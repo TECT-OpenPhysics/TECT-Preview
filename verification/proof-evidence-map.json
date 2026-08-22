@@ -7,7 +7,7 @@
   "authority_boundary": "This projection is complete by reference but is not a tier or proof authority. Claim status cards, proof notes/runs, RESULTS-LEDGER.md, negative-results/registry.md, explorations/log.jsonl, changelog/log.jsonl, todo/todo.json, and claims/GATES.md remain canonical. theory/proof-evidence/interface-pointers.json owns only reference-only external locators and never a claim or obligation status.",
   "source_hashes": {
     "RESULTS-LEDGER.md": "1dcab28ca10923c9d668d57f1959d6421c9a5adebbd7c043fb9140a540c1f046",
-    "changelog/log.jsonl": "233d55c712c75349096e6479eebc00c7efb21872bbe83081d1988944024337ed",
+    "changelog/log.jsonl": "ecddd274e387fdaba031f9fbdaa0000091d76c650a5373a792f3cc5945cc9dac",
     "claims/A1-KERNEL-CONV/status.json": "e5dd2b08ce58f1c3d2680b907e1469b828b2b6a3929d773f7bd84137efe36509",
     "claims/A1-KERNEL-IDENTITY/status.json": "dbaf6f1e80d994b94c9746cc7d342592fbc3638abb372d8e1c02841bb4e4d477",
     "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/status.json": "202e7514bb2d6fc029e61de95386981aedca15d81e9d6f71fc1570d77049d554",
@@ -32,7 +32,7 @@
     "claims/B1-RH-ENUM/status.json": "ac08c4be7b0afa16744bc790054b4703124f58a903aa9ac455c0e94146149a8a",
     "claims/B2-PROPA-HLAYER/status.json": "a68aa8518b1db556d0dba78342ece2bb3d44cc6c9e4c66a6a610db85f85d8cd8",
     "claims/B3-BCC-STRUCT/status.json": "c0a651785ec4799540768b796173d8c41dc66b1d3aa8374fd556370e2ca00035",
-    "claims/B3-RH-TESTED-STRUCTURE-RANKING/status.json": "07f9c205ff6adb798720a5e1b013e12fa3d8c926fcd61a89767c38178618419a",
+    "claims/B3-RH-TESTED-STRUCTURE-RANKING/status.json": "839a4ded29b7e2114feda3fb1f2fff9cc9e930fdf9ef6db98b785d6ae8929196",
     "claims/B4-CONE-CURVATURE-ANCHOR/status.json": "704f7c03c41352fa19da5bd41bddb33807354405ffc2386f97c4927db74e9627",
     "claims/B4-MASS-GAP/status.json": "63946d0cba01ebe30191465e19d322c59a0bc1fbd7293e2ca90d080d8470d424",
     "claims/B5-BEYOND-LAYER-BOUND/status.json": "9f9667da4aca63ee0c5fa5fc72a77deeaf81d2551ad910109cb636c3174b3541",
@@ -58,7 +58,7 @@
     "claims/F2-BARYOGENESIS/status.json": "de39e5132355707dd49d4da4ef2da7b64d5f69802609c2f867d658114c3523a4",
     "claims/F3-INFLATION-CMB/status.json": "04b783d1f49f0ee453d4ccc3eff93cc7bca3c084dcdcdd036a023dd76d62331c",
     "claims/GATES.md": "8b2e79e8570fb392bb475ddad551ce551ce8775b22d180fbf547ca4b440c2c3f",
-    "explorations/log.jsonl": "850bdcd5d41f47947f2f7924c14bafcf717d626015adb2777d6ebc9c8f2e845f",
+    "explorations/log.jsonl": "9a16771dcdd2dc3f2ee0190aeecdf23ffcc04d38387dcf97e480433e510b72c7",
     "negative-results/registry.md": "546bbd65ee917eae68a9b1a3564431d3fcea72804d4aea79e061e002e097de0e",
     "theory/proof-evidence/interface-pointers.json": "59d3135869897d1c77a62dcbf9a513110136dba21dd43d23ffa4abbc9307992f",
     "todo/todo.json": "1252641a4d7ef622c32f8ce993b493d91d817eabaa290aa7e7721083168f96e6"
@@ -70,20 +70,20 @@
     "interface_pointers": 1,
     "reusable_results": 193,
     "negative_records": 372,
-    "proof_explorations": 918,
+    "proof_explorations": 919,
     "exploration_verdicts": {
-      "advanced": 568,
+      "advanced": 569,
       "failed": 236,
       "inconclusive": 80,
       "parked": 34
     },
     "process_grade_lessons": 3,
-    "accepted_events": 692,
+    "accepted_events": 693,
     "tasks": 58,
     "live_tasks": 10,
     "completed_tasks": 48,
-    "open_gates": 16,
-    "current_route_gates": 18,
+    "open_gates": 15,
+    "current_route_gates": 17,
     "sectors": 6,
     "proof_notes": 414,
     "proof_pdfs": 395,
@@ -1474,15 +1474,7 @@
         "enforcement_applies": false
       }
     ],
-    "open_gate_status_conflicts": [
-      {
-        "gate": "ESTIMATOR-UPGRADE",
-        "owners": [
-          "B3-RH-TESTED-STRUCTURE-RANKING"
-        ],
-        "registered_status": "CLOSED@CONTROLLED-ERROR (operator-authorized 2026-06-07)"
-      }
-    ],
+    "open_gate_status_conflicts": [],
     "claim_unbound_result_ids": [
       "R-191",
       "R-174",
@@ -2969,6 +2961,13 @@
           "EXP-000918",
           "R-193"
         ]
+      },
+      {
+        "event": "20260822-reconcile-b3-estimator-gate-pointer-after-r-019",
+        "claim_ids": [
+          "EXP-000919",
+          "R-019"
+        ]
       }
     ],
     "event_unregistered_negative_tags": [
@@ -3053,9 +3052,7 @@
       "active": 6,
       "refuted": 1,
       "tier_profile": "T7x3 T5x1 T4x1 T1x1 T0x1",
-      "open_gates": [
-        "ESTIMATOR-UPGRADE"
-      ],
+      "open_gates": [],
       "live_tasks": [
         "T-030"
       ]
@@ -3454,31 +3451,6 @@
         "status_summary": "OPEN"
       },
       "path": "claims/GATES.md#cp-unitarity"
-    },
-    {
-      "id": "ESTIMATOR-UPGRADE",
-      "owners": [
-        "B3-RH-TESTED-STRUCTURE-RANKING"
-      ],
-      "claim_card_owners": [
-        "B3-RH-TESTED-STRUCTURE-RANKING"
-      ],
-      "live_task_owners": [],
-      "live_tasks": [],
-      "definition": {
-        "statement": "GAP-2 instance for Reading-H: estimator-grade $\\Delta F$ → controlled error bound",
-        "status": "CLOSED@CONTROLLED-ERROR (operator-authorized 2026-06-07)",
-        "source": "`archive/legacy/notes/` Math427–Math436 enumerated-reading chain (migrated batch 2).",
-        "advance_2026_06_07": "(estimator_upgrade_enumerated.py 7/7, estimator-upgrade-enumerated v1.0): single-shell readings (LAM/HEX/FCC/BCC) at mu^2=0.005 upgraded to CONTROLLED-ERROR -- A=0 is a strict minimum, curvature kappa_R = dF_R''(0) >= 0.85 (binding LAM 0.851), M-quadrature envelope < 0.1% of kappa (N_PT 6000 vs 20000), no condensate at either resolution. REMAINING: two-shell ensemble + dI/grid knobs (same method); gate stays OPEN pending those + operator sign-off.",
-        "operator_review_2026_06_07": "(reviews/2026-06-07-estimator-upgrade-and-scscope-acceptance-review.md): the single-shell M-quadrature SUBGATE is marked CONTROLLED-ERROR ADVANCED; the enumerated margins are controlled w.r.t. the dominant M-quadrature knob ONLY (NOT a full estimator closure). Remaining knobs {two-shell ensemble, dI quadrature, amplitude grid} keep the gate OPEN; a no-condensate interval/Lipschitz continuum bound is a registered publication-grade follow-up (T-010).",
-        "knob_closure_2026_06_07": "(estimator_upgrade_knobs.py 13/13, estimator-upgrade-knobs v1.0): the dI-quadrature + amplitude-grid knobs are now also controlled (kappa moves <0.1% under dI refinement (6000,50)->(12000,100); no-condensate grid-monotone at NG=121/241/481), the no-condensate verdict is upgraded to a curvature-chord CONTINUUM bound (min(v_i,v_{i+1})-(1/8)M_i delta^2 > 0 on every A>0 interval), and the two-shell {110}+{200} (0,0) Hessian certified positive-definite (kappa_12=0 by orthogonality; both eigenvalues>0).",
-        "two_shell_global_advance_2026_06_07": "(twoshell_continuum_bound.py 10/10, twoshell-continuum-bound v1.0): the two-shell GLOBAL no-condensate is established as a DIAGONAL-continuum bound AT THE B1 POINT r=0.219 (M-minimised surface min +3.9e-5>0; 2D curvature-chord continuum lower bound +1.2e-4>0; PD (0,0) Hessian), via a diagonal evaluator validated vs Math432 to 1.6e-7. TWO CORRECTIONS to the knob-closure note: (1) the cited Math432 evidence runs at a DIFFERENT operating point r=0.005 (not the B1 point r=0.219); (2) the soft (0,0) eigenvalue is kappa_{200}=3.86 NOT kappa_BCC({110})=5.116 ({200} is the SOFTER direction; PD still holds).",
-        "exact_wick_bracket_closed_2026_06_07": "(twoshell_anchored_bracket.py 7/7, twoshell-anchored-bracket v1.0): with the EXACT slogdet engine (Math432 neuter-imported, validated to 5e-8), the anchored two-shell dF = diagonal + bracket at r=0.219 has min over (A1,A2)!=(0,0) = +6.7e-4>0; the bracket is O(A^4) near origin (|bracket|(0.005)=3.9e-8) so the anchored (0,0) Hessian = diagonal (kappa_{110}=5.16, kappa_{200}=3.86, PD). The off-diagonal bracket does NOT overturn the no-condensate. BULK CONTINUUM +",
-        "closure_2026_06_07": "(twoshell_anchored_continuum.py 7/7, twoshell-anchored-continuum v1.0): the exact anchored two-shell surface at r=0.219 has a 2D curvature-chord continuum lower bound +1.34e-3>0 away from the origin cell (node-free no-condensate) and an anchored (0,0) PD Hessian covering the origin cell -- the exact-Wick no-condensate is CONTINUUM on the whole domain. CLOSED@CONTROLLED-ERROR (operator-authorized 'close cleanly' 2026-06-07; consolidation: estimator-upgrade-closure-consolidation v1.0). Single-shell (M/dI/amplitude knobs + curvature-chord continuum) and two-shell (exact-Wick anchored continuum) margins are controlled-error/strong-evidence; a T7 interval-arithmetic upgrade is optional. B1 T6 tier unchanged (margins gate, not the SIGN). <a id=\"robustness-mu2\"></a>",
-        "statement_summary": "GAP-2 instance for Reading-H: estimator-grade $\\Delta F$ → controlled error bound",
-        "status_summary": "CLOSED@CONTROLLED-ERROR (operator-authorized 2026-06-07)"
-      },
-      "path": "claims/GATES.md#estimator-upgrade"
     },
     {
       "id": "GAP-3",
@@ -9323,15 +9295,13 @@
         "B1-RH-ENUM"
       ],
       "hypotheses": [],
-      "open_gates": [
-        "ESTIMATOR-UPGRADE"
-      ],
+      "open_gates": [],
       "statement": "$\\Delta F_{\\rm enum}[\\mathcal R]:=F_{\\rm TECT}[\\mathcal R]-F_{\\rm TECT}[\\mathcal R_H]>0$ for every $\\mathcal R$ in the tested ordered-reading ensemble $\\mathcal E_{\\rm tested}$ (LAM/HEX/FCC explicit via Math431), at estimator grade -- i.e. Reading-H is the lowest-energy reading WITHIN the tested ensemble. This is a dependent projection of B1-RH-ENUM.",
-      "scope": "RELATIVE ranking within the tested ordered-reading ensemble ONLY. 'Continuum-anchored' here means the estimator is built on the continuum functional/convention, NOT that an $a\\to0$ PDE continuum limit has been certified (it has not). The result does NOT imply $F[\\mathcal R_H]<F[0]$, nor $H_{\\mathcal R_H}\\succeq0$ under unrestricted variations, nor BCC phase existence/stability. Estimator error bound: uncontrolled (ESTIMATOR-UPGRADE / GAP-2).",
+      "scope": "RELATIVE ranking within the tested ordered-reading ensemble ONLY. 'Continuum-anchored' here means the estimator is built on the continuum functional/convention, NOT that an $a\\to0$ PDE continuum limit has been certified (it has not). The result does NOT imply $F[\\mathcal R_H]<F[0]$, nor $H_{\\mathcal R_H}\\succeq0$ under unrestricted variations, nor BCC phase existence/stability. The estimator error bound is controlled only in the declared B1 single/two-shell controlled-error scope (R-019 / ESTIMATOR-UPGRADE); this projection remains estimator-grade and does not inherit a global T7 or physical conclusion.",
       "falsifier": "A tested-ensemble reading $\\mathcal R\\in\\mathcal E_{\\rm tested}$ with $F_{\\rm TECT}[\\mathcal R]<F_{\\rm TECT}[\\mathcal R_H]$ at estimator grade (a ranking inversion). NOTE: this is a falsifier of the RANKING only, NOT of any BCC phase/minimum/global-selection claim.",
-      "next_action": "Tighten the estimator error bound (ESTIMATOR-UPGRADE). To re-establish a physical BCC structural claim (separate, new card), certify F[Psi_min]<F[0], lambda_min^perp>=0 (symmetry-projected), N->inf on the canonical PDE background.",
-      "notes": "Created 2026-06-23 by operator verdict as the ONLY surviving projection of the retired B3-BCC-STRUCT. Strictly a dependent projection of B1-RH-ENUM; carries no independent evidence. Estimator error bound: uncontrolled (inherited from B1; ESTIMATOR-UPGRADE).",
-      "last_review": "2026-06-23",
+      "next_action": "No further ESTIMATOR-UPGRADE action is required for this card in its declared controlled-error scope. To re-establish a physical BCC structural claim (separate, new card), certify F[Psi_min]<F[0], lambda_min^perp>=0 (symmetry-projected), N->inf on the canonical PDE background.",
+      "notes": "Created 2026-06-23 by operator verdict as the ONLY surviving projection of the retired B3-BCC-STRUCT. Strictly a dependent projection of B1-RH-ENUM; carries no independent evidence. The estimator error bound is controlled only in the declared B1 single/two-shell controlled-error scope (R-019 / ESTIMATOR-UPGRADE); this card remains estimator-grade and does not inherit a global T7 or physical conclusion.",
+      "last_review": "2026-08-22",
       "reproduction": {
         "command": "cd archive/legacy/scripts && python Math431_g1pp3_lam_hex_fcc.py",
         "expected": "LAM/HEX/FCC races PASS (estimator grade)",
@@ -9380,9 +9350,10 @@
           "EXP-000858",
           "EXP-000860",
           "EXP-000862",
-          "EXP-000907"
+          "EXP-000907",
+          "EXP-000919"
         ],
-        "latest_exploration_id": "EXP-000907",
+        "latest_exploration_id": "EXP-000919",
         "accepted_event_ids": [
           "20260623-operator-verdicts-b3-retire-b4-massgap-scope",
           "20260814-r-169-v1-0-truncated-octahedron-realization-and",
@@ -9390,13 +9361,12 @@
           "20260814-r-169-v1-2-reading-h-covariance-to-p1-interface",
           "20260814-r-169-v1-3-reading-h-native-owner-bcc-realizati",
           "20260814-r-169-v1-4-legacy-sma-common-bohr-moment-radial",
-          "20260822-if-tect-ym-0001-scope-preserving-tect-to-yang-m"
+          "20260822-if-tect-ym-0001-scope-preserving-tect-to-yang-m",
+          "20260822-reconcile-b3-estimator-gate-pointer-after-r-019"
         ],
-        "latest_event_id": "20260822-if-tect-ym-0001-scope-preserving-tect-to-yang-m",
+        "latest_event_id": "20260822-reconcile-b3-estimator-gate-pointer-after-r-019",
         "live_task_gate_ids": [],
-        "route_gate_ids": [
-          "ESTIMATOR-UPGRADE"
-        ]
+        "route_gate_ids": []
       }
     },
     {
@@ -19402,7 +19372,8 @@
         "B1"
       ],
       "accepted_event_ids": [
-        "20260607-estimator-upgrade-closed-controlled-error-bulk"
+        "20260607-estimator-upgrade-closed-controlled-error-bulk",
+        "20260822-reconcile-b3-estimator-gate-pointer-after-r-019"
       ],
       "co_recorded_negative_tags": []
     },
@@ -73621,6 +73592,48 @@
       "task_id": "T-058",
       "title": "Repair the R-193 historical reader for append-only catalog and result growth",
       "verdict": "advanced"
+    },
+    {
+      "boundary": "No B3/BCC phase, physical-empty sign, unrestricted Hessian stability, global selection, Reading-H-to-P1 bridge, thermodynamic or PDE continuum limit, claim-tier change, or new negative result follows.",
+      "claim_ids": [
+        "B3-RH-TESTED-STRUCTURE-RANKING"
+      ],
+      "decision_reason": "This is a status and provenance correction, not a new numerical theorem or tier promotion. The existing R-019 authority already owns the controlled-error closure; the B3 card must not keep a closed gate as an active blocker or imply that its scoped error control is absent.",
+      "evidence_refs": [
+        "claims/B3-RH-TESTED-STRUCTURE-RANKING/status.json#open_gates",
+        "claims/B3-RH-TESTED-STRUCTURE-RANKING/claim.md#dependencies-and-hypotheses",
+        "claims/GATES.md#estimator-upgrade",
+        "RESULTS-LEDGER.md#r-019",
+        "claims/B1-RH-ENUM/status.json#scope"
+      ],
+      "finding": "The ESTIMATOR-UPGRADE gate is CLOSED@CONTROLLED-ERROR in the canonical gate registry and R-019 closes the declared single-shell and exact-Wick two-shell estimator-control scope. B3 nevertheless retained ESTIMATOR-UPGRADE in open_gates and described its estimator error as uncontrolled. Removing only that stale pointer and updating the review wording reconciles the card; the T4 tested-ensemble relative ranking remains dependent on B1 and does not become a physical BCC or global theorem.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": [
+          "R-019"
+        ]
+      },
+      "gate_ids": [
+        "ESTIMATOR-UPGRADE"
+      ],
+      "id": "EXP-000919",
+      "method": [
+        "Compare the B3 status card and claim card with the canonical ESTIMATOR-UPGRADE section in claims/GATES.md.",
+        "Read R-019's single-shell and two-shell controlled-error closure and check that it does not alter the B3 T4 relative-ranking scope.",
+        "Audit the revised card for preservation of the physical-empty, BCC stability, global selection and PDE-limit no-overclaim boundaries."
+      ],
+      "next_action": "Keep the B3 relative-ranking card at T4 and continue only the separately owned physical-empty, transverse-stability and continuum obligations; do not reopen ESTIMATOR-UPGRADE for this card.",
+      "provenance": "contemporaneous",
+      "question": "Does the surviving B3 tested-ensemble ranking still have an open estimator-control gate after R-019 closes the declared Reading-H controlled-error scope?",
+      "recorded_at": "2026-08-22T07:00:00Z",
+      "recorded_by": "Codex",
+      "related": [],
+      "reviewed_on": "2026-08-22",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-051",
+      "title": "Reconcile the B3 estimator-gate pointer after the controlled-error closure",
+      "verdict": "advanced"
     }
   ],
   "inconclusive_or_parked_exploration_ids": [
@@ -101043,6 +101056,51 @@
       "result_link_basis": {
         "R-193": "explicit_result_id"
       }
+    },
+    {
+      "id": "20260822-reconcile-b3-estimator-gate-pointer-after-r-019",
+      "date": "2026-08-22",
+      "header": "[Reconcile B3 estimator-gate pointer after R-019] - 2026-08-22",
+      "claim_ids": [
+        "B3-RH-TESTED-STRUCTURE-RANKING",
+        "EXP-000919",
+        "R-019"
+      ],
+      "keywords": [
+        "EXP-000919",
+        "R-019",
+        "controlled-error",
+        "estimator-upgrade",
+        "stale-gate-reconciliation"
+      ],
+      "negative_results": [],
+      "notes": [
+        "claims/B3-RH-TESTED-STRUCTURE-RANKING/status.json",
+        "claims/B3-RH-TESTED-STRUCTURE-RANKING/claim.md",
+        "claims/GATES.md",
+        "RESULTS-LEDGER.md"
+      ],
+      "scripts": [],
+      "raw": "## [Reconcile B3 estimator-gate pointer after R-019] - 2026-08-22\n\nEXP-000919 records a correction-only reconciliation of the surviving B3 tested-ensemble ranking. R-019 and the canonical ESTIMATOR-UPGRADE gate already close the declared single-shell and exact-Wick two-shell controlled-error scope, so the B3 card no longer carries that gate as open and no longer describes the scoped estimator control as absent. The T4 relative-ranking scope and all physical BCC, empty-reference, unrestricted-stability and continuum non-claims remain unchanged. No new theorem, tier change, negative result, PDF, or physical conclusion is issued.\n\n",
+      "claim_refs": [
+        "B3-RH-TESTED-STRUCTURE-RANKING"
+      ],
+      "claim_ref_basis": {
+        "B3-RH-TESTED-STRUCTURE-RANKING": "explicit_claim_ids"
+      },
+      "unresolved_claim_ids": [
+        "EXP-000919",
+        "R-019"
+      ],
+      "result_ids": [
+        "R-019"
+      ],
+      "linked_result_ids": [
+        "R-019"
+      ],
+      "result_link_basis": {
+        "R-019": "explicit_result_id"
+      }
     }
   ],
   "all_tasks": [
@@ -106251,6 +106309,12 @@
         "id": "event:20260822-r-193-static-owner-heat-map-non-identifiability",
         "kind": "accepted_event",
         "label": "[R-193 static-owner heat-map non-identifiability witness] - 2026-08-22",
+        "authority": "CHANGELOG.md"
+      },
+      {
+        "id": "event:20260822-reconcile-b3-estimator-gate-pointer-after-r-019",
+        "kind": "accepted_event",
+        "label": "[Reconcile B3 estimator-gate pointer after R-019] - 2026-08-22",
         "authority": "CHANGELOG.md"
       },
       {
@@ -111768,6 +111832,12 @@
         "authority": "explorations/log.jsonl"
       },
       {
+        "id": "exploration:EXP-000919",
+        "kind": "proof_exploration",
+        "label": "Reconcile the B3 estimator-gate pointer after the controlled-error closure",
+        "authority": "explorations/log.jsonl"
+      },
+      {
         "id": "gate:A1-KERNEL-CONV",
         "kind": "hypothesis",
         "label": "A1-KERNEL-CONV",
@@ -117245,12 +117315,6 @@
         "from": "claim:B3-BCC-STRUCT",
         "relation": "depends_on",
         "to": "claim:A1-KERNEL-CONV",
-        "basis": "canonical"
-      },
-      {
-        "from": "claim:B3-RH-TESTED-STRUCTURE-RANKING",
-        "relation": "blocked_by_gate",
-        "to": "gate:ESTIMATOR-UPGRADE",
         "basis": "canonical"
       },
       {
@@ -128765,6 +128829,18 @@
         "from": "event:20260822-r-193-static-owner-heat-map-non-identifiability",
         "relation": "records_result",
         "to": "result:R-193",
+        "basis": "explicit_result_id"
+      },
+      {
+        "from": "event:20260822-reconcile-b3-estimator-gate-pointer-after-r-019",
+        "relation": "records",
+        "to": "claim:B3-RH-TESTED-STRUCTURE-RANKING",
+        "basis": "explicit_claim_ids"
+      },
+      {
+        "from": "event:20260822-reconcile-b3-estimator-gate-pointer-after-r-019",
+        "relation": "records_result",
+        "to": "result:R-019",
         "basis": "explicit_result_id"
       },
       {
@@ -170495,6 +170571,30 @@
         "from": "exploration:EXP-000918",
         "relation": "references_result",
         "to": "result:R-193",
+        "basis": "structured_formal_ref"
+      },
+      {
+        "from": "exploration:EXP-000919",
+        "relation": "assesses",
+        "to": "claim:B3-RH-TESTED-STRUCTURE-RANKING",
+        "basis": "structured_claim_id"
+      },
+      {
+        "from": "exploration:EXP-000919",
+        "relation": "assesses_gate",
+        "to": "gate:ESTIMATOR-UPGRADE",
+        "basis": "structured_gate_id"
+      },
+      {
+        "from": "exploration:EXP-000919",
+        "relation": "records_task",
+        "to": "task:T-051",
+        "basis": "structured_task_id"
+      },
+      {
+        "from": "exploration:EXP-000919",
+        "relation": "references_result",
+        "to": "result:R-019",
         "basis": "structured_formal_ref"
       },
       {

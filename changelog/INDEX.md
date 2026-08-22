@@ -5,7 +5,7 @@ Compact generated reader surface. The append-only authority is
 record 568 / commit `4db22f4e` and no longer grows.
 Post-cutover full bodies live exactly once in bounded pages under `pages/`.
 
-**692 accepted events** · latest 25 shown below · machine locator: `index.json`
+**693 accepted events** · latest 25 shown below · machine locator: `index.json`
 
 Search the complete authority without loading every page:
 
@@ -17,6 +17,7 @@ python verification/scripts/changelog.py search --text <phrase>
 
 | Date | Event | Claims | Full entry |
 |---|---|---|---|
+| 2026-08-22 | `20260822-reconcile-b3-estimator-gate-pointer-after-r-019` — [Reconcile B3 estimator-gate pointer after R-019] - 2026-08-22 | B3-RH-TESTED-STRUCTURE-RANKING, EXP-000919, R-019 | [bounded page](pages/000669-000718.md#20260822-reconcile-b3-estimator-gate-pointer-after-r-019) |
 | 2026-08-22 | `20260822-r-193-historical-reader-append-only-growth-repa` — [R-193 historical reader append-only growth repair] - 2026-08-22 | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION, EXP-000918, R-193 | [bounded page](pages/000669-000718.md#20260822-r-193-historical-reader-append-only-growth-repa) |
 | 2026-08-22 | `20260822-t-006-code-discipline-gate-and-rho-source-conso` — [T-006 code-discipline gate and RHO source consolidation] - 2026-08-22 | — | [bounded page](pages/000669-000718.md#20260822-t-006-code-discipline-gate-and-rho-source-conso) |
 | 2026-08-22 | `20260822-r-193-static-owner-heat-map-non-identifiability` — [R-193 static-owner heat-map non-identifiability witness] - 2026-08-22 | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION, EXP-000910, R-193 | [bounded page](pages/000669-000718.md#20260822-r-193-static-owner-heat-map-non-identifiability) |
@@ -41,7 +42,6 @@ python verification/scripts/changelog.py search --text <phrase>
 | 2026-08-21 | `20260821-r-176-a1-two-root-cholesky-covariance-witnesses` — [R-176 A1 two-root Cholesky covariance witnesses] - 2026-08-21 | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION, EXP-000891, R-176 | [bounded page](pages/000669-000718.md#20260821-r-176-a1-two-root-cholesky-covariance-witnesses) |
 | 2026-08-21 | `20260821-r-175-duplicated-covariance-square-root-basis-i` — [R-175 duplicated covariance square-root basis interface] - 2026-08-21 | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION, EXP-000890, R-175 | [bounded page](pages/000669-000718.md#20260821-r-175-duplicated-covariance-square-root-basis-i) |
 | 2026-08-21 | `20260821-r-174-two-root-production-cylinder-cross-synthe` — [R-174 two-root production-cylinder cross-synthesis boundary] - 2026-08-21 | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION, EXP-000889, R-174 | [bounded page](pages/000669-000718.md#20260821-r-174-two-root-production-cylinder-cross-synthe) |
-| 2026-08-21 | `20260821-r-173-r-163-dyadic-forest-lean-cross-check-2026` — [R-173 R-163 dyadic-forest Lean cross-check] - 2026-08-21 | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION, EXP-000888, R-173 | [bounded page](pages/000619-000668.md#20260821-r-173-r-163-dyadic-forest-lean-cross-check-2026) |
 
 ## Post-cutover pages
 
@@ -49,6 +49,6 @@ Each full event body after the cutover occurs in exactly one page.
 
 | Ordinals | Events | Page |
 |---|---:|---|
-| 669–692 | 24 | [000669-000718.md](pages/000669-000718.md) |
+| 669–693 | 25 | [000669-000718.md](pages/000669-000718.md) |
 | 619–668 | 50 | [000619-000668.md](pages/000619-000668.md) |
 | 569–618 | 50 | [000569-000618.md](pages/000569-000618.md) |

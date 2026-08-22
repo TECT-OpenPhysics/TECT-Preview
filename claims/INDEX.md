@@ -53,7 +53,7 @@ The 21 Sector-A claim cards are immutable evidence and branch records, not 21 pe
 | `B1-RH-ENUM` | T7 | A1-KERNEL-CONV | — | ESTIMATOR-UPGRADE (25), ROBUSTNESS-MU2 (4), Reading-H (12), enumerated (5), near-gap (4) | [INDEX](B1-RH-ENUM/INDEX.md) |
 | `B2-PROPA-HLAYER` | T7 | A1-KERNEL-CONV | — | G-A0-DUI (2), H-A0-removal (2), Prop-A (15) | [INDEX](B2-PROPA-HLAYER/INDEX.md) |
 | `B3-BCC-STRUCT` | T0 | — | — | (all notes) (1) | [INDEX](B3-BCC-STRUCT/INDEX.md) |
-| `B3-RH-TESTED-STRUCTURE-RANKING` | T4 | — | ESTIMATOR-UPGRADE | _scaffold (no notes yet)_ | — |
+| `B3-RH-TESTED-STRUCTURE-RANKING` | T4 | — | — | _scaffold (no notes yet)_ | — |
 | `B4-CONE-CURVATURE-ANCHOR` | T5 | — | — | _scaffold (no notes yet)_ | — |
 | `B4-MASS-GAP` | T1 | — | — | (all notes) (2) | [INDEX](B4-MASS-GAP/INDEX.md) |
 | `B5-BEYOND-LAYER-BOUND` | T7 | A1-KERNEL-CONV | — | DR-2 (20), H-LAYER-AUX (9), SC-SCOPE (11), STEP-5B (10), T5-DOSSIER (4) | [INDEX](B5-BEYOND-LAYER-BOUND/INDEX.md) |

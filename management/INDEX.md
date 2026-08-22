@@ -36,9 +36,9 @@ Full task ledger: [TODO.md](../TODO.md). Detailed staged plan: [ROADMAP.md](../R
 | [`A7-CLASSII-SELF-COUPLING-INTERPOLATION`](../claims/GATES.md#a7-classii-self-coupling-interpolation) | A8-CLASSII-DECOUPLED-NELSON-BOUND |
 | [`C6-BCC-PREMISE-BLOCKED`](../claims/GATES.md#c6-bcc-premise-blocked) | C6-SPACETIME-SIGNATURE |
 | [`CP-UNITARITY`](../claims/GATES.md#cp-unitarity) | D4-QUANTUM-CONSISTENCY |
-| [`ESTIMATOR-UPGRADE`](../claims/GATES.md#estimator-upgrade) | B3-RH-TESTED-STRUCTURE-RANKING |
 | [`H-SUPPRESSION-DISCHARGE`](../claims/GATES.md#h-suppression-discharge) | C1-LORENTZ-KIN |
 | [`PRED-G-FREEZE`](../claims/GATES.md#pred-g-freeze) | C5-NEWTON-G |
+| [`SCHEME-2LOOP`](../claims/GATES.md#scheme-2loop) | C4-GRAVITY-1LOOP |
 
 ## Reader routes
 

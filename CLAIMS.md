@@ -44,7 +44,7 @@ reproduction commands, and history live on the claim cards.
 | [B1-RH-ENUM](claims/B1-RH-ENUM/claim.md) | Reading-H selection within enumerated condensate ensembles | T7 | ACTIVE | ANALYTIC, EXECUTED | A1-KERNEL-CONV | — |
 | [B2-PROPA-HLAYER](claims/B2-PROPA-HLAYER/claim.md) | Proposition A: the isotropic Gaussian-Hartree layer is the strict comparison infimum (T7, H-LAYER discharged) | T7 | ACTIVE | ANALYTIC, CONDITIONAL | A1-KERNEL-CONV | — |
 | [B3-BCC-STRUCT](claims/B3-BCC-STRUCT/claim.md) | BCC structural selection among tested ordered condensates | T0 | REFUTED | EXECUTED | — | — |
-| [B3-RH-TESTED-STRUCTURE-RANKING](claims/B3-RH-TESTED-STRUCTURE-RANKING/claim.md) | Reading-H is selected within the tested ordered-reading ensemble (estimator grade) | T4 | ACTIVE | EXECUTED, ESTIMATOR | — | ESTIMATOR-UPGRADE |
+| [B3-RH-TESTED-STRUCTURE-RANKING](claims/B3-RH-TESTED-STRUCTURE-RANKING/claim.md) | Reading-H is selected within the tested ordered-reading ensemble (estimator grade) | T4 | ACTIVE | EXECUTED, ESTIMATOR | — | — |
 | [B4-CONE-CURVATURE-ANCHOR](claims/B4-CONE-CURVATURE-ANCHOR/claim.md) | BCC single-mode-cone uniqueness + positive local curvature anchor (metastable branch) | T5 | ACTIVE | ANALYTIC, EXECUTED | — | — |
 | [B4-MASS-GAP](claims/B4-MASS-GAP/claim.md) | BCC ground-state uniqueness within the single-mode constraint cone | T1 | ACTIVE | ANALYTIC | — | — |
 | [B5-BEYOND-LAYER-BOUND](claims/B5-BEYOND-LAYER-BOUND/claim.md) | Pattern-generic Gershgorin reduction of the beyond-layer bound | T7 | ACTIVE | ANALYTIC, EXECUTED | A1-KERNEL-CONV | — |

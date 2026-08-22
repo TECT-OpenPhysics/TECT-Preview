@@ -8,13 +8,13 @@ $\Delta F_{\rm enum}[\mathcal R]:=F_{\rm TECT}[\mathcal R]-F_{\rm TECT}[\mathcal
 
 ## Scope (strict)
 
-Relative ranking within the tested ordered-reading ensemble **only**. "Continuum-anchored" here means the estimator is built on the continuum functional/convention — **not** that an $a\to0$ PDE continuum limit has been certified (it has not). The result does **not** imply $F[\mathcal R_H]<F[0]$, nor $H_{\mathcal R_H}\succeq0$ under unrestricted variations, nor BCC phase existence/stability/global selection. Estimator error bound: uncontrolled (ESTIMATOR-UPGRADE / GAP-2).
+Relative ranking within the tested ordered-reading ensemble **only**. "Continuum-anchored" here means the estimator is built on the continuum functional/convention — **not** that an $a\to0$ PDE continuum limit has been certified (it has not). The result does **not** imply $F[\mathcal R_H]<F[0]$, nor $H_{\mathcal R_H}\succeq0$ under unrestricted variations, nor BCC phase existence/stability/global selection. The estimator error bound is controlled only in the declared B1 single/two-shell controlled-error scope (R-019 / ESTIMATOR-UPGRADE); this projection remains estimator-grade and does not inherit a global T7 or physical conclusion.
 
 ## Dependencies and hypotheses
 
 - Hard dependencies: A1-KERNEL-CONV, B1-RH-ENUM
 - Soft dependencies: B1-RH-ENUM (this card is its projection)
-- Hypotheses: none · Open gates: ESTIMATOR-UPGRADE
+- Hypotheses: none · Open gates: none for the declared estimator-control scope
 
 ## Evidence
 
@@ -40,7 +40,8 @@ BCC phase/minimum existence, stability, or **global** selection; $F[\mathcal R_H
 ## History
 
 - 2026-06-23 — Created by operator verdict as the only surviving projection of the retired B3-BCC-STRUCT (`R-2026-06-23-b3-bcc-structural-selection`). Strictly a B1 projection; no independent evidence.
+- 2026-08-22 — The stale `ESTIMATOR-UPGRADE` open-gate pointer and uncontrolled-error wording were corrected after R-019 closed the declared single/two-shell controlled-error scope. The T4 relative-ranking and all physical no-overclaim boundaries are unchanged.
 
 ## Next required action
 
-Tighten the estimator error bound (ESTIMATOR-UPGRADE). A physical BCC structural claim must be re-established as a separate new card by certifying $F[\Psi_{\min}]<F[0]$, $\lambda_{\min}^\perp\ge0$ (symmetry-projected), $N\to\infty$ on the canonical PDE background.
+No further ESTIMATOR-UPGRADE action is required for this card in its declared controlled-error scope. A physical BCC structural claim must be re-established as a separate new card by certifying $F[\Psi_{\min}]<F[0]$, $\lambda_{\min}^\perp\ge0$ (symmetry-projected), $N\to\infty$ on the canonical PDE background.

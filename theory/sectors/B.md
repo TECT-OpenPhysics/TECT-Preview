@@ -15,13 +15,13 @@ Tier profile: T7x3 T5x1 T4x1 T1x1 T0x1
 | [`B1-RH-ENUM`](../../claims/B1-RH-ENUM/INDEX.md) | T7 | A1-KERNEL-CONV | — | Reading-H selection within enumerated condensate ensembles |
 | [`B2-PROPA-HLAYER`](../../claims/B2-PROPA-HLAYER/INDEX.md) | T7 | A1-KERNEL-CONV | — | Proposition A: the isotropic Gaussian-Hartree layer is the strict comparison… |
 | [`B3-BCC-STRUCT`](../../claims/B3-BCC-STRUCT/INDEX.md) | T0 | — | — | BCC structural selection among tested ordered condensates |
-| [`B3-RH-TESTED-STRUCTURE-RANKING`](../../claims/B3-RH-TESTED-STRUCTURE-RANKING/claim.md) | T4 | — | ESTIMATOR-UPGRADE | Reading-H is selected within the tested ordered-reading ensemble (estimator… |
+| [`B3-RH-TESTED-STRUCTURE-RANKING`](../../claims/B3-RH-TESTED-STRUCTURE-RANKING/claim.md) | T4 | — | — | Reading-H is selected within the tested ordered-reading ensemble (estimator… |
 | [`B4-CONE-CURVATURE-ANCHOR`](../../claims/B4-CONE-CURVATURE-ANCHOR/claim.md) | T5 | — | — | BCC single-mode-cone uniqueness + positive local curvature anchor (metastable… |
 | [`B4-MASS-GAP`](../../claims/B4-MASS-GAP/INDEX.md) | T1 | — | — | BCC ground-state uniqueness within the single-mode constraint cone |
 | [`B5-BEYOND-LAYER-BOUND`](../../claims/B5-BEYOND-LAYER-BOUND/INDEX.md) | T7 | A1-KERNEL-CONV | — | Pattern-generic Gershgorin reduction of the beyond-layer bound |
 
 **Open named hypotheses (sector union):** A1-KERNEL-CONV  
-**Open gates (sector union):** ESTIMATOR-UPGRADE
+**Open gates (sector union):** —
 
 ## Predictions
 
