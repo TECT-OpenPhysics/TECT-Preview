@@ -1894,6 +1894,55 @@
       "task_id": "T-050",
       "title": "Revalidate the A6 running-mass boundaries after Lean registry growth",
       "verdict": "advanced"
+    },
+    {
+      "boundary": "No A13/T-050 closure, production heat/root generator, raw-current map, once-owned q-ledger, progressive/revisit estimate, Nelson bound, interacting measure, Sector-A, Pre-A, physical-empty, removal or continuum result is asserted. A failed revalidation remains a maintenance failure, not a mathematical counterexample.",
+      "claim_ids": [
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
+      ],
+      "decision_reason": "EXP-000936 showed that direct readers have package-specific stale expected counts and stored artifacts; a bulk compatibility rewrite could mask unrelated drift. R-191 is selected first because its witness is finite and already Lean-cross-checked, and because its existing boundary explicitly keeps both A13 gates open.",
+      "evidence_refs": [
+        "verification/proof-evidence-map.json#index",
+        "verification/scripts/proof_evidence_map_io.py#load_map",
+        "codes/foundations/lean_a13_two_root_complete_scalar_owner_verify.py#proof_map-reader",
+        "strategy/pre-a13-two-root-complete-scalar-owner-manifest.json#formal_integration.expected_counts",
+        "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-22-lean-r191-two-root-complete-scalar-owner/integrated.json#assertion_summary",
+        "claims/GATES.md#A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE"
+      ],
+      "finding": "This is a bounded package-specific maintenance route. The current R-191 verifier still parses verification/proof-evidence-map.json as if it were the pre-sharding logical map, while the root is now a validated index over shards. A loader migration is therefore necessary for a meaningful current revalidation, but it must not be treated as a new A13 production-owner theorem or as evidence that the open raw-current, filtration and q-ledger obligations have been met.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": [
+          "R-191"
+        ]
+      },
+      "gate_ids": [
+        "A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE",
+        "A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION"
+      ],
+      "id": "EXP-000938",
+      "method": [
+        "Refresh only the R-191 verifier's logical map reader to verification/scripts/proof_evidence_map_io.py while preserving all registered mathematical inputs and no-overclaim assertions.",
+        "Recompute the R-191 source hashes, exploration/event ordinals, current catalog expectation and stored-child contract from the live authorities rather than importing R-189/R-190 changes.",
+        "Run primary, non-importing independent, Lean and integrated lanes with no-store before refreshing stored JSON, then compare the result and release surfaces."
+      ],
+      "next_action": "Patch only the R-191 reader, refresh its package-specific contract, and stop if any source, event, catalog or stored-child mutation cannot be justified independently.",
+      "provenance": "contemporaneous",
+      "question": "Can the R-191 finite two-root scalar-owner verifier be migrated to the lossless proof-evidence-map shard loader and revalidated without changing its mathematical witness or opening a production-owner claim?",
+      "recorded_at": "2026-08-22T23:30:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-000936",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-08-22",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-058",
+      "title": "Select package-specific R-191 reader revalidation after proof-evidence-map sharding",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",

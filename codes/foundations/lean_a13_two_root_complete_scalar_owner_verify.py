@@ -16,6 +16,11 @@ from pathlib import Path
 from typing import Any
 
 REPO = Path(__file__).resolve().parents[2]
+SCRIPTS_DIR = REPO / "verification" / "scripts"
+if str(SCRIPTS_DIR) not in sys.path:
+    sys.path.insert(0, str(SCRIPTS_DIR))
+from proof_evidence_map_io import load_map
+
 MANIFEST = REPO / "strategy" / "pre-a13-two-root-complete-scalar-owner-manifest.json"
 PRIMARY = REPO / "verification" / "scripts" / "lean_a13_two_root_complete_scalar_owner.py"
 INDEPENDENT = REPO / "codes" / "foundations" / "lean_a13_two_root_complete_scalar_owner_independent.py"
@@ -120,7 +125,7 @@ def main() -> int:
     interim_catalog = expected["catalog"] - 1
     check("catalog count", catalog_total >= expected["catalog"] or (catalog_total == interim_catalog and not args.output.exists()), catalog_total, f">= {expected['catalog']} or interim {interim_catalog}")
     check("claim count", summary.get("claim_count") == expected["claims"], summary.get("claim_count"), expected["claims"])
-    proof_map = json.loads((REPO / "verification" / "proof-evidence-map.json").read_text(encoding="utf-8"))
+    proof_map = load_map(REPO)
     check("result count", len(proof_map.get("reusable_results", [])) >= expected["results"], len(proof_map.get("reusable_results", [])), f">= {expected['results']}")
 
     stored = REPO / "claims" / "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION" / "runs" / "2026-08-22-lean-r191-two-root-complete-scalar-owner"
