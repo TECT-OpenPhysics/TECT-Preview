@@ -6,8 +6,8 @@
   },
   "authority_boundary": "This projection is complete by reference but is not a tier or proof authority. Claim status cards, proof notes/runs, RESULTS-LEDGER.md, negative-results/registry.md, explorations/log.jsonl, changelog/log.jsonl, todo/todo.json, and claims/GATES.md remain canonical.",
   "source_hashes": {
-    "RESULTS-LEDGER.md": "cebcbdc5ff66ec4bbb19befbd59e830a5ee2c62d06c757a1bed14609bc5d7b12",
-    "changelog/log.jsonl": "f07d34812ef2e3e366cbef5954783dfc4edb13441e7b8ba0854ee8e237b659bf",
+    "RESULTS-LEDGER.md": "6f02ea68123bdba3338865d92d58579865f8559350e8668c0eeb01247b8d4992",
+    "changelog/log.jsonl": "4ca7b781b1c1964b759e3aac651a0e31d1c0f8fb25a0584560e140ad432ad5fe",
     "claims/A1-KERNEL-CONV/status.json": "e5dd2b08ce58f1c3d2680b907e1469b828b2b6a3929d773f7bd84137efe36509",
     "claims/A1-KERNEL-IDENTITY/status.json": "dbaf6f1e80d994b94c9746cc7d342592fbc3638abb372d8e1c02841bb4e4d477",
     "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/status.json": "202e7514bb2d6fc029e61de95386981aedca15d81e9d6f71fc1570d77049d554",
@@ -58,27 +58,27 @@
     "claims/F2-BARYOGENESIS/status.json": "de39e5132355707dd49d4da4ef2da7b64d5f69802609c2f867d658114c3523a4",
     "claims/F3-INFLATION-CMB/status.json": "04b783d1f49f0ee453d4ccc3eff93cc7bca3c084dcdcdd036a023dd76d62331c",
     "claims/GATES.md": "8b2e79e8570fb392bb475ddad551ce551ce8775b22d180fbf547ca4b440c2c3f",
-    "explorations/log.jsonl": "14216c0d3f5f8ef3e74760a579312478a40527f7b040c13a156e89b1bc10c7b1",
+    "explorations/log.jsonl": "397fdee07e1dd42bc29a1c4121345d36d28aab78961a14d8684b93f9e3c7b820",
     "negative-results/registry.md": "546bbd65ee917eae68a9b1a3564431d3fcea72804d4aea79e061e002e097de0e",
-    "todo/todo.json": "ec2cfbd089b7c06eb8f82fbd4f5634c8ba882d440766b8ec3d5fec6a8e75359a"
+    "todo/todo.json": "076d8bca62b1f43cbda03d4d2f9558fe6870d1a48c32a14f2acb9f37259c6f52"
   },
   "coverage": {
     "status_cards": 49,
     "active_claims": 48,
     "refuted_claims": 1,
-    "reusable_results": 190,
+    "reusable_results": 191,
     "negative_records": 372,
-    "proof_explorations": 905,
+    "proof_explorations": 908,
     "exploration_verdicts": {
-      "advanced": 561,
+      "advanced": 563,
       "failed": 235,
-      "inconclusive": 79,
+      "inconclusive": 80,
       "parked": 30
     },
     "process_grade_lessons": 3,
-    "accepted_events": 686,
-    "tasks": 57,
-    "live_tasks": 11,
+    "accepted_events": 688,
+    "tasks": 58,
+    "live_tasks": 12,
     "completed_tasks": 46,
     "open_gates": 16,
     "current_route_gates": 18,
@@ -89,7 +89,7 @@
     "unordered_root_pdfs": 9,
     "proof_notes_without_sibling_pdf": 19,
     "proof_notes_with_incomplete_historical_footer": 118,
-    "run_json": 854,
+    "run_json": 857,
     "claim_manifests": 124,
     "bundle_manifests": 40,
     "bundle_embedded_manifests": 45
@@ -1482,6 +1482,7 @@
       }
     ],
     "claim_unbound_result_ids": [
+      "R-191",
       "R-174",
       "R-172",
       "R-170",
@@ -2938,6 +2939,13 @@
           "EXP-000905",
           "R-190"
         ]
+      },
+      {
+        "event": "20260822-r-191-complete-finite-two-root-a1-scalar-owner",
+        "claim_ids": [
+          "EXP-000906",
+          "R-191"
+        ]
       }
     ],
     "event_unregistered_negative_tags": [
@@ -2982,6 +2990,7 @@
         "A7-CLASSII-SELF-COUPLING-INTERPOLATION"
       ],
       "live_tasks": [
+        "T-058",
         "T-032",
         "T-048",
         "T-045",
@@ -3094,6 +3103,19 @@
       "note": "Policy: governance/legacy-research-knowledge-base.md. Contents remains the maintained full corpus; no wholesale copy or all-path completion target remains. TECT retains all 66 existing compatibility payloads, 49 newly selected readable reference copies, 115 selected source identities, 24 reviewed assessments, and the 50-source LEGACY-T055-GEOMETRY-EMPTY-REFERENCE-001 batch. FTS5 plus deterministic hashed-TFIDF retrieval uses hash-verified repository copies, with dense multilingual semantics explicitly unconfigured until a local model is pinned. Next: complete exact per-source extraction and dependency closure for the active batch, rerun under current conventions, independently audit, and integrate or reject only the surviving methods and results. Resolve other legacy claim pointers on demand from live gates. Selection, copies, summaries, search, or matching hashes do not change a claim tier or close a physical-vacuum, C6, Sector A, or Pre-A gate.",
       "created": "2026-08-14",
       "updated": "2026-08-14",
+      "blocked_by": [],
+      "status_normalized": "in_progress"
+    },
+    {
+      "id": "T-058",
+      "title": "A13: bounded complete finite production-cylinder integration trial",
+      "status": "in_progress",
+      "owner": "Codex",
+      "claim": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+      "gate": "A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE",
+      "note": "Bounded diagnostic; it does not restore T-050 as the main physical priority. Freeze one A1 side-16 two-root cylinder and map actual heat/root incidence, covariance bases, complement, historical low, forest, returned mean, source, and sextic owners exactly once into the R-183 reserve and R-184 temporal-overlap contracts. PASS requires a reproducible complete-owner identity plus a nonnegative q-ledger and headroom bound on the declared cylinder. FAIL requires a pinned counterfixture identifying the first unmet inequality or missing production map. Either outcome is T0 or negative/method evidence only until separately integrated. Stop after one complete pass/fail assessment; do not add isolated algebra checks first.",
+      "created": "2026-08-22",
+      "updated": "2026-08-22",
       "blocked_by": [],
       "status_normalized": "in_progress"
     },
@@ -3259,7 +3281,8 @@
         "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
       ],
       "live_tasks": [
-        "T-050"
+        "T-050",
+        "T-058"
       ],
       "definition": {
         "statement": "Prove a cutoff-uniform adapted-control estimate for the full renormalised Class-II action, `E V_J^ren(X+h(v)) >= -epsilon_6 E||X+h(v)||_6^6 -epsilon_v E sum_j||v_j||_2^2-C`, with `epsilon_6<gamma/6=0.27` and `epsilon_v<1/(2p)`. The flexible production potential inequality `U(r)>=(gamma/6-delta)r^3-|lambda|^3/(432 delta^2)` permits this range for any positive `delta<gamma/6-epsilon_6`; the older `gamma/12` condition was a conservative equal split. The proof must retain the A9 Hilbert--Schmidt cancellation for Gaussian fluctuations, spend the Cameron--Martin control energy only once across all shells, and show that no new interaction counterterm is generated. A shell-by-shell sum of the A13 one-shell estimate is forbidden because its `H_A(x)` term repeatedly pays Gaussian past energy, whose expectation grows with the cutoff by A11.",
@@ -5325,7 +5348,10 @@
           "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-22-lean-r189-a1-e3-two-mode-production-cylinder/primary.json",
           "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-22-lean-r190-a1-arbitrary-polarization-two-mode/independent.json",
           "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-22-lean-r190-a1-arbitrary-polarization-two-mode/integrated.json",
-          "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-22-lean-r190-a1-arbitrary-polarization-two-mode/primary.json"
+          "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-22-lean-r190-a1-arbitrary-polarization-two-mode/primary.json",
+          "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-22-lean-r191-two-root-complete-scalar-owner/independent.json",
+          "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-22-lean-r191-two-root-complete-scalar-owner/integrated.json",
+          "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-22-lean-r191-two-root-complete-scalar-owner/primary.json"
         ],
         "manifests": [
           "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_affine_gaussian_score_feedback_collar_boundary_manifest.json",
@@ -6493,9 +6519,11 @@
           "EXP-000902",
           "EXP-000903",
           "EXP-000904",
-          "EXP-000905"
+          "EXP-000905",
+          "EXP-000906",
+          "EXP-000908"
         ],
-        "latest_exploration_id": "EXP-000905",
+        "latest_exploration_id": "EXP-000908",
         "accepted_event_ids": [
           "20260721-close-t-049-negatively-with-the-a13-relative-ph",
           "20260721-complete-a13-gate-record-synchronization-and-re",
@@ -6691,9 +6719,10 @@
           "20260822-r-187-adapted-near-obstruction-lean-cross-check",
           "20260822-r-188-signed-jensen-defect-telescope-lean-cross",
           "20260822-r-189-a1-e3-two-mode-production-cylinder-positi",
-          "20260822-r-190-a1-arbitrary-polarization-two-mode-positi"
+          "20260822-r-190-a1-arbitrary-polarization-two-mode-positi",
+          "20260822-r-191-complete-finite-two-root-a1-scalar-owner"
         ],
-        "latest_event_id": "20260822-r-190-a1-arbitrary-polarization-two-mode-positi",
+        "latest_event_id": "20260822-r-191-complete-finite-two-root-a1-scalar-owner",
         "live_task_gate_ids": [
           "A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE"
         ],
@@ -7226,8 +7255,10 @@
         "negative_tags": [
           "AUDIT-2026-07-19-A3-SHARED-BUNDLE-INTEGRITY"
         ],
-        "exploration_ids": [],
-        "latest_exploration_id": "",
+        "exploration_ids": [
+          "EXP-000907"
+        ],
+        "latest_exploration_id": "EXP-000907",
         "accepted_event_ids": [
           "20260623-a3-split-uv-t6-correlators-open",
           "20260623-a3-graphwise-convergence-proved-t6",
@@ -7238,9 +7269,10 @@
           "20260623-a2-a3-t6-reproduction-bundles",
           "20260623-a2-a3-consolidation-v11-paper-grade",
           "20260623-a1-split-identity-branch-manifest",
-          "20260719-replace-defective-historical-a3-shared-bundle-w"
+          "20260719-replace-defective-historical-a3-shared-bundle-w",
+          "20260822-if-tect-ym-0001-scope-preserving-tect-to-yang-m"
         ],
-        "latest_event_id": "20260719-replace-defective-historical-a3-shared-bundle-w",
+        "latest_event_id": "20260822-if-tect-ym-0001-scope-preserving-tect-to-yang-m",
         "live_task_gate_ids": [],
         "route_gate_ids": []
       }
@@ -7453,17 +7485,20 @@
           "AUDIT-2026-07-19-A4-VERIFIER-TIER-DRIFT",
           "AUDIT-2026-07-19-A4-Q0-ZERO-SHELL-BOUNDARY"
         ],
-        "exploration_ids": [],
-        "latest_exploration_id": "",
+        "exploration_ids": [
+          "EXP-000907"
+        ],
+        "latest_exploration_id": "EXP-000907",
         "accepted_event_ids": [
           "20260718-p4-scalar-spectral-constructive-measure-closed",
           "20260718-p4-integrated-evidence-boundary-aligned-with-t5",
           "20260718-p4-scalar-constructive-measure-promoted-to-scop",
           "20260719-prepare-integrated-a4-t6-referee-package-and-re",
           "20260719-repair-a4-q0-0-shell-boundary-defect-before-pub",
-          "20260719-publish-corrected-a4-scalar-constructive-t6-sup"
+          "20260719-publish-corrected-a4-scalar-constructive-t6-sup",
+          "20260822-if-tect-ym-0001-scope-preserving-tect-to-yang-m"
         ],
-        "latest_event_id": "20260719-publish-corrected-a4-scalar-constructive-t6-sup",
+        "latest_event_id": "20260822-if-tect-ym-0001-scope-preserving-tect-to-yang-m",
         "live_task_gate_ids": [],
         "route_gate_ids": []
       }
@@ -8684,9 +8719,10 @@
           "EXP-000859",
           "EXP-000860",
           "EXP-000862",
-          "EXP-000863"
+          "EXP-000863",
+          "EXP-000907"
         ],
-        "latest_exploration_id": "EXP-000863",
+        "latest_exploration_id": "EXP-000907",
         "accepted_event_ids": [
           "20260605-m1-migration-sector-b-evidence-chain-migrated-r",
           "20260605-m1-reorg-archive-per-tag-layout-first-tsv2-theo",
@@ -8775,9 +8811,10 @@
           "20260814-adopt-literature-first-proof-gate-and-legacy-ev",
           "20260814-r-169-v1-3-reading-h-native-owner-bcc-realizati",
           "20260814-r-169-v1-4-legacy-sma-common-bohr-moment-radial",
-          "20260814-r-170-v1-0-initial-literature-applicability-aud"
+          "20260814-r-170-v1-0-initial-literature-applicability-aud",
+          "20260822-if-tect-ym-0001-scope-preserving-tect-to-yang-m"
         ],
-        "latest_event_id": "20260814-r-170-v1-0-initial-literature-applicability-aud",
+        "latest_event_id": "20260822-if-tect-ym-0001-scope-preserving-tect-to-yang-m",
         "live_task_gate_ids": [],
         "route_gate_ids": []
       }
@@ -9059,9 +9096,10 @@
         "negative_tags": [],
         "exploration_ids": [
           "EXP-000860",
-          "EXP-000862"
+          "EXP-000862",
+          "EXP-000907"
         ],
-        "latest_exploration_id": "EXP-000862",
+        "latest_exploration_id": "EXP-000907",
         "accepted_event_ids": [
           "20260605-m1-migration-sector-b-evidence-chain-migrated-r",
           "20260605-m1-reorg-archive-per-tag-layout-first-tsv2-theo",
@@ -9114,9 +9152,10 @@
           "20260612-main-line-synthesis-t013-260612-published-opera",
           "20260612-all-four-t-013-synthesis-notes-confirmed-and-re",
           "20260814-r-169-v1-3-reading-h-native-owner-bcc-realizati",
-          "20260814-r-169-v1-4-legacy-sma-common-bohr-moment-radial"
+          "20260814-r-169-v1-4-legacy-sma-common-bohr-moment-radial",
+          "20260822-if-tect-ym-0001-scope-preserving-tect-to-yang-m"
         ],
-        "latest_event_id": "20260814-r-169-v1-4-legacy-sma-common-bohr-moment-radial",
+        "latest_event_id": "20260822-if-tect-ym-0001-scope-preserving-tect-to-yang-m",
         "live_task_gate_ids": [],
         "route_gate_ids": []
       }
@@ -9204,9 +9243,10 @@
           "EXP-000847",
           "EXP-000851",
           "EXP-000861",
-          "EXP-000862"
+          "EXP-000862",
+          "EXP-000907"
         ],
-        "latest_exploration_id": "EXP-000862",
+        "latest_exploration_id": "EXP-000907",
         "accepted_event_ids": [
           "20260623-migration-batch4-b3-reframe-continuum",
           "20260623-operator-verdicts-b3-retire-b4-massgap-scope",
@@ -9214,9 +9254,10 @@
           "20260814-r-169-v1-0-truncated-octahedron-realization-and",
           "20260814-legacy-research-knowledge-base-cutover-and-firs",
           "20260814-correct-t-057-to-selective-main-line-legacy-pre",
-          "20260814-r-169-v1-4-legacy-sma-common-bohr-moment-radial"
+          "20260814-r-169-v1-4-legacy-sma-common-bohr-moment-radial",
+          "20260822-if-tect-ym-0001-scope-preserving-tect-to-yang-m"
         ],
-        "latest_event_id": "20260814-r-169-v1-4-legacy-sma-common-bohr-moment-radial",
+        "latest_event_id": "20260822-if-tect-ym-0001-scope-preserving-tect-to-yang-m",
         "live_task_gate_ids": [],
         "route_gate_ids": []
       }
@@ -9295,18 +9336,20 @@
           "EXP-000857",
           "EXP-000858",
           "EXP-000860",
-          "EXP-000862"
+          "EXP-000862",
+          "EXP-000907"
         ],
-        "latest_exploration_id": "EXP-000862",
+        "latest_exploration_id": "EXP-000907",
         "accepted_event_ids": [
           "20260623-operator-verdicts-b3-retire-b4-massgap-scope",
           "20260814-r-169-v1-0-truncated-octahedron-realization-and",
           "20260814-r-169-v1-1-pinned-p1-bcc-periodic-realization-e",
           "20260814-r-169-v1-2-reading-h-covariance-to-p1-interface",
           "20260814-r-169-v1-3-reading-h-native-owner-bcc-realizati",
-          "20260814-r-169-v1-4-legacy-sma-common-bohr-moment-radial"
+          "20260814-r-169-v1-4-legacy-sma-common-bohr-moment-radial",
+          "20260822-if-tect-ym-0001-scope-preserving-tect-to-yang-m"
         ],
-        "latest_event_id": "20260814-r-169-v1-4-legacy-sma-common-bohr-moment-radial",
+        "latest_event_id": "20260822-if-tect-ym-0001-scope-preserving-tect-to-yang-m",
         "live_task_gate_ids": [],
         "route_gate_ids": [
           "ESTIMATOR-UPGRADE"
@@ -9361,13 +9404,16 @@
       "evidence_links": {
         "result_ids": [],
         "negative_tags": [],
-        "exploration_ids": [],
-        "latest_exploration_id": "",
+        "exploration_ids": [
+          "EXP-000907"
+        ],
+        "latest_exploration_id": "EXP-000907",
         "accepted_event_ids": [
           "20260623-operator-review2-a2v12-b4-open-c6-blocked",
-          "20260623-a2-t6-approved-b4-footer-fixed"
+          "20260623-a2-t6-approved-b4-footer-fixed",
+          "20260822-if-tect-ym-0001-scope-preserving-tect-to-yang-m"
         ],
-        "latest_event_id": "20260623-a2-t6-approved-b4-footer-fixed",
+        "latest_event_id": "20260822-if-tect-ym-0001-scope-preserving-tect-to-yang-m",
         "live_task_gate_ids": [],
         "route_gate_ids": []
       }
@@ -9428,16 +9474,18 @@
         "result_ids": [],
         "negative_tags": [],
         "exploration_ids": [
-          "EXP-000592"
+          "EXP-000592",
+          "EXP-000907"
         ],
-        "latest_exploration_id": "EXP-000592",
+        "latest_exploration_id": "EXP-000907",
         "accepted_event_ids": [
           "20260623-migration-batch3-b4-massgap-verbatim",
           "20260623-operator-verdicts-b3-retire-b4-massgap-scope",
           "20260623-operator-review2-a2v12-b4-open-c6-blocked",
-          "20260623-a2-t6-approved-b4-footer-fixed"
+          "20260623-a2-t6-approved-b4-footer-fixed",
+          "20260822-if-tect-ym-0001-scope-preserving-tect-to-yang-m"
         ],
-        "latest_event_id": "20260623-a2-t6-approved-b4-footer-fixed",
+        "latest_event_id": "20260822-if-tect-ym-0001-scope-preserving-tect-to-yang-m",
         "live_task_gate_ids": [],
         "route_gate_ids": []
       }
@@ -10302,8 +10350,10 @@
           "AUDIT-2026-06-08-scscope-lift-overclaim",
           "NG-2026-06-07-scscope-endpoint-joint"
         ],
-        "exploration_ids": [],
-        "latest_exploration_id": "",
+        "exploration_ids": [
+          "EXP-000907"
+        ],
+        "latest_exploration_id": "EXP-000907",
         "accepted_event_ids": [
           "20260605-step-5b-reduction-pattern-generic-gershgorin-re",
           "20260605-step-5b-closed-region-matching-lemmas-derived-n",
@@ -10382,9 +10432,10 @@
           "20260622-r-043-round-2-corrections-note-pdf-commit-unblo",
           "20260622-r-043-appendix-a-completed-the-full-self-contai",
           "20260622-r-043-freeze-patch-a-3-a-4-degenerate-case-m-2",
-          "20260622-infra-google-drive-proof-commits-comprehensive"
+          "20260622-infra-google-drive-proof-commits-comprehensive",
+          "20260822-if-tect-ym-0001-scope-preserving-tect-to-yang-m"
         ],
-        "latest_event_id": "20260622-infra-google-drive-proof-commits-comprehensive",
+        "latest_event_id": "20260822-if-tect-ym-0001-scope-preserving-tect-to-yang-m",
         "live_task_gate_ids": [],
         "route_gate_ids": []
       }
@@ -11331,9 +11382,10 @@
           "EXP-000871",
           "EXP-000872",
           "EXP-000873",
-          "EXP-000874"
+          "EXP-000874",
+          "EXP-000907"
         ],
-        "latest_exploration_id": "EXP-000874",
+        "latest_exploration_id": "EXP-000907",
         "accepted_event_ids": [
           "20260609-toe-completeness-audit-ledger-18-29-claims-ever",
           "20260623-operator-verdicts-b3-retire-b4-massgap-scope",
@@ -11489,9 +11541,10 @@
           "20260821-t-054-common-input-owner-split-audit-2026-08-21",
           "20260821-historical-t-055-regression-reader-contract-cor",
           "20260821-t-054-common-input-ledger-audit-leaves-current",
-          "20260821-t-055-common-parent-audit-keeps-physical-empty"
+          "20260821-t-055-common-parent-audit-keeps-physical-empty",
+          "20260822-if-tect-ym-0001-scope-preserving-tect-to-yang-m"
         ],
-        "latest_event_id": "20260821-t-055-common-parent-audit-keeps-physical-empty",
+        "latest_event_id": "20260822-if-tect-ym-0001-scope-preserving-tect-to-yang-m",
         "live_task_gate_ids": [
           "C6-BCC-PREMISE-BLOCKED",
           "LEGACY-SELECTIVE-INDEX-AND-ON-DEMAND-REVALIDATION"
@@ -12417,6 +12470,34 @@
   ],
   "reusable_results": [
     {
+      "id": "R-191",
+      "anchor": "r-191",
+      "title": "Complete finite two-root A1 scalar owner telescope",
+      "summary": "R-191 v1.0 is a T0 claim-nonbearing Lean cross-check under EXP-000906. It binds the corrected A1 two-mode moments, the R-177 common-heat/root-1/root-2/future incidence, the exact signed endpoint telescope, and the feedback chain-rule coordinates; a finite fixture has negative intermediate stages but positive total increment. The production raw-current q-ledger, forest/source/sextic owner, A13, Sector-A and Pre-A remain open",
+      "detail_title": "Complete finite two-root A1 scalar owner telescope",
+      "detail": {
+        "result_id": "R-191 is a T0, claim-nonbearing finite Lean cross-check established by EXP-000906.",
+        "scope": "The hash-pinned A1 side-16 two-mode scalar owner uses the corrected period moments m4=3(a^4+b^4)/8+3a^2b^2/2 and m6=5(a^6+b^6)/16+105a^4b^2/32+45a^2b^4/16. It is coupled to the actual R-177 finite order common_heat -> root_1 -> root_2 -> future_residual, with feedback coefficient beta=1/2, and to the R-176 root labels k,2k. R-178 remains a separately pinned ordered phase cross-owner input.",
+        "exact_finite_result": "Lean, the primary Fraction-only lane, and the stdlib-only independent lane prove the three-stage signed telescope. In the registered fixture the increments are 332706119/20480000000, -84198439/20480000000, and -8885057/4096000000; their exact sum is the positive endpoint increment 40816479/4096000000. The endpoint chain rule is dr1=df1+(1/2)df2, dr2=df2, with the registered exact rational derivatives. Thus a positive endpoint does not license a positive payment at each intermediate root stage.",
+        "boundary": "This is a finite owner-coordinate prerequisite only. It does not prove the production raw-current q-ledger, signed forest-current lower bound, positive collar/headroom, arbitrary progressive/revisit control, OVERLAP_src, Nelson, an interacting measure, either A13 gate, T-050, Sector-A, Pre-A, physical-empty comparison, a thermodynamic/continuum limit, or a tier change. A13's two gates remain open. No new negative. No R-191 PDF is issued.",
+        "proven_in": "R-191 certificate, Lean entrypoint, primary script, independent script, integrated verifier, scope note, and the saved run artefacts. No R-191 PDF is issued."
+      },
+      "normalized_detail": {
+        "statement": "",
+        "proof_anchor": "R-191 certificate, Lean entrypoint, primary script, independent script, integrated verifier, scope note, and the saved run artefacts. No R-191 PDF is issued.",
+        "reuse": "",
+        "boundary": "This is a finite owner-coordinate prerequisite only. It does not prove the production raw-current q-ledger, signed forest-current lower bound, positive collar/headroom, arbitrary progressive/revisit control, OVERLAP_src, Nelson, an interacting measure, either A13 gate, T-050, Sector-A, Pre-A, physical-empty comparison, a thermodynamic/continuum limit, or a tier change. A13's two gates remain open. No new negative. No R-191 PDF is issued.",
+        "publication_target": ""
+      },
+      "claim_refs": [],
+      "claim_ref_basis": {},
+      "family_refs": [],
+      "accepted_event_ids": [
+        "20260822-r-191-complete-finite-two-root-a1-scalar-owner"
+      ],
+      "co_recorded_negative_tags": []
+    },
+    {
       "id": "R-190",
       "anchor": "r-190",
       "title": "A1 arbitrary-polarization two-mode positivity Lean cross-check",
@@ -12832,7 +12913,8 @@
       "accepted_event_ids": [
         "20260821-r-178-complete-cross-owner-phase-differentiatio",
         "20260821-r-178-event-673-script-path-correction-2026-08",
-        "20260821-r-182-feedback-pulled-cross-hessian-margin-2026"
+        "20260821-r-182-feedback-pulled-cross-hessian-margin-2026",
+        "20260822-r-191-complete-finite-two-root-a1-scalar-owner"
       ],
       "co_recorded_negative_tags": []
     },
@@ -12865,7 +12947,8 @@
       "family_refs": [],
       "accepted_event_ids": [
         "20260821-r-177-two-root-heat-incidence-ledger-2026-08-21",
-        "20260821-r-181-two-root-feedback-mixed-gram-cross-check"
+        "20260821-r-181-two-root-feedback-mixed-gram-cross-check",
+        "20260822-r-191-complete-finite-two-root-a1-scalar-owner"
       ],
       "co_recorded_negative_tags": []
     },
@@ -12898,7 +12981,8 @@
       "family_refs": [],
       "accepted_event_ids": [
         "20260821-r-176-a1-two-root-cholesky-covariance-witnesses",
-        "20260821-r-177-two-root-heat-incidence-ledger-2026-08-21"
+        "20260821-r-177-two-root-heat-incidence-ledger-2026-08-21",
+        "20260822-r-191-complete-finite-two-root-a1-scalar-owner"
       ],
       "co_recorded_negative_tags": []
     },
@@ -72773,6 +72857,166 @@
       "task_id": "T-050",
       "title": "Test arbitrary internal polarization on the A1 two-mode production cylinder",
       "verdict": "advanced"
+    },
+    {
+      "boundary": "No complete production raw-current one-use q-ledger, signed forest-current lower bound, positive collar/headroom, arbitrary progressive/revisit extension, OVERLAP_src, Nelson, interacting measure, A13/T-050 closure, transverse stability, physical-empty comparison, removal, continuum limit, Sector-A or Pre-A conclusion is advanced.",
+      "claim_ids": [
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
+      ],
+      "decision_reason": "This is nonduplicate with R-177 because it adds the actual A1 nonlinear polynomial owner and chain-rule derivatives, and nonduplicate with R-178 because it supplies the amplitude/incidence telescope rather than only the phase cross derivative. It remains T0 claim-nonbearing: the scalar cylinder is finite, the Class-II/heat/forest/source/sextic maps are not identified as a cutoff-uniform production owner, and the observed positive endpoint fixture is not a lower bound for arbitrary progressive controls.",
+      "evidence_refs": [
+        "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/production_functional_manifest.json#proposed_reference_functional",
+        "strategy/pre-a13-a1-arbitrary-polarization-two-mode-manifest.json#derived_coefficients",
+        "strategy/pre-a-a13-a1-two-root-cholesky-covariance-witness-manifest.json#files",
+        "strategy/pre-a-a13-two-root-heat-incidence-ledger-manifest.json#registered_inputs",
+        "strategy/pre-a-a13-two-root-complete-cross-owner-differentiation-manifest.json#registered_inputs",
+        "verification/lean/Tect/R191.lean#incidence_telescope",
+        "verification/scripts/lean_a13_two_root_complete_scalar_owner.py#derive",
+        "codes/foundations/lean_a13_two_root_complete_scalar_owner_independent.py#derive",
+        "codes/foundations/lean_a13_two_root_complete_scalar_owner_verify.py#main"
+      ],
+      "finding": "The complete finite scalar endpoint is an exact four-stage telescope. With g1=h+r1, g2=h+(1/2)g1+r2, A=g1+f1 and B=g2+f2, E(A,B)-E(h,h) equals the sum of the common-to-root-1, root-1-to-root-2 and root-2-to-future increments without reanchoring. Its exact gradient is (E_a,E_b); the legal feedback derivatives are d_r1=E_a+(1/2)E_b, d_r2=E_b, d_f1=E_a and d_f2=E_b. The registered fixture q1=q2=1/8, h=1/5, r1=1/10, r2=-1/20, f1=1/20, f2=-1/10 gives stage increments 332706119/20480000000, -84198439/20480000000 and -8885057/4096000000, while the total endpoint increment is 40816479/4096000000 > 0. Thus a complete endpoint identity does not license a rootwise positive payment; the negative intermediate increments are a finite warning that source/forest/returned-mean control must be applied to the signed recombined owner.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": []
+      },
+      "gate_ids": [
+        "A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE",
+        "A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION"
+      ],
+      "id": "EXP-000906",
+      "method": [
+        "Pin the A1 F_ref nonlinear coefficients and the R-176 actual k and 2k covariance-root witness, then use the R-177 incidence g1=h+r1 and g2=h+(1/2)g1+r2.",
+        "Derive the exact side-16 scalar two-mode moments m4=3(a^4+b^4)/8+3a^2b^2/2 and m6=5(a^6+b^6)/16+105a^4b^2/32+45a^2b^4/16, and define E=q1 a^2+q2 b^2-(43/400)m4+(27/100)m6.",
+        "Insert the common, root-1, root-2 and future stages in that order; differentiate the endpoint owner with respect to r1,r2,f1,f2 by an exact polynomial chain rule; retain R-178 phase cross blocks as a separately hash-pinned predecessor rather than silently merging them into the scalar amplitude owner.",
+        "Run a Fraction-only independent lane and Lean ring identities, including a nonzero fixture in which one intermediate root increment is negative although the total endpoint increment is positive."
+      ],
+      "next_action": "Use this exact endpoint and derivative owner as the finite algebraic core for a genuine raw reveal derivative. Add the production heat/forest/complement/returned-mean/source/sextic maps, then test the q_k ledger and headroom uniformly before attempting either A13 gate.",
+      "provenance": "contemporaneous",
+      "question": "Can the hash-pinned finite A1 two-mode nonlinear owner be combined with the R-177 common-heat/root-2 feedback incidence and the R-178 ordered cross-owner boundary into one exact endpoint telescope and chain-rule differentiation, while retaining the actual R-176 covariance-root bridge and without closing either A13 gate?",
+      "recorded_at": "2026-08-22T01:00:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-000905",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-08-22",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-050",
+      "title": "Complete finite two-root A1 owner telescope and chain-rule differentiation",
+      "verdict": "advanced"
+    },
+    {
+      "boundary": "No TECT claim, gate, tier, lifecycle, or physical-vacuum conclusion changes. No Yang-Mills record is copied or mutated; no obligation is promoted or closed. The Yang-Mills owner-literal mismatch is reported but not auto-corrected. Release PASS, if obtained, remains repository verification only and is not analytic proof, independent cross-project audit, staging, commit, push, or bilateral integration.",
+      "claim_ids": [
+        "A3-PERTURBATIVE-CONTINUUM-CORRELATORS",
+        "A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE",
+        "B1-RH-ENUM",
+        "B2-PROPA-HLAYER",
+        "B3-BCC-STRUCT",
+        "B3-RH-TESTED-STRUCTURE-RANKING",
+        "B4-CONE-CURVATURE-ANCHOR",
+        "B4-MASS-GAP",
+        "B5-BEYOND-LAYER-BOUND",
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "The crosswalk is useful only if model and limit identity are preserved. Treating relative free energy, local curvature, or restricted scalar correlations as a Yang-Mills vacuum or mass gap would violate both projects' live non-claims. The blocked interface records exactly the reusable architecture and the missing bridge theorems without changing a canonical claim.",
+      "evidence_refs": [
+        "claims/B1-RH-ENUM/status.json#L1-L80",
+        "claims/B1-RH-ENUM/literature-applicability.md#L10-L70",
+        "claims/B3-BCC-STRUCT/status.json#L1-L80",
+        "claims/B3-RH-TESTED-STRUCTURE-RANKING/status.json#L1-L80",
+        "claims/B4-CONE-CURVATURE-ANCHOR/status.json#L1-L80",
+        "claims/B4-MASS-GAP/status.json#L1-L80",
+        "claims/A3-PERTURBATIVE-CONTINUUM-CORRELATORS/status.json#L1-L80",
+        "claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/status.json#L1-L80",
+        "claims/GATES.md#c6-bcc-premise-blocked",
+        "strategy/tect-yang-mills-interface-manifest.json#L1-L260",
+        "strategy/tect-yang-mills-interface-package-260822.md#L1-L220"
+      ],
+      "finding": "The TECT export separates five packages. B1/B2/B5 provide only the internal relative sign F_total[Q]-F_total[G_*]>0 in the registered C_full owner; B3's BCC structural route is refuted and its tested-ensemble successor is only estimator-grade; B4 provides local metastable cone curvature but explicitly no mass gap; A3 provides d=3 scalar order-by-order spectral-continuum correlators; A4 provides a fixed period-16 T3 scalar Gibbs measure and declared correlation cutoff removal. None supplies a d=4 compact-simple gauge model, physical-empty sign, R4 vacuum, OS/Wightman reconstruction, regulator/volume-uniform physical-sector gap, or spectral passage. The TECT-owned interface therefore remains blocked, matching the live Yang-Mills counterpart status while leaving all four obligations open.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [
+          "R-2026-06-23-b3-bcc-structural-selection"
+        ],
+        "results": []
+      },
+      "gate_ids": [
+        "C6-BCC-PREMISE-BLOCKED",
+        "LEGACY-SELECTIVE-INDEX-AND-ON-DEMAND-REVALIDATION"
+      ],
+      "id": "EXP-000907",
+      "method": [
+        "Read the live TECT claim statuses, the C6-BCC-PREMISE-BLOCKED gate, task dashboard, B1 literature-applicability firewall, and targeted proof-evidence-map entries.",
+        "Read the live Yang-Mills obligation records and its existing IF-TECT-YM-0001 counterpart without mutating the Yang-Mills repository.",
+        "For each TECT result, freeze model, dimension, field/gauge content, regulator/volume/boundary conditions, normalization/reference, observable class, sign or bound, stationarity/stability assumptions, retained limits, provided and missing obligation content, evidence level, non-claims, and the next bridge theorem.",
+        "Apply the controlled interface statuses and preserve the physical-empty, OS/Wightman, Hamiltonian spectral, and bilateral-audit gates."
+      ],
+      "next_action": "Keep IF-TECT-YM-0001 blocked. The first TECT-side bounded test is a preregistered finite-regulator physical-empty branch E under the same F_total owner, with all state-dependent finite parts fixed, followed by a sign decision for F_total[G_*]-F_total[E], stationarity, and symmetry-projected transverse stability. Continuum/thermodynamic control and a gauge-observable/OS/Hamiltonian bridge are separate later theorems before Yang-Mills can reassess OBL-060/090/100.",
+      "provenance": "contemporaneous",
+      "question": "Which live TECT free-energy, vacuum, curvature, perturbative-continuum, and finite-volume measure results can be mapped to Yang-Mills OBL-060, OBL-080, OBL-090, and OBL-100 without importing a scalar or variational result as a gauge-theory vacuum or mass-gap theorem?",
+      "recorded_at": "2026-08-22T02:00:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-000863",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-08-22",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-055",
+      "title": "Scope-preserving TECT export to Yang-Mills OBL-060/080/090/100",
+      "verdict": "inconclusive"
+    },
+    {
+      "boundary": "This registration changes no claim, tier, lifecycle, physical-vacuum conclusion, Sector-A status, or Pre-A status. Passing a finite cylinder is only T0 candidate/method evidence until a separate complete-owner and uniformity proof is recorded. Failure is local to the pinned cylinder unless a broader theorem is separately proved.",
+      "claim_ids": [
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
+      ],
+      "decision_reason": "The existing T-050 note correctly prevents an unbounded return to the parked main physical programme, but it did not register a single finite integration test with an explicit failure outcome. The bounded trial preserves T-054 as the primary Pre-A task and converts the recent finite prerequisites into a falsifiable diagnostic.",
+      "evidence_refs": [
+        "todo/todo.json#T-050",
+        "todo/todo.json#T-058",
+        "explorations/log.jsonl#EXP-000898",
+        "explorations/log.jsonl#EXP-000899",
+        "explorations/log.jsonl#EXP-000906"
+      ],
+      "finding": "R-191 now supplies a finite two-root A1 endpoint telescope and chain-rule core, while R-183 and R-184 give exact finite reserve and overlap contracts. The missing step is not another isolated algebra lemma: it is one complete mapping of heat/root incidence, covariance, complement, historical low, forest, returned mean, source, and sextic owners into that fixed cylinder. T-058 fixes this pass-or-fail integration test and its stop rule.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": []
+      },
+      "gate_ids": [
+        "A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE",
+        "A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION"
+      ],
+      "id": "EXP-000908",
+      "method": [
+        "Read the T-050 parked-route condition, the R-183 reserve threshold, the R-184 overlap identity, and the R-191 endpoint telescope.",
+        "Register a bounded task with explicit inputs, PASS/FAIL criteria, no-overclaim boundary, and a stop rule."
+      ],
+      "next_action": "Execute T-058 before any further isolated A13 algebra checks: freeze the cylinder manifest, assign every term once, test the R-183 reserve and R-184 temporal contract, then record either a reproducible finite pass with its residual scope or a pinned first-failure counterfixture. Return to T-054 after that one assessment.",
+      "provenance": "contemporaneous",
+      "question": "Can one hash-pinned A1 side-16 two-root production cylinder assemble every actual owner contribution exactly once and either satisfy the R-183 reserve plus R-184 overlap contracts or expose the first failed inequality?",
+      "recorded_at": "2026-08-22T02:00:01Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-000906",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-08-22",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-058",
+      "title": "Register the bounded complete finite production-cylinder integration trial",
+      "verdict": "advanced"
     }
   ],
   "inconclusive_or_parked_exploration_ids": [
@@ -72884,7 +73128,8 @@
     "EXP-000873",
     "EXP-000874",
     "EXP-000877",
-    "EXP-000885"
+    "EXP-000885",
+    "EXP-000907"
   ],
   "process_grade_lessons": [
     "Round-summary over-claim incident (legacy 2026-04-24): higher-tier summaries may never outrun pillar-level notes → single-source-of-truth rule (`status.json` → generated `CLAIMS.md`).",
@@ -99855,6 +100100,130 @@
       "result_link_basis": {
         "R-190": "explicit_result_id"
       }
+    },
+    {
+      "id": "20260822-r-191-complete-finite-two-root-a1-scalar-owner",
+      "date": "2026-08-22",
+      "header": "[R-191 complete finite two-root A1 scalar owner telescope] - 2026-08-22",
+      "claim_ids": [
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "EXP-000906",
+        "R-191"
+      ],
+      "keywords": [
+        "A13-open",
+        "EXP-000906",
+        "Lean",
+        "R-191",
+        "complete-owner",
+        "finite-cylinder",
+        "signed-telescope",
+        "two-root"
+      ],
+      "negative_results": [],
+      "notes": [
+        "strategy/pre-a13-two-root-complete-scalar-owner-manifest.json",
+        "strategy/pre-a13-two-root-complete-scalar-owner-certificate-260822.md",
+        "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/a13-two-root-complete-scalar-owner-260822.md",
+        "RESULTS-LEDGER.md",
+        "ROADMAP.md",
+        "strategy/INDEX.md"
+      ],
+      "scripts": [
+        "verification/scripts/lean_a13_two_root_complete_scalar_owner.py",
+        "codes/foundations/lean_a13_two_root_complete_scalar_owner_independent.py",
+        "codes/foundations/lean_a13_two_root_complete_scalar_owner_verify.py"
+      ],
+      "raw": "## [R-191 complete finite two-root A1 scalar owner telescope] - 2026-08-22\n\nEXP-000906 records R-191 as a T0, claim-nonbearing complete finite owner checkpoint. Lean checks the exact A1 moments, the R-177 feedback incidence, and the signed telescope; one finite fixture has positive total increment with negative intermediate stages.\n\nR-176 root provenance and the R-178 ordered phase boundary remain separate hash-pinned inputs. No rootwise positive payment, physical conclusion, or limit transfer is claimed. The production q-ledger and A13 remain open.\n\nNo R-191 PDF is issued.\n\n",
+      "claim_refs": [
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
+      ],
+      "claim_ref_basis": {
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION": "explicit_claim_ids"
+      },
+      "unresolved_claim_ids": [
+        "EXP-000906",
+        "R-191"
+      ],
+      "result_ids": [
+        "R-176",
+        "R-177",
+        "R-178",
+        "R-191"
+      ],
+      "linked_result_ids": [
+        "R-176",
+        "R-177",
+        "R-178",
+        "R-191"
+      ],
+      "result_link_basis": {
+        "R-176": "explicit_result_id",
+        "R-177": "explicit_result_id",
+        "R-178": "explicit_result_id",
+        "R-191": "explicit_result_id"
+      }
+    },
+    {
+      "id": "20260822-if-tect-ym-0001-scope-preserving-tect-to-yang-m",
+      "date": "2026-08-22",
+      "header": "[[IF-TECT-YM-0001] Scope-preserving TECT-to-Yang-Mills evidence export] - 2026-08-22",
+      "claim_ids": [
+        "A3-PERTURBATIVE-CONTINUUM-CORRELATORS",
+        "A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE",
+        "B1-RH-ENUM",
+        "B2-PROPA-HLAYER",
+        "B3-BCC-STRUCT",
+        "B3-RH-TESTED-STRUCTURE-RANKING",
+        "B4-CONE-CURVATURE-ANCHOR",
+        "B4-MASS-GAP",
+        "B5-BEYOND-LAYER-BOUND",
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "keywords": [
+        "OBL-060",
+        "OBL-080",
+        "OBL-090",
+        "OBL-100",
+        "Yang-Mills",
+        "crosswalk",
+        "physical-empty"
+      ],
+      "negative_results": [],
+      "notes": [
+        "strategy/tect-yang-mills-interface-package-260822.md",
+        "strategy/tect-yang-mills-interface-manifest.json"
+      ],
+      "scripts": [],
+      "raw": "## [[IF-TECT-YM-0001] Scope-preserving TECT-to-Yang-Mills evidence export] - 2026-08-22\n\nAdded the TECT-owned blocked counterpart for IF-TECT-YM-0001. The package separates the scoped Reading-H candidate-versus-G_* sign, retired BCC structural route, local cone-curvature boundary, d=3 scalar perturbative continuum correlators, and fixed-volume scalar Gibbs measure. It maps only method and assumption-level relevance to OBL-060/080/090/100. No physical-empty sign, Reading-H-to-P1 intertwiner, gauge/OS reconstruction, uniform physical-sector spectral gap, bilateral acceptance, claim promotion, or obligation closure follows. EXP-000907 records the reusable scope verdict; the Yang-Mills owner-literal mismatch is reported without mutating the counterpart.\n\n",
+      "claim_refs": [
+        "A3-PERTURBATIVE-CONTINUUM-CORRELATORS",
+        "A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE",
+        "B1-RH-ENUM",
+        "B2-PROPA-HLAYER",
+        "B3-BCC-STRUCT",
+        "B3-RH-TESTED-STRUCTURE-RANKING",
+        "B4-CONE-CURVATURE-ANCHOR",
+        "B4-MASS-GAP",
+        "B5-BEYOND-LAYER-BOUND",
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "claim_ref_basis": {
+        "A3-PERTURBATIVE-CONTINUUM-CORRELATORS": "explicit_claim_ids",
+        "A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE": "explicit_claim_ids",
+        "B1-RH-ENUM": "explicit_claim_ids",
+        "B2-PROPA-HLAYER": "explicit_claim_ids",
+        "B3-BCC-STRUCT": "explicit_claim_ids",
+        "B3-RH-TESTED-STRUCTURE-RANKING": "explicit_claim_ids",
+        "B4-CONE-CURVATURE-ANCHOR": "explicit_claim_ids",
+        "B4-MASS-GAP": "explicit_claim_ids",
+        "B5-BEYOND-LAYER-BOUND": "explicit_claim_ids",
+        "C6-SPACETIME-SIGNATURE": "explicit_claim_ids"
+      },
+      "unresolved_claim_ids": [],
+      "result_ids": [],
+      "linked_result_ids": [],
+      "result_link_basis": {}
     }
   ],
   "all_tasks": [
@@ -100605,6 +100974,19 @@
       "note": "Policy: governance/legacy-research-knowledge-base.md. Contents remains the maintained full corpus; no wholesale copy or all-path completion target remains. TECT retains all 66 existing compatibility payloads, 49 newly selected readable reference copies, 115 selected source identities, 24 reviewed assessments, and the 50-source LEGACY-T055-GEOMETRY-EMPTY-REFERENCE-001 batch. FTS5 plus deterministic hashed-TFIDF retrieval uses hash-verified repository copies, with dense multilingual semantics explicitly unconfigured until a local model is pinned. Next: complete exact per-source extraction and dependency closure for the active batch, rerun under current conventions, independently audit, and integrate or reject only the surviving methods and results. Resolve other legacy claim pointers on demand from live gates. Selection, copies, summaries, search, or matching hashes do not change a claim tier or close a physical-vacuum, C6, Sector A, or Pre-A gate.",
       "created": "2026-08-14",
       "updated": "2026-08-14",
+      "blocked_by": [],
+      "status_normalized": "in_progress"
+    },
+    {
+      "id": "T-058",
+      "title": "A13: bounded complete finite production-cylinder integration trial",
+      "status": "in_progress",
+      "owner": "Codex",
+      "claim": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+      "gate": "A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE",
+      "note": "Bounded diagnostic; it does not restore T-050 as the main physical priority. Freeze one A1 side-16 two-root cylinder and map actual heat/root incidence, covariance bases, complement, historical low, forest, returned mean, source, and sextic owners exactly once into the R-183 reserve and R-184 temporal-overlap contracts. PASS requires a reproducible complete-owner identity plus a nonnegative q-ledger and headroom bound on the declared cylinder. FAIL requires a pinned counterfixture identifying the first unmet inequality or missing production map. Either outcome is T0 or negative/method evidence only until separately integrated. Stop after one complete pass/fail assessment; do not add isolated algebra checks first.",
+      "created": "2026-08-22",
+      "updated": "2026-08-22",
       "blocked_by": [],
       "status_normalized": "in_progress"
     }
@@ -104975,6 +105357,12 @@
         "authority": "CHANGELOG.md"
       },
       {
+        "id": "event:20260822-if-tect-ym-0001-scope-preserving-tect-to-yang-m",
+        "kind": "accepted_event",
+        "label": "[[IF-TECT-YM-0001] Scope-preserving TECT-to-Yang-Mills evidence export] - 2026-08-22",
+        "authority": "CHANGELOG.md"
+      },
+      {
         "id": "event:20260822-r-183-diagonal-reserve-margin-cross-hessian-thr",
         "kind": "accepted_event",
         "label": "[R-183 diagonal reserve margin cross-Hessian threshold] - 2026-08-22",
@@ -105020,6 +105408,12 @@
         "id": "event:20260822-r-190-a1-arbitrary-polarization-two-mode-positi",
         "kind": "accepted_event",
         "label": "[R-190 A1 arbitrary-polarization two-mode positivity Lean cross-check] - 2026-08-22",
+        "authority": "CHANGELOG.md"
+      },
+      {
+        "id": "event:20260822-r-191-complete-finite-two-root-a1-scalar-owner",
+        "kind": "accepted_event",
+        "label": "[R-191 complete finite two-root A1 scalar owner telescope] - 2026-08-22",
         "authority": "CHANGELOG.md"
       },
       {
@@ -110453,6 +110847,24 @@
         "authority": "explorations/log.jsonl"
       },
       {
+        "id": "exploration:EXP-000906",
+        "kind": "proof_exploration",
+        "label": "Complete finite two-root A1 owner telescope and chain-rule differentiation",
+        "authority": "explorations/log.jsonl"
+      },
+      {
+        "id": "exploration:EXP-000907",
+        "kind": "proof_exploration",
+        "label": "Scope-preserving TECT export to Yang-Mills OBL-060/080/090/100",
+        "authority": "explorations/log.jsonl"
+      },
+      {
+        "id": "exploration:EXP-000908",
+        "kind": "proof_exploration",
+        "label": "Register the bounded complete finite production-cylinder integration trial",
+        "authority": "explorations/log.jsonl"
+      },
+      {
         "id": "gate:A1-KERNEL-CONV",
         "kind": "hypothesis",
         "label": "A1-KERNEL-CONV",
@@ -114887,6 +115299,12 @@
         "authority": "RESULTS-LEDGER.md#r-190"
       },
       {
+        "id": "result:R-191",
+        "kind": "accepted_result",
+        "label": "Complete finite two-root A1 scalar owner telescope",
+        "authority": "RESULTS-LEDGER.md#r-191"
+      },
+      {
         "id": "task:T-001",
         "kind": "task",
         "label": "Flip ROBUSTNESS-MU2 -> CLOSED@[x0.5,x2]-2ND-CUMULANT (atomic GATES.md + card + CHANGELOG)",
@@ -115226,6 +115644,12 @@
         "id": "task:T-057",
         "kind": "task",
         "label": "Selective legacy preservation, retrieval, and gate-by-gate revalidation",
+        "authority": "todo/todo.json"
+      },
+      {
+        "id": "task:T-058",
+        "kind": "task",
+        "label": "A13: bounded complete finite production-cylinder integration trial",
         "authority": "todo/todo.json"
       }
     ],
@@ -127141,6 +127565,66 @@
         "basis": "proof_anchor_note:pre-a-t055-legacy-sma-common-bohr-moment-radial-owner-route-split-certificate-260814"
       },
       {
+        "from": "event:20260822-if-tect-ym-0001-scope-preserving-tect-to-yang-m",
+        "relation": "records",
+        "to": "claim:A3-PERTURBATIVE-CONTINUUM-CORRELATORS",
+        "basis": "explicit_claim_ids"
+      },
+      {
+        "from": "event:20260822-if-tect-ym-0001-scope-preserving-tect-to-yang-m",
+        "relation": "records",
+        "to": "claim:A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE",
+        "basis": "explicit_claim_ids"
+      },
+      {
+        "from": "event:20260822-if-tect-ym-0001-scope-preserving-tect-to-yang-m",
+        "relation": "records",
+        "to": "claim:B1-RH-ENUM",
+        "basis": "explicit_claim_ids"
+      },
+      {
+        "from": "event:20260822-if-tect-ym-0001-scope-preserving-tect-to-yang-m",
+        "relation": "records",
+        "to": "claim:B2-PROPA-HLAYER",
+        "basis": "explicit_claim_ids"
+      },
+      {
+        "from": "event:20260822-if-tect-ym-0001-scope-preserving-tect-to-yang-m",
+        "relation": "records",
+        "to": "claim:B3-BCC-STRUCT",
+        "basis": "explicit_claim_ids"
+      },
+      {
+        "from": "event:20260822-if-tect-ym-0001-scope-preserving-tect-to-yang-m",
+        "relation": "records",
+        "to": "claim:B3-RH-TESTED-STRUCTURE-RANKING",
+        "basis": "explicit_claim_ids"
+      },
+      {
+        "from": "event:20260822-if-tect-ym-0001-scope-preserving-tect-to-yang-m",
+        "relation": "records",
+        "to": "claim:B4-CONE-CURVATURE-ANCHOR",
+        "basis": "explicit_claim_ids"
+      },
+      {
+        "from": "event:20260822-if-tect-ym-0001-scope-preserving-tect-to-yang-m",
+        "relation": "records",
+        "to": "claim:B4-MASS-GAP",
+        "basis": "explicit_claim_ids"
+      },
+      {
+        "from": "event:20260822-if-tect-ym-0001-scope-preserving-tect-to-yang-m",
+        "relation": "records",
+        "to": "claim:B5-BEYOND-LAYER-BOUND",
+        "basis": "explicit_claim_ids"
+      },
+      {
+        "from": "event:20260822-if-tect-ym-0001-scope-preserving-tect-to-yang-m",
+        "relation": "records",
+        "to": "claim:C6-SPACETIME-SIGNATURE",
+        "basis": "explicit_claim_ids"
+      },
+      {
         "from": "event:20260822-r-183-diagonal-reserve-margin-cross-hessian-thr",
         "relation": "records",
         "to": "claim:A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
@@ -127258,6 +127742,36 @@
         "from": "event:20260822-r-190-a1-arbitrary-polarization-two-mode-positi",
         "relation": "records_result",
         "to": "result:R-190",
+        "basis": "explicit_result_id"
+      },
+      {
+        "from": "event:20260822-r-191-complete-finite-two-root-a1-scalar-owner",
+        "relation": "records",
+        "to": "claim:A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "basis": "explicit_claim_ids"
+      },
+      {
+        "from": "event:20260822-r-191-complete-finite-two-root-a1-scalar-owner",
+        "relation": "records_result",
+        "to": "result:R-176",
+        "basis": "explicit_result_id"
+      },
+      {
+        "from": "event:20260822-r-191-complete-finite-two-root-a1-scalar-owner",
+        "relation": "records_result",
+        "to": "result:R-177",
+        "basis": "explicit_result_id"
+      },
+      {
+        "from": "event:20260822-r-191-complete-finite-two-root-a1-scalar-owner",
+        "relation": "records_result",
+        "to": "result:R-178",
+        "basis": "explicit_result_id"
+      },
+      {
+        "from": "event:20260822-r-191-complete-finite-two-root-a1-scalar-owner",
+        "relation": "records_result",
+        "to": "result:R-191",
         "basis": "explicit_result_id"
       },
       {
@@ -168475,6 +168989,156 @@
         "basis": "structured_task_id"
       },
       {
+        "from": "exploration:EXP-000906",
+        "relation": "assesses",
+        "to": "claim:A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "basis": "structured_claim_id"
+      },
+      {
+        "from": "exploration:EXP-000906",
+        "relation": "assesses_gate",
+        "to": "gate:A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE",
+        "basis": "structured_gate_id"
+      },
+      {
+        "from": "exploration:EXP-000906",
+        "relation": "assesses_gate",
+        "to": "gate:A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION",
+        "basis": "structured_gate_id"
+      },
+      {
+        "from": "exploration:EXP-000906",
+        "relation": "continues",
+        "to": "exploration:EXP-000905",
+        "basis": "structured_related_ref"
+      },
+      {
+        "from": "exploration:EXP-000906",
+        "relation": "records_task",
+        "to": "task:T-050",
+        "basis": "structured_task_id"
+      },
+      {
+        "from": "exploration:EXP-000907",
+        "relation": "assesses",
+        "to": "claim:A3-PERTURBATIVE-CONTINUUM-CORRELATORS",
+        "basis": "structured_claim_id"
+      },
+      {
+        "from": "exploration:EXP-000907",
+        "relation": "assesses",
+        "to": "claim:A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE",
+        "basis": "structured_claim_id"
+      },
+      {
+        "from": "exploration:EXP-000907",
+        "relation": "assesses",
+        "to": "claim:B1-RH-ENUM",
+        "basis": "structured_claim_id"
+      },
+      {
+        "from": "exploration:EXP-000907",
+        "relation": "assesses",
+        "to": "claim:B2-PROPA-HLAYER",
+        "basis": "structured_claim_id"
+      },
+      {
+        "from": "exploration:EXP-000907",
+        "relation": "assesses",
+        "to": "claim:B3-BCC-STRUCT",
+        "basis": "structured_claim_id"
+      },
+      {
+        "from": "exploration:EXP-000907",
+        "relation": "assesses",
+        "to": "claim:B3-RH-TESTED-STRUCTURE-RANKING",
+        "basis": "structured_claim_id"
+      },
+      {
+        "from": "exploration:EXP-000907",
+        "relation": "assesses",
+        "to": "claim:B4-CONE-CURVATURE-ANCHOR",
+        "basis": "structured_claim_id"
+      },
+      {
+        "from": "exploration:EXP-000907",
+        "relation": "assesses",
+        "to": "claim:B4-MASS-GAP",
+        "basis": "structured_claim_id"
+      },
+      {
+        "from": "exploration:EXP-000907",
+        "relation": "assesses",
+        "to": "claim:B5-BEYOND-LAYER-BOUND",
+        "basis": "structured_claim_id"
+      },
+      {
+        "from": "exploration:EXP-000907",
+        "relation": "assesses",
+        "to": "claim:C6-SPACETIME-SIGNATURE",
+        "basis": "structured_claim_id"
+      },
+      {
+        "from": "exploration:EXP-000907",
+        "relation": "assesses_gate",
+        "to": "gate:C6-BCC-PREMISE-BLOCKED",
+        "basis": "structured_gate_id"
+      },
+      {
+        "from": "exploration:EXP-000907",
+        "relation": "assesses_gate",
+        "to": "gate:LEGACY-SELECTIVE-INDEX-AND-ON-DEMAND-REVALIDATION",
+        "basis": "structured_gate_id"
+      },
+      {
+        "from": "exploration:EXP-000907",
+        "relation": "continues",
+        "to": "exploration:EXP-000863",
+        "basis": "structured_related_ref"
+      },
+      {
+        "from": "exploration:EXP-000907",
+        "relation": "records_task",
+        "to": "task:T-055",
+        "basis": "structured_task_id"
+      },
+      {
+        "from": "exploration:EXP-000907",
+        "relation": "references_negative",
+        "to": "negative:R-2026-06-23-b3-bcc-structural-selection",
+        "basis": "structured_formal_ref"
+      },
+      {
+        "from": "exploration:EXP-000908",
+        "relation": "assesses",
+        "to": "claim:A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "basis": "structured_claim_id"
+      },
+      {
+        "from": "exploration:EXP-000908",
+        "relation": "assesses_gate",
+        "to": "gate:A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE",
+        "basis": "structured_gate_id"
+      },
+      {
+        "from": "exploration:EXP-000908",
+        "relation": "assesses_gate",
+        "to": "gate:A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION",
+        "basis": "structured_gate_id"
+      },
+      {
+        "from": "exploration:EXP-000908",
+        "relation": "continues",
+        "to": "exploration:EXP-000906",
+        "basis": "structured_related_ref"
+      },
+      {
+        "from": "exploration:EXP-000908",
+        "relation": "records_task",
+        "to": "task:T-058",
+        "basis": "structured_task_id"
+      },
+      {
         "from": "negative:AUDIT-2026-06-08-scscope-lift-overclaim",
         "relation": "bears_on",
         "to": "claim:B1-RH-ENUM",
@@ -172318,6 +172982,18 @@
         "from": "task:T-057",
         "relation": "targets",
         "to": "gate:LEGACY-SELECTIVE-INDEX-AND-ON-DEMAND-REVALIDATION",
+        "basis": "canonical"
+      },
+      {
+        "from": "task:T-058",
+        "relation": "advances",
+        "to": "claim:A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "basis": "canonical"
+      },
+      {
+        "from": "task:T-058",
+        "relation": "targets",
+        "to": "gate:A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE",
         "basis": "canonical"
       }
     ]

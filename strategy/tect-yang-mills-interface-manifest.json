@@ -1,0 +1,181 @@
+{
+  "schema_version": "1.0",
+  "interface_id": "IF-TECT-YM-0001",
+  "owner": "TECT",
+  "tect_claim_ids": [
+    "A3-PERTURBATIVE-CONTINUUM-CORRELATORS",
+    "A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE",
+    "B1-RH-ENUM",
+    "B2-PROPA-HLAYER",
+    "B3-BCC-STRUCT",
+    "B3-RH-TESTED-STRUCTURE-RANKING",
+    "B4-CONE-CURVATURE-ANCHOR",
+    "B4-MASS-GAP",
+    "B5-BEYOND-LAYER-BOUND",
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "ym_obligation_ids": [
+    "OBL-060",
+    "OBL-080",
+    "OBL-090",
+    "OBL-100"
+  ],
+  "model_scope": "A scope-preserving export of TECT scalar Brazovskii, Reading-H/Hartree, restricted ordered-candidate, finite-volume Gibbs-measure, perturbative spectral-continuum, and single-mode-cone curvature records. No TECT object is identified with four-dimensional pure Yang-Mills.",
+  "shared_assumptions": [
+    "Any transported sign must retain one explicitly common functional, reference, state-dependent finite parts, and normalization.",
+    "Stationarity, symmetry-projected transverse stability, regulator removal, thermodynamic limits, and the observable algebra are separate hypotheses.",
+    "A TECT free-energy comparison is not a Hamiltonian spectral-gap statement, and local Hessian positivity is not a physical mass gap.",
+    "No gauge field, compact simple gauge group, Gauss-law physical sector, or Yang-Mills observable algebra is present in the exported TECT results."
+  ],
+  "provided_evidence": [
+    "B1/B2/B5 provide the scoped relative sign F_total[Q]-F_total[G_*]>0 for admitted C_full shell competitors in the registered parameter region, under the A1 kernel convention.",
+    "B3-BCC-STRUCT is refuted/retired, while B3-RH-TESTED-STRUCTURE-RANKING retains only estimator-grade relative ordering in a tested ensemble.",
+    "B4-CONE-CURVATURE-ANCHOR provides a positive local curvature anchor on a metastable single-mode constraint cone; B4-MASS-GAP explicitly records that no physical gap follows.",
+    "A3-PERTURBATIVE-CONTINUUM-CORRELATORS gives an order-by-order spectral-cutoff continuum limit for fixed-momentum connected amplitudes of a d=3 real scalar Brazovskii model.",
+    "A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE gives a nonperturbative finite-volume real-scalar Gibbs measure and cutoff removal for declared smeared cylinder-polynomial observables on the period-16 three-torus."
+  ],
+  "missing_evidence": [
+    "No preregistered physical-empty branch and no controlled sign for F_total[G_*]-F_empty or F_Reading-H-F_empty.",
+    "No Reading-H-to-production/P1 energy and ensemble intertwiner under a common normalization.",
+    "No d=4 compact-simple gauge model, gauge-invariant observable algebra, Gauss-law physical Hilbert space, or Yang-Mills Hamiltonian.",
+    "No R^4 infinite-volume vacuum theorem, OS/Wightman reconstruction, target-theory nontriviality/OPE theorem, regulator- and volume-uniform physical-sector gap, or spectral passage through the limits.",
+    "No bilateral independent audit accepting the TECT packages as hypotheses of any Yang-Mills canonical theorem."
+  ],
+  "status": "blocked",
+  "evidence_level": "scope_checked_mixed_T0_T7",
+  "non_claims": [
+    "This interface record is non-tier-bearing and changes no TECT claim, gate, or lifecycle.",
+    "It is not a Yang-Mills theorem, a Clay-obligation discharge, a physical-vacuum result, or a mass-gap result.",
+    "TECT release PASS does not validate Yang-Mills, and Yang-Mills release PASS does not validate TECT.",
+    "The refuted BCC structural route is not restored by the crosswalk."
+  ],
+  "next_test": "Construct a finite-regulator same-parent TECT theorem that preregisters physical empty E, fixes the common functional/reference/normalization and all state-dependent finite parts, and decides sign(F_total[G_*]-F_total[E]) together with stationarity and symmetry-projected transverse stability. Only after controlled continuum and thermodynamic limits and an explicit gauge/observable interface should Yang-Mills reassess OBL-060; OBL-090/100 additionally require an independent Hamiltonian spectral bridge.",
+  "last_verified": "2026-08-22",
+  "counterpart": {
+    "project": "Yang-Mills",
+    "record_locator": "E:/Dev/YangMills/research_db/records/interfaces.jsonl#IF-TECT-YM-0001",
+    "observed_status": "blocked",
+    "observed_obligation_statuses": {
+      "OBL-060": "open",
+      "OBL-080": "open",
+      "OBL-090": "open",
+      "OBL-100": "open"
+    },
+    "acceptance": "not_bilateral",
+    "mismatch_report": [
+      "The live Yang-Mills record stores owner as 'Yang-Mills'; the supplied cross-project controlled vocabulary spells that owner value 'Yang–Mills'. This TECT record does not mutate the counterpart."
+    ]
+  },
+  "evidence_packages": [
+    {
+      "package_id": "TECT-YM-RH-GSTAR-RELATIVE-001",
+      "title": "Reading-H relative free-energy ordering against G_*",
+      "tect_claim_ids": ["B1-RH-ENUM", "B2-PROPA-HLAYER", "B5-BEYOND-LAYER-BOUND"],
+      "model_scope": {
+        "model": "Reading-H diagonal Gaussian-Hartree shell-amplitude comparison",
+        "dimension": "three-dimensional Brazovskii momentum shell |k|=q0",
+        "field_gauge_content": "finite real-antipodal scalar shell amplitudes plus a rotation-invariant Gaussian covariance; no gauge field or gauge group"
+      },
+      "regulator_volume_boundary": "No physical spatial volume, UV cutoff, lattice spacing, boundary-condition sequence, or thermodynamic-limit sequence is quantified by the live B1 import. The domain is the finite C_full shell-amplitude class and registered (I,mu2) region R.",
+      "functional_reference_normalization": "One internal F_total owner and normalization on both sides; sign is F_total[Q]-F_total[G_*]>0. G_* has nonzero covariance and is not a preregistered physical-empty state.",
+      "observable_class": "Variational free-energy differences for admitted shell-amplitude/covariance competitors.",
+      "proven_sign_or_bound": "Strictly positive candidate-minus-G_* sign in the registered C_full class and parameter region.",
+      "stationarity_stability_assumptions": "The comparison does not export a physical-empty stationary point or an unrestricted symmetry-projected transverse Hessian theorem.",
+      "continuum_thermodynamic_assumptions": "No controlled physical continuum, thermodynamic, zero-temperature, or R^4 limit is provided.",
+      "possible_ym_obl": ["OBL-060"],
+      "not_provided": "No global vacuum selection, Yang-Mills vacuum, energy positivity in a reconstructed theory, OBL-080 short-distance structure, OBL-090 uniform physical-sector gap, or OBL-100 spectral passage.",
+      "evidence_level": "TECT T7 scope-qualified internal theorem package; cross-project relevance only scope-checked",
+      "non_claims": ["Relative candidate ranking is not physical-vacuum selection.", "Free-energy minimization is not a Hamiltonian spectral gap."],
+      "next_bridge_theorem": "A same-parent, same-ensemble, matched-normalization physical-empty sign theorem for F_total[G_*]-F_total[E], followed by stationarity, transverse stability, and controlled limits.",
+      "status": "blocked"
+    },
+    {
+      "package_id": "TECT-YM-BCC-ROUTE-BOUNDARY-001",
+      "title": "Retired BCC premise and restricted tested-ensemble ranking",
+      "tect_claim_ids": ["B3-BCC-STRUCT", "B3-RH-TESTED-STRUCTURE-RANKING", "C6-SPACETIME-SIGNATURE"],
+      "model_scope": {
+        "model": "tested ordered scalar condensate families and a retired BCC structural interpretation",
+        "dimension": "three-dimensional ordered-reading geometry in the registered estimator owner",
+        "field_gauge_content": "scalar condensate patterns; no Yang-Mills gauge field or physical gauge sector"
+      },
+      "regulator_volume_boundary": "The tested-ensemble estimator has no certified physical volume/regulator sequence or completed a-to-zero PDE limit.",
+      "functional_reference_normalization": "B3-RH-TESTED-STRUCTURE-RANKING uses relative Delta F_enum within its tested ensemble. It does not decide F[Reading-H]-F[empty].",
+      "observable_class": "Relative estimator-grade free energies of LAM/HEX/FCC and related tested ordered candidates.",
+      "proven_sign_or_bound": "Only the restricted tested-ensemble ranking survives; the former positive BCC structural-selection claim is refuted/retired.",
+      "stationarity_stability_assumptions": "No physical BCC existence theorem, unrestricted stationarity, or symmetry-projected transverse stability is available.",
+      "continuum_thermodynamic_assumptions": "No controlled continuum or thermodynamic limit is available.",
+      "possible_ym_obl": ["OBL-060", "OBL-090", "OBL-100"],
+      "not_provided": "No BCC vacuum premise, spacetime premise, global vacuum selection, physical-sector correlation/spectral gap, or limit passage.",
+      "evidence_level": "B3 structural route T0 REFUTED; surviving ranking T4 EXECUTED/ESTIMATOR",
+      "non_claims": ["BCC geometry is not a proved spacetime or vacuum premise.", "The C6 BCC-premised route remains blocked."],
+      "next_bridge_theorem": "A new, separately owned physical-structure theorem would have to prove below-empty sign, unrestricted stationarity, symmetry-projected transverse stability, and controlled limits before any reuse.",
+      "status": "refuted"
+    },
+    {
+      "package_id": "TECT-YM-CONE-CURVATURE-001",
+      "title": "Metastable single-mode-cone curvature anchor",
+      "tect_claim_ids": ["B4-CONE-CURVATURE-ANCHOR", "B4-MASS-GAP"],
+      "model_scope": {
+        "model": "subset-four-cosine BCC branch inside the Math56 single-mode constraint cone",
+        "dimension": "registered three-dimensional single-mode ordered branch",
+        "field_gauge_content": "scalar condensate ansatz; no gauge field, gauge group, Gauss constraint, or physical Yang-Mills sector"
+      },
+      "regulator_volume_boundary": "No continuum/thermodynamic regulator sequence is controlled by the curvature claim.",
+      "functional_reference_normalization": "Local second variation on the registered metastable branch; the branch has Delta F>0 and is not normalized against physical empty as a selected ground state.",
+      "observable_class": "One local cone curvature coordinate m_*^2, not a full Hessian spectrum or Hamiltonian spectrum.",
+      "proven_sign_or_bound": "m_*^2=+4.247e-2 at mu^2=+5e-3 within the declared single-mode cone.",
+      "stationarity_stability_assumptions": "Uniqueness and positive local curvature hold only inside the constraint cone; m_*^2 is not identified with the symmetry-projected cone Hessian gap Delta_cone.",
+      "continuum_thermodynamic_assumptions": "No N-to-infinity, a-to-zero, volume-uniform, or thermodynamic-limit certification is provided.",
+      "possible_ym_obl": ["OBL-090", "OBL-100"],
+      "not_provided": "No Hamiltonian spectral gap, no target gauge-invariant physical-sector gap, no volume/regulator-uniform lower bound, and no passage to a reconstructed R^4 theory.",
+      "evidence_level": "B4 curvature T5 ANALYTIC/EXECUTED; B4 physical mass-gap target T1 OPEN",
+      "non_claims": ["Transverse or cone curvature positivity is not a physical mass gap.", "Finite-volume/local stability is not R^4 continuum theory."],
+      "next_bridge_theorem": "First prove Delta_cone>0 for the canonical production Hessian with symmetry projection and regulator/volume-uniform control; then construct an independent OS/Hamiltonian spectral identification theorem.",
+      "status": "blocked"
+    },
+    {
+      "package_id": "TECT-YM-SCALAR-PERT-CONTINUUM-001",
+      "title": "Order-by-order spectral continuum correlators in the scalar Brazovskii model",
+      "tect_claim_ids": ["A3-PERTURBATIVE-CONTINUUM-CORRELATORS"],
+      "model_scope": {
+        "model": "real scalar Brazovskii theory with K(q)=m_sh^2+Y(|q|^2-q0^2)^2 and local quartic/sextic interaction",
+        "dimension": "d=3 Euclidean",
+        "field_gauge_content": "one real scalar field; no gauge field, compact gauge group, ghosts, Gauss law, or gauge-invariant physical sector"
+      },
+      "regulator_volume_boundary": "Sharp spectral/Galerkin line cutoff Lambda=pi/a; fixed external momentum. Genuine finite-difference lattice/Umklapp Route B, uniform external-momentum control, and thermodynamic-volume passage are outside scope.",
+      "functional_reference_normalization": "Connected perturbative amplitudes use the scalar propagator G_a=1_{|q|<=pi/a}/K(q); this is not a free-energy comparison with physical empty and is not normalized to a Yang-Mills coupling trajectory.",
+      "observable_class": "Each fixed-order connected perturbative amplitude at fixed external momentum.",
+      "proven_sign_or_bound": "Uniform q^-4 domination and graphwise convergence A_{G,a}(p) to A_G(p) for each fixed graph/order and fixed p under the named positivity/coercivity hypotheses.",
+      "stationarity_stability_assumptions": "Requires positive shell mass, Y>0, and gamma>0; it proves neither a selected vacuum nor transverse stability of Reading-H.",
+      "continuum_thermodynamic_assumptions": "UV spectral cutoff removal is order-by-order only; there is no resummation, constructive full theory, regulator independence, or infinite-volume vacuum theorem.",
+      "possible_ym_obl": ["OBL-080"],
+      "not_provided": "No Yang-Mills asymptotic freedom, non-Gaussian target limit, stress tensor, OPE, gauge observable algebra, OS reconstruction, or mass gap.",
+      "evidence_level": "TECT T6 ANALYTIC/ESTIMATOR conditional scalar theorem",
+      "non_claims": ["A scalar perturbative formal series does not satisfy Yang-Mills OBL-080.", "Fixed-momentum graphwise convergence is not a target-theory construction."],
+      "next_bridge_theorem": "A source- and coupling-matched d=4 gauge-theory construction with controlled renormalization, nontrivial gauge-invariant observables, stress tensor/OPE content, and nonperturbative or resummed control.",
+      "status": "mapped"
+    },
+    {
+      "package_id": "TECT-YM-SCALAR-FINITE-GIBBS-001",
+      "title": "Finite-volume scalar spectral constructive Gibbs measure",
+      "tect_claim_ids": ["A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE"],
+      "model_scope": {
+        "model": "real scalar Brazovskii Gibbs measure with quartic/sextic local potential",
+        "dimension": "three-dimensional Euclidean torus",
+        "field_gauge_content": "one real scalar field; no gauge content"
+      },
+      "regulator_volume_boundary": "Fixed T^3 with periods 16 and periodic boundary conditions, beta=1, sharp max-norm spectral Galerkin projectors; finite-volume cutoff removal only.",
+      "functional_reference_normalization": "Gibbs densities are normalized by their partition functions relative to the common Gaussian measure. This is probability normalization, not an absolute vacuum-energy or physical-empty normalization.",
+      "observable_class": "Finite-degree smeared cylinder-polynomial correlations and the L2-valued finite-volume Gibbs law.",
+      "proven_sign_or_bound": "Normalizability, trace-class covariance, weak convergence of the Galerkin measures, L1/total-variation convergence of lifted densities, and convergence of the declared correlations.",
+      "stationarity_stability_assumptions": "Positive shell mass, Y>0, and sextic coercivity gamma>0; no selected broken vacuum, phase uniqueness, or physical transverse Hessian theorem.",
+      "continuum_thermodynamic_assumptions": "Spectral cutoff is removed at fixed volume. Infinite volume, thermodynamic limit, phase transition, finite-difference regulator independence, and R^4 reconstruction are excluded.",
+      "possible_ym_obl": ["OBL-060", "OBL-080"],
+      "not_provided": "No translation-invariant R^4 Yang-Mills vacuum, nontrivial short-distance gauge structure, OS/Wightman reconstruction, or uniform physical-sector gap.",
+      "evidence_level": "TECT T6 ANALYTIC/EXACT/EXECUTED/CONDITIONAL scalar theorem",
+      "non_claims": ["Finite-volume scalar measure construction is not a Yang-Mills vacuum theorem.", "Restricted scalar correlations do not imply a full physical-sector gap."],
+      "next_bridge_theorem": "A volume-uniform tightness/uniqueness or phase theorem with compatible OS-positive observable algebra and a proven model map; a separate gauge-theory construction is still required.",
+      "status": "mapped"
+    }
+  ]
+}

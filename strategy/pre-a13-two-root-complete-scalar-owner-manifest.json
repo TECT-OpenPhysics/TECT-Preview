@@ -1,0 +1,208 @@
+{
+  "schema": "tect/lean-a13-two-root-complete-scalar-owner/1.0",
+  "audit_id": "A13-TWO-ROOT-COMPLETE-SCALAR-OWNER",
+  "result_id": "R-191",
+  "claim_id": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+  "exploration_id": "EXP-000906",
+  "task_id": "T-050",
+  "tier": "T0",
+  "claim_bearing": false,
+  "title": "Complete finite two-root A1 scalar owner telescope and chain-rule differentiation",
+  "purpose": "Combine the actual A1 two-mode nonlinear owner with the registered common-heat/root-1/root-2/future incidence and expose the exact signed stage and feedback derivatives before a production q-ledger is attempted.",
+  "inputs": {
+    "a1_manifest": {
+      "path": "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/production_functional_manifest.json",
+      "sha256": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565"
+    },
+    "r176_manifest": {
+      "path": "strategy/pre-a-a13-a1-two-root-cholesky-covariance-witness-manifest.json",
+      "sha256": "93776dab165e7b6dcf703ee592246e2135edf2ff327127c6f8ea6bdb24cd850e"
+    },
+    "r176_run": {
+      "path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-21-lean-r176-a1-two-root-cholesky-covariance-witness/integrated.json",
+      "sha256": "7faf807e7706b4854f7eb1ecfbe5d79255be4cdd725c2446027bdcbf77aadfa6"
+    },
+    "r177_manifest": {
+      "path": "strategy/pre-a-a13-two-root-heat-incidence-ledger-manifest.json",
+      "sha256": "8085e63cab49157972cbc8b23718d15a33f1b60ce509e91f9c2975a2f50258ac"
+    },
+    "r177_run": {
+      "path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-21-lean-r177-two-root-heat-incidence-ledger/integrated.json",
+      "sha256": "b40f40e83f81118a022f0c115e90ff56989af10abe14be4574bd412853beafe4"
+    },
+    "r178_manifest": {
+      "path": "strategy/pre-a-a13-two-root-complete-cross-owner-differentiation-manifest.json",
+      "sha256": "1525819f394df3352e0a870e1742361b9bbe2fa2e870af41fa1a57932db05864"
+    },
+    "r190_manifest": {
+      "path": "strategy/pre-a13-a1-arbitrary-polarization-two-mode-manifest.json",
+      "sha256": "94a4add6b0f1b1ca95b10d1e30116465ea5df89d2011f897a71f0c5c933286e2"
+    },
+    "a13_status": {
+      "path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/status.json",
+      "sha256": "356ea6ec060cecc06df38712b2715ea32ec52dd8493ef4177bb840170a48c8dd"
+    },
+    "lean_toolchain": {
+      "path": "verification/lean/lean-toolchain",
+      "sha256": "8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af"
+    },
+    "lakefile": {
+      "path": "verification/lean/lakefile.toml",
+      "sha256": "a67c26b5518afd984e53eae28a0ba4948c6bb01680d7c360e8b36386eb98962b"
+    },
+    "lake_manifest": {
+      "path": "verification/lean/lake-manifest.json",
+      "sha256": "4308d953726ebe0a8e8fdb7aa5da996c8bfcd45d4a58f6f1b3b40e25d2521964"
+    }
+  },
+  "registered_inputs": {
+    "owner_coefficients": {
+      "quartic": "-43/400",
+      "sextic": "27/100"
+    },
+    "moment_coefficients": {
+      "a4_b4": "3/8",
+      "a2b2": "3/2",
+      "a6_b6": "5/16",
+      "a4b2": "105/32",
+      "a2b4": "45/16"
+    },
+    "incidence": {
+      "feedback_gain": "1/2",
+      "owner_order": [
+        "common_heat",
+        "root_1",
+        "root_2",
+        "future_residual"
+      ],
+      "g1": "h+r1",
+      "g2": "h+(1/2)g1+r2"
+    },
+    "root_labels": [
+      "k",
+      "2k"
+    ],
+    "cross_owner_predecessor": "R-178 ordered field-current block is retained as a separately hash-pinned phase owner; this scalar amplitude owner does not erase it"
+  },
+  "test_oracles": {
+    "moment_m4_at_one": "9/4",
+    "moment_m6_at_one": "215/32",
+    "fixture": {
+      "q1": "1/8",
+      "q2": "1/8",
+      "h": "1/5",
+      "r1": "1/10",
+      "r2": "-1/20",
+      "f1": "1/20",
+      "f2": "-1/10",
+      "stage_increments": [
+        "332706119/20480000000",
+        "-84198439/20480000000",
+        "-8885057/4096000000"
+      ],
+      "endpoint_delta": "40816479/4096000000",
+      "dr1": "28234503/256000000",
+      "dr2": "12611927/256000000",
+      "df1": "43857079/512000000",
+      "df2": "12611927/256000000"
+    }
+  },
+  "theorem_markers": [
+    "moment_fixture",
+    "incidence_telescope",
+    "feedback_chain_rule",
+    "registered_fixture",
+    "registered_endpoint_positive"
+  ],
+  "files": {
+    "lean_entrypoint": {
+      "path": "verification/lean/Tect/R191.lean",
+      "sha256": "fef5de1142e5b31b118e4323d954d2d42782612da54314c539f463f9a27119ed"
+    },
+    "primary": {
+      "path": "verification/scripts/lean_a13_two_root_complete_scalar_owner.py",
+      "sha256": "96dad29d58415adf80b1550bd62364642aa32ffd7a0cea640d43895ffd20283b"
+    },
+    "independent": {
+      "path": "codes/foundations/lean_a13_two_root_complete_scalar_owner_independent.py",
+      "sha256": "c4b362258449950b4bd78426a5f754b1fb6fc286e1eaa6f06df55c3efde55af7"
+    },
+    "verifier": {
+      "path": "codes/foundations/lean_a13_two_root_complete_scalar_owner_verify.py",
+      "sha256": "5a89efec02222d0f68108586406b0d248ce01ad2fa0223c6438777b1f74edec1"
+    },
+    "certificate": {
+      "path": "strategy/pre-a13-two-root-complete-scalar-owner-certificate-260822.md",
+      "sha256": "097d71fa7b942953febfc797a4951af87eaaeb49272d28088e3dfc6bcebe95ae"
+    },
+    "note": {
+      "path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/a13-two-root-complete-scalar-owner-260822.md",
+      "sha256": "498110ab231d79ce9eb6138133be4e2c84e62d86a4b90fc1d939d2af215db4cb"
+    }
+  },
+  "formal_integration": {
+    "event_id": "20260822-r-191-complete-finite-two-root-a1-scalar-owner",
+    "event_ordinal": 687,
+    "event_claim_ids": [
+      "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+      "EXP-000906",
+      "R-191"
+    ],
+    "event_keywords": [
+      "A13-open",
+      "EXP-000906",
+      "Lean",
+      "R-191",
+      "complete-owner",
+      "finite-cylinder",
+      "signed-telescope",
+      "two-root"
+    ],
+    "event_notes": [
+      "strategy/pre-a13-two-root-complete-scalar-owner-manifest.json",
+      "strategy/pre-a13-two-root-complete-scalar-owner-certificate-260822.md",
+      "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/a13-two-root-complete-scalar-owner-260822.md",
+      "RESULTS-LEDGER.md",
+      "ROADMAP.md",
+      "strategy/INDEX.md"
+    ],
+    "event_scripts": [
+      "verification/scripts/lean_a13_two_root_complete_scalar_owner.py",
+      "codes/foundations/lean_a13_two_root_complete_scalar_owner_independent.py",
+      "codes/foundations/lean_a13_two_root_complete_scalar_owner_verify.py"
+    ],
+    "event_raw_tokens": [
+      "EXP-000906",
+      "R-191",
+      "complete finite owner",
+      "signed telescope",
+      "Lean",
+      "No R-191 PDF"
+    ],
+    "expected_counts": {
+      "claims": 49,
+      "results": 191,
+      "gates": 206,
+      "negatives": 372,
+      "explorations": 908,
+      "events": 688,
+      "tasks": 58,
+      "catalog": 4475
+    },
+    "no_new_negative_ids": [],
+    "reused_negative_ids": [],
+    "no_pdf": true,
+    "exploration_ordinal": 906
+  },
+  "hostile_mutations": [
+    "replace the registered moment coefficient with a zero cross moment",
+    "remove the root-2 feedback term while retaining the stage order",
+    "reorder the future stage before root 2",
+    "replace actual R-176 roots by a supplied placeholder",
+    "turn the negative intermediate increment into a positive payment",
+    "promote the finite endpoint identity to A13 or T-050 closure",
+    "replace an authority hash",
+    "insert a Lean sorry or axiom token"
+  ],
+  "boundary": "R-191 proves only a finite side-16 scalar A1 owner telescope, its exact polynomial moments and feedback chain-rule coordinates, bound to the R-176 actual root labels and R-177 incidence, with R-178 phase cross blocks retained as a separate predecessor. It does not prove a production raw-current one-use q-ledger, signed forest-current lower bound, positive collar/headroom, arbitrary progressive/revisit extension, OVERLAP_src, Nelson, an interacting measure, A13/T-050, Sector-A, Pre-A, physical-empty, removal or continuum limits. No gate closure, tier change, new negative or PDF follows."
+}

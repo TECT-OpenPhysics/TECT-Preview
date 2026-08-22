@@ -4,7 +4,7 @@ Generated from `todo/todo.json` by `verification/scripts/todo.py` -- **never han
 Portable: copying the TECT folder carries this ledger; a fresh cowork session reads it in the session-entry prelude (AGENTS.md §1).
 For bounded daily reading use `management/INDEX.md`; this compatibility view deliberately preserves every completed task.
 
-Counts: In progress 3 · Next up 1 · Blocked 2 · Backlog 5 · Done (compatibility history) 46
+Counts: In progress 4 · Next up 1 · Blocked 2 · Backlog 5 · Done (compatibility history) 46
 
 ## In progress
 
@@ -17,6 +17,9 @@ Counts: In progress 3 · Next up 1 · Blocked 2 · Backlog 5 · Done (compatibil
 - **T-057** Selective legacy preservation, retrieval, and gate-by-gate revalidation  _(owner: AI+operator; claim: C6-SPACETIME-SIGNATURE; gate: LEGACY-SELECTIVE-INDEX-AND-ON-DEMAND-REVALIDATION)_
   - Policy: governance/legacy-research-knowledge-base.md. Contents remains the maintained full corpus; no wholesale copy or all-path completion target remains. TECT retains all 66 existing compatibility payloads, 49 newly selected readable reference copies, 115 selected source identities, 24 reviewed assessments, and the 50-source LEGACY-T055-GEOMETRY-EMPTY-REFERENCE-001 batch. FTS5 plus deterministic hashed-TFIDF retrieval uses hash-verified repository copies, with dense multilingual semantics explicitly unconfigured until a local model is pinned. Next: complete exact per-source extraction and dependency closure for the active batch, rerun under current conventions, independently audit, and integrate or reject only the surviving methods and results. Resolve other legacy claim pointers on demand from live gates. Selection, copies, summaries, search, or matching hashes do not change a claim tier or close a physical-vacuum, C6, Sector A, or Pre-A gate.
   - _updated 2026-08-14_
+- **T-058** A13: bounded complete finite production-cylinder integration trial  _(owner: Codex; claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION; gate: A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE)_
+  - Bounded diagnostic; it does not restore T-050 as the main physical priority. Freeze one A1 side-16 two-root cylinder and map actual heat/root incidence, covariance bases, complement, historical low, forest, returned mean, source, and sextic owners exactly once into the R-183 reserve and R-184 temporal-overlap contracts. PASS requires a reproducible complete-owner identity plus a nonnegative q-ledger and headroom bound on the declared cylinder. FAIL requires a pinned counterfixture identifying the first unmet inequality or missing production map. Either outcome is T0 or negative/method evidence only until separately integrated. Stop after one complete pass/fail assessment; do not add isolated algebra checks first.
+  - _updated 2026-08-22_
 
 ## Next up
 

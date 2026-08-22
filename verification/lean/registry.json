@@ -17,130 +17,295 @@
     "line_endings": "LF",
     "final_newline": true,
     "encoding": "UTF-8",
-    "required_declaration_kinds": ["theorem", "lemma", "example"],
-    "forbidden_tokens": ["sorry", "admit", "axiom", "unsafe"],
+    "required_declaration_kinds": [
+      "theorem",
+      "lemma",
+      "example"
+    ],
+    "forbidden_tokens": [
+      "sorry",
+      "admit",
+      "axiom",
+      "unsafe"
+    ],
     "manifest_bridge_glob": "strategy/**/*.json"
   },
   "entrypoints": [
     {
       "path": "verification/lean/Tect/A1ClassIIOwnerMismatch.lean",
       "sha256": "70826a11c336710f469518794e890ccce4a5c273b870f12a7cf1cc292db49f76",
-      "declarations": ["numerator_fixture", "mass_denom_positive", "coefficient_difference", "coefficients_are_not_equal"]
+      "declarations": [
+        "numerator_fixture",
+        "mass_denom_positive",
+        "coefficient_difference",
+        "coefficients_are_not_equal"
+      ]
     },
     {
       "path": "verification/lean/Tect/A1NonlinearMismatch.lean",
       "sha256": "e3c1356a5bcc7d69f16311224e644164b433bf47047cabe5dee0c184d18aea24",
-      "declarations": ["declared_is_twice_residual", "manifest_fixture", "equality_zeroes"]
+      "declarations": [
+        "declared_is_twice_residual",
+        "manifest_fixture",
+        "equality_zeroes"
+      ]
     },
     {
       "path": "verification/lean/Tect/R057.lean",
       "sha256": "f84b62a71c932662a950871ea8aa0e156b683d8a28df11e3fc6732c23d28ace7",
-      "declarations": ["boundary_product", "sharp_boundary_arithmetic", "production_target_gap"]
+      "declarations": [
+        "boundary_product",
+        "sharp_boundary_arithmetic",
+        "production_target_gap"
+      ]
     },
     {
       "path": "verification/lean/Tect/R058.lean",
       "sha256": "3c76bb524870f5a40db971040188004dc67ec50838d9846200621172d5e3ea68",
-      "declarations": ["allowance_le_gamma_third", "budget_gap", "gamma_third_exact"]
+      "declarations": [
+        "allowance_le_gamma_third",
+        "budget_gap",
+        "gamma_third_exact"
+      ]
     },
     {
       "path": "verification/lean/Tect/R163.lean",
       "sha256": "e012f95185ae6777fe4398265a3a21c53c470ebcfdbbd6b2acab623b8de6c1db",
-      "declarations": ["retained_coefficient_gap", "t050_threshold_arithmetic", "sextic_window", "recursive_tangent_guard", "source_third_derivative_fixture", "audit_margin_bundle"]
+      "declarations": [
+        "retained_coefficient_gap",
+        "t050_threshold_arithmetic",
+        "sextic_window",
+        "recursive_tangent_guard",
+        "source_third_derivative_fixture",
+        "audit_margin_bundle"
+      ]
     },
     {
       "path": "verification/lean/Tect/R166.lean",
       "sha256": "aa48af9b9fbdf66554ac0c4703dbda5761b2cfd40d2b4f6b1c2f830376730884",
-      "declarations": ["global_lower_decomposition", "stronger_minus_four_fifths_margin", "derivative_root_bracket", "curvature_bracket", "two_harmonic_counterdirection", "rho_choice_and_downstream_constants", "rho_margin_target"]
+      "declarations": [
+        "global_lower_decomposition",
+        "stronger_minus_four_fifths_margin",
+        "derivative_root_bracket",
+        "curvature_bracket",
+        "two_harmonic_counterdirection",
+        "rho_choice_and_downstream_constants",
+        "rho_margin_target"
+      ]
     },
     {
       "path": "verification/lean/Tect/R171.lean",
       "sha256": "26128b83862abd3ed33388e710d32ddce39fc22b1c6fec2cff78eb9ad1c75bff",
-      "declarations": ["bracket_numerator_identity", "bracket_positive", "bracket_numerator_coefficients_positive", "endpoint_secant_sign"]
+      "declarations": [
+        "bracket_numerator_identity",
+        "bracket_positive",
+        "bracket_numerator_coefficients_positive",
+        "endpoint_secant_sign"
+      ]
     },
     {
       "path": "verification/lean/Tect/R174.lean",
       "sha256": "d905dd8fca1a812cae9b2b8e143e9089a9cc35b679d904890605872dedbf612f",
-      "declarations": ["same_root_cross_zero", "cross_block_formula", "field_cross_formula", "current_cross_formula", "same_phase_cross_zero", "equal_frequency_cross_zero", "nonzero_cross_fixture", "cross_block_bundle"]
+      "declarations": [
+        "same_root_cross_zero",
+        "cross_block_formula",
+        "field_cross_formula",
+        "current_cross_formula",
+        "same_phase_cross_zero",
+        "equal_frequency_cross_zero",
+        "nonzero_cross_fixture",
+        "cross_block_bundle"
+      ]
     },
     {
       "path": "verification/lean/Tect/R175.lean",
       "sha256": "967cf2bad70e86854c952b97accebff7673636920ec639552b5a9655553e3e2f",
-      "declarations": ["duplicate_transpose_mul", "duplicate_commutes_with_complexStructure", "duplicated_square_root", "duplicated_basis_preserves_complex_structure"]
+      "declarations": [
+        "duplicate_transpose_mul",
+        "duplicate_commutes_with_complexStructure",
+        "duplicated_square_root",
+        "duplicated_basis_preserves_complex_structure"
+      ]
     },
     {
       "path": "verification/lean/Tect/R176.lean",
       "sha256": "84e9c0c31c5c96d394b1e1b9e50687320f80386af2415e47d17b967e2d5d4c61",
-      "declarations": ["lower3_gram", "lower3_gram_entrywise"]
+      "declarations": [
+        "lower3_gram",
+        "lower3_gram_entrywise"
+      ]
     },
     {
       "path": "verification/lean/Tect/R177.lean",
       "sha256": "ce590d92c4d20a57c70efbc50569da17a59c977c9d99bbb2d8fbecfe664a2233",
-      "declarations": ["two_replica_variance", "common_heat_cancels", "root2_feedback_dependence", "endpoint_feedback_dependence", "independent_heat_does_not_cancel", "incidence_is_two_root", "root_two_after_root_one", "future_after_root_two"]
+      "declarations": [
+        "two_replica_variance",
+        "common_heat_cancels",
+        "root2_feedback_dependence",
+        "endpoint_feedback_dependence",
+        "independent_heat_does_not_cancel",
+        "incidence_is_two_root",
+        "root_two_after_root_one",
+        "future_after_root_two"
+      ]
     },
     {
       "path": "verification/lean/Tect/R178.lean",
       "sha256": "41ae3a43c1fbef21f6a0702cd8602be055dbe35f82c1ea8e318ff12bdfec7c7e",
-      "declarations": ["complete_cross_d1", "complete_cross_d2", "phase_derivative_sum_zero", "ordered_block_is_retained", "ordered_block_nonzero_fixture"]
+      "declarations": [
+        "complete_cross_d1",
+        "complete_cross_d2",
+        "phase_derivative_sum_zero",
+        "ordered_block_is_retained",
+        "ordered_block_nonzero_fixture"
+      ]
     },
     {
       "path": "verification/lean/Tect/R179.lean",
       "sha256": "2dd817cc78591e466e48b3c5cb84696143500004355f3837f7b6a7480d8265c3",
-      "declarations": ["replica_owner_half", "omission_cost", "constant_translation", "positive_variance_rebate", "zero_variance_rebate"]
+      "declarations": [
+        "replica_owner_half",
+        "omission_cost",
+        "constant_translation",
+        "positive_variance_rebate",
+        "zero_variance_rebate"
+      ]
     },
     {
       "path": "verification/lean/Tect/R180.lean",
       "sha256": "b3a7832e47645ddada8c283caa5e14ce8a62645812fb8f313866da199e0f4c14",
-      "declarations": ["geom_closed", "geom_nonneg", "geom_le_inv_one_sub", "near_pos", "far_high_pos", "hFive_pos", "hFive_fixture", "geom_fixture", "production_exponent_margins"]
+      "declarations": [
+        "geom_closed",
+        "geom_nonneg",
+        "geom_le_inv_one_sub",
+        "near_pos",
+        "far_high_pos",
+        "hFive_pos",
+        "hFive_fixture",
+        "geom_fixture",
+        "production_exponent_margins"
+      ]
     },
     {
       "path": "verification/lean/Tect/R181.lean",
       "sha256": "5cf86f54e02bdc45f1f74f96ba3d7d2c79266eb2867e0e05d4892a9e8c19d2c4",
-      "declarations": ["feedback_formula", "gram_matrix_is_feedback_transpose_feedback", "gram_quadratic", "feedback_defect_decomposition", "feedback_mixed_gram_bound", "feedback_bound_strict_off_zero", "feedback_zero_defect"]
+      "declarations": [
+        "feedback_formula",
+        "gram_matrix_is_feedback_transpose_feedback",
+        "gram_quadratic",
+        "feedback_defect_decomposition",
+        "feedback_mixed_gram_bound",
+        "feedback_bound_strict_off_zero",
+        "feedback_zero_defect"
+      ]
     },
     {
       "path": "verification/lean/Tect/R182.lean",
       "sha256": "6ad5c96b4035d7bf511458c6e3a2e12408afce1d8c7c9660247a67115cf11611",
-      "declarations": ["feedback_pulled_hessian", "cross_hessian_quadratic", "pulled_hessian_quadratic", "pulled_negative_fixture"]
+      "declarations": [
+        "feedback_pulled_hessian",
+        "cross_hessian_quadratic",
+        "pulled_hessian_quadratic",
+        "pulled_negative_fixture"
+      ]
     },
     {
       "path": "verification/lean/Tect/R183.lean",
       "sha256": "f06edbdab5f8a51baf3a57a202e2b9aaa5936fbffc391cc9a296f36522de2b8e",
-      "declarations": ["pulled_reserve_matrix", "pulled_reserve_qform", "reserve_completion", "reserve_nonneg", "pulled_reserve_nonneg", "necessary_reserve_witness", "isotropic_completion", "isotropic_nonneg", "isotropic_failure_below"]
+      "declarations": [
+        "pulled_reserve_matrix",
+        "pulled_reserve_qform",
+        "reserve_completion",
+        "reserve_nonneg",
+        "pulled_reserve_nonneg",
+        "necessary_reserve_witness",
+        "isotropic_completion",
+        "isotropic_nonneg",
+        "isotropic_failure_below"
+      ]
     },
     {
       "path": "verification/lean/Tect/R184.lean",
       "sha256": "3cf283bc0ffaad0f78166884f10c7211d27cb3a5b74c55364fbff575ffd8b788",
-      "declarations": ["two_block_douglas_identity", "two_block_douglas_bound", "fixture_identity", "fixture_gap"]
+      "declarations": [
+        "two_block_douglas_identity",
+        "two_block_douglas_bound",
+        "fixture_identity",
+        "fixture_gap"
+      ]
     },
     {
       "path": "verification/lean/Tect/R185.lean",
       "sha256": "ee045805613333437b6b46aaaf1384bb05d0b46af95b14d784716805eeaa09d7",
-      "declarations": ["finite_packet_cauchy_bound", "three_packet_fixture", "three_packet_gap"]
+      "declarations": [
+        "finite_packet_cauchy_bound",
+        "three_packet_fixture",
+        "three_packet_gap"
+      ]
     },
     {
       "path": "verification/lean/Tect/R186.lean",
       "sha256": "343725ec0a84dd2448a8dbdff803b8b408bd69213edff255f0b4925757b9ff48",
-      "declarations": ["temporal_weighted_cauchy_fixture", "temporal_douglas_energy_fixture", "complete_packet_identity", "complete_packet_fixture", "retained_cross_fixture"]
+      "declarations": [
+        "temporal_weighted_cauchy_fixture",
+        "temporal_douglas_energy_fixture",
+        "complete_packet_identity",
+        "complete_packet_fixture",
+        "retained_cross_fixture"
+      ]
     },
     {
       "path": "verification/lean/Tect/R187.lean",
       "sha256": "277931ee2c18abaf769bf958257a8eae9e975ad2de7f82dcae3ba6e49053d472",
-      "declarations": ["nonlinear_mean_fixture", "nonlinear_square_deviation_fixture", "adapted_ledger_fixture", "control_control_pair_slack_fixture", "finite_doob_fixture"]
+      "declarations": [
+        "nonlinear_mean_fixture",
+        "nonlinear_square_deviation_fixture",
+        "adapted_ledger_fixture",
+        "control_control_pair_slack_fixture",
+        "finite_doob_fixture"
+      ]
     },
     {
       "path": "verification/lean/Tect/R188.lean",
       "sha256": "167c1b63c1eb5b251ae31976c528fe8b6f455fe9c805ef2323547d1297d5a96a",
-      "declarations": ["jensen_defect_telescope", "jensen_defect_fixture", "signed_endpoint_mean_zero", "absolute_jensen_defect_positive", "secant_defect_recombination_fixture"]
+      "declarations": [
+        "jensen_defect_telescope",
+        "jensen_defect_fixture",
+        "signed_endpoint_mean_zero",
+        "absolute_jensen_defect_positive",
+        "secant_defect_recombination_fixture"
+      ]
     },
     {
       "path": "verification/lean/Tect/R189.lean",
       "sha256": "8c3ba286d758804ab027f215c4ef5d3436cc716708745721ae478eaf17b25f34",
-      "declarations": ["lowerPoly_factor", "lowerPoly_positive", "two_mode_energy_lower_bound", "cylinderPoly_nonnegative"]
+      "declarations": [
+        "lowerPoly_factor",
+        "lowerPoly_positive",
+        "two_mode_energy_lower_bound",
+        "cylinderPoly_nonnegative"
+      ]
     },
     {
       "path": "verification/lean/Tect/R190.lean",
       "sha256": "ff727c64bceb67d99062c0a740fb507548e213012044fc6d2dea67e85f88d66f",
-      "declarations": ["lowerPoly_factor", "lowerPoly_positive", "arbitrary_two_mode_nonnegative", "arbitrary_two_mode_strict"]
+      "declarations": [
+        "lowerPoly_factor",
+        "lowerPoly_positive",
+        "arbitrary_two_mode_nonnegative",
+        "arbitrary_two_mode_strict"
+      ]
+    },
+    {
+      "path": "verification/lean/Tect/R191.lean",
+      "sha256": "fef5de1142e5b31b118e4323d954d2d42782612da54314c539f463f9a27119ed",
+      "declarations": [
+        "moment_fixture",
+        "incidence_telescope",
+        "feedback_chain_rule",
+        "registered_fixture",
+        "registered_endpoint_positive"
+      ]
     }
   ]
 }

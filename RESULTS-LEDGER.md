@@ -35,6 +35,7 @@ policy in `governance/development-history.md`.
 | [R-188](#r-188) | Signed Jensen-defect telescope Lean cross-check | R-188 v1.0 is a T0 claim-nonbearing kernel cross-check under EXP-000903. It proves the finite quadratic signed Jensen-defect telescope, exact secant-plus-defect recombination, zero signed endpoint mean, and strict positive absolute first-defect payment. The production adapted NEAR owner, `OVERLAP_src`, Nelson, Sector-A and Pre-A remain open |
 | [R-189](#r-189) | A1 e3 two-mode production-cylinder positivity Lean cross-check | R-189 v1.0 is a T0 claim-nonbearing finite A1 F_ref slice result under EXP-000904. It derives the exact mixed t,u polynomial on the side-16 e3 n=1,2 cylinder and proves strict positivity away from zero. Arbitrary polarization, active Class-II terms, the complete A13 owner, controlled-shell one-use, progressive/revisit, Sector-A and Pre-A remain open |
 | [R-190](#r-190) | A1 arbitrary-polarization two-mode positivity Lean cross-check | R-190 v1.0 is a T0 claim-nonbearing finite A1 F_ref field-space result under EXP-000905. It extends the side-16 n=1,2 cylinder to arbitrary complex internal polarization, retains the positive actual Class-II form, and proves a strict cubic lower bound. The complete production owner, controlled-shell one-use, progressive/revisit, Sector-A and Pre-A remain open |
+| [R-191](#r-191) | Complete finite two-root A1 scalar owner telescope | R-191 v1.0 is a T0 claim-nonbearing Lean cross-check under EXP-000906. It binds the corrected A1 two-mode moments, the R-177 common-heat/root-1/root-2/future incidence, the exact signed endpoint telescope, and the feedback chain-rule coordinates; a finite fixture has negative intermediate stages but positive total increment. The production raw-current q-ledger, forest/source/sextic owner, A13, Sector-A and Pre-A remain open |
 | [R-182](#r-182) | Feedback-pulled cross-Hessian margin Lean cross-check | R-182 v1.0 is a T0 claim-nonbearing Lean checkpoint under EXP-000897. It combines the active R-178 cross coefficient with the R-181 feedback map and proves the exact pulled Hessian `[-2,4;4,-8]` with eigenvalues -10 and 0. The diagonal production owner, source/sextic one-use, T-050, A13, Sector-A and Pre-A remain open |
 | [R-181](#r-181) | Finite two-root feedback mixed-Gram Lean cross-check | R-181 v1.0 is a T0 claim-nonbearing Lean checkpoint under EXP-000896. It binds the R-177 beta=1/2 root-2 feedback map, exact Gram `[[5/4,1/2],[1/2,1]]`, and positive envelope defect. The production spatial mixed Gram, source/sextic one-use, T-050, A13, Sector-A and Pre-A remain open |
 | [R-180](#r-180) | Lean scalar triangular majorant cross-check | R-180 v1.0 is a T0 claim-nonbearing Lean checkpoint under EXP-000895. It rechecks the finite geometric majorant algebra, abstract C=5 positivity, the rational fixture, and the registered exponent margins 7/60 and 1/12. The production mixed-Gram envelope, source/sextic one-use, T-050, A13, Sector-A and Pre-A remain open |
@@ -494,6 +495,41 @@ any continuum/thermodynamic limit. A13's two gates remain open. No new
 negative and no R-190 PDF are issued.
 
 **Proven in:** [R-190 certificate](strategy/pre-a13-a1-arbitrary-polarization-two-mode-certificate-260822.md), [Lean entrypoint](verification/lean/Tect/R190.lean), [primary script](verification/scripts/lean_a13_a1_arbitrary_polarization_two_mode.py), [independent script](codes/foundations/lean_a13_a1_arbitrary_polarization_two_mode_independent.py), [integrated verifier](codes/foundations/lean_a13_a1_arbitrary_polarization_two_mode_verify.py), [scope note](claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/a13-a1-arbitrary-polarization-two-mode-260822.md), and the saved run artefacts. No R-190 PDF is issued.
+
+<a id="r-191"></a>
+### R-191 -- Complete finite two-root A1 scalar owner telescope
+
+**Result ID.** R-191 is a T0, claim-nonbearing finite Lean cross-check
+established by EXP-000906.
+
+**Scope.** The hash-pinned A1 side-16 two-mode scalar owner uses the corrected
+period moments m4=3(a^4+b^4)/8+3a^2b^2/2 and
+m6=5(a^6+b^6)/16+105a^4b^2/32+45a^2b^4/16.
+It is coupled to the actual R-177 finite order
+common_heat -> root_1 -> root_2 -> future_residual, with feedback coefficient
+beta=1/2, and to the R-176 root labels k,2k. R-178 remains a separately
+pinned ordered phase cross-owner input.
+
+**Exact finite result.** Lean, the primary Fraction-only lane, and the
+stdlib-only independent lane prove the three-stage signed telescope. In the
+registered fixture the increments are
+332706119/20480000000,
+-84198439/20480000000, and
+-8885057/4096000000; their exact sum is the positive endpoint increment
+40816479/4096000000. The endpoint chain rule is
+dr1=df1+(1/2)df2, dr2=df2, with the registered exact rational derivatives.
+Thus a positive endpoint does not license a positive payment at each
+intermediate root stage.
+
+**Boundary.** This is a finite owner-coordinate prerequisite only. It does not
+prove the production raw-current q-ledger, signed forest-current lower bound,
+positive collar/headroom, arbitrary progressive/revisit control,
+OVERLAP_src, Nelson, an interacting measure, either A13 gate, T-050,
+Sector-A, Pre-A, physical-empty comparison, a thermodynamic/continuum limit,
+or a tier change. A13's two gates remain open. No new negative. No R-191 PDF is issued.
+
+**Proven in:** R-191 certificate, Lean entrypoint, primary script, independent
+script, integrated verifier, scope note, and the saved run artefacts. No R-191 PDF is issued.
 
 ---
 

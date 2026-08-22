@@ -5,10 +5,11 @@
 
 Authorities: `RESULTS-LEDGER.md`.
 
-**190 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
+**191 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
 
 | ID | Result | Tier/scope |
 |---|---|---|
+| [`R-191`](../RESULTS-LEDGER.md#r-191) | Complete finite two-root A1 scalar owner telescope | T0 |
 | [`R-190`](../RESULTS-LEDGER.md#r-190) | A1 arbitrary-polarization two-mode positivity Lean cross-check | T0 |
 | [`R-189`](../RESULTS-LEDGER.md#r-189) | A1 e3 two-mode production-cylinder positivity Lean cross-check | T0 |
 | [`R-188`](../RESULTS-LEDGER.md#r-188) | Signed Jensen-defect telescope Lean cross-check | T0 |
@@ -33,7 +34,6 @@ Authorities: `RESULTS-LEDGER.md`.
 | [`R-169`](../RESULTS-LEDGER.md#r-169) | Truncated-octahedron realization semantics and matched empty-reference sign/stability reduction | T0 (claim-nonbearing scoped exact geometry, conditional sign/stability transfer and exact logical obstructions only). |
 | [`R-168`](../RESULTS-LEDGER.md#r-168) | Prospective holdout freeze protocol and current-tree readiness audit | T0 (claim-nonbearing scoped schema, current-version admission, Gaussian fingerprint, finite-regulator nonidentifiability and exact v1.3 mathematical transport children only; no ac… |
 | [`R-167`](../RESULTS-LEDGER.md#r-167) | Weighted-energy, cubic graph and thermodynamic-Cauchy route split | T0 (scoped essential-range multiplier/joint-cylinder, zero-source star/common-radius, bond-flow/shell and abstract GNS-gap transfer results; selected-tangent, categorical orbit-sm… |
-| [`R-166`](../RESULTS-LEDGER.md#r-166) | Sparse production radial-Gram decomposition and global owner bound | T4 (scoped exact finite production fibre; no promotion). |
 
 Search without loading the full ledger:
 

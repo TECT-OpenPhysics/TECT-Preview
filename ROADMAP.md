@@ -1657,6 +1657,18 @@ finite field-space extension of R-189, not the complete heat/forest/
 returned-low/source/sextic owner. A13, T-050, controlled-shell one-use,
 progressive/revisit, Sector-A, Pre-A and all limit routes remain open. No R-190
 PDF is issued.
+EXP-000906 / R-191 is a T0, claim-nonbearing Lean checkpoint for the
+hash-pinned A1 side-16 two-mode scalar owner coupled to the actual R-177
+common-heat/root-1/root-2/future incidence. Corrected exact m4/m6 moments,
+the R-176 root labels, the R-177 feedback coefficient and the R-178 ordered
+phase-owner boundary are all hash-pinned. Lean and two independent exact
+lanes prove the signed three-stage telescope and chain-rule derivatives; the
+registered fixture has negative intermediate increments but a positive total
+endpoint increment. This is a finite owner-coordinate prerequisite, not the
+production raw-current q-ledger, forest/source/sextic owner, arbitrary
+progressive/revisit control, A13/T-050, Sector-A, Pre-A, physical-empty or
+continuum closure. A13 and all residual routes remain open. No R-191 PDF is
+issued.
 EXP-000878 / R-171 records an exact T4 endpoint boundary in the pinned
 A1/A7 model. The registered dual-lattice plane wave
 `Psi_amp=amp*cos((pi/8)x_1)e1` has strictly positive deterministic A7
