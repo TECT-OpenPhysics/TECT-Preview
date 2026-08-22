@@ -58,7 +58,7 @@
     "claims/F2-BARYOGENESIS/status.json": "de39e5132355707dd49d4da4ef2da7b64d5f69802609c2f867d658114c3523a4",
     "claims/F3-INFLATION-CMB/status.json": "04b783d1f49f0ee453d4ccc3eff93cc7bca3c084dcdcdd036a023dd76d62331c",
     "claims/GATES.md": "8b2e79e8570fb392bb475ddad551ce551ce8775b22d180fbf547ca4b440c2c3f",
-    "explorations/log.jsonl": "9a16771dcdd2dc3f2ee0190aeecdf23ffcc04d38387dcf97e480433e510b72c7",
+    "explorations/log.jsonl": "e5f15af4d4dbf237f88d42bf92fda787ad13a8c3f08569824798e36aa04e9f7e",
     "negative-results/registry.md": "546bbd65ee917eae68a9b1a3564431d3fcea72804d4aea79e061e002e097de0e",
     "theory/proof-evidence/interface-pointers.json": "59d3135869897d1c77a62dcbf9a513110136dba21dd43d23ffa4abbc9307992f",
     "todo/todo.json": "1252641a4d7ef622c32f8ce993b493d91d817eabaa290aa7e7721083168f96e6"
@@ -70,12 +70,12 @@
     "interface_pointers": 1,
     "reusable_results": 193,
     "negative_records": 372,
-    "proof_explorations": 919,
+    "proof_explorations": 920,
     "exploration_verdicts": {
       "advanced": 569,
       "failed": 236,
       "inconclusive": 80,
-      "parked": 34
+      "parked": 35
     },
     "process_grade_lessons": 3,
     "accepted_events": 693,
@@ -7686,9 +7686,10 @@
         "exploration_ids": [
           "EXP-000590",
           "EXP-000624",
-          "EXP-000783"
+          "EXP-000783",
+          "EXP-000920"
         ],
-        "latest_exploration_id": "EXP-000783",
+        "latest_exploration_id": "EXP-000920",
         "accepted_event_ids": [
           "20260718-p5-branch-aware-sector-a-synthesis-prepared-for",
           "20260719-enact-operator-confirmed-a5-branch-aware-synthe",
@@ -73634,6 +73635,48 @@
       "task_id": "T-051",
       "title": "Reconcile the B3 estimator-gate pointer after the controlled-error closure",
       "verdict": "advanced"
+    },
+    {
+      "boundary": "No A5 tier or lifecycle change, no Sector-A or Pre-A closure/retraction, no BCC or physical-vacuum conclusion, and no change to the R-192/R-193 production-owner boundary follows. A5 may be cited again only after a dedicated resolver or manifest repair, fresh primary/independent/integrated runs, and regenerated stored artifacts.",
+      "claim_ids": [
+        "A5-SECTOR-A-SYNTHESIS"
+      ],
+      "decision_reason": "The path-length hygiene commit changed historical aliases and bundle inventories without leaving a current resolver and without preserving recomputed digest equality. Treating the stored PASS as current would mask an integrity defect. This is an infrastructure/path-provenance failure, not a mathematical refutation of the conditional composition theorem.",
+      "evidence_refs": [
+        "codes/foundations/a5_t6_conditional_primary.py#immutable_t5_manifest_and_bundle_manifest_are_unchanged",
+        "codes/foundations/a5_t6_conditional_independent.py#t5_history_bundle_is_independently_reconstructed",
+        "codes/foundations/a5_t6_conditional_verify.py#fresh_temporary_reexecution",
+        "claims/A5-SECTOR-A-SYNTHESIS/conditional_composition_manifest.json#immutable_t5_baseline",
+        "claims/A5-SECTOR-A-SYNTHESIS/bundle/a5t5/MANIFEST.json#bundle_digest",
+        "claims/A5-SECTOR-A-SYNTHESIS/bundle/a5t6/MANIFEST.json#bundle_digest",
+        "claims/A5-SECTOR-A-SYNTHESIS/runs/2026-07-20-t6-conditional-published-integrated/result.json#verdict",
+        "verification/scripts/check_path_lengths.py#main",
+        "verification/catalog-summary.json#total"
+      ],
+      "finding": "The root A5 primary stops before theorem assertions because the manifest requests the historical path claims/a5/sector_a_synthesis_manifest.json, which is absent from the canonical root. The compact bundle contains the corresponding historical file, but its recorded bundle digest is not the digest obtained from its 155 hash-listed files; the same stale-digest pattern appears in the nested compact manifests. The stored A5 integrated PASS is therefore historical evidence only and is not a fresh current-tree reproduction.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": []
+      },
+      "gate_ids": [],
+      "id": "EXP-000920",
+      "method": [
+        "Run the root A5 T6 primary, independent and integrated verifiers in fresh temporary mode.",
+        "Compare every lower-case claims/a5 reference in the conditional and immutable manifests with the canonical uppercase claim tree and the compact a5t5/a5t6 bundle locations.",
+        "Recompute the recorded MANIFEST.json file hashes and bundle digests for the compact A5 bundles without changing any scientific assertion."
+      ],
+      "next_action": "Repair the historical-path resolver or rebuild the A5 compact manifests from their current hash-listed files, then rerun all three A5 lanes and update the package only if the exact T6 boundary remains unchanged.",
+      "provenance": "contemporaneous",
+      "question": "Does the current A5 T6 verifier still reconstruct the published branch-aware package after the path-length hygiene compaction?",
+      "recorded_at": "2026-08-22T08:00:00Z",
+      "recorded_by": "Codex",
+      "related": [],
+      "reviewed_on": "2026-08-22",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "A5 T6 reproduction path and bundle-digest drift after path hygiene",
+      "verdict": "parked"
     }
   ],
   "inconclusive_or_parked_exploration_ids": [
@@ -73750,7 +73793,8 @@
     "EXP-000911",
     "EXP-000913",
     "EXP-000914",
-    "EXP-000916"
+    "EXP-000916",
+    "EXP-000920"
   ],
   "process_grade_lessons": [
     "Round-summary over-claim incident (legacy 2026-04-24): higher-tier summaries may never outrun pillar-level notes → single-source-of-truth rule (`status.json` → generated `CLAIMS.md`).",
@@ -111835,6 +111879,12 @@
         "id": "exploration:EXP-000919",
         "kind": "proof_exploration",
         "label": "Reconcile the B3 estimator-gate pointer after the controlled-error closure",
+        "authority": "explorations/log.jsonl"
+      },
+      {
+        "id": "exploration:EXP-000920",
+        "kind": "proof_exploration",
+        "label": "A5 T6 reproduction path and bundle-digest drift after path hygiene",
         "authority": "explorations/log.jsonl"
       },
       {
@@ -170596,6 +170646,18 @@
         "relation": "references_result",
         "to": "result:R-019",
         "basis": "structured_formal_ref"
+      },
+      {
+        "from": "exploration:EXP-000920",
+        "relation": "assesses",
+        "to": "claim:A5-SECTOR-A-SYNTHESIS",
+        "basis": "structured_claim_id"
+      },
+      {
+        "from": "exploration:EXP-000920",
+        "relation": "records_task",
+        "to": "task:T-054",
+        "basis": "structured_task_id"
       },
       {
         "from": "negative:AUDIT-2026-06-08-scscope-lift-overclaim",
