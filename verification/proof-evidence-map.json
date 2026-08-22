@@ -58,7 +58,7 @@
     "claims/F2-BARYOGENESIS/status.json": "de39e5132355707dd49d4da4ef2da7b64d5f69802609c2f867d658114c3523a4",
     "claims/F3-INFLATION-CMB/status.json": "04b783d1f49f0ee453d4ccc3eff93cc7bca3c084dcdcdd036a023dd76d62331c",
     "claims/GATES.md": "8b2e79e8570fb392bb475ddad551ce551ce8775b22d180fbf547ca4b440c2c3f",
-    "explorations/log.jsonl": "a824c635e61eb406cabea0857693f4cf5eab8a33f028fea1eefd8911a14a75d6",
+    "explorations/log.jsonl": "ef32d18f71c93e2c4fab4e3d8e7e8eadc1c98ebf3eddfcedc84992c4b2d60ec0",
     "negative-results/registry.md": "546bbd65ee917eae68a9b1a3564431d3fcea72804d4aea79e061e002e097de0e",
     "theory/proof-evidence/interface-pointers.json": "59d3135869897d1c77a62dcbf9a513110136dba21dd43d23ffa4abbc9307992f",
     "todo/todo.json": "a1660a293e0e34d6c252a122fe48444446a012863fd9206fe2581fa91676978c"
@@ -70,9 +70,9 @@
     "interface_pointers": 1,
     "reusable_results": 193,
     "negative_records": 372,
-    "proof_explorations": 914,
+    "proof_explorations": 915,
     "exploration_verdicts": {
-      "advanced": 565,
+      "advanced": 566,
       "failed": 236,
       "inconclusive": 80,
       "parked": 33
@@ -6564,9 +6564,10 @@
           "EXP-000911",
           "EXP-000912",
           "EXP-000913",
-          "EXP-000914"
+          "EXP-000914",
+          "EXP-000915"
         ],
-        "latest_exploration_id": "EXP-000914",
+        "latest_exploration_id": "EXP-000915",
         "accepted_event_ids": [
           "20260721-close-t-049-negatively-with-the-a13-relative-ph",
           "20260721-complete-a13-gate-record-synchronization-and-re",
@@ -73430,6 +73431,56 @@
       "task_id": "T-057",
       "title": "T-057 extended audit of Hartree and BZ legacy candidate owners",
       "verdict": "parked"
+    },
+    {
+      "boundary": "No new theorem, negative result, gate closure, tier change, physical-vacuum conclusion, Sector-A/Pre-A result, continuum limit, or A13/T-050 advance follows. R-191 remains a T0 claim-nonbearing finite scalar owner prerequisite; the production heat/root map and once-owned q-ledger remain missing at R-192/R-193.",
+      "claim_ids": [
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
+      ],
+      "decision_reason": "R-192 already established the repository policy for historical readers: later append-only records must not invalidate an earlier finite result. Relaxing only the global count equality preserves all authority hashes and mathematical assertions and prevents a stale reader from masking the actual owner proof boundary.",
+      "evidence_refs": [
+        "codes/foundations/lean_a13_two_root_complete_scalar_owner_verify.py#catalog-count",
+        "strategy/pre-a13-two-root-complete-scalar-owner-manifest.json#formal_integration",
+        "verification/catalog-summary.json#total",
+        "explorations/log.jsonl#EXP-000912",
+        "RESULTS-LEDGER.md#r-191"
+      ],
+      "finding": "The current R-191 reader stops before the finite owner lanes because it requires catalog total 4475 or interim 4474, while the append-only current catalog total is 4496. This is compatibility drift, not a mathematical failure: R-191's pinned authorities, Lean entrypoint, primary and independent finite telescope checks, signed intermediate-stage warning, and open A13/T-050 boundary remain unchanged. The reader should accept any current total at least the recorded final sentinel, while still accepting the pre-output interim sentinel only when the integrated output is absent.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": [
+          "R-191",
+          "R-192",
+          "R-193"
+        ]
+      },
+      "gate_ids": [
+        "A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION",
+        "A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE"
+      ],
+      "id": "EXP-000915",
+      "method": [
+        "Run the pinned R-191 integrated verifier in no-store mode against the current generated catalog and proof-evidence map.",
+        "Separate a historical exact catalog sentinel from the R-191 authority hashes, Lean-free finite owner algebra, child lanes, event/exploration identity, and no-overclaim boundary.",
+        "Replace only the global catalog equality with an append-only lower-bound check while retaining the interim bootstrap condition and rerun the reader."
+      ],
+      "next_action": "Rerun the repaired R-191 reader and keep the R-192 owner order stopped at heat_root_incidence until a hash-pinned production heat/root raw-current map and once-owned q-ledger are supplied.",
+      "provenance": "contemporaneous",
+      "question": "Does the historical R-191 integrated reader still verify its finite Lean owner cross-check after append-only catalog and result growth?",
+      "recorded_at": "2026-08-22T04:30:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-000912",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-08-22",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-050",
+      "title": "Repair the R-191 historical reader for append-only catalog growth",
+      "verdict": "advanced"
     }
   ],
   "inconclusive_or_parked_exploration_ids": [
@@ -111455,6 +111506,12 @@
         "id": "exploration:EXP-000914",
         "kind": "proof_exploration",
         "label": "T-057 extended audit of Hartree and BZ legacy candidate owners",
+        "authority": "explorations/log.jsonl"
+      },
+      {
+        "id": "exploration:EXP-000915",
+        "kind": "proof_exploration",
+        "label": "Repair the R-191 historical reader for append-only catalog growth",
         "authority": "explorations/log.jsonl"
       },
       {
@@ -170024,6 +170081,54 @@
         "relation": "records_task",
         "to": "task:T-057",
         "basis": "structured_task_id"
+      },
+      {
+        "from": "exploration:EXP-000915",
+        "relation": "assesses",
+        "to": "claim:A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "basis": "structured_claim_id"
+      },
+      {
+        "from": "exploration:EXP-000915",
+        "relation": "assesses_gate",
+        "to": "gate:A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE",
+        "basis": "structured_gate_id"
+      },
+      {
+        "from": "exploration:EXP-000915",
+        "relation": "assesses_gate",
+        "to": "gate:A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION",
+        "basis": "structured_gate_id"
+      },
+      {
+        "from": "exploration:EXP-000915",
+        "relation": "continues",
+        "to": "exploration:EXP-000912",
+        "basis": "structured_related_ref"
+      },
+      {
+        "from": "exploration:EXP-000915",
+        "relation": "records_task",
+        "to": "task:T-050",
+        "basis": "structured_task_id"
+      },
+      {
+        "from": "exploration:EXP-000915",
+        "relation": "references_result",
+        "to": "result:R-191",
+        "basis": "structured_formal_ref"
+      },
+      {
+        "from": "exploration:EXP-000915",
+        "relation": "references_result",
+        "to": "result:R-192",
+        "basis": "structured_formal_ref"
+      },
+      {
+        "from": "exploration:EXP-000915",
+        "relation": "references_result",
+        "to": "result:R-193",
+        "basis": "structured_formal_ref"
       },
       {
         "from": "negative:AUDIT-2026-06-08-scscope-lift-overclaim",

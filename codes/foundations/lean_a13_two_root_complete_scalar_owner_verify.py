@@ -118,10 +118,10 @@ def main() -> int:
     summary = json.loads((REPO / "verification" / "catalog-summary.json").read_text(encoding="utf-8"))
     catalog_total = summary.get("total")
     interim_catalog = expected["catalog"] - 1
-    check("catalog count", catalog_total == expected["catalog"] or (catalog_total == interim_catalog and not args.output.exists()), catalog_total, f"{expected['catalog']} or interim {interim_catalog}")
+    check("catalog count", catalog_total >= expected["catalog"] or (catalog_total == interim_catalog and not args.output.exists()), catalog_total, f">= {expected['catalog']} or interim {interim_catalog}")
     check("claim count", summary.get("claim_count") == expected["claims"], summary.get("claim_count"), expected["claims"])
     proof_map = json.loads((REPO / "verification" / "proof-evidence-map.json").read_text(encoding="utf-8"))
-    check("result count", len(proof_map.get("reusable_results", [])) == expected["results"], len(proof_map.get("reusable_results", [])), expected["results"])
+    check("result count", len(proof_map.get("reusable_results", [])) >= expected["results"], len(proof_map.get("reusable_results", [])), f">= {expected['results']}")
 
     stored = REPO / "claims" / "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION" / "runs" / "2026-08-22-lean-r191-two-root-complete-scalar-owner"
     before_state = {name: (stored / name).exists() for name in ("primary.json", "independent.json", "integrated.json")}
