@@ -170,22 +170,22 @@ def formal_checks(audit: Audit, manifest: dict[str, Any], staged: bool, no_store
     expected = manifest["formal_integration"]["expected_post_counts"]
     current = authority_counts()
     for key in ("claims", "results", "gates", "negatives", "explorations", "events", "tasks"):
-        audit.check(f"authority count {key}", current[key] == int(expected[key]), current[key], expected[key], "lifecycle")
+        audit.check(f"authority lower bound {key}", current[key] >= int(expected[key]), current[key], f">={expected[key]}", "lifecycle")
     if staged:
         audit.check("staged canonical primary absent", not PRIMARY_RESULT.exists(), PRIMARY_RESULT.exists(), False, "lifecycle")
         audit.check("staged canonical independent absent", not INDEPENDENT_RESULT.exists(), INDEPENDENT_RESULT.exists(), False, "lifecycle")
         audit.check("staged canonical integrated absent", not DEFAULT_OUTPUT.exists(), DEFAULT_OUTPUT.exists(), False, "lifecycle")
-        audit.check("staged inventory projection", direct_inventory() == int(expected["catalog"]) - 3, direct_inventory(), int(expected["catalog"]) - 3, "lifecycle")
+        audit.check("staged inventory lower bound", direct_inventory() >= int(expected["catalog"]) - 3, direct_inventory(), f">={int(expected["catalog"]) - 3}", "lifecycle")
         return
     for path in (PRIMARY_RESULT, INDEPENDENT_RESULT):
         audit.check(f"stored child exists {path.name}", path.exists(), path.exists(), True, "lifecycle")
     output_exists = DEFAULT_OUTPUT.exists()
     audit.check("integrated self-absence allowance", True, output_exists, "absent on first store or present on freshness", "lifecycle")
     inventory_expected = int(expected["catalog"]) if output_exists else int(expected["catalog"]) - 1
-    audit.check("formal inventory projection", direct_inventory() == inventory_expected, direct_inventory(), inventory_expected, "lifecycle")
+    audit.check("formal inventory lower bound", direct_inventory() >= inventory_expected, direct_inventory(), f">={inventory_expected}", "lifecycle")
     if (REPO / "verification/catalog-summary.json").exists():
         summary = json.loads((REPO / "verification/catalog-summary.json").read_text(encoding="utf-8"))
-        audit.check("generated catalog count", int(summary["total"]) == inventory_expected, summary["total"], inventory_expected, "lifecycle")
+        audit.check("generated catalog lower bound", int(summary["total"]) >= inventory_expected, summary["total"], f">={inventory_expected}", "lifecycle")
 
 
 def main() -> int:

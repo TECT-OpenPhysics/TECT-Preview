@@ -265,6 +265,8 @@ The exact bracket identity and positivity core additionally pass the pinned
 [kernel-cross-check artefact](claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-21-lean-r171-kernel-crosscheck/result.json)
 reporting `LEAN R-171 PASS 18/18`.
 
+**Current-tree revalidation.** EXP-000923 and EXP-000924 repair the historical certificate/A13 hash pins and make the integrated lifecycle reader append-only compatible. Current primary `25/25`, non-importing independent `23/23`, integrated `36/36` and Lean `18/18` pass; the stored Python artifacts agree with fresh runs, and the Lean assertions/source hashes agree apart from execution timestamp and artifact-path metadata. This changes no mathematics or scope and does not close A13 or T-050.
+
 **Tier.** T4 scoped analytic/exact/executed result; no claim tier or lifecycle change.
 <a id="r-177"></a>
 ### R-177 -- A1 two-root common-heat and root-incidence ledger

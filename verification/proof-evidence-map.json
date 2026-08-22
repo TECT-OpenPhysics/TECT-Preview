@@ -6,8 +6,8 @@
   },
   "authority_boundary": "This projection is complete by reference but is not a tier or proof authority. Claim status cards, proof notes/runs, RESULTS-LEDGER.md, negative-results/registry.md, explorations/log.jsonl, changelog/log.jsonl, todo/todo.json, and claims/GATES.md remain canonical. theory/proof-evidence/interface-pointers.json owns only reference-only external locators and never a claim or obligation status.",
   "source_hashes": {
-    "RESULTS-LEDGER.md": "1dcab28ca10923c9d668d57f1959d6421c9a5adebbd7c043fb9140a540c1f046",
-    "changelog/log.jsonl": "9cf2362bc5055ea12e1fb6185dd812c581109766ca9fa87617746db2dc66ac9b",
+    "RESULTS-LEDGER.md": "6a39b824cbe000cdc83c47236dcd21b29a15768e8036ed4efcf3da4b0d4f4ebc",
+    "changelog/log.jsonl": "81057b2f1449bdb293fc8708d8a51fba15046baa9a8cb4fea01c262c4d889700",
     "claims/A1-KERNEL-CONV/status.json": "e5dd2b08ce58f1c3d2680b907e1469b828b2b6a3929d773f7bd84137efe36509",
     "claims/A1-KERNEL-IDENTITY/status.json": "dbaf6f1e80d994b94c9746cc7d342592fbc3638abb372d8e1c02841bb4e4d477",
     "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/status.json": "202e7514bb2d6fc029e61de95386981aedca15d81e9d6f71fc1570d77049d554",
@@ -58,7 +58,7 @@
     "claims/F2-BARYOGENESIS/status.json": "de39e5132355707dd49d4da4ef2da7b64d5f69802609c2f867d658114c3523a4",
     "claims/F3-INFLATION-CMB/status.json": "04b783d1f49f0ee453d4ccc3eff93cc7bca3c084dcdcdd036a023dd76d62331c",
     "claims/GATES.md": "8b2e79e8570fb392bb475ddad551ce551ce8775b22d180fbf547ca4b440c2c3f",
-    "explorations/log.jsonl": "d80b011eb9339dae1be485cd9d98e263e48ecf21903dbc77219ca33701445746",
+    "explorations/log.jsonl": "9c4d9a99db39e2ddd479d4a1ba55efb002e46d293315763a7632fffd437a1085",
     "negative-results/registry.md": "546bbd65ee917eae68a9b1a3564431d3fcea72804d4aea79e061e002e097de0e",
     "theory/proof-evidence/interface-pointers.json": "59d3135869897d1c77a62dcbf9a513110136dba21dd43d23ffa4abbc9307992f",
     "todo/todo.json": "1252641a4d7ef622c32f8ce993b493d91d817eabaa290aa7e7721083168f96e6"
@@ -70,15 +70,15 @@
     "interface_pointers": 1,
     "reusable_results": 193,
     "negative_records": 372,
-    "proof_explorations": 922,
+    "proof_explorations": 924,
     "exploration_verdicts": {
-      "advanced": 570,
+      "advanced": 572,
       "failed": 236,
       "inconclusive": 80,
       "parked": 36
     },
     "process_grade_lessons": 3,
-    "accepted_events": 694,
+    "accepted_events": 695,
     "tasks": 58,
     "live_tasks": 10,
     "completed_tasks": 48,
@@ -2973,6 +2973,14 @@
         "event": "20260822-a5-t6-path-hygiene-resolver-and-compact-digest",
         "claim_ids": [
           "EXP-000921"
+        ]
+      },
+      {
+        "event": "20260822-r-171-authority-hash-repair-and-append-only-rea",
+        "claim_ids": [
+          "EXP-000923",
+          "EXP-000924",
+          "R-171"
         ]
       }
     ],
@@ -6538,9 +6546,11 @@
           "EXP-000914",
           "EXP-000915",
           "EXP-000916",
-          "EXP-000918"
+          "EXP-000918",
+          "EXP-000923",
+          "EXP-000924"
         ],
-        "latest_exploration_id": "EXP-000918",
+        "latest_exploration_id": "EXP-000924",
         "accepted_event_ids": [
           "20260721-close-t-049-negatively-with-the-a13-relative-ph",
           "20260721-complete-a13-gate-record-synchronization-and-re",
@@ -6740,9 +6750,10 @@
           "20260822-r-191-complete-finite-two-root-a1-scalar-owner",
           "20260822-r-192-t-058-bounded-complete-finite-production",
           "20260822-r-193-static-owner-heat-map-non-identifiability",
-          "20260822-r-193-historical-reader-append-only-growth-repa"
+          "20260822-r-193-historical-reader-append-only-growth-repa",
+          "20260822-r-171-authority-hash-repair-and-append-only-rea"
         ],
-        "latest_event_id": "20260822-r-193-historical-reader-append-only-growth-repa",
+        "latest_event_id": "20260822-r-171-authority-hash-repair-and-append-only-rea",
         "live_task_gate_ids": [
           "A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE"
         ],
@@ -7989,9 +8000,11 @@
           "EXP-000783",
           "EXP-000878",
           "EXP-000879",
-          "EXP-000922"
+          "EXP-000922",
+          "EXP-000923",
+          "EXP-000924"
         ],
-        "latest_exploration_id": "EXP-000922",
+        "latest_exploration_id": "EXP-000924",
         "accepted_event_ids": [
           "20260720-a7-full-class-ii-renormalised-energy-composite",
           "20260720-a7-adversarial-repair-closes-the-rational-coeff",
@@ -7999,9 +8012,10 @@
           "20260809-pre-a-priority-reset-and-controller-free-cl8-ma",
           "20260809-pre-a-macro-adversarial-hardening-gaussian-scop",
           "20260821-r-171-actual-a7-plane-wave-endpoint-secant-sign",
-          "20260821-r-171-lean-kernel-cross-check-and-important-res"
+          "20260821-r-171-lean-kernel-cross-check-and-important-res",
+          "20260822-r-171-authority-hash-repair-and-append-only-rea"
         ],
-        "latest_event_id": "20260821-r-171-lean-kernel-cross-check-and-important-res",
+        "latest_event_id": "20260822-r-171-authority-hash-repair-and-append-only-rea",
         "live_task_gate_ids": [],
         "route_gate_ids": [
           "A6-CLASSII-FULL-FIELD-BARE-CONCENTRATION",
@@ -13224,6 +13238,7 @@
         "reproduction_and_adversarial_review": "The SymPy primary and non-importing stdlib Fraction independent scripts derive the same coefficients, Pauli current identities, mode commensurability, point witness and lower bound. The integrated verifier executes eight hostile mutations covering sign, mode, coefficients, Pauli identities, owner substitution, route closure and physical overclaim.",
         "boundary": "This blocks only the inference that a positive endpoint component energy automatically gives a positive relative secant to zero. It does not close the complete A13/T-050 joint owner, the full A1 action, the covariance- normal random composite, a Nelson estimate, a Gibbs measure, a phase or morphology, a physical-empty comparison, Sector-A or Pre-A. No new negative result is registered and no R-171 v1.0 PDF is issued.",
         "proven_in": "[R-171 certificate](strategy/pre-a-a7-actual-plane-wave-endpoint-secant-sign-witness-certificate-260821.md), [primary script](codes/foundations/pre-a-a7_actual_plane_wave_endpoint_secant_sign_witness.py), [independent script](codes/foundations/pre-a-a7_actual_plane_wave_endpoint_secant_sign_witness_independent.py), and [integrated verifier](codes/foundations/pre-a-a7_actual_plane_wave_endpoint_secant_sign_witness_verify.py). The exact bracket identity and positivity core additionally pass the pinned [Lean entrypoint](verification/lean/Tect/R171.lean), with the saved [kernel-cross-check artefact](claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-21-lean-r171-kernel-crosscheck/result.json) reporting `LEAN R-171 PASS 18/18`.",
+        "current_tree_revalidation": "EXP-000923 and EXP-000924 repair the historical certificate/A13 hash pins and make the integrated lifecycle reader append-only compatible. Current primary `25/25`, non-importing independent `23/23`, integrated `36/36` and Lean `18/18` pass; the stored Python artifacts agree with fresh runs, and the Lean assertions/source hashes agree apart from execution timestamp and artifact-path metadata. This changes no mathematics or scope and does not close A13 or T-050.",
         "tier": "T4 scoped analytic/exact/executed result; no claim tier or lifecycle change."
       },
       "normalized_detail": {
@@ -13243,7 +13258,8 @@
       "accepted_event_ids": [
         "20260821-r-171-actual-a7-plane-wave-endpoint-secant-sign",
         "20260821-r-171-lean-kernel-cross-check-and-important-res",
-        "20260821-r-171-lean-runner-offline-bootstrap-repair-2026"
+        "20260821-r-171-lean-runner-offline-bootstrap-repair-2026",
+        "20260822-r-171-authority-hash-repair-and-append-only-rea"
       ],
       "co_recorded_negative_tags": []
     },
@@ -73799,6 +73815,125 @@
       "task_id": "T-050",
       "title": "A6/A7 running-counterterm owner and full-field closure applicability audit",
       "verdict": "parked"
+    },
+    {
+      "boundary": "No new theorem, negative result, gate closure, tier or lifecycle change follows. R-171 remains only a fixed-L=16 deterministic A7 component-energy endpoint sign; it does not become a full A1 action, covariance-normal composite, A13/T-050 owner, Nelson bound, Gibbs measure, phase, physical-empty comparison, Sector-A or Pre-A result. If the repaired lanes fail after hash re-pinning, the result must remain historical until a separate mathematical audit.",
+      "claim_ids": [
+        "A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE",
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
+      ],
+      "decision_reason": "A stale authority pin must not be bypassed by treating a stored historical PASS as current. The exact scope and theorem text are unchanged, so the safe repair is to record the drift, re-pin only the current certificate and A13 status hashes, rerun all four lanes including Lean, and preserve the existing R-171 result and open A13/T-050 boundaries.",
+      "evidence_refs": [
+        "strategy/pre-a-a7-actual-plane-wave-endpoint-secant-sign-witness-manifest.json#inputs",
+        "strategy/pre-a-a7-actual-plane-wave-endpoint-secant-sign-witness-manifest.json#package_hashes",
+        "strategy/pre-a-a7-actual-plane-wave-endpoint-secant-sign-witness-certificate-260821.md#lean-kernel-cross-check",
+        "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/status.json#reproducibility",
+        "codes/foundations/pre_a_a7_actual_plane_wave_endpoint_secant_sign_witness.py#main",
+        "codes/foundations/pre_a_a7_actual_plane_wave_endpoint_secant_sign_witness_independent.py#main",
+        "codes/foundations/pre_a_a7_actual_plane_wave_endpoint_secant_sign_witness_verify.py#main",
+        "verification/scripts/lean_r171_kernel_crosscheck.py#main"
+      ],
+      "finding": "All four current R-171 lanes stop before theorem assertions because the manifest pins the pre-Lean certificate hash ac3fb7e4ce029faafbe9f250b08faae5b81c49bcc05ce38d0468674bb8aaa850 while the current certificate is d858d0cdd0582887211c7de8daf402951d49656ae605ccd34dda924dbd13a322, and the manifest pins the pre-R-166 A13 status hash 774652d15115a6e43f2cc25f49b3018d70b41d3edec30cf23607062c6227539b while the current status is be613720df9008ea6d1db718fcb3e6e61e4db5b07b943b0a5974ee00285e3527. The certificate diff adds only the repository Lean kernel cross-check section; the A13 status diff adds later R-166 authority provenance. The R-171 primary, independent, integrated, and Lean scripts themselves remain hash-identical to the manifest. This is reproducibility/provenance drift, not a counterexample to the deterministic endpoint sign.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": [
+          "R-171"
+        ]
+      },
+      "gate_ids": [
+        "A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION",
+        "A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE"
+      ],
+      "id": "EXP-000923",
+      "method": [
+        "Run the pinned R-171 primary, non-importing independent, integrated, and Lean bridge lanes against the clean current tree.",
+        "Compare every failing package/source hash with the R-171 manifest and inspect the certificate and A13 status history from the original R-171 commits.",
+        "Distinguish a mathematical assertion change from a provenance-only hash drift before repairing any manifest or stored artifact."
+      ],
+      "next_action": "Re-pin only the current certificate and A13 status SHA-256 values in the R-171 manifest, rerun primary, independent, integrated, and Lean lanes, refresh the R-171 stored artifacts only after fresh agreement, and keep both A13/T-050 gates open.",
+      "provenance": "contemporaneous",
+      "question": "Does the current R-171 plane-wave endpoint witness still reproduce after later append-only A13 authority updates and the added Lean certificate section, or are its hash pins stale?",
+      "recorded_at": "2026-08-22T11:00:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-000878",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-000879",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-000884",
+          "relation": "corrects"
+        }
+      ],
+      "reviewed_on": "2026-08-22",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-050",
+      "title": "Repair R-171 authority pins after append-only A13 and Lean certificate growth",
+      "verdict": "advanced"
+    },
+    {
+      "boundary": "R-171 remains a T4 deterministic fixed-L=16 A7 component-energy endpoint witness. It does not prove the full A1 action, the covariance-normal random composite, a complete A13/T-050 owner, Nelson, a Gibbs measure, phase or morphology, physical-empty ordering, Sector-A, Pre-A, thermodynamic/removal limits, or any tier/lifecycle change. Both A13/T-050 gates remain open and no new negative result is registered.",
+      "claim_ids": [
+        "A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE",
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
+      ],
+      "decision_reason": "The stale package was a provenance/lifecycle compatibility defect, not a failed inequality. Revalidating after exact re-pinning and preserving append-only lower-bound semantics restores current reproducibility without weakening any mathematical assertion or importing later results into the original R-171 scope.",
+      "evidence_refs": [
+        "strategy/pre-a-a7-actual-plane-wave-endpoint-secant-sign-witness-manifest.json#package_hashes",
+        "strategy/pre-a-a7-actual-plane-wave-endpoint-secant-sign-witness-manifest.json#formal_integration",
+        "codes/foundations/pre_a_a7_actual_plane_wave_endpoint_secant_sign_witness.py#main",
+        "codes/foundations/pre_a_a7_actual_plane_wave_endpoint_secant_sign_witness_independent.py#main",
+        "codes/foundations/pre_a_a7_actual_plane_wave_endpoint_secant_sign_witness_verify.py#formal_checks",
+        "verification/scripts/lean_r171_kernel_crosscheck.py#main",
+        "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-21-primary-actual-a7-plane-wave-endpoint-secant-sign-witness/result.json#assertions",
+        "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-21-independent-actual-a7-plane-wave-endpoint-secant-sign-witness/result.json#assertions",
+        "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-21-integrated-actual-a7-plane-wave-endpoint-secant-sign-witness/result.json#assertions",
+        "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-21-lean-r171-kernel-crosscheck/result.json#assertions",
+        "RESULTS-LEDGER.md#r-171"
+      ],
+      "finding": "The repaired current tree passes primary 25/25, independent 23/23, integrated 36/36 and Lean 18/18. The integrated reader now treats the historical authority counts and catalog sentinel as append-only lower bounds while retaining exact source hashes, theorem scope, child agreement, hostile mutations and no-overclaim checks. Fresh primary, independent and integrated JSONs are JSON-equivalent to their refreshed canonical stored artifacts; the Lean assertions, source hashes and command are equivalent, with only recorded_at and the expected artifact path differing between stored and temporary runs. The exact derived witness remains the same: dual-lattice k=pi/8, positive deterministic A7 component energy for nonzero amplitude, zero endpoint energy, negative endpoint secant, and no A13/T-050 closure.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": [
+          "R-171"
+        ]
+      },
+      "gate_ids": [
+        "A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION",
+        "A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE"
+      ],
+      "id": "EXP-000924",
+      "method": [
+        "Re-pin only the current A13 status, Lean-augmented certificate and repaired integrated-reader hashes in the existing R-171 manifest.",
+        "Run the primary, non-importing Fraction independent, integrated and repository-pinned Lean bridge lanes in the official TECT environment.",
+        "Refresh the three canonical Python and Lean result artifacts and compare fresh outputs with stored outputs, ignoring only execution timestamp and generated artifact-path metadata in the Lean JSON."
+      ],
+      "next_action": "Keep the repaired R-171 witness as a current scoped boundary and resume the actual A13/T-050 obligation: supply a hash-pinned complete finite production cylinder with heat/root incidence, raw-current placement and one-use joint sextic ownership before attempting any gate closure.",
+      "provenance": "contemporaneous",
+      "question": "After repairing the stale R-171 certificate, A13 status and historical count pins, do all current exact lanes and stored artifacts reproduce the same endpoint witness?",
+      "recorded_at": "2026-08-22T12:00:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-000923",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-000878",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-08-22",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-050",
+      "title": "R-171 authority re-pin and append-only reader revalidation",
+      "verdict": "advanced"
     }
   ],
   "inconclusive_or_parked_exploration_ids": [
@@ -101318,6 +101453,64 @@
       "result_link_basis": {
         "R-048": "proof_anchor_note:a5_t6_conditional_verify"
       }
+    },
+    {
+      "id": "20260822-r-171-authority-hash-repair-and-append-only-rea",
+      "date": "2026-08-22",
+      "header": "[R-171 authority hash repair and append-only reader revalidation] - 2026-08-22",
+      "claim_ids": [
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE",
+        "EXP-000923",
+        "EXP-000924",
+        "R-171"
+      ],
+      "keywords": [
+        "EXP-000923",
+        "EXP-000924",
+        "R-171",
+        "append-only-reader",
+        "authority-repair",
+        "lean-cross-check",
+        "no-new-negative"
+      ],
+      "negative_results": [],
+      "notes": [
+        "strategy/pre-a-a7-actual-plane-wave-endpoint-secant-sign-witness-manifest.json",
+        "strategy/pre-a-a7-actual-plane-wave-endpoint-secant-sign-witness-certificate-260821.md",
+        "codes/foundations/pre_a_a7_actual_plane_wave_endpoint_secant_sign_witness_verify.py",
+        "verification/scripts/lean_r171_kernel_crosscheck.py",
+        "RESULTS-LEDGER.md"
+      ],
+      "scripts": [
+        "codes/foundations/pre_a_a7_actual_plane_wave_endpoint_secant_sign_witness.py",
+        "codes/foundations/pre_a_a7_actual_plane_wave_endpoint_secant_sign_witness_independent.py",
+        "codes/foundations/pre_a_a7_actual_plane_wave_endpoint_secant_sign_witness_verify.py",
+        "verification/scripts/lean_r171_kernel_crosscheck.py"
+      ],
+      "raw": "## [R-171 authority hash repair and append-only reader revalidation] - 2026-08-22\n\nEXP-000923 and EXP-000924 record the R-171 authority repair after append-only A13 updates and the added Lean certificate section. The manifest now pins the current A13 status, certificate and repaired integrated reader, while the exact deterministic witness scope is unchanged. Primary 25/25, independent 23/23, integrated 36/36 and Lean 18/18 pass; canonical stored artifacts agree with fresh runs up to execution-only timestamp and artifact-path metadata.\n\nThis is a provenance and historical-reader repair, not a new theorem, negative result, tier change or gate closure. The dual-lattice k=pi/8 component-energy endpoint remains positive for nonzero amplitude, zero remains zero, and the endpoint secant remains negative. A13, T-050, physical-empty, Sector-A and Pre-A remain open. No R-171 v1.0 PDF is issued.\n\n",
+      "claim_refs": [
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE"
+      ],
+      "claim_ref_basis": {
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION": "explicit_claim_ids",
+        "A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE": "explicit_claim_ids"
+      },
+      "unresolved_claim_ids": [
+        "EXP-000923",
+        "EXP-000924",
+        "R-171"
+      ],
+      "result_ids": [
+        "R-171"
+      ],
+      "linked_result_ids": [
+        "R-171"
+      ],
+      "result_link_basis": {
+        "R-171": "explicit_result_id"
+      }
     }
   ],
   "all_tasks": [
@@ -106460,6 +106653,12 @@
         "id": "event:20260822-if-tect-ym-0001-scope-preserving-tect-to-yang-m",
         "kind": "accepted_event",
         "label": "[[IF-TECT-YM-0001] Scope-preserving TECT-to-Yang-Mills evidence export] - 2026-08-22",
+        "authority": "CHANGELOG.md"
+      },
+      {
+        "id": "event:20260822-r-171-authority-hash-repair-and-append-only-rea",
+        "kind": "accepted_event",
+        "label": "[R-171 authority hash repair and append-only reader revalidation] - 2026-08-22",
         "authority": "CHANGELOG.md"
       },
       {
@@ -112076,6 +112275,18 @@
         "id": "exploration:EXP-000922",
         "kind": "proof_exploration",
         "label": "A6/A7 running-counterterm owner and full-field closure applicability audit",
+        "authority": "explorations/log.jsonl"
+      },
+      {
+        "id": "exploration:EXP-000923",
+        "kind": "proof_exploration",
+        "label": "Repair R-171 authority pins after append-only A13 and Lean certificate growth",
+        "authority": "explorations/log.jsonl"
+      },
+      {
+        "id": "exploration:EXP-000924",
+        "kind": "proof_exploration",
+        "label": "R-171 authority re-pin and append-only reader revalidation",
         "authority": "explorations/log.jsonl"
       },
       {
@@ -128855,6 +129066,24 @@
         "relation": "records",
         "to": "claim:C6-SPACETIME-SIGNATURE",
         "basis": "explicit_claim_ids"
+      },
+      {
+        "from": "event:20260822-r-171-authority-hash-repair-and-append-only-rea",
+        "relation": "records",
+        "to": "claim:A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "basis": "explicit_claim_ids"
+      },
+      {
+        "from": "event:20260822-r-171-authority-hash-repair-and-append-only-rea",
+        "relation": "records",
+        "to": "claim:A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE",
+        "basis": "explicit_claim_ids"
+      },
+      {
+        "from": "event:20260822-r-171-authority-hash-repair-and-append-only-rea",
+        "relation": "records_result",
+        "to": "result:R-171",
+        "basis": "explicit_result_id"
       },
       {
         "from": "event:20260822-r-183-diagonal-reserve-margin-cross-hessian-thr",
@@ -170950,6 +171179,108 @@
         "from": "exploration:EXP-000922",
         "relation": "references_result",
         "to": "result:R-052",
+        "basis": "structured_formal_ref"
+      },
+      {
+        "from": "exploration:EXP-000923",
+        "relation": "assesses",
+        "to": "claim:A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "basis": "structured_claim_id"
+      },
+      {
+        "from": "exploration:EXP-000923",
+        "relation": "assesses",
+        "to": "claim:A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE",
+        "basis": "structured_claim_id"
+      },
+      {
+        "from": "exploration:EXP-000923",
+        "relation": "assesses_gate",
+        "to": "gate:A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE",
+        "basis": "structured_gate_id"
+      },
+      {
+        "from": "exploration:EXP-000923",
+        "relation": "assesses_gate",
+        "to": "gate:A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION",
+        "basis": "structured_gate_id"
+      },
+      {
+        "from": "exploration:EXP-000923",
+        "relation": "continues",
+        "to": "exploration:EXP-000878",
+        "basis": "structured_related_ref"
+      },
+      {
+        "from": "exploration:EXP-000923",
+        "relation": "continues",
+        "to": "exploration:EXP-000879",
+        "basis": "structured_related_ref"
+      },
+      {
+        "from": "exploration:EXP-000923",
+        "relation": "corrects",
+        "to": "exploration:EXP-000884",
+        "basis": "structured_related_ref"
+      },
+      {
+        "from": "exploration:EXP-000923",
+        "relation": "records_task",
+        "to": "task:T-050",
+        "basis": "structured_task_id"
+      },
+      {
+        "from": "exploration:EXP-000923",
+        "relation": "references_result",
+        "to": "result:R-171",
+        "basis": "structured_formal_ref"
+      },
+      {
+        "from": "exploration:EXP-000924",
+        "relation": "assesses",
+        "to": "claim:A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "basis": "structured_claim_id"
+      },
+      {
+        "from": "exploration:EXP-000924",
+        "relation": "assesses",
+        "to": "claim:A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE",
+        "basis": "structured_claim_id"
+      },
+      {
+        "from": "exploration:EXP-000924",
+        "relation": "assesses_gate",
+        "to": "gate:A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE",
+        "basis": "structured_gate_id"
+      },
+      {
+        "from": "exploration:EXP-000924",
+        "relation": "assesses_gate",
+        "to": "gate:A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION",
+        "basis": "structured_gate_id"
+      },
+      {
+        "from": "exploration:EXP-000924",
+        "relation": "continues",
+        "to": "exploration:EXP-000878",
+        "basis": "structured_related_ref"
+      },
+      {
+        "from": "exploration:EXP-000924",
+        "relation": "continues",
+        "to": "exploration:EXP-000923",
+        "basis": "structured_related_ref"
+      },
+      {
+        "from": "exploration:EXP-000924",
+        "relation": "records_task",
+        "to": "task:T-050",
+        "basis": "structured_task_id"
+      },
+      {
+        "from": "exploration:EXP-000924",
+        "relation": "references_result",
+        "to": "result:R-171",
         "basis": "structured_formal_ref"
       },
       {
