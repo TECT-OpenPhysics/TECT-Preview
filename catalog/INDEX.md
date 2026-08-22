@@ -12,7 +12,7 @@ for historical verifiers and no longer grows.
 
 | Kind | Artefacts | Canonical bytes |
 |---|---:|---:|
-| Claim cards (registry layer) (`claim-card`) | 604 | 5,070,417 |
+| Claim cards (registry layer) (`claim-card`) | 604 | 5,070,416 |
 | Working proof notes (on claim cards) (`proof-note`) | 927 | 107,199,421 |
 | Theory synthesis documents (Layer 2) (`synthesis`) | 345 | 7,746,888 |
 | Migrated legacy notes (immutable) (`archive-note`) | 72 | 1,509,315 |
@@ -22,13 +22,13 @@ for historical verifiers and no longer grows.
 | Generated legacy sector, claim, and gate views (`legacy-research-view`) | 16 | 205,000 |
 | Fresh run artefacts (TSv2 evidence) (`run-artefact`) | 1082 | 30,045,278 |
 | Domain codes (`code`) | 789 | 17,056,930 |
-| Verification harness (`verification`) | 259 | 11,397,336 |
+| Verification harness (`verification`) | 259 | 11,397,692 |
 | Papers (publication layer) (`paper`) | 1 | 546 |
 | Website (publication layer) (`website`) | 4 | 20,775 |
-| Registries and ledgers (`registry`) | 42 | 1,548,963 |
+| Registries and ledgers (`registry`) | 42 | 1,549,236 |
 | Governance policies (`policy`) | 21 | 198,378 |
 | Root documents (`root-doc`) | 14 | 1,726,543 |
-| Other tracked files (`other`) | 312 | 12,074,877 |
+| Other tracked files (`other`) | 312 | 12,075,023 |
 
 ## Use
 

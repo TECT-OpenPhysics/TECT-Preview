@@ -5562,6 +5562,8 @@ revalidation, and integration remain T-057 work. This gate remains OPEN.
 
 **Statement:** C6-SPACETIME-SIGNATURE previously depended on B3-BCC-STRUCT for a physical BCC-structure premise. B3-BCC-STRUCT is REFUTED/RETIRED (R-2026-06-23-b3-bcc-structural-selection); its only survivor B3-RH-TESTED-STRUCTURE-RANKING supplies a restricted relative ranking within the tested ensemble, which does NOT supply a BCC-structure premise. C6 therefore has no valid structural input.
 
+**Status:** BLOCKED / OPEN (2026-08-22). The BCC structural premise is unavailable; this status records the existing physical-route blocker and does not reinstate B3 or close C6.
+
 **Discharge path:** BLOCKED -- operator review required (2026-06-23). To unblock, a physical BCC structure must be re-established (F[Psi_min]<F[0], lambda_min^perp>=0 symmetry-projected, N->inf on the canonical PDE background); only then may C6 depend on it.
 
 EXP-000851 / R-169 v1.0 proves one exact BCC Voronoi fixture, an affine-

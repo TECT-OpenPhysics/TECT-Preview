@@ -7,7 +7,7 @@ Authorities: `claims/GATES.md`, `claims/*/status.json`.
 
 **206 registered definitions** · **15 claim-card gate listings** · **11 live hypothesis listings**.
 The tables report claim-card fields exactly; they do not reinterpret registry status.
-Audit flags: 1 listed gate(s) lack an explicit Status field; 0 are still listed by cards although the registry status begins CLOSED.
+Audit flags: 0 listed gate(s) lack an explicit Status field; 0 are still listed by cards although the registry status begins CLOSED.
 These source mismatches are preserved for follow-up rather than silently normalized.
 
 | Gate | Claims | Current status summary |
@@ -20,7 +20,7 @@ These source mismatches are preserved for follow-up rather than silently normali
 | [`A6-CLASSII-FULL-FIELD-BARE-CONCENTRATION`](GATES.md#a6-classii-full-field-bare-concentration) | A6-CLASSII-K-COMPOSITE-DEFINITION, A6-CLASSII-UV-POWER-COUNTING, A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE | OPEN (2026-07-20). The exact bound `9*lambda_min(Q_II)*s <= W_eps <= 9*(a+2b+c)*s` fixes the zero set of the conditiona… |
 | [`A7-CLASSII-NELSON-EXPONENTIAL-BOUND`](GATES.md#a7-classii-nelson-exponential-bound) | A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE | OPEN, DECOUPLED SPATIAL-BACKGROUND SUBGATE CLOSED (2026-07-20). The A7 composite action converges in `L2`, has mean zer… |
 | [`A7-CLASSII-SELF-COUPLING-INTERPOLATION`](GATES.md#a7-classii-self-coupling-interpolation) | A8-CLASSII-DECOUPLED-NELSON-BOUND | OPEN, EXACT SMART-PATH/FROZEN-SHELL SUBGATE CLOSED (2026-07-20); FORMER COMMUTATOR-ALONE SUBGATE FALSIFIED (2026-07-21)… |
-| [`C6-BCC-PREMISE-BLOCKED`](GATES.md#c6-bcc-premise-blocked) | C6-SPACETIME-SIGNATURE | MISSING EXPLICIT STATUS FIELD |
+| [`C6-BCC-PREMISE-BLOCKED`](GATES.md#c6-bcc-premise-blocked) | C6-SPACETIME-SIGNATURE | BLOCKED / OPEN (2026-08-22). The BCC structural premise is unavailable; this status records the existing physical-route… |
 | [`CP-UNITARITY`](GATES.md#cp-unitarity) | D4-QUANTUM-CONSISTENCY | OPEN |
 | [`GAP-3`](GATES.md#gap-3) | C5-NEWTON-G, E1-HIGGS-EW, E3-GAUGE-COUPLINGS, E4-FERMION-MASSES, E5-CKM-MIXING, E6-PMNS-NEUTRINO | OPEN (ledger seeded) |
 | [`GAP-4`](GATES.md#gap-4) | F1-COSMO-DARK-SECTOR, F2-BARYOGENESIS, F3-INFLATION-CMB | OPEN |
