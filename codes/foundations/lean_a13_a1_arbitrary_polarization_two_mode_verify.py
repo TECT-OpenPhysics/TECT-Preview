@@ -16,6 +16,11 @@ from pathlib import Path
 from typing import Any
 
 REPO = Path(__file__).resolve().parents[2]
+SCRIPTS_DIR = REPO / "verification" / "scripts"
+if str(SCRIPTS_DIR) not in sys.path:
+    sys.path.insert(0, str(SCRIPTS_DIR))
+from proof_evidence_map_io import load_map
+
 MANIFEST = REPO / "strategy" / "pre-a13-a1-arbitrary-polarization-two-mode-manifest.json"
 PRIMARY = REPO / "verification" / "scripts" / "lean_a13_a1_arbitrary_polarization_two_mode.py"
 INDEPENDENT = REPO / "codes" / "foundations" / "lean_a13_a1_arbitrary_polarization_two_mode_independent.py"
@@ -98,7 +103,8 @@ def main() -> int:
 
     exploration_rows = [json.loads(line) for line in (REPO / "explorations" / "log.jsonl").read_text(encoding="utf-8").splitlines() if line.strip()]
     exp_matches = [(ordinal, row) for ordinal, row in enumerate(exploration_rows, start=1) if row.get("id") == manifest["exploration_id"]]
-    check("exploration unique", len(exp_matches) == 1 and exp_matches[0][0] == expected["explorations"], [(i, r.get("id")) for i, r in exp_matches], expected["explorations"])
+    exploration_ordinal = manifest["formal_integration"].get("exploration_ordinal", expected["explorations"])
+    check("exploration unique", len(exp_matches) == 1 and exp_matches[0][0] == exploration_ordinal, [(i, r.get("id")) for i, r in exp_matches], exploration_ordinal)
     event_rows = [json.loads(line) for line in (REPO / "changelog" / "log.jsonl").read_text(encoding="utf-8").splitlines() if line.strip()]
     event_matches = [(ordinal, row) for ordinal, row in enumerate(event_rows, start=1) if row.get("id") == manifest["formal_integration"]["event_id"]]
     check("event unique", len(event_matches) == 1 and event_matches[0][0] == manifest["formal_integration"]["event_ordinal"], [(i, r.get("id")) for i, r in event_matches], manifest["formal_integration"]["event_ordinal"])
@@ -122,7 +128,7 @@ def main() -> int:
     catalog_ok = catalog_total == expected["catalog"] or (catalog_total == interim_catalog and not args.output.exists())
     check("catalog count", catalog_ok, catalog_total, f"{expected['catalog']} (or interim {interim_catalog} before integrated store)")
     check("claim count", summary.get("claim_count") == expected["claims"], summary.get("claim_count"), expected["claims"])
-    proof_map = json.loads((REPO / "verification" / "proof-evidence-map.json").read_text(encoding="utf-8"))
+    proof_map = load_map(REPO)
     check("result count", len(proof_map.get("reusable_results", [])) == expected["results"], len(proof_map.get("reusable_results", [])), expected["results"])
 
     before = [REPO / "claims" / "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION" / "runs" / "2026-08-22-lean-r190-a1-arbitrary-polarization-two-mode" / name for name in ("primary.json", "independent.json", "integrated.json")]
