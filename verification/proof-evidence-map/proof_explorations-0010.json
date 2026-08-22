@@ -1782,6 +1782,63 @@
       "task_id": "T-058",
       "title": "Revalidate the R-193 non-identifiability witness after registry and map-shard growth",
       "verdict": "advanced"
+    },
+    {
+      "boundary": "This is a T0 claim-nonbearing maintenance audit. It neither changes R-189/R-190/R-191 mathematical verdicts nor closes A13, T-050, A11, A6, A7, Sector-A, Pre-A, physical-empty or continuum routes.",
+      "claim_ids": [
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
+      ],
+      "decision_reason": "The representation change is lossless only through the shared loader; silently changing old verifiers would mask unrelated catalog drift and could make stale historical packages appear current. Keep the three packages unchanged and open separate revalidation work rather than promoting a bulk compatibility edit.",
+      "evidence_refs": [
+        "verification/proof-evidence-map.json#index",
+        "verification/scripts/proof_evidence_map_io.py#load_map",
+        "codes/foundations/lean_a13_a1_e3_two_mode_production_cylinder_verify.py#proof_map-reader",
+        "codes/foundations/lean_a13_a1_arbitrary_polarization_two_mode_verify.py#proof_map-reader",
+        "codes/foundations/lean_a13_two_root_complete_scalar_owner_verify.py#proof_map-reader",
+        "strategy/pre-a13-a1-e3-two-mode-production-cylinder-manifest.json#formal_integration.expected_counts",
+        "strategy/pre-a13-a1-arbitrary-polarization-two-mode-manifest.json#formal_integration.expected_counts",
+        "strategy/pre-a13-two-root-complete-scalar-owner-manifest.json#formal_integration.expected_counts"
+      ],
+      "finding": "Three remaining logical direct readers were identified. R-189 and R-190 stop at stale package-specific catalog expectations (current 4670 versus expected 4453 and 4463 respectively). R-191 reaches the direct root-map read and sees zero reusable results because the root is now an index, not the logical map. The shared load_map repair is therefore necessary, but a safe migration also requires each package's source-hash, event/exploration ordinal, expected counts and stored artifact to be refreshed and independently rerun.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": [
+          "R-189",
+          "R-190",
+          "R-191"
+        ]
+      },
+      "gate_ids": [
+        "A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE",
+        "A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION"
+      ],
+      "id": "EXP-000936",
+      "method": [
+        "Search the active verifier tree for logical json.loads reads of the root proof-evidence-map.json after the R-192 and R-193 loader repairs.",
+        "Run the R-189, R-190 and R-191 integrated readers in no-store mode against the current generated catalog and sharded map.",
+        "Attempt no bulk rewrite: compare failures and preserve each package's existing manifest, expected-count and stored-artifact contract until a separate revalidation is authorized."
+      ],
+      "next_action": "Create package-specific R-189/R-190/R-191 revalidation manifests only when their expected counts and stored artifacts are intentionally refreshed; use proof_evidence_map_io.load_map in each logical reader and retain no-overclaim boundaries.",
+      "provenance": "contemporaneous",
+      "question": "Can the remaining historical verifiers that parse verification/proof-evidence-map.json directly be switched to the shard loader without package-specific revalidation?",
+      "recorded_at": "2026-08-22T22:00:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-000934",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-000935",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-08-22",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-058",
+      "title": "Audit remaining proof-evidence-map direct readers after shard migration",
+      "verdict": "parked"
     }
   ],
   "kind": "proof_explorations",
