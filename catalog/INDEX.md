@@ -22,13 +22,13 @@ for historical verifiers and no longer grows.
 | Generated legacy sector, claim, and gate views (`legacy-research-view`) | 16 | 205,000 |
 | Fresh run artefacts (TSv2 evidence) (`run-artefact`) | 1073 | 29,923,952 |
 | Domain codes (`code`) | 785 | 17,023,454 |
-| Verification harness (`verification`) | 103 | 11,220,300 |
+| Verification harness (`verification`) | 103 | 11,225,041 |
 | Papers (publication layer) (`paper`) | 1 | 546 |
 | Website (publication layer) (`website`) | 4 | 20,775 |
 | Registries and ledgers (`registry`) | 42 | 1,548,610 |
 | Governance policies (`policy`) | 21 | 197,756 |
 | Root documents (`root-doc`) | 14 | 1,718,094 |
-| Other tracked files (`other`) | 308 | 11,746,789 |
+| Other tracked files (`other`) | 308 | 11,755,029 |
 
 ## Use
 
