@@ -21,7 +21,7 @@ for historical verifiers and no longer grows.
 | Reviewed legacy research records (`legacy-research-record`) | 140 | 164,393 |
 | Generated legacy sector, claim, and gate views (`legacy-research-view`) | 16 | 205,000 |
 | Fresh run artefacts (TSv2 evidence) (`run-artefact`) | 1079 | 30,015,504 |
-| Domain codes (`code`) | 787 | 17,043,439 |
+| Domain codes (`code`) | 787 | 17,044,257 |
 | Verification harness (`verification`) | 256 | 11,315,135 |
 | Papers (publication layer) (`paper`) | 1 | 546 |
 | Website (publication layer) (`website`) | 4 | 20,775 |

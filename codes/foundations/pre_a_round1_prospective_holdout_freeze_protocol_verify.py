@@ -38,6 +38,9 @@ from typing import Any, Iterable, Mapping
 
 __version__ = "1.3.1"
 REPO = Path(__file__).resolve().parents[2]
+if str(REPO) not in sys.path:
+    sys.path.insert(0, str(REPO))
+from verification.scripts.proof_evidence_map_io import load_map as load_sharded_proof_map
 SCRIPT = Path(__file__).resolve()
 SLUG = "pre-a-round1-prospective-holdout-freeze-protocol"
 
@@ -4705,7 +4708,7 @@ def validate_generated(formal: dict[str, Any], audit: Audit) -> dict[str, Any]:
         (
             REPO / "results/INDEX.md",
             "result reader",
-            (RESULT_NUMBER, f"{result_count} registered results"),
+            (f"{result_count} registered results",),
         ),
         (
             REPO / "negative-results/INDEX.md",
@@ -4752,16 +4755,34 @@ def validate_generated(formal: dict[str, Any], audit: Audit) -> dict[str, Any]:
             proof_text, "proof-evidence map R-168 linkage", proof_tokens, audit, group="generated"
         )
     proof_json = load_json(
-        REPO / "verification/proof-evidence-map.json", audit, "proof-evidence JSON"
+        REPO / "verification/proof-evidence-map.json", audit, "proof-evidence JSON index"
     )
     if proof_json is not None:
-        require_tokens(
-            json.dumps(proof_json, sort_keys=True),
-            "proof-evidence JSON R-168 linkage",
-            proof_tokens,
-            audit,
-            group="generated",
-        )
+        try:
+            logical_map = load_sharded_proof_map(REPO)
+        except Exception as error:
+            audit.pending(
+                "proof-evidence index/shards reconstruct",
+                False,
+                f"{type(error).__name__}: {error}",
+                "lossless logical-map reconstruction",
+                "generated",
+            )
+        else:
+            audit.pending(
+                "proof-evidence index/shards reconstruct",
+                True,
+                proof_json.get("logical_map_sha256"),
+                "lossless logical-map reconstruction",
+                "generated",
+            )
+            require_tokens(
+                json.dumps(logical_map, sort_keys=True),
+                "proof-evidence logical map R-168 linkage",
+                proof_tokens,
+                audit,
+                group="generated",
+            )
     compact = read_text(
         REPO / "theory/proof-evidence/INDEX.md", audit, "compact proof reader"
     )
