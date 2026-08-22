@@ -16,6 +16,11 @@ from pathlib import Path
 from typing import Any
 
 REPO = Path(__file__).resolve().parents[2]
+SCRIPTS_DIR = REPO / "verification" / "scripts"
+if str(SCRIPTS_DIR) not in sys.path:
+    sys.path.insert(0, str(SCRIPTS_DIR))
+from proof_evidence_map_io import load_map
+
 MANIFEST = REPO / "strategy" / "pre-a13-t058-bounded-complete-production-cylinder-manifest.json"
 PRIMARY = REPO / "verification" / "scripts" / "lean_a13_t058_bounded_complete_production_cylinder.py"
 INDEPENDENT = REPO / "codes" / "foundations" / "lean_a13_t058_bounded_complete_production_cylinder_independent.py"
@@ -165,7 +170,10 @@ def main() -> int:
     # current surface still fails, while allowing monotone post-R-192 growth.
     current_catalog = summary.get("total")
     check("catalog count (append-only compatible)", isinstance(current_catalog, int) and current_catalog >= expected["catalog"], current_catalog, f">={expected['catalog']}")
-    proof_map = json.loads((REPO / "verification" / "proof-evidence-map.json").read_text(encoding="utf-8"))
+    # The root proof-evidence-map.json is an index after the split.  Reconstruct
+    # the logical map through the shared loader so this historical verifier stays
+    # compatible with append-only shard growth.
+    proof_map = load_map(REPO)
     current_results = len(proof_map.get("reusable_results", []))
     check("result count (append-only compatible)", current_results >= expected["results"], current_results, f">={expected['results']}")
     mutations = {

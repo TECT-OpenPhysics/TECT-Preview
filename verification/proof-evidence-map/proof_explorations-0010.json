@@ -1680,6 +1680,55 @@
       "task_id": "T-045",
       "title": "Spatial constant-field lift of the A6 running-mass escape",
       "verdict": "advanced"
+    },
+    {
+      "boundary": "This is a T0 claim-nonbearing tooling correction. It does not close A13, T-050, A11, A6, A7, Sector-A, Pre-A, physical-empty, Nelson, removal, or continuum routes. Other historical readers that still pin old source hashes require separate revalidation and are not silently rewritten.",
+      "claim_ids": [
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
+      ],
+      "decision_reason": "The split is a representation-preserving storage change, so consumers must use the loader rather than infer the old monolithic schema from the index. Updating the historical verifier hash pin records the compatibility repair without changing its mathematical verdict or promoting any A13 claim.",
+      "evidence_refs": [
+        "verification/proof-evidence-map.json#index",
+        "verification/proof-evidence-map/accepted_events-0001.json#shard",
+        "verification/scripts/proof_evidence_map_io.py#load_map",
+        "codes/foundations/lean_a13_t058_bounded_complete_production_cylinder_verify.py#result-count-reader",
+        "strategy/pre-a13-t058-bounded-complete-production-cylinder-manifest.json#files.verifier",
+        "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-22-lean-r192-t058-bounded-complete-production-cylinder/integrated.json#assertion_summary"
+      ],
+      "finding": "The pre-repair reader treated the split root index as a full map and reported zero reusable results. The repaired reader reconstructs the logical map through the shared loader and passes all 58 assertions. The finite trial still stops at heat_root_incidence with FAIL_FIRST_MISSING_PRODUCTION_MAP; no production heat/root map or q-ledger is supplied.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": [
+          "R-192"
+        ]
+      },
+      "gate_ids": [
+        "A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE",
+        "A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION"
+      ],
+      "id": "EXP-000934",
+      "method": [
+        "Run the pinned R-192 integrated verifier against the current generated surfaces before and after the consumer repair.",
+        "Replace the direct root-JSON reusable_results read with proof_evidence_map_io.load_map, preserving all R-192 finite owner-order and scope assertions.",
+        "Update only the R-192 verifier hash pin, rerun the staged no-store lane, and search the active verifier tree for remaining direct reusable_results reads."
+      ],
+      "next_action": "Keep both A13 gates open. Migrate or separately revalidate any remaining historical direct readers, and require a hash-pinned production heat/root generator, filtration, raw-current spatial map and once-owned q-ledger before rerunning the owner order for a substantive proof attempt.",
+      "provenance": "contemporaneous",
+      "question": "Does the historical R-192 integrated verifier still consume the logical proof-evidence map after the root JSON was split into an index and shards?",
+      "recorded_at": "2026-08-22T20:00:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-000912",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-08-22",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-058",
+      "title": "Repair the R-192 reader after proof-evidence-map sharding",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",
