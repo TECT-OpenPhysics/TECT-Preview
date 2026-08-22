@@ -58,7 +58,7 @@
     "claims/F2-BARYOGENESIS/status.json": "de39e5132355707dd49d4da4ef2da7b64d5f69802609c2f867d658114c3523a4",
     "claims/F3-INFLATION-CMB/status.json": "04b783d1f49f0ee453d4ccc3eff93cc7bca3c084dcdcdd036a023dd76d62331c",
     "claims/GATES.md": "8b2e79e8570fb392bb475ddad551ce551ce8775b22d180fbf547ca4b440c2c3f",
-    "explorations/log.jsonl": "f3e2cd3d590147dc90dc9e88d82b8dbadc41aa02a5504b7233fbfdb2e35a2b4c",
+    "explorations/log.jsonl": "c07fdc7f9cc6897c30110fc5bff000c7613027353cdf0aac8073afd7af3690c7",
     "negative-results/registry.md": "546bbd65ee917eae68a9b1a3564431d3fcea72804d4aea79e061e002e097de0e",
     "theory/proof-evidence/interface-pointers.json": "59d3135869897d1c77a62dcbf9a513110136dba21dd43d23ffa4abbc9307992f",
     "todo/todo.json": "1252641a4d7ef622c32f8ce993b493d91d817eabaa290aa7e7721083168f96e6"
@@ -70,9 +70,9 @@
     "interface_pointers": 1,
     "reusable_results": 193,
     "negative_records": 372,
-    "proof_explorations": 926,
+    "proof_explorations": 927,
     "exploration_verdicts": {
-      "advanced": 572,
+      "advanced": 573,
       "failed": 236,
       "inconclusive": 80,
       "parked": 38
@@ -9294,9 +9294,10 @@
           "EXP-000851",
           "EXP-000861",
           "EXP-000862",
-          "EXP-000907"
+          "EXP-000907",
+          "EXP-000927"
         ],
-        "latest_exploration_id": "EXP-000907",
+        "latest_exploration_id": "EXP-000927",
         "accepted_event_ids": [
           "20260623-migration-batch4-b3-reframe-continuum",
           "20260623-operator-verdicts-b3-retire-b4-massgap-scope",
@@ -9386,9 +9387,10 @@
           "EXP-000860",
           "EXP-000862",
           "EXP-000907",
-          "EXP-000919"
+          "EXP-000919",
+          "EXP-000927"
         ],
-        "latest_exploration_id": "EXP-000919",
+        "latest_exploration_id": "EXP-000927",
         "accepted_event_ids": [
           "20260623-operator-verdicts-b3-retire-b4-massgap-scope",
           "20260814-r-169-v1-0-truncated-octahedron-realization-and",
@@ -11432,9 +11434,10 @@
           "EXP-000873",
           "EXP-000874",
           "EXP-000907",
-          "EXP-000926"
+          "EXP-000926",
+          "EXP-000927"
         ],
-        "latest_exploration_id": "EXP-000926",
+        "latest_exploration_id": "EXP-000927",
         "accepted_event_ids": [
           "20260609-toe-completeness-audit-ledger-18-29-claims-ever",
           "20260623-operator-verdicts-b3-retire-b4-massgap-scope",
@@ -74063,6 +74066,60 @@
       "task_id": "T-054",
       "title": "Frontier audit finds no justified closure beyond the current owner boundaries",
       "verdict": "parked"
+    },
+    {
+      "boundary": "This is a T0 claim-nonbearing preservation and retrieval audit. It adds no BCC structure, below-empty sign, Reading-H-to-P1 map, physical vacuum selection, transverse stability, continuum limit, tier change, lifecycle change, or gate closure.",
+      "claim_ids": [
+        "B3-BCC-STRUCT",
+        "B3-RH-TESTED-STRUCTURE-RANKING",
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "Hash equality and generated-view consistency are necessary intake conditions but are not a theorem or a promotion rule. Treating the 115-copy PASS as a physical sign or realization map would conflate provenance with applicability and violate the current C6 and Pre-A boundaries.",
+      "evidence_refs": [
+        "verification/scripts/legacy_research.py#verify-selected",
+        "verification/scripts/legacy_research.py#build",
+        "archive/legacy/registry/README.md#selection-and-assessment",
+        "archive/legacy/registry/records/LEG-T055-BCC-SELECTION-LINEAGE-001.json#current_assessment",
+        "archive/legacy/registry/records/LEG-T055-TRUNCATED-OCTAHEDRON-BZ-001.json#current_assessment",
+        "claims/GATES.md#legacy-selective-index-and-on-demand-revalidation",
+        "claims/GATES.md#C6-BCC-PREMISE-BLOCKED",
+        "verification/legacy-research-index.json#source_count"
+      ],
+      "finding": "The repository legacy build passes with 115 selected sources, 25 records, and 16 generated views. The maintained Contents verification also passes for all 115 selected references, including byte counts and SHA-256 identities. This proves preservation and retrieval integrity only. The selected records still contain discovery, dependency, finite-owner, and counterevidence scopes; no single current source supplies a matched Reading-H candidate/G_* / physical-empty parent with common normalization, transverse Hessian, and thermodynamic-continuum control. Therefore T-057 remains OPEN, the retired B3 premise is not restored, and C6 remains BLOCKED/OPEN.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": [
+          "R-170"
+        ]
+      },
+      "gate_ids": [
+        "LEGACY-SELECTIVE-INDEX-AND-ON-DEMAND-REVALIDATION",
+        "C6-BCC-PREMISE-BLOCKED",
+        "PA-T055-READING-H-REALIZATION-TO-PINNED-P1-OR-DECLARED-ESCAPE"
+      ],
+      "id": "EXP-000927",
+      "method": [
+        "Run legacy_research.py build --check against the repository registry and generated views.",
+        "Run legacy_research.py verify-selected against the configured maintained Contents root and compare every selected source byte count and SHA-256 with its registry identity.",
+        "Read the T-057 and C6 gate boundaries to distinguish exact preservation from current-convention revalidation, a matched physical-empty functional owner, transverse stability, or a controlled limit."
+      ],
+      "next_action": "Complete exact per-source extraction and dependency closure for the active T-057 batch, rerun only surviving methods under current conventions with independent checks, and require a matched common functional/empty reference before any C6 or physical promotion.",
+      "provenance": "contemporaneous",
+      "question": "Do the 115 selected maintained-Contents references reproduce their repository source identities exactly, and does that preservation close the T-057 or C6 physical route?",
+      "recorded_at": "2026-08-22T15:00:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-000926",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-08-22",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-057",
+      "title": "T-057 selected Contents hashes reproduce without proof promotion",
+      "verdict": "advanced"
     }
   ],
   "inconclusive_or_parked_exploration_ids": [
@@ -112430,6 +112487,12 @@
         "id": "exploration:EXP-000926",
         "kind": "proof_exploration",
         "label": "Frontier audit finds no justified closure beyond the current owner boundaries",
+        "authority": "explorations/log.jsonl"
+      },
+      {
+        "id": "exploration:EXP-000927",
+        "kind": "proof_exploration",
+        "label": "T-057 selected Contents hashes reproduce without proof promotion",
         "authority": "explorations/log.jsonl"
       },
       {
@@ -171592,6 +171655,60 @@
         "from": "exploration:EXP-000926",
         "relation": "references_result",
         "to": "result:R-193",
+        "basis": "structured_formal_ref"
+      },
+      {
+        "from": "exploration:EXP-000927",
+        "relation": "assesses",
+        "to": "claim:B3-BCC-STRUCT",
+        "basis": "structured_claim_id"
+      },
+      {
+        "from": "exploration:EXP-000927",
+        "relation": "assesses",
+        "to": "claim:B3-RH-TESTED-STRUCTURE-RANKING",
+        "basis": "structured_claim_id"
+      },
+      {
+        "from": "exploration:EXP-000927",
+        "relation": "assesses",
+        "to": "claim:C6-SPACETIME-SIGNATURE",
+        "basis": "structured_claim_id"
+      },
+      {
+        "from": "exploration:EXP-000927",
+        "relation": "assesses_gate",
+        "to": "gate:C6-BCC-PREMISE-BLOCKED",
+        "basis": "structured_gate_id"
+      },
+      {
+        "from": "exploration:EXP-000927",
+        "relation": "assesses_gate",
+        "to": "gate:LEGACY-SELECTIVE-INDEX-AND-ON-DEMAND-REVALIDATION",
+        "basis": "structured_gate_id"
+      },
+      {
+        "from": "exploration:EXP-000927",
+        "relation": "assesses_gate",
+        "to": "gate:PA-T055-READING-H-REALIZATION-TO-PINNED-P1-OR-DECLARED-ESCAPE",
+        "basis": "structured_gate_id"
+      },
+      {
+        "from": "exploration:EXP-000927",
+        "relation": "continues",
+        "to": "exploration:EXP-000926",
+        "basis": "structured_related_ref"
+      },
+      {
+        "from": "exploration:EXP-000927",
+        "relation": "records_task",
+        "to": "task:T-057",
+        "basis": "structured_task_id"
+      },
+      {
+        "from": "exploration:EXP-000927",
+        "relation": "references_result",
+        "to": "result:R-170",
         "basis": "structured_formal_ref"
       },
       {
