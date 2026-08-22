@@ -58,7 +58,7 @@
     "claims/F2-BARYOGENESIS/status.json": "de39e5132355707dd49d4da4ef2da7b64d5f69802609c2f867d658114c3523a4",
     "claims/F3-INFLATION-CMB/status.json": "04b783d1f49f0ee453d4ccc3eff93cc7bca3c084dcdcdd036a023dd76d62331c",
     "claims/GATES.md": "8b2e79e8570fb392bb475ddad551ce551ce8775b22d180fbf547ca4b440c2c3f",
-    "explorations/log.jsonl": "ef32d18f71c93e2c4fab4e3d8e7e8eadc1c98ebf3eddfcedc84992c4b2d60ec0",
+    "explorations/log.jsonl": "06cbb2e7b85e1c6b34193d2aad96e2137cf69a5743f9dc639ef0810dd56f7c55",
     "negative-results/registry.md": "546bbd65ee917eae68a9b1a3564431d3fcea72804d4aea79e061e002e097de0e",
     "theory/proof-evidence/interface-pointers.json": "59d3135869897d1c77a62dcbf9a513110136dba21dd43d23ffa4abbc9307992f",
     "todo/todo.json": "a1660a293e0e34d6c252a122fe48444446a012863fd9206fe2581fa91676978c"
@@ -70,12 +70,12 @@
     "interface_pointers": 1,
     "reusable_results": 193,
     "negative_records": 372,
-    "proof_explorations": 915,
+    "proof_explorations": 916,
     "exploration_verdicts": {
       "advanced": 566,
       "failed": 236,
       "inconclusive": 80,
-      "parked": 33
+      "parked": 34
     },
     "process_grade_lessons": 3,
     "accepted_events": 690,
@@ -6565,9 +6565,10 @@
           "EXP-000912",
           "EXP-000913",
           "EXP-000914",
-          "EXP-000915"
+          "EXP-000915",
+          "EXP-000916"
         ],
-        "latest_exploration_id": "EXP-000915",
+        "latest_exploration_id": "EXP-000916",
         "accepted_event_ids": [
           "20260721-close-t-049-negatively-with-the-a13-relative-ph",
           "20260721-complete-a13-gate-record-synchronization-and-re",
@@ -73481,6 +73482,59 @@
       "task_id": "T-050",
       "title": "Repair the R-191 historical reader for append-only catalog growth",
       "verdict": "advanced"
+    },
+    {
+      "boundary": "This is a T0 claim-nonbearing owner-applicability audit. It does not add a theorem, negative result, gate closure, tier change, physical-empty comparison, Sector-A/Pre-A result, thermodynamic or continuum limit, or A13/T-050 advance. The exact finite R-191 telescope and R-192/R-193 Lean checks remain valid, but the production heat/root map, raw-current projector and q-ledger are still missing.",
+      "claim_ids": [
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
+      ],
+      "decision_reason": "The spectral word and auxiliary heat-kernel representation are insufficient owner evidence. Promoting either to the A13 dynamics would conflate static regularity with a time-indexed stochastic/filtration law and would bypass the explicit R-193 non-identifiability witness.",
+      "evidence_refs": [
+        "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/production_functional_manifest.json#parameters.laplacian_mode",
+        "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/bundle/A1-Production-Functional-T5-260717/codes/foundations/n001_variational_backend.py#_grad_lap",
+        "claims/A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE/classii_renormalised_energy_manifest.json#scope",
+        "claims/A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE/notes/classii-renormalised-energy-composite-260720-v1.0.tex.txt#3.4-Sobolev-Cauchy-convergence",
+        "strategy/pre-a13-t058-bounded-complete-production-cylinder-manifest.json#first_failure_slot",
+        "strategy/pre-a13-r193-static-owner-heat-map-nonidentifiability-manifest.json#boundary",
+        "RESULTS-LEDGER.md#r-192",
+        "RESULTS-LEDGER.md#r-193"
+      ],
+      "finding": "A1 declares a fixed torus, a spectral FFT spatial derivative/Laplacian and a static Brazovskii/Class-II functional; its backend computes energy, residual and Hessian-vector data but no time-indexed flow or production heat law. A7 declares static covariance-normal renormalised composites; its heat-kernel representation is the positive Bessel kernel used for a Sobolev weight, not a production covariance semigroup or root filtration. Neither authority supplies a measurable square-root/root selection, raw-current spatial derivative/projector, or a once-owned nonnegative q-ledger. Choosing exp(-t Delta) or a gradient-flow law would therefore add a new dynamics rather than identify the registered A13 owner. R-192 remains correctly stopped at heat_root_incidence and R-193 remains the exact interface obstruction.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": [
+          "R-191",
+          "R-192",
+          "R-193"
+        ]
+      },
+      "gate_ids": [
+        "A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION",
+        "A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE"
+      ],
+      "id": "EXP-000916",
+      "method": [
+        "Read the hash-pinned A1 production manifest and its standalone backend, including the spectral FFT gradient/Laplacian implementation and all declared parameters.",
+        "Read the hash-pinned A7 renormalised-energy scope and its Sobolev heat-kernel passage, distinguishing the auxiliary positive Bessel kernel from a time-indexed production semigroup.",
+        "Compare those objects against the R-192 first-failure contract and the R-193 static-owner non-identifiability witness; require an explicit generator/semigroup, root filtration, raw-current spatial intertwiner or projector, and once-owned q-ledger before treating a candidate as the A13 owner."
+      ],
+      "next_action": "Supply and hash-pin the actual time-indexed production generator or semigroup, measurable root filtration, raw-current spatial derivative/projector, and once-owned nonnegative q-ledger; then rerun R-192 unchanged before any A13 gate decision.",
+      "provenance": "contemporaneous",
+      "question": "Do the current hash-pinned A1 and A7 authorities already define the production time-indexed heat/root owner required by R-192, or only static spatial operators and covariance composites?",
+      "recorded_at": "2026-08-22T05:00:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-000914",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-08-22",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-058",
+      "title": "A1/A7 spectral operators do not supply the A13 production heat owner",
+      "verdict": "parked"
     }
   ],
   "inconclusive_or_parked_exploration_ids": [
@@ -73596,7 +73650,8 @@
     "EXP-000907",
     "EXP-000911",
     "EXP-000913",
-    "EXP-000914"
+    "EXP-000914",
+    "EXP-000916"
   ],
   "process_grade_lessons": [
     "Round-summary over-claim incident (legacy 2026-04-24): higher-tier summaries may never outrun pillar-level notes → single-source-of-truth rule (`status.json` → generated `CLAIMS.md`).",
@@ -111512,6 +111567,12 @@
         "id": "exploration:EXP-000915",
         "kind": "proof_exploration",
         "label": "Repair the R-191 historical reader for append-only catalog growth",
+        "authority": "explorations/log.jsonl"
+      },
+      {
+        "id": "exploration:EXP-000916",
+        "kind": "proof_exploration",
+        "label": "A1/A7 spectral operators do not supply the A13 production heat owner",
         "authority": "explorations/log.jsonl"
       },
       {
@@ -170126,6 +170187,54 @@
       },
       {
         "from": "exploration:EXP-000915",
+        "relation": "references_result",
+        "to": "result:R-193",
+        "basis": "structured_formal_ref"
+      },
+      {
+        "from": "exploration:EXP-000916",
+        "relation": "assesses",
+        "to": "claim:A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "basis": "structured_claim_id"
+      },
+      {
+        "from": "exploration:EXP-000916",
+        "relation": "assesses_gate",
+        "to": "gate:A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE",
+        "basis": "structured_gate_id"
+      },
+      {
+        "from": "exploration:EXP-000916",
+        "relation": "assesses_gate",
+        "to": "gate:A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION",
+        "basis": "structured_gate_id"
+      },
+      {
+        "from": "exploration:EXP-000916",
+        "relation": "continues",
+        "to": "exploration:EXP-000914",
+        "basis": "structured_related_ref"
+      },
+      {
+        "from": "exploration:EXP-000916",
+        "relation": "records_task",
+        "to": "task:T-058",
+        "basis": "structured_task_id"
+      },
+      {
+        "from": "exploration:EXP-000916",
+        "relation": "references_result",
+        "to": "result:R-191",
+        "basis": "structured_formal_ref"
+      },
+      {
+        "from": "exploration:EXP-000916",
+        "relation": "references_result",
+        "to": "result:R-192",
+        "basis": "structured_formal_ref"
+      },
+      {
+        "from": "exploration:EXP-000916",
         "relation": "references_result",
         "to": "result:R-193",
         "basis": "structured_formal_ref"
