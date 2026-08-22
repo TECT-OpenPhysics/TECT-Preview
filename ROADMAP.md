@@ -1689,6 +1689,7 @@ obligation without promoting either illustrative map to A1 dynamics. A13,
 T-050, Sector-A, Pre-A, physical-empty, removal and continuum routes remain
 open. No new negative or R-193 PDF is issued.
 EXP-000932 / R-194 adds a T0, claim-nonbearing Lean and independent exact boundary for the A6 running-mass route. The sharp local coefficient h_min=9*(a+2*b+c) gives a nonnegative endpoint correction, but the fixed-s third-component escape drives the ratio to zero, so no uniform coercivity or counterterm closure follows. A6 full-field concentration, A7 self-coupling, A13/T-050, physical-empty, Sector-A and Pre-A remain open. No new negative or R-194 PDF is issued.
+EXP-000933 / R-195 lifts that escape to constant fields on the declared finite torus. The integrated correction is exactly V times the R-194 local correction, the volume cancels in the coercivity ratio, and an explicit O(1/r) bound defeats every positive volume-uniform constant on the constant-field subspace. This strengthens the field-space boundary only; full-field partition/tightness, A7, A13/T-050, physical-empty, Sector-A and Pre-A remain open. No new negative or R-195 PDF is issued.
 
 EXP-000878 / R-171 records an exact T4 endpoint boundary in the pinned
 A1/A7 model. The registered dual-lattice plane wave

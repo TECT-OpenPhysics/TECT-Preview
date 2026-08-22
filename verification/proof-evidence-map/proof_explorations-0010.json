@@ -1624,6 +1624,62 @@
       "task_id": "T-050",
       "title": "Lean cross-check of the sharp A6 running-mass counterterm boundary",
       "verdict": "advanced"
+    },
+    {
+      "boundary": "No full renormalised Class-II energy, spatially correlated partition convergence, tightness, full-field bare concentration, rho-floor removal, infinite-volume limit, A7 self-coupling, A13, Sector-A, Pre-A, physical-empty comparison, or new negative result follows. Both A6 gates and all Pre-A/Sector-A routes remain open.",
+      "claim_ids": [
+        "A6-CLASSII-K-COMPOSITE-DEFINITION"
+      ],
+      "decision_reason": "R-194 already proves the local escape but leaves the spatial interpretation explicit only as a local algebraic statement. The constant-field lift closes that logical embedding gap without claiming that the local density is the full spatial Gibbs action. It is distinct from the A6 full-field concentration gate because it supplies no partition, branch, or tightness estimate.",
+      "evidence_refs": [
+        "strategy/pre-a6-sharp-running-mass-counterterm-boundary-manifest.json#endpoint_identity",
+        "strategy/pre-a6-spatial-constant-field-lift-boundary-manifest.json#registered_inputs",
+        "strategy/pre-a6-spatial-constant-field-lift-boundary-certificate-260822.md#3-explicit-field-space-noncoercivity",
+        "verification/lean/Tect/R195.lean#integrated_identity",
+        "verification/lean/Tect/R195.lean#ratio_bound",
+        "verification/scripts/lean_a6_spatial_constant_field_lift.py#main",
+        "codes/foundations/lean_a6_spatial_constant_field_lift_independent.py#main",
+        "codes/foundations/lean_a6_spatial_constant_field_lift_verify.py#main",
+        "claims/GATES.md#A6-CLASSII-COUNTERTERM-CLOSURE"
+      ],
+      "finding": "The constant-field embedding gives integrated correction V*D(h_min;s,r), and for V>0 and s>0 its coercivity ratio is exactly the local ratio. The Lean theorem supplies the explicit O(1/r) bound, so the r(kappa) family makes the ratio strictly below every positive kappa on this spatial subspace. Volume growth cancels and cannot repair the escape. This is a spatial field-space boundary strengthening R-194, not a full Gibbs or partition theorem.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [
+          "NG-2026-07-20-A6-NAIVE-W-SUBTRACTION-NONUNIFORM"
+        ],
+        "results": [
+          "R-194",
+          "R-195"
+        ]
+      },
+      "gate_ids": [
+        "A6-CLASSII-COUNTERTERM-CLOSURE",
+        "A6-CLASSII-FULL-FIELD-BARE-CONCENTRATION"
+      ],
+      "id": "EXP-000933",
+      "method": [
+        "Use the hash-pinned A1 torus parameters to derive V=Lx*Ly*Lz and define the constant real field Psi_(s,r)=sqrt(s)e1+sqrt(r)e3 with s>0 and r>=0.",
+        "Multiply the exact R-194 local correction by V and prove the volume-cancelled ratio identity in Lean over Rat.",
+        "For r>=s+2*eps prove the exact bound D(h_min;s,r)/s <= 6*s*(b+c)/r, then choose r=s+2*eps+6*s*(b+c)/kappa+1 for an arbitrary registered kappa>0.",
+        "Recompute the same identities and witness with a non-importing Fraction lane and run the integrated hash/hostile-mutation verifier."
+      ],
+      "next_action": "Freeze the complete coefficient trajectory and prove a spatially correlated partition/tightness estimate controlling all nonconstant and branch directions before any counterterm promotion.",
+      "provenance": "contemporaneous",
+      "question": "Does the sharp R-194 running-mass endpoint remain noncoercive after embedding the local variables into actual constant fields on the declared finite torus, or can the spatial volume restore a uniform lower bound?",
+      "recorded_at": "2026-08-22T19:00:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-000932",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-08-22",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-045",
+      "title": "Spatial constant-field lift of the A6 running-mass escape",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",

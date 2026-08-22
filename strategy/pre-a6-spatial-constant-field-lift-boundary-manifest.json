@@ -1,0 +1,162 @@
+{
+  "schema": "tect/a6-r195-spatial-constant-field-lift-boundary/1.0",
+  "audit_id": "A6-R195-SPATIAL-CONSTANT-FIELD-LIFT-BOUNDARY",
+  "result_id": "R-195",
+  "claim_id": "A6-CLASSII-COUNTERTERM-CLOSURE",
+  "exploration_id": "EXP-000933",
+  "prior_exploration_id": "EXP-000932",
+  "task_id": "T-045",
+  "tier": "T0",
+  "claim_bearing": false,
+  "title": "Spatial constant-field lift of the A6 running-mass escape",
+  "purpose": "Lift the R-194 local running-mass escape to exact constant fields on the declared finite torus and rule out any positive volume-uniform coercivity constant on that subspace.",
+  "inputs": {
+    "a1_production": {
+      "path": "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/production_functional_manifest.json",
+      "sha256": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565"
+    },
+    "a6_composite": {
+      "path": "claims/A6-CLASSII-K-COMPOSITE-DEFINITION/classii_k_composite_manifest.json",
+      "sha256": "c65e7296efa7ab3dd7ec4105f26129e02f7adf6a722714551f5b39ed6357055d"
+    },
+    "r194_manifest": {
+      "path": "strategy/pre-a6-sharp-running-mass-counterterm-boundary-manifest.json",
+      "sha256": "56cbf27fe768960b625232bc853471024f5ae050e14448f994111e876c2c7f9d"
+    },
+    "r194_certificate": {
+      "path": "strategy/pre-a6-sharp-running-mass-counterterm-boundary-certificate-260822.md",
+      "sha256": "e84a6742cbc8cb39fcda500abac097e6acd8f301493445a563ffc52f08871c45"
+    },
+    "r194_lean": {
+      "path": "verification/lean/Tect/R194.lean",
+      "sha256": "90912e1e785348997b67af27878068114a1b7ec8a6ad5b16118df6f25155408a"
+    },
+    "lean_toolchain": {
+      "path": "verification/lean/lean-toolchain",
+      "sha256": "8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af"
+    },
+    "lakefile": {
+      "path": "verification/lean/lakefile.toml",
+      "sha256": "a67c26b5518afd984e53eae28a0ba4948c6bb01680d7c360e8b36386eb98962b"
+    },
+    "lake_manifest": {
+      "path": "verification/lean/lake-manifest.json",
+      "sha256": "4308d953726ebe0a8e8fdb7aa5da996c8bfcd45d4a58f6f1b3b40e25d2521964"
+    },
+    "lean_registry": {
+      "path": "verification/lean/registry.json",
+      "sha256": "8e0461c1ce73bf8ee11a809559d10b7863b4768890c143304ebcc97351188c73"
+    }
+  },
+  "registered_inputs": {
+    "formula": "W_eps=9*(a+2*b+c)*s-6*b*s^2/(rho+eps)-3*c*s^2*(rho+2*eps)/(rho+eps)^2, with rho=s+r, s=|Psi_1|^2+|Psi_2|^2 and r=|Psi_3|^2",
+    "constant_field_domain": "T^3 with constant real field Psi_(s,r)=sqrt(s)e1+sqrt(r)e3; volume V=Lx*Ly*Lz derived from the hash-pinned A1 parameters",
+    "volume_rule": "V is computed from A1 parameters Lx, Ly, Lz; it is not a hardcoded derived number",
+    "test_oracles": {
+      "s": "1",
+      "kappa": "1/1000",
+      "strict_margin": "1"
+    }
+  },
+  "theorem_markers": [
+    "spatial_constant_field",
+    "integrated_identity",
+    "scaled_ratio_identity",
+    "ratio_bound"
+  ],
+  "files": {
+    "lean_entrypoint": {
+      "path": "verification/lean/Tect/R195.lean",
+      "sha256": "fe6680c28d2d9e1c8c3530e118757bab9d932172259207bd2e7a42270f19385f"
+    },
+    "primary": {
+      "path": "verification/scripts/lean_a6_spatial_constant_field_lift.py",
+      "sha256": "448a47a035a2a65d71a7831d4dc71482dce2d004983e8c0e781736e5092564a4"
+    },
+    "independent": {
+      "path": "codes/foundations/lean_a6_spatial_constant_field_lift_independent.py",
+      "sha256": "ae55ce3d7adcd1e8b77aff4f14916df06fe6c7fba83524e833d52409f8a63407"
+    },
+    "verifier": {
+      "path": "codes/foundations/lean_a6_spatial_constant_field_lift_verify.py",
+      "sha256": "ab01609857d61ad0e3117dc345195a91d55886b967acdc40db7969c0b727d4b2"
+    },
+    "certificate": {
+      "path": "strategy/pre-a6-spatial-constant-field-lift-boundary-certificate-260822.md",
+      "sha256": "9487bd81df3be6003a79b17b0f8f84f1bc67b496f053337e41862433b2f0872a"
+    },
+    "note": {
+      "path": "claims/A6-CLASSII-K-COMPOSITE-DEFINITION/notes/a6-spatial-constant-field-lift-boundary-260822.md",
+      "sha256": "e8988c46f67cf54ec346cad5861011d2a49f03f1e545752a53c446ecb3a5dd80"
+    }
+  },
+  "hostile_mutations": [
+    "drop the spatial volume factor V from the integrated correction",
+    "replace the volume-cancelled ratio by the local identity without proving V>0 and s>0",
+    "reverse the O(1/r) bound or omit r>=s+2*eps",
+    "claim the explicit r(kappa) family gives uniform coercivity",
+    "promote constant-field control to the full Gibbs measure",
+    "erase the partition/tightness and full-field boundary",
+    "replace the finite-torus constant subspace by an arbitrary continuum limit",
+    "insert Lean sorry, admit, axiom or unsafe escape"
+  ],
+  "boundary": "This T0 claim-nonbearing result proves only an exact constant-field spatial lift of the R-194 local algebra on the finite torus. It proves no positive volume-uniform coercivity on that subspace, but it does not prove a full-field Gibbs theorem, partition convergence, tightness, rho-floor removal, infinite volume, Sector-A, Pre-A or physical-empty comparison.",
+  "next_action": "Freeze a complete coefficient trajectory and prove spatially correlated partition and tightness estimates controlling all field directions, not only the constant-field escape, before any counterterm promotion.",
+  "no_overclaim": "R-195 is a Lean and independent Fraction field-space boundary only. The constant-field lift is not the full spatial Gibbs measure, and no A6 gate, A7, A13, Sector-A, Pre-A, vacuum or continuum conclusion follows.",
+  "formal_integration": {
+    "event_id": "20260822-r-195-spatial-constant-field-lift-of-a6-running",
+    "event_ordinal": 697,
+    "exploration_ordinal": 933,
+    "event_claim_ids": [
+      "A6-CLASSII-COUNTERTERM-CLOSURE",
+      "A6-CLASSII-K-COMPOSITE-DEFINITION",
+      "EXP-000933",
+      "R-195"
+    ],
+    "event_keywords": [
+      "A6",
+      "EXP-000933",
+      "Lean",
+      "R-195",
+      "constant-field",
+      "counterterm-open",
+      "spatial-lift",
+      "volume-cancelled"
+    ],
+    "event_notes": [
+      "strategy/pre-a6-spatial-constant-field-lift-boundary-manifest.json",
+      "strategy/pre-a6-spatial-constant-field-lift-boundary-certificate-260822.md",
+      "claims/A6-CLASSII-K-COMPOSITE-DEFINITION/notes/a6-spatial-constant-field-lift-boundary-260822.md",
+      "RESULTS-LEDGER.md",
+      "ROADMAP.md",
+      "strategy/INDEX.md"
+    ],
+    "event_scripts": [
+      "verification/scripts/lean_a6_spatial_constant_field_lift.py",
+      "codes/foundations/lean_a6_spatial_constant_field_lift_independent.py",
+      "codes/foundations/lean_a6_spatial_constant_field_lift_verify.py"
+    ],
+    "event_raw_tokens": [
+      "EXP-000933",
+      "R-195",
+      "constant-field",
+      "volume-cancelled",
+      "No R-195 PDF"
+    ],
+    "expected_counts": {
+      "claims": 49,
+      "results": 195,
+      "gates": 206,
+      "negatives": 372,
+      "explorations": 933,
+      "events": 697,
+      "tasks": 58,
+      "catalog": 4670
+    },
+    "no_new_negative_ids": [],
+    "reused_negative_ids": [
+      "NG-2026-07-20-A6-NAIVE-W-SUBTRACTION-NONUNIFORM"
+    ],
+    "no_pdf": true
+  }
+}

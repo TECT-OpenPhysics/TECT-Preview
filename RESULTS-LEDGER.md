@@ -38,6 +38,7 @@ policy in `governance/development-history.md`.
 | [R-191](#r-191) | Complete finite two-root A1 scalar owner telescope | R-191 v1.0 is a T0 claim-nonbearing Lean cross-check under EXP-000906. It binds the corrected A1 two-mode moments, the R-177 common-heat/root-1/root-2/future incidence, the exact signed endpoint telescope, and the feedback chain-rule coordinates; a finite fixture has negative intermediate stages but positive total increment. The production raw-current q-ledger, forest/source/sextic owner, A13, Sector-A and Pre-A remain open |
 | [R-192](#r-192) | Bounded complete finite production-cylinder integration trial | R-192 v1.0 is a T0 claim-nonbearing T-058 integration audit under EXP-000909. Lean and both exact lanes confirm the R-183 reserve fixtures, R-184 temporal identity and R-191 telescope, then stop at the first missing production heat/root raw-current map. The audit does not close the q-ledger, either A13 gate, Sector-A or Pre-A |
 | [R-194](#r-194) | Sharp running-mass counterterm boundary | R-194 v1.0 is a T0 claim-nonbearing Lean/Fraction boundary under EXP-000932. It proves the sharp local coefficient h_min=9*(a+2*b+c), a nonnegative endpoint correction, a subsharp negative witness, and a third-component escape with no uniform coercivity. The full renormalised A6 owner, tightness, removal, Sector-A and Pre-A remain open |
+| [R-195](#r-195) | Spatial constant-field lift of the A6 running-mass escape | R-195 v1.0 is a T0 claim-nonbearing Lean/Fraction spatial lift under EXP-000933. On the declared finite torus, constant fields multiply the R-194 correction by the exact volume and the volume-cancelled ratio is bounded by 6*s*(b+c)/r, so no positive volume-uniform coercivity holds even on that subspace. Full-field concentration, partition/tightness, A7, A13, Sector-A and Pre-A remain open |
 | [R-193](#r-193) | Static-owner to heat-map non-identifiability witness | R-193 v1.0 is a T0 claim-nonbearing interface result under EXP-000910. Two exact positive diagonal contractions share the same static inverse-covariance data but reverse relative decay order; A1/A7 do not supply the missing heat/root/raw-current/q-ledger fields. This sharpens, but does not close, the R-192 blocker or either A13 gate |
 | [R-182](#r-182) | Feedback-pulled cross-Hessian margin Lean cross-check | R-182 v1.0 is a T0 claim-nonbearing Lean checkpoint under EXP-000897. It combines the active R-178 cross coefficient with the R-181 feedback map and proves the exact pulled Hessian `[-2,4;4,-8]` with eigenvalues -10 and 0. The diagonal production owner, source/sextic one-use, T-050, A13, Sector-A and Pre-A remain open |
 | [R-181](#r-181) | Finite two-root feedback mixed-Gram Lean cross-check | R-181 v1.0 is a T0 claim-nonbearing Lean checkpoint under EXP-000896. It binds the R-177 beta=1/2 root-2 feedback map, exact Gram `[[5/4,1/2],[1/2,1]]`, and positive envelope defect. The production spatial mixed Gram, source/sextic one-use, T-050, A13, Sector-A and Pre-A remain open |
@@ -564,6 +565,39 @@ tier/lifecycle change follows. A13 gates remain open. No R-192 PDF is issued.
 **Proven in:** [R-192 certificate](strategy/pre-a13-t058-bounded-complete-production-cylinder-certificate-260822.md), [Lean entrypoint](verification/lean/Tect/R192.lean), [primary script](verification/scripts/lean_a13_t058_bounded_complete_production_cylinder.py), [independent script](codes/foundations/lean_a13_t058_bounded_complete_production_cylinder_independent.py), [integrated verifier](verification/scripts/lean_a13_t058_bounded_complete_production_cylinder_verify.py), [scope note](claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/a13-t058-bounded-complete-production-cylinder-260822.md), and saved run artefacts. No R-192 PDF is issued.
 
 <a id="r-193"></a>
+<a id="r-195"></a>
+### R-195 -- Spatial constant-field lift of the A6 running-mass escape
+
+**Result ID.** R-195 is a T0, claim-nonbearing Lean and independent exact
+field-space boundary established by EXP-000933.
+
+**Scope.** On the hash-pinned finite torus with volume `V=Lx*Ly*Lz`, the
+constant field `Psi_(s,r)(x)=sqrt(s)e1+sqrt(r)e3` has
+`|Psi_1|^2+|Psi_2|^2=s` and `|Psi_3|^2=r`. The integrated R-194 endpoint
+correction is exactly `V*D(h_min;s,r)`, and for `V>0`, `s>0` its ratio to
+`V*s` equals the local ratio.
+
+**Exact bound.** Lean proves that when `b,c>=0`, `eps>0`, and
+`r>=s+2*eps`,
+`D(h_min;s,r)/s <= 6*s*(b+c)/r`. Choosing
+`r=s+2*eps+6*s*(b+c)/kappa+1` makes this ratio strictly below every
+`kappa>0`. The spatial volume cancels and cannot repair the escape.
+
+**Verification.** The pinned Lean entrypoint, primary Fraction lane, and
+non-importing independent Fraction lane agree on the exact volume, integrated
+identity, ratio, explicit witness, and bound. The integrated verifier checks
+source hashes, Lean escape absence, child agreement, hostile mutations, and
+the local-versus-full-field boundary.
+
+**Boundary.** This is a constant-field subspace result only. It does not prove
+a full renormalised Class-II energy, a spatially correlated partition or
+tightness estimate, full-field bare concentration, rho-floor removal, an
+infinite-volume limit, A7 self-coupling, A13, Sector-A, Pre-A,
+physical-empty comparison, or any gate closure. R-194's existing negative is
+reused and no new negative is registered. No R-195 PDF is issued.
+
+**Proven in:** [R-195 certificate](strategy/pre-a6-spatial-constant-field-lift-boundary-certificate-260822.md), [Lean entrypoint](verification/lean/Tect/R195.lean), [primary script](verification/scripts/lean_a6_spatial_constant_field_lift.py), [independent script](codes/foundations/lean_a6_spatial_constant_field_lift_independent.py), [integrated verifier](codes/foundations/lean_a6_spatial_constant_field_lift_verify.py), [scope note](claims/A6-CLASSII-K-COMPOSITE-DEFINITION/notes/a6-spatial-constant-field-lift-boundary-260822.md), and the saved run artefacts. No R-195 PDF is issued.
+
 <a id="r-194"></a>
 ### R-194 -- Sharp running-mass counterterm boundary
 
