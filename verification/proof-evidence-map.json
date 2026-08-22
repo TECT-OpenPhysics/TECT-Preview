@@ -58,7 +58,7 @@
     "claims/F2-BARYOGENESIS/status.json": "de39e5132355707dd49d4da4ef2da7b64d5f69802609c2f867d658114c3523a4",
     "claims/F3-INFLATION-CMB/status.json": "04b783d1f49f0ee453d4ccc3eff93cc7bca3c084dcdcdd036a023dd76d62331c",
     "claims/GATES.md": "8b2e79e8570fb392bb475ddad551ce551ce8775b22d180fbf547ca4b440c2c3f",
-    "explorations/log.jsonl": "facd6a3a1b33eb29b8b516a61355d1d8418b4c46cd42524ed8a647daf04ef7ab",
+    "explorations/log.jsonl": "d80b011eb9339dae1be485cd9d98e263e48ecf21903dbc77219ca33701445746",
     "negative-results/registry.md": "546bbd65ee917eae68a9b1a3564431d3fcea72804d4aea79e061e002e097de0e",
     "theory/proof-evidence/interface-pointers.json": "59d3135869897d1c77a62dcbf9a513110136dba21dd43d23ffa4abbc9307992f",
     "todo/todo.json": "1252641a4d7ef622c32f8ce993b493d91d817eabaa290aa7e7721083168f96e6"
@@ -70,12 +70,12 @@
     "interface_pointers": 1,
     "reusable_results": 193,
     "negative_records": 372,
-    "proof_explorations": 921,
+    "proof_explorations": 922,
     "exploration_verdicts": {
       "advanced": 570,
       "failed": 236,
       "inconclusive": 80,
-      "parked": 35
+      "parked": 36
     },
     "process_grade_lessons": 3,
     "accepted_events": 694,
@@ -7793,8 +7793,10 @@
           "NG-2026-07-20-A6-NAIVE-W-SUBTRACTION-NONUNIFORM",
           "NG-2026-07-20-A6-BARE-CLASSII-L1"
         ],
-        "exploration_ids": [],
-        "latest_exploration_id": "",
+        "exploration_ids": [
+          "EXP-000922"
+        ],
+        "latest_exploration_id": "EXP-000922",
         "accepted_event_ids": [
           "20260720-close-the-fixed-floor-class-ii-k-current-and-sp"
         ],
@@ -7880,8 +7882,10 @@
           "NG-2026-07-20-A6-NAIVE-W-SUBTRACTION-NONUNIFORM",
           "NG-2026-07-20-A6-BARE-CLASSII-L1"
         ],
-        "exploration_ids": [],
-        "latest_exploration_id": "",
+        "exploration_ids": [
+          "EXP-000922"
+        ],
+        "latest_exploration_id": "EXP-000922",
         "accepted_event_ids": [
           "20260720-prove-a6-derivative-class-ii-uv-power-counting",
           "20260720-bound-a6-counterterm-conclusion-against-bare-co",
@@ -7984,9 +7988,10 @@
         "exploration_ids": [
           "EXP-000783",
           "EXP-000878",
-          "EXP-000879"
+          "EXP-000879",
+          "EXP-000922"
         ],
-        "latest_exploration_id": "EXP-000879",
+        "latest_exploration_id": "EXP-000922",
         "accepted_event_ids": [
           "20260720-a7-full-class-ii-renormalised-energy-composite",
           "20260720-a7-adversarial-repair-closes-the-rational-coeff",
@@ -73736,6 +73741,64 @@
       "task_id": "T-054",
       "title": "A5 T6 path-hygiene resolver and compact digest repair",
       "verdict": "advanced"
+    },
+    {
+      "boundary": "This is a T0 claim-nonbearing applicability audit. It proves no new theorem or negative result, changes no tier or lifecycle, and does not close A6-CLASSII-COUNTERTERM-CLOSURE, A6-CLASSII-FULL-FIELD-BARE-CONCENTRATION, A7-CLASSII-NELSON-EXPONENTIAL-BOUND, A7-CLASSII-SELF-COUPLING-INTERPOLATION, A11, A13, T-050, Nelson, an interacting Gibbs measure, regulator or floor removal, infinite volume, physical-empty comparison, phase selection, Sector-A, or Pre-A.",
+      "claim_ids": [
+        "A6-CLASSII-UV-POWER-COUNTING",
+        "A6-CLASSII-K-COMPOSITE-DEFINITION",
+        "A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE"
+      ],
+      "decision_reason": "The missing data are load-bearing owner hypotheses rather than a notation or path issue. Treating the fixed-floor composite or decoupled determinant as a running renormalisation prescription would conflate a defined observable with a controlled interacting measure and would bypass the explicit A6/A7 gate contracts. The correct route decision is to require one scheme owner with finite parts and renormalisation conditions, or a separately certified full-field concentration route, before attempting a closure theorem.",
+      "evidence_refs": [
+        "claims/A6-CLASSII-UV-POWER-COUNTING/status.json#next_action",
+        "claims/A6-CLASSII-UV-POWER-COUNTING/classii_uv_power_counting_manifest.json#open_obligations",
+        "claims/A6-CLASSII-K-COMPOSITE-DEFINITION/status.json#next_action",
+        "claims/A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE/status.json#next_action",
+        "claims/A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE/classii_renormalised_energy_manifest.json#finite_scheme_condition",
+        "claims/GATES.md#A6-CLASSII-COUNTERTERM-CLOSURE",
+        "claims/GATES.md#A7-CLASSII-NELSON-EXPONENTIAL-BOUND",
+        "claims/GATES.md#A7-CLASSII-SELF-COUPLING-INTERPOLATION",
+        "RESULTS-LEDGER.md#r-049",
+        "RESULTS-LEDGER.md#r-050",
+        "RESULTS-LEDGER.md#r-051",
+        "RESULTS-LEDGER.md#r-052"
+      ],
+      "finding": "No current authority supplies the missing owner. A6-CLASSII-UV-POWER-COUNTING proves the positive bare Gaussian derivative contraction and explicitly leaves counterterm closure and full-field bare concentration open. A6-CLASSII-K-COMPOSITE-DEFINITION and A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE close only fixed-floor covariance-normal composite definitions within the declared common-even regulator class. R-051 eliminates the literal fixed-coefficient subtraction as a uniform-coercivity route and records that a running family mass would be a new renormalisation condition; R-052 proves only an independent-coefficient/derivative product-Gaussian determinant and measure, not the self-coupled field. R-049--R-052 contain no hash-pinned finite-part trajectory, subgraph-by-subgraph counterterm closure, self-coupled negative-exponential bound, partition-density convergence, or full-field tightness theorem. Therefore the A6 counterterm and A7 self-coupled Nelson gates remain genuinely open; no physical, continuum, removal, phase, BCC, Sector-A, or Pre-A conclusion follows.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": [
+          "R-049",
+          "R-050",
+          "R-051",
+          "R-052"
+        ]
+      },
+      "gate_ids": [
+        "A6-CLASSII-COUNTERTERM-CLOSURE",
+        "A6-CLASSII-FULL-FIELD-BARE-CONCENTRATION",
+        "A7-CLASSII-NELSON-EXPONENTIAL-BOUND",
+        "A7-CLASSII-SELF-COUPLING-INTERPOLATION"
+      ],
+      "id": "EXP-000922",
+      "method": [
+        "Read the hash-pinned A6 UV power-counting, A6 K-composite, and A7 covariance-normal energy status cards and manifests, including their declared scheme, regulator, floor, and no-overclaim boundaries.",
+        "Inspect the R-049, R-050, R-051, and R-052 result sections and saved assertions for a running coefficient trajectory, finite parts, renormalisation conditions, subgraph closure, uniform lower form, partition-function bound, or tightness theorem.",
+        "Cross-check the live A6 counterterm and A7 Nelson gates against the exact next-action text; reject importing a fixed subtraction, a decoupled product-Gaussian determinant, or an auxiliary Sobolev kernel as the self-coupled owner.",
+        "Apply the Lean policy boundary: no new kernel theorem is needed because this audit finds no new exact numerical proposition; any future owner must add Lean checks for its exact rational consequences and retain analytic hypotheses separately."
+      ],
+      "next_action": "Require a hash-pinned renormalisation owner that specifies the complete symmetry-allowed counterterm basis, coefficient trajectory including finite parts, renormalisation conditions and uniform lower/partition estimates; alternatively construct a separately certified full-field concentration and tightness route. Then run primary, non-importing independent, integrated and Lean exact-consequence checks before any gate decision.",
+      "provenance": "contemporaneous",
+      "question": "Do the current fixed-floor A6/A7 authorities and R-049--R-052 supply a scheme-controlled running relevant coefficient or counterterm owner together with full-field partition and tightness control, or is the next A6/A7 obligation still unowned?",
+      "recorded_at": "2026-08-22T10:00:00Z",
+      "recorded_by": "Codex",
+      "related": [],
+      "reviewed_on": "2026-08-22",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-050",
+      "title": "A6/A7 running-counterterm owner and full-field closure applicability audit",
+      "verdict": "parked"
     }
   ],
   "inconclusive_or_parked_exploration_ids": [
@@ -73853,7 +73916,8 @@
     "EXP-000913",
     "EXP-000914",
     "EXP-000916",
-    "EXP-000920"
+    "EXP-000920",
+    "EXP-000922"
   ],
   "process_grade_lessons": [
     "Round-summary over-claim incident (legacy 2026-04-24): higher-tier summaries may never outrun pillar-level notes → single-source-of-truth rule (`status.json` → generated `CLAIMS.md`).",
@@ -112006,6 +112070,12 @@
         "id": "exploration:EXP-000921",
         "kind": "proof_exploration",
         "label": "A5 T6 path-hygiene resolver and compact digest repair",
+        "authority": "explorations/log.jsonl"
+      },
+      {
+        "id": "exploration:EXP-000922",
+        "kind": "proof_exploration",
+        "label": "A6/A7 running-counterterm owner and full-field closure applicability audit",
         "authority": "explorations/log.jsonl"
       },
       {
@@ -170809,6 +170879,78 @@
         "relation": "records_task",
         "to": "task:T-054",
         "basis": "structured_task_id"
+      },
+      {
+        "from": "exploration:EXP-000922",
+        "relation": "assesses",
+        "to": "claim:A6-CLASSII-K-COMPOSITE-DEFINITION",
+        "basis": "structured_claim_id"
+      },
+      {
+        "from": "exploration:EXP-000922",
+        "relation": "assesses",
+        "to": "claim:A6-CLASSII-UV-POWER-COUNTING",
+        "basis": "structured_claim_id"
+      },
+      {
+        "from": "exploration:EXP-000922",
+        "relation": "assesses",
+        "to": "claim:A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE",
+        "basis": "structured_claim_id"
+      },
+      {
+        "from": "exploration:EXP-000922",
+        "relation": "assesses_gate",
+        "to": "gate:A6-CLASSII-COUNTERTERM-CLOSURE",
+        "basis": "structured_gate_id"
+      },
+      {
+        "from": "exploration:EXP-000922",
+        "relation": "assesses_gate",
+        "to": "gate:A6-CLASSII-FULL-FIELD-BARE-CONCENTRATION",
+        "basis": "structured_gate_id"
+      },
+      {
+        "from": "exploration:EXP-000922",
+        "relation": "assesses_gate",
+        "to": "gate:A7-CLASSII-NELSON-EXPONENTIAL-BOUND",
+        "basis": "structured_gate_id"
+      },
+      {
+        "from": "exploration:EXP-000922",
+        "relation": "assesses_gate",
+        "to": "gate:A7-CLASSII-SELF-COUPLING-INTERPOLATION",
+        "basis": "structured_gate_id"
+      },
+      {
+        "from": "exploration:EXP-000922",
+        "relation": "records_task",
+        "to": "task:T-050",
+        "basis": "structured_task_id"
+      },
+      {
+        "from": "exploration:EXP-000922",
+        "relation": "references_result",
+        "to": "result:R-049",
+        "basis": "structured_formal_ref"
+      },
+      {
+        "from": "exploration:EXP-000922",
+        "relation": "references_result",
+        "to": "result:R-050",
+        "basis": "structured_formal_ref"
+      },
+      {
+        "from": "exploration:EXP-000922",
+        "relation": "references_result",
+        "to": "result:R-051",
+        "basis": "structured_formal_ref"
+      },
+      {
+        "from": "exploration:EXP-000922",
+        "relation": "references_result",
+        "to": "result:R-052",
+        "basis": "structured_formal_ref"
       },
       {
         "from": "negative:AUDIT-2026-06-08-scscope-lift-overclaim",
