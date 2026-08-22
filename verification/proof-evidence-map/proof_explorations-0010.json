@@ -2281,6 +2281,52 @@
       "task_id": "T-057",
       "title": "Selected H-suppression closure note is superseded and cannot discharge C1",
       "verdict": "inconclusive"
+    },
+    {
+      "boundary": "R-191 remains unverified until the dependency hash is repaired. R-189/R-190/R-194/R-195 are finite/local cross-checks only. No A13/T-050 closure, production map, one-use q-ledger, signed forest-current estimate, OVERLAP_src, Nelson, measure, Sector-A, Pre-A, physical-empty, removal or continuum result is promoted.",
+      "claim_ids": [
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
+      ],
+      "decision_reason": "The mismatch is load-bearing because R-191 explicitly hashes all registered inputs. Refreshing the upstream pin is a narrow provenance repair; no conclusion about production raw-current ownership, q-ledger, A13, Sector-A, Pre-A, physical-empty, removal or continuum follows.",
+      "evidence_refs": [
+        "codes/foundations/lean_a13_two_root_complete_scalar_owner_verify.py#input-hash-loop",
+        "strategy/pre-a13-two-root-complete-scalar-owner-manifest.json#inputs.r190_manifest",
+        "strategy/pre-a13-a1-arbitrary-polarization-two-mode-manifest.json#manifest-inputs",
+        "verification/lean/Tect/R191.lean#finite-telescope-theorems",
+        "verification/proof-evidence-map.json#index"
+      ],
+      "finding": "R-189, R-190, R-194 and R-195 pass their current Lean/Fraction integrated lanes. R-191 fails before its child derivations because its registered R-190 manifest hash is 94a4add6b0f1b1ca95b10d1e30116465ea5df89d2011f897a71f0c5c933286e2 while the current hash is ccea7270265594d8b1d3fc5641a8247ddb9f662bf31804662b4750ec57a0053c. This is a consumer provenance-drift blocker, not a mathematical refutation of the finite two-root telescope; the R-190 result must be repinned and R-191 rerun before its integrated result can be stored or cited.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": [
+          "R-189",
+          "R-190",
+          "R-194",
+          "R-195"
+        ]
+      },
+      "gate_ids": [
+        "A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE",
+        "A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION"
+      ],
+      "id": "EXP-000946",
+      "method": [
+        "Run the stored-output-preserving R-189, R-190, R-191, R-194 and R-195 Lean-integrated verifiers after the current release-gated commit.",
+        "Compare every R-191 registered input hash against the current upstream manifest and distinguish child-lane mathematics from consumer provenance freshness.",
+        "Do not alter the two-root theorem or promote any A13 gate while the dependency pin is stale."
+      ],
+      "next_action": "Refresh only the R-191 inputs.r190_manifest SHA-256 to the current R-190 manifest, regenerate generated surfaces, rerun the R-191 primary/independent/integrated Lean lanes with no-store, and store the corrected child artifacts only after the full formal topology is revalidated.",
+      "provenance": "contemporaneous",
+      "question": "Does the R-191 two-root consumer remain hash-consistent after the R-190 arbitrary-polarization manifest was revalidated?",
+      "recorded_at": "2026-08-23T00:50:00Z",
+      "recorded_by": "Codex",
+      "related": [],
+      "reviewed_on": "2026-08-23",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-058",
+      "title": "R-191 consumer hash pin drift after R-190 manifest revalidation",
+      "verdict": "inconclusive"
     }
   ],
   "kind": "proof_explorations",
