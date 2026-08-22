@@ -7,7 +7,7 @@
   "authority_boundary": "This projection is complete by reference but is not a tier or proof authority. Claim status cards, proof notes/runs, RESULTS-LEDGER.md, negative-results/registry.md, explorations/log.jsonl, changelog/log.jsonl, todo/todo.json, and claims/GATES.md remain canonical. theory/proof-evidence/interface-pointers.json owns only reference-only external locators and never a claim or obligation status.",
   "source_hashes": {
     "RESULTS-LEDGER.md": "1dcab28ca10923c9d668d57f1959d6421c9a5adebbd7c043fb9140a540c1f046",
-    "changelog/log.jsonl": "2ad2ff9226dfb2f2bb95a721b05d202571adb10b2448583e17b608ab2dcba932",
+    "changelog/log.jsonl": "233d55c712c75349096e6479eebc00c7efb21872bbe83081d1988944024337ed",
     "claims/A1-KERNEL-CONV/status.json": "e5dd2b08ce58f1c3d2680b907e1469b828b2b6a3929d773f7bd84137efe36509",
     "claims/A1-KERNEL-IDENTITY/status.json": "dbaf6f1e80d994b94c9746cc7d342592fbc3638abb372d8e1c02841bb4e4d477",
     "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/status.json": "202e7514bb2d6fc029e61de95386981aedca15d81e9d6f71fc1570d77049d554",
@@ -58,7 +58,7 @@
     "claims/F2-BARYOGENESIS/status.json": "de39e5132355707dd49d4da4ef2da7b64d5f69802609c2f867d658114c3523a4",
     "claims/F3-INFLATION-CMB/status.json": "04b783d1f49f0ee453d4ccc3eff93cc7bca3c084dcdcdd036a023dd76d62331c",
     "claims/GATES.md": "8b2e79e8570fb392bb475ddad551ce551ce8775b22d180fbf547ca4b440c2c3f",
-    "explorations/log.jsonl": "02d14e4710eda30e83a6912fcbe10cdf24045b6244d1b889ab1ef5b4938770a9",
+    "explorations/log.jsonl": "850bdcd5d41f47947f2f7924c14bafcf717d626015adb2777d6ebc9c8f2e845f",
     "negative-results/registry.md": "546bbd65ee917eae68a9b1a3564431d3fcea72804d4aea79e061e002e097de0e",
     "theory/proof-evidence/interface-pointers.json": "59d3135869897d1c77a62dcbf9a513110136dba21dd43d23ffa4abbc9307992f",
     "todo/todo.json": "1252641a4d7ef622c32f8ce993b493d91d817eabaa290aa7e7721083168f96e6"
@@ -70,15 +70,15 @@
     "interface_pointers": 1,
     "reusable_results": 193,
     "negative_records": 372,
-    "proof_explorations": 917,
+    "proof_explorations": 918,
     "exploration_verdicts": {
-      "advanced": 567,
+      "advanced": 568,
       "failed": 236,
       "inconclusive": 80,
       "parked": 34
     },
     "process_grade_lessons": 3,
-    "accepted_events": 691,
+    "accepted_events": 692,
     "tasks": 58,
     "live_tasks": 10,
     "completed_tasks": 48,
@@ -2960,6 +2960,13 @@
         "event": "20260822-r-193-static-owner-heat-map-non-identifiability",
         "claim_ids": [
           "EXP-000910",
+          "R-193"
+        ]
+      },
+      {
+        "event": "20260822-r-193-historical-reader-append-only-growth-repa",
+        "claim_ids": [
+          "EXP-000918",
           "R-193"
         ]
       }
@@ -6552,9 +6559,10 @@
           "EXP-000913",
           "EXP-000914",
           "EXP-000915",
-          "EXP-000916"
+          "EXP-000916",
+          "EXP-000918"
         ],
-        "latest_exploration_id": "EXP-000916",
+        "latest_exploration_id": "EXP-000918",
         "accepted_event_ids": [
           "20260721-close-t-049-negatively-with-the-a13-relative-ph",
           "20260721-complete-a13-gate-record-synchronization-and-re",
@@ -6753,9 +6761,10 @@
           "20260822-r-190-a1-arbitrary-polarization-two-mode-positi",
           "20260822-r-191-complete-finite-two-root-a1-scalar-owner",
           "20260822-r-192-t-058-bounded-complete-finite-production",
-          "20260822-r-193-static-owner-heat-map-non-identifiability"
+          "20260822-r-193-static-owner-heat-map-non-identifiability",
+          "20260822-r-193-historical-reader-append-only-growth-repa"
         ],
-        "latest_event_id": "20260822-r-193-static-owner-heat-map-non-identifiability",
+        "latest_event_id": "20260822-r-193-historical-reader-append-only-growth-repa",
         "live_task_gate_ids": [
           "A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE"
         ],
@@ -12530,7 +12539,8 @@
       },
       "family_refs": [],
       "accepted_event_ids": [
-        "20260822-r-193-static-owner-heat-map-non-identifiability"
+        "20260822-r-193-static-owner-heat-map-non-identifiability",
+        "20260822-r-193-historical-reader-append-only-growth-repa"
       ],
       "co_recorded_negative_tags": []
     },
@@ -73564,6 +73574,53 @@
       "task_id": "T-006",
       "title": "T-006 code-discipline gate and RHO source consolidation",
       "verdict": "advanced"
+    },
+    {
+      "boundary": "This is T0 infrastructure evidence. It repairs only the R-193 historical reader and does not add a theorem, alter the static non-identifiability witness, close A13 or T-050, supply a production map, prove Nelson or a measure, establish physical-empty ordering, or advance Sector-A/Pre-A/continuum/removal claims.",
+      "claim_ids": [
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
+      ],
+      "decision_reason": "A historical exact-count predicate is not a valid freshness invariant in an append-only evidence ledger. Monotone growth is safe only after preserving the pinned minimum baseline, the first-store interim absence rule, source hashes, child agreement, and all theorem-boundary assertions.",
+      "evidence_refs": [
+        "codes/foundations/lean_a13_r193_static_owner_heat_map_nonidentifiability_verify.py#catalog-count-and-result-count",
+        "strategy/pre-a13-r193-static-owner-heat-map-nonidentifiability-manifest.json#files.verifier",
+        "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-22-lean-r193-static-owner-heat-map-nonidentifiability/integrated.json#assertions",
+        "RESULTS-LEDGER.md#r-193"
+      ],
+      "finding": "The old R-193 integrated reader rejected the current append-only tree because catalog total 4497 exceeded the pinned baseline 4496. The static witness and all dynamic-field absence checks were unchanged. After the reader repair and manifest hash refresh, the integrated lane passes 48/48 with interface=non-identifiable; no new production heat map, root filtration, raw-current projector, or q-ledger is supplied.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": [
+          "R-193"
+        ]
+      },
+      "gate_ids": [
+        "A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION",
+        "A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE"
+      ],
+      "id": "EXP-000918",
+      "method": [
+        "Re-run the unchanged R-193 primary and independent Lean witnesses and the integrated verifier against the current hash-pinned A1/A7/R-136/R-125 authorities.",
+        "Reproduce the historical failure at catalog total 4497 versus the original expected 4496 and distinguish repository growth from a theorem failure.",
+        "Change only the integrated historical-reader count predicates to accept catalog and reusable-result totals greater than or equal to the pinned baseline, while retaining the first-run interim allowance and all source/hash/interface/mutation checks."
+      ],
+      "next_action": "Keep R-193 as the static-interface boundary. Require a hash-pinned production heat/root/current/q-ledger owner before rerunning R-192 for any A13 gate decision.",
+      "provenance": "contemporaneous",
+      "question": "Does the R-193 static-owner non-identifiability verifier remain valid when later append-only catalog and reusable-result records exceed its original expected counts?",
+      "recorded_at": "2026-08-22T06:01:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-000916",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-08-22",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-058",
+      "title": "Repair the R-193 historical reader for append-only catalog and result growth",
+      "verdict": "advanced"
     }
   ],
   "inconclusive_or_parked_exploration_ids": [
@@ -100934,6 +100991,58 @@
       "result_ids": [],
       "linked_result_ids": [],
       "result_link_basis": {}
+    },
+    {
+      "id": "20260822-r-193-historical-reader-append-only-growth-repa",
+      "date": "2026-08-22",
+      "header": "[R-193 historical reader append-only growth repair] - 2026-08-22",
+      "claim_ids": [
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "EXP-000918",
+        "R-193"
+      ],
+      "keywords": [
+        "EXP-000918",
+        "R-193",
+        "append-only",
+        "freshness",
+        "infrastructure",
+        "no-new-negative",
+        "non-identifiability",
+        "reader"
+      ],
+      "negative_results": [],
+      "notes": [
+        "strategy/pre-a13-r193-static-owner-heat-map-nonidentifiability-manifest.json",
+        "strategy/pre-a13-r193-static-owner-heat-map-nonidentifiability-certificate-260822.md",
+        "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/a13-r193-static-owner-heat-map-nonidentifiability-260822.md",
+        "RESULTS-LEDGER.md"
+      ],
+      "scripts": [
+        "verification/scripts/lean_a13_r193_static_owner_heat_map_nonidentifiability.py",
+        "codes/foundations/lean_a13_r193_static_owner_heat_map_nonidentifiability_independent.py",
+        "codes/foundations/lean_a13_r193_static_owner_heat_map_nonidentifiability_verify.py"
+      ],
+      "raw": "## [R-193 historical reader append-only growth repair] - 2026-08-22\n\nEXP-000918 records a T0, claim-nonbearing repair of the R-193 historical reader. The original exact catalog/result predicates rejected append-only growth even though the Lean static witness, child agreement, source hashes, and dynamic-field absence checks were unchanged. The repaired predicates retain the pinned baseline and first-store interim rule while accepting monotone catalog and reusable-result growth.\n\nR-193 now passes its integrated 48/48 interface=non-identifiable lane on the current tree. This is an infrastructure/freshness repair only: it supplies no production heat/root map, raw-current projector, q-ledger, A13/T-050 closure, Nelson or measure theorem, physical-empty ordering, Sector-A/Pre-A result, removal, continuum limit, or PDF. No new negative result is registered.\n\n",
+      "claim_refs": [
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
+      ],
+      "claim_ref_basis": {
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION": "explicit_claim_ids"
+      },
+      "unresolved_claim_ids": [
+        "EXP-000918",
+        "R-193"
+      ],
+      "result_ids": [
+        "R-193"
+      ],
+      "linked_result_ids": [
+        "R-193"
+      ],
+      "result_link_basis": {
+        "R-193": "explicit_result_id"
+      }
     }
   ],
   "all_tasks": [
@@ -106130,6 +106239,12 @@
         "id": "event:20260822-r-192-t-058-bounded-complete-finite-production",
         "kind": "accepted_event",
         "label": "[R-192 T-058 bounded complete finite production-cylinder integration trial] - 2026-08-22",
+        "authority": "CHANGELOG.md"
+      },
+      {
+        "id": "event:20260822-r-193-historical-reader-append-only-growth-repa",
+        "kind": "accepted_event",
+        "label": "[R-193 historical reader append-only growth repair] - 2026-08-22",
         "authority": "CHANGELOG.md"
       },
       {
@@ -111644,6 +111759,12 @@
         "id": "exploration:EXP-000917",
         "kind": "proof_exploration",
         "label": "T-006 code-discipline gate and RHO source consolidation",
+        "authority": "explorations/log.jsonl"
+      },
+      {
+        "id": "exploration:EXP-000918",
+        "kind": "proof_exploration",
+        "label": "Repair the R-193 historical reader for append-only catalog and result growth",
         "authority": "explorations/log.jsonl"
       },
       {
@@ -128602,6 +128723,18 @@
         "from": "event:20260822-r-192-t-058-bounded-complete-finite-production",
         "relation": "records_result",
         "to": "result:R-192",
+        "basis": "explicit_result_id"
+      },
+      {
+        "from": "event:20260822-r-193-historical-reader-append-only-growth-repa",
+        "relation": "records",
+        "to": "claim:A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "basis": "explicit_claim_ids"
+      },
+      {
+        "from": "event:20260822-r-193-historical-reader-append-only-growth-repa",
+        "relation": "records_result",
+        "to": "result:R-193",
         "basis": "explicit_result_id"
       },
       {
@@ -170327,6 +170460,42 @@
         "relation": "records_task",
         "to": "task:T-006",
         "basis": "structured_task_id"
+      },
+      {
+        "from": "exploration:EXP-000918",
+        "relation": "assesses",
+        "to": "claim:A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "basis": "structured_claim_id"
+      },
+      {
+        "from": "exploration:EXP-000918",
+        "relation": "assesses_gate",
+        "to": "gate:A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE",
+        "basis": "structured_gate_id"
+      },
+      {
+        "from": "exploration:EXP-000918",
+        "relation": "assesses_gate",
+        "to": "gate:A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION",
+        "basis": "structured_gate_id"
+      },
+      {
+        "from": "exploration:EXP-000918",
+        "relation": "continues",
+        "to": "exploration:EXP-000916",
+        "basis": "structured_related_ref"
+      },
+      {
+        "from": "exploration:EXP-000918",
+        "relation": "records_task",
+        "to": "task:T-058",
+        "basis": "structured_task_id"
+      },
+      {
+        "from": "exploration:EXP-000918",
+        "relation": "references_result",
+        "to": "result:R-193",
+        "basis": "structured_formal_ref"
       },
       {
         "from": "negative:AUDIT-2026-06-08-scscope-lift-overclaim",

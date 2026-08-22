@@ -162,9 +162,12 @@ def main() -> int:
         check("event raw tokens", all(token in event.get("raw", "") for token in manifest["formal_integration"]["event_raw_tokens"]), manifest["formal_integration"]["event_raw_tokens"], "all present")
         check("event no negatives", event.get("neg_results") == [], event.get("neg_results"), [])
     summary = json.loads((REPO / "verification" / "catalog-summary.json").read_text(encoding="utf-8"))
-    check("catalog count", summary.get("total") == expected["catalog"] or (summary.get("total") == expected["catalog"] - 1 and not args.output.exists()), summary.get("total"), expected["catalog"])
+    catalog_total = summary.get("total")
+    interim_catalog = expected["catalog"] - 1
+    check("catalog count (append-only compatible)", isinstance(catalog_total, int) and (catalog_total >= expected["catalog"] or (catalog_total == interim_catalog and not args.output.exists())), catalog_total, f">= {expected['catalog']} or interim {interim_catalog}")
     proof_map = json.loads((REPO / "verification" / "proof-evidence-map.json").read_text(encoding="utf-8"))
-    check("result count", len(proof_map.get("reusable_results", [])) == expected["results"], len(proof_map.get("reusable_results", [])), expected["results"])
+    result_total = len(proof_map.get("reusable_results", []))
+    check("result count (append-only compatible)", result_total >= expected["results"], result_total, f">= {expected['results']}")
     mutations = {
         "same_static_data": derived["static_inverse"],
         "zero_preserving": derived["map_a_zero"] and derived["map_b_zero"],
