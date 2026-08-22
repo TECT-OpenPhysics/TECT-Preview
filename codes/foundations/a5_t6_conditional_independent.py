@@ -18,7 +18,7 @@ from decimal import Decimal, getcontext
 from pathlib import Path
 from typing import Any
 
-__version__ = "1.1.0"
+__version__ = "1.2.0"
 __first_issued__ = "2026-07-19"
 __version_issued__ = "2026-07-20"
 __claims__ = ["A5-SECTOR-A-SYNTHESIS"]
@@ -27,6 +27,32 @@ getcontext().prec = 80
 REPO = Path(__file__).resolve().parents[2]
 CLAIM = REPO / "claims" / __claims__[0]
 MANIFEST = CLAIM / "conditional_composition_manifest.json"
+
+
+# Path-hygiene compatibility: compact legacy aliases resolve to canonical roots.
+PATH_ALIASES = (
+    ("claims/a5/bundle/a5t5", "claims/A5-SECTOR-A-SYNTHESIS/bundle/a5t5"),
+    ("claims/a5/bundle/a5t6", "claims/A5-SECTOR-A-SYNTHESIS/bundle/a5t6"),
+    ("claims/a1k/bundle/b-a1n", "claims/A1-PRODUCTION-KERNEL-MANIFEST/bundle/A1-N001-Manifest-T5-260716"),
+    ("claims/a1f/bundle/b-a1f", "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/bundle/A1-Production-Functional-T5-260717"),
+    ("claims/a2/bundle/b-a2", "claims/A2-FULL-PRODUCTION-WELLPOSED/bundle/A2-Full-Production-WellPosedness-T6-260717"),
+    ("claims/a3f/bundle/b-a3f", "claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/bundle/A3-Full-Production-Discretization-T6-Repair-260717"),
+    ("claims/a3p/bundle/b-a3p", "claims/A3-PERTURBATIVE-CONTINUUM-CORRELATORS/bundle/A3-Perturbative-Continuum-T6-260719"),
+    ("claims/a4/bundle/b-a4", "claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/bundle/A4-Scalar-Constructive-T6-260719"),
+    ("claims/a1k", "claims/A1-PRODUCTION-KERNEL-MANIFEST"),
+    ("claims/a1f", "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION"),
+    ("claims/a2", "claims/A2-FULL-PRODUCTION-WELLPOSED"),
+    ("claims/a3f", "claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM"),
+    ("claims/a3p", "claims/A3-PERTURBATIVE-CONTINUUM-CORRELATORS"),
+    ("claims/a4", "claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE"),
+    ("claims/a5", "claims/A5-SECTOR-A-SYNTHESIS"),
+)
+
+def resolve_repo_path(value: str) -> Path:
+    for alias, canonical in sorted(PATH_ALIASES, key=lambda row: -len(row[0])):
+        if value == alias or value.startswith(alias + "/"):
+            return REPO / (canonical + value[len(alias):])
+    return REPO / value
 DEFAULT_PRIMARY = CLAIM / "runs" / "2026-07-20-t6-conditional-published-primary" / "result.json"
 DEFAULT_OUTPUT = CLAIM / "runs" / "2026-07-20-t6-conditional-published-independent" / "result.json"
 
@@ -71,7 +97,7 @@ def main() -> int:
         assertions,
     )
     primary = load_json(args.primary_result)
-    primary_source = REPO / authority["primary_audit"]["path"]
+    primary_source = resolve_repo_path(authority["primary_audit"]["path"])
     primary_summary = primary.get("assertion_summary", {})
     check(
         "fresh_primary_result_and_source_are_complete",
@@ -96,8 +122,8 @@ def main() -> int:
         assertions,
     )
     confirmation = manifest.get("operator_confirmation", {})
-    candidate_source = REPO / confirmation.get("candidate_source", "__missing__")
-    candidate_pdf = REPO / confirmation.get("candidate_pdf", "__missing__")
+    candidate_source = resolve_repo_path(confirmation.get("candidate_source", "__missing__"))
+    candidate_pdf = resolve_repo_path(confirmation.get("candidate_pdf", "__missing__"))
     check(
         "operator_confirmation_reconstructs_exact_v1_0_candidate",
         confirmation.get("status") == "CONFIRMED"
@@ -114,7 +140,7 @@ def main() -> int:
     )
 
     baseline = manifest["immutable_t5_baseline"]
-    bundle_root = REPO / baseline["bundle_path"]
+    bundle_root = resolve_repo_path(baseline["bundle_path"])
     bundle_manifest_path = bundle_root / "MANIFEST.json"
     bundle = load_json(bundle_manifest_path)
     file_rows = []
@@ -193,8 +219,8 @@ def main() -> int:
         assertions,
     )
 
-    kernel = load_json(REPO / manifest["numeric_firewall"]["scalar_source"])
-    functional = load_json(REPO / manifest["numeric_firewall"]["full_source"])
+    kernel = load_json(resolve_repo_path(manifest["numeric_firewall"]["scalar_source"]))
+    functional = load_json(resolve_repo_path(manifest["numeric_firewall"]["full_source"]))
     params = functional["parameters"]
     scalar_mass = Decimal(str(kernel["mu2_shell"]))
     full_mass = Decimal(str(params["r"])) - Decimal(str(params["Z"])) ** 2 / (Decimal(4) * Decimal(str(params["Y"])))
@@ -212,8 +238,8 @@ def main() -> int:
         assertions,
     )
 
-    note_source = REPO / authority["referee_source"]["path"]
-    note_pdf = REPO / authority["referee_pdf"]["path"]
+    note_source = resolve_repo_path(authority["referee_source"]["path"])
+    note_pdf = resolve_repo_path(authority["referee_pdf"]["path"])
     note_text = note_source.read_text(encoding="utf-8") if note_source.is_file() else ""
     required_note_tokens = [
         "T6 CONDITIONAL-THEOREM",

@@ -54,7 +54,7 @@ claims/A5-SECTOR-A-SYNTHESIS/bundle/
 \end{verbatim}
 That bundle has 155 hash-listed files and content digest
 \begin{verbatim}
-5cf4397c38fb316ec108447404531e649e628d6fcc62d67e613d060b70b24eA5-SECTOR-A-SYNTHESIS
+5cf4397c38fb316ec108447404531e649e628d6fcc62d67e613d060b70b24ea5
 \end{verbatim}
 Both audits reconstruct every listed file hash and this digest before checking
 the new theorem.  Any T5 drift falsifies the candidate rather than rewriting
@@ -62,7 +62,7 @@ history.
 
 The canonical JSON serialization of the T6 theorem contract has SHA-256
 \begin{verbatim}
-df01a1a3606d979307ac0bb8c9de14A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASUREab2d68fd83d228ed38f9e470eba823fc
+df01a1a3606d979307ac0bb8c9de14a4ab2d68fd83d228ed38f9e470eba823fc
 \end{verbatim}
 This digest fixes the premise list, seven hypotheses, branch topology,
 conclusions, and exclusions.  It is an identity check, not a substitute for
@@ -241,7 +241,7 @@ regulator-removal gates before any promotion.
 \section{Independent reproduction and quantitative checks}
 Run from the repository root:
 \begin{verbatim}
-python codes/foundations/A5-SECTOR-A-SYNTHESIS_t6_conditional_verify.py
+python codes/foundations/a5_t6_conditional_verify.py
 \end{verbatim}
 The required output is
 \begin{verbatim}
@@ -331,7 +331,7 @@ Dependencies:            Six A1-A4 premise claims; A5-H1, A1-KERNEL-CONV,
                          A1-SHELL-POSITIVITY, A2-H2, A2-H3, A3-H1, A3-H2.
 Evidence grade:          ANALYTIC + EXACT + EXECUTED + CONDITIONAL.
 Reproduction command:    python codes/foundations/
-                         A5-SECTOR-A-SYNTHESIS_t6_conditional_verify.py
+                         a5_t6_conditional_verify.py
 Expected output:         primary 21/21; independent 12/12; ASSERTS 33/33;
                          A5-T6-CONDITIONAL-COMPOSITION-PREFLIGHT-PASS.
 Falsification gate:      Any premise, hash, hypothesis, edge, fork, audit,

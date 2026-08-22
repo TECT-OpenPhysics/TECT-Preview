@@ -1,0 +1,116 @@
+{
+  "schema": "tect/a5-t6-conditional-integrated-result/1.0",
+  "claim_id": "A5-SECTOR-A-SYNTHESIS",
+  "script_version": "1.2.0",
+  "verdict": "A5-T6-CONDITIONAL-COMPOSITION-INTEGRATED-PASS",
+  "candidate_result": "A5-T6-BRANCH-AWARE-CONDITIONAL-COMPOSITION",
+  "publication_state": "T6-PUBLISHED-OPERATOR-CONFIRMED",
+  "source_reports": [
+    {
+      "authority": "primary_audit",
+      "path": "codes/foundations/a5_t6_conditional_primary.py",
+      "actual_sha256": "9f0cafa6e51e4f7125e7f6ee4a40c54e223b117148d1720cbe3a079acb199708",
+      "expected_sha256": "9f0cafa6e51e4f7125e7f6ee4a40c54e223b117148d1720cbe3a079acb199708",
+      "passed": true
+    },
+    {
+      "authority": "independent_audit",
+      "path": "codes/foundations/a5_t6_conditional_independent.py",
+      "actual_sha256": "f50063f7018c218fe4ee90aacd0bea0b9efed66ccb7c9341941ea28f79018732",
+      "expected_sha256": "f50063f7018c218fe4ee90aacd0bea0b9efed66ccb7c9341941ea28f79018732",
+      "passed": true
+    },
+    {
+      "authority": "one_command_verifier",
+      "path": "codes/foundations/a5_t6_conditional_verify.py",
+      "actual_sha256": "359ea6357fcdb694edec097707ba940da5299922479d4c7738b092ff2fea4bb7",
+      "expected_sha256": "359ea6357fcdb694edec097707ba940da5299922479d4c7738b092ff2fea4bb7",
+      "passed": true
+    }
+  ],
+  "audit_reports": [
+    {
+      "audit": "primary_audit",
+      "mode": "fresh temporary re-execution",
+      "returncode": 0,
+      "expected_verdict": "A5-T6-CONDITIONAL-PRIMARY-PASS",
+      "actual_verdict": "A5-T6-CONDITIONAL-PRIMARY-PASS",
+      "assertions": {
+        "passed": 22,
+        "total": 22
+      },
+      "passed": true
+    },
+    {
+      "audit": "independent_audit",
+      "mode": "fresh non-importing temporary re-execution",
+      "returncode": 0,
+      "expected_verdict": "A5-T6-CONDITIONAL-INDEPENDENT-PASS",
+      "actual_verdict": "A5-T6-CONDITIONAL-INDEPENDENT-PASS",
+      "assertions": {
+        "passed": 13,
+        "total": 13
+      },
+      "passed": true
+    }
+  ],
+  "cross_audit_agreement": {
+    "theorem_contract_sha256": true,
+    "hypotheses": true,
+    "branches": true,
+    "mass_fork": true,
+    "immutable_t5_bundle_digest": true
+  },
+  "theorem_contract_sha256": "df01a1a3606d979307ac0bb8c9de14a4ab2d68fd83d228ed38f9e470eba823fc",
+  "hypotheses": [
+    "A5-H1-CANONICAL-KERNEL-MANIFEST",
+    "A1-KERNEL-CONV",
+    "A1-SHELL-POSITIVITY",
+    "A2-H2-SEXTIC-COERCIVITY",
+    "A2-H3-CANONICAL-PRODUCTION-FUNCTIONAL",
+    "A3-H1-DIM3-Q4-KERNEL",
+    "A3-H2-IR-POSITIVITY"
+  ],
+  "branches": {
+    "full_production": [
+      "A1-PRODUCTION-FUNCTIONAL-REALISATION",
+      "A2-FULL-PRODUCTION-WELLPOSED",
+      "A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM"
+    ],
+    "scalar_continuum": [
+      "A3-PERTURBATIVE-CONTINUUM-CORRELATORS",
+      "A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE"
+    ]
+  },
+  "mass_fork": {
+    "scalar_shell_mass_squared": "0.005",
+    "full_shell_mass_squared": "0.26000000000947494031",
+    "absolute_difference": "0.25500000000947494031"
+  },
+  "immutable_t5_bundle_digest": "0dc4a53052ac59d262842b847cb19e6af215f3a744b87049d7066051fa699a6c",
+  "assertion_summary": {
+    "passed": 35,
+    "total": 35
+  },
+  "environment": {
+    "python": "3.12.9",
+    "platform": "Windows-11-10.0.26200-SP0"
+  },
+  "failures": [],
+  "promotion_boundary": "Exact v1.0 is operator-confirmed. PASS verifies the enacted T6 contract; publication completeness additionally requires the bundle-last PUBLISHED package and final integrity gate.",
+  "next_required_action": "Build or verify the PUBLISHED T6 bundle last, then synchronize the public ledgers and release gate.",
+  "not_closed_here": [
+    "a parameter-identical full-production constructive quantum field theory",
+    "a full three-component derivative Class-II Gibbs or constructive measure",
+    "eta_shell nonzero or removal of rho and Class-II regularisers",
+    "a t=0 algebraic Galerkin rate for merely H2 data",
+    "practical error bars for historical N32/N64/N128 trajectories",
+    "a genuine finite-difference Route-B continuum theorem",
+    "unsmeared composite-field correlations",
+    "an infinite-volume or thermodynamic-limit construction",
+    "a phase transition or minimizer uniqueness",
+    "BCC existence or selection",
+    "Sector-B closure or physical-domain closure",
+    "T7"
+  ]
+}

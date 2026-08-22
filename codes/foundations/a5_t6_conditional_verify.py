@@ -18,7 +18,7 @@ import tempfile
 from pathlib import Path
 from typing import Any
 
-__version__ = "1.1.0"
+__version__ = "1.2.0"
 __first_issued__ = "2026-07-19"
 __version_issued__ = "2026-07-20"
 __claims__ = ["A5-SECTOR-A-SYNTHESIS"]
@@ -26,6 +26,32 @@ __claims__ = ["A5-SECTOR-A-SYNTHESIS"]
 REPO = Path(__file__).resolve().parents[2]
 CLAIM = REPO / "claims" / __claims__[0]
 MANIFEST = CLAIM / "conditional_composition_manifest.json"
+
+
+# Path-hygiene compatibility: compact legacy aliases resolve to canonical roots.
+PATH_ALIASES = (
+    ("claims/a5/bundle/a5t5", "claims/A5-SECTOR-A-SYNTHESIS/bundle/a5t5"),
+    ("claims/a5/bundle/a5t6", "claims/A5-SECTOR-A-SYNTHESIS/bundle/a5t6"),
+    ("claims/a1k/bundle/b-a1n", "claims/A1-PRODUCTION-KERNEL-MANIFEST/bundle/A1-N001-Manifest-T5-260716"),
+    ("claims/a1f/bundle/b-a1f", "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/bundle/A1-Production-Functional-T5-260717"),
+    ("claims/a2/bundle/b-a2", "claims/A2-FULL-PRODUCTION-WELLPOSED/bundle/A2-Full-Production-WellPosedness-T6-260717"),
+    ("claims/a3f/bundle/b-a3f", "claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/bundle/A3-Full-Production-Discretization-T6-Repair-260717"),
+    ("claims/a3p/bundle/b-a3p", "claims/A3-PERTURBATIVE-CONTINUUM-CORRELATORS/bundle/A3-Perturbative-Continuum-T6-260719"),
+    ("claims/a4/bundle/b-a4", "claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/bundle/A4-Scalar-Constructive-T6-260719"),
+    ("claims/a1k", "claims/A1-PRODUCTION-KERNEL-MANIFEST"),
+    ("claims/a1f", "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION"),
+    ("claims/a2", "claims/A2-FULL-PRODUCTION-WELLPOSED"),
+    ("claims/a3f", "claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM"),
+    ("claims/a3p", "claims/A3-PERTURBATIVE-CONTINUUM-CORRELATORS"),
+    ("claims/a4", "claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE"),
+    ("claims/a5", "claims/A5-SECTOR-A-SYNTHESIS"),
+)
+
+def resolve_repo_path(value: str) -> Path:
+    for alias, canonical in sorted(PATH_ALIASES, key=lambda row: -len(row[0])):
+        if value == alias or value.startswith(alias + "/"):
+            return REPO / (canonical + value[len(alias):])
+    return REPO / value
 DEFAULT_OUTPUT = CLAIM / "runs" / "2026-07-20-t6-conditional-published-integrated" / "result.json"
 
 
@@ -60,7 +86,7 @@ def main() -> int:
     authority = manifest["authority"]
     source_reports = []
     for key in ("primary_audit", "independent_audit", "one_command_verifier"):
-        source = REPO / authority[key]["path"]
+        source = resolve_repo_path(authority[key]["path"])
         actual = sha256(source)
         source_reports.append(
             {
@@ -81,7 +107,7 @@ def main() -> int:
     with tempfile.TemporaryDirectory(prefix="a5-t6-conditional-") as temporary:
         root = Path(temporary)
         primary_output = root / "primary.json"
-        primary_source = REPO / authority["primary_audit"]["path"]
+        primary_source = resolve_repo_path(authority["primary_audit"]["path"])
         primary_run = run([sys.executable, str(primary_source), "--output", str(primary_output)])
         primary_ok, primary_result, primary_detail = load_result(primary_output, "A5-T6-CONDITIONAL-PRIMARY-PASS")
         primary_ok = primary_ok and primary_run.returncode == 0
@@ -104,7 +130,7 @@ def main() -> int:
             failures.append(f"primary: {primary_detail}; exit={primary_run.returncode}; stderr={primary_run.stderr[-800:]!r}")
 
         independent_output = root / "independent.json"
-        independent_source = REPO / authority["independent_audit"]["path"]
+        independent_source = resolve_repo_path(authority["independent_audit"]["path"])
         independent_run = run(
             [
                 sys.executable,

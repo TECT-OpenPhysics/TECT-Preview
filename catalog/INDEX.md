@@ -5,7 +5,7 @@ Compact generated reader surface. The complete current machine inventory is
 `../CATALOG.md` is a frozen compatibility volume at commit `4db22f4e`
 for historical verifiers and no longer grows.
 
-**4497 artefacts** · **49 live claim cards** ·
+**4500 artefacts** · **49 live claim cards** ·
 130 superseded artefacts retained
 
 ## By kind
@@ -13,22 +13,22 @@ for historical verifiers and no longer grows.
 | Kind | Artefacts | Canonical bytes |
 |---|---:|---:|
 | Claim cards (registry layer) (`claim-card`) | 604 | 5,070,308 |
-| Working proof notes (on claim cards) (`proof-note`) | 925 | 107,651,640 |
-| Theory synthesis documents (Layer 2) (`synthesis`) | 345 | 7,749,956 |
+| Working proof notes (on claim cards) (`proof-note`) | 925 | 107,196,430 |
+| Theory synthesis documents (Layer 2) (`synthesis`) | 345 | 7,746,888 |
 | Migrated legacy notes (immutable) (`archive-note`) | 72 | 1,509,315 |
 | Migrated legacy scripts (runnable) (`archive-script`) | 22 | 319,000 |
 | Migrated legacy run artefacts (immutable) (`archive-artefact`) | 21 | 302,036 |
 | Reviewed legacy research records (`legacy-research-record`) | 140 | 164,393 |
 | Generated legacy sector, claim, and gate views (`legacy-research-view`) | 16 | 205,000 |
-| Fresh run artefacts (TSv2 evidence) (`run-artefact`) | 1073 | 29,924,028 |
-| Domain codes (`code`) | 785 | 17,024,095 |
-| Verification harness (`verification`) | 104 | 11,279,672 |
+| Fresh run artefacts (TSv2 evidence) (`run-artefact`) | 1076 | 29,965,268 |
+| Domain codes (`code`) | 785 | 17,029,474 |
+| Verification harness (`verification`) | 104 | 11,288,223 |
 | Papers (publication layer) (`paper`) | 1 | 546 |
 | Website (publication layer) (`website`) | 4 | 20,775 |
-| Registries and ledgers (`registry`) | 42 | 1,547,919 |
+| Registries and ledgers (`registry`) | 42 | 1,547,873 |
 | Governance policies (`policy`) | 21 | 197,756 |
 | Root documents (`root-doc`) | 14 | 1,720,151 |
-| Other tracked files (`other`) | 308 | 11,832,263 |
+| Other tracked files (`other`) | 308 | 11,842,891 |
 
 ## Use
 

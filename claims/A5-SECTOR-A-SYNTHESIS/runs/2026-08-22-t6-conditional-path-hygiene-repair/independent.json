@@ -1,0 +1,294 @@
+{
+  "schema": "tect/a5-t6-conditional-independent-result/1.0",
+  "claim_id": "A5-SECTOR-A-SYNTHESIS",
+  "script_version": "1.2.0",
+  "verdict": "A5-T6-CONDITIONAL-INDEPENDENT-PASS",
+  "theorem_contract_sha256": "df01a1a3606d979307ac0bb8c9de14a4ab2d68fd83d228ed38f9e470eba823fc",
+  "hypotheses": [
+    "A5-H1-CANONICAL-KERNEL-MANIFEST",
+    "A1-KERNEL-CONV",
+    "A1-SHELL-POSITIVITY",
+    "A2-H2-SEXTIC-COERCIVITY",
+    "A2-H3-CANONICAL-PRODUCTION-FUNCTIONAL",
+    "A3-H1-DIM3-Q4-KERNEL",
+    "A3-H2-IR-POSITIVITY"
+  ],
+  "branches": {
+    "full_production": [
+      "A1-PRODUCTION-FUNCTIONAL-REALISATION",
+      "A2-FULL-PRODUCTION-WELLPOSED",
+      "A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM"
+    ],
+    "scalar_continuum": [
+      "A3-PERTURBATIVE-CONTINUUM-CORRELATORS",
+      "A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE"
+    ]
+  },
+  "mass_fork": {
+    "scalar_shell_mass_squared": "0.005",
+    "full_shell_mass_squared": "0.26000000000947494031",
+    "absolute_difference": "0.25500000000947494031"
+  },
+  "immutable_t5_bundle_digest": "0dc4a53052ac59d262842b847cb19e6af215f3a744b87049d7066051fa699a6c",
+  "assertions": [
+    {
+      "name": "independent_source_hash_matches_authority",
+      "status": "PASS",
+      "detail": {
+        "actual": "f50063f7018c218fe4ee90aacd0bea0b9efed66ccb7c9341941ea28f79018732",
+        "expected": "f50063f7018c218fe4ee90aacd0bea0b9efed66ccb7c9341941ea28f79018732"
+      }
+    },
+    {
+      "name": "fresh_primary_result_and_source_are_complete",
+      "status": "PASS",
+      "detail": {
+        "source_sha256": "9f0cafa6e51e4f7125e7f6ee4a40c54e223b117148d1720cbe3a079acb199708",
+        "verdict": "A5-T6-CONDITIONAL-PRIMARY-PASS",
+        "summary": {
+          "passed": 22,
+          "total": 22
+        }
+      }
+    },
+    {
+      "name": "theorem_contract_is_canonical_and_agrees_with_primary",
+      "status": "PASS",
+      "detail": {
+        "actual": "df01a1a3606d979307ac0bb8c9de14a4ab2d68fd83d228ed38f9e470eba823fc",
+        "manifest": "df01a1a3606d979307ac0bb8c9de14a4ab2d68fd83d228ed38f9e470eba823fc",
+        "primary": "df01a1a3606d979307ac0bb8c9de14a4ab2d68fd83d228ed38f9e470eba823fc"
+      }
+    },
+    {
+      "name": "operator_confirmation_reconstructs_exact_v1_0_candidate",
+      "status": "PASS",
+      "detail": {
+        "status": "CONFIRMED",
+        "confirmed_by": "Jusang Lee",
+        "confirmed_on": "2026-07-20",
+        "confirmation_text": "A5 v1.0 T6 conditional-composition referee package reviewed; creation of the PUBLISHED T6 bundle approved.",
+        "candidate_source": "claims/a5/notes/a5-t6-conditional-composition-referee-package-260719-v1.0.tex.txt",
+        "candidate_source_sha256": "58d2f5ab1ed56b2d2fb390cae5323f2b7b3b52fb56006cc637739e1baa1ea944",
+        "candidate_pdf": "claims/a5/notes/a5-t6-conditional-composition-referee-package-260719-v1.0.pdf",
+        "candidate_pdf_sha256": "60a9eb9efd3c3861374ed807b5d38a7571bd484adb2737c8e7e7664a6b021883",
+        "candidate_commit": "fb776bff6b161178a6328570af3ef9529b44a2df",
+        "published_bundle_authorized": true
+      }
+    },
+    {
+      "name": "t5_history_bundle_is_independently_reconstructed",
+      "status": "PASS",
+      "detail": {
+        "file_count": 155,
+        "file_hashes_ok": true,
+        "reconstructed_digest": "0dc4a53052ac59d262842b847cb19e6af215f3a744b87049d7066051fa699a6c",
+        "expected_digest": "0dc4a53052ac59d262842b847cb19e6af215f3a744b87049d7066051fa699a6c"
+      }
+    },
+    {
+      "name": "exact_seven_hypothesis_set_is_registered",
+      "status": "PASS",
+      "detail": {
+        "actual": [
+          "A5-H1-CANONICAL-KERNEL-MANIFEST",
+          "A1-KERNEL-CONV",
+          "A1-SHELL-POSITIVITY",
+          "A2-H2-SEXTIC-COERCIVITY",
+          "A2-H3-CANONICAL-PRODUCTION-FUNCTIONAL",
+          "A3-H1-DIM3-Q4-KERNEL",
+          "A3-H2-IR-POSITIVITY"
+        ],
+        "expected": [
+          "A5-H1-CANONICAL-KERNEL-MANIFEST",
+          "A1-KERNEL-CONV",
+          "A1-SHELL-POSITIVITY",
+          "A2-H2-SEXTIC-COERCIVITY",
+          "A2-H3-CANONICAL-PRODUCTION-FUNCTIONAL",
+          "A3-H1-DIM3-Q4-KERNEL",
+          "A3-H2-IR-POSITIVITY"
+        ],
+        "registered": {
+          "A5-H1-CANONICAL-KERNEL-MANIFEST": true,
+          "A1-KERNEL-CONV": true,
+          "A1-SHELL-POSITIVITY": true,
+          "A2-H2-SEXTIC-COERCIVITY": true,
+          "A2-H3-CANONICAL-PRODUCTION-FUNCTIONAL": true,
+          "A3-H1-DIM3-Q4-KERNEL": true,
+          "A3-H2-IR-POSITIVITY": true
+        }
+      }
+    },
+    {
+      "name": "tier_matrix_has_four_t6_premises_and_two_named_lifts",
+      "status": "PASS",
+      "detail": {
+        "premise_tiers": {
+          "A1-PRODUCTION-KERNEL-MANIFEST": "T5",
+          "A1-PRODUCTION-FUNCTIONAL-REALISATION": "T5",
+          "A2-FULL-PRODUCTION-WELLPOSED": "T6",
+          "A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM": "T6",
+          "A3-PERTURBATIVE-CONTINUUM-CORRELATORS": "T6",
+          "A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE": "T6"
+        },
+        "lifts": {
+          "A1-PRODUCTION-KERNEL-MANIFEST": "A5-H1-CANONICAL-KERNEL-MANIFEST",
+          "A1-PRODUCTION-FUNCTIONAL-REALISATION": "A2-H3-CANONICAL-PRODUCTION-FUNCTIONAL"
+        }
+      }
+    },
+    {
+      "name": "branch_topology_is_exact_and_disjoint",
+      "status": "PASS",
+      "detail": {
+        "full": [
+          "A1-PRODUCTION-FUNCTIONAL-REALISATION",
+          "A2-FULL-PRODUCTION-WELLPOSED",
+          "A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM"
+        ],
+        "scalar": [
+          "A3-PERTURBATIVE-CONTINUUM-CORRELATORS",
+          "A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE"
+        ]
+      }
+    },
+    {
+      "name": "decimal_mass_fork_matches_manifest_and_primary",
+      "status": "PASS",
+      "detail": {
+        "scalar": "0.005",
+        "full": "0.26000000000947494031",
+        "difference": "0.25500000000947494031"
+      }
+    },
+    {
+      "name": "referee_package_states_the_exact_conditional_boundary",
+      "status": "PASS",
+      "detail": {
+        "required_tokens": [
+          "T6 CONDITIONAL-THEOREM",
+          "seven named hypotheses",
+          "A5-H1-CANONICAL-KERNEL-MANIFEST",
+          "0.005",
+          "0.260000000009475",
+          "full three-component derivative Class-II constructive measure",
+          "BCC existence, selection",
+          "operator-confirmed 2026-07-20"
+        ],
+        "source_exists": true,
+        "pdf_exists": true
+      }
+    },
+    {
+      "name": "non_implication_firewall_blocks_the_three_invalid_crossings",
+      "status": "PASS",
+      "detail": [
+        "Shared spectral geometry does not imply shell-mass identity or state-space identity.",
+        "Local scalar reduction does not imply full three-component derivative Class-II measure equivalence.",
+        "Perturbative cutoff removal does not imply resummation or constructive convergence.",
+        "Finite-volume scalar construction does not imply an infinite-volume phase transition.",
+        "Positive-time exact-Galerkin convergence does not imply a t=0 algebraic rate for merely H2 data."
+      ]
+    },
+    {
+      "name": "weakness_map_is_unique_complete_and_fail_closed",
+      "status": "PASS",
+      "detail": [
+        {
+          "id": "TIER-MONOTONICITY-OF-T5-INPUTS",
+          "status": "CONTROLLED-BY-CONDITIONAL-T6",
+          "control": "Both T5 hard premises are exposed through separately registered named hypotheses."
+        },
+        {
+          "id": "IMMUTABLE-T5-TIER-HISTORY",
+          "status": "CONTROLLED-BY-CONDITIONAL-T6",
+          "control": "The complete 155-file T5 capstone and digest are revalidated and never overwritten."
+        },
+        {
+          "id": "BRANCH-TOPOLOGY-AMBIGUITY",
+          "status": "CONTROLLED-BY-CONDITIONAL-T6",
+          "control": "The full-production implication chain and scalar-continuum conjunction are disjoint in the theorem contract."
+        },
+        {
+          "id": "SHELL-MASS-IDENTIFICATION",
+          "status": "CONTROLLED-BY-CONDITIONAL-T6",
+          "control": "Both masses are independently rederived with Decimal arithmetic and their separation must exceed 0.2."
+        },
+        {
+          "id": "SCALAR-TO-FULL-MEASURE-INFERENCE",
+          "status": "CONTROLLED-BY-CONDITIONAL-T6",
+          "control": "The local scalar reduction is audited while full Class-II measure equivalence is explicitly prohibited."
+        },
+        {
+          "id": "Q0-ZERO-CONSTRUCTIVE-ENDPOINT",
+          "status": "CONTROLLED-BY-CONDITIONAL-T6",
+          "control": "The corrected and PUBLISHED A4 v2.1 support bundle is a hash-pinned premise."
+        },
+        {
+          "id": "POSITIVE-TIME-GALERKIN-SCOPE",
+          "status": "CONTROLLED-BY-CONDITIONAL-T6",
+          "control": "The theorem retains tau>0 and restarted exact-Galerkin scope instead of silently asserting t=0 rates."
+        },
+        {
+          "id": "FULL-CLASSII-CONSTRUCTIVE-MEASURE",
+          "status": "OPEN-SEPARATE-CLAIM",
+          "control": "Requires ultraviolet power counting, derivative-current definition, counterterms, stability, and regulator removal for the full three-component functional."
+        },
+        {
+          "id": "CANONICAL-PARAMETER-IDENTITY",
+          "status": "OPEN-SEPARATE-CLAIM",
+          "control": "The scalar and full-production mass anchors remain distinct and no common calibrated parameter theorem exists."
+        },
+        {
+          "id": "REGULARISER-REMOVAL",
+          "status": "OPEN-SEPARATE-CLAIM",
+          "control": "eta_shell nonzero and removal of rho or Class-II mass regularisers are not covered."
+        },
+        {
+          "id": "T0-RATES-AND-HISTORICAL-GRID-ERRORS",
+          "status": "OPEN-SEPARATE-CLAIM",
+          "control": "P3 gives controlled positive-time exact-Galerkin convergence, not practical N32/N64/N128 historical-solver error bars."
+        },
+        {
+          "id": "FINITE-DIFFERENCE-ROUTE-B",
+          "status": "OPEN-SEPARATE-CLAIM",
+          "control": "Only the canonical spectral regulator and exact-Galerkin route are proved."
+        },
+        {
+          "id": "INFINITE-VOLUME-AND-PHASE-TRANSITION",
+          "status": "OPEN-SEPARATE-CLAIM",
+          "control": "A4 is finite volume and supplies neither thermodynamic-limit construction nor phase selection."
+        },
+        {
+          "id": "BCC-EXISTENCE-AND-SELECTION",
+          "status": "OPEN-SEPARATE-CLAIM",
+          "control": "BCC existence, minimization, stability, and Sector-B selection remain outside Sector-A conditional composition."
+        }
+      ]
+    },
+    {
+      "name": "claim_state_preserves_t5_reproduction_until_t6_is_confirmed",
+      "status": "PASS",
+      "detail": {
+        "tier": "T6",
+        "open_gates": [],
+        "reproduction": {
+          "command": "python codes/foundations/a5_t6_conditional_verify.py",
+          "expected": "PASS: primary (22/22); PASS: independent (13/13); ASSERTS: 35/35; A5-T6-CONDITIONAL-COMPOSITION-INTEGRATED-PASS; Publication: T6-PUBLISHED-OPERATOR-CONFIRMED; exit 0.",
+          "status": "AVAILABLE"
+        },
+        "current_t5_reproduction_ok": false,
+        "confirmed_t6_reproduction_ok": true
+      }
+    }
+  ],
+  "assertion_summary": {
+    "passed": 13,
+    "total": 13
+  },
+  "environment": {
+    "python": "3.12.9",
+    "platform": "Windows-11-10.0.26200-SP0"
+  },
+  "promotion_boundary": "Operator confirmation is bound to exact v1.0; publication completeness additionally requires the bundle-last PUBLISHED package."
+}

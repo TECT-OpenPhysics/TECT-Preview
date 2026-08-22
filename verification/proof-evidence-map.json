@@ -7,7 +7,7 @@
   "authority_boundary": "This projection is complete by reference but is not a tier or proof authority. Claim status cards, proof notes/runs, RESULTS-LEDGER.md, negative-results/registry.md, explorations/log.jsonl, changelog/log.jsonl, todo/todo.json, and claims/GATES.md remain canonical. theory/proof-evidence/interface-pointers.json owns only reference-only external locators and never a claim or obligation status.",
   "source_hashes": {
     "RESULTS-LEDGER.md": "1dcab28ca10923c9d668d57f1959d6421c9a5adebbd7c043fb9140a540c1f046",
-    "changelog/log.jsonl": "ecddd274e387fdaba031f9fbdaa0000091d76c650a5373a792f3cc5945cc9dac",
+    "changelog/log.jsonl": "9cf2362bc5055ea12e1fb6185dd812c581109766ca9fa87617746db2dc66ac9b",
     "claims/A1-KERNEL-CONV/status.json": "e5dd2b08ce58f1c3d2680b907e1469b828b2b6a3929d773f7bd84137efe36509",
     "claims/A1-KERNEL-IDENTITY/status.json": "dbaf6f1e80d994b94c9746cc7d342592fbc3638abb372d8e1c02841bb4e4d477",
     "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/status.json": "202e7514bb2d6fc029e61de95386981aedca15d81e9d6f71fc1570d77049d554",
@@ -58,7 +58,7 @@
     "claims/F2-BARYOGENESIS/status.json": "de39e5132355707dd49d4da4ef2da7b64d5f69802609c2f867d658114c3523a4",
     "claims/F3-INFLATION-CMB/status.json": "04b783d1f49f0ee453d4ccc3eff93cc7bca3c084dcdcdd036a023dd76d62331c",
     "claims/GATES.md": "8b2e79e8570fb392bb475ddad551ce551ce8775b22d180fbf547ca4b440c2c3f",
-    "explorations/log.jsonl": "e5f15af4d4dbf237f88d42bf92fda787ad13a8c3f08569824798e36aa04e9f7e",
+    "explorations/log.jsonl": "facd6a3a1b33eb29b8b516a61355d1d8418b4c46cd42524ed8a647daf04ef7ab",
     "negative-results/registry.md": "546bbd65ee917eae68a9b1a3564431d3fcea72804d4aea79e061e002e097de0e",
     "theory/proof-evidence/interface-pointers.json": "59d3135869897d1c77a62dcbf9a513110136dba21dd43d23ffa4abbc9307992f",
     "todo/todo.json": "1252641a4d7ef622c32f8ce993b493d91d817eabaa290aa7e7721083168f96e6"
@@ -70,15 +70,15 @@
     "interface_pointers": 1,
     "reusable_results": 193,
     "negative_records": 372,
-    "proof_explorations": 920,
+    "proof_explorations": 921,
     "exploration_verdicts": {
-      "advanced": 569,
+      "advanced": 570,
       "failed": 236,
       "inconclusive": 80,
       "parked": 35
     },
     "process_grade_lessons": 3,
-    "accepted_events": 693,
+    "accepted_events": 694,
     "tasks": 58,
     "live_tasks": 10,
     "completed_tasks": 48,
@@ -91,7 +91,7 @@
     "unordered_root_pdfs": 9,
     "proof_notes_without_sibling_pdf": 19,
     "proof_notes_with_incomplete_historical_footer": 118,
-    "run_json": 863,
+    "run_json": 866,
     "claim_manifests": 124,
     "bundle_manifests": 40,
     "bundle_embedded_manifests": 45
@@ -2967,6 +2967,12 @@
         "claim_ids": [
           "EXP-000919",
           "R-019"
+        ]
+      },
+      {
+        "event": "20260822-a5-t6-path-hygiene-resolver-and-compact-digest",
+        "claim_ids": [
+          "EXP-000921"
         ]
       }
     ],
@@ -7604,7 +7610,10 @@
           "claims/A5-SECTOR-A-SYNTHESIS/runs/2026-07-19-t6-conditional-candidate-primary/result.json",
           "claims/A5-SECTOR-A-SYNTHESIS/runs/2026-07-20-t6-conditional-published-independent/result.json",
           "claims/A5-SECTOR-A-SYNTHESIS/runs/2026-07-20-t6-conditional-published-integrated/result.json",
-          "claims/A5-SECTOR-A-SYNTHESIS/runs/2026-07-20-t6-conditional-published-primary/result.json"
+          "claims/A5-SECTOR-A-SYNTHESIS/runs/2026-07-20-t6-conditional-published-primary/result.json",
+          "claims/A5-SECTOR-A-SYNTHESIS/runs/2026-08-22-t6-conditional-path-hygiene-repair/independent.json",
+          "claims/A5-SECTOR-A-SYNTHESIS/runs/2026-08-22-t6-conditional-path-hygiene-repair/integrated.json",
+          "claims/A5-SECTOR-A-SYNTHESIS/runs/2026-08-22-t6-conditional-path-hygiene-repair/primary.json"
         ],
         "manifests": [
           "claims/A5-SECTOR-A-SYNTHESIS/conditional_composition_manifest.json",
@@ -7687,9 +7696,10 @@
           "EXP-000590",
           "EXP-000624",
           "EXP-000783",
-          "EXP-000920"
+          "EXP-000920",
+          "EXP-000921"
         ],
-        "latest_exploration_id": "EXP-000920",
+        "latest_exploration_id": "EXP-000921",
         "accepted_event_ids": [
           "20260718-p5-branch-aware-sector-a-synthesis-prepared-for",
           "20260719-enact-operator-confirmed-a5-branch-aware-synthe",
@@ -7703,9 +7713,10 @@
           "20260729-add-deduplicated-registered-results-synthesis-2",
           "20260802-pre-a-evidence-first-model-selection-charter-re",
           "20260809-pre-a-priority-reset-and-controller-free-cl8-ma",
-          "20260809-pre-a-macro-adversarial-hardening-gaussian-scop"
+          "20260809-pre-a-macro-adversarial-hardening-gaussian-scop",
+          "20260822-a5-t6-path-hygiene-resolver-and-compact-digest"
         ],
-        "latest_event_id": "20260809-pre-a-macro-adversarial-hardening-gaussian-scop",
+        "latest_event_id": "20260822-a5-t6-path-hygiene-resolver-and-compact-digest",
         "live_task_gate_ids": [],
         "route_gate_ids": []
       }
@@ -18253,7 +18264,9 @@
       "family_refs": [
         "A5"
       ],
-      "accepted_event_ids": [],
+      "accepted_event_ids": [
+        "20260822-a5-t6-path-hygiene-resolver-and-compact-digest"
+      ],
       "co_recorded_negative_tags": []
     },
     {
@@ -73677,6 +73690,52 @@
       "task_id": "T-054",
       "title": "A5 T6 reproduction path and bundle-digest drift after path hygiene",
       "verdict": "parked"
+    },
+    {
+      "boundary": "This is T0 infrastructure evidence. It does not establish a T7 theorem, a full derivative Class-II constructive measure, BCC existence or selection, Sector-B or physical-vacuum closure, Pre-A freeze, thermodynamic/removal limits, or any new numerical theorem.",
+      "claim_ids": [
+        "A5-SECTOR-A-SYNTHESIS"
+      ],
+      "decision_reason": "The defect was path/provenance compatibility drift introduced by filename compaction, not a mathematical failure. The repair is limited to path resolution, current hash pins, and reproducible run artifacts; it does not promote A5, alter its T6 scope, or identify the two scalar/full branches.",
+      "evidence_refs": [
+        "codes/foundations/a5_t6_conditional_primary.py#resolve_repo_path",
+        "codes/foundations/a5_t6_conditional_independent.py#resolve_repo_path",
+        "codes/foundations/a5_t6_conditional_verify.py#resolve_repo_path",
+        "claims/A5-SECTOR-A-SYNTHESIS/conditional_composition_manifest.json#immutable_t5_baseline",
+        "claims/A5-SECTOR-A-SYNTHESIS/bundle/a5t5/MANIFEST.json#bundle_digest",
+        "claims/A5-SECTOR-A-SYNTHESIS/runs/2026-08-22-t6-conditional-path-hygiene-repair/primary.json#assertion_summary",
+        "claims/A5-SECTOR-A-SYNTHESIS/runs/2026-08-22-t6-conditional-path-hygiene-repair/independent.json#assertion_summary",
+        "claims/A5-SECTOR-A-SYNTHESIS/runs/2026-08-22-t6-conditional-path-hygiene-repair/integrated.json#assertion_summary"
+      ],
+      "finding": "The initial current-tree run failed before theorem assertions because the T6 manifest requested absent lowercase claims/a5 paths and the compact bundle recorded a digest different from the digest reconstructed from its 155 hash-listed files. After the resolver and digest/status-pin repair, the primary lane passes 22/22, the independent non-importing lane passes 13/13, and the integrated fresh reexecution passes 35/35. The theorem contract, seven hypotheses, branch separation, mass fork, and non-implication boundary remain unchanged.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": []
+      },
+      "gate_ids": [],
+      "id": "EXP-000921",
+      "method": [
+        "Reproduce the root A5 primary, independent, and integrated lanes against the current compact tree before repair and record the first missing canonical path.",
+        "Add a fail-closed resolver from compact claims/a1k, claims/a1f, claims/a2, claims/a3f, claims/a3p, claims/a4, and claims/a5 aliases to their canonical claim roots and compact A5 bundles.",
+        "Recompute the compact A5 T5 bundle digest from its existing 155-file hash list, refresh the live component status pins and current T6 authority hashes, then rerun all three lanes with stored JSON artifacts."
+      ],
+      "next_action": "Keep A5 at its existing T6 conditional scope. Continue A6 UV/counterterm and full-field concentration obligations, and keep Sector-B, C6, physical-empty, Pre-A, thermodynamic, and removal boundaries open.",
+      "provenance": "contemporaneous",
+      "question": "Does the current A5 T6 conditional-composition package reconstruct after path-length hygiene compacts legacy aliases and changes bundle inventories?",
+      "recorded_at": "2026-08-22T09:00:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-000920",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-08-22",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "A5 T6 path-hygiene resolver and compact digest repair",
+      "verdict": "advanced"
     }
   ],
   "inconclusive_or_parked_exploration_ids": [
@@ -101145,6 +101204,56 @@
       "result_link_basis": {
         "R-019": "explicit_result_id"
       }
+    },
+    {
+      "id": "20260822-a5-t6-path-hygiene-resolver-and-compact-digest",
+      "date": "2026-08-22",
+      "header": "[A5 T6 path-hygiene resolver and compact digest repair] - 2026-08-22",
+      "claim_ids": [
+        "A5-SECTOR-A-SYNTHESIS",
+        "EXP-000921"
+      ],
+      "keywords": [
+        "A5-T6",
+        "EXP-000921",
+        "T0",
+        "compact-digest",
+        "path-hygiene",
+        "resolver"
+      ],
+      "negative_results": [],
+      "notes": [
+        "codes/foundations/a5_t6_conditional_primary.py",
+        "codes/foundations/a5_t6_conditional_independent.py",
+        "codes/foundations/a5_t6_conditional_verify.py",
+        "claims/A5-SECTOR-A-SYNTHESIS/conditional_composition_manifest.json",
+        "claims/A5-SECTOR-A-SYNTHESIS/bundle/a5t5/MANIFEST.json",
+        "claims/A5-SECTOR-A-SYNTHESIS/runs/2026-08-22-t6-conditional-path-hygiene-repair/primary.json",
+        "claims/A5-SECTOR-A-SYNTHESIS/runs/2026-08-22-t6-conditional-path-hygiene-repair/independent.json",
+        "claims/A5-SECTOR-A-SYNTHESIS/runs/2026-08-22-t6-conditional-path-hygiene-repair/integrated.json"
+      ],
+      "scripts": [
+        "codes/foundations/a5_t6_conditional_primary.py",
+        "codes/foundations/a5_t6_conditional_independent.py",
+        "codes/foundations/a5_t6_conditional_verify.py"
+      ],
+      "raw": "## [A5 T6 path-hygiene resolver and compact digest repair] - 2026-08-22\n\nEXP-000921 records a T0, claim-nonbearing repair of the current A5 T6 conditional-composition reader after path-length hygiene compacted legacy aliases. The fresh root primary initially stopped at the absent lowercase claims/a5 path and the compact 155-file bundle digest did not equal its file-list reconstruction.\n\nThe three A5 source lanes now resolve compact aliases to canonical claim roots, the current compact T5 digest is recomputed from its existing hash list, live component status pins and T6 source hashes are refreshed, and stored run artifacts are present. Fresh primary passes 22/22, independent passes 13/13, and integrated fresh reexecution passes 35/35. The seven-hypothesis theorem contract, branch separation, mass fork, and non-implication boundary are unchanged.\n\nThis is infrastructure evidence only. A5 remains at its existing T6 conditional scope; no T7, full derivative Class-II measure, BCC, physical-empty, Sector-B, Pre-A, thermodynamic, removal, or continuum closure follows. No PDF is issued.\n\n",
+      "claim_refs": [
+        "A5-SECTOR-A-SYNTHESIS"
+      ],
+      "claim_ref_basis": {
+        "A5-SECTOR-A-SYNTHESIS": "explicit_claim_ids"
+      },
+      "unresolved_claim_ids": [
+        "EXP-000921"
+      ],
+      "result_ids": [],
+      "linked_result_ids": [
+        "R-048"
+      ],
+      "result_link_basis": {
+        "R-048": "proof_anchor_note:a5_t6_conditional_verify"
+      }
     }
   ],
   "all_tasks": [
@@ -106275,6 +106384,12 @@
         "id": "event:20260821-t-055-common-parent-audit-keeps-physical-empty",
         "kind": "accepted_event",
         "label": "[T-055 common-parent audit keeps physical-empty comparator unowned] - 2026-08-21",
+        "authority": "CHANGELOG.md"
+      },
+      {
+        "id": "event:20260822-a5-t6-path-hygiene-resolver-and-compact-digest",
+        "kind": "accepted_event",
+        "label": "[A5 T6 path-hygiene resolver and compact digest repair] - 2026-08-22",
         "authority": "CHANGELOG.md"
       },
       {
@@ -111885,6 +112000,12 @@
         "id": "exploration:EXP-000920",
         "kind": "proof_exploration",
         "label": "A5 T6 reproduction path and bundle-digest drift after path hygiene",
+        "authority": "explorations/log.jsonl"
+      },
+      {
+        "id": "exploration:EXP-000921",
+        "kind": "proof_exploration",
+        "label": "A5 T6 path-hygiene resolver and compact digest repair",
         "authority": "explorations/log.jsonl"
       },
       {
@@ -128592,6 +128713,18 @@
         "relation": "records_result",
         "to": "result:R-169",
         "basis": "proof_anchor_note:pre-a-t055-legacy-sma-common-bohr-moment-radial-owner-route-split-certificate-260814"
+      },
+      {
+        "from": "event:20260822-a5-t6-path-hygiene-resolver-and-compact-digest",
+        "relation": "records",
+        "to": "claim:A5-SECTOR-A-SYNTHESIS",
+        "basis": "explicit_claim_ids"
+      },
+      {
+        "from": "event:20260822-a5-t6-path-hygiene-resolver-and-compact-digest",
+        "relation": "records_result",
+        "to": "result:R-048",
+        "basis": "proof_anchor_note:a5_t6_conditional_verify"
       },
       {
         "from": "event:20260822-if-tect-ym-0001-scope-preserving-tect-to-yang-m",
@@ -170655,6 +170788,24 @@
       },
       {
         "from": "exploration:EXP-000920",
+        "relation": "records_task",
+        "to": "task:T-054",
+        "basis": "structured_task_id"
+      },
+      {
+        "from": "exploration:EXP-000921",
+        "relation": "assesses",
+        "to": "claim:A5-SECTOR-A-SYNTHESIS",
+        "basis": "structured_claim_id"
+      },
+      {
+        "from": "exploration:EXP-000921",
+        "relation": "continues",
+        "to": "exploration:EXP-000920",
+        "basis": "structured_related_ref"
+      },
+      {
+        "from": "exploration:EXP-000921",
         "relation": "records_task",
         "to": "task:T-054",
         "basis": "structured_task_id"

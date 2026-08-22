@@ -18,7 +18,7 @@ from decimal import Decimal, getcontext
 from pathlib import Path
 from typing import Any
 
-__version__ = "1.1.0"
+__version__ = "1.2.0"
 __first_issued__ = "2026-07-19"
 __version_issued__ = "2026-07-20"
 __claims__ = ["A5-SECTOR-A-SYNTHESIS"]
@@ -27,6 +27,32 @@ getcontext().prec = 80
 REPO = Path(__file__).resolve().parents[2]
 CLAIM = REPO / "claims" / __claims__[0]
 MANIFEST = CLAIM / "conditional_composition_manifest.json"
+
+
+# Path-hygiene compatibility: compact legacy aliases resolve to canonical roots.
+PATH_ALIASES = (
+    ("claims/a5/bundle/a5t5", "claims/A5-SECTOR-A-SYNTHESIS/bundle/a5t5"),
+    ("claims/a5/bundle/a5t6", "claims/A5-SECTOR-A-SYNTHESIS/bundle/a5t6"),
+    ("claims/a1k/bundle/b-a1n", "claims/A1-PRODUCTION-KERNEL-MANIFEST/bundle/A1-N001-Manifest-T5-260716"),
+    ("claims/a1f/bundle/b-a1f", "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/bundle/A1-Production-Functional-T5-260717"),
+    ("claims/a2/bundle/b-a2", "claims/A2-FULL-PRODUCTION-WELLPOSED/bundle/A2-Full-Production-WellPosedness-T6-260717"),
+    ("claims/a3f/bundle/b-a3f", "claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/bundle/A3-Full-Production-Discretization-T6-Repair-260717"),
+    ("claims/a3p/bundle/b-a3p", "claims/A3-PERTURBATIVE-CONTINUUM-CORRELATORS/bundle/A3-Perturbative-Continuum-T6-260719"),
+    ("claims/a4/bundle/b-a4", "claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/bundle/A4-Scalar-Constructive-T6-260719"),
+    ("claims/a1k", "claims/A1-PRODUCTION-KERNEL-MANIFEST"),
+    ("claims/a1f", "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION"),
+    ("claims/a2", "claims/A2-FULL-PRODUCTION-WELLPOSED"),
+    ("claims/a3f", "claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM"),
+    ("claims/a3p", "claims/A3-PERTURBATIVE-CONTINUUM-CORRELATORS"),
+    ("claims/a4", "claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE"),
+    ("claims/a5", "claims/A5-SECTOR-A-SYNTHESIS"),
+)
+
+def resolve_repo_path(value: str) -> Path:
+    for alias, canonical in sorted(PATH_ALIASES, key=lambda row: -len(row[0])):
+        if value == alias or value.startswith(alias + "/"):
+            return REPO / (canonical + value[len(alias):])
+    return REPO / value
 DEFAULT_OUTPUT = CLAIM / "runs" / "2026-07-20-t6-conditional-published-primary" / "result.json"
 
 
@@ -117,8 +143,8 @@ def main() -> int:
         assertions,
     )
     confirmation = manifest.get("operator_confirmation", {})
-    candidate_source = REPO / confirmation.get("candidate_source", "__missing__")
-    candidate_pdf = REPO / confirmation.get("candidate_pdf", "__missing__")
+    candidate_source = resolve_repo_path(confirmation.get("candidate_source", "__missing__"))
+    candidate_pdf = resolve_repo_path(confirmation.get("candidate_pdf", "__missing__"))
     check(
         "exact_v1_0_operator_confirmation_is_bound_to_candidate_hashes",
         confirmation.get("status") == "CONFIRMED"
@@ -137,7 +163,7 @@ def main() -> int:
     source_rows = []
     for key in ("primary_audit", "independent_audit", "one_command_verifier"):
         row = authority[key]
-        path = REPO / row["path"]
+        path = resolve_repo_path(row["path"])
         source_rows.append(
             {"id": key, "exists": path.is_file(), "actual": sha256(path) if path.is_file() else None, "expected": row["sha256"]}
         )
@@ -151,7 +177,7 @@ def main() -> int:
     note_rows = []
     for key in ("referee_source", "referee_pdf"):
         row = authority[key]
-        path = REPO / row["path"]
+        path = resolve_repo_path(row["path"])
         note_rows.append(
             {"id": key, "exists": path.is_file(), "actual": sha256(path) if path.is_file() else None, "expected": row["sha256"]}
         )
@@ -163,8 +189,8 @@ def main() -> int:
     )
 
     baseline = manifest["immutable_t5_baseline"]
-    t5_manifest_path = REPO / baseline["synthesis_manifest_path"]
-    t5_bundle_root = REPO / baseline["bundle_path"]
+    t5_manifest_path = resolve_repo_path(baseline["synthesis_manifest_path"])
+    t5_bundle_root = resolve_repo_path(baseline["bundle_path"])
     t5_bundle_manifest = t5_bundle_root / "MANIFEST.json"
     check(
         "immutable_t5_manifest_and_bundle_manifest_are_unchanged",
@@ -191,7 +217,7 @@ def main() -> int:
     component_rows = []
     support_bundle_rows = []
     for component in t5_manifest["components"]:
-        status_path = REPO / component["status_path"]
+        status_path = resolve_repo_path(component["status_path"])
         card = load_json(status_path)
         cards[component["id"]] = card
         component_rows.append(
@@ -203,7 +229,7 @@ def main() -> int:
                 "reproducible": card.get("reproduction", {}).get("status") == "AVAILABLE",
             }
         )
-        bundle_manifest_path = REPO / component["published_bundle_manifest"]
+        bundle_manifest_path = resolve_repo_path(component["published_bundle_manifest"])
         bundle_root = bundle_manifest_path.parent
         support_report = verify_bundle(bundle_root)
         support_bundle_rows.append(
@@ -303,9 +329,9 @@ def main() -> int:
         assertions,
     )
 
-    kernel = load_json(REPO / manifest["numeric_firewall"]["scalar_source"])
-    functional = load_json(REPO / manifest["numeric_firewall"]["full_source"])
-    a4_manifest = load_json(REPO / manifest["shared_domain"]["a4_manifest"])
+    kernel = load_json(resolve_repo_path(manifest["numeric_firewall"]["scalar_source"]))
+    functional = load_json(resolve_repo_path(manifest["numeric_firewall"]["full_source"]))
+    a4_manifest = load_json(resolve_repo_path(manifest["shared_domain"]["a4_manifest"]))
     params = functional["parameters"]
     geometry = manifest["shared_domain"]
     q0_ok = Decimal(str(kernel["q0"])) == Decimal(str(params["q0"]))
