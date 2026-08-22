@@ -4,7 +4,7 @@ Generated from `todo/todo.json` by `verification/scripts/todo.py` -- **never han
 Portable: copying the TECT folder carries this ledger; a fresh cowork session reads it in the session-entry prelude (AGENTS.md §1).
 For bounded daily reading use `management/INDEX.md`; this compatibility view deliberately preserves every completed task.
 
-Counts: In progress 3 · Next up 1 · Blocked 2 · Backlog 5 · Done (compatibility history) 47
+Counts: In progress 3 · Next up 0 · Blocked 2 · Backlog 5 · Done (compatibility history) 48
 
 ## In progress
 
@@ -17,12 +17,6 @@ Counts: In progress 3 · Next up 1 · Blocked 2 · Backlog 5 · Done (compatibil
 - **T-057** Selective legacy preservation, retrieval, and gate-by-gate revalidation  _(owner: AI+operator; claim: C6-SPACETIME-SIGNATURE; gate: LEGACY-SELECTIVE-INDEX-AND-ON-DEMAND-REVALIDATION)_
   - Policy: governance/legacy-research-knowledge-base.md. Contents remains the maintained full corpus; no wholesale copy or all-path completion target remains. TECT retains all 66 existing compatibility payloads, 49 newly selected readable reference copies, 115 selected source identities, 24 reviewed assessments, and the 50-source LEGACY-T055-GEOMETRY-EMPTY-REFERENCE-001 batch. FTS5 plus deterministic hashed-TFIDF retrieval uses hash-verified repository copies, with dense multilingual semantics explicitly unconfigured until a local model is pinned. Next: complete exact per-source extraction and dependency closure for the active batch, rerun under current conventions, independently audit, and integrate or reject only the surviving methods and results. Resolve other legacy claim pointers on demand from live gates. Selection, copies, summaries, search, or matching hashes do not change a claim tier or close a physical-vacuum, C6, Sector A, or Pre-A gate.
   - _updated 2026-08-14_
-
-## Next up
-
-- **T-006** De-hardcode codes/vacuum scripts (derive MARGIN/RHO from source) + add check_code_discipline.py to release_check  _(owner: unassigned; claim: B1-RH-ENUM)_
-  - MARGIN de-hardcoded 2026-06-07 (codes/vacuum/sectorb_common.py single source; scscope+robustness import margin_of). REMAINING: RHO consolidation + automated check_code_discipline.py wired into release_check (no-hardcoding + self-test + JSON-artefact scan).
-  - _updated 2026-06-07_
 
 ## Blocked
 
@@ -67,6 +61,9 @@ Counts: In progress 3 · Next up 1 · Blocked 2 · Backlog 5 · Done (compatibil
 - **T-005** Assemble the joint second+third-order endpoint inequality (SC-SCOPE all-orders lift)  _(owner: unassigned; claim: B5-BEYOND-LAYER-BOUND; gate: SC-SCOPE; blocked by: T-003, T-004)_
   - SUPERSEDED by the 2026-06-07 SC-SCOPE scope decision: 2nd-cumulant accepted at the I=2e-3 endpoint; all-orders feasible for I<=1e-3. Joint inequality not pursued to closure (paired x0.905 exhausted). Reopen only via STEP-5B endpoint floor rho>~3.9.
   - _updated 2026-06-07_
+- **T-006** De-hardcode codes/vacuum scripts (derive MARGIN/RHO from source) + add check_code_discipline.py to release_check  _(owner: Codex; claim: B1-RH-ENUM)_
+  - EXP-000917 / T-006 completes the release-gated MARGIN/RHO/RHO_END literal firewall and derives RHO_END from sectorb_common.RHO[2e-3]. The scanner self-test and SC-SCOPE reproduction pass; historical self-test/JSON coverage diagnostics remain explicit and nonblocking. No claim, tier, physical, Sector-A, Pre-A, or A13 closure follows.
+  - _updated 2026-08-22_
 - **T-007** ESTIMATOR-UPGRADE: controlled-error quantitative selection margins for B1  _(owner: unassigned; claim: B1-RH-ENUM; gate: ESTIMATOR-UPGRADE)_
   - Promote the estimator-grade selection margins to controlled-error bounds (separate from the T6 sign claim).
   - _updated 2026-06-07_

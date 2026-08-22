@@ -39,7 +39,7 @@ import sectorb_common as sb  # noqa: E402
 
 REPO = Path(__file__).resolve().parents[2]
 MU2 = 0.005
-RHO_END = 2.6            # AddE hardened endpoint ratio (cited certified)
+RHO_END = sb.RHO[2e-3]  # derived AddE hardened endpoint ratio
 SUNSET_RATIO = 1.13      # dressed sunset endpoint ratio (scscope_mendpoint_eval, cited)
 R_MAX = 1.019            # quartic-difference per-transfer R_max (scscope_ghat4_pertransfer, cited)
 CLAIMS = []

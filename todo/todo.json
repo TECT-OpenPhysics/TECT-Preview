@@ -70,13 +70,13 @@
     {
       "id": "T-006",
       "title": "De-hardcode codes/vacuum scripts (derive MARGIN/RHO from source) + add check_code_discipline.py to release_check",
-      "status": "next",
-      "owner": "unassigned",
+      "status": "done",
+      "owner": "Codex",
       "claim": "B1-RH-ENUM",
       "gate": null,
-      "note": "MARGIN de-hardcoded 2026-06-07 (codes/vacuum/sectorb_common.py single source; scscope+robustness import margin_of). REMAINING: RHO consolidation + automated check_code_discipline.py wired into release_check (no-hardcoding + self-test + JSON-artefact scan).",
+      "note": "EXP-000917 / T-006 completes the release-gated MARGIN/RHO/RHO_END literal firewall and derives RHO_END from sectorb_common.RHO[2e-3]. The scanner self-test and SC-SCOPE reproduction pass; historical self-test/JSON coverage diagnostics remain explicit and nonblocking. No claim, tier, physical, Sector-A, Pre-A, or A13 closure follows.",
       "created": "2026-06-07",
-      "updated": "2026-06-07",
+      "updated": "2026-08-22",
       "blocked_by": []
     },
     {

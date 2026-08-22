@@ -7,7 +7,7 @@
   "authority_boundary": "This projection is complete by reference but is not a tier or proof authority. Claim status cards, proof notes/runs, RESULTS-LEDGER.md, negative-results/registry.md, explorations/log.jsonl, changelog/log.jsonl, todo/todo.json, and claims/GATES.md remain canonical. theory/proof-evidence/interface-pointers.json owns only reference-only external locators and never a claim or obligation status.",
   "source_hashes": {
     "RESULTS-LEDGER.md": "1dcab28ca10923c9d668d57f1959d6421c9a5adebbd7c043fb9140a540c1f046",
-    "changelog/log.jsonl": "fbc0e3ac3061ba8b92fea71b554806e4ddc247179d5bfc30c998e118b3d3f423",
+    "changelog/log.jsonl": "2ad2ff9226dfb2f2bb95a721b05d202571adb10b2448583e17b608ab2dcba932",
     "claims/A1-KERNEL-CONV/status.json": "e5dd2b08ce58f1c3d2680b907e1469b828b2b6a3929d773f7bd84137efe36509",
     "claims/A1-KERNEL-IDENTITY/status.json": "dbaf6f1e80d994b94c9746cc7d342592fbc3638abb372d8e1c02841bb4e4d477",
     "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/status.json": "202e7514bb2d6fc029e61de95386981aedca15d81e9d6f71fc1570d77049d554",
@@ -58,10 +58,10 @@
     "claims/F2-BARYOGENESIS/status.json": "de39e5132355707dd49d4da4ef2da7b64d5f69802609c2f867d658114c3523a4",
     "claims/F3-INFLATION-CMB/status.json": "04b783d1f49f0ee453d4ccc3eff93cc7bca3c084dcdcdd036a023dd76d62331c",
     "claims/GATES.md": "8b2e79e8570fb392bb475ddad551ce551ce8775b22d180fbf547ca4b440c2c3f",
-    "explorations/log.jsonl": "06cbb2e7b85e1c6b34193d2aad96e2137cf69a5743f9dc639ef0810dd56f7c55",
+    "explorations/log.jsonl": "02d14e4710eda30e83a6912fcbe10cdf24045b6244d1b889ab1ef5b4938770a9",
     "negative-results/registry.md": "546bbd65ee917eae68a9b1a3564431d3fcea72804d4aea79e061e002e097de0e",
     "theory/proof-evidence/interface-pointers.json": "59d3135869897d1c77a62dcbf9a513110136dba21dd43d23ffa4abbc9307992f",
-    "todo/todo.json": "a1660a293e0e34d6c252a122fe48444446a012863fd9206fe2581fa91676978c"
+    "todo/todo.json": "1252641a4d7ef622c32f8ce993b493d91d817eabaa290aa7e7721083168f96e6"
   },
   "coverage": {
     "status_cards": 49,
@@ -70,18 +70,18 @@
     "interface_pointers": 1,
     "reusable_results": 193,
     "negative_records": 372,
-    "proof_explorations": 916,
+    "proof_explorations": 917,
     "exploration_verdicts": {
-      "advanced": 566,
+      "advanced": 567,
       "failed": 236,
       "inconclusive": 80,
       "parked": 34
     },
     "process_grade_lessons": 3,
-    "accepted_events": 690,
+    "accepted_events": 691,
     "tasks": 58,
-    "live_tasks": 11,
-    "completed_tasks": 47,
+    "live_tasks": 10,
+    "completed_tasks": 48,
     "open_gates": 16,
     "current_route_gates": 18,
     "sectors": 6,
@@ -3050,7 +3050,6 @@
         "ESTIMATOR-UPGRADE"
       ],
       "live_tasks": [
-        "T-006",
         "T-030"
       ]
     },
@@ -3148,19 +3147,6 @@
       "updated": "2026-08-14",
       "blocked_by": [],
       "status_normalized": "in_progress"
-    },
-    {
-      "id": "T-006",
-      "title": "De-hardcode codes/vacuum scripts (derive MARGIN/RHO from source) + add check_code_discipline.py to release_check",
-      "status": "next",
-      "owner": "unassigned",
-      "claim": "B1-RH-ENUM",
-      "gate": null,
-      "note": "MARGIN de-hardcoded 2026-06-07 (codes/vacuum/sectorb_common.py single source; scscope+robustness import margin_of). REMAINING: RHO consolidation + automated check_code_discipline.py wired into release_check (no-hardcoding + self-test + JSON-artefact scan).",
-      "created": "2026-06-07",
-      "updated": "2026-06-07",
-      "blocked_by": [],
-      "status_normalized": "next"
     },
     {
       "id": "T-032",
@@ -8767,9 +8753,10 @@
           "EXP-000860",
           "EXP-000862",
           "EXP-000863",
-          "EXP-000907"
+          "EXP-000907",
+          "EXP-000917"
         ],
-        "latest_exploration_id": "EXP-000907",
+        "latest_exploration_id": "EXP-000917",
         "accepted_event_ids": [
           "20260605-m1-migration-sector-b-evidence-chain-migrated-r",
           "20260605-m1-reorg-archive-per-tag-layout-first-tsv2-theo",
@@ -73535,6 +73522,48 @@
       "task_id": "T-058",
       "title": "A1/A7 spectral operators do not supply the A13 production heat owner",
       "verdict": "parked"
+    },
+    {
+      "boundary": "This is T0 infrastructure evidence. It proves only the release-time scanner behavior and the RHO source consolidation. It does not prove B1, Sector-A, A13, a Nelson bound, an interacting measure, physical-empty ordering, continuum/removal, or any claim-tier change.",
+      "claim_ids": [
+        "B1-RH-ENUM"
+      ],
+      "decision_reason": "A fail-closed literal firewall is safe for the known derived quantities, but enforcing self-test/JSON coverage retroactively over the historical 782-file corpus would be a false claim of compliance and would block unrelated legacy evidence. Those diagnostics are therefore explicit and nonblocking until files are migrated under a strict marker.",
+      "evidence_refs": [
+        "verification/scripts/check_code_discipline.py#main",
+        "verification/scripts/gates.py#SYNC_GATES",
+        "codes/vacuum/sectorb_common.py#RHO",
+        "codes/vacuum/scscope_joint_endpoint.py#RHO_END"
+      ],
+      "finding": "The scanner finds no remaining literal assignment to MARGIN, RHO or RHO_END after RHO_END is sourced from sectorb_common.RHO[2e-3]. It reports 714 historical scripts without explicit self-test markers and 11 without JSON markers as nonblocking coverage diagnostics; strict coverage is available for new-code review, while the release gate fails on syntax errors or derived-literal violations. The SC-SCOPE endpoint remains numerically unchanged and reports joint ratio 0.757 with the registered honest non-closure.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": []
+      },
+      "gate_ids": [],
+      "id": "EXP-000917",
+      "method": [
+        "Scan all 782 codes Python files with an AST checker for numeric-literal assignments to the known derived names MARGIN, RHO and RHO_END.",
+        "Add the checker to the single-source release/doctor gate list and exercise its in-memory self-test for literal rejection, derived-call acceptance, assertion detection and JSON-artifact detection.",
+        "Replace the remaining RHO_END literal in scscope_joint_endpoint.py by sectorb_common.RHO[2e-3], rerun the endpoint calculation, regeneration and release check."
+      ],
+      "next_action": "Keep the scanner release-gated; migrate any new proof script with an explicit self-test and JSON artefact, and do not treat the historical coverage warnings as a completed proof obligation.",
+      "provenance": "contemporaneous",
+      "question": "Does the current codebase enforce the binding no-hardcoded-derived-number rule at release time, and is the remaining Sector-B endpoint ratio RHO_END derived from the shared source?",
+      "recorded_at": "2026-08-22T06:00:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-000916",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-08-22",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-006",
+      "title": "T-006 code-discipline gate and RHO source consolidation",
+      "verdict": "advanced"
     }
   ],
   "inconclusive_or_parked_exploration_ids": [
@@ -100875,6 +100904,36 @@
         "R-192": "explicit_result_id",
         "R-193": "explicit_result_id"
       }
+    },
+    {
+      "id": "20260822-t-006-code-discipline-gate-and-rho-source-conso",
+      "date": "2026-08-22",
+      "header": "[T-006 code-discipline gate and RHO source consolidation] - 2026-08-22",
+      "claim_ids": [],
+      "keywords": [
+        "RHO",
+        "T-006",
+        "code-discipline",
+        "no-hardcoded-derived"
+      ],
+      "negative_results": [],
+      "notes": [
+        "governance/CODE-DISCIPLINE.md",
+        "verification/scripts/check_code_discipline.py",
+        "verification/scripts/gates.py",
+        "codes/vacuum/scscope_joint_endpoint.py"
+      ],
+      "scripts": [
+        "verification/scripts/check_code_discipline.py",
+        "codes/vacuum/scscope_joint_endpoint.py"
+      ],
+      "raw": "## [T-006 code-discipline gate and RHO source consolidation] - 2026-08-22\n\nT-006 records the release-gated code-discipline implementation. The new AST checker rejects syntax errors and numeric-literal assignments to the known derived quantities MARGIN, RHO, and RHO_END; its self-test covers the literal firewall, derived-call acceptance, assertion detection, and JSON-artifact detection.\n\nThe remaining RHO_END endpoint literal was replaced by the shared sectorb_common.RHO[2e-3] source, and the SC-SCOPE endpoint reproduction remains unchanged at joint ratio 0.757 with an honest non-closure. Historical scripts without self-test or JSON markers are reported as explicit nonblocking coverage diagnostics; strict coverage is available for new proof code.\n\nThis is T0 infrastructure only. It changes no claim tier, gate, physical-empty comparison, Sector-A/Pre-A result, or A13 conclusion.\n\n",
+      "claim_refs": [],
+      "claim_ref_basis": {},
+      "unresolved_claim_ids": [],
+      "result_ids": [],
+      "linked_result_ids": [],
+      "result_link_basis": {}
     }
   ],
   "all_tasks": [
@@ -100953,15 +101012,15 @@
     {
       "id": "T-006",
       "title": "De-hardcode codes/vacuum scripts (derive MARGIN/RHO from source) + add check_code_discipline.py to release_check",
-      "status": "next",
-      "owner": "unassigned",
+      "status": "done",
+      "owner": "Codex",
       "claim": "B1-RH-ENUM",
       "gate": null,
-      "note": "MARGIN de-hardcoded 2026-06-07 (codes/vacuum/sectorb_common.py single source; scscope+robustness import margin_of). REMAINING: RHO consolidation + automated check_code_discipline.py wired into release_check (no-hardcoding + self-test + JSON-artefact scan).",
+      "note": "EXP-000917 / T-006 completes the release-gated MARGIN/RHO/RHO_END literal firewall and derives RHO_END from sectorb_common.RHO[2e-3]. The scanner self-test and SC-SCOPE reproduction pass; historical self-test/JSON coverage diagnostics remain explicit and nonblocking. No claim, tier, physical, Sector-A, Pre-A, or A13 closure follows.",
       "created": "2026-06-07",
-      "updated": "2026-06-07",
+      "updated": "2026-08-22",
       "blocked_by": [],
-      "status_normalized": "next"
+      "status_normalized": "done"
     },
     {
       "id": "T-007",
@@ -106077,6 +106136,12 @@
         "id": "event:20260822-r-193-static-owner-heat-map-non-identifiability",
         "kind": "accepted_event",
         "label": "[R-193 static-owner heat-map non-identifiability witness] - 2026-08-22",
+        "authority": "CHANGELOG.md"
+      },
+      {
+        "id": "event:20260822-t-006-code-discipline-gate-and-rho-source-conso",
+        "kind": "accepted_event",
+        "label": "[T-006 code-discipline gate and RHO source consolidation] - 2026-08-22",
         "authority": "CHANGELOG.md"
       },
       {
@@ -111573,6 +111638,12 @@
         "id": "exploration:EXP-000916",
         "kind": "proof_exploration",
         "label": "A1/A7 spectral operators do not supply the A13 production heat owner",
+        "authority": "explorations/log.jsonl"
+      },
+      {
+        "id": "exploration:EXP-000917",
+        "kind": "proof_exploration",
+        "label": "T-006 code-discipline gate and RHO source consolidation",
         "authority": "explorations/log.jsonl"
       },
       {
@@ -170238,6 +170309,24 @@
         "relation": "references_result",
         "to": "result:R-193",
         "basis": "structured_formal_ref"
+      },
+      {
+        "from": "exploration:EXP-000917",
+        "relation": "assesses",
+        "to": "claim:B1-RH-ENUM",
+        "basis": "structured_claim_id"
+      },
+      {
+        "from": "exploration:EXP-000917",
+        "relation": "continues",
+        "to": "exploration:EXP-000916",
+        "basis": "structured_related_ref"
+      },
+      {
+        "from": "exploration:EXP-000917",
+        "relation": "records_task",
+        "to": "task:T-006",
+        "basis": "structured_task_id"
       },
       {
         "from": "negative:AUDIT-2026-06-08-scscope-lift-overclaim",

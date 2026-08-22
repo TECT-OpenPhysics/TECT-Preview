@@ -15,7 +15,6 @@ Authorities: `claims/*/status.json`, `todo/todo.json`, `ROADMAP.md`, `RESULTS-LE
 | `T-054` | in_progress | — | PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE | Pre-A evidence register and candidate-functional tournament |
 | `T-055` | in_progress | C6-SPACETIME-SIGNATURE | C6-BCC-PREMISE-BLOCKED | Geometry-first truncated-octahedron candidate triage: enumerate realizations and test empty-reference sign before structural use |
 | `T-057` | in_progress | C6-SPACETIME-SIGNATURE | LEGACY-SELECTIVE-INDEX-AND-ON-DEMAND-REVALIDATION | Selective legacy preservation, retrieval, and gate-by-gate revalidation |
-| `T-006` | next | B1-RH-ENUM | — | De-hardcode codes/vacuum scripts (derive MARGIN/RHO from source) + add check_code_discipline.py to release_check |
 | `T-032` | blocked | A1-PRODUCTION-KERNEL-MANIFEST | — | Operator-independent certification and main-proof-line decision for the canonical N-001 scalar-slice manifest before any T5 package |
 | `T-048` | blocked | A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION | A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE | A11: prove the true-increment stabilised relative log-Laplace bound |
 
