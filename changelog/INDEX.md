@@ -5,7 +5,7 @@ Compact generated reader surface. The append-only authority is
 record 568 / commit `4db22f4e` and no longer grows.
 Post-cutover full bodies live exactly once in bounded pages under `pages/`.
 
-**689 accepted events** · latest 25 shown below · machine locator: `index.json`
+**690 accepted events** · latest 25 shown below · machine locator: `index.json`
 
 Search the complete authority without loading every page:
 
@@ -17,6 +17,7 @@ python verification/scripts/changelog.py search --text <phrase>
 
 | Date | Event | Claims | Full entry |
 |---|---|---|---|
+| 2026-08-22 | `20260822-r-193-static-owner-heat-map-non-identifiability` — [R-193 static-owner heat-map non-identifiability witness] - 2026-08-22 | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION, EXP-000910, R-193 | [bounded page](pages/000669-000718.md#20260822-r-193-static-owner-heat-map-non-identifiability) |
 | 2026-08-22 | `20260822-r-192-t-058-bounded-complete-finite-production` — [R-192 T-058 bounded complete finite production-cylinder integration trial] - 2026-08-22 | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION, EXP-000909, R-192 | [bounded page](pages/000669-000718.md#20260822-r-192-t-058-bounded-complete-finite-production) |
 | 2026-08-22 | `20260822-if-tect-ym-0001-scope-preserving-tect-to-yang-m` — [[IF-TECT-YM-0001] Scope-preserving TECT-to-Yang-Mills evidence export] - 2026-08-22 | A3-PERTURBATIVE-CONTINUUM-CORRELATORS, A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE, B1-RH-ENUM, B2-PROPA-HLAYER, B3-BCC-STRUCT, B3-RH-TESTED-STRUCTURE-RANKING, B4-CONE-CURVATURE-ANCHOR, B4-MASS-GAP, B5-BEYOND-LAYER-BOUND, C6-SPACETIME-SIGNATURE | [bounded page](pages/000669-000718.md#20260822-if-tect-ym-0001-scope-preserving-tect-to-yang-m) |
 | 2026-08-22 | `20260822-r-191-complete-finite-two-root-a1-scalar-owner` — [R-191 complete finite two-root A1 scalar owner telescope] - 2026-08-22 | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION, EXP-000906, R-191 | [bounded page](pages/000669-000718.md#20260822-r-191-complete-finite-two-root-a1-scalar-owner) |
@@ -41,7 +42,6 @@ python verification/scripts/changelog.py search --text <phrase>
 | 2026-08-21 | `20260821-r-173-r-163-dyadic-forest-lean-cross-check-2026` — [R-173 R-163 dyadic-forest Lean cross-check] - 2026-08-21 | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION, EXP-000888, R-173 | [bounded page](pages/000619-000668.md#20260821-r-173-r-163-dyadic-forest-lean-cross-check-2026) |
 | 2026-08-21 | `20260821-a1-class-ii-owner-mismatch-lean-cross-check-202` — [A1 Class-II owner mismatch Lean cross-check] - 2026-08-21 | A1-CLASSII-OWNER-MISMATCH-LEAN-CROSSCHECK, A1-PRODUCTION-FUNCTIONAL-REALISATION, A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION, EXP-000887, R-172 | [bounded page](pages/000619-000668.md#20260821-a1-class-ii-owner-mismatch-lean-cross-check-202) |
 | 2026-08-21 | `20260821-a1-nonlinear-gradient-mismatch-lean-cross-check` — [A1 nonlinear gradient mismatch Lean cross-check] - 2026-08-21 | A1-PFR-VARIATIONAL-MISMATCH, A1-PRODUCTION-FUNCTIONAL-REALISATION, EXP-000886 | [bounded page](pages/000619-000668.md#20260821-a1-nonlinear-gradient-mismatch-lean-cross-check) |
-| 2026-08-21 | `20260821-a13-t-050-production-cylinder-scratch-route-bou` — [A13 T-050 production-cylinder scratch route boundary] - 2026-08-21 | A1-PRODUCTION-FUNCTIONAL-REALISATION, A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION, EXP-000885, R-166 | [bounded page](pages/000619-000668.md#20260821-a13-t-050-production-cylinder-scratch-route-bou) |
 
 ## Post-cutover pages
 
@@ -49,6 +49,6 @@ Each full event body after the cutover occurs in exactly one page.
 
 | Ordinals | Events | Page |
 |---|---:|---|
-| 669–689 | 21 | [000669-000718.md](pages/000669-000718.md) |
+| 669–690 | 22 | [000669-000718.md](pages/000669-000718.md) |
 | 619–668 | 50 | [000619-000668.md](pages/000619-000668.md) |
 | 569–618 | 50 | [000569-000618.md](pages/000569-000618.md) |

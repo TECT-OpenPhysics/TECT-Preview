@@ -1,0 +1,88 @@
+{
+  "schema": "tect/a13-r193-static-owner-heat-map-nonidentifiability/1.0",
+  "audit_id": "A13-R193-STATIC-OWNER-HEAT-MAP-NONIDENTIFIABILITY",
+  "result_id": "R-193",
+  "claim_id": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+  "exploration_id": "EXP-000910",
+  "task_id": "T-058",
+  "tier": "T0",
+  "claim_bearing": false,
+  "title": "Static-owner to heat-map non-identifiability witness",
+  "purpose": "Show, with an exact Lean and independent Fraction witness, that pinned static inverse-covariance data do not select a unique production heat/root map when the generator, filtration, raw-current derivative and q-ledger are absent.",
+  "inputs": {
+    "a1": {"path": "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/production_functional_manifest.json", "sha256": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565"},
+    "a7": {"path": "claims/A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE/classii_renormalised_energy_manifest.json", "sha256": "4e14817d1928d54fa15e5871e506870d51c0b49baee5407c24200b2a726c5607"},
+    "r136": {"path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_common_heat_replica_raw_sequential_owner_boundary_manifest.json", "sha256": "5b844c23b6acab430c6e2f2b4cbd339eb28f559f02d7817c01a749d58ed88dd9"},
+    "r125": {"path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_conditional_variance_forest_bridge_root_shell_operator_boundary_manifest.json", "sha256": "64d0d5ee851a49c5f85994f71616b4d51def2bca701abea6d006a578d8d44e2f"},
+    "r192_certificate": {"path": "strategy/pre-a13-t058-bounded-complete-production-cylinder-certificate-260822.md", "sha256": "c6a95057b54cebe487f140ab5d2ee7ae2e16df3e5318877d0eac180a128f5605"},
+    "a13_status": {"path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/status.json", "sha256": "356ea6ec060cecc06df38712b2715ea32ec52dd8493ef4177bb840170a48c8dd"},
+    "lean_toolchain": {"path": "verification/lean/lean-toolchain", "sha256": "8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af"},
+    "lakefile": {"path": "verification/lean/lakefile.toml", "sha256": "a67c26b5518afd984e53eae28a0ba4948c6bb01680d7c360e8b36386eb98962b"},
+    "lake_manifest": {"path": "verification/lean/lake-manifest.json", "sha256": "4308d953726ebe0a8e8fdb7aa5da996c8bfcd45d4a58f6f1b3b40e25d2521964"},
+    "lean_registry": {"path": "verification/lean/registry.json", "sha256": "d34bf7627da847892557b6439f26a94baf86966c038097acb3aa7da0635c1b7f"}
+  },
+  "registered_inputs": {
+    "static_witness": {
+      "hessian": ["1", "2"],
+      "covariance": ["1", "1/2"],
+      "map_a_factors": ["1/2", "1/4"],
+      "map_b_factors": ["1/4", "1/2"],
+      "interpretation": "The inverse pair and diagonal contractions are a finite illustrative witness compatible with the pinned static data; neither diagonal map is asserted to be the A1 production dynamics."
+    },
+    "required_absent_fields": ["heat_generator", "heat_semigroup", "filtration", "raw_current_spatial_intertwiner", "production_one_use_q_ledger"],
+    "source_scope": {
+      "a1": "Hash-pinned deterministic A1 functional/backend parameters; static functional data only.",
+      "a7": "Hash-pinned fixed-floor covariance-normal composite; static covariance data only.",
+      "r136": "Production raw-current spatial intertwiner and one-use q-ledger flags are explicitly false.",
+      "r125": "Production root-shell factorisation flag is explicitly false.",
+      "r192": "R-192 stops at the first missing production heat/root raw-current map."
+    }
+  },
+  "theorem_markers": ["pinned_static_inverse", "map_a_admissible", "map_b_admissible", "map_a_zero", "map_b_zero", "maps_distinct", "relative_order_a", "relative_order_b", "two_static_compatible_heat_maps", "nonidentifiability_for_any_static_data"],
+  "files": {
+    "lean_entrypoint": {"path": "verification/lean/Tect/R193.lean", "sha256": "d230777152a63cd2e7e20ec76d8be032e477b83c75900708263c99757bd2ab2b"},
+    "primary": {"path": "verification/scripts/lean_a13_r193_static_owner_heat_map_nonidentifiability.py", "sha256": "e17f50950ef51dbe3192797d535d1f275d6a2905d5e635d0cf3ae7e6d1e6982b"},
+    "independent": {"path": "codes/foundations/lean_a13_r193_static_owner_heat_map_nonidentifiability_independent.py", "sha256": "e89fcd00dcfc4b386cc63d47ae180ee40e49fbd232392c389a07bd658029b591"},
+    "verifier": {"path": "codes/foundations/lean_a13_r193_static_owner_heat_map_nonidentifiability_verify.py", "sha256": "a5c65c6929700ccfc69777b838dd01c9b714e2293674f8ea19e2d55cfe682ec9"},
+    "certificate": {"path": "strategy/pre-a13-r193-static-owner-heat-map-nonidentifiability-certificate-260822.md", "sha256": "015c93fad3a1f4982c6c753686f43b50ea8a7bb42f47e4be6df3db6a4a70cee8"},
+    "note": {"path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/a13-r193-static-owner-heat-map-nonidentifiability-260822.md", "sha256": "0ffa84ef3c538106a2cfc3cdbf58a6aaff1541fda61c4eefb9779cca2ea5d3cb"}
+  },
+  "hostile_mutations": [
+    "replace the static inverse relation by a non-inverse pair",
+    "replace one diagonal contraction by an expansion or sign-changing map",
+    "make either map fail zero preservation",
+    "make the two maps equal",
+    "erase the reversed relative decay order",
+    "insert a heat generator or raw-current field into A1 or A7 and call it absent",
+    "promote the R-136 or R-125 false production flags to proved",
+    "insert a Lean sorry, admit, axiom or unsafe escape"
+  ],
+  "boundary": "This T0 claim-nonbearing witness proves only static-owner non-identifiability: two distinct positive zero-preserving diagonal contractions fit the same finite inverse-covariance data and reverse relative decay order, while the pinned A1/A7 authorities and R-136/R-125 flags supply no production heat/root map. It does not identify either map with A1 dynamics, prove a heat semigroup, q-ledger, root-shell factorisation, A13/T-050 closure, Sector-A, Pre-A, physical-empty comparison, removal or continuum limit. A future gate-level proof requires a hash-pinned production generator/filtration/raw-current derivative/projector and one-use q-ledger before the R-192 owner order can be rerun. No new negative, tier change or PDF follows.",
+  "next_action": "Supply and hash-pin the actual production generator, filtration, raw-current spatial derivative/projector and one-use q-ledger; then rerun R-192 unchanged and test whether the owner map is unique before attempting A13 gate closure.",
+  "formal_integration": {
+    "event_id": "20260822-r-193-static-owner-heat-map-non-identifiability",
+    "event_ordinal": 690,
+    "exploration_ordinal": 910,
+    "event_claim_ids": ["A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION", "EXP-000910", "R-193"],
+    "event_keywords": ["A13-open", "EXP-000910", "Lean", "R-193", "heat-map", "non-identifiability", "production-interface", "static-owner"],
+    "event_notes": [
+      "strategy/pre-a13-r193-static-owner-heat-map-nonidentifiability-manifest.json",
+      "strategy/pre-a13-r193-static-owner-heat-map-nonidentifiability-certificate-260822.md",
+      "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/a13-r193-static-owner-heat-map-nonidentifiability-260822.md",
+      "RESULTS-LEDGER.md",
+      "ROADMAP.md",
+      "strategy/INDEX.md"
+    ],
+    "event_scripts": [
+      "verification/scripts/lean_a13_r193_static_owner_heat_map_nonidentifiability.py",
+      "codes/foundations/lean_a13_r193_static_owner_heat_map_nonidentifiability_independent.py",
+      "codes/foundations/lean_a13_r193_static_owner_heat_map_nonidentifiability_verify.py"
+    ],
+    "event_raw_tokens": ["EXP-000910", "R-193", "non-identifiability", "first missing production map", "No R-193 PDF"],
+    "expected_counts": {"claims": 49, "results": 193, "gates": 206, "negatives": 372, "explorations": 910, "events": 690, "tasks": 58, "catalog": 4496},
+    "no_new_negative_ids": [],
+    "reused_negative_ids": [],
+    "no_pdf": true
+  },
+  "no_overclaim": "T0 claim-nonbearing interface audit only. The exact Lean witness and independent Fraction lane show non-identifiability of a production heat/root map from the registered static owners; they do not prove an A1 dynamical map, close A13 or T-050, or establish any physical, thermodynamic, removal or continuum result."
+}

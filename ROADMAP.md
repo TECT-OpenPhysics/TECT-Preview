@@ -1677,6 +1677,17 @@ The owner-slot contract does not infer complement, historical low, forest,
 returned mean, source or sextic terms from endpoint data. A13 gates, T-050,
 Sector-A, Pre-A, physical-empty, removal, continuum and all production
 q-ledger routes remain open. No new negative or R-192 PDF is issued.
+
+EXP-000910 / R-193 is a T0, claim-nonbearing interface witness following
+R-192. The A1 static functional and A7 covariance-normal data contain no
+heat-generator, filtration, raw-current spatial-intertwiner or once-owned
+q-ledger field; R-136/R-125 retain those production flags as false. Lean and
+an independent Fraction lane exhibit two distinct positive diagonal
+contractions compatible with the same static inverse-covariance relation but
+with reversed relative decay order. This sharpens the first-missing-map
+obligation without promoting either illustrative map to A1 dynamics. A13,
+T-050, Sector-A, Pre-A, physical-empty, removal and continuum routes remain
+open. No new negative or R-193 PDF is issued.
 EXP-000878 / R-171 records an exact T4 endpoint boundary in the pinned
 A1/A7 model. The registered dual-lattice plane wave
 `Psi_amp=amp*cos((pi/8)x_1)e1` has strictly positive deterministic A7

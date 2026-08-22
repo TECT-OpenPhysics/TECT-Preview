@@ -64,7 +64,7 @@ def files():
 
 def run(label, cmd, errors):
     r = subprocess.run(
-        [sys.executable] + cmd,
+        [sys.executable, "-X", "utf8"] + cmd,
         capture_output=True,
         text=True,
         encoding="utf-8",
@@ -86,7 +86,7 @@ def main():
         run(label, ["verification/scripts/" + args[0]] + list(args[1:]), errors)
 
     # note-PDF presence/freshness (advisory; enforced by commit_watcher --build)
-    rp = subprocess.run([sys.executable, "verification/scripts/verify_note_pdfs.py", "--check"],
+    rp = subprocess.run([sys.executable, "-X", "utf8", "verification/scripts/verify_note_pdfs.py", "--check"],
                         capture_output=True, text=True, encoding="utf-8",
                         errors="replace", cwd=REPO)
     npass = "NOTE-PDF: PASS" in rp.stdout
@@ -174,7 +174,7 @@ def main():
 
     # 9. Windows path-length budget
     path_gate = subprocess.run(
-        [sys.executable, "verification/scripts/check_path_lengths.py", "--max", "256"],
+        [sys.executable, "-X", "utf8", "verification/scripts/check_path_lengths.py", "--max", "256"],
         capture_output=True, text=True, encoding="utf-8", errors="replace",
         cwd=REPO,
     )
@@ -189,7 +189,7 @@ def main():
         for e in errors:
             print(f"  ERR {e}")
         return 1
-    print("RELEASE-CHECK: PASS — safe to push the public surface")
+    print("RELEASE-CHECK: PASS -- safe to push the public surface")
     return 0
 
 
