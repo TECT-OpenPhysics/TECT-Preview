@@ -2240,6 +2240,47 @@
       "task_id": "T-058",
       "title": "Correction of R-189 global exploration sentinel in EXP-000943",
       "verdict": "advanced"
+    },
+    {
+      "boundary": "C1-LORENTZ-KIN remains conditional and H-SUPPRESSION-DISCHARGE remains OPEN. No unconditional Lorentz result, BCC premise, C6 signature result, physical-empty comparison, Sector-A, Pre-A, removal, continuum, or new negative result is asserted.",
+      "claim_ids": [
+        "C1-LORENTZ-KIN"
+      ],
+      "decision_reason": "Promoting this source would convert a self-identified failed and superseded historical attempt into a current proof and would skip the registered owner obligations for the full Hessian, Wetterich projection, and negative-eigenvalue derivation.",
+      "evidence_refs": [
+        "archive/legacy/references/Docs/math/TECT-Math_IR_Bound-v4-thm-v4-2-H-suppression-closure.tex.txt#AUDIT-STATUS",
+        "archive/legacy/references/Docs/math/TECT-Math_IR_Bound-v4-thm-v4-2-H-suppression-closure.tex.txt#Parseval-tail",
+        "archive/legacy/references/Docs/math/TECT-Math_IR_Bound-v4-thm-v4-2-final-formalization.tex.txt#status",
+        "archive/legacy/registry/records/LEG-T055-TRUNCATED-OCTAHEDRON-BZ-001.json#contradictions",
+        "claims/GATES.md#h-suppression-discharge"
+      ],
+      "finding": "The selected note is explicitly classified as a superseded technical attempt and not a theorem source. Its abstract claims an unconditional tail closure, but its body contains an algebraically impossible negative L2 Parseval bound and its conclusion falls back to PC-3A, which also does not close the tail. The successor final formalization labels the anisotropy theorem proved only subject to the explicit H-suppression hypothesis. No current full Hessian plus Wetterich projection plus negative-eigenvalue derivation or independently checked production artifact is supplied. The note therefore cannot discharge H-SUPPRESSION-DISCHARGE; only method-level BZ/Parseval ideas remain reusable.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": []
+      },
+      "gate_ids": [
+        "H-SUPPRESSION-DISCHARGE"
+      ],
+      "id": "EXP-000945",
+      "method": [
+        "Read the selected H-suppression note's audit-status header and inspect its Parseval tail argument for an unconditional closure.",
+        "Check whether the note supplies a full TECT Hessian, Wetterich projection, negative-eigenvalue derivation, and an executable independent artifact for the current owner.",
+        "Cross-check the successor final formalization and the current legacy registry record for the exact status of the H-suppression hypothesis.",
+        "Separate reusable BZ/Parseval method ideas from any claim that the H-suppression gate, C1, C6, or a physical conclusion is discharged."
+      ],
+      "next_action": "Require a current hash-pinned full TECT-Hessian, explicit Wetterich projection, and negative-eigenvalue derivation with independent executable checks; otherwise retain H-suppression as an explicit hypothesis and keep the legacy route at method-only scope.",
+      "provenance": "contemporaneous",
+      "question": "Does the selected Math_IR_Bound H-suppression closure note provide an admissible proof of the H-SUPPRESSION-DISCHARGE gate?",
+      "recorded_at": "2026-08-23T00:46:00Z",
+      "recorded_by": "Codex",
+      "related": [],
+      "reviewed_on": "2026-08-23",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-057",
+      "title": "Selected H-suppression closure note is superseded and cannot discharge C1",
+      "verdict": "inconclusive"
     }
   ],
   "kind": "proof_explorations",
