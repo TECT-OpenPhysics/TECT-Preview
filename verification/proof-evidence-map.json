@@ -58,7 +58,7 @@
     "claims/F2-BARYOGENESIS/status.json": "de39e5132355707dd49d4da4ef2da7b64d5f69802609c2f867d658114c3523a4",
     "claims/F3-INFLATION-CMB/status.json": "04b783d1f49f0ee453d4ccc3eff93cc7bca3c084dcdcdd036a023dd76d62331c",
     "claims/GATES.md": "8b2e79e8570fb392bb475ddad551ce551ce8775b22d180fbf547ca4b440c2c3f",
-    "explorations/log.jsonl": "89a0c1f1ca40baddbdd6a1dc8eed10cf24749fe98960f5344da7c34c50c63fe3",
+    "explorations/log.jsonl": "f2f57aa0626227fb58654623a9c5463a78cce0eb3f604b1b4b058fe5bc9c2187",
     "negative-results/registry.md": "546bbd65ee917eae68a9b1a3564431d3fcea72804d4aea79e061e002e097de0e",
     "theory/proof-evidence/interface-pointers.json": "59d3135869897d1c77a62dcbf9a513110136dba21dd43d23ffa4abbc9307992f",
     "todo/todo.json": "a1660a293e0e34d6c252a122fe48444446a012863fd9206fe2581fa91676978c"
@@ -70,9 +70,9 @@
     "interface_pointers": 1,
     "reusable_results": 193,
     "negative_records": 372,
-    "proof_explorations": 911,
+    "proof_explorations": 912,
     "exploration_verdicts": {
-      "advanced": 564,
+      "advanced": 565,
       "failed": 236,
       "inconclusive": 80,
       "parked": 31
@@ -6561,9 +6561,10 @@
           "EXP-000908",
           "EXP-000909",
           "EXP-000910",
-          "EXP-000911"
+          "EXP-000911",
+          "EXP-000912"
         ],
-        "latest_exploration_id": "EXP-000911",
+        "latest_exploration_id": "EXP-000912",
         "accepted_event_ids": [
           "20260721-close-t-049-negatively-with-the-a13-relative-ph",
           "20260721-complete-a13-gate-record-synchronization-and-re",
@@ -73275,6 +73276,59 @@
       "task_id": "T-058",
       "title": "Post-R-193 bounded search for a newly supplied production heat/root map",
       "verdict": "parked"
+    },
+    {
+      "boundary": "R-192 remains a T0 claim-nonbearing finite integration failure at heat_root_incidence. R-193 remains the static-owner non-identifiability witness. No production heat/root generator, filtration, raw-current spatial map, q-ledger, complete owner, A13/T-050, OVERLAP_src, Nelson, measure, Sector-A, Pre-A, physical-empty, removal or continuum result follows.",
+      "claim_ids": [
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
+      ],
+      "decision_reason": "Historical readers must remain reproducible under append-only growth. Treating later records as a theorem failure would block legitimate release checks and obscure the actual mathematical boundary. The reader correction changes lifecycle compatibility only; it does not supply the missing production map or advance A13.",
+      "evidence_refs": [
+        "strategy/pre-a13-t058-bounded-complete-production-cylinder-manifest.json#formal_integration",
+        "codes/foundations/lean_a13_t058_bounded_complete_production_cylinder_verify.py#catalog-count",
+        "RESULTS-LEDGER.md#r-192",
+        "RESULTS-LEDGER.md#r-193",
+        "explorations/log.jsonl#exp-000911"
+      ],
+      "finding": "The pre-repair R-192 reader failed only because its historical catalog sentinel 4486 and result sentinel 192 were exact equalities while the current append-only surfaces contain 4496 catalog artefacts and 193 reusable results after R-193 and EXP-000911. The finite owner-order trial still passes 58/58 and stops at the same first missing heat/root production map. The repair accepts current counts only when they are greater than or equal to the historical sentinels; it does not relax any finite algebra, authority hash, child-lane, gate, event, or no-overclaim check.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": [
+          "R-192",
+          "R-193"
+        ]
+      },
+      "gate_ids": [
+        "A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE",
+        "A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION"
+      ],
+      "id": "EXP-000912",
+      "method": [
+        "Run the pinned R-192 integrated verifier against the current generated surfaces and record the first failure.",
+        "Separate a stale exact global-count assertion from the finite owner-order, hash, child-lane, exploration/event, and scope assertions.",
+        "Replace only the historical reader's global count equality with monotone append-only lower bounds, keep the original EXP-000909/R-192 authority hashes and finite verdict, and rerun the reader plus the Lean metadata check."
+      ],
+      "next_action": "Keep both A13 gates open and require a newly supplied hash-pinned production generator/filtration/raw-current derivative/projector and once-owned q-ledger before rerunning the R-192 owner order for a substantive proof attempt.",
+      "provenance": "contemporaneous",
+      "question": "Does the historical R-192 integrated reader still verify its finite audit after append-only R-193 and later public-surface growth?",
+      "recorded_at": "2026-08-22T03:20:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-000909",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-000911",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-08-22",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-058",
+      "title": "Repair the R-192 historical reader for append-only catalog growth",
+      "verdict": "advanced"
     }
   ],
   "inconclusive_or_parked_exploration_ids": [
@@ -111280,6 +111334,12 @@
         "id": "exploration:EXP-000911",
         "kind": "proof_exploration",
         "label": "Post-R-193 bounded search for a newly supplied production heat/root map",
+        "authority": "explorations/log.jsonl"
+      },
+      {
+        "id": "exploration:EXP-000912",
+        "kind": "proof_exploration",
+        "label": "Repair the R-192 historical reader for append-only catalog growth",
         "authority": "explorations/log.jsonl"
       },
       {
@@ -169729,6 +169789,54 @@
         "relation": "records_task",
         "to": "task:T-058",
         "basis": "structured_task_id"
+      },
+      {
+        "from": "exploration:EXP-000912",
+        "relation": "assesses",
+        "to": "claim:A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "basis": "structured_claim_id"
+      },
+      {
+        "from": "exploration:EXP-000912",
+        "relation": "assesses_gate",
+        "to": "gate:A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE",
+        "basis": "structured_gate_id"
+      },
+      {
+        "from": "exploration:EXP-000912",
+        "relation": "assesses_gate",
+        "to": "gate:A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION",
+        "basis": "structured_gate_id"
+      },
+      {
+        "from": "exploration:EXP-000912",
+        "relation": "continues",
+        "to": "exploration:EXP-000909",
+        "basis": "structured_related_ref"
+      },
+      {
+        "from": "exploration:EXP-000912",
+        "relation": "continues",
+        "to": "exploration:EXP-000911",
+        "basis": "structured_related_ref"
+      },
+      {
+        "from": "exploration:EXP-000912",
+        "relation": "records_task",
+        "to": "task:T-058",
+        "basis": "structured_task_id"
+      },
+      {
+        "from": "exploration:EXP-000912",
+        "relation": "references_result",
+        "to": "result:R-192",
+        "basis": "structured_formal_ref"
+      },
+      {
+        "from": "exploration:EXP-000912",
+        "relation": "references_result",
+        "to": "result:R-193",
+        "basis": "structured_formal_ref"
       },
       {
         "from": "negative:AUDIT-2026-06-08-scscope-lift-overclaim",

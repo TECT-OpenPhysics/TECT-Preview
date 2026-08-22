@@ -158,9 +158,16 @@ def main() -> int:
     check("result section", "### R-192 -- Bounded complete finite production-cylinder integration trial" in results_text, "R-192" in results_text, True)
     check("result boundary", all(token in results_text for token in ("first missing production map", "No R-192 PDF", "A13 gates remain open")), True, "scope tokens")
     summary = json.loads((REPO / "verification" / "catalog-summary.json").read_text(encoding="utf-8"))
-    check("catalog count", summary.get("total") == expected["catalog"] or (summary.get("total") == expected["catalog"] - 1 and not args.output.exists()), summary.get("total"), expected["catalog"])
+    # This verifier is a historical reader for EXP-000909.  Later append-only
+    # packages legitimately increase the generated catalog and result counts;
+    # requiring the old global total would turn reader drift into a false
+    # theorem failure.  Keep the lower-bound sentinel so a stale or truncated
+    # current surface still fails, while allowing monotone post-R-192 growth.
+    current_catalog = summary.get("total")
+    check("catalog count (append-only compatible)", isinstance(current_catalog, int) and current_catalog >= expected["catalog"], current_catalog, f">={expected['catalog']}")
     proof_map = json.loads((REPO / "verification" / "proof-evidence-map.json").read_text(encoding="utf-8"))
-    check("result count", len(proof_map.get("reusable_results", [])) == expected["results"], len(proof_map.get("reusable_results", [])), expected["results"])
+    current_results = len(proof_map.get("reusable_results", []))
+    check("result count (append-only compatible)", current_results >= expected["results"], current_results, f">={expected['results']}")
     mutations = {
         "structural_not_production": manifest["registered_inputs"]["slot_audit"][0]["mapped"] is False,
         "complement_not_full": manifest["registered_inputs"]["slot_audit"][2]["mapped"] is False,
