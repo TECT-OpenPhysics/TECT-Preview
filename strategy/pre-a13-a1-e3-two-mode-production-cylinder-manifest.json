@@ -36,9 +36,15 @@
     }
   },
   "registered_inputs": {
-    "mode_indices": [1, 2],
+    "mode_indices": [
+      1,
+      2
+    ],
     "polarization": "e3=(0,0,1)",
-    "pi_coarse_interval": {"lower": "6283/2000", "upper": "22/7"},
+    "pi_coarse_interval": {
+      "lower": "6283/2000",
+      "upper": "22/7"
+    },
     "q_lower_target": "1/10",
     "machin_terms": 32,
     "backend_scope": "F_ref normalized by volume; eta_shell=0; Class-II generators act on first two components and annihilate e3",
@@ -57,12 +63,30 @@
     "cylinderPoly_nonnegative"
   ],
   "files": {
-    "lean_entrypoint": {"path": "verification/lean/Tect/R189.lean", "sha256": "8c3ba286d758804ab027f215c4ef5d3436cc716708745721ae478eaf17b25f34"},
-    "primary": {"path": "verification/scripts/lean_a13_a1_e3_two_mode_production_cylinder.py", "sha256": "6757fac77eedf4fdc0fa52f548f10453d011e9eb1412c180e5f0578ae94c7af7"},
-    "independent": {"path": "codes/foundations/lean_a13_a1_e3_two_mode_production_cylinder_independent.py", "sha256": "2151b026ea6bc064c4b2382c7fb48e4b00fef19e3cf93da6e145ee76eb7c2a91"},
-    "verifier": {"path": "codes/foundations/lean_a13_a1_e3_two_mode_production_cylinder_verify.py", "sha256": "c17ff05e64ec9cf076d967cfd64ec4c304eab9c17c0a1b7048fa6218584fb232"},
-    "certificate": {"path": "strategy/pre-a13-a1-e3-two-mode-production-cylinder-certificate-260822.md", "sha256": "d7c9d7e59bd01e621bcfce3fb87715ed43bc04fbade0287d601cc6c63a0c6a1e"},
-    "note": {"path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/a13-a1-e3-two-mode-production-cylinder-260822.md", "sha256": "41cda8ab13d438710a0bffc42153c48a54334589de07418cccfe3832efa43ace"}
+    "lean_entrypoint": {
+      "path": "verification/lean/Tect/R189.lean",
+      "sha256": "8c3ba286d758804ab027f215c4ef5d3436cc716708745721ae478eaf17b25f34"
+    },
+    "primary": {
+      "path": "verification/scripts/lean_a13_a1_e3_two_mode_production_cylinder.py",
+      "sha256": "6757fac77eedf4fdc0fa52f548f10453d011e9eb1412c180e5f0578ae94c7af7"
+    },
+    "independent": {
+      "path": "codes/foundations/lean_a13_a1_e3_two_mode_production_cylinder_independent.py",
+      "sha256": "2151b026ea6bc064c4b2382c7fb48e4b00fef19e3cf93da6e145ee76eb7c2a91"
+    },
+    "verifier": {
+      "path": "codes/foundations/lean_a13_a1_e3_two_mode_production_cylinder_verify.py",
+      "sha256": "a6adb0846117b5483e19dac9dcd82f3695b0cb1d3f34b0d60fdf81b4dde3f3da"
+    },
+    "certificate": {
+      "path": "strategy/pre-a13-a1-e3-two-mode-production-cylinder-certificate-260822.md",
+      "sha256": "d7c9d7e59bd01e621bcfce3fb87715ed43bc04fbade0287d601cc6c63a0c6a1e"
+    },
+    "note": {
+      "path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/a13-a1-e3-two-mode-production-cylinder-260822.md",
+      "sha256": "41cda8ab13d438710a0bffc42153c48a54334589de07418cccfe3832efa43ace"
+    }
   },
   "hostile_mutations": [
     "change the A1 mass, Z or Y coefficient",
@@ -78,14 +102,54 @@
   "formal_integration": {
     "event_id": "20260822-r-189-a1-e3-two-mode-production-cylinder-positi",
     "event_ordinal": 685,
-    "event_claim_ids": ["A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION", "EXP-000904", "R-189"],
-    "event_keywords": ["A1-e3", "A13-open", "EXP-000904", "Lean", "R-189", "production-cylinder", "slice-positivity"],
-    "event_notes": ["strategy/pre-a13-a1-e3-two-mode-production-cylinder-manifest.json", "strategy/pre-a13-a1-e3-two-mode-production-cylinder-certificate-260822.md", "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/a13-a1-e3-two-mode-production-cylinder-260822.md", "RESULTS-LEDGER.md", "ROADMAP.md", "strategy/INDEX.md"],
-    "event_scripts": ["verification/scripts/lean_a13_a1_e3_two_mode_production_cylinder.py", "codes/foundations/lean_a13_a1_e3_two_mode_production_cylinder_independent.py", "codes/foundations/lean_a13_a1_e3_two_mode_production_cylinder_verify.py"],
-    "event_raw_tokens": ["EXP-000904", "R-189", "A1 e3", "production-cylinder", "Lean", "No R-189 PDF"],
-    "expected_counts": {"claims": 49, "results": 189, "gates": 206, "negatives": 372, "explorations": 904, "events": 685, "tasks": 57, "catalog": 4453},
+    "event_claim_ids": [
+      "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+      "EXP-000904",
+      "R-189"
+    ],
+    "event_keywords": [
+      "A1-e3",
+      "A13-open",
+      "EXP-000904",
+      "Lean",
+      "R-189",
+      "production-cylinder",
+      "slice-positivity"
+    ],
+    "event_notes": [
+      "strategy/pre-a13-a1-e3-two-mode-production-cylinder-manifest.json",
+      "strategy/pre-a13-a1-e3-two-mode-production-cylinder-certificate-260822.md",
+      "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/a13-a1-e3-two-mode-production-cylinder-260822.md",
+      "RESULTS-LEDGER.md",
+      "ROADMAP.md",
+      "strategy/INDEX.md"
+    ],
+    "event_scripts": [
+      "verification/scripts/lean_a13_a1_e3_two_mode_production_cylinder.py",
+      "codes/foundations/lean_a13_a1_e3_two_mode_production_cylinder_independent.py",
+      "codes/foundations/lean_a13_a1_e3_two_mode_production_cylinder_verify.py"
+    ],
+    "event_raw_tokens": [
+      "EXP-000904",
+      "R-189",
+      "A1 e3",
+      "production-cylinder",
+      "Lean",
+      "No R-189 PDF"
+    ],
+    "expected_counts": {
+      "claims": 49,
+      "results": 195,
+      "gates": 206,
+      "negatives": 372,
+      "explorations": 943,
+      "events": 697,
+      "tasks": 58,
+      "catalog": 4671
+    },
     "no_new_negative_ids": [],
-    "no_pdf": true
+    "no_pdf": true,
+    "exploration_ordinal": 904
   },
   "no_overclaim": "This T0 claim-nonbearing package is a finite A1 F_ref slice diagnostic with a Lean algebraic lower-bound theorem. It is not the complete A13 production owner and creates no gate closure, tier change, negative result, physical selection, continuum limit or PDF."
 }

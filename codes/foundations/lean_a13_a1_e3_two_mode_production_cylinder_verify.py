@@ -14,6 +14,11 @@ from pathlib import Path
 from typing import Any
 
 REPO = Path(__file__).resolve().parents[2]
+SCRIPTS_DIR = REPO / "verification" / "scripts"
+if str(SCRIPTS_DIR) not in sys.path:
+    sys.path.insert(0, str(SCRIPTS_DIR))
+from proof_evidence_map_io import load_map
+
 MANIFEST = REPO / "strategy" / "pre-a13-a1-e3-two-mode-production-cylinder-manifest.json"
 PRIMARY = REPO / "verification" / "scripts" / "lean_a13_a1_e3_two_mode_production_cylinder.py"
 INDEPENDENT = REPO / "codes" / "foundations" / "lean_a13_a1_e3_two_mode_production_cylinder_independent.py"
@@ -49,6 +54,7 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--output", type=Path, default=DEFAULT_OUTPUT)
     parser.add_argument("--no-store", action="store_true")
+    parser.add_argument("--staged", action="store_true")
     args = parser.parse_args()
     manifest = json.loads(MANIFEST.read_text(encoding="utf-8"))
     rows: list[dict[str, Any]] = []
@@ -76,7 +82,8 @@ def main() -> int:
     expected = manifest["formal_integration"]["expected_counts"]
     exploration_rows = [json.loads(line) for line in (REPO / "explorations" / "log.jsonl").read_text(encoding="utf-8").splitlines() if line.strip()]
     exp_matches = [(ordinal, row) for ordinal, row in enumerate(exploration_rows, start=1) if row.get("id") == manifest["exploration_id"]]
-    check("exploration unique", len(exp_matches) == 1 and exp_matches[0][0] == expected["explorations"], [(i, r.get("id")) for i, r in exp_matches], expected["explorations"])
+    exploration_ordinal = manifest["formal_integration"].get("exploration_ordinal", expected["explorations"])
+    check("exploration unique", len(exp_matches) == 1 and exp_matches[0][0] == exploration_ordinal, [(i, r.get("id")) for i, r in exp_matches], exploration_ordinal)
     event_rows = [json.loads(line) for line in (REPO / "changelog" / "log.jsonl").read_text(encoding="utf-8").splitlines() if line.strip()]
     event_matches = [(ordinal, row) for ordinal, row in enumerate(event_rows, start=1) if row.get("id") == manifest["formal_integration"]["event_id"]]
     check("event unique and ordinal", len(event_matches) == 1 and event_matches[0][0] == manifest["formal_integration"]["event_ordinal"], [(i, r.get("id")) for i, r in event_matches], manifest["formal_integration"]["event_ordinal"])
@@ -95,7 +102,7 @@ def main() -> int:
     summary = json.loads((REPO / "verification" / "catalog-summary.json").read_text(encoding="utf-8"))
     check("catalog count", summary.get("total") == expected["catalog"], summary.get("total"), expected["catalog"])
     check("claim count", summary.get("claim_count") == expected["claims"], summary.get("claim_count"), expected["claims"])
-    proof_map = json.loads((REPO / "verification" / "proof-evidence-map.json").read_text(encoding="utf-8"))
+    proof_map = load_map(REPO)
     result_count = len(proof_map.get("reusable_results", []))
     check("result count", result_count == expected["results"], result_count, expected["results"])
     with tempfile.TemporaryDirectory(prefix="r189-verify-") as directory:
