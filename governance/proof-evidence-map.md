@@ -9,10 +9,16 @@ creating a second truth store.
 ## 1. Generated surfaces
 
 - `theory/proof-evidence-map.md` is the human one-glance roadmap.
-- `verification/proof-evidence-map.json` is the complete machine projection.
+- `verification/proof-evidence-map.json` is the compact index for the complete
+  machine projection.
+- `verification/proof-evidence-map/*.json` are deterministic, hash-pinned
+  shards. `verification/scripts/proof_evidence_map_io.py` reconstructs the
+  complete logical map and verifies the round-trip hash.
 - `verification/scripts/build_proof_evidence_map.py` generates and checks both.
 
-The Markdown and JSON are generated files and must never be hand-edited.
+The Markdown, index, and shards are generated files and must never be
+hand-edited. The shard layout is serialization only; it does not create a
+second authority or alter any claim, result, gate, task, event, or exploration.
 
 ## 2. Authority boundary
 
@@ -144,6 +150,10 @@ This preserves the full record while minimizing repeated context loading.
   registry. The generated Markdown and JSON project only locator/version/
   revalidation/non-claim metadata; canonical claims, gates, and obligations
   remain owned by their projects.
+- 2026-08-22: v1.4 replaced the single large machine projection with a compact
+  index and deterministic shards. The loader verifies every shard hash and a
+  logical-map round-trip hash; the proof-evidence authority boundary is
+  unchanged.
 - 2026-08-10: v1.2 removed the materialized `lookup.event_by_id` copy. Event
   objects remain once in `accepted_events`; consumers build an in-memory ID map
   when needed. This removes an exact generated duplicate without changing any

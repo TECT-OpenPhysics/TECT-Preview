@@ -14888,7 +14888,7 @@ not lost merely because they predate the indexed negative-record schema.
 
 ## Recent accepted chronology
 
-The newest 20 entries are shown here. All accepted events, including their notes and scripts, are present in `verification/proof-evidence-map.json`; the append-only authority is `changelog/log.jsonl`.
+The newest 20 entries are shown here. All accepted events, including their notes and scripts, are present in the indexed/sharded machine projection under `verification/proof-evidence-map.json` and `verification/proof-evidence-map/`; the append-only authority is `changelog/log.jsonl`.
 
 | Date | Accepted change | Claims | Negative-result links |
 |---|---|---|---|

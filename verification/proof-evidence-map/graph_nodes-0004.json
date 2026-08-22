@@ -1,0 +1,608 @@
+{
+  "data": [
+    {
+      "authority": "CHANGELOG.md",
+      "id": "event:20260623-a2-t6-approved-b4-footer-fixed",
+      "kind": "accepted_event",
+      "label": "[A2-PDE-WELLPOSED T6 PROVED CONDITIONAL APPROVED (operator 2026-06-23; scalar/periodic/mu^2>0/gamma>0, 3/2<s<=2; footer 'F non-increasing for t>0'); B4 addendum v1.1 footer metadata conflict fixed (B4-MASS-GAP T5->T1 OPEN, successor T5) -> now canonical-freezable] - 2026-06-23"
+    },
+    {
+      "authority": "CHANGELOG.md",
+      "id": "event:20260623-a2-v1p1-operator-corrections-narrow-scope",
+      "kind": "accepted_event",
+      "label": "[A2-PDE-WELLPOSED v1.1: operator review corrections (lambda0>=mu^2>0 lower bound; Sobolev direction H^2 subset X^beta; s-range restricted to 3/2<s<=2; scope narrowed to scalar/periodic/mu^2>0/gamma>0). T6 PROVED CONDITIONAL re-submitted for sign-off] - 2026-06-23"
+    },
+    {
+      "authority": "CHANGELOG.md",
+      "id": "event:20260623-a3-correlators-t6-approved-bedrock-complete",
+      "kind": "accepted_event",
+      "label": "[A3-PERTURBATIVE-CONTINUUM-CORRELATORS: T3->T6 PROVED CONDITIONAL APPROVED by operator (spectral/Galerkin, scalar d=3, mu^2>0, gamma>0, order-by-order, FIXED external momenta). A-sector perturbative analytical bedrock COMPLETE (A2+A3-UV+A3-CORR all T6). Script docstring + lattice asserts relabelled Route-B audit] - 2026-06-23"
+    },
+    {
+      "authority": "CHANGELOG.md",
+      "id": "event:20260623-a3-correlators-v14-fixedp-spectral-script-align",
+      "kind": "accepted_event",
+      "label": "[A3-CORRELATORS v1.4: removed unjustified 'uniformly on compact p' (per-p DCT majorant only) -> fixed-external-momentum convergence; numerical count aligned to the spectral 8/8 check script. T3 (operator-authorised), re-submitted for T6 in the spectral/fixed-p scope] - 2026-06-23"
+    },
+    {
+      "authority": "CHANGELOG.md",
+      "id": "event:20260623-a3-graphwise-convergence-proved-t6",
+      "kind": "accepted_event",
+      "label": "[A3-PERTURBATIVE-CONTINUUM-CORRELATORS: gate A3-GRAPHWISE-CONVERGENCE PROVED (lattice regulator + dominated convergence; Lambda=pi/a ties a->0==Lambda->inf); T3->T6 PROVED CONDITIONAL. The perturbative analytical bedrock of Sector B (A2 + A3-UV + this) is complete] - 2026-06-23"
+    },
+    {
+      "authority": "CHANGELOG.md",
+      "id": "event:20260623-a3-graphwise-lattice-flaw-spectral-routeA",
+      "kind": "accepted_event",
+      "label": "[A3-GRAPHWISE-CONVERGENCE: operator REFUTED the v1.1/v1.2 finite-difference-lattice domination (periodic qhat folds internal-line momenta => the (1+|q|)^-4 bound fails on Umklapp/aliasing). Re-proved via the SPECTRAL/Galerkin regulator (Route A); genuine lattice (Reisz) = Route B open. A3-CORRELATORS stays T3; A3-UV T6 unchanged] - 2026-06-23"
+    },
+    {
+      "authority": "CHANGELOG.md",
+      "id": "event:20260623-a3-split-uv-t6-correlators-open",
+      "kind": "accepted_event",
+      "label": "[Operator review of A3: T6 NOT granted to the whole claim. A3-RENORMALISATION SPLIT -> A3-UV-SUPERRENORMALISABILITY (T6 PROVED CONDITIONAL, UV power counting + Weinberg, precise counterterm statement) + A3-PERTURBATIVE-CONTINUUM-CORRELATORS (T3 PROOF SKETCH; open gate A3-GRAPHWISE-CONVERGENCE: measure def + graphwise dominated-convergence lemma)] - 2026-06-23"
+    },
+    {
+      "authority": "CHANGELOG.md",
+      "id": "event:20260623-a3-superrenormalisability-t6-conditional",
+      "kind": "accepted_event",
+      "label": "[A3-RENORMALISATION foundation: the d=3 quartic-kernel scalar Brazovskii functional is SUPER-RENORMALISABLE (D=3-3V-I<0 for all connected diagrams; Weinberg => UV-finite, finite/empty counterterm set; continuum a->0 limit exists); verification 6/6; proposed T1->T6 PROVED CONDITIONAL (perturbative, scalar/d=3/mu^2>0), operator sign-off pending] - 2026-06-23"
+    },
+    {
+      "authority": "CHANGELOG.md",
+      "id": "event:20260623-a3uv-t6-approved-correlators-resubmit-corrections",
+      "kind": "accepted_event",
+      "label": "[Operator review enacted: A3-UV-SUPERRENORMALISABILITY T6 APPROVED; A3-PERTURBATIVE-CONTINUUM-CORRELATORS reverted T6->T3 (honouring the verdict) with gamma>0 measure hypothesis added + graphwise lemma proved, re-submitted for T6; 4 script/docstring corrections applied] - 2026-06-23"
+    },
+    {
+      "authority": "CHANGELOG.md",
+      "id": "event:20260623-adr0001-catalog-git-enumeration-incremental-cache",
+      "kind": "accepted_event",
+      "label": "[Infra/perf (ADR-0001): catalog + release_check enumerate the tracked artefact set via git (repo_inventory.real_files) with an incremental (size,mtime) hash cache -- build_catalog 45.7s->3.76s, regen_all now completes in-sandbox (4.1s), catalog cleaned 12354->1116 entries (8047 committed Drive-temp junk excluded); operator L0: git rm --cached the junk] - 2026-06-23"
+    },
+    {
+      "authority": "CHANGELOG.md",
+      "id": "event:20260623-changelog-truncation-resilience-l0-l3-status",
+      "kind": "accepted_event",
+      "label": "[Infra/robustness: changelog truncation resilience -- load() no longer crashes on a Drive-corrupted line; new verify (gate) + repair (git-HEAD recovery); atomic build-db (os.replace) + stale-temp cleanup; add refuses to persist over a corrupted log. Plus L0/L3 status: L0 junk still operator-pending, L3 assessed low-value post L0+L1+L2 and deferred] - 2026-06-23"
+    },
+    {
+      "authority": "CHANGELOG.md",
+      "id": "event:20260623-migration-batch3-b4-massgap-verbatim",
+      "kind": "accepted_event",
+      "label": "[Migration batch 3: B4-MASS-GAP evidence chain migrated verbatim -- Math01-v2 + Math56 constraint-cone cluster + Math82-AddG/G2/G3 continuation curve/audits + continuation-run provenance manifest; legacy: pointers resolved, B4 now migration-clean; Sector-B critical-path migration complete] - 2026-06-23 - 2026-06-23"
+    },
+    {
+      "authority": "CHANGELOG.md",
+      "id": "event:20260623-migration-batch4-b3-reframe-continuum",
+      "kind": "accepted_event",
+      "label": "[Migration batch 4: B3-BCC-STRUCT reframed onto corrected continuum basis after seeded evidence (Math194/Math383) found REFUTED by Math400 -- re-validation gate caught it; B3 re-pointed to B1 chain (Math431/434/436/428/432), Math194/383 archived SUPERSEDED, migration-clean, T4 unchanged] - 2026-06-23"
+    },
+    {
+      "authority": "CHANGELOG.md",
+      "id": "event:20260623-operator-review2-a2v12-b4-open-c6-blocked",
+      "kind": "accepted_event",
+      "label": "[Operator review #2 enacted: A2 v1.2 energy-domain global-existence patch (T6 re-submitted); B4-MASS-GAP -> T1 OPEN/UNESTABLISHED + successor B4-CONE-CURVATURE-ANCHOR (T5) + Delta_cone on the tangent cone; C6 BLOCKED (B3-RH does not supply a BCC-structure premise)] - 2026-06-23"
+    },
+    {
+      "authority": "CHANGELOG.md",
+      "id": "event:20260623-operator-verdicts-b3-retire-b4-massgap-scope",
+      "kind": "accepted_event",
+      "label": "[Operator verdicts enacted 2026-06-23: B3-BCC-STRUCT RETIRED/REFUTED (reframe rejected) -> successor card B3-RH-TESTED-STRUCTURE-RANKING (T4, B1 projection); B4 migration ACCEPTED + mass-gap scope corrected (Delta_cone gap-falsifier, m*^2 = curvature anchor not mass gap, full SHA-256 digests)] - 2026-06-23"
+    },
+    {
+      "authority": "CHANGELOG.md",
+      "id": "event:20260716-a1-manifest-historical-bundle-integrity-reconci",
+      "kind": "accepted_event",
+      "label": "[A1 manifest historical-bundle integrity reconciled and T-032 operator certification blocker recorded] - 2026-07-16"
+    },
+    {
+      "authority": "CHANGELOG.md",
+      "id": "event:20260716-a1-manifest-promotion-package-reconciliation-v1",
+      "kind": "accepted_event",
+      "label": "[A1 manifest promotion-package reconciliation: v1.6 artefact ownership, pre-certification bundle correction, and T5 packaging guardrails] - 2026-07-16"
+    },
+    {
+      "authority": "CHANGELOG.md",
+      "id": "event:20260716-add-a1-promotion-evidence-cli-and-preflight-pac",
+      "kind": "accepted_event",
+      "label": "[Add A1 promotion evidence CLI and preflight package] - 2026-07-16"
+    },
+    {
+      "authority": "CHANGELOG.md",
+      "id": "event:20260716-add-n-001-bcc-star-curvature-probe-2026-07-16",
+      "kind": "accepted_event",
+      "label": "[Add N-001 BCC-star curvature probe] - 2026-07-16"
+    },
+    {
+      "authority": "CHANGELOG.md",
+      "id": "event:20260716-align-a1-scoped-t5-note-and-bundle-2026-07-16",
+      "kind": "accepted_event",
+      "label": "[Align A1 scoped T5 note and bundle] - 2026-07-16"
+    },
+    {
+      "authority": "CHANGELOG.md",
+      "id": "event:20260716-complete-n32-bcc-star-curvature-full-star-probe",
+      "kind": "accepted_event",
+      "label": "[Complete N32 BCC-star curvature full-star probe] - 2026-07-16"
+    },
+    {
+      "authority": "CHANGELOG.md",
+      "id": "event:20260716-freeze-n-001-q1a-bcc-bridge-evidence-package-20",
+      "kind": "accepted_event",
+      "label": "[Freeze N-001 q1a BCC-bridge evidence package] - 2026-07-16"
+    },
+    {
+      "authority": "CHANGELOG.md",
+      "id": "event:20260716-promote-a1-production-kernel-manifest-to-scoped",
+      "kind": "accepted_event",
+      "label": "[Promote A1 production kernel manifest to scoped T5] - 2026-07-16"
+    },
+    {
+      "authority": "CHANGELOG.md",
+      "id": "event:20260716-record-n-001-homogeneous-condensate-experiment",
+      "kind": "accepted_event",
+      "label": "[Record N-001 homogeneous condensate experiment and scoped BCC-seed negative result] - 2026-07-16"
+    },
+    {
+      "authority": "CHANGELOG.md",
+      "id": "event:20260717-a3-full-production-discretization-promoted-to-t",
+      "kind": "accepted_event",
+      "label": "[A3 full-production discretization promoted to T6] - 2026-07-17"
+    },
+    {
+      "authority": "CHANGELOG.md",
+      "id": "event:20260717-add-a2-full-production-one-command-verifier-202",
+      "kind": "accepted_event",
+      "label": "[Add A2 full-production one-command verifier] - 2026-07-17"
+    },
+    {
+      "authority": "CHANGELOG.md",
+      "id": "event:20260717-add-p3-positive-time-solution-ball-bound-and-in",
+      "kind": "accepted_event",
+      "label": "[Add P3 positive-time solution-ball bound and integrated verifier] - 2026-07-17"
+    },
+    {
+      "authority": "CHANGELOG.md",
+      "id": "event:20260717-align-p0-sector-a-record-and-verification-basel",
+      "kind": "accepted_event",
+      "label": "[Align P0 Sector-A record and verification baseline] - 2026-07-17"
+    },
+    {
+      "authority": "CHANGELOG.md",
+      "id": "event:20260717-close-a1-production-functional-p1-at-scoped-t4",
+      "kind": "accepted_event",
+      "label": "[Close A1 production-functional P1 at scoped T4] - 2026-07-17"
+    },
+    {
+      "authority": "CHANGELOG.md",
+      "id": "event:20260717-close-a2-full-production-energy-continuation-au",
+      "kind": "accepted_event",
+      "label": "[Close A2 full-production energy-continuation audit] - 2026-07-17"
+    },
+    {
+      "authority": "CHANGELOG.md",
+      "id": "event:20260717-close-a2-full-production-nonlinear-mapping-audi",
+      "kind": "accepted_event",
+      "label": "[Close A2 full-production nonlinear mapping audit] - 2026-07-17"
+    },
+    {
+      "authority": "CHANGELOG.md",
+      "id": "event:20260717-close-a2-full-production-smoothing-audit-at-t4",
+      "kind": "accepted_event",
+      "label": "[Close A2 full-production smoothing audit at T4] - 2026-07-17"
+    },
+    {
+      "authority": "CHANGELOG.md",
+      "id": "event:20260717-close-p1-reference-functional-variational-scaff",
+      "kind": "accepted_event",
+      "label": "[Close P1 reference-functional variational scaffold] - 2026-07-17"
+    },
+    {
+      "authority": "CHANGELOG.md",
+      "id": "event:20260717-close-p3-explicit-energy-to-h2-solution-ball-in",
+      "kind": "accepted_event",
+      "label": "[Close P3 explicit energy-to-H2 solution-ball input] - 2026-07-17"
+    },
+    {
+      "authority": "CHANGELOG.md",
+      "id": "event:20260717-close-p3-finite-time-manufactured-and-cross-gri",
+      "kind": "accepted_event",
+      "label": "[Close P3 finite-time manufactured and cross-grid execution stage] - 2026-07-17"
+    },
+    {
+      "authority": "CHANGELOG.md",
+      "id": "event:20260717-close-p3-hessian-ritz-stage-and-cpu-precision-r",
+      "kind": "accepted_event",
+      "label": "[Close P3 Hessian/Ritz stage and CPU precision rows] - 2026-07-17"
+    },
+    {
+      "authority": "CHANGELOG.md",
+      "id": "event:20260717-close-p3-independent-analytic-continuum-quadrat",
+      "kind": "accepted_event",
+      "label": "[Close P3 independent analytic continuum-quadrature proxy] - 2026-07-17"
+    },
+    {
+      "authority": "CHANGELOG.md",
+      "id": "event:20260717-close-p3-recorded-cuda-hardware-precision-matri",
+      "kind": "accepted_event",
+      "label": "[Close P3 recorded CUDA hardware precision matrix] - 2026-07-17"
+    },
+    {
+      "authority": "CHANGELOG.md",
+      "id": "event:20260717-prepare-a2-full-production-t6-referee-package-2",
+      "kind": "accepted_event",
+      "label": "[Prepare A2 full-production T6 referee package] - 2026-07-17"
+    },
+    {
+      "authority": "CHANGELOG.md",
+      "id": "event:20260717-prepare-p3-t5-candidate-integrated-referee-pack",
+      "kind": "accepted_event",
+      "label": "[Prepare P3 T5 candidate integrated referee package] - 2026-07-17"
+    },
+    {
+      "authority": "CHANGELOG.md",
+      "id": "event:20260717-promote-a1-production-functional-backend-to-sco",
+      "kind": "accepted_event",
+      "label": "[Promote A1 production-functional backend to scoped T5] - 2026-07-17"
+    },
+    {
+      "authority": "CHANGELOG.md",
+      "id": "event:20260717-promote-a2-full-production-well-posedness-to-sc",
+      "kind": "accepted_event",
+      "label": "[Promote A2 full-production well-posedness to scoped T6] - 2026-07-17"
+    },
+    {
+      "authority": "CHANGELOG.md",
+      "id": "event:20260717-promote-p3-discretization-evidence-package-to-s",
+      "kind": "accepted_event",
+      "label": "[Promote P3 discretization evidence package to scoped T4] - 2026-07-17"
+    },
+    {
+      "authority": "CHANGELOG.md",
+      "id": "event:20260717-register-p1-production-functional-variational-a",
+      "kind": "accepted_event",
+      "label": "[Register P1 production-functional variational audit scaffold] - 2026-07-17"
+    },
+    {
+      "authority": "CHANGELOG.md",
+      "id": "event:20260717-register-p3-full-production-discretization-scaf",
+      "kind": "accepted_event",
+      "label": "[Register P3 full-production discretization scaffold and close spatial baseline] - 2026-07-17"
+    },
+    {
+      "authority": "CHANGELOG.md",
+      "id": "event:20260717-repair-and-re-enact-a3-full-production-discreti",
+      "kind": "accepted_event",
+      "label": "[Repair and re-enact A3 full-production discretization T6] - 2026-07-17"
+    },
+    {
+      "authority": "CHANGELOG.md",
+      "id": "event:20260717-start-a2-full-production-pde-proof-candidate-20",
+      "kind": "accepted_event",
+      "label": "[Start A2 full-production PDE proof candidate] - 2026-07-17"
+    },
+    {
+      "authority": "CHANGELOG.md",
+      "id": "event:20260718-p4-integrated-evidence-boundary-aligned-with-t5",
+      "kind": "accepted_event",
+      "label": "[P4 integrated evidence boundary aligned with T5 status] - 2026-07-18"
+    },
+    {
+      "authority": "CHANGELOG.md",
+      "id": "event:20260718-p4-scalar-constructive-measure-promoted-to-scop",
+      "kind": "accepted_event",
+      "label": "[P4 scalar constructive measure promoted to scoped T6] - 2026-07-18"
+    },
+    {
+      "authority": "CHANGELOG.md",
+      "id": "event:20260718-p4-scalar-spectral-constructive-measure-closed",
+      "kind": "accepted_event",
+      "label": "[P4 scalar spectral constructive measure closed at pinned T5 scope] - 2026-07-18"
+    },
+    {
+      "authority": "CHANGELOG.md",
+      "id": "event:20260718-p5-branch-aware-sector-a-synthesis-prepared-for",
+      "kind": "accepted_event",
+      "label": "[P5 branch-aware Sector-A synthesis prepared for operator review] - 2026-07-18"
+    },
+    {
+      "authority": "CHANGELOG.md",
+      "id": "event:20260719-a5-t6-conditional-composition-referee-candidate",
+      "kind": "accepted_event",
+      "label": "[A5 T6 conditional-composition referee candidate prepared] - 2026-07-19"
+    },
+    {
+      "authority": "CHANGELOG.md",
+      "id": "event:20260719-enact-operator-confirmed-a5-branch-aware-synthe",
+      "kind": "accepted_event",
+      "label": "[Enact operator-confirmed A5 branch-aware synthesis at scoped T5 and refresh dependency pins] - 2026-07-19"
+    },
+    {
+      "authority": "CHANGELOG.md",
+      "id": "event:20260719-prepare-integrated-a4-t6-referee-package-and-re",
+      "kind": "accepted_event",
+      "label": "[Prepare integrated A4 T6 referee package and repair verifier tier-boundary drift] - 2026-07-19"
+    },
+    {
+      "authority": "CHANGELOG.md",
+      "id": "event:20260719-publish-corrected-a4-scalar-constructive-t6-sup",
+      "kind": "accepted_event",
+      "label": "[Publish corrected A4 scalar constructive T6 support bundle] - 2026-07-19"
+    },
+    {
+      "authority": "CHANGELOG.md",
+      "id": "event:20260719-publish-the-a5-scoped-t5-sector-a-capstone-2026",
+      "kind": "accepted_event",
+      "label": "[Publish the A5 scoped T5 Sector-A capstone] - 2026-07-19"
+    },
+    {
+      "authority": "CHANGELOG.md",
+      "id": "event:20260719-repair-a4-q0-0-shell-boundary-defect-before-pub",
+      "kind": "accepted_event",
+      "label": "[Repair A4 q0=0 shell-boundary defect before publication] - 2026-07-19"
+    },
+    {
+      "authority": "CHANGELOG.md",
+      "id": "event:20260719-repair-a5-capstone-note-pdf-completeness-before",
+      "kind": "accepted_event",
+      "label": "[Repair A5 capstone note-PDF completeness before commit] - 2026-07-19"
+    },
+    {
+      "authority": "CHANGELOG.md",
+      "id": "event:20260719-replace-defective-historical-a3-shared-bundle-w",
+      "kind": "accepted_event",
+      "label": "[Replace defective historical A3 shared bundle with clean claim-level T6 support package] - 2026-07-19"
+    },
+    {
+      "authority": "CHANGELOG.md",
+      "id": "event:20260720-a5-branch-aware-t6-conditional-composition-theo",
+      "kind": "accepted_event",
+      "label": "[A5 branch-aware T6 conditional-composition theorem published] - 2026-07-20"
+    },
+    {
+      "authority": "CHANGELOG.md",
+      "id": "event:20260720-a7-adversarial-repair-closes-the-rational-coeff",
+      "kind": "accepted_event",
+      "label": "[A7 adversarial repair closes the rational-coefficient proof and verifier defects] - 2026-07-20"
+    },
+    {
+      "authority": "CHANGELOG.md",
+      "id": "event:20260720-a7-full-class-ii-renormalised-energy-composite",
+      "kind": "accepted_event",
+      "label": "[A7 full Class-II renormalised energy composite closed at scoped T5] - 2026-07-20"
+    },
+    {
+      "authority": "CHANGELOG.md",
+      "id": "event:20260720-a9-exact-smart-path-cancellation-and-frozen-she",
+      "kind": "accepted_event",
+      "label": "[A9 exact smart-path cancellation and frozen-shell theorem closed at scoped T5] - 2026-07-20"
+    },
+    {
+      "authority": "CHANGELOG.md",
+      "id": "event:20260720-align-sector-a-a1-a5-and-roadmap-records-2026-0",
+      "kind": "accepted_event",
+      "label": "[Align Sector-A A1, A5, and roadmap records] - 2026-07-20"
+    },
+    {
+      "authority": "CHANGELOG.md",
+      "id": "event:20260720-bound-a6-counterterm-conclusion-against-bare-co",
+      "kind": "accepted_event",
+      "label": "[Bound A6 counterterm conclusion against bare concentration] - 2026-07-20"
+    },
+    {
+      "authority": "CHANGELOG.md",
+      "id": "event:20260720-bundle-coverage-prefers-the-current-claim-tier",
+      "kind": "accepted_event",
+      "label": "[Bundle coverage prefers the current claim tier] - 2026-07-20"
+    },
+    {
+      "authority": "CHANGELOG.md",
+      "id": "event:20260720-close-the-decoupled-class-ii-nelson-theorem-and",
+      "kind": "accepted_event",
+      "label": "[Close the decoupled Class-II Nelson theorem and isolate self-coupling] - 2026-07-20"
+    },
+    {
+      "authority": "CHANGELOG.md",
+      "id": "event:20260720-close-the-fixed-floor-class-ii-k-current-and-sp",
+      "kind": "accepted_event",
+      "label": "[Close the fixed-floor Class-II K current and split counterterm from bare concentration] - 2026-07-20"
+    },
+    {
+      "authority": "CHANGELOG.md",
+      "id": "event:20260720-complete-the-a8-closure-record-after-empty-stdi",
+      "kind": "accepted_event",
+      "label": "[Complete the A8 closure record after empty-stdin body loss] - 2026-07-20"
+    },
+    {
+      "authority": "CHANGELOG.md",
+      "id": "event:20260720-prove-a6-derivative-class-ii-uv-power-counting",
+      "kind": "accepted_event",
+      "label": "[Prove A6 derivative Class-II UV power counting] - 2026-07-20"
+    },
+    {
+      "authority": "CHANGELOG.md",
+      "id": "event:20260721-a11-true-increment-determinant-closes-action-re",
+      "kind": "accepted_event",
+      "label": "[A11 true-increment determinant closes action recovery and refutes the past-energy upper form] - 2026-07-21"
+    },
+    {
+      "authority": "CHANGELOG.md",
+      "id": "event:20260721-a13-joint-source-potential-gate-reduced-to-one",
+      "kind": "accepted_event",
+      "label": "[A13 joint source-potential gate reduced to one-use full-action control] - 2026-07-21"
+    },
+    {
+      "authority": "CHANGELOG.md",
+      "id": "event:20260721-close-t-049-negatively-with-the-a13-relative-ph",
+      "kind": "accepted_event",
+      "label": "[Close T-049 negatively with the A13 relative-phase source obstruction] - 2026-07-21"
+    },
+    {
+      "authority": "CHANGELOG.md",
+      "id": "event:20260721-complete-a13-gate-record-synchronization-and-re",
+      "kind": "accepted_event",
+      "label": "[Complete A13 gate-record synchronization and register R-058] - 2026-07-21"
+    },
+    {
+      "authority": "CHANGELOG.md",
+      "id": "event:20260721-falsify-a7-infinitesimal-tilted-commutator-boun",
+      "kind": "accepted_event",
+      "label": "[Falsify A7 infinitesimal tilted-commutator bound and register frozen-energy-relative successor] - 2026-07-21"
+    },
+    {
+      "authority": "CHANGELOG.md",
+      "id": "event:20260721-prove-a10-relative-commutator-structural-reduct",
+      "kind": "accepted_event",
+      "label": "[Prove A10 relative-commutator structural reduction and correct the zero-frozen criterion] - 2026-07-21"
+    },
+    {
+      "authority": "CHANGELOG.md",
+      "id": "event:20260721-prove-the-sharp-cube-class-ii-source-square-ana",
+      "kind": "accepted_event",
+      "label": "[Prove the sharp-cube Class-II source-square analytic reduction] - 2026-07-21"
+    },
+    {
+      "authority": "CHANGELOG.md",
+      "id": "event:20260721-refute-the-separated-sharp-cube-source-budget-a",
+      "kind": "accepted_event",
+      "label": "[Refute the separated sharp-cube source budget and expose the Class-II gauge-null pivot] - 2026-07-21"
+    },
+    {
+      "authority": "CHANGELOG.md",
+      "id": "event:20260721-repair-a10-covariance-normalization-and-isolate",
+      "kind": "accepted_event",
+      "label": "[Repair A10 covariance normalization and isolate the multiscale action gate] - 2026-07-21"
+    },
+    {
+      "authority": "CHANGELOG.md",
+      "id": "event:20260722-bind-exact-a13-universal-q-result-and-no-go-ide",
+      "kind": "accepted_event",
+      "label": "[Bind exact A13 universal-Q result and no-go identifiers] - 2026-07-22"
+    },
+    {
+      "authority": "CHANGELOG.md",
+      "id": "event:20260722-classify-unreconstructible-a13-v1-0-joint-sourc",
+      "kind": "accepted_event",
+      "label": "[Classify unreconstructible A13 v1.0 joint-source runs as superseded provenance] - 2026-07-22"
+    },
+    {
+      "authority": "CHANGELOG.md",
+      "id": "event:20260722-close-a13-balanced-coefficient-jet-continuum-an",
+      "kind": "accepted_event",
+      "label": "[Close A13 balanced coefficient-jet continuum and exact A7 reconstruction] - 2026-07-22"
+    },
+    {
+      "authority": "CHANGELOG.md",
+      "id": "event:20260722-close-a13-universal-q-subgate-and-register-the",
+      "kind": "accepted_event",
+      "label": "[Close A13 universal-Q subgate and register the raw coefficient-jet no-go] - 2026-07-22"
+    },
+    {
+      "authority": "CHANGELOG.md",
+      "id": "event:20260722-correct-a13-cone-contraction-sign-and-total-tre",
+      "kind": "accepted_event",
+      "label": "[Correct A13 cone-contraction sign and total-tree boundary] - 2026-07-22"
+    },
+    {
+      "authority": "CHANGELOG.md",
+      "id": "event:20260722-reduce-a13-to-the-translated-current-model-lift",
+      "kind": "accepted_event",
+      "label": "[Reduce A13 to the translated-current model lift] - 2026-07-22"
+    },
+    {
+      "authority": "CHANGELOG.md",
+      "id": "event:20260722-rename-historical-bundle-paths-under-the-256-ch",
+      "kind": "accepted_event",
+      "label": "[Rename historical bundle paths under the 256-character budget] - 2026-07-22"
+    },
+    {
+      "authority": "CHANGELOG.md",
+      "id": "event:20260722-repair-a13-v1-1-and-close-the-direct-nonfrozen",
+      "kind": "accepted_event",
+      "label": "[Repair A13 v1.1 and close the direct nonfrozen Ramer route negatively] - 2026-07-22"
+    },
+    {
+      "authority": "CHANGELOG.md",
+      "id": "event:20260722-sector-a-enforce-five-family-theorem-map-and-cl",
+      "kind": "accepted_event",
+      "label": "[Sector A: enforce five-family theorem map and close A13 finite forest subproof] - 2026-07-22"
+    },
+    {
+      "authority": "CHANGELOG.md",
+      "id": "event:20260723-a13-backward-heat-martingale-and-square-coupled",
+      "kind": "accepted_event",
+      "label": "[A13 backward-heat martingale and square-coupled Cartan reduction] - 2026-07-23"
+    },
+    {
+      "authority": "CHANGELOG.md",
+      "id": "event:20260723-a13-npc-cone-and-martingale-injection-reduction",
+      "kind": "accepted_event",
+      "label": "[A13 NPC-cone and martingale-injection reduction] - 2026-07-23"
+    },
+    {
+      "authority": "CHANGELOG.md",
+      "id": "event:20260723-a13-strict-past-joint-score-and-heat-current-re",
+      "kind": "accepted_event",
+      "label": "[A13 strict-past joint-score and heat-current reduction] - 2026-07-23"
+    },
+    {
+      "authority": "CHANGELOG.md",
+      "id": "event:20260723-a13-strict-past-resolvent-signed-charge-reducti",
+      "kind": "accepted_event",
+      "label": "[A13 strict-past resolvent signed-charge reduction] - 2026-07-23"
+    },
+    {
+      "authority": "CHANGELOG.md",
+      "id": "event:20260723-a13-tip-safe-grouped-harvest-reduction-2026-07",
+      "kind": "accepted_event",
+      "label": "[A13 tip-safe grouped-harvest reduction] - 2026-07-23"
+    },
+    {
+      "authority": "CHANGELOG.md",
+      "id": "event:20260723-add-global-proof-evidence-map-and-coverage-gate",
+      "kind": "accepted_event",
+      "label": "[Add global proof evidence map and coverage gate] - 2026-07-23"
+    },
+    {
+      "authority": "CHANGELOG.md",
+      "id": "event:20260723-automate-verified-offsite-push-after-watcher-co",
+      "kind": "accepted_event",
+      "label": "[Automate verified offsite push after watcher commit] - 2026-07-23"
+    },
+    {
+      "authority": "CHANGELOG.md",
+      "id": "event:20260723-bind-a13-strict-past-result-identifier-2026-07",
+      "kind": "accepted_event",
+      "label": "[Bind A13 strict-past result identifier] - 2026-07-23"
+    },
+    {
+      "authority": "CHANGELOG.md",
+      "id": "event:20260723-harden-catalog-fallback-for-workspace-local-too",
+      "kind": "accepted_event",
+      "label": "[Harden catalog fallback for workspace-local toolchains] - 2026-07-23"
+    },
+    {
+      "authority": "CHANGELOG.md",
+      "id": "event:20260723-make-commit-watcher-resolve-repository-toolchai",
+      "kind": "accepted_event",
+      "label": "[Make commit watcher resolve repository toolchains] - 2026-07-23"
+    },
+    {
+      "authority": "CHANGELOG.md",
+      "id": "event:20260724-a13-r-074-predecessor-contract-normalization-20",
+      "kind": "accepted_event",
+      "label": "[A13 R-074 predecessor contract normalization] - 2026-07-24"
+    },
+    {
+      "authority": "CHANGELOG.md",
+      "id": "event:20260724-a13-r-074-resonant-phase-root-and-besov-reducti",
+      "kind": "accepted_event",
+      "label": "[A13 R-074 resonant phase-root and Besov reduction] - 2026-07-24"
+    }
+  ],
+  "kind": "graph_nodes",
+  "map_schema": "tect/proof-evidence-map/1.3",
+  "part": 4,
+  "schema": "tect/proof-evidence-map-shard/1.0"
+}

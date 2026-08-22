@@ -14,6 +14,7 @@ REPO = Path(__file__).resolve().parents[2]
 BUILDER = REPO / "verification" / "scripts" / "build_proof_evidence_map.py"
 MAP_JSON = REPO / "verification" / "proof-evidence-map.json"
 MAP_MARKDOWN = REPO / "theory" / "proof-evidence-map.md"
+MAP_IO = REPO / "verification" / "scripts" / "proof_evidence_map_io.py"
 
 
 def load_module(path: Path, name: str):
@@ -22,6 +23,11 @@ def load_module(path: Path, name: str):
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
     return module
+
+
+def load_machine_map():
+    module = load_module(MAP_IO, "proof_evidence_map_io_test")
+    return module.load_map(REPO)
 
 
 def test_proof_evidence_map_in_sync():
@@ -37,7 +43,7 @@ def test_proof_evidence_map_in_sync():
 
 
 def test_machine_map_has_complete_unique_coverage():
-    data = json.loads(MAP_JSON.read_text(encoding="utf-8"))
+    data = load_machine_map()
     coverage = data["coverage"]
     assert coverage["status_cards"] == len(data["claims"])
     assert coverage["reusable_results"] == len(data["reusable_results"])
@@ -81,8 +87,25 @@ def test_machine_map_has_complete_unique_coverage():
             assert (REPO / reference.split("#", 1)[0]).is_file()
 
 
+def test_machine_map_index_and_shards_are_small_and_lossless():
+    index = json.loads(MAP_JSON.read_text(encoding="utf-8"))
+    assert index["schema"] == "tect/proof-evidence-map-index/1.0"
+    assert index["shard_count"] == len(index["shards"])
+    assert MAP_JSON.stat().st_size < 1_000_000
+    shard_sizes = []
+    for entry in index["shards"]:
+        path = REPO / entry["path"]
+        assert path.is_file()
+        assert path.stat().st_size == entry["bytes"]
+        shard_sizes.append(path.stat().st_size)
+    assert shard_sizes
+    assert max(shard_sizes) < 5_000_000
+    data = load_machine_map()
+    assert index["coverage"]["proof_explorations"] == len(data["proof_explorations"])
+
+
 def test_graph_edges_and_authority_paths_resolve():
-    data = json.loads(MAP_JSON.read_text(encoding="utf-8"))
+    data = load_machine_map()
     node_ids = {node["id"] for node in data["graph"]["nodes"]}
     for node in data["graph"]["nodes"]:
         authority = node["authority"].split("#", 1)[0]
@@ -148,7 +171,7 @@ def test_markdown_local_link_targets_resolve():
 
 
 def test_associations_use_canonical_structured_sources_only():
-    data = json.loads(MAP_JSON.read_text(encoding="utf-8"))
+    data = load_machine_map()
     known = {claim["id"] for claim in data["claims"]}
     for event in data["accepted_events"]:
         assert set(event["claim_refs"]) <= set(event["claim_ids"])
@@ -210,7 +233,7 @@ def test_associations_use_canonical_structured_sources_only():
 
 
 def test_current_child_gate_and_honest_a13_boundary_are_visible():
-    data = json.loads(MAP_JSON.read_text(encoding="utf-8"))
+    data = load_machine_map()
     a13 = next(
         claim
         for claim in data["claims"]
@@ -305,7 +328,7 @@ def test_shared_gate_wiring_keeps_catalog_last():
 
 
 def test_exploration_projection_and_historical_boundary_are_visible():
-    data = json.loads(MAP_JSON.read_text(encoding="utf-8"))
+    data = load_machine_map()
     records = data["proof_explorations"]
     assert records
     canonical_records = [

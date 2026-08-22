@@ -12,7 +12,7 @@ Usage:
     python verification/scripts/build_proof_evidence_map.py --self-test
 """
 
-__version__ = "1.3.0"
+__version__ = "1.4.0"
 
 import argparse
 import hashlib
@@ -36,11 +36,17 @@ from evidence_paths import (
     unordered_root_note_paths,
 )
 from exploration import LOG as EXPLORATIONS, verify as verify_explorations
+from proof_evidence_map_io import (
+    INDEX_NAME,
+    SHARD_DIR_NAME,
+    build_index_and_shards,
+)
 
 
 REPO = Path(__file__).resolve().parents[2]
 OUT_MD = REPO / "theory" / "proof-evidence-map.md"
-OUT_JSON = REPO / "verification" / "proof-evidence-map.json"
+OUT_JSON = REPO / INDEX_NAME
+OUT_SHARD_DIR = REPO / SHARD_DIR_NAME
 RESULTS = REPO / "RESULTS-LEDGER.md"
 NEGATIVES = REPO / "negative-results" / "registry.md"
 CHANGELOG = REPO / "changelog" / "log.jsonl"
@@ -1794,7 +1800,8 @@ def render_markdown(data: dict[str, object]) -> str:
         "",
         f"The newest {min(RECENT_EVENT_DISPLAY_LIMIT, len(events))} entries are shown here. "
         "All accepted events, including their notes and scripts, are present in "
-        "`verification/proof-evidence-map.json`; the append-only authority is `changelog/log.jsonl`.",
+        "the indexed/sharded machine projection under `verification/proof-evidence-map.json` "
+        "and `verification/proof-evidence-map/`; the append-only authority is `changelog/log.jsonl`.",
         "",
         "| Date | Accepted change | Claims | Negative-result links |",
         "|---|---|---|---|",
@@ -1878,7 +1885,8 @@ def self_test() -> None:
 def build_outputs() -> tuple[str, str, dict[str, object]]:
     data = build_data()
     markdown = render_markdown(data)
-    machine = json.dumps(data, ensure_ascii=False, indent=2) + "\n"
+    index, _ = build_index_and_shards(data)
+    machine = json.dumps(index, ensure_ascii=False, indent=2) + "\n"
     return markdown, machine, data
 
 
@@ -1888,6 +1896,17 @@ def stale_targets(outputs: dict[Path, str]) -> list[Path]:
         for path, expected in outputs.items()
         if not path.exists() or path.read_text(encoding="utf-8") != expected
     ]
+
+
+def stale_shard_targets(shard_texts: dict[str, str]) -> tuple[list[Path], list[Path]]:
+    expected = {REPO / path for path in shard_texts}
+    stale = [
+        path
+        for path, text in ((REPO / name, body) for name, body in shard_texts.items())
+        if not path.exists() or path.read_text(encoding="utf-8") != text
+    ]
+    obsolete = [path for path in OUT_SHARD_DIR.glob("*.json") if path not in expected]
+    return stale, sorted(obsolete)
 
 
 def main() -> int:
@@ -1903,13 +1922,20 @@ def main() -> int:
 
     try:
         markdown, machine, data = build_outputs()
+        _, shard_texts = build_index_and_shards(data)
     except Exception as error:
         print(f"PROOF-EVIDENCE-MAP: FAIL: {error}")
         return 1
 
     outputs = {OUT_MD: markdown, OUT_JSON: machine}
+    _, shard_texts = build_index_and_shards(data)
+    outputs.update({REPO / path: text for path, text in shard_texts.items()})
     if args.check:
         stale = stale_targets(outputs)
+        shard_stale, obsolete = stale_shard_targets(shard_texts)
+        stale = sorted(set(stale + shard_stale))
+        if obsolete:
+            stale.extend(obsolete)
         if stale:
             print(f"PROOF-EVIDENCE-MAP CHECK: FAIL ({len(stale)} stale)")
             for path in stale:
@@ -1930,10 +1956,14 @@ def main() -> int:
 
     for path, text in outputs.items():
         atomic_write(path, text)
+    _, obsolete = stale_shard_targets(shard_texts)
+    for path in obsolete:
+        path.unlink()
     coverage = data["coverage"]
     print(
         "PROOF-EVIDENCE-MAP: wrote theory/proof-evidence-map.md + "
-        "verification/proof-evidence-map.json "
+        "verification/proof-evidence-map.json index + "
+        f"{len(shard_texts)} proof-evidence shards "
         f"({coverage['status_cards']} status cards; "
         f"{coverage['reusable_results']} results; "
         f"{coverage['negative_records']} negative records; "
