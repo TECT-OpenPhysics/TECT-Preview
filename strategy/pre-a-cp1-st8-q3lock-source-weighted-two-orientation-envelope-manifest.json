@@ -1,0 +1,87 @@
+{
+  "schema": "tect/pre-a-cp1-st8-q3lock-source-weighted-two-orientation-envelope/1.0",
+  "exploration_id": "EXP-001030",
+  "prior_exploration_id": "EXP-001029",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "tier": "T0",
+  "claim_bearing": false,
+  "title": "Source-weighted analytic envelope and explicit two-orientation branch factor",
+  "question": "Can a declared degree-five source weight absorb the onsite-dressed response while a symmetric two-orientation finite-step recurrence remains algebraically volume-independent?",
+  "model": {
+    "source_weight": "w_5(a)=(1+|a|)^5",
+    "response": "P_a(q,r)=cG a^5/2-2cGq a^4+3cGq^2 a^3+(-2cGq^3+2c^2r)a^2",
+    "coefficient_bound": "|P_a(q,r)| <= (sum_k |p_k(q,r)|) w_5(a) for every integer degree k<=5 and every sampled common-core point",
+    "two_orientation_step": "M_{n+1}=(1+C delta)M_n+J delta M_n^{(+)}+J delta M_n^{(-)}",
+    "orientation_count": 2,
+    "scope": "finite coefficient and branch algebra only; the exact Q3 recurrence is not supplied"
+  },
+  "fixture": {
+    "g": "3/5",
+    "lambda": "2/7",
+    "c": "2/3",
+    "G": "51/35",
+    "leading_coefficient": "17/35",
+    "weight_degree": 5,
+    "C": "1",
+    "J": "1",
+    "delta": "1/5",
+    "steps": 6,
+    "sample_amplitudes": [0, 1, 2, 5, 10, 25],
+    "sample_points": [[0, 0], [1, 0], [0, 1], ["1/2", "1/3"], [-1, 2]]
+  },
+  "scoped_verdict": "The degree-five source weight gives a finite exact absorption envelope for the declared polynomial response, and the explicit two-orientation branch sum has factor 1+(C+2J) delta at every tested step. This is a usable algebraic interface for a future analytic/Frechet route, not the Q3 recurrence theorem itself.",
+  "open_after_test": [
+    "a canonical representation-independent analytic or Frechet seminorm",
+    "the actual Q3 onsite-plus-bond recurrence on the common core",
+    "all-bond lattice degree and both-orientation volume-uniform path coefficients",
+    "exhaustion Cauchy, common alpha, KMS, ground/GNS gap, continuum and Pre-A"
+  ],
+  "adversarial_review": [
+    {
+      "axis": "weight selection",
+      "check": "The degree-five weight is a declared candidate input, not a consequence of Q3 dynamics or a canonical topology.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "polynomial slice scope",
+      "check": "The coefficient identity is the leading scalar source slice; it is not an invariant full eight-component Q3 flow.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "orientation count",
+      "check": "The factor two counts the declared forward and reverse branches only; it is not the six-neighbour lattice degree.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "finite envelope to thermodynamic limit",
+      "check": "The branch factor is tested for finite steps and does not prove exhaustion Cauchy or a common alpha.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "Lean promotion",
+      "check": "R214 checks rational coefficient, weight-fixture and branch-factor arithmetic only.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "QFT-to-TECT promotion",
+      "check": "No heat_root_incidence field or A1/R-192 production owner is supplied.",
+      "disposition": "UPHELD"
+    }
+  ],
+  "scope": {
+    "closed": "Finite source-weight absorption and the explicit two-orientation branch algebra for the declared fixtures.",
+    "not_closed": "The actual Q3 recurrence, spatial first-passage decay, all-shape exhaustion, common alpha, KMS, ground/GNS gap, continuum, C6, Sector A, Pre-A and TECT production remain open.",
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "formal_integration": {
+    "lean_entry": "verification/lean/Tect/R214.lean",
+    "result_ids": [],
+    "negative_ids": [],
+    "changelog_event": null
+  },
+  "next_action": "Promote the degree-five weight from a coefficient fixture to a declared common-core seminorm, then prove the actual Q3 onsite and bond recurrence with all six lattice neighbours and both orientations before any QFT interface claim.",
+  "no_overclaim": "This package is a finite candidate-envelope checkpoint. It does not prove the exact Q3 dynamics, a thermodynamic QFT, C6, Sector A, Pre-A, TECT production, or a Clay result."
+}
