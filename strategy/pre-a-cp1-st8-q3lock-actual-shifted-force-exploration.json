@@ -1,0 +1,56 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001037",
+  "title": "Actual finite-Q3 shifted force one-step bound",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-FIRST-PASSAGE-BACKBONE-REAL-TIME-PRODUCT-AND-ENERGY-TAIL-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "prior_exploration_id": "EXP-001036",
+  "recorded_at": "2026-08-24T17:30:00Z",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-08-24",
+  "provenance": "contemporaneous",
+  "question": "Does the actual onsite cubic plus Q3-lock edge force and spatial linear force admit an exact source-shift coefficient bound uniform in finite volume?",
+  "method": [
+    "Expand the actual Q3 edge derivative after a two-endpoint source shift.",
+    "Group absolute coefficients by source degree and sum the three Q3 neighbours at each species.",
+    "Add the six-neighbour spatial linear shift and check every site/species in a side-2 finite lattice fixture with exact rational arithmetic.",
+    "Compile Lean R219 for the coefficient table and scalar top-coefficient fixture."
+  ],
+  "finding": "The exact edge source-degree coefficient sums are 12, 12 and 4. The resulting actual finite-Q3 shifted-force bound passes every side-2 site/species fixture in both independent lanes, including the spatial linear term. The repeated Q3 history remains explicitly open.",
+  "verdict": "advanced",
+  "decision_reason": "This is a genuine one-step actual-Q3 polynomial estimate, not a supplied abstract recurrence. It is deliberately not promoted to locality or common-alpha because propagation through repeated commutators and Duhamel histories has not been derived.",
+  "adversarial_review": [
+    {"axis": "force convention", "check": "The Q3 edge derivative is expanded exactly and the spatial linear term is separately included.", "disposition": "UPHELD"},
+    {"axis": "global maxima", "check": "The finite bound uses global Q and S and does not establish a local common-core topology.", "disposition": "UPHELD"},
+    {"axis": "one-step versus history", "check": "No repeated source type, first-passage incidence or factorial resummation is claimed.", "disposition": "UPHELD"},
+    {"axis": "Lean promotion", "check": "R219 checks scalar coefficient arithmetic only.", "disposition": "UPHELD"},
+    {"axis": "QFT promotion", "check": "No thermodynamic dynamics, KMS, GNS gap, continuum, C6, Sector A or Pre-A result is claimed.", "disposition": "UPHELD"}
+  ],
+  "evidence_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-actual-shifted-force-manifest.json#model",
+    "strategy/pre-a-cp1-st8-q3lock-actual-shifted-force-certificate-260824.md#Finding",
+    "codes/foundations/pre_a_cp1_st8_q3lock_actual_shifted_force.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_actual_shifted_force_independent.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_actual_shifted_force_verify.py#main",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-24-primary-pre-a-cp1-st8-q3lock-actual-shifted-force/primary.json#assertions",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-24-primary-pre-a-cp1-st8-q3lock-actual-shifted-force/independent.json#assertions",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-24-primary-pre-a-cp1-st8-q3lock-actual-shifted-force/integrated.json#assertions",
+    "verification/lean/Tect/R219.lean#edge_shift_source_degree_one",
+    "verification/lean/registry.json#entrypoints"
+  ],
+  "formal_refs": {"events": [], "negatives": [], "results": []},
+  "formal_integration": {"events": [], "negatives": [], "results": [], "no_new_result": true, "no_new_negative": true, "no_pdf": true},
+  "qft_interface": {
+    "closed": "Actual finite-Q3 one-step shifted-force polynomial identity and bounded fixture.",
+    "open": "Repeated history, first-passage resummation, all-shape exhaustion, common alpha, KMS, gap, continuum, C6 and Pre-A remain open.",
+    "tect_boundary": "No heat_root_incidence or A1/R-192 TECT production owner is supplied by this one-step Q3 package."
+  },
+  "boundary": "T0 claim-nonbearing actual-Q3 one-step checkpoint. It does not prove Q3 dynamics, a thermodynamic QFT, C6, Sector A, Pre-A, TECT production or a Clay result.",
+  "next_action": "Propagate the actual shifted-force inequality through repeated commutators on a declared common core and determine whether an entire/source-weighted history closes; record the first obstruction if it fails."
+}

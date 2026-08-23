@@ -1,0 +1,80 @@
+{
+  "schema": "tect/pre-a-cp1-st8-q3lock-actual-shifted-force/1.0",
+  "exploration_id": "EXP-001037",
+  "prior_exploration_id": "EXP-001036",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "tier": "T0",
+  "claim_bearing": false,
+  "title": "Actual finite-Q3 shifted force one-step bound",
+  "question": "Does the actual onsite cubic plus Q3-lock edge force and spatial linear force admit an exact source-shift coefficient bound uniform in the finite volume?",
+  "model": {
+    "onsite_force": "g*q_(x,e)^3",
+    "q3_edge_force": "lambda*(a^3-(3/2)*a^2*b+a*b^2-(1/2)*b^3)",
+    "spatial_force": "-c*sum_(y~x) q_(y,e)",
+    "shifted_bound": "(3g+36lambda)Q^2S+(3g+36lambda)QS^2+(g+12lambda)S^3+6cS",
+    "Q_and_S": "Q=max |q_(x,e)| and S=max |source_(x,e)| over the finite field",
+    "scope": "exact one-step finite-Q3 polynomial estimate; repeated history remains open"
+  },
+  "fixture": {
+    "dimension": 3,
+    "side": 2,
+    "g": "3/5",
+    "lambda": "2/7",
+    "spatial_coupling": "1/2",
+    "edge_shift_l1_oracle": {"1": "12", "2": "12", "3": "4"}
+  },
+  "scoped_verdict": "The exact shifted Q3 edge-force coefficient table is (12,12,4) by source degree 1,2,3. Summing the three Q3 neighbours and the six-neighbour spatial linear term gives the declared one-step bound; both exact lanes verify it for the finite side-2 field fixture. This is an actual Q3 one-step estimate, not a repeated-history, thermodynamic, or QFT theorem.",
+  "open_after_test": [
+    "iterate the shifted force bound without losing the source type or energy topology",
+    "derive the actual first-passage history incidence and cancellations",
+    "prove two orientations and adjoints for every partial history",
+    "establish all-shape exhaustion Cauchy and common alpha",
+    "construct KMS, ground/GNS gap, continuum, C6 and Pre-A bridges"
+  ],
+  "adversarial_review": [
+    {
+      "axis": "force convention",
+      "check": "The Q3 edge derivative is expanded from the declared quartic lock; the spatial term is kept linear and separately bounded.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "global maxima",
+      "check": "The finite bound uses global Q and S; this does not create a decaying local source seminorm or a common-core domain theorem.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "one-step versus history",
+      "check": "The estimate is checked only for one shifted force evaluation; repeated commutator/Duhamel incidence and factorial resummation remain open.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "Lean promotion",
+      "check": "R219 checks coefficient sums and scalar fixtures only, not the full finite-lattice inequality or operator domain.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "QFT promotion",
+      "check": "No thermodynamic dynamics, KMS, GNS gap, continuum, C6, Sector A or Pre-A conclusion is supplied.",
+      "disposition": "UPHELD"
+    }
+  ],
+  "scope": {
+    "closed": "Actual finite-Q3 one-step shifted-force polynomial identity and a finite-volume-independent coefficient bound for the declared field fixture.",
+    "not_closed": "Repeated Q3 history, first-passage resummation, all-shape exhaustion, common alpha, KMS, gap, continuum, C6, Sector A and Pre-A remain open.",
+    "actual_q3_history_closed": false,
+    "all_shape_exhaustion_closed": false,
+    "common_alpha_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "formal_integration": {
+    "lean_entry": "verification/lean/Tect/R219.lean",
+    "result_ids": [],
+    "negative_ids": [],
+    "changelog_event": null
+  },
+  "next_action": "Promote this one-step bound to an actual repeated-history estimate on a declared common core; if the source type or energy topology cannot be propagated, record that obstruction rather than treating the one-step bound as locality.",
+  "no_overclaim": "This package proves only an exact finite-Q3 shifted-force one-step checkpoint. It does not prove Q3 dynamics, a thermodynamic QFT, C6, Sector A, Pre-A, TECT production or a Clay result."
+}
