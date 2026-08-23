@@ -1,0 +1,65 @@
+{
+  "schema": "tect/reference-only-tect-ym-hybrid-crosswalk/1.0",
+  "id": "PRE-A-TECT-YM-FINITE-COVARIANT-HYBRID-CROSSWALK",
+  "recorded_on": "2026-08-23",
+  "task_id": "T-054",
+  "claim_bearing": false,
+  "source_mode": "read_only_external",
+  "source_project": "E:\\Dev\\TECT-YM",
+  "snapshot_id": "SNAP-TY-20260823-002",
+  "promotion_status": "none",
+  "source_authorities": [
+    {
+      "path": "E:\\Dev\\TECT-YM\\proof\\19-finite-gauge-covariant-tect-matter-hybrid.md",
+      "sha256": "AF0319EB075DF3CE777CEE142CA6A80BF24CAADEB7ABB30FFE38F713785BC5AA"
+    },
+    {
+      "path": "E:\\Dev\\TECT-YM\\verification\\finite_gauge_covariant_tect_matter_hybrid.ps1",
+      "sha256": "9B1F1F4A2B79D5C6EA4D22F637732BB8F612F646A1E263173A1CFA07509B66E9"
+    },
+    {
+      "path": "E:\\Dev\\TECT-YM\\verification\\check_project.py",
+      "sha256": "BF967CF028B113FB8900D3FE4B54C3430AEBAE135A52BA1FE60C5AACD9A9E003"
+    },
+    {
+      "path": "E:\\Dev\\TECT-YM\\interfaces\\source-manifest.json",
+      "sha256": "B7243D3BC62777401E4762BE08AFEB2D595FA83D34D96BD5F8ACC87CC25DCA49"
+    }
+  ],
+  "external_checks": {
+    "project_check": "TECT-YM-CHECK PASS; source_mode=read_only_external; project_status=OPEN",
+    "hybrid_check": "TY-CLM-0018 FINITE HYBRID INTERFACE PASS; assertions=22",
+    "temporary_artifact": ".tmp/ty-clm-0018-readonly.json",
+    "no_external_mutation": true
+  },
+  "model": {
+    "gauge_group": "SU(2)",
+    "matter_representation": "C^2 direct-sum C, R(g)=g direct-sum 1",
+    "spatial_kernel": "finite covariant difference and shifted-square Delta_U^T",
+    "observable_layer": "adjoint current with spectral one-use q shell",
+    "transfer_layer": "finite positive symmetric Euclidean transfer on gauge-invariant physical subspace"
+  },
+  "crosswalk": {
+    "finite_gauge_covariance": true,
+    "finite_invariant_measure": true,
+    "finite_transfer_positivity": true,
+    "finite_spectral_q_shell": true,
+    "exact_original_a1_f_ref_recovery": false,
+    "mismatch_reasons": [
+      "uses a finite covariant difference rather than the hash-pinned A1 spectral backend",
+      "replaces the source fixed z0 lock by a commutant lock",
+      "does not preserve the source TECT nondegenerate family-mass convention"
+    ],
+    "r192_required_slots": {
+      "heat_root_incidence": false,
+      "root_filtration": false,
+      "conditional_replicas": false,
+      "raw_current_spatial_intertwiner": false,
+      "production_one_use_q_ledger": false
+    },
+    "r192_first_missing_slot": "heat_root_incidence",
+    "admission": "reference_only_finite_adjacent_hybrid"
+  },
+  "boundary": "This pointer records a read-only external finite gauge-matter interface. It does not copy source content, alter TECT claims, repair the A1 source mismatch, supply the canonical nonlinear production heat/root owner, close R-192/R-193, or establish A13, Sector-A, Pre-A, OS/Wightman, continuum, thermodynamic, pure-Yang-Mills, or mass-gap results.",
+  "next_action": "Use the external hybrid only as a design reference. A TECT successor must preserve exact hash-pinned A1 F_ref gauge-off recovery, define covariant mobility and heat-root filtration, and supply conditional replicas, raw-current spatial identity, and the once-owned q-ledger before any promotion."
+}
