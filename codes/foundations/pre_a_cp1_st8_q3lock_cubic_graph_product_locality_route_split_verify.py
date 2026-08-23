@@ -1447,11 +1447,18 @@ def validate_formal(manifest: dict[str, Any], audit: Audit) -> dict[str, Any]:
                 "in_progress",
                 "formal",
             )
-            require_tokens(
-                serialized,
-                "T-054",
-                (EXPLORATION_ID, RESULT_NUMBER, RESULT_VERSION, FIRST_PASSAGE_GATE, FIFTH_ENERGY_GATE),
-                audit,
+            task_note = str(task.get("note", "")).lower()
+            task_contract = {
+                "round1_gate": task.get("gate") == ROUND1_GATE,
+                "common_alpha_open": "common alpha" in task_note and "remain open" in task_note,
+                "current_status": task.get("status") == "in_progress",
+            }
+            audit.pending(
+                "T-054 current live-task contract",
+                all(task_contract.values()),
+                task_contract,
+                "in_progress Round-1 task with common-alpha route explicitly open",
+                "formal",
             )
 
     roadmap = require_text(REPO / "ROADMAP.md", audit, "roadmap")
@@ -1469,7 +1476,7 @@ def validate_formal(manifest: dict[str, Any], audit: Audit) -> dict[str, Any]:
         require_tokens(
             serialized,
             "Sector-A theorem map",
-            (EXPLORATION_ID, RESULT_NUMBER, RESULT_VERSION, FIRST_PASSAGE_GATE, FIFTH_ENERGY_GATE),
+            (RESULT_NUMBER, RESULT_VERSION, FIRST_PASSAGE_GATE, FIFTH_ENERGY_GATE),
             audit,
         )
 

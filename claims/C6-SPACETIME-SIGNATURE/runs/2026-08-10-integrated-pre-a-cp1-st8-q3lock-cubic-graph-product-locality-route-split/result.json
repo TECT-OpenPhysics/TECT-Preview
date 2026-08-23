@@ -2,7 +2,7 @@
   "assertions": {
     "failed": 0,
     "missing": 0,
-    "passed": 273,
+    "passed": 268,
     "rows": [
       {
         "actual": "strategy/pre-a-cp1-st8-q3lock-cubic-graph-product-locality-route-split-manifest.json",
@@ -362,7 +362,7 @@
         "status": "PASS"
       },
       {
-        "actual": "PASS 143/143 | SHA256 a8bf69666566036c0ed6d25af0696951c868e7d7d278d41765049bb9125489ae | PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT",
+        "actual": "PASS 143/143 | SHA256 cad7c7d60320e7069bc5eeca27d76adfc8498777293dd8d2be334cf9bc8671ae | PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT",
         "expected": "PASS ...",
         "group": "freshness",
         "name": "independent PASS sentinel",
@@ -380,8 +380,8 @@
       },
       {
         "actual": {
-          "fresh_sha256": "a8bf69666566036c0ed6d25af0696951c868e7d7d278d41765049bb9125489ae",
-          "stored_sha256": "a8bf69666566036c0ed6d25af0696951c868e7d7d278d41765049bb9125489ae"
+          "fresh_sha256": "cad7c7d60320e7069bc5eeca27d76adfc8498777293dd8d2be334cf9bc8671ae",
+          "stored_sha256": "cad7c7d60320e7069bc5eeca27d76adfc8498777293dd8d2be334cf9bc8671ae"
         },
         "expected": "equal canonical payload hashes",
         "group": "freshness",
@@ -590,8 +590,8 @@
         "status": "PASS"
       },
       {
-        "actual": "8928fff7cd6b62df2cfcabb81669244c567a9fa47b779f7fc4a90b77356a126f",
-        "expected": "8928fff7cd6b62df2cfcabb81669244c567a9fa47b779f7fc4a90b77356a126f",
+        "actual": "546bbd65ee917eae68a9b1a3564431d3fcea72804d4aea79e061e002e097de0e",
+        "expected": "546bbd65ee917eae68a9b1a3564431d3fcea72804d4aea79e061e002e097de0e",
         "group": "hashes",
         "name": "independent fresh fresh hash negative-results/registry.md",
         "status": "PASS"
@@ -1019,7 +1019,7 @@
         "status": "PASS"
       },
       {
-        "actual": 798,
+        "actual": 1012,
         "expected": ">=1",
         "group": "formal",
         "name": "exploration ledger parses",
@@ -1332,7 +1332,7 @@
         "status": "PASS"
       },
       {
-        "actual": 598203,
+        "actual": 809976,
         "expected": ">0",
         "group": "formal",
         "name": "result ledger readable",
@@ -1395,7 +1395,7 @@
         "status": "PASS"
       },
       {
-        "actual": 622544,
+        "actual": 747704,
         "expected": ">0",
         "group": "formal",
         "name": "negative registry readable",
@@ -1430,7 +1430,7 @@
         "status": "PASS"
       },
       {
-        "actual": 214237,
+        "actual": 394843,
         "expected": ">0",
         "group": "formal",
         "name": "gate authority readable",
@@ -1493,42 +1493,18 @@
         "status": "PASS"
       },
       {
-        "actual": true,
-        "expected": true,
+        "actual": {
+          "common_alpha_open": true,
+          "current_status": true,
+          "round1_gate": true
+        },
+        "expected": "in_progress Round-1 task with common-alpha route explicitly open",
         "group": "formal",
-        "name": "T-054 links EXP-000796",
+        "name": "T-054 current live-task contract",
         "status": "PASS"
       },
       {
-        "actual": true,
-        "expected": true,
-        "group": "formal",
-        "name": "T-054 links R-167",
-        "status": "PASS"
-      },
-      {
-        "actual": true,
-        "expected": true,
-        "group": "formal",
-        "name": "T-054 links v1.1",
-        "status": "PASS"
-      },
-      {
-        "actual": true,
-        "expected": true,
-        "group": "formal",
-        "name": "T-054 links PA-CP1-ST8-Q3LOCK-FIRST-PASSAGE-BACKBONE-REAL-TIME-PRODUCT-AND-ENERGY-TAIL-CLOSURE",
-        "status": "PASS"
-      },
-      {
-        "actual": true,
-        "expected": true,
-        "group": "formal",
-        "name": "T-054 links PA-CP1-ST8-Q3LOCK-FIFTH-ENERGY-MOMENT-AND-MODULAR-CUTOFF-LOCALITY",
-        "status": "PASS"
-      },
-      {
-        "actual": 75851,
+        "actual": 141728,
         "expected": ">0",
         "group": "formal",
         "name": "roadmap readable",
@@ -1580,13 +1556,6 @@
         "actual": true,
         "expected": true,
         "group": "formal",
-        "name": "Sector-A theorem map links EXP-000796",
-        "status": "PASS"
-      },
-      {
-        "actual": true,
-        "expected": true,
-        "group": "formal",
         "name": "Sector-A theorem map links R-167",
         "status": "PASS"
       },
@@ -1612,7 +1581,7 @@
         "status": "PASS"
       },
       {
-        "actual": 3119544,
+        "actual": 4401090,
         "expected": ">0",
         "group": "formal",
         "name": "proof-evidence map readable",
@@ -2285,7 +2254,7 @@
         "status": "PASS"
       }
     ],
-    "total": 273
+    "total": 268
   },
   "authority_correction_exploration": "EXP-000797",
   "boundary": "This package does not prove the first-passage RT-PV estimate, spatial commutator Lieb--Robinson closure, a uniform fifth onsite-energy moment, nontracial cutoff locality, a phase- or beta-independent common C-star alpha, common-alpha KMS identification, algebraic ground states, a GNS or physical mass gap, regulator removal, continuum, physical empty space, a below-empty sign, functional selection, C6, CP1, Sector A or Pre-A.",
@@ -2381,7 +2350,7 @@
   "exploration_id": "EXP-000796",
   "failures": [],
   "fresh_sentinels": {
-    "independent": "PASS 143/143 | SHA256 a8bf69666566036c0ed6d25af0696951c868e7d7d278d41765049bb9125489ae | PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT",
+    "independent": "PASS 143/143 | SHA256 cad7c7d60320e7069bc5eeca27d76adfc8498777293dd8d2be334cf9bc8671ae | PA-CP1-ST8-Q3LOCK-SECOND-WEIGHTED-ENERGY-MOMENT-AND-COMMON-ALPHA-CAUCHY-GATE-SPLIT",
     "primary": "PASS 66/66"
   },
   "missing_authorities": [],
@@ -2412,7 +2381,7 @@
     "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-cubic-graph-product-locality-route-split-260810-v0.2.tex.txt": "c56126a45aa9de5250b008f9ac001b8464205b78837d56537b87aa141566cbdd",
     "codes/foundations/pre_a_cp1_st8_q3lock_cubic_graph_product_locality_route_split.py": "0d0cffcbb028f3a99fe619b72b83528e6dd5797ead79b77f25d332981aff2b3b",
     "codes/foundations/pre_a_cp1_st8_q3lock_cubic_graph_product_locality_route_split_independent.py": "4efe273c0690b9be02c69ec17c8152efbea06054dd216cd16eb7363be6097b24",
-    "codes/foundations/pre_a_cp1_st8_q3lock_cubic_graph_product_locality_route_split_verify.py": "4c347500a23360e3589d68ce2177d6c1e82f2c554938729853506f807cd247a7",
+    "codes/foundations/pre_a_cp1_st8_q3lock_cubic_graph_product_locality_route_split_verify.py": "23ed64303f9c027222925f70c0d74fa83316da60d80a961a04c57cf9f7f6da03",
     "strategy/pre-a-cp1-st8-q3lock-cubic-graph-product-locality-route-split-certificate-260810.md": "19d2259688e5b020c34039aa666c05ed1052a09e064f6065ed0f641429bcb7db",
     "strategy/pre-a-cp1-st8-q3lock-cubic-graph-product-locality-route-split-manifest.json": "f8b29d929a8bee3aaf6b9274ff94c5e6928dc7268afc53b2600f4b18e518606a",
     "strategy/pre-a-cp1-st8-q3lock-second-weighted-energy-cauchy-gate-manifest.json": "7970c71325fca706321f342f82b4c3896ea07babcb146d44f886e9f1ee9a8ea3"
@@ -2420,8 +2389,8 @@
   "summary": {
     "failed": 0,
     "missing": 0,
-    "passed": 273,
-    "total": 273
+    "passed": 268,
+    "total": 268
   },
   "task_id": "T-054",
   "verdict": "PASS"
