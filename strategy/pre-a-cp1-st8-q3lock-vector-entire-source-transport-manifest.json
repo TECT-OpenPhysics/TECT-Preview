@@ -1,0 +1,82 @@
+{
+  "schema": "tect/pre-a-cp1-st8-q3lock-vector-entire-source-transport/1.0",
+  "exploration_id": "EXP-001035",
+  "prior_exploration_id": "EXP-001032",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "tier": "T0",
+  "claim_bearing": false,
+  "title": "Conditional vector entire-source type transport on a regular six-neighbour torus",
+  "question": "If a supplied source history obeys a linear six-neighbour transport recurrence, does the vector entire source weight acquire a volume-independent type update?",
+  "model": {
+    "graph": "finite three-dimensional periodic torus with side 3 and six-neighbour averaging P",
+    "transport": "M_delta = I + kappa*delta*P, with kappa >= 0 and delta > 0",
+    "source_functional": "S(a) = sum_x |a_x|^4",
+    "weight": "W_sigma(a) = exp(sigma*S(a))",
+    "type_update": "sigma_next = sigma*(1+kappa*delta)^4; after N steps sigma_N = sigma_0*product_k(1+kappa*delta_k)^4",
+    "conditional_reason": "P is an averaging contraction in l4 on the regular torus; the source recurrence itself is not derived here"
+  },
+  "fixture": {
+    "dimension": 3,
+    "side": 3,
+    "kappa": "1/5",
+    "total_time": "1",
+    "steps": 6,
+    "sigma_0": "1/5",
+    "sigma_upper_bound_oracle": "1/2"
+  },
+  "scoped_verdict": "For the declared regular-torus linear transport, exact rational vector fixtures satisfy the one-step and six-step l4 fourth-power bounds, and the entire-weight type update is sigma_6 = (1/5)*(31/30)^24 < 1/2. The type expression contains no site-count factor.",
+  "open_after_test": [
+    "derive the actual Q3 common-core operator recurrence",
+    "replace the regular periodic torus by all finite exhaustion shapes and both orientations",
+    "prove domain and continuity for the entire source seminorm",
+    "prove common alpha and exhaustion Cauchy",
+    "construct KMS, ground/GNS gap, continuum, C6 and Pre-A bridges"
+  ],
+  "adversarial_review": [
+    {
+      "axis": "recurrence input",
+      "check": "The matrix M_delta is supplied as a conditional interface; no Q3 commutator or Duhamel derivation is hidden in the script.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "graph class",
+      "check": "The contraction argument is for a regular periodic six-neighbour torus, not for open boxes or arbitrary exhaustion shapes.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "norm topology",
+      "check": "The finite exact checks use S(a)=sum |a_x|^4; they do not establish a representation-independent operator-domain theorem.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "Lean promotion",
+      "check": "R217 verifies the scalar rational type arithmetic and six-neighbour count, not the vector Jensen inequality or Q3 recurrence.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "QFT promotion",
+      "check": "No infinite-volume dynamics, KMS state, GNS sector, mass gap, continuum limit or TECT production owner is supplied.",
+      "disposition": "UPHELD"
+    }
+  ],
+  "scope": {
+    "closed": "Conditional l4 vector transport and entire-weight type update for the declared regular periodic six-neighbour model.",
+    "not_closed": "Actual Q3 history, all-shape/two-orientation volume uniformity, domain, exhaustion Cauchy, common alpha, KMS, gap, continuum, C6, Sector A and Pre-A remain open.",
+    "supplied_by_q3": false,
+    "actual_q3_history_closed": false,
+    "all_shape_exhaustion_closed": false,
+    "common_alpha_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "formal_integration": {
+    "lean_entry": "verification/lean/Tect/R217.lean",
+    "result_ids": [],
+    "negative_ids": [],
+    "changelog_event": null
+  },
+  "next_action": "Prove or refute the actual Q3 six-neighbour two-orientation recurrence on the common core; do not promote this conditional transport interface until that recurrence and all-shape exhaustion estimates are supplied.",
+  "no_overclaim": "This package is a conditional finite vector transport checkpoint. It does not prove Q3 dynamics, a thermodynamic QFT, C6, Sector A, Pre-A, TECT production or a Clay result."
+}

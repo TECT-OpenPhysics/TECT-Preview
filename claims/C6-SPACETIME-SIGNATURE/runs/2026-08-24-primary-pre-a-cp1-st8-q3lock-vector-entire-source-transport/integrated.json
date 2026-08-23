@@ -1,0 +1,291 @@
+{
+  "assertion_count": 26,
+  "assertions": [
+    {
+      "actual": [
+        "EXP-001035",
+        "T-054"
+      ],
+      "expected": "EXP-001035/T-054",
+      "name": "identity",
+      "pass": true
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "claim nonbearing",
+      "pass": true
+    },
+    {
+      "actual": {
+        "actual_q3_history_closed": false,
+        "all_shape_exhaustion_closed": false,
+        "closed": "Conditional l4 vector transport and entire-weight type update for the declared regular periodic six-neighbour model.",
+        "common_alpha_closed": false,
+        "no_new_negative_result": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "not_closed": "Actual Q3 history, all-shape/two-orientation volume uniformity, domain, exhaustion Cauchy, common alpha, KMS, gap, continuum, C6, Sector A and Pre-A remain open.",
+        "supplied_by_q3": false
+      },
+      "expected": false,
+      "name": "conditional model",
+      "pass": true
+    },
+    {
+      "actual": "sigma_next = sigma*(1+kappa*delta)^4; after N steps sigma_N = sigma_0*product_k(1+kappa*delta_k)^4",
+      "expected": "no site count",
+      "name": "type update has no site count",
+      "pass": true
+    },
+    {
+      "actual": [
+        "six_neighbour_count",
+        "one_step_type_factor",
+        "six_step_type_formula",
+        "six_step_type_bound",
+        "scalar_entire_weight_transport"
+      ],
+      "expected": "present",
+      "name": "Lean source",
+      "pass": true
+    },
+    {
+      "actual": [],
+      "expected": "none",
+      "name": "Lean forbidden",
+      "pass": true
+    },
+    {
+      "actual": "PRIMARY VECTOR-ENTIRE-SOURCE-TRANSPORT PASS 22/22\n",
+      "expected": "PASS",
+      "name": "primary child",
+      "pass": true
+    },
+    {
+      "actual": "INDEPENDENT VECTOR-ENTIRE-SOURCE-TRANSPORT PASS 15/15\n",
+      "expected": "PASS",
+      "name": "independent child",
+      "pass": true
+    },
+    {
+      "actual": [
+        22,
+        15
+      ],
+      "expected": ">0",
+      "name": "positive totals",
+      "pass": true
+    },
+    {
+      "actual": [
+        3,
+        3
+      ],
+      "expected": "equal",
+      "name": "lane agreement dimension",
+      "pass": true
+    },
+    {
+      "actual": [
+        3,
+        3
+      ],
+      "expected": "equal",
+      "name": "lane agreement side",
+      "pass": true
+    },
+    {
+      "actual": [
+        27,
+        27
+      ],
+      "expected": "equal",
+      "name": "lane agreement site_count",
+      "pass": true
+    },
+    {
+      "actual": [
+        6,
+        6
+      ],
+      "expected": "equal",
+      "name": "lane agreement neighbour_count",
+      "pass": true
+    },
+    {
+      "actual": [
+        "1/6",
+        "1/6"
+      ],
+      "expected": "equal",
+      "name": "lane agreement delta",
+      "pass": true
+    },
+    {
+      "actual": [
+        "31/30",
+        "31/30"
+      ],
+      "expected": "equal",
+      "name": "lane agreement one_step_factor",
+      "pass": true
+    },
+    {
+      "actual": [
+        "620412660965527688188300451573157121/282429536481000000000000000000000000",
+        "620412660965527688188300451573157121/282429536481000000000000000000000000"
+      ],
+      "expected": "equal",
+      "name": "lane agreement type_multiplier",
+      "pass": true
+    },
+    {
+      "actual": [
+        "1/5",
+        "1/5"
+      ],
+      "expected": "equal",
+      "name": "lane agreement sigma_0",
+      "pass": true
+    },
+    {
+      "actual": [
+        "620412660965527688188300451573157121/1412147682405000000000000000000000000",
+        "620412660965527688188300451573157121/1412147682405000000000000000000000000"
+      ],
+      "expected": "equal",
+      "name": "lane agreement sigma_steps",
+      "pass": true
+    },
+    {
+      "actual": [
+        "1/2",
+        "1/2"
+      ],
+      "expected": "equal",
+      "name": "lane agreement sigma_upper_bound_oracle",
+      "pass": true
+    },
+    {
+      "actual": [
+        true,
+        true
+      ],
+      "expected": "equal",
+      "name": "lane agreement conditional_vector_transport_closed",
+      "pass": true
+    },
+    {
+      "actual": [
+        false,
+        false
+      ],
+      "expected": "equal",
+      "name": "lane agreement actual_q3_history_closed",
+      "pass": true
+    },
+    {
+      "actual": [
+        false,
+        false
+      ],
+      "expected": "equal",
+      "name": "lane agreement all_shape_exhaustion_closed",
+      "pass": true
+    },
+    {
+      "actual": [
+        false,
+        false
+      ],
+      "expected": "equal",
+      "name": "lane agreement common_alpha_closed",
+      "pass": true
+    },
+    {
+      "actual": {
+        "actual_q3_history_closed": false,
+        "all_shape_exhaustion_closed": false,
+        "common_alpha_closed": false,
+        "conditional_vector_transport_closed": true,
+        "delta": "1/6",
+        "dimension": 3,
+        "neighbour_count": 6,
+        "one_step_factor": "31/30",
+        "side": 3,
+        "sigma_0": "1/5",
+        "sigma_steps": "620412660965527688188300451573157121/1412147682405000000000000000000000000",
+        "sigma_upper_bound_oracle": "1/2",
+        "site_count": 27,
+        "type_multiplier": "620412660965527688188300451573157121/282429536481000000000000000000000000"
+      },
+      "expected": true,
+      "name": "conditional result",
+      "pass": true
+    },
+    {
+      "actual": {
+        "actual_q3_history_closed": false,
+        "all_shape_exhaustion_closed": false,
+        "common_alpha_closed": false,
+        "conditional_vector_transport_closed": true,
+        "delta": "1/6",
+        "dimension": 3,
+        "neighbour_count": 6,
+        "one_step_factor": "31/30",
+        "side": 3,
+        "sigma_0": "1/5",
+        "sigma_steps": "620412660965527688188300451573157121/1412147682405000000000000000000000000",
+        "sigma_upper_bound_oracle": "1/2",
+        "site_count": 27,
+        "type_multiplier": "620412660965527688188300451573157121/282429536481000000000000000000000000"
+      },
+      "expected": false,
+      "name": "Q3 history remains open",
+      "pass": true
+    },
+    {
+      "actual": {
+        "command": "lake env lean Tect/R217.lean",
+        "output": "",
+        "returncode": 0,
+        "status": "PASS"
+      },
+      "expected": "PASS",
+      "name": "Lean compile",
+      "pass": true
+    }
+  ],
+  "audit_id": "PA-CP1-ST8-Q3LOCK-VECTOR-ENTIRE-SOURCE-TRANSPORT",
+  "boundary": {
+    "actual_q3_history_closed": false,
+    "all_shape_exhaustion_closed": false,
+    "closed": "Conditional l4 vector transport and entire-weight type update for the declared regular periodic six-neighbour model.",
+    "common_alpha_closed": false,
+    "no_new_negative_result": true,
+    "no_pdf": true,
+    "no_tier_change": true,
+    "not_closed": "Actual Q3 history, all-shape/two-orientation volume uniformity, domain, exhaustion Cauchy, common alpha, KMS, gap, continuum, C6, Sector A and Pre-A remain open.",
+    "supplied_by_q3": false
+  },
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "exploration_id": "EXP-001035",
+  "lean": {
+    "command": "lake env lean Tect/R217.lean",
+    "output": "",
+    "returncode": 0,
+    "status": "PASS"
+  },
+  "provenance": {
+    "independent_sha256": "393274366eccbbfa66fd3ede423fa7a90af8817fc679715ea4bf55bc091387fe",
+    "lean_sha256": "72f86dba69ac30c26622e52da30f45fd5b3284693de1ad51ccfdc31724b3445b",
+    "manifest_sha256": "f8c07118e3a8e64763eb1400f8ae844cf12ce83b8e66f9cc8729e32da7c8366c",
+    "primary_sha256": "4e3b7ad9b8f756a43d8a3d340e1c2259f8348571fe8d53215ab34e27b30eddfc"
+  },
+  "recorded_at": "2026-08-23T23:00:26.045526Z",
+  "run_kind": "integrated",
+  "schema": "tect/foundation-audit/1.0",
+  "task_id": "T-054",
+  "verdict": "PASS"
+}
