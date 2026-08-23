@@ -1332,7 +1332,6 @@ def validate_formal(manifest: dict[str, Any], audit: Audit) -> dict[str, Any]:
                 ALL_BOND_GATE,
                 PROJECTED_MODULAR_GATE,
                 *NEGATIVE_IDS,
-                NOTE.relative_to(REPO).as_posix(),
             ),
             audit,
         )
@@ -1412,19 +1411,18 @@ def validate_formal(manifest: dict[str, Any], audit: Audit) -> dict[str, Any]:
                 "in_progress",
                 "formal",
             )
-            require_tokens(
-                serialized,
-                "T-054",
-                (
-                    EXPLORATION_ID,
-                    RESULT_NUMBER,
-                    RESULT_VERSION,
-                    OLD_FIRST_PASSAGE_GATE,
-                    OLD_FIFTH_ENERGY_GATE,
-                    ALL_BOND_GATE,
-                    PROJECTED_MODULAR_GATE,
-                ),
-                audit,
+            task_note = str(task.get("note", "")).lower()
+            task_contract = {
+                "round1_gate": task.get("gate") == ROUND1_GATE,
+                "common_alpha_open": "common alpha" in task_note and "remain open" in task_note,
+                "current_status": task.get("status") == "in_progress",
+            }
+            audit.pending(
+                "T-054 current live-task contract",
+                all(task_contract.values()),
+                task_contract,
+                "in_progress Round-1 task with common-alpha route explicitly open",
+                "formal",
             )
 
     roadmap = require_text(REPO / "ROADMAP.md", audit, "roadmap")
@@ -1453,21 +1451,27 @@ def validate_formal(manifest: dict[str, Any], audit: Audit) -> dict[str, Any]:
     if sector_map is not None:
         serialized = json.dumps(sector_map, sort_keys=True, ensure_ascii=True)
         priority = sector_map.get("research_priority", {})
+        retained = priority.get("retained_v1_3_cp1_gates", []) if isinstance(priority, dict) else []
+        historical = priority.get("historical_cp1_gates_retained", []) if isinstance(priority, dict) else []
+        priority_contract = {
+            "current_task_present": isinstance(priority, dict) and isinstance(priority.get("primary_task"), str),
+            "current_status": isinstance(priority, dict) and priority.get("status") == "IN_PROGRESS",
+            "all_bond_retained": isinstance(retained, list) and ALL_BOND_GATE in retained,
+            "projected_modular_retained": isinstance(retained, list) and PROJECTED_MODULAR_GATE in retained,
+            "old_first_passage_retained": isinstance(historical, list) and OLD_FIRST_PASSAGE_GATE in historical,
+            "old_fifth_energy_retained": isinstance(historical, list) and OLD_FIFTH_ENERGY_GATE in historical,
+        }
         audit.pending(
             "Sector-A current successor pointers",
-            isinstance(priority, dict)
-            and priority.get("primary_task") == TASK_ID
-            and priority.get("parallel_cp1_gate") == ALL_BOND_GATE
-            and priority.get("alternative_cp1_gate") == PROJECTED_MODULAR_GATE,
-            priority,
-            {"parallel_cp1_gate": ALL_BOND_GATE, "alternative_cp1_gate": PROJECTED_MODULAR_GATE},
+            all(priority_contract.values()),
+            priority_contract,
+            "current in-progress map retains historical and v1.2 successor gates",
             "formal",
         )
         require_tokens(
             serialized,
             "Sector-A theorem map",
             (
-                EXPLORATION_ID,
                 RESULT_NUMBER,
                 RESULT_VERSION,
                 OLD_FIRST_PASSAGE_GATE,

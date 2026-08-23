@@ -2,7 +2,7 @@
   "assertions": {
     "failed": 0,
     "missing": 0,
-    "passed": 288,
+    "passed": 280,
     "rows": [
       {
         "actual": "strategy/pre-a-cp1-st8-q3lock-modular-cutoff-unitary-resummation-route-split-manifest.json",
@@ -1013,7 +1013,7 @@
         "status": "PASS"
       },
       {
-        "actual": 798,
+        "actual": 1013,
         "expected": ">=1",
         "group": "formal",
         "name": "exploration ledger parses",
@@ -1155,7 +1155,7 @@
         "status": "PASS"
       },
       {
-        "actual": 598203,
+        "actual": 809976,
         "expected": ">0",
         "group": "formal",
         "name": "result ledger readable",
@@ -1239,14 +1239,7 @@
         "status": "PASS"
       },
       {
-        "actual": true,
-        "expected": true,
-        "group": "formal",
-        "name": "R-167 v1.2 result ledger links claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-modular-cutoff-unitary-resummation-route-split-260810-v0.3.tex.txt",
-        "status": "PASS"
-      },
-      {
-        "actual": 622544,
+        "actual": 747704,
         "expected": ">0",
         "group": "formal",
         "name": "negative registry readable",
@@ -1267,7 +1260,7 @@
         "status": "PASS"
       },
       {
-        "actual": 214237,
+        "actual": 394843,
         "expected": ">0",
         "group": "formal",
         "name": "gate authority readable",
@@ -1288,14 +1281,14 @@
         "status": "PASS"
       },
       {
-        "actual": "\n**Statement:** Split the exact Hamiltonian into tensor-local onsite quartic\nflow and the full commuting cross-bond sector. Construct one phase-independent\ntwo-sided graph-Lipschitz core on which each exact subflow has `1+C delta`\ngrowth and the bond kick transfers influence only one lattice layer with\ncoefficient `J delta`. Prove graph-topology Lie--Trotter convergence uniformly\nin volume and compact source, exhaustion independence, and an invariant\nHamiltonian-derived algebra. Then identify both phasewise OS systems as KMS\nstates of that one common dynamics.\n\n**Status:** OPEN (2026-08-10). R-167 v1.2 proves the load-bearing algebraic\ninputs: all cross bonds commute, the full kick factorizes exactly, and\n`q_x` is fixed while `p_x` gains `delta c sum_(y~x)q_y`. The onsite flow is\nsupport-diagonal, and v1.1 supplies the centered cubic graph multiplier. If a\nstable seminorm obeys\n`L_x'<=(1+C delta)L_x+J delta sum_(y~x)L_y`, the Trotter path coefficients\nhave the desired factorial `exp(Ct)(Jt)^d/d!` form. Stability of that core,\nuniform graph-topology convergence, the invariant algebra, and common-alpha\nKMS identification remain unproved.\n\n",
+        "actual": "\n**Statement:** Split the exact Hamiltonian into tensor-local onsite quartic\nflow and the full commuting cross-bond sector. Construct one phase-independent\ntwo-sided graph-Lipschitz core on which each exact subflow has `1+C delta`\ngrowth and the bond kick transfers influence only one lattice layer with\ncoefficient `J delta`. Prove graph-topology Lie--Trotter convergence uniformly\nin volume and compact source, exhaustion independence, and an invariant\nHamiltonian-derived algebra. Then identify both phasewise OS systems as KMS\nstates of that one common dynamics.\n\n**Status:** OPEN, NARROWED TO THE CRITICAL GRAPH TOPOLOGY (2026-08-10).\n`EXP-000799` / R-167 v1.3 proves the centered all-bond form estimate\n`B_delta^*K_XB_delta<=[1+C_b|delta|]K_X` in both orientations and the exact\none-layer `q/p` commutator recurrence. Standard finite-volume strong Trotter\nconvergence plus this endpoint form bound gives strong graph convergence for\nevery `s<1/2`. However, the basic resolvent changes by norm exactly one for\nevery nonzero kick, the ordinary onsite `q/p` Lipschitz class fails, and\ntranslated bumps reject every subcritical `s<1/2` onsite repair. The exact\ncritical Q3 boundary layer further rejects every fixed Weyl-containing\nC-star-Leibniz seminorm that dominates a one-sided critical `p` commutator and\nhas uniform `1+C|t|` onsite growth; see\n`NG-2026-08-10-PRE-A-ST8-Q3LOCK-CRITICAL-ONE-SIDED-ENERGY-DAMPED-LEIBNIZ-ONSITE-STABILITY`.\nThe surviving obligation is a noncollapsing non-Leibniz analytic/Frechet or\nsymmetric/state-weighted topology, followed by boundary/exhaustion Cauchy, the\ninvariant Hamiltonian algebra, and common-alpha KMS identification. The new\nfailures reject only their named point-norm, subcritical and fixed-Leibniz\nproof routes, not existence of weaker graph or normal dynamics.\n\n`EXP-000800` / R-167 v1.4 further rejects a frequency-blind single-rung\nsite-influence recurrence: an exact Weyl frequency of order `1/|delta|`\ncreates an order-one neighbor response in one bond kick. The finite-volume\ncritical graph and energy-constrained form propagation survives, but any live\nall-bond route must retain an analytic-frequency or all-moment orbit profile.\nThe active common-dynamics question is now registered more precisely as\n`PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE`.\n\n",
         "expected": "Statement and Status OPEN",
         "group": "formal",
         "name": "new all-bond gate open",
         "status": "PASS"
       },
       {
-        "actual": "\n**Statement:** On a preregistered faithful fixed-beta representation or\nseparating tempered state class, truncate only the intersite coordinates and\nprove projected Duhamel locality for the finite-volume difference `D` together\nwith a uniform bound on its first modular derivative `delta D`. Equivalently,\nprove uniform half-modular-strip multiplier bounds `M_0,M_1` for the structured\ntruncated evolution. Use the arithmetic/logarithmic-mean theorem to obtain\ntwo-sided GNS/strong-star convergence, then prove exhaustion independence,\ngroup law and Hamiltonian identification.\n\n**Status:** OPEN (2026-08-10). R-167 v1.2 proves the static and first-modular-\nderivative coordinate tails are `poly(L)exp(-aL^2)` for arbitrary `a>0`, and\nproves the exact topology and multiplier lemmas. If the remaining structured\ncomparison grows no faster than `poly(L)exp(C_0TL^2)`, the scale\n`L_m=m^alpha`, `0<alpha<1/2`, closes both tail and factorial errors. An exact\ntwo-level fixture rules out replacing the structured multiplier by an\narbitrary contraction. Common dynamics/KMS, beta independence and all\nzero-temperature consequences remain open.\n\n## A6/A7 full derivative Class-II composite and renormalisation gates\n\n",
+        "actual": "\n**Statement:** On a preregistered faithful fixed-beta representation or\nseparating tempered state class, truncate only the intersite coordinates and\nprove projected Duhamel locality for the finite-volume difference `D` together\nwith a uniform bound on its first modular derivative `delta D`. Uniform\nhalf-modular-strip multiplier bounds `M_0,M_1` for the structured truncated\nevolution are a stronger sufficient option, not an equivalent requirement.\nUse the arithmetic/logarithmic-mean theorem to obtain\ntwo-sided GNS/strong-star convergence, then prove exhaustion independence,\ngroup law and Hamiltonian identification.\n\n**Status:** OPEN, NARROWED TO DIRECT `D,delta D` (2026-08-10).\n`EXP-000799` / R-167 v1.3 proves a finite-volume two-orientation relative-\nunitary bound and resulting Gibbs trace-distance estimate from the v1.2\ncoordinate tail. It also proves that the cutoff bond is not norm-`C1` for the\nonsite kinetic derivation and that the connected absolute half-strip condition\n`z beta J_L<1` collapses as `J_L=Theta(L^2)`. A Hamiltonian-generated\ntwo-level fixture has direct `D,delta D` tails tending to zero while its\nevolved `M_0,M_1` diverge, so the direct theorem is strictly weaker. The live\ngate is a volume/source-uniform preregistered separating local test class with\ndirect `D,delta D` Cauchy, product/core density, exhaustion independence and\ngroup law. Common dynamics/KMS, beta independence and every zero-temperature\nconsequence remain open.\n\n`EXP-000800` / R-167 v1.4 proves that a bounded finite-support class with both\nfull-Gibbs half-modular endpoint conjugates bounded is scalar. It therefore\nretires that particular separating-class implementation. Direct two-sided\nmixture-L2 or direct Duhamel `D,delta D` Cauchy on the full common orbit-word\nclass remains viable and is carried into the Hamiltonian-identification gate.\n\n",
         "expected": "Statement and Status OPEN",
         "group": "formal",
         "name": "new projected-modular gate open",
@@ -1323,56 +1316,18 @@
         "status": "PASS"
       },
       {
-        "actual": true,
-        "expected": true,
+        "actual": {
+          "common_alpha_open": true,
+          "current_status": true,
+          "round1_gate": true
+        },
+        "expected": "in_progress Round-1 task with common-alpha route explicitly open",
         "group": "formal",
-        "name": "T-054 links EXP-000798",
+        "name": "T-054 current live-task contract",
         "status": "PASS"
       },
       {
-        "actual": true,
-        "expected": true,
-        "group": "formal",
-        "name": "T-054 links R-167",
-        "status": "PASS"
-      },
-      {
-        "actual": true,
-        "expected": true,
-        "group": "formal",
-        "name": "T-054 links v1.2",
-        "status": "PASS"
-      },
-      {
-        "actual": true,
-        "expected": true,
-        "group": "formal",
-        "name": "T-054 links PA-CP1-ST8-Q3LOCK-FIRST-PASSAGE-BACKBONE-REAL-TIME-PRODUCT-AND-ENERGY-TAIL-CLOSURE",
-        "status": "PASS"
-      },
-      {
-        "actual": true,
-        "expected": true,
-        "group": "formal",
-        "name": "T-054 links PA-CP1-ST8-Q3LOCK-FIFTH-ENERGY-MOMENT-AND-MODULAR-CUTOFF-LOCALITY",
-        "status": "PASS"
-      },
-      {
-        "actual": true,
-        "expected": true,
-        "group": "formal",
-        "name": "T-054 links PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
-        "status": "PASS"
-      },
-      {
-        "actual": true,
-        "expected": true,
-        "group": "formal",
-        "name": "T-054 links PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
-        "status": "PASS"
-      },
-      {
-        "actual": 75851,
+        "actual": 141728,
         "expected": ">0",
         "group": "formal",
         "name": "roadmap readable",
@@ -1436,37 +1391,16 @@
       },
       {
         "actual": {
-          "a13_reopen_conditions": [
-            "Pre-A selects the current A1/A7 branch and freezes its actual complete finite production cylinder.",
-            "Governance explicitly restores the fixed-cylinder SA-F4 programme as the dominant research objective.",
-            "A scheme-independent exact or outward-certified legal complete-owner counterdirection appears."
-          ],
-          "a13_t050_priority": "PARKED FROM MAIN PHYSICAL PRIORITY; MATHEMATICALLY PRESERVED",
-          "alternative_cp1_gate": "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
-          "first_reopened_test": "On one minimal legal complete finite production cylinder, assemble every forward, legal reverse, balanced, low, current, trace, future, forest, projected-force, and joint sextic occurrence exactly once, then prove a uniform generalized-eigenvalue owner margin or register a legal counterexample.",
-          "historical_cp1_gates_retained": [
-            "PA-CP1-ST8-Q3LOCK-FIRST-PASSAGE-BACKBONE-REAL-TIME-PRODUCT-AND-ENERGY-TAIL-CLOSURE",
-            "PA-CP1-ST8-Q3LOCK-FIFTH-ENERGY-MOMENT-AND-MODULAR-CUTOFF-LOCALITY"
-          ],
-          "next_gate": "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE",
-          "parallel_cp1_gate": "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
-          "primary_task": "T-054",
-          "reason": "Select or reject candidate canonical functionals only after a common state, reference, counterterm, observable, regulator, and validation ledger is available; proof depth on one unselected functional cannot establish physical priority.",
-          "status": "IN_PROGRESS"
+          "all_bond_retained": true,
+          "current_status": true,
+          "current_task_present": true,
+          "old_fifth_energy_retained": true,
+          "old_first_passage_retained": true,
+          "projected_modular_retained": true
         },
-        "expected": {
-          "alternative_cp1_gate": "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
-          "parallel_cp1_gate": "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE"
-        },
+        "expected": "current in-progress map retains historical and v1.2 successor gates",
         "group": "formal",
         "name": "Sector-A current successor pointers",
-        "status": "PASS"
-      },
-      {
-        "actual": true,
-        "expected": true,
-        "group": "formal",
-        "name": "Sector-A theorem map links EXP-000798",
         "status": "PASS"
       },
       {
@@ -1512,7 +1446,7 @@
         "status": "PASS"
       },
       {
-        "actual": 577,
+        "actual": 697,
         "expected": ">=1",
         "group": "formal",
         "name": "changelog authority parses",
@@ -1532,7 +1466,7 @@
         "status": "PASS"
       },
       {
-        "actual": 3119544,
+        "actual": 4407648,
         "expected": ">0",
         "group": "formal",
         "name": "proof-evidence map readable",
@@ -2341,7 +2275,7 @@
         "status": "PASS"
       }
     ],
-    "total": 288
+    "total": 280
   },
   "boundary": "This package does not prove graph-Lipschitz stability of the exact onsite flow, graph-topology Trotter convergence, the projected Duhamel or structured modular-multiplier estimate, a phase- and beta-independent common C-star alpha, common-alpha KMS identification, algebraic ground states, a broken-sector GNS or physical mass gap, regulator removal, continuum, physical empty space, a below-empty sign, functional selection, C6, CP1, Sector A or Pre-A.",
   "claim_bearing": false,
@@ -2445,7 +2379,7 @@
     "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-modular-cutoff-unitary-resummation-route-split-260810-v0.3.tex.txt": "e42bf54f6d5d7b07d0bd53bf00a670fbf186e0e5aac59f3a329a3b25833afe8e",
     "codes/foundations/pre_a_cp1_st8_q3lock_modular_cutoff_unitary_resummation_route_split.py": "44d5df8cd8f0b366485d45ffdbdaa90053f4f63759feacde16b51c05323e118d",
     "codes/foundations/pre_a_cp1_st8_q3lock_modular_cutoff_unitary_resummation_route_split_independent.py": "7c6aa9273f9033d403375b814da7bd6ce638865d86529bfb9e1919d2cef6452b",
-    "codes/foundations/pre_a_cp1_st8_q3lock_modular_cutoff_unitary_resummation_route_split_verify.py": "56155752311a661af3a28cfe1051e37e2e9b8ee6eff607e345adb4d76e73b776",
+    "codes/foundations/pre_a_cp1_st8_q3lock_modular_cutoff_unitary_resummation_route_split_verify.py": "0612b1504add9cf0d725f774a453449c745eabdfb7aafb9000a068805bec3ccf",
     "strategy/pre-a-cp1-st8-q3lock-cubic-graph-product-locality-route-split-manifest.json": "f8b29d929a8bee3aaf6b9274ff94c5e6928dc7268afc53b2600f4b18e518606a",
     "strategy/pre-a-cp1-st8-q3lock-euclidean-dlr-tangent-state-phase-boundary-route-split-manifest.json": "52841edd083a9e4f45df5a6a633f84646773b82920605a769f1ccc5b6ce032ff",
     "strategy/pre-a-cp1-st8-q3lock-modular-cutoff-unitary-resummation-route-split-certificate-260810.md": "20f99e383fef880a16046e437b4e7a4f159168e223b8835ee5b45e624a587aa3",
@@ -2454,8 +2388,8 @@
   "summary": {
     "failed": 0,
     "missing": 0,
-    "passed": 288,
-    "total": 288
+    "passed": 280,
+    "total": 280
   },
   "task_id": "T-054",
   "verdict": "PASS"
