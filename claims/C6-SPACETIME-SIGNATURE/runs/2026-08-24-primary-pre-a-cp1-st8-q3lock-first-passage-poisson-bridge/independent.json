@@ -1,0 +1,182 @@
+{
+  "assertions": [
+    {
+      "actual": "tect/pre-a-cp1-st8-q3lock-first-passage-poisson-bridge/1.0",
+      "expected": ".../1.0",
+      "group": "provenance",
+      "name": "schema",
+      "status": "PASS"
+    },
+    {
+      "actual": "EXP-001028",
+      "expected": "EXP-001028",
+      "group": "provenance",
+      "name": "exploration",
+      "status": "PASS"
+    },
+    {
+      "actual": "T-054",
+      "expected": "T-054",
+      "group": "provenance",
+      "name": "task",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "claim nonbearing",
+      "status": "PASS"
+    },
+    {
+      "actual": "OPEN for the exact Q3 onsite-plus-bond dynamics",
+      "expected": "OPEN",
+      "group": "scope",
+      "name": "hypothesis open",
+      "status": "PASS"
+    },
+    {
+      "actual": "6",
+      "expected": 6,
+      "group": "fixture",
+      "name": "degree input",
+      "status": "PASS"
+    },
+    {
+      "actual": "2",
+      "expected": 2,
+      "group": "arithmetic",
+      "name": "positive rate",
+      "status": "PASS"
+    },
+    {
+      "actual": "4",
+      "expected": 4,
+      "group": "arithmetic",
+      "name": "weighted rate",
+      "status": "PASS"
+    },
+    {
+      "actual": "7776",
+      "expected": 7776,
+      "group": "combinatorics",
+      "name": "path count envelope",
+      "status": "PASS"
+    },
+    {
+      "actual": 10,
+      "expected": 10,
+      "group": "support",
+      "name": "distance support",
+      "status": "PASS"
+    },
+    {
+      "actual": 10,
+      "expected": "no path length below d",
+      "group": "support",
+      "name": "short paths absent",
+      "status": "PASS"
+    },
+    {
+      "actual": "2",
+      "expected": ">1",
+      "group": "weight",
+      "name": "weight base",
+      "status": "PASS"
+    },
+    {
+      "actual": "1",
+      "expected": 1,
+      "group": "initial",
+      "name": "source mass",
+      "status": "PASS"
+    },
+    {
+      "actual": "1093036662792865537/147926426347074375",
+      "expected": "< exp(4)",
+      "group": "series",
+      "name": "partial exponential bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "50824100743162/147926426347074375",
+      "expected": "<= 2^(-10)*exp(4)",
+      "group": "series",
+      "name": "distance tail bound",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.05331850589174242,
+      "expected": "<0.1",
+      "group": "decay",
+      "name": "point bound numeric",
+      "status": "PASS"
+    },
+    {
+      "actual": "2",
+      "expected": "limit zero",
+      "group": "decay",
+      "name": "distance decay asymptotic",
+      "status": "PASS"
+    },
+    {
+      "actual": "Exact factorial path-sum to weighted boundary-decay arithmetic under the declared hypothesis",
+      "expected": "conditional bridge",
+      "group": "scope",
+      "name": "conditional bridge declared",
+      "status": "PASS"
+    },
+    {
+      "actual": "OPEN for the exact Q3 onsite-plus-bond dynamics",
+      "expected": "OPEN",
+      "group": "scope",
+      "name": "Q3 expansion remains open",
+      "status": "PASS"
+    }
+  ],
+  "boundary": {
+    "closed": "Exact factorial path-sum to weighted boundary-decay arithmetic under the declared hypothesis",
+    "not_claimed": "Q3 dynamics, thermodynamic locality, C6 closure, Sector A closure or TECT production ownership",
+    "open": "Actual Q3 first-passage expansion, onsite recurrence, projected Duhamel locality, exhaustion Cauchy, common alpha, KMS, ground/gap, continuum and Pre-A"
+  },
+  "derived": {
+    "actual_q3_first_passage_closed": false,
+    "common_alpha_closed": false,
+    "conditional_boundary_decay_closed": true,
+    "degree": "6",
+    "distance": 10,
+    "eta": "1",
+    "exhaustion_cauchy_closed": false,
+    "point_bound": "1/1024",
+    "rate": "2",
+    "time": "1/3",
+    "truncation_order": 24,
+    "weight_base": "2",
+    "weighted_rate": "4"
+  },
+  "exploration_id": "EXP-001028",
+  "failed": 0,
+  "hypothesis": {
+    "distance": "Every path from X to x has length at least d(x,X)",
+    "path_count": "At most z^n paths of length n leave any starting site",
+    "response_expansion": "R_x(t) <= sum_{n>=0} (eta*t)^n/n! sum_{paths gamma ending at x, length n} R_{gamma(0)}(0)",
+    "status": "OPEN for the exact Q3 onsite-plus-bond dynamics",
+    "support": "R_y(0)=0 outside a finite source set X"
+  },
+  "passed": 19,
+  "provenance": {
+    "manifest": "strategy/pre-a-cp1-st8-q3lock-first-passage-poisson-bridge-manifest.json",
+    "manifest_sha256": "209348a959a9c0e56b3efe123f3994af16b699b357f17867630ca8cf66e2ed16",
+    "script": "codes/foundations/pre_a_cp1_st8_q3lock_first_passage_poisson_bridge_independent.py",
+    "script_sha256": "e9b9ede72e82a5ad4ad25ca60a052cd3cae5df95ae032601b746207ec8c3faa4"
+  },
+  "run_kind": "independent",
+  "schema": "tect/foundation-audit/1.0",
+  "series": {
+    "partial": "1093036662792865537/147926426347074375",
+    "tail_partial": "50824100743162/147926426347074375",
+    "weighted_constant": 54.598150033144236
+  },
+  "total": 19,
+  "verdict": "PASS"
+}

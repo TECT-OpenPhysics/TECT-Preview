@@ -1,0 +1,51 @@
+{
+  "schema": "tect/pre-a-cp1-st8-q3lock-first-passage-poisson-bridge/1.0",
+  "exploration_id": "EXP-001028",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "claim_bearing": false,
+  "tier": "T0",
+  "title": "Conditional first-passage Poisson bridge for boundary response",
+  "question": "If the Q3 response admits a nonnegative factorial first-passage expansion, does graph degree and a spatial weight yield a volume-uniform boundary decay bound?",
+  "hypothesis": {
+    "response_expansion": "R_x(t) <= sum_{n>=0} (eta*t)^n/n! sum_{paths gamma ending at x, length n} R_{gamma(0)}(0)",
+    "path_count": "At most z^n paths of length n leave any starting site",
+    "support": "R_y(0)=0 outside a finite source set X",
+    "distance": "Every path from X to x has length at least d(x,X)",
+    "status": "OPEN for the exact Q3 onsite-plus-bond dynamics"
+  },
+  "bridge": {
+    "weight": "w(x)=base^d(x,X), base>1",
+    "weighted_path_sum": "sum_n (eta*z*t*base)^n/n! = exp(eta*z*t*base)",
+    "decay": "R_x(t) <= base^(-d(x,X))*exp(eta*z*t*base)*R_X(0)",
+    "interpretation": "This is a conditional first-passage bridge, not an actual Q3 locality theorem"
+  },
+  "fixture": {
+    "degree": "6",
+    "eta": "1",
+    "time": "1/3",
+    "weight_base": "2",
+    "distance": "10",
+    "truncation_order": "24",
+    "source_mass": "1"
+  },
+  "scope": {
+    "closed": "Exact factorial path-sum to weighted boundary-decay arithmetic under the declared hypothesis",
+    "open": "Actual Q3 first-passage expansion, onsite recurrence, projected Duhamel locality, exhaustion Cauchy, common alpha, KMS, ground/gap, continuum and Pre-A",
+    "not_claimed": "Q3 dynamics, thermodynamic locality, C6 closure, Sector A closure or TECT production ownership"
+  },
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R212.lean",
+    "command": "lake env lean Tect/R212.lean",
+    "boundary": "Lean checks only the rational rate, weight and finite-distance fixture arithmetic; it does not encode the infinite path expansion"
+  },
+  "formal_integration": {
+    "events": [],
+    "results": [],
+    "negatives": [],
+    "no_new_result": true,
+    "no_new_negative": true,
+    "no_pdf": true
+  },
+  "no_overclaim": "The bridge is conditional on an unproved Q3 factorial path expansion and path-count bound. It supplies a precise target for the open boundary gate but does not prove Q3 dynamics, common alpha, KMS, a mass gap, Pre-A, Sector A or the TECT production map."
+}

@@ -1,0 +1,232 @@
+{
+  "assertion_count": 25,
+  "assertions": [
+    {
+      "actual": [
+        "EXP-001028",
+        "T-054"
+      ],
+      "expected": "EXP-001028/T-054",
+      "name": "identity",
+      "pass": true
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "claim nonbearing",
+      "pass": true
+    },
+    {
+      "actual": "R_x(t) <= sum_{n>=0} (eta*t)^n/n! sum_{paths gamma ending at x, length n} R_{gamma(0)}(0)",
+      "expected": "factorial path expansion",
+      "name": "factorial hypothesis",
+      "pass": true
+    },
+    {
+      "actual": "At most z^n paths of length n leave any starting site",
+      "expected": "degree envelope",
+      "name": "path count hypothesis",
+      "pass": true
+    },
+    {
+      "actual": [
+        "OPEN for the exact Q3 onsite-plus-bond dynamics",
+        "The bridge is conditional on an unproved Q3 factorial path expansion and path-count bound. It supplies a precise target for the open boundary gate but does not prove Q3 dynamics, common alpha, KMS, a mass gap, Pre-A, Sector A or the TECT production map."
+      ],
+      "expected": "explicit conditional scope",
+      "name": "Q3 firewall",
+      "pass": true
+    },
+    {
+      "actual": "E:\\Dev\\TECT\\verification\\lean\\Tect\\R212.lean",
+      "expected": true,
+      "name": "Lean source",
+      "pass": true
+    },
+    {
+      "actual": [
+        "poisson_rate_fixture",
+        "weighted_rate_fixture",
+        "distance_weight_fixture",
+        "finite_distance_fixture"
+      ],
+      "expected": "present",
+      "name": "Lean markers",
+      "pass": true
+    },
+    {
+      "actual": [],
+      "expected": "none",
+      "name": "Lean forbidden",
+      "pass": true
+    },
+    {
+      "actual": "PRIMARY FIRST-PASSAGE-POISSON PASS 20/20\n",
+      "expected": "PASS",
+      "name": "primary child",
+      "pass": true
+    },
+    {
+      "actual": "INDEPENDENT FIRST-PASSAGE-POISSON PASS 19/19\n",
+      "expected": "PASS",
+      "name": "independent child",
+      "pass": true
+    },
+    {
+      "actual": [
+        20,
+        19
+      ],
+      "expected": ">0",
+      "name": "positive totals",
+      "pass": true
+    },
+    {
+      "actual": [
+        "6",
+        "6"
+      ],
+      "expected": "equal",
+      "name": "lane agreement degree",
+      "pass": true
+    },
+    {
+      "actual": [
+        "2",
+        "2"
+      ],
+      "expected": "equal",
+      "name": "lane agreement rate",
+      "pass": true
+    },
+    {
+      "actual": [
+        "4",
+        "4"
+      ],
+      "expected": "equal",
+      "name": "lane agreement weighted_rate",
+      "pass": true
+    },
+    {
+      "actual": [
+        "2",
+        "2"
+      ],
+      "expected": "equal",
+      "name": "lane agreement weight_base",
+      "pass": true
+    },
+    {
+      "actual": [
+        10,
+        10
+      ],
+      "expected": "equal",
+      "name": "lane agreement distance",
+      "pass": true
+    },
+    {
+      "actual": [
+        24,
+        24
+      ],
+      "expected": "equal",
+      "name": "lane agreement truncation_order",
+      "pass": true
+    },
+    {
+      "actual": [
+        "exp(4)/1024",
+        "exp(4)/1024"
+      ],
+      "expected": "equal",
+      "name": "lane agreement point_bound",
+      "pass": true
+    },
+    {
+      "actual": [
+        true,
+        true
+      ],
+      "expected": "equal",
+      "name": "lane agreement conditional_boundary_decay_closed",
+      "pass": true
+    },
+    {
+      "actual": [
+        false,
+        false
+      ],
+      "expected": "equal",
+      "name": "lane agreement actual_q3_first_passage_closed",
+      "pass": true
+    },
+    {
+      "actual": [
+        false,
+        false
+      ],
+      "expected": "equal",
+      "name": "lane agreement exhaustion_cauchy_closed",
+      "pass": true
+    },
+    {
+      "actual": [
+        false,
+        false
+      ],
+      "expected": "equal",
+      "name": "lane agreement common_alpha_closed",
+      "pass": true
+    },
+    {
+      "actual": 10,
+      "expected": 10,
+      "name": "distance target",
+      "pass": true
+    },
+    {
+      "actual": "4",
+      "expected": "4",
+      "name": "weighted rate target",
+      "pass": true
+    },
+    {
+      "actual": {
+        "command": "lake env lean Tect/R212.lean",
+        "output": "",
+        "returncode": 0,
+        "status": "PASS"
+      },
+      "expected": "PASS",
+      "name": "Lean compile",
+      "pass": true
+    }
+  ],
+  "audit_id": "PA-CP1-ST8-Q3LOCK-FIRST-PASSAGE-POISSON-BRIDGE",
+  "boundary": {
+    "closed": "Exact factorial path-sum to weighted boundary-decay arithmetic under the declared hypothesis",
+    "not_claimed": "Q3 dynamics, thermodynamic locality, C6 closure, Sector A closure or TECT production ownership",
+    "open": "Actual Q3 first-passage expansion, onsite recurrence, projected Duhamel locality, exhaustion Cauchy, common alpha, KMS, ground/gap, continuum and Pre-A"
+  },
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "exploration_id": "EXP-001028",
+  "lean": {
+    "command": "lake env lean Tect/R212.lean",
+    "output": "",
+    "returncode": 0,
+    "status": "PASS"
+  },
+  "provenance": {
+    "independent_sha256": "1a66ebd49d4524864cb2b71346959931389a8cf384501d9164b82810b19d720c",
+    "lean_sha256": "40ba4a2d6d1efdf8aac7de50ddd6ee71354c8fb452f833a645fe49259a3630e2",
+    "manifest_sha256": "209348a959a9c0e56b3efe123f3994af16b699b357f17867630ca8cf66e2ed16",
+    "primary_sha256": "6d8ef9f31aaa5ea64afc035b735eb48bfc37d001e051c85e91c9d87047d26659"
+  },
+  "recorded_at": "2026-08-23T21:04:43.697526Z",
+  "run_kind": "integrated",
+  "schema": "tect/foundation-audit/1.0",
+  "task_id": "T-054",
+  "verdict": "PASS"
+}
