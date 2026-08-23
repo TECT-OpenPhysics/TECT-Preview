@@ -1,0 +1,96 @@
+{
+  "schema": "tect/pre-a-cp1-cl8-q3-fixed-torus-os-kms-current-revalidation/1.0",
+  "audit_id": "PA-CP1-CL8-Q3-FIXED-TORUS-OS-KMS-CURRENT-REVALIDATION",
+  "exploration_id": "EXP-001007",
+  "prior_exploration_id": "EXP-000773",
+  "task_id": "T-054",
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "tier": "T0",
+  "claim_bearing": false,
+  "title": "Current revalidation of the fixed-torus QFT OS/KMS package",
+  "question": "After the historical certificate hash and obsolete TODO-reader checks drifted from the current append-only ledgers, do the existing fixed-torus QFT/OS/KMS primary, independent, and integrated lanes still reproduce the same declared theorem scope?",
+  "historical_drift": {
+    "first_failure": "The original integrated reader rejected the stored child JSON because its certificate SHA-256 was 4ab8955caa5f4656c926409a34e0392b7d95df6888f59f13baa386f8042da7fa while the current certificate is 27ac7f82383113c7601f3bed3a26ca32f03ba18eb3eb41b970aa5510182b862e.",
+    "second_failure": "After child refresh, the original reader required EXP-000773 and its next gate inside todo.json; current protocol keeps EXP ordinals in explorations/log.jsonl and changelog/log.jsonl while todo.json is the live task registry.",
+    "classification": "provenance and current-reader contract drift only; no theorem statement, source authority, scope flag, tier or lifecycle field changed"
+  },
+  "source_hashes": {
+    "historical_manifest": {
+      "path": "strategy/pre-a-cp1-cl8-q3-fixed-torus-os-kms-markov-reference-route-split-manifest.json",
+      "sha256": "2d58057264e95287ac81c9a6fd1f83b3cd45ec1a2daffce543bd3b146a7d0402"
+    },
+    "historical_certificate": {
+      "path": "strategy/pre-a-cp1-cl8-q3-fixed-torus-os-kms-markov-reference-route-split-certificate-260804.md",
+      "sha256": "27ac7f82383113c7601f3bed3a26ca32f03ba18eb3eb41b970aa5510182b862e"
+    },
+    "primary_script": {
+      "path": "codes/foundations/pre_a_cp1_cl8_q3_fixed_torus_os_kms_markov_reference_route_split.py",
+      "sha256": "3e17b82559bb6c06ae57f2b042bd1d82b1f7d29ed7e1dea049e3cc56efae40fa"
+    },
+    "independent_script": {
+      "path": "codes/foundations/pre_a_cp1_cl8_q3_fixed_torus_os_kms_markov_reference_route_split_independent.py",
+      "sha256": "b0c659d9d1cef8f058ef5e48123989460f5444650323073caebb4ea952915116"
+    },
+    "integrated_script": {
+      "path": "codes/foundations/pre_a_cp1_cl8_q3_fixed_torus_os_kms_markov_reference_route_split_verify.py",
+      "sha256": "246e484b6d50380f06e47d0d0b472501aa21d66562e930dec55b42cafea9df2a"
+    }
+  },
+  "run_summary": {
+    "primary": "65/65 PASS",
+    "independent": "59/59 PASS",
+    "integrated": "103/103 PASS",
+    "canonical_child_artifacts_refreshed": true,
+    "canonical_scope_and_next_gate_unchanged": true,
+    "new_result_id": null,
+    "new_negative_ids": [],
+    "pdf_issued": false
+  },
+  "preserved_scope": {
+    "fixed_finite_beta0_L_torus": true,
+    "periodic_thermal_OS_KMS": true,
+    "two_sided_germ_domain_Markov": true,
+    "strict_named_Gaussian_reference_ordering": true,
+    "beta_independent_Hamiltonian": false,
+    "positive_energy_vacuum": false,
+    "Hadamard_or_interacting_microlocal_spectrum": false,
+    "physical_empty_space_reference": false,
+    "thermodynamic_limit": false,
+    "ground_state_limit": false,
+    "C6_complete": false,
+    "Sector_A_complete": false,
+    "Pre_A_complete": false
+  },
+  "next_gate": "PA-CP1-CL8-BETA-INDEPENDENT-HAMILTONIAN-THERMODYNAMIC-REFERENCE-AND-GROUND-LIMIT-ROUTE-SPLIT",
+  "adversarial_review": [
+    {
+      "axis": "certificate provenance",
+      "disposition": "DISMISSED",
+      "check": "Both child lanes now carry the current certificate SHA-256 and their canonical JSON equals a fresh execution."
+    },
+    {
+      "axis": "ledger semantics",
+      "disposition": "DISMISSED",
+      "check": "The repaired reader checks the live T-054 task plus append-only exploration and changelog ledgers; it does not recreate a historical EXP entry in todo.json."
+    },
+    {
+      "axis": "analytic overclaim",
+      "disposition": "UPHELD",
+      "check": "The package remains fixed-beta thermal OS/KMS and named-reference mathematics; it is not a vacuum, physical-empty, continuum, Sector-A or Pre-A theorem."
+    },
+    {
+      "axis": "Lean promotion",
+      "disposition": "NOT-APPLICABLE",
+      "check": "This correction adds no new exact mathematical proposition; existing child lanes and the analytic certificate are revalidated without fabricating a Lean theorem for OS/KMS reconstruction."
+    }
+  ],
+  "boundary": "T0 claim-nonbearing provenance and current-reader revalidation. It does not change EXP-000773, create a new result card, close the beta-independent Hamiltonian or thermodynamic gates, identify physical empty space, establish Hadamard or positive-energy vacuum, or advance C6, Sector A or Pre-A.",
+  "next_action": "Attack the named beta-independent Hamiltonian, thermodynamic reference-density and ground-limit route with one fixed Wick convention; preserve the physical-empty and Pre-A firewalls and do not treat this revalidation as a production A1 heat/root owner.",
+  "formal_integration": {
+    "results": [],
+    "events": [],
+    "negatives": [],
+    "no_new_negative_ids": [],
+    "no_pdf": true
+  }
+}

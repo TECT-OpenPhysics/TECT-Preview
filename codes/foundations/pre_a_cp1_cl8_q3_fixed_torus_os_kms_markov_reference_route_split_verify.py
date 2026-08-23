@@ -153,7 +153,11 @@ def build_payload() -> dict[str, Any]:
     audit.check("exploration next gate", manifest["gate_resolution"]["next_gate"] in exploration["next_action"], exploration["next_action"], manifest["gate_resolution"]["next_gate"], "records")
     todo = (REPO / "todo/todo.json").read_text(encoding="utf-8")
     changelog = (REPO / "changelog/log.jsonl").read_text(encoding="utf-8")
-    audit.check("TODO record", EXPLORATION_ID in todo and manifest["gate_resolution"]["next_gate"] in todo, EXPLORATION_ID, "present", "records")
+    exploration_log = (REPO / "explorations/log.jsonl").read_text(encoding="utf-8")
+    # Current protocol keeps EXP ordinals in the append-only exploration and
+    # changelog ledgers; todo.json is the live task registry, not an EXP index.
+    audit.check("live TODO task", manifest["task_id"] in todo, manifest["task_id"], "present", "records")
+    audit.check("exploration ledger record", EXPLORATION_ID in exploration_log, EXPLORATION_ID, "present", "records")
     audit.check("changelog record", EXPLORATION_ID in changelog and MANIFEST.name in changelog, EXPLORATION_ID, "present", "records")
     lineage = (REPO / "claims/C6-SPACETIME-SIGNATURE/LINEAGE.md").read_text(encoding="utf-8")
     for kind in ("primary", "independent"):
