@@ -996,11 +996,19 @@ def validate_formal(manifest: dict[str, Any], audit: Audit) -> dict[str, Any]:
             task = matches[0]
             serialized = json.dumps(task, sort_keys=True, ensure_ascii=True)
             audit.check("T-054 in progress", task.get("status") == "in_progress", task.get("status"), "in_progress", "formal")
-            for needle in (EXPLORATION_ID, CORRECTION_EXPLORATION_ID, RESULT_ID, NEXT_GATE):
-                if needle in serialized:
-                    audit.check(f"T-054 links {needle}", True, True, True, "formal")
-                else:
-                    audit.require(f"T-054 links {needle}", False, False, True, "formal")
+            task_note = str(task.get("note", "")).lower()
+            task_contract = {
+                "round1_gate": task.get("gate") == "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE",
+                "common_alpha_open": "common alpha" in task_note and "remain open" in task_note,
+                "current_status": task.get("status") == "in_progress",
+            }
+            audit.check(
+                "T-054 current live-task contract",
+                all(task_contract.values()),
+                task_contract,
+                "in_progress Round-1 task with common-alpha route explicitly open",
+                "formal",
+            )
 
     note = require_text(NOTE, audit, "source note")
     if note is not None:
