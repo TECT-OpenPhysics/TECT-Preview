@@ -1,0 +1,167 @@
+{
+  "assertions": [
+    {
+      "actual": "EXP-001032",
+      "expected": "EXP-001032",
+      "group": "provenance",
+      "name": "exploration",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "claim nonbearing",
+      "status": "PASS"
+    },
+    {
+      "actual": "51/35",
+      "expected": "51/35",
+      "group": "derivation",
+      "name": "Q3 coefficient",
+      "status": "PASS"
+    },
+    {
+      "actual": "2*(51/140)**(m - 1)*a**(4*m - 3)*m/(3*3**m*factorial(m))",
+      "expected": "2*a*(17*a**4/140)**(m - 1)/(9*factorial(m - 1))",
+      "group": "series",
+      "name": "summand rewrite",
+      "status": "PASS"
+    },
+    {
+      "actual": "17/140",
+      "expected": "17/140",
+      "group": "series",
+      "name": "rate fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": "11/140",
+      "expected": "11/140",
+      "group": "weight",
+      "name": "sigma margin",
+      "status": "PASS"
+    },
+    {
+      "actual": "2/9",
+      "expected": "2/9",
+      "group": "weight",
+      "name": "prefactor",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.0,
+      "expected": "<=0.0",
+      "group": "series",
+      "name": "finite positive series a=0",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.2509130472047123,
+      "expected": "<=0.2509130472049764",
+      "group": "series",
+      "name": "finite positive series a=1",
+      "status": "PASS"
+    },
+    {
+      "actual": 3.09879287446187,
+      "expected": "<=3.1016273539567654",
+      "group": "series",
+      "name": "finite positive series a=2",
+      "status": "PASS"
+    },
+    {
+      "actual": 3516733125.0142055,
+      "expected": "<=1.0129932782050006e+33",
+      "group": "series",
+      "name": "finite positive series a=5",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.726282593272879e+18,
+      "expected": "<=inf",
+      "group": "series",
+      "name": "finite positive series a=10",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/5",
+      "expected": ">17/140",
+      "group": "weight",
+      "name": "candidate weight dominates rate",
+      "status": "PASS"
+    },
+    {
+      "actual": "Actual Q3 word incidence, analytic domain, all-bond recurrence, volume uniformity, exhaustion Cauchy, common alpha, KMS, gap, continuum, C6, Sector A, Pre-A and TECT production remain open.",
+      "expected": "explicit open",
+      "group": "scope",
+      "name": "conditional boundary",
+      "status": "PASS"
+    }
+  ],
+  "boundary": {
+    "closed": "Conditional entire-weight generating envelope for the declared repeated onsite word family.",
+    "no_new_negative_result": true,
+    "no_pdf": true,
+    "no_tier_change": true,
+    "not_closed": "Actual Q3 word incidence, analytic domain, all-bond recurrence, volume uniformity, exhaustion Cauchy, common alpha, KMS, gap, continuum, C6, Sector A, Pre-A and TECT production remain open."
+  },
+  "derived": {
+    "G": "51/35",
+    "actual_q3_word_incidence_closed": false,
+    "analytic_domain_closed": false,
+    "candidate_entire_weight_closed_for_prescribed_words": true,
+    "exhaustion_cauchy_closed": false,
+    "margin": "11/140",
+    "prefactor": "2/9",
+    "rate": "17/140",
+    "sigma": "1/5",
+    "truncation_order": 8,
+    "volume_uniform_history_closed": false
+  },
+  "exploration_id": "EXP-001032",
+  "failed": 0,
+  "passed": 14,
+  "provenance": {
+    "manifest": "strategy/pre-a-cp1-st8-q3lock-entire-source-weight-generating-envelope-manifest.json",
+    "manifest_sha256": "a6f3b9359ec77c8335b69cd4d98794e7db4dacdbdc4352ee4d06aa0c4c6cfac9",
+    "script": "codes/foundations/pre_a_cp1_st8_q3lock_entire_source_weight_generating_envelope.py",
+    "script_sha256": "6ef54b559d98258983cd45ca8c54989f2c6fdcdf31d5136a0243df5a2e699142"
+  },
+  "run_kind": "primary",
+  "schema": "tect/foundation-audit/1.0",
+  "series_rows": [
+    {
+      "amplitude": 0,
+      "closed_bound": 0.0,
+      "partial_order": 8,
+      "partial_sum": 0.0
+    },
+    {
+      "amplitude": 1,
+      "closed_bound": 0.2509130472049764,
+      "partial_order": 8,
+      "partial_sum": 0.2509130472047123
+    },
+    {
+      "amplitude": 2,
+      "closed_bound": 3.1016273539567654,
+      "partial_order": 8,
+      "partial_sum": 3.09879287446187
+    },
+    {
+      "amplitude": 5,
+      "closed_bound": 1.0129932782050006e+33,
+      "partial_order": 8,
+      "partial_sum": 3516733125.0142055
+    },
+    {
+      "amplitude": 10,
+      "closed_bound": Infinity,
+      "partial_order": 8,
+      "partial_sum": 1.726282593272879e+18
+    }
+  ],
+  "total": 14,
+  "verdict": "PASS"
+}

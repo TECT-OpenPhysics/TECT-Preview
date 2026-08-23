@@ -1,0 +1,161 @@
+{
+  "assertions": [
+    {
+      "actual": "EXP-001032",
+      "expected": "EXP-001032",
+      "group": "provenance",
+      "name": "exploration",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "claim nonbearing",
+      "status": "PASS"
+    },
+    {
+      "actual": "51/35",
+      "expected": "51/35",
+      "group": "derivation",
+      "name": "coefficient",
+      "status": "PASS"
+    },
+    {
+      "actual": "17/140",
+      "expected": "17/140",
+      "group": "series",
+      "name": "rate",
+      "status": "PASS"
+    },
+    {
+      "actual": "11/140",
+      "expected": "11/140",
+      "group": "weight",
+      "name": "margin",
+      "status": "PASS"
+    },
+    {
+      "actual": "2/9",
+      "expected": "2/9",
+      "group": "weight",
+      "name": "prefactor",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.0,
+      "expected": "<=0.0",
+      "group": "series",
+      "name": "series bound a=0",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.2509130472047123,
+      "expected": "<=0.25091304720497637",
+      "group": "series",
+      "name": "series bound a=1",
+      "status": "PASS"
+    },
+    {
+      "actual": 3.09879287446187,
+      "expected": "<=3.1016273539567654",
+      "group": "series",
+      "name": "series bound a=2",
+      "status": "PASS"
+    },
+    {
+      "actual": 3516733125.0142055,
+      "expected": "<=1.0129932782049965e+33",
+      "group": "series",
+      "name": "series bound a=5",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.726282593272879e+18,
+      "expected": "<=inf",
+      "group": "series",
+      "name": "series bound a=10",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/5",
+      "expected": ">17/140",
+      "group": "weight",
+      "name": "sigma dominates",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "closed": "Conditional entire-weight generating envelope for the declared repeated onsite word family.",
+        "no_new_negative_result": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "not_closed": "Actual Q3 word incidence, analytic domain, all-bond recurrence, volume uniformity, exhaustion Cauchy, common alpha, KMS, gap, continuum, C6, Sector A, Pre-A and TECT production remain open."
+      },
+      "expected": true,
+      "group": "scope",
+      "name": "actual Q3 open",
+      "status": "PASS"
+    }
+  ],
+  "boundary": {
+    "closed": "Conditional entire-weight generating envelope for the declared repeated onsite word family.",
+    "no_new_negative_result": true,
+    "no_pdf": true,
+    "no_tier_change": true,
+    "not_closed": "Actual Q3 word incidence, analytic domain, all-bond recurrence, volume uniformity, exhaustion Cauchy, common alpha, KMS, gap, continuum, C6, Sector A, Pre-A and TECT production remain open."
+  },
+  "derived": {
+    "G": "51/35",
+    "actual_q3_word_incidence_closed": false,
+    "analytic_domain_closed": false,
+    "candidate_entire_weight_closed_for_prescribed_words": true,
+    "exhaustion_cauchy_closed": false,
+    "margin": "11/140",
+    "prefactor": "2/9",
+    "rate": "17/140",
+    "sigma": "1/5",
+    "truncation_order": 8,
+    "volume_uniform_history_closed": false
+  },
+  "exploration_id": "EXP-001032",
+  "failed": 0,
+  "passed": 13,
+  "provenance": {
+    "manifest": "strategy/pre-a-cp1-st8-q3lock-entire-source-weight-generating-envelope-manifest.json",
+    "manifest_sha256": "a6f3b9359ec77c8335b69cd4d98794e7db4dacdbdc4352ee4d06aa0c4c6cfac9",
+    "script": "codes/foundations/pre_a_cp1_st8_q3lock_entire_source_weight_generating_envelope_independent.py",
+    "script_sha256": "5a3b22f7f1463ef037d91864e68d1b05c75c892c6ec91e6515bfc6c411ae78b3"
+  },
+  "run_kind": "independent",
+  "schema": "tect/foundation-audit/1.0",
+  "series_rows": [
+    {
+      "amplitude": 0,
+      "bound": 0.0,
+      "partial_sum": "0"
+    },
+    {
+      "amplitude": 1,
+      "bound": 0.25091304720497637,
+      "partial_sum": "5998774610971678693/23907782707200000000"
+    },
+    {
+      "amplitude": 2,
+      "bound": 3.1016273539567654,
+      "partial_sum": "565225728586228/182401906640625"
+    },
+    {
+      "amplitude": 5,
+      "bound": 1.0129932782049965e+33,
+      "partial_sum": "215237865963653229056105/61203923730432"
+    },
+    {
+      "amplitude": 10,
+      "bound": Infinity,
+      "partial_sum": "806085725218549083680954180/466948881"
+    }
+  ],
+  "total": 13,
+  "verdict": "PASS"
+}

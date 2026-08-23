@@ -1,0 +1,226 @@
+{
+  "assertion_count": 22,
+  "assertions": [
+    {
+      "actual": [
+        "EXP-001032",
+        "T-054"
+      ],
+      "expected": "EXP-001032/T-054",
+      "name": "identity",
+      "pass": true
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "claim nonbearing",
+      "pass": true
+    },
+    {
+      "actual": "sum_{m>=1} t^m |R_m(a)|/m! = c t |a| exp((tG/4)|a|^4)",
+      "expected": "explicit series",
+      "name": "generating identity",
+      "pass": true
+    },
+    {
+      "actual": "w_sigma(a)=(1+|a|) exp(sigma |a|^4)",
+      "expected": "entire weight",
+      "name": "candidate weight",
+      "pass": true
+    },
+    {
+      "actual": [
+        "q3_rate_fixture",
+        "sigma_margin_fixture",
+        "sigma_margin_positive",
+        "source_prefactor_fixture",
+        "m3_summand_fixture"
+      ],
+      "expected": "present",
+      "name": "Lean source",
+      "pass": true
+    },
+    {
+      "actual": [],
+      "expected": "none",
+      "name": "Lean forbidden",
+      "pass": true
+    },
+    {
+      "actual": "PRIMARY ENTIRE-SOURCE-WEIGHT PASS 14/14\n",
+      "expected": "PASS",
+      "name": "primary child",
+      "pass": true
+    },
+    {
+      "actual": "INDEPENDENT ENTIRE-SOURCE-WEIGHT PASS 13/13\n",
+      "expected": "PASS",
+      "name": "independent child",
+      "pass": true
+    },
+    {
+      "actual": [
+        14,
+        13
+      ],
+      "expected": ">0",
+      "name": "positive totals",
+      "pass": true
+    },
+    {
+      "actual": [
+        "51/35",
+        "51/35"
+      ],
+      "expected": "equal",
+      "name": "lane agreement G",
+      "pass": true
+    },
+    {
+      "actual": [
+        "17/140",
+        "17/140"
+      ],
+      "expected": "equal",
+      "name": "lane agreement rate",
+      "pass": true
+    },
+    {
+      "actual": [
+        "1/5",
+        "1/5"
+      ],
+      "expected": "equal",
+      "name": "lane agreement sigma",
+      "pass": true
+    },
+    {
+      "actual": [
+        "11/140",
+        "11/140"
+      ],
+      "expected": "equal",
+      "name": "lane agreement margin",
+      "pass": true
+    },
+    {
+      "actual": [
+        "2/9",
+        "2/9"
+      ],
+      "expected": "equal",
+      "name": "lane agreement prefactor",
+      "pass": true
+    },
+    {
+      "actual": [
+        8,
+        8
+      ],
+      "expected": "equal",
+      "name": "lane agreement truncation_order",
+      "pass": true
+    },
+    {
+      "actual": [
+        true,
+        true
+      ],
+      "expected": "equal",
+      "name": "lane agreement candidate_entire_weight_closed_for_prescribed_words",
+      "pass": true
+    },
+    {
+      "actual": [
+        false,
+        false
+      ],
+      "expected": "equal",
+      "name": "lane agreement actual_q3_word_incidence_closed",
+      "pass": true
+    },
+    {
+      "actual": [
+        false,
+        false
+      ],
+      "expected": "equal",
+      "name": "lane agreement analytic_domain_closed",
+      "pass": true
+    },
+    {
+      "actual": [
+        false,
+        false
+      ],
+      "expected": "equal",
+      "name": "lane agreement volume_uniform_history_closed",
+      "pass": true
+    },
+    {
+      "actual": [
+        false,
+        false
+      ],
+      "expected": "equal",
+      "name": "lane agreement exhaustion_cauchy_closed",
+      "pass": true
+    },
+    {
+      "actual": {
+        "G": "51/35",
+        "actual_q3_word_incidence_closed": false,
+        "analytic_domain_closed": false,
+        "candidate_entire_weight_closed_for_prescribed_words": true,
+        "exhaustion_cauchy_closed": false,
+        "margin": "11/140",
+        "prefactor": "2/9",
+        "rate": "17/140",
+        "sigma": "1/5",
+        "truncation_order": 8,
+        "volume_uniform_history_closed": false
+      },
+      "expected": "11/140",
+      "name": "positive margin",
+      "pass": true
+    },
+    {
+      "actual": {
+        "command": "lake env lean Tect/R216.lean",
+        "output": "",
+        "returncode": 0,
+        "status": "PASS"
+      },
+      "expected": "PASS",
+      "name": "Lean compile",
+      "pass": true
+    }
+  ],
+  "audit_id": "PA-CP1-ST8-Q3LOCK-ENTIRE-SOURCE-WEIGHT-GENERATING-ENVELOPE",
+  "boundary": {
+    "closed": "Conditional entire-weight generating envelope for the declared repeated onsite word family.",
+    "no_new_negative_result": true,
+    "no_pdf": true,
+    "no_tier_change": true,
+    "not_closed": "Actual Q3 word incidence, analytic domain, all-bond recurrence, volume uniformity, exhaustion Cauchy, common alpha, KMS, gap, continuum, C6, Sector A, Pre-A and TECT production remain open."
+  },
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "exploration_id": "EXP-001032",
+  "lean": {
+    "command": "lake env lean Tect/R216.lean",
+    "output": "",
+    "returncode": 0,
+    "status": "PASS"
+  },
+  "provenance": {
+    "independent_sha256": "5a3b22f7f1463ef037d91864e68d1b05c75c892c6ec91e6515bfc6c411ae78b3",
+    "lean_sha256": "a8d8e01c8ab6845f1926e82fdee31bc7fb485732af72e585393b4bbeb9b68371",
+    "manifest_sha256": "a6f3b9359ec77c8335b69cd4d98794e7db4dacdbdc4352ee4d06aa0c4c6cfac9",
+    "primary_sha256": "6ef54b559d98258983cd45ca8c54989f2c6fdcdf31d5136a0243df5a2e699142"
+  },
+  "recorded_at": "2026-08-23T22:05:53.398192Z",
+  "run_kind": "integrated",
+  "schema": "tect/foundation-audit/1.0",
+  "task_id": "T-054",
+  "verdict": "PASS"
+}
