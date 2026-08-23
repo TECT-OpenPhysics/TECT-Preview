@@ -1,0 +1,825 @@
+{
+  "schema": "tect/a8-classii-decoupled-nelson-independent-result/1.0",
+  "claim_id": "A8-CLASSII-DECOUPLED-NELSON-BOUND",
+  "script_version": "1.0.0",
+  "verdict": "A8-CLASSII-DECOUPLED-NELSON-INDEPENDENT-PASS",
+  "manifest_sha256": "30c718bb7d0c03e596a389d1870f600c9a895736ae87b793beca1d59177fa382",
+  "config": {
+    "seed": 20260731,
+    "coefficient_samples": 2048,
+    "determinant_cutoff": 3,
+    "determinant_p": 2.0,
+    "p_values": [
+      1.25,
+      2.0,
+      4.0
+    ],
+    "quadrature_orders": [
+      128,
+      160
+    ],
+    "regulator_multiplier_bound": 1.0
+  },
+  "config_sha256": "717356eae0753eeb1a98d4b6d3d06efd7a224361500ab60198eff435e3e48369",
+  "derived": {
+    "coefficients": {
+      "a": 0.004499999999998875,
+      "b": 0.0018749999999995311,
+      "c": 0.002343749999999414,
+      "Q_eigenvalues": [
+        0.0012590115009260615,
+        0.005584738499072227
+      ]
+    },
+    "symbol_coercivity": {
+      "stationary_k2": 0.6403987464328916,
+      "c_symbol": 0.10836453058711468,
+      "dense_minimum": 0.10836453058763539
+    },
+    "beta_B": 0.2564999999999359,
+    "sample_max_B_over_rho": 0.06256390265588728,
+    "lattice_upper": 1752.0684950182842,
+    "trace_ideal_constant": 36.426447977732074,
+    "nelson_quartic_constant": 0.5991444929904363,
+    "determinant": {
+      "cutoff": 3,
+      "trace": 21.631153893688072,
+      "hs_squared": 0.5878334390218125,
+      "log_moment_eigen": 0.5630720364295175,
+      "log_moment_slogdet": 0.5630720364295303,
+      "half_hs_bound": 0.5878334390218125
+    },
+    "p_bounds": [
+      {
+        "p": 1.25,
+        "quartic": 1.0705382702975565,
+        "sextic": 0.3375000000000001,
+        "rho_star": 2.114643496884062,
+        "pointwise_maximum": 1.5957147699140743
+      },
+      {
+        "p": 2.0,
+        "quartic": 2.611577971961745,
+        "sextic": 0.54,
+        "rho_star": 3.2241703357552405,
+        "pointwise_maximum": 9.0493565051038
+      },
+      {
+        "p": 4.0,
+        "quartic": 10.01631188784698,
+        "sextic": 1.08,
+        "rho_star": 6.182908572745049,
+        "pointwise_maximum": 127.63572029478195
+      }
+    ],
+    "toy_negative_control": {
+      "rows": [
+        {
+          "order": 128,
+          "decoupled": 0.7045728065436849,
+          "self_coupled": 0.7154233124283766,
+          "absolute_difference": 0.010850505884691719
+        },
+        {
+          "order": 160,
+          "decoupled": 0.7046194679221599,
+          "self_coupled": 0.7154536291346767,
+          "absolute_difference": 0.01083416121251679
+        }
+      ],
+      "minimum_absolute_difference": 0.01083416121251679,
+      "order_spread": 1.63446721749283e-05
+    },
+    "divergence": {
+      "sites": 5,
+      "dimension": 30,
+      "finite_difference_step": 0.0001,
+      "even_errors": [
+        1.3278267374516872e-13,
+        4.798383912429927e-13,
+        3.377298440909726e-13,
+        2.2359891715950653e-13
+      ],
+      "asymmetric_gaps": [
+        0.2404766861725669,
+        0.09494365062418808,
+        0.09707833905382035,
+        0.20976527793695254
+      ],
+      "even_same_point_kernel": 8.673617379884035e-19,
+      "asymmetric_same_point_kernel": 0.41500600999557163
+    }
+  },
+  "assertions": [
+    {
+      "name": "independent_A1_hash_matches",
+      "status": "PASS",
+      "actual": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565",
+      "expected": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565"
+    },
+    {
+      "name": "independent_A7_hash_matches",
+      "status": "PASS",
+      "actual": "4e14817d1928d54fa15e5871e506870d51c0b49baee5407c24200b2a726c5607",
+      "expected": "4e14817d1928d54fa15e5871e506870d51c0b49baee5407c24200b2a726c5607"
+    },
+    {
+      "name": "independent_QII_positive",
+      "status": "PASS",
+      "actual": [
+        0.0012590115009260615,
+        0.005584738499072227
+      ],
+      "expected": ">0"
+    },
+    {
+      "name": "independent_symbol_coercivity_reconstructs",
+      "status": "PASS",
+      "actual": {
+        "analytic": 0.10836453058711468,
+        "dense": 0.10836453058763539,
+        "stationary": 0.6403987464328916
+      },
+      "expected": 1e-08
+    },
+    {
+      "name": "independent_supnorm_shell_count_is_exact",
+      "status": "PASS",
+      "actual": [
+        [
+          26,
+          26
+        ],
+        [
+          98,
+          98
+        ],
+        [
+          218,
+          218
+        ],
+        [
+          386,
+          386
+        ],
+        [
+          602,
+          602
+        ],
+        [
+          866,
+          866
+        ],
+        [
+          1178,
+          1178
+        ],
+        [
+          1538,
+          1538
+        ],
+        [
+          1946,
+          1946
+        ],
+        [
+          2402,
+          2402
+        ],
+        [
+          2906,
+          2906
+        ],
+        [
+          3458,
+          3458
+        ],
+        [
+          4058,
+          4058
+        ],
+        [
+          4706,
+          4706
+        ],
+        [
+          5402,
+          5402
+        ],
+        [
+          6146,
+          6146
+        ],
+        [
+          6938,
+          6938
+        ],
+        [
+          7778,
+          7778
+        ],
+        [
+          8666,
+          8666
+        ],
+        [
+          9602,
+          9602
+        ],
+        [
+          10586,
+          10586
+        ],
+        [
+          11618,
+          11618
+        ],
+        [
+          12698,
+          12698
+        ],
+        [
+          13826,
+          13826
+        ],
+        [
+          15002,
+          15002
+        ],
+        [
+          16226,
+          16226
+        ],
+        [
+          17498,
+          17498
+        ],
+        [
+          18818,
+          18818
+        ],
+        [
+          20186,
+          20186
+        ],
+        [
+          21602,
+          21602
+        ],
+        [
+          23066,
+          23066
+        ],
+        [
+          24578,
+          24578
+        ],
+        [
+          26138,
+          26138
+        ],
+        [
+          27746,
+          27746
+        ],
+        [
+          29402,
+          29402
+        ],
+        [
+          31106,
+          31106
+        ],
+        [
+          32858,
+          32858
+        ],
+        [
+          34658,
+          34658
+        ],
+        [
+          36506,
+          36506
+        ],
+        [
+          38402,
+          38402
+        ],
+        [
+          40346,
+          40346
+        ],
+        [
+          42338,
+          42338
+        ],
+        [
+          44378,
+          44378
+        ],
+        [
+          46466,
+          46466
+        ],
+        [
+          48602,
+          48602
+        ],
+        [
+          50786,
+          50786
+        ],
+        [
+          53018,
+          53018
+        ],
+        [
+          55298,
+          55298
+        ],
+        [
+          57626,
+          57626
+        ],
+        [
+          60002,
+          60002
+        ],
+        [
+          62426,
+          62426
+        ],
+        [
+          64898,
+          64898
+        ],
+        [
+          67418,
+          67418
+        ],
+        [
+          69986,
+          69986
+        ],
+        [
+          72602,
+          72602
+        ],
+        [
+          75266,
+          75266
+        ],
+        [
+          77978,
+          77978
+        ],
+        [
+          80738,
+          80738
+        ],
+        [
+          83546,
+          83546
+        ],
+        [
+          86402,
+          86402
+        ],
+        [
+          89306,
+          89306
+        ],
+        [
+          92258,
+          92258
+        ],
+        [
+          95258,
+          95258
+        ],
+        [
+          98306,
+          98306
+        ],
+        [
+          101402,
+          101402
+        ],
+        [
+          104546,
+          104546
+        ],
+        [
+          107738,
+          107738
+        ],
+        [
+          110978,
+          110978
+        ],
+        [
+          114266,
+          114266
+        ],
+        [
+          117602,
+          117602
+        ],
+        [
+          120986,
+          120986
+        ],
+        [
+          124418,
+          124418
+        ],
+        [
+          127898,
+          127898
+        ],
+        [
+          131426,
+          131426
+        ],
+        [
+          135002,
+          135002
+        ],
+        [
+          138626,
+          138626
+        ],
+        [
+          142298,
+          142298
+        ],
+        [
+          146018,
+          146018
+        ],
+        [
+          149786,
+          149786
+        ],
+        [
+          153602,
+          153602
+        ],
+        [
+          157466,
+          157466
+        ],
+        [
+          161378,
+          161378
+        ],
+        [
+          165338,
+          165338
+        ],
+        [
+          169346,
+          169346
+        ],
+        [
+          173402,
+          173402
+        ],
+        [
+          177506,
+          177506
+        ],
+        [
+          181658,
+          181658
+        ],
+        [
+          185858,
+          185858
+        ],
+        [
+          190106,
+          190106
+        ],
+        [
+          194402,
+          194402
+        ],
+        [
+          198746,
+          198746
+        ],
+        [
+          203138,
+          203138
+        ],
+        [
+          207578,
+          207578
+        ],
+        [
+          212066,
+          212066
+        ],
+        [
+          216602,
+          216602
+        ],
+        [
+          221186,
+          221186
+        ],
+        [
+          225818,
+          225818
+        ],
+        [
+          230498,
+          230498
+        ],
+        [
+          235226,
+          235226
+        ],
+        [
+          240002,
+          240002
+        ],
+        [
+          244826,
+          244826
+        ],
+        [
+          249698,
+          249698
+        ],
+        [
+          254618,
+          254618
+        ],
+        [
+          259586,
+          259586
+        ],
+        [
+          264602,
+          264602
+        ],
+        [
+          269666,
+          269666
+        ],
+        [
+          274778,
+          274778
+        ],
+        [
+          279938,
+          279938
+        ],
+        [
+          285146,
+          285146
+        ],
+        [
+          290402,
+          290402
+        ],
+        [
+          295706,
+          295706
+        ],
+        [
+          301058,
+          301058
+        ],
+        [
+          306458,
+          306458
+        ],
+        [
+          311906,
+          311906
+        ],
+        [
+          317402,
+          317402
+        ],
+        [
+          322946,
+          322946
+        ],
+        [
+          328538,
+          328538
+        ],
+        [
+          334178,
+          334178
+        ],
+        [
+          339866,
+          339866
+        ],
+        [
+          345602,
+          345602
+        ],
+        [
+          351386,
+          351386
+        ],
+        [
+          357218,
+          357218
+        ],
+        [
+          363098,
+          363098
+        ],
+        [
+          369026,
+          369026
+        ],
+        [
+          375002,
+          375002
+        ],
+        [
+          381026,
+          381026
+        ],
+        [
+          387098,
+          387098
+        ],
+        [
+          393218,
+          393218
+        ]
+      ],
+      "expected": "equal"
+    },
+    {
+      "name": "independent_lattice_upper_is_finite",
+      "status": "PASS",
+      "actual": 1752.0684950182842,
+      "expected": "finite >1"
+    },
+    {
+      "name": "sampled_independent_complex_row_B_is_PSD",
+      "status": "PASS",
+      "actual": -1.4980291977723606e-16,
+      "expected": ">=-tolerance"
+    },
+    {
+      "name": "sampled_independent_beta_rho_bound_holds",
+      "status": "PASS",
+      "actual": {
+        "maximum_ratio": 0.06256390265588728,
+        "beta": 0.2564999999999359
+      },
+      "expected": "ratio<=beta"
+    },
+    {
+      "name": "independent_det2_eigen_and_slogdet_routes_agree",
+      "status": "PASS",
+      "actual": {
+        "cutoff": 3,
+        "trace": 21.631153893688072,
+        "hs_squared": 0.5878334390218125,
+        "log_moment_eigen": 0.5630720364295175,
+        "log_moment_slogdet": 0.5630720364295303,
+        "half_hs_bound": 0.5878334390218125
+      },
+      "expected": 1e-10
+    },
+    {
+      "name": "independent_det2_HS_bound_holds",
+      "status": "PASS",
+      "actual": {
+        "cutoff": 3,
+        "trace": 21.631153893688072,
+        "hs_squared": 0.5878334390218125,
+        "log_moment_eigen": 0.5630720364295175,
+        "log_moment_slogdet": 0.5630720364295303,
+        "half_hs_bound": 0.5878334390218125
+      },
+      "expected": "0<=log<=p^2 HS^2/4"
+    },
+    {
+      "name": "independent_sextic_absorption_stationarity_is_exact",
+      "status": "PASS",
+      "actual": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "expected": 1e-12
+    },
+    {
+      "name": "independent_Nelson_bounds_are_finite",
+      "status": "PASS",
+      "actual": [
+        {
+          "p": 1.25,
+          "quartic": 1.0705382702975565,
+          "sextic": 0.3375000000000001,
+          "rho_star": 2.114643496884062,
+          "pointwise_maximum": 1.5957147699140743
+        },
+        {
+          "p": 2.0,
+          "quartic": 2.611577971961745,
+          "sextic": 0.54,
+          "rho_star": 3.2241703357552405,
+          "pointwise_maximum": 9.0493565051038
+        },
+        {
+          "p": 4.0,
+          "quartic": 10.01631188784698,
+          "sextic": 1.08,
+          "rho_star": 6.182908572745049,
+          "pointwise_maximum": 127.63572029478195
+        }
+      ],
+      "expected": "finite positive"
+    },
+    {
+      "name": "decoupled_and_self_coupled_toy_weights_are_stably_distinct",
+      "status": "PASS",
+      "actual": {
+        "rows": [
+          {
+            "order": 128,
+            "decoupled": 0.7045728065436849,
+            "self_coupled": 0.7154233124283766,
+            "absolute_difference": 0.010850505884691719
+          },
+          {
+            "order": 160,
+            "decoupled": 0.7046194679221599,
+            "self_coupled": 0.7154536291346767,
+            "absolute_difference": 0.01083416121251679
+          }
+        ],
+        "minimum_absolute_difference": 0.01083416121251679,
+        "order_spread": 1.63446721749283e-05
+      },
+      "expected": "minimum difference>0.0001 and order spread<5e-05"
+    },
+    {
+      "name": "full_B_Gaussian_divergence_identity_and_parity_negative_control",
+      "status": "PASS",
+      "actual": {
+        "sites": 5,
+        "dimension": 30,
+        "finite_difference_step": 0.0001,
+        "even_errors": [
+          1.3278267374516872e-13,
+          4.798383912429927e-13,
+          3.377298440909726e-13,
+          2.2359891715950653e-13
+        ],
+        "asymmetric_gaps": [
+          0.2404766861725669,
+          0.09494365062418808,
+          0.09707833905382035,
+          0.20976527793695254
+        ],
+        "even_same_point_kernel": 8.673617379884035e-19,
+        "asymmetric_same_point_kernel": 0.41500600999557163
+      },
+      "expected": "even identity passes and parity-breaking control fires"
+    },
+    {
+      "name": "self_coupling_interpolation_remains_named",
+      "status": "PASS",
+      "actual": "A7-CLASSII-SELF-COUPLING-INTERPOLATION",
+      "expected": "named"
+    }
+  ],
+  "assertion_summary": {
+    "passed": 15,
+    "total": 15
+  },
+  "failures": [],
+  "environment": {
+    "python": "3.12.9",
+    "numpy": "2.5.1",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "git_commit": "9ee923f200cb6726ee89f8d4658a21624a5550b0",
+    "deterministic": true
+  },
+  "not_closed_here": [
+    "the self-coupled A7 negative-exponential bound",
+    "the adapted Boue-Dupuis drift or smart-path interpolation estimate",
+    "a full three-component production Gibbs measure",
+    "proof that no additional interacting mass, orientation, or vacuum counterterm is required",
+    "rho_regularizer removal",
+    "asymmetric or component-split regulator universality",
+    "infinite volume, phase transition, BCC existence or selection",
+    "T6 or T7 status"
+  ]
+}

@@ -1,0 +1,615 @@
+{
+  "schema": "tect/a7-classii-renormalised-energy-primary-result/1.1",
+  "claim_id": "A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE",
+  "script_version": "1.0.1",
+  "verdict": "A7-CLASSII-RENORMALISED-ENERGY-PRIMARY-PASS",
+  "scope": "Fixed L=16 hash-pinned A1 production q^-4 Gaussian on three complex components in the six-real convention, fixed rho_regularizer=1e-12, positive production Q_II, embedded Pauli generators, common real-even uniformly bounded scalar Fourier multipliers converging pointwise to one with compact support or a uniform Schwartz tail, each regulator's exact derivative covariance subtraction, and exact Fourier convolution or sufficient de-aliasing.",
+  "run": {
+    "schema": "tect/a7-classii-renormalised-energy-run/1.0",
+    "role": "primary",
+    "manifest_sha256": "4e14817d1928d54fa15e5871e506870d51c0b49baee5407c24200b2a726c5607",
+    "script_sha256": "ee41cc4f8220b9b2951c52afc9d7229115c5af8a34c8839f8846485420f41a2b",
+    "script_version": "1.0.1",
+    "seed": {
+      "base": 20260720,
+      "conditional": 20260721,
+      "stability": 20260722
+    },
+    "config": {
+      "audit": {
+        "seed": 20260720,
+        "conditional_cutoff": 24,
+        "conditional_samples": 120000,
+        "conditional_z_score": 5.5,
+        "asymptotic_cutoffs": [
+          16,
+          32,
+          64,
+          128
+        ],
+        "asymptotic_relative_tolerance": 0.03,
+        "variance_cutoffs": [
+          16,
+          32,
+          64,
+          128
+        ],
+        "variance_reference_cutoff": 512,
+        "variance_tail_slope_interval": [
+          -1.8,
+          -0.6
+        ],
+        "variance_scheme_relative_tolerance": 0.02,
+        "determinant_cutoffs": [
+          8,
+          16,
+          32,
+          64
+        ],
+        "matrix_identity_tolerance": 1e-12
+      }
+    },
+    "config_sha256": "a765138375b956500af51a5c8d14ce8efc741b26894d340d75509bd3af762bb5"
+  },
+  "derived": {
+    "conditional_monte_carlo": {
+      "samples": 120000,
+      "mean": 0.030095637549069146,
+      "expected": 0.03008813325290964,
+      "standard_error": 4.2605330009199e-05,
+      "z_score": 0.17613514923801388,
+      "centered_mean": 7.504296159505097e-06
+    },
+    "counterterm_asymptotics": [
+      {
+        "cutoff": 16,
+        "exact_over_N": 0.0012744146286037803,
+        "target": 0.0012002006237778616,
+        "relative_error": 0.06183466610133554
+      },
+      {
+        "cutoff": 32,
+        "exact_over_N": 0.0012418236745327228,
+        "target": 0.0012002006237778616,
+        "relative_error": 0.034680077588898996
+      },
+      {
+        "cutoff": 64,
+        "exact_over_N": 0.001222165503532802,
+        "target": 0.0012002006237778616,
+        "relative_error": 0.018301006781517606
+      },
+      {
+        "cutoff": 128,
+        "exact_over_N": 0.0012114746410162084,
+        "target": 0.0012002006237778616,
+        "relative_error": 0.009393443908452244
+      }
+    ],
+    "centered_gradient_variance": {
+      "reference_cutoff": 512,
+      "reference": 0.0003367963520869462,
+      "rows": [
+        {
+          "cutoff": 16,
+          "cube": 0.00031817577227546794,
+          "cube_tail": 1.8620579811478243e-05,
+          "ball": 0.0003133765133821153,
+          "ball_tail": 2.34198387048309e-05,
+          "smooth": 0.0002931608198179077,
+          "smooth_tail": 4.3635532269038454e-05
+        },
+        {
+          "cutoff": 32,
+          "cube": 0.0003277179667382997,
+          "cube_tail": 9.078385348646476e-06,
+          "ball": 0.0003255465599946981,
+          "ball_tail": 1.1249792092248088e-05,
+          "smooth": 0.00031649406288672963,
+          "smooth_tail": 2.0302289200216546e-05
+        },
+        {
+          "cutoff": 64,
+          "cube": 0.00033253560740102137,
+          "cube_tail": 4.2607446859248125e-06,
+          "ball": 0.00033149785584163615,
+          "ball_tail": 5.298496245310024e-06,
+          "smooth": 0.00032711758763972234,
+          "smooth_tail": 9.678764447223836e-06
+        },
+        {
+          "cutoff": 128,
+          "cube": 0.00033496420021224206,
+          "cube_tail": 1.8321518747041162e-06,
+          "ball": 0.00033445569391782814,
+          "ball_tail": 2.340658169118037e-06,
+          "smooth": 0.00033228496596856535,
+          "smooth_tail": 4.511386118380824e-06
+        }
+      ],
+      "tail_slopes": {
+        "cube": -1.112719109912919,
+        "ball": -1.1054478394913634,
+        "smooth": -1.0890329779741486
+      },
+      "last_relative_spread": 0.013394996977925046
+    },
+    "gaussian_ibp_connections": {
+      "one_vertex": [
+        {
+          "internal_derivatives": 0,
+          "degree": -1,
+          "parity_zero": false,
+          "requires_counterterm": false
+        },
+        {
+          "internal_derivatives": 1,
+          "degree": 0,
+          "parity_zero": true,
+          "requires_counterterm": false
+        },
+        {
+          "internal_derivatives": 2,
+          "degree": 1,
+          "parity_zero": false,
+          "requires_counterterm": true
+        }
+      ],
+      "two_point": [
+        {
+          "derivative_derivative_bridges": 0,
+          "derivative_value_bridges": 4,
+          "covariance_monomial": {
+            "Q": 0,
+            "P_or_R": 4
+          },
+          "worst_fourier_decay": 3,
+          "locally_integrable_in_d3": true,
+          "bessel_radial_exponent_at_kappa_zero": 1
+        },
+        {
+          "derivative_derivative_bridges": 1,
+          "derivative_value_bridges": 2,
+          "covariance_monomial": {
+            "Q": 1,
+            "P_or_R": 2
+          },
+          "worst_fourier_decay": 2,
+          "locally_integrable_in_d3": true,
+          "bessel_radial_exponent_at_kappa_zero": 0
+        },
+        {
+          "derivative_derivative_bridges": 2,
+          "derivative_value_bridges": 0,
+          "covariance_monomial": {
+            "Q": 2,
+            "P_or_R": 0
+          },
+          "worst_fourier_decay": 1,
+          "locally_integrable_in_d3": true,
+          "bessel_radial_exponent_at_kappa_zero": -1
+        }
+      ]
+    },
+    "stability_threshold": {
+      "a": 0.004499999999998875,
+      "b": 0.0018749999999995311,
+      "c": 0.002343749999999414,
+      "h": 0.09534374999997615,
+      "d": 0.018281249999995426,
+      "random_ratio_max": 0.09525057632513709,
+      "near_zero_doublet_ratio": 0.09534374999814803,
+      "residual_identity_max_error": 3.3306690738754696e-16,
+      "below_threshold": 0.09439031249997638,
+      "mixed_orientation": 0.02607692307692318,
+      "escaping_coefficient": 1.2431358173073911e-05,
+      "negative_energy_over_t_3_2": -3.246714501784495e-08,
+      "family_mass_slope": 0.0030889442288279433
+    },
+    "plane_wave_negative_control": {
+      "max_abs_J": 2.220446049250313e-16,
+      "max_abs_K": 4.440892098500626e-16,
+      "W": 0.05348571428570664
+    },
+    "frozen_background_determinant": {
+      "rows": [
+        {
+          "cutoff": 8,
+          "leading_density": 0.010511153622163302,
+          "logdet_density": 0.010418467269943789,
+          "normal_ordered_log_partition": 9.268635221951378e-05,
+          "half_hs_bound": 9.512912560457171e-05
+        },
+        {
+          "cutoff": 16,
+          "leading_density": 0.02039063405766047,
+          "logdet_density": 0.020292192033497792,
+          "normal_ordered_log_partition": 9.844202416267947e-05,
+          "half_hs_bound": 0.00010089063317702683
+        },
+        {
+          "cutoff": 32,
+          "leading_density": 0.03973835758504704,
+          "logdet_density": 0.039637048694359196,
+          "normal_ordered_log_partition": 0.00010130889068784427,
+          "half_hs_bound": 0.0001037582378959594
+        },
+        {
+          "cutoff": 64,
+          "leading_density": 0.0782185922261,
+          "logdet_density": 0.07811583565134174,
+          "normal_ordered_log_partition": 0.00010275657475826427,
+          "half_hs_bound": 0.00010520601670824829
+        }
+      ]
+    }
+  },
+  "analytic_result": {
+    "counterterm": "C_Lambda(X)=E[e_II,Lambda(x)|X_Lambda(x)=X]=one half sum_i Tr[B(X) Gamma_Lambda,i]",
+    "composite": "e_II,Lambda-C_Lambda(X_Lambda) is the covariance-normal-ordered joint definition of J^2, J*K, and K^2",
+    "regularity": "the exact finite Gaussian-IBP identity leaves Q^2, QPR, and P^2R^2; the worst Bessel-weighted Fourier convolution is <k>^-1, yielding H^(-1-kappa) control",
+    "measure_gate": "uniform negative-exponential integrability is not implied by L2 composite convergence"
+  },
+  "assertions": [
+    {
+      "name": "production_manifest_hash_matches",
+      "status": "PASS",
+      "actual": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565",
+      "expected": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565"
+    },
+    {
+      "name": "a6_uv_source_hash_matches",
+      "status": "PASS",
+      "actual": "2537c71312d214d9d8f3a043194cc50f99131dba7b35f4e7f2bc20b596dcc15c",
+      "expected": "2537c71312d214d9d8f3a043194cc50f99131dba7b35f4e7f2bc20b596dcc15c"
+    },
+    {
+      "name": "rho_floor_is_fixed_positive",
+      "status": "PASS",
+      "actual": 1e-12,
+      "expected": ">0"
+    },
+    {
+      "name": "ClassII_coefficient_matrix_is_positive",
+      "status": "PASS",
+      "actual": [
+        0.0012590115009260615,
+        0.005584738499072227
+      ],
+      "expected": "positive"
+    },
+    {
+      "name": "real_quadratic_matrix_matches_direct_currents",
+      "status": "PASS",
+      "actual": 8.881784197001252e-16,
+      "expected": 1e-12
+    },
+    {
+      "name": "field_dependent_derivative_matrix_is_positive_semidefinite",
+      "status": "PASS",
+      "actual": -1.0529074344285136e-16,
+      "expected": ">=-1e-13"
+    },
+    {
+      "name": "real_and_complex_counterterm_formulas_agree",
+      "status": "PASS",
+      "actual": 0.0,
+      "expected": "<1e-14"
+    },
+    {
+      "name": "conditional_Gaussian_mean_matches_exact_counterterm",
+      "status": "PASS",
+      "actual": {
+        "samples": 120000,
+        "mean": 0.030095637549069146,
+        "expected": 0.03008813325290964,
+        "standard_error": 4.2605330009199e-05,
+        "z_score": 0.17613514923801388,
+        "centered_mean": 7.504296159505097e-06
+      },
+      "expected": "z<5.5"
+    },
+    {
+      "name": "covariance_normal_ordering_centres_the_density",
+      "status": "PASS",
+      "actual": 7.504296159505097e-06,
+      "expected": "within MC uncertainty of zero"
+    },
+    {
+      "name": "exact_counterterm_recovers_delta_N_W",
+      "status": "PASS",
+      "actual": {
+        "cutoff": 128,
+        "exact_over_N": 0.0012114746410162084,
+        "target": 0.0012002006237778616,
+        "relative_error": 0.009393443908452244
+      },
+      "expected": 0.03
+    },
+    {
+      "name": "counterterm_is_field_dependent_not_vacuum_scalar",
+      "status": "PASS",
+      "actual": [
+        0.07409109374999065,
+        0.05827782595692432
+      ],
+      "expected": "distinct"
+    },
+    {
+      "name": "cube_centered_gradient_variance_has_N_minus_1_tail",
+      "status": "PASS",
+      "actual": -1.112719109912919,
+      "expected": [
+        -1.8,
+        -0.6
+      ]
+    },
+    {
+      "name": "ball_centered_gradient_variance_has_N_minus_1_tail",
+      "status": "PASS",
+      "actual": -1.1054478394913634,
+      "expected": [
+        -1.8,
+        -0.6
+      ]
+    },
+    {
+      "name": "smooth_centered_gradient_variance_has_N_minus_1_tail",
+      "status": "PASS",
+      "actual": -1.0890329779741486,
+      "expected": [
+        -1.8,
+        -0.6
+      ]
+    },
+    {
+      "name": "common_regulators_approach_same_Hilbert_Schmidt_limit",
+      "status": "PASS",
+      "actual": 0.013394996977925046,
+      "expected": 0.02
+    },
+    {
+      "name": "one_vertex_pair_enumeration_is_exhaustive",
+      "status": "PASS",
+      "actual": [
+        {
+          "internal_derivatives": 0,
+          "degree": -1,
+          "parity_zero": false,
+          "requires_counterterm": false
+        },
+        {
+          "internal_derivatives": 1,
+          "degree": 0,
+          "parity_zero": true,
+          "requires_counterterm": false
+        },
+        {
+          "internal_derivatives": 2,
+          "degree": 1,
+          "parity_zero": false,
+          "requires_counterterm": true
+        }
+      ],
+      "expected": "all value/mixed/derivative pairs"
+    },
+    {
+      "name": "only_local_derivative_pair_requires_counterterm",
+      "status": "PASS",
+      "actual": [
+        2
+      ],
+      "expected": [
+        2
+      ]
+    },
+    {
+      "name": "Gaussian_IBP_connection_families_are_exhaustive",
+      "status": "PASS",
+      "actual": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "expected": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ]
+      ]
+    },
+    {
+      "name": "only_Q_squared_family_is_Hminus1_logarithmic",
+      "status": "PASS",
+      "actual": [
+        1,
+        0,
+        -1
+      ],
+      "expected": "one radial r^-1 endpoint"
+    },
+    {
+      "name": "sharp_running_mass_threshold_is_h",
+      "status": "PASS",
+      "actual": {
+        "random_max": 0.09525057632513709,
+        "near_limit": 0.09534374999814803,
+        "h": 0.09534374999997615
+      },
+      "expected": "sup W/s=h"
+    },
+    {
+      "name": "critical_mass_residual_identity_is_nonnegative",
+      "status": "PASS",
+      "actual": 3.3306690738754696e-16,
+      "expected": "<2e-14"
+    },
+    {
+      "name": "every_subcritical_mass_has_mixed_orientation_escape",
+      "status": "PASS",
+      "actual": {
+        "coefficient": 1.2431358173073911e-05,
+        "energy_scale": -3.246714501784495e-08
+      },
+      "expected": "positive escape coefficient and negative t^(3/2) energy"
+    },
+    {
+      "name": "production_family_mass_shift_slope_is_positive",
+      "status": "PASS",
+      "actual": 0.0030889442288279433,
+      "expected": ">0"
+    },
+    {
+      "name": "common_phase_plane_wave_is_exact_ClassII_null",
+      "status": "PASS",
+      "actual": {
+        "max_abs_J": 2.220446049250313e-16,
+        "max_abs_K": 4.440892098500626e-16,
+        "W": 0.05348571428570664
+      },
+      "expected": "J=K=0"
+    },
+    {
+      "name": "ClassII_null_plane_wave_has_positive_W",
+      "status": "PASS",
+      "actual": 0.05348571428570664,
+      "expected": ">0"
+    },
+    {
+      "name": "frozen_background_normal_ordered_determinant_is_positive",
+      "status": "PASS",
+      "actual": [
+        {
+          "cutoff": 8,
+          "leading_density": 0.010511153622163302,
+          "logdet_density": 0.010418467269943789,
+          "normal_ordered_log_partition": 9.268635221951378e-05,
+          "half_hs_bound": 9.512912560457171e-05
+        },
+        {
+          "cutoff": 16,
+          "leading_density": 0.02039063405766047,
+          "logdet_density": 0.020292192033497792,
+          "normal_ordered_log_partition": 9.844202416267947e-05,
+          "half_hs_bound": 0.00010089063317702683
+        },
+        {
+          "cutoff": 32,
+          "leading_density": 0.03973835758504704,
+          "logdet_density": 0.039637048694359196,
+          "normal_ordered_log_partition": 0.00010130889068784427,
+          "half_hs_bound": 0.0001037582378959594
+        },
+        {
+          "cutoff": 64,
+          "leading_density": 0.0782185922261,
+          "logdet_density": 0.07811583565134174,
+          "normal_ordered_log_partition": 0.00010275657475826427,
+          "half_hs_bound": 0.00010520601670824829
+        }
+      ],
+      "expected": ">=0"
+    },
+    {
+      "name": "frozen_background_determinant_is_Hilbert_Schmidt_bounded",
+      "status": "PASS",
+      "actual": [
+        {
+          "cutoff": 8,
+          "leading_density": 0.010511153622163302,
+          "logdet_density": 0.010418467269943789,
+          "normal_ordered_log_partition": 9.268635221951378e-05,
+          "half_hs_bound": 9.512912560457171e-05
+        },
+        {
+          "cutoff": 16,
+          "leading_density": 0.02039063405766047,
+          "logdet_density": 0.020292192033497792,
+          "normal_ordered_log_partition": 9.844202416267947e-05,
+          "half_hs_bound": 0.00010089063317702683
+        },
+        {
+          "cutoff": 32,
+          "leading_density": 0.03973835758504704,
+          "logdet_density": 0.039637048694359196,
+          "normal_ordered_log_partition": 0.00010130889068784427,
+          "half_hs_bound": 0.0001037582378959594
+        },
+        {
+          "cutoff": 64,
+          "leading_density": 0.0782185922261,
+          "logdet_density": 0.07811583565134174,
+          "normal_ordered_log_partition": 0.00010275657475826427,
+          "half_hs_bound": 0.00010520601670824829
+        }
+      ],
+      "expected": "remainder <= half HS bound"
+    },
+    {
+      "name": "frozen_background_determinant_remainder_is_Cauchy_directed",
+      "status": "PASS",
+      "actual": [
+        5.755671943165688e-06,
+        2.8668665251647962e-06,
+        1.4476840704200078e-06
+      ],
+      "expected": "positive shrinking increments"
+    },
+    {
+      "name": "Gibbs_exponential_bound_remains_explicitly_excluded",
+      "status": "PASS",
+      "actual": [
+        "Nelson or Boue-Dupuis uniform negative-exponential estimate",
+        "uniform integrability or L1 convergence of interacting Gibbs weights",
+        "full three-component constructive Gibbs measure",
+        "classification or tightness of the full-field bare law",
+        "rho_regularizer removal",
+        "arbitrary component-split or asymmetric regulators",
+        "infinite-volume limit or phase transition",
+        "BCC existence, stability, or selection",
+        "T6 or T7 theorem status"
+      ],
+      "expected": "explicit exclusion"
+    }
+  ],
+  "assertion_summary": {
+    "passed": 29,
+    "total": 29
+  },
+  "failures": [],
+  "environment": {
+    "python": "3.12.9",
+    "numpy": "2.5.1",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "git_commit": "9ee923f200cb6726ee89f8d4658a21624a5550b0",
+    "deterministic": true
+  },
+  "not_closed_here": [
+    "Nelson or Boue-Dupuis uniform negative-exponential estimate",
+    "uniform integrability or L1 convergence of interacting Gibbs weights",
+    "full three-component constructive Gibbs measure",
+    "classification or tightness of the full-field bare law",
+    "rho_regularizer removal",
+    "arbitrary component-split or asymmetric regulators",
+    "infinite-volume limit or phase transition",
+    "BCC existence, stability, or selection",
+    "T6 or T7 theorem status"
+  ]
+}

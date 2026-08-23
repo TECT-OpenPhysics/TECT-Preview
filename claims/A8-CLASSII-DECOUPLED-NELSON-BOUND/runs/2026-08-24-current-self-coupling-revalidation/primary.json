@@ -1,0 +1,423 @@
+{
+  "schema": "tect/a8-classii-decoupled-nelson-primary-result/1.0",
+  "claim_id": "A8-CLASSII-DECOUPLED-NELSON-BOUND",
+  "script_version": "1.0.0",
+  "verdict": "A8-CLASSII-DECOUPLED-NELSON-PRIMARY-PASS",
+  "manifest_sha256": "30c718bb7d0c03e596a389d1870f600c9a895736ae87b793beca1d59177fa382",
+  "config": {
+    "seed": 20260720,
+    "coefficient_samples": 2048,
+    "lattice_cutoffs": [
+      2,
+      4,
+      8,
+      16
+    ],
+    "operator_cutoff": 1,
+    "coefficient_modulation": 0.25,
+    "determinant_p": 2.0,
+    "p_values": [
+      1.25,
+      2.0,
+      4.0
+    ],
+    "regulator_multiplier_bound": 1.0
+  },
+  "config_sha256": "2dc50bc7381aec9b5d3acc42b4f9a70fe15a38ec039c1c60d1380941f9e1b8ac",
+  "derived": {
+    "coefficients": {
+      "a": 0.004499999999998875,
+      "b": 0.0018749999999995311,
+      "c": 0.002343749999999414,
+      "Q_eigenvalues": [
+        0.0012590115009260615,
+        0.005584738499072227
+      ]
+    },
+    "internal_mass_eigenvalues": [
+      0.02811617233511541,
+      0.02811617233511541,
+      0.16519715288082723,
+      0.16519715288082723,
+      0.20668667478405733,
+      0.20668667478405733
+    ],
+    "symbol_coercivity": {
+      "stationary_k2": 0.6403987464328916,
+      "c_symbol": 0.10836453058711468,
+      "zero_ratio": 0.4740336473,
+      "stationary_ratio": 0.10836453058711468,
+      "infinity_ratio": 1.0
+    },
+    "beta_B": 0.2564999999999359,
+    "sample_max_B_over_rho": 0.06255964069227328,
+    "lattice_sum": {
+      "upper": 1752.0684950182842,
+      "partials": [
+        {
+          "cutoff": 2,
+          "partial_sum": 40.27273816007409
+        },
+        {
+          "cutoff": 4,
+          "partial_sum": 78.04377905836036
+        },
+        {
+          "cutoff": 8,
+          "partial_sum": 113.47401291907434
+        },
+        {
+          "cutoff": 16,
+          "partial_sum": 136.66698580455068
+        }
+      ]
+    },
+    "trace_ideal_constant": 36.426447977732074,
+    "nelson_quartic_constant": 0.5991444929904363,
+    "operator": {
+      "cutoff": 1,
+      "dimension": 162,
+      "modulation": 0.25,
+      "p": 2.0,
+      "symmetry_error": 3.469446951953614e-18,
+      "minimum_eigenvalue": -1.1813885181115419e-17,
+      "maximum_eigenvalue": 0.03859846312525297,
+      "trace": 1.5858716630892047,
+      "counterterm_direct": 0.7929358315446021,
+      "counterterm_spectral": 0.7929358315446023,
+      "counterterm_absolute_error": 2.220446049250313e-16,
+      "hs_squared": 0.04060194899394709,
+      "b_l2_squared": 7.439411834079142,
+      "hs_upper": 270.9913481590082,
+      "hs_ratio_to_upper": 0.00014982747334842326,
+      "det2_log_moment": 0.039055316860226466,
+      "det2_hs_upper": 0.04060194899394709
+    },
+    "p_bounds": [
+      {
+        "p": 1.25,
+        "quartic_coefficient": 1.0705382702975565,
+        "sextic_coefficient": 0.3375000000000001,
+        "rho_star": 2.114643496884062,
+        "pointwise_log_bound": 1.5957147699140743,
+        "volume_log_bound": 6536.0476975680485,
+        "grid_maximum": 1.5957147699140748
+      },
+      {
+        "p": 2.0,
+        "quartic_coefficient": 2.611577971961745,
+        "sextic_coefficient": 0.54,
+        "rho_star": 3.2241703357552405,
+        "pointwise_log_bound": 9.0493565051038,
+        "volume_log_bound": 37066.164244905165,
+        "grid_maximum": 9.049356505103798
+      },
+      {
+        "p": 4.0,
+        "quartic_coefficient": 10.01631188784698,
+        "sextic_coefficient": 1.08,
+        "rho_star": 6.182908572745049,
+        "pointwise_log_bound": 127.63572029478195,
+        "volume_log_bound": 522795.91032742686,
+        "grid_maximum": 127.63572029478189
+      }
+    ],
+    "theorem": {
+      "deterministic_background": "For every deterministic measurable PSD b in L2(T^3;R^(6x6)) and every p>0, E exp[-p Q_Lambda,b(Y)]=det_2(I+p T_Lambda,b)^(-1/2), where T_Lambda,b=(D R_Lambda C^(1/2))^* M_b(D R_Lambda C^(1/2))>=0 on the common white-noise space.",
+      "trace_ideal": "For a fixed regulator family with M_R=sup_(Lambda,k)|r_Lambda(k)|, sup_Lambda ||T_Lambda,b||_S2^2 <= C_A(M_R)||b||_L2^2, from the q^-4 symbol and sup_q sum_k <k>^-2<k-q>^-2<infinity.",
+      "determinant_bound": "log E exp[-p Q_Lambda,b] <= (p^2/4)||T_Lambda,b||_S2^2.",
+      "coefficient_bound": "B(z)>=0 and ||B(z)||_F <= beta_B |z|^2 with beta_B=12a+48|b|+48c.",
+      "nelson_bound": "For every fixed p>0, sup_Lambda E_(Z,Y) exp{-p[U_Lambda(Z)+Q_Lambda(Z,Y)]}<infinity.",
+      "full_sequence": "The decoupled actions converge in probability on the common product Gaussian space; the p>1 estimate gives L1 convergence of weights, partition convergence, total-variation convergence of lifted product-space densities, and weak convergence of the projected full-sequence laws.",
+      "finite_gaussian_divergence_identity": "For the original self-coupled finite cutoff, 2 V_Lambda^ren=delta_gamma b_Lambda with b_Lambda(xi)=C_Lambda^(1/2)D^*[B(X_Lambda)D X_Lambda]; the DB trace vanishes only because D_x C_Lambda(x,y)|_(y=x)=0 in the common-even class."
+    }
+  },
+  "assertions": [
+    {
+      "name": "A1_authority_hash_matches",
+      "status": "PASS",
+      "actual": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565",
+      "expected": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565"
+    },
+    {
+      "name": "A7_authority_hash_matches",
+      "status": "PASS",
+      "actual": "4e14817d1928d54fa15e5871e506870d51c0b49baee5407c24200b2a726c5607",
+      "expected": "4e14817d1928d54fa15e5871e506870d51c0b49baee5407c24200b2a726c5607"
+    },
+    {
+      "name": "production_ClassII_matrix_is_positive_definite",
+      "status": "PASS",
+      "actual": [
+        0.0012590115009260615,
+        0.005584738499072227
+      ],
+      "expected": ">0"
+    },
+    {
+      "name": "internal_mass_is_positive_semidefinite",
+      "status": "PASS",
+      "actual": [
+        0.02811617233511541,
+        0.02811617233511541,
+        0.16519715288082723,
+        0.16519715288082723,
+        0.20668667478405733,
+        0.20668667478405733
+      ],
+      "expected": ">=-tolerance"
+    },
+    {
+      "name": "q4_symbol_has_global_coercivity",
+      "status": "PASS",
+      "actual": {
+        "stationary_k2": 0.6403987464328916,
+        "c_symbol": 0.10836453058711468,
+        "zero_ratio": 0.4740336473,
+        "stationary_ratio": 0.10836453058711468,
+        "infinity_ratio": 1.0
+      },
+      "expected": ">0"
+    },
+    {
+      "name": "coercivity_stationary_point_is_a_minimum",
+      "status": "PASS",
+      "actual": {
+        "left": 0.10836453390103022,
+        "center": 0.10836453058711468,
+        "right": 0.10836453390022223
+      },
+      "expected": "center<=neighbors"
+    },
+    {
+      "name": "sampled_ClassII_coefficient_is_positive_semidefinite",
+      "status": "PASS",
+      "actual": -2.0507895700503158e-16,
+      "expected": ">=-tolerance"
+    },
+    {
+      "name": "sampled_ClassII_coefficient_obeys_derived_beta_rho_bound",
+      "status": "PASS",
+      "actual": {
+        "sample_max": 0.06255964069227328,
+        "beta": 0.2564999999999359
+      },
+      "expected": "sample_max<=beta"
+    },
+    {
+      "name": "lattice_Hminus2_sum_is_monotone",
+      "status": "PASS",
+      "actual": [
+        {
+          "cutoff": 2,
+          "partial_sum": 40.27273816007409
+        },
+        {
+          "cutoff": 4,
+          "partial_sum": 78.04377905836036
+        },
+        {
+          "cutoff": 8,
+          "partial_sum": 113.47401291907434
+        },
+        {
+          "cutoff": 16,
+          "partial_sum": 136.66698580455068
+        }
+      ],
+      "expected": "strictly increasing"
+    },
+    {
+      "name": "analytic_lattice_shell_bound_encloses_partial_sums",
+      "status": "PASS",
+      "actual": {
+        "rows": [
+          {
+            "cutoff": 2,
+            "partial_sum": 40.27273816007409
+          },
+          {
+            "cutoff": 4,
+            "partial_sum": 78.04377905836036
+          },
+          {
+            "cutoff": 8,
+            "partial_sum": 113.47401291907434
+          },
+          {
+            "cutoff": 16,
+            "partial_sum": 136.66698580455068
+          }
+        ],
+        "upper": 1752.0684950182842
+      },
+      "expected": "partial<upper"
+    },
+    {
+      "name": "variable_background_operator_is_self_adjoint",
+      "status": "PASS",
+      "actual": 3.469446951953614e-18,
+      "expected": 1e-11
+    },
+    {
+      "name": "variable_background_operator_is_positive",
+      "status": "PASS",
+      "actual": -1.1813885181115419e-17,
+      "expected": ">=-tolerance"
+    },
+    {
+      "name": "Schatten2_bound_encloses_variable_background",
+      "status": "PASS",
+      "actual": {
+        "cutoff": 1,
+        "dimension": 162,
+        "modulation": 0.25,
+        "p": 2.0,
+        "symmetry_error": 3.469446951953614e-18,
+        "minimum_eigenvalue": -1.1813885181115419e-17,
+        "maximum_eigenvalue": 0.03859846312525297,
+        "trace": 1.5858716630892047,
+        "counterterm_direct": 0.7929358315446021,
+        "counterterm_spectral": 0.7929358315446023,
+        "counterterm_absolute_error": 2.220446049250313e-16,
+        "hs_squared": 0.04060194899394709,
+        "b_l2_squared": 7.439411834079142,
+        "hs_upper": 270.9913481590082,
+        "hs_ratio_to_upper": 0.00014982747334842326,
+        "det2_log_moment": 0.039055316860226466,
+        "det2_hs_upper": 0.04060194899394709
+      },
+      "expected": "HS^2<=analytic upper"
+    },
+    {
+      "name": "counterterm_equals_one_half_operator_trace",
+      "status": "PASS",
+      "actual": 2.220446049250313e-16,
+      "expected": 1e-10
+    },
+    {
+      "name": "det2_log_moment_is_nonnegative",
+      "status": "PASS",
+      "actual": 0.039055316860226466,
+      "expected": ">=0"
+    },
+    {
+      "name": "det2_log_moment_obeys_HS_bound",
+      "status": "PASS",
+      "actual": {
+        "cutoff": 1,
+        "dimension": 162,
+        "modulation": 0.25,
+        "p": 2.0,
+        "symmetry_error": 3.469446951953614e-18,
+        "minimum_eigenvalue": -1.1813885181115419e-17,
+        "maximum_eigenvalue": 0.03859846312525297,
+        "trace": 1.5858716630892047,
+        "counterterm_direct": 0.7929358315446021,
+        "counterterm_spectral": 0.7929358315446023,
+        "counterterm_absolute_error": 2.220446049250313e-16,
+        "hs_squared": 0.04060194899394709,
+        "b_l2_squared": 7.439411834079142,
+        "hs_upper": 270.9913481590082,
+        "hs_ratio_to_upper": 0.00014982747334842326,
+        "det2_log_moment": 0.039055316860226466,
+        "det2_hs_upper": 0.04060194899394709
+      },
+      "expected": "log moment<=p^2 HS^2/4"
+    },
+    {
+      "name": "sextic_absorption_maximum_matches_direct_grid",
+      "status": "PASS",
+      "actual": 4.45356666061232e-16,
+      "expected": 1e-10
+    },
+    {
+      "name": "decoupled_Nelson_constants_are_finite_for_all_tested_p",
+      "status": "PASS",
+      "actual": [
+        {
+          "p": 1.25,
+          "quartic_coefficient": 1.0705382702975565,
+          "sextic_coefficient": 0.3375000000000001,
+          "rho_star": 2.114643496884062,
+          "pointwise_log_bound": 1.5957147699140743,
+          "volume_log_bound": 6536.0476975680485,
+          "grid_maximum": 1.5957147699140748
+        },
+        {
+          "p": 2.0,
+          "quartic_coefficient": 2.611577971961745,
+          "sextic_coefficient": 0.54,
+          "rho_star": 3.2241703357552405,
+          "pointwise_log_bound": 9.0493565051038,
+          "volume_log_bound": 37066.164244905165,
+          "grid_maximum": 9.049356505103798
+        },
+        {
+          "p": 4.0,
+          "quartic_coefficient": 10.01631188784698,
+          "sextic_coefficient": 1.08,
+          "rho_star": 6.182908572745049,
+          "pointwise_log_bound": 127.63572029478195,
+          "volume_log_bound": 522795.91032742686,
+          "grid_maximum": 127.63572029478189
+        }
+      ],
+      "expected": "finite positive"
+    },
+    {
+      "name": "full_sequence_decoupled_density_convergence_is_declared",
+      "status": "PASS",
+      "actual": [
+        "arbitrary deterministic spatial PSD-background det_2 identity and cutoff-uniform Schatten-2 bound",
+        "all fixed p>0 decoupled negative-exponential moments",
+        "full-sequence decoupled product-space weight and finite-volume measure convergence",
+        "exact finite-cutoff Gaussian-divergence identity for the self-coupled A7 composite"
+      ],
+      "expected": "declared"
+    },
+    {
+      "name": "self_coupled_A7_measure_remains_excluded",
+      "status": "PASS",
+      "actual": [
+        "the self-coupled A7 negative-exponential bound",
+        "the adapted Boue-Dupuis drift or smart-path interpolation estimate",
+        "a full three-component production Gibbs measure",
+        "proof that no additional interacting mass, orientation, or vacuum counterterm is required",
+        "rho_regularizer removal",
+        "asymmetric or component-split regulator universality",
+        "infinite volume, phase transition, BCC existence or selection",
+        "T6 or T7 status"
+      ],
+      "expected": "explicit exclusion"
+    },
+    {
+      "name": "adapted_drift_gate_is_named",
+      "status": "PASS",
+      "actual": "A7-CLASSII-SELF-COUPLING-INTERPOLATION",
+      "expected": "A7-CLASSII-SELF-COUPLING-INTERPOLATION"
+    }
+  ],
+  "assertion_summary": {
+    "passed": 21,
+    "total": 21
+  },
+  "failures": [],
+  "environment": {
+    "python": "3.12.9",
+    "numpy": "2.5.1",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "git_commit": "9ee923f200cb6726ee89f8d4658a21624a5550b0",
+    "deterministic": true
+  },
+  "not_closed_here": [
+    "the self-coupled A7 negative-exponential bound",
+    "the adapted Boue-Dupuis drift or smart-path interpolation estimate",
+    "a full three-component production Gibbs measure",
+    "proof that no additional interacting mass, orientation, or vacuum counterterm is required",
+    "rho_regularizer removal",
+    "asymmetric or component-split regulator universality",
+    "infinite volume, phase transition, BCC existence or selection",
+    "T6 or T7 status"
+  ]
+}

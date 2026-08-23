@@ -1,0 +1,137 @@
+{
+  "schema": "tect/sector-a-a7-a8-self-coupling-current-revalidation/1.0",
+  "exploration_id": "EXP-001022",
+  "prior_exploration_id": "EXP-000836",
+  "task_id": "T-054",
+  "claim_ids": [
+    "A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE",
+    "A8-CLASSII-DECOUPLED-NELSON-BOUND"
+  ],
+  "tier": "T0",
+  "claim_bearing": false,
+  "title": "Current dual-lane revalidation of the Sector-A fixed-floor energy and decoupled Nelson boundaries",
+  "question": "Do the current A7 fixed-floor covariance-normal energy composite and A8 deterministic-background decoupled Nelson theorem still reproduce their exact primary, independent, and integrated checks, and do those checks close the self-coupled A7 interpolation or full-field concentration gates?",
+  "run_summary": {
+    "a7_primary": "29/29 PASS",
+    "a7_independent": "17/17 PASS",
+    "a7_integrated": "74/74 PASS",
+    "a8_primary": "21/21 PASS",
+    "a8_independent": "15/15 PASS",
+    "a8_integrated": "54/54 PASS",
+    "fresh_canonical_authority_pins": true,
+    "stored_under_current_run_directories": true,
+    "pdf_issued": false,
+    "lean_crosscheck": "NOT-APPLICABLE: no new exact proposition was introduced; the existing executable dual lanes and pinned A7/A8 contracts were revalidated",
+    "new_result_ids": [],
+    "new_negative_ids": [],
+    "new_changelog_event": null,
+    "closed_subgates": [
+      "A7-CLASSII-FIXED-FLOOR-COVARIANCE-NORMAL-ENERGY-COMPOSITE",
+      "A8-CLASSII-DETERMINISTIC-PSD-BACKGROUND-DET2-AND-DECOUPLED-NELSON"
+    ],
+    "declared_open_gates": [
+      "A7-CLASSII-NELSON-EXPONENTIAL-BOUND",
+      "A7-CLASSII-SELF-COUPLING-INTERPOLATION",
+      "A6-CLASSII-FULL-FIELD-BARE-CONCENTRATION",
+      "A6-CLASSII-COUNTERTERM-CLOSURE"
+    ]
+  },
+  "qft_interface": {
+    "closed_interface": "The fixed-floor covariance-normal Class-II composite and the independent-carrier determinant/Schatten theorem remain reproducible finite constructive-measure inputs.",
+    "not_closed": "The coefficient and derivative fields in the physical A7 action are the same field. Conditioning on B(X) therefore cannot reuse the independent Gaussian determinant. No adapted Cameron-Martin drift estimate, smart-path positive-variation bound, self-coupled Nelson estimate, interacting Gibbs density convergence, or full-field bare concentration is proved.",
+    "tect_boundary": "These Sector-A estimates are constructive-measure prerequisites, not a QFT OS/KMS or TECT production-dynamics result. They supply no heat_root_incidence, canonical A1/R-192 owner, physical empty reference, C6, CP1, Pre-A or mass-gap closure."
+  },
+  "preserved_scope": {
+    "a7_fixed_floor_covariance_normal_composite": true,
+    "a7_joint_product_and_gaussian_ibp_scope": true,
+    "a7_deterministic_background_det2": true,
+    "a8_arbitrary_deterministic_psd_background": true,
+    "a8_cutoff_uniform_schatten_bound": true,
+    "a8_decoupled_negative_exponential_moments": true,
+    "a7_self_coupled_nelson": false,
+    "a7_adapted_drift": false,
+    "a7_smart_path": false,
+    "full_field_bare_concentration": false,
+    "rho_regularizer_removal": false,
+    "infinite_volume": false,
+    "phase_transition": false,
+    "Sector_A_complete": false,
+    "Pre_A_complete": false
+  },
+  "adversarial_review": [
+    {
+      "axis": "deterministic-background to self-coupled promotion",
+      "check": "A8 conditions on an independent derivative carrier; the physical A7 coefficient and derivative fields coincide, so the determinant cannot be reused after conditioning.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "Gaussian-divergence identity to exponentiation",
+      "check": "The exact finite self-coupled divergence identity identifies the remaining drift geometry but does not supply an adapted drift or smart-path estimate.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "pathwise coercivity threshold to Nelson failure",
+      "check": "The fixed-floor homogeneous subcritical boundary rejects a uniform pathwise lower bound, but Gaussian trace cancellation may still support an expectation estimate; no global Nelson no-go is claimed.",
+      "disposition": "DISMISSED"
+    },
+    {
+      "axis": "fresh PASS to interacting measure",
+      "check": "All six lanes passing revalidates the declared finite scopes only and does not imply uniform integrability, L1 density convergence, or full-field tightness.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "QFT-to-TECT promotion",
+      "check": "No heat_root_incidence or canonical A1/R-192 production map is present in these Sector-A runs.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "Lean promotion",
+      "check": "No new exact proposition was added; the current executable primary/independent lanes and pinned contracts are the applicable cross-check.",
+      "disposition": "NOT-APPLICABLE"
+    }
+  ],
+  "run_artifacts": {
+    "a7": {
+      "primary": {
+        "path": "claims/A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE/runs/2026-08-24-current-self-coupling-revalidation/primary.json",
+        "sha256": "d9c77c6a26225ae0d6ca6a37ee458b370f0e1a4b71540a7a77a39773485407a9"
+      },
+      "independent": {
+        "path": "claims/A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE/runs/2026-08-24-current-self-coupling-revalidation/independent.json",
+        "sha256": "3d40ff5854966988e99cd7c6ba5d6a3b8825d2a64e054996ffcd457de6291c94"
+      },
+      "integrated": {
+        "path": "claims/A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE/runs/2026-08-24-current-self-coupling-revalidation/integrated.json",
+        "sha256": "1d31162bc5de73595ee0be124d4966e8d0cb2231a63f51f6e55590dcbb5c23bd"
+      }
+    },
+    "a8": {
+      "primary": {
+        "path": "claims/A8-CLASSII-DECOUPLED-NELSON-BOUND/runs/2026-08-24-current-self-coupling-revalidation/primary.json",
+        "sha256": "ae297ac1173b118e317eb2426b1f20747ccd73b30ae3b3dd8c65395568c65318"
+      },
+      "independent": {
+        "path": "claims/A8-CLASSII-DECOUPLED-NELSON-BOUND/runs/2026-08-24-current-self-coupling-revalidation/independent.json",
+        "sha256": "686a0014d00aa4ff6b548f51657670c47483d0717bcf667961d340b8fec2ae37"
+      },
+      "integrated": {
+        "path": "claims/A8-CLASSII-DECOUPLED-NELSON-BOUND/runs/2026-08-24-current-self-coupling-revalidation/integrated.json",
+        "sha256": "719775168887aa084611dec744624b669901c3f8d4e72b13c2661b6ca77e71e0"
+      }
+    }
+  },
+  "formal_integration": {
+    "events": [],
+    "results": [],
+    "negatives": [],
+    "no_new_result": true,
+    "no_new_negative_ids": true,
+    "no_new_changelog_event": true,
+    "no_pdf": true
+  },
+  "next_action": "Attack A7-CLASSII-SELF-COUPLING-INTERPOLATION directly: either prove the adapted Cameron-Martin lower bound for every progressive drift or prove a uniform positive-variation smart-path estimate with the exact self-coupled coefficient. Keep the independent-carrier determinant as a deterministic-background lemma only, and retain A6 bare concentration and rho-floor removal as separate gates.",
+  "decision_reason": "The fresh six-lane audit confirms the finite Sector-A prerequisites and their exact scope, but the load-bearing self-coupling step is precisely the field-dependence omitted by A8. No honest tier change or gate closure is justified.",
+  "boundary": "T0 claim-nonbearing current revalidation only. It does not alter A7/A8 authorities or tiers, prove a self-coupled Nelson estimate, full constructive Gibbs measure, infinite volume, phase transition, BCC, QFT OS/KMS, physical empty space, C6, CP1, Sector A or Pre-A closure.",
+  "recorded_at": "2026-08-24T06:42:00Z",
+  "recorded_by": "Codex"
+}
