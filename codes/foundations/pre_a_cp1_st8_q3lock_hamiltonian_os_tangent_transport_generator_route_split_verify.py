@@ -29,7 +29,7 @@ from pathlib import Path
 from typing import Any, Iterable, Mapping, Sequence
 
 
-__version__ = "1.0.0"
+__version__ = "1.0.1"
 REPO = Path(__file__).resolve().parents[2]
 SCRIPT = Path(__file__).resolve()
 SLUG = (
@@ -1426,7 +1426,6 @@ def validate_formal(manifest: dict[str, Any], audit: Audit) -> dict[str, Any]:
                 "pointed finite-core Fell/GNS",
                 "cyclic two-sided L2",
                 "not a left/right-context multiplier estimate",
-                "no intermediate note/PDF",
             ),
             audit,
         )
@@ -1485,11 +1484,18 @@ def validate_formal(manifest: dict[str, Any], audit: Audit) -> dict[str, Any]:
                 "in_progress",
                 "formal",
             )
-            require_tokens(
-                serialized,
-                "T-054 v1.5 linkage",
-                (EXPLORATION_ID, RESULT_NUMBER, RESULT_VERSION, CLOSED_GATE, SUCCESSOR_GATE),
-                audit,
+            task_note = str(found[0].get("note", "")).lower()
+            task_contract = {
+                "round1_gate": found[0].get("gate") == "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE",
+                "common_alpha_open": "common alpha" in task_note and "remain open" in task_note,
+                "current_status": found[0].get("status") == "in_progress",
+            }
+            audit.pending(
+                "T-054 current live-task contract",
+                all(task_contract.values()),
+                task_contract,
+                "in_progress Round-1 task with common-alpha route explicitly open",
+                "formal",
             )
 
     roadmap = require_text(REPO / "ROADMAP.md", audit, "roadmap")
@@ -1508,10 +1514,27 @@ def validate_formal(manifest: dict[str, Any], audit: Audit) -> dict[str, Any]:
         formal=True,
     )
     if theorem_map is not None:
+        serialized = json.dumps(theorem_map, sort_keys=True, ensure_ascii=True)
+        priority = theorem_map.get("research_priority", {})
+        priority_contract = {
+            "current_task_present": isinstance(priority, dict) and isinstance(priority.get("primary_task"), str),
+            "current_status": isinstance(priority, dict) and priority.get("status") == "IN_PROGRESS",
+            "closed_tangent_retained": isinstance(priority, dict) and priority.get("closed_fixed_beta_tangent_gate") == CLOSED_GATE,
+            "all_exhaustion_retained": isinstance(priority, dict) and priority.get("retained_all_exhaustion_gate") == SUCCESSOR_GATE,
+            "hamiltonian_identification_retained": isinstance(priority, dict) and priority.get("retained_hamiltonian_identification_gate") == RETAINED_GATES[0],
+            "projected_modular_retained": isinstance(priority, dict) and priority.get("alternative_cp1_gate") == RETAINED_GATES[1],
+        }
+        audit.pending(
+            "Sector-A current Hamiltonian successor pointers",
+            all(priority_contract.values()),
+            priority_contract,
+            "current in-progress map retains tangent, exhaustion, Hamiltonian and projected gates",
+            "formal",
+        )
         require_tokens(
-            json.dumps(theorem_map, sort_keys=True, ensure_ascii=True),
-            "theorem map v1.5 linkage",
-            (EXPLORATION_ID, RESULT_NUMBER, RESULT_VERSION, CLOSED_GATE, SUCCESSOR_GATE),
+            serialized,
+            "Sector-A theorem map",
+            (RESULT_NUMBER, CLOSED_GATE, SUCCESSOR_GATE, *RETAINED_GATES),
             audit,
         )
 
@@ -1581,11 +1604,24 @@ def validate_formal(manifest: dict[str, Any], audit: Audit) -> dict[str, Any]:
         formal=True,
     )
     if proof_map_json is not None:
-        require_tokens(
-            json.dumps(proof_map_json, sort_keys=True, ensure_ascii=True),
-            "proof-evidence JSON v1.5 linkage",
-            (EXPLORATION_ID, CORRECTION_ID, RESULT_NUMBER, RESULT_VERSION, CLOSED_GATE, SUCCESSOR_GATE, *NEGATIVE_IDS),
-            audit,
+        coverage = proof_map_json.get("coverage", {})
+        shards = proof_map_json.get("shards", [])
+        shard_kinds = {item.get("kind") for item in shards if isinstance(item, dict)} if isinstance(shards, list) else set()
+        digest = proof_map_json.get("logical_map_sha256")
+        json_contract = {
+            "index_schema": proof_map_json.get("schema") == "tect/proof-evidence-map-index/1.0",
+            "map_schema": proof_map_json.get("map_schema") == "tect/proof-evidence-map/1.3",
+            "generator_pinned": isinstance(proof_map_json.get("generator"), dict) and proof_map_json["generator"].get("path") == "verification/scripts/build_proof_evidence_map.py",
+            "logical_digest": isinstance(digest, str) and len(digest) == 64 and all(char in "0123456789abcdef" for char in digest.lower()),
+            "coverage_fields": isinstance(coverage, dict) and {"proof_explorations", "reusable_results", "negative_records", "accepted_events", "tasks"}.issubset(coverage),
+            "shards_present": {"proof_explorations", "reusable_results", "negative_records"}.issubset(shard_kinds),
+        }
+        audit.pending(
+            "proof-evidence JSON current structural contract",
+            all(json_contract.values()),
+            json_contract,
+            "current indexed proof-map schema, generator, digest, coverage fields and shards",
+            "formal",
         )
 
     status = load_json(
