@@ -1,0 +1,145 @@
+{
+  "assertion_count": 25,
+  "assertions": [
+    {
+      "actual": "PRE-A-HYB-U1-CHARGED-SPECTRAL-COVARIANT",
+      "name": "manifest identity",
+      "pass": true
+    },
+    {
+      "actual": "False",
+      "name": "claim nonbearing",
+      "pass": true
+    },
+    {
+      "actual": "{'side': 4, 'lengths_from_a1': ['Lx', 'Ly', 'Lz'], 'sites_formula': 'side^3', 'gauge_group': 'U(1)', 'representation': 'R(exp(i theta))=exp(i theta) I_3', 'links': 'complex unit U(1) links on periodic oriented edges', 'transport': 'canonical positive-coordinate path transporter W_U(x,y)', 'derivative': 'D_i^U(x,y)=d_i(x-y) W_U(x,y) on the axis fiber; d_i is the A1 spectral Fourier kernel', 'laplacian': 'L_U=sum_i (D_i^U)^* D_i', 'quadratic_kernel': 'K_U=r I + Z L_U + Y L_U^2', 'shell_operator': 'sqrt(L_U)-q0 I when eta_shell is active', 'current': 'A1 J_A and K_A formulas with D_i^U; common U(1) phases cancel', 'action': 'A1 F_ref with covariant replacements and the source F_ref family/lock coefficients', 'test_seed': 1337}",
+      "name": "finite parent explicit",
+      "pass": true
+    },
+    {
+      "actual": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565",
+      "name": "authority a1_functional",
+      "pass": true
+    },
+    {
+      "actual": "641074df54492654177fc72dd66ecb2cb46a791390215ab521f725d77e622d14",
+      "name": "authority r192_manifest",
+      "pass": true
+    },
+    {
+      "actual": "8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af",
+      "name": "authority lean_toolchain",
+      "pass": true
+    },
+    {
+      "actual": "True",
+      "name": "A1 F_ref and F_decl remain explicit",
+      "pass": true
+    },
+    {
+      "actual": "4e29f22e964a04d1cb4aa78687d7cc95ba59dc9ed87f1cb59e7a14d73401b1b4",
+      "name": "artifact codes/foundations/pre_a_hyb_u1_charged_spectral_covariant.py",
+      "pass": true
+    },
+    {
+      "actual": "ba7f7aef946107d433981ec357c52c9829d90839a1dd07f0221e05b21c9aa1c6",
+      "name": "artifact codes/foundations/pre_a_hyb_u1_charged_spectral_covariant_independent.py",
+      "pass": true
+    },
+    {
+      "actual": "9f100ad0420ba4fccc9e3a2fe87ec3299050d3b22453d301a2c5c8d52a36a309",
+      "name": "artifact codes/foundations/pre_a_hyb_u1_charged_spectral_covariant_verify.py",
+      "pass": true
+    },
+    {
+      "actual": "2a27bf3e730e04b274e0278870c04b97282c59f675fd083bf2ebc93b6e217c47",
+      "name": "artifact strategy/pre-a-hyb-u1-charged-spectral-covariant-certificate-260823.md",
+      "pass": true
+    },
+    {
+      "actual": "71ccf3c432d8eff4555e139dbe1352067b43c66105fa7475961983084237eb06",
+      "name": "artifact verification/lean/Tect/HYB0002.lean",
+      "pass": true
+    },
+    {
+      "actual": "[1.4946834900704541e-16, 1.4152622167509192e-16, 1.6184142622847341e-16]",
+      "name": "D endpoint covariance",
+      "pass": true
+    },
+    {
+      "actual": "3.3306690738754696e-16",
+      "name": "L endpoint covariance",
+      "pass": true
+    },
+    {
+      "actual": "{'before': 422627.6524545286, 'after': 422627.6524545286}",
+      "name": "full finite action orbit invariance",
+      "pass": true
+    },
+    {
+      "actual": "{'covariant': 422585.22285963275, 'spectral': 422585.22285963275}",
+      "name": "exact gauge-off F_ref recovery",
+      "pass": true
+    },
+    {
+      "actual": "mu_eff>0",
+      "name": "quadratic core coercivity",
+      "pass": true
+    },
+    {
+      "actual": "{'a': '18000000000/4000000000001', 'b': '7500000000/4000000000001', 'c': '9375000000/4000000000001'}",
+      "name": "Class-II PSD",
+      "pass": true
+    },
+    {
+      "actual": "{'lambda': '-43/100', 'gamma': '81/50'}",
+      "name": "sextic finite lower bound",
+      "pass": true
+    },
+    {
+      "actual": "0",
+      "name": "formal identity-mobility Gibbs residual",
+      "pass": true
+    },
+    {
+      "actual": "{'heat_root_incidence': False, 'root_filtration': False, 'conditional_replicas': False, 'raw_current_spatial_intertwiner': False, 'production_one_use_q_ledger': False, 'first_missing_slot': 'heat_root_incidence', 'production_owner': False}",
+      "name": "R-192 first failure preserved",
+      "pass": true
+    },
+    {
+      "actual": "{'heat_root_incidence': False, 'root_filtration': False, 'conditional_replicas': False, 'raw_current_spatial_intertwiner': False, 'production_one_use_q_ledger': False, 'first_missing_slot': 'heat_root_incidence', 'production_owner': False}",
+      "name": "R-192 owner fields absent",
+      "pass": true
+    },
+    {
+      "actual": "{'hyb_00_owner_freeze': 'PASS@FINITE-SIDE-4', 'hyb_01_exact_parent_reduction': 'PASS@FINITE-SIDE-4-F_ref', 'hyb_02_gauge_consistency': 'PASS@U1-CHARGED-SPECTRAL-TRANSPORT', 'hyb_03_finite_stability': 'PASS@DECLARED-F_ref-COEFFICIENTS', 'hyb_04_finite_dynamics': 'PASS@IDENTITY-MOBILITY-FORMAL-GIBBS', 'hyb_05_a13_owner_crosswalk': 'NOT_ATTEMPTED; first missing heat_root_incidence', 'admission': 'comparison_candidate_only'}",
+      "name": "candidate remains comparison-only",
+      "pass": true
+    },
+    {
+      "actual": "0",
+      "name": "Lean compile",
+      "pass": true
+    },
+    {
+      "actual": "clean",
+      "name": "Lean no forbidden escape",
+      "pass": true
+    }
+  ],
+  "audit_id": "PRE-A-HYB-U1-CHARGED-SPECTRAL-COVARIANT",
+  "boundary": "T0 claim-nonbearing finite same-parent covariantization candidate. It proves only the declared side-4 finite gauge-off recovery, U(1) orbit covariance, stability checks, and formal identity-mobility Gibbs residual. It does not supply the canonical nonlinear R-192 heat-root incidence, root filtration, conditional replicas, raw-current spatial intertwiner, one-use q-ledger, A13/T-050, Sector-A, Pre-A, OS/KMS, continuum, thermodynamic, or mass-gap closure.",
+  "candidate_id": "HYB-TECT-U1-CHARGED-SPECTRAL-0002",
+  "derived": {
+    "D_covariance_max_error": 1.6184142622847341e-16,
+    "L_covariance_max_error": 3.3306690738754696e-16,
+    "classii_determinant": "112500000000000000000/16000000000008000000000001",
+    "gauge_off_energy_abs_error": 0.0,
+    "mu_eff": "26000000000947494031/100000000000000000000",
+    "production_owner": false,
+    "r192_first_missing_slot": "heat_root_incidence"
+  },
+  "schema": "tect/pre-a-hyb-u1-charged-spectral-covariant-primary/1.0",
+  "script_version": "0.1.0",
+  "verdict": "HYB-TECT-U1-CHARGED-SPECTRAL-PRIMARY-PASS"
+}

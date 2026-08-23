@@ -1,0 +1,91 @@
+{
+  "schema": "tect/pre-a-hyb-u1-charged-spectral-covariant/1.0",
+  "audit_id": "PRE-A-HYB-U1-CHARGED-SPECTRAL-COVARIANT",
+  "candidate_id": "HYB-TECT-U1-CHARGED-SPECTRAL-0002",
+  "task_id": "T-054",
+  "exploration_id": "EXP-001001",
+  "tier": "T0",
+  "claim_bearing": false,
+  "source_authorities": {
+    "a1_functional": {
+      "path": "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/production_functional_manifest.json",
+      "sha256": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565"
+    },
+    "r192_manifest": {
+      "path": "strategy/pre-a13-t058-bounded-complete-production-cylinder-manifest.json",
+      "sha256": "641074df54492654177fc72dd66ecb2cb46a791390215ab521f725d77e622d14"
+    },
+    "lean_toolchain": {
+      "path": "verification/lean/lean-toolchain",
+      "sha256": "8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af"
+    }
+  },
+  "finite_regulator": {
+    "side": 4,
+    "lengths_from_a1": [
+      "Lx",
+      "Ly",
+      "Lz"
+    ],
+    "sites_formula": "side^3",
+    "gauge_group": "U(1)",
+    "representation": "R(exp(i theta))=exp(i theta) I_3",
+    "links": "complex unit U(1) links on periodic oriented edges",
+    "transport": "canonical positive-coordinate path transporter W_U(x,y)",
+    "derivative": "D_i^U(x,y)=d_i(x-y) W_U(x,y) on the axis fiber; d_i is the A1 spectral Fourier kernel",
+    "laplacian": "L_U=sum_i (D_i^U)^* D_i",
+    "quadratic_kernel": "K_U=r I + Z L_U + Y L_U^2",
+    "shell_operator": "sqrt(L_U)-q0 I when eta_shell is active",
+    "current": "A1 J_A and K_A formulas with D_i^U; common U(1) phases cancel",
+    "action": "A1 F_ref with covariant replacements and the source F_ref family/lock coefficients",
+    "test_seed": 1337
+  },
+  "exact_reductions": {
+    "gauge_off": "U=1 gives the spectral A1 F_ref functional on the declared side-4 torus",
+    "gauge_covariance": "D, L, shell and all scalar action terms transform by endpoint conjugation",
+    "finite_dynamics": "identity finite-dimensional mobility and formal Gibbs residual only"
+  },
+  "r192_crosswalk": {
+    "heat_root_incidence": false,
+    "root_filtration": false,
+    "conditional_replicas": false,
+    "raw_current_spatial_intertwiner": false,
+    "production_one_use_q_ledger": false,
+    "first_missing_slot": "heat_root_incidence",
+    "production_owner": false
+  },
+  "files": {
+    "primary": "codes/foundations/pre_a_hyb_u1_charged_spectral_covariant.py",
+    "independent": "codes/foundations/pre_a_hyb_u1_charged_spectral_covariant_independent.py",
+    "integrated": "codes/foundations/pre_a_hyb_u1_charged_spectral_covariant_verify.py",
+    "certificate": "strategy/pre-a-hyb-u1-charged-spectral-covariant-certificate-260823.md",
+    "lean": "verification/lean/Tect/HYB0002.lean"
+  },
+  "artifact_hashes": {
+    "codes/foundations/pre_a_hyb_u1_charged_spectral_covariant.py": "4e29f22e964a04d1cb4aa78687d7cc95ba59dc9ed87f1cb59e7a14d73401b1b4",
+    "codes/foundations/pre_a_hyb_u1_charged_spectral_covariant_independent.py": "d7dd66710422310331c855aaed38498aa23039bdb292e845f4400b8e192e9def",
+    "codes/foundations/pre_a_hyb_u1_charged_spectral_covariant_verify.py": "f80c479b408ba83879687040c57a7a86e2d64ada293822d3993f3d5eb65c8b68",
+    "strategy/pre-a-hyb-u1-charged-spectral-covariant-certificate-260823.md": "c1b34b4cc54538ddc2c374628e5a63a052f51b2e82f9e253621882f2e0a4cdf4",
+    "verification/lean/Tect/HYB0002.lean": "0900571151f16fa82d2369a5c0e557405d09609a8170c7b3010426b9d2545794"
+  },  "selection": {
+    "hyb_00_owner_freeze": "PASS@FINITE-SIDE-4",
+    "hyb_01_exact_parent_reduction": "PASS@FINITE-SIDE-4-F_ref",
+    "hyb_02_gauge_consistency": "PASS@U1-CHARGED-SPECTRAL-TRANSPORT",
+    "hyb_03_finite_stability": "PASS@DECLARED-F_ref-COEFFICIENTS",
+    "hyb_04_finite_dynamics": "PASS@IDENTITY-MOBILITY-FORMAL-GIBBS",
+    "hyb_05_a13_owner_crosswalk": "NOT_ATTEMPTED; first missing heat_root_incidence",
+    "admission": "comparison_candidate_only"
+  },
+  "hostile_mutations": [
+    "replace the all-component U(1) representation by a trivial representation",
+    "replace D_i^U by a finite-difference operator and claim exact spectral recovery",
+    "drop endpoint transport and claim gauge covariance",
+    "replace F_ref by F_decl",
+    "replace the fixed A1 family/lock terms by unrecorded commutant terms",
+    "promote finite Gibbs residual to a production heat-root owner",
+    "fabricate the R-192 root filtration or q-ledger",
+    "insert a Lean sorry, admit, axiom, or unsafe escape"
+  ],
+  "boundary": "T0 claim-nonbearing finite same-parent covariantization candidate. It proves only the declared side-4 finite gauge-off recovery, U(1) orbit covariance, stability checks, and formal identity-mobility Gibbs residual. It does not supply the canonical nonlinear R-192 heat-root incidence, root filtration, conditional replicas, raw-current spatial intertwiner, one-use q-ledger, A13/T-050, Sector-A, Pre-A, OS/KMS, continuum, thermodynamic, or mass-gap closure.",
+  "next_action": "Run primary, independent, integrated, and Lean checks. Retain only as a finite same-parent comparison candidate unless the unchanged R-192 owner slots are supplied."
+}

@@ -1,0 +1,114 @@
+{
+  "assertion_count": 19,
+  "assertions": [
+    {
+      "actual": "HYB-TECT-U1-CHARGED-SPECTRAL-0002",
+      "name": "candidate identity",
+      "pass": true
+    },
+    {
+      "actual": "T0",
+      "name": "finite T0 boundary",
+      "pass": true
+    },
+    {
+      "actual": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565",
+      "name": "authority a1_functional",
+      "pass": true
+    },
+    {
+      "actual": "641074df54492654177fc72dd66ecb2cb46a791390215ab521f725d77e622d14",
+      "name": "authority r192_manifest",
+      "pass": true
+    },
+    {
+      "actual": "8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af",
+      "name": "authority lean_toolchain",
+      "pass": true
+    },
+    {
+      "actual": "4e29f22e964a04d1cb4aa78687d7cc95ba59dc9ed87f1cb59e7a14d73401b1b4",
+      "name": "artifact codes/foundations/pre_a_hyb_u1_charged_spectral_covariant.py",
+      "pass": true
+    },
+    {
+      "actual": "ba7f7aef946107d433981ec357c52c9829d90839a1dd07f0221e05b21c9aa1c6",
+      "name": "artifact codes/foundations/pre_a_hyb_u1_charged_spectral_covariant_independent.py",
+      "pass": true
+    },
+    {
+      "actual": "9f100ad0420ba4fccc9e3a2fe87ec3299050d3b22453d301a2c5c8d52a36a309",
+      "name": "artifact codes/foundations/pre_a_hyb_u1_charged_spectral_covariant_verify.py",
+      "pass": true
+    },
+    {
+      "actual": "2a27bf3e730e04b274e0278870c04b97282c59f675fd083bf2ebc93b6e217c47",
+      "name": "artifact strategy/pre-a-hyb-u1-charged-spectral-covariant-certificate-260823.md",
+      "pass": true
+    },
+    {
+      "actual": "71ccf3c432d8eff4555e139dbe1352067b43c66105fa7475961983084237eb06",
+      "name": "artifact verification/lean/Tect/HYB0002.lean",
+      "pass": true
+    },
+    {
+      "actual": "{'returncode': 0, 'stdout': '25/25 PASS\\nHYB-TECT-U1-CHARGED-SPECTRAL-PRIMARY-PASS\\nR-192 first missing: heat_root_incidence\\n', 'stderr': ''}",
+      "name": "primary subprocess",
+      "pass": true
+    },
+    {
+      "actual": "{'returncode': 0, 'stdout': '20/20 PASS\\nHYB-TECT-U1-CHARGED-SPECTRAL-INDEPENDENT-PASS\\nR-192 first missing: heat_root_incidence\\n', 'stderr': ''}",
+      "name": "independent subprocess",
+      "pass": true
+    },
+    {
+      "actual": "HYB-TECT-U1-CHARGED-SPECTRAL-PRIMARY-PASS",
+      "name": "primary PASS verdict",
+      "pass": true
+    },
+    {
+      "actual": "HYB-TECT-U1-CHARGED-SPECTRAL-INDEPENDENT-PASS",
+      "name": "independent PASS verdict",
+      "pass": true
+    },
+    {
+      "actual": "{'primary': 25, 'independent': 20}",
+      "name": "all child assertions pass",
+      "pass": true
+    },
+    {
+      "actual": "{'primary': {'D_covariance_max_error': 1.6184142622847341e-16, 'L_covariance_max_error': 3.3306690738754696e-16, 'classii_determinant': '112500000000000000000/16000000000008000000000001', 'gauge_off_energy_abs_error': 0.0, 'mu_eff': '26000000000947494031/100000000000000000000', 'production_owner': False, 'r192_first_missing_slot': 'heat_root_incidence'}, 'independent': {'D_covariance_max_error': 1.6653345369377348e-16, 'L_covariance_max_error': 2.220446049250313e-16, 'production_owner': False, 'r192_first_missing_slot': 'heat_root_incidence', 'spectral_derivative_max_error': 2.7755575615628914e-16}}",
+      "name": "cross-run covariance bounds",
+      "pass": true
+    },
+    {
+      "actual": "{'primary': {'D_covariance_max_error': 1.6184142622847341e-16, 'L_covariance_max_error': 3.3306690738754696e-16, 'classii_determinant': '112500000000000000000/16000000000008000000000001', 'gauge_off_energy_abs_error': 0.0, 'mu_eff': '26000000000947494031/100000000000000000000', 'production_owner': False, 'r192_first_missing_slot': 'heat_root_incidence'}, 'independent': {'D_covariance_max_error': 1.6653345369377348e-16, 'L_covariance_max_error': 2.220446049250313e-16, 'production_owner': False, 'r192_first_missing_slot': 'heat_root_incidence', 'spectral_derivative_max_error': 2.7755575615628914e-16}}",
+      "name": "cross-run R-192 boundary",
+      "pass": true
+    },
+    {
+      "actual": "{'returncode': 0, 'stderr': ''}",
+      "name": "Lean subprocess",
+      "pass": true
+    },
+    {
+      "actual": "clean",
+      "name": "Lean source policy",
+      "pass": true
+    }
+  ],
+  "boundary": "T0 claim-nonbearing finite same-parent covariantization candidate. It proves only the declared side-4 finite gauge-off recovery, U(1) orbit covariance, stability checks, and formal identity-mobility Gibbs residual. It does not supply the canonical nonlinear R-192 heat-root incidence, root filtration, conditional replicas, raw-current spatial intertwiner, one-use q-ledger, A13/T-050, Sector-A, Pre-A, OS/KMS, continuum, thermodynamic, or mass-gap closure.",
+  "candidate_id": "HYB-TECT-U1-CHARGED-SPECTRAL-0002",
+  "children": {
+    "independent": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-23-integrated-hyb-u1-charged-spectral-covariant/independent.json",
+    "lean": "verification/lean/Tect/HYB0002.lean",
+    "primary": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-23-integrated-hyb-u1-charged-spectral-covariant/primary.json"
+  },
+  "derived": {
+    "child_assertions": 35,
+    "production_owner": false,
+    "r192_first_missing_slot": "heat_root_incidence"
+  },
+  "schema": "tect/pre-a-hyb-u1-charged-spectral-covariant-integrated/1.0",
+  "verdict": "HYB-TECT-U1-CHARGED-SPECTRAL-INTEGRATED-PASS"
+}
