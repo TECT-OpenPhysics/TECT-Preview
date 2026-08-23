@@ -1,0 +1,62 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001024",
+  "title": "Q3 matching layers supply a volume-uniform common-core split envelope",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "verdict": "advanced",
+  "provenance": "contemporaneous",
+  "recorded_at": "2026-08-24T07:20:00Z",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-08-24",
+  "prior_exploration_id": "EXP-001023",
+  "related": [{"id": "EXP-001023", "relation": "continues"}],
+  "question": "Do the actual Z^3 matching bond layers and tensor-local onsite factors admit a two-sided K^(1/2) common-core envelope uniform in finite-box volume?",
+  "method": [
+    "Colour the induced {0,1,2}^3 nearest-neighbor graph by axis and lower-endpoint parity, and verify six matching layers cover all 54 edges.",
+    "Derive the shifted-square, quartic absorption and matching weighted-transfer identities in the primary SymPy lane.",
+    "Recompute the same graph, exact ratios, fixtures and product bounds in a non-importing standard-library Fraction lane.",
+    "Check both shear orientations on four rational phase-space fixtures and verify the six-layer endpoint product is bounded by exp(3*C_match*T) independently of box volume.",
+    "Kernel-compile Lean R208 for the scalar shifted-square, quartic and matching-transfer identities.",
+    "Apply adversarial checks separating matching layers from the full degree-six graph, conditional onsite operator assumptions from numeric evidence, graph envelopes from Trotter convergence, finite boxes from exhaustion, and QFT from the TECT production owner."
+  ],
+  "finding": "Primary 86/86, independent 86/86 and integrated 24/24 pass; Lean R208 compiles. Six matching layers have incidence one, the exact fixture gives C_match=53/35, both signs satisfy the layer form bound, and the N-step endpoint envelope is exp(3*C_match*T).",
+  "decision_reason": "The package advances the precise finite common-core induced-norm subgate requested by EXP-001023. It is still conditional on the positive self-adjoint form and tensor-local onsite hypotheses, and it gives no boundary decay or exhaustion Cauchy estimate.",
+  "boundary": "T0 claim-nonbearing finite common-core and split-envelope checkpoint only. It does not close the Q3 common-alpha gate, prove a thermodynamic dynamics, identify common-alpha KMS states, establish a ground state or GNS/physical gap, remove a regulator, establish C6, Sector A or Pre-A, or supply the TECT production owner.",
+  "evidence_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-common-core-matching-layer-envelope-manifest.json#form_theorem",
+    "strategy/pre-a-cp1-st8-q3lock-common-core-matching-layer-envelope-certificate-260824.md#Finding",
+    "codes/foundations/pre_a_cp1_st8_q3lock_common_core_matching_layer_envelope.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_common_core_matching_layer_envelope_independent.py#main",
+    "codes/foundations/pre_a_cp1_st8_q3lock_common_core_matching_layer_envelope_verify.py#main",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-24-primary-pre-a-cp1-st8-q3lock-common-core-matching-layer-envelope/primary.json#assertions",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-24-primary-pre-a-cp1-st8-q3lock-common-core-matching-layer-envelope/independent.json#assertions",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-24-primary-pre-a-cp1-st8-q3lock-common-core-matching-layer-envelope/integrated.json#assertions",
+    "verification/lean/Tect/R208.lean#shift_square",
+    "verification/lean/registry.json#entrypoints",
+    "explorations/log.jsonl#EXP-001023"
+  ],
+  "formal_refs": {"results": [], "negatives": [], "events": []},
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "adversarial_review": [
+    {"axis": "matching versus full graph", "check": "The full Q3 box has degree six and is not one matching; the estimate is applied layer by layer.", "disposition": "UPHELD"},
+    {"axis": "form bound versus induced norm", "check": "The endpoint norm follows only under the declared positive self-adjoint K form and core hypotheses; scripts do not prove those operator hypotheses.", "disposition": "UPHELD"},
+    {"axis": "onsite isometry", "check": "Onsite norm one is conditional on affine local h_x and tensor commutation, not a numerical inference.", "disposition": "UPHELD"},
+    {"axis": "finite box versus exhaustion", "check": "The coefficient is volume-independent, but no boundary leakage or exhaustion summability is claimed.", "disposition": "UPHELD"},
+    {"axis": "envelope versus convergence", "check": "A uniform graph envelope does not prove Lie--Trotter convergence or identify the limiting generator.", "disposition": "UPHELD"},
+    {"axis": "Lean promotion", "check": "R208 checks scalar inequalities only and cannot certify the QFT operator theorem.", "disposition": "UPHELD"},
+    {"axis": "QFT-to-TECT promotion", "check": "No heat_root_incidence or A1/R-192 production map is present.", "disposition": "UPHELD"}
+  ],
+  "qft_interface": {
+    "closed": "A finite-box six-matching graph factorisation and a conditional common-core K^(1/2) induced-norm envelope uniform in box volume.",
+    "open": "Boundary commutator decay, all-shape exhaustion Cauchy, invariant Hamiltonian algebra, common alpha, OS/KMS, ground/gap and continuum remain open.",
+    "tect_boundary": "No heat_root_incidence, canonical A1/R-192 production owner, physical-empty reference or Sector-A closure."
+  },
+  "formal_integration": {"results": [], "negatives": [], "events": []},
+  "next_action": "Use the volume-uniform matching-layer envelope to attack boundary commutator decay and the all-shape exhaustion Cauchy estimate; do not promote the finite split bound to common alpha or KMS."
+}

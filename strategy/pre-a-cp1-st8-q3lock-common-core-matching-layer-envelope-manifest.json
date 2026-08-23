@@ -1,0 +1,86 @@
+{
+  "schema": "tect/pre-a-cp1-st8-q3lock-common-core-matching-layer-envelope/1.0",
+  "title": "Finite Q3 matching-layer common-core induced-norm envelope",
+  "exploration_id": "EXP-001024",
+  "prior_exploration_id": "EXP-001023",
+  "task_id": "T-054",
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "claim_bearing": false,
+  "tier": "T0",
+  "question": "Do the actual Z^3 matching bond layers and tensor-local onsite factors admit a two-sided K^(1/2) common-core envelope that is uniform in finite-box volume?",
+  "files": {
+    "primary": "codes/foundations/pre_a_cp1_st8_q3lock_common_core_matching_layer_envelope.py",
+    "independent": "codes/foundations/pre_a_cp1_st8_q3lock_common_core_matching_layer_envelope_independent.py",
+    "integrated": "codes/foundations/pre_a_cp1_st8_q3lock_common_core_matching_layer_envelope_verify.py",
+    "lean": "verification/lean/Tect/R208.lean",
+    "primary_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-24-primary-pre-a-cp1-st8-q3lock-common-core-matching-layer-envelope/primary.json",
+    "independent_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-24-primary-pre-a-cp1-st8-q3lock-common-core-matching-layer-envelope/independent.json",
+    "integrated_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-24-primary-pre-a-cp1-st8-q3lock-common-core-matching-layer-envelope/integrated.json"
+  },
+  "graph_model": {
+    "lattice": "finite induced box {0,1,2}^3 in Z^3",
+    "vertices": 27,
+    "edges": 54,
+    "degree_bound": 6,
+    "layer_count": 6,
+    "colouring": "axis plus parity of the lower endpoint coordinate",
+    "matching_condition": "each vertex is incident to at most one edge in each layer"
+  },
+  "form_theorem": {
+    "hypotheses": [
+      "K_f=sum_x f_x k_x with k_x >= 1+p_x^2/(2 chi)+gamma q_x^4",
+      "0<f_x and adjacent ratios are in [1/kappa,kappa]",
+      "F is one matching layer and B_F(delta) shears p_u,p_v by +/-delta*c*q_v, +/-delta*c*q_u",
+      "0<|delta|<=1"
+    ],
+    "bound": "B_F(+/-delta)^* K_f B_F(+/-delta) <= (1+C_match*|delta|) K_f",
+    "coefficient": "C_match=1+kappa*c^2/(2 chi sqrt(gamma))",
+    "endpoint": "||K_f^(1/2) B_F(+/-delta) K_f^(-1/2)|| <= sqrt(1+C_match*|delta|)",
+    "fixture": {
+      "c": "3/5",
+      "chi": "7/4",
+      "sqrt_gamma": "2/5",
+      "kappa": "2",
+      "C_match": "53/35"
+    }
+  },
+  "onsite_factor": {
+    "factor": "A_t=exp(-it sum_x h_x/hbar)",
+    "operator_theorem_assumption": "conditional",
+    "hypothesis": "k_x is an affine shifted local h_x and all site-local self-adjoint terms strongly commute on the declared Schwartz/form core",
+    "conclusion": "A_t^* K_f A_t=K_f and endpoint graph norm is one",
+    "site_local_terms_commute": true
+  },
+  "product_theorem": {
+    "six_layer_form_factor": "(1+C_match*|delta|)^6",
+    "six_layer_endpoint_factor": "(1+C_match*|delta|)^3",
+    "N_step_endpoint_envelope": "exp(3*C_match*T) for delta=T/N",
+    "volume_uniform": true,
+    "exhaustion_cauchy": false
+  },
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R208.lean",
+    "proposition": "scalar shifted-square, quartic absorption and matching weighted-transfer identities",
+    "theorem_markers": ["shift_square", "quartic_absorb", "matching_weight_transfer"],
+    "command": "lake env lean Tect/R208.lean",
+    "boundary": "Lean checks the scalar inequalities only; it does not encode unbounded operators, tensor domains, Trotter convergence, exhaustion, KMS or thermodynamic limits."
+  },
+  "qft_interface": {
+    "closed": "A finite-box six-matching graph factorisation and a conditional common-core K^(1/2) induced-norm envelope, uniform in box volume.",
+    "not_closed": "The boundary commutator decay, all-shape exhaustion Cauchy theorem, invariant Hamiltonian algebra, common alpha, OS/KMS identification, ground selection, GNS gap and continuum remain open.",
+    "tect_boundary": "The package contains no heat_root_incidence, canonical A1/R-192 production owner, physical-empty reference or Sector-A closure."
+  },
+  "adversarial_review": [
+    {"axis": "matching versus full graph", "check": "The full Q3 box has degree six and is not one matching; the estimate is applied layer by layer.", "disposition": "UPHELD"},
+    {"axis": "form bound versus induced norm", "check": "The endpoint norm follows only under the declared positive self-adjoint K form and core hypotheses; the scripts do not prove those operator hypotheses.", "disposition": "UPHELD"},
+    {"axis": "onsite isometry", "check": "Onsite norm one is conditional on affine local h_x and strong tensor commutation; it is not inferred from a finite matrix fixture.", "disposition": "UPHELD"},
+    {"axis": "finite box versus exhaustion", "check": "The coefficient is volume-independent, but no boundary leakage or exhaustion summability is claimed.", "disposition": "UPHELD"},
+    {"axis": "Trotter envelope versus convergence", "check": "A uniform graph envelope does not itself prove Lie-Trotter convergence or identify the limiting generator.", "disposition": "UPHELD"},
+    {"axis": "Lean promotion", "check": "R208 checks scalar inequalities only and cannot certify the QFT operator theorem.", "disposition": "UPHELD"},
+    {"axis": "QFT-to-TECT promotion", "check": "No heat_root_incidence or A1/R-192 production map is present.", "disposition": "UPHELD"}
+  ],
+  "formal_integration": {"events": [], "results": [], "negatives": [], "no_new_result": true, "no_new_negative": true, "no_pdf": true},
+  "boundary": "T0 claim-nonbearing finite common-core and split-envelope checkpoint only. It does not close the Q3 common-alpha gate, prove a thermodynamic dynamics, identify common-alpha KMS states, establish a ground state or GNS/physical gap, remove a regulator, establish C6, Sector A or Pre-A, or supply the TECT production owner.",
+  "tect_boundary": "The package is independent of the canonical TECT production route and contains no heat_root_incidence field.",
+  "next_action": "Use the volume-uniform matching-layer envelope to attack the actual boundary commutator decay and all-shape exhaustion Cauchy estimate; do not promote the finite split bound to common alpha or KMS."
+}

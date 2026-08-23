@@ -5,7 +5,7 @@ Compact generated reader surface. The append-only authority is
 record 568 / commit `4db22f4e` and no longer grows.
 Post-cutover full bodies live exactly once in bounded pages under `pages/`.
 
-**697 accepted events** · latest 25 shown below · machine locator: `index.json`
+**698 accepted events** · latest 25 shown below · machine locator: `index.json`
 
 Search the complete authority without loading every page:
 
@@ -17,6 +17,7 @@ python verification/scripts/changelog.py search --text <phrase>
 
 | Date | Event | Claims | Full entry |
 |---|---|---|---|
+| 2026-08-24 | `20260824-exp-001024-q3-matching-layer-common-core-envelo` — [EXP-001024 Q3 matching-layer common-core envelope] - 2026-08-24 | C6-SPACETIME-SIGNATURE, EXP-001024 | [bounded page](pages/000669-000718.md#20260824-exp-001024-q3-matching-layer-common-core-envelo) |
 | 2026-08-22 | `20260822-r-195-spatial-constant-field-lift-of-a6-running` — [R-195 spatial constant-field lift of A6 running-mass escape] - 2026-08-22 | A6-CLASSII-COUNTERTERM-CLOSURE, A6-CLASSII-K-COMPOSITE-DEFINITION, EXP-000933, R-195 | [bounded page](pages/000669-000718.md#20260822-r-195-spatial-constant-field-lift-of-a6-running) |
 | 2026-08-22 | `20260822-r-194-sharp-running-mass-counterterm-boundary-2` — [R-194 sharp running-mass counterterm boundary] - 2026-08-22 | A6-CLASSII-COUNTERTERM-CLOSURE, A6-CLASSII-K-COMPOSITE-DEFINITION, EXP-000932, R-194 | [bounded page](pages/000669-000718.md#20260822-r-194-sharp-running-mass-counterterm-boundary-2) |
 | 2026-08-22 | `20260822-r-171-authority-hash-repair-and-append-only-rea` — [R-171 authority hash repair and append-only reader revalidation] - 2026-08-22 | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION, A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE, EXP-000923, EXP-000924, R-171 | [bounded page](pages/000669-000718.md#20260822-r-171-authority-hash-repair-and-append-only-rea) |
@@ -41,7 +42,6 @@ python verification/scripts/changelog.py search --text <phrase>
 | 2026-08-21 | `20260821-r-180-lean-scalar-triangular-majorant-cross-che` — [R-180 Lean scalar triangular majorant cross-check] - 2026-08-21 | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION, EXP-000895, R-180 | [bounded page](pages/000669-000718.md#20260821-r-180-lean-scalar-triangular-majorant-cross-che) |
 | 2026-08-21 | `20260821-r-179-future-variance-forest-owner-half-ledger` — [R-179 future-variance forest owner-half ledger] - 2026-08-21 | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION, EXP-000894, R-179 | [bounded page](pages/000669-000718.md#20260821-r-179-future-variance-forest-owner-half-ledger) |
 | 2026-08-21 | `20260821-r-178-event-673-script-path-correction-2026-08` — [R-178 event 673 script path correction] - 2026-08-21 | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION, R-178 | [bounded page](pages/000669-000718.md#20260821-r-178-event-673-script-path-correction-2026-08) |
-| 2026-08-21 | `20260821-r-178-complete-cross-owner-phase-differentiatio` — [R-178 complete cross-owner phase differentiation] - 2026-08-21 | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION, EXP-000893, R-178 | [bounded page](pages/000669-000718.md#20260821-r-178-complete-cross-owner-phase-differentiatio) |
 
 ## Post-cutover pages
 
@@ -49,6 +49,6 @@ Each full event body after the cutover occurs in exactly one page.
 
 | Ordinals | Events | Page |
 |---|---:|---|
-| 669–697 | 29 | [000669-000718.md](pages/000669-000718.md) |
+| 669–698 | 30 | [000669-000718.md](pages/000669-000718.md) |
 | 619–668 | 50 | [000619-000668.md](pages/000619-000668.md) |
 | 569–618 | 50 | [000569-000618.md](pages/000569-000618.md) |
