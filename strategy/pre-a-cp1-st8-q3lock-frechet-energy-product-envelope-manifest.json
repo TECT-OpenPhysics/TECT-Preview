@@ -1,0 +1,72 @@
+{
+  "schema": "tect/pre-a-cp1-st8-q3lock-frechet-energy-product-envelope/1.0",
+  "title": "Finite non-Leibniz energy-product envelope and locality separation",
+  "exploration_id": "EXP-001025",
+  "prior_exploration_id": "EXP-001024",
+  "task_id": "T-054",
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "claim_bearing": false,
+  "tier": "T0",
+  "question": "Does the volume-uniform Q3 energy envelope close a finite non-Leibniz product topology, and does that topology by itself imply spatial boundary commutator decay?",
+  "definition": {
+    "control": "K=diag(1,4,9,16), K^(1/2)=diag(1,2,3,4)",
+    "seminorm": "M_(a,b)(A)=||K^a A K^(-b)||_infinity for a,b in {0,1/2}",
+    "product_identity": "K^a AB K^(-b)=(K^a A K^(-c))(K^c B K^(-b))",
+    "norm": "induced matrix infinity norm; submultiplicative",
+    "exponents": [0, "1/2"]
+  },
+  "finite_product_theorem": {
+    "hypotheses": [
+      "K is positive and the half-power contexts are defined on the common finite matrix core",
+      "M_(a,b) uses the induced submultiplicative norm",
+      "bond B and B* have ordinary norm at most one",
+      "both half-weighted endpoint norms of B and B* are at most G"
+    ],
+    "conclusion": "M_(a,b)(B* A B)<=G^(2a+2b) M_(a,b)(A) for a,b in {0,1/2}",
+    "split_consequence": "six matching layers and N steps with G^2<=1+C delta give factor (1+C T/N)^(6N(a+b))<=exp(6C T(a+b))",
+    "volume_uniform": true
+  },
+  "locality_separation": {
+    "fixture": "K=I on an 8-dimensional cyclic shift representation, X=E_00, Y_d=E_(d,d+1), d=3",
+    "initial": "[X,Y_d]=0",
+    "transported": "P^d X P^(-d)=E_dd and ||[E_dd,Y_d]||_infinity=1",
+    "conclusion": "All M_(a,b) bounds can remain unchanged while an order-one distant commutator appears; energy-product control alone is not spatial decay"
+  },
+  "split_envelope": {
+    "layers": 6,
+    "volume_uniform": true,
+    "boundary_decay": false,
+    "exhaustion_cauchy": false
+  },
+  "files": {
+    "primary": "codes/foundations/pre_a_cp1_st8_q3lock_frechet_energy_product_envelope.py",
+    "independent": "codes/foundations/pre_a_cp1_st8_q3lock_frechet_energy_product_envelope_independent.py",
+    "integrated": "codes/foundations/pre_a_cp1_st8_q3lock_frechet_energy_product_envelope_verify.py",
+    "lean": "verification/lean/Tect/R209.lean",
+    "primary_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-24-primary-pre-a-cp1-st8-q3lock-frechet-energy-product-envelope/primary.json",
+    "independent_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-24-primary-pre-a-cp1-st8-q3lock-frechet-energy-product-envelope/independent.json",
+    "integrated_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-24-primary-pre-a-cp1-st8-q3lock-frechet-energy-product-envelope/integrated.json"
+  },
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R209.lean",
+    "theorem_markers": ["context_insert", "abs_product_context", "conjugation_factor"],
+    "command": "lake env lean Tect/R209.lean",
+    "boundary": "Lean checks scalar/context algebra only; it does not encode unbounded Q3 operators, spatial support, boundary decay, exhaustion, KMS or thermodynamic limits."
+  },
+  "adversarial_review": [
+    {"axis": "finite matrices to unbounded operators", "check": "The product theorem is exact only on the declared finite matrix/common-core fixture; no domain closure is inferred.", "disposition": "UPHELD"},
+    {"axis": "Frobenius or induced norm to physical seminorm", "check": "The induced infinity norm is a finite algebraic model and does not select the physical Q3 topology.", "disposition": "UPHELD"},
+    {"axis": "envelope to locality", "check": "The cyclic shift counterexample preserves every K=I energy seminorm while producing an order-one distant commutator.", "disposition": "UPHELD"},
+    {"axis": "split product to thermodynamic limit", "check": "The exponential factor is volume-uniform but no all-shape exhaustion Cauchy estimate or generator identification follows.", "disposition": "UPHELD"},
+    {"axis": "Lean promotion", "check": "R209 proves only scalar norm/context identities and cannot certify QFT dynamics.", "disposition": "UPHELD"},
+    {"axis": "QFT-to-TECT promotion", "check": "No heat_root_incidence or canonical A1/R-192 production map is present.", "disposition": "UPHELD"}
+  ],
+  "formal_integration": {"events": [], "results": [], "negatives": [], "no_new_result": true, "no_new_negative": true, "no_pdf": true},
+  "qft_interface": {
+    "closed": "A finite non-Leibniz energy-product subgate and an exact separation showing why spatial first-passage information is independently necessary.",
+    "open": "Actual Q3 first-passage product estimate, boundary commutator decay, all-shape exhaustion Cauchy, common alpha, KMS, ground/gap and continuum remain open.",
+    "tect_boundary": "This package has no heat_root_incidence, canonical A1/R-192 production owner, physical-empty reference or Sector-A closure."
+  },
+  "boundary": "T0 claim-nonbearing finite algebraic/topological checkpoint only. It does not close the Q3 common-alpha gate, prove thermodynamic dynamics, identify KMS states, establish a ground state or GNS gap, remove a regulator, establish C6, Sector A or Pre-A, or supply the TECT production owner.",
+  "next_action": "Use the product envelope only as an energy-side input and attack PA-CP1-ST8-Q3LOCK-FIRST-PASSAGE-BACKBONE-REAL-TIME-PRODUCT-AND-ENERGY-TAIL-CLOSURE; if the two-sided branch/repeat sum cannot be closed, record its exact obstruction rather than treating the finite envelope as a Lieb-Robinson bound."
+}
