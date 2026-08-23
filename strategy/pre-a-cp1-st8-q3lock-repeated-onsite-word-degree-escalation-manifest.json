@@ -1,0 +1,81 @@
+{
+  "schema": "tect/pre-a-cp1-st8-q3lock-repeated-onsite-word-degree-escalation/1.0",
+  "exploration_id": "EXP-001031",
+  "prior_exploration_id": "EXP-001030",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "tier": "T0",
+  "claim_bearing": false,
+  "title": "Repeated onsite word degree escalation against fixed polynomial source weights",
+  "question": "Does a fixed-degree polynomial source weight remain closed if an uncancelled repeated onsite potential-difference word appears in the Q3 first-passage history?",
+  "model": {
+    "shifted_difference": "Delta_a(q,r)=(G/4)(q^4-(q-a)^4)-c a r",
+    "word": "R_m(a)=partial_r(Delta_a(q,r)^m) evaluated at q=r=0",
+    "exact_degree": "deg_a R_m=4m-3 for m>=1",
+    "fixed_weight": "w_5(a)=(1+|a|)^5",
+    "interpretation": "coefficient-level prescribed-word audit only; it does not assert that the actual Q3 Duhamel history contains an uncancelled word"
+  },
+  "fixture": {
+    "g": "3/5",
+    "lambda": "2/7",
+    "c": "2/3",
+    "G": "51/35",
+    "weight_degree": 5,
+    "word_lengths": [1, 2, 3, 4, 5],
+    "test_amplitude": 10
+  },
+  "scoped_verdict": "The exact prescribed word has degree 4m-3, so m=2 reproduces the degree-five response while m>=3 outruns every fixed degree-five polynomial source weight. A cancellation, truncation, or an entire analytic source weight is therefore required before this word-level audit can be used in a first-passage recurrence.",
+  "open_after_test": [
+    "whether the exact Q3 Duhamel expansion contains these words with nonzero uncancelled coefficients",
+    "cancellations from the full eight-component onsite flow and bond orientations",
+    "a canonical entire/Frechet source topology and its domain",
+    "volume-uniform history summability, exhaustion Cauchy, common alpha, KMS, gap and continuum"
+  ],
+  "adversarial_review": [
+    {
+      "axis": "prescribed-word promotion",
+      "check": "The calculation does not assert that the actual Q3 Duhamel history contains the uncancelled word.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "degree formula",
+      "check": "The degree 4m-3 is derived from the exact q=r=0 polynomial and independently recomputed in a Fraction lane.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "weight scope",
+      "check": "Only fixed-degree polynomial weights are excluded for this word family; entire analytic or cancellation-based topologies remain open.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "finite fixture to QFT",
+      "check": "The amplitude and word lengths are reproducible fixtures, not thermodynamic constants.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "Lean promotion",
+      "check": "R215 checks the degree and rational coefficient fixture only.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "QFT-to-TECT promotion",
+      "check": "No heat_root_incidence field or A1/R-192 production owner is supplied.",
+      "disposition": "UPHELD"
+    }
+  ],
+  "scope": {
+    "closed": "Exact coefficient-level degree escalation for the declared repeated onsite word family.",
+    "not_closed": "Actual Q3 history incidence, cancellation, analytic domain, all-bond recurrence, exhaustion Cauchy, common alpha, KMS, gap, continuum, C6, Sector A, Pre-A and TECT production remain open.",
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "formal_integration": {
+    "lean_entry": "verification/lean/Tect/R215.lean",
+    "result_ids": [],
+    "negative_ids": [],
+    "changelog_event": null
+  },
+  "next_action": "Derive the actual Q3 word expansion and test whether onsite cancellations or an entire analytic source weight control the degree escalation uniformly in word length and volume.",
+  "no_overclaim": "This package is a prescribed-word coefficient obstruction to fixed polynomial source weights. It does not prove that the Q3 dynamics contains the word, does not reject entire analytic/Frechet routes, and does not establish or refute a thermodynamic QFT or the TECT production route."
+}

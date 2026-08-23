@@ -1,0 +1,57 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001031",
+  "title": "Repeated onsite word degree escalation against fixed polynomial source weights",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-FIRST-PASSAGE-BACKBONE-REAL-TIME-PRODUCT-AND-ENERGY-TAIL-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "prior_exploration_id": "EXP-001030",
+  "related": [{"id": "EXP-001030", "relation": "continues"}],
+  "recorded_at": "2026-08-24T12:30:00Z",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-08-24",
+  "provenance": "contemporaneous",
+  "question": "Does a fixed-degree polynomial source weight remain closed if an uncancelled repeated onsite potential-difference word appears in the Q3 first-passage history?",
+  "method": [
+    "Form the exact prescribed word R_m(a)=partial_r(Delta_a(q,r)^m) at q=r=0 for word lengths m=1 through 5.",
+    "Use symbolic differentiation in the primary lane and an independent Fraction formula to check R_m=-m c(-G/4)^(m-1)a^(4m-3).",
+    "Compare the degree 4m-3 with the fixed degree-five source weight and record the m=3 degree-nine gap.",
+    "Compile Lean R215 only for the rational coefficient, degree, and fixed-weight-gap fixtures."
+  ],
+  "finding": "Primary passes 22/22 and independent passes 21/21; the integrated lane passes 22/22 and Lean R215 passes. The prescribed word has exact degree 4m-3: m=2 gives degree five, while m=3 gives degree nine and outruns a fixed degree-five source weight by four powers of a. A cancellation theorem, truncation, or entire analytic source weight is therefore required before this word-level calculation can enter a first-passage recurrence.",
+  "verdict": "advanced",
+  "decision_reason": "This is a precise boundary for the source-weight route: EXP-001030's degree-five weight absorbs one response but cannot be assumed to control arbitrary repeated onsite words. The result is not promoted to an actual Q3 obstruction because word incidence and cancellation in the full Duhamel expansion remain unproved.",
+  "adversarial_review": [
+    {"axis": "prescribed-word promotion", "check": "The calculation does not assert that the actual Q3 Duhamel history contains the uncancelled word.", "disposition": "UPHELD"},
+    {"axis": "degree formula", "check": "The 4m-3 formula is independently recomputed over exact Fractions and cross-checked by Lean R215.", "disposition": "UPHELD"},
+    {"axis": "weight scope", "check": "Only fixed-degree polynomial weights are excluded for this word family; entire analytic or cancellation routes remain open.", "disposition": "UPHELD"},
+    {"axis": "fixture promotion", "check": "The amplitude and word lengths are reproducible fixtures, not thermodynamic constants.", "disposition": "UPHELD"},
+    {"axis": "QFT-to-TECT promotion", "check": "No heat_root_incidence or A1/R-192 production owner is supplied.", "disposition": "UPHELD"}
+  ],
+  "evidence_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-repeated-onsite-word-degree-escalation-manifest.json#model",
+    "strategy/pre-a-cp1-st8-q3lock-repeated-onsite-word-degree-escalation-certificate-260824.md#Finding",
+    "codes/foundations/pre_a_cp1_st8_q3lock_repeated_onsite_word_degree_escalation.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_repeated_onsite_word_degree_escalation_independent.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_repeated_onsite_word_degree_escalation_verify.py#main",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-24-primary-pre-a-cp1-st8-q3lock-repeated-onsite-word-degree-escalation/primary.json#assertions",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-24-primary-pre-a-cp1-st8-q3lock-repeated-onsite-word-degree-escalation/independent.json#assertions",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-24-primary-pre-a-cp1-st8-q3lock-repeated-onsite-word-degree-escalation/integrated.json#assertions",
+    "verification/lean/Tect/R215.lean#repeated_word_degree_m3",
+    "verification/lean/registry.json#entrypoints"
+  ],
+  "formal_refs": {"events": [], "negatives": [], "results": []},
+  "formal_integration": {"events": [], "negatives": [], "results": [], "no_new_result": true, "no_new_negative": true, "no_pdf": true},
+  "qft_interface": {
+    "closed": "Exact coefficient-level degree escalation for the declared repeated onsite word family.",
+    "open": "Actual Q3 word incidence, cancellation, analytic domain, all-bond recurrence, history summability, exhaustion Cauchy, common alpha, KMS, gap, continuum, C6 and Pre-A remain open.",
+    "tect_boundary": "No heat_root_incidence or A1/R-192 TECT production owner is supplied by this prescribed-word audit."
+  },
+  "boundary": "T0 claim-nonbearing prescribed-word coefficient checkpoint. It does not prove that the Q3 dynamics contains the word, does not reject entire analytic/Frechet routes, and does not establish a thermodynamic QFT, C6, Sector A, Pre-A or TECT production.",
+  "next_action": "Derive the actual Q3 word expansion and test cancellation or entire analytic source weights uniformly in word length and volume before any QFT interface promotion."
+}
