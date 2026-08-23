@@ -1,0 +1,86 @@
+{
+  "schema": "tect/pre-a13-a1-fref-root-frequency-convention-correction/1.0",
+  "audit_id": "A13-A1-FREF-ROOT-FREQUENCY-CONVENTION-CORRECTION",
+  "exploration_id": "EXP-001004",
+  "task_id": "T-054",
+  "claim_id": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+  "tier": "T0",
+  "claim_bearing": false,
+  "status": "append_only_convention_decision",
+  "decision": "USE_2PI_OVER_L_AS_CANONICAL_EXECUTABLE_CONVENTION",
+  "authority_policy": {
+    "historical_r176_manifest_edited": false,
+    "correction_mode": "append-only",
+    "reason": "R-174, the R-176 executable, and the A1 spectral backend use the Fourier step 2*pi/L; the frozen R-176 manifest string m*pi/L is retained as a stale formula record rather than silently rewritten."
+  },
+  "source_authorities": {
+    "a1_manifest": {
+      "path": "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/production_functional_manifest.json",
+      "sha256": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565"
+    },
+    "r176_manifest": {
+      "path": "strategy/pre-a-a13-a1-two-root-cholesky-covariance-witness-manifest.json",
+      "sha256": "93776dab165e7b6dcf703ee592246e2135edf2ff327127c6f8ea6bdb24cd850e"
+    },
+    "r174_manifest": {
+      "path": "strategy/pre-a-a13-two-root-production-cylinder-cross-synthesis-manifest.json",
+      "sha256": "f0aff366385b3857407f6d2340c4bdf96860359a679d1e5760f40b691a1ae043"
+    },
+    "crosswalk_manifest": {
+      "path": "strategy/pre-a13-a1-fref-root-frequency-crosswalk-manifest.json",
+      "sha256": "06fae2c9285fd9f46bd2c75e884e88935115aeaacd446c65e392852e85704073"
+    }
+  },
+  "canonical_convention": {
+    "torus_length": "16",
+    "fourier_step": "2*pi/L = pi/8",
+    "root_1": "(2*pi/L, 0, 0)",
+    "root_2": "(4*pi/L, 0, 0)",
+    "root_norm_squares": [
+      1,
+      4
+    ],
+    "kinetic_symbol": "r+Z*(m*(2*pi/L))^2+Y*(m*(2*pi/L))^4"
+  },
+  "crosswalk_finding": {
+    "qstar_square_over_step_square": "2.999999999993102473641602178113512365467",
+    "nearest_fref_shell_norm_square": 3,
+    "r176_root_norm_squares": [
+      1,
+      4
+    ],
+    "fref_shell_equals_r176_pair": false,
+    "manifest_formula_mismatch": true,
+    "primary_assertions": "23/23",
+    "independent_assertions": "16/16",
+    "integrated_assertions": "19/19"
+  },
+  "r192_owner_effect": {
+    "production_owner": false,
+    "first_missing_slot": "heat_root_incidence",
+    "remaining_slots": [
+      "root_filtration",
+      "conditional_replicas",
+      "raw_current_spatial_intertwiner",
+      "production_one_use_q_ledger"
+    ]
+  },
+  "adversarial_review": [
+    {
+      "objection": "The stale manifest string may be treated as the source convention.",
+      "disposition": "DISMISSED",
+      "reason": "The decision freezes the executable/A1 2*pi/L convention while preserving the historical string and recording the mismatch explicitly."
+    },
+    {
+      "objection": "The nearest F_ref shell can be relabelled as the R-176 roots.",
+      "disposition": "UPHELD",
+      "reason": "The exact crosswalk gives norm-square 3 versus the root pair 1 and 4; no equality is asserted."
+    },
+    {
+      "objection": "Fixing the frequency convention supplies heat-root incidence.",
+      "disposition": "UPHELD",
+      "reason": "A frequency convention does not define the nonlinear production mobility, raw-current spatial map, replicas, or q-ledger."
+    }
+  ],
+  "next_action": "Use the frozen 2*pi/L convention in a new production-compatible candidate only if it derives heat_root_incidence and the remaining R-192 slots from the same A1 parent; otherwise retain the owner stop."
+}
