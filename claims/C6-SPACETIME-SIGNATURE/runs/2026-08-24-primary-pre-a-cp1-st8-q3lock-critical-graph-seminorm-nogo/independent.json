@@ -1,0 +1,185 @@
+{
+  "assertions": [
+    {
+      "actual": "tect/pre-a-cp1-st8-q3lock-critical-graph-seminorm-nogo/1.0",
+      "expected": ".../1.0",
+      "group": "provenance",
+      "name": "schema",
+      "status": "PASS"
+    },
+    {
+      "actual": "EXP-001027",
+      "expected": "EXP-001027",
+      "group": "provenance",
+      "name": "exploration",
+      "status": "PASS"
+    },
+    {
+      "actual": "T-054",
+      "expected": "T-054",
+      "group": "provenance",
+      "name": "task",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "claim nonbearing",
+      "status": "PASS"
+    },
+    {
+      "actual": "51/35",
+      "expected": "51/35",
+      "group": "arithmetic",
+      "name": "force derivation",
+      "status": "PASS"
+    },
+    {
+      "actual": "51/35",
+      "expected": ">0",
+      "group": "arithmetic",
+      "name": "positive force",
+      "status": "PASS"
+    },
+    {
+      "actual": "7/4",
+      "expected": "7/4",
+      "group": "provenance",
+      "name": "chi is retained as fixture input",
+      "status": "PASS"
+    },
+    {
+      "actual": "32/35",
+      "expected": "32/35 > 0",
+      "group": "arithmetic",
+      "name": "slope gap",
+      "status": "PASS"
+    },
+    {
+      "actual": "10",
+      "expected": "a",
+      "group": "Weyl",
+      "name": "Weyl q commutator",
+      "status": "PASS"
+    },
+    {
+      "actual": 0,
+      "expected": 0,
+      "group": "Weyl",
+      "name": "Weyl p commutator",
+      "status": "PASS"
+    },
+    {
+      "actual": 1,
+      "expected": ">=0 from K>=1",
+      "group": "operator-bound",
+      "name": "K inverse square-root bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "20",
+      "expected": "a+a",
+      "group": "operator-bound",
+      "name": "initial seminorm envelope",
+      "status": "PASS"
+    },
+    {
+      "actual": "507/70",
+      "expected": "gap*a-B-2*C*tau/a",
+      "group": "arithmetic",
+      "name": "difference formula",
+      "status": "PASS"
+    },
+    {
+      "actual": "417/32",
+      "expected": ">1",
+      "group": "arithmetic",
+      "name": "threshold positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "449/70",
+      "expected": ">0",
+      "group": "arithmetic",
+      "name": "threshold implication margin",
+      "status": "PASS"
+    },
+    {
+      "actual": "10",
+      "expected": 10,
+      "group": "fixture",
+      "name": "fixture frequency",
+      "status": "PASS"
+    },
+    {
+      "actual": "507/70",
+      "expected": "507/70 > 0",
+      "group": "fixture",
+      "name": "fixture contradiction margin",
+      "status": "PASS"
+    },
+    {
+      "actual": "32/35",
+      "expected": "+infinity slope",
+      "group": "asymptotic",
+      "name": "unbounded slope",
+      "status": "PASS"
+    },
+    {
+      "actual": "507/70",
+      "expected": "lower > proposed upper",
+      "group": "verdict",
+      "name": "stability contradiction",
+      "status": "PASS"
+    }
+  ],
+  "boundary": {
+    "closed": "an exact route-level obstruction for this canonical K^(-1/2)-damped commutator seminorm",
+    "not_claimed": "nonexistence of Q3 dynamics or rejection of every non-Leibniz topology",
+    "open": "non-Leibniz analytic/Frechet scales with frequency profiles, state-weighted topologies, direct projected-Duhamel locality, common alpha, KMS, ground/gap, continuum and Pre-A"
+  },
+  "derived": {
+    "B_tau_oracle": "3/2",
+    "C_growth_oracle": "1",
+    "G": "51/35",
+    "a_fixture": "10",
+    "all_nonleibniz_rejected": false,
+    "chi": "7/4",
+    "critical_graph_stability_closed": false,
+    "fixture_difference": "507/70",
+    "g": "3/5",
+    "initial_seminorm_bound": "2*a",
+    "lambda": "2/7",
+    "q3_dynamics_closed": false,
+    "slope_gap": "32/35",
+    "tau": "2",
+    "threshold": "417/32"
+  },
+  "exploration_id": "EXP-001027",
+  "failed": 0,
+  "formulae": {
+    "difference_at_fixture": "507/70",
+    "lower_bound": "G*tau*a-B_tau",
+    "proposed_upper_bound": "(1+C*tau/a^2)*(2*a)"
+  },
+  "imported_authority": {
+    "G": "g+3 lambda, with G>0",
+    "authority": "strategy/pre-a-cp1-st8-q3lock-common-alpha-topology-critical-graph-route-split-manifest.json#critical_half_leibniz_counterexample",
+    "bound": "||[p_0,alpha_(t_a)(W_a)]K^(-1/2)|| >= G tau a - B_tau",
+    "observable": "W_a=exp(-i a p_0/hbar)",
+    "time": "t_a=tau/a^2",
+    "uniformity": "B_tau is finite and independent of a"
+  },
+  "passed": 19,
+  "provenance": {
+    "manifest": "strategy/pre-a-cp1-st8-q3lock-critical-graph-seminorm-nogo-manifest.json",
+    "manifest_sha256": "f76c3ff3f9be86e5d8b2f00be34aca022d218bec70b1613a780480f51861b80d",
+    "script": "codes/foundations/pre_a_cp1_st8_q3lock_critical_graph_seminorm_nogo_independent.py",
+    "script_sha256": "c6b0e132597f74df038a54ec382d3e6c1d5f06b284925738d33213ad7687b328"
+  },
+  "run_kind": "independent",
+  "schema": "tect/foundation-audit/1.0",
+  "total": 19,
+  "verdict": "PASS"
+}

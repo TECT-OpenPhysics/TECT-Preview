@@ -1,0 +1,49 @@
+{
+  "schema": "tect/pre-a-cp1-st8-q3lock-critical-graph-seminorm-nogo/1.0",
+  "exploration_id": "EXP-001027",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "claim_bearing": false,
+  "title": "Critical two-sided graph commutator seminorm is not onsite-stable",
+  "question": "Does the canonical critical two-sided K^(-1/2)-damped q/p commutator seminorm satisfy a frequency-uniform onsite one-step bound?",
+  "candidate_topology": {
+    "control": "K=h-inf(spec(h))+1 with K>=1",
+    "seminorm": "L_K(A)=sum_nu(||[q_nu,A]K^(-1/2)||+||K^(-1/2)[q_nu,A]||+||[p_nu,A]K^(-1/2)||+||K^(-1/2)[p_nu,A]||)",
+    "stability_target": "L_K(alpha_t(A)) <= (1+C|t|) L_K(A) with C independent of Weyl frequency a",
+    "status_before": "OPEN as a specific non-Leibniz candidate; broader analytic/Frechet and state-weighted topologies remain open"
+  },
+  "imported_exact_lower_bound": {
+    "authority": "strategy/pre-a-cp1-st8-q3lock-common-alpha-topology-critical-graph-route-split-manifest.json#critical_half_leibniz_counterexample",
+    "observable": "W_a=exp(-i a p_0/hbar)",
+    "time": "t_a=tau/a^2",
+    "bound": "||[p_0,alpha_(t_a)(W_a)]K^(-1/2)|| >= G tau a - B_tau",
+    "uniformity": "B_tau is finite and independent of a",
+    "G": "g+3 lambda, with G>0"
+  },
+  "new_deduction": {
+    "weyl_initial_bound": "[q_0,W_a]=a W_a and [p_nu,W_a]=0, so K>=1 and Weyl unitarity give L_K(W_a)<=2|a|",
+    "slope": "For tau with G tau>2, the lower slope G tau exceeds the upper initial slope 2",
+    "difference": "(G tau-2)a-B_tau-2 C tau/a is positive for all sufficiently large a",
+    "verdict": "the displayed critical graph seminorm cannot obey the stated frequency-uniform onsite one-step bound"
+  },
+  "fixture": {
+    "g": "3/5",
+    "lambda": "2/7",
+    "chi": "7/4",
+    "tau": "2",
+    "B_tau_oracle": "3/2",
+    "C_growth_oracle": "1",
+    "a_fixture": "10"
+  },
+  "scope": {
+    "closed": "an exact route-level obstruction for this canonical K^(-1/2)-damped commutator seminorm",
+    "open": "non-Leibniz analytic/Frechet scales with frequency profiles, state-weighted topologies, direct projected-Duhamel locality, common alpha, KMS, ground/gap, continuum and Pre-A",
+    "not_claimed": "nonexistence of Q3 dynamics or rejection of every non-Leibniz topology"
+  },
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R211.lean",
+    "command": "lake env lean Tect/R211.lean",
+    "boundary": "Lean checks only the rational slope arithmetic and the finite fixture; it does not encode the unbounded Q3 lower-bound theorem"
+  },
+  "no_overclaim": "The imported lower bound is the analytic authority. This package only combines it with the exact Weyl commutator and K>=1 norm bound; it does not prove a global no-go for non-Leibniz, analytic/Frechet or state-weighted dynamics, and it does not close any QFT thermodynamic or TECT production gate."
+}

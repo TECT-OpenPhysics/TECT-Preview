@@ -1,0 +1,57 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001027",
+  "title": "Critical two-sided graph seminorm is removed by a frequency-growth obstruction",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-FIRST-PASSAGE-BACKBONE-REAL-TIME-PRODUCT-AND-ENERGY-TAIL-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "prior_exploration_id": "EXP-001026",
+  "related": [{"id": "EXP-001026", "relation": "continues"}],
+  "recorded_at": "2026-08-24T09:00:00Z",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-08-24",
+  "provenance": "contemporaneous",
+  "question": "Does the canonical two-sided K^(-1/2)-damped q/p commutator seminorm obey a frequency-uniform onsite bound?",
+  "method": [
+    "Import the exact Q3 Weyl lower bound from the critical-half authority without re-proving it in this package.",
+    "Use [q_0,W_a]=a W_a, [p_nu,W_a]=0, K>=1 and Weyl unitarity to obtain L_K(W_a)<=2a for a>0.",
+    "Set t_a=tau/a^2 and compare G tau a-B_tau against (1+C tau/a^2)2a in exact SymPy and independent Fraction lanes.",
+    "Compile Lean R211 only for rational slope arithmetic and the finite fixture inequality."
+  ],
+  "finding": "Primary and independent lanes pass 19/19, integrated lane passes 21/21 and Lean R211 passes. With G=g+3 lambda=51/35 and tau=2, the lower-minus-upper difference is (32/35)a-3/2-4/a, positive at a=10 and eventually positive for all sufficiently large a. Therefore the displayed critical graph seminorm cannot satisfy the proposed frequency-uniform onsite one-step bound.",
+  "verdict": "advanced",
+  "decision_reason": "This is a useful route-level obstruction, not a theorem about all non-Leibniz topologies. It removes the declared K^(-1/2)-damped critical graph seminorm from the candidate tournament while leaving frequency-profiled analytic/Frechet, state-weighted, projected-Duhamel and local-strict routes open.",
+  "adversarial_review": [
+    {"axis": "imported lower bound", "check": "The bound is imported from the critical-half authority and is not reproved here.", "disposition": "UPHELD; retain the authority as the analytic dependency."},
+    {"axis": "fixture constants", "check": "B_tau, C and a are manifest fixtures; they are not silently promoted to universal theorem constants.", "disposition": "UPHELD; use the positive slope gap for the asymptotic statement."},
+    {"axis": "topology scope", "check": "A contradiction for one seminorm is not a no-go for every non-Leibniz analytic/Frechet or state-weighted scale.", "disposition": "UPHELD; all broader alternatives remain open."},
+    {"axis": "Lean promotion", "check": "R211 checks scalar rational arithmetic and the finite fixture only.", "disposition": "UPHELD; no unbounded operator theorem is claimed."},
+    {"axis": "QFT-to-TECT promotion", "check": "The Q3 route is auxiliary and does not provide heat_root_incidence or the A1/R-192 production owner.", "disposition": "UPHELD; Pre-A and Sector-A remain open."}
+  ],
+  "evidence_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-critical-graph-seminorm-nogo-manifest.json#new_deduction",
+    "strategy/pre-a-cp1-st8-q3lock-critical-graph-seminorm-nogo-certificate-260824.md#Finding",
+    "codes/foundations/pre_a_cp1_st8_q3lock_critical_graph_seminorm_nogo.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_critical_graph_seminorm_nogo_independent.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_critical_graph_seminorm_nogo_verify.py#main",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-24-primary-pre-a-cp1-st8-q3lock-critical-graph-seminorm-nogo/primary.json#assertions",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-24-primary-pre-a-cp1-st8-q3lock-critical-graph-seminorm-nogo/independent.json#assertions",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-24-primary-pre-a-cp1-st8-q3lock-critical-graph-seminorm-nogo/integrated.json#assertions",
+    "verification/lean/Tect/R211.lean#q3_force_fixture",
+    "verification/lean/registry.json#entrypoints"
+  ],
+  "formal_refs": {"events": [], "negatives": [], "results": []},
+  "formal_integration": {"events": [], "negatives": [], "results": [], "no_new_result": true, "no_new_negative": true, "no_pdf": true},
+  "qft_interface": {
+    "closed": "Only the scoped critical graph seminorm obstruction.",
+    "open": "Actual Q3 recurrence, projected-Duhamel locality, common alpha, KMS, ground/gap, continuum and all Pre-A/TECT interfaces remain open.",
+    "tect_boundary": "No heat_root_incidence or A1/R-192 production owner is supplied by this QFT-side audit."
+  },
+  "boundary": "T0 claim-nonbearing route checkpoint. It does not prove Q3 dynamics, QFT thermodynamic identification, C6, Sector A, Pre-A or TECT production closure.",
+  "next_action": "Test a frequency-profiled analytic/Frechet or state-weighted topology, while retaining projected-Duhamel and local-strict history routes as independent candidates; require an explicit common-core recurrence before any QFT interface promotion."
+}
