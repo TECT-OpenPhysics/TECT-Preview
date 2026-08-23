@@ -37,7 +37,7 @@
     },
     "lean_registry": {
       "path": "verification/lean/registry.json",
-      "sha256": "8e0461c1ce73bf8ee11a809559d10b7863b4768890c143304ebcc97351188c73"
+      "sha256": "92b10491beef11fe6f2c30c0a9cd1243520e8c10263df85ad566e0cf550c9b73"
     }
   },
   "registered_inputs": {
@@ -48,8 +48,31 @@
       "subsharp_gap": "1/1000",
       "subsharp_s": "1",
       "subsharp_r": "100",
-      "escape_r_values": ["1", "10", "100", "1000", "10000"],
-      "endpoint_samples": [["1/3", "0"], ["1", "2"], ["2", "10"], ["5/2", "100"]]
+      "escape_r_values": [
+        "1",
+        "10",
+        "100",
+        "1000",
+        "10000"
+      ],
+      "endpoint_samples": [
+        [
+          "1/3",
+          "0"
+        ],
+        [
+          "1",
+          "2"
+        ],
+        [
+          "2",
+          "10"
+        ],
+        [
+          "5/2",
+          "100"
+        ]
+      ]
     }
   },
   "theorem_markers": [
@@ -62,12 +85,30 @@
     "no_uniform_coercivity"
   ],
   "files": {
-    "lean_entrypoint": {"path": "verification/lean/Tect/R194.lean", "sha256": "90912e1e785348997b67af27878068114a1b7ec8a6ad5b16118df6f25155408a"},
-    "primary": {"path": "verification/scripts/lean_a6_sharp_running_mass.py", "sha256": "12d399761775c84a4cc00526c2cd4e2311fb18ee1b747a5f58402f0d01f59c4b"},
-    "independent": {"path": "codes/foundations/lean_a6_sharp_running_mass_independent.py", "sha256": "0296af2ee96b7c1f7ab68bbafe6421dc334f728b48523ee9fba8f33194a47b20"},
-    "verifier": {"path": "codes/foundations/lean_a6_sharp_running_mass_verify.py", "sha256": "0ea7b141620d4fb06a9963a4246263a009037499d378b37e4c8817e7f7f6fcfe"},
-    "certificate": {"path": "strategy/pre-a6-sharp-running-mass-counterterm-boundary-certificate-260822.md", "sha256": "e84a6742cbc8cb39fcda500abac097e6acd8f301493445a563ffc52f08871c45"},
-    "note": {"path": "claims/A6-CLASSII-K-COMPOSITE-DEFINITION/notes/a6-sharp-running-mass-counterterm-boundary-260822.md", "sha256": "bfc400122e5ad796473145cb3474d5f1d01b1d10a0e114d79a3833d751205eea"}
+    "lean_entrypoint": {
+      "path": "verification/lean/Tect/R194.lean",
+      "sha256": "90912e1e785348997b67af27878068114a1b7ec8a6ad5b16118df6f25155408a"
+    },
+    "primary": {
+      "path": "verification/scripts/lean_a6_sharp_running_mass.py",
+      "sha256": "12d399761775c84a4cc00526c2cd4e2311fb18ee1b747a5f58402f0d01f59c4b"
+    },
+    "independent": {
+      "path": "codes/foundations/lean_a6_sharp_running_mass_independent.py",
+      "sha256": "0296af2ee96b7c1f7ab68bbafe6421dc334f728b48523ee9fba8f33194a47b20"
+    },
+    "verifier": {
+      "path": "codes/foundations/lean_a6_sharp_running_mass_verify.py",
+      "sha256": "0ea7b141620d4fb06a9963a4246263a009037499d378b37e4c8817e7f7f6fcfe"
+    },
+    "certificate": {
+      "path": "strategy/pre-a6-sharp-running-mass-counterterm-boundary-certificate-260822.md",
+      "sha256": "e84a6742cbc8cb39fcda500abac097e6acd8f301493445a563ffc52f08871c45"
+    },
+    "note": {
+      "path": "claims/A6-CLASSII-K-COMPOSITE-DEFINITION/notes/a6-sharp-running-mass-counterterm-boundary-260822.md",
+      "sha256": "bfc400122e5ad796473145cb3474d5f1d01b1d10a0e114d79a3833d751205eea"
+    }
   },
   "hostile_mutations": [
     "replace h_min by a smaller coefficient",
@@ -85,8 +126,22 @@
     "event_id": "20260822-r-194-sharp-running-mass-counterterm-boundary-2",
     "event_ordinal": 696,
     "exploration_ordinal": 932,
-    "event_claim_ids": ["A6-CLASSII-COUNTERTERM-CLOSURE", "A6-CLASSII-K-COMPOSITE-DEFINITION", "EXP-000932", "R-194"],
-    "event_keywords": ["A6", "EXP-000932", "R-194", "Lean", "running-mass", "sharp-boundary", "third-component-escape", "counterterm-open"],
+    "event_claim_ids": [
+      "A6-CLASSII-COUNTERTERM-CLOSURE",
+      "A6-CLASSII-K-COMPOSITE-DEFINITION",
+      "EXP-000932",
+      "R-194"
+    ],
+    "event_keywords": [
+      "A6",
+      "EXP-000932",
+      "R-194",
+      "Lean",
+      "running-mass",
+      "sharp-boundary",
+      "third-component-escape",
+      "counterterm-open"
+    ],
     "event_notes": [
       "strategy/pre-a6-sharp-running-mass-counterterm-boundary-manifest.json",
       "strategy/pre-a6-sharp-running-mass-counterterm-boundary-certificate-260822.md",
@@ -100,10 +155,27 @@
       "codes/foundations/lean_a6_sharp_running_mass_independent.py",
       "codes/foundations/lean_a6_sharp_running_mass_verify.py"
     ],
-    "event_raw_tokens": ["EXP-000932", "R-194", "sharp running-mass", "third-component escape", "No R-194 PDF"],
-    "expected_counts": {"claims": 49, "results": 194, "gates": 206, "negatives": 372, "explorations": 932, "events": 696, "tasks": 58, "catalog": 4660},
+    "event_raw_tokens": [
+      "EXP-000932",
+      "R-194",
+      "sharp running-mass",
+      "third-component escape",
+      "No R-194 PDF"
+    ],
+    "expected_counts": {
+      "claims": 49,
+      "results": 194,
+      "gates": 206,
+      "negatives": 372,
+      "explorations": 932,
+      "events": 696,
+      "tasks": 58,
+      "catalog": 4660
+    },
     "no_new_negative_ids": [],
-    "reused_negative_ids": ["NG-2026-07-20-A6-NAIVE-W-SUBTRACTION-NONUNIFORM"],
+    "reused_negative_ids": [
+      "NG-2026-07-20-A6-NAIVE-W-SUBTRACTION-NONUNIFORM"
+    ],
     "no_pdf": true
   },
   "no_overclaim": "T0 claim-nonbearing Lean and independent Fraction boundary only. The sharp coefficient is a local algebraic threshold; the h_min direction remains noncoercive at large third-component background, so no counterterm closure, full-field measure, tightness, Sector-A or Pre-A result is claimed."

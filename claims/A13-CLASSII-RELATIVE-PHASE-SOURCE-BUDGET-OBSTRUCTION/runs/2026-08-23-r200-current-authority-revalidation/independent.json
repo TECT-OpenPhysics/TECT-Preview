@@ -1,0 +1,139 @@
+{
+  "assertion_count": 14,
+  "assertions": [
+    {
+      "actual": "A13-FREF-MOBILITY-HEAT-ROOT-NONIDENTIFIABILITY-CURRENT",
+      "expected": "A13-FREF-MOBILITY-HEAT-ROOT-NONIDENTIFIABILITY-CURRENT",
+      "name": "manifest identity",
+      "pass": true
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "name": "claim nonbearing",
+      "pass": true
+    },
+    {
+      "actual": "[]",
+      "expected": "[]",
+      "name": "no new negative",
+      "pass": true
+    },
+    {
+      "actual": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565",
+      "expected": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565",
+      "name": "source a1_functional",
+      "pass": true
+    },
+    {
+      "actual": "641074df54492654177fc72dd66ecb2cb46a791390215ab521f725d77e622d14",
+      "expected": "641074df54492654177fc72dd66ecb2cb46a791390215ab521f725d77e622d14",
+      "name": "source r192_owner_contract",
+      "pass": true
+    },
+    {
+      "actual": "ae48ade9d11e3f47955ef4837e26d6cf106d2427570fe886c2eb33b0607d6b43",
+      "expected": "ae48ade9d11e3f47955ef4837e26d6cf106d2427570fe886c2eb33b0607d6b43",
+      "name": "source r193_current_manifest",
+      "pass": true
+    },
+    {
+      "actual": "8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af",
+      "expected": "8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af",
+      "name": "source lean_toolchain",
+      "pass": true
+    },
+    {
+      "actual": "a67c26b5518afd984e53eae28a0ba4948c6bb01680d7c360e8b36386eb98962b",
+      "expected": "a67c26b5518afd984e53eae28a0ba4948c6bb01680d7c360e8b36386eb98962b",
+      "name": "source lakefile",
+      "pass": true
+    },
+    {
+      "actual": "4308d953726ebe0a8e8fdb7aa5da996c8bfcd45d4a58f6f1b3b40e25d2521964",
+      "expected": "4308d953726ebe0a8e8fdb7aa5da996c8bfcd45d4a58f6f1b3b40e25d2521964",
+      "name": "source lake_manifest",
+      "pass": true
+    },
+    {
+      "actual": "['0', '0']",
+      "expected": "['0', '0']",
+      "name": "stationary currents vanish",
+      "pass": true
+    },
+    {
+      "actual": "['1', '1']",
+      "expected": "['1', '1']",
+      "name": "rates A",
+      "pass": true
+    },
+    {
+      "actual": "['2', '3']",
+      "expected": "['2', '3']",
+      "name": "rates B",
+      "pass": true
+    },
+    {
+      "actual": "True",
+      "expected": "True",
+      "name": "rates differ",
+      "pass": true
+    },
+    {
+      "actual": "['1', '1']",
+      "expected": "['1', '1']",
+      "name": "covariance unchanged",
+      "pass": true
+    }
+  ],
+  "audit_id": "A13-FREF-MOBILITY-HEAT-ROOT-NONIDENTIFIABILITY-CURRENT",
+  "boundary": "T0 claim-nonbearing current-authority revalidation only. It proves that the finite witness still has the same stationary density and different heat rates after the current R-193 pin is used. It does not identify the canonical A1 production generator, heat-root incidence, raw-current spatial intertwiner, conditional replicas, q-ledger, A13/T-050, Sector-A, Pre-A, physical-empty, continuum, thermodynamic, or real-time dynamics.",
+  "claim_id": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+  "derived": {
+    "different_heat_rates": true,
+    "gibbs_covariance": [
+      "1",
+      "1"
+    ],
+    "hessian": [
+      "1",
+      "1"
+    ],
+    "mobility_a_rates": [
+      "1",
+      "1"
+    ],
+    "mobility_b_rates": [
+      "2",
+      "3"
+    ],
+    "root_labels": [
+      "k",
+      "2k"
+    ],
+    "root_rate_pairs": {
+      "A": {
+        "2k": "1",
+        "k": "1"
+      },
+      "B": {
+        "2k": "3",
+        "k": "2"
+      }
+    },
+    "same_stationary_density": true,
+    "stationary_current_a": [
+      "0",
+      "0"
+    ],
+    "stationary_current_b": [
+      "0",
+      "0"
+    ]
+  },
+  "exploration_id": "EXP-000992",
+  "recorded_at": "2026-08-23T02:45:40.901053Z",
+  "run_kind": "independent",
+  "schema": "tect/a13-fref-r200-current-independent/1.0",
+  "verdict": "PASS"
+}

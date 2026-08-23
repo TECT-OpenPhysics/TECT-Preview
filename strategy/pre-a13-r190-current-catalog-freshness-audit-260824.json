@@ -1,0 +1,52 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-000987",
+  "title": "R-190 current integrated reader is blocked only by a historical catalog sentinel",
+  "recorded_at": "2026-08-24T02:20:00Z",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-08-23",
+  "provenance": "contemporaneous",
+  "task_id": "T-058",
+  "claim_ids": ["A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"],
+  "question": "Does the current R-190 arbitrary-polarization finite-slice package still revalidate on the expanded current catalog, and is any failure mathematical or only historical lifecycle metadata?",
+  "method": [
+    "Run the registered R-190 primary and non-importing independent lanes with --no-store and preserve all existing stored outputs.",
+    "Run the registered integrated reader with --no-store and compare its catalog sentinel against verification/catalog-summary.json.",
+    "Separate source hashes, Lean markers, finite positivity assertions, and owner-scope boundaries from the historical expected catalog count before deciding whether any theorem or downstream owner must change."
+  ],
+  "checks": {
+    "primary": "PRIMARY R-190 LEAN PASS 31/31",
+    "independent": "INDEPENDENT R-190 LEAN PASS 11/11",
+    "integrated": {
+      "status": "blocked before integrated child cross-check",
+      "actual_catalog": 4802,
+      "historical_expected_catalog": 4671,
+      "interim_expected_catalog": 4670,
+      "error": "catalog count sentinel mismatch"
+    }
+  },
+  "finding": "The finite arbitrary-complex-polarization R-190 mathematics and Lean-backed primary/independent lanes still pass. The current integrated reader fails before its cross-assertions solely because its historical formal_integration catalog sentinel is 4671 (or 4670 before its integrated store), while the current generated catalog contains 4802 artefacts after later QFT and run additions. This is a reproducibility/lifecycle freshness mismatch, not a refutation of the finite F_ref positivity theorem and not evidence that the A1 production owner exists.",
+  "decision_reason": "Mutating the historical R-190 manifest in place would change its pinned downstream R-191 input and silently rewrite provenance. The correct disposition is to leave the accepted historical package unchanged, record the freshness blocker, and create a separate append-only reader-revalidation package only if current integrated freshness is required. No A13 owner slot is supplied by this rerun.",
+  "boundary": "T0 claim-nonbearing lifecycle audit. It does not alter R-190's finite two-mode positivity result, repair the A1 F_decl/F_ref owner mismatch, supply heat_root_incidence, root filtration, raw-current intertwining or q-ledger, close R-191/R-192, A13, T-050, Sector-A, Pre-A, physical-empty, continuum or thermodynamic routes, or create a new negative.",
+  "evidence_refs": [
+    "verification/scripts/lean_a13_a1_arbitrary_polarization_two_mode.py#main",
+    "codes/foundations/lean_a13_a1_arbitrary_polarization_two_mode_independent.py#main",
+    "codes/foundations/lean_a13_a1_arbitrary_polarization_two_mode_verify.py#catalog-count",
+    "strategy/pre-a13-a1-arbitrary-polarization-two-mode-manifest.json#formal_integration",
+    "verification/catalog-summary.json#total",
+    "strategy/pre-a13-t058-bounded-complete-production-cylinder-manifest.json#inputs.r190_manifest",
+    "explorations/log.jsonl#EXP-000941"
+  ],
+  "formal_refs": {
+    "events": [],
+    "results": ["R-190"],
+    "negatives": []
+  },
+  "gate_ids": [
+    "A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE",
+    "A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION"
+  ],
+  "next_action": "Do not mutate the historical R-190 manifest. If a current integrated reader is needed, create a separate append-only revalidation package with dynamically or explicitly updated catalog accounting, then revalidate the R-191 consumer hash and rerun the unchanged bounded production-cylinder audit. Keep all finite-slice results comparison-only.",
+  "related": [{"id": "EXP-000941", "relation": "continues"}],
+  "verdict": "inconclusive"
+}

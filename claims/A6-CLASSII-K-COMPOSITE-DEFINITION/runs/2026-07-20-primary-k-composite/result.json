@@ -16,59 +16,59 @@
   "derived": {
     "chain_rule": {
       "one_form_vs_floor_grad_q": 4.2563666103023243e-16,
-      "one_form_vs_J_minus_q_grad_rho": 3.44040374740782e-16
+      "one_form_vs_J_minus_q_grad_rho": 3.440403747407819e-16
     },
     "curvature_maximum": 2.768166089964919,
     "area_lift": {
       "reference_cutoff": 512,
-      "reference_variance": 0.030394785218825795,
+      "reference_variance": 0.030394785218825812,
       "rows": [
         {
           "cutoff": 16,
           "sharp_cube": 0.03038216579409523,
           "sharp_ball": 0.030371337518285857,
-          "smooth_even": 0.030336286149994306,
-          "cube_variance_tail": 1.2619424730565126e-05,
-          "ball_variance_tail": 2.3447700539937916e-05,
-          "smooth_variance_tail": 5.849906883148917e-05
+          "smooth_even": 0.03033628614999431,
+          "cube_variance_tail": 1.2619424730582474e-05,
+          "ball_variance_tail": 2.3447700539955263e-05,
+          "smooth_variance_tail": 5.849906883150305e-05
         },
         {
           "cutoff": 32,
           "sharp_cube": 0.03039315601667171,
           "sharp_ball": 0.030391924946031015,
-          "smooth_even": 0.030387828231328656,
-          "cube_variance_tail": 1.629202154084658e-06,
-          "ball_variance_tail": 2.860272794780183e-06,
-          "smooth_variance_tail": 6.95698749713855e-06
+          "smooth_even": 0.03038782823132866,
+          "cube_variance_tail": 1.6292021541020052e-06,
+          "ball_variance_tail": 2.8602727947975304e-06,
+          "smooth_variance_tail": 6.956987497152428e-06
         },
         {
           "cutoff": 64,
-          "sharp_cube": 0.030394577874600797,
-          "sharp_ball": 0.030394430385518596,
-          "smooth_even": 0.03039392667109432,
-          "cube_variance_tail": 2.0734422499779637e-07,
-          "ball_variance_tail": 3.54833307198571e-07,
-          "smooth_variance_tail": 8.585477314741741e-07
+          "sharp_cube": 0.0303945778746008,
+          "sharp_ball": 0.030394430385518603,
+          "smooth_even": 0.030393926671094324,
+          "cube_variance_tail": 2.0734422501167415e-07,
+          "ball_variance_tail": 3.548333072089793e-07,
+          "smooth_variance_tail": 8.585477314880519e-07
         },
         {
           "cutoff": 128,
-          "sharp_cube": 0.030394759381510816,
-          "sharp_ball": 0.030394741282323542,
-          "smooth_even": 0.030394678593227697,
-          "cube_variance_tail": 2.5837314978488513e-08,
-          "ball_variance_tail": 4.3936502252400755e-08,
-          "smooth_variance_tail": 1.066255980973485e-07
+          "sharp_cube": 0.030394759381510823,
+          "sharp_ball": 0.03039474128232355,
+          "smooth_even": 0.030394678593227694,
+          "cube_variance_tail": 2.5837314988896853e-08,
+          "ball_variance_tail": 4.3936502262809096e-08,
+          "smooth_variance_tail": 1.0662559811816519e-07
         }
       ],
       "variance_tail_slopes": {
-        "cube_variance_tail": -2.989282832099774,
-        "ball_variance_tail": -3.012294457943983,
-        "smooth_variance_tail": -3.0139184943622523
+        "cube_variance_tail": -2.989282831816868,
+        "ball_variance_tail": -3.0122944577774704,
+        "smooth_variance_tail": -3.01391849422286
       },
       "rms_tail_slopes": {
-        "cube_variance_tail": -1.494641416049887,
-        "ball_variance_tail": -1.5061472289719915,
-        "smooth_variance_tail": -1.5069592471811262
+        "cube_variance_tail": -1.494641415908434,
+        "ball_variance_tail": -1.5061472288887352,
+        "smooth_variance_tail": -1.50695924711143
       }
     },
     "counterterm": {
@@ -84,7 +84,7 @@
       "lower_bound_coefficient": 0.011331103508334554,
       "w_infinity": 0.07706249999998072,
       "fierz_max_absolute_error": 4.440892098500626e-16,
-      "minimum_lower_margin": 0.015128729254012381,
+      "minimum_lower_margin": 0.015128729254012385,
       "minimum_upper_margin": 0.00014611308963775535,
       "pure_third_W": 0.0,
       "first_component_W": 0.07706249999999197,
@@ -260,7 +260,7 @@
     {
       "name": "smooth_chain_rule_omega_equals_J_minus_q_grad_rho",
       "status": "PASS",
-      "actual": 3.44040374740782e-16,
+      "actual": 3.440403747407819e-16,
       "expected": "<1e-12"
     },
     {
@@ -276,43 +276,43 @@
     {
       "name": "cube_variance_tail_has_N_minus_3_tail",
       "status": "PASS",
-      "actual": -2.989282832099774,
+      "actual": -2.989282831816868,
       "expected": "between -3.8 and -2.2"
     },
     {
       "name": "ball_variance_tail_has_N_minus_3_tail",
       "status": "PASS",
-      "actual": -3.012294457943983,
+      "actual": -3.0122944577774704,
       "expected": "between -3.8 and -2.2"
     },
     {
       "name": "smooth_variance_tail_has_N_minus_3_tail",
       "status": "PASS",
-      "actual": -3.0139184943622523,
+      "actual": -3.01391849422286,
       "expected": "between -3.8 and -2.2"
     },
     {
       "name": "cube_variance_tail_has_N_minus_3_over_2_rms_tail",
       "status": "PASS",
-      "actual": -1.494641416049887,
+      "actual": -1.494641415908434,
       "expected": "between -1.9 and -1.1"
     },
     {
       "name": "ball_variance_tail_has_N_minus_3_over_2_rms_tail",
       "status": "PASS",
-      "actual": -1.5061472289719915,
+      "actual": -1.5061472288887352,
       "expected": "between -1.9 and -1.1"
     },
     {
       "name": "smooth_variance_tail_has_N_minus_3_over_2_rms_tail",
       "status": "PASS",
-      "actual": -1.5069592471811262,
+      "actual": -1.50695924711143,
       "expected": "between -1.9 and -1.1"
     },
     {
       "name": "admissible_even_regulators_approach_common_area_limit",
       "status": "PASS",
-      "actual": 2.657965257435729e-06,
+      "actual": 2.6579652577781656e-06,
       "expected": 0.01
     },
     {
@@ -330,7 +330,7 @@
     {
       "name": "W_lower_bound_by_9_lambda_min_s",
       "status": "PASS",
-      "actual": 0.015128729254012381,
+      "actual": 0.015128729254012385,
       "expected": ">=-2e-14"
     },
     {
@@ -427,10 +427,10 @@
   },
   "failures": [],
   "environment": {
-    "python": "3.12.10",
-    "numpy": "1.26.4",
+    "python": "3.12.9",
+    "numpy": "2.5.1",
     "platform": "Windows-11-10.0.26200-SP0",
-    "git_commit": "31808f4ee680ed2d289851b398f561b289c5b640",
+    "git_commit": "72f6bffdb9c6c6c93a4c20d7ce25eb2946bdd175",
     "deterministic": true
   },
   "not_closed_here": [

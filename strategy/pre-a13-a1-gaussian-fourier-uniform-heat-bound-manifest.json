@@ -1,0 +1,120 @@
+{
+  "schema": "tect/pre-a13-a1-gaussian-fourier-uniform-heat-bound/1.0",
+  "id": "PRE-A13-A1-GAUSSIAN-FOURIER-UNIFORM-HEAT-BOUND",
+  "title": "Cutoff-uniform quadratic-heat bound for the diagonal-Gaussian A1 current proxy",
+  "recorded_on": "2026-08-23",
+  "task_id": "T-054",
+  "exploration_id": "EXP-000978",
+  "tier": "T0",
+  "claim_bearing": false,
+  "claim_ids": ["A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"],
+  "gate_ids": [
+    "A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE",
+    "A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "purpose": "Upgrade the finite diagonal-Gaussian Fourier heat screen to an explicit cutoff-uniform comparison bound for every heat exponent s>=2, while retaining the proxy-only boundary.",
+  "source_authorities": {
+    "heat_screen_manifest": {
+      "path": "strategy/pre-a13-a1-gaussian-fourier-current-heat-screen-manifest.json",
+      "sha256": "ede52ea1c4d209664260c797e1d0c16aacf2c466d2b0fe4c2d0a8906cecbca14"
+    },
+    "a1_functional_manifest": {
+      "path": "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/production_functional_manifest.json",
+      "sha256": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565"
+    },
+    "a1_backend": {
+      "path": "codes/foundations/n001_variational_backend.py",
+      "sha256": "e2b55702d48198b933968f002e3d7e3781075927fe9b2684047d585ed56f70fc"
+    }
+  },
+  "registered_inputs": {
+    "dimension": 3,
+    "covariance_power": 2,
+    "cutoffs": [1, 2, 3, 4, 5],
+    "heat_exponents": [2, 4],
+    "generator_profile": {
+      "cross_channels": 2,
+      "diagonal_channels": 1,
+      "current_factor_formula": "2*cross_channels+2*diagonal_channels"
+    },
+    "proxy_covariance": "gamma_n=(1+|n|_2^2)^(-2)",
+    "max_norm_shell": {
+      "shell_count_formula": "(2*m+1)^3-(2*m-1)^3=24*m^2+2",
+      "shell_coefficients": [24, 2],
+      "weight_bound_formula": "(24*m^2+2)/(1+m^2)^2 <= 26/m^2 for m>=1"
+    },
+    "convolution_split": {
+      "regions": 2,
+      "quarter_scale": 4,
+      "multiplier_formula": "regions*quarter_scale^covariance_power",
+      "bound_formula": "S(r)<=32*A_bound/(1+|r|_infty^2)^2"
+    },
+    "l1_shell_bound": {
+      "partial_inverse_square_sum_bound": 2,
+      "bound_formula": "A=sum_n gamma_n <= 1+26*2=53"
+    },
+    "uniform_charge_bound": {
+      "bound_formula": "Q_N(s)>=0 and Q_N(s)<=current_factor*convolution_multiplier*A_bound*shell_sum_bound for s>=2",
+      "heat_threshold": 2
+    },
+    "finite_sum": "Q_N(s)=sum_{0!=r in [-N,N]^3} current_factor*|r|_2^2*S_N(r)/(1+(1+|r|_2^2)^(s/2))"
+  },
+  "analytic_contract": {
+    "shell_count": "The max-norm shell has (2m+1)^3-(2m-1)^3=24m^2+2 points.",
+    "inverse_square_tail": "For M>=1, sum_{m=1}^M m^(-2)<2 by 1/m^2<=1/(m(m-1)) for m>=2 and telescoping.",
+    "convolution": "Split p by |p|_infty<=|r|_infty/2 and its complement; each branch costs 4^covariance_power times the l1 proxy bound.",
+    "charge": "For s>=2, |r|_2^2/(1+(1+|r|_2^2)^(s/2))<=1, so the shell sum gives a cutoff-independent majorant.",
+    "comparison_only": "The bound applies only to the declared diagonal Gaussian proxy and is not an A1 production q-ledger."
+  },
+  "derived_contract": {
+    "current_factor": 6,
+    "shell_coefficient": 26,
+    "shell_sum_bound": 52,
+    "l1_bound": 53,
+    "convolution_multiplier": 32,
+    "uniform_charge_bound": 529152
+  },
+  "hostile_mutations": [
+    "replace the Euclidean proxy covariance by the full interacting A1 Gibbs law",
+    "drop one of the two convolution split regions",
+    "change the covariance power without recomputing the split multiplier",
+    "claim the finite proxy bound is a canonical production q-ledger",
+    "claim heat exponent s=0 is uniformly summable",
+    "replace the shell count by an axis-only count",
+    "promote the comparison bound to A13, Sector-A or Pre-A closure",
+    "insert a Lean sorry, admit, axiom or unsafe escape"
+  ],
+  "files": {
+    "primary": {
+      "path": "codes/foundations/a13_a1_gaussian_fourier_uniform_heat_bound.py",
+      "sha256": "22f667cc99df31c2c6e3bfb56cc787e96b7a87e816994f5169c1fcc688522d40"
+    },
+    "independent": {
+      "path": "codes/foundations/a13_a1_gaussian_fourier_uniform_heat_bound_independent.py",
+      "sha256": "44862518dbd3b7579fba644813e0f21ff45dd91d47d26db067d635cd7bb6d833"
+    },
+    "verifier": {
+      "path": "codes/foundations/a13_a1_gaussian_fourier_uniform_heat_bound_verify.py",
+      "sha256": "a8f5656e2dfb32c9cc26134fc96a46faaf4b5c30fc5039f9740be3f4f2495c05"
+    },
+    "lean": {
+      "path": "verification/lean/Tect/R204.lean",
+      "sha256": "f43d74ad94894090dab686b5e6c321c9dee54801f2875af0e83f8feaedab63b0"
+    },
+    "certificate": {
+      "path": "strategy/pre-a13-a1-gaussian-fourier-uniform-heat-bound-certificate-260823.md",
+      "sha256": "92ddf14ee00b35db098f423465c6810feaa2dc5df7847bae317380ebecd915c2"
+    }
+  },
+  "boundary": "T0 claim-nonbearing proxy theorem only. It supplies a cutoff-uniform comparison bound for the explicit diagonal Gaussian Fourier current at heat exponent s>=2. It does not identify the A1 production mobility or heat-root incidence, root filtration, conditional replicas, raw-current spatial intertwiner, once-owned q-ledger, OVERLAP_src, Nelson, an interacting measure, physical-empty ordering, OS/KMS or real-time dynamics, removal, continuum, or close A13, Sector-A or Pre-A.",
+  "formal_integration": {
+    "results": [],
+    "events": [],
+    "negatives": [],
+    "no_new_negative_ids": [],
+    "no_pdf": true,
+    "exploration_only": true
+  },
+  "next_action": "Use the uniform proxy bound only as a comparison input. The next production obligation remains a hash-pinned heat_root_incidence and raw-current/q-ledger owner on the same A1 cylinder; rerun R-192 only after those fields exist."
+}

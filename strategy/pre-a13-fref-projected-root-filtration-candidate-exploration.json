@@ -1,0 +1,43 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-000993",
+  "title": "Finite projected root filtration supplies only a quadratic comparison candidate",
+  "recorded_at": "2026-08-24T06:01:00Z",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-08-23",
+  "provenance": "contemporaneous",
+  "task_id": "T-054",
+  "claim_ids": ["A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"],
+  "question": "Can a finite projected support filtration turn the side-16 F_ref QFT comparison process into the heat-root and root-filtration owner required by R-192?",
+  "method": [
+    "Define the side-16 one-dimensional slice G=Z/16Z, S0={1,2}, C(S)=S+2(S-S) modulo 16, and V_j as Fourier-support subspaces of S_j.",
+    "Derive S1 and S2 by exact integer set arithmetic and independently reconstruct the same supports with a stdlib-only Fraction lane.",
+    "Define the quadratic-core diagonal rate omega(n)=r+Z*(2*pi*n/16)^2+Y*(2*pi*n/16)^4 and prove its positive rational lower bound r-Z^2/(4Y).",
+    "Use Lean to prove the general diagonal support-preservation lemma and the exact positive lower-bound identity; run primary, independent, integrated and direct Lean checks."
+  ],
+  "finding": "The projected candidate is exact on the declared finite slice: S0=[1,2], S1=[0,1,2,3,4,15], and S2 is all residues 0 through 15. Thus V0 is properly nested in V1 and V2, the local nonlinear support rule raises V_j to V_(j+1), and the diagonal quadratic heat proxy preserves every V_j. The lower bound is 26000000000947494031/100000000000000000000>0. This supplies a finite projected-filtration and quadratic-core heat-root candidate only; it does not supply a nonlinear production heat-root law, conditional replicas, raw-current spatial intertwiner, or one-use q-ledger.",
+  "decision_reason": "A diagonal Fourier multiplier preserves support by construction, but static F_ref data do not select that multiplier as the canonical nonlinear production mobility, and a deterministic support projection is not a conditional replica law. The one-dimensional slice is not the full three-dimensional A1 cylinder. Promoting this candidate would therefore bypass the R-192 owner contract rather than advance it.",
+  "boundary": "T0 claim-nonbearing finite comparison only. No R-192 completion, A13/T-050 closure, interacting measure, OS/KMS or real-time result, physical-empty ordering, removal, continuum, thermodynamic, Sector-A or Pre-A conclusion follows.",
+  "evidence_refs": [
+    "strategy/pre-a13-fref-projected-root-filtration-candidate-manifest.json#derived_contract",
+    "strategy/pre-a13-fref-projected-root-filtration-candidate-certificate-260823.md#Heat-root-candidate",
+    "codes/foundations/a13_fref_projected_root_filtration_candidate.py#derive",
+    "codes/foundations/a13_fref_projected_root_filtration_candidate_independent.py#reconstruct",
+    "codes/foundations/a13_fref_projected_root_filtration_candidate_verify.py#main",
+    "verification/lean/Tect/R205.lean#diagonal_preserves_support",
+    "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-23-primary-projected-root-filtration-candidate/result.json#assertions",
+    "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-23-independent-projected-root-filtration-candidate/result.json#assertions",
+    "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-23-integrated-projected-root-filtration-candidate/result.json#assertions",
+    "strategy/pre-a13-t058-bounded-complete-production-cylinder-manifest.json#first_failure_slot",
+    "explorations/log.jsonl#EXP-000992"
+  ],
+  "formal_refs": {"results": [], "negatives": [], "events": []},
+  "gate_ids": [
+    "A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE",
+    "A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "next_action": "Keep this finite projected object as a comparison baseline. Advance R-192 only after a hash-pinned full A1 nonlinear heat-root law, conditional replica construction, raw-current spatial identity and one-use nonnegative q-ledger are supplied on the complete production cylinder.",
+  "related": [{"id": "EXP-000992", "relation": "continues"}],
+  "verdict": "advanced"
+}

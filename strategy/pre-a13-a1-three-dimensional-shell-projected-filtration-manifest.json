@@ -1,0 +1,88 @@
+{
+  "schema": "tect/pre-a13-a1-three-dimensional-shell-projected-filtration/1.0",
+  "audit_id": "A13-A1-THREE-DIMENSIONAL-SHELL-PROJECTED-FILTRATION",
+  "title": "Three-dimensional A1 shell support closure and projected filtration",
+  "task_id": "T-054",
+  "exploration_id": "EXP-000994",
+  "claim_id": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+  "tier": "T0",
+  "claim_bearing": false,
+  "source_authorities": {
+    "a1_functional": {
+      "path": "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/production_functional_manifest.json",
+      "sha256": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565"
+    },
+    "r192_owner": {
+      "path": "strategy/pre-a13-t058-bounded-complete-production-cylinder-manifest.json",
+      "sha256": "641074df54492654177fc72dd66ecb2cb46a791390215ab521f725d77e622d14"
+    },
+    "r202_full_residue": {
+      "path": "strategy/pre-a13-full-residue-fref-qft-closure-manifest.json",
+      "sha256": "e4396bfb4204825bbea0be94af6e076a1f6f8bdf040fd4048b31fc8c9bd83653"
+    },
+    "r205_projected_candidate": {
+      "path": "strategy/pre-a13-fref-projected-root-filtration-candidate-manifest.json",
+      "sha256": "3daa15bbcfca3aabe75b9004aecfdde5447a10afdb6b573b4419d3861c28af33"
+    }
+  },
+  "registered_inputs": {
+    "torus_side": 16,
+    "spatial_dimension": 3,
+    "seed_shell": "S0={-1,+1}^3 modulo 16, the |n|^2=3 side-16 shell",
+    "seed_modes": [
+      [-1, -1, -1],
+      [-1, -1, 1],
+      [-1, 1, -1],
+      [-1, 1, 1],
+      [1, -1, -1],
+      [1, -1, 1],
+      [1, 1, -1],
+      [1, 1, 1]
+    ],
+    "nonlinear_power": 2,
+    "iterations": 2,
+    "closure_rule": "C(S)=S+2(S-S) modulo (Z/16Z)^3",
+    "filtration": "V_j={f: supp(f) subset S_j}",
+    "quadratic_heat_rate": "omega(n)=r+Z*(2*pi*n/16)^2+Y*(2*pi*n/16)^4 componentwise",
+    "heat_semigroup": "diagonal Fourier multiplier exp(-t*omega(n))"
+  },
+  "derived_contract": {
+    "support_cardinalities": {"S0": 8, "S1": 216, "S2": 512},
+    "S0_coordinate_values": [1, 15],
+    "S1_coordinate_values": [1, 3, 5, 11, 13, 15],
+    "S2_coordinate_values": [1, 3, 5, 7, 9, 11, 13, 15],
+    "S2_description": "odd residue cube, a proper 512-point subset of the 4096-point torus",
+    "nested_filtration": true,
+    "quadratic_heat_preserves_each_Vj": true,
+    "nonlinear_drift_maps_Vj_to_Vj_plus_1": true,
+    "quadratic_core_has_positive_rate_lower_bound": true,
+    "heat_root_incidence": "finite quadratic-core candidate only",
+    "root_filtration": "finite 3D projected candidate only",
+    "conditional_replicas": false,
+    "raw_current_spatial_intertwiner": false,
+    "production_one_use_q_ledger": false,
+    "production_owner": false,
+    "r192_first_failure_slot": "heat_root_incidence",
+    "next_candidate_missing_slots": ["conditional_replicas", "raw_current_spatial_intertwiner", "production_one_use_q_ledger"]
+  },
+  "hostile_mutations": [
+    "replace the modulo-16 three-dimensional closure by a one-dimensional slice",
+    "replace the |n|^2=3 seed shell by an arbitrary eight-point support",
+    "claim S2 has 4096 points or equals the full torus",
+    "erase the intermediate 216-point support",
+    "claim diagonal heat preservation supplies the nonlinear production heat-root map",
+    "promote the finite shell projection to a full A1 QFT owner",
+    "invent conditional replicas, raw-current identity or q-ledger",
+    "insert a Lean sorry, admit, axiom or unsafe escape"
+  ],
+  "files": {
+    "primary": {"path": "codes/foundations/a13_a1_three_dimensional_shell_projected_filtration.py", "sha256": "fd4717aa1ae32c8570c739b1e87f1670d621667af548e698ab1e5a524c09861f"},
+    "independent": {"path": "codes/foundations/a13_a1_three_dimensional_shell_projected_filtration_independent.py", "sha256": "6c1b3d857910035bb5ea306d69ddfdc34d775c94dee85078254b9f871592edb2"},
+    "integrated": {"path": "codes/foundations/a13_a1_three_dimensional_shell_projected_filtration_verify.py", "sha256": "a0b50ffc249f175eec5c95c6719edb2f329d9619c91ac0d9208040ab65d8afce"},
+    "lean": {"path": "verification/lean/Tect/R206.lean", "sha256": "05323f632da50b20d072d41eb3eeb1888e5e9bc74ed187267a16b8ec3d59c595"},
+    "certificate": {"path": "strategy/pre-a13-a1-three-dimensional-shell-projected-filtration-certificate-260823.md", "sha256": "0e4b399019780af691d8be88a5d7fdea5401c145ec23d5c5fb43de91eb1b30c0"}
+  },
+  "boundary": "T0 claim-nonbearing finite three-dimensional shell projection only. It proves the exact support-cardinality sequence 8 to 216 to 512 and the parity-cube endpoint for the declared local nonlinear support rule, plus preservation by a diagonal quadratic heat proxy. It does not supply the canonical nonlinear A1 production mobility, heat-root incidence, conditional replicas, raw-current spatial intertwiner, one-use q-ledger, complete R-192 owner, A13/T-050, interacting measure, OS/KMS, real-time dynamics, physical-empty comparison, removal, continuum, thermodynamic, Sector-A or Pre-A closure.",
+  "formal_integration": {"results": [], "events": [], "negatives": [], "no_new_negative_ids": [], "no_pdf": true, "exploration_only": true},
+  "next_action": "Treat the 512-point odd-residue cube as a finite projected comparison object. A production advance still requires a hash-pinned full A1 nonlinear heat-root law, conditional replica construction, raw-current spatial identity and one-use nonnegative q-ledger on the complete cylinder before rerunning R-192."
+}

@@ -1,0 +1,99 @@
+{
+  "schema": "tect/pre-a13-nonlinear-root-filtration-mixing/1.0",
+  "audit_id": "A13-NONLINEAR-ROOT-FILTRATION-MIXING",
+  "title": "Exact nonlinear F_ref mode mixing blocks the naive two-root heat filtration",
+  "task_id": "T-054",
+  "exploration_id": "EXP-000963",
+  "claim_id": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+  "tier": "T0",
+  "claim_bearing": false,
+  "source_authorities": {
+    "a1_functional": {
+      "path": "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/production_functional_manifest.json",
+      "sha256": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565"
+    },
+    "a1_backend": {
+      "path": "codes/foundations/n001_variational_backend.py",
+      "sha256": "e2b55702d48198b933968f002e3d7e3781075927fe9b2684047d585ed56f70fc"
+    },
+    "r192_manifest": {
+      "path": "strategy/pre-a13-t058-bounded-complete-production-cylinder-manifest.json",
+      "sha256": "641074df54492654177fc72dd66ecb2cb46a791390215ab521f725d77e622d14"
+    },
+    "lean_toolchain": {
+      "path": "verification/lean/lean-toolchain",
+      "sha256": "8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af"
+    },
+    "lean_lakefile": {
+      "path": "verification/lean/lakefile.toml",
+      "sha256": "a67c26b5518afd984e53eae28a0ba4948c6bb01680d7c360e8b36386eb98962b"
+    },
+    "lean_lockfile": {
+      "path": "verification/lean/lake-manifest.json",
+      "sha256": "4308d953726ebe0a8e8fdb7aa5da996c8bfcd45d4a58f6f1b3b40e25d2521964"
+    }
+  },
+  "registered_inputs": {
+    "torus": "declared side-16 Fourier torus; frequency units are integer multiples of k=2*pi/16",
+    "root_modes": [1, 2],
+    "root_coefficients": [1, 1],
+    "internal_component": 1,
+    "nonlinear_power": 2,
+    "tested_term": "gamma*rho^2*Psi from the hash-pinned proposed F_ref local sextic term",
+    "naive_filtration": "span of the registered input root modes only"
+  },
+  "derived_contract": {
+    "conjugate_fourier_rule": "bar(phi)_n=conj(phi_-n)",
+    "rho_rule": "rho=bar(phi)*phi",
+    "drift_rule": "nonlinear_drift=rho^p*phi",
+    "required_result": "exact output support and coefficient leakage outside the input root span",
+    "owner_slots": {
+      "heat_root_incidence": false,
+      "root_filtration": false,
+      "raw_current_spatial_intertwiner": false,
+      "production_one_use_q_ledger": false
+    }
+  },
+  "hostile_mutations": [
+    "drop the conjugate Fourier factor when forming rho",
+    "replace the registered nonlinear power by a linear term",
+    "declare the output support equal to the input roots without convolution",
+    "erase the negative-frequency leakage",
+    "erase the zero-frequency leakage",
+    "promote the exact witness to a complete production heat-root map",
+    "promote a finite mode-mixing witness to A13/T-050 or Sector-A closure",
+    "insert a Lean sorry, admit, axiom or unsafe escape"
+  ],
+  "files": {
+    "primary": {
+      "path": "codes/foundations/a13_nonlinear_root_filtration_mixing.py",
+      "sha256": "0f5aba68f5f16c6e9e80e49572b73664865aed2fb7fe60b14ccfbdc6786b6d1a"
+    },
+    "independent": {
+      "path": "codes/foundations/a13_nonlinear_root_filtration_mixing_independent.py",
+      "sha256": "7b2ba24db1b421f1ace67a1e6d9fc722e146fb9829d5d76dc7171ca59775e961"
+    },
+    "integrated": {
+      "path": "codes/foundations/a13_nonlinear_root_filtration_mixing_verify.py",
+      "sha256": "1320ebbaa7fe2be5685b187b1b2315d15ec0c2a6bc9c451c9233ec6b699a5e4a"
+    },
+    "certificate": {
+      "path": "strategy/pre-a13-nonlinear-root-filtration-mixing-certificate-260823.md",
+      "sha256": "ed23f330568012f80b9d2f93e1abe1ed318a32c98c4db74219aac42618db57cc"
+    },
+    "lean": {
+      "path": "verification/lean/Tect/R198.lean",
+      "sha256": "de51119d8af7eab4872ccb8a5b43d1bc1b41d8d09b8d637b7344d86e0ac197df"
+    }
+  },
+  "boundary": "T0 claim-nonbearing exact finite nonlinear mode-mixing witness only. It blocks the naive two-root invariant filtration; it does not supply a canonical root filtration, heat-root incidence, raw-current spatial intertwiner, q-ledger, A13/T-050, Sector-A, Pre-A, physical-empty, continuum, or real-time conclusion.",
+  "formal_integration": {
+    "results": [],
+    "events": [],
+    "negatives": [],
+    "no_new_negative_ids": [],
+    "no_pdf": true
+  },
+  "next_action": "Define and hash-pin a projected conditional root filtration that contains the generated modes and prove its compatibility with the production heat/root map and one-use q-ledger; otherwise retain the R-192 first-missing-owner boundary.",
+  "verdict": "advanced"
+}

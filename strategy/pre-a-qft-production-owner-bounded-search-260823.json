@@ -1,0 +1,84 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-000980",
+  "title": "Bounded QFT source search finds no admitted A1 production heat-root owner",
+  "recorded_at": "2026-08-24T00:45:00Z",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-08-23",
+  "provenance": "contemporaneous",
+  "task_id": "T-054",
+  "claim_ids": [
+    "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
+  ],
+  "question": "Does the current selected legacy/QFT source index contain an admitted A1 production generator with heat-root incidence, root filtration, replicas, raw-current intertwiner, and production q-ledger?",
+  "method": [
+    "Run the bounded selected-index A13 query for production generator, stochastic heat, mobility and root filtration with limit 50 and JSON output.",
+    "Run three broader bounded discovery queries for stochastic quantization, Model-A/Langevin and heat-kernel generator terms, retaining source identifiers, hit counts and discovery warnings.",
+    "Cross-read the returned source roles against the hash-pinned A1/A2/R-192 owner-slot contract and do not promote discovery-only legacy sources into current authority."
+  ],
+  "bounded_queries": [
+    {
+      "claim": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+      "text": "production generator stochastic heat mobility root filtration",
+      "limit": 50,
+      "returned": 0,
+      "unique_sources": 0,
+      "interpretation": "No selected A13-indexed source matched this owner query."
+    },
+    {
+      "claim": null,
+      "text": "production generator stochastic heat mobility root filtration",
+      "limit": 50,
+      "returned": 50,
+      "unique_sources": 22,
+      "interpretation": "Limit-saturated discovery results; every returned row is marked legacy discovery result, not current proof."
+    },
+    {
+      "claim": null,
+      "text": "stochastic quantization mobility root filtration",
+      "limit": 50,
+      "returned": 50,
+      "unique_sources": 19,
+      "interpretation": "Limit-saturated discovery results; no returned row is an admitted A1 production owner."
+    },
+    {
+      "claim": null,
+      "text": "production generator heat kernel",
+      "limit": 50,
+      "returned": 50,
+      "unique_sources": 28,
+      "interpretation": "Limit-saturated discovery results; source roles remain legacy discovery or comparison only."
+    }
+  ],
+  "finding": "The bounded selected A13 query returns no source. Broader discovery queries return only legacy discovery rows, including known scalar/Hartree, finite-grid, or comparison materials; none supplies the current complex three-component A1 production generator together with a hash-pinned heat_root_incidence, root-labelled filtration, conditional replicas, raw-current spatial intertwiner and once-owned nonnegative q-ledger. The search therefore strengthens the R-192 owner stop but does not prove that no such source exists outside the bounded index.",
+  "decision_reason": "A discovery hit is not a production owner. Promoting a legacy Model-A, Hartree, finite-grid, or gradient-flow statement would import its kinetic law, field space, regulator and normalization and would bypass the R-192 first-failure contract. The correct disposition is a bounded applicability stop, not a new physical negative.",
+  "boundary": "This is T0 claim-nonbearing source-applicability evidence only. It does not refute QFT dynamics in general, close R-192, supply A13/T-050, prove an interacting measure, OS/KMS or real-time dynamics, select a physical vacuum, or close Sector-A/Pre-A. The result is limited to the current selected index and the stated bounded queries.",
+  "evidence_refs": [
+    "verification/scripts/legacy_search.py#query",
+    "strategy/pre-a-qft-dynamics-candidate-screen-260823.md#candidate-screen",
+    "strategy/pre-a13-t058-bounded-complete-production-cylinder-manifest.json#first_failure_slot",
+    "strategy/pre-a2-gradient-flow-r192-owner-crosswalk-manifest.json#registered_crosswalk",
+    "explorations/log.jsonl#EXP-000979"
+  ],
+  "formal_refs": {
+    "events": [],
+    "results": [
+      "R-192",
+      "R-193"
+    ],
+    "negatives": []
+  },
+  "gate_ids": [
+    "A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE",
+    "A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "next_action": "Keep the discovery-only source set quarantined. Advance only if a future authority supplies and hash-pins the A1 production generator/mobility, heat_root_incidence, root filtration, conditional replicas, raw-current spatial identity and one-use q-ledger; then rerun the unchanged R-192 owner order.",
+  "related": [
+    {
+      "id": "EXP-000979",
+      "relation": "continues"
+    }
+  ],
+  "verdict": "parked"
+}

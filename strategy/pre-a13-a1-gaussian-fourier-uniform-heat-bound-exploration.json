@@ -1,0 +1,41 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-000978",
+  "title": "Cutoff-uniform diagonal-Gaussian Fourier heat comparison bound",
+  "recorded_at": "2026-08-24T00:11:12Z",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-08-23",
+  "provenance": "contemporaneous",
+  "task_id": "T-054",
+  "claim_ids": ["A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"],
+  "question": "Can the finite diagonal-Gaussian Fourier heat screen be upgraded to a cutoff-uniform comparison bound without promoting it to the A1 production owner?",
+  "method": [
+    "Count max-norm shells in Z^3 and bound their diagonal-Gaussian weights by an inverse-square tail.",
+    "Use the two-region max-norm convolution split to derive a cutoff-independent majorant for the proxy charge at heat exponent s>=2.",
+    "Reproduce the finite cutoff tables in an exact Fraction primary lane and a stdlib-only independent lane, compile the scalar constants in Lean R204, and exercise hostile scope mutations.",
+    "Compare the resulting proxy fields against the first missing R-192 production slot heat_root_incidence and its filtration, raw-current and q-ledger obligations."
+  ],
+  "finding": "For gamma_n=(1+|n|_2^2)^(-2) in d=3, the max-norm shell count is 24m^2+2, the proxy l1 bound is A<53, the nonzero shell sum is <52, and the two-region convolution multiplier is 32. With current factor 6 this gives Q_N(s)<=529152 for every finite cutoff and every s>=2. Primary, independent, integrated and Lean R204 checks pass. The result is a comparison theorem for the declared diagonal Gaussian proxy only; it does not identify the nonlinear A1 production mobility, heat-root incidence, root filtration, conditional replicas, raw-current spatial intertwiner or once-owned production q-ledger.",
+  "decision_reason": "The uniform estimate is a genuine finite-QFT comparison improvement, but importing it as canonical would conflate an explicit Gaussian proxy with the missing production owner and would bypass the R-192 first-failure rule.",
+  "boundary": "T0 claim-nonbearing proxy theorem only. No A13, Sector-A, Pre-A, physical-empty, OS/KMS, real-time, thermodynamic or continuum conclusion follows.",
+  "evidence_refs": [
+    "strategy/pre-a13-a1-gaussian-fourier-uniform-heat-bound-manifest.json#derived_contract",
+    "strategy/pre-a13-a1-gaussian-fourier-uniform-heat-bound-certificate-260823.md#Exact-majorant",
+    "codes/foundations/a13_a1_gaussian_fourier_uniform_heat_bound.py#compute",
+    "codes/foundations/a13_a1_gaussian_fourier_uniform_heat_bound_independent.py#run",
+    "codes/foundations/a13_a1_gaussian_fourier_uniform_heat_bound_verify.py#mutation_suite",
+    "verification/lean/Tect/R204.lean#uniform_charge_bound",
+    "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-08-23-integrated-a1-gaussian-fourier-uniform-heat-bound/result.json#cross_assertions",
+    "strategy/pre-a13-t058-bounded-complete-production-cylinder-manifest.json#first_failure_slot",
+    "explorations/log.jsonl#EXP-000977"
+  ],
+  "formal_refs": {"events": [], "results": [], "negatives": []},
+  "gate_ids": [
+    "A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE",
+    "A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "next_action": "Keep this proxy as comparison-only. Do not rerun R-192 until a hash-pinned A1 production mobility, heat_root_incidence, root-labelled filtration, raw-current spatial identity and once-owned nonnegative q-ledger are supplied.",
+  "related": [{"id": "EXP-000977", "relation": "continues"}],
+  "verdict": "advanced"
+}

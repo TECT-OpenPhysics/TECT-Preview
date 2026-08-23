@@ -1,0 +1,132 @@
+{
+  "schema": "tect/pre-a13-a1-fref-root-frequency-crosswalk/1.0",
+  "audit_id": "A13-A1-FREF-ROOT-FREQUENCY-CROSSWALK",
+  "title": "F_ref Fourier shell versus two-root cylinder frequency crosswalk",
+  "task_id": "T-054",
+  "exploration_id": "EXP-000976",
+  "claim_id": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+  "tier": "T0",
+  "claim_bearing": false,
+  "source_authorities": {
+    "a1_functional": {
+      "path": "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/production_functional_manifest.json",
+      "sha256": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565"
+    },
+    "r174_cylinder": {
+      "path": "strategy/pre-a-a13-two-root-production-cylinder-cross-synthesis-manifest.json",
+      "sha256": "f0aff366385b3857407f6d2340c4bdf96860359a679d1e5760f40b691a1ae043"
+    },
+    "r176_two_root": {
+      "path": "strategy/pre-a-a13-a1-two-root-cholesky-covariance-witness-manifest.json",
+      "sha256": "93776dab165e7b6dcf703ee592246e2135edf2ff327127c6f8ea6bdb24cd850e"
+    },
+    "r192_owner": {
+      "path": "strategy/pre-a13-t058-bounded-complete-production-cylinder-manifest.json",
+      "sha256": "641074df54492654177fc72dd66ecb2cb46a791390215ab521f725d77e622d14"
+    },
+    "r197_fref_candidate": {
+      "path": "strategy/pre-a13-fref-nonlinear-gibbs-candidate-manifest.json",
+      "sha256": "f5b106b9bd8f3000afcfa9ae5c0899da6d6736de786c13895ac4a017d2d49a47"
+    },
+    "lean_toolchain": {
+      "path": "verification/lean/lean-toolchain",
+      "sha256": "8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af"
+    },
+    "lakefile": {
+      "path": "verification/lean/lakefile.toml",
+      "sha256": "a67c26b5518afd984e53eae28a0ba4948c6bb01680d7c360e8b36386eb98962b"
+    },
+    "lake_manifest": {
+      "path": "verification/lean/lake-manifest.json",
+      "sha256": "4308d953726ebe0a8e8fdb7aa5da996c8bfcd45d4a58f6f1b3b40e25d2521964"
+    }
+  },
+  "registered_inputs": {
+    "torus_length": "16",
+    "spatial_dimension": 3,
+    "fourier_step": "2*pi/L",
+    "root_multipliers": [
+      1,
+      2
+    ],
+    "fref_symbol": "r+Z*|k|^2+Y*|k|^4=Y*(|k|^2-q_*^2)^2+mu_*",
+    "qstar_square": "-Z/(2*Y)",
+    "side16_mode_norm_squares": [
+      1,
+      3,
+      4
+    ],
+    "r176_manifest_kinetic_formula": "r+Z*(m*pi/L)^2+Y*(m*pi/L)^4",
+    "r176_executable_formula": "r+Z*(m*(2*pi/L))^2+Y*(m*(2*pi/L))^4"
+  },
+  "derived_contract": {
+    "manifest_formula_mismatch": true,
+    "r176_root_norm_squares": [
+      1,
+      4
+    ],
+    "nearest_fref_side16_shell_norm_square": 3,
+    "fref_shell_is_not_r176_root_pair": true,
+    "finite_fref_qft_candidate": true,
+    "canonical_heat_root_incidence": false,
+    "r192_first_missing_slot": "heat_root_incidence",
+    "production_owner": false
+  },
+  "test_oracles": {
+    "formula_difference_coefficients": [
+      3,
+      15
+    ],
+    "qstar_ratio_interval": [
+      "2.9999999999",
+      "3.0000000001"
+    ],
+    "kinetic_order": [
+      "K_n2=3",
+      "K_n2=4",
+      "K_n2=1"
+    ]
+  },
+  "files": {
+    "lean": {
+      "path": "verification/lean/Tect/R203.lean",
+      "sha256": "45054ccf7b9dbcadf67f7aa90aa4d4573675473b7708dcc8dbb394535ee15911"
+    },
+    "primary": {
+      "path": "verification/scripts/a13_a1_fref_root_frequency_crosswalk.py",
+      "sha256": "c32c7ab1d526c3ad9d13b67cbd3b3c29e90adb6ca70ac04b182681a954666561"
+    },
+    "independent": {
+      "path": "codes/foundations/a13_a1_fref_root_frequency_crosswalk_independent.py",
+      "sha256": "ca97f33a960678494551d61802e7546f042f7e54895f3a0277989e0079054c2b"
+    },
+    "integrated": {
+      "path": "codes/foundations/a13_a1_fref_root_frequency_crosswalk_verify.py",
+      "sha256": "e5c8c49f0c51a6eee2fe498cfb37b0726f15a043a68d4d34bddcd1abc7798173"
+    },
+    "certificate": {
+      "path": "strategy/pre-a13-a1-fref-root-frequency-crosswalk-certificate-260823.md",
+      "sha256": "de0f335d273edad31e17aaa539a5a4b7ff0550414b9f9cdae6a9e5583010ef27"
+    }
+  },
+  "formal_integration": {
+    "results": [],
+    "events": [],
+    "negatives": [],
+    "no_new_negative_ids": [],
+    "no_pdf": true
+  },
+  "hostile_mutations": [
+    "replace the executable 2*pi/L formula by pi/L without recomputation",
+    "delete the manifest-versus-code mismatch finding",
+    "declare the |n|^2=1,4 roots to be the F_ref bottom shell",
+    "replace the completed-square q_* symbol by q_0 without checking the decimal defect",
+    "promote finite F_ref Gibbs invariance to the R-192 production owner",
+    "erase the heat_root_incidence missing slot",
+    "insert a Lean sorry, admit, axiom or unsafe token",
+    "replace an authority hash"
+  ],
+  "boundary": "This T0 crosswalk derives the exact finite Fourier step, compares the R-174/R-176 two-root modes with the completed-square F_ref shell, and exposes the unasserted R-176 manifest kinetic-formula mismatch. It does not repair the frozen R-176 authority, identify a canonical root-labelled heat map, supply the nonlinear raw-current spatial intertwiner or q-ledger, or close R-192, A13, T-050, Sector-A, Pre-A, physical-empty, continuum, thermodynamic, OS/KMS or real-time routes.",
+  "next_action": "Decide and hash-pin one convention: either correct the R-176 manifest formula to the executable 2*pi/L convention or change the executable and all root covariances consistently. Then define the canonical map from F_ref Fourier modes to production roots before attempting heat_root_incidence.",
+  "verdict": "advanced"
+}

@@ -1,0 +1,104 @@
+{
+  "schema": "tect/pre-a13-fref-nonlinear-gibbs-candidate/1.0",
+  "audit_id": "A13-A1-FREF-NONLINEAR-GIBBS-CANDIDATE",
+  "title": "Finite A1 F_ref nonlinear stochastic-quantization candidate and owner crosswalk",
+  "task_id": "T-054",
+  "exploration_id": "EXP-000962",
+  "claim_id": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+  "tier": "T0",
+  "claim_bearing": false,
+  "source_authorities": {
+    "a1_functional": {
+      "path": "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/production_functional_manifest.json",
+      "sha256": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565"
+    },
+    "a1_backend": {
+      "path": "codes/foundations/n001_variational_backend.py",
+      "sha256": "e2b55702d48198b933968f002e3d7e3781075927fe9b2684047d585ed56f70fc"
+    },
+    "r192_manifest": {
+      "path": "strategy/pre-a13-t058-bounded-complete-production-cylinder-manifest.json",
+      "sha256": "641074df54492654177fc72dd66ecb2cb46a791390215ab521f725d77e622d14"
+    },
+    "lean_toolchain": {
+      "path": "verification/lean/lean-toolchain",
+      "sha256": "8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af"
+    },
+    "lean_lakefile": {
+      "path": "verification/lean/lakefile.toml",
+      "sha256": "a67c26b5518afd984e53eae28a0ba4948c6bb01680d7c360e8b36386eb98962b"
+    },
+    "lean_lockfile": {
+      "path": "verification/lean/lake-manifest.json",
+      "sha256": "4308d953726ebe0a8e8fdb7aa5da996c8bfcd45d4a58f6f1b3b40e25d2521964"
+    }
+  },
+  "registered_inputs": {
+    "mobility": "identity finite-dimensional mobility M_N=I",
+    "inverse_temperature": "beta>0 symbolic",
+    "finite_space": "finite Fourier Galerkin space on the declared T^3",
+    "functional": "hash-pinned proposed F_ref, not F_decl",
+    "scope": "finite real coordinates, fixed declared torus and cutoff, no limit",
+    "owner_choice": "identity mobility is an explicit candidate choice, not a deduction"
+  },
+  "derived_contract": {
+    "functional_owner": "F_ref",
+    "owner_slots": {
+      "heat_generator": true,
+      "heat_semigroup": true,
+      "filtration": false,
+      "raw_current_spatial_intertwiner": false,
+      "production_one_use_q_ledger": false
+    },
+    "r192_first_failure_slot": "heat_root_incidence",
+    "production_owner": false
+  },
+  "hostile_mutations": [
+    "replace F_ref by F_decl",
+    "promote identity mobility to canonical production mobility",
+    "declare finite Gibbs invariance to be a continuum or interacting-measure limit",
+    "promote heat-generator candidate to heat-root incidence",
+    "promote finite translation covariance to a raw-current spatial intertwiner",
+    "invent a nonnegative one-use production q-ledger from Gibbs invariance",
+    "declare the finite candidate to close A13 or T-050",
+    "declare the candidate to close Sector-A, Pre-A, physical-empty, or real-time routes"
+  ],
+  "files": {
+    "primary": {
+      "path": "codes/foundations/a13_fref_nonlinear_gibbs_candidate.py",
+      "sha256": "eb9e61618d1ab5a5291d2dbe6fbb03dc1b05f09c5e18f783ea9ebcae25f46915"
+    },
+    "independent": {
+      "path": "codes/foundations/a13_fref_nonlinear_gibbs_candidate_independent.py",
+      "sha256": "41acebb186cec22f95935c9185a13e057f76c2c1c4dde48e8d3a8df44de1317a"
+    },
+    "integrated": {
+      "path": "codes/foundations/a13_fref_nonlinear_gibbs_candidate_verify.py",
+      "sha256": "4ddb87f66c772fdd2a94a791feb360b0841e196873f85f52c5e815a4c266e664"
+    },
+    "certificate": {
+      "path": "strategy/pre-a13-fref-nonlinear-gibbs-candidate-certificate-260823.md",
+      "sha256": "4cc2549480f4d382e7c441d9a6835396b66bb0150a806989feb7d189342408fb"
+    },
+    "lean": {
+      "path": "verification/lean/Tect/R197.lean",
+      "sha256": "b304e5bee312d574b6dc89287995b25e8710af75a39e1f32659319c77776c627"
+    }
+  },
+  "boundary": "T0 claim-nonbearing finite F_ref candidate only; R-192 heat_root_incidence remains missing; no A13/T-050, Sector-A, Pre-A, physical-empty, removal, continuum, thermodynamic, or real-time conclusion.",
+  "formal_integration": {
+    "results": [],
+    "events": [],
+    "negatives": [],
+    "no_new_negative_ids": [],
+    "no_pdf": true,
+    "stored_artifacts": false
+  },
+  "evidence": {
+    "r192_first_missing_slot": "heat_root_incidence",
+    "lean_entrypoint": "verification/lean/Tect/R197.lean",
+    "owner_crosswalk": "finite generator and semigroup only"
+  },
+  "next_action": "Hash-pin the canonical production heat/root incidence, root filtration, nonlinear raw-current spatial intertwiner, and one-use nonnegative q-ledger; otherwise keep A13 and R-192 open.",
+  "verdict": "advanced"
+}

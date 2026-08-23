@@ -1,0 +1,85 @@
+{
+  "schema": "tect/a13-fref-mobility-heat-root-nonidentifiability/1.0",
+  "audit_id": "A13-FREF-MOBILITY-HEAT-ROOT-NONIDENTIFIABILITY",
+  "exploration_id": "EXP-000965",
+  "task_id": "T-054",
+  "claim_id": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+  "tier": "T0",
+  "claim_bearing": false,
+  "title": "Static finite Gibbs data do not identify a canonical heat-root incidence",
+  "question": "Does a fixed finite energy and Gibbs density determine the mobility, heat rates, or root-incidence order required by the A13 production owner?",
+  "purpose": "Construct two exact positive mobility generators with the same finite quadratic Gibbs density and different coordinate heat rates. This isolates the missing dynamic owner without pretending that a generic witness is the full A1 production functional.",
+  "source_authorities": {
+    "a1_functional": {
+      "path": "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/production_functional_manifest.json",
+      "sha256": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565"
+    },
+    "r192_owner_contract": {
+      "path": "strategy/pre-a13-t058-bounded-complete-production-cylinder-manifest.json",
+      "sha256": "641074df54492654177fc72dd66ecb2cb46a791390215ab521f725d77e622d14"
+    },
+    "r193_static_nonidentifiability": {
+      "path": "strategy/pre-a13-r193-static-owner-heat-map-nonidentifiability-manifest.json",
+      "sha256": "f93df3d48e86c536aa1cd0bc117f6269a5d8a282e8fce728ac6c5fe7a0cbfdda"
+    },
+    "lean_toolchain": {
+      "path": "verification/lean/lean-toolchain",
+      "sha256": "8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af"
+    },
+    "lakefile": {
+      "path": "verification/lean/lakefile.toml",
+      "sha256": "a67c26b5518afd984e53eae28a0ba4948c6bb01680d7c360e8b36386eb98962b"
+    },
+    "lake_manifest": {
+      "path": "verification/lean/lake-manifest.json",
+      "sha256": "4308d953726ebe0a8e8fdb7aa5da996c8bfcd45d4a58f6f1b3b40e25d2521964"
+    }
+  },
+  "registered_inputs": {
+    "dimension": 2,
+    "beta": "1",
+    "witness_energy": "(x^2+y^2)/2",
+    "hessian_diagonal": ["1", "1"],
+    "mobility_a": ["1", "1"],
+    "mobility_b": ["2", "3"],
+    "root_labels": ["k", "2k"],
+    "coordinate_assignment": {"k": 0, "2k": 1},
+    "generator": "L_M f = -<M grad F,grad f> + beta^-1 tr(M Hess f)",
+    "stationary_density": "rho_beta proportional to exp(-beta F)",
+    "observable_basis": ["x", "y"]
+  },
+  "derived_contract": {
+    "static_hessian": ["1", "1"],
+    "gibbs_covariance": ["1", "1"],
+    "mobility_a_decay_rates": ["1", "1"],
+    "mobility_b_decay_rates": ["2", "3"],
+    "same_stationary_current": true,
+    "different_heat_rates": true,
+    "root_order_is_not_identified": true,
+    "necessary_missing_owner": "mobility/heat-root incidence plus raw-current spatial intertwiner"
+  },
+  "files": {
+    "primary": {"path": "codes/foundations/a13_fref_mobility_heat_root_nonidentifiability.py", "sha256": "a90a0354b2b8392d278597b887438212ddcfe21675696467850055f565297904"},
+    "independent": {"path": "codes/foundations/a13_fref_mobility_heat_root_nonidentifiability_independent.py", "sha256": "dc6561c790baef8f6cf90fc0b9501c8139722ae9213ca375ad6486e498c9a0cb"},
+    "verifier": {"path": "codes/foundations/a13_fref_mobility_heat_root_nonidentifiability_verify.py", "sha256": "cc25550fe8c753dc39026f363def56d2751430a34f8ae246d3e2cdd4c7bf3190"},
+    "certificate": {"path": "strategy/pre-a13-fref-mobility-heat-root-nonidentifiability-certificate-260823.md", "sha256": "e52a07fad765fb4f8406d472ed1f3a2305d88e17e74eebb2ab39d6a498698430"},
+    "lean": {"path": "verification/lean/Tect/R200.lean", "sha256": "0b98a5c39a3e704693b86f4d8786b1f101f0e65a342458680985f536eb155355"}
+  },
+  "formal_integration": {
+    "no_new_negative_ids": [],
+    "reused_negative_ids": [],
+    "no_pdf": true
+  },
+  "hostile_mutations": [
+    "replace mobility B by mobility A",
+    "claim same heat rates from same Gibbs density",
+    "identify the witness energy with the complete A1 F_ref",
+    "delete the stationary-current cancellation",
+    "swap root labels without recomputing the coordinate assignment",
+    "claim a heat-root map from static covariance alone",
+    "claim A13 or Sector-A closed",
+    "insert a Lean sorry or axiom token"
+  ],
+  "boundary": "T0 claim-nonbearing finite mobility non-identifiability witness only. The two generators share the witness Gibbs density and static Hessian but have different heat rates and root-labelled decay. This does not identify or refute the canonical A1 production generator, heat-root incidence, raw-current spatial intertwiner, conditional replicas, q-ledger, A13/T-050, Sector-A, Pre-A, physical-empty, continuum, thermodynamic, or real-time conclusions.",
+  "next_action": "Supply a hash-pinned production mobility/heat-root map and raw-current spatial intertwiner on the same A1 cylinder; only then rerun the R192 owner-slot audit and any q-ledger estimate."
+}

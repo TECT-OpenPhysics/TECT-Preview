@@ -120,7 +120,9 @@ def main():
         if rel.startswith(PHRASE_SCOPE) and f.suffix == ".md":
             low = f.read_text(encoding="utf-8", errors="replace").lower()
             for ph in FORBIDDEN:
-                if ph in low:
+                # Match standalone phrases only. A phrase such as "near closure"
+                # must not fire inside the legitimate word "nonlinear closure".
+                if re.search(r"(?<![A-Za-z])" + re.escape(ph) + r"(?![A-Za-z])", low):
                     errors.append(f"no-overclaim: '{ph}' in {rel}")
     print("  [no-overclaim] done")
 

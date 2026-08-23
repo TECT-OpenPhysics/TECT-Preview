@@ -1,0 +1,295 @@
+{
+  "assertion_count": 25,
+  "assertions": [
+    {
+      "actual": {
+        "a1_backend": "e2b55702d48198b933968f002e3d7e3781075927fe9b2684047d585ed56f70fc",
+        "a1_functional_manifest": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565",
+        "a1_kernel_status": "e5dd2b08ce58f1c3d2680b907e1469b828b2b6a3929d773f7bd84137efe36509",
+        "lean_r201": "16006c7f23a0119de13438f1b6a68981d81598ed3cc6e60ae825a4f0f77ea9ee"
+      },
+      "expected": {
+        "a1_backend": "e2b55702d48198b933968f002e3d7e3781075927fe9b2684047d585ed56f70fc",
+        "a1_functional_manifest": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565",
+        "a1_kernel_status": "e5dd2b08ce58f1c3d2680b907e1469b828b2b6a3929d773f7bd84137efe36509",
+        "lean_r201": "16006c7f23a0119de13438f1b6a68981d81598ed3cc6e60ae825a4f0f77ea9ee"
+      },
+      "name": "source_hashes_match",
+      "status": "PASS"
+    },
+    {
+      "actual": 1,
+      "expected": "sum(mode_i^2)",
+      "name": "mode_norm_derived",
+      "status": "PASS"
+    },
+    {
+      "actual": 3,
+      "expected": "3 spatial / 2 internal",
+      "name": "dimensions",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          "1",
+          "1/2"
+        ],
+        [
+          "1/2",
+          "1"
+        ]
+      ],
+      "expected": "symmetric PSD",
+      "name": "opposite_correlation_left_psd",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          "1",
+          "-1/2"
+        ],
+        [
+          "-1/2",
+          "1"
+        ]
+      ],
+      "expected": "symmetric PSD",
+      "name": "opposite_correlation_right_psd",
+      "status": "PASS"
+    },
+    {
+      "actual": "13/2",
+      "expected": "13/2",
+      "name": "opposite_correlation_fierz",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/2",
+      "expected": "1/2",
+      "name": "opposite_correlation_heat_integral",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "13/2",
+        "13/4"
+      ],
+      "expected": ">=0",
+      "name": "opposite_correlation_nonnegative",
+      "status": "PASS"
+    },
+    {
+      "actual": "13/4",
+      "expected": "13/4",
+      "name": "opposite_correlation_charge",
+      "status": "PASS"
+    },
+    {
+      "actual": "2",
+      "expected": "derived",
+      "name": "opposite_correlation_heat_factor",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "1"
+        ]
+      ],
+      "expected": "symmetric PSD",
+      "name": "equal_identity_left_psd",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "1"
+        ]
+      ],
+      "expected": "symmetric PSD",
+      "name": "equal_identity_right_psd",
+      "status": "PASS"
+    },
+    {
+      "actual": "6",
+      "expected": "6",
+      "name": "equal_identity_fierz",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/2",
+      "expected": "1/2",
+      "name": "equal_identity_heat_integral",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "6",
+        "3"
+      ],
+      "expected": ">=0",
+      "name": "equal_identity_nonnegative",
+      "status": "PASS"
+    },
+    {
+      "actual": "3",
+      "expected": "3",
+      "name": "equal_identity_charge",
+      "status": "PASS"
+    },
+    {
+      "actual": "2",
+      "expected": "derived",
+      "name": "equal_identity_heat_factor",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "0"
+        ]
+      ],
+      "expected": "symmetric PSD",
+      "name": "orthogonal_rank_one_left_psd",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "1"
+        ]
+      ],
+      "expected": "symmetric PSD",
+      "name": "orthogonal_rank_one_right_psd",
+      "status": "PASS"
+    },
+    {
+      "actual": "2",
+      "expected": "2",
+      "name": "orthogonal_rank_one_fierz",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/2",
+      "expected": "1/2",
+      "name": "orthogonal_rank_one_heat_integral",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "2",
+        "1"
+      ],
+      "expected": ">=0",
+      "name": "orthogonal_rank_one_nonnegative",
+      "status": "PASS"
+    },
+    {
+      "actual": "1",
+      "expected": "1",
+      "name": "orthogonal_rank_one_charge",
+      "status": "PASS"
+    },
+    {
+      "actual": "2",
+      "expected": "derived",
+      "name": "orthogonal_rank_one_heat_factor",
+      "status": "PASS"
+    },
+    {
+      "actual": "This is a finite covariance proxy with declared output heat and Lean fixture cross-check. It has no A1 production heat/root owner, no raw-current spatial intertwiner, no cutoff-uniform q-ledger, no A13 or T-050 closure, and no continuum, thermodynamic, real-time, Sector-A or Pre-A conclusion.",
+      "expected": "finite/no A1 production",
+      "name": "boundary",
+      "status": "PASS"
+    }
+  ],
+  "claim_id": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+  "conclusion": "The independent lane reproduces the Fierz contraction and declared heat integral for all registered finite fixtures; it remains a proxy and does not identify the A1 production dynamics.",
+  "derived": {
+    "charge_prefactor": "2",
+    "fierz_identity": "sum_a tr(sigma_a C_right sigma_a C_left)=2 tr(C_right) tr(C_left)-tr(C_right C_left)",
+    "fixtures": {
+      "equal_identity": {
+        "charge_q": "3",
+        "fierz_s": "6",
+        "heat_integral_factor": "1/2",
+        "heat_rate": "2",
+        "left": "identity",
+        "right": "identity",
+        "trace_left": "2",
+        "trace_product": "2",
+        "trace_right": "2"
+      },
+      "opposite_correlation": {
+        "charge_q": "13/4",
+        "fierz_s": "13/2",
+        "heat_integral_factor": "1/2",
+        "heat_rate": "2",
+        "left": "opposite_left",
+        "right": "opposite_right",
+        "trace_left": "2",
+        "trace_product": "3/2",
+        "trace_right": "2"
+      },
+      "orthogonal_rank_one": {
+        "charge_q": "1",
+        "fierz_s": "2",
+        "heat_integral_factor": "1/2",
+        "heat_rate": "2",
+        "left": "rank_one_left",
+        "right": "rank_one_right",
+        "trace_left": "1",
+        "trace_product": "0",
+        "trace_right": "1"
+      }
+    },
+    "formula": "q_r=(charge_prefactor/(heat_decay_multiplier*lambda_r))*|r|^2*S_r; registered values make this |r|^2*S_r/lambda_r",
+    "heat_decay_multiplier": "2",
+    "output_mode": [
+      1,
+      0,
+      0
+    ],
+    "output_mode_norm_sq": 1
+  },
+  "failures": [],
+  "generated_at_utc": "2026-08-22T21:04:12.401329+00:00",
+  "honesty_boundary": [
+    "finite covariance proxy",
+    "declared heat only",
+    "no production owner",
+    "no q-ledger theorem",
+    "no A13 closure"
+  ],
+  "schema": "tect/pre-a13-a1-covariance-aware-fourier-current-charge-independent-result/1.0",
+  "scope": "Independent exact Fraction finite covariance proxy; no production-owner claim.",
+  "script_version": "1.0.0",
+  "source_authorities": {
+    "a1_backend": "e2b55702d48198b933968f002e3d7e3781075927fe9b2684047d585ed56f70fc",
+    "a1_functional_manifest": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565",
+    "a1_kernel_status": "e5dd2b08ce58f1c3d2680b907e1469b828b2b6a3929d773f7bd84137efe36509",
+    "lean_r201": "16006c7f23a0119de13438f1b6a68981d81598ed3cc6e60ae825a4f0f77ea9ee"
+  }
+}

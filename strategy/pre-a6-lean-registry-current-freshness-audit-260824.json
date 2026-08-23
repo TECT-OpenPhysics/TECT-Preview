@@ -1,0 +1,59 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-000990",
+  "title": "A6 R-194/R-195 freshness is blocked only by the current Lean registry hash",
+  "recorded_at": "2026-08-24T04:00:00Z",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-08-23",
+  "provenance": "contemporaneous",
+  "task_id": "T-054",
+  "claim_ids": [
+    "A6-CLASSII-UV-POWER-COUNTING",
+    "A6-CLASSII-K-COMPOSITE-DEFINITION",
+    "A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE"
+  ],
+  "question": "Do the current R-194 sharp running-mass and R-195 constant-field A6 boundary packages still revalidate after later Lean registry additions, and is the observed failure mathematical or only lifecycle metadata?",
+  "method": [
+    "Run the registered R-194 and R-195 primary, independent and integrated lanes with --no-store against the current tree.",
+    "Compile the pinned Lean entrypoints Tect/R194.lean and Tect/R195.lean directly under the repository toolchain, independently of Python manifest sentinels.",
+    "Separate exact algebra, independent Fraction results and direct Lean compilation from historical normalized lean_registry hash checks before deciding whether any A6/A7 theorem or gate changed."
+  ],
+  "checks": {
+    "r194_primary": "FAIL before theorem assertions: lean_registry actual 92b10491beef11fe6f2c30c0a9cd1243520e8c10263df85ad566e0cf550c9b73 expected fec03c41dec8ed7ce13773011699dd3b65855ac586c25555e768db30dc215250",
+    "r194_independent": "INDEPENDENT R-194 PASS 17/17",
+    "r194_integrated": "FAIL at the same historical lean_registry hash sentinel",
+    "r195_primary": "FAIL at the same historical lean_registry hash sentinel",
+    "r195_independent": "INDEPENDENT R-195 PASS with the exact constant-field lift",
+    "r195_integrated": "FAIL at the same historical lean_registry hash sentinel",
+    "direct_lean": "Tect/R194.lean and Tect/R195.lean compile with exit code 0",
+    "current_registry_normalized_sha256": "92b10491beef11fe6f2c30c0a9cd1243520e8c10263df85ad566e0cf550c9b73"
+  },
+  "finding": "The exact R-194 threshold algebra and R-195 spatial constant-field lift remain intact: independent lanes reproduce the registered results and both Lean entrypoints compile directly. The primary and integrated lanes fail closed before theorem assertions solely because their historical manifests still expect the older normalized Lean registry hash fec03c41..., while the current registry hash is 92b10491... after later append-only Lean entries. This is a provenance/lifecycle freshness mismatch, not a mathematical refutation or a new A6/A7 result.",
+  "decision_reason": "Mutating the historical R-194/R-195 manifests in place would erase the source package that R-194/R-195 consumers cite. The correct next action is a separate append-only registry-refresh package that repins the current registry and reruns both packages, while preserving the existing sharp noncoercivity and constant-field escape boundaries.",
+  "boundary": "T0 claim-nonbearing lifecycle audit. It does not close A6 counterterm closure, full-field bare concentration, A7 Nelson/self-coupling, A13/T-050, Sector-A, Pre-A, physical-empty, thermodynamic, continuum, removal, or real-time routes, and it introduces no new negative result.",
+  "evidence_refs": [
+    "strategy/pre-a6-sharp-running-mass-counterterm-boundary-manifest.json#inputs.lean_registry",
+    "strategy/pre-a6-spatial-constant-field-lift-boundary-manifest.json#inputs.lean_registry",
+    "verification/lean/Tect/R194.lean#endpoint_identity",
+    "verification/lean/Tect/R195.lean#integrated_identity",
+    "verification/scripts/lean_a6_sharp_running_mass.py#normalized_hash",
+    "codes/foundations/lean_a6_sharp_running_mass_independent.py#exact_fraction_lane",
+    "verification/lean/registry.json#current_hash",
+    "explorations/log.jsonl#EXP-000969"
+  ],
+  "formal_refs": {
+    "events": [],
+    "results": ["R-194", "R-195"],
+    "negatives": []
+  },
+  "gate_ids": [
+    "A6-CLASSII-COUNTERTERM-CLOSURE",
+    "A6-CLASSII-FULL-FIELD-BARE-CONCENTRATION",
+    "A7-CLASSII-NELSON-EXPONENTIAL-BOUND"
+  ],
+  "related": [
+    {"id": "EXP-000969", "relation": "continues"}
+  ],
+  "next_action": "Create an append-only R-194/R-195 registry-refresh package with the current normalized Lean registry hash, rerun primary/independent/integrated lanes, and preserve the mathematical boundaries: no uniform coercivity from the third-component escape, no full-field concentration, and no A7 self-coupled Nelson closure.",
+  "verdict": "inconclusive"
+}

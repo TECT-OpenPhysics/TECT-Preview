@@ -1,0 +1,87 @@
+{
+  "schema": "tect/pre-a13-a1-covariance-aware-fourier-current-charge/1.0",
+  "id": "PRE-A13-A1-COVARIANCE-AWARE-FOURIER-CURRENT-CHARGE",
+  "title": "Finite covariance-aware A1 Fourier current charge formula",
+  "recorded_on": "2026-08-23",
+  "task_id": "T-054",
+  "exploration_id": "EXP-000966",
+  "tier": "T0",
+  "claim_bearing": false,
+  "claim_ids": ["A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"],
+  "gate_ids": [
+    "A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE",
+    "A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "registered_inputs": {
+    "spatial_dimension": 3,
+    "internal_dimension": 2,
+    "output_mode": [1, 0, 0],
+    "charge_prefactor": "2",
+    "heat_decay_multiplier": "2",
+    "covariance_blocks": {
+      "opposite_left": [["1", "1/2"], ["1/2", "1"]],
+      "opposite_right": [["1", "-1/2"], ["-1/2", "1"]],
+      "identity": [["1", "0"], ["0", "1"]],
+      "rank_one_left": [["1", "0"], ["0", "0"]],
+      "rank_one_right": [["0", "0"], ["0", "1"]]
+    },
+    "covariance_pairs": [
+      {"name": "opposite_correlation", "left": "opposite_left", "right": "opposite_right", "heat_rate": "2"},
+      {"name": "equal_identity", "left": "identity", "right": "identity", "heat_rate": "2"},
+      {"name": "orthogonal_rank_one", "left": "rank_one_left", "right": "rank_one_right", "heat_rate": "2"}
+    ]
+  },
+  "test_oracles": {
+    "opposite_correlation": {"fierz_s": "13/2", "heat_integral_factor": "1/2", "charge_q": "13/4"},
+    "equal_identity": {"fierz_s": "6", "heat_integral_factor": "1/2", "charge_q": "3"},
+    "orthogonal_rank_one": {"fierz_s": "2", "heat_integral_factor": "1/2", "charge_q": "1"}
+  },
+  "source_authorities": {
+    "a1_functional_manifest": {
+      "path": "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/production_functional_manifest.json",
+      "sha256": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565"
+    },
+    "a1_kernel_status": {
+      "path": "claims/A1-KERNEL-CONV/status.json",
+      "sha256": "e5dd2b08ce58f1c3d2680b907e1469b828b2b6a3929d773f7bd84137efe36509"
+    },
+    "a1_backend": {
+      "path": "codes/foundations/n001_variational_backend.py",
+      "sha256": "e2b55702d48198b933968f002e3d7e3781075927fe9b2684047d585ed56f70fc"
+    },
+    "lean_r201": {
+      "path": "verification/lean/Tect/R201.lean",
+      "sha256": "16006c7f23a0119de13438f1b6a68981d81598ed3cc6e60ae825a4f0f77ea9ee"
+    }
+  },
+  "theorem_contract": {
+    "fierz": "sum_a tr(sigma_a C_right sigma_a C_left)=2 tr(C_right) tr(C_left)-tr(C_right C_left)",
+    "heat": "2 integral_0^infinity exp(-2 lambda t) dt=1/lambda",
+    "charge": "q_r=(2/(2 lambda_r))*|r|^2*S_r=|r|^2*S_r/lambda_r for the declared output decay"
+  },
+  "interpretation": {
+    "qft_link": "Finite centered proper complex Gaussian Fourier roots and a declared output heat semigroup are used as a QFT-compatible composite-current proxy.",
+    "production_status": "The A1 production mobility, heat-root incidence, nonlinear filtration and q-ledger are not supplied by this screen.",
+    "owner": "The Pauli/Fierz calculation is an exact finite proxy owner only."
+  },
+  "hostile_mutations": [
+    "replace 2x2 PSD covariance blocks by an indefinite block",
+    "drop the sigma_2 Pauli channel",
+    "replace the Fierz trace contraction by root-labelled separate charges",
+    "remove the output heat decay multiplier",
+    "call the declared heat rate the A1 production heat rate",
+    "claim positivity implies cutoff-uniform q-ledger",
+    "transfer the finite proxy to nonlinear F_ref without an intertwiner",
+    "close A13 or T-050 from the finite formula"
+  ],
+  "contract": {"hostile_mutation_count": 8},
+  "boundary": "This is a finite covariance proxy with declared output heat and Lean fixture cross-check. It has no A1 production heat/root owner, no raw-current spatial intertwiner, no cutoff-uniform q-ledger, no A13 or T-050 closure, and no continuum, thermodynamic, real-time, Sector-A or Pre-A conclusion.",
+  "files": {
+    "primary": "codes/foundations/a13_a1_covariance_aware_fourier_current_charge.py",
+    "independent": "codes/foundations/a13_a1_covariance_aware_fourier_current_charge_independent.py",
+    "verifier": "codes/foundations/a13_a1_covariance_aware_fourier_current_charge_verify.py",
+    "certificate": "strategy/pre-a13-a1-covariance-aware-fourier-current-charge-certificate-260823.md",
+    "lean": "verification/lean/Tect/R201.lean"
+  }
+}

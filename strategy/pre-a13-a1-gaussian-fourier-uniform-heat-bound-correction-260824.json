@@ -1,0 +1,38 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-000983",
+  "title": "R-204 certificate assertion-count correction revalidation",
+  "recorded_at": "2026-08-24T01:20:00Z",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-08-24",
+  "provenance": "contemporaneous",
+  "task_id": "T-054",
+  "claim_ids": ["A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"],
+  "question": "Does the current R-204 Gaussian Fourier uniform-heat package match its certificate assertion counts after the integrated lane changed from 23/23 to 24/24?",
+  "method": [
+    "Compare the certificate assertion-count sentence with the current integrated verifier output.",
+    "Update only the stale integrated count and refresh the certificate SHA256 in the manifest.",
+    "Rerun primary, stdlib-only independent, and integrated lanes with --no-store and preserve the proxy owner boundary."
+  ],
+  "finding": "The certificate had a stale bookkeeping value: it reported primary 45/45, independent 40/40, and integrated 23/23, while the current integrated verifier executes 24/24. The certificate was corrected to 24/24 and the manifest certificate hash was refreshed. Fresh reruns pass primary 45/45, independent 40/40, and integrated 24/24. The derived proxy majorant Q_N(s)<=529152 for s>=2 and every owner-boundary assertion are unchanged.",
+  "decision_reason": "This is an append-only documentation correction, not a new theorem or gate closure. The integrated assertion-count increase reflects an existing verifier assertion and does not add a production heat-root map, filtration, raw-current intertwiner, or q-ledger.",
+  "boundary": "T0 claim-nonbearing proxy theorem only. The diagonal-Gaussian comparison remains distinct from the nonlinear A1 production mobility, heat-root incidence, root filtration, conditional replicas, raw-current spatial intertwiner, once-owned q-ledger, OVERLAP_src, Nelson, interacting measure, physical-empty ordering, OS/KMS or real-time dynamics, removal, continuum, Sector-A, and Pre-A closure.",
+  "evidence_refs": [
+    "strategy/pre-a13-a1-gaussian-fourier-uniform-heat-bound-manifest.json#files.certificate",
+    "strategy/pre-a13-a1-gaussian-fourier-uniform-heat-bound-certificate-260823.md#Reproduction-and-adversarial-review",
+    "codes/foundations/a13_a1_gaussian_fourier_uniform_heat_bound.py#main",
+    "codes/foundations/a13_a1_gaussian_fourier_uniform_heat_bound_independent.py#main",
+    "codes/foundations/a13_a1_gaussian_fourier_uniform_heat_bound_verify.py#main",
+    "verification/lean/Tect/R204.lean#uniform_charge_bound",
+    "explorations/log.jsonl#EXP-000978"
+  ],
+  "formal_refs": {"events": [], "results": [], "negatives": []},
+  "gate_ids": [
+    "A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE",
+    "A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "related": [{"id": "EXP-000978", "relation": "corrects"}],
+  "next_action": "Retain R-204 as a comparison-only proxy. Do not rerun the R-192 production owner order until a hash-pinned A1 production mobility, heat_root_incidence, root-labelled filtration, raw-current spatial identity, and once-owned nonnegative q-ledger are supplied.",
+  "verdict": "advanced"
+}

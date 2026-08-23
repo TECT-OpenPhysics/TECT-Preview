@@ -1,0 +1,101 @@
+{
+  "schema": "tect/pre-a13-fref-projected-root-filtration-candidate/1.0",
+  "audit_id": "A13-A1-FREF-PROJECTED-ROOT-FILTRATION-CANDIDATE",
+  "title": "Finite projected root filtration for the F_ref quadratic heat proxy",
+  "task_id": "T-054",
+  "exploration_id": "EXP-000993",
+  "claim_id": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+  "tier": "T0",
+  "claim_bearing": false,
+  "source_authorities": {
+    "a1_functional": {
+      "path": "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/production_functional_manifest.json",
+      "sha256": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565"
+    },
+    "r192_owner": {
+      "path": "strategy/pre-a13-t058-bounded-complete-production-cylinder-manifest.json",
+      "sha256": "641074df54492654177fc72dd66ecb2cb46a791390215ab521f725d77e622d14"
+    },
+    "r202_full_residue": {
+      "path": "strategy/pre-a13-full-residue-fref-qft-closure-manifest.json",
+      "sha256": "e4396bfb4204825bbea0be94af6e076a1f6f8bdf040fd4048b31fc8c9bd83653"
+    },
+    "r203_frequency_crosswalk": {
+      "path": "strategy/pre-a13-a1-fref-root-frequency-crosswalk-manifest.json",
+      "sha256": "06fae2c9285fd9f46bd2c75e884e88935115aeaacd446c65e392852e85704073"
+    }
+  },
+  "registered_inputs": {
+    "torus_side": 16,
+    "spatial_dimension": 3,
+    "slice": "k=(n,0,0) in (Z/16Z)^3",
+    "root_modes": [1, 2],
+    "nonlinear_power": 2,
+    "closure_rule": "C(S)=S+2(S-S) modulo 16",
+    "filtration": "V_j={f: supp(f) subset S_j}, S_0={1,2}, S_(j+1)=C(S_j)",
+    "quadratic_heat_rate": "omega(n)=r+Z*(2*pi*n/16)^2+Y*(2*pi*n/16)^4",
+    "heat_semigroup": "(H_t f)(n)=exp(-t*omega(n))*f(n), t>=0",
+    "projection": "Fourier support projection onto S_j; finite comparison object only"
+  },
+  "derived_contract": {
+    "supports": {
+      "S0": [1, 2],
+      "S1": [0, 1, 2, 3, 4, 15],
+      "S2": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+    },
+    "nested_filtration": true,
+    "quadratic_heat_preserves_each_Vj": true,
+    "nonlinear_drift_maps_Vj_to_Vj_plus_1": true,
+    "quadratic_core_has_positive_rate_lower_bound": true,
+    "heat_root_incidence": "finite quadratic-core candidate only",
+    "root_filtration": "finite projected candidate only",
+    "conditional_replicas": false,
+    "raw_current_spatial_intertwiner": false,
+    "production_one_use_q_ledger": false,
+    "production_owner": false,
+    "r192_first_failure_slot": "heat_root_incidence",
+    "next_candidate_missing_slots": ["conditional_replicas", "raw_current_spatial_intertwiner", "production_one_use_q_ledger"]
+  },
+  "hostile_mutations": [
+    "replace the modular closure by non-aliased closure without declaring a new space",
+    "claim S1 is already all residues",
+    "drop the inclusion S_j subset S_(j+1)",
+    "claim diagonal heat preservation supplies nonlinear production heat-root incidence",
+    "promote the one-dimensional slice to the full three-dimensional A1 owner",
+    "invent conditional replicas from the deterministic support projection",
+    "invent a raw-current intertwiner or one-use q-ledger",
+    "insert a Lean sorry, admit, axiom or unsafe escape"
+  ],
+  "files": {
+    "primary": {
+      "path": "codes/foundations/a13_fref_projected_root_filtration_candidate.py",
+      "sha256": "d7eeea16b8e7222524a3656f9f3b28d6a57e4f158900153d4545524ba76888e1"
+    },
+    "independent": {
+      "path": "codes/foundations/a13_fref_projected_root_filtration_candidate_independent.py",
+      "sha256": "23344ef9693634ed7f2205987fca24716afd8c65ea9295fa88d0064ca21b1d35"
+    },
+    "integrated": {
+      "path": "codes/foundations/a13_fref_projected_root_filtration_candidate_verify.py",
+      "sha256": "10d2eac8909d2164caa038d7e2ae51d1e7b1b4452727075db1792916c60623b7"
+    },
+    "lean": {
+      "path": "verification/lean/Tect/R205.lean",
+      "sha256": "a28f493a87ec80c46287ed750f36c1702bcbc8b927e4a1795b2c932d1a631df6"
+    },
+    "certificate": {
+      "path": "strategy/pre-a13-fref-projected-root-filtration-candidate-certificate-260823.md",
+      "sha256": "31f2f5d7a42eba348c878efe48d5210a81bd5d33033d0bf17efc589d654c9354"
+    }
+  },
+  "boundary": "T0 claim-nonbearing finite projected-filtration candidate only. It supplies an explicit side-16 one-dimensional support filtration, proves that the diagonal quadratic heat proxy preserves each level, and proves that the local nonlinear drift raises the level. It does not supply the canonical nonlinear A1 production mobility, conditional replicas, raw-current spatial intertwiner, one-use q-ledger, complete R-192 owner, A13/T-050, interacting measure, OS/KMS, real-time dynamics, physical-empty comparison, removal, continuum, thermodynamic, Sector-A or Pre-A closure.",
+  "formal_integration": {
+    "results": [],
+    "events": [],
+    "negatives": [],
+    "no_new_negative_ids": [],
+    "no_pdf": true,
+    "exploration_only": true
+  },
+  "next_action": "Use this projected object only as a finite QFT-interface candidate. A production advance requires a hash-pinned nonlinear heat-root law, conditional replica construction, raw-current spatial identity and once-owned nonnegative q-ledger on the same full A1 cylinder; then rerun the unchanged R-192 owner order."
+}

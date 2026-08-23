@@ -1,0 +1,59 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-000981",
+  "title": "A5 Sector-A synthesis verifier stops on stale historical path aliases",
+  "recorded_at": "2026-08-24T00:55:00Z",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-08-23",
+  "provenance": "contemporaneous",
+  "task_id": "T-054",
+  "claim_ids": [
+    "A5-SECTOR-A-SYNTHESIS"
+  ],
+  "question": "Does the current A5 Sector-A synthesis package still execute its primary and independent audits from a clean temporary workspace after the claim-directory migration?",
+  "method": [
+    "Run the registered one-command A5 verifier with a fresh temporary output path and capture both child return codes, stderr and the generated integrated report.",
+    "Inspect the hash-pinned sector_a_synthesis_manifest.json component paths and compare the historical aliases with the current canonical claim directories and nested published bundles.",
+    "Separate a wrapper/path-lifecycle failure from the mathematical termination scope; do not promote the manifest's branch-aware termination string while the fresh child audits produce no result JSON."
+  ],
+  "reproduction": {
+    "command": "E:\\Dev\\TECT.venv\\Scripts\\python.exe -B -X utf8 codes/foundations/a5_sector_a_synthesis_verify.py --output <fresh-temp-json>",
+    "return_code": 1,
+    "primary_return_code": 1,
+    "independent_return_code": 1,
+    "primary_error": "FileNotFoundError: E:\\\\Dev\\\\TECT\\\\claims\\\\a1k\\\\status.json",
+    "independent_error": "FileNotFoundError while loading the missing primary result JSON",
+    "child_results_created": false,
+    "registered_source_hashes": true,
+    "manifest_termination_scope": "PASS@BRANCH-AWARE-DECLARED-SCOPE"
+  },
+  "finding": "The A5 integrated wrapper itself starts and verifies all three registered script hashes, but both fresh child audits stop before writing a result. The primary follows historical claims/a1k and related claims/a1f, a2, a3f, a3p and a4 aliases that are absent after the canonical uppercase claim-directory migration; the independent child then reports the missing primary result. The registered manifest also points at historical bundle roots, so a path alias repair must preserve the pinned component and bundle hashes rather than silently changing the mathematical owner. The branch-aware termination string remains only a manifest scope statement until the fresh child audits execute.",
+  "decision_reason": "This is a verification/package failure, not a proof of failure of the Sector-A mathematics and not evidence for a QFT production owner. Treating the manifest termination string as a fresh synthesis PASS would bypass the required independent execution and would contaminate the QFT-to-A1 crosswalk. The safe disposition is to repair or explicitly retire the historical path resolver, then rerun both child audits from a clean temporary workspace.",
+  "boundary": "T0 claim-nonbearing tooling evidence. It does not demote A5's registered conditional branch, prove a physical Sector-A closure, close A6/A7/A13, supply heat_root_incidence or production replicas, or establish a QFT dynamics bridge. The current result is limited to the registered A5 verifier and the current repository path layout.",
+  "evidence_refs": [
+    "codes/foundations/a5_sector_a_synthesis_verify.py#main",
+    "codes/foundations/a5_sector_a_synthesis_audit.py#main",
+    "codes/foundations/a5_sector_a_synthesis_independent.py#main",
+    "claims/A5-SECTOR-A-SYNTHESIS/sector_a_synthesis_manifest.json#components",
+    "claims/A5-SECTOR-A-SYNTHESIS/sector_a_synthesis_manifest.json#termination_verdict",
+    "explorations/log.jsonl#EXP-000980"
+  ],
+  "formal_refs": {
+    "events": [],
+    "results": [],
+    "negatives": []
+  },
+  "gate_ids": [
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE",
+    "A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE",
+    "A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION"
+  ],
+  "next_action": "Repair the A5 historical-path resolver or produce a new canonical migration crosswalk with unchanged source hashes; rerun primary, independent and integrated A5 audits, then regenerate maps/catalog/release. Keep the QFT production-owner search quarantined until heat_root_incidence, root filtration, replicas, raw-current intertwining and q-ledger are independently supplied.",
+  "related": [
+    {
+      "id": "EXP-000980",
+      "relation": "continues"
+    }
+  ],
+  "verdict": "failed"
+}

@@ -1,0 +1,153 @@
+{
+  "schema": "tect/pre-a13-full-residue-fref-qft-closure/1.0",
+  "audit_id": "A13-A1-FULL-RESIDUE-FREF-QFT-CLOSURE",
+  "title": "Full side-16 residue closure of the finite F_ref QFT candidate",
+  "task_id": "T-054",
+  "exploration_id": "EXP-000975",
+  "claim_id": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+  "tier": "T0",
+  "claim_bearing": false,
+  "source_authorities": {
+    "a1_functional": {
+      "path": "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/production_functional_manifest.json",
+      "sha256": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565"
+    },
+    "r192_owner_contract": {
+      "path": "strategy/pre-a13-t058-bounded-complete-production-cylinder-manifest.json",
+      "sha256": "641074df54492654177fc72dd66ecb2cb46a791390215ab521f725d77e622d14"
+    },
+    "r197_candidate": {
+      "path": "strategy/pre-a13-fref-nonlinear-gibbs-candidate-manifest.json",
+      "sha256": "f5b106b9bd8f3000afcfa9ae5c0899da6d6736de786c13895ac4a017d2d49a47"
+    },
+    "r199_saturation": {
+      "path": "strategy/pre-a13-nonlinear-root-filtration-saturation-manifest.json",
+      "sha256": "c1de40c59a08e91abb0027441e492aa501ea91d606aa6919bcf53b5bf4750568"
+    },
+    "lean_toolchain": {
+      "path": "verification/lean/lean-toolchain",
+      "sha256": "8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af"
+    },
+    "lakefile": {
+      "path": "verification/lean/lakefile.toml",
+      "sha256": "a67c26b5518afd984e53eae28a0ba4948c6bb01680d7c360e8b36386eb98962b"
+    },
+    "lake_manifest": {
+      "path": "verification/lean/lake-manifest.json",
+      "sha256": "4308d953726ebe0a8e8fdb7aa5da996c8bfcd45d4a58f6f1b3b40e25d2521964"
+    }
+  },
+  "registered_inputs": {
+    "torus_side": 16,
+    "spatial_dimension": 3,
+    "internal_components": 3,
+    "root_modes": [
+      1,
+      2
+    ],
+    "root_coefficients": [
+      1,
+      1
+    ],
+    "nonlinear_power": 2,
+    "closure_iterations": 2,
+    "operation": "S(phi)=(bar(phi)*phi)^p*phi",
+    "finite_fourier_space": "C^(3 x (Z/16Z)^3) with the real-pairing constraint",
+    "cyclic_convolution": "(a*b)[k]=sum_{i+j=k mod 16} a[i] b[j]",
+    "mobility_candidate": "identity finite-dimensional mobility M_N=I",
+    "inverse_temperature": "beta>0",
+    "candidate_status": "finite comparison candidate only; not canonical production dynamics"
+  },
+  "test_oracles": {
+    "nonaliased_first_interval": [
+      -1,
+      4
+    ],
+    "nonaliased_second_interval": [
+      -11,
+      14
+    ],
+    "cyclic_first_residues": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      15
+    ],
+    "cyclic_second_residues": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "real_coordinate_count": 24576
+  },
+  "derived_contract": {
+    "full_residue_projection_closed": true,
+    "minimal_coordinate_support_for_witness": 16,
+    "proper_two_root_projection_invariant": false,
+    "finite_generator_candidate": true,
+    "finite_gibbs_candidate": true,
+    "heat_root_incidence": false,
+    "root_filtration": false,
+    "raw_current_spatial_intertwiner": false,
+    "production_one_use_q_ledger": false,
+    "production_owner": false,
+    "r192_first_missing_slot": "heat_root_incidence"
+  },
+  "files": {
+    "lean": {
+      "path": "verification/lean/Tect/R202.lean",
+      "sha256": "80acf41e24a1e7bca1c36fd9b1caf2b2796dba6530fdd68a7e79b06d641a0a6e"
+    },
+    "primary": {
+      "path": "codes/foundations/a13_full_residue_fref_qft_closure.py",
+      "sha256": "0cdf0c618cc5f92a5e07714c2bb5cea573eaf94b6abb967d37db16d68fcfff31"
+    },
+    "independent": {
+      "path": "codes/foundations/a13_full_residue_fref_qft_closure_independent.py",
+      "sha256": "ebf482983c60557837a3cc1d284ea28ff77b2911b22007247dec42add897331b"
+    },
+    "integrated": {
+      "path": "codes/foundations/a13_full_residue_fref_qft_closure_verify.py",
+      "sha256": "a67a31160b02ee60d256e8e5e297c704f240e9f7800e13b8b50b6e127c324328"
+    },
+    "certificate": {
+      "path": "strategy/pre-a13-full-residue-fref-qft-closure-certificate-260823.md",
+      "sha256": "bb84d403960ee35c1c07e3e4af4da5fb0e632ab17658b6a82818c93989341c96"
+    }
+  },
+  "hostile_mutations": [
+    "drop the conjugate factor in the nonlinear density",
+    "replace cyclic convolution by ordinary non-aliased convolution",
+    "erase the side-16 quotient and claim an infinite-line result",
+    "declare the full-residue projection to be a distinguished k versus 2k filtration",
+    "promote finite Gibbs invariance to an interacting or continuum measure",
+    "promote full residue closure to a raw-current spatial intertwiner",
+    "invent a one-use nonnegative production q-ledger",
+    "insert a Lean sorry, admit, axiom or unsafe escape"
+  ],
+  "formal_integration": {
+    "results": [],
+    "events": [],
+    "negatives": [],
+    "no_new_negative_ids": [],
+    "no_pdf": true
+  },
+  "boundary": "T0 claim-nonbearing finite QFT-interface and nonlinear-closure result only. The full side-16 Fourier Galerkin space is invariant under the finite F_ref polynomial drift, and the two-root witness requires all 16 one-dimensional residues after two nonlinear closures. This does not supply a canonical heat-root incidence, conditional replica filtration, raw-current spatial intertwiner, one-use q-ledger, complete R-192 owner, A13/T-050, interacting measure, OS/KMS reconstruction, real-time dynamics, physical-empty comparison, removal, continuum or thermodynamic limit, Sector-A, or Pre-A closure.",
+  "next_action": "Use the full-residue space only as the finite comparison candidate. To advance R-192, hash-pin a canonical root-labelled heat map and conditional replica law on this enlarged space, then supply the raw-current spatial identity and once-owned q-ledger before rerunning the unchanged owner order.",
+  "verdict": "advanced"
+}

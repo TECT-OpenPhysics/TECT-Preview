@@ -1,0 +1,165 @@
+{
+  "assertion_count": 17,
+  "assertions": [
+    {
+      "actual": [
+        "A6-R194-SHARP-RUNNING-MASS-COUNTERTERM-BOUNDARY",
+        "R-194"
+      ],
+      "expected": "R-194 identity",
+      "name": "identity",
+      "pass": true
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "claim nonbearing",
+      "pass": true
+    },
+    {
+      "actual": [],
+      "expected": [],
+      "name": "no new negative",
+      "pass": true
+    },
+    {
+      "actual": "7500000000/4000000000001",
+      "expected": ">0",
+      "name": "b positive",
+      "pass": true
+    },
+    {
+      "actual": "9375000000/4000000000001",
+      "expected": ">0",
+      "name": "c positive",
+      "pass": true
+    },
+    {
+      "actual": {
+        "correction": "24375000000101250000000000000000000/4000000000025000000000042000000000009",
+        "diff": "24375000000101250000000000000000000/4000000000025000000000042000000000009",
+        "r": "0",
+        "s": "1/3"
+      },
+      "expected": "exact equality",
+      "name": "endpoint identity",
+      "pass": true
+    },
+    {
+      "actual": "24375000000101250000000000000000000/4000000000025000000000042000000000009",
+      "expected": ">=0",
+      "name": "endpoint nonnegative",
+      "pass": true
+    },
+    {
+      "actual": {
+        "correction": "219375000000101250000000000000000000/36000000000033000000000010000000000001",
+        "diff": "219375000000101250000000000000000000/36000000000033000000000010000000000001",
+        "r": "2",
+        "s": "1"
+      },
+      "expected": "exact equality",
+      "name": "endpoint identity",
+      "pass": true
+    },
+    {
+      "actual": "219375000000101250000000000000000000/36000000000033000000000010000000000001",
+      "expected": ">=0",
+      "name": "endpoint nonnegative",
+      "pass": true
+    },
+    {
+      "actual": {
+        "correction": "3510000000000405000000000000000000000/576000000000240000000000028000000000001",
+        "diff": "3510000000000405000000000000000000000/576000000000240000000000028000000000001",
+        "r": "10",
+        "s": "2"
+      },
+      "expected": "exact equality",
+      "name": "endpoint identity",
+      "pass": true
+    },
+    {
+      "actual": "3510000000000405000000000000000000000/576000000000240000000000028000000000001",
+      "expected": ">=0",
+      "name": "endpoint nonnegative",
+      "pass": true
+    },
+    {
+      "actual": {
+        "correction": "5205078125000070312500000000000000000/4669444444445702916666666689888888888889",
+        "diff": "5205078125000070312500000000000000000/4669444444445702916666666689888888888889",
+        "r": "100",
+        "s": "5/2"
+      },
+      "expected": "exact equality",
+      "name": "endpoint identity",
+      "pass": true
+    },
+    {
+      "actual": "5205078125000070312500000000000000000/4669444444445702916666666689888888888889",
+      "expected": ">=0",
+      "name": "endpoint nonnegative",
+      "pass": true
+    },
+    {
+      "actual": "-3713152777778989750000000022888888888889/4533777777779001000000000022888888888889000",
+      "expected": "<0",
+      "name": "subsharp witness",
+      "pass": true
+    },
+    {
+      "actual": [
+        "16250000000011250000000000000000000/1777777777780000000000000888888888889",
+        "89375000000011250000000000000000000/53777777777801000000000002888888888889",
+        "820625000000011250000000000000000000/4533777777779001000000000022888888888889",
+        "8133125000000011250000000000000000000/445333777777890001000000000222888888888889",
+        "81258125000000011250000000000000000000/44453333777788900001000000002222888888888889"
+      ],
+      "expected": ">0",
+      "name": "escape ratios positive",
+      "pass": true
+    },
+    {
+      "actual": [
+        "16250000000011250000000000000000000/1777777777780000000000000888888888889",
+        "89375000000011250000000000000000000/53777777777801000000000002888888888889",
+        "820625000000011250000000000000000000/4533777777779001000000000022888888888889",
+        "8133125000000011250000000000000000000/445333777777890001000000000222888888888889",
+        "81258125000000011250000000000000000000/44453333777788900001000000002222888888888889"
+      ],
+      "expected": "strictly decreasing",
+      "name": "escape ratios decrease",
+      "pass": true
+    },
+    {
+      "actual": "W_eps=9*(a+2*b+c)*s-6*b*s^2/(rho+eps)-3*c*s^2*(rho+2*eps)/(rho+eps)^2, with s=|Psi_1|^2+|Psi_2|^2 and rho=s+|Psi_3|^2",
+      "expected": "registered formula",
+      "name": "escape formula limit",
+      "pass": true
+    }
+  ],
+  "audit_id": "A6-R194-SHARP-RUNNING-MASS-COUNTERTERM-BOUNDARY",
+  "boundary": "This T0 claim-nonbearing result proves only the sharp spatially local running-mass domination identity and the residual noncoercive third-component escape in the pinned fixed-floor A6 algebra. It does not define a full renormalised Class-II energy, prove partition-density convergence, tightness, full-field bare concentration, a Gibbs measure, rho-floor removal, infinite volume, a phase transition, BCC, Sector-A, Pre-A, or any physical-empty or vacuum comparison. The h_min direction is not uniformly coercive. No new negative result or gate closure follows.",
+  "claim_id": "A6-CLASSII-COUNTERTERM-CLOSURE",
+  "derived": {
+    "a": "18000000000/4000000000001",
+    "b": "7500000000/4000000000001",
+    "c": "9375000000/4000000000001",
+    "eps": "1/1000000000000",
+    "h_min": "381375000000/4000000000001",
+    "ratios": [
+      "16250000000011250000000000000000000/1777777777780000000000000888888888889",
+      "89375000000011250000000000000000000/53777777777801000000000002888888888889",
+      "820625000000011250000000000000000000/4533777777779001000000000022888888888889",
+      "8133125000000011250000000000000000000/445333777777890001000000000222888888888889",
+      "81258125000000011250000000000000000000/44453333777788900001000000002222888888888889"
+    ],
+    "sub_difference": "-3713152777778989750000000022888888888889/4533777777779001000000000022888888888889000"
+  },
+  "recorded_at": "2026-08-22T21:20:16.037894Z",
+  "result_id": "R-194",
+  "run_kind": "independent",
+  "schema": "tect/lean-kernel-crosscheck/1.0",
+  "verdict": "PASS"
+}

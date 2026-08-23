@@ -1,0 +1,105 @@
+{
+  "assertion_count": 9,
+  "assertions": [
+    {
+      "actual": "0.01",
+      "expected": ">0",
+      "name": "reserve_positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.979",
+      "expected": "<1",
+      "name": "p_alpha_below_one",
+      "status": "PASS"
+    },
+    {
+      "actual": "13031.471094354635390976",
+      "expected": ">0",
+      "name": "envelope_positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "651.5735547177317695488",
+      "expected": ">0.01",
+      "name": "registered_target_exceeds_reserve",
+      "status": "PASS"
+    },
+    {
+      "actual": "1303.1471094354635390976",
+      "expected": ">0.01",
+      "name": "doubled_target_exceeds_reserve",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.99960824163786527745303446462187169571440275476841566601577910254627397359141544",
+      "expected": ">0.9",
+      "name": "registered_required_theta_is_higher",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.99972298500554800249886751698449754930821154677038886499335036058252124375138173",
+      "expected": ">0.9",
+      "name": "doubled_required_theta_is_higher",
+      "status": "PASS"
+    },
+    {
+      "actual": "exact Fraction identity",
+      "expected": "true",
+      "name": "registered_identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "exact Fraction identity",
+      "expected": "true",
+      "name": "doubled_is_twice_registered",
+      "status": "PASS"
+    }
+  ],
+  "claim_id": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+  "conclusion": "The registered theta target fails the coarse envelope only; this is not an exact-B or production closure.",
+  "derived": {
+    "B6": "0.01",
+    "C_src_coarse": "13031.471094354635390976",
+    "Kf_conservative": "1303.1471094354635390976",
+    "Kf_registered": "651.5735547177317695488",
+    "M_R": "1",
+    "alpha": "0.89",
+    "alpha_c": "0.8",
+    "alpha_d": "0.04",
+    "alpha_f": "0.05",
+    "conservative_ratio_Kf_over_B6": "130314.71094354635390976",
+    "epsilon_6": "0.25",
+    "epsilon_d": "0.01",
+    "gamma": "1.62",
+    "p": "1.1",
+    "p_alpha": "0.979",
+    "registered_ratio_Kf_over_B6": "65157.35547177317695488",
+    "required_s2_conservative": "0.000000076737307151240206332761292519035555623804134864845123606100845998029221386124232",
+    "required_s2_registered": "0.00000015347461430248041266552258503807111124760826972969024721220169199605844277224846",
+    "required_theta_conservative": "0.99972298500554800249886751698449754930821154677038886499335036058252124375138173",
+    "required_theta_registered": "0.99960824163786527745303446462187169571440275476841566601577910254627397359141544",
+    "s": "0.1",
+    "sharp_lower_H6": "786432",
+    "source_base_constant": "0.016570372383568618",
+    "target_s2": "0.01",
+    "theta": "0.9"
+  },
+  "failures": [],
+  "generated_at_utc": "2026-08-22T17:34:17.838495+00:00",
+  "honesty_boundary": [
+    "not exact-B",
+    "not joint source/potential",
+    "not action reconstruction",
+    "not gate closure"
+  ],
+  "schema": "tect/a11-a13-coarse-source-budget-screen-independent-result/1.0",
+  "scope": "Independent Fraction-only recomputation of the coefficient-blind coarse screen; exact-B and joint routes remain open.",
+  "script_version": "1.0.0",
+  "source_authorities": {
+    "claims\\A1-PRODUCTION-FUNCTIONAL-REALISATION\\production_functional_manifest.json": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565",
+    "claims\\A10-CLASSII-RELATIVE-COMMUTATOR-REDUCTION\\classii_relative_structural_reduction_manifest.json": "ae97c870916b8f1da6822def01c9b8c80243538676f3fdbce42ddc7701b36cc9",
+    "claims\\A12-CLASSII-SOURCE-SQUARE-REDUCTION\\classii_sharp_cube_budget_obstruction_manifest.json": "e16ad41f192505ca17a7c249705e30ec51771877505a9e833cd900e863580213",
+    "claims\\A12-CLASSII-SOURCE-SQUARE-REDUCTION\\classii_source_square_reduction_manifest.json": "f1e12ad869fff0e5ac51b8dbfbb04fe9b13ac46f108cce8f60bed05c1acfb5d5"
+  }
+}
