@@ -431,6 +431,89 @@
       "task_id": "T-054",
       "title": "Current revalidation repairs fixed-torus QFT OS/KMS provenance and reader drift",
       "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "axis": "certificate provenance",
+          "check": "Fresh child outputs carry the current certificate hash and canonical artifacts equal fresh runs.",
+          "disposition": "DISMISSED"
+        },
+        {
+          "axis": "live-task reader",
+          "check": "The reader uses current active-task plus append-only exploration/changelog semantics rather than a historical T-054 note string.",
+          "disposition": "DISMISSED"
+        },
+        {
+          "axis": "density-to-state overclaim",
+          "check": "Scalar density equality remains distinct from state, phase, gap, physical-reference and full KMS conclusions.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "surface estimate",
+          "check": "The stronger cutoff-volume-interpolation O(boundary) estimate remains open and non-load-bearing.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "Lean promotion",
+          "check": "No new exact proposition is introduced by this provenance repair; no artificial Lean theorem is claimed.",
+          "disposition": "NOT-APPLICABLE"
+        }
+      ],
+      "boundary": "T0 claim-nonbearing provenance/current-reader revalidation only. It does not alter EXP-000778, add a result card, prove an O(boundary) estimate, identify physical empty space, select a phase, derive a three-dimensional parent, or close Sector A or Pre-A.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "This is a current reproducibility and protocol-reader repair, not a new theorem or gate closure. The finite-component GRS density bridge is restored as current evidence while the stronger surface estimate, physical reference, phase/state, original parent, C6, Sector A and Pre-A gates remain open.",
+      "evidence_refs": [
+        "strategy/pre-a-cp1-cl8-q3-finite-component-grs-current-revalidation-manifest.json#run_summary",
+        "strategy/pre-a-cp1-cl8-q3-finite-component-grs-current-revalidation-certificate-260824.md#Finding",
+        "strategy/pre-a-cp1-cl8-q3-finite-component-grs-boundary-pressure-periodic-ground-density-route-split-manifest.json#finite_component_GRS_port",
+        "strategy/pre-a-cp1-cl8-q3-finite-component-grs-boundary-pressure-periodic-ground-density-route-split-manifest.json#periodic_ground_and_KL",
+        "strategy/pre-a-cp1-cl8-q3-finite-component-grs-boundary-pressure-periodic-ground-density-route-split-certificate-260804.md#section-6-half-periodic-transfer-and-periodic-ground-energy-density",
+        "codes/foundations/pre_a_cp1_cl8_q3_finite_component_grs_boundary_pressure_periodic_ground_density_route_split.py#main",
+        "codes/foundations/pre_a_cp1_cl8_q3_finite_component_grs_boundary_pressure_periodic_ground_density_route_split_independent.py#main",
+        "codes/foundations/pre_a_cp1_cl8_q3_finite_component_grs_boundary_pressure_periodic_ground_density_route_split_verify.py#main",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-04-primary-pre-a-cp1-cl8-q3-finite-component-grs-boundary-pressure-periodic-ground-density-route-split/result.json#assertion_summary",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-04-independent-pre-a-cp1-cl8-q3-finite-component-grs-boundary-pressure-periodic-ground-density-route-split/result.json#assertion_summary",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-04-integrated-pre-a-cp1-cl8-q3-finite-component-grs-boundary-pressure-periodic-ground-density-route-split/result.json#assertion_summary",
+        "explorations/log.jsonl#EXP-000778",
+        "changelog/log.jsonl#20260804-exp-000771-closes-the-q3-periodic-scalar-densit"
+      ],
+      "finding": "The primary lane passes 108/108, the independent lane passes 97/97, and the repaired integrated lane passes 170/170. The only pre-repair differences were the stored certificate hash and the requirement that a historical EXP ordinal and next gate remain embedded in the current T-054 note. Current source pins, canonical child/integrated JSONs, scalar-density scope and next gate now agree without changing the theorem boundaries.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": []
+      },
+      "gate_ids": [
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE",
+        "C6-BCC-PREMISE-BLOCKED"
+      ],
+      "id": "EXP-001008",
+      "method": [
+        "Run the current finite-component GRS primary and independent scripts and compare their JSONs with the canonical child artifacts.",
+        "Classify the original integrated-reader failures as certificate-hash provenance drift and an obsolete live-task note contract, without editing EXP-000778 or its changelog event.",
+        "Refresh only the canonical child and integrated JSON artifacts and minimally update the reader to use the current live task plus append-only exploration/changelog ledgers.",
+        "Run the integrated verifier and assert exact source pins, child agreement, all-sixteen density/scope checks, the stronger-surface firewall, lineage, negative references and the current next gate.",
+        "Apply the QFT firewall: scalar density conclusions are not physical empty space, phase/state selection, the original 3D parent, Sector A or Pre-A."
+      ],
+      "next_action": "Attack the phase/physical-reference/one-dimensional-to-three-dimensional parent route with an explicit common parent, stress-tensor normalization and state/phase observables; retain the scalar density theorem and all physical firewalls.",
+      "provenance": "contemporaneous",
+      "question": "After certificate-hash drift and an obsolete T-054 note contract, do the existing finite-component GRS primary, independent and integrated lanes reproduce the declared scalar density theorem and its physical/parent firewalls?",
+      "recorded_at": "2026-08-24T06:28:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-000778",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-08-24",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Current revalidation repairs finite-component GRS QFT density provenance and reader drift",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",

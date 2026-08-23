@@ -253,7 +253,11 @@ def build_payload() -> dict[str, Any]:
     audit.check("exploration next gate", NEXT_GATE in exploration["next_action"], exploration["next_action"], NEXT_GATE, "records")
     todo_payload = json.loads((REPO / "todo/todo.json").read_text(encoding="utf-8"))
     task = next(item for item in todo_payload["tasks"] if item["id"] == "T-054")
-    audit.check("TODO record", task["status"] == "in_progress" and EXPLORATION_ID in task["note"] and NEXT_GATE in task["note"], task, "active route history", "records")
+    exploration_log = (REPO / "explorations/log.jsonl").read_text(encoding="utf-8")
+    # The live task note is not an EXP ordinal index; append-only exploration
+    # and changelog ledgers carry historical route membership.
+    audit.check("live TODO task", task["status"] == "in_progress" and task["id"] == manifest["task_id"], task, "active task", "records")
+    audit.check("exploration ledger record", EXPLORATION_ID in exploration_log, EXPLORATION_ID, "present", "records")
     changelog_records = [json.loads(line) for line in (REPO / "changelog/log.jsonl").read_text(encoding="utf-8").splitlines()]
     changelog = next(item for item in changelog_records if EXPLORATION_ID in item.get("header", ""))
     audit.check("changelog record", MANIFEST.relative_to(REPO).as_posix() in changelog["notes"] and SCRIPT.relative_to(REPO).as_posix() in changelog["scripts"], changelog, "package paths", "records")
