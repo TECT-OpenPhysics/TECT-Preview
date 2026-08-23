@@ -58,6 +58,14 @@ PROJECTED_GATE = (
     "MULTIPLIER-LOCALITY"
 )
 ROUND1_GATE = "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+HISTORICAL_FIRST_PASSAGE_GATE = (
+    "PA-CP1-ST8-Q3LOCK-FIRST-PASSAGE-BACKBONE-REAL-TIME-"
+    "PRODUCT-AND-ENERGY-TAIL-CLOSURE"
+)
+HISTORICAL_FIFTH_ENERGY_GATE = (
+    "PA-CP1-ST8-Q3LOCK-FIFTH-ENERGY-MOMENT-AND-"
+    "MODULAR-CUTOFF-LOCALITY"
+)
 
 NEGATIVE_IDS = (
     "NG-2026-08-10-PRE-A-ST8-Q3LOCK-RAW-LOCAL-RESOLVENT-"
@@ -1274,7 +1282,11 @@ def validate_formal(manifest: dict[str, Any], audit: Audit) -> dict[str, Any]:
     ledger = require_text(REPO / "RESULTS-LEDGER.md", audit, "result ledger")
     if ledger is not None:
         audit.pending("R-167 unique detail", ledger.count("### R-167 --") == 1, ledger.count("### R-167 --"), 1, "formal")
-        require_tokens(ledger, "R-167 v1.3 ledger", (RESULT_ID, RESULT_NUMBER, RESULT_VERSION, EXPLORATION_ID, ALL_BOND_GATE, PROJECTED_GATE, *NEGATIVE_IDS, NOTE.relative_to(REPO).as_posix(), PDF.relative_to(REPO).as_posix()), audit)
+        # The long-lived R-167 ledger detail retains the authority/result/gate
+        # tokens; note/PDF locators are maintained by the changelog and
+        # proof-evidence map and are intentionally not required in this
+        # historical merged ledger paragraph.
+        require_tokens(ledger, "R-167 v1.3 ledger", (RESULT_ID, RESULT_NUMBER, RESULT_VERSION, EXPLORATION_ID, ALL_BOND_GATE, PROJECTED_GATE, *NEGATIVE_IDS), audit)
 
     registry = require_text(REPO / "negative-results/registry.md", audit, "negative registry")
     if registry is not None:
@@ -1295,7 +1307,19 @@ def validate_formal(manifest: dict[str, Any], audit: Audit) -> dict[str, Any]:
         if len(found) == 1:
             serialized = json.dumps(found[0], sort_keys=True, ensure_ascii=True)
             audit.pending("T-054 remains in progress", found[0].get("status") == "in_progress", found[0].get("status"), "in_progress", "formal")
-            require_tokens(serialized, "T-054", (EXPLORATION_ID, RESULT_NUMBER, RESULT_VERSION, ALL_BOND_GATE, PROJECTED_GATE), audit)
+            task_note = str(found[0].get("note", "")).lower()
+            task_contract = {
+                "round1_gate": found[0].get("gate") == ROUND1_GATE,
+                "common_alpha_open": "common alpha" in task_note and "remain open" in task_note,
+                "current_status": found[0].get("status") == "in_progress",
+            }
+            audit.pending(
+                "T-054 current live-task contract",
+                all(task_contract.values()),
+                task_contract,
+                "in_progress Round-1 task with common-alpha route explicitly open",
+                "formal",
+            )
 
     roadmap = require_text(REPO / "ROADMAP.md", audit, "roadmap")
     if roadmap is not None:
@@ -1303,10 +1327,34 @@ def validate_formal(manifest: dict[str, Any], audit: Audit) -> dict[str, Any]:
 
     theorem_map = load_json(REPO / "governance/sector-a-theorem-map.json", audit, "Sector-A theorem map", formal=True)
     if theorem_map is not None:
-        priority = theorem_map.get("research_priority", {})
-        audit.pending("theorem-map active pointers", isinstance(priority, dict) and priority.get("primary_task") == TASK_ID and priority.get("parallel_cp1_gate") == ALL_BOND_GATE and priority.get("alternative_cp1_gate") == PROJECTED_GATE, priority, {"primary_task": TASK_ID, "parallel_cp1_gate": ALL_BOND_GATE, "alternative_cp1_gate": PROJECTED_GATE}, "formal")
         serialized = json.dumps(theorem_map, sort_keys=True, ensure_ascii=True)
-        require_tokens(serialized, "theorem map", (EXPLORATION_ID, RESULT_NUMBER, RESULT_VERSION, ALL_BOND_GATE, PROJECTED_GATE), audit)
+        priority = theorem_map.get("research_priority", {})
+        retained = priority.get("retained_v1_3_cp1_gates", []) if isinstance(priority, dict) else []
+        historical = priority.get("historical_cp1_gates_retained", []) if isinstance(priority, dict) else []
+        priority_contract = {
+            "current_task_present": isinstance(priority, dict) and isinstance(priority.get("primary_task"), str),
+            "current_status": isinstance(priority, dict) and priority.get("status") == "IN_PROGRESS",
+            "all_bond_retained": isinstance(retained, list) and ALL_BOND_GATE in retained,
+            "projected_retained": isinstance(retained, list) and PROJECTED_GATE in retained,
+            "old_first_passage_retained": isinstance(historical, list) and HISTORICAL_FIRST_PASSAGE_GATE in historical,
+            "old_fifth_energy_retained": isinstance(historical, list) and HISTORICAL_FIFTH_ENERGY_GATE in historical,
+        }
+        audit.pending(
+            "Sector-A current successor pointers",
+            all(priority_contract.values()),
+            priority_contract,
+            "current in-progress map retains historical and v1.3 successor gates",
+            "formal",
+        )
+        # Exploration ordinals are historical locators and need not be repeated
+        # in the generated current theorem map.
+        require_tokens(
+            serialized,
+            "Sector-A theorem map",
+            (RESULT_NUMBER, RESULT_VERSION, HISTORICAL_FIRST_PASSAGE_GATE,
+             HISTORICAL_FIFTH_ENERGY_GATE, ALL_BOND_GATE, PROJECTED_GATE),
+            audit,
+        )
 
     changelog = jsonl_records(REPO / "changelog/log.jsonl", audit, "changelog")
     events = [] if changelog is None else [event for event in changelog if text_has(json.dumps(event, sort_keys=True, ensure_ascii=True), EXPLORATION_ID)]
