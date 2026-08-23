@@ -299,17 +299,17 @@ def main() -> int:
 
     public_checks = {
         "claim card": (CLAIM_DIR / "claim.md", "R-113"),
-        "status card": (CLAIM_DIR / "status.json", "R-113"),
+        "status card": (CLAIM_DIR / "status.json", CLAIM),
         "results ledger": (REPO / "RESULTS-LEDGER.md", '<a id="r-113"></a>'),
         "negative registry": (REPO / "negative-results/registry.md", NEGATIVE_ID),
         "exploration ledger first": (REPO / "explorations/log.jsonl", '"id":"EXP-000318"'),
         "exploration ledger last": (REPO / "explorations/log.jsonl", '"id":"EXP-000324"'),
         "roadmap": (REPO / "ROADMAP.md", "R-113"),
-        "theorem map": (REPO / "governance/sector-a-theorem-map.json", "R-113"),
-        "todo": (REPO / "TODO.md", "R-113"),
+        "theorem map": (REPO / "governance/sector-a-theorem-map.json", "classii-scalar-k2k-effective-boundary-and-directed-rounding-seed"),
+        "todo": (REPO / "TODO.md", "T-050"),
         "main proof line": (REPO / "theory/main-proof-line.md", "R-113"),
         "proof map markdown": (REPO / "theory/proof-evidence-map.md", "R-113"),
-        "proof map json": (REPO / "verification/proof-evidence-map.json", "R-113"),
+        "proof map json": (REPO / "verification/proof-evidence-map/accepted_events-0005.json", "R-113"),
         "changelog": (REPO / "CHANGELOG.md", "R-113 effective scalar boundary and directed-rounding seed"),
     }
     for name, (path, token) in public_checks.items():
