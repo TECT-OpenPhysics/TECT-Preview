@@ -1,0 +1,51 @@
+{
+  "schema": "tect/a1-classii-owner-mismatch-current-revalidation/1.0",
+  "audit_id": "A1-CLASSII-OWNER-MISMATCH-CURRENT-REVALIDATION",
+  "exploration_id": "EXP-001005",
+  "task_id": "T-054",
+  "claim_id": "A1-PRODUCTION-FUNCTIONAL-REALISATION",
+  "tier": "T0",
+  "claim_bearing": false,
+  "purpose": "Revalidate the exact historical A1 cKK-versus-cJK owner mismatch on the current tree while isolating the stale historical aggregate-count wrapper.",
+  "source_authorities": {
+    "a1_functional": {
+      "path": "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/production_functional_manifest.json",
+      "sha256": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565"
+    },
+    "historical_mismatch_manifest": {
+      "path": "strategy/pre-a-a1-classii-owner-mismatch-lean-crosscheck-manifest.json",
+      "sha256": "0f92ef81ee0b8e62fc42451b3b1b01651cc993751235927dba1e44c96f64e21b"
+    },
+    "primary": {
+      "path": "verification/scripts/lean_a1_classii_owner_mismatch_crosscheck.py",
+      "sha256": "6a1a304ac7ddd98dd8d55d20c85c1256a176fe563c1d01dee11b742962ea3d7a"
+    },
+    "independent": {
+      "path": "codes/foundations/a1_classii_owner_mismatch_crosscheck_independent.py",
+      "sha256": "695ddd6c02118a4885336e70384e8fcce61ba157cf350413e00faab352efca29"
+    }
+  },
+  "independent_stdlib_only": true,
+  "historical_wrapper": {
+    "expected_catalog_is_historical_oracle": true,
+    "current_count_must_be_derived": true,
+    "stale_wrapper_is_not_a_mathematical_failure": true
+  },
+  "derived_contract": {
+    "declared_owner": "cKK*beta_X^2",
+    "residual_owner": "cJK*alpha_X*beta_X",
+    "required_exact_relation": "declared_numerator != residual_numerator",
+    "canonical_parent_selection": false,
+    "r192_production_owner": false
+  },
+  "hostile_mutations": [
+    "replace cKK by cJK in the declared owner",
+    "replace cJK by cKK in the residual owner",
+    "drop the positive mass denominator",
+    "treat the historical catalog count as a current theorem premise",
+    "promote the coefficient mismatch to a full functional or dynamics selection",
+    "insert a Lean escape token"
+  ],
+  "boundary": "This T0 current-reader revalidation confirms the exact A1 Class-II coefficient mismatch and separates it from a stale historical catalog-count assertion. It does not choose F_decl versus F_ref, repair the full A1 variational mismatch, supply R-192 heat_root_incidence, root filtration, conditional replicas, raw-current spatial intertwiner or q-ledger, close A13, Sector-A, Pre-A, or establish any QFT/continuum/physical result.",
+  "next_action": "Keep the A1 parent-selection decision explicit. A QFT dynamics candidate may use F_ref only as a declared comparison hypothesis until an authority chooses and hash-pins one complete functional; then require the unchanged R-192 owner contract before promotion."
+}
