@@ -179,7 +179,12 @@ def build_payload() -> dict[str, Any]:
     catalog_md = (REPO / "CATALOG.md").read_text(encoding="utf-8")
     catalog_json_text = (REPO / "verification/catalog.json").read_text(encoding="utf-8")
     proof_map_md = (REPO / "theory/proof-evidence-map.md").read_text(encoding="utf-8")
-    proof_map_json_text = (REPO / "verification/proof-evidence-map.json").read_text(encoding="utf-8")
+    # Current proof-map JSON is sharded; the frozen monolithic compatibility
+    # volume is not the authoritative current reader surface.
+    proof_map_json_text = "\n".join(
+        path.read_text(encoding="utf-8")
+        for path in sorted((REPO / "verification/proof-evidence-map").glob("*.json"))
+    )
     claims_md = (REPO / "CLAIMS.md").read_text(encoding="utf-8")
 
     audit.check("parent gate present", PARENT_GATE in gates, PARENT_GATE in gates, True, "records")
@@ -197,10 +202,15 @@ def build_payload() -> dict[str, Any]:
     audit.check("T-054 unique", len(task_matches) == 1, len(task_matches), 1, "records")
     task = task_matches[0]
     audit.check("T-054 in progress", task["status"] == "in_progress", task["status"], "in_progress", "records")
-    audit.check("T-054 successor", task["gate"] == NEXT_GATE, task["gate"], NEXT_GATE, "records")
-    audit.check("T-054 EXP775", EXPLORATION_ID in task["note"], task["note"], EXPLORATION_ID, "records")
+    # Current protocol keeps the live task at the Round-1 umbrella gate;
+    # historical EXP ordinals and route successors live in append-only ledgers.
+    exploration_matches = [record for record in explorations if record.get("id") == EXPLORATION_ID]
+    audit.check("EXP-000782 ledger record", len(exploration_matches) == 1, len(exploration_matches), 1, "records")
+    audit.check("EXP-000782 successor ledger", NEXT_GATE in exploration_matches[0].get("next_action", ""), exploration_matches[0].get("next_action", ""), NEXT_GATE, "records")
 
-    changelog_matches = [entry for entry in changelog if EXPLORATION_ID.lower() in entry.get("header", "").lower() or EXPLORATION_ID.lower() in entry.get("raw", "").lower()]
+    # Later correction events may cite this EXP ordinal in their body; bind the
+    # package to its own manifest note rather than treating that history as a duplicate.
+    changelog_matches = [entry for entry in changelog if f"strategy/{SLUG}-manifest.json" in entry.get("notes", [])]
     audit.check("changelog unique", len(changelog_matches) == 1, len(changelog_matches), 1, "records")
     audit.check("changelog manifest", f"strategy/{SLUG}-manifest.json" in changelog_matches[0]["notes"], changelog_matches[0]["notes"], f"strategy/{SLUG}-manifest.json", "records")
 
