@@ -1,0 +1,255 @@
+{
+  "assertions": [
+    {
+      "actual": "tect/pre-a-cp1-st8-q3lock-weighted-recurrence-decay-bridge/1.0",
+      "expected": ".../1.0",
+      "group": "provenance",
+      "name": "schema",
+      "status": "PASS"
+    },
+    {
+      "actual": "EXP-001026",
+      "expected": "EXP-001026",
+      "group": "provenance",
+      "name": "exploration",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "missing": "The exact quartic Q3 onsite flow has not been shown to preserve a suitable non-Leibniz/state-weighted local commutator seminorm with the required recurrence.",
+        "statement": "L_x(n+1)<= (1+C delta)L_x(n)+J delta sum_(y~x)L_y(n), with L_x>=0 and graph degree at most z",
+        "status": "OPEN",
+        "supplied_by_q3": false,
+        "weight": "W_rho(L)=sum_x exp(rho d(x,X))L_x; for the exact fixture exp(rho)=2"
+      },
+      "expected": "supplied_by_q3=false",
+      "group": "scope",
+      "name": "conditional",
+      "status": "PASS"
+    },
+    {
+      "actual": "1",
+      "expected": 1,
+      "group": "initial",
+      "name": "center mass",
+      "status": "PASS"
+    },
+    {
+      "actual": "18/5",
+      "expected": "<=18/5",
+      "group": "recurrence",
+      "name": "recurrence 1",
+      "status": "PASS"
+    },
+    {
+      "actual": "306/25",
+      "expected": "<=324/25",
+      "group": "recurrence",
+      "name": "recurrence 2",
+      "status": "PASS"
+    },
+    {
+      "actual": "984/25",
+      "expected": "<=5508/125",
+      "group": "recurrence",
+      "name": "recurrence 3",
+      "status": "PASS"
+    },
+    {
+      "actual": "75042/625",
+      "expected": "<=17712/125",
+      "group": "recurrence",
+      "name": "recurrence 4",
+      "status": "PASS"
+    },
+    {
+      "actual": "1090584/3125",
+      "expected": "<=1350756/3125",
+      "group": "recurrence",
+      "name": "recurrence 5",
+      "status": "PASS"
+    },
+    {
+      "actual": "607374/625",
+      "expected": "<=19630512/15625",
+      "group": "recurrence",
+      "name": "recurrence 6",
+      "status": "PASS"
+    },
+    {
+      "actual": "607374/625",
+      "expected": "<=34012224/15625",
+      "group": "recurrence",
+      "name": "iteration",
+      "status": "PASS"
+    },
+    {
+      "actual": "342/25",
+      "expected": "<=607374/625",
+      "group": "decay",
+      "name": "decay 0",
+      "status": "PASS"
+    },
+    {
+      "actual": "24516/3125",
+      "expected": "<=303687/625",
+      "group": "decay",
+      "name": "decay 1",
+      "status": "PASS"
+    },
+    {
+      "actual": "65988/15625",
+      "expected": "<=303687/1250",
+      "group": "decay",
+      "name": "decay 2",
+      "status": "PASS"
+    },
+    {
+      "actual": "1296/625",
+      "expected": "<=303687/2500",
+      "group": "decay",
+      "name": "decay 3",
+      "status": "PASS"
+    },
+    {
+      "actual": "1386/3125",
+      "expected": "<=303687/5000",
+      "group": "decay",
+      "name": "decay 4",
+      "status": "PASS"
+    },
+    {
+      "actual": 6,
+      "expected": "<=6",
+      "group": "volume",
+      "name": "degree 3",
+      "status": "PASS"
+    },
+    {
+      "actual": 6,
+      "expected": "<=6",
+      "group": "volume",
+      "name": "degree 5",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "boundary_decay_is_conditional": true,
+        "iterated": "W_rho(L_N)<=exp((C+J z exp(rho))T)W_rho(L_0)",
+        "pointwise": "L_x(T)<=exp(-rho d(x,X)+(C+J z exp(rho))T)W_rho(L_0)",
+        "volume_uniform": true,
+        "weighted_step": "W_rho(L(n+1))<= [1+(C+J z exp(rho))delta]W_rho(L(n))"
+      },
+      "expected": true,
+      "group": "scope",
+      "name": "boundary conditional",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "missing": "The exact quartic Q3 onsite flow has not been shown to preserve a suitable non-Leibniz/state-weighted local commutator seminorm with the required recurrence.",
+        "statement": "L_x(n+1)<= (1+C delta)L_x(n)+J delta sum_(y~x)L_y(n), with L_x>=0 and graph degree at most z",
+        "status": "OPEN",
+        "supplied_by_q3": false,
+        "weight": "W_rho(L)=sum_x exp(rho d(x,X))L_x; for the exact fixture exp(rho)=2"
+      },
+      "expected": "OPEN",
+      "group": "scope",
+      "name": "Q3 hypothesis open",
+      "status": "PASS"
+    }
+  ],
+  "boundary": "T0 claim-nonbearing conditional recurrence checkpoint only. It does not close the Q3 common-alpha gate, prove a thermodynamic dynamics, identify KMS states, establish a ground/GNS gap, remove a regulator, establish C6, Sector A or Pre-A, or supply the TECT production owner.",
+  "decay_rows": [
+    {
+      "actual_max": "342/25",
+      "bound": "607374/625",
+      "distance": 0
+    },
+    {
+      "actual_max": "24516/3125",
+      "bound": "303687/625",
+      "distance": 1
+    },
+    {
+      "actual_max": "65988/15625",
+      "bound": "303687/1250",
+      "distance": 2
+    },
+    {
+      "actual_max": "1296/625",
+      "bound": "303687/2500",
+      "distance": 3
+    },
+    {
+      "actual_max": "1386/3125",
+      "bound": "303687/5000",
+      "distance": 4
+    }
+  ],
+  "derived": {
+    "C": "1",
+    "J": "1",
+    "boundary_commutator_decay_closed": false,
+    "common_alpha_closed": false,
+    "delta": "1/5",
+    "exhaustion_cauchy_closed": false,
+    "max_degree": 6,
+    "recurrence_hypothesis_supplied_by_q3": false,
+    "side": 5,
+    "volume_uniform_conditional": true,
+    "weight_base": 2,
+    "weighted_recurrence_to_decay_closed": true
+  },
+  "exploration_id": "EXP-001026",
+  "failed": 0,
+  "passed": 20,
+  "provenance": {
+    "manifest": "strategy/pre-a-cp1-st8-q3lock-weighted-recurrence-decay-bridge-manifest.json",
+    "manifest_sha256": "88f694bfd6780c62ccf26f075bba3996cf0b0c30b55945cb00aa4d876e1fd1a0",
+    "script": "codes/foundations/pre_a_cp1_st8_q3lock_weighted_recurrence_decay_bridge_independent.py",
+    "script_sha256": "c43ce2eccee2eb2974f6ae6814c36b2730f6ee8806aad8262b4deb535dbefc90"
+  },
+  "recurrence_rows": [
+    {
+      "bound": "18/5",
+      "step": 1,
+      "weight_after": "18/5",
+      "weight_before": "1"
+    },
+    {
+      "bound": "324/25",
+      "step": 2,
+      "weight_after": "306/25",
+      "weight_before": "18/5"
+    },
+    {
+      "bound": "5508/125",
+      "step": 3,
+      "weight_after": "984/25",
+      "weight_before": "306/25"
+    },
+    {
+      "bound": "17712/125",
+      "step": 4,
+      "weight_after": "75042/625",
+      "weight_before": "984/25"
+    },
+    {
+      "bound": "1350756/3125",
+      "step": 5,
+      "weight_after": "1090584/3125",
+      "weight_before": "75042/625"
+    },
+    {
+      "bound": "19630512/15625",
+      "step": 6,
+      "weight_after": "607374/625",
+      "weight_before": "1090584/3125"
+    }
+  ],
+  "run_kind": "independent",
+  "schema": "tect/foundation-audit/1.0",
+  "total": 20,
+  "verdict": "PASS"
+}
