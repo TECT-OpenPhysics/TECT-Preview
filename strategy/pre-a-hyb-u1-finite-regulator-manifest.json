@@ -1,0 +1,151 @@
+{
+  "schema": "tect/pre-a-hyb-u1-finite-regulator/1.0",
+  "candidate_id": "HYB-TECT-U1-FINITE-0001",
+  "audit_id": "PRE-A-HYB-U1-FINITE-REGULATOR",
+  "title": "Minimal finite U(1) effective-gauge hybrid of the hash-pinned A1 F_ref candidate",
+  "issued": "2026-08-23",
+  "task_id": "T-054",
+  "claim_id": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+  "tier": "T0",
+  "claim_bearing": false,
+  "status": "candidate_only",
+  "scientific_role": "Freeze one explicit finite-regulator model and test HYB-00 through HYB-04 before any A13 crosswalk.",
+  "authorities": {
+    "a1_functional": {
+      "path": "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/production_functional_manifest.json",
+      "sha256": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565"
+    },
+    "r192_manifest": {
+      "path": "strategy/pre-a13-t058-bounded-complete-production-cylinder-manifest.json",
+      "sha256": "641074df54492654177fc72dd66ecb2cb46a791390215ab521f725d77e622d14"
+    }
+  },
+  "finite_regulator": {
+    "dimension": 3,
+    "lattice": "Lambda_2=(Z/2Z)^3 with periodic boundary conditions",
+    "sites": 8,
+    "spacing": 1,
+    "field": "Psi in C^3 at every site, represented as a gauge-singlet matter field",
+    "gauge_group": "U(1)",
+    "representation": "trivial one-dimensional representation on Psi; explicit and not silently promoted to a charged representation",
+    "links": "U_{x,mu} in U(1) on every oriented link",
+    "plaquettes": "U_{x,mu} U_{x+mu,nu} conjugate(U_{x+nu,mu}) conjugate(U_{x,nu})",
+    "tect_parent": "F_ref from the hash-pinned standalone A1 backend at eta_shell=0 on the declared N=(2,2,2) spectral regulator",
+    "gauge_action": "S_YM^U1=beta_g sum_p (1-Re U_p)",
+    "interaction": "S_int=kappa sum_{x,p attached to x} rho_x (1-Re U_p), rho_x=Psi_x^dagger Psi_x",
+    "total_action": "S_hyb(U,Psi)=F_ref(Psi)+S_YM^U1(U)+S_int(U,Psi)",
+    "parameters": {
+      "N": [
+        2,
+        2,
+        2
+      ],
+      "L": [
+        16,
+        16,
+        16
+      ],
+      "eta_shell": 0,
+      "beta_g": "1",
+      "kappa": "1/10",
+      "beta_inverse_temperature": "1",
+      "r": "0.4740336473",
+      "Z": "-0.9252754126",
+      "Y": "1",
+      "lambda": "-0.43",
+      "gamma": "1.62",
+      "rho_regularizer": "1e-12",
+      "classii_mass_regularizer": "1e-12"
+    }
+  },
+  "parent_reductions": {
+    "tect_gauge_off": "At U=1 every plaquette defect and S_YM vanish, so S_hyb(1,Psi)=F_ref(Psi) exactly.",
+    "effective_gauge_frozen_psi": "At Psi=0, F_ref and S_int vanish, so S_hyb(U,0)=S_YM^U1(U) exactly.",
+    "yang_mills_scope": "The frozen parent is an explicitly declared regulated U(1) effective gauge model, not four-dimensional pure Yang-Mills.",
+    "canonical_spectral_boundary": "The finite N=(2,2,2) regulator is exact for the declared F_ref parent only; no continuum or regulator-removal identification is asserted."
+  },
+  "gauge_contract": {
+    "transformation": "g_x in U(1), Psi_x unchanged, U_{x,mu} -> g_x U_{x,mu} conjugate(g_{x+mu})",
+    "invariants": [
+      "rho_x",
+      "Re U_p",
+      "Wilson plaquette products"
+    ],
+    "ward_identity": "The finite action is constant on every local gauge orbit; the orbit derivative is the Euclidean Gauss/Ward constraint.",
+    "observable_class": [
+      "rho_x",
+      "Re U_p",
+      "finite Wilson loops"
+    ],
+    "physical_hilbert_space": "not constructed; HYB-06 remains open"
+  },
+  "stability_contract": {
+    "quadratic_core": "For s>=0, r+Z*s+Y*s^2 >= r-Z^2/(4Y)>0.",
+    "classii_form": "The A1 F_ref Class-II quadratic form is nonnegative because a>0 and a*c-b^2>0.",
+    "local_potential": "lambda*rho^2/4+gamma*rho^3/6 >= lambda^3/(12*gamma^2) for rho>=0 with lambda<0<gamma.",
+    "gauge_terms": "S_YM^U1 and S_int are nonnegative."
+  },
+  "finite_dynamics": {
+    "generator": "L f=-grad(S_hyb).grad(f)+beta_inverse*Delta(f) on finite matter coordinates and periodic link angles",
+    "mobility": "identity finite-dimensional mobility",
+    "invariant_candidate": "Z^{-1} exp(-beta_inverse*S_hyb) dPsi dtheta",
+    "detailed_balance": "formal finite-dimensional Gibbs residual is zero",
+    "time_separation": "stochastic quantization time, Euclidean transfer time, and physical real time are distinct"
+  },
+  "r192_crosswalk": {
+    "heat_generator": true,
+    "heat_semigroup": true,
+    "heat_root_incidence": false,
+    "root_filtration": false,
+    "conditional_replicas": false,
+    "raw_current_spatial_intertwiner": false,
+    "production_one_use_q_ledger": false,
+    "first_missing_slot": "heat_root_incidence",
+    "production_owner": false
+  },
+  "hostile_mutations": [
+    "replace trivial representation by a charged representation while retaining the ungauged spectral F_ref term",
+    "replace F_ref by the mismatched F_decl functional",
+    "set gamma nonpositive or beta_g negative",
+    "identify stochastic time with physical real time",
+    "promote finite U(1) detailed balance to OS/KMS, Yang-Mills, A13 or continuum closure",
+    "mark the R-192 missing owner slots as present without hash-pinned evidence"
+  ],
+  "selection": {
+    "HYB-00": "PASS",
+    "HYB-01": "PASS@DECLARED-FINITE-PARENT",
+    "HYB-02": "PASS@FINITE-U1-GAUGE-WARD",
+    "HYB-03": "PASS@FINITE-LOWER-BOUND",
+    "HYB-04": "PASS@FINITE-MARKOV-GENERATOR",
+    "HYB-05": "NOT-ATTEMPTED; R-192 first missing slot remains heat_root_incidence",
+    "HYB-06": "OPEN; no physical Hilbert-space or gauge/TECT current bridge",
+    "HYB-07": "OPEN; no controlled limit program",
+    "candidate_verdict": "RETAIN AS AN EXPLICIT FINITE EFFECTIVE-GAUGE COMPARISON; DO NOT SELECT AS THE CANONICAL TECT PRODUCTION OWNER"
+  },
+  "boundary": "This T0 package proves only the finite contract audit for one explicit U(1) effective-gauge model. It is not a pure Yang-Mills theorem, does not construct a physical Hilbert space, does not supply R-192 heat-root incidence, root filtration, conditional replicas, raw-current spatial intertwiner or one-use q-ledger, and does not close A13, T-050, Sector-A, Pre-A, physical-empty, OS/KMS, real-time, thermodynamic, continuum or mass-gap obligations.",
+  "formal_integration": {
+    "results": [],
+    "events": [],
+    "negatives": [],
+    "no_new_negative_ids": [],
+    "no_pdf": true
+  },
+  "files": {
+    "primary": {
+      "path": "codes/foundations/pre_a_hyb_u1_finite_regulator.py",
+      "sha256": "55b9d76f064bc708f102cb0b0518da51216959d100ddc116b2360512bce81589"
+    },
+    "independent": {
+      "path": "codes/foundations/pre_a_hyb_u1_finite_regulator_independent.py",
+      "sha256": "87904c22f30c400a545c4d40f5a650cbd7af6c1660262ba15dde6466c89baab2"
+    },
+    "verifier": {
+      "path": "codes/foundations/pre_a_hyb_u1_finite_regulator_verify.py",
+      "sha256": "9ca2bdc413c0d6074a23d84155f0ef5a1389da6b3ce13decdd578e0afa0e43a0"
+    },
+    "lean": {
+      "path": "verification/lean/Tect/HYB0001.lean",
+      "sha256": "27fc7f3b9d557040d7333c64067f17484f2090d6cdc2a1cb51e81447730f7d58"
+    }
+  }
+}

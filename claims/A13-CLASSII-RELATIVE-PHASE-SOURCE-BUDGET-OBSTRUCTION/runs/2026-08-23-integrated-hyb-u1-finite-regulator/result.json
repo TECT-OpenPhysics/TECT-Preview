@@ -1,0 +1,75 @@
+{
+  "assertion_summary": {
+    "passed": 56,
+    "total": 56
+  },
+  "audit_id": "PRE-A-HYB-U1-FINITE-REGULATOR",
+  "boundary": "This T0 package proves only the finite contract audit for one explicit U(1) effective-gauge model. It is not a pure Yang-Mills theorem, does not construct a physical Hilbert space, does not supply R-192 heat-root incidence, root filtration, conditional replicas, raw-current spatial intertwiner or one-use q-ledger, and does not close A13, T-050, Sector-A, Pre-A, physical-empty, OS/KMS, real-time, thermodynamic, continuum or mass-gap obligations.",
+  "candidate_id": "HYB-TECT-U1-FINITE-0001",
+  "cross_audit": {
+    "all_missing_slots_absent": true,
+    "r192_agreement": true
+  },
+  "environment": {
+    "platform": "Windows-11-10.0.26200-SP0",
+    "python": "3.12.9"
+  },
+  "failures": [],
+  "gate_results": {
+    "HYB-00": "PASS",
+    "HYB-01": "PASS@DECLARED-FINITE-PARENT",
+    "HYB-02": "PASS@FINITE-U1-GAUGE-WARD",
+    "HYB-03": "PASS@FINITE-LOWER-BOUND",
+    "HYB-04": "PASS@FINITE-MARKOV-GENERATOR",
+    "HYB-05": "NOT-ATTEMPTED; R-192 first missing slot remains heat_root_incidence",
+    "HYB-06": "OPEN; no physical Hilbert-space or gauge/TECT current bridge",
+    "HYB-07": "OPEN; no controlled limit program",
+    "candidate_verdict": "RETAIN AS AN EXPLICIT FINITE EFFECTIVE-GAUGE COMPARISON; DO NOT SELECT AS THE CANONICAL TECT PRODUCTION OWNER"
+  },
+  "lane_reports": [
+    {
+      "lane": "primary",
+      "passed": true,
+      "returncode": 0,
+      "summary": {
+        "passed": 33,
+        "total": 33
+      }
+    },
+    {
+      "lane": "independent",
+      "passed": true,
+      "returncode": 0,
+      "summary": {
+        "passed": 23,
+        "total": 23
+      }
+    }
+  ],
+  "schema": "tect/pre-a-hyb-u1-finite-regulator-integrated/1.0",
+  "script_version": "0.1.0",
+  "source_reports": [
+    {
+      "actual_sha256": "55b9d76f064bc708f102cb0b0518da51216959d100ddc116b2360512bce81589",
+      "authority": "primary",
+      "expected_sha256": "55b9d76f064bc708f102cb0b0518da51216959d100ddc116b2360512bce81589",
+      "passed": true,
+      "path": "codes\\foundations\\pre_a_hyb_u1_finite_regulator.py"
+    },
+    {
+      "actual_sha256": "87904c22f30c400a545c4d40f5a650cbd7af6c1660262ba15dde6466c89baab2",
+      "authority": "independent",
+      "expected_sha256": "87904c22f30c400a545c4d40f5a650cbd7af6c1660262ba15dde6466c89baab2",
+      "passed": true,
+      "path": "codes\\foundations\\pre_a_hyb_u1_finite_regulator_independent.py"
+    },
+    {
+      "actual_sha256": "9ca2bdc413c0d6074a23d84155f0ef5a1389da6b3ce13decdd578e0afa0e43a0",
+      "authority": "verifier",
+      "expected_sha256": "9ca2bdc413c0d6074a23d84155f0ef5a1389da6b3ce13decdd578e0afa0e43a0",
+      "passed": true,
+      "path": "codes\\foundations\\pre_a_hyb_u1_finite_regulator_verify.py"
+    }
+  ],
+  "verdict": "HYB-TECT-U1-FINITE-INTEGRATED-PASS"
+}
