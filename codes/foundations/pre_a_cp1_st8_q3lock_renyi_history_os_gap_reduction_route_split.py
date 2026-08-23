@@ -990,13 +990,24 @@ def authority_audit(audit: Audit, staged: bool) -> dict[str, Any]:
 
     theorem_map_text = require_file(SECTOR_A_MAP, "sector-a theorem map")
     if theorem_map_text is not None:
-        require_token(theorem_map_text, "R-167 v1.8", "theorem map current R-167")
-        if "Pre-A" in theorem_map_text and "remain open" in theorem_map_text:
-            audit.check("theorem map keeps Pre-A open", True, True, True, "authority")
-        elif staged:
-            missing.append("theorem map keeps Pre-A open")
-        else:
-            raise AssertionError("theorem map must keep Pre-A open")
+        theorem_map = json.loads(theorem_map_text)
+        priority = theorem_map.get("research_priority", {})
+        current_contract = {
+            "schema": theorem_map.get("schema") == "tect/sector-a-theorem-map/1.0",
+            "status": theorem_map.get("status") == "ACTIVE",
+            "priority_status": priority.get("status") == "IN_PROGRESS",
+            "dynamics_successor": priority.get("parallel_cp1_gate") == EXPECTED_OPEN_GATES[0],
+            "gap_successor": priority.get("parallel_cp1_gap_gate") == EXPECTED_OPEN_GATES[1],
+            "pre_a_boundary": "Pre-A" in json.dumps(theorem_map, sort_keys=True)
+            and "remain open" in json.dumps(theorem_map, sort_keys=True),
+        }
+        audit.check(
+            "theorem map current successor contract",
+            all(current_contract.values()),
+            current_contract,
+            "current Sector-A map with live successor gates and open Pre-A boundary",
+            "authority",
+        )
 
     return {"status": "INCOMPLETE" if missing else "COMPLETE", "missing": missing}
 

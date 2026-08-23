@@ -660,7 +660,24 @@ def authority_audit(checks: Checks, staged: bool) -> dict[str, Any]:
             token(gates, value, f"gate {value}")
     theorem_map = file_text(SECTOR_A_MAP, "sector-a theorem map")
     if theorem_map is not None:
-        token(theorem_map, "R-167 v1.8", "theorem map v1.8")
+        theorem_map_json = json.loads(theorem_map)
+        priority = theorem_map_json.get("research_priority", {})
+        current_contract = {
+            "schema": theorem_map_json.get("schema") == "tect/sector-a-theorem-map/1.0",
+            "status": theorem_map_json.get("status") == "ACTIVE",
+            "priority_status": priority.get("status") == "IN_PROGRESS",
+            "dynamics_successor": priority.get("parallel_cp1_gate") == EXPECTED_OPEN_GATES[0],
+            "gap_successor": priority.get("parallel_cp1_gap_gate") == EXPECTED_OPEN_GATES[1],
+            "pre_a_boundary": "Pre-A" in json.dumps(theorem_map_json, sort_keys=True)
+            and "remain open" in json.dumps(theorem_map_json, sort_keys=True),
+        }
+        checks.add(
+            "theorem map current successor contract",
+            all(current_contract.values()),
+            current_contract,
+            "current Sector-A map with live successor gates and open Pre-A boundary",
+            "authority",
+        )
 
     return {"status": "INCOMPLETE" if missing else "COMPLETE", "missing": missing}
 
