@@ -1,0 +1,47 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001006",
+  "title": "Current A5 path migration revalidation restores the branch-aware audit",
+  "recorded_at": "2026-08-24T06:26:00Z",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-08-23",
+  "provenance": "contemporaneous",
+  "task_id": "T-054",
+  "claim_ids": ["A5-SECTOR-A-SYNTHESIS"],
+  "question": "After the canonical uppercase claim-directory migration, does the current A5 branch-aware synthesis package execute through its primary, independent and integrated audits without weakening its pinned hashes or scope?",
+  "method": [
+    "Run the current root A5 primary audit and store its JSON under the current A5 claim run directory.",
+    "Run the separate non-importing independent audit against that stored primary result and store its JSON.",
+    "Run the one-command integrated verifier in a fresh temporary workspace and store its integrated JSON.",
+    "Check the branch-aware termination marker, the two reconstructed shell-mass anchors and the explicit full-Class-II/infinite-volume exclusions before recording the route."
+  ],
+  "finding": "The current path-compatible resolver locates all six canonical component records while preserving the frozen SHA-256 checks. The primary audit passes 16/16, the independent audit passes 16/16, and the integrated verifier passes 32/32 with termination PASS@BRANCH-AWARE-DECLARED-SCOPE. The reconstructed scalar and full-production shell-mass anchors remain distinct (0.005 versus 0.260000000009475), and the audit retains the scalar/full-production branch firewall.",
+  "decision_reason": "EXP-000981 recorded a historical path-alias failure before the current resolver was available. The fresh stored runs show that this is no longer a live execution blocker. The result is a current package revalidation only; it does not promote the branch-aware synthesis to a parameter-identical constructive QFT, and it does not discharge the A1 canonical-parent, R-192 production heat/root, A6/A7, physical-vacuum or Pre-A gates.",
+  "boundary": "T0 claim-nonbearing current migration and package revalidation. It does not alter A5 tier or lifecycle, prove a full three-component Class-II constructive measure, identify the canonical nonlinear production dynamics, establish OS/KMS or real-time reconstruction, close physical Sector-A or Pre-A, or select a vacuum.",
+  "evidence_refs": [
+    "codes/foundations/a5_sector_a_synthesis_audit.py#main",
+    "codes/foundations/a5_sector_a_synthesis_independent.py#main",
+    "codes/foundations/a5_sector_a_synthesis_verify.py#main",
+    "claims/A5-SECTOR-A-SYNTHESIS/sector_a_synthesis_manifest.json#termination_verdict",
+    "claims/A5-SECTOR-A-SYNTHESIS/runs/2026-08-24-current-path-migration/primary.json#assertion_summary",
+    "claims/A5-SECTOR-A-SYNTHESIS/runs/2026-08-24-current-path-migration/independent.json#assertion_summary",
+    "claims/A5-SECTOR-A-SYNTHESIS/runs/2026-08-24-current-path-migration/integrated.json#assertion_summary",
+    "strategy/pre-a-a5-sector-a-synthesis-verifier-path-blocker-260823.json#finding",
+    "explorations/log.jsonl#EXP-000981"
+  ],
+  "formal_refs": {"events": [], "results": [], "negatives": []},
+  "gate_ids": [
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE",
+    "A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE",
+    "A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION"
+  ],
+  "adversarial_review": [
+    {"axis": "hash/path identity", "disposition": "DISMISSED", "check": "The resolver accepts a migrated path only when the exact frozen SHA-256 matches; no path alias is accepted by name alone."},
+    {"axis": "independent contamination", "disposition": "DISMISSED", "check": "The independent lane remains a separate standard-library implementation and consumes only the stored primary JSON."},
+    {"axis": "branch overclaim", "disposition": "UPHELD", "check": "The integrated output retains PASS@BRANCH-AWARE-DECLARED-SCOPE and the scalar/full-production mass fork; no unified physical closure is asserted."},
+    {"axis": "stale evidence", "disposition": "DISMISSED", "check": "Primary, independent and integrated JSON artefacts were generated in the current run directory on this checkout."}
+  ],
+  "next_action": "Retain the current resolver and rerun this three-lane A5 package after any component or generated-surface change. Continue the main QFT proof only through the explicit A1 parent-selection and R-192 heat_root_incidence owner gates.",
+  "related": [{"id": "EXP-000981", "relation": "continues"}],
+  "verdict": "advanced"
+}
