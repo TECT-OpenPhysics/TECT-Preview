@@ -1,0 +1,56 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001036",
+  "title": "Conditional bounded-degree graph history and two-orientation envelope",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-FIRST-PASSAGE-BACKBONE-REAL-TIME-PRODUCT-AND-ENERGY-TAIL-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "prior_exploration_id": "EXP-001035",
+  "recorded_at": "2026-08-24T17:00:00Z",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-08-24",
+  "provenance": "contemporaneous",
+  "question": "Does a finite open-box graph with maximum degree six admit a volume-independent oriented-walk and adjoint history envelope for a supplied two-orientation recurrence?",
+  "method": [
+    "Enumerate the open-box graph for sides 1, 2, 3 and 4 in three dimensions.",
+    "Count every oriented walk from every seed through five steps and compare with 6^m.",
+    "Construct the reversed undirected incidence and check equal path counts for every seed and order.",
+    "Check the supplied two-orientation branch recurrence and its exact iterated factor in two independent implementations, with Lean R218 arithmetic."
+  ],
+  "finding": "Primary and independent exact lanes pass the bounded-degree and reverse-orientation checks for every tested box, seed and order. The branch factor is 37/35 and the five-step envelope is (37/35)^5. The bound contains no site-count factor within the declared graph family.",
+  "verdict": "advanced",
+  "decision_reason": "This closes only the conditional graph-combinatorial part. It does not derive the Q3 recurrence, source coefficient control, arbitrary-shape exhaustion, common alpha or QFT bridges.",
+  "adversarial_review": [
+    {"axis": "path-count versus operator coefficient", "check": "Walk counts do not supply the actual Q3 commutator coefficient or source norm.", "disposition": "UPHELD"},
+    {"axis": "shape coverage", "check": "Only the declared finite box family is tested, not arbitrary exhaustion shapes.", "disposition": "UPHELD"},
+    {"axis": "adjoint orientation", "check": "Reverse equality is graph-theoretic and does not prove the Q3 adjoint history identity.", "disposition": "UPHELD"},
+    {"axis": "Lean promotion", "check": "R218 checks scalar arithmetic only.", "disposition": "UPHELD"},
+    {"axis": "QFT promotion", "check": "No thermodynamic dynamics, KMS, GNS gap, continuum, C6, Sector A or Pre-A result is claimed.", "disposition": "UPHELD"}
+  ],
+  "evidence_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-graph-history-envelope-manifest.json#model",
+    "strategy/pre-a-cp1-st8-q3lock-graph-history-envelope-certificate-260824.md#Finding",
+    "codes/foundations/pre_a_cp1_st8_q3lock_graph_history_envelope.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_graph_history_envelope_independent.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_graph_history_envelope_verify.py#main",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-24-primary-pre-a-cp1-st8-q3lock-graph-history-envelope/primary.json#assertions",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-24-primary-pre-a-cp1-st8-q3lock-graph-history-envelope/independent.json#assertions",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-24-primary-pre-a-cp1-st8-q3lock-graph-history-envelope/integrated.json#assertions",
+    "verification/lean/Tect/R218.lean#two_orientation_branch_factor",
+    "verification/lean/registry.json#entrypoints"
+  ],
+  "formal_refs": {"events": [], "negatives": [], "results": []},
+  "formal_integration": {"events": [], "negatives": [], "results": [], "no_new_result": true, "no_new_negative": true, "no_pdf": true},
+  "qft_interface": {
+    "closed": "Conditional bounded-degree path and reverse-orientation envelope for the declared finite box family.",
+    "open": "Actual Q3 recurrence, source coefficient control, arbitrary exhaustion, common alpha, KMS, gap, continuum, C6 and Pre-A remain open.",
+    "tect_boundary": "No heat_root_incidence or A1/R-192 TECT production owner is supplied by this conditional graph package."
+  },
+  "boundary": "T0 claim-nonbearing conditional graph-history checkpoint. It does not prove Q3 dynamics, a thermodynamic QFT, C6, Sector A, Pre-A, TECT production or a Clay result.",
+  "next_action": "Derive the actual Q3 source recurrence and attach coefficient bounds to this graph envelope; then test arbitrary exhaustion shapes and common-alpha Cauchy estimates."
+}

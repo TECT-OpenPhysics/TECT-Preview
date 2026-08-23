@@ -1,0 +1,80 @@
+{
+  "schema": "tect/pre-a-cp1-st8-q3lock-graph-history-envelope/1.0",
+  "exploration_id": "EXP-001036",
+  "prior_exploration_id": "EXP-001035",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "tier": "T0",
+  "claim_bearing": false,
+  "title": "Conditional bounded-degree graph history and two-orientation envelope",
+  "question": "Does a finite open-box graph with maximum degree six admit a volume-independent oriented-walk and adjoint history envelope for a supplied two-orientation recurrence?",
+  "model": {
+    "graph": "finite open boxes in Z^3 with side lengths in the declared fixture",
+    "path_bound": "the number of length-m walks from any seed is at most 6^m, independent of site_count",
+    "adjoint_bound": "the reversed undirected graph has the same path envelope",
+    "history": "B_{n+1}=(1+C*delta)B_n+J*delta*B_n^(+)+J*delta*B_n^(-)",
+    "scope": "conditional graph combinatorics and branch algebra; the Q3 recurrence is not supplied"
+  },
+  "fixture": {
+    "dimension": 3,
+    "box_sides": [1, 2, 3, 4],
+    "history_steps": 5,
+    "C": "1/5",
+    "J": "1/10",
+    "delta": "1/7",
+    "orientation_count": 2
+  },
+  "scoped_verdict": "For all tested open boxes with sides 1 through 4, every seed and order through five, exact path counts and their reverse-orientation counts obey the 6^m bound and agree. The supplied branch recurrence has factor 37/35 at each step and iterated factor (37/35)^5. These are volume-independent conditional graph bounds, not the Q3 operator history theorem.",
+  "open_after_test": [
+    "derive the actual Q3 onsite-plus-bond common-core recurrence",
+    "control source coefficients and cancellations rather than only path counts",
+    "prove all finite exhaustion shapes, not only the tested box family",
+    "establish common alpha and exhaustion Cauchy",
+    "construct KMS, ground/GNS gap, continuum, C6 and Pre-A bridges"
+  ],
+  "adversarial_review": [
+    {
+      "axis": "path-count versus operator coefficient",
+      "check": "The 6^m count bounds combinatorial walks only; it does not bound the actual Q3 commutator coefficient or source norm.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "shape coverage",
+      "check": "Sides 1 through 4 are tested; arbitrary finite shapes and the exhaustion limit are not claimed.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "adjoint orientation",
+      "check": "Reverse equality uses the explicitly undirected box graph; it does not supply the Q3 adjoint history identity.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "Lean promotion",
+      "check": "R218 checks degree and scalar branch arithmetic only; it does not formalize path enumeration or the Q3 recurrence.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "QFT promotion",
+      "check": "No thermodynamic dynamics, KMS state, GNS gap, continuum, C6, Sector A or Pre-A conclusion is supplied.",
+      "disposition": "UPHELD"
+    }
+  ],
+  "scope": {
+    "closed": "Conditional bounded-degree path and reverse-orientation envelope for the declared finite open-box family, plus the supplied two-orientation branch algebra.",
+    "not_closed": "Actual Q3 recurrence, source coefficient control, arbitrary exhaustion shapes, exhaustion Cauchy, common alpha, KMS, gap, continuum, C6, Sector A and Pre-A remain open.",
+    "actual_q3_recurrence_closed": false,
+    "all_shape_exhaustion_closed": false,
+    "common_alpha_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "formal_integration": {
+    "lean_entry": "verification/lean/Tect/R218.lean",
+    "result_ids": [],
+    "negative_ids": [],
+    "changelog_event": null
+  },
+  "next_action": "Use the bounded-degree result only as a coefficient-count input; derive the actual Q3 common-core source recurrence and repeat the estimate with all shapes and both orientations before any common-alpha or QFT promotion.",
+  "no_overclaim": "This package is a conditional graph-history checkpoint. It does not prove Q3 dynamics, a thermodynamic QFT, C6, Sector A, Pre-A, TECT production or a Clay result."
+}
