@@ -5,7 +5,7 @@ Compact generated reader surface. The complete current machine inventory is
 `../CATALOG.md` is a frozen compatibility volume at commit `4db22f4e`
 for historical verifiers and no longer grows.
 
-**4910 artefacts** · **49 live claim cards** ·
+**4913 artefacts** · **49 live claim cards** ·
 130 superseded artefacts retained
 
 ## By kind
@@ -20,15 +20,15 @@ for historical verifiers and no longer grows.
 | Migrated legacy run artefacts (immutable) (`archive-artefact`) | 21 | 302,036 |
 | Reviewed legacy research records (`legacy-research-record`) | 140 | 164,393 |
 | Generated legacy sector, claim, and gate views (`legacy-research-view`) | 16 | 205,000 |
-| Fresh run artefacts (TSv2 evidence) (`run-artefact`) | 1156 | 32,463,291 |
-| Domain codes (`code`) | 840 | 17,481,794 |
-| Verification harness (`verification`) | 280 | 11,901,750 |
+| Fresh run artefacts (TSv2 evidence) (`run-artefact`) | 1156 | 32,488,977 |
+| Domain codes (`code`) | 840 | 17,487,039 |
+| Verification harness (`verification`) | 280 | 11,913,444 |
 | Papers (publication layer) (`paper`) | 1 | 546 |
 | Website (publication layer) (`website`) | 4 | 20,775 |
 | Registries and ledgers (`registry`) | 42 | 1,549,237 |
 | Governance policies (`policy`) | 21 | 198,378 |
 | Root documents (`root-doc`) | 14 | 1,726,543 |
-| Other tracked files (`other`) | 405 | 13,215,243 |
+| Other tracked files (`other`) | 408 | 13,254,025 |
 
 ## Use
 

@@ -2,7 +2,7 @@
   "assertions": {
     "failed": 0,
     "missing": 0,
-    "passed": 153,
+    "passed": 161,
     "rows": [
       {
         "actual": "strategy/pre-a-cp1-st8-q3lock-local-strict-quartic-c0-entropy-gap-route-split-manifest.json",
@@ -255,8 +255,8 @@
       },
       {
         "actual": {
-          "a": "0f53e46004290fb66b727e3a641624337045a936b8f7262a32e8059876efcb4c",
-          "b": "0f53e46004290fb66b727e3a641624337045a936b8f7262a32e8059876efcb4c"
+          "a": "5bbd89dc92036a3224546a414ee7a726f6ea4d615525343cf59931890de2847b",
+          "b": "5bbd89dc92036a3224546a414ee7a726f6ea4d615525343cf59931890de2847b"
         },
         "expected": "equal canonical hashes",
         "group": "freshness",
@@ -275,8 +275,8 @@
       },
       {
         "actual": {
-          "fresh": "61091f5018cd9e987fdac8042309b3a034d8e71bfee81250e710058e7e6bb402",
-          "stored": "61091f5018cd9e987fdac8042309b3a034d8e71bfee81250e710058e7e6bb402"
+          "fresh": "b67f8a6d9b407f399c17e2d3041efe0de430ad9a3371070b8da8ceecfbf04374",
+          "stored": "b67f8a6d9b407f399c17e2d3041efe0de430ad9a3371070b8da8ceecfbf04374"
         },
         "expected": "equal canonical hashes",
         "group": "freshness",
@@ -726,7 +726,7 @@
         "status": "PASS"
       },
       {
-        "actual": 804,
+        "actual": 1018,
         "expected": ">=1",
         "group": "formal",
         "name": "exploration ledger parses",
@@ -766,7 +766,7 @@
         "status": "PASS"
       },
       {
-        "actual": 617513,
+        "actual": 809976,
         "expected": ">0",
         "group": "formal",
         "name": "result ledger readable",
@@ -787,7 +787,7 @@
         "status": "PASS"
       },
       {
-        "actual": 659386,
+        "actual": 747704,
         "expected": ">0",
         "group": "formal",
         "name": "negative registry readable",
@@ -822,7 +822,7 @@
         "status": "PASS"
       },
       {
-        "actual": 232519,
+        "actual": 394843,
         "expected": ">0",
         "group": "formal",
         "name": "gate authority readable",
@@ -843,14 +843,14 @@
         "status": "PASS"
       },
       {
-        "actual": "### **PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA**\n\n**Statement:** Starting from the finite-region local-strict carrier, construct\ncompatible exhaustion-level energy/state seminorms and prove a volume- and\nsource-uniform two-orientation estimate for every partial split-product\nhistory and its adjoint. Remove the coordinate cutoff without losing the\nhistory tail, prove all-shape exhaustion Cauchy, group/star/product/inverse\nclosure, and identify the exact zero-source finite-Hamiltonian generator and\nboth fixed-beta phase KMS quotient representations on one noncollapsing\nspatial oscillator algebra.\n\n**Status:** OPEN (2026-08-11). R-167 v1.7 supplies the finite-region\nlocal-strict carrier and exact subflow control, but the current bounded-cutoff\ncorridor pays `exp(C L^2)`. The exact Gibbs character entropy bound gives\nonly an inverse-logarithmic tail. The registered entropy/finite-moment\nfixture proves that those inputs cannot be upgraded automatically to a\nGaussian history estimate. The missing target is a uniform bound for\n`phi_0(P^*EP)+phi_0(PEP^*)` and its\n`(V-V_L)^2`-weighted analogue for every partial history, or a\nstate-weighted all-bond resummation avoiding the exponential corridor loss.\nNo exact Q3LOCK dynamics nonexistence is asserted.\n",
+        "actual": "### **PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA**\n\n**Statement:** Starting from the finite-region local-strict carrier, construct\ncompatible exhaustion-level energy/state seminorms and prove a volume- and\nsource-uniform two-orientation estimate for every partial split-product\nhistory and its adjoint. Remove the coordinate cutoff without losing the\nhistory tail, prove all-shape exhaustion Cauchy, group/star/product/inverse\nclosure, and identify the exact zero-source finite-Hamiltonian generator and\nboth fixed-beta phase KMS quotient representations on one noncollapsing\nspatial oscillator algebra.\n\n**Status:** OPEN, WITH FIXED-TROTTER COMPATIBILITY, PURE-BOND TAIL INVARIANCE\nAND LOCAL-MEASURED-RENYI SUFFICIENCY CLOSED (2026-08-12). R-167 v1.7 supplies the finite-region\nlocal-strict carrier and exact subflow control, but the current bounded-cutoff\ncorridor pays `exp(C L^2)`. The exact Gibbs character entropy bound gives\nonly an inverse-logarithmic tail. The registered entropy/finite-moment\nfixture proves that those inputs cannot be upgraded automatically to a\nGaussian history estimate. The missing target is a uniform bound for\n`phi_0(P^*EP)+phi_0(PEP^*)` and its\n`(V-V_L)^2`-weighted analogue for every partial history, or a\nstate-weighted all-bond resummation avoiding the exponential corridor loss.\nR-167 v1.8 proves the precise sandwiched-Renyi sufficient condition and a\ncounterfixture to its automatic derivation. R-167 v1.9 proves that pure bond\nlayers preserve coordinate tails exactly, replaces the overstrong global\nRenyi target by a local measured-Renyi sufficient condition, and registers an\nexact disjoint-bond product counterexample to global volume uniformity.\nEXP-000809 / R-167 v2.0 adds the finite-volume static full-Gibbs two-orientation\nunitary resummation and the fixed-bond-to-growing-corridor reduction. These do\nnot supply arbitrary bounded contexts or the actual translate-and-orientation-\nuniform onsite-interspersed Q3LOCK fixed-edge history estimate. The\n`n->infinity` limit and group/generator/KMS completion remain open.\nNo exact Q3LOCK dynamics nonexistence is asserted.\n\nEXP-000813 / R-167 v2.2 closes the registered-periodic twentieth-history input.\nEXP-000815 / R-167 v2.3 converts it into mesh-uniform hard-cutoff removal for\nthe finite-periodic split implementers in the two-sided Gibbs Hilbert--Schmidt\nnorm. EXP-000818 / R-167 v2.4 upgrades the two ordinary Hilbert--Schmidt legs,\nfor each one fixed finite faithful Gibbs standard representation, to\nimplementer strong-star and bounded-observable point-strong-star convergence.\nIt also proves a deterministic conditional completion theorem from all-shape\npoint-norm Cauchy control in both time signs to one C0 automorphism group. It\ndoes not prove the actual `n->infinity` all-shape Q3 Cauchy estimates, a common-\nrepresentation rate, local-generator identification or phase-KMS quotients.\nThe UHF\ncounterfixture registered as\n`NG-2026-08-11-PRE-A-ST8-Q3LOCK-FORWARD-LOCAL-AUTOMORPHISM-LIMIT-AUTOMATIC-SURJECTIVITY-AND-INVERSE-CAUCHY`\nshows that forward local stabilization alone cannot supply those missing\nconclusions. EXP-000825 additionally shows that the canonical one-site compact-\ncylinder split-bond action has a point-norm jump on every nonzero compact\ncylinder admitted by the multiplier algebra. The unitized compacts exclude\nthat cylinder, and the multiplier algebra includes it without making the\naction point-norm C0. This is distinct from the prior raw momentum-resolvent\nobstruction and rejects only that carrier/action pair: it proves neither\nunsplit-dynamics failure nor common-alpha nonexistence. This parent remains\nOPEN.\n\nEXP-000826 as corrected by EXP-000827 / R-167 v2.6 does not advance the actual all-shape common-alpha estimate. Its two-qubit fixture shows only that temporal orbit smearing of formally disjoint seeds need not automatically create commuting spatial local algebras; it does not reject the orbit-smear carrier or common-alpha existence. This parent remains OPEN.\n\nEXP-000828 / R-167 v2.7 proves that every nonzero raw configuration Weyl\ncharacter has point-norm jump two at time zero under the exact finite-volume\nfull Q3 Hamiltonian. This removes that raw label from an equivariant\npoint-norm `C0` carrier, but does not reject local-strict, strong, orbit-smear,\nenergy/resolvent-smoothed or other common-alpha constructions. This parent\nremains OPEN.\n\nEXP-000831 / R-167 v2.8 strengthens the raw-Weyl obstruction: every\nnonconstant bounded continuous configuration multiplier has a nonzero\nfinite-volume point-norm jump under the exact full Hamiltonian, with lower\nbound equal to the diameter of its range and exact oscillation for real\nmultipliers. This excludes those raw multipliers from an equivariant\npoint-norm `C0` carrier, but does not reject strong or strong-star dynamics,\nlocal-strict or energy topologies, temporal/energy/resolvent smears, smaller\ncontinuous-element algebras or common alpha on another carrier. This parent\nremains OPEN.\n\nEXP-000834 / R-167 v3.0 classifies standard cylinders for\nthe isolated bilinear bond flow and proves that uniform summable\nsingle-toggle shell responses would imply bidirectional all-shape Cauchy\nconvergence. It proves no such response weights for exact quartic Q3 and\nidentifies no Hamiltonian-to-OS phase quotient. This parent remains OPEN.\n\nEXP-000835 / R-167 v3.1 proves that every nonessentially-constant\n`L_infinity` configuration multiplier has a full-Hamiltonian point-norm jump\nat least the diameter of its essential range and that the raw standard\none-site cylinder simultaneously continuous for one isolated bond and the\nfull flow is scalar. This strictly strengthens the earlier raw-multiplier\nboundary but leaves dressed, multi-site, smeared, resolvent, local-strict,\nstrong-star and state-weighted carriers open. The background-uniform dressed\nbond-form commutator and summable exact-Q3 shell weights remain unproved, so\nthis parent remains OPEN.\n\nEXP-000836 / R-167 v3.2 assumes one identified common algebra, phase KMS\nfamilies and common-core target-generator convergence. It proves none of the\nall-shape Q3 Cauchy estimates, spatial embeddings, Hamiltonian/OS quotient\nidentification or fixed exact-Q3 separator needed to instantiate those\nassumptions. This parent remains OPEN.\n\nEXP-000837 / R-167 v3.3 is a static fixed-Ritz phase theorem. It constructs\nno compatible all-shape spatial embeddings, thermodynamic point-norm C0\naction, Hamiltonian-to-OS quotient, common phase KMS dynamics or fixed\nexact-Q3 separator. This parent remains OPEN.\n\nEXP-000838 / R-167 v3.4 is likewise static and cutoff-indexed. Its exact\nHilbert--Schmidt obstruction and conditional gap reduction construct no\ncompatible spatial carrier, all-shape Cauchy estimate, common dynamics or\nHamiltonian-to-phase quotient. This parent remains OPEN.\n\nEXP-000839 / R-167 v3.5 places Ritz states on one bounded full-oscillator\nlocal algebra by UCP pullback, but this is a static state construction and not\na compatible multiplicative embedding. The norm-one corner generator defect\nand the absence of all-shape dynamics estimates leave the common-alpha and\nHamiltonian-to-phase quotient obligations untouched. This parent remains\nOPEN.\n\nEXP-000840 / R-167 v3.6 proves exact full-oscillator Euclidean DLR coexistence\non the registered corridor and a conditional imaginary-time first-coefficient\nlimit, not a spatial point-norm C0 automorphism group. It supplies no\nall-shape Cauchy estimates, common generator or Hamiltonian-to-phase quotient.\nThis parent remains OPEN.\n\nEXP-000841 / R-167 v3.7 proves a trace-norm imaginary-time first-insertion\nlimit, not a spatial point-norm C0 automorphism group. It supplies no\nall-shape Cauchy estimates, common generator or Hamiltonian-to-phase quotient.\nThis parent remains OPEN.\n\nEXP-000842 / R-167 v3.8 supplies one source-symmetric categorical common\naction, but no spatial net, compatible embeddings, all-shape Cauchy estimate,\nzero-source quotient factorization or Hamiltonian-to-zero-source-phase\nidentification. The exact `M2` fixture shows why `h_n->0` alone cannot supply\nthe missing quotient condition. This parent remains OPEN.\n\nEXP-000843 / R-167 v3.9 assumes the target common `C0` system and strong-star-\ndense local carrier; it proves neither exact-Q3 all-shape Cauchy convergence\nnor the common spatial `alpha` or represented core. This parent remains OPEN.\n\nEXP-000844 / R-167 v4.0 closes the model-specific residual on the existing\nzero-source categorical orbit-smear action, not on a spatial local net. It\nproves no all-shape Cauchy estimate, compatible spatial embeddings, raw\noscillator thermodynamic action or DLR/KMS quotient identification. This\nparent remains OPEN.\n\nEXP-000845 / R-167 v4.1 works inside the same nonspatial categorical action.\nThe bandlimited represented form core does not provide all-shape Cauchy\nestimates, compatible spatial embeddings, a raw oscillator thermodynamic\naction or DLR/KMS quotient identification. This parent remains OPEN.\n\nEXP-000846 / R-167 v4.2 proves the all-shape/C0 conclusion only conditionally\nfor integrated orbit smears under summable toggle weights that are not proved\nfor exact Q3. Its `B_sp` is not a seed-indexed commuting local net or the raw\noscillator algebra, and no DLR/KMS branch is identified. This parent remains\nOPEN.\n",
         "expected": "OPEN and linked to v1.7",
         "group": "formal",
         "name": "successor gate authority PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
         "status": "PASS"
       },
       {
-        "actual": "### **PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY**\n\n**Statement:** After the ordered ground states have been identified in the\ntwo broken-sector GNS representations of the sought common oscillator\nalgebra, prove a positive sectorwise spectral coercivity estimate on one\ndense invariant core:\n\n`-i hbar omega(A^*delta(A)) >= Delta[omega(A^*A)-|omega(A)|^2]`\n\nwith `Delta>0`, separately in both parity-related sectors.\n\n**Status:** OPEN (2026-08-11). R-167 v1.6 proves two distinct algebraic\nground states only on the categorical orbit-smear carrier. R-167 v1.7 gives\nan exact system with two pure, disjoint, parity-related ordered ground states,\nsimple ground vectors and a fixed central order witness, while each\nimplementing spectrum is gapless. Distinct order and ground-state existence\ntherefore do not supply the required coercive estimate. This gate is\nindependent of the common-alpha history gate and does not license a physical\nmass-gap claim.\n\n## A6/A7 full derivative Class-II composite and renormalisation gates\n",
+        "actual": "### **PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY**\n\n**Statement:** After the ordered ground states have been identified in the\ntwo broken-sector GNS representations of the sought common oscillator\nalgebra, prove a positive sectorwise spectral coercivity estimate on one\ndense invariant core:\n\n`-i hbar omega(A^*delta(A)) >= Delta[omega(A^*A)-|omega(A)|^2]`\n\nwith `Delta>0`, separately in both parity-related sectors.\n\n**Status:** OPEN, WITH THE OS TEMPORAL-MASS EQUIVALENCE, SMALL-`h_sc` ONSITE\nDOUBLET AND EXACT LOW-BAND COMPRESSION ISOLATED (2026-08-11). R-167 v1.6 proves two distinct algebraic\nground states only on the categorical orbit-smear carrier. R-167 v1.7 gives\nan exact system with two pure, disjoint, parity-related ordered ground states,\nsimple ground vectors and a fixed central order witness, while each\nimplementing spectrum is gapless. Distinct order and ground-state existence\ntherefore do not supply the required coercive estimate. R-167 v1.8 supplies\nthe exact zero-temperature OS/GNS criterion, isolated instanton action, and\nconditional doublet-Ising reference. R-167 v1.9 proves the fixed-`mu`, small-\n`h_sc` onsite doublet and exact rank-two TFIM compression. EXP-000809 / R-167\nv2.0 proves a positive phasewise GNS gap only for the exact compressed\nfinite-spin TFIM; it is not the oscillator gap. The volume-uniform rank-two\nblock/QPS transfer, beta-infinity oscillator selection and actual phasewise\ntemporal mass remain open. This gate is\nindependent of the common-alpha history gate and does not license a physical\nmass-gap claim.\n\nEXP-000811 / R-167 v2.1 proves only a local two-site full-oscillator edge\ncluster. It supplies no thermodynamic phase selection or sectorwise lattice\ncoercivity estimate. The oscillator GNS-gap parent remains OPEN.\n\nThe R-167 v2.3 second-order coefficient is `O(N^-8)=o(J)` only in its\ndeclared corridor. Without all-order remainder control, oscillator phase\nidentification and a phasewise GNS intertwiner it implies no oscillator\ncoercivity or gap. R-167 v2.4 adds only the first homological generator and\nexact second-order match. It supplies neither the all-order remainder nor the\nphasewise intertwiner, so this parent remains OPEN.\n\nThe corrected R-167 v2.6 authority is a zero-source fixed-order coefficient\ntheorem. It supplies neither ordered oscillator phase identification nor a\nphasewise GNS intertwiner or coercivity estimate. This parent remains OPEN.\n\nEXP-000828 / R-167 v2.7 changes neither phase identification nor the missing\noscillator GNS coercivity. A fixed-`M` local-SW ground-energy remainder is not\na phasewise infinite-volume spectral-gap theorem. This parent remains OPEN.\n\nEXP-000831 / R-167 v2.8 is a finite-dimensional Ritz-restricted ground-energy\nremainder theorem. It identifies neither ordered infinite-volume oscillator\nphases nor their GNS representations and proves no sectorwise coercivity or\nspectral gap. This parent remains OPEN.\n\nEXP-000833 / R-167 v2.9 gives, for each fixed selected system, a\nvolume-independent finite-volume gap and a weak-star thermodynamic state. The\nsource theorem does not identify the common Q3 dynamics, its GNS Hamiltonian\nor the required invariant core, and the selector is not removed. Therefore no\nbroken-sector coercive estimate or physical mass gap follows. This parent\nremains OPEN.\n## A6/A7 full derivative Class-II composite and renormalisation gates\n\nEXP-000834 / R-167 v3.0 proves an abstract GNS-gap transfer\nonly after local-generator convergence to one prespecified target dynamics,\npositivity, the energy identity and the centered form-core property. Its exact\n`M_2` fixture shows that weak-star ground-state convergence and uniformly\npositive finite gaps alone do not identify that generator. None of the\nmodel-dependent Q3 premises is established. This parent remains OPEN.\n\nEXP-000835 / R-167 v3.1 classifies finite-volume raw multipliers and one\ncanonical standard-cylinder intersection only. It constructs no ordered\nzero-temperature phase, common target generator, centered form core,\nsectorwise Poincare inequality or positive broken-sector implementer. This\nparent remains OPEN.\n\nEXP-000836 / R-167 v3.2 proves algebraic ground positivity and distinctness\nonly under a common-target generator limit and a fixed odd separator. It does\nnot supply phasewise Poincare coercivity, a positive implementing Hamiltonian,\na centered form core, kernel simplicity or a broken-sector GNS gap. This\nparent remains OPEN.\n\nEXP-000837 / R-167 v3.3 gives distinct ordered fixed-Ritz ground states but no\ncommon infinite-volume oscillator dynamics, positive implementing\nHamiltonian, phasewise Poincare inequality, energy identity or centered form\ncore. It proves no broken-sector GNS gap. This parent remains OPEN.\n\nEXP-000838 / R-167 v3.4 identifies an exact fixed-Ritz relative-plus-bounded\nsplit and a conditional route to the cited phasewise GNS-gap conclusion. It\ndoes not prove the required Yarotskii neighbourhood, identify those branches\nwith the DFFR limits, construct the common oscillator dynamics or transfer a\nuniform gap through cutoff removal. This parent remains OPEN.\n\nEXP-000839 / R-167 v3.5 separates parity-related Ritz-corner cluster states\nand proves their local normality only under explicit fixed-witness and local-\nenergy-tightness premises. It does not prove that the cluster states are\nground states of a common target dynamics, establish the energy identity or\ncentered form core, or transfer a positive gap. The positive-imaginary-time\ntrace-class limit does not close any of those GNS obligations. This parent\nremains OPEN.\n\nEXP-000840 / R-167 v3.6 gives opposite ordered time-zero tangent candidates\nand a collapse upper bound for the symmetric full finite-volume gap. It does\nnot identify a common target generator, prove the ground-state energy identity\non a centered form core, or establish positive coercivity in either broken\nsector. This parent remains OPEN.\n\nEXP-000841 / R-167 v3.7 is an imaginary-time first-coefficient trace theorem.\nIt neither identifies the tangent candidates as ground states of a common\ntarget generator nor proves a centered-core Poincare/coercivity estimate or a\npositive broken-sector GNS gap. This parent remains OPEN.\n\nEXP-000842 / R-167 v3.8 separates two fixed-physical-`beta` KMS clusters on a\ncategorical carrier. It proves no zero-temperature ground identity, positive\nimplementing Hamiltonian, phasewise Poincare inequality, centered form core,\nkernel simplicity or broken-sector GNS gap. This parent remains OPEN.\n\nEXP-000843 / R-167 v3.9 transfers only algebraic ground positivity under a\ncombined residual and separates states conditionally. It supplies no\nPoincare coercivity, centered form core, simple kernel or positive broken-\nsector GNS gap. This parent remains OPEN.\n\nEXP-000844 / R-167 v4.0 now verifies exact-Q3 categorical groundness and\nfixed-witness separation for the mesoscopic diagonal pair. It supplies no\nphasewise Poincare inequality, centered GNS form core, simple implementing\nkernel, disjointness or positive broken-sector spectral gap. This parent\nremains OPEN.\n\nEXP-000845 / R-167 v4.1 now proves the exact implementing-energy identity,\nthe centered compact-Arveson `D_bl` form-core property, parity equality of the\ntwo Rayleigh constants and the fixed-carrier coercivity equivalence. It proves\nno positive `D_bl` Poincare lower bound. The global `L`-dependent branch-\nswitching trial makes the full mesoscopic-source finite gaps vanish but does\nnot decide the phasewise target gap. Kernel simplicity, positive coercivity,\ndisjointness and a broken-sector spectral gap remain OPEN.\n\nEXP-000846 / R-167 v4.2 conditionally factors the same two ground states\nthrough a spatial integrated-smear quotient and preserves their fixed witness.\nIt supplies no positive Poincare lower bound, simple kernel, disjointness or\nbroken-sector spectral gap. This parent remains OPEN.\n",
         "expected": "OPEN and linked to v1.7",
         "group": "formal",
         "name": "successor gate authority PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY",
@@ -864,7 +864,7 @@
         "status": "PASS"
       },
       {
-        "actual": "### **PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE**\n\n**Statement:** Before scoring or selecting any Pre-A round-one candidate,\nfreeze the complete evidence and clue register with an explicit role for each\nitem, admit every contestant under the same minimum manifest fields, separate\nbridge infrastructure from contestants, and declare one common\nreference/observable/input ledger, one non-fitting validation prediction, and\none robustness envelope. Scoped failures may eliminate only the exact\nmechanism and parameter contract that was tested.\n\n**Status:** OPEN (2026-08-10). EXP-000791 freezes a bounded T-053 evidence-role\ninventory, common categorical matrix, explicit absence fields, reference\nrules, and robustness boundaries. It independently derives the M2 quadratic\ncone and computes that none of M1/M2/M5 survives all hard admission rows; M0\nremains the effective baseline. The visible helium target predates the new\nstiffness observable map, so its exact mismatch is retrospective and receives\nno validation credit. The parent gate therefore remains open until a genuinely\nprospective prediction or holdout and its microscopic observable map are\nfrozen in an earlier immutable commit. Published EXP-000758--EXP-000790 remain\nbridge evidence and do not convert CP1 into a contestant. No winner, shortlist,\npreferred PDE, physical vacuum, Pre-A exit, C6 advancement, or unconditional\nSector-A closure is licensed.\n",
+        "actual": "### **PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE**\n\n**Statement:** Before scoring or selecting any Pre-A round-one candidate,\nfreeze the complete evidence and clue register with an explicit role for each\nitem, admit every contestant under the same minimum manifest fields, separate\nbridge infrastructure from contestants, and declare one common\nreference/observable/input ledger, one non-fitting validation prediction, and\none robustness envelope. Scoped failures may eliminate only the exact\nmechanism and parameter contract that was tested.\n\n**Status:** OPEN (2026-08-11). EXP-000791 freezes a bounded T-053 evidence-role\ninventory, common categorical matrix, explicit absence fields, reference\nrules, and robustness boundaries. It independently derives the M2 quadratic\ncone and computes that none of M1/M2/M5 survives all hard admission rows; M0\nremains the effective baseline. The visible helium target predates the new\nstiffness observable map, so its exact mismatch is retrospective and receives\nno validation credit. EXP-000807 / R-168 v1.0 now closes four schema and audit\nsubgates: the common estimand/map split, prospective provenance-order protocol,\nanti-leakage schema validator, and exact current-checkpoint empty-admission\naudit. At audited commit `99157442831c0e44d425b5d5f8cd78856c57da53` there are\nzero official freeze records, zero locally registered `freeze/*` tags observed\nat audit execution, zero admitted microscopic survivors, and no admitted\nM1/M2/M5 map with a nonempty prediction. The tag observation is local only;\nno remote ref or custodian signature was verified. The parent gate remains\nopen until a genuinely prospective external commitment and admitted\nmicroscopic observable map with a nonempty prediction are frozen before\ndisclosure and independently verified. EXP-000810 / R-168 v1.1 proves that\nthe exact current hash-pinned M1/M2/M5 map-only admitted set is empty, and\nthat even a hypothetical map-only new version has no all-PASS survivor under\nthe ten frozen hard rows. It also closes a 48-component finite-torus Gaussian\nM2 fingerprint. Neither result is an admitted physical response map, an\nerror-controlled prediction, or a prospective freeze; the parent gate remains\nOPEN.\nEXP-000812 / R-168 v1.2 additionally proves that a fixed linear scalar probe\ndoes not identify second-order response without a frozen quadratic contact and\ncloses only the minimum successor syntax/declared-binding schema. It supplies\nno physical control law, actual candidate, state/reference realization,\nresponse map, error budget, prediction or external prospective commitment.\nThe physical-response gate and this Round-1 parent remain OPEN.\nEXP-000814 / R-168 v1.3 closes five exact T0, claim-nonbearing mathematical children but creates no compact action, winding law, ordered physical state, physical response, six-term physical error budget, candidate, prediction or freeze. The physical-response and Round-1 parents remain OPEN.\nPublished EXP-000758--EXP-000790 remain bridge evidence and do not convert CP1\ninto a contestant. No winner, shortlist, preferred PDE, physical vacuum,\nPre-A exit, C6 advancement, or unconditional Sector-A closure is licensed.\n\nEXP-000826 as corrected by EXP-000827 / R-167 v2.6 adds four claim-nonbearing mathematical children and two scoped route failures only. It creates no candidate, common estimand, prospective prediction, custodian commitment, freeze or score. Round-1 remains OPEN.\n\nEXP-000828 / R-167 v2.7 adds one claim-nonbearing fixed-`M` local-SW\nremainder child and two scoped negative authorities. It creates no candidate,\ncommon estimand, prospective prediction, custodian commitment, freeze or\nscore. Round-1 remains OPEN.\n\nEXP-000863 / R-170 v1.0 classifies four initial literature-applicability\nrecords only. It creates no candidate, admitted microscopic observable map,\ncommon estimand, prospective prediction, custodian commitment, freeze or\nscore. The literature policy remains binding and Round-1 remains OPEN.\n\nEXP-000831 / R-167 v2.8 adds one claim-nonbearing fixed-complete-cluster,\nsufficiently-large-`N` Ritz-restricted local-SW child and one scoped\nconfiguration-multiplier point-norm boundary. It creates no candidate, common\nestimand, microscopic observable map, prospective prediction, custodian\ncommitment, freeze or score. Round-1 remains OPEN.\n\nEXP-000833 / R-167 v2.9 closes four claim-nonbearing scoped mathematical\nchildren and registers three implication failures. It creates no contestant,\nmicroscopic observable map, common estimand, prospective prediction,\ncustodian commitment, freeze or score. Round-1 remains OPEN.\n\nEXP-000834 / R-167 v3.0 adds three claim-nonbearing scoped\nmathematical children and one implication failure. It creates no contestant,\nmicroscopic observable map, common estimand, prospective prediction,\ncustodian commitment, freeze or score. Round-1 remains OPEN.\n\nEXP-000835 / R-167 v3.1 adds one claim-nonbearing finite-volume\nessential-range multiplier theorem and its joint standard-cylinder scalarity\ncorollary. It creates no contestant, microscopic observable map, common\nestimand, prospective prediction, custodian commitment, freeze or score.\nRound-1 remains OPEN.\n\nEXP-000836 / R-167 v3.2 adds one claim-nonbearing abstract conditional\nzero-temperature transfer theorem and one fixed-witness collapse negative.\nIt creates no contestant, microscopic observable map, common estimand,\nprospective prediction, custodian commitment, freeze or score. Round-1\nremains OPEN.\n\nEXP-000837 / R-167 v3.3 adds one claim-nonbearing fixed-Ritz mathematical\nchild. It creates no contestant, microscopic observable map, common estimand,\nprospective prediction, custodian commitment, freeze or score. Round-1\nremains OPEN.\n\nEXP-000838 / R-167 v3.4 adds two claim-nonbearing conditional reductions and\none exact Hilbert--Schmidt multiplicity obstruction. It creates no contestant,\nmicroscopic observable map, common estimand, prospective prediction,\ncustodian commitment, freeze or score. Round-1 remains OPEN.\n\nEXP-000839 / R-167 v3.5 adds two claim-nonbearing cutoff-passage lemmas and\nfour exact implication failures. It creates no contestant, microscopic\nobservable map, common estimand, prospective prediction, custodian\ncommitment, freeze or score. Round-1 remains OPEN.\n\nEXP-000840 / R-167 v3.6 adds one exact registered-corridor specialization and\none conditional first-Duhamel cutoff lemma. It creates no contestant,\nmicroscopic observable map, common estimand, prospective prediction,\ncustodian commitment, freeze or score. Round-1 remains OPEN.\n\nEXP-000841 / R-167 v3.7 adds one claim-nonbearing first-Duhamel\nfull-oscillator cutoff-removal theorem. It creates no contestant, microscopic\nobservable map, common estimand, prospective prediction, custodian\ncommitment, freeze or score. Round-1 remains OPEN.\n\nEXP-000842 / R-167 v3.8 adds one claim-nonbearing fixed-`N` categorical\ncarrier/KMS child and one scoped quotient-factorization failure. It creates no\ncontestant, microscopic observable map, common estimand, prospective\nprediction, custodian commitment, freeze or score. Round-1 remains OPEN.\n\nEXP-000843 / R-167 v3.9 adds only two conditional abstract lemmas and one\nnon-Q3 logical fixture. It selects no evidence role or candidate functional\nand freezes no Round-1 manifest. This parent remains OPEN.\n\nEXP-000844 / R-167 v4.0 closes one exact-Q3 categorical ground-pair child\nonly. It creates no contestant, microscopic observable map, common estimand,\nprospective prediction, custodian commitment, freeze or score. Round-1\nremains OPEN.\n\nEXP-000845 / R-167 v4.1 adds one scoped categorical GNS form-core/Rayleigh\nreduction and one finite-source route no-go. It creates no contestant,\nmicroscopic observable map, common estimand, prospective prediction,\ncustodian commitment, freeze or score. Round-1 remains OPEN.\n\nEXP-000846 / R-167 v4.2 adds one conditional integrated-orbit-smear spatial\nquotient and same-net ground-transfer child. It creates no contestant,\nmicroscopic observable map, common estimand, prospective prediction,\ncustodian commitment, freeze or score. Round-1 remains OPEN.\n\nEXP-000851 / R-169 v1.0 adds two scoped T0, claim-nonbearing reductions and\ntwo exact implication failures. It freezes neither a Reading-H center rule nor\na TECT realization, parent functional/reference pair, counterterm finite\nparts, error budget, transverse form, prospective prediction, custodian\ncommitment, or score. Round-1 remains OPEN.\n\nEXP-000852 / R-169 v1.1 constructs and rejects one exact BCC-periodic field\ninside the already hash-pinned neutral P1/A2 functional. It supplies no\nReading-H-to-field map, admitted microscopic observable map, common estimand,\nprospective prediction, custodian commitment, freeze or score. Round-1\nremains OPEN.\n\nEXP-000858 / R-169 v1.2 closes only two T0 interface-audit children. It\nseparates covariance data from a selected mean field and proves exact\nnonlinear-convention and side-16 commensurability firewalls, but creates no\nReading-H realization, admitted microscopic observable map, common estimand,\nprospective prediction, custodian commitment, freeze or score. Round-1\nremains OPEN.\n\nEXP-000860 / R-169 v1.3 owns one exact native Reading-H zero-phase BCC\norbit/cell and the inherited native Q-versus-`G_*` comparison. It supplies no\nadmitted microscopic observable map, common estimand, prospective prediction,\ncustodian commitment, freeze or score. Round-1 remains OPEN.\n\nEXP-000862 / R-169 v1.4 closes only a reconstructed common-Bohr scalar\nmoment/radial-owner audit. It creates no admitted microscopic observable map,\ncommon estimand, prospective prediction, custodian commitment, freeze or\nscore. Round-1 remains OPEN.\n",
         "expected": "OPEN",
         "group": "formal",
         "name": "PA-ROUND1 provenance remains open",
@@ -913,14 +913,18 @@
         "status": "PASS"
       },
       {
-        "actual": [],
-        "expected": "all required tokens present",
+        "actual": {
+          "common_alpha_successors_open": true,
+          "round1_gate": true,
+          "sector_a_and_pre_a_open": true
+        },
+        "expected": "current in-progress Round-1 task with common-alpha and Sector-A/Pre-A open boundary",
         "group": "formal",
-        "name": "T-054 v1.7 gate split linkage required tokens",
+        "name": "T-054 current Round-1/common-alpha contract",
         "status": "PASS"
       },
       {
-        "actual": 84253,
+        "actual": 141728,
         "expected": ">0",
         "group": "formal",
         "name": "roadmap readable",
@@ -952,7 +956,7 @@
         "status": "PASS"
       },
       {
-        "actual": 584,
+        "actual": 697,
         "expected": ">=1",
         "group": "formal",
         "name": "changelog parses",
@@ -1002,7 +1006,7 @@
         "status": "PASS"
       },
       {
-        "actual": 3183424,
+        "actual": 4446713,
         "expected": ">0",
         "group": "formal",
         "name": "proof-evidence map readable",
@@ -1023,14 +1027,79 @@
         "status": "PASS"
       },
       {
-        "actual": [],
-        "expected": "all required tokens present",
+        "actual": {
+          "coverage_fields": true,
+          "generator_pinned": true,
+          "index_schema": true,
+          "logical_digest": true,
+          "map_schema": true,
+          "shards_present": true
+        },
+        "expected": "current indexed proof-map schema, generator, digest, coverage fields and shards",
         "group": "formal",
-        "name": "proof-evidence JSON v1.7 linkage required tokens",
+        "name": "proof-evidence JSON current structural contract",
         "status": "PASS"
       },
       {
-        "actual": 4041,
+        "actual": "results/index.json",
+        "expected": "dict",
+        "group": "files",
+        "name": "result locator parses",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "authority": true,
+          "count": true,
+          "entries_nonempty": true,
+          "schema": true
+        },
+        "expected": "current generated result locator with authority and count",
+        "group": "formal",
+        "name": "result locator current structural contract",
+        "status": "PASS"
+      },
+      {
+        "actual": "negative-results/index.json",
+        "expected": "dict",
+        "group": "files",
+        "name": "negative locator parses",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "authority": true,
+          "count": true,
+          "entries_nonempty": true,
+          "schema": true
+        },
+        "expected": "current generated negative locator with authority and count",
+        "group": "formal",
+        "name": "negative locator current structural contract",
+        "status": "PASS"
+      },
+      {
+        "actual": "changelog/index.json",
+        "expected": "dict",
+        "group": "files",
+        "name": "changelog locator parses",
+        "status": "PASS"
+      },
+      {
+        "actual": {
+          "authority": true,
+          "recent_bounded": true,
+          "recent_count": true,
+          "schema": true,
+          "total": true
+        },
+        "expected": "current generated changelog locator with authority, total and recent page",
+        "group": "formal",
+        "name": "changelog locator current structural contract",
+        "status": "PASS"
+      },
+      {
+        "actual": 3402,
         "expected": ">0",
         "group": "formal",
         "name": "result index readable",
@@ -1040,11 +1109,11 @@
         "actual": [],
         "expected": "all required tokens present",
         "group": "formal",
-        "name": "result index current R-167 projection required tokens",
+        "name": "result index current generated projection required tokens",
         "status": "PASS"
       },
       {
-        "actual": 8333,
+        "actual": 9569,
         "expected": ">0",
         "group": "formal",
         "name": "negative index readable",
@@ -1054,11 +1123,11 @@
         "actual": [],
         "expected": "all required tokens present",
         "group": "formal",
-        "name": "negative index current four-route projection required tokens",
+        "name": "negative index current generated projection required tokens",
         "status": "PASS"
       },
       {
-        "actual": 7268,
+        "actual": 6632,
         "expected": ">0",
         "group": "formal",
         "name": "gate index readable",
@@ -1072,7 +1141,7 @@
         "status": "PASS"
       },
       {
-        "actual": 889,
+        "actual": 890,
         "expected": ">0",
         "group": "formal",
         "name": "compact proof-evidence index readable",
@@ -1086,7 +1155,7 @@
         "status": "PASS"
       },
       {
-        "actual": 7919,
+        "actual": 9064,
         "expected": ">0",
         "group": "formal",
         "name": "changelog index readable",
@@ -1096,7 +1165,7 @@
         "actual": [],
         "expected": "all required tokens present",
         "group": "formal",
-        "name": "changelog index current theorem event required tokens",
+        "name": "changelog index current generated projection required tokens",
         "status": "PASS"
       },
       {
@@ -1146,6 +1215,20 @@
         "expected": "dict",
         "group": "files",
         "name": "catalog shard archive-artefact parses",
+        "status": "PASS"
+      },
+      {
+        "actual": "verification/catalog/kinds/legacy-research-record.json",
+        "expected": "dict",
+        "group": "files",
+        "name": "catalog shard legacy-research-record parses",
+        "status": "PASS"
+      },
+      {
+        "actual": "verification/catalog/kinds/legacy-research-view.json",
+        "expected": "dict",
+        "group": "files",
+        "name": "catalog shard legacy-research-view parses",
         "status": "PASS"
       },
       {
@@ -1213,11 +1296,11 @@
       },
       {
         "actual": {
-          "declared_total": 3789,
+          "declared_total": 4913,
           "schema": "tect/catalog-manifest/2.0",
-          "shards": 15,
-          "summed_total": 3789,
-          "valid": 15
+          "shards": 17,
+          "summed_total": 4913,
+          "valid": 17
         },
         "expected": "valid shard hashes/counts summing to manifest total",
         "group": "formal",
@@ -1390,10 +1473,7 @@
         "status": "PASS"
       },
       {
-        "actual": [
-          "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-local-strict-quartic-c0-entropy-gap-route-split-260811-v0.6.pdf",
-          "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-local-strict-quartic-c0-entropy-gap-route-split-260811-v0.6.tex.txt"
-        ],
+        "actual": [],
         "expected": {
           "allowed_atomic_checkpoint_pair": [
             "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-local-strict-quartic-c0-entropy-gap-route-split-260811-v0.6.pdf",
@@ -1419,7 +1499,7 @@
         "status": "PASS"
       }
     ],
-    "total": 153
+    "total": 161
   },
   "boundary": "This package proves only a finite-region local-strict/energy carrier and a fixed finite-Gibbs entropy tail bound, together with four sharply scoped route no-go results. It does not prove a continuous-time thermodynamic split limit, all-exhaustion or all-boundary Cauchy, a quasi-local raw oscillator common alpha, full resolvent-algebra invariance or non-invariance for the unsplit quartic flow, phase-KMS quotient identification, a broken-sector GNS or physical mass gap, regulator removal, a continuum, physical empty space or a below-empty sign, Pre-A selection, C6, CP1 or Sector-A closure.",
   "claim_bearing": false,
@@ -1674,10 +1754,7 @@
       "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-local-strict-quartic-c0-entropy-gap-route-split-260811-v0.6.pdf",
       "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-local-strict-quartic-c0-entropy-gap-route-split-260811-v0.6.tex.txt"
     ],
-    "changed_note_or_pdf_artifacts": [
-      "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-local-strict-quartic-c0-entropy-gap-route-split-260811-v0.6.pdf",
-      "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-local-strict-quartic-c0-entropy-gap-route-split-260811-v0.6.tex.txt"
-    ],
+    "changed_note_or_pdf_artifacts": [],
     "checkpoint_pdf": "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-local-strict-quartic-c0-entropy-gap-route-split-260811-v0.6.pdf",
     "note_source": "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-local-strict-quartic-c0-entropy-gap-route-split-260811-v0.6.tex.txt",
     "package_artifacts": [
@@ -1725,15 +1802,15 @@
     "raw_weyl_basic_resolvent_point_norm_C0": false,
     "unsplit_resolvent_algebra_invariance_decided": false
   },
-  "script_version": "1.0.0",
+  "script_version": "1.0.1",
   "source_hashes": {
     "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-local-strict-quartic-c0-entropy-gap-route-split-260811-v0.6.pdf": "3d2e33dbef6781dc45563750bf451e7e9243c4cb079b5e2ed571794d8d6aba3d",
     "claims/C6-SPACETIME-SIGNATURE/notes/pre-a-q3lock-local-strict-quartic-c0-entropy-gap-route-split-260811-v0.6.tex.txt": "101c4ffc3742d4c9caf57e57d90db599656f5ea22332f1b178d8920a28b643fc",
-    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-11-independent-pre-a-cp1-st8-q3lock-local-strict-quartic-c0-entropy-gap-route-split/result.json": "7e2abcb80cf60b629e437ac720d1a5f7f5d5630de51743ca1622b8a755e7e33e",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-11-independent-pre-a-cp1-st8-q3lock-local-strict-quartic-c0-entropy-gap-route-split/result.json": "17e567b3c5884fb0264b778988242f14e7633991c1482ffe08af12f408d7074c",
     "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-11-primary-pre-a-cp1-st8-q3lock-local-strict-quartic-c0-entropy-gap-route-split/result.json": "6280bb8571306089058f95c6e7226f5a5df6138b9a2cd59549ea33b31d32d423",
     "codes/foundations/pre_a_cp1_st8_q3lock_local_strict_quartic_c0_entropy_gap_route_split.py": "e4901ef7cd1b78e2976d7ac8ff7dbc066c60801b9588b2787164ba6b477a0dc5",
     "codes/foundations/pre_a_cp1_st8_q3lock_local_strict_quartic_c0_entropy_gap_route_split_independent.py": "94a42fb9908ab89fca0009687dbd6cb431c9e6cf9662b52438db836fc1d29d77",
-    "codes/foundations/pre_a_cp1_st8_q3lock_local_strict_quartic_c0_entropy_gap_route_split_verify.py": "72ea64b2e1f3e97b6dc05d9f66902ef9b583d39139c4289cc6355b86569d45dd",
+    "codes/foundations/pre_a_cp1_st8_q3lock_local_strict_quartic_c0_entropy_gap_route_split_verify.py": "0f26bf3e20a1eb76ed30bade7b0951fc3125dd80619381db054d354323268a5a",
     "strategy/pre-a-cp1-st8-q3lock-local-strict-quartic-c0-entropy-gap-route-split-certificate-260811.md": "5beab888a16d12ff1af1b5bba9ad40fe12f99d0ba467e19d7ae372e8da38788e",
     "strategy/pre-a-cp1-st8-q3lock-local-strict-quartic-c0-entropy-gap-route-split-manifest.json": "ad59c27985a3bd8c098ba6289e4e4dde0614fc92a4029d320f9264b03625ad0d"
   },
@@ -1744,8 +1821,8 @@
   "summary": {
     "failed": 0,
     "missing": 0,
-    "passed": 153,
-    "total": 153
+    "passed": 161,
+    "total": 161
   },
   "task_id": "T-054",
   "verdict": "PASS"

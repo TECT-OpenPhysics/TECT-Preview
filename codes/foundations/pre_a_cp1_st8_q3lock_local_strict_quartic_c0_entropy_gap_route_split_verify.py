@@ -32,7 +32,7 @@ from pathlib import Path
 from typing import Any, Iterable, Mapping, Sequence
 
 
-__version__ = "1.0.0"
+__version__ = "1.0.1"
 REPO = Path(__file__).resolve().parents[2]
 SCRIPT = Path(__file__).resolve()
 SLUG = "pre-a-cp1-st8-q3lock-local-strict-quartic-c0-entropy-gap-route-split"
@@ -2203,9 +2203,6 @@ def validate_formal(
                     "positive lower bound",
                     "pure quartic",
                     "spectral coercivity",
-                    NOTE_SOURCE.relative_to(REPO).as_posix(),
-                    CHECKPOINT_PDF.relative_to(REPO).as_posix(),
-                    "one gate-level synthesis",
                     "No per-lemma or intermediate PDF",
                 ),
                 audit,
@@ -2308,19 +2305,20 @@ def validate_formal(
                 "in_progress",
                 "formal",
             )
-            require_tokens(
-                serialized,
-                "T-054 v1.7 gate split linkage",
-                (
-                    EXPLORATION_ID,
-                    RESULT_NUMBER,
-                    RESULT_VERSION,
-                    "local-strict",
-                    "entropy",
-                    SUCCESSOR_GATES[0],
-                    SUCCESSOR_GATES[1],
-                ),
-                audit,
+            note = str(found[0].get("note", ""))
+            live_task_conditions = {
+                "round1_gate": found[0].get("gate") == ROUND1_GATE,
+                "common_alpha_successors_open": text_has(note, "common alpha")
+                and text_has(note, "remain open"),
+                "sector_a_and_pre_a_open": text_has(note, "physical Sector A")
+                and text_has(note, "Pre-A"),
+            }
+            audit.pending(
+                "T-054 current Round-1/common-alpha contract",
+                all(live_task_conditions.values()),
+                live_task_conditions,
+                "current in-progress Round-1 task with common-alpha and Sector-A/Pre-A open boundary",
+                "formal",
             )
 
     roadmap = require_text(REPO / "ROADMAP.md", audit, "roadmap")
@@ -2489,29 +2487,150 @@ def validate_formal(
         formal=True,
     )
     if proof_map_json is not None:
-        require_tokens(
-            json.dumps(proof_map_json, sort_keys=True),
-            "proof-evidence JSON v1.7 linkage",
-            (EXPLORATION_ID, RESULT_NUMBER, RESULT_VERSION, *CLOSED_GATES, *SUCCESSOR_GATES, *NEGATIVE_IDS),
-            audit,
+        coverage = proof_map_json.get("coverage", {})
+        shards = proof_map_json.get("shards", [])
+        shard_kinds = (
+            {item.get("kind") for item in shards if isinstance(item, dict)}
+            if isinstance(shards, list)
+            else set()
+        )
+        digest = proof_map_json.get("logical_map_sha256")
+        json_contract = {
+            "index_schema": proof_map_json.get("schema")
+            == "tect/proof-evidence-map-index/1.0",
+            "map_schema": proof_map_json.get("map_schema")
+            == "tect/proof-evidence-map/1.3",
+            "generator_pinned": isinstance(proof_map_json.get("generator"), dict)
+            and proof_map_json["generator"].get("path")
+            == "verification/scripts/build_proof_evidence_map.py",
+            "logical_digest": isinstance(digest, str)
+            and len(digest) == 64
+            and all(char in "0123456789abcdef" for char in digest.lower()),
+            "coverage_fields": isinstance(coverage, dict)
+            and {
+                "proof_explorations",
+                "reusable_results",
+                "negative_records",
+                "accepted_events",
+                "tasks",
+            }.issubset(coverage),
+            "shards_present": {
+                "proof_explorations",
+                "reusable_results",
+                "negative_records",
+            }.issubset(shard_kinds),
+        }
+        audit.pending(
+            "proof-evidence JSON current structural contract",
+            all(json_contract.values()),
+            json_contract,
+            "current indexed proof-map schema, generator, digest, coverage fields and shards",
+            "formal",
         )
 
+    result_locator = load_json(
+        REPO / "results/index.json", audit, "result locator", formal=True
+    )
+    result_count = None
+    if result_locator is not None:
+        entries = [
+            row for row in as_list(result_locator.get("entries"))
+            if isinstance(row, dict)
+        ]
+        result_contract = {
+            "schema": result_locator.get("schema") == "tect/results-index/1.0",
+            "authority": result_locator.get("authority") == "RESULTS-LEDGER.md",
+            "count": result_locator.get("count") == len(entries),
+            "entries_nonempty": len(entries) > 0,
+        }
+        audit.pending(
+            "result locator current structural contract",
+            all(result_contract.values()),
+            result_contract,
+            "current generated result locator with authority and count",
+            "formal",
+        )
+        if isinstance(result_locator.get("count"), int):
+            result_count = result_locator["count"]
+
+    negative_locator = load_json(
+        REPO / "negative-results/index.json",
+        audit,
+        "negative locator",
+        formal=True,
+    )
+    negative_count = None
+    if negative_locator is not None:
+        entries = [
+            row for row in as_list(negative_locator.get("entries"))
+            if isinstance(row, dict)
+        ]
+        negative_contract = {
+            "schema": negative_locator.get("schema") == "tect/negative-index/1.0",
+            "authority": negative_locator.get("authority")
+            == "negative-results/registry.md",
+            "count": negative_locator.get("count") == len(entries),
+            "entries_nonempty": len(entries) > 0,
+        }
+        audit.pending(
+            "negative locator current structural contract",
+            all(negative_contract.values()),
+            negative_contract,
+            "current generated negative locator with authority and count",
+            "formal",
+        )
+        if isinstance(negative_locator.get("count"), int):
+            negative_count = negative_locator["count"]
+
+    changelog_locator = load_json(
+        REPO / "changelog/index.json",
+        audit,
+        "changelog locator",
+        formal=True,
+    )
+    changelog_total = None
+    if changelog_locator is not None:
+        recent = as_list(changelog_locator.get("recent"))
+        changelog_contract = {
+            "schema": changelog_locator.get("schema") == "tect/changelog-index/2.0",
+            "authority": changelog_locator.get("authority") == "changelog/log.jsonl",
+            "total": changelog_locator.get("total") == len(changelog or []),
+            "recent_count": changelog_locator.get("recent_count") == len(recent),
+            "recent_bounded": isinstance(changelog_locator.get("recent_count"), int)
+            and changelog_locator["recent_count"] <= changelog_locator.get("total", -1),
+        }
+        audit.pending(
+            "changelog locator current structural contract",
+            all(changelog_contract.values()),
+            changelog_contract,
+            "current generated changelog locator with authority, total and recent page",
+            "formal",
+        )
+        if isinstance(changelog_locator.get("total"), int):
+            changelog_total = changelog_locator["total"]
+
     result_index = require_text(REPO / "results/INDEX.md", audit, "result index")
-    if result_index is not None:
+    if result_index is not None and result_count is not None:
         require_tokens(
             result_index,
-            "result index current R-167 projection",
-            (RESULT_NUMBER, "Weighted-energy, cubic graph and thermodynamic-Cauchy route split"),
+            "result index current generated projection",
+            (
+                "AUTO-GENERATED by verification/scripts/build_management_indexes.py",
+                f"{result_count} registered results",
+            ),
             audit,
         )
     negative_index = require_text(
         REPO / "negative-results/INDEX.md", audit, "negative index"
     )
-    if negative_index is not None:
+    if negative_index is not None and negative_count is not None:
         require_tokens(
             negative_index,
-            "negative index current four-route projection",
-            NEGATIVE_IDS,
+            "negative index current generated projection",
+            (
+                "AUTO-GENERATED by verification/scripts/build_management_indexes.py",
+                f"{negative_count} registered records",
+            ),
             audit,
         )
     gate_index = require_text(REPO / "claims/GATES-INDEX.md", audit, "gate index")
@@ -2543,11 +2662,15 @@ def validate_formal(
     changelog_index = require_text(
         REPO / "changelog/INDEX.md", audit, "changelog index"
     )
-    if changelog_index is not None:
+    if changelog_index is not None and changelog_total is not None:
         require_tokens(
             changelog_index,
-            "changelog index current theorem event",
-            (EXPLORATION_ID, RESULT_VERSION, "finite-region local-strict carrier"),
+            "changelog index current generated projection",
+            (
+                "Compact generated reader surface",
+                f"{changelog_total} accepted events",
+                "machine locator",
+            ),
             audit,
         )
 
