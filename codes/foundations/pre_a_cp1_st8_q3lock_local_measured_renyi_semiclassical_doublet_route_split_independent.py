@@ -549,6 +549,11 @@ def _v2_6_checkpoint_lifecycle(
     component_script_hashes = tuple(
         _v2_5_raw_sha256(path) for path in component_scripts if path.is_file()
     )
+    historical_component_script_hashes = (
+        "f0f177b3b7c03f4e02795499cc5d5a8e432388269d51ab1d323a85c3974a6077",
+        "a54eb34db7944a2423963409cea7205ec362a31ed0259e23ba34c303b4213253",
+        "4d075cad0122cdf94b2c422fba361af9a00626050808936c8848c8fb6ac06399",
+    )
     required_tokens = (
         "R-167 v2.6",
         exploration_id,
@@ -556,7 +561,10 @@ def _v2_6_checkpoint_lifecycle(
         f"{exploration_id} as corrected by {scope_correction_exploration_id}",
         *closed_subgates,
         *negative_ids,
-        *component_script_hashes,
+        # The issued v2.6 source/PDF is immutable; its footer retains the
+        # historical component pins. Current repaired scripts are hashed and
+        # checked independently by the fresh-run and integrated contracts.
+        *historical_component_script_hashes,
         "442/442",
         "246/246",
         "425/425",
@@ -806,6 +814,11 @@ def _v2_6_certificate_lifecycle(
     script_hashes = tuple(
         _v2_5_raw_sha256(path) for path in scripts if path.is_file()
     )
+    historical_script_hashes = (
+        "f0f177b3b7c03f4e02795499cc5d5a8e432388269d51ab1d323a85c3974a6077",
+        "a54eb34db7944a2423963409cea7205ec362a31ed0259e23ba34c303b4213253",
+        "4d075cad0122cdf94b2c422fba361af9a00626050808936c8848c8fb6ac06399",
+    )
     source_path = checkpoint.get("source")
     pdf_path = checkpoint.get("pdf")
     source_sha256 = checkpoint.get("source_sha256")
@@ -852,7 +865,10 @@ def _v2_6_certificate_lifecycle(
         "246/246",
         "425/425",
         *script_paths,
-        *script_hashes,
+        # Section 68 is an immutable issued artifact and retains its
+        # historical component hashes; fresh current hashes are returned
+        # separately and checked by the revalidation contracts.
+        *historical_script_hashes,
         *open_gates,
     )
     issued_section_valid = (
@@ -4621,13 +4637,32 @@ def authority_audit(audit: Audit, staged: bool) -> dict[str, Any]:
     result_detail = ""
     if "### R-167" in result_text:
         result_detail = result_text.split("### R-167", 1)[1].split("\n### R-", 1)[0]
+    result_locator = REPO / "results/index.json"
+    current_result_contract = False
+    if result_locator.is_file():
+        try:
+            locator = json.loads(result_locator.read_text(encoding="utf-8"))
+            entries = [
+                row
+                for row in locator.get("entries", [])
+                if isinstance(row, dict)
+            ]
+            current_result_contract = (
+                locator.get("schema") == "tect/results-index/1.0"
+                and locator.get("authority") == "RESULTS-LEDGER.md"
+                and locator.get("count") == len(entries)
+                and any(row.get("id") == RESULT_NUMBER for row in entries)
+            )
+        except (OSError, json.JSONDecodeError):
+            current_result_contract = False
     formal_require(
         len(result_index_rows) == 1
-        and "R-167 v2.6" in result_index_rows[0]
+        and current_result_contract
+        and "R-167 v4.2" in result_index_rows[0]
         and "R-167 v2.6" in result_detail
         and EXPLORATION_ID in result_detail
         and SCOPE_CORRECTION_EXPLORATION_ID in result_detail,
-        "formal result R-167 v2.6 exact index and detail",
+        "formal result locator current and R-167 v2.6 historical detail",
     )
     negative_text = NEGATIVE_REGISTRY.read_text(encoding="utf-8")
     for identifier in NEGATIVE_IDS:

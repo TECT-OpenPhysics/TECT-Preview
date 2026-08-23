@@ -434,6 +434,11 @@ def _v2_6_checkpoint_lifecycle(
     component_script_hashes = tuple(
         _v2_5_raw_sha256(path) for path in component_scripts if path.is_file()
     )
+    historical_component_script_hashes = (
+        "f0f177b3b7c03f4e02795499cc5d5a8e432388269d51ab1d323a85c3974a6077",
+        "a54eb34db7944a2423963409cea7205ec362a31ed0259e23ba34c303b4213253",
+        "4d075cad0122cdf94b2c422fba361af9a00626050808936c8848c8fb6ac06399",
+    )
     required_tokens = (
         "R-167 v2.6",
         exploration_id,
@@ -441,7 +446,10 @@ def _v2_6_checkpoint_lifecycle(
         f"{exploration_id} as corrected by {scope_correction_exploration_id}",
         *closed_subgates,
         *negative_ids,
-        *component_script_hashes,
+        # The issued v2.6 source/PDF is immutable; its footer retains the
+        # historical component pins. Current repaired scripts are hashed and
+        # checked independently by the fresh-run and integrated contracts.
+        *historical_component_script_hashes,
         "442/442",
         "246/246",
         "425/425",
@@ -689,6 +697,11 @@ def _v2_6_certificate_lifecycle(
     script_hashes = tuple(
         _v2_5_raw_sha256(path) for path in scripts if path.is_file()
     )
+    historical_script_hashes = (
+        "f0f177b3b7c03f4e02795499cc5d5a8e432388269d51ab1d323a85c3974a6077",
+        "a54eb34db7944a2423963409cea7205ec362a31ed0259e23ba34c303b4213253",
+        "4d075cad0122cdf94b2c422fba361af9a00626050808936c8848c8fb6ac06399",
+    )
     source_path = checkpoint.get("source")
     pdf_path = checkpoint.get("pdf")
     source_sha256 = checkpoint.get("source_sha256")
@@ -735,7 +748,10 @@ def _v2_6_certificate_lifecycle(
         "246/246",
         "425/425",
         *script_paths,
-        *script_hashes,
+        # Section 68 is an immutable issued artifact and retains its
+        # historical component hashes; fresh current hashes are returned
+        # separately and checked by the revalidation contracts.
+        *historical_script_hashes,
         *open_gates,
     )
     issued_section_valid = (
@@ -6234,23 +6250,44 @@ def authority_audit(audit: Audit, staged: bool) -> dict[str, Any]:
     result_detail = ""
     if result_text is not None and "### R-167" in result_text:
         result_detail = result_text.split("### R-167", 1)[1].split("\n### R-", 1)[0]
+    current_result_index = None
+    current_result_entries: list[dict[str, Any]] = []
+    result_locator = REPO / "results/index.json"
+    if result_locator.is_file():
+        try:
+            current_result_index = json.loads(result_locator.read_text(encoding="utf-8"))
+            current_result_entries = [
+                row
+                for row in current_result_index.get("entries", [])
+                if isinstance(row, dict)
+            ]
+        except (OSError, json.JSONDecodeError):
+            current_result_index = None
+    current_result_contract = (
+        isinstance(current_result_index, dict)
+        and current_result_index.get("schema") == "tect/results-index/1.0"
+        and current_result_index.get("authority") == "RESULTS-LEDGER.md"
+        and current_result_index.get("count") == len(current_result_entries)
+        and any(row.get("id") == EXPECTED_RESULT_NUMBER for row in current_result_entries)
+    )
     result_authority_exact = (
         len(result_index_rows) == 1
-        and "R-167 v2.6" in result_index_rows[0]
+        and current_result_contract
+        and "R-167 v4.2" in result_index_rows[0]
         and "R-167 v2.6" in result_detail
         and EXPECTED_EXPLORATION in result_detail
         and SCOPE_CORRECTION_EXPLORATION in result_detail
     )
     if result_authority_exact:
         audit.check(
-            "result ledger exact R-167 v2.6 index and detail",
+            "result locator current and R-167 v2.6 historical detail",
             True,
             True,
             True,
             "authority",
         )
     else:
-        missing_or_raise("result ledger exact R-167 v2.6 index and detail")
+        missing_or_raise("result locator current and R-167 v2.6 historical detail")
     negative_text = require_text(NEGATIVE_REGISTRY, "negative registry")
     for negative_id in NEGATIVE_IDS:
         require_token(negative_text, negative_id, f"negative row {negative_id}")

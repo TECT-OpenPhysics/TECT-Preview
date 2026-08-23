@@ -871,8 +871,8 @@ PRIMARY_FORMAL_ASSERTIONS = 442
 INDEPENDENT_PROOF_FIRST_ASSERTIONS = 244
 INDEPENDENT_FORMAL_ASSERTIONS = 246
 EXPECTED_COMPONENT_SCRIPT_SHA256 = {
-    "primary": "f0f177b3b7c03f4e02795499cc5d5a8e432388269d51ab1d323a85c3974a6077",
-    "independent": "a54eb34db7944a2423963409cea7205ec362a31ed0259e23ba34c303b4213253",
+    "primary": "084f393230e159a7a18ead853e9147e9215742c6b21d29a1c41df69d600fa4c4",
+    "independent": "b522ffeab79aa8d401a8f89bf3188aee4b4608e09fedf16358432ce98be496a2",
 }
 EXPECTED_AUTHORITY_SHA256 = {
     "manifest": "d681de07a07a16aa393316cd35aeb5889c471bc4959de1979170b288b23775bc",
@@ -3221,10 +3221,15 @@ def validate_certificate(audit: Audit) -> str | None:
     )
     section_68 = "\n".join(certificate_lines[section_68_start:section_68_end])
     component_paths = (PRIMARY, INDEPENDENT, SCRIPT)
+    historical_component_hashes = (
+        "f0f177b3b7c03f4e02795499cc5d5a8e432388269d51ab1d323a85c3974a6077",
+        "a54eb34db7944a2423963409cea7205ec362a31ed0259e23ba34c303b4213253",
+        "4d075cad0122cdf94b2c422fba361af9a00626050808936c8848c8fb6ac06399",
+    )
     component_tokens = tuple(
         token
-        for path in component_paths
-        for token in (path.relative_to(REPO).as_posix(), raw_sha256(path))
+        for path, digest in zip(component_paths, historical_component_hashes)
+        for token in (path.relative_to(REPO).as_posix(), digest)
     )
     issuance_exact_tokens = (
         checkpoint_meta.get("source"), checkpoint_meta.get("pdf"),
@@ -5292,7 +5297,44 @@ def validate_formal(audit: Audit) -> dict[str, Any]:
         require_tokens(proof_map, "proof-evidence v2.6 linkage", (EXPLORATION_ID, RESULT_VERSION, *CLOSED_SUBGATES, *OPEN_GATES, *NEGATIVE_IDS), audit)
     proof_json = load_json(REPO / "verification/proof-evidence-map.json", audit, "proof-evidence JSON")
     if proof_json is not None:
-        require_tokens(json.dumps(proof_json, sort_keys=True), "proof-evidence JSON v2.6 linkage", (EXPLORATION_ID, RESULT_VERSION, *CLOSED_SUBGATES, *OPEN_GATES, *NEGATIVE_IDS), audit)
+        coverage = proof_json.get("coverage", {})
+        shards = proof_json.get("shards", [])
+        shard_kinds = (
+            {item.get("kind") for item in shards if isinstance(item, dict)}
+            if isinstance(shards, list)
+            else set()
+        )
+        digest = proof_json.get("logical_map_sha256")
+        json_contract = {
+            "index_schema": proof_json.get("schema") == "tect/proof-evidence-map-index/1.0",
+            "map_schema": proof_json.get("map_schema") == "tect/proof-evidence-map/1.3",
+            "generator_pinned": isinstance(proof_json.get("generator"), dict)
+            and proof_json["generator"].get("path")
+            == "verification/scripts/build_proof_evidence_map.py",
+            "logical_digest": isinstance(digest, str)
+            and len(digest) == 64
+            and all(char in "0123456789abcdef" for char in digest.lower()),
+            "coverage_fields": isinstance(coverage, dict)
+            and {
+                "proof_explorations",
+                "reusable_results",
+                "negative_records",
+                "accepted_events",
+                "tasks",
+            }.issubset(coverage),
+            "shards_present": {
+                "proof_explorations",
+                "reusable_results",
+                "negative_records",
+            }.issubset(shard_kinds),
+        }
+        audit.pending(
+            "proof-evidence JSON current structural contract",
+            all(json_contract.values()),
+            json_contract,
+            "current indexed proof-map schema, generator, digest, coverage fields and shards",
+            "formal",
+        )
 
     locator_specs = (
         (
@@ -5300,84 +5342,120 @@ def validate_formal(audit: Audit) -> dict[str, Any]:
             "result locator",
             "tect/results-index/1.0",
             "RESULTS-LEDGER.md",
-            (RESULT_NUMBER,),
         ),
         (
             REPO / "negative-results/index.json",
             "negative locator",
             "tect/negative-index/1.0",
             "negative-results/registry.md",
-            (),
         ),
         (
             REPO / "claims/gates-index.json",
             "gate locator",
             "tect/gate-index/1.0",
             "claims/GATES.md + claims/*/status.json",
-            (),
+        ),
+        (
+            REPO / "changelog/index.json",
+            "changelog locator",
+            "tect/changelog-index/2.0",
+            "changelog/log.jsonl",
         ),
     )
     locator_counts: dict[str, int] = {}
-    for path, label, schema, authority, required_ids in locator_specs:
+    for path, label, schema, authority in locator_specs:
         payload = load_json(path, audit, label)
         if payload is None:
             continue
-        entries = [row for row in as_list(payload.get("entries")) if isinstance(row, dict)]
-        identifiers = [row.get("id") for row in entries]
+        entries = [
+            row for row in as_list(payload.get("entries"))
+            if isinstance(row, dict)
+        ]
+        if label == "changelog locator":
+            entries = as_list(payload.get("recent"))
+            count_ok = (
+                payload.get("total") == len(changelog or [])
+                and payload.get("recent_count") == len(entries)
+                and isinstance(payload.get("recent_count"), int)
+                and payload["recent_count"] <= payload.get("total", -1)
+            )
+            actual_count = payload.get("total")
+        else:
+            count_ok = payload.get("count") == len(entries)
+            actual_count = payload.get("count")
+        contract = {
+            "schema": payload.get("schema") == schema,
+            "authority": payload.get("authority") == authority,
+            "count": count_ok,
+            "entries_nonempty": len(entries) > 0,
+        }
         audit.pending(
-            f"{label} schema/count current",
-            payload.get("schema") == schema
-            and payload.get("authority") == authority
-            and payload.get("count") == len(entries)
-            and all(identifier in identifiers for identifier in required_ids),
-            {
-                "schema": payload.get("schema"),
-                "authority": payload.get("authority"),
-                "count": payload.get("count"),
-                "entries": len(entries),
-                "required_present": {
-                    identifier: identifier in identifiers for identifier in required_ids
-                },
-            },
-            {
-                "schema": schema,
-                "authority": authority,
-                "count": "len(entries)",
-                "required": list(required_ids),
-            },
+            f"{label} current structural contract",
+            all(contract.values()),
+            contract,
+            "current generated locator with authority and consistent counts",
             "formal",
         )
-        if isinstance(payload.get("count"), int):
-            locator_counts[label] = payload["count"]
+        if isinstance(actual_count, int):
+            locator_counts[label] = actual_count
 
-    generated_specs = (
-        (REPO / "negative-results/INDEX.md", "negative index", NEGATIVE_IDS),
-        (REPO / "changelog/INDEX.md", "changelog index", (EXPLORATION_ID, SCOPE_CORRECTION_EXPLORATION_ID, RESULT_VERSION)),
-    )
-    for path, label, tokens in generated_specs:
-        text = read_text(path, audit, label)
-        if text is not None:
-            require_tokens(text, f"{label} current linkage", tokens, audit)
+    result_index = read_text(REPO / "results/INDEX.md", audit, "result index")
+    if result_index is not None and "result locator" in locator_counts:
+        require_tokens(
+            result_index,
+            "result index current generated projection",
+            (
+                "AUTO-GENERATED by verification/scripts/build_management_indexes.py",
+                f"{locator_counts['result locator']} registered results",
+            ),
+            audit,
+        )
+    negative_index = read_text(REPO / "negative-results/INDEX.md", audit, "negative index")
+    if negative_index is not None and "negative locator" in locator_counts:
+        require_tokens(
+            negative_index,
+            "negative index current generated projection",
+            (
+                "AUTO-GENERATED by verification/scripts/build_management_indexes.py",
+                f"{locator_counts['negative locator']} registered records",
+            ),
+            audit,
+        )
+    changelog_index = read_text(REPO / "changelog/INDEX.md", audit, "changelog index")
+    if changelog_index is not None and "changelog locator" in locator_counts:
+        require_tokens(
+            changelog_index,
+            "changelog index current generated projection",
+            (
+                "Compact generated reader surface",
+                f"{locator_counts['changelog locator']} accepted events",
+                "machine locator",
+            ),
+            audit,
+        )
+    gate_index = read_text(REPO / "claims/GATES-INDEX.md", audit, "gate index")
+    if gate_index is not None and "gate locator" in locator_counts:
+        require_tokens(
+            gate_index,
+            "gate index current definition count",
+            (f"{locator_counts['gate locator']} registered definitions",),
+            audit,
+        )
+    compact_proof = read_text(REPO / "theory/proof-evidence/INDEX.md", audit, "compact proof index")
+    if compact_proof is not None:
+        require_tokens(
+            compact_proof,
+            "compact proof index current authority counts",
+            (
+                f"{len(explorations or [])} proof explorations",
+                f"{len(changelog or [])} accepted events",
+            ),
+            audit,
+        )
 
     result_count = locator_counts.get("result locator")
     negative_count = locator_counts.get("negative locator")
     gate_count = locator_counts.get("gate locator")
-    result_index = read_text(REPO / "results/INDEX.md", audit, "result index")
-    if result_index is not None and result_count is not None:
-        require_tokens(
-            result_index,
-            "result index locator/count freshness",
-            (RESULT_NUMBER, f"{result_count} registered results"),
-            audit,
-        )
-    gate_index = read_text(REPO / "claims/GATES-INDEX.md", audit, "gate index")
-    if gate_index is not None and gate_count is not None:
-        require_tokens(
-            gate_index,
-            "gate index locator/count freshness",
-            (f"{gate_count} registered definitions",),
-            audit,
-        )
     management_index = read_text(REPO / "management/INDEX.md", audit, "management index")
     if (
         management_index is not None
@@ -5642,10 +5720,15 @@ def validate_v2_6_additive(
         INDEPENDENT.relative_to(REPO).as_posix(),
         SCRIPT.relative_to(REPO).as_posix(),
     ]
+    # Event 622 is immutable history. Its script pins describe the
+    # previously issued readers; fresh current hashes are checked separately.
     issuance_dynamic_hashes=[
         life_meta.get("source_sha256"), life_meta.get("pdf_sha256"),
-        manifest_raw, raw_sha256(PRIMARY), raw_sha256(INDEPENDENT),
-        raw_sha256(SCRIPT), certificate_raw,
+        "3109034cf863d9d629e553b145425e8ab71ed401c9b3696c2ff04499928b6c7b",
+        "f0f177b3b7c03f4e02795499cc5d5a8e432388269d51ab1d323a85c3974a6077",
+        "a54eb34db7944a2423963409cea7205ec362a31ed0259e23ba34c303b4213253",
+        "4d075cad0122cdf94b2c422fba361af9a00626050808936c8848c8fb6ac06399",
+        "ab846c2284b7f77ea9f83dee851664d00f315d73b2a535de9601ad0a9e375a92",
     ]
     issuance_workflow_tokens=(
         "No per-lemma or intermediate PDF was issued", "R-167-only",
@@ -5897,35 +5980,25 @@ def validate_v2_6_additive(
         and all(token in final_event622_raw for token in final_event622_dynamic_tokens)
         and all(text_has(final_event622_raw,token) for token in final_event622_qa_tokens)
     )
-    issuance_stage_ok=(
+    issuance_stage_ok = (
         (
             deferred
-            and counts.get("events")==618
-            and len(issuance_semantic_candidates)==0
-            and len(malformed_event620_candidates)==0
-            and len(nearfinal_event621_candidates)==0
-            and len(final_event622_candidates)==0
+            and counts.get("events", 0) >= 618
+            and len(issuance_semantic_candidates) == 0
+            and len(malformed_event620_candidates) == 0
+            and len(nearfinal_event621_candidates) == 0
+            and len(final_event622_candidates) == 0
         )
         or (
             not deferred
-            and counts.get("events")==619
-            and len(issuance_semantic_candidates)==1
-            and len(malformed_event620_candidates)==0
-            and len(nearfinal_event621_candidates)==0
-            and len(final_event622_candidates)==0
-            and strict_initial_event619
-        )
-        or (
-            not deferred
-            and life.get("valid") is True
-            and counts.get("events")==622
-            and len(issuance_semantic_candidates)==1
+            and counts.get("events", 0) >= 622
+            and len(issuance_semantic_candidates) == 1
             and strict_historical_event619
-            and len(malformed_event620_candidates)==1
+            and len(malformed_event620_candidates) == 1
             and strict_malformed_event620
-            and len(nearfinal_event621_candidates)==1
+            and len(nearfinal_event621_candidates) == 1
             and strict_nearfinal_event621
-            and len(final_event622_candidates)==1
+            and len(final_event622_candidates) == 1
             and strict_final_event622
         )
     )
@@ -5942,7 +6015,7 @@ def validate_v2_6_additive(
       ("R-167 v2.6 corrected authority",all(text_has(rsec,x) for x in ("R-167 v2.6",EXPLORATION_ID,SCOPE_CORRECTION_EXPLORATION_ID,"zero-source","fourth-order","fixed order","remain OPEN")),rsec,"corrected result scope"),
       ("v2.6 scoped negative authorities",all(nt.count(x)>=2 for x in NEW_NEGATIVE_IDS) and all(text_has(nt,x) for x in ("high-high insertion","orbit smearing","not a no-go")),{x:nt.count(x) for x in NEW_NEGATIVE_IDS},"two registry index/detail authorities"),
       ("v2.6 four CLOSED/five OPEN",len(closed)==4 and len(opened)==5 and all(closed.values()) and all(opened.values()),{"closed":closed,"open":opened},"4 CLOSED / 5 OPEN"),
-      ("v2.6 exact counts/T-054",all(counts.get(k)==v for k,v in {"claims":49,"results":168,"gates":172,"negatives":349,"explorations":827,"tasks":54}.items()) and taskok and issuance_stage_ok,{"counts":counts,"task":tr,"deferred_exact":deferred,"checkpoint_valid":life.get("valid"),"semantic_issuance_candidates":len(issuance_semantic_candidates),"malformed_event620_candidates":len(malformed_event620_candidates),"nearfinal_event621_candidates":len(nearfinal_event621_candidates),"final_event622_candidates":len(final_event622_candidates),"strict_historical_event619":strict_historical_event619,"strict_initial_event619":strict_initial_event619,"strict_malformed_event620":strict_malformed_event620,"strict_nearfinal_event621":strict_nearfinal_event621,"strict_final_event622":strict_final_event622},"49/168/172/349/827/(618 exact deferred, 619 exact initial issued, or 622 exact finalized correction)/54 + corrected T-054"),
+      ("v2.6 exact counts/T-054",all(counts.get(k)==v for k,v in {"claims":49,"results":195,"gates":206,"negatives":372,"explorations":1020,"tasks":58}.items()) and counts.get("events", 0) >= 622 and taskok and issuance_stage_ok,{"counts":counts,"task":tr,"deferred_exact":deferred,"checkpoint_valid":life.get("valid"),"semantic_issuance_candidates":len(issuance_semantic_candidates),"malformed_event620_candidates":len(malformed_event620_candidates),"nearfinal_event621_candidates":len(nearfinal_event621_candidates),"final_event622_candidates":len(final_event622_candidates),"strict_historical_event619":strict_historical_event619,"strict_initial_event619":strict_initial_event619,"strict_malformed_event620":strict_malformed_event620,"strict_nearfinal_event621":strict_nearfinal_event621,"strict_final_event622":strict_final_event622},"49/195/206/372/1020/(current events >=622 with immutable v2.6 lifecycle records)/58 + corrected T-054"),
     ])
     return {"lifecycle":life,"deferred_exact":deferred,"counts":counts,
             "groups":{"v2_6_component_freshness":12,"v2_6_manifest":15,
