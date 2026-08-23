@@ -1,0 +1,96 @@
+{
+  "schema": "tect/pre-a-cp1-st8-q3lock-first-passage-onsite-dressing-nogo/1.0",
+  "exploration_id": "EXP-001029",
+  "task_id": "T-054",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "parent_explorations": [
+    "EXP-001027",
+    "EXP-001028"
+  ],
+  "tier": "T0",
+  "claim_bearing": false,
+  "title": "Scoped common-core obstruction for an onsite-dressed first-passage coefficient",
+  "question": "Can the exact Q3 onsite-plus-one-spatial-bond second response coefficient be bounded uniformly by a source Weyl position seminorm that grows only linearly in the translation amplitude?",
+  "model": {
+    "source_site": "one scalar source coordinate q with the other seven internal Q3 coordinates set to zero in the leading source-degree slice",
+    "target_site": "one spatial neighbor r coupled by the harmonic bond -c q r",
+    "onsite_quartic": "G q^4/4 with G=g+3 lambda",
+    "weyl_observable": "W_a=exp(-i a p_q / hbar)",
+    "hbar_fixture": "1",
+    "common_core": "polynomial CCR core multiplied on the right by W_a; the identity is coefficientwise before any representation-specific norm estimate"
+  },
+  "exact_identity": {
+    "shifted_potential_difference": "Delta_a(q,r)=(G/4)(q^4-(q-a)^4)-c a r",
+    "potential_second_response": "partial_r(Delta_a(q,r)^2)=cG a^5/2-2cG q a^4+3cG q^2 a^3+(-2cG q^3+2c^2 r)a^2",
+    "leading_source_degree": 5,
+    "source_position_commutator": "[q,W_a]=a W_a",
+    "degree_gap_after_source_normalisation": 4,
+    "kinetic_boundary": "The p^2 source commutator vanishes and the kinetic contribution cannot create an a^5 coefficient in the target p_r commutator; the displayed a^5 term is the exact potential-potential coefficient."
+  },
+  "fixture": {
+    "g": "3/5",
+    "lambda": "2/7",
+    "c": "2/3",
+    "chi": "7/4",
+    "G": "51/35",
+    "leading_coefficient": "17/35",
+    "amplitude": "10"
+  },
+  "scoped_verdict": "The coefficient-level common-core target has degree five in a while the declared source position seminorm is degree one. Therefore no source-uniform first-passage coefficient estimate of this form can hold on a class containing these Weyl translates with only linear source growth. This removes one-sided critical energy normalisations of that specific kind from the candidate tournament.",
+  "conditional_operator_consequence": "If a representation contains translated compact wave packets with K^(1/2)-energy O(a^2), the same polynomial identity gives a one-sided K^(-1/2) response lower bound of order a^3, versus an O(a) source seminorm; hence the ratio is unbounded. This conditional wave-packet consequence is not promoted to a no-go for every analytic, Frechet, state-weighted, or modular topology.",
+  "open_after_test": [
+    "frequency-profiled analytic or Frechet source weights growing at least as fast as the coefficient",
+    "symmetric or state-weighted estimates with cancellation not visible coefficientwise",
+    "the actual volume-uniform Q3 factorial expansion and two-orientation response",
+    "exhaustion Cauchy, common alpha, KMS, ground/GNS gap, continuum and Pre-A"
+  ],
+  "adversarial_review": [
+    {
+      "axis": "Q3 slice scope",
+      "check": "Only the leading scalar source-degree slice is used; no claim is made that the slice is an invariant full Q3 dynamics.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "kinetic terms",
+      "check": "The source kinetic commutator is zero and kinetic terms cannot produce the displayed a^5 coefficient in the target p_r commutator.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "coefficient-to-norm promotion",
+      "check": "The exact algebraic identity is not silently promoted to a representation-independent norm theorem; the wave-packet implication is stated conditionally.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "topology coverage",
+      "check": "The obstruction targets only linear-source one-sided critical energy normalisation; analytic/Frechet and state-weighted alternatives remain open.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "QFT-to-TECT promotion",
+      "check": "No canonical TECT production map, heat_root_incidence field or A1/R-192 owner is supplied.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "Lean promotion",
+      "check": "R213 checks only the rational polynomial identity and fixture arithmetic.",
+      "disposition": "UPHELD"
+    }
+  ],
+  "scope": {
+    "closed": "Exact coefficient-level obstruction for the declared common-core source-normalised critical route.",
+    "not_closed": "The full Q3 dynamics, all-bond Trotter limit, actual factorial path expansion, projected Duhamel locality, common alpha, KMS, ground state, gap, continuum, C6, Sector A and Pre-A remain open.",
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "next_action": "Test a source-weighted analytic/Frechet or state-weighted first-passage norm whose declared growth absorbs the a^5 coefficient, and require a genuine two-orientation volume-uniform recurrence before any QFT promotion.",
+  "formal_integration": {
+    "result_ids": [],
+    "negative_ids": [],
+    "changelog_event": null,
+    "lean_entry": "verification/lean/Tect/R213.lean"
+  },
+  "no_overclaim": "This package is a scoped route obstruction. It does not prove nonexistence of Q3 dynamics, reject every critical topology, close the Q3 factorial expansion, establish a thermodynamic QFT, or supply the TECT production dynamics."
+}

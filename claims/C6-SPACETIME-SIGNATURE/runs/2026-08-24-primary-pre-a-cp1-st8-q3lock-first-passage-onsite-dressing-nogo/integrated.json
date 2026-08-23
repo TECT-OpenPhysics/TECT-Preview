@@ -1,0 +1,225 @@
+{
+  "assertion_count": 24,
+  "assertions": [
+    {
+      "actual": [
+        "EXP-001029",
+        "T-054"
+      ],
+      "expected": "EXP-001029/T-054",
+      "name": "identity",
+      "pass": true
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "claim nonbearing",
+      "pass": true
+    },
+    {
+      "actual": 5,
+      "expected": 5,
+      "name": "degree statement",
+      "pass": true
+    },
+    {
+      "actual": "[q,W_a]=a W_a",
+      "expected": "[q,W_a]=a W_a",
+      "name": "source statement",
+      "pass": true
+    },
+    {
+      "actual": "E:\\Dev\\TECT\\verification\\lean\\Tect\\R213.lean",
+      "expected": true,
+      "name": "Lean source",
+      "pass": true
+    },
+    {
+      "actual": [
+        "shifted_response_identity",
+        "q3_coefficient_fixture",
+        "leading_coefficient_fixture",
+        "fixture_ratio_is_positive"
+      ],
+      "expected": "present",
+      "name": "Lean markers",
+      "pass": true
+    },
+    {
+      "actual": [],
+      "expected": "none",
+      "name": "Lean forbidden",
+      "pass": true
+    },
+    {
+      "actual": "PRIMARY FIRST-PASSAGE-ONSITE-DRESSING-NOGO PASS 19/19\n",
+      "expected": "PASS",
+      "name": "primary child",
+      "pass": true
+    },
+    {
+      "actual": "INDEPENDENT FIRST-PASSAGE-ONSITE-DRESSING-NOGO PASS 17/17\n",
+      "expected": "PASS",
+      "name": "independent child",
+      "pass": true
+    },
+    {
+      "actual": [
+        19,
+        17
+      ],
+      "expected": ">0",
+      "name": "positive totals",
+      "pass": true
+    },
+    {
+      "actual": [
+        "51/35",
+        "51/35"
+      ],
+      "expected": "equal",
+      "name": "lane agreement G",
+      "pass": true
+    },
+    {
+      "actual": [
+        "17/35",
+        "17/35"
+      ],
+      "expected": "equal",
+      "name": "lane agreement leading_coefficient",
+      "pass": true
+    },
+    {
+      "actual": [
+        5,
+        5
+      ],
+      "expected": "equal",
+      "name": "lane agreement response_degree",
+      "pass": true
+    },
+    {
+      "actual": [
+        1,
+        1
+      ],
+      "expected": "equal",
+      "name": "lane agreement source_degree",
+      "pass": true
+    },
+    {
+      "actual": [
+        4,
+        4
+      ],
+      "expected": "equal",
+      "name": "lane agreement degree_gap",
+      "pass": true
+    },
+    {
+      "actual": [
+        "10",
+        "10"
+      ],
+      "expected": "equal",
+      "name": "lane agreement fixture_amplitude",
+      "pass": true
+    },
+    {
+      "actual": [
+        "34000/7",
+        "34000/7"
+      ],
+      "expected": "equal",
+      "name": "lane agreement fixture_ratio",
+      "pass": true
+    },
+    {
+      "actual": [
+        false,
+        false
+      ],
+      "expected": "equal",
+      "name": "lane agreement critical_linear_source_route_closed",
+      "pass": true
+    },
+    {
+      "actual": [
+        false,
+        false
+      ],
+      "expected": "equal",
+      "name": "lane agreement all_critical_topologies_rejected",
+      "pass": true
+    },
+    {
+      "actual": [
+        false,
+        false
+      ],
+      "expected": "equal",
+      "name": "lane agreement actual_q3_first_passage_closed",
+      "pass": true
+    },
+    {
+      "actual": [
+        false,
+        false
+      ],
+      "expected": "equal",
+      "name": "lane agreement common_alpha_closed",
+      "pass": true
+    },
+    {
+      "actual": "17/35",
+      "expected": "17/35",
+      "name": "leading coefficient positive",
+      "pass": true
+    },
+    {
+      "actual": 4,
+      "expected": 4,
+      "name": "degree gap exact",
+      "pass": true
+    },
+    {
+      "actual": {
+        "command": "lake env lean Tect/R213.lean",
+        "output": "",
+        "returncode": 0,
+        "status": "PASS"
+      },
+      "expected": "PASS",
+      "name": "Lean compile",
+      "pass": true
+    }
+  ],
+  "audit_id": "PA-CP1-ST8-Q3LOCK-FIRST-PASSAGE-ONSITE-DRESSING-NOGO",
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "exploration_id": "EXP-001029",
+  "lean": {
+    "command": "lake env lean Tect/R213.lean",
+    "output": "",
+    "returncode": 0,
+    "status": "PASS"
+  },
+  "provenance": {
+    "independent_sha256": "2470470e04e56bda7aa06dfa985331ffe03861e73b50887166132c87d3523346",
+    "lean_sha256": "1366d91baf918887469f04e13c4e3d8e65251e9a0eafd7daea13549405436891",
+    "manifest_sha256": "fdd77c829320ec4db2ade8683342b3169c81f39bd265a52c1f887b1333f0811b",
+    "primary_sha256": "8f8056425e27e8e367be78cdfd27ca4b6dd1e68bfdffdd29a8463b655f595997"
+  },
+  "recorded_at": "2026-08-23T21:36:30.064600Z",
+  "run_kind": "integrated",
+  "schema": "tect/foundation-audit/1.0",
+  "scope": {
+    "closed": "Exact coefficient-level obstruction for the declared common-core source-normalised critical route.",
+    "no_new_negative_result": true,
+    "no_pdf": true,
+    "no_tier_change": true,
+    "not_closed": "The full Q3 dynamics, all-bond Trotter limit, actual factorial path expansion, projected Duhamel locality, common alpha, KMS, ground state, gap, continuum, C6, Sector A and Pre-A remain open."
+  },
+  "task_id": "T-054",
+  "verdict": "PASS"
+}

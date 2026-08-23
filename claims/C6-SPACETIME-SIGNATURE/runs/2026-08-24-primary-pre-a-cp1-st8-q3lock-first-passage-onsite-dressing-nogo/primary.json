@@ -1,0 +1,179 @@
+{
+  "assertions": [
+    {
+      "actual": "tect/pre-a-cp1-st8-q3lock-first-passage-onsite-dressing-nogo/1.0",
+      "expected": ".../1.0",
+      "group": "provenance",
+      "name": "schema",
+      "status": "PASS"
+    },
+    {
+      "actual": "EXP-001029",
+      "expected": "EXP-001029",
+      "group": "provenance",
+      "name": "exploration",
+      "status": "PASS"
+    },
+    {
+      "actual": "T-054",
+      "expected": "T-054",
+      "group": "provenance",
+      "name": "task",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "claim nonbearing",
+      "status": "PASS"
+    },
+    {
+      "actual": "51/35",
+      "expected": "51/35",
+      "group": "derivation",
+      "name": "Q3 quartic coefficient",
+      "status": "PASS"
+    },
+    {
+      "actual": "-51*a**4/140 + 51*a**3*q/35 - 153*a**2*q**2/70 + 51*a*q**3/35 - 2*a*r/3",
+      "expected": "Delta_a",
+      "group": "derivation",
+      "name": "shifted potential definition",
+      "status": "PASS"
+    },
+    {
+      "actual": "17*a**5/35 - 68*a**4*q/35 + 102*a**3*q**2/35 - 68*a**2*q**3/35 + 8*a**2*r/9",
+      "expected": "17*a**5/35 - 68*a**4*q/35 + 102*a**3*q**2/35 - 68*a**2*q**3/35 + 8*a**2*r/9",
+      "group": "common-core",
+      "name": "second response identity",
+      "status": "PASS"
+    },
+    {
+      "actual": 5,
+      "expected": 5,
+      "group": "common-core",
+      "name": "leading response degree",
+      "status": "PASS"
+    },
+    {
+      "actual": "17/35",
+      "expected": "17/35",
+      "group": "common-core",
+      "name": "leading coefficient",
+      "status": "PASS"
+    },
+    {
+      "actual": 1,
+      "expected": 1,
+      "group": "Weyl",
+      "name": "source Weyl degree",
+      "status": "PASS"
+    },
+    {
+      "actual": 4,
+      "expected": 4,
+      "group": "normalisation",
+      "name": "degree gap",
+      "status": "PASS"
+    },
+    {
+      "actual": "17/35",
+      "expected": "17/35",
+      "group": "fixture",
+      "name": "fixture coefficient",
+      "status": "PASS"
+    },
+    {
+      "actual": "34000/7",
+      "expected": ">0",
+      "group": "fixture",
+      "name": "fixture ratio positive",
+      "status": "PASS"
+    },
+    {
+      "actual": 4,
+      "expected": 4,
+      "group": "asymptotic",
+      "name": "ratio grows with amplitude",
+      "status": "PASS"
+    },
+    {
+      "actual": 3,
+      "expected": 3,
+      "group": "conditional-operator",
+      "name": "conditional wave-packet response degree",
+      "status": "PASS"
+    },
+    {
+      "actual": "The p^2 source commutator vanishes and the kinetic contribution cannot create an a^5 coefficient in the target p_r commutator; the displayed a^5 term is the exact potential-potential coefficient.",
+      "expected": "a^5 coefficient boundary",
+      "group": "scope",
+      "name": "kinetic boundary recorded",
+      "status": "PASS"
+    },
+    {
+      "actual": 4,
+      "expected": ">=4",
+      "group": "scope",
+      "name": "broader topologies remain open",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "scope",
+      "name": "no tier change",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "scope",
+      "name": "no negative result",
+      "status": "PASS"
+    }
+  ],
+  "derived": {
+    "G": "51/35",
+    "actual_q3_first_passage_closed": false,
+    "all_critical_topologies_rejected": false,
+    "c": "2/3",
+    "common_alpha_closed": false,
+    "critical_linear_source_route_closed": false,
+    "degree_gap": 4,
+    "fixture_amplitude": "10",
+    "fixture_ratio": "34000/7",
+    "g": "3/5",
+    "lambda": "2/7",
+    "leading_coefficient": "17/35",
+    "response_degree": 5,
+    "source_degree": 1
+  },
+  "exploration_id": "EXP-001029",
+  "failed": 0,
+  "formulae": {
+    "conditional_wave_packet_lower_order": "a^3",
+    "delta": "-51*a**4/140 + 51*a**3*q/35 - 153*a**2*q**2/70 + 51*a*q**3/35 - 2*a*r/3",
+    "response": "17*a**5/35 - 68*a**4*q/35 + 102*a**3*q**2/35 - 68*a**2*q**3/35 + 8*a**2*r/9",
+    "source_commutator": "a W_a"
+  },
+  "passed": 19,
+  "provenance": {
+    "manifest": "strategy/pre-a-cp1-st8-q3lock-first-passage-onsite-dressing-nogo-manifest.json",
+    "manifest_sha256": "fdd77c829320ec4db2ade8683342b3169c81f39bd265a52c1f887b1333f0811b",
+    "script": "codes/foundations/pre_a_cp1_st8_q3lock_first_passage_onsite_dressing_nogo.py",
+    "script_sha256": "8f8056425e27e8e367be78cdfd27ca4b6dd1e68bfdffdd29a8463b655f595997"
+  },
+  "run_kind": "primary",
+  "schema": "tect/foundation-audit/1.0",
+  "scope": {
+    "closed": "Exact coefficient-level obstruction for the declared common-core source-normalised critical route.",
+    "no_new_negative_result": true,
+    "no_pdf": true,
+    "no_tier_change": true,
+    "not_closed": "The full Q3 dynamics, all-bond Trotter limit, actual factorial path expansion, projected Duhamel locality, common alpha, KMS, ground state, gap, continuum, C6, Sector A and Pre-A remain open."
+  },
+  "total": 19,
+  "verdict": "PASS"
+}

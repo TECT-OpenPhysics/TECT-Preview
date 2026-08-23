@@ -1,0 +1,58 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001029",
+  "title": "Scoped common-core obstruction for an onsite-dressed first-passage coefficient",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-FIRST-PASSAGE-BACKBONE-REAL-TIME-PRODUCT-AND-ENERGY-TAIL-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "prior_exploration_id": "EXP-001028",
+  "related": [{"id": "EXP-001028", "relation": "continues"}],
+  "recorded_at": "2026-08-24T10:30:00Z",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-08-24",
+  "provenance": "contemporaneous",
+  "question": "Can the exact Q3 onsite-plus-one-spatial-bond second response coefficient be bounded uniformly by a source Weyl position seminorm that grows only linearly in the translation amplitude?",
+  "method": [
+    "Restrict the coefficient calculation to the declared polynomial CCR common core and the leading scalar source-degree slice, with the seven other internal Q3 coordinates set to zero.",
+    "Use the onsite coefficient G=g+3 lambda, the harmonic bond -c q r, the Weyl identity [q,W_a]=a W_a, and the exact potential-potential derivative to expose the source and response degrees.",
+    "Check the symbolic identity, the degree gap, and the fixture ratio in independent SymPy and Fraction lanes.",
+    "Compile Lean R213 only for the rational polynomial identity, leading coefficient, and finite fixture arithmetic."
+  ],
+  "finding": "Primary passes 19/19 and independent passes 17/17; the integrated lane passes 24/24 and Lean R213 passes. The exact response is cG a^5/2 - 2cG q a^4 + 3cG q^2 a^3 + (-2cG q^3 + 2c^2 r) a^2, while [q,W_a]=a W_a. For g=3/5, lambda=2/7, c=2/3, chi=7/4, G=51/35, the leading coefficient is 17/35 and the source-normalised ratio grows as (17/35) a^4. The declared linear-source first-passage coefficient route is therefore obstructed on this common-core class.",
+  "verdict": "advanced",
+  "decision_reason": "This is an exact scoped route obstruction that removes one-sided critical energy normalisations with only linear source growth. It is not a no-go for analytic/Frechet, state-weighted, symmetric, or projected-Duhamel topologies, and it does not derive the actual Q3 factorial expansion.",
+  "adversarial_review": [
+    {"axis": "Q3 slice scope", "check": "Only the leading scalar source-degree slice is used; no invariant full Q3 dynamics is inferred.", "disposition": "UPHELD"},
+    {"axis": "kinetic boundary", "check": "The source kinetic commutator is zero and kinetic terms cannot create the displayed a^5 coefficient in the target p_r commutator.", "disposition": "UPHELD"},
+    {"axis": "coefficient-to-norm promotion", "check": "The exact identity is not silently promoted to a representation-independent norm theorem; the wave-packet consequence remains conditional.", "disposition": "UPHELD"},
+    {"axis": "topology coverage", "check": "Only the linear-source one-sided critical normalisation is removed; analytic/Frechet and state-weighted alternatives remain open.", "disposition": "UPHELD"},
+    {"axis": "Lean promotion", "check": "R213 checks rational polynomial identities and fixture arithmetic only.", "disposition": "UPHELD"},
+    {"axis": "QFT-to-TECT promotion", "check": "No heat_root_incidence or A1/R-192 production owner is supplied.", "disposition": "UPHELD"}
+  ],
+  "evidence_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-first-passage-onsite-dressing-nogo-manifest.json#exact_identity",
+    "strategy/pre-a-cp1-st8-q3lock-first-passage-onsite-dressing-nogo-certificate-260824.md#Finding",
+    "codes/foundations/pre_a_cp1_st8_q3lock_first_passage_onsite_dressing_nogo.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_first_passage_onsite_dressing_nogo_independent.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_first_passage_onsite_dressing_nogo_verify.py#main",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-24-primary-pre-a-cp1-st8-q3lock-first-passage-onsite-dressing-nogo/primary.json#assertions",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-24-primary-pre-a-cp1-st8-q3lock-first-passage-onsite-dressing-nogo/independent.json#assertions",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-24-primary-pre-a-cp1-st8-q3lock-first-passage-onsite-dressing-nogo/integrated.json#assertions",
+    "verification/lean/Tect/R213.lean#shifted_response_identity",
+    "verification/lean/registry.json#entrypoints"
+  ],
+  "formal_refs": {"events": [], "negatives": [], "results": []},
+  "formal_integration": {"events": [], "negatives": [], "results": [], "no_new_result": true, "no_new_negative": true, "no_pdf": true},
+  "qft_interface": {
+    "closed": "Only the scoped common-core coefficient obstruction for the linear-source one-sided critical route.",
+    "open": "Actual Q3 recurrence, factorial first-passage expansion, two-orientation response, projected Duhamel locality, exhaustion Cauchy, common alpha, KMS, ground/gap, continuum, C6 and Pre-A remain open.",
+    "tect_boundary": "No heat_root_incidence or A1/R-192 TECT production owner is supplied by this QFT-side audit."
+  },
+  "boundary": "T0 claim-nonbearing route checkpoint. It does not prove Q3 dynamics, a thermodynamic QFT, C6, Sector A, Pre-A, TECT production, or a Clay result.",
+  "next_action": "Test a source-weighted analytic/Frechet or state-weighted topology whose declared growth absorbs the a^5 coefficient, then require a genuine two-orientation volume-uniform recurrence before any QFT interface promotion."
+}
