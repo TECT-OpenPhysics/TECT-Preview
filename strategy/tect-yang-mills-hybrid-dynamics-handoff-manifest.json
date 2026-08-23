@@ -1,0 +1,49 @@
+{
+  "schema": "tect/hybrid-lane-handoff/1.0",
+  "id": "HYB-TECT-YM-DYN-0001",
+  "status": "candidate_only",
+  "evidence_role": "T0_strategy_and_falsification_contract",
+  "parent_interface": "IF-TECT-YM-0001",
+  "claim_ids": [
+    "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
+  ],
+  "candidate_action": "S_hyb[A,Psi]=S_YM[A]+S_TECT[Psi;D_A]+S_int[A,Psi]",
+  "candidate_quadratic_operator": "K_A=mu2+Y*(-D_A^2-q0^2)^2",
+  "required_reductions": [
+    "gauge-off or zero-coupling limit reproduces the hash-pinned TECT functional",
+    "frozen or decoupled Psi limit reproduces the declared regulated Yang-Mills model or an explicitly weaker effective-gauge model"
+  ],
+  "gates": [
+    "HYB-00-OWNER-FREEZE",
+    "HYB-01-EXACT-PARENT-REDUCTIONS",
+    "HYB-02-GAUGE-CONSISTENCY",
+    "HYB-03-FINITE-REGULATOR-STABILITY",
+    "HYB-04-FINITE-DYNAMICS",
+    "HYB-05-A13-PRODUCTION-OWNER-CROSSWALK",
+    "HYB-06-OBSERVABLE-BRIDGE",
+    "HYB-07-CONTROLLED-LIMIT-PROGRAM"
+  ],
+  "a13_required_fields": [
+    "heat_root_incidence",
+    "root_filtration",
+    "conditional_replicas",
+    "raw_current_spatial_intertwiner",
+    "once_owned_nonnegative_q_ledger"
+  ],
+  "early_stop_conditions": [
+    "either parent limit is recovered only by renaming or dropping unmatched terms",
+    "the gauge-invariant physical observable class is absent",
+    "a stochastic or gradient-flow time is identified with physical time without reconstruction",
+    "the finite-regulator energy is unbounded without a controlled prescription",
+    "static covariance or support preservation is substituted for the A13 production owner"
+  ],
+  "first_trial_scope": "one minimal finite-regulator model; HYB-00 through HYB-04 only",
+  "non_claims": [
+    "not a TECT theorem",
+    "not a Yang-Mills theorem",
+    "not a pure Yang-Mills mass-gap result",
+    "not an A13, Sector-A, Pre-A, physical-empty, OS/KMS, thermodynamic or continuum closure"
+  ],
+  "handoff_note": "strategy/tect-yang-mills-hybrid-dynamics-handoff-260823.md",
+  "recorded_on": "2026-08-23"
+}

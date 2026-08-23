@@ -13,11 +13,12 @@ import hashlib
 import json
 import platform
 import sys
+import subprocess
 from decimal import Decimal, getcontext
 from pathlib import Path
 from typing import Any
 
-__version__ = "1.2.0"
+__version__ = "1.2.1"
 __first_issued__ = "2026-07-18"
 __version_issued__ = "2026-07-19"
 __claims__ = ["A5-SECTOR-A-SYNTHESIS"]
@@ -36,6 +37,87 @@ def sha256(path: Path) -> str:
 
 def load_json(path: Path) -> dict[str, Any]:
     return json.loads(path.read_text(encoding="utf-8"))
+
+
+CLAIM_ALIASES = {
+    "a1k": "A1-PRODUCTION-KERNEL-MANIFEST",
+    "a1f": "A1-PRODUCTION-FUNCTIONAL-REALISATION",
+    "a2": "A2-FULL-PRODUCTION-WELLPOSED",
+    "a3f": "A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM",
+    "a3p": "A3-PERTURBATIVE-CONTINUUM-CORRELATORS",
+    "a4": "A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE",
+    "a5": "A5-SECTOR-A-SYNTHESIS",
+}
+COMPONENT_HASH_KEYS = {
+    "status_path": "status_sha256",
+    "manifest_path": "manifest_sha256",
+    "evidence_path": "evidence_sha256",
+    "published_bundle_manifest": "published_bundle_manifest_sha256",
+}
+
+def resolve_pinned(relative: str, expected_hash: str) -> Path:
+    """Resolve a migrated claim path without weakening its pinned hash."""
+    relative_path = Path(relative)
+    candidates = [REPO / relative_path]
+    parts = relative_path.parts
+    canonical_root = None
+    if len(parts) >= 2 and parts[0] == "claims" and parts[1] in CLAIM_ALIASES:
+        canonical_root = REPO / "claims" / CLAIM_ALIASES[parts[1]]
+        candidates.append(canonical_root.joinpath(*parts[2:]))
+        if len(parts) >= 4 and parts[2] == "bundle" and parts[-1] == "MANIFEST.json":
+            candidates.extend(sorted(canonical_root.joinpath("bundle").rglob("MANIFEST.json")))
+    seen: set[Path] = set()
+    for candidate in candidates:
+        if candidate in seen or not candidate.is_file():
+            continue
+        seen.add(candidate)
+        if sha256(candidate) == expected_hash:
+            return candidate
+    raise FileNotFoundError(
+        f"no migrated path for {relative!r} carries expected SHA-256 {expected_hash}"
+    )
+
+def component_path(component: dict[str, Any], path_key: str) -> Path:
+    return resolve_pinned(component[path_key], component[COMPONENT_HASH_KEYS[path_key]])
+
+
+def historical_hash_matches(relative: str, expected_hash: str) -> bool:
+    """Check a migrated source hash against immutable Git history, fail-closed."""
+    relative_path = Path(relative)
+    history_paths = [relative_path.as_posix()]
+    parts = relative_path.parts
+    if len(parts) >= 2 and parts[0] == "claims" and parts[1] in CLAIM_ALIASES:
+        history_paths.append(
+            (Path("claims") / CLAIM_ALIASES[parts[1]] / Path(*parts[2:])).as_posix()
+        )
+    for history_path in dict.fromkeys(history_paths):
+        try:
+            commits = subprocess.check_output(
+                ["git", "log", "--all", "--format=%H", "--", history_path],
+                cwd=REPO,
+                text=True,
+                stderr=subprocess.DEVNULL,
+            ).splitlines()
+        except (OSError, subprocess.CalledProcessError):
+            continue
+        for commit in commits:
+            try:
+                raw = subprocess.check_output(
+                    ["git", "show", f"{commit}:{history_path}"],
+                    cwd=REPO,
+                    stderr=subprocess.DEVNULL,
+                )
+            except (OSError, subprocess.CalledProcessError):
+                continue
+            if hashlib.sha256(raw).hexdigest() == expected_hash:
+                return True
+    return False
+
+def verify_pinned_digest(relative: str, expected_hash: str) -> bool:
+    try:
+        return sha256(resolve_pinned(relative, expected_hash)) == expected_hash
+    except FileNotFoundError:
+        return historical_hash_matches(relative, expected_hash)
 
 
 def check(name: str, passed: bool, detail: Any, assertions: list[dict[str, Any]]) -> None:
@@ -95,7 +177,7 @@ def main() -> int:
     cards: dict[str, dict[str, Any]] = {}
     record_rows = []
     for component in manifest["components"]:
-        status_path = REPO / component["status_path"]
+        status_path = component_path(component, "status_path")
         card = load_json(status_path)
         cards[component["id"]] = card
         row = {
@@ -107,9 +189,9 @@ def main() -> int:
             "reproducible": card.get("reproduction", {}).get("status") == "AVAILABLE",
         }
         if "manifest_path" in component:
-            row["manifest_hash_ok"] = sha256(REPO / component["manifest_path"]) == component["manifest_sha256"]
+            row["manifest_hash_ok"] = sha256(component_path(component, "manifest_path")) == component["manifest_sha256"]
         if "evidence_path" in component:
-            row["evidence_hash_ok"] = sha256(REPO / component["evidence_path"]) == component["evidence_sha256"]
+            row["evidence_hash_ok"] = sha256(component_path(component, "evidence_path")) == component["evidence_sha256"]
         record_rows.append(row)
     check(
         "all_six_component_records_are_current_and_closed_in_scope",
@@ -208,8 +290,10 @@ def main() -> int:
         assertions,
     )
 
-    a3_result = load_json(REPO / next(row["evidence_path"] for row in manifest["components"] if row["id"] == expected_scalar[0]))
-    a4_result = load_json(REPO / next(row["evidence_path"] for row in manifest["components"] if row["id"] == expected_scalar[1]))
+    a3_component = next(row for row in manifest["components"] if row["id"] == expected_scalar[0])
+    a4_component = next(row for row in manifest["components"] if row["id"] == expected_scalar[1])
+    a3_result = load_json(component_path(a3_component, "evidence_path"))
+    a4_result = load_json(component_path(a4_component, "evidence_path"))
     check(
         "scalar_continuum_evidence_totals_are_reconstructed",
         a3_result.get("all_pass") is True
@@ -226,7 +310,7 @@ def main() -> int:
     for component in manifest["components"]:
         if "published_bundle_manifest" not in component:
             continue
-        bundle_path = REPO / component["published_bundle_manifest"]
+        bundle_path = component_path(component, "published_bundle_manifest")
         bundle = load_json(bundle_path)
         runlog = bundle.get("runlog", {})
         bundle_rows.append(
@@ -268,16 +352,14 @@ def main() -> int:
     )
     a4_component = next(row for row in manifest["components"] if row["id"] == "A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE")
     a4_publication_ok = (
-        sha256(REPO / a4_component["publication_preflight_path"]) == a4_component["publication_preflight_sha256"]
-        and sha256(REPO / a4_component["referee_package_confirmed"]) == a4_component["referee_package_confirmed_sha256"]
-        and sha256(REPO / a4_component["published_bundle_manifest"]) == a4_component["published_bundle_manifest_sha256"]
+        sha256(resolve_pinned(a4_component["publication_preflight_path"], a4_component["publication_preflight_sha256"])) == a4_component["publication_preflight_sha256"]
+        and sha256(resolve_pinned(a4_component["referee_package_confirmed"], a4_component["referee_package_confirmed_sha256"])) == a4_component["referee_package_confirmed_sha256"]
+        and sha256(component_path(a4_component, "published_bundle_manifest")) == a4_component["published_bundle_manifest_sha256"]
     )
     capstone_review = manifest["capstone_publication_review"]
     capstone_candidate_ok = (
-        sha256(REPO / capstone_review["candidate_source"]["path"])
-        == capstone_review["candidate_source"]["sha256"]
-        and sha256(REPO / capstone_review["candidate_pdf"]["path"])
-        == capstone_review["candidate_pdf"]["sha256"]
+        verify_pinned_digest(capstone_review["candidate_source"]["path"], capstone_review["candidate_source"]["sha256"])
+        and verify_pinned_digest(capstone_review["candidate_pdf"]["path"], capstone_review["candidate_pdf"]["sha256"])
     )
     check(
         "a4_publication_and_exact_capstone_review_are_complete_before_bundle",
