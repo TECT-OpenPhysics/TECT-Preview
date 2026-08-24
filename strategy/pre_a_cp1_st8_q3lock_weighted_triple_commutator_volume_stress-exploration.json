@@ -1,0 +1,74 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001088",
+  "title": "Actual-Q3 weighted triple-commutator volume stress for the projected D-delta-D route",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-ENERGY-WEIGHTED-COMMUTATOR-GEVREY-LR-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "question": "Does the declared s=3/4 support-local or full-volume energy weight give a volume-uniform two-sided weighted bound for the actual Q3 modular triple commutator [H,[W_L,[H,A_2]]] before promotion to direct D,delta-D Cauchy?",
+  "method": [
+    "Construct the actual finite Q3 Hamiltonian at oscillator dimension three on the target edge, square face, and 2x3 rectangular grid.",
+    "Use A_2=exp(i*(q_0+q_1)/(3*hbar)) and replace only bond coordinates by the smooth cosine cutoff at radii 0.5, 1.0, and 2.0.",
+    "Evaluate the exact finite identity delta D''(0)=beta/hbar^2*[H,[W_L,[H,A_2]]] and check source and disjoint-tail commutators.",
+    "Measure the four-leg two-sided Gibbs weighted seminorm at exponent s=3/4 for the shifted support-local weight and shifted full-volume weight.",
+    "Rebuild every matrix, thermal state, nested commutator, and weighted leg in an independent lane and cross-check R270 sign, graph, and threshold fixtures.",
+    "Keep finite-dimensional CCR, volume-uniform common-core bounds, positive-time history, direct D/delta-D Cauchy, OS/KMS/GNS, continuum, C6, Sector A, and Pre-A explicitly open."
+  ],
+  "finding": "Primary 65/65, independent 56/56, and integrated 46/46 with Lean R270 PASS. The support-local modular weighted maxima for volumes 2,4,6 are 6.2135874113, 21.1841912659, and 33.9749450217, giving a V6/V2 ratio 5.4678469574. The full-volume maxima are 6.2135874113, 30.4046432745, and 61.8549607811, giving ratio 9.9547904755. The direct weighted D'' maxima also grow (local 2.5613260830, 4.6560548858, 5.7753940867; full 2.5613260830, 6.7717433187, 10.5685520687). Source and disjoint-tail commutators remain below tolerance and the radius-two tail is at the numerical floor.",
+  "verdict": "advanced",
+  "decision_reason": "The finite actual-Q3 algebraic identity and four-leg weighted rows are reproducible, but both declared energy weights show strong finite-volume growth of the modular triple coefficient. This is sufficient to reject promotion of this candidate weight as a volume-uniform multiplier. It is not an asymptotic lower-bound theorem and does not refute every possible local topology or cancellation.",
+  "boundary": "Finite actual-Q3 oscillator matrices, beta=1 Gibbs states, a two-site character, three finite graph volumes, and three coordinate cutoffs only. No source/volume/beta-uniform common-core theorem, modular-domain transfer, positive-time history, direct D or delta-D Cauchy, product/core density, exhaustion independence, group law, common dynamics, KMS/GNS gap, continuum, C6, Sector A, Pre-A, TECT production owner, or Clay result follows.",
+  "next_action": "Derive an analytic local cancellation or alternative weight whose multiplier is proved source/volume-uniform, or prove a lower-bound obstruction for this exact candidate and register that route-specific failure. Do not promote common alpha until the direct D,delta-D gate is closed.",
+  "no_overclaim": "This is a finite weighted triple-commutator stress test and a route-local candidate scaling obstruction only. It is not a no-go theorem for Q3 dynamics, not an OS reconstruction, not a KMS/GNS result, not a mass-gap or continuum result, and not Sector A or Pre-A closure.",
+  "qft_interface": {
+    "closed": "The actual finite Q3 modular companion identity and reproducible weighted diagnostic are closed for the declared finite models.",
+    "open": "A source/volume-uniform weighted common-core estimate, positive-time history, direct D,delta-D Cauchy, exhaustion, Hamiltonian-to-OS identification, KMS/GNS gap, continuum, C6, Sector A, and Pre-A remain open.",
+    "tect_boundary": "No heat_root_incidence or canonical A1/R-192 production owner is supplied."
+  },
+  "evidence_refs": [
+    "strategy/pre_a_cp1_st8_q3lock_weighted_triple_commutator_volume_stress_manifest.json#model",
+    "strategy/pre_a_cp1_st8_q3lock_weighted_triple_commutator_volume_stress-certificate-260825.md#Results",
+    "codes/foundations/pre_a_cp1_st8_q3lock_weighted_triple_commutator_volume_stress.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_weighted_triple_commutator_volume_stress_independent.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_weighted_triple_commutator_volume_stress_verify.py#run",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-primary-pre_a_cp1_st8_q3lock_weighted_triple_commutator_volume_stress/primary.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-primary-pre_a_cp1_st8_q3lock_weighted_triple_commutator_volume_stress/independent.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-primary-pre_a_cp1_st8_q3lock_weighted_triple_commutator_volume_stress/integrated.json#lean",
+    "verification/lean/Tect/R270.lean#modular_coefficient_fixture",
+    "verification/lean/registry.json#R270"
+  ],
+  "formal_integration": {
+    "events": [],
+    "results": [],
+    "negatives": [],
+    "lean": "R270 PASS; metadata PASS",
+    "no_new_event": true,
+    "no_new_result": true,
+    "no_new_negative": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "adversarial_review": [
+    {"axis": "nested commutator sign", "check": "Both lanes and R270 check delta D''=beta/hbar^2*[H,[W_L,[H,A_2]]] without a Jacobi reorder.", "disposition": "UPHELD"},
+    {"axis": "configuration locality", "check": "Source and disjoint-tail commutators are explicitly computed in every volume and radius.", "disposition": "UPHELD"},
+    {"axis": "weight positivity", "check": "Local and full weights are shifted spectrally positive before the 3/4 power.", "disposition": "UPHELD"},
+    {"axis": "two-sided norm", "check": "Four left/right and adjoint Gibbs legs are included; no one-sided substitute is used.", "disposition": "UPHELD"},
+    {"axis": "independence", "check": "The independent lane rebuilds oscillator, graph, cutoff, Gibbs state, and nested commutators without importing primary code.", "disposition": "UPHELD"},
+    {"axis": "volume inference", "check": "Ratios use only volumes 2,4,6 and are reported as finite diagnostics, not asymptotic lower bounds.", "disposition": "UPHELD"},
+    {"axis": "truncated CCR", "check": "Finite-dimensional matrix scope is explicit and no exact infinite-core theorem is inferred.", "disposition": "UPHELD"},
+    {"axis": "QFT promotion", "check": "Direct Cauchy, modular domain, common dynamics/KMS, OS/GNS, gap, continuum, C6, Sector A, and Pre-A remain open.", "disposition": "UPHELD"}
+  ],
+  "recorded_at": "2026-08-26T15:00:00Z",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-08-25",
+  "related": [
+    {"id": "EXP-001087", "relation": "continues"},
+    {"id": "EXP-001084", "relation": "continues"},
+    {"id": "EXP-001083", "relation": "continues"}
+  ]
+}
