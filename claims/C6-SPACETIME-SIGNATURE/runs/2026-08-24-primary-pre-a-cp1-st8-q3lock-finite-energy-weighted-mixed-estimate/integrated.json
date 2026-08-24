@@ -1,0 +1,256 @@
+{
+  "assertion_count": 34,
+  "assertions": [
+    {
+      "actual": "['EXP-001082', 'T-054']",
+      "expected": "EXP-001082/T-054",
+      "name": "identity",
+      "pass": true
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "name": "claim nonbearing",
+      "pass": true
+    },
+    {
+      "actual": "['weighted_right_fixture', 'weighted_corrected_fixture', 'commutator_fixture', 'residual_fixture', 'scope_fixture']",
+      "expected": "present",
+      "name": "Lean source",
+      "pass": true
+    },
+    {
+      "actual": "[]",
+      "expected": "none",
+      "name": "Lean forbidden",
+      "pass": true
+    },
+    {
+      "actual": "PRIMARY FINITE-ENERGY-WEIGHTED-MIXED PASS 87/87\n",
+      "expected": "PASS",
+      "name": "primary child",
+      "pass": true
+    },
+    {
+      "actual": "INDEPENDENT FINITE-ENERGY-WEIGHTED-MIXED PASS 47/47\n",
+      "expected": "PASS",
+      "name": "independent child",
+      "pass": true
+    },
+    {
+      "actual": "[87, 47]",
+      "expected": ">0",
+      "name": "positive assertion totals",
+      "pass": true
+    },
+    {
+      "actual": "[[4, 6, 8, 10, 12], [4, 6, 8, 10, 12]]",
+      "expected": "equal",
+      "name": "lane dimensions",
+      "pass": true
+    },
+    {
+      "actual": "[5, 5]",
+      "expected": "5",
+      "name": "lane fixed_radius_energy_multiplier_norms length",
+      "pass": true
+    },
+    {
+      "actual": "[[7.512061877105031, 16.540807777732915, 28.13984069342846, 42.94393959258691, 61.10018793975949], [7.512061877105024, 16.540807777732972, 28.13984069342846, 42.943939592586894, 61.10018793975958]]",
+      "expected": "within 1e-7 relative",
+      "name": "lane fixed_radius_energy_multiplier_norms agreement",
+      "pass": true
+    },
+    {
+      "actual": "[5, 5]",
+      "expected": "5",
+      "name": "lane fixed_radius_coordinate_derivative_norms length",
+      "pass": true
+    },
+    {
+      "actual": "[[12.346465278456773, 17.683560367747575, 26.429814030307035, 36.49120244893141, 47.78027138338887], [12.346465278456765, 17.68356036774764, 26.429814030307025, 36.49120244893143, 47.78027138338888]]",
+      "expected": "within 1e-7 relative",
+      "name": "lane fixed_radius_coordinate_derivative_norms agreement",
+      "pass": true
+    },
+    {
+      "actual": "[5, 5]",
+      "expected": "5",
+      "name": "lane fixed_radius_ccr_residual_norms length",
+      "pass": true
+    },
+    {
+      "actual": "[[22.737831406331914, 44.99542370236788, 76.73455257434948, 119.46376552429058, 174.28868068036942], [22.737831406331907, 44.99542370236796, 76.73455257434945, 119.46376552429054, 174.2886806803695]]",
+      "expected": "within 1e-7 relative",
+      "name": "lane fixed_radius_ccr_residual_norms agreement",
+      "pass": true
+    },
+    {
+      "actual": "[5, 5]",
+      "expected": "5",
+      "name": "lane fixed_radius_unweighted_multiplier_norms length",
+      "pass": true
+    },
+    {
+      "actual": "[[33.26945960664873, 169.78778861401338, 508.6272573110855, 1189.6099295242539, 2381.668693873847], [33.26945960664873, 169.78778861401338, 508.6272573110855, 1189.6099295242539, 2381.668693873847]]",
+      "expected": "within 1e-7 relative",
+      "name": "lane fixed_radius_unweighted_multiplier_norms agreement",
+      "pass": true
+    },
+    {
+      "actual": "[2, 2]",
+      "expected": "equal",
+      "name": "lane n=4 radius count",
+      "pass": true
+    },
+    {
+      "actual": "[{'actual_root': 9.347455074723378, 'commutator_bound_root': 46.72937786794317, 'corrected_bound_margin': 66.88676265811938, 'corrected_bound_root': 76.23421773284277, 'ideal_bound_margin': 33.66998608848787, 'ideal_bound_root': 43.017441163211245, 'k_plus': 2.567090911917083, 'k_zero': 1.5525664715526697, 'left_leg': 2.617617940946516, 'radius': 1.0, 'residual_energy': 22.737831406331914, 'residual_to_coordinate_ratio': 1.8416470539148508, 'right_leg': 8.97346046345593, 'u_energy': 7.512061877105031, 'v_commutator': 14.994905174315173, 'v_coordinate': 12.346465278456773}, {'actual_root': 9.347455074723356, 'commutator_bound_root': 46.72937786794312, 'corrected_bound_root': 76.23421773284265, 'k_plus': 2.567090911917082, 'k_zero': 1.5525664715526677, 'left_leg': 2.617617940946487, 'radius': 1.0, 'residual_energy': 22.737831406331907, 'right_leg': 8.973460463455918, 'u_energy': 7.512061877105024, 'v_commutator': 14.994905174315178, 'v_coordinate': 12.346465278456765}]",
+      "expected": "within 1e-7 relative",
+      "name": "lane n=4 L=1.0",
+      "pass": true
+    },
+    {
+      "actual": "[{'actual_root': 0.5734398472830832, 'commutator_bound_root': 2.916836662504138, 'corrected_bound_margin': 12.629844332406842, 'corrected_bound_root': 13.203284179689925, 'ideal_bound_margin': 6.433098846072642, 'ideal_bound_root': 7.006538693355726, 'k_plus': 2.567090911917083, 'k_zero': 1.5525664715526697, 'left_leg': 0.15482164292784645, 'radius': 1.5, 'residual_energy': 4.022966490145296, 'residual_to_coordinate_ratio': 1.096005716965953, 'right_leg': 0.5521444714322223, 'u_energy': 0.4688512323245223, 'v_commutator': 0.9360982667904152, 'v_coordinate': 3.6705707168042707}, {'actual_root': 0.5734398472830818, 'commutator_bound_root': 2.9168366625041346, 'corrected_bound_root': 13.203284179689895, 'k_plus': 2.567090911917082, 'k_zero': 1.5525664715526677, 'left_leg': 0.15482164292784456, 'radius': 1.5, 'residual_energy': 4.022966490145293, 'right_leg': 0.5521444714322215, 'u_energy': 0.4688512323245217, 'v_commutator': 0.936098266790416, 'v_coordinate': 3.670570716804267}]",
+      "expected": "within 1e-7 relative",
+      "name": "lane n=4 L=1.5",
+      "pass": true
+    },
+    {
+      "actual": "[2, 2]",
+      "expected": "equal",
+      "name": "lane n=6 radius count",
+      "pass": true
+    },
+    {
+      "actual": "[{'actual_root': 13.85142653192776, 'commutator_bound_root': 136.8806341645354, 'corrected_bound_margin': 167.42355482505826, 'corrected_bound_root': 181.27498135698602, 'ideal_bound_margin': 95.849717334456, 'ideal_bound_root': 109.70114386638376, 'k_plus': 3.651393988472768, 'k_zero': 1.7632796631980165, 'left_leg': 2.8408450352404007, 'radius': 1.0, 'residual_energy': 44.99542370236788, 'residual_to_coordinate_ratio': 2.5444776259216133, 'right_leg': 13.556976670893194, 'u_energy': 16.540807777732915, 'v_commutator': 35.410315270625226, 'v_coordinate': 17.683560367747575}, {'actual_root': 13.851426531927768, 'commutator_bound_root': 136.88063416453573, 'corrected_bound_root': 181.27498135698653, 'k_plus': 3.651393988472771, 'k_zero': 1.7632796631980157, 'left_leg': 2.840845035240305, 'radius': 1.0, 'residual_energy': 44.99542370236796, 'right_leg': 13.55697667089322, 'u_energy': 16.540807777732972, 'v_commutator': 35.410315270625254, 'v_coordinate': 17.68356036774764}]",
+      "expected": "within 1e-7 relative",
+      "name": "lane n=6 L=1.0",
+      "pass": true
+    },
+    {
+      "actual": "[{'actual_root': 11.022480115455448, 'commutator_bound_root': 121.45627019811296, 'corrected_bound_margin': 162.43766082267248, 'corrected_bound_root': 173.46014093812792, 'ideal_bound_margin': 94.55594926257083, 'ideal_bound_root': 105.57842937802629, 'k_plus': 3.651393988472768, 'k_zero': 1.7632796631980165, 'left_leg': 2.0855182706553586, 'radius': 1.5, 'residual_energy': 42.0005520384723, 'residual_to_coordinate_ratio': 1.9977622924316878, 'right_leg': 10.823385858333491, 'u_energy': 14.729229193931758, 'v_commutator': 31.258381902976446, 'v_coordinate': 21.023798575830053}, {'actual_root': 11.022480115455451, 'commutator_bound_root': 121.4562701981133, 'corrected_bound_root': 173.46014093812846, 'k_plus': 3.651393988472771, 'k_zero': 1.7632796631980157, 'left_leg': 2.0855182706552564, 'radius': 1.5, 'residual_energy': 42.000552038472414, 'right_leg': 10.823385858333516, 'u_energy': 14.72922919393181, 'v_commutator': 31.25838190297649, 'v_coordinate': 21.023798575830124}]",
+      "expected": "within 1e-7 relative",
+      "name": "lane n=6 L=1.5",
+      "pass": true
+    },
+    {
+      "actual": "[2, 2]",
+      "expected": "equal",
+      "name": "lane n=8 radius count",
+      "pass": true
+    },
+    {
+      "actual": "[{'actual_root': 16.320853878435166, 'commutator_bound_root': 243.66238347084013, 'corrected_bound_margin': 292.1991656157648, 'corrected_bound_root': 308.52001949419997, 'ideal_bound_margin': 171.61656691547847, 'ideal_bound_root': 187.93742079391365, 'k_plus': 3.8231153775455486, 'k_zero': 1.7600396054715826, 'left_leg': 3.597703978932107, 'radius': 1.0, 'residual_energy': 76.73455257434948, 'residual_to_coordinate_ratio': 2.9033330498034555, 'right_leg': 15.919384328585332, 'u_energy': 28.13984069342846, 'v_commutator': 63.09206790244708, 'v_coordinate': 26.429814030307035}, {'actual_root': 16.320853878434704, 'commutator_bound_root': 243.6623834708395, 'corrected_bound_root': 308.52001949419923, 'k_plus': 3.823115377545537, 'k_zero': 1.7600396054715794, 'left_leg': 3.5977039789325502, 'radius': 1.0, 'residual_energy': 76.73455257434945, 'right_leg': 15.91938432858476, 'u_energy': 28.13984069342846, 'v_commutator': 63.09206790244706, 'v_coordinate': 26.429814030307025}]",
+      "expected": "within 1e-7 relative",
+      "name": "lane n=8 L=1.0",
+      "pass": true
+    },
+    {
+      "actual": "[{'actual_root': 14.426501377242475, 'commutator_bound_root': 242.9608210707344, 'corrected_bound_margin': 293.724331846187, 'corrected_bound_root': 308.15083322342946, 'ideal_bound_margin': 173.5195668445742, 'ideal_bound_root': 187.9460682218167, 'k_plus': 3.8231153775455486, 'k_zero': 1.7600396054715826, 'left_leg': 2.142745815024814, 'radius': 1.5, 'residual_energy': 76.50345813754112, 'residual_to_coordinate_ratio': 2.893204757309584, 'right_leg': 14.266484583097991, 'u_energy': 28.13803603848623, 'v_commutator': 62.65351595575725, 'v_coordinate': 26.44246244385494}, {'actual_root': 14.426501377242024, 'commutator_bound_root': 242.9608210707338, 'corrected_bound_root': 308.1508332234287, 'k_plus': 3.823115377545537, 'k_zero': 1.7600396054715794, 'left_leg': 2.1427458150256027, 'radius': 1.5, 'residual_energy': 76.50345813754109, 'right_leg': 14.266484583097418, 'u_energy': 28.138036038486238, 'v_commutator': 62.65351595575724, 'v_coordinate': 26.44246244385494}]",
+      "expected": "within 1e-7 relative",
+      "name": "lane n=8 L=1.5",
+      "pass": true
+    },
+    {
+      "actual": "[2, 2]",
+      "expected": "equal",
+      "name": "lane n=10 radius count",
+      "pass": true
+    },
+    {
+      "actual": "[{'actual_root': 14.935524065175041, 'commutator_bound_root': 358.02446929690103, 'corrected_bound_margin': 430.18230340964925, 'corrected_bound_root': 445.1178274748243, 'ideal_bound_margin': 247.5683063188479, 'ideal_bound_root': 262.50383038402293, 'k_plus': 3.5343855812122658, 'k_zero': 1.7098538969039427, 'left_leg': 3.392415075340288, 'radius': 1.0, 'residual_energy': 119.46376552429058, 'residual_to_coordinate_ratio': 3.2737689499675255, 'right_leg': 14.545150362166309, 'u_energy': 42.94393959258691, 'v_commutator': 100.87356104634961, 'v_coordinate': 36.49120244893141}, {'actual_root': 14.935524065174944, 'commutator_bound_root': 358.0244692969017, 'corrected_bound_root': 445.11782747482516, 'k_plus': 3.534385581212274, 'k_zero': 1.7098538969039463, 'left_leg': 3.3924150753399376, 'radius': 1.0, 'residual_energy': 119.46376552429054, 'right_leg': 14.545150362166291, 'u_energy': 42.943939592586894, 'v_commutator': 100.87356104634956, 'v_coordinate': 36.49120244893143}]",
+      "expected": "within 1e-7 relative",
+      "name": "lane n=10 L=1.0",
+      "pass": true
+    },
+    {
+      "actual": "[{'actual_root': 13.59775305512617, 'commutator_bound_root': 357.83014315265143, 'corrected_bound_margin': 431.5560546988142, 'corrected_bound_root': 445.1538077539404, 'ideal_bound_margin': 248.90561443803134, 'ideal_bound_root': 262.5033674931575, 'k_plus': 3.5343855812122658, 'k_zero': 1.7098538969039427, 'left_leg': 2.0764182963765023, 'radius': 1.5, 'residual_energy': 119.48636128051858, 'residual_to_coordinate_ratio': 3.274364582138236, 'right_leg': 13.438280217597265, 'u_energy': 42.94377124834188, 'v_commutator': 100.74857942622556, 'v_coordinate': 36.491465224221066}, {'actual_root': 13.597753055126049, 'commutator_bound_root': 357.83014315265217, 'corrected_bound_root': 445.1538077539411, 'k_plus': 3.534385581212274, 'k_zero': 1.7098538969039463, 'left_leg': 2.0764182963759286, 'radius': 1.5, 'residual_energy': 119.48636128051851, 'right_leg': 13.438280217597232, 'u_energy': 42.94377124834186, 'v_commutator': 100.74857942622559, 'v_coordinate': 36.49146522422106}]",
+      "expected": "within 1e-7 relative",
+      "name": "lane n=10 L=1.5",
+      "pass": true
+    },
+    {
+      "actual": "[2, 2]",
+      "expected": "equal",
+      "name": "lane n=12 radius count",
+      "pass": true
+    },
+    {
+      "actual": "[{'actual_root': 12.344582278997919, 'commutator_bound_root': 494.56170841190414, 'corrected_bound_margin': 595.5511551745687, 'corrected_bound_root': 607.8957374535667, 'ideal_bound_margin': 330.8178490386521, 'ideal_bound_root': 343.16243131765003, 'k_plus': 3.2546324381189295, 'k_zero': 1.6913262650530874, 'left_leg': 2.972361983912951, 'radius': 1.0, 'residual_energy': 174.28868068036942, 'residual_to_coordinate_ratio': 3.6477122384232006, 'right_leg': 11.981392902310589, 'u_energy': 61.10018793975949, 'v_commutator': 150.15551852256633, 'v_coordinate': 47.78027138338887}, {'actual_root': 12.344582278996423, 'commutator_bound_root': 494.5617084119068, 'corrected_bound_root': 607.8957374535705, 'k_plus': 3.254632438118928, 'k_zero': 1.6913262650531042, 'left_leg': 2.9723619839135162, 'radius': 1.0, 'residual_energy': 174.2886806803695, 'right_leg': 11.981392902308906, 'u_energy': 61.10018793975958, 'v_commutator': 150.15551852256638, 'v_coordinate': 47.78027138338888}]",
+      "expected": "within 1e-7 relative",
+      "name": "lane n=12 L=1.0",
+      "pass": true
+    },
+    {
+      "actual": "[{'actual_root': 11.396102735729912, 'commutator_bound_root': 494.5574751370915, 'corrected_bound_margin': 596.6371615349659, 'corrected_bound_root': 608.0332642706958, 'ideal_bound_margin': 331.7661469003475, 'ideal_bound_root': 343.16224963607743, 'k_plus': 3.2546324381189295, 'k_zero': 1.6913262650530874, 'left_leg': 2.1570590499676445, 'radius': 1.5, 'residual_energy': 174.37483645014123, 'residual_to_coordinate_ratio': 3.6495175443983867, 'right_leg': 11.190096238114464, 'u_energy': 61.10015641681858, 'v_commutator': 150.15287216670345, 'v_coordinate': 47.780243368822184}, {'actual_root': 11.396102735728237, 'commutator_bound_root': 494.5574751370942, 'corrected_bound_root': 608.0332642707, 'k_plus': 3.254632438118928, 'k_zero': 1.6913262650531042, 'left_leg': 2.1570590499682814, 'radius': 1.5, 'residual_energy': 174.37483645014143, 'right_leg': 11.190096238112634, 'u_energy': 61.10015641681865, 'v_commutator': 150.15287216670353, 'v_coordinate': 47.78024336882224}]",
+      "expected": "within 1e-7 relative",
+      "name": "lane n=12 L=1.5",
+      "pass": true
+    },
+    {
+      "actual": "{'finite_ideal_energy_weighted_bound_closed': False, 'weighted_cutoff_uniformity_proved': False, 'exact_ccr_domain_closed': False, 'modular_domain_transfer_closed': False, 'volume_uniform_direct_d_cauchy_closed': False, 'delta_d_cauchy_closed': False, 'actual_q3_four_context_theorem_proved': False, 'actual_q3_factorial_history_proved': False, 'product_core_density_closed': False, 'exhaustion_independence_closed': False, 'group_law_closed': False, 'common_alpha_closed': False, 'hamiltonian_os_identification_closed': False, 'kms_os_closed': False, 'gns_gap_closed': False, 'continuum_closed': False, 'c6_closed': False, 'sector_a_closed': False, 'pre_a_closed': False}",
+      "expected": "successor gates open",
+      "name": "QFT firewall",
+      "pass": true
+    },
+    {
+      "actual": "{'finite_actual_q3_matrix_model_closed': True, 'finite_corrected_energy_weighted_bound_closed': True, 'finite_ideal_energy_weighted_bound_closed': False, 'finite_ccr_residual_measured': True, 'weighted_cutoff_uniformity_proved': False, 'exact_ccr_domain_closed': False, 'modular_domain_transfer_closed': False, 'volume_uniform_direct_d_cauchy_closed': False, 'delta_d_cauchy_closed': False, 'actual_q3_four_context_theorem_proved': False, 'actual_q3_factorial_history_proved': False, 'product_core_density_closed': False, 'exhaustion_independence_closed': False, 'group_law_closed': False, 'common_alpha_closed': False, 'hamiltonian_os_identification_closed': False, 'kms_os_closed': False, 'gns_gap_closed': False, 'continuum_closed': False, 'c6_closed': False, 'sector_a_closed': False, 'pre_a_closed': False, 'no_new_negative_result': True, 'no_tier_change': True, 'no_pdf': True}",
+      "expected": "PASS",
+      "name": "corrected finite scope",
+      "pass": true
+    },
+    {
+      "actual": "{'status': 'PASS', 'command': 'lake env lean Tect/R264.lean', 'returncode': 0, 'output': ''}",
+      "expected": "PASS",
+      "name": "Lean compile",
+      "pass": true
+    }
+  ],
+  "audit_id": "PA-CP1-ST8-Q3LOCK-FINITE-ENERGY-WEIGHTED-MIXED-ESTIMATE",
+  "boundary": {
+    "actual_q3_factorial_history_proved": false,
+    "actual_q3_four_context_theorem_proved": false,
+    "c6_closed": false,
+    "common_alpha_closed": false,
+    "continuum_closed": false,
+    "delta_d_cauchy_closed": false,
+    "exact_ccr_domain_closed": false,
+    "exhaustion_independence_closed": false,
+    "finite_actual_q3_matrix_model_closed": true,
+    "finite_ccr_residual_measured": true,
+    "finite_corrected_energy_weighted_bound_closed": true,
+    "finite_ideal_energy_weighted_bound_closed": false,
+    "gns_gap_closed": false,
+    "group_law_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_os_closed": false,
+    "modular_domain_transfer_closed": false,
+    "no_new_negative_result": true,
+    "no_pdf": true,
+    "no_tier_change": true,
+    "pre_a_closed": false,
+    "product_core_density_closed": false,
+    "sector_a_closed": false,
+    "volume_uniform_direct_d_cauchy_closed": false,
+    "weighted_cutoff_uniformity_proved": false
+  },
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "exploration_id": "EXP-001082",
+  "lean": {
+    "command": "lake env lean Tect/R264.lean",
+    "output": "",
+    "returncode": 0,
+    "status": "PASS"
+  },
+  "provenance": {
+    "independent_sha256": "3ab8f946c715a4b5ec26eaa99c7e0b5da104f49fe92d377df09740e0417467e0",
+    "lean_sha256": "5f797733497db8499d95e60ce600c8ce0d3d7e83e01ed6bc71ce761b3b2f1de7",
+    "manifest_sha256": "32a65960a03d6f332bd6d28dc0fab2e26c5d8f7798e0cfeeaa0a70c09f203ab5",
+    "primary_sha256": "e9a32537941ba6197c24d3cb85c8abc70d6d3b3d6eabed1fb1a39401b6c7271d"
+  },
+  "recorded_at": "2026-08-24T14:52:59.716044Z",
+  "run_kind": "integrated",
+  "schema": "tect/foundation-audit/1.0",
+  "task_id": "T-054",
+  "verdict": "PASS"
+}

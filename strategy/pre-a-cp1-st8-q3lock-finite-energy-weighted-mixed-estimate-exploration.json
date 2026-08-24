@@ -1,0 +1,96 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001082",
+  "exploration_id": "EXP-001082",
+  "prior_exploration_id": "EXP-001081",
+  "task_id": "T-054",
+  "title": "Finite Q3 energy-weighted mixed force-momentum estimate and truncated-CCR boundary",
+  "question": "On the actual finite two-site Q3 oscillator regularization, can the unweighted mixed force-momentum bound be replaced by a two-sided A^(-3/4) energy-weighted factorization, and does the finite data establish a cutoff-uniform weighted constant?",
+  "verdict": "advanced",
+  "provenance": "contemporaneous",
+  "reviewed_on": "2026-08-24",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-FIFTH-ENERGY-MOMENT-AND-MODULAR-CUTOFF-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE",
+    "PA-CP1-ST8-Q3LOCK-FIRST-PASSAGE-BACKBONE-REAL-TIME-PRODUCT-AND-ENERGY-TAIL-CLOSURE",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "method": [
+    "Reuse EXP-001081's actual finite two-site Q3 oscillator, full-H Gibbs state, cosine coordinate cutoff, mixed multiplier M_L and coordinate derivative Mdot_L.",
+    "Set A=I+H-min(spec(H))I and compute A^(3/4), A^(-3/4), u_E, v_E, K_+ and K_0 by the finite spectral theorem.",
+    "Factor M_L p_1 through A^(-3/4) on the right Gibbs leg and retain the exact truncated-CCR residual R_L=p_1M_L-M_Lp_1+i*hbar*Mdot_L on the left leg.",
+    "Check the corrected two-sided bound, the residual-free commutator-derivative version, factorization identities and finite-weight diagnostics for n=4,6,8,10,12 and L=1,1.5.",
+    "Rebuild the complete calculation in an independent lane and compile Lean R264 for the rational corrected/ideal bound fixtures and scope firewall.",
+    "Keep local uniformity, exact CCR/domain transfer, modular locality, history, direct D/delta-D Cauchy, OS/KMS/GNS, gap, continuum, C6, Sector A and Pre-A explicitly open."
+  ],
+  "finding": "The primary lane passes 87/87, the independent lane passes 47/47, and the integrated verifier passes 34/34 with Lean R264 PASS. The finite corrected estimate is valid with an explicit truncated-CCR residual. At fixed L=1, u_E is 7.5120618771, 16.5408077777, 28.1398406934, 42.9439395926 and 61.1001879398 for n=4,6,8,10,12, compared with unweighted norms 33.2694596066, 169.7877886140, 508.6272573111, 1189.6099295243 and 2381.6686938738. The global shifted-H weight improves the finite constants but remains visibly cutoff-growing; the coordinate-derivative and retained residual norms also grow. This is a route-local weighted bridge and a domain-transfer boundary, not a uniformity theorem.",
+  "decision_reason": "The exact finite factorization isolates the part of EXP-001081 that survives without commuting assumptions and exposes the finite CCR/domain term that must vanish or be controlled in the Q3 common-core limit. The independent and Lean lanes prevent a formal residual-free identity from being smuggled into a truncated matrix calculation. The observed global-weight growth prevents promoting this finite diagnostic to the local source/volume-uniform modular estimate required by the projected D,delta-D gate.",
+  "closed": [
+    "finite actual-Q3 matrix model",
+    "finite corrected two-sided A^(-3/4) energy-weighted mixed bound",
+    "finite spectral positivity and factorization checks",
+    "finite commutator-derivative residual-free algebraic bound",
+    "independent numerical reproduction and Lean R264 arithmetic"
+  ],
+  "open": [
+    "local source- and volume-uniform u_E and v_E bounds",
+    "exact CCR/common-core or modular-domain transfer controlling R_L",
+    "weighted cutoff uniformity",
+    "direct D and delta-D Cauchy and first-passage history",
+    "product/core density, exhaustion independence and group law",
+    "common beta-independent alpha and Hamiltonian-to-OS identification",
+    "KMS/GNS, ground state, physical mass gap and continuum",
+    "C6, Sector A, Pre-A and the TECT A1/R-192 production owner"
+  ],
+  "adversarial_review": [
+    {"axis": "noncommuting weight", "check": "No commutation of A with M_L, p_1 or rho is used in the factorization.", "disposition": "UPHELD"},
+    {"axis": "truncated CCR", "check": "R_L is included in the corrected bound and is numerically measured.", "disposition": "UPHELD"},
+    {"axis": "derivative", "check": "Mdot_L and (i/hbar)[p_1,M_L] are computed separately.", "disposition": "UPHELD"},
+    {"axis": "two-sided state", "check": "Both Gibbs seminorm legs and both weighted state factors K_+,K_0 are retained.", "disposition": "UPHELD"},
+    {"axis": "uniformity", "check": "Finite cutoff growth is recorded only as a diagnostic; no asymptotic claim is made.", "disposition": "UPHELD"},
+    {"axis": "independence", "check": "The second numerical lane does not import the primary implementation and agrees within 1e-7 relative tolerance.", "disposition": "UPHELD"},
+    {"axis": "Lean", "check": "R264 proves rational fixtures and scope only; no spectral/QFT theorem is inferred.", "disposition": "UPHELD"},
+    {"axis": "QFT promotion", "check": "All thermodynamic, OS/KMS/GNS, gap, continuum, C6, Sector A and Pre-A gates remain open.", "disposition": "UPHELD"}
+  ],
+  "evidence_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-finite-energy-weighted-mixed-estimate-manifest.json#model",
+    "strategy/pre-a-cp1-st8-q3lock-finite-energy-weighted-mixed-estimate-manifest.json#scope",
+    "strategy/pre-a-cp1-st8-q3lock-finite-energy-weighted-mixed-estimate-certificate-260824.md#Finding",
+    "codes/foundations/pre_a_cp1_st8_q3lock_finite_energy_weighted_mixed_estimate.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_finite_energy_weighted_mixed_estimate_independent.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_finite_energy_weighted_mixed_estimate_verify.py#main",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-24-primary-pre-a-cp1-st8-q3lock-finite-energy-weighted-mixed-estimate/primary.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-24-primary-pre-a-cp1-st8-q3lock-finite-energy-weighted-mixed-estimate/independent.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-24-primary-pre-a-cp1-st8-q3lock-finite-energy-weighted-mixed-estimate/integrated.json#lean",
+    "verification/lean/Tect/R264.lean#weighted_corrected_fixture",
+    "verification/lean/registry.json#R264"
+  ],
+  "formal_integration": {
+    "events": [],
+    "results": [],
+    "negatives": [],
+    "lean": "R264 PASS; metadata pending regeneration",
+    "no_new_event": true,
+    "no_new_result": true,
+    "no_new_negative": true,
+    "no_pdf": true,
+    "no_tier_change": true
+  },
+  "qft_interface": {
+    "closed": "Finite actual-Q3 corrected energy-weighted mixed force-momentum estimate with explicit finite-CCR residual and independent Lean cross-check.",
+    "open": "A local source/volume/cutoff/beta-uniform modular-domain estimate, direct D/delta-D Cauchy, history, exhaustion, common alpha, Hamiltonian-to-OS identification, KMS/GNS gap, continuum, C6, Sector A and Pre-A remain open.",
+    "tect_boundary": "No heat_root_incidence or canonical A1/R-192 production owner is supplied."
+  },
+  "boundary": "T0 claim-nonbearing finite QFT-facing weighted estimate. It does not close the residual-free Q3 common-core theorem or any thermodynamic/QFT/Clay obligation.",
+  "next_action": "Prove a local source- and volume-uniform bound for u_E, v_E and the residual/domain transfer on the actual Q3 common core, or construct a genuine scaling obstruction before entering the direct D,delta-D history gate.",
+  "no_overclaim": "This package is not a residual-free ideal Q3 theorem, an all-time projected D/delta-D theorem, an OS reconstruction, a KMS/GNS result, a mass-gap proof, a continuum result, a C6/Sector-A/Pre-A result, a TECT production map or a Clay result.",
+  "related": [
+    {"id": "EXP-001081", "relation": "continues"},
+    {"id": "EXP-001080", "relation": "continues"},
+    {"id": "EXP-001079", "relation": "alternative_to"},
+    {"id": "EXP-001061", "relation": "continues"}
+  ],
+  "recorded_at": "2026-08-26T09:00:00Z"
+}

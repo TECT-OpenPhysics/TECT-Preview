@@ -1,0 +1,107 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "exploration_id": "EXP-001082",
+  "prior_exploration_id": "EXP-001081",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "claim_bearing": false,
+  "tier": "T0",
+  "title": "Finite Q3 energy-weighted mixed force-momentum estimate and truncated-CCR boundary",
+  "question": "On the actual finite two-site Q3 oscillator regularization, can the unweighted mixed force-momentum bound be replaced by a two-sided A^(-3/4) energy-weighted factorization, and does the finite data establish a cutoff-uniform weighted constant?",
+  "authority_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-finite-mixed-force-momentum-multiplier-estimate-manifest.json#model",
+    "strategy/pre-a-cp1-st8-q3lock-finite-structured-cutoff-orbit-modular-derivative-manifest.json#model",
+    "strategy/pre-a-cp1-st8-q3lock-dual-state-fifth-moment-modular-cutoff-obstruction-manifest.json#matrix_family",
+    "strategy/pre-a-cp1-st8-q3lock-hamiltonian-os-tangent-transport-generator-route-split-manifest.json#general_wstar_bridge"
+  ],
+  "model": {
+    "hamiltonian": "H=sum_x p_x^2/(2 chi)+r(q_1^2+q_2^2)/2+g(q_1^4+q_2^4)/4+B(q_1,q_2)",
+    "bond": "B(q,v)=c*(q-v)^2/2+lambda*(q-v)^2*(q^2+v^2)/4",
+    "force": "F=partial_q B",
+    "tail": "W_L=B-B_L for the declared cosine spectral coordinate cutoff",
+    "mixed_multiplier": "M_L=W_L*F; Mdot_L=partial_q(W_L*F)",
+    "energy_weight": "A=I+H-min(spec(H))*I, so A is finite positive and A^(-3/4) is defined spectrally",
+    "weighted_constants": "u_E=||M_L A^(-3/4)||, v_E=||Mdot_L A^(-3/4)||, K_+=||A^(3/4)p_1 rho^(1/2)||_2, K_0=||A^(3/4)rho^(1/2)||_2",
+    "finite_ccr_residual": "R_L=p_1 M_L-M_L p_1+i*hbar*Mdot_L",
+    "corrected_bound": "N_(rho,#)(M_L p_1)^2 <= (u_E*K_+)^2+(u_E*K_+ + hbar*v_E*K_0 + ||R_L A^(-3/4)||*K_0)^2",
+    "ideal_bound": "When R_L=0, the corrected bound reduces to the two-sided energy-weighted modular-domain estimate proposed for the Q3 core."
+  },
+  "finite_fixture": {
+    "n_values": [4, 6, 8, 10, 12],
+    "radius_values": [1.0, 1.5],
+    "scaling_radius": 1.0,
+    "beta": 1.0,
+    "chi": 1.0,
+    "hbar": 1.0,
+    "r": -1.0,
+    "g": 0.6,
+    "c": 1.0,
+    "lambda": 0.1,
+    "bound_tolerance": 1.0e-8,
+    "factorization_tolerance": 1.0e-8,
+    "lane_tolerance": 1.0e-7,
+    "positive_tolerance": 1.0e-10
+  },
+  "scope": {
+    "finite_actual_q3_matrix_model_closed": true,
+    "finite_corrected_energy_weighted_bound_closed": true,
+    "finite_ideal_energy_weighted_bound_closed": false,
+    "finite_ccr_residual_measured": true,
+    "weighted_cutoff_uniformity_proved": false,
+    "exact_ccr_domain_closed": false,
+    "modular_domain_transfer_closed": false,
+    "volume_uniform_direct_d_cauchy_closed": false,
+    "delta_d_cauchy_closed": false,
+    "actual_q3_four_context_theorem_proved": false,
+    "actual_q3_factorial_history_proved": false,
+    "product_core_density_closed": false,
+    "exhaustion_independence_closed": false,
+    "group_law_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_os_closed": false,
+    "gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "scaling_boundary": {
+    "diagnostic": "At fixed radius L=1, the finite global-weight constants u_E and v_E are recorded across n=4,6,8,10,12.",
+    "meaning": "The global shifted-H weight improves the finite bound but is not a local, volume-uniform modular estimate by itself.",
+    "not_claimed": "Finite growth or improvement is not an asymptotic theorem and neither proves nor refutes a local energy-weighted Q3 bound."
+  },
+  "adversarial_review": [
+    {"axis": "operator factorization", "check": "The right leg is factored through A^(-3/4) and A^(3/4) without assuming that A commutes with M, p or rho.", "disposition": "UPHELD"},
+    {"axis": "truncated CCR", "check": "The finite oscillator does not satisfy exact CCR; the residual R_L is retained in the corrected bound rather than silently set to zero.", "disposition": "UPHELD"},
+    {"axis": "coordinate derivative", "check": "Mdot_L is differentiated in the joint commuting coordinate basis and is kept distinct from the finite commutator derivative.", "disposition": "UPHELD"},
+    {"axis": "two-sided state", "check": "Both Gibbs seminorm legs are included, with K_+ and K_0 computed from the same full-H Gibbs state.", "disposition": "UPHELD"},
+    {"axis": "weight positivity", "check": "A=I+H-min(H)I has spectrum at least one, so all fractional powers are finite and unambiguous.", "disposition": "UPHELD"},
+    {"axis": "uniformity", "check": "The finite dimensions are a diagnostic only; no cutoff, volume, source or beta uniformity is inferred.", "disposition": "UPHELD"},
+    {"axis": "independent lane", "check": "The second script reconstructs the oscillator, Q3 matrices, Gibbs state, coordinate derivative and weighted constants without importing the primary lane.", "disposition": "UPHELD"},
+    {"axis": "Lean", "check": "R264 checks the rational corrected/ideal bound algebra and scope firewall only; it does not formalize matrix spectral calculus or QFT limits.", "disposition": "UPHELD"},
+    {"axis": "QFT promotion", "check": "Direct D and delta-D Cauchy, modular-domain transfer, history, OS/KMS/GNS, gap, continuum, C6, Sector A and Pre-A remain open.", "disposition": "UPHELD"}
+  ],
+  "formal_integration": {
+    "lean_entry": "verification/lean/Tect/R264.lean",
+    "result_ids": [],
+    "negative_ids": [],
+    "changelog_event": null
+  },
+  "qft_interface": {
+    "closed": "A finite actual-Q3 corrected energy-weighted mixed force-momentum estimate with explicit finite-CCR residual, plus the ideal residual-free formula as a named modular-domain target.",
+    "open": "A local energy/modular weight with source-, volume-, cutoff- and beta-uniform constants, residual/domain transfer, direct D/delta-D Cauchy, history, exhaustion, common alpha, Hamiltonian-to-OS identification, KMS/GNS gap, continuum, C6, Sector A and Pre-A remain open.",
+    "tect_boundary": "No heat_root_incidence or canonical A1/R-192 production owner is supplied."
+  },
+  "boundary": "T0 claim-nonbearing finite QFT-facing energy-weighted mixed estimate. The corrected finite bound does not close the ideal modular-domain or thermodynamic route.",
+  "next_action": "Prove a local source- and volume-uniform bound for u_E, v_E and the finite-CCR/domain residual on the actual Q3 common core, or construct a genuine scaling obstruction before using the ideal formula in the direct D,delta-D history gate.",
+  "verification": {
+    "primary_script": "codes/foundations/pre_a_cp1_st8_q3lock_finite_energy_weighted_mixed_estimate.py",
+    "independent_script": "codes/foundations/pre_a_cp1_st8_q3lock_finite_energy_weighted_mixed_estimate_independent.py",
+    "integrated_script": "codes/foundations/pre_a_cp1_st8_q3lock_finite_energy_weighted_mixed_estimate_verify.py"
+  },
+  "no_overclaim": "This package is not an ideal residual-free Q3 core theorem, an all-time projected D/delta-D theorem, an OS reconstruction, a KMS/GNS result, a mass-gap proof, a continuum result, a C6/Sector-A/Pre-A result, a TECT production map or a Clay result."
+}
