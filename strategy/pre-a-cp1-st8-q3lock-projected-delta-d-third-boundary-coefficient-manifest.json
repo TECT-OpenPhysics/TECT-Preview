@@ -1,0 +1,145 @@
+{
+  "schema": "tect/pre-a-cp1-st8-q3lock-projected-delta-d-third-boundary-coefficient/1.0",
+  "exploration_id": "EXP-001073",
+  "prior_exploration_id": "EXP-001058",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "tier": "T0",
+  "claim_bearing": false,
+  "title": "Second nonzero projected D-delta-D boundary Taylor coefficient",
+  "question": "For a local configuration character and one neighboring canonical Q3 bond, what is the exact third generator difference after the first nonzero second-order coefficient, and what operator degrees must a positive-time orbit estimate control?",
+  "authority_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-projected-delta-d-boundary-taylor-coefficient-manifest.json#model",
+    "strategy/pre-a-cp1-st8-q3lock-canonical-energy-quartic-weight-coercivity-manifest.json#coercive_bound",
+    "strategy/pre-a-cp1-st8-q3lock-fixed-beta-two-sided-duhamel-remainder-bridge-manifest.json#finite_time_theorem"
+  ],
+  "model": {
+    "hamiltonians": "H_0=p_q^2/(2*chi)+V_0(q,v), H_1=H_0+B(q,v), where V_0 is a configuration multiplier",
+    "bond": "B(q,v)=c*(q-v)^2/2 + lambda*(q-v)^2*(q^2+v^2)/4",
+    "character": "W_a(q)=exp(i*a*q/hbar)",
+    "derivation": "L_H(X)=i*[H,X]/hbar on the finite polynomial CCR core",
+    "boundary_difference": "D(t)=exp(t*L_1)(W_a)-exp(t*L_0)(W_a)",
+    "first_difference": "D'(0)=0 because B and W_a are configuration multipliers",
+    "second_difference": "D''(0)=-(i*a/(chi*hbar))*W_a*F, F=partial_q B",
+    "third_difference": "D'''(0)=W_a*(A_1(q,v)*partial_q+A_0(q,v))",
+    "force": "F=partial_q B",
+    "coefficient_form": "A_1=-a*F'/(chi^2)-3*i*a^2*F/(chi^2*hbar); A_0=-a*F''/(2*chi^2)-2*i*a^2*F'/(chi^2*hbar)+3*a^3*F/(2*chi^2*hbar^2)",
+    "degree": "F has degree 3, F' degree 2 and F'' degree 1; the third coefficient contains a first-order momentum term with cubic Q3 force coefficient"
+  },
+  "finite_fixture": {
+    "chi": "1",
+    "hbar": "1",
+    "c": "1",
+    "lambda": "1/10",
+    "character_amplitude": "1/4",
+    "field_values": ["-2", "-1", "0", "1", "2", "3"],
+    "source_radius": "1/4",
+    "grid_points": 36,
+    "selected_q": "3",
+    "selected_v": "-2",
+    "derived_selected_force": "12",
+    "derived_selected_force_first_derivative": "59/10",
+    "derived_selected_force_second_derivative": "12/5",
+    "derived_selected_A1_real": "-59/40",
+    "derived_selected_A1_imaginary": "-9/4",
+    "derived_selected_A0_real": "-3/160",
+    "derived_selected_A0_imaginary": "-59/80",
+    "derived_abs_A1_real_ceiling": "59/40",
+    "derived_abs_A1_imaginary_ceiling": "9/4",
+    "derived_abs_A0_real_ceiling": "9/80",
+    "derived_abs_A0_imaginary_ceiling": "59/80",
+    "derived_force_degree": 3,
+    "derived_A1_degree": 3,
+    "derived_A0_degree": 3
+  },
+  "scope": {
+    "first_generator_difference_zero": true,
+    "second_generator_difference_exact_reused": true,
+    "third_generator_difference_exact": true,
+    "third_coefficient_operator_form_closed": true,
+    "finite_grid_component_bounds_closed": true,
+    "evolved_force_uniform_closed": false,
+    "modular_domain_closed": false,
+    "actual_q3_four_context_theorem_proved": false,
+    "actual_q3_factorial_history_proved": false,
+    "all_time_projected_d_duhamel_cauchy_closed": false,
+    "volume_uniform_direct_d_cauchy_closed": false,
+    "delta_d_cauchy_closed": false,
+    "product_core_density_closed": false,
+    "exhaustion_independence_closed": false,
+    "group_law_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_os_closed": false,
+    "gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true,
+    "not_closed": "This package closes only an exact finite CCR-core third Taylor coefficient and finite grid component bounds. It does not prove a positive-time evolved-force estimate, a modular-domain estimate, direct D or delta-D Cauchy, exhaustion independence, a common alpha, Hamiltonian-to-OS identification, KMS/GNS gap, continuum, C6, Sector A or Pre-A."
+  },
+  "adversarial_review": [
+    {
+      "axis": "CCR convention",
+      "check": "The derivation uses L_H=i[H,.]/hbar, p=-i*hbar*partial_q, and W_a=exp(i*a*q/hbar); the signs and hbar factors are checked by direct operator action.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "scalar shift",
+      "check": "The commutator with (p+a/2)^2 retains the linear a*[F,p] contribution; omitting it would change the 3*a^3*F/(2*chi^2*hbar^2) term.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "configuration background",
+      "check": "Any V_0(q,v) configuration multiplier commutes with W_a and the boundary force, so the displayed boundary coefficient is independent of the background potential on the declared core.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "order",
+      "check": "D'(0) vanishes, D''(0) is the first force coefficient, and D'''(0) is the next coefficient; no full Taylor summation is inferred.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "grid scope",
+      "check": "The rational component ceilings are checked only on the declared 6x6 field grid and are not promoted to an operator bound.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "Lean",
+      "check": "R255 checks exact force derivatives and selected third-coefficient components only; it does not formalize unbounded domains or limits.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "QFT promotion",
+      "check": "Positive-time orbit control, direct D/delta-D, OS/KMS/GNS, gap, continuum, C6, Sector A and Pre-A remain open.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "TECT owner",
+      "check": "No heat_root_incidence or canonical A1/R-192 production owner is supplied.",
+      "disposition": "UPHELD"
+    }
+  ],
+  "formal_integration": {
+    "lean_entry": "verification/lean/Tect/R255.lean",
+    "result_ids": [],
+    "negative_ids": [],
+    "changelog_event": null
+  },
+  "qft_interface": {
+    "closed": "The second nonzero projected boundary Taylor coefficient is an exact finite CCR-core first-order differential operator whose coefficients are explicit combinations of the cubic boundary force and its first two derivatives.",
+    "open": "A positive-time evolved-force bound, modular companion, actual four-context history, direct D/delta-D Cauchy, exhaustion, common alpha, Hamiltonian-to-OS identification, KMS/GNS gap, continuum, C6, Sector A and Pre-A remain open.",
+    "tect_boundary": "This is a finite CCR-core QFT interface only; no heat_root_incidence or A1/R-192 production owner is supplied."
+  },
+  "boundary": "T0 claim-nonbearing exact finite generator-coefficient bridge. It identifies the next mixed force/momentum obligations for direct projected D,delta-D locality, not that locality theorem itself.",
+  "next_action": "Use the displayed A_1/A_0 operator as the seed for a separately proved weighted orbit estimate; require mixed force-momentum moments and modular-domain control rather than reusing the static second-commutator envelope.",
+  "verification": {
+    "primary_script": "codes/foundations/pre_a_cp1_st8_q3lock_projected_delta_d_third_boundary_coefficient.py",
+    "independent_script": "codes/foundations/pre_a_cp1_st8_q3lock_projected_delta_d_third_boundary_coefficient_independent.py",
+    "integrated_script": "codes/foundations/pre_a_cp1_st8_q3lock_projected_delta_d_third_boundary_coefficient_verify.py"
+  },
+  "no_overclaim": "This is a finite CCR-core QFT-facing coefficient checkpoint only. It is not an all-time projected D/delta-D theorem, an OS reconstruction, a KMS/GNS result, a mass-gap proof, a continuum result, a C6/Sector-A/Pre-A result, a TECT production map or a Clay result."
+}
