@@ -1,0 +1,96 @@
+{
+  "schema": "tect/pre-a-cp1-st8-q3lock-repeated-factor-transport-boundary/1.0",
+  "exploration_id": "EXP-001047",
+  "prior_exploration_id": "EXP-001046",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "tier": "T0",
+  "claim_bearing": false,
+  "title": "Repeated cubic graph-factor transport boundary",
+  "question": "Do the two-sided one-factor Q3 graph bounds with A^(-3/4) control imply a uniform bound for a repeated product, or is an additional A-power transport theorem required?",
+  "input_boundary": {
+    "inherited_source": "R-167/EXP-000796 and the conditional mixed lift EXP-001045",
+    "one_factor_hypotheses": "||Q A^(-3/4)||<=1 and ||A^(-3/4) Q||<=1",
+    "repeated_target": "||Q^2 A^(-3/2)|| with the same uniform constant",
+    "interpretation": "Abstract finite operator witness only; Q is not identified with an actual unbounded Q3 multiplier"
+  },
+  "operator_witness": {
+    "basis": "e_0,e_1,e_2",
+    "shift": "S e_0=e_1, S e_1=e_2, S e_2=0",
+    "energy": "A_n=diag(1,b^(4n),b^(8n))",
+    "factor": "Q_n=S A_n^(3/4)=S diag(1,b^(3n),b^(6n))",
+    "exact_norms": {
+      "right_one_factor": "||Q_n A_n^(-3/4)||_infty=1",
+      "left_one_factor": "||A_n^(-3/4) Q_n||_infty=b^(-3n)<=1",
+      "repeated_product": "||Q_n^2 A_n^(-3/2)||_infty=b^(3n)"
+    },
+    "family_consequence": "For b=2 and n increasing, the one-factor bounds stay <=1 while the repeated-product norm is 8^n"
+  },
+  "fixture": {
+    "base": 2,
+    "quartic_power": 4,
+    "cubic_power": 3,
+    "dimension": 3,
+    "n_values": [1, 2, 3]
+  },
+  "scoped_verdict": "The exact finite family rejects the inference from separate one-factor A^(-3/4) bounds to a uniform repeated-factor A^(-3/2) bound. A genuine history proof must supply A-power transport, higher energy moments, an analytic/Frechet composition theorem, or a cancellation mechanism.",
+  "adversarial_review": [
+    {
+      "axis": "abstract-witness promotion",
+      "check": "The shift family is an operator-norm counterexample to an inference rule, not an assertion that the Q3 multiplier equals Q_n.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "orientation",
+      "check": "Both displayed one-sided orientations are computed; the small left norm is not silently replaced by equality.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "fractional energy power",
+      "check": "A_n^(3/4) is represented exactly by integer powers b^(3n), so no floating-point fractional-power estimate enters.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "target necessity",
+      "check": "The product target is the minimal naive repeated-factor composition; a different analytic topology or cancellation may avoid it.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "Lean promotion",
+      "check": "R229 checks the exact rational scale and norm inequalities for the fixture, not unbounded-operator domains or Q3 dynamics.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "QFT promotion",
+      "check": "No common alpha, KMS/OS reconstruction, GNS gap, continuum, C6, Sector A or Pre-A conclusion follows.",
+      "disposition": "UPHELD"
+    }
+  ],
+  "scope": {
+    "one_factor_graph_bounds_closed_as_inputs": true,
+    "repeated_product_inference_refuted": true,
+    "higher_moment_or_A_power_transport_closed": false,
+    "actual_q3_factor_identification": false,
+    "actual_q3_history_closed": false,
+    "first_passage_resummation_closed": false,
+    "all_shape_exhaustion_closed": false,
+    "common_alpha_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true,
+    "not_closed": "The witness does not prove a Q3 higher-moment theorem, actual repeated histories, first-passage decay, exhaustion Cauchy, common alpha, KMS/OS reconstruction, a GNS gap, continuum, C6, Sector A or Pre-A."
+  },
+  "formal_integration": {
+    "lean_entry": "verification/lean/Tect/R229.lean",
+    "result_ids": [],
+    "negative_ids": [],
+    "changelog_event": null
+  },
+  "qft_interface": {
+    "closed": "A precise finite operator boundary for the graph-factor composition step that precedes the common-alpha QFT interface.",
+    "open": "Actual Q3 repeated history, spatial first passage, exhaustion, common alpha, KMS, GNS gap, continuum, C6, Sector A and Pre-A remain open.",
+    "tect_boundary": "No heat_root_incidence or canonical A1/R-192 production owner is supplied."
+  },
+  "boundary": "T0 claim-nonbearing finite repeated-factor transport checkpoint.",
+  "next_action": "Prove a Q3-specific higher-energy/A-power transport or an analytic/Frechet history composition estimate; only then revisit the actual two-orientation first-passage recurrence."
+}

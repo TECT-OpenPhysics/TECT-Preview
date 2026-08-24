@@ -1,0 +1,347 @@
+{
+  "assertion_count": 26,
+  "assertions": [
+    {
+      "actual": [
+        "EXP-001047",
+        "T-054"
+      ],
+      "expected": "EXP-001047/T-054",
+      "name": "identity",
+      "pass": true
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "claim nonbearing",
+      "pass": true
+    },
+    {
+      "actual": {
+        "actual_q3_factor_identification": false,
+        "actual_q3_history_closed": false,
+        "all_shape_exhaustion_closed": false,
+        "common_alpha_closed": false,
+        "first_passage_resummation_closed": false,
+        "higher_moment_or_A_power_transport_closed": false,
+        "no_new_negative_result": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "not_closed": "The witness does not prove a Q3 higher-moment theorem, actual repeated histories, first-passage decay, exhaustion Cauchy, common alpha, KMS/OS reconstruction, a GNS gap, continuum, C6, Sector A or Pre-A.",
+        "one_factor_graph_bounds_closed_as_inputs": true,
+        "repeated_product_inference_refuted": true
+      },
+      "expected": "boundary flags",
+      "name": "scope boundary",
+      "pass": true
+    },
+    {
+      "actual": [
+        "scale_fixture",
+        "one_factor_fixture",
+        "repeated_product_fixture",
+        "scope_fixture"
+      ],
+      "expected": "present",
+      "name": "Lean source",
+      "pass": true
+    },
+    {
+      "actual": [],
+      "expected": "none",
+      "name": "Lean forbidden",
+      "pass": true
+    },
+    {
+      "actual": "PRIMARY Q3-REPEATED-FACTOR-TRANSPORT PASS 24/24\n",
+      "expected": "PASS",
+      "name": "primary child",
+      "pass": true
+    },
+    {
+      "actual": "INDEPENDENT Q3-REPEATED-FACTOR-TRANSPORT PASS 20/20\n",
+      "expected": "PASS",
+      "name": "independent child",
+      "pass": true
+    },
+    {
+      "actual": [
+        24,
+        20
+      ],
+      "expected": ">0",
+      "name": "positive totals",
+      "pass": true
+    },
+    {
+      "actual": [
+        2,
+        2
+      ],
+      "expected": "equal",
+      "name": "lane agreement base",
+      "pass": true
+    },
+    {
+      "actual": [
+        4,
+        4
+      ],
+      "expected": "equal",
+      "name": "lane agreement quartic_power",
+      "pass": true
+    },
+    {
+      "actual": [
+        3,
+        3
+      ],
+      "expected": "equal",
+      "name": "lane agreement cubic_power",
+      "pass": true
+    },
+    {
+      "actual": [
+        "1",
+        "1"
+      ],
+      "expected": "equal",
+      "name": "lane agreement right_one_factor_norm",
+      "pass": true
+    },
+    {
+      "actual": [
+        "1/8",
+        "1/8"
+      ],
+      "expected": "equal",
+      "name": "lane agreement left_one_factor_norm",
+      "pass": true
+    },
+    {
+      "actual": [
+        "8",
+        "8"
+      ],
+      "expected": "equal",
+      "name": "lane agreement repeated_product_norm",
+      "pass": true
+    },
+    {
+      "actual": [
+        [
+          "8",
+          "64",
+          "512"
+        ],
+        [
+          "8",
+          "64",
+          "512"
+        ]
+      ],
+      "expected": "equal",
+      "name": "lane agreement family_repeated_norms",
+      "pass": true
+    },
+    {
+      "actual": [
+        true,
+        true
+      ],
+      "expected": "equal",
+      "name": "lane agreement one_factor_bounds_uniform_in_fixture",
+      "pass": true
+    },
+    {
+      "actual": [
+        false,
+        false
+      ],
+      "expected": "equal",
+      "name": "lane agreement repeated_product_bound_from_one_factor_inference",
+      "pass": true
+    },
+    {
+      "actual": [
+        false,
+        false
+      ],
+      "expected": "equal",
+      "name": "lane agreement actual_q3_factor_identification",
+      "pass": true
+    },
+    {
+      "actual": [
+        false,
+        false
+      ],
+      "expected": "equal",
+      "name": "lane agreement higher_moment_or_A_power_transport_closed",
+      "pass": true
+    },
+    {
+      "actual": [
+        false,
+        false
+      ],
+      "expected": "equal",
+      "name": "lane agreement actual_q3_history_closed",
+      "pass": true
+    },
+    {
+      "actual": [
+        false,
+        false
+      ],
+      "expected": "equal",
+      "name": "lane agreement common_alpha_closed",
+      "pass": true
+    },
+    {
+      "actual": {
+        "actual_q3_factor_identification": false,
+        "actual_q3_history_closed": false,
+        "base": 2,
+        "common_alpha_closed": false,
+        "cubic_power": 3,
+        "dimension": 3,
+        "family_repeated_norms": [
+          "8",
+          "64",
+          "512"
+        ],
+        "higher_moment_or_A_power_transport_closed": false,
+        "left_one_factor_norm": "1/8",
+        "one_factor_bounds_uniform_in_fixture": true,
+        "quartic_power": 4,
+        "repeated_product_bound_from_one_factor_inference": false,
+        "repeated_product_norm": "8",
+        "right_one_factor_norm": "1"
+      },
+      "expected": "8",
+      "name": "n=1 amplification",
+      "pass": true
+    },
+    {
+      "actual": {
+        "actual_q3_factor_identification": false,
+        "actual_q3_history_closed": false,
+        "base": 2,
+        "common_alpha_closed": false,
+        "cubic_power": 3,
+        "dimension": 3,
+        "family_repeated_norms": [
+          "8",
+          "64",
+          "512"
+        ],
+        "higher_moment_or_A_power_transport_closed": false,
+        "left_one_factor_norm": "1/8",
+        "one_factor_bounds_uniform_in_fixture": true,
+        "quartic_power": 4,
+        "repeated_product_bound_from_one_factor_inference": false,
+        "repeated_product_norm": "8",
+        "right_one_factor_norm": "1"
+      },
+      "expected": "[8,64,512]",
+      "name": "family amplification",
+      "pass": true
+    },
+    {
+      "actual": {
+        "actual_q3_factor_identification": false,
+        "actual_q3_history_closed": false,
+        "base": 2,
+        "common_alpha_closed": false,
+        "cubic_power": 3,
+        "dimension": 3,
+        "family_repeated_norms": [
+          "8",
+          "64",
+          "512"
+        ],
+        "higher_moment_or_A_power_transport_closed": false,
+        "left_one_factor_norm": "1/8",
+        "one_factor_bounds_uniform_in_fixture": true,
+        "quartic_power": 4,
+        "repeated_product_bound_from_one_factor_inference": false,
+        "repeated_product_norm": "8",
+        "right_one_factor_norm": "1"
+      },
+      "expected": true,
+      "name": "one-factor fixture uniform",
+      "pass": true
+    },
+    {
+      "actual": {
+        "actual_q3_factor_identification": false,
+        "actual_q3_history_closed": false,
+        "base": 2,
+        "common_alpha_closed": false,
+        "cubic_power": 3,
+        "dimension": 3,
+        "family_repeated_norms": [
+          "8",
+          "64",
+          "512"
+        ],
+        "higher_moment_or_A_power_transport_closed": false,
+        "left_one_factor_norm": "1/8",
+        "one_factor_bounds_uniform_in_fixture": true,
+        "quartic_power": 4,
+        "repeated_product_bound_from_one_factor_inference": false,
+        "repeated_product_norm": "8",
+        "right_one_factor_norm": "1"
+      },
+      "expected": false,
+      "name": "naive inference rejected",
+      "pass": true
+    },
+    {
+      "actual": {
+        "command": "lake env lean Tect/R229.lean",
+        "output": "",
+        "returncode": 0,
+        "status": "PASS"
+      },
+      "expected": "PASS",
+      "name": "Lean compile",
+      "pass": true
+    }
+  ],
+  "audit_id": "PA-CP1-ST8-Q3LOCK-REPEATED-FACTOR-TRANSPORT-BOUNDARY",
+  "boundary": {
+    "actual_q3_factor_identification": false,
+    "actual_q3_history_closed": false,
+    "all_shape_exhaustion_closed": false,
+    "common_alpha_closed": false,
+    "first_passage_resummation_closed": false,
+    "higher_moment_or_A_power_transport_closed": false,
+    "no_new_negative_result": true,
+    "no_pdf": true,
+    "no_tier_change": true,
+    "not_closed": "The witness does not prove a Q3 higher-moment theorem, actual repeated histories, first-passage decay, exhaustion Cauchy, common alpha, KMS/OS reconstruction, a GNS gap, continuum, C6, Sector A or Pre-A.",
+    "one_factor_graph_bounds_closed_as_inputs": true,
+    "repeated_product_inference_refuted": true
+  },
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "exploration_id": "EXP-001047",
+  "lean": {
+    "command": "lake env lean Tect/R229.lean",
+    "output": "",
+    "returncode": 0,
+    "status": "PASS"
+  },
+  "provenance": {
+    "independent_sha256": "f5bed607e637412de8a175840795553d67756cfb55cf5bf30395517b06f3fdff",
+    "lean_sha256": "d77e26b82489d7961c98b24636eb9978d0c4fb1fffd55c54af2b52501cdfdd2c",
+    "manifest_sha256": "c418f6061465e1f8fdd407749dff43a00eff3e91834dcf66c6eca33e6b54c013",
+    "primary_sha256": "22872d984209d684b7e02fbe9492cf05451d5e328f6cab468e6a382a03b0fc91"
+  },
+  "recorded_at": "2026-08-24T02:26:50.194678Z",
+  "run_kind": "integrated",
+  "schema": "tect/foundation-audit/1.0",
+  "task_id": "T-054",
+  "verdict": "PASS"
+}

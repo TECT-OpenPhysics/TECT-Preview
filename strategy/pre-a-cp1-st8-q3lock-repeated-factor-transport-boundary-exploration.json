@@ -1,0 +1,59 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001047",
+  "title": "Repeated cubic graph-factor transport boundary",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "question": "Do the two-sided one-factor Q3 graph bounds with A^(-3/4) control imply a uniform repeated product, or is an additional A-power transport theorem required?",
+  "method": [
+    "Define the finite positive diagonal family A_n=diag(1,2^(4n),2^(8n)) and the raising shift S on three basis vectors.",
+    "Set Q_n=S A_n^(3/4) using the exact integer diagonal entries 1,2^(3n),2^(6n).",
+    "Compute both one-factor infinity norms and the repeated product norm with exact rational matrix arithmetic for n=1,2,3.",
+    "Reproduce the scale identities and inequalities in an independent lane and Lean R229."
+  ],
+  "finding": "The one-factor norms are 1 and 2^(-3n), while the repeated target norm is 2^(3n)=8^n. Separate one-factor A^(-3/4) bounds therefore do not yield a volume- or history-uniform repeated-factor bound.",
+  "decision_reason": "This is a new linkage after EXP-001045/1046: it isolates repeated A-power composition, rather than the already-recorded one-site-to-mixed marginal failure or the prescribed polynomial-word degree escalation.",
+  "verdict": "advanced",
+  "boundary": "T0 claim-nonbearing finite operator inference boundary. It rejects only the naive repeated-factor inference and does not reject stronger Q3-specific transport, analytic/Frechet, or cancellation routes.",
+  "evidence_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-repeated-factor-transport-boundary-manifest.json#operator_witness",
+    "strategy/pre-a-cp1-st8-q3lock-repeated-factor-transport-boundary-certificate-260824.md#Finding",
+    "codes/foundations/pre_a_cp1_st8_q3lock_repeated_factor_transport_boundary.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_repeated_factor_transport_boundary_independent.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_repeated_factor_transport_boundary_verify.py#main",
+    "verification/lean/Tect/R229.lean#repeated_product_fixture"
+  ],
+  "adversarial_review": [
+    {"axis": "abstract-witness promotion", "check": "Q_n is a finite operator witness and is not identified with the Q3 multiplier.", "disposition": "UPHELD"},
+    {"axis": "orientation", "check": "Both one-sided graph norms are retained with their distinct exact values.", "disposition": "UPHELD"},
+    {"axis": "fractional powers", "check": "All powers are exact integer powers of the base; no floating point is used.", "disposition": "UPHELD"},
+    {"axis": "history target", "check": "The product target is a minimal naive composition, not a universal requirement for every topology.", "disposition": "UPHELD"},
+    {"axis": "Lean", "check": "R229 covers fixture arithmetic only, not unbounded operator domains.", "disposition": "UPHELD"},
+    {"axis": "QFT promotion", "check": "No common alpha, KMS/OS, GNS gap, continuum, C6, Sector A or Pre-A result is claimed.", "disposition": "UPHELD"}
+  ],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-FIRST-PASSAGE-BACKBONE-REAL-TIME-PRODUCT-AND-ENERGY-TAIL-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "related": [],
+  "prior_exploration_id": "EXP-001046",
+  "provenance": "contemporaneous",
+  "qft_interface": {
+    "closed": "A finite repeated-factor transport boundary before the common-alpha interface.",
+    "open": "Actual Q3 history, first passage, exhaustion, common alpha, KMS, GNS gap, continuum, C6, Sector A and Pre-A remain open.",
+    "tect_boundary": "No heat_root_incidence or A1/R-192 production owner is supplied."
+  },
+  "formal_integration": {
+    "events": [],
+    "negatives": [],
+    "results": [],
+    "no_new_negative": true,
+    "no_pdf": true
+  },
+  "next_action": "Prove a Q3-specific higher-energy/A-power transport or an analytic/Frechet history composition estimate, then revisit the actual two-orientation first-passage recurrence.",
+  "reviewed_on": "2026-08-24",
+  "recorded_at": "2026-08-25T01:00:00Z",
+  "recorded_by": "Codex"
+}
