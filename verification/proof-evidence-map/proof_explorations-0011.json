@@ -7129,6 +7129,122 @@
       "task_id": "T-054",
       "title": "Second nonzero projected D-delta-D boundary Taylor coefficient",
       "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "axis": "coefficient source",
+          "check": "A1 and A0 are reused exactly from EXP-001073; no fourth generator is inferred.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "all-real versus grid",
+          "check": "The all-real bound is coefficient-majorant plus degree reasoning; the grid is a self-test only.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "source radius",
+          "check": "Only |a|<=1/4 is covered.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "complex norm",
+          "check": "The l1 component triangle is explicit and conservative.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "domain",
+          "check": "The derivative-weighted statement is pointwise on the polynomial CCR core, not a modular or operator-closure claim.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "Lean",
+          "check": "R256 checks exact rational constants and fixtures only.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "orbit promotion",
+          "check": "No positive-time or history estimate is inferred from the boundary coefficient.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "QFT and TECT promotion",
+          "check": "OS/KMS/GNS, gap, continuum, C6, Sector A, Pre-A and the A1/R-192 production owner remain open.",
+          "disposition": "UPHELD"
+        }
+      ],
+      "boundary": "T0 claim-nonbearing finite CCR coefficient majorant only. It does not prove positive-time evolved-force or modular estimates, a Q3 four-context history, direct D or delta-D Cauchy, product/core density, exhaustion independence, common alpha, Hamiltonian-to-OS identification, KMS/GNS, continuum, C6, Sector A or Pre-A.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "The exact EXP-001073 coefficient is a first-order differential operator with cubic-field coefficient terms. At chi=hbar=c=1, lambda=1/10 and source radius 1/4, coefficient-majorant arithmetic gives |Re A1|<=17/40 A^(3/4), |Im A1|<=9/20 A^(3/4), |Re A0|<=27/160 A^(3/4), and |Im A0|<=17/80 A^(3/4), hence |A1|<=(7/8)A^(3/4) and |A0|<=(61/160)A^(3/4). Primary symbolic, independent Fraction and Lean R256 checks agree on the constants and the 72-point fixture.",
+      "evidence_refs": [
+        "strategy/pre-a-cp1-st8-q3lock-projected-delta-d-third-coefficient-weighted-majorant-manifest.json#derived_majorants",
+        "strategy/pre-a-cp1-st8-q3lock-projected-delta-d-third-coefficient-weighted-majorant-certificate-260824.md#Decision",
+        "codes/foundations/pre_a_cp1_st8_q3lock_projected_delta_d_third_coefficient_weighted_majorant.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_projected_delta_d_third_coefficient_weighted_majorant_independent.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_projected_delta_d_third_coefficient_weighted_majorant_verify.py#main",
+        "verification/lean/Tect/R256.lean#derivative_weighted_fixture",
+        "strategy/pre-a-cp1-st8-q3lock-projected-delta-d-third-boundary-coefficient-manifest.json#coefficient_form"
+      ],
+      "finding": "For A(q,v)=1+q^4+v^4 and |a|<=1/4, the all-real coefficient majorants are (17/40, 9/20, 27/160, 17/80) for (Re A1, Im A1, Re A0, Im A0). Their conservative complex sums are 7/8 and 61/160. At (3,-2,1/4), (A1,A0)=(-59/40-9i/4,-3/160-59i/80), A=98. The 72-point exact grid reaches component ceilings 59/40, 9/4, 9/80 and 59/80.",
+      "formal_integration": {
+        "events": [],
+        "lean": "R256 PASS",
+        "negatives": [],
+        "no_new_event": true,
+        "no_new_negative": true,
+        "no_new_result": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "results": []
+      },
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": []
+      },
+      "gate_ids": [
+        "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+        "PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE",
+        "PA-CP1-ST8-Q3LOCK-FIRST-PASSAGE-BACKBONE-REAL-TIME-PRODUCT-AND-ENERGY-TAIL-CLOSURE",
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001074",
+      "method": [
+        "Reuse the exact A1 and A0 coefficient form from EXP-001073 without introducing a fourth-generator or background hypothesis.",
+        "Specialise only the finite coefficient audit to chi=hbar=c=1, lambda=1/10 and |a|<=1/4, expand the four real component polynomials, and sum absolute coefficients with source-radius powers.",
+        "Use the quartic weight A=1+q^4+v^4 and the degree-at-most-three monomial rule to turn coefficient sums into all-real A^(3/4) majorants.",
+        "Rebuild the bond and q-derivatives in a Fraction-only polynomial dictionary, test the 6x6x2 rational grid, and compile Lean R256 for the exact rational fixtures.",
+        "Keep positive-time orbit, modular-domain, history, direct D/delta-D, exhaustion, OS/KMS/GNS, continuum, C6, Sector A and Pre-A gates explicitly open."
+      ],
+      "next_action": "Use the derivative-weighted majorant only as a local seed for a separately proved mixed orbit estimate, with modular-domain control and a history recurrence; otherwise record the exact obstruction.",
+      "no_overclaim": "This is a finite QFT-facing coefficient-majorant checkpoint only. It is not an all-time projected D/delta-D theorem, an OS reconstruction, a KMS/GNS result, a mass-gap proof, a continuum result, a C6/Sector-A/Pre-A result, a TECT production map or a Clay result.",
+      "prior_exploration_id": "EXP-001073",
+      "provenance": "contemporaneous",
+      "qft_interface": {
+        "closed": "A finite CCR third boundary coefficient has an explicit all-real quartic-weight and derivative-weighted pointwise majorant.",
+        "open": "Positive-time evolved-force and modular estimates, actual Q3 history, direct D/delta-D Cauchy, exhaustion, common alpha, Hamiltonian-to-OS identification, KMS/GNS gap, continuum, C6, Sector A and Pre-A remain open.",
+        "tect_boundary": "No heat_root_incidence or canonical A1/R-192 production owner is supplied."
+      },
+      "question": "Can the exact A1 partial_q+A0 coefficient from EXP-001073 be controlled by a quartic field weight and an explicit derivative-weighted pointwise majorant without claiming a Q3 orbit bound?",
+      "recorded_at": "2026-08-26T01:00:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001073",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001069",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-08-24",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Projected D-delta-D third-coefficient mixed force-momentum weighted majorant",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",

@@ -1,0 +1,147 @@
+{
+  "schema": "tect/pre-a-cp1-st8-q3lock-projected-delta-d-third-coefficient-weighted-majorant/1.0",
+  "exploration_id": "EXP-001074",
+  "prior_exploration_id": "EXP-001073",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "tier": "T0",
+  "claim_bearing": false,
+  "title": "Projected D-delta-D third-coefficient mixed force-momentum weighted majorant",
+  "question": "Can the exact A1 partial_q+A0 coefficient from EXP-001073 be controlled by a quartic field weight and an explicit derivative-weighted pointwise majorant without claiming a Q3 orbit bound?",
+  "authority_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-projected-delta-d-third-boundary-coefficient-manifest.json#coefficient_form",
+    "strategy/pre-a-cp1-st8-q3lock-multivariate-energy-weighted-source-bound-manifest.json#weighted_target",
+    "strategy/pre-a-cp1-st8-q3lock-canonical-energy-quartic-weight-coercivity-manifest.json#coercive_bound"
+  ],
+  "model": {
+    "bond": "B(q,v)=c*(q-v)^2/2+lambda*(q-v)^2*(q^2+v^2)/4",
+    "force": "F=partial_q B",
+    "boundary_coefficient": "D'''(0)=W_a*(A1*partial_q+A0)",
+    "A1": "-a*F'/chi^2-3*i*a^2*F/(chi^2*hbar)",
+    "A0": "-a*F''/(2*chi^2)-2*i*a^2*F'/(chi^2*hbar)+3*a^3*F/(2*chi^2*hbar^2)",
+    "fixture_specialisation": "chi=hbar=c=1, lambda=1/10, |a|<=1/4",
+    "weight": "A(q,v)=1+q^4+v^4",
+    "monomial_rule": "For every q,v and every monomial q^i*v^j of field degree i+j<=3, |q|^i*|v|^j<=A(q,v)^(3/4)."
+  },
+  "derived_majorants": {
+    "A1_real": "17/40",
+    "A1_imaginary": "9/20",
+    "A0_real": "27/160",
+    "A0_imaginary": "17/80",
+    "A1_sum": "7/8",
+    "A0_sum": "61/160",
+    "pointwise_complex_bounds": "|A1|<=(7/8)*A^(3/4), |A0|<=(61/160)*A^(3/4)",
+    "derivative_weighted_bound": "|D'''(0)f|<=A^(3/4)*((7/8)|partial_q f|+(61/160)|f|) on the polynomial CCR core"
+  },
+  "finite_fixture": {
+    "chi": "1",
+    "hbar": "1",
+    "c": "1",
+    "lambda": "1/10",
+    "character_amplitude": "1/4",
+    "field_values": ["-2", "-1", "0", "1", "2", "3"],
+    "source_values": ["-1/4", "1/4"],
+    "selected_q": "3",
+    "selected_v": "-2",
+    "grid_points": 72,
+    "derived_selected_A1_real": "-59/40",
+    "derived_selected_A1_imaginary": "-9/4",
+    "derived_selected_A0_real": "-3/160",
+    "derived_selected_A0_imaginary": "-59/80",
+    "derived_abs_A1_real_ceiling": "59/40",
+    "derived_abs_A1_imaginary_ceiling": "9/4",
+    "derived_abs_A0_real_ceiling": "9/80",
+    "derived_abs_A0_imaginary_ceiling": "59/80",
+    "derived_weight_at_selected": "98"
+  },
+  "scope": {
+    "coefficient_formula_reused": true,
+    "all_real_polynomial_majorant_closed": true,
+    "complex_component_bounds_closed": true,
+    "derivative_weighted_pointwise_bound_closed": true,
+    "finite_grid_crosscheck_closed": true,
+    "evolved_force_uniform_closed": false,
+    "modular_domain_closed": false,
+    "actual_q3_four_context_theorem_proved": false,
+    "actual_q3_factorial_history_proved": false,
+    "all_time_projected_d_duhamel_cauchy_closed": false,
+    "volume_uniform_direct_d_cauchy_closed": false,
+    "delta_d_cauchy_closed": false,
+    "product_core_density_closed": false,
+    "exhaustion_independence_closed": false,
+    "group_law_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_os_closed": false,
+    "gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true,
+    "not_closed": "This package is a pointwise finite-CCR coefficient majorant. It does not prove a positive-time evolved-force estimate, a modular-domain estimate, a Q3 four-context history, direct D or delta-D Cauchy convergence, exhaustion independence, Hamiltonian-to-OS identification, KMS/GNS, continuum, C6, Sector A or Pre-A."
+  },
+  "adversarial_review": [
+    {
+      "axis": "coefficient source",
+      "check": "A1 and A0 are reused exactly from EXP-001073; no fourth generator or unregistered background derivative is introduced.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "all-real versus grid",
+      "check": "The all-real estimate comes from the coefficient majorant and degree rule; the 72 grid points are only exact self-tests.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "source radius",
+      "check": "The constants use |a|<=1/4 exactly; no unrestricted character amplitude is inferred.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "complex norm",
+      "check": "The complex bounds use |z|<=|Re z|+|Im z|, so no hidden Euclidean cancellation is assumed.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "derivative domain",
+      "check": "The derivative-weighted statement is pointwise on the polynomial CCR core and is not an operator-closure assertion.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "Lean",
+      "check": "R256 checks exact rational constants and the selected weighted fixture only; it does not formalize unbounded domains or limits.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "orbit promotion",
+      "check": "A boundary Taylor coefficient is not promoted to a positive-time evolved-force or factorial-history estimate.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "QFT and TECT promotion",
+      "check": "OS/KMS/GNS, gap, continuum, C6, Sector A, Pre-A and the canonical A1/R-192 production owner remain outside scope.",
+      "disposition": "UPHELD"
+    }
+  ],
+  "formal_integration": {
+    "lean_entry": "verification/lean/Tect/R256.lean",
+    "result_ids": [],
+    "negative_ids": [],
+    "changelog_event": null
+  },
+  "qft_interface": {
+    "closed": "The finite CCR third boundary coefficient has an explicit all-real quartic-weight majorant and a derivative-weighted pointwise bound.",
+    "open": "The positive-time orbit, modular domain, four-context history, direct D/delta-D Cauchy, exhaustion, common alpha, Hamiltonian-to-OS identification, KMS/GNS gap, continuum, C6, Sector A and Pre-A remain open.",
+    "tect_boundary": "No heat_root_incidence or canonical A1/R-192 production owner is supplied."
+  },
+  "boundary": "T0 claim-nonbearing exact finite CCR coefficient majorant only.",
+  "next_action": "Use the derivative-weighted majorant only as a local seed for a separately proved mixed orbit estimate; require modular-domain control and a history recurrence before any thermodynamic conclusion.",
+  "verification": {
+    "primary_script": "codes/foundations/pre_a_cp1_st8_q3lock_projected_delta_d_third_coefficient_weighted_majorant.py",
+    "independent_script": "codes/foundations/pre_a_cp1_st8_q3lock_projected_delta_d_third_coefficient_weighted_majorant_independent.py",
+    "integrated_script": "codes/foundations/pre_a_cp1_st8_q3lock_projected_delta_d_third_coefficient_weighted_majorant_verify.py"
+  },
+  "no_overclaim": "This is a finite QFT-facing coefficient-majorant checkpoint only. It is not an all-time projected D/delta-D theorem, an OS reconstruction, a KMS/GNS result, a mass-gap proof, a continuum result, a C6/Sector-A/Pre-A result, a TECT production map or a Clay result."
+}

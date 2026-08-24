@@ -1,0 +1,1176 @@
+{
+  "assertion_count": 32,
+  "assertions": [
+    {
+      "actual": "['EXP-001074', 'T-054']",
+      "expected": "EXP-001074/T-054",
+      "group": "provenance",
+      "name": "identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "group": "scope",
+      "name": "claim nonbearing",
+      "status": "PASS"
+    },
+    {
+      "actual": "EXP-001073",
+      "expected": "EXP-001073 third coefficient",
+      "group": "authority",
+      "name": "previous authority",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'bond': 'B(q,v)=c*(q-v)^2/2+lambda*(q-v)^2*(q^2+v^2)/4', 'force': 'F=partial_q B', 'boundary_coefficient': \"D'''(0)=W_a*(A1*partial_q+A0)\", 'A1': \"-a*F'/chi^2-3*i*a^2*F/(chi^2*hbar)\", 'A0': \"-a*F''/(2*chi^2)-2*i*a^2*F'/(chi^2*hbar)+3*a^3*F/(2*chi^2*hbar^2)\", 'fixture_specialisation': 'chi=hbar=c=1, lambda=1/10, |a|<=1/4', 'weight': 'A(q,v)=1+q^4+v^4', 'monomial_rule': 'For every q,v and every monomial q^i*v^j of field degree i+j<=3, |q|^i*|v|^j<=A(q,v)^(3/4).'}",
+      "expected": "A1/A0 coefficient model",
+      "group": "model",
+      "name": "model declarations",
+      "status": "PASS"
+    },
+    {
+      "actual": "[{'q_degree': 2, 'v_degree': 0, 'source_degree': 1, 'coefficient': '-3/10', 'absolute_source_weight': '3/40'}, {'q_degree': 1, 'v_degree': 1, 'source_degree': 1, 'coefficient': '3/10', 'absolute_source_weight': '3/40'}, {'q_degree': 0, 'v_degree': 2, 'source_degree': 1, 'coefficient': '-1/10', 'absolute_source_weight': '1/40'}, {'q_degree': 0, 'v_degree': 0, 'source_degree': 1, 'coefficient': '-1', 'absolute_source_weight': '1/4'}]",
+      "expected": "field degree <=3",
+      "group": "majorant",
+      "name": "majorant degree A1_real",
+      "status": "PASS"
+    },
+    {
+      "actual": "17/40",
+      "expected": "17/40",
+      "group": "majorant",
+      "name": "majorant A1_real",
+      "status": "PASS"
+    },
+    {
+      "actual": "[{'q_degree': 3, 'v_degree': 0, 'source_degree': 2, 'coefficient': '-3/10', 'absolute_source_weight': '3/160'}, {'q_degree': 2, 'v_degree': 1, 'source_degree': 2, 'coefficient': '9/20', 'absolute_source_weight': '9/320'}, {'q_degree': 1, 'v_degree': 2, 'source_degree': 2, 'coefficient': '-3/10', 'absolute_source_weight': '3/160'}, {'q_degree': 1, 'v_degree': 0, 'source_degree': 2, 'coefficient': '-3', 'absolute_source_weight': '3/16'}, {'q_degree': 0, 'v_degree': 3, 'source_degree': 2, 'coefficient': '3/20', 'absolute_source_weight': '3/320'}, {'q_degree': 0, 'v_degree': 1, 'source_degree': 2, 'coefficient': '3', 'absolute_source_weight': '3/16'}]",
+      "expected": "field degree <=3",
+      "group": "majorant",
+      "name": "majorant degree A1_imaginary",
+      "status": "PASS"
+    },
+    {
+      "actual": "9/20",
+      "expected": "9/20",
+      "group": "majorant",
+      "name": "majorant A1_imaginary",
+      "status": "PASS"
+    },
+    {
+      "actual": "[{'q_degree': 3, 'v_degree': 0, 'source_degree': 3, 'coefficient': '3/20', 'absolute_source_weight': '3/1280'}, {'q_degree': 2, 'v_degree': 1, 'source_degree': 3, 'coefficient': '-9/40', 'absolute_source_weight': '9/2560'}, {'q_degree': 1, 'v_degree': 2, 'source_degree': 3, 'coefficient': '3/20', 'absolute_source_weight': '3/1280'}, {'q_degree': 1, 'v_degree': 0, 'source_degree': 3, 'coefficient': '3/2', 'absolute_source_weight': '3/128'}, {'q_degree': 1, 'v_degree': 0, 'source_degree': 1, 'coefficient': '-3/10', 'absolute_source_weight': '3/40'}, {'q_degree': 0, 'v_degree': 3, 'source_degree': 3, 'coefficient': '-3/40', 'absolute_source_weight': '3/2560'}, {'q_degree': 0, 'v_degree': 1, 'source_degree': 3, 'coefficient': '-3/2', 'absolute_source_weight': '3/128'}, {'q_degree': 0, 'v_degree': 1, 'source_degree': 1, 'coefficient': '3/20', 'absolute_source_weight': '3/80'}]",
+      "expected": "field degree <=3",
+      "group": "majorant",
+      "name": "majorant degree A0_real",
+      "status": "PASS"
+    },
+    {
+      "actual": "27/160",
+      "expected": "27/160",
+      "group": "majorant",
+      "name": "majorant A0_real",
+      "status": "PASS"
+    },
+    {
+      "actual": "[{'q_degree': 2, 'v_degree': 0, 'source_degree': 2, 'coefficient': '-3/5', 'absolute_source_weight': '3/80'}, {'q_degree': 1, 'v_degree': 1, 'source_degree': 2, 'coefficient': '3/5', 'absolute_source_weight': '3/80'}, {'q_degree': 0, 'v_degree': 2, 'source_degree': 2, 'coefficient': '-1/5', 'absolute_source_weight': '1/80'}, {'q_degree': 0, 'v_degree': 0, 'source_degree': 2, 'coefficient': '-2', 'absolute_source_weight': '1/8'}]",
+      "expected": "field degree <=3",
+      "group": "majorant",
+      "name": "majorant degree A0_imaginary",
+      "status": "PASS"
+    },
+    {
+      "actual": "17/80",
+      "expected": "17/80",
+      "group": "majorant",
+      "name": "majorant A0_imaginary",
+      "status": "PASS"
+    },
+    {
+      "actual": "7/8",
+      "expected": "7/8",
+      "group": "majorant",
+      "name": "A1 sum",
+      "status": "PASS"
+    },
+    {
+      "actual": "61/160",
+      "expected": "61/160",
+      "group": "majorant",
+      "name": "A0 sum",
+      "status": "PASS"
+    },
+    {
+      "actual": "[3, 3, 3]",
+      "expected": "[3, 3, 3]",
+      "group": "majorant",
+      "name": "field degrees",
+      "status": "PASS"
+    },
+    {
+      "actual": "-59/40",
+      "expected": "-59/40",
+      "group": "fixture",
+      "name": "selected A1_real",
+      "status": "PASS"
+    },
+    {
+      "actual": "-9/4",
+      "expected": "-9/4",
+      "group": "fixture",
+      "name": "selected A1_imaginary",
+      "status": "PASS"
+    },
+    {
+      "actual": "-3/160",
+      "expected": "-3/160",
+      "group": "fixture",
+      "name": "selected A0_real",
+      "status": "PASS"
+    },
+    {
+      "actual": "-59/80",
+      "expected": "-59/80",
+      "group": "fixture",
+      "name": "selected A0_imaginary",
+      "status": "PASS"
+    },
+    {
+      "actual": "98",
+      "expected": "98",
+      "group": "fixture",
+      "name": "selected weight",
+      "status": "PASS"
+    },
+    {
+      "actual": "72",
+      "expected": "72",
+      "group": "grid",
+      "name": "grid cardinality",
+      "status": "PASS"
+    },
+    {
+      "actual": "59/40",
+      "expected": "59/40",
+      "group": "grid",
+      "name": "grid ceiling A1_real",
+      "status": "PASS"
+    },
+    {
+      "actual": "17/40",
+      "expected": "all grid rows",
+      "group": "grid",
+      "name": "grid weighted bound A1_real",
+      "status": "PASS"
+    },
+    {
+      "actual": "9/4",
+      "expected": "9/4",
+      "group": "grid",
+      "name": "grid ceiling A1_imaginary",
+      "status": "PASS"
+    },
+    {
+      "actual": "9/20",
+      "expected": "all grid rows",
+      "group": "grid",
+      "name": "grid weighted bound A1_imaginary",
+      "status": "PASS"
+    },
+    {
+      "actual": "9/80",
+      "expected": "9/80",
+      "group": "grid",
+      "name": "grid ceiling A0_real",
+      "status": "PASS"
+    },
+    {
+      "actual": "27/160",
+      "expected": "all grid rows",
+      "group": "grid",
+      "name": "grid weighted bound A0_real",
+      "status": "PASS"
+    },
+    {
+      "actual": "59/80",
+      "expected": "59/80",
+      "group": "grid",
+      "name": "grid ceiling A0_imaginary",
+      "status": "PASS"
+    },
+    {
+      "actual": "17/80",
+      "expected": "all grid rows",
+      "group": "grid",
+      "name": "grid weighted bound A0_imaginary",
+      "status": "PASS"
+    },
+    {
+      "actual": "773/80",
+      "expected": "weighted pointwise upper bound",
+      "group": "derivative-weight",
+      "name": "derivative weighted selected fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'coefficient_formula_reused': True, 'all_real_polynomial_majorant_closed': True, 'complex_component_bounds_closed': True, 'derivative_weighted_pointwise_bound_closed': True, 'finite_grid_crosscheck_closed': True}",
+      "expected": "finite weighted coefficient closed",
+      "group": "scope",
+      "name": "finite weighted closure",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'evolved_force_uniform_closed': False, 'modular_domain_closed': False, 'actual_q3_four_context_theorem_proved': False, 'actual_q3_factorial_history_proved': False, 'all_time_projected_d_duhamel_cauchy_closed': False, 'volume_uniform_direct_d_cauchy_closed': False, 'delta_d_cauchy_closed': False, 'product_core_density_closed': False, 'exhaustion_independence_closed': False, 'group_law_closed': False, 'common_alpha_closed': False, 'hamiltonian_os_identification_closed': False, 'kms_os_closed': False, 'gns_gap_closed': False, 'continuum_closed': False, 'c6_closed': False, 'sector_a_closed': False, 'pre_a_closed': False}",
+      "expected": "successor gates open",
+      "group": "scope",
+      "name": "QFT firewall",
+      "status": "PASS"
+    }
+  ],
+  "audit_id": "PA-CP1-ST8-Q3LOCK-PROJECTED-DELTA-D-THIRD-COEFFICIENT-WEIGHTED-MAJORANT",
+  "boundary": {
+    "actual_q3_factorial_history_proved": false,
+    "actual_q3_four_context_theorem_proved": false,
+    "all_real_polynomial_majorant_closed": true,
+    "all_time_projected_d_duhamel_cauchy_closed": false,
+    "c6_closed": false,
+    "coefficient_formula_reused": true,
+    "common_alpha_closed": false,
+    "complex_component_bounds_closed": true,
+    "continuum_closed": false,
+    "delta_d_cauchy_closed": false,
+    "derivative_weighted_pointwise_bound_closed": true,
+    "evolved_force_uniform_closed": false,
+    "exhaustion_independence_closed": false,
+    "finite_grid_crosscheck_closed": true,
+    "gns_gap_closed": false,
+    "group_law_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_os_closed": false,
+    "modular_domain_closed": false,
+    "no_new_negative_result": true,
+    "no_pdf": true,
+    "no_tier_change": true,
+    "not_closed": "This package is a pointwise finite-CCR coefficient majorant. It does not prove a positive-time evolved-force estimate, a modular-domain estimate, a Q3 four-context history, direct D or delta-D Cauchy convergence, exhaustion independence, Hamiltonian-to-OS identification, KMS/GNS, continuum, C6, Sector A or Pre-A.",
+    "pre_a_closed": false,
+    "product_core_density_closed": false,
+    "sector_a_closed": false,
+    "volume_uniform_direct_d_cauchy_closed": false
+  },
+  "derived": {
+    "A0_imaginary_majorant": "17/80",
+    "A0_real_majorant": "27/160",
+    "A0_sum": "61/160",
+    "A1_imaginary_majorant": "9/20",
+    "A1_real_majorant": "17/40",
+    "A1_sum": "7/8",
+    "derivative_weighted_pointwise_bound_closed": true,
+    "evolved_force_uniform_closed": false,
+    "field_degree_rule": 3,
+    "grid_ceilings": {
+      "A0_imaginary": "59/80",
+      "A0_real": "9/80",
+      "A1_imaginary": "9/4",
+      "A1_real": "59/40"
+    },
+    "grid_points": 72,
+    "modular_domain_closed": false,
+    "selected_A0_imaginary": "-59/80",
+    "selected_A0_real": "-3/160",
+    "selected_A1_imaginary": "-9/4",
+    "selected_A1_real": "-59/40",
+    "selected_weight": "98",
+    "source_radius": "1/4"
+  },
+  "exploration_id": "EXP-001074",
+  "grid_rows": [
+    {
+      "A0_imaginary": "-7/40",
+      "A0_real": "-3/40",
+      "A1_imaginary": "0",
+      "A1_real": "7/20",
+      "a": "-1/4",
+      "q": "-2",
+      "v": "-2",
+      "weight": "33"
+    },
+    {
+      "A0_imaginary": "-7/40",
+      "A0_real": "3/40",
+      "A1_imaginary": "0",
+      "A1_real": "-7/20",
+      "a": "1/4",
+      "q": "-2",
+      "v": "-2",
+      "weight": "33"
+    },
+    {
+      "A0_imaginary": "-17/80",
+      "A0_real": "-207/2560",
+      "A1_imaginary": "81/320",
+      "A1_real": "17/40",
+      "a": "-1/4",
+      "q": "-2",
+      "v": "-1",
+      "weight": "18"
+    },
+    {
+      "A0_imaginary": "-17/80",
+      "A0_real": "207/2560",
+      "A1_imaginary": "81/320",
+      "A1_real": "-17/40",
+      "a": "1/4",
+      "q": "-2",
+      "v": "-1",
+      "weight": "18"
+    },
+    {
+      "A0_imaginary": "-11/40",
+      "A0_real": "-27/320",
+      "A1_imaginary": "21/40",
+      "A1_real": "11/20",
+      "a": "-1/4",
+      "q": "-2",
+      "v": "0",
+      "weight": "17"
+    },
+    {
+      "A0_imaginary": "-11/40",
+      "A0_real": "27/320",
+      "A1_imaginary": "21/40",
+      "A1_real": "-11/20",
+      "a": "1/4",
+      "q": "-2",
+      "v": "0",
+      "weight": "17"
+    },
+    {
+      "A0_imaginary": "-29/80",
+      "A0_real": "-201/2560",
+      "A1_imaginary": "279/320",
+      "A1_real": "29/40",
+      "a": "-1/4",
+      "q": "-2",
+      "v": "1",
+      "weight": "18"
+    },
+    {
+      "A0_imaginary": "-29/80",
+      "A0_real": "201/2560",
+      "A1_imaginary": "279/320",
+      "A1_real": "-29/40",
+      "a": "1/4",
+      "q": "-2",
+      "v": "1",
+      "weight": "18"
+    },
+    {
+      "A0_imaginary": "-19/40",
+      "A0_real": "-9/160",
+      "A1_imaginary": "27/20",
+      "A1_real": "19/20",
+      "a": "-1/4",
+      "q": "-2",
+      "v": "2",
+      "weight": "33"
+    },
+    {
+      "A0_imaginary": "-19/40",
+      "A0_real": "9/160",
+      "A1_imaginary": "27/20",
+      "A1_real": "-19/20",
+      "a": "1/4",
+      "q": "-2",
+      "v": "2",
+      "weight": "33"
+    },
+    {
+      "A0_imaginary": "-49/80",
+      "A0_real": "-27/2560",
+      "A1_imaginary": "129/64",
+      "A1_real": "49/40",
+      "a": "-1/4",
+      "q": "-2",
+      "v": "3",
+      "weight": "98"
+    },
+    {
+      "A0_imaginary": "-49/80",
+      "A0_real": "27/2560",
+      "A1_imaginary": "129/64",
+      "A1_real": "-49/40",
+      "a": "1/4",
+      "q": "-2",
+      "v": "3",
+      "weight": "98"
+    },
+    {
+      "A0_imaginary": "-11/80",
+      "A0_real": "-9/320",
+      "A1_imaginary": "-9/40",
+      "A1_real": "11/40",
+      "a": "-1/4",
+      "q": "-1",
+      "v": "-2",
+      "weight": "18"
+    },
+    {
+      "A0_imaginary": "-11/80",
+      "A0_real": "9/320",
+      "A1_imaginary": "-9/40",
+      "A1_real": "-11/40",
+      "a": "1/4",
+      "q": "-1",
+      "v": "-2",
+      "weight": "18"
+    },
+    {
+      "A0_imaginary": "-11/80",
+      "A0_real": "-3/80",
+      "A1_imaginary": "0",
+      "A1_real": "11/40",
+      "a": "-1/4",
+      "q": "-1",
+      "v": "-1",
+      "weight": "3"
+    },
+    {
+      "A0_imaginary": "-11/80",
+      "A0_real": "3/80",
+      "A1_imaginary": "0",
+      "A1_real": "-11/40",
+      "a": "1/4",
+      "q": "-1",
+      "v": "-1",
+      "weight": "3"
+    },
+    {
+      "A0_imaginary": "-13/80",
+      "A0_real": "-63/1280",
+      "A1_imaginary": "33/160",
+      "A1_real": "13/40",
+      "a": "-1/4",
+      "q": "-1",
+      "v": "0",
+      "weight": "2"
+    },
+    {
+      "A0_imaginary": "-13/80",
+      "A0_real": "63/1280",
+      "A1_imaginary": "33/160",
+      "A1_real": "-13/40",
+      "a": "1/4",
+      "q": "-1",
+      "v": "0",
+      "weight": "2"
+    },
+    {
+      "A0_imaginary": "-17/80",
+      "A0_real": "-9/160",
+      "A1_imaginary": "9/20",
+      "A1_real": "17/40",
+      "a": "-1/4",
+      "q": "-1",
+      "v": "1",
+      "weight": "3"
+    },
+    {
+      "A0_imaginary": "-17/80",
+      "A0_real": "9/160",
+      "A1_imaginary": "9/20",
+      "A1_real": "-17/40",
+      "a": "1/4",
+      "q": "-1",
+      "v": "1",
+      "weight": "3"
+    },
+    {
+      "A0_imaginary": "-23/80",
+      "A0_real": "-33/640",
+      "A1_imaginary": "63/80",
+      "A1_real": "23/40",
+      "a": "-1/4",
+      "q": "-1",
+      "v": "2",
+      "weight": "18"
+    },
+    {
+      "A0_imaginary": "-23/80",
+      "A0_real": "33/640",
+      "A1_imaginary": "63/80",
+      "A1_real": "-23/40",
+      "a": "1/4",
+      "q": "-1",
+      "v": "2",
+      "weight": "18"
+    },
+    {
+      "A0_imaginary": "-31/80",
+      "A0_real": "-9/320",
+      "A1_imaginary": "51/40",
+      "A1_real": "31/40",
+      "a": "-1/4",
+      "q": "-1",
+      "v": "3",
+      "weight": "83"
+    },
+    {
+      "A0_imaginary": "-31/80",
+      "A0_real": "9/320",
+      "A1_imaginary": "51/40",
+      "A1_real": "-31/40",
+      "a": "1/4",
+      "q": "-1",
+      "v": "3",
+      "weight": "83"
+    },
+    {
+      "A0_imaginary": "-7/40",
+      "A0_real": "3/160",
+      "A1_imaginary": "-9/20",
+      "A1_real": "7/20",
+      "a": "-1/4",
+      "q": "0",
+      "v": "-2",
+      "weight": "17"
+    },
+    {
+      "A0_imaginary": "-7/40",
+      "A0_real": "-3/160",
+      "A1_imaginary": "-9/20",
+      "A1_real": "-7/20",
+      "a": "1/4",
+      "q": "0",
+      "v": "-2",
+      "weight": "17"
+    },
+    {
+      "A0_imaginary": "-11/80",
+      "A0_real": "33/2560",
+      "A1_imaginary": "-63/320",
+      "A1_real": "11/40",
+      "a": "-1/4",
+      "q": "0",
+      "v": "-1",
+      "weight": "2"
+    },
+    {
+      "A0_imaginary": "-11/80",
+      "A0_real": "-33/2560",
+      "A1_imaginary": "-63/320",
+      "A1_real": "-11/40",
+      "a": "1/4",
+      "q": "0",
+      "v": "-1",
+      "weight": "2"
+    },
+    {
+      "A0_imaginary": "-1/8",
+      "A0_real": "0",
+      "A1_imaginary": "0",
+      "A1_real": "1/4",
+      "a": "-1/4",
+      "q": "0",
+      "v": "0",
+      "weight": "1"
+    },
+    {
+      "A0_imaginary": "-1/8",
+      "A0_real": "0",
+      "A1_imaginary": "0",
+      "A1_real": "-1/4",
+      "a": "1/4",
+      "q": "0",
+      "v": "0",
+      "weight": "1"
+    },
+    {
+      "A0_imaginary": "-11/80",
+      "A0_real": "-33/2560",
+      "A1_imaginary": "63/320",
+      "A1_real": "11/40",
+      "a": "-1/4",
+      "q": "0",
+      "v": "1",
+      "weight": "2"
+    },
+    {
+      "A0_imaginary": "-11/80",
+      "A0_real": "33/2560",
+      "A1_imaginary": "63/320",
+      "A1_real": "-11/40",
+      "a": "1/4",
+      "q": "0",
+      "v": "1",
+      "weight": "2"
+    },
+    {
+      "A0_imaginary": "-7/40",
+      "A0_real": "-3/160",
+      "A1_imaginary": "9/20",
+      "A1_real": "7/20",
+      "a": "-1/4",
+      "q": "0",
+      "v": "2",
+      "weight": "17"
+    },
+    {
+      "A0_imaginary": "-7/40",
+      "A0_real": "3/160",
+      "A1_imaginary": "9/20",
+      "A1_real": "-7/20",
+      "a": "1/4",
+      "q": "0",
+      "v": "2",
+      "weight": "17"
+    },
+    {
+      "A0_imaginary": "-19/80",
+      "A0_real": "-27/2560",
+      "A1_imaginary": "261/320",
+      "A1_real": "19/40",
+      "a": "-1/4",
+      "q": "0",
+      "v": "3",
+      "weight": "82"
+    },
+    {
+      "A0_imaginary": "-19/80",
+      "A0_real": "27/2560",
+      "A1_imaginary": "261/320",
+      "A1_real": "-19/40",
+      "a": "1/4",
+      "q": "0",
+      "v": "3",
+      "weight": "82"
+    },
+    {
+      "A0_imaginary": "-23/80",
+      "A0_real": "33/640",
+      "A1_imaginary": "-63/80",
+      "A1_real": "23/40",
+      "a": "-1/4",
+      "q": "1",
+      "v": "-2",
+      "weight": "18"
+    },
+    {
+      "A0_imaginary": "-23/80",
+      "A0_real": "-33/640",
+      "A1_imaginary": "-63/80",
+      "A1_real": "-23/40",
+      "a": "1/4",
+      "q": "1",
+      "v": "-2",
+      "weight": "18"
+    },
+    {
+      "A0_imaginary": "-17/80",
+      "A0_real": "9/160",
+      "A1_imaginary": "-9/20",
+      "A1_real": "17/40",
+      "a": "-1/4",
+      "q": "1",
+      "v": "-1",
+      "weight": "3"
+    },
+    {
+      "A0_imaginary": "-17/80",
+      "A0_real": "-9/160",
+      "A1_imaginary": "-9/20",
+      "A1_real": "-17/40",
+      "a": "1/4",
+      "q": "1",
+      "v": "-1",
+      "weight": "3"
+    },
+    {
+      "A0_imaginary": "-13/80",
+      "A0_real": "63/1280",
+      "A1_imaginary": "-33/160",
+      "A1_real": "13/40",
+      "a": "-1/4",
+      "q": "1",
+      "v": "0",
+      "weight": "2"
+    },
+    {
+      "A0_imaginary": "-13/80",
+      "A0_real": "-63/1280",
+      "A1_imaginary": "-33/160",
+      "A1_real": "-13/40",
+      "a": "1/4",
+      "q": "1",
+      "v": "0",
+      "weight": "2"
+    },
+    {
+      "A0_imaginary": "-11/80",
+      "A0_real": "3/80",
+      "A1_imaginary": "0",
+      "A1_real": "11/40",
+      "a": "-1/4",
+      "q": "1",
+      "v": "1",
+      "weight": "3"
+    },
+    {
+      "A0_imaginary": "-11/80",
+      "A0_real": "-3/80",
+      "A1_imaginary": "0",
+      "A1_real": "-11/40",
+      "a": "1/4",
+      "q": "1",
+      "v": "1",
+      "weight": "3"
+    },
+    {
+      "A0_imaginary": "-11/80",
+      "A0_real": "9/320",
+      "A1_imaginary": "9/40",
+      "A1_real": "11/40",
+      "a": "-1/4",
+      "q": "1",
+      "v": "2",
+      "weight": "18"
+    },
+    {
+      "A0_imaginary": "-11/80",
+      "A0_real": "-9/320",
+      "A1_imaginary": "9/40",
+      "A1_real": "-11/40",
+      "a": "1/4",
+      "q": "1",
+      "v": "2",
+      "weight": "18"
+    },
+    {
+      "A0_imaginary": "-13/80",
+      "A0_real": "9/320",
+      "A1_imaginary": "21/40",
+      "A1_real": "13/40",
+      "a": "-1/4",
+      "q": "1",
+      "v": "3",
+      "weight": "83"
+    },
+    {
+      "A0_imaginary": "-13/80",
+      "A0_real": "-9/320",
+      "A1_imaginary": "21/40",
+      "A1_real": "-13/40",
+      "a": "1/4",
+      "q": "1",
+      "v": "3",
+      "weight": "83"
+    },
+    {
+      "A0_imaginary": "-19/40",
+      "A0_real": "9/160",
+      "A1_imaginary": "-27/20",
+      "A1_real": "19/20",
+      "a": "-1/4",
+      "q": "2",
+      "v": "-2",
+      "weight": "33"
+    },
+    {
+      "A0_imaginary": "-19/40",
+      "A0_real": "-9/160",
+      "A1_imaginary": "-27/20",
+      "A1_real": "-19/20",
+      "a": "1/4",
+      "q": "2",
+      "v": "-2",
+      "weight": "33"
+    },
+    {
+      "A0_imaginary": "-29/80",
+      "A0_real": "201/2560",
+      "A1_imaginary": "-279/320",
+      "A1_real": "29/40",
+      "a": "-1/4",
+      "q": "2",
+      "v": "-1",
+      "weight": "18"
+    },
+    {
+      "A0_imaginary": "-29/80",
+      "A0_real": "-201/2560",
+      "A1_imaginary": "-279/320",
+      "A1_real": "-29/40",
+      "a": "1/4",
+      "q": "2",
+      "v": "-1",
+      "weight": "18"
+    },
+    {
+      "A0_imaginary": "-11/40",
+      "A0_real": "27/320",
+      "A1_imaginary": "-21/40",
+      "A1_real": "11/20",
+      "a": "-1/4",
+      "q": "2",
+      "v": "0",
+      "weight": "17"
+    },
+    {
+      "A0_imaginary": "-11/40",
+      "A0_real": "-27/320",
+      "A1_imaginary": "-21/40",
+      "A1_real": "-11/20",
+      "a": "1/4",
+      "q": "2",
+      "v": "0",
+      "weight": "17"
+    },
+    {
+      "A0_imaginary": "-17/80",
+      "A0_real": "207/2560",
+      "A1_imaginary": "-81/320",
+      "A1_real": "17/40",
+      "a": "-1/4",
+      "q": "2",
+      "v": "1",
+      "weight": "18"
+    },
+    {
+      "A0_imaginary": "-17/80",
+      "A0_real": "-207/2560",
+      "A1_imaginary": "-81/320",
+      "A1_real": "-17/40",
+      "a": "1/4",
+      "q": "2",
+      "v": "1",
+      "weight": "18"
+    },
+    {
+      "A0_imaginary": "-7/40",
+      "A0_real": "3/40",
+      "A1_imaginary": "0",
+      "A1_real": "7/20",
+      "a": "-1/4",
+      "q": "2",
+      "v": "2",
+      "weight": "33"
+    },
+    {
+      "A0_imaginary": "-7/40",
+      "A0_real": "-3/40",
+      "A1_imaginary": "0",
+      "A1_real": "-7/20",
+      "a": "1/4",
+      "q": "2",
+      "v": "2",
+      "weight": "33"
+    },
+    {
+      "A0_imaginary": "-13/80",
+      "A0_real": "189/2560",
+      "A1_imaginary": "93/320",
+      "A1_real": "13/40",
+      "a": "-1/4",
+      "q": "2",
+      "v": "3",
+      "weight": "98"
+    },
+    {
+      "A0_imaginary": "-13/80",
+      "A0_real": "-189/2560",
+      "A1_imaginary": "93/320",
+      "A1_real": "-13/40",
+      "a": "1/4",
+      "q": "2",
+      "v": "3",
+      "weight": "98"
+    },
+    {
+      "A0_imaginary": "-59/80",
+      "A0_real": "3/160",
+      "A1_imaginary": "-9/4",
+      "A1_real": "59/40",
+      "a": "-1/4",
+      "q": "3",
+      "v": "-2",
+      "weight": "98"
+    },
+    {
+      "A0_imaginary": "-59/80",
+      "A0_real": "-3/160",
+      "A1_imaginary": "-9/4",
+      "A1_real": "-59/40",
+      "a": "1/4",
+      "q": "3",
+      "v": "-2",
+      "weight": "98"
+    },
+    {
+      "A0_imaginary": "-47/80",
+      "A0_real": "21/320",
+      "A1_imaginary": "-63/40",
+      "A1_real": "47/40",
+      "a": "-1/4",
+      "q": "3",
+      "v": "-1",
+      "weight": "83"
+    },
+    {
+      "A0_imaginary": "-47/80",
+      "A0_real": "-21/320",
+      "A1_imaginary": "-63/40",
+      "A1_real": "-47/40",
+      "a": "1/4",
+      "q": "3",
+      "v": "-1",
+      "weight": "83"
+    },
+    {
+      "A0_imaginary": "-37/80",
+      "A0_real": "117/1280",
+      "A1_imaginary": "-171/160",
+      "A1_real": "37/40",
+      "a": "-1/4",
+      "q": "3",
+      "v": "0",
+      "weight": "82"
+    },
+    {
+      "A0_imaginary": "-37/80",
+      "A0_real": "-117/1280",
+      "A1_imaginary": "-171/160",
+      "A1_real": "-37/40",
+      "a": "1/4",
+      "q": "3",
+      "v": "0",
+      "weight": "82"
+    },
+    {
+      "A0_imaginary": "-29/80",
+      "A0_real": "33/320",
+      "A1_imaginary": "-27/40",
+      "A1_real": "29/40",
+      "a": "-1/4",
+      "q": "3",
+      "v": "1",
+      "weight": "83"
+    },
+    {
+      "A0_imaginary": "-29/80",
+      "A0_real": "-33/320",
+      "A1_imaginary": "-27/40",
+      "A1_real": "-29/40",
+      "a": "1/4",
+      "q": "3",
+      "v": "1",
+      "weight": "83"
+    },
+    {
+      "A0_imaginary": "-23/80",
+      "A0_real": "69/640",
+      "A1_imaginary": "-27/80",
+      "A1_real": "23/40",
+      "a": "-1/4",
+      "q": "3",
+      "v": "2",
+      "weight": "98"
+    },
+    {
+      "A0_imaginary": "-23/80",
+      "A0_real": "-69/640",
+      "A1_imaginary": "-27/80",
+      "A1_real": "-23/40",
+      "a": "1/4",
+      "q": "3",
+      "v": "2",
+      "weight": "98"
+    },
+    {
+      "A0_imaginary": "-19/80",
+      "A0_real": "9/80",
+      "A1_imaginary": "0",
+      "A1_real": "19/40",
+      "a": "-1/4",
+      "q": "3",
+      "v": "3",
+      "weight": "163"
+    },
+    {
+      "A0_imaginary": "-19/80",
+      "A0_real": "-9/80",
+      "A1_imaginary": "0",
+      "A1_real": "-19/40",
+      "a": "1/4",
+      "q": "3",
+      "v": "3",
+      "weight": "163"
+    }
+  ],
+  "majorant_terms": {
+    "A0_imaginary": [
+      {
+        "absolute_source_weight": "3/80",
+        "coefficient": "-3/5",
+        "q_degree": 2,
+        "source_degree": 2,
+        "v_degree": 0
+      },
+      {
+        "absolute_source_weight": "3/80",
+        "coefficient": "3/5",
+        "q_degree": 1,
+        "source_degree": 2,
+        "v_degree": 1
+      },
+      {
+        "absolute_source_weight": "1/80",
+        "coefficient": "-1/5",
+        "q_degree": 0,
+        "source_degree": 2,
+        "v_degree": 2
+      },
+      {
+        "absolute_source_weight": "1/8",
+        "coefficient": "-2",
+        "q_degree": 0,
+        "source_degree": 2,
+        "v_degree": 0
+      }
+    ],
+    "A0_real": [
+      {
+        "absolute_source_weight": "3/1280",
+        "coefficient": "3/20",
+        "q_degree": 3,
+        "source_degree": 3,
+        "v_degree": 0
+      },
+      {
+        "absolute_source_weight": "9/2560",
+        "coefficient": "-9/40",
+        "q_degree": 2,
+        "source_degree": 3,
+        "v_degree": 1
+      },
+      {
+        "absolute_source_weight": "3/1280",
+        "coefficient": "3/20",
+        "q_degree": 1,
+        "source_degree": 3,
+        "v_degree": 2
+      },
+      {
+        "absolute_source_weight": "3/128",
+        "coefficient": "3/2",
+        "q_degree": 1,
+        "source_degree": 3,
+        "v_degree": 0
+      },
+      {
+        "absolute_source_weight": "3/40",
+        "coefficient": "-3/10",
+        "q_degree": 1,
+        "source_degree": 1,
+        "v_degree": 0
+      },
+      {
+        "absolute_source_weight": "3/2560",
+        "coefficient": "-3/40",
+        "q_degree": 0,
+        "source_degree": 3,
+        "v_degree": 3
+      },
+      {
+        "absolute_source_weight": "3/128",
+        "coefficient": "-3/2",
+        "q_degree": 0,
+        "source_degree": 3,
+        "v_degree": 1
+      },
+      {
+        "absolute_source_weight": "3/80",
+        "coefficient": "3/20",
+        "q_degree": 0,
+        "source_degree": 1,
+        "v_degree": 1
+      }
+    ],
+    "A1_imaginary": [
+      {
+        "absolute_source_weight": "3/160",
+        "coefficient": "-3/10",
+        "q_degree": 3,
+        "source_degree": 2,
+        "v_degree": 0
+      },
+      {
+        "absolute_source_weight": "9/320",
+        "coefficient": "9/20",
+        "q_degree": 2,
+        "source_degree": 2,
+        "v_degree": 1
+      },
+      {
+        "absolute_source_weight": "3/160",
+        "coefficient": "-3/10",
+        "q_degree": 1,
+        "source_degree": 2,
+        "v_degree": 2
+      },
+      {
+        "absolute_source_weight": "3/16",
+        "coefficient": "-3",
+        "q_degree": 1,
+        "source_degree": 2,
+        "v_degree": 0
+      },
+      {
+        "absolute_source_weight": "3/320",
+        "coefficient": "3/20",
+        "q_degree": 0,
+        "source_degree": 2,
+        "v_degree": 3
+      },
+      {
+        "absolute_source_weight": "3/16",
+        "coefficient": "3",
+        "q_degree": 0,
+        "source_degree": 2,
+        "v_degree": 1
+      }
+    ],
+    "A1_real": [
+      {
+        "absolute_source_weight": "3/40",
+        "coefficient": "-3/10",
+        "q_degree": 2,
+        "source_degree": 1,
+        "v_degree": 0
+      },
+      {
+        "absolute_source_weight": "3/40",
+        "coefficient": "3/10",
+        "q_degree": 1,
+        "source_degree": 1,
+        "v_degree": 1
+      },
+      {
+        "absolute_source_weight": "1/40",
+        "coefficient": "-1/10",
+        "q_degree": 0,
+        "source_degree": 1,
+        "v_degree": 2
+      },
+      {
+        "absolute_source_weight": "1/4",
+        "coefficient": "-1",
+        "q_degree": 0,
+        "source_degree": 1,
+        "v_degree": 0
+      }
+    ]
+  },
+  "passed": 32,
+  "run_kind": "primary",
+  "schema": "tect/foundation-audit/1.0",
+  "task_id": "T-054",
+  "verdict": "PASS"
+}
