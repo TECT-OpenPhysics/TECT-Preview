@@ -1,0 +1,2081 @@
+{
+  "assertion_count": 212,
+  "assertions": [
+    {
+      "actual": "['EXP-001080', 'T-054']",
+      "expected": "EXP-001080/T-054",
+      "group": "provenance",
+      "name": "identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "group": "scope",
+      "name": "claim nonbearing",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.0, 1.0, 0.6, 0.1]",
+      "expected": "positive finite inputs",
+      "group": "model",
+      "name": "finite parameters",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.75, 1.0, 1.25, 1.5]",
+      "expected": "increasing positive radii",
+      "group": "cutoff",
+      "name": "cutoff geometry",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.1, 0.2]",
+      "expected": "increasing positive times",
+      "group": "time",
+      "name": "time geometry",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'finite_truncated_oscillator_q3_model_closed': True, 'smooth_coordinate_cutoff_constructed_closed': True, 'full_gibbs_state_and_two_sided_seminorm_closed': True, 'configuration_character_commutation_closed': True, 'finite_time_cutoff_difference_computed': True, 'finite_hamiltonian_modular_derivative_computed': True, 'finite_tail_monotonicity_checked': True, 'finite_modular_amplification_observed': True, 'oscillator_dimension_uniformity_proved': False, 'volume_uniform_direct_d_cauchy_closed': False, 'delta_d_cauchy_closed': False, 'actual_ccr_domain_closed': False, 'smooth_cutoff_infinite_volume_closed': False, 'four_context_history_closed': False, 'product_core_density_closed': False, 'exhaustion_independence_closed': False, 'group_law_closed': False, 'common_alpha_closed': False, 'hamiltonian_os_identification_closed': False, 'kms_os_closed': False, 'gns_gap_closed': False, 'continuum_closed': False, 'c6_closed': False, 'sector_a_closed': False, 'pre_a_closed': False, 'no_new_negative_result': True, 'no_tier_change': True, 'no_pdf': True}",
+      "expected": "finite checkpoint with thermodynamic gates open",
+      "group": "scope",
+      "name": "scope firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": "<1e-09",
+      "group": "matrix",
+      "name": "n=4 q1 Hermitian",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": "<1e-09",
+      "group": "matrix",
+      "name": "n=4 p1 Hermitian",
+      "status": "PASS"
+    },
+    {
+      "actual": "8.196123257993793e-16",
+      "expected": "<1e-09",
+      "group": "matrix",
+      "name": "n=4 full H Hermitian",
+      "status": "PASS"
+    },
+    {
+      "actual": "(0.9999999999999998+0j)",
+      "expected": "1",
+      "group": "state",
+      "name": "n=4 Gibbs trace",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.0001465648483326219, 0.24395207218891077]",
+      "expected": "[0,1]",
+      "group": "state",
+      "name": "n=4 Gibbs positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "8.553052483067079e-16",
+      "expected": "<1e-09",
+      "group": "state",
+      "name": "n=4 Gibbs commutes",
+      "status": "PASS"
+    },
+    {
+      "actual": "4.4817046927112875e-15",
+      "expected": "<1.0000000000000001e-07",
+      "group": "character",
+      "name": "n=4 character unitary",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.2967854842430457, 7.714044562518224]",
+      "expected": "finite spectrum",
+      "group": "model",
+      "name": "n=4 finite Q3 bounded below",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.094751130452841",
+      "expected": ">1e-06",
+      "group": "cutoff",
+      "name": "n=4 L=0.75 tail floor",
+      "status": "PASS"
+    },
+    {
+      "actual": "5.4627453700129325e-15",
+      "expected": "<1e-08",
+      "group": "CCR-core",
+      "name": "n=4 L=0.75 configuration commutation",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": "0",
+      "group": "Duhamel",
+      "name": "n=4 L=0.75 D(0)",
+      "status": "PASS"
+    },
+    {
+      "actual": "5.429037475034708e-15",
+      "expected": "<1e-08",
+      "group": "Duhamel",
+      "name": "n=4 L=0.75 D'(0)",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.010116578333639279, 0.06868434370039588]",
+      "expected": "finite",
+      "group": "Duhamel",
+      "name": "n=4 L=0.75 t=0.1 D finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": "<1.0000000000000001e-07",
+      "group": "seminorm",
+      "name": "n=4 L=0.75 t=0.1 D two-sided identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "8.673617379884035e-19",
+      "expected": "<1.0000000000000001e-07",
+      "group": "seminorm",
+      "name": "n=4 L=0.75 t=0.1 delta two-sided identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.03881595062398012, 0.26250386286487987]",
+      "expected": "finite",
+      "group": "Duhamel",
+      "name": "n=4 L=0.75 t=0.2 D finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.0842021724855044e-19",
+      "expected": "<1.0000000000000001e-07",
+      "group": "seminorm",
+      "name": "n=4 L=0.75 t=0.2 D two-sided identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "-1.3877787807814457e-17",
+      "expected": "<1.0000000000000001e-07",
+      "group": "seminorm",
+      "name": "n=4 L=0.75 t=0.2 delta two-sided identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.0409209835978073",
+      "expected": ">1e-06",
+      "group": "cutoff",
+      "name": "n=4 L=1.0 tail floor",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.0409209835978073",
+      "expected": "<=1.094751130452841+1e-08",
+      "group": "cutoff",
+      "name": "n=4 tail monotone L=1.0",
+      "status": "PASS"
+    },
+    {
+      "actual": "5.056564467581261e-15",
+      "expected": "<1e-08",
+      "group": "CCR-core",
+      "name": "n=4 L=1.0 configuration commutation",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": "0",
+      "group": "Duhamel",
+      "name": "n=4 L=1.0 D(0)",
+      "status": "PASS"
+    },
+    {
+      "actual": "5.044041599987319e-15",
+      "expected": "<1e-08",
+      "group": "Duhamel",
+      "name": "n=4 L=1.0 D'(0)",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.009438422754792376, 0.06457222267768531]",
+      "expected": "finite",
+      "group": "Duhamel",
+      "name": "n=4 L=1.0 t=0.1 D finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "-1.3552527156068805e-20",
+      "expected": "<1.0000000000000001e-07",
+      "group": "seminorm",
+      "name": "n=4 L=1.0 t=0.1 D two-sided identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "-8.673617379884035e-19",
+      "expected": "<1.0000000000000001e-07",
+      "group": "seminorm",
+      "name": "n=4 L=1.0 t=0.1 delta two-sided identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.0362690132847107, 0.24731259359078572]",
+      "expected": "finite",
+      "group": "Duhamel",
+      "name": "n=4 L=1.0 t=0.2 D finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "-3.2526065174565133e-19",
+      "expected": "<1.0000000000000001e-07",
+      "group": "seminorm",
+      "name": "n=4 L=1.0 t=0.2 D two-sided identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": "<1.0000000000000001e-07",
+      "group": "seminorm",
+      "name": "n=4 L=1.0 t=0.2 delta two-sided identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.5130796987817628",
+      "expected": ">1e-06",
+      "group": "cutoff",
+      "name": "n=4 L=1.25 tail floor",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.5130796987817628",
+      "expected": "<=1.0409209835978073+1e-08",
+      "group": "cutoff",
+      "name": "n=4 tail monotone L=1.25",
+      "status": "PASS"
+    },
+    {
+      "actual": "2.610633888742581e-15",
+      "expected": "<1e-08",
+      "group": "CCR-core",
+      "name": "n=4 L=1.25 configuration commutation",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": "0",
+      "group": "Duhamel",
+      "name": "n=4 L=1.25 D(0)",
+      "status": "PASS"
+    },
+    {
+      "actual": "2.6227184598503085e-15",
+      "expected": "<1e-08",
+      "group": "Duhamel",
+      "name": "n=4 L=1.25 D'(0)",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.0046154366132580785, 0.03182499791866713]",
+      "expected": "finite",
+      "group": "Duhamel",
+      "name": "n=4 L=1.25 t=0.1 D finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "-1.6940658945086007e-21",
+      "expected": "<1.0000000000000001e-07",
+      "group": "seminorm",
+      "name": "n=4 L=1.25 t=0.1 D two-sided identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "2.168404344971009e-19",
+      "expected": "<1.0000000000000001e-07",
+      "group": "seminorm",
+      "name": "n=4 L=1.25 t=0.1 delta two-sided identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.017868312836832663, 0.12297214983601758]",
+      "expected": "finite",
+      "group": "Duhamel",
+      "name": "n=4 L=1.25 t=0.2 D finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "2.710505431213761e-20",
+      "expected": "<1.0000000000000001e-07",
+      "group": "seminorm",
+      "name": "n=4 L=1.25 t=0.2 D two-sided identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": "<1.0000000000000001e-07",
+      "group": "seminorm",
+      "name": "n=4 L=1.25 t=0.2 delta two-sided identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0644814352520479",
+      "expected": ">1e-06",
+      "group": "cutoff",
+      "name": "n=4 L=1.5 tail floor",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0644814352520479",
+      "expected": "<=0.5130796987817628+1e-08",
+      "group": "cutoff",
+      "name": "n=4 tail monotone L=1.5",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.2814094661198606e-15",
+      "expected": "<1e-08",
+      "group": "CCR-core",
+      "name": "n=4 L=1.5 configuration commutation",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": "0",
+      "group": "Duhamel",
+      "name": "n=4 L=1.5 D(0)",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.780016354915037e-15",
+      "expected": "<1e-08",
+      "group": "Duhamel",
+      "name": "n=4 L=1.5 D'(0)",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.0005818246722294064, 0.0040204094763980555]",
+      "expected": "finite",
+      "group": "Duhamel",
+      "name": "n=4 L=1.5 t=0.1 D finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "-2.6469779601696886e-23",
+      "expected": "<1.0000000000000001e-07",
+      "group": "seminorm",
+      "name": "n=4 L=1.5 t=0.1 D two-sided identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "-3.3881317890172014e-21",
+      "expected": "<1.0000000000000001e-07",
+      "group": "seminorm",
+      "name": "n=4 L=1.5 t=0.1 delta two-sided identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.0022369328929063214, 0.015431504066056513]",
+      "expected": "finite",
+      "group": "Duhamel",
+      "name": "n=4 L=1.5 t=0.2 D finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "-8.470329472543003e-22",
+      "expected": "<1.0000000000000001e-07",
+      "group": "seminorm",
+      "name": "n=4 L=1.5 t=0.2 D two-sided identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.3552527156068805e-20",
+      "expected": "<1.0000000000000001e-07",
+      "group": "seminorm",
+      "name": "n=4 L=1.5 t=0.2 delta two-sided identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": "<1e-09",
+      "group": "matrix",
+      "name": "n=6 q1 Hermitian",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": "<1e-09",
+      "group": "matrix",
+      "name": "n=6 p1 Hermitian",
+      "status": "PASS"
+    },
+    {
+      "actual": "2.7877432650069077e-15",
+      "expected": "<1e-09",
+      "group": "matrix",
+      "name": "n=6 full H Hermitian",
+      "status": "PASS"
+    },
+    {
+      "actual": "(1+0j)",
+      "expected": "1",
+      "group": "state",
+      "name": "n=6 Gibbs trace",
+      "status": "PASS"
+    },
+    {
+      "actual": "[9.60520091959002e-11, 0.3201036612176995]",
+      "expected": "[0,1]",
+      "group": "state",
+      "name": "n=6 Gibbs positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "2.5426793423172105e-15",
+      "expected": "<1e-09",
+      "group": "state",
+      "name": "n=6 Gibbs commutes",
+      "status": "PASS"
+    },
+    {
+      "actual": "8.565139374603918e-15",
+      "expected": "<1.0000000000000001e-07",
+      "group": "character",
+      "name": "n=6 character unitary",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.5040449035555326, 22.43106591549983]",
+      "expected": "finite spectrum",
+      "group": "model",
+      "name": "n=6 finite Q3 bounded below",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.149426691234319",
+      "expected": ">1e-06",
+      "group": "cutoff",
+      "name": "n=6 L=0.75 tail floor",
+      "status": "PASS"
+    },
+    {
+      "actual": "2.3372772276562736e-14",
+      "expected": "<1e-08",
+      "group": "CCR-core",
+      "name": "n=6 L=0.75 configuration commutation",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": "0",
+      "group": "Duhamel",
+      "name": "n=6 L=0.75 D(0)",
+      "status": "PASS"
+    },
+    {
+      "actual": "2.3957481485808274e-14",
+      "expected": "<1e-08",
+      "group": "Duhamel",
+      "name": "n=6 L=0.75 D'(0)",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.01232610042103505, 0.1473592235872357]",
+      "expected": "finite",
+      "group": "Duhamel",
+      "name": "n=6 L=0.75 t=0.1 D finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": "<1.0000000000000001e-07",
+      "group": "seminorm",
+      "name": "n=6 L=0.75 t=0.1 D two-sided identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": "<1.0000000000000001e-07",
+      "group": "seminorm",
+      "name": "n=6 L=0.75 t=0.1 delta two-sided identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.04383352070360928, 0.48962099614897686]",
+      "expected": "finite",
+      "group": "Duhamel",
+      "name": "n=6 L=0.75 t=0.2 D finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "-2.168404344971009e-19",
+      "expected": "<1.0000000000000001e-07",
+      "group": "seminorm",
+      "name": "n=6 L=0.75 t=0.2 D two-sided identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "4.163336342344337e-17",
+      "expected": "<1.0000000000000001e-07",
+      "group": "seminorm",
+      "name": "n=6 L=0.75 t=0.2 delta two-sided identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.7564304935538211",
+      "expected": ">1e-06",
+      "group": "cutoff",
+      "name": "n=6 L=1.0 tail floor",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.7564304935538211",
+      "expected": "<=1.149426691234319+1e-08",
+      "group": "cutoff",
+      "name": "n=6 tail monotone L=1.0",
+      "status": "PASS"
+    },
+    {
+      "actual": "2.352872824014596e-14",
+      "expected": "<1e-08",
+      "group": "CCR-core",
+      "name": "n=6 L=1.0 configuration commutation",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": "0",
+      "group": "Duhamel",
+      "name": "n=6 L=1.0 D(0)",
+      "status": "PASS"
+    },
+    {
+      "actual": "2.382214048636111e-14",
+      "expected": "<1e-08",
+      "group": "Duhamel",
+      "name": "n=6 L=1.0 D'(0)",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.011694626231305833, 0.14452402741929632]",
+      "expected": "finite",
+      "group": "Duhamel",
+      "name": "n=6 L=1.0 t=0.1 D finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.3552527156068805e-20",
+      "expected": "<1.0000000000000001e-07",
+      "group": "seminorm",
+      "name": "n=6 L=1.0 t=0.1 D two-sided identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "-5.204170427930421e-18",
+      "expected": "<1.0000000000000001e-07",
+      "group": "seminorm",
+      "name": "n=6 L=1.0 t=0.1 delta two-sided identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.0413213851075444, 0.4762353602099249]",
+      "expected": "finite",
+      "group": "Duhamel",
+      "name": "n=6 L=1.0 t=0.2 D finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": "<1.0000000000000001e-07",
+      "group": "seminorm",
+      "name": "n=6 L=1.0 t=0.2 D two-sided identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "2.7755575615628914e-17",
+      "expected": "<1.0000000000000001e-07",
+      "group": "seminorm",
+      "name": "n=6 L=1.0 t=0.2 delta two-sided identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.6010316227002326",
+      "expected": ">1e-06",
+      "group": "cutoff",
+      "name": "n=6 L=1.25 tail floor",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.6010316227002326",
+      "expected": "<=0.7564304935538211+1e-08",
+      "group": "cutoff",
+      "name": "n=6 tail monotone L=1.25",
+      "status": "PASS"
+    },
+    {
+      "actual": "2.2943200025997346e-14",
+      "expected": "<1e-08",
+      "group": "CCR-core",
+      "name": "n=6 L=1.25 configuration commutation",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": "0",
+      "group": "Duhamel",
+      "name": "n=6 L=1.25 D(0)",
+      "status": "PASS"
+    },
+    {
+      "actual": "2.3737785239821903e-14",
+      "expected": "<1e-08",
+      "group": "Duhamel",
+      "name": "n=6 L=1.25 D'(0)",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.01129622157187001, 0.14143291809041159]",
+      "expected": "finite",
+      "group": "Duhamel",
+      "name": "n=6 L=1.25 t=0.1 D finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": "<1.0000000000000001e-07",
+      "group": "seminorm",
+      "name": "n=6 L=1.25 t=0.1 D two-sided identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": "<1.0000000000000001e-07",
+      "group": "seminorm",
+      "name": "n=6 L=1.25 t=0.1 delta two-sided identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.03986391484655836, 0.4630268459333279]",
+      "expected": "finite",
+      "group": "Duhamel",
+      "name": "n=6 L=1.25 t=0.2 D finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "-1.0842021724855044e-19",
+      "expected": "<1.0000000000000001e-07",
+      "group": "seminorm",
+      "name": "n=6 L=1.25 t=0.2 D two-sided identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "-2.7755575615628914e-17",
+      "expected": "<1.0000000000000001e-07",
+      "group": "seminorm",
+      "name": "n=6 L=1.25 t=0.2 delta two-sided identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.5648637301263053",
+      "expected": ">1e-06",
+      "group": "cutoff",
+      "name": "n=6 L=1.5 tail floor",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.5648637301263053",
+      "expected": "<=0.6010316227002326+1e-08",
+      "group": "cutoff",
+      "name": "n=6 tail monotone L=1.5",
+      "status": "PASS"
+    },
+    {
+      "actual": "2.0343319318281773e-14",
+      "expected": "<1e-08",
+      "group": "CCR-core",
+      "name": "n=6 L=1.5 configuration commutation",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": "0",
+      "group": "Duhamel",
+      "name": "n=6 L=1.5 D(0)",
+      "status": "PASS"
+    },
+    {
+      "actual": "2.072714558068432e-14",
+      "expected": "<1e-08",
+      "group": "Duhamel",
+      "name": "n=6 L=1.5 D'(0)",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.009208384674744323, 0.11870616626805569]",
+      "expected": "finite",
+      "group": "Duhamel",
+      "name": "n=6 L=1.5 t=0.1 D finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": "<1.0000000000000001e-07",
+      "group": "seminorm",
+      "name": "n=6 L=1.5 t=0.1 D two-sided identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.734723475976807e-18",
+      "expected": "<1.0000000000000001e-07",
+      "group": "seminorm",
+      "name": "n=6 L=1.5 t=0.1 delta two-sided identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.03265236848472871, 0.3929254329784347]",
+      "expected": "finite",
+      "group": "Duhamel",
+      "name": "n=6 L=1.5 t=0.2 D finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": "<1.0000000000000001e-07",
+      "group": "seminorm",
+      "name": "n=6 L=1.5 t=0.2 D two-sided identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": "<1.0000000000000001e-07",
+      "group": "seminorm",
+      "name": "n=6 L=1.5 t=0.2 delta two-sided identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": "<1e-09",
+      "group": "matrix",
+      "name": "n=8 q1 Hermitian",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": "<1e-09",
+      "group": "matrix",
+      "name": "n=8 p1 Hermitian",
+      "status": "PASS"
+    },
+    {
+      "actual": "4.43776849771663e-15",
+      "expected": "<1e-09",
+      "group": "matrix",
+      "name": "n=8 full H Hermitian",
+      "status": "PASS"
+    },
+    {
+      "actual": "(1.0000000000000007+0j)",
+      "expected": "1",
+      "group": "state",
+      "name": "n=8 Gibbs trace",
+      "status": "PASS"
+    },
+    {
+      "actual": "[-1.4850049774457979e-18, 0.3426227842089251]",
+      "expected": "[0,1]",
+      "group": "state",
+      "name": "n=8 Gibbs positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "4.875578976774954e-15",
+      "expected": "<1e-09",
+      "group": "state",
+      "name": "n=8 Gibbs commutes",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.0731284687691265e-14",
+      "expected": "<1.0000000000000001e-07",
+      "group": "character",
+      "name": "n=8 character unitary",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.5361424454041417, 47.39193081433821]",
+      "expected": "finite spectrum",
+      "group": "model",
+      "name": "n=8 finite Q3 bounded below",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.0690388985034593",
+      "expected": ">1e-06",
+      "group": "cutoff",
+      "name": "n=8 L=0.75 tail floor",
+      "status": "PASS"
+    },
+    {
+      "actual": "2.896713224466348e-14",
+      "expected": "<1e-08",
+      "group": "CCR-core",
+      "name": "n=8 L=0.75 configuration commutation",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": "0",
+      "group": "Duhamel",
+      "name": "n=8 L=0.75 D(0)",
+      "status": "PASS"
+    },
+    {
+      "actual": "3.043035917698394e-14",
+      "expected": "<1e-08",
+      "group": "Duhamel",
+      "name": "n=8 L=0.75 D'(0)",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.014212613374914139, 0.28125745100609967]",
+      "expected": "finite",
+      "group": "Duhamel",
+      "name": "n=8 L=0.75 t=0.1 D finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": "<1.0000000000000001e-07",
+      "group": "seminorm",
+      "name": "n=8 L=0.75 t=0.1 D two-sided identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "-1.3877787807814457e-17",
+      "expected": "<1.0000000000000001e-07",
+      "group": "seminorm",
+      "name": "n=8 L=0.75 t=0.1 delta two-sided identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.043373329662238516, 0.7637454747119476]",
+      "expected": "finite",
+      "group": "Duhamel",
+      "name": "n=8 L=0.75 t=0.2 D finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.0842021724855044e-19",
+      "expected": "<1.0000000000000001e-07",
+      "group": "seminorm",
+      "name": "n=8 L=0.75 t=0.2 D two-sided identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "-5.551115123125783e-17",
+      "expected": "<1.0000000000000001e-07",
+      "group": "seminorm",
+      "name": "n=8 L=0.75 t=0.2 delta two-sided identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.8516610423619768",
+      "expected": ">1e-06",
+      "group": "cutoff",
+      "name": "n=8 L=1.0 tail floor",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.8516610423619768",
+      "expected": "<=1.0690388985034593+1e-08",
+      "group": "cutoff",
+      "name": "n=8 tail monotone L=1.0",
+      "status": "PASS"
+    },
+    {
+      "actual": "2.9614519884856815e-14",
+      "expected": "<1e-08",
+      "group": "CCR-core",
+      "name": "n=8 L=1.0 configuration commutation",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": "0",
+      "group": "Duhamel",
+      "name": "n=8 L=1.0 D(0)",
+      "status": "PASS"
+    },
+    {
+      "actual": "3.0633027268488836e-14",
+      "expected": "<1e-08",
+      "group": "Duhamel",
+      "name": "n=8 L=1.0 D'(0)",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.014210700229073411, 0.28118921957945253]",
+      "expected": "finite",
+      "group": "Duhamel",
+      "name": "n=8 L=1.0 t=0.1 D finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "2.710505431213761e-20",
+      "expected": "<1.0000000000000001e-07",
+      "group": "seminorm",
+      "name": "n=8 L=1.0 t=0.1 D two-sided identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "6.938893903907228e-18",
+      "expected": "<1.0000000000000001e-07",
+      "group": "seminorm",
+      "name": "n=8 L=1.0 t=0.1 delta two-sided identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.04346895294905929, 0.7668297326833975]",
+      "expected": "finite",
+      "group": "Duhamel",
+      "name": "n=8 L=1.0 t=0.2 D finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": "<1.0000000000000001e-07",
+      "group": "seminorm",
+      "name": "n=8 L=1.0 t=0.2 D two-sided identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "-1.1102230246251565e-16",
+      "expected": "<1.0000000000000001e-07",
+      "group": "seminorm",
+      "name": "n=8 L=1.0 t=0.2 delta two-sided identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.7732557063168072",
+      "expected": ">1e-06",
+      "group": "cutoff",
+      "name": "n=8 L=1.25 tail floor",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.7732557063168072",
+      "expected": "<=0.8516610423619768+1e-08",
+      "group": "cutoff",
+      "name": "n=8 tail monotone L=1.25",
+      "status": "PASS"
+    },
+    {
+      "actual": "2.9515292069443595e-14",
+      "expected": "<1e-08",
+      "group": "CCR-core",
+      "name": "n=8 L=1.25 configuration commutation",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": "0",
+      "group": "Duhamel",
+      "name": "n=8 L=1.25 D(0)",
+      "status": "PASS"
+    },
+    {
+      "actual": "3.081681423767678e-14",
+      "expected": "<1e-08",
+      "group": "Duhamel",
+      "name": "n=8 L=1.25 D'(0)",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.013581195944679698, 0.27509869178107194]",
+      "expected": "finite",
+      "group": "Duhamel",
+      "name": "n=8 L=1.25 t=0.1 D finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": "<1.0000000000000001e-07",
+      "group": "seminorm",
+      "name": "n=8 L=1.25 t=0.1 D two-sided identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": "<1.0000000000000001e-07",
+      "group": "seminorm",
+      "name": "n=8 L=1.25 t=0.1 delta two-sided identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.041138638081606275, 0.7481692866218512]",
+      "expected": "finite",
+      "group": "Duhamel",
+      "name": "n=8 L=1.25 t=0.2 D finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "2.168404344971009e-19",
+      "expected": "<1.0000000000000001e-07",
+      "group": "seminorm",
+      "name": "n=8 L=1.25 t=0.2 D two-sided identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": "<1.0000000000000001e-07",
+      "group": "seminorm",
+      "name": "n=8 L=1.25 t=0.2 delta two-sided identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.48072016940125467",
+      "expected": ">1e-06",
+      "group": "cutoff",
+      "name": "n=8 L=1.5 tail floor",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.48072016940125467",
+      "expected": "<=0.7732557063168072+1e-08",
+      "group": "cutoff",
+      "name": "n=8 tail monotone L=1.5",
+      "status": "PASS"
+    },
+    {
+      "actual": "2.9828737824934124e-14",
+      "expected": "<1e-08",
+      "group": "CCR-core",
+      "name": "n=8 L=1.5 configuration commutation",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": "0",
+      "group": "Duhamel",
+      "name": "n=8 L=1.5 D(0)",
+      "status": "PASS"
+    },
+    {
+      "actual": "3.0841995398130063e-14",
+      "expected": "<1e-08",
+      "group": "Duhamel",
+      "name": "n=8 L=1.5 D'(0)",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.012493794803439661, 0.260609186837439]",
+      "expected": "finite",
+      "group": "Duhamel",
+      "name": "n=8 L=1.5 t=0.1 D finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.3552527156068805e-20",
+      "expected": "<1.0000000000000001e-07",
+      "group": "seminorm",
+      "name": "n=8 L=1.5 t=0.1 D two-sided identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.3877787807814457e-17",
+      "expected": "<1.0000000000000001e-07",
+      "group": "seminorm",
+      "name": "n=8 L=1.5 t=0.1 delta two-sided identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.03734772862698755, 0.714105740323782]",
+      "expected": "finite",
+      "group": "Duhamel",
+      "name": "n=8 L=1.5 t=0.2 D finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.0842021724855044e-19",
+      "expected": "<1.0000000000000001e-07",
+      "group": "seminorm",
+      "name": "n=8 L=1.5 t=0.2 D two-sided identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": "<1.0000000000000001e-07",
+      "group": "seminorm",
+      "name": "n=8 L=1.5 t=0.2 delta two-sided identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": "<1e-09",
+      "group": "matrix",
+      "name": "n=10 q1 Hermitian",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": "<1e-09",
+      "group": "matrix",
+      "name": "n=10 p1 Hermitian",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.525264215859813e-14",
+      "expected": "<1e-09",
+      "group": "matrix",
+      "name": "n=10 full H Hermitian",
+      "status": "PASS"
+    },
+    {
+      "actual": "(0.9999999999999998+0j)",
+      "expected": "1",
+      "group": "state",
+      "name": "n=10 Gibbs trace",
+      "status": "PASS"
+    },
+    {
+      "actual": "[-3.9630787152696174e-19, 0.3571029087680083]",
+      "expected": "[0,1]",
+      "group": "state",
+      "name": "n=10 Gibbs positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "8.878613457216527e-15",
+      "expected": "<1e-09",
+      "group": "state",
+      "name": "n=10 Gibbs commutes",
+      "status": "PASS"
+    },
+    {
+      "actual": "2.4945016562730394e-14",
+      "expected": "<1.0000000000000001e-07",
+      "group": "character",
+      "name": "n=10 character unitary",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.5344463271750239, 83.67218503602163]",
+      "expected": "finite spectrum",
+      "group": "model",
+      "name": "n=10 finite Q3 bounded below",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.996029897228615",
+      "expected": ">1e-06",
+      "group": "cutoff",
+      "name": "n=10 L=0.75 tail floor",
+      "status": "PASS"
+    },
+    {
+      "actual": "7.26403074552978e-14",
+      "expected": "<1e-08",
+      "group": "CCR-core",
+      "name": "n=10 L=0.75 configuration commutation",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": "0",
+      "group": "Duhamel",
+      "name": "n=10 L=0.75 D(0)",
+      "status": "PASS"
+    },
+    {
+      "actual": "7.525211734852367e-14",
+      "expected": "<1e-08",
+      "group": "Duhamel",
+      "name": "n=10 L=0.75 D'(0)",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.011296261518844277, 0.3254534000081874]",
+      "expected": "finite",
+      "group": "Duhamel",
+      "name": "n=10 L=0.75 t=0.1 D finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "4.0657581468206416e-20",
+      "expected": "<1.0000000000000001e-07",
+      "group": "seminorm",
+      "name": "n=10 L=0.75 t=0.1 D two-sided identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": "<1.0000000000000001e-07",
+      "group": "seminorm",
+      "name": "n=10 L=0.75 t=0.1 delta two-sided identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.028021177674327397, 0.6185416492674349]",
+      "expected": "finite",
+      "group": "Duhamel",
+      "name": "n=10 L=0.75 t=0.2 D finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": "<1.0000000000000001e-07",
+      "group": "seminorm",
+      "name": "n=10 L=0.75 t=0.2 D two-sided identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "2.7755575615628914e-17",
+      "expected": "<1.0000000000000001e-07",
+      "group": "seminorm",
+      "name": "n=10 L=0.75 t=0.2 delta two-sided identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.8936201157432033",
+      "expected": ">1e-06",
+      "group": "cutoff",
+      "name": "n=10 L=1.0 tail floor",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.8936201157432033",
+      "expected": "<=0.996029897228615+1e-08",
+      "group": "cutoff",
+      "name": "n=10 tail monotone L=1.0",
+      "status": "PASS"
+    },
+    {
+      "actual": "7.314983384193888e-14",
+      "expected": "<1e-08",
+      "group": "CCR-core",
+      "name": "n=10 L=1.0 configuration commutation",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": "0",
+      "group": "Duhamel",
+      "name": "n=10 L=1.0 D(0)",
+      "status": "PASS"
+    },
+    {
+      "actual": "7.494349089856114e-14",
+      "expected": "<1e-08",
+      "group": "Duhamel",
+      "name": "n=10 L=1.0 D'(0)",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.011275251597393296, 0.3248214834271585]",
+      "expected": "finite",
+      "group": "Duhamel",
+      "name": "n=10 L=1.0 t=0.1 D finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "4.0657581468206416e-20",
+      "expected": "<1.0000000000000001e-07",
+      "group": "seminorm",
+      "name": "n=10 L=1.0 t=0.1 D two-sided identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.3877787807814457e-17",
+      "expected": "<1.0000000000000001e-07",
+      "group": "seminorm",
+      "name": "n=10 L=1.0 t=0.1 delta two-sided identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.02809527384942292, 0.6219125763562715]",
+      "expected": "finite",
+      "group": "Duhamel",
+      "name": "n=10 L=1.0 t=0.2 D finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "-1.0842021724855044e-19",
+      "expected": "<1.0000000000000001e-07",
+      "group": "seminorm",
+      "name": "n=10 L=1.0 t=0.2 D two-sided identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "-5.551115123125783e-17",
+      "expected": "<1.0000000000000001e-07",
+      "group": "seminorm",
+      "name": "n=10 L=1.0 t=0.2 delta two-sided identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.6508030408496778",
+      "expected": ">1e-06",
+      "group": "cutoff",
+      "name": "n=10 L=1.25 tail floor",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.6508030408496778",
+      "expected": "<=0.8936201157432033+1e-08",
+      "group": "cutoff",
+      "name": "n=10 tail monotone L=1.25",
+      "status": "PASS"
+    },
+    {
+      "actual": "7.303513503821518e-14",
+      "expected": "<1e-08",
+      "group": "CCR-core",
+      "name": "n=10 L=1.25 configuration commutation",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": "0",
+      "group": "Duhamel",
+      "name": "n=10 L=1.25 D(0)",
+      "status": "PASS"
+    },
+    {
+      "actual": "7.534468343023057e-14",
+      "expected": "<1e-08",
+      "group": "Duhamel",
+      "name": "n=10 L=1.25 D'(0)",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.01077122752792325, 0.31858340314853745]",
+      "expected": "finite",
+      "group": "Duhamel",
+      "name": "n=10 L=1.25 t=0.1 D finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.3552527156068805e-20",
+      "expected": "<1.0000000000000001e-07",
+      "group": "seminorm",
+      "name": "n=10 L=1.25 t=0.1 D two-sided identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "-1.3877787807814457e-17",
+      "expected": "<1.0000000000000001e-07",
+      "group": "seminorm",
+      "name": "n=10 L=1.25 t=0.1 delta two-sided identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.025997131391160538, 0.6096511966473346]",
+      "expected": "finite",
+      "group": "Duhamel",
+      "name": "n=10 L=1.25 t=0.2 D finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "5.421010862427522e-20",
+      "expected": "<1.0000000000000001e-07",
+      "group": "seminorm",
+      "name": "n=10 L=1.25 t=0.2 D two-sided identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "2.7755575615628914e-17",
+      "expected": "<1.0000000000000001e-07",
+      "group": "seminorm",
+      "name": "n=10 L=1.25 t=0.2 delta two-sided identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.4141037068391976",
+      "expected": ">1e-06",
+      "group": "cutoff",
+      "name": "n=10 L=1.5 tail floor",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.4141037068391976",
+      "expected": "<=0.6508030408496778+1e-08",
+      "group": "cutoff",
+      "name": "n=10 tail monotone L=1.5",
+      "status": "PASS"
+    },
+    {
+      "actual": "7.325167282786194e-14",
+      "expected": "<1e-08",
+      "group": "CCR-core",
+      "name": "n=10 L=1.5 configuration commutation",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": "0",
+      "group": "Duhamel",
+      "name": "n=10 L=1.5 D(0)",
+      "status": "PASS"
+    },
+    {
+      "actual": "7.535016301096273e-14",
+      "expected": "<1e-08",
+      "group": "Duhamel",
+      "name": "n=10 L=1.5 D'(0)",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.010493575573915394, 0.3148619689293827]",
+      "expected": "finite",
+      "group": "Duhamel",
+      "name": "n=10 L=1.5 t=0.1 D finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": "<1.0000000000000001e-07",
+      "group": "seminorm",
+      "name": "n=10 L=1.5 t=0.1 D two-sided identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "-1.3877787807814457e-17",
+      "expected": "<1.0000000000000001e-07",
+      "group": "seminorm",
+      "name": "n=10 L=1.5 t=0.1 delta two-sided identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.02483889483578891, 0.6047458662283433]",
+      "expected": "finite",
+      "group": "Duhamel",
+      "name": "n=10 L=1.5 t=0.2 D finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "5.421010862427522e-20",
+      "expected": "<1.0000000000000001e-07",
+      "group": "seminorm",
+      "name": "n=10 L=1.5 t=0.2 D two-sided identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "5.551115123125783e-17",
+      "expected": "<1.0000000000000001e-07",
+      "group": "seminorm",
+      "name": "n=10 L=1.5 t=0.2 delta two-sided identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.4854915307864307",
+      "expected": ">0.1",
+      "group": "diagnostic",
+      "name": "modular amplification is visible",
+      "status": "PASS"
+    },
+    {
+      "actual": "[{'n': 4, 'dimension': 16, 'rows': [{'radius': 0.75, 'tail_root': 1.094751130452841, 'tail_right': 0.5992400188138867, 'tail_left': 0.5992400188138864, 'max_difference_to_time_tail_ratio': 0.1772820760090195, 'max_modular_to_tail_ratio': 0.23978405279773113, 'times': [{'time': 0.1, 'difference_root': 0.010116578333639279, 'difference_right': 5.117257859032931e-05, 'difference_left': 5.117257859033037e-05, 'modular_root': 0.06868434370039588, 'modular_right': 0.0023587695347770275, 'modular_left': 0.002358769534777082, 'difference_to_time_tail_ratio': 0.09240984596612914, 'modular_to_tail_ratio': 0.0627396873954218}, {'time': 0.2, 'difference_root': 0.03881595062398012, 'difference_right': 0.0007533390114216299, 'difference_left': 0.0007533390114216326, 'modular_root': 0.26250386286487987, 'modular_right': 0.03445413900949176, 'modular_left': 0.0344541390094919, 'difference_to_time_tail_ratio': 0.1772820760090195, 'modular_to_tail_ratio': 0.23978405279773113}]}, {'radius': 1.0, 'tail_root': 1.0409209835978073, 'tail_right': 0.5417582470471132, 'tail_left': 0.5417582470471131, 'max_difference_to_time_tail_ratio': 0.17421597727500698, 'max_modular_to_tail_ratio': 0.23759017013566397, 'times': [{'time': 0.1, 'difference_root': 0.009438422754792376, 'difference_right': 4.454191204909084e-05, 'difference_left': 4.454191204909168e-05, 'modular_root': 0.06457222267768531, 'modular_right': 0.0020847859707682657, 'modular_left': 0.0020847859707683117, 'difference_to_time_tail_ratio': 0.09067376778369576, 'modular_to_tail_ratio': 0.06203374098051118}, {'time': 0.2, 'difference_root': 0.0362690132847107, 'difference_right': 0.0006577206623232601, 'difference_left': 0.0006577206623232615, 'modular_root': 0.24731259359078572, 'modular_right': 0.030581759474300522, 'modular_left': 0.030581759474300627, 'difference_to_time_tail_ratio': 0.17421597727500698, 'modular_to_tail_ratio': 0.23759017013566397}]}, {'radius': 1.25, 'tail_root': 0.5130796987817628, 'tail_right': 0.13162538865099227, 'tail_left': 0.13162538865099227, 'max_difference_to_time_tail_ratio': 0.17412804364759035, 'max_modular_to_tail_ratio': 0.23967455763305004, 'times': [{'time': 0.1, 'difference_root': 0.0046154366132580785, 'difference_right': 1.0651127565501538e-05, 'difference_left': 1.0651127565501665e-05, 'modular_root': 0.03182499791866713, 'modular_right': 0.00050641524626158, 'modular_left': 0.0005064152462615869, 'difference_to_time_tail_ratio': 0.089955549288284, 'modular_to_tail_ratio': 0.062027396512142674}, {'time': 0.2, 'difference_root': 0.017868312836832663, 'difference_right': 0.0001596383018174592, 'difference_left': 0.0001596383018174597, 'modular_root': 0.12297214983601758, 'modular_right': 0.007561074817645966, 'modular_left': 0.007561074817645992, 'difference_to_time_tail_ratio': 0.17412804364759035, 'modular_to_tail_ratio': 0.23967455763305004}]}, {'radius': 1.5, 'tail_root': 0.0644814352520479, 'tail_right': 0.0020789277460820325, 'tail_left': 0.0020789277460820125, 'max_difference_to_time_tail_ratio': 0.17345557555926747, 'max_modular_to_tail_ratio': 0.23931700660410496, 'times': [{'time': 0.1, 'difference_root': 0.0005818246722294064, 'difference_right': 1.6925997460740127e-07, 'difference_left': 1.6925997460745487e-07, 'modular_root': 0.0040204094763980555, 'modular_right': 8.081846178954169e-06, 'modular_left': 8.08184617895712e-06, 'difference_to_time_tail_ratio': 0.0902313464263232, 'modular_to_tail_ratio': 0.06234987575389568}, {'time': 0.2, 'difference_root': 0.0022369328929063214, 'difference_right': 2.5019343836830436e-06, 'difference_left': 2.501934383683201e-06, 'modular_root': 0.015431504066056513, 'modular_right': 0.00011906565887035481, 'modular_left': 0.00011906565887036388, 'difference_to_time_tail_ratio': 0.17345557555926747, 'modular_to_tail_ratio': 0.23931700660410496}]}], 'max_modular_to_tail_ratio': 0.23978405279773113, 'max_difference_to_time_tail_ratio': 0.1772820760090195}, {'n': 6, 'dimension': 36, 'rows': [{'radius': 0.75, 'tail_root': 1.149426691234319, 'tail_right': 0.6605908592609371, 'tail_left': 0.6605908592609371, 'max_difference_to_time_tail_ratio': 0.19067558217452904, 'max_modular_to_tail_ratio': 0.42596974638129753, 'times': [{'time': 0.1, 'difference_root': 0.01232610042103505, 'difference_right': 7.596637579472114e-05, 'difference_left': 7.59663757947193e-05, 'modular_root': 0.1473592235872357, 'modular_right': 0.01085737038811659, 'modular_left': 0.010857370388116327, 'difference_to_time_tail_ratio': 0.10723694268660658, 'modular_to_tail_ratio': 0.12820236793787437}, {'time': 0.2, 'difference_root': 0.04383352070360928, 'difference_right': 0.0009606887686368776, 'difference_left': 0.0009606887686368663, 'modular_root': 0.48962099614897686, 'modular_right': 0.11986435993495899, 'modular_left': 0.11986435993495739, 'difference_to_time_tail_ratio': 0.19067558217452904, 'modular_to_tail_ratio': 0.42596974638129753}]}, {'radius': 1.0, 'tail_root': 0.7564304935538211, 'tail_right': 0.2860935457890387, 'tail_left': 0.2860935457890387, 'max_difference_to_time_tail_ratio': 0.2731340517052035, 'max_modular_to_tail_ratio': 0.6295824458008052, 'times': [{'time': 0.1, 'difference_root': 0.011694626231305833, 'difference_right': 6.838214134497397e-05, 'difference_left': 6.83821413449725e-05, 'modular_root': 0.14452402741929632, 'modular_right': 0.010443597250746863, 'modular_left': 0.010443597250746657, 'difference_to_time_tail_ratio': 0.15460278678564066, 'modular_to_tail_ratio': 0.19106055169762037}, {'time': 0.2, 'difference_root': 0.0413213851075444, 'difference_right': 0.0008537284336029999, 'difference_left': 0.0008537284336029923, 'modular_root': 0.4762353602099249, 'modular_right': 0.113400059157139, 'modular_left': 0.11340005915713791, 'difference_to_time_tail_ratio': 0.2731340517052035, 'modular_to_tail_ratio': 0.6295824458008052}]}, {'radius': 1.25, 'tail_root': 0.6010316227002326, 'tail_right': 0.18061950574283742, 'tail_left': 0.18061950574283733, 'max_difference_to_time_tail_ratio': 0.33162909688065345, 'max_modular_to_tail_ratio': 0.7703868289876401, 'times': [{'time': 0.1, 'difference_root': 0.01129622157187001, 'difference_right': 6.38023109003916e-05, 'difference_left': 6.380231090038975e-05, 'modular_root': 0.14143291809041159, 'modular_right': 0.010001635159784675, 'modular_left': 0.010001635159784398, 'difference_to_time_tail_ratio': 0.18794720851990934, 'modular_to_tail_ratio': 0.23531693300096446}, {'time': 0.2, 'difference_root': 0.03986391484655836, 'difference_right': 0.0007945658534468325, 'difference_left': 0.0007945658534468235, 'modular_root': 0.4630268459333279, 'modular_right': 0.1071969300274836, 'modular_left': 0.10719693002748218, 'difference_to_time_tail_ratio': 0.33162909688065345, 'modular_to_tail_ratio': 0.7703868289876401}]}, {'radius': 1.5, 'tail_root': 0.5648637301263053, 'tail_right': 0.15953551680610173, 'tail_left': 0.1595355168061017, 'max_difference_to_time_tail_ratio': 0.28902872271005553, 'max_modular_to_tail_ratio': 0.6956110155817145, 'times': [{'time': 0.1, 'difference_root': 0.009208384674744323, 'difference_right': 4.239717415903357e-05, 'difference_left': 4.239717415903254e-05, 'modular_root': 0.11870616626805569, 'modular_right': 0.007045576955029704, 'modular_left': 0.0070455769550295776, 'difference_to_time_tail_ratio': 0.16301957770744632, 'modular_to_tail_ratio': 0.21015009450423133}, {'time': 0.2, 'difference_root': 0.03265236848472871, 'difference_right': 0.0005330885838312558, 'difference_left': 0.0005330885838312489, 'modular_root': 0.3929254329784347, 'modular_right': 0.07719519794064561, 'modular_left': 0.07719519794064475, 'difference_to_time_tail_ratio': 0.28902872271005553, 'modular_to_tail_ratio': 0.6956110155817145}]}], 'max_modular_to_tail_ratio': 0.7703868289876401, 'max_difference_to_time_tail_ratio': 0.33162909688065345}, {'n': 8, 'dimension': 64, 'rows': [{'radius': 0.75, 'tail_root': 1.0690388985034593, 'tail_right': 0.5714220832567449, 'tail_left': 0.571422083256745, 'max_difference_to_time_tail_ratio': 0.20286132582713576, 'max_modular_to_tail_ratio': 0.7144225301634113, 'times': [{'time': 0.1, 'difference_root': 0.014212613374914139, 'difference_right': 0.00010099918947239413, 'difference_left': 0.00010099918947239413, 'modular_root': 0.28125745100609967, 'modular_right': 0.039552876873224285, 'modular_left': 0.039552876873224285, 'difference_to_time_tail_ratio': 0.1329475793145627, 'modular_to_tail_ratio': 0.2630937484125509}, {'time': 0.2, 'difference_root': 0.043373329662238516, 'difference_right': 0.0009406228629946094, 'difference_left': 0.0009406228629946101, 'modular_root': 0.7637454747119476, 'modular_right': 0.2916535750714889, 'modular_left': 0.2916535750714894, 'difference_to_time_tail_ratio': 0.20286132582713576, 'modular_to_tail_ratio': 0.7144225301634113}]}, {'radius': 1.0, 'tail_root': 0.8516610423619768, 'tail_right': 0.3626632655385445, 'tail_left': 0.36266326553854444, 'max_difference_to_time_tail_ratio': 0.25520101769891634, 'max_modular_to_tail_ratio': 0.9003931077517527, 'times': [{'time': 0.1, 'difference_root': 0.014210700229073411, 'difference_right': 0.00010097200050029298, 'difference_left': 0.0001009720005002941, 'modular_root': 0.28118921957945253, 'modular_right': 0.039533688603850536, 'modular_left': 0.03953368860385103, 'difference_to_time_tail_ratio': 0.16685863885075436, 'modular_to_tail_ratio': 0.33016564759098166}, {'time': 0.2, 'difference_root': 0.04346895294905929, 'difference_right': 0.0009447749352437623, 'difference_left': 0.0009447749352437677, 'modular_root': 0.7668297326833975, 'modular_right': 0.2940139194636444, 'modular_left': 0.2940139194636465, 'difference_to_time_tail_ratio': 0.25520101769891634, 'modular_to_tail_ratio': 0.9003931077517527}]}, {'radius': 1.25, 'tail_root': 0.7732557063168072, 'tail_right': 0.29896219367575216, 'tail_left': 0.29896219367575216, 'max_difference_to_time_tail_ratio': 0.2660092757514779, 'max_modular_to_tail_ratio': 0.9675574076078297, 'times': [{'time': 0.1, 'difference_root': 0.013581195944679698, 'difference_right': 9.22244416438918e-05, 'difference_left': 9.222444164389248e-05, 'modular_root': 0.27509869178107194, 'modular_right': 0.03783964510982851, 'modular_left': 0.03783964510982871, 'difference_to_time_tail_ratio': 0.17563654343231458, 'modular_to_tail_ratio': 0.355766778743127}, {'time': 0.2, 'difference_root': 0.041138638081606275, 'difference_right': 0.0008461937716046909, 'difference_left': 0.000846193771604695, 'modular_root': 0.7481692866218512, 'modular_right': 0.27987864072212426, 'modular_left': 0.2798786407221255, 'difference_to_time_tail_ratio': 0.2660092757514779, 'modular_to_tail_ratio': 0.9675574076078297}]}, {'radius': 1.5, 'tail_root': 0.48072016940125467, 'tail_right': 0.11554594063458547, 'tail_left': 0.11554594063458551, 'max_difference_to_time_tail_ratio': 0.38845601874272084, 'max_modular_to_tail_ratio': 1.4854915307864307, 'times': [{'time': 0.1, 'difference_root': 0.012493794803439661, 'difference_right': 7.804745429522772e-05, 'difference_left': 7.804745429522814e-05, 'modular_root': 0.260609186837439, 'modular_right': 0.03395857413203547, 'modular_left': 0.03395857413203571, 'difference_to_time_tail_ratio': 0.2598974538347517, 'modular_to_tail_ratio': 0.5421224309394638}, {'time': 0.2, 'difference_root': 0.03734772862698755, 'difference_right': 0.0006974264167975519, 'difference_left': 0.0006974264167975533, 'modular_root': 0.714105740323782, 'modular_right': 0.25497350418168796, 'modular_left': 0.25497350418168885, 'difference_to_time_tail_ratio': 0.38845601874272084, 'modular_to_tail_ratio': 1.4854915307864307}]}], 'max_modular_to_tail_ratio': 1.4854915307864307, 'max_difference_to_time_tail_ratio': 0.38845601874272084}, {'n': 10, 'dimension': 100, 'rows': [{'radius': 0.75, 'tail_root': 0.996029897228615, 'tail_right': 0.4960377780866226, 'tail_left': 0.49603777808662264, 'max_difference_to_time_tail_ratio': 0.1406643402587332, 'max_modular_to_tail_ratio': 0.6210071113211407, 'times': [{'time': 0.1, 'difference_root': 0.011296261518844277, 'difference_right': 6.380276215106058e-05, 'difference_left': 6.38027621510614e-05, 'modular_root': 0.3254534000081874, 'modular_right': 0.05295995778844416, 'modular_left': 0.052959957788445075, 'difference_to_time_tail_ratio': 0.11341287596160868, 'modular_to_tail_ratio': 0.3267506336042113}, {'time': 0.2, 'difference_root': 0.028021177674327397, 'difference_right': 0.0003925931991281113, 'difference_left': 0.0003925931991281128, 'modular_root': 0.6185416492674349, 'modular_right': 0.19129688593923894, 'modular_left': 0.19129688593923952, 'difference_to_time_tail_ratio': 0.1406643402587332, 'modular_to_tail_ratio': 0.6210071113211407}]}, {'radius': 1.0, 'tail_root': 0.8936201157432033, 'tail_right': 0.3992784556304481, 'tail_left': 0.399278455630448, 'max_difference_to_time_tail_ratio': 0.15719920218031758, 'max_modular_to_tail_ratio': 0.6959473778620584, 'times': [{'time': 0.1, 'difference_root': 0.011275251597393296, 'difference_right': 6.356564929225944e-05, 'difference_left': 6.356564929226061e-05, 'modular_root': 0.3248214834271585, 'modular_right': 0.05275449804790929, 'modular_left': 0.0527544980479105, 'difference_to_time_tail_ratio': 0.1261749976164752, 'modular_to_tail_ratio': 0.36348944893324375}, {'time': 0.2, 'difference_root': 0.02809527384942292, 'difference_right': 0.00039467220633703236, 'difference_left': 0.0003946722063370352, 'modular_root': 0.6219125763562715, 'modular_right': 0.1933876263150473, 'modular_left': 0.19338762631504797, 'difference_to_time_tail_ratio': 0.15719920218031758, 'modular_to_tail_ratio': 0.6959473778620584}]}, {'radius': 1.25, 'tail_root': 0.6508030408496778, 'tail_right': 0.2117722989895937, 'tail_left': 0.2117722989895937, 'max_difference_to_time_tail_ratio': 0.19973117640337937, 'max_modular_to_tail_ratio': 0.9367675907773633, 'times': [{'time': 0.1, 'difference_root': 0.01077122752792325, 'difference_right': 5.800967122914511e-05, 'difference_left': 5.800967122914648e-05, 'modular_root': 0.31858340314853745, 'modular_right': 0.05074769238085104, 'modular_left': 0.05074769238085251, 'difference_to_time_tail_ratio': 0.16550671788288684, 'modular_to_tail_ratio': 0.48952353193156595}, {'time': 0.2, 'difference_root': 0.025997131391160538, 'difference_right': 0.0003379254202846313, 'difference_left': 0.0003379254202846333, 'modular_root': 0.6096511966473346, 'modular_right': 0.1858372907867631, 'modular_left': 0.1858372907867639, 'difference_to_time_tail_ratio': 0.19973117640337937, 'modular_to_tail_ratio': 0.9367675907773633}]}, {'radius': 1.5, 'tail_root': 0.4141037068391976, 'tail_right': 0.08574094000898201, 'tail_left': 0.08574094000898208, 'max_difference_to_time_tail_ratio': 0.2999115248856515, 'max_modular_to_tail_ratio': 1.46037298444946, 'times': [{'time': 0.1, 'difference_root': 0.010493575573915394, 'difference_right': 5.5057564162736335e-05, 'difference_left': 5.505756416273746e-05, 'modular_root': 0.3148619689293827, 'modular_right': 0.04956902973904309, 'modular_left': 0.049569029739044465, 'difference_to_time_tail_ratio': 0.25340453129510865, 'modular_to_tail_ratio': 0.760345690534106}, {'time': 0.2, 'difference_root': 0.02483889483578891, 'difference_right': 0.0003084853483316901, 'difference_left': 0.0003084853483316909, 'modular_root': 0.6047458662283433, 'modular_right': 0.18285878136013448, 'modular_left': 0.1828587813601347, 'difference_to_time_tail_ratio': 0.2999115248856515, 'modular_to_tail_ratio': 1.46037298444946}]}], 'max_modular_to_tail_ratio': 1.46037298444946, 'max_difference_to_time_tail_ratio': 0.2999115248856515}]",
+      "expected": "finite",
+      "group": "diagnostic",
+      "name": "all finite ratios",
+      "status": "PASS"
+    }
+  ],
+  "audit_id": "PA-CP1-ST8-Q3LOCK-FINITE-STRUCTURED-CUTOFF-ORBIT-MODULAR-DERIVATIVE",
+  "boundary": {
+    "actual_ccr_domain_closed": false,
+    "c6_closed": false,
+    "common_alpha_closed": false,
+    "configuration_character_commutation_closed": true,
+    "continuum_closed": false,
+    "delta_d_cauchy_closed": false,
+    "exhaustion_independence_closed": false,
+    "finite_hamiltonian_modular_derivative_computed": true,
+    "finite_modular_amplification_observed": true,
+    "finite_tail_monotonicity_checked": true,
+    "finite_time_cutoff_difference_computed": true,
+    "finite_truncated_oscillator_q3_model_closed": true,
+    "four_context_history_closed": false,
+    "full_gibbs_state_and_two_sided_seminorm_closed": true,
+    "gns_gap_closed": false,
+    "group_law_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_os_closed": false,
+    "no_new_negative_result": true,
+    "no_pdf": true,
+    "no_tier_change": true,
+    "oscillator_dimension_uniformity_proved": false,
+    "pre_a_closed": false,
+    "product_core_density_closed": false,
+    "sector_a_closed": false,
+    "smooth_coordinate_cutoff_constructed_closed": true,
+    "smooth_cutoff_infinite_volume_closed": false,
+    "volume_uniform_direct_d_cauchy_closed": false
+  },
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "derived": {
+    "delta_d_cauchy_closed": false,
+    "dimension_summary": [
+      {
+        "dimension": 16,
+        "max_difference_to_time_tail_ratio": 0.1772820760090195,
+        "max_modular_to_tail_ratio": 0.23978405279773113,
+        "n": 4,
+        "rows": [
+          {
+            "max_difference_to_time_tail_ratio": 0.1772820760090195,
+            "max_modular_to_tail_ratio": 0.23978405279773113,
+            "radius": 0.75,
+            "tail_left": 0.5992400188138864,
+            "tail_right": 0.5992400188138867,
+            "tail_root": 1.094751130452841,
+            "times": [
+              {
+                "difference_left": 5.117257859033037e-05,
+                "difference_right": 5.117257859032931e-05,
+                "difference_root": 0.010116578333639279,
+                "difference_to_time_tail_ratio": 0.09240984596612914,
+                "modular_left": 0.002358769534777082,
+                "modular_right": 0.0023587695347770275,
+                "modular_root": 0.06868434370039588,
+                "modular_to_tail_ratio": 0.0627396873954218,
+                "time": 0.1
+              },
+              {
+                "difference_left": 0.0007533390114216326,
+                "difference_right": 0.0007533390114216299,
+                "difference_root": 0.03881595062398012,
+                "difference_to_time_tail_ratio": 0.1772820760090195,
+                "modular_left": 0.0344541390094919,
+                "modular_right": 0.03445413900949176,
+                "modular_root": 0.26250386286487987,
+                "modular_to_tail_ratio": 0.23978405279773113,
+                "time": 0.2
+              }
+            ]
+          },
+          {
+            "max_difference_to_time_tail_ratio": 0.17421597727500698,
+            "max_modular_to_tail_ratio": 0.23759017013566397,
+            "radius": 1.0,
+            "tail_left": 0.5417582470471131,
+            "tail_right": 0.5417582470471132,
+            "tail_root": 1.0409209835978073,
+            "times": [
+              {
+                "difference_left": 4.454191204909168e-05,
+                "difference_right": 4.454191204909084e-05,
+                "difference_root": 0.009438422754792376,
+                "difference_to_time_tail_ratio": 0.09067376778369576,
+                "modular_left": 0.0020847859707683117,
+                "modular_right": 0.0020847859707682657,
+                "modular_root": 0.06457222267768531,
+                "modular_to_tail_ratio": 0.06203374098051118,
+                "time": 0.1
+              },
+              {
+                "difference_left": 0.0006577206623232615,
+                "difference_right": 0.0006577206623232601,
+                "difference_root": 0.0362690132847107,
+                "difference_to_time_tail_ratio": 0.17421597727500698,
+                "modular_left": 0.030581759474300627,
+                "modular_right": 0.030581759474300522,
+                "modular_root": 0.24731259359078572,
+                "modular_to_tail_ratio": 0.23759017013566397,
+                "time": 0.2
+              }
+            ]
+          },
+          {
+            "max_difference_to_time_tail_ratio": 0.17412804364759035,
+            "max_modular_to_tail_ratio": 0.23967455763305004,
+            "radius": 1.25,
+            "tail_left": 0.13162538865099227,
+            "tail_right": 0.13162538865099227,
+            "tail_root": 0.5130796987817628,
+            "times": [
+              {
+                "difference_left": 1.0651127565501665e-05,
+                "difference_right": 1.0651127565501538e-05,
+                "difference_root": 0.0046154366132580785,
+                "difference_to_time_tail_ratio": 0.089955549288284,
+                "modular_left": 0.0005064152462615869,
+                "modular_right": 0.00050641524626158,
+                "modular_root": 0.03182499791866713,
+                "modular_to_tail_ratio": 0.062027396512142674,
+                "time": 0.1
+              },
+              {
+                "difference_left": 0.0001596383018174597,
+                "difference_right": 0.0001596383018174592,
+                "difference_root": 0.017868312836832663,
+                "difference_to_time_tail_ratio": 0.17412804364759035,
+                "modular_left": 0.007561074817645992,
+                "modular_right": 0.007561074817645966,
+                "modular_root": 0.12297214983601758,
+                "modular_to_tail_ratio": 0.23967455763305004,
+                "time": 0.2
+              }
+            ]
+          },
+          {
+            "max_difference_to_time_tail_ratio": 0.17345557555926747,
+            "max_modular_to_tail_ratio": 0.23931700660410496,
+            "radius": 1.5,
+            "tail_left": 0.0020789277460820125,
+            "tail_right": 0.0020789277460820325,
+            "tail_root": 0.0644814352520479,
+            "times": [
+              {
+                "difference_left": 1.6925997460745487e-07,
+                "difference_right": 1.6925997460740127e-07,
+                "difference_root": 0.0005818246722294064,
+                "difference_to_time_tail_ratio": 0.0902313464263232,
+                "modular_left": 8.08184617895712e-06,
+                "modular_right": 8.081846178954169e-06,
+                "modular_root": 0.0040204094763980555,
+                "modular_to_tail_ratio": 0.06234987575389568,
+                "time": 0.1
+              },
+              {
+                "difference_left": 2.501934383683201e-06,
+                "difference_right": 2.5019343836830436e-06,
+                "difference_root": 0.0022369328929063214,
+                "difference_to_time_tail_ratio": 0.17345557555926747,
+                "modular_left": 0.00011906565887036388,
+                "modular_right": 0.00011906565887035481,
+                "modular_root": 0.015431504066056513,
+                "modular_to_tail_ratio": 0.23931700660410496,
+                "time": 0.2
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "dimension": 36,
+        "max_difference_to_time_tail_ratio": 0.33162909688065345,
+        "max_modular_to_tail_ratio": 0.7703868289876401,
+        "n": 6,
+        "rows": [
+          {
+            "max_difference_to_time_tail_ratio": 0.19067558217452904,
+            "max_modular_to_tail_ratio": 0.42596974638129753,
+            "radius": 0.75,
+            "tail_left": 0.6605908592609371,
+            "tail_right": 0.6605908592609371,
+            "tail_root": 1.149426691234319,
+            "times": [
+              {
+                "difference_left": 7.59663757947193e-05,
+                "difference_right": 7.596637579472114e-05,
+                "difference_root": 0.01232610042103505,
+                "difference_to_time_tail_ratio": 0.10723694268660658,
+                "modular_left": 0.010857370388116327,
+                "modular_right": 0.01085737038811659,
+                "modular_root": 0.1473592235872357,
+                "modular_to_tail_ratio": 0.12820236793787437,
+                "time": 0.1
+              },
+              {
+                "difference_left": 0.0009606887686368663,
+                "difference_right": 0.0009606887686368776,
+                "difference_root": 0.04383352070360928,
+                "difference_to_time_tail_ratio": 0.19067558217452904,
+                "modular_left": 0.11986435993495739,
+                "modular_right": 0.11986435993495899,
+                "modular_root": 0.48962099614897686,
+                "modular_to_tail_ratio": 0.42596974638129753,
+                "time": 0.2
+              }
+            ]
+          },
+          {
+            "max_difference_to_time_tail_ratio": 0.2731340517052035,
+            "max_modular_to_tail_ratio": 0.6295824458008052,
+            "radius": 1.0,
+            "tail_left": 0.2860935457890387,
+            "tail_right": 0.2860935457890387,
+            "tail_root": 0.7564304935538211,
+            "times": [
+              {
+                "difference_left": 6.83821413449725e-05,
+                "difference_right": 6.838214134497397e-05,
+                "difference_root": 0.011694626231305833,
+                "difference_to_time_tail_ratio": 0.15460278678564066,
+                "modular_left": 0.010443597250746657,
+                "modular_right": 0.010443597250746863,
+                "modular_root": 0.14452402741929632,
+                "modular_to_tail_ratio": 0.19106055169762037,
+                "time": 0.1
+              },
+              {
+                "difference_left": 0.0008537284336029923,
+                "difference_right": 0.0008537284336029999,
+                "difference_root": 0.0413213851075444,
+                "difference_to_time_tail_ratio": 0.2731340517052035,
+                "modular_left": 0.11340005915713791,
+                "modular_right": 0.113400059157139,
+                "modular_root": 0.4762353602099249,
+                "modular_to_tail_ratio": 0.6295824458008052,
+                "time": 0.2
+              }
+            ]
+          },
+          {
+            "max_difference_to_time_tail_ratio": 0.33162909688065345,
+            "max_modular_to_tail_ratio": 0.7703868289876401,
+            "radius": 1.25,
+            "tail_left": 0.18061950574283733,
+            "tail_right": 0.18061950574283742,
+            "tail_root": 0.6010316227002326,
+            "times": [
+              {
+                "difference_left": 6.380231090038975e-05,
+                "difference_right": 6.38023109003916e-05,
+                "difference_root": 0.01129622157187001,
+                "difference_to_time_tail_ratio": 0.18794720851990934,
+                "modular_left": 0.010001635159784398,
+                "modular_right": 0.010001635159784675,
+                "modular_root": 0.14143291809041159,
+                "modular_to_tail_ratio": 0.23531693300096446,
+                "time": 0.1
+              },
+              {
+                "difference_left": 0.0007945658534468235,
+                "difference_right": 0.0007945658534468325,
+                "difference_root": 0.03986391484655836,
+                "difference_to_time_tail_ratio": 0.33162909688065345,
+                "modular_left": 0.10719693002748218,
+                "modular_right": 0.1071969300274836,
+                "modular_root": 0.4630268459333279,
+                "modular_to_tail_ratio": 0.7703868289876401,
+                "time": 0.2
+              }
+            ]
+          },
+          {
+            "max_difference_to_time_tail_ratio": 0.28902872271005553,
+            "max_modular_to_tail_ratio": 0.6956110155817145,
+            "radius": 1.5,
+            "tail_left": 0.1595355168061017,
+            "tail_right": 0.15953551680610173,
+            "tail_root": 0.5648637301263053,
+            "times": [
+              {
+                "difference_left": 4.239717415903254e-05,
+                "difference_right": 4.239717415903357e-05,
+                "difference_root": 0.009208384674744323,
+                "difference_to_time_tail_ratio": 0.16301957770744632,
+                "modular_left": 0.0070455769550295776,
+                "modular_right": 0.007045576955029704,
+                "modular_root": 0.11870616626805569,
+                "modular_to_tail_ratio": 0.21015009450423133,
+                "time": 0.1
+              },
+              {
+                "difference_left": 0.0005330885838312489,
+                "difference_right": 0.0005330885838312558,
+                "difference_root": 0.03265236848472871,
+                "difference_to_time_tail_ratio": 0.28902872271005553,
+                "modular_left": 0.07719519794064475,
+                "modular_right": 0.07719519794064561,
+                "modular_root": 0.3929254329784347,
+                "modular_to_tail_ratio": 0.6956110155817145,
+                "time": 0.2
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "dimension": 64,
+        "max_difference_to_time_tail_ratio": 0.38845601874272084,
+        "max_modular_to_tail_ratio": 1.4854915307864307,
+        "n": 8,
+        "rows": [
+          {
+            "max_difference_to_time_tail_ratio": 0.20286132582713576,
+            "max_modular_to_tail_ratio": 0.7144225301634113,
+            "radius": 0.75,
+            "tail_left": 0.571422083256745,
+            "tail_right": 0.5714220832567449,
+            "tail_root": 1.0690388985034593,
+            "times": [
+              {
+                "difference_left": 0.00010099918947239413,
+                "difference_right": 0.00010099918947239413,
+                "difference_root": 0.014212613374914139,
+                "difference_to_time_tail_ratio": 0.1329475793145627,
+                "modular_left": 0.039552876873224285,
+                "modular_right": 0.039552876873224285,
+                "modular_root": 0.28125745100609967,
+                "modular_to_tail_ratio": 0.2630937484125509,
+                "time": 0.1
+              },
+              {
+                "difference_left": 0.0009406228629946101,
+                "difference_right": 0.0009406228629946094,
+                "difference_root": 0.043373329662238516,
+                "difference_to_time_tail_ratio": 0.20286132582713576,
+                "modular_left": 0.2916535750714894,
+                "modular_right": 0.2916535750714889,
+                "modular_root": 0.7637454747119476,
+                "modular_to_tail_ratio": 0.7144225301634113,
+                "time": 0.2
+              }
+            ]
+          },
+          {
+            "max_difference_to_time_tail_ratio": 0.25520101769891634,
+            "max_modular_to_tail_ratio": 0.9003931077517527,
+            "radius": 1.0,
+            "tail_left": 0.36266326553854444,
+            "tail_right": 0.3626632655385445,
+            "tail_root": 0.8516610423619768,
+            "times": [
+              {
+                "difference_left": 0.0001009720005002941,
+                "difference_right": 0.00010097200050029298,
+                "difference_root": 0.014210700229073411,
+                "difference_to_time_tail_ratio": 0.16685863885075436,
+                "modular_left": 0.03953368860385103,
+                "modular_right": 0.039533688603850536,
+                "modular_root": 0.28118921957945253,
+                "modular_to_tail_ratio": 0.33016564759098166,
+                "time": 0.1
+              },
+              {
+                "difference_left": 0.0009447749352437677,
+                "difference_right": 0.0009447749352437623,
+                "difference_root": 0.04346895294905929,
+                "difference_to_time_tail_ratio": 0.25520101769891634,
+                "modular_left": 0.2940139194636465,
+                "modular_right": 0.2940139194636444,
+                "modular_root": 0.7668297326833975,
+                "modular_to_tail_ratio": 0.9003931077517527,
+                "time": 0.2
+              }
+            ]
+          },
+          {
+            "max_difference_to_time_tail_ratio": 0.2660092757514779,
+            "max_modular_to_tail_ratio": 0.9675574076078297,
+            "radius": 1.25,
+            "tail_left": 0.29896219367575216,
+            "tail_right": 0.29896219367575216,
+            "tail_root": 0.7732557063168072,
+            "times": [
+              {
+                "difference_left": 9.222444164389248e-05,
+                "difference_right": 9.22244416438918e-05,
+                "difference_root": 0.013581195944679698,
+                "difference_to_time_tail_ratio": 0.17563654343231458,
+                "modular_left": 0.03783964510982871,
+                "modular_right": 0.03783964510982851,
+                "modular_root": 0.27509869178107194,
+                "modular_to_tail_ratio": 0.355766778743127,
+                "time": 0.1
+              },
+              {
+                "difference_left": 0.000846193771604695,
+                "difference_right": 0.0008461937716046909,
+                "difference_root": 0.041138638081606275,
+                "difference_to_time_tail_ratio": 0.2660092757514779,
+                "modular_left": 0.2798786407221255,
+                "modular_right": 0.27987864072212426,
+                "modular_root": 0.7481692866218512,
+                "modular_to_tail_ratio": 0.9675574076078297,
+                "time": 0.2
+              }
+            ]
+          },
+          {
+            "max_difference_to_time_tail_ratio": 0.38845601874272084,
+            "max_modular_to_tail_ratio": 1.4854915307864307,
+            "radius": 1.5,
+            "tail_left": 0.11554594063458551,
+            "tail_right": 0.11554594063458547,
+            "tail_root": 0.48072016940125467,
+            "times": [
+              {
+                "difference_left": 7.804745429522814e-05,
+                "difference_right": 7.804745429522772e-05,
+                "difference_root": 0.012493794803439661,
+                "difference_to_time_tail_ratio": 0.2598974538347517,
+                "modular_left": 0.03395857413203571,
+                "modular_right": 0.03395857413203547,
+                "modular_root": 0.260609186837439,
+                "modular_to_tail_ratio": 0.5421224309394638,
+                "time": 0.1
+              },
+              {
+                "difference_left": 0.0006974264167975533,
+                "difference_right": 0.0006974264167975519,
+                "difference_root": 0.03734772862698755,
+                "difference_to_time_tail_ratio": 0.38845601874272084,
+                "modular_left": 0.25497350418168885,
+                "modular_right": 0.25497350418168796,
+                "modular_root": 0.714105740323782,
+                "modular_to_tail_ratio": 1.4854915307864307,
+                "time": 0.2
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "dimension": 100,
+        "max_difference_to_time_tail_ratio": 0.2999115248856515,
+        "max_modular_to_tail_ratio": 1.46037298444946,
+        "n": 10,
+        "rows": [
+          {
+            "max_difference_to_time_tail_ratio": 0.1406643402587332,
+            "max_modular_to_tail_ratio": 0.6210071113211407,
+            "radius": 0.75,
+            "tail_left": 0.49603777808662264,
+            "tail_right": 0.4960377780866226,
+            "tail_root": 0.996029897228615,
+            "times": [
+              {
+                "difference_left": 6.38027621510614e-05,
+                "difference_right": 6.380276215106058e-05,
+                "difference_root": 0.011296261518844277,
+                "difference_to_time_tail_ratio": 0.11341287596160868,
+                "modular_left": 0.052959957788445075,
+                "modular_right": 0.05295995778844416,
+                "modular_root": 0.3254534000081874,
+                "modular_to_tail_ratio": 0.3267506336042113,
+                "time": 0.1
+              },
+              {
+                "difference_left": 0.0003925931991281128,
+                "difference_right": 0.0003925931991281113,
+                "difference_root": 0.028021177674327397,
+                "difference_to_time_tail_ratio": 0.1406643402587332,
+                "modular_left": 0.19129688593923952,
+                "modular_right": 0.19129688593923894,
+                "modular_root": 0.6185416492674349,
+                "modular_to_tail_ratio": 0.6210071113211407,
+                "time": 0.2
+              }
+            ]
+          },
+          {
+            "max_difference_to_time_tail_ratio": 0.15719920218031758,
+            "max_modular_to_tail_ratio": 0.6959473778620584,
+            "radius": 1.0,
+            "tail_left": 0.399278455630448,
+            "tail_right": 0.3992784556304481,
+            "tail_root": 0.8936201157432033,
+            "times": [
+              {
+                "difference_left": 6.356564929226061e-05,
+                "difference_right": 6.356564929225944e-05,
+                "difference_root": 0.011275251597393296,
+                "difference_to_time_tail_ratio": 0.1261749976164752,
+                "modular_left": 0.0527544980479105,
+                "modular_right": 0.05275449804790929,
+                "modular_root": 0.3248214834271585,
+                "modular_to_tail_ratio": 0.36348944893324375,
+                "time": 0.1
+              },
+              {
+                "difference_left": 0.0003946722063370352,
+                "difference_right": 0.00039467220633703236,
+                "difference_root": 0.02809527384942292,
+                "difference_to_time_tail_ratio": 0.15719920218031758,
+                "modular_left": 0.19338762631504797,
+                "modular_right": 0.1933876263150473,
+                "modular_root": 0.6219125763562715,
+                "modular_to_tail_ratio": 0.6959473778620584,
+                "time": 0.2
+              }
+            ]
+          },
+          {
+            "max_difference_to_time_tail_ratio": 0.19973117640337937,
+            "max_modular_to_tail_ratio": 0.9367675907773633,
+            "radius": 1.25,
+            "tail_left": 0.2117722989895937,
+            "tail_right": 0.2117722989895937,
+            "tail_root": 0.6508030408496778,
+            "times": [
+              {
+                "difference_left": 5.800967122914648e-05,
+                "difference_right": 5.800967122914511e-05,
+                "difference_root": 0.01077122752792325,
+                "difference_to_time_tail_ratio": 0.16550671788288684,
+                "modular_left": 0.05074769238085251,
+                "modular_right": 0.05074769238085104,
+                "modular_root": 0.31858340314853745,
+                "modular_to_tail_ratio": 0.48952353193156595,
+                "time": 0.1
+              },
+              {
+                "difference_left": 0.0003379254202846333,
+                "difference_right": 0.0003379254202846313,
+                "difference_root": 0.025997131391160538,
+                "difference_to_time_tail_ratio": 0.19973117640337937,
+                "modular_left": 0.1858372907867639,
+                "modular_right": 0.1858372907867631,
+                "modular_root": 0.6096511966473346,
+                "modular_to_tail_ratio": 0.9367675907773633,
+                "time": 0.2
+              }
+            ]
+          },
+          {
+            "max_difference_to_time_tail_ratio": 0.2999115248856515,
+            "max_modular_to_tail_ratio": 1.46037298444946,
+            "radius": 1.5,
+            "tail_left": 0.08574094000898208,
+            "tail_right": 0.08574094000898201,
+            "tail_root": 0.4141037068391976,
+            "times": [
+              {
+                "difference_left": 5.505756416273746e-05,
+                "difference_right": 5.5057564162736335e-05,
+                "difference_root": 0.010493575573915394,
+                "difference_to_time_tail_ratio": 0.25340453129510865,
+                "modular_left": 0.049569029739044465,
+                "modular_right": 0.04956902973904309,
+                "modular_root": 0.3148619689293827,
+                "modular_to_tail_ratio": 0.760345690534106,
+                "time": 0.1
+              },
+              {
+                "difference_left": 0.0003084853483316909,
+                "difference_right": 0.0003084853483316901,
+                "difference_root": 0.02483889483578891,
+                "difference_to_time_tail_ratio": 0.2999115248856515,
+                "modular_left": 0.1828587813601347,
+                "modular_right": 0.18285878136013448,
+                "modular_root": 0.6047458662283433,
+                "modular_to_tail_ratio": 1.46037298444946,
+                "time": 0.2
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "dimension_uniformity_proved": false,
+    "finite_q3_regularization": true,
+    "max_difference_to_time_tail_ratio": 0.38845601874272084,
+    "max_modular_to_tail_ratio": 1.4854915307864307,
+    "volume_uniform_direct_d_cauchy_closed": false
+  },
+  "exploration_id": "EXP-001080",
+  "passed": 212,
+  "run_kind": "primary",
+  "schema": "tect/foundation-audit/1.0",
+  "task_id": "T-054",
+  "verdict": "PASS"
+}

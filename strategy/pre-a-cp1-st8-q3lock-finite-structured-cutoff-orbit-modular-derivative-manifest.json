@@ -1,0 +1,143 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "exploration_id": "EXP-001080",
+  "prior_exploration_id": "EXP-001079",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "tier": "T0",
+  "claim_bearing": false,
+  "title": "Finite regularized Q3 structured-cutoff orbit and modular-derivative audit",
+  "question": "In a declared finite oscillator regularization of the actual two-site one-component Q3 Hamiltonian, does a smooth spectral coordinate cutoff give a two-sided Gibbs seminorm difference and its Hamiltonian modular derivative that can be treated as a volume-uniform projected-Duhamel estimate?",
+  "authority_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-modular-cutoff-unitary-resummation-route-split-manifest.json#coordinate_cutoff_route",
+    "strategy/pre-a-cp1-st8-q3lock-projected-delta-d-third-coefficient-weighted-seminorm-bridge-manifest.json#model",
+    "strategy/pre-a-cp1-st8-q3lock-dual-state-fifth-moment-modular-cutoff-obstruction-manifest.json#matrix_family"
+  ],
+  "model": {
+    "regularization": "n-dimensional truncated oscillator at each of two sites; q=(a+a*)/sqrt(2), p=(a-a*)/(i*sqrt(2))",
+    "onsite": "h_x=p_x^2/(2*chi)+r*q_x^2/2+g*q_x^4/4",
+    "bond": "B=c*(q_1-q_2)^2/2+lambda*(q_1-q_2)^2*(q_1^2+q_2^2)/4",
+    "character": "A=exp(i*a*q_1/hbar)",
+    "cutoff": "q_L=eta(|q|/L)q with eta=1 on [0,1], eta=(1+cos(pi(s-1)))/2 on (1,2), eta=0 on [2,infinity)",
+    "comparison": "D_L(t)=exp(i*t*H/hbar) A exp(-i*t*H/hbar)-exp(i*t*H_L/hbar) A exp(-i*t*H_L/hbar)",
+    "state": "rho=exp(-beta*H)/Tr(exp(-beta*H))",
+    "seminorm": "N_beta,#(X)^2=Tr(rho*X*X)+Tr(rho*X*X*)",
+    "modular_derivative": "delta_H(X)=i*[H,X]/hbar; this equals the Hamiltonian modular derivative for the declared Gibbs state"
+  },
+  "finite_fixture": {
+    "n_values": [4, 6, 8, 10],
+    "L_values": [0.75, 1.0, 1.25, 1.5],
+    "time_values": [0.1, 0.2],
+    "beta": 1.0,
+    "chi": 1.0,
+    "hbar": 1.0,
+    "r": -1.0,
+    "g": 0.6,
+    "c": 1.0,
+    "lambda": 0.1,
+    "character_amplitude": 0.25,
+    "hermitian_tolerance": 1.0e-9,
+    "state_tolerance": 1.0e-9,
+    "commutator_tolerance": 1.0e-8,
+    "lane_agreement_tolerance": 1.0e-7,
+    "tail_floor": 1.0e-6,
+    "monotonic_tolerance": 1.0e-8,
+    "modular_ratio_floor": 0.1
+  },
+  "scope": {
+    "finite_truncated_oscillator_q3_model_closed": true,
+    "smooth_coordinate_cutoff_constructed_closed": true,
+    "full_gibbs_state_and_two_sided_seminorm_closed": true,
+    "configuration_character_commutation_closed": true,
+    "finite_time_cutoff_difference_computed": true,
+    "finite_hamiltonian_modular_derivative_computed": true,
+    "finite_tail_monotonicity_checked": true,
+    "finite_modular_amplification_observed": true,
+    "oscillator_dimension_uniformity_proved": false,
+    "volume_uniform_direct_d_cauchy_closed": false,
+    "delta_d_cauchy_closed": false,
+    "actual_ccr_domain_closed": false,
+    "smooth_cutoff_infinite_volume_closed": false,
+    "four_context_history_closed": false,
+    "product_core_density_closed": false,
+    "exhaustion_independence_closed": false,
+    "group_law_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_os_closed": false,
+    "gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "adversarial_review": [
+    {
+      "axis": "truncated CCR",
+      "check": "The finite matrices are a declared oscillator regularization; no exact CCR or unbounded-domain theorem is inferred.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "Q3 source",
+      "check": "The onsite quartic and quadratic/cubic bond are built from the registered Q3 form, with no A1/R-192 production owner substituted.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "cutoff",
+      "check": "The spectral cosine taper is smooth and explicitly declared; it is a finite test of the coordinate-cutoff route, not the infinite-volume theorem.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "Gibbs direction",
+      "check": "The state is the full-H Gibbs state and the seminorm records both Tr(rho*X*X) and Tr(rho*X*X*); no dual state is silently identified with the reference state.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "modular derivative",
+      "check": "delta_H is evaluated as the commutator with the same full Hamiltonian that defines rho; this is finite type-I only.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "uniformity",
+      "check": "Observed ratios across n=4,6,8,10 are diagnostics, not a proof or disproof of volume-uniformity.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "independence",
+      "check": "Primary and independent lanes rebuild the matrix model separately and are compared with a declared numerical tolerance.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "Lean",
+      "check": "Lean R262 checks the rational fixture algebra and scope firewall only; it does not formalize floating-point matrix exponentials or QFT limits.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "QFT promotion",
+      "check": "No OS/KMS/GNS, common-alpha, gap, continuum, C6, Sector A or Pre-A closure follows.",
+      "disposition": "UPHELD"
+    }
+  ],
+  "formal_integration": {
+    "lean_entry": "verification/lean/Tect/R262.lean",
+    "result_ids": [],
+    "negative_ids": [],
+    "changelog_event": null
+  },
+  "qft_interface": {
+    "closed": "A reproducible finite actual-Q3 regularization computes the two-sided Gibbs cutoff difference and its full-H modular derivative, verifies the initial configuration-commutation cancellation, and records the cutoff-tail trend across four oscillator dimensions.",
+    "open": "No oscillator-dimension or lattice-volume uniform estimate, direct D/delta-D Cauchy theorem, common faithful thermodynamic representation, exhaustion/group law, Hamiltonian-to-OS identification, common KMS dynamics, GNS gap, continuum, C6, Sector A or Pre-A closure is obtained.",
+    "tect_boundary": "This is a finite QFT-facing diagnostic only; it supplies no heat_root_incidence or canonical A1/R-192 production owner."
+  },
+  "boundary": "T0 claim-nonbearing finite regularized Q3 structured-cutoff audit. It is a numerical matrix checkpoint for the open projected-Duhamel modular-C1 gate, not a continuum or thermodynamic proof.",
+  "next_action": "Use the measured finite modular ratios to formulate an analytic mixed force-momentum bound on a common Q3 core; require a dimension/volume-uniform constant or record a genuine scaling obstruction before promoting the route.",
+  "verification": {
+    "primary_script": "codes/foundations/pre_a_cp1_st8_q3lock_finite_structured_cutoff_orbit_modular_derivative.py",
+    "independent_script": "codes/foundations/pre_a_cp1_st8_q3lock_finite_structured_cutoff_orbit_modular_derivative_independent.py",
+    "integrated_script": "codes/foundations/pre_a_cp1_st8_q3lock_finite_structured_cutoff_orbit_modular_derivative_verify.py"
+  },
+  "no_overclaim": "This package is not an all-time projected D/delta-D theorem, an OS reconstruction, a KMS/GNS result, a mass-gap proof, a continuum result, a C6/Sector-A/Pre-A result, a TECT production map or a Clay result."
+}
