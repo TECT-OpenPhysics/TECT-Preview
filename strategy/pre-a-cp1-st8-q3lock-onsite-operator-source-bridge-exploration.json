@@ -1,0 +1,57 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001043",
+  "title": "Conditional Q3 onsite shifted-potential operator/source bridge",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-FIRST-PASSAGE-BACKBONE-REAL-TIME-PRODUCT-AND-ENERGY-TAIL-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "prior_exploration_id": "EXP-001042",
+  "recorded_at": "2026-08-24T23:30:00Z",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-08-24",
+  "provenance": "contemporaneous",
+  "question": "Under declared one-sided local graph bounds for q^m A^(-3/4), does the actual onsite Q3 shifted potential admit an exact source-weighted operator majorant?",
+  "method": [
+    "Take the existing one-sided local graph bounds ||q^m A^(-3/4)||<=M_m as explicit conditional inputs.",
+    "Expand the actual onsite shifted quartic exactly and apply the operator triangle inequality term by term in the declared order.",
+    "Use kappa/gamma=256=4^4 to derive M=(1,4,16,64), then compute the exact source-radius rate and its factorial EGF fixture.",
+    "Run independent SymPy and Fraction lanes and compile Lean R225 for ratio, moment, rate, orientation, and weighted-rate identities."
+  ],
+  "finding": "Conditional on the declared graph inputs, the onsite source majorant is B_on(S)=g*(M3*S+3*M2*S^2/2+M1*S^3+S^4/4). The fixture derives kappa/gamma=256, root scale 4, M=(1,4,16,64), B_on=10791/1024, and tB_on=10791/8192. Primary passes 20/20, independent passes 20/20, integrated passes 28/28, and Lean R225 passes.",
+  "verdict": "advanced",
+  "decision_reason": "This is the first explicit bridge from the formal source polynomial to a declared one-sided energy graph bound for an actual Q3 term. It narrows the next burden to multivariate edge terms and A-power transport; it does not claim those hypotheses or their history composition.",
+  "adversarial_review": [
+    {"axis": "graph hypotheses", "check": "The M_m bounds are conditional inputs and no CCR domain theorem is encoded.", "disposition": "UPHELD"},
+    {"axis": "one-sided order", "check": "Only q^m A^(-3/4) in the declared order is used; adjoint/reverse operator bounds are not inferred.", "disposition": "UPHELD"},
+    {"axis": "edge omission", "check": "The multivariate Q3 edge and spatial bond terms remain outside this onsite calculation.", "disposition": "UPHELD"},
+    {"axis": "history composition", "check": "One-step triangle control does not supply A-power transport, cancellation, or repeated Duhamel histories.", "disposition": "UPHELD"},
+    {"axis": "Lean promotion", "check": "R225 checks rational fixtures only, not the operator hypotheses.", "disposition": "UPHELD"},
+    {"axis": "QFT promotion", "check": "No KMS, OS, GNS gap, continuum, C6, Sector A or Pre-A result is claimed.", "disposition": "UPHELD"}
+  ],
+  "evidence_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-onsite-operator-source-bridge-manifest.json#model",
+    "strategy/pre-a-cp1-st8-q3lock-onsite-operator-source-bridge-certificate-260824.md#Exact fixture",
+    "codes/foundations/pre_a_cp1_st8_q3lock_onsite_operator_source_bridge.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_onsite_operator_source_bridge_independent.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_onsite_operator_source_bridge_verify.py#main",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-24-primary-pre-a-cp1-st8-q3lock-onsite-operator-source-bridge/primary.json#assertions",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-24-primary-pre-a-cp1-st8-q3lock-onsite-operator-source-bridge/independent.json#assertions",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-24-primary-pre-a-cp1-st8-q3lock-onsite-operator-source-bridge/integrated.json#assertions",
+    "verification/lean/Tect/R225.lean#onsite_source_rate_fixture",
+    "verification/lean/registry.json#entrypoints"
+  ],
+  "formal_refs": {"events": [], "negatives": [], "results": []},
+  "formal_integration": {"events": [], "negatives": [], "results": [], "no_new_result": true, "no_new_negative": true, "no_pdf": true},
+  "qft_interface": {
+    "closed": "A conditional one-step operator/source majorant for the actual onsite Q3 shifted potential under declared graph inputs.",
+    "open": "Graph hypothesis proof, Q3 edge and bond lifts, A-power transport, repeated histories, spatial first-passage, exhaustion, common alpha, KMS/OS reconstruction, GNS gap, continuum, C6, Sector A and Pre-A remain open.",
+    "tect_boundary": "No heat_root_incidence or A1/R-192 TECT production owner is supplied."
+  },
+  "boundary": "T0 claim-nonbearing conditional one-step operator/source checkpoint. It does not prove Q3 dynamics, thermodynamic QFT, common alpha, KMS, GNS gap, continuum, C6, Sector A, Pre-A, TECT production or a Clay result.",
+  "next_action": "Extend the conditional bridge to the Q3 edge and spatial bond monomials using the registered matching-layer graph bounds, then test whether the A-power transports compose along both orientations; record the first exact obstruction if not."
+}

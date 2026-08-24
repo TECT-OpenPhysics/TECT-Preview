@@ -1,0 +1,60 @@
+{
+  "schema": "tect/pre-a-cp1-st8-q3lock-onsite-operator-source-bridge/1.0",
+  "exploration_id": "EXP-001043",
+  "prior_exploration_id": "EXP-001042",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "tier": "T0",
+  "claim_bearing": false,
+  "title": "Conditional Q3 onsite shifted-potential operator/source bridge",
+  "question": "Under declared one-sided local graph bounds for q^m A^(-3/4), does the actual onsite Q3 shifted potential admit an exact source-weighted operator majorant?",
+  "model": {
+    "onsite_difference": "g*(q^4-(q-a)^4)/4 = g*q^3*a - 3g*q^2*a^2/2 + g*q*a^3 - g*a^4/4",
+    "declared_graph_inputs": "||q^m A^(-3/4)|| <= M_m for m=0,1,2,3 on a common core",
+    "energy_graph_fixture": "M_m=(kappa/gamma)^(m/4), with kappa/gamma a declared perfect fourth power",
+    "source_majorant": "B_on(S)=g*(M_3*S + 3*M_2*S^2/2 + M_1*S^3 + S^4/4)",
+    "interpretation": "one-sided conditional operator/source map for one onsite factor; no product or history theorem"
+  },
+  "fixture": {
+    "g": "3/5",
+    "gamma": "1/128",
+    "kappa": "2",
+    "source_radius": "1/4",
+    "time": "1/8",
+    "expected_energy_ratio": "256",
+    "expected_root_scale": "4",
+    "expected_M": ["1", "4", "16", "64"],
+    "expected_onsite_source_rate": "10791/1024",
+    "expected_weighted_rate": "10791/8192"
+  },
+  "scoped_verdict": "Conditional on the declared one-sided graph bounds for local q powers, triangle inequality gives the exact onsite shifted-potential source majorant B_on(S). The fixture derives energy ratio 256, root scale 4, M=(1,4,16,64), B_on=10791/1024, and t*B_on=10791/8192.",
+  "adversarial_review": [
+    {"axis": "graph hypotheses", "check": "The M_m bounds are inputs to this bridge; the script does not prove their unbounded-operator domains.", "disposition": "UPHELD"},
+    {"axis": "one-sided order", "check": "Every term is bounded only in the declared q^m A^(-3/4) orientation; adjoint and reverse orientation are not silently inferred.", "disposition": "UPHELD"},
+    {"axis": "edge omission", "check": "The Q3 edge potential contains two field coordinates and is not covered by this one-coordinate onsite bridge.", "disposition": "UPHELD"},
+    {"axis": "history composition", "check": "Multiplying one-step majorants requires an A-power transport/product theorem and is not inferred from this triangle bound.", "disposition": "UPHELD"},
+    {"axis": "Lean", "check": "R225 checks rational coefficient and rate fixtures only; it does not formalize the operator hypothesis.", "disposition": "UPHELD"},
+    {"axis": "QFT promotion", "check": "No common alpha, KMS/OS reconstruction, GNS gap, continuum, C6, Sector A or Pre-A conclusion follows.", "disposition": "UPHELD"}
+  ],
+  "scope": {
+    "onsite_one_step_bridge_closed": true,
+    "graph_bounds_assumed": true,
+    "edge_bridge_closed": false,
+    "history_product_closed": false,
+    "actual_q3_history_closed": false,
+    "all_shape_exhaustion_closed": false,
+    "common_alpha_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true,
+    "not_closed": "The declared graph bounds, edge/multivariate operator map, A-power transport, repeated histories, spatial first-passage, exhaustion, common alpha, KMS/OS reconstruction, GNS gap, continuum, C6, Sector A and Pre-A remain open."
+  },
+  "formal_integration": {
+    "lean_entry": "verification/lean/Tect/R225.lean",
+    "result_ids": [],
+    "negative_ids": [],
+    "changelog_event": null
+  },
+  "next_action": "Extend the conditional bridge to the Q3 edge and spatial bond monomials with the already registered matching-layer graph bounds, then test whether the required A-power transports compose along both orientations; record the first exact obstruction if they do not.",
+  "no_overclaim": "This package is a conditional one-step onsite operator/source bridge. It does not prove the graph hypotheses, actual Q3 dynamics, thermodynamic QFT, common alpha, KMS, GNS gap, continuum, C6, Sector A, Pre-A, TECT production or a Clay result."
+}
