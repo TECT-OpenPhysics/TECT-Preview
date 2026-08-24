@@ -1,0 +1,115 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "exploration_id": "EXP-001058",
+  "prior_exploration_id": "EXP-001057",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "tier": "T0",
+  "claim_bearing": false,
+  "title": "First nonzero projected D-delta-D boundary Taylor coefficient",
+  "question": "For a local configuration Weyl character, what is the first exact generator coefficient created by adding a neighboring canonical Q3 bond, and does its force lie in the registered quartic energy weight?",
+  "model": {
+    "character": "W_a(x)=exp(i*a*q_x/hbar)",
+    "bond": "B(q,v)=c*(q-v)^2/2 + lambda*(q-v)^2*(q^2+v^2)/4",
+    "derivation": "delta_H(X)=i*[H,X]/hbar on the finite polynomial CCR core",
+    "first_difference": "delta_(H0+B)(W_a)-delta_H0(W_a)=0 because [B,W_a]=0",
+    "second_difference": "delta_(H0+B)^2(W_a)-delta_H0^2(W_a)=-(i*a/(hbar*chi))*W_a*partial_q B",
+    "force": "partial_q B=c*(q-v)+lambda*(q-v)*(2*q^2-q*v+v^2)/2",
+    "weight_target": "|partial_q B| <= C*(1+q^4+v^4)^(3/4) on the declared real configuration core"
+  },
+  "finite_fixture": {
+    "chi": "1",
+    "hbar": "1",
+    "c": "1",
+    "lambda": "1/10",
+    "character_amplitude": "1/4",
+    "field_values": ["-2", "-1", "0", "1", "2", "3"],
+    "source_radius": "1/4",
+    "weight_constant": "122099/35840",
+    "grid_points": 36,
+    "derived_force_degree": 3
+  },
+  "scope": {
+    "first_generator_difference_zero": true,
+    "second_generator_difference_exact": true,
+    "canonical_q3_force_reconstructed": true,
+    "force_weighted_by_w_lambda_three_quarters": true,
+    "all_time_projected_d_duhamel_cauchy_closed": false,
+    "delta_d_cauchy_closed": false,
+    "product_core_density_closed": false,
+    "exhaustion_independence_closed": false,
+    "group_law_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_os_closed": false,
+    "gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true,
+    "not_closed": "The result is an exact finite CCR-core Taylor coefficient and a conditional weighted force bound. It does not sum the time expansion or prove projected D, delta-D, exhaustion, group law, Hamiltonian-to-OS identification, common alpha, KMS/GNS, continuum, C6, Sector A or Pre-A closure."
+  },
+  "adversarial_review": [
+    {
+      "axis": "CCR convention",
+      "check": "The derivation uses delta=i[H,.]/hbar, [B,p_x]=i*hbar*partial_q B, and W_a=exp(i*a*q_x/hbar); the hbar and sign are tracked.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "first versus second order",
+      "check": "The first generator difference is exactly zero because the bond is a q-multiplier; the force first appears at the second generator difference.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "Q3 force",
+      "check": "The cubic force is differentiated from the registered quadratic and Q3 edge bond, not imported as an abstract polynomial.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "weight bound",
+      "check": "The W_Lambda^(3/4) bound is checked only on the declared real grid and is not promoted to an operator-domain theorem.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "Taylor promotion",
+      "check": "A second generator coefficient does not sum the real-time Duhamel series or control all spatial histories.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "Lean",
+      "check": "Lean R240 checks exact force coefficients, degree, and the hbar/chi fixture only.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "QFT promotion",
+      "check": "No projected D, delta-D, OS/KMS, GNS gap, continuum, C6, Sector A or Pre-A closure follows.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "TECT owner",
+      "check": "No heat_root_incidence or canonical A1/R-192 production owner is supplied.",
+      "disposition": "UPHELD"
+    }
+  ],
+  "formal_integration": {
+    "lean_entry": "verification/lean/Tect/R240.lean",
+    "result_ids": [],
+    "negative_ids": [],
+    "changelog_event": null
+  },
+  "qft_interface": {
+    "closed": "The first nonzero boundary Taylor coefficient for a local configuration character is the exact cubic Q3 bond force, and it has the registered quartic energy degree.",
+    "open": "All-time projected D and delta-D Cauchy, product/core density, exhaustion independence, group law, Hamiltonian-to-OS identification, common alpha, KMS/GNS gap, continuum, C6, Sector A and Pre-A remain open.",
+    "tect_boundary": "This is a finite CCR-core QFT interface only; no heat_root_incidence or A1/R-192 production owner is supplied."
+  },
+  "boundary": "T0 claim-nonbearing exact finite generator-coefficient bridge. It is a prerequisite calculation for direct projected D,delta-D locality, not that locality theorem itself.",
+  "next_action": "Convert the exact force coefficient into a two-sided Duhamel bound using the canonical shifted form, then test volume/source uniformity on the fixed-beta OS mixture word class.",
+  "verification": {
+    "primary_script": "codes/foundations/pre_a_cp1_st8_q3lock_projected_delta_d_boundary_taylor_coefficient.py",
+    "independent_script": "codes/foundations/pre_a_cp1_st8_q3lock_projected_delta_d_boundary_taylor_coefficient_independent.py",
+    "integrated_script": "codes/foundations/pre_a_cp1_st8_q3lock_projected_delta_d_boundary_taylor_coefficient_verify.py"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001058",
+  "title": "First nonzero projected D-delta-D boundary Taylor coefficient",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "question": "For a local configuration Weyl character, what is the first exact generator coefficient created by adding a neighboring canonical Q3 bond, and does its force lie in the registered quartic energy weight?",
+  "method": [
+    "Use the finite polynomial CCR core with delta=i[H,.]/hbar and the registered canonical quadratic plus Q3 edge bond.",
+    "Compute the first and second generator differences for W_a=exp(i*a*q_x/hbar), retaining the hbar and chi factors and differentiating the bond force exactly.",
+    "Recompute the cubic force and fourth-power weighted bound independently on the declared 6x6 real grid, then compile Lean R240 for the exact coefficient and scope fixtures."
+  ],
+  "finding": "The first boundary generator difference is exactly zero because the canonical Q3 bond commutes with a configuration character. The second difference is -(i*a/(hbar*chi))*W_a*partial_q B, with partial_q B=c*(q-v)+lambda*(q-v)*(2*q^2-q*v+v^2)/2, an actual cubic Q3 force. The registered C=122099/35840 quartic-weight bound passes on all 36 field pairs. Primary and independent lanes pass 49/49 and 46/46; the integrated verifier passes 21/21 with Lean R240.",
+  "decision_reason": "This is the first nonzero local coefficient needed by the direct projected D,delta-D route after the canonical energy comparison. It advances the QFT-facing boundary calculation without claiming that the Taylor series, Duhamel tail, volume limit or OS identification has been controlled.",
+  "verdict": "advanced",
+  "boundary": "T0 claim-nonbearing exact finite CCR-core generator-coefficient bridge. It does not prove all-time projected D or delta-D locality, product/core density, exhaustion independence, group law, Hamiltonian-to-OS identification, common alpha, KMS/GNS, continuum, C6, Sector A or Pre-A closure.",
+  "evidence_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-projected-delta-d-boundary-taylor-coefficient-manifest.json#model",
+    "strategy/pre-a-cp1-st8-q3lock-projected-delta-d-boundary-taylor-coefficient-certificate-260824.md#Finding",
+    "codes/foundations/pre_a_cp1_st8_q3lock_projected_delta_d_boundary_taylor_coefficient.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_projected_delta_d_boundary_taylor_coefficient_independent.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_projected_delta_d_boundary_taylor_coefficient_verify.py#main",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-primary-pre-a-cp1-st8-q3lock-projected-delta-d-boundary-taylor-coefficient/primary.json#assertions",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-primary-pre-a-cp1-st8-q3lock-projected-delta-d-boundary-taylor-coefficient/independent.json#assertions",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-primary-pre-a-cp1-st8-q3lock-projected-delta-d-boundary-taylor-coefficient/integrated.json#assertions",
+    "verification/lean/Tect/R240.lean#force_derivative_fixture",
+    "verification/lean/registry.json#entrypoints",
+    "strategy/pre-a-cp1-st8-q3lock-finite-volume-multiplication-graph-bridge-manifest.json#operator_model",
+    "strategy/pre-a-cp1-st8-q3lock-canonical-energy-quartic-weight-coercivity-manifest.json#coercive_bound"
+  ],
+  "adversarial_review": [
+    {"axis": "CCR convention", "check": "The hbar, chi and sign conventions are tracked in the first and second generator differences.", "disposition": "UPHELD"},
+    {"axis": "first versus second order", "check": "The first difference vanishes exactly and the force enters at second order.", "disposition": "UPHELD"},
+    {"axis": "Q3 force", "check": "The cubic force is differentiated from the registered Q3 bond polynomial.", "disposition": "UPHELD"},
+    {"axis": "weight bound", "check": "The W_Lambda^(3/4) bound is finite-grid evidence only and is not an operator-domain theorem.", "disposition": "UPHELD"},
+    {"axis": "Taylor promotion", "check": "One generator coefficient does not sum the real-time expansion or spatial histories.", "disposition": "UPHELD"},
+    {"axis": "Lean", "check": "R240 checks exact arithmetic fixtures only.", "disposition": "UPHELD"},
+    {"axis": "QFT promotion", "check": "Projected D,delta-D, OS/KMS, GNS gap, continuum, C6, Sector A and Pre-A remain open.", "disposition": "UPHELD"},
+    {"axis": "TECT owner", "check": "No heat_root_incidence or A1/R-192 production owner is supplied.", "disposition": "UPHELD"}
+  ],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE",
+    "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-FIRST-PASSAGE-BACKBONE-REAL-TIME-PRODUCT-AND-ENERGY-TAIL-CLOSURE",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "related": [{"id": "EXP-001057", "relation": "continues"}],
+  "prior_exploration_id": "EXP-001057",
+  "provenance": "contemporaneous",
+  "qft_interface": {
+    "closed": "The exact first nonzero boundary Taylor coefficient for a local configuration character is the canonical cubic Q3 bond force, with a finite registered quartic-weight grid bound.",
+    "open": "All-time projected D and delta-D Cauchy, product/core density, exhaustion independence, group law, Hamiltonian-to-OS identification, common alpha, KMS/GNS gap, continuum, C6, Sector A and Pre-A remain open.",
+    "tect_boundary": "This is a finite CCR-core QFT interface only; no heat_root_incidence or A1/R-192 production owner is supplied."
+  },
+  "formal_integration": {
+    "events": [],
+    "negatives": [],
+    "results": [],
+    "no_new_negative": true,
+    "no_pdf": true
+  },
+  "next_action": "Turn the exact cubic force coefficient into a two-sided Duhamel estimate using the EXP-001057 shifted form, then test volume/source uniformity on the fixed-beta OS mixture word class.",
+  "reviewed_on": "2026-08-24",
+  "recorded_at": "2026-08-25T08:00:00Z",
+  "recorded_by": "Codex"
+}

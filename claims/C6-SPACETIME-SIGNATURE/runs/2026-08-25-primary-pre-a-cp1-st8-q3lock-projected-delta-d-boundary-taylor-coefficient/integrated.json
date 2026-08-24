@@ -1,0 +1,267 @@
+{
+  "assertion_count": 21,
+  "assertions": [
+    {
+      "actual": [
+        "EXP-001058",
+        "T-054"
+      ],
+      "expected": "EXP-001058/T-054",
+      "name": "identity",
+      "pass": true
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "claim nonbearing",
+      "pass": true
+    },
+    {
+      "actual": {
+        "bond": "B(q,v)=c*(q-v)^2/2 + lambda*(q-v)^2*(q^2+v^2)/4",
+        "character": "W_a(x)=exp(i*a*q_x/hbar)",
+        "derivation": "delta_H(X)=i*[H,X]/hbar on the finite polynomial CCR core",
+        "first_difference": "delta_(H0+B)(W_a)-delta_H0(W_a)=0 because [B,W_a]=0",
+        "force": "partial_q B=c*(q-v)+lambda*(q-v)*(2*q^2-q*v+v^2)/2",
+        "second_difference": "delta_(H0+B)^2(W_a)-delta_H0^2(W_a)=-(i*a/(hbar*chi))*W_a*partial_q B",
+        "weight_target": "|partial_q B| <= C*(1+q^4+v^4)^(3/4) on the declared real configuration core"
+      },
+      "expected": "registered CCR boundary model",
+      "name": "model identity",
+      "pass": true
+    },
+    {
+      "actual": {
+        "all_time_projected_d_duhamel_cauchy_closed": false,
+        "c6_closed": false,
+        "canonical_q3_force_reconstructed": true,
+        "common_alpha_closed": false,
+        "continuum_closed": false,
+        "delta_d_cauchy_closed": false,
+        "exhaustion_independence_closed": false,
+        "first_generator_difference_zero": true,
+        "force_weighted_by_w_lambda_three_quarters": true,
+        "gns_gap_closed": false,
+        "group_law_closed": false,
+        "hamiltonian_os_identification_closed": false,
+        "kms_os_closed": false,
+        "no_new_negative_result": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "not_closed": "The result is an exact finite CCR-core Taylor coefficient and a conditional weighted force bound. It does not sum the time expansion or prove projected D, delta-D, exhaustion, group law, Hamiltonian-to-OS identification, common alpha, KMS/GNS, continuum, C6, Sector A or Pre-A closure.",
+        "pre_a_closed": false,
+        "product_core_density_closed": false,
+        "second_generator_difference_exact": true,
+        "sector_a_closed": false
+      },
+      "expected": "finite bridge closed",
+      "name": "finite force bridge scope",
+      "pass": true
+    },
+    {
+      "actual": {
+        "all_time_projected_d_duhamel_cauchy_closed": false,
+        "c6_closed": false,
+        "canonical_q3_force_reconstructed": true,
+        "common_alpha_closed": false,
+        "continuum_closed": false,
+        "delta_d_cauchy_closed": false,
+        "exhaustion_independence_closed": false,
+        "first_generator_difference_zero": true,
+        "force_weighted_by_w_lambda_three_quarters": true,
+        "gns_gap_closed": false,
+        "group_law_closed": false,
+        "hamiltonian_os_identification_closed": false,
+        "kms_os_closed": false,
+        "no_new_negative_result": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "not_closed": "The result is an exact finite CCR-core Taylor coefficient and a conditional weighted force bound. It does not sum the time expansion or prove projected D, delta-D, exhaustion, group law, Hamiltonian-to-OS identification, common alpha, KMS/GNS, continuum, C6, Sector A or Pre-A closure.",
+        "pre_a_closed": false,
+        "product_core_density_closed": false,
+        "second_generator_difference_exact": true,
+        "sector_a_closed": false
+      },
+      "expected": "successor gates open",
+      "name": "D-delta-D firewall",
+      "pass": true
+    },
+    {
+      "actual": [
+        "force_derivative_fixture",
+        "force_degree_fixture",
+        "second_coefficient_fixture",
+        "hbar_chi_fixture",
+        "scope_fixture"
+      ],
+      "expected": "present",
+      "name": "Lean source",
+      "pass": true
+    },
+    {
+      "actual": [],
+      "expected": "none",
+      "name": "Lean forbidden",
+      "pass": true
+    },
+    {
+      "actual": "PRIMARY PROJECTED-D-DELTA-D-BOUNDARY PASS 49/49\n",
+      "expected": "PASS",
+      "name": "primary child",
+      "pass": true
+    },
+    {
+      "actual": "INDEPENDENT PROJECTED-D-DELTA-D-BOUNDARY PASS 46/46\n",
+      "expected": "PASS",
+      "name": "independent child",
+      "pass": true
+    },
+    {
+      "actual": [
+        49,
+        46
+      ],
+      "expected": ">0",
+      "name": "positive totals",
+      "pass": true
+    },
+    {
+      "actual": [
+        3,
+        3
+      ],
+      "expected": "equal",
+      "name": "lane agreement force_degree",
+      "pass": true
+    },
+    {
+      "actual": [
+        36,
+        36
+      ],
+      "expected": "equal",
+      "name": "lane agreement grid_points",
+      "pass": true
+    },
+    {
+      "actual": [
+        true,
+        true
+      ],
+      "expected": "equal",
+      "name": "lane agreement first_generator_difference_zero",
+      "pass": true
+    },
+    {
+      "actual": [
+        true,
+        true
+      ],
+      "expected": "equal",
+      "name": "lane agreement second_generator_difference_exact",
+      "pass": true
+    },
+    {
+      "actual": [
+        true,
+        true
+      ],
+      "expected": "equal",
+      "name": "lane agreement canonical_q3_force_reconstructed",
+      "pass": true
+    },
+    {
+      "actual": [
+        true,
+        true
+      ],
+      "expected": "equal",
+      "name": "lane agreement force_weighted_by_w_lambda_three_quarters",
+      "pass": true
+    },
+    {
+      "actual": [
+        false,
+        false
+      ],
+      "expected": "equal",
+      "name": "lane agreement all_time_projected_d_duhamel_cauchy_closed",
+      "pass": true
+    },
+    {
+      "actual": [
+        false,
+        false
+      ],
+      "expected": "equal",
+      "name": "lane agreement delta_d_cauchy_closed",
+      "pass": true
+    },
+    {
+      "actual": 3,
+      "expected": 3,
+      "name": "fixture degree",
+      "pass": true
+    },
+    {
+      "actual": 36,
+      "expected": 36,
+      "name": "fixture grid",
+      "pass": true
+    },
+    {
+      "actual": {
+        "command": "lake env lean Tect/R240.lean",
+        "output": "",
+        "returncode": 0,
+        "status": "PASS"
+      },
+      "expected": "PASS",
+      "name": "Lean compile",
+      "pass": true
+    }
+  ],
+  "audit_id": "PA-CP1-ST8-Q3LOCK-PROJECTED-D-DELTA-D-BOUNDARY-TAYLOR",
+  "boundary": {
+    "all_time_projected_d_duhamel_cauchy_closed": false,
+    "c6_closed": false,
+    "canonical_q3_force_reconstructed": true,
+    "common_alpha_closed": false,
+    "continuum_closed": false,
+    "delta_d_cauchy_closed": false,
+    "exhaustion_independence_closed": false,
+    "first_generator_difference_zero": true,
+    "force_weighted_by_w_lambda_three_quarters": true,
+    "gns_gap_closed": false,
+    "group_law_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_os_closed": false,
+    "no_new_negative_result": true,
+    "no_pdf": true,
+    "no_tier_change": true,
+    "not_closed": "The result is an exact finite CCR-core Taylor coefficient and a conditional weighted force bound. It does not sum the time expansion or prove projected D, delta-D, exhaustion, group law, Hamiltonian-to-OS identification, common alpha, KMS/GNS, continuum, C6, Sector A or Pre-A closure.",
+    "pre_a_closed": false,
+    "product_core_density_closed": false,
+    "second_generator_difference_exact": true,
+    "sector_a_closed": false
+  },
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "exploration_id": "EXP-001058",
+  "lean": {
+    "command": "lake env lean Tect/R240.lean",
+    "output": "",
+    "returncode": 0,
+    "status": "PASS"
+  },
+  "provenance": {
+    "independent_sha256": "1b3dafd05407ced30e385b2a830755b29cafef69f4bdca1c8eb5ed59e8066a31",
+    "lean_sha256": "1da7202ebb98e08eae683e24e1a9cd6045b6ac1da76adcf03bc48a645a247b87",
+    "manifest_sha256": "24ce569d282b27fcf8c853ba42e00765d4b9dfcbedd914c84d7f92fad3d8490c",
+    "primary_sha256": "7fe76bdad14e8e545c824b46cf15e720f48c6411af41f154fc14652680b8d3cf"
+  },
+  "recorded_at": "2026-08-24T05:31:01.475036Z",
+  "run_kind": "integrated",
+  "schema": "tect/foundation-audit/1.0",
+  "task_id": "T-054",
+  "verdict": "PASS"
+}

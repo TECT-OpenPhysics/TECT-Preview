@@ -1,0 +1,701 @@
+{
+  "assertions": [
+    {
+      "actual": [
+        "EXP-001058",
+        "T-054"
+      ],
+      "expected": "EXP-001058/T-054",
+      "group": "provenance",
+      "name": "identity",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "claim nonbearing",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "bond": "B(q,v)=c*(q-v)^2/2 + lambda*(q-v)^2*(q^2+v^2)/4",
+        "character": "W_a(x)=exp(i*a*q_x/hbar)",
+        "derivation": "delta_H(X)=i*[H,X]/hbar on the finite polynomial CCR core",
+        "first_difference": "delta_(H0+B)(W_a)-delta_H0(W_a)=0 because [B,W_a]=0",
+        "force": "partial_q B=c*(q-v)+lambda*(q-v)*(2*q^2-q*v+v^2)/2",
+        "second_difference": "delta_(H0+B)^2(W_a)-delta_H0^2(W_a)=-(i*a/(hbar*chi))*W_a*partial_q B",
+        "weight_target": "|partial_q B| <= C*(1+q^4+v^4)^(3/4) on the declared real configuration core"
+      },
+      "expected": "registered character and derivation",
+      "group": "model",
+      "name": "character declaration",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "1",
+        "1",
+        "1",
+        "1/10",
+        "1/4"
+      ],
+      "expected": "chi,hbar>0; c,lambda>=0; a!=0",
+      "group": "parameters",
+      "name": "positive parameters",
+      "status": "PASS"
+    },
+    {
+      "actual": 0,
+      "expected": 0,
+      "group": "CCR",
+      "name": "first boundary difference",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/4",
+      "expected": "1/4",
+      "group": "model",
+      "name": "source radius",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": "fourth-power bound",
+      "group": "weight",
+      "name": "weighted force -2,-2",
+      "status": "PASS"
+    },
+    {
+      "actual": "-27/20",
+      "expected": "fourth-power bound",
+      "group": "weight",
+      "name": "weighted force -2,-1",
+      "status": "PASS"
+    },
+    {
+      "actual": "-14/5",
+      "expected": "fourth-power bound",
+      "group": "weight",
+      "name": "weighted force -2,0",
+      "status": "PASS"
+    },
+    {
+      "actual": "-93/20",
+      "expected": "fourth-power bound",
+      "group": "weight",
+      "name": "weighted force -2,1",
+      "status": "PASS"
+    },
+    {
+      "actual": "-36/5",
+      "expected": "fourth-power bound",
+      "group": "weight",
+      "name": "weighted force -2,2",
+      "status": "PASS"
+    },
+    {
+      "actual": "-43/4",
+      "expected": "fourth-power bound",
+      "group": "weight",
+      "name": "weighted force -2,3",
+      "status": "PASS"
+    },
+    {
+      "actual": "6/5",
+      "expected": "fourth-power bound",
+      "group": "weight",
+      "name": "weighted force -1,-2",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": "fourth-power bound",
+      "group": "weight",
+      "name": "weighted force -1,-1",
+      "status": "PASS"
+    },
+    {
+      "actual": "-11/10",
+      "expected": "fourth-power bound",
+      "group": "weight",
+      "name": "weighted force -1,0",
+      "status": "PASS"
+    },
+    {
+      "actual": "-12/5",
+      "expected": "fourth-power bound",
+      "group": "weight",
+      "name": "weighted force -1,1",
+      "status": "PASS"
+    },
+    {
+      "actual": "-21/5",
+      "expected": "fourth-power bound",
+      "group": "weight",
+      "name": "weighted force -1,2",
+      "status": "PASS"
+    },
+    {
+      "actual": "-34/5",
+      "expected": "fourth-power bound",
+      "group": "weight",
+      "name": "weighted force -1,3",
+      "status": "PASS"
+    },
+    {
+      "actual": "12/5",
+      "expected": "fourth-power bound",
+      "group": "weight",
+      "name": "weighted force 0,-2",
+      "status": "PASS"
+    },
+    {
+      "actual": "21/20",
+      "expected": "fourth-power bound",
+      "group": "weight",
+      "name": "weighted force 0,-1",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": "fourth-power bound",
+      "group": "weight",
+      "name": "weighted force 0,0",
+      "status": "PASS"
+    },
+    {
+      "actual": "-21/20",
+      "expected": "fourth-power bound",
+      "group": "weight",
+      "name": "weighted force 0,1",
+      "status": "PASS"
+    },
+    {
+      "actual": "-12/5",
+      "expected": "fourth-power bound",
+      "group": "weight",
+      "name": "weighted force 0,2",
+      "status": "PASS"
+    },
+    {
+      "actual": "-87/20",
+      "expected": "fourth-power bound",
+      "group": "weight",
+      "name": "weighted force 0,3",
+      "status": "PASS"
+    },
+    {
+      "actual": "21/5",
+      "expected": "fourth-power bound",
+      "group": "weight",
+      "name": "weighted force 1,-2",
+      "status": "PASS"
+    },
+    {
+      "actual": "12/5",
+      "expected": "fourth-power bound",
+      "group": "weight",
+      "name": "weighted force 1,-1",
+      "status": "PASS"
+    },
+    {
+      "actual": "11/10",
+      "expected": "fourth-power bound",
+      "group": "weight",
+      "name": "weighted force 1,0",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": "fourth-power bound",
+      "group": "weight",
+      "name": "weighted force 1,1",
+      "status": "PASS"
+    },
+    {
+      "actual": "-6/5",
+      "expected": "fourth-power bound",
+      "group": "weight",
+      "name": "weighted force 1,2",
+      "status": "PASS"
+    },
+    {
+      "actual": "-14/5",
+      "expected": "fourth-power bound",
+      "group": "weight",
+      "name": "weighted force 1,3",
+      "status": "PASS"
+    },
+    {
+      "actual": "36/5",
+      "expected": "fourth-power bound",
+      "group": "weight",
+      "name": "weighted force 2,-2",
+      "status": "PASS"
+    },
+    {
+      "actual": "93/20",
+      "expected": "fourth-power bound",
+      "group": "weight",
+      "name": "weighted force 2,-1",
+      "status": "PASS"
+    },
+    {
+      "actual": "14/5",
+      "expected": "fourth-power bound",
+      "group": "weight",
+      "name": "weighted force 2,0",
+      "status": "PASS"
+    },
+    {
+      "actual": "27/20",
+      "expected": "fourth-power bound",
+      "group": "weight",
+      "name": "weighted force 2,1",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": "fourth-power bound",
+      "group": "weight",
+      "name": "weighted force 2,2",
+      "status": "PASS"
+    },
+    {
+      "actual": "-31/20",
+      "expected": "fourth-power bound",
+      "group": "weight",
+      "name": "weighted force 2,3",
+      "status": "PASS"
+    },
+    {
+      "actual": "12",
+      "expected": "fourth-power bound",
+      "group": "weight",
+      "name": "weighted force 3,-2",
+      "status": "PASS"
+    },
+    {
+      "actual": "42/5",
+      "expected": "fourth-power bound",
+      "group": "weight",
+      "name": "weighted force 3,-1",
+      "status": "PASS"
+    },
+    {
+      "actual": "57/10",
+      "expected": "fourth-power bound",
+      "group": "weight",
+      "name": "weighted force 3,0",
+      "status": "PASS"
+    },
+    {
+      "actual": "18/5",
+      "expected": "fourth-power bound",
+      "group": "weight",
+      "name": "weighted force 3,1",
+      "status": "PASS"
+    },
+    {
+      "actual": "9/5",
+      "expected": "fourth-power bound",
+      "group": "weight",
+      "name": "weighted force 3,2",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": "fourth-power bound",
+      "group": "weight",
+      "name": "weighted force 3,3",
+      "status": "PASS"
+    },
+    {
+      "actual": 3,
+      "expected": 3,
+      "group": "degree",
+      "name": "force degree",
+      "status": "PASS"
+    },
+    {
+      "actual": 36,
+      "expected": 36,
+      "group": "fixture",
+      "name": "grid cardinality",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "all_time_projected_d_duhamel_cauchy_closed": false,
+        "c6_closed": false,
+        "canonical_q3_force_reconstructed": true,
+        "common_alpha_closed": false,
+        "continuum_closed": false,
+        "delta_d_cauchy_closed": false,
+        "exhaustion_independence_closed": false,
+        "first_generator_difference_zero": true,
+        "force_weighted_by_w_lambda_three_quarters": true,
+        "gns_gap_closed": false,
+        "group_law_closed": false,
+        "hamiltonian_os_identification_closed": false,
+        "kms_os_closed": false,
+        "no_new_negative_result": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "not_closed": "The result is an exact finite CCR-core Taylor coefficient and a conditional weighted force bound. It does not sum the time expansion or prove projected D, delta-D, exhaustion, group law, Hamiltonian-to-OS identification, common alpha, KMS/GNS, continuum, C6, Sector A or Pre-A closure.",
+        "pre_a_closed": false,
+        "product_core_density_closed": false,
+        "second_generator_difference_exact": true,
+        "sector_a_closed": false
+      },
+      "expected": "finite force bridge closed",
+      "group": "scope",
+      "name": "finite scope",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "all_time_projected_d_duhamel_cauchy_closed": false,
+        "c6_closed": false,
+        "canonical_q3_force_reconstructed": true,
+        "common_alpha_closed": false,
+        "continuum_closed": false,
+        "delta_d_cauchy_closed": false,
+        "exhaustion_independence_closed": false,
+        "first_generator_difference_zero": true,
+        "force_weighted_by_w_lambda_three_quarters": true,
+        "gns_gap_closed": false,
+        "group_law_closed": false,
+        "hamiltonian_os_identification_closed": false,
+        "kms_os_closed": false,
+        "no_new_negative_result": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "not_closed": "The result is an exact finite CCR-core Taylor coefficient and a conditional weighted force bound. It does not sum the time expansion or prove projected D, delta-D, exhaustion, group law, Hamiltonian-to-OS identification, common alpha, KMS/GNS, continuum, C6, Sector A or Pre-A closure.",
+        "pre_a_closed": false,
+        "product_core_density_closed": false,
+        "second_generator_difference_exact": true,
+        "sector_a_closed": false
+      },
+      "expected": "successor gates open",
+      "group": "scope",
+      "name": "D-delta-D firewall",
+      "status": "PASS"
+    }
+  ],
+  "boundary": "T0 claim-nonbearing exact finite generator-coefficient bridge. It is a prerequisite calculation for direct projected D,delta-D locality, not that locality theorem itself.",
+  "derived": {
+    "all_time_projected_d_duhamel_cauchy_closed": false,
+    "canonical_q3_force_reconstructed": true,
+    "delta_d_cauchy_closed": false,
+    "first_generator_difference_zero": true,
+    "force_degree": 3,
+    "force_weighted_by_w_lambda_three_quarters": true,
+    "grid_points": 36,
+    "second_generator_difference_exact": true
+  },
+  "exploration_id": "EXP-001058",
+  "failed": 0,
+  "grid_rows": [
+    {
+      "bound_power": "7987120707128158301425137/1649954636431360000",
+      "force": "0",
+      "q": "-2",
+      "second_coeff": "0",
+      "v": "-2",
+      "weight": "33"
+    },
+    {
+      "bound_power": "162022734104027253297129/206244329553920000",
+      "force": "-27/20",
+      "q": "-2",
+      "second_coeff": "27/80",
+      "v": "-1",
+      "weight": "18"
+    },
+    {
+      "bound_power": "1091930991293670638475713/1649954636431360000",
+      "force": "-14/5",
+      "q": "-2",
+      "second_coeff": "7/10",
+      "v": "0",
+      "weight": "17"
+    },
+    {
+      "bound_power": "162022734104027253297129/206244329553920000",
+      "force": "-93/20",
+      "q": "-2",
+      "second_coeff": "93/80",
+      "v": "1",
+      "weight": "18"
+    },
+    {
+      "bound_power": "7987120707128158301425137/1649954636431360000",
+      "force": "-36/5",
+      "q": "-2",
+      "second_coeff": "9/5",
+      "v": "2",
+      "weight": "33"
+    },
+    {
+      "bound_power": "10890416969955192608449/85899345920000",
+      "force": "-43/4",
+      "q": "-2",
+      "second_coeff": "43/16",
+      "v": "3",
+      "weight": "98"
+    },
+    {
+      "bound_power": "162022734104027253297129/206244329553920000",
+      "force": "6/5",
+      "q": "-1",
+      "second_coeff": "-3/10",
+      "v": "-2",
+      "weight": "18"
+    },
+    {
+      "bound_power": "6000842003852861233227/1649954636431360000",
+      "force": "0",
+      "q": "-1",
+      "second_coeff": "0",
+      "v": "-1",
+      "weight": "3"
+    },
+    {
+      "bound_power": "222253407550105971601/206244329553920000",
+      "force": "-11/10",
+      "q": "-1",
+      "second_coeff": "11/40",
+      "v": "0",
+      "weight": "2"
+    },
+    {
+      "bound_power": "6000842003852861233227/1649954636431360000",
+      "force": "-12/5",
+      "q": "-1",
+      "second_coeff": "3/5",
+      "v": "1",
+      "weight": "3"
+    },
+    {
+      "bound_power": "162022734104027253297129/206244329553920000",
+      "force": "-21/5",
+      "q": "-1",
+      "second_coeff": "21/20",
+      "v": "2",
+      "weight": "18"
+    },
+    {
+      "bound_power": "127081609142852443183820987/1649954636431360000",
+      "force": "-34/5",
+      "q": "-1",
+      "second_coeff": "17/10",
+      "v": "3",
+      "weight": "83"
+    },
+    {
+      "bound_power": "1091930991293670638475713/1649954636431360000",
+      "force": "12/5",
+      "q": "0",
+      "second_coeff": "-3/5",
+      "v": "-2",
+      "weight": "17"
+    },
+    {
+      "bound_power": "222253407550105971601/206244329553920000",
+      "force": "21/20",
+      "q": "0",
+      "second_coeff": "-21/80",
+      "v": "-1",
+      "weight": "2"
+    },
+    {
+      "bound_power": "222253407550105971601/1649954636431360000",
+      "force": "0",
+      "q": "0",
+      "second_coeff": "0",
+      "v": "0",
+      "weight": "1"
+    },
+    {
+      "bound_power": "222253407550105971601/206244329553920000",
+      "force": "-21/20",
+      "q": "0",
+      "second_coeff": "21/80",
+      "v": "1",
+      "weight": "2"
+    },
+    {
+      "bound_power": "1091930991293670638475713/1649954636431360000",
+      "force": "-12/5",
+      "q": "0",
+      "second_coeff": "3/5",
+      "v": "2",
+      "weight": "17"
+    },
+    {
+      "bound_power": "15317927101760853668712521/206244329553920000",
+      "force": "-87/20",
+      "q": "0",
+      "second_coeff": "87/80",
+      "v": "3",
+      "weight": "82"
+    },
+    {
+      "bound_power": "162022734104027253297129/206244329553920000",
+      "force": "21/5",
+      "q": "1",
+      "second_coeff": "-21/20",
+      "v": "-2",
+      "weight": "18"
+    },
+    {
+      "bound_power": "6000842003852861233227/1649954636431360000",
+      "force": "12/5",
+      "q": "1",
+      "second_coeff": "-3/5",
+      "v": "-1",
+      "weight": "3"
+    },
+    {
+      "bound_power": "222253407550105971601/206244329553920000",
+      "force": "11/10",
+      "q": "1",
+      "second_coeff": "-11/40",
+      "v": "0",
+      "weight": "2"
+    },
+    {
+      "bound_power": "6000842003852861233227/1649954636431360000",
+      "force": "0",
+      "q": "1",
+      "second_coeff": "0",
+      "v": "1",
+      "weight": "3"
+    },
+    {
+      "bound_power": "162022734104027253297129/206244329553920000",
+      "force": "-6/5",
+      "q": "1",
+      "second_coeff": "3/10",
+      "v": "2",
+      "weight": "18"
+    },
+    {
+      "bound_power": "127081609142852443183820987/1649954636431360000",
+      "force": "-14/5",
+      "q": "1",
+      "second_coeff": "7/10",
+      "v": "3",
+      "weight": "83"
+    },
+    {
+      "bound_power": "7987120707128158301425137/1649954636431360000",
+      "force": "36/5",
+      "q": "2",
+      "second_coeff": "-9/5",
+      "v": "-2",
+      "weight": "33"
+    },
+    {
+      "bound_power": "162022734104027253297129/206244329553920000",
+      "force": "93/20",
+      "q": "2",
+      "second_coeff": "-93/80",
+      "v": "-1",
+      "weight": "18"
+    },
+    {
+      "bound_power": "1091930991293670638475713/1649954636431360000",
+      "force": "14/5",
+      "q": "2",
+      "second_coeff": "-7/10",
+      "v": "0",
+      "weight": "17"
+    },
+    {
+      "bound_power": "162022734104027253297129/206244329553920000",
+      "force": "27/20",
+      "q": "2",
+      "second_coeff": "-27/80",
+      "v": "1",
+      "weight": "18"
+    },
+    {
+      "bound_power": "7987120707128158301425137/1649954636431360000",
+      "force": "0",
+      "q": "2",
+      "second_coeff": "0",
+      "v": "2",
+      "weight": "33"
+    },
+    {
+      "bound_power": "10890416969955192608449/85899345920000",
+      "force": "-31/20",
+      "q": "2",
+      "second_coeff": "31/80",
+      "v": "3",
+      "weight": "98"
+    },
+    {
+      "bound_power": "10890416969955192608449/85899345920000",
+      "force": "12",
+      "q": "3",
+      "second_coeff": "-3",
+      "v": "-2",
+      "weight": "98"
+    },
+    {
+      "bound_power": "127081609142852443183820987/1649954636431360000",
+      "force": "42/5",
+      "q": "3",
+      "second_coeff": "-21/10",
+      "v": "-1",
+      "weight": "83"
+    },
+    {
+      "bound_power": "15317927101760853668712521/206244329553920000",
+      "force": "57/10",
+      "q": "3",
+      "second_coeff": "-57/40",
+      "v": "0",
+      "weight": "82"
+    },
+    {
+      "bound_power": "127081609142852443183820987/1649954636431360000",
+      "force": "18/5",
+      "q": "3",
+      "second_coeff": "-9/10",
+      "v": "1",
+      "weight": "83"
+    },
+    {
+      "bound_power": "10890416969955192608449/85899345920000",
+      "force": "9/5",
+      "q": "3",
+      "second_coeff": "-9/20",
+      "v": "2",
+      "weight": "98"
+    },
+    {
+      "bound_power": "962523277987398786193115947/1649954636431360000",
+      "force": "0",
+      "q": "3",
+      "second_coeff": "0",
+      "v": "3",
+      "weight": "163"
+    }
+  ],
+  "passed": 46,
+  "provenance": {
+    "manifest": "strategy/pre-a-cp1-st8-q3lock-projected-delta-d-boundary-taylor-coefficient-manifest.json",
+    "manifest_sha256": "24ce569d282b27fcf8c853ba42e00765d4b9dfcbedd914c84d7f92fad3d8490c",
+    "script": "codes/foundations/pre_a_cp1_st8_q3lock_projected_delta_d_boundary_taylor_coefficient_independent.py",
+    "script_sha256": "1b3dafd05407ced30e385b2a830755b29cafef69f4bdca1c8eb5ed59e8066a31"
+  },
+  "run_kind": "independent",
+  "schema": "tect/foundation-audit/1.0",
+  "total": 46,
+  "verdict": "PASS"
+}
