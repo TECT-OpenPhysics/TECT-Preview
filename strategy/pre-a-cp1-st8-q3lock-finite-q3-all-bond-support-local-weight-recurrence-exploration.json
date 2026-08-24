@@ -1,0 +1,87 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001084",
+  "title": "Finite Q3 all-bond support-local weight recurrence stress test",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-ENERGY-WEIGHTED-COMMUTATOR-GEVREY-LR-CLOSURE",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "question": "Does a support-local energy weight give a stable two-orientation all-bond recurrence on the exact finite Q3 graph, and does one-layer support enlargement supply the missing critical topology input?",
+  "method": [
+    "Construct the exact cube graph with twelve bonds, a square-face subvolume, and the two-site target using the canonical quartic onsite and quadratic/quartic bond Hamiltonian.",
+    "Build the commuting all-bond bilinear kick in the joint coordinate basis and evaluate both signs of delta.",
+    "Embed endpoint, one-layer, and full-support shifted-positive Hamiltonian weights into the full tensor product and compute the two-sided form and graph ratios.",
+    "Check the q invariance and p one-layer recurrence while retaining the finite truncated-CCR residual; rebuild the full calculation in an independent lane and compile Lean R266 arithmetic fixtures."
+  ],
+  "finding": "Primary 167/167, independent 166/166, and integrated 183/183 with Lean R266 PASS. For (volume,n)=(2,3), (4,3), and (8,2), the maximum finite-CCR residuals are 0.27537395, 0.54958861, and 0.31786266. The maximum endpoint form/graph ratios are (1.08474437,1.04151062), (1.12461836,1.06048025), and approximately (1,1); the one-layer ratios are (1.08474437,1.04151062), (1.15620360,1.07526908), and approximately (1,1).",
+  "verdict": "advanced",
+  "decision_reason": "The finite all-bond and two-orientation support-weight calculation is reproducible, but one-layer support is not monotone-improving on the nontrivial four-site row, the finite CCR residual remains visible, and the full eight-site n=2 row is cutoff-degenerate. The data therefore selects no uniform critical topology and cannot promote the all-bond or direct projected gate.",
+  "boundary": "Finite exact graph and truncated oscillator rows only; no source-, volume-, cutoff-, beta-, common-core-, thermodynamic-, OS/KMS/GNS-, gap-, continuum-, C6-, Sector-A-, or Pre-A-level conclusion.",
+  "next_action": "Run a direct projected D,delta-D Cauchy audit on the structured local test class using the nontrivial n=3 face, with the modular/domain residual explicit; if the constants grow, register that scaling obstruction rather than inferring common alpha.",
+  "no_overclaim": "This is a claim-nonbearing finite diagnostic, not a volume-, source-, cutoff-, or beta-uniform recurrence theorem, a common dynamics, a direct D,delta-D theorem, an OS/KMS/GNS result, a gap, a continuum result, or a C6/Sector-A/Pre-A result.",
+  "closed": [
+    "finite exact graph and all-bond kick construction",
+    "finite endpoint/one-layer/full support weight form ratios in both orientations",
+    "finite q invariance and p recurrence with explicit truncated-CCR residual",
+    "independent numerical reproduction and Lean R266 fixture check"
+  ],
+  "open": [
+    "support-local source/volume/cutoff/beta uniformity",
+    "critical non-Leibniz or state-weighted topology",
+    "exact common-core CCR and modular-domain transfer",
+    "direct projected D and delta-D Cauchy, product/core density, and exhaustion",
+    "common alpha, OS/KMS/GNS identification, gap, continuum, C6, Sector A, and Pre-A"
+  ],
+  "evidence_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-finite-q3-all-bond-support-local-weight-recurrence-manifest.json#model",
+    "strategy/pre-a-cp1-st8-q3lock-finite-q3-all-bond-support-local-weight-recurrence-certificate-260824.md#Findings",
+    "codes/foundations/pre_a_cp1_st8_q3lock_finite_q3_all_bond_support_local_weight_recurrence.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_finite_q3_all_bond_support_local_weight_recurrence_independent.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_finite_q3_all_bond_support_local_weight_recurrence_verify.py#run",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-24-primary-pre-a-cp1-st8-q3lock-finite-q3-all-bond-support-local-weight-recurrence/primary.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-24-primary-pre-a-cp1-st8-q3lock-finite-q3-all-bond-support-local-weight-recurrence/independent.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-24-primary-pre-a-cp1-st8-q3lock-finite-q3-all-bond-support-local-weight-recurrence/integrated.json#lean",
+    "verification/lean/Tect/R266.lean#form_ratio_fixture",
+    "verification/lean/registry.json#R266"
+  ],
+  "formal_integration": {
+    "events": [],
+    "results": [],
+    "negatives": [],
+    "lean": "R266 PASS",
+    "no_new_event": true,
+    "no_new_result": true,
+    "no_new_negative": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "adversarial_review": [
+    {"axis": "exact graph", "check": "The full cube row includes all twelve Hamming-one edges and the face row is labeled separately.", "disposition": "UPHELD"},
+    {"axis": "orientation", "check": "Both signs of the commuting kick are evaluated for every edge.", "disposition": "UPHELD"},
+    {"axis": "CCR", "check": "The finite p recurrence retains and reports its truncated-CCR residual.", "disposition": "UPHELD"},
+    {"axis": "support embedding", "check": "Weights are shifted and embedded before spectral powers and norm evaluation.", "disposition": "UPHELD"},
+    {"axis": "cutoff degeneracy", "check": "The n=2 full-cube row is not promoted to a uniformity claim.", "disposition": "UPHELD"},
+    {"axis": "independence", "check": "The independent lane reconstructs the matrices without importing primary code.", "disposition": "UPHELD"},
+    {"axis": "Lean", "check": "R266 proves arithmetic/support fixtures only, not the numerical spectral result.", "disposition": "UPHELD"},
+    {"axis": "QFT promotion", "check": "Common alpha, D,delta-D, OS/KMS/GNS, gap, continuum, C6, Sector A and Pre-A remain open.", "disposition": "UPHELD"}
+  ],
+  "qft_interface": {
+    "closed": "Finite exact all-bond support-weight ratios and one-layer recurrence residual measurements.",
+    "open": "Uniform critical topology, direct D,delta-D Cauchy, exhaustion, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector A and Pre-A.",
+    "tect_boundary": "No heat_root_incidence or canonical A1/R-192 production owner is supplied."
+  },
+  "related": [
+    {"id": "EXP-001083", "relation": "continues"},
+    {"id": "EXP-001026", "relation": "continues"},
+    {"id": "EXP-001030", "relation": "continues"}
+  ],
+  "prior_exploration_id": "EXP-001083",
+  "recorded_at": "2026-08-26T11:00:00Z",
+  "recorded_by": "Codex",
+  "provenance": "contemporaneous",
+  "reviewed_on": "2026-08-24"
+}
