@@ -1,0 +1,88 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001086",
+  "title": "Finite two-site local-character direct D and delta-D scaling audit",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-ENERGY-WEIGHTED-COMMUTATOR-GEVREY-LR-CLOSURE",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "question": "Does enlarging the local test observable to a two-site configuration character change the finite direct D,delta-D cutoff behavior or remove the volume dependence that blocks the projected QFT route?",
+  "method": [
+    "Construct the exact two-site target and four-site square-face Q3 Hamiltonians at oscillator dimension three and form the uncut full-volume Gibbs state.",
+    "Use A_2=exp(i*character_amplitude*(q_0+q_1)/hbar), apply the smooth cosine cutoff only to bond coordinates at radii 0.5, 1.0, and 2.0, and set W_L=H-H_L.",
+    "Evolve A_2 under H+sigma W_L and H for both signs sigma and compute D_sigma and delta D_sigma=[-beta H,D_sigma] in the two-sided Gibbs seminorm at times 0.05 and 0.10.",
+    "Rebuild the entire calculation independently, compare every orientation/radius/time row, and compile Lean R268 support, orientation, zero-tail, and scope fixtures."
+  ],
+  "finding": "Primary 46/46, independent 46/46, and integrated 56/56 with Lean R268 PASS. At L=0.5 and t=0.10, the two-orientation D_norm sums are 0.0093767225 (V=2) and 0.0168376850 (V=4), while the delta_D_norm sums are 0.0213010043 and 0.0729462141. At L=1.0 the corresponding pairs are 0.0024376321/0.0043922819 and 0.0055408095/0.0190361869; at L=2.0 the bond tail and direct norms are at the numerical floor. The V=4/V=2 ratios of the recorded maxima are 1.7956898 for D_norm and 3.4245434 for delta_D_norm.",
+  "verdict": "advanced",
+  "decision_reason": "The two-site local character has finite cutoff decay in both orientations and independent lanes, but enlarging the observable support does not remove the modular-derivative growth from the two-site target to the four-site face. The finite evidence therefore advances the QFT-facing interface while keeping the volume/source-uniform direct D,delta-D gate open.",
+  "boundary": "Finite two-site local observable, finite Q3 Gibbs members, and finite spectral cutoffs only; no source-, volume-, cutoff-, beta-, common-core-, thermodynamic-, OS/KMS/GNS-, gap-, continuum-, C6-, Sector-A-, or Pre-A-level conclusion.",
+  "next_action": "Derive an analytic local-class direct D,delta-D bound with an explicit volume-independent multiplier, or test a larger structured support/cutoff family and register a formal scaling obstruction if the growth persists before any common-alpha promotion.",
+  "no_overclaim": "This package is a finite two-site direct-D scaling diagnostic, not a volume-uniform projected D,delta-D theorem, a common dynamics, an OS/KMS/GNS result, a gap, a continuum result, or a C6/Sector-A/Pre-A result.",
+  "closed": [
+    "finite two-site local-character direct D for both cutoff orientations",
+    "finite two-site local-character modular derivative delta-D",
+    "finite cutoff-zero tail fixture with bond-only replacement",
+    "support-scaling diagnostic between the two-site target and four-site face",
+    "independent numerical reproduction and Lean R268 cross-check"
+  ],
+  "open": [
+    "volume/source/cutoff/beta-uniform direct D and delta-D Cauchy",
+    "product/core density and exhaustion independence",
+    "group law and Hamiltonian-to-OS identification",
+    "common alpha, KMS/GNS gap, continuum, C6, Sector A, and Pre-A"
+  ],
+  "evidence_refs": [
+    "strategy/pre_a_cp1_st8_q3lock_finite_two_site_character_direct_d_delta_d_scaling-manifest.json#model",
+    "strategy/pre_a_cp1_st8_q3lock_finite_two_site_character_direct_d_delta_d_scaling-certificate-260825.md#Findings",
+    "codes/foundations/pre_a_cp1_st8_q3lock_finite_two_site_character_direct_d_delta_d_scaling.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_finite_two_site_character_direct_d_delta_d_scaling_independent.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_finite_two_site_character_direct_d_delta_d_scaling_verify.py#run",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-primary-pre_a_cp1_st8_q3lock_finite_two_site_character_direct_d_delta_d_scaling/primary.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-primary-pre_a_cp1_st8_q3lock_finite_two_site_character_direct_d_delta_d_scaling/independent.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-primary-pre_a_cp1_st8_q3lock_finite_two_site_character_direct_d_delta_d_scaling/integrated.json#lean",
+    "verification/lean/Tect/R268.lean#two_site_support_fixture",
+    "verification/lean/registry.json#R268"
+  ],
+  "formal_integration": {
+    "events": [],
+    "results": [],
+    "negatives": [],
+    "lean": "R268 PASS",
+    "no_new_event": true,
+    "no_new_result": true,
+    "no_new_negative": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "adversarial_review": [
+    {"axis": "observable support", "check": "A_2 is generated by q_0+q_1 and is supported on the first two sites in both finite volumes.", "disposition": "UPHELD"},
+    {"axis": "cutoff scope", "check": "Onsite terms are unchanged and only bond coordinates receive the smooth cutoff.", "disposition": "UPHELD"},
+    {"axis": "reference state", "check": "Both lanes use the uncut full-volume Gibbs state without a local-state substitution.", "disposition": "UPHELD"},
+    {"axis": "orientations", "check": "H+W_L and H-W_L are evaluated separately.", "disposition": "UPHELD"},
+    {"axis": "modular derivative", "check": "delta-D is computed from the explicit finite commutator [-beta H,D].", "disposition": "UPHELD"},
+    {"axis": "scaling", "check": "The V=4/V=2 ratios are finite diagnostics and are not promoted to monotone or thermodynamic theorems.", "disposition": "UPHELD"},
+    {"axis": "independence", "check": "The independent lane rebuilds oscillator, Hamiltonian, cutoff, Gibbs state, observable, and evolution without importing primary code.", "disposition": "UPHELD"},
+    {"axis": "Lean", "check": "R268 proves arithmetic support/orientation/zero-tail fixtures and scope labels only.", "disposition": "UPHELD"},
+    {"axis": "QFT promotion", "check": "Uniform direct Cauchy, product/core density, exhaustion, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector A, and Pre-A remain open.", "disposition": "UPHELD"}
+  ],
+  "qft_interface": {
+    "closed": "Finite actual-Q3 direct D and modular derivative for a fixed two-site local character in both cutoff orientations, with support-scaling comparison.",
+    "open": "Uniform direct D,delta-D Cauchy, product/core density, exhaustion, group law, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector A and Pre-A.",
+    "tect_boundary": "No heat_root_incidence or canonical A1/R-192 production owner is supplied."
+  },
+  "related": [
+    {"id": "EXP-001085", "relation": "continues"},
+    {"id": "EXP-001084", "relation": "continues"},
+    {"id": "EXP-001080", "relation": "continues"}
+  ],
+  "prior_exploration_id": "EXP-001085",
+  "recorded_at": "2026-08-26T13:00:00Z",
+  "recorded_by": "Codex",
+  "provenance": "contemporaneous",
+  "reviewed_on": "2026-08-25"
+}
