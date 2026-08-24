@@ -1,0 +1,217 @@
+{
+  "assertion_count": 28,
+  "assertions": [
+    {
+      "actual": "['EXP-001061', 'T-054']",
+      "expected": "EXP-001061/T-054",
+      "name": "identity",
+      "pass": true
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "name": "claim nonbearing",
+      "pass": true
+    },
+    {
+      "actual": "{'onsite_split': 'In the registered finite periodic compact-source family, H_Lambda(h)+C|Lambda|=sum_x k_(x,h)+sum_<xy> V_xy with k_(x,h)>=1+gamma|q_x|^4 and 0<gamma<g/32.', 'endpoint_energy': 'e(q)=r*q^2/2+g*q^4/4+r^2/(2*g)>=0 for one force endpoint coordinate.', 'form_domination': 'For r<0, e(q)<=a_gamma*k_(x,h)+A_r with a_gamma=g/(4*gamma) and A_r=r^2/(2*g), because q^4<=|q_x|^4<=(k_(x,h)-1)/gamma and the quadratic term is nonpositive.', 'pair_energy': 'E_xy=1+e(q_x)+e(q_y)<=C0+a_gamma*(k_(x,h)+k_(y,h)), where C0=1+2*A_r.', 'cube_majorant': 'E_xy^3<=9*(C0^3+a_gamma^3*k_(x,h)^3+a_gamma^3*k_(y,h)^3).', 'fifth_to_third': 'k_(x,h)>=1 implies k_(x,h)^3<=k_(x,h)^5; the closed R-167 compact-source m5 bounds both endpoints.', 'bridge_bound': 'sup phi_(Lambda,h)(E_xy^3)<=M_bridge_compact=9*(C0^3+2*a_gamma^3*m5).'}",
+      "expected": "source-uniform endpoint bridge",
+      "name": "model bridge",
+      "pass": true
+    },
+    {
+      "actual": "{'compact_source_endpoint_third_moment_bridge_closed': True, 'registered_periodic_compact_source_scope_only': True, 'uses_closed_source_uniform_m5': True, 'uses_registered_onsite_form_split': True, 'arbitrary_boundary_extension_closed': False, 'all_time_projected_d_duhamel_cauchy_closed': False, 'delta_d_cauchy_closed': False, 'product_core_density_closed': False, 'exhaustion_independence_closed': False, 'group_law_closed': False, 'common_alpha_closed': False, 'hamiltonian_os_identification_closed': False, 'kms_os_closed': False, 'gns_gap_closed': False, 'continuum_closed': False, 'c6_closed': False, 'sector_a_closed': False, 'pre_a_closed': False, 'no_new_negative_result': True, 'no_tier_change': True, 'no_pdf': True, 'not_closed': 'The bridge supplies only the compact-source local third-moment input. It does not sum Duhamel histories, prove direct D or delta-D Cauchy, establish product/core density, exhaustion independence, group law, Hamiltonian-to-OS identification, common alpha, KMS/GNS, continuum, C6, Sector A or Pre-A closure.'}",
+      "expected": "registered compact-source bridge",
+      "name": "scope closed",
+      "pass": true
+    },
+    {
+      "actual": "{'compact_source_endpoint_third_moment_bridge_closed': True, 'registered_periodic_compact_source_scope_only': True, 'uses_closed_source_uniform_m5': True, 'uses_registered_onsite_form_split': True, 'arbitrary_boundary_extension_closed': False, 'all_time_projected_d_duhamel_cauchy_closed': False, 'delta_d_cauchy_closed': False, 'product_core_density_closed': False, 'exhaustion_independence_closed': False, 'group_law_closed': False, 'common_alpha_closed': False, 'hamiltonian_os_identification_closed': False, 'kms_os_closed': False, 'gns_gap_closed': False, 'continuum_closed': False, 'c6_closed': False, 'sector_a_closed': False, 'pre_a_closed': False, 'no_new_negative_result': True, 'no_tier_change': True, 'no_pdf': True, 'not_closed': 'The bridge supplies only the compact-source local third-moment input. It does not sum Duhamel histories, prove direct D or delta-D Cauchy, establish product/core density, exhaustion independence, group law, Hamiltonian-to-OS identification, common alpha, KMS/GNS, continuum, C6, Sector A or Pre-A closure.'}",
+      "expected": "successor gates open",
+      "name": "scope firewalls",
+      "pass": true
+    },
+    {
+      "actual": "E:\\Dev\\TECT\\claims\\GATES.md",
+      "expected": "closed source-uniform m5 authority",
+      "name": "upstream m5 gate",
+      "pass": true
+    },
+    {
+      "actual": "E:\\Dev\\TECT\\strategy\\pre-a-cp1-st8-q3lock-local-measured-renyi-semiclassical-doublet-route-split-manifest.json",
+      "expected": "R-167 compact-source m5",
+      "name": "upstream compact source",
+      "pass": true
+    },
+    {
+      "actual": "['coefficient_fixture', 'shift_fixture', 'pair_constant_fixture', 'bridge_fixture', 'endpoint_form_fixture', 'scope_fixture']",
+      "expected": "present",
+      "name": "Lean source",
+      "pass": true
+    },
+    {
+      "actual": "[]",
+      "expected": "none",
+      "name": "Lean forbidden",
+      "pass": true
+    },
+    {
+      "actual": "PRIMARY COMPACT-SOURCE-ENDPOINT-BRIDGE PASS 157/157\n",
+      "expected": "PASS",
+      "name": "primary child",
+      "pass": true
+    },
+    {
+      "actual": "INDEPENDENT COMPACT-SOURCE-ENDPOINT-BRIDGE PASS 157/157\n",
+      "expected": "PASS",
+      "name": "independent child",
+      "pass": true
+    },
+    {
+      "actual": "[157, 157]",
+      "expected": ">0",
+      "name": "positive totals",
+      "pass": true
+    },
+    {
+      "actual": "['3/5', '3/5']",
+      "expected": "equal",
+      "name": "lane agreement g",
+      "pass": true
+    },
+    {
+      "actual": "['-9/2', '-9/2']",
+      "expected": "equal",
+      "name": "lane agreement r",
+      "pass": true
+    },
+    {
+      "actual": "['1/100', '1/100']",
+      "expected": "equal",
+      "name": "lane agreement gamma",
+      "pass": true
+    },
+    {
+      "actual": "['3', '3']",
+      "expected": "equal",
+      "name": "lane agreement m5",
+      "pass": true
+    },
+    {
+      "actual": "['15', '15']",
+      "expected": "equal",
+      "name": "lane agreement a_gamma",
+      "pass": true
+    },
+    {
+      "actual": "['135/8', '135/8']",
+      "expected": "equal",
+      "name": "lane agreement A_r",
+      "pass": true
+    },
+    {
+      "actual": "['139/4', '139/4']",
+      "expected": "equal",
+      "name": "lane agreement C0",
+      "pass": true
+    },
+    {
+      "actual": "['35834571/64', '35834571/64']",
+      "expected": "equal",
+      "name": "lane agreement M_bridge_compact",
+      "pass": true
+    },
+    {
+      "actual": "[7, 7]",
+      "expected": "equal",
+      "name": "lane agreement form_grid_points",
+      "pass": true
+    },
+    {
+      "actual": "[125, 125]",
+      "expected": "equal",
+      "name": "lane agreement cube_grid_points",
+      "pass": true
+    },
+    {
+      "actual": "[True, True]",
+      "expected": "equal",
+      "name": "lane agreement compact_source_endpoint_third_moment_bridge_closed",
+      "pass": true
+    },
+    {
+      "actual": "[False, False]",
+      "expected": "equal",
+      "name": "lane agreement arbitrary_boundary_extension_closed",
+      "pass": true
+    },
+    {
+      "actual": "[False, False]",
+      "expected": "equal",
+      "name": "lane agreement all_time_projected_d_duhamel_cauchy_closed",
+      "pass": true
+    },
+    {
+      "actual": "[False, False]",
+      "expected": "equal",
+      "name": "lane agreement delta_d_cauchy_closed",
+      "pass": true
+    },
+    {
+      "actual": "{'A_r': '135/8', 'C0': '139/4', 'M_bridge_compact': '35834571/64', 'a_gamma': '15', 'all_time_projected_d_duhamel_cauchy_closed': False, 'arbitrary_boundary_extension_closed': False, 'compact_source_endpoint_third_moment_bridge_closed': True, 'cube_grid_points': 125, 'delta_d_cauchy_closed': False, 'form_grid_points': 7, 'g': '3/5', 'gamma': '1/100', 'm5': '3', 'r': '-9/2'}",
+      "expected": "{'g': '3/5', 'r': '-9/2', 'gamma': '1/100', 'm5': '3', 'field_values': ['-3', '-2', '-1', '0', '1', '2', '3'], 'derived_a_gamma': '15', 'derived_A_r': '135/8', 'derived_C0': '139/4', 'derived_M_bridge_compact': '35834571/64', 'grid_points': 7}",
+      "name": "fixture constants",
+      "pass": true
+    },
+    {
+      "actual": "{'status': 'PASS', 'command': 'lake env lean Tect/R243.lean', 'returncode': 0, 'output': ''}",
+      "expected": "PASS",
+      "name": "Lean compile",
+      "pass": true
+    }
+  ],
+  "audit_id": "PA-CP1-ST8-Q3LOCK-COMPACT-SOURCE-ENDPOINT-THIRD-MOMENT-BRIDGE",
+  "boundary": {
+    "all_time_projected_d_duhamel_cauchy_closed": false,
+    "arbitrary_boundary_extension_closed": false,
+    "c6_closed": false,
+    "common_alpha_closed": false,
+    "compact_source_endpoint_third_moment_bridge_closed": true,
+    "continuum_closed": false,
+    "delta_d_cauchy_closed": false,
+    "exhaustion_independence_closed": false,
+    "gns_gap_closed": false,
+    "group_law_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_os_closed": false,
+    "no_new_negative_result": true,
+    "no_pdf": true,
+    "no_tier_change": true,
+    "not_closed": "The bridge supplies only the compact-source local third-moment input. It does not sum Duhamel histories, prove direct D or delta-D Cauchy, establish product/core density, exhaustion independence, group law, Hamiltonian-to-OS identification, common alpha, KMS/GNS, continuum, C6, Sector A or Pre-A closure.",
+    "pre_a_closed": false,
+    "product_core_density_closed": false,
+    "registered_periodic_compact_source_scope_only": true,
+    "sector_a_closed": false,
+    "uses_closed_source_uniform_m5": true,
+    "uses_registered_onsite_form_split": true
+  },
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "exploration_id": "EXP-001061",
+  "lean": {
+    "command": "lake env lean Tect/R243.lean",
+    "output": "",
+    "returncode": 0,
+    "status": "PASS"
+  },
+  "provenance": {
+    "independent_sha256": "b807447d0e48c2c8b8a06b11c773a4995b8c2a62f4b0dc2692780c95cccb7a0a",
+    "lean_sha256": "cd3fdae128cf8a33c71473b0248aa813e2e3804d612876a848487a0fd3da07de",
+    "manifest_sha256": "9c7feef490c250e3a28701f8ffb0aacaecad8b657815fadeee4a0ad35e3d2723",
+    "primary_sha256": "9558eee591ba75326b5289a5c6fe250463b83caf1e7d8ccaa8623eb012af07f6"
+  },
+  "recorded_at": "2026-08-24T06:50:17.286958Z",
+  "run_kind": "integrated",
+  "schema": "tect/foundation-audit/1.0",
+  "task_id": "T-054",
+  "verdict": "PASS"
+}

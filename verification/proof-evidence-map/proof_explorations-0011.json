@@ -5694,6 +5694,116 @@
       "task_id": "T-054",
       "title": "Existing Q3 fifth-moment authority to endpoint third-moment bridge",
       "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "axis": "source split",
+          "check": "The source-uniform lower bound k_(x,h)>=1+gamma|q_x|^4 is an explicit registered input; EXP-001060's zero-source xi_0 shift is not reused.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "quartic coefficient",
+          "check": "a_gamma=g/(4 gamma) is derived from the form inequality and recomputed in both executable lanes.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "negative quadratic",
+          "check": "The r<0 term is dropped only in an upper bound, while A_r is retained exactly.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "volume/source uniformity",
+          "check": "Only two endpoint moments enter and the upstream m5 is already uniform over periodic volumes and compact sources.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "moment order",
+          "check": "The only order reduction is k^3<=k^5 from k>=1; no history or all-order moment is assumed.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "Lean",
+          "check": "R243 is an exact arithmetic cross-check and does not certify unbounded domains.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "Duhamel promotion",
+          "check": "A static endpoint Gibbs moment is not a direct all-time D,delta-D Cauchy theorem.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "QFT/TECT promotion",
+          "check": "No OS/KMS/GNS/continuum or heat_root_incidence/A1/R-192 conclusion follows.",
+          "disposition": "UPHELD"
+        }
+      ],
+      "boundary": "T0 claim-nonbearing compact-source endpoint third-moment bridge only. Arbitrary boundaries, all-time Duhamel summation, direct D,delta-D Cauchy, product/core density, exhaustion independence, group law, common alpha, Hamiltonian-to-OS identification, KMS/GNS, continuum, C6, Sector A and Pre-A remain open.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "This is a non-duplicative compact-source extension of EXP-001060 using the registered source-uniform onsite split. It removes the compact-source moment hypothesis from EXP-001059 but does not sum histories or prove direct projected D,delta-D Cauchy.",
+      "evidence_refs": [
+        "strategy/pre-a-cp1-st8-q3lock-compact-source-endpoint-third-moment-bridge-manifest.json#model",
+        "strategy/pre-a-cp1-st8-q3lock-compact-source-endpoint-third-moment-bridge-certificate-260824.md#Exact bound",
+        "strategy/pre-a-cp1-st8-q3lock-common-local-derivation-weighted-energy-route-split-manifest.json#source_uniform_coercivity",
+        "strategy/pre-a-cp1-st8-q3lock-cubic-graph-product-locality-route-split-manifest.json#equilibrium_cutoff_alternative",
+        "strategy/pre-a-cp1-st8-q3lock-local-measured-renyi-semiclassical-doublet-route-split-manifest.json#actual_q3_static_fifth_moment_and_elliptic_embedding",
+        "codes/foundations/pre_a_cp1_st8_q3lock_compact_source_endpoint_third_moment_bridge.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_compact_source_endpoint_third_moment_bridge_independent.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_compact_source_endpoint_third_moment_bridge_verify.py#main",
+        "verification/lean/Tect/R243.lean#compact_source_bridge_fixture",
+        "verification/lean/registry.json#entrypoints"
+      ],
+      "finding": "In the registered periodic compact-source family, e(q)<=15*k_(x,h)+135/8 for the labelled fixture g=3/5, r=-9/2, gamma=1/100. Hence E_xy^3 is bounded by 9*(C0^3+a_gamma^3*k_x^3+a_gamma^3*k_y^3), and the closed m5 gives M_bridge_compact=9*(C0^3+2*a_gamma^3*m5)=35834571/64 for m5=3. The endpoint third-moment input is therefore source- and volume-uniform in the declared scope.",
+      "formal_integration": {
+        "events": [],
+        "negatives": [],
+        "no_new_negative": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "results": []
+      },
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": []
+      },
+      "gate_ids": [
+        "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+        "PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE",
+        "PA-CP1-ST8-Q3LOCK-FIRST-PASSAGE-BACKBONE-REAL-TIME-PRODUCT-AND-ENERGY-TAIL-CLOSURE",
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001061",
+      "method": [
+        "Reuse the closed finite-periodic compact-source form split and the R-167 source-uniform onsite fifth moment; do not re-prove or copy either authority.",
+        "Derive e(q)<=a_gamma*k_(x,h)+A_r from r<0, q^4<=|q_x|^4 and k_(x,h)>=1+gamma|q_x|^4, then apply the exact three-term cube majorant to the two endpoint energy.",
+        "Run a SymPy primary lane and a Fraction-only independent lane on the same labelled fixture and scalar field grid.",
+        "Compile Lean R243 for the rational coefficient, shift, endpoint domination and bridge fixture, then retain the direct D,delta-D, history, modular and QFT scope firewalls."
+      ],
+      "next_action": "Insert M_bridge_compact into a two-sided direct Duhamel remainder estimate on the fixed-beta OS-mixture word class and attack the remaining modular/dual-state topology inputs without a point-norm shortcut.",
+      "prior_exploration_id": "EXP-001060",
+      "provenance": "contemporaneous",
+      "qft_interface": {
+        "closed": "The direct Q3 force endpoint's cubic energy moment is bounded uniformly over the registered periodic compact-source Gibbs family by a function of the closed R-167 fifth moment.",
+        "open": "The direct D and delta-D limits, history summation, modular topology, common alpha, KMS/GNS gap, continuum, C6, Sector A and Pre-A remain open.",
+        "tect_boundary": "This is a finite QFT-facing endpoint bridge; it does not identify the canonical TECT production dynamics."
+      },
+      "question": "Does the registered source-uniform onsite split k_(x,h)>=1+gamma|q_x|^4, together with the closed compact-source fifth moment, give a volume- and source-uniform endpoint third moment for the projected D,delta-D force interface?",
+      "recorded_at": "2026-08-25T11:00:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001060",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-08-24",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Compact-source endpoint third-moment bridge under the source-uniform onsite split",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",
