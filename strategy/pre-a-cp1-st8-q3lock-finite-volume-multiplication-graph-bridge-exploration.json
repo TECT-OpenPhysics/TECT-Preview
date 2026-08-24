@@ -1,0 +1,64 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001055",
+  "title": "Finite-volume Q3 multiplication graph bridge",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "question": "Does the multivariate pointwise Q3 bound lift to a volume-uniform commuting multiplication-operator graph bound and conditional product envelope relative to W_Lambda(q)=1+sum_x q_x^4?",
+  "method": [
+    "Declare the finite-volume configuration representation with commuting coordinate multipliers and the explicit potential weight W_Lambda=1+sum_x q_x^4.",
+    "Reconstruct the center and reverse Q3 source polynomials independently, use the EXP-001054 coefficient-majorant constant C=122099/35840, and check exact fourth-power inequalities for volumes 2, 3 and 4 on both source signs.",
+    "Check the conditional C^n product envelope for alternating center/reverse multiplication words of lengths 1 through 4 on all 5^4 field configurations, then compile Lean R237 for exact arithmetic and scope fixtures."
+  ],
+  "finding": "The declared potential-only multiplication representation passes the primary lane at 5311/5311, the independent Fraction lane at 5310/5310, and the integrated lane at 27/27 with Lean R237 PASS. The derived constant is C=122099/35840, with 150 local rows and 5000 product rows. The commuting product envelope is closed conditionally for this representation.",
+  "decision_reason": "This is the operator-interface lift after EXP-001054. It isolates a genuine finite-volume potential multiplication graph bound while keeping the full Q3 energy, domain, history and QFT reconstruction obligations explicit rather than silently identifying the potential with the Hamiltonian.",
+  "verdict": "advanced",
+  "boundary": "T0 claim-nonbearing conditional operator interface. It applies only to the declared commuting multiplication representation and potential weight and does not establish the actual Q3 dynamics or thermodynamic QFT.",
+  "evidence_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-finite-volume-multiplication-graph-bridge-manifest.json#operator_model",
+    "strategy/pre-a-cp1-st8-q3lock-finite-volume-multiplication-graph-bridge-certificate-260824.md#Conditional graph statement",
+    "codes/foundations/pre_a_cp1_st8_q3lock_finite_volume_multiplication_graph_bridge.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_finite_volume_multiplication_graph_bridge_independent.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_finite_volume_multiplication_graph_bridge_verify.py#main",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-primary-pre-a-cp1-st8-q3lock-finite-volume-multiplication-graph-bridge/primary.json#assertions",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-primary-pre-a-cp1-st8-q3lock-finite-volume-multiplication-graph-bridge/independent.json#assertions",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-primary-pre-a-cp1-st8-q3lock-finite-volume-multiplication-graph-bridge/integrated.json#assertions",
+    "verification/lean/Tect/R237.lean#graph_constant_fixture",
+    "verification/lean/registry.json#entrypoints"
+  ],
+  "adversarial_review": [
+    {"axis": "operator representation", "check": "The graph estimate is explicitly for commuting multiplication operators and does not hide a differential or full-Hamiltonian action.", "disposition": "UPHELD"},
+    {"axis": "volume uniformity", "check": "W_Lambda dominates every local pair and the constant is volume-independent; finite volumes are self-tests only.", "disposition": "UPHELD"},
+    {"axis": "product commutation", "check": "The C^n product envelope uses commutation and is not transferred to noncommuting energy transports.", "disposition": "UPHELD"},
+    {"axis": "full energy comparison", "check": "No equivalence or domination of W_Lambda by the canonical Q3 energy is asserted.", "disposition": "UPHELD"},
+    {"axis": "source amplitude", "check": "Every local and product check retains the explicit |a|<=1/4 restriction.", "disposition": "UPHELD"},
+    {"axis": "Lean", "check": "R237 checks exact constants and finite fixtures only, not domains or thermodynamic limits.", "disposition": "UPHELD"},
+    {"axis": "QFT promotion", "check": "No factorial incidence, KMS/OS, GNS gap, continuum, C6, Sector A or Pre-A conclusion follows.", "disposition": "UPHELD"},
+    {"axis": "TECT owner", "check": "No heat_root_incidence or canonical A1/R-192 production owner is supplied.", "disposition": "UPHELD"}
+  ],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-ENERGY-WEIGHTED-COMMUTATOR-GEVREY-LR-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-FIRST-PASSAGE-BACKBONE-REAL-TIME-PRODUCT-AND-ENERGY-TAIL-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+  ],
+  "related": [],
+  "prior_exploration_id": "EXP-001054",
+  "provenance": "contemporaneous",
+  "qft_interface": {
+    "closed": "A conditional finite-volume commuting multiplication graph bound and C^n product envelope relative to W_Lambda with C=122099/35840.",
+    "open": "Comparison with the full Q3 energy, common-core and domain closure, factorial spatial incidence, first passage, exhaustion, common alpha, KMS/OS, GNS gap, continuum, C6, Sector A and Pre-A remain open.",
+    "tect_boundary": "No heat_root_incidence or canonical A1/R-192 production owner is supplied."
+  },
+  "formal_integration": {
+    "events": [],
+    "negatives": [],
+    "results": [],
+    "no_new_negative": true,
+    "no_pdf": true
+  },
+  "next_action": "Compare W_Lambda with the canonical Q3 energy on a declared common core, record any obstruction, and then test whether the conditional product envelope survives the actual Duhamel/spatial history and factorial incidence.",
+  "reviewed_on": "2026-08-24",
+  "recorded_at": "2026-08-25T05:30:00Z",
+  "recorded_by": "Codex"
+}
