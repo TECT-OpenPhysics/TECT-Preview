@@ -1,0 +1,71 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001081",
+  "title": "Finite Q3 mixed force-momentum multiplier estimate and cutoff-scaling boundary",
+  "exploration_id": "EXP-001081",
+  "prior_exploration_id": "EXP-001080",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "provenance": "contemporaneous",
+  "recorded_at": "2026-08-26T08:00:00Z",
+  "reviewed_on": "2026-08-24",
+  "verdict": "advanced",
+  "question": "On the actual finite two-site Q3 oscillator regularization, can the mixed configuration-force/momentum product be bounded in the two-sided Gibbs seminorm by explicit multiplier and kinetic constants, and do those constants remain uniform as the oscillator cutoff grows?",
+  "decision_reason": "The finite polynomial-core identity and two-sided Hilbert-Schmidt estimate are valid with explicit u=||W_L F||, v=||partial_q(W_L F)|| and kappa=(Tr(rho p_1^2))^(1/2). Independent finite-Q3 matrix lanes confirm the estimate for n=4,6,8,10 and L=1,1.5. At fixed L=1 the unweighted multiplier norms grow across the finite oscillator sequence, so this elementary route has no demonstrated cutoff-uniform constant; the result points to the required energy-weighted/modular replacement without refuting that stronger route.",
+  "method": [
+    "Reconstruct the registered two-site Q3 onsite and quadratic/cubic bond in a truncated oscillator basis, and generate rho from the same full Hamiltonian at beta=1.",
+    "Diagonalize the commuting coordinate pair, differentiate the declared cosine cutoff through q_L, q_L' and q_L'', and form W_L, F, M_L=W_L F and partial_q M_L.",
+    "Evaluate both legs of N_(rho,#)(M_L p_1), compare them with (u*kappa)^2+(u*kappa+hbar*v)^2, and run a centered scalar finite-difference chain-rule check away from taper junctions.",
+    "Rebuild the complete matrix and cutoff calculation in an independent lane, compile Lean R263 for the rational mixed-bound and force-polynomial fixtures, and retain the QFT scope firewall."
+  ],
+  "finding": "Primary 28/28, independent 14/14, integrated 24/24 with Lean R263 PASS. At fixed radius L=1 the multiplier norms are 33.2694596066, 169.7877886140, 508.6272573111 and 1189.6099295243 for n=4,6,8,10. The finite mixed estimate is respected but its unweighted constants are not demonstrated uniform.",
+  "evidence_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-finite-mixed-force-momentum-multiplier-estimate-manifest.json#model",
+    "strategy/pre-a-cp1-st8-q3lock-finite-mixed-force-momentum-multiplier-estimate-certificate-260824.md#Finding",
+    "codes/foundations/pre_a_cp1_st8_q3lock_finite_mixed_force_momentum_multiplier_estimate.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_finite_mixed_force_momentum_multiplier_estimate_independent.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_finite_mixed_force_momentum_multiplier_estimate_verify.py#main",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-24-primary-pre-a-cp1-st8-q3lock-finite-mixed-force-momentum-multiplier-estimate/primary.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-24-primary-pre-a-cp1-st8-q3lock-finite-mixed-force-momentum-multiplier-estimate/independent.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-24-primary-pre-a-cp1-st8-q3lock-finite-mixed-force-momentum-multiplier-estimate/integrated.json#lean",
+    "verification/lean/Tect/R263.lean#mixed_bound_fixture",
+    "verification/lean/registry.json#R263"
+  ],
+  "adversarial_review": [
+    {"axis": "finite CCR", "check": "The matrix oscillator is only a declared regularization; no exact CCR or domain closure is inferred.", "disposition": "UPHELD"},
+    {"axis": "Q3 source", "check": "The bond and force are reconstructed from the registered Q3 Hamiltonian coefficients.", "disposition": "UPHELD"},
+    {"axis": "seminorm orientation", "check": "Both Gibbs legs are retained and the derivative commutator term is included.", "disposition": "UPHELD"},
+    {"axis": "chain rule", "check": "The cutoff derivative is checked analytically and by centered scalar finite differences away from junctions.", "disposition": "UPHELD"},
+    {"axis": "scaling", "check": "Finite growth is a diagnostic only; no asymptotic obstruction to energy-weighted estimates is claimed.", "disposition": "UPHELD"},
+    {"axis": "QFT promotion", "check": "OS/KMS/GNS, exhaustion, common alpha, gap, continuum, C6, Sector A and Pre-A remain open.", "disposition": "UPHELD"}
+  ],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "related": [
+    {"id": "EXP-001080", "relation": "continues"},
+    {"id": "EXP-001067", "relation": "continues"},
+    {"id": "EXP-001069", "relation": "continues"}
+  ],
+  "formal_integration": {
+    "lean": "R263 PASS; metadata pending regeneration",
+    "events": [],
+    "results": [],
+    "negatives": [],
+    "no_new_event": true,
+    "no_new_result": true,
+    "no_new_negative": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "qft_interface": {
+    "closed": "Finite actual-Q3 two-sided mixed force-momentum multiplier estimate with explicit chain rule and independent lane.",
+    "open": "Energy-weighted/modular uniformity, direct D/delta-D Cauchy, history, exhaustion, common alpha, Hamiltonian-to-OS identification, KMS/GNS gap, continuum, C6, Sector A and Pre-A remain open.",
+    "tect_boundary": "No heat_root_incidence or canonical A1/R-192 production owner is supplied."
+  },
+  "next_action": "Replace the unweighted multiplier constants by a two-sided energy-weighted or modular-domain estimate for the actual Q3 bond tail, and require a volume/source-uniform bound before entering the direct D,delta-D history gate.",
+  "boundary": "T0 claim-nonbearing finite QFT-facing mixed force-momentum checkpoint. It is not a thermodynamic, OS/KMS/GNS, mass-gap, continuum, C6, Sector-A, Pre-A, TECT production or Clay result.",
+  "no_overclaim": "This route-local result does not close the main Q3 dynamics or any Clay obligation."
+}
