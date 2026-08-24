@@ -1,0 +1,62 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-FINITE-SECOND-DUHAMEL-COEFFICIENT-SUPPORT-AUDIT-v0",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001087",
+  "claim_bearing": false,
+  "parent_explorations": ["EXP-001086", "EXP-001085", "EXP-001080", "EXP-001067"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-ENERGY-WEIGHTED-COMMUTATOR-GEVREY-LR-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "finite_fixture": {
+    "volume_values": [2, 4],
+    "oscillator_dimension": 3,
+    "observable_support": [0, 1],
+    "beta": 1.0,
+    "character_amplitude": 0.3333333333333333,
+    "radius_values": [0.5, 1.0, 2.0],
+    "c": 0.6,
+    "chi": 1.0,
+    "r": -1.0,
+    "g": 0.6,
+    "lambda": 0.1,
+    "hbar": 1.0,
+    "commutator_tolerance": 1e-8,
+    "tail_tolerance": 1e-9,
+    "agreement_tolerance": 1e-7
+  },
+  "model": {
+    "graph": "two-site target edge and four-site square face, with all bonds in each finite volume",
+    "observable": "A_2=exp(i*character_amplitude*(q_0+q_1)/hbar), supported on sites 0,1",
+    "cutoff": "replace only bond coordinates by the smooth cosine cutoff q_L; W_L=H-H_L",
+    "source_commutation": "[W_L,A_2]=0 because W_L and A_2 are configuration functions",
+    "second_coefficient": "D_sigma''(0)=-sigma/hbar^2*[W_L,[H,A_2]] for H_sigma=H+sigma W_L",
+    "modular_coefficient": "delta D_sigma''(0)=-beta*[H,D_sigma''(0)] in the finite Gibbs representation",
+    "seminorm": "||X||_(beta,#)^2=Tr(rho X*X)+Tr(rho XX*) with rho=Z^(-1)exp(-beta H)"
+  },
+  "scope": {
+    "finite_second_duhamel_coefficient_closed": true,
+    "finite_modular_second_coefficient_closed": true,
+    "source_character_commutation_closed": true,
+    "disjoint_tail_support_fixture_closed": true,
+    "coefficient_scaling_diagnostic_closed": true,
+    "volume_uniform_direct_d_cauchy_closed": false,
+    "delta_d_cauchy_closed": false,
+    "positive_time_history_closed": false,
+    "product_core_density_closed": false,
+    "exhaustion_independence_closed": false,
+    "group_law_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false
+  },
+  "no_overclaim": "This is a finite actual-Q3 second Duhamel coefficient and modular-coefficient audit. It verifies a support-local commutator identity and records finite scaling only; it does not prove a volume/source/cutoff-uniform history bound, direct D or delta-D Cauchy theorem, common dynamics, OS/KMS/GNS identification, a gap, continuum, C6, Sector A or Pre-A closure."
+}
