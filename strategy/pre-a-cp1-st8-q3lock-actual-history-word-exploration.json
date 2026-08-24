@@ -1,0 +1,57 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001038",
+  "title": "Actual finite-Q3 local Duhamel-word incidence and degree escalation",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-FIRST-PASSAGE-BACKBONE-REAL-TIME-PRODUCT-AND-ENERGY-TAIL-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "prior_exploration_id": "EXP-001037",
+  "recorded_at": "2026-08-24T18:30:00Z",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-08-24",
+  "provenance": "contemporaneous",
+  "question": "Does a concrete local word built from the canonical Q3 onsite and one spatial-bond potential have a nonzero source coefficient of degree 4m-3?",
+  "method": [
+    "Restrict the canonical onsite quartic and the three incident Q3 lock edges at species 000 with the other species set to zero, deriving G=g+3*lambda.",
+    "Form the exact shifted onsite difference and one selected spatial-bond difference from the canonical polynomial potentials.",
+    "Compute the ordered word with m-1 onsite factors and one bond factor, its m-position multiplication-word sum, and the exact source degree for m=1 through 6.",
+    "Run independent SymPy and sparse-polynomial Fraction lanes and compile Lean R220 for the rational degree and coefficient fixtures."
+  ],
+  "finding": "The selected word is an actual local polynomial word of the canonical Q3 split. Its ordered coefficient is -c*(-G/4)^(m-1)*a^(4m-3), and the m-position sum is m times this nonzero coefficient for every tested word length. The degree-five/fixed-weight escalation is therefore an actual local-word witness, not only a prescribed abstract family.",
+  "verdict": "advanced",
+  "decision_reason": "This closes the local incidence question while preserving the full-history firewall. The calculation is restricted to one species coordinate and one selected bond; it does not determine the signed complete Duhamel coefficient or a resummable source topology.",
+  "adversarial_review": [
+    {"axis": "actual incidence", "check": "Both factors are derived from the canonical Q3 lock and one spatial quadratic bond.", "disposition": "UPHELD"},
+    {"axis": "restriction", "check": "Zeroing the other species and sites makes this a local coefficient witness, not a full-volume estimate.", "disposition": "UPHELD"},
+    {"axis": "word ordering", "check": "The m factor counts multiplication-word insertion positions and is not a full operator-series sign theorem.", "disposition": "UPHELD"},
+    {"axis": "cancellation", "check": "No cancellation or noncancellation conclusion is inferred for the complete Duhamel series.", "disposition": "UPHELD"},
+    {"axis": "Lean promotion", "check": "R220 checks scalar rational fixtures only, not domains or convergence.", "disposition": "UPHELD"},
+    {"axis": "QFT promotion", "check": "No thermodynamic dynamics, KMS, GNS gap, continuum, C6, Sector A or Pre-A result is claimed.", "disposition": "UPHELD"}
+  ],
+  "evidence_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-actual-history-word-manifest.json#model",
+    "strategy/pre-a-cp1-st8-q3lock-actual-history-word-certificate-260824.md#Finding",
+    "codes/foundations/pre_a_cp1_st8_q3lock_actual_history_word.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_actual_history_word_independent.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_actual_history_word_verify.py#main",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-24-primary-pre-a-cp1-st8-q3lock-actual-history-word/primary.json#assertions",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-24-primary-pre-a-cp1-st8-q3lock-actual-history-word/independent.json#assertions",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-24-primary-pre-a-cp1-st8-q3lock-actual-history-word/integrated.json#assertions",
+    "verification/lean/Tect/R220.lean#actual_word_degree_m3",
+    "verification/lean/registry.json#entrypoints"
+  ],
+  "formal_refs": {"events": [], "negatives": [], "results": []},
+  "formal_integration": {"events": [], "negatives": [], "results": [], "no_new_result": true, "no_new_negative": true, "no_pdf": true},
+  "qft_interface": {
+    "closed": "Actual local Q3 word incidence and nonzero source-degree formula for the declared onsite-plus-one-bond word.",
+    "open": "Full Q3 history, cancellation, two-orientation resummation, all-shape exhaustion, common alpha, KMS, gap, continuum, C6, Sector A and Pre-A remain open.",
+    "tect_boundary": "No heat_root_incidence or A1/R-192 TECT production owner is supplied by this local-word package."
+  },
+  "boundary": "T0 claim-nonbearing actual local-word checkpoint. It does not prove the full Q3 dynamics, a thermodynamic QFT, C6, Sector A, Pre-A, TECT production or a Clay result.",
+  "next_action": "Insert the local word into a complete signed Duhamel expansion and prove cancellation or an entire/source-weighted resummation; otherwise record the first full-history obstruction before attempting common-alpha or QFT promotion."
+}

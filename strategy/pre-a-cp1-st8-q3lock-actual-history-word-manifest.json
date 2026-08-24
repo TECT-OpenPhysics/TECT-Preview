@@ -1,0 +1,86 @@
+{
+  "schema": "tect/pre-a-cp1-st8-q3lock-actual-history-word/1.0",
+  "exploration_id": "EXP-001038",
+  "prior_exploration_id": "EXP-001037",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "tier": "T0",
+  "claim_bearing": false,
+  "title": "Actual finite-Q3 local Duhamel-word incidence and degree escalation",
+  "question": "Does a concrete local word built from the canonical Q3 onsite and one spatial-bond potential have a nonzero source coefficient of degree 4m-3?",
+  "model": {
+    "onsite_restriction": "Set the three Q3 neighbours of species 000 to zero; the onsite plus incident-lock quartic is G*q^4/4 with G=g+3*lambda.",
+    "onsite_difference": "D_on(q,a)=G*(q^4-(q-a)^4)/4",
+    "selected_bond_difference": "D_bond(q,r,a)=c*((q-r)^2-(q-a-r)^2)/2",
+    "ordered_word": "partial_r[D_on(q,a)^(m-1)*D_bond(q,r,a)] at q=r=0",
+    "position_sum": "m times the ordered word, representing the m possible bond-insertion positions in the commuting multiplication word",
+    "degree_formula": "4m-3"
+  },
+  "fixture": {
+    "g": "3/5",
+    "lambda": "2/7",
+    "G": "51/35",
+    "spatial_coupling": "2/3",
+    "word_lengths": [1, 2, 3, 4, 5, 6]
+  },
+  "scoped_verdict": "The selected local word is an actual polynomial word of the canonical Q3 split: its ordered coefficient is -c*(-G/4)^(m-1)*a^(4m-3), and the position sum is m times this nonzero coefficient for the fixture.",
+  "open_after_test": [
+    "cancellation or reinforcement among all Duhamel words",
+    "full eight-component onsite flow and all bond orientations",
+    "factorial history resummation with a source/energy topology",
+    "volume-uniform all-shape exhaustion Cauchy and common alpha",
+    "KMS, ground/GNS gap, continuum, C6, Sector A and Pre-A"
+  ],
+  "adversarial_review": [
+    {
+      "axis": "actual-incidence",
+      "check": "The restricted onsite polynomial and selected bond are derived from the canonical Q3 lock and spatial quadratic, so the word is an actual local split word.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "restriction",
+      "check": "Setting other species and sites to zero proves a local coefficient witness only; it does not evaluate the full lattice history.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "word ordering",
+      "check": "The m-position factor is a multiplication-word combinatorial sum, not a claim that all operator orderings have the same full-series sign after dynamics.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "cancellation",
+      "check": "No cancellation theorem is inferred from a nonzero local word coefficient.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "Lean",
+      "check": "R220 checks only the rational degree and coefficient fixtures, not operator domains or history convergence.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "QFT promotion",
+      "check": "No thermodynamic dynamics, OS/KMS construction, GNS gap, continuum limit, C6 or Pre-A conclusion follows.",
+      "disposition": "UPHELD"
+    }
+  ],
+  "scope": {
+    "closed": "Exact local Q3 word incidence and nonzero source-degree formula for the declared onsite-plus-one-bond word.",
+    "not_closed": "The full Q3 history, full-series cancellation, two-orientation resummation, all-shape exhaustion, common alpha, KMS, gap, continuum, C6, Sector A and Pre-A remain open.",
+    "actual_local_word_incidence_closed": true,
+    "full_q3_dyson_history_closed": false,
+    "full_series_cancellation_closed": false,
+    "all_shape_exhaustion_closed": false,
+    "common_alpha_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "formal_integration": {
+    "lean_entry": "verification/lean/Tect/R220.lean",
+    "result_ids": [],
+    "negative_ids": [],
+    "changelog_event": null
+  },
+  "next_action": "Use this actual local word as a coefficient witness in a full signed Duhamel expansion; prove cancellation or derive an entire/source-weighted resummation before any common-alpha or QFT promotion.",
+  "no_overclaim": "This package proves an actual local polynomial word coefficient only. It does not prove that the complete Q3 series retains that coefficient after all words, nor Q3 dynamics, a thermodynamic QFT, C6, Sector A, Pre-A, TECT production or a Clay result."
+}

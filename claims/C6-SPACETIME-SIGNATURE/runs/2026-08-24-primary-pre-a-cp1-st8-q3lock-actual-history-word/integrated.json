@@ -1,0 +1,258 @@
+{
+  "assertion_count": 22,
+  "assertions": [
+    {
+      "actual": [
+        "EXP-001038",
+        "T-054"
+      ],
+      "expected": "EXP-001038/T-054",
+      "name": "identity",
+      "pass": true
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "claim nonbearing",
+      "pass": true
+    },
+    {
+      "actual": {
+        "actual_local_word_incidence_closed": true,
+        "all_shape_exhaustion_closed": false,
+        "closed": "Exact local Q3 word incidence and nonzero source-degree formula for the declared onsite-plus-one-bond word.",
+        "common_alpha_closed": false,
+        "full_q3_dyson_history_closed": false,
+        "full_series_cancellation_closed": false,
+        "no_new_negative_result": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "not_closed": "The full Q3 history, full-series cancellation, two-orientation resummation, all-shape exhaustion, common alpha, KMS, gap, continuum, C6, Sector A and Pre-A remain open."
+      },
+      "expected": true,
+      "name": "actual local-word scope",
+      "pass": true
+    },
+    {
+      "actual": {
+        "actual_local_word_incidence_closed": true,
+        "all_shape_exhaustion_closed": false,
+        "closed": "Exact local Q3 word incidence and nonzero source-degree formula for the declared onsite-plus-one-bond word.",
+        "common_alpha_closed": false,
+        "full_q3_dyson_history_closed": false,
+        "full_series_cancellation_closed": false,
+        "no_new_negative_result": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "not_closed": "The full Q3 history, full-series cancellation, two-orientation resummation, all-shape exhaustion, common alpha, KMS, gap, continuum, C6, Sector A and Pre-A remain open."
+      },
+      "expected": false,
+      "name": "full history firewall",
+      "pass": true
+    },
+    {
+      "actual": [
+        "restricted_G",
+        "actual_word_degree_m3",
+        "actual_word_leading_coefficient_m3"
+      ],
+      "expected": "present",
+      "name": "Lean source",
+      "pass": true
+    },
+    {
+      "actual": [],
+      "expected": "none",
+      "name": "Lean forbidden",
+      "pass": true
+    },
+    {
+      "actual": "PRIMARY ACTUAL-Q3-HISTORY-WORD PASS 32/32\n",
+      "expected": "PASS",
+      "name": "primary child",
+      "pass": true
+    },
+    {
+      "actual": "INDEPENDENT ACTUAL-Q3-HISTORY-WORD PASS 26/26\n",
+      "expected": "PASS",
+      "name": "independent child",
+      "pass": true
+    },
+    {
+      "actual": [
+        32,
+        26
+      ],
+      "expected": ">0",
+      "name": "positive totals",
+      "pass": true
+    },
+    {
+      "actual": [
+        3,
+        3
+      ],
+      "expected": "equal",
+      "name": "lane agreement selected_q3_degree",
+      "pass": true
+    },
+    {
+      "actual": [
+        "51/35",
+        "51/35"
+      ],
+      "expected": "equal",
+      "name": "lane agreement restricted_G",
+      "pass": true
+    },
+    {
+      "actual": [
+        true,
+        true
+      ],
+      "expected": "equal",
+      "name": "lane agreement actual_local_word_incidence_closed",
+      "pass": true
+    },
+    {
+      "actual": [
+        "4m-3",
+        "4m-3"
+      ],
+      "expected": "equal",
+      "name": "lane agreement word_degree_formula",
+      "pass": true
+    },
+    {
+      "actual": [
+        true,
+        true
+      ],
+      "expected": "equal",
+      "name": "lane agreement ordered_word_nonzero_for_fixture",
+      "pass": true
+    },
+    {
+      "actual": [
+        true,
+        true
+      ],
+      "expected": "equal",
+      "name": "lane agreement symmetrized_position_sum_closed",
+      "pass": true
+    },
+    {
+      "actual": [
+        false,
+        false
+      ],
+      "expected": "equal",
+      "name": "lane agreement full_q3_dyson_history_closed",
+      "pass": true
+    },
+    {
+      "actual": [
+        false,
+        false
+      ],
+      "expected": "equal",
+      "name": "lane agreement full_series_cancellation_closed",
+      "pass": true
+    },
+    {
+      "actual": [
+        false,
+        false
+      ],
+      "expected": "equal",
+      "name": "lane agreement all_shape_exhaustion_closed",
+      "pass": true
+    },
+    {
+      "actual": [
+        false,
+        false
+      ],
+      "expected": "equal",
+      "name": "lane agreement common_alpha_closed",
+      "pass": true
+    },
+    {
+      "actual": {
+        "actual_local_word_incidence_closed": true,
+        "all_shape_exhaustion_closed": false,
+        "common_alpha_closed": false,
+        "full_q3_dyson_history_closed": false,
+        "full_series_cancellation_closed": false,
+        "ordered_word_nonzero_for_fixture": true,
+        "restricted_G": "51/35",
+        "selected_q3_degree": 3,
+        "symmetrized_position_sum_closed": true,
+        "word_degree_formula": "4m-3"
+      },
+      "expected": true,
+      "name": "actual local word",
+      "pass": true
+    },
+    {
+      "actual": {
+        "actual_local_word_incidence_closed": true,
+        "all_shape_exhaustion_closed": false,
+        "common_alpha_closed": false,
+        "full_q3_dyson_history_closed": false,
+        "full_series_cancellation_closed": false,
+        "ordered_word_nonzero_for_fixture": true,
+        "restricted_G": "51/35",
+        "selected_q3_degree": 3,
+        "symmetrized_position_sum_closed": true,
+        "word_degree_formula": "4m-3"
+      },
+      "expected": false,
+      "name": "full history remains open",
+      "pass": true
+    },
+    {
+      "actual": {
+        "command": "lake env lean Tect/R220.lean",
+        "output": "",
+        "returncode": 0,
+        "status": "PASS"
+      },
+      "expected": "PASS",
+      "name": "Lean compile",
+      "pass": true
+    }
+  ],
+  "audit_id": "PA-CP1-ST8-Q3LOCK-ACTUAL-HISTORY-WORD",
+  "boundary": {
+    "actual_local_word_incidence_closed": true,
+    "all_shape_exhaustion_closed": false,
+    "closed": "Exact local Q3 word incidence and nonzero source-degree formula for the declared onsite-plus-one-bond word.",
+    "common_alpha_closed": false,
+    "full_q3_dyson_history_closed": false,
+    "full_series_cancellation_closed": false,
+    "no_new_negative_result": true,
+    "no_pdf": true,
+    "no_tier_change": true,
+    "not_closed": "The full Q3 history, full-series cancellation, two-orientation resummation, all-shape exhaustion, common alpha, KMS, gap, continuum, C6, Sector A and Pre-A remain open."
+  },
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "exploration_id": "EXP-001038",
+  "lean": {
+    "command": "lake env lean Tect/R220.lean",
+    "output": "",
+    "returncode": 0,
+    "status": "PASS"
+  },
+  "provenance": {
+    "independent_sha256": "0548c8adfd30fbb9fbeb931195bb304873345c31cca4aaa78f3f8aba695bde9a",
+    "lean_sha256": "dfd9181136974daa662a5c6d1d18ac0f6f8eb2685af25d49ae90d47a2e09162a",
+    "manifest_sha256": "ee89529bdada0f0fdf56d829329c576105265cd5ce8e751ab06a23cd2494bec4",
+    "primary_sha256": "71eef5e6d82cbd794add2b098b62b84e8073c76a090baaf2b579a663b9573dc2"
+  },
+  "recorded_at": "2026-08-23T23:56:06.909018Z",
+  "run_kind": "integrated",
+  "schema": "tect/foundation-audit/1.0",
+  "task_id": "T-054",
+  "verdict": "PASS"
+}
