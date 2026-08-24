@@ -1,0 +1,100 @@
+{
+  "schema": "tect/pre-a-cp1-st8-q3lock-field-window-word-majorant/1.0",
+  "exploration_id": "EXP-001040",
+  "prior_exploration_id": "EXP-001039",
+  "task_id": "T-054",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "tier": "T0",
+  "claim_bearing": false,
+  "title": "Field-window actual-Q3 multiplication-word majorant",
+  "question": "On a declared bounded field window, do the actual onsite, Q3-edge and spatial-bond potential differences admit a two-orientation entire multiplication-word envelope?",
+  "model": {
+    "onsite_difference": "g*(q^4-(q-a)^4)/4",
+    "q3_edge_difference": "lambda*((q-v)^2*(q^2+v^2)-(q-a-v)^2*((q-a)^2+v^2))/4",
+    "spatial_bond_difference": "c*((q-r)^2-(q-a-r)^2)/2",
+    "field_window": "|q|,|v|,|r|<=Q",
+    "source_radius": "|a|<=S",
+    "local_choices": "one onsite plus three Q3 edges plus six spatial bonds",
+    "word_bound": "B(Q,S)^n for length-n coefficient words; factorial EGF exp(t*B(Q,S))",
+    "coefficient_norm": "sum of absolute source coefficients times S^degree"
+  },
+  "fixture": {
+    "g": "3/5",
+    "lambda": "2/7",
+    "spatial_coupling": "2/3",
+    "field_radius": "3/2",
+    "source_radius": "1/2",
+    "time": "1/3",
+    "max_word_length": 8,
+    "grid_points_per_axis": 5,
+    "expected_onsite_bound": "105/64",
+    "expected_q3_edge_bound": "577/224",
+    "expected_spatial_bond_bound": "13/12",
+    "expected_local_rate": "7109/448",
+    "expected_weighted_rate": "7109/1344",
+    "onsite_choices": 1,
+    "q3_edge_choices": 3,
+    "spatial_bond_choices": 6,
+    "local_choice_count": 10
+  },
+  "scoped_verdict": "For fixed Q and S, the exact field-dependent source coefficient tables obey the displayed triangle bounds. Summing one onsite, three Q3-edge and six spatial-bond choices gives B(Q,S); the length-n coefficient-word envelope is B(Q,S)^n and the factorial generating envelope is exp(t*B(Q,S)). Endpoint reversal has the same bound.",
+  "adversarial_review": [
+    {
+      "axis": "field window",
+      "check": "The bound is uniform only for |field|<=Q; Q is not removed or replaced by an energy operator.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "coefficient versus operator",
+      "check": "The multiplication-word norm is a scalar polynomial coefficient norm and does not prove unbounded operator-domain control or Duhamel dynamics.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "choice count",
+      "check": "Ten is the local bounded-degree envelope; it is not a support-growth or first-passage theorem.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "orientation",
+      "check": "Reversal preserves the absolute coefficient bound but is not an adjoint-history identity.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "Q-limit",
+      "check": "B(Q,S) grows cubically in Q for fixed S, so this result cannot be promoted to a field-independent norm without a separate energy/state mechanism.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "Lean",
+      "check": "R222 checks exact rational fixture arithmetic only.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "QFT promotion",
+      "check": "No thermodynamic QFT dynamics, OS/KMS, GNS gap, continuum, C6, Sector A or Pre-A conclusion follows.",
+      "disposition": "UPHELD"
+    }
+  ],
+  "scope": {
+    "closed": "Field-window coefficient-level entire envelope for the actual local Q3 potential differences and both endpoint orientations.",
+    "field_window_word_egf_closed": true,
+    "orientation_symmetric": true,
+    "field_independent_operator_history_closed": false,
+    "all_shape_exhaustion_closed": false,
+    "common_alpha_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true,
+    "not_closed": "Energy-weighted or state-weighted removal of Q, operator commutator/Duhamel histories, spatial first-passage, exhaustion, common alpha, KMS, ground/GNS gap, continuum, C6, Sector A and Pre-A remain open."
+  },
+  "formal_integration": {
+    "lean_entry": "verification/lean/Tect/R222.lean",
+    "result_ids": [],
+    "negative_ids": [],
+    "changelog_event": null
+  },
+  "next_action": "Use the explicit Q-dependence to test a radius-loss or energy/state-weighted replacement; only a bound with Q absorbed by a declared common-core topology can enter the actual two-orientation first-passage gate.",
+  "no_overclaim": "This package proves only a bounded-field coefficient envelope. It does not prove the Q3 real-time history, thermodynamic QFT dynamics, common alpha, KMS, a GNS gap, continuum, C6, Sector A, Pre-A, TECT production or a Clay result."
+}

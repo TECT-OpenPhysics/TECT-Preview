@@ -3544,6 +3544,103 @@
       "task_id": "T-054",
       "title": "Source-only all-local-Q3 multiplication-word majorant",
       "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "axis": "field window",
+          "check": "The estimate is uniform only for |field|<=Q and does not remove Q.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "coefficient versus operator",
+          "check": "The l1 polynomial norm does not prove CCR domains, commutators or Duhamel convergence.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "choice count",
+          "check": "Ten is a local bounded-degree envelope, not spatial support growth or first-passage decay.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "orientation",
+          "check": "Absolute endpoint reversal is not an adjoint-history identity.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "Q growth",
+          "check": "B(Q,S) grows cubically in Q, so a field-independent common-core estimate is not inferred.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "Lean promotion",
+          "check": "R222 checks exact rational fixtures only.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "QFT promotion",
+          "check": "No thermodynamic QFT dynamics, OS/KMS, GNS gap, continuum, C6, Sector A or Pre-A result is claimed.",
+          "disposition": "UPHELD"
+        }
+      ],
+      "boundary": "T0 claim-nonbearing bounded-field coefficient checkpoint. It does not prove Q3 real-time dynamics, a thermodynamic QFT, common alpha, KMS, a GNS gap, continuum, C6, Sector A, Pre-A, TECT production or a Clay result.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "This extends EXP-001039 from a source-only slice to the actual field-dependent local polynomial coefficients on a declared finite field window. It deliberately leaves the window-removal and operator-history steps open.",
+      "evidence_refs": [
+        "strategy/pre-a-cp1-st8-q3lock-field-window-word-majorant-manifest.json#model",
+        "strategy/pre-a-cp1-st8-q3lock-field-window-word-majorant-certificate-260824.md#Exact coefficient envelope",
+        "codes/foundations/pre_a_cp1_st8_q3lock_field_window_word_majorant.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_field_window_word_majorant_independent.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_field_window_word_majorant_verify.py#main",
+        "verification/lean/Tect/R222.lean#field_window_rate_fixture",
+        "verification/lean/registry.json#entrypoints"
+      ],
+      "finding": "The exact field-dependent source tables obey the declared bounds. For the registered fixture B_on=105/64, B_edge=577/224, B_bond=13/12, B(Q,S)=7109/448 and tB=7109/1344. The local length-n coefficient-word envelope is B(Q,S)^n and the factorial generating envelope is exp(tB); endpoint reversal has the same bound.",
+      "formal_integration": {
+        "events": [],
+        "negatives": [],
+        "no_new_negative": true,
+        "no_new_result": true,
+        "no_pdf": true,
+        "results": []
+      },
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": []
+      },
+      "gate_ids": [
+        "PA-CP1-ST8-Q3LOCK-FIRST-PASSAGE-BACKBONE-REAL-TIME-PRODUCT-AND-ENERGY-TAIL-CLOSURE",
+        "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+        "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001040",
+      "method": [
+        "Retain the field variables in the exact shifted onsite, Q3-edge and spatial-bond potentials.",
+        "Derive the source coefficient tables and apply the field-window triangle bounds B_on, B_edge and B_bond.",
+        "Sum one onsite, three Q3 edges and six spatial bonds, then verify the length-n coefficient-word and factorial envelope.",
+        "Run independent SymPy and Fraction lanes on a rational field grid and compile Lean R222 for the exact fixture rates."
+      ],
+      "next_action": "Use the explicit O(Q^3) dependence to test a radius-loss or energy/state-weighted replacement; only after Q is absorbed by a declared common-core topology can the all-bond first-passage gate be attempted.",
+      "prior_exploration_id": "EXP-001039",
+      "provenance": "contemporaneous",
+      "qft_interface": {
+        "closed": "A field-window coefficient-level entire envelope for actual local Q3 potential differences with endpoint reversal symmetry.",
+        "open": "Energy/state-weighted window removal, operator histories, spatial first-passage, exhaustion, common alpha, KMS, gap, continuum, C6, Sector A and Pre-A remain open.",
+        "tect_boundary": "No heat_root_incidence or A1/R-192 TECT production owner is supplied."
+      },
+      "question": "On a declared bounded field window, do the actual onsite, Q3-edge and spatial-bond potential differences admit a two-orientation entire multiplication-word envelope?",
+      "recorded_at": "2026-08-24T20:30:00Z",
+      "recorded_by": "Codex",
+      "related": [],
+      "reviewed_on": "2026-08-24",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Field-window actual-Q3 multiplication-word majorant",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",
