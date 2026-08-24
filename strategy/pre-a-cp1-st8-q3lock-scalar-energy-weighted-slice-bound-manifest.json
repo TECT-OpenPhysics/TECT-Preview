@@ -1,0 +1,100 @@
+{
+  "schema": "tect/pre-a-cp1-st8-q3lock-scalar-energy-weighted-slice-bound/1.0",
+  "exploration_id": "EXP-001053",
+  "prior_exploration_id": "EXP-001052",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "tier": "T0",
+  "claim_bearing": false,
+  "title": "Scalar energy-weighted Q3 slice bound",
+  "question": "Does the candidate energy A(q)=1+q^4 absorb the cubic growth of the actual Q3 slice with an exact finite coefficient majorant?",
+  "upstream_input": {
+    "growth_manifest": "strategy/pre-a-cp1-st8-q3lock-unbounded-multiplication-norm-boundary-manifest.json",
+    "growth_exploration": "EXP-001052",
+    "slice": "v=0, a=1/4",
+    "source_polynomial": "P=onsite(q,a)+3*edge_u(q,v,a)+6*bond_u(q,v,a)"
+  },
+  "weighted_target": {
+    "energy": "A(q)=1+q^4",
+    "exponent": "3/4",
+    "majorant": "C=|51/140|+|153/1120|+|2291/2240|+|4531/35840|=59139/35840",
+    "inequality": "|P_0(q)| <= C A(q)^(3/4) for every real q",
+    "reason": "For k=0,1,2,3, |q|^k <= (1+q^4)^(3/4); apply the coefficient triangle inequality."
+  },
+  "finite_fixture": {
+    "q_values": ["0", "1", "2", "4", "8", "32"],
+    "check_role": "exact sample evaluations plus coefficient-majorant arithmetic; samples do not replace the all-real inequality"
+  },
+  "scope": {
+    "slice_polynomial_reconstructed": true,
+    "scalar_energy_weighted_majorant_closed": true,
+    "actual_q3_common_core_map_proved": false,
+    "operator_domain_closure_proved": false,
+    "multivariate_weighted_bound_proved": false,
+    "factorial_incidence_supplied": false,
+    "actual_q3_history_closed": false,
+    "common_alpha_closed": false,
+    "kms_os_closed": false,
+    "gns_gap_closed": false,
+    "continuum_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true,
+    "not_closed": "Only the scalar polynomial slice has an energy-weighted coefficient majorant. No operator, common-core, multivariate, spatial-history, or thermodynamic QFT theorem follows."
+  },
+  "adversarial_review": [
+    {
+      "axis": "all-real versus samples",
+      "check": "The all-real scalar inequality is attributed to the coefficient triangle and the elementary |q|^k <= A^(3/4) inequalities; finite samples are only self-tests.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "slice scope",
+      "check": "v=0 and a=1/4 are fixed declared slice values; no multivariate Q3 estimate is silently inferred.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "operator promotion",
+      "check": "The scalar majorant is not called a common-core operator bound or domain theorem.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "weight provenance",
+      "check": "A(q)=1+q^4 is the explicit candidate matching the cubic asymptotic; it is not declared to be the canonical full Hamiltonian.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "constant derivation",
+      "check": "C is recomputed from the exact slice coefficients in both arithmetic lanes; it is not hardcoded as an unexplained rate.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "Lean",
+      "check": "R235 checks the exact coefficient-majorant identity and positivity, not real-power operator domains.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "QFT promotion",
+      "check": "No KMS/OS, GNS gap, continuum, C6, Sector A or Pre-A conclusion follows.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "TECT owner",
+      "check": "No heat_root_incidence or canonical A1/R-192 production owner is supplied.",
+      "disposition": "UPHELD"
+    }
+  ],
+  "formal_integration": {
+    "lean_entry": "verification/lean/Tect/R235.lean",
+    "result_ids": [],
+    "negative_ids": [],
+    "changelog_event": null
+  },
+  "qft_interface": {
+    "closed": "A scalar, exact energy-weighted coefficient majorant that matches the cubic Q3 slice growth.",
+    "open": "The actual Q3 common-core map, domain invariance, multivariate energy estimate, factorial spatial incidence, first passage, exhaustion, common alpha, KMS/OS, GNS gap, continuum, C6, Sector A and Pre-A remain open.",
+    "tect_boundary": "No heat_root_incidence or canonical A1/R-192 production owner is supplied."
+  },
+  "boundary": "T0 claim-nonbearing scalar weighted interface. It selects a plausible QFT seminorm target but does not establish the full Q3 dynamics.",
+  "next_action": "Lift the scalar coefficient majorant to the multivariate Q3 source on a common energy domain and test whether the resulting weighted product carries the factorial spatial incidence."
+}

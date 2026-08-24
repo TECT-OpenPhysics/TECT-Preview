@@ -1,0 +1,64 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001053",
+  "title": "Scalar energy-weighted Q3 slice bound",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "question": "Does the candidate energy A(q)=1+q^4 absorb the cubic growth of the actual Q3 slice with an exact finite coefficient majorant?",
+  "method": [
+    "Reconstruct the EXP-001052 source slice v=0, a=1/4 in primary SymPy and independent Fraction arithmetic.",
+    "Compute the exact coefficient triangle C=59139/35840 and verify the all-real power-majorant conditions for degrees 0 through 3, with exact fourth-power sample self-tests at q=0,1,2,4,8,32.",
+    "Compile Lean R235 for the coefficient-majorant identity, positivity, exponent and degree fixtures while preserving the scalar-only scope firewall."
+  ],
+  "finding": "For P_0(q)=(51/140)q^3-(153/1120)q^2+(2291/2240)q-4531/35840 and A(q)=1+q^4, the coefficient triangle gives the exact all-real scalar bound |P_0(q)| <= (59139/35840) A(q)^(3/4). Both arithmetic lanes and Lean R235 reproduce the constant and exact sample inequalities. This is a scalar weighted interface only.",
+  "decision_reason": "This is the first positive follow-up to the EXP-001052 ordinary-norm boundary: the candidate energy weight matches the cubic source growth at an exact scalar level. It selects a plausible QFT domain seminorm without silently promoting it to the multivariate Q3 operator or history theorem.",
+  "verdict": "advanced",
+  "boundary": "T0 claim-nonbearing scalar weighted interface. It does not establish the actual Q3 common core, operator domain closure, multivariate source estimate, factorial incidence, or thermodynamic QFT.",
+  "evidence_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-scalar-energy-weighted-slice-bound-manifest.json#weighted_target",
+    "strategy/pre-a-cp1-st8-q3lock-scalar-energy-weighted-slice-bound-certificate-260824.md#Exact scalar estimate",
+    "codes/foundations/pre_a_cp1_st8_q3lock_scalar_energy_weighted_slice_bound.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_scalar_energy_weighted_slice_bound_independent.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_scalar_energy_weighted_slice_bound_verify.py#main",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-primary-pre-a-cp1-st8-q3lock-scalar-energy-weighted-slice-bound/primary.json#assertions",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-primary-pre-a-cp1-st8-q3lock-scalar-energy-weighted-slice-bound/independent.json#assertions",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-primary-pre-a-cp1-st8-q3lock-scalar-energy-weighted-slice-bound/integrated.json#assertions",
+    "verification/lean/Tect/R235.lean#coefficient_majorant_fixture",
+    "verification/lean/registry.json#entrypoints"
+  ],
+  "adversarial_review": [
+    {"axis": "all-real versus samples", "check": "The all-real inequality is carried by the coefficient triangle and |q|^k<=A^(3/4); samples are self-tests only.", "disposition": "UPHELD"},
+    {"axis": "slice scope", "check": "The result is restricted to v=0 and a=1/4; no multivariate source estimate is inferred.", "disposition": "UPHELD"},
+    {"axis": "operator promotion", "check": "The scalar majorant is not promoted to a common-core operator/domain theorem.", "disposition": "UPHELD"},
+    {"axis": "weight provenance", "check": "A(q)=1+q^4 is an explicit matching target, not the canonical full Hamiltonian by declaration.", "disposition": "UPHELD"},
+    {"axis": "constant derivation", "check": "C is recomputed from exact slice coefficients in both arithmetic lanes.", "disposition": "UPHELD"},
+    {"axis": "Lean", "check": "R235 checks exact coefficient arithmetic and scope markers, not real-power domains.", "disposition": "UPHELD"},
+    {"axis": "QFT promotion", "check": "No KMS/OS, GNS gap, continuum, C6, Sector A or Pre-A conclusion follows.", "disposition": "UPHELD"},
+    {"axis": "TECT owner", "check": "No heat_root_incidence or A1/R-192 production owner is supplied.", "disposition": "UPHELD"}
+  ],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-ENERGY-WEIGHTED-COMMUTATOR-GEVREY-LR-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-FIRST-PASSAGE-BACKBONE-REAL-TIME-PRODUCT-AND-ENERGY-TAIL-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+  ],
+  "related": [],
+  "prior_exploration_id": "EXP-001052",
+  "provenance": "contemporaneous",
+  "qft_interface": {
+    "closed": "An exact scalar energy-weighted coefficient majorant matching the cubic Q3 slice growth.",
+    "open": "The actual common-core map, operator domain invariance, multivariate weighted estimate, factorial incidence, first passage, exhaustion, common alpha, KMS/OS, GNS gap, continuum, C6, Sector A and Pre-A remain open.",
+    "tect_boundary": "No heat_root_incidence or canonical A1/R-192 production owner is supplied."
+  },
+  "formal_integration": {
+    "events": [],
+    "negatives": [],
+    "results": [],
+    "no_new_negative": true,
+    "no_pdf": true
+  },
+  "next_action": "Lift the scalar coefficient majorant to the multivariate Q3 source on a declared common energy domain and test whether the resulting weighted product carries the factorial spatial incidence.",
+  "reviewed_on": "2026-08-24",
+  "recorded_at": "2026-08-25T04:30:00Z",
+  "recorded_by": "Codex"
+}

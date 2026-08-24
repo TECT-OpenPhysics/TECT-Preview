@@ -1,0 +1,271 @@
+{
+  "assertions": [
+    {
+      "actual": [
+        "EXP-001053",
+        "T-054"
+      ],
+      "expected": "EXP-001053/T-054",
+      "group": "provenance",
+      "name": "identity",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "EXP-001052",
+        "EXP-001052"
+      ],
+      "expected": "EXP-001052",
+      "group": "provenance",
+      "name": "upstream identity",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "claim nonbearing",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "energy": "A(q)=1+q^4",
+        "exponent": "3/4",
+        "inequality": "|P_0(q)| <= C A(q)^(3/4) for every real q",
+        "majorant": "C=|51/140|+|153/1120|+|2291/2240|+|4531/35840|=59139/35840",
+        "reason": "For k=0,1,2,3, |q|^k <= (1+q^4)^(3/4); apply the coefficient triangle inequality."
+      },
+      "expected": "A(q), 3/4",
+      "group": "model",
+      "name": "weighted target",
+      "status": "PASS"
+    },
+    {
+      "actual": "51*q**3/140 - 153*q**2/1120 + 2291*q/2240 - 4531/35840",
+      "expected": "51*q**3/140 - 153*q**2/1120 + 2291*q/2240 - 4531/35840",
+      "group": "slice",
+      "name": "slice expression",
+      "status": "PASS"
+    },
+    {
+      "actual": 3,
+      "expected": "<=3",
+      "group": "slice",
+      "name": "slice degree at most three",
+      "status": "PASS"
+    },
+    {
+      "actual": "59139/35840",
+      "expected": "59139/35840",
+      "group": "weight",
+      "name": "coefficient majorant",
+      "status": "PASS"
+    },
+    {
+      "actual": "59139/35840",
+      "expected": ">0",
+      "group": "weight",
+      "name": "majorant positive",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "expected": "0..3",
+      "group": "weight",
+      "name": "power range",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "421479298661521/1649954636431360000",
+        "12231955896585385041/1649954636431360000"
+      ],
+      "expected": "left<=right",
+      "group": "weight",
+      "name": "weighted sample q=0",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "1755097689601/1099511627776",
+        "12231955896585385041/206244329553920000"
+      ],
+      "expected": "left<=right",
+      "group": "weight",
+      "name": "weighted sample q=1",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "891648554288216481/2639927418290176",
+        "60095599319923996706433/1649954636431360000"
+      ],
+      "expected": "left<=right",
+      "group": "weight",
+      "name": "weighted sample q=2",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "654180465575560355586961/1649954636431360000",
+        "207632472938487000819263313/1649954636431360000"
+      ],
+      "expected": "left<=right",
+      "group": "weight",
+      "name": "weighted sample q=4",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "1311101991098510932161/1099511627776",
+        "841189413488221862302226752593/1649954636431360000"
+      ],
+      "expected": "left<=right",
+      "group": "weight",
+      "name": "weighted sample q=8",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "51698356532970627668537755296801/2639927418290176",
+        "14102525344147510667202320753517622353/1649954636431360000"
+      ],
+      "expected": "left<=right",
+      "group": "weight",
+      "name": "weighted sample q=32",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "actual_q3_common_core_map_proved": false,
+        "actual_q3_history_closed": false,
+        "common_alpha_closed": false,
+        "continuum_closed": false,
+        "factorial_incidence_supplied": false,
+        "gns_gap_closed": false,
+        "kms_os_closed": false,
+        "multivariate_weighted_bound_proved": false,
+        "no_new_negative_result": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "not_closed": "Only the scalar polynomial slice has an energy-weighted coefficient majorant. No operator, common-core, multivariate, spatial-history, or thermodynamic QFT theorem follows.",
+        "operator_domain_closure_proved": false,
+        "scalar_energy_weighted_majorant_closed": true,
+        "slice_polynomial_reconstructed": true
+      },
+      "expected": "scalar-only/open",
+      "group": "scope",
+      "name": "scalar weighted majorant declared",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "actual_q3_common_core_map_proved": false,
+        "actual_q3_history_closed": false,
+        "common_alpha_closed": false,
+        "continuum_closed": false,
+        "factorial_incidence_supplied": false,
+        "gns_gap_closed": false,
+        "kms_os_closed": false,
+        "multivariate_weighted_bound_proved": false,
+        "no_new_negative_result": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "not_closed": "Only the scalar polynomial slice has an energy-weighted coefficient majorant. No operator, common-core, multivariate, spatial-history, or thermodynamic QFT theorem follows.",
+        "operator_domain_closure_proved": false,
+        "scalar_energy_weighted_majorant_closed": true,
+        "slice_polynomial_reconstructed": true
+      },
+      "expected": "conditional/open",
+      "group": "scope",
+      "name": "QFT scope",
+      "status": "PASS"
+    }
+  ],
+  "boundary": "T0 claim-nonbearing scalar weighted interface. It selects a plausible QFT seminorm target but does not establish the full Q3 dynamics.",
+  "derived": {
+    "actual_q3_common_core_map_proved": false,
+    "actual_q3_history_closed": false,
+    "coefficient_majorant_C": "59139/35840",
+    "common_alpha_closed": false,
+    "energy_exponent": "3/4",
+    "factorial_incidence_supplied": false,
+    "multivariate_weighted_bound_proved": false,
+    "operator_domain_closure_proved": false,
+    "sample_count": 6,
+    "scalar_energy_weighted_majorant_closed": true,
+    "slice_coefficients": [
+      "-4531/35840",
+      "2291/2240",
+      "-153/1120",
+      "51/140"
+    ],
+    "slice_degree": 3,
+    "slice_expression": "51*q**3/140 - 153*q**2/1120 + 2291*q/2240 - 4531/35840"
+  },
+  "exploration_id": "EXP-001053",
+  "failed": 0,
+  "passed": 17,
+  "provenance": {
+    "fixture_manifest_sha256": "67e064ce6248824c9071ebaac22c939bc8fc787132e214524da633b1c8526894",
+    "growth_manifest_sha256": "010f4ce1ff8e4e04f02679596994c234e136a9d3ecaaa7bd0cb3965cf4b78536",
+    "manifest": "strategy/pre-a-cp1-st8-q3lock-scalar-energy-weighted-slice-bound-manifest.json",
+    "manifest_sha256": "c8db736589d4d9e23817f059c03c6cc8ccf28ea190fb57b44f51c7980dac8274",
+    "script": "codes/foundations/pre_a_cp1_st8_q3lock_scalar_energy_weighted_slice_bound.py",
+    "script_sha256": "3a064a4a5a6bf323d19d64870ffc87cddd89411c716b8f16f5593507764b2bc8",
+    "upstream_manifest_sha256": "010f4ce1ff8e4e04f02679596994c234e136a9d3ecaaa7bd0cb3965cf4b78536"
+  },
+  "run_kind": "primary",
+  "sample_rows": [
+    {
+      "energy": "1",
+      "fourth_left": "421479298661521/1649954636431360000",
+      "fourth_right": "12231955896585385041/1649954636431360000",
+      "q": "0",
+      "value": "-4531/35840"
+    },
+    {
+      "energy": "2",
+      "fourth_left": "1755097689601/1099511627776",
+      "fourth_right": "12231955896585385041/206244329553920000",
+      "q": "1",
+      "value": "1151/1024"
+    },
+    {
+      "energy": "17",
+      "fourth_left": "891648554288216481/2639927418290176",
+      "fourth_right": "60095599319923996706433/1649954636431360000",
+      "q": "2",
+      "value": "30729/7168"
+    },
+    {
+      "energy": "257",
+      "fourth_left": "654180465575560355586961/1649954636431360000",
+      "fourth_right": "207632472938487000819263313/1649954636431360000",
+      "q": "4",
+      "value": "899341/35840"
+    },
+    {
+      "energy": "4097",
+      "fourth_left": "1311101991098510932161/1099511627776",
+      "fourth_right": "841189413488221862302226752593/1649954636431360000",
+      "q": "8",
+      "value": "190287/1024"
+    },
+    {
+      "energy": "1048577",
+      "fourth_left": "51698356532970627668537755296801/2639927418290176",
+      "fourth_right": "14102525344147510667202320753517622353/1649954636431360000",
+      "q": "32",
+      "value": "84794793/7168"
+    }
+  ],
+  "schema": "tect/foundation-audit/1.0",
+  "total": 17,
+  "verdict": "PASS"
+}
