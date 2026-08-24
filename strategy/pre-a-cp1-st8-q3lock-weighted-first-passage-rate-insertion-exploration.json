@@ -1,0 +1,60 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001046",
+  "title": "Conditional insertion of the Q3 weighted mixed rate into a first-passage Poisson bridge",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-FIRST-PASSAGE-BACKBONE-REAL-TIME-PRODUCT-AND-ENERGY-TAIL-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "prior_exploration_id": "EXP-001045",
+  "recorded_at": "2026-08-25T00:45:00Z",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-08-24",
+  "provenance": "contemporaneous",
+  "question": "If the exact-Q3 response has a factorial first-passage expansion, what spatial decay exponent follows when the EXP-001045 weighted mixed local rate, six-neighbour degree, and two orientations are inserted?",
+  "method": [
+    "Recompute B from the EXP-001045 onsite, edge and bond exact rate fixture.",
+    "Multiply B by the declared orientation count, six-neighbour path count, spatial tilt base and time to obtain the exact exponent E.",
+    "Apply the distance factor base^(-d) and compare the finite order-32 Poisson partial sum with exp(E) in two exact lanes.",
+    "Compile Lean R228 for B, E, the distance factor and the finite arithmetic fixture.",
+    "Keep the factorial first-passage expansion explicitly as an unresolved hypothesis."
+  ],
+  "finding": "Under the declared factorial first-passage hypothesis, the EXP-001045 rate B=1382807/7168 gives E=4148421/896000 for two orientations, degree six, base two, and t=1/1000. At distance ten the conditional envelope is 2^(-10) exp(E), and the finite order-32 partial sum is below exp(E).",
+  "verdict": "advanced",
+  "decision_reason": "This is a parameterized insertion of an actual Q3 weighted mixed rate into the existing first-passage bridge. It does not discharge the factorial response hypothesis, so the main Q3 history/common-alpha gate remains open.",
+  "adversarial_review": [
+    {"axis": "rate provenance", "check": "B is recomputed from EXP-001045 rather than pasted.", "disposition": "UPHELD"},
+    {"axis": "orientation count", "check": "The factor two is explicit and separate from degree six.", "disposition": "UPHELD"},
+    {"axis": "path count", "check": "The six-neighbour path count is conditional graph combinatorics.", "disposition": "UPHELD"},
+    {"axis": "exponential promotion", "check": "Finite partial sums do not prove an infinite operator history.", "disposition": "UPHELD"},
+    {"axis": "spatial tilt", "check": "The distance factor remains explicit.", "disposition": "UPHELD"},
+    {"axis": "Lean", "check": "R228 checks exact fixtures only.", "disposition": "UPHELD"},
+    {"axis": "QFT promotion", "check": "No thermodynamic QFT, KMS/OS, GNS gap, continuum, C6, Sector A or Pre-A result follows.", "disposition": "UPHELD"}
+  ],
+  "evidence_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-weighted-first-passage-rate-insertion-manifest.json#bridge",
+    "strategy/pre-a-cp1-st8-q3lock-first-passage-poisson-bridge-manifest.json#bridge",
+    "strategy/pre-a-cp1-st8-q3lock-weighted-first-passage-rate-insertion-certificate-260824.md#Conditional response input",
+    "codes/foundations/pre_a_cp1_st8_q3lock_weighted_first_passage_rate_insertion.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_weighted_first_passage_rate_insertion_independent.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_weighted_first_passage_rate_insertion_verify.py#main",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-24-primary-pre-a-cp1-st8-q3lock-weighted-first-passage-rate-insertion/primary.json#assertions",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-24-primary-pre-a-cp1-st8-q3lock-weighted-first-passage-rate-insertion/independent.json#assertions",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-24-primary-pre-a-cp1-st8-q3lock-weighted-first-passage-rate-insertion/integrated.json#assertions",
+    "verification/lean/Tect/R228.lean#weighted_exponent_fixture",
+    "verification/lean/registry.json#entrypoints"
+  ],
+  "formal_refs": {"events": [], "negatives": [], "results": []},
+  "formal_integration": {"events": [], "negatives": [], "results": [], "no_new_result": true, "no_new_negative": true, "no_pdf": true},
+  "qft_interface": {
+    "closed": "Conditional exact insertion of the actual weighted Q3 mixed rate into a factorial first-passage decay envelope.",
+    "open": "The actual factorial expansion/recurrence, exhaustion, common alpha, KMS, GNS gap, continuum, C6, Sector A and Pre-A remain open.",
+    "tect_boundary": "No heat_root_incidence or A1/R-192 production owner is supplied."
+  },
+  "boundary": "T0 claim-nonbearing conditional rate insertion only; no actual Q3 locality or thermodynamic QFT conclusion is claimed.",
+  "next_action": "Prove the factorial first-passage expansion for the actual Q3 commutator/Duhamel history with the lifted weighted rate, rather than assuming it."
+}

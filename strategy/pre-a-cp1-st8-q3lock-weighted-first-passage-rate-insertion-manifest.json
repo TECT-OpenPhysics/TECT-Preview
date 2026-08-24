@@ -1,0 +1,100 @@
+{
+  "schema": "tect/pre-a-cp1-st8-q3lock-weighted-first-passage-rate-insertion/1.0",
+  "exploration_id": "EXP-001046",
+  "prior_exploration_id": "EXP-001045",
+  "task_id": "T-054",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "claim_bearing": false,
+  "tier": "T0",
+  "title": "Conditional insertion of the Q3 weighted mixed rate into a first-passage Poisson bridge",
+  "question": "If the exact-Q3 response has a factorial first-passage expansion, what spatial decay exponent follows when the EXP-001045 weighted mixed local rate, six-neighbour degree, and two orientations are inserted?",
+  "prior_inputs": {
+    "weighted_mixed_rate": "EXP-001045 local rate B=one onsite+three Q3 edges+six spatial bonds under the R-167 conditional graph lift",
+    "factorial_response_hypothesis": "R_x(t)<=sum_n (B*t)^n/n! sum_{paths length n from X to x} with both orientations multiplied by 2",
+    "graph_degree": "z=6",
+    "spatial_tilt": "base=2, so every length-n path receives at most base^n and a point at distance d pays base^(-d)"
+  },
+  "bridge": {
+    "weighted_exponent": "E=orientation_count*B*z*base*|t|",
+    "decay": "R_x(t)<=base^(-d(x,X))*exp(E)*R_X(0)",
+    "finite_truncation": "The stored finite partial sum is checked below the full exponential envelope; no infinite operator series is asserted"
+  },
+  "fixture": {
+    "B": "1382807/7168",
+    "orientation_count": "2",
+    "degree": "6",
+    "base": "2",
+    "time": "1/1000",
+    "distance": "10",
+    "truncation_order": "32",
+    "source_mass": "1",
+    "expected_exponent": "4148421/896000",
+    "expected_distance_factor": "1/1024",
+    "source_radius": "1/4"
+  },
+  "scope": {
+    "rate_insertion_closed_conditionally": true,
+    "finite_poisson_arithmetic_closed": true,
+    "factorial_first_passage_expansion_supplied": false,
+    "actual_q3_recurrence_closed": false,
+    "boundary_commutator_decay_closed": false,
+    "all_shape_exhaustion_closed": false,
+    "common_alpha_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true,
+    "not_closed": "The factorial first-passage response expansion, actual Q3 recurrence, operator history composition, exhaustion Cauchy, common alpha, KMS/OS reconstruction, GNS gap, continuum, C6, Sector A and Pre-A remain open."
+  },
+  "adversarial_review": [
+    {
+      "axis": "rate provenance",
+      "check": "B is recomputed from the EXP-001045 onsite/edge/bond rate fixture, not pasted as an unexplained constant.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "factor two",
+      "check": "The orientation factor is explicitly declared and is not confused with the six-neighbour degree.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "path count",
+      "check": "The z^n path envelope is conditional graph combinatorics; it is not the exact Q3 history coefficient.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "exponential promotion",
+      "check": "Finite partial sums are checked against exp(E); no infinite operator series or generator convergence is inferred.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "spatial tilt",
+      "check": "The base^(-d) distance factor is retained, and no unweighted moving-site estimate is claimed.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "Lean",
+      "check": "R228 checks the exact rational B, E, distance factor and finite partial-sum fixture only.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "QFT promotion",
+      "check": "No thermodynamic dynamics, OS/KMS, GNS gap, continuum, C6, Sector A or Pre-A result follows.",
+      "disposition": "UPHELD"
+    }
+  ],
+  "formal_integration": {
+    "lean_entry": "verification/lean/Tect/R228.lean",
+    "result_ids": [],
+    "negative_ids": [],
+    "changelog_event": null
+  },
+  "qft_interface": {
+    "closed": "Conditional numerical insertion of the actual weighted mixed Q3 local rate into the standard factorial first-passage bridge.",
+    "open": "The exact Q3 factorial expansion and recurrence remain the main dynamical gate; all thermodynamic/QFT downstream gates remain open.",
+    "tect_boundary": "No heat_root_incidence or canonical A1/R-192 production owner is supplied."
+  },
+  "boundary": "T0 claim-nonbearing conditional first-passage rate insertion. It is not a Q3 locality theorem or a thermodynamic QFT result.",
+  "next_action": "Derive the factorial first-passage expansion for the actual Q3 commutator/Duhamel history, with the EXP-001045 weighted rate and spatial cost, rather than assuming it."
+}
