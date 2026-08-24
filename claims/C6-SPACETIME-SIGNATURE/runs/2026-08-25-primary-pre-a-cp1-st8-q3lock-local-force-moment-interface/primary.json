@@ -1,0 +1,1351 @@
+{
+  "assertions": [
+    {
+      "actual": [
+        "EXP-001059",
+        "T-054"
+      ],
+      "expected": "EXP-001059/T-054",
+      "group": "provenance",
+      "name": "identity",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "claim nonbearing",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "conditional_l4": "||partial_q B||_{L4(phi_Lambda)} <= C*max(1,8/g)^(3/4)*M_beta,local^(1/4)",
+        "conditional_moment": "sup_{Lambda,x~y} phi_Lambda(E_pair(q_x,q_y)^3) <= M_beta,local",
+        "conditional_second_coefficient": "||delta_boundary^2(W_a)||_{L4(phi_Lambda)} <= |a|/(hbar*chi) times the local force bound",
+        "endpoint_energy": "e(q)=r*q^2/2+g*q^4/4+r^2/(2*g)>=0",
+        "force_input": "|partial_q B|^4 <= C^4*(1+q^4+v^4)^3 with C=122099/35840 on the registered force grid",
+        "global_weight_link": "1+q^4+v^4 <= 1+(8/g)*(e(q)+e(v))",
+        "local_force_bound": "|partial_q B|^4 <= C^4*max(1,8/g)^3*E_pair(q,v)^3",
+        "pair_energy": "E_pair(q,v)=1+e(q)+e(v)"
+      },
+      "expected": "explicit local moment input",
+      "group": "model",
+      "name": "conditional declaration",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "3/5",
+        "1",
+        "1",
+        "1",
+        "1/10",
+        "-9/2",
+        "1/4"
+      ],
+      "expected": "g,chi,hbar>0; c,lambda>=0; r<0; a!=0",
+      "group": "parameters",
+      "name": "positive parameters",
+      "status": "PASS"
+    },
+    {
+      "actual": "3*(2*q**4 - 30*q**2 + 225)/40",
+      "expected": "nonnegative completed square",
+      "group": "algebra",
+      "name": "endpoint energy nonnegative",
+      "status": "PASS"
+    },
+    {
+      "actual": "(q**2 - 15)**2",
+      "expected": "square",
+      "group": "algebra",
+      "name": "endpoint quartic ratio",
+      "status": "PASS"
+    },
+    {
+      "actual": "q**4 - 30*q**2 + v**4 - 30*v**2 + 450",
+      "expected": "sum of squares",
+      "group": "algebra",
+      "name": "pair weight ratio",
+      "status": "PASS"
+    },
+    {
+      "actual": "(q - v)*(2*q**2 - q*v + v**2 + 20)/20",
+      "expected": "q - v + (q/10 - v/10)*(2*q**2 - q*v + v**2)/2",
+      "group": "force",
+      "name": "force identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "40/3",
+      "expected": "40/3",
+      "group": "derived",
+      "name": "weight ratio",
+      "status": "PASS"
+    },
+    {
+      "actual": "135/8",
+      "expected": "135/8",
+      "group": "derived",
+      "name": "energy shift",
+      "status": "PASS"
+    },
+    {
+      "actual": "222253407550105971601/696074612244480",
+      "expected": "C^4*max(1,8/g)^3",
+      "group": "derived",
+      "name": "local prefactor formula",
+      "status": "PASS"
+    },
+    {
+      "actual": "122099*750**(1/4)/107520",
+      "expected": "|a|/(hbar*chi)*C*max(1,8/g)^(3/4)",
+      "group": "conditional",
+      "name": "conditional coefficient formula",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": "global fourth-power bound",
+      "group": "grid",
+      "name": "global force bound -2,-2",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": "local fourth-power bound",
+      "group": "grid",
+      "name": "local force bound -2,-2",
+      "status": "PASS"
+    },
+    {
+      "actual": "431/20",
+      "expected": ">=1",
+      "group": "grid",
+      "name": "pair energy nonnegative -2,-2",
+      "status": "PASS"
+    },
+    {
+      "actual": "-27/20",
+      "expected": "global fourth-power bound",
+      "group": "grid",
+      "name": "global force bound -2,-1",
+      "status": "PASS"
+    },
+    {
+      "actual": "-27/20",
+      "expected": "local fourth-power bound",
+      "group": "grid",
+      "name": "local force bound -2,-1",
+      "status": "PASS"
+    },
+    {
+      "actual": "521/20",
+      "expected": ">=1",
+      "group": "grid",
+      "name": "pair energy nonnegative -2,-1",
+      "status": "PASS"
+    },
+    {
+      "actual": "-14/5",
+      "expected": "global fourth-power bound",
+      "group": "grid",
+      "name": "global force bound -2,0",
+      "status": "PASS"
+    },
+    {
+      "actual": "-14/5",
+      "expected": "local fourth-power bound",
+      "group": "grid",
+      "name": "local force bound -2,0",
+      "status": "PASS"
+    },
+    {
+      "actual": "563/20",
+      "expected": ">=1",
+      "group": "grid",
+      "name": "pair energy nonnegative -2,0",
+      "status": "PASS"
+    },
+    {
+      "actual": "-93/20",
+      "expected": "global fourth-power bound",
+      "group": "grid",
+      "name": "global force bound -2,1",
+      "status": "PASS"
+    },
+    {
+      "actual": "-93/20",
+      "expected": "local fourth-power bound",
+      "group": "grid",
+      "name": "local force bound -2,1",
+      "status": "PASS"
+    },
+    {
+      "actual": "521/20",
+      "expected": ">=1",
+      "group": "grid",
+      "name": "pair energy nonnegative -2,1",
+      "status": "PASS"
+    },
+    {
+      "actual": "-36/5",
+      "expected": "global fourth-power bound",
+      "group": "grid",
+      "name": "global force bound -2,2",
+      "status": "PASS"
+    },
+    {
+      "actual": "-36/5",
+      "expected": "local fourth-power bound",
+      "group": "grid",
+      "name": "local force bound -2,2",
+      "status": "PASS"
+    },
+    {
+      "actual": "431/20",
+      "expected": ">=1",
+      "group": "grid",
+      "name": "pair energy nonnegative -2,2",
+      "status": "PASS"
+    },
+    {
+      "actual": "-43/4",
+      "expected": "global fourth-power bound",
+      "group": "grid",
+      "name": "global force bound -2,3",
+      "status": "PASS"
+    },
+    {
+      "actual": "-43/4",
+      "expected": "local fourth-power bound",
+      "group": "grid",
+      "name": "local force bound -2,3",
+      "status": "PASS"
+    },
+    {
+      "actual": "401/20",
+      "expected": ">=1",
+      "group": "grid",
+      "name": "pair energy nonnegative -2,3",
+      "status": "PASS"
+    },
+    {
+      "actual": "6/5",
+      "expected": "global fourth-power bound",
+      "group": "grid",
+      "name": "global force bound -1,-2",
+      "status": "PASS"
+    },
+    {
+      "actual": "6/5",
+      "expected": "local fourth-power bound",
+      "group": "grid",
+      "name": "local force bound -1,-2",
+      "status": "PASS"
+    },
+    {
+      "actual": "521/20",
+      "expected": ">=1",
+      "group": "grid",
+      "name": "pair energy nonnegative -1,-2",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": "global fourth-power bound",
+      "group": "grid",
+      "name": "global force bound -1,-1",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": "local fourth-power bound",
+      "group": "grid",
+      "name": "local force bound -1,-1",
+      "status": "PASS"
+    },
+    {
+      "actual": "611/20",
+      "expected": ">=1",
+      "group": "grid",
+      "name": "pair energy nonnegative -1,-1",
+      "status": "PASS"
+    },
+    {
+      "actual": "-11/10",
+      "expected": "global fourth-power bound",
+      "group": "grid",
+      "name": "global force bound -1,0",
+      "status": "PASS"
+    },
+    {
+      "actual": "-11/10",
+      "expected": "local fourth-power bound",
+      "group": "grid",
+      "name": "local force bound -1,0",
+      "status": "PASS"
+    },
+    {
+      "actual": "653/20",
+      "expected": ">=1",
+      "group": "grid",
+      "name": "pair energy nonnegative -1,0",
+      "status": "PASS"
+    },
+    {
+      "actual": "-12/5",
+      "expected": "global fourth-power bound",
+      "group": "grid",
+      "name": "global force bound -1,1",
+      "status": "PASS"
+    },
+    {
+      "actual": "-12/5",
+      "expected": "local fourth-power bound",
+      "group": "grid",
+      "name": "local force bound -1,1",
+      "status": "PASS"
+    },
+    {
+      "actual": "611/20",
+      "expected": ">=1",
+      "group": "grid",
+      "name": "pair energy nonnegative -1,1",
+      "status": "PASS"
+    },
+    {
+      "actual": "-21/5",
+      "expected": "global fourth-power bound",
+      "group": "grid",
+      "name": "global force bound -1,2",
+      "status": "PASS"
+    },
+    {
+      "actual": "-21/5",
+      "expected": "local fourth-power bound",
+      "group": "grid",
+      "name": "local force bound -1,2",
+      "status": "PASS"
+    },
+    {
+      "actual": "521/20",
+      "expected": ">=1",
+      "group": "grid",
+      "name": "pair energy nonnegative -1,2",
+      "status": "PASS"
+    },
+    {
+      "actual": "-34/5",
+      "expected": "global fourth-power bound",
+      "group": "grid",
+      "name": "global force bound -1,3",
+      "status": "PASS"
+    },
+    {
+      "actual": "-34/5",
+      "expected": "local fourth-power bound",
+      "group": "grid",
+      "name": "local force bound -1,3",
+      "status": "PASS"
+    },
+    {
+      "actual": "491/20",
+      "expected": ">=1",
+      "group": "grid",
+      "name": "pair energy nonnegative -1,3",
+      "status": "PASS"
+    },
+    {
+      "actual": "12/5",
+      "expected": "global fourth-power bound",
+      "group": "grid",
+      "name": "global force bound 0,-2",
+      "status": "PASS"
+    },
+    {
+      "actual": "12/5",
+      "expected": "local fourth-power bound",
+      "group": "grid",
+      "name": "local force bound 0,-2",
+      "status": "PASS"
+    },
+    {
+      "actual": "563/20",
+      "expected": ">=1",
+      "group": "grid",
+      "name": "pair energy nonnegative 0,-2",
+      "status": "PASS"
+    },
+    {
+      "actual": "21/20",
+      "expected": "global fourth-power bound",
+      "group": "grid",
+      "name": "global force bound 0,-1",
+      "status": "PASS"
+    },
+    {
+      "actual": "21/20",
+      "expected": "local fourth-power bound",
+      "group": "grid",
+      "name": "local force bound 0,-1",
+      "status": "PASS"
+    },
+    {
+      "actual": "653/20",
+      "expected": ">=1",
+      "group": "grid",
+      "name": "pair energy nonnegative 0,-1",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": "global fourth-power bound",
+      "group": "grid",
+      "name": "global force bound 0,0",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": "local fourth-power bound",
+      "group": "grid",
+      "name": "local force bound 0,0",
+      "status": "PASS"
+    },
+    {
+      "actual": "139/4",
+      "expected": ">=1",
+      "group": "grid",
+      "name": "pair energy nonnegative 0,0",
+      "status": "PASS"
+    },
+    {
+      "actual": "-21/20",
+      "expected": "global fourth-power bound",
+      "group": "grid",
+      "name": "global force bound 0,1",
+      "status": "PASS"
+    },
+    {
+      "actual": "-21/20",
+      "expected": "local fourth-power bound",
+      "group": "grid",
+      "name": "local force bound 0,1",
+      "status": "PASS"
+    },
+    {
+      "actual": "653/20",
+      "expected": ">=1",
+      "group": "grid",
+      "name": "pair energy nonnegative 0,1",
+      "status": "PASS"
+    },
+    {
+      "actual": "-12/5",
+      "expected": "global fourth-power bound",
+      "group": "grid",
+      "name": "global force bound 0,2",
+      "status": "PASS"
+    },
+    {
+      "actual": "-12/5",
+      "expected": "local fourth-power bound",
+      "group": "grid",
+      "name": "local force bound 0,2",
+      "status": "PASS"
+    },
+    {
+      "actual": "563/20",
+      "expected": ">=1",
+      "group": "grid",
+      "name": "pair energy nonnegative 0,2",
+      "status": "PASS"
+    },
+    {
+      "actual": "-87/20",
+      "expected": "global fourth-power bound",
+      "group": "grid",
+      "name": "global force bound 0,3",
+      "status": "PASS"
+    },
+    {
+      "actual": "-87/20",
+      "expected": "local fourth-power bound",
+      "group": "grid",
+      "name": "local force bound 0,3",
+      "status": "PASS"
+    },
+    {
+      "actual": "533/20",
+      "expected": ">=1",
+      "group": "grid",
+      "name": "pair energy nonnegative 0,3",
+      "status": "PASS"
+    },
+    {
+      "actual": "21/5",
+      "expected": "global fourth-power bound",
+      "group": "grid",
+      "name": "global force bound 1,-2",
+      "status": "PASS"
+    },
+    {
+      "actual": "21/5",
+      "expected": "local fourth-power bound",
+      "group": "grid",
+      "name": "local force bound 1,-2",
+      "status": "PASS"
+    },
+    {
+      "actual": "521/20",
+      "expected": ">=1",
+      "group": "grid",
+      "name": "pair energy nonnegative 1,-2",
+      "status": "PASS"
+    },
+    {
+      "actual": "12/5",
+      "expected": "global fourth-power bound",
+      "group": "grid",
+      "name": "global force bound 1,-1",
+      "status": "PASS"
+    },
+    {
+      "actual": "12/5",
+      "expected": "local fourth-power bound",
+      "group": "grid",
+      "name": "local force bound 1,-1",
+      "status": "PASS"
+    },
+    {
+      "actual": "611/20",
+      "expected": ">=1",
+      "group": "grid",
+      "name": "pair energy nonnegative 1,-1",
+      "status": "PASS"
+    },
+    {
+      "actual": "11/10",
+      "expected": "global fourth-power bound",
+      "group": "grid",
+      "name": "global force bound 1,0",
+      "status": "PASS"
+    },
+    {
+      "actual": "11/10",
+      "expected": "local fourth-power bound",
+      "group": "grid",
+      "name": "local force bound 1,0",
+      "status": "PASS"
+    },
+    {
+      "actual": "653/20",
+      "expected": ">=1",
+      "group": "grid",
+      "name": "pair energy nonnegative 1,0",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": "global fourth-power bound",
+      "group": "grid",
+      "name": "global force bound 1,1",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": "local fourth-power bound",
+      "group": "grid",
+      "name": "local force bound 1,1",
+      "status": "PASS"
+    },
+    {
+      "actual": "611/20",
+      "expected": ">=1",
+      "group": "grid",
+      "name": "pair energy nonnegative 1,1",
+      "status": "PASS"
+    },
+    {
+      "actual": "-6/5",
+      "expected": "global fourth-power bound",
+      "group": "grid",
+      "name": "global force bound 1,2",
+      "status": "PASS"
+    },
+    {
+      "actual": "-6/5",
+      "expected": "local fourth-power bound",
+      "group": "grid",
+      "name": "local force bound 1,2",
+      "status": "PASS"
+    },
+    {
+      "actual": "521/20",
+      "expected": ">=1",
+      "group": "grid",
+      "name": "pair energy nonnegative 1,2",
+      "status": "PASS"
+    },
+    {
+      "actual": "-14/5",
+      "expected": "global fourth-power bound",
+      "group": "grid",
+      "name": "global force bound 1,3",
+      "status": "PASS"
+    },
+    {
+      "actual": "-14/5",
+      "expected": "local fourth-power bound",
+      "group": "grid",
+      "name": "local force bound 1,3",
+      "status": "PASS"
+    },
+    {
+      "actual": "491/20",
+      "expected": ">=1",
+      "group": "grid",
+      "name": "pair energy nonnegative 1,3",
+      "status": "PASS"
+    },
+    {
+      "actual": "36/5",
+      "expected": "global fourth-power bound",
+      "group": "grid",
+      "name": "global force bound 2,-2",
+      "status": "PASS"
+    },
+    {
+      "actual": "36/5",
+      "expected": "local fourth-power bound",
+      "group": "grid",
+      "name": "local force bound 2,-2",
+      "status": "PASS"
+    },
+    {
+      "actual": "431/20",
+      "expected": ">=1",
+      "group": "grid",
+      "name": "pair energy nonnegative 2,-2",
+      "status": "PASS"
+    },
+    {
+      "actual": "93/20",
+      "expected": "global fourth-power bound",
+      "group": "grid",
+      "name": "global force bound 2,-1",
+      "status": "PASS"
+    },
+    {
+      "actual": "93/20",
+      "expected": "local fourth-power bound",
+      "group": "grid",
+      "name": "local force bound 2,-1",
+      "status": "PASS"
+    },
+    {
+      "actual": "521/20",
+      "expected": ">=1",
+      "group": "grid",
+      "name": "pair energy nonnegative 2,-1",
+      "status": "PASS"
+    },
+    {
+      "actual": "14/5",
+      "expected": "global fourth-power bound",
+      "group": "grid",
+      "name": "global force bound 2,0",
+      "status": "PASS"
+    },
+    {
+      "actual": "14/5",
+      "expected": "local fourth-power bound",
+      "group": "grid",
+      "name": "local force bound 2,0",
+      "status": "PASS"
+    },
+    {
+      "actual": "563/20",
+      "expected": ">=1",
+      "group": "grid",
+      "name": "pair energy nonnegative 2,0",
+      "status": "PASS"
+    },
+    {
+      "actual": "27/20",
+      "expected": "global fourth-power bound",
+      "group": "grid",
+      "name": "global force bound 2,1",
+      "status": "PASS"
+    },
+    {
+      "actual": "27/20",
+      "expected": "local fourth-power bound",
+      "group": "grid",
+      "name": "local force bound 2,1",
+      "status": "PASS"
+    },
+    {
+      "actual": "521/20",
+      "expected": ">=1",
+      "group": "grid",
+      "name": "pair energy nonnegative 2,1",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": "global fourth-power bound",
+      "group": "grid",
+      "name": "global force bound 2,2",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": "local fourth-power bound",
+      "group": "grid",
+      "name": "local force bound 2,2",
+      "status": "PASS"
+    },
+    {
+      "actual": "431/20",
+      "expected": ">=1",
+      "group": "grid",
+      "name": "pair energy nonnegative 2,2",
+      "status": "PASS"
+    },
+    {
+      "actual": "-31/20",
+      "expected": "global fourth-power bound",
+      "group": "grid",
+      "name": "global force bound 2,3",
+      "status": "PASS"
+    },
+    {
+      "actual": "-31/20",
+      "expected": "local fourth-power bound",
+      "group": "grid",
+      "name": "local force bound 2,3",
+      "status": "PASS"
+    },
+    {
+      "actual": "401/20",
+      "expected": ">=1",
+      "group": "grid",
+      "name": "pair energy nonnegative 2,3",
+      "status": "PASS"
+    },
+    {
+      "actual": "12",
+      "expected": "global fourth-power bound",
+      "group": "grid",
+      "name": "global force bound 3,-2",
+      "status": "PASS"
+    },
+    {
+      "actual": "12",
+      "expected": "local fourth-power bound",
+      "group": "grid",
+      "name": "local force bound 3,-2",
+      "status": "PASS"
+    },
+    {
+      "actual": "401/20",
+      "expected": ">=1",
+      "group": "grid",
+      "name": "pair energy nonnegative 3,-2",
+      "status": "PASS"
+    },
+    {
+      "actual": "42/5",
+      "expected": "global fourth-power bound",
+      "group": "grid",
+      "name": "global force bound 3,-1",
+      "status": "PASS"
+    },
+    {
+      "actual": "42/5",
+      "expected": "local fourth-power bound",
+      "group": "grid",
+      "name": "local force bound 3,-1",
+      "status": "PASS"
+    },
+    {
+      "actual": "491/20",
+      "expected": ">=1",
+      "group": "grid",
+      "name": "pair energy nonnegative 3,-1",
+      "status": "PASS"
+    },
+    {
+      "actual": "57/10",
+      "expected": "global fourth-power bound",
+      "group": "grid",
+      "name": "global force bound 3,0",
+      "status": "PASS"
+    },
+    {
+      "actual": "57/10",
+      "expected": "local fourth-power bound",
+      "group": "grid",
+      "name": "local force bound 3,0",
+      "status": "PASS"
+    },
+    {
+      "actual": "533/20",
+      "expected": ">=1",
+      "group": "grid",
+      "name": "pair energy nonnegative 3,0",
+      "status": "PASS"
+    },
+    {
+      "actual": "18/5",
+      "expected": "global fourth-power bound",
+      "group": "grid",
+      "name": "global force bound 3,1",
+      "status": "PASS"
+    },
+    {
+      "actual": "18/5",
+      "expected": "local fourth-power bound",
+      "group": "grid",
+      "name": "local force bound 3,1",
+      "status": "PASS"
+    },
+    {
+      "actual": "491/20",
+      "expected": ">=1",
+      "group": "grid",
+      "name": "pair energy nonnegative 3,1",
+      "status": "PASS"
+    },
+    {
+      "actual": "9/5",
+      "expected": "global fourth-power bound",
+      "group": "grid",
+      "name": "global force bound 3,2",
+      "status": "PASS"
+    },
+    {
+      "actual": "9/5",
+      "expected": "local fourth-power bound",
+      "group": "grid",
+      "name": "local force bound 3,2",
+      "status": "PASS"
+    },
+    {
+      "actual": "401/20",
+      "expected": ">=1",
+      "group": "grid",
+      "name": "pair energy nonnegative 3,2",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": "global fourth-power bound",
+      "group": "grid",
+      "name": "global force bound 3,3",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": "local fourth-power bound",
+      "group": "grid",
+      "name": "local force bound 3,3",
+      "status": "PASS"
+    },
+    {
+      "actual": "371/20",
+      "expected": ">=1",
+      "group": "grid",
+      "name": "pair energy nonnegative 3,3",
+      "status": "PASS"
+    },
+    {
+      "actual": 36,
+      "expected": 36,
+      "group": "fixture",
+      "name": "grid cardinality",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "all_time_projected_d_duhamel_cauchy_closed": false,
+        "c6_closed": false,
+        "common_alpha_closed": false,
+        "conditional_l4_coefficient_bound_closed": true,
+        "continuum_closed": false,
+        "delta_d_cauchy_closed": false,
+        "exhaustion_independence_closed": false,
+        "gns_gap_closed": false,
+        "group_law_closed": false,
+        "hamiltonian_os_identification_closed": false,
+        "kms_os_closed": false,
+        "local_force_weight_bound_closed": true,
+        "no_new_negative_result": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "not_closed": "The local moment bound M_beta,local is an explicit conditional input. This package does not prove it, sum the time expansion, or close projected D, delta-D, exhaustion, group law, Hamiltonian-to-OS identification, common alpha, KMS/GNS, continuum, C6, Sector A or Pre-A.",
+        "pre_a_closed": false,
+        "product_core_density_closed": false,
+        "sector_a_closed": false,
+        "uniform_local_third_moment_proved": false
+      },
+      "expected": "conditional local bridge",
+      "group": "scope",
+      "name": "conditional scope",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "all_time_projected_d_duhamel_cauchy_closed": false,
+        "c6_closed": false,
+        "common_alpha_closed": false,
+        "conditional_l4_coefficient_bound_closed": true,
+        "continuum_closed": false,
+        "delta_d_cauchy_closed": false,
+        "exhaustion_independence_closed": false,
+        "gns_gap_closed": false,
+        "group_law_closed": false,
+        "hamiltonian_os_identification_closed": false,
+        "kms_os_closed": false,
+        "local_force_weight_bound_closed": true,
+        "no_new_negative_result": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "not_closed": "The local moment bound M_beta,local is an explicit conditional input. This package does not prove it, sum the time expansion, or close projected D, delta-D, exhaustion, group law, Hamiltonian-to-OS identification, common alpha, KMS/GNS, continuum, C6, Sector A or Pre-A.",
+        "pre_a_closed": false,
+        "product_core_density_closed": false,
+        "sector_a_closed": false,
+        "uniform_local_third_moment_proved": false
+      },
+      "expected": "successor gates open",
+      "group": "scope",
+      "name": "QFT firewall",
+      "status": "PASS"
+    }
+  ],
+  "boundary": "T0 claim-nonbearing conditional local-force moment bridge. The explicit local moment hypothesis is the next named subgate.",
+  "derived": {
+    "all_time_projected_d_duhamel_cauchy_closed": false,
+    "conditional_coefficient_prefactor": "122099*750**(1/4)/107520",
+    "conditional_l4_coefficient_bound_closed": true,
+    "delta_d_cauchy_closed": false,
+    "energy_shift_per_site": "135/8",
+    "grid_points": 36,
+    "local_force_weight_bound_closed": true,
+    "local_prefactor_power": "222253407550105971601/696074612244480",
+    "uniform_local_third_moment_proved": false,
+    "weight_ratio": "40/3"
+  },
+  "exploration_id": "EXP-001059",
+  "failed": 0,
+  "grid_rows": [
+    {
+      "energy_q": "411/40",
+      "energy_v": "411/40",
+      "force": "0",
+      "force_bound_power": "7987120707128158301425137/1649954636431360000",
+      "global_weight": "33",
+      "local_bound_power": "17794272568403466453337118591/5568596897955840000",
+      "pair_energy": "431/20",
+      "q": "-2",
+      "v": "-2"
+    },
+    {
+      "energy_q": "411/40",
+      "energy_v": "591/40",
+      "force": "-27/20",
+      "force_bound_power": "162022734104027253297129/206244329553920000",
+      "global_weight": "18",
+      "local_bound_power": "31431246030579132134457808361/5568596897955840000",
+      "pair_energy": "521/20",
+      "q": "-2",
+      "v": "-1"
+    },
+    {
+      "energy_q": "411/40",
+      "energy_v": "135/8",
+      "force": "-14/5",
+      "force_bound_power": "1091930991293670638475713/1649954636431360000",
+      "global_weight": "17",
+      "local_bound_power": "39661908910152990858079718747/5568596897955840000",
+      "pair_energy": "563/20",
+      "q": "-2",
+      "v": "0"
+    },
+    {
+      "energy_q": "411/40",
+      "energy_v": "591/40",
+      "force": "-93/20",
+      "force_bound_power": "162022734104027253297129/206244329553920000",
+      "global_weight": "18",
+      "local_bound_power": "31431246030579132134457808361/5568596897955840000",
+      "pair_energy": "521/20",
+      "q": "-2",
+      "v": "1"
+    },
+    {
+      "energy_q": "411/40",
+      "energy_v": "411/40",
+      "force": "-36/5",
+      "force_bound_power": "7987120707128158301425137/1649954636431360000",
+      "global_weight": "33",
+      "local_bound_power": "17794272568403466453337118591/5568596897955840000",
+      "pair_energy": "431/20",
+      "q": "-2",
+      "v": "2"
+    },
+    {
+      "energy_q": "411/40",
+      "energy_v": "351/40",
+      "force": "-43/4",
+      "force_bound_power": "10890416969955192608449/85899345920000",
+      "global_weight": "98",
+      "local_bound_power": "14331166645173300726104372801/5568596897955840000",
+      "pair_energy": "401/20",
+      "q": "-2",
+      "v": "3"
+    },
+    {
+      "energy_q": "591/40",
+      "energy_v": "411/40",
+      "force": "6/5",
+      "force_bound_power": "162022734104027253297129/206244329553920000",
+      "global_weight": "18",
+      "local_bound_power": "31431246030579132134457808361/5568596897955840000",
+      "pair_energy": "521/20",
+      "q": "-1",
+      "v": "-2"
+    },
+    {
+      "energy_q": "591/40",
+      "energy_v": "591/40",
+      "force": "0",
+      "force_bound_power": "6000842003852861233227/1649954636431360000",
+      "global_weight": "3",
+      "local_bound_power": "50695809123968011080098778731/5568596897955840000",
+      "pair_energy": "611/20",
+      "q": "-1",
+      "v": "-1"
+    },
+    {
+      "energy_q": "591/40",
+      "energy_v": "135/8",
+      "force": "-11/10",
+      "force_bound_power": "222253407550105971601/206244329553920000",
+      "global_weight": "2",
+      "local_bound_power": "61885367178801638620600258277/5568596897955840000",
+      "pair_energy": "653/20",
+      "q": "-1",
+      "v": "0"
+    },
+    {
+      "energy_q": "591/40",
+      "energy_v": "591/40",
+      "force": "-12/5",
+      "force_bound_power": "6000842003852861233227/1649954636431360000",
+      "global_weight": "3",
+      "local_bound_power": "50695809123968011080098778731/5568596897955840000",
+      "pair_energy": "611/20",
+      "q": "-1",
+      "v": "1"
+    },
+    {
+      "energy_q": "591/40",
+      "energy_v": "411/40",
+      "force": "-21/5",
+      "force_bound_power": "162022734104027253297129/206244329553920000",
+      "global_weight": "18",
+      "local_bound_power": "31431246030579132134457808361/5568596897955840000",
+      "pair_energy": "521/20",
+      "q": "-1",
+      "v": "2"
+    },
+    {
+      "energy_q": "591/40",
+      "energy_v": "351/40",
+      "force": "-34/5",
+      "force_bound_power": "127081609142852443183820987/1649954636431360000",
+      "global_weight": "83",
+      "local_bound_power": "26308307209083264990114474371/5568596897955840000",
+      "pair_energy": "491/20",
+      "q": "-1",
+      "v": "3"
+    },
+    {
+      "energy_q": "135/8",
+      "energy_v": "411/40",
+      "force": "12/5",
+      "force_bound_power": "1091930991293670638475713/1649954636431360000",
+      "global_weight": "17",
+      "local_bound_power": "39661908910152990858079718747/5568596897955840000",
+      "pair_energy": "563/20",
+      "q": "0",
+      "v": "-2"
+    },
+    {
+      "energy_q": "135/8",
+      "energy_v": "591/40",
+      "force": "21/20",
+      "force_bound_power": "222253407550105971601/206244329553920000",
+      "global_weight": "2",
+      "local_bound_power": "61885367178801638620600258277/5568596897955840000",
+      "pair_energy": "653/20",
+      "q": "0",
+      "v": "-1"
+    },
+    {
+      "energy_q": "135/8",
+      "energy_v": "135/8",
+      "force": "0",
+      "force_bound_power": "222253407550105971601/1649954636431360000",
+      "global_weight": "1",
+      "local_bound_power": "596887974131308049345106019/44548775183646720",
+      "pair_energy": "139/4",
+      "q": "0",
+      "v": "0"
+    },
+    {
+      "energy_q": "135/8",
+      "energy_v": "591/40",
+      "force": "-21/20",
+      "force_bound_power": "222253407550105971601/206244329553920000",
+      "global_weight": "2",
+      "local_bound_power": "61885367178801638620600258277/5568596897955840000",
+      "pair_energy": "653/20",
+      "q": "0",
+      "v": "1"
+    },
+    {
+      "energy_q": "135/8",
+      "energy_v": "411/40",
+      "force": "-12/5",
+      "force_bound_power": "1091930991293670638475713/1649954636431360000",
+      "global_weight": "17",
+      "local_bound_power": "39661908910152990858079718747/5568596897955840000",
+      "pair_energy": "563/20",
+      "q": "0",
+      "v": "2"
+    },
+    {
+      "energy_q": "135/8",
+      "energy_v": "351/40",
+      "force": "-87/20",
+      "force_bound_power": "15317927101760853668712521/206244329553920000",
+      "global_weight": "82",
+      "local_bound_power": "33653485842568595510161408637/5568596897955840000",
+      "pair_energy": "533/20",
+      "q": "0",
+      "v": "3"
+    },
+    {
+      "energy_q": "591/40",
+      "energy_v": "411/40",
+      "force": "21/5",
+      "force_bound_power": "162022734104027253297129/206244329553920000",
+      "global_weight": "18",
+      "local_bound_power": "31431246030579132134457808361/5568596897955840000",
+      "pair_energy": "521/20",
+      "q": "1",
+      "v": "-2"
+    },
+    {
+      "energy_q": "591/40",
+      "energy_v": "591/40",
+      "force": "12/5",
+      "force_bound_power": "6000842003852861233227/1649954636431360000",
+      "global_weight": "3",
+      "local_bound_power": "50695809123968011080098778731/5568596897955840000",
+      "pair_energy": "611/20",
+      "q": "1",
+      "v": "-1"
+    },
+    {
+      "energy_q": "591/40",
+      "energy_v": "135/8",
+      "force": "11/10",
+      "force_bound_power": "222253407550105971601/206244329553920000",
+      "global_weight": "2",
+      "local_bound_power": "61885367178801638620600258277/5568596897955840000",
+      "pair_energy": "653/20",
+      "q": "1",
+      "v": "0"
+    },
+    {
+      "energy_q": "591/40",
+      "energy_v": "591/40",
+      "force": "0",
+      "force_bound_power": "6000842003852861233227/1649954636431360000",
+      "global_weight": "3",
+      "local_bound_power": "50695809123968011080098778731/5568596897955840000",
+      "pair_energy": "611/20",
+      "q": "1",
+      "v": "1"
+    },
+    {
+      "energy_q": "591/40",
+      "energy_v": "411/40",
+      "force": "-6/5",
+      "force_bound_power": "162022734104027253297129/206244329553920000",
+      "global_weight": "18",
+      "local_bound_power": "31431246030579132134457808361/5568596897955840000",
+      "pair_energy": "521/20",
+      "q": "1",
+      "v": "2"
+    },
+    {
+      "energy_q": "591/40",
+      "energy_v": "351/40",
+      "force": "-14/5",
+      "force_bound_power": "127081609142852443183820987/1649954636431360000",
+      "global_weight": "83",
+      "local_bound_power": "26308307209083264990114474371/5568596897955840000",
+      "pair_energy": "491/20",
+      "q": "1",
+      "v": "3"
+    },
+    {
+      "energy_q": "411/40",
+      "energy_v": "411/40",
+      "force": "36/5",
+      "force_bound_power": "7987120707128158301425137/1649954636431360000",
+      "global_weight": "33",
+      "local_bound_power": "17794272568403466453337118591/5568596897955840000",
+      "pair_energy": "431/20",
+      "q": "2",
+      "v": "-2"
+    },
+    {
+      "energy_q": "411/40",
+      "energy_v": "591/40",
+      "force": "93/20",
+      "force_bound_power": "162022734104027253297129/206244329553920000",
+      "global_weight": "18",
+      "local_bound_power": "31431246030579132134457808361/5568596897955840000",
+      "pair_energy": "521/20",
+      "q": "2",
+      "v": "-1"
+    },
+    {
+      "energy_q": "411/40",
+      "energy_v": "135/8",
+      "force": "14/5",
+      "force_bound_power": "1091930991293670638475713/1649954636431360000",
+      "global_weight": "17",
+      "local_bound_power": "39661908910152990858079718747/5568596897955840000",
+      "pair_energy": "563/20",
+      "q": "2",
+      "v": "0"
+    },
+    {
+      "energy_q": "411/40",
+      "energy_v": "591/40",
+      "force": "27/20",
+      "force_bound_power": "162022734104027253297129/206244329553920000",
+      "global_weight": "18",
+      "local_bound_power": "31431246030579132134457808361/5568596897955840000",
+      "pair_energy": "521/20",
+      "q": "2",
+      "v": "1"
+    },
+    {
+      "energy_q": "411/40",
+      "energy_v": "411/40",
+      "force": "0",
+      "force_bound_power": "7987120707128158301425137/1649954636431360000",
+      "global_weight": "33",
+      "local_bound_power": "17794272568403466453337118591/5568596897955840000",
+      "pair_energy": "431/20",
+      "q": "2",
+      "v": "2"
+    },
+    {
+      "energy_q": "411/40",
+      "energy_v": "351/40",
+      "force": "-31/20",
+      "force_bound_power": "10890416969955192608449/85899345920000",
+      "global_weight": "98",
+      "local_bound_power": "14331166645173300726104372801/5568596897955840000",
+      "pair_energy": "401/20",
+      "q": "2",
+      "v": "3"
+    },
+    {
+      "energy_q": "351/40",
+      "energy_v": "411/40",
+      "force": "12",
+      "force_bound_power": "10890416969955192608449/85899345920000",
+      "global_weight": "98",
+      "local_bound_power": "14331166645173300726104372801/5568596897955840000",
+      "pair_energy": "401/20",
+      "q": "3",
+      "v": "-2"
+    },
+    {
+      "energy_q": "351/40",
+      "energy_v": "591/40",
+      "force": "42/5",
+      "force_bound_power": "127081609142852443183820987/1649954636431360000",
+      "global_weight": "83",
+      "local_bound_power": "26308307209083264990114474371/5568596897955840000",
+      "pair_energy": "491/20",
+      "q": "3",
+      "v": "-1"
+    },
+    {
+      "energy_q": "351/40",
+      "energy_v": "135/8",
+      "force": "57/10",
+      "force_bound_power": "15317927101760853668712521/206244329553920000",
+      "global_weight": "82",
+      "local_bound_power": "33653485842568595510161408637/5568596897955840000",
+      "pair_energy": "533/20",
+      "q": "3",
+      "v": "0"
+    },
+    {
+      "energy_q": "351/40",
+      "energy_v": "591/40",
+      "force": "18/5",
+      "force_bound_power": "127081609142852443183820987/1649954636431360000",
+      "global_weight": "83",
+      "local_bound_power": "26308307209083264990114474371/5568596897955840000",
+      "pair_energy": "491/20",
+      "q": "3",
+      "v": "1"
+    },
+    {
+      "energy_q": "351/40",
+      "energy_v": "411/40",
+      "force": "9/5",
+      "force_bound_power": "10890416969955192608449/85899345920000",
+      "global_weight": "98",
+      "local_bound_power": "14331166645173300726104372801/5568596897955840000",
+      "pair_energy": "401/20",
+      "q": "3",
+      "v": "2"
+    },
+    {
+      "energy_q": "351/40",
+      "energy_v": "351/40",
+      "force": "0",
+      "force_bound_power": "962523277987398786193115947/1649954636431360000",
+      "global_weight": "163",
+      "local_bound_power": "33088420555837126734042077/16234976378880000",
+      "pair_energy": "371/20",
+      "q": "3",
+      "v": "3"
+    }
+  ],
+  "passed": 123,
+  "provenance": {
+    "manifest": "strategy/pre-a-cp1-st8-q3lock-local-force-moment-interface-manifest.json",
+    "manifest_sha256": "22ebca9d2064e66ce030db357bcb25be7f1f3107dd4dd631d5ccf15ca98b4887",
+    "script": "codes/foundations/pre_a_cp1_st8_q3lock_local_force_moment_interface.py",
+    "script_sha256": "95bbc3ad7180544318c52bfd4648682c1ffcd18df096a7cb17d3911577aa26fa"
+  },
+  "run_kind": "primary",
+  "schema": "tect/foundation-audit/1.0",
+  "total": 123,
+  "verdict": "PASS"
+}

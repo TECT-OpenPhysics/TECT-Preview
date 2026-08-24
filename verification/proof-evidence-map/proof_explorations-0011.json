@@ -5473,6 +5473,117 @@
       "task_id": "T-054",
       "title": "First nonzero projected D-delta-D boundary Taylor coefficient",
       "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "axis": "localization",
+          "check": "The endpoint energy comparison is sitewise and does not use an extensive global shift as a local theorem.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "moment hypothesis",
+          "check": "Uniform local third moment is explicit conditional input and remains unproved.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "coefficient",
+          "check": "The local prefactor is derived from C and max(1,8/g).",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "norm exponent",
+          "check": "The fourth-power inequality gives the one-quarter moment exponent and three-quarter weight exponent.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "CCR boundary",
+          "check": "The estimate applies to the second generator coefficient, not the full evolved difference.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "Lean",
+          "check": "R241 checks exact rational fixtures only.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "QFT promotion",
+          "check": "D,delta-D, OS/KMS, GNS gap, continuum, C6, Sector A and Pre-A remain open.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "TECT owner",
+          "check": "No heat_root_incidence or A1/R-192 production owner is supplied.",
+          "disposition": "UPHELD"
+        }
+      ],
+      "boundary": "T0 claim-nonbearing conditional local-force moment bridge. The local moment hypothesis, all-time projected D and delta-D Cauchy, product/core density, exhaustion independence, group law, Hamiltonian-to-OS identification, common alpha, KMS/GNS, continuum, C6, Sector A and Pre-A remain open.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "This localizes the force estimate so that the next Duhamel bound need not pay the extensive global spectator shift. The required uniform local third-moment theorem is kept as a named conditional gate rather than silently inferred from finite-volume coercivity.",
+      "evidence_refs": [
+        "strategy/pre-a-cp1-st8-q3lock-local-force-moment-interface-manifest.json#model",
+        "strategy/pre-a-cp1-st8-q3lock-local-force-moment-interface-certificate-260824.md#Finding",
+        "codes/foundations/pre_a_cp1_st8_q3lock_local_force_moment_interface.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_local_force_moment_interface_independent.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_local_force_moment_interface_verify.py#main",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-primary-pre-a-cp1-st8-q3lock-local-force-moment-interface/primary.json#assertions",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-primary-pre-a-cp1-st8-q3lock-local-force-moment-interface/independent.json#assertions",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-primary-pre-a-cp1-st8-q3lock-local-force-moment-interface/integrated.json#assertions",
+        "verification/lean/Tect/R241.lean#local_prefactor_fixture",
+        "verification/lean/registry.json#entrypoints",
+        "strategy/pre-a-cp1-st8-q3lock-canonical-energy-quartic-weight-coercivity-manifest.json#coercive_bound",
+        "strategy/pre-a-cp1-st8-q3lock-projected-delta-d-boundary-taylor-coefficient-manifest.json#force"
+      ],
+      "finding": "The Q3 boundary force admits the local endpoint bound |partial_q B|^4 <= C^4*max(1,8/g)^3*(1+e(q)+e(v))^3, with C=122099/35840 and e(q)=r*q^2/2+g*q^4/4+r^2/(2*g). Therefore a uniform local third-moment input M_beta,local yields the conditional L4 estimate C*max(1,8/g)^(3/4)*M_beta,local^(1/4), and the second generator coefficient adds |a|/(hbar*chi). Primary and independent lanes pass 123/123 and 191/191; the integrated verifier passes 23/23 with Lean R241.",
+      "formal_integration": {
+        "events": [],
+        "negatives": [],
+        "no_new_negative": true,
+        "no_pdf": true,
+        "results": []
+      },
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": []
+      },
+      "gate_ids": [
+        "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+        "PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE",
+        "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+        "PA-CP1-ST8-Q3LOCK-FIRST-PASSAGE-BACKBONE-REAL-TIME-PRODUCT-AND-ENERGY-TAIL-CLOSURE",
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001059",
+      "method": [
+        "Use the sitewise shifted onsite energy from EXP-001057 and the exact Q3 force coefficient from EXP-001058.",
+        "Derive q^4 <= (8/g)e(q) and the pair endpoint-energy fourth-power force bound, then take the fourth root under an explicitly stated local third-moment hypothesis.",
+        "Recompute all rational constants independently on the registered 6x6 field grid and compile Lean R241 for the shift, ratio, prefactor and conditional-power fixtures."
+      ],
+      "next_action": "Prove or obstruct the uniform local third-moment hypothesis for the fixed-beta finite-volume Gibbs family, then insert the conditional coefficient into a two-sided Duhamel remainder estimate.",
+      "prior_exploration_id": "EXP-001058",
+      "provenance": "contemporaneous",
+      "qft_interface": {
+        "closed": "A conditional local endpoint-energy L4 estimate for the exact Q3 boundary force, with the local third-moment hypothesis explicit.",
+        "open": "Proving the local moment hypothesis, summing the time expansion, direct projected D and delta-D Cauchy, product/core density, exhaustion independence, group law, Hamiltonian-to-OS identification, common alpha, KMS/GNS gap, continuum, C6, Sector A and Pre-A remain open.",
+        "tect_boundary": "This is a conditional local QFT interface only; no heat_root_incidence or A1/R-192 production owner is supplied."
+      },
+      "question": "Can the exact Q3 boundary force be localized to the two endpoint shifted onsite energies, yielding a conditional volume-uniform L4 coefficient bound under a uniform local third-moment hypothesis?",
+      "recorded_at": "2026-08-25T09:00:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001058",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-08-24",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Local force moment interface for projected D-delta-D locality",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",

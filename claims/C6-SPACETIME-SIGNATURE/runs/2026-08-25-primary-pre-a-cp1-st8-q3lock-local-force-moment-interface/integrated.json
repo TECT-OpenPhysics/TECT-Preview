@@ -1,0 +1,280 @@
+{
+  "assertion_count": 23,
+  "assertions": [
+    {
+      "actual": [
+        "EXP-001059",
+        "T-054"
+      ],
+      "expected": "EXP-001059/T-054",
+      "name": "identity",
+      "pass": true
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "claim nonbearing",
+      "pass": true
+    },
+    {
+      "actual": {
+        "conditional_l4": "||partial_q B||_{L4(phi_Lambda)} <= C*max(1,8/g)^(3/4)*M_beta,local^(1/4)",
+        "conditional_moment": "sup_{Lambda,x~y} phi_Lambda(E_pair(q_x,q_y)^3) <= M_beta,local",
+        "conditional_second_coefficient": "||delta_boundary^2(W_a)||_{L4(phi_Lambda)} <= |a|/(hbar*chi) times the local force bound",
+        "endpoint_energy": "e(q)=r*q^2/2+g*q^4/4+r^2/(2*g)>=0",
+        "force_input": "|partial_q B|^4 <= C^4*(1+q^4+v^4)^3 with C=122099/35840 on the registered force grid",
+        "global_weight_link": "1+q^4+v^4 <= 1+(8/g)*(e(q)+e(v))",
+        "local_force_bound": "|partial_q B|^4 <= C^4*max(1,8/g)^3*E_pair(q,v)^3",
+        "pair_energy": "E_pair(q,v)=1+e(q)+e(v)"
+      },
+      "expected": "explicit conditional moment",
+      "name": "conditional model",
+      "pass": true
+    },
+    {
+      "actual": {
+        "all_time_projected_d_duhamel_cauchy_closed": false,
+        "c6_closed": false,
+        "common_alpha_closed": false,
+        "conditional_l4_coefficient_bound_closed": true,
+        "continuum_closed": false,
+        "delta_d_cauchy_closed": false,
+        "exhaustion_independence_closed": false,
+        "gns_gap_closed": false,
+        "group_law_closed": false,
+        "hamiltonian_os_identification_closed": false,
+        "kms_os_closed": false,
+        "local_force_weight_bound_closed": true,
+        "no_new_negative_result": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "not_closed": "The local moment bound M_beta,local is an explicit conditional input. This package does not prove it, sum the time expansion, or close projected D, delta-D, exhaustion, group law, Hamiltonian-to-OS identification, common alpha, KMS/GNS, continuum, C6, Sector A or Pre-A.",
+        "pre_a_closed": false,
+        "product_core_density_closed": false,
+        "sector_a_closed": false,
+        "uniform_local_third_moment_proved": false
+      },
+      "expected": "conditional bridge",
+      "name": "local bridge scope",
+      "pass": true
+    },
+    {
+      "actual": {
+        "all_time_projected_d_duhamel_cauchy_closed": false,
+        "c6_closed": false,
+        "common_alpha_closed": false,
+        "conditional_l4_coefficient_bound_closed": true,
+        "continuum_closed": false,
+        "delta_d_cauchy_closed": false,
+        "exhaustion_independence_closed": false,
+        "gns_gap_closed": false,
+        "group_law_closed": false,
+        "hamiltonian_os_identification_closed": false,
+        "kms_os_closed": false,
+        "local_force_weight_bound_closed": true,
+        "no_new_negative_result": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "not_closed": "The local moment bound M_beta,local is an explicit conditional input. This package does not prove it, sum the time expansion, or close projected D, delta-D, exhaustion, group law, Hamiltonian-to-OS identification, common alpha, KMS/GNS, continuum, C6, Sector A or Pre-A.",
+        "pre_a_closed": false,
+        "product_core_density_closed": false,
+        "sector_a_closed": false,
+        "uniform_local_third_moment_proved": false
+      },
+      "expected": "successor gates open",
+      "name": "QFT firewall",
+      "pass": true
+    },
+    {
+      "actual": [
+        "local_energy_shift_fixture",
+        "weight_ratio_fixture",
+        "local_prefactor_fixture",
+        "conditional_power_fixture",
+        "scope_fixture"
+      ],
+      "expected": "present",
+      "name": "Lean source",
+      "pass": true
+    },
+    {
+      "actual": [],
+      "expected": "none",
+      "name": "Lean forbidden",
+      "pass": true
+    },
+    {
+      "actual": "PRIMARY LOCAL-FORCE-MOMENT-INTERFACE PASS 123/123\n",
+      "expected": "PASS",
+      "name": "primary child",
+      "pass": true
+    },
+    {
+      "actual": "INDEPENDENT LOCAL-FORCE-MOMENT-INTERFACE PASS 191/191\n",
+      "expected": "PASS",
+      "name": "independent child",
+      "pass": true
+    },
+    {
+      "actual": [
+        123,
+        191
+      ],
+      "expected": ">0",
+      "name": "positive totals",
+      "pass": true
+    },
+    {
+      "actual": [
+        "135/8",
+        "135/8"
+      ],
+      "expected": "equal",
+      "name": "lane agreement energy_shift_per_site",
+      "pass": true
+    },
+    {
+      "actual": [
+        "40/3",
+        "40/3"
+      ],
+      "expected": "equal",
+      "name": "lane agreement weight_ratio",
+      "pass": true
+    },
+    {
+      "actual": [
+        "222253407550105971601/696074612244480",
+        "222253407550105971601/696074612244480"
+      ],
+      "expected": "equal",
+      "name": "lane agreement local_prefactor_power",
+      "pass": true
+    },
+    {
+      "actual": [
+        36,
+        36
+      ],
+      "expected": "equal",
+      "name": "lane agreement grid_points",
+      "pass": true
+    },
+    {
+      "actual": [
+        true,
+        true
+      ],
+      "expected": "equal",
+      "name": "lane agreement local_force_weight_bound_closed",
+      "pass": true
+    },
+    {
+      "actual": [
+        true,
+        true
+      ],
+      "expected": "equal",
+      "name": "lane agreement conditional_l4_coefficient_bound_closed",
+      "pass": true
+    },
+    {
+      "actual": [
+        false,
+        false
+      ],
+      "expected": "equal",
+      "name": "lane agreement uniform_local_third_moment_proved",
+      "pass": true
+    },
+    {
+      "actual": [
+        false,
+        false
+      ],
+      "expected": "equal",
+      "name": "lane agreement all_time_projected_d_duhamel_cauchy_closed",
+      "pass": true
+    },
+    {
+      "actual": [
+        false,
+        false
+      ],
+      "expected": "equal",
+      "name": "lane agreement delta_d_cauchy_closed",
+      "pass": true
+    },
+    {
+      "actual": "135/8",
+      "expected": "135/8",
+      "name": "fixture shift",
+      "pass": true
+    },
+    {
+      "actual": "40/3",
+      "expected": "40/3",
+      "name": "fixture ratio",
+      "pass": true
+    },
+    {
+      "actual": 36,
+      "expected": 36,
+      "name": "fixture grid",
+      "pass": true
+    },
+    {
+      "actual": {
+        "command": "lake env lean Tect/R241.lean",
+        "output": "",
+        "returncode": 0,
+        "status": "PASS"
+      },
+      "expected": "PASS",
+      "name": "Lean compile",
+      "pass": true
+    }
+  ],
+  "audit_id": "PA-CP1-ST8-Q3LOCK-LOCAL-FORCE-MOMENT-INTERFACE",
+  "boundary": {
+    "all_time_projected_d_duhamel_cauchy_closed": false,
+    "c6_closed": false,
+    "common_alpha_closed": false,
+    "conditional_l4_coefficient_bound_closed": true,
+    "continuum_closed": false,
+    "delta_d_cauchy_closed": false,
+    "exhaustion_independence_closed": false,
+    "gns_gap_closed": false,
+    "group_law_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_os_closed": false,
+    "local_force_weight_bound_closed": true,
+    "no_new_negative_result": true,
+    "no_pdf": true,
+    "no_tier_change": true,
+    "not_closed": "The local moment bound M_beta,local is an explicit conditional input. This package does not prove it, sum the time expansion, or close projected D, delta-D, exhaustion, group law, Hamiltonian-to-OS identification, common alpha, KMS/GNS, continuum, C6, Sector A or Pre-A.",
+    "pre_a_closed": false,
+    "product_core_density_closed": false,
+    "sector_a_closed": false,
+    "uniform_local_third_moment_proved": false
+  },
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "exploration_id": "EXP-001059",
+  "lean": {
+    "command": "lake env lean Tect/R241.lean",
+    "output": "",
+    "returncode": 0,
+    "status": "PASS"
+  },
+  "provenance": {
+    "independent_sha256": "d35a5262078a80ee497ba337121cae70390a0cc7ddaeabff14afb132e3739a65",
+    "lean_sha256": "79055edf1d83057eb403865e9603917eb1cd08763bc6270bffbda427fbf99b30",
+    "manifest_sha256": "22ebca9d2064e66ce030db357bcb25be7f1f3107dd4dd631d5ccf15ca98b4887",
+    "primary_sha256": "95bbc3ad7180544318c52bfd4648682c1ffcd18df096a7cb17d3911577aa26fa"
+  },
+  "recorded_at": "2026-08-24T05:42:03.905980Z",
+  "run_kind": "integrated",
+  "schema": "tect/foundation-audit/1.0",
+  "task_id": "T-054",
+  "verdict": "PASS"
+}
