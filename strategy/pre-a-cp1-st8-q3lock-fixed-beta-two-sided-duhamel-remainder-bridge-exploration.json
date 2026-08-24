@@ -1,0 +1,101 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001062",
+  "title": "Fixed-beta two-sided Duhamel remainder bridge",
+  "task_id": "T-054",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE",
+    "PA-CP1-ST8-Q3LOCK-FIXED-BETA-CANONICAL-OS-MIXTURE-COMMON-NORMAL-WSTAR-KMS-ENVELOPE"
+  ],
+  "verdict": "advanced",
+  "provenance": "contemporaneous",
+  "prior_exploration_id": "EXP-001061",
+  "related": [
+    {
+      "id": "EXP-001061",
+      "relation": "continues"
+    }
+  ],
+  "question": "After the compact-source endpoint third moment is available, what exact finite-time two-sided Duhamel remainder follows on the preregistered fixed-beta OS-mixture word class, and which orbit bound is still required for thermodynamic direct D and delta-D Cauchy?",
+  "method": [
+    "Use the fixed-beta OS-mixture beta,# seminorm and the countable common orbit-word span already identified in EXP-000800.",
+    "Define the orientation remainder R_sigma(t)=tau_sigma(t)(W_a)-tau_0(t)(W_a)-t Delta_sigma(W_a), retain the exact multiplier commutation Delta_sigma(W_a)=0, and apply the second-order integral identity under an explicit all-time orbit bound.",
+    "Insert the EXP-001061 compact-source endpoint moment and EXP-001058 force constant into the initial fourth-power coefficient, compute a minimal integer safety ceiling, and verify the single-orientation, two-orientation and modular rational fixtures in independent Python and Lean lanes."
+  ],
+  "finding": "Conditionally, ||R_sigma(t)||_(beta,#) <= t^2 K_sigma(T)/2 and ||R_+(t)-R_-(t)||_(beta,#) <= t^2(K_+(T)+K_-(T))/2. The static endpoint bridge gives K_initial^4=(|a|/(hbar chi))^4 C^4 w^3 M_bridge and the labelled fixture has the minimal integer ceiling 163. The positive-time orbit bound K_sigma(T), its volume/source uniformity, and the modular companion remain unproved.",
+  "decision_reason": "This is the first checkpoint that places the exact Q3 force coefficient into the actual two-sided finite-time remainder shape required by the fixed-beta Hamiltonian-identification gate, while keeping the all-time orbit hypothesis explicit instead of treating a Taylor coefficient as a Duhamel theorem.",
+  "boundary": "T0 claim-nonbearing conditional finite-member Duhamel checkpoint. It does not prove volume-uniform direct D or delta-D Cauchy, product/core density, exhaustion independence, group law, Hamiltonian-to-OS identification, a beta-independent common alpha, GNS gap, continuum, C6, Sector A, Pre-A or the TECT production owner.",
+  "qft_interface": {
+    "closed": "The finite-member two-sided t^2/2 remainder formula on the fixed-beta OS-mixture seminorm, with the compact-source static coefficient inserted.",
+    "open": "The all-time orbit bound, volume/source uniformity, modular domain, direct D/delta-D Cauchy, Hamiltonian thermodynamic identification, common alpha, GNS gap, continuum, C6, Sector A and Pre-A remain open.",
+    "tect_boundary": "No heat_root_incidence or canonical A1/R-192 production owner is supplied."
+  },
+  "adversarial_review": [
+    {
+      "axis": "Taylor remainder",
+      "check": "The t^2/2 estimate uses zero initial data and a declared all-time second-orbit norm; static EXP-001061 is not extended silently.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "orientation",
+      "check": "Both K_+ and K_- remain in the bound; no parity equality is assumed.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "modular derivative",
+      "check": "The modular commutation/domain assumption and K_mod are separate inputs.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "moment",
+      "check": "The compact-source moment closes only the initial coefficient, not the orbit envelope.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "volume",
+      "check": "All fixture values describe one finite member and do not imply exhaustion control.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "Lean",
+      "check": "R244 checks exact rational arithmetic only, not unbounded domains or convergence.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "QFT promotion",
+      "check": "The fixed-beta OS/KMS envelope is existing input; no Hamiltonian identification or continuum follows.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "TECT owner",
+      "check": "No heat_root_incidence or A1/R-192 production map is supplied.",
+      "disposition": "UPHELD"
+    }
+  ],
+  "formal_integration": {
+    "events": [],
+    "results": [],
+    "negatives": [],
+    "no_new_negative": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "evidence_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-fixed-beta-two-sided-duhamel-remainder-bridge-manifest.json#finite_time_theorem",
+    "strategy/pre-a-cp1-st8-q3lock-fixed-beta-two-sided-duhamel-remainder-bridge-certificate-260824.md#Bound",
+    "codes/foundations/pre_a_cp1_st8_q3lock_fixed_beta_two_sided_duhamel_remainder_bridge.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_fixed_beta_two_sided_duhamel_remainder_bridge_independent.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_fixed_beta_two_sided_duhamel_remainder_bridge_verify.py#main",
+    "verification/lean/Tect/R244.lean#theorems",
+    "strategy/pre-a-cp1-st8-q3lock-compact-source-endpoint-third-moment-bridge-manifest.json#finite_fixture",
+    "strategy/pre-a-cp1-st8-q3lock-fixed-beta-os-mixture-common-wstar-route-split-manifest.json#hamiltonian_identification_boundary"
+  ],
+  "recorded_at": "2026-08-25T12:00:00Z",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-08-24",
+  "next_action": "Prove a volume/source-uniform second-orbit bound K_sigma(T) and its modular companion on the fixed-beta common word class, or construct an exact obstruction before promoting the finite remainder to direct D and delta-D Cauchy."
+}
