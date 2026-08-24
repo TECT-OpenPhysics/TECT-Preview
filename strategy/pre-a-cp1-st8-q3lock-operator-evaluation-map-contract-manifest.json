@@ -1,0 +1,115 @@
+{
+  "schema": "tect/pre-a-cp1-st8-q3lock-operator-evaluation-map-contract/1.0",
+  "exploration_id": "EXP-001051",
+  "prior_exploration_id": "EXP-001050",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "tier": "T0",
+  "claim_bearing": false,
+  "title": "Q3 operator-evaluation map contract and coefficient-only non-implication",
+  "question": "Does the weighted coefficient norm control an actual Q3 operator history only after an explicit common-core evaluation contract, and can the coefficient data alone supply that contract?",
+  "upstream_input": {
+    "coefficient_manifest": "strategy/pre-a-cp1-st8-q3lock-actual-source-coefficient-product-manifest.json",
+    "coefficient_exploration": "EXP-001050",
+    "source_polynomial": "P=onsite(q,a)+3*edge_u(q,v,a)+6*bond_u(q,v,a)",
+    "expected_rate_B": "1382807/7168",
+    "radii": ["4", "8", "1/4"]
+  },
+  "map_contract": {
+    "common_core": "A dense core D is invariant under every ordered monomial occurring in P and under the products used in the history.",
+    "seminorm": "The operator seminorm on D is submultiplicative and homogeneous.",
+    "generator_bounds": "The Q3 generator images satisfy ||Phi(q)||<=4, ||Phi(v)||<=8 and ||Phi(a)||<=1/4 in the declared seminorm.",
+    "linearity": "Phi is linear on the finite coefficient span.",
+    "multiplicativity": "Phi(p*r)=Phi(p)Phi(r) on D for the ordered product used by the Q3 source history.",
+    "conclusion": "Under these explicit assumptions, ||Phi(p)||<=||p||_R and ||Phi(p_1)...Phi(p_n)||<=product ||p_i||_R.",
+    "status": "conditional interface; no unbounded Q3 realization is supplied"
+  },
+  "finite_fixture": {
+    "representation": "scalar sign evaluations q in {+4,-4}, v in {+8,-8}, a in {+1/4,-1/4}; diagonal matrices are the direct commuting lift",
+    "sign_evaluations": 8,
+    "product_lengths": [1, 2, 3, 4],
+    "obstruction_q": "32",
+    "obstruction_v": "0",
+    "obstruction_a": "1/4",
+    "obstruction_message": "The same coefficient polynomial is evaluated outside the generator-radius contract; its value exceeds B, so coefficient data without a map bound is insufficient."
+  },
+  "spatial_bridge": {
+    "hypothesis": "A separate nonnegative factorial incidence bound is still required to turn the product estimate into first-passage decay.",
+    "orientations": 2,
+    "degree_bound": 6,
+    "spatial_base": 2,
+    "status": "not supplied"
+  },
+  "scope": {
+    "conditional_map_contract_formulated": true,
+    "finite_bounded_evaluations_checked": true,
+    "coefficient_only_map_inference_rejected": true,
+    "actual_q3_common_core_map_proved": false,
+    "unbounded_domain_closure_proved": false,
+    "factorial_incidence_supplied": false,
+    "actual_q3_history_closed": false,
+    "common_alpha_closed": false,
+    "kms_os_closed": false,
+    "gns_gap_closed": false,
+    "continuum_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true,
+    "not_closed": "The finite evaluation contract is conditional. It does not construct the actual Q3 common core, establish unbounded-domain invariance, supply factorial spatial incidence, or close any thermodynamic QFT gate."
+  },
+  "adversarial_review": [
+    {
+      "axis": "coefficient versus operator norm",
+      "check": "The weighted l1 norm is used only through an explicitly stated evaluation contract; it is not silently identified with an unbounded operator norm.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "common core",
+      "check": "Invariance and product closure of the common core are hypotheses, not consequences of the finite sign fixture.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "orientation",
+      "check": "Both center and source-at-neighbor orientations retain their separate radii and rate checks.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "coefficient-only inference",
+      "check": "The radius-violating evaluation witness is not identified with the physical Q3 representation; it rejects only the inference rule without generator bounds.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "history",
+      "check": "Submultiplicativity yields a product bound only under multiplicativity of Phi; factorial incidence and spatial paths remain separate hypotheses.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "Lean",
+      "check": "R233 checks the declared rational fixtures and scope markers, not the actual Q3 operator domains.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "QFT promotion",
+      "check": "No KMS/OS reconstruction, GNS gap, continuum, C6, Sector A or Pre-A closure is claimed.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "TECT owner",
+      "check": "No heat_root_incidence or canonical A1/R-192 production owner is supplied by this package.",
+      "disposition": "UPHELD"
+    }
+  ],
+  "formal_integration": {
+    "lean_entry": "verification/lean/Tect/R233.lean",
+    "result_ids": [],
+    "negative_ids": [],
+    "changelog_event": null
+  },
+  "qft_interface": {
+    "closed": "An explicit conditional Q3 coefficient-to-operator admission contract and a finite check that it yields the formal B^n product bound.",
+    "open": "The actual common-core realization, domain invariance, factorial incidence, spatial first passage, exhaustion, common alpha, KMS/OS, GNS gap, continuum, C6, Sector A and Pre-A remain open.",
+    "tect_boundary": "No heat_root_incidence or canonical A1/R-192 production owner is supplied."
+  },
+  "boundary": "T0 claim-nonbearing conditional QFT interface. The finite witness rejects only the coefficient-only inference and does not reject the actual Q3 route.",
+  "next_action": "Construct the actual Q3 common-core evaluation map or derive a Q3-specific domain/energy estimate that verifies the contract, then independently prove the factorial spatial incidence bound."
+}
