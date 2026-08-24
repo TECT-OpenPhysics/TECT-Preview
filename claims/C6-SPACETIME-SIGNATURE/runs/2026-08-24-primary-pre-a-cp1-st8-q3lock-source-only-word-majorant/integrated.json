@@ -1,0 +1,290 @@
+{
+  "assertion_count": 25,
+  "assertions": [
+    {
+      "actual": [
+        "EXP-001039",
+        "T-054"
+      ],
+      "expected": "EXP-001039/T-054",
+      "name": "identity",
+      "pass": true
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "claim nonbearing",
+      "pass": true
+    },
+    {
+      "actual": {
+        "all_shape_exhaustion_closed": false,
+        "closed": "Source-only all-local-Q3 multiplication-word coefficient majorant and orientation-symmetric factorial generating envelope.",
+        "common_alpha_closed": false,
+        "field_dependent_operator_history_closed": false,
+        "no_new_negative_result": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "not_closed": "Field-dependent operator history, commutator incidence, spatial decay, all-shape exhaustion, common alpha, KMS, gap, continuum, C6, Sector A and Pre-A remain open.",
+        "source_only_egf_closed": true
+      },
+      "expected": true,
+      "name": "source-only scope",
+      "pass": true
+    },
+    {
+      "actual": {
+        "all_shape_exhaustion_closed": false,
+        "closed": "Source-only all-local-Q3 multiplication-word coefficient majorant and orientation-symmetric factorial generating envelope.",
+        "common_alpha_closed": false,
+        "field_dependent_operator_history_closed": false,
+        "no_new_negative_result": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "not_closed": "Field-dependent operator history, commutator incidence, spatial decay, all-shape exhaustion, common alpha, KMS, gap, continuum, C6, Sector A and Pre-A remain open.",
+        "source_only_egf_closed": true
+      },
+      "expected": false,
+      "name": "operator-history firewall",
+      "pass": true
+    },
+    {
+      "actual": [
+        "source_only_onsite",
+        "source_only_edge",
+        "source_only_bond",
+        "local_rate_fixture",
+        "weighted_rate_fixture"
+      ],
+      "expected": "present",
+      "name": "Lean source",
+      "pass": true
+    },
+    {
+      "actual": [],
+      "expected": "none",
+      "name": "Lean forbidden",
+      "pass": true
+    },
+    {
+      "actual": "PRIMARY SOURCE-ONLY-Q3-WORD-MAJORANT PASS 31/31\n",
+      "expected": "PASS",
+      "name": "primary child",
+      "pass": true
+    },
+    {
+      "actual": "INDEPENDENT SOURCE-ONLY-Q3-WORD-MAJORANT PASS 21/21\n",
+      "expected": "PASS",
+      "name": "independent child",
+      "pass": true
+    },
+    {
+      "actual": [
+        31,
+        21
+      ],
+      "expected": ">0",
+      "name": "positive totals",
+      "pass": true
+    },
+    {
+      "actual": [
+        "3/320",
+        "3/320"
+      ],
+      "expected": "equal",
+      "name": "lane agreement onsite_l1_at_radius",
+      "pass": true
+    },
+    {
+      "actual": [
+        "1/28",
+        "1/28"
+      ],
+      "expected": "equal",
+      "name": "lane agreement q3_edge_l1_at_radius",
+      "pass": true
+    },
+    {
+      "actual": [
+        "1/3",
+        "1/3"
+      ],
+      "expected": "equal",
+      "name": "lane agreement spatial_bond_l1_at_radius",
+      "pass": true
+    },
+    {
+      "actual": [
+        3,
+        3
+      ],
+      "expected": "equal",
+      "name": "lane agreement q3_degree",
+      "pass": true
+    },
+    {
+      "actual": [
+        6,
+        6
+      ],
+      "expected": "equal",
+      "name": "lane agreement spatial_degree",
+      "pass": true
+    },
+    {
+      "actual": [
+        10,
+        10
+      ],
+      "expected": "equal",
+      "name": "lane agreement local_choice_count",
+      "pass": true
+    },
+    {
+      "actual": [
+        "4741/2240",
+        "4741/2240"
+      ],
+      "expected": "equal",
+      "name": "lane agreement local_rate_at_radius",
+      "pass": true
+    },
+    {
+      "actual": [
+        "4741/6720",
+        "4741/6720"
+      ],
+      "expected": "equal",
+      "name": "lane agreement weighted_rate",
+      "pass": true
+    },
+    {
+      "actual": [
+        true,
+        true
+      ],
+      "expected": "equal",
+      "name": "lane agreement source_only_egf_closed",
+      "pass": true
+    },
+    {
+      "actual": [
+        true,
+        true
+      ],
+      "expected": "equal",
+      "name": "lane agreement orientation_symmetric",
+      "pass": true
+    },
+    {
+      "actual": [
+        false,
+        false
+      ],
+      "expected": "equal",
+      "name": "lane agreement field_dependent_operator_history_closed",
+      "pass": true
+    },
+    {
+      "actual": [
+        false,
+        false
+      ],
+      "expected": "equal",
+      "name": "lane agreement all_shape_exhaustion_closed",
+      "pass": true
+    },
+    {
+      "actual": [
+        false,
+        false
+      ],
+      "expected": "equal",
+      "name": "lane agreement common_alpha_closed",
+      "pass": true
+    },
+    {
+      "actual": {
+        "all_shape_exhaustion_closed": false,
+        "common_alpha_closed": false,
+        "field_dependent_operator_history_closed": false,
+        "local_choice_count": 10,
+        "local_rate_at_radius": "4741/2240",
+        "onsite_l1_at_radius": "3/320",
+        "orientation_symmetric": true,
+        "q3_degree": 3,
+        "q3_edge_l1_at_radius": "1/28",
+        "source_only_egf_closed": true,
+        "spatial_bond_l1_at_radius": "1/3",
+        "spatial_degree": 6,
+        "weighted_rate": "4741/6720"
+      },
+      "expected": true,
+      "name": "source-only EGF",
+      "pass": true
+    },
+    {
+      "actual": {
+        "all_shape_exhaustion_closed": false,
+        "common_alpha_closed": false,
+        "field_dependent_operator_history_closed": false,
+        "local_choice_count": 10,
+        "local_rate_at_radius": "4741/2240",
+        "onsite_l1_at_radius": "3/320",
+        "orientation_symmetric": true,
+        "q3_degree": 3,
+        "q3_edge_l1_at_radius": "1/28",
+        "source_only_egf_closed": true,
+        "spatial_bond_l1_at_radius": "1/3",
+        "spatial_degree": 6,
+        "weighted_rate": "4741/6720"
+      },
+      "expected": false,
+      "name": "operator history remains open",
+      "pass": true
+    },
+    {
+      "actual": {
+        "command": "lake env lean Tect/R221.lean",
+        "output": "",
+        "returncode": 0,
+        "status": "PASS"
+      },
+      "expected": "PASS",
+      "name": "Lean compile",
+      "pass": true
+    }
+  ],
+  "audit_id": "PA-CP1-ST8-Q3LOCK-SOURCE-ONLY-WORD-MAJORANT",
+  "boundary": {
+    "all_shape_exhaustion_closed": false,
+    "closed": "Source-only all-local-Q3 multiplication-word coefficient majorant and orientation-symmetric factorial generating envelope.",
+    "common_alpha_closed": false,
+    "field_dependent_operator_history_closed": false,
+    "no_new_negative_result": true,
+    "no_pdf": true,
+    "no_tier_change": true,
+    "not_closed": "Field-dependent operator history, commutator incidence, spatial decay, all-shape exhaustion, common alpha, KMS, gap, continuum, C6, Sector A and Pre-A remain open.",
+    "source_only_egf_closed": true
+  },
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "exploration_id": "EXP-001039",
+  "lean": {
+    "command": "lake env lean Tect/R221.lean",
+    "output": "",
+    "returncode": 0,
+    "status": "PASS"
+  },
+  "provenance": {
+    "independent_sha256": "eb861482ae5071ad413b4a563b662c38b43767f9483d3976050c4d615c586ad4",
+    "lean_sha256": "383985b23afae2ec8f8c90eb6cb320ac8e4d2197e13af2455529a2ae6a05e041",
+    "manifest_sha256": "64e9c0b0035334abd7abf2882f6fcc77b107af3395e72bb36db30e7b2b454dfd",
+    "primary_sha256": "1c5010ae80510609f5aa3ca1829a57942f9df0d577ea8cfeab0784dd584f4535"
+  },
+  "recorded_at": "2026-08-24T00:14:40.142602Z",
+  "run_kind": "integrated",
+  "schema": "tect/foundation-audit/1.0",
+  "task_id": "T-054",
+  "verdict": "PASS"
+}

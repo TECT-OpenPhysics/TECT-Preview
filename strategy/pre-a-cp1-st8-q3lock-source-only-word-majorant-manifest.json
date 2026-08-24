@@ -1,0 +1,91 @@
+{
+  "schema": "tect/pre-a-cp1-st8-q3lock-source-only-word-majorant/1.0",
+  "exploration_id": "EXP-001039",
+  "prior_exploration_id": "EXP-001038",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "tier": "T0",
+  "claim_bearing": false,
+  "title": "Source-only all-local-Q3 multiplication-word majorant",
+  "question": "Does the source-only slice of all actual Q3 local potential words admit a volume-independent entire generating majorant with both orientations?",
+  "model": {
+    "onsite_source_polynomial": "g*u^4/4",
+    "q3_edge_source_polynomial": "lambda*(u-v)^2*(u^2+v^2)/4",
+    "spatial_bond_source_polynomial": "c*(u-v)^2/2",
+    "local_choices": "one onsite plus three Q3 edges plus six spatial bonds at an active site",
+    "coefficient_norm": "sum of absolute source coefficients times source_radius^degree",
+    "word_bound": "A(R)^n for a length-n connected source-only multiplication word; factorial EGF exp(t*A(R))"
+  },
+  "fixture": {
+    "g": "3/5",
+    "lambda": "2/7",
+    "spatial_coupling": "2/3",
+    "source_radius": "1/2",
+    "time": "1/3",
+    "q3_degree": 3,
+    "spatial_degree": 6,
+    "local_choice_count": 10,
+    "max_word_length": 8,
+    "expected_rate": "4741/2240",
+    "expected_weighted_rate": "4741/6720"
+  },
+  "scoped_verdict": "On the source-only slice, the exact onsite, Q3-edge and spatial-bond coefficient tables give a local summed rate A(R)=4741/2240 at R=1/2. Summing connected word choices at each length and the factorial time weights is bounded by exp(t*A(R)); reversing endpoints or source orientation preserves the coefficient norm.",
+  "open_after_test": [
+    "field-dependent coefficients and unbounded operator domains",
+    "actual commutator/Duhamel incidence beyond multiplication words",
+    "two-sided energy or state-weighted topology and spatial first-passage decay",
+    "all-shape exhaustion Cauchy and common alpha",
+    "KMS, ground/GNS gap, continuum, C6, Sector A and Pre-A"
+  ],
+  "adversarial_review": [
+    {
+      "axis": "source-only restriction",
+      "check": "Setting field variables to zero removes q-dependent coefficients; the result is not an operator-domain estimate.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "choice count",
+      "check": "The ten local choices are a bounded-degree combinatorial envelope, not a proof that every operator history has exactly those choices after support growth.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "orientation",
+      "check": "Endpoint reversal and simultaneous source sign reversal preserve the absolute coefficient norm, but do not prove adjoint dynamics.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "EGF",
+      "check": "The factorial exponential bound is a source-only multiplication-word series, not a Q3 real-time resummation.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "Lean",
+      "check": "R221 checks exact rational coefficient and rate fixtures only.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "QFT promotion",
+      "check": "No thermodynamic dynamics, OS/KMS, GNS gap, continuum, C6, Sector A or Pre-A result follows.",
+      "disposition": "UPHELD"
+    }
+  ],
+  "scope": {
+    "closed": "Source-only all-local-Q3 multiplication-word coefficient majorant and orientation-symmetric factorial generating envelope.",
+    "not_closed": "Field-dependent operator history, commutator incidence, spatial decay, all-shape exhaustion, common alpha, KMS, gap, continuum, C6, Sector A and Pre-A remain open.",
+    "source_only_egf_closed": true,
+    "field_dependent_operator_history_closed": false,
+    "all_shape_exhaustion_closed": false,
+    "common_alpha_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "formal_integration": {
+    "lean_entry": "verification/lean/Tect/R221.lean",
+    "result_ids": [],
+    "negative_ids": [],
+    "changelog_event": null
+  },
+  "next_action": "Lift the source-only majorant to a field/energy-weighted common-core norm or record the exact failure of that lift; only then attempt the two-orientation first-passage and common-alpha estimates.",
+  "no_overclaim": "This package proves only a source-only coefficient-level envelope. It does not prove the actual Q3 real-time history, thermodynamic QFT dynamics, C6, Sector A, Pre-A, TECT production or a Clay result."
+}

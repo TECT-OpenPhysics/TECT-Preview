@@ -1,0 +1,57 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001039",
+  "title": "Source-only all-local-Q3 multiplication-word majorant",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-FIRST-PASSAGE-BACKBONE-REAL-TIME-PRODUCT-AND-ENERGY-TAIL-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "prior_exploration_id": "EXP-001038",
+  "recorded_at": "2026-08-24T19:30:00Z",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-08-24",
+  "provenance": "contemporaneous",
+  "question": "Does the source-only slice of all actual Q3 local potential words admit a volume-independent entire generating majorant with both orientations?",
+  "method": [
+    "Set field variables to zero after taking each actual onsite, Q3-edge and spatial-bond potential difference.",
+    "Compute the exact absolute source coefficient norm at radius R for one onsite, one Q3 edge and one spatial bond.",
+    "Sum one onsite, three Q3-edge and six spatial-bond choices at an active site and bound every length-n connected source-only word by A(R)^n.",
+    "Run independent SymPy and Fraction lanes for the factorial EGF, check endpoint/source orientation symmetry, and compile Lean R221 for the exact rate fixtures."
+  ],
+  "finding": "The source-only local rate is A(1/2)=4741/2240 for the registered fixture, with t*A=4741/6720. The length-n source-only multiplication-word sum is bounded by A^n and its factorial generating series by exp(t*A); endpoint reversal preserves the coefficient norm.",
+  "verdict": "advanced",
+  "decision_reason": "This extends the entire-source candidate from one actual local word to all declared source-only local multiplication-word types with a bounded-degree choice envelope. The field-dependent operator lift is deliberately not inferred.",
+  "adversarial_review": [
+    {"axis": "source-only restriction", "check": "The field variables are set to zero, so q-dependent coefficients and operator domains are outside the closed scope.", "disposition": "UPHELD"},
+    {"axis": "choice count", "check": "Ten local choices are a bounded-degree envelope and not a complete support-growth theorem for operator histories.", "disposition": "UPHELD"},
+    {"axis": "orientation", "check": "Absolute coefficient symmetry is not an adjoint or two-sided real-time identity.", "disposition": "UPHELD"},
+    {"axis": "EGF", "check": "The exponential bound is only a source-only multiplication-word series.", "disposition": "UPHELD"},
+    {"axis": "Lean promotion", "check": "R221 checks exact rational coefficient and rate fixtures only.", "disposition": "UPHELD"},
+    {"axis": "QFT promotion", "check": "No thermodynamic dynamics, KMS, GNS gap, continuum, C6, Sector A or Pre-A result is claimed.", "disposition": "UPHELD"}
+  ],
+  "evidence_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-source-only-word-majorant-manifest.json#model",
+    "strategy/pre-a-cp1-st8-q3lock-source-only-word-majorant-certificate-260824.md#Finding",
+    "codes/foundations/pre_a_cp1_st8_q3lock_source_only_word_majorant.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_source_only_word_majorant_independent.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_source_only_word_majorant_verify.py#main",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-24-primary-pre-a-cp1-st8-q3lock-source-only-word-majorant/primary.json#assertions",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-24-primary-pre-a-cp1-st8-q3lock-source-only-word-majorant/independent.json#assertions",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-24-primary-pre-a-cp1-st8-q3lock-source-only-word-majorant/integrated.json#assertions",
+    "verification/lean/Tect/R221.lean#local_rate_fixture",
+    "verification/lean/registry.json#entrypoints"
+  ],
+  "formal_refs": {"events": [], "negatives": [], "results": []},
+  "formal_integration": {"events": [], "negatives": [], "results": [], "no_new_result": true, "no_new_negative": true, "no_pdf": true},
+  "qft_interface": {
+    "closed": "A source-only coefficient-level entire generating envelope for all declared local Q3 multiplication-word types.",
+    "open": "Field-dependent operator history, commutators, spatial first-passage decay, all-shape exhaustion, common alpha, KMS, gap, continuum, C6, Sector A and Pre-A remain open.",
+    "tect_boundary": "No heat_root_incidence or A1/R-192 TECT production owner is supplied by the source-only package."
+  },
+  "boundary": "T0 claim-nonbearing source-only local-word checkpoint. It does not prove Q3 real-time dynamics, a thermodynamic QFT, C6, Sector A, Pre-A, TECT production or a Clay result.",
+  "next_action": "Lift the source-only bound to a field/energy-weighted common-core norm, or record the exact obstruction to that lift, before attempting the two-orientation first-passage and common-alpha estimates."
+}
