@@ -1,0 +1,69 @@
+{
+  "schema": "tect/pre-a-cp1-st8-q3lock-bientire-coefficient-majorant/1.0",
+  "exploration_id": "EXP-001041",
+  "prior_exploration_id": "EXP-001040",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "tier": "T0",
+  "claim_bearing": false,
+  "title": "Formal bi-entire coefficient majorant for actual Q3 local words",
+  "question": "Can the actual onsite, Q3-edge and spatial-bond potential differences be controlled by a formal coefficient norm with independent field and source radii, without a finite field cutoff?",
+  "model": {
+    "norm": "||P||_(R,S)=sum |coefficient(q,v,r,a)| R^(total field degree) S^(source degree)",
+    "onsite_difference": "g*(q^4-(q-a)^4)/4",
+    "q3_edge_difference": "lambda*((q-v)^2*(q^2+v^2)-(q-a-v)^2*((q-a)^2+v^2))/4",
+    "spatial_bond_difference": "c*((q-r)^2-(q-a-r)^2)/2",
+    "local_choices": "one onsite plus three Q3 edges plus six spatial bonds",
+    "word_bound": "C(R,S)^n for length-n coefficient words; factorial EGF exp(t*C(R,S))",
+    "interpretation": "formal analytic/Frechet coefficient candidate; R is not a pointwise field cutoff"
+  },
+  "fixture": {
+    "g": "3/5",
+    "lambda": "2/7",
+    "spatial_coupling": "2/3",
+    "field_radius": "1/2",
+    "source_radius": "1/3",
+    "time": "1/5",
+    "max_word_length": 8,
+    "onsite_choices": 1,
+    "q3_edge_choices": 3,
+    "spatial_bond_choices": 6,
+    "local_choice_count": 10,
+    "expected_onsite_norm": "17/270",
+    "expected_q3_edge_norm": "191/2268",
+    "expected_spatial_bond_norm": "7/27",
+    "expected_local_rate": "7073/3780",
+    "expected_weighted_rate": "7073/18900"
+  },
+  "scoped_verdict": "The exact actual local Q3 potential differences have finite bi-entire coefficient norms. Their endpoint reversals have equal norms. Summing one onsite, three Q3-edge and six bond choices gives C(R,S), and coefficient-word submultiplicativity gives C(R,S)^n and exp(t*C(R,S)).",
+  "adversarial_review": [
+    {"axis": "formal radius", "check": "R and S are coefficient-norm radii, not a claim that the physical fields are bounded.", "disposition": "UPHELD"},
+    {"axis": "coefficient versus operator", "check": "The formal l1 norm does not prove q^3 A^(-3/4), CCR domain invariance, or Duhamel convergence.", "disposition": "UPHELD"},
+    {"axis": "product topology", "check": "Submultiplicativity is for formal polynomial coefficients; no representation-independent completion is constructed.", "disposition": "UPHELD"},
+    {"axis": "orientation", "check": "Absolute coefficient reversal is not an adjoint-history or KMS statement.", "disposition": "UPHELD"},
+    {"axis": "volume", "check": "The local choice count is bounded-degree; no spatial first-passage or exhaustion estimate follows.", "disposition": "UPHELD"},
+    {"axis": "Lean", "check": "R223 checks exact rational fixture arithmetic only.", "disposition": "UPHELD"},
+    {"axis": "QFT promotion", "check": "No OS/KMS, GNS gap, continuum, C6, Sector A or Pre-A conclusion follows.", "disposition": "UPHELD"}
+  ],
+  "scope": {
+    "closed": "Formal bi-entire coefficient-level word envelope for actual local Q3 potential differences and both endpoint orientations.",
+    "formal_bientire_word_egf_closed": true,
+    "formal_field_radius_not_a_cutoff": true,
+    "orientation_symmetric": true,
+    "operator_history_closed": false,
+    "all_shape_exhaustion_closed": false,
+    "common_alpha_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true,
+    "not_closed": "Representation-independent common-core completion, energy/state bridge, actual repeated commutators, spatial first-passage, exhaustion, common alpha, KMS, ground/GNS gap, continuum, C6, Sector A and Pre-A remain open."
+  },
+  "formal_integration": {
+    "lean_entry": "verification/lean/Tect/R223.lean",
+    "result_ids": [],
+    "negative_ids": [],
+    "changelog_event": null
+  },
+  "next_action": "Define and test a representation-independent completion of this bi-entire coefficient topology on the Q3 common core; then prove the actual six-neighbour/two-orientation recurrence and spatial Cauchy estimate.",
+  "no_overclaim": "This package proves only a formal coefficient-level analytic candidate. It does not prove Q3 operator dynamics, thermodynamic QFT, common alpha, KMS, a GNS gap, continuum, C6, Sector A, Pre-A, TECT production or a Clay result."
+}
