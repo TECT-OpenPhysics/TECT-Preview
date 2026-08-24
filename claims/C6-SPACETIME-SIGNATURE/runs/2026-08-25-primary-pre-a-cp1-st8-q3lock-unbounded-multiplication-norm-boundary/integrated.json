@@ -1,0 +1,242 @@
+{
+  "assertion_count": 22,
+  "assertions": [
+    {
+      "actual": [
+        "EXP-001052",
+        "T-054"
+      ],
+      "expected": "EXP-001052/T-054",
+      "name": "identity",
+      "pass": true
+    },
+    {
+      "actual": "EXP-001051",
+      "expected": "EXP-001051",
+      "name": "upstream identity",
+      "pass": true
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "claim nonbearing",
+      "pass": true
+    },
+    {
+      "actual": {
+        "actual_q3_common_core_map_proved": false,
+        "actual_q3_history_closed": false,
+        "common_alpha_closed": false,
+        "continuum_closed": false,
+        "energy_weighted_bound_proved": false,
+        "factorial_incidence_supplied": false,
+        "gns_gap_closed": false,
+        "kms_os_closed": false,
+        "no_new_negative_result": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "not_closed": "The polynomial-growth boundary applies to the full real scalar multiplication representation only. It does not refute a cutoff, energy-weighted, state-weighted, or analytic Q3 realization.",
+        "ordinary_global_operator_bound_closed": false,
+        "ordinary_norm_growth_checked": true,
+        "slice_polynomial_reconstructed": true
+      },
+      "expected": "growth boundary/open weighted target",
+      "name": "conditional/open scope",
+      "pass": true
+    },
+    {
+      "actual": [
+        "leading_coefficient_fixture",
+        "slice_value_32",
+        "slice_value_64",
+        "coefficient_rate_boundary",
+        "scope_fixture"
+      ],
+      "expected": "present",
+      "name": "Lean source",
+      "pass": true
+    },
+    {
+      "actual": [],
+      "expected": "none",
+      "name": "Lean forbidden",
+      "pass": true
+    },
+    {
+      "actual": "PRIMARY Q3-UNBOUNDED-MULTIPLICATION PASS 20/20\n",
+      "expected": "PASS",
+      "name": "primary child",
+      "pass": true
+    },
+    {
+      "actual": "INDEPENDENT Q3-UNBOUNDED-MULTIPLICATION PASS 18/18\n",
+      "expected": "PASS",
+      "name": "independent child",
+      "pass": true
+    },
+    {
+      "actual": [
+        20,
+        18
+      ],
+      "expected": ">0",
+      "name": "positive totals",
+      "pass": true
+    },
+    {
+      "actual": [
+        3,
+        3
+      ],
+      "expected": "equal",
+      "name": "lane agreement slice_degree",
+      "pass": true
+    },
+    {
+      "actual": [
+        "51/140",
+        "51/140"
+      ],
+      "expected": "equal",
+      "name": "lane agreement leading_coefficient",
+      "pass": true
+    },
+    {
+      "actual": [
+        5,
+        5
+      ],
+      "expected": "equal",
+      "name": "lane agreement q_values_checked",
+      "pass": true
+    },
+    {
+      "actual": [
+        true,
+        true
+      ],
+      "expected": "equal",
+      "name": "lane agreement ordinary_multiplication_growth_checked",
+      "pass": true
+    },
+    {
+      "actual": [
+        false,
+        false
+      ],
+      "expected": "equal",
+      "name": "lane agreement ordinary_global_operator_bound_closed",
+      "pass": true
+    },
+    {
+      "actual": [
+        false,
+        false
+      ],
+      "expected": "equal",
+      "name": "lane agreement energy_weighted_bound_proved",
+      "pass": true
+    },
+    {
+      "actual": [
+        false,
+        false
+      ],
+      "expected": "equal",
+      "name": "lane agreement actual_q3_common_core_map_proved",
+      "pass": true
+    },
+    {
+      "actual": [
+        false,
+        false
+      ],
+      "expected": "equal",
+      "name": "lane agreement factorial_incidence_supplied",
+      "pass": true
+    },
+    {
+      "actual": [
+        false,
+        false
+      ],
+      "expected": "equal",
+      "name": "lane agreement actual_q3_history_closed",
+      "pass": true
+    },
+    {
+      "actual": [
+        false,
+        false
+      ],
+      "expected": "equal",
+      "name": "lane agreement common_alpha_closed",
+      "pass": true
+    },
+    {
+      "actual": [
+        "51/140",
+        "51/140"
+      ],
+      "expected": "51/140",
+      "name": "canonical leading coefficient",
+      "pass": true
+    },
+    {
+      "actual": "1382807/7168",
+      "expected": "1382807/7168",
+      "name": "canonical coefficient rate",
+      "pass": true
+    },
+    {
+      "actual": {
+        "command": "lake env lean Tect/R234.lean",
+        "output": "",
+        "returncode": 0,
+        "status": "PASS"
+      },
+      "expected": "PASS",
+      "name": "Lean compile",
+      "pass": true
+    }
+  ],
+  "audit_id": "PA-CP1-ST8-Q3LOCK-UNBOUNDED-MULTIPLICATION-NORM-BOUNDARY",
+  "boundary": {
+    "actual_q3_common_core_map_proved": false,
+    "actual_q3_history_closed": false,
+    "common_alpha_closed": false,
+    "continuum_closed": false,
+    "energy_weighted_bound_proved": false,
+    "factorial_incidence_supplied": false,
+    "gns_gap_closed": false,
+    "kms_os_closed": false,
+    "no_new_negative_result": true,
+    "no_pdf": true,
+    "no_tier_change": true,
+    "not_closed": "The polynomial-growth boundary applies to the full real scalar multiplication representation only. It does not refute a cutoff, energy-weighted, state-weighted, or analytic Q3 realization.",
+    "ordinary_global_operator_bound_closed": false,
+    "ordinary_norm_growth_checked": true,
+    "slice_polynomial_reconstructed": true
+  },
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "exploration_id": "EXP-001052",
+  "lean": {
+    "command": "lake env lean Tect/R234.lean",
+    "output": "",
+    "returncode": 0,
+    "status": "PASS"
+  },
+  "provenance": {
+    "fixture_manifest_sha256": "67e064ce6248824c9071ebaac22c939bc8fc787132e214524da633b1c8526894",
+    "independent_sha256": "fae40f6afa15a2fd5f2c18cec25dac9bae0b65a3a45b09fa5315f287af38aedf",
+    "lean_sha256": "23b39534782160a8c25c1d5662ad5b7505ca68e578d88c3aedd328778b4db627",
+    "manifest_sha256": "010f4ce1ff8e4e04f02679596994c234e136a9d3ecaaa7bd0cb3965cf4b78536",
+    "primary_sha256": "46705092cdabf698ff0ad958375955cc93c486b3fad8b9ecc0f94f112381acd2",
+    "upstream_manifest_sha256": "c4428451b6c5eedd0b34b0200f4c4cf132eb4ae7a757ba330c779a0973e61c36"
+  },
+  "recorded_at": "2026-08-24T03:52:54.486290Z",
+  "run_kind": "integrated",
+  "schema": "tect/foundation-audit/1.0",
+  "task_id": "T-054",
+  "verdict": "PASS"
+}

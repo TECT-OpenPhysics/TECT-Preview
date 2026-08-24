@@ -1,0 +1,109 @@
+{
+  "schema": "tect/pre-a-cp1-st8-q3lock-unbounded-multiplication-norm-boundary/1.0",
+  "exploration_id": "EXP-001052",
+  "prior_exploration_id": "EXP-001051",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "tier": "T0",
+  "claim_bearing": false,
+  "title": "Q3 unbounded multiplication-norm boundary and energy-weighted target",
+  "question": "Does the actual Q3 source admit a finite ordinary multiplication-operator norm on an unbounded field line, or must the QFT route use an energy-weighted/domain seminorm?",
+  "upstream_input": {
+    "operator_map_manifest": "strategy/pre-a-cp1-st8-q3lock-operator-evaluation-map-contract-manifest.json",
+    "operator_map_exploration": "EXP-001051",
+    "source_polynomial": "P=onsite(q,a)+3*edge_u(q,v,a)+6*bond_u(q,v,a)",
+    "slice": "v=0, a=1/4",
+    "canonical_fixture": "strategy/pre-a-cp1-st8-q3lock-weighted-mixed-graph-lift-manifest.json"
+  },
+  "slice_polynomial": {
+    "variable": "q",
+    "expression": "(51/140)q^3-(153/1120)q^2+(2291/2240)q-4531/35840",
+    "factorization": "(8q-1)(1632q^2-408q+4531)/35840",
+    "leading_coefficient": "51/140",
+    "leading_coefficient_positive": true,
+    "ratio_limit": "lim_(q->+infinity) P_0(q)/q^3=51/140"
+  },
+  "finite_fixture": {
+    "q_values": ["4", "8", "16", "32", "64"],
+    "values": ["899341/35840", "190287/1024", "10561193/7168", "84794793/7168", "486405643/5120"],
+    "coefficient_rate_B": "1382807/7168",
+    "interpretation": "On the full real field line, multiplication by P_0 is not bounded in ordinary L2 operator norm; the finite values are only a reproducible witness of the growth mechanism."
+  },
+  "energy_weighted_target": {
+    "candidate_energy": "A(q)=1+q^4",
+    "motivation": "A(q)^(3/4) has cubic growth, matching the Q3 slice degree.",
+    "status": "target interface only; no global weighted bound is claimed"
+  },
+  "scope": {
+    "slice_polynomial_reconstructed": true,
+    "ordinary_norm_growth_checked": true,
+    "ordinary_global_operator_bound_closed": false,
+    "energy_weighted_bound_proved": false,
+    "actual_q3_common_core_map_proved": false,
+    "factorial_incidence_supplied": false,
+    "actual_q3_history_closed": false,
+    "common_alpha_closed": false,
+    "kms_os_closed": false,
+    "gns_gap_closed": false,
+    "continuum_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true,
+    "not_closed": "The polynomial-growth boundary applies to the full real scalar multiplication representation only. It does not refute a cutoff, energy-weighted, state-weighted, or analytic Q3 realization."
+  },
+  "adversarial_review": [
+    {
+      "axis": "representation scope",
+      "check": "The unbounded conclusion is conditional on the full real field-line multiplication representation and is not identified with the canonical Q3 Hilbert-space realization.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "ordinary versus weighted norm",
+      "check": "Only ordinary multiplication-operator boundedness is obstructed; an energy-weighted/domain estimate remains an explicit target.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "coefficient provenance",
+      "check": "The slice polynomial is reconstructed from the registered Q3 coefficients and canonical fixture, not fitted to the growth values.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "finite witness",
+      "check": "The values at q=4,...,64 are witnesses; the leading coefficient and exact ratio limit carry the asymptotic statement.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "energy target",
+      "check": "A(q)=1+q^4 is a proposed matching weight, not a proved Q3 Hamiltonian or domain operator.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "Lean",
+      "check": "R234 checks exact rational slice values and leading-coefficient fixtures only.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "QFT promotion",
+      "check": "No KMS/OS, GNS gap, continuum, C6, Sector A or Pre-A conclusion follows.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "TECT owner",
+      "check": "No heat_root_incidence or canonical A1/R-192 production owner is supplied.",
+      "disposition": "UPHELD"
+    }
+  ],
+  "formal_integration": {
+    "lean_entry": "verification/lean/Tect/R234.lean",
+    "result_ids": [],
+    "negative_ids": [],
+    "changelog_event": null
+  },
+  "qft_interface": {
+    "closed": "A precise boundary: ordinary global multiplication norm is incompatible with the cubic Q3 slice on an unbounded field line, so the surviving QFT route must use an energy/domain or state-weighted seminorm.",
+    "open": "The actual energy-weighted Q3 domain estimate, common core, factorial incidence, spatial first passage, exhaustion, common alpha, KMS/OS, GNS gap, continuum, C6, Sector A and Pre-A remain open.",
+    "tect_boundary": "No heat_root_incidence or canonical A1/R-192 production owner is supplied."
+  },
+  "boundary": "T0 claim-nonbearing route boundary. It rejects only the ordinary global multiplication-norm architecture under the stated representation, not the Q3 energy-weighted or analytic route.",
+  "next_action": "Prove or obstruct the energy-weighted Q3 slice estimate for A(q)=1+q^4 on a declared common core, including both source orientations and the spatial factorial response."
+}

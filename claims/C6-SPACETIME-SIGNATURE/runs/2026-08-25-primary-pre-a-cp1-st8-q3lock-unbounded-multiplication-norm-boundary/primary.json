@@ -1,0 +1,225 @@
+{
+  "assertions": [
+    {
+      "actual": [
+        "EXP-001052",
+        "T-054"
+      ],
+      "expected": "EXP-001052/T-054",
+      "group": "provenance",
+      "name": "identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "EXP-001051",
+      "expected": "EXP-001051",
+      "group": "provenance",
+      "name": "upstream identity",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "claim nonbearing",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "candidate_energy": "A(q)=1+q^4",
+        "motivation": "A(q)^(3/4) has cubic growth, matching the Q3 slice degree.",
+        "status": "target interface only; no global weighted bound is claimed"
+      },
+      "expected": "declared target",
+      "group": "scope",
+      "name": "target declared",
+      "status": "PASS"
+    },
+    {
+      "actual": 3,
+      "expected": 3,
+      "group": "slice",
+      "name": "slice degree",
+      "status": "PASS"
+    },
+    {
+      "actual": "51/140",
+      "expected": "51/140",
+      "group": "slice",
+      "name": "slice leading coefficient",
+      "status": "PASS"
+    },
+    {
+      "actual": "(8*q - 1)*(1632*q**2 - 408*q + 4531)/35840",
+      "expected": "(8*q - 1)*(1632*q**2 - 408*q + 4531)/35840",
+      "group": "slice",
+      "name": "slice factorization",
+      "status": "PASS"
+    },
+    {
+      "actual": "51/140",
+      "expected": "51/140",
+      "group": "growth",
+      "name": "positive cubic limit",
+      "status": "PASS"
+    },
+    {
+      "actual": "899341/35840",
+      "expected": "899341/35840",
+      "group": "growth",
+      "name": "slice value q=4",
+      "status": "PASS"
+    },
+    {
+      "actual": "190287/1024",
+      "expected": "190287/1024",
+      "group": "growth",
+      "name": "slice value q=8",
+      "status": "PASS"
+    },
+    {
+      "actual": "10561193/7168",
+      "expected": "10561193/7168",
+      "group": "growth",
+      "name": "slice value q=16",
+      "status": "PASS"
+    },
+    {
+      "actual": "84794793/7168",
+      "expected": "84794793/7168",
+      "group": "growth",
+      "name": "slice value q=32",
+      "status": "PASS"
+    },
+    {
+      "actual": "486405643/5120",
+      "expected": "486405643/5120",
+      "group": "growth",
+      "name": "slice value q=64",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "899341/35840",
+        "190287/1024"
+      ],
+      "expected": "strictly increasing",
+      "group": "growth",
+      "name": "finite growth step",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "190287/1024",
+        "10561193/7168"
+      ],
+      "expected": "strictly increasing",
+      "group": "growth",
+      "name": "finite growth step",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "10561193/7168",
+        "84794793/7168"
+      ],
+      "expected": "strictly increasing",
+      "group": "growth",
+      "name": "finite growth step",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "84794793/7168",
+        "486405643/5120"
+      ],
+      "expected": "strictly increasing",
+      "group": "growth",
+      "name": "finite growth step",
+      "status": "PASS"
+    },
+    {
+      "actual": "84794793/7168",
+      "expected": ">1382807/7168",
+      "group": "boundary",
+      "name": "finite value exceeds coefficient rate",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "actual_q3_common_core_map_proved": false,
+        "actual_q3_history_closed": false,
+        "common_alpha_closed": false,
+        "continuum_closed": false,
+        "energy_weighted_bound_proved": false,
+        "factorial_incidence_supplied": false,
+        "gns_gap_closed": false,
+        "kms_os_closed": false,
+        "no_new_negative_result": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "not_closed": "The polynomial-growth boundary applies to the full real scalar multiplication representation only. It does not refute a cutoff, energy-weighted, state-weighted, or analytic Q3 realization.",
+        "ordinary_global_operator_bound_closed": false,
+        "ordinary_norm_growth_checked": true,
+        "slice_polynomial_reconstructed": true
+      },
+      "expected": "ordinary open; weighted target",
+      "group": "boundary",
+      "name": "ordinary norm architecture boundary",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "actual_q3_common_core_map_proved": false,
+        "actual_q3_history_closed": false,
+        "common_alpha_closed": false,
+        "continuum_closed": false,
+        "energy_weighted_bound_proved": false,
+        "factorial_incidence_supplied": false,
+        "gns_gap_closed": false,
+        "kms_os_closed": false,
+        "no_new_negative_result": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "not_closed": "The polynomial-growth boundary applies to the full real scalar multiplication representation only. It does not refute a cutoff, energy-weighted, state-weighted, or analytic Q3 realization.",
+        "ordinary_global_operator_bound_closed": false,
+        "ordinary_norm_growth_checked": true,
+        "slice_polynomial_reconstructed": true
+      },
+      "expected": "conditional/open",
+      "group": "scope",
+      "name": "QFT scope",
+      "status": "PASS"
+    }
+  ],
+  "boundary": "T0 claim-nonbearing route boundary. It rejects only the ordinary global multiplication-norm architecture under the stated representation, not the Q3 energy-weighted or analytic route.",
+  "derived": {
+    "actual_q3_common_core_map_proved": false,
+    "actual_q3_history_closed": false,
+    "common_alpha_closed": false,
+    "energy_weighted_bound_proved": false,
+    "factorial_incidence_supplied": false,
+    "leading_coefficient": "51/140",
+    "ordinary_global_operator_bound_closed": false,
+    "ordinary_multiplication_growth_checked": true,
+    "q_values_checked": 5,
+    "ratio_limit": "51/140",
+    "slice_degree": 3,
+    "slice_expression": "(8*q - 1)*(1632*q**2 - 408*q + 4531)/35840"
+  },
+  "exploration_id": "EXP-001052",
+  "failed": 0,
+  "passed": 20,
+  "provenance": {
+    "fixture_manifest_sha256": "67e064ce6248824c9071ebaac22c939bc8fc787132e214524da633b1c8526894",
+    "manifest": "strategy/pre-a-cp1-st8-q3lock-unbounded-multiplication-norm-boundary-manifest.json",
+    "manifest_sha256": "010f4ce1ff8e4e04f02679596994c234e136a9d3ecaaa7bd0cb3965cf4b78536",
+    "script": "codes/foundations/pre_a_cp1_st8_q3lock_unbounded_multiplication_norm_boundary.py",
+    "script_sha256": "46705092cdabf698ff0ad958375955cc93c486b3fad8b9ecc0f94f112381acd2",
+    "upstream_manifest_sha256": "c4428451b6c5eedd0b34b0200f4c4cf132eb4ae7a757ba330c779a0973e61c36"
+  },
+  "run_kind": "primary",
+  "schema": "tect/foundation-audit/1.0",
+  "total": 20,
+  "verdict": "PASS"
+}
