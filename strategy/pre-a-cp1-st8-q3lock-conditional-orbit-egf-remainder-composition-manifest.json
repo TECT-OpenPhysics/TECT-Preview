@@ -1,0 +1,129 @@
+{
+  "schema": "tect/pre-a-cp1-st8-q3lock-conditional-orbit-egf-remainder-composition/1.0",
+  "exploration_id": "EXP-001063",
+  "prior_exploration_id": "EXP-001062",
+  "task_id": "T-054",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "tier": "T0",
+  "claim_bearing": false,
+  "title": "Conditional orbit-EGF insertion into the fixed-beta Duhamel remainder",
+  "question": "Can the registered four-context factorial history envelope be inserted into the EXP-001062 two-sided remainder without hiding the actual-Q3 history hypothesis?",
+  "authority_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-central-context-history-composition-manifest.json#central_context",
+    "strategy/pre-a-cp1-st8-q3lock-central-context-history-composition-manifest.json#first_passage_bridge",
+    "strategy/pre-a-cp1-st8-q3lock-weighted-mixed-graph-lift-manifest.json#fixture",
+    "strategy/pre-a-cp1-st8-q3lock-fixed-beta-two-sided-duhamel-remainder-bridge-manifest.json#finite_time_theorem"
+  ],
+  "conditional_inputs": {
+    "central_context": "All four A^(a) D A^(-b) contexts are bounded by the registered one-step rate B on a common core, uniformly in volume, source and orientation.",
+    "factorial_history": "The two-orientation degree-six history has nonnegative coefficients bounded by eta^n with eta=orientations*degree*spatial_base*B*T.",
+    "geometric_majorant": "For 0<=eta<1, the conditional history sum is bounded by the geometric envelope G=1/(1-eta).",
+    "remainder_input": "EXP-001062 supplies the finite-member t^2 K/2 remainder once K is replaced by the orbit envelope K_initial*G.",
+    "not_supplied": "EXP-001045 supplies only one-step mixed inputs; neither the four contexts nor the factorial recurrence is an actual Q3 theorem."
+  },
+  "composition": {
+    "rate": "B is recomputed from the actual onsite, three Q3 edge and six spatial-bond source polynomials at S=1/4.",
+    "eta": "eta=2*6*2*B*T",
+    "orbit_envelope": "K_orbit(T)<=K_initial/(1-eta)",
+    "single_remainder": "||R_sigma(T)||_(beta,#)<=T^2*K_initial/(2*(1-eta))",
+    "two_orientation": "||R_+(T)-R_-(T)||_(beta,#)<=T^2*K_initial/(1-eta)",
+    "modular": "With a separate modular multiplier m, ||mR_+-mR_-||_(beta,#)<=m*T^2*K_initial/(1-eta)."
+  },
+  "finite_fixture": {
+    "B": "1382807/7168",
+    "orientations": "2",
+    "degree_bound": "6",
+    "spatial_base": "2",
+    "time_horizon": "1/10000",
+    "K_initial": "163",
+    "modular_multiplier": "2",
+    "derived_eta": "4148421/8960000",
+    "derived_one_minus_eta": "4811579/8960000",
+    "derived_orbit_envelope": "1460480000/4811579",
+    "derived_single_remainder": "4564/3007236875",
+    "derived_two_orientation_remainder": "9128/3007236875",
+    "derived_modular_remainder": "18256/3007236875",
+    "onsite_g": "3/5"
+  },
+  "scope": {
+    "conditional_egf_to_remainder_composition_closed": true,
+    "geometric_history_majorant_closed_conditionally": true,
+    "actual_q3_four_context_theorem_proved": false,
+    "actual_q3_factorial_history_proved": false,
+    "all_time_orbit_bound_proved": false,
+    "volume_uniform_direct_d_cauchy_closed": false,
+    "delta_d_cauchy_closed": false,
+    "product_core_density_closed": false,
+    "exhaustion_independence_closed": false,
+    "group_law_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "fixed_beta_os_kms_envelope_closed": true,
+    "gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true,
+    "not_closed": "The conditional composition does not prove the actual Q3 four-context estimate or factorial recurrence, so no volume-uniform direct D/delta-D Cauchy, exhaustion, common alpha, GNS gap, continuum, C6, Sector A or Pre-A closure follows."
+  },
+  "adversarial_review": [
+    {
+      "axis": "rate provenance",
+      "check": "B is recomputed from the registered weighted mixed graph fixture and is not pasted into the script.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "four-context hypothesis",
+      "check": "The central-context bound remains an explicit conditional input; the one-step rate is not promoted to an operator theorem.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "factorial history",
+      "check": "The geometric sum assumes a nonnegative history coefficient bound; actual Q3 cancellations and domains remain open.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "small-time condition",
+      "check": "eta<1 is checked from the declared time horizon; no all-time statement is inferred.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "orientation",
+      "check": "Both orientations are retained in the remainder triangle estimate and no parity equality is assumed.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "modular derivative",
+      "check": "The modular multiplier is a separate conditional input from EXP-001062; Hamiltonian and modular domains are not identified.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "Lean",
+      "check": "R245 checks exact rational eta, denominator and remainder arithmetic; it does not formalize unbounded Q3 history convergence.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "QFT/TECT promotion",
+      "check": "No thermodynamic OS identification, GNS gap, continuum, C6, Sector A, Pre-A or heat_root_incidence/A1/R-192 owner follows.",
+      "disposition": "UPHELD"
+    }
+  ],
+  "formal_integration": {
+    "lean_entry": "verification/lean/Tect/R245.lean",
+    "result_ids": [],
+    "negative_ids": [],
+    "changelog_event": null
+  },
+  "qft_interface": {
+    "closed": "A conditional scalar composition: the registered central-context/factorial envelope supplies an explicit small-time orbit bound that can be inserted into the two-sided fixed-beta Duhamel remainder.",
+    "open": "The actual Q3 four-context and factorial history theorems, volume-uniform direct D/delta-D Cauchy, exhaustion, Hamiltonian-to-OS identification, common alpha, GNS gap, continuum, C6, Sector A and Pre-A remain open.",
+    "tect_boundary": "No canonical TECT heat_root_incidence or A1/R-192 production owner is supplied."
+  },
+  "boundary": "T0 claim-nonbearing conditional composition checkpoint. It closes only the algebra of combining two already conditional envelopes at a declared small time.",
+  "next_action": "Attack the actual four-context Q3 operator estimate and factorial history recurrence at the declared fixed-beta word class; if either fails, append an exact obstruction rather than promoting this scalar composition."
+}
