@@ -1,0 +1,147 @@
+{
+  "schema": "tect/pre-a-cp1-st8-q3lock-static-character-full-double-commutator-bound/1.0",
+  "exploration_id": "EXP-001069",
+  "prior_exploration_id": "EXP-001068",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "tier": "T0",
+  "claim_bearing": false,
+  "title": "Static finite-periodic full character double-commutator bound",
+  "question": "Does the registered compact-source endpoint force moment combine with the kinetic character estimate to bound the complete static two-sided Gibbs seminorm of delta_H^2(W_a) in the finite periodic Q3 family?",
+  "authority_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-compact-source-endpoint-third-moment-bridge-manifest.json#model",
+    "strategy/pre-a-cp1-st8-q3lock-local-force-moment-interface-manifest.json#model",
+    "strategy/pre-a-cp1-st8-q3lock-uniform-kinetic-character-moment-corollary-manifest.json#model",
+    "strategy/pre-a-cp1-st8-q3lock-kinetic-force-double-commutator-split-manifest.json#model",
+    "strategy/pre-a-cp1-st8-q3lock-local-measured-renyi-semiclassical-doublet-route-split-manifest.json#actual_q3_static_fifth_moment_and_elliptic_embedding",
+    "strategy/pre-a-cp1-st8-q3lock-common-alpha-topology-critical-graph-route-split-manifest.json#model"
+  ],
+  "model": {
+    "scope": "Registered finite periodic Q3 volumes at fixed beta, compact onsite sources, local configuration characters and the registered force grid; no history, arbitrary boundary, exhaustion or continuum promotion.",
+    "split": "delta_H^2(W_a)=-(a^2/(chi^2*hbar^2))*W_a*(p_x+a/2)^2-(i*a/(chi*hbar))*W_a*F_x",
+    "force_fourth_input": "phi(F_x^4)<=C_force^4*max(1,8/g)^3*M_bridge_compact",
+    "force_two_sided": "N_rho((a/(chi*hbar))*W_a*F_x)^2<=2*(a/(chi*hbar))^2*sqrt(phi(F_x^4))",
+    "kinetic_two_sided": "N_rho((a^2/(chi^2*hbar^2))*W_a*(p_x+a/2)^2)^2<=(a^4/(chi^4*hbar^4))*(64*chi^2*m5+a^4)",
+    "triangle": "N_rho(delta_H^2(W_a))^2<=(sqrt(K_bound)+sqrt(F_bound))^2",
+    "force_orientation_reason": "F_x is self-adjoint and configuration-local, while W_a commutes with F_x, so both two-sided products equal phi(F_x^2) before the L4-to-L2 monotonicity step."
+  },
+  "finite_fixture": {
+    "g": "3/5",
+    "r": "-9/2",
+    "gamma": "1/100",
+    "m5": "3",
+    "chi": "1",
+    "hbar": "1",
+    "character_amplitude": "1/4",
+    "force_constant": "122099/35840",
+    "force_weight_ratio": "40/3",
+    "force_sqrt_ceiling": "423000",
+    "force_norm_sqrt_ceiling": "230",
+    "kinetic_norm_sqrt_ceiling": "1",
+    "derived_a_gamma": "15",
+    "derived_A_r": "135/8",
+    "derived_C0": "139/4",
+    "derived_M_bridge_compact": "35834571/64",
+    "derived_force_fourth_moment": "884928390316245388540002019/4949863909294080",
+    "derived_force_fourth_ceiling_square": "178929000000",
+    "derived_force_norm_squared_upper": "52875",
+    "derived_kinetic_squared_norm": "49153/65536",
+    "derived_full_squared_norm_upper": "53361",
+    "bridge_grid_points": 7,
+    "force_grid_points": 36
+  },
+  "scope": {
+    "endpoint_third_moment_reused": true,
+    "static_force_summand_two_sided_bound_closed": true,
+    "static_full_character_double_commutator_bound_closed": true,
+    "onsite_momentum_fourth_moment_closed": true,
+    "kinetic_character_two_sided_gibbs_bound_closed": true,
+    "force_history_uniform_closed": false,
+    "full_actual_q3_double_commutator_uniform_closed": false,
+    "actual_q3_four_context_theorem_proved": false,
+    "actual_q3_factorial_history_proved": false,
+    "volume_uniform_direct_d_cauchy_closed": false,
+    "delta_d_cauchy_closed": false,
+    "product_core_density_closed": false,
+    "exhaustion_independence_closed": false,
+    "group_law_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_os_closed": false,
+    "gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true,
+    "not_closed": "This package closes only a static finite-periodic local-character bound assembled from prior force and kinetic inputs. It does not close time-history uniformity, modular multiplier/domain control, direct D or delta-D Cauchy, product/core density, exhaustion, group law, common alpha, Hamiltonian-to-OS identification, KMS/GNS, continuum, C6, Sector A or Pre-A."
+  },
+  "adversarial_review": [
+    {
+      "axis": "force authority",
+      "check": "The force fourth-moment constant is imported only from the registered local force grid and the EXP-001061 compact-source endpoint bridge; it is not promoted to arbitrary polynomial configurations.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "two-sided orientation",
+      "check": "Self-adjoint configuration force and commuting W_a make both products equal phi(F_x^2); the L4-to-L2 step uses the normalized-state monotonicity inequality.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "kinetic independence",
+      "check": "The EXP-001068 kinetic bound is retained separately; force control is not used to absorb momentum powers.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "triangle estimate",
+      "check": "The final bound uses the seminorm triangle inequality and does not assume kinetic/force orthogonality.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "conservative fixture",
+      "check": "The rational ceiling 423000 is checked against the exact force fourth-moment expression; the resulting 53361 bound is an explicit upper envelope, not an equality.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "history promotion",
+      "check": "A static Gibbs bound is not reused for split histories, evolved contexts or factorial summation.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "domain",
+      "check": "The algebraic split remains a polynomial CCR-core identity; no closure of unbounded operators or modular domains is asserted.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "Lean",
+      "check": "R251 checks exact rational bridge, force-envelope and triangle-oracle arithmetic only; it does not formalize the operator theorem.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "QFT promotion",
+      "check": "The result is a static QFT-facing finite-volume input and does not identify Hamiltonian dynamics with OS/KMS/GNS or establish a mass gap, continuum, C6, Sector A or Pre-A.",
+      "disposition": "UPHELD"
+    }
+  ],
+  "formal_integration": {
+    "lean_entry": "verification/lean/Tect/R251.lean",
+    "result_ids": [],
+    "negative_ids": [],
+    "changelog_event": null
+  },
+  "qft_interface": {
+    "closed": "The complete static two-sided Gibbs seminorm of the local configuration-character second commutator has a finite explicit upper envelope in the registered periodic compact-source scope.",
+    "open": "The force/history extension, direct projected D and delta-D Cauchy, product/core density, exhaustion-independent common alpha, Hamiltonian-to-OS identification, KMS/GNS gap, continuum, C6, Sector A and Pre-A remain open.",
+    "tect_boundary": "No heat_root_incidence or canonical A1/R-192 production owner is supplied."
+  },
+  "boundary": "T0 claim-nonbearing static finite-periodic full-character bound; not a dynamics or Clay closure.",
+  "next_action": "Insert this static bound into a preregistered two-sided split-history estimate and test the remaining evolved-force and modular-domain hypotheses; do not infer history uniformity from the static envelope.",
+  "verification": {
+    "primary_script": "codes/foundations/pre_a_cp1_st8_q3lock_static_character_full_double_commutator_bound.py",
+    "independent_script": "codes/foundations/pre_a_cp1_st8_q3lock_static_character_full_double_commutator_bound_independent.py",
+    "integrated_script": "codes/foundations/pre_a_cp1_st8_q3lock_static_character_full_double_commutator_bound_verify.py"
+  },
+  "no_overclaim": "This is a finite static QFT-interface checkpoint. It is not a complete Q3 dynamics proof, direct D or delta-D Cauchy theorem, common-alpha theorem, OS/KMS/GNS result, mass-gap proof, continuum result, C6/Sector-A/Pre-A result, TECT production map or Clay result."
+}
