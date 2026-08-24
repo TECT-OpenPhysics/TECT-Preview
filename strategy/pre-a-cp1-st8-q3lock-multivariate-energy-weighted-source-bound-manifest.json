@@ -1,0 +1,105 @@
+{
+  "schema": "tect/pre-a-cp1-st8-q3lock-multivariate-energy-weighted-source-bound/1.0",
+  "exploration_id": "EXP-001054",
+  "prior_exploration_id": "EXP-001053",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "tier": "T0",
+  "claim_bearing": false,
+  "title": "Multivariate energy-weighted Q3 source bound",
+  "question": "Does A(q,v)=1+q^4+v^4 absorb the actual Q3 source polynomial in both spatial orientations for every real q,v and |a|<=1/4?",
+  "upstream_input": {
+    "scalar_bound_manifest": "strategy/pre-a-cp1-st8-q3lock-scalar-energy-weighted-slice-bound-manifest.json",
+    "scalar_exploration": "EXP-001053",
+    "source_polynomial": "P=onsite(q,a)+3*edge_u(q,v,a)+6*bond_u(q,v,a)",
+    "reverse_polynomial": "P_reverse=onsite(v,a)+3*edge_v(q,v,a)+6*bond_v(q,v,a)",
+    "canonical_fixture": "strategy/pre-a-cp1-st8-q3lock-weighted-mixed-graph-lift-manifest.json"
+  },
+  "weighted_target": {
+    "energy": "A(q,v)=1+q^4+v^4",
+    "exponent": "3/4",
+    "source_radius": "1/4",
+    "majorant_center": "C=122099/35840",
+    "majorant_reverse": "C=122099/35840",
+    "inequality": "|P(q,v,a)| and |P_reverse(q,v,a)| <= C A(q,v)^(3/4) whenever |a|<=1/4",
+    "reason": "Every monomial has field degree i+j<=3 and source degree k; |q|^i|v|^j <= A^(3/4) and |a|^k <= (1/4)^k."
+  },
+  "finite_fixture": {
+    "field_values": ["-4", "-2", "-1", "0", "1", "2", "4"],
+    "source_values": ["-1/4", "1/4"],
+    "grid_points": 98,
+    "check_role": "exact fourth-power self-tests; the all-real inequality is the coefficient-majorant argument"
+  },
+  "scope": {
+    "multivariate_scalar_majorant_closed": true,
+    "both_orientations_checked": true,
+    "actual_q3_common_core_map_proved": false,
+    "operator_domain_closure_proved": false,
+    "weighted_product_bound_proved": false,
+    "factorial_incidence_supplied": false,
+    "actual_q3_history_closed": false,
+    "common_alpha_closed": false,
+    "kms_os_closed": false,
+    "gns_gap_closed": false,
+    "continuum_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true,
+    "not_closed": "The result is a pointwise commutative polynomial majorant. It does not construct the Q3 operator common core, prove domain invariance, or control products and spatial histories."
+  },
+  "adversarial_review": [
+    {
+      "axis": "all-real versus grid",
+      "check": "The all-real estimate is attributed to the coefficient majorant and monomial degree bounds; the 98 grid points are exact self-tests only.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "orientation",
+      "check": "Center and source-at-neighbor polynomials are reconstructed separately and receive separate coefficient sums.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "source amplitude",
+      "check": "The bound assumes |a|<=1/4 exactly as declared; no unrestricted source amplitude is inferred.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "operator promotion",
+      "check": "The pointwise commuting bound is not called a Q3 operator/domain theorem or a central-context estimate.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "constant derivation",
+      "check": "C=122099/35840 is recomputed from all polynomial coefficients and source powers in both arithmetic lanes.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "Lean",
+      "check": "R236 checks exact coefficient and orientation fixtures only, not unbounded domains or history convergence.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "QFT promotion",
+      "check": "No factorial incidence, KMS/OS, GNS gap, continuum, C6, Sector A or Pre-A conclusion follows.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "TECT owner",
+      "check": "No heat_root_incidence or canonical A1/R-192 production owner is supplied.",
+      "disposition": "UPHELD"
+    }
+  ],
+  "formal_integration": {
+    "lean_entry": "verification/lean/Tect/R236.lean",
+    "result_ids": [],
+    "negative_ids": [],
+    "changelog_event": null
+  },
+  "qft_interface": {
+    "closed": "A pointwise multivariate energy-weighted coefficient majorant for the actual Q3 source in both orientations under |a|<=1/4.",
+    "open": "The Q3 common-core realization, domain invariance, weighted product/history bound, factorial spatial incidence, first passage, exhaustion, common alpha, KMS/OS, GNS gap, continuum, C6, Sector A and Pre-A remain open.",
+    "tect_boundary": "No heat_root_incidence or canonical A1/R-192 production owner is supplied."
+  },
+  "boundary": "T0 claim-nonbearing multivariate scalar interface. It is stronger than the slice bound but remains pointwise and commutative.",
+  "next_action": "Connect this pointwise majorant to an actual Q3 common energy domain and prove a multiplicative weighted history estimate before attempting the factorial spatial incidence and common-alpha gates."
+}
