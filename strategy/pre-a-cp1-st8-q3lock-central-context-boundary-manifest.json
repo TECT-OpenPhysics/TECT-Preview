@@ -1,0 +1,101 @@
+{
+  "schema": "tect/pre-a-cp1-st8-q3lock-central-context-boundary/1.0",
+  "exploration_id": "EXP-001049",
+  "prior_exploration_id": "EXP-001048",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "tier": "T0",
+  "claim_bearing": false,
+  "title": "One-sided Q3 graph bounds do not imply central A-context control",
+  "question": "Do the two one-sided A^(-3/4) graph bounds used by the Q3 source lift imply the central conjugation bound ||A^(3/4) D A^(-3/4)|| needed by the EXP-001048 composition theorem?",
+  "input_boundary": {
+    "inherited_source": "EXP-001045 weighted mixed graph lift and EXP-001047 repeated-factor transport family",
+    "one_factor_hypotheses": "||D A^(-3/4)||<=1 and ||A^(-3/4)D||<=1",
+    "central_target": "||A^(3/4) D A^(-3/4)|| uniformly bounded",
+    "interpretation": "Finite operator inference boundary only; D is not identified with an actual unbounded Q3 source difference."
+  },
+  "operator_witness": {
+    "basis": "e_0,e_1,e_2",
+    "shift": "S e_0=e_1, S e_1=e_2, S e_2=0",
+    "energy": "A_n=diag(1,b^(4n),b^(8n))",
+    "factor": "D_n=S A_n^(3/4)=S diag(1,b^(3n),b^(6n))",
+    "exact_norms": {
+      "right_one_factor": "||D_n A_n^(-3/4)||_infty=1",
+      "left_one_factor": "||A_n^(-3/4)D_n||_infty=b^(-3n)<=1",
+      "central_context": "||A_n^(3/4)D_n A_n^(-3/4)||_infty=b^(6n)",
+      "ordinary_factor": "||D_n||_infty=b^(3n)"
+    },
+    "family_consequence": "For b=2 and n increasing, both one-sided bounds remain <=1 while the central context grows as 64^n."
+  },
+  "fixture": {
+    "base": 2,
+    "quartic_power": 4,
+    "cubic_power": 3,
+    "dimension": 3,
+    "n_values": [1, 2, 3]
+  },
+  "scope": {
+    "one_sided_bounds_uniform_in_fixture": true,
+    "central_context_inference_refuted": true,
+    "ordinary_context_inference_refuted": true,
+    "actual_q3_factor_identification": false,
+    "actual_q3_central_context_proved": false,
+    "actual_q3_history_closed": false,
+    "all_shape_exhaustion_closed": false,
+    "common_alpha_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true,
+    "not_closed": "The witness refutes only the inference from one-sided graph bounds to a central context. It does not prove that the actual Q3 central context is unbounded, and it does not close Q3 histories, first passage, exhaustion, common alpha, KMS/OS, GNS gap, continuum, C6, Sector A or Pre-A."
+  },
+  "adversarial_review": [
+    {
+      "axis": "abstract-witness promotion",
+      "check": "D_n is a finite operator witness and is not identified with the Q3 multiplier or source difference.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "orientation",
+      "check": "Both one-sided orientations are computed separately; the smaller left norm is not silently replaced by equality.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "central-context target",
+      "check": "The growing quantity is exactly A^(3/4) D A^(-3/4), the missing single-factor context in EXP-001048, not its repeated-product target.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "fractional powers",
+      "check": "A_n^(3/4) is represented by exact integer powers b^(3n); no floating-point estimate enters.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "Q3 conclusion",
+      "check": "The finite family rejects an inference rule only; it neither proves nor disproves an actual Q3 central-context theorem.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "Lean promotion",
+      "check": "R231 checks exact rational scales and norm fixtures, not unbounded domains or Q3 dynamics.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "QFT promotion",
+      "check": "No common alpha, KMS/OS reconstruction, GNS gap, continuum, C6, Sector A or Pre-A conclusion follows.",
+      "disposition": "UPHELD"
+    }
+  ],
+  "formal_integration": {
+    "lean_entry": "verification/lean/Tect/R231.lean",
+    "result_ids": [],
+    "negative_ids": [],
+    "changelog_event": null
+  },
+  "qft_interface": {
+    "closed": "A precise finite boundary showing that one-sided Q3 graph estimates do not supply the central A-power context required for naive word composition.",
+    "open": "An actual Q3 analytic/Frechet, heat-strip or state-weighted replacement remains necessary; Q3 history, first passage, exhaustion, common alpha, KMS, GNS gap, continuum, C6, Sector A and Pre-A remain open.",
+    "tect_boundary": "No heat_root_incidence or canonical A1/R-192 production owner is supplied."
+  },
+  "boundary": "T0 claim-nonbearing finite central-context inference boundary. It does not establish a Q3 no-go or a thermodynamic QFT.",
+  "next_action": "Replace the unavailable central context by a product-level analytic/Frechet, heat/strip-loss or state-weighted estimate, and test its spatial first-passage consequence without commuting growing A-powers through every bond."
+}

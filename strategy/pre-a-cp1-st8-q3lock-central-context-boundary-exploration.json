@@ -1,0 +1,63 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001049",
+  "title": "One-sided Q3 graph bounds do not imply central A-context control",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "question": "Do the two one-sided A^(-3/4) graph bounds used by the Q3 source lift imply the central conjugation bound ||A^(3/4) D A^(-3/4)|| needed by the EXP-001048 composition theorem?",
+  "method": [
+    "Reuse the exact positive diagonal energy family A_n=diag(1,2^(4n),2^(8n)) and raising shift S, but set D_n=S A_n^(3/4) so the target is a single central conjugation context.",
+    "Compute ||D_n A_n^(-3/4)||, ||A_n^(-3/4)D_n||, ||A_n^(3/4)D_n A_n^(-3/4)|| and ||D_n|| exactly for n=1,2,3 in primary SymPy and independent Fraction lanes.",
+    "Compile Lean R231 for the exact 2^3, 2^6, 2^12 and 2^18 fixtures and preserve the finite-operator/Q3 scope firewall."
+  ],
+  "finding": "The one-sided norms are 1 and 2^(-3n), while the single central context norm is 2^(6n)=64^n and the ordinary factor norm is 2^(3n). Therefore the one-sided graph estimates cannot by themselves imply the central A^(3/4) D A^(-3/4) context required by EXP-001048. This rejects an inference rule only; it does not identify the witness with an actual Q3 source difference or prove the actual Q3 central context unbounded.",
+  "decision_reason": "This is the direct next test after EXP-001048: it isolates the missing single-factor central context rather than repeating the prior repeated-product target. The result routes the proof toward a product-level analytic/Frechet, heat-strip or state-weighted estimate.",
+  "verdict": "advanced",
+  "boundary": "T0 claim-nonbearing finite central-context inference boundary. It does not establish a Q3 no-go or a thermodynamic QFT.",
+  "evidence_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-central-context-boundary-manifest.json#operator_witness",
+    "strategy/pre-a-cp1-st8-q3lock-central-context-boundary-certificate-260824.md#Finding",
+    "codes/foundations/pre_a_cp1_st8_q3lock_central_context_boundary.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_central_context_boundary_independent.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_central_context_boundary_verify.py#main",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-primary-pre-a-cp1-st8-q3lock-central-context-boundary/primary.json#assertions",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-primary-pre-a-cp1-st8-q3lock-central-context-boundary/independent.json#assertions",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-primary-pre-a-cp1-st8-q3lock-central-context-boundary/integrated.json#assertions",
+    "verification/lean/Tect/R231.lean#central_context_fixture",
+    "verification/lean/registry.json#entrypoints"
+  ],
+  "adversarial_review": [
+    {"axis": "abstract-witness promotion", "check": "D_n is a finite operator witness and is not identified with the Q3 multiplier or source difference.", "disposition": "UPHELD"},
+    {"axis": "orientation", "check": "Both one-sided orientations and their unequal exact values are retained.", "disposition": "UPHELD"},
+    {"axis": "central-context target", "check": "The growing quantity is the single A^(3/4) D A^(-3/4) context missing in EXP-001048, not its repeated-product target.", "disposition": "UPHELD"},
+    {"axis": "fractional powers", "check": "A_n^(3/4) is represented by exact integer powers 2^(3n); no floating point enters.", "disposition": "UPHELD"},
+    {"axis": "Q3 conclusion", "check": "The family rejects only the inference rule and does not prove an actual Q3 central-context no-go.", "disposition": "UPHELD"},
+    {"axis": "Lean promotion", "check": "R231 checks exact rational scales only, not unbounded domains or Q3 dynamics.", "disposition": "UPHELD"},
+    {"axis": "QFT promotion", "check": "No common alpha, KMS/OS reconstruction, GNS gap, continuum, C6, Sector A or Pre-A conclusion follows.", "disposition": "UPHELD"}
+  ],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-FIRST-PASSAGE-BACKBONE-REAL-TIME-PRODUCT-AND-ENERGY-TAIL-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-ENERGY-WEIGHTED-COMMUTATOR-GEVREY-LR-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+  ],
+  "related": [],
+  "prior_exploration_id": "EXP-001048",
+  "provenance": "contemporaneous",
+  "qft_interface": {
+    "closed": "A precise finite boundary showing that one-sided Q3 graph estimates do not supply the central A-power context needed for naive word composition.",
+    "open": "An actual Q3 analytic/Frechet, heat-strip or state-weighted replacement remains necessary; Q3 history, first passage, exhaustion, common alpha, KMS, GNS gap, continuum, C6, Sector A and Pre-A remain open.",
+    "tect_boundary": "No heat_root_incidence or canonical A1/R-192 production owner is supplied."
+  },
+  "formal_integration": {
+    "events": [],
+    "negatives": [],
+    "results": [],
+    "no_new_negative": true,
+    "no_pdf": true
+  },
+  "next_action": "Replace the unavailable central context by a product-level analytic/Frechet, heat/strip-loss or state-weighted estimate, retaining the spatial weight and both orientations, and test its first-passage consequence.",
+  "reviewed_on": "2026-08-24",
+  "recorded_at": "2026-08-25T02:00:00Z",
+  "recorded_by": "Codex"
+}
