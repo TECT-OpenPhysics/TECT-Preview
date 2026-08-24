@@ -1,0 +1,102 @@
+{
+  "schema": "tect/pre-a-cp1-st8-q3lock-actual-source-coefficient-product/1.0",
+  "exploration_id": "EXP-001050",
+  "prior_exploration_id": "EXP-001049",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "tier": "T0",
+  "claim_bearing": false,
+  "title": "Actual Q3 source polynomial coefficient-product envelope",
+  "question": "Does the actual shifted Q3 source polynomial embed into a weighted coefficient algebra with norm B, so that formal Cauchy products provide a B^n history envelope without the unavailable central A-context?",
+  "upstream_input": {
+    "rate_manifest": "strategy/pre-a-cp1-st8-q3lock-weighted-mixed-graph-lift-manifest.json",
+    "rate_exploration": "EXP-001045",
+    "source_polynomial": "P=onsite(q,a)+3*edge_u(q,v,a)+6*bond_u(q,v,a)",
+    "weighted_norm": "sum |c_(i,j,k)| R_q^i R_v^j S^k with R_q=4, R_v=8, S=1/4",
+    "rate_role": "The coefficient norm B is a formal polynomial majorant; it is not an operator-domain or Q3 history theorem."
+  },
+  "coefficient_model": {
+    "variables": ["q", "v", "a"],
+    "radii": ["4", "8", "1/4"],
+    "norm": "weighted l1 coefficient norm",
+    "product": "Cauchy convolution of coefficient arrays",
+    "theorem": "||P^n||_(R_q,R_v,S)<=||P||_(R_q,R_v,S)^n=B^n",
+    "orientations": "The source-at-neighbor relabelled polynomial uses radii (8,4,1/4) and has the same norm."
+  },
+  "first_passage_bridge": {
+    "hypothesis": "A separate operator-to-coefficient map and nonnegative factorial spatial incidence are supplied.",
+    "orientations": 2,
+    "degree_bound": 6,
+    "spatial_base": 2,
+    "time": "1/1000",
+    "distance": 10,
+    "exponent": "eta=orientations*degree_bound*spatial_base*B*time"
+  },
+  "scope": {
+    "actual_q3_polynomial_reconstructed": true,
+    "coefficient_norm_B_recomputed": true,
+    "cauchy_product_envelope_closed_formally": true,
+    "operator_to_coefficient_map_proved": false,
+    "factorial_incidence_hypothesis_supplied": false,
+    "actual_q3_history_closed": false,
+    "all_shape_exhaustion_closed": false,
+    "common_alpha_closed": false,
+    "kms_os_closed": false,
+    "gns_gap_closed": false,
+    "continuum_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true,
+    "not_closed": "The actual polynomial coefficient envelope is formal. The operator-to-coefficient map, factorial Q3 incidence, spatial first passage, exhaustion Cauchy, common alpha, KMS/OS reconstruction, GNS gap, continuum, C6, Sector A and Pre-A remain open."
+  },
+  "adversarial_review": [
+    {
+      "axis": "actual polynomial scope",
+      "check": "The onsite, edge and bond source polynomials are reconstructed from the registered Q3 potential and the spatial multiplicities are explicit.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "formal versus operator norm",
+      "check": "The weighted l1 coefficient norm is not an unbounded-operator norm and no operator-to-coefficient map is silently assumed to be proved.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "orientation",
+      "check": "The relabelled source orientation is computed with swapped field radii and checked separately.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "history promotion",
+      "check": "Cauchy product continuity supplies a formal B^n envelope only; factorial operator incidence and spatial path counting remain hypotheses.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "radius loss",
+      "check": "The finite polynomial has no same-radius derivative claim; EXP-001042's strict radius-loss boundary remains in force.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "Lean promotion",
+      "check": "R232 checks exact rate, product-power and exponent fixtures, not the infinite coefficient theorem or Q3 domains.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "QFT promotion",
+      "check": "No thermodynamic dynamics, KMS/OS reconstruction, GNS gap, continuum, C6, Sector A or Pre-A conclusion follows.",
+      "disposition": "UPHELD"
+    }
+  ],
+  "formal_integration": {
+    "lean_entry": "verification/lean/Tect/R232.lean",
+    "result_ids": [],
+    "negative_ids": [],
+    "changelog_event": null
+  },
+  "qft_interface": {
+    "closed": "A formal actual-Q3 source polynomial coefficient envelope with two-orientation relabeling and Cauchy-product B^n control.",
+    "open": "The operator-to-coefficient realization, factorial incidence, spatial first passage, exhaustion, common alpha, KMS, GNS gap, continuum, C6, Sector A and Pre-A remain open.",
+    "tect_boundary": "No heat_root_incidence or canonical A1/R-192 production owner is supplied."
+  },
+  "boundary": "T0 claim-nonbearing formal analytic/Frechet candidate. It avoids the central A-context inference but does not prove a Q3 history or thermodynamic QFT.",
+  "next_action": "Define an explicit Q3 common-core map into this weighted coefficient algebra, or produce an obstruction; then test whether its coefficient incidence carries the required spatial path weight and factorial response."
+}

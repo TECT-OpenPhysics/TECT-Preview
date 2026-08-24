@@ -1,0 +1,280 @@
+{
+  "assertion_count": 26,
+  "assertions": [
+    {
+      "actual": [
+        "EXP-001050",
+        "T-054"
+      ],
+      "expected": "EXP-001050/T-054",
+      "name": "identity",
+      "pass": true
+    },
+    {
+      "actual": "EXP-001045",
+      "expected": "EXP-001045",
+      "name": "upstream identity",
+      "pass": true
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "claim nonbearing",
+      "pass": true
+    },
+    {
+      "actual": {
+        "actual_q3_history_closed": false,
+        "actual_q3_polynomial_reconstructed": true,
+        "all_shape_exhaustion_closed": false,
+        "cauchy_product_envelope_closed_formally": true,
+        "coefficient_norm_B_recomputed": true,
+        "common_alpha_closed": false,
+        "continuum_closed": false,
+        "factorial_incidence_hypothesis_supplied": false,
+        "gns_gap_closed": false,
+        "kms_os_closed": false,
+        "no_new_negative_result": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "not_closed": "The actual polynomial coefficient envelope is formal. The operator-to-coefficient map, factorial Q3 incidence, spatial first passage, exhaustion Cauchy, common alpha, KMS/OS reconstruction, GNS gap, continuum, C6, Sector A and Pre-A remain open.",
+        "operator_to_coefficient_map_proved": false
+      },
+      "expected": "formal/open",
+      "name": "formal/open scope",
+      "pass": true
+    },
+    {
+      "actual": [
+        "source_rate_fixture",
+        "reverse_rate_fixture",
+        "product_power_fixture",
+        "exponent_fixture",
+        "scope_fixture"
+      ],
+      "expected": "present",
+      "name": "Lean source",
+      "pass": true
+    },
+    {
+      "actual": [],
+      "expected": "none",
+      "name": "Lean forbidden",
+      "pass": true
+    },
+    {
+      "actual": "PRIMARY Q3-ACTUAL-SOURCE-COEFFICIENT PASS 20/20\n",
+      "expected": "PASS",
+      "name": "primary child",
+      "pass": true
+    },
+    {
+      "actual": "INDEPENDENT Q3-ACTUAL-SOURCE-COEFFICIENT PASS 17/17\n",
+      "expected": "PASS",
+      "name": "independent child",
+      "pass": true
+    },
+    {
+      "actual": [
+        20,
+        17
+      ],
+      "expected": ">0",
+      "name": "positive totals",
+      "pass": true
+    },
+    {
+      "actual": [
+        "1382807/7168",
+        "1382807/7168"
+      ],
+      "expected": "equal",
+      "name": "lane agreement source_rate_B",
+      "pass": true
+    },
+    {
+      "actual": [
+        "1382807/7168",
+        "1382807/7168"
+      ],
+      "expected": "equal",
+      "name": "lane agreement reverse_rate_B",
+      "pass": true
+    },
+    {
+      "actual": [
+        "4",
+        "4"
+      ],
+      "expected": "equal",
+      "name": "lane agreement field_radius_center",
+      "pass": true
+    },
+    {
+      "actual": [
+        "8",
+        "8"
+      ],
+      "expected": "equal",
+      "name": "lane agreement field_radius_neighbor",
+      "pass": true
+    },
+    {
+      "actual": [
+        "1/4",
+        "1/4"
+      ],
+      "expected": "equal",
+      "name": "lane agreement source_radius",
+      "pass": true
+    },
+    {
+      "actual": [
+        4,
+        4
+      ],
+      "expected": "equal",
+      "name": "lane agreement product_lengths_checked",
+      "pass": true
+    },
+    {
+      "actual": [
+        true,
+        true
+      ],
+      "expected": "equal",
+      "name": "lane agreement center_coefficient_embedding_closed_formally",
+      "pass": true
+    },
+    {
+      "actual": [
+        true,
+        true
+      ],
+      "expected": "equal",
+      "name": "lane agreement reverse_coefficient_embedding_closed_formally",
+      "pass": true
+    },
+    {
+      "actual": [
+        true,
+        true
+      ],
+      "expected": "equal",
+      "name": "lane agreement cauchy_product_envelope_closed_formally",
+      "pass": true
+    },
+    {
+      "actual": [
+        false,
+        false
+      ],
+      "expected": "equal",
+      "name": "lane agreement operator_to_coefficient_map_proved",
+      "pass": true
+    },
+    {
+      "actual": [
+        false,
+        false
+      ],
+      "expected": "equal",
+      "name": "lane agreement factorial_incidence_hypothesis_supplied",
+      "pass": true
+    },
+    {
+      "actual": [
+        "4148421/896000",
+        "4148421/896000"
+      ],
+      "expected": "equal",
+      "name": "lane agreement eta",
+      "pass": true
+    },
+    {
+      "actual": [
+        10,
+        10
+      ],
+      "expected": "equal",
+      "name": "lane agreement distance",
+      "pass": true
+    },
+    {
+      "actual": [
+        false,
+        false
+      ],
+      "expected": "equal",
+      "name": "lane agreement actual_q3_history_closed",
+      "pass": true
+    },
+    {
+      "actual": [
+        false,
+        false
+      ],
+      "expected": "equal",
+      "name": "lane agreement common_alpha_closed",
+      "pass": true
+    },
+    {
+      "actual": [
+        "1382807/7168",
+        "1382807/7168"
+      ],
+      "expected": "1382807/7168",
+      "name": "upstream rate preserved",
+      "pass": true
+    },
+    {
+      "actual": {
+        "command": "lake env lean Tect/R232.lean",
+        "output": "",
+        "returncode": 0,
+        "status": "PASS"
+      },
+      "expected": "PASS",
+      "name": "Lean compile",
+      "pass": true
+    }
+  ],
+  "audit_id": "PA-CP1-ST8-Q3LOCK-ACTUAL-SOURCE-COEFFICIENT-PRODUCT",
+  "boundary": {
+    "actual_q3_history_closed": false,
+    "actual_q3_polynomial_reconstructed": true,
+    "all_shape_exhaustion_closed": false,
+    "cauchy_product_envelope_closed_formally": true,
+    "coefficient_norm_B_recomputed": true,
+    "common_alpha_closed": false,
+    "continuum_closed": false,
+    "factorial_incidence_hypothesis_supplied": false,
+    "gns_gap_closed": false,
+    "kms_os_closed": false,
+    "no_new_negative_result": true,
+    "no_pdf": true,
+    "no_tier_change": true,
+    "not_closed": "The actual polynomial coefficient envelope is formal. The operator-to-coefficient map, factorial Q3 incidence, spatial first passage, exhaustion Cauchy, common alpha, KMS/OS reconstruction, GNS gap, continuum, C6, Sector A and Pre-A remain open.",
+    "operator_to_coefficient_map_proved": false
+  },
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "exploration_id": "EXP-001050",
+  "lean": {
+    "command": "lake env lean Tect/R232.lean",
+    "output": "",
+    "returncode": 0,
+    "status": "PASS"
+  },
+  "provenance": {
+    "independent_sha256": "32b30241d1665d8a6d3636a6dea0a72f353b733a74f546133afe292c645b354b",
+    "lean_sha256": "9c04f54eb0cd504c06ea7128ab145aad279efeda4e5b5412387b619334ec12ca",
+    "manifest_sha256": "634e9f95bec7f1139712b14d747d24249d4d459042126263255c3064d45b39db",
+    "primary_sha256": "aa14830bd31e8108f384dddf6c61da935b50d2fb711b459ac128f6003aae4e06",
+    "upstream_manifest_sha256": "67e064ce6248824c9071ebaac22c939bc8fc787132e214524da633b1c8526894"
+  },
+  "recorded_at": "2026-08-24T03:18:49.764901Z",
+  "run_kind": "integrated",
+  "schema": "tect/foundation-audit/1.0",
+  "task_id": "T-054",
+  "verdict": "PASS"
+}

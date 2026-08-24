@@ -1,0 +1,63 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001050",
+  "title": "Actual Q3 source polynomial coefficient-product envelope",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "question": "Does the actual shifted Q3 source polynomial embed into a weighted coefficient algebra with norm B, so that formal Cauchy products provide a B^n history envelope without the unavailable central A-context?",
+  "method": [
+    "Reconstruct P=onsite(q,a)+3*edge_u(q,v,a)+6*bond_u(q,v,a) from the registered Q3 potentials and compute its weighted l1 coefficient norm with radii (4,8,1/4), reproducing the EXP-001045 mixed rate.",
+    "Construct the source-at-neighbor relabelled polynomial with swapped radii (8,4,1/4) and verify the same exact norm in independent SymPy and Fraction lanes.",
+    "Expand P^n and its relabelled counterpart for n=1,2,3,4 and check the formal Cauchy-product bounds ||P^n||<=B^n, then compile Lean R232 for the exact rate and first-passage exponent fixtures."
+  ],
+  "finding": "The actual shifted Q3 source polynomial has weighted coefficient norm B=1382807/7168 in both source orientations. Formal Cauchy products satisfy the exact B^n envelope for lengths one through four, and the separately conditional two-orientation spatial EGF has eta=4148421/896000. The operator-to-coefficient map and factorial Q3 incidence are not proved.",
+  "decision_reason": "This is the first concrete analytic/Frechet candidate after the central-context inference boundary: it uses actual Q3 polynomial coefficients and avoids commuting growing A-powers through each factor, while explicitly isolating the missing operator realization and spatial history incidence.",
+  "verdict": "advanced",
+  "boundary": "T0 claim-nonbearing formal analytic/Frechet candidate. It does not prove a Q3 history or thermodynamic QFT.",
+  "evidence_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-actual-source-coefficient-product-manifest.json#coefficient_model",
+    "strategy/pre-a-cp1-st8-q3lock-actual-source-coefficient-product-certificate-260824.md#Scope",
+    "codes/foundations/pre_a_cp1_st8_q3lock_actual_source_coefficient_product.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_actual_source_coefficient_product_independent.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_actual_source_coefficient_product_verify.py#main",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-primary-pre-a-cp1-st8-q3lock-actual-source-coefficient-product/primary.json#assertions",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-primary-pre-a-cp1-st8-q3lock-actual-source-coefficient-product/independent.json#assertions",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-primary-pre-a-cp1-st8-q3lock-actual-source-coefficient-product/integrated.json#assertions",
+    "verification/lean/Tect/R232.lean#product_power_fixture",
+    "verification/lean/registry.json#entrypoints"
+  ],
+  "adversarial_review": [
+    {"axis": "actual polynomial scope", "check": "The onsite, edge and bond source polynomials and spatial multiplicities are reconstructed from the registered Q3 potential.", "disposition": "UPHELD"},
+    {"axis": "formal versus operator norm", "check": "The weighted l1 coefficient norm is not an unbounded-operator norm and the operator-to-coefficient map remains open.", "disposition": "UPHELD"},
+    {"axis": "orientation", "check": "The relabelled source orientation is computed with swapped field radii and checked independently.", "disposition": "UPHELD"},
+    {"axis": "history promotion", "check": "Cauchy product continuity gives a formal B^n envelope only; factorial operator incidence and spatial path counting remain hypotheses.", "disposition": "UPHELD"},
+    {"axis": "radius loss", "check": "No same-radius derivative theorem is inferred; EXP-001042's strict radius-loss boundary remains active.", "disposition": "UPHELD"},
+    {"axis": "Lean promotion", "check": "R232 checks finite rate, product-power and exponent arithmetic only.", "disposition": "UPHELD"},
+    {"axis": "QFT promotion", "check": "No thermodynamic dynamics, KMS/OS reconstruction, GNS gap, continuum, C6, Sector A or Pre-A conclusion follows.", "disposition": "UPHELD"}
+  ],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-ENERGY-WEIGHTED-COMMUTATOR-GEVREY-LR-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-FIRST-PASSAGE-BACKBONE-REAL-TIME-PRODUCT-AND-ENERGY-TAIL-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+  ],
+  "related": [],
+  "prior_exploration_id": "EXP-001049",
+  "provenance": "contemporaneous",
+  "qft_interface": {
+    "closed": "A formal actual-Q3 source polynomial coefficient envelope with two-orientation relabeling and Cauchy-product B^n control.",
+    "open": "The operator-to-coefficient realization, factorial incidence, spatial first passage, exhaustion, common alpha, KMS, GNS gap, continuum, C6, Sector A and Pre-A remain open.",
+    "tect_boundary": "No heat_root_incidence or canonical A1/R-192 production owner is supplied."
+  },
+  "formal_integration": {
+    "events": [],
+    "negatives": [],
+    "results": [],
+    "no_new_negative": true,
+    "no_pdf": true
+  },
+  "next_action": "Define an explicit Q3 common-core map into the weighted coefficient algebra, or produce an obstruction; then test whether its coefficient incidence carries the required spatial path weight and factorial response.",
+  "reviewed_on": "2026-08-24",
+  "recorded_at": "2026-08-25T02:30:00Z",
+  "recorded_by": "Codex"
+}
