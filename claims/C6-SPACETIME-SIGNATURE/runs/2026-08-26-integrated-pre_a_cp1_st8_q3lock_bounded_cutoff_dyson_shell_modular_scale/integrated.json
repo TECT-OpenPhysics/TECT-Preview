@@ -1,0 +1,124 @@
+{
+  "assertion_count": 14,
+  "assertions": [
+    {
+      "actual": "['EXP-001091', 'T-054']",
+      "expected": "EXP-001091/T-054",
+      "name": "identity",
+      "pass": true
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "name": "claim nonbearing",
+      "pass": true
+    },
+    {
+      "actual": "{'bounded_cutoff_dyson_envelope_closed': True, 'scale_balance_closed': True, 'two_sign_static_plus_dynamic_arithmetic_closed': True, 'actual_q3_modular_history_envelope_closed': False, 'actual_q3_unbounded_tail_comparison_closed': False, 'volume_uniform_direct_d_delta_d_closed': False, 'exhaustion_independence_closed': False, 'common_alpha_closed': False, 'kms_gns_gap_closed': False, 'continuum_closed': False, 'c6_closed': False, 'sector_a_closed': False, 'pre_a_closed': False}",
+      "expected": "bounded bridge with actual Q3 hypotheses open",
+      "name": "scope firewall",
+      "pass": true
+    },
+    {
+      "actual": "['dyson_coefficient_fixture', 'modular_coefficient_fixture', 'sublinear_scale_fixture', 'factorial_exponent_fixture', 'static_margin_d_fixture', 'static_margin_delta_fixture', 'orientation_fixture', 'scale_radius_fixture', 'scope_fixture']",
+      "expected": "present",
+      "name": "Lean source",
+      "pass": true
+    },
+    {
+      "actual": "[]",
+      "expected": "none",
+      "name": "Lean forbidden",
+      "pass": true
+    },
+    {
+      "actual": "PRIMARY BOUNDED-CUTOFF-DYSON-SHELL PASS 20/20\n",
+      "expected": "PASS",
+      "name": "primary child",
+      "pass": true
+    },
+    {
+      "actual": "INDEPENDENT BOUNDED-CUTOFF-DYSON-SHELL PASS 15/15\n",
+      "expected": "PASS",
+      "name": "independent child",
+      "pass": true
+    },
+    {
+      "actual": "['6/25', '6/25', '12/25', '12/25']",
+      "expected": "equal",
+      "name": "kappa agreement",
+      "pass": true
+    },
+    {
+      "actual": "[3, 3]",
+      "expected": "3",
+      "name": "row count",
+      "pass": true
+    },
+    {
+      "actual": "[{'D_dynamic_bound': 8.15196741404168e-18, 'D_dynamic_log_bound': -39.34827237527655, 'D_static_bound': 2.0341528753571375e-60, 'D_static_log_bound': -137.44502612488148, 'cutoff': 4, 'delta_D_dynamic_bound': 6.129352477430646e-16, 'delta_D_dynamic_log_bound': -35.02827237527655, 'delta_D_static_bound': 1.9176571372725422e-71, 'delta_D_static_log_bound': -162.8324374026417, 'interaction_bound': 0.18, 'lambda_L': 2.16, 'lambda_modular_L': 4.32, 'radius': 64}, {'D_dynamic_bound': 8.15196741404168e-18, 'D_dynamic_log_bound': -39.34827237527655, 'D_static_bound': 2.0341528753571375e-60, 'D_static_log_bound': -137.44502612488148, 'cutoff': 4, 'delta_D_dynamic_bound': 6.129352477430646e-16, 'delta_D_dynamic_log_bound': -35.02827237527655, 'delta_D_static_bound': 1.9176571372725422e-71, 'delta_D_static_log_bound': -162.8324374026417, 'interaction_bound': 0.18, 'lambda_L': 2.16, 'lambda_modular_L': 4.32, 'radius': 64}]",
+      "expected": "within 1e-12 relative",
+      "name": "R=64 row agreement",
+      "pass": true
+    },
+    {
+      "actual": "[{'D_dynamic_bound': 1.1295275003466468e-147, 'D_dynamic_log_bound': -338.35820926613206, 'D_static_bound': 5.800890271443439e-260, 'D_static_log_bound': -596.9141127776022, 'cutoff': 8, 'delta_D_dynamic_bound': 8.553057710961473e-141, 'delta_D_dynamic_log_bound': -322.51820926613203, 'delta_D_static_bound': 4.474496605147722e-307, 'delta_D_static_log_bound': -705.3952296942425, 'interaction_bound': 0.66, 'lambda_L': 7.92, 'lambda_modular_L': 15.84, 'radius': 512}, {'D_dynamic_bound': 1.1295275003466468e-147, 'D_dynamic_log_bound': -338.35820926613206, 'D_static_bound': 5.800890271443439e-260, 'D_static_log_bound': -596.9141127776022, 'cutoff': 8, 'delta_D_dynamic_bound': 8.553057710961473e-141, 'delta_D_dynamic_log_bound': -322.51820926613203, 'delta_D_static_bound': 4.474496605147722e-307, 'delta_D_static_log_bound': -705.3952296942425, 'interaction_bound': 0.66, 'lambda_L': 7.92, 'lambda_modular_L': 15.84, 'radius': 512}]",
+      "expected": "within 1e-12 relative",
+      "name": "R=512 row agreement",
+      "pass": true
+    },
+    {
+      "actual": "[{'D_dynamic_bound': 0.0, 'D_dynamic_log_bound': -2776.517704392976, 'D_static_bound': 0.0, 'D_static_log_bound': -2461.823199430323, 'cutoff': 16, 'delta_D_dynamic_bound': 0.0, 'delta_D_dynamic_log_bound': -2714.597704392976, 'delta_D_static_bound': 0.0, 'delta_D_static_log_bound': -2906.838021985843, 'interaction_bound': 2.58, 'lambda_L': 30.96, 'lambda_modular_L': 61.92, 'radius': 4096}, {'D_dynamic_bound': 0.0, 'D_dynamic_log_bound': -2776.517704392976, 'D_static_bound': 0.0, 'D_static_log_bound': -2461.823199430323, 'cutoff': 16, 'delta_D_dynamic_bound': 0.0, 'delta_D_dynamic_log_bound': -2714.597704392976, 'delta_D_static_bound': 0.0, 'delta_D_static_log_bound': -2906.838021985843, 'interaction_bound': 2.58, 'lambda_L': 30.96, 'lambda_modular_L': 61.92, 'radius': 4096}]",
+      "expected": "within 1e-12 relative",
+      "name": "R=4096 row agreement",
+      "pass": true
+    },
+    {
+      "actual": "C:\\Users\\NaEun\\.elan\\toolchains\\leanprover--lean4---v4.32.1\\bin\\lake.exe",
+      "expected": "available",
+      "name": "pinned Lake",
+      "pass": true
+    },
+    {
+      "actual": "{'status': 'PASS', 'command': 'lake env lean Tect/R273.lean', 'returncode': 0, 'output': ''}",
+      "expected": "PASS",
+      "name": "Lean compile",
+      "pass": true
+    }
+  ],
+  "audit_id": "PA-CP1-ST8-Q3LOCK-BOUNDED-CUTOFF-DYSON-SHELL-MODULAR-SCALE",
+  "boundary": {
+    "actual_q3_modular_history_envelope_closed": false,
+    "actual_q3_unbounded_tail_comparison_closed": false,
+    "bounded_cutoff_dyson_envelope_closed": true,
+    "c6_closed": false,
+    "common_alpha_closed": false,
+    "continuum_closed": false,
+    "exhaustion_independence_closed": false,
+    "kms_gns_gap_closed": false,
+    "pre_a_closed": false,
+    "scale_balance_closed": true,
+    "sector_a_closed": false,
+    "two_sign_static_plus_dynamic_arithmetic_closed": true,
+    "volume_uniform_direct_d_delta_d_closed": false
+  },
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "exploration_id": "EXP-001091",
+  "lean": {
+    "command": "lake env lean Tect/R273.lean",
+    "output": "",
+    "returncode": 0,
+    "status": "PASS"
+  },
+  "provenance": {
+    "independent_sha256": "7f77a14962856708eb95b5dd295eb4a5557e1d3a3cd9bf394e5a4c52af964b3b",
+    "lean_sha256": "4c7dbe4999d57ad8ba65e4845eec7cde5c61e9d9c07f558c3e8978ca02c7afce",
+    "manifest_sha256": "12b3288bc0aabd7dd58339ac9eb8124fffd24f21ef7d53c9e7b49898e0477f9f",
+    "primary_sha256": "906a44df734043372a2984601a5a9bd6d6bc2e29b358af38946223aa15fed889"
+  },
+  "recorded_at": "2026-08-24T22:48:04.537630Z",
+  "run_kind": "integrated",
+  "schema": "tect/foundation-audit/1.0",
+  "task_id": "T-054",
+  "verdict": "PASS"
+}

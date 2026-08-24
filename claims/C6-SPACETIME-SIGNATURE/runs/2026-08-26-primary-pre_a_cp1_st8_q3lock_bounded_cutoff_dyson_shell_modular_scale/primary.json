@@ -1,0 +1,243 @@
+{
+  "assertions": [
+    {
+      "actual": "['EXP-001091', 'T-054']",
+      "expected": "EXP-001091/T-054",
+      "group": "provenance",
+      "name": "identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "group": "scope",
+      "name": "claim nonbearing",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'bounded_cutoff_dyson_envelope_closed': True, 'scale_balance_closed': True, 'two_sign_static_plus_dynamic_arithmetic_closed': True, 'actual_q3_modular_history_envelope_closed': False, 'actual_q3_unbounded_tail_comparison_closed': False, 'volume_uniform_direct_d_delta_d_closed': False, 'exhaustion_independence_closed': False, 'common_alpha_closed': False, 'kms_gns_gap_closed': False, 'continuum_closed': False, 'c6_closed': False, 'sector_a_closed': False, 'pre_a_closed': False}",
+      "expected": "bounded bridge only",
+      "group": "scope",
+      "name": "scope firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": "6",
+      "expected": "6",
+      "group": "fixture",
+      "name": "positive graph degree",
+      "status": "PASS"
+    },
+    {
+      "actual": "[Fraction(1, 50), Fraction(1, 100)]",
+      "expected": ">0",
+      "group": "fixture",
+      "name": "positive interaction coefficients",
+      "status": "PASS"
+    },
+    {
+      "actual": "2",
+      "expected": ">1",
+      "group": "fixture",
+      "name": "weight base",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/3",
+      "expected": "0<alpha<1/2",
+      "group": "scale",
+      "name": "sublinear scale",
+      "status": "PASS"
+    },
+    {
+      "actual": "2",
+      "expected": "2",
+      "group": "two orientations",
+      "name": "orientation count",
+      "status": "PASS"
+    },
+    {
+      "actual": "244/25",
+      "expected": ">0",
+      "group": "scale balance",
+      "name": "static margin D",
+      "status": "PASS"
+    },
+    {
+      "actual": "288/25",
+      "expected": ">0",
+      "group": "scale balance",
+      "name": "static margin delta-D",
+      "status": "PASS"
+    },
+    {
+      "actual": "-1/3",
+      "expected": "<0",
+      "group": "scale balance",
+      "name": "factorial exponent",
+      "status": "PASS"
+    },
+    {
+      "actual": "64",
+      "expected": "64",
+      "group": "scale fixture",
+      "name": "R=64 perfect scale",
+      "status": "PASS"
+    },
+    {
+      "actual": "[-39.34827237527655, -35.02827237527655, -137.44502612488148, -162.8324374026417]",
+      "expected": "finite",
+      "group": "arithmetic",
+      "name": "R=64 finite logs",
+      "status": "PASS"
+    },
+    {
+      "actual": "512",
+      "expected": "512",
+      "group": "scale fixture",
+      "name": "R=512 perfect scale",
+      "status": "PASS"
+    },
+    {
+      "actual": "[-338.35820926613206, -322.51820926613203, -596.9141127776022, -705.3952296942425]",
+      "expected": "finite",
+      "group": "arithmetic",
+      "name": "R=512 finite logs",
+      "status": "PASS"
+    },
+    {
+      "actual": "4096",
+      "expected": "4096",
+      "group": "scale fixture",
+      "name": "R=4096 perfect scale",
+      "status": "PASS"
+    },
+    {
+      "actual": "[-2776.517704392976, -2714.597704392976, -2461.823199430323, -2906.838021985843]",
+      "expected": "finite",
+      "group": "arithmetic",
+      "name": "R=4096 finite logs",
+      "status": "PASS"
+    },
+    {
+      "actual": "[64, 512, 4096]",
+      "expected": "[64, 512, 4096]",
+      "group": "scale fixture",
+      "name": "radius sequence",
+      "status": "PASS"
+    },
+    {
+      "actual": "[-39.34827237527655, -2776.517704392976, -35.02827237527655, -2714.597704392976]",
+      "expected": "decreasing",
+      "group": "arithmetic",
+      "name": "large-scale decay fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": "[-137.44502612488148, -2461.823199430323, -162.8324374026417, -2906.838021985843]",
+      "expected": "decreasing",
+      "group": "arithmetic",
+      "name": "static decay fixture",
+      "status": "PASS"
+    }
+  ],
+  "audit_id": "PA-CP1-ST8-Q3LOCK-BOUNDED-CUTOFF-DYSON-SHELL-MODULAR-SCALE",
+  "boundary": {
+    "actual_q3_modular_history_envelope_closed": false,
+    "actual_q3_unbounded_tail_comparison_closed": false,
+    "bounded_cutoff_dyson_envelope_closed": true,
+    "c6_closed": false,
+    "common_alpha_closed": false,
+    "continuum_closed": false,
+    "exhaustion_independence_closed": false,
+    "kms_gns_gap_closed": false,
+    "pre_a_closed": false,
+    "scale_balance_closed": true,
+    "sector_a_closed": false,
+    "two_sign_static_plus_dynamic_arithmetic_closed": true,
+    "volume_uniform_direct_d_delta_d_closed": false
+  },
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "derived": {
+    "actual_q3_modular_history_envelope_closed": false,
+    "actual_q3_unbounded_tail_comparison_closed": false,
+    "alpha": "1/3",
+    "bounded_cutoff_dyson_envelope_closed": true,
+    "common_alpha_closed": false,
+    "degree": "6",
+    "kappa0": "6/25",
+    "kappa1": "12/25",
+    "lambda_L_formula": "2*Delta*T*(v0+v2*L^2)/hbar",
+    "rows": [
+      {
+        "D_dynamic_bound": 8.15196741404168e-18,
+        "D_dynamic_log_bound": -39.34827237527655,
+        "D_static_bound": 2.0341528753571375e-60,
+        "D_static_log_bound": -137.44502612488148,
+        "cutoff": 4,
+        "delta_D_dynamic_bound": 6.129352477430646e-16,
+        "delta_D_dynamic_log_bound": -35.02827237527655,
+        "delta_D_static_bound": 1.9176571372725422e-71,
+        "delta_D_static_log_bound": -162.8324374026417,
+        "interaction_bound": 0.18,
+        "lambda_L": 2.16,
+        "lambda_modular_L": 4.32,
+        "radius": 64
+      },
+      {
+        "D_dynamic_bound": 1.1295275003466468e-147,
+        "D_dynamic_log_bound": -338.35820926613206,
+        "D_static_bound": 5.800890271443439e-260,
+        "D_static_log_bound": -596.9141127776022,
+        "cutoff": 8,
+        "delta_D_dynamic_bound": 8.553057710961473e-141,
+        "delta_D_dynamic_log_bound": -322.51820926613203,
+        "delta_D_static_bound": 4.474496605147722e-307,
+        "delta_D_static_log_bound": -705.3952296942425,
+        "interaction_bound": 0.66,
+        "lambda_L": 7.92,
+        "lambda_modular_L": 15.84,
+        "radius": 512
+      },
+      {
+        "D_dynamic_bound": 0.0,
+        "D_dynamic_log_bound": -2776.517704392976,
+        "D_static_bound": 0.0,
+        "D_static_log_bound": -2461.823199430323,
+        "cutoff": 16,
+        "delta_D_dynamic_bound": 0.0,
+        "delta_D_dynamic_log_bound": -2714.597704392976,
+        "delta_D_static_bound": 0.0,
+        "delta_D_static_log_bound": -2906.838021985843,
+        "interaction_bound": 2.58,
+        "lambda_L": 30.96,
+        "lambda_modular_L": 61.92,
+        "radius": 4096
+      }
+    ],
+    "scale_balance_closed": true,
+    "static_margins": [
+      "244/25",
+      "288/25"
+    ],
+    "two_alpha_minus_one": "-1/3",
+    "volume_uniform_direct_d_delta_d_closed": false
+  },
+  "exploration_id": "EXP-001091",
+  "failed": 0,
+  "hypotheses": {
+    "bond_bound": "every interaction-picture cutoff bond has operator norm at most V_L=v0+v2 L^2",
+    "commutator_bound": "the induced bond derivation norm is at most 2 V_L / hbar",
+    "first_passage": "a response at graph distance R requires at least R bond insertions in the Dyson series",
+    "graph": "locally finite graph with maximum degree Delta",
+    "modular_extension": "for delta-D an additional declared modular multiplier m1 is assumed uniformly in volume, source, and intermediate background",
+    "onsite_flow": "the tensor-local onsite flow is norm-isometric and preserves support",
+    "two_orientations": "the same envelope is required for both time signs"
+  },
+  "passed": 20,
+  "run_kind": "primary",
+  "schema": "tect/foundation-audit/1.0",
+  "task_id": "T-054",
+  "total": 20,
+  "verdict": "PASS"
+}

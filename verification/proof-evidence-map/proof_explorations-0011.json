@@ -9296,6 +9296,127 @@
       "task_id": "T-054",
       "title": "Actual-Q3 positive-time Kubo-Mori logarithmic-mean history audit",
       "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "axis": "bounded versus unbounded Q3",
+          "check": "The Dyson estimate uses the declared cutoff bond bound only; no full-versus-cutoff comparison is silently inserted.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "onsite support flow",
+          "check": "Norm-isometry and support preservation are explicit hypotheses and are not inferred from the fixture.",
+          "disposition": "UPHELD-AS-HYPOTHESIS"
+        },
+        {
+          "axis": "first-passage distance",
+          "check": "The R-insertion lower bound is conditional on the actual local graph and support notion.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "modular multiplier",
+          "check": "delta-D carries an additional multiplier uniform in volume, source, and intermediate background; finite arithmetic does not prove it.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "two orientations",
+          "check": "Both signs are included through the explicit factor two and both dynamic/static rows.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "asymptotic inference",
+          "check": "Three radii are a finite fixture; the symbolic alpha and positive-margin inequalities carry the only conditional asymptotic step.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "Lean scope",
+          "check": "R273 checks exact rational rates, scales, margins, orientation count, and scope only; it does not encode operator theory or QFT limits.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "QFT promotion",
+          "check": "Common alpha, KMS/OS/GNS, gap, continuum, C6, Sector A, and Pre-A remain explicitly false in the manifest and run JSON.",
+          "disposition": "UPHELD-OPEN"
+        }
+      ],
+      "boundary": "Bounded local graph, norm-isometric support-preserving onsite flow, cutoff bond bound v0+v2 L^2, first-passage distance hypothesis, two orientations, declared uniform modular multiplier, and finite rational fixture only. No actual-Q3 source/volume-uniform modular history, unbounded comparison, all-shape exhaustion, common alpha, KMS/OS/GNS identification, gap, continuum, C6, Sector A, Pre-A, TECT production owner, or Clay result follows.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "A deterministic bounded-cutoff Dyson factorial shell and its two-sign scale balance are now independently reproduced and exactly checked at the declared fixture. This advances the route only conditionally: the modular multiplier, actual-Q3 common-core history estimate, and full-versus-cutoff comparison have not been derived.",
+      "evidence_refs": [
+        "strategy/pre_a_cp1_st8_q3lock_bounded_cutoff_dyson_shell_modular_scale_manifest.json#derived_bridge",
+        "strategy/pre_a_cp1_st8_q3lock_bounded_cutoff_dyson_shell_modular_scale-certificate-260826.md#Conditional_bridge",
+        "codes/foundations/pre_a_cp1_st8_q3lock_bounded_cutoff_dyson_shell_modular_scale.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_bounded_cutoff_dyson_shell_modular_scale_independent.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_bounded_cutoff_dyson_shell_modular_scale_verify.py#run",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-primary-pre_a_cp1_st8_q3lock_bounded_cutoff_dyson_shell_modular_scale/primary.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-independent-pre_a_cp1_st8_q3lock_bounded_cutoff_dyson_shell_modular_scale/independent.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-integrated-pre_a_cp1_st8_q3lock_bounded_cutoff_dyson_shell_modular_scale/integrated.json#lean",
+        "verification/lean/Tect/R273.lean#dyson_coefficient_fixture",
+        "verification/lean/registry.json#R273"
+      ],
+      "finding": "The primary lane passes 20/20, the independent lane 15/15, and the integrated verifier 14/14 with Lean R273 PASS. The fixture gives kappa_D=6/25, kappa_delta-D=12/25, margins 244/25 and 288/25, alpha=1/3, and 2*alpha-1=-1/3. The primary and independent rows agree within 1e-12; the two-sign dynamic and static log bounds decrease over R=64,512,4096 after including the orientation factor.",
+      "formal_integration": {
+        "events": [],
+        "lean": "R273 PASS; exact rational fixtures only",
+        "negatives": [],
+        "no_new_event": true,
+        "no_new_negative": true,
+        "no_new_result": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "results": []
+      },
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": []
+      },
+      "gate_ids": [
+        "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+        "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001091",
+      "method": [
+        "Read the declared graph, onsite-flow, bond-norm, commutator, first-passage, two-sign, and modular-multiplier hypotheses from the manifest.",
+        "Derive lambda_L=2*Delta*T*(v0+v2*L^2)/hbar and apply the weighted factorial tail sum_{n>=R} lambda_L^n/n! <= b^(-R) exp(b lambda_L).",
+        "Combine the dynamic envelope with the registered static shells and choose L=R^alpha with 0<alpha<1/2 and positive static margins.",
+        "Run the manifest-derived primary arithmetic lane and an independently reconstructed lane, compare every scale row, and compile the exact rational fixtures in Lean R273.",
+        "Review the bounded/unbounded, modular, support, orientation, asymptotic, Lean-scope, and QFT-promotion boundaries adversarially."
+      ],
+      "next_action": "Derive the actual-Q3 modular-history envelope on the common core, or formalize a route-local obstruction if the multiplier cannot be made uniform; then prove full-versus-cutoff convergence before reassessing the common-alpha gate.",
+      "no_overclaim": "This is a claim-nonbearing conditional bounded-cutoff bridge. It is not a direct D or delta-D Cauchy theorem, not an actual-Q3 unbounded result, not a QFT reconstruction, not a mass-gap or continuum result, and not C6, Sector A, or Pre-A closure.",
+      "provenance": "contemporaneous",
+      "qft_interface": {
+        "closed": "The conditional dynamic factorial shell and registered static scale balance can supply the decay form required by a QFT locality/Cauchy bridge once the actual Q3 hypotheses are proved.",
+        "open": "Actual-Q3 modular history, unbounded tail comparison, direct volume/source-uniform D and delta-D bounds, common alpha, KMS/OS/GNS, physical gap, continuum, C6, Sector A, and Pre-A.",
+        "route": "Q3 Hamiltonian -> common core and uniform D,delta-D -> common alpha -> KMS/OS/GNS -> physical gap -> continuum; this package addresses only the conditional middle shell estimate."
+      },
+      "question": "Under an explicit bounded cutoff interaction and a declared modular-history multiplier, does a Dyson first-passage shell plus a sublinear cutoff scale give simultaneous two-sign D and delta-D decay?",
+      "recorded_at": "2026-08-26T17:30:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001090",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001028",
+          "relation": "alternative_to"
+        },
+        {
+          "id": "EXP-000798",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-08-25",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Bounded-cutoff Dyson first-passage shell and modular scale bridge",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",

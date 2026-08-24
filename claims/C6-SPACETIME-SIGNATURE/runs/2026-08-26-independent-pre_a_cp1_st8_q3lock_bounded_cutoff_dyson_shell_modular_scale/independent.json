@@ -1,0 +1,193 @@
+{
+  "assertions": [
+    {
+      "actual": "['EXP-001091', 'T-054']",
+      "expected": "EXP-001091/T-054",
+      "group": "provenance",
+      "name": "identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'bounded_cutoff_dyson_envelope_closed': True, 'scale_balance_closed': True, 'two_sign_static_plus_dynamic_arithmetic_closed': True, 'actual_q3_modular_history_envelope_closed': False, 'actual_q3_unbounded_tail_comparison_closed': False, 'volume_uniform_direct_d_delta_d_closed': False, 'exhaustion_independence_closed': False, 'common_alpha_closed': False, 'kms_gns_gap_closed': False, 'continuum_closed': False, 'c6_closed': False, 'sector_a_closed': False, 'pre_a_closed': False}",
+      "expected": "claim-nonbearing/open modular input",
+      "group": "scope",
+      "name": "finite-only scope",
+      "status": "PASS"
+    },
+    {
+      "actual": "6",
+      "expected": "6",
+      "group": "fixture",
+      "name": "degree fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/3",
+      "expected": "(0,1/2)",
+      "group": "scale",
+      "name": "scale interval",
+      "status": "PASS"
+    },
+    {
+      "actual": "244/25",
+      "expected": ">0",
+      "group": "scale",
+      "name": "D margin",
+      "status": "PASS"
+    },
+    {
+      "actual": "288/25",
+      "expected": ">0",
+      "group": "scale",
+      "name": "delta-D margin",
+      "status": "PASS"
+    },
+    {
+      "actual": "-1/3",
+      "expected": "<0",
+      "group": "scale",
+      "name": "factorial exponent",
+      "status": "PASS"
+    },
+    {
+      "actual": "64",
+      "expected": "64",
+      "group": "scale fixture",
+      "name": "R=64 cube",
+      "status": "PASS"
+    },
+    {
+      "actual": "[-39.34827237527655, -35.02827237527655, -137.44502612488148, -162.8324374026417]",
+      "expected": "finite",
+      "group": "arithmetic",
+      "name": "R=64 logs finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "512",
+      "expected": "512",
+      "group": "scale fixture",
+      "name": "R=512 cube",
+      "status": "PASS"
+    },
+    {
+      "actual": "[-338.35820926613206, -322.51820926613203, -596.9141127776022, -705.3952296942425]",
+      "expected": "finite",
+      "group": "arithmetic",
+      "name": "R=512 logs finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "4096",
+      "expected": "4096",
+      "group": "scale fixture",
+      "name": "R=4096 cube",
+      "status": "PASS"
+    },
+    {
+      "actual": "[-2776.517704392976, -2714.597704392976, -2461.823199430323, -2906.838021985843]",
+      "expected": "finite",
+      "group": "arithmetic",
+      "name": "R=4096 logs finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "[-39.34827237527655, -2776.517704392976]",
+      "expected": "decreasing",
+      "group": "arithmetic",
+      "name": "dynamic decay",
+      "status": "PASS"
+    },
+    {
+      "actual": "[-137.44502612488148, -2461.823199430323]",
+      "expected": "decreasing",
+      "group": "arithmetic",
+      "name": "static decay",
+      "status": "PASS"
+    }
+  ],
+  "audit_id": "PA-CP1-ST8-Q3LOCK-BOUNDED-CUTOFF-DYSON-SHELL-MODULAR-SCALE",
+  "boundary": {
+    "actual_q3_modular_history_envelope_closed": false,
+    "actual_q3_unbounded_tail_comparison_closed": false,
+    "bounded_cutoff_dyson_envelope_closed": true,
+    "c6_closed": false,
+    "common_alpha_closed": false,
+    "continuum_closed": false,
+    "exhaustion_independence_closed": false,
+    "kms_gns_gap_closed": false,
+    "pre_a_closed": false,
+    "scale_balance_closed": true,
+    "sector_a_closed": false,
+    "two_sign_static_plus_dynamic_arithmetic_closed": true,
+    "volume_uniform_direct_d_delta_d_closed": false
+  },
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "derived": {
+    "actual_q3_modular_history_envelope_closed": false,
+    "actual_q3_unbounded_tail_comparison_closed": false,
+    "alpha": "1/3",
+    "bounded_cutoff_dyson_envelope_closed": true,
+    "common_alpha_closed": false,
+    "kappa0": "6/25",
+    "kappa1": "12/25",
+    "rows": [
+      {
+        "D_dynamic_bound": 8.15196741404168e-18,
+        "D_dynamic_log_bound": -39.34827237527655,
+        "D_static_bound": 2.0341528753571375e-60,
+        "D_static_log_bound": -137.44502612488148,
+        "cutoff": 4,
+        "delta_D_dynamic_bound": 6.129352477430646e-16,
+        "delta_D_dynamic_log_bound": -35.02827237527655,
+        "delta_D_static_bound": 1.9176571372725422e-71,
+        "delta_D_static_log_bound": -162.8324374026417,
+        "interaction_bound": 0.18,
+        "lambda_L": 2.16,
+        "lambda_modular_L": 4.32,
+        "radius": 64
+      },
+      {
+        "D_dynamic_bound": 1.1295275003466468e-147,
+        "D_dynamic_log_bound": -338.35820926613206,
+        "D_static_bound": 5.800890271443439e-260,
+        "D_static_log_bound": -596.9141127776022,
+        "cutoff": 8,
+        "delta_D_dynamic_bound": 8.553057710961473e-141,
+        "delta_D_dynamic_log_bound": -322.51820926613203,
+        "delta_D_static_bound": 4.474496605147722e-307,
+        "delta_D_static_log_bound": -705.3952296942425,
+        "interaction_bound": 0.66,
+        "lambda_L": 7.92,
+        "lambda_modular_L": 15.84,
+        "radius": 512
+      },
+      {
+        "D_dynamic_bound": 0.0,
+        "D_dynamic_log_bound": -2776.517704392976,
+        "D_static_bound": 0.0,
+        "D_static_log_bound": -2461.823199430323,
+        "cutoff": 16,
+        "delta_D_dynamic_bound": 0.0,
+        "delta_D_dynamic_log_bound": -2714.597704392976,
+        "delta_D_static_bound": 0.0,
+        "delta_D_static_log_bound": -2906.838021985843,
+        "interaction_bound": 2.58,
+        "lambda_L": 30.96,
+        "lambda_modular_L": 61.92,
+        "radius": 4096
+      }
+    ],
+    "scale_balance_closed": true,
+    "two_alpha_minus_one": "-1/3",
+    "volume_uniform_direct_d_delta_d_closed": false
+  },
+  "exploration_id": "EXP-001091",
+  "failed": 0,
+  "passed": 15,
+  "run_kind": "independent",
+  "schema": "tect/foundation-audit/1.0",
+  "task_id": "T-054",
+  "total": 15,
+  "verdict": "PASS"
+}
