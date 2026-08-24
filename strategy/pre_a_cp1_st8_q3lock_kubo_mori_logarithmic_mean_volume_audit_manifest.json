@@ -1,0 +1,61 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-KUBO-MORI-LOG-MEAN-VOLUME-AUDIT-v0",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001089",
+  "claim_bearing": false,
+  "parent_explorations": ["EXP-001088", "EXP-000798", "EXP-000799"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "finite_fixture": {
+    "volume_values": [2, 4, 6],
+    "oscillator_dimension": 3,
+    "observable_support": [0, 1],
+    "beta": 1.0,
+    "character_amplitude": 0.3333333333333333,
+    "radius_values": [0.5, 1.0, 2.0],
+    "c": 0.6,
+    "chi": 1.0,
+    "r": -1.0,
+    "g": 0.6,
+    "lambda": 0.1,
+    "hbar": 1.0,
+    "commutator_tolerance": 1e-8,
+    "tail_tolerance": 1e-9,
+    "agreement_tolerance": 1e-7,
+    "mean_gap_tolerance": 1e-12
+  },
+  "model": {
+    "graph": "two-site edge, four-site square face, and six-site 2x3 rectangular grid",
+    "observable": "A_2=exp(i*character_amplitude*(q_0+q_1)/hbar), supported on sites 0,1",
+    "cutoff": "replace only bond coordinates by the smooth cosine cutoff q_L; W_L=H-H_L",
+    "duhamel_norm": "in the H eigenbasis use L(p_i,p_j)=(p_i-p_j)/(log p_i-log p_j), with diagonal limit p_i, and two-sided square norm 2*sum L|X_ij|^2",
+    "arithmetic_norm": "comparison norm 2*sum ((p_i+p_j)/2)|X_ij|^2",
+    "modular_companion": "delta D''(0)=-beta[H,D''(0)]"
+  },
+  "scope": {
+    "finite_kubo_mori_rows_closed": true,
+    "finite_arithmetic_comparison_closed": true,
+    "finite_triple_commutator_identity_closed": true,
+    "candidate_uniformity_decided": false,
+    "modular_domain_closed": false,
+    "volume_uniform_direct_d_cauchy_closed": false,
+    "delta_d_cauchy_closed": false,
+    "positive_time_history_closed": false,
+    "product_core_density_closed": false,
+    "exhaustion_independence_closed": false,
+    "group_law_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false
+  },
+  "no_overclaim": "This is a finite actual-Q3 Kubo–Mori/Duhamel versus arithmetic-mean topology comparison. It does not prove a common-core logarithmic-mean estimate, volume/source uniformity, modular-domain transfer, positive-time history, direct D or delta-D Cauchy, common dynamics, OS/KMS/GNS identification, a gap, continuum, C6, Sector A or Pre-A closure. Finite scaling is diagnostic only."
+}

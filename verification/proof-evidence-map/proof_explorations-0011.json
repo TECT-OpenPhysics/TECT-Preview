@@ -9042,6 +9042,133 @@
       "task_id": "T-054",
       "title": "Actual-Q3 weighted triple-commutator volume stress for the projected D-delta-D route",
       "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "axis": "logarithmic-mean diagonal limit",
+          "check": "Equal Gibbs probabilities use the exact diagonal limit p_i and are checked in both code lanes; no division by a zero log gap is used.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "state representation",
+          "check": "Both lanes use the uncut full-volume Gibbs eigenbasis and the same normalized positive probabilities; no local-state substitution is made.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "modular identity",
+          "check": "delta D'' is computed as -beta[H,D''(0)] and compared to beta/hbar^2*[H,[W_L,[H,A_2]]] without a Jacobi reorder.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "support locality",
+          "check": "Source and disjoint-tail commutators are measured in every volume and radius, not inferred from graph labels.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "mean comparison",
+          "check": "Arithmetic-mean values are reported as a comparison topology and are not used to replace the Kubo-Mori weight.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "volume inference",
+          "check": "Growth factors use only volumes 2,4,6 and are finite diagnostics, not asymptotic lower bounds.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "independence",
+          "check": "The independent lane rebuilds oscillator, graph, cutoff, Gibbs state, observable, commutators, and both mean matrices without importing primary code.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "Lean",
+          "check": "R271 checks exact rational fixtures and scope declarations; it does not formalize the floating-point spectral norms or a thermodynamic limit.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "QFT promotion",
+          "check": "Uniform direct Cauchy, modular domain, common dynamics/KMS, OS/GNS, gap, continuum, C6, Sector A, and Pre-A remain open.",
+          "disposition": "UPHELD"
+        }
+      ],
+      "boundary": "Finite actual-Q3 oscillator matrices, beta=1 Gibbs states, a two-site character, three finite graph volumes, and three coordinate cutoffs only. No source/volume/beta-uniform common-core theorem, modular-domain transfer, positive-time history, direct D or delta-D Cauchy, product/core density, exhaustion independence, group law, common dynamics, KMS/GNS gap, continuum, C6, Sector A, Pre-A, TECT production owner, or Clay result follows.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "The finite logarithmic-mean state topology is implemented and independently reproduced, and it preserves the exact modular companion identity and support-local commutation. It is numerically smaller than the arithmetic comparison, but its modular maximum still grows across the declared finite volumes. This rejects promotion of this finite candidate as a volume-uniform multiplier without proving an analytic cancellation or a different uniform topology; it is not an asymptotic lower-bound theorem and does not refute every possible QFT topology.",
+      "evidence_refs": [
+        "strategy/pre_a_cp1_st8_q3lock_kubo_mori_logarithmic_mean_volume_audit_manifest.json#model",
+        "strategy/pre_a_cp1_st8_q3lock_kubo_mori_logarithmic_mean_volume_audit-certificate-260825.md#Results",
+        "codes/foundations/pre_a_cp1_st8_q3lock_kubo_mori_logarithmic_mean_volume_audit.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_kubo_mori_logarithmic_mean_volume_audit_independent.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_kubo_mori_logarithmic_mean_volume_audit_verify.py#run",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-primary-pre_a_cp1_st8_q3lock_kubo_mori_logarithmic_mean_volume_audit/primary.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-independent-pre_a_cp1_st8_q3lock_kubo_mori_logarithmic_mean_volume_audit/independent.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-primary-pre_a_cp1_st8_q3lock_kubo_mori_logarithmic_mean_volume_audit/integrated.json#lean",
+        "verification/lean/Tect/R271.lean#diagonal_log_mean_fixture",
+        "verification/lean/registry.json#R271"
+      ],
+      "finding": "Primary 67/67, independent 58/58, and integrated 47/47 with Lean R271 PASS. The Kubo-Mori modular maxima for volumes 2,4,6 are 1.7578318425, 4.7969614982, and 6.8384686282; the arithmetic-mean comparison maxima are 2.1370416950, 7.3775956341, and 11.9136100135. The corresponding volume-six/volume-two growth factors are 3.8902860119 and 5.5748140251. Arithmetic-to-Kubo-Mori modular ratios rise from 1.2157258978 to 1.7421458898. Source and disjoint-tail commutators vanish within tolerance and the radius-two tail is at the numerical floor.",
+      "formal_integration": {
+        "events": [],
+        "lean": "R271 PASS; registry entrypoint count 107",
+        "negatives": [],
+        "no_new_event": true,
+        "no_new_negative": true,
+        "no_new_result": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "results": []
+      },
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": []
+      },
+      "gate_ids": [
+        "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+        "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001089",
+      "method": [
+        "Construct the actual finite Q3 Hamiltonian at oscillator dimension three on the target edge, square face, and 2x3 rectangular grid.",
+        "Use A_2=exp(i*(q_0+q_1)/(3*hbar)) and replace only bond coordinates by the smooth cosine cutoff at radii 0.5, 1.0, and 2.0.",
+        "Diagonalize the uncut full-volume Hamiltonian and evaluate the two-sided Kubo-Mori/Duhamel norm with L(p_i,p_j)=(p_i-p_j)/(log p_i-log p_j), using the diagonal limit p_i.",
+        "Compare the logarithmic-mean rows with the arithmetic-mean rows for D''(0)=-[W_L,[H,A_2]]/hbar^2 and delta D''(0)=-beta[H,D''(0)].",
+        "Rebuild the oscillator graph, cutoff, Gibbs state, observable, nested commutators, and both state-weighted means in an independent lane and compare every finite row.",
+        "Compile Lean R271 for exact rational diagonal-limit, symmetry, coefficient/sign, graph, and finite-scope fixtures."
+      ],
+      "next_action": "Derive an analytic local cancellation or alternative state-weighted topology with a source/volume-uniform multiplier on the declared common core, or enlarge the structured family and prove a route-specific lower-bound obstruction for this exact candidate before any common-alpha promotion.",
+      "no_overclaim": "This is a finite actual-Q3 Kubo-Mori/Duhamel versus arithmetic-mean topology comparison and a route-local scaling diagnostic. It is not a no-go theorem for Q3 dynamics, not an OS reconstruction, not a KMS/GNS result, not a mass-gap or continuum result, and not Sector A or Pre-A closure.",
+      "provenance": "contemporaneous",
+      "qft_interface": {
+        "closed": "Finite Kubo-Mori/Duhamel and arithmetic state-weighted rows, the exact finite modular identity, and support-local commutator checks for the declared actual-Q3 models.",
+        "open": "A source/volume-uniform weighted common-core estimate, modular-domain transfer, positive-time history, direct D,delta-D Cauchy, exhaustion, Hamiltonian-to-OS identification, KMS/GNS gap, continuum, C6, Sector A, and Pre-A.",
+        "tect_boundary": "No heat_root_incidence or canonical A1/R-192 production owner is supplied."
+      },
+      "question": "Does the actual finite-Q3 Kubo-Mori/Duhamel logarithmic-mean state topology control the cutoff double commutator and its modular companion more uniformly than the arithmetic-mean comparison before promotion to the projected QFT D,delta-D gate?",
+      "recorded_at": "2026-08-26T16:00:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001088",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001087",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001084",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-08-25",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Actual-Q3 Kubo-Mori logarithmic-mean topology volume audit",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",
