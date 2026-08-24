@@ -1,0 +1,92 @@
+{
+  "schema": "tect/pre-a-cp1-st8-q3lock-multivariate-edge-bond-operator-source-bridge/1.0",
+  "exploration_id": "EXP-001044",
+  "prior_exploration_id": "EXP-001043",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "claim_bearing": false,
+  "tier": "T0",
+  "title": "Conditional Q3 multivariate edge/bond operator-source bridge and A-power transport boundary",
+  "question": "Under explicit mixed two-site graph bounds, do the actual Q3 edge and spatial bond source differences admit exact two-orientation operator majorants, and do the one-site bounds alone imply the mixed bounds needed for composition?",
+  "model": {
+    "q3_edge_potential": "V_e(q,v)=lambda*(q-v)^2*(q^2+v^2)/4",
+    "edge_source_difference": "D_e(q,v,a)=V_e(q,v)-V_e(q-a,v)",
+    "spatial_bond_potential": "V_b(q,r)=c*(q-r)^2/2",
+    "bond_source_difference": "D_b(q,r,a)=V_b(q,r)-V_b(q-a,r)",
+    "mixed_graph_inputs": "M_ij=||q_u^i q_v^j A^(-3/4)|| and Mhat_ij=||A^(-3/4) q_u^i q_v^j|| for i+j<=3, with M_00=Mhat_00=1",
+    "fixture_moment_ladder": "M_ij=Mhat_ij=4^(i+j), derived from kappa/gamma=256=4^4 as a declared mixed-input fixture",
+    "source_majorant": "B_e(S)=sum |coeff(q^i v^j a^k)| M_ij S^k and B_b(S)=sum |coeff(q^i r^j a^k)| M_ij S^k",
+    "orientation": "The reverse endpoint and reverse operator order use the separately declared Mhat table; equality is checked only for the symmetric fixture"
+  },
+  "fixture": {
+    "lambda": "2/7",
+    "spatial_coupling": "2/3",
+    "source_radius": "1/4",
+    "time": "1/8",
+    "energy_ratio": "256",
+    "root_scale": "4",
+    "expected_edge_source_rate": "69217/3584",
+    "expected_bond_source_rate": "65/48",
+    "onsite_source_rate_from_exp001043": "10791/1024",
+    "expected_local_rate": "549079/7168",
+    "expected_weighted_local_rate": "549079/57344",
+    "transport_matrix_energy_ratio": "16",
+    "transport_one_factor_norm": "1",
+    "transport_mixed_factor_norm": "2"
+  },
+  "conditional_theorem": {
+    "hypotheses": [
+      "A is positive self-adjoint and all mixed monomials act on a declared common core",
+      "Both one-sided mixed tables M_ij and Mhat_ij are finite for i+j<=3",
+      "The source shift acts at one endpoint; the other endpoint follows only by the symmetric edge formula",
+      "The source radius is measured by |a| and the operator triangle inequality is taken in the displayed order"
+    ],
+    "conclusion": "||D_e(q_u,q_v,a)A^(-3/4)||<=B_e(|a|), ||A^(-3/4)D_e(q_u,q_v,a)||<=Bhat_e(|a|), and analogously for D_b",
+    "fixture_consequence": "At S=1/4 and M_ij=Mhat_ij=4^(i+j), B_e=69217/3584, B_b=65/48, and the ten-choice local rate is 549079/7168"
+  },
+  "transport_boundary": {
+    "marginal_hypothesis": "||Q_u A^(-1/4)||<=1 and ||Q_v A^(-1/4)||<=1",
+    "matrix_fixture": "A=diag(1,16,256), S is the 3x3 raising shift, Q_u=Q_v=S A^(1/4)",
+    "checked_values": "||Q_u A^(-1/4)||_inf=||Q_v A^(-1/4)||_inf=1 but ||Q_u Q_v A^(-3/4)||_inf=2",
+    "interpretation": "Single-site one-sided graph bounds do not imply the mixed product bound with the naive product constant; an explicit mixed graph estimate or A-power transport theorem is required",
+    "nonexistence_scope": "This finite obstruction rejects only the inference rule, not the existence of a stronger Q3 mixed bound"
+  },
+  "adversarial_review": [
+    {"axis": "canonical potential", "check": "The edge polynomial is the registered lambda/4*(q-v)^2*(q^2+v^2) potential and the bond is the registered quadratic spatial interaction.", "disposition": "UPHELD"},
+    {"axis": "mixed graph input", "check": "M_ij and Mhat_ij are explicit hypotheses; they are not silently derived from the one-coordinate EXP-001043 inputs.", "disposition": "UPHELD"},
+    {"axis": "endpoint reversal", "check": "The reversed endpoint has the same scalar coefficient norm by symmetry, but the operator reverse orientation needs Mhat separately.", "disposition": "UPHELD"},
+    {"axis": "transport composition", "check": "The finite A=diag(1,16,256) raising-shift fixture has unit one-factor bounds and mixed norm two, so naive composition is invalid.", "disposition": "UPHELD"},
+    {"axis": "field cutoff", "check": "The source majorants use graph moments, not a pointwise field window; no Q cutoff is claimed.", "disposition": "UPHELD"},
+    {"axis": "history", "check": "A one-factor source bridge and a transport obstruction do not prove repeated Duhamel histories, first passage or common alpha.", "disposition": "UPHELD"},
+    {"axis": "Lean promotion", "check": "R226 checks exact rational rates and the scalar norm fixture only; it does not formalize unbounded operators or Q3 dynamics.", "disposition": "UPHELD"},
+    {"axis": "QFT promotion", "check": "No thermodynamic dynamics, OS/KMS reconstruction, GNS gap, continuum, C6, Sector A or Pre-A conclusion follows.", "disposition": "UPHELD"}
+  ],
+  "scope": {
+    "closed": "Conditional exact two-site edge/bond source majorants and a finite obstruction to deriving mixed products from marginal one-site graph bounds.",
+    "edge_one_step_bridge_closed": true,
+    "bond_one_step_bridge_closed": true,
+    "mixed_graph_bounds_assumed": true,
+    "naive_one_site_transport_refuted": true,
+    "history_product_closed": false,
+    "actual_q3_history_closed": false,
+    "all_shape_exhaustion_closed": false,
+    "common_alpha_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true,
+    "not_closed": "The mixed graph hypotheses, A-power transport, repeated histories, spatial first-passage, exhaustion, common alpha, KMS/OS reconstruction, GNS gap, continuum, C6, Sector A and Pre-A remain open."
+  },
+  "formal_integration": {
+    "lean_entry": "verification/lean/Tect/R226.lean",
+    "result_ids": [],
+    "negative_ids": [],
+    "changelog_event": null
+  },
+  "qft_interface": {
+    "closed": "A conditional finite-Q3 multivariate source bridge and an exact boundary on the graph-norm composition step needed before the QFT common-alpha gate.",
+    "open": "Actual volume-uniform mixed graph bounds, first-passage histories, all-shape Cauchy convergence, common alpha, KMS, ground/GNS gap, continuum, C6, Sector A and Pre-A remain open.",
+    "tect_boundary": "No heat_root_incidence or canonical A1/R-192 production owner is supplied."
+  },
+  "boundary": "T0 claim-nonbearing conditional edge/bond operator-source checkpoint. It does not prove Q3 dynamics, a thermodynamic QFT, common alpha, KMS, a GNS gap, continuum, C6, Sector A, Pre-A, TECT production or a Clay result.",
+  "next_action": "Prove a genuine mixed two-site graph estimate or an A-power transport inequality on the Q3 common core; only then attempt the repeated two-orientation history and spatial first-passage resummation."
+}

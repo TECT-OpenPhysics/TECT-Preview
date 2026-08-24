@@ -1,0 +1,215 @@
+{
+  "assertions": [
+    {
+      "actual": [
+        "EXP-001044",
+        "T-054"
+      ],
+      "expected": "EXP-001044/T-054",
+      "group": "provenance",
+      "name": "identity",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "claim nonbearing",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "2/7",
+        "2/3",
+        "1/4",
+        "1/8"
+      ],
+      "expected": ">0",
+      "group": "hypothesis",
+      "name": "positive fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "1",
+        "4",
+        "16",
+        "64"
+      ],
+      "expected": "[1,4,16,64]",
+      "group": "hypothesis",
+      "name": "moment ladder",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "4",
+        "256"
+      ],
+      "expected": "root^4=ratio",
+      "group": "hypothesis",
+      "name": "energy ratio",
+      "status": "PASS"
+    },
+    {
+      "actual": "69217/3584",
+      "expected": "69217/3584",
+      "group": "majorant",
+      "name": "edge source rate",
+      "status": "PASS"
+    },
+    {
+      "actual": "69217/3584",
+      "expected": "69217/3584",
+      "group": "orientation",
+      "name": "edge reverse endpoint rate",
+      "status": "PASS"
+    },
+    {
+      "actual": "65/48",
+      "expected": "65/48",
+      "group": "majorant",
+      "name": "bond source rate",
+      "status": "PASS"
+    },
+    {
+      "actual": "65/48",
+      "expected": "65/48",
+      "group": "orientation",
+      "name": "bond reverse endpoint rate",
+      "status": "PASS"
+    },
+    {
+      "actual": "10791/1024",
+      "expected": "10791/1024",
+      "group": "composition",
+      "name": "onsite inherited rate",
+      "status": "PASS"
+    },
+    {
+      "actual": "549079/7168",
+      "expected": "549079/7168",
+      "group": "composition",
+      "name": "ten-choice local rate",
+      "status": "PASS"
+    },
+    {
+      "actual": "549079/57344",
+      "expected": "549079/57344",
+      "group": "composition",
+      "name": "weighted local rate",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "1",
+          "0"
+        ]
+      ],
+      "expected": "S",
+      "group": "transport",
+      "name": "one-factor exact cancellation",
+      "status": "PASS"
+    },
+    {
+      "actual": "1",
+      "expected": 1,
+      "group": "transport",
+      "name": "one-factor norm",
+      "status": "PASS"
+    },
+    {
+      "actual": "1",
+      "expected": 1,
+      "group": "transport",
+      "name": "second marginal norm",
+      "status": "PASS"
+    },
+    {
+      "actual": "2",
+      "expected": 2,
+      "group": "transport",
+      "name": "mixed norm",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "2",
+        "1"
+      ],
+      "expected": ">",
+      "group": "transport",
+      "name": "naive mixed product fails",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "actual_q3_history_closed": false,
+        "all_shape_exhaustion_closed": false,
+        "bond_one_step_bridge_closed": true,
+        "closed": "Conditional exact two-site edge/bond source majorants and a finite obstruction to deriving mixed products from marginal one-site graph bounds.",
+        "common_alpha_closed": false,
+        "edge_one_step_bridge_closed": true,
+        "history_product_closed": false,
+        "mixed_graph_bounds_assumed": true,
+        "naive_one_site_transport_refuted": true,
+        "no_new_negative_result": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "not_closed": "The mixed graph hypotheses, A-power transport, repeated histories, spatial first-passage, exhaustion, common alpha, KMS/OS reconstruction, GNS gap, continuum, C6, Sector A and Pre-A remain open."
+      },
+      "expected": "false/false",
+      "group": "scope",
+      "name": "history remains open",
+      "status": "PASS"
+    }
+  ],
+  "boundary": "T0 claim-nonbearing conditional edge/bond operator-source checkpoint. It does not prove Q3 dynamics, a thermodynamic QFT, common alpha, KMS, a GNS gap, continuum, C6, Sector A, Pre-A, TECT production or a Clay result.",
+  "derived": {
+    "actual_q3_history_closed": false,
+    "all_shape_exhaustion_closed": false,
+    "bond_one_step_bridge_closed": true,
+    "bond_reverse_source_rate": "65/48",
+    "bond_source_rate": "65/48",
+    "common_alpha_closed": false,
+    "edge_one_step_bridge_closed": true,
+    "edge_reverse_source_rate": "69217/3584",
+    "edge_source_rate": "69217/3584",
+    "energy_ratio": "256",
+    "history_product_closed": false,
+    "local_rate": "549079/7168",
+    "mixed_graph_bounds_assumed": true,
+    "naive_one_site_transport_refuted": true,
+    "onsite_source_rate": "10791/1024",
+    "root_scale": "4",
+    "source_radius": "1/4",
+    "transport_mixed_factor_norm": "2",
+    "transport_one_factor_norm": "1",
+    "weighted_local_rate": "549079/57344"
+  },
+  "exploration_id": "EXP-001044",
+  "failed": 0,
+  "passed": 18,
+  "provenance": {
+    "manifest": "strategy/pre-a-cp1-st8-q3lock-multivariate-edge-bond-operator-source-bridge-manifest.json",
+    "manifest_sha256": "6d6559a78efa8fbce5476425c527e1b829640defeb566b2ec98d80ad24ed822b",
+    "script": "codes/foundations/pre_a_cp1_st8_q3lock_multivariate_edge_bond_operator_source_bridge_independent.py",
+    "script_sha256": "2d35f771a3163ec9af81a3b23574d6cdd964c05062c063d2b45b9f7c985604e4"
+  },
+  "run_kind": "independent",
+  "schema": "tect/foundation-audit/1.0",
+  "total": 18,
+  "verdict": "PASS"
+}

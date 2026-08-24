@@ -3928,6 +3928,107 @@
       "task_id": "T-054",
       "title": "Conditional Q3 onsite shifted-potential operator/source bridge",
       "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "axis": "canonical potential",
+          "check": "The edge and bond expansions are generated from the registered Q3 potentials.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "mixed graph input",
+          "check": "The two-site graph table is an explicit hypothesis, not an inference from EXP-001043.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "transport composition",
+          "check": "The exact finite matrix witness gives unit marginal bounds but mixed norm two.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "orientation",
+          "check": "Reverse endpoint and reverse operator order remain separately declared.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "history",
+          "check": "No Duhamel history, first passage, exhaustion, or common-alpha theorem is claimed.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "Lean",
+          "check": "R226 is a scalar/finite-fixture cross-check and not an unbounded-operator formalization.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "QFT promotion",
+          "check": "No thermodynamic QFT, KMS/OS, GNS gap, continuum, C6, Sector A or Pre-A result follows.",
+          "disposition": "UPHELD"
+        }
+      ],
+      "boundary": "T0 claim-nonbearing conditional edge/bond checkpoint. The obstruction is to an inference rule only and is not a nonexistence result for Q3 dynamics.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "This closes the algebraic multivariate one-step bridge under an explicit mixed hypothesis and identifies the first exact operator-composition boundary. It does not prove the mixed hypothesis, so no repeated history or common-alpha promotion is justified.",
+      "evidence_refs": [
+        "strategy/pre-a-cp1-st8-q3lock-multivariate-edge-bond-operator-source-bridge-manifest.json#model",
+        "strategy/pre-a-cp1-st8-q3lock-multivariate-edge-bond-operator-source-bridge-certificate-260824.md#Conditional operator bridge",
+        "codes/foundations/pre_a_cp1_st8_q3lock_multivariate_edge_bond_operator_source_bridge.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_multivariate_edge_bond_operator_source_bridge_independent.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_multivariate_edge_bond_operator_source_bridge_verify.py#main",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-24-primary-pre-a-cp1-st8-q3lock-multivariate-edge-bond-operator-source-bridge/primary.json#assertions",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-24-primary-pre-a-cp1-st8-q3lock-multivariate-edge-bond-operator-source-bridge/independent.json#assertions",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-24-primary-pre-a-cp1-st8-q3lock-multivariate-edge-bond-operator-source-bridge/integrated.json#assertions",
+        "verification/lean/Tect/R226.lean#edge_source_rate_fixture",
+        "verification/lean/registry.json#entrypoints"
+      ],
+      "finding": "Conditional on the mixed tables, the actual edge and bond source maps have exact two-orientation triangle majorants. At S=1/4 and M_ij=Mhat_ij=4^(i+j), the edge and bond rates are 69217/3584 and 65/48, and the ten-choice local rate including the prior onsite rate is 549079/7168. The finite raising-shift fixture shows that separate one-site graph bounds with constant one do not compose into the mixed product bound: the mixed norm is two.",
+      "formal_integration": {
+        "events": [],
+        "negatives": [],
+        "no_new_negative": true,
+        "no_new_result": true,
+        "no_pdf": true,
+        "results": []
+      },
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": []
+      },
+      "gate_ids": [
+        "PA-CP1-ST8-Q3LOCK-FIRST-PASSAGE-BACKBONE-REAL-TIME-PRODUCT-AND-ENERGY-TAIL-CLOSURE",
+        "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+        "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001044",
+      "method": [
+        "Expand the registered Q3 edge potential lambda*(q-v)^2*(q^2+v^2)/4 and the spatial bond c*(q-r)^2/2 after a one-endpoint source shift.",
+        "Use explicit mixed graph inputs M_ij and Mhat_ij for i+j<=3 and apply the operator triangle inequality in both orders.",
+        "Run independent exact polynomial lanes for the source rates and include one onsite, three edge and six bond choices in the local rate.",
+        "Test the missing transport inference on A=diag(1,16,256) with a raising shift: both marginal one-factor norms are one while the mixed norm is two.",
+        "Compile Lean R226 for the exact rational source rates and the scalar norm witness."
+      ],
+      "next_action": "Prove a genuine mixed two-site graph bound or A-power transport estimate on the Q3 common core, then revisit the repeated two-orientation first-passage history gate.",
+      "prior_exploration_id": "EXP-001043",
+      "provenance": "contemporaneous",
+      "qft_interface": {
+        "closed": "Conditional finite-Q3 multivariate source bridge plus a precise marginal-to-mixed transport obstruction.",
+        "open": "Mixed graph theorem, repeated histories, first-passage decay, exhaustion, common alpha, KMS, ground/GNS gap, continuum, C6, Sector A and Pre-A remain open.",
+        "tect_boundary": "No heat_root_incidence or A1/R-192 production owner is supplied."
+      },
+      "question": "Under explicit mixed two-site graph bounds, do the actual Q3 edge and spatial bond source differences admit exact two-orientation operator majorants, and do the one-site bounds alone imply the mixed bounds needed for composition?",
+      "recorded_at": "2026-08-24T23:55:00Z",
+      "recorded_by": "Codex",
+      "related": [],
+      "reviewed_on": "2026-08-24",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Conditional Q3 multivariate edge/bond operator-source bridge and A-power transport boundary",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",
