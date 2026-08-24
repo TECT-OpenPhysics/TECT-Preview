@@ -1,0 +1,58 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-FINITE-DIRECT-D-DELTA-D-CAUCHY-v0",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001085",
+  "claim_bearing": false,
+  "parent_explorations": ["EXP-001084", "EXP-001062", "EXP-001073", "EXP-001080"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-ENERGY-WEIGHTED-COMMUTATOR-GEVREY-LR-CLOSURE",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "finite_fixture": {
+    "volume_values": [2, 4],
+    "oscillator_dimension": 3,
+    "beta": 1.0,
+    "character_amplitude": 0.3333333333333333,
+    "time_values": [0.05, 0.1],
+    "radius_values": [0.5, 1.0, 2.0],
+    "c": 0.6,
+    "chi": 1.0,
+    "r": -1.0,
+    "g": 0.6,
+    "lambda": 0.1,
+    "hbar": 1.0,
+    "tail_tolerance": 1e-9,
+    "agreement_tolerance": 1e-7
+  },
+  "model": {
+    "graph": "two-site target and four-site square face, with all bonds in each finite volume",
+    "reference": "rho=Z^(-1) exp(-beta H) from the uncut finite Q3 Hamiltonian",
+    "cutoff": "replace every coordinate in the bond terms by the smooth cosine cutoff q_L; W_L=H-H_L",
+    "direct_difference": "D_sigma(t)=exp(-it(H+sigma W_L)/hbar) A exp(+it(H+sigma W_L)/hbar)-exp(-itH/hbar) A exp(+itH/hbar)",
+    "modular_difference": "delta D_sigma=[-beta H,D_sigma] in the finite Gibbs representation",
+    "seminorm": "||X||_(beta,#)^2=Tr(rho X*X)+Tr(rho XX*)"
+  },
+  "scope": {
+    "finite_direct_D_closed": true,
+    "finite_direct_delta_D_closed": true,
+    "finite_two_orientation_difference_closed": true,
+    "cutoff_zero_tail_fixture_closed": true,
+    "volume_uniform_direct_d_cauchy_closed": false,
+    "delta_d_cauchy_closed": false,
+    "product_core_density_closed": false,
+    "exhaustion_independence_closed": false,
+    "group_law_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false
+  },
+  "no_overclaim": "This is a finite Gibbs direct-D and modular-derivative diagnostic. It does not prove a volume/source/cutoff/beta-uniform Cauchy theorem, a common dynamics, OS/KMS/GNS identification, a gap, continuum, C6, Sector A or Pre-A closure."
+}

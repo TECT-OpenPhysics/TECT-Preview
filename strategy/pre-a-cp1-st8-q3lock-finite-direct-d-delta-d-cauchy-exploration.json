@@ -1,0 +1,86 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001085",
+  "title": "Finite direct D and delta-D Cauchy audit",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-ENERGY-WEIGHTED-COMMUTATOR-GEVREY-LR-CLOSURE",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "question": "On finite actual-Q3 Gibbs members, do the direct two-sided D and modular derivative delta-D differences for both cutoff orientations decay with the coordinate cutoff strongly enough to suggest the projected route?",
+  "method": [
+    "Build the exact two-site target and four-site square-face Q3 Hamiltonians at oscillator dimension three and form the uncut Gibbs state.",
+    "Replace bond coordinates by the smooth cosine cutoff at radii 0.5, 1.0, and 2.0, set W_L=H-H_L, and evolve a finite-support configuration character under H+sigma W_L and H for both signs sigma.",
+    "Compute the direct D_sigma and the finite Gibbs modular derivative delta D_sigma=[-beta H,D_sigma] in the two-sided Gibbs seminorm at times 0.05 and 0.10.",
+    "Rebuild the calculation independently and cross-check rational direct-bound and zero-tail fixtures in Lean R267."
+  ],
+  "finding": "Primary 45/45, independent 45/45, and integrated 54/54 with Lean R267 PASS. At radius 0.5 and time 0.10, the two-orientation D_norm sums are 0.00667525 (V=2) and 0.01187804 (V=4), while the delta_D_norm sums are 0.01567462 and 0.05155844. At radius 1.0 and time 0.10 the D sums are 0.00173654 and 0.00310143, and the delta_D sums are 0.00410474 and 0.01349134. At radius 2.0 the tail and direct norms are at numerical zero.",
+  "verdict": "advanced",
+  "decision_reason": "The direct finite D and delta-D quantities decay as the coordinate cutoff reaches the n=3 spectral range, and both orientations agree across independent lanes. However, the modular derivative grows by about a factor 3.3 from the two-site target to the square face at the same cutoff/time, so the finite data does not supply a volume-uniform Cauchy constant.",
+  "boundary": "Finite Gibbs members and finite spectral cutoffs only; no source-, volume-, cutoff-, beta-, common-core-, thermodynamic-, OS/KMS/GNS-, gap-, continuum-, C6-, Sector-A-, or Pre-A-level conclusion.",
+  "next_action": "Extend the direct D,delta-D audit to a larger structured support or an analytic local class while tracking the modular derivative growth; if the growth persists, register an explicit volume-scaling obstruction before any common-alpha promotion.",
+  "no_overclaim": "This package is a finite direct-D diagnostic, not a volume-uniform projected D,delta-D theorem, a common dynamics, an OS/KMS/GNS result, a gap, a continuum result, or a C6/Sector-A/Pre-A result.",
+  "closed": [
+    "finite direct D for both cutoff orientations",
+    "finite direct modular derivative delta-D",
+    "finite cutoff-zero tail fixture",
+    "independent numerical reproduction and Lean R267 arithmetic cross-check"
+  ],
+  "open": [
+    "volume/source/cutoff/beta-uniform direct D and delta-D Cauchy",
+    "product/core density and exhaustion independence",
+    "group law and Hamiltonian-to-OS identification",
+    "common alpha, KMS/GNS gap, continuum, C6, Sector A, and Pre-A"
+  ],
+  "evidence_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-finite-direct-d-delta-d-cauchy-manifest.json#model",
+    "strategy/pre-a-cp1-st8-q3lock-finite-direct-d-delta-d-cauchy-certificate-260824.md#Findings",
+    "codes/foundations/pre_a_cp1_st8_q3lock_finite_direct_d_delta_d_cauchy.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_finite_direct_d_delta_d_cauchy_independent.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_finite_direct_d_delta_d_cauchy_verify.py#run",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-24-primary-pre-a-cp1-st8-q3lock-finite-direct-d-delta-d-cauchy/primary.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-24-primary-pre-a-cp1-st8-q3lock-finite-direct-d-delta-d-cauchy/independent.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-24-primary-pre-a-cp1-st8-q3lock-finite-direct-d-delta-d-cauchy/integrated.json#lean",
+    "verification/lean/Tect/R267.lean#direct_fixture",
+    "verification/lean/registry.json#R267"
+  ],
+  "formal_integration": {
+    "events": [],
+    "results": [],
+    "negatives": [],
+    "lean": "R267 PASS",
+    "no_new_event": true,
+    "no_new_result": true,
+    "no_new_negative": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "adversarial_review": [
+    {"axis": "reference state", "check": "Both lanes use the uncut finite-H Gibbs state and do not replace it with a local Gibbs state.", "disposition": "UPHELD"},
+    {"axis": "orientations", "check": "H+W_L and H-W_L are evolved separately and both norms are retained.", "disposition": "UPHELD"},
+    {"axis": "modular derivative", "check": "delta-D is computed as the explicit finite Gibbs commutator with -beta H.", "disposition": "UPHELD"},
+    {"axis": "cutoff", "check": "Smaller radii have nonzero tails and the largest radius is checked as a separate zero-tail fixture.", "disposition": "UPHELD"},
+    {"axis": "volume", "check": "The V=4 growth is reported rather than treated as uniform.", "disposition": "UPHELD"},
+    {"axis": "independence", "check": "The independent lane reconstructs the entire finite evolution without importing primary code.", "disposition": "UPHELD"},
+    {"axis": "Lean", "check": "R267 proves rational direct-bound and scope fixtures only.", "disposition": "UPHELD"},
+    {"axis": "QFT promotion", "check": "Thermodynamic D,delta-D, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector A and Pre-A remain open.", "disposition": "UPHELD"}
+  ],
+  "qft_interface": {
+    "closed": "Finite actual-Q3 direct D and modular derivative for both cutoff orientations in one finite Gibbs representation.",
+    "open": "Uniform direct D,delta-D Cauchy, product/core density, exhaustion, group law, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector A and Pre-A.",
+    "tect_boundary": "No heat_root_incidence or canonical A1/R-192 production owner is supplied."
+  },
+  "related": [
+    {"id": "EXP-001084", "relation": "continues"},
+    {"id": "EXP-001062", "relation": "continues"},
+    {"id": "EXP-001080", "relation": "continues"}
+  ],
+  "prior_exploration_id": "EXP-001084",
+  "recorded_at": "2026-08-26T12:00:00Z",
+  "recorded_by": "Codex",
+  "provenance": "contemporaneous",
+  "reviewed_on": "2026-08-24"
+}
