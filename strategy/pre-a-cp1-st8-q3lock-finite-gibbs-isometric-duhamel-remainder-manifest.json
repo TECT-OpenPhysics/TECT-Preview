@@ -1,0 +1,118 @@
+{
+  "schema": "tect/pre-a-cp1-st8-q3lock-finite-gibbs-isometric-duhamel-remainder/1.0",
+  "exploration_id": "EXP-001066",
+  "prior_exploration_id": "EXP-001065",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "tier": "T0",
+  "claim_bearing": false,
+  "title": "Finite Gibbs-isometric Duhamel remainder",
+  "question": "Can the all-time orbit-bound hypothesis in the finite-member Duhamel bridge be removed for each fixed finite Gibbs Hamiltonian, while keeping volume-uniformity and OS identification explicitly open?",
+  "authority_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-finite-gibbs-invariance-conditional-os-intertwiner-manifest.json#finite_gibbs_theorem",
+    "strategy/pre-a-cp1-st8-q3lock-fixed-beta-two-sided-duhamel-remainder-bridge-manifest.json#finite_time_theorem",
+    "strategy/pre-a-cp1-st8-q3lock-fixed-beta-os-mixture-common-wstar-route-split-manifest.json#hamiltonian_identification_boundary"
+  ],
+  "finite_time_theorem": {
+    "setup": "Let H=H* be finite dimensional, rho_beta=Z^(-1) exp(-beta H), alpha_t(X)=U_t* X U_t with U_t=exp(-itH/hbar), and delta_H(X)=(i/hbar)[H,X].",
+    "remainder": "R_t(X)=alpha_t(X)-X-t delta_H(X).",
+    "identity": "Finite-dimensional differentiation gives R_t(X)=integral from 0 to t of (t-s) alpha_s(delta_H^2(X)) ds.",
+    "bound": "Gibbs isometry and the triangle inequality give N_beta(R_t(X)) <= t^2 N_beta(delta_H^2(X))/2 for t>=0, with no separate all-time orbit envelope assumption.",
+    "orientation": "The same statement applies independently to each finite orientation sigma; comparing orientations in one OS carrier still requires the missing intertwiner."
+  },
+  "fixture": {
+    "hamiltonian": [["0", "0"], ["0", "1"]],
+    "gibbs_weights": ["2/3", "1/3"],
+    "observable": [["0", "1"], ["1", "0"]],
+    "hbar": "1",
+    "delta_squared_observable": [["0", "-1"], ["-1", "0"]],
+    "initial_squared_seminorm": "2",
+    "delta_squared_squared_seminorm": "2",
+    "time": "1/10",
+    "remainder_squared_bound": "1/20000"
+  },
+  "finding": {
+    "finite": "For each fixed finite Gibbs member the exact Duhamel remainder is bounded by t^2/2 times the finite double-commutator seminorm; the prior all-time orbit hypothesis is unnecessary at this finite level.",
+    "thermodynamic": "The double-commutator seminorm may depend on volume, source, cutoff and orientation, so this does not close a uniform direct D or delta-D Cauchy estimate.",
+    "os": "The result does not identify finite members with the fixed-beta OS mixture or supply a common Hamiltonian generator."
+  },
+  "scope": {
+    "finite_gibbs_isometry_closed": true,
+    "finite_member_duhamel_remainder_closed": true,
+    "all_time_orbit_hypothesis_removed_finite": true,
+    "volume_uniform_direct_d_cauchy_closed": false,
+    "delta_d_cauchy_closed": false,
+    "finite_hamiltonian_os_embedding_closed": false,
+    "actual_q3_four_context_theorem_proved": false,
+    "actual_q3_factorial_history_proved": false,
+    "product_core_density_closed": false,
+    "exhaustion_independence_closed": false,
+    "group_law_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true,
+    "not_closed": "The fixed finite-member remainder bound is not a thermodynamic or OS theorem. Uniform double-commutator control, direct D/delta-D Cauchy, exhaustion, common alpha, KMS/GNS gap, continuum, C6, Sector A and Pre-A remain open."
+  },
+  "adversarial_review": [
+    {
+      "axis": "derivation sign",
+      "check": "The generator delta_H=(i/hbar)[H,·] is used consistently; the second commutator fixture is checked with the complex factor and its norm is sign-independent.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "finite trace",
+      "check": "Gibbs invariance follows from rho_beta being a function of the same H, not from an arbitrary fixed state.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "integral remainder",
+      "check": "The t^2/2 identity is a finite-dimensional Bochner/Taylor identity and does not assume a uniform-in-time orbit constant.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "orientation",
+      "check": "Each finite orientation has its own Gibbs seminorm and double commutator; no equality between plus and minus members is assumed.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "thermodynamic promotion",
+      "check": "No volume/source/cutoff uniformity is inferred from finite-dimensional finiteness.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "Lean",
+      "check": "R248 checks exact rational matrix-entry and seminorm fixtures, not unbounded domains or a limit theorem.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "QFT promotion",
+      "check": "No OS/KMS identification, GNS gap, continuum, C6, Sector A or Pre-A conclusion follows.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "negative authority",
+      "check": "This is a positive finite theorem and creates no new global negative result.",
+      "disposition": "UPHELD"
+    }
+  ],
+  "formal_integration": {
+    "lean_entry": "verification/lean/Tect/R248.lean",
+    "result_ids": [],
+    "negative_ids": [],
+    "changelog_event": null
+  },
+  "qft_interface": {
+    "closed": "An exact fixed finite Gibbs Duhamel remainder bound with the all-time orbit-envelope hypothesis removed at finite volume.",
+    "open": "Uniform double-commutator estimates, actual Q3 history, direct D/delta-D, finite-to-OS identification, common alpha, KMS/GNS gap, continuum, C6, Sector A and Pre-A remain open.",
+    "tect_boundary": "No heat_root_incidence or canonical A1/R-192 production owner is supplied."
+  },
+  "boundary": "T0 claim-nonbearing fixed finite-member QFT interface theorem. It is not a thermodynamic limit, an OS reconstruction, or a Clay-level result.",
+  "next_action": "Estimate the finite double commutator uniformly in volume/source/cutoff on the actual Q3 common core, or record an exact growth obstruction; only then revisit direct D and delta-D Cauchy."
+}

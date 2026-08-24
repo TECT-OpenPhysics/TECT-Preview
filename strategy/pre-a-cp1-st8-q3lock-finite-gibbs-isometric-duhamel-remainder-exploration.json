@@ -1,0 +1,54 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001066",
+  "title": "Finite Gibbs-isometric Duhamel remainder",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "verdict": "advanced",
+  "provenance": "contemporaneous",
+  "prior_exploration_id": "EXP-001065",
+  "related": [{"id": "EXP-001065", "relation": "continues"}],
+  "question": "Can the all-time orbit-bound hypothesis in the finite-member Duhamel bridge be removed for each fixed finite Gibbs Hamiltonian, while keeping volume-uniformity and OS identification explicitly open?",
+  "method": [
+    "For a finite self-adjoint H use the Gibbs functional calculus to obtain exact two-sided seminorm isometry of alpha_t.",
+    "Apply the finite-dimensional Taylor integral identity to R_t(X)=alpha_t(X)-X-t delta_H(X), then use Gibbs isometry under the integral to derive the t^2/2 bound from the single finite double commutator seminorm.",
+    "Check the two-level fixture independently and in Lean R248, and preserve the volume, source, cutoff, orientation, OS, KMS, gap and continuum firewalls."
+  ],
+  "finding": "For every fixed finite Gibbs member, N_beta(R_t(X)) <= t^2 N_beta(delta_H^2(X))/2. The prior all-time orbit-envelope assumption is therefore unnecessary at fixed finite volume. The double-commutator constant may grow with volume, source or cutoff, and no common OS embedding is supplied.",
+  "decision_reason": "This is the direct finite-member continuation after EXP-001065 and EXP-001062: it closes the exact Taylor/Duhamel remainder at finite dimension without pretending that finite-dimensional boundedness is a thermodynamic estimate.",
+  "boundary": "T0 claim-nonbearing finite interface theorem. It does not prove actual Q3 four-context history, uniform direct D/delta-D Cauchy, exhaustion, common alpha, KMS/OS identification, GNS gap, continuum, C6, Sector A, Pre-A or the TECT production owner.",
+  "qft_interface": {
+    "closed": "Exact finite Gibbs-isometric two-sided Duhamel remainder bound.",
+    "open": "Uniform double-commutator growth, actual Q3 history, direct D/delta-D, OS identification, common alpha, gap and continuum remain open.",
+    "tect_boundary": "No heat_root_incidence or canonical A1/R-192 production owner is supplied."
+  },
+  "adversarial_review": [
+    {"axis": "derivation sign", "check": "The i[H,·] convention and second-commutator fixture are checked exactly.", "disposition": "UPHELD"},
+    {"axis": "finite trace", "check": "Only the same-H Gibbs state supplies isometry.", "disposition": "UPHELD"},
+    {"axis": "integral remainder", "check": "The t^2/2 identity is finite-dimensional and has no uniformity implication.", "disposition": "UPHELD"},
+    {"axis": "thermodynamic promotion", "check": "Finite boundedness is not promoted to a volume-uniform constant.", "disposition": "UPHELD"},
+    {"axis": "Lean", "check": "R248 checks rational fixtures only.", "disposition": "UPHELD"},
+    {"axis": "QFT promotion", "check": "No OS/KMS/GNS/continuum or Sector-A/Pre-A closure follows.", "disposition": "UPHELD"},
+    {"axis": "negative authority", "check": "No new global negative record is created.", "disposition": "UPHELD"}
+  ],
+  "formal_integration": {"events": [], "results": [], "negatives": [], "no_new_negative": true, "no_tier_change": true, "no_pdf": true},
+  "evidence_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-finite-gibbs-isometric-duhamel-remainder-manifest.json#finite_time_theorem",
+    "strategy/pre-a-cp1-st8-q3lock-finite-gibbs-isometric-duhamel-remainder-certificate-260824.md#Decision",
+    "codes/foundations/pre_a_cp1_st8_q3lock_finite_gibbs_isometric_duhamel_remainder.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_finite_gibbs_isometric_duhamel_remainder_independent.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_finite_gibbs_isometric_duhamel_remainder_verify.py#main",
+    "verification/lean/Tect/R248.lean#theorems",
+    "strategy/pre-a-cp1-st8-q3lock-finite-gibbs-invariance-conditional-os-intertwiner-manifest.json#finite_gibbs_theorem",
+    "strategy/pre-a-cp1-st8-q3lock-fixed-beta-two-sided-duhamel-remainder-bridge-manifest.json#finite_time_theorem"
+  ],
+  "next_action": "Estimate the actual Q3 double commutator uniformly in volume/source/cutoff on a common core, or record its exact growth obstruction; then revisit direct D/delta-D Cauchy.",
+  "recorded_at": "2026-08-25T16:00:00Z",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-08-24"
+}
