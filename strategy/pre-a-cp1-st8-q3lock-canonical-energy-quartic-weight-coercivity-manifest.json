@@ -1,0 +1,115 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "exploration_id": "EXP-001057",
+  "prior_exploration_id": "EXP-001055",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "tier": "T0",
+  "claim_bearing": false,
+  "title": "Canonical Q3 energy coercivity for the quartic multiplication weight",
+  "question": "Does the canonical finite-volume Q3 Hamiltonian control the quartic weight W_Lambda=1+sum_x q_x^4 on its natural form core, and what volume dependence is unavoidable?",
+  "model": {
+    "finite_volume": "Lambda with n sites and the canonical ST8/Q3LOCK Schrodinger form",
+    "parameters": "chi>0, g>0, c>=0, lambda>=0, r<0",
+    "hamiltonian_form": "H_Lambda = kinetic + sum_x (r q_x^2/2 + g q_x^4/4) + positive spatial quadratic and Q3 edge terms",
+    "positive_edge_term": "lambda/4*(q_x-q_y)^2*(q_x^2+q_y^2)",
+    "weight": "W_Lambda(q)=1+sum_x q_x^4",
+    "shifted_form": "Hhat_Lambda=H_Lambda+n*r^2/(2*g)",
+    "coercive_bound": "W_Lambda <= 1+(8/g)*Hhat_Lambda",
+    "proof_identity": "u(q)+r^2/(4*g)=g*(q^2+r/g)^2/4 and q^4 <= 2*(q^2+r/g)^2+2*(r/g)^2"
+  },
+  "finite_fixture": {
+    "chi": "1",
+    "g": "3/5",
+    "r": "-9/2",
+    "c": "1",
+    "lambda": "1/10",
+    "volumes": [1, 2, 3, 4],
+    "field_values": ["-2", "-1", "0", "1", "2", "3"],
+    "vector_checks": "all 6^n vectors for n<=2 and constant vectors for n=3,4",
+    "derived_v_squared": "15/2",
+    "derived_shift_per_site": "135/8",
+    "derived_weight_constant": "40/3"
+  },
+  "scope": {
+    "canonical_q3_form_comparison_closed": true,
+    "exact_extensive_shift_recorded": true,
+    "volume_uniform_unshifted_bound_closed": false,
+    "finite_form_core_domain_closure": false,
+    "operator_d_duhamel_locality_closed": false,
+    "delta_d_locality_closed": false,
+    "factorial_incidence_supplied": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_os_closed": false,
+    "gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true,
+    "not_closed": "The result is a finite-volume coercive form comparison with an explicit extensive shift. It does not identify the thermodynamic Hamiltonian dynamics with the OS mixture or close D, delta-D, common-alpha, KMS, GNS, continuum, C6, Sector A or Pre-A gates."
+  },
+  "adversarial_review": [
+    {
+      "axis": "sign and shift",
+      "check": "The r<0 quadratic term is not silently discarded; completing the square produces the exact n*r^2/(2*g) shift used in the bound.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "coefficient",
+      "check": "The factor 8/g is derived from q^4 <= 2*(q^2+r/g)^2+2*(r/g)^2 and is recomputed from the manifest parameters.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "positive interactions",
+      "check": "Kinetic, spatial-gradient and Q3 edge terms are used only through nonnegativity; no hidden cancellation is assumed.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "volume dependence",
+      "check": "The additive shift is extensive in n; no volume-uniform unshifted energy bound is claimed.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "operator domain",
+      "check": "The algebraic inequality is a form-core statement and does not by itself prove self-adjoint domain closure or a thermodynamic form limit.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "Lean",
+      "check": "Lean R239 checks exact rational constants and square nonnegativity only; it does not certify the analytic operator theorem.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "QFT promotion",
+      "check": "A finite coercive comparison is not Hamiltonian-to-OS identification, a KMS dynamics theorem, a GNS gap, a continuum limit, C6 closure or Pre-A closure.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "TECT owner",
+      "check": "No heat_root_incidence or canonical A1/R-192 production owner is supplied by this Q3 interface.",
+      "disposition": "UPHELD"
+    }
+  ],
+  "formal_integration": {
+    "lean_entry": "verification/lean/Tect/R239.lean",
+    "result_ids": [],
+    "negative_ids": [],
+    "changelog_event": null
+  },
+  "qft_interface": {
+    "closed": "On the finite natural Q3 form core, the actual canonical energy controls the quartic multiplication weight after the exact extensive shift n*r^2/(2*g), with coefficient 8/g.",
+    "open": "A volume-uniform unshifted bound, common Hamiltonian domain, direct D and delta-D thermodynamic Cauchy estimates, all-bond history, exhaustion, common alpha, KMS/OS identification, GNS gap, continuum, C6, Sector A and Pre-A remain open.",
+    "tect_boundary": "This is a QFT-facing Q3 energy interface only; no heat_root_incidence or canonical A1/R-192 production owner is supplied."
+  },
+  "boundary": "T0 claim-nonbearing finite-volume coercive form comparison. The extensive shift is part of the theorem and is not hidden as a uniform constant.",
+  "next_action": "Use the shifted coercive form in a declared finite-volume Duhamel estimate and test whether its extensive normalization can be made compatible with the fixed-beta OS mixture; then attack the direct projected D and delta-D Cauchy gate.",
+  "verification": {
+    "primary_script": "codes/foundations/pre_a_cp1_st8_q3lock_canonical_energy_quartic_weight_coercivity.py",
+    "independent_script": "codes/foundations/pre_a_cp1_st8_q3lock_canonical_energy_quartic_weight_coercivity_independent.py",
+    "integrated_script": "codes/foundations/pre_a_cp1_st8_q3lock_canonical_energy_quartic_weight_coercivity_verify.py"
+  }
+}

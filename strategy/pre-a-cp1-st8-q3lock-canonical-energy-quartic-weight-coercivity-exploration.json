@@ -1,0 +1,66 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001057",
+  "title": "Canonical Q3 energy coercivity for the quartic multiplication weight",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "question": "Does the canonical finite-volume Q3 Hamiltonian control W_Lambda=1+sum_x q_x^4 on its natural form core, and what volume dependence is unavoidable?",
+  "method": [
+    "Use the registered canonical ST8/Q3LOCK finite-volume form with chi>0, g>0, c>=0, lambda>=0 and r<0, retaining kinetic, spatial and Q3 edge terms as nonnegative contributions.",
+    "Complete the onsite square and derive the exact square remainder q^4 <= 2*(q^2+r/g)^2+2*(r/g)^2, giving W_Lambda <= 1+(8/g)*(H_Lambda+n*r^2/(2*g)).",
+    "Recompute the rational fixture in independent SymPy and Fraction lanes, test finite volume vectors and positive interaction terms, and compile Lean R239 for the exact arithmetic and scope fixtures."
+  ],
+  "finding": "The actual canonical finite-volume Q3 form controls the quartic multiplication weight after the exact extensive shift n*r^2/(2*g): W_Lambda <= 1+(8/g)*(H_Lambda+n*r^2/(2*g)). For g=3/5 and r=-9/2 the derived values are v^2=15/2, shift per site 135/8 and coefficient 40/3. Primary and independent lanes pass 284/284 and 289/289; the integrated verifier passes 22/22 with Lean R239.",
+  "decision_reason": "This is the first direct comparison of the EXP-001055 potential weight with the registered canonical Q3 Hamiltonian form. It closes the finite coercive interface while preserving the extensive normalization and refusing to infer a thermodynamic Duhamel or OS theorem from a finite form inequality.",
+  "verdict": "advanced",
+  "boundary": "T0 claim-nonbearing finite-volume coercive form comparison. The exact extensive shift is part of the theorem; finite form-core control is not self-adjoint domain closure, direct D or delta-D locality, Hamiltonian-to-OS identification, common-alpha, KMS/GNS, continuum, C6, Sector A or Pre-A closure.",
+  "evidence_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-canonical-energy-quartic-weight-coercivity-manifest.json#model",
+    "strategy/pre-a-cp1-st8-q3lock-canonical-energy-quartic-weight-coercivity-certificate-260824.md#Finding",
+    "codes/foundations/pre_a_cp1_st8_q3lock_canonical_energy_quartic_weight_coercivity.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_canonical_energy_quartic_weight_coercivity_independent.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_canonical_energy_quartic_weight_coercivity_verify.py#main",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-primary-pre-a-cp1-st8-q3lock-canonical-energy-quartic-weight-coercivity/primary.json#assertions",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-primary-pre-a-cp1-st8-q3lock-canonical-energy-quartic-weight-coercivity/independent.json#assertions",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-primary-pre-a-cp1-st8-q3lock-canonical-energy-quartic-weight-coercivity/integrated.json#assertions",
+    "verification/lean/Tect/R239.lean#quartic_square_identity",
+    "verification/lean/registry.json#entrypoints",
+    "strategy/pre-a-cp1-st8-q3lock-finite-volume-multiplication-graph-bridge-manifest.json#operator_model"
+  ],
+  "adversarial_review": [
+    {"axis": "sign and shift", "check": "The negative quadratic term is retained and the n*r^2/(2*g) shift is derived from completing the square.", "disposition": "UPHELD"},
+    {"axis": "coefficient", "check": "The factor 8/g is reconstructed from the square remainder in both arithmetic lanes.", "disposition": "UPHELD"},
+    {"axis": "positive interactions", "check": "Kinetic, spatial and Q3 edge terms are used only through nonnegativity.", "disposition": "UPHELD"},
+    {"axis": "volume", "check": "The additive shift is extensive and no unshifted volume-uniform bound is claimed.", "disposition": "UPHELD"},
+    {"axis": "domain", "check": "The result is a finite form-core inequality, not a thermodynamic self-adjoint-domain theorem.", "disposition": "UPHELD"},
+    {"axis": "Lean", "check": "R239 checks exact rational fixtures only and cannot certify unbounded-operator closure.", "disposition": "UPHELD"},
+    {"axis": "QFT promotion", "check": "No Duhamel locality, OS identification, KMS/GNS gap, continuum, C6, Sector A or Pre-A conclusion follows.", "disposition": "UPHELD"},
+    {"axis": "TECT owner", "check": "No heat_root_incidence or canonical A1/R-192 production owner is supplied.", "disposition": "UPHELD"}
+  ],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-ENERGY-WEIGHTED-COMMUTATOR-GEVREY-LR-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-FIRST-PASSAGE-BACKBONE-REAL-TIME-PRODUCT-AND-ENERGY-TAIL-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "related": [{"id": "EXP-001055", "relation": "continues"}],
+  "prior_exploration_id": "EXP-001055",
+  "provenance": "contemporaneous",
+  "qft_interface": {
+    "closed": "A finite-volume canonical Q3 coercive form comparison for W_Lambda with the exact extensive shift and parameter-derived coefficient 8/g.",
+    "open": "Direct D and delta-D thermodynamic Cauchy estimates, all-bond history, exhaustion, common alpha, Hamiltonian-to-OS identification, KMS/GNS gap, continuum, C6, Sector A and Pre-A remain open.",
+    "tect_boundary": "This is a QFT-facing Q3 energy interface only; no heat_root_incidence or A1/R-192 production owner is supplied."
+  },
+  "formal_integration": {
+    "events": [],
+    "negatives": [],
+    "results": [],
+    "no_new_negative": true,
+    "no_pdf": true
+  },
+  "next_action": "Insert the shifted canonical form into a finite-volume Duhamel estimate, test extensive normalization against the fixed-beta OS mixture, and then attack the direct projected D and delta-D Cauchy gate.",
+  "reviewed_on": "2026-08-24",
+  "recorded_at": "2026-08-25T07:13:14Z",
+  "recorded_by": "Codex"
+}

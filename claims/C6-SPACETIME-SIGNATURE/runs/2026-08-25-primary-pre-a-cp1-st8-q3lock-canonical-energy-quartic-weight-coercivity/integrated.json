@@ -1,0 +1,284 @@
+{
+  "assertion_count": 22,
+  "assertions": [
+    {
+      "actual": [
+        "EXP-001057",
+        "T-054"
+      ],
+      "expected": "EXP-001057/T-054",
+      "name": "identity",
+      "pass": true
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "claim nonbearing",
+      "pass": true
+    },
+    {
+      "actual": {
+        "coercive_bound": "W_Lambda <= 1+(8/g)*Hhat_Lambda",
+        "finite_volume": "Lambda with n sites and the canonical ST8/Q3LOCK Schrodinger form",
+        "hamiltonian_form": "H_Lambda = kinetic + sum_x (r q_x^2/2 + g q_x^4/4) + positive spatial quadratic and Q3 edge terms",
+        "parameters": "chi>0, g>0, c>=0, lambda>=0, r<0",
+        "positive_edge_term": "lambda/4*(q_x-q_y)^2*(q_x^2+q_y^2)",
+        "proof_identity": "u(q)+r^2/(4*g)=g*(q^2+r/g)^2/4 and q^4 <= 2*(q^2+r/g)^2+2*(r/g)^2",
+        "shifted_form": "Hhat_Lambda=H_Lambda+n*r^2/(2*g)",
+        "weight": "W_Lambda(q)=1+sum_x q_x^4"
+      },
+      "expected": "canonical Q3 form and bound",
+      "name": "canonical model",
+      "pass": true
+    },
+    {
+      "actual": {
+        "c6_closed": false,
+        "canonical_q3_form_comparison_closed": true,
+        "common_alpha_closed": false,
+        "continuum_closed": false,
+        "delta_d_locality_closed": false,
+        "exact_extensive_shift_recorded": true,
+        "factorial_incidence_supplied": false,
+        "finite_form_core_domain_closure": false,
+        "gns_gap_closed": false,
+        "hamiltonian_os_identification_closed": false,
+        "kms_os_closed": false,
+        "no_new_negative_result": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "not_closed": "The result is a finite-volume coercive form comparison with an explicit extensive shift. It does not identify the thermodynamic Hamiltonian dynamics with the OS mixture or close D, delta-D, common-alpha, KMS, GNS, continuum, C6, Sector A or Pre-A gates.",
+        "operator_d_duhamel_locality_closed": false,
+        "pre_a_closed": false,
+        "sector_a_closed": false,
+        "volume_uniform_unshifted_bound_closed": false
+      },
+      "expected": "comparison closed; domain open",
+      "name": "form comparison scope",
+      "pass": true
+    },
+    {
+      "actual": {
+        "c6_closed": false,
+        "canonical_q3_form_comparison_closed": true,
+        "common_alpha_closed": false,
+        "continuum_closed": false,
+        "delta_d_locality_closed": false,
+        "exact_extensive_shift_recorded": true,
+        "factorial_incidence_supplied": false,
+        "finite_form_core_domain_closure": false,
+        "gns_gap_closed": false,
+        "hamiltonian_os_identification_closed": false,
+        "kms_os_closed": false,
+        "no_new_negative_result": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "not_closed": "The result is a finite-volume coercive form comparison with an explicit extensive shift. It does not identify the thermodynamic Hamiltonian dynamics with the OS mixture or close D, delta-D, common-alpha, KMS, GNS, continuum, C6, Sector A or Pre-A gates.",
+        "operator_d_duhamel_locality_closed": false,
+        "pre_a_closed": false,
+        "sector_a_closed": false,
+        "volume_uniform_unshifted_bound_closed": false
+      },
+      "expected": "successor QFT gates open",
+      "name": "QFT firewall",
+      "pass": true
+    },
+    {
+      "actual": [
+        "quartic_square_identity",
+        "quartic_remainder_square",
+        "coercivity_constant_fixture",
+        "shift_fixture",
+        "scope_fixture"
+      ],
+      "expected": "present",
+      "name": "Lean source",
+      "pass": true
+    },
+    {
+      "actual": [],
+      "expected": "none",
+      "name": "Lean forbidden",
+      "pass": true
+    },
+    {
+      "actual": "PRIMARY CANONICAL-Q3-ENERGY-COERCIVITY PASS 284/284\n",
+      "expected": "PASS",
+      "name": "primary child",
+      "pass": true
+    },
+    {
+      "actual": "INDEPENDENT CANONICAL-Q3-ENERGY-COERCIVITY PASS 289/289\n",
+      "expected": "PASS",
+      "name": "independent child",
+      "pass": true
+    },
+    {
+      "actual": [
+        284,
+        289
+      ],
+      "expected": ">0",
+      "name": "positive totals",
+      "pass": true
+    },
+    {
+      "actual": [
+        "15/2",
+        "15/2"
+      ],
+      "expected": "equal",
+      "name": "lane agreement v_squared",
+      "pass": true
+    },
+    {
+      "actual": [
+        "135/8",
+        "135/8"
+      ],
+      "expected": "equal",
+      "name": "lane agreement shift_per_site",
+      "pass": true
+    },
+    {
+      "actual": [
+        "40/3",
+        "40/3"
+      ],
+      "expected": "equal",
+      "name": "lane agreement weight_constant",
+      "pass": true
+    },
+    {
+      "actual": [
+        54,
+        54
+      ],
+      "expected": "equal",
+      "name": "lane agreement vector_count",
+      "pass": true
+    },
+    {
+      "actual": [
+        "W_Lambda <= 1+(8/g)*(H_Lambda+n*r^2/(2*g))",
+        "W_Lambda <= 1+(8/g)*(H_Lambda+n*r^2/(2*g))"
+      ],
+      "expected": "equal",
+      "name": "lane agreement coercive_bound",
+      "pass": true
+    },
+    {
+      "actual": [
+        true,
+        true
+      ],
+      "expected": "equal",
+      "name": "lane agreement canonical_q3_form_comparison_closed",
+      "pass": true
+    },
+    {
+      "actual": [
+        true,
+        true
+      ],
+      "expected": "equal",
+      "name": "lane agreement extensive_shift_required_in_statement",
+      "pass": true
+    },
+    {
+      "actual": [
+        false,
+        false
+      ],
+      "expected": "equal",
+      "name": "lane agreement operator_d_duhamel_locality_closed",
+      "pass": true
+    },
+    {
+      "actual": [
+        false,
+        false
+      ],
+      "expected": "equal",
+      "name": "lane agreement hamiltonian_os_identification_closed",
+      "pass": true
+    },
+    {
+      "actual": {
+        "canonical_q3_form_comparison_closed": true,
+        "coercive_bound": "W_Lambda <= 1+(8/g)*(H_Lambda+n*r^2/(2*g))",
+        "extensive_shift_required_in_statement": true,
+        "hamiltonian_os_identification_closed": false,
+        "operator_d_duhamel_locality_closed": false,
+        "shift_per_site": "135/8",
+        "v_squared": "15/2",
+        "vector_count": 54,
+        "weight_constant": "40/3"
+      },
+      "expected": "manifest-derived constants",
+      "name": "manifest fixture constants",
+      "pass": true
+    },
+    {
+      "actual": [
+        54,
+        54
+      ],
+      "expected": ">0 and equal",
+      "name": "volume fixture",
+      "pass": true
+    },
+    {
+      "actual": {
+        "command": "lake env lean Tect/R239.lean",
+        "output": "",
+        "returncode": 0,
+        "status": "PASS"
+      },
+      "expected": "PASS",
+      "name": "Lean compile",
+      "pass": true
+    }
+  ],
+  "audit_id": "PA-CP1-ST8-Q3LOCK-CANONICAL-ENERGY-QUARTIC-WEIGHT-COERCIVITY",
+  "boundary": {
+    "c6_closed": false,
+    "canonical_q3_form_comparison_closed": true,
+    "common_alpha_closed": false,
+    "continuum_closed": false,
+    "delta_d_locality_closed": false,
+    "exact_extensive_shift_recorded": true,
+    "factorial_incidence_supplied": false,
+    "finite_form_core_domain_closure": false,
+    "gns_gap_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_os_closed": false,
+    "no_new_negative_result": true,
+    "no_pdf": true,
+    "no_tier_change": true,
+    "not_closed": "The result is a finite-volume coercive form comparison with an explicit extensive shift. It does not identify the thermodynamic Hamiltonian dynamics with the OS mixture or close D, delta-D, common-alpha, KMS, GNS, continuum, C6, Sector A or Pre-A gates.",
+    "operator_d_duhamel_locality_closed": false,
+    "pre_a_closed": false,
+    "sector_a_closed": false,
+    "volume_uniform_unshifted_bound_closed": false
+  },
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "exploration_id": "EXP-001057",
+  "lean": {
+    "command": "lake env lean Tect/R239.lean",
+    "output": "",
+    "returncode": 0,
+    "status": "PASS"
+  },
+  "provenance": {
+    "independent_sha256": "7d7dff769cfa2160b6aefe6df7ee557d3aceaeda4772c25a85d24430f7d13fe8",
+    "lean_sha256": "f472281751eb4169a610d37e31432290ba071e5df60563c16677eaf731f14b5f",
+    "manifest_sha256": "2a297df4b55ccc8ebc361ffb09bb89e83457c3338a813973cb035f75f9734445",
+    "primary_sha256": "60d9fe47938cf1fbbb43c0dda921afc812f8c0a3c1478cb4a80d3aee13b83d4a"
+  },
+  "recorded_at": "2026-08-24T05:12:38.175908Z",
+  "run_kind": "integrated",
+  "schema": "tect/foundation-audit/1.0",
+  "task_id": "T-054",
+  "verdict": "PASS"
+}
