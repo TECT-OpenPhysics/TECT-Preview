@@ -1,0 +1,426 @@
+{
+  "assertion_count": 52,
+  "assertions": [
+    {
+      "actual": "['EXP-001078', 'T-054']",
+      "expected": "EXP-001078/T-054",
+      "group": "provenance",
+      "name": "identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "group": "scope",
+      "name": "claim nonbearing",
+      "status": "PASS"
+    },
+    {
+      "actual": "EXP-001077",
+      "expected": "EXP-001077 finite obstruction",
+      "group": "authority",
+      "name": "previous authority",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'parameters': 'Pell pairs (t,s) with t^2-2s^2=-1, L=t^2', 'K': 'diag(1,L)', 'A': '(1/2)*[[1,t],[t,L]]=(1/2)*(1,t)^T(1,t)', 'P': '(1/2)*[[1,-t],[-t,L]]=(1/2)*(1,-t)^T(1,-t)', 'state': 'rho_L=diag(L^6/(L^6+1),1/(L^6+1))', 'gibbs_identity': 'rho_L is exp(-beta*K)/Tr(exp(-beta*K)) for beta=6*log(L)/(L-1)>0', 'form_identity': 'A>=0, P>=0, K=A+P', 'power_identity': 'A^2=s^2*A and A^(3/2)=s*A'}",
+      "expected": "finite-temperature Gibbs state",
+      "group": "model",
+      "name": "Gibbs witness declared",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'from_EXP_001076': 'Q_sigma^2 <= (9/4)*m5^(3/10), obtained by squaring the rational ceiling Q_sigma <= (3/2)*m5^(3/20)', 'powered_comparison': '(Q_sigma^2)^10 <= (9/4)^10*m5^3', 'gibbs_moment': 'm5=phi_rho_L(K^5)=L^5*(L+1)/(L^6+1)', 'matrix_value': 'Q_sigma^2 is tested as 2*phi_rho_L(A^(3/2))=s*(L^6+L)/(L^6+1)', 'meaning': 'Even a finite-temperature Gibbs state for the abstract energy K does not repair the form-order-only transfer; the Q3 proof needs the actual Hamiltonian/Gibbs comparison, common-core multiplication, and commutator estimates.'}",
+      "expected": "powered Q candidate",
+      "group": "model",
+      "name": "candidate declared",
+      "status": "PASS"
+    },
+    {
+      "actual": "-1",
+      "expected": "-1",
+      "group": "family",
+      "name": "Pell equation 1",
+      "status": "PASS"
+    },
+    {
+      "actual": "49",
+      "expected": ">1",
+      "group": "family",
+      "name": "positive L 1",
+      "status": "PASS"
+    },
+    {
+      "actual": "((Fraction(1, 2), Fraction(7, 2)), (Fraction(7, 2), Fraction(49, 2)))",
+      "expected": "rank-one factor",
+      "group": "positivity",
+      "name": "A factor 1",
+      "status": "PASS"
+    },
+    {
+      "actual": "((Fraction(1, 2), Fraction(-7, 2)), (Fraction(-7, 2), Fraction(49, 2)))",
+      "expected": "rank-one factor",
+      "group": "positivity",
+      "name": "P factor 1",
+      "status": "PASS"
+    },
+    {
+      "actual": "((Fraction(1, 1), Fraction(0, 1)), (Fraction(0, 1), Fraction(49, 1)))",
+      "expected": "((Fraction(1, 1), Fraction(0, 1)), (Fraction(0, 1), Fraction(49, 1)))",
+      "group": "form",
+      "name": "K sum 1",
+      "status": "PASS"
+    },
+    {
+      "actual": "((Fraction(13841287201, 13841287202), Fraction(0, 1)), (Fraction(0, 1), Fraction(1, 13841287202)))",
+      "expected": "positive trace-one",
+      "group": "state",
+      "name": "rho positive trace 1",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/13841287201",
+      "expected": "1/13841287201",
+      "group": "state",
+      "name": "Gibbs ratio 1",
+      "status": "PASS"
+    },
+    {
+      "actual": "((Fraction(0, 1), Fraction(24222252600, 6920643601)), (Fraction(-24222252600, 6920643601), Fraction(0, 1)))",
+      "expected": "nonzero",
+      "group": "state",
+      "name": "nontracial commutator 1",
+      "status": "PASS"
+    },
+    {
+      "actual": "25",
+      "expected": "25",
+      "group": "family",
+      "name": "Pell square 1",
+      "status": "PASS"
+    },
+    {
+      "actual": "((Fraction(25, 2), Fraction(175, 2)), (Fraction(175, 2), Fraction(1225, 2)))",
+      "expected": "((Fraction(25, 2), Fraction(175, 2)), (Fraction(175, 2), Fraction(1225, 2)))",
+      "group": "power",
+      "name": "A power identity 1",
+      "status": "PASS"
+    },
+    {
+      "actual": "49",
+      "expected": "beta=6*log(L)/(L-1)>0",
+      "group": "state",
+      "name": "finite beta 1",
+      "status": "PASS"
+    },
+    {
+      "actual": "7061881225/6920643601",
+      "expected": "7061881225/6920643601",
+      "group": "moment",
+      "name": "K fifth Gibbs moment 1",
+      "status": "PASS"
+    },
+    {
+      "actual": "34603218125/6920643601",
+      "expected": "34603218125/6920643601",
+      "group": "moment",
+      "name": "Q squared Gibbs identity 1",
+      "status": "PASS"
+    },
+    {
+      "actual": "2461301995524835548481046927287998764135913179767156006937538829887206769499252914101816713809967041015625/252037315601377353789211072353232705823265935871871456661795862009066375097082378257579027869636001",
+      "expected": "> 1227965939600258921753557250537169515625/347567665503849305337003571466469376",
+      "group": "obstruction",
+      "name": "powered candidate violation 1",
+      "status": "PASS"
+    },
+    {
+      "actual": "2070065039442902885558278690835962405168615476264293958587036743164062500000000000000000000/748912167022254324852690913032907145534118506019320545738795569420732653171844510545649",
+      "expected": ">1",
+      "group": "obstruction",
+      "name": "powered ratio 1",
+      "status": "PASS"
+    },
+    {
+      "actual": "-1",
+      "expected": "-1",
+      "group": "family",
+      "name": "Pell equation 2",
+      "status": "PASS"
+    },
+    {
+      "actual": "1681",
+      "expected": ">1",
+      "group": "family",
+      "name": "positive L 2",
+      "status": "PASS"
+    },
+    {
+      "actual": "((Fraction(1, 2), Fraction(41, 2)), (Fraction(41, 2), Fraction(1681, 2)))",
+      "expected": "rank-one factor",
+      "group": "positivity",
+      "name": "A factor 2",
+      "status": "PASS"
+    },
+    {
+      "actual": "((Fraction(1, 2), Fraction(-41, 2)), (Fraction(-41, 2), Fraction(1681, 2)))",
+      "expected": "rank-one factor",
+      "group": "positivity",
+      "name": "P factor 2",
+      "status": "PASS"
+    },
+    {
+      "actual": "((Fraction(1, 1), Fraction(0, 1)), (Fraction(0, 1), Fraction(1681, 1)))",
+      "expected": "((Fraction(1, 1), Fraction(0, 1)), (Fraction(0, 1), Fraction(1681, 1)))",
+      "group": "form",
+      "name": "K sum 2",
+      "status": "PASS"
+    },
+    {
+      "actual": "((Fraction(22563490300366186081, 22563490300366186082), Fraction(0, 1)), (Fraction(0, 1), Fraction(1, 22563490300366186082)))",
+      "expected": "positive trace-one",
+      "group": "state",
+      "name": "rho positive trace 2",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/22563490300366186081",
+      "expected": "1/22563490300366186081",
+      "group": "state",
+      "name": "Gibbs ratio 2",
+      "status": "PASS"
+    },
+    {
+      "actual": "((Fraction(0, 1), Fraction(231275775578753407320, 11281745150183093041)), (Fraction(-231275775578753407320, 11281745150183093041), Fraction(0, 1)))",
+      "expected": "nonzero",
+      "group": "state",
+      "name": "nontracial commutator 2",
+      "status": "PASS"
+    },
+    {
+      "actual": "841",
+      "expected": "841",
+      "group": "family",
+      "name": "Pell square 2",
+      "status": "PASS"
+    },
+    {
+      "actual": "((Fraction(841, 2), Fraction(34481, 2)), (Fraction(34481, 2), Fraction(1413721, 2)))",
+      "expected": "((Fraction(841, 2), Fraction(34481, 2)), (Fraction(34481, 2), Fraction(1413721, 2)))",
+      "group": "power",
+      "name": "A power identity 2",
+      "status": "PASS"
+    },
+    {
+      "actual": "1681",
+      "expected": "beta=6*log(L)/(L-1)>0",
+      "group": "state",
+      "name": "finite beta 2",
+      "status": "PASS"
+    },
+    {
+      "actual": "11288456479838169241/11281745150183093041",
+      "expected": "11288456479838169241/11281745150183093041",
+      "group": "moment",
+      "name": "K fifth Gibbs moment 2",
+      "status": "PASS"
+    },
+    {
+      "actual": "327170609355309722549/11281745150183093041",
+      "expected": "327170609355309722549/11281745150183093041",
+      "group": "moment",
+      "name": "Q squared Gibbs identity 2",
+      "status": "PASS"
+    },
+    {
+      "actual": "14052151672391935904895811733233199713148549853898868487151003801592833634886194924116360758344353494485322766900347704108349346164233203264089175704841176791345572709880165555506471767187083737321982887001/33401259973975379207941675826336094510939838587779528501695720119965699372480275548290299588463096487269921489665287460176502030665926281493781367438361620067689586354687845140058083128882401",
+      "expected": "> 5015668019365193024868195098789442650551814280666932094594714336921/1505666432151446318514759438423533454799337876323738654260330496",
+      "group": "obstruction",
+      "name": "powered candidate violation 2",
+      "status": "PASS"
+    },
+    {
+      "actual": "137492060411336074203808961421852949235865018990791302623263119874216479895650296567274367637009664146460912502256771596237566300644271568554576138537101704238338440953856/1088673511912918582489555871041291445984261597576050344930277489413637357859517280254629649314350997378656716454338063038210808708758038187639283910672737045681",
+      "expected": ">1",
+      "group": "obstruction",
+      "name": "powered ratio 2",
+      "status": "PASS"
+    },
+    {
+      "actual": "-1",
+      "expected": "-1",
+      "group": "family",
+      "name": "Pell equation 3",
+      "status": "PASS"
+    },
+    {
+      "actual": "57121",
+      "expected": ">1",
+      "group": "family",
+      "name": "positive L 3",
+      "status": "PASS"
+    },
+    {
+      "actual": "((Fraction(1, 2), Fraction(239, 2)), (Fraction(239, 2), Fraction(57121, 2)))",
+      "expected": "rank-one factor",
+      "group": "positivity",
+      "name": "A factor 3",
+      "status": "PASS"
+    },
+    {
+      "actual": "((Fraction(1, 2), Fraction(-239, 2)), (Fraction(-239, 2), Fraction(57121, 2)))",
+      "expected": "rank-one factor",
+      "group": "positivity",
+      "name": "P factor 3",
+      "status": "PASS"
+    },
+    {
+      "actual": "((Fraction(1, 1), Fraction(0, 1)), (Fraction(0, 1), Fraction(57121, 1)))",
+      "expected": "((Fraction(1, 1), Fraction(0, 1)), (Fraction(0, 1), Fraction(57121, 1)))",
+      "group": "form",
+      "name": "K sum 3",
+      "status": "PASS"
+    },
+    {
+      "actual": "((Fraction(34735600510611194263176918721, 34735600510611194263176918722), Fraction(0, 1)), (Fraction(0, 1), Fraction(1, 34735600510611194263176918722)))",
+      "expected": "positive trace-one",
+      "group": "state",
+      "name": "rho positive trace 3",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/34735600510611194263176918721",
+      "expected": "1/34735600510611194263176918721",
+      "group": "state",
+      "name": "Gibbs ratio 3",
+      "status": "PASS"
+    },
+    {
+      "actual": "((Fraction(0, 1), Fraction(2075452130509018857224820893520, 17367800255305597131588459361)), (Fraction(-2075452130509018857224820893520, 17367800255305597131588459361), Fraction(0, 1)))",
+      "expected": "nonzero",
+      "group": "state",
+      "name": "nontracial commutator 3",
+      "status": "PASS"
+    },
+    {
+      "actual": "28561",
+      "expected": "28561",
+      "group": "family",
+      "name": "Pell square 3",
+      "status": "PASS"
+    },
+    {
+      "actual": "((Fraction(28561, 2), Fraction(6826079, 2)), (Fraction(6826079, 2), Fraction(1631432881, 2)))",
+      "expected": "((Fraction(28561, 2), Fraction(6826079, 2)), (Fraction(6826079, 2), Fraction(1631432881, 2)))",
+      "group": "power",
+      "name": "A power identity 3",
+      "status": "PASS"
+    },
+    {
+      "actual": "57121",
+      "expected": "beta=6*log(L)/(L-1)>0",
+      "group": "state",
+      "name": "finite beta 3",
+      "status": "PASS"
+    },
+    {
+      "actual": "17368104308110262764142714161/17367800255305597131588459361",
+      "expected": "17368104308110262764142714161/17367800255305597131588459361",
+      "group": "moment",
+      "name": "K fifth Gibbs moment 3",
+      "status": "PASS"
+    },
+    {
+      "actual": "2935158243146645915238454458649/17367800255305597131588459361",
+      "expected": "2935158243146645915238454458649/17367800255305597131588459361",
+      "group": "moment",
+      "name": "Q squared Gibbs identity 3",
+      "status": "PASS"
+    },
+    {
+      "actual": "47458630666298620579197026643171674971352044135881574830742422371844561583894555666935778785631366600267420332944592312029681896251451004932111342123791122876476256064423608127388752426970653993535601061086592528758692817576684282345361632590388400257881523992061796988025949501532611430671033346204926001/2497170277642177967145357343834693702803656683953593016415619927377483100870282533264613341729544538172228624497751746088577566754516832519761974698513855956199293775923872170675041955640786850462093661146282962424104908962342386860116292193218807008502105701865860417006203258545601",
+      "expected": "> 18267636051667256320591358248176248315995615719953060744460643449068988595407066948168229371681/5493313193580441446361445088198642206154813152676587186339128096531951202113700299151507456",
+      "group": "obstruction",
+      "name": "powered candidate violation 3",
+      "status": "PASS"
+    },
+    {
+      "actual": "5776128813946815094108513135503316779216070602460032068572015483356856692972060515507715809095833340015579943468034216255407375558292635681079642034440960166731001151978590419015447011317881131989404877225014761052809849184971156751607823743027511296/1010689639651959665028117754782951857960886950781005472600386642732374527784858212249300591820457082671787304426659483924864189616425451071358480272119556902971625832556678929568017633772581713035492620085616314027459408405842791121",
+      "expected": ">1",
+      "group": "obstruction",
+      "name": "powered ratio 3",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'finite_gibbs_obstruction_closed': True, 'gibbs_weight_only_transfer_refuted': True}",
+      "expected": "route-local Gibbs obstruction",
+      "group": "scope",
+      "name": "obstruction scope",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'actual_q3_gibbs_transfer_refuted': False, 'actual_q3_m5_to_q_transfer_refuted': False, 'actual_q3_mixed_moment_bound_closed': False, 'actual_q3_multiplication_domination_closed': False, 'noncommutative_quadratic_form_transfer_closed': False, 'modular_companion_bound_closed': False, 'actual_q3_four_context_theorem_proved': False, 'actual_q3_factorial_history_proved': False, 'all_time_projected_d_duhamel_cauchy_closed': False, 'volume_uniform_direct_d_cauchy_closed': False, 'delta_d_cauchy_closed': False, 'product_core_density_closed': False, 'exhaustion_independence_closed': False, 'group_law_closed': False, 'common_alpha_closed': False, 'hamiltonian_os_identification_closed': False, 'kms_os_closed': False, 'gns_gap_closed': False, 'continuum_closed': False, 'c6_closed': False, 'sector_a_closed': False, 'pre_a_closed': False}",
+      "expected": "actual Q3 and QFT gates open",
+      "group": "scope",
+      "name": "QFT firewall",
+      "status": "PASS"
+    }
+  ],
+  "audit_id": "PA-CP1-ST8-Q3LOCK-PROJECTED-DELTA-D-THIRD-COEFFICIENT-GIBBS-WEIGHTED-NONCOMMUTATIVE-MOMENT-TRANSFER-OBSTRUCTION",
+  "boundary": {
+    "actual_q3_factorial_history_proved": false,
+    "actual_q3_four_context_theorem_proved": false,
+    "actual_q3_gibbs_transfer_refuted": false,
+    "actual_q3_m5_to_q_transfer_refuted": false,
+    "actual_q3_mixed_moment_bound_closed": false,
+    "actual_q3_multiplication_domination_closed": false,
+    "all_time_projected_d_duhamel_cauchy_closed": false,
+    "c6_closed": false,
+    "common_alpha_closed": false,
+    "continuum_closed": false,
+    "delta_d_cauchy_closed": false,
+    "exhaustion_independence_closed": false,
+    "finite_gibbs_obstruction_closed": true,
+    "gibbs_weight_only_transfer_refuted": true,
+    "gns_gap_closed": false,
+    "group_law_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_os_closed": false,
+    "modular_companion_bound_closed": false,
+    "no_new_negative_result": true,
+    "no_pdf": true,
+    "no_tier_change": true,
+    "noncommutative_quadratic_form_transfer_closed": false,
+    "not_closed": "The witness rejects only a Gibbs-for-K shortcut in an abstract 2x2 form-order family. It is not a counterexample to the actual Q3 Gibbs state, local Hamiltonian, common core, or stronger trace/commutator estimates. All Q3 and QFT gates remain open.",
+    "pre_a_closed": false,
+    "product_core_density_closed": false,
+    "sector_a_closed": false,
+    "volume_uniform_direct_d_cauchy_closed": false
+  },
+  "derived": {
+    "candidate_coefficient": "9/4",
+    "candidate_power": 10,
+    "gibbs_ratio_exponent": 6,
+    "m5": [
+      "7061881225/6920643601",
+      "11288456479838169241/11281745150183093041",
+      "17368104308110262764142714161/17367800255305597131588459361"
+    ],
+    "matrix_Q_squared": [
+      "34603218125/6920643601",
+      "327170609355309722549/11281745150183093041",
+      "2935158243146645915238454458649/17367800255305597131588459361"
+    ],
+    "powered_violation_ratio": [
+      "2070065039442902885558278690835962405168615476264293958587036743164062500000000000000000000/748912167022254324852690913032907145534118506019320545738795569420732653171844510545649",
+      "137492060411336074203808961421852949235865018990791302623263119874216479895650296567274367637009664146460912502256771596237566300644271568554576138537101704238338440953856/1088673511912918582489555871041291445984261597576050344930277489413637357859517280254629649314350997378656716454338063038210808708758038187639283910672737045681",
+      "5776128813946815094108513135503316779216070602460032068572015483356856692972060515507715809095833340015579943468034216255407375558292635681079642034440960166731001151978590419015447011317881131989404877225014761052809849184971156751607823743027511296/1010689639651959665028117754782951857960886950781005472600386642732374527784858212249300591820457082671787304426659483924864189616425451071358480272119556902971625832556678929568017633772581713035492620085616314027459408405842791121"
+    ]
+  },
+  "exploration_id": "EXP-001078",
+  "passed": 52,
+  "run_kind": "independent",
+  "schema": "tect/foundation-audit/1.0",
+  "task_id": "T-054",
+  "verdict": "PASS"
+}

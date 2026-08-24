@@ -1,0 +1,129 @@
+{
+  "schema": "tect/pre-a-cp1-st8-q3lock-projected-delta-d-third-coefficient-gibbs-weighted-noncommutative-moment-transfer-obstruction/1.0",
+  "exploration_id": "EXP-001078",
+  "prior_exploration_id": "EXP-001077",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "tier": "T0",
+  "claim_bearing": false,
+  "title": "Gibbs-weighted noncommutative m5-to-Q transfer obstruction",
+  "question": "Does replacing the arbitrary state in EXP-001077 by a finite-temperature Gibbs state for K repair the noncommutative transfer from K=A+P and a fifth K-moment to the EXP-001076 Q_sigma bound?",
+  "authority_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-projected-delta-d-third-coefficient-noncommutative-moment-transfer-obstruction-manifest.json#matrix_family",
+    "strategy/pre-a-cp1-st8-q3lock-projected-delta-d-third-coefficient-scalar-energy-moment-bridge-manifest.json#candidate_bridge",
+    "strategy/pre-a-cp1-st8-q3lock-uniform-kinetic-character-moment-corollary-manifest.json#fifth_moment"
+  ],
+  "matrix_family": {
+    "parameters": "Pell pairs (t,s) with t^2-2s^2=-1, L=t^2",
+    "K": "diag(1,L)",
+    "A": "(1/2)*[[1,t],[t,L]]=(1/2)*(1,t)^T(1,t)",
+    "P": "(1/2)*[[1,-t],[-t,L]]=(1/2)*(1,-t)^T(1,-t)",
+    "state": "rho_L=diag(L^6/(L^6+1),1/(L^6+1))",
+    "gibbs_identity": "rho_L is exp(-beta*K)/Tr(exp(-beta*K)) for beta=6*log(L)/(L-1)>0",
+    "form_identity": "A>=0, P>=0, K=A+P",
+    "power_identity": "A^2=s^2*A and A^(3/2)=s*A"
+  },
+  "candidate_test": {
+    "from_EXP_001076": "Q_sigma^2 <= (9/4)*m5^(3/10), obtained by squaring the rational ceiling Q_sigma <= (3/2)*m5^(3/20)",
+    "powered_comparison": "(Q_sigma^2)^10 <= (9/4)^10*m5^3",
+    "gibbs_moment": "m5=phi_rho_L(K^5)=L^5*(L+1)/(L^6+1)",
+    "matrix_value": "Q_sigma^2 is tested as 2*phi_rho_L(A^(3/2))=s*(L^6+L)/(L^6+1)",
+    "meaning": "Even a finite-temperature Gibbs state for the abstract energy K does not repair the form-order-only transfer; the Q3 proof needs the actual Hamiltonian/Gibbs comparison, common-core multiplication, and commutator estimates."
+  },
+  "finite_fixture": {
+    "pell_pairs": [["7", "5"], ["41", "29"], ["239", "169"]],
+    "candidate_coefficient": "9/4",
+    "candidate_power": 10,
+    "gibbs_ratio_exponent": 6
+  },
+  "scope": {
+    "finite_gibbs_obstruction_closed": true,
+    "gibbs_weight_only_transfer_refuted": true,
+    "actual_q3_gibbs_transfer_refuted": false,
+    "actual_q3_m5_to_q_transfer_refuted": false,
+    "actual_q3_mixed_moment_bound_closed": false,
+    "actual_q3_multiplication_domination_closed": false,
+    "noncommutative_quadratic_form_transfer_closed": false,
+    "modular_companion_bound_closed": false,
+    "actual_q3_four_context_theorem_proved": false,
+    "actual_q3_factorial_history_proved": false,
+    "all_time_projected_d_duhamel_cauchy_closed": false,
+    "volume_uniform_direct_d_cauchy_closed": false,
+    "delta_d_cauchy_closed": false,
+    "product_core_density_closed": false,
+    "exhaustion_independence_closed": false,
+    "group_law_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_os_closed": false,
+    "gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true,
+    "not_closed": "The witness rejects only a Gibbs-for-K shortcut in an abstract 2x2 form-order family. It is not a counterexample to the actual Q3 Gibbs state, local Hamiltonian, common core, or stronger trace/commutator estimates. All Q3 and QFT gates remain open."
+  },
+  "adversarial_review": [
+    {
+      "axis": "Gibbs identity",
+      "check": "The rational state ratio rho_22/rho_11=L^-6 equals exp(-beta*(L-1)) for beta=6*log(L)/(L-1)>0; the witness is finite-temperature, not a zero-temperature projector.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "positivity",
+      "check": "A and P are explicit rank-one positive matrices and K=A+P is positive diagonal.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "moment",
+      "check": "The fifth K-moment and Q-squared value are exact rational traces under the same Gibbs state.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "fractional-power comparison",
+      "check": "The fractional candidate inequality is tested after raising both positive sides to the exact tenth power; no floating-point root or decimal threshold is used.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "temperature",
+      "check": "Each beta is strictly positive and finite; its dependence on L is explicit and no beta-independent Q3 conclusion is attached.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "Q3 identification",
+      "check": "K is an abstract 2x2 energy witness, not the registered interacting Q3 Hamiltonian or its local Gibbs measure.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "Lean",
+      "check": "R260 checks the rational Gibbs ratios, traces, powered comparisons, and scope fixture only; it does not formalize the Q3 representation.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "QFT promotion",
+      "check": "The witness does not alter OS/KMS/GNS, gap, continuum, C6, Sector A, Pre-A, or the TECT production-owner status.",
+      "disposition": "UPHELD"
+    }
+  ],
+  "formal_integration": {
+    "lean_entry": "verification/lean/Tect/R260.lean",
+    "result_ids": [],
+    "negative_ids": [],
+    "changelog_event": null
+  },
+  "qft_interface": {
+    "closed": "A finite-temperature Gibbs state for the abstract K still does not make form order K=A+P plus one fifth moment sufficient for the scalar Q candidate.",
+    "open": "Actual Q3 Hamiltonian/Gibbs comparison, translate- and volume-uniform moments, commutator/domain control, P input, modular companion, history, direct D/delta-D Cauchy, exhaustion, Hamiltonian-to-OS identification, KMS/GNS gap, continuum, C6, Sector A and Pre-A remain open.",
+    "tect_boundary": "No heat_root_incidence or canonical A1/R-192 production owner is supplied."
+  },
+  "next_action": "Use the actual Q3 Hamiltonian rather than K as the Gibbs generator, and prove a translate- and volume-uniform trace/commutator estimate on the common quartic form core; test any proposed estimate against this finite Gibbs obstruction before promotion.",
+  "verification": {
+    "primary_script": "codes/foundations/pre_a_cp1_st8_q3lock_projected_delta_d_third_coefficient_gibbs_weighted_noncommutative_moment_transfer_obstruction.py",
+    "independent_script": "codes/foundations/pre_a_cp1_st8_q3lock_projected_delta_d_third_coefficient_gibbs_weighted_noncommutative_moment_transfer_obstruction_independent.py",
+    "integrated_script": "codes/foundations/pre_a_cp1_st8_q3lock_projected_delta_d_third_coefficient_gibbs_weighted_noncommutative_moment_transfer_obstruction_verify.py"
+  },
+  "boundary": "T0 claim-nonbearing finite Gibbs-weighted matrix route obstruction."
+}

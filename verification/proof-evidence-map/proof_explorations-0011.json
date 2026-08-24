@@ -7602,6 +7602,127 @@
       "task_id": "T-054",
       "title": "Noncommutative m5-to-Q transfer obstruction",
       "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "axis": "Gibbs identity",
+          "check": "The exact state ratio rho_22/rho_11=L^-6 equals exp(-beta*(L-1)) for beta=6*log(L)/(L-1)>0, so the witness is finite-temperature rather than a zero-temperature projector.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "positivity",
+          "check": "A and P are rank-one positive matrices and K=A+P is positive diagonal for every listed Pell pair.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "moment",
+          "check": "The fifth K-moment and Q-squared value are exact rational traces under the same Gibbs state, including both diagonal contributions.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "fractional comparison",
+          "check": "The candidate is tested after raising both positive sides to the tenth power, so no floating-point root or decimal threshold is used.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "temperature",
+          "check": "Each beta is finite and strictly positive; its L-dependence is explicit and no beta-independent Q3 conclusion is attached.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "Q3 identification",
+          "check": "K is an abstract 2x2 energy witness, not the registered interacting Q3 Hamiltonian or its local Gibbs measure.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "Lean",
+          "check": "R260 checks rational Pell, Gibbs-ratio, moment, powered-comparison, and scope fixtures only; it does not formalize Q3.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "QFT promotion",
+          "check": "The witness does not alter OS/KMS/GNS, gap, continuum, C6, Sector A, Pre-A, or the TECT A1/R-192 production-owner status.",
+          "disposition": "UPHELD"
+        }
+      ],
+      "boundary": "T0 claim-nonbearing finite Gibbs-weighted matrix route obstruction. It does not prove or refute the actual Q3 Gibbs state, local Hamiltonian, translate- or volume-uniform moments, noncommutative quadratic-form Holder estimates, multiplication domination, modular domain or companion, positive-time history, direct D or delta-D Cauchy, product/core density, exhaustion independence, group law, common alpha, Hamiltonian-to-OS identification, KMS/GNS, continuum, C6, Sector A, Pre-A, a TECT production map or a Clay result.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "The stronger finite-temperature test still rejects the form-order-only shortcut. For K=diag(1,L), the exact rank-one A and P from EXP-001077, and rho_L=diag(L^6/(L^6+1),1/(L^6+1)), rho_L is a genuine Gibbs state for K at beta=6*log(L)/(L-1)>0. Yet the same state has m5=phi(K^5)=L^5*(L+1)/(L^6+1) and Q^2=s*(L^6+L)/(L^6+1), which violates Q^2<=(9/4)m5^(3/10) for all three exact Pell fixtures. This narrows the QFT interface: even Gibbs weighting for an abstract dominating K is insufficient without the actual Hamiltonian/Gibbs comparison and common-core structure.",
+      "evidence_refs": [
+        "strategy/pre-a-cp1-st8-q3lock-projected-delta-d-third-coefficient-gibbs-weighted-noncommutative-moment-transfer-obstruction-manifest.json#matrix_family",
+        "strategy/pre-a-cp1-st8-q3lock-projected-delta-d-third-coefficient-noncommutative-moment-transfer-obstruction-manifest.json#matrix_family",
+        "strategy/pre-a-cp1-st8-q3lock-projected-delta-d-third-coefficient-scalar-energy-moment-bridge-manifest.json#candidate_bridge",
+        "codes/foundations/pre_a_cp1_st8_q3lock_projected_delta_d_third_coefficient_gibbs_weighted_noncommutative_moment_transfer_obstruction.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_projected_delta_d_third_coefficient_gibbs_weighted_noncommutative_moment_transfer_obstruction_independent.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_projected_delta_d_third_coefficient_gibbs_weighted_noncommutative_moment_transfer_obstruction_verify.py#main",
+        "verification/lean/Tect/R260.lean#powered_candidate_violation_first",
+        "verification/lean/registry.json#R260"
+      ],
+      "finding": "The primary SymPy lane and independent Fraction-only lane each pass 52/52. The integrated verifier passes 20/20 with Lean R260 PASS. The three finite-temperature Gibbs witnesses all satisfy K=A+P and exact fifth moments while violating the powered EXP-001076 candidate; the first has m5=7061881225/6920643601 and Q^2=34603218125/6920643601, already far above the candidate threshold. This refutes only the abstract Gibbs-for-K shortcut, not the actual Q3 transfer.",
+      "formal_integration": {
+        "events": [],
+        "lean": "R260 PASS; metadata PASS",
+        "negatives": [],
+        "no_new_event": true,
+        "no_new_negative": true,
+        "no_new_result": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "results": []
+      },
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": []
+      },
+      "gate_ids": [
+        "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+        "PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE",
+        "PA-CP1-ST8-Q3LOCK-FIRST-PASSAGE-BACKBONE-REAL-TIME-PRODUCT-AND-ENERGY-TAIL-CLOSURE",
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001078",
+      "method": [
+        "Reuse EXP-001076's powered candidate inequality (Q_sigma^2)^10 <= (9/4)^10*m5^3 and EXP-001077's exact positive 2x2 form family.",
+        "Replace the nontracial state by rho_L=diag(L^6/(L^6+1),1/(L^6+1)), which is exp(-beta*K)/Tr(exp(-beta*K)) for beta=6*log(L)/(L-1)>0.",
+        "Verify exactly that A and P are positive rank-one forms, K=A+P, A^2=s^2*A, the Gibbs fifth moment is L^5*(L+1)/(L^6+1), and 2*phi_rho_L(A^(3/2))=s*(L^6+L)/(L^6+1).",
+        "Raise the positive fractional-power comparison to the tenth power and test the fixtures (7,5), (41,29), and (239,169) with exact rational arithmetic.",
+        "Rebuild every matrix operation with a Fraction-only lane, compile Lean R260 for the rational Gibbs fixtures, and keep actual Q3 Hamiltonian/Gibbs comparison, local moment uniformity, commutator/domain transfer, history, direct D/delta-D Cauchy, OS/KMS/GNS, continuum, C6, Sector A and Pre-A explicitly open."
+      ],
+      "next_action": "Use the actual Q3 Hamiltonian rather than K as the Gibbs generator, and prove a translate- and volume-uniform trace/commutator estimate on the common quartic form core; test any proposed estimate against this finite Gibbs obstruction before promotion.",
+      "no_overclaim": "This is a finite Gibbs-weighted route obstruction only. It is not a counterexample to the actual Q3 Gibbs family, not an OS reconstruction, not a KMS/GNS result, not a mass-gap or continuum result, not a C6/Sector-A/Pre-A result, not a TECT production map and not a Clay result.",
+      "prior_exploration_id": "EXP-001077",
+      "provenance": "contemporaneous",
+      "qft_interface": {
+        "closed": "A finite-temperature Gibbs state for the abstract K still does not make form order K=A+P plus one fifth moment sufficient for the scalar Q candidate.",
+        "open": "Actual Q3 Hamiltonian/Gibbs comparison, translate- and volume-uniform moments, commutator/domain control, P input, modular companion, history, direct D/delta-D Cauchy, exhaustion, Hamiltonian-to-OS identification, KMS/GNS gap, continuum, C6, Sector A and Pre-A remain open.",
+        "tect_boundary": "No heat_root_incidence or canonical A1/R-192 production owner is supplied."
+      },
+      "question": "Does replacing the arbitrary state in EXP-001077 by a finite-temperature Gibbs state for K repair the noncommutative transfer from K=A+P and a fifth K-moment to the EXP-001076 Q_sigma bound?",
+      "recorded_at": "2026-08-26T05:00:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001077",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001076",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001068",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-08-24",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Gibbs-weighted noncommutative m5-to-Q transfer obstruction",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",
