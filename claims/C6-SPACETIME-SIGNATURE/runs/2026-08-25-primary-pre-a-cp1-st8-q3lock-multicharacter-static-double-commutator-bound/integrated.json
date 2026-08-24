@@ -1,0 +1,236 @@
+{
+  "assertion_count": 30,
+  "assertions": [
+    {
+      "actual": "['EXP-001071', 'T-054']",
+      "expected": "EXP-001071/T-054",
+      "name": "identity",
+      "pass": true
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "name": "claim nonbearing",
+      "pass": true
+    },
+    {
+      "actual": "EXP-001069",
+      "expected": "EXP-001069 static bound",
+      "name": "static authority",
+      "pass": true
+    },
+    {
+      "actual": "EXP-001068",
+      "expected": "EXP-001068 kinetic bound",
+      "name": "kinetic authority",
+      "pass": true
+    },
+    {
+      "actual": "EXP-001067",
+      "expected": "EXP-001067 split",
+      "name": "CCR authority",
+      "pass": true
+    },
+    {
+      "actual": "['EXP-001061', 'EXP-001059']",
+      "expected": "EXP-001061/EXP-001059",
+      "name": "force authority",
+      "pass": true
+    },
+    {
+      "actual": "['shifted_fourth_first_fixture', 'shifted_fourth_second_fixture', 'l1_amplitude_fixture', 'kinetic_bound_fixture', 'kinetic_ceiling_fixture', 'force_upper_fixture', 'force_ceiling_fixture', 'full_triangle_upper_fixture', 'scope_fixture']",
+      "expected": "present",
+      "name": "Lean source",
+      "pass": true
+    },
+    {
+      "actual": "[]",
+      "expected": "none",
+      "name": "Lean forbidden",
+      "pass": true
+    },
+    {
+      "actual": "PRIMARY MULTICHARACTER-STATIC-DOUBLE-COMMUTATOR PASS 18/18\n",
+      "expected": "PASS",
+      "name": "primary child",
+      "pass": true
+    },
+    {
+      "actual": "INDEPENDENT MULTICHARACTER-STATIC-DOUBLE-COMMUTATOR PASS 17/17\n",
+      "expected": "PASS",
+      "name": "independent child",
+      "pass": true
+    },
+    {
+      "actual": "[18, 17]",
+      "expected": ">0",
+      "name": "positive totals",
+      "pass": true
+    },
+    {
+      "actual": "[2, 2]",
+      "expected": "equal",
+      "name": "lane agreement support_size",
+      "pass": true
+    },
+    {
+      "actual": "[['1/4', '-1/3'], ['1/4', '-1/3']]",
+      "expected": "equal",
+      "name": "lane agreement amplitudes",
+      "pass": true
+    },
+    {
+      "actual": "[['49153/512', '15553/162'], ['49153/512', '15553/162']]",
+      "expected": "equal",
+      "name": "lane agreement shifted_fourth_bounds",
+      "pass": true
+    },
+    {
+      "actual": "['7/12', '7/12']",
+      "expected": "equal",
+      "name": "lane agreement l1_amplitude",
+      "pass": true
+    },
+    {
+      "actual": "['884928390316245388540002019/4949863909294080', '884928390316245388540002019/4949863909294080']",
+      "expected": "equal",
+      "name": "lane agreement force_fourth_moment",
+      "pass": true
+    },
+    {
+      "actual": "['1341774241/53747712', '1341774241/53747712']",
+      "expected": "equal",
+      "name": "lane agreement kinetic_squared_norm_bound",
+      "pass": true
+    },
+    {
+      "actual": "['287875', '287875']",
+      "expected": "equal",
+      "name": "lane agreement force_squared_upper",
+      "pass": true
+    },
+    {
+      "actual": "['293764', '293764']",
+      "expected": "equal",
+      "name": "lane agreement full_squared_norm_upper",
+      "pass": true
+    },
+    {
+      "actual": "[True, True]",
+      "expected": "equal",
+      "name": "lane agreement finite_support_static_multi_character_closed",
+      "pass": true
+    },
+    {
+      "actual": "[True, True]",
+      "expected": "equal",
+      "name": "lane agreement static_product_character_bound_closed",
+      "pass": true
+    },
+    {
+      "actual": "[False, False]",
+      "expected": "equal",
+      "name": "lane agreement product_core_density_closed",
+      "pass": true
+    },
+    {
+      "actual": "[False, False]",
+      "expected": "equal",
+      "name": "lane agreement actual_q3_factorial_history_proved",
+      "pass": true
+    },
+    {
+      "actual": "['49153/512', '15553/162']",
+      "expected": "['49153/512', '15553/162']",
+      "name": "fixture derived_shifted_fourth_bounds",
+      "pass": true
+    },
+    {
+      "actual": "7/12",
+      "expected": "7/12",
+      "name": "fixture derived_l1_amplitude",
+      "pass": true
+    },
+    {
+      "actual": "1341774241/53747712",
+      "expected": "1341774241/53747712",
+      "name": "fixture derived_kinetic_squared_norm",
+      "pass": true
+    },
+    {
+      "actual": "287875",
+      "expected": "287875",
+      "name": "fixture derived_force_squared_upper",
+      "pass": true
+    },
+    {
+      "actual": "293764",
+      "expected": "293764",
+      "name": "fixture derived_full_squared_norm_upper",
+      "pass": true
+    },
+    {
+      "actual": "{'force_history_uniform_closed': False, 'full_actual_q3_double_commutator_uniform_closed': False, 'actual_q3_four_context_theorem_proved': False, 'actual_q3_factorial_history_proved': False, 'volume_uniform_direct_d_cauchy_closed': False, 'delta_d_cauchy_closed': False, 'product_core_density_closed': False, 'exhaustion_independence_closed': False, 'group_law_closed': False, 'common_alpha_closed': False, 'hamiltonian_os_identification_closed': False, 'kms_os_closed': False, 'gns_gap_closed': False, 'continuum_closed': False, 'c6_closed': False, 'sector_a_closed': False, 'pre_a_closed': False}",
+      "expected": "successor gates open",
+      "name": "QFT firewall",
+      "pass": true
+    },
+    {
+      "actual": "{'status': 'PASS', 'command': 'lake env lean Tect/R253.lean', 'returncode': 0, 'output': ''}",
+      "expected": "PASS",
+      "name": "Lean compile",
+      "pass": true
+    }
+  ],
+  "audit_id": "PA-CP1-ST8-Q3LOCK-MULTICHARACTER-STATIC-DOUBLE-COMMUTATOR-BOUND",
+  "boundary": {
+    "actual_q3_factorial_history_proved": false,
+    "actual_q3_four_context_theorem_proved": false,
+    "c6_closed": false,
+    "common_alpha_closed": false,
+    "continuum_closed": false,
+    "delta_d_cauchy_closed": false,
+    "exhaustion_independence_closed": false,
+    "finite_support_static_multi_character_closed": true,
+    "force_history_uniform_closed": false,
+    "full_actual_q3_double_commutator_uniform_closed": false,
+    "gns_gap_closed": false,
+    "group_law_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_os_closed": false,
+    "no_new_negative_result": true,
+    "no_overclaim": "This closes a static bound for each declared finite support and amplitude vector only. It does not prove a support-uniform product class, density, split-history bound, direct D or delta-D Cauchy, OS/KMS/GNS, continuum, C6, Sector A or Pre-A.",
+    "no_pdf": true,
+    "no_tier_change": true,
+    "pre_a_closed": false,
+    "product_core_density_closed": false,
+    "sector_a_closed": false,
+    "single_character_remainder_uniform_closed_reused": true,
+    "static_product_character_bound_closed": true,
+    "volume_uniform_direct_d_cauchy_closed": false
+  },
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "exploration_id": "EXP-001071",
+  "lean": {
+    "command": "lake env lean Tect/R253.lean",
+    "output": "",
+    "returncode": 0,
+    "status": "PASS"
+  },
+  "provenance": {
+    "bridge_manifest_sha256": "9c7feef490c250e3a28701f8ffb0aacaecad8b657815fadeee4a0ad35e3d2723",
+    "force_manifest_sha256": "22ebca9d2064e66ce030db357bcb25be7f1f3107dd4dd631d5ccf15ca98b4887",
+    "independent_sha256": "32350803ed7ab507add53fc469f5756f88e27381cff0a2f5438864a6b4a737d7",
+    "kinetic_manifest_sha256": "b03d17b5ca26059945c83d506ca95ed9d4d86506059d0980da0974159ff95232",
+    "lean_sha256": "8d99f2b7475f79e07aa11a748fe09f29bfed14fd85240cf09394d10e2dcf7ee0",
+    "manifest_sha256": "7dc9d47e6d92e20a0f91a27c1609c80ccf2ae0a76198d23ff3d1481cc0a8b6ae",
+    "primary_sha256": "ed3738d14e1d2b9ea6f76a1af016b3060da0831c61ded2d85cb94b1a77f5970b",
+    "split_manifest_sha256": "ca0d45e4e79763c489c56e2336e4ebc90f5e7b19cafe18982e9075975186ab43",
+    "static_manifest_sha256": "afb465fcc051642951248249fa62e30af990651e89d6f66843297cf384a3b496"
+  },
+  "recorded_at": "2026-08-24T09:36:46.894823Z",
+  "run_kind": "integrated",
+  "schema": "tect/foundation-audit/1.0",
+  "task_id": "T-054",
+  "verdict": "PASS"
+}
