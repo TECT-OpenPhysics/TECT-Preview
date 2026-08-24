@@ -1,0 +1,113 @@
+{
+  "schema": "tect/pre-a-cp1-st8-q3lock-fixed-beta-mixture-seminorm-orbit-contract-stress-test/1.0",
+  "exploration_id": "EXP-001064",
+  "prior_exploration_id": "EXP-001063",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "tier": "T0",
+  "claim_bearing": false,
+  "title": "Fixed-beta mixture-seminorm orbit-contract stress test",
+  "question": "Can the beta,# contractivity assumed by the finite-member Duhamel bridge be inferred from a fixed-beta mixture state without first proving the finite Hamiltonian-to-OS embedding?",
+  "authority_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-fixed-beta-two-sided-duhamel-remainder-bridge-manifest.json#conditional_hypotheses",
+    "strategy/pre-a-cp1-st8-q3lock-fixed-beta-os-mixture-common-wstar-route-split-manifest.json#hamiltonian_identification_boundary",
+    "strategy/pre-a-cp1-st8-q3lock-fixed-beta-os-mixture-common-wstar-route-split-manifest.json#strongstar_topology"
+  ],
+  "fixture": {
+    "state": "rho=(I+p*sigma_z)/2",
+    "polarization": "3/5",
+    "unitary": "U=(3*I-4*i*sigma_x)/5",
+    "seed": "X=P_-=(I-sigma_z)/2",
+    "seminorm": "N_rho(X)^2=Tr(rho*X*X)+Tr(rho*X*X*)",
+    "initial_squared_norm": "2/5",
+    "evolved_squared_norm": "146/125",
+    "growth_gap": "96/125",
+    "rotation_diagonal": ["16/25", "9/25"]
+  },
+  "finding": {
+    "unitarity": "U*U=I exactly",
+    "initial": "N_rho(P_-)^2=1-p=2/5",
+    "evolved": "For X'=U*P_-U, diagonal entries are 16/25 and 9/25, so N_rho(X')^2=146/125.",
+    "obstruction": "146/125>2/5; the fixed state is not invariant under the noncommuting finite Hamiltonian orbit, so beta,# contractivity is not an automatic consequence of the state or of the static endpoint moment."
+  },
+  "scope": {
+    "finite_counterexample_closed": true,
+    "automatic_mixture_contractivity_closed": false,
+    "finite_hamiltonian_os_embedding_closed": false,
+    "actual_q3_four_context_theorem_proved": false,
+    "actual_q3_factorial_history_proved": false,
+    "all_time_orbit_bound_proved": false,
+    "volume_uniform_direct_d_cauchy_closed": false,
+    "delta_d_cauchy_closed": false,
+    "product_core_density_closed": false,
+    "exhaustion_independence_closed": false,
+    "group_law_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "fixed_beta_os_kms_envelope_closed": true,
+    "gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true,
+    "not_closed": "The finite counterexample rejects only automatic contractivity in an arbitrary fixed state. It does not reject an invariant reconstructed OS dynamics or prove that the actual Q3 embedding fails. All direct D/delta-D, history, exhaustion, common-alpha, gap and continuum gates remain open."
+  },
+  "adversarial_review": [
+    {
+      "axis": "matrix exactness",
+      "check": "The 2x2 unitary and density matrix are evaluated exactly; no floating-point sign is used.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "two-sided norm",
+      "check": "The stress test uses the same psi(X*X)+psi(XX*) seminorm target as the fixed-beta OS gate, not a one-sided substitute.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "scope of obstruction",
+      "check": "The example rejects automatic state contractivity only; it does not reject an invariant OS-reconstructed group or the Q3 route itself.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "static-to-dynamic promotion",
+      "check": "The endpoint moment and Duhamel coefficient are not used to infer finite Hamiltonian-to-OS embedding.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "volume",
+      "check": "The fixture is dimension two and supplies no thermodynamic estimate.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "Lean",
+      "check": "R246 checks exact rational polarization, rotation squares and norm values; it does not formalize complex matrix domains.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "QFT promotion",
+      "check": "No OS/KMS reconstruction, GNS gap, continuum, C6, Sector A, Pre-A or TECT production conclusion follows.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "negative-result boundary",
+      "check": "This is a route stress test with no new global negative authority; the exact finite witness is kept as an exploration boundary.",
+      "disposition": "UPHELD"
+    }
+  ],
+  "formal_integration": {
+    "lean_entry": "verification/lean/Tect/R246.lean",
+    "result_ids": [],
+    "negative_ids": [],
+    "changelog_event": null
+  },
+  "qft_interface": {
+    "closed": "An exact finite witness that fixed-state beta,# contractivity is not automatic for a noncommuting finite Hamiltonian orbit.",
+    "open": "A canonical Hamiltonian-to-OS embedding with an invariant/separating topology, the actual Q3 four-context history and all direct D/delta-D thermodynamic gates remain open.",
+    "tect_boundary": "No heat_root_incidence or canonical A1/R-192 production owner is supplied."
+  },
+  "boundary": "T0 claim-nonbearing adversarial stress test. It narrows the next proof obligation to an invariant OS/Hamiltonian embedding or a replacement weighted orbit estimate; it is not a Q3 no-go theorem.",
+  "next_action": "Construct the finite Hamiltonian-to-OS intertwiner with an invariant beta,# topology, or replace contractivity by a proved weighted orbit bound; retain the direct D/delta-D and QFT firewalls."
+}
