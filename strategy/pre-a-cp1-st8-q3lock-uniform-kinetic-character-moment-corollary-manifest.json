@@ -1,0 +1,134 @@
+{
+  "schema": "tect/pre-a-cp1-st8-q3lock-uniform-kinetic-character-moment-corollary/1.0",
+  "exploration_id": "EXP-001068",
+  "prior_exploration_id": "EXP-001067",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "tier": "T0",
+  "claim_bearing": false,
+  "title": "Uniform finite-periodic kinetic character moment corollary",
+  "question": "Does the registered onsite coercivity and fifth Gibbs moment give a volume/source-uniform two-sided Gibbs seminorm bound for the kinetic part of delta_H^2(W_a) without a modular multiplier hypothesis?",
+  "authority_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-common-alpha-topology-critical-graph-route-split-manifest.json#model",
+    "strategy/pre-a-cp1-st8-q3lock-local-measured-renyi-semiclassical-doublet-route-split-manifest.json#conditional_fifth_graph_transport",
+    "strategy/pre-a-cp1-st8-q3lock-local-measured-renyi-semiclassical-doublet-route-split-manifest.json#actual_q3_static_fifth_moment_and_elliptic_embedding",
+    "strategy/pre-a-cp1-st8-q3lock-kinetic-force-double-commutator-split-manifest.json#model"
+  ],
+  "model": {
+    "scope": "Registered finite periodic Q3 volumes at fixed beta, compact onsite sources, uniform site translates; arbitrary boundaries remain outside scope.",
+    "onsite_coercivity": "k_x >= 1 + p_x^2/(2 chi) + gamma*q_x^4",
+    "fifth_moment": "m5=sup_(Lambda,h,x) phi_(Lambda,h)(k_x^5)<infinity",
+    "character": "W_a=exp(i*a*q_x/hbar), P_plus=p_x+a/2, P_minus=p_x-a/2",
+    "kinetic_identity": "N_rho(W_a P_plus^2)^2=phi_rho(P_plus^4)+phi_rho(P_minus^4)",
+    "moment_bound": "phi_rho(p_x^4)<=4 chi^2 m5",
+    "shift_bound": "N_rho(W_a P_plus^2)^2<=64 chi^2 m5+a^4",
+    "double_commutator_contribution": "N_rho((a^2/(chi^2*hbar^2))W_a P_plus^2)^2<=(a^4/(chi^4*hbar^4))*(64 chi^2 m5+a^4)"
+  },
+  "proof_boundary": {
+    "kinetic_part": "The two seminorm orientations reduce algebraically to p_x+a/2 and p_x-a/2; no uniform M_0(W_a) is used.",
+    "force_part": "The local force summand from EXP-001067 is not silently included; a full-force second moment remains a separate input.",
+    "thermodynamic_use": "The bound is uniform over the registered finite periodic family and is a necessary input to, but not a direct D/delta-D exhaustion theorem."
+  },
+  "finite_fixture": {
+    "chi": "1",
+    "hbar": "1",
+    "m5": "3",
+    "character_amplitude": "1/4",
+    "derived_shifted_kinetic_squared_norm_bound": "49153/256",
+    "derived_double_commutator_kinetic_squared_norm_bound": "49153/65536",
+    "p_grid": ["-3", "-2", "-1", "0", "1", "2", "3"],
+    "grid_points": 7
+  },
+  "scope": {
+    "onsite_momentum_fourth_moment_closed": true,
+    "kinetic_character_two_sided_gibbs_bound_closed": true,
+    "modular_multiplier_for_kinetic_part_needed": false,
+    "force_summand_closed": false,
+    "full_actual_q3_double_commutator_uniform_closed": false,
+    "actual_q3_four_context_theorem_proved": false,
+    "actual_q3_factorial_history_proved": false,
+    "volume_uniform_direct_d_cauchy_closed": false,
+    "delta_d_cauchy_closed": false,
+    "product_core_density_closed": false,
+    "exhaustion_independence_closed": false,
+    "group_law_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_os_closed": false,
+    "gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true,
+    "not_closed": "This package closes only the kinetic contribution for local configuration characters in the registered finite periodic compact-source scope. It does not close the force contribution, the full double commutator, direct D/delta-D Cauchy, exhaustion, common alpha, OS/KMS/GNS, continuum, C6, Sector A or Pre-A."
+  },
+  "adversarial_review": [
+    {
+      "axis": "authority scope",
+      "check": "The onsite coercivity and m5 are reused only in the registered finite periodic compact-source family; no arbitrary-boundary or all-shape extension is inferred.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "fourth-moment reduction",
+      "check": "p_x^2/(2 chi)<=k_x and k_x>=1 imply p_x^4<=4 chi^2 k_x^5 by functional calculus; no unregistered moment is inserted.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "shift inequality",
+      "check": "The scalar bound |u+v|^4<=8(|u|^4+|v|^4) is applied to both p_x+a/2 and p_x-a/2, with the derived a^4 term retained.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "Weyl ordering",
+      "check": "W_a p_x W_a^*=p_x-a is used only inside W_a P_plus^4 W_a^*, so the second seminorm orientation becomes phi(P_minus^4) exactly.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "modular shortcut",
+      "check": "No bound on rho^t W_a rho^-t is assumed; the cancellation is an algebraic two-sided seminorm identity for this character.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "force separation",
+      "check": "The force summand is not hidden inside the kinetic bound; full Q3 force control remains open.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "volume promotion",
+      "check": "Uniformity is only over the upstream registered finite periodic family and does not identify a common OS representation or an exhaustion limit.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "Lean scope",
+      "check": "R250 checks exact rational shift and fixture arithmetic only; it does not formalize unbounded operator domains or the upstream m5 theorem.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "QFT promotion",
+      "check": "A kinetic seminorm input is not Hamiltonian-to-OS identification, common alpha, KMS/GNS, gap, continuum, C6, Sector A or Pre-A closure.",
+      "disposition": "UPHELD"
+    }
+  ],
+  "formal_integration": {
+    "lean_entry": "verification/lean/Tect/R250.lean",
+    "result_ids": [],
+    "negative_ids": [],
+    "changelog_event": null
+  },
+  "qft_interface": {
+    "closed": "The registered finite-periodic Q3 m5 input now yields a uniform two-sided Gibbs seminorm bound for the kinetic summand of the local configuration-character double commutator, with no modular multiplier hypothesis for that summand.",
+    "open": "The force summand, full double commutator, actual Q3 history, direct D/delta-D Cauchy, exhaustion, common alpha, Hamiltonian-to-OS identification, KMS/GNS gap, continuum, C6, Sector A and Pre-A remain open.",
+    "tect_boundary": "No heat_root_incidence or canonical A1/R-192 production owner is supplied."
+  },
+  "boundary": "T0 claim-nonbearing kinetic-part corollary in the registered finite periodic compact-source scope.",
+  "next_action": "Derive a matching uniform L2 force bound for the complete onsite-plus-edge Q3 force from the registered endpoint energy moments; then combine it with this kinetic bound in EXP-001066 while preserving the OS/exhaustion firewall.",
+  "verification": {
+    "primary_script": "codes/foundations/pre_a_cp1_st8_q3lock_uniform_kinetic_character_moment_corollary.py",
+    "independent_script": "codes/foundations/pre_a_cp1_st8_q3lock_uniform_kinetic_character_moment_corollary_independent.py",
+    "integrated_script": "codes/foundations/pre_a_cp1_st8_q3lock_uniform_kinetic_character_moment_corollary_verify.py"
+  },
+  "no_overclaim": "This is a finite QFT-facing kinetic-moment corollary only. It is not a proof of the complete Q3 dynamics, thermodynamic QFT, mass gap, C6, Sector A, Pre-A, TECT production or a Clay result."
+}
