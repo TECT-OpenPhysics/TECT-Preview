@@ -1,0 +1,118 @@
+{
+  "schema": "tect/pre-a-cp1-st8-q3lock-single-character-uniform-duhamel-remainder/1.0",
+  "exploration_id": "EXP-001070",
+  "prior_exploration_id": "EXP-001069",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "tier": "T0",
+  "claim_bearing": false,
+  "title": "Uniform finite-periodic single-character Duhamel remainder",
+  "question": "Does the exact finite Gibbs-isometric Duhamel remainder theorem combine with the EXP-001069 static character envelope to give a uniform remainder bound for one local configuration character across the registered finite periodic Q3 family?",
+  "authority_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-finite-gibbs-isometric-duhamel-remainder-manifest.json#finite_time_theorem",
+    "strategy/pre-a-cp1-st8-q3lock-static-character-full-double-commutator-bound-manifest.json#model",
+    "strategy/pre-a-cp1-st8-q3lock-uniform-kinetic-character-moment-corollary-manifest.json#model",
+    "strategy/pre-a-cp1-st8-q3lock-compact-source-endpoint-third-moment-bridge-manifest.json#model"
+  ],
+  "model": {
+    "scope": "Registered finite periodic Q3 volumes at fixed beta, compact onsite sources and one local configuration character W_a; no products, split histories, arbitrary boundaries or thermodynamic promotion.",
+    "finite_theorem": "R_t(X)=integral_0^t (t-s) alpha_s(delta_H^2(X)) ds and Gibbs isometry gives N_beta(R_t(X))<=t^2*N_beta(delta_H^2(X))/2 for each finite Gibbs member.",
+    "static_input": "EXP-001069 supplies N_rho(delta_H^2(W_a))^2<=B_static uniformly in the registered static family.",
+    "remainder_bound": "N_rho(R_t(W_a))^2<=(t^4/4)*B_static",
+    "uniformity": "The displayed bound is uniform only for the registered single-character finite periodic family and its declared source/parameter fixture."
+  },
+  "finite_fixture": {
+    "time": "1/100",
+    "static_full_squared_norm_upper": "53361",
+    "derived_remainder_factor": "1/400000000",
+    "derived_remainder_squared_upper": "53361/400000000",
+    "derived_remainder_squared_upper_decimal": "0.0001334025"
+  },
+  "scope": {
+    "finite_member_duhamel_remainder_reused": true,
+    "static_full_character_bound_reused": true,
+    "single_character_remainder_uniform_closed": true,
+    "uniform_direct_d_single_character_closed": false,
+    "volume_uniform_direct_d_cauchy_closed": false,
+    "delta_d_cauchy_closed": false,
+    "actual_q3_four_context_theorem_proved": false,
+    "actual_q3_factorial_history_proved": false,
+    "product_core_density_closed": false,
+    "exhaustion_independence_closed": false,
+    "group_law_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_os_closed": false,
+    "gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true,
+    "not_closed": "This package closes only a uniform finite-periodic remainder estimate for one local character. It does not establish a product class, split-history factorial bound, direct D or delta-D Cauchy theorem, exhaustion-independent dynamics, common alpha, Hamiltonian-to-OS identification, KMS/GNS gap, continuum, C6, Sector A or Pre-A."
+  },
+  "adversarial_review": [
+    {
+      "axis": "finite theorem",
+      "check": "The Duhamel identity is used only for each finite Gibbs member, where the Gibbs seminorm isometry is exact.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "scaling",
+      "check": "Squaring the t^2/2 bound gives t^4/4; the time factor is recomputed from the fixture rather than pasted.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "static input",
+      "check": "The EXP-001069 envelope is reused as a static bound and is not silently applied to evolved split histories.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "single observable",
+      "check": "Only W_a is covered; no product or generated algebra density claim is made.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "orientation",
+      "check": "The finite theorem applies per orientation; no plus/minus Gibbs carrier identification is asserted.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "uniformity",
+      "check": "Uniformity is restricted to the declared periodic compact-source static family and does not become an all-exhaustion theorem.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "Lean",
+      "check": "R252 checks rational time scaling and the conservative envelope only; it does not formalize unbounded generators or limits.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "QFT promotion",
+      "check": "Direct D/delta-D, OS/KMS/GNS, gap, continuum, C6, Sector A and Pre-A remain open.",
+      "disposition": "UPHELD"
+    }
+  ],
+  "formal_integration": {
+    "lean_entry": "verification/lean/Tect/R252.lean",
+    "result_ids": [],
+    "negative_ids": [],
+    "changelog_event": null
+  },
+  "qft_interface": {
+    "closed": "A uniform finite-periodic Taylor remainder envelope is obtained for one local character from the static full second-commutator bound.",
+    "open": "Products, split histories, direct D and delta-D Cauchy, exhaustion, common alpha, Hamiltonian-to-OS identification, KMS/GNS gap, continuum, C6, Sector A and Pre-A remain open.",
+    "tect_boundary": "No heat_root_incidence or canonical A1/R-192 production owner is supplied."
+  },
+  "boundary": "T0 claim-nonbearing single-character finite-periodic Duhamel corollary; not a dynamics completion.",
+  "next_action": "Extend the remainder estimate to a preregistered product/core class only after an evolved-force and modular-domain estimate is proved; otherwise record the exact history obstruction.",
+  "verification": {
+    "primary_script": "codes/foundations/pre_a_cp1_st8_q3lock_single_character_uniform_duhamel_remainder.py",
+    "independent_script": "codes/foundations/pre_a_cp1_st8_q3lock_single_character_uniform_duhamel_remainder_independent.py",
+    "integrated_script": "codes/foundations/pre_a_cp1_st8_q3lock_single_character_uniform_duhamel_remainder_verify.py"
+  },
+  "no_overclaim": "This is a finite QFT-facing single-character remainder checkpoint. It is not a product-class dynamics theorem, an OS reconstruction, a KMS/GNS result, a mass-gap proof, a continuum result, a C6/Sector-A/Pre-A result, a TECT production map or a Clay result."
+}
+
