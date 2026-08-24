@@ -1,6 +1,27 @@
 {
   "data": [
     {
+      "anchor": "ng-2026-08-04-pre-a-cp1-cl8-natural-low-mode-exact-dynamics-equivariance",
+      "branch": "exactly intertwine the declared inserted-1D `g>0` coarse and fine dynamics with the natural low-mode embedding while allowing only scalar-energy, scalar-mass, and Q3-Laplacian quadratic counterterms",
+      "claim_ref_basis": {
+        "C6-SPACETIME-SIGNATURE": "explicit_negative_event:20260804-register-exp-000758-matrix-counterterm-state-co"
+      },
+      "claim_refs": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "detail": {
+        "artifacts": "`strategy/pre-a-cp1-cl8-matrix-counterterm-state-compactness-route-split-certificate-260804.md`; `strategy/pre-a-cp1-cl8-matrix-counterterm-state-compactness-route-split-manifest.json`; `codes/foundations/pre_a_cp1_cl8_matrix_counterterm_state_compactness_route_split.py`; `codes/foundations/pre_a_cp1_cl8_matrix_counterterm_state_compactness_route_split_independent.py`.",
+        "consequence": "Exact natural low-mode interacting dynamics equivariance is refuted only for this inserted-1D family, embedding, and counterterm class. Asymptotic fixed-observable dynamics, dressed or nonnatural embeddings, completely-positive reductions, Hamiltonians of mean force, and different perfect-action regulators remain open. No continuum, physical-light, C6, CP1, or Pre-A verdict follows.",
+        "evidence": "Exact invariance of the type-I factor `B(H_low) tensor I` would make the fine unitary a product, up to phase, and its generator additive on the common invariant Schwartz tensor core. On the collective retained-zero/added-Nyquist plane, however, ```text U_N contains 3g X^2 Y^2/(2L), partial_X^2 partial_Y^2 U_N=6g/L>0. ``` The resulting cubic force term `-(3g/L)X Y^2` is quadratic in the added mode. A scalar energy has no force, quadratic counterterms have only linear forces, and the Q3 term vanishes on the species singlet, so this term cannot be canceled within the declared class.",
+        "failure_mode": "Within the inserted one-dimensional CL8 family with `g>0`, require the natural low-mode monomorphism to exactly intertwine coarse and fine Heisenberg dynamics while allowing only the declared scalar-energy, scalar-mass, and Q3-Laplacian quadratic counterterms."
+      },
+      "detail_title": "the declared natural low-mode factor is not exactly invariant under interacting dynamics",
+      "family_refs": [],
+      "kind": "no_go",
+      "summary": "type-I-factor invariance would force product dynamics and an additive low/high generator, but the exact fine potential has `partial_X^2 partial_Y^2 U_N=6g/L>0`. Retain asymptotic fixed-observable, dressed, completely-positive, mean-force, or perfect-action routes",
+      "tag": "NG-2026-08-04-PRE-A-CP1-CL8-NATURAL-LOW-MODE-EXACT-DYNAMICS-EQUIVARIANCE"
+    },
+    {
       "anchor": "ng-2026-08-04-pre-a-cp1-cl8-midpoint-quad-global-uniqueness",
       "branch": "claim a global single-valued Q3 four-corner map for the symmetric midpoint variational quad over the whole admitted `r<0` parameter range",
       "claim_ref_basis": {
@@ -2220,29 +2241,6 @@
       "kind": "no_go",
       "summary": "adding a constant `C` to the endpoint energy preserves every normalized relative datum but shifts the absolute free energy by `C`. The route needs an external absolute low/injected anchor; this does not refute the pinned production normalization or any anchored endpoint theorem",
       "tag": "NG-2026-07-30-A13-NORMALIZED-GIBBS-DOOB-ABSOLUTE-ANCHOR"
-    },
-    {
-      "anchor": "ng-2026-07-30-a13-naive-primitive-trace-forest-identification",
-      "branch": "identify the conditionally averaged R-123 primitive trace directly with the R-063 covariance-normal forest while omitting conditional future variance",
-      "claim_ref_basis": {
-        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION": "structured_unique_family:A13"
-      },
-      "claim_refs": [
-        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
-      ],
-      "detail": {
-        "claim_route": "After conditional future averaging, identify the R-123 primitive trace directly with the R-063 covariance-normal forest, equivalently use `E_f E_u^CN=1/2 sum_C(||Phi_(u,C)||^2-Theta_(u,C))` without a conditional-variance term.",
-        "consequence": "Conditional averaging splits unaveraged current energy into endpoint mean-square plus future variance. The variance rebate is load-bearing even for a deterministic translation already inside R-063's scope. This falsifies only the naive primitive-trace/forest identification; it does not refute the corrected R-125 bridge, the finite-cutoff adapted partial-Wick coordinate, or a complete signed production estimate. The adapted continuum forest, production root-shell factorisation, balanced band, and stationary-baseline bound remain open.",
-        "evidence": "R-125 proof note, Section 5, Eqs. (5.1)--(5.5); exact primary and non-importing independent executable audits; paired PDF and integrated verifier.",
-        "failure_mode": "Take trivial past, one future `eta~N(0,1)`, no heat, one full output cluster, base `w_0=0`, terminal `w_1=e_1`, derivative `V=eta e_2`, and covariance `Gamma=e_2 e_2^T`. Only the `S_1` pair survives. With `s=c0+c1=339/(8000P)`, the exact quantities are `J_1=2 eta(sqrt(c0),sqrt(c1))`, `Phi_1=0`, `Theta_1=4s`, and `V_(fut,1)=4s`. The covariance-normal endpoint and deterministic R-063 forest both have mean `E[2s(eta^2-1)]=0`. The corrected bridge is `0=1/2(0-4s)+1/2(4s)`. The naive identity instead gives `0=-2s` and misses exactly `2s=339/(4000P)`."
-      },
-      "detail_title": "conditional future variance separates primitive trace from the forest",
-      "family_refs": [
-        "A13"
-      ],
-      "kind": "no_go",
-      "summary": "a deterministic constant-translation fixture has zero covariance-normal/forest mean but `Theta=V_fut=4s`, `s=339/(8000P)`; the naive identity gives `0=-2s` and misses exactly `2s=339/(4000P)`. The future-variance rebate is indispensable even before adaptation",
-      "tag": "NG-2026-07-30-A13-NAIVE-PRIMITIVE-TRACE-FOREST-IDENTIFICATION"
     }
   ],
   "kind": "negative_records",

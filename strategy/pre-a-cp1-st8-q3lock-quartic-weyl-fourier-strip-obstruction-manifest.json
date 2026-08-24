@@ -1,0 +1,116 @@
+{
+  "schema": "tect/pre-a-cp1-st8-q3lock-quartic-weyl-fourier-strip-obstruction/1.0",
+  "exploration_id": "EXP-001056",
+  "prior_exploration_id": "EXP-001055",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "tier": "T0",
+  "claim_bearing": false,
+  "title": "Quartic onsite obstruction to a positive-strip Weyl-Fourier carrier",
+  "question": "Does the natural positive-strip L1 Weyl-Fourier analytic carrier remain invariant under the exact quartic onsite multiplication subflow of the Q3 model?",
+  "upstream_input": {
+    "route_manifest": "strategy/pre-a-cp1-st8-q3lock-fixed-beta-os-mixture-common-wstar-route-split-manifest.json",
+    "route_exploration": "EXP-000800",
+    "candidate": "Weyl-Fourier analytic hierarchy with a positive exponential frequency moment and all-moment orbit-Frechet closure",
+    "scope": "The exact test is on the one-component quartic onsite subflow, before kinetic and bond terms are added."
+  },
+  "model": {
+    "potential": "V(q)=G q^4/4",
+    "translation": "W_a=exp(-i a p/hbar)",
+    "onsite_subflow": "beta_t^V(W_a)=W_a exp(i t [V(q+a)-V(q)]/hbar) up to the declared sign convention",
+    "difference": "V(q+a)-V(q)=G[a q^3+(3/2)a^2 q^2+a^3 q+a^4/4]",
+    "phase": "P_(a,t)(q)=t[V(q+a)-V(q)]/hbar",
+    "leading_phase_coefficient": "kappa=G t a/hbar"
+  },
+  "analytic_lemma": {
+    "weighted_fourier_implies_bounded_strip": true,
+    "statement": "If a coefficient density f has integral exp(rho|k|)|f(k)| dk finite for rho>0, its Fourier transform extends to a bounded holomorphic function on every narrower strip |Im z|<rho.",
+    "phase_growth": "For kappa != 0, |exp(i P_(a,t)(x+i y))| grows like exp(3|kappa||y|x^2) on the side y*kappa<0, so the quartic phase is unbounded in every nonzero strip.",
+    "conclusion": "The positive-strip L1 Weyl-Fourier representation cannot contain the quartic onsite image of any nonzero translation Weyl element at nonzero time."
+  },
+  "fixture": {
+    "G": "51/35",
+    "translation_amplitude": "1/2",
+    "time": "1/3",
+    "hbar": "1",
+    "strip_test_imaginary_height": "-1",
+    "real_sample_points": ["0", "1", "2", "4", "8"]
+  },
+  "scope": {
+    "positive_strip_weyl_fourier_carrier_refuted": true,
+    "quartic_onsite_subflow_tested": true,
+    "full_q3_dynamics_closed": false,
+    "common_alpha_closed": false,
+    "gevery_or_subexponential_alternative_tested": false,
+    "state_weighted_route_closed": false,
+    "direct_projected_d_delta_d_closed": false,
+    "fixed_beta_os_mixture_identified_with_hamiltonian": false,
+    "kms_os_closed": false,
+    "gns_gap_closed": false,
+    "continuum_closed": false,
+    "no_tier_change": true,
+    "no_pdf": true,
+    "not_closed": "This is a route-specific obstruction for a positive exponential Weyl-Fourier density/strip carrier. It does not rule out radius-free Frechet scales, Gevrey or subexponential weights, modular/state-weighted classes, direct D and delta-D convergence, or another Hamiltonian-derived common algebra."
+  },
+  "adversarial_review": [
+    {
+      "axis": "potential-only scope",
+      "check": "The calculation uses only the exact quartic multiplication subflow and does not identify it with the full Q3 Hamiltonian flow.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "Weyl representation",
+      "check": "The tested carrier is explicitly a positive-strip L1 Weyl-Fourier coefficient class; no claim covers all observable representations.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "strip implication",
+      "check": "The contradiction uses the elementary weighted-Fourier-to-bounded-strip lemma and the exact entire quartic phase growth.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "nonzero parameters",
+      "check": "The fixture keeps G, a and t nonzero, so the cubic phase coefficient is genuinely nonzero.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "radius loss",
+      "check": "The result removes only positive-radius strip invariance; radius-free, Gevrey and subexponential alternatives remain live.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "Lean",
+      "check": "R238 checks the exact rational cubic coefficient and strip-growth sign only; it does not formalize Fourier analysis or Q3 domains.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "QFT promotion",
+      "check": "No thermodynamic dynamics, KMS identification, GNS gap, continuum, C6, Sector A or Pre-A conclusion follows.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "TECT owner",
+      "check": "No heat_root_incidence or canonical A1/R-192 production owner is supplied.",
+      "disposition": "UPHELD"
+    }
+  ],
+  "formal_integration": {
+    "lean_entry": "verification/lean/Tect/R238.lean",
+    "negative_ids": ["NG-2026-08-24-PRE-A-ST8-Q3LOCK-QUARTIC-WEYL-FOURIER-POSITIVE-STRIP-INVARIANCE"],
+    "result_ids": [],
+    "events": [],
+    "no_new_result": false,
+    "no_new_negative": false,
+    "no_pdf": true
+  },
+  "qft_interface": {
+    "closed": "A route-specific obstruction: the positive-strip L1 Weyl-Fourier carrier cannot be invariant under the quartic onsite subflow.",
+    "open": "A radius-free analytic/Frechet or Gevrey topology, state-weighted or modular route, direct projected D and delta-D locality, Hamiltonian identification with the fixed-beta OS mixture, common alpha/KMS, ground/GNS gap, continuum, C6, Sector A and Pre-A remain open.",
+    "tect_boundary": "No heat_root_incidence or canonical A1/R-192 production owner is supplied."
+  },
+  "boundary": "T0 claim-nonbearing route obstruction for one positive-strip Weyl-Fourier carrier. It is not a no-go theorem for Q3 dynamics or for all analytic/state-weighted topologies.",
+  "next_action": "Retire the positive-strip L1 Weyl-Fourier candidate and test a radius-free/Gevrey or modular/state-weighted orbit topology, or attack direct projected D and delta-D Cauchy inside the fixed-beta OS mixture envelope.",
+  "reviewed_on": "2026-08-24",
+  "recorded_at": "2026-08-25T06:30:00Z",
+  "recorded_by": "Codex"
+}

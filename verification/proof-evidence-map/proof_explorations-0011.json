@@ -5138,6 +5138,120 @@
       "task_id": "T-054",
       "title": "Finite-volume Q3 multiplication graph bridge",
       "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "axis": "potential-only scope",
+          "check": "Only the exact quartic multiplication subflow is tested; the full Q3 Hamiltonian is not identified with it.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "carrier definition",
+          "check": "The obstruction concerns positive-strip L1 Weyl-Fourier densities only; other topologies remain open.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "strip implication",
+          "check": "Weighted Fourier inversion gives bounded holomorphic strip extension on every narrower strip.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "growth sign",
+          "check": "The exact cubic coefficient kappa is nonzero and y*kappa<0 makes -Im(P) grow quadratically in x.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "radius alternatives",
+          "check": "Radius-free, Gevrey and subexponential profiles are not tested or rejected.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "Lean",
+          "check": "R238 checks exact arithmetic fixtures only and cannot certify Fourier analysis or Q3 domains.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "QFT promotion",
+          "check": "No thermodynamic dynamics, KMS, GNS gap, continuum, C6, Sector A or Pre-A conclusion follows.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "TECT owner",
+          "check": "No heat_root_incidence or canonical A1/R-192 production owner is supplied.",
+          "disposition": "UPHELD"
+        }
+      ],
+      "boundary": "T0 claim-nonbearing route obstruction for a positive exponential Weyl-Fourier density/strip carrier. It does not reject all analytic/Frechet, Gevrey, modular/state-weighted or direct D and delta-D routes and does not establish a thermodynamic QFT.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "This is the first exact test of the Weyl-Fourier analytic hierarchy left open by the fixed-beta OS-mixture route. It removes one named carrier without conflating the failure with nonexistence of Q3 dynamics or with the still-live radius-free, Gevrey, modular and state-weighted alternatives.",
+      "evidence_refs": [
+        "strategy/pre-a-cp1-st8-q3lock-quartic-weyl-fourier-strip-obstruction-manifest.json#analytic_lemma",
+        "strategy/pre-a-cp1-st8-q3lock-quartic-weyl-fourier-strip-obstruction-certificate-260824.md#Finding",
+        "codes/foundations/pre_a_cp1_st8_q3lock_quartic_weyl_fourier_strip_obstruction.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_quartic_weyl_fourier_strip_obstruction_independent.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_quartic_weyl_fourier_strip_obstruction_verify.py#main",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-primary-pre-a-cp1-st8-q3lock-quartic-weyl-fourier-strip-obstruction/primary.json#assertions",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-primary-pre-a-cp1-st8-q3lock-quartic-weyl-fourier-strip-obstruction/independent.json#assertions",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-primary-pre-a-cp1-st8-q3lock-quartic-weyl-fourier-strip-obstruction/integrated.json#assertions",
+        "verification/lean/Tect/R238.lean#quartic_weyl_cubic_coefficient",
+        "verification/lean/registry.json#entrypoints",
+        "strategy/pre-a-cp1-st8-q3lock-fixed-beta-os-mixture-common-wstar-route-split-manifest.json#single_rung_influence_counterexample"
+      ],
+      "finding": "The positive-strip L1 Weyl-Fourier carrier is not invariant even under the quartic onsite subflow for any nonzero translation and time: the cubic phase is unbounded in every nonzero complex strip, while a positive exponential Fourier moment would force bounded strip analyticity. Primary and independent lanes pass 20/20; integrated passes 31/31; Lean R238 passes.",
+      "formal_integration": {
+        "events": [],
+        "negatives": [
+          "NG-2026-08-24-PRE-A-ST8-Q3LOCK-QUARTIC-WEYL-FOURIER-POSITIVE-STRIP-INVARIANCE"
+        ],
+        "no_new_negative": false,
+        "no_new_result": false,
+        "no_pdf": true,
+        "results": []
+      },
+      "formal_refs": {
+        "events": [],
+        "negatives": [
+          "NG-2026-08-24-PRE-A-ST8-Q3LOCK-QUARTIC-WEYL-FOURIER-POSITIVE-STRIP-INVARIANCE"
+        ],
+        "results": []
+      },
+      "gate_ids": [
+        "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+        "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+        "PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE",
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001056",
+      "method": [
+        "Restrict to the one-component quartic onsite potential V(q)=G q^4/4 and the translation Weyl W_a=exp(-i a p/hbar), so the exact potential subflow produces the cubic phase exp(i t[V(q+a)-V(q)]/hbar).",
+        "Use the elementary weighted-Fourier implication: a finite positive exponential frequency moment gives a bounded holomorphic extension to every narrower complex strip.",
+        "Expand the exact cubic phase at z=x+i y and choose y with y*kappa<0. Its modulus grows as exp(3|kappa||y|x^2), contradicting boundedness in every nonzero strip. Recompute the exact rational coefficient in independent SymPy and Fraction lanes and compile Lean R238 for the arithmetic sign fixtures."
+      ],
+      "next_action": "Retire the positive-strip L1 Weyl-Fourier candidate and test a radius-free/Gevrey or modular/state-weighted orbit topology, or attack direct projected D and delta-D Cauchy inside the fixed-beta OS mixture envelope.",
+      "prior_exploration_id": "EXP-001055",
+      "provenance": "contemporaneous",
+      "qft_interface": {
+        "closed": "A route-specific obstruction to the positive-strip L1 Weyl-Fourier carrier.",
+        "open": "Radius-free/Gevrey or modular/state-weighted topology, direct projected D and delta-D locality, Hamiltonian thermodynamic identification, common alpha/KMS, ground/GNS gap, continuum, C6, Sector A and Pre-A remain open.",
+        "tect_boundary": "No heat_root_incidence or canonical A1/R-192 production owner is supplied."
+      },
+      "question": "Does the natural positive-strip L1 Weyl-Fourier analytic carrier remain invariant under the exact quartic onsite multiplication subflow?",
+      "recorded_at": "2026-08-25T06:30:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-000800",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-08-24",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Quartic onsite obstruction to a positive-strip Weyl-Fourier carrier",
+      "verdict": "failed"
     }
   ],
   "kind": "proof_explorations",

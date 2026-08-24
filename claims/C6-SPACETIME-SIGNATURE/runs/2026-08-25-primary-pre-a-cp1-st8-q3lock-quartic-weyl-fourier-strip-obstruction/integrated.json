@@ -1,0 +1,340 @@
+{
+  "assertion_count": 31,
+  "assertions": [
+    {
+      "actual": [
+        "EXP-001056",
+        "T-054"
+      ],
+      "expected": "EXP-001056/T-054",
+      "name": "identity",
+      "pass": true
+    },
+    {
+      "actual": "EXP-000800",
+      "expected": "EXP-000800",
+      "name": "upstream identity",
+      "pass": true
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "claim nonbearing",
+      "pass": true
+    },
+    {
+      "actual": {
+        "common_alpha_closed": false,
+        "continuum_closed": false,
+        "direct_projected_d_delta_d_closed": false,
+        "fixed_beta_os_mixture_identified_with_hamiltonian": false,
+        "full_q3_dynamics_closed": false,
+        "gevery_or_subexponential_alternative_tested": false,
+        "gns_gap_closed": false,
+        "kms_os_closed": false,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "not_closed": "This is a route-specific obstruction for a positive exponential Weyl-Fourier density/strip carrier. It does not rule out radius-free Frechet scales, Gevrey or subexponential weights, modular/state-weighted classes, direct D and delta-D convergence, or another Hamiltonian-derived common algebra.",
+        "positive_strip_weyl_fourier_carrier_refuted": true,
+        "quartic_onsite_subflow_tested": true,
+        "state_weighted_route_closed": false
+      },
+      "expected": "route-specific/open",
+      "name": "manifest scope",
+      "pass": true
+    },
+    {
+      "actual": "import Mathlib\n\nnamespace Tect.R238\n\ntheorem quartic_weyl_kappa_positive :\n    (51 / 35 : Rat) * (1 / 2 : Rat) * (1 / 3 : Rat) > 0 := by\n  norm_num\n\ntheorem quartic_weyl_cubic_coefficient :\n    (51 / 35 : Rat) * (1 / 2 : Rat) * (1 / 3 : Rat) = 17 / 70 := by\n  norm_num\n\ntheorem strip_growth_coefficient_positive :\n    3 * (17 / 70 : Rat) > 0 := by\n  norm_num\n\ntheorem strip_sign_choice_positive :\n    -(3 * (17 / 70 : Rat) * (-1 : Rat)) > 0 := by\n  norm_num\n\ntheorem quartic_difference_degree_fixture :\n    (4 : Nat) - 1 = 3 := by\n  norm_num\n\ntheorem scope_fixture : True \u2227 \u00acFalse := by\n  norm_num\n\nend Tect.R238\n",
+      "expected": "R238 markers",
+      "name": "Lean source",
+      "pass": true
+    },
+    {
+      "actual": [],
+      "expected": "none",
+      "name": "Lean forbidden",
+      "pass": true
+    },
+    {
+      "actual": {
+        "conclusion": "The positive-strip L1 Weyl-Fourier representation cannot contain the quartic onsite image of any nonzero translation Weyl element at nonzero time.",
+        "phase_growth": "For kappa != 0, |exp(i P_(a,t)(x+i y))| grows like exp(3|kappa||y|x^2) on the side y*kappa<0, so the quartic phase is unbounded in every nonzero strip.",
+        "statement": "If a coefficient density f has integral exp(rho|k|)|f(k)| dk finite for rho>0, its Fourier transform extends to a bounded holomorphic function on every narrower strip |Im z|<rho.",
+        "weighted_fourier_implies_bounded_strip": true
+      },
+      "expected": true,
+      "name": "analytic lemma marker",
+      "pass": true
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "upstream Weyl-Fourier precursor",
+      "pass": true
+    },
+    {
+      "actual": "PRIMARY QUARTIC-WEYL-FOURIER-STRIP PASS 20/20\n",
+      "expected": "PASS",
+      "name": "primary child",
+      "pass": true
+    },
+    {
+      "actual": "INDEPENDENT QUARTIC-WEYL-FOURIER-STRIP PASS 20/20\n",
+      "expected": "PASS",
+      "name": "independent child",
+      "pass": true
+    },
+    {
+      "actual": [
+        20,
+        20
+      ],
+      "expected": ">0",
+      "name": "positive totals",
+      "pass": true
+    },
+    {
+      "actual": [
+        "51/35",
+        "51/35"
+      ],
+      "expected": "equal",
+      "name": "lane agreement G",
+      "pass": true
+    },
+    {
+      "actual": [
+        "1/2",
+        "1/2"
+      ],
+      "expected": "equal",
+      "name": "lane agreement translation_amplitude",
+      "pass": true
+    },
+    {
+      "actual": [
+        "1/3",
+        "1/3"
+      ],
+      "expected": "equal",
+      "name": "lane agreement time",
+      "pass": true
+    },
+    {
+      "actual": [
+        "1",
+        "1"
+      ],
+      "expected": "equal",
+      "name": "lane agreement hbar",
+      "pass": true
+    },
+    {
+      "actual": [
+        3,
+        3
+      ],
+      "expected": "equal",
+      "name": "lane agreement quartic_difference_degree",
+      "pass": true
+    },
+    {
+      "actual": [
+        "51/70",
+        "51/70"
+      ],
+      "expected": "equal",
+      "name": "lane agreement cubic_difference_coefficient",
+      "pass": true
+    },
+    {
+      "actual": [
+        "17/70",
+        "17/70"
+      ],
+      "expected": "equal",
+      "name": "lane agreement phase_kappa",
+      "pass": true
+    },
+    {
+      "actual": [
+        "-1",
+        "-1"
+      ],
+      "expected": "equal",
+      "name": "lane agreement strip_test_imaginary_height",
+      "pass": true
+    },
+    {
+      "actual": [
+        "-51/70",
+        "-51/70"
+      ],
+      "expected": "equal",
+      "name": "lane agreement imaginary_x2_coefficient",
+      "pass": true
+    },
+    {
+      "actual": [
+        "51/70",
+        "51/70"
+      ],
+      "expected": "equal",
+      "name": "lane agreement positive_strip_growth_coefficient",
+      "pass": true
+    },
+    {
+      "actual": [
+        [
+          "0",
+          "1",
+          "2",
+          "4",
+          "8"
+        ],
+        [
+          "0",
+          "1",
+          "2",
+          "4",
+          "8"
+        ]
+      ],
+      "expected": "equal",
+      "name": "lane agreement real_sample_points",
+      "pass": true
+    },
+    {
+      "actual": [
+        {
+          "0": "-51/280",
+          "1": "51/56",
+          "2": "969/280",
+          "4": "3621/280",
+          "8": "13821/280"
+        },
+        {
+          "0": "-51/280",
+          "1": "51/56",
+          "2": "969/280",
+          "4": "3621/280",
+          "8": "13821/280"
+        }
+      ],
+      "expected": "equal",
+      "name": "lane agreement growth_samples",
+      "pass": true
+    },
+    {
+      "actual": [
+        true,
+        true
+      ],
+      "expected": "equal",
+      "name": "lane agreement positive_strip_weyl_fourier_carrier_refuted",
+      "pass": true
+    },
+    {
+      "actual": [
+        false,
+        false
+      ],
+      "expected": "equal",
+      "name": "lane agreement full_q3_dynamics_closed",
+      "pass": true
+    },
+    {
+      "actual": [
+        false,
+        false
+      ],
+      "expected": "equal",
+      "name": "lane agreement common_alpha_closed",
+      "pass": true
+    },
+    {
+      "actual": [
+        false,
+        false
+      ],
+      "expected": "equal",
+      "name": "lane agreement gevery_or_subexponential_alternative_tested",
+      "pass": true
+    },
+    {
+      "actual": [
+        false,
+        false
+      ],
+      "expected": "equal",
+      "name": "lane agreement state_weighted_route_closed",
+      "pass": true
+    },
+    {
+      "actual": [
+        "17/70",
+        "17/70"
+      ],
+      "expected": "17/70",
+      "name": "canonical kappa",
+      "pass": true
+    },
+    {
+      "actual": [
+        "51/70",
+        "51/70"
+      ],
+      "expected": "51/70",
+      "name": "canonical growth sign",
+      "pass": true
+    },
+    {
+      "actual": {
+        "command": "lake env lean Tect/R238.lean",
+        "output": "",
+        "returncode": 0,
+        "status": "PASS"
+      },
+      "expected": "PASS",
+      "name": "Lean compile",
+      "pass": true
+    }
+  ],
+  "audit_id": "PA-CP1-ST8-Q3LOCK-QUARTIC-WEYL-FOURIER-POSITIVE-STRIP",
+  "boundary": {
+    "common_alpha_closed": false,
+    "continuum_closed": false,
+    "direct_projected_d_delta_d_closed": false,
+    "fixed_beta_os_mixture_identified_with_hamiltonian": false,
+    "full_q3_dynamics_closed": false,
+    "gevery_or_subexponential_alternative_tested": false,
+    "gns_gap_closed": false,
+    "kms_os_closed": false,
+    "no_pdf": true,
+    "no_tier_change": true,
+    "not_closed": "This is a route-specific obstruction for a positive exponential Weyl-Fourier density/strip carrier. It does not rule out radius-free Frechet scales, Gevrey or subexponential weights, modular/state-weighted classes, direct D and delta-D convergence, or another Hamiltonian-derived common algebra.",
+    "positive_strip_weyl_fourier_carrier_refuted": true,
+    "quartic_onsite_subflow_tested": true,
+    "state_weighted_route_closed": false
+  },
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "exploration_id": "EXP-001056",
+  "lean": {
+    "command": "lake env lean Tect/R238.lean",
+    "output": "",
+    "returncode": 0,
+    "status": "PASS"
+  },
+  "provenance": {
+    "independent_sha256": "38461eccf8053df5890d5b3eb4abde13062977591be275d854013ede2aa49a3f",
+    "lean_sha256": "d0668f78fbfb2684ea63c6b95cdb592482a49169f94d8d6197435bc124c3a5aa",
+    "manifest_sha256": "4905105691dfbec9daba2cb486290cd5cb4289cd438694775e001a8d28ed6745",
+    "primary_sha256": "3aaf28f633d64aa0ac7fbed101843d89b16cf204abec24753d49e9a3e794f792",
+    "upstream_manifest_sha256": "b06dc6b1370e2865d1d6a52795d12cc85204924df4b038545d7d24d76a52579d"
+  },
+  "recorded_at": "2026-08-24T04:52:23.091197Z",
+  "run_kind": "integrated",
+  "schema": "tect/foundation-audit/1.0",
+  "task_id": "T-054",
+  "verdict": "PASS"
+}

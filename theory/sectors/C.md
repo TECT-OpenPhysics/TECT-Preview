@@ -63,6 +63,7 @@ Tier profile: T6x4 T5x1 T1x1
 | NG-2026-08-03-PRE-A-C0-STATIC-FUNCTIONAL-DYNAMICAL-COMPLETION | static data do not identify a unique temporal completion | Close Pre-A's causal-origin fork, or infer a unique physical |
 | NG-2026-08-03-M1-PINNED-FUNCTIONAL-NONZERO-EQUILIBRIUM | the pinned unconstrained M1 functional has no nonzero… | Continue a finite BCC-versus-flat, symmetry-star, |
 | R-2026-legacy-newtonG-label | Newton $G$ "independently predicted / T7" label | independent prediction missing ($a_{\rm BCC}$ fixed by $G_{\rm obs}$) |
+| NG-2026-08-24-PRE-A-ST8-Q3LOCK-QUARTIC-WEYL-FOURIER-POSITIVE-STRIP-INVARIANCE | quartic onsite destroys positive-strip Weyl-Fourier… | Require a positive-strip L1 Weyl-Fourier coefficient density or all-moment orbit-Frechet carrier to remain invariant under the exact… |
 
 ---
 

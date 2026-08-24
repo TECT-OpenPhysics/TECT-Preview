@@ -9,6 +9,7 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-08-24-PRE-A-ST8-Q3LOCK-QUARTIC-WEYL-FOURIER-POSITIVE-STRIP-INVARIANCE](#ng-2026-08-24-pre-a-st8-q3lock-quartic-weyl-fourier-positive-strip-invariance) | require a positive-strip L1 Weyl-Fourier coefficient carrier to remain invariant under the exact quartic onsite subflow | the quartic translation phase has a nonzero cubic coefficient and grows like exp((51/70)x^2) on a sign-chosen strip, contradicting bounded strip extension; this retires only the named carrier |
 | [NG-2026-08-14-PRE-A-T055-ISOTROPIC-GAUSSIAN-COVARIANCE-AUTOMATIC-NONZERO-BCC-MEAN-FIELD-EXTRACTION](#ng-2026-08-14-pre-a-t055-isotropic-gaussian-covariance-automatic-nonzero-bcc-mean-field-extraction) | deterministically and translation-equivariantly extract a nonzero BCC mean field from the stationary isotropic Gaussian-Hartree covariance alone | a translation-fixed covariance input must map under any deterministic equivariant section to a translation-fixed, hence constant, output; preserving centering or nonzero-shell support forces that output to zero |
 | [NG-2026-08-14-PRE-A-T055-READING-H-BCC-110-ON-SHELL-AUTOMATIC-SIDE16-TORUS-EMBEDDING](#ng-2026-08-14-pre-a-t055-reading-h-bcc-110-on-shell-automatic-side16-torus-embedding) | treat the registered Reading-H BCC `{110}` shell as an automatic exact on-shell support-preserving embedding in the side-16 pinned P1 torus | exact rational Machin bounds place the literal registered `q_0` strictly between the side-16 index-square 3 and 4 shells; even the commensurate reinterpretation has only eight `{+/-1}^3` modes for twelve BCC directions |
 | [NG-2026-08-14-PRE-A-T055-READING-H-SCALAR-CONSTANTS-AUTOMATIC-PINNED-P1-ENERGY-INTERTWINER](#ng-2026-08-14-pre-a-t055-reading-h-scalar-constants-automatic-pinned-p1-energy-intertwiner) | infer an ordering-preserving Reading-H-to-pinned-P1 energy identity from shared printed scalar couplings or one constant amplitude normalization | the exact bare-density defect is `phi^4(108phi^2-43)/400`, which changes sign, while coefficient matching would require the incompatible conditions `s^4=2` and `s^6=2` |
@@ -10255,6 +10256,14 @@ negative result is created.
 
 **Consequence:** The v2.1 note and original PUBLISHED bundle are superseded, not deleted. T6 was treated as challenged until the repair derived $F(P_Nu(\tau))\leq E_+(M_2)$, a separate uniform Galerkin $H^2$ envelope, common-ball evolution constants, directed rounding, and a subtraction-free conservative logarithmic Gronwall enclosure. T6 is re-enacted only by replacement bundle `A3-Full-Production-Discretization-T6-Repair-260717`, digest `6d15d165a73d3a2af07e10fce07394ce8b83311e571ba2aae2fbbc61c31d2e41`.
 
+<a id="ng-2026-08-24-pre-a-st8-q3lock-quartic-weyl-fourier-positive-strip-invariance"></a>
+### NG-2026-08-24-PRE-A-ST8-Q3LOCK-QUARTIC-WEYL-FOURIER-POSITIVE-STRIP-INVARIANCE -- quartic onsite destroys positive-strip Weyl-Fourier invariance
+
+**Failure mode:** Require a positive-strip L1 Weyl-Fourier coefficient density or all-moment orbit-Frechet carrier to remain invariant under the exact quartic onsite subflow.
+
+**Evidence:** EXP-001056 manifest and certificate, primary and independent run JSONs, integrated verifier, and Lean `verification/lean/Tect/R238.lean`. For `V(q)=Gq^4/4`, translation amplitude `a=1/2`, time `t=1/3`, `G=51/35`, and `hbar=1`, the cubic phase coefficient is `kappa=Gta/hbar=17/70`. A positive exponential Fourier moment would give a bounded holomorphic strip extension, but on the sign-chosen strip the cubic phase has imaginary quadratic growth coefficient `3*kappa=51/70`, so the modulus is unbounded as `|x|` tends to infinity. Primary and independent exact lanes each pass 20/20; the integrated verifier passes 31/31 with Lean compilation.
+
+**Consequence:** Retire only this named positive-strip L1 Weyl-Fourier carrier. Radius-free, Gevrey, subexponential, modular or state-weighted, and direct projected `D,delta-D` routes remain open. This does not close Q3 dynamics, common-alpha, KMS/GNS, continuum, C6, Sector A, or Pre-A.
 ## Process-grade negative results (carried as lessons, enforced in governance)
 
 - Round-summary over-claim incident (legacy 2026-04-24): higher-tier summaries

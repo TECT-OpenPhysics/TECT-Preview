@@ -1,6 +1,29 @@
 {
   "data": [
     {
+      "anchor": "ng-2026-07-30-a13-naive-primitive-trace-forest-identification",
+      "branch": "identify the conditionally averaged R-123 primitive trace directly with the R-063 covariance-normal forest while omitting conditional future variance",
+      "claim_ref_basis": {
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION": "structured_unique_family:A13"
+      },
+      "claim_refs": [
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
+      ],
+      "detail": {
+        "claim_route": "After conditional future averaging, identify the R-123 primitive trace directly with the R-063 covariance-normal forest, equivalently use `E_f E_u^CN=1/2 sum_C(||Phi_(u,C)||^2-Theta_(u,C))` without a conditional-variance term.",
+        "consequence": "Conditional averaging splits unaveraged current energy into endpoint mean-square plus future variance. The variance rebate is load-bearing even for a deterministic translation already inside R-063's scope. This falsifies only the naive primitive-trace/forest identification; it does not refute the corrected R-125 bridge, the finite-cutoff adapted partial-Wick coordinate, or a complete signed production estimate. The adapted continuum forest, production root-shell factorisation, balanced band, and stationary-baseline bound remain open.",
+        "evidence": "R-125 proof note, Section 5, Eqs. (5.1)--(5.5); exact primary and non-importing independent executable audits; paired PDF and integrated verifier.",
+        "failure_mode": "Take trivial past, one future `eta~N(0,1)`, no heat, one full output cluster, base `w_0=0`, terminal `w_1=e_1`, derivative `V=eta e_2`, and covariance `Gamma=e_2 e_2^T`. Only the `S_1` pair survives. With `s=c0+c1=339/(8000P)`, the exact quantities are `J_1=2 eta(sqrt(c0),sqrt(c1))`, `Phi_1=0`, `Theta_1=4s`, and `V_(fut,1)=4s`. The covariance-normal endpoint and deterministic R-063 forest both have mean `E[2s(eta^2-1)]=0`. The corrected bridge is `0=1/2(0-4s)+1/2(4s)`. The naive identity instead gives `0=-2s` and misses exactly `2s=339/(4000P)`."
+      },
+      "detail_title": "conditional future variance separates primitive trace from the forest",
+      "family_refs": [
+        "A13"
+      ],
+      "kind": "no_go",
+      "summary": "a deterministic constant-translation fixture has zero covariance-normal/forest mean but `Theta=V_fut=4s`, `s=339/(8000P)`; the naive identity gives `0=-2s` and misses exactly `2s=339/(4000P)`. The future-variance rebate is indispensable even before adaptation",
+      "tag": "NG-2026-07-30-A13-NAIVE-PRIMITIVE-TRACE-FOREST-IDENTIFICATION"
+    },
+    {
       "anchor": "ng-2026-07-30-a13-loewner-saturation-low-coupling",
       "branch": "saturate the two-channel source/sextic Loewner budget and retain a generic low/injected affine coupling outside the matrix",
       "claim_ref_basis": {
@@ -2203,29 +2226,6 @@
       "kind": "no_go",
       "summary": "even after the Hessian repair the A-high route has negative Young slack, while an exact adapted high--high-to-low fixture keeps the innovation bracket plus its positive square negative on a nonempty parameter interval",
       "tag": "NG-2026-07-25-A13-AHIGH-ABSOLUTE-AND-AUTOMATIC-BRACKET"
-    },
-    {
-      "anchor": "ng-2026-07-25-a13-adapted-wick-carre-du-champ",
-      "branch": "A13 universal adapted Wick-square/trace positivity",
-      "claim_ref_basis": {
-        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION": "structured_unique_family:A13"
-      },
-      "claim_refs": [
-        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
-      ],
-      "detail": {
-        "consequence": "This abstract scalar/matrix root fixture is not a production `B^>` counterexample. It rules out only generic Wick/carre-du-champ positivity. The production near/far estimate and all umbrella conclusions remain open.",
-        "correction": "Retain the production frequency geometry, terminal square, trace, heat compensator, complete R-063 forest, derivative feedback, paid subtraction, and both low objects in one signed estimate. Universal adapted rootwise positivity is not an admissible proof step.",
-        "evidence": "For `xi~N(0,1)`, scalar frame `m(A)=1+A`, and zero derivative control, the exact post-first-variation remainder is `R(A)=A^2(xi^2-1)/2=(A xi)^2/2-A^2/2`. With `A=alpha(xi^2-4)`, the complete Hermite product gives `E R=-2 alpha^2`, while the square and trace are respectively `7 alpha^2/2` and `-11 alpha^2/2`; moreover `E|dA|^2=2 alpha^2`, so `E R=-E|dA|^2`. This is not an omitted-chaos effect. The bounded smooth choice `A=a exp(-xi^2)`, `a>0`, has frame floor at least one and exact remainder `-2a^2/(5 sqrt(5))`. A two-component diagonal matrix lift has the same sign. Both R-079 executable routes verify the polynomial and bounded fixtures independently.",
-        "failure_mode": "Infer that the future-feedback current bracket becomes nonnegative after its positive innovation square and exact Wick covariance trace are restored, or represent every adapted remainder as a sum of nonnegative rootwise carre-du-champ terms."
-      },
-      "detail_title": "exact square and trace have no universal adapted sign",
-      "family_refs": [
-        "A13"
-      ],
-      "kind": "no_go",
-      "summary": "the complete positive current square plus Wick trace can equal the negative of the coefficient innovation energy, including for a bounded smooth positive frame",
-      "tag": "NG-2026-07-25-A13-ADAPTED-WICK-CARRE-DU-CHAMP"
     }
   ],
   "kind": "negative_records",

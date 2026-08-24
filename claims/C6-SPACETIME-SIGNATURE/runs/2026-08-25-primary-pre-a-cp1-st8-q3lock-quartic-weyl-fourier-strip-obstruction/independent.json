@@ -1,0 +1,191 @@
+{
+  "assertions": [
+    {
+      "actual": "['EXP-001056', 'T-054']",
+      "expected": "EXP-001056/T-054",
+      "group": "provenance",
+      "name": "identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "EXP-000800",
+      "expected": "EXP-000800",
+      "group": "provenance",
+      "name": "upstream identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "group": "scope",
+      "name": "claim nonbearing",
+      "status": "PASS"
+    },
+    {
+      "actual": "[Fraction(51, 35), Fraction(1, 2), Fraction(1, 3), Fraction(1, 1)]",
+      "expected": "valid",
+      "group": "input",
+      "name": "quartic input",
+      "status": "PASS"
+    },
+    {
+      "actual": "3",
+      "expected": "3",
+      "group": "polynomial",
+      "name": "difference degree",
+      "status": "PASS"
+    },
+    {
+      "actual": "51/70",
+      "expected": "51/70",
+      "group": "polynomial",
+      "name": "cubic coefficient",
+      "status": "PASS"
+    },
+    {
+      "actual": "17/70",
+      "expected": "17/70",
+      "group": "phase",
+      "name": "phase kappa",
+      "status": "PASS"
+    },
+    {
+      "actual": "51/280",
+      "expected": "51/280",
+      "group": "phase",
+      "name": "quadratic phase coefficient",
+      "status": "PASS"
+    },
+    {
+      "actual": "17/280",
+      "expected": "17/280",
+      "group": "phase",
+      "name": "linear phase coefficient",
+      "status": "PASS"
+    },
+    {
+      "actual": "17/2240",
+      "expected": "17/2240",
+      "group": "phase",
+      "name": "constant phase coefficient",
+      "status": "PASS"
+    },
+    {
+      "actual": "-51/70",
+      "expected": "-51/70",
+      "group": "strip",
+      "name": "imaginary x2 coefficient",
+      "status": "PASS"
+    },
+    {
+      "actual": "-17/70",
+      "expected": "<0",
+      "group": "strip",
+      "name": "opposite strip sign",
+      "status": "PASS"
+    },
+    {
+      "actual": "51/56",
+      "expected": ">-51/280",
+      "group": "strip",
+      "name": "growth sample monotone x=1",
+      "status": "PASS"
+    },
+    {
+      "actual": "969/280",
+      "expected": ">51/56",
+      "group": "strip",
+      "name": "growth sample monotone x=2",
+      "status": "PASS"
+    },
+    {
+      "actual": "3621/280",
+      "expected": ">969/280",
+      "group": "strip",
+      "name": "growth sample monotone x=4",
+      "status": "PASS"
+    },
+    {
+      "actual": "13821/280",
+      "expected": ">3621/280",
+      "group": "strip",
+      "name": "growth sample monotone x=8",
+      "status": "PASS"
+    },
+    {
+      "actual": "51/70",
+      "expected": ">0",
+      "group": "strip",
+      "name": "positive growth coefficient",
+      "status": "PASS"
+    },
+    {
+      "actual": "True",
+      "expected": "True",
+      "group": "provenance",
+      "name": "upstream analytic precursor",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'weighted_fourier_implies_bounded_strip': True, 'statement': 'If a coefficient density f has integral exp(rho|k|)|f(k)| dk finite for rho>0, its Fourier transform extends to a bounded holomorphic function on every narrower strip |Im z|<rho.', 'phase_growth': 'For kappa != 0, |exp(i P_(a,t)(x+i y))| grows like exp(3|kappa||y|x^2) on the side y*kappa<0, so the quartic phase is unbounded in every nonzero strip.', 'conclusion': 'The positive-strip L1 Weyl-Fourier representation cannot contain the quartic onsite image of any nonzero translation Weyl element at nonzero time.'}",
+      "expected": "True",
+      "group": "scope",
+      "name": "weighted Fourier lemma",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'positive_strip_weyl_fourier_carrier_refuted': True, 'quartic_onsite_subflow_tested': True, 'full_q3_dynamics_closed': False, 'common_alpha_closed': False, 'gevery_or_subexponential_alternative_tested': False, 'state_weighted_route_closed': False, 'direct_projected_d_delta_d_closed': False, 'fixed_beta_os_mixture_identified_with_hamiltonian': False, 'kms_os_closed': False, 'gns_gap_closed': False, 'continuum_closed': False, 'no_tier_change': True, 'no_pdf': True, 'not_closed': 'This is a route-specific obstruction for a positive exponential Weyl-Fourier density/strip carrier. It does not rule out radius-free Frechet scales, Gevrey or subexponential weights, modular/state-weighted classes, direct D and delta-D convergence, or another Hamiltonian-derived common algebra.'}",
+      "expected": "open",
+      "group": "scope",
+      "name": "scope firewall",
+      "status": "PASS"
+    }
+  ],
+  "boundary": "T0 claim-nonbearing route obstruction for one positive-strip Weyl-Fourier carrier. It is not a no-go theorem for Q3 dynamics or for all analytic/state-weighted topologies.",
+  "derived": {
+    "G": "51/35",
+    "common_alpha_closed": false,
+    "cubic_difference_coefficient": "51/70",
+    "full_q3_dynamics_closed": false,
+    "gevery_or_subexponential_alternative_tested": false,
+    "growth_samples": {
+      "0": "-51/280",
+      "1": "51/56",
+      "2": "969/280",
+      "4": "3621/280",
+      "8": "13821/280"
+    },
+    "hbar": "1",
+    "imaginary_x2_coefficient": "-51/70",
+    "phase_kappa": "17/70",
+    "positive_strip_growth_coefficient": "51/70",
+    "positive_strip_weyl_fourier_carrier_refuted": true,
+    "quartic_difference_degree": 3,
+    "real_sample_points": [
+      "0",
+      "1",
+      "2",
+      "4",
+      "8"
+    ],
+    "state_weighted_route_closed": false,
+    "strip_test_imaginary_height": "-1",
+    "time": "1/3",
+    "translation_amplitude": "1/2"
+  },
+  "exploration_id": "EXP-001056",
+  "failed": 0,
+  "passed": 20,
+  "provenance": {
+    "manifest": "strategy/pre-a-cp1-st8-q3lock-quartic-weyl-fourier-strip-obstruction-manifest.json",
+    "manifest_sha256": "4905105691dfbec9daba2cb486290cd5cb4289cd438694775e001a8d28ed6745",
+    "script": "codes/foundations/pre_a_cp1_st8_q3lock_quartic_weyl_fourier_strip_obstruction_independent.py",
+    "script_sha256": "38461eccf8053df5890d5b3eb4abde13062977591be275d854013ede2aa49a3f",
+    "upstream_manifest": "strategy/pre-a-cp1-st8-q3lock-fixed-beta-os-mixture-common-wstar-route-split-manifest.json",
+    "upstream_manifest_sha256": "b06dc6b1370e2865d1d6a52795d12cc85204924df4b038545d7d24d76a52579d"
+  },
+  "run_kind": "independent",
+  "schema": "tect/foundation-audit/1.0",
+  "total": 20,
+  "verdict": "PASS"
+}

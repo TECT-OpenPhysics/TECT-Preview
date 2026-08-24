@@ -1,6 +1,22 @@
 {
   "data": [
     {
+      "anchor": "ng-2026-08-24-pre-a-st8-q3lock-quartic-weyl-fourier-positive-strip-invariance",
+      "branch": "require a positive-strip L1 Weyl-Fourier coefficient carrier to remain invariant under the exact quartic onsite subflow",
+      "claim_ref_basis": {},
+      "claim_refs": [],
+      "detail": {
+        "consequence": "Retire only this named positive-strip L1 Weyl-Fourier carrier. Radius-free, Gevrey, subexponential, modular or state-weighted, and direct projected `D,delta-D` routes remain open. This does not close Q3 dynamics, common-alpha, KMS/GNS, continuum, C6, Sector A, or Pre-A.",
+        "evidence": "EXP-001056 manifest and certificate, primary and independent run JSONs, integrated verifier, and Lean `verification/lean/Tect/R238.lean`. For `V(q)=Gq^4/4`, translation amplitude `a=1/2`, time `t=1/3`, `G=51/35`, and `hbar=1`, the cubic phase coefficient is `kappa=Gta/hbar=17/70`. A positive exponential Fourier moment would give a bounded holomorphic strip extension, but on the sign-chosen strip the cubic phase has imaginary quadratic growth coefficient `3*kappa=51/70`, so the modulus is unbounded as `|x|` tends to infinity. Primary and independent exact lanes each pass 20/20; the integrated verifier passes 31/31 with Lean compilation.",
+        "failure_mode": "Require a positive-strip L1 Weyl-Fourier coefficient density or all-moment orbit-Frechet carrier to remain invariant under the exact quartic onsite subflow."
+      },
+      "detail_title": "quartic onsite destroys positive-strip Weyl-Fourier invariance",
+      "family_refs": [],
+      "kind": "no_go",
+      "summary": "the quartic translation phase has a nonzero cubic coefficient and grows like exp((51/70)x^2) on a sign-chosen strip, contradicting bounded strip extension; this retires only the named carrier",
+      "tag": "NG-2026-08-24-PRE-A-ST8-Q3LOCK-QUARTIC-WEYL-FOURIER-POSITIVE-STRIP-INVARIANCE"
+    },
+    {
       "anchor": "ng-2026-08-14-pre-a-t055-truncated-octahedron-combinatorics-automatic-finite-realization-enumeration",
       "branch": "infer a finite exhaustive realization list from truncated-octahedron face combinatorics alone",
       "claim_ref_basis": {
@@ -2048,27 +2064,6 @@
       "kind": "no_go",
       "summary": "on the collective uniform/fine-Nyquist plane the exact quartic potential has `partial_X^2 partial_Y^2 U_N=6g/L>0`; a product positive ground would force low/high additivity, so the fine ground is entangled and its retained marginal is mixed, unlike the coarse pure ground. Retain approximate, dressed, completely-positive, mean-force, or newly renormalized state families",
       "tag": "NG-2026-08-04-PRE-A-CP1-CL8-NATURAL-LOW-MODE-INTERACTING-GROUND-PROJECTIVITY"
-    },
-    {
-      "anchor": "ng-2026-08-04-pre-a-cp1-cl8-natural-low-mode-exact-dynamics-equivariance",
-      "branch": "exactly intertwine the declared inserted-1D `g>0` coarse and fine dynamics with the natural low-mode embedding while allowing only scalar-energy, scalar-mass, and Q3-Laplacian quadratic counterterms",
-      "claim_ref_basis": {
-        "C6-SPACETIME-SIGNATURE": "explicit_negative_event:20260804-register-exp-000758-matrix-counterterm-state-co"
-      },
-      "claim_refs": [
-        "C6-SPACETIME-SIGNATURE"
-      ],
-      "detail": {
-        "artifacts": "`strategy/pre-a-cp1-cl8-matrix-counterterm-state-compactness-route-split-certificate-260804.md`; `strategy/pre-a-cp1-cl8-matrix-counterterm-state-compactness-route-split-manifest.json`; `codes/foundations/pre_a_cp1_cl8_matrix_counterterm_state_compactness_route_split.py`; `codes/foundations/pre_a_cp1_cl8_matrix_counterterm_state_compactness_route_split_independent.py`.",
-        "consequence": "Exact natural low-mode interacting dynamics equivariance is refuted only for this inserted-1D family, embedding, and counterterm class. Asymptotic fixed-observable dynamics, dressed or nonnatural embeddings, completely-positive reductions, Hamiltonians of mean force, and different perfect-action regulators remain open. No continuum, physical-light, C6, CP1, or Pre-A verdict follows.",
-        "evidence": "Exact invariance of the type-I factor `B(H_low) tensor I` would make the fine unitary a product, up to phase, and its generator additive on the common invariant Schwartz tensor core. On the collective retained-zero/added-Nyquist plane, however, ```text U_N contains 3g X^2 Y^2/(2L), partial_X^2 partial_Y^2 U_N=6g/L>0. ``` The resulting cubic force term `-(3g/L)X Y^2` is quadratic in the added mode. A scalar energy has no force, quadratic counterterms have only linear forces, and the Q3 term vanishes on the species singlet, so this term cannot be canceled within the declared class.",
-        "failure_mode": "Within the inserted one-dimensional CL8 family with `g>0`, require the natural low-mode monomorphism to exactly intertwine coarse and fine Heisenberg dynamics while allowing only the declared scalar-energy, scalar-mass, and Q3-Laplacian quadratic counterterms."
-      },
-      "detail_title": "the declared natural low-mode factor is not exactly invariant under interacting dynamics",
-      "family_refs": [],
-      "kind": "no_go",
-      "summary": "type-I-factor invariance would force product dynamics and an additive low/high generator, but the exact fine potential has `partial_X^2 partial_Y^2 U_N=6g/L>0`. Retain asymptotic fixed-observable, dressed, completely-positive, mean-force, or perfect-action routes",
-      "tag": "NG-2026-08-04-PRE-A-CP1-CL8-NATURAL-LOW-MODE-EXACT-DYNAMICS-EQUIVARIANCE"
     }
   ],
   "kind": "negative_records",
