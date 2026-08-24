@@ -1,0 +1,91 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001083",
+  "exploration_id": "EXP-001083",
+  "prior_exploration_id": "EXP-001082",
+  "task_id": "T-054",
+  "title": "Finite Q3 cube support-local versus full-volume energy-weight stress test",
+  "question": "In the exact finite Q3 cube, does a support-local energy weight for one bond produce a different and finite two-sided mixed force-momentum estimate from the full-volume shifted-H weight, and what does the volume comparison establish?",
+  "verdict": "advanced",
+  "provenance": "contemporaneous",
+  "reviewed_on": "2026-08-24",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-ENERGY-WEIGHTED-COMMUTATOR-GEVREY-LR-CLOSURE",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "method": [
+    "Build the exact Q3 cube graph on {0,1}^3 with all twelve bonds and retain the target edge (0,1).",
+    "Construct the full-volume Hamiltonian and the embedded target-support Hamiltonian, then generate one full-volume Gibbs state for each volume.",
+    "Use the smooth coordinate cutoff on the target edge, form M_L=W_L partial_q B and Mdot_L, and evaluate the corrected two-sided A^(-3/4) bound with the finite-CCR residual.",
+    "Compare A_X and A_Lambda for volumes two and eight at oscillator dimension two and L=1/2 in independent numerical lanes.",
+    "Compile Lean R265 for the corrected-bound arithmetic and keep local/full equivalence, thermodynamic uniformity, critical topology, direct D/delta-D, common alpha and all downstream QFT gates open."
+  ],
+  "finding": "The primary lane passes 22/22, the independent lane passes 18/18, and the integrated lane passes 17/17 with Lean R265 PASS. At L=1/2 the target seminorm root is 0.70522682 in both volumes. The support-local weight has (u_E,v_E,r_E)=(0.58214131,3.19300524,3.29458763) in both V=2 and V=8 rows, with corrected bound roots 8.61609223 and 8.03235790. The full-volume weight changes to (0.34301076,1.88139053,2.02204043) at V=8 and its corrected bound root is 10.22379767. This finite exact-cube comparison supports selecting a support-local weight for the next recurrence proof, but it does not establish volume-uniformity.",
+  "decision_reason": "The EXP-001082 global shifted-H diagnostic could not distinguish support-local from full-volume energy factors. The exact Q3 cube stress test shows that both weights are algebraically valid, while the full-volume Gibbs moment factors change with added cube sites and the support-local factors remain stable in this finite row. This is a meaningful QFT-facing route selection, but the two volumes and cutoff-two oscillator do not justify an asymptotic theorem.",
+  "closed": [
+    "exact finite Q3 cube geometry",
+    "embedded support-local and full-volume positive weights",
+    "same-full-Gibbs-state corrected two-sided mixed bound",
+    "finite-CCR residual retention",
+    "independent numerical and Lean R265 cross-checks"
+  ],
+  "open": [
+    "support-local source/volume/cutoff-uniform graph constants",
+    "all-bond two-orientation critical topology and recurrence",
+    "exact CCR/common-core and modular-domain transfer",
+    "direct projected D and delta-D Cauchy, product/core density and exhaustion",
+    "common alpha and Hamiltonian-to-OS/KMS identification",
+    "GNS/physical gap, continuum, C6, Sector A and Pre-A"
+  ],
+  "adversarial_review": [
+    {"axis": "Q3 geometry", "check": "The V=8 row uses the exact cube graph and all twelve Hamming-one edges.", "disposition": "UPHELD"},
+    {"axis": "local embedding", "check": "The support-local Hamiltonian is embedded in the full tensor product before spectral powers.", "disposition": "UPHELD"},
+    {"axis": "state", "check": "Both weights use the full-volume Gibbs state; no local Gibbs replacement is made.", "disposition": "UPHELD"},
+    {"axis": "CCR", "check": "The finite-CCR residual is retained rather than set to zero.", "disposition": "UPHELD"},
+    {"axis": "finite volume", "check": "V=2 and V=8 at oscillator dimension two are a diagnostic, not a thermodynamic limit.", "disposition": "UPHELD"},
+    {"axis": "independence", "check": "The independent lane reconstructs the cube and weighted rows without importing the primary lane.", "disposition": "UPHELD"},
+    {"axis": "Lean", "check": "R265 proves rational fixtures and scope labels only.", "disposition": "UPHELD"},
+    {"axis": "QFT promotion", "check": "Critical topology, D/delta-D Cauchy, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector A and Pre-A remain open.", "disposition": "UPHELD"}
+  ],
+  "evidence_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-finite-q3-cube-local-global-weight-volume-stress-manifest.json#model",
+    "strategy/pre-a-cp1-st8-q3lock-finite-q3-cube-local-global-weight-volume-stress-manifest.json#scope",
+    "strategy/pre-a-cp1-st8-q3lock-finite-q3-cube-local-global-weight-volume-stress-certificate-260824.md#Finding",
+    "codes/foundations/pre_a_cp1_st8_q3lock_finite_q3_cube_local_global_weight_volume_stress.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_finite_q3_cube_local_global_weight_volume_stress_independent.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_finite_q3_cube_local_global_weight_volume_stress_verify.py#main",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-24-primary-pre-a-cp1-st8-q3lock-finite-q3-cube-local-global-weight-volume-stress/primary.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-24-primary-pre-a-cp1-st8-q3lock-finite-q3-cube-local-global-weight-volume-stress/independent.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-24-primary-pre-a-cp1-st8-q3lock-finite-q3-cube-local-global-weight-volume-stress/integrated.json#lean",
+    "verification/lean/Tect/R265.lean#local_weight_fixture",
+    "verification/lean/registry.json#R265"
+  ],
+  "formal_integration": {
+    "events": [],
+    "results": [],
+    "negatives": [],
+    "lean": "R265 PASS; metadata pending regeneration",
+    "no_new_event": true,
+    "no_new_result": true,
+    "no_new_negative": true,
+    "no_pdf": true,
+    "no_tier_change": true
+  },
+  "qft_interface": {
+    "closed": "Finite exact Q3 cube support-local versus full-volume corrected mixed estimate in one full Gibbs state.",
+    "open": "Local volume-uniform all-bond recurrence, modular domain, direct D/delta-D Cauchy, exhaustion, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector A and Pre-A remain open.",
+    "tect_boundary": "No heat_root_incidence or canonical A1/R-192 production owner is supplied."
+  },
+  "boundary": "T0 claim-nonbearing finite Q3 volume diagnostic; no local/full equivalence or thermodynamic uniformity is claimed.",
+  "next_action": "Use the support-local weight as the declared candidate in the all-bond two-orientation recurrence, then test direct projected D,delta-D Cauchy; record any larger-cutoff or larger-support failure as a route obstruction.",
+  "no_overclaim": "This package is not a local-weight uniformity theorem, an all-bond critical graph theorem, an ideal residual-free Q3 core theorem, an all-time projected D/delta-D theorem, an OS reconstruction, a KMS/GNS result, a mass-gap proof, a continuum result, a C6/Sector-A/Pre-A result, a TECT production map or a Clay result.",
+  "related": [
+    {"id": "EXP-001082", "relation": "continues"},
+    {"id": "EXP-001026", "relation": "continues"},
+    {"id": "EXP-001030", "relation": "continues"}
+  ],
+  "recorded_at": "2026-08-26T10:00:00Z"
+}
