@@ -1,0 +1,72 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001075",
+  "title": "Projected D-delta-D third-coefficient conditional two-orientation weighted seminorm bridge",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "question": "What exact mixed-moment hypotheses transfer the EXP-001074 quartic-weight coefficient majorant into a two-orientation Gibbs seminorm bound and its t^3/6 boundary contribution, while keeping the modular-domain obligation explicit?",
+  "verdict": "advanced",
+  "decision_reason": "The EXP-001074 pointwise coefficient majorant transfers algebraically to a two-orientation Gibbs seminorm only after four explicit mixed-root inputs and a two-sided multiplication-domination hypothesis are supplied. Separate modular roots give the analogous companion formula. Primary symbolic, independent Fraction and Lean R257 checks agree on all rational fixture values. The package therefore advances the QFT interface by isolating the exact hypotheses, but it does not infer any of them from the finite fixture.",
+  "method": [
+    "Reuse |A1|<=(7/8) A^(3/4) and |A0|<=(61/160) A^(3/4) from EXP-001074 without adding a fourth generator or an unregistered domain assumption.",
+    "Declare P_sigma and Q_sigma as separate two-sided Gibbs seminorm roots for W_a A^(3/4) partial_q and W_a A^(3/4), conditional on an explicit multiplication-domination statement on the common Q3 core.",
+    "Declare P_delta_sigma and Q_delta_sigma separately for the modular companion; do not identify modular and Hamiltonian actions or domains.",
+    "Form M_sigma=(7/8)P_sigma+(61/160)Q_sigma, add the plus and minus orientations, and retain the t^3/6 factor only as a third Taylor boundary contribution.",
+    "Recompute the rational fixture independently and compile Lean R257; keep the actual mixed moments, history, direct D/delta-D limits and all QFT reconstruction gates open."
+  ],
+  "finding": "With P_plus=5, Q_plus=3, P_minus=7, Q_minus=4, the conditional roots give M_plus=883/160, M_minus=153/20 and M_two_orientation=2107/160. With P_delta_plus=2, Q_delta_plus=1, P_delta_minus=3, Q_delta_minus=2, the modular companion gives M_delta_two_orientation=883/160. At t=1/100, t^3/6=1/6000000, so the conditional third boundary bounds are 2107/960000000 and 883/960000000. These are fixture values for the bridge algebra, not uniform Q3 estimates.",
+  "boundary": "T0 claim-nonbearing conditional finite QFT-interface bridge. It does not prove the four mixed moments, multiplication domination on the actual Q3 core, modular domain or commutation, positive-time orbit or factorial history control, direct D or delta-D Cauchy convergence, product/core density, exhaustion independence, group law, common alpha, Hamiltonian-to-OS identification, KMS/GNS, continuum, C6, Sector A or Pre-A.",
+  "adversarial_review": [
+    {"axis": "majorant transfer", "check": "The A1/A0 bounds enter only through an explicit two-sided multiplication-domination hypothesis; no operator monotonicity is inferred.", "disposition": "UPHELD"},
+    {"axis": "two orientations", "check": "Plus and minus roots remain separate and are added by the seminorm triangle; no parity equality is assumed.", "disposition": "UPHELD"},
+    {"axis": "moment meaning", "check": "P and Q are declared input roots, not values inferred from the fixture or from an unstated higher moment.", "disposition": "UPHELD"},
+    {"axis": "modular companion", "check": "P_delta and Q_delta are separate inputs; no Hamiltonian/modular commutation or domain identification is assumed.", "disposition": "UPHELD"},
+    {"axis": "time order", "check": "The t^3/6 factor is only a third Taylor boundary contribution and is not a positive-time remainder bound.", "disposition": "UPHELD"},
+    {"axis": "finite fixture", "check": "The rational roots are test inputs for the bridge algebra and do not represent volume-uniform Q3 estimates.", "disposition": "UPHELD"},
+    {"axis": "Lean", "check": "R257 checks exact rational bridge arithmetic only; it does not formalize states, unbounded domains or limits.", "disposition": "UPHELD"},
+    {"axis": "QFT and TECT promotion", "check": "OS/KMS/GNS, the gap, continuum, C6, Sector A, Pre-A and the canonical A1/R-192 production owner remain open.", "disposition": "UPHELD"}
+  ],
+  "evidence_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-projected-delta-d-third-coefficient-weighted-seminorm-bridge-manifest.json#model",
+    "strategy/pre-a-cp1-st8-q3lock-projected-delta-d-third-coefficient-weighted-seminorm-bridge-manifest.json#finite_fixture",
+    "codes/foundations/pre_a_cp1_st8_q3lock_projected_delta_d_third_coefficient_weighted_seminorm_bridge.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_projected_delta_d_third_coefficient_weighted_seminorm_bridge_independent.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_projected_delta_d_third_coefficient_weighted_seminorm_bridge_verify.py#main",
+    "verification/lean/Tect/R257.lean#third_bound_fixture",
+    "verification/lean/registry.json#R257"
+  ],
+  "formal_integration": {
+    "events": [],
+    "negatives": [],
+    "results": [],
+    "no_new_event": true,
+    "no_new_negative": true,
+    "no_new_result": true,
+    "no_tier_change": true,
+    "no_pdf": true,
+    "lean": "R257 PASS; metadata PASS"
+  },
+  "formal_refs": {"events": [], "negatives": [], "results": []},
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE",
+    "PA-CP1-ST8-Q3LOCK-FIRST-PASSAGE-BACKBONE-REAL-TIME-PRODUCT-AND-ENERGY-TAIL-CLOSURE",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "related": [
+    {"id": "EXP-001074", "relation": "continues"},
+    {"id": "EXP-001062", "relation": "continues"}
+  ],
+  "prior_exploration_id": "EXP-001074",
+  "provenance": "contemporaneous",
+  "qft_interface": {
+    "closed": "A conditional bridge from the finite coefficient majorant and four explicitly named mixed moment-root inputs to a two-orientation Gibbs seminorm and a separate modular companion, including the t^3/6 third-boundary scale.",
+    "open": "The actual mixed moments, multiplication domination, modular domain, positive-time orbit and history, direct D/delta-D Cauchy, exhaustion, common alpha, Hamiltonian-to-OS identification, KMS/GNS gap, continuum, C6, Sector A and Pre-A remain open.",
+    "tect_boundary": "No heat_root_incidence or canonical A1/R-192 production owner is supplied."
+  },
+  "next_action": "Prove the four mixed moment and multiplication-domination inputs on an actual common Q3 core, with the modular companion separately, or record an exact obstruction before any direct D/delta-D promotion.",
+  "recorded_at": "2026-08-26T02:00:00Z",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-08-24",
+  "no_overclaim": "This is a conditional finite QFT-facing seminorm bridge only. It is not an all-time projected D/delta-D theorem, an OS reconstruction, a KMS/GNS result, a mass-gap proof, a continuum result, a C6/Sector-A/Pre-A result, a TECT production map or a Clay result."
+}

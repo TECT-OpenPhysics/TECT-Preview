@@ -1,0 +1,139 @@
+{
+  "schema": "tect/pre-a-cp1-st8-q3lock-projected-delta-d-third-coefficient-weighted-seminorm-bridge/1.0",
+  "exploration_id": "EXP-001075",
+  "prior_exploration_id": "EXP-001074",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "tier": "T0",
+  "claim_bearing": false,
+  "title": "Projected D-delta-D third-coefficient conditional two-orientation weighted seminorm bridge",
+  "question": "What exact mixed-moment hypotheses transfer the EXP-001074 quartic-weight coefficient majorant into a two-orientation Gibbs seminorm bound and its t^3/6 boundary contribution, while keeping the modular-domain obligation explicit?",
+  "authority_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-projected-delta-d-third-coefficient-weighted-majorant-manifest.json#derived_majorants",
+    "strategy/pre-a-cp1-st8-q3lock-fixed-beta-two-sided-duhamel-remainder-bridge-manifest.json#mixture_seminorm",
+    "strategy/pre-a-cp1-st8-q3lock-kinetic-force-double-commutator-split-manifest.json#positive_finite_checkpoint"
+  ],
+  "model": {
+    "coefficient": "Y_sigma=W_a*(A1*partial_q+A0), sigma in {+,-}",
+    "seminorm": "N_beta,#(X)^2=psi_beta,0(X^*X)+psi_beta,0(XX^*)",
+    "weight": "A(q,v)=1+q^4+v^4",
+    "coefficient_majorants": "|A1|<=(7/8)A^(3/4), |A0|<=(61/160)A^(3/4) for chi=hbar=c=1, lambda=1/10, |a|<=1/4",
+    "mixed_moment_inputs": "P_sigma bounds N_beta,#(W_a*A^(3/4)*partial_q) and Q_sigma bounds N_beta,#(W_a*A^(3/4)) after a declared two-sided multiplication-domination hypothesis",
+    "modular_inputs": "P_delta_sigma and Q_delta_sigma are separate roots for the same domination statement applied to delta(Y_sigma); no Hamiltonian/modular commutation is assumed",
+    "bridge": "M_sigma=(7/8)*P_sigma+(61/160)*Q_sigma; M_delta_sigma=(7/8)*P_delta_sigma+(61/160)*Q_delta_sigma",
+    "third_boundary_scale": "N_beta,#(t^3*(Y_+-Y_-)/6)<=t^3*(M_++M_-)/6, and the same formula for the modular companion"
+  },
+  "finite_fixture": {
+    "hbar": "1",
+    "A1_sum": "7/8",
+    "A0_sum": "61/160",
+    "P_plus": "5",
+    "Q_plus": "3",
+    "P_minus": "7",
+    "Q_minus": "4",
+    "P_delta_plus": "2",
+    "Q_delta_plus": "1",
+    "P_delta_minus": "3",
+    "Q_delta_minus": "2",
+    "time": "1/100",
+    "derived_M_plus": "883/160",
+    "derived_M_minus": "153/20",
+    "derived_M_two_orientation": "2107/160",
+    "derived_M_delta_plus": "341/160",
+    "derived_M_delta_minus": "271/80",
+    "derived_M_delta_two_orientation": "883/160",
+    "derived_t3_over_6": "1/6000000",
+    "derived_third_two_orientation_bound": "2107/960000000",
+    "derived_third_modular_bound": "883/960000000"
+  },
+  "scope": {
+    "pointwise_majorant_reused": true,
+    "conditional_two_orientation_seminorm_bridge_closed": true,
+    "conditional_modular_companion_formula_closed": true,
+    "third_boundary_t3_scale_closed": true,
+    "actual_weighted_moment_bound_closed": false,
+    "multiplication_domination_on_actual_q3_core_closed": false,
+    "modular_domain_closed": false,
+    "actual_q3_four_context_theorem_proved": false,
+    "actual_q3_factorial_history_proved": false,
+    "all_time_projected_d_duhamel_cauchy_closed": false,
+    "volume_uniform_direct_d_cauchy_closed": false,
+    "delta_d_cauchy_closed": false,
+    "product_core_density_closed": false,
+    "exhaustion_independence_closed": false,
+    "group_law_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_os_closed": false,
+    "gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true,
+    "not_closed": "This package closes only a conditional finite two-orientation seminorm algebra. It does not prove the mixed moments, multiplication domination on the actual Q3 core, modular domain or commutation, positive-time orbit/history control, direct D or delta-D Cauchy convergence, exhaustion independence, Hamiltonian-to-OS identification, KMS/GNS, continuum, C6, Sector A or Pre-A."
+  },
+  "adversarial_review": [
+    {
+      "axis": "majorant transfer",
+      "check": "The pointwise A1/A0 bounds are used only through an explicit two-sided multiplication-domination hypothesis; no operator monotonicity is silently inferred.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "two orientations",
+      "check": "Plus and minus mixed roots remain separate and are added by the seminorm triangle; no parity equality is assumed.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "moment meaning",
+      "check": "P and Q are declared weighted seminorm-root inputs, not values inferred from the finite fixture or from a fifth moment.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "modular companion",
+      "check": "P_delta and Q_delta are separate inputs; no Hamiltonian/modular commutation or domain identification is assumed.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "time order",
+      "check": "The t^3/6 factor is only the third Taylor boundary contribution and is not a positive-time remainder bound.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "finite fixture",
+      "check": "The rational roots are test inputs for the bridge algebra and do not represent uniform Q3 volume estimates.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "Lean",
+      "check": "R257 checks exact rational bridge arithmetic only; it does not formalize states, unbounded domains or limits.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "QFT and TECT promotion",
+      "check": "OS/KMS/GNS, gap, continuum, C6, Sector A, Pre-A and the canonical A1/R-192 production owner remain open.",
+      "disposition": "UPHELD"
+    }
+  ],
+  "formal_integration": {
+    "lean_entry": "verification/lean/Tect/R257.lean",
+    "result_ids": [],
+    "negative_ids": [],
+    "changelog_event": null
+  },
+  "qft_interface": {
+    "closed": "An explicit conditional bridge from the EXP-001074 coefficient majorant and four mixed moment-root inputs to the two-orientation seminorm and third Taylor contribution, with a separate modular companion.",
+    "open": "The actual mixed moments, multiplication domination, modular domain, positive-time orbit/history, direct D/delta-D Cauchy, exhaustion, common alpha, Hamiltonian-to-OS identification, KMS/GNS gap, continuum, C6, Sector A and Pre-A remain open.",
+    "tect_boundary": "No heat_root_incidence or canonical A1/R-192 production owner is supplied."
+  },
+  "boundary": "T0 claim-nonbearing conditional finite QFT-interface bridge.",
+  "next_action": "Prove the four mixed moment and multiplication-domination inputs on an actual common Q3 core, with the modular companion separately, or record an exact obstruction before any direct D/delta-D promotion.",
+  "verification": {
+    "primary_script": "codes/foundations/pre_a_cp1_st8_q3lock_projected_delta_d_third_coefficient_weighted_seminorm_bridge.py",
+    "independent_script": "codes/foundations/pre_a_cp1_st8_q3lock_projected_delta_d_third_coefficient_weighted_seminorm_bridge_independent.py",
+    "integrated_script": "codes/foundations/pre_a_cp1_st8_q3lock_projected_delta_d_third_coefficient_weighted_seminorm_bridge_verify.py"
+  },
+  "no_overclaim": "This is a conditional finite QFT-facing seminorm bridge only. It is not an all-time projected D/delta-D theorem, an OS reconstruction, a KMS/GNS result, a mass-gap proof, a continuum result, a C6/Sector-A/Pre-A result, a TECT production map or a Clay result."
+}
