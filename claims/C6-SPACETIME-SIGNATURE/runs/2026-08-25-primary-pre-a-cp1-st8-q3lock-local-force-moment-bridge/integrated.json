@@ -1,0 +1,190 @@
+{
+  "assertion_count": 24,
+  "assertions": [
+    {
+      "actual": "['EXP-001060', 'T-054']",
+      "expected": "EXP-001060/T-054",
+      "name": "identity",
+      "pass": true
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "name": "claim nonbearing",
+      "pass": true
+    },
+    {
+      "actual": "{'onsite_operator': 'k_x=h_site-xi_0-delta_1 P_1 >= 1 at zero source in the registered periodic Q3 family', 'site_energy': 'e(q)=r*q^2/2+g*q^4/4+r^2/(2*g) >= 0', 'spectral_shift': 'A0=max(0,xi_0+delta_1+r^2/(2*g)); the finite one-site spectral owner supplies A0<infinity', 'form_domination': 'e(q_x) <= k_x+A0 because p_x^2/(2*chi) and the omitted scalar are nonnegative in the onsite form', 'endpoint_energy': 'E_xy=1+e(q_x)+e(q_y) <= C0+k_x+k_y with C0=1+2*A0', 'cube_majorant': 'For nonnegative entries, E_xy^3 <= 9*(C0^3+k_x^3+k_y^3)', 'fifth_to_third': 'k_x>=1 implies k_x^3<=k_x^5; the existing uniform m5 therefore bounds both endpoint third moments', 'bridge_bound': 'sup phi(E_xy^3) <= M_bridge=9*(C0^3+2*m5)'}",
+      "expected": "onsite-to-endpoint bridge",
+      "name": "model bridge",
+      "pass": true
+    },
+    {
+      "actual": "{'endpoint_third_moment_bridge_closed': True, 'registered_periodic_zero_source_scope_only': True, 'uniform_over_sites_and_translates': True, 'uses_existing_m5_authority': True, 'arbitrary_boundary_extension_closed': False, 'compact_source_uniform_shift_closed': False, 'all_time_projected_d_duhamel_cauchy_closed': False, 'delta_d_cauchy_closed': False, 'product_core_density_closed': False, 'exhaustion_independence_closed': False, 'group_law_closed': False, 'common_alpha_closed': False, 'hamiltonian_os_identification_closed': False, 'kms_os_closed': False, 'gns_gap_closed': False, 'continuum_closed': False, 'c6_closed': False, 'sector_a_closed': False, 'pre_a_closed': False}",
+      "expected": "registered bridge",
+      "name": "scope closed",
+      "pass": true
+    },
+    {
+      "actual": "{'endpoint_third_moment_bridge_closed': True, 'registered_periodic_zero_source_scope_only': True, 'uniform_over_sites_and_translates': True, 'uses_existing_m5_authority': True, 'arbitrary_boundary_extension_closed': False, 'compact_source_uniform_shift_closed': False, 'all_time_projected_d_duhamel_cauchy_closed': False, 'delta_d_cauchy_closed': False, 'product_core_density_closed': False, 'exhaustion_independence_closed': False, 'group_law_closed': False, 'common_alpha_closed': False, 'hamiltonian_os_identification_closed': False, 'kms_os_closed': False, 'gns_gap_closed': False, 'continuum_closed': False, 'c6_closed': False, 'sector_a_closed': False, 'pre_a_closed': False}",
+      "expected": "source/boundary extension open",
+      "name": "source boundary",
+      "pass": true
+    },
+    {
+      "actual": "{'endpoint_third_moment_bridge_closed': True, 'registered_periodic_zero_source_scope_only': True, 'uniform_over_sites_and_translates': True, 'uses_existing_m5_authority': True, 'arbitrary_boundary_extension_closed': False, 'compact_source_uniform_shift_closed': False, 'all_time_projected_d_duhamel_cauchy_closed': False, 'delta_d_cauchy_closed': False, 'product_core_density_closed': False, 'exhaustion_independence_closed': False, 'group_law_closed': False, 'common_alpha_closed': False, 'hamiltonian_os_identification_closed': False, 'kms_os_closed': False, 'gns_gap_closed': False, 'continuum_closed': False, 'c6_closed': False, 'sector_a_closed': False, 'pre_a_closed': False}",
+      "expected": "successor gates open",
+      "name": "QFT firewall",
+      "pass": true
+    },
+    {
+      "actual": "E:\\Dev\\TECT\\claims\\GATES.md",
+      "expected": "R-167 fifth-moment authority present",
+      "name": "authority gate closed",
+      "pass": true
+    },
+    {
+      "actual": "['cube_constant_fixture', 'endpoint_cube_fixture', 'fifth_dominates_third_fixture', 'bridge_fixture', 'scope_fixture']",
+      "expected": "present",
+      "name": "Lean source",
+      "pass": true
+    },
+    {
+      "actual": "[]",
+      "expected": "none",
+      "name": "Lean forbidden",
+      "pass": true
+    },
+    {
+      "actual": "PRIMARY LOCAL-FORCE-MOMENT-BRIDGE PASS 140/140\n",
+      "expected": "PASS",
+      "name": "primary child",
+      "pass": true
+    },
+    {
+      "actual": "INDEPENDENT LOCAL-FORCE-MOMENT-BRIDGE PASS 140/140\n",
+      "expected": "PASS",
+      "name": "independent child",
+      "pass": true
+    },
+    {
+      "actual": "[140, 140]",
+      "expected": ">0",
+      "name": "positive totals",
+      "pass": true
+    },
+    {
+      "actual": "['2', '2']",
+      "expected": "equal",
+      "name": "lane agreement A0",
+      "pass": true
+    },
+    {
+      "actual": "['3', '3']",
+      "expected": "equal",
+      "name": "lane agreement m5",
+      "pass": true
+    },
+    {
+      "actual": "['9', '9']",
+      "expected": "equal",
+      "name": "lane agreement cube_constant",
+      "pass": true
+    },
+    {
+      "actual": "['5', '5']",
+      "expected": "equal",
+      "name": "lane agreement C0",
+      "pass": true
+    },
+    {
+      "actual": "['1179', '1179']",
+      "expected": "equal",
+      "name": "lane agreement M_bridge",
+      "pass": true
+    },
+    {
+      "actual": "[125, 125]",
+      "expected": "equal",
+      "name": "lane agreement cube_grid_points",
+      "pass": true
+    },
+    {
+      "actual": "[True, True]",
+      "expected": "equal",
+      "name": "lane agreement endpoint_third_moment_bridge_closed",
+      "pass": true
+    },
+    {
+      "actual": "[False, False]",
+      "expected": "equal",
+      "name": "lane agreement compact_source_uniform_shift_closed",
+      "pass": true
+    },
+    {
+      "actual": "[False, False]",
+      "expected": "equal",
+      "name": "lane agreement all_time_projected_d_duhamel_cauchy_closed",
+      "pass": true
+    },
+    {
+      "actual": "[False, False]",
+      "expected": "equal",
+      "name": "lane agreement delta_d_cauchy_closed",
+      "pass": true
+    },
+    {
+      "actual": "{'A0': '2', 'C0': '5', 'M_bridge': '1179', 'all_time_projected_d_duhamel_cauchy_closed': False, 'compact_source_uniform_shift_closed': False, 'cube_constant': '9', 'cube_grid_points': 125, 'delta_d_cauchy_closed': False, 'endpoint_count': '2', 'endpoint_third_moment_bridge_closed': True, 'm5': '3'}",
+      "expected": "manifest fixture",
+      "name": "fixture constants",
+      "pass": true
+    },
+    {
+      "actual": "{'status': 'PASS', 'command': 'lake env lean Tect/R242.lean', 'returncode': 0, 'output': ''}",
+      "expected": "PASS",
+      "name": "Lean compile",
+      "pass": true
+    }
+  ],
+  "audit_id": "PA-CP1-ST8-Q3LOCK-LOCAL-FORCE-MOMENT-BRIDGE",
+  "boundary": {
+    "all_time_projected_d_duhamel_cauchy_closed": false,
+    "arbitrary_boundary_extension_closed": false,
+    "c6_closed": false,
+    "common_alpha_closed": false,
+    "compact_source_uniform_shift_closed": false,
+    "continuum_closed": false,
+    "delta_d_cauchy_closed": false,
+    "endpoint_third_moment_bridge_closed": true,
+    "exhaustion_independence_closed": false,
+    "gns_gap_closed": false,
+    "group_law_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_os_closed": false,
+    "pre_a_closed": false,
+    "product_core_density_closed": false,
+    "registered_periodic_zero_source_scope_only": true,
+    "sector_a_closed": false,
+    "uniform_over_sites_and_translates": true,
+    "uses_existing_m5_authority": true
+  },
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "exploration_id": "EXP-001060",
+  "lean": {
+    "command": "lake env lean Tect/R242.lean",
+    "output": "",
+    "returncode": 0,
+    "status": "PASS"
+  },
+  "provenance": {
+    "independent_sha256": "24fad8c3b15676aa5ca671988c5d4df8e051316aa00cdf96d78e9331f039cfea",
+    "lean_sha256": "2b3ee4f042ecb35852b08ad1a3c3a8713cf35f70cdbcbefd4842dd8a709ee27c",
+    "manifest_sha256": "254d061b4fde8eafc358976b1059e98d76f59db2b807f86304c2e6d4dd0ac4bb",
+    "primary_sha256": "e56751eac22c61afe09e82467d1dbf875033f729db2e47ed72aee6f33cf840fe"
+  },
+  "recorded_at": "2026-08-24T05:58:52.231222Z",
+  "run_kind": "integrated",
+  "schema": "tect/foundation-audit/1.0",
+  "task_id": "T-054",
+  "verdict": "PASS"
+}

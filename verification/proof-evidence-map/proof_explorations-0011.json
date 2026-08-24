@@ -5584,6 +5584,116 @@
       "task_id": "T-054",
       "title": "Local force moment interface for projected D-delta-D locality",
       "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "axis": "source convention",
+          "check": "The result is restricted to the zero-source onsite operator already registered for the canonical Q3 form.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "spectral shift",
+          "check": "A0 uses a max and no unverified sign of the ground-energy shift is assumed.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "form versus scalar",
+          "check": "The onsite domination is a quadratic-form statement followed by positive functional calculus, not a full commuting-Hamiltonian assertion.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "volume",
+          "check": "Only the two endpoints enter; no extensive spectator sum is introduced.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "moment exponent",
+          "check": "The passage from fifth to third power uses k>=1 and does not hide an interpolation assumption.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "authority reuse",
+          "check": "The existing fifth-moment theorem is an input and is not silently duplicated or promoted.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "Lean",
+          "check": "R242 checks exact arithmetic fixtures and scope markers only, not Gibbs traces or unbounded domains.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "QFT promotion",
+          "check": "Direct D, delta-D, OS/KMS, GNS, continuum, C6, Sector A and Pre-A remain open.",
+          "disposition": "UPHELD"
+        }
+      ],
+      "boundary": "Scoped endpoint third-moment bridge only: fixed beta, finite periodic Q3 volumes, zero source, uniform sites/translates. Compact-source affine shift, arbitrary boundaries, exhaustion, direct dynamics, common alpha, OS/KMS/GNS, continuum, C6, Sector A and Pre-A are not closed.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "The existing R-167/R-168 fifth-moment gate is already closed in the registered periodic compact-source scope. In its zero-source subset, the positive shifted onsite operator gives e(q_x)<=k_x+A0. The three-term cube inequality and k_x>=1 then convert m5 directly into the endpoint E_xy^3 moment needed by EXP-001059, with only two endpoint terms and no volume sum.",
+      "evidence_refs": [
+        "strategy/pre-a-cp1-st8-q3lock-local-force-moment-bridge-manifest.json#model",
+        "strategy/pre-a-cp1-st8-q3lock-local-force-moment-bridge-certificate-260824.md#Decision",
+        "codes/foundations/pre_a_cp1_st8_q3lock_local_force_moment_bridge.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_local_force_moment_bridge_independent.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_local_force_moment_bridge_verify.py#main",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-primary-pre-a-cp1-st8-q3lock-local-force-moment-bridge/primary.json#assertions",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-primary-pre-a-cp1-st8-q3lock-local-force-moment-bridge/independent.json#assertions",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-primary-pre-a-cp1-st8-q3lock-local-force-moment-bridge/integrated.json#assertions",
+        "verification/lean/Tect/R242.lean#bridge_fixture",
+        "claims/GATES.md#pa-cp1-st8-q3lock-translate-uniform-local-fifth-gibbs-moment-and-elliptic-embedding"
+      ],
+      "finding": "For E_xy=1+e(q_x)+e(q_y), A0=max(0,xi_0+delta_1+r^2/(2g)), C0=1+2A0, and m5=sup phi(k_x^5), the exact form/function-calculus bridge is phi(E_xy^3)<=9*(C0^3+2*m5). The arithmetic fixture A0=2, m5=3 gives C0=5 and M_bridge=1179. Primary and independent lanes each pass 140/140; integrated passes 24/24 with Lean R242.",
+      "formal_integration": {
+        "events": [],
+        "lean": "R242 PASS",
+        "negatives": [],
+        "no_new_event": true,
+        "no_new_negative": true,
+        "no_new_result": true,
+        "results": []
+      },
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": []
+      },
+      "gate_ids": [
+        "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+        "PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE",
+        "PA-CP1-ST8-Q3LOCK-TRANSLATE-UNIFORM-LOCAL-FIFTH-GIBBS-MOMENT-AND-ELLIPTIC-EMBEDDING"
+      ],
+      "id": "EXP-001060",
+      "method": [
+        "Reuse only the already registered R-167 fifth-moment and onsite positivity scope; do not re-count it as a new Gibbs proof.",
+        "Use the zero-source onsite form identity k_x=h_site-xi_0-delta_1 P_1 and define the finite spectral shift A0 without assuming a sign for xi_0.",
+        "Apply the nonnegative three-term cube inequality with derived constant 3^(3-1)=9 and the functional-calculus implication k_x^3<=k_x^5 for k_x>=1.",
+        "Recompute the rational fixture in SymPy and an independent Fraction lane, then compile Lean R242 for the exact constants and scope firewall."
+      ],
+      "next_action": "Insert M_bridge into a two-sided Duhamel remainder estimate for direct projected D and delta-D, keeping the compact-source A0 extension as an explicit hypothesis unless separately discharged.",
+      "prior_exploration_id": "EXP-001059",
+      "provenance": "contemporaneous",
+      "qft_interface": {
+        "closed": "The existing fixed-beta periodic Q3 fifth-moment authority now supplies the local endpoint third-moment input for EXP-001059 in its zero-source subset.",
+        "open": "The direct projected D and delta-D Duhamel remainder, source-uniform shift, all-shape exhaustion, common alpha, Hamiltonian-to-OS identification, KMS/GNS gap, continuum, C6, Sector A and Pre-A remain open.",
+        "tect_boundary": "No heat_root_incidence or canonical A1/R-192 production owner is supplied."
+      },
+      "question": "Does the registered fixed-beta Q3 onsite fifth moment imply the endpoint third moment required by EXP-001059 without an extensive volume factor?",
+      "recorded_at": "2026-08-25T10:00:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001059",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-08-24",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Existing Q3 fifth-moment authority to endpoint third-moment bridge",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",

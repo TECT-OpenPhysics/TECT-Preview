@@ -1,0 +1,74 @@
+{
+  "schema": "tect/proof-strategy/1.0",
+  "exploration_id": "EXP-001060",
+  "task_id": "T-054",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "claim_bearing": false,
+  "title": "Existing Q3 fifth-moment authority to endpoint third-moment bridge",
+  "prior_exploration_id": "EXP-001059",
+  "related": [
+    {
+      "id": "EXP-001059",
+      "relation": "continues"
+    },
+    {
+      "id": "EXP-000813",
+      "relation": "reuses"
+    }
+  ],
+  "authority_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-local-measured-renyi-semiclassical-doublet-route-split-manifest.json#actual_q3_static_fifth_moment_and_elliptic_embedding",
+    "strategy/pre-a-cp1-st8-q3lock-local-measured-renyi-semiclassical-doublet-route-split-manifest.json#conditional_fifth_graph_transport",
+    "claims/GATES.md#pa-cp1-st8-q3lock-translate-uniform-local-fifth-gibbs-moment-and-elliptic-embedding",
+    "strategy/pre-a-cp1-st8-q3lock-local-force-moment-interface-manifest.json#model"
+  ],
+  "question": "Does the already-closed fixed-beta Q3 onsite fifth moment imply the endpoint third moment required by EXP-001059 without an extensive volume factor?",
+  "model": {
+    "onsite_operator": "k_x=h_site-xi_0-delta_1 P_1 >= 1 at zero source in the registered periodic Q3 family",
+    "site_energy": "e(q)=r*q^2/2+g*q^4/4+r^2/(2*g) >= 0",
+    "spectral_shift": "A0=max(0,xi_0+delta_1+r^2/(2*g)); the finite one-site spectral owner supplies A0<infinity",
+    "form_domination": "e(q_x) <= k_x+A0 because p_x^2/(2*chi) and the omitted scalar are nonnegative in the onsite form",
+    "endpoint_energy": "E_xy=1+e(q_x)+e(q_y) <= C0+k_x+k_y with C0=1+2*A0",
+    "cube_majorant": "For nonnegative entries, E_xy^3 <= 9*(C0^3+k_x^3+k_y^3)",
+    "fifth_to_third": "k_x>=1 implies k_x^3<=k_x^5; the existing uniform m5 therefore bounds both endpoint third moments",
+    "bridge_bound": "sup phi(E_xy^3) <= M_bridge=9*(C0^3+2*m5)"
+  },
+  "scope": {
+    "endpoint_third_moment_bridge_closed": true,
+    "registered_periodic_zero_source_scope_only": true,
+    "uniform_over_sites_and_translates": true,
+    "uses_existing_m5_authority": true,
+    "arbitrary_boundary_extension_closed": false,
+    "compact_source_uniform_shift_closed": false,
+    "all_time_projected_d_duhamel_cauchy_closed": false,
+    "delta_d_cauchy_closed": false,
+    "product_core_density_closed": false,
+    "exhaustion_independence_closed": false,
+    "group_law_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_os_closed": false,
+    "gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false
+  },
+  "finite_fixture": {
+    "A0_input": "2",
+    "m5_input": "3",
+    "derived_C0": "5",
+    "derived_M_bridge": "1179",
+    "fixture_scope": "arithmetic self-test only; not a physical spectral enclosure"
+  },
+  "verification": {
+    "primary_script": "codes/foundations/pre_a_cp1_st8_q3lock_local_force_moment_bridge.py",
+    "independent_script": "codes/foundations/pre_a_cp1_st8_q3lock_local_force_moment_bridge_independent.py",
+    "integrated_script": "codes/foundations/pre_a_cp1_st8_q3lock_local_force_moment_bridge_verify.py",
+    "lean": "verification/lean/Tect/R242.lean",
+    "certificate": "strategy/pre-a-cp1-st8-q3lock-local-force-moment-bridge-certificate-260824.md"
+  },
+  "no_overclaim": "The bridge closes only the endpoint third-moment input in the registered periodic zero-source scope. It does not close the direct D or delta-D limits, history summation, exhaustion, common alpha, OS/KMS/GNS identification, continuum, C6, Sector A or Pre-A. The compact-source extension requires a separate uniform affine form-domination row for A0."
+}
