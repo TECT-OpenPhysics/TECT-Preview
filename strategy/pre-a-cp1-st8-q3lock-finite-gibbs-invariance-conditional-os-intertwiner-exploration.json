@@ -1,0 +1,54 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001065",
+  "title": "Finite Gibbs invariance and conditional OS intertwiner boundary",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE",
+    "PA-CP1-ST8-Q3LOCK-FIXED-BETA-CANONICAL-OS-MIXTURE-COMMON-NORMAL-WSTAR-KMS-ENVELOPE"
+  ],
+  "verdict": "advanced",
+  "provenance": "contemporaneous",
+  "prior_exploration_id": "EXP-001064",
+  "related": [{"id": "EXP-001064", "relation": "continues"}],
+  "question": "What exact invariant finite Gibbs seminorm identity is available, and which additional hypotheses would transfer it into the fixed-beta OS mixture without claiming Hamiltonian thermodynamic identification?",
+  "method": [
+    "Use rho_beta=Z^{-1} exp(-beta H) for a finite self-adjoint H and derive [rho_beta,U_t]=0 by functional calculus.",
+    "Apply finite trace cyclicity separately to X^*X and XX^* to prove exact two-sided beta,# isometry.",
+    "Check a two-level q=1/2 rational fixture independently and in Lean, then state the OS transfer only as a four-hypothesis conditional implication: seminorm isometry, action intertwining, common-word compatibility and exhaustion control."
+  ],
+  "finding": "The finite Gibbs state is invariant under its own Hamiltonian orbit and its two-sided beta,# seminorm is exactly isometric. An invariant seminorm-isometric Hamiltonian-to-OS intertwiner would transfer this identity to the fixed-beta OS carrier, but the actual Q3 maps, common-word compatibility and exhaustion independence remain unproved.",
+  "decision_reason": "This is a non-duplicative positive complement to EXP-001064: it replaces the false arbitrary-state shortcut by the exact finite Gibbs condition and names every additional OS identification hypothesis instead of hiding it.",
+  "boundary": "T0 claim-nonbearing finite interface theorem. It does not prove actual Q3 operator history, direct D/delta-D Cauchy, exhaustion, a beta-independent common alpha, a GNS gap, the continuum, C6, Sector A, Pre-A or the TECT production owner.",
+  "qft_interface": {
+    "closed": "Exact finite Gibbs beta,# orbit isometry and a conditional invariant intertwiner transfer statement.",
+    "open": "Common finite-to-OS embedding, actual Q3 histories, direct D/delta-D, exhaustion, common alpha, gap and continuum remain open.",
+    "tect_boundary": "No heat_root_incidence or canonical A1/R-192 production owner is supplied."
+  },
+  "adversarial_review": [
+    {"axis": "Gibbs functional calculus", "check": "The state is a function of the same H that generates the orbit.", "disposition": "UPHELD"},
+    {"axis": "two-sided seminorm", "check": "Both trace terms are transported by cyclicity.", "disposition": "UPHELD"},
+    {"axis": "intertwiner logic", "check": "The transfer remains conditional on four explicit OS hypotheses.", "disposition": "UPHELD"},
+    {"axis": "mixture boundary", "check": "Fixed-beta OS mixture is not silently identified with finite Gibbs data.", "disposition": "UPHELD"},
+    {"axis": "Lean", "check": "R247 checks rational finite arithmetic and sign invariance only.", "disposition": "UPHELD"},
+    {"axis": "QFT promotion", "check": "No KMS/GNS/continuum or Clay conclusion follows.", "disposition": "UPHELD"},
+    {"axis": "negative authority", "check": "No new global negative record is created.", "disposition": "UPHELD"}
+  ],
+  "formal_integration": {"events": [], "results": [], "negatives": [], "no_new_negative": true, "no_tier_change": true, "no_pdf": true},
+  "evidence_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-finite-gibbs-invariance-conditional-os-intertwiner-manifest.json#finite_gibbs_theorem",
+    "strategy/pre-a-cp1-st8-q3lock-finite-gibbs-invariance-conditional-os-intertwiner-certificate-260824.md#Decision",
+    "codes/foundations/pre_a_cp1_st8_q3lock_finite_gibbs_invariance_conditional_os_intertwiner.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_finite_gibbs_invariance_conditional_os_intertwiner_independent.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_finite_gibbs_invariance_conditional_os_intertwiner_verify.py#main",
+    "verification/lean/Tect/R247.lean#theorems",
+    "strategy/pre-a-cp1-st8-q3lock-fixed-beta-mixture-seminorm-orbit-contract-stress-test-manifest.json#finding",
+    "strategy/pre-a-cp1-st8-q3lock-fixed-beta-os-mixture-common-wstar-route-split-manifest.json#hamiltonian_identification_boundary"
+  ],
+  "next_action": "Construct a common-word, exhaustion-compatible seminorm-isometric intertwiner for the actual finite Q3 Hamiltonians, or replace it with a weighted orbit estimate; keep direct D/delta-D and QFT firewalls.",
+  "recorded_at": "2026-08-25T15:00:00Z",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-08-24"
+}

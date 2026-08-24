@@ -1,0 +1,127 @@
+{
+  "schema": "tect/pre-a-cp1-st8-q3lock-finite-gibbs-invariance-conditional-os-intertwiner/1.0",
+  "exploration_id": "EXP-001065",
+  "prior_exploration_id": "EXP-001064",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "tier": "T0",
+  "claim_bearing": false,
+  "title": "Finite Gibbs invariance and conditional OS intertwiner boundary",
+  "question": "What exact invariant finite Gibbs seminorm identity is available, and which additional hypotheses would transfer it into the fixed-beta OS mixture without claiming Hamiltonian thermodynamic identification?",
+  "authority_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-fixed-beta-mixture-seminorm-orbit-contract-stress-test-manifest.json#finding",
+    "strategy/pre-a-cp1-st8-q3lock-fixed-beta-two-sided-duhamel-remainder-bridge-manifest.json#conditional_hypotheses",
+    "strategy/pre-a-cp1-st8-q3lock-fixed-beta-os-mixture-common-wstar-route-split-manifest.json#hamiltonian_identification_boundary",
+    "strategy/pre-a-cp1-st8-q3lock-selector-yarotsky-maximal-continuous-kms-envelope-route-split-manifest.json#finite_full_h_continuous_core"
+  ],
+  "finite_gibbs_theorem": {
+    "setup": "Let H be a finite-dimensional self-adjoint Hamiltonian, beta>0, Z=Tr(exp(-beta H)), rho_beta=exp(-beta H)/Z, and U_t=exp(-i t H/hbar).",
+    "invariance": "Functional calculus gives [rho_beta,U_t]=0. Cyclicity of the finite trace then gives Tr(rho_beta alpha_t(X)^* alpha_t(X))=Tr(rho_beta X^*X) and Tr(rho_beta alpha_t(X) alpha_t(X)^*)=Tr(rho_beta XX^*) for alpha_t(X)=U_t^* X U_t.",
+    "seminorm": "The two-sided finite Gibbs seminorm N_beta(X)^2=Tr(rho_beta X^*X)+Tr(rho_beta XX^*) is exactly alpha_t-isometric.",
+    "fixture": "For a two-level Boltzmann ratio q=1/2, rho=diag(2/3,1/3), U=diag(1,-1), and X=[[1,2],[3,4]], the exact squared seminorm is 25 before and after conjugation."
+  },
+  "conditional_os_transfer": {
+    "hypotheses": [
+      "For every finite member Lambda, a linear map Phi_Lambda from the finite word core into the fixed-beta OS carrier is defined.",
+      "The map is seminorm-isometric: ||Phi_Lambda(X)||_(beta,#)=N_beta,Lambda(X).",
+      "The maps intertwine the finite Hamiltonian action with the one fixed OS action: Phi_Lambda(alpha_t^Lambda(X))=alpha_t^OS(Phi_Lambda(X)).",
+      "The maps are compatible on common local words and have an exhaustion-independent limit or a separately proved direct Cauchy criterion."
+    ],
+    "conclusion": "Under exactly these hypotheses, finite Gibbs isometry transfers to OS orbit isometry on the image, so a finite Duhamel remainder bound may be transported without the false shortcut rejected by EXP-001064.",
+    "status": "conditional_only"
+  },
+  "fixture": {
+    "boltzmann_ratio": "1/2",
+    "weights": ["2/3", "1/3"],
+    "unitary": [["1", "0"], ["0", "-1"]],
+    "observable": [["1", "2"], ["3", "4"]],
+    "initial_squared_norm": "25",
+    "evolved_observable": [["1", "-2"], ["-3", "4"]],
+    "evolved_squared_norm": "25",
+    "orbit_gap": "0"
+  },
+  "finding": {
+    "finite": "The finite Gibbs state is invariant under its own Hamiltonian orbit, and the two-sided beta,# seminorm is exactly isometric.",
+    "transfer": "An invariant isometric intertwiner would transfer this identity into the fixed-beta OS carrier, but the existence, common-word compatibility and exhaustion independence of that intertwiner are not proved.",
+    "boundary": "The exact positive finite theorem complements EXP-001064; it does not repair the missing Hamiltonian-to-OS identification."
+  },
+  "scope": {
+    "finite_gibbs_isometry_closed": true,
+    "conditional_os_transfer_statement_closed": true,
+    "finite_hamiltonian_os_embedding_closed": false,
+    "actual_q3_four_context_theorem_proved": false,
+    "actual_q3_factorial_history_proved": false,
+    "all_time_orbit_bound_proved": false,
+    "volume_uniform_direct_d_cauchy_closed": false,
+    "delta_d_cauchy_closed": false,
+    "product_core_density_closed": false,
+    "exhaustion_independence_closed": false,
+    "group_law_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true,
+    "not_closed": "The exact finite Gibbs identity and the conditional transfer implication do not prove a Q3 thermodynamic embedding, direct D or delta-D Cauchy, a common alpha, a GNS gap, the continuum, C6, Sector A, Pre-A or the TECT production owner."
+  },
+  "adversarial_review": [
+    {
+      "axis": "Gibbs functional calculus",
+      "check": "The finite theorem uses rho_beta as an exact function of H, so commutation with U_t is not inferred from an arbitrary fixed state.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "two-sided seminorm",
+      "check": "Both Tr(rho X^*X) and Tr(rho XX^*) are transported by trace cyclicity; no one-sided norm is substituted.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "fixture arithmetic",
+      "check": "The two-level weights, sign-conjugation and squared seminorm are recomputed exactly by SymPy, Fraction and Lean.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "intertwiner logic",
+      "check": "The OS transfer is explicitly conditional on seminorm isometry, action intertwining, common-word compatibility and exhaustion control.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "mixture confusion",
+      "check": "A fixed-beta OS mixture is not identified with a finite Gibbs state merely because both have a beta label.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "Lean scope",
+      "check": "R247 checks the exact rational finite fixture and sign-invariance polynomial, not unbounded domains or OS reconstruction.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "QFT promotion",
+      "check": "No KMS/GNS gap, continuum, C6, Sector A, Pre-A or Yang-Mills conclusion follows.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "negative authority",
+      "check": "The result is a positive finite theorem and creates no new global negative record.",
+      "disposition": "UPHELD"
+    }
+  ],
+  "formal_integration": {
+    "lean_entry": "verification/lean/Tect/R247.lean",
+    "result_ids": [],
+    "negative_ids": [],
+    "changelog_event": null
+  },
+  "qft_interface": {
+    "closed": "Exact finite Gibbs invariance and a precisely stated conditional norm-preserving Hamiltonian-to-OS transfer implication.",
+    "open": "The actual Q3 four-context estimate, factorial history, volume-uniform direct D/delta-D, common-word embedding, exhaustion independence, common alpha, GNS gap and continuum remain open.",
+    "tect_boundary": "No heat_root_incidence or canonical A1/R-192 production owner is supplied."
+  },
+  "boundary": "T0 claim-nonbearing finite QFT interface theorem. It identifies the exact invariant input required by the OS route but is not Hamiltonian thermodynamic identification or Clay-level closure.",
+  "next_action": "Construct the common-word, exhaustion-compatible seminorm-isometric intertwiner for the actual finite Q3 Hamiltonians, or replace it with a weighted orbit estimate and retain the direct D/delta-D firewalls."
+}
