@@ -6322,6 +6322,123 @@
       "task_id": "T-054",
       "title": "Finite Gibbs-isometric Duhamel remainder",
       "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "axis": "CCR sign",
+          "check": "The i[H,.]/hbar convention and shifted momentum p_x+a/2 reproduce the displayed kinetic and force signs.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "operator ordering",
+          "check": "The configuration force commutes with W_a and the kinetic square is not reordered without a CCR identity.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "force reuse",
+          "check": "The endpoint moment is used only for the force summand; no momentum control is inferred.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "finite witness",
+          "check": "The two-level family is an exact control model and is not asserted to be the Q3 spectrum.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "seminorm orientation",
+          "check": "Both rho-weighted orientations are retained, giving 2 and 2*n^4.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "volume",
+          "check": "The witness rejects a force-only shortcut but does not prove growth for the actual Q3 volume sequence.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "Lean",
+          "check": "R249 checks rational scaling and fixtures, not unbounded domains or Gibbs limits.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "QFT promotion",
+          "check": "No OS/KMS/GNS, continuum, C6, Sector A or Pre-A conclusion follows.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "negative boundary",
+          "check": "No global negative-result record is opened; this is a route-local obstruction.",
+          "disposition": "UPHELD"
+        }
+      ],
+      "boundary": "T0 claim-nonbearing finite CCR split plus route-local force-only shortcut obstruction. It does not prove a uniform actual-Q3 kinetic moment, modular multiplier/domain estimate, four-context history, direct D or delta-D Cauchy, exhaustion, common alpha, Hamiltonian-to-OS identification, KMS/GNS gap, continuum, C6, Sector A or Pre-A.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "The finite CCR calculation isolates a kinetic term and a local force term. The force term can reuse the registered endpoint-moment interface, but an exact force-free two-level family has two-sided double-commutator squared seminorm 2*n^4, so a force-only shortcut cannot control the kinetic term.",
+      "evidence_refs": [
+        "strategy/pre-a-cp1-st8-q3lock-kinetic-force-double-commutator-split-manifest.json#model",
+        "strategy/pre-a-cp1-st8-q3lock-kinetic-force-double-commutator-split-certificate-260824.md#Decision",
+        "codes/foundations/pre_a_cp1_st8_q3lock_kinetic_force_double_commutator_split.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_kinetic_force_double_commutator_split_independent.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_kinetic_force_double_commutator_split_verify.py#main",
+        "verification/lean/Tect/R249.lean#second_commutator_scaling",
+        "strategy/pre-a-cp1-st8-q3lock-finite-gibbs-isometric-duhamel-remainder-manifest.json#finite_time_theorem",
+        "strategy/pre-a-cp1-st8-q3lock-compact-source-endpoint-third-moment-bridge-manifest.json#qft_interface",
+        "strategy/pre-a-cp1-st8-q3lock-local-force-moment-interface-manifest.json#model"
+      ],
+      "finding": "The exact split is delta_H^2(W_a)=-(a^2/(chi^2*hbar^2))W_a(p_x+a/2)^2-(i*a/(chi*hbar))W_a F_x. In the force-free two-level family delta_n^2(W)=-n^2W, N_rho(W)^2=2 and N_rho(delta_n^2(W))^2=2*n^4; n=4 gives 512. Therefore the force endpoint moment is not a complete double-commutator estimate.",
+      "formal_integration": {
+        "events": [],
+        "lean": "R249 PASS",
+        "negatives": [],
+        "no_new_event": true,
+        "no_new_negative": true,
+        "no_new_result": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "results": []
+      },
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": []
+      },
+      "gate_ids": [
+        "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+        "PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE",
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001067",
+      "method": [
+        "Derive delta_H^2(W_a) from delta_H=i[H,.]/hbar, [p_x,W_a]=a W_a and delta_H(p_x)=-partial_(q_x)V on the polynomial CCR core.",
+        "Reuse the EXP-001058--EXP-001061 force interface only for the force summand and keep the kinetic fourth-moment and modular multiplier as separate gates.",
+        "Evaluate the exact two-level family H_n=diag(0,n), W=sigma_x with a normalized diagonal Gibbs state and compute both orientations of the two-sided seminorm.",
+        "Run independent exact arithmetic and compile Lean R249, retaining all thermodynamic and OS firewalls."
+      ],
+      "next_action": "Prove or obstruct a volume/source/cutoff-uniform fourth momentum moment and modular multiplier estimate for the actual finite Q3 Gibbs word core, then revisit the uniform double-commutator constant.",
+      "no_overclaim": "This is a finite QFT-interface checkpoint only. It is not a Q3 thermodynamic dynamics proof, a mass-gap proof, a C6/Sector-A/Pre-A result, a TECT production map or a Clay result.",
+      "prior_exploration_id": "EXP-001066",
+      "provenance": "contemporaneous",
+      "qft_interface": {
+        "closed": "The finite Q3-facing second commutator is split exactly into kinetic and force interfaces, and force-only control is ruled out by an exact finite witness.",
+        "open": "Actual Q3 kinetic moment, modular multiplier/domain, four-context history, direct D/delta-D, exhaustion, common alpha, OS/KMS/GNS, continuum, C6, Sector A and Pre-A remain open.",
+        "tect_boundary": "No heat_root_incidence or canonical A1/R-192 production owner is supplied."
+      },
+      "question": "Does the exact finite Q3 second commutator of a local configuration character close from the endpoint force moment alone, or is a separate kinetic and modular bound required?",
+      "recorded_at": "2026-08-25T17:00:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001066",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-08-24",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Finite Q3 double-commutator kinetic/force split and force-only obstruction",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",
