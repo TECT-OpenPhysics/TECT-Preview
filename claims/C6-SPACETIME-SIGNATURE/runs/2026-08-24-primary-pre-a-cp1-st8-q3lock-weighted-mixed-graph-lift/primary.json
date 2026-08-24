@@ -1,0 +1,293 @@
+{
+  "assertions": [
+    {
+      "actual": [
+        "EXP-001045",
+        "T-054"
+      ],
+      "expected": "EXP-001045/T-054",
+      "group": "provenance",
+      "name": "identity",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "claim nonbearing",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "1/128",
+        "2",
+        "1/4",
+        "1/8"
+      ],
+      "expected": ">0",
+      "group": "hypothesis",
+      "name": "positive inputs",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "4",
+        "256",
+        "256"
+      ],
+      "expected": "root^4=kappa/gamma",
+      "group": "hypothesis",
+      "name": "energy ratio root",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "1",
+        "1/16",
+        "2"
+      ],
+      "expected": "1,1/16,2^4=16",
+      "group": "hypothesis",
+      "name": "weight fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": "X",
+      "expected": ">=0 coefficients",
+      "group": "scalar",
+      "name": "scalar lift i=0 j=1",
+      "status": "PASS"
+    },
+    {
+      "actual": "Y",
+      "expected": ">=0 coefficients",
+      "group": "scalar",
+      "name": "scalar lift i=1 j=0",
+      "status": "PASS"
+    },
+    {
+      "actual": "X**2 + 2*X*Y",
+      "expected": ">=0 coefficients",
+      "group": "scalar",
+      "name": "scalar lift i=0 j=2",
+      "status": "PASS"
+    },
+    {
+      "actual": "X**2 + X*Y + Y**2",
+      "expected": ">=0 coefficients",
+      "group": "scalar",
+      "name": "scalar lift i=1 j=1",
+      "status": "PASS"
+    },
+    {
+      "actual": "2*X*Y + Y**2",
+      "expected": ">=0 coefficients",
+      "group": "scalar",
+      "name": "scalar lift i=2 j=0",
+      "status": "PASS"
+    },
+    {
+      "actual": "X**3 + 3*X**2*Y + 3*X*Y**2",
+      "expected": ">=0 coefficients",
+      "group": "scalar",
+      "name": "scalar lift i=0 j=3",
+      "status": "PASS"
+    },
+    {
+      "actual": "X**3 + 3*X**2*Y + 2*X*Y**2 + Y**3",
+      "expected": ">=0 coefficients",
+      "group": "scalar",
+      "name": "scalar lift i=1 j=2",
+      "status": "PASS"
+    },
+    {
+      "actual": "X**3 + 2*X**2*Y + 3*X*Y**2 + Y**3",
+      "expected": ">=0 coefficients",
+      "group": "scalar",
+      "name": "scalar lift i=2 j=1",
+      "status": "PASS"
+    },
+    {
+      "actual": "3*X**2*Y + 3*X*Y**2 + Y**3",
+      "expected": ">=0 coefficients",
+      "group": "scalar",
+      "name": "scalar lift i=3 j=0",
+      "status": "PASS"
+    },
+    {
+      "actual": 16,
+      "expected": "<=4913",
+      "group": "scalar",
+      "name": "powered scalar fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": "203393/3584",
+      "expected": "203393/3584",
+      "group": "majorant",
+      "name": "edge centered rate",
+      "status": "PASS"
+    },
+    {
+      "actual": "203393/3584",
+      "expected": "203393/3584",
+      "group": "orientation",
+      "name": "edge relabelled rate",
+      "status": "PASS"
+    },
+    {
+      "actual": "97/48",
+      "expected": "97/48",
+      "group": "majorant",
+      "name": "bond centered rate",
+      "status": "PASS"
+    },
+    {
+      "actual": "97/48",
+      "expected": "97/48",
+      "group": "orientation",
+      "name": "bond relabelled rate",
+      "status": "PASS"
+    },
+    {
+      "actual": "10791/1024",
+      "expected": "10791/1024",
+      "group": "composition",
+      "name": "onsite rate",
+      "status": "PASS"
+    },
+    {
+      "actual": "1382807/7168",
+      "expected": "1382807/7168",
+      "group": "composition",
+      "name": "local rate",
+      "status": "PASS"
+    },
+    {
+      "actual": "1382807/57344",
+      "expected": "1382807/57344",
+      "group": "composition",
+      "name": "weighted local rate",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "16",
+        "16"
+      ],
+      "expected": 16,
+      "group": "spatial",
+      "name": "spatial cost retained",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "actual_q3_history_closed": false,
+        "all_shape_exhaustion_closed": false,
+        "bond_one_step_bridge_closed_conditionally": true,
+        "common_alpha_closed": false,
+        "edge_one_step_bridge_closed_conditionally": true,
+        "history_product_closed": false,
+        "mixed_graph_hypothesis_independent": false,
+        "no_new_negative_result": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "not_closed": "The R-167 weighted-energy operator hypotheses, repeated history composition, first-passage resummation, exhaustion, common alpha, KMS/OS reconstruction, GNS gap, continuum, C6, Sector A and Pre-A remain open.",
+        "scalar_mixed_lift_closed": true,
+        "spatial_weight_cost_explicit": true,
+        "weighted_mixed_graph_lift_closed_conditionally": true
+      },
+      "expected": "conditional/false",
+      "group": "scope",
+      "name": "conditional history scope",
+      "status": "PASS"
+    }
+  ],
+  "boundary": "T0 claim-nonbearing conditional weighted mixed graph checkpoint. It repairs only the missing algebraic mixed-input implication under R-167 hypotheses and does not establish Q3 dynamics or a thermodynamic QFT.",
+  "derived": {
+    "actual_q3_history_closed": false,
+    "all_shape_exhaustion_closed": false,
+    "bond_one_step_bridge_closed_conditionally": true,
+    "bond_relabelled_rate": "97/48",
+    "bond_weighted_rate": "97/48",
+    "common_alpha_closed": false,
+    "edge_one_step_bridge_closed_conditionally": true,
+    "edge_relabelled_rate": "203393/3584",
+    "edge_weighted_rate": "203393/3584",
+    "energy_ratio": "256",
+    "gamma": "1/128",
+    "history_product_closed": false,
+    "kappa": "2",
+    "local_rate": "1382807/7168",
+    "mixed_graph_hypothesis_independent": false,
+    "neighbor_factor_root": "2",
+    "onsite_rate": "10791/1024",
+    "root_scale": "4",
+    "scalar_mixed_lift_closed": true,
+    "spatial_weight_cost_explicit": true,
+    "weight_center": "1",
+    "weight_neighbor": "1/16",
+    "weighted_local_rate": "1382807/57344",
+    "weighted_mixed_graph_lift_closed_conditionally": true
+  },
+  "exploration_id": "EXP-001045",
+  "failed": 0,
+  "passed": 24,
+  "provenance": {
+    "manifest": "strategy/pre-a-cp1-st8-q3lock-weighted-mixed-graph-lift-manifest.json",
+    "manifest_sha256": "67e064ce6248824c9071ebaac22c939bc8fc787132e214524da633b1c8526894",
+    "script": "codes/foundations/pre_a_cp1_st8_q3lock_weighted_mixed_graph_lift.py",
+    "script_sha256": "a1fb75a91d9c17eaf06e904d0136a441ec14a855c38326531a58d3cb7d841cac"
+  },
+  "run_kind": "primary",
+  "scalar_rows": [
+    {
+      "difference": "X",
+      "i": 0,
+      "j": 1
+    },
+    {
+      "difference": "Y",
+      "i": 1,
+      "j": 0
+    },
+    {
+      "difference": "X**2 + 2*X*Y",
+      "i": 0,
+      "j": 2
+    },
+    {
+      "difference": "X**2 + X*Y + Y**2",
+      "i": 1,
+      "j": 1
+    },
+    {
+      "difference": "2*X*Y + Y**2",
+      "i": 2,
+      "j": 0
+    },
+    {
+      "difference": "X**3 + 3*X**2*Y + 3*X*Y**2",
+      "i": 0,
+      "j": 3
+    },
+    {
+      "difference": "X**3 + 3*X**2*Y + 2*X*Y**2 + Y**3",
+      "i": 1,
+      "j": 2
+    },
+    {
+      "difference": "X**3 + 2*X**2*Y + 3*X*Y**2 + Y**3",
+      "i": 2,
+      "j": 1
+    },
+    {
+      "difference": "3*X**2*Y + 3*X*Y**2 + Y**3",
+      "i": 3,
+      "j": 0
+    }
+  ],
+  "schema": "tect/foundation-audit/1.0",
+  "total": 24,
+  "verdict": "PASS"
+}

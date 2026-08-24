@@ -1,0 +1,87 @@
+{
+  "schema": "tect/pre-a-cp1-st8-q3lock-weighted-mixed-graph-lift/1.0",
+  "exploration_id": "EXP-001045",
+  "prior_exploration_id": "EXP-001044",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "claim_bearing": false,
+  "tier": "T0",
+  "title": "Conditional R-167 weighted-energy lift for mixed Q3 edge/bond graph monomials",
+  "question": "Can the missing mixed two-site graph inputs be derived conditionally from the registered R-167 weighted-energy bound and an exact scalar domination inequality?",
+  "prior_inputs": {
+    "authority": "EXP-000796/R-167 cubic graph product-locality route split",
+    "declared_energy_bound": "U_f>=gamma*sum_x f_x*|q_x|^4 and ||U_f^theta A^(-theta)||<=kappa^theta for 0<=theta<=1",
+    "operator_order": "all multiplication monomials are applied before A^(-3/4) on the declared common core",
+    "volume_scope": "finite volume and centered spatial weights; volume-uniformity is inherited only conditionally"
+  },
+  "scalar_lift": {
+    "inequality": "for i,j>=0 and m=i+j<=3, (x^i*y^j)^4 <= (x^4+y^4)^m for x,y>=0",
+    "weighted_form": "f_u^(i/4)*f_v^(j/4)*|q_u|^i*|q_v|^j <= (f_u|q_u|^4+f_v|q_v|^4)^(m/4)",
+    "graph_conclusion": "||q_u^i q_v^j A^(-3/4)|| <= f_u^(-i/4) f_v^(-j/4) gamma^(-m/4) kappa^(m/4)",
+    "reverse_orientation": "The adjoint has the same bound under the real multiplication and the separately declared adjoint graph theorem"
+  },
+  "edge_bond_application": {
+    "edge_potential": "lambda*(q-v)^2*(q^2+v^2)/4",
+    "bond_potential": "c*(q-r)^2/2",
+    "source_radius": "S=1/4",
+    "local_weights": "f_u=1, f_v=1/16, so the neighbor factor is (f_v/f_u)^(-1/4)=2",
+    "mixed_moment_fixture": "M_ij=4^(i+j)*2^j when q is the source-centered coordinate and v is its neighbor",
+    "endpoint_relabel": "For a source at v, swap q and v and use the neighbor exponent i; the scalar rates agree"
+  },
+  "fixture": {
+    "gamma": "1/128",
+    "kappa": "2",
+    "energy_ratio": "256",
+    "root_scale": "4",
+    "weight_center": "1",
+    "weight_neighbor": "1/16",
+    "neighbor_factor_root": "2",
+    "lambda": "2/7",
+    "spatial_coupling": "2/3",
+    "source_radius": "1/4",
+    "time": "1/8",
+    "expected_edge_rate": "203393/3584",
+    "expected_bond_rate": "97/48",
+    "expected_onsite_rate": "10791/1024",
+    "expected_local_rate": "1382807/7168",
+    "expected_weighted_local_rate": "1382807/57344"
+  },
+  "scope": {
+    "scalar_mixed_lift_closed": true,
+    "weighted_mixed_graph_lift_closed_conditionally": true,
+    "edge_one_step_bridge_closed_conditionally": true,
+    "bond_one_step_bridge_closed_conditionally": true,
+    "spatial_weight_cost_explicit": true,
+    "mixed_graph_hypothesis_independent": false,
+    "history_product_closed": false,
+    "actual_q3_history_closed": false,
+    "all_shape_exhaustion_closed": false,
+    "common_alpha_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true,
+    "not_closed": "The R-167 weighted-energy operator hypotheses, repeated history composition, first-passage resummation, exhaustion, common alpha, KMS/OS reconstruction, GNS gap, continuum, C6, Sector A and Pre-A remain open."
+  },
+  "adversarial_review": [
+    {"axis": "inheritance", "check": "The mixed lift is conditional on the exact R-167 weighted-energy and Heinz--Kato graph theorem; it is not an independent proof of those inputs.", "disposition": "UPHELD"},
+    {"axis": "scalar-to-operator order", "check": "Pointwise multiplication domination is applied before A^(-3/4), and the remaining A power is a contraction because A>=1.", "disposition": "UPHELD"},
+    {"axis": "spatial weight", "check": "The factor f_u^(-i/4)f_v^(-j/4) is retained; no unweighted moving-site uniformity is claimed.", "disposition": "UPHELD"},
+    {"axis": "endpoint orientation", "check": "The source-centered relabelled edge uses the neighbor exponent on the opposite coordinate and is checked independently.", "disposition": "UPHELD"},
+    {"axis": "history", "check": "One-step mixed graph control does not prove repeated Duhamel words, first passage, or common alpha.", "disposition": "UPHELD"},
+    {"axis": "Lean", "check": "R227 checks exact rational rates and a powered scalar domination fixture only.", "disposition": "UPHELD"},
+    {"axis": "QFT promotion", "check": "No thermodynamic dynamics, OS/KMS reconstruction, GNS gap, continuum, C6, Sector A or Pre-A conclusion follows.", "disposition": "UPHELD"}
+  ],
+  "formal_integration": {
+    "lean_entry": "verification/lean/Tect/R227.lean",
+    "result_ids": [],
+    "negative_ids": [],
+    "changelog_event": null
+  },
+  "qft_interface": {
+    "closed": "A conditional weighted-energy derivation of the mixed two-site graph inputs needed by the Q3 edge/bond source bridge, with explicit spatial weight cost.",
+    "open": "The inherited weighted-energy theorem, actual repeated histories, first-passage decay, all-shape Cauchy convergence, common alpha, KMS, GNS gap, continuum, C6, Sector A and Pre-A remain open.",
+    "tect_boundary": "No heat_root_incidence or canonical A1/R-192 production owner is supplied."
+  },
+  "boundary": "T0 claim-nonbearing conditional weighted mixed graph checkpoint. It repairs only the missing algebraic mixed-input implication under R-167 hypotheses and does not establish Q3 dynamics or a thermodynamic QFT.",
+  "next_action": "Insert the weighted mixed constants into the actual two-orientation history recurrence, preserving the f^(-m/4) spatial cost; if the branch/repeat sum still fails, record its exact growth obstruction."
+}

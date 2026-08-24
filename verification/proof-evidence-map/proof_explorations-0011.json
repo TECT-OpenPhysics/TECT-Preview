@@ -4029,6 +4029,108 @@
       "task_id": "T-054",
       "title": "Conditional Q3 multivariate edge/bond operator-source bridge and A-power transport boundary",
       "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "axis": "inheritance",
+          "check": "The mixed lift is conditional on R-167's weighted-energy and Heinz--Kato inputs.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "operator order",
+          "check": "Pointwise multiplication domination is applied before A^(-3/4), and the remaining A power is contractive because A>=1.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "spatial weight",
+          "check": "The f^(-m/4) cost is retained and no moving-site uniformity is claimed.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "orientation",
+          "check": "The relabelled endpoint and adjoint order are separately audited.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "history",
+          "check": "Repeated words, first passage, exhaustion and common alpha remain open.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "Lean",
+          "check": "R227 checks fixtures, not unbounded operators.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "QFT promotion",
+          "check": "No thermodynamic QFT, KMS/OS, GNS gap, continuum, C6, Sector A or Pre-A result follows.",
+          "disposition": "UPHELD"
+        }
+      ],
+      "boundary": "T0 claim-nonbearing conditional weighted mixed graph checkpoint; no Q3 thermodynamic or Clay-level conclusion is claimed.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "This removes the independent mixed-table hypothesis of EXP-001044 under the explicit R-167 weighted-energy assumptions and records the unavoidable spatial weight cost. It does not establish those inherited hypotheses or the repeated history/common-alpha gate.",
+      "evidence_refs": [
+        "strategy/pre-a-cp1-st8-q3lock-weighted-mixed-graph-lift-manifest.json#scalar_lift",
+        "strategy/pre-a-cp1-st8-q3lock-cubic-graph-product-locality-route-split-manifest.json#cubic_graph_embedding",
+        "strategy/pre-a-cp1-st8-q3lock-weighted-mixed-graph-lift-certificate-260824.md#Input theorem and scalar lift",
+        "codes/foundations/pre_a_cp1_st8_q3lock_weighted_mixed_graph_lift.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_weighted_mixed_graph_lift_independent.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_weighted_mixed_graph_lift_verify.py#main",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-24-primary-pre-a-cp1-st8-q3lock-weighted-mixed-graph-lift/primary.json#assertions",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-24-primary-pre-a-cp1-st8-q3lock-weighted-mixed-graph-lift/independent.json#assertions",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-24-primary-pre-a-cp1-st8-q3lock-weighted-mixed-graph-lift/integrated.json#assertions",
+        "verification/lean/Tect/R227.lean#edge_weighted_rate_fixture",
+        "verification/lean/registry.json#entrypoints"
+      ],
+      "finding": "Conditional on R-167's weighted-energy graph theorem, the scalar domination inequality yields ||q_u^i q_v^j A^(-3/4)|| <= f_u^(-i/4)f_v^(-j/4)gamma^(-m/4)kappa^(m/4) for m=i+j<=3, with the adjoint orientation. For f_u=1, f_v=1/16, gamma=1/128, kappa=2, S=1/4, the edge and bond rates are 203393/3584 and 97/48, and the ten-choice local rate is 1382807/7168.",
+      "formal_integration": {
+        "events": [],
+        "negatives": [],
+        "no_new_negative": true,
+        "no_new_result": true,
+        "no_pdf": true,
+        "results": []
+      },
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": []
+      },
+      "gate_ids": [
+        "PA-CP1-ST8-Q3LOCK-FIRST-PASSAGE-BACKBONE-REAL-TIME-PRODUCT-AND-ENERGY-TAIL-CLOSURE",
+        "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+        "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001045",
+      "method": [
+        "Take the R-167 conditional inputs U_f>=gamma sum f_x|q_x|^4 and ||U_f^theta A^(-theta)||<=kappa^theta, including the adjoint orientation.",
+        "Prove the scalar powered inequality (x^i*y^j)^4<=(x^4+y^4)^(i+j) for i+j<=3 and lift it to multiplication-operator order.",
+        "Insert the resulting weighted mixed moment table into the actual Q3 edge and spatial bond source polynomials in both endpoint orientations.",
+        "Retain the explicit f^(-m/4) spatial cost and reproduce the source rates in an independent exact polynomial lane.",
+        "Compile Lean R227 for the powered scalar fixture, exact rates, and weighted local rate."
+      ],
+      "next_action": "Insert the lifted mixed constants into the actual two-orientation history recurrence, retaining the spatial f^(-m/4) cost, and test branch/repeat summability.",
+      "prior_exploration_id": "EXP-001044",
+      "provenance": "contemporaneous",
+      "qft_interface": {
+        "closed": "Conditional R-167 weighted mixed graph lift for the actual Q3 edge/bond source maps with explicit spatial cost.",
+        "open": "Inherited weighted-energy theorem, repeated histories, first passage, exhaustion, common alpha, KMS, GNS gap, continuum, C6, Sector A and Pre-A remain open.",
+        "tect_boundary": "No heat_root_incidence or A1/R-192 production owner is supplied."
+      },
+      "question": "Can the missing mixed two-site graph inputs be derived conditionally from the registered R-167 weighted-energy bound and an exact scalar domination inequality?",
+      "recorded_at": "2026-08-25T00:20:00Z",
+      "recorded_by": "Codex",
+      "related": [],
+      "reviewed_on": "2026-08-24",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Conditional R-167 weighted-energy lift for mixed Q3 edge/bond graph monomials",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",
