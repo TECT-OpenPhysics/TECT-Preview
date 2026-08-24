@@ -1,0 +1,168 @@
+{
+  "assertion_count": 19,
+  "assertions": [
+    {
+      "actual": "['EXP-001079', 'T-054']",
+      "expected": "EXP-001079/T-054",
+      "name": "identity",
+      "pass": true
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "name": "claim nonbearing",
+      "pass": true
+    },
+    {
+      "actual": "EXP-001078",
+      "expected": "EXP-001078 finite Gibbs obstruction",
+      "name": "previous authority",
+      "pass": true
+    },
+    {
+      "actual": "['gibbs_ratio_first', 'gibbs_ratio_second', 'gibbs_ratio_third', 'reference_moment_first', 'reference_moment_second', 'reference_moment_third', 'dual_moment_first', 'dual_moment_second', 'dual_moment_third', 'tail_first', 'tail_second', 'tail_third', 'reference_ceiling_first', 'reference_ceiling_second', 'reference_ceiling_third', 'tail_floor_first', 'tail_floor_second', 'tail_floor_third', 'relative_bound_fixture', 'scope_fixture']",
+      "expected": "present",
+      "name": "Lean source",
+      "pass": true
+    },
+    {
+      "actual": "[]",
+      "expected": "none",
+      "name": "Lean forbidden",
+      "pass": true
+    },
+    {
+      "actual": "PRIMARY DUAL-STATE FIFTH-MOMENT CUTOFF OBSTRUCTION PASS 46/46\n",
+      "expected": "PASS",
+      "name": "primary child",
+      "pass": true
+    },
+    {
+      "actual": "INDEPENDENT DUAL-STATE FIFTH-MOMENT CUTOFF OBSTRUCTION PASS 46/46\n",
+      "expected": "PASS",
+      "name": "independent child",
+      "pass": true
+    },
+    {
+      "actual": "[46, 46]",
+      "expected": ">0",
+      "name": "positive totals",
+      "pass": true
+    },
+    {
+      "actual": "[6, 6]",
+      "expected": "equal",
+      "name": "lane agreement gibbs_ratio_exponent",
+      "pass": true
+    },
+    {
+      "actual": "[['5120/4097', '17825792/16777217', '69793218560/68719476737'], ['5120/4097', '17825792/16777217', '69793218560/68719476737']]",
+      "expected": "equal",
+      "name": "lane agreement reference_moment",
+      "pass": true
+    },
+    {
+      "actual": "[['4194305/4097', '17592186044417/16777217', '73786976294838206465/68719476737'], ['4194305/4097', '17592186044417/16777217', '73786976294838206465/68719476737']]",
+      "expected": "equal",
+      "name": "lane agreement dual_moment",
+      "pass": true
+    },
+    {
+      "actual": "[['4096/4097', '16777216/16777217', '68719476736/68719476737'], ['4096/4097', '16777216/16777217', '68719476736/68719476737']]",
+      "expected": "equal",
+      "name": "lane agreement opposite_tail",
+      "pass": true
+    },
+    {
+      "actual": "[['1', '1', '1'], ['1', '1', '1']]",
+      "expected": "equal",
+      "name": "lane agreement relative_squared_norm",
+      "pass": true
+    },
+    {
+      "actual": "{'L_values': ['4', '16', '64'], 'cutoff_R': '2', 'dual_moment': ['4194305/4097', '17592186044417/16777217', '73786976294838206465/68719476737'], 'gibbs_ratio_exponent': 6, 'opposite_tail': ['4096/4097', '16777216/16777217', '68719476736/68719476737'], 'reference_moment': ['5120/4097', '17825792/16777217', '69793218560/68719476737'], 'relative_squared_norm': ['1', '1', '1']}",
+      "expected": "three L fixtures",
+      "name": "fixture count",
+      "pass": true
+    },
+    {
+      "actual": "['4', '16', '64']",
+      "expected": "[4, 16, 64]",
+      "name": "L fixture",
+      "pass": true
+    },
+    {
+      "actual": "6",
+      "expected": "6",
+      "name": "Gibbs exponent fixture",
+      "pass": true
+    },
+    {
+      "actual": "2",
+      "expected": "2",
+      "name": "cutoff fixture",
+      "pass": true
+    },
+    {
+      "actual": "{'actual_q3_fifth_moment_closed': False, 'actual_q3_dual_state_moment_closed': False, 'actual_q3_modular_tail_closed': False, 'volume_uniform_direct_d_cauchy_closed': False, 'delta_d_cauchy_closed': False, 'product_core_density_closed': False, 'exhaustion_independence_closed': False, 'group_law_closed': False, 'common_alpha_closed': False, 'hamiltonian_os_identification_closed': False, 'kms_os_closed': False, 'gns_gap_closed': False, 'continuum_closed': False, 'c6_closed': False, 'sector_a_closed': False, 'pre_a_closed': False}",
+      "expected": "actual Q3 and QFT gates open",
+      "name": "QFT firewall",
+      "pass": true
+    },
+    {
+      "actual": "{'status': 'PASS', 'command': 'lake env lean Tect/R261.lean', 'returncode': 0, 'output': ''}",
+      "expected": "PASS",
+      "name": "Lean compile",
+      "pass": true
+    }
+  ],
+  "audit_id": "PA-CP1-ST8-Q3LOCK-DUAL-STATE-FIFTH-MOMENT-MODULAR-CUTOFF-OBSTRUCTION",
+  "boundary": {
+    "actual_q3_dual_state_moment_closed": false,
+    "actual_q3_factorial_history_proved": false,
+    "actual_q3_fifth_moment_closed": false,
+    "actual_q3_four_context_theorem_proved": false,
+    "actual_q3_modular_cutoff_refuted": false,
+    "actual_q3_modular_tail_closed": false,
+    "c6_closed": false,
+    "common_alpha_closed": false,
+    "conditional_dual_tail_theorem_identified": true,
+    "continuum_closed": false,
+    "delta_d_cauchy_closed": false,
+    "exhaustion_independence_closed": false,
+    "finite_dual_state_obstruction_closed": true,
+    "gns_gap_closed": false,
+    "group_law_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_os_closed": false,
+    "no_new_negative_result": true,
+    "no_pdf": true,
+    "no_tier_change": true,
+    "not_closed": "The witness rejects only the one-sided reference-moment shortcut for an abstract finite Gibbs/cutoff family. It is not a counterexample to the actual Q3 local energy, its dual Gibbs states, or a stronger modular-tail theorem. All Q3 and QFT gates remain open.",
+    "one_sided_moment_shortcut_refuted": true,
+    "pre_a_closed": false,
+    "product_core_density_closed": false,
+    "sector_a_closed": false,
+    "volume_uniform_direct_d_cauchy_closed": false
+  },
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "exploration_id": "EXP-001079",
+  "lean": {
+    "command": "lake env lean Tect/R261.lean",
+    "output": "",
+    "returncode": 0,
+    "status": "PASS"
+  },
+  "provenance": {
+    "independent_sha256": "830710f8a62933566171dc07f59f78e2fc77ccbfda7f96ebd33d9e1dc1fd47ec",
+    "lean_sha256": "19e864a2635fb0c5b3e5c97f2b76234348a6532b89f3e6d600c87d4b3f551cd2",
+    "manifest_sha256": "0238e3b1f8d4dface2319c98d7a35df371797449374a4964fd06331f86cc9787",
+    "previous_manifest_sha256": "6e699ee45b3da794e7a7c4d1d71fb834b563953fba5d93ca794b7b06987ac7c8",
+    "primary_sha256": "f56962dd565ba91e9543c8f8f0dd0f08068bbde66bff10b2ae69955f9ab2bfe4"
+  },
+  "recorded_at": "2026-08-24T12:40:21.738770Z",
+  "run_kind": "integrated",
+  "schema": "tect/foundation-audit/1.0",
+  "task_id": "T-054",
+  "verdict": "PASS"
+}

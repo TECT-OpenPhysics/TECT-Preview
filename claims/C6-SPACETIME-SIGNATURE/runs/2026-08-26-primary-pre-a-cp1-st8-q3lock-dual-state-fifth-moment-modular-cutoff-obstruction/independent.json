@@ -1,0 +1,391 @@
+{
+  "assertion_count": 46,
+  "assertions": [
+    {
+      "actual": "['EXP-001079', 'T-054']",
+      "expected": "EXP-001079/T-054",
+      "group": "provenance",
+      "name": "identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "group": "scope",
+      "name": "claim nonbearing",
+      "status": "PASS"
+    },
+    {
+      "actual": "EXP-001078",
+      "expected": "EXP-001078 finite Gibbs obstruction",
+      "group": "authority",
+      "name": "previous authority",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'parameters': 'L in {4,16,64}, k=diag(1,L), cutoff R=2', 'state': 'rho_L=diag(L^6/(L^6+1),1/(L^6+1))', 'gibbs_identity': 'rho_L is exp(-beta*k)/Tr(exp(-beta*k)) for beta=6*log(L)/(L-1)>0', 'multiplier': 'B=[[0,1],[1,0]]', 'cutoff': 'P_R=1_[k<=2]=diag(1,0), Q_R=I-P_R=diag(0,1)', 'relative_bound': '||B*k^(-1/2)||=||B^**k^(-1/2)||=1'}",
+      "expected": "finite-temperature Gibbs state",
+      "group": "model",
+      "name": "Gibbs witness declared",
+      "status": "PASS"
+    },
+    {
+      "actual": "P_R=1_[k<=2]=diag(1,0), Q_R=I-P_R=diag(0,1)",
+      "expected": "exact spectral projection",
+      "group": "model",
+      "name": "cutoff declared",
+      "status": "PASS"
+    },
+    {
+      "actual": "4",
+      "expected": ">2",
+      "group": "family",
+      "name": "L range 1",
+      "status": "PASS"
+    },
+    {
+      "actual": "((Fraction(4096, 4097), Fraction(0, 1)), (Fraction(0, 1), Fraction(1, 4097)))",
+      "expected": "positive trace-one",
+      "group": "state",
+      "name": "state positive trace 1",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/4096",
+      "expected": "1/4096",
+      "group": "state",
+      "name": "Gibbs ratio 1",
+      "status": "PASS"
+    },
+    {
+      "actual": "4",
+      "expected": "beta=6*log(L)/(L-1)>0",
+      "group": "state",
+      "name": "finite beta 1",
+      "status": "PASS"
+    },
+    {
+      "actual": "[((Fraction(1, 1), Fraction(0, 1)), (Fraction(0, 1), Fraction(0, 1))), ((Fraction(0, 1), Fraction(0, 1)), (Fraction(0, 1), Fraction(1, 1))), ((Fraction(1, 1), Fraction(0, 1)), (Fraction(0, 1), Fraction(1, 1))), ((Fraction(1, 1), Fraction(0, 1)), (Fraction(0, 1), Fraction(0, 1)))]",
+      "expected": "P,Q spectral projections",
+      "group": "cutoff",
+      "name": "cutoff projection 1",
+      "status": "PASS"
+    },
+    {
+      "actual": "((Fraction(1, 1), Fraction(0, 1)), (Fraction(0, 1), Fraction(1, 4)))",
+      "expected": "diagonal entries <=1",
+      "group": "relative",
+      "name": "relative bound right 1",
+      "status": "PASS"
+    },
+    {
+      "actual": "((Fraction(1, 4), Fraction(0, 1)), (Fraction(0, 1), Fraction(1, 1)))",
+      "expected": "diagonal entries <=1",
+      "group": "relative",
+      "name": "relative bound left 1",
+      "status": "PASS"
+    },
+    {
+      "actual": "5120/4097",
+      "expected": "5120/4097",
+      "group": "moment",
+      "name": "reference fifth moment 1",
+      "status": "PASS"
+    },
+    {
+      "actual": "4194305/4097",
+      "expected": "4194305/4097",
+      "group": "dual",
+      "name": "dual fifth moment 1",
+      "status": "PASS"
+    },
+    {
+      "actual": "5120/4097",
+      "expected": "<3/2",
+      "group": "moment",
+      "name": "reference ceiling 1",
+      "status": "PASS"
+    },
+    {
+      "actual": "4194305/4097",
+      "expected": ">256",
+      "group": "dual",
+      "name": "dual growth 1",
+      "status": "PASS"
+    },
+    {
+      "actual": "4096/4097",
+      "expected": "4096/4097",
+      "group": "tail",
+      "name": "opposite tail identity 1",
+      "status": "PASS"
+    },
+    {
+      "actual": "4096/4097",
+      "expected": ">1/2",
+      "group": "tail",
+      "name": "opposite tail floor 1",
+      "status": "PASS"
+    },
+    {
+      "actual": "16",
+      "expected": ">2",
+      "group": "family",
+      "name": "L range 2",
+      "status": "PASS"
+    },
+    {
+      "actual": "((Fraction(16777216, 16777217), Fraction(0, 1)), (Fraction(0, 1), Fraction(1, 16777217)))",
+      "expected": "positive trace-one",
+      "group": "state",
+      "name": "state positive trace 2",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/16777216",
+      "expected": "1/16777216",
+      "group": "state",
+      "name": "Gibbs ratio 2",
+      "status": "PASS"
+    },
+    {
+      "actual": "16",
+      "expected": "beta=6*log(L)/(L-1)>0",
+      "group": "state",
+      "name": "finite beta 2",
+      "status": "PASS"
+    },
+    {
+      "actual": "[((Fraction(1, 1), Fraction(0, 1)), (Fraction(0, 1), Fraction(0, 1))), ((Fraction(0, 1), Fraction(0, 1)), (Fraction(0, 1), Fraction(1, 1))), ((Fraction(1, 1), Fraction(0, 1)), (Fraction(0, 1), Fraction(1, 1))), ((Fraction(1, 1), Fraction(0, 1)), (Fraction(0, 1), Fraction(0, 1)))]",
+      "expected": "P,Q spectral projections",
+      "group": "cutoff",
+      "name": "cutoff projection 2",
+      "status": "PASS"
+    },
+    {
+      "actual": "((Fraction(1, 1), Fraction(0, 1)), (Fraction(0, 1), Fraction(1, 16)))",
+      "expected": "diagonal entries <=1",
+      "group": "relative",
+      "name": "relative bound right 2",
+      "status": "PASS"
+    },
+    {
+      "actual": "((Fraction(1, 16), Fraction(0, 1)), (Fraction(0, 1), Fraction(1, 1)))",
+      "expected": "diagonal entries <=1",
+      "group": "relative",
+      "name": "relative bound left 2",
+      "status": "PASS"
+    },
+    {
+      "actual": "17825792/16777217",
+      "expected": "17825792/16777217",
+      "group": "moment",
+      "name": "reference fifth moment 2",
+      "status": "PASS"
+    },
+    {
+      "actual": "17592186044417/16777217",
+      "expected": "17592186044417/16777217",
+      "group": "dual",
+      "name": "dual fifth moment 2",
+      "status": "PASS"
+    },
+    {
+      "actual": "17825792/16777217",
+      "expected": "<3/2",
+      "group": "moment",
+      "name": "reference ceiling 2",
+      "status": "PASS"
+    },
+    {
+      "actual": "17592186044417/16777217",
+      "expected": ">65536",
+      "group": "dual",
+      "name": "dual growth 2",
+      "status": "PASS"
+    },
+    {
+      "actual": "16777216/16777217",
+      "expected": "16777216/16777217",
+      "group": "tail",
+      "name": "opposite tail identity 2",
+      "status": "PASS"
+    },
+    {
+      "actual": "16777216/16777217",
+      "expected": ">1/2",
+      "group": "tail",
+      "name": "opposite tail floor 2",
+      "status": "PASS"
+    },
+    {
+      "actual": "64",
+      "expected": ">2",
+      "group": "family",
+      "name": "L range 3",
+      "status": "PASS"
+    },
+    {
+      "actual": "((Fraction(68719476736, 68719476737), Fraction(0, 1)), (Fraction(0, 1), Fraction(1, 68719476737)))",
+      "expected": "positive trace-one",
+      "group": "state",
+      "name": "state positive trace 3",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/68719476736",
+      "expected": "1/68719476736",
+      "group": "state",
+      "name": "Gibbs ratio 3",
+      "status": "PASS"
+    },
+    {
+      "actual": "64",
+      "expected": "beta=6*log(L)/(L-1)>0",
+      "group": "state",
+      "name": "finite beta 3",
+      "status": "PASS"
+    },
+    {
+      "actual": "[((Fraction(1, 1), Fraction(0, 1)), (Fraction(0, 1), Fraction(0, 1))), ((Fraction(0, 1), Fraction(0, 1)), (Fraction(0, 1), Fraction(1, 1))), ((Fraction(1, 1), Fraction(0, 1)), (Fraction(0, 1), Fraction(1, 1))), ((Fraction(1, 1), Fraction(0, 1)), (Fraction(0, 1), Fraction(0, 1)))]",
+      "expected": "P,Q spectral projections",
+      "group": "cutoff",
+      "name": "cutoff projection 3",
+      "status": "PASS"
+    },
+    {
+      "actual": "((Fraction(1, 1), Fraction(0, 1)), (Fraction(0, 1), Fraction(1, 64)))",
+      "expected": "diagonal entries <=1",
+      "group": "relative",
+      "name": "relative bound right 3",
+      "status": "PASS"
+    },
+    {
+      "actual": "((Fraction(1, 64), Fraction(0, 1)), (Fraction(0, 1), Fraction(1, 1)))",
+      "expected": "diagonal entries <=1",
+      "group": "relative",
+      "name": "relative bound left 3",
+      "status": "PASS"
+    },
+    {
+      "actual": "69793218560/68719476737",
+      "expected": "69793218560/68719476737",
+      "group": "moment",
+      "name": "reference fifth moment 3",
+      "status": "PASS"
+    },
+    {
+      "actual": "73786976294838206465/68719476737",
+      "expected": "73786976294838206465/68719476737",
+      "group": "dual",
+      "name": "dual fifth moment 3",
+      "status": "PASS"
+    },
+    {
+      "actual": "69793218560/68719476737",
+      "expected": "<3/2",
+      "group": "moment",
+      "name": "reference ceiling 3",
+      "status": "PASS"
+    },
+    {
+      "actual": "73786976294838206465/68719476737",
+      "expected": ">16777216",
+      "group": "dual",
+      "name": "dual growth 3",
+      "status": "PASS"
+    },
+    {
+      "actual": "68719476736/68719476737",
+      "expected": "68719476736/68719476737",
+      "group": "tail",
+      "name": "opposite tail identity 3",
+      "status": "PASS"
+    },
+    {
+      "actual": "68719476736/68719476737",
+      "expected": ">1/2",
+      "group": "tail",
+      "name": "opposite tail floor 3",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'finite_dual_state_obstruction_closed': True, 'one_sided_moment_shortcut_refuted': True}",
+      "expected": "route-local obstruction",
+      "group": "scope",
+      "name": "finite dual-state obstruction",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'actual_q3_fifth_moment_closed': False, 'actual_q3_dual_state_moment_closed': False, 'actual_q3_modular_tail_closed': False, 'volume_uniform_direct_d_cauchy_closed': False, 'delta_d_cauchy_closed': False, 'product_core_density_closed': False, 'exhaustion_independence_closed': False, 'group_law_closed': False, 'common_alpha_closed': False, 'hamiltonian_os_identification_closed': False, 'kms_os_closed': False, 'gns_gap_closed': False, 'continuum_closed': False, 'c6_closed': False, 'sector_a_closed': False, 'pre_a_closed': False}",
+      "expected": "actual Q3 and QFT gates open",
+      "group": "scope",
+      "name": "QFT firewall",
+      "status": "PASS"
+    }
+  ],
+  "audit_id": "PA-CP1-ST8-Q3LOCK-DUAL-STATE-FIFTH-MOMENT-MODULAR-CUTOFF-OBSTRUCTION",
+  "boundary": {
+    "actual_q3_dual_state_moment_closed": false,
+    "actual_q3_factorial_history_proved": false,
+    "actual_q3_fifth_moment_closed": false,
+    "actual_q3_four_context_theorem_proved": false,
+    "actual_q3_modular_cutoff_refuted": false,
+    "actual_q3_modular_tail_closed": false,
+    "c6_closed": false,
+    "common_alpha_closed": false,
+    "conditional_dual_tail_theorem_identified": true,
+    "continuum_closed": false,
+    "delta_d_cauchy_closed": false,
+    "exhaustion_independence_closed": false,
+    "finite_dual_state_obstruction_closed": true,
+    "gns_gap_closed": false,
+    "group_law_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_os_closed": false,
+    "no_new_negative_result": true,
+    "no_pdf": true,
+    "no_tier_change": true,
+    "not_closed": "The witness rejects only the one-sided reference-moment shortcut for an abstract finite Gibbs/cutoff family. It is not a counterexample to the actual Q3 local energy, its dual Gibbs states, or a stronger modular-tail theorem. All Q3 and QFT gates remain open.",
+    "one_sided_moment_shortcut_refuted": true,
+    "pre_a_closed": false,
+    "product_core_density_closed": false,
+    "sector_a_closed": false,
+    "volume_uniform_direct_d_cauchy_closed": false
+  },
+  "derived": {
+    "L_values": [
+      4,
+      16,
+      64
+    ],
+    "cutoff_R": 2,
+    "dual_moment": [
+      "4194305/4097",
+      "17592186044417/16777217",
+      "73786976294838206465/68719476737"
+    ],
+    "gibbs_ratio_exponent": 6,
+    "opposite_tail": [
+      "4096/4097",
+      "16777216/16777217",
+      "68719476736/68719476737"
+    ],
+    "reference_moment": [
+      "5120/4097",
+      "17825792/16777217",
+      "69793218560/68719476737"
+    ],
+    "relative_squared_norm": [
+      "1",
+      "1",
+      "1"
+    ]
+  },
+  "exploration_id": "EXP-001079",
+  "passed": 46,
+  "run_kind": "independent",
+  "schema": "tect/foundation-audit/1.0",
+  "task_id": "T-054",
+  "verdict": "PASS"
+}

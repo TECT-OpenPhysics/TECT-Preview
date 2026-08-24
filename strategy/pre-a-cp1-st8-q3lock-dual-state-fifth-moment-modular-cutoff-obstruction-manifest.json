@@ -1,0 +1,125 @@
+{
+  "schema": "tect/pre-a-cp1-st8-q3lock-dual-state-fifth-moment-modular-cutoff-obstruction/1.0",
+  "exploration_id": "EXP-001079",
+  "prior_exploration_id": "EXP-001078",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "tier": "T0",
+  "claim_bearing": false,
+  "title": "Dual-state fifth-moment necessity for modular cutoff locality",
+  "question": "Does a uniform fifth moment of the reference Gibbs state and a relative form bound for a local multiplier suffice to make the opposite-side energy cutoff tail small, or is a dual-state moment required?",
+  "authority_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-cubic-graph-product-locality-route-split-manifest.json#equilibrium_cutoff_alternative",
+    "strategy/pre-a-cp1-st8-q3lock-second-weighted-energy-cauchy-gate-manifest.json#conditional_cauchy",
+    "strategy/pre-a-cp1-st8-q3lock-cubic-graph-product-locality-route-split-manifest.json#duhamel_topology_counterexample"
+  ],
+  "matrix_family": {
+    "parameters": "L in {4,16,64}, k=diag(1,L), cutoff R=2",
+    "state": "rho_L=diag(L^6/(L^6+1),1/(L^6+1))",
+    "gibbs_identity": "rho_L is exp(-beta*k)/Tr(exp(-beta*k)) for beta=6*log(L)/(L-1)>0",
+    "multiplier": "B=[[0,1],[1,0]]",
+    "cutoff": "P_R=1_[k<=2]=diag(1,0), Q_R=I-P_R=diag(0,1)",
+    "relative_bound": "||B*k^(-1/2)||=||B^**k^(-1/2)||=1"
+  },
+  "moment_and_tail": {
+    "reference_moment": "M5=Tr(rho_L*k^5)=L^5*(L+1)/(L^6+1)<3/2 for L>=4",
+    "dual_moment": "M5_dual=Tr(B*rho_L*B^**k^5)=(L^11+1)/(L^6+1)",
+    "opposite_tail": "||Q_R*B*rho_L^(1/2)||_2^2=Tr(rho_L*B^**Q_R*B)=L^6/(L^6+1)>1/2",
+    "necessity": "The reference fifth moment remains bounded while the opposite-side cutoff tail stays above 1/2 and the dual fifth moment grows like L^5. A dual-state or modular-energy tail is therefore a necessary extra input for this cutoff architecture."
+  },
+  "finite_fixture": {
+    "L_values": [4,16,64],
+    "cutoff_R": 2,
+    "gibbs_ratio_exponent": 6,
+    "reference_moment_ceiling": "3/2",
+    "tail_floor": "1/2"
+  },
+  "scope": {
+    "finite_dual_state_obstruction_closed": true,
+    "one_sided_moment_shortcut_refuted": true,
+    "conditional_dual_tail_theorem_identified": true,
+    "actual_q3_modular_cutoff_refuted": false,
+    "actual_q3_fifth_moment_closed": false,
+    "actual_q3_dual_state_moment_closed": false,
+    "actual_q3_modular_tail_closed": false,
+    "actual_q3_four_context_theorem_proved": false,
+    "actual_q3_factorial_history_proved": false,
+    "volume_uniform_direct_d_cauchy_closed": false,
+    "delta_d_cauchy_closed": false,
+    "product_core_density_closed": false,
+    "exhaustion_independence_closed": false,
+    "group_law_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_os_closed": false,
+    "gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true,
+    "not_closed": "The witness rejects only the one-sided reference-moment shortcut for an abstract finite Gibbs/cutoff family. It is not a counterexample to the actual Q3 local energy, its dual Gibbs states, or a stronger modular-tail theorem. All Q3 and QFT gates remain open."
+  },
+  "adversarial_review": [
+    {
+      "axis": "Gibbs identity",
+      "check": "The rational state ratio rho_22/rho_11=L^-6 equals exp(-beta*(L-1)) for an explicit finite positive beta.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "cutoff",
+      "check": "P_R and Q_R are exact spectral projections of k with R=2 and L>2; no arbitrary coordinate projection is substituted.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "relative bound",
+      "check": "The swap multiplier has both squared relative graph norms at most one because k>=I; the bound is computed from singular values, not assumed from a scalar norm.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "moment direction",
+      "check": "Reference and dual fifth moments are evaluated separately; the missing dual quantity is not silently identified with the reference moment.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "tail direction",
+      "check": "The nonvanishing tail is the opposite-side quantity ||Q_R B rho^(1/2)||_2, exactly the side that requires B rho B^* energy control.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "growth",
+      "check": "All fixtures use exact integer/rational arithmetic and the reference ceiling and tail floor are checked symbolically.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "Lean",
+      "check": "R261 checks rational Gibbs ratios, moments, tail identities and inequalities only; it does not formalize Q3.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "QFT promotion",
+      "check": "The witness does not alter Q3 Hamiltonian/Gibbs, OS/KMS/GNS, gap, continuum, C6, Sector A, Pre-A or TECT production status.",
+      "disposition": "UPHELD"
+    }
+  ],
+  "formal_integration": {
+    "lean_entry": "verification/lean/Tect/R261.lean",
+    "result_ids": [],
+    "negative_ids": [],
+    "changelog_event": null
+  },
+  "qft_interface": {
+    "closed": "A finite Gibbs/cutoff witness proves that a reference fifth moment and a local relative bound do not by themselves control the opposite-side cutoff tail; a dual-state or modular-energy tail is mathematically necessary for this route.",
+    "open": "Actual Q3 dual-state moment bounds, modular cutoff locality, direct D/delta-D Cauchy, first-passage history, exhaustion, Hamiltonian-to-OS identification, common KMS dynamics, GNS gap, continuum, C6, Sector A and Pre-A remain open.",
+    "tect_boundary": "No heat_root_incidence or canonical A1/R-192 production owner is supplied."
+  },
+  "next_action": "Prove both one-sided/dual-state fifth-energy or modular-tail bounds for the actual Q3 projected bond on a predeclared faithful phase-pair/separating class; only then use the equilibrium cutoff alternative in direct D and delta-D convergence.",
+  "verification": {
+    "primary_script": "codes/foundations/pre_a_cp1_st8_q3lock_dual_state_fifth_moment_modular_cutoff_obstruction.py",
+    "independent_script": "codes/foundations/pre_a_cp1_st8_q3lock_dual_state_fifth_moment_modular_cutoff_obstruction_independent.py",
+    "integrated_script": "codes/foundations/pre_a_cp1_st8_q3lock_dual_state_fifth_moment_modular_cutoff_obstruction_verify.py"
+  },
+  "boundary": "T0 claim-nonbearing finite dual-state modular-cutoff route obstruction."
+}
