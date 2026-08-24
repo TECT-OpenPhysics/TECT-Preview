@@ -1,0 +1,139 @@
+{
+  "schema": "tect/pre-a-cp1-st8-q3lock-projected-delta-d-third-coefficient-scalar-energy-moment-bridge/1.0",
+  "exploration_id": "EXP-001076",
+  "prior_exploration_id": "EXP-001075",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "tier": "T0",
+  "claim_bearing": false,
+  "title": "Projected D-delta-D third-coefficient scalar energy-moment candidate bridge",
+  "question": "Can the registered finite-periodic local fifth energy moment supply a scalar energy-moment candidate for the P_sigma and Q_sigma inputs of EXP-001075, while isolating the noncommutative Q3 transfer obligation?",
+  "authority_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-projected-delta-d-third-coefficient-weighted-seminorm-bridge-manifest.json#mixed_moment_inputs",
+    "strategy/pre-a-cp1-st8-q3lock-uniform-kinetic-character-moment-corollary-manifest.json#fifth_moment",
+    "strategy/pre-a-cp1-st8-q3lock-compact-source-endpoint-third-moment-bridge-manifest.json#fifth_to_third",
+    "strategy/pre-a-cp1-st8-q3lock-kinetic-force-double-commutator-split-manifest.json#boundary_use"
+  ],
+  "scalar_surrogate": {
+    "field_weight": "A=1+q^4+v^4",
+    "energy_weight": "K=A+p^2",
+    "moment_input": "E[K^5]<=m5",
+    "basic_order": "0<=A<=K and 0<=p^2<=K",
+    "mixed_power": "A^(3/2)*p^2<=K^(5/2)",
+    "field_power": "A^(3/2)<=K^(3/2)",
+    "derivative": "M=A^(3/4), |partial_q M|=3|q|^3 A^(-1/4), and (partial_q M)^2<=9K",
+    "shift": "|p+/-a|<=|p|+|a| for |a|<=a_max"
+  },
+  "candidate_bridge": {
+    "root_bounds": {
+      "m5_quarter": "m5^(1/4)",
+      "m5_three_twentieths": "m5^(3/20)",
+      "m5_one_tenth": "m5^(1/10)"
+    },
+    "derivation": "The scalar Holder/Jensen bounds give ||pM||_2<=m5^(1/4), ||M||_2<=m5^(3/20), and ||partial_q M||_2<=3m5^(1/10). The two-sided Weyl shift and the triangle inequality therefore give P_sigma<=2*(m5^(1/4)+a_max*m5^(3/20))+(9/2)*m5^(1/10), and Q_sigma<=(3/2)*m5^(3/20), after rational root ceilings and sqrt(2)<=3/2.",
+    "actual_transfer_condition": "To use these values for EXP-001075, the actual Q3 representation must prove the corresponding quadratic-form Holder/Jensen inequalities, the commutator bound for A^(3/4), and the common-core multiplication/domain statement. None is inferred here."
+  },
+  "finite_fixture": {
+    "m5": "3",
+    "a_max": "1/4",
+    "hbar": "1",
+    "root_grid_denominator": "120",
+    "derived_root_ceiling_m5_quarter": "79/60",
+    "derived_root_ceiling_m5_three_twentieths": "71/60",
+    "derived_root_ceiling_m5_one_tenth": "67/60",
+    "derived_X_ceiling": "129/80",
+    "derived_P_sigma_ceiling": "33/4",
+    "derived_Q_sigma_ceiling": "71/40",
+    "derived_two_orientation_P_ceiling": "33/2",
+    "derived_two_orientation_Q_ceiling": "71/20"
+  },
+  "scope": {
+    "scalar_commuting_energy_bridge_closed": true,
+    "scalar_derivative_commutator_bound_closed": true,
+    "candidate_P_Q_formula_closed": true,
+    "actual_q3_mixed_moment_bound_closed": false,
+    "actual_q3_multiplication_domination_closed": false,
+    "noncommutative_quadratic_form_transfer_closed": false,
+    "modular_companion_bound_closed": false,
+    "actual_q3_four_context_theorem_proved": false,
+    "actual_q3_factorial_history_proved": false,
+    "all_time_projected_d_duhamel_cauchy_closed": false,
+    "volume_uniform_direct_d_cauchy_closed": false,
+    "delta_d_cauchy_closed": false,
+    "product_core_density_closed": false,
+    "exhaustion_independence_closed": false,
+    "group_law_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_os_closed": false,
+    "gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true,
+    "not_closed": "This package closes only a scalar commuting energy-moment candidate and its exact rational fixture. It does not prove the actual Q3 mixed moments, noncommutative transfer, multiplication domination, modular domain, history, direct D or delta-D Cauchy, exhaustion, OS/KMS/GNS, continuum, C6, Sector A or Pre-A."
+  },
+  "adversarial_review": [
+    {
+      "axis": "commutativity",
+      "check": "The scalar inequalities are explicitly a commuting surrogate; no scalar product inequality is promoted to an operator order statement.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "moment interpolation",
+      "check": "The powers m5^(1/4), m5^(3/20), and m5^(1/10) follow from Holder/Jensen on the declared scalar K moment; no extra moment is hidden.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "derivative",
+      "check": "The bound (partial_q A^(3/4))^2<=9K is checked from q^6<=A^(3/2), but the actual Q3 commutator/domain transfer remains open.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "Weyl shift",
+      "check": "Both plus and minus source orientations are retained through |p+/-a| and no parity equality is assumed.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "root ceilings",
+      "check": "The rational ceilings are generated by an exact denominator-120 search and independently checked by powered integer inequalities; they are not pasted derived constants.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "source and volume",
+      "check": "m5=3 is a declared fixture input representing the registered finite-periodic compact-source scope, not a new thermodynamic theorem.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "modular companion",
+      "check": "No estimate for delta(Y_sigma), Hamiltonian/modular commutation, or modular domain is inferred.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "QFT promotion",
+      "check": "OS/KMS/GNS, gap, continuum, C6, Sector A, Pre-A and the TECT A1/R-192 production owner remain open.",
+      "disposition": "UPHELD"
+    }
+  ],
+  "formal_integration": {
+    "lean_entry": "verification/lean/Tect/R258.lean",
+    "result_ids": [],
+    "negative_ids": [],
+    "changelog_event": null
+  },
+  "qft_interface": {
+    "closed": "A scalar energy-moment candidate translates the registered m5 input into explicit P_sigma and Q_sigma ceilings for the EXP-001075 bridge.",
+    "open": "The actual noncommutative Q3 quadratic-form transfer, multiplication domination, modular companion, positive-time history, direct D/delta-D Cauchy, exhaustion, Hamiltonian-to-OS identification, KMS/GNS gap, continuum, C6, Sector A and Pre-A remain open.",
+    "tect_boundary": "No heat_root_incidence or canonical A1/R-192 production owner is supplied."
+  },
+  "boundary": "T0 claim-nonbearing scalar energy-moment candidate bridge.",
+  "next_action": "Prove the corresponding noncommutative quadratic-form and commutator estimates on the actual common Q3 core, or construct a finite obstruction to the transfer; only then instantiate the P_sigma and Q_sigma inputs in EXP-001075.",
+  "verification": {
+    "primary_script": "codes/foundations/pre_a_cp1_st8_q3lock_projected_delta_d_third_coefficient_scalar_energy_moment_bridge.py",
+    "independent_script": "codes/foundations/pre_a_cp1_st8_q3lock_projected_delta_d_third_coefficient_scalar_energy_moment_bridge_independent.py",
+    "integrated_script": "codes/foundations/pre_a_cp1_st8_q3lock_projected_delta_d_third_coefficient_scalar_energy_moment_bridge_verify.py"
+  }
+}
