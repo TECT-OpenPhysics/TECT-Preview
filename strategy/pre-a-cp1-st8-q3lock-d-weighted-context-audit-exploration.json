@@ -1,0 +1,83 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001145",
+  "title": "Actual Q3 four-context D-weighted energy transfer audit",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "question": "Do the actual finite Q3 histories satisfy the corrected four-context D-weighted transfer inequality, and do its cross terms show a volume/beta-uniform pattern or a route-local growth signal?",
+  "method": [
+    "Use the registered edge, square, and six-site 2x3 Q3 Hamiltonians with oscillator dimension three, beta in {0.5,1,2}, radius 0.5, time 0.05, and both cutoff orientations.",
+    "Diagonalize each full Hamiltonian, shift its energies by the actual minimum plus one, and form the Gibbs logarithmic-mean weights and actual D history in the H eigenbasis.",
+    "Compute the four oriented contexts A=sum p_i k_i^2|D_ij|^2, B=sum p_i k_j^2|D_ij|^2, C=sum p_j k_i^2|D_ij|^2, and D=sum p_j k_j^2|D_ij|^2 without using transpose symmetry.",
+    "Check S<=2(A+B+C+D), the coarse trace fallback, row coverage, primary/independent summary agreement, and Lean R315's weighted term inequality."
+  ],
+  "finding": "Primary 88/88, independent 76/76, integrated 13/13, and Lean R315 PASS over 18 actual rows. The corrected four-context inequality S<=2(A+B+C+D) holds in every row and the coarse trace fallback also holds. M2 ranges from 1.9205583860609077 to 33.286943994754964, while Tr(K^2) grows from 60.30727720796911 at volume 2 to 46421.121419896044 at volume 6. The largest weighted right side is 0.0014187271094517294. The ratio of the weighted right side to M2||D||_operator^2 reaches 64.32828297725494 at volume 6, beta 2, compared with 2.807699917079624 at volume 2, beta 0.5. The cross contexts B and C dominate A and D in the audited rows; their finite growth is a diagnostic, not an asymptotic obstruction.",
+  "verdict": "advanced",
+  "decision_reason": "The corrected D-weighted interface is algebraically and numerically valid on the actual Q3 histories, and the independent lane preserves energy-index orientation rather than silently replacing cross terms by M2. The observed growth of the cross-context ratio shows why an unweighted M2 shortcut is unavailable, but three finite volumes and one cutoff/time do not prove divergence or refute a state-weighted local estimate. The next proof target is now exact: bound the four contexts, or an equivalent direct two-sided D,delta-D quantity, uniformly on the declared common core.",
+  "closed": [
+    "finite four-context D-weighted transfer inequality",
+    "actual edge, square, and six-site two-orientation Q3 rows",
+    "coarse trace fallback and exact shifted-energy bookkeeping",
+    "independent reproduction and Lean R315 cross-check"
+  ],
+  "open": [
+    "source-, volume-, beta-, cutoff-, and exhaustion-uniform bounds for A,B,C,D",
+    "direct two-sided D,delta-D Cauchy and modular-domain transfer",
+    "product/core density, exhaustion independence and group law",
+    "common alpha and Hamiltonian-to-OS/KMS/GNS identification",
+    "broken-sector gap, continuum, C6, Sector A and Pre-A"
+  ],
+  "adversarial_review": [
+    {"axis": "index orientation", "check": "The primary and independent lanes compute all four contexts directly from p_i,p_j and k_i,k_j; no D transpose or B=C identity is assumed.", "disposition": "UPHELD"},
+    {"axis": "logarithmic mean", "check": "The finite equal-probability limit and arithmetic-mean upper bound are checked on every spectrum.", "disposition": "UPHELD"},
+    {"axis": "energy shift", "check": "The positive shift is included in every context, while S uses the shift-invariant energy gap.", "disposition": "UPHELD"},
+    {"axis": "norm shortcut", "check": "No unweighted M2-times-norm inequality is used after EXP-001144; the contexts remain explicit.", "disposition": "UPHELD"},
+    {"axis": "finite growth", "check": "The context ratio is reported only across the declared finite grid and is not promoted to a monotone or divergent sequence.", "disposition": "UPHELD-OPEN"},
+    {"axis": "QFT promotion", "check": "Uniform common-core control, modular transfer, exhaustion, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector A and Pre-A remain open.", "disposition": "UPHELD-OPEN"}
+  ],
+  "evidence_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-d-weighted-context-audit-manifest.json#model",
+    "codes/foundations/pre_a_cp1_st8_q3lock_d_weighted_context_audit.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_d_weighted_context_audit_independent.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_d_weighted_context_audit_verify.py#run",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-primary-pre_a_cp1_st8_q3lock_d_weighted_context_audit/primary.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-independent-pre_a_cp1_st8_q3lock_d_weighted_context_audit/independent.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-integrated-pre_a_cp1_st8_q3lock_d_weighted_context_audit/integrated.json#derived",
+    "verification/lean/Tect/R315.lean#weighted_gap_term",
+    "verification/lean/registry.json#R315"
+  ],
+  "formal_integration": {
+    "events": [],
+    "results": [],
+    "negatives": [],
+    "lean": "R315 PASS; metadata regenerated",
+    "no_new_event": true,
+    "no_new_result": true,
+    "no_new_negative": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "qft_interface": {
+    "closed": "A finite actual-Q3 implementation of the corrected four-context D-weighted energy interface.",
+    "open": "Uniform local/common-core control of the contexts or direct D,delta-D estimates, modular transfer, products, exhaustion, common alpha, OS/KMS/GNS identification, gap, continuum and Pre-A.",
+    "tect_boundary": "Finite context rows and growth diagnostics only; no thermodynamic QFT theorem or route-wide no-go."
+  },
+  "next_action": "Derive a source/volume/beta-uniform estimate for the cross contexts B and C (or an equivalent state-weighted D,delta-D form) on the declared common core. If the estimate cannot be uniform, enlarge the finite family until a certified lower-bound mechanism identifies the exact topology that fails; finite growth alone is insufficient.",
+  "related": [
+    {"id": "EXP-001144", "relation": "continues"},
+    {"id": "EXP-001143", "relation": "continues"},
+    {"id": "EXP-001142", "relation": "continues"}
+  ],
+  "prior_exploration_id": "EXP-001144",
+  "provenance": "contemporaneous",
+  "recorded_at": "2026-08-27T18:30:00Z",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-08-26",
+  "boundary": "This is a finite actual-Q3 four-context audit over three graph volumes, three beta values, one cutoff, one time, and both orientations. It is not a common-core theorem, infinite-volume dynamics, QFT reconstruction, gap, continuum, C6, Sector A or Pre-A result.",
+  "no_overclaim": "The corrected finite context inequality is exact and reusable. The measured cross-context growth does not prove divergence, and no uniform Q3 common-core estimate or QFT result is claimed."
+}

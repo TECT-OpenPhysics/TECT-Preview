@@ -1,0 +1,149 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-D-WEIGHTED-CONTEXT-AUDIT-v0",
+  "title": "Actual Q3 four-context D-weighted energy transfer audit",
+  "task_id": "T-054",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "exploration_id": "EXP-001145",
+  "claim_bearing": false,
+  "parent_explorations": [
+    "EXP-001144",
+    "EXP-001143",
+    "EXP-001142"
+  ],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "question": "Do the actual finite Q3 histories satisfy the corrected four-context D-weighted transfer inequality, and do its cross terms show a volume/beta-uniform pattern or a route-local growth signal?",
+  "finite_fixture": {
+    "volume_values": [
+      2,
+      4,
+      6
+    ],
+    "oscillator_dimension": 3,
+    "observable_support": [
+      0,
+      1
+    ],
+    "character_amplitude": 0.3333333333333333,
+    "time_values": [
+      0.05
+    ],
+    "radius_values": [
+      0.5
+    ],
+    "orientation_values": [
+      -1,
+      1
+    ],
+    "two_sided_factor": 2.0,
+    "c": 0.6,
+    "chi": 1.0,
+    "r": -1.0,
+    "g": 0.6,
+    "lambda": 0.1,
+    "hbar": 1.0,
+    "commutator_tolerance": 1e-08,
+    "transfer_tolerance": 1e-08,
+    "mean_gap_tolerance": 1e-12,
+    "shift_constant": 1.0,
+    "beta_values": [
+      0.5,
+      1.0,
+      2.0
+    ]
+  },
+  "model": {
+    "shifted_energy": "K=H-min(spec(H))+I, k_i>=1",
+    "spectral_moment": "S=2 sum_ij L(p_i,p_j)((E_i-E_j)/hbar)^2 |D_hat_ij|^2",
+    "contexts": {
+      "A": "sum_ij p_i k_i^2 |D_hat_ij|^2",
+      "B": "sum_ij p_i k_j^2 |D_hat_ij|^2",
+      "C": "sum_ij p_j k_i^2 |D_hat_ij|^2",
+      "D": "sum_ij p_j k_j^2 |D_hat_ij|^2"
+    },
+    "corrected_transfer": "S <= 2(A+B+C+D) from L<=(p_i+p_j)/2 and (k_i-k_j)^2<=2(k_i^2+k_j^2)",
+    "coarse_fallback": "S <= 4(Tr(rho K^2)+Tr(K^2))||D||_operator^2",
+    "interpretation": "The finite context inequality is exact; uniformity of A,B,C,D for actual Q3 common-core histories is not inferred from finite rows."
+  },
+  "scope": {
+    "finite_d_weighted_transfer_closed": true,
+    "actual_q3_rows_closed": true,
+    "four_context_decomposition_closed": true,
+    "two_orientation_history_closed": true,
+    "uniform_d_weighted_context_common_core_closed": false,
+    "uniform_beta_volume_direct_d_delta_d_closed": false,
+    "modular_domain_transfer_closed": false,
+    "exhaustion_independence_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false
+  },
+  "adversarial_review": [
+    {
+      "axis": "index orientation",
+      "check": "A,B,C,D are computed from the same H eigenbasis with p_i and p_j positions retained; no transpose symmetry is assumed for D.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "logarithmic mean",
+      "check": "The equal-probability diagonal limit and arithmetic-mean inequality are checked for every actual finite Gibbs spectrum.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "energy shift",
+      "check": "Only differences enter S, while all four contexts use the declared positive shifted energies.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "norm shortcut",
+      "check": "No unweighted M2-times-norm replacement is used after EXP-001144; the four contexts are retained explicitly.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "uniformity",
+      "check": "Finite context ratios and volume trends are diagnostics only; no common-core uniformity is inferred.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "QFT promotion",
+      "check": "Direct Cauchy, modular transfer, exhaustion, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector A and Pre-A remain open.",
+      "disposition": "UPHELD-OPEN"
+    }
+  ],
+  "files": {
+    "primary": "codes/foundations/pre_a_cp1_st8_q3lock_d_weighted_context_audit.py",
+    "independent": "codes/foundations/pre_a_cp1_st8_q3lock_d_weighted_context_audit_independent.py",
+    "integrated": "codes/foundations/pre_a_cp1_st8_q3lock_d_weighted_context_audit_verify.py",
+    "lean": "verification/lean/Tect/R315.lean",
+    "primary_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-primary-pre_a_cp1_st8_q3lock_d_weighted_context_audit/primary.json",
+    "independent_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-independent-pre_a_cp1_st8_q3lock_d_weighted_context_audit/independent.json",
+    "integrated_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-integrated-pre_a_cp1_st8_q3lock_d_weighted_context_audit/integrated.json"
+  },
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R315.lean",
+    "theorem_markers": [
+      "weighted_gap_term",
+      "four_context_constant",
+      "coarse_trace_fixture",
+      "shifted_gap_fixture"
+    ],
+    "command": "lake env lean Tect/R315.lean",
+    "boundary": "Lean checks the rational termwise context inequality and constants; actual spectral matrix rows are independently executed in Python."
+  },
+  "qft_interface": {
+    "closed": "The corrected finite interface is evaluated on the actual Q3 histories without discarding energy-index orientation.",
+    "open": "Uniform local bounds for all four contexts or direct D,delta-D Cauchy on a common core, modular transfer, product/core density, exhaustion independence, common alpha, OS/KMS/GNS identification, gap, continuum and Pre-A.",
+    "tect_boundary": "Finite four-context audit only; no thermodynamic QFT theorem or common-alpha closure."
+  },
+  "no_overclaim": "Finite context inequalities and row metrics do not prove a uniform Q3 common-core estimate. The route remains open unless a volume/source/beta-uniform bound is established or a certified growth obstruction is found."
+}

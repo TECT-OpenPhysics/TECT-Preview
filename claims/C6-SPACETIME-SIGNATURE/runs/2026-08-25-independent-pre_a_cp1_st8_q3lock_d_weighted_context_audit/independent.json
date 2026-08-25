@@ -1,0 +1,346 @@
+{
+  "assertion_count": 76,
+  "assertions": [
+    {
+      "actual": "EXP-001145",
+      "expected": "EXP-001145/nonbearing",
+      "group": "provenance",
+      "name": "provenance",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2, 4, 6]",
+      "expected": "edge/square/six-site",
+      "group": "geometry",
+      "name": "geometry",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'finite_d_weighted_transfer_closed': True, 'actual_q3_rows_closed': True, 'four_context_decomposition_closed': True, 'two_orientation_history_closed': True, 'uniform_d_weighted_context_common_core_closed': False, 'uniform_beta_volume_direct_d_delta_d_closed': False, 'modular_domain_transfer_closed': False, 'exhaustion_independence_closed': False, 'common_alpha_closed': False, 'hamiltonian_os_identification_closed': False, 'kms_gns_gap_closed': False, 'continuum_closed': False, 'c6_closed': False, 'sector_a_closed': False, 'pre_a_closed': False}",
+      "expected": "finite weighted context only",
+      "group": "scope",
+      "name": "scope firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": ">=-tolerance",
+      "group": "Kubo-Mori weights",
+      "name": "V=2 beta=0.5 mean bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "5.160540528461638e-16",
+      "expected": "<=1e-08",
+      "group": "support locality",
+      "name": "V=2 beta=0.5 radius=0.5 source",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'M2': 4.910242530367492, 'TrK2': 60.3072772079691, 'spectral_second_moment': 5.3908134196213205e-06, 'context_A': 2.2411307826107075e-06, 'context_B': 5.550063670400055e-06, 'context_C': 5.550063670400274e-06, 'context_D': 2.241130782610667e-06, 'weighted_rhs': 3.1164777812043406e-05, 'operator_norm': 0.001503706634832147, 'coarse_trace_bound': 0.0005898621121399702, 'weighted_ratio_to_M2_norm': 2.8069511808771157, 'source_commutator_norm': 5.160540528461638e-16, 'min_mean_slack': 0.0}",
+      "expected": "finite",
+      "group": "weighted contexts",
+      "name": "V=2 beta=0.5 L=0.5 t=0.05 sign=-1 finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "[5.3908134196213205e-06, 3.1164777812043406e-05]",
+      "expected": "0<=S<=2(A+B+C+D)",
+      "group": "corrected transfer",
+      "name": "V=2 beta=0.5 L=0.5 t=0.05 sign=-1 context transfer",
+      "status": "PASS"
+    },
+    {
+      "actual": "[3.1164777812043406e-05, 0.0005898621121399702]",
+      "expected": "weighted RHS<=coarse trace bound",
+      "group": "coarse fallback",
+      "name": "V=2 beta=0.5 L=0.5 t=0.05 sign=-1 coarse bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'M2': 4.910242530367492, 'TrK2': 60.3072772079691, 'spectral_second_moment': 5.385935622457783e-06, 'context_A': 2.2381393495249844e-06, 'context_B': 5.54402916206781e-06, 'context_C': 5.544029162067535e-06, 'context_D': 2.2381393495250343e-06, 'weighted_rhs': 3.1128674046370725e-05, 'operator_norm': 0.0015026349797884816, 'coarse_trace_bound': 0.0005890216510532818, 'weighted_ratio_to_M2_norm': 2.807699917079624, 'source_commutator_norm': 5.160540528461638e-16, 'min_mean_slack': 0.0}",
+      "expected": "finite",
+      "group": "weighted contexts",
+      "name": "V=2 beta=0.5 L=0.5 t=0.05 sign=1 finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "[5.385935622457783e-06, 3.1128674046370725e-05]",
+      "expected": "0<=S<=2(A+B+C+D)",
+      "group": "corrected transfer",
+      "name": "V=2 beta=0.5 L=0.5 t=0.05 sign=1 context transfer",
+      "status": "PASS"
+    },
+    {
+      "actual": "[3.1128674046370725e-05, 0.0005890216510532818]",
+      "expected": "weighted RHS<=coarse trace bound",
+      "group": "coarse fallback",
+      "name": "V=2 beta=0.5 L=0.5 t=0.05 sign=1 coarse bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": ">=-tolerance",
+      "group": "Kubo-Mori weights",
+      "name": "V=2 beta=1.0 mean bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "5.160540528461638e-16",
+      "expected": "<=1e-08",
+      "group": "support locality",
+      "name": "V=2 beta=1.0 radius=0.5 source",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'M2': 3.4680487052725555, 'TrK2': 60.3072772079691, 'spectral_second_moment': 4.8223431968554075e-06, 'context_A': 1.542556451277891e-06, 'context_B': 7.454021233467334e-06, 'context_C': 7.454021233467634e-06, 'context_D': 1.5425564512778985e-06, 'weighted_rhs': 3.598631073898151e-05, 'operator_norm': 0.001503706634832147, 'coarse_trace_bound': 0.0005768181402256924, 'weighted_ratio_to_M2_norm': 4.58908292724998, 'source_commutator_norm': 5.160540528461638e-16, 'min_mean_slack': 0.0}",
+      "expected": "finite",
+      "group": "weighted contexts",
+      "name": "V=2 beta=1.0 L=0.5 t=0.05 sign=-1 finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "[4.8223431968554075e-06, 3.598631073898151e-05]",
+      "expected": "0<=S<=2(A+B+C+D)",
+      "group": "corrected transfer",
+      "name": "V=2 beta=1.0 L=0.5 t=0.05 sign=-1 context transfer",
+      "status": "PASS"
+    },
+    {
+      "actual": "[3.598631073898151e-05, 0.0005768181402256924]",
+      "expected": "weighted RHS<=coarse trace bound",
+      "group": "coarse fallback",
+      "name": "V=2 beta=1.0 L=0.5 t=0.05 sign=-1 coarse bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'M2': 3.4680487052725555, 'TrK2': 60.3072772079691, 'spectral_second_moment': 4.818124087868968e-06, 'context_A': 1.5403959819856199e-06, 'context_B': 7.446600061113944e-06, 'context_C': 7.446600061113554e-06, 'context_D': 1.5403959819856105e-06, 'weighted_rhs': 3.5947984172397454e-05, 'operator_norm': 0.0015026349797884816, 'coarse_trace_bound': 0.0005759962647551747, 'weighted_ratio_to_M2_norm': 4.590736488027578, 'source_commutator_norm': 5.160540528461638e-16, 'min_mean_slack': 0.0}",
+      "expected": "finite",
+      "group": "weighted contexts",
+      "name": "V=2 beta=1.0 L=0.5 t=0.05 sign=1 finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "[4.818124087868968e-06, 3.5947984172397454e-05]",
+      "expected": "0<=S<=2(A+B+C+D)",
+      "group": "corrected transfer",
+      "name": "V=2 beta=1.0 L=0.5 t=0.05 sign=1 context transfer",
+      "status": "PASS"
+    },
+    {
+      "actual": "[3.5947984172397454e-05, 0.0005759962647551747]",
+      "expected": "weighted RHS<=coarse trace bound",
+      "group": "coarse fallback",
+      "name": "V=2 beta=1.0 L=0.5 t=0.05 sign=1 coarse bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": ">=-tolerance",
+      "group": "Kubo-Mori weights",
+      "name": "V=2 beta=2.0 mean bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "5.160540528461638e-16",
+      "expected": "<=1e-08",
+      "group": "support locality",
+      "name": "V=2 beta=2.0 radius=0.5 source",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'M2': 1.9205583860609077, 'TrK2': 60.3072772079691, 'spectral_second_moment': 3.4363990293683835e-06, 'context_A': 1.2568655247243346e-06, 'context_B': 9.655248718590807e-06, 'context_C': 9.655248718591172e-06, 'context_D': 1.256865524724375e-06, 'weighted_rhs': 4.3648456973261375e-05, 'operator_norm': 0.001503706634832147, 'coarse_trace_bound': 0.0005628218105297967, 'weighted_ratio_to_M2_norm': 10.051135991513995, 'source_commutator_norm': 5.160540528461638e-16, 'min_mean_slack': 0.0}",
+      "expected": "finite",
+      "group": "weighted contexts",
+      "name": "V=2 beta=2.0 L=0.5 t=0.05 sign=-1 finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "[3.4363990293683835e-06, 4.3648456973261375e-05]",
+      "expected": "0<=S<=2(A+B+C+D)",
+      "group": "corrected transfer",
+      "name": "V=2 beta=2.0 L=0.5 t=0.05 sign=-1 context transfer",
+      "status": "PASS"
+    },
+    {
+      "actual": "[4.3648456973261375e-05, 0.0005628218105297967]",
+      "expected": "weighted RHS<=coarse trace bound",
+      "group": "coarse fallback",
+      "name": "V=2 beta=2.0 L=0.5 t=0.05 sign=-1 coarse bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "76",
+      "expected": "all executed assertions passed",
+      "group": "summary",
+      "name": "assertion_summary",
+      "status": "PASS"
+    }
+  ],
+  "audit_id": "PA-CP1-ST8-Q3LOCK-D-WEIGHTED-CONTEXT-AUDIT",
+  "boundary": {
+    "actual_q3_rows_closed": true,
+    "c6_closed": false,
+    "common_alpha_closed": false,
+    "continuum_closed": false,
+    "exhaustion_independence_closed": false,
+    "finite_d_weighted_transfer_closed": true,
+    "four_context_decomposition_closed": true,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "modular_domain_transfer_closed": false,
+    "pre_a_closed": false,
+    "sector_a_closed": false,
+    "two_orientation_history_closed": true,
+    "uniform_beta_volume_direct_d_delta_d_closed": false,
+    "uniform_d_weighted_context_common_core_closed": false
+  },
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "derived": {
+    "actual_q3_rows_closed": true,
+    "coarse_trace_fallback_closed": true,
+    "common_alpha_closed": false,
+    "finite_d_weighted_transfer_closed": true,
+    "four_context_decomposition_closed": true,
+    "modular_domain_transfer_closed": false,
+    "pre_a_closed": false,
+    "row_count": 18,
+    "summary_rows": [
+      {
+        "M2": 4.910242530367492,
+        "TrK2": 60.3072772079691,
+        "beta": 0.5,
+        "max_coarse_trace_bound": 0.0005898621121399702,
+        "max_context_A": 2.2411307826107075e-06,
+        "max_context_B": 5.550063670400055e-06,
+        "max_context_C": 5.550063670400274e-06,
+        "max_context_D": 2.241130782610667e-06,
+        "max_spectral_second_moment": 5.3908134196213205e-06,
+        "max_weighted_ratio_to_M2_norm": 2.807699917079624,
+        "max_weighted_rhs": 3.1164777812043406e-05,
+        "volume": 2
+      },
+      {
+        "M2": 3.4680487052725555,
+        "TrK2": 60.3072772079691,
+        "beta": 1.0,
+        "max_coarse_trace_bound": 0.0005768181402256924,
+        "max_context_A": 1.542556451277891e-06,
+        "max_context_B": 7.454021233467334e-06,
+        "max_context_C": 7.454021233467634e-06,
+        "max_context_D": 1.5425564512778985e-06,
+        "max_spectral_second_moment": 4.8223431968554075e-06,
+        "max_weighted_ratio_to_M2_norm": 4.590736488027578,
+        "max_weighted_rhs": 3.598631073898151e-05,
+        "volume": 2
+      },
+      {
+        "M2": 1.9205583860609077,
+        "TrK2": 60.3072772079691,
+        "beta": 2.0,
+        "max_coarse_trace_bound": 0.0005628218105297967,
+        "max_context_A": 1.2568655247243346e-06,
+        "max_context_B": 9.655248718590807e-06,
+        "max_context_C": 9.655248718591172e-06,
+        "max_context_D": 1.256865524724375e-06,
+        "max_spectral_second_moment": 3.4363990293683835e-06,
+        "max_weighted_ratio_to_M2_norm": 10.055694054141329,
+        "max_weighted_rhs": 4.3648456973261375e-05,
+        "volume": 2
+      },
+      {
+        "M2": 15.873994026488598,
+        "TrK2": 2232.802085102621,
+        "beta": 0.5,
+        "max_coarse_trace_bound": 0.042029203816820015,
+        "max_context_A": 1.3801537542503655e-05,
+        "max_context_B": 4.687861068582498e-05,
+        "max_context_C": 4.687861068582394e-05,
+        "max_context_D": 1.380153754250364e-05,
+        "max_spectral_second_moment": 3.1331616229703775e-05,
+        "max_weighted_ratio_to_M2_norm": 3.2767236122615038,
+        "max_weighted_rhs": 0.00024272059291331245,
+        "volume": 4
+      },
+      {
+        "M2": 8.474816662651167,
+        "TrK2": 2232.802085102621,
+        "beta": 1.0,
+        "max_coarse_trace_bound": 0.041890908427640636,
+        "max_context_A": 8.31226038732408e-06,
+        "max_context_B": 7.496642108056018e-05,
+        "max_context_C": 7.49664210805584e-05,
+        "max_context_D": 8.31226038732396e-06,
+        "max_spectral_second_moment": 3.583633186289356e-05,
+        "max_weighted_ratio_to_M2_norm": 8.422069362284725,
+        "max_weighted_rhs": 0.00033311472587153326,
+        "volume": 4
+      },
+      {
+        "M2": 2.348092232817126,
+        "TrK2": 2232.802085102621,
+        "beta": 2.0,
+        "max_coarse_trace_bound": 0.041776396003116285,
+        "max_context_A": 5.41137071502668e-06,
+        "max_context_B": 0.000121309579697384,
+        "max_context_C": 0.00012130957969738172,
+        "max_context_D": 5.411370715026594e-06,
+        "max_spectral_second_moment": 3.3700916806799016e-05,
+        "max_weighted_ratio_to_M2_norm": 46.243068654287,
+        "max_weighted_rhs": 0.0005068838016496379,
+        "volume": 4
+      },
+      {
+        "M2": 33.286943994754964,
+        "TrK2": 46421.12141989603,
+        "beta": 0.5,
+        "max_coarse_trace_bound": 1.4591965780133933,
+        "max_context_A": 3.883886249262575e-05,
+        "max_context_B": 0.0001222835312542079,
+        "max_context_C": 0.00012228353125420712,
+        "max_context_D": 3.883886249262562e-05,
+        "max_spectral_second_moment": 5.418081715846669e-05,
+        "max_weighted_ratio_to_M2_norm": 2.4738133207761717,
+        "max_weighted_rhs": 0.0006444895749873329,
+        "volume": 6
+      },
+      {
+        "M2": 15.898866805440203,
+        "TrK2": 46421.12141989603,
+        "beta": 1.0,
+        "max_coarse_trace_bound": 1.458650394698903,
+        "max_context_A": 2.5680755085931638e-05,
+        "max_context_B": 0.0002087452407218132,
+        "max_context_C": 0.00020874524072181247,
+        "max_context_D": 2.5680755085931506e-05,
+        "max_spectral_second_moment": 7.266939057013464e-05,
+        "max_weighted_ratio_to_M2_norm": 7.523265960350882,
+        "max_weighted_rhs": 0.0009377039832309777,
+        "volume": 6
+      },
+      {
+        "M2": 2.808600220327005,
+        "TrK2": 46421.12141989603,
+        "beta": 2.0,
+        "max_coarse_trace_bound": 1.4582392115006013,
+        "max_context_A": 1.1921976869475757e-05,
+        "max_context_B": 0.00034275980049345683,
+        "max_context_C": 0.00034275980049345634,
+        "max_context_D": 1.19219768694758e-05,
+        "max_spectral_second_moment": 7.617859727677994e-05,
+        "max_weighted_ratio_to_M2_norm": 64.32828297725493,
+        "max_weighted_rhs": 0.0014187271094517294,
+        "volume": 6
+      }
+    ],
+    "two_orientation_history_closed": true,
+    "uniform_beta_volume_direct_d_delta_d_closed": false,
+    "uniform_d_weighted_context_common_core_closed": false
+  },
+  "exploration_id": "EXP-001145",
+  "passed": 76,
+  "run_kind": "independent",
+  "schema": "tect/foundation-audit/1.0",
+  "task_id": "T-054",
+  "verdict": "PASS"
+}

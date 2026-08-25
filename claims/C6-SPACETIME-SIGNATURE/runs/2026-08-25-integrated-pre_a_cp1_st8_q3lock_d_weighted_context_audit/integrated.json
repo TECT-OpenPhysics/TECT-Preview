@@ -1,0 +1,382 @@
+{
+  "assertion_count": 13,
+  "assertions": [
+    {
+      "actual": "['EXP-001145', 'T-054']",
+      "expected": "EXP-001145/T-054",
+      "name": "identity",
+      "pass": true
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "name": "claim nonbearing",
+      "pass": true
+    },
+    {
+      "actual": "['2cdca959f0f393ac795582b1bed8b69fbca49455817be6d62c165caa914e57ba', 'a7b4df2a764656963b19c46e728c21054e0401d6271ddcfb6db65a060e899e76']",
+      "expected": "distinct SHA-256",
+      "name": "source lanes distinct",
+      "pass": true
+    },
+    {
+      "actual": "['weighted_gap_term', 'four_context_constant', 'coarse_trace_fixture', 'shifted_gap_fixture']",
+      "expected": "present",
+      "name": "Lean source",
+      "pass": true
+    },
+    {
+      "actual": "[]",
+      "expected": "none",
+      "name": "Lean forbidden",
+      "pass": true
+    },
+    {
+      "actual": "PRIMARY D-WEIGHTED-CONTEXT-AUDIT PASS 88/88 rows=18\n",
+      "expected": "PASS",
+      "name": "primary child",
+      "pass": true
+    },
+    {
+      "actual": "INDEPENDENT D-WEIGHTED-CONTEXT-AUDIT PASS 76/76 rows=18\n",
+      "expected": "PASS",
+      "name": "independent child",
+      "pass": true
+    },
+    {
+      "actual": "[18, 18]",
+      "expected": "18",
+      "name": "row count agreement",
+      "pass": true
+    },
+    {
+      "actual": "[]",
+      "expected": "within tolerance",
+      "name": "summary agreement",
+      "pass": true
+    },
+    {
+      "actual": "[{'actual_q3_rows_closed': True, 'coarse_trace_fallback_closed': True, 'common_alpha_closed': False, 'finite_d_weighted_transfer_closed': True, 'four_context_decomposition_closed': True, 'modular_domain_transfer_closed': False, 'pre_a_closed': False, 'row_count': 18, 'summary_rows': [{'M2': 4.910242530367492, 'TrK2': 60.30727720796911, 'beta': 0.5, 'max_coarse_trace_bound': 0.0005898621121399703, 'max_context_A': 2.2411307826107075e-06, 'max_context_B': 5.550063670400055e-06, 'max_context_C': 5.550063670400274e-06, 'max_context_D': 2.241130782610667e-06, 'max_spectral_second_moment': 5.3908134196213205e-06, 'max_weighted_ratio_to_M2_norm': 2.807699917079624, 'max_weighted_rhs': 3.1164777812043406e-05, 'volume': 2}, {'M2': 3.4680487052725555, 'TrK2': 60.30727720796911, 'beta': 1.0, 'max_coarse_trace_bound': 0.0005768181402256925, 'max_context_A': 1.542556451277891e-06, 'max_context_B': 7.454021233467334e-06, 'max_context_C': 7.454021233467634e-06, 'max_context_D': 1.5425564512778985e-06, 'max_spectral_second_moment': 4.8223431968554075e-06, 'max_weighted_ratio_to_M2_norm': 4.590736488027578, 'max_weighted_rhs': 3.598631073898151e-05, 'volume': 2}, {'M2': 1.9205583860609077, 'TrK2': 60.30727720796911, 'beta': 2.0, 'max_coarse_trace_bound': 0.0005628218105297968, 'max_context_A': 1.2568655247243346e-06, 'max_context_B': 9.655248718590807e-06, 'max_context_C': 9.655248718591172e-06, 'max_context_D': 1.256865524724375e-06, 'max_spectral_second_moment': 3.4363990293683835e-06, 'max_weighted_ratio_to_M2_norm': 10.055694054141329, 'max_weighted_rhs': 4.3648456973261375e-05, 'volume': 2}, {'M2': 15.873994026488598, 'TrK2': 2232.802085102621, 'beta': 0.5, 'max_coarse_trace_bound': 0.042029203816820015, 'max_context_A': 1.3801537542503655e-05, 'max_context_B': 4.687861068582498e-05, 'max_context_C': 4.687861068582394e-05, 'max_context_D': 1.380153754250364e-05, 'max_spectral_second_moment': 3.1331616229703775e-05, 'max_weighted_ratio_to_M2_norm': 3.2767236122615038, 'max_weighted_rhs': 0.00024272059291331245, 'volume': 4}, {'M2': 8.474816662651167, 'TrK2': 2232.802085102621, 'beta': 1.0, 'max_coarse_trace_bound': 0.041890908427640636, 'max_context_A': 8.31226038732408e-06, 'max_context_B': 7.496642108056018e-05, 'max_context_C': 7.49664210805584e-05, 'max_context_D': 8.31226038732396e-06, 'max_spectral_second_moment': 3.583633186289356e-05, 'max_weighted_ratio_to_M2_norm': 8.422069362284725, 'max_weighted_rhs': 0.00033311472587153326, 'volume': 4}, {'M2': 2.348092232817126, 'TrK2': 2232.802085102621, 'beta': 2.0, 'max_coarse_trace_bound': 0.041776396003116285, 'max_context_A': 5.41137071502668e-06, 'max_context_B': 0.000121309579697384, 'max_context_C': 0.00012130957969738172, 'max_context_D': 5.411370715026594e-06, 'max_spectral_second_moment': 3.3700916806799016e-05, 'max_weighted_ratio_to_M2_norm': 46.243068654287, 'max_weighted_rhs': 0.0005068838016496379, 'volume': 4}, {'M2': 33.286943994754964, 'TrK2': 46421.121419896044, 'beta': 0.5, 'max_coarse_trace_bound': 1.4591965780133938, 'max_context_A': 3.883886249262575e-05, 'max_context_B': 0.0001222835312542079, 'max_context_C': 0.00012228353125420712, 'max_context_D': 3.883886249262562e-05, 'max_spectral_second_moment': 5.418081715846669e-05, 'max_weighted_ratio_to_M2_norm': 2.4738133207761717, 'max_weighted_rhs': 0.0006444895749873329, 'volume': 6}, {'M2': 15.898866805440203, 'TrK2': 46421.121419896044, 'beta': 1.0, 'max_coarse_trace_bound': 1.4586503946989033, 'max_context_A': 2.5680755085931638e-05, 'max_context_B': 0.0002087452407218132, 'max_context_C': 0.00020874524072181247, 'max_context_D': 2.5680755085931506e-05, 'max_spectral_second_moment': 7.266939057013464e-05, 'max_weighted_ratio_to_M2_norm': 7.523265960350882, 'max_weighted_rhs': 0.0009377039832309777, 'volume': 6}, {'M2': 2.8086002203270044, 'TrK2': 46421.121419896044, 'beta': 2.0, 'max_coarse_trace_bound': 1.4582392115006018, 'max_context_A': 1.1921976869475757e-05, 'max_context_B': 0.00034275980049345683, 'max_context_C': 0.00034275980049345634, 'max_context_D': 1.19219768694758e-05, 'max_spectral_second_moment': 7.617859727677994e-05, 'max_weighted_ratio_to_M2_norm': 64.32828297725494, 'max_weighted_rhs': 0.0014187271094517294, 'volume': 6}], 'two_orientation_history_closed': True, 'uniform_beta_volume_direct_d_delta_d_closed': False, 'uniform_d_weighted_context_common_core_closed': False}, {'actual_q3_rows_closed': True, 'coarse_trace_fallback_closed': True, 'common_alpha_closed': False, 'finite_d_weighted_transfer_closed': True, 'four_context_decomposition_closed': True, 'modular_domain_transfer_closed': False, 'pre_a_closed': False, 'row_count': 18, 'summary_rows': [{'M2': 4.910242530367492, 'TrK2': 60.3072772079691, 'beta': 0.5, 'max_coarse_trace_bound': 0.0005898621121399702, 'max_context_A': 2.2411307826107075e-06, 'max_context_B': 5.550063670400055e-06, 'max_context_C': 5.550063670400274e-06, 'max_context_D': 2.241130782610667e-06, 'max_spectral_second_moment': 5.3908134196213205e-06, 'max_weighted_ratio_to_M2_norm': 2.807699917079624, 'max_weighted_rhs': 3.1164777812043406e-05, 'volume': 2}, {'M2': 3.4680487052725555, 'TrK2': 60.3072772079691, 'beta': 1.0, 'max_coarse_trace_bound': 0.0005768181402256924, 'max_context_A': 1.542556451277891e-06, 'max_context_B': 7.454021233467334e-06, 'max_context_C': 7.454021233467634e-06, 'max_context_D': 1.5425564512778985e-06, 'max_spectral_second_moment': 4.8223431968554075e-06, 'max_weighted_ratio_to_M2_norm': 4.590736488027578, 'max_weighted_rhs': 3.598631073898151e-05, 'volume': 2}, {'M2': 1.9205583860609077, 'TrK2': 60.3072772079691, 'beta': 2.0, 'max_coarse_trace_bound': 0.0005628218105297967, 'max_context_A': 1.2568655247243346e-06, 'max_context_B': 9.655248718590807e-06, 'max_context_C': 9.655248718591172e-06, 'max_context_D': 1.256865524724375e-06, 'max_spectral_second_moment': 3.4363990293683835e-06, 'max_weighted_ratio_to_M2_norm': 10.055694054141329, 'max_weighted_rhs': 4.3648456973261375e-05, 'volume': 2}, {'M2': 15.873994026488598, 'TrK2': 2232.802085102621, 'beta': 0.5, 'max_coarse_trace_bound': 0.042029203816820015, 'max_context_A': 1.3801537542503655e-05, 'max_context_B': 4.687861068582498e-05, 'max_context_C': 4.687861068582394e-05, 'max_context_D': 1.380153754250364e-05, 'max_spectral_second_moment': 3.1331616229703775e-05, 'max_weighted_ratio_to_M2_norm': 3.2767236122615038, 'max_weighted_rhs': 0.00024272059291331245, 'volume': 4}, {'M2': 8.474816662651167, 'TrK2': 2232.802085102621, 'beta': 1.0, 'max_coarse_trace_bound': 0.041890908427640636, 'max_context_A': 8.31226038732408e-06, 'max_context_B': 7.496642108056018e-05, 'max_context_C': 7.49664210805584e-05, 'max_context_D': 8.31226038732396e-06, 'max_spectral_second_moment': 3.583633186289356e-05, 'max_weighted_ratio_to_M2_norm': 8.422069362284725, 'max_weighted_rhs': 0.00033311472587153326, 'volume': 4}, {'M2': 2.348092232817126, 'TrK2': 2232.802085102621, 'beta': 2.0, 'max_coarse_trace_bound': 0.041776396003116285, 'max_context_A': 5.41137071502668e-06, 'max_context_B': 0.000121309579697384, 'max_context_C': 0.00012130957969738172, 'max_context_D': 5.411370715026594e-06, 'max_spectral_second_moment': 3.3700916806799016e-05, 'max_weighted_ratio_to_M2_norm': 46.243068654287, 'max_weighted_rhs': 0.0005068838016496379, 'volume': 4}, {'M2': 33.286943994754964, 'TrK2': 46421.12141989603, 'beta': 0.5, 'max_coarse_trace_bound': 1.4591965780133933, 'max_context_A': 3.883886249262575e-05, 'max_context_B': 0.0001222835312542079, 'max_context_C': 0.00012228353125420712, 'max_context_D': 3.883886249262562e-05, 'max_spectral_second_moment': 5.418081715846669e-05, 'max_weighted_ratio_to_M2_norm': 2.4738133207761717, 'max_weighted_rhs': 0.0006444895749873329, 'volume': 6}, {'M2': 15.898866805440203, 'TrK2': 46421.12141989603, 'beta': 1.0, 'max_coarse_trace_bound': 1.458650394698903, 'max_context_A': 2.5680755085931638e-05, 'max_context_B': 0.0002087452407218132, 'max_context_C': 0.00020874524072181247, 'max_context_D': 2.5680755085931506e-05, 'max_spectral_second_moment': 7.266939057013464e-05, 'max_weighted_ratio_to_M2_norm': 7.523265960350882, 'max_weighted_rhs': 0.0009377039832309777, 'volume': 6}, {'M2': 2.808600220327005, 'TrK2': 46421.12141989603, 'beta': 2.0, 'max_coarse_trace_bound': 1.4582392115006013, 'max_context_A': 1.1921976869475757e-05, 'max_context_B': 0.00034275980049345683, 'max_context_C': 0.00034275980049345634, 'max_context_D': 1.19219768694758e-05, 'max_spectral_second_moment': 7.617859727677994e-05, 'max_weighted_ratio_to_M2_norm': 64.32828297725493, 'max_weighted_rhs': 0.0014187271094517294, 'volume': 6}], 'two_orientation_history_closed': True, 'uniform_beta_volume_direct_d_delta_d_closed': False, 'uniform_d_weighted_context_common_core_closed': False}]",
+      "expected": "finite four-context transfer",
+      "name": "corrected transfer agreement",
+      "pass": true
+    },
+    {
+      "actual": "[False, False]",
+      "expected": "False",
+      "name": "uniformity firewall",
+      "pass": true
+    },
+    {
+      "actual": "{'finite_d_weighted_transfer_closed': True, 'actual_q3_rows_closed': True, 'four_context_decomposition_closed': True, 'two_orientation_history_closed': True, 'uniform_d_weighted_context_common_core_closed': False, 'uniform_beta_volume_direct_d_delta_d_closed': False, 'modular_domain_transfer_closed': False, 'exhaustion_independence_closed': False, 'common_alpha_closed': False, 'hamiltonian_os_identification_closed': False, 'kms_gns_gap_closed': False, 'continuum_closed': False, 'c6_closed': False, 'sector_a_closed': False, 'pre_a_closed': False}",
+      "expected": "finite context; QFT gates open",
+      "name": "scope firewall",
+      "pass": true
+    },
+    {
+      "actual": "{'status': 'PASS', 'command': 'lake env lean Tect/R315.lean', 'returncode': 0, 'output': ''}",
+      "expected": "PASS",
+      "name": "Lean compile",
+      "pass": true
+    }
+  ],
+  "audit_id": "PA-CP1-ST8-Q3LOCK-D-WEIGHTED-CONTEXT-AUDIT",
+  "boundary": {
+    "actual_q3_rows_closed": true,
+    "c6_closed": false,
+    "common_alpha_closed": false,
+    "continuum_closed": false,
+    "exhaustion_independence_closed": false,
+    "finite_d_weighted_transfer_closed": true,
+    "four_context_decomposition_closed": true,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "modular_domain_transfer_closed": false,
+    "pre_a_closed": false,
+    "sector_a_closed": false,
+    "two_orientation_history_closed": true,
+    "uniform_beta_volume_direct_d_delta_d_closed": false,
+    "uniform_d_weighted_context_common_core_closed": false
+  },
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "derived": {
+    "finite_d_weighted_transfer_promoted": true,
+    "four_context_decomposition_promoted": true,
+    "independent_summary_rows": [
+      {
+        "M2": 4.910242530367492,
+        "TrK2": 60.3072772079691,
+        "beta": 0.5,
+        "max_coarse_trace_bound": 0.0005898621121399702,
+        "max_context_A": 2.2411307826107075e-06,
+        "max_context_B": 5.550063670400055e-06,
+        "max_context_C": 5.550063670400274e-06,
+        "max_context_D": 2.241130782610667e-06,
+        "max_spectral_second_moment": 5.3908134196213205e-06,
+        "max_weighted_ratio_to_M2_norm": 2.807699917079624,
+        "max_weighted_rhs": 3.1164777812043406e-05,
+        "volume": 2
+      },
+      {
+        "M2": 3.4680487052725555,
+        "TrK2": 60.3072772079691,
+        "beta": 1.0,
+        "max_coarse_trace_bound": 0.0005768181402256924,
+        "max_context_A": 1.542556451277891e-06,
+        "max_context_B": 7.454021233467334e-06,
+        "max_context_C": 7.454021233467634e-06,
+        "max_context_D": 1.5425564512778985e-06,
+        "max_spectral_second_moment": 4.8223431968554075e-06,
+        "max_weighted_ratio_to_M2_norm": 4.590736488027578,
+        "max_weighted_rhs": 3.598631073898151e-05,
+        "volume": 2
+      },
+      {
+        "M2": 1.9205583860609077,
+        "TrK2": 60.3072772079691,
+        "beta": 2.0,
+        "max_coarse_trace_bound": 0.0005628218105297967,
+        "max_context_A": 1.2568655247243346e-06,
+        "max_context_B": 9.655248718590807e-06,
+        "max_context_C": 9.655248718591172e-06,
+        "max_context_D": 1.256865524724375e-06,
+        "max_spectral_second_moment": 3.4363990293683835e-06,
+        "max_weighted_ratio_to_M2_norm": 10.055694054141329,
+        "max_weighted_rhs": 4.3648456973261375e-05,
+        "volume": 2
+      },
+      {
+        "M2": 15.873994026488598,
+        "TrK2": 2232.802085102621,
+        "beta": 0.5,
+        "max_coarse_trace_bound": 0.042029203816820015,
+        "max_context_A": 1.3801537542503655e-05,
+        "max_context_B": 4.687861068582498e-05,
+        "max_context_C": 4.687861068582394e-05,
+        "max_context_D": 1.380153754250364e-05,
+        "max_spectral_second_moment": 3.1331616229703775e-05,
+        "max_weighted_ratio_to_M2_norm": 3.2767236122615038,
+        "max_weighted_rhs": 0.00024272059291331245,
+        "volume": 4
+      },
+      {
+        "M2": 8.474816662651167,
+        "TrK2": 2232.802085102621,
+        "beta": 1.0,
+        "max_coarse_trace_bound": 0.041890908427640636,
+        "max_context_A": 8.31226038732408e-06,
+        "max_context_B": 7.496642108056018e-05,
+        "max_context_C": 7.49664210805584e-05,
+        "max_context_D": 8.31226038732396e-06,
+        "max_spectral_second_moment": 3.583633186289356e-05,
+        "max_weighted_ratio_to_M2_norm": 8.422069362284725,
+        "max_weighted_rhs": 0.00033311472587153326,
+        "volume": 4
+      },
+      {
+        "M2": 2.348092232817126,
+        "TrK2": 2232.802085102621,
+        "beta": 2.0,
+        "max_coarse_trace_bound": 0.041776396003116285,
+        "max_context_A": 5.41137071502668e-06,
+        "max_context_B": 0.000121309579697384,
+        "max_context_C": 0.00012130957969738172,
+        "max_context_D": 5.411370715026594e-06,
+        "max_spectral_second_moment": 3.3700916806799016e-05,
+        "max_weighted_ratio_to_M2_norm": 46.243068654287,
+        "max_weighted_rhs": 0.0005068838016496379,
+        "volume": 4
+      },
+      {
+        "M2": 33.286943994754964,
+        "TrK2": 46421.12141989603,
+        "beta": 0.5,
+        "max_coarse_trace_bound": 1.4591965780133933,
+        "max_context_A": 3.883886249262575e-05,
+        "max_context_B": 0.0001222835312542079,
+        "max_context_C": 0.00012228353125420712,
+        "max_context_D": 3.883886249262562e-05,
+        "max_spectral_second_moment": 5.418081715846669e-05,
+        "max_weighted_ratio_to_M2_norm": 2.4738133207761717,
+        "max_weighted_rhs": 0.0006444895749873329,
+        "volume": 6
+      },
+      {
+        "M2": 15.898866805440203,
+        "TrK2": 46421.12141989603,
+        "beta": 1.0,
+        "max_coarse_trace_bound": 1.458650394698903,
+        "max_context_A": 2.5680755085931638e-05,
+        "max_context_B": 0.0002087452407218132,
+        "max_context_C": 0.00020874524072181247,
+        "max_context_D": 2.5680755085931506e-05,
+        "max_spectral_second_moment": 7.266939057013464e-05,
+        "max_weighted_ratio_to_M2_norm": 7.523265960350882,
+        "max_weighted_rhs": 0.0009377039832309777,
+        "volume": 6
+      },
+      {
+        "M2": 2.808600220327005,
+        "TrK2": 46421.12141989603,
+        "beta": 2.0,
+        "max_coarse_trace_bound": 1.4582392115006013,
+        "max_context_A": 1.1921976869475757e-05,
+        "max_context_B": 0.00034275980049345683,
+        "max_context_C": 0.00034275980049345634,
+        "max_context_D": 1.19219768694758e-05,
+        "max_spectral_second_moment": 7.617859727677994e-05,
+        "max_weighted_ratio_to_M2_norm": 64.32828297725493,
+        "max_weighted_rhs": 0.0014187271094517294,
+        "volume": 6
+      }
+    ],
+    "primary_summary_rows": [
+      {
+        "M2": 4.910242530367492,
+        "TrK2": 60.30727720796911,
+        "beta": 0.5,
+        "max_coarse_trace_bound": 0.0005898621121399703,
+        "max_context_A": 2.2411307826107075e-06,
+        "max_context_B": 5.550063670400055e-06,
+        "max_context_C": 5.550063670400274e-06,
+        "max_context_D": 2.241130782610667e-06,
+        "max_spectral_second_moment": 5.3908134196213205e-06,
+        "max_weighted_ratio_to_M2_norm": 2.807699917079624,
+        "max_weighted_rhs": 3.1164777812043406e-05,
+        "volume": 2
+      },
+      {
+        "M2": 3.4680487052725555,
+        "TrK2": 60.30727720796911,
+        "beta": 1.0,
+        "max_coarse_trace_bound": 0.0005768181402256925,
+        "max_context_A": 1.542556451277891e-06,
+        "max_context_B": 7.454021233467334e-06,
+        "max_context_C": 7.454021233467634e-06,
+        "max_context_D": 1.5425564512778985e-06,
+        "max_spectral_second_moment": 4.8223431968554075e-06,
+        "max_weighted_ratio_to_M2_norm": 4.590736488027578,
+        "max_weighted_rhs": 3.598631073898151e-05,
+        "volume": 2
+      },
+      {
+        "M2": 1.9205583860609077,
+        "TrK2": 60.30727720796911,
+        "beta": 2.0,
+        "max_coarse_trace_bound": 0.0005628218105297968,
+        "max_context_A": 1.2568655247243346e-06,
+        "max_context_B": 9.655248718590807e-06,
+        "max_context_C": 9.655248718591172e-06,
+        "max_context_D": 1.256865524724375e-06,
+        "max_spectral_second_moment": 3.4363990293683835e-06,
+        "max_weighted_ratio_to_M2_norm": 10.055694054141329,
+        "max_weighted_rhs": 4.3648456973261375e-05,
+        "volume": 2
+      },
+      {
+        "M2": 15.873994026488598,
+        "TrK2": 2232.802085102621,
+        "beta": 0.5,
+        "max_coarse_trace_bound": 0.042029203816820015,
+        "max_context_A": 1.3801537542503655e-05,
+        "max_context_B": 4.687861068582498e-05,
+        "max_context_C": 4.687861068582394e-05,
+        "max_context_D": 1.380153754250364e-05,
+        "max_spectral_second_moment": 3.1331616229703775e-05,
+        "max_weighted_ratio_to_M2_norm": 3.2767236122615038,
+        "max_weighted_rhs": 0.00024272059291331245,
+        "volume": 4
+      },
+      {
+        "M2": 8.474816662651167,
+        "TrK2": 2232.802085102621,
+        "beta": 1.0,
+        "max_coarse_trace_bound": 0.041890908427640636,
+        "max_context_A": 8.31226038732408e-06,
+        "max_context_B": 7.496642108056018e-05,
+        "max_context_C": 7.49664210805584e-05,
+        "max_context_D": 8.31226038732396e-06,
+        "max_spectral_second_moment": 3.583633186289356e-05,
+        "max_weighted_ratio_to_M2_norm": 8.422069362284725,
+        "max_weighted_rhs": 0.00033311472587153326,
+        "volume": 4
+      },
+      {
+        "M2": 2.348092232817126,
+        "TrK2": 2232.802085102621,
+        "beta": 2.0,
+        "max_coarse_trace_bound": 0.041776396003116285,
+        "max_context_A": 5.41137071502668e-06,
+        "max_context_B": 0.000121309579697384,
+        "max_context_C": 0.00012130957969738172,
+        "max_context_D": 5.411370715026594e-06,
+        "max_spectral_second_moment": 3.3700916806799016e-05,
+        "max_weighted_ratio_to_M2_norm": 46.243068654287,
+        "max_weighted_rhs": 0.0005068838016496379,
+        "volume": 4
+      },
+      {
+        "M2": 33.286943994754964,
+        "TrK2": 46421.121419896044,
+        "beta": 0.5,
+        "max_coarse_trace_bound": 1.4591965780133938,
+        "max_context_A": 3.883886249262575e-05,
+        "max_context_B": 0.0001222835312542079,
+        "max_context_C": 0.00012228353125420712,
+        "max_context_D": 3.883886249262562e-05,
+        "max_spectral_second_moment": 5.418081715846669e-05,
+        "max_weighted_ratio_to_M2_norm": 2.4738133207761717,
+        "max_weighted_rhs": 0.0006444895749873329,
+        "volume": 6
+      },
+      {
+        "M2": 15.898866805440203,
+        "TrK2": 46421.121419896044,
+        "beta": 1.0,
+        "max_coarse_trace_bound": 1.4586503946989033,
+        "max_context_A": 2.5680755085931638e-05,
+        "max_context_B": 0.0002087452407218132,
+        "max_context_C": 0.00020874524072181247,
+        "max_context_D": 2.5680755085931506e-05,
+        "max_spectral_second_moment": 7.266939057013464e-05,
+        "max_weighted_ratio_to_M2_norm": 7.523265960350882,
+        "max_weighted_rhs": 0.0009377039832309777,
+        "volume": 6
+      },
+      {
+        "M2": 2.8086002203270044,
+        "TrK2": 46421.121419896044,
+        "beta": 2.0,
+        "max_coarse_trace_bound": 1.4582392115006018,
+        "max_context_A": 1.1921976869475757e-05,
+        "max_context_B": 0.00034275980049345683,
+        "max_context_C": 0.00034275980049345634,
+        "max_context_D": 1.19219768694758e-05,
+        "max_spectral_second_moment": 7.617859727677994e-05,
+        "max_weighted_ratio_to_M2_norm": 64.32828297725494,
+        "max_weighted_rhs": 0.0014187271094517294,
+        "volume": 6
+      }
+    ],
+    "qft_promoted": false,
+    "uniformity_promoted": false
+  },
+  "exploration_id": "EXP-001145",
+  "lean": {
+    "command": "lake env lean Tect/R315.lean",
+    "output": "",
+    "returncode": 0,
+    "status": "PASS"
+  },
+  "provenance": {
+    "independent_sha256": "a7b4df2a764656963b19c46e728c21054e0401d6271ddcfb6db65a060e899e76",
+    "lean_sha256": "04941f7fe5ffa6236440ad72536dee177de94b2862e49dd0941b082e777d476a",
+    "manifest_sha256": "9bc991a533fb881ae00ded08f7f2901b5dd73586a5062bd802134dcfaa2b361f",
+    "primary_sha256": "2cdca959f0f393ac795582b1bed8b69fbca49455817be6d62c165caa914e57ba"
+  },
+  "recorded_at": "2026-08-25T17:53:32.255105Z",
+  "run_kind": "integrated",
+  "schema": "tect/foundation-audit/1.0",
+  "task_id": "T-054",
+  "verdict": "PASS"
+}
