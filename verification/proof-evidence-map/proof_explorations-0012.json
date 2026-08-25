@@ -5184,6 +5184,116 @@
       "task_id": "T-054",
       "title": "Actual Q3 local-energy four-leg D(t) audit",
       "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "axis": "source normalization",
+          "check": "The norm-level normalization uses one declared scalar w_sigma(a); squared leg sums and normalized norms are both retained, so no square-versus-norm substitution is hidden.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "noncommuting local weight",
+          "check": "K_X remains a matrix in the full-H representation; no commutation with rho, D, or the source character is assumed.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "finite amplitude and volume",
+          "check": "The source-amplitude suppression and the volume endpoint ratio are finite-grid diagnostics only; neither is promoted to an asymptotic bound or divergence.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "entire-series transfer",
+          "check": "Lean checks the prescribed-family rate and positive margin, but the actual Q3 word incidence, cancellations, domain, and six-neighbour history theorem remain open.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "independent reconstruction",
+          "check": "The independent lane reconstructs all four legs from trace identities without rho^(1/2), and the integrated verifier compares normalized endpoint maxima within tolerance.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "QFT promotion",
+          "check": "Common-core uniformity, modular transfer, exhaustion, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector A and Pre-A remain open.",
+          "disposition": "UPHELD-OPEN"
+        }
+      ],
+      "boundary": "T0 claim-nonbearing finite actual-Q3 source-weight audit. It does not prove a source-, volume-, cutoff-, or beta-uniform entire seminorm, an actual Q3 word-incidence theorem, modular-domain transfer, direct D or delta-D Cauchy, product/core density, exhaustion independence, common alpha, OS/KMS/GNS reconstruction, a mass gap, continuum, C6, Sector A, Pre-A, TECT production or a Clay result.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "EXP-001032 supplied an entire weight for a prescribed word family, while EXP-001147 supplied the finite actual-Q3 local-weighted four-leg interface. This checkpoint connects those two interfaces on actual matrices: the candidate weight is numerically effective against large source amplitudes, yet the remaining volume growth is not removed. Because only finite amplitudes, three volumes, one time, two cutoffs, two orientations, and three beta values are sampled, the correct verdict is an advanced finite calibration, not a theorem or a negative result.",
+      "evidence_refs": [
+        "strategy/pre-a-cp1-st8-q3lock-source-weight-d-audit-manifest.json#model",
+        "codes/foundations/pre_a_cp1_st8_q3lock_source_weight_d_audit.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_source_weight_d_audit_independent.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_source_weight_d_audit_verify.py#main",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-27-primary-pre_a_cp1_st8_q3lock_source_weight_d_audit/primary.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-27-independent-pre_a_cp1_st8_q3lock_source_weight_d_audit/independent.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-27-integrated-pre_a_cp1_st8_q3lock_source_weight_d_audit/integrated.json#lean",
+        "verification/lean/Tect/R318.lean#q3_source_rate_fixture",
+        "verification/lean/registry.json#R318",
+        "explorations/log.jsonl#EXP-001147"
+      ],
+      "finding": "Primary 414/414, independent 293/293, integrated 14/14, and Lean R318 PASS over 144 actual-Q3 rows. The raw local four-leg norms maximize at 0.0117833200, 0.0241826418, and 0.0315388112 for volumes 2,4,6. After division by the candidate source weight, the local maxima are 0.0048236832, 0.0098995363, and 0.0129108973; the full-weight baseline maxima are 0.0048236832, 0.0155316708, and 0.0259965445. The source weight strongly suppresses the high-amplitude rows (for amplitude 5 the normalized local maxima are approximately 1.59e-58, 3.50e-58, and 4.54e-58), but the volume-endpoint ratio of the overall local normalized maximum remains 2.67656. Thus the candidate absorbs the declared source-amplitude growth on this finite grid but does not supply a volume-uniform actual-Q3 estimate.",
+      "formal_integration": {
+        "events": [],
+        "negatives": [],
+        "no_new_event": true,
+        "no_new_negative": true,
+        "no_new_result": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "results": []
+      },
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": []
+      },
+      "gate_ids": [
+        "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+        "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+        "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001148",
+      "method": [
+        "Build the registered edge, square, and six-site 2x3 Q3 Hamiltonians with oscillator dimension three, beta in {0.5,1,2}, amplitudes in {0,1,2,5}, radii {0.5,1}, time 0.05, and both cutoff orientations.",
+        "Form the actual D_sigma(t,a) history from the full and cutoff Hamiltonian unitaries and compute all four matrix-product legs with the positive local edge weight K_X; retain the full shifted Hamiltonian weight as a finite baseline.",
+        "Normalize the square-summed local four-leg norm by w_sigma(a)=(1+|a|) exp((1/5)|a|^4), while retaining the unnormalized legs and source weight in every row.",
+        "Reconstruct the same rows independently from trace identities without inserting rho^(1/2), compile Lean R318 for the exact rate/margin/prefactor and normalization fixture, and keep all common-core and QFT gates explicit."
+      ],
+      "next_action": "Define the actual Q3 entire source seminorm on the common core and prove or refute a six-neighbour, two-orientation, source- and volume-uniform history bound. If the volume factor persists after a mathematically justified centered/local refinement, record that exact obstruction before attempting exhaustion or QFT promotion.",
+      "prior_exploration_id": "EXP-001147",
+      "provenance": "contemporaneous",
+      "qft_interface": {
+        "closed": "Finite actual-Q3 local-weighted four-leg histories are normalized by the exact candidate entire source weight and independently reconstructed by trace formulas; the source-amplitude response is strongly damped on the declared grid.",
+        "open": "A source- and volume-uniform entire seminorm on the actual Q3 common core, modular-domain transfer, direct Cauchy, product/core density, exhaustion, common alpha, OS/KMS/GNS identification, gap, continuum and Pre-A remain open.",
+        "tect_boundary": "No heat_root_incidence or canonical A1/R-192 production owner is supplied."
+      },
+      "question": "Does the candidate entire source weight w_sigma(a)=(1+|a|) exp(sigma |a|^4) absorb the actual Q3 local-weighted four-leg D(t) history across the declared finite amplitude and volume grid?",
+      "recorded_at": "2026-08-27T19:00:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001147",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001032",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001031",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-08-26",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Actual Q3 four-leg D(t) audit under an entire source weight",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",

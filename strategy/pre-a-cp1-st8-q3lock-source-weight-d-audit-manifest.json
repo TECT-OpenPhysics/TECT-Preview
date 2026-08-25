@@ -1,0 +1,117 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-SOURCE-WEIGHT-D-AUDIT-v0",
+  "title": "Actual Q3 four-leg D(t) audit under an entire source weight",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001148",
+  "claim_bearing": false,
+  "parent_explorations": ["EXP-001147", "EXP-001032", "EXP-001031"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "question": "Does the candidate entire source weight w_sigma(a)=(1+|a|) exp(sigma |a|^4) absorb the actual Q3 local-weighted four-leg D(t) history across the declared finite amplitude and volume grid?",
+  "finite_fixture": {
+    "volume_values": [2, 4, 6],
+    "oscillator_dimension": 3,
+    "observable_support": [0, 1],
+    "amplitude_values": [0, 1, 2, 5],
+    "time_values": [0.05],
+    "radius_values": [0.5, 1.0],
+    "orientation_values": [-1, 1],
+    "beta_values": [0.5, 1.0, 2.0],
+    "c": 0.6,
+    "chi": 1.0,
+    "r": -1.0,
+    "g": 0.6,
+    "lambda": 0.1,
+    "hbar": 1.0,
+    "commutator_tolerance": 1e-8,
+    "finite_tolerance": 1e-8,
+    "agreement_tolerance": 1e-7,
+    "positive_shift": 1.0
+  },
+  "analytic_fixture": {
+    "g": "3/5",
+    "lambda": "2/7",
+    "c": "2/3",
+    "t": "1/3",
+    "sigma": "1/5",
+    "expected_G": "51/35",
+    "expected_rate": "17/140",
+    "expected_margin": "11/140",
+    "expected_prefactor": "2/9"
+  },
+  "model": {
+    "history": "D_sigma(t,a)=U(H+sigma W_L,t) A_a U(H+sigma W_L,t)^* - U(H,t) A_a U(H,t)^*",
+    "source_observable": "A_a=exp(i a (q_0+q_1)/hbar)",
+    "local_weight": "K_X=H_{sites 0,1,bond(0,1)}-min(H_X)+I",
+    "candidate_source_weight": "w_sigma(a)=(1+|a|) exp(sigma |a|^4)",
+    "normalized_quantity": "sqrt(sum of four local weighted leg squares)/w_sigma(a)",
+    "four_legs": [
+      "||K_X D rho^(1/2)||_HS^2",
+      "||K_X D^* rho^(1/2)||_HS^2",
+      "||D K_X rho^(1/2)||_HS^2",
+      "||D^* K_X rho^(1/2)||_HS^2"
+    ],
+    "comparison": "The full shifted Hamiltonian weight is retained as a finite baseline; no global-K uniformity is assumed."
+  },
+  "scope": {
+    "actual_q3_source_weight_rows_closed": true,
+    "independent_trace_reconstruction_closed": true,
+    "finite_source_weight_normalization_closed": true,
+    "candidate_source_weight_uniformity_proved": false,
+    "actual_q3_entire_history_theorem_closed": false,
+    "direct_d_delta_d_cauchy_closed": false,
+    "modular_domain_transfer_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "adversarial_review": [
+    {"axis": "source normalization", "check": "The four-leg norm is divided by the declared scalar w_sigma(a), while the unnormalized values remain recorded; no square-versus-norm substitution is hidden.", "disposition": "UPHELD"},
+    {"axis": "noncommuting local weight", "check": "K_X is applied as a matrix in the full-H representation and no commutation with rho or D is assumed.", "disposition": "UPHELD"},
+    {"axis": "amplitude range", "check": "The four amplitudes and finite volume/beta/cutoff grid are diagnostics only; no infinite source or volume limit is inferred.", "disposition": "UPHELD-OPEN"},
+    {"axis": "entire-series transfer", "check": "The analytic rate and positive sigma margin are Lean-checked, but the actual Q3 word incidence and cancellations are not identified with the prescribed family.", "disposition": "UPHELD-OPEN"},
+    {"axis": "independent lane", "check": "Trace formulas reconstruct all four legs without inserting rho^(1/2), and row coverage is checked independently.", "disposition": "UPHELD"},
+    {"axis": "QFT promotion", "check": "Common-core domain, source/volume uniformity, exhaustion, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector A and Pre-A remain open.", "disposition": "UPHELD-OPEN"}
+  ],
+  "formal_integration": {
+    "lean_entry": "verification/lean/Tect/R318.lean",
+    "result_ids": [],
+    "negative_ids": [],
+    "changelog_event": null
+  },
+  "next_action": "Use the normalized finite rows to decide whether the entire source weight is a viable common-core topology; if so, define the actual Q3 source seminorm and prove a six-neighbour, two-orientation, volume-uniform history bound before attempting exhaustion and QFT promotion.",
+  "no_overclaim": "This package tests a candidate source-weight normalization on actual finite Q3 matrices. It does not prove an entire-source seminorm, a uniform common-core estimate, a thermodynamic QFT, C6, Sector A, Pre-A, or a Clay result.",
+  "files": {
+    "primary": "codes/foundations/pre_a_cp1_st8_q3lock_source_weight_d_audit.py",
+    "independent": "codes/foundations/pre_a_cp1_st8_q3lock_source_weight_d_audit_independent.py",
+    "integrated": "codes/foundations/pre_a_cp1_st8_q3lock_source_weight_d_audit_verify.py",
+    "lean": "verification/lean/Tect/R318.lean",
+    "primary_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-27-primary-pre_a_cp1_st8_q3lock_source_weight_d_audit/primary.json",
+    "independent_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-27-independent-pre_a_cp1_st8_q3lock_source_weight_d_audit/independent.json",
+    "integrated_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-27-integrated-pre_a_cp1_st8_q3lock_source_weight_d_audit/integrated.json"
+  },
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R318.lean",
+    "theorem_markers": ["q3_source_rate_fixture", "q3_source_sigma_margin", "q3_source_prefactor", "source_weight_norm_fixture"],
+    "command": "lake env lean Tect/R318.lean",
+    "boundary": "Lean checks the exact rational entire-weight rate, margin, prefactor, and the norm-level normalization identity; Python checks actual Q3 matrices."
+  },
+  "qft_interface": {
+    "closed": "Finite actual-Q3 local-weighted four-leg histories are normalized by the exact candidate entire source weight and independently reconstructed by trace formulas.",
+    "open": "A source-, volume-, cutoff- and beta-uniform source seminorm, modular-domain transfer, direct Cauchy, product/core density, exhaustion, common alpha, OS/KMS/GNS identification, gap, continuum and Pre-A remain open.",
+    "tect_boundary": "No heat_root_incidence or canonical A1/R-192 production owner is supplied."
+  }
+}

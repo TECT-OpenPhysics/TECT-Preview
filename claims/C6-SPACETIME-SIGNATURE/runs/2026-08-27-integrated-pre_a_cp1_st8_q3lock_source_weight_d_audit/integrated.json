@@ -1,0 +1,143 @@
+{
+  "assertion_count": 14,
+  "assertions": [
+    {
+      "actual": "['EXP-001148', 'T-054']",
+      "expected": "EXP-001148/T-054",
+      "name": "identity",
+      "pass": true
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "name": "claim nonbearing",
+      "pass": true
+    },
+    {
+      "actual": "['71f0dd2a9a8019f7be3763658654c9cdc9a6a480d06ee70abf21f82baa3858e7', '695ad9851debc71fe891e41d47babf0d8e2324b33f144280b30bcf8ba58e8fee']",
+      "expected": "distinct SHA-256",
+      "name": "source lanes distinct",
+      "pass": true
+    },
+    {
+      "actual": "['q3_source_rate_fixture', 'q3_source_sigma_margin', 'q3_source_prefactor', 'source_weight_norm_fixture']",
+      "expected": "present",
+      "name": "Lean source",
+      "pass": true
+    },
+    {
+      "actual": "[]",
+      "expected": "none",
+      "name": "Lean forbidden",
+      "pass": true
+    },
+    {
+      "actual": "PRIMARY SOURCE-WEIGHT-D-AUDIT PASS 414/414 rows=144\n",
+      "expected": "PASS",
+      "name": "primary child",
+      "pass": true
+    },
+    {
+      "actual": "INDEPENDENT SOURCE-WEIGHT-D-AUDIT PASS 293/293 rows=144\n",
+      "expected": "PASS",
+      "name": "independent child",
+      "pass": true
+    },
+    {
+      "actual": "[144, 144]",
+      "expected": "144",
+      "name": "row count agreement",
+      "pass": true
+    },
+    {
+      "actual": "[[0.0048236832322994415, 0.009899536265406057, 0.012910897329227889], [0.0048236832322994415, 0.009899536265406062, 0.01291089732922788]]",
+      "expected": "within tolerance",
+      "name": "normalized local agreement",
+      "pass": true
+    },
+    {
+      "actual": "[[0.0048236832322994415, 0.015531670785280994, 0.02599654446548214], [0.0048236832322994415, 0.015531670785280987, 0.025996544465482115]]",
+      "expected": "within tolerance",
+      "name": "normalized full agreement",
+      "pass": true
+    },
+    {
+      "actual": "[{'actual_q3_entire_history_theorem_closed': False, 'actual_q3_source_weight_rows_closed': True, 'amplitude_values': [0.0, 1.0, 2.0, 5.0], 'candidate_source_weight_uniformity_proved': False, 'common_alpha_closed': False, 'direct_d_delta_d_cauchy_closed': False, 'finite_source_weight_normalization_closed': True, 'modular_domain_transfer_closed': False, 'normalized_full_maxima_by_volume': [0.0048236832322994415, 0.015531670785280994, 0.02599654446548214], 'normalized_local_maxima_by_volume': [0.0048236832322994415, 0.009899536265406057, 0.012910897329227889], 'pre_a_closed': False, 'raw_local_maxima_by_volume': [0.011783320008843003, 0.02418264179814717, 0.03153881121648343], 'row_count': 144, 'sigma': 0.2, 'summary_rows': [{'amplitude': 0.0, 'max_full_four_leg_norm': 9.239916128963263e-15, 'max_full_normalized_norm': 9.239916128963263e-15, 'max_local_four_leg_norm': 9.239916128963263e-15, 'max_local_normalized_norm': 9.239916128963263e-15, 'volume': 2}, {'amplitude': 1.0, 'max_full_four_leg_norm': 0.011783320008843003, 'max_full_normalized_norm': 0.0048236832322994415, 'max_local_four_leg_norm': 0.011783320008843003, 'max_local_normalized_norm': 0.0048236832322994415, 'volume': 2}, {'amplitude': 2.0, 'max_full_four_leg_norm': 0.008112984760258776, 'max_full_normalized_norm': 0.00011023437989034824, 'max_local_four_leg_norm': 0.008112984760258776, 'max_local_normalized_norm': 0.00011023437989034824, 'volume': 2}, {'amplitude': 5.0, 'max_full_four_leg_norm': 0.0018473843204699538, 'max_full_normalized_norm': 1.5907274116761868e-58, 'max_local_four_leg_norm': 0.0018473843204699538, 'max_local_normalized_norm': 1.5907274116761868e-58, 'volume': 2}, {'amplitude': 0.0, 'max_full_four_leg_norm': 3.5404591919012756e-14, 'max_full_normalized_norm': 3.5404591919012756e-14, 'max_local_four_leg_norm': 1.884393493934527e-14, 'max_local_normalized_norm': 1.884393493934527e-14, 'volume': 4}, {'amplitude': 1.0, 'max_full_four_leg_norm': 0.037940851071955876, 'max_full_normalized_norm': 0.015531670785280994, 'max_local_four_leg_norm': 0.02418264179814717, 'max_local_normalized_norm': 0.009899536265406057, 'volume': 4}, {'amplitude': 2.0, 'max_full_four_leg_norm': 0.02612573068074163, 'max_full_normalized_norm': 0.00035498078769741686, 'max_local_four_leg_norm': 0.01671940951889176, 'max_local_normalized_norm': 0.00022717332706896786, 'volume': 4}, {'amplitude': 5.0, 'max_full_four_leg_norm': 0.0063621134026986, 'max_full_normalized_norm': 5.478225658692723e-58, 'max_local_four_leg_norm': 0.0040593962062997315, 'max_local_normalized_norm': 3.495424719515112e-58, 'volume': 4}, {'amplitude': 0.0, 'max_full_four_leg_norm': 9.99366742511155e-14, 'max_full_normalized_norm': 9.99366742511155e-14, 'max_local_four_leg_norm': 3.576851594481534e-14, 'max_local_normalized_norm': 3.576851594481534e-14, 'volume': 6}, {'amplitude': 1.0, 'max_full_four_leg_norm': 0.06350450222554677, 'max_full_normalized_norm': 0.02599654446548214, 'max_local_four_leg_norm': 0.03153881121648343, 'max_local_normalized_norm': 0.012910897329227889, 'volume': 6}, {'amplitude': 2.0, 'max_full_four_leg_norm': 0.04344808010006997, 'max_full_normalized_norm': 0.0005903465011691487, 'max_local_four_leg_norm': 0.02169236783384346, 'max_local_normalized_norm': 0.00029474290747229237, 'volume': 6}, {'amplitude': 5.0, 'max_full_four_leg_norm': 0.010642200738837992, 'max_full_normalized_norm': 9.163680912655822e-58, 'max_local_four_leg_norm': 0.005275427552346218, 'max_local_normalized_norm': 4.5425129589138065e-58, 'volume': 6}]}, {'actual_q3_entire_history_theorem_closed': False, 'actual_q3_source_weight_rows_closed': True, 'candidate_source_weight_uniformity_proved': False, 'common_alpha_closed': False, 'direct_d_delta_d_cauchy_closed': False, 'independent_trace_reconstruction_closed': True, 'modular_domain_transfer_closed': False, 'normalized_full_maxima_by_volume': [0.0048236832322994415, 0.015531670785280987, 0.025996544465482115], 'normalized_local_maxima_by_volume': [0.0048236832322994415, 0.009899536265406062, 0.01291089732922788], 'pre_a_closed': False, 'row_count': 144, 'sigma': 0.2, 'summary_rows': [{'amplitude': 0.0, 'beta': 0.5, 'max_full_normalized_norm': 9.239916128963268e-15, 'max_local_normalized_norm': 9.239916128963268e-15, 'volume': 2}, {'amplitude': 1.0, 'beta': 0.5, 'max_full_normalized_norm': 0.003804868367149201, 'max_local_normalized_norm': 0.003804868367149201, 'volume': 2}, {'amplitude': 2.0, 'beta': 0.5, 'max_full_normalized_norm': 9.70675624768676e-05, 'max_local_normalized_norm': 9.70675624768676e-05, 'volume': 2}, {'amplitude': 5.0, 'beta': 0.5, 'max_full_normalized_norm': 1.3621215809410859e-58, 'max_local_normalized_norm': 1.3621215809410859e-58, 'volume': 2}, {'amplitude': 0.0, 'beta': 1.0, 'max_full_normalized_norm': 8.179614449984756e-15, 'max_local_normalized_norm': 8.179614449984756e-15, 'volume': 2}, {'amplitude': 1.0, 'beta': 1.0, 'max_full_normalized_norm': 0.004109353210909206, 'max_local_normalized_norm': 0.004109353210909206, 'volume': 2}, {'amplitude': 2.0, 'beta': 1.0, 'max_full_normalized_norm': 0.00010030916798554224, 'max_local_normalized_norm': 0.00010030916798554224, 'volume': 2}, {'amplitude': 5.0, 'beta': 1.0, 'max_full_normalized_norm': 1.4620903217517695e-58, 'max_local_normalized_norm': 1.4620903217517695e-58, 'volume': 2}, {'amplitude': 0.0, 'beta': 2.0, 'max_full_normalized_norm': 6.4197460237021914e-15, 'max_local_normalized_norm': 6.4197460237021914e-15, 'volume': 2}, {'amplitude': 1.0, 'beta': 2.0, 'max_full_normalized_norm': 0.0048236832322994415, 'max_local_normalized_norm': 0.0048236832322994415, 'volume': 2}, {'amplitude': 2.0, 'beta': 2.0, 'max_full_normalized_norm': 0.00011023437989034821, 'max_local_normalized_norm': 0.00011023437989034821, 'volume': 2}, {'amplitude': 5.0, 'beta': 2.0, 'max_full_normalized_norm': 1.590727411676187e-58, 'max_local_normalized_norm': 1.590727411676187e-58, 'volume': 2}, {'amplitude': 0.0, 'beta': 0.5, 'max_full_normalized_norm': 3.540459191901277e-14, 'max_local_normalized_norm': 1.8843934939345274e-14, 'volume': 4}, {'amplitude': 1.0, 'beta': 0.5, 'max_full_normalized_norm': 0.010786617728783133, 'max_local_normalized_norm': 0.005791416889372665, 'volume': 4}, {'amplitude': 2.0, 'beta': 0.5, 'max_full_normalized_norm': 0.0002712356023615113, 'max_local_normalized_norm': 0.000147275517546344, 'volume': 4}, {'amplitude': 5.0, 'beta': 0.5, 'max_full_normalized_norm': 3.7906621325949355e-58, 'max_local_normalized_norm': 2.038785698416768e-58, 'volume': 4}, {'amplitude': 0.0, 'beta': 1.0, 'max_full_normalized_norm': 2.762540146022317e-14, 'max_local_normalized_norm': 1.588706316512139e-14, 'volume': 4}, {'amplitude': 1.0, 'beta': 1.0, 'max_full_normalized_norm': 0.012637128337670693, 'max_local_normalized_norm': 0.007521798871974152, 'volume': 4}, {'amplitude': 2.0, 'beta': 1.0, 'max_full_normalized_norm': 0.0002999571697793486, 'max_local_normalized_norm': 0.00017970373083096757, 'volume': 4}, {'amplitude': 5.0, 'beta': 1.0, 'max_full_normalized_norm': 4.439125809213478e-58, 'max_local_normalized_norm': 2.6513761534003618e-58, 'volume': 4}, {'amplitude': 0.0, 'beta': 2.0, 'max_full_normalized_norm': 2.3326678042522022e-14, 'max_local_normalized_norm': 1.3134486105126378e-14, 'volume': 4}, {'amplitude': 1.0, 'beta': 2.0, 'max_full_normalized_norm': 0.015531670785280987, 'max_local_normalized_norm': 0.009899536265406062, 'volume': 4}, {'amplitude': 2.0, 'beta': 2.0, 'max_full_normalized_norm': 0.0003549807876974168, 'max_local_normalized_norm': 0.0002271733270689679, 'volume': 4}, {'amplitude': 5.0, 'beta': 2.0, 'max_full_normalized_norm': 5.478225658692725e-58, 'max_local_normalized_norm': 3.495424719515111e-58, 'volume': 4}, {'amplitude': 0.0, 'beta': 0.5, 'max_full_normalized_norm': 9.993667425111549e-14, 'max_local_normalized_norm': 3.5768515944815347e-14, 'volume': 6}, {'amplitude': 1.0, 'beta': 0.5, 'max_full_normalized_norm': 0.017610176466419197, 'max_local_normalized_norm': 0.006617533093566651, 'volume': 6}, {'amplitude': 2.0, 'beta': 0.5, 'max_full_normalized_norm': 0.0004448478599761108, 'max_local_normalized_norm': 0.000169091720206409, 'volume': 6}, {'amplitude': 5.0, 'beta': 0.5, 'max_full_normalized_norm': 6.175007405854177e-58, 'max_local_normalized_norm': 2.320364643030457e-58, 'volume': 6}, {'amplitude': 0.0, 'beta': 1.0, 'max_full_normalized_norm': 7.788908211273903e-14, 'max_local_normalized_norm': 2.8450746398821914e-14, 'volume': 6}, {'amplitude': 1.0, 'beta': 1.0, 'max_full_normalized_norm': 0.02120533503410355, 'max_local_normalized_norm': 0.009343097019065025, 'volume': 6}, {'amplitude': 2.0, 'beta': 1.0, 'max_full_normalized_norm': 0.0005004054822883632, 'max_local_normalized_norm': 0.0002218409986455163, 'volume': 6}, {'amplitude': 5.0, 'beta': 1.0, 'max_full_normalized_norm': 7.447311092865463e-58, 'max_local_normalized_norm': 3.2810443022249104e-58, 'volume': 6}, {'amplitude': 0.0, 'beta': 2.0, 'max_full_normalized_norm': 6.356687573102804e-14, 'max_local_normalized_norm': 2.018764306247677e-14, 'volume': 6}, {'amplitude': 1.0, 'beta': 2.0, 'max_full_normalized_norm': 0.025996544465482115, 'max_local_normalized_norm': 0.01291089732922788, 'volume': 6}, {'amplitude': 2.0, 'beta': 2.0, 'max_full_normalized_norm': 0.0005903465011691486, 'max_local_normalized_norm': 0.0002947429074722922, 'volume': 6}, {'amplitude': 5.0, 'beta': 2.0, 'max_full_normalized_norm': 9.163680912655815e-58, 'max_local_normalized_norm': 4.542512958913804e-58, 'volume': 6}]}]",
+      "expected": "finite actual-Q3 source-weight rows",
+      "name": "finite rows promoted",
+      "pass": true
+    },
+    {
+      "actual": "[{'actual_q3_entire_history_theorem_closed': False, 'actual_q3_source_weight_rows_closed': True, 'amplitude_values': [0.0, 1.0, 2.0, 5.0], 'candidate_source_weight_uniformity_proved': False, 'common_alpha_closed': False, 'direct_d_delta_d_cauchy_closed': False, 'finite_source_weight_normalization_closed': True, 'modular_domain_transfer_closed': False, 'normalized_full_maxima_by_volume': [0.0048236832322994415, 0.015531670785280994, 0.02599654446548214], 'normalized_local_maxima_by_volume': [0.0048236832322994415, 0.009899536265406057, 0.012910897329227889], 'pre_a_closed': False, 'raw_local_maxima_by_volume': [0.011783320008843003, 0.02418264179814717, 0.03153881121648343], 'row_count': 144, 'sigma': 0.2, 'summary_rows': [{'amplitude': 0.0, 'max_full_four_leg_norm': 9.239916128963263e-15, 'max_full_normalized_norm': 9.239916128963263e-15, 'max_local_four_leg_norm': 9.239916128963263e-15, 'max_local_normalized_norm': 9.239916128963263e-15, 'volume': 2}, {'amplitude': 1.0, 'max_full_four_leg_norm': 0.011783320008843003, 'max_full_normalized_norm': 0.0048236832322994415, 'max_local_four_leg_norm': 0.011783320008843003, 'max_local_normalized_norm': 0.0048236832322994415, 'volume': 2}, {'amplitude': 2.0, 'max_full_four_leg_norm': 0.008112984760258776, 'max_full_normalized_norm': 0.00011023437989034824, 'max_local_four_leg_norm': 0.008112984760258776, 'max_local_normalized_norm': 0.00011023437989034824, 'volume': 2}, {'amplitude': 5.0, 'max_full_four_leg_norm': 0.0018473843204699538, 'max_full_normalized_norm': 1.5907274116761868e-58, 'max_local_four_leg_norm': 0.0018473843204699538, 'max_local_normalized_norm': 1.5907274116761868e-58, 'volume': 2}, {'amplitude': 0.0, 'max_full_four_leg_norm': 3.5404591919012756e-14, 'max_full_normalized_norm': 3.5404591919012756e-14, 'max_local_four_leg_norm': 1.884393493934527e-14, 'max_local_normalized_norm': 1.884393493934527e-14, 'volume': 4}, {'amplitude': 1.0, 'max_full_four_leg_norm': 0.037940851071955876, 'max_full_normalized_norm': 0.015531670785280994, 'max_local_four_leg_norm': 0.02418264179814717, 'max_local_normalized_norm': 0.009899536265406057, 'volume': 4}, {'amplitude': 2.0, 'max_full_four_leg_norm': 0.02612573068074163, 'max_full_normalized_norm': 0.00035498078769741686, 'max_local_four_leg_norm': 0.01671940951889176, 'max_local_normalized_norm': 0.00022717332706896786, 'volume': 4}, {'amplitude': 5.0, 'max_full_four_leg_norm': 0.0063621134026986, 'max_full_normalized_norm': 5.478225658692723e-58, 'max_local_four_leg_norm': 0.0040593962062997315, 'max_local_normalized_norm': 3.495424719515112e-58, 'volume': 4}, {'amplitude': 0.0, 'max_full_four_leg_norm': 9.99366742511155e-14, 'max_full_normalized_norm': 9.99366742511155e-14, 'max_local_four_leg_norm': 3.576851594481534e-14, 'max_local_normalized_norm': 3.576851594481534e-14, 'volume': 6}, {'amplitude': 1.0, 'max_full_four_leg_norm': 0.06350450222554677, 'max_full_normalized_norm': 0.02599654446548214, 'max_local_four_leg_norm': 0.03153881121648343, 'max_local_normalized_norm': 0.012910897329227889, 'volume': 6}, {'amplitude': 2.0, 'max_full_four_leg_norm': 0.04344808010006997, 'max_full_normalized_norm': 0.0005903465011691487, 'max_local_four_leg_norm': 0.02169236783384346, 'max_local_normalized_norm': 0.00029474290747229237, 'volume': 6}, {'amplitude': 5.0, 'max_full_four_leg_norm': 0.010642200738837992, 'max_full_normalized_norm': 9.163680912655822e-58, 'max_local_four_leg_norm': 0.005275427552346218, 'max_local_normalized_norm': 4.5425129589138065e-58, 'volume': 6}]}, {'actual_q3_entire_history_theorem_closed': False, 'actual_q3_source_weight_rows_closed': True, 'candidate_source_weight_uniformity_proved': False, 'common_alpha_closed': False, 'direct_d_delta_d_cauchy_closed': False, 'independent_trace_reconstruction_closed': True, 'modular_domain_transfer_closed': False, 'normalized_full_maxima_by_volume': [0.0048236832322994415, 0.015531670785280987, 0.025996544465482115], 'normalized_local_maxima_by_volume': [0.0048236832322994415, 0.009899536265406062, 0.01291089732922788], 'pre_a_closed': False, 'row_count': 144, 'sigma': 0.2, 'summary_rows': [{'amplitude': 0.0, 'beta': 0.5, 'max_full_normalized_norm': 9.239916128963268e-15, 'max_local_normalized_norm': 9.239916128963268e-15, 'volume': 2}, {'amplitude': 1.0, 'beta': 0.5, 'max_full_normalized_norm': 0.003804868367149201, 'max_local_normalized_norm': 0.003804868367149201, 'volume': 2}, {'amplitude': 2.0, 'beta': 0.5, 'max_full_normalized_norm': 9.70675624768676e-05, 'max_local_normalized_norm': 9.70675624768676e-05, 'volume': 2}, {'amplitude': 5.0, 'beta': 0.5, 'max_full_normalized_norm': 1.3621215809410859e-58, 'max_local_normalized_norm': 1.3621215809410859e-58, 'volume': 2}, {'amplitude': 0.0, 'beta': 1.0, 'max_full_normalized_norm': 8.179614449984756e-15, 'max_local_normalized_norm': 8.179614449984756e-15, 'volume': 2}, {'amplitude': 1.0, 'beta': 1.0, 'max_full_normalized_norm': 0.004109353210909206, 'max_local_normalized_norm': 0.004109353210909206, 'volume': 2}, {'amplitude': 2.0, 'beta': 1.0, 'max_full_normalized_norm': 0.00010030916798554224, 'max_local_normalized_norm': 0.00010030916798554224, 'volume': 2}, {'amplitude': 5.0, 'beta': 1.0, 'max_full_normalized_norm': 1.4620903217517695e-58, 'max_local_normalized_norm': 1.4620903217517695e-58, 'volume': 2}, {'amplitude': 0.0, 'beta': 2.0, 'max_full_normalized_norm': 6.4197460237021914e-15, 'max_local_normalized_norm': 6.4197460237021914e-15, 'volume': 2}, {'amplitude': 1.0, 'beta': 2.0, 'max_full_normalized_norm': 0.0048236832322994415, 'max_local_normalized_norm': 0.0048236832322994415, 'volume': 2}, {'amplitude': 2.0, 'beta': 2.0, 'max_full_normalized_norm': 0.00011023437989034821, 'max_local_normalized_norm': 0.00011023437989034821, 'volume': 2}, {'amplitude': 5.0, 'beta': 2.0, 'max_full_normalized_norm': 1.590727411676187e-58, 'max_local_normalized_norm': 1.590727411676187e-58, 'volume': 2}, {'amplitude': 0.0, 'beta': 0.5, 'max_full_normalized_norm': 3.540459191901277e-14, 'max_local_normalized_norm': 1.8843934939345274e-14, 'volume': 4}, {'amplitude': 1.0, 'beta': 0.5, 'max_full_normalized_norm': 0.010786617728783133, 'max_local_normalized_norm': 0.005791416889372665, 'volume': 4}, {'amplitude': 2.0, 'beta': 0.5, 'max_full_normalized_norm': 0.0002712356023615113, 'max_local_normalized_norm': 0.000147275517546344, 'volume': 4}, {'amplitude': 5.0, 'beta': 0.5, 'max_full_normalized_norm': 3.7906621325949355e-58, 'max_local_normalized_norm': 2.038785698416768e-58, 'volume': 4}, {'amplitude': 0.0, 'beta': 1.0, 'max_full_normalized_norm': 2.762540146022317e-14, 'max_local_normalized_norm': 1.588706316512139e-14, 'volume': 4}, {'amplitude': 1.0, 'beta': 1.0, 'max_full_normalized_norm': 0.012637128337670693, 'max_local_normalized_norm': 0.007521798871974152, 'volume': 4}, {'amplitude': 2.0, 'beta': 1.0, 'max_full_normalized_norm': 0.0002999571697793486, 'max_local_normalized_norm': 0.00017970373083096757, 'volume': 4}, {'amplitude': 5.0, 'beta': 1.0, 'max_full_normalized_norm': 4.439125809213478e-58, 'max_local_normalized_norm': 2.6513761534003618e-58, 'volume': 4}, {'amplitude': 0.0, 'beta': 2.0, 'max_full_normalized_norm': 2.3326678042522022e-14, 'max_local_normalized_norm': 1.3134486105126378e-14, 'volume': 4}, {'amplitude': 1.0, 'beta': 2.0, 'max_full_normalized_norm': 0.015531670785280987, 'max_local_normalized_norm': 0.009899536265406062, 'volume': 4}, {'amplitude': 2.0, 'beta': 2.0, 'max_full_normalized_norm': 0.0003549807876974168, 'max_local_normalized_norm': 0.0002271733270689679, 'volume': 4}, {'amplitude': 5.0, 'beta': 2.0, 'max_full_normalized_norm': 5.478225658692725e-58, 'max_local_normalized_norm': 3.495424719515111e-58, 'volume': 4}, {'amplitude': 0.0, 'beta': 0.5, 'max_full_normalized_norm': 9.993667425111549e-14, 'max_local_normalized_norm': 3.5768515944815347e-14, 'volume': 6}, {'amplitude': 1.0, 'beta': 0.5, 'max_full_normalized_norm': 0.017610176466419197, 'max_local_normalized_norm': 0.006617533093566651, 'volume': 6}, {'amplitude': 2.0, 'beta': 0.5, 'max_full_normalized_norm': 0.0004448478599761108, 'max_local_normalized_norm': 0.000169091720206409, 'volume': 6}, {'amplitude': 5.0, 'beta': 0.5, 'max_full_normalized_norm': 6.175007405854177e-58, 'max_local_normalized_norm': 2.320364643030457e-58, 'volume': 6}, {'amplitude': 0.0, 'beta': 1.0, 'max_full_normalized_norm': 7.788908211273903e-14, 'max_local_normalized_norm': 2.8450746398821914e-14, 'volume': 6}, {'amplitude': 1.0, 'beta': 1.0, 'max_full_normalized_norm': 0.02120533503410355, 'max_local_normalized_norm': 0.009343097019065025, 'volume': 6}, {'amplitude': 2.0, 'beta': 1.0, 'max_full_normalized_norm': 0.0005004054822883632, 'max_local_normalized_norm': 0.0002218409986455163, 'volume': 6}, {'amplitude': 5.0, 'beta': 1.0, 'max_full_normalized_norm': 7.447311092865463e-58, 'max_local_normalized_norm': 3.2810443022249104e-58, 'volume': 6}, {'amplitude': 0.0, 'beta': 2.0, 'max_full_normalized_norm': 6.356687573102804e-14, 'max_local_normalized_norm': 2.018764306247677e-14, 'volume': 6}, {'amplitude': 1.0, 'beta': 2.0, 'max_full_normalized_norm': 0.025996544465482115, 'max_local_normalized_norm': 0.01291089732922788, 'volume': 6}, {'amplitude': 2.0, 'beta': 2.0, 'max_full_normalized_norm': 0.0005903465011691486, 'max_local_normalized_norm': 0.0002947429074722922, 'volume': 6}, {'amplitude': 5.0, 'beta': 2.0, 'max_full_normalized_norm': 9.163680912655815e-58, 'max_local_normalized_norm': 4.542512958913804e-58, 'volume': 6}]}]",
+      "expected": "False",
+      "name": "uniformity firewall",
+      "pass": true
+    },
+    {
+      "actual": "{'actual_q3_source_weight_rows_closed': True, 'independent_trace_reconstruction_closed': True, 'finite_source_weight_normalization_closed': True, 'candidate_source_weight_uniformity_proved': False, 'actual_q3_entire_history_theorem_closed': False, 'direct_d_delta_d_cauchy_closed': False, 'modular_domain_transfer_closed': False, 'common_alpha_closed': False, 'hamiltonian_os_identification_closed': False, 'kms_gns_gap_closed': False, 'continuum_closed': False, 'c6_closed': False, 'sector_a_closed': False, 'pre_a_closed': False, 'no_new_negative_result': True, 'no_tier_change': True, 'no_pdf': True}",
+      "expected": "finite source-weight rows; QFT gates open",
+      "name": "scope firewall",
+      "pass": true
+    },
+    {
+      "actual": "{'status': 'PASS', 'command': 'lake env lean Tect/R318.lean', 'returncode': 0, 'output': ''}",
+      "expected": "PASS",
+      "name": "Lean compile",
+      "pass": true
+    }
+  ],
+  "audit_id": "PA-CP1-ST8-Q3LOCK-SOURCE-WEIGHT-D-AUDIT",
+  "boundary": {
+    "actual_q3_entire_history_theorem_closed": false,
+    "actual_q3_source_weight_rows_closed": true,
+    "c6_closed": false,
+    "candidate_source_weight_uniformity_proved": false,
+    "common_alpha_closed": false,
+    "continuum_closed": false,
+    "direct_d_delta_d_cauchy_closed": false,
+    "finite_source_weight_normalization_closed": true,
+    "hamiltonian_os_identification_closed": false,
+    "independent_trace_reconstruction_closed": true,
+    "kms_gns_gap_closed": false,
+    "modular_domain_transfer_closed": false,
+    "no_new_negative_result": true,
+    "no_pdf": true,
+    "no_tier_change": true,
+    "pre_a_closed": false,
+    "sector_a_closed": false
+  },
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "derived": {
+    "independent_normalized_local_maxima_by_volume": [
+      0.0048236832322994415,
+      0.009899536265406062,
+      0.01291089732922788
+    ],
+    "primary_normalized_local_maxima_by_volume": [
+      0.0048236832322994415,
+      0.009899536265406057,
+      0.012910897329227889
+    ],
+    "qft_promoted": false,
+    "source_weight_rows_promoted": true,
+    "source_weight_uniformity_promoted": false
+  },
+  "exploration_id": "EXP-001148",
+  "lean": {
+    "command": "lake env lean Tect/R318.lean",
+    "output": "",
+    "returncode": 0,
+    "status": "PASS"
+  },
+  "provenance": {
+    "independent_sha256": "695ad9851debc71fe891e41d47babf0d8e2324b33f144280b30bcf8ba58e8fee",
+    "lean_sha256": "6dde0cee78fc852d2fbc1e14136c5f1ba821f7897d97d26234058a41f4be335e",
+    "manifest_sha256": "f62a628b069e22f0450e9b45fa70a89c737fc04507197e65fae1c31d71cc2eaf",
+    "primary_sha256": "71f0dd2a9a8019f7be3763658654c9cdc9a6a480d06ee70abf21f82baa3858e7"
+  },
+  "recorded_at": "2026-08-25T19:07:05.053124Z",
+  "run_kind": "integrated",
+  "schema": "tect/foundation-audit/1.0",
+  "task_id": "T-054",
+  "verdict": "PASS"
+}
