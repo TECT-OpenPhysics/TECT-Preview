@@ -1,0 +1,118 @@
+{
+  "schema": "tect/pre-a-cp1-st8-q3lock-repeated-radius-loss-derivative-obstruction/1.0",
+  "exploration_id": "EXP-001117",
+  "prior_exploration_id": "EXP-001116",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "tier": "T0",
+  "claim_bearing": false,
+  "title": "Repeated radius-loss derivative budget obstruction for the Q3 history candidate",
+  "question": "Can the formal bi-entire radius-loss derivative estimates supply a volume-independent C^n bound for arbitrarily long Q3 histories at a fixed positive radius?",
+  "upstream_input": {
+    "source_manifest": "strategy/pre-a-cp1-st8-q3lock-actual-source-coefficient-product-manifest.json",
+    "source_exploration": "EXP-001050",
+    "mixed_graph_manifest": "strategy/pre-a-cp1-st8-q3lock-weighted-mixed-graph-lift-manifest.json",
+    "mixed_graph_exploration": "EXP-001045",
+    "radius_loss_exploration": "EXP-001116"
+  },
+  "model": {
+    "coefficient_space": "weighted l1 coefficients in q,v,a with radii (R_q,R_v,S)",
+    "source_polynomial": "P=onsite(q,a)+3*edge_u(q,v,a)+6*bond_u(q,v,a)",
+    "derivative": "D_a c_(i,j,k)=(k+1)c_(i,j,k+1)",
+    "witness": "f_n(a)=a^n has ||f_n||_S=S^n and ||D_a^n f_n||_(S')=n! for every 0<S'<=S",
+    "lower_bound": "||D_a^n||_(A_S -> A_S') >= n!/S^n",
+    "asymptotic": "n!/S^n is superexponential in n, so no fixed C gives ||D_a^n||<=C^n for all n",
+    "orientation": "The same source radius is used for both source-centered orientations"
+  },
+  "fixture": {
+    "field_radius": "4",
+    "reduced_field_radius": "3",
+    "source_radius": "1/4",
+    "reduced_source_radius": "1/8",
+    "onsite_coupling": "3/5",
+    "orientation_count": 2,
+    "neighbour_count": 6,
+    "comparison_base": 12,
+    "orders": [1, 2, 4, 8, 16, 32],
+    "small_exact_witness_order": 8,
+    "asymptotic_witness_order": 32,
+    "expected_source_degree": 4,
+    "expected_local_rate": "1382807/7168"
+  },
+  "scope": {
+    "actual_q3_source_polynomial_revalidated": true,
+    "two_orientation_source_radius_revalidated": true,
+    "n_fold_derivative_lower_bound_closed": true,
+    "fixed_exponential_derivative_envelope_refuted": true,
+    "finite_radius_loss_chain_rescue_refuted_for_this_derivative_model": true,
+    "actual_q3_common_core_map_proved": false,
+    "actual_q3_history_closed": false,
+    "factorial_spatial_incidence_supplied": false,
+    "volume_uniform_direct_d_delta_d_closed": false,
+    "common_alpha_closed": false,
+    "kms_os_closed": false,
+    "gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true,
+    "not_closed": "The obstruction removes only the pure repeated radius-loss derivative envelope. It does not rule out cancellations, non-Leibniz analytic/Frechet estimates, symmetric or state-weighted seminorms, an actual Q3 common core, a thermodynamic history, QFT reconstruction, the gap, the continuum, C6, Sector A or Pre-A."
+  },
+  "adversarial_review": [
+    {
+      "axis": "source provenance",
+      "check": "The field/source radii, actual source polynomial and local coefficient rate are re-read from the registered upstream manifests; the factorial witness is a test vector, not a fitted physical datum.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "derivative model versus Q3 history",
+      "check": "The lower bound applies to the formal pure source derivative D_a^n; it is not silently identified with every Q3 commutator word.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "radius loss",
+      "check": "The witness output is constant after n derivatives, so shrinking the final radius does not remove the n!/S^n growth; this rejects only this repeated-derivative strategy.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "exponential comparison",
+      "check": "The finite order-8 and order-32 comparisons are diagnostics; the all-n statement uses the elementary factorial lower bound and is not promoted to an operator theorem.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "volume and orientation",
+      "check": "The branch count is retained only as a comparison base; no volume-uniform factorial spatial incidence is inferred from it.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "Lean scope",
+      "check": "Lean R289 checks rational radii, factorial witnesses and the discrete lower-bound fixture only; it does not formalize coefficient completions, unbounded operators or limits.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "QFT promotion",
+      "check": "No KMS/OS reconstruction, GNS gap, continuum, C6, Sector A, Pre-A or TECT production owner follows.",
+      "disposition": "UPHELD"
+    }
+  ],
+  "formal_integration": {
+    "lean_entry": "verification/lean/Tect/R289.lean",
+    "events": [],
+    "negatives": [],
+    "results": [],
+    "no_new_result": true,
+    "no_new_negative": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "qft_interface": {
+    "closed": "The registered formal source radii and orientation rate are consistent, and the pure repeated radius-loss derivative envelope has superexponential n!/S^n growth.",
+    "open": "An actual Q3 common-core estimate must exploit cancellations or a topology with derivative closure; factorial spatial incidence, first passage, exhaustion, common alpha, Hamiltonian/KMS identification, OS/GNS, gap, continuum, C6, Sector A and Pre-A remain open.",
+    "tect_boundary": "No heat_root_incidence or canonical A1/R-192 production owner is supplied by this analytic boundary test."
+  },
+  "boundary": "T0 claim-nonbearing route boundary. The pure repeated radius-loss derivative architecture is parked; the result is not a no-go theorem for the actual Q3 dynamics or for stronger analytic, symmetric, state-weighted or modular constructions.",
+  "next_action": "Construct a genuinely derivative-closed Q3 common-core or state-weighted seminorm with explicit cancellations and both orientations; if it cannot produce a volume-uniform factorial history, register that separate obstruction before any QFT promotion."
+}
