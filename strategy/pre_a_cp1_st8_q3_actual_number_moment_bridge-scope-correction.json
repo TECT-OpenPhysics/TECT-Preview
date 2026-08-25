@@ -1,0 +1,55 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001107",
+  "title": "EXP-001106 scalar fixture scope correction",
+  "recorded_at": "2026-08-26T23:50:00Z",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-08-25",
+  "provenance": "contemporaneous",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "question": "Does the finite Q3 actual-number-moment package EXP-001106 use the full canonical eight-component onsite system or only a scalar component fixture?",
+  "method": [
+    "Read the EXP-001106 Hamiltonian implementation and finite fixture dimensions.",
+    "Compare its scalar q,p onsite and scalar bond terms with the current R-167 authority, which specifies an eight-component Q3 onsite/bond system.",
+    "Separate the validity of the finite scalar Markov audit from any claim about the full canonical Q3 component space."
+  ],
+  "finding": "EXP-001106 constructs a finite scalar oscillator at each lattice site: one q, one p, scalar q^4 onsite interaction, and scalar bond differences. The canonical R-167 Q3 route is eight-component, with vector q_x and p_x and full component-coupled onsite/bond structure. Therefore the EXP-001106 primary/independent/integrated results remain valid for their declared scalar component fixture, but they are not a full eight-component Q3 state theorem. The phrase actual finite Q3 is corrected to actual finite scalar-component Q3 proxy in the scope boundary; an eight-component number-moment/domain package remains a separate gate.",
+  "verdict": "advanced",
+  "decision_reason": "Append-only scope correction prevents a scalar component audit from being promoted to the canonical eight-component Q3 parent. No numerical row, Lean result, or finite Markov identity is withdrawn.",
+  "boundary": "T0 claim-nonbearing scope correction. The corrected scalar fixture does not establish the full eight-component onsite energy-to-number form inequality, full Q3 source/volume/history uniformity, unbounded common-core transfer, common alpha, OS/KMS/GNS reconstruction, gap, continuum, C6, Sector A or Pre-A.",
+  "evidence_refs": [
+    "strategy/pre_a_cp1_st8_q3lock_finite_q3_actual_number_moment_bridge_manifest.json#finite_fixture",
+    "codes/foundations/pre_a_cp1_st8_q3lock_finite_q3_actual_number_moment_bridge.py#build_hamiltonian",
+    "codes/foundations/pre_a_cp1_st8_q3lock_finite_q3_actual_number_moment_bridge_independent.py#hamiltonian",
+    "strategy/pre-a-cp1-st8-q3lock-local-measured-renyi-semiclassical-doublet-route-split-manifest.json#authority",
+    "strategy/pre-a-cp1-st8-q3lock-local-measured-renyi-semiclassical-doublet-route-split-manifest.json#q3_semiclassical_onsite",
+    "explorations/log.jsonl#EXP-001106"
+  ],
+  "formal_refs": {"events": [], "results": [], "negatives": []},
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-CP1-ST8-Q3LOCK-CONNECTED-RANK-TWO-OSCILLATOR-ELIMINATION-QPS-NORM-AND-CUTOFF-COMPATIBILITY",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "related": [{"id": "EXP-001106", "relation": "corrects"}],
+  "adversarial_review": [
+    {
+      "axis": "component count",
+      "check": "The implementation and manifest are explicitly scalar in q,p and do not silently represent eight components.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "finite identity",
+      "check": "The scalar Markov inequality and stored numerical rows remain mathematically valid within their declared fixture.",
+      "disposition": "DISMISSED"
+    },
+    {
+      "axis": "Q3 promotion",
+      "check": "No scalar result is used as the full canonical eight-component Q3 domain or QFT theorem.",
+      "disposition": "UPHELD"
+    }
+  ],
+  "next_action": "Construct a separate eight-component onsite number/energy bridge using the canonical R-167 vector Hamiltonian, or record a dimension/complexity obstruction before any full-Q3 CCR or common-alpha promotion."
+}

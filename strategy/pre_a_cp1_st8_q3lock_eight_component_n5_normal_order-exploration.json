@@ -1,0 +1,72 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001108",
+  "title": "Eight-component N5 normal-order admissibility audit",
+  "task_id": "T-054",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-CONNECTED-RANK-TWO-OSCILLATOR-ELIMINATION-QPS-NORM-AND-CUTOFF-COMPATIBILITY",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "question": "Does the full eight-component harmonic number N^5 have a normal-ordered expansion whose every monomial lies within anisotropic Shubin order five, so that the R-167 graph estimate can in principle be applied without a hidden higher-order term?",
+  "method": [
+    "Run the primary exact multicomponent Weyl normal-order implementation for d=1,2,3,8.",
+    "Run an independent multinomial reconstruction and independent ladder/tensor matrix lane.",
+    "Compare low-dimensional matrix powers with the normal-ordered expression on low blocks padded beyond the degree-10 boundary.",
+    "Compile Lean R280, which formalizes degree <= 10 implies anisotropic order <= 5, and enforce the QFT firewall in the integrated verifier."
+  ],
+  "finding": "The primary, independent, and integrated lanes all pass. For d=8, N^5 has 1286 normal-ordered monomials, maximum total creation-plus-annihilation degree 10, anisotropic order 5. The coefficient absolute-sum diagnostic is 87496. The d=1,2,3 rows are respectively 5/20/55 terms with coefficient absolute sums 52/454/1866. Low-block matrix residuals are 0.0, 2.842170943040401e-14, 1.7053025658242404e-13, and 2.9103830456733704e-11 for the tested d={1,2}, low dimensions={2,3}; all are within the declared tolerance. Lean R280 compiles with two checked declarations. This closes only the combinatorial eight-component normal-order and order-admissibility subgate.",
+  "verdict": "advanced",
+  "decision_reason": "The normal-ordered monomial family has no hidden degree above ten, so the successor graph/domain step can be stated against an explicit finite family. The result is claim-nonbearing and does not instantiate a uniform graph constant or identify the actual Q3 form domain.",
+  "boundary": "T0 claim-nonbearing combinatorial audit. It does not close the numerical uniform graph constant, q/p-to-creation-annihilation domain transfer, energy-to-number uniform form domination, eight-component Q3 Gibbs or evolved-history weighted-tail uniformity, source/volume/orientation/history uniformity, direct D-delta-D Cauchy control, common alpha, Hamiltonian-to-OS identification, KMS/GNS gap, continuum, C6, Sector A, or Pre-A.",
+  "evidence_refs": [
+    "strategy/pre_a_cp1_st8_q3lock_eight_component_n5_normal_order_manifest.json#exact_statement",
+    "codes/foundations/pre_a_cp1_st8_q3lock_eight_component_n5_normal_order.py#build_normal_order",
+    "codes/foundations/pre_a_cp1_st8_q3lock_eight_component_n5_normal_order_independent.py#independent_component_rows",
+    "codes/foundations/pre_a_cp1_st8_q3lock_eight_component_n5_normal_order_verify.py#run",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-integrated-pre_a_cp1_st8_q3lock_eight_component_n5_normal_order/integrated.json#verdict",
+    "verification/lean/Tect/R280.lean#anisotropic_order_bound",
+    "strategy/pre-a-cp1-st8-q3lock-local-measured-renyi-semiclassical-doublet-route-split-manifest.json#actual_q3_static_fifth_moment_and_elliptic_embedding"
+  ],
+  "formal_refs": {
+    "results": [],
+    "events": [],
+    "negatives": []
+  },
+  "adversarial_review": [
+    {
+      "axis": "component count and canonical scope",
+      "check": "The d=8 lane is generated from eight independent oscillator components; no scalar fixture is silently promoted.",
+      "disposition": "DISMISSED"
+    },
+    {
+      "axis": "noncommutative contractions",
+      "check": "The primary contraction recurrence and the independent one-component/multinomial reconstruction agree on all tested component rows and the matrix lane.",
+      "disposition": "DISMISSED"
+    },
+    {
+      "axis": "finite cutoff boundary",
+      "check": "Ambient matrix dimensions exceed the tested low blocks by the declared padding; the residuals remain below the agreement tolerance.",
+      "disposition": "DISMISSED"
+    },
+    {
+      "axis": "graph constant and form domain",
+      "check": "The finite order audit might be mistaken for the uniform R-167 graph estimate or q/p-to-a/a-dagger domain theorem.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "QFT promotion",
+      "check": "A combinatorial normal-order identity might be cited as OS/KMS/GNS, mass-gap, continuum, C6, Sector A, or Pre-A closure.",
+      "disposition": "UPHELD"
+    }
+  ],
+  "next_action": "Bind the explicit eight-component monomial family to the exact R-167 graph norm with a uniform constant on the canonical compact onsite-source set, then test the resulting energy-to-number form inequality on actual eight-component finite states before any Q3 state or QFT promotion.",
+  "provenance": "contemporaneous",
+  "recorded_by": "Codex",
+  "recorded_at": "2026-08-27T00:10:00Z",
+  "reviewed_on": "2026-08-25"
+}

@@ -1,0 +1,71 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-EIGHT-COMPONENT-N5-NORMAL-ORDER-v0",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001108",
+  "claim_bearing": false,
+  "parent_explorations": ["EXP-001107", "EXP-001104", "EXP-001105"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-CONNECTED-RANK-TWO-OSCILLATOR-ELIMINATION-QPS-NORM-AND-CUTOFF-COMPATIBILITY",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "question": "Does the full eight-component harmonic number N^5 have a normal-ordered expansion whose every monomial lies within anisotropic Shubin order five, so that the R-167 graph estimate can in principle be applied without a hidden higher-order term?",
+  "exact_statement": {
+    "operator": "For d components define N_d=sum_{r=1}^d a_r^dagger a_r with [a_r,a_s^dagger]=delta_rs. Expand N_d^5 in normal order (a^dagger)^alpha a^beta.",
+    "order": "Every normal-ordered monomial has total creation-plus-annihilation degree at most 10, hence anisotropic oscillator order at most 5 when each a or a^dagger is linear in p and q with p-order 1/2 and q-order 1/4.",
+    "eight_component_scope": "The primary symbolic lane computes d=1,2,3,8; the d=8 expansion is the canonical component count, while low-dimensional matrix lanes independently check the identity away from the artificial cutoff boundary.",
+    "form_boundary": "The order audit does not supply the numerical uniform graph constant, the q/p-to-a/a^dagger domain closure, or the eight-component Q3 Gibbs/history uniformity required for N^5<=C(1+k_h^5)."
+  },
+  "finite_fixture": {
+    "component_values": [1, 2, 3, 8],
+    "moment_order": 5,
+    "maximum_total_degree": 10,
+    "anisotropic_creation_annihilation_weight": 0.5,
+    "matrix_component_values": [1, 2],
+    "matrix_low_dimensions": [2, 3],
+    "matrix_ambient_padding": 11,
+    "tolerance": 1.0e-9,
+    "agreement_tolerance": 1.0e-8
+  },
+  "scope": {
+    "normal_order_expansion_closed": true,
+    "eight_component_order_admissibility_closed": true,
+    "low_block_matrix_identity_closed": true,
+    "uniform_graph_constant_instantiated": false,
+    "q_p_to_creation_annihilation_domain_closed": false,
+    "energy_to_number_uniform_form_domination_closed": false,
+    "q3_gibbs_weighted_tail_uniformity_closed": false,
+    "q3_evolved_history_weighted_tail_uniformity_closed": false,
+    "actual_unbounded_q3_domain_transfer_closed": false,
+    "source_volume_orientation_history_uniform_closed": false,
+    "direct_d_delta_d_cauchy_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false
+  },
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R280.lean",
+    "command": "lake env lean Tect/R280.lean",
+    "declarations": ["anisotropic_order_bound", "degree_fixture"],
+    "role": "R280 formalizes the scalar degree-to-order inequality used by the symbolic audit; it does not formalize the noncommutative expansion or the Q3 form domain."
+  },
+  "formal_integration": {
+    "results": [],
+    "events": [],
+    "negatives": [],
+    "lean": "R280 PASS",
+    "no_new_result": true,
+    "no_new_negative": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "boundary": "T0 claim-nonbearing eight-component normal-order admissibility audit. It reduces the energy-to-number bridge to the explicit graph-constant and domain-identification inputs; it does not close them or any QFT gate.",
+  "next_action": "Bind the normal-ordered monomial family to the exact R-167 graph norm with a uniform constant on the canonical eight-component compact onsite-source set, then test the resulting form inequality on actual eight-component finite states."
+}
