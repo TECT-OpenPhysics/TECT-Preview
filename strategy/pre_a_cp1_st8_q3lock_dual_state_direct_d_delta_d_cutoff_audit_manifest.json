@@ -1,0 +1,106 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-DUAL-STATE-DIRECT-D-DELTA-D-CUTOFF-AUDIT-v0",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001123",
+  "claim_bearing": false,
+  "parent_explorations": ["EXP-001122", "EXP-001113", "EXP-001080"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-FIFTH-ENERGY-MOMENT-AND-MODULAR-CUTOFF-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "question": "In the actual finite truncated Q3 regulator, does a smooth intersite coordinate cutoff have finite direct-D and full-H modular-derivative differences in both the reference Gibbs state and the local-character dual state, across the declared edge and square volumes?",
+  "model": {
+    "hamiltonian": "H=sum_x[p_x^2/(2 chi)+r q_x^2/2+g q_x^4/4]+sum_<xy>[c(q_x-q_y)^2/2+lambda(q_x-q_y)^2(q_x^2+q_y^2)/4]",
+    "cutoff": "q_L=eta(|q|/L)q with eta=1 on [0,1], eta=(1+cos(pi(s-1)))/2 on (1,2), eta=0 on [2,infinity); replace q by q_L only inside every bond",
+    "tail": "W_L=H-H_L",
+    "observable": "A=exp(i*a*q_0/hbar)",
+    "direct_difference": "D_sigma(t)=alpha_t^(H+sigma W_L)(A)-alpha_t^H(A), sigma in {-1,+1}",
+    "modular_derivative": "delta_H(D)=i[H,D]/hbar using the same full H that defines the reference Gibbs state",
+    "states": "rho=exp(-beta H)/Tr(exp(-beta H)); rho_dual=A rho A*",
+    "seminorm": "N_rho,#(X)^2=Tr(rho X*X)+Tr(rho XX*) evaluated for rho and rho_dual separately"
+  },
+  "finite_fixture": {
+    "volume_values": [2, 4],
+    "oscillator_dimensions_by_volume": {"2": [3, 4, 5, 6, 7], "4": [3, 4]},
+    "edges_by_volume": {
+      "2": [[0, 1]],
+      "4": [[0, 1], [0, 2], [1, 3], [2, 3]]
+    },
+    "beta": 1.0,
+    "chi": 1.0,
+    "hbar": 1.0,
+    "r": -1.0,
+    "g": 0.6,
+    "c": 1.0,
+    "lambda": 0.1,
+    "character_amplitude": 0.25,
+    "radius_values": [0.75, 0.9, 1.0],
+    "time_values": [0.1, 0.2],
+    "sign_values": [-1, 1],
+    "hermitian_tolerance": 1.0e-9,
+    "state_tolerance": 1.0e-9,
+    "commutation_tolerance": 1.0e-8,
+    "agreement_tolerance": 1.0e-7,
+    "finite_ratio_floor": 0.0
+  },
+  "scope": {
+    "finite_reference_direct_D_closed": true,
+    "finite_reference_delta_D_closed": true,
+    "finite_dual_direct_D_closed": true,
+    "finite_dual_delta_D_closed": true,
+    "finite_two_orientation_signs_closed": true,
+    "finite_dual_state_construction_closed": true,
+    "finite_ratio_audit_closed": true,
+    "actual_q3_dual_state_uniform_closed": false,
+    "actual_q3_modular_tail_uniform_closed": false,
+    "actual_unbounded_q3_common_core_closed": false,
+    "volume_uniform_direct_d_cauchy_closed": false,
+    "delta_d_cauchy_closed": false,
+    "product_core_density_closed": false,
+    "exhaustion_independence_closed": false,
+    "group_law_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "adversarial_review": [
+    {"axis": "dual state", "check": "rho_dual is constructed as A rho A* and is checked separately; it is not identified with the reference Gibbs state.", "disposition": "UPHELD"},
+    {"axis": "cutoff scope", "check": "Only bond coordinates are replaced by the declared smooth spectral cutoff; onsite kinetic and quartic terms remain those of the full finite regulator.", "disposition": "UPHELD"},
+    {"axis": "two orientations", "check": "Both sigma=-1 and sigma=+1 evolutions are evaluated, and each state seminorm retains both Tr(rho X*X) and Tr(rho XX*).", "disposition": "UPHELD"},
+    {"axis": "modular convention", "check": "delta_H uses the full H in the commutator, matching the state rho; no cutoff Hamiltonian is substituted in the derivative.", "disposition": "UPHELD"},
+    {"axis": "truncated CCR", "check": "All conclusions are finite matrix statements; no infinite-dimensional CCR, common-core, or domain closure is inferred.", "disposition": "UPHELD"},
+    {"axis": "uniformity", "check": "Finite rows and ratios are diagnostics only; volume, source, beta, regulator, and exhaustion uniformity remain explicit open fields.", "disposition": "UPHELD-OPEN"},
+    {"axis": "Lean", "check": "R294 checks only exact rational state/seminorm bookkeeping and scope markers; matrix exponentials and QFT limits remain in the Python artefacts.", "disposition": "UPHELD"},
+    {"axis": "QFT promotion", "check": "No common alpha, OS/KMS/GNS identification, gap, continuum, C6, Sector A, or Pre-A conclusion follows.", "disposition": "UPHELD-OPEN"}
+  ],
+  "formal_integration": {
+    "lean_entry": "verification/lean/Tect/R294.lean",
+    "result_ids": [],
+    "negative_ids": [],
+    "changelog_event": null
+  },
+  "qft_interface": {
+    "closed": "A finite actual-Q3 dual-state audit of direct D and full-H modular-derivative cutoff differences, with reproducible reference/dual two-sided seminorm rows.",
+    "open": "A source-, volume-, beta-, cutoff-, and orientation-uniform dual modular tail; an unbounded common core; direct D/delta-D Cauchy, exhaustion, common alpha, Hamiltonian-to-OS/KMS/GNS identification, gap, continuum, C6, Sector A and Pre-A remain open.",
+    "tect_boundary": "No heat_root_incidence or canonical A1/R-192 production owner is supplied."
+  },
+  "boundary": "T0 claim-nonbearing finite dual-state direct-D/delta-D diagnostic. It tests the necessary dual companion to EXP-001113 but is not a thermodynamic theorem.",
+  "next_action": "Use the measured dual/reference ratios to attempt an analytic local modular-tail estimate on one common Q3 core; if the ratios grow with regulator or volume, record that route-specific obstruction without promoting a finite trend to an asymptotic theorem.",
+  "verification": {
+    "primary_script": "codes/foundations/pre_a_cp1_st8_q3lock_dual_state_direct_d_delta_d_cutoff_audit.py",
+    "independent_script": "codes/foundations/pre_a_cp1_st8_q3lock_dual_state_direct_d_delta_d_cutoff_audit_independent.py",
+    "integrated_script": "codes/foundations/pre_a_cp1_st8_q3lock_dual_state_direct_d_delta_d_cutoff_audit_verify.py"
+  },
+  "no_overclaim": "This finite dual-state diagnostic is not an unbounded Q3 dynamics proof, a direct D/delta-D Cauchy theorem, an OS/KMS/GNS result, a mass-gap proof, a continuum result, a C6/Sector-A/Pre-A result, a TECT production map or a Clay result."
+}
