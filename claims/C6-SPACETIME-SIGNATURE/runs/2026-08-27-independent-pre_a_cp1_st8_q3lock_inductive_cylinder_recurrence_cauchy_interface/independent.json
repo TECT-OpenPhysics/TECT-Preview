@@ -1,0 +1,141 @@
+{
+  "assertion_count": 10,
+  "assertions": [
+    {
+      "actual": "['EXP-001151', 'T-054', False]",
+      "expected": "EXP-001151/T-054/false",
+      "group": "provenance",
+      "name": "provenance",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'degree': 6, 'recurrence_C': '1', 'recurrence_J': '1', 'base_weight': '2', 'time_step': '1/18', 'steps': 6, 'time_horizon': '1/3', 'boundary_distance': 10, 'source_mass': '1', 'orientation_count': 2}",
+      "expected": "positive inputs",
+      "group": "hypotheses",
+      "name": "input ordering",
+      "status": "PASS"
+    },
+    {
+      "actual": "[Fraction(1, 3), Fraction(1, 3)]",
+      "expected": "dt*n",
+      "group": "time",
+      "name": "time decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": "13",
+      "expected": "C+J*z*base",
+      "group": "recurrence",
+      "name": "weighted rate",
+      "status": "PASS"
+    },
+    {
+      "actual": "887503681/34012224",
+      "expected": "mass*factor^N",
+      "group": "recurrence",
+      "name": "closed response",
+      "status": "PASS"
+    },
+    {
+      "actual": "[Fraction(2, 1), Fraction(1, 1024)]",
+      "expected": "base^(-d)",
+      "group": "spatial envelope",
+      "name": "integer base spatial",
+      "status": "PASS"
+    },
+    {
+      "actual": "887503681/52242776064",
+      "expected": "orientations*horizon*envelope",
+      "group": "Cauchy interface",
+      "name": "time integrated coefficient",
+      "status": "PASS"
+    },
+    {
+      "actual": "887503681/52242776064",
+      "expected": "<1",
+      "group": "Cauchy interface",
+      "name": "conditional coefficient finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "['EXP-001150', 'EXP-001026', 'EXP-001028', 'EXP-001015']",
+      "expected": "EXP-001150",
+      "group": "QFT interface",
+      "name": "bounded cylinder parent",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'conditional_weighted_recurrence_arithmetic_closed': True, 'conditional_spatial_envelope_closed': True, 'conditional_two_orientation_cauchy_coefficient_closed': True, 'inductive_cylinder_interface_used': True, 'actual_q3_recurrence_closed': False, 'actual_first_commutator_decay_closed': False, 'actual_second_commutator_decay_closed': False, 'direct_d_cauchy_closed': False, 'delta_d_cauchy_closed': False, 'common_alpha_closed': False, 'exhaustion_independence_closed': False, 'hamiltonian_os_identification_closed': False, 'kms_gns_gap_closed': False, 'continuum_closed': False, 'c6_closed': False, 'sector_a_closed': False, 'pre_a_closed': False, 'no_new_negative_result': True, 'no_tier_change': True, 'no_pdf': True}",
+      "expected": "open",
+      "group": "boundary",
+      "name": "downstream firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": "{\"groups\": {\"Cauchy interface\": 2, \"QFT interface\": 1, \"boundary\": 1, \"hypotheses\": 1, \"provenance\": 1, \"recurrence\": 2, \"spatial envelope\": 1, \"time\": 1}, \"storage\": \"compact-summary; all assertions executed in memory\", \"total\": 10}",
+      "expected": "all executed assertions passed",
+      "group": "summary",
+      "name": "assertion_summary",
+      "status": "PASS"
+    }
+  ],
+  "audit_id": "PA-CP1-ST8-Q3LOCK-INDUCTIVE-CYLINDER-RECURRENCE-CAUCHY-INTERFACE",
+  "boundary": {
+    "actual_first_commutator_decay_closed": false,
+    "actual_q3_recurrence_closed": false,
+    "actual_second_commutator_decay_closed": false,
+    "c6_closed": false,
+    "common_alpha_closed": false,
+    "conditional_spatial_envelope_closed": true,
+    "conditional_two_orientation_cauchy_coefficient_closed": true,
+    "conditional_weighted_recurrence_arithmetic_closed": true,
+    "continuum_closed": false,
+    "delta_d_cauchy_closed": false,
+    "direct_d_cauchy_closed": false,
+    "exhaustion_independence_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "inductive_cylinder_interface_used": true,
+    "kms_gns_gap_closed": false,
+    "no_new_negative_result": true,
+    "no_pdf": true,
+    "no_tier_change": true,
+    "pre_a_closed": false,
+    "sector_a_closed": false
+  },
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "derived": {
+    "actual_first_commutator_decay_closed": false,
+    "actual_q3_recurrence_closed": false,
+    "actual_second_commutator_decay_closed": false,
+    "cauchy_coefficient": "887503681/52242776064",
+    "common_alpha_closed": false,
+    "conditional_spatial_envelope_closed": true,
+    "conditional_two_orientation_cauchy_coefficient_closed": true,
+    "conditional_weighted_recurrence_arithmetic_closed": true,
+    "degree": 6,
+    "delta_d_cauchy_closed": false,
+    "direct_d_cauchy_closed": false,
+    "growth_rate": "13",
+    "orientation_count": 2,
+    "pre_a_closed": false,
+    "response_envelope": "887503681/34828517376",
+    "response_levels": [
+      "1",
+      "31/18",
+      "961/324",
+      "29791/5832",
+      "923521/104976",
+      "28629151/1889568",
+      "887503681/34012224"
+    ],
+    "spatial_penalty": "1/1024",
+    "step_factor": "31/18",
+    "time_horizon": "1/3"
+  },
+  "exploration_id": "EXP-001151",
+  "passed": 10,
+  "run_kind": "independent",
+  "schema": "tect/foundation-audit/1.0",
+  "task_id": "T-054",
+  "verdict": "PASS"
+}

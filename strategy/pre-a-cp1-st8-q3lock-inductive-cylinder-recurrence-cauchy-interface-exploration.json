@@ -1,0 +1,82 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001151",
+  "title": "Conditional inductive-cylinder recurrence-to-Cauchy interface",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-ENERGY-WEIGHTED-COMMUTATOR-GEVREY-LR-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-RESOLVENT-ALGEBRA-EXACT-POLYNOMIAL-COMMON-ALPHA-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "question": "If an explicit nonnegative local Q3 recurrence and first/double commutator response estimate hold on the bounded inductive-limit cylinder algebra, what exact finite-volume D/delta-D Cauchy coefficient follows at a fixed boundary distance?",
+  "method": [
+    "Use the fixed-support bounded C1 inductive-limit cylinder contract from EXP-001150 as the test-algebra interface.",
+    "Assume the explicit nonnegative recurrence L_x(n+1) <= (1+C delta)L_x(n) + J delta sum_{y~x} L_y(n) with z=6, C=J=1, base=2, delta=1/18, N=6 and T=1/3.",
+    "Compute the exact weighted step factor 1+(C+J*z*base)*delta, iterate it for six steps, and apply the distance-10 spatial penalty base^(-d) with source mass one.",
+    "Multiply the response envelope by the two declared orientations and the full time horizon to obtain the conditional D/delta-D Cauchy coefficient.",
+    "Reproduce the arithmetic in an independent Fraction-only lane and compile the exact rational fixtures in Lean R321; keep the actual Q3 recurrence and commutator estimates as explicit open hypotheses."
+  ],
+  "finding": "Primary 14/14, independent 10/10, integrated 19/19, and Lean R321 PASS. The declared recurrence fixture gives growth rate 13, one-step factor 31/18, distance-10 response envelope 887503681/34828517376 (approximately 0.0254820976563), and two-orientation time-integrated coefficient 887503681/52242776064 (approximately 0.0169880651042).",
+  "verdict": "advanced",
+  "decision_reason": "The QFT route now has an exact conditional bridge from the bounded inductive-limit cylinder algebra to a finite-volume D/delta-D Cauchy envelope. The bridge is useful because it states the required recurrence and response hypotheses quantitatively, but it does not establish those hypotheses for the actual quartic Q3 dynamics and therefore does not close direct Cauchy, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector A or Pre-A.",
+  "closed": [
+    "conditional weighted recurrence arithmetic",
+    "conditional distance-decay envelope at the declared boundary distance",
+    "conditional two-orientation time-integrated Cauchy coefficient",
+    "composition with the EXP-001150 bounded inductive-limit cylinder interface",
+    "independent exact-arithmetic reproduction and Lean R321 cross-check"
+  ],
+  "open": [
+    "actual quartic Q3 weighted recurrence",
+    "actual first position-commutator spatial decay",
+    "actual double position-commutator spatial decay",
+    "volume-, cutoff- and beta-uniform response bounds",
+    "direct D and delta-D Cauchy estimates",
+    "finite-volume dynamics convergence and exhaustion-independent states",
+    "common alpha and Hamiltonian-to-OS/KMS/GNS identification",
+    "broken-sector gap, continuum, C6, Sector A and Pre-A"
+  ],
+  "adversarial_review": [
+    {"axis": "recurrence", "check": "The recurrence is a hypothesis in both scripts and is not inferred from finite Q3 data.", "disposition": "UPHELD-OPEN"},
+    {"axis": "weight and orientation", "check": "The degree-weighted factor, inverse spatial power and both Duhamel orientations are retained exactly.", "disposition": "UPHELD"},
+    {"axis": "volume uniformity", "check": "The conditional coefficient is not treated as a volume-uniform theorem until the response hypothesis is proved.", "disposition": "UPHELD-OPEN"},
+    {"axis": "domain", "check": "Only bounded fixed-support C1 cylinders from EXP-001150 are admitted; unbounded polynomial and exact CCR domains remain open.", "disposition": "UPHELD"},
+    {"axis": "QFT promotion", "check": "The interface is not a common alpha, state reconstruction, gap, continuum, C6, Sector A or Pre-A result.", "disposition": "UPHELD-OPEN"},
+    {"axis": "Lean", "check": "R321 contains exact rational fixtures only and no analytic, operator, state or limit theorem.", "disposition": "UPHELD"}
+  ],
+  "evidence_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-inductive-cylinder-recurrence-cauchy-interface-manifest.json#model",
+    "strategy/pre-a-cp1-st8-q3lock-inductive-cylinder-recurrence-cauchy-interface-certificate-260827.md#role-and-status",
+    "codes/foundations/pre_a_cp1_st8_q3lock_inductive_cylinder_recurrence_cauchy_interface.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_inductive_cylinder_recurrence_cauchy_interface_independent.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_inductive_cylinder_recurrence_cauchy_interface_verify.py#run",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-27-primary-pre_a_cp1_st8_q3lock_inductive_cylinder_recurrence_cauchy_interface/primary.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-27-independent-pre_a_cp1_st8_q3lock_inductive_cylinder_recurrence_cauchy_interface/independent.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-27-integrated-pre_a_cp1_st8_q3lock_inductive_cylinder_recurrence_cauchy_interface/integrated.json#lean",
+    "verification/lean/Tect/R321.lean#weighted_step_fixture",
+    "verification/lean/registry.json#R321"
+  ],
+  "formal_refs": {"results": [], "negatives": [], "events": []},
+  "formal_integration": {"lean": "R321 PASS", "results": [], "negatives": [], "events": [], "no_new_result": true, "no_new_negative": true, "no_tier_change": true, "no_pdf": true},
+  "qft_interface": {
+    "closed": "An exact conditional coefficient translating a declared weighted recurrence and two-orientation response estimate into a bounded cylinder D/delta-D Cauchy envelope.",
+    "open": "Actual Q3 recurrence and commutator decay, uniformity in volume/cutoff/beta, direct Cauchy, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector A and Pre-A.",
+    "tect_boundary": "No heat_root_incidence or canonical A1/R-192 production owner is supplied."
+  },
+  "related": [
+    {"id": "EXP-001150", "relation": "continues"},
+    {"id": "EXP-001026", "relation": "continues"},
+    {"id": "EXP-001028", "relation": "continues"},
+    {"id": "EXP-001015", "relation": "continues"}
+  ],
+  "prior_exploration_id": "EXP-001150",
+  "provenance": "contemporaneous",
+  "recorded_at": "2026-08-27T20:30:00Z",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-08-26",
+  "next_action": "Attack the actual Q3 energy-weighted commutator recurrence and first/double response bounds on the bounded cylinder algebra; require explicit volume-, cutoff- and beta-uniform constants before promoting this conditional interface to a direct Cauchy result.",
+  "boundary": "T0 claim-nonbearing conditional recurrence-to-Cauchy interface. It computes the consequence of declared hypotheses and does not establish a thermodynamic QFT dynamics or any downstream physical theorem.",
+  "no_overclaim": "Only conditional arithmetic and interface bookkeeping are closed. Actual Q3 dynamics, direct Cauchy, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector A and Pre-A remain open."
+}
