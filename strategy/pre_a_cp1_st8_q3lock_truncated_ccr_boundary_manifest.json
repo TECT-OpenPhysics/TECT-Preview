@@ -1,0 +1,62 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-TRUNCATED-CCR-BOUNDARY-v0",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001094",
+  "claim_bearing": false,
+  "parent_explorations": ["EXP-001082", "EXP-001088", "EXP-001092"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "question": "What is the exact canonical-commutator defect of the n-dimensional oscillator truncation, and what domain-tail condition is necessary before finite Q3 matrix estimates can be transferred to an unbounded common core?",
+  "finite_fixture": {
+    "n_values": [2, 3, 4, 6, 8],
+    "powers": [1, 2, 3],
+    "tolerance": 1e-10,
+    "boundary_amplitudes": ["1/n", "1/n^2", "1/n^3"],
+    "hbar": 1
+  },
+  "exact_statement": {
+    "oscillator": "q_n=(a_n+a_n^*)/sqrt(2), p_n=(a_n-a_n^*)/(i*sqrt(2)), a_n|k>=sqrt(k)|k-1> for 1<=k<n",
+    "commutator": "[q_n,p_n]=i*(I-n*P_top)",
+    "defect": "[q_n,p_n]-i*I=-i*n*P_top",
+    "operator_norm": "||[q_n,p_n]-i*I||=n",
+    "vector_domain_condition": "For a cutoff vector psi_n, defect convergence requires n*|<top_n,psi_n>| -> 0; squared-norm formulations require n^2*<psi_n,P_top psi_n> -> 0."
+  },
+  "scope": {
+    "exact_truncated_ccr_identity_closed": true,
+    "operator_norm_defect_closed": true,
+    "vector_tail_condition_derived": true,
+    "finite_matrix_ccr_uniformity_closed": false,
+    "actual_unbounded_q3_domain_transfer_closed": false,
+    "source_volume_uniform_modular_history_closed": false,
+    "all_shape_exhaustion_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false
+  },
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R275.lean",
+    "command": "lake env lean Tect/R275.lean",
+    "boundary": "R275 checks exact rational defect coefficients, norm fixtures, and scaled tail arithmetic only; it does not encode infinite-dimensional CCR domains, Q3 Gibbs limits, modular histories, or QFT reconstruction."
+  },
+  "formal_integration": {
+    "results": [],
+    "events": [],
+    "negatives": [],
+    "no_new_result": true,
+    "no_new_negative": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "boundary": "T0 claim-nonbearing exact finite oscillator boundary audit. It supplies a necessary cutoff-domain condition but no sufficient common-core theorem, no actual Q3 thermodynamic limit, no common alpha, no OS/KMS/GNS reconstruction, no gap, and no C6, Sector A, Pre-A, TECT production, or Clay result.",
+  "no_overclaim": "The exact defect identity shows why finite matrix CCR estimates cannot be promoted without a top-state tail/domain-transfer proof. It does not show that the canonical unbounded Q3 common core fails, and it does not replace the missing source/volume-uniform modular-history estimate.",
+  "next_action": "Use the derived n-weighted top-boundary condition as an explicit hypothesis in the actual Q3 common-core transfer; prove it for the chosen local carrier or register failure before any direct D/delta-D, common-alpha, or OS/KMS promotion."
+}

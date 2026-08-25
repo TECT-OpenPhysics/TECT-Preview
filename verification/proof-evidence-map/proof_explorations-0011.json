@@ -9650,6 +9650,119 @@
       "task_id": "T-054",
       "title": "A5 T6 canonical baseline hash revalidation after manifest drift",
       "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "axis": "momentum sign",
+          "check": "The independent lane initially failed the exact formula because its momentum convention was reversed; the corrected lane uses the same registered hbar orientation and passes the matrix identity.",
+          "disposition": "CORRECTED-AND-UPHELD"
+        },
+        {
+          "axis": "rank-one boundary",
+          "check": "The residual is compared to the explicit top projector, with rank one and bottom-state annihilation checked for every dimension.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "operator versus vector condition",
+          "check": "The operator norm grows as n, while the vector condition is stated separately as n times the top amplitude; no vector-tail decay is inferred from operator-norm growth.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "finite fixture versus asymptotic limit",
+          "check": "n=2,3,4,6,8 and powers 1,2,3 are finite arithmetic fixtures only; no convergence theorem is claimed.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "actual Q3 domain",
+          "check": "The exact truncated matrix identity is not identified with the unbounded Q3 common core; the required tail estimate remains an open gate.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "Lean scope",
+          "check": "R275 checks exact rational coefficients and fixtures only; it does not encode operator domains, Gibbs limits, modular history, or reconstruction.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "QFT promotion",
+          "check": "Common alpha, OS/KMS/GNS, gap, continuum, C6, Sector A, and Pre-A remain explicitly open.",
+          "disposition": "UPHELD-OPEN"
+        }
+      ],
+      "boundary": "T0 claim-nonbearing exact finite oscillator boundary audit. It does not prove the actual unbounded Q3 domain transfer, source/volume-uniform modular history, all-shape exhaustion, common alpha, Hamiltonian-to-OS/KMS identification, GNS gap, continuum, C6, Sector A, Pre-A, TECT production, or a Clay result.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "The finite CCR residual was previously retained only as a numerical residual in weighted estimates. This audit upgrades that boundary to an exact rank-one formula and states the domain-tail condition that any common-core proof must discharge. It is a necessary-condition checkpoint, not a proof that the canonical Q3 domain fails.",
+      "evidence_refs": [
+        "strategy/pre_a_cp1_st8_q3lock_truncated_ccr_boundary_manifest.json#exact_statement",
+        "strategy/pre_a_cp1_st8_q3lock_truncated_ccr_boundary_certificate-260825.md#Decision",
+        "codes/foundations/pre_a_cp1_st8_q3lock_truncated_ccr_boundary.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_truncated_ccr_boundary_independent.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_truncated_ccr_boundary_verify.py#run",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-primary-pre_a_cp1_st8_q3lock_truncated_ccr_boundary/primary.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-independent-pre_a_cp1_st8_q3lock_truncated_ccr_boundary/independent.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-integrated-pre_a_cp1_st8_q3lock_truncated_ccr_boundary/integrated.json#lean",
+        "verification/lean/Tect/R275.lean#boundary_scope",
+        "verification/lean/registry.json#R275",
+        "explorations/log.jsonl#EXP-001082",
+        "explorations/log.jsonl#EXP-001092"
+      ],
+      "finding": "The exact finite identity is [q_n,p_n]=i*(I-n*P_top), hence the CCR defect is -i*n*P_top and has operator norm n. On a cutoff vector psi_n the defect norm is n*|<top_n,psi_n>|, so a transfer to an unbounded common core requires n*|<top_n,psi_n>| -> 0; in squared norms the corresponding requirement is n^2*<psi_n,P_top psi_n> -> 0. The primary lane passes 37/37, the independent lane passes 31/31, and the integrated verifier passes 17/17 with Lean R275. The independent lane initially caught a reversed momentum convention; after correction the field-level reconciliation and exact identity pass in both lanes.",
+      "formal_integration": {
+        "events": [],
+        "lean": "R275 PASS; exact rational defect and scaled-tail fixtures only",
+        "negatives": [],
+        "no_new_event": true,
+        "no_new_negative": true,
+        "no_new_result": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "results": []
+      },
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": []
+      },
+      "gate_ids": [
+        "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+        "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001094",
+      "method": [
+        "Construct the n-dimensional lowering/raising matrices independently in two lanes and form q_n and p_n with the registered hbar convention.",
+        "Compare the computed commutator defect with the exact rank-one boundary matrix -i*n*P_top for n=2,3,4,6,8; check operator norm, top-state action, bottom-state annihilation, and rank.",
+        "Derive the vector action -i*n*P_top*psi_n and evaluate the manifest tail powers n^{-1}, n^{-2}, and n^{-3} as finite scaling fixtures.",
+        "Run primary, non-importing independent, integrated, and Lean R275 checks, preserving the explicit open-domain and QFT boundary."
+      ],
+      "next_action": "Use the n-weighted top-boundary condition as an explicit hypothesis in the actual Q3 common-core transfer. Prove it for the chosen local carrier, or register its route-specific failure before attempting direct D/delta-D Cauchy or common-alpha promotion.",
+      "no_overclaim": "The exact finite defect identity explains why finite truncated matrices cannot silently inherit the CCR. It does not refute the unbounded Q3 common core and does not supply a modular-history or QFT reconstruction theorem.",
+      "provenance": "contemporaneous",
+      "qft_interface": {
+        "closed": "Exact finite truncated-CCR defect identity, operator-norm formula, and necessary n-weighted top-boundary condition.",
+        "open": "The actual Q3 tail/domain estimate, modular history, all-shape exhaustion, common alpha, Hamiltonian-to-OS/KMS identification, GNS gap, continuum, C6, Sector A, and Pre-A.",
+        "route": "Finite Q3 matrices -> explicit CCR boundary/domain transfer -> actual unbounded common core -> source/volume-uniform modular history -> common alpha -> KMS/OS/GNS -> physical gap -> continuum."
+      },
+      "question": "What is the exact canonical-commutator defect of the n-dimensional oscillator truncation, and what domain-tail condition is necessary before finite Q3 matrix estimates can be transferred to an unbounded common core?",
+      "recorded_at": "2026-08-26T20:00:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001082",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001092",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-08-25",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Exact truncated-CCR boundary and common-core tail condition",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",

@@ -1,0 +1,139 @@
+{
+  "assertion_count": 17,
+  "assertions": [
+    {
+      "actual": "['EXP-001094', 'T-054']",
+      "expected": "EXP-001094/T-054",
+      "name": "manifest identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "name": "manifest nonbearing",
+      "status": "PASS"
+    },
+    {
+      "actual": "['E:\\\\Dev\\\\TECT\\\\codes\\\\foundations\\\\pre_a_cp1_st8_q3lock_truncated_ccr_boundary.py', 'E:\\\\Dev\\\\TECT\\\\codes\\\\foundations\\\\pre_a_cp1_st8_q3lock_truncated_ccr_boundary_independent.py', 'E:\\\\Dev\\\\TECT\\\\verification\\\\lean\\\\Tect\\\\R275.lean']",
+      "expected": "all present",
+      "name": "manifest source files",
+      "status": "PASS"
+    },
+    {
+      "actual": "['a7ea73f9cdb82520e18bfe66ba60f571327471d01eeaa99aa1bae299f1ef1d14', '41296786898c51e98b874dc71af9921797d252ef432ab449dc90e6e84e0321d0', '2afe3b9c28660c8e2914912e9135878633f0d7c59a83c3f237556572157535be']",
+      "expected": "distinct primary/independent and Lean present",
+      "name": "script hash pins",
+      "status": "PASS"
+    },
+    {
+      "actual": "PRIMARY TRUNCATED-CCR-BOUNDARY PASS 37/37\n",
+      "expected": "exit 0",
+      "name": "primary process",
+      "status": "PASS"
+    },
+    {
+      "actual": "E:\\Dev\\TECT\\claims\\C6-SPACETIME-SIGNATURE\\runs\\2026-08-25-primary-pre_a_cp1_st8_q3lock_truncated_ccr_boundary\\primary.json",
+      "expected": "stored JSON",
+      "name": "primary output",
+      "status": "PASS"
+    },
+    {
+      "actual": "PASS",
+      "expected": "PASS",
+      "name": "primary verdict",
+      "status": "PASS"
+    },
+    {
+      "actual": "37",
+      "expected": ">0",
+      "name": "primary nonempty assertions",
+      "status": "PASS"
+    },
+    {
+      "actual": "INDEPENDENT TRUNCATED-CCR-BOUNDARY PASS 31/31\n",
+      "expected": "exit 0",
+      "name": "independent process",
+      "status": "PASS"
+    },
+    {
+      "actual": "E:\\Dev\\TECT\\claims\\C6-SPACETIME-SIGNATURE\\runs\\2026-08-25-independent-pre_a_cp1_st8_q3lock_truncated_ccr_boundary\\independent.json",
+      "expected": "stored JSON",
+      "name": "independent output",
+      "status": "PASS"
+    },
+    {
+      "actual": "PASS",
+      "expected": "PASS",
+      "name": "independent verdict",
+      "status": "PASS"
+    },
+    {
+      "actual": "31",
+      "expected": ">0",
+      "name": "independent nonempty assertions",
+      "status": "PASS"
+    },
+    {
+      "actual": "[5, 5]",
+      "expected": "same n/coefficient/rank/norm fields",
+      "name": "lane field reconciliation",
+      "status": "PASS"
+    },
+    {
+      "actual": "[-2, -3, -4, -6, -8]",
+      "expected": "minus n",
+      "name": "formula coefficient sequence",
+      "status": "PASS"
+    },
+    {
+      "actual": "both false",
+      "expected": "both false",
+      "name": "uniformity firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": "C:\\Users\\NaEun\\.elan\\toolchains\\leanprover--lean4---v4.32.1\\bin\\lake.exe",
+      "expected": "pinned lake",
+      "name": "pinned lake available",
+      "status": "PASS"
+    },
+    {
+      "actual": "",
+      "expected": "exit 0 without errors",
+      "name": "Lean R275",
+      "status": "PASS"
+    }
+  ],
+  "audit_id": "PA-CP1-ST8-Q3LOCK-TRUNCATED-CCR-BOUNDARY",
+  "boundary": "T0 claim-nonbearing exact finite oscillator boundary audit. It supplies a necessary cutoff-domain condition but no sufficient common-core theorem, no actual Q3 thermodynamic limit, no common alpha, no OS/KMS/GNS reconstruction, no gap, and no C6, Sector A, Pre-A, TECT production, or Clay result.",
+  "children": {
+    "independent": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-independent-pre_a_cp1_st8_q3lock_truncated_ccr_boundary/independent.json",
+    "primary": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-primary-pre_a_cp1_st8_q3lock_truncated_ccr_boundary/primary.json"
+  },
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "derived": {
+    "actual_unbounded_q3_domain_transfer_closed": false,
+    "common_alpha_closed": false,
+    "exact_truncated_ccr_identity_closed": true,
+    "finite_matrix_ccr_uniformity_closed": false,
+    "operator_norm_defect_closed": true,
+    "source_volume_uniform_modular_history_closed": false,
+    "vector_tail_condition_derived": true
+  },
+  "exploration_id": "EXP-001094",
+  "lean": {
+    "path": "verification/lean/Tect/R275.lean",
+    "sha256": "2afe3b9c28660c8e2914912e9135878633f0d7c59a83c3f237556572157535be",
+    "status": "PASS"
+  },
+  "provenance": {
+    "independent_sha256": "41296786898c51e98b874dc71af9921797d252ef432ab449dc90e6e84e0321d0",
+    "lean_sha256": "2afe3b9c28660c8e2914912e9135878633f0d7c59a83c3f237556572157535be",
+    "manifest_sha256": "6addc3e0dc3466e65f0908eafca61b3b829bb493fd3eded964e6e41cff40ab4a",
+    "primary_sha256": "a7ea73f9cdb82520e18bfe66ba60f571327471d01eeaa99aa1bae299f1ef1d14"
+  },
+  "run_kind": "integrated",
+  "schema": "tect/foundation-audit/1.0",
+  "task_id": "T-054",
+  "verdict": "PASS"
+}
