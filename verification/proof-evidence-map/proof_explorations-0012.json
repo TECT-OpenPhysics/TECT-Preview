@@ -2624,6 +2624,139 @@
       "task_id": "T-054",
       "title": "Finite actual-Q3 Gibbs condition-number transfer audit",
       "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "axis": "cutoff",
+          "check": "The cosine taper is exactly zero on q>=2L; no asymptotic cutoff approximation is used.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "force coefficient",
+          "check": "The q^7 coefficient lambda^2/4 follows from the exact registered bond derivative and is checked in both lanes and Lean.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "kinetic term",
+          "check": "The operator conclusion is made only through translated fixed-width packets and the graph-factorization implication, not by replacing the Schrödinger operator pointwise.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "lambda boundary",
+          "check": "The lambda=0 degree-three case is explicitly retained as open.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "QFT promotion",
+          "check": "The method no-go does not reject state-weighted, modular, product-level or direct projected QFT routes.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "Lean scope",
+          "check": "R298 contains only exact rational polynomial and power-count propositions; no unbounded-domain or limit theorem is inferred.",
+          "disposition": "UPHELD"
+        }
+      ],
+      "boundary": "This is an exact scalar/translated-packet method no-go, not a counterexample to the Q3 Hamiltonian dynamics, a thermodynamic QFT construction, OS/KMS/GNS reconstruction, a mass-gap theorem, a continuum result, C6, Sector A or Pre-A.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "closed": [
+        "exact quartic tail-sector polynomial identity",
+        "positive leading q^7 coefficient for lambda>0",
+        "translated-packet graph-power obstruction to the local A^(-3/4) operator bridge",
+        "lambda=0 degree boundary",
+        "independent exact-arithmetic reproduction",
+        "Lean R298 scalar cross-check"
+      ],
+      "decision_reason": "The named local operator-norm A^(-3/4) factorization cannot control the quartic cutoff tail-force product for lambda>0. The exact obstruction is route-local: it does not address the lambda=0 critical boundary, state-weighted/modular cancellation, product-level resummation, direct projected D,delta-D locality, or common dynamics.",
+      "evidence_refs": [
+        "strategy/pre-a-cp1-st8-q3lock-local-tail-force-a34-operator-obstruction-manifest.json#exact_conclusion",
+        "strategy/pre-a-cp1-st8-q3lock-local-tail-force-a34-operator-obstruction-certificate-260825.md#Result-first",
+        "codes/foundations/pre_a_cp1_st8_q3lock_local_tail_force_a34_operator_obstruction.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_local_tail_force_a34_operator_obstruction_independent.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_local_tail_force_a34_operator_obstruction_verify.py#main",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-primary-pre-a-cp1-st8-q3lock-local-tail-force-a34-operator-obstruction/primary.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-independent-pre-a-cp1-st8-q3lock-local-tail-force-a34-operator-obstruction/independent.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-integrated-pre-a-cp1-st8-q3lock-local-tail-force-a34-operator-obstruction/integrated.json#lean",
+        "verification/lean/Tect/R298.lean#mixed_tail_expansion",
+        "verification/lean/registry.json#R298",
+        "negative-results/registry.md#ng-2026-08-25-pre-a-st8-q3lock-local-quartic-tail-force-a34-operator-factorization"
+      ],
+      "finding": "For c>0 and lambda>0, the exact tail polynomial is W_L F=c^2 q^3/2+3c lambda q^5/4+lambda^2 q^7/4. Its leading term is positive and the A^(3/4) graph ratio grows at least as a positive constant times q^4 on translated packets. Primary 25/25, independent 24/24, integrated 17/17 and Lean R298 PASS.",
+      "formal_integration": {
+        "events": [],
+        "lean": "R298 PASS; metadata PASS",
+        "negatives": [
+          "NG-2026-08-25-PRE-A-ST8-Q3LOCK-LOCAL-QUARTIC-TAIL-FORCE-A34-OPERATOR-FACTORIZATION"
+        ],
+        "no_new_result": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "results": []
+      },
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": []
+      },
+      "gate_ids": [
+        "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+        "PA-CP1-ST8-Q3LOCK-ENERGY-WEIGHTED-COMMUTATOR-GEVREY-LR-CLOSURE",
+        "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001127",
+      "method": [
+        "Restrict the registered cosine cutoff to the exact tail sector v=0 and q>=2L, where q_L=v_L=0.",
+        "Differentiate the registered quartic Q3 bond exactly and expand W_L F as a rational polynomial.",
+        "Use translated fixed-width Schwartz packets: a bounded graph factorization would imply ||W_L F psi_R||<=C||K^(3/4)psi_R||, while the local quartic energy gives graph size O(R^3).",
+        "Run a Fraction-only primary lane and a non-importing Fraction-only independent lane, compare exact rational rows, and compile Lean R298 for the polynomial and power-count identities.",
+        "Register the scoped method no-go while retaining the lambda=0 boundary and all state-weighted, modular, product-level and direct projected alternatives."
+      ],
+      "negative_ids": [
+        "NG-2026-08-25-PRE-A-ST8-Q3LOCK-LOCAL-QUARTIC-TAIL-FORCE-A34-OPERATOR-FACTORIZATION"
+      ],
+      "next_action": "Attack the surviving state-weighted/modular or product-level route without isolating W_L F in operator norm; keep the lambda=0 boundary as a separate critical audit.",
+      "no_overclaim": "This is a method no-go for one local operator-norm factorization only. It is not a Q3 dynamics nonexistence result, a QFT construction, an OS/KMS/GNS result, a mass-gap or continuum result, a C6/Sector-A/Pre-A result, a TECT production map or a Clay result.",
+      "open": [
+        "lambda=0 quadratic-bond critical subcase",
+        "state-weighted or modular tail cancellation",
+        "product-level Volterra/linked-cluster resummation",
+        "direct projected D and delta-D locality",
+        "common alpha and thermodynamic exhaustion",
+        "OS/KMS/GNS identification, gap, continuum, C6, Sector A and Pre-A"
+      ],
+      "prior_exploration_id": "EXP-001082",
+      "provenance": "contemporaneous",
+      "qft_interface": {
+        "closed": "The quartic tail-force operator-norm A^(-3/4) bridge is ruled out in its exact tail sector for lambda>0.",
+        "open": "State-weighted/modular cancellation, product-level resummation, direct projected D,delta-D locality, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector A and Pre-A.",
+        "tect_boundary": "No TECT heat_root_incidence or A1/R-192 production owner is supplied."
+      },
+      "question": "Does the proposed local energy-weighted factorization ||W_L F K^(-3/4)|| remain bounded for the actual quartic Q3 bond tail, or does the exact cutoff sector force a higher polynomial power?",
+      "recorded_at": "2026-08-27T09:00:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001082",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001080",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001025",
+          "relation": "alternative_to"
+        }
+      ],
+      "reviewed_on": "2026-08-25",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Quartic cutoff tail-force product rejects the local A^(3/4) operator bridge",
+      "verdict": "failed"
     }
   ],
   "kind": "proof_explorations",

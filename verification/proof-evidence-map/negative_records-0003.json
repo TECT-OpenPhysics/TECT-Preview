@@ -1,6 +1,29 @@
 {
   "data": [
     {
+      "anchor": "ng-2026-07-30-a13-normalized-gibbs-doob-absolute-anchor",
+      "branch": "derive the absolute low/free-energy endpoint from normalized Gibbs laws, Doob increments, conditional variances, or relative entropy alone",
+      "claim_ref_basis": {
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION": "structured_unique_family:A13"
+      },
+      "claim_refs": [
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
+      ],
+      "detail": {
+        "claim_route": "Bound the absolute low/free-energy endpoint using only normalized Gibbs laws, Doob increments, conditional variances, KL production, or other relative information derived from those normalized laws.",
+        "consequence": "A complete proof must retain an absolute low/injected anchor, such as the linear term in the coherent residual interpolation. This does not refute the pinned A1/A8 normalization, an independently anchored endpoint theorem, or the complete production packet.",
+        "evidence": "R-127 proof note, Section 8; symbolic constant-gauge and normalized-law checks; non-importing two-atom gauge audit.",
+        "failure_mode": "Replacing `L` by `L+C` leaves `exp(-qL)/E exp(-qL)` and every conditional normalized law unchanged. Hence Doob increments, conditional variances, and relative entropies are unchanged, whereas `Phi(L)=-(1/q)log E exp(-qL)` obeys `Phi(L+C)=Phi(L)+C`."
+      },
+      "detail_title": "normalized relative data cannot supply the absolute low anchor",
+      "family_refs": [
+        "A13"
+      ],
+      "kind": "no_go",
+      "summary": "adding a constant `C` to the endpoint energy preserves every normalized relative datum but shifts the absolute free energy by `C`. The route needs an external absolute low/injected anchor; this does not refute the pinned production normalization or any anchored endpoint theorem",
+      "tag": "NG-2026-07-30-A13-NORMALIZED-GIBBS-DOOB-ABSOLUTE-ANCHOR"
+    },
+    {
       "anchor": "ng-2026-07-30-a13-naive-primitive-trace-forest-identification",
       "branch": "identify the conditionally averaged R-123 primitive trace directly with the R-063 covariance-normal forest while omitting conditional future variance",
       "claim_ref_basis": {
@@ -2203,29 +2226,6 @@
       "kind": "no_go",
       "summary": "exact production curvature is negative four times the retained square, while equal high frequencies make the shifted multiplier leak a zero mode and raise the deterministic budget to `13/12`",
       "tag": "NG-2026-07-25-A13-BREGMAN-AND-SEPARATED-SHIFTED-MULTIPLIER"
-    },
-    {
-      "anchor": "ng-2026-07-25-a13-ahigh-absolute-and-automatic-bracket",
-      "branch": "A13 termwise absolute A-high summation and generic bracket-plus-square positivity",
-      "claim_ref_basis": {
-        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION": "structured_unique_family:A13"
-      },
-      "claim_refs": [
-        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
-      ],
-      "detail": {
-        "consequence": "These fixtures rule out only the two named shortcuts. They are not counterexamples to the complete production lower bound. The future-control weighted innovation bracket, controlled-shell one-use, Nelson, and Sector A remain open.",
-        "correction": "Retain the complete canonical safe packet and seek a production-specific spatially weighted innovation-Carleson estimate only after terminal-square polarization, curvature, the full Wick forest, trace, and finite-low reconstruction. Do not apply Young shell by shell and do not replace the signed bracket by generic positivity.",
-        "evidence": "For raw current order `s`, coefficient interpolation parameters must satisfy `q=theta+phi>1+s`. The remaining Young slack is `c_A=1-q/2-(4-q)/6=(1-q)/3<-s/3`. At `s=3/5`, `c_A<-1/5`, so the termwise absolute route remains supercritical. Independently, for a standard Gaussian `xi` and normalized spatial mode, take `Y_N=(xi^2-1)cos(Nx)` and `H_N=exp(-xi^2)cos(Nx)`. Its centered innovation bracket is `-1/(3 sqrt(3))`, and the bracket plus its positive innovation square remains negative for a nonempty interval `0<lambda<6.759734692...`. Opposite carriers also produce an exact low mode.",
-        "failure_mode": "After replacing the cubic transport coordinate by its exact Hessian difference, either sum coefficient-`A`-high pieces termwise in absolute value or infer that the Doob innovation bracket becomes nonnegative when its positive innovation square is restored."
-      },
-      "detail_title": "two post-Hessian shortcuts fail",
-      "family_refs": [
-        "A13"
-      ],
-      "kind": "no_go",
-      "summary": "even after the Hessian repair the A-high route has negative Young slack, while an exact adapted high--high-to-low fixture keeps the innovation bracket plus its positive square negative on a nonempty parameter interval",
-      "tag": "NG-2026-07-25-A13-AHIGH-ABSOLUTE-AND-AUTOMATIC-BRACKET"
     }
   ],
   "kind": "negative_records",

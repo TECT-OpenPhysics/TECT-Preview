@@ -8,6 +8,7 @@ Failures are trust assets. Entries are never deleted. Format:
 result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
+| [NG-2026-08-25-PRE-A-ST8-Q3LOCK-LOCAL-QUARTIC-TAIL-FORCE-A34-OPERATOR-FACTORIZATION](#ng-2026-08-25-pre-a-st8-q3lock-local-quartic-tail-force-a34-operator-factorization) | use a local quartic A^(-3/4) operator factorization for the cutoff bond-tail times force | on the exact q>=2L cutoff sector, W_L F=c^2 q^3/2+3c lambda q^5/4+lambda^2 q^7/4; translated packets leave a ratio growing as q^4 for lambda>0; retain state-weighted, product-level or direct D,delta-D routes |
 |---|---|---|
 | [NG-2026-08-24-PRE-A-ST8-Q3LOCK-QUARTIC-WEYL-FOURIER-POSITIVE-STRIP-INVARIANCE](#ng-2026-08-24-pre-a-st8-q3lock-quartic-weyl-fourier-positive-strip-invariance) | require a positive-strip L1 Weyl-Fourier coefficient carrier to remain invariant under the exact quartic onsite subflow | the quartic translation phase has a nonzero cubic coefficient and grows like exp((51/70)x^2) on a sign-chosen strip, contradicting bounded strip extension; this retires only the named carrier |
 | [NG-2026-08-14-PRE-A-T055-ISOTROPIC-GAUSSIAN-COVARIANCE-AUTOMATIC-NONZERO-BCC-MEAN-FIELD-EXTRACTION](#ng-2026-08-14-pre-a-t055-isotropic-gaussian-covariance-automatic-nonzero-bcc-mean-field-extraction) | deterministically and translation-equivariantly extract a nonzero BCC mean field from the stationary isotropic Gaussian-Hartree covariance alone | a translation-fixed covariance input must map under any deterministic equivariant section to a translation-fixed, hence constant, output; preserving centering or nonzero-shell support forces that output to zero |
@@ -10406,3 +10407,28 @@ hashes, content digest
 `5cf4397c38fb316ec108447404531e649e628d6fcc62d67e613d060b70b24ea5`,
 and `NOTE-PDF: PASS (190 current notes, all have fresh PDFs)`.  No claim tier,
 proof statement, or approved A5 entry source changed.
+
+<a id="ng-2026-08-25-pre-a-st8-q3lock-local-quartic-tail-force-a34-operator-factorization"></a>
+### NG-2026-08-25-PRE-A-ST8-Q3LOCK-LOCAL-QUARTIC-TAIL-FORCE-A34-OPERATOR-FACTORIZATION -- the local quartic tail-force A^(-3/4) factorization fails
+
+**Failure mode.** Use a local quartic energy graph power `K^(-3/4)` to
+bound the cutoff bond tail times its force in operator norm for the actual
+Q3 quartic interaction.
+
+**Evidence.** On the exact cosine-cutoff sector `v=0`, `q>=2L`, the cutoff
+coordinates vanish. The registered bond and force give
+`B=c q^2/2+lambda q^4/4`, `F=c q+lambda q^3`, and hence
+`W_L F=c^2 q^3/2+3c lambda q^5/4+lambda^2 q^7/4`. For positive
+`lambda`, translated fixed-width Schwartz packets have local graph size
+`K^(3/4)=O(q^3)` while the product is bounded below by
+`lambda^2 q^7/4`. The graph-factorization ratio therefore grows at least as
+a positive constant times `q^4`.
+
+**Consequence.** The named local operator-norm A^(-3/4) factorization is
+retired for the quartic lambda>0 route. The lambda=0 quadratic-bond
+subcase is a separate critical boundary. This is a method no-go only: it
+does not reject state-weighted or modular cancellation, higher graph powers,
+product-level resummation, direct projected D,delta-D locality, common
+dynamics, OS/KMS/GNS reconstruction, a gap, continuum, C6, Sector A or
+Pre-A closure. Evidence: EXP-001127, its R298 cross-check and the
+contemporaneous certificate.

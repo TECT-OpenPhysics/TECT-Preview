@@ -1,0 +1,103 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "exploration_id": "EXP-001127",
+  "prior_exploration_id": "EXP-001082",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "claim_bearing": false,
+  "tier": "T0",
+  "title": "Local quartic-tail force product obstructs the A^(3/4) operator factorization",
+  "question": "Does the proposed local energy-weighted factorization ||W_L F K^(-3/4)|| remain bounded for the actual quartic Q3 bond tail, or does the cutoff sector leave an unavoidable polynomial power?",
+  "authority_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-finite-energy-weighted-mixed-estimate-manifest.json#model",
+    "strategy/pre-a-cp1-st8-q3lock-second-weighted-energy-cauchy-gate-manifest.json#fractional_graph_domain",
+    "strategy/pre-a-cp1-st8-q3lock-common-local-derivation-weighted-energy-route-split-manifest.json#weighted_first_local_energy"
+  ],
+  "model": {
+    "bond": "B(q,v)=c*(q-v)^2/2+lambda*(q-v)^2*(q^2+v^2)/4",
+    "force": "F(q,v)=partial_q B=c*(q-v)+lambda*(q-v)*(2*q^2-q*v+v^2)/2",
+    "cutoff_sector": "v=0, q>=2L, q_L=v_L=0 for the declared cosine coordinate cutoff",
+    "local_energy_comparison": "K(q,0)>=1+gamma*q^4 on translated compact test packets; a bounded M K^(-3/4) factorization would imply ||M psi||<=C||K^(3/4) psi||",
+    "mixed_tail": "M_L(q)=W_L(q,0)F(q,0)=c^2*q^3/2+3*c*lambda*q^5/4+lambda^2*q^7/4"
+  },
+  "exact_conclusion": {
+    "lambda_positive": "For c>0, lambda>0 and q>=2L, M_L>=lambda^2*q^7/4 while K^(3/4) grows at most as a constant times q^3 on translated fixed-width packets; the ratio grows at least as a positive constant times q^4.",
+    "lambda_zero_boundary": "When lambda=0 the scalar degree is 3 and the A^(3/4) exponent is only critical; this package does not reject that separate quadratic-bond subcase.",
+    "scope": "The no-go rejects only a local operator-norm A^(-3/4) factorization for the quartic tail-force product. It does not reject state-weighted cancellation, a higher graph power, direct projected D/delta-D estimates, or a common QFT dynamics."
+  },
+  "scope": {
+    "exact_scalar_polynomial_obstruction_closed": true,
+    "translated_packet_form_implication_closed": true,
+    "quartic_lambda_positive_operator_route_rejected": true,
+    "lambda_zero_subcase_open": true,
+    "state_weighted_modular_route_open": true,
+    "direct_d_delta_d_route_open": true,
+    "common_core_ccr_closed": false,
+    "volume_uniform_direct_d_cauchy_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "negative_ids": [
+    "NG-2026-08-25-PRE-A-ST8-Q3LOCK-LOCAL-QUARTIC-TAIL-FORCE-A34-OPERATOR-FACTORIZATION"
+  ],
+  "adversarial_review": [
+    {
+      "axis": "cutoff sector",
+      "check": "The argument is restricted to q>=2L where the declared cosine taper is exactly zero; no asymptotic approximation is used for the cutoff.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "force convention",
+      "check": "The force is the exact partial derivative of the registered quartic bond and the q^7 coefficient is lambda^2/4.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "operator versus scalar",
+      "check": "The scalar calculation is promoted only through translated fixed-width Schwartz packets and the implication of a bounded graph factorization; it is not asserted as a pointwise replacement for the kinetic operator.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "lambda boundary",
+      "check": "The lambda=0 quadratic-bond subcase is retained as a separate critical boundary rather than silently included in the quartic no-go.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "QFT promotion",
+      "check": "Only the named local operator-norm route is rejected; modular/state-weighted and direct projected D,delta-D QFT routes remain open.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "Lean scope",
+      "check": "R298 formalizes the polynomial identity and rational power-count fixtures, not unbounded operator domains or thermodynamic limits.",
+      "disposition": "UPHELD"
+    }
+  ],
+  "formal_integration": {
+    "lean_entry": "verification/lean/Tect/R298.lean",
+    "result_ids": [],
+    "negative_ids": [
+      "NG-2026-08-25-PRE-A-ST8-Q3LOCK-LOCAL-QUARTIC-TAIL-FORCE-A34-OPERATOR-FACTORIZATION"
+    ],
+    "changelog_event": null
+  },
+  "qft_interface": {
+    "closed": "An exact actual-Q3 scalar tail-sector obstruction to the quartic local operator-norm factorization through A^(-3/4), with the lambda=0 boundary separated.",
+    "open": "A state-weighted/modular tail estimate, direct projected D and delta-D locality, a common alpha, OS/KMS/GNS identification, a gap, continuum, C6, Sector A and Pre-A remain open.",
+    "tect_boundary": "This is a QFT-facing route no-go only; it supplies no TECT heat_root_incidence or A1/R-192 production owner."
+  },
+  "next_action": "Replace the rejected local operator-norm factorization by a preregistered state-weighted or product-level cancellation estimate, or use a higher graph power only if its thermodynamic constants can be made uniform.",
+  "verification": {
+    "primary_script": "codes/foundations/pre_a_cp1_st8_q3lock_local_tail_force_a34_operator_obstruction.py",
+    "independent_script": "codes/foundations/pre_a_cp1_st8_q3lock_local_tail_force_a34_operator_obstruction_independent.py",
+    "integrated_script": "codes/foundations/pre_a_cp1_st8_q3lock_local_tail_force_a34_operator_obstruction_verify.py"
+  },
+  "no_overclaim": "This package is not a nonexistence theorem for Q3 dynamics, a failure of all energy-weighted topologies, an OS/KMS/GNS result, a mass-gap proof, a continuum result, a C6/Sector-A/Pre-A result, a TECT production map or a Clay result."
+}

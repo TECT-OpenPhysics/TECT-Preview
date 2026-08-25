@@ -1,6 +1,27 @@
 {
   "data": [
     {
+      "anchor": "ng-2026-08-04-pre-a-cp1-cl8-natural-low-mode-interacting-ground-projectivity",
+      "branch": "identify the registered interacting fine ground with the coarse ground by restricting the natural low-mode `B(H)` factor under strict refinement `N=2M`",
+      "claim_ref_basis": {
+        "C6-SPACETIME-SIGNATURE": "explicit_negative_event:20260804-split-interacting-state-projectivity-and-q3-wic"
+      },
+      "claim_refs": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "detail": {
+        "artifacts": "`strategy/pre-a-cp1-cl8-interacting-regulator-compatible-state-route-split-certificate-260804.md`; `strategy/pre-a-cp1-cl8-interacting-regulator-compatible-state-route-split-manifest.json`; `codes/foundations/pre_a_cp1_cl8_interacting_regulator_compatible_state_route_split.py`; `codes/foundations/pre_a_cp1_cl8_interacting_regulator_compatible_state_route_split_independent.py`.",
+        "consequence": "Exact projectivity of the registered interacting ground states under this natural factorization is refuted. The trace-norm ground limit also excludes same-`beta` Gibbs equality on an explicit low-temperature tail and hence excludes an exact family covering every `beta>0`. This does not exclude an isolated finite temperature, a cutoff-dependent temperature, Hamiltonians of mean force, completely positive coarse-graining, dressed or nonnatural embeddings, approximate consistency, or a newly renormalized continuum state. The history-cut consequence is conditional on a separately constructed inter-regulator cut square. No physical vacuum, below-empty-space comparison, C6, CP1, or Pre-A verdict follows.",
+        "evidence": "The fine ground is a smooth strictly positive pure vector. A pure retained marginal would therefore make that vector a product across the low/high tensor split. The separated kinetic operator and divided ground equation would then make the potential low/high additive. On the exact collective Q3 plane ```text q_(j,e)=[X+(-1)^j Y]/sqrt(L), partial_X^2 partial_Y^2 U_N=6g/L>0, ``` for every species, independently of `N`, `r`, and `lambda`. The Q3 lock vanishes on this plane. The nonzero mixed derivative contradicts the required additivity, so the fine ground is entangled and its retained density is mixed; the coarse simple ground is pure.",
+        "failure_mode": "For even `M>=4` and `N=2M`, identify the coarse oscillator space with the natural fine low-mode factor, including the explicit reciprocal coarse-Nyquist squeeze, and demand ```text Tr_high P_(0,N)=P_(0,M). ```"
+      },
+      "detail_title": "the registered interacting ground is not naturally projective",
+      "family_refs": [],
+      "kind": "no_go",
+      "summary": "on the collective uniform/fine-Nyquist plane the exact quartic potential has `partial_X^2 partial_Y^2 U_N=6g/L>0`; a product positive ground would force low/high additivity, so the fine ground is entangled and its retained marginal is mixed, unlike the coarse pure ground. Retain approximate, dressed, completely-positive, mean-force, or newly renormalized state families",
+      "tag": "NG-2026-08-04-PRE-A-CP1-CL8-NATURAL-LOW-MODE-INTERACTING-GROUND-PROJECTIVITY"
+    },
+    {
       "anchor": "ng-2026-08-04-pre-a-cp1-cl8-natural-low-mode-exact-dynamics-equivariance",
       "branch": "exactly intertwine the declared inserted-1D `g>0` coarse and fine dynamics with the natural low-mode embedding while allowing only scalar-energy, scalar-mass, and Q3-Laplacian quadratic counterterms",
       "claim_ref_basis": {
@@ -2218,29 +2239,6 @@
       "kind": "no_go",
       "summary": "for selfadjoint `H=[[0,1],[1,0]]` and `P=diag(1,0)`, `(PH)^*=HP != PH`. Adjoint reverse symmetry is automatic only for two-sided blocks `Q_m H Q_r` of one common source-space shell resolution, or after proving an equivalent intertwiner",
       "tag": "NG-2026-07-30-A13-ONE-SIDED-SHELL-PROJECTION-ADJOINT"
-    },
-    {
-      "anchor": "ng-2026-07-30-a13-normalized-gibbs-doob-absolute-anchor",
-      "branch": "derive the absolute low/free-energy endpoint from normalized Gibbs laws, Doob increments, conditional variances, or relative entropy alone",
-      "claim_ref_basis": {
-        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION": "structured_unique_family:A13"
-      },
-      "claim_refs": [
-        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
-      ],
-      "detail": {
-        "claim_route": "Bound the absolute low/free-energy endpoint using only normalized Gibbs laws, Doob increments, conditional variances, KL production, or other relative information derived from those normalized laws.",
-        "consequence": "A complete proof must retain an absolute low/injected anchor, such as the linear term in the coherent residual interpolation. This does not refute the pinned A1/A8 normalization, an independently anchored endpoint theorem, or the complete production packet.",
-        "evidence": "R-127 proof note, Section 8; symbolic constant-gauge and normalized-law checks; non-importing two-atom gauge audit.",
-        "failure_mode": "Replacing `L` by `L+C` leaves `exp(-qL)/E exp(-qL)` and every conditional normalized law unchanged. Hence Doob increments, conditional variances, and relative entropies are unchanged, whereas `Phi(L)=-(1/q)log E exp(-qL)` obeys `Phi(L+C)=Phi(L)+C`."
-      },
-      "detail_title": "normalized relative data cannot supply the absolute low anchor",
-      "family_refs": [
-        "A13"
-      ],
-      "kind": "no_go",
-      "summary": "adding a constant `C` to the endpoint energy preserves every normalized relative datum but shifts the absolute free energy by `C`. The route needs an external absolute low/injected anchor; this does not refute the pinned production normalization or any anchored endpoint theorem",
-      "tag": "NG-2026-07-30-A13-NORMALIZED-GIBBS-DOOB-ABSOLUTE-ANCHOR"
     }
   ],
   "kind": "negative_records",

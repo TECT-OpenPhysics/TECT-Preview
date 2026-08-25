@@ -1,0 +1,148 @@
+{
+  "assertion_count": 17,
+  "assertions": [
+    {
+      "actual": "['EXP-001127', 'T-054']",
+      "expected": "EXP-001127/T-054",
+      "name": "identity",
+      "pass": true
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "name": "claim nonbearing",
+      "pass": true
+    },
+    {
+      "actual": "['NG-2026-08-25-PRE-A-ST8-Q3LOCK-LOCAL-QUARTIC-TAIL-FORCE-A34-OPERATOR-FACTORIZATION']",
+      "expected": "registry anchor",
+      "name": "negative authority present",
+      "pass": true
+    },
+    {
+      "actual": "['tail_bond_fixture', 'tail_force_fixture', 'mixed_tail_expansion', 'quartic_power_deficit', 'scope_fixture']",
+      "expected": "present",
+      "name": "Lean source",
+      "pass": true
+    },
+    {
+      "actual": "[]",
+      "expected": "none",
+      "name": "Lean forbidden",
+      "pass": true
+    },
+    {
+      "actual": "PRIMARY LOCAL-TAIL-FORCE-A34 PASS 25/25\n",
+      "expected": "PASS",
+      "name": "primary child",
+      "pass": true
+    },
+    {
+      "actual": "INDEPENDENT LOCAL-TAIL-FORCE-A34 PASS 24/24\n",
+      "expected": "PASS",
+      "name": "independent child",
+      "pass": true
+    },
+    {
+      "actual": "[25, 24]",
+      "expected": ">0",
+      "name": "positive assertion totals",
+      "pass": true
+    },
+    {
+      "actual": "[4, 4]",
+      "expected": "4",
+      "name": "lane row count",
+      "pass": true
+    },
+    {
+      "actual": "[{'bond': '72/5', 'energy': '69/5', 'force': '52/5', 'lower_fourth': '4194304/28940625', 'mixed': '3744/25', 'q': '4', 'ratio_fourth': '7277456130048/38021875'}, {'mixed': '3744/25', 'q': '4', 'ratio_fourth': '7277456130048/38021875'}]",
+      "expected": "exact agreement",
+      "name": "lane q=4",
+      "pass": true
+    },
+    {
+      "actual": "[{'bond': '672/5', 'energy': '1029/5', 'force': '296/5', 'lower_fourth': '274877906944/28940625', 'mixed': '198912/25', 'q': '8', 'ratio_fourth': '24148380607315968/52521875'}, {'mixed': '198912/25', 'q': '8', 'ratio_fourth': '24148380607315968/52521875'}]",
+      "expected": "exact agreement",
+      "name": "lane q=8",
+      "pass": true
+    },
+    {
+      "actual": "[{'bond': '8832/5', 'energy': '16389/5', 'force': '2128/5', 'lower_fourth': '18014398509481984/28940625', 'mixed': '18794496/25', 'q': '16', 'ratio_fourth': '1540414922610028277898674176/169833112340625'}, {'mixed': '18794496/25', 'q': '16', 'ratio_fourth': '1540414922610028277898674176/169833112340625'}]",
+      "expected": "exact agreement",
+      "name": "lane q=16",
+      "pass": true
+    },
+    {
+      "actual": "[{'bond': '133632/5', 'energy': '262149/5', 'force': '16544/5', 'lower_fourth': '1180591620717411303424/28940625', 'mixed': '2210807808/25', 'q': '32', 'ratio_fourth': '884789978020523589663177773728923648/2085119134409021875'}, {'mixed': '2210807808/25', 'q': '32', 'ratio_fourth': '884789978020523589663177773728923648/2085119134409021875'}]",
+      "expected": "exact agreement",
+      "name": "lane q=32",
+      "pass": true
+    },
+    {
+      "actual": "[{'energy_three_quarter_degree': 3, 'lambda_zero_degree': 3, 'lambda_zero_subcase_open': True, 'quartic_degree': 7, 'quartic_operator_route_rejected': True, 'quartic_ratio_degree': 4, 'ratio_rows': [{'bond': '72/5', 'energy': '69/5', 'force': '52/5', 'lower_fourth': '4194304/28940625', 'mixed': '3744/25', 'q': '4', 'ratio_fourth': '7277456130048/38021875'}, {'bond': '672/5', 'energy': '1029/5', 'force': '296/5', 'lower_fourth': '274877906944/28940625', 'mixed': '198912/25', 'q': '8', 'ratio_fourth': '24148380607315968/52521875'}, {'bond': '8832/5', 'energy': '16389/5', 'force': '2128/5', 'lower_fourth': '18014398509481984/28940625', 'mixed': '18794496/25', 'q': '16', 'ratio_fourth': '1540414922610028277898674176/169833112340625'}, {'bond': '133632/5', 'energy': '262149/5', 'force': '16544/5', 'lower_fourth': '1180591620717411303424/28940625', 'mixed': '2210807808/25', 'q': '32', 'ratio_fourth': '884789978020523589663177773728923648/2085119134409021875'}], 'state_weighted_route_open': True}, {'lambda_zero_subcase_open': True, 'quartic_operator_route_rejected': True, 'ratio_rows': [{'mixed': '3744/25', 'q': '4', 'ratio_fourth': '7277456130048/38021875'}, {'mixed': '198912/25', 'q': '8', 'ratio_fourth': '24148380607315968/52521875'}, {'mixed': '18794496/25', 'q': '16', 'ratio_fourth': '1540414922610028277898674176/169833112340625'}, {'mixed': '2210807808/25', 'q': '32', 'ratio_fourth': '884789978020523589663177773728923648/2085119134409021875'}], 'state_weighted_route_open': True}]",
+      "expected": "route rejected",
+      "name": "quartic scope",
+      "pass": true
+    },
+    {
+      "actual": "{'lambda_zero_subcase_open': True, 'state_weighted_modular_route_open': True, 'direct_d_delta_d_route_open': True, 'common_core_ccr_closed': False, 'common_alpha_closed': False, 'hamiltonian_os_identification_closed': False, 'kms_gns_gap_closed': False, 'continuum_closed': False, 'c6_closed': False, 'sector_a_closed': False, 'pre_a_closed': False}",
+      "expected": "named obstruction with successor gates open",
+      "name": "QFT firewall",
+      "pass": true
+    },
+    {
+      "actual": "{'exact_scalar_polynomial_obstruction_closed': True, 'translated_packet_form_implication_closed': True, 'quartic_lambda_positive_operator_route_rejected': True, 'lambda_zero_subcase_open': True, 'state_weighted_modular_route_open': True, 'direct_d_delta_d_route_open': True, 'common_core_ccr_closed': False, 'volume_uniform_direct_d_cauchy_closed': False, 'common_alpha_closed': False, 'hamiltonian_os_identification_closed': False, 'kms_gns_gap_closed': False, 'continuum_closed': False, 'c6_closed': False, 'sector_a_closed': False, 'pre_a_closed': False, 'no_new_result': True, 'no_tier_change': True, 'no_pdf': True}",
+      "expected": "PASS",
+      "name": "exact obstruction scope",
+      "pass": true
+    },
+    {
+      "actual": "{'status': 'PASS', 'command': 'lake env lean Tect/R298.lean', 'returncode': 0, 'output': ''}",
+      "expected": "PASS",
+      "name": "Lean compile",
+      "pass": true
+    }
+  ],
+  "audit_id": "PA-CP1-ST8-Q3LOCK-LOCAL-TAIL-FORCE-A34-OPERATOR-OBSTRUCTION",
+  "boundary": {
+    "c6_closed": false,
+    "common_alpha_closed": false,
+    "common_core_ccr_closed": false,
+    "continuum_closed": false,
+    "direct_d_delta_d_route_open": true,
+    "exact_scalar_polynomial_obstruction_closed": true,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "lambda_zero_subcase_open": true,
+    "no_new_result": true,
+    "no_pdf": true,
+    "no_tier_change": true,
+    "pre_a_closed": false,
+    "quartic_lambda_positive_operator_route_rejected": true,
+    "sector_a_closed": false,
+    "state_weighted_modular_route_open": true,
+    "translated_packet_form_implication_closed": true,
+    "volume_uniform_direct_d_cauchy_closed": false
+  },
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "exploration_id": "EXP-001127",
+  "lean": {
+    "command": "lake env lean Tect/R298.lean",
+    "output": "",
+    "returncode": 0,
+    "status": "PASS"
+  },
+  "provenance": {
+    "independent_sha256": "32538bf69bb9a361e289c3f2aed6aa412ea6ef3f622f36b3b3be6bd2ce0930cf",
+    "lean_sha256": "e4b3b5b4b8fd983a2344e5f86f037d040f3ce76ebe9b8df3a4eef9cd81bf8178",
+    "manifest_sha256": "b055f51ac47d5e260d5a9b80c9c6102b83a55958257e42ffdd42b8665e556855",
+    "negative_registry_sha256": "25a21e011efc2c076be6d5126e490b4d1c2247d540d0add3523a8c4211adecab",
+    "primary_sha256": "dcddef47925343a9a210aad328c153f5a8eb8f8b69bae1c7cf2b09a9d79fea4c"
+  },
+  "recorded_at": "2026-08-25T12:12:29.018802Z",
+  "run_kind": "integrated",
+  "schema": "tect/foundation-audit/1.0",
+  "task_id": "T-054",
+  "verdict": "PASS"
+}

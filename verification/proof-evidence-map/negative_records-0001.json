@@ -1,6 +1,24 @@
 {
   "data": [
     {
+      "anchor": "ng-2026-08-25-pre-a-st8-q3lock-local-quartic-tail-force-a34-operator-factorization",
+      "branch": "use a local quartic A^(-3/4) operator factorization for the cutoff bond-tail times force",
+      "claim_ref_basis": {},
+      "claim_refs": [],
+      "detail": {
+        "consequence": "The named local operator-norm A^(-3/4) factorization is retired for the quartic lambda>0 route. The lambda=0 quadratic-bond subcase is a separate critical boundary. This is a method no-go only: it does not reject state-weighted or modular cancellation, higher graph powers, product-level resummation, direct projected D,delta-D locality, common dynamics, OS/KMS/GNS reconstruction, a gap, continuum, C6, Sector A or Pre-A closure. Evidence: EXP-001127, its R298 cross-check and the contemporaneous certificate.",
+        "evidence": "On the exact cosine-cutoff sector `v=0`, `q>=2L`, the cutoff coordinates vanish. The registered bond and force give `B=c q^2/2+lambda q^4/4`, `F=c q+lambda q^3`, and hence `W_L F=c^2 q^3/2+3c lambda q^5/4+lambda^2 q^7/4`. For positive `lambda`, translated fixed-width Schwartz packets have local graph size `K^(3/4)=O(q^3)` while the product is bounded below by `lambda^2 q^7/4`. The graph-factorization ratio therefore grows at least as a positive constant times `q^4`.",
+        "failure_mode": "Use a local quartic energy graph power `K^(-3/4)` to bound the cutoff bond tail times its force in operator norm for the actual Q3 quartic interaction."
+      },
+      "detail_title": "the local quartic tail-force A^(-3/4) factorization fails",
+      "family_refs": [
+        "A34"
+      ],
+      "kind": "no_go",
+      "summary": "on the exact q>=2L cutoff sector, W_L F=c^2 q^3/2+3c lambda q^5/4+lambda^2 q^7/4; translated packets leave a ratio growing as q^4 for lambda>0; retain state-weighted, product-level or direct D,delta-D routes",
+      "tag": "NG-2026-08-25-PRE-A-ST8-Q3LOCK-LOCAL-QUARTIC-TAIL-FORCE-A34-OPERATOR-FACTORIZATION"
+    },
+    {
       "anchor": "ng-2026-08-24-pre-a-st8-q3lock-quartic-weyl-fourier-positive-strip-invariance",
       "branch": "require a positive-strip L1 Weyl-Fourier coefficient carrier to remain invariant under the exact quartic onsite subflow",
       "claim_ref_basis": {},
@@ -2043,27 +2061,6 @@
       "kind": "no_go",
       "summary": "conjugating a Weyl configuration translation by the quartic position kick produces a cubic-phase multiplier that is not uniformly continuous and therefore not almost periodic; it lies outside the Weyl algebra. Retain the exact `B(H_a)` automorphism, the quadratic metaplectic Weyl sector, or define and verify an enlarged observable algebra",
       "tag": "NG-2026-08-04-PRE-A-CP1-CL8-NONLINEAR-FLOQUET-WEYL-NORMALIZER"
-    },
-    {
-      "anchor": "ng-2026-08-04-pre-a-cp1-cl8-natural-low-mode-interacting-ground-projectivity",
-      "branch": "identify the registered interacting fine ground with the coarse ground by restricting the natural low-mode `B(H)` factor under strict refinement `N=2M`",
-      "claim_ref_basis": {
-        "C6-SPACETIME-SIGNATURE": "explicit_negative_event:20260804-split-interacting-state-projectivity-and-q3-wic"
-      },
-      "claim_refs": [
-        "C6-SPACETIME-SIGNATURE"
-      ],
-      "detail": {
-        "artifacts": "`strategy/pre-a-cp1-cl8-interacting-regulator-compatible-state-route-split-certificate-260804.md`; `strategy/pre-a-cp1-cl8-interacting-regulator-compatible-state-route-split-manifest.json`; `codes/foundations/pre_a_cp1_cl8_interacting_regulator_compatible_state_route_split.py`; `codes/foundations/pre_a_cp1_cl8_interacting_regulator_compatible_state_route_split_independent.py`.",
-        "consequence": "Exact projectivity of the registered interacting ground states under this natural factorization is refuted. The trace-norm ground limit also excludes same-`beta` Gibbs equality on an explicit low-temperature tail and hence excludes an exact family covering every `beta>0`. This does not exclude an isolated finite temperature, a cutoff-dependent temperature, Hamiltonians of mean force, completely positive coarse-graining, dressed or nonnatural embeddings, approximate consistency, or a newly renormalized continuum state. The history-cut consequence is conditional on a separately constructed inter-regulator cut square. No physical vacuum, below-empty-space comparison, C6, CP1, or Pre-A verdict follows.",
-        "evidence": "The fine ground is a smooth strictly positive pure vector. A pure retained marginal would therefore make that vector a product across the low/high tensor split. The separated kinetic operator and divided ground equation would then make the potential low/high additive. On the exact collective Q3 plane ```text q_(j,e)=[X+(-1)^j Y]/sqrt(L), partial_X^2 partial_Y^2 U_N=6g/L>0, ``` for every species, independently of `N`, `r`, and `lambda`. The Q3 lock vanishes on this plane. The nonzero mixed derivative contradicts the required additivity, so the fine ground is entangled and its retained density is mixed; the coarse simple ground is pure.",
-        "failure_mode": "For even `M>=4` and `N=2M`, identify the coarse oscillator space with the natural fine low-mode factor, including the explicit reciprocal coarse-Nyquist squeeze, and demand ```text Tr_high P_(0,N)=P_(0,M). ```"
-      },
-      "detail_title": "the registered interacting ground is not naturally projective",
-      "family_refs": [],
-      "kind": "no_go",
-      "summary": "on the collective uniform/fine-Nyquist plane the exact quartic potential has `partial_X^2 partial_Y^2 U_N=6g/L>0`; a product positive ground would force low/high additivity, so the fine ground is entangled and its retained marginal is mixed, unlike the coarse pure ground. Retain approximate, dressed, completely-positive, mean-force, or newly renormalized state families",
-      "tag": "NG-2026-08-04-PRE-A-CP1-CL8-NATURAL-LOW-MODE-INTERACTING-GROUND-PROJECTIVITY"
     }
   ],
   "kind": "negative_records",
