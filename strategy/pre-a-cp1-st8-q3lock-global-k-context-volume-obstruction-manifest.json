@@ -1,0 +1,104 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-GLOBAL-K-CONTEXT-VOLUME-OBSTRUCTION-v0",
+  "title": "Global shifted-energy context obstruction for local tensor-product Gibbs members",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001146",
+  "claim_bearing": false,
+  "parent_explorations": ["EXP-001145", "EXP-001144", "EXP-000794"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "question": "Can the four global-K D-weighted contexts be uniformly bounded for a local observable solely from bounded local data as remote Gibbs tensor factors grow?",
+  "finite_fixture": {
+    "local_gap": "1",
+    "remote_gap": "1",
+    "gibbs_excited_weight_ratio": "1/2",
+    "shift_constant": "1",
+    "remote_site_values": [0, 1, 2, 4, 8, 16, 32],
+    "observable_row": 0,
+    "observable_column": 1,
+    "amplitude_squared": "1"
+  },
+  "model": {
+    "local_hamiltonian": "diag(0, local_gap)",
+    "remote_hamiltonian": "sum_{a=1}^n diag(0, remote_gap)_a",
+    "total_hamiltonian": "H_n=H_local+H_remote",
+    "shifted_energy": "K_n=H_n-min(H_n)+shift_constant",
+    "gibbs_state": "rho_n proportional to exp(-beta H_n), with exp(-beta remote_gap)=gibbs_excited_weight_ratio",
+    "observable": "D_n=|observable_row><observable_column| tensor I_remote",
+    "context_B": "sum_{i,j} p_i k_j^2 |D_ij|^2",
+    "context_C": "sum_{i,j} p_j k_i^2 |D_ij|^2",
+    "closed_B_formula": "p_local(row)*E[(shift+local_gap+remote_gap*M)^2], M~Binomial(n,q)",
+    "lower_bound": "B_n >= p_local(row)*(shift+local_gap+remote_gap*n*q)^2 >= p_local(row)*(remote_gap*q)^2*n^2",
+    "interpretation": "A global total-energy weight sees remote thermal energy even when D is strictly local; volume-uniform context control therefore requires a centered or local energy weight."
+  },
+  "scope": {
+    "exact_tensor_product_contexts_closed": true,
+    "quadratic_lower_bound_closed": true,
+    "global_k_volume_uniformity_refuted": true,
+    "actual_q3_interacting_uniformity_refuted": false,
+    "local_energy_weight_route_selected": true,
+    "direct_d_delta_d_cauchy_closed": false,
+    "modular_domain_transfer_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false
+  },
+  "adversarial_review": [
+    {
+      "axis": "model scope",
+      "check": "The witness is an exactly solvable tensor-product Gibbs family, not the interacting Q3 Hamiltonian; it is used only to reject a topology-independent global-K shortcut.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "locality",
+      "check": "D_n acts on the local factor and is identity on every remote factor; the growth comes only from the right energy index in K_n.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "probability",
+      "check": "The remote binomial weights are derived from the declared excited-weight ratio; no probability or context coefficient is hardcoded.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "asymptotic claim",
+      "check": "The quadratic lower bound is exact for every nonnegative remote-site count; finite samples illustrate it and do not replace the bound.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "QFT promotion",
+      "check": "The result selects a local/centered energy-weighted target but proves no interacting Q3 common-alpha, OS/KMS/GNS, gap, continuum, C6, Sector A or Pre-A theorem.",
+      "disposition": "UPHELD-OPEN"
+    }
+  ],
+  "files": {
+    "primary": "codes/foundations/pre_a_cp1_st8_q3lock_global_k_context_volume_obstruction.py",
+    "independent": "codes/foundations/pre_a_cp1_st8_q3lock_global_k_context_volume_obstruction_independent.py",
+    "integrated": "codes/foundations/pre_a_cp1_st8_q3lock_global_k_context_volume_obstruction_verify.py",
+    "lean": "verification/lean/Tect/R316.lean",
+    "primary_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-primary-pre_a_cp1_st8_q3lock_global_k_context_volume_obstruction/primary.json",
+    "independent_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-independent-pre_a_cp1_st8_q3lock_global_k_context_volume_obstruction/independent.json",
+    "integrated_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-integrated-pre_a_cp1_st8_q3lock_global_k_context_volume_obstruction/integrated.json"
+  },
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R316.lean",
+    "theorem_markers": ["global_context_formula_fixture", "global_context_quadratic_lower", "threshold_witness"],
+    "command": "lake env lean Tect/R316.lean",
+    "boundary": "Lean checks the exact rational fixture, polynomial lower bound and threshold implication; it does not formalize Gibbs operator domains or interacting Q3 dynamics."
+  },
+  "qft_interface": {
+    "closed": "The global-total-energy four-context topology has an exact tensor-product quadratic growth obstruction for strictly local D.",
+    "open": "The surviving target is a centered/local state-weighted D,delta-D estimate built on the source-uniform local-energy cone; interacting Q3 modular transfer, product/core density, exhaustion, common alpha, OS/KMS/GNS identification, gap, continuum and Pre-A remain open.",
+    "tect_boundary": "No heat_root_incidence or canonical A1/R-192 production owner is supplied."
+  },
+  "no_overclaim": "This route-local product obstruction does not refute actual interacting Q3 dynamics and does not prove any QFT or Clay conclusion. It only rules out using a global shifted total-energy context as a volume-uniform local bound without additional centering or locality structure."
+}
