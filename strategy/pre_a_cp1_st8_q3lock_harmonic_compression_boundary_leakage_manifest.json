@@ -1,0 +1,68 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-HARMONIC-COMPRESSION-BOUNDARY-LEAKAGE-v0",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001105",
+  "claim_bearing": false,
+  "parent_explorations": ["EXP-001104", "EXP-001103", "EXP-001094"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-CP1-ST8-Q3LOCK-CONNECTED-RANK-TWO-OSCILLATOR-ELIMINATION-QPS-NORM-AND-CUTOFF-COMPATIBILITY",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "question": "Does the mismatch between harmonic polynomial compression and the exact onsite k_h restriction become negligible in a state-weighted sense under a fifth harmonic-number moment, while remaining non-negligible in operator norm?",
+  "exact_statement": {
+    "path_support": "For the oscillator q and p, D_{n,d}=P_n A^d P_n-(P_n A P_n)^d with d in {2,4} is supported on the top window W_{n,d}=span{|n-d>,...,|n-1>}; the audit checks this exact finite path statement.",
+    "norm_envelope": "The compression defect obeys ||D_{n,d}|| <= 2 ||A||^d, and the finite ambient oscillator gives the derived bound 2*m^(d/2), m=n+d+1. The onsite quartic defect is bounded by the coefficient-weighted sum of the degree-2 and degree-4 envelopes.",
+    "conditional_state_bound": "If a positive normalized state omega has omega(N^5)<=C and n>d, then |omega(D_{n,d})| <= ||D_{n,d}|| C/(n-d)^5. This is a conditional number-tail statement; it does not identify omega with an R-167 Q3 Gibbs or history state.",
+    "qft_interface": "The state-weighted defect is the exact interface needed before replacing harmonic polynomial powers by a Q3 onsite/Ritz restriction in the truncated CCR and Duhamel route. It is still prior to common-alpha dynamics, OS/KMS/GNS reconstruction, a physical gap, continuum, Sector A or Pre-A.",
+    "operator_norm_boundary": "The audit deliberately records the operator-norm defect and does not claim it tends to zero; only the conditional state-weighted envelope is a candidate vanishing quantity."
+  },
+  "finite_fixture": {
+    "n_values": [8, 12, 16, 24, 32, 48],
+    "degree_values": [2, 4],
+    "parameters": {"chi": 1.0, "r": -9.0, "g": 1.0, "shift": 41.5},
+    "moment_cap": 1.0,
+    "tolerance": 1.0e-10,
+    "agreement_tolerance": 1.0e-9
+  },
+  "scope": {
+    "finite_path_support_closed": true,
+    "finite_norm_envelope_closed": true,
+    "conditional_state_weighted_boundary_bound_closed": true,
+    "operator_norm_convergence_closed": false,
+    "q3_energy_to_number_form_domination_closed": false,
+    "q3_gibbs_weighted_boundary_uniformity_closed": false,
+    "q3_evolved_history_weighted_boundary_uniformity_closed": false,
+    "actual_unbounded_q3_domain_transfer_closed": false,
+    "source_volume_orientation_history_uniform_closed": false,
+    "direct_d_delta_d_cauchy_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false
+  },
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R279.lean",
+    "command": "lake env lean Tect/R279.lean",
+    "declarations": ["fifth_moment_to_weighted_top_tail", "fifth_moment_fixture"],
+    "role": "R279 proves the scalar n^2 top-tail decay used by the conditional state-weighted bound; it does not prove the matrix path-support audit or any Q3/QFT uniformity."
+  },
+  "formal_integration": {
+    "results": [],
+    "events": [],
+    "negatives": [],
+    "lean": "R279 PASS",
+    "no_new_result": true,
+    "no_new_negative": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "boundary": "T0 claim-nonbearing finite compression audit. It supplies an exact path-support fact and a conditional state-weighted envelope only. It does not instantiate the R-167 state, prove source/volume/orientation/history uniformity, or cross the Hamiltonian-to-OS/KMS/GNS/QFT boundary.",
+  "next_action": "Use the R-167 two-sided Shubin graph authority to derive an explicit harmonic-number form inequality with uniform constants, then instantiate the conditional boundary estimate for the actual Gibbs and two-orientation history states; if that fails, register the obstruction before D/delta-D or common-alpha promotion."
+}
