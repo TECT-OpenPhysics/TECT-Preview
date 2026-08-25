@@ -1,0 +1,274 @@
+{
+  "assertion_count": 135,
+  "assertions": [
+    {
+      "actual": "['EXP-001139', 'T-054']",
+      "expected": "EXP-001139/T-054",
+      "group": "provenance",
+      "name": "identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "group": "scope",
+      "name": "claim nonbearing",
+      "status": "PASS"
+    },
+    {
+      "actual": "[Fraction(1, 8), Fraction(1, 4), Fraction(1, 2), Fraction(1, 1), Fraction(2, 1), Fraction(4, 1)]",
+      "expected": ">0",
+      "group": "hypotheses",
+      "name": "positive beta",
+      "status": "PASS"
+    },
+    {
+      "actual": "[Fraction(-64, 1), Fraction(-16, 1), Fraction(-8, 1), Fraction(-4, 1), Fraction(-2, 1), Fraction(0, 1), Fraction(2, 1), Fraction(4, 1), Fraction(8, 1), Fraction(16, 1), Fraction(64, 1)]",
+      "expected": "two-sided and origin",
+      "group": "hypotheses",
+      "name": "grid includes tails",
+      "status": "PASS"
+    },
+    {
+      "actual": "[Fraction(150872149, 60), Fraction(150872149, 60)]",
+      "expected": "equal",
+      "group": "potential",
+      "name": "q 0 potential completion",
+      "status": "PASS"
+    },
+    {
+      "actual": "[Fraction(150872149, 60), Fraction(4194304, 5)]",
+      "expected": ">=tail coefficient*q^4",
+      "group": "Gibbs tail",
+      "name": "q 0 quartic tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[Fraction(-255, 66049), Fraction(-255, 66049)]",
+      "expected": "equal",
+      "group": "resolvent derivatives",
+      "name": "q 0 first derivative formula",
+      "status": "PASS"
+    },
+    {
+      "actual": "[Fraction(-2024, 16974593), Fraction(-2024, 16974593)]",
+      "expected": "equal",
+      "group": "resolvent derivatives",
+      "name": "q 0 second derivative formula",
+      "status": "PASS"
+    },
+    {
+      "actual": "255/66049",
+      "expected": "<=1",
+      "group": "derivative envelopes",
+      "name": "q 0 first derivative envelope",
+      "status": "PASS"
+    },
+    {
+      "actual": "2024/16974593",
+      "expected": "<=1",
+      "group": "derivative envelopes",
+      "name": "q 0 second derivative envelope",
+      "status": "PASS"
+    },
+    {
+      "actual": "[Fraction(582229, 60), Fraction(582229, 60)]",
+      "expected": "equal",
+      "group": "potential",
+      "name": "q 1 potential completion",
+      "status": "PASS"
+    },
+    {
+      "actual": "[Fraction(582229, 60), Fraction(16384, 5)]",
+      "expected": ">=tail coefficient*q^4",
+      "group": "Gibbs tail",
+      "name": "q 1 quartic tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "{\"groups\": {\"Gibbs tail\": 11, \"beta dependence\": 5, \"cancellation product rule\": 28, \"derivative envelopes\": 22, \"history interface\": 4, \"hypotheses\": 2, \"potential\": 12, \"provenance\": 1, \"resolvent derivatives\": 22, \"route\": 1, \"scope\": 2, \"state pairing\": 1, \"state-weighted envelope\": 24}, \"storage\": \"compact-summary; all assertions executed in memory\", \"total\": 135}",
+      "expected": "all executed assertions passed",
+      "group": "summary",
+      "name": "assertion_summary",
+      "status": "PASS"
+    }
+  ],
+  "audit_id": "PA-CP1-ST8-Q3LOCK-GIBBS-WEIGHTED-FORCE-CANCELLATION",
+  "boundary": {
+    "c6_closed": false,
+    "common_alpha_closed": false,
+    "continuum_closed": false,
+    "exhaustion_independence_closed": false,
+    "fixed_beta_one_site_pairing_closed": true,
+    "force_tail_removed_from_linear_pairing": true,
+    "hamiltonian_os_identification_closed": false,
+    "ibp_boundary_contract_closed": true,
+    "kms_gns_gap_closed": false,
+    "pre_a_closed": false,
+    "product_core_density_closed": false,
+    "sector_a_closed": false,
+    "state_weighted_history_envelope_closed": true,
+    "uniform_beta_closed": false,
+    "volume_uniform_d_delta_d_closed": false
+  },
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "derived": {
+    "beta_rows": [
+      {
+        "beta": "1/8",
+        "matrix_element_bound": "(H0+H1)/1/8",
+        "unit_history_envelope": "16"
+      },
+      {
+        "beta": "1/4",
+        "matrix_element_bound": "(H0+H1)/1/4",
+        "unit_history_envelope": "8"
+      },
+      {
+        "beta": "1/2",
+        "matrix_element_bound": "(H0+H1)/1/2",
+        "unit_history_envelope": "4"
+      },
+      {
+        "beta": "1",
+        "matrix_element_bound": "(H0+H1)/1",
+        "unit_history_envelope": "2"
+      },
+      {
+        "beta": "2",
+        "matrix_element_bound": "(H0+H1)/2",
+        "unit_history_envelope": "1"
+      },
+      {
+        "beta": "4",
+        "matrix_element_bound": "(H0+H1)/4",
+        "unit_history_envelope": "1/2"
+      }
+    ],
+    "common_alpha_closed": false,
+    "fixed_beta_one_site_pairing_closed": true,
+    "force_tail_removed_from_linear_pairing": true,
+    "history_rows": [
+      {
+        "envelope_symbol": "(1+0)/beta",
+        "h0_norm": "1",
+        "h1_norm": "0"
+      },
+      {
+        "envelope_symbol": "(1/2+1/3)/beta",
+        "h0_norm": "1/2",
+        "h1_norm": "1/3"
+      },
+      {
+        "envelope_symbol": "(2+5/4)/beta",
+        "h0_norm": "2",
+        "h1_norm": "5/4"
+      },
+      {
+        "envelope_symbol": "(7/3+11/5)/beta",
+        "h0_norm": "7/3",
+        "h1_norm": "11/5"
+      }
+    ],
+    "point_rows": [
+      {
+        "force": "-786112/5",
+        "force_fprime": "40091712/66049",
+        "fprime": "-255/66049",
+        "fsecond": "-2024/16974593",
+        "potential": "150872149/60",
+        "q": "-64"
+      },
+      {
+        "force": "-12208/5",
+        "force_fprime": "36624/289",
+        "fprime": "-15/289",
+        "fsecond": "-26/4913",
+        "potential": "582229/60",
+        "q": "-16"
+      },
+      {
+        "force": "-1496/5",
+        "force_fprime": "4488/125",
+        "fprime": "-3/25",
+        "fsecond": "-1/125",
+        "potential": "35029/60",
+        "q": "-8"
+      },
+      {
+        "force": "-172/5",
+        "force_fprime": "0",
+        "fprime": "0",
+        "fsecond": "1/8",
+        "potential": "1909/60",
+        "q": "-4"
+      },
+      {
+        "force": "-14/5",
+        "force_fprime": "-168/125",
+        "fprime": "12/25",
+        "fsecond": "44/125",
+        "potential": "109/60",
+        "q": "-2"
+      },
+      {
+        "force": "0",
+        "force_fprime": "0",
+        "fprime": "1",
+        "fsecond": "0",
+        "potential": "17/12",
+        "q": "0"
+      },
+      {
+        "force": "14/5",
+        "force_fprime": "168/125",
+        "fprime": "12/25",
+        "fsecond": "-44/125",
+        "potential": "109/60",
+        "q": "2"
+      },
+      {
+        "force": "172/5",
+        "force_fprime": "0",
+        "fprime": "0",
+        "fsecond": "-1/8",
+        "potential": "1909/60",
+        "q": "4"
+      },
+      {
+        "force": "1496/5",
+        "force_fprime": "-4488/125",
+        "fprime": "-3/25",
+        "fsecond": "1/125",
+        "potential": "35029/60",
+        "q": "8"
+      },
+      {
+        "force": "12208/5",
+        "force_fprime": "-36624/289",
+        "fprime": "-15/289",
+        "fsecond": "26/4913",
+        "potential": "582229/60",
+        "q": "16"
+      },
+      {
+        "force": "786112/5",
+        "force_fprime": "-40091712/66049",
+        "fprime": "-255/66049",
+        "fsecond": "2024/16974593",
+        "potential": "150872149/60",
+        "q": "64"
+      }
+    ],
+    "pre_a_closed": false,
+    "state_weighted_history_envelope_closed": true,
+    "uniform_beta_closed": false,
+    "volume_uniform_d_delta_d_closed": false
+  },
+  "exploration_id": "EXP-001139",
+  "passed": 135,
+  "run_kind": "primary",
+  "schema": "tect/foundation-audit/1.0",
+  "task_id": "T-054",
+  "verdict": "PASS"
+}

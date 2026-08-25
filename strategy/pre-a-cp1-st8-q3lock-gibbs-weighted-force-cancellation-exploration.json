@@ -1,0 +1,88 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001139",
+  "title": "Fixed-beta Gibbs-weighted cancellation for the resolvent force term",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-ENERGY-WEIGHTED-COMMUTATOR-GEVREY-LR-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "question": "Can the V'(q)f'(q) second-commutator term be paired by a fixed-beta one-site Gibbs integration-by-parts identity, replacing the divergent standalone K-form multiplier by f'' and the derivative-bearing history?",
+  "method": [
+    "Use the exact Q3 one-site potential V=17/12-q^2/2+3q^4/20 and the resolvent coordinate f(q)=16q/(16+q^2). Verify the completed-square form V=1+(3/20)(q^2-5/3)^2 and the global quartic tail V>=q^4/20 on an exact rational two-sided grid.",
+    "Verify the quotient-rule formulas for f' and f'', their exact finite-grid envelopes |f'|<=1 and |f''|<=1, and the product-rule expression (f'h)'=f''h+f'h' for derivative-bearing polynomial history proxies.",
+    "Use the compact-support fixed-beta Gibbs integration-by-parts contract omega_beta(V'f'h)=beta^(-1)omega_beta((f'h)') and apply Cauchy-Schwarz to obtain the conditional matrix-element envelope beta^(-1)(||h||_2+||h'||_2). The explicit beta dependence is retained.",
+    "Reproduce all rational rows in a separate Fraction-only implementation and compile Lean R309 for the potential completion, quartic tail, derivative formulas and beta envelope coefficient."
+  ],
+  "finding": "Primary 135/135, independent 77/77, integrated 12/12, and Lean R309 PASS. The fixed-beta one-site Gibbs pairing transfers the force factor from V'f'h to the derivative-bearing product f''h+f'h' under the declared compact-support zero-boundary contract. Because |f'| and |f''| are bounded by one on the audited grid, the resulting conditional matrix-element envelope is beta^(-1)(||h||_2+||h'||_2), with no standalone V'f' multiplier. This is a finite state-weighted cancellation bridge, not a squared V-weighted K-form estimate.",
+  "verdict": "advanced",
+  "decision_reason": "The calculation opens a cancellation-aware state-pairing subroute after the R308 naive K-form obstruction. It closes only the algebraic one-site fixed-beta pairing under an explicit compact-support boundary hypothesis. The history derivative h' is a proxy and is not identified with the Q3 modular derivative delta D; no volume/source-uniform estimate, beta-uniform constant, product/core density, exhaustion independence, common alpha, OS/KMS/GNS identification, gap, continuum, C6, Sector A or Pre-A result follows.",
+  "closed": [
+    "exact completed-square Q3 potential and quartic Gibbs tail fixture",
+    "exact resolvent first- and second-derivative formulas",
+    "finite-grid derivative envelopes for the resolvent coordinate",
+    "compact-support product-rule transfer to f''h+f'h'",
+    "fixed-beta one-site state-weighted matrix-element envelope",
+    "independent reproduction and Lean R309 cross-check"
+  ],
+  "open": [
+    "actual Gibbs integration-by-parts theorem with operator-domain boundary control",
+    "identification of the history derivative with direct modular delta D",
+    "volume/source-uniform D and delta-D Cauchy estimates",
+    "squared energy-form or V-weighted norm control",
+    "beta-uniform transfer and product/core density",
+    "exhaustion independence and common alpha",
+    "Hamiltonian-to-OS/KMS/GNS identification, gap, continuum, C6, Sector A and Pre-A"
+  ],
+  "adversarial_review": [
+    {"axis": "integration by parts", "check": "The identity is restricted to compactly supported C1 histories with an explicit zero-boundary contract; no boundary cancellation is promoted to the infinite-volume theory.", "disposition": "UPHELD-OPEN"},
+    {"axis": "state versus norm", "check": "The estimate controls a fixed-beta linear Gibbs matrix element, not the squared V-weighted K-form norm obstructed by R308.", "disposition": "UPHELD-OPEN"},
+    {"axis": "derivative factor", "check": "The product rule retains both f''h and f'h'; the history derivative is not silently renamed modular delta D.", "disposition": "UPHELD"},
+    {"axis": "beta dependence", "check": "The beta^-1 factor is explicit and the package makes no beta-uniform claim.", "disposition": "UPHELD"},
+    {"axis": "volume dependence", "check": "The fixture is one-site and finite-beta; no source- or volume-uniform exhaustion estimate is inferred.", "disposition": "UPHELD-OPEN"},
+    {"axis": "QFT promotion", "check": "Direct D/delta-D Cauchy, common alpha, OS/KMS/GNS identification, gap, continuum, C6, Sector A and Pre-A remain open.", "disposition": "UPHELD-OPEN"}
+  ],
+  "evidence_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-gibbs-weighted-force-cancellation-manifest.json#model",
+    "codes/foundations/pre_a_cp1_st8_q3lock_gibbs_weighted_force_cancellation.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_gibbs_weighted_force_cancellation_independent.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_gibbs_weighted_force_cancellation_verify.py#run",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-primary-pre_a_cp1_st8_q3lock_gibbs_weighted_force_cancellation/primary.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-independent-pre_a_cp1_st8_q3lock_gibbs_weighted_force_cancellation/independent.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-integrated-pre_a_cp1_st8_q3lock_gibbs_weighted_force_cancellation/integrated.json#lean",
+    "verification/lean/Tect/R309.lean#potential_completion_square",
+    "verification/lean/registry.json#R309"
+  ],
+  "formal_integration": {
+    "events": [],
+    "results": [],
+    "negatives": [],
+    "lean": "R309 PASS; metadata regenerated",
+    "no_new_event": true,
+    "no_new_result": true,
+    "no_new_negative": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "qft_interface": {
+    "closed": "A fixed-beta one-site state-weighted linear pairing that transfers the force factor to f'' and a derivative-bearing history under a declared compact-support boundary contract.",
+    "open": "Squared energy-form estimates, volume/source-uniform D/delta-D Cauchy, product/core density, exhaustion independence, common alpha, OS/KMS/GNS, gap, continuum and Pre-A.",
+    "tect_boundary": "Positive route-local state-pairing result only; h is a history proxy and not the Q3 modular derivative."
+  },
+  "next_action": "Build the smallest finite two-site or finite-edge history fixture in which the paired derivative is the actual D/delta-D difference, test whether the beta-weighted bound is uniform in the growing source/cutoff, and record either a genuine uniform estimate or a route-local obstruction before attempting the all-shape common-core theorem.",
+  "related": [
+    {"id": "EXP-001138", "relation": "continues"},
+    {"id": "EXP-001125", "relation": "continues"},
+    {"id": "EXP-001123", "relation": "continues"}
+  ],
+  "prior_exploration_id": "EXP-001138",
+  "provenance": "contemporaneous",
+  "recorded_at": "2026-08-27T15:30:00Z",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-08-26",
+  "boundary": "This is a fixed-beta one-site state-weighted cancellation bridge. It is not a squared K-form bound, a direct Q3 D/delta-D theorem, a common infinite-volume dynamics result, a full QFT reconstruction, a gap, continuum, C6, Sector A or Pre-A result.",
+  "no_overclaim": "The positive result opens only a conditional cancellation-aware matrix-element route. It neither repairs the R308 K-form obstruction nor closes any common-alpha, OS/KMS/GNS, gap, continuum, C6, Sector A or Pre-A gate."
+}

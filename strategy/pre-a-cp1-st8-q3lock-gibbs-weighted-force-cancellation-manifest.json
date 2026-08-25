@@ -1,0 +1,86 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-GIBBS-WEIGHTED-FORCE-CANCELLATION-v0",
+  "title": "Fixed-beta Gibbs-weighted cancellation for the resolvent force term",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001139",
+  "claim_bearing": false,
+  "parent_explorations": ["EXP-001138", "EXP-001123", "EXP-001125"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-ENERGY-WEIGHTED-COMMUTATOR-GEVREY-LR-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "question": "Can the V'(q)f'(q) second-commutator term be paired by a fixed-beta one-site Gibbs integration-by-parts identity, replacing the divergent standalone K-form multiplier by f'' and the derivative-bearing history?",
+  "finite_fixture": {
+    "chi": "1",
+    "r": "-1",
+    "g": "3/5",
+    "per_site_shift": "17/12",
+    "resolvent_scale": "16",
+    "quartic_tail_coefficient": "1/20",
+    "completion_center": "5/3",
+    "completion_constant": "1",
+    "beta_grid": ["1/8", "1/4", "1/2", "1", "2", "4"],
+    "q_grid": ["-64", "-16", "-8", "-4", "-2", "0", "2", "4", "8", "16", "64"],
+    "history_norm_pairs": [["1", "0"], ["1/2", "1/3"], ["2", "5/4"], ["7/3", "11/5"]]
+  },
+  "model": {
+    "shifted_potential": "V(q)=17/12-q^2/2+3q^4/20=1+(3/20)(q^2-5/3)^2",
+    "force": "V'(q)=-q+3q^3/5",
+    "resolvent_coordinate": "f(q)=16q/(16+q^2)",
+    "resolvent_derivative": "f'(q)=16(16-q^2)/(16+q^2)^2",
+    "resolvent_second_derivative": "f''(q)=32q(q^2-48)/(16+q^2)^3",
+    "gibbs_pairing": "omega_beta(V'f'h)=beta^(-1) omega_beta((f'h)') for h in C_c^1",
+    "cauchy_envelope": "|omega_beta(V'f'h)| <= beta^(-1)(||h||_2+||h'||_2) using |f'|,|f''|<=1",
+    "history_interface": "h is a one-site derivative-bearing history proxy; it is not the Q3 modular derivative delta D"
+  },
+  "scope": {
+    "fixed_beta_one_site_pairing_closed": true,
+    "ibp_boundary_contract_closed": true,
+    "force_tail_removed_from_linear_pairing": true,
+    "state_weighted_history_envelope_closed": true,
+    "uniform_beta_closed": false,
+    "volume_uniform_d_delta_d_closed": false,
+    "product_core_density_closed": false,
+    "exhaustion_independence_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false
+  },
+  "adversarial_review": [
+    {"axis": "integration by parts", "check": "The identity is used only for compactly supported C1 history h with an explicit zero-boundary contract; no unproved boundary cancellation is promoted to the thermodynamic theory.", "disposition": "UPHELD-OPEN"},
+    {"axis": "state versus norm", "check": "The estimate controls a fixed-beta Gibbs matrix element, not the squared V-weighted K-form norm that R308 obstructed.", "disposition": "UPHELD-OPEN"},
+    {"axis": "derivative factor", "check": "The product rule produces f''h+f'h'; the history derivative is retained and is not identified silently with modular delta D.", "disposition": "UPHELD"},
+    {"axis": "beta dependence", "check": "The explicit beta^-1 factor is reported and no beta-uniform constant is asserted.", "disposition": "UPHELD"},
+    {"axis": "volume dependence", "check": "The fixture is one-site and finite-beta; no volume/source-uniform estimate or exhaustion rate is inferred.", "disposition": "UPHELD-OPEN"},
+    {"axis": "QFT promotion", "check": "Direct D/delta-D Cauchy, product/core density, common alpha, OS/KMS/GNS identification, gap, continuum, C6, Sector A and Pre-A remain open.", "disposition": "UPHELD-OPEN"}
+  ],
+  "files": {
+    "primary": "codes/foundations/pre_a_cp1_st8_q3lock_gibbs_weighted_force_cancellation.py",
+    "independent": "codes/foundations/pre_a_cp1_st8_q3lock_gibbs_weighted_force_cancellation_independent.py",
+    "integrated": "codes/foundations/pre_a_cp1_st8_q3lock_gibbs_weighted_force_cancellation_verify.py",
+    "lean": "verification/lean/Tect/R309.lean",
+    "primary_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-primary-pre_a_cp1_st8_q3lock_gibbs_weighted_force_cancellation/primary.json",
+    "independent_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-independent-pre_a_cp1_st8_q3lock_gibbs_weighted_force_cancellation/independent.json",
+    "integrated_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-integrated-pre_a_cp1_st8_q3lock_gibbs_weighted_force_cancellation/integrated.json"
+  },
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R309.lean",
+    "theorem_markers": ["potential_completion_square", "potential_quartic_lower_fixture", "resolvent_first_derivative_formula", "resolvent_second_derivative_formula", "beta_envelope_fixture"],
+    "command": "lake env lean Tect/R309.lean",
+    "boundary": "Lean checks exact rational polynomial identities and the beta envelope coefficient; it does not formalize Gibbs integration, boundary terms, modular derivatives, operator domains, or QFT limits."
+  },
+  "qft_interface": {
+    "closed": "A fixed-beta one-site state-weighted linear pairing that transfers the force factor to f'' and a derivative-bearing history under a declared compact-support boundary contract.",
+    "open": "Squared energy-form estimates, volume/source-uniform D/delta-D Cauchy, product/core density, exhaustion independence, common alpha, OS/KMS/GNS, gap, continuum and Pre-A.",
+    "tect_boundary": "Positive route-local state-pairing result only; h is a history proxy and not the Q3 modular derivative."
+  },
+  "no_overclaim": "This supports a cancellation-aware fixed-beta matrix-element route. It neither repairs the R308 K-form obstruction nor proves a common infinite-volume QFT dynamics."
+}
