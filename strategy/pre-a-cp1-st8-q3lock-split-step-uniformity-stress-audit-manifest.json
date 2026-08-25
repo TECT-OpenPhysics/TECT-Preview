@@ -1,0 +1,123 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-SPLIT-STEP-UNIFORMITY-STRESS-AUDIT-v0",
+  "title": "Finite split-step source, beta, volume and shape uniformity stress audit",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001157",
+  "claim_bearing": false,
+  "parent_explorations": ["EXP-001156", "EXP-001155", "EXP-001154", "EXP-001151"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-CP1-ST8-Q3LOCK-ENERGY-WEIGHTED-COMMUTATOR-GEVREY-LR-CLOSURE",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "question": "Does the finite split-step recurrence pass persist under declared source, beta, volume and shape changes, with the same C=J=1 constants and both term orders?",
+  "finite_fixture": {
+    "oscillator_dimension": 3,
+    "beta_baseline": "1",
+    "character_amplitude": "1/3",
+    "hbar": "1",
+    "time_step": "1/18",
+    "steps": 6,
+    "time_horizon": "1/3",
+    "recurrence_C": "1",
+    "recurrence_J": "1",
+    "orientation_count": 4,
+    "split_order_count": 2,
+    "case_count": 5,
+    "finite_tolerance": 1e-08,
+    "agreement_tolerance": 1e-07,
+    "recurrence_tolerance": 1e-09,
+    "weighted_degree": 6,
+    "base_weight": 2
+  },
+  "model_parameters": {
+    "chi": "1",
+    "r": "-1",
+    "g": "3/5",
+    "c": "3/5",
+    "lambda": "1/10"
+  },
+  "split_orders": [
+    "onsite_then_lexicographic_bonds",
+    "reverse_term_order"
+  ],
+  "cases": [
+    {
+      "id": "baseline_canonical_beta1_source01",
+      "shape": "canonical",
+      "volume_values": [2, 4, 6],
+      "beta_values": ["1"],
+      "source_pairs": {"2": [[0, 1]], "4": [[0, 1]], "6": [[0, 1]]}
+    },
+    {
+      "id": "canonical_beta_half_v6",
+      "shape": "canonical",
+      "volume_values": [6],
+      "beta_values": ["1/2"],
+      "source_pairs": {"6": [[0, 1]]}
+    },
+    {
+      "id": "canonical_beta_two_v6",
+      "shape": "canonical",
+      "volume_values": [6],
+      "beta_values": ["2"],
+      "source_pairs": {"6": [[0, 1]]}
+    },
+    {
+      "id": "canonical_shifted_source",
+      "shape": "canonical",
+      "volume_values": [4, 6],
+      "beta_values": ["1"],
+      "source_pairs": {"4": [[1, 2]], "6": [[3, 4]]}
+    },
+    {
+      "id": "path_shape_source01",
+      "shape": "path",
+      "volume_values": [4, 6],
+      "beta_values": ["1"],
+      "source_pairs": {"4": [[0, 1]], "6": [[0, 1]]}
+    }
+  ],
+  "model": {
+    "hamiltonian": "H=sum_x[p_x^2/(2 chi)+r q_x^2/2+g q_x^4/4]+sum_edges[c(q_x-q_y)^2/2+lambda(q_x-q_y)^2(q_x^2+q_y^2)/4]",
+    "split_step": "The exact onsite-plus-all-bond product from EXP-001156, with both declared term orders",
+    "observable": "A_a=exp(i a(q_i+q_j)/hbar), with source pair (i,j) supplied per case",
+    "seminorm": "L_x^2=||[q_x,A]||_(beta,#)^2+||[p_x,A]||_(beta,#)^2",
+    "recurrence_target": "L_x(n+1) <= (1+C delta)L_x(n)+J delta sum_{y~x}L_y(n)",
+    "shape_variants": "canonical target/square/2x3 graphs plus path stress graphs; path results are stress evidence, not canonical Q3 geometry"
+  },
+  "scope": {
+    "finite_uniformity_stress_rows_closed": true,
+    "source_variation_checked": true,
+    "beta_variation_checked": true,
+    "volume_variation_checked": true,
+    "shape_variation_checked": true,
+    "uniform_split_recurrence_theorem_closed": false,
+    "volume_uniformity_proved": false,
+    "cutoff_uniformity_proved": false,
+    "beta_uniformity_proved": false,
+    "source_uniformity_proved": false,
+    "exhaustion_independence_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R327.lean",
+    "command": "lake env lean Tect/R327.lean",
+    "role": "R327 checks exact rational time, recurrence, case and context fixtures only; Python checks matrix stress rows."
+  },
+  "next_action": "If the finite stress rows pass, derive an analytic state-weighted or energy-graph estimate uniform in source, beta and volume; if a case fails, retain the exact case as a route boundary and do not promote common alpha.",
+  "boundary": "T0 claim-nonbearing finite stress audit. It does not prove an infinite-volume recurrence, common alpha, a thermodynamic dynamics, OS/KMS/GNS reconstruction, a gap, continuum, C6, Sector A or Pre-A.",
+  "no_overclaim": "Finite stress agreement is evidence for the declared cases only; it is not a uniform theorem or a QFT conclusion."
+}
