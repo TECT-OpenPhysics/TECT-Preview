@@ -2390,6 +2390,128 @@
       "task_id": "T-054",
       "title": "Static dual-tail identity for a commuting coordinate character",
       "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "axis": "generator algebra",
+          "check": "The cross-term E_L is retained after checking [W_L,A]=0.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "initial cancellation",
+          "check": "Both initial conditions are checked for both signs.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "operator versus state norm",
+          "check": "The finite bound is not transferred to a Gibbs seminorm.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "dual state",
+          "check": "Reference and A-rho-A* rows are separate and two-sided.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "truncated CCR",
+          "check": "No infinite-dimensional CCR or domain claim is made.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "uniformity",
+          "check": "Finite ratios do not establish a uniform QFT constant.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "Lean",
+          "check": "R296 is scalar bookkeeping only.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "QFT promotion",
+          "check": "OS/KMS/GNS, common alpha, gap, continuum, C6, Sector A and Pre-A remain open.",
+          "disposition": "UPHELD-OPEN"
+        }
+      ],
+      "boundary": "T0 claim-nonbearing finite evolved-integrand cross-term audit; not a thermodynamic QFT theorem.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "The finite Q3 route advances because the first nonzero evolved term is identified exactly as delta_W_L delta_H(A), and a finite operator-norm second-order bound follows without a state-isometry assumption. The state-seminorm ratios are diagnostics only and do not provide a uniform common-core estimate; static tail reuse therefore cannot close the dual evolved integrand gate.",
+      "evidence_refs": [
+        "strategy/pre_a_cp1_st8_q3lock_evolved_dual_integrand_cross_term_audit_manifest.json#model",
+        "strategy/pre-a-cp1-st8-q3lock-evolved-dual-integrand-cross-term-audit-certificate-260825.md#Exact finite identity",
+        "codes/foundations/pre_a_cp1_st8_q3lock_evolved_dual_integrand_cross_term_audit.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_evolved_dual_integrand_cross_term_audit_independent.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_evolved_dual_integrand_cross_term_audit_verify.py#main",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-27-primary-pre_a_cp1_st8_q3lock_evolved_dual_integrand_cross_term_audit/primary.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-27-independent-pre_a_cp1_st8_q3lock_evolved_dual_integrand_cross_term_audit/independent.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-27-integrated-pre_a_cp1_st8_q3lock_evolved_dual_integrand_cross_term_audit/integrated.json#lean",
+        "verification/lean/Tect/R296.lean#second_order_operator_bound_fixture",
+        "verification/lean/registry.json#R296"
+      ],
+      "finding": "Primary 469/469, independent 321/321, and integrated 32/32 with Lean R296 PASS. The exact finite generator identity and initial cancellation hold for every tested volume, oscillator dimension, radius, time, and sign. The maximum finite operator-bound ratio is 0.32770398902982883. Reference and dual state rows are finite; the cross-term-to-static-tail ratio ranges from 0.7201853381375809 to 3.27318205723085, with the maximum at volume 2, oscillator dimension 6, radius 1.0 in the dual state.",
+      "formal_integration": {
+        "events": [],
+        "lean": "R296 PASS",
+        "negatives": [],
+        "no_new_event": true,
+        "no_new_negative": true,
+        "no_new_result": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "results": []
+      },
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": []
+      },
+      "gate_ids": [
+        "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+        "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+        "PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE",
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001125",
+      "method": [
+        "Build the registered finite Q3 Hamiltonian on the edge and square graphs with the declared oscillator dimensions.",
+        "Construct the smooth coordinate cutoff tail W_L, local character A, reference Gibbs state rho, and dual state A rho A*.",
+        "Compute B=delta_H(A), C=delta_H^2(A), E_L=delta_W_L(B), and verify the exact signed-generator identity for sigma=-1 and sigma=+1.",
+        "Check D_sigma(0)=D_sigma'(0)=0 and test the finite operator-norm second-order Duhamel bound at times 0.1 and 0.2.",
+        "Evaluate E_L, D_sigma, and delta_H(D_sigma) in both reference and dual two-sided state seminorms, rebuild independently, and compile Lean R296."
+      ],
+      "next_action": "Prove a source/volume/beta/cutoff-uniform state-norm transfer for E_L and signed dynamics on one common Q3 core, or register the first exact scaling obstruction.",
+      "parent_exploration_id": "EXP-001124",
+      "provenance": "contemporaneous",
+      "qft_interface": {
+        "closed": "Finite actual-Q3 evolved cross-term identity and finite operator-norm second-order bound with independent reference/dual state diagnostics.",
+        "open": "Uniform state-norm transfer, common core, direct D/delta-D Cauchy, exhaustion, common alpha, Hamiltonian-to-OS/KMS/GNS identification, gap, continuum, C6, Sector A and Pre-A.",
+        "tect_boundary": "No heat_root_incidence or canonical A1/R-192 production owner is supplied."
+      },
+      "question": "For the actual finite truncated Q3 regulator, does coordinate commutation expose an exact evolved Duhamel cross-term E_L=delta_W_L delta_H(A), and does it give a finite second-order operator-norm bound while reference and dual state seminorms remain finite?",
+      "recorded_at": "2026-08-27T08:00:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001124",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001123",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001066",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-08-25",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Finite actual-Q3 evolved dual-integrand cross-term audit",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",

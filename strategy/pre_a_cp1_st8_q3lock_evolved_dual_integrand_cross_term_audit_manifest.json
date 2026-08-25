@@ -1,0 +1,102 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-EVOLVED-DUAL-INTEGRAND-CROSS-TERM-AUDIT-v0",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001125",
+  "claim_bearing": false,
+  "parent_explorations": ["EXP-001124", "EXP-001123", "EXP-001066"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "question": "For the actual finite truncated Q3 regulator, does coordinate commutation [W_L,A]=0 expose an exact evolved Duhamel cross-term E_L=delta_W_L delta_H(A), and does it give a finite second-order operator-norm bound while the reference and dual state seminorms remain finite?",
+  "model": {
+    "full_hamiltonian": "H=sum_x[p_x^2/(2 chi)+r q_x^2/2+g q_x^4/4]+sum_<xy>[c(q_x-q_y)^2/2+lambda(q_x-q_y)^2(q_x^2+q_y^2)/4]",
+    "cutoff_tail": "W_L=H-H_L from the smooth spectral coordinate cutoff used in EXP-001123",
+    "character": "A=exp(i*a*q_0/hbar)",
+    "generators": "delta_K(X)=i[K,X]/hbar, B=delta_H(A), C=delta_H^2(A), E_L=delta_W_L(B)",
+    "exact_identity": "[W_L,A]=0 implies delta_(H+sigma W_L)^2(A)=C+sigma E_L and D_sigma(0)=D_sigma'(0)=0",
+    "finite_operator_bound": "For finite unitary conjugation, ||D_sigma(t)||_op <= t^2*(2||C||_op+||E_L||_op)/2",
+    "state_diagnostic": "N_rho,# and N_(A rho A*),# are evaluated for E_L, D_sigma(t), and delta_H(D_sigma(t)); no state-isometry for H+sigma W_L is assumed"
+  },
+  "finite_fixture": {
+    "volume_values": [2, 4],
+    "oscillator_dimensions_by_volume": {"2": [3, 4, 5, 6, 7], "4": [3, 4]},
+    "edges_by_volume": {
+      "2": [[0, 1]],
+      "4": [[0, 1], [0, 2], [1, 3], [2, 3]]
+    },
+    "beta": 1.0,
+    "chi": 1.0,
+    "hbar": 1.0,
+    "r": -1.0,
+    "g": 0.6,
+    "c": 1.0,
+    "lambda": 0.1,
+    "character_amplitude": 0.25,
+    "radius_values": [0.75, 0.9, 1.0],
+    "time_values": [0.1, 0.2],
+    "sign_values": [-1, 1],
+    "hermitian_tolerance": 1.0e-9,
+    "state_tolerance": 1.0e-9,
+    "commutation_tolerance": 1.0e-8,
+    "bound_tolerance": 1.0e-8,
+    "lane_tolerance": 1.0e-7
+  },
+  "scope": {
+    "finite_cross_term_identity_closed": true,
+    "finite_second_order_operator_bound_closed": true,
+    "finite_reference_cross_term_closed": true,
+    "finite_dual_cross_term_closed": true,
+    "finite_reference_D_closed": true,
+    "finite_dual_D_closed": true,
+    "finite_reference_delta_D_closed": true,
+    "finite_dual_delta_D_closed": true,
+    "finite_small_time_diagnostic_closed": true,
+    "actual_q3_evolved_dual_integrand_uniform_closed": false,
+    "state_isometry_for_signed_dynamics_closed": false,
+    "actual_q3_unbounded_common_core_closed": false,
+    "volume_uniform_direct_d_cauchy_closed": false,
+    "delta_d_cauchy_closed": false,
+    "product_core_density_closed": false,
+    "exhaustion_independence_closed": false,
+    "group_law_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "adversarial_review": [
+    {"axis": "generator algebra", "check": "The identity uses delta_(H+sigma W)^2(A)=delta_H^2(A)+sigma delta_W delta_H(A) only after checking delta_W(A)=0; the cross-term is not dropped.", "disposition": "UPHELD"},
+    {"axis": "initial cancellation", "check": "D(0) and D'(0) are checked for both signs; configuration commutation is measured independently.", "disposition": "UPHELD"},
+    {"axis": "operator bound", "check": "The t^2/2 bound is stated only in finite operator norm using unitary conjugation; it is not silently transferred to a Gibbs seminorm.", "disposition": "UPHELD"},
+    {"axis": "state seminorm", "check": "Reference and A-rho-A* dual seminorms are computed separately, with both trace legs; no signed-dynamics state isometry is assumed.", "disposition": "UPHELD"},
+    {"axis": "truncated CCR", "check": "All computations are finite matrices and do not assert an exact infinite-dimensional CCR or common domain.", "disposition": "UPHELD"},
+    {"axis": "orientation", "check": "Both sigma=-1 and sigma=+1 cutoff orientations are retained in the generator identity and evolution rows.", "disposition": "UPHELD"},
+    {"axis": "uniformity", "check": "Finite cross-term ratios are diagnostics only; source, volume, beta, cutoff, and exhaustion uniformity remain open.", "disposition": "UPHELD-OPEN"},
+    {"axis": "Lean", "check": "R296 checks rational second-order fixture algebra and scope firewall only; it does not formalize matrix exponentials or QFT limits.", "disposition": "UPHELD"},
+    {"axis": "QFT promotion", "check": "No common core, common alpha, OS/KMS/GNS identification, gap, continuum, C6, Sector A, or Pre-A closure follows.", "disposition": "UPHELD-OPEN"}
+  ],
+  "formal_integration": {
+    "lean_entry": "verification/lean/Tect/R296.lean",
+    "result_ids": [],
+    "negative_ids": [],
+    "changelog_event": null
+  },
+  "qft_interface": {
+    "closed": "A finite actual-Q3 algebraic cross-term identity and a finite operator-norm second-order Duhamel bound, with independent reference/dual state-seminorm diagnostics.",
+    "open": "A state-norm bound for the signed dynamics, a source/volume/beta/cutoff-uniform evolved dual integrand estimate, an unbounded common core, direct D/delta-D Cauchy, exhaustion, common alpha, Hamiltonian-to-OS/KMS/GNS identification, gap, continuum, C6, Sector A and Pre-A remain open.",
+    "tect_boundary": "No heat_root_incidence or canonical A1/R-192 production owner is supplied."
+  },
+  "boundary": "T0 claim-nonbearing finite evolved-integrand cross-term audit. The operator-norm estimate is a finite unitary statement; state seminorm rows are diagnostic and do not close the QFT route.",
+  "next_action": "Attempt a common-core state-norm transfer of the finite cross-term estimate with an explicit signed-dynamics isometry or weighted comparison; if its constant is not uniform, record that route obstruction rather than promoting the operator-norm bound."
+}
