@@ -1,0 +1,78 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-RESOLVENT-SMOOTHING-UNIFORMITY-OBSTRUCTION-v0",
+  "title": "Epsilon-uniformity obstruction for resolvent-smoothed coordinate cylinders",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001137",
+  "claim_bearing": false,
+  "parent_explorations": ["EXP-001136", "EXP-001134", "EXP-001133"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-ENERGY-WEIGHTED-COMMUTATOR-GEVREY-LR-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-RESOLVENT-ALGEBRA-EXACT-POLYNOMIAL-COMMON-ALPHA-CLOSURE",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "question": "Can the fixed-epsilon resolvent-smoothed coordinate f_epsilon(q)=q/(1+epsilon*q^2) be used as an epsilon-uniform weighted cylinder approximating the raw coordinate as epsilon tends to zero?",
+  "finite_fixture": {
+    "chi": "1",
+    "scales_a": [2, 4, 8, 16, 32, 64],
+    "support_sizes": [1, 2, 4],
+    "grid_values": [-64, -32, -16, -8, -4, -2, -1, 0, 1, 2, 4, 8, 16, 32, 64],
+    "form_additive_gradient_bound": "1",
+    "cross_orientation_multiplier": "21"
+  },
+  "model": {
+    "parameterization": "epsilon=1/a^2 and f_a(q)=a^2*q/(a^2+q^2)",
+    "resolvent_decomposition": "f_a(q)=(1/(2*epsilon))*((q-i*a)^(-1)+(q+i*a)^(-1))",
+    "witness": "f_a(a)=a/2, hence ||f_a||_infinity^2 >= a^2/4 = 1/(4*epsilon)",
+    "form_bound": "The R304 same-form multiplier bound is at least 2*(a^2/4)^m plus the gradient term, so it diverges as epsilon tends to zero for every fixed support m>=1.",
+    "approximation": "The pointwise error is q-f_epsilon(q)=epsilon*q^3/(1+epsilon*q^2), which can vanish under a state M20 hypothesis while the weighted multiplier constant still diverges."
+  },
+  "scope": {
+    "fixed_epsilon_resolvent_cylinder_closed": true,
+    "epsilon_uniform_weighted_resolvent_cylinder_closed": false,
+    "epsilon_uniform_raw_coordinate_approximation_closed": false,
+    "resolvent_smoothing_route_obstruction_closed": true,
+    "alternative_cutoff_or_higher_weight_route_open": true,
+    "second_commutator_closed": false,
+    "modular_domain_transfer_closed": false,
+    "direct_d_cauchy_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false
+  },
+  "adversarial_review": [
+    {"axis": "witness versus supremum", "check": "Only the exact value f_a(a)=a/2 is needed for the lower bound; no unproved maximizer claim is used in the obstruction.", "disposition": "UPHELD"},
+    {"axis": "form constant", "check": "The divergence uses the already-closed R304 bound and the lower bound on M; it does not pretend that a different weighted norm cannot exist.", "disposition": "UPHELD-OPEN"},
+    {"axis": "approximation versus uniformity", "check": "The M20 approximation coefficient tends to zero separately, but that fact is not conflated with a uniform form multiplier or common-algebra estimate.", "disposition": "UPHELD"},
+    {"axis": "support and volume", "check": "The one-coordinate witness already diverges; larger products only strengthen the fixed-support obstruction and no thermodynamic statement is inferred.", "disposition": "UPHELD-OPEN"},
+    {"axis": "route scope", "check": "The negative result targets only epsilon-uniform promotion through the R304 weighted multiplier route; alternative higher-weight or cutoff-dependent routes remain open.", "disposition": "UPHELD-OPEN"},
+    {"axis": "QFT promotion", "check": "No nonexistence theorem, common-alpha conclusion, OS/KMS/GNS result, gap, continuum, C6, Sector A or Pre-A conclusion follows.", "disposition": "UPHELD-OPEN"}
+  ],
+  "files": {
+    "primary": "codes/foundations/pre_a_cp1_st8_q3lock_resolvent_smoothing_uniformity_obstruction.py",
+    "independent": "codes/foundations/pre_a_cp1_st8_q3lock_resolvent_smoothing_uniformity_obstruction_independent.py",
+    "integrated": "codes/foundations/pre_a_cp1_st8_q3lock_resolvent_smoothing_uniformity_obstruction_verify.py",
+    "lean": "verification/lean/Tect/R307.lean",
+    "primary_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-primary-pre_a_cp1_st8_q3lock_resolvent_smoothing_uniformity_obstruction/primary.json",
+    "independent_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-independent-pre_a_cp1_st8_q3lock_resolvent_smoothing_uniformity_obstruction/independent.json",
+    "integrated_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-integrated-pre_a_cp1_st8_q3lock_resolvent_smoothing_uniformity_obstruction/integrated.json"
+  },
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R307.lean",
+    "theorem_markers": ["witness_value_fixture", "same_form_growth_fixture", "epsilon_parameter_fixture", "resolvent_coefficient_fixture"],
+    "command": "lake env lean Tect/R307.lean",
+    "boundary": "Lean checks exact rational witness and scaling arithmetic only; it does not formalize a supremum theorem, operator domains, alternative weights, or any QFT limit."
+  },
+  "qft_interface": {
+    "closed": "A route-local obstruction: the R304 weighted multiplier constants cannot be epsilon-uniform when the resolvent smoothing is removed, despite a separate conditional M20 pointwise approximation.",
+    "open": "Alternative higher-energy weights, cutoff-dependent algebras, second commutators, modular transfer, direct D/delta-D Cauchy, exhaustion, common alpha, OS/KMS/GNS, gap, continuum and Pre-A.",
+    "tect_boundary": "Negative epsilon-uniformity result for one bounded-cylinder route only; no common infinite-volume dynamics or production-owner conclusion."
+  },
+  "no_overclaim": "This is a route-local scaling obstruction to promoting the fixed-epsilon R304 multiplier estimate uniformly to epsilon=0. It does not exclude other weighted algebras, cutoff-dependent constructions, or a different proof of common QFT dynamics."
+}

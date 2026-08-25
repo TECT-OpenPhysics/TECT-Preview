@@ -1,0 +1,87 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001137",
+  "title": "Epsilon-uniformity obstruction for resolvent-smoothed coordinate cylinders",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-ENERGY-WEIGHTED-COMMUTATOR-GEVREY-LR-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-RESOLVENT-ALGEBRA-EXACT-POLYNOMIAL-COMMON-ALPHA-CLOSURE",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "question": "Can the fixed-epsilon resolvent-smoothed coordinate f_epsilon(q)=q/(1+epsilon*q^2) be used as an epsilon-uniform weighted cylinder approximating the raw coordinate as epsilon tends to zero?",
+  "method": [
+    "Parameterize epsilon=1/a^2 and f_a(q)=a^2*q/(a^2+q^2), then evaluate the exact witness at q=a: f_a(a)=a/2.",
+    "Use the R304 same-form multiplier estimate with chi=1. The witness forces M^2>=a^2/4, so even the one-site weighted bound is at least a^2/2+1 and diverges as a grows.",
+    "Check the exact resolvent coefficient, monotone form lower bounds over a=2,4,8,16,32,64, decreasing pointwise approximation coefficients epsilon^2, and fixed-support product lower bounds on a rational grid.",
+    "Reproduce the scaling in an independent Fraction-only lane and compile Lean R307 for the reciprocal parameter, witness value, resolvent coefficient, growth samples and approximation-decay samples."
+  ],
+  "finding": "Primary 88/88, independent 50/50, integrated 13/13, and Lean R307 PASS. The fixed-epsilon cylinder remains finite and bounded, and the conditional pointwise/M20 approximation coefficient decreases as epsilon^2. However, the R304 weighted multiplier route cannot be made epsilon-uniform: f_a(a)=a/2 gives ||f_a||_infinity^2>=a^2/4, so the one-site same-form bound is at least a^2/2+1, with strict growth over the audited scales. Product supports only strengthen this lower bound. Therefore resolvent smoothing alone cannot promote the fixed-epsilon cylinder to the raw coordinate or a common QFT test algebra through the current weighted form estimate.",
+  "verdict": "failed",
+  "decision_reason": "This is a genuine route-local scaling obstruction, not a finite-sample failure. The smoothing approximation improves pointwise under an M20 hypothesis while the form multiplier constant diverges in the opposite direction. The obstruction blocks only epsilon-uniform promotion through the R304 weighted multiplier route; alternative higher-energy weights, cutoff-dependent algebras, or a different resolvent-difference estimate remain available.",
+  "closed": [
+    "exact epsilon=1/a^2 parameterization and resolvent coefficient",
+    "witness lower bound f_a(a)=a/2",
+    "strict form-bound growth over the declared scale family",
+    "conditional approximation-coefficient decay",
+    "fixed-support product lower-bound scaling",
+    "independent reproduction and Lean R307 cross-check"
+  ],
+  "open": [
+    "alternative higher-energy weights",
+    "cutoff-dependent or beta-dependent local algebras",
+    "second commutator and resolvent-difference D/delta-D estimates",
+    "direct D and delta-D Cauchy estimates",
+    "exhaustion independence and common alpha",
+    "Hamiltonian-to-OS/KMS/GNS identification, gap, continuum, C6, Sector A and Pre-A"
+  ],
+  "adversarial_review": [
+    {"axis": "witness versus supremum", "check": "The obstruction needs only the exact value at q=a; it does not rely on an unproved assertion that q=a is the global maximizer.", "disposition": "UPHELD"},
+    {"axis": "form estimate", "check": "The divergence is a lower bound on the already-closed R304 route, not a claim that every possible weighted norm must diverge.", "disposition": "UPHELD-OPEN"},
+    {"axis": "approximation", "check": "The decreasing epsilon^2 coefficient is kept separate from the non-uniform form bound; no M20 or Gibbs estimate is silently promoted.", "disposition": "UPHELD"},
+    {"axis": "support and volume", "check": "The one-coordinate witness suffices; larger fixed supports only increase the product lower bound, and no thermodynamic conclusion is drawn.", "disposition": "UPHELD-OPEN"},
+    {"axis": "route firewall", "check": "Only epsilon-uniform promotion through the R304 multiplier route is failed; higher-weight and cutoff-dependent alternatives remain open.", "disposition": "UPHELD-OPEN"},
+    {"axis": "QFT promotion", "check": "No common-alpha nonexistence, OS/KMS/GNS result, gap, continuum, C6, Sector A or Pre-A conclusion follows.", "disposition": "UPHELD-OPEN"}
+  ],
+  "evidence_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-resolvent-smoothing-uniformity-obstruction-manifest.json#model",
+    "codes/foundations/pre_a_cp1_st8_q3lock_resolvent_smoothing_uniformity_obstruction.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_resolvent_smoothing_uniformity_obstruction_independent.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_resolvent_smoothing_uniformity_obstruction_verify.py#run",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-primary-pre_a_cp1_st8_q3lock_resolvent_smoothing_uniformity_obstruction/primary.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-independent-pre_a_cp1_st8_q3lock_resolvent_smoothing_uniformity_obstruction/independent.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-integrated-pre_a_cp1_st8_q3lock_resolvent_smoothing_uniformity_obstruction/integrated.json#lean",
+    "verification/lean/Tect/R307.lean#witness_value_fixture",
+    "verification/lean/registry.json#R307"
+  ],
+  "formal_integration": {
+    "events": [],
+    "results": [],
+    "negatives": [],
+    "lean": "R307 PASS; metadata regenerated",
+    "no_new_event": true,
+    "no_new_result": true,
+    "no_new_negative": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "qft_interface": {
+    "closed": "A route-local negative: fixed-epsilon resolvent smoothing is not epsilon-uniform under the R304 weighted form multiplier estimate, even though its conditional pointwise approximation improves.",
+    "open": "Alternative higher-energy weights, cutoff/beta-dependent algebras, second commutators, resolvent-difference D/delta-D estimates, direct Cauchy, exhaustion independence, common alpha, OS/KMS/GNS, gap, continuum and Pre-A.",
+    "tect_boundary": "Negative scaling result for one bounded-cylinder promotion route only; no common infinite-volume dynamics or production-owner conclusion."
+  },
+  "next_action": "Test a higher-energy weighted norm or a cutoff-dependent resolvent-difference estimate that does not require a uniform sup-norm multiplier. If the new constants still diverge, retain the obstruction and move to the exact common-core Hamiltonian route.",
+  "related": [
+    {"id": "EXP-001136", "relation": "continues"},
+    {"id": "EXP-001134", "relation": "continues"},
+    {"id": "EXP-001133", "relation": "continues"}
+  ],
+  "prior_exploration_id": "EXP-001136",
+  "provenance": "contemporaneous",
+  "recorded_at": "2026-08-27T15:10:00Z",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-08-25",
+  "boundary": "This is a route-local epsilon-uniformity obstruction for the resolvent-smoothed coordinate under the R304 weighted multiplier estimate. It is not a general polynomial no-go, a common infinite-volume dynamics result, a full QFT reconstruction, a gap, continuum, C6, Sector A or Pre-A result.",
+  "no_overclaim": "The failed route only excludes epsilon-uniform promotion through this specific bounded-multiplier form estimate. Alternative weighted algebras, cutoff-dependent constructions and exact Hamiltonian common-core routes remain open."
+}
