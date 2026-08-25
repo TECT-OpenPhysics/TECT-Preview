@@ -1,0 +1,83 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-ENERGY-MOMENT-NORM-COUNTEREXAMPLE-v0",
+  "title": "Two-level Gibbs counterexample to an unweighted energy-moment norm transfer",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001144",
+  "claim_bearing": false,
+  "parent_explorations": ["EXP-001143", "EXP-001142"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "question": "Is the proposed finite transfer S <= 8 Tr(rho K^2)||D||^2 a general matrix theorem, or does it require a D-weighted two-sided energy moment?",
+  "finite_fixture": {
+    "probabilities": ["100/101", "1/101"],
+    "energy_gap": 100,
+    "shift_constant": 1,
+    "beta_definition": "log(100)/100",
+    "rank_one_D": "|0><1|",
+    "operator_norm": 1,
+    "hilbert_schmidt_norm": 1,
+    "log_mean_lower_bound": "99/505",
+    "transfer_constant": 8,
+    "tolerance": 1e-12
+  },
+  "model": {
+    "shifted_energies": [1, 101],
+    "gibbs_second_moment": "M2=(100/101)*1^2+(1/101)*101^2=10301/101",
+    "spectral_moment": "S=2 L(100/101,1/101)*100^2",
+    "logarithmic_mean": "L=(99/101)/log(100)",
+    "counterexample": "log(100)<5 implies L>99/505, hence S>2*(99/505)*100^2 > 8*(10301/101)=8 M2",
+    "corrected_interface": "S <= 2(A+B+C+D), where A=sum p_i k_i^2|D_ij|^2, B=sum p_i k_j^2|D_ij|^2, C=sum p_j k_i^2|D_ij|^2, D=sum p_j k_j^2|D_ij|^2; the cross terms require D-weighted energy control and cannot be replaced by M2 alone."
+  },
+  "scope": {
+    "two_level_counterexample_closed": true,
+    "operator_norm_general_transfer_refuted": true,
+    "hilbert_schmidt_general_transfer_refuted": true,
+    "D_weighted_two_sided_interface_identified": true,
+    "actual_q3_rows_remain_empirical": true,
+    "uniform_local_M2_common_core_closed": false,
+    "uniform_beta_volume_direct_d_delta_d_closed": false,
+    "modular_domain_transfer_closed": false,
+    "exhaustion_independence_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false
+  },
+  "adversarial_review": [
+    {"axis": "Gibbs consistency", "check": "The probabilities are exactly Gibbs for the declared beta and gap, with p0/p1=100.", "disposition": "UPHELD"},
+    {"axis": "norm scope", "check": "The rank-one D has both operator and Hilbert-Schmidt norm one, so the failure is not caused by a norm-conversion artifact.", "disposition": "UPHELD"},
+    {"axis": "logarithmic mean", "check": "The strict lower bound uses only log(100)<5, while the numerical lane evaluates the exact logarithmic mean independently.", "disposition": "UPHELD"},
+    {"axis": "energy shift", "check": "The shifted gap is unchanged and the exact M2 includes the positive shift k0=1,k1=101.", "disposition": "UPHELD"},
+    {"axis": "route scope", "check": "The counterexample refutes only the unweighted M2 norm transfer; the D-weighted two-sided interface and actual Q3 row diagnostics remain available.", "disposition": "UPHELD-OPEN"},
+    {"axis": "QFT promotion", "check": "No conclusion about nonexistence of common alpha, OS/KMS/GNS, a gap, continuum, C6, Sector A or Pre-A is drawn.", "disposition": "UPHELD-OPEN"}
+  ],
+  "files": {
+    "primary": "codes/foundations/pre_a_cp1_st8_q3lock_energy_moment_norm_counterexample.py",
+    "independent": "codes/foundations/pre_a_cp1_st8_q3lock_energy_moment_norm_counterexample_independent.py",
+    "integrated": "codes/foundations/pre_a_cp1_st8_q3lock_energy_moment_norm_counterexample_verify.py",
+    "lean": "verification/lean/Tect/R314.lean",
+    "primary_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-primary-pre_a_cp1_st8_q3lock_energy_moment_norm_counterexample/primary.json",
+    "independent_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-independent-pre_a_cp1_st8_q3lock_energy_moment_norm_counterexample/independent.json",
+    "integrated_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-integrated-pre_a_cp1_st8_q3lock_energy_moment_norm_counterexample/integrated.json"
+  },
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R314.lean",
+    "theorem_markers": ["counterexample_moment", "counterexample_threshold", "rank_one_norm_fixture", "weighted_interface_constant"],
+    "command": "lake env lean Tect/R314.lean",
+    "boundary": "Lean checks the exact rational counterexample arithmetic and norm fixtures; the logarithmic-mean lower bound is independently checked in Python, and all QFT limits remain open."
+  },
+  "qft_interface": {
+    "closed": "The unweighted M2-times-norm transfer is refuted as a general matrix route; the surviving interface is a D-weighted two-sided energy moment that must be controlled directly.",
+    "open": "A source/volume/beta-uniform D-weighted moment or direct D,delta-D estimate on a common core, modular transfer, product/core density, exhaustion independence, common alpha, OS/KMS/GNS identification, gap, continuum and Pre-A.",
+    "tect_boundary": "This is a route-local finite counterexample and correction, not a no-go theorem for exact Q3 dynamics or QFT."
+  },
+  "no_overclaim": "The finite actual-Q3 rows in EXP-001143 remain valid diagnostics, but neither operator norm nor Hilbert-Schmidt norm times the unweighted Gibbs M2 is a general transfer bound. A D-weighted two-sided energy interface is required before QFT promotion."
+}

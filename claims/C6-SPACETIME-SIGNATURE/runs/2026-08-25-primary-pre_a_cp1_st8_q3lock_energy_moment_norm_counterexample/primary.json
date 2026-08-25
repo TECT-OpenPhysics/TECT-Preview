@@ -1,0 +1,150 @@
+{
+  "assertion_count": 13,
+  "assertions": [
+    {
+      "actual": "['EXP-001144', 'T-054']",
+      "expected": "EXP-001144/T-054",
+      "group": "provenance",
+      "name": "provenance",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "group": "scope",
+      "name": "claim nonbearing",
+      "status": "PASS"
+    },
+    {
+      "actual": "[Fraction(100, 101), Fraction(1, 101)]",
+      "expected": "positive normalized Gibbs pair",
+      "group": "Gibbs state",
+      "name": "probability normalization",
+      "status": "PASS"
+    },
+    {
+      "actual": "100",
+      "expected": "100",
+      "group": "Gibbs ratio",
+      "name": "Gibbs ratio",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1, 101]",
+      "expected": "[1, 101]",
+      "group": "energy shift",
+      "name": "shifted energies",
+      "status": "PASS"
+    },
+    {
+      "actual": "4.605170185988092",
+      "expected": "<5",
+      "group": "log mean",
+      "name": "logarithm elementary bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.21284729558624715",
+      "expected": ">0.19603960396039605",
+      "group": "log mean",
+      "name": "exact log-mean lower bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "10301/101",
+      "expected": "10301/101",
+      "group": "Gibbs moment",
+      "name": "moment arithmetic",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.0, 1.0]",
+      "expected": "[1.0, 1.0]",
+      "group": "norm fixture",
+      "name": "rank-one norms",
+      "status": "PASS"
+    },
+    {
+      "actual": "[4256.9459117249435, 815.9207920792079]",
+      "expected": "S>8*M2*||D||^2",
+      "group": "route obstruction",
+      "name": "operator-norm route fails",
+      "status": "PASS"
+    },
+    {
+      "actual": "[4256.9459117249435, 815.9207920792079]",
+      "expected": "S>8*M2*||D||_HS^2",
+      "group": "route obstruction",
+      "name": "Hilbert-Schmidt route fails",
+      "status": "PASS"
+    },
+    {
+      "actual": "[4256.9459117249435, 20404.0]",
+      "expected": "S<=2*(A+B+C+D)",
+      "group": "corrected interface",
+      "name": "D-weighted interface",
+      "status": "PASS"
+    },
+    {
+      "actual": "[4256.9459117249435, 41215.960396039605]",
+      "expected": "S<=4*(M2+Tr(K^2))*||D||^2",
+      "group": "corrected interface",
+      "name": "coarse trace fallback",
+      "status": "PASS"
+    }
+  ],
+  "audit_id": "PA-CP1-ST8-Q3LOCK-ENERGY-MOMENT-NORM-COUNTEREXAMPLE",
+  "boundary": {
+    "D_weighted_two_sided_interface_identified": true,
+    "actual_q3_rows_remain_empirical": true,
+    "c6_closed": false,
+    "common_alpha_closed": false,
+    "continuum_closed": false,
+    "exhaustion_independence_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "hilbert_schmidt_general_transfer_refuted": true,
+    "kms_gns_gap_closed": false,
+    "modular_domain_transfer_closed": false,
+    "operator_norm_general_transfer_refuted": true,
+    "pre_a_closed": false,
+    "sector_a_closed": false,
+    "two_level_counterexample_closed": true,
+    "uniform_beta_volume_direct_d_delta_d_closed": false,
+    "uniform_local_M2_common_core_closed": false
+  },
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "derived": {
+    "D_weighted_two_sided_interface_identified": true,
+    "M2": 101.99009900990099,
+    "actual_q3_rows_remain_empirical": true,
+    "coarse_trace_bound": 41215.960396039605,
+    "common_alpha_closed": false,
+    "hilbert_schmidt_candidate_bound": 815.9207920792079,
+    "hilbert_schmidt_general_transfer_refuted": true,
+    "hilbert_schmidt_norm": 1.0,
+    "logarithmic_mean": 0.21284729558624715,
+    "logarithmic_mean_lower_bound": 0.19603960396039605,
+    "operator_candidate_bound": 815.9207920792079,
+    "operator_norm": 1.0,
+    "operator_norm_general_transfer_refuted": true,
+    "pre_a_closed": false,
+    "probabilities": [
+      0.9900990099009901,
+      0.009900990099009901
+    ],
+    "shifted_energies": [
+      1,
+      101
+    ],
+    "spectral_moment": 4256.9459117249435,
+    "two_level_counterexample_closed": true,
+    "uniform_local_M2_common_core_closed": false,
+    "weighted_rhs": 20404.0
+  },
+  "exploration_id": "EXP-001144",
+  "passed": 13,
+  "run_kind": "primary",
+  "schema": "tect/foundation-audit/1.0",
+  "task_id": "T-054",
+  "verdict": "PASS"
+}

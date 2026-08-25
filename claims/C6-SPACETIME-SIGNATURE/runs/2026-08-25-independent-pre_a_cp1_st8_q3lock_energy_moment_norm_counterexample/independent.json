@@ -1,0 +1,136 @@
+{
+  "assertion_count": 11,
+  "assertions": [
+    {
+      "actual": "EXP-001144",
+      "expected": "EXP-001144/nonbearing",
+      "group": "provenance",
+      "name": "provenance",
+      "status": "PASS"
+    },
+    {
+      "actual": "[Decimal('0.99009900990099009900990099009900990099009900990099009900990099009900990099009901'), Decimal('0.0099009900990099009900990099009900990099009900990099009900990099009900990099009901')]",
+      "expected": "positive normalized Gibbs pair",
+      "group": "Gibbs state",
+      "name": "probability normalization",
+      "status": "PASS"
+    },
+    {
+      "actual": "1E+2",
+      "expected": "100",
+      "group": "Gibbs ratio",
+      "name": "Gibbs ratio",
+      "status": "PASS"
+    },
+    {
+      "actual": "4.6051701859880913680359829093687284152022029772575459520666558019351452193547050",
+      "expected": "<5",
+      "group": "log mean",
+      "name": "logarithm elementary bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.21284729558624718285872159887496981756012526522060886161054913135356732807761488",
+      "expected": ">0.19603960396039603960396039603960396039603960396039603960396039603960396039603960",
+      "group": "log mean",
+      "name": "exact log-mean lower bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "101.99009900990099009900990099009900990099009900990099009900990099009900990099010",
+      "expected": "101.99009900990099009900990099009900990099009900990099009900990099009900990099010",
+      "group": "Gibbs moment",
+      "name": "moment arithmetic",
+      "status": "PASS"
+    },
+    {
+      "actual": "[Decimal('1'), Decimal('1')]",
+      "expected": "[Decimal('1'), Decimal('1')]",
+      "group": "norm fixture",
+      "name": "rank-one norms",
+      "status": "PASS"
+    },
+    {
+      "actual": "[Decimal('4256.9459117249436571744319774993963512025053044121772322109826270713465615522976'), Decimal('815.92079207920792079207920792079207920792079207920792079207920792079207920792080')]",
+      "expected": "S>8*M2*||D||^2",
+      "group": "route obstruction",
+      "name": "operator-norm route fails",
+      "status": "PASS"
+    },
+    {
+      "actual": "[Decimal('4256.9459117249436571744319774993963512025053044121772322109826270713465615522976'), Decimal('815.92079207920792079207920792079207920792079207920792079207920792079207920792080')]",
+      "expected": "S>8*M2*||D||_HS^2",
+      "group": "route obstruction",
+      "name": "Hilbert-Schmidt route fails",
+      "status": "PASS"
+    },
+    {
+      "actual": "[Decimal('4256.9459117249436571744319774993963512025053044121772322109826270713465615522976'), Decimal('20404.000000000000000000000000000000000000000000000000000000000000000000000000000')]",
+      "expected": "S<=2*(A+B+C+D)",
+      "group": "corrected interface",
+      "name": "D-weighted interface",
+      "status": "PASS"
+    },
+    {
+      "actual": "[Decimal('4256.9459117249436571744319774993963512025053044121772322109826270713465615522976'), Decimal('41215.960396039603960396039603960396039603960396039603960396039603960396039603960')]",
+      "expected": "S<=4*(M2+Tr(K^2))*||D||^2",
+      "group": "corrected interface",
+      "name": "coarse trace fallback",
+      "status": "PASS"
+    }
+  ],
+  "audit_id": "PA-CP1-ST8-Q3LOCK-ENERGY-MOMENT-NORM-COUNTEREXAMPLE",
+  "boundary": {
+    "D_weighted_two_sided_interface_identified": true,
+    "actual_q3_rows_remain_empirical": true,
+    "c6_closed": false,
+    "common_alpha_closed": false,
+    "continuum_closed": false,
+    "exhaustion_independence_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "hilbert_schmidt_general_transfer_refuted": true,
+    "kms_gns_gap_closed": false,
+    "modular_domain_transfer_closed": false,
+    "operator_norm_general_transfer_refuted": true,
+    "pre_a_closed": false,
+    "sector_a_closed": false,
+    "two_level_counterexample_closed": true,
+    "uniform_beta_volume_direct_d_delta_d_closed": false,
+    "uniform_local_M2_common_core_closed": false
+  },
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "derived": {
+    "D_weighted_two_sided_interface_identified": true,
+    "M2": 101.99009900990099,
+    "actual_q3_rows_remain_empirical": true,
+    "coarse_trace_bound": 41215.960396039605,
+    "common_alpha_closed": false,
+    "hilbert_schmidt_candidate_bound": 815.9207920792079,
+    "hilbert_schmidt_general_transfer_refuted": true,
+    "hilbert_schmidt_norm": 1.0,
+    "logarithmic_mean": 0.21284729558624718,
+    "logarithmic_mean_lower_bound": 0.19603960396039605,
+    "operator_candidate_bound": 815.9207920792079,
+    "operator_norm": 1.0,
+    "operator_norm_general_transfer_refuted": true,
+    "pre_a_closed": false,
+    "probabilities": [
+      0.9900990099009901,
+      0.009900990099009901
+    ],
+    "shifted_energies": [
+      1.0,
+      101.0
+    ],
+    "spectral_moment": 4256.9459117249435,
+    "two_level_counterexample_closed": true,
+    "uniform_local_M2_common_core_closed": false,
+    "weighted_rhs": 20404.0
+  },
+  "exploration_id": "EXP-001144",
+  "passed": 11,
+  "run_kind": "independent",
+  "schema": "tect/foundation-audit/1.0",
+  "task_id": "T-054",
+  "verdict": "PASS"
+}
