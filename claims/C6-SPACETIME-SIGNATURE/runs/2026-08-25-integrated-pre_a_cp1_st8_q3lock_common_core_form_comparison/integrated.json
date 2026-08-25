@@ -1,0 +1,127 @@
+{
+  "assertion_count": 13,
+  "assertions": [
+    {
+      "actual": "['EXP-001130', 'T-054']",
+      "expected": "EXP-001130/T-054",
+      "name": "identity",
+      "pass": true
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "name": "claim nonbearing",
+      "pass": true
+    },
+    {
+      "actual": "['onsite_lower_fixture', 'edge_form_comparison_fixture', 'two_orientation_constant_fixture']",
+      "expected": "present",
+      "name": "Lean source",
+      "pass": true
+    },
+    {
+      "actual": "[]",
+      "expected": "none",
+      "name": "Lean forbidden",
+      "pass": true
+    },
+    {
+      "actual": "PRIMARY COMMON-CORE-FORM-COMPARISON PASS 32817/32817\n",
+      "expected": "PASS",
+      "name": "primary child",
+      "pass": true
+    },
+    {
+      "actual": "INDEPENDENT COMMON-CORE-FORM-COMPARISON PASS 32812/32812\n",
+      "expected": "PASS",
+      "name": "independent child",
+      "pass": true
+    },
+    {
+      "actual": "[32817, 32812]",
+      "expected": ">0",
+      "name": "positive assertion totals",
+      "pass": true
+    },
+    {
+      "actual": "[6561, 6561]",
+      "expected": "6561",
+      "name": "grid count",
+      "pass": true
+    },
+    {
+      "actual": "{'pair_lower_bound': ['-5/6', '-5/6'], 'canonical_shift': ['11/6', '11/6'], 'edge_coefficient': ['13/3', '13/3'], 'edge_remainder': ['29/45', '29/45'], 'two_orientation_constant_squared': ['224/45', '224/45']}",
+      "expected": "matching exact constants",
+      "name": "constant agreement",
+      "pass": true
+    },
+    {
+      "actual": "[{'canonical_shift': '11/6', 'common_alpha_closed': False, 'common_core_form_comparison_closed': True, 'common_core_scalar_lower_bound_closed': True, 'edge_coefficient': '13/3', 'edge_remainder': '29/45', 'friedrichs_operator_realisation_closed': False, 'grid_rows': 6561, 'minimum_slack': {'absorbed': '3341/1350', 'lower': '2/15', 'positivity': '0', 'reverse': '0', 'upper': '64/45'}, 'pair_lower_bound': '-5/6', 'positive_canonical_shift_closed': True, 'pre_a_closed': False, 'two_orientation_constant_squared': '224/45', 'two_orientation_square_root_inclusion_contract_closed': True, 'weighted_product_domain_closed': False}, {'canonical_shift': '11/6', 'common_alpha_closed': False, 'common_core_form_comparison_closed': True, 'common_core_scalar_lower_bound_closed': True, 'edge_coefficient': '13/3', 'edge_remainder': '29/45', 'friedrichs_operator_realisation_closed': False, 'grid_rows': 6561, 'minimum_slack': {'absorbed': '3341/1350', 'bond': '0', 'lower': '2/15', 'reverse': '0', 'upper': '64/45'}, 'pair_lower_bound': '-5/6', 'positive_canonical_shift_closed': True, 'pre_a_closed': False, 'two_orientation_constant_squared': '224/45', 'two_orientation_square_root_inclusion_contract_closed': True, 'weighted_product_domain_closed': False}]",
+      "expected": "True",
+      "name": "form contract",
+      "pass": true
+    },
+    {
+      "actual": "[{'canonical_shift': '11/6', 'common_alpha_closed': False, 'common_core_form_comparison_closed': True, 'common_core_scalar_lower_bound_closed': True, 'edge_coefficient': '13/3', 'edge_remainder': '29/45', 'friedrichs_operator_realisation_closed': False, 'grid_rows': 6561, 'minimum_slack': {'absorbed': '3341/1350', 'lower': '2/15', 'positivity': '0', 'reverse': '0', 'upper': '64/45'}, 'pair_lower_bound': '-5/6', 'positive_canonical_shift_closed': True, 'pre_a_closed': False, 'two_orientation_constant_squared': '224/45', 'two_orientation_square_root_inclusion_contract_closed': True, 'weighted_product_domain_closed': False}, {'canonical_shift': '11/6', 'common_alpha_closed': False, 'common_core_form_comparison_closed': True, 'common_core_scalar_lower_bound_closed': True, 'edge_coefficient': '13/3', 'edge_remainder': '29/45', 'friedrichs_operator_realisation_closed': False, 'grid_rows': 6561, 'minimum_slack': {'absorbed': '3341/1350', 'bond': '0', 'lower': '2/15', 'reverse': '0', 'upper': '64/45'}, 'pair_lower_bound': '-5/6', 'positive_canonical_shift_closed': True, 'pre_a_closed': False, 'two_orientation_constant_squared': '224/45', 'two_orientation_square_root_inclusion_contract_closed': True, 'weighted_product_domain_closed': False}]",
+      "expected": "open product-domain gate",
+      "name": "operator boundary",
+      "pass": true
+    },
+    {
+      "actual": "{'common_core_scalar_lower_bound_closed': True, 'common_core_form_comparison_closed': True, 'positive_canonical_shift_closed': True, 'two_orientation_square_root_inclusion_contract_closed': True, 'friedrichs_operator_realisation_closed': False, 'weighted_product_domain_closed': False, 'source_uniformity_proved': True, 'volume_uniformity_proved': True, 'cutoff_uniformity_proved': False, 'beta_uniformity_proved': False, 'exact_ccr_common_core_closed': False, 'modular_domain_transfer_closed': False, 'volume_uniform_direct_d_cauchy_closed': False, 'delta_d_cauchy_closed': False, 'all_bond_graph_lipschitz_closed': False, 'common_alpha_closed': False, 'hamiltonian_os_identification_closed': False, 'kms_gns_gap_closed': False, 'continuum_closed': False, 'c6_closed': False, 'sector_a_closed': False, 'pre_a_closed': False}",
+      "expected": "form comparison with operator/QFT gates open",
+      "name": "QFT firewall",
+      "pass": true
+    },
+    {
+      "actual": "{'status': 'PASS', 'command': 'lake env lean Tect/R301.lean', 'returncode': 0, 'output': ''}",
+      "expected": "PASS",
+      "name": "Lean compile",
+      "pass": true
+    }
+  ],
+  "audit_id": "PA-CP1-ST8-Q3LOCK-COMMON-CORE-FORM-COMPARISON",
+  "boundary": {
+    "all_bond_graph_lipschitz_closed": false,
+    "beta_uniformity_proved": false,
+    "c6_closed": false,
+    "common_alpha_closed": false,
+    "common_core_form_comparison_closed": true,
+    "common_core_scalar_lower_bound_closed": true,
+    "continuum_closed": false,
+    "cutoff_uniformity_proved": false,
+    "delta_d_cauchy_closed": false,
+    "exact_ccr_common_core_closed": false,
+    "friedrichs_operator_realisation_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "modular_domain_transfer_closed": false,
+    "positive_canonical_shift_closed": true,
+    "pre_a_closed": false,
+    "sector_a_closed": false,
+    "source_uniformity_proved": true,
+    "two_orientation_square_root_inclusion_contract_closed": true,
+    "volume_uniform_direct_d_cauchy_closed": false,
+    "volume_uniformity_proved": true,
+    "weighted_product_domain_closed": false
+  },
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "exploration_id": "EXP-001130",
+  "lean": {
+    "command": "lake env lean Tect/R301.lean",
+    "output": "",
+    "returncode": 0,
+    "status": "PASS"
+  },
+  "provenance": {
+    "independent_sha256": "35210c77c0a164d0007f0eb6285adc5c76e2725bacce9a8dbaf5e501c5cf83aa",
+    "lean_sha256": "22fd29620721d1bc56cee68bff6db325e0a169401fcde3648f223ef297185b2e",
+    "manifest_sha256": "ad3ee223395e4942031915876e081ef4c9b0f737f17d0cd2b63258c7904c13be",
+    "primary_sha256": "eb5f5f18f5e846c714217b7de7fa278c8f1becddd137bdd0d07752e0def577a7"
+  },
+  "recorded_at": "2026-08-25T13:16:26.671729Z",
+  "run_kind": "integrated",
+  "schema": "tect/foundation-audit/1.0",
+  "task_id": "T-054",
+  "verdict": "PASS"
+}

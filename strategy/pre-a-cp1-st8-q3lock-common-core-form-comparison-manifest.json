@@ -1,0 +1,92 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-COMMON-CORE-FORM-COMPARISON-v0",
+  "title": "Canonical shifted common-core form comparison and two-orientation inclusion contract",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001130",
+  "claim_bearing": false,
+  "parent_explorations": ["EXP-001129", "EXP-001128"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-ENERGY-WEIGHTED-COMMUTATOR-GEVREY-LR-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-RESOLVENT-ALGEBRA-EXACT-POLYNOMIAL-COMMON-ALPHA-CLOSURE",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "question": "Does the EXP-001129 form envelope yield a positive canonical shift, a common-core local form comparison, and bounded two-orientation square-root inclusion constants?",
+  "finite_fixture": {
+    "c": "3/5",
+    "lambda": "1/10",
+    "chi": "1",
+    "r": "-1",
+    "g": "3/5",
+    "bond_form_constant": "304/45",
+    "onsite_form_coefficient": "13/3",
+    "pair_lower_bound": "-5/6",
+    "canonical_shift": "11/6",
+    "edge_remainder": "29/45",
+    "two_orientation_constant": "224/45",
+    "grid_values": [-4, -3, -2, -1, 0, 1, 2, 3, 4]
+  },
+  "model": {
+    "core": "D=C_c^infinity(R^2) for the two-site position representation, with q_i multiplication and p_i=-i*d/dq_i",
+    "onsite_form": "h_i[psi]=||p_i psi||^2/2 + integral(-q_i^2/2+3 q_i^4/20)|psi|^2",
+    "lower_bound": "h_i >= -5/12, hence H_on=h_0+h_1 >= -5/6",
+    "weights": "K_on=H_on+11/6 I and K_edge=H_on+B+11/6 I, so both are >= I on the closed form domains",
+    "comparison": "K_on <= K_edge <= (13/3) K_on + 29/45 I <= (224/45) K_on",
+    "orientation_contract": "The Friedrichs form closures imply ||K_edge^(1/2) K_on^(-1/2)|| <= sqrt(224/45) and ||K_on^(1/2) K_edge^(-1/2)|| <= 1, subject to the declared closure/product-domain hypotheses."
+  },
+  "scope": {
+    "common_core_scalar_lower_bound_closed": true,
+    "common_core_form_comparison_closed": true,
+    "positive_canonical_shift_closed": true,
+    "two_orientation_square_root_inclusion_contract_closed": true,
+    "friedrichs_operator_realisation_closed": false,
+    "weighted_product_domain_closed": false,
+    "source_uniformity_proved": true,
+    "volume_uniformity_proved": true,
+    "cutoff_uniformity_proved": false,
+    "beta_uniformity_proved": false,
+    "exact_ccr_common_core_closed": false,
+    "modular_domain_transfer_closed": false,
+    "volume_uniform_direct_d_cauchy_closed": false,
+    "delta_d_cauchy_closed": false,
+    "all_bond_graph_lipschitz_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false
+  },
+  "adversarial_review": [
+    {"axis": "lower-bound sign", "check": "The negative r term is completed against the quartic exactly, giving -5/12 per site and -5/6 per edge.", "disposition": "UPHELD"},
+    {"axis": "canonical shift", "check": "The shift 11/6 is chosen so both K_on and K_edge dominate I; no spectral minimum is silently assumed.", "disposition": "UPHELD"},
+    {"axis": "form versus operator", "check": "The form comparison is on C_c^infinity and the square-root inclusion is explicitly a Friedrichs/product-domain contract, not an unconditional operator theorem.", "disposition": "UPHELD-OPEN"},
+    {"axis": "uniformity", "check": "The local constants are independent of source and volume, while cutoff and beta transfer remain open.", "disposition": "UPHELD-OPEN"},
+    {"axis": "two orientations", "check": "Both K_edge over K_on and K_on over K_edge directions are retained; the latter uses bond positivity.", "disposition": "UPHELD"},
+    {"axis": "QFT promotion", "check": "Common alpha, OS/KMS/GNS, gap, continuum, C6, Sector A and Pre-A remain open.", "disposition": "UPHELD-OPEN"}
+  ],
+  "files": {
+    "primary": "codes/foundations/pre_a_cp1_st8_q3lock_common_core_form_comparison.py",
+    "independent": "codes/foundations/pre_a_cp1_st8_q3lock_common_core_form_comparison_independent.py",
+    "integrated": "codes/foundations/pre_a_cp1_st8_q3lock_common_core_form_comparison_verify.py",
+    "lean": "verification/lean/Tect/R301.lean",
+    "primary_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-primary-pre_a_cp1_st8_q3lock_common_core_form_comparison/primary.json",
+    "independent_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-independent-pre_a_cp1_st8_q3lock_common_core_form_comparison/independent.json",
+    "integrated_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-integrated-pre_a_cp1_st8_q3lock_common_core_form_comparison/integrated.json"
+  },
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R301.lean",
+    "theorem_markers": ["onsite_lower_fixture", "edge_form_comparison_fixture", "two_orientation_constant_fixture"],
+    "command": "lake env lean Tect/R301.lean",
+    "boundary": "Lean checks exact rational lower-bound and comparison arithmetic only; it does not formalize unbounded operators or Friedrichs domains."
+  },
+  "qft_interface": {
+    "closed": "A canonical source- and volume-independent local form comparison with explicit two-orientation square-root inclusion constants, conditional on standard closed-form/product-domain hypotheses.",
+    "open": "Friedrichs realization and product-domain proof for the exact Q3 common core, cutoff/beta modular transfer, direct D/delta-D Cauchy, exhaustion, common alpha, OS/KMS/GNS identification, gap and continuum.",
+    "tect_boundary": "No heat_root_incidence or canonical A1/R-192 production owner is supplied."
+  },
+  "no_overclaim": "This is a form-level common-core comparison and conditional square-root inclusion contract. It is not yet an unconditional operator-domain theorem, thermodynamic QFT dynamics, common alpha, OS/KMS/GNS reconstruction, a gap, continuum, C6, Sector A or Pre-A result."
+}
