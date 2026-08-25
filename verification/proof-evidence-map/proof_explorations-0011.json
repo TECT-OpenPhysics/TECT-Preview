@@ -9973,6 +9973,114 @@
       "task_id": "T-054",
       "title": "Infinite-to-finite cross-lane routing and owner-boundary transfer",
       "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "axis": "finite versus unbounded",
+          "check": "Every row is a finite matrix calculation and the top projector is an explicit regulator boundary; no unbounded operator is silently substituted.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "Gibbs versus history",
+          "check": "Gibbs density tails and evolved vacuum tails are stored separately; no Gibbs estimate is used to infer a real-time history estimate.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "orientation and cutoff placement",
+          "check": "Both signs are evolved and the smooth cutoff is inserted only in bond coordinates while onsite terms retain the uncut Q3 coordinate.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "asymptotic monotonicity",
+          "check": "Finite values are reported without asserting monotonic decay across oscillator dimensions or volumes; the volume-four rows are especially not an asymptotic theorem.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "independent reconstruction",
+          "check": "The independent lane rebuilds the tensor operators, Hamiltonian, cutoff, propagators and tails without importing the primary implementation and all rows reconcile within the declared tolerance.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "Lean scope",
+          "check": "R277 proves only natural-number weighted top-defect fixtures and the two-orientation count; it does not formalize spectral exponentials, traces or limits.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "QFT promotion",
+          "check": "Uniform tail, common core, modular history, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector A and Pre-A remain open.",
+          "disposition": "UPHELD-OPEN"
+        }
+      ],
+      "boundary": "Finite zero-source oscillator regulators, volumes 2 and 4, declared oscillator dimensions, cutoff radius, beta, vacuum history, and times only. No source-, volume-, orientation-, beta-, regulator-, or history-uniform tail bound; no unbounded Q3 domain transfer; no modular-history Cauchy theorem; no common alpha, OS/KMS/GNS, gap, continuum, C6, Sector A, or Pre-A closure.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "The checkpoint discharges the finite two-orientation arithmetic and numerical tail rows required before attempting an analytic Q3 domain estimate, while the independent reconstruction and Lean fixture prevent a finite matrix pass from being mistaken for a common-core theorem.",
+      "evidence_refs": [
+        "strategy/pre_a_cp1_st8_q3lock_finite_q3_weighted_top_tail_history_manifest.json#question",
+        "codes/foundations/pre_a_cp1_st8_q3lock_finite_q3_weighted_top_tail_history.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_finite_q3_weighted_top_tail_history_independent.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_finite_q3_weighted_top_tail_history_verify.py#run",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-primary-pre_a_cp1_st8_q3lock_finite_q3_weighted_top_tail_history/primary.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-independent-pre_a_cp1_st8_q3lock_finite_q3_weighted_top_tail_history/independent.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-integrated-pre_a_cp1_st8_q3lock_finite_q3_weighted_top_tail_history/integrated.json#lean",
+        "verification/lean/Tect/R277.lean#scope_fixture"
+      ],
+      "finding": "The primary lane passes 203/203, the independent lane passes 202/202, and the integrated verifier passes 223/223 with Lean R277. All declared finite Gibbs and evolved-history weighted top tails are finite and nonnegative, and the zero-time vacuum anchors vanish within tolerance. At the largest declared cutoffs the primary history maxima are 1.146543932289657e-4 for volume 2 at n=12 and 1.4498545200244836e-2 for volume 4 at n=5; these are finite fixture values only.",
+      "formal_integration": {
+        "events": [],
+        "lean": "R277 PASS; natural-number weighted-defect fixtures only",
+        "negatives": [],
+        "no_new_event": true,
+        "no_new_negative": true,
+        "no_new_result": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "results": []
+      },
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": []
+      },
+      "gate_ids": [
+        "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+        "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001097",
+      "method": [
+        "Construct the exact finite Q3 Hamiltonian on the two-site edge and four-site square face using the registered oscillator, quartic onsite, quadratic bond and quartic bond terms.",
+        "Form the smooth spectral coordinate cutoff only in the bond terms, compare both H+W_L and H-W_L, and evolve the finite-particle vacuum at the declared nonnegative times.",
+        "Measure n^2 times the top-level projector weight site by site for each history and for the uncut Gibbs density matrix.",
+        "Rebuild the calculation in an independent lane, reconcile every volume, cutoff, orientation, time and site row, and compile Lean R277 for the finite weighted-defect fixtures."
+      ],
+      "next_action": "Derive an analytic source/volume/orientation/history-uniform top-tail estimate for the selected Q3 carrier, or register the first route-specific scaling obstruction; do not promote the finite rows to the common-alpha gate.",
+      "no_overclaim": "This is a T0 claim-nonbearing finite checkpoint. It provides no regulator-uniform Q3 domain theorem and no QFT reconstruction.",
+      "provenance": "contemporaneous",
+      "question": "For the declared finite zero-source Q3 regulators, does the n-weighted truncated-CCR top tail remain finite for both cutoff orientations along a positive-time vacuum history and in the uncut Gibbs state?",
+      "recorded_at": "2026-08-26T22:00:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001096",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001095",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001094",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-08-26",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Finite Q3 Gibbs and evolved-history weighted top-tail checkpoint",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",

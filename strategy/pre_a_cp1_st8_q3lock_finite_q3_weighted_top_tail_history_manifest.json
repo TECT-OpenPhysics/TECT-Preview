@@ -1,0 +1,79 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-FINITE-Q3-WEIGHTED-TOP-TAIL-HISTORY-v0",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001097",
+  "claim_bearing": false,
+  "parent_explorations": ["EXP-001095", "EXP-001094", "EXP-001090"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "question": "For the declared finite zero-source Q3 regulators, does the n-weighted truncated-CCR top tail remain finite for both cutoff orientations along a positive-time vacuum history and in the uncut Gibbs state?",
+  "finite_fixture": {
+    "volume_values": [2, 4],
+    "oscillator_dimensions_by_volume": {
+      "2": [3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+      "4": [3, 4, 5]
+    },
+    "edges_by_volume": {
+      "2": [[0, 1]],
+      "4": [[0, 1], [0, 2], [1, 3], [2, 3]]
+    },
+    "beta": 1.0,
+    "hbar": 1.0,
+    "time_values": [0.0, 0.05, 0.1],
+    "orientation_values": [-1, 1],
+    "cutoff_radius": 2.0,
+    "chi": 1.0,
+    "r": -1.0,
+    "g": 0.6,
+    "c": 0.6,
+    "lambda": 0.1,
+    "residual_tolerance": 1.0e-8,
+    "agreement_tolerance": 1.0e-7
+  },
+  "model": {
+    "hamiltonian": "H=sum_x[p_x^2/(2 chi)+r q_x^2/2+g q_x^4/4]+sum_edges[c(q_x-q_y)^2/2+lambda(q_x-q_y)^2(q_x^2+q_y^2)/4]",
+    "cutoff": "H_L is formed by replacing every coordinate q_x in the bond terms by the smooth spectral cutoff q_L; W_L=H-H_L",
+    "history": "psi_{sigma,t}=exp(-i t (H+sigma W_L)/hbar) vacuum for sigma in {-1,+1} and declared nonnegative times",
+    "gibbs": "rho=exp(-beta H)/Tr(exp(-beta H))",
+    "top_projector": "P_top,j is the oscillator-level n-1 projector at site j",
+    "weighted_tail": "n^2 <psi,P_top,j psi> and n^2 Tr(rho P_top,j)"
+  },
+  "scope": {
+    "finite_evolved_history_weighted_tail_closed": true,
+    "finite_gibbs_weighted_tail_closed": true,
+    "two_orientation_fixture_closed": true,
+    "positive_time_fixture_closed": true,
+    "source_volume_orientation_history_uniform_tail_closed": false,
+    "actual_unbounded_q3_domain_transfer_closed": false,
+    "source_volume_uniform_modular_history_closed": false,
+    "all_shape_exhaustion_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false
+  },
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R277.lean",
+    "command": "lake env lean Tect/R277.lean",
+    "boundary": "R277 checks only natural-number weighted top-defect fixtures and the two-orientation count; it does not formalize matrix exponentials, Gibbs traces, Q3 domains, or a QFT limit."
+  },
+  "formal_integration": {
+    "results": [],
+    "events": [],
+    "negatives": [],
+    "no_new_result": true,
+    "no_new_negative": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "boundary": "T0 claim-nonbearing finite Q3 tail checkpoint. It records finite Gibbs and evolved-history weighted top-tail values for a declared regulator family only; it does not establish a regulator-, volume-, source-, orientation-, or history-uniform estimate.",
+  "no_overclaim": "Finite weighted tails and a Lean arithmetic fixture do not justify the unbounded common-core transfer, modular-history Cauchy estimate, common alpha, OS/KMS/GNS reconstruction, gap, continuum, C6, Sector A, or Pre-A closure."
+}
