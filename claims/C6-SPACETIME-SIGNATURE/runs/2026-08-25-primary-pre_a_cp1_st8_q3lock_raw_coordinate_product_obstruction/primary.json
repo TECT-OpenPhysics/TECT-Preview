@@ -1,0 +1,153 @@
+{
+  "assertion_count": 20,
+  "assertions": [
+    {
+      "actual": "['EXP-001134', 'T-054']",
+      "expected": "EXP-001134/T-054",
+      "group": "provenance",
+      "name": "identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "group": "scope",
+      "name": "claim nonbearing",
+      "status": "PASS"
+    },
+    {
+      "actual": "[Fraction(1, 2), Fraction(1, 1), Fraction(3, 5)]",
+      "expected": "positive",
+      "group": "hypotheses",
+      "name": "Gaussian variance",
+      "status": "PASS"
+    },
+    {
+      "actual": "[4, 6]",
+      "expected": "[4, 6]",
+      "group": "degree obstruction",
+      "name": "form degree",
+      "status": "PASS"
+    },
+    {
+      "actual": "[Fraction(3, 20), Fraction(3, 20)]",
+      "expected": "3/20",
+      "group": "degree obstruction",
+      "name": "leading coefficient",
+      "status": "PASS"
+    },
+    {
+      "actual": "1",
+      "expected": "1",
+      "group": "degree obstruction",
+      "name": "asymptotic ratio coefficient",
+      "status": "PASS"
+    },
+    {
+      "actual": "367/240",
+      "expected": ">0",
+      "group": "Gaussian form",
+      "name": "sample denominator 0",
+      "status": "PASS"
+    },
+    {
+      "actual": "475/734",
+      "expected": ">=0",
+      "group": "Gaussian obstruction",
+      "name": "sample ratio growth 0",
+      "status": "PASS"
+    },
+    {
+      "actual": "391/240",
+      "expected": ">0",
+      "group": "Gaussian form",
+      "name": "sample denominator 1",
+      "status": "PASS"
+    },
+    {
+      "actual": "1737/782",
+      "expected": ">=1/2",
+      "group": "Gaussian obstruction",
+      "name": "sample ratio growth 1",
+      "status": "PASS"
+    },
+    {
+      "actual": "{\"groups\": {\"Gaussian form\": 6, \"Gaussian obstruction\": 6, \"boundary\": 2, \"degree obstruction\": 3, \"hypotheses\": 1, \"provenance\": 1, \"scope\": 1}, \"storage\": \"compact-summary; all assertions executed in memory\", \"total\": 20}",
+      "expected": "all executed assertions passed",
+      "group": "summary",
+      "name": "assertion_summary",
+      "status": "PASS"
+    }
+  ],
+  "audit_id": "PA-CP1-ST8-Q3LOCK-RAW-COORDINATE-PRODUCT-OBSTRUCTION",
+  "boundary": {
+    "bounded_lipschitz_cylinder_closed": true,
+    "common_alpha_closed": false,
+    "continuum_closed": false,
+    "direct_d_cauchy_closed": false,
+    "modular_domain_transfer_closed": false,
+    "pre_a_closed": false,
+    "raw_coordinate_form_domain_invariance_closed": false,
+    "raw_coordinate_obstruction_closed": true,
+    "raw_coordinate_weighted_product_bounded": false,
+    "resolvent_smoothed_polynomial_closed": false,
+    "unbounded_polynomial_products_closed": false
+  },
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "derived": {
+    "asymptotic_ratio_coefficient": "1",
+    "bounded_lipschitz_cylinder_closed": true,
+    "form_degree": 4,
+    "form_leading_coefficient": "3/20",
+    "raw_coordinate_form_domain_invariance_closed": false,
+    "raw_coordinate_obstruction_closed": true,
+    "raw_coordinate_weighted_product_bounded": false,
+    "resolvent_smoothed_polynomial_closed": false,
+    "sample_rows": [
+      {
+        "center": "0",
+        "form_energy": "367/240",
+        "ratio": "475/734",
+        "weighted_energy": "95/96"
+      },
+      {
+        "center": "1",
+        "form_energy": "391/240",
+        "ratio": "1737/782",
+        "weighted_energy": "579/160"
+      },
+      {
+        "center": "2",
+        "form_energy": "179/48",
+        "ratio": "13443/1790",
+        "weighted_energy": "4481/160"
+      },
+      {
+        "center": "4",
+        "form_energy": "9391/240",
+        "ratio": "386427/18782",
+        "weighted_energy": "128809/160"
+      },
+      {
+        "center": "8",
+        "form_energy": "29411/48",
+        "ratio": "20160603/294110",
+        "weighted_energy": "6720201/160"
+      },
+      {
+        "center": "16",
+        "form_energy": "2356591/240",
+        "ratio": "1227848667/4713182",
+        "weighted_energy": "409282889/160"
+      }
+    ],
+    "weighted_degree": 6,
+    "weighted_leading_coefficient": "3/20"
+  },
+  "exploration_id": "EXP-001134",
+  "passed": 20,
+  "run_kind": "primary",
+  "schema": "tect/foundation-audit/1.0",
+  "task_id": "T-054",
+  "verdict": "PASS"
+}

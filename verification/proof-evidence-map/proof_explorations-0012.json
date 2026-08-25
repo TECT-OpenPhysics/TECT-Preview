@@ -3502,6 +3502,127 @@
       "task_id": "T-054",
       "title": "Bounded Lipschitz cylinder multipliers and finite Q3 weighted products",
       "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "axis": "normalization",
+          "check": "All Gaussian moments and kinetic factors are generated from the declared variance; no sampled normalization is used.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "kinetic contribution",
+          "check": "The derivative of q psi is included; even with that contribution the weighted degree remains six.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "leading coefficient",
+          "check": "Both leading terms are recomputed as g/4=3/20, giving an exact asymptotic ratio coefficient one.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "bond cancellation",
+          "check": "The witness is one-site; adding nonnegative bonds cannot cancel the onsite q^6 growth.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "scope",
+          "check": "Only the raw coordinate product is rejected; bounded Lipschitz and resolvent-smoothed polynomial classes are not decided here.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "QFT promotion",
+          "check": "No QFT nonexistence or Clay conclusion follows; this is a named weighted-domain route obstruction.",
+          "disposition": "UPHELD-OPEN"
+        }
+      ],
+      "boundary": "This is a route-local raw-coordinate weighted-product obstruction in the one-site quartic form. It is not an arbitrary-polynomial no-go, a common infinite-volume dynamics result, a QFT nonexistence theorem, a gap, continuum, C6, Sector A or Pre-A result.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "closed": [
+        "raw-coordinate route obstruction",
+        "exact Gaussian degree and leading-coefficient mismatch",
+        "independent reproduction and Lean R305 cross-check",
+        "bounded Lipschitz alternative retained as closed"
+      ],
+      "decision_reason": "This is a genuine route-local obstruction rather than a numerical near-miss. The quartic form controls q^4 but the weighted coordinate form requires q^6; the translated Gaussian witness makes the degree mismatch explicit. The result prevents promoting the raw coordinate to the weighted cylinder algebra, while leaving bounded Lipschitz and resolvent-smoothed polynomial routes available.",
+      "evidence_refs": [
+        "strategy/pre-a-cp1-st8-q3lock-raw-coordinate-product-obstruction-manifest.json#model",
+        "codes/foundations/pre_a_cp1_st8_q3lock_raw_coordinate_product_obstruction.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_raw_coordinate_product_obstruction_independent.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_raw_coordinate_product_obstruction_verify.py#run",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-primary-pre_a_cp1_st8_q3lock_raw_coordinate_product_obstruction/primary.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-independent-pre_a_cp1_st8_q3lock_raw_coordinate_product_obstruction/independent.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-integrated-pre_a_cp1_st8_q3lock_raw_coordinate_product_obstruction/integrated.json#lean",
+        "verification/lean/Tect/R305.lean#obstruction_ratio_fixture",
+        "verification/lean/registry.json#R305"
+      ],
+      "finding": "Primary 20/20, independent 18/18, integrated 13/13, and Lean R305 PASS. The raw coordinate route fails: E0 has degree 4, E1 has degree 6, and both leading coefficients are 3/20, so the normalized ratio E1/E0 divided by R^2 tends to 1. Therefore q does not preserve the quartic form domain with a uniform weighted bound, and K^(1/2) q K^(-1/2) cannot be bounded on this route.",
+      "formal_integration": {
+        "events": [],
+        "lean": "R305 PASS; metadata to be regenerated",
+        "negatives": [],
+        "no_new_event": true,
+        "no_new_negative": true,
+        "no_new_result": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "results": []
+      },
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": []
+      },
+      "gate_ids": [
+        "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+        "PA-CP1-ST8-Q3LOCK-ENERGY-WEIGHTED-COMMUTATOR-GEVREY-LR-CLOSURE",
+        "PA-CP1-ST8-Q3LOCK-RESOLVENT-ALGEBRA-EXACT-POLYNOMIAL-COMMON-ALPHA-CLOSURE",
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001134",
+      "method": [
+        "Use the normalized translated Gaussian family with density variance 1/2 and generate all moments exactly from the centered Gaussian recurrence.",
+        "Compute the shifted onsite form energy E0(R)=q_K[psi_R] and the weighted energy E1(R)=q_K[q psi_R], including the derivative of q psi exactly.",
+        "Compare polynomial degrees and leading coefficients: E0 has degree four with leading coefficient g/4, E1 has degree six with the same coefficient, so E1/E0 is asymptotic to R^2.",
+        "Reproduce the samples independently and compile Lean R305 for the exact leading-coefficient ratio; retain bounded Lipschitz and resolvent-smoothed alternatives as separate routes."
+      ],
+      "next_action": "Construct a resolvent-smoothed polynomial cylinder and test whether the resolvent commutator supplies enough decay to restore a K-form bound; if not, retain this obstruction as the stop condition for raw polynomial observables.",
+      "no_overclaim": "The failed route only excludes a uniform K^(1/2) q K^(-1/2) bound for the declared raw coordinate under the quartic form. Bounded multipliers, resolvent-smoothed polynomials and other weighted choices remain open.",
+      "open": [
+        "resolvent-smoothed polynomial cylinders",
+        "other weighted algebras with higher powers of K",
+        "cutoff- and beta-uniform modular transfer",
+        "direct D and delta-D Cauchy estimates",
+        "exhaustion independence and common alpha",
+        "Hamiltonian-to-OS/KMS/GNS identification, gap, continuum, C6, Sector A and Pre-A"
+      ],
+      "prior_exploration_id": "EXP-001133",
+      "provenance": "contemporaneous",
+      "qft_interface": {
+        "closed": "A route-local negative: raw coordinate multiplication is not a bounded weighted multiplier for the quartic shifted form.",
+        "open": "Resolvent-smoothed polynomial cylinders, higher-weight alternatives, modular transfer, direct D/delta-D Cauchy, common alpha, OS/KMS/GNS, gap, continuum and Pre-A.",
+        "tect_boundary": "This obstruction is not a production claim, heat_root_incidence, A1/R-192 owner, or Clay result."
+      },
+      "question": "Does the raw coordinate multiplier q preserve the quartic Friedrichs form domain, or is K^(1/2) q K^(-1/2) necessarily unbounded?",
+      "recorded_at": "2026-08-27T14:30:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001133",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001131",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-08-25",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Raw coordinate weighted-product obstruction for the finite Q3 quartic form",
+      "verdict": "failed"
     }
   ],
   "kind": "proof_explorations",

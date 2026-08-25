@@ -1,0 +1,74 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-RAW-COORDINATE-PRODUCT-OBSTRUCTION-v0",
+  "title": "Raw coordinate weighted-product obstruction for the finite Q3 quartic form",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001134",
+  "claim_bearing": false,
+  "parent_explorations": ["EXP-001133", "EXP-001131"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-ENERGY-WEIGHTED-COMMUTATOR-GEVREY-LR-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-RESOLVENT-ALGEBRA-EXACT-POLYNOMIAL-COMMON-ALPHA-CLOSURE",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "question": "Does the raw coordinate multiplier q preserve the quartic Friedrichs form domain, or is K^(1/2) q K^(-1/2) necessarily unbounded?",
+  "finite_fixture": {
+    "chi": "1",
+    "r": "-1",
+    "g": "3/5",
+    "per_site_shift": "17/12",
+    "gaussian_variance": "1/2",
+    "translated_centers": [0, 1, 2, 4, 8, 16]
+  },
+  "model": {
+    "test_family": "psi_R is the normalized Gaussian with density variance 1/2 and center R",
+    "form_energy": "E0(R)=q_K[psi_R]",
+    "weighted_energy": "E1(R)=q_K[q psi_R]",
+    "obstruction": "E0 has degree four with leading coefficient g/4, E1 has degree six with the same leading coefficient g/4, so E1/E0 is asymptotic to R^2 and the raw coordinate weighted product is unbounded",
+    "scope": "one-site shifted onsite form; adding nonnegative bonds cannot repair the one-site high-coordinate obstruction"
+  },
+  "scope": {
+    "raw_coordinate_form_domain_invariance_closed": false,
+    "raw_coordinate_weighted_product_bounded": false,
+    "raw_coordinate_obstruction_closed": true,
+    "bounded_lipschitz_cylinder_closed": true,
+    "resolvent_smoothed_polynomial_closed": false,
+    "unbounded_polynomial_products_closed": false,
+    "modular_domain_transfer_closed": false,
+    "direct_d_cauchy_closed": false,
+    "common_alpha_closed": false,
+    "continuum_closed": false,
+    "pre_a_closed": false
+  },
+  "adversarial_review": [
+    {"axis": "normalization", "check": "The translated Gaussian moments are generated from variance 1/2 and the exact centered-moment recurrence, not pasted asymptotic numbers.", "disposition": "UPHELD"},
+    {"axis": "kinetic term", "check": "The derivative of q psi is included exactly; dropping it would understate E1 but cannot remove the degree-six potential term.", "disposition": "UPHELD"},
+    {"axis": "leading coefficient", "check": "Both leading coefficients are recomputed from the same quartic coefficient g/4, giving the exact ratio-one coefficient after dividing by R^2.", "disposition": "UPHELD"},
+    {"axis": "bond relevance", "check": "The obstruction is already present in the one-site onsite form; nonnegative bonds only increase the weighted energy and do not provide a cancellation.", "disposition": "UPHELD-OPEN"},
+    {"axis": "scope", "check": "The failure is only for the raw coordinate weighted product; bounded Lipschitz multipliers remain closed and resolvent-smoothed polynomials are not decided here.", "disposition": "UPHELD-OPEN"},
+    {"axis": "QFT promotion", "check": "No modular, common-alpha, OS/KMS/GNS, gap, continuum, C6, Sector A or Pre-A conclusion is drawn from this route-local obstruction.", "disposition": "UPHELD-OPEN"}
+  ],
+  "files": {
+    "primary": "codes/foundations/pre_a_cp1_st8_q3lock_raw_coordinate_product_obstruction.py",
+    "independent": "codes/foundations/pre_a_cp1_st8_q3lock_raw_coordinate_product_obstruction_independent.py",
+    "integrated": "codes/foundations/pre_a_cp1_st8_q3lock_raw_coordinate_product_obstruction_verify.py",
+    "lean": "verification/lean/Tect/R305.lean",
+    "primary_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-primary-pre_a_cp1_st8_q3lock_raw_coordinate_product_obstruction/primary.json",
+    "independent_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-independent-pre_a_cp1_st8_q3lock_raw_coordinate_product_obstruction/independent.json",
+    "integrated_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-integrated-pre_a_cp1_st8_q3lock_raw_coordinate_product_obstruction/integrated.json"
+  },
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R305.lean",
+    "theorem_markers": ["onsite_leading_coefficient_fixture", "weighted_leading_coefficient_fixture", "obstruction_ratio_fixture"],
+    "command": "lake env lean Tect/R305.lean",
+    "boundary": "Lean checks exact leading-coefficient arithmetic only; it does not formalize Gaussian integration or an operator-domain theorem."
+  },
+  "qft_interface": {
+    "closed": "A named route-local obstruction: the raw coordinate is not a bounded weighted form multiplier for the quartic shifted form.",
+    "open": "Resolvent-smoothed polynomial cylinders, modular transfer, direct D/delta-D Cauchy, common alpha, OS/KMS/GNS, gap, continuum and Pre-A.",
+    "tect_boundary": "Negative bounded-product route only; no heat_root_incidence or canonical A1/R-192 production owner."
+  },
+  "no_overclaim": "This is a route-local obstruction for the raw coordinate multiplier in the one-site quartic form. It does not exclude bounded Lipschitz cylinders, resolvent-smoothed polynomials, or other weighted algebras, and it is not a QFT nonexistence theorem."
+}
