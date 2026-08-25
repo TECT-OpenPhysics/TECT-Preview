@@ -1,0 +1,138 @@
+{
+  "assertions": [
+    {
+      "actual": "['EXP-001092', 'T-054']",
+      "expected": "EXP-001092/T-054",
+      "name": "manifest identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "name": "claim nonbearing",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'finite_matrix_duhamel_identity_closed': True, 'finite_two_sign_operator_norm_bound_closed': True, 'finite_modular_companion_bound_closed': True, 'fixed_regulator_cutoff_limit_closed': True, 'actual_q3_unbounded_tail_comparison_closed': False, 'volume_uniform_direct_d_delta_d_closed': False, 'modular_history_closed': False, 'all_shape_exhaustion_closed': False, 'common_alpha_closed': False, 'hamiltonian_os_identification_closed': False, 'kms_gns_gap_closed': False, 'continuum_closed': False, 'c6_closed': False, 'sector_a_closed': False, 'pre_a_closed': False}",
+      "expected": "finite only",
+      "name": "scope firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": "E:\\Dev\\TECT\\codes\\foundations\\pre_a_cp1_st8_q3lock_finite_volume_operator_norm_cutoff_duhamel_bound.py",
+      "expected": "file",
+      "name": "primary exists",
+      "status": "PASS"
+    },
+    {
+      "actual": "E:\\Dev\\TECT\\codes\\foundations\\pre_a_cp1_st8_q3lock_finite_volume_operator_norm_cutoff_duhamel_bound_independent.py",
+      "expected": "file",
+      "name": "independent exists",
+      "status": "PASS"
+    },
+    {
+      "actual": "E:\\Dev\\TECT\\verification\\lean\\Tect\\R274.lean",
+      "expected": "file",
+      "name": "Lean exists",
+      "status": "PASS"
+    },
+    {
+      "actual": "PASS",
+      "expected": "PASS",
+      "name": "primary verdict",
+      "status": "PASS"
+    },
+    {
+      "actual": "PASS",
+      "expected": "PASS",
+      "name": "independent verdict",
+      "status": "PASS"
+    },
+    {
+      "actual": "['EXP-001092', 'EXP-001092']",
+      "expected": "EXP-001092",
+      "name": "primary/independent identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "[]",
+      "expected": "no differences",
+      "name": "primary/independent derived agreement",
+      "status": "PASS"
+    },
+    {
+      "actual": "[165, 165]",
+      "expected": "165/165",
+      "name": "primary assertions",
+      "status": "PASS"
+    },
+    {
+      "actual": "[165, 165]",
+      "expected": "165/165",
+      "name": "independent assertions",
+      "status": "PASS"
+    },
+    {
+      "actual": "LF/no forbidden tokens",
+      "expected": "required",
+      "name": "Lean source policy",
+      "status": "PASS"
+    },
+    {
+      "actual": "PASS",
+      "expected": "PASS",
+      "name": "Lean R274 compile",
+      "status": "PASS"
+    },
+    {
+      "actual": "95aab8614047d854d2a361d3b92068b4058130aa000aec62f86e6d33cfeb1422",
+      "expected": "registry hash",
+      "name": "Lean source hash",
+      "status": "PASS"
+    }
+  ],
+  "audit_id": "PA-CP1-ST8-Q3LOCK-FINITE-VOLUME-OPERATOR-NORM-CUTOFF-DUHAMEL-BOUND",
+  "children": {
+    "independent": {
+      "passed": 165,
+      "total": 165
+    },
+    "independent_stdout": "INDEPENDENT FINITE-VOLUME-DUHAMEL-BOUND PASS 165/165",
+    "primary": {
+      "passed": 165,
+      "total": 165
+    },
+    "primary_stdout": "PRIMARY FINITE-VOLUME-DUHAMEL-BOUND PASS 165/165"
+  },
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "derived": {
+    "actual_q3_unbounded_tail_comparison_closed": false,
+    "all_shape_exhaustion_closed": false,
+    "c6_closed": false,
+    "common_alpha_closed": false,
+    "continuum_closed": false,
+    "finite_matrix_duhamel_identity_closed": true,
+    "finite_modular_companion_bound_closed": true,
+    "finite_two_sign_operator_norm_bound_closed": true,
+    "fixed_regulator_cutoff_limit_closed": true,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "modular_history_closed": false,
+    "pre_a_closed": false,
+    "sector_a_closed": false,
+    "volume_uniform_direct_d_delta_d_closed": false
+  },
+  "exploration_id": "EXP-001092",
+  "failed": 0,
+  "lean": {
+    "command": "lake env lean Tect/R274.lean",
+    "path": "verification/lean/Tect/R274.lean",
+    "status": "PASS"
+  },
+  "passed": 15,
+  "run_kind": "integrated",
+  "schema": "tect/foundation-audit/1.0",
+  "task_id": "T-054",
+  "total": 15,
+  "verdict": "PASS"
+}

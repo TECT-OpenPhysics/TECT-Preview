@@ -9417,6 +9417,132 @@
       "task_id": "T-054",
       "title": "Bounded-cutoff Dyson first-passage shell and modular scale bridge",
       "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "axis": "finite matrices versus unbounded Q3",
+          "check": "The proof uses finite operator norms and a bounded spectral cutoff; no domain or unbounded comparison is silently inserted.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "Duhamel sign and factor",
+          "check": "Both sigma=-1 and sigma=+1 are evaluated; the factor two appears only when comparing the two unitary legs in D.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "modular commutator factor",
+          "check": "The finite estimate is 2 beta ||H|| ||D|| and therefore has factor 4 after substitution; R274 checks the exact fixture arithmetic.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "bounded character",
+          "check": "The observable is constructed as a unitary spectral character, so its finite operator norm is one; no unbounded field observable is substituted.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "two orientations",
+          "check": "Every volume/radius/time row contains both signs and the independent implementation reproduces them.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "largest-radius zero tail",
+          "check": "The near-zero tail at radius 2 is a finite dimension-3 spectral fact only and does not imply convergence for growing oscillator dimension.",
+          "disposition": "UPHELD-AS-FINITE-ONLY"
+        },
+        {
+          "axis": "volume uniformity",
+          "check": "Hamiltonian norms increase across the finite volumes and no uniform bound is reported.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "Lean scope",
+          "check": "R274 verifies exact rational coefficients and orientation doubling only; it does not encode matrix exponentials, domains, limits, or reconstruction.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "QFT promotion",
+          "check": "Common alpha, OS/KMS/GNS, gap, continuum, C6, Sector A, and Pre-A remain explicitly open.",
+          "disposition": "UPHELD-OPEN"
+        }
+      ],
+      "boundary": "Finite self-adjoint matrices, bounded unitary local character, finite spectral cutoff, two signed histories, and the same finite reference Hamiltonian in the modular commutator only. No actual unbounded Q3 tail comparison, source/volume/oscillator/beta uniformity, modular history, all-shape exhaustion, common alpha, Hamiltonian OS/KMS identification, beta-infinity ground-state selection, broken-sector GNS gap, continuum, C6, Sector A, Pre-A, or Clay result follows.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "The finite-dimensional Duhamel identity and its explicit bounded-observable and Hamiltonian-modular companion estimates are independently reproduced, including both cutoff orientations and exact rational factor checks. This advances a finite interface in the Q3-to-QFT route only; the constants are regulator-dependent and no uniform Q3 estimate has been derived.",
+      "evidence_refs": [
+        "strategy/pre_a_cp1_st8_q3lock_finite_volume_operator_norm_cutoff_duhamel_bound_manifest.json#derived_bound",
+        "strategy/pre_a_cp1_st8_q3lock_finite_volume_operator_norm_cutoff_duhamel_bound-certificate-260825.md#Mathematical_statement",
+        "codes/foundations/pre_a_cp1_st8_q3lock_finite_volume_operator_norm_cutoff_duhamel_bound.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_finite_volume_operator_norm_cutoff_duhamel_bound_independent.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_finite_volume_operator_norm_cutoff_duhamel_bound_verify.py#run",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-primary-pre_a_cp1_st8_q3lock_finite_volume_operator_norm_cutoff_duhamel_bound/primary.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-independent-pre_a_cp1_st8_q3lock_finite_volume_operator_norm_cutoff_duhamel_bound/independent.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-integrated-pre_a_cp1_st8_q3lock_finite_volume_operator_norm_cutoff_duhamel_bound/integrated.json#lean",
+        "verification/lean/Tect/R274.lean#duhamel_fixture",
+        "verification/lean/registry.json#R274"
+      ],
+      "finding": "The primary lane passes 165/165, the independent lane passes 165/165, and the integrated verifier passes 15/15 with Lean R274 PASS. Both signs are present in every row. At the largest finite radius the tail norms are approximately 1.38e-15, 5.39e-15, and 9.01e-15 for volumes 2, 4, and 6, respectively, below the declared 1e-8 tolerance. The finite reference Hamiltonian norms are approximately 2.45937, 9.15164, and 15.95158.",
+      "formal_integration": {
+        "events": [],
+        "lean": "R274 PASS; exact rational factors only",
+        "negatives": [],
+        "no_new_event": true,
+        "no_new_negative": true,
+        "no_new_result": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "results": []
+      },
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": []
+      },
+      "gate_ids": [
+        "PA-CP1-ST8-Q3LOCK-FULL-HAMILTONIAN-TWO-ORIENTATION-STATIC-GIBBS-CUTOFF-UNITARY-RESUMMATION",
+        "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+        "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001092",
+      "method": [
+        "Reconstruct the declared finite Q3 graph, oscillator, onsite terms, full bond Hamiltonian, spectral coordinate cutoff, and both signed perturbed histories.",
+        "Check the finite-dimensional Duhamel estimate, the two-leg bounded-character estimate for D, and the commutator estimate for -beta[H,D] for every volume, radius, time, and sign.",
+        "Repeat the calculation in an independently reconstructed script, compare the complete derived rows, and compile exact rational bound factors in Lean R274.",
+        "Keep finite-regulator conclusions separate from source/volume-uniform Q3 comparison, common alpha, QFT reconstruction, and Clay-level gates."
+      ],
+      "next_action": "Derive the actual-Q3 common-core full-versus-cutoff comparison and source/volume-uniform modular-history envelope; if a uniform multiplier or domain estimate fails, register that route-local obstruction before reassessing common alpha and the QFT reconstruction gates.",
+      "no_overclaim": "This is a claim-nonbearing finite-regulator checkpoint. It is not an unbounded Q3 theorem, not a volume-uniform D or delta-D Cauchy result, not common alpha, not OS/KMS/GNS reconstruction, not a mass gap or continuum result, and not C6, Sector A, or Pre-A closure.",
+      "provenance": "contemporaneous",
+      "qft_interface": {
+        "closed": "A rigorously checked finite full-versus-cutoff operator-norm interface is available as one prerequisite for a Q3-to-QFT locality/Cauchy bridge.",
+        "open": "Actual-Q3 common-core comparison, source/volume-uniform modular history, common alpha, Hamiltonian OS/KMS identification, GNS gap/coercivity, continuum, C6, Sector A, and Pre-A.",
+        "route": "Q3 Hamiltonian -> common core and uniform D,delta-D -> common alpha -> KMS/OS/GNS -> physical gap -> continuum; EXP-001092 closes only the fixed finite-regulator bound at the first interface."
+      },
+      "question": "At fixed finite spatial volume and finite oscillator regularization, does a bounded self-adjoint cutoff tail give an explicit two-sign operator-norm Duhamel bound for D and its Hamiltonian modular companion, and what does that establish for the unbounded Q3 gate?",
+      "recorded_at": "2026-08-26T18:00:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001091",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001090",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001086",
+          "relation": "alternative_to"
+        }
+      ],
+      "reviewed_on": "2026-08-25",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Finite-regulator full-versus-cutoff Duhamel and modular companion bound",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",

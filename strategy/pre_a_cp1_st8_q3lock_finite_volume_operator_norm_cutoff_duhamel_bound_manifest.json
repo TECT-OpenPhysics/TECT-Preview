@@ -1,0 +1,77 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-FINITE-VOLUME-OPERATOR-NORM-CUTOFF-DUHAMEL-BOUND-v0",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001092",
+  "claim_bearing": false,
+  "parent_explorations": ["EXP-001091", "EXP-001090", "EXP-001086"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-FULL-HAMILTONIAN-TWO-ORIENTATION-STATIC-GIBBS-CUTOFF-UNITARY-RESUMMATION",
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "question": "At fixed finite spatial volume and finite oscillator regularization, does the bounded self-adjoint cutoff tail give an explicit two-sign operator-norm Duhamel bound for D and its Hamiltonian modular companion, and what does that establish for the unbounded Q3 gate?",
+  "hypotheses": {
+    "finite_dimension": "H and W_L are self-adjoint finite matrices, so ||W_L|| and ||H|| are finite.",
+    "observable": "A is a bounded unitary local character, ||A||=1.",
+    "histories": "U_sigma(t)=exp[-i t(H+sigma W_L)/hbar] for sigma=-1,+1 and U_0(t)=exp[-i t H/hbar].",
+    "modular_companion": "delta_H(D)=-beta[H,D] uses the same finite H as the reference Gibbs generator."
+  },
+  "derived_bound": {
+    "duhamel": "||U_sigma(t)-U_0(t)|| <= |t| ||W_L||/hbar",
+    "observable_difference": "||D_sigma(t)|| <= 2 |t| ||A|| ||W_L||/hbar",
+    "modular_difference": "||delta_H D_sigma(t)|| <= 4 beta |t| ||H|| ||A|| ||W_L||/hbar",
+    "two_sign_sum": "The same bounds hold for sigma=-1 and +1, so the two-orientation sum is at most twice each displayed bound.",
+    "fixed_regulator_limit": "If ||W_L|| tends to zero along the finite matrix cutoff, both bounds tend to zero uniformly for |t|<=T.",
+    "boundary": "The constants depend on the finite H and W_L; no volume-, oscillator-cutoff-, source-, beta-, or unbounded-Q3 uniformity follows."
+  },
+  "finite_fixture": {
+    "volume_values": [2, 4, 6],
+    "oscillator_dimension": 3,
+    "beta": 1.0,
+    "hbar": 1.0,
+    "character_amplitude": 0.3333333333333333,
+    "time_values": [0.05, 0.1],
+    "radius_values": [0.5, 1.0, 2.0],
+    "c": 0.6,
+    "chi": 1.0,
+    "r": -1.0,
+    "g": 0.6,
+    "lambda": 0.1,
+    "operator_tolerance": 1e-8,
+    "agreement_tolerance": 1e-7
+  },
+  "scope": {
+    "finite_matrix_duhamel_identity_closed": true,
+    "finite_two_sign_operator_norm_bound_closed": true,
+    "finite_modular_companion_bound_closed": true,
+    "fixed_regulator_cutoff_limit_closed": true,
+    "actual_q3_unbounded_tail_comparison_closed": false,
+    "volume_uniform_direct_d_delta_d_closed": false,
+    "modular_history_closed": false,
+    "all_shape_exhaustion_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false
+  },
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R274.lean",
+    "command": "lake env lean Tect/R274.lean",
+    "boundary": "R274 checks exact rational fixture coefficients and the finite bound factors only; it does not encode matrix exponentials, uniform limits, or QFT reconstruction."
+  },
+  "formal_integration": {
+    "events": [],
+    "results": [],
+    "negatives": [],
+    "no_new_result": true,
+    "no_new_negative": true,
+    "no_pdf": true
+  },
+  "no_overclaim": "This package closes only a fixed finite-dimensional full-versus-cutoff operator-norm estimate and its modular commutator consequence. It does not close the actual unbounded Q3 cutoff comparison, the source/volume-uniform modular-history estimate, common alpha, OS/KMS/GNS identification, a gap, continuum, C6, Sector A, or Pre-A."
+}
