@@ -1848,6 +1848,131 @@
       "task_id": "T-054",
       "title": "Signed Q3 source-slice top filtration and quartic history boundary",
       "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "axis": "word scope",
+          "check": "The fourth word is one further H commutator of the R270 triple coefficient, not the complete perturbed third time derivative or a Duhamel sum.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "nested-bracket construction",
+          "check": "Primary and independent lanes build the same inner, triple, and fourth brackets and agree row by row.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "support locality",
+          "check": "The tail is configuration-only and disjoint edges commute with the supported character in every finite row.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "weight positivity",
+          "check": "Both support-local and full Hamiltonian weights are shifted spectrally positive before the 3/4 power.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "volume inference",
+          "check": "Ratios use only volumes 2,4,6 and are reported as finite diagnostics, not asymptotic lower bounds.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "truncated CCR",
+          "check": "Oscillator dimension three is explicit; no infinite-dimensional CCR or common-core theorem is inferred.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "Lean scope",
+          "check": "R292 formalizes only scalar bookkeeping and the declared threshold; matrix norms and limits remain in the JSON artefacts.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "QFT promotion",
+          "check": "Direct D/delta-D Cauchy, common dynamics/KMS, OS/GNS, gap, continuum, C6, Sector A and Pre-A remain open.",
+          "disposition": "UPHELD"
+        }
+      ],
+      "boundary": "T0 claim-nonbearing finite actual-Q3 oscillator matrices at dimension three, beta=1, one supported character, three graph volumes, three cutoff radii, and one further H-word only. No source/volume/beta-uniform common-core bound, complete Duhamel history, modular-domain transfer, direct D or delta-D Cauchy, product/core density, exhaustion independence, group law, common dynamics, KMS/GNS gap, continuum, C6, Sector A, Pre-A, TECT production owner, or Clay result follows.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "The next actual-Q3 Hamiltonian word shows stronger finite volume growth in both declared two-sided Gibbs weights than the preceding R270 triple-word stress. This rejects promotion of this fixed s=3/4 candidate as a volume-uniform history multiplier on the tested finite family, but it is not an asymptotic lower-bound theorem and does not refute cancellation-aware analytic/Frechet, direct D-delta-D, or other state-weighted topologies.",
+      "evidence_refs": [
+        "strategy/pre_a_cp1_st8_q3lock_weighted_fourth_commutator_volume_stress_manifest.json#model",
+        "strategy/pre_a_cp1_st8_q3lock_weighted_fourth_commutator_volume_stress-certificate-260825.md#Results",
+        "codes/foundations/pre_a_cp1_st8_q3lock_weighted_fourth_commutator_volume_stress.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_weighted_fourth_commutator_volume_stress_independent.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_weighted_fourth_commutator_volume_stress_verify.py#run",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-primary-pre_a_cp1_st8_q3lock_weighted_fourth_commutator_volume_stress/primary.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-primary-pre_a_cp1_st8_q3lock_weighted_fourth_commutator_volume_stress/independent.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-primary-pre_a_cp1_st8_q3lock_weighted_fourth_commutator_volume_stress/integrated.json#lean",
+        "verification/lean/Tect/R292.lean#fourth_word_fixture",
+        "verification/lean/registry.json#R292"
+      ],
+      "finding": "Primary 59/59, independent 56/56, and integrated 46/46 with Lean R292 PASS. The local fourth-word weighted maxima for volumes 2,4,6 are 15.6471854059, 101.546090286, and 218.969968087, giving a V6/V2 ratio 13.9942080577. The full-volume maxima are 15.6471854059, 146.821470988, and 404.323015948, giving a ratio 25.8399837069. Primary and independent values agree within the integrated 1e-7 relative tolerance; support and disjoint-tail commutators remain at the declared finite tolerance.",
+      "formal_integration": {
+        "events": [],
+        "lean": "R292 PASS; metadata PASS",
+        "negatives": [],
+        "no_new_event": true,
+        "no_new_negative": true,
+        "no_new_result": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "results": []
+      },
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": []
+      },
+      "gate_ids": [
+        "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+        "PA-CP1-ST8-Q3LOCK-ENERGY-WEIGHTED-COMMUTATOR-GEVREY-LR-CLOSURE",
+        "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001120",
+      "method": [
+        "Reuse the registered actual Q3 oscillator Hamiltonians, graph volumes 2, 4, and 6, smooth bond-coordinate cutoff, Gibbs state, and two-sided local/full weights from the R270 independent constructions.",
+        "For A_2=exp(i*(q_0+q_1)/(3*hbar)), form inner=[W_L,[H,A_2]], triple=[H,inner], and the next single-word continuation fourth=[H,triple].",
+        "Evaluate the four-leg s=3/4 Gibbs weighted norm and the unweighted two-sided Gibbs norm at cutoff radii 0.5, 1.0, and 2.0, while checking configuration support and disjoint-tail commutators.",
+        "Run primary and independent matrix lanes, compare every finite row and volume maximum, and compile Lean R292 for the finite nested-word bookkeeping and declared threshold.",
+        "Keep the single-word scope firewall: this is not the complete perturbed third time derivative and it does not sum a Duhamel history."
+      ],
+      "next_action": "Retain this fixed-weight route as a finite stress boundary and move to a cancellation-aware analytic/Frechet or direct D,delta-D estimate; any surviving route must prove a genuine two-orientation volume-uniform recurrence before common-alpha promotion.",
+      "provenance": "contemporaneous",
+      "qft_interface": {
+        "closed": "Only the finite actual-Q3 fourth-word matrix identity, support locality checks, and reproducible two-sided weighted diagnostic.",
+        "open": "Actual Q3 common-core domains, complete history summation, dual modular tail, direct D/delta-D Cauchy, exhaustion, Hamiltonian-to-OS identification, common alpha, KMS/GNS gap, continuum, C6, Sector A and Pre-A remain open.",
+        "tect_boundary": "No heat_root_incidence or canonical A1/R-192 production owner is supplied."
+      },
+      "question": "Does the declared s=3/4 four-leg Gibbs-weighted topology control the next Hamiltonian commutator of the actual Q3 cutoff defect uniformly across finite volume and cutoff fixtures?",
+      "recorded_at": "2026-08-27T05:30:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001088",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001089",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001090",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001119",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-08-25",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Actual-Q3 weighted fourth-commutator volume stress for the projected D-delta-D route",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",
