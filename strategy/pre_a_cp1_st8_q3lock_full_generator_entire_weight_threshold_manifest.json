@@ -1,0 +1,130 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-FULL-GENERATOR-ENTIRE-WEIGHT-THRESHOLD-v0",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001115",
+  "claim_bearing": false,
+  "parent_explorations": ["EXP-001114", "EXP-001032", "EXP-001030"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-FIRST-PASSAGE-BACKBONE-REAL-TIME-PRODUCT-AND-ENERGY-TAIL-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "question": "What entire source weight is necessary to absorb the noncancellable top source-degree sequence of the full formal Q3 Heisenberg Taylor coefficient?",
+  "model": {
+    "full_generator_input": "Use the R286 full-generator top coefficient, not only a selected potential word.",
+    "top_absolute_sequence": "A_m(a)=m*c*(G/4)^(m-1)*|a|^(4*m-3) for positive G,c",
+    "entire_generating_parameter": "t>=0",
+    "candidate_weight": "w_sigma(a)=(1+|a|)*exp(sigma*|a|^4)",
+    "source_topology": "coefficientwise analytic/Frechet candidate; no operator seminorm or domain closure is asserted"
+  },
+  "exact_statement": {
+    "generating_identity": "sum_{m>=1} t^m*A_m(a)/m! = c*t*|a|*exp((t*G/4)*|a|^4)",
+    "weight_ratio": "[c*t*|a|/(1+|a|)]*exp(((t*G/4)-sigma)*|a|^4)",
+    "sufficient_threshold": "sigma>=t*G/4 gives coefficientwise ratio <=c*t",
+    "necessary_threshold": "sigma<t*G/4 makes the displayed coefficientwise ratio grow without bound as |a| tends to infinity",
+    "full_generator_link": "R286 proves that this top sequence is present in the full formal Taylor coefficient and cannot be cancelled by kinetic words"
+  },
+  "fixture": {
+    "g": "3/5",
+    "lambda": "2/7",
+    "c": "2/3",
+    "G": "51/35",
+    "t": "1/3",
+    "rate": "17/140",
+    "sigma_good": "1/5",
+    "good_margin": "11/140",
+    "sigma_bad": "1/10",
+    "bad_margin": "3/140",
+    "prefactor": "2/9",
+    "amplitudes": [0, 1, 2, 5, 10],
+    "truncation_order": 8
+  },
+  "scope": {
+    "full_generator_entire_weight_threshold_closed": true,
+    "good_sigma_finite_partial_bound_closed": true,
+    "bad_sigma_finite_growth_diagnostic_closed": true,
+    "actual_q3_entire_seminorm_closed": false,
+    "actual_q3_common_core_closed": false,
+    "actual_q3_word_incidence_closed": false,
+    "volume_uniform_factorial_history_closed": false,
+    "dual_modular_tail_closed": false,
+    "direct_d_delta_d_cauchy_closed": false,
+    "exhaustion_independence_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true,
+    "not_closed": "The threshold is an exact coefficientwise topology condition. It does not construct the actual Q3 entire seminorm, prove its domain continuity, supply word incidence, or close any thermodynamic or physical gate."
+  },
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R287.lean",
+    "command": "lake env lean Tect/R287.lean",
+    "declarations": ["rate_fixture", "good_margin_fixture", "bad_margin_fixture", "prefactor_fixture", "top_coefficient_m2"],
+    "role": "R287 checks the exact rational rate, threshold margins, prefactor, and one full-generator top-coefficient fixture; it does not formalize exponential limits or Q3 domains."
+  },
+  "formal_integration": {
+    "results": [],
+    "events": [],
+    "negatives": [],
+    "lean": "R287 PASS",
+    "no_new_result": true,
+    "no_new_negative": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "boundary": "T0 claim-nonbearing coefficientwise analytic-weight threshold. It narrows the admissible QFT-facing topology but does not prove an actual Q3 analytic dynamics theorem.",
+  "next_action": "Define the threshold weight on a genuine common CCR core, prove its generator continuity and two-orientation volume-uniform recurrence, and then test direct/modular D Cauchy and exhaustion.",
+  "verification": {
+    "primary_script": "codes/foundations/pre_a_cp1_st8_q3lock_full_generator_entire_weight_threshold.py",
+    "independent_script": "codes/foundations/pre_a_cp1_st8_q3lock_full_generator_entire_weight_threshold_independent.py",
+    "integrated_script": "codes/foundations/pre_a_cp1_st8_q3lock_full_generator_entire_weight_threshold_verify.py"
+  },
+  "qft_interface": {
+    "closed": "The full formal Taylor coefficient forces the quartic exponential source-growth threshold sigma>=tG/4 for the displayed coefficientwise entire envelope.",
+    "open": "Actual Q3 analytic seminorm/domain, word incidence, history recurrence, dual modular tail, exhaustion, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector A and Pre-A remain open.",
+    "tect_boundary": "No heat_root_incidence or canonical A1/R-192 production owner is supplied by this coefficient audit."
+  },
+  "adversarial_review": [
+    {
+      "axis": "full-generator input",
+      "check": "The top sequence is inherited from the R286 full formal Taylor filtration; it is not re-labelled as a selected potential word.",
+      "disposition": "UPHELD-WITH-COEFFICIENT-BOUNDARY"
+    },
+    {
+      "axis": "threshold direction",
+      "check": "The good and bad margins are computed from rate=tG/4; no numerical threshold is pasted independently of the upstream fixture.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "infinite series",
+      "check": "The exponential identity is a coefficientwise generating identity; finite samples do not replace an actual Q3 history sum.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "operator topology",
+      "check": "The entire weight is a candidate source topology, not a representation-independent seminorm or domain theorem.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "QFT-to-TECT promotion",
+      "check": "No word incidence, common core, KMS/GNS, gap, continuum, C6, Sector A or Pre-A conclusion is supplied.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "Lean scope",
+      "check": "R287 checks exact rational fixtures only and does not formalize exponential asymptotics or unbounded operators.",
+      "disposition": "UPHELD"
+    }
+  ],
+  "no_overclaim": "This package is a coefficientwise analytic-weight threshold inherited from the full formal Taylor filtration. It does not prove actual Q3 dynamics, a thermodynamic QFT, C6, Sector A, Pre-A, TECT production, or a Clay result."
+}
