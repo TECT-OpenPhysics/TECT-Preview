@@ -1,0 +1,112 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-SOURCE-WEIGHT-DIRECT-DELTA-AUDIT-v0",
+  "title": "Actual Q3 source-weighted direct D and delta-D audit",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001149",
+  "claim_bearing": false,
+  "parent_explorations": ["EXP-001148", "EXP-001147", "EXP-001085"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "question": "Do the actual Q3 direct D(t) and generator derivative delta_H D(t)=i[H,D(t)]/hbar remain finite and source-damped in both the Gibbs seminorm and the local-energy four-leg norm?",
+  "finite_fixture": {
+    "volume_values": [2, 4, 6],
+    "oscillator_dimension": 3,
+    "observable_support": [0, 1],
+    "amplitude_values": [0, 1, 2, 5],
+    "time_values": [0.05],
+    "radius_values": [0.5, 1.0],
+    "orientation_values": [-1, 1],
+    "beta_values": [0.5, 1.0, 2.0],
+    "c": 0.6,
+    "chi": 1.0,
+    "r": -1.0,
+    "g": 0.6,
+    "lambda": 0.1,
+    "hbar": 1.0,
+    "commutator_tolerance": 1e-8,
+    "finite_tolerance": 1e-8,
+    "agreement_tolerance": 1e-7,
+    "positive_shift": 1.0
+  },
+  "analytic_fixture": {
+    "sigma": "1/5",
+    "expected_rate": "17/140",
+    "expected_margin": "11/140",
+    "expected_prefactor": "2/9"
+  },
+  "model": {
+    "history": "D_sigma(t,a)=U(H+sigma W_L,t) A_a U(H+sigma W_L,t)^* - U(H,t) A_a U(H,t)^*",
+    "generator_derivative": "delta_H D=i[H,D]/hbar",
+    "gibbs_seminorm": "||X||_(beta,#)^2=Tr(rho X*X)+Tr(rho XX*)",
+    "local_weight": "K_X=H_{sites 0,1,bond(0,1)}-min(H_X)+I",
+    "four_legs": [
+      "||K_X X rho^(1/2)||_HS^2",
+      "||K_X X^* rho^(1/2)||_HS^2",
+      "||X K_X rho^(1/2)||_HS^2",
+      "||X^* K_X rho^(1/2)||_HS^2"
+    ],
+    "source_weight": "w_sigma(a)=(1+|a|) exp(sigma |a|^4)",
+    "normalization": "divide both Gibbs seminorms and local four-leg norms by w_sigma(a)"
+  },
+  "scope": {
+    "actual_q3_direct_d_rows_closed": true,
+    "actual_q3_direct_delta_d_rows_closed": true,
+    "independent_trace_reconstruction_closed": true,
+    "finite_source_weight_normalization_closed": true,
+    "candidate_source_weight_uniformity_proved": false,
+    "volume_uniform_direct_d_cauchy_proved": false,
+    "modular_domain_transfer_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "adversarial_review": [
+    {"axis": "derivation convention", "check": "The primary definition delta_H D=i[H,D]/hbar is stated explicitly; the modular beta-scaled commutator is not silently substituted.", "disposition": "UPHELD"},
+    {"axis": "source normalization", "check": "Unnormalized Gibbs and four-leg quantities remain recorded alongside their norm-level division by one scalar w_sigma(a).", "disposition": "UPHELD"},
+    {"axis": "noncommuting weight", "check": "K_X is applied in the full-H representation with no commutation assumption with rho, D, or delta_H D.", "disposition": "UPHELD"},
+    {"axis": "finite grid", "check": "Three volumes, three beta values, four amplitudes, two cutoffs, one time, and two orientations are finite diagnostics only.", "disposition": "UPHELD-OPEN"},
+    {"axis": "Cauchy promotion", "check": "Finite D and delta-D rows do not establish a uniform common-core Cauchy estimate, exhaustion independence, or a common alpha.", "disposition": "UPHELD-OPEN"},
+    {"axis": "QFT promotion", "check": "Modular transfer, products, OS/KMS/GNS, gap, continuum, C6, Sector A and Pre-A remain open.", "disposition": "UPHELD-OPEN"}
+  ],
+  "formal_integration": {
+    "lean_entry": "verification/lean/Tect/R319.lean",
+    "result_ids": [],
+    "negative_ids": [],
+    "changelog_event": null
+  },
+  "next_action": "Use the finite pair only as calibration. Define the corresponding local entire source seminorm on a common core and prove a source-, volume-, cutoff- and beta-uniform bound for both D and delta_H D before attempting direct Cauchy and exhaustion.",
+  "no_overclaim": "This package tests the direct D/delta-D interface on finite actual Q3 matrices under a candidate source weight. It does not prove a uniform Cauchy theorem, common dynamics, a thermodynamic QFT, C6, Sector A, Pre-A, or a Clay result.",
+  "files": {
+    "primary": "codes/foundations/pre_a_cp1_st8_q3lock_source_weight_direct_delta_audit.py",
+    "independent": "codes/foundations/pre_a_cp1_st8_q3lock_source_weight_direct_delta_audit_independent.py",
+    "integrated": "codes/foundations/pre_a_cp1_st8_q3lock_source_weight_direct_delta_audit_verify.py",
+    "lean": "verification/lean/Tect/R319.lean",
+    "primary_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-27-primary-pre_a_cp1_st8_q3lock_source_weight_direct_delta_audit/primary.json",
+    "independent_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-27-independent-pre_a_cp1_st8_q3lock_source_weight_direct_delta_audit/independent.json",
+    "integrated_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-27-integrated-pre_a_cp1_st8_q3lock_source_weight_direct_delta_audit/integrated.json"
+  },
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R319.lean",
+    "theorem_markers": ["source_rate_fixture", "source_margin_fixture", "delta_generator_fixture", "source_norm_fixture"],
+    "command": "lake env lean Tect/R319.lean",
+    "boundary": "Lean checks exact rational source-weight bookkeeping and the scalar generator-derivative normalization; Python checks actual Q3 matrices and trace identities."
+  },
+  "qft_interface": {
+    "closed": "Finite actual-Q3 D and delta_H D rows are evaluated in both the Gibbs seminorm and the noncommuting local-energy four-leg norm, with independent trace reconstruction and source normalization.",
+    "open": "A source-, volume-, cutoff- and beta-uniform common-core estimate, modular transfer, direct Cauchy, product/core density, exhaustion, common alpha, OS/KMS/GNS identification, gap, continuum and Pre-A remain open.",
+    "tect_boundary": "No heat_root_incidence or canonical A1/R-192 production owner is supplied."
+  }
+}
