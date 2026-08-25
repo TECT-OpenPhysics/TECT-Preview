@@ -1,0 +1,100 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-DUAL-CHARACTER-FIFTH-MOMENT-v0",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001122",
+  "claim_bearing": false,
+  "parent_explorations": ["EXP-001079", "EXP-001106", "EXP-001120"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-FIFTH-ENERGY-MOMENT-AND-MODULAR-CUTOFF-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-RESOLVENT-ALGEBRA-EXACT-POLYNOMIAL-COMMON-ALPHA-CLOSURE",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "question": "For the declared finite Q3 Hamiltonians, does a local character W_a=exp(i*a*q_0/hbar) produce a normalized dual state whose shifted-H fifth moment and global spectral tails remain finite and comparable to the reference Gibbs state?",
+  "exact_statement": {
+    "dual_state": "The reference state is rho_beta=exp(-beta*(H-min(H)))/Z and the audited dual state is rho_a=W_a*rho_beta*W_a^*. Both are evaluated against K=H-min(H)+I.",
+    "moment": "The package computes Tr(rho_beta*K^5) and Tr(rho_a*K^5) and checks the finite Markov inequality R^5*Tr(rho*1_[K>R]) <= Tr(rho*K^5) for each declared spectral cutoff R.",
+    "kinetic_identity": "For the formal scalar momentum shift, (p+a)^2/(2*chi)-p^2/(2*chi)=a*p/chi+a^2/(2*chi). In the matrix fixture this is only a character diagnostic because truncated CCR do not satisfy the infinite-dimensional Weyl relation exactly.",
+    "qft_interface": "The rows instantiate the missing actual-Q3 dual-state input identified by EXP-001079. They do not prove a volume-, cutoff-, beta-, source-, or orientation-uniform modular tail, direct D/delta-D Cauchy, common alpha, OS/KMS/GNS reconstruction, a gap, continuum, C6, Sector A or Pre-A."
+  },
+  "finite_fixture": {
+    "volume_values": [2, 4, 6],
+    "oscillator_dimensions_by_volume": {"2": [3, 4, 5], "4": [3], "6": [3]},
+    "edges_by_volume": {
+      "2": [[0, 1]],
+      "4": [[0, 1], [0, 2], [1, 3], [2, 3]],
+      "6": [[0, 1], [1, 2], [3, 4], [4, 5], [0, 3], [1, 4], [2, 5]]
+    },
+    "beta": 1.0,
+    "hbar": 1.0,
+    "character_amplitude": 0.3333333333333333,
+    "moment_order": 5,
+    "spectral_cutoffs": [4.0, 8.0, 16.0, 32.0],
+    "chi": 1.0,
+    "r": -1.0,
+    "g": 0.6,
+    "c": 0.6,
+    "lambda": 0.1,
+    "agreement_tolerance": 2.0e-7,
+    "unitarity_tolerance": 1.0e-8,
+    "markov_tolerance": 1.0e-8
+  },
+  "model": {
+    "graph": "two-site edge, four-site square face, and six-site 2x3 rectangular grid",
+    "hamiltonian": "sum_x[p_x^2/(2*chi)+r*q_x^2/2+g*q_x^4/4] + sum_edges[c*(q_x-q_y)^2/2 + lambda*(q_x-q_y)^2*(q_x^2+q_y^2)/4]",
+    "character": "W_a=exp(i*character_amplitude*q_0/hbar)",
+    "shift": "K=H-min(spec(H))+I",
+    "tail": "Q_R=1_[K>R] and tail_weight=Tr(rho*Q_R*K^5)"
+  },
+  "scope": {
+    "finite_reference_fifth_moment_closed": true,
+    "finite_dual_character_fifth_moment_closed": true,
+    "finite_global_spectral_tail_comparison_closed": true,
+    "finite_character_kinetic_shift_identity_closed": true,
+    "actual_q3_dual_state_moment_uniform_closed": false,
+    "actual_q3_modular_tail_uniform_closed": false,
+    "actual_q3_unbounded_domain_transfer_closed": false,
+    "source_volume_beta_orientation_uniform_closed": false,
+    "volume_uniform_direct_d_cauchy_closed": false,
+    "delta_d_cauchy_closed": false,
+    "product_core_density_closed": false,
+    "exhaustion_independence_closed": false,
+    "group_law_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R293.lean",
+    "command": "lake env lean Tect/R293.lean",
+    "declarations": ["kinetic_shift_identity", "tail_markov_fixture", "tail_order_fixture", "tail_ratio_fixture", "scope_fixture"],
+    "role": "R293 formalizes the scalar kinetic-shift identity and the declared fifth-power tail algebra only; it does not formalize matrices, truncated CCR, Gibbs diagonalization, unbounded domains, or any limit."
+  },
+  "adversarial_review": [
+    {"axis": "character convention", "check": "The primary and independent lanes use W_a=exp(+i*a*q_0/hbar) and form rho_a=W_a*rho_beta*W_a^*, with the sign recorded rather than inferred from a continuum CCR convention.", "disposition": "UPHELD"},
+    {"axis": "normalization", "check": "Both reference and dual traces are checked numerically after Gibbs normalization and unitary conjugation.", "disposition": "UPHELD"},
+    {"axis": "shift positivity", "check": "K is formed from the actual finite H spectrum by subtracting its minimum and adding I before taking fifth powers or spectral tails.", "disposition": "UPHELD"},
+    {"axis": "tail direction", "check": "Reference and dual global spectral tails are evaluated separately; neither is substituted for the other and the cutoff is Q_R=1_[K>R].", "disposition": "UPHELD"},
+    {"axis": "local-versus-global", "check": "The audited Q_R is a global shifted-H projector, not the local bond or modular projector required by the D/delta-D proof.", "disposition": "UPHELD-OPEN"},
+    {"axis": "finite cutoff", "check": "All rows use finite oscillator matrices and the declared graph family; no infinite-dimensional CCR, source removal, or thermodynamic uniformity is inferred.", "disposition": "UPHELD-OPEN"},
+    {"axis": "QFT promotion", "check": "The package leaves common-core dynamics, dual modular tails, D/delta-D Cauchy, exhaustion, common alpha, Hamiltonian-to-OS/KMS, GNS gap, continuum, C6, Sector A and Pre-A open.", "disposition": "UPHELD-OPEN"},
+    {"axis": "Lean scope", "check": "R293 checks only scalar identities and declared inequalities; it contains no axiom, sorry, unbounded operator theorem or limit claim.", "disposition": "UPHELD"}
+  ],
+  "qft_interface": {
+    "closed": "Finite actual-Q3 reference/dual fifth moments and global shifted-H spectral-tail comparisons for the declared graph and oscillator fixtures; the scalar character kinetic shift identity.",
+    "open": "A uniform actual-Q3 dual-state or modular-energy tail, local projected-bond transfer, direct D/delta-D convergence, common alpha, Hamiltonian-to-OS/KMS identification, GNS gap, continuum, C6, Sector A and Pre-A.",
+    "tect_boundary": "No heat_root_incidence or canonical A1/R-192 production owner is involved."
+  },
+  "next_action": "Use the finite rows only as a diagnostic seed for a genuine common-core graph estimate; require an explicit local/modular tail theorem and all-exhaustion D/delta-D Cauchy before any QFT promotion.",
+  "formal_integration": {"events": [], "negatives": [], "results": [], "no_new_event": true, "no_new_negative": true, "no_new_result": true, "no_tier_change": true, "no_pdf": true},
+  "boundary": "T0 claim-nonbearing finite actual-Q3 dual-character moment and global spectral-tail audit."
+}
