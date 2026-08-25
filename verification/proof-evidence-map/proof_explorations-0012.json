@@ -3379,6 +3379,129 @@
       "task_id": "T-054",
       "title": "Finite-support Weyl cylinder form invariance and weighted square-root products",
       "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "axis": "boundedness",
+          "check": "M and L are explicit hypotheses; no coordinate or polynomial with infinite sup norm is admitted.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "kinetic factor",
+          "check": "The form coefficient is exactly 2M^2 with additive L^2/chi from the product rule; no extra factor is hidden in the stated bound.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "potential term",
+          "check": "The EXP-001131 per-site shift makes onsite-plus-bond potential nonnegative, so the potential term is controlled by M^2.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "orientation",
+          "check": "Same and cross products are separated, with cross factor 21 inherited from the closed form comparison.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "volume",
+          "check": "Only support size and local M,L enter the constants within degree six; no thermodynamic dynamics is inferred.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "QFT promotion",
+          "check": "Unbounded products, modular transfer, direct D/delta-D Cauchy, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector A and Pre-A remain open.",
+          "disposition": "UPHELD-OPEN"
+        }
+      ],
+      "boundary": "This is a bounded finite-support C1 form-invariance checkpoint with explicit weighted products. It is not an arbitrary-observable domain theorem, a common infinite-volume dynamics, modular transfer, common alpha, OS/KMS/GNS reconstruction, a gap, continuum, C6, Sector A or Pre-A result, a TECT production map or a Clay result.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "closed": [
+        "bounded finite-support Lipschitz cylinder form-domain invariance",
+        "same-orientation weighted square-root products",
+        "cross-orientation weighted square-root products",
+        "regularized-coordinate witness family",
+        "fixed-support volume uniformity and independent Lean cross-check"
+      ],
+      "decision_reason": "The bounded cylinder bridge now extends beyond Weyl multipliers to an explicit finite-support C1 class with a product-rule form estimate. This is the correct bounded QFT test-algebra direction, but it does not license unbounded polynomial observables, modular dynamics, or a common infinite-volume alpha.",
+      "evidence_refs": [
+        "strategy/pre-a-cp1-st8-q3lock-bounded-lipschitz-cylinder-manifest.json#model",
+        "codes/foundations/pre_a_cp1_st8_q3lock_bounded_lipschitz_cylinder.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_bounded_lipschitz_cylinder_independent.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_bounded_lipschitz_cylinder_verify.py#run",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-primary-pre_a_cp1_st8_q3lock_bounded_lipschitz_cylinder/primary.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-independent-pre_a_cp1_st8_q3lock_bounded_lipschitz_cylinder/independent.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-integrated-pre_a_cp1_st8_q3lock_bounded_lipschitz_cylinder/integrated.json#lean",
+        "verification/lean/Tect/R304.lean#regularized_coordinate_square_fixture",
+        "verification/lean/registry.json#R304"
+      ],
+      "finding": "Primary 46/46, independent 44/44, integrated 15/15, and Lean R304 PASS. The declared bounded finite-support Lipschitz cylinder class preserves both shifted Q3 form domains. Its same-orientation weighted square-root product has squared bound 2M^2+L^2/chi; cross-orientation products pay the exact factor 21. The regularized-coordinate product family satisfies M<=1 and L^2<=m for support size m, uniformly in volume within the degree-six graph class.",
+      "formal_integration": {
+        "events": [],
+        "lean": "R304 PASS; metadata to be regenerated",
+        "negatives": [],
+        "no_new_event": true,
+        "no_new_negative": true,
+        "no_new_result": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "results": []
+      },
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": []
+      },
+      "gate_ids": [
+        "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+        "PA-CP1-ST8-Q3LOCK-ENERGY-WEIGHTED-COMMUTATOR-GEVREY-LR-CLOSURE",
+        "PA-CP1-ST8-Q3LOCK-RESOLVENT-ALGEBRA-EXACT-POLYNOMIAL-COMMON-ALPHA-CLOSURE",
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001133",
+      "method": [
+        "Take a finite-support multiplication cylinder A_f with sup norm M and gradient norm L, and use the exact kinetic product rule while retaining the nonnegative shifted potential.",
+        "Derive q_K[A_f psi] <= 2 M^2 q_K[psi] + L^2/chi ||psi||^2 on either closed EXP-001131 form, giving a same-orientation squared weighted bound 2M^2+L^2/chi.",
+        "Use the EXP-001131 degree-six form order to obtain the cross-orientation squared bound 21(2M^2+L^2/chi).",
+        "Audit the regularized coordinate a(x)=x/sqrt(1+x^2), whose exact squared modulus and derivative are bounded by one, over rational grids and support sizes, with Lean R304 checking the rational constants."
+      ],
+      "next_action": "Attempt a resolvent-smoothed polynomial cylinder with an explicit form bound; if derivative or resolvent commutators cannot be controlled without a new cutoff/beta hypothesis, register the obstruction instead of widening this class by fiat.",
+      "no_overclaim": "Only the declared bounded Lipschitz cylinder class is closed. All unbounded, modular, exhaustion, QFT reconstruction, gap, continuum and production gates remain open.",
+      "open": [
+        "all bounded local observables without explicit gradient control",
+        "unbounded polynomial weighted products",
+        "exact CCR/common-core operator-domain transfer",
+        "cutoff- and beta-uniform modular transfer",
+        "direct D and delta-D Cauchy estimates",
+        "exhaustion independence and common alpha",
+        "Hamiltonian-to-OS/KMS/GNS identification, a sector gap, continuum, C6, Sector A and Pre-A"
+      ],
+      "prior_exploration_id": "EXP-001132",
+      "provenance": "contemporaneous",
+      "qft_interface": {
+        "closed": "Bounded finite-support Lipschitz cylinder form invariance and same/cross-orientation weighted products uniform in bounded-degree volume.",
+        "open": "Unbounded polynomial products, modular/cutoff/beta transfer, direct D/delta-D Cauchy, common alpha, OS/KMS/GNS, gap, continuum and Pre-A.",
+        "tect_boundary": "Bounded cylinder bridge only; no heat_root_incidence or canonical A1/R-192 production owner."
+      },
+      "question": "Can the finite Q3 shifted form domain admit bounded finite-support C1 multipliers with bounded gradient, beyond the Weyl subclass, with explicit same- and cross-orientation weighted products?",
+      "recorded_at": "2026-08-27T13:30:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001132",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001131",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-08-25",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Bounded Lipschitz cylinder multipliers and finite Q3 weighted products",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",
