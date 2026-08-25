@@ -1,0 +1,90 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-ONSITE-ENERGY-WEIGHTED-ISOMETRY-BOND-RECURRENCE-v0",
+  "title": "Finite Q3 onsite weighted isometry and endpoint-to-edge bond recurrence reduction",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001128",
+  "claim_bearing": false,
+  "parent_explorations": ["EXP-001127", "EXP-001084", "EXP-001026"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-ENERGY-WEIGHTED-COMMUTATOR-GEVREY-LR-CLOSURE",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "question": "Does the exact finite Q3 onsite flow preserve the two-orientation local energy-weighted seminorm, leaving only a finite endpoint-to-edge bond multiplier for the graph recurrence?",
+  "finite_fixture": {
+    "volume_values": [2, 4, 6],
+    "oscillator_dimension": 3,
+    "observable_support": [0, 1],
+    "probe_count": 4,
+    "delta": 0.125,
+    "character_amplitude": 0.3333333333333333,
+    "c": 0.6,
+    "chi": 1.0,
+    "r": -1.0,
+    "g": 0.6,
+    "lambda": 0.1,
+    "hbar": 1.0,
+    "matrix_tolerance": 1e-8,
+    "agreement_tolerance": 1e-7,
+    "growth_threshold": 1.0
+  },
+  "model": {
+    "graph": "two-site edge, four-site square face, and six-site 2x3 rectangular grid",
+    "local_weight": "K_S=I+H_S-min(spec(H_S))I for the declared support S, with both K_S^(1/2) A K_S^(-1/2) and its reverse orientation",
+    "onsite_step": "U_S=exp(-i delta H_S/hbar), so [U_S,K_S]=0 exactly in the finite spectral model",
+    "bond_step": "B_e=exp(-i delta H_e/hbar) for the full registered quartic bond on edge e",
+    "recurrence_reduction": "onsite layers are isometries; the remaining finite endpoint-to-edge multiplier is measured for both bond orientations"
+  },
+  "scope": {
+    "finite_onsite_two_orientation_isometry_closed": true,
+    "finite_endpoint_to_edge_bond_multiplier_rows_closed": true,
+    "finite_full_q3_recurrence_reduction_closed": true,
+    "source_uniformity_proved": false,
+    "volume_uniformity_proved": false,
+    "cutoff_uniformity_proved": false,
+    "exact_ccr_common_core_closed": false,
+    "modular_domain_transfer_closed": false,
+    "volume_uniform_direct_d_cauchy_closed": false,
+    "delta_d_cauchy_closed": false,
+    "all_bond_graph_lipschitz_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false
+  },
+  "adversarial_review": [
+    {"axis": "onsite isometry", "check": "The finite spectral construction checks [U_S,K_S] and both weighted orientations; no unbounded-domain identity is inferred.", "disposition": "UPHELD"},
+    {"axis": "bond convention", "check": "The bond step uses the registered quartic bond, not only its bilinear part, and both signs are retained.", "disposition": "UPHELD"},
+    {"axis": "endpoint-to-edge transfer", "check": "The pre-step endpoint weight and post-step edge weight are reported separately; their ratio is a finite diagnostic, not a monotonicity theorem.", "disposition": "UPHELD"},
+    {"axis": "volume inference", "check": "Volumes 2, 4, and 6 only establish finite rows; no asymptotic uniform constant is claimed.", "disposition": "UPHELD-OPEN"},
+    {"axis": "truncated CCR", "check": "Oscillator dimension three is explicit and no infinite CCR or common-core closure is promoted.", "disposition": "UPHELD"},
+    {"axis": "QFT promotion", "check": "Common alpha, OS/KMS/GNS, gap, continuum, C6, Sector A and Pre-A remain open.", "disposition": "UPHELD-OPEN"}
+  ],
+  "files": {
+    "primary": "codes/foundations/pre_a_cp1_st8_q3lock_onsite_weighted_isometry_bond_recurrence.py",
+    "independent": "codes/foundations/pre_a_cp1_st8_q3lock_onsite_weighted_isometry_bond_recurrence_independent.py",
+    "integrated": "codes/foundations/pre_a_cp1_st8_q3lock_onsite_weighted_isometry_bond_recurrence_verify.py",
+    "lean": "verification/lean/Tect/R299.lean",
+    "primary_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-primary-pre_a_cp1_st8_q3lock_onsite_weighted_isometry_bond_recurrence/primary.json",
+    "independent_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-independent-pre_a_cp1_st8_q3lock_onsite_weighted_isometry_bond_recurrence/independent.json",
+    "integrated_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-integrated-pre_a_cp1_st8_q3lock_onsite_weighted_isometry_bond_recurrence/integrated.json"
+  },
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R299.lean",
+    "theorem_markers": ["commuting_weight_isometry", "two_orientation_multiplier", "recurrence_reduction_fixture"],
+    "command": "lake env lean Tect/R299.lean",
+    "boundary": "Lean checks the scalar weighted-conjugation identities and finite recurrence bookkeeping; it does not formalize Q3 matrices, unbounded domains, or limits."
+  },
+  "qft_interface": {
+    "closed": "The finite exact-Q3 onsite layer is an isometry in the declared two-orientation local energy seminorm, and the finite recurrence can be reduced to endpoint-to-edge bond multipliers.",
+    "open": "A source-, volume-, cutoff- and beta-uniform multiplier, common-core CCR transfer, direct D/delta-D Cauchy, exhaustion independence, common alpha, OS/KMS/GNS identification, gap, continuum, C6, Sector A and Pre-A remain open.",
+    "tect_boundary": "No heat_root_incidence or canonical A1/R-192 production owner is supplied."
+  },
+  "no_overclaim": "Finite actual-Q3 matrix rows and the abstract commuting-weight identity do not prove a thermodynamic QFT dynamics, common alpha, OS/KMS/GNS reconstruction, a gap, a continuum limit, C6, Sector A or Pre-A."
+}
