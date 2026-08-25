@@ -1,0 +1,113 @@
+{
+  "schema": "tect/pre-a-cp1-st8-q3lock-signed-source-slice-top-filtration-obstruction/1.0",
+  "exploration_id": "EXP-001119",
+  "prior_exploration_id": "EXP-001118",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "tier": "T0",
+  "claim_bearing": false,
+  "title": "Signed Q3 source-slice top filtration and quartic history boundary",
+  "question": "Does the signed full source-slice operator P(a)D_a cancel the highest-degree quartic branch that survived the positive majorant audit, or does degree filtration retain it in both orientations?",
+  "upstream_input": {
+    "source_manifest": "strategy/pre-a-cp1-st8-q3lock-actual-source-coefficient-product-manifest.json",
+    "source_exploration": "EXP-001050",
+    "prior_factorial_manifest": "strategy/pre-a-cp1-st8-q3lock-factorial-derivative-closed-quartic-obstruction-manifest.json",
+    "prior_factorial_exploration": "EXP-001118",
+    "mixed_graph_manifest": "strategy/pre-a-cp1-st8-q3lock-weighted-mixed-graph-lift-manifest.json",
+    "mixed_graph_exploration": "EXP-001045"
+  },
+  "model": {
+    "signed_source_slice": "At q=v=0, both registered source orientations reduce exactly to P(a)=-(51/140)a^4-2a^2.",
+    "formal_generator": "L=P(a)D_a on finite source polynomials.",
+    "degree_filtration": "The quartic term raises degree by 3 after D_a, while the quadratic term raises degree by 1; hence the degree 1+3m top coefficient cannot receive a lower-term contribution.",
+    "top_coefficient": "[a^(1+3m)]L^m(a)=(-51/140)^m product_{j=0}^{m-1}(1+3j).",
+    "norm_boundary": "The absolute top coefficient gives the same factorial-seminorm lower witness as R290 at S=1/4 and S'=1/8."
+  },
+  "fixture": {
+    "source_radius": "1/4",
+    "reduced_source_radius": "1/8",
+    "quartic_coefficient_abs": "51/140",
+    "quadratic_coefficient_abs": "2",
+    "orientation_count": 2,
+    "neighbour_count": 6,
+    "comparison_base": 12,
+    "witness_initial_degree": 1,
+    "orders": [1, 2, 4, 8, 16],
+    "small_exact_witness_order": 16
+  },
+  "scope": {
+    "signed_source_slice_reconstructed": true,
+    "both_orientations_revalidated": true,
+    "top_degree_filtration_closed": true,
+    "signed_slice_quartic_cancellation_refuted": true,
+    "factorial_top_branch_boundary_revalidated": true,
+    "actual_q3_common_core_map_proved": false,
+    "actual_q3_history_closed": false,
+    "volume_uniform_direct_d_delta_d_closed": false,
+    "common_alpha_closed": false,
+    "kms_os_closed": false,
+    "gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true,
+    "not_closed": "This rejects cancellation only in the formal signed source-slice degree filtration. It does not rule out multivariate Q3 commutator cancellations, state-weighted estimates, an unbounded common core, QFT reconstruction, the gap, the continuum, C6, Sector A or Pre-A."
+  },
+  "adversarial_review": [
+    {
+      "axis": "slice provenance",
+      "check": "The q=v=0 slice is recomputed from the center and reverse source polynomials, including the lower quadratic term.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "signed versus absolute",
+      "check": "The recurrence is generated with the signed polynomial P, and only the final norm uses the absolute top coefficient.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "degree cancellation",
+      "check": "The quadratic branch raises degree by one and cannot reach degree 1+3m, so it cannot cancel the top quartic branch.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "orientation",
+      "check": "Both source orientations have the same signed slice and the same top-degree rows.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "finite radii",
+      "check": "The order-sixteen witness is an exact finite rational row; the asymptotic statement uses the factorial lower bound and does not infer a thermodynamic limit.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "Lean scope",
+      "check": "Lean R291 checks only the rational slice and finite top-degree witness, not the Q3 operator domain or histories.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "QFT promotion",
+      "check": "No common alpha, KMS/OS, GNS gap, continuum, C6, Sector A or Pre-A conclusion follows.",
+      "disposition": "UPHELD"
+    }
+  ],
+  "formal_integration": {
+    "lean_entry": "verification/lean/Tect/R291.lean",
+    "events": [],
+    "negatives": [],
+    "results": [],
+    "no_new_result": true,
+    "no_new_negative": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "qft_interface": {
+    "closed": "The signed source-slice top degree survives exactly in both orientations and reproduces the factorial top-branch boundary.",
+    "open": "Multivariate signed Q3 commutator cancellations, common-core realization, state-weighted histories, exhaustion, common alpha, Hamiltonian/KMS identification, OS/GNS, gap, continuum, C6, Sector A and Pre-A.",
+    "tect_boundary": "No heat_root_incidence or canonical A1/R-192 production owner is supplied by this formal slice test."
+  },
+  "boundary": "T0 claim-nonbearing route boundary. The signed formal source slice has no top-degree cancellation, but this is not a no-go theorem for the full Q3 dynamics or QFT.",
+  "next_action": "Leave the source-slice analytic route parked and attack a genuinely multivariate cancellation-aware or state-weighted common-core estimate before common-alpha promotion."
+}
