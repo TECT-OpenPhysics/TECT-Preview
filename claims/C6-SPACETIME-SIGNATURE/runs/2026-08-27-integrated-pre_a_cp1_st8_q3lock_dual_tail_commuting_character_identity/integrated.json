@@ -1,0 +1,194 @@
+{
+  "assertion_count": 28,
+  "assertions": [
+    {
+      "actual": "['EXP-001124', 'T-054']",
+      "expected": "EXP-001124/T-054",
+      "name": "identity",
+      "pass": true
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "name": "claim nonbearing",
+      "pass": true
+    },
+    {
+      "actual": "['f297380f67192c1efeef790bed872b060f7868350059d3d30bd34967457d8a50', '4a755804b738c1b446bfb24ccbaea0df71090b1ff7f27f297a647aabdf752e84']",
+      "expected": "distinct source hashes",
+      "name": "source distinct",
+      "pass": true
+    },
+    {
+      "actual": "['rotation_norm_fixture', 'tail_square_fixture', 'dual_tail_static_fixture', 'scope_fixture']",
+      "expected": "present",
+      "name": "Lean markers",
+      "pass": true
+    },
+    {
+      "actual": "[]",
+      "expected": "none",
+      "name": "Lean forbidden tokens",
+      "pass": true
+    },
+    {
+      "actual": "PRIMARY DUAL-TAIL-COMMUTING-CHARACTER PASS 11/11\n",
+      "expected": "PASS",
+      "name": "primary child",
+      "pass": true
+    },
+    {
+      "actual": "INDEPENDENT DUAL-TAIL-COMMUTING-CHARACTER PASS 9/9\n",
+      "expected": "PASS",
+      "name": "independent child",
+      "pass": true
+    },
+    {
+      "actual": "['3/2', '3/2']",
+      "expected": "equal",
+      "name": "reference values agree",
+      "pass": true
+    },
+    {
+      "actual": "['3/2', '3/2']",
+      "expected": "equal",
+      "name": "dual values agree",
+      "pass": true
+    },
+    {
+      "actual": "[True, True, True]",
+      "expected": "equal",
+      "name": "scope agreement abstract_static_dual_tail_identity_closed",
+      "pass": true
+    },
+    {
+      "actual": "[True, True, True]",
+      "expected": "equal",
+      "name": "scope agreement finite_matrix_fixture_closed",
+      "pass": true
+    },
+    {
+      "actual": "[True, True, True]",
+      "expected": "equal",
+      "name": "scope agreement reference_tail_reuse_licensed",
+      "pass": true
+    },
+    {
+      "actual": "[False, False, False]",
+      "expected": "equal",
+      "name": "scope agreement evolved_D_dual_tail_identity_closed",
+      "pass": true
+    },
+    {
+      "actual": "[False, False, False]",
+      "expected": "equal",
+      "name": "scope agreement dual_modular_history_closed",
+      "pass": true
+    },
+    {
+      "actual": "[False, False, False]",
+      "expected": "equal",
+      "name": "scope agreement actual_q3_dual_state_uniform_closed",
+      "pass": true
+    },
+    {
+      "actual": "[False, False, False]",
+      "expected": "equal",
+      "name": "scope agreement actual_unbounded_q3_common_core_closed",
+      "pass": true
+    },
+    {
+      "actual": "[False, False, False]",
+      "expected": "equal",
+      "name": "scope agreement volume_uniform_direct_d_cauchy_closed",
+      "pass": true
+    },
+    {
+      "actual": "[False, False, False]",
+      "expected": "equal",
+      "name": "scope agreement delta_d_cauchy_closed",
+      "pass": true
+    },
+    {
+      "actual": "[False, False, False]",
+      "expected": "equal",
+      "name": "scope agreement exhaustion_independence_closed",
+      "pass": true
+    },
+    {
+      "actual": "[False, False, False]",
+      "expected": "equal",
+      "name": "scope agreement common_alpha_closed",
+      "pass": true
+    },
+    {
+      "actual": "[False, False, False]",
+      "expected": "equal",
+      "name": "scope agreement hamiltonian_os_identification_closed",
+      "pass": true
+    },
+    {
+      "actual": "[False, False, False]",
+      "expected": "equal",
+      "name": "scope agreement kms_gns_gap_closed",
+      "pass": true
+    },
+    {
+      "actual": "[False, False, False]",
+      "expected": "equal",
+      "name": "scope agreement continuum_closed",
+      "pass": true
+    },
+    {
+      "actual": "[False, False, False]",
+      "expected": "equal",
+      "name": "scope agreement c6_closed",
+      "pass": true
+    },
+    {
+      "actual": "[False, False, False]",
+      "expected": "equal",
+      "name": "scope agreement sector_a_closed",
+      "pass": true
+    },
+    {
+      "actual": "[False, False, False]",
+      "expected": "equal",
+      "name": "scope agreement pre_a_closed",
+      "pass": true
+    },
+    {
+      "actual": "{'status': 'PASS', 'command': 'lake env lean Tect/R295.lean', 'returncode': 0, 'output': ''}",
+      "expected": "PASS",
+      "name": "Lean compile",
+      "pass": true
+    },
+    {
+      "actual": "{'evolved_D_dual_tail_identity_closed': False, 'dual_modular_history_closed': False, 'actual_q3_dual_state_uniform_closed': False, 'actual_unbounded_q3_common_core_closed': False, 'volume_uniform_direct_d_cauchy_closed': False, 'delta_d_cauchy_closed': False, 'exhaustion_independence_closed': False, 'common_alpha_closed': False, 'hamiltonian_os_identification_closed': False, 'kms_gns_gap_closed': False, 'continuum_closed': False, 'c6_closed': False, 'sector_a_closed': False, 'pre_a_closed': False}",
+      "expected": "all open",
+      "name": "QFT firewall",
+      "pass": true
+    }
+  ],
+  "audit_id": "PA-CP1-ST8-Q3LOCK-DUAL-TAIL-COMMUTING-CHARACTER-IDENTITY",
+  "boundary": "T0 claim-nonbearing static dual-tail identity; it is a local algebraic bridge, not a dynamics or QFT closure.",
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "exploration_id": "EXP-001124",
+  "lean": {
+    "command": "lake env lean Tect/R295.lean",
+    "output": "",
+    "returncode": 0,
+    "status": "PASS"
+  },
+  "provenance": {
+    "independent_sha256": "4a755804b738c1b446bfb24ccbaea0df71090b1ff7f27f297a647aabdf752e84",
+    "lean_sha256": "ee082dd037040d8aa6e725d6fd917996bbeb7a6bbb71a7653d38fca2c9acae02",
+    "manifest_sha256": "c084c2ebc5eb95ce2b6ffed37c4d29e75fce9f52c857d1df25aa117c2552e749",
+    "primary_sha256": "f297380f67192c1efeef790bed872b060f7868350059d3d30bd34967457d8a50"
+  },
+  "recorded_at": "2026-08-25T11:03:32.417716Z",
+  "run_kind": "integrated",
+  "schema": "tect/foundation-audit/1.0",
+  "task_id": "T-054",
+  "verdict": "PASS"
+}

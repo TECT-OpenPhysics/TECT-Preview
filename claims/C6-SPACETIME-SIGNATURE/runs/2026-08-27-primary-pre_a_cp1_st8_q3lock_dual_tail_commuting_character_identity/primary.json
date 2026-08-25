@@ -1,0 +1,122 @@
+{
+  "assertion_count": 11,
+  "assertions": [
+    {
+      "actual": "['EXP-001124', 'T-054']",
+      "expected": "EXP-001124/T-054",
+      "group": "provenance",
+      "name": "identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "group": "scope",
+      "name": "claim nonbearing",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1, 1]",
+      "expected": "1",
+      "group": "state",
+      "name": "state normalized",
+      "status": "PASS"
+    },
+    {
+      "actual": "Matrix([[1, 0, 0], [0, 1, 0], [0, 0, 1]])",
+      "expected": "I",
+      "group": "character",
+      "name": "character unitary fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": "Matrix([[1, 0, 0], [0, 1, 0], [0, 0, -2]])",
+      "expected": "Matrix([[1, 0, 0], [0, 1, 0], [0, 0, -2]])",
+      "group": "tail",
+      "name": "tail self-adjoint",
+      "status": "PASS"
+    },
+    {
+      "actual": "Matrix([[0, 0, 0], [0, 0, 0], [0, 0, 0]])",
+      "expected": "0",
+      "group": "commutation",
+      "name": "tail commutes",
+      "status": "PASS"
+    },
+    {
+      "actual": "3/2",
+      "expected": "3/2",
+      "group": "identity",
+      "name": "static dual identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "[3/2, 3/2]",
+      "expected": "3/2",
+      "group": "seminorm",
+      "name": "reference two-sided",
+      "status": "PASS"
+    },
+    {
+      "actual": "[3/2, 3/2]",
+      "expected": "3/2",
+      "group": "seminorm",
+      "name": "dual two-sided",
+      "status": "PASS"
+    },
+    {
+      "actual": "1",
+      "expected": "1",
+      "group": "fixture",
+      "name": "rotation fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'abstract_static_dual_tail_identity_closed': True, 'finite_matrix_fixture_closed': True, 'reference_tail_reuse_licensed': True, 'evolved_D_dual_tail_identity_closed': False, 'dual_modular_history_closed': False, 'actual_q3_dual_state_uniform_closed': False, 'actual_unbounded_q3_common_core_closed': False, 'volume_uniform_direct_d_cauchy_closed': False, 'delta_d_cauchy_closed': False, 'exhaustion_independence_closed': False, 'common_alpha_closed': False, 'hamiltonian_os_identification_closed': False, 'kms_gns_gap_closed': False, 'continuum_closed': False, 'c6_closed': False, 'sector_a_closed': False, 'pre_a_closed': False, 'no_new_negative_result': True, 'no_tier_change': True, 'no_pdf': True}",
+      "expected": "static only",
+      "group": "scope",
+      "name": "scope firewall",
+      "status": "PASS"
+    }
+  ],
+  "audit_id": "PA-CP1-ST8-Q3LOCK-DUAL-TAIL-COMMUTING-CHARACTER-IDENTITY",
+  "boundary": "T0 claim-nonbearing static dual-tail identity; it is a local algebraic bridge, not a dynamics or QFT closure.",
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "derived": {
+    "abstract_static_dual_tail_identity_closed": true,
+    "actual_q3_dual_state_uniform_closed": false,
+    "actual_unbounded_q3_common_core_closed": false,
+    "c6_closed": false,
+    "common_alpha_closed": false,
+    "continuum_closed": false,
+    "delta_d_cauchy_closed": false,
+    "dual_left": "3/2",
+    "dual_modular_history_closed": false,
+    "dual_right": "3/2",
+    "dual_tail_value": "3/2",
+    "evolved_D_dual_tail_identity_closed": false,
+    "exhaustion_independence_closed": false,
+    "finite_matrix_fixture_closed": true,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "pre_a_closed": false,
+    "reference_left": "3/2",
+    "reference_right": "3/2",
+    "reference_tail_reuse_licensed": true,
+    "reference_tail_value": "3/2",
+    "sector_a_closed": false,
+    "volume_uniform_direct_d_cauchy_closed": false
+  },
+  "exploration_id": "EXP-001124",
+  "passed": 11,
+  "provenance": {
+    "manifest": "strategy/pre_a_cp1_st8_q3lock_dual_tail_commuting_character_identity_manifest.json",
+    "manifest_sha256": "c084c2ebc5eb95ce2b6ffed37c4d29e75fce9f52c857d1df25aa117c2552e749",
+    "script": "codes/foundations/pre_a_cp1_st8_q3lock_dual_tail_commuting_character_identity.py",
+    "script_sha256": "f297380f67192c1efeef790bed872b060f7868350059d3d30bd34967457d8a50"
+  },
+  "run_kind": "primary",
+  "schema": "tect/foundation-audit/1.0",
+  "task_id": "T-054",
+  "verdict": "PASS"
+}
