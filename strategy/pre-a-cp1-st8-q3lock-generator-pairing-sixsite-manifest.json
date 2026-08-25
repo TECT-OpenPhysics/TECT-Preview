@@ -1,0 +1,94 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-GENERATOR-PAIRING-SIXSITE-v0",
+  "title": "Six-site structured-volume extension of the actual Q3 generator pairing",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001141",
+  "claim_bearing": false,
+  "parent_explorations": ["EXP-001140", "EXP-001090", "EXP-001128"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-ENERGY-WEIGHTED-COMMUTATOR-GEVREY-LR-CLOSURE",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "question": "Does the full-generator Kubo-Mori D/delta-D pairing remain bounded when the actual Q3 history is extended from the edge and square to the registered six-site 2x3 graph over an increasing cutoff family?",
+  "finite_fixture": {
+    "volume_values": [6],
+    "oscillator_dimension": 3,
+    "observable_support": [0, 1],
+    "beta_values": [1.0],
+    "character_amplitude": 0.3333333333333333,
+    "time_values": [0.05, 0.1],
+    "radius_values": [0.5, 1.0, 2.0, 4.0],
+    "orientation_values": [-1, 1],
+    "two_sided_factor": 2.0,
+    "c": 0.6,
+    "chi": 1.0,
+    "r": -1.0,
+    "g": 0.6,
+    "lambda": 0.1,
+    "hbar": 1.0,
+    "commutator_tolerance": 1e-8,
+    "mean_gap_tolerance": 1e-12,
+    "baseline_artifact": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-primary-pre_a_cp1_st8_q3lock_generator_pairing_cancellation/primary.json",
+    "baseline_volume": 4,
+    "baseline_beta": 1.0
+  },
+  "model": {
+    "graph": "registered six-site 2x3 rectangular grid with seven bonds",
+    "observable": "A_2=exp(i*character_amplitude*(q_0+q_1)/hbar), supported on sites 0,1",
+    "cutoff": "replace only bond coordinates by the smooth cosine cutoff q_L; W_L=H-H_L for radius 0.5,1,2,4",
+    "history": "D_sigma(t)=U_(H+sigma W_L)(t) A_2 U_(H+sigma W_L)(t)^* - U_H(t) A_2 U_H(t)^*",
+    "generator": "delta_H(X)=i[H,X]/hbar and delta_H^2(X)=i[H,delta_H(X)]/hbar",
+    "kubo_mori_inner_product": "<A,B>_KM=2 sum_ij L(p_i,p_j) conjugate(A_ij) B_ij in the H Gibbs eigenbasis",
+    "cancellation_identity": "<delta_H^2 D,D>_KM + <delta_H D,delta_H D>_KM=0"
+  },
+  "scope": {
+    "six_site_actual_d_delta_rows_closed": true,
+    "increasing_cutoff_family_closed": true,
+    "full_generator_pairing_identity_closed": true,
+    "six_site_vs_square_growth_diagnostic_closed": true,
+    "uniform_beta_volume_direct_d_delta_d_closed": false,
+    "modular_domain_closed": false,
+    "product_core_density_closed": false,
+    "exhaustion_independence_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false
+  },
+  "adversarial_review": [
+    {"axis": "volume construction", "check": "The six-site graph is the registered 2x3 graph with seven bonds, and the observable support remains exactly sites 0,1.", "disposition": "UPHELD"},
+    {"axis": "cutoff family", "check": "Radii 0.5,1,2,4 are evaluated with the same cosine cutoff and both signs; radius growth is a finite diagnostic only.", "disposition": "UPHELD"},
+    {"axis": "generator sign", "check": "The i[H,·]/hbar convention and Kubo-Mori skew-adjoint pairing are retained from R310 and independently rebuilt spectrally.", "disposition": "UPHELD"},
+    {"axis": "uniformity", "check": "The six-site versus four-site ratio is compared to the committed R310 baseline but is not promoted to an asymptotic lower bound.", "disposition": "UPHELD-OPEN"},
+    {"axis": "numerical scale", "check": "Finite oscillator dimension three and one beta value are explicit; no continuum, beta-uniform or cutoff-removal claim is made.", "disposition": "UPHELD-OPEN"},
+    {"axis": "QFT promotion", "check": "Uniform direct Cauchy, modular domain, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector A and Pre-A remain open.", "disposition": "UPHELD-OPEN"}
+  ],
+  "files": {
+    "primary": "codes/foundations/pre_a_cp1_st8_q3lock_generator_pairing_sixsite.py",
+    "independent": "codes/foundations/pre_a_cp1_st8_q3lock_generator_pairing_sixsite_independent.py",
+    "integrated": "codes/foundations/pre_a_cp1_st8_q3lock_generator_pairing_sixsite_verify.py",
+    "lean": "verification/lean/Tect/R311.lean",
+    "primary_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-primary-pre_a_cp1_st8_q3lock_generator_pairing_sixsite/primary.json",
+    "independent_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-independent-pre_a_cp1_st8_q3lock_generator_pairing_sixsite/independent.json",
+    "integrated_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-integrated-pre_a_cp1_st8_q3lock_generator_pairing_sixsite/integrated.json"
+  },
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R311.lean",
+    "theorem_markers": ["six_site_graph_fixture", "cutoff_order_fixture", "generator_pairing_scalar_fixture", "volume_ratio_fixture"],
+    "command": "lake env lean Tect/R311.lean",
+    "boundary": "Lean checks exact rational graph/cutoff and spectral pairing fixtures; the six-site matrix computation and all thermodynamic/QFT conclusions remain finite-only."
+  },
+  "qft_interface": {
+    "closed": "A six-site actual-Q3 two-orientation D/delta-D history audit over an increasing cutoff family with full-generator Kubo-Mori cancellation.",
+    "open": "A source/volume/beta-uniform direct-Cauchy theorem, modular domain transfer, product/core density, exhaustion independence, common alpha, OS/KMS/GNS identification, gap, continuum and Pre-A.",
+    "tect_boundary": "Six-site finite extension and growth diagnostic only; no asymptotic no-go or common dynamics theorem."
+  },
+  "no_overclaim": "This extends the valid finite pairing identity to the registered six-site graph and reports its comparison with the square baseline. It does not close uniform direct D/delta-D control or any downstream QFT, Sector A, or Pre-A gate."
+}

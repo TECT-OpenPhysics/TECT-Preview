@@ -1,0 +1,148 @@
+{
+  "assertion_count": 13,
+  "assertions": [
+    {
+      "actual": "['EXP-001141', 'T-054']",
+      "expected": "EXP-001141/T-054",
+      "name": "identity",
+      "pass": true
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "name": "claim nonbearing",
+      "pass": true
+    },
+    {
+      "actual": "['six_site_graph_fixture', 'cutoff_order_fixture', 'generator_pairing_scalar_fixture', 'volume_ratio_fixture']",
+      "expected": "present",
+      "name": "Lean source",
+      "pass": true
+    },
+    {
+      "actual": "[]",
+      "expected": "none",
+      "name": "Lean forbidden",
+      "pass": true
+    },
+    {
+      "actual": "PRIMARY GENERATOR-PAIRING-SIXSITE PASS 59/59 rows=16\n",
+      "expected": "PASS",
+      "name": "primary child",
+      "pass": true
+    },
+    {
+      "actual": "INDEPENDENT GENERATOR-PAIRING-SIXSITE PASS 56/56 rows=16\n",
+      "expected": "PASS",
+      "name": "independent child",
+      "pass": true
+    },
+    {
+      "actual": "[16, 16]",
+      "expected": "16",
+      "name": "row count agreement",
+      "pass": true
+    },
+    {
+      "actual": "[]",
+      "expected": "within tolerance",
+      "name": "summary agreement",
+      "pass": true
+    },
+    {
+      "actual": "[{'common_alpha_closed': False, 'cutoff_rows': [{'beta': 1.0, 'max_D': 0.011120385765177385, 'max_D_km': 0.006657604193285778, 'max_cancellation_error': 2.1684090494798863e-19, 'max_delta2_D': 0.4464751839163682, 'max_delta2_D_km': 0.20814526176582074, 'max_delta_D': 0.0668151425651249, 'max_delta_D_km': 0.03381877701977454, 'radius': 0.5, 'source_commutator_norm': 2.3925600541428377e-14, 'tail_operator_norm': 15.750000000000014, 'volume': 6}, {'beta': 1.0, 'max_D': 0.0028946811906061334, 'max_D_km': 0.0017293013753018585, 'max_cancellation_error': 2.338309135057535e-22, 'max_delta2_D': 0.11620930348555411, 'max_delta2_D_km': 0.0541859219469357, 'max_delta_D': 0.0174026065252135, 'max_delta_D_km': 0.008803291366292517, 'radius': 1.0, 'source_commutator_norm': 6.2723472304366605e-15, 'tail_operator_norm': 4.089266706768675, 'volume': 6}, {'beta': 1.0, 'max_D': 1.752013278671205e-14, 'max_D_km': 7.260648047013583e-15, 'max_cancellation_error': 8.99088671109687e-44, 'max_delta2_D': 6.516917259849563e-13, 'max_delta2_D_km': 1.2276944526835027e-13, 'max_delta_D': 5.615982719507207e-14, 'max_delta_D_km': 1.7361322766689837e-14, 'radius': 2.0, 'source_commutator_norm': 7.665429959068717e-16, 'tail_operator_norm': 9.008064898603127e-15, 'volume': 6}, {'beta': 1.0, 'max_D': 1.752013278671205e-14, 'max_D_km': 7.260648047013583e-15, 'max_cancellation_error': 8.99088671109687e-44, 'max_delta2_D': 6.516917259849563e-13, 'max_delta2_D_km': 1.2276944526835027e-13, 'max_delta_D': 5.615982719507207e-14, 'max_delta_D_km': 1.7361322766689837e-14, 'radius': 4.0, 'source_commutator_norm': 7.665429959068717e-16, 'tail_operator_norm': 9.008064898603127e-15, 'volume': 6}], 'full_generator_pairing_identity_closed': True, 'increasing_cutoff_family_closed': True, 'pre_a_closed': False, 'row_count': 16, 'six_site_actual_d_delta_rows_closed': True, 'six_site_vs_square_growth_diagnostic_closed': True, 'summary_rows': [{'beta': 1.0, 'max_D': 0.011120385765177385, 'max_D_km': 0.006657604193285778, 'max_cancellation_error': 2.1684090494798863e-19, 'max_delta2_D': 0.4464751839163682, 'max_delta2_D_km': 0.20814526176582074, 'max_delta_D': 0.0668151425651249, 'max_delta_D_km': 0.03381877701977454, 'volume': 6}], 'uniform_beta_volume_direct_d_delta_d_closed': False}, {'common_alpha_closed': False, 'finite_actual_d_delta_rows_closed': True, 'full_generator_pairing_identity_closed': True, 'increasing_cutoff_family_closed': True, 'pre_a_closed': False, 'row_count': 16, 'summary_rows': [{'beta': 1.0, 'max_D': 0.011120385765177385, 'max_D_km': 0.006657604193285772, 'max_cancellation_error': 2.1729720267122036e-19, 'max_delta2_D': 0.44647518391636787, 'max_delta2_D_km': 0.2081452617658208, 'max_delta_D': 0.06681514256512486, 'max_delta_D_km': 0.03381877701977453, 'volume': 6}], 'two_orientation_history_closed': True, 'uniform_beta_volume_direct_d_delta_d_closed': False}]",
+      "expected": "finite cancellation only",
+      "name": "finite route agreement",
+      "pass": true
+    },
+    {
+      "actual": "E:\\Dev\\TECT\\claims\\C6-SPACETIME-SIGNATURE\\runs\\2026-08-25-primary-pre_a_cp1_st8_q3lock_generator_pairing_cancellation\\primary.json",
+      "expected": "PASS artifact",
+      "name": "baseline available",
+      "pass": true
+    },
+    {
+      "actual": "1.4193189535517179",
+      "expected": "finite positive diagnostic",
+      "name": "six-site baseline ratio finite",
+      "pass": true
+    },
+    {
+      "actual": "{'six_site_actual_d_delta_rows_closed': True, 'increasing_cutoff_family_closed': True, 'full_generator_pairing_identity_closed': True, 'six_site_vs_square_growth_diagnostic_closed': True, 'uniform_beta_volume_direct_d_delta_d_closed': False, 'modular_domain_closed': False, 'product_core_density_closed': False, 'exhaustion_independence_closed': False, 'common_alpha_closed': False, 'hamiltonian_os_identification_closed': False, 'kms_gns_gap_closed': False, 'continuum_closed': False, 'c6_closed': False, 'sector_a_closed': False, 'pre_a_closed': False}",
+      "expected": "six-site finite extension; QFT gates open",
+      "name": "scope firewall",
+      "pass": true
+    },
+    {
+      "actual": "{'status': 'PASS', 'command': 'lake env lean Tect/R311.lean', 'returncode': 0, 'output': ''}",
+      "expected": "PASS",
+      "name": "Lean compile",
+      "pass": true
+    }
+  ],
+  "audit_id": "PA-CP1-ST8-Q3LOCK-GENERATOR-PAIRING-SIXSITE",
+  "boundary": {
+    "c6_closed": false,
+    "common_alpha_closed": false,
+    "continuum_closed": false,
+    "exhaustion_independence_closed": false,
+    "full_generator_pairing_identity_closed": true,
+    "hamiltonian_os_identification_closed": false,
+    "increasing_cutoff_family_closed": true,
+    "kms_gns_gap_closed": false,
+    "modular_domain_closed": false,
+    "pre_a_closed": false,
+    "product_core_density_closed": false,
+    "sector_a_closed": false,
+    "six_site_actual_d_delta_rows_closed": true,
+    "six_site_vs_square_growth_diagnostic_closed": true,
+    "uniform_beta_volume_direct_d_delta_d_closed": false
+  },
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "derived": {
+    "baseline_summary": {
+      "beta": 1.0,
+      "max_D": 0.008606972571749881,
+      "max_D_km": 0.005956653074308545,
+      "max_cancellation_error": 1.099141146146753e-19,
+      "max_delta2_D": 0.18952658964063818,
+      "max_delta2_D_km": 0.11149663539417469,
+      "max_delta_D": 0.03905409380578725,
+      "max_delta_D_km": 0.02382746805088884,
+      "volume": 4
+    },
+    "qft_promoted": false,
+    "six_site_over_square_max_delta_D_km_ratio": 1.4193189535517179,
+    "six_site_summary": {
+      "beta": 1.0,
+      "max_D": 0.011120385765177385,
+      "max_D_km": 0.006657604193285778,
+      "max_cancellation_error": 2.1684090494798863e-19,
+      "max_delta2_D": 0.4464751839163682,
+      "max_delta2_D_km": 0.20814526176582074,
+      "max_delta_D": 0.0668151425651249,
+      "max_delta_D_km": 0.03381877701977454,
+      "volume": 6
+    },
+    "uniformity_promoted": false
+  },
+  "exploration_id": "EXP-001141",
+  "lean": {
+    "command": "lake env lean Tect/R311.lean",
+    "output": "",
+    "returncode": 0,
+    "status": "PASS"
+  },
+  "provenance": {
+    "baseline_sha256": "0ca1586475433df7eb701c082413ec6690fd71f65a2008ba2631e529aba23805",
+    "independent_sha256": "6398feb4a0cc7847764b0ac70bcebedc03c06cdd65999143fe140b8253a73346",
+    "lean_sha256": "0ecf29b4f9a7783f9a049b07b93b7c8f2ffdce34c8707f3f26d115cf0c5e205b",
+    "manifest_sha256": "231f0ef77fa75cb2a874107aef87aadd1610ef0c4400d8c5478f0ee795bab375",
+    "primary_sha256": "cdbe48a2adcefbf2ea2b95ba29e4b296a26605ae2fe3c300985015b288798a33"
+  },
+  "recorded_at": "2026-08-25T16:34:51.827954Z",
+  "run_kind": "integrated",
+  "schema": "tect/foundation-audit/1.0",
+  "task_id": "T-054",
+  "verdict": "PASS"
+}

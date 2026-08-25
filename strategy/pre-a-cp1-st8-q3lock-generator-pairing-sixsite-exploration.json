@@ -1,0 +1,87 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001141",
+  "title": "Six-site actual-Q3 full-generator Kubo-Mori pairing and cutoff-family diagnostic",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-ENERGY-WEIGHTED-COMMUTATOR-GEVREY-LR-CLOSURE",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "question": "Does the full-generator Kubo-Mori D/delta-D pairing remain valid on the registered six-site 2x3 graph over an increasing bond-coordinate cutoff family, and what finite growth is visible against the committed square baseline?",
+  "method": [
+    "Build the registered six-site 2x3 Q3 Hamiltonian with oscillator dimension three, seven bonds, and the observable supported on sites 0,1.",
+    "For beta=1, times 0.05 and 0.1, radii 0.5,1,2,4, and both cutoff orientations, generate the actual D_sigma(t) history from H and H+sigma W_L, then compute delta_H D and delta_H^2 D.",
+    "Evaluate the two-sided Kubo-Mori form in the H Gibbs eigenbasis using the logarithmic-mean diagonal limit, and check full-generator cancellation, positivity, source locality, finite values, and row coverage.",
+    "Rebuild the same rows independently in the H eigenbasis, compare all summary fields within the declared tolerance, compile Lean R311, and compare the six-site maximum delta-D Kubo-Mori norm with the EXP-001140 four-site baseline."
+  ],
+  "finding": "Primary 59/59, independent 56/56, integrated 13/13, and Lean R311 PASS over 16 six-site history rows. The full-generator identity <delta_H^2 D,D>_KM + <delta_H D,delta_H D>_KM=0 holds in every row; the primary maximum cancellation error is 2.1684090494798863e-19 and the independent lane agrees within the 1e-8 tolerance. Across the cutoff family, the primary maximum delta-D Kubo-Mori norm is 0.03381877701977454 at radius 0.5 and falls to 1.7361322766689837e-14 by radius 2. The six-site value is 1.4193189535517179 times the committed four-site beta=1 baseline value 0.02382746805088884. This is a finite growth diagnostic, not an asymptotic lower bound.",
+  "verdict": "advanced",
+  "decision_reason": "The exact finite pairing cancellation extends from the edge and square to the registered six-site graph, and an independent spectral reconstruction plus Lean R311 supports the algebraic sign and rational fixture. The finite cutoff family shows larger state-weighted delta-D at the smallest radius, but only one beta and one volume are sampled and no monotone asymptotic obstruction is certified. The source/volume/beta-uniform direct estimate, modular domain, product/core density, exhaustion independence, common alpha, OS/KMS/GNS identification, gap, continuum, C6, Sector A, and Pre-A remain open.",
+  "closed": [
+    "actual finite Q3 D(t), delta-D, and delta-squared-D histories on the six-site 2x3 graph",
+    "two-orientation coverage over the structured cutoff family radii 0.5,1,2,4",
+    "full-generator Kubo-Mori pairing cancellation in every finite row",
+    "finite Kubo-Mori positivity, source-locality tolerance, and row coverage",
+    "independent reproduction and Lean R311 cross-check",
+    "six-site versus committed four-site state-weighted delta-D growth diagnostic"
+  ],
+  "open": [
+    "analytic source/volume/beta-uniform direct D and delta-D Cauchy estimate",
+    "modular-domain and operator-core boundary control",
+    "all-shape exhaustion independence and product/core density",
+    "beta-independent common alpha and group law",
+    "Hamiltonian-to-OS/KMS/GNS identification, gap, continuum, C6, Sector A and Pre-A"
+  ],
+  "adversarial_review": [
+    {"axis": "graph construction", "check": "The fixture constructs the registered six-site 2x3 graph with seven bonds and keeps observable support exactly at sites 0,1.", "disposition": "UPHELD"},
+    {"axis": "cutoff family", "check": "Radii 0.5,1,2,4 use the same bond-coordinate cosine cutoff and both orientations; the radius trend is reported as finite data only.", "disposition": "UPHELD"},
+    {"axis": "generator sign", "check": "The primary commutator implementation and independent eigenbasis implementation both use delta_H(X)=i[H,X]/hbar, while Lean R311 checks the exact scalar cancellation fixture.", "disposition": "UPHELD"},
+    {"axis": "numerical agreement", "check": "All shared six-site summary fields agree within 1e-8, but this is a finite numerical tolerance and not an analytic error bound.", "disposition": "UPHELD-OPEN"},
+    {"axis": "volume inference", "check": "The six-site/four-site ratio is computed from committed artifacts but is not promoted to monotonicity, divergence, or a route-specific no-go.", "disposition": "UPHELD-OPEN"},
+    {"axis": "QFT promotion", "check": "Uniform direct Cauchy, modular domain, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector A, and Pre-A remain explicitly open.", "disposition": "UPHELD-OPEN"}
+  ],
+  "evidence_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-generator-pairing-sixsite-manifest.json#model",
+    "codes/foundations/pre_a_cp1_st8_q3lock_generator_pairing_sixsite.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_generator_pairing_sixsite_independent.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_generator_pairing_sixsite_verify.py#run",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-primary-pre_a_cp1_st8_q3lock_generator_pairing_sixsite/primary.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-independent-pre_a_cp1_st8_q3lock_generator_pairing_sixsite/independent.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-integrated-pre_a_cp1_st8_q3lock_generator_pairing_sixsite/integrated.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-primary-pre_a_cp1_st8_q3lock_generator_pairing_cancellation/primary.json#derived",
+    "verification/lean/Tect/R311.lean#generator_pairing_scalar_fixture",
+    "verification/lean/registry.json#R311"
+  ],
+  "formal_integration": {
+    "events": [],
+    "results": [],
+    "negatives": [],
+    "lean": "R311 PASS; metadata regenerated",
+    "no_new_event": true,
+    "no_new_result": true,
+    "no_new_negative": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "qft_interface": {
+    "closed": "A finite six-site actual-Q3 two-orientation D/delta-D history audit over a structured cutoff family with full-generator Kubo-Mori cancellation and an independent Lean-backed cross-check.",
+    "open": "A source/volume/beta-uniform direct-Cauchy theorem, modular domain transfer, product/core density, exhaustion independence, common alpha, OS/KMS/GNS identification, gap, continuum and Pre-A.",
+    "tect_boundary": "Six-site finite extension and square comparison only; no asymptotic no-go, common dynamics theorem, or QFT reconstruction is claimed."
+  },
+  "next_action": "Derive a volume- and beta-uniform analytic bound for the Kubo-Mori delta-D norm on the common core, or enlarge the registered volume/cutoff family until a certified lower-bound mechanism—not a numerical trend alone—can decide whether this route is obstructed.",
+  "related": [
+    {"id": "EXP-001140", "relation": "continues"},
+    {"id": "EXP-001090", "relation": "continues"},
+    {"id": "EXP-001128", "relation": "continues"}
+  ],
+  "prior_exploration_id": "EXP-001140",
+  "provenance": "contemporaneous",
+  "recorded_at": "2026-08-27T16:00:00Z",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-08-26",
+  "boundary": "This is a finite actual-Q3 six-site full-generator Kubo-Mori pairing audit over one beta, four cutoffs, two times, and both orientations. It is not a source/volume-uniform D/delta-D theorem, a common infinite-volume dynamics result, a full QFT reconstruction, a gap, continuum, C6, Sector A, or Pre-A result.",
+  "no_overclaim": "The finite six-site full-generator cancellation identity is valid and reusable, and the square comparison is a diagnostic only. It neither proves a uniform bound nor closes any common-alpha, OS/KMS/GNS, gap, continuum, C6, Sector A, or Pre-A gate."
+}

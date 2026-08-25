@@ -1,0 +1,216 @@
+{
+  "assertion_count": 59,
+  "assertions": [
+    {
+      "actual": "['EXP-001141', 'T-054']",
+      "expected": "EXP-001141/T-054",
+      "group": "provenance",
+      "name": "identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "group": "scope",
+      "name": "claim nonbearing",
+      "status": "PASS"
+    },
+    {
+      "actual": "[[6], 7]",
+      "expected": "[6], seven bonds",
+      "group": "geometry",
+      "name": "six-site graph",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'six_site_actual_d_delta_rows_closed': True, 'increasing_cutoff_family_closed': True, 'full_generator_pairing_identity_closed': True, 'six_site_vs_square_growth_diagnostic_closed': True, 'uniform_beta_volume_direct_d_delta_d_closed': False, 'modular_domain_closed': False, 'product_core_density_closed': False, 'exhaustion_independence_closed': False, 'common_alpha_closed': False, 'hamiltonian_os_identification_closed': False, 'kms_gns_gap_closed': False, 'continuum_closed': False, 'c6_closed': False, 'sector_a_closed': False, 'pre_a_closed': False}",
+      "expected": "six-site finite only",
+      "group": "scope",
+      "name": "scope firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": "2.3925600541428377e-14",
+      "expected": "<=1e-08",
+      "group": "support locality",
+      "name": "beta=1.0 V=6 L=0.5 source",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'D_matrix_norm': 0.002802292335196379, 'delta_D_matrix_norm': 0.016855689090985383, 'delta2_D_matrix_norm': 0.11270391508019915, 'D_kubo_mori_norm': 0.0016740318839334471, 'delta_D_kubo_mori_norm': 0.008524634336447207, 'delta2_D_kubo_mori_norm': 0.05253520804793324, 'pairing_delta2_D_D_real': -7.26693905701347e-05, 'pairing_delta_D_delta_D_real': 7.26693905701347e-05, 'cancellation_error': 5.148878025443544e-22, 'tail_operator_norm': 15.750000000000014, 'source_commutator_norm': 2.3925600541428377e-14}",
+      "expected": "finite",
+      "group": "actual D/delta-D",
+      "name": "beta=1.0 V=6 L=0.5 t=0.05 sign=-1 finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "5.148878025443544e-22",
+      "expected": "<=1e-08",
+      "group": "full-generator cancellation",
+      "name": "beta=1.0 V=6 L=0.5 t=0.05 sign=-1 pairing",
+      "status": "PASS"
+    },
+    {
+      "actual": "[(2.802382748425766e-06-4.267789937558467e-25j), (7.26693905701347e-05-1.11289185705432e-23j), (0.00275994808463963+9.119512329435606e-22j)]",
+      "expected": ">=-tolerance",
+      "group": "Kubo-Mori positivity",
+      "name": "beta=1.0 V=6 L=0.5 t=0.05 sign=-1 positivity",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'D_matrix_norm': 0.011120385765177385, 'delta_D_matrix_norm': 0.0668151425651249, 'delta2_D_matrix_norm': 0.4464751839163682, 'D_kubo_mori_norm': 0.006657604193285778, 'delta_D_kubo_mori_norm': 0.03381877701977454, 'delta2_D_kubo_mori_norm': 0.20814526176582074, 'pairing_delta2_D_D_real': -0.0011437096791132302, 'pairing_delta_D_delta_D_real': 0.0011437096791132302, 'cancellation_error': 6.159785758815201e-21, 'tail_operator_norm': 15.750000000000014, 'source_commutator_norm': 2.3925600541428377e-14}",
+      "expected": "finite",
+      "group": "actual D/delta-D",
+      "name": "beta=1.0 V=6 L=0.5 t=0.1 sign=-1 finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "6.159785758815201e-21",
+      "expected": "<=1e-08",
+      "group": "full-generator cancellation",
+      "name": "beta=1.0 V=6 L=0.5 t=0.1 sign=-1 pairing",
+      "status": "PASS"
+    },
+    {
+      "actual": "[(4.432369359445638e-05-2.126012630347029e-23j), (0.0011437096791132302-2.8511626611088075e-22j), (0.04332444999556204+5.899315777722681e-20j)]",
+      "expected": ">=-tolerance",
+      "group": "Kubo-Mori positivity",
+      "name": "beta=1.0 V=6 L=0.5 t=0.1 sign=-1 positivity",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'D_matrix_norm': 0.0027883315176160627, 'delta_D_matrix_norm': 0.016775558945023094, 'delta2_D_matrix_norm': 0.1120467292344618, 'D_kubo_mori_norm': 0.0016661381984876035, 'delta_D_kubo_mori_norm': 0.008487729786590539, 'delta2_D_kubo_mori_norm': 0.052266938333372995, 'pairing_delta2_D_D_real': -7.204155693017626e-05, 'pairing_delta_D_delta_D_real': 7.204155693017626e-05, 'cancellation_error': 1.3237238533237967e-22, 'tail_operator_norm': 15.750000000000014, 'source_commutator_norm': 2.3925600541428377e-14}",
+      "expected": "finite",
+      "group": "actual D/delta-D",
+      "name": "beta=1.0 V=6 L=0.5 t=0.05 sign=1 finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.3237238533237967e-22",
+      "expected": "<=1e-08",
+      "group": "full-generator cancellation",
+      "name": "beta=1.0 V=6 L=0.5 t=0.05 sign=1 pairing",
+      "status": "PASS"
+    },
+    {
+      "actual": "[(2.776016496459517e-06+1.5088332214936696e-24j), (7.204155693017626e-05+9.51200716077618e-24j), (0.0027318328427446154+2.6985346019706656e-21j)]",
+      "expected": ">=-tolerance",
+      "group": "Kubo-Mori positivity",
+      "name": "beta=1.0 V=6 L=0.5 t=0.05 sign=1 positivity",
+      "status": "PASS"
+    },
+    {
+      "actual": "59",
+      "expected": "all executed assertions passed",
+      "group": "summary",
+      "name": "assertion_summary",
+      "status": "PASS"
+    }
+  ],
+  "audit_id": "PA-CP1-ST8-Q3LOCK-GENERATOR-PAIRING-SIXSITE",
+  "boundary": {
+    "c6_closed": false,
+    "common_alpha_closed": false,
+    "continuum_closed": false,
+    "exhaustion_independence_closed": false,
+    "full_generator_pairing_identity_closed": true,
+    "hamiltonian_os_identification_closed": false,
+    "increasing_cutoff_family_closed": true,
+    "kms_gns_gap_closed": false,
+    "modular_domain_closed": false,
+    "pre_a_closed": false,
+    "product_core_density_closed": false,
+    "sector_a_closed": false,
+    "six_site_actual_d_delta_rows_closed": true,
+    "six_site_vs_square_growth_diagnostic_closed": true,
+    "uniform_beta_volume_direct_d_delta_d_closed": false
+  },
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "derived": {
+    "common_alpha_closed": false,
+    "cutoff_rows": [
+      {
+        "beta": 1.0,
+        "max_D": 0.011120385765177385,
+        "max_D_km": 0.006657604193285778,
+        "max_cancellation_error": 2.1684090494798863e-19,
+        "max_delta2_D": 0.4464751839163682,
+        "max_delta2_D_km": 0.20814526176582074,
+        "max_delta_D": 0.0668151425651249,
+        "max_delta_D_km": 0.03381877701977454,
+        "radius": 0.5,
+        "source_commutator_norm": 2.3925600541428377e-14,
+        "tail_operator_norm": 15.750000000000014,
+        "volume": 6
+      },
+      {
+        "beta": 1.0,
+        "max_D": 0.0028946811906061334,
+        "max_D_km": 0.0017293013753018585,
+        "max_cancellation_error": 2.338309135057535e-22,
+        "max_delta2_D": 0.11620930348555411,
+        "max_delta2_D_km": 0.0541859219469357,
+        "max_delta_D": 0.0174026065252135,
+        "max_delta_D_km": 0.008803291366292517,
+        "radius": 1.0,
+        "source_commutator_norm": 6.2723472304366605e-15,
+        "tail_operator_norm": 4.089266706768675,
+        "volume": 6
+      },
+      {
+        "beta": 1.0,
+        "max_D": 1.752013278671205e-14,
+        "max_D_km": 7.260648047013583e-15,
+        "max_cancellation_error": 8.99088671109687e-44,
+        "max_delta2_D": 6.516917259849563e-13,
+        "max_delta2_D_km": 1.2276944526835027e-13,
+        "max_delta_D": 5.615982719507207e-14,
+        "max_delta_D_km": 1.7361322766689837e-14,
+        "radius": 2.0,
+        "source_commutator_norm": 7.665429959068717e-16,
+        "tail_operator_norm": 9.008064898603127e-15,
+        "volume": 6
+      },
+      {
+        "beta": 1.0,
+        "max_D": 1.752013278671205e-14,
+        "max_D_km": 7.260648047013583e-15,
+        "max_cancellation_error": 8.99088671109687e-44,
+        "max_delta2_D": 6.516917259849563e-13,
+        "max_delta2_D_km": 1.2276944526835027e-13,
+        "max_delta_D": 5.615982719507207e-14,
+        "max_delta_D_km": 1.7361322766689837e-14,
+        "radius": 4.0,
+        "source_commutator_norm": 7.665429959068717e-16,
+        "tail_operator_norm": 9.008064898603127e-15,
+        "volume": 6
+      }
+    ],
+    "full_generator_pairing_identity_closed": true,
+    "increasing_cutoff_family_closed": true,
+    "pre_a_closed": false,
+    "row_count": 16,
+    "six_site_actual_d_delta_rows_closed": true,
+    "six_site_vs_square_growth_diagnostic_closed": true,
+    "summary_rows": [
+      {
+        "beta": 1.0,
+        "max_D": 0.011120385765177385,
+        "max_D_km": 0.006657604193285778,
+        "max_cancellation_error": 2.1684090494798863e-19,
+        "max_delta2_D": 0.4464751839163682,
+        "max_delta2_D_km": 0.20814526176582074,
+        "max_delta_D": 0.0668151425651249,
+        "max_delta_D_km": 0.03381877701977454,
+        "volume": 6
+      }
+    ],
+    "uniform_beta_volume_direct_d_delta_d_closed": false
+  },
+  "exploration_id": "EXP-001141",
+  "passed": 59,
+  "run_kind": "primary",
+  "schema": "tect/foundation-audit/1.0",
+  "task_id": "T-054",
+  "verdict": "PASS"
+}
