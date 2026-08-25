@@ -786,6 +786,118 @@
       "task_id": "T-054",
       "title": "Finite eight-component Q3 energy-number form audit",
       "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "axis": "normal-order coefficient accounting",
+          "check": "Both lanes independently reconstruct 1286 terms and S_N5=87496; the coefficient sum is not pasted into the proof calculation.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "form versus finite matrix ratio",
+          "check": "The corollary uses the R-167 graph-norm premise on a common core; EXP-001109 finite generalized eigenvalues are not used as a uniform operator bound.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "Young and positivity",
+          "check": "R282 checks the equal-scale inequality and uses k_h>=1 before absorbing ||psi||^2 into the k_h^5 form.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "history ordering",
+          "check": "The history factor is taken only from the registered K_e^5 transport and endpoint strong-commutativity statement; no arbitrary onsite-interspersed history is added.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "cutoff indexing",
+          "check": "The finite lanes use the exact (n-1)^5 top-level Markov factor, while R282 verifies an asymptotically equivalent shifted sequence with an eventual nonzero denominator.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "QFT promotion",
+          "check": "No direct D/delta-D, common-alpha, OS/KMS/GNS, gap, continuum, C6, Sector A or Pre-A closure is inferred.",
+          "disposition": "UPHELD-OPEN"
+        }
+      ],
+      "boundary": "The result is a derived one-site Q3 domain/tail corollary in the registered fixed-beta finite-periodic compact-source family and its declared split histories. It does not prove arbitrary-boundary or all-exhaustion tails, full-lattice common-core closure, direct D or delta-D Cauchy convergence, one thermodynamic state-independent alpha, Hamiltonian-to-OS identification, KMS/GNS reconstruction, a gap, continuum, C6, Sector A or Pre-A.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "This resolves the previously unnamed composition between the R-167 Shubin graph authority and the full eight-component normal-order family. It instantiates the scalar R279 top-tail bridge for the registered static and split-history scopes, while keeping the graph equivalence and history transport as cited premises rather than silently reproving them.",
+      "evidence_refs": [
+        "strategy/pre_a_cp1_st8_q3lock_energy_to_number_shubin_corollary_manifest.json#exact_statement",
+        "codes/foundations/pre_a_cp1_st8_q3lock_energy_to_number_shubin_corollary.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_energy_to_number_shubin_corollary_independent.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_energy_to_number_shubin_corollary_verify.py#run",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-primary-pre_a_cp1_st8_q3lock_energy_to_number_shubin_corollary/primary.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-independent-pre_a_cp1_st8_q3lock_energy_to_number_shubin_corollary/independent.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-integrated-pre_a_cp1_st8_q3lock_energy_to_number_shubin_corollary/integrated.json#lean",
+        "strategy/pre-a-cp1-st8-q3lock-local-measured-renyi-semiclassical-doublet-route-split-certificate-260811.md#33.3",
+        "verification/lean/Tect/R280.lean#anisotropic_order_bound",
+        "verification/lean/Tect/R279.lean#fifth_moment_to_weighted_top_tail",
+        "verification/lean/Tect/R282.lean#energy_to_number_form_constant"
+      ],
+      "finding": "Primary 39/39, independent 39/39, integrated 23/23, and Lean R282 compile PASS. The independently reconstructed eight-component N^5 expansion has 1286 terms and coefficient l1 sum S_N5=87496, with maximum anisotropic order five. Under the already registered R-167 Shubin graph premise, the closed-core form bound is N^5 <= S_N5*G_graph*k_h^5. Consequently the registered Gibbs fifth moment supplies n^2 top-projector decay proportional to n^2/(n-1)^5, and the registered two-orientation K_e^5 history transport supplies the same decay with the factor exp(G_transport*T) S_mu^5 m5. The bound tends to zero in the cutoff parameter.",
+      "formal_integration": {
+        "events": [],
+        "lean": "R282 PASS",
+        "negatives": [],
+        "no_new_event": true,
+        "no_new_negative": true,
+        "no_new_result": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "results": []
+      },
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": []
+      },
+      "gate_ids": [
+        "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+        "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001110",
+      "method": [
+        "Recompute the full normal-order expansion of the eight-component harmonic number N^5 in a primary multidimensional contraction lane and an independent one-component multinomial lane.",
+        "Use the already registered R-167 order-five Shubin graph equivalence as an explicit common-core premise: every normal-ordered monomial of anisotropic order at most five has norm at most G_graph times the k_h^(5/2) graph norm, uniformly over the registered compact onsite-source family.",
+        "Let S_N5 be the recomputed coefficient l1 sum. Cauchy-Schwarz and the equal-scale Young inequality give |<psi,N^5 psi>| <= S_N5 G_graph ||psi|| ||k_h^(5/2)psi||, and k_h>=1 absorbs the vector norm into the k_h^5 form.",
+        "Combine the resulting N^5 form bound with the registered R-167 static fifth moment and K_e^5 split-history transport, then apply the R279 Markov/top-tail implication in the shifted cutoff parameter.",
+        "Compile R282, which checks the scalar form composition, history-tail scaling, and zero limit without introducing an operator axiom or an unproved Q3 theorem."
+      ],
+      "next_action": "Use the now-explicit registered top-tail interface in the direct D/delta-D comparison, while proving the missing product/core density, exhaustion independence and group law for the Hamiltonian-derived carrier. Do not promote the one-site corollary to common alpha until those gates close.",
+      "no_overclaim": "The finite coefficient sum and scalar tail limit do not create the R-167 Shubin graph constant, the K_e^5 transport constant, or an all-exhaustion dynamics. The QFT bridge remains open at direct Cauchy/common-alpha and subsequent OS/KMS/GNS stages.",
+      "provenance": "contemporaneous",
+      "qft_interface": {
+        "closed": "A registered one-site energy-to-number form/tail interface for the actual eight-component Q3 onsite family and the declared periodic split-history states.",
+        "open": "Full-lattice direct D/delta-D Cauchy, product/core density, exhaustion independence, group law, common alpha, Hamiltonian-to-OS/KMS identification, GNS gap, continuum, C6, Sector A and Pre-A.",
+        "tect_boundary": "No heat_root_incidence or canonical A1/R-192 production owner is supplied."
+      },
+      "question": "Can the registered order-five Shubin graph equivalence and the exact eight-component N^5 normal-order expansion be composed into a uniform one-site energy-to-number form bound, and then into the registered Gibbs/history top-tail interface?",
+      "recorded_at": "2026-08-27T01:10:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001108",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001103",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001105",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-08-25",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Eight-component Q3 energy-to-number Shubin corollary and registered top-tail instantiation",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",

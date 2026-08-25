@@ -1,0 +1,420 @@
+{
+  "assertion_count": 39,
+  "assertions": [
+    {
+      "actual": "['EXP-001110', 'T-054']",
+      "expected": "EXP-001110/T-054",
+      "group": "provenance",
+      "name": "identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "group": "scope",
+      "name": "claim nonbearing",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'shubin_graph': {'source': 'strategy/pre-a-cp1-st8-q3lock-local-measured-renyi-semiclassical-doublet-route-split-certificate-260811.md#33.3', 'statement': 'For the compact onsite-source family, the closed quartic graph norm through m=5 is equivalent in both directions to the finite monomial family of anisotropic order at most five.', 'scope': 'registered fixed-beta finite-periodic compact-source one-site Q3 family'}, 'normal_order': {'source': 'EXP-001108/R280', 'statement': 'The full eight-component N^5 normal-order expansion has finite coefficient l1 sum and every monomial has anisotropic creation/annihilation order at most five.', 'component_count': 8, 'moment_order': 5}, 'history_transport': {'source': 'strategy/pre-a-cp1-st8-q3lock-local-measured-renyi-semiclassical-doublet-route-split-manifest.json#conditional_fifth_graph_transport', 'statement': 'The registered periodic split histories have a uniform K_e^5 moment bound exp(G_transport T) S_mu^5 m5 in both orientations.', 'scope': 'registered fixed-beta finite-periodic compact-source split histories only'}}",
+      "expected": "registered inputs",
+      "group": "provenance",
+      "name": "authority inputs",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'normal_order_input_reused': True, 'shubin_graph_input_reused': True, 'energy_to_number_form_corollary_closed': True, 'registered_gibbs_top_tail_closed': True, 'registered_split_history_top_tail_closed': True, 'all_shape_exhaustion_top_tail_closed': False, 'arbitrary_boundary_top_tail_closed': False, 'actual_full_q3_common_core_closed': False, 'direct_d_delta_d_cauchy_closed': False, 'common_alpha_closed': False, 'hamiltonian_os_identification_closed': False, 'kms_gns_gap_closed': False, 'continuum_closed': False, 'c6_closed': False, 'sector_a_closed': False, 'pre_a_closed': False}",
+      "expected": "registered corollary only",
+      "group": "scope",
+      "name": "scope firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": "5",
+      "expected": ">0",
+      "group": "normal order",
+      "name": "components=1 nonempty",
+      "status": "PASS"
+    },
+    {
+      "actual": "10",
+      "expected": "<=10",
+      "group": "normal order",
+      "name": "components=1 degree",
+      "status": "PASS"
+    },
+    {
+      "actual": "5",
+      "expected": "<=5",
+      "group": "normal order",
+      "name": "components=1 anisotropic order",
+      "status": "PASS"
+    },
+    {
+      "actual": "20",
+      "expected": ">0",
+      "group": "normal order",
+      "name": "components=2 nonempty",
+      "status": "PASS"
+    },
+    {
+      "actual": "10",
+      "expected": "<=10",
+      "group": "normal order",
+      "name": "components=2 degree",
+      "status": "PASS"
+    },
+    {
+      "actual": "5",
+      "expected": "<=5",
+      "group": "normal order",
+      "name": "components=2 anisotropic order",
+      "status": "PASS"
+    },
+    {
+      "actual": "55",
+      "expected": ">0",
+      "group": "normal order",
+      "name": "components=3 nonempty",
+      "status": "PASS"
+    },
+    {
+      "actual": "10",
+      "expected": "<=10",
+      "group": "normal order",
+      "name": "components=3 degree",
+      "status": "PASS"
+    },
+    {
+      "actual": "5",
+      "expected": "<=5",
+      "group": "normal order",
+      "name": "components=3 anisotropic order",
+      "status": "PASS"
+    },
+    {
+      "actual": "1286",
+      "expected": ">0",
+      "group": "normal order",
+      "name": "components=8 nonempty",
+      "status": "PASS"
+    },
+    {
+      "actual": "10",
+      "expected": "<=10",
+      "group": "normal order",
+      "name": "components=8 degree",
+      "status": "PASS"
+    },
+    {
+      "actual": "5",
+      "expected": "<=5",
+      "group": "normal order",
+      "name": "components=8 anisotropic order",
+      "status": "PASS"
+    },
+    {
+      "actual": "1286",
+      "expected": "1286 (EXP-001108 oracle)",
+      "group": "normal order",
+      "name": "eight-component term count",
+      "status": "PASS"
+    },
+    {
+      "actual": "87496",
+      "expected": "87496 (EXP-001108 oracle)",
+      "group": "normal order",
+      "name": "eight-component coefficient sum",
+      "status": "PASS"
+    },
+    {
+      "actual": "[Fraction(1, 2), Fraction(43748, 1)]",
+      "expected": ">0",
+      "group": "form composition",
+      "name": "graph constant 1/2 positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "[Fraction(0, 1), Fraction(10937, 1)]",
+      "expected": "left<=right when k_h>=1",
+      "group": "form composition",
+      "name": "Young 1/2 x=0",
+      "status": "PASS"
+    },
+    {
+      "actual": "[Fraction(109370, 9), Fraction(273425, 9)]",
+      "expected": "left<=right when k_h>=1",
+      "group": "form composition",
+      "name": "Young 1/2 x=1/3",
+      "status": "PASS"
+    },
+    {
+      "actual": "[Fraction(218740, 1), Fraction(273425, 1)]",
+      "expected": "left<=right when k_h>=1",
+      "group": "form composition",
+      "name": "Young 1/2 x=2",
+      "status": "PASS"
+    },
+    {
+      "actual": "[Fraction(3, 2), Fraction(131244, 1)]",
+      "expected": ">0",
+      "group": "form composition",
+      "name": "graph constant 3/2 positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "[Fraction(0, 1), Fraction(32811, 1)]",
+      "expected": "left<=right when k_h>=1",
+      "group": "form composition",
+      "name": "Young 3/2 x=0",
+      "status": "PASS"
+    },
+    {
+      "actual": "[Fraction(109370, 3), Fraction(273425, 3)]",
+      "expected": "left<=right when k_h>=1",
+      "group": "form composition",
+      "name": "Young 3/2 x=1/3",
+      "status": "PASS"
+    },
+    {
+      "actual": "[Fraction(656220, 1), Fraction(820275, 1)]",
+      "expected": "left<=right when k_h>=1",
+      "group": "form composition",
+      "name": "Young 3/2 x=2",
+      "status": "PASS"
+    },
+    {
+      "actual": "[Fraction(7, 3), Fraction(612472, 3)]",
+      "expected": ">0",
+      "group": "form composition",
+      "name": "graph constant 7/3 positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "[Fraction(0, 1), Fraction(153118, 3)]",
+      "expected": "left<=right when k_h>=1",
+      "group": "form composition",
+      "name": "Young 7/3 x=0",
+      "status": "PASS"
+    },
+    {
+      "actual": "[Fraction(1531180, 27), Fraction(3827950, 27)]",
+      "expected": "left<=right when k_h>=1",
+      "group": "form composition",
+      "name": "Young 7/3 x=1/3",
+      "status": "PASS"
+    },
+    {
+      "actual": "[Fraction(3062360, 3), Fraction(3827950, 3)]",
+      "expected": "left<=right when k_h>=1",
+      "group": "form composition",
+      "name": "Young 7/3 x=2",
+      "status": "PASS"
+    },
+    {
+      "actual": "[Fraction(1749920, 81), Fraction(1312440, 1)]",
+      "expected": "strictly smaller",
+      "group": "tail",
+      "name": "static tail monotone n=4",
+      "status": "PASS"
+    },
+    {
+      "actual": "[Fraction(20999040, 16807), Fraction(1749920, 81)]",
+      "expected": "strictly smaller",
+      "group": "tail",
+      "name": "static tail monotone n=8",
+      "status": "PASS"
+    },
+    {
+      "actual": "[Fraction(5599744, 50625), Fraction(20999040, 16807)]",
+      "expected": "strictly smaller",
+      "group": "tail",
+      "name": "static tail monotone n=16",
+      "status": "PASS"
+    },
+    {
+      "actual": "[Fraction(335984640, 28629151), Fraction(5599744, 50625)]",
+      "expected": "strictly smaller",
+      "group": "tail",
+      "name": "static tail monotone n=32",
+      "status": "PASS"
+    },
+    {
+      "actual": "[Fraction(447979520, 330812181), Fraction(335984640, 28629151)]",
+      "expected": "strictly smaller",
+      "group": "tail",
+      "name": "static tail monotone n=64",
+      "status": "PASS"
+    },
+    {
+      "actual": "[{'cutoff': 2, 'bound': '1312440'}, {'cutoff': 4, 'bound': '1749920/81'}, {'cutoff': 8, 'bound': '20999040/16807'}, {'cutoff': 16, 'bound': '5599744/50625'}, {'cutoff': 32, 'bound': '335984640/28629151'}, {'cutoff': 64, 'bound': '447979520/330812181'}]",
+      "expected": ">0",
+      "group": "tail",
+      "name": "static tail positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "5715.206145635917",
+      "expected": ">0 finite",
+      "group": "history",
+      "name": "history moment finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "[{'cutoff': 2, 'bound': 3000346061.511361}, {'cutoff': 4, 'bound': 49388412.535166435}, {'cutoff': 8, 'bound': 2856282.3219005046}, {'cutoff': 16, 'bound': 252868.67218005218}, {'cutoff': 32, 'bound': 26828.898689552774}, {'cutoff': 64, 'bound': 3095.76908333134}]",
+      "expected": "strictly decreasing",
+      "group": "history",
+      "name": "history tail decreases",
+      "status": "PASS"
+    },
+    {
+      "actual": "[3000346061.511361, 3095.76908333134]",
+      "expected": "decreases",
+      "group": "history",
+      "name": "tail limit trend",
+      "status": "PASS"
+    }
+  ],
+  "audit_id": "PA-CP1-ST8-Q3LOCK-ENERGY-TO-NUMBER-SHUBIN-COROLLARY",
+  "boundary": {
+    "actual_full_q3_common_core_closed": false,
+    "all_shape_exhaustion_top_tail_closed": false,
+    "arbitrary_boundary_top_tail_closed": false,
+    "c6_closed": false,
+    "common_alpha_closed": false,
+    "continuum_closed": false,
+    "direct_d_delta_d_cauchy_closed": false,
+    "energy_to_number_form_corollary_closed": true,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "normal_order_input_reused": true,
+    "pre_a_closed": false,
+    "registered_gibbs_top_tail_closed": true,
+    "registered_split_history_top_tail_closed": true,
+    "sector_a_closed": false,
+    "shubin_graph_input_reused": true
+  },
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "derived": {
+    "actual_full_q3_common_core_closed": false,
+    "all_shape_exhaustion_top_tail_closed": false,
+    "c6_closed": false,
+    "common_alpha_closed": false,
+    "component_rows": [
+      {
+        "coefficient_l1": 52,
+        "components": 1,
+        "maximum_anisotropic_order": 5.0,
+        "maximum_degree": 10,
+        "term_count": 5
+      },
+      {
+        "coefficient_l1": 454,
+        "components": 2,
+        "maximum_anisotropic_order": 5.0,
+        "maximum_degree": 10,
+        "term_count": 20
+      },
+      {
+        "coefficient_l1": 1866,
+        "components": 3,
+        "maximum_anisotropic_order": 5.0,
+        "maximum_degree": 10,
+        "term_count": 55
+      },
+      {
+        "coefficient_l1": 87496,
+        "components": 8,
+        "maximum_anisotropic_order": 5.0,
+        "maximum_degree": 10,
+        "term_count": 1286
+      }
+    ],
+    "continuum_closed": false,
+    "direct_d_delta_d_cauchy_closed": false,
+    "eight_component_coefficient_l1": 87496,
+    "energy_to_number_form_constant_formula": "S_N5*G_graph",
+    "energy_to_number_form_corollary_closed": true,
+    "graph_rows": [
+      {
+        "coefficient_l1": 87496,
+        "form_constant": "43748",
+        "graph_constant": "1/2"
+      },
+      {
+        "coefficient_l1": 87496,
+        "form_constant": "131244",
+        "graph_constant": "3/2"
+      },
+      {
+        "coefficient_l1": 87496,
+        "form_constant": "612472/3",
+        "graph_constant": "7/3"
+      }
+    ],
+    "hamiltonian_os_identification_closed": false,
+    "history_tail_rows": [
+      {
+        "bound": 3000346061.511361,
+        "cutoff": 2
+      },
+      {
+        "bound": 49388412.535166435,
+        "cutoff": 4
+      },
+      {
+        "bound": 2856282.3219005046,
+        "cutoff": 8
+      },
+      {
+        "bound": 252868.67218005218,
+        "cutoff": 16
+      },
+      {
+        "bound": 26828.898689552774,
+        "cutoff": 32
+      },
+      {
+        "bound": 3095.76908333134,
+        "cutoff": 64
+      }
+    ],
+    "kms_gns_gap_closed": false,
+    "pre_a_closed": false,
+    "registered_gibbs_top_tail_closed": true,
+    "registered_split_history_top_tail_closed": true,
+    "sector_a_closed": false,
+    "static_tail_rows": [
+      {
+        "bound": "1312440",
+        "cutoff": 2
+      },
+      {
+        "bound": "1749920/81",
+        "cutoff": 4
+      },
+      {
+        "bound": "20999040/16807",
+        "cutoff": 8
+      },
+      {
+        "bound": "5599744/50625",
+        "cutoff": 16
+      },
+      {
+        "bound": "335984640/28629151",
+        "cutoff": 32
+      },
+      {
+        "bound": "447979520/330812181",
+        "cutoff": 64
+      }
+    ]
+  },
+  "exploration_id": "EXP-001110",
+  "passed": 39,
+  "run_kind": "independent",
+  "schema": "tect/foundation-audit/1.0",
+  "task_id": "T-054",
+  "verdict": "PASS"
+}

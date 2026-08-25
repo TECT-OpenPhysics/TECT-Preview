@@ -1,0 +1,123 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-ENERGY-TO-NUMBER-SHUBIN-COROLLARY-v0",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001110",
+  "claim_bearing": false,
+  "parent_explorations": ["EXP-001108", "EXP-001103", "EXP-001105"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "question": "Can the registered order-five Shubin graph equivalence and the exact eight-component N^5 normal-order expansion be composed into a uniform one-site energy-to-number form bound, and then into the registered Gibbs/history top-tail interface?",
+  "authoritative_inputs": {
+    "shubin_graph": {
+      "source": "strategy/pre-a-cp1-st8-q3lock-local-measured-renyi-semiclassical-doublet-route-split-certificate-260811.md#33.3",
+      "statement": "For the compact onsite-source family, the closed quartic graph norm through m=5 is equivalent in both directions to the finite monomial family of anisotropic order at most five.",
+      "scope": "registered fixed-beta finite-periodic compact-source one-site Q3 family"
+    },
+    "normal_order": {
+      "source": "EXP-001108/R280",
+      "statement": "The full eight-component N^5 normal-order expansion has finite coefficient l1 sum and every monomial has anisotropic creation/annihilation order at most five.",
+      "component_count": 8,
+      "moment_order": 5
+    },
+    "history_transport": {
+      "source": "strategy/pre-a-cp1-st8-q3lock-local-measured-renyi-semiclassical-doublet-route-split-manifest.json#conditional_fifth_graph_transport",
+      "statement": "The registered periodic split histories have a uniform K_e^5 moment bound exp(G_transport T) S_mu^5 m5 in both orientations.",
+      "scope": "registered fixed-beta finite-periodic compact-source split histories only"
+    }
+  },
+  "exact_statement": {
+    "graph_input": "Assume the R-167 graph constant G_graph bounds the norm of every normal-ordered N^5 monomial of anisotropic order at most five by G_graph*||k_h^(5/2) psi|| on the common Schwartz/form core.",
+    "coefficient_sum": "If N^5=sum_j c_j M_j and S=sum_j |c_j|, then |<psi,N^5 psi>| <= S G_graph ||psi|| ||k_h^(5/2) psi||.",
+    "form_bound": "Since k_h>=1, N^5 <= S G_graph k_h^5 as closed quadratic forms on the core, with the constant uniform over the registered compact source family.",
+    "static_tail": "A registered Gibbs state with phi(k_h^5)<=m5 therefore satisfies n^2 phi(P_top^(n)) <= S G_graph m5 n^2/(n-1)^5 for n>=2.",
+    "history_tail": "A registered split-history state with phi(K_e^5)<=exp(G_transport T) S_mu^5 m5 satisfies the same top-tail bound with m5 replaced by exp(G_transport T) S_mu^5 m5, because k_x and K_e strongly commute and k_x<=K_e at an endpoint.",
+    "limit": "The right side tends to zero, so the weighted truncated-CCR defect interface is supplied in the declared registered state/history scope."
+  },
+  "finite_fixture": {
+    "component_values": [1, 2, 3, 8],
+    "moment_order": 5,
+    "maximum_total_degree": 10,
+    "anisotropic_creation_annihilation_weight": 0.5,
+    "graph_constant_test_values": ["1/2", "3/2", "7/3"],
+    "transport_constant_test": "1/4",
+    "moment_test": "5/2",
+    "history_time_test": "2",
+    "history_weight_sum_test": "17/4",
+    "cutoff_values": [2, 4, 8, 16, 32, 64],
+    "tolerance": 1.0e-12
+  },
+  "scope": {
+    "normal_order_input_reused": true,
+    "shubin_graph_input_reused": true,
+    "energy_to_number_form_corollary_closed": true,
+    "registered_gibbs_top_tail_closed": true,
+    "registered_split_history_top_tail_closed": true,
+    "all_shape_exhaustion_top_tail_closed": false,
+    "arbitrary_boundary_top_tail_closed": false,
+    "actual_full_q3_common_core_closed": false,
+    "direct_d_delta_d_cauchy_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false
+  },
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R282.lean",
+    "command": "lake env lean Tect/R282.lean",
+    "declarations": [
+      "young_with_equal_scales",
+      "energy_to_number_form_constant",
+      "top_tail_decay",
+      "history_top_tail_decay",
+      "scope_fixture"
+    ],
+    "boundary": "R282 formalizes the scalar composition and tail limits; the analytic Shubin equivalence and the Q3 history transport remain the cited authoritative premises."
+  },
+  "formal_integration": {
+    "results": [],
+    "events": [],
+    "negatives": [],
+    "lean": "R282 PASS",
+    "no_new_result": true,
+    "no_new_negative": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "boundary": "This is a derived one-site Q3 domain/tail corollary in the registered R-167 scope. It does not construct the all-exhaustion common algebra, prove direct D or delta-D Cauchy convergence, identify one thermodynamic alpha, or close OS/KMS/GNS, a gap, continuum, C6, Sector A or Pre-A.",
+  "no_overclaim": "The graph-equivalence and fifth-history premises are not reproved by this package. No finite or conditional tail estimate is promoted to a state-independent thermodynamic automorphism theorem.",
+  "adversarial_review": [
+    {
+      "axis": "normal-order coefficient accounting",
+      "check": "Both lanes recompute the eight-component expansion and its coefficient l1 sum; no coefficient sum is pasted as a derived number.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "noncommutative form direction",
+      "check": "The composition uses the stated R-167 graph-norm premise for every order-five monomial; it does not infer an operator power inequality from a scalar eigenvalue ratio.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "Young inequality",
+      "check": "The passage from |<psi,N^5 psi>| to the k_h^5 form uses the explicit equal-scale inequality and k_h>=1.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "history ordering",
+      "check": "The history conclusion is restricted to the registered K_e^5 transport and endpoint strong-commutativity scope; no arbitrary onsite-interspersed or all-exhaustion history is inserted.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "QFT promotion",
+      "check": "Direct D/delta-D, common alpha, OS/KMS/GNS identification, gap, continuum, C6, Sector A and Pre-A remain open.",
+      "disposition": "UPHELD-OPEN"
+    }
+  ]
+}
