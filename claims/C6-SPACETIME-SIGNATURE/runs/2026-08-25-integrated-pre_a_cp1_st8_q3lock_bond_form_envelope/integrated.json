@@ -1,0 +1,118 @@
+{
+  "assertion_count": 12,
+  "assertions": [
+    {
+      "actual": "['EXP-001129', 'T-054']",
+      "expected": "EXP-001129/T-054",
+      "name": "identity",
+      "pass": true
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "name": "claim nonbearing",
+      "pass": true
+    },
+    {
+      "actual": "['bond_quartic_domination', 'onsite_square_completion', 'full_bond_form_envelope']",
+      "expected": "present",
+      "name": "Lean source",
+      "pass": true
+    },
+    {
+      "actual": "[]",
+      "expected": "none",
+      "name": "Lean forbidden",
+      "pass": true
+    },
+    {
+      "actual": "PRIMARY BOND-FORM-ENVELOPE PASS 26253/26253\n",
+      "expected": "PASS",
+      "name": "primary child",
+      "pass": true
+    },
+    {
+      "actual": "INDEPENDENT BOND-FORM-ENVELOPE PASS 26254/26254\n",
+      "expected": "PASS",
+      "name": "independent child",
+      "pass": true
+    },
+    {
+      "actual": "[26253, 26254]",
+      "expected": ">0",
+      "name": "positive assertion totals",
+      "pass": true
+    },
+    {
+      "actual": "[6561, 6561]",
+      "expected": "6561",
+      "name": "grid count",
+      "pass": true
+    },
+    {
+      "actual": "[{'alpha_bond': '5/3', 'bond_constant': '304/45', 'common_alpha_closed': False, 'endpoint_to_edge_operator_inclusion_closed': False, 'grid_rows': 6561, 'maximum_slack': {'auxiliary': '1282/15', 'coordinate': '352/5', 'full': '11824/45', 'onsite': '962/15'}, 'onsite_factor': '2', 'pre_a_closed': False, 'quadratic_form_common_core_lift_closed': False, 'scalar_bond_form_envelope_closed': True, 'source_uniform_scalar_constant_closed': True, 'volume_uniform_local_form_constant_closed': True}, {'alpha_bond': '5/3', 'bond_constant': '304/45', 'common_alpha_closed': False, 'endpoint_to_edge_operator_inclusion_closed': False, 'grid_rows': 6561, 'minimum_slack': {'auxiliary': '3/10', 'coordinate': '0', 'full': '64/45', 'onsite': '2/15'}, 'onsite_factor': '2', 'pre_a_closed': False, 'quadratic_form_common_core_lift_closed': False, 'scalar_bond_form_envelope_closed': True, 'source_uniform_scalar_constant_closed': True, 'volume_uniform_local_form_constant_closed': True}]",
+      "expected": "alpha=5/3, constant=304/45",
+      "name": "constants agreement",
+      "pass": true
+    },
+    {
+      "actual": "[{'alpha_bond': '5/3', 'bond_constant': '304/45', 'common_alpha_closed': False, 'endpoint_to_edge_operator_inclusion_closed': False, 'grid_rows': 6561, 'maximum_slack': {'auxiliary': '1282/15', 'coordinate': '352/5', 'full': '11824/45', 'onsite': '962/15'}, 'onsite_factor': '2', 'pre_a_closed': False, 'quadratic_form_common_core_lift_closed': False, 'scalar_bond_form_envelope_closed': True, 'source_uniform_scalar_constant_closed': True, 'volume_uniform_local_form_constant_closed': True}, {'alpha_bond': '5/3', 'bond_constant': '304/45', 'common_alpha_closed': False, 'endpoint_to_edge_operator_inclusion_closed': False, 'grid_rows': 6561, 'minimum_slack': {'auxiliary': '3/10', 'coordinate': '0', 'full': '64/45', 'onsite': '2/15'}, 'onsite_factor': '2', 'pre_a_closed': False, 'quadratic_form_common_core_lift_closed': False, 'scalar_bond_form_envelope_closed': True, 'source_uniform_scalar_constant_closed': True, 'volume_uniform_local_form_constant_closed': True}]",
+      "expected": "scalar closed, operator open",
+      "name": "scalar scope",
+      "pass": true
+    },
+    {
+      "actual": "{'scalar_bond_form_envelope_closed': True, 'source_uniform_scalar_constant_closed': True, 'volume_uniform_local_form_constant_closed': True, 'quadratic_form_common_core_lift_closed': False, 'endpoint_to_edge_operator_inclusion_closed': False, 'source_uniform_operator_multiplier_closed': False, 'cutoff_uniformity_proved': False, 'exact_ccr_common_core_closed': False, 'modular_domain_transfer_closed': False, 'volume_uniform_direct_d_cauchy_closed': False, 'delta_d_cauchy_closed': False, 'all_bond_graph_lipschitz_closed': False, 'common_alpha_closed': False, 'hamiltonian_os_identification_closed': False, 'kms_gns_gap_closed': False, 'continuum_closed': False, 'c6_closed': False, 'sector_a_closed': False, 'pre_a_closed': False}",
+      "expected": "form envelope with named open gates",
+      "name": "QFT firewall",
+      "pass": true
+    },
+    {
+      "actual": "{'status': 'PASS', 'command': 'lake env lean Tect/R300.lean', 'returncode': 0, 'output': ''}",
+      "expected": "PASS",
+      "name": "Lean compile",
+      "pass": true
+    }
+  ],
+  "audit_id": "PA-CP1-ST8-Q3LOCK-BOND-FORM-ENVELOPE",
+  "boundary": {
+    "all_bond_graph_lipschitz_closed": false,
+    "c6_closed": false,
+    "common_alpha_closed": false,
+    "continuum_closed": false,
+    "cutoff_uniformity_proved": false,
+    "delta_d_cauchy_closed": false,
+    "endpoint_to_edge_operator_inclusion_closed": false,
+    "exact_ccr_common_core_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "modular_domain_transfer_closed": false,
+    "pre_a_closed": false,
+    "quadratic_form_common_core_lift_closed": false,
+    "scalar_bond_form_envelope_closed": true,
+    "sector_a_closed": false,
+    "source_uniform_operator_multiplier_closed": false,
+    "source_uniform_scalar_constant_closed": true,
+    "volume_uniform_direct_d_cauchy_closed": false,
+    "volume_uniform_local_form_constant_closed": true
+  },
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "exploration_id": "EXP-001129",
+  "lean": {
+    "command": "lake env lean Tect/R300.lean",
+    "output": "",
+    "returncode": 0,
+    "status": "PASS"
+  },
+  "provenance": {
+    "independent_sha256": "2e4e4262cd90ac2448b530e4c9a33fa561b401172a0f8b904676114a9c31688a",
+    "lean_sha256": "cec2e3536aca249467c5d27480ea229cc5c483a4eabce1825b2fac31ace13ff6",
+    "manifest_sha256": "24f3264032c5d02f5a7e373a6caf5a220e700c50b84ab88372f6426248c4da81",
+    "primary_sha256": "927c097206236caf0def0a8ffa68e6322aa4a977d0ecae8ff479bbe4f722624b"
+  },
+  "recorded_at": "2026-08-25T13:00:01.100192Z",
+  "run_kind": "integrated",
+  "schema": "tect/foundation-audit/1.0",
+  "task_id": "T-054",
+  "verdict": "PASS"
+}

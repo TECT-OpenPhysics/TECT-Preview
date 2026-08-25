@@ -1,0 +1,86 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-BOND-FORM-ENVELOPE-v0",
+  "title": "Uniform scalar quartic bond form envelope over the registered onsite Q3 energy",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001129",
+  "claim_bearing": false,
+  "parent_explorations": ["EXP-001128", "EXP-001127", "EXP-001026"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-ENERGY-WEIGHTED-COMMUTATOR-GEVREY-LR-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-RESOLVENT-ALGEBRA-EXACT-POLYNOMIAL-COMMON-ALPHA-CLOSURE",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "question": "Does the registered quartic Q3 bond admit a source- and volume-independent scalar form envelope by the local onsite energy, providing a candidate endpoint-to-edge comparison on the common core?",
+  "finite_fixture": {
+    "c": "3/5",
+    "lambda": "1/10",
+    "chi": "1",
+    "r": "-1",
+    "g": "3/5",
+    "alpha_bond": "5/3",
+    "onsite_factor": "2",
+    "bond_constant": "304/45",
+    "grid_values": [-4, -3, -2, -1, 0, 1, 2, 3, 4],
+    "tolerance": "1e-12"
+  },
+  "model": {
+    "bond": "B(x,y)=c*(x-y)^2/2+lambda*(x-y)^2*(x^2+y^2)/4",
+    "onsite": "h(x,p)=p^2/(2*chi)+r*x^2/2+g*x^4/4",
+    "positive_auxiliary": "S(x,p)=p^2/(2*chi)+g*x^4/4",
+    "scalar_chain": "B <= c*(x^2+y^2)+lambda*(x^4+y^4) <= (5/3)*(S_x+S_y)+6/5 <= (10/3)*(h_x+h_y)+304/45",
+    "operator_interface": "The scalar inequality lifts to a quadratic-form statement on the commuting-coordinate common core; converting it to a two-orientation operator seminorm inclusion is a separate gate."
+  },
+  "scope": {
+    "scalar_bond_form_envelope_closed": true,
+    "source_uniform_scalar_constant_closed": true,
+    "volume_uniform_local_form_constant_closed": true,
+    "quadratic_form_common_core_lift_closed": false,
+    "endpoint_to_edge_operator_inclusion_closed": false,
+    "source_uniform_operator_multiplier_closed": false,
+    "cutoff_uniformity_proved": false,
+    "exact_ccr_common_core_closed": false,
+    "modular_domain_transfer_closed": false,
+    "volume_uniform_direct_d_cauchy_closed": false,
+    "delta_d_cauchy_closed": false,
+    "all_bond_graph_lipschitz_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false
+  },
+  "adversarial_review": [
+    {"axis": "polynomial domination", "check": "The two inequalities use only nonnegative squares and the registered positive c, lambda, g; all coefficients are recomputed from the fixture.", "disposition": "UPHELD"},
+    {"axis": "negative mass term", "check": "The r=-1 term is handled by the explicit square-completion constant 5/3 rather than silently discarded.", "disposition": "UPHELD"},
+    {"axis": "operator lift", "check": "The result is recorded as a scalar/common-core form candidate; no operator-order or seminorm inclusion is inferred from grid checks alone.", "disposition": "UPHELD-OPEN"},
+    {"axis": "uniformity", "check": "The constants do not depend on volume or source, but beta/cutoff/domain and spectral shifts are not yet transferred.", "disposition": "UPHELD-OPEN"},
+    {"axis": "Lean scope", "check": "R300 proves rational polynomial inequalities only; it does not encode Q3 unbounded forms or limits.", "disposition": "UPHELD"},
+    {"axis": "QFT promotion", "check": "Common alpha, OS/KMS/GNS, gap, continuum, C6, Sector A and Pre-A remain open.", "disposition": "UPHELD-OPEN"}
+  ],
+  "files": {
+    "primary": "codes/foundations/pre_a_cp1_st8_q3lock_bond_form_envelope.py",
+    "independent": "codes/foundations/pre_a_cp1_st8_q3lock_bond_form_envelope_independent.py",
+    "integrated": "codes/foundations/pre_a_cp1_st8_q3lock_bond_form_envelope_verify.py",
+    "lean": "verification/lean/Tect/R300.lean",
+    "primary_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-primary-pre_a_cp1_st8_q3lock_bond_form_envelope/primary.json",
+    "independent_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-independent-pre_a_cp1_st8_q3lock_bond_form_envelope/independent.json",
+    "integrated_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-integrated-pre_a_cp1_st8_q3lock_bond_form_envelope/integrated.json"
+  },
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R300.lean",
+    "theorem_markers": ["bond_quartic_domination", "onsite_square_completion", "full_bond_form_envelope"],
+    "command": "lake env lean Tect/R300.lean",
+    "boundary": "Lean checks exact rational scalar inequalities and coefficient arithmetic only."
+  },
+  "qft_interface": {
+    "closed": "A source- and volume-independent scalar quartic bond form envelope for the registered local Q3 polynomial.",
+    "open": "Quadratic-form lifting, endpoint-to-edge operator inclusion, source/cutoff/beta-uniform modular transfer, direct D/delta-D Cauchy, common alpha, OS/KMS/GNS, gap and continuum.",
+    "tect_boundary": "No heat_root_incidence or canonical A1/R-192 production owner is supplied."
+  },
+  "no_overclaim": "This is an exact scalar polynomial/form-envelope checkpoint. It is not an unbounded Q3 common-core theorem, a thermodynamic QFT construction, a common-alpha theorem, OS/KMS/GNS reconstruction, a gap, continuum, C6, Sector A or Pre-A result."
+}
