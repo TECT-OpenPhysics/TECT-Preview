@@ -1,0 +1,91 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001103",
+  "title": "Registered Q3 fifth-energy moment to harmonic top-tail bridge",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "question": "Does the registered Q3 onsite fifth-energy/history moment supply the weighted top-tail condition required by the harmonic truncated CCR, and what exact input is still missing?",
+  "method": [
+    "Use P_top^(n)<=N^5/(n-1)^5 for the harmonic number N on the local oscillator basis, with n>=2.",
+    "Apply the scalar Markov estimate to obtain n^2 omega(P_top^(n))<=C n^2/(n-1)^5 and the limit zero.",
+    "Compare the required N^5 moment with the R-167 v2.2 definitions m5=sup phi(k_h^5), K_e^5 history transport, d5 and the declared Shubin graph statement.",
+    "Separate the missing reverse N-versus-k_h form inequality from the separate compatibility of harmonic compressions with the exact k_h/Ritz cutoff, then compile the scalar bridge in pinned Lean R279."
+  ],
+  "finding": "R279 compiles without errors and proves the exact scalar implication: a uniform fifth moment for the harmonic number gives the n^2 top-projector tail required by EXP-001094 and hence the R278 CCR interface. R-167 v2.2 supplies a fixed-beta finite-periodic compact-source fifth moment for the shifted onsite energy and transports K_e^5 through its registered histories, but its issued fields do not name the reverse form domination N^5<=C_N(1+k_h^5) or the harmonic-compression-to-exact-k_h compatibility needed to instantiate R279. The existing M20 corridor is a coordinate bond moment and is not an individual number-tail estimate.",
+  "verdict": "advanced",
+  "decision_reason": "This closes a precise scalar/QFT-facing interface and identifies the first operator-domain/cutoff mismatch without promoting a conditional energy estimate to an actual Q3 harmonic top-tail theorem.",
+  "boundary": "T0 claim-nonbearing bridge only. No Q3 Gibbs/history weighted top-tail uniformity, unbounded common-core transfer, direct D or delta-D Cauchy, common alpha, OS/KMS/GNS reconstruction, gap, continuum, C6, Sector A or Pre-A conclusion follows.",
+  "next_action": "Prove the reverse onsite form inequality and harmonic-number compression compatibility uniformly on the declared source set, or record an exact counterexample/obstruction before any direct D/delta-D or common-alpha promotion.",
+  "qft_interface": {
+    "closed": "A uniform harmonic-number fifth moment is sufficient for the weighted top-tail condition and truncated-CCR defect transfer.",
+    "open": "The actual Q3 energy-to-number estimate, harmonic cutoff compatibility, source/volume/orientation/history uniformity, direct dynamics limit, Hamiltonian-to-OS identification, KMS/GNS gap, continuum, Sector A and Pre-A remain open.",
+    "tect_boundary": "No heat_root_incidence or canonical A1/R-192 production owner is supplied."
+  },
+  "evidence_refs": [
+    "strategy/pre_a_cp1_st8_q3lock_energy_moment_harmonic_top_tail_bridge_manifest.json#exact_statement",
+    "strategy/pre-a-cp1-st8-q3lock-local-measured-renyi-semiclassical-doublet-route-split-manifest.json#actual_q3_static_fifth_moment_and_elliptic_embedding",
+    "strategy/pre-a-cp1-st8-q3lock-local-measured-renyi-semiclassical-doublet-route-split-manifest.json#conditional_fifth_graph_transport",
+    "strategy/pre_a_cp1_st8_q3lock_truncated_ccr_boundary_manifest.json#exact_statement",
+    "strategy/pre_a_cp1_st8_q3lock_top_tail_ccr_transfer_bridge_manifest.json#exact_statement",
+    "verification/lean/Tect/R279.lean#fifth_moment_to_weighted_top_tail",
+    "verification/lean/registry.json#R279"
+  ],
+  "formal_integration": {
+    "events": [],
+    "results": [],
+    "negatives": [],
+    "lean": "R279 PASS",
+    "no_new_event": true,
+    "no_new_result": true,
+    "no_new_negative": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "adversarial_review": [
+    {
+      "axis": "Markov exponent",
+      "check": "The top level is n-1, so the denominator is (n-1)^5 and the limit uses n^2/(n-1)^5; no n versus n-1 factor is hidden.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "moment direction",
+      "check": "R279 assumes a fifth moment of harmonic N; the R-167 k_h moment is not silently renamed N^5.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "noncommutative powers",
+      "check": "The required N^5<=C_N(1+k_h^5) relation is explicitly a form-domain input; scalar order of noncommuting p and q is not used as a proof.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "cutoff compatibility",
+      "check": "Harmonic matrix compression and parity-preserving k_h spectral/Ritz restriction are kept as separate cutoffs; convergence between them is not assumed.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "coordinate versus number tail",
+      "check": "The M20 bound is recognized as an edge coordinate moment and is not used to control individual momentum-sensitive top projectors.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "QFT promotion",
+      "check": "No finite-regulator bridge is promoted to common alpha, OS/KMS/GNS, a mass gap, continuum, Sector A or Pre-A.",
+      "disposition": "UPHELD-OPEN"
+    }
+  ],
+  "related": [
+    {"id": "EXP-001102", "relation": "continues"},
+    {"id": "EXP-000813", "relation": "continues"},
+    {"id": "EXP-001079", "relation": "continues"},
+    {"id": "EXP-001094", "relation": "continues"}
+  ],
+  "recorded_at": "2026-08-26T23:00:05Z",
+  "recorded_by": "Codex",
+  "provenance": "contemporaneous",
+  "reviewed_on": "2026-08-25"
+}

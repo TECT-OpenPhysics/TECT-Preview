@@ -1,0 +1,62 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-ENERGY-MOMENT-HARMONIC-TOP-TAIL-BRIDGE-v0",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001103",
+  "claim_bearing": false,
+  "parent_explorations": ["EXP-000813", "EXP-001079", "EXP-001102"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "question": "Does the registered Q3 onsite fifth-energy/history moment supply the weighted top-tail condition required by the harmonic truncated CCR, and what exact input is still missing?",
+  "exact_statement": {
+    "scalar_markov_bridge": "For a local harmonic number N and top projector P_top^(n) onto level n-1, a uniform bound omega(N^5)<=C gives 0<=omega(P_top^(n))<=C/(n-1)^5 for n>=2, hence n^2 omega(P_top^(n))->0.",
+    "energy_route": "The R-167 v2.2 authority defines k_h as the positive shifted exact onsite Q3 Hamiltonian and controls k_h^5 statically and K_e^5 through the declared finite-periodic compact-source split histories. A valid reverse graph/form estimate N^5 <= C_N(1+k_h^5) would therefore imply the scalar bridge with a uniform C.",
+    "missing_form_input": "R-167 records the quartic Shubin graph equivalence and the one-sided consequence k_h^5<=C(1+sum p_i^10+|q|^20), but it does not issue the reverse harmonic-number form domination N^5<=C_N(1+k_h^5) as a named theorem.",
+    "missing_cutoff_input": "The finite top-tail audit uses q_n,p_n compressed in the harmonic number basis, whereas the R-167 cutoff statements are parity-preserving onsite spectral/Ritz form restrictions. A separate uniform harmonic-compression versus exact-k_h domain/convergence lemma is required.",
+    "coordinate_boundary": "The existing M20 history corridor controls the bond coordinate X_e=q_x-q_y; it cannot by itself control an individual harmonic-number top projector, which also detects momentum and onsite coordinate excitations.",
+    "qft_chain_boundary": "Even after both missing inputs, the result would be only a finite-regulator Q3 domain bridge. Direct D and delta-D Cauchy, common alpha, Hamiltonian-to-OS identification, KMS/GNS reconstruction, a physical gap, continuum, Sector A and Pre-A remain separate gates."
+  },
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R279.lean",
+    "command": "lake env lean Tect/R279.lean",
+    "declarations": ["fifth_moment_to_weighted_top_tail", "fifth_moment_fixture"],
+    "hash": "5fe37f20ddd08bfd031731ddf6e609488ce15c5cb8c70a5ed59184859417b4c5",
+    "boundary": "R279 proves only the scalar fifth-moment Markov limit and a reciprocal-power fixture; it does not assert the Q3 energy-to-number form estimate or any QFT limit."
+  },
+  "scope": {
+    "scalar_fifth_moment_to_weighted_top_tail_closed": true,
+    "registered_q3_onsite_energy_moment_closed": true,
+    "registered_q3_history_energy_moment_closed": true,
+    "q3_energy_to_harmonic_number_form_domination_closed": false,
+    "harmonic_compression_domain_compatibility_closed": false,
+    "q3_gibbs_weighted_top_tail_uniformity_closed": false,
+    "q3_evolved_history_weighted_top_tail_uniformity_closed": false,
+    "actual_unbounded_q3_domain_transfer_closed": false,
+    "source_volume_uniform_modular_history_closed": false,
+    "direct_d_delta_d_cauchy_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false
+  },
+  "formal_integration": {
+    "results": [],
+    "events": [],
+    "negatives": [],
+    "lean": "R279 PASS",
+    "no_new_result": true,
+    "no_new_negative": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "boundary": "T0 claim-nonbearing analytic bridge. It converts a supplied local fifth number/energy moment into the exact n^2 top-tail condition, but it does not identify the R-167 energy moment with the harmonic truncation used by the CCR audit.",
+  "no_overclaim": "The finite-periodic R-167 m5 and M20 statements are not silently promoted to a harmonic top-tail theorem, an all-exhaustion Q3 dynamics, or a QFT reconstruction.",
+  "next_action": "Prove the reverse onsite form inequality for the exact Q3 k_h and a harmonic-number Ritz/compression compatibility estimate uniformly on the declared source set; then instantiate R279 for both Gibbs and two-orientation history states before attempting direct D/delta-D or common-alpha promotion."
+}
