@@ -1,0 +1,82 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-RESOLVENT-FORCE-COMMUTATOR-OBSTRUCTION-v0",
+  "title": "Potential-force commutator obstruction for the resolvent-smoothed coordinate",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001138",
+  "claim_bearing": false,
+  "parent_explorations": ["EXP-001137", "EXP-001136", "EXP-001120"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-ENERGY-WEIGHTED-COMMUTATOR-GEVREY-LR-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-RESOLVENT-ALGEBRA-EXACT-POLYNOMIAL-COMMON-ALPHA-CLOSURE",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "question": "Does the potential-force term V'(q) f'(q) in the second Heisenberg commutator remain uniformly K-form bounded for the fixed resolvent-smoothed coordinate f(q)=16q/(16+q^2)?",
+  "finite_fixture": {
+    "chi": "1",
+    "r": "-1",
+    "g": "3/5",
+    "per_site_shift": "17/12",
+    "resolvent_scale": "16",
+    "large_coordinate_square_threshold": "64",
+    "grid_y": [64, 100, 256, 1024, 4096, 16384],
+    "localization_derivative_energy_symbol": "C_phi"
+  },
+  "model": {
+    "shifted_potential": "V(q)=17/12-q^2/2+3q^4/20",
+    "force": "V'(q)=-q+3q^3/5",
+    "resolvent_derivative": "f'(q)=16(16-q^2)/(16+q^2)^2",
+    "commutator_factor": "G(q)=V'(q)f'(q)",
+    "large_coordinate_bound": "For y=q^2>=64, |V'(q)|>=|q|*y/2 and |f'(q)|>=2/y, hence |G(q)|>=|q|.",
+    "potential_bound": "For y>=64, V(q)>=y^2/20, so V(q)|G(q)|^2>=y^3/20.",
+    "localization_consequence": "On translated compactly supported C1 bumps with bounded derivative energy C_phi, the numerator potential contribution grows like R^6 while the denominator K-form grows like R^4; the ratio is therefore unbounded in this K-form route."
+  },
+  "scope": {
+    "pointwise_force_resolvent_obstruction_closed": true,
+    "localized_k_form_obstruction_closed": true,
+    "fixed_resolvent_first_commutator_closed": true,
+    "alternative_cancellation_aware_commutator_route_open": true,
+    "higher_energy_weight_route_open": true,
+    "second_commutator_closed": false,
+    "modular_domain_transfer_closed": false,
+    "direct_d_cauchy_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false
+  },
+  "adversarial_review": [
+    {"axis": "sign and asymptotics", "check": "The lower bounds use absolute values for the force and resolvent derivative on y>=64; no sign cancellation is assumed.", "disposition": "UPHELD"},
+    {"axis": "potential shift", "check": "The shifted quartic potential is lower-bounded by y^2/20 on the declared region; the positive shift is retained rather than dropped with an incorrect sign.", "disposition": "UPHELD"},
+    {"axis": "localization", "check": "The unbounded ratio is stated for translated compact-support C1 bumps with an explicit finite derivative-energy symbol C_phi; no Gaussian normalization or hidden boundary limit is used.", "disposition": "UPHELD-OPEN"},
+    {"axis": "commutator scope", "check": "Only the V'f' potential part of a second commutator is obstructed; kinetic f'', f''' and f'''' terms and cancellation-aware combinations remain open.", "disposition": "UPHELD-OPEN"},
+    {"axis": "route firewall", "check": "The result rejects the naive K-form multiplication route, not all higher-energy, state-weighted or modular estimates.", "disposition": "UPHELD-OPEN"},
+    {"axis": "QFT promotion", "check": "No common-alpha nonexistence, OS/KMS/GNS result, gap, continuum, C6, Sector A or Pre-A conclusion follows.", "disposition": "UPHELD-OPEN"}
+  ],
+  "files": {
+    "primary": "codes/foundations/pre_a_cp1_st8_q3lock_resolvent_force_commutator_obstruction.py",
+    "independent": "codes/foundations/pre_a_cp1_st8_q3lock_resolvent_force_commutator_obstruction_independent.py",
+    "integrated": "codes/foundations/pre_a_cp1_st8_q3lock_resolvent_force_commutator_obstruction_verify.py",
+    "lean": "verification/lean/Tect/R308.lean",
+    "primary_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-primary-pre_a_cp1_st8_q3lock_resolvent_force_commutator_obstruction/primary.json",
+    "independent_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-independent-pre_a_cp1_st8_q3lock_resolvent_force_commutator_obstruction/independent.json",
+    "integrated_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-integrated-pre_a_cp1_st8_q3lock_resolvent_force_commutator_obstruction/integrated.json"
+  },
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R308.lean",
+    "theorem_markers": ["force_lower_fixture", "resolvent_derivative_lower_fixture", "combined_force_derivative_lower_fixture", "potential_lower_fixture", "leading_coefficient_fixture"],
+    "command": "lake env lean Tect/R308.lean",
+    "boundary": "Lean checks exact rational pointwise inequalities and polynomial coefficients only; it does not formalize compact-support localization, operator commutators, cancellation, or QFT limits."
+  },
+  "qft_interface": {
+    "closed": "A route-local pointwise/localization obstruction to controlling the potential-force component of the second commutator by the current shifted K-form for the fixed resolvent coordinate.",
+    "open": "Cancellation-aware commutator combinations, higher-energy/state-weighted norms, modular transfer, direct D/delta-D Cauchy, exhaustion, common alpha, OS/KMS/GNS, gap, continuum and Pre-A.",
+    "tect_boundary": "Negative K-form route result only; no common infinite-volume dynamics or production-owner conclusion."
+  },
+  "no_overclaim": "This obstructs only the naive K-form multiplication estimate for the V'(q)f'(q) part of a second commutator under the declared localization test. It does not rule out cancellation-aware, higher-weight, modular, or alternative carrier constructions."
+}

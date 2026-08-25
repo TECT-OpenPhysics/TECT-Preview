@@ -3971,6 +3971,134 @@
       "task_id": "T-054",
       "title": "Epsilon-uniformity obstruction for resolvent-smoothed coordinate cylinders",
       "verdict": "failed"
+    },
+    {
+      "adversarial_review": [
+        {
+          "axis": "sign and asymptotics",
+          "check": "All lower bounds use absolute values on y>=64 and retain the correct sign of the resolvent derivative; no cancellation is assumed.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "potential shift",
+          "check": "The positive 17/12 shift is included and the lower bound V>=y^2/20 is checked exactly; no negative term is dropped without compensation.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "localization",
+          "check": "The unbounded ratio is conditional on translated compact-support C1 bumps with finite derivative energy C_phi; the package does not silently claim a full operator-domain theorem.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "commutator scope",
+          "check": "Only the V'f' potential component is obstructed; kinetic derivative terms and possible exact cancellations remain open.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "route firewall",
+          "check": "The failure is for the current shifted K-form multiplier route, not for higher-energy, modular or state-weighted constructions.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "QFT promotion",
+          "check": "No common-alpha nonexistence, OS/KMS/GNS result, gap, continuum, C6, Sector A or Pre-A conclusion follows.",
+          "disposition": "UPHELD-OPEN"
+        }
+      ],
+      "boundary": "This is a route-local pointwise/localization obstruction for the V'(q)f'(q) component of a second commutator. It is not a general second-commutator no-go, a common infinite-volume dynamics result, a full QFT reconstruction, a gap, continuum, C6, Sector A or Pre-A result.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "closed": [
+        "exact Q3 force and shifted-potential formulas on the declared one-site fixture",
+        "large-coordinate force lower bound",
+        "resolvent derivative lower bound",
+        "combined linear-tail and q^6 weighted-potential lower bounds",
+        "conditional compact-support localization obstruction",
+        "independent reproduction and Lean R308 cross-check"
+      ],
+      "decision_reason": "This is a route-local coercive obstruction rather than a finite numerical miss. Resolvent smoothing controls f and its first derivative, but the Q3 quartic force leaves a linear tail in V'f'. The result blocks only the naive second-commutator K-form route; cancellation-aware combinations, higher-energy/state-weighted norms, modular estimates, and different carriers remain open.",
+      "evidence_refs": [
+        "strategy/pre-a-cp1-st8-q3lock-resolvent-force-commutator-obstruction-manifest.json#model",
+        "codes/foundations/pre_a_cp1_st8_q3lock_resolvent_force_commutator_obstruction.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_resolvent_force_commutator_obstruction_independent.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_resolvent_force_commutator_obstruction_verify.py#run",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-primary-pre_a_cp1_st8_q3lock_resolvent_force_commutator_obstruction/primary.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-independent-pre_a_cp1_st8_q3lock_resolvent_force_commutator_obstruction/independent.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-integrated-pre_a_cp1_st8_q3lock_resolvent_force_commutator_obstruction/integrated.json#lean",
+        "verification/lean/Tect/R308.lean#combined_force_derivative_lower_fixture",
+        "verification/lean/registry.json#R308"
+      ],
+      "finding": "Primary 50/50, independent 36/36, integrated 12/12, and Lean R308 PASS. On y=q^2>=64 the exact force/derivative lower bounds give |V'(q)f'(q)|>=|q|, while the shifted potential satisfies V(q)>=q^4/20. Hence the potential contribution V|V'f'|^2 is at least q^6/20. Under the declared translated compact-support C1 localization test with finite derivative energy C_phi, the corresponding weighted numerator/denominator ratio grows at least like q^2. This obstructs the naive K-form multiplication route for the potential-force component of a second commutator, even at fixed resolvent scale.",
+      "formal_integration": {
+        "events": [],
+        "lean": "R308 PASS; metadata to be regenerated",
+        "negatives": [],
+        "no_new_event": true,
+        "no_new_negative": true,
+        "no_new_result": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "results": []
+      },
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": []
+      },
+      "gate_ids": [
+        "PA-CP1-ST8-Q3LOCK-ENERGY-WEIGHTED-COMMUTATOR-GEVREY-LR-CLOSURE",
+        "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+        "PA-CP1-ST8-Q3LOCK-RESOLVENT-ALGEBRA-EXACT-POLYNOMIAL-COMMON-ALPHA-CLOSURE",
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001138",
+      "method": [
+        "Use y=q^2 and the exact Q3 shifted potential V=17/12-y/2+3y^2/20, force V'=q(-1+3y/5), and resolvent derivative |f'|=16(y-16)/(16+y)^2 on y>=64.",
+        "Prove the exact lower bounds |V'|/|q|>=y/2, |f'|>=2/y, and V>=y^2/20, so |V'f'|>=|q| and V|V'f'|^2>=y^3/20.",
+        "Interpret the pointwise inequality on translated compactly supported C1 bumps with finite derivative energy C_phi: the potential part of the numerator grows like R^6 while the K-form denominator grows like R^4, giving a route-local unbounded ratio.",
+        "Reproduce the rational y-grid independently and compile Lean R308 for the force, derivative, combined numerator and potential polynomial inequalities."
+      ],
+      "next_action": "Test a cancellation-aware or state-weighted second-commutator estimate in which the V'f' tail is paired with the D/delta-D history rather than bounded as a standalone K-form multiplier. If no uniform pairing survives, retain this route obstruction and move to the exact Hamiltonian common-core carrier.",
+      "no_overclaim": "The failed route only excludes treating V'(q)f'(q) as a standalone K-form multiplier under the declared localization test. Cancellations, higher weights, state-weighted modular estimates and alternative carriers remain open.",
+      "open": [
+        "kinetic f'', f''' and f'''' commutator terms",
+        "cancellation-aware second-commutator combinations",
+        "higher-energy or state-weighted norms",
+        "cutoff- and beta-uniform modular transfer",
+        "direct D and delta-D Cauchy estimates",
+        "exhaustion independence and common alpha",
+        "Hamiltonian-to-OS/KMS/GNS identification, gap, continuum, C6, Sector A and Pre-A"
+      ],
+      "prior_exploration_id": "EXP-001137",
+      "provenance": "contemporaneous",
+      "qft_interface": {
+        "closed": "A route-local K-form obstruction for the potential-force part of the second commutator of the fixed resolvent coordinate under compact-support localization.",
+        "open": "Kinetic derivative terms, cancellation-aware commutators, higher-energy/state-weighted norms, modular/cutoff/beta transfer, direct D/delta-D Cauchy, exhaustion, common alpha, OS/KMS/GNS, gap, continuum and Pre-A.",
+        "tect_boundary": "Negative naive K-form result only; no common infinite-volume dynamics or production-owner conclusion."
+      },
+      "question": "Does the potential-force term V'(q) f'(q) in the second Heisenberg commutator remain uniformly K-form bounded for the fixed resolvent-smoothed coordinate f(q)=16q/(16+q^2)?",
+      "recorded_at": "2026-08-27T15:15:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001137",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001136",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001120",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-08-26",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Potential-force commutator obstruction for the resolvent-smoothed coordinate",
+      "verdict": "failed"
     }
   ],
   "kind": "proof_explorations",

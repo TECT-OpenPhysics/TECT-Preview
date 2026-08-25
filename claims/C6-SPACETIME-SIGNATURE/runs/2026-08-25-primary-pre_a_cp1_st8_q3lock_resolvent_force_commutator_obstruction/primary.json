@@ -1,0 +1,192 @@
+{
+  "assertion_count": 50,
+  "assertions": [
+    {
+      "actual": "['EXP-001138', 'T-054']",
+      "expected": "EXP-001138/T-054",
+      "group": "provenance",
+      "name": "identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "group": "scope",
+      "name": "claim nonbearing",
+      "status": "PASS"
+    },
+    {
+      "actual": "[Fraction(3, 5), Fraction(16, 1), Fraction(64, 1), [Fraction(64, 1), Fraction(100, 1), Fraction(256, 1), Fraction(1024, 1), Fraction(4096, 1), Fraction(16384, 1)]]",
+      "expected": "positive and above threshold",
+      "group": "hypotheses",
+      "name": "positive parameters",
+      "status": "PASS"
+    },
+    {
+      "actual": "[Fraction(-1, 1), Fraction(3, 5), Fraction(16, 1)]",
+      "expected": "[-1, Fraction(3, 5), 16]",
+      "group": "Q3 fixture",
+      "name": "model coefficients",
+      "status": "PASS"
+    },
+    {
+      "actual": "80",
+      "expected": ">0",
+      "group": "pointwise",
+      "name": "y 0 denominator",
+      "status": "PASS"
+    },
+    {
+      "actual": "[Fraction(187, 5), Fraction(32, 1)]",
+      "expected": ">=y/2",
+      "group": "force lower bound",
+      "name": "y 0 force positivity",
+      "status": "PASS"
+    },
+    {
+      "actual": "[Fraction(3, 25), Fraction(1, 32)]",
+      "expected": ">=2/y",
+      "group": "resolvent derivative lower bound",
+      "name": "y 0 derivative lower",
+      "status": "PASS"
+    },
+    {
+      "actual": "[Fraction(561, 125), Fraction(1, 1)]",
+      "expected": ">=1",
+      "group": "commutator lower bound",
+      "name": "y 0 combined lower",
+      "status": "PASS"
+    },
+    {
+      "actual": "[Fraction(35029, 60), Fraction(1024, 5)]",
+      "expected": ">=y^2/20",
+      "group": "potential coercivity",
+      "name": "y 0 potential lower",
+      "status": "PASS"
+    },
+    {
+      "actual": "[Fraction(65536, 5), Fraction(65536, 5)]",
+      "expected": ">=y^3/20",
+      "group": "weighted potential",
+      "name": "y 0 weighted density lower",
+      "status": "PASS"
+    },
+    {
+      "actual": "{\"groups\": {\"Q3 fixture\": 1, \"asymptotic coefficient\": 1, \"commutator lower bound\": 6, \"force lower bound\": 6, \"hypotheses\": 1, \"localization\": 1, \"localization ratio\": 6, \"pointwise\": 6, \"potential coercivity\": 6, \"provenance\": 1, \"resolvent derivative lower bound\": 6, \"scope\": 3, \"weighted potential\": 6}, \"storage\": \"compact-summary; all assertions executed in memory\", \"total\": 50}",
+      "expected": "all executed assertions passed",
+      "group": "summary",
+      "name": "assertion_summary",
+      "status": "PASS"
+    }
+  ],
+  "audit_id": "PA-CP1-ST8-Q3LOCK-RESOLVENT-FORCE-COMMUTATOR-OBSTRUCTION",
+  "boundary": {
+    "alternative_cancellation_aware_commutator_route_open": true,
+    "c6_closed": false,
+    "common_alpha_closed": false,
+    "continuum_closed": false,
+    "direct_d_cauchy_closed": false,
+    "fixed_resolvent_first_commutator_closed": true,
+    "hamiltonian_os_identification_closed": false,
+    "higher_energy_weight_route_open": true,
+    "kms_gns_gap_closed": false,
+    "localized_k_form_obstruction_closed": true,
+    "modular_domain_transfer_closed": false,
+    "pointwise_force_resolvent_obstruction_closed": true,
+    "pre_a_closed": false,
+    "second_commutator_closed": false,
+    "sector_a_closed": false
+  },
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "derived": {
+    "alternative_cancellation_aware_commutator_route_open": true,
+    "common_alpha_closed": false,
+    "fixed_resolvent_first_commutator_closed": true,
+    "higher_energy_weight_route_open": true,
+    "leading_force_derivative_coefficient": "48/5",
+    "localized_k_form_obstruction_closed": true,
+    "pointwise_force_resolvent_obstruction_closed": true,
+    "pre_a_closed": false,
+    "rows_y": [
+      {
+        "combined_lower": "561/125",
+        "force_lower": "32",
+        "force_over_q": "187/5",
+        "potential": "35029/60",
+        "potential_lower": "1024/5",
+        "ratio_lower": "64",
+        "resolvent_derivative": "3/25",
+        "resolvent_derivative_lower": "1/32",
+        "weighted_potential_lower": "65536/5",
+        "y": "64"
+      },
+      {
+        "combined_lower": "4956/841",
+        "force_lower": "50",
+        "force_over_q": "59",
+        "potential": "17417/12",
+        "potential_lower": "500",
+        "ratio_lower": "100",
+        "resolvent_derivative": "84/841",
+        "resolvent_derivative_lower": "1/50",
+        "weighted_potential_lower": "50000",
+        "y": "100"
+      },
+      {
+        "combined_lower": "2289/289",
+        "force_lower": "128",
+        "force_over_q": "763/5",
+        "potential": "582229/60",
+        "potential_lower": "16384/5",
+        "ratio_lower": "256",
+        "resolvent_derivative": "15/289",
+        "resolvent_derivative_lower": "1/128",
+        "weighted_potential_lower": "4194304/5",
+        "y": "256"
+      },
+      {
+        "combined_lower": "193221/21125",
+        "force_lower": "512",
+        "force_over_q": "3067/5",
+        "potential": "9406549/60",
+        "potential_lower": "262144/5",
+        "ratio_lower": "1024",
+        "resolvent_derivative": "63/4225",
+        "resolvent_derivative_lower": "1/512",
+        "weighted_potential_lower": "268435456/5",
+        "y": "1024"
+      },
+      {
+        "combined_lower": "626433/66049",
+        "force_lower": "2048",
+        "force_over_q": "12283/5",
+        "potential": "150872149/60",
+        "potential_lower": "4194304/5",
+        "ratio_lower": "4096",
+        "resolvent_derivative": "255/66049",
+        "resolvent_derivative_lower": "1/2048",
+        "weighted_potential_lower": "17179869184/5",
+        "y": "4096"
+      },
+      {
+        "combined_lower": "50277381/5253125",
+        "force_lower": "8192",
+        "force_over_q": "49147/5",
+        "potential": "2415427669/60",
+        "potential_lower": "67108864/5",
+        "ratio_lower": "16384",
+        "resolvent_derivative": "1023/1050625",
+        "resolvent_derivative_lower": "1/8192",
+        "weighted_potential_lower": "1099511627776/5",
+        "y": "16384"
+      }
+    ],
+    "second_commutator_closed": false
+  },
+  "exploration_id": "EXP-001138",
+  "passed": 50,
+  "run_kind": "primary",
+  "schema": "tect/foundation-audit/1.0",
+  "task_id": "T-054",
+  "verdict": "PASS"
+}
