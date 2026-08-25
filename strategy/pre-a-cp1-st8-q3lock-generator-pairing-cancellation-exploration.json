@@ -1,0 +1,86 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001140",
+  "title": "Full-generator Kubo-Mori pairing cancellation for actual finite Q3 D and delta-D",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-ENERGY-WEIGHTED-COMMUTATOR-GEVREY-LR-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "question": "For the actual finite Q3 history D(t), can the full generator pairing identity <delta^2 D,D>_KM + <delta D,delta D>_KM = 0 provide a genuine cancellation-aware replacement for isolating the divergent V'f' term?",
+  "method": [
+    "Build the exact finite Q3 Hamiltonian with oscillator dimension three on the two-site edge and four-site square, using the registered onsite and bond fixture. Replace only bond coordinates by the smooth cosine cutoff and define W_L=H-H_L.",
+    "For beta in {0.5,1,2}, time in {0.05,0.1}, cutoff radius in {0.5,1,2}, and both signs, generate the actual history D_sigma(t)=U_(H+sigma W_L)(t) A_2 U_(H+sigma W_L)(t)^* - U_H(t) A_2 U_H(t)^* and the exact finite generators delta_H(D)=i[H,D]/hbar and delta_H^2(D).",
+    "Diagonalize H and evaluate the two-sided Kubo-Mori inner product with the logarithmic-mean diagonal limit. Check the full-generator identity <delta_H^2 D,D>_KM + <delta_H D,delta_H D>_KM=0 and positivity of D, delta-D, and delta-squared-D forms in every row.",
+    "Rebuild the evolution independently in the H eigenbasis, compare summary rows within the declared tolerance, and compile Lean R310 for the exact rational spectral coefficients and cancellation identity."
+  ],
+  "finding": "Primary 316/316, independent 240/240, integrated 12/12, and Lean R310 PASS over 72 actual history rows. The complete finite generator pairing identity holds with cancellation errors at or below 1.1e-19 in the primary lane, and the independent eigenbasis lane agrees within the 1e-8 numerical tolerance. The Kubo-Mori delta-D maximum grows from the two-site edge to the four-site square by ratios 2.4036 (beta=0.5), 2.7175 (beta=1), and 3.1214 (beta=2). This validates a cancellation-aware finite identity but leaves source/volume/beta-uniform direct D/delta-D control unresolved.",
+  "verdict": "advanced",
+  "decision_reason": "The finite audit replaces the invalid termwise V'f' multiplier estimate by the exact full-generator skew-adjoint pairing, while retaining the actual D and delta-D histories rather than a proxy derivative. It closes a reusable finite lemma and a finite volume-growth diagnostic. The two volumes do not establish an asymptotic lower bound or a general no-go, and the identity alone gives no uniform constant, modular-domain theorem, product/core density, exhaustion independence, common alpha, OS/KMS/GNS identification, gap, continuum, C6, Sector A or Pre-A result.",
+  "closed": [
+    "actual finite Q3 D(t) and delta-D histories on two-site and square graphs",
+    "two-orientation cutoff history coverage",
+    "full-generator Kubo-Mori pairing cancellation identity",
+    "finite Kubo-Mori positivity and delta-squared rows",
+    "finite volume-growth diagnostic for the state-weighted delta-D norm",
+    "independent reproduction and Lean R310 cross-check"
+  ],
+  "open": [
+    "analytic source/volume/beta-uniform direct D and delta-D Cauchy estimate",
+    "modular-domain and operator-core boundary control",
+    "all-shape exhaustion independence and product/core density",
+    "beta-independent common alpha and group law",
+    "Hamiltonian-to-OS/KMS/GNS identification, gap, continuum, C6, Sector A and Pre-A"
+  ],
+  "adversarial_review": [
+    {"axis": "generator sign", "check": "The i[H,·]/hbar convention is used for both delta and delta-squared, and the spectral lane reproduces the same sign coefficient.", "disposition": "UPHELD"},
+    {"axis": "force cancellation", "check": "No termwise V'f' cancellation is asserted; delta-squared is paired as a complete generator so kinetic and potential pieces remain together.", "disposition": "UPHELD"},
+    {"axis": "Gibbs weights", "check": "The logarithmic-mean diagonal limit is used at equal probabilities and each beta row is formed from the actual H spectrum.", "disposition": "UPHELD"},
+    {"axis": "history definition", "check": "D and delta-D are produced from H and H+sigma W_L, not from the one-site h' proxy used in EXP-001139.", "disposition": "UPHELD"},
+    {"axis": "volume inference", "check": "Only volumes two and four are sampled; the ratios are diagnostics, not asymptotic monotonicity or a no-go theorem.", "disposition": "UPHELD-OPEN"},
+    {"axis": "QFT promotion", "check": "Uniform direct Cauchy, modular domain, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector A and Pre-A remain open.", "disposition": "UPHELD-OPEN"}
+  ],
+  "evidence_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-generator-pairing-cancellation-manifest.json#model",
+    "codes/foundations/pre_a_cp1_st8_q3lock_generator_pairing_cancellation.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_generator_pairing_cancellation_independent.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_generator_pairing_cancellation_verify.py#run",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-primary-pre_a_cp1_st8_q3lock_generator_pairing_cancellation/primary.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-independent-pre_a_cp1_st8_q3lock_generator_pairing_cancellation/independent.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-integrated-pre_a_cp1_st8_q3lock_generator_pairing_cancellation/integrated.json#lean",
+    "verification/lean/Tect/R310.lean#generator_pairing_scalar_fixture",
+    "verification/lean/registry.json#R310"
+  ],
+  "formal_integration": {
+    "events": [],
+    "results": [],
+    "negatives": [],
+    "lean": "R310 PASS; metadata regenerated",
+    "no_new_event": true,
+    "no_new_result": true,
+    "no_new_negative": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "qft_interface": {
+    "closed": "A finite actual-Q3 two-orientation D/delta-D history audit and a full-generator Kubo-Mori cancellation identity in each finite H eigenbasis.",
+    "open": "A source/volume/beta-uniform direct-Cauchy theorem, modular domain transfer, product/core density, exhaustion independence, common alpha, OS/KMS/GNS identification, gap, continuum and Pre-A.",
+    "tect_boundary": "This replaces only the invalid termwise-force estimate by a finite full-generator pairing; it is not a common infinite-volume dynamics theorem."
+  },
+  "next_action": "Extend the same full-generator pairing to the registered six-site 2x3 graph and a structured increasing cutoff/source family. Derive an analytic bound for the Kubo-Mori delta-D norm or, if the finite growth persists with a certified lower-bound family, record only that route-specific obstruction before moving to the exact common-core carrier.",
+  "related": [
+    {"id": "EXP-001139", "relation": "continues"},
+    {"id": "EXP-001090", "relation": "continues"},
+    {"id": "EXP-001123", "relation": "continues"}
+  ],
+  "prior_exploration_id": "EXP-001139",
+  "provenance": "contemporaneous",
+  "recorded_at": "2026-08-27T15:45:00Z",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-08-26",
+  "boundary": "This is a finite actual-Q3 full-generator Kubo-Mori pairing audit over two graphs, three beta values, three cutoffs, two times and both orientations. It is not a source/volume-uniform D/delta-D theorem, a common infinite-volume dynamics result, a full QFT reconstruction, a gap, continuum, C6, Sector A or Pre-A result.",
+  "no_overclaim": "The finite full-generator cancellation identity is valid and reusable, but it neither proves a uniform bound nor closes any common-alpha, OS/KMS/GNS, gap, continuum, C6, Sector A or Pre-A gate."
+}

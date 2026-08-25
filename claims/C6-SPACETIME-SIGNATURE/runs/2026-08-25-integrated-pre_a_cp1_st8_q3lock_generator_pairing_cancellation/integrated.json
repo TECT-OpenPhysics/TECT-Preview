@@ -1,0 +1,114 @@
+{
+  "assertion_count": 12,
+  "assertions": [
+    {
+      "actual": "['EXP-001140', 'T-054']",
+      "expected": "EXP-001140/T-054",
+      "name": "identity",
+      "pass": true
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "name": "claim nonbearing",
+      "pass": true
+    },
+    {
+      "actual": "['generator_pairing_scalar_fixture', 'skew_adjoint_scalar_fixture', 'modular_coefficient_fixture', 'orientation_sum_fixture']",
+      "expected": "present",
+      "name": "Lean source",
+      "pass": true
+    },
+    {
+      "actual": "[]",
+      "expected": "none",
+      "name": "Lean forbidden",
+      "pass": true
+    },
+    {
+      "actual": "PRIMARY GENERATOR-PAIRING-CANCELLATION PASS 316/316 rows=72\n",
+      "expected": "PASS",
+      "name": "primary child",
+      "pass": true
+    },
+    {
+      "actual": "INDEPENDENT GENERATOR-PAIRING-CANCELLATION PASS 240/240 rows=72\n",
+      "expected": "PASS",
+      "name": "independent child",
+      "pass": true
+    },
+    {
+      "actual": "[72, 72]",
+      "expected": "72",
+      "name": "row count agreement",
+      "pass": true
+    },
+    {
+      "actual": "[]",
+      "expected": "within tolerance",
+      "name": "summary agreement",
+      "pass": true
+    },
+    {
+      "actual": "[[{'beta': 0.5, 'edge_max_delta_D_km': 0.009270825180258407, 'square_max_delta_D_km': 0.022283324434287047, 'square_over_edge_ratio': 2.403596659522593}, {'beta': 1.0, 'edge_max_delta_D_km': 0.008768274205079368, 'square_max_delta_D_km': 0.02382746805088884, 'square_over_edge_ratio': 2.7174638353674934}, {'beta': 2.0, 'edge_max_delta_D_km': 0.007401527040245913, 'square_max_delta_D_km': 0.023103115829969392, 'square_over_edge_ratio': 3.121398557938903}], [{'beta': 0.5, 'edge_max_delta_D_km': 0.009270825180258407, 'square_max_delta_D_km': 0.02228332443428707, 'square_over_edge_ratio': 2.403596659522595}, {'beta': 1.0, 'edge_max_delta_D_km': 0.008768274205079368, 'square_max_delta_D_km': 0.02382746805088886, 'square_over_edge_ratio': 2.717463835367496}, {'beta': 2.0, 'edge_max_delta_D_km': 0.007401527040245914, 'square_max_delta_D_km': 0.023103115829969437, 'square_over_edge_ratio': 3.121398557938909}]]",
+      "expected": "within tolerance",
+      "name": "growth agreement",
+      "pass": true
+    },
+    {
+      "actual": "[{'common_alpha_closed': False, 'finite_actual_d_delta_rows_closed': True, 'finite_volume_growth_diagnostic_closed': True, 'full_generator_pairing_identity_closed': True, 'growth_rows': [{'beta': 0.5, 'edge_max_delta_D_km': 0.009270825180258407, 'square_max_delta_D_km': 0.022283324434287047, 'square_over_edge_ratio': 2.403596659522593}, {'beta': 1.0, 'edge_max_delta_D_km': 0.008768274205079368, 'square_max_delta_D_km': 0.02382746805088884, 'square_over_edge_ratio': 2.7174638353674934}, {'beta': 2.0, 'edge_max_delta_D_km': 0.007401527040245913, 'square_max_delta_D_km': 0.023103115829969392, 'square_over_edge_ratio': 3.121398557938903}], 'modular_domain_closed': False, 'pre_a_closed': False, 'row_count': 72, 'summary_rows': [{'beta': 0.5, 'max_D': 0.00600507030559777, 'max_D_km': 0.004078683718890759, 'max_cancellation_error': 2.7108461697060446e-20, 'max_delta2_D': 0.035681890194364976, 'max_delta2_D_km': 0.023275890252466132, 'max_delta_D': 0.014183800794153207, 'max_delta_D_km': 0.009270825180258407, 'volume': 2}, {'beta': 0.5, 'max_D': 0.008606972571749881, 'max_D_km': 0.00569942427610301, 'max_cancellation_error': 1.356045674671804e-20, 'max_delta2_D': 0.18952658964063818, 'max_delta2_D_km': 0.10236578558910403, 'max_delta_D': 0.03905409380578725, 'max_delta_D_km': 0.022283324434287047, 'volume': 4}, {'beta': 1.0, 'max_D': 0.00600507030559777, 'max_D_km': 0.0040282797091049935, 'max_cancellation_error': 2.7122000415866017e-20, 'max_delta2_D': 0.035681890194364976, 'max_delta2_D_km': 0.022042224387037134, 'max_delta_D': 0.014183800794153207, 'max_delta_D_km': 0.008768274205079368, 'volume': 2}, {'beta': 1.0, 'max_D': 0.008606972571749881, 'max_D_km': 0.005956653074308545, 'max_cancellation_error': 1.099141146146753e-19, 'max_delta2_D': 0.18952658964063818, 'max_delta2_D_km': 0.11149663539417469, 'max_delta_D': 0.03905409380578725, 'max_delta_D_km': 0.02382746805088884, 'volume': 4}, {'beta': 2.0, 'max_D': 0.00600507030559777, 'max_D_km': 0.003783139684359667, 'max_cancellation_error': 1.3667113409193123e-20, 'max_delta2_D': 0.035681890194364976, 'max_delta2_D_km': 0.018658291066021303, 'max_delta_D': 0.014183800794153207, 'max_delta_D_km': 0.007401527040245913, 'volume': 2}, {'beta': 2.0, 'max_D': 0.008606972571749881, 'max_D_km': 0.005782069334079727, 'max_cancellation_error': 1.0952286430993101e-19, 'max_delta2_D': 0.18952658964063818, 'max_delta2_D_km': 0.10993189843232874, 'max_delta_D': 0.03905409380578725, 'max_delta_D_km': 0.023103115829969392, 'volume': 4}], 'two_orientation_history_closed': True, 'uniform_beta_volume_direct_d_delta_d_closed': False}, {'common_alpha_closed': False, 'finite_actual_d_delta_rows_closed': True, 'finite_volume_growth_diagnostic_closed': True, 'full_generator_pairing_identity_closed': True, 'growth_rows': [{'beta': 0.5, 'edge_max_delta_D_km': 0.009270825180258407, 'square_max_delta_D_km': 0.02228332443428707, 'square_over_edge_ratio': 2.403596659522595}, {'beta': 1.0, 'edge_max_delta_D_km': 0.008768274205079368, 'square_max_delta_D_km': 0.02382746805088886, 'square_over_edge_ratio': 2.717463835367496}, {'beta': 2.0, 'edge_max_delta_D_km': 0.007401527040245914, 'square_max_delta_D_km': 0.023103115829969437, 'square_over_edge_ratio': 3.121398557938909}], 'modular_domain_closed': False, 'pre_a_closed': False, 'row_count': 72, 'summary_rows': [{'beta': 0.5, 'max_D': 0.00600507030559777, 'max_D_km': 0.004078683718890758, 'max_cancellation_error': 2.7610228275428463e-21, 'max_delta2_D': 0.03568189019436497, 'max_delta2_D_km': 0.02327589025246613, 'max_delta_D': 0.014183800794153208, 'max_delta_D_km': 0.009270825180258407, 'volume': 2}, {'beta': 0.5, 'max_D': 0.008606972571749881, 'max_D_km': 0.005699424276103021, 'max_cancellation_error': 5.589346303831659e-20, 'max_delta2_D': 0.18952658964063834, 'max_delta2_D_km': 0.10236578558910422, 'max_delta_D': 0.039054093805787185, 'max_delta_D_km': 0.02228332443428707, 'volume': 4}, {'beta': 1.0, 'max_D': 0.00600507030559777, 'max_D_km': 0.004028279709104994, 'max_cancellation_error': 2.1872562469316574e-21, 'max_delta2_D': 0.03568189019436497, 'max_delta2_D_km': 0.022042224387037134, 'max_delta_D': 0.014183800794153208, 'max_delta_D_km': 0.008768274205079368, 'volume': 2}, {'beta': 1.0, 'max_D': 0.008606972571749881, 'max_D_km': 0.00595665307430855, 'max_cancellation_error': 1.1092506431016438e-19, 'max_delta2_D': 0.18952658964063834, 'max_delta2_D_km': 0.11149663539417486, 'max_delta_D': 0.039054093805787185, 'max_delta_D_km': 0.02382746805088886, 'volume': 4}, {'beta': 2.0, 'max_D': 0.00600507030559777, 'max_D_km': 0.003783139684359667, 'max_cancellation_error': 1.3613782700418928e-20, 'max_delta2_D': 0.03568189019436497, 'max_delta2_D_km': 0.018658291066021303, 'max_delta_D': 0.014183800794153208, 'max_delta_D_km': 0.007401527040245914, 'volume': 2}, {'beta': 2.0, 'max_D': 0.008606972571749881, 'max_D_km': 0.005782069334079732, 'max_cancellation_error': 1.1238413093323156e-19, 'max_delta2_D': 0.18952658964063834, 'max_delta2_D_km': 0.109931898432329, 'max_delta_D': 0.039054093805787185, 'max_delta_D_km': 0.023103115829969437, 'volume': 4}], 'two_orientation_history_closed': True, 'uniform_beta_volume_direct_d_delta_d_closed': False}]",
+      "expected": "finite cancellation only",
+      "name": "finite route agreement",
+      "pass": true
+    },
+    {
+      "actual": "{'finite_actual_d_delta_rows_closed': True, 'full_generator_pairing_identity_closed': True, 'two_orientation_history_closed': True, 'finite_volume_growth_diagnostic_closed': True, 'uniform_beta_volume_direct_d_delta_d_closed': False, 'modular_domain_closed': False, 'product_core_density_closed': False, 'exhaustion_independence_closed': False, 'common_alpha_closed': False, 'hamiltonian_os_identification_closed': False, 'kms_gns_gap_closed': False, 'continuum_closed': False, 'c6_closed': False, 'sector_a_closed': False, 'pre_a_closed': False}",
+      "expected": "finite full-generator pairing; QFT gates open",
+      "name": "scope firewall",
+      "pass": true
+    },
+    {
+      "actual": "{'status': 'PASS', 'command': 'lake env lean Tect/R310.lean', 'returncode': 0, 'output': ''}",
+      "expected": "PASS",
+      "name": "Lean compile",
+      "pass": true
+    }
+  ],
+  "audit_id": "PA-CP1-ST8-Q3LOCK-GENERATOR-PAIRING-CANCELLATION",
+  "boundary": {
+    "c6_closed": false,
+    "common_alpha_closed": false,
+    "continuum_closed": false,
+    "exhaustion_independence_closed": false,
+    "finite_actual_d_delta_rows_closed": true,
+    "finite_volume_growth_diagnostic_closed": true,
+    "full_generator_pairing_identity_closed": true,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "modular_domain_closed": false,
+    "pre_a_closed": false,
+    "product_core_density_closed": false,
+    "sector_a_closed": false,
+    "two_orientation_history_closed": true,
+    "uniform_beta_volume_direct_d_delta_d_closed": false
+  },
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "exploration_id": "EXP-001140",
+  "lean": {
+    "command": "lake env lean Tect/R310.lean",
+    "output": "",
+    "returncode": 0,
+    "status": "PASS"
+  },
+  "provenance": {
+    "independent_sha256": "d4e183f03588b33fb1f2fd2f812a7b9d03e3e8993e58747dd9b0591340a7d24d",
+    "lean_sha256": "3d71e34de00eb2e8d6472d50cc81daac9a7a1079ed1c7eee048adbdc820bf912",
+    "manifest_sha256": "8c58ea89e7e1cbe2106d5e710a10dc3ac609532eed5602f04d111c2b9a49b52d",
+    "primary_sha256": "6e1cccec745476b6fa421e0bfe30c5e55c9e0f7522f84904c02fcc7aaefc2c60"
+  },
+  "recorded_at": "2026-08-25T15:59:09.752597Z",
+  "run_kind": "integrated",
+  "schema": "tect/foundation-audit/1.0",
+  "task_id": "T-054",
+  "verdict": "PASS"
+}
