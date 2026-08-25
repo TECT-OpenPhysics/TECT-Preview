@@ -1,0 +1,280 @@
+{
+  "assertions": [
+    {
+      "actual": [
+        "EXP-001116",
+        "T-054"
+      ],
+      "expected": "EXP-001116/T-054",
+      "group": "provenance",
+      "name": "identity",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "claim nonbearing",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/10",
+      "expected": "1/10",
+      "group": "fixture",
+      "name": "delta fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": 12,
+      "expected": 12,
+      "group": "recurrence",
+      "name": "branch count",
+      "status": "PASS"
+    },
+    {
+      "actual": "10",
+      "expected": 10,
+      "group": "radius-loss",
+      "name": "critical point n=1",
+      "status": "PASS"
+    },
+    {
+      "actual": "10",
+      "expected": 10,
+      "group": "radius-loss",
+      "name": "multiplier formula n=1",
+      "status": "PASS"
+    },
+    {
+      "actual": "20",
+      "expected": 20,
+      "group": "radius-loss",
+      "name": "critical point n=2",
+      "status": "PASS"
+    },
+    {
+      "actual": "400",
+      "expected": 400,
+      "group": "radius-loss",
+      "name": "multiplier formula n=2",
+      "status": "PASS"
+    },
+    {
+      "actual": "30",
+      "expected": 30,
+      "group": "radius-loss",
+      "name": "critical point n=3",
+      "status": "PASS"
+    },
+    {
+      "actual": "27000",
+      "expected": 27000,
+      "group": "radius-loss",
+      "name": "multiplier formula n=3",
+      "status": "PASS"
+    },
+    {
+      "actual": "40",
+      "expected": 40,
+      "group": "radius-loss",
+      "name": "critical point n=4",
+      "status": "PASS"
+    },
+    {
+      "actual": "2560000",
+      "expected": 2560000,
+      "group": "radius-loss",
+      "name": "multiplier formula n=4",
+      "status": "PASS"
+    },
+    {
+      "actual": 10000,
+      "expected": ">1",
+      "group": "same-radius",
+      "name": "same radius growth witness",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        {
+          "finite_envelope": 9.829106588114616,
+          "limit_envelope": 6830.181923227801,
+          "steps": 1
+        },
+        {
+          "finite_envelope": 29.317387374186843,
+          "limit_envelope": 6830.181923227801,
+          "steps": 2
+        },
+        {
+          "finite_envelope": 105.81462283685691,
+          "limit_envelope": 6830.181923227801,
+          "steps": 4
+        },
+        {
+          "finite_envelope": 383.5028471997531,
+          "limit_envelope": 6830.181923227801,
+          "steps": 8
+        },
+        {
+          "finite_envelope": 1130.9873912929122,
+          "limit_envelope": 6830.181923227801,
+          "steps": 16
+        }
+      ],
+      "expected": "<=exp(24/e)",
+      "group": "recurrence",
+      "name": "conditional recurrence finite envelope",
+      "status": "PASS"
+    },
+    {
+      "actual": 8.829106588114616,
+      "expected": "24/e",
+      "group": "recurrence",
+      "name": "conditional exponent",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "actual_q3_common_core_closed": false,
+        "actual_q3_entire_seminorm_closed": false,
+        "actual_q3_word_incidence_closed": false,
+        "c6_closed": false,
+        "common_alpha_closed": false,
+        "conditional_two_orientation_recurrence_closed": true,
+        "continuum_closed": false,
+        "direct_d_delta_d_cauchy_closed": false,
+        "dual_modular_tail_closed": false,
+        "exhaustion_independence_closed": false,
+        "hamiltonian_os_identification_closed": false,
+        "kms_gns_gap_closed": false,
+        "no_new_negative_result": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "not_closed": "The radius-loss calculus is formal weighted-function arithmetic. The conditional recurrence assumes the actual Q3 insertion bound, common core, six-neighbour history, and both orientations. None is supplied here.",
+        "pre_a_closed": false,
+        "radius_loss_multiplier_closed": true,
+        "same_radius_rejection_closed": true,
+        "sector_a_closed": false,
+        "volume_uniform_factorial_history_closed": false
+      },
+      "expected": "closed scalar rejection / open Q3",
+      "group": "scope",
+      "name": "same-radius scope",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "actual_q3_common_core_closed": false,
+        "actual_q3_entire_seminorm_closed": false,
+        "actual_q3_word_incidence_closed": false,
+        "c6_closed": false,
+        "common_alpha_closed": false,
+        "conditional_two_orientation_recurrence_closed": true,
+        "continuum_closed": false,
+        "direct_d_delta_d_cauchy_closed": false,
+        "dual_modular_tail_closed": false,
+        "exhaustion_independence_closed": false,
+        "hamiltonian_os_identification_closed": false,
+        "kms_gns_gap_closed": false,
+        "no_new_negative_result": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "not_closed": "The radius-loss calculus is formal weighted-function arithmetic. The conditional recurrence assumes the actual Q3 insertion bound, common core, six-neighbour history, and both orientations. None is supplied here.",
+        "pre_a_closed": false,
+        "radius_loss_multiplier_closed": true,
+        "same_radius_rejection_closed": true,
+        "sector_a_closed": false,
+        "volume_uniform_factorial_history_closed": false
+      },
+      "expected": "false/false",
+      "group": "scope",
+      "name": "history scope",
+      "status": "PASS"
+    }
+  ],
+  "boundary": "T0 claim-nonbearing radius-loss multiplier and conditional recurrence. It identifies the topology's required radius-loss shape but does not prove actual Q3 common-core dynamics.",
+  "derived": {
+    "M1": "1/(e*delta)",
+    "actual_q3_common_core_closed": false,
+    "actual_q3_entire_seminorm_closed": false,
+    "actual_q3_word_incidence_closed": false,
+    "branch_rate": "12/(e*delta)",
+    "common_alpha_closed": false,
+    "conditional_exponent": "24/e",
+    "conditional_two_orientation_recurrence_closed": true,
+    "delta": "1/10",
+    "multiplier_rows": [
+      {
+        "critical_y": "10",
+        "max_value": "(10/e)^1",
+        "max_without_e_power": "10",
+        "n": 1
+      },
+      {
+        "critical_y": "20",
+        "max_value": "(20/e)^2",
+        "max_without_e_power": "400",
+        "n": 2
+      },
+      {
+        "critical_y": "30",
+        "max_value": "(30/e)^3",
+        "max_without_e_power": "27000",
+        "n": 3
+      },
+      {
+        "critical_y": "40",
+        "max_value": "(40/e)^4",
+        "max_without_e_power": "2560000",
+        "n": 4
+      }
+    ],
+    "neighbours": 6,
+    "orientations": 2,
+    "radius_loss_multiplier_closed": true,
+    "recurrence_rows": [
+      {
+        "finite_envelope": 9.829106588114616,
+        "limit_envelope": 6830.181923227801,
+        "steps": 1
+      },
+      {
+        "finite_envelope": 29.317387374186843,
+        "limit_envelope": 6830.181923227801,
+        "steps": 2
+      },
+      {
+        "finite_envelope": 105.81462283685691,
+        "limit_envelope": 6830.181923227801,
+        "steps": 4
+      },
+      {
+        "finite_envelope": 383.5028471997531,
+        "limit_envelope": 6830.181923227801,
+        "steps": 8
+      },
+      {
+        "finite_envelope": 1130.9873912929122,
+        "limit_envelope": 6830.181923227801,
+        "steps": 16
+      }
+    ],
+    "same_radius_rejection_closed": true,
+    "time": "1/5",
+    "volume_uniform_factorial_history_closed": false
+  },
+  "exploration_id": "EXP-001116",
+  "failed": 0,
+  "passed": 17,
+  "provenance": {
+    "manifest": "strategy/pre_a_cp1_st8_q3lock_full_generator_radius_loss_multiplier_manifest.json",
+    "manifest_sha256": "61681d0dee271e073681106f11725026323febc0915a7e28a5ade9c8724c5d1d",
+    "script": "codes/foundations/pre_a_cp1_st8_q3lock_full_generator_radius_loss_multiplier.py",
+    "script_sha256": "e0616b88864717004f02b022f1688889e650ae0dfe4143845765f241dfe8d13f"
+  },
+  "run_kind": "primary",
+  "schema": "tect/foundation-audit/1.0",
+  "total": 17,
+  "verdict": "PASS"
+}

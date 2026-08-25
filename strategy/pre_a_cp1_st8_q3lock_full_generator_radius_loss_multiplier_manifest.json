@@ -1,0 +1,124 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-FULL-GENERATOR-RADIUS-LOSS-MULTIPLIER-v0",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001116",
+  "claim_bearing": false,
+  "parent_explorations": ["EXP-001115", "EXP-001042", "EXP-001030"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-FIRST-PASSAGE-BACKBONE-REAL-TIME-PRODUCT-AND-ENERGY-TAIL-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "question": "Does quartic source multiplication become continuous only after explicit entire-weight radius loss, and what conditional two-orientation recurrence constant follows?",
+  "model": {
+    "weighted_seminorm": "||f||_sigma=sup_{x>=0}|f(x)|*exp(-sigma*x^4)",
+    "source_multiplier": "M_n(delta)=sup_{x>=0} x^(4*n)*exp(-delta*x^4)",
+    "radius_loss": "M_n(delta)=(n/(e*delta))^n for delta>0",
+    "same_radius": "M_n(0)=infinity for n>=1",
+    "conditional_recurrence": "If each of six neighbours and two orientations contributes M_1(delta), then B_(N+1)<=(1+12*M_1(delta)*T/N)B_N"
+  },
+  "exact_statement": {
+    "calculus_identity": "Set y=x^4. The maximum of y^n*exp(-delta*y) is attained at y=n/delta and equals (n/(e*delta))^n.",
+    "same_radius_obstruction": "At delta=0, x^(4*n) is unbounded, so a same-radius Banach bound for quartic source multiplication is impossible.",
+    "conditional_limit": "Under the declared scalar recurrence hypothesis, B_N<=exp(12*M_1(delta)*T)B_0 as N tends to infinity.",
+    "operator_boundary": "The recurrence constant is a conditional coefficient-space insertion; no Q3 generator continuity or word incidence is proved."
+  },
+  "fixture": {
+    "delta": "1/10",
+    "time": "1/5",
+    "neighbours": 6,
+    "orientations": 2,
+    "orders": [1, 2, 3, 4],
+    "critical_y_n1": 10,
+    "conditional_exponent": "24/e",
+    "finite_steps": [1, 2, 4, 8, 16]
+  },
+  "scope": {
+    "radius_loss_multiplier_closed": true,
+    "same_radius_rejection_closed": true,
+    "conditional_two_orientation_recurrence_closed": true,
+    "actual_q3_entire_seminorm_closed": false,
+    "actual_q3_common_core_closed": false,
+    "actual_q3_word_incidence_closed": false,
+    "volume_uniform_factorial_history_closed": false,
+    "dual_modular_tail_closed": false,
+    "direct_d_delta_d_cauchy_closed": false,
+    "exhaustion_independence_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true,
+    "not_closed": "The radius-loss calculus is formal weighted-function arithmetic. The conditional recurrence assumes the actual Q3 insertion bound, common core, six-neighbour history, and both orientations. None is supplied here."
+  },
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R288.lean",
+    "command": "lake env lean Tect/R288.lean",
+    "declarations": ["delta_fixture", "n1_scale_fixture", "branch_count_fixture", "rational_exponent_fixture", "same_radius_witness"],
+    "role": "R288 checks the rational radius-loss fixture, branch count, conditional exponent coefficient, and a same-radius growth witness; it does not formalize calculus, exponentials, operators, or limits."
+  },
+  "formal_integration": {
+    "results": [],
+    "events": [],
+    "negatives": [],
+    "lean": "R288 PASS",
+    "no_new_result": true,
+    "no_new_negative": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "boundary": "T0 claim-nonbearing radius-loss multiplier and conditional recurrence. It identifies the topology's required radius-loss shape but does not prove actual Q3 common-core dynamics.",
+  "next_action": "Prove the actual Q3 shifted-force insertion into the radius-loss seminorm on one common core, with volume and orientation control; then test whether the conditional recurrence survives modular and exhaustion requirements.",
+  "verification": {
+    "primary_script": "codes/foundations/pre_a_cp1_st8_q3lock_full_generator_radius_loss_multiplier.py",
+    "independent_script": "codes/foundations/pre_a_cp1_st8_q3lock_full_generator_radius_loss_multiplier_independent.py",
+    "integrated_script": "codes/foundations/pre_a_cp1_st8_q3lock_full_generator_radius_loss_multiplier_verify.py"
+  },
+  "qft_interface": {
+    "closed": "Quartic source multiplication is unbounded at the same entire radius but has an explicit radius-loss multiplier, and the resulting six-neighbour/two-orientation recurrence is conditionally bounded.",
+    "open": "Actual Q3 common-core insertion, word incidence, volume-uniform history, dual modular tail, D/delta-D Cauchy, exhaustion, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector A and Pre-A remain open.",
+    "tect_boundary": "No heat_root_incidence or canonical A1/R-192 production owner is supplied by this weighted-function audit."
+  },
+  "adversarial_review": [
+    {
+      "axis": "calculus versus operator",
+      "check": "The maximum formula is for scalar weighted functions and is not identified with a Q3 operator norm.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "same-radius claim",
+      "check": "The same-radius failure is an explicit unbounded polynomial multiplier, not a claim that every possible topology fails.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "recurrence assumption",
+      "check": "The six-neighbour/two-orientation recurrence is labelled conditional and does not hide actual Q3 insertion or word-incidence hypotheses.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "volume and exhaustion",
+      "check": "A scalar volume-independent constant is not promoted to all-shape exhaustion or common-alpha convergence.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "QFT-to-TECT promotion",
+      "check": "No KMS/GNS, gap, continuum, C6, Sector A or Pre-A result follows.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "Lean scope",
+      "check": "R288 checks rational fixtures only and does not formalize the calculus or unbounded domains.",
+      "disposition": "UPHELD"
+    }
+  ],
+  "no_overclaim": "This package is a scalar radius-loss and conditional recurrence interface. It does not prove actual Q3 dynamics, a thermodynamic QFT, C6, Sector A, Pre-A, TECT production, or a Clay result."
+}
