@@ -1,0 +1,134 @@
+{
+  "assertion_count": 13,
+  "assertions": [
+    {
+      "actual": "['EXP-001112', 'T-054']",
+      "expected": "EXP-001112/T-054",
+      "group": "provenance",
+      "name": "identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'registered_finite_periodic_m20_uniform_corollary_closed': True, 'registered_finite_periodic_hard_cutoff_uniform_corollary_closed': True, 'registered_inputs_reused': True, 'all_shape_exhaustion_closed': False, 'beta_uniformity_closed': False, 'actual_unbounded_q3_common_core_closed': False, 'direct_d_delta_d_cauchy_closed': False, 'source_volume_history_uniformity_beyond_registered_scope_closed': False, 'exhaustion_independence_closed': False, 'common_alpha_closed': False, 'hamiltonian_os_identification_closed': False, 'kms_gns_gap_closed': False, 'continuum_closed': False, 'c6_closed': False, 'sector_a_closed': False, 'pre_a_closed': False}",
+      "expected": "registered finite scope",
+      "group": "scope",
+      "name": "scope firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": "120",
+      "expected": "120",
+      "group": "M20",
+      "name": "M20 composition",
+      "status": "PASS"
+    },
+    {
+      "actual": "38880",
+      "expected": "38880",
+      "group": "tail",
+      "name": "tail constant composition",
+      "status": "PASS"
+    },
+    {
+      "actual": "1",
+      "expected": "R^(2/5)",
+      "group": "cutoff",
+      "name": "R=1 cutoff",
+      "status": "PASS"
+    },
+    {
+      "actual": "38880",
+      "expected": ">=0",
+      "group": "tail",
+      "name": "R=1 tail nonnegative",
+      "status": "PASS"
+    },
+    {
+      "actual": "4",
+      "expected": "R^(2/5)",
+      "group": "cutoff",
+      "name": "R=32 cutoff",
+      "status": "PASS"
+    },
+    {
+      "actual": "1215/131072",
+      "expected": ">=0",
+      "group": "tail",
+      "name": "R=32 tail nonnegative",
+      "status": "PASS"
+    },
+    {
+      "actual": "25",
+      "expected": "R^(2/5)",
+      "group": "cutoff",
+      "name": "R=3125 cutoff",
+      "status": "PASS"
+    },
+    {
+      "actual": "7776/476837158203125",
+      "expected": ">=0",
+      "group": "tail",
+      "name": "R=3125 tail nonnegative",
+      "status": "PASS"
+    },
+    {
+      "actual": "7776/476837158203125",
+      "expected": "below initial",
+      "group": "tail",
+      "name": "tail decreases",
+      "status": "PASS"
+    },
+    {
+      "actual": "3/2",
+      "expected": ">0",
+      "group": "inputs",
+      "name": "transport factor positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "group": "scope",
+      "name": "source/site scope retained",
+      "status": "PASS"
+    }
+  ],
+  "audit_id": "PA-CP1-ST8-Q3LOCK-REGISTERED-M20-UNIFORM-HARD-CUTOFF-COROLLARY",
+  "boundary": "This is a registered-scope conditional composition. It makes the existing R-167 fifth-energy/history premise operational for the EXP-001111 hard cutoff, but does not prove those analytic inputs anew and does not cross the all-shape common-alpha gate.",
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "derived": {
+    "M20_star": "120",
+    "actual_unbounded_q3_common_core_closed": false,
+    "all_shape_exhaustion_closed": false,
+    "beta_uniformity_closed": false,
+    "common_alpha_closed": false,
+    "direct_d_delta_d_cauchy_closed": false,
+    "registered_finite_periodic_hard_cutoff_uniform_corollary_closed": true,
+    "registered_finite_periodic_m20_uniform_corollary_closed": true,
+    "registered_inputs_reused": true,
+    "tail_constant": "38880",
+    "tail_rows": [
+      {
+        "L": 1,
+        "R": 1,
+        "tail": "38880"
+      },
+      {
+        "L": 4,
+        "R": 32,
+        "tail": "1215/131072"
+      },
+      {
+        "L": 25,
+        "R": 3125,
+        "tail": "7776/476837158203125"
+      }
+    ]
+  },
+  "exploration_id": "EXP-001112",
+  "passed": 13,
+  "run_kind": "primary",
+  "schema": "tect/foundation-audit/1.0",
+  "task_id": "T-054",
+  "verdict": "PASS"
+}

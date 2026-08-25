@@ -1,0 +1,98 @@
+{
+  "assertion_count": 12,
+  "assertions": [
+    {
+      "actual": "['EXP-001112', 'T-054']",
+      "expected": "EXP-001112/T-054",
+      "name": "identity",
+      "pass": true
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "name": "claim nonbearing",
+      "pass": true
+    },
+    {
+      "actual": "E:\\Dev\\TECT\\verification\\lean\\Tect\\R284.lean",
+      "expected": "R284 declarations",
+      "name": "Lean declarations",
+      "pass": true
+    },
+    {
+      "actual": "[]",
+      "expected": "none",
+      "name": "Lean forbidden",
+      "pass": true
+    },
+    {
+      "actual": "{'registered_finite_periodic_m20_uniform_corollary_closed': True, 'registered_finite_periodic_hard_cutoff_uniform_corollary_closed': True, 'registered_inputs_reused': True, 'all_shape_exhaustion_closed': False, 'beta_uniformity_closed': False, 'actual_unbounded_q3_common_core_closed': False, 'direct_d_delta_d_cauchy_closed': False, 'source_volume_history_uniformity_beyond_registered_scope_closed': False, 'exhaustion_independence_closed': False, 'common_alpha_closed': False, 'hamiltonian_os_identification_closed': False, 'kms_gns_gap_closed': False, 'continuum_closed': False, 'c6_closed': False, 'sector_a_closed': False, 'pre_a_closed': False}",
+      "expected": "registered finite scope with QFT successors open",
+      "name": "scope firewall",
+      "pass": true
+    },
+    {
+      "actual": "PRIMARY REGISTERED-M20-HARD-CUTOFF-COROLLARY PASS 13/13\n",
+      "expected": "PASS",
+      "name": "primary child",
+      "pass": true
+    },
+    {
+      "actual": "INDEPENDENT REGISTERED-M20-HARD-CUTOFF-COROLLARY PASS 12/12\n",
+      "expected": "PASS",
+      "name": "independent child",
+      "pass": true
+    },
+    {
+      "actual": "['120', '120.000']",
+      "expected": "120",
+      "name": "M20 agreement",
+      "pass": true
+    },
+    {
+      "actual": "['38880', '38880']",
+      "expected": "38880",
+      "name": "tail constant agreement",
+      "pass": true
+    },
+    {
+      "actual": "[3, 3]",
+      "expected": "3",
+      "name": "tail rows",
+      "pass": true
+    },
+    {
+      "actual": "{'M20_star': '120', 'actual_unbounded_q3_common_core_closed': False, 'all_shape_exhaustion_closed': False, 'beta_uniformity_closed': False, 'common_alpha_closed': False, 'direct_d_delta_d_cauchy_closed': False, 'registered_finite_periodic_hard_cutoff_uniform_corollary_closed': True, 'registered_finite_periodic_m20_uniform_corollary_closed': True, 'registered_inputs_reused': True, 'tail_constant': '38880', 'tail_rows': [{'L': 1, 'R': 1, 'tail': '38880'}, {'L': 4, 'R': 32, 'tail': '1215/131072'}, {'L': 25, 'R': 3125, 'tail': '7776/476837158203125'}]}",
+      "expected": "closed",
+      "name": "derived flags",
+      "pass": true
+    },
+    {
+      "actual": "{'status': 'PASS', 'command': 'lake env lean Tect/R284.lean', 'returncode': 0, 'output': ''}",
+      "expected": "PASS",
+      "name": "Lean compile",
+      "pass": true
+    }
+  ],
+  "audit_id": "PA-CP1-ST8-Q3LOCK-REGISTERED-M20-UNIFORM-HARD-CUTOFF-COROLLARY",
+  "boundary": "This is a registered-scope conditional composition. It makes the existing R-167 fifth-energy/history premise operational for the EXP-001111 hard cutoff, but does not prove those analytic inputs anew and does not cross the all-shape common-alpha gate.",
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "exploration_id": "EXP-001112",
+  "lean": {
+    "command": "lake env lean Tect/R284.lean",
+    "output": "",
+    "returncode": 0,
+    "status": "PASS"
+  },
+  "provenance": {
+    "independent_sha256": "bfa503f804a944368f5491d9169469b51e359c6ef9578355e617b0a4d59b0533",
+    "lean_sha256": "02621845589d21e5f17638deaf02dfe68f3f26b929e429aba2ced16bbeb153da",
+    "manifest_sha256": "ca12bd93152e7e1814bd29266baad37088961759cbd9ec9226151e45ea06a28c",
+    "primary_sha256": "2c875a10a539da935f065316f11b95b7c7c23643fd94b826421ac9deb6695382"
+  },
+  "recorded_at": "2026-08-25T05:41:32.642237Z",
+  "run_kind": "integrated",
+  "schema": "tect/foundation-audit/1.0",
+  "task_id": "T-054",
+  "verdict": "PASS"
+}

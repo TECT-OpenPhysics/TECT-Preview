@@ -1,0 +1,98 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-REGISTERED-M20-UNIFORM-HARD-CUTOFF-COROLLARY-v0",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001112",
+  "claim_bearing": false,
+  "parent_explorations": ["EXP-001111", "EXP-001110", "EXP-001026"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "question": "Can the registered R-167 fifth-energy transport inputs be composed with the EXP-001111 hard-cutoff algebra to produce a fixed-beta periodic compact-source M20 and tail constant uniform in finite volume, site and declared split history?",
+  "registered_inputs": {
+    "m5": "sup_phi k_(x,h)^5, uniformly finite over the registered fixed-beta periodic compact-source family",
+    "d5": "sup || |q|^10 k_h^(-5/2) ||, uniformly finite in that same scope",
+    "G5": "the fifth graph transport constant for the simultaneous all-cross-bond shear, uniform in the declared finite cubic periodic family",
+    "S_mu": "the finite exponential weight sum with endpoint weights one",
+    "T": "the declared total absolute bond-history time",
+    "tail": "EXP-001111 hard-tail coefficient 2916*c^2*R^(-2/5)"
+  },
+  "exact_statement": {
+    "m20_constant": "M20_star = 2*d5^2*exp(G5*T)*S_mu^5*m5",
+    "uniform_m20": "For every finite periodic cubic volume, tested edge/site translate, compact onsite source and declared two-orientation split history of total time at most T, M20 <= M20_star, provided the registered R-167 inputs hold.",
+    "uniform_tail": "The EXP-001111 hard cutoff L=R^(2/5) then gives two-orientation tail <=2916*c^2*M20_star*R^(-2/5)."
+  },
+  "finite_fixture": {
+    "d5": "1/2",
+    "transport_factor_exp_G5T": "3/2",
+    "S_mu": "2",
+    "m5": "5",
+    "c": "1/3",
+    "R_values_exact_fifth_power": [1, 32, 3125],
+    "safe_tail_constant": "38880",
+    "agreement_tolerance": 1.0e-12
+  },
+  "scope": {
+    "registered_finite_periodic_m20_uniform_corollary_closed": true,
+    "registered_finite_periodic_hard_cutoff_uniform_corollary_closed": true,
+    "registered_inputs_reused": true,
+    "all_shape_exhaustion_closed": false,
+    "beta_uniformity_closed": false,
+    "actual_unbounded_q3_common_core_closed": false,
+    "direct_d_delta_d_cauchy_closed": false,
+    "source_volume_history_uniformity_beyond_registered_scope_closed": false,
+    "exhaustion_independence_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false
+  },
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R284.lean",
+    "command": "lake env lean Tect/R284.lean",
+    "declarations": ["m20_constant_fixture", "uniform_tail_fixture", "scope_fixture"],
+    "boundary": "R284 checks only the rational composition of the registered constants; it does not prove the R-167 analytic inputs, all-shape exhaustion, unbounded Q3 domains, direct D/delta-D convergence or a QFT limit."
+  },
+  "formal_integration": {
+    "events": [],
+    "results": [],
+    "negatives": [],
+    "lean": "R284 PASS",
+    "no_new_event": true,
+    "no_new_result": true,
+    "no_new_negative": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "adversarial_review": [
+    {
+      "axis": "input reuse",
+      "check": "m5,d5,G5,S_mu are cited only in the exact R-167 fixed-beta periodic compact-source scope; no stronger uniformity is inferred.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "two-orientation factor",
+      "check": "The leading factor two is retained in M20_star and is not counted again in the EXP-001111 tail coefficient.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "finite-volume wording",
+      "check": "Uniform means the registered finite periodic cubic family and declared histories only; arbitrary exhaustion shapes and beta limits remain open.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "QFT promotion",
+      "check": "The corollary does not identify a common alpha or close OS/KMS/GNS, gap, continuum, C6, Sector A or Pre-A.",
+      "disposition": "UPHELD-OPEN"
+    }
+  ],
+  "boundary": "This is a registered-scope conditional composition. It makes the existing R-167 fifth-energy/history premise operational for the EXP-001111 hard cutoff, but does not prove those analytic inputs anew and does not cross the all-shape common-alpha gate.",
+  "next_action": "Use the registered finite-periodic M20 constant in a direct D/delta-D estimate, then prove compatibility across arbitrary exhaustion shapes and the unbounded common core before common-alpha identification.",
+  "no_overclaim": "A source/site/finite-volume-uniform corollary inside a registered regulator family is not an all-exhaustion thermodynamic dynamics theorem."
+}
