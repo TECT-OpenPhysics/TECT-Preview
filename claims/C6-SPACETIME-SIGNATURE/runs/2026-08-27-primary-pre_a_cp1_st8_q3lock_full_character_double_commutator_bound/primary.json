@@ -1,0 +1,211 @@
+{
+  "assertion_count": 190,
+  "assertions": [
+    {
+      "actual": "['EXP-001152', 'T-054']",
+      "expected": "EXP-001152/T-054",
+      "group": "provenance",
+      "name": "identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "group": "scope",
+      "name": "claim nonbearing",
+      "status": "PASS"
+    },
+    {
+      "actual": "EXP-001068",
+      "expected": "EXP-001068 kinetic input",
+      "group": "upstream",
+      "name": "kinetic parent",
+      "status": "PASS"
+    },
+    {
+      "actual": "EXP-001061",
+      "expected": "EXP-001061 pair-moment input",
+      "group": "upstream",
+      "name": "force parent",
+      "status": "PASS"
+    },
+    {
+      "actual": "m5<infinity and d5<infinity uniformly in the declared scope.",
+      "expected": "uniform registered m5",
+      "group": "upstream",
+      "name": "m5 authority",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'chi': '1', 'hbar': '1', 'g': '3/5', 'r': '-9/2', 'gamma': '1/100', 'c': '1', 'lambda': '1/10', 'm5': '3', 'degree': 6, 'character_amplitude': '1/4', 'field_grid': [-4, -3, -2, -1, 0, 1, 2, 3, 4], 'source_scope': 'registered finite periodic Q3 volumes at fixed beta, compact onsite sources and uniform site translates'}",
+      "expected": "positive inputs",
+      "group": "hypotheses",
+      "name": "positive parameters",
+      "status": "PASS"
+    },
+    {
+      "actual": "1364850",
+      "expected": "8*(r^4/gamma+g^4/gamma^3)",
+      "group": "onsite force",
+      "name": "onsite force coefficient",
+      "status": "PASS"
+    },
+    {
+      "actual": "12/5",
+      "expected": "2*c+4*lambda",
+      "group": "edge force",
+      "name": "edge constant derivation",
+      "status": "PASS"
+    },
+    {
+      "actual": "35834571/64",
+      "expected": "35834571/64",
+      "group": "pair moment",
+      "name": "pair moment agreement",
+      "status": "PASS"
+    },
+    {
+      "actual": "220167604224/5",
+      "expected": "C_edge^4*max(1,8/g)^3*M_pair",
+      "group": "edge force",
+      "name": "edge single formula",
+      "status": "PASS"
+    },
+    {
+      "actual": "285337215074304/5",
+      "expected": "z^4*single_edge",
+      "group": "edge force",
+      "name": "edge count",
+      "status": "PASS"
+    },
+    {
+      "actual": "2282697884376432/5",
+      "expected": "8*(A_on*m5+A_edge)",
+      "group": "force moment",
+      "name": "full force fourth formula",
+      "status": "PASS"
+    },
+    {
+      "actual": "2282697884376432/5",
+      "expected": ">=1 for rational safe L2 envelope",
+      "group": "force moment",
+      "name": "force fourth finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "49153/65536",
+      "expected": "EXP-001068 kinetic bound",
+      "group": "composition",
+      "name": "kinetic composition",
+      "status": "PASS"
+    },
+    {
+      "actual": "285337235547054/5",
+      "expected": "safe force L2 bound",
+      "group": "composition",
+      "name": "force character composition",
+      "status": "PASS"
+    },
+    {
+      "actual": "18699861068811976709/163840",
+      "expected": "2*(kinetic+force)",
+      "group": "composition",
+      "name": "full triangle envelope",
+      "status": "PASS"
+    },
+    {
+      "actual": "[-4, Fraction(-102, 5)]",
+      "expected": "analytic onsite envelope",
+      "group": "grid sanity",
+      "name": "onsite grid q=-4",
+      "status": "PASS"
+    },
+    {
+      "actual": "[-4, -4, Fraction(0, 1)]",
+      "expected": "analytic edge envelope",
+      "group": "grid sanity",
+      "name": "edge grid q=-4 v=-4",
+      "status": "PASS"
+    },
+    {
+      "actual": "{\"groups\": {\"boundary\": 1, \"composition\": 3, \"edge force\": 3, \"force moment\": 2, \"grid sanity\": 172, \"hypotheses\": 1, \"onsite force\": 1, \"pair moment\": 1, \"provenance\": 1, \"scope\": 2, \"upstream\": 3}, \"storage\": \"compact-summary; all assertions executed in memory\", \"total\": 190}",
+      "expected": "all executed assertions passed",
+      "group": "summary",
+      "name": "assertion_summary",
+      "status": "PASS"
+    }
+  ],
+  "audit_id": "PA-CP1-ST8-Q3LOCK-FULL-CHARACTER-DOUBLE-COMMUTATOR-BOUND",
+  "boundary": {
+    "actual_q3_four_context_history_closed": false,
+    "all_shape_exhaustion_uniformity_closed": false,
+    "arbitrary_boundary_extension_closed": false,
+    "c6_closed": false,
+    "common_alpha_closed": false,
+    "compact_source_pair_third_moment_reused": true,
+    "continuum_closed": false,
+    "delta_d_cauchy_closed": false,
+    "exact_ccr_common_core_closed": false,
+    "exhaustion_independence_closed": false,
+    "full_character_second_commutator_safe_bound_closed": true,
+    "full_onsite_edge_force_fourth_moment_bound_closed": true,
+    "global_scalar_edge_force_bound_closed": true,
+    "group_law_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "modular_domain_transfer_closed": false,
+    "no_new_negative_result": true,
+    "no_pdf": true,
+    "no_tier_change": true,
+    "onsite_force_fourth_moment_envelope_closed": true,
+    "pre_a_closed": false,
+    "product_core_density_closed": false,
+    "registered_periodic_compact_source_static_q3_scope_closed": true,
+    "sector_a_closed": false,
+    "volume_uniform_direct_d_cauchy_closed": false
+  },
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "derived": {
+    "actual_q3_four_context_history_closed": false,
+    "all_shape_exhaustion_uniformity_closed": false,
+    "arbitrary_boundary_extension_closed": false,
+    "c6_closed": false,
+    "common_alpha_closed": false,
+    "continuum_closed": false,
+    "delta_d_cauchy_closed": false,
+    "edge_constant": "12/5",
+    "edge_force_grid_rows": 81,
+    "edge_single_fourth_bound": "220167604224/5",
+    "edge_sum_fourth_bound": "285337215074304/5",
+    "exact_ccr_common_core_closed": false,
+    "exhaustion_independence_closed": false,
+    "force_fourth_bound": "2282697884376432/5",
+    "force_safe_second_norm_bound": "285337235547054/5",
+    "full_character_second_commutator_safe_bound_closed": true,
+    "full_onsite_edge_force_fourth_moment_bound_closed": true,
+    "full_safe_second_norm_bound": "18699861068811976709/163840",
+    "global_scalar_edge_force_bound_closed": true,
+    "group_law_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kinetic_second_norm_bound": "49153/65536",
+    "kms_gns_gap_closed": false,
+    "max_pair_factor": "40/3",
+    "modular_domain_transfer_closed": false,
+    "onsite_force_fourth_coefficient": "1364850",
+    "onsite_force_fourth_moment_envelope_closed": true,
+    "onsite_force_grid_rows": 9,
+    "pair_energy_grid_rows": 81,
+    "pair_moment": "35834571/64",
+    "pre_a_closed": false,
+    "product_core_density_closed": false,
+    "registered_periodic_compact_source_static_q3_scope_closed": true,
+    "sector_a_closed": false,
+    "volume_uniform_direct_d_cauchy_closed": false
+  },
+  "exploration_id": "EXP-001152",
+  "passed": 190,
+  "run_kind": "primary",
+  "schema": "tect/foundation-audit/1.0",
+  "task_id": "T-054",
+  "verdict": "PASS"
+}

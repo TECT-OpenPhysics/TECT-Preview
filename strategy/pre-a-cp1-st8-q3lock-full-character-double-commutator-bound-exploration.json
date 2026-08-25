@@ -1,0 +1,87 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001152",
+  "title": "Registered-family full Q3 character double-commutator bound",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-ENERGY-WEIGHTED-COMMUTATOR-GEVREY-LR-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "question": "Can the registered kinetic character estimate and compact-source endpoint moment be combined with a global scalar edge-force inequality to bound the complete onsite-plus-edge Q3 force and the full local-character second commutator uniformly over the registered finite periodic compact-source family?",
+  "method": [
+    "Reuse the EXP-001068 kinetic character bound and the EXP-001061 compact-source pair third-moment bridge, checking their identities and scope directly from the authority manifests.",
+    "Derive a global edge-force polynomial bound with S=1+q^4+v^4, |q-v|<=2*S^(1/4), and |2q^2-qv+v^2|<=4*S^(1/2), giving C_edge=2c+4lambda.",
+    "Derive the onsite cubic-force fourth envelope from k_x>=1+gamma*q_x^4 and the registered m5 bound, retaining q^12<=k_x^5/gamma^3.",
+    "Use the pair third-moment bridge and the z-neighbour fourth-power sum inequality to bound the complete onsite-plus-edge force fourth moment.",
+    "Combine the exact kinetic/force CCR split with the two-sided Hilbert-space triangle inequality, and use a deliberately loose rational square-root envelope for an exact reproducible coefficient.",
+    "Rebuild all rational arithmetic in an independent lane, check a reversed field grid as a sanity test, and compile Lean R322 for the exact fixtures."
+  ],
+  "finding": "Primary 190/190, independent 187/187, integrated 33/33, and Lean R322 PASS. The global edge constant is 12/5; the pair third-moment bound is 35834571/64; the complete force fourth bound is 2282697884376432/5; the kinetic second-norm bound is 49153/65536; and the deliberately safe rational full second-norm bound is 18699861068811976709/163840.",
+  "verdict": "advanced",
+  "decision_reason": "The previously separate kinetic and force obligations now compose into a complete static two-sided second-commutator envelope on the registered finite periodic compact-source family. The force estimate is rebuilt from global polynomial inequalities rather than a finite grid. This is a genuine QFT-facing static input, but it does not sum time histories or establish arbitrary-boundary/all-shape common dynamics.",
+  "closed": [
+    "global scalar edge-force polynomial envelope",
+    "onsite cubic-force fourth-moment envelope from the registered onsite split",
+    "registered compact-source pair third-moment reuse",
+    "complete onsite-plus-edge force fourth-moment bound",
+    "full local-character static second-commutator safe envelope",
+    "independent exact arithmetic and Lean R322 cross-check"
+  ],
+  "open": [
+    "arbitrary-boundary and all-shape extension",
+    "exact CCR/common-core and modular-domain transfer",
+    "complete four-context history and factorial incidence",
+    "volume-, cutoff- and beta-uniform direct D/delta-D Cauchy",
+    "product/core density, exhaustion independence and group law",
+    "common alpha and Hamiltonian-to-OS identification",
+    "KMS/GNS gap, continuum, C6, Sector A and Pre-A"
+  ],
+  "adversarial_review": [
+    {"axis": "edge force", "check": "The global constant 2c+4lambda is derived analytically from S bounds and is not fitted to the finite grid.", "disposition": "UPHELD"},
+    {"axis": "onsite force", "check": "The cubic onsite force is controlled through q^4<=k/gamma and q^12<=k^5/gamma^3 with the full absolute-value coefficient retained.", "disposition": "UPHELD"},
+    {"axis": "neighbour sum", "check": "The z^3 fourth-power inequality and the z edge count are both present.", "disposition": "UPHELD"},
+    {"axis": "upstream scope", "check": "EXP-001061 and the m5 authority are reused only in their registered periodic compact-source scope.", "disposition": "UPHELD-OPEN"},
+    {"axis": "kinetic force split", "check": "The shifted kinetic and complete force terms remain separate before the final norm composition.", "disposition": "UPHELD"},
+    {"axis": "safe envelope", "check": "The rational full coefficient is deliberately loose and is not presented as sharp.", "disposition": "UPHELD"},
+    {"axis": "QFT promotion", "check": "Static registered-family control does not imply history, direct Cauchy, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector A or Pre-A.", "disposition": "UPHELD-OPEN"},
+    {"axis": "Lean", "check": "R322 checks rational fixtures only and has no analytic axioms or limit theorem.", "disposition": "UPHELD"}
+  ],
+  "evidence_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-full-character-double-commutator-bound-manifest.json#model",
+    "strategy/pre-a-cp1-st8-q3lock-full-character-double-commutator-bound-certificate-260827.md#Decision",
+    "codes/foundations/pre_a_cp1_st8_q3lock_full_character_double_commutator_bound.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_full_character_double_commutator_bound_independent.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_full_character_double_commutator_bound_verify.py#run",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-27-primary-pre_a_cp1_st8_q3lock_full_character_double_commutator_bound/primary.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-27-independent-pre_a_cp1_st8_q3lock_full_character_double_commutator_bound/independent.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-27-integrated-pre_a_cp1_st8_q3lock_full_character_double_commutator_bound/integrated.json#lean",
+    "strategy/pre-a-cp1-st8-q3lock-uniform-kinetic-character-moment-corollary-manifest.json#model",
+    "strategy/pre-a-cp1-st8-q3lock-compact-source-endpoint-third-moment-bridge-manifest.json#model",
+    "verification/lean/Tect/R322.lean#force_fourth_fixture",
+    "verification/lean/registry.json#R322"
+  ],
+  "formal_refs": {"results": [], "negatives": [], "events": []},
+  "formal_integration": {"lean": "R322 PASS", "results": [], "negatives": [], "events": [], "no_new_result": true, "no_new_negative": true, "no_tier_change": true, "no_pdf": true},
+  "qft_interface": {
+    "closed": "A registered-family static two-sided second-commutator envelope for local configuration characters, including both kinetic and complete onsite-plus-edge force pieces.",
+    "open": "Arbitrary boundaries, all-shape exhaustion, exact domains, modular transfer, complete history, direct D/delta-D Cauchy, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector A and Pre-A.",
+    "tect_boundary": "No heat_root_incidence or canonical A1/R-192 production owner is supplied."
+  },
+  "related": [
+    {"id": "EXP-001068", "relation": "continues"},
+    {"id": "EXP-001061", "relation": "continues"},
+    {"id": "EXP-001067", "relation": "continues"},
+    {"id": "EXP-001129", "relation": "continues"}
+  ],
+  "prior_exploration_id": "EXP-001151",
+  "provenance": "contemporaneous",
+  "recorded_at": "2026-08-27T21:00:00Z",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-08-26",
+  "next_action": "Insert the complete static second-commutator envelope into a two-sided finite-time Duhamel/history estimate on the registered periodic compact-source word class; keep product, modular and all-shape costs explicit before any common-alpha promotion.",
+  "boundary": "T0 claim-nonbearing registered-family static Q3 input. It is a conditional composition over recorded moment authorities and is not a thermodynamic dynamics theorem.",
+  "no_overclaim": "Only the declared registered-family static force and second-commutator envelope is closed. History, direct Cauchy, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector A and Pre-A remain open."
+}
