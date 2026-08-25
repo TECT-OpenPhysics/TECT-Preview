@@ -1,0 +1,227 @@
+{
+  "assertion_count": 22,
+  "assertions": [
+    {
+      "actual": "['EXP-001111', 'T-054']",
+      "expected": "EXP-001111/T-054",
+      "group": "provenance",
+      "name": "identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "group": "scope",
+      "name": "claim nonbearing",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'multiplicity_bound_closed': True, 'hard_cutoff_polynomial_corridor_closed': True, 'factorial_shell_scalar_majorant_closed': True, 'registered_m20_input_reused': True, 'q3_m20_uniformity_reproved': False, 'actual_unbounded_q3_common_core_closed': False, 'direct_d_delta_d_cauchy_closed': False, 'source_volume_history_uniformity_closed': False, 'exhaustion_independence_closed': False, 'common_alpha_closed': False, 'hamiltonian_os_identification_closed': False, 'kms_gns_gap_closed': False, 'continuum_closed': False, 'c6_closed': False, 'sector_a_closed': False, 'pre_a_closed': False}",
+      "expected": "conditional corridor",
+      "group": "scope",
+      "name": "scope firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": "1",
+      "expected": "R^(2/5)",
+      "group": "cutoff",
+      "name": "R=1 exact cutoff",
+      "status": "PASS"
+    },
+    {
+      "actual": "54",
+      "expected": "<=54R^3",
+      "group": "multiplicity",
+      "name": "R=1 multiplicity safety",
+      "status": "PASS"
+    },
+    {
+      "actual": "2916",
+      "expected": "<=2916",
+      "group": "tail",
+      "name": "R=1 tail safety",
+      "status": "PASS"
+    },
+    {
+      "actual": "4",
+      "expected": "R^(2/5)",
+      "group": "cutoff",
+      "name": "R=32 exact cutoff",
+      "status": "PASS"
+    },
+    {
+      "actual": "811200",
+      "expected": "<=54R^3",
+      "group": "multiplicity",
+      "name": "R=32 multiplicity safety",
+      "status": "PASS"
+    },
+    {
+      "actual": "160655625/1048576",
+      "expected": "<=729",
+      "group": "tail",
+      "name": "R=32 tail safety",
+      "status": "PASS"
+    },
+    {
+      "actual": "25",
+      "expected": "R^(2/5)",
+      "group": "cutoff",
+      "name": "R=3125 exact cutoff",
+      "status": "PASS"
+    },
+    {
+      "actual": "732656268750",
+      "expected": "<=54R^3",
+      "group": "multiplicity",
+      "name": "R=3125 multiplicity safety",
+      "status": "PASS"
+    },
+    {
+      "actual": "54966805313400036/2384185791015625",
+      "expected": "<=2916/25",
+      "group": "tail",
+      "name": "R=3125 tail safety",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": "finite log",
+      "group": "factorial",
+      "name": "R=1 factorial nonnegative",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": "<=1.0",
+      "group": "factorial",
+      "name": "R=1 factorial Stirling comparison",
+      "status": "PASS"
+    },
+    {
+      "actual": "7.164879655557968",
+      "expected": "finite log",
+      "group": "factorial",
+      "name": "R=32 factorial nonnegative",
+      "status": "PASS"
+    },
+    {
+      "actual": "7.164879655557968",
+      "expected": "<=9.819290222081749",
+      "group": "factorial",
+      "name": "R=32 factorial Stirling comparison",
+      "status": "PASS"
+    },
+    {
+      "actual": "-1909.4360363375235",
+      "expected": "finite log",
+      "group": "factorial",
+      "name": "R=3125 factorial nonnegative",
+      "status": "PASS"
+    },
+    {
+      "actual": "-1909.4360363375235",
+      "expected": "<=-1904.493476356564",
+      "group": "factorial",
+      "name": "R=3125 factorial Stirling comparison",
+      "status": "PASS"
+    },
+    {
+      "actual": "2916",
+      "expected": "2916",
+      "group": "constants",
+      "name": "safe constant derivation",
+      "status": "PASS"
+    },
+    {
+      "actual": "-2/5",
+      "expected": "-2/5",
+      "group": "exponents",
+      "name": "tail exponent reduction",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.543656365691809",
+      "expected": "<1",
+      "group": "factorial",
+      "name": "large-radius factorial base",
+      "status": "PASS"
+    },
+    {
+      "actual": "2916/25",
+      "expected": "below initial",
+      "group": "tail",
+      "name": "corridor decreases",
+      "status": "PASS"
+    }
+  ],
+  "audit_id": "PA-CP1-ST8-Q3LOCK-FIFTH-MOMENT-HARD-CUTOFF-CORRIDOR",
+  "boundary": "This is a conditional scalar hard-cutoff corridor. It converts a supplied M20/history envelope into a vanishing polynomial cutoff tail and a scalar factorial-shell estimate. It does not supply the actual Q3 M20 theorem, a common core, a source/volume-uniform modular history, direct D or delta-D Cauchy convergence, a common alpha, OS/KMS/GNS reconstruction, a gap, continuum, C6, Sector A or Pre-A closure.",
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "derived": {
+    "actual_unbounded_q3_common_core_closed": false,
+    "common_alpha_closed": false,
+    "direct_d_delta_d_cauchy_closed": false,
+    "factorial_rows": [
+      {
+        "R": 1,
+        "R_four_fifths": 1,
+        "base": 2.718281828459045,
+        "exact_log": 0.0,
+        "majorant_log": 1.0
+      },
+      {
+        "R": 32,
+        "R_four_fifths": 16,
+        "base": 1.3591409142295225,
+        "exact_log": 7.164879655557968,
+        "majorant_log": 9.819290222081749
+      },
+      {
+        "R": 3125,
+        "R_four_fifths": 625,
+        "base": 0.543656365691809,
+        "exact_log": -1909.4360363375235,
+        "majorant_log": -1904.493476356564
+      }
+    ],
+    "factorial_shell_scalar_majorant_closed": true,
+    "hard_cutoff_polynomial_corridor_closed": true,
+    "multiplicity_bound_closed": true,
+    "multiplicity_rows": [
+      {
+        "L": 1,
+        "R": 1,
+        "exact_tail": "2916",
+        "m_R": "54",
+        "root": 1,
+        "safe_tail": "2916"
+      },
+      {
+        "L": 4,
+        "R": 32,
+        "exact_tail": "160655625/1048576",
+        "m_R": "811200",
+        "root": 2,
+        "safe_tail": "729"
+      },
+      {
+        "L": 25,
+        "R": 3125,
+        "exact_tail": "54966805313400036/2384185791015625",
+        "m_R": "732656268750",
+        "root": 5,
+        "safe_tail": "2916/25"
+      }
+    ],
+    "q3_m20_uniformity_reproved": false,
+    "registered_m20_input_reused": true
+  },
+  "exploration_id": "EXP-001111",
+  "passed": 22,
+  "run_kind": "primary",
+  "schema": "tect/foundation-audit/1.0",
+  "task_id": "T-054",
+  "verdict": "PASS"
+}

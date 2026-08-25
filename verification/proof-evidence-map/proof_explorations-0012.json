@@ -898,6 +898,111 @@
       "task_id": "T-054",
       "title": "Eight-component Q3 energy-to-number Shubin corollary and registered top-tail instantiation",
       "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "axis": "registered moment versus new theorem",
+          "check": "M20 is cited as a fixed-beta periodic compact-source premise; this package does not extend it to arbitrary volume, source, beta, orientation or history.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "multiplicity arithmetic",
+          "check": "Both lanes recompute m_R and verify the 54 and 2916 safety constants on exact fifth-power radii.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "fractional cutoff indexing",
+          "check": "The exact fixtures choose R=1,32,3125 so R^(1/5), R^(2/5), and R^(4/5) are integers; symbolic exponent reduction is kept separate from finite matrix data.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "factorial estimate",
+          "check": "The factorial lane uses R! >= (R/e)^R only as a scalar majorant and never calls it a Dyson or Q3 convergence proof.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "QFT promotion",
+          "check": "No direct D/delta-D, common-alpha, OS/KMS/GNS, gap, continuum, C6, Sector A or Pre-A closure is inferred.",
+          "disposition": "UPHELD-OPEN"
+        }
+      ],
+      "boundary": "This is a conditional scalar hard-cutoff corridor. It converts a supplied M20/history envelope into a vanishing polynomial cutoff tail and a scalar factorial-shell estimate. It does not supply the actual Q3 M20 theorem, a common core, a source/volume-uniform modular history, direct D or delta-D Cauchy convergence, a common alpha, OS/KMS/GNS reconstruction, a gap, continuum, C6, Sector A or Pre-A closure.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "The package makes the registered fifth-moment-to-hard-cutoff interface explicit and independently reproducible. It closes the scalar multiplicity and exponent bookkeeping that the direct D/delta-D corridor needs, while preserving the distinction between a supplied Q3 M20/history estimate and the missing unbounded common-core theorem.",
+      "evidence_refs": [
+        "strategy/pre_a_cp1_st8_q3lock_fifth_moment_hard_cutoff_corridor_manifest.json#exact_statement",
+        "codes/foundations/pre_a_cp1_st8_q3lock_fifth_moment_hard_cutoff_corridor.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_fifth_moment_hard_cutoff_corridor_independent.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_fifth_moment_hard_cutoff_corridor_verify.py#run",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-primary-pre_a_cp1_st8_q3lock_fifth_moment_hard_cutoff_corridor/primary.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-independent-pre_a_cp1_st8_q3lock_fifth_moment_hard_cutoff_corridor/independent.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-integrated-pre_a_cp1_st8_q3lock_fifth_moment_hard_cutoff_corridor/integrated.json#lean",
+        "verification/lean/Tect/R283.lean#hard_cutoff_power_fixture",
+        "verification/lean/registry.json#R283",
+        "strategy/pre-a-cp1-st8-q3lock-local-measured-renyi-semiclassical-doublet-route-split-manifest.json#actual_q3_twentieth_history_and_hard_cutoff_corridor"
+      ],
+      "finding": "Primary 22/22, independent 17/17, integrated 14/14, and Lean R283 compile PASS. The exact fifth-power fixtures give L=1,4,25 for R=1,32,3125. The safe two-orientation tail values are 2916, 729 and 2916/25=116.64, with the exponent reduction 6-(2/5)*16=-2/5. The factorial scalar log comparison gives bases e, 1.3591409142 and 0.5436563657; at R=3125 the exact log is -1909.4360 and the elementary majorant log is -1904.4935.",
+      "formal_integration": {
+        "events": [],
+        "lean": "R283 PASS",
+        "negatives": [],
+        "no_new_event": true,
+        "no_new_negative": true,
+        "no_new_result": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "results": []
+      },
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": []
+      },
+      "gate_ids": [
+        "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+        "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001111",
+      "method": [
+        "Recompute m_R=6R(2R+1)^2 and the safe inequality m_R<=54R^3 on exact fifth-power radii R=1,32,3125.",
+        "Apply the registered hard-tail formula m_R^2 c^2 M20 L^(-16) with L=R^(2/5), and independently recompute the safe corridor 2916 c^2 M20 R^(-2/5).",
+        "Evaluate the scalar factorial shell (C R^(4/5))^R/R! in the log domain and compare it with (e C R^(-1/5))^R.",
+        "Compile Lean R283 for exact rational instances of the multiplicity, cutoff, factorial and scope arithmetic; retain the registered M20/history theorem as a cited premise."
+      ],
+      "next_action": "Use the corridor only after proving the actual Q3 common-core M20 and modular-domain hypotheses; then establish full-versus-cutoff D/delta-D convergence and exhaustion independence before any common-alpha identification.",
+      "no_overclaim": "The scalar tail and factorial limits are conditional interfaces, not a thermodynamic dynamics theorem and not an OS/KMS/GNS or Pre-A result.",
+      "provenance": "contemporaneous",
+      "qft_interface": {
+        "closed": "Conditional scalar hard-cutoff power and factorial-shell bridge under the registered fifth-moment/history premise.",
+        "open": "Actual Q3 M20 uniformity, common-core/truncated-CCR transfer, direct D/delta-D Cauchy, product/core density, exhaustion independence, group law, common alpha, OS/KMS identification, GNS gap, continuum, C6, Sector A and Pre-A.",
+        "tect_boundary": "No heat_root_incidence or canonical A1/R-192 production owner is supplied."
+      },
+      "question": "Given the registered two-orientation twentieth-moment envelope, does the declared hard cutoff L=R^(2/5) produce a vanishing polynomial tail and a factorial shell remainder?",
+      "recorded_at": "2026-08-27T01:20:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001110",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001097",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001036",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-08-25",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Conditional fifth-moment hard-cutoff corridor for the Q3 projected-D/delta-D route",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",

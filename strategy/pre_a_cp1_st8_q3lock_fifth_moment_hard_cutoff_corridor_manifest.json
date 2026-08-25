@@ -1,0 +1,112 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-FIFTH-MOMENT-HARD-CUTOFF-CORRIDOR-v0",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001111",
+  "claim_bearing": false,
+  "parent_explorations": ["EXP-001110", "EXP-001097", "EXP-001036"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "question": "Given the registered two-orientation twentieth-moment envelope, does the declared hard cutoff L=R^(2/5) produce a vanishing polynomial tail and a factorial shell remainder?",
+  "cited_premises": {
+    "moment": "The registered R-167 fifth-graph transport supplies M20 <= 2*d5^2*exp(G5*T)*S_mu^5*m5 in its fixed-beta periodic compact-source split-history scope.",
+    "tail": "The registered corridor reduces the two-orientation hard tail to m_R^2*c^2*M20*L^(-16), with m_R=6*R*(2*R+1)^2.",
+    "factorial": "The bounded-cutoff Dyson shell has the scalar majorant (C*R^(4/5))^R/R!; this package uses R! >= (R/e)^R only as a numerical comparison, not as a Q3 convergence theorem."
+  },
+  "exact_statement": {
+    "multiplicity_bound": "For R>=1, m_R <= 54*R^3 and therefore m_R^2*c^2*M20*L^(-16) <= 2916*c^2*M20*R^6*L^(-16).",
+    "hard_cutoff": "With L=R^(2/5), the safe tail is <=2916*c^2*M20*R^(-2/5), hence tends to zero for fixed finite c and M20.",
+    "factorial_shell": "For C>0, (C*R^(4/5))^R/R! <= (e*C*R^(-1/5))^R; once e*C*R^(-1/5)<1 this decays exponentially in R*log(R)."
+  },
+  "finite_fixture": {
+    "R_values_exact_fifth_power": [1, 32, 3125],
+    "c": 1,
+    "M20": 1,
+    "factorial_C": 1,
+    "multiplicity_factor": 6,
+    "multiplicity_linear_factor": 2,
+    "safe_m_constant": 54,
+    "safe_square_constant": 2916,
+    "cutoff_exponent_numerator": 2,
+    "cutoff_exponent_denominator": 5,
+    "tail_power": 16,
+    "radius_power": 6,
+    "factorial_radius_numerator": 4,
+    "factorial_radius_denominator": 5,
+    "agreement_tolerance": 1.0e-12
+  },
+  "scope": {
+    "multiplicity_bound_closed": true,
+    "hard_cutoff_polynomial_corridor_closed": true,
+    "factorial_shell_scalar_majorant_closed": true,
+    "registered_m20_input_reused": true,
+    "q3_m20_uniformity_reproved": false,
+    "actual_unbounded_q3_common_core_closed": false,
+    "direct_d_delta_d_cauchy_closed": false,
+    "source_volume_history_uniformity_closed": false,
+    "exhaustion_independence_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false
+  },
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R283.lean",
+    "command": "lake env lean Tect/R283.lean",
+    "declarations": [
+      "safe_multiplicity_fixture",
+      "hard_cutoff_power_fixture",
+      "factorial_shell_fixture",
+      "scope_fixture"
+    ],
+    "boundary": "R283 checks exact rational instances and the declared scalar factors only; it does not prove the registered Q3 M20 input, common-core domains, matrix exponentials, Dyson convergence, or a QFT limit."
+  },
+  "formal_integration": {
+    "events": [],
+    "results": [],
+    "negatives": [],
+    "lean": "R283 PASS",
+    "no_new_event": true,
+    "no_new_result": true,
+    "no_new_negative": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "adversarial_review": [
+    {
+      "axis": "registered moment versus new theorem",
+      "check": "M20 is cited as a fixed-beta periodic compact-source premise; this package does not extend it to arbitrary volume, source, beta, orientation or history.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "multiplicity arithmetic",
+      "check": "The primary and independent lanes recompute m_R and verify the 54 and 2916 safety constants on exact fifth-power radii.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "fractional cutoff indexing",
+      "check": "The exact fixture chooses R=1,32,3125 so R^(1/5), R^(2/5), and R^(4/5) are integers; the symbolic exponent reduction is kept separate from finite matrix data.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "factorial estimate",
+      "check": "The factorial lane uses the elementary lower bound R! >= (R/e)^R only as a scalar majorant and never calls it a Dyson or Q3 convergence proof.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "QFT promotion",
+      "check": "No direct D/delta-D, common-alpha, OS/KMS/GNS, gap, continuum, C6, Sector A or Pre-A closure is inferred.",
+      "disposition": "UPHELD-OPEN"
+    }
+  ],
+  "boundary": "This is a conditional scalar hard-cutoff corridor. It converts a supplied M20/history envelope into a vanishing polynomial cutoff tail and a scalar factorial-shell estimate. It does not supply the actual Q3 M20 theorem, a common core, a source/volume-uniform modular history, direct D or delta-D Cauchy convergence, a common alpha, OS/KMS/GNS reconstruction, a gap, continuum, C6, Sector A or Pre-A closure.",
+  "next_action": "Use the corridor only after proving the actual Q3 common-core M20 and modular-domain hypotheses; then establish full-versus-cutoff D/delta-D convergence and exhaustion independence before any common-alpha identification.",
+  "no_overclaim": "A vanishing scalar corridor under registered hypotheses is not a thermodynamic dynamics theorem and cannot identify the phasewise OS systems with one Hamiltonian-derived alpha."
+}

@@ -1,0 +1,110 @@
+{
+  "assertion_count": 14,
+  "assertions": [
+    {
+      "actual": "['EXP-001111', 'T-054']",
+      "expected": "EXP-001111/T-054",
+      "name": "identity",
+      "pass": true
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "name": "claim nonbearing",
+      "pass": true
+    },
+    {
+      "actual": "E:\\Dev\\TECT\\verification\\lean\\Tect\\R283.lean",
+      "expected": "R283 declarations",
+      "name": "Lean declarations",
+      "pass": true
+    },
+    {
+      "actual": "[]",
+      "expected": "none",
+      "name": "Lean forbidden",
+      "pass": true
+    },
+    {
+      "actual": "{'multiplicity_bound_closed': True, 'hard_cutoff_polynomial_corridor_closed': True, 'factorial_shell_scalar_majorant_closed': True, 'registered_m20_input_reused': True, 'q3_m20_uniformity_reproved': False, 'actual_unbounded_q3_common_core_closed': False, 'direct_d_delta_d_cauchy_closed': False, 'source_volume_history_uniformity_closed': False, 'exhaustion_independence_closed': False, 'common_alpha_closed': False, 'hamiltonian_os_identification_closed': False, 'kms_gns_gap_closed': False, 'continuum_closed': False, 'c6_closed': False, 'sector_a_closed': False, 'pre_a_closed': False}",
+      "expected": "conditional corridor with QFT successors open",
+      "name": "scope firewall",
+      "pass": true
+    },
+    {
+      "actual": "PRIMARY FIFTH-MOMENT-HARD-CUTOFF-CORRIDOR PASS 22/22\n",
+      "expected": "PASS",
+      "name": "primary child",
+      "pass": true
+    },
+    {
+      "actual": "INDEPENDENT FIFTH-MOMENT-HARD-CUTOFF-CORRIDOR PASS 17/17\n",
+      "expected": "PASS",
+      "name": "independent child",
+      "pass": true
+    },
+    {
+      "actual": "[3, 3]",
+      "expected": "equal",
+      "name": "radius row count",
+      "pass": true
+    },
+    {
+      "actual": "[{'L': 1, 'R': 1, 'exact_tail': '2916', 'm_R': '54', 'root': 1, 'safe_tail': '2916'}, {'L': 1, 'R': 1, 'exact_tail': '2916', 'm_R': 54, 'safe_tail': '2916'}]",
+      "expected": "equal",
+      "name": "radius 1 length agreement",
+      "pass": true
+    },
+    {
+      "actual": "[{'L': 4, 'R': 32, 'exact_tail': '160655625/1048576', 'm_R': '811200', 'root': 2, 'safe_tail': '729'}, {'L': 4, 'R': 32, 'exact_tail': '153.21314334869384765625', 'm_R': 811200, 'safe_tail': '729'}]",
+      "expected": "equal",
+      "name": "radius 32 length agreement",
+      "pass": true
+    },
+    {
+      "actual": "[{'L': 25, 'R': 3125, 'exact_tail': '54966805313400036/2384185791015625', 'm_R': '732656268750', 'root': 5, 'safe_tail': '2916/25'}, {'L': 25, 'R': 3125, 'exact_tail': '23.0547491393215024594944', 'm_R': 732656268750, 'safe_tail': '116.64'}]",
+      "expected": "equal",
+      "name": "radius 3125 length agreement",
+      "pass": true
+    },
+    {
+      "actual": "[3, 3]",
+      "expected": "equal",
+      "name": "factorial row count",
+      "pass": true
+    },
+    {
+      "actual": "{'actual_unbounded_q3_common_core_closed': False, 'common_alpha_closed': False, 'direct_d_delta_d_cauchy_closed': False, 'factorial_rows': [{'R': 1, 'R_four_fifths': 1, 'base': 2.718281828459045, 'exact_log': 0.0, 'majorant_log': 1.0}, {'R': 32, 'R_four_fifths': 16, 'base': 1.3591409142295225, 'exact_log': 7.164879655557968, 'majorant_log': 9.819290222081749}, {'R': 3125, 'R_four_fifths': 625, 'base': 0.543656365691809, 'exact_log': -1909.4360363375235, 'majorant_log': -1904.493476356564}], 'factorial_shell_scalar_majorant_closed': True, 'hard_cutoff_polynomial_corridor_closed': True, 'multiplicity_bound_closed': True, 'multiplicity_rows': [{'L': 1, 'R': 1, 'exact_tail': '2916', 'm_R': '54', 'root': 1, 'safe_tail': '2916'}, {'L': 4, 'R': 32, 'exact_tail': '160655625/1048576', 'm_R': '811200', 'root': 2, 'safe_tail': '729'}, {'L': 25, 'R': 3125, 'exact_tail': '54966805313400036/2384185791015625', 'm_R': '732656268750', 'root': 5, 'safe_tail': '2916/25'}], 'q3_m20_uniformity_reproved': False, 'registered_m20_input_reused': True}",
+      "expected": "closed",
+      "name": "derived flags",
+      "pass": true
+    },
+    {
+      "actual": "{'status': 'PASS', 'command': 'lake env lean Tect/R283.lean', 'returncode': 0, 'output': ''}",
+      "expected": "PASS",
+      "name": "Lean compile",
+      "pass": true
+    }
+  ],
+  "audit_id": "PA-CP1-ST8-Q3LOCK-FIFTH-MOMENT-HARD-CUTOFF-CORRIDOR",
+  "boundary": "This is a conditional scalar hard-cutoff corridor. It converts a supplied M20/history envelope into a vanishing polynomial cutoff tail and a scalar factorial-shell estimate. It does not supply the actual Q3 M20 theorem, a common core, a source/volume-uniform modular history, direct D or delta-D Cauchy convergence, a common alpha, OS/KMS/GNS reconstruction, a gap, continuum, C6, Sector A or Pre-A closure.",
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "exploration_id": "EXP-001111",
+  "lean": {
+    "command": "lake env lean Tect/R283.lean",
+    "output": "",
+    "returncode": 0,
+    "status": "PASS"
+  },
+  "provenance": {
+    "independent_sha256": "ac4fba0a5780f88031a44103ea1acb132284e488f88ffe4c8878b7d6a1925cfe",
+    "lean_sha256": "41e9d19e80dfd10fe8bd247d2c7534e7a1dc07e34f1c04f1f9eebff3e41c712e",
+    "manifest_sha256": "77f4bb2c387ea16215ec58f8cf676d1829aaaf556855b966a185a6ea316934c5",
+    "primary_sha256": "dc195b0c58af9981f64de24dc8c8f899028e244435ef572482884fa220f39586"
+  },
+  "recorded_at": "2026-08-25T05:29:02.010754Z",
+  "run_kind": "integrated",
+  "schema": "tect/foundation-audit/1.0",
+  "task_id": "T-054",
+  "verdict": "PASS"
+}
