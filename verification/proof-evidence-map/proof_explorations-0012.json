@@ -5078,6 +5078,112 @@
       "task_id": "T-054",
       "title": "Global shifted-energy context obstruction for local tensor-product Gibbs members",
       "verdict": "failed"
+    },
+    {
+      "adversarial_review": [
+        {
+          "axis": "weight noncommutation",
+          "check": "K_X is treated as a matrix in the full-H representation; no simultaneous diagonalization with rho is assumed.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "leg orientation",
+          "check": "All four D/D* left/right legs are retained and independently reconstructed by trace formulas.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "finite growth",
+          "check": "The local and global volume ratios are finite-grid diagnostics only and are not promoted to divergence or a no-go theorem.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "global comparison",
+          "check": "K_full is reported as a baseline, not as an admissible volume-uniform local estimate after EXP-001146.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "QFT promotion",
+          "check": "Common-core local-weighted uniformity, modular transfer, exhaustion, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector A and Pre-A remain open.",
+          "disposition": "UPHELD-OPEN"
+        }
+      ],
+      "boundary": "T0 claim-nonbearing finite actual-Q3 local-weighted D(t) audit. It does not prove a source-, volume-, cutoff-, or beta-uniform estimate, modular-domain transfer, direct D or delta-D Cauchy, product/core density, exhaustion independence, common alpha, OS/KMS/GNS reconstruction, a mass gap, continuum, C6, Sector A, Pre-A, TECT production or a Clay result.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "EXP-001146 removed the global total-energy topology as a volume-uniform local shortcut. This checkpoint confirms that the actual Q3 finite D(t) history can be evaluated with a noncommuting local edge weight and that the local route is materially less volume-sensitive on the declared grid. Since the local ratio still grows and only three finite volumes are sampled, the correct verdict is an advanced finite interface with the common-core/local-weighted theorem still open.",
+      "evidence_refs": [
+        "strategy/pre-a-cp1-st8-q3lock-local-weighted-d-delta-d-audit-manifest.json#model",
+        "strategy/pre-a-cp1-st8-q3lock-local-weighted-d-delta-d-audit-certificate-260826.md#Result",
+        "codes/foundations/pre_a_cp1_st8_q3lock_local_weighted_d_delta_d_audit.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_local_weighted_d_delta_d_audit_independent.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_local_weighted_d_delta_d_audit_verify.py#main",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-primary-pre_a_cp1_st8_q3lock_local_weighted_d_delta_d_audit/primary.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-independent-pre_a_cp1_st8_q3lock_local_weighted_d_delta_d_audit/independent.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-integrated-pre_a_cp1_st8_q3lock_local_weighted_d_delta_d_audit/integrated.json#lean",
+        "verification/lean/Tect/R317.lean#four_leg_scalar_identity",
+        "verification/lean/registry.json#R317",
+        "explorations/log.jsonl#EXP-001146"
+      ],
+      "finding": "Primary 105/105, independent 77/77, integrated 13/13 and Lean R317 PASS over 36 actual-Q3 rows. The local-weight maximum four-leg sums for volumes 2,4,6 are respectively (1.5582388906e-05, 3.5082596819e-05, 4.5493115615e-05) at beta 0.5, (1.7993155369e-05, 5.9350271376e-05, 9.0996077453e-05) at beta 1, and (2.1824228487e-05, 1.0314165594e-04, 1.7439045293e-04) at beta 2. The corresponding full-global maxima reach 7.0936355473e-04. The finite local-volume ratio is 11.1915 versus 45.5234 for the global baseline. The local weight reduces the measured volume sensitivity but finite growth remains, so no uniform bound is inferred.",
+      "formal_integration": {
+        "events": [],
+        "negatives": [],
+        "no_new_event": true,
+        "no_new_negative": true,
+        "no_new_result": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "results": []
+      },
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": []
+      },
+      "gate_ids": [
+        "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+        "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+        "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001147",
+      "method": [
+        "Build the registered edge, square, and six-site 2x3 Q3 Hamiltonians with oscillator dimension three, beta in {0.5,1,2}, radii {0.5,1}, time 0.05 and both cutoff orientations.",
+        "Form D_sigma(t) from the actual full and cutoff Hamiltonian unitaries and compute all four matrix-product legs with the positive local edge weight K_X and the full shifted Hamiltonian weight K_full.",
+        "Reconstruct the same local and full legs independently from trace identities Tr(rho D* K^2 D), Tr(rho D K^2 D*), Tr(rho K D*D K), and Tr(rho K DD* K), without inserting rho^(1/2).",
+        "Compile Lean R317 for the scalar four-leg regrouping and exact local/global fixture arithmetic; keep all uniformity and common-core gates explicit."
+      ],
+      "next_action": "Prove a source-, volume-, cutoff- and beta-uniform local/centered K_X four-leg bound for the declared Q3 common core, then transfer it to direct D and delta-D Cauchy with the modular companion. Use the finite local rows only as calibration; do not promote their ratio.",
+      "prior_exploration_id": "EXP-001146",
+      "provenance": "contemporaneous",
+      "qft_interface": {
+        "closed": "Finite actual-Q3 local-energy four-leg D(t) rows and an independent noncommuting trace reconstruction; local weight is materially less volume-sensitive than global K on the declared grid.",
+        "open": "Uniform local-weighted common-core estimate, modular transfer, direct D/delta-D Cauchy, products, exhaustion, common alpha, OS/KMS/GNS identification, gap, continuum, C6, Sector A and Pre-A remain open.",
+        "tect_boundary": "No heat_root_incidence or canonical A1/R-192 production owner is supplied."
+      },
+      "question": "Does replacing the global shifted total-energy weight by the positive local edge-energy weight keep the four D(t) weighted legs finite and less volume-sensitive on the actual Q3 histories?",
+      "recorded_at": "2026-08-27T18:45:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001146",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001145",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-000794",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-08-26",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Actual Q3 local-energy four-leg D(t) audit",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",

@@ -1,0 +1,94 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-LOCAL-WEIGHTED-D-DELTA-D-AUDIT-v0",
+  "title": "Actual Q3 local-energy four-leg D(t) audit",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001147",
+  "claim_bearing": false,
+  "parent_explorations": ["EXP-001146", "EXP-001145", "EXP-000794"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "question": "Does replacing the global shifted total-energy weight by the positive local edge-energy weight keep the four D(t) weighted legs finite and less volume-sensitive on the actual Q3 histories?",
+  "finite_fixture": {
+    "volume_values": [2, 4, 6],
+    "oscillator_dimension": 3,
+    "observable_support": [0, 1],
+    "character_amplitude": 0.3333333333333333,
+    "time_values": [0.05],
+    "radius_values": [0.5, 1.0],
+    "orientation_values": [-1, 1],
+    "beta_values": [0.5, 1.0, 2.0],
+    "weight_exponent": 1.0,
+    "c": 0.6,
+    "chi": 1.0,
+    "r": -1.0,
+    "g": 0.6,
+    "lambda": 0.1,
+    "hbar": 1.0,
+    "commutator_tolerance": 1e-8,
+    "finite_tolerance": 1e-8,
+    "agreement_tolerance": 1e-7,
+    "positive_shift": 1.0
+  },
+  "model": {
+    "full_weight": "K_full=H_volume-min(H_volume)+I",
+    "local_weight": "K_X=H_{sites 0,1,bond(0,1)}-min(H_X)+I",
+    "history": "D_sigma(t)=U(H+sigma W_L,t) A U(H+sigma W_L,t)^* - U(H,t) A U(H,t)^*",
+    "four_legs": [
+      "||K D rho^(1/2)||_HS^2",
+      "||K D^* rho^(1/2)||_HS^2",
+      "||D K rho^(1/2)||_HS^2",
+      "||D^* K rho^(1/2)||_HS^2"
+    ],
+    "comparison": "The local weight is tested against the full global weight; no global-K uniformity is assumed."
+  },
+  "scope": {
+    "actual_q3_local_four_leg_rows_closed": true,
+    "independent_trace_reconstruction_closed": true,
+    "full_global_baseline_closed": true,
+    "local_weight_volume_uniformity_proved": false,
+    "global_weight_volume_uniformity_proved": false,
+    "direct_d_delta_d_cauchy_closed": false,
+    "modular_domain_transfer_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false
+  },
+  "adversarial_review": [
+    {"axis": "weight noncommutation", "check": "The local edge weight is treated as a matrix in the full-H representation; no simultaneous diagonalization with rho is assumed.", "disposition": "UPHELD"},
+    {"axis": "leg orientation", "check": "All four left/right and D/D* legs are retained and independently reconstructed by trace identities.", "disposition": "UPHELD"},
+    {"axis": "volume interpretation", "check": "The three graph volumes and two cutoffs are finite diagnostics only; no local-weight uniform theorem is inferred.", "disposition": "UPHELD-OPEN"},
+    {"axis": "global comparison", "check": "The full weight is a baseline for the same rows, not an admissible uniform local estimate after EXP-001146.", "disposition": "UPHELD"},
+    {"axis": "QFT promotion", "check": "Common-core modular transfer, exhaustion, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector A and Pre-A remain open.", "disposition": "UPHELD-OPEN"}
+  ],
+  "files": {
+    "primary": "codes/foundations/pre_a_cp1_st8_q3lock_local_weighted_d_delta_d_audit.py",
+    "independent": "codes/foundations/pre_a_cp1_st8_q3lock_local_weighted_d_delta_d_audit_independent.py",
+    "integrated": "codes/foundations/pre_a_cp1_st8_q3lock_local_weighted_d_delta_d_audit_verify.py",
+    "lean": "verification/lean/Tect/R317.lean",
+    "primary_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-primary-pre_a_cp1_st8_q3lock_local_weighted_d_delta_d_audit/primary.json",
+    "independent_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-independent-pre_a_cp1_st8_q3lock_local_weighted_d_delta_d_audit/independent.json",
+    "integrated_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-integrated-pre_a_cp1_st8_q3lock_local_weighted_d_delta_d_audit/integrated.json"
+  },
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R317.lean",
+    "theorem_markers": ["four_leg_scalar_identity", "local_weight_fixture", "global_weight_scope_fixture"],
+    "command": "lake env lean Tect/R317.lean",
+    "boundary": "Lean checks the finite scalar four-leg identity and exact local/global fixture arithmetic; Python checks actual Q3 matrices."
+  },
+  "qft_interface": {
+    "closed": "The actual Q3 D(t) four-leg quantities are evaluated with a noncommuting local edge weight and independently reconstructed by trace formulas.",
+    "open": "A source-, volume-, cutoff- and beta-uniform local-weight bound, modular-domain transfer, direct Cauchy, product/core density, exhaustion, common alpha, OS/KMS/GNS identification, gap, continuum and Pre-A remain open.",
+    "tect_boundary": "No heat_root_incidence or canonical A1/R-192 production owner is supplied."
+  },
+  "no_overclaim": "Finite actual-Q3 local-weight rows and their trace reconstruction do not prove a common-core local-energy estimate or QFT dynamics. They only test the surviving topology selected after the global-K route-local obstruction."
+}
