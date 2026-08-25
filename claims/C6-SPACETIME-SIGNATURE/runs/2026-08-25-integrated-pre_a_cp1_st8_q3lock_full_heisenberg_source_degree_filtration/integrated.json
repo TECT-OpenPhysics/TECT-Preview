@@ -1,0 +1,193 @@
+{
+  "assertion_count": 16,
+  "assertions": [
+    {
+      "actual": [
+        "EXP-001114",
+        "T-054"
+      ],
+      "expected": "EXP-001114/T-054",
+      "name": "identity",
+      "pass": true
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "claim nonbearing",
+      "pass": true
+    },
+    {
+      "actual": {
+        "actual_q3_common_core_invariance_closed": false,
+        "actual_q3_operator_domain_closed": false,
+        "all_potential_top_coefficient_closed": true,
+        "c6_closed": false,
+        "common_alpha_closed": false,
+        "continuum_closed": false,
+        "direct_d_delta_d_cauchy_closed": false,
+        "dual_modular_tail_closed": false,
+        "exhaustion_independence_closed": false,
+        "full_taylor_source_degree_closed": true,
+        "group_law_closed": false,
+        "hamiltonian_os_identification_closed": false,
+        "kinetic_degree_gap_closed_formally": true,
+        "kms_gns_gap_closed": false,
+        "no_new_negative_result": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "not_closed": "This is an exact coefficient-level filtration checkpoint. It does not prove an unbounded Q3 commutator estimate, a common core, a factorial history bound, a thermodynamic limit, OS/KMS/GNS, a gap, continuum, C6, Sector A or Pre-A.",
+        "pre_a_closed": false,
+        "product_core_density_closed": false,
+        "sector_a_closed": false,
+        "two_orientation_coefficient_closed": true,
+        "volume_uniform_factorial_history_closed": false
+      },
+      "expected": "closed coefficient / open operator",
+      "name": "scope flags",
+      "pass": true
+    },
+    {
+      "actual": "markers present",
+      "expected": "present",
+      "name": "Lean source",
+      "pass": true
+    },
+    {
+      "actual": [],
+      "expected": "none",
+      "name": "Lean forbidden",
+      "pass": true
+    },
+    {
+      "actual": "PRIMARY FULL-HEISENBERG-SOURCE-FILTRATION PASS 27/27\n",
+      "expected": "PASS",
+      "name": "primary child",
+      "pass": true
+    },
+    {
+      "actual": "INDEPENDENT FULL-HEISENBERG-SOURCE-FILTRATION PASS 30/30\n",
+      "expected": "PASS",
+      "name": "independent child",
+      "pass": true
+    },
+    {
+      "actual": [
+        27,
+        30
+      ],
+      "expected": ">0",
+      "name": "positive totals",
+      "pass": true
+    },
+    {
+      "actual": [
+        "51/35",
+        "51/35"
+      ],
+      "expected": "equal",
+      "name": "lane G agreement",
+      "pass": true
+    },
+    {
+      "actual": "matching m/coefficient/degree rows",
+      "expected": "equal",
+      "name": "lane target agreement",
+      "pass": true
+    },
+    {
+      "actual": "matching orientation rows",
+      "expected": "equal",
+      "name": "lane orientation agreement",
+      "pass": true
+    },
+    {
+      "actual": "matching filtration rows",
+      "expected": "equal",
+      "name": "lane kinetic agreement",
+      "pass": true
+    },
+    {
+      "actual": [
+        "4*m-3",
+        "4*m-3"
+      ],
+      "expected": "4*m-3",
+      "name": "degree formula",
+      "pass": true
+    },
+    {
+      "actual": [
+        "-m*c*(-G/4)^(m-1)",
+        "-m*c*(-G/4)^(m-1)"
+      ],
+      "expected": "declared formula",
+      "name": "coefficient formula",
+      "pass": true
+    },
+    {
+      "actual": [
+        false,
+        false
+      ],
+      "expected": false,
+      "name": "operator boundary",
+      "pass": true
+    },
+    {
+      "actual": {
+        "command": "lake env lean Tect/R286.lean",
+        "output": "Tect/R286.lean:32:38: warning: Variable name `hm` is not explicitly referenced.\n\nThe binding can be removed (if unused) or named `_` (if used implicitly).\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\nTect/R286.lean:32:64: warning: Variable name `hkm` is not explicitly referenced.\n\nThe binding can be removed (if unused) or named `_` (if used implicitly).\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`",
+        "returncode": 0,
+        "status": "PASS"
+      },
+      "expected": "PASS",
+      "name": "Lean compile",
+      "pass": true
+    }
+  ],
+  "audit_id": "PA-CP1-ST8-Q3LOCK-FULL-HEISENBERG-SOURCE-DEGREE-FILTRATION",
+  "boundary": {
+    "actual_q3_common_core_invariance_closed": false,
+    "actual_q3_operator_domain_closed": false,
+    "all_potential_top_coefficient_closed": true,
+    "c6_closed": false,
+    "common_alpha_closed": false,
+    "continuum_closed": false,
+    "direct_d_delta_d_cauchy_closed": false,
+    "dual_modular_tail_closed": false,
+    "exhaustion_independence_closed": false,
+    "full_taylor_source_degree_closed": true,
+    "group_law_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kinetic_degree_gap_closed_formally": true,
+    "kms_gns_gap_closed": false,
+    "no_new_negative_result": true,
+    "no_pdf": true,
+    "no_tier_change": true,
+    "not_closed": "This is an exact coefficient-level filtration checkpoint. It does not prove an unbounded Q3 commutator estimate, a common core, a factorial history bound, a thermodynamic limit, OS/KMS/GNS, a gap, continuum, C6, Sector A or Pre-A.",
+    "pre_a_closed": false,
+    "product_core_density_closed": false,
+    "sector_a_closed": false,
+    "two_orientation_coefficient_closed": true,
+    "volume_uniform_factorial_history_closed": false
+  },
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "exploration_id": "EXP-001114",
+  "lean": {
+    "command": "lake env lean Tect/R286.lean",
+    "output": "Tect/R286.lean:32:38: warning: Variable name `hm` is not explicitly referenced.\n\nThe binding can be removed (if unused) or named `_` (if used implicitly).\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\nTect/R286.lean:32:64: warning: Variable name `hkm` is not explicitly referenced.\n\nThe binding can be removed (if unused) or named `_` (if used implicitly).\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`",
+    "returncode": 0,
+    "status": "PASS"
+  },
+  "provenance": {
+    "independent_sha256": "d441c46ba2542d8c28d08484e8434d0769ad9731be4c515df2daabacdc046214",
+    "lean_sha256": "7b93edc3ee04fd70af317724b0d63c63a5ae4cc7e634f91c0c95b99f6f6e228f",
+    "manifest_sha256": "56a9c61b5e221d305158cee2a80c6d23165e483830f114dd5fae808c664f656c",
+    "primary_sha256": "916bb4d74f956b807fdab88a3676a6fda4708376bb53a72c9e74ec0a8e5736e1"
+  },
+  "recorded_at": "2026-08-25T06:53:48.406706Z",
+  "run_kind": "integrated",
+  "schema": "tect/foundation-audit/1.0",
+  "task_id": "T-054",
+  "verdict": "PASS"
+}

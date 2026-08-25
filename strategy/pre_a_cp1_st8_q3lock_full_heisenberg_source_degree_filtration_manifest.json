@@ -1,0 +1,135 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-FULL-HEISENBERG-SOURCE-DEGREE-FILTRATION-v0",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001114",
+  "claim_bearing": false,
+  "parent_explorations": ["EXP-001113", "EXP-001029", "EXP-001031"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-FIRST-PASSAGE-BACKBONE-REAL-TIME-PRODUCT-AND-ENERGY-TAIL-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "question": "Does the exact finite-volume Q3 Heisenberg Taylor coefficient retain the prescribed-word source-degree obstruction after the full kinetic-plus-potential derivation is expanded?",
+  "model": {
+    "source_site": "one scalar Q3 source coordinate q with the remaining internal coordinates held at zero in the leading source-degree slice",
+    "neighbour_site": "one spatial neighbour coordinate r coupled by the bond -c*q*r",
+    "onsite_slice": "G*q^4/4 with G=g+3*lambda",
+    "weyl_observable": "W_a=exp(-i*a*p_q/hbar)",
+    "hamiltonian_split": "H=T+V(q,r), with T the quadratic kinetic part and V the displayed onsite-plus-bond potential",
+    "generator_split": "delta_H=delta_T+delta_V",
+    "common_core": "polynomial CCR core multiplied on the right by W_a; the source-degree calculation is coefficientwise before representation-specific norm closure"
+  },
+  "exact_statement": {
+    "shifted_potential_difference": "Delta_a(q,r)=(G/4)*(q^4-(q-a)^4)-c*a*r",
+    "potential_word": "delta_V^m(W_a)=(i/hbar)^m*Delta_a(q,r)^m*W_a",
+    "target_operation": "take the neighbour momentum coefficient, represented on the coefficient slice by partial_r, and evaluate q=r=0",
+    "top_term": "partial_r(Delta_a^m)|_(q=r=0)=-m*c*(-G/4)^(m-1)*a^(4*m-3)",
+    "top_degree": "4*m-3",
+    "kinetic_filtration": "Every word containing at least one delta_T loses the coordinate-independent a^(4*n) top coefficient before the target operation; with n potential insertions its target source degree is at most 4*n-1 and hence at most 4*m-5 when m>=1",
+    "conclusion": "The all-potential word is the unique degree-(4*m-3) contribution to the full formal Taylor coefficient, so kinetic words cannot cancel its nonzero coefficient"
+  },
+  "fixture": {
+    "g": "3/5",
+    "lambda": "2/7",
+    "c": "2/3",
+    "G": "51/35",
+    "hbar": "1",
+    "orders": [1, 2, 3, 4, 5, 6],
+    "source_degree_formula": "4*m-3"
+  },
+  "scope": {
+    "full_taylor_source_degree_closed": true,
+    "all_potential_top_coefficient_closed": true,
+    "kinetic_degree_gap_closed_formally": true,
+    "two_orientation_coefficient_closed": true,
+    "actual_q3_operator_domain_closed": false,
+    "actual_q3_common_core_invariance_closed": false,
+    "volume_uniform_factorial_history_closed": false,
+    "dual_modular_tail_closed": false,
+    "direct_d_delta_d_cauchy_closed": false,
+    "product_core_density_closed": false,
+    "exhaustion_independence_closed": false,
+    "group_law_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true,
+    "not_closed": "This is an exact coefficient-level filtration checkpoint. It does not prove an unbounded Q3 commutator estimate, a common core, a factorial history bound, a thermodynamic limit, OS/KMS/GNS, a gap, continuum, C6, Sector A or Pre-A."
+  },
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R286.lean",
+    "command": "lake env lean Tect/R286.lean",
+    "declarations": ["coefficient_m1", "coefficient_m2", "coefficient_m3", "coefficient_m4", "coefficient_m5", "coefficient_m6", "kinetic_degree_gap"],
+    "role": "R286 checks the rational coefficient fixtures and the integer source-degree gap only; it does not formalize unbounded operators, domains, or limits."
+  },
+  "formal_integration": {
+    "results": [],
+    "events": [],
+    "negatives": [],
+    "lean": "R286 PASS",
+    "no_new_result": true,
+    "no_new_negative": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "boundary": "T0 claim-nonbearing exact finite Q3 coefficient filtration. The source-degree gap narrows admissible QFT-facing topologies but leaves the actual common-core and thermodynamic gates open.",
+  "next_action": "Use the surviving analytic/Frechet or state-weighted topology to seek a genuine two-orientation volume-uniform recurrence; if its constants fail the filtration growth, record a route-specific obstruction before any common-alpha promotion.",
+  "verification": {
+    "primary_script": "codes/foundations/pre_a_cp1_st8_q3lock_full_heisenberg_source_degree_filtration.py",
+    "independent_script": "codes/foundations/pre_a_cp1_st8_q3lock_full_heisenberg_source_degree_filtration_independent.py",
+    "integrated_script": "codes/foundations/pre_a_cp1_st8_q3lock_full_heisenberg_source_degree_filtration_verify.py"
+  },
+  "qft_interface": {
+    "closed": "The full formal finite-volume Taylor coefficient has a nonzero all-potential source-degree top term that kinetic words cannot cancel.",
+    "open": "Q3 operator domains, volume-uniform history, dual modular tail, direct D/delta-D Cauchy, exhaustion, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector A and Pre-A remain open.",
+    "tect_boundary": "No heat_root_incidence or canonical A1/R-192 production owner is supplied by this coefficient audit."
+  },
+  "adversarial_review": [
+    {
+      "axis": "full-versus-prescribed expansion",
+      "check": "The top-degree argument is stated for the generator split delta_H=delta_T+delta_V; the coefficient scripts separately identify the all-potential word and the kinetic filtration rule.",
+      "disposition": "UPHELD-WITH-FORMAL-BOUNDARY"
+    },
+    {
+      "axis": "kinetic source degree",
+      "check": "Kinetic commutators differentiate the coordinate polynomial and annihilate the coordinate-independent leading source coefficient; no increase in a-degree is assumed.",
+      "disposition": "UPHELD-FOR-THE-DECLARED-CCR-FILTRATION"
+    },
+    {
+      "axis": "bond derivative",
+      "check": "The target partial_r extracts exactly one linear bond factor, producing degree 4*m-3; no higher-degree bond term is inserted.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "orientation",
+      "check": "The relabelled source/neighbor orientation is recomputed independently and is not inferred from a symmetry of the final norm estimate.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "operator promotion",
+      "check": "Coefficientwise noncancellation is not promoted to a representation-independent norm lower bound or a no-go for analytic, Frechet, state-weighted, or modular topologies.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "QFT-to-TECT promotion",
+      "check": "No Q3 common core, KMS/GNS construction, Hamiltonian-to-OS identification, gap, C6, Sector A or Pre-A owner is supplied.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "Lean scope",
+      "check": "R286 checks only rational fixtures and integer degree arithmetic; it does not certify the unbounded operator argument.",
+      "disposition": "UPHELD"
+    }
+  ],
+  "no_overclaim": "This package advances a scoped source-degree filtration boundary for the actual full formal Taylor coefficient. It does not prove nonexistence of Q3 dynamics, close the factorial expansion, establish a thermodynamic QFT, or close C6, Sector A, Pre-A or any Clay result."
+}

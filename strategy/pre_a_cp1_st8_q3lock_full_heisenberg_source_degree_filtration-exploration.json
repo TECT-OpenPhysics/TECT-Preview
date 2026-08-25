@@ -1,0 +1,62 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001114",
+  "title": "Full Q3 Heisenberg source-degree filtration and kinetic noncancellation",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-FIRST-PASSAGE-BACKBONE-REAL-TIME-PRODUCT-AND-ENERGY-TAIL-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "question": "Does the exact finite-volume Q3 Heisenberg Taylor coefficient retain the prescribed-word source-degree obstruction after the full kinetic-plus-potential derivation is expanded?",
+  "method": [
+    "Restrict the exact Q3 potential to the registered scalar source/neighbor slice and form Delta_a(q,r)=(G/4)(q^4-(q-a)^4)-c*a*r.",
+    "Compute partial_r(Delta_a^m) at q=r=0 for m=1 through 6 using exact symbolic arithmetic and independently recompute the same coefficients with a rational polynomial engine.",
+    "Use the generator split delta_H=delta_T+delta_V and a source-degree filtration: potential multiplication contributes at most four powers of a, while a kinetic coordinate derivation kills the coordinate-independent leading coefficient of the accumulated potential word.",
+    "Check the relabelled source/neighbor orientation and compile Lean R286 for the rational coefficient fixtures and the integer kinetic degree gap.",
+    "Apply adversarial review to the full-versus-prescribed expansion, kinetic filtration, bond derivative, orientation, operator promotion, QFT promotion, and Lean scope."
+  ],
+  "finding": "The primary lane, independent rational lane, integrated verifier, and Lean R286 all PASS. For G=51/35 and c=2/3, the target coefficient is -m*c*(-G/4)^(m-1) at source degree 4*m-3 for m=1,...,6. The all-potential word is the only formal word at that degree; any word with at least one kinetic derivation has target source degree at most 4*(m-k)-1 and therefore strictly below 4*m-3. The orientation-reversed slice gives the same exact rows.",
+  "decision_reason": "The degree-escalation obstruction is now attached to the full formal generator expansion rather than only to a selected potential word. This removes cancellation by kinetic words at the coefficient level and narrows the admissible Q3 route to analytic/Frechet, state-weighted, or modular topologies whose source growth absorbs the surviving degree. The result remains a coefficient filtration checkpoint, not an operator-domain or thermodynamic theorem.",
+  "verdict": "advanced",
+  "boundary": "T0 claim-nonbearing exact finite Q3 coefficient filtration. No actual Q3 operator, common core, volume-uniform history, dual modular tail, direct D/delta-D Cauchy, exhaustion, group law, OS/KMS/GNS, gap, continuum, C6, Sector A or Pre-A conclusion follows.",
+  "next_action": "Test the surviving analytic/Frechet or state-weighted topology on the same full-generator filtration and require a genuine two-orientation volume-uniform recurrence before common-alpha promotion; register any growth obstruction as a route-specific negative only if the actual topology is fixed.",
+  "evidence_refs": [
+    "strategy/pre_a_cp1_st8_q3lock_full_heisenberg_source_degree_filtration_manifest.json#exact_statement",
+    "strategy/pre_a_cp1_st8_q3lock_full_heisenberg_source_degree_filtration-certificate-260825.md#filtration",
+    "codes/foundations/pre_a_cp1_st8_q3lock_full_heisenberg_source_degree_filtration.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_full_heisenberg_source_degree_filtration_independent.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_full_heisenberg_source_degree_filtration_verify.py#run",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-primary-pre_a_cp1_st8_q3lock_full_heisenberg_source_degree_filtration/primary.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-independent-pre_a_cp1_st8_q3lock_full_heisenberg_source_degree_filtration/independent.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-integrated-pre_a_cp1_st8_q3lock_full_heisenberg_source_degree_filtration/integrated.json#lean",
+    "verification/lean/Tect/R286.lean#kinetic_degree_gap"
+  ],
+  "formal_refs": {"results": [], "negatives": [], "events": []},
+  "formal_integration": {"no_new_result": true, "no_new_negative": true, "no_tier_change": true, "no_pdf": true},
+  "related": [
+    {"id": "EXP-001113", "relation": "continues"},
+    {"id": "EXP-001031", "relation": "continues"},
+    {"id": "EXP-001029", "relation": "continues"}
+  ],
+  "recorded_at": "2026-08-27T02:10:00Z",
+  "reviewed_on": "2026-08-25",
+  "provenance": "contemporaneous",
+  "qft_interface": {
+    "closed": "The full formal finite-volume Taylor coefficient has a nonzero all-potential source-degree top term that kinetic words cannot cancel.",
+    "open": "Q3 operator domains, volume-uniform history, dual modular tail, direct D/delta-D Cauchy, exhaustion, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector A and Pre-A remain open.",
+    "tect_boundary": "No heat_root_incidence or canonical A1/R-192 production owner is supplied by this coefficient audit."
+  },
+  "adversarial_review": [
+    {"axis": "full-versus-prescribed expansion", "check": "The formal generator split is explicit and the kinetic-word filtration is recorded as a coefficientwise lemma, not hidden inside a norm claim.", "disposition": "UPHELD-WITH-FORMAL-BOUNDARY"},
+    {"axis": "kinetic source degree", "check": "Coordinate derivatives do not increase a-degree and kill the coordinate-independent leading potential coefficient.", "disposition": "UPHELD-FOR-DECLARED-CCR-FILTRATION"},
+    {"axis": "orientation", "check": "The relabelled source/neighbor slice is recomputed in the independent lane.", "disposition": "UPHELD"},
+    {"axis": "operator promotion", "check": "Coefficient noncancellation is not promoted to a representation-independent norm theorem or a topology-wide no-go.", "disposition": "UPHELD-OPEN"},
+    {"axis": "QFT promotion", "check": "OS/KMS/GNS, gap, continuum, C6, Sector A and Pre-A remain explicit open gates.", "disposition": "UPHELD-OPEN"},
+    {"axis": "Lean", "check": "R286 checks only rational fixtures and integer degree arithmetic.", "disposition": "UPHELD"}
+  ],
+  "no_overclaim": "This is a scoped route-advancement record. It does not prove nonexistence of Q3 dynamics, close the factorial expansion, establish a thermodynamic QFT, or supply TECT production dynamics."
+}
