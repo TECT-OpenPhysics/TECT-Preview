@@ -9763,6 +9763,113 @@
       "task_id": "T-054",
       "title": "Exact truncated-CCR boundary and common-core tail condition",
       "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "axis": "fixed core versus moving vectors",
+          "check": "The zero result applies only to fixed K and embedded e_k; the top boundary e_(n-1) remains a nonzero witness.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "cutoff inequality",
+          "check": "Every zero row satisfies n>=K+2, equivalently K+1<n; no equality-at-boundary row is silently included.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "independent reconstruction",
+          "check": "The independent lane recomputes overlap and defect rows without importing the primary implementation, and the integrated verifier reconciles complete rows.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "history propagation",
+          "check": "No claim is made that Q3 evolution or Gibbs weighting preserves finite support or the required n-weighted tail.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "Lean scope",
+          "check": "R276 proves only the natural-number top-overlap implication and finite fixtures.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "QFT promotion",
+          "check": "Common alpha, OS/KMS/GNS, gap, continuum, C6, Sector A, and Pre-A remain open.",
+          "disposition": "UPHELD-OPEN"
+        }
+      ],
+      "boundary": "T0 claim-nonbearing algebraic core-domain checkpoint. It closes strong convergence on fixed finite-particle vectors only; actual Q3 evolution/Gibbs tails, modular history, all-shape exhaustion, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector A, and Pre-A remain open.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "EXP-001094 gives the exact operator defect. This follow-up separates the valid strong-on-core statement from the invalid inference to operator-norm or history-uniform convergence and identifies the precise remaining tail estimate for Q3 domain transfer.",
+      "evidence_refs": [
+        "strategy/pre_a_cp1_st8_q3lock_finite_particle_core_domain_manifest.json#exact_statement",
+        "strategy/pre_a_cp1_st8_q3lock_finite_particle_core_domain_certificate-260825.md#Decision",
+        "codes/foundations/pre_a_cp1_st8_q3lock_finite_particle_core_domain.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_finite_particle_core_domain_independent.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_finite_particle_core_domain_verify.py#run",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-primary-pre_a_cp1_st8_q3lock_finite_particle_core_domain/primary.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-independent-pre_a_cp1_st8_q3lock_finite_particle_core_domain/independent.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-integrated-pre_a_cp1_st8_q3lock_finite_particle_core_domain/integrated.json#lean",
+        "verification/lean/Tect/R276.lean#defect_zero_of_core",
+        "verification/lean/registry.json#R276",
+        "explorations/log.jsonl#EXP-001094"
+      ],
+      "finding": "For every declared K and every n>=K+2, the top projector P_top^(n) annihilates all embedded e_k with k<=K, so the truncated CCR defect is exactly zero on the fixed finite-particle core. The boundary vector e_(n-1) still has defect amplitude n. Primary passes 93/93, independent passes 62/62, and integrated passes 13/13 with Lean R276.",
+      "formal_integration": {
+        "events": [],
+        "lean": "R276 PASS; natural-number support implication only",
+        "negatives": [],
+        "no_new_event": true,
+        "no_new_negative": true,
+        "no_new_result": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "results": []
+      },
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": []
+      },
+      "gate_ids": [
+        "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+        "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001095",
+      "method": [
+        "Represent D_fin as the span of occupation vectors e_k with k<=K and embed it into every oscillator truncation with n>=K+2.",
+        "Evaluate the exact top-projector overlap and the n-weighted defect on every declared support/cutoff row, including the top-level boundary witness.",
+        "Reconstruct the arithmetic independently, compare complete rows, and compile Lean R276 for the natural-number support implication.",
+        "Keep evolved-history, Gibbs-tail, volume-uniform, and QFT reconstruction fields explicitly open."
+      ],
+      "next_action": "Prove a volume/source/orientation/history-uniform weighted top-tail estimate for the selected Q3 local carrier, or record its first failure before attempting direct D/delta-D Cauchy or common-alpha promotion.",
+      "no_overclaim": "Strong convergence on each fixed finite-particle vector does not justify exchanging cutoff, volume, source, beta, or time limits and is not an unbounded Q3 theorem.",
+      "provenance": "contemporaneous",
+      "qft_interface": {
+        "closed": "Strong zero of the truncated CCR defect on every fixed finite-particle core vector beyond its support cutoff.",
+        "open": "The evolved/Gibbs weighted tail estimate, actual unbounded Q3 domain, modular history, all-shape exhaustion, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector A, and Pre-A.",
+        "route": "Fixed finite-particle core -> weighted tail/domain transfer for evolved Q3 vectors -> source/volume-uniform modular history -> common alpha -> KMS/OS/GNS -> gap -> continuum."
+      },
+      "question": "Does the exact truncated-CCR defect vanish strongly on every fixed finite-particle core vector once the oscillator cutoff exceeds its support, and what additional estimate is still required for Q3 histories?",
+      "recorded_at": "2026-08-26T21:00:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001094",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001082",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-08-25",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Fixed finite-particle core strong convergence of the truncated CCR",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",

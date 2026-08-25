@@ -1,0 +1,115 @@
+{
+  "assertion_count": 13,
+  "assertions": [
+    {
+      "actual": "['EXP-001095', 'T-054']",
+      "expected": "EXP-001095/T-054",
+      "name": "identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "name": "nonbearing",
+      "status": "PASS"
+    },
+    {
+      "actual": "['E:\\\\Dev\\\\TECT\\\\codes\\\\foundations\\\\pre_a_cp1_st8_q3lock_finite_particle_core_domain.py', 'E:\\\\Dev\\\\TECT\\\\codes\\\\foundations\\\\pre_a_cp1_st8_q3lock_finite_particle_core_domain_independent.py', 'E:\\\\Dev\\\\TECT\\\\verification\\\\lean\\\\Tect\\\\R276.lean']",
+      "expected": "present",
+      "name": "authority files",
+      "status": "PASS"
+    },
+    {
+      "actual": "PRIMARY FINITE-PARTICLE-CORE-DOMAIN PASS 93/93\n",
+      "expected": "exit 0",
+      "name": "primary process",
+      "status": "PASS"
+    },
+    {
+      "actual": "E:\\Dev\\TECT\\claims\\C6-SPACETIME-SIGNATURE\\runs\\2026-08-25-primary-pre_a_cp1_st8_q3lock_finite_particle_core_domain\\primary.json",
+      "expected": "stored JSON",
+      "name": "primary output",
+      "status": "PASS"
+    },
+    {
+      "actual": "PASS",
+      "expected": "PASS",
+      "name": "primary PASS",
+      "status": "PASS"
+    },
+    {
+      "actual": "INDEPENDENT FINITE-PARTICLE-CORE-DOMAIN PASS 62/62\n",
+      "expected": "exit 0",
+      "name": "independent process",
+      "status": "PASS"
+    },
+    {
+      "actual": "E:\\Dev\\TECT\\claims\\C6-SPACETIME-SIGNATURE\\runs\\2026-08-25-independent-pre_a_cp1_st8_q3lock_finite_particle_core_domain\\independent.json",
+      "expected": "stored JSON",
+      "name": "independent output",
+      "status": "PASS"
+    },
+    {
+      "actual": "PASS",
+      "expected": "PASS",
+      "name": "independent PASS",
+      "status": "PASS"
+    },
+    {
+      "actual": "[39, 39]",
+      "expected": "identical rows",
+      "name": "core row reconciliation",
+      "status": "PASS"
+    },
+    {
+      "actual": "both false",
+      "expected": "both false",
+      "name": "history tail remains open",
+      "status": "PASS"
+    },
+    {
+      "actual": "C:\\Users\\NaEun\\.elan\\toolchains\\leanprover--lean4---v4.32.1\\bin\\lake.exe",
+      "expected": "present",
+      "name": "pinned lake",
+      "status": "PASS"
+    },
+    {
+      "actual": "",
+      "expected": "exit 0",
+      "name": "Lean R276",
+      "status": "PASS"
+    }
+  ],
+  "audit_id": "PA-CP1-ST8-Q3LOCK-FINITE-PARTICLE-CORE-DOMAIN",
+  "boundary": "T0 claim-nonbearing algebraic core-domain checkpoint. It closes strong convergence on fixed finite-particle vectors only. It does not close the actual Q3 common-core transfer, history tail, modular estimate, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector A, or Pre-A.",
+  "children": {
+    "independent": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-independent-pre_a_cp1_st8_q3lock_finite_particle_core_domain/independent.json",
+    "primary": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-primary-pre_a_cp1_st8_q3lock_finite_particle_core_domain/primary.json"
+  },
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "derived": {
+    "actual_unbounded_q3_domain_transfer_closed": false,
+    "common_alpha_closed": false,
+    "embedded_basis_identity_closed": true,
+    "evolved_history_tail_closed": false,
+    "fixed_finite_particle_core_strong_zero_closed": true,
+    "gibbs_tail_uniformity_closed": false,
+    "source_volume_uniform_modular_history_closed": false
+  },
+  "exploration_id": "EXP-001095",
+  "lean": {
+    "path": "verification/lean/Tect/R276.lean",
+    "sha256": "5b4aec3099494db9dd5b882d10639d5f667c962bd5d0fb0ac3d9bc26a9409bdd",
+    "status": "PASS"
+  },
+  "provenance": {
+    "independent_sha256": "d4e19d489553301d7c69dff33c3625947bead31cb41408f6cc5a1c0c7cb15c0b",
+    "lean_sha256": "5b4aec3099494db9dd5b882d10639d5f667c962bd5d0fb0ac3d9bc26a9409bdd",
+    "manifest_sha256": "4ec9a9f3b40aadc3d8c08b202bfedddc05ce4dd96b43e044108fe42be390b799",
+    "primary_sha256": "2cec023f951679e2b0ce0bb4533c543fa87e57b7a1e6bfae96299498867a14cf"
+  },
+  "run_kind": "integrated",
+  "schema": "tect/foundation-audit/1.0",
+  "task_id": "T-054",
+  "verdict": "PASS"
+}

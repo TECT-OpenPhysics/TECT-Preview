@@ -1,0 +1,59 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-FINITE-PARTICLE-CORE-DOMAIN-v0",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001095",
+  "claim_bearing": false,
+  "parent_explorations": ["EXP-001094", "EXP-001082"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "question": "Does the exact truncated-CCR defect vanish strongly on every fixed finite-particle core vector once the oscillator cutoff exceeds its support, and what additional estimate is still required for Q3 histories?",
+  "finite_fixture": {
+    "support_levels": [0, 1, 2, 3, 5],
+    "cutoff_dimensions": [2, 4, 8, 12],
+    "tolerance": 1e-12
+  },
+  "exact_statement": {
+    "core": "D_fin is the span of occupation basis vectors e_k with k<=K for a fixed finite K.",
+    "embedding": "For n>=K+2, the n-dimensional top projector P_top^(n) annihilates every embedded e_k with k<=K.",
+    "defect": "([q_n,p_n]-iI)e_k=-i*n*P_top^(n)e_k=0 for k<=K and n>=K+2.",
+    "remaining_gate": "The Q3 proof must show that evolved/local Gibbs vectors retain a sufficiently small n-weighted top tail uniformly in volume, source, orientation, and history length."
+  },
+  "scope": {
+    "fixed_finite_particle_core_strong_zero_closed": true,
+    "embedded_basis_identity_closed": true,
+    "evolved_history_tail_closed": false,
+    "gibbs_tail_uniformity_closed": false,
+    "actual_unbounded_q3_domain_transfer_closed": false,
+    "source_volume_uniform_modular_history_closed": false,
+    "all_shape_exhaustion_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false
+  },
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R276.lean",
+    "command": "lake env lean Tect/R276.lean",
+    "boundary": "R276 checks the natural-number support/cutoff implication only; it does not encode Q3 evolution, Gibbs tails, domain closures, or QFT reconstruction."
+  },
+  "formal_integration": {
+    "results": [],
+    "events": [],
+    "negatives": [],
+    "no_new_result": true,
+    "no_new_negative": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "boundary": "T0 claim-nonbearing algebraic core-domain checkpoint. It closes strong convergence on fixed finite-particle vectors only. It does not close the actual Q3 common-core transfer, history tail, modular estimate, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector A, or Pre-A.",
+  "no_overclaim": "Vanishing on each fixed finite-particle vector is weaker than a uniform history estimate and does not justify exchanging cutoff, volume, source, beta, or time limits.",
+  "next_action": "Prove a volume/source/orientation/history-uniform weighted tail estimate for the chosen Q3 local carrier that extends the fixed-core result to evolved and Gibbs-weighted vectors; otherwise register the first failure."
+}
