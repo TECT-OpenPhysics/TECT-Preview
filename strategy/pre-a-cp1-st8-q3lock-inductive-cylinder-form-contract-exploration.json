@@ -1,0 +1,82 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001150",
+  "title": "Inductive-limit bounded Lipschitz cylinder form contract",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-ENERGY-WEIGHTED-COMMUTATOR-GEVREY-LR-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-RESOLVENT-ALGEBRA-EXACT-POLYNOMIAL-COMMON-ALPHA-CLOSURE",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "question": "Do finite-support bounded C1 cylinder multipliers define a volume-compatible inductive-limit test algebra with the same two-orientation Q3 form bounds, while leaving dynamics convergence as a separate gate?",
+  "method": [
+    "Use the EXP-001131 shifted Q3 form order K_edge <= 21 K_on for the bounded-degree-six graph class.",
+    "For every declared support size S and every ambient volume V >= S, compute the exact same-form and cross-form weighted product constants from M=1 and L=1; verify that they depend on S but not on V.",
+    "Check restriction/extension compatibility for all ambient-volume pairs containing the same support, so the multiplier is unchanged on S and identity outside S.",
+    "Apply the bounded C1 product rule to two fixed-support factors (M1,L1)=(1,1) and (M2,L2)=(2,3/2), obtaining M12=2, L12=7/2, same-form bound 81/4 and cross-form bound 1701/4.",
+    "Rebuild the arithmetic in an independent Fraction-only lane and compile Lean R320 for the degree, product, embedding and scope fixtures."
+  ],
+  "finding": "Primary 92/92, independent 61/61, integrated 15/15, and Lean R320 compile PASS. For support size S the same-form squared bound is 2+S and the cross-orientation bound is 21(2+S), with the same exact values in every ambient volume V in {S,...,16}. All restriction/extension pairs preserve these constants. The product fixture gives M12=2, L12=7/2, same-form 81/4 and cross-form 1701/4.",
+  "verdict": "advanced",
+  "decision_reason": "The bounded finite-support C1 cylinder class now has an explicit inductive-limit compatibility contract at the form level: ambient-volume embeddings do not change its local constants, and products remain in the same class with a computable Leibniz bound. This supplies the appropriate bounded QFT test-algebra interface, but it does not make finite-volume dynamics converge or identify an infinite-volume state or alpha_t.",
+  "closed": [
+    "fixed-support finite graph embedding contract",
+    "ambient-volume-independent same-form constants",
+    "restriction/extension compatibility",
+    "bounded C1 cylinder product closure",
+    "same- and cross-orientation weighted square-root form bounds",
+    "inductive-limit bounded test-algebra contract",
+    "independent reproduction and Lean R320 cross-check"
+  ],
+  "open": [
+    "all bounded local observables without an explicit gradient bound",
+    "unbounded polynomial products and exact CCR domains",
+    "cutoff-, beta- and modular-domain transfer",
+    "direct D and delta-D Cauchy estimates",
+    "finite-volume dynamics convergence and exhaustion-independent states",
+    "common alpha and Hamiltonian-to-OS/KMS/GNS identification",
+    "broken-sector gap, continuum, C6, Sector A and Pre-A"
+  ],
+  "adversarial_review": [
+    {"axis": "embedding", "check": "Only the declared finite support is active under an ambient embedding; no volume-dependent gradient term is added outside the support.", "disposition": "UPHELD"},
+    {"axis": "orientation", "check": "Same and cross form orientations remain separate and the exact factor 21 is retained.", "disposition": "UPHELD"},
+    {"axis": "product rule", "check": "The gradient is bounded by M1 L2 + M2 L1, while no unbounded polynomial is admitted.", "disposition": "UPHELD"},
+    {"axis": "support growth", "check": "Uniformity is only in ambient volume at fixed support; constants can grow with support size.", "disposition": "UPHELD-OPEN"},
+    {"axis": "inductive limit", "check": "Algebraic/form compatibility is not confused with convergence of dynamics or states.", "disposition": "UPHELD-OPEN"},
+    {"axis": "Lean", "check": "R320 proves rational bookkeeping only and contains no axioms, sorry, unbounded operator theorem or limit.", "disposition": "UPHELD"},
+    {"axis": "QFT promotion", "check": "Direct Cauchy, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector A and Pre-A remain open.", "disposition": "UPHELD-OPEN"}
+  ],
+  "evidence_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-inductive-cylinder-form-contract-manifest.json#model",
+    "codes/foundations/pre_a_cp1_st8_q3lock_inductive_cylinder_form_contract.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_inductive_cylinder_form_contract_independent.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_inductive_cylinder_form_contract_verify.py#run",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-27-primary-pre_a_cp1_st8_q3lock_inductive_cylinder_form_contract/primary.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-27-independent-pre_a_cp1_st8_q3lock_inductive_cylinder_form_contract/independent.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-27-integrated-pre_a_cp1_st8_q3lock_inductive_cylinder_form_contract/integrated.json#lean",
+    "verification/lean/Tect/R320.lean#degree_order_fixture",
+    "verification/lean/registry.json#R320"
+  ],
+  "formal_refs": {"results": [], "negatives": [], "events": []},
+  "formal_integration": {"lean": "R320 PASS", "results": [], "negatives": [], "events": [], "no_new_result": true, "no_new_negative": true, "no_tier_change": true, "no_pdf": true},
+  "qft_interface": {
+    "closed": "A fixed-support bounded C1 cylinder test algebra contract compatible with bounded-degree graph embeddings and explicit same/cross form constants independent of ambient volume.",
+    "open": "Unbounded products, exact CCR domains, cutoff/beta modular transfer, direct D/delta-D Cauchy, finite-volume dynamics convergence, exhaustion, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector A and Pre-A.",
+    "tect_boundary": "No heat_root_incidence or canonical A1/R-192 production owner is supplied."
+  },
+  "related": [
+    {"id": "EXP-001133", "relation": "continues"},
+    {"id": "EXP-001132", "relation": "continues"},
+    {"id": "EXP-001131", "relation": "continues"}
+  ],
+  "prior_exploration_id": "EXP-001149",
+  "provenance": "contemporaneous",
+  "recorded_at": "2026-08-27T20:00:00Z",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-08-26",
+  "next_action": "Use this bounded inductive-limit test algebra to formulate and test a finite-volume D/delta-D Cauchy estimate; require an explicit source-, volume-, cutoff- and beta-uniform bound before promoting a common alpha or OS/KMS/GNS limit.",
+  "boundary": "T0 claim-nonbearing inductive-limit test-algebra contract. It is a bounded form/algebra interface only and does not establish a thermodynamic QFT dynamics, a common alpha, OS/KMS/GNS reconstruction, a gap, continuum, C6, Sector A, Pre-A, TECT production or a Clay result.",
+  "no_overclaim": "Only the declared fixed-support bounded C1 cylinder compatibility and form constants are closed. All unbounded, modular, dynamics-limit, reconstruction, gap, continuum and production gates remain open."
+}
