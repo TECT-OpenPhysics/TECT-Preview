@@ -1,0 +1,85 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001143",
+  "title": "Finite Q3 Kubo-Mori energy-moment transfer and QFT interface",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-FIFTH-ENERGY-MOMENT-AND-MODULAR-CUTOFF-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "question": "Can the finite Kubo-Mori spectral second moment be transferred to an explicit shifted Gibbs energy moment on the actual Q3 histories, and which additional hypothesis is required before this can serve as a QFT common-core estimate?",
+  "method": [
+    "Use the registered edge, square, and six-site 2x3 Q3 Hamiltonians with oscillator dimension three, the observable supported on sites 0,1, beta in {0.5,1,2}, radius 0.5, time 0.05, and both cutoff orientations.",
+    "Diagonalize each actual finite Hamiltonian, form Gibbs probabilities p_i and logarithmic-mean weights L(p_i,p_j), and shift the spectrum by its actual minimum plus one so k_i>=1.",
+    "Evaluate S=2 sum_ij L(p_i,p_j)((E_i-E_j)/hbar)^2 |D_hat_ij|^2 for each actual Q3 history and verify the arithmetic-mean and square-gap inequalities row by row.",
+    "Run independent primary and eigenbasis lanes and compile Lean R313 for the exact rational gap, mean-weight transfer, constant, and shifted-energy fixtures."
+  ],
+  "finding": "Primary 115/115, independent 103/103, integrated 13/13, and Lean R313 PASS over 18 actual rows. The safe finite-dimensional Hilbert-Schmidt transfer S <= 8 M2 ||D||_HS^2 holds in every row. The sharper operator-norm candidate S <= 8 M2 ||D||_operator^2 also passes all declared rows, with the largest observed ratio S/(M2||D||_operator^2)=3.4553020779615164; this is an empirical row result, not a general operator-norm theorem. The shifted Gibbs moment M2 is finite in every row and ranges from 1.9205583860609077 to 33.286943994754964 across the declared beta-volume grid. The largest safe Hilbert-Schmidt ratio is 0.38662982758364417. The minimum square-gap slack is 4.0 up to floating-point roundoff and the minimum logarithmic-mean slack is no smaller than -1.554481482245992e-17. None of these finite values supplies a source-, volume-, beta-, cutoff-, or exhaustion-uniform local M2 estimate.",
+  "verdict": "advanced",
+  "decision_reason": "The finite Q3 spectral moment now has a reusable energy-moment interface: the arithmetic-mean logarithmic-mean bound and shifted square-gap inequality give a rigorous finite Hilbert-Schmidt estimate, and the actual operator-norm candidate survives all 18 histories. The hostile review prevents promotion of that candidate to a general theorem because the aggregate cross terms do not follow from operator norm alone without an additional structural argument. The remaining QFT target is therefore explicit: establish a local/source/volume/beta-uniform M2 and common-core D estimate (or prove a valid operator-norm replacement) before attempting common alpha, modular transfer, OS/KMS/GNS identification, or any gap/continuum claim.",
+  "closed": [
+    "finite shifted-energy Gibbs moment and arithmetic-mean transfer fixtures",
+    "finite Hilbert-Schmidt transfer bound on actual edge, square, and six-site Q3 rows",
+    "actual two-orientation history rows at beta 0.5,1,2",
+    "independent reproduction and Lean R313 cross-check"
+  ],
+  "open": [
+    "general operator-norm transfer theorem or a replacement structural bound",
+    "source-, volume-, beta-, cutoff-, and exhaustion-uniform local M2 estimate",
+    "high-energy/common-core tail control and modular-domain transfer",
+    "product/core density and exhaustion independence",
+    "common alpha and Hamiltonian-to-OS/KMS/GNS identification",
+    "broken-sector gap, continuum, C6, Sector A and Pre-A"
+  ],
+  "adversarial_review": [
+    {"axis": "energy shift", "check": "Every finite spectrum is shifted by its actual minimum plus the declared positive constant; all square-gap calculations use shift-invariant differences and nonnegative k_i.", "disposition": "UPHELD"},
+    {"axis": "logarithmic mean", "check": "The equal-probability limit is explicit and the arithmetic-mean upper bound is checked on every actual Gibbs spectrum.", "disposition": "UPHELD"},
+    {"axis": "safe norm", "check": "The rigorous finite transfer retained by the checkpoint uses the Hilbert-Schmidt norm; no Hilbert-Schmidt-to-operator-norm replacement is silently made.", "disposition": "UPHELD"},
+    {"axis": "operator-norm candidate", "check": "The sharper operator-norm expression passes the declared rows, but aggregate cross terms are not promoted without an additional theorem controlling their Gibbs-weighted orientation.", "disposition": "UPHELD-OPEN"},
+    {"axis": "uniformity", "check": "M2 is a global finite Gibbs moment in each row; the finite range is not a local or volume-uniform common-core estimate.", "disposition": "UPHELD-OPEN"},
+    {"axis": "QFT promotion", "check": "Direct Cauchy, common core, exhaustion, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector A, and Pre-A remain open.", "disposition": "UPHELD-OPEN"}
+  ],
+  "evidence_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-finite-energy-moment-transfer-manifest.json#model",
+    "codes/foundations/pre_a_cp1_st8_q3lock_finite_energy_moment_transfer.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_finite_energy_moment_transfer_independent.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_finite_energy_moment_transfer_verify.py#run",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-primary-pre_a_cp1_st8_q3lock_finite_energy_moment_transfer/primary.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-independent-pre_a_cp1_st8_q3lock_finite_energy_moment_transfer/independent.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-integrated-pre_a_cp1_st8_q3lock_finite_energy_moment_transfer/integrated.json#derived",
+    "verification/lean/Tect/R313.lean#gap_square_bound",
+    "verification/lean/registry.json#R313"
+  ],
+  "formal_integration": {
+    "events": [],
+    "results": [],
+    "negatives": [],
+    "lean": "R313 PASS; metadata regenerated",
+    "no_new_event": true,
+    "no_new_result": true,
+    "no_new_negative": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "qft_interface": {
+    "closed": "A finite conditional interface from the Kubo-Mori derivative spectral moment to a shifted Gibbs energy moment, with a rigorous Hilbert-Schmidt finite bound and a separately labelled operator-norm candidate.",
+    "open": "Uniform local/common-core energy control, a general operator-norm replacement if needed, modular-domain transfer, product/core density, exhaustion independence, common alpha, OS/KMS/GNS identification, gap, continuum and Pre-A.",
+    "tect_boundary": "The factor-eight finite estimate identifies the analytic quantity that must be controlled before QFT promotion; it is not a thermodynamic limit or a Clay proof."
+  },
+  "next_action": "Prove or refute a source/volume/beta-uniform local M2 and high-energy tail estimate for the actual Q3 D history on a declared unbounded common core. If the operator-norm candidate is needed, supply an independent structural argument for its aggregate cross terms; otherwise carry the Hilbert-Schmidt norm through the direct Cauchy route and quantify the dimension dependence.",
+  "related": [
+    {"id": "EXP-001142", "relation": "continues"},
+    {"id": "EXP-001122", "relation": "continues"},
+    {"id": "EXP-001131", "relation": "continues"}
+  ],
+  "prior_exploration_id": "EXP-001142",
+  "provenance": "contemporaneous",
+  "recorded_at": "2026-08-27T17:30:00Z",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-08-26",
+  "boundary": "This is a finite actual-Q3 energy-moment audit over three graph volumes, three beta values, one cutoff, one time, and both orientations. It is not a uniform common-core theorem, an infinite-volume dynamics, a QFT reconstruction, a gap, continuum, C6, Sector A, or Pre-A result.",
+  "no_overclaim": "The finite Hilbert-Schmidt transfer is exact within the declared finite spectral setting. The operator-norm version is an empirical candidate only. The checkpoint does not prove a uniform local energy moment, direct D/delta-D Cauchy, common alpha, Sector A, Pre-A, or any Clay statement."
+}

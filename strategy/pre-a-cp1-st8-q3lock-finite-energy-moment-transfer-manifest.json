@@ -1,0 +1,147 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-FINITE-ENERGY-MOMENT-TRANSFER-v0",
+  "title": "Finite Kubo-Mori derivative transfer through a shifted energy second moment",
+  "task_id": "T-054",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "exploration_id": "EXP-001143",
+  "claim_bearing": false,
+  "parent_explorations": [
+    "EXP-001142",
+    "EXP-001122",
+    "EXP-001131"
+  ],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-FIFTH-ENERGY-MOMENT-AND-MODULAR-CUTOFF-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "question": "Does the finite Kubo-Mori spectral second moment admit an explicit shifted-energy transfer bound S(delta_H D) <= 8 Tr(rho K^2)||D||^2 for the actual Q3 histories, and what hypothesis remains for a common-core theorem?",
+  "finite_fixture": {
+    "volume_values": [
+      2,
+      4,
+      6
+    ],
+    "oscillator_dimension": 3,
+    "observable_support": [
+      0,
+      1
+    ],
+    "beta_values": [
+      0.5,
+      1.0,
+      2.0
+    ],
+    "character_amplitude": 0.3333333333333333,
+    "time_values": [
+      0.05
+    ],
+    "radius_values": [
+      0.5
+    ],
+    "orientation_values": [
+      -1,
+      1
+    ],
+    "two_sided_factor": 2.0,
+    "c": 0.6,
+    "chi": 1.0,
+    "r": -1.0,
+    "g": 0.6,
+    "lambda": 0.1,
+    "hbar": 1.0,
+    "commutator_tolerance": 1e-08,
+    "transfer_tolerance": 1e-08,
+    "mean_gap_tolerance": 1e-12,
+    "shift_constant": 1.0
+  },
+  "model": {
+    "shifted_energy": "K=H-min(spec(H))+I, so k_i>=1",
+    "gibbs_second_moment": "M2=Tr(rho K^2)=sum_i p_i k_i^2",
+    "spectral_moment": "S=2 sum_ij L(p_i,p_j)((E_i-E_j)/hbar)^2 |D_hat_ij|^2",
+    "transfer_bound": "The termwise inequalities give the safe finite-dimensional bound S <= 8 M2 ||D||_HS^2; the sharper S <= 8 M2 ||D||_operator^2 is tested only as an empirical candidate on the declared Q3 rows.",
+    "interpretation": "The finite Hilbert-Schmidt inequality is a conditional bridge; a volume/source/beta-uniform local M2, a common-core D bound, and any operator-norm replacement remain separate hypotheses."
+  },
+  "scope": {
+    "finite_energy_moment_transfer_closed": true,
+    "termwise_arithmetic_mean_bound_closed": true,
+    "actual_q3_rows_closed": true,
+    "two_orientation_history_closed": true,
+    "uniform_local_M2_common_core_closed": false,
+    "uniform_beta_volume_direct_d_delta_d_closed": false,
+    "modular_domain_transfer_closed": false,
+    "exhaustion_independence_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "finite_hilbert_schmidt_transfer_closed": true,
+    "finite_operator_norm_candidate_rows_closed": true,
+    "general_operator_norm_transfer_theorem_closed": false
+  },
+  "adversarial_review": [
+    {
+      "axis": "energy shift",
+      "check": "K is shifted by the actual finite spectral minimum plus I, so the transfer inequality uses nonnegative k_i and is invariant under scalar energy shifts.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "logarithmic mean",
+      "check": "The finite lanes verify L(p_i,p_j)<= (p_i+p_j)/2 and use the equal-probability diagonal limit.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "operator norm",
+      "check": "The aggregate 8 M2 ||D||^2 bound is tested with the actual matrix operator norm; no Hilbert-Schmidt replacement is silently made.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "uniformity",
+      "check": "M2 is the global finite Gibbs moment in each row; no local or volume-uniform M2 is inferred from finite data.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "common core",
+      "check": "The finite matrix inequality does not establish product domains, modular tails, or a common unbounded core.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "QFT promotion",
+      "check": "Direct Cauchy, exhaustion, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector A and Pre-A remain open.",
+      "disposition": "UPHELD-OPEN"
+    }
+  ],
+  "files": {
+    "primary": "codes/foundations/pre_a_cp1_st8_q3lock_finite_energy_moment_transfer.py",
+    "independent": "codes/foundations/pre_a_cp1_st8_q3lock_finite_energy_moment_transfer_independent.py",
+    "integrated": "codes/foundations/pre_a_cp1_st8_q3lock_finite_energy_moment_transfer_verify.py",
+    "lean": "verification/lean/Tect/R313.lean",
+    "primary_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-primary-pre_a_cp1_st8_q3lock_finite_energy_moment_transfer/primary.json",
+    "independent_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-independent-pre_a_cp1_st8_q3lock_finite_energy_moment_transfer/independent.json",
+    "integrated_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-integrated-pre_a_cp1_st8_q3lock_finite_energy_moment_transfer/integrated.json"
+  },
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R313.lean",
+    "theorem_markers": [
+      "gap_square_bound",
+      "spectral_term_bound",
+      "aggregate_constant_fixture",
+      "moment_shift_fixture"
+    ],
+    "command": "lake env lean Tect/R313.lean",
+    "boundary": "Lean checks exact rational gap and arithmetic-mean transfer fixtures; the finite matrix norm inequality is independently executed in Python and all common-core/uniform QFT assertions remain open."
+  },
+  "qft_interface": {
+    "closed": "A finite conditional bridge from the Kubo-Mori derivative spectral moment to a shifted Gibbs energy second moment, with a proven Hilbert-Schmidt bound and an operator-norm candidate checked on actual rows.",
+    "open": "A local/source/volume/beta-uniform M2 estimate on an unbounded common core, a general operator-norm replacement, direct D control, modular-domain transfer, product/core density, exhaustion independence, common alpha, OS/KMS/GNS identification, gap, continuum and Pre-A.",
+    "tect_boundary": "The factor 8 Hilbert-Schmidt inequality identifies a sufficient finite analytic interface; the sharper operator-norm statement is empirical here and neither is itself a thermodynamic QFT theorem."
+  },
+  "no_overclaim": "The finite Hilbert-Schmidt transfer bound is exact within the declared finite spectral setting. The operator-norm version is only a candidate passing these rows. Neither proves a uniform local energy moment, direct D/delta-D Cauchy, common alpha, Sector A, Pre-A, or any Clay statement."
+}
