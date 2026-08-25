@@ -1,0 +1,82 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-ACTUAL-LOCAL-COMMUTATOR-RECURRENCE-AUDIT-v0",
+  "title": "Actual finite-Q3 four-context local commutator recurrence audit",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001155",
+  "claim_bearing": false,
+  "parent_explorations": ["EXP-001154", "EXP-001151", "EXP-001128", "EXP-001149"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-ENERGY-WEIGHTED-COMMUTATOR-GEVREY-LR-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-FIRST-PASSAGE-BACKBONE-REAL-TIME-PRODUCT-AND-ENERGY-TAIL-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "question": "Does the explicit EXP-001151 local recurrence hold for the actual finite Q3 four-context first q/p commutator seminorm before it is used as a common-alpha hypothesis?",
+  "finite_fixture": {
+    "volume_values": [2, 4, 6],
+    "oscillator_dimension": 3,
+    "graph": "target edge, square face, and 2x3 rectangular grid",
+    "beta": "1",
+    "character_amplitude": "1/3",
+    "hbar": "1",
+    "time_step": "1/18",
+    "steps": 6,
+    "time_horizon": "1/3",
+    "recurrence_C": "1",
+    "recurrence_J": "1",
+    "orientation_count": 4,
+    "support": [0, 1],
+    "finite_tolerance": 1e-8,
+    "agreement_tolerance": 1e-7,
+    "recurrence_tolerance": 1e-9
+  },
+  "model": {
+    "hamiltonian": "H=sum_x[p_x^2/(2 chi)+r q_x^2/2+g q_x^4/4]+sum_edges[c(q_x-q_y)^2/2+lambda(q_x-q_y)^2(q_x^2+q_y^2)/4]",
+    "observable": "A_a=exp(i a(q_0+q_1)/hbar), with A and A* contexts",
+    "contexts": "U_{sigma,t} A^{epsilon} U_{sigma,t}* for sigma in {-1,+1}, epsilon in {1,*}",
+    "seminorm": "L_x(t)^2=||[q_x,A_t]||_(beta,#)^2+||[p_x,A_t]||_(beta,#)^2, where ||X||_(beta,#)^2=Tr(rho X*X)+Tr(rho XX*)",
+    "recurrence_target": "L_x(n+1) <= (1+C delta)L_x(n)+J delta sum_{y~x}L_y(n)",
+    "scope": "finite exact matrix falsification/support test for the registered recurrence candidate; not the final common-core seminorm"
+  },
+  "derived_oracles": {
+    "weighted_step_factor": "31/18",
+    "time_horizon_identity": "6*(1/18)=1/3",
+    "source_support_count": 2,
+    "context_count": 4
+  },
+  "scope": {
+    "finite_actual_four_context_rows_closed": true,
+    "finite_recurrence_candidate_test_closed": true,
+    "source_support_anchor_checked": true,
+    "actual_q3_recurrence_theorem_closed": false,
+    "recurrence_passes_all_finite_rows": false,
+    "route_local_result_only": true,
+    "volume_uniformity_proved": false,
+    "cutoff_uniformity_proved": false,
+    "exact_ccr_common_core_closed": false,
+    "first_commutator_decay_closed": false,
+    "second_commutator_decay_closed": false,
+    "direct_d_delta_d_cauchy_closed": false,
+    "exhaustion_independence_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R325.lean",
+    "command": "lake env lean Tect/R325.lean",
+    "role": "R325 checks only the exact rational recurrence factor, time-step identity, support count, context count, and scope firewall; Python checks the actual finite Q3 matrices."
+  },
+  "next_action": "If the candidate fails, keep the failure scoped to this q/p Gibbs seminorm and constants and move to a cancellation-aware energy/state-weighted topology. If it passes, test source, cutoff and volume enlargement before any common-alpha promotion.",
+  "boundary": "T0 claim-nonbearing finite actual-Q3 recurrence audit. It does not prove or refute every Q3 common-core topology, a thermodynamic dynamics, common alpha, OS/KMS/GNS reconstruction, a gap, continuum, C6, Sector A or Pre-A.",
+  "no_overclaim": "Finite recurrence violations are route-local evidence only; no asymptotic divergence or QFT no-go is inferred."
+}

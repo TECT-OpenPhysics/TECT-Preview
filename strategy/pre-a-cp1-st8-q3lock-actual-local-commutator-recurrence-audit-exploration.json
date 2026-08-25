@@ -1,0 +1,89 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001155",
+  "title": "Actual finite-Q3 local commutator recurrence audit and unsplit-flow boundary",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-ENERGY-WEIGHTED-COMMUTATOR-GEVREY-LR-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-FIRST-PASSAGE-BACKBONE-REAL-TIME-PRODUCT-AND-ENERGY-TAIL-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "question": "Does the EXP-001151 one-layer local recurrence hold for the exact finite unsplit Q3 Hamiltonian flow on the declared four-context q/p Gibbs seminorm?",
+  "method": [
+    "Build the registered quartic Q3 Hamiltonian on the target edge, square face and 2x3 rectangular graph with oscillator dimension three and beta one.",
+    "Evolve the supported character and its adjoint with both real-time signs at six steps of delta=1/18 under the exact unsplit unitary exp(-i t H).",
+    "Define L_x from the two-sided Gibbs seminorms of [q_x,A_t] and [p_x,A_t] and test L_x(n+1) <= (1+C delta)L_x(n)+J delta sum_(y~x)L_y(n) with C=J=1.",
+    "Rebuild the oscillator, graph, Hamiltonian, Gibbs state and all four contexts in a non-importing independent lane; compile Lean R325 only for the exact scalar recurrence fixtures."
+  ],
+  "finding": "Primary 98/98 and independent 92/92 pass as finite audits, integrated 36/36 passes, and Lean R325 compiles. The candidate outcome is FAIL_ON_GRID_ROUTE_LOCAL for the unsplit flow: at volume 6, site 5, step 0, all four contexts have lhs=6.5371290e-7, rhs=1.4959333e-14 and residual=6.5371289e-7. Volumes 2 and 4 have no positive residual under the same finite tolerance.",
+  "verdict": "advanced",
+  "decision_reason": "The exact unsplit finite Q3 flow has an immediate small tail at a site beyond the initial support, so it cannot be substituted for the registered one-layer split-history recurrence with C=J=1. This is an adversarial applicability boundary, not a no-go theorem: EXP-001151 concerns partial onsite/bond split products, and the split-step recurrence remains to be tested directly.",
+  "boundary": "Finite unsplit Q3 matrices, beta=1, one character amplitude, three graph volumes, six steps and four W/W* plus/minus-time contexts. No asymptotic lower bound, no failure of the split dynamics, no common-core theorem, no thermodynamic QFT, common alpha, OS/KMS/GNS reconstruction, gap, continuum, C6, Sector A or Pre-A conclusion follows.",
+  "closed": [
+    "finite unsplit four-context q/p commutator rows",
+    "finite recurrence residual and exact violating site/step",
+    "independent numerical reproduction",
+    "Lean R325 scalar cross-check",
+    "scope separation between unsplit flow and split-history recurrence"
+  ],
+  "open": [
+    "actual split onsite-plus-bond recurrence",
+    "first and double commutator spatial decay",
+    "source-, volume-, cutoff- and beta-uniform constants",
+    "direct D/delta-D Cauchy",
+    "exhaustion independence and common alpha",
+    "Hamiltonian-to-OS/KMS/GNS identification",
+    "gap, continuum, C6, Sector A and Pre-A"
+  ],
+  "evidence_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-actual-local-commutator-recurrence-audit-manifest.json#model",
+    "codes/foundations/pre_a_cp1_st8_q3lock_actual_local_commutator_recurrence_audit.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_actual_local_commutator_recurrence_audit_independent.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_actual_local_commutator_recurrence_audit_verify.py#main",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-27-primary-pre_a_cp1_st8_q3lock_actual_local_commutator_recurrence_audit/primary.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-27-independent-pre_a_cp1_st8_q3lock_actual_local_commutator_recurrence_audit/independent.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-27-integrated-pre_a_cp1_st8_q3lock_actual_local_commutator_recurrence_audit/integrated.json#lean",
+    "verification/lean/Tect/R325.lean#weighted_step_fixture",
+    "verification/lean/registry.json#R325",
+    "strategy/pre-a-cp1-st8-q3lock-inductive-cylinder-recurrence-cauchy-interface-manifest.json#conditional_recurrence"
+  ],
+  "formal_integration": {
+    "lean": "R325 PASS",
+    "results": [],
+    "negatives": [],
+    "events": [],
+    "no_new_result": true,
+    "no_new_negative": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "adversarial_review": [
+    {"axis": "unsplit-versus-split", "check": "The failing rows use exp(-i t H), while the registered recurrence is explicitly for partial onsite/bond split histories; the two are not conflated.", "disposition": "UPHELD"},
+    {"axis": "context coverage", "check": "Both real-time signs and both adjoint orientations are evaluated separately.", "disposition": "UPHELD"},
+    {"axis": "recurrence constants", "check": "C=J=1, delta=1/18 and graph adjacency are read from the declared fixture; no fitted constant is substituted.", "disposition": "UPHELD"},
+    {"axis": "finite numerical scope", "check": "The positive residual is a finite matrix diagnostic and is not promoted to an asymptotic divergence or global no-go.", "disposition": "UPHELD"},
+    {"axis": "truncated CCR", "check": "Oscillator dimension three is explicit; no exact infinite CCR or common-core conclusion is inferred.", "disposition": "UPHELD"},
+    {"axis": "QFT promotion", "check": "No split recurrence, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector A or Pre-A result follows.", "disposition": "UPHELD"},
+    {"axis": "Lean scope", "check": "R325 proves only rational bookkeeping and the scope firewall, not the matrix residuals or limits.", "disposition": "UPHELD"}
+  ],
+  "qft_interface": {
+    "closed": "A reproducible finite boundary showing why exact unsplit flow cannot be used as the one-layer split recurrence premise.",
+    "open": "The actual split Q3 recurrence, first/double response, uniform Cauchy, exhaustion, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector A and Pre-A remain open.",
+    "tect_boundary": "No heat_root_incidence or canonical A1/R-192 production owner is supplied."
+  },
+  "next_action": "Implement the same four-context audit for one exact onsite-plus-all-bond Trotter step and test whether the registered one-layer recurrence holds there; retain this unsplit-flow boundary as a scope guard.",
+  "prior_exploration_id": "EXP-001154",
+  "related": [
+    {"id": "EXP-001154", "relation": "continues"},
+    {"id": "EXP-001151", "relation": "continues"},
+    {"id": "EXP-001128", "relation": "continues"},
+    {"id": "EXP-001149", "relation": "continues"}
+  ],
+  "provenance": "contemporaneous",
+  "recorded_at": "2026-08-27T23:59:00Z",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-08-26",
+  "no_overclaim": "This package is a finite unsplit-flow scope boundary. It is not a no-go theorem for split Q3 dynamics or any QFT construction."
+}
