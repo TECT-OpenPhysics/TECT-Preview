@@ -713,6 +713,79 @@
       "task_id": "T-054",
       "title": "Eight-component N5 normal-order admissibility audit",
       "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "axis": "canonical component count",
+          "check": "The matrix construction uses all eight binary-cube components and validates the twelve Q3 internal edges; the scalar EXP-001106 fixture is not reused.",
+          "disposition": "DISMISSED"
+        },
+        {
+          "axis": "truncated CCR boundary",
+          "check": "The finite oscillator matrices have a cutoff boundary, so the residual is reported only on the declared 256-dimensional matrix space and no canonical commutator limit is inferred.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "generalized-eigenvalue interpretation",
+          "check": "The denominator I+k_h^5 is checked positive and the largest generalized eigenvalue is used, so the reported C_fin is a valid finite form constant rather than a sampled-state maximum.",
+          "disposition": "DISMISSED"
+        },
+        {
+          "axis": "uniformity",
+          "check": "Nine compact parameter rows cannot establish uniformity in source, volume, cutoff, beta, orientation, or history.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "QFT promotion",
+          "check": "A finite matrix ratio might be cited as the actual Q3 common-core, OS/KMS/GNS, gap, continuum, Sector A, or Pre-A theorem.",
+          "disposition": "UPHELD"
+        }
+      ],
+      "boundary": "T0 claim-nonbearing finite-matrix scope. No source-, volume-, oscillator-cutoff-, beta-, orientation-, or history-uniform constant is proved; no unbounded q/p-to-creation-annihilation domain transfer, actual Q3 common-core theorem, D-delta-D Cauchy estimate, common alpha, Hamiltonian-to-OS identification, KMS/GNS reconstruction, gap, continuum, C6, Sector A, or Pre-A closure follows.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "The actual vector Q3 onsite polynomial, rather than the corrected scalar proxy, now has a reproducible finite N^5 versus 1+k_h^5 form comparison. The generalized-eigenvalue constant is cutoff- and fixture-specific, so it is recorded as diagnostic evidence and not as the R-167 uniform graph constant.",
+      "evidence_refs": [
+        "strategy/pre_a_cp1_st8_q3lock_eight_component_energy_number_form_manifest.json#exact_statement",
+        "codes/foundations/pre_a_cp1_st8_q3lock_eight_component_energy_number_form.py#build_hamiltonian",
+        "codes/foundations/pre_a_cp1_st8_q3lock_eight_component_energy_number_form_independent.py#build",
+        "codes/foundations/pre_a_cp1_st8_q3lock_eight_component_energy_number_form_verify.py#run",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-integrated-pre_a_cp1_st8_q3lock_eight_component_energy_number_form/integrated.json#verdict",
+        "verification/lean/Tect/R281.lean#finite_form_ratio_implies_domination",
+        "strategy/pre-a-cp1-st8-q3lock-local-measured-renyi-semiclassical-doublet-route-split-manifest.json#q3_semiclassical_onsite"
+      ],
+      "finding": "The primary lane passes 99/99 assertions and the independent lane passes 30/30; the integrated verifier passes 74/74 with Lean R281. The full eight-component cutoff dimension is 2^8=256. Across the 3-by-3 (r,lambda) fixture, both lanes agree on every row; the largest finite generalized form ratio is C_fin=189.29695775387336 at (r,lambda)=(-1.25,0.0). The corresponding finite Gibbs ratio is 14.580856975. All tested finite energy minima are positive, generalized residual minima meet tolerance, and the unitary history checks pass. This closes only a finite canonical eight-component matrix form audit.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": []
+      },
+      "gate_ids": [
+        "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+        "PA-CP1-ST8-Q3LOCK-CONNECTED-RANK-TWO-OSCILLATOR-ELIMINATION-QPS-NORM-AND-CUTOFF-COMPATIBILITY",
+        "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001109",
+      "method": [
+        "Construct the eight-component oscillator tensor matrices with the binary-cube Q3 internal edge potential and the declared shifted onsite Hamiltonian.",
+        "Compute the largest generalized eigenvalue C_fin of (N^5, I+k_h^5) and verify the residual matrix is positive up to tolerance.",
+        "Evaluate Gibbs and finite unitary-history number/energy ratios on the same matrices.",
+        "Repeat the construction with an independent tensor-factor lane and compile Lean R281 for the scalar ratio implication."
+      ],
+      "next_action": "Extend the exact finite matrix audit to a declared increasing oscillator cutoff and spatial volume family, while deriving an analytic Shubin graph constant independent of those cutoffs; stop and register a scaling obstruction if C_fin grows without a compensating normalization.",
+      "provenance": "contemporaneous",
+      "question": "For the actual full eight-component Q3 onsite Hamiltonian at finite oscillator cutoff, does the local harmonic number N^5 admit a finite matrix form bound by C(1+k_h^5) across a declared compact parameter fixture, and do independent constructions agree?",
+      "recorded_at": "2026-08-27T01:00:00Z",
+      "recorded_by": "Codex",
+      "related": [],
+      "reviewed_on": "2026-08-25",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Finite eight-component Q3 energy-number form audit",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",
