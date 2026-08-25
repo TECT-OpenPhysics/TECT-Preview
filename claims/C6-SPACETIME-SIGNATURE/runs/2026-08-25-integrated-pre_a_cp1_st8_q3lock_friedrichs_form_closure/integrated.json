@@ -1,0 +1,121 @@
+{
+  "assertion_count": 12,
+  "assertions": [
+    {
+      "actual": "['EXP-001131', 'T-054']",
+      "expected": "EXP-001131/T-054",
+      "name": "identity",
+      "pass": true
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "name": "claim nonbearing",
+      "pass": true
+    },
+    {
+      "actual": "['onsite_lower_fixture', 'bond_envelope_fixture', 'per_site_shift_fixture', 'bounded_degree_multiplier_fixture']",
+      "expected": "present",
+      "name": "Lean source",
+      "pass": true
+    },
+    {
+      "actual": "[]",
+      "expected": "none",
+      "name": "Lean forbidden",
+      "pass": true
+    },
+    {
+      "actual": "PRIMARY FRIEDRICHS-FORM-CLOSURE PASS 32827/32827\n",
+      "expected": "PASS",
+      "name": "primary child",
+      "pass": true
+    },
+    {
+      "actual": "INDEPENDENT FRIEDRICHS-FORM-CLOSURE PASS 26251/26251\n",
+      "expected": "PASS",
+      "name": "independent child",
+      "pass": true
+    },
+    {
+      "actual": "[32827, 26251]",
+      "expected": ">0",
+      "name": "positive assertion totals",
+      "pass": true
+    },
+    {
+      "actual": "{'site_lower_bound': ['-5/12', '-5/12'], 'bond_on_site_coefficient': ['10/3', '10/3'], 'per_site_shift': ['17/12', '17/12'], 'growth_remainder': ['-121/45', '-121/45'], 'edge_multiplier': ['21', '21']}",
+      "expected": "matching exact constants",
+      "name": "constant agreement",
+      "pass": true
+    },
+    {
+      "actual": "[{'bond_on_site_coefficient': '10/3', 'bounded_degree_shifted_form_order_closed': True, 'common_alpha_closed': False, 'degree_bound': 6, 'edge_multiplier': '21', 'finite_graph_common_form_domain_closed': True, 'finite_graph_form_closure_closed': True, 'finite_graph_friedrichs_operator_realisation_closed': True, 'graph_rows': [{'edges': 0, 'max_degree': 0, 'volume': 1}, {'edges': 1, 'max_degree': 1, 'volume': 2}, {'edges': 3, 'max_degree': 2, 'volume': 4}, {'edges': 7, 'max_degree': 2, 'volume': 8}, {'edges': 15, 'max_degree': 2, 'volume': 16}], 'growth_remainder': '-121/45', 'minimum_slack': {'bond': '0', 'envelope': '64/45', 'kinetic_envelope': '37/9', 'lower': '1/15', 'shifted_envelope': '37/9'}, 'pair_grid_rows': 6561, 'per_site_shift': '17/12', 'pre_a_closed': False, 'site_lower_bound': '-5/12', 'two_orientation_square_root_inclusion_closed': True, 'weighted_product_domain_closed': False}, {'bond_on_site_coefficient': '10/3', 'bounded_degree_shifted_form_order_closed': True, 'common_alpha_closed': False, 'degree_bound': 6, 'edge_multiplier': '21', 'finite_graph_common_form_domain_closed': True, 'finite_graph_form_closure_closed': True, 'finite_graph_friedrichs_operator_realisation_closed': True, 'growth_remainder': '-121/45', 'minimum_slack': {'bond': '0', 'envelope': '64/45', 'lower': '1/15', 'shifted': '37/9'}, 'pair_grid_rows': 6561, 'per_site_shift': '17/12', 'pre_a_closed': False, 'site_lower_bound': '-5/12', 'two_orientation_square_root_inclusion_closed': True, 'weighted_product_domain_closed': False}]",
+      "expected": "True",
+      "name": "closure agreement",
+      "pass": true
+    },
+    {
+      "actual": "[{'bond_on_site_coefficient': '10/3', 'bounded_degree_shifted_form_order_closed': True, 'common_alpha_closed': False, 'degree_bound': 6, 'edge_multiplier': '21', 'finite_graph_common_form_domain_closed': True, 'finite_graph_form_closure_closed': True, 'finite_graph_friedrichs_operator_realisation_closed': True, 'graph_rows': [{'edges': 0, 'max_degree': 0, 'volume': 1}, {'edges': 1, 'max_degree': 1, 'volume': 2}, {'edges': 3, 'max_degree': 2, 'volume': 4}, {'edges': 7, 'max_degree': 2, 'volume': 8}, {'edges': 15, 'max_degree': 2, 'volume': 16}], 'growth_remainder': '-121/45', 'minimum_slack': {'bond': '0', 'envelope': '64/45', 'kinetic_envelope': '37/9', 'lower': '1/15', 'shifted_envelope': '37/9'}, 'pair_grid_rows': 6561, 'per_site_shift': '17/12', 'pre_a_closed': False, 'site_lower_bound': '-5/12', 'two_orientation_square_root_inclusion_closed': True, 'weighted_product_domain_closed': False}, {'bond_on_site_coefficient': '10/3', 'bounded_degree_shifted_form_order_closed': True, 'common_alpha_closed': False, 'degree_bound': 6, 'edge_multiplier': '21', 'finite_graph_common_form_domain_closed': True, 'finite_graph_form_closure_closed': True, 'finite_graph_friedrichs_operator_realisation_closed': True, 'growth_remainder': '-121/45', 'minimum_slack': {'bond': '0', 'envelope': '64/45', 'lower': '1/15', 'shifted': '37/9'}, 'pair_grid_rows': 6561, 'per_site_shift': '17/12', 'pre_a_closed': False, 'site_lower_bound': '-5/12', 'two_orientation_square_root_inclusion_closed': True, 'weighted_product_domain_closed': False}]",
+      "expected": "open product-domain gate",
+      "name": "product-domain firewall",
+      "pass": true
+    },
+    {
+      "actual": "{'finite_graph_form_closure_closed': True, 'finite_graph_friedrichs_operator_realisation_closed': True, 'finite_graph_common_form_domain_closed': True, 'bounded_degree_shifted_form_order_closed': True, 'two_orientation_square_root_inclusion_closed': True, 'source_uniform_form_bound_closed': True, 'volume_uniform_form_bound_closed': True, 'weighted_product_domain_closed': False, 'exact_ccr_common_core_closed': False, 'modular_domain_transfer_closed': False, 'direct_d_cauchy_closed': False, 'delta_d_cauchy_closed': False, 'all_bond_graph_lipschitz_closed': False, 'common_alpha_closed': False, 'cutoff_uniformity_proved': False, 'beta_uniformity_proved': False, 'hamiltonian_os_identification_closed': False, 'kms_gns_gap_closed': False, 'continuum_closed': False, 'c6_closed': False, 'sector_a_closed': False, 'pre_a_closed': False}",
+      "expected": "finite form bridge only",
+      "name": "QFT firewall",
+      "pass": true
+    },
+    {
+      "actual": "{'status': 'PASS', 'command': 'lake env lean Tect/R302.lean', 'returncode': 0, 'output': ''}",
+      "expected": "PASS",
+      "name": "Lean compile",
+      "pass": true
+    }
+  ],
+  "audit_id": "PA-CP1-ST8-Q3LOCK-FRIEDRICHS-FORM-CLOSURE",
+  "boundary": {
+    "all_bond_graph_lipschitz_closed": false,
+    "beta_uniformity_proved": false,
+    "bounded_degree_shifted_form_order_closed": true,
+    "c6_closed": false,
+    "common_alpha_closed": false,
+    "continuum_closed": false,
+    "cutoff_uniformity_proved": false,
+    "delta_d_cauchy_closed": false,
+    "direct_d_cauchy_closed": false,
+    "exact_ccr_common_core_closed": false,
+    "finite_graph_common_form_domain_closed": true,
+    "finite_graph_form_closure_closed": true,
+    "finite_graph_friedrichs_operator_realisation_closed": true,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "modular_domain_transfer_closed": false,
+    "pre_a_closed": false,
+    "sector_a_closed": false,
+    "source_uniform_form_bound_closed": true,
+    "two_orientation_square_root_inclusion_closed": true,
+    "volume_uniform_form_bound_closed": true,
+    "weighted_product_domain_closed": false
+  },
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "exploration_id": "EXP-001131",
+  "lean": {
+    "command": "lake env lean Tect/R302.lean",
+    "output": "",
+    "returncode": 0,
+    "status": "PASS"
+  },
+  "provenance": {
+    "independent_sha256": "1c2d2c8ef5ef229b76291287dd704a0320f705975d38748be745fee884d29fd1",
+    "lean_sha256": "d502eb1d831f6b8d9ec27b9542ab07da3f41362859080960689af8a39934f26d",
+    "manifest_sha256": "4adcc0bdb0ff68e5156050ecff49b8d7a4642b7f094510d21957be5f261f23df",
+    "primary_sha256": "cb3dc7a11fd605f70cf9209d40e96e4fdbf24cc68eeb02ca8384361e0b4f6ea6"
+  },
+  "recorded_at": "2026-08-25T13:31:22.969929Z",
+  "run_kind": "integrated",
+  "schema": "tect/foundation-audit/1.0",
+  "task_id": "T-054",
+  "verdict": "PASS"
+}

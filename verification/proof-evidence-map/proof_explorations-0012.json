@@ -3133,6 +3133,129 @@
       "task_id": "T-054",
       "title": "Canonical shifted common-core form comparison and two-orientation inclusion contract",
       "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "axis": "form theorem hypotheses",
+          "check": "chi and g are positive, c and lambda are nonnegative, the polynomial potential is real and locally integrable, and the negative part is bounded by the exact onsite square completion.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "common domain direction",
+          "check": "Bond positivity supplies Q_edge subset Q_on; the reverse inclusion is separately supplied by the shifted quartic envelope.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "volume uniformity",
+          "check": "The 21 multiplier depends only on the degree bound six and not on vertex count; it is a form bound and not a dynamics, gap, or thermodynamic-limit theorem.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "operator versus form",
+          "check": "Friedrichs operators are asserted only graph-by-graph from the closed forms; arbitrary weighted products and commutators are not promoted to bounded operators.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "Lean scope",
+          "check": "R302 checks the exact rational prerequisites and shifted constants; it does not formalize the representation theorem, unbounded domains, modular transfer, or limits.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "QFT promotion",
+          "check": "Common alpha, OS/KMS/GNS reconstruction, a sector gap, continuum, C6, Sector A and Pre-A remain open.",
+          "disposition": "UPHELD-OPEN"
+        }
+      ],
+      "boundary": "This is an unconditional fixed-finite-graph semibounded-form/Friedrichs checkpoint with a bounded-degree form order. It is not a weighted product-domain theorem, common infinite-volume dynamics, common alpha, OS/KMS/GNS reconstruction, a gap, continuum, C6, Sector A or Pre-A result, a TECT production map or a Clay result.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "closed": [
+        "fixed finite graph semibounded form closure",
+        "fixed finite graph Friedrichs operator realization",
+        "common onsite/bond quartic form domain",
+        "source-independent bounded-degree shifted form order",
+        "two-orientation square-root form inclusion",
+        "independent reproduction and Lean R302 cross-check"
+      ],
+      "decision_reason": "The prior EXP-001130 conditional form comparison is now unconditional at the declared fixed-finite-graph form level: the standard semibounded Schrodinger form theorem supplies closure/Friedrichs realization, while the exact bond envelope supplies common-domain equality and a bounded-degree uniform order. The remaining obstruction is specifically the weighted product-domain identity and its cutoff/beta/modular transfer, not finite form closure.",
+      "evidence_refs": [
+        "strategy/pre-a-cp1-st8-q3lock-friedrichs-form-closure-manifest.json#model",
+        "codes/foundations/pre_a_cp1_st8_q3lock_friedrichs_form_closure.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_friedrichs_form_closure_independent.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_friedrichs_form_closure_verify.py#run",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-primary-pre_a_cp1_st8_q3lock_friedrichs_form_closure/primary.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-independent-pre_a_cp1_st8_q3lock_friedrichs_form_closure/independent.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-integrated-pre_a_cp1_st8_q3lock_friedrichs_form_closure/integrated.json#lean",
+        "verification/lean/Tect/R302.lean#bond_envelope_fixture",
+        "verification/lean/registry.json#R302"
+      ],
+      "finding": "Primary 32827/32827, independent 26251/26251, integrated 12/12, and Lean R302 PASS. The fixed finite graph form theorem applies because chi,g>0, c,lambda>=0, the polynomial potentials are real and locally integrable, and the negative part is bounded. The closures share the quartic form domain, the associated Friedrichs operators exist for each finite graph, and the degree-six shifted order is K_on <= K_edge <= 21 K_on with per-site shift 17/12.",
+      "formal_integration": {
+        "events": [],
+        "lean": "R302 PASS; metadata to be regenerated",
+        "negatives": [],
+        "no_new_event": true,
+        "no_new_negative": true,
+        "no_new_result": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "results": []
+      },
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": []
+      },
+      "gate_ids": [
+        "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+        "PA-CP1-ST8-Q3LOCK-ENERGY-WEIGHTED-COMMUTATOR-GEVREY-LR-CLOSURE",
+        "PA-CP1-ST8-Q3LOCK-RESOLVENT-ALGEBRA-EXACT-POLYNOMIAL-COMMON-ALPHA-CLOSURE",
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001131",
+      "method": [
+        "Use the exact onsite square completion to obtain the per-site lower bound -5/12 and choose the coercive per-site shift 17/12.",
+        "Reuse the exact quartic bond envelope B_ij <= (10/3)(h_i+h_j)+304/45 and recompute the shifted remainder 304/45-2(10/3)(17/12)=-121/45.",
+        "Apply the standard semibounded real Schrodinger-form closure theorem at each fixed finite graph; bond positivity gives one form-domain inclusion and the shifted envelope gives the reverse inclusion.",
+        "Sum the local bound over graphs of degree at most six to obtain K_on <= K_edge <= 21 K_on, then run independent Fraction-only grids and Lean R302 for the exact polynomial and rational constants."
+      ],
+      "next_action": "Use the 21 two-orientation form bound to audit a concrete weighted local observable family; if the product-domain or modular transfer cannot be closed under explicit graph/cutoff constants, append that obstruction rather than promoting the finite form theorem.",
+      "no_overclaim": "The fixed finite form theorem is closed only under its explicitly stated standard hypotheses. All unbounded product, modular, exhaustion, QFT reconstruction, gap, continuum and production gates remain open.",
+      "open": [
+        "weighted product-domain identity for unbounded local observables",
+        "exact CCR/common-core operator-domain transfer",
+        "cutoff- and beta-uniform modular transfer",
+        "direct D and delta-D Cauchy estimates",
+        "exhaustion independence and common alpha",
+        "Hamiltonian-to-OS/KMS/GNS identification, a sector gap, continuum, C6, Sector A and Pre-A"
+      ],
+      "prior_exploration_id": "EXP-001130",
+      "provenance": "contemporaneous",
+      "qft_interface": {
+        "closed": "Fixed finite-graph Friedrichs/form-domain realization and bounded-degree shifted form order.",
+        "open": "Weighted product domains, cutoff/beta modular transfer, direct D/delta-D Cauchy, exhaustion, common alpha, OS/KMS/GNS, gap, continuum and Pre-A.",
+        "tect_boundary": "Finite-form bridge only; no heat_root_incidence or canonical A1/R-192 production owner."
+      },
+      "question": "For a fixed finite Q3 graph with bounded degree, do the exact onsite and bond forms have a common Friedrichs form domain and a volume-uniform shifted form order?",
+      "recorded_at": "2026-08-27T11:30:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001130",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001129",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-08-25",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Finite bounded-degree Q3 Friedrichs form closure and volume-uniform shifted order",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",

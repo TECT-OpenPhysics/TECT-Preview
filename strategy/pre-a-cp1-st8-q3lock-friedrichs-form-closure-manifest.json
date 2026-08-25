@@ -1,0 +1,94 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-FRIEDRICHS-FORM-CLOSURE-v0",
+  "title": "Finite bounded-degree Q3 Friedrichs form closure and volume-uniform shifted order",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001131",
+  "claim_bearing": false,
+  "parent_explorations": ["EXP-001130", "EXP-001129"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-ENERGY-WEIGHTED-COMMUTATOR-GEVREY-LR-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-RESOLVENT-ALGEBRA-EXACT-POLYNOMIAL-COMMON-ALPHA-CLOSURE",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "question": "For a fixed finite Q3 graph with bounded degree, do the exact onsite and bond forms have a common Friedrichs form domain and a volume-uniform shifted form order?",
+  "finite_fixture": {
+    "c": "3/5",
+    "lambda": "1/10",
+    "chi": "1",
+    "r": "-1",
+    "g": "3/5",
+    "bond_form_constant": "304/45",
+    "bond_on_site_coefficient": "10/3",
+    "site_lower_bound": "-5/12",
+    "per_site_shift": "17/12",
+    "growth_remainder": "-121/45",
+    "degree_bound": 6,
+    "edge_multiplier": "21",
+    "grid_values": [-4, -3, -2, -1, 0, 1, 2, 3, 4],
+    "volumes": [1, 2, 4, 8, 16]
+  },
+  "model": {
+    "core": "D=C_c^infinity(R^S) for a finite graph S, with q_i multiplication and p_i=-i*d/dq_i",
+    "onsite_form": "h_i[psi]=||p_i psi||^2/(2 chi)+integral(r q_i^2/2+g q_i^4/4)|psi|^2",
+    "bond_form": "b_ij[psi]=integral(c(q_i-q_j)^2/2+lambda(q_i-q_j)^2(q_i^2+q_j^2)/4)|psi|^2",
+    "closure_argument": "The real polynomial potential is locally integrable and bounded below; the negative part is bounded, so the standard semibounded Schrodinger form theorem closes the C_c^infinity form and gives its Friedrichs operator.",
+    "common_domain_argument": "Bond positivity gives Q_edge subset Q_on; the EXP-001129 envelope and the per-site shift 17/12 give B <= (10/3) sum_edges(K_i+K_j), hence Q_on subset Q_edge for graphs of degree at most six.",
+    "shifted_order": "K_on=H_on+(17/12)|S| I and K_edge=K_on+B satisfy K_on <= K_edge <= 21 K_on for max degree six."
+  },
+  "scope": {
+    "finite_graph_form_closure_closed": true,
+    "finite_graph_friedrichs_operator_realisation_closed": true,
+    "finite_graph_common_form_domain_closed": true,
+    "bounded_degree_shifted_form_order_closed": true,
+    "two_orientation_square_root_inclusion_closed": true,
+    "source_uniform_form_bound_closed": true,
+    "volume_uniform_form_bound_closed": true,
+    "weighted_product_domain_closed": false,
+    "exact_ccr_common_core_closed": false,
+    "modular_domain_transfer_closed": false,
+    "direct_d_cauchy_closed": false,
+    "delta_d_cauchy_closed": false,
+    "all_bond_graph_lipschitz_closed": false,
+    "common_alpha_closed": false,
+    "cutoff_uniformity_proved": false,
+    "beta_uniformity_proved": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false
+  },
+  "adversarial_review": [
+    {"axis": "form theorem hypotheses", "check": "chi and g are positive, c and lambda are nonnegative, the polynomial potential is real and locally integrable, and its negative part is bounded by the exact onsite square completion.", "disposition": "UPHELD"},
+    {"axis": "common domain direction", "check": "Bond positivity gives only Q_edge subset Q_on; the reverse inclusion is supplied separately by the quartic envelope after the per-site shift.", "disposition": "UPHELD"},
+    {"axis": "volume uniformity", "check": "The 21 multiplier uses only the degree bound six and the per-site shift, not the number of vertices; it is a form bound, not a dynamics or gap bound.", "disposition": "UPHELD-OPEN"},
+    {"axis": "operator versus form", "check": "Friedrichs operators are obtained for each fixed finite graph from the closed form theorem; arbitrary weighted products with unbounded observables are not asserted to have a common operator domain.", "disposition": "UPHELD-OPEN"},
+    {"axis": "Lean scope", "check": "R302 reuses the compiled R300 polynomial envelope and checks the new rational shift/order constants; it does not formalize the representation theorem or thermodynamic limits.", "disposition": "UPHELD-OPEN"},
+    {"axis": "QFT promotion", "check": "Cutoff/beta modular transfer, direct D/delta-D Cauchy, common alpha, OS/KMS/GNS reconstruction, gap, continuum, C6, Sector A and Pre-A remain open.", "disposition": "UPHELD-OPEN"}
+  ],
+  "files": {
+    "primary": "codes/foundations/pre_a_cp1_st8_q3lock_friedrichs_form_closure.py",
+    "independent": "codes/foundations/pre_a_cp1_st8_q3lock_friedrichs_form_closure_independent.py",
+    "integrated": "codes/foundations/pre_a_cp1_st8_q3lock_friedrichs_form_closure_verify.py",
+    "lean": "verification/lean/Tect/R302.lean",
+    "primary_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-primary-pre_a_cp1_st8_q3lock_friedrichs_form_closure/primary.json",
+    "independent_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-independent-pre_a_cp1_st8_q3lock_friedrichs_form_closure/independent.json",
+    "integrated_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-integrated-pre_a_cp1_st8_q3lock_friedrichs_form_closure/integrated.json"
+  },
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R302.lean",
+    "theorem_markers": ["onsite_lower_fixture", "bond_envelope_fixture", "per_site_shift_fixture", "bounded_degree_multiplier_fixture"],
+    "command": "lake env lean Tect/R302.lean",
+    "boundary": "Lean checks the exact rational polynomial prerequisites and shifted-order constants, reusing the compiled R300 envelope; it does not formalize Friedrichs representation, form-domain closure, unbounded products, or limits."
+  },
+  "qft_interface": {
+    "closed": "For every fixed finite graph in the declared bounded-degree class, the exact Q3 onsite and bond forms share a Friedrichs form domain and satisfy a source-independent, volume-uniform shifted form order with square-root bounds.",
+    "open": "Weighted product-domain identities, cutoff/beta modular transfer, exact CCR domain transfer, direct D/delta-D Cauchy, exhaustion-independent common alpha, OS/KMS/GNS identification, a sector gap, continuum and the Pre-A production gate.",
+    "tect_boundary": "This is a finite-form analytic bridge only; it supplies no heat_root_incidence or canonical A1/R-192 production owner."
+  },
+  "no_overclaim": "This closes the fixed finite-graph Friedrichs/form-domain checkpoint under the explicit standard semibounded Schrodinger form theorem. It is not a common infinite-volume dynamics, a modular or weighted-product theorem, a common alpha, OS/KMS/GNS reconstruction, a gap, continuum, C6, Sector A or Pre-A result."
+}
