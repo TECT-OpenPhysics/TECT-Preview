@@ -1,0 +1,92 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-RESOLVENT-SMOOTHED-POLYNOMIAL-CYLINDER-v0",
+  "title": "Resolvent-smoothed polynomial cylinders for the finite Q3 quartic form",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001136",
+  "claim_bearing": false,
+  "parent_explorations": ["EXP-001134", "EXP-001133", "EXP-001131"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-ENERGY-WEIGHTED-COMMUTATOR-GEVREY-LR-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-RESOLVENT-ALGEBRA-EXACT-POLYNOMIAL-COMMON-ALPHA-CLOSURE",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "question": "Does the resolvent-smoothed coordinate f(q)=q/(1+q^2/16) provide a bounded finite-support cylinder with an explicit form bound, first-generator commutator bound, and conditional M20 approximation estimate?",
+  "finite_fixture": {
+    "chi": "1",
+    "epsilon": "1/16",
+    "resolvent_imaginary_shift": "4",
+    "resolvent_sum_coefficient": "8",
+    "cross_orientation_multiplier": "21",
+    "support_sizes": [1, 2, 4, 8],
+    "grid_values": [-16, -8, -4, -2, -1, 0, 1, 2, 4, 8, 16],
+    "moment_order": 20,
+    "dominated_error_order": 6,
+    "gaussian_variance": "1/2",
+    "gaussian_centers": [0, 1, 2, 4, 8]
+  },
+  "model": {
+    "single_coordinate": "f_epsilon(q)=q/(1+epsilon*q^2)=16*q/(16+q^2)",
+    "resolvent_decomposition": "f_epsilon(q)=8*((q-4i)^(-1)+(q+4i)^(-1))",
+    "pointwise_bounds": "|f|<=2, |f'|<=1, |f''|<=1; q-f=q^3/(16+q^2)",
+    "product_cylinder": "F_S=product_{x in S} f_epsilon(q_x), with sup norm <=2^m and gradient squared <=m*4^(m-1)",
+    "same_form_bound": "q_K[F_S psi] <= 2*(2^m)^2*q_K[psi] + (m*4^(m-1))/chi * ||psi||^2",
+    "cross_form_bound": "The opposite orientation pays the exact EXP-001131 factor 21.",
+    "first_commutator_bound": "Under the declared symmetric kinetic convention, a safe squared K-form bound is 2*m*4^(m-1)/chi.",
+    "conditional_moment_bound": "If omega(q^20)<=M20, then omega((q-f)^2)<=epsilon^2*(1+M20) because q^6<=1+q^20."
+  },
+  "scope": {
+    "resolvent_smoothed_single_coordinate_closed": true,
+    "resolvent_smoothed_finite_support_form_invariance_closed": true,
+    "resolvent_smoothed_product_weighted_bound_closed": true,
+    "resolvent_smoothed_first_commutator_form_bound_closed": true,
+    "conditional_m20_static_approximation_closed": true,
+    "bounded_lipschitz_cylinder_closed": true,
+    "raw_coordinate_form_domain_invariance_closed": false,
+    "unbounded_polynomial_products_closed": false,
+    "second_commutator_closed": false,
+    "modular_domain_transfer_closed": false,
+    "direct_d_cauchy_closed": false,
+    "delta_d_cauchy_closed": false,
+    "common_alpha_closed": false,
+    "cutoff_uniformity_proved": false,
+    "beta_uniformity_proved": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false
+  },
+  "adversarial_review": [
+    {"axis": "resolvent identity", "check": "The partial-fraction expression is checked after combining the two conjugate scalar resolvents; no complex-domain theorem is silently imported.", "disposition": "UPHELD"},
+    {"axis": "derivative constants", "check": "The sup, first-derivative and second-derivative bounds are proved from nonnegative exact polynomial gaps; grid samples are only a reproducibility audit.", "disposition": "UPHELD"},
+    {"axis": "product growth", "check": "The 2^m and m*4^(m-1) factors are recomputed from support size and are not volume-uniform when support grows; only fixed support is claimed.", "disposition": "UPHELD-OPEN"},
+    {"axis": "commutator convention", "check": "The first-generator estimate uses a deliberately safe factor 2/chi for the symmetric p f'+f' p convention; no sharp constant is asserted.", "disposition": "UPHELD-OPEN"},
+    {"axis": "moment transfer", "check": "The L2 approximation is conditional on a state M20 bound and q^6<=1+q^20; no Gibbs, beta, cutoff or thermodynamic moment bound is inferred.", "disposition": "UPHELD-OPEN"},
+    {"axis": "QFT promotion", "check": "Second commutators, modular transfer, direct D/delta-D Cauchy, exhaustion, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector A and Pre-A remain open.", "disposition": "UPHELD-OPEN"}
+  ],
+  "files": {
+    "primary": "codes/foundations/pre_a_cp1_st8_q3lock_resolvent_smoothed_polynomial_cylinder.py",
+    "independent": "codes/foundations/pre_a_cp1_st8_q3lock_resolvent_smoothed_polynomial_cylinder_independent.py",
+    "integrated": "codes/foundations/pre_a_cp1_st8_q3lock_resolvent_smoothed_polynomial_cylinder_verify.py",
+    "lean": "verification/lean/Tect/R306.lean",
+    "primary_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-primary-pre_a_cp1_st8_q3lock_resolvent_smoothed_polynomial_cylinder/primary.json",
+    "independent_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-independent-pre_a_cp1_st8_q3lock_resolvent_smoothed_polynomial_cylinder/independent.json",
+    "integrated_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-integrated-pre_a_cp1_st8_q3lock_resolvent_smoothed_polynomial_cylinder/integrated.json"
+  },
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R306.lean",
+    "theorem_markers": ["resolvent_sum_fixture", "modulus_square_bound", "derivative_square_bound", "second_derivative_square_bound", "second_derivative_gap_identity"],
+    "command": "lake env lean Tect/R306.lean",
+    "boundary": "Lean checks exact rational resolvent and polynomial inequalities only; it does not formalize the operator commutator, state moment hypothesis, QFT algebra or any limit."
+  },
+  "qft_interface": {
+    "closed": "A finite-support resolvent-smoothed bounded cylinder has explicit same/cross orientation form bounds, a safe first-generator commutator bound, and a conditional M20 static approximation estimate.",
+    "open": "Second commutators, modular/cutoff/beta transfer, direct D/delta-D Cauchy, exhaustion independence, common alpha, OS/KMS/GNS, gap, continuum and Pre-A.",
+    "tect_boundary": "Finite bounded cylinder bridge only; no common infinite-volume dynamics, heat_root_incidence or canonical A1/R-192 production owner."
+  },
+  "no_overclaim": "This package closes only the declared finite-support resolvent-smoothed cylinder estimates under an explicit M20 hypothesis for the approximation clause. It does not close the full polynomial observable algebra, modular dynamics, common alpha, OS/KMS/GNS reconstruction, a gap, continuum, C6, Sector A or Pre-A."
+}
