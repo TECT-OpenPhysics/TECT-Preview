@@ -1,0 +1,117 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-FULL-CHARACTER-TWO-SIDED-DUHAMEL-HISTORY-BOUND-v0",
+  "title": "Finite-support two-sided Duhamel history bound from the full Q3 character envelope",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001153",
+  "claim_bearing": false,
+  "parent_explorations": ["EXP-001152", "EXP-001150"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "question": "Can the registered full Q3 static second-commutator envelope be inserted into an exact finite-member two-sided Duhamel remainder estimate for a fixed two-site configuration-character word while keeping product, modular and shape costs explicit?",
+  "finite_fixture": {
+    "chi": "1",
+    "hbar": "1",
+    "m5": "3",
+    "support_size": 2,
+    "amplitudes": ["1/4", "-1/3"],
+    "time_horizon": "1/3",
+    "orientations": 2,
+    "product_same_form_cost": "81/4",
+    "product_cross_form_cost": "1701/4",
+    "source_scope": "registered finite periodic Q3 volumes at fixed beta, compact sources, fixed two-site support and declared amplitudes"
+  },
+  "model": {
+    "word": "W_aS=exp(i*sum_(x in S) a_x*q_x/hbar) with |S|=2 and the declared amplitudes",
+    "static_input": "EXP-001152 supplies a complete registered-family kinetic-plus-force fourth-moment envelope for the local character double commutator",
+    "multi_support_extension": "For commuting site momenta and configuration forces, |sum c_x u_x|^4<=|S|^3 sum |c_x|^4 |u_x|^4 and the l1 force triangle give an explicit finite-support envelope",
+    "safe_force_step": "sqrt(G_force4)<=G_force4 for G_force4>=1 is used only to keep the multi-support coefficient rational and deliberately loose",
+    "duhamel_identity": "R_T^sign(W)=integral_0^T (T-s) alpha_(sign*s)(delta_H^2(W)) ds",
+    "one_orientation_bound": "N_beta(R_T^sign(W))^2<=T^4*B_word/4 by finite Gibbs isometry",
+    "two_orientation_bound": "N_beta(R_T^+(W)-R_T^-(W))^2<=T^4*B_word by the seminorm triangle inequality",
+    "product_cost": "EXP-001150 gives same-form 81/4 and cross-form 1701/4 for the declared bounded C1 factor product; these costs are recorded but not silently used as an unbounded history theorem",
+    "qft_role": "This is a finite-member two-sided history interface only; modular derivatives, volume comparison, exhaustion and common alpha remain separate gates"
+  },
+  "derived_oracles": {
+    "kinetic_squared_bound": "1341774241/53747712",
+    "l1_amplitude": "7/12",
+    "force_safe_squared_bound": "1553502726867294/5",
+    "full_word_squared_bound": "83497217154884689002533/134369280",
+    "one_orientation_remainder_squared_bound": "83497217154884689002533/43535646720",
+    "negative_orientation_remainder_squared_bound": "83497217154884689002533/43535646720",
+    "two_orientation_difference_squared_bound": "83497217154884689002533/10883911680",
+    "duhamel_kernel_squared_integral": "1/324",
+    "product_same_form_cost": "81/4",
+    "product_cross_form_cost": "1701/4"
+  },
+  "scope": {
+    "finite_support_static_multi_character_recomputed": true,
+    "finite_member_positive_time_remainder_closed": true,
+    "finite_member_negative_time_remainder_closed": true,
+    "finite_member_two_orientation_difference_closed": true,
+    "product_cost_recorded": true,
+    "modular_derivative_closed": false,
+    "actual_q3_four_context_history_closed": false,
+    "actual_q3_factorial_history_closed": false,
+    "volume_uniform_direct_d_cauchy_closed": false,
+    "delta_d_cauchy_closed": false,
+    "unbounded_product_core_closed": false,
+    "exhaustion_independence_closed": false,
+    "group_law_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "arbitrary_boundary_extension_closed": false,
+    "all_shape_uniformity_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "adversarial_review": [
+    {"axis":"static import","check":"The full force coefficient is read from EXP-001152 and its registered finite periodic compact-source scope is checked; no sharper unregistered coefficient is substituted.","disposition":"UPHELD"},
+    {"axis":"multi-site kinetic power","check":"The |S|^3 fourth-power inequality is applied to commuting site momenta and the support cost remains explicit.","disposition":"UPHELD"},
+    {"axis":"force square root","check":"The rational force envelope uses sqrt(G)<=G only after checking G>=1 and is labelled deliberately loose.","disposition":"UPHELD"},
+    {"axis":"Duhamel sign","check":"Positive and negative time kernels are evaluated separately with the same finite Gibbs isometry; no time-sign identification of the infinite-volume dynamics is inferred.","disposition":"UPHELD"},
+    {"axis":"orientation triangle","check":"The two-orientation difference pays the full triangle factor and is not identified with a one-sided remainder.","disposition":"UPHELD"},
+    {"axis":"product boundary","check":"The EXP-001150 bounded-C1 product costs are recorded as interface data only; unbounded polynomial products and history closure remain open.","disposition":"UPHELD-OPEN"},
+    {"axis":"modular boundary","check":"No bound for delta_H R or a modular multiplier is inserted; modular transfer remains an explicit false scope flag.","disposition":"UPHELD-OPEN"},
+    {"axis":"volume and shape","check":"The result is one fixed support and one registered finite-member family; no pairwise-volume or all-shape Cauchy conclusion is drawn.","disposition":"UPHELD-OPEN"},
+    {"axis":"Lean","check":"R323 checks exact rational arithmetic and scope markers only, not unbounded domains, Gibbs traces or thermodynamic limits.","disposition":"UPHELD"},
+    {"axis":"QFT promotion","check":"Finite-time remainder control is not common alpha, OS/KMS/GNS reconstruction, a gap, continuum, C6, Sector A or Pre-A closure.","disposition":"UPHELD-OPEN"}
+  ],
+  "files": {
+    "primary": "codes/foundations/pre_a_cp1_st8_q3lock_full_character_two_sided_duhamel_history_bound.py",
+    "independent": "codes/foundations/pre_a_cp1_st8_q3lock_full_character_two_sided_duhamel_history_bound_independent.py",
+    "integrated": "codes/foundations/pre_a_cp1_st8_q3lock_full_character_two_sided_duhamel_history_bound_verify.py",
+    "lean": "verification/lean/Tect/R323.lean"
+  },
+  "upstream": {
+    "static_full_q3": "strategy/pre-a-cp1-st8-q3lock-full-character-double-commutator-bound-manifest.json#derived_oracles",
+    "bounded_cylinder": "strategy/pre-a-cp1-st8-q3lock-inductive-cylinder-form-contract-manifest.json#finite_fixture",
+    "static_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-27-integrated-pre_a_cp1_st8_q3lock_full_character_double_commutator_bound/integrated.json#lean"
+  },
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R323.lean",
+    "command": "lake env lean Tect/R323.lean",
+    "declarations": ["multi_support_kinetic_fixture", "force_safe_fixture", "full_word_fixture", "duhamel_one_orientation_fixture", "duhamel_two_orientation_fixture", "product_cost_fixture", "scope_fixture"],
+    "role": "R323 checks exact rational composition and finite-time scaling only; it does not formalize operator domains, Gibbs isometry or limits."
+  },
+  "qft_interface": {
+    "closed": "A fixed two-site configuration-character word has an explicit finite-member positive-time and negative-time Duhamel remainder bound, plus a two-orientation difference bound, using the registered full Q3 static envelope.",
+    "open": "Modular derivatives, four-context history, factorial incidence, volume-uniform direct D/delta-D Cauchy, unbounded products, exhaustion, group law, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector A and Pre-A remain open.",
+    "tect_boundary": "No heat_root_incidence or canonical A1/R-192 production owner is supplied."
+  },
+  "boundary": "T0 claim-nonbearing finite-member two-sided Duhamel interface for a fixed two-site word; deliberately not a thermodynamic history theorem.",
+  "next_action": "Use the finite-time seed as the base case for a four-context partial-history recurrence; prove or refute a volume-, cutoff- and beta-uniform product/modular response coefficient before any exhaustion or common-alpha promotion.",
+  "no_overclaim": "Only the declared fixed-support finite-member Duhamel remainder and two-orientation triangle bounds are closed. This does not establish actual Q3 four-context history, direct D/delta-D Cauchy, exhaustion independence, common alpha, OS/KMS/GNS, a gap, continuum, C6, Sector A or Pre-A.",
+  "formal_integration": {"results": [], "negatives": [], "events": [], "lean": "R323 pending", "no_new_result": true, "no_new_negative": true, "no_tier_change": true, "no_pdf": true}
+}
