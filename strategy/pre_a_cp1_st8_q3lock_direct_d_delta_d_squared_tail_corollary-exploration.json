@@ -1,0 +1,58 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001113",
+  "title": "Conditional shell-tail composition for direct D and modular derivative",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "question": "If reference and dual cutoff tails decay as K_i/s^2 along R=s^5, L=s^2, does a uniform Duhamel integrand bound imply a vanishing combined squared D and delta-D tail?",
+  "method": [
+    "Rewrite the EXP-001111/112 safe polynomial tail on the exact fifth-power shell subsequence R=s^5, L=s^2 as K_i/s^2.",
+    "Assume, without proving for Q3, squared direct-D and delta-D Duhamel integrands bounded by a_0^2 K_0/s^2 and a_1^2 K_1/s^2 uniformly over time.",
+    "Apply the scalar Cauchy-Schwarz Duhamel composition and independently recompute the resulting coefficient and exact shell fixtures.",
+    "Compile Lean R285 for the inverse-square limit and rational coefficient only."
+  ],
+  "finding": "Primary 17/17, independent 11/11, integrated 11/11, and Lean R285 compile PASS. With K_0=K_1=38880, a_0=1/2, a_1=3/4 and t=1/5, the combined squared bound is (6318/5)/L on L=s^2. The exact rows for (R,L)=(1,1),(32,4),(3125,25) are 6318/5, 3159/10 and 6318/125, respectively, and the Lean inverse-square theorem gives the zero limit along s to infinity.",
+  "decision_reason": "The scalar tail-to-squared-D/delta-D bookkeeping is now explicit and independently reproducible. It closes only a conditional interface: the actual Q3 dual modular tail and both common-core Duhamel integrand bounds are not supplied, so direct D/delta-D Cauchy and common-alpha remain open.",
+  "verdict": "advanced",
+  "boundary": "T0 claim-nonbearing conditional scalar bridge. No actual Q3 operator, state, domain, product/core density, exhaustion, group law, OS/KMS/GNS, gap, continuum, C6, Sector A or Pre-A conclusion follows.",
+  "next_action": "Prove or falsify the dual-state modular companion and the two source/volume/history-uniform Q3 integrand bounds on one unbounded common core; register any volume or beta scaling obstruction before common-alpha promotion.",
+  "evidence_refs": [
+    "strategy/pre_a_cp1_st8_q3lock_direct_d_delta_d_squared_tail_corollary_manifest.json#exact_statement",
+    "codes/foundations/pre_a_cp1_st8_q3lock_direct_d_delta_d_squared_tail_corollary.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_direct_d_delta_d_squared_tail_corollary_independent.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_direct_d_delta_d_squared_tail_corollary_verify.py#run",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-primary-pre_a_cp1_st8_q3lock_direct_d_delta_d_squared_tail_corollary/primary.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-independent-pre_a_cp1_st8_q3lock_direct_d_delta_d_squared_tail_corollary/independent.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-integrated-pre_a_cp1_st8_q3lock_direct_d_delta_d_squared_tail_corollary/integrated.json#lean",
+    "verification/lean/Tect/R285.lean#inverse_square_tail_limit",
+    "verification/lean/registry.json#R285"
+  ],
+  "formal_refs": {"results": [], "negatives": [], "events": []},
+  "formal_integration": {"no_new_result": true, "no_new_negative": true, "no_tier_change": true, "no_pdf": true},
+  "related": [
+    {"id": "EXP-001112", "relation": "continues"},
+    {"id": "EXP-001111", "relation": "continues"},
+    {"id": "EXP-001079", "relation": "continues"},
+    {"id": "EXP-001092", "relation": "continues"}
+  ],
+  "recorded_at": "2026-08-27T01:40:00Z",
+  "reviewed_on": "2026-08-25",
+  "provenance": "contemporaneous",
+  "qft_interface": {
+    "closed": "Conditional inverse-square shell tail composition for squared direct D and modular derivative bounds.",
+    "open": "Actual Q3 dual tail, common-core integrand bounds, direct D/delta-D Cauchy, product/core density, exhaustion independence, group law, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector A and Pre-A.",
+    "tect_boundary": "No heat_root_incidence or canonical A1/R-192 production owner is supplied."
+  },
+  "adversarial_review": [
+    {"axis": "dual tail", "check": "The dual constant is an explicit conditional fixture and is not presented as an actual Q3 theorem.", "disposition": "UPHELD-OPEN"},
+    {"axis": "Duhamel hypotheses", "check": "The integrand multipliers a_0 and a_1 are declared inputs; Cauchy-Schwarz is not used to hide their common-core/domain proof.", "disposition": "UPHELD-OPEN"},
+    {"axis": "shell indexing", "check": "Only exact R=s^5, L=s^2 fixtures are used, so no unproved fractional-index interpolation is inferred.", "disposition": "UPHELD"},
+    {"axis": "QFT promotion", "check": "The scalar limit does not close direct D/delta-D, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector A or Pre-A.", "disposition": "UPHELD-OPEN"}
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-DIRECT-D-DELTA-D-SQUARED-TAIL-COROLLARY-v0",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001113",
+  "claim_bearing": false,
+  "parent_explorations": ["EXP-001112", "EXP-001111", "EXP-001079", "EXP-001092"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "question": "If reference and dual cutoff tails decay as K_i/s^2 along the registered fifth-power shell subsequence R=s^5, does a uniform Duhamel integrand bound imply a vanishing combined squared direct-D and modular-derivative tail?",
+  "exact_statement": {
+    "shell_subsequence": "For R=s^5 and L=s^2, the EXP-001111/112 safe tail K_i R^(-2/5) is exactly K_i/s^2.",
+    "conditional_inputs": "Assume the direct-D integrand and the delta-D integrand have squared norms bounded by a_i^2 K_i/s^2 uniformly over the integration interval. These are hypotheses, not a Q3 theorem supplied by this package.",
+    "duhamel_conclusion": "The Cauchy-Schwarz Duhamel estimate gives ||D||^2+||delta D||^2 <= t^2*(a_0^2 K_0+a_1^2 K_1)/s^2, which tends to zero as s tends to infinity.",
+    "qft_boundary": "The result is a scalar conditional composition only. It does not prove the actual Q3 common core, either dual tail, either integrand bound, product/core density, exhaustion independence, group law, or a common alpha."
+  },
+  "finite_fixture": {
+    "reference_tail_constant": 38880,
+    "dual_tail_constant": 38880,
+    "d_integrand_multiplier": "1/2",
+    "delta_d_integrand_multiplier": "3/4",
+    "time": "1/5",
+    "shell_roots": [1, 2, 5],
+    "safe_tail_multiplier": 2916,
+    "source_c": "1/3",
+    "registered_m20_star": 120
+  },
+  "scope": {
+    "shell_tail_to_squared_direct_d_corollary_closed": true,
+    "shell_tail_to_squared_delta_d_corollary_closed": true,
+    "combined_squared_tail_limit_closed": true,
+    "reference_tail_input_reused": true,
+    "dual_tail_input_proved": false,
+    "actual_q3_integrand_bound_proved": false,
+    "actual_unbounded_q3_common_core_closed": false,
+    "direct_d_delta_d_cauchy_closed": false,
+    "product_core_density_closed": false,
+    "exhaustion_independence_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false
+  },
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R285.lean",
+    "command": "lake env lean Tect/R285.lean",
+    "declarations": ["inverse_square_tail_limit", "combined_squared_tail_fixture", "scope_fixture"],
+    "role": "R285 checks the inverse-square shell limit and rational fixture composition only; it does not formalize operators, Q3, Duhamel, or modular theory."
+  },
+  "formal_integration": {
+    "results": [],
+    "events": [],
+    "negatives": [],
+    "lean": "R285 PASS",
+    "no_new_result": true,
+    "no_new_negative": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "boundary": "T0 claim-nonbearing conditional scalar bridge. The missing Q3 dual modular tail and common-core D/delta-D integrand estimates remain explicit hypotheses, so no thermodynamic dynamics or common-alpha claim is made.",
+  "next_action": "Prove or falsify the two Q3 integrand bounds on a single unbounded common core, beginning with the dual-state modular companion; if either constant grows with volume, source, beta, or shell history, register that route-specific obstruction."
+}

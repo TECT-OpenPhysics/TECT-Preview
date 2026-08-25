@@ -1,0 +1,92 @@
+{
+  "assertion_count": 11,
+  "assertions": [
+    {
+      "actual": "['EXP-001113', 'T-054']",
+      "expected": "EXP-001113/T-054",
+      "name": "identity",
+      "pass": true
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "name": "claim nonbearing",
+      "pass": true
+    },
+    {
+      "actual": "E:\\Dev\\TECT\\verification\\lean\\Tect\\R285.lean",
+      "expected": "R285 declarations",
+      "name": "Lean declarations",
+      "pass": true
+    },
+    {
+      "actual": "[]",
+      "expected": "none",
+      "name": "Lean forbidden",
+      "pass": true
+    },
+    {
+      "actual": "{'shell_tail_to_squared_direct_d_corollary_closed': True, 'shell_tail_to_squared_delta_d_corollary_closed': True, 'combined_squared_tail_limit_closed': True, 'reference_tail_input_reused': True, 'dual_tail_input_proved': False, 'actual_q3_integrand_bound_proved': False, 'actual_unbounded_q3_common_core_closed': False, 'direct_d_delta_d_cauchy_closed': False, 'product_core_density_closed': False, 'exhaustion_independence_closed': False, 'common_alpha_closed': False, 'hamiltonian_os_identification_closed': False, 'kms_gns_gap_closed': False, 'continuum_closed': False, 'c6_closed': False, 'sector_a_closed': False, 'pre_a_closed': False}",
+      "expected": "conditional bridge with QFT successors open",
+      "name": "scope firewall",
+      "pass": true
+    },
+    {
+      "actual": "PRIMARY DIRECT-D-DELTA-D-SQUARED-TAIL PASS 17/17\n",
+      "expected": "PASS",
+      "name": "primary child",
+      "pass": true
+    },
+    {
+      "actual": "INDEPENDENT DIRECT-D-DELTA-D-SQUARED-TAIL PASS 11/11\n",
+      "expected": "PASS",
+      "name": "independent child",
+      "pass": true
+    },
+    {
+      "actual": "['6318/5', '6318/5']",
+      "expected": "6318/5",
+      "name": "coefficient agreement",
+      "pass": true
+    },
+    {
+      "actual": "[3, 3]",
+      "expected": "exact row equality",
+      "name": "row agreement",
+      "pass": true
+    },
+    {
+      "actual": "{'actual_q3_integrand_bound_proved': False, 'actual_unbounded_q3_common_core_closed': False, 'c6_closed': False, 'coefficient': '6318/5', 'combined_squared_tail_limit_closed': True, 'common_alpha_closed': False, 'continuum_closed': False, 'direct_d_delta_d_cauchy_closed': False, 'dual_tail_input_proved': False, 'exhaustion_independence_closed': False, 'hamiltonian_os_identification_closed': False, 'kms_gns_gap_closed': False, 'pre_a_closed': False, 'product_core_density_closed': False, 'reference_tail_input_reused': True, 'rows': [{'L': 1, 'R': 1, 'combined_squared': '6318/5', 'delta_squared': '4374/5', 'direct_squared': '1944/5', 'dual_tail': '38880', 'reference_tail': '38880', 'shell_root': 1}, {'L': 4, 'R': 32, 'combined_squared': '3159/10', 'delta_squared': '2187/10', 'direct_squared': '486/5', 'dual_tail': '9720', 'reference_tail': '9720', 'shell_root': 2}, {'L': 25, 'R': 3125, 'combined_squared': '6318/125', 'delta_squared': '4374/125', 'direct_squared': '1944/125', 'dual_tail': '7776/5', 'reference_tail': '7776/5', 'shell_root': 5}], 'sector_a_closed': False, 'shell_tail_to_squared_delta_d_corollary_closed': True, 'shell_tail_to_squared_direct_d_corollary_closed': True}",
+      "expected": "closed",
+      "name": "derived flags",
+      "pass": true
+    },
+    {
+      "actual": "{'status': 'PASS', 'command': 'lake env lean Tect/R285.lean', 'returncode': 0, 'output': ''}",
+      "expected": "PASS",
+      "name": "Lean compile",
+      "pass": true
+    }
+  ],
+  "audit_id": "PA-CP1-ST8-Q3LOCK-DIRECT-D-DELTA-D-SQUARED-TAIL-COROLLARY",
+  "boundary": "T0 claim-nonbearing conditional scalar bridge. The missing Q3 dual modular tail and common-core D/delta-D integrand estimates remain explicit hypotheses, so no thermodynamic dynamics or common-alpha claim is made.",
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "exploration_id": "EXP-001113",
+  "lean": {
+    "command": "lake env lean Tect/R285.lean",
+    "output": "",
+    "returncode": 0,
+    "status": "PASS"
+  },
+  "provenance": {
+    "independent_sha256": "07d700ec8ab094b94708ceb8026b2f6afd6550dae85c4b08ec6c527b310203f4",
+    "lean_sha256": "93397b3202187aabced00313218e2ee83a6cd899c04d9cfc5110a0ffcbaa84ef",
+    "manifest_sha256": "ba470c0ab3426a460a1e825b8301baf8206c7531307c04366ee3f74fb34f58ed",
+    "primary_sha256": "59ccac34f41f0f278d0bc130415d49f81b7fe9fcb99097340ed1e1cbc9acb02d"
+  },
+  "recorded_at": "2026-08-25T06:10:55.399136Z",
+  "run_kind": "integrated",
+  "schema": "tect/foundation-audit/1.0",
+  "task_id": "T-054",
+  "verdict": "PASS"
+}
