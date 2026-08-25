@@ -1,0 +1,79 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-FINITE-Q3-ACTUAL-NUMBER-MOMENT-BRIDGE-v0",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001106",
+  "claim_bearing": false,
+  "parent_explorations": ["EXP-001105", "EXP-001103", "EXP-001097"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-CP1-ST8-Q3LOCK-CONNECTED-RANK-TWO-OSCILLATOR-ELIMINATION-QPS-NORM-AND-CUTOFF-COMPATIBILITY",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "question": "For the declared finite zero-source Q3 Gibbs and two-orientation history states, does the actual local harmonic N^5 moment dominate the top-level projector with the exact Markov exponent, and how does it compare to the shifted onsite k_h^5 moment?",
+  "exact_statement": {
+    "state_markov_bridge": "For every normalized finite Gibbs density or evolved history vector and every site, (n-1)^5 times the top-level probability is at most the corresponding expectation of N^5; the audit checks this exact finite-state inequality.",
+    "energy_comparison": "The audit also reports the finite ratio omega(N^5)/(1+omega(k_h^5)) for the shifted onsite k_h used by R-167. These ratios are diagnostic finite values, not a volume-, cutoff-, source-, beta-, orientation-, or history-uniform theorem.",
+    "qft_interface": "This instantiates the scalar R279 input for actual finite Q3 states before any CCR transfer, but it does not prove the unbounded common-core limit, common-alpha dynamics, OS/KMS/GNS reconstruction, gap, continuum, Sector A or Pre-A.",
+    "scope_firewall": "Zero source, volumes 2 and 4, declared oscillator dimensions, beta, times, and both cutoff orientations only. No thermodynamic or regulator-uniform conclusion is inferred."
+  },
+  "finite_fixture": {
+    "volume_values": [2, 4],
+    "oscillator_dimensions_by_volume": {"2": [3, 4, 5, 6, 8, 10, 12], "4": [3, 4, 5]},
+    "edges_by_volume": {"2": [[0, 1]], "4": [[0, 1], [0, 2], [1, 3], [2, 3]]},
+    "beta": 1.0,
+    "hbar": 1.0,
+    "time_values": [0.0, 0.05, 0.1],
+    "orientation_values": [-1, 1],
+    "cutoff_radius": 2.0,
+    "chi": 1.0,
+    "r": -1.0,
+    "g": 0.6,
+    "c": 0.6,
+    "lambda": 0.1,
+    "onsite_shift": 1.0,
+    "moment_order": 5,
+    "weighted_tail_power": 2,
+    "residual_tolerance": 1.0e-8,
+    "agreement_tolerance": 1.0e-7
+  },
+  "scope": {
+    "finite_actual_gibbs_number_moment_closed": true,
+    "finite_actual_history_number_moment_closed": true,
+    "finite_markov_top_tail_bridge_closed": true,
+    "finite_shifted_onsite_energy_comparison_closed": true,
+    "energy_to_number_uniform_form_domination_closed": false,
+    "q3_gibbs_weighted_tail_uniformity_closed": false,
+    "q3_evolved_history_weighted_tail_uniformity_closed": false,
+    "actual_unbounded_q3_domain_transfer_closed": false,
+    "source_volume_orientation_history_uniform_closed": false,
+    "direct_d_delta_d_cauchy_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false
+  },
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R279.lean",
+    "command": "lake env lean Tect/R279.lean",
+    "declarations": ["fifth_moment_to_weighted_top_tail", "fifth_moment_fixture"],
+    "role": "R279 supplies the scalar fifth-moment-to-weighted-tail implication; this package supplies actual finite Q3 state moments but does not formalize matrix exponentials or uniform limits."
+  },
+  "formal_integration": {
+    "results": [],
+    "events": [],
+    "negatives": [],
+    "lean": "R279 PASS",
+    "no_new_result": true,
+    "no_new_negative": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "boundary": "T0 claim-nonbearing finite actual-state bridge. It validates the top-tail Markov inequality for the declared Q3 Gibbs and history fixtures and reports finite N^5-to-k_h^5 ratios. It does not establish any uniform Q3 estimate or QFT reconstruction.",
+  "next_action": "Audit the finite ratios across a larger declared cutoff/source family and derive a symbolic uniform constant from the two-sided R-167 graph equivalence; if the ratio grows, record the obstruction before D/delta-D or common-alpha promotion."
+}

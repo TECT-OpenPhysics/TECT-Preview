@@ -481,6 +481,99 @@
       "task_id": "T-054",
       "title": "Finite harmonic compression boundary leakage is state-weighted only",
       "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "axis": "finite Markov exponent",
+          "check": "The top level is n-1, and the tested inequality uses (n-1)^5 rather than n^5; no index shift is hidden.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "state normalization",
+          "check": "Gibbs traces and history unitarity are checked before moments are used.",
+          "disposition": "DISMISSED"
+        },
+        {
+          "axis": "energy comparison",
+          "check": "Finite N^5-to-k_h^5 ratios are reported as diagnostics and are not promoted to a uniform form constant.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "zero-time numerical floor",
+          "check": "Ratios with machine-zero N^5 moments use the declared residual threshold; raw moments and Markov inequalities remain checked directly.",
+          "disposition": "DISMISSED"
+        },
+        {
+          "axis": "QFT promotion",
+          "check": "Finite zero-source state data do not imply unbounded Q3 domain transfer, common alpha, OS/KMS/GNS, gap, continuum, Sector A or Pre-A.",
+          "disposition": "UPHELD"
+        }
+      ],
+      "boundary": "T0 claim-nonbearing finite actual-state bridge. It proves only the declared zero-source volumes, dimensions, beta, times, and two cutoff orientations. It does not prove an unbounded Q3 common core, source/volume/history uniformity, direct D or delta-D Cauchy convergence, common alpha, Hamiltonian-to-OS identification, KMS/GNS reconstruction, a physical gap, continuum, C6, Sector A or Pre-A.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "This instantiates the scalar harmonic-number moment bridge for actual finite Q3 states rather than an abstract state, and it supplies a concrete finite comparison with the shifted onsite energy. The scope remains claim-nonbearing because no exhaustion or uniform constant is proved.",
+      "evidence_refs": [
+        "strategy/pre_a_cp1_st8_q3lock_finite_q3_actual_number_moment_bridge_manifest.json#exact_statement",
+        "codes/foundations/pre_a_cp1_st8_q3lock_finite_q3_actual_number_moment_bridge.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_finite_q3_actual_number_moment_bridge_independent.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_finite_q3_actual_number_moment_bridge_verify.py#run",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-primary-pre_a_cp1_st8_q3lock_finite_q3_actual_number_moment_bridge/primary.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-independent-pre_a_cp1_st8_q3lock_finite_q3_actual_number_moment_bridge/independent.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-integrated-pre_a_cp1_st8_q3lock_finite_q3_actual_number_moment_bridge/integrated.json#provenance",
+        "verification/lean/Tect/R279.lean#fifth_moment_to_weighted_top_tail",
+        "explorations/log.jsonl#EXP-001105"
+      ],
+      "finding": "The primary finite Q3 lane passes 468/468 assertions, the independent lane passes 441/441, and the integrated lane passes 1469/1469 with Lean R279. Every declared Gibbs and two-orientation history row satisfies the exact finite Markov inequality (n-1)^5 omega(P_top)<=omega(N^5), with normalized states, positive shifted onsite k_h, finite moments, and unitary histories. The largest finite diagnostic ratio omega(N^5)/(1+omega(k_h^5)) is 3.813565063270192 over the Gibbs rows and 0.06175707716314795 over the history rows in the declared fixture. These are finite regulator values only; they do not establish a uniform N^5<=C(1+k_h^5) form inequality, nor do they prove a uniform Gibbs/history tail as n, volume, source, beta, orientation, or time vary.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": []
+      },
+      "gate_ids": [
+        "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+        "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+        "PA-CP1-ST8-Q3LOCK-CONNECTED-RANK-TWO-OSCILLATOR-ELIMINATION-QPS-NORM-AND-CUTOFF-COMPATIBILITY",
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001106",
+      "method": [
+        "Build the declared finite Q3 Hamiltonian, smooth bond-coordinate cutoff, uncut Gibbs density, and both signed positive-time history propagators for volumes 2 and 4.",
+        "At every site and oscillator dimension, form the exact diagonal harmonic number N and the shifted local onsite k_h, then evaluate N^5, k_h^5, and the top-level projector expectation in both Gibbs and history states.",
+        "Check (n-1)^5 omega(P_top) <= omega(N^5) directly, report n^2 omega(P_top), and record the finite diagnostic ratio omega(N^5)/(1+omega(k_h^5)).",
+        "Run the independent tensor/Hamiltonian implementation, reconcile all rows in the integrated verifier, and compile pinned Lean R279 for the scalar fifth-moment implication."
+      ],
+      "next_action": "Increase the declared cutoff and source/volume family and test whether the finite N^5/(1+k_h^5) ratio admits a derived uniform bound from the two-sided R-167 graph equivalence; record any growth or failure before D/delta-D or common-alpha promotion.",
+      "provenance": "contemporaneous",
+      "qft_interface": {
+        "closed": "Actual finite Q3 Gibbs/history N^5 moments and the exact top-tail Markov inequality, cross-checked by Lean R279 at the scalar level.",
+        "open": "A uniform energy-to-number form constant, actual regulator-uniform tail, unbounded domain transfer, modular history, common alpha, OS/KMS/GNS, gap and continuum.",
+        "tect_boundary": "No heat_root_incidence or canonical A1/R-192 production owner is supplied."
+      },
+      "question": "For the declared finite zero-source Q3 Gibbs and two-orientation history states, does the actual local harmonic N^5 moment dominate the top-level projector with the exact Markov exponent, and how does it compare to the shifted onsite k_h^5 moment?",
+      "recorded_at": "2026-08-26T23:40:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001105",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001103",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001097",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-08-25",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Actual finite Q3 Gibbs/history number moment bridge",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",
