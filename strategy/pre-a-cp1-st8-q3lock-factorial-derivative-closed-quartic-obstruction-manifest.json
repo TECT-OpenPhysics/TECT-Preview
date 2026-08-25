@@ -1,0 +1,115 @@
+{
+  "schema": "tect/pre-a-cp1-st8-q3lock-factorial-derivative-closed-quartic-obstruction/1.0",
+  "exploration_id": "EXP-001118",
+  "prior_exploration_id": "EXP-001117",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "tier": "T0",
+  "claim_bearing": false,
+  "title": "Derivative-closed factorial seminorm versus quartic source-history growth",
+  "question": "Can a factorial-weighted coefficient seminorm, which closes the source derivative at fixed radius, also control repeated insertion of the actual quartic Q3 source top monomial in both source orientations at a fixed positive final radius?",
+  "upstream_input": {
+    "source_manifest": "strategy/pre-a-cp1-st8-q3lock-actual-source-coefficient-product-manifest.json",
+    "source_exploration": "EXP-001050",
+    "prior_derivative_obstruction": "strategy/pre-a-cp1-st8-q3lock-repeated-radius-loss-derivative-obstruction-manifest.json",
+    "prior_derivative_exploration": "EXP-001117"
+  },
+  "model": {
+    "factorial_seminorm": "For f(a)=sum_n c_n a^n, ||f||_(S,!)=sum_n |c_n| n! S^n.",
+    "derivative_closure": "||D_a f||_(S,!) = S^(-1)||f||_(S,!) on finite polynomials, so this candidate closes the source derivative without radius loss.",
+    "actual_source_slice": "The registered center and reverse Q3 source polynomials both have coefficient -51/140 on the pure a^4 monomial at q=v=0.",
+    "top_monomial_operator": "T=(51/140) a^4 D_a is the positive absolute-value top-monomial branch of the source insertion envelope.",
+    "witness": "T^m(a)=(51/140)^m prod_{j=0}^{m-1}(1+3j) a^(1+3m).",
+    "norm_ratio": "At input radius S and output radius S', the witness ratio is (51/140)^m prod_j(1+3j) (1+3m)! S'^(1+3m)/S.",
+    "orientation": "The pure a^4 coefficient has the same absolute value for the center and reverse source orientation."
+  },
+  "fixture": {
+    "source_radius": "1/4",
+    "reduced_source_radius": "1/8",
+    "onsite_coupling": "3/5",
+    "top_coefficient_abs": "51/140",
+    "orientation_count": 2,
+    "neighbour_count": 6,
+    "comparison_base": 12,
+    "witness_initial_degree": 1,
+    "orders": [1, 2, 4, 8, 16],
+    "small_exact_witness_order": 16,
+    "expected_source_degree": 4
+  },
+  "scope": {
+    "actual_source_top_coefficient_revalidated": true,
+    "both_orientations_revalidated": true,
+    "factorial_derivative_closure_closed": true,
+    "same_radius_quartic_multiplier_closed": false,
+    "radius_loss_quartic_multiplier_requires_strict_loss": true,
+    "repeated_top_monomial_exponential_envelope_refuted": true,
+    "actual_q3_common_core_map_proved": false,
+    "actual_q3_history_closed": false,
+    "volume_uniform_direct_d_delta_d_closed": false,
+    "common_alpha_closed": false,
+    "kms_os_closed": false,
+    "gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true,
+    "not_closed": "This rejects only the positive top-monomial envelope in this factorial coefficient topology. It does not exclude cancellations in the complete Q3 commutator, a different non-Leibniz or state-weighted topology, an actual common core, QFT reconstruction, the gap, the continuum, C6, Sector A or Pre-A."
+  },
+  "adversarial_review": [
+    {
+      "axis": "derivative closure",
+      "check": "The factorial weight is differentiated algebraically; the factor m exactly cancels the ratio m!/(m-1)! and gives the stated S^(-1) bound.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "source provenance",
+      "check": "The pure a^4 coefficient is rederived from the registered center and reverse source polynomials, not inserted as a fitted constant.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "top-monomial versus full history",
+      "check": "T is the positive absolute-value top branch of a coefficient majorant; no equality with the signed full Q3 history is claimed.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "radius loss",
+      "check": "The exact m=8 witness is evaluated at S=1/4 and S'=1/8; the factorial lower bound shows every fixed positive radius ratio is eventually dominated, while the finite row remains the declared fixture.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "orientation and branching",
+      "check": "Center and reverse top coefficients agree and the 12-branch comparison is retained only as a finite history baseline.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "Lean scope",
+      "check": "Lean R290 checks the rational derivative identity, exact m=8 witness and factorial lower-bound fixture; it does not formalize Q3 domains or limits.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "QFT promotion",
+      "check": "No common dynamics, KMS/OS, GNS gap, continuum, C6, Sector A or Pre-A conclusion is inferred.",
+      "disposition": "UPHELD"
+    }
+  ],
+  "formal_integration": {
+    "lean_entry": "verification/lean/Tect/R290.lean",
+    "events": [],
+    "negatives": [],
+    "results": [],
+    "no_new_result": true,
+    "no_new_negative": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "qft_interface": {
+    "closed": "A derivative-closed factorial coefficient seminorm is algebraically compatible with D_a, but its actual quartic top-source insertion branch has a superexponential repeated-history witness in both orientations.",
+    "open": "A cancellation-aware actual Q3 common-core or state-weighted estimate, factorial spatial incidence, first passage, exhaustion, common alpha, Hamiltonian/KMS identification, OS/GNS, gap, continuum, C6, Sector A and Pre-A remain open.",
+    "tect_boundary": "No heat_root_incidence or canonical A1/R-192 production owner is supplied by this route boundary."
+  },
+  "boundary": "T0 claim-nonbearing route boundary. The factorial seminorm closes the formal derivative but the positive top-monomial quartic insertion envelope is not exponentially bounded at any fixed positive final radius. This is not a no-go theorem for the signed Q3 dynamics or QFT.",
+  "next_action": "Retain the factorial topology only if an actual Q3 cancellation or state-weighted estimate removes the top-monomial branch; otherwise test a genuinely different common-core construction before common-alpha promotion."
+}
