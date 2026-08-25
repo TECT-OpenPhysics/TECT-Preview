@@ -1,0 +1,187 @@
+{
+  "assertion_count": 32,
+  "assertions": [
+    {
+      "actual": "['EXP-001132', 'T-054']",
+      "expected": "EXP-001132/T-054",
+      "group": "provenance",
+      "name": "identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "group": "scope",
+      "name": "claim nonbearing",
+      "status": "PASS"
+    },
+    {
+      "actual": "[Fraction(1, 1), 6, Fraction(21, 1)]",
+      "expected": "positive",
+      "group": "hypotheses",
+      "name": "positive parameters",
+      "status": "PASS"
+    },
+    {
+      "actual": "21",
+      "expected": "1+(10/3)d",
+      "group": "prior form order",
+      "name": "order multiplier",
+      "status": "PASS"
+    },
+    {
+      "actual": "1",
+      "expected": ">=0",
+      "group": "Weyl gradient",
+      "name": "support 0 norm",
+      "status": "PASS"
+    },
+    {
+      "actual": "1",
+      "expected": "1",
+      "group": "Weyl unitarity",
+      "name": "support 0 modulus",
+      "status": "PASS"
+    },
+    {
+      "actual": "3",
+      "expected": ">=2",
+      "group": "same-form product",
+      "name": "support 0 base bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "63",
+      "expected": ">=42",
+      "group": "cross-orientation product",
+      "name": "support 0 cross bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "4",
+      "expected": ">=0",
+      "group": "Weyl gradient",
+      "name": "support 1 norm",
+      "status": "PASS"
+    },
+    {
+      "actual": "1",
+      "expected": "1",
+      "group": "Weyl unitarity",
+      "name": "support 1 modulus",
+      "status": "PASS"
+    },
+    {
+      "actual": "{\"groups\": {\"Weyl gradient\": 5, \"Weyl unitarity\": 5, \"boundary\": 2, \"closed bounded test algebra\": 1, \"cross-orientation product\": 5, \"hypotheses\": 1, \"prior form order\": 1, \"provenance\": 1, \"same-form product\": 5, \"scope\": 1, \"volume uniformity\": 5}, \"storage\": \"compact-summary; all assertions executed in memory\", \"total\": 32}",
+      "expected": "all executed assertions passed",
+      "group": "summary",
+      "name": "assertion_summary",
+      "status": "PASS"
+    }
+  ],
+  "audit_id": "PA-CP1-ST8-Q3LOCK-WEYL-CYLINDER-FORM-INVARIANCE",
+  "boundary": {
+    "all_bond_graph_lipschitz_closed": false,
+    "all_bounded_local_observables_closed": false,
+    "beta_uniformity_proved": false,
+    "bounded_weyl_cylinder_form_invariance_closed": true,
+    "c6_closed": false,
+    "common_alpha_closed": false,
+    "continuum_closed": false,
+    "cross_orientation_weyl_products_closed": true,
+    "cutoff_uniformity_proved": false,
+    "delta_d_cauchy_closed": false,
+    "direct_d_cauchy_closed": false,
+    "exact_ccr_common_core_closed": false,
+    "fixed_support_volume_uniformity_closed": true,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "modular_domain_transfer_closed": false,
+    "pre_a_closed": false,
+    "same_form_weighted_square_root_products_closed": true,
+    "sector_a_closed": false,
+    "unbounded_polynomial_products_closed": false,
+    "weighted_product_domain_closed": false
+  },
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "derived": {
+    "all_bounded_local_observables_closed": false,
+    "bounded_weyl_cylinder_form_invariance_closed": true,
+    "common_alpha_closed": false,
+    "cross_orientation_weyl_products_closed": true,
+    "fixed_support_volume_uniformity_closed": true,
+    "form_order_multiplier": "21",
+    "graph_rows": [
+      {
+        "edges": 0,
+        "max_degree": 0,
+        "volume": 1
+      },
+      {
+        "edges": 1,
+        "max_degree": 1,
+        "volume": 2
+      },
+      {
+        "edges": 3,
+        "max_degree": 2,
+        "volume": 4
+      },
+      {
+        "edges": 7,
+        "max_degree": 2,
+        "volume": 8
+      },
+      {
+        "edges": 15,
+        "max_degree": 2,
+        "volume": 16
+      }
+    ],
+    "maximum_same_form_bound_squared": "15",
+    "minimum_same_form_bound_squared": "3",
+    "pre_a_closed": false,
+    "same_form_weighted_square_root_products_closed": true,
+    "support_count": 5,
+    "support_rows": [
+      {
+        "cross_orientation_bound_squared": "63",
+        "norm_square": "1",
+        "same_form_bound_squared": "3",
+        "support_size": 1
+      },
+      {
+        "cross_orientation_bound_squared": "126",
+        "norm_square": "4",
+        "same_form_bound_squared": "6",
+        "support_size": 1
+      },
+      {
+        "cross_orientation_bound_squared": "147",
+        "norm_square": "5",
+        "same_form_bound_squared": "7",
+        "support_size": 2
+      },
+      {
+        "cross_orientation_bound_squared": "105",
+        "norm_square": "3",
+        "same_form_bound_squared": "5",
+        "support_size": 3
+      },
+      {
+        "cross_orientation_bound_squared": "315",
+        "norm_square": "13",
+        "same_form_bound_squared": "15",
+        "support_size": 4
+      }
+    ],
+    "unbounded_polynomial_products_closed": false,
+    "weighted_product_domain_closed": false
+  },
+  "exploration_id": "EXP-001132",
+  "passed": 32,
+  "run_kind": "primary",
+  "schema": "tect/foundation-audit/1.0",
+  "task_id": "T-054",
+  "verdict": "PASS"
+}

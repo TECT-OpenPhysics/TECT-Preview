@@ -1,0 +1,83 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-WEYL-CYLINDER-FORM-INVARIANCE-v0",
+  "title": "Finite-support Weyl cylinder form invariance and weighted square-root products",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001132",
+  "claim_bearing": false,
+  "parent_explorations": ["EXP-001131", "EXP-001130"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-ENERGY-WEIGHTED-COMMUTATOR-GEVREY-LR-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-RESOLVENT-ALGEBRA-EXACT-POLYNOMIAL-COMMON-ALPHA-CLOSURE",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "question": "Does the finite Q3 Friedrichs form domain remain invariant under finite-support Weyl multipliers, with explicit two-orientation weighted square-root product bounds?",
+  "finite_fixture": {
+    "chi": "1",
+    "degree_bound": 6,
+    "form_order_multiplier": "21",
+    "t_values": [-4, -3, -2, -1, 0, 1, 2, 3, 4],
+    "support_vectors": [[1], [2], [1, -2], [1, 1, 1], [2, -1, 2, -2]],
+    "volumes": [1, 2, 4, 8, 16]
+  },
+  "model": {
+    "weyl_multiplier": "A_t(q)=exp(i sum_j t_j q_j) on a finite-support cylinder, with |A_t|=1 and |grad A_t|^2=||t||_2^2",
+    "shifted_forms": "K_on and K_edge are the closed positive Friedrichs forms from EXP-001131, with common form domain and K_edge <= 21 K_on",
+    "product_rule": "For either shifted form q_K, q_K[A_t psi] <= 2 q_K[psi] + ||t||_2^2/chi ||psi||^2 on the common core, hence A_t preserves the form domain",
+    "weighted_bound": "||K_K^(1/2) A_t K_K^(-1/2)||^2 <= 2+||t||_2^2/chi; cross-orientation products have squared bound at most 21(2+||t||_2^2/chi)"
+  },
+  "scope": {
+    "bounded_weyl_cylinder_form_invariance_closed": true,
+    "same_form_weighted_square_root_products_closed": true,
+    "cross_orientation_weyl_products_closed": true,
+    "fixed_support_volume_uniformity_closed": true,
+    "all_bounded_local_observables_closed": false,
+    "unbounded_polynomial_products_closed": false,
+    "weighted_product_domain_closed": false,
+    "exact_ccr_common_core_closed": false,
+    "modular_domain_transfer_closed": false,
+    "direct_d_cauchy_closed": false,
+    "delta_d_cauchy_closed": false,
+    "all_bond_graph_lipschitz_closed": false,
+    "common_alpha_closed": false,
+    "cutoff_uniformity_proved": false,
+    "beta_uniformity_proved": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false
+  },
+  "adversarial_review": [
+    {"axis": "unitarity", "check": "A_t is a modulus-one multiplication operator, so the potential and bond terms are unchanged; only the kinetic product rule contributes.", "disposition": "UPHELD"},
+    {"axis": "gradient factor", "check": "The bound uses the exact squared gradient norm ||t||_2^2/chi and the safe inequality |a+b|^2<=2|a|^2+2|b|^2; no missing factor of two is hidden.", "disposition": "UPHELD"},
+    {"axis": "form versus operator", "check": "The product is defined through the closed form and K^{-1/2}; this does not assert a bounded commutator or an operator-domain identity for arbitrary unbounded observables.", "disposition": "UPHELD-OPEN"},
+    {"axis": "orientation", "check": "Same-form and cross-orientation products are separated; the cross bound pays the exact degree-six multiplier 21 from EXP-001131.", "disposition": "UPHELD-OPEN"},
+    {"axis": "volume", "check": "For a fixed finite support vector t, the constant is independent of volume within the degree-six graph class, but no thermodynamic dynamics or common alpha follows.", "disposition": "UPHELD-OPEN"},
+    {"axis": "QFT promotion", "check": "The Weyl cylinder algebra is only a bounded test algebra; modular transfer, direct D/delta-D Cauchy, OS/KMS/GNS reconstruction, gap, continuum, C6, Sector A and Pre-A remain open.", "disposition": "UPHELD-OPEN"}
+  ],
+  "files": {
+    "primary": "codes/foundations/pre_a_cp1_st8_q3lock_weyl_cylinder_form_invariance.py",
+    "independent": "codes/foundations/pre_a_cp1_st8_q3lock_weyl_cylinder_form_invariance_independent.py",
+    "integrated": "codes/foundations/pre_a_cp1_st8_q3lock_weyl_cylinder_form_invariance_verify.py",
+    "lean": "verification/lean/Tect/R303.lean",
+    "primary_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-primary-pre_a_cp1_st8_q3lock_weyl_cylinder_form_invariance/primary.json",
+    "independent_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-independent-pre_a_cp1_st8_q3lock_weyl_cylinder_form_invariance/independent.json",
+    "integrated_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-integrated-pre_a_cp1_st8_q3lock_weyl_cylinder_form_invariance/integrated.json"
+  },
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R303.lean",
+    "theorem_markers": ["weyl_base_bound_fixture", "cross_orientation_multiplier_fixture", "support_norm_fixture"],
+    "command": "lake env lean Tect/R303.lean",
+    "boundary": "Lean checks exact rational squared-gradient, support-norm and cross-orientation constants; it does not formalize multiplication operators, form representation, or QFT limits."
+  },
+  "qft_interface": {
+    "closed": "Finite-support Weyl cylinder multipliers preserve both finite-volume shifted form domains and have explicit same- and cross-orientation weighted square-root bounds uniform in volume for bounded-degree graphs.",
+    "open": "All bounded local observables, unbounded polynomial products, modular/cutoff/beta transfer, direct D/delta-D Cauchy, common alpha, OS/KMS/GNS identification, gap, continuum and Pre-A.",
+    "tect_boundary": "This is a bounded Weyl-cylinder bridge toward the QFT algebra; it supplies no heat_root_incidence or canonical A1/R-192 production owner."
+  },
+  "no_overclaim": "This closes only the declared finite-support Weyl-cylinder form-invariance and weighted-product estimate. It is not an arbitrary-observable domain theorem, a modular dynamics result, a common alpha, OS/KMS/GNS reconstruction, a gap, continuum, C6, Sector A or Pre-A result."
+}

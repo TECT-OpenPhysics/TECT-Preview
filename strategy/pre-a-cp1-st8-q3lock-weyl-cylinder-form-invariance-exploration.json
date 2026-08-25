@@ -1,0 +1,86 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001132",
+  "title": "Finite-support Weyl cylinder form invariance and weighted square-root products",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-ENERGY-WEIGHTED-COMMUTATOR-GEVREY-LR-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-RESOLVENT-ALGEBRA-EXACT-POLYNOMIAL-COMMON-ALPHA-CLOSURE",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "question": "Does the finite Q3 Friedrichs form domain remain invariant under finite-support Weyl multipliers, with explicit two-orientation weighted square-root product bounds?",
+  "method": [
+    "Represent a finite-support Weyl cylinder as the modulus-one multiplier A_t(q)=exp(i sum_j t_j q_j), so the potential and bond parts of either shifted form are unchanged.",
+    "Use the product rule and |a+b|^2<=2|a|^2+2|b|^2 to obtain q_K[A_t psi] <= 2 q_K[psi] + ||t||_2^2/chi ||psi||^2 on the common C_c^infinity core.",
+    "Pass through the closed positive Friedrichs form from EXP-001131 to define same-orientation products with squared bound 2+||t||_2^2/chi; pay the exact form-order multiplier 21 for cross-orientation products.",
+    "Run independent Fraction-only support vectors, bounded-degree volume fixtures and Lean R303 for the squared-gradient and orientation constants."
+  ],
+  "finding": "Primary 32/32, independent 22/22, integrated 14/14, and Lean R303 PASS. Every declared finite-support Weyl multiplier preserves both fixed-finite-graph shifted form domains; same-orientation weighted square-root products have squared bound 2+||t||_2^2/chi, and cross-orientation products have squared bound 21(2+||t||_2^2/chi), uniform in volume for degree at most six.",
+  "verdict": "advanced",
+  "decision_reason": "EXP-001131 supplied closed common forms and the degree-six order. The exact Weyl product rule now closes a bounded cylinder subalgebra at the form level and gives explicit weighted products in both orientations. This is a direct QFT Weyl-algebra interface, but it does not extend automatically to unbounded polynomial observables or modular real-time dynamics.",
+  "closed": [
+    "finite-support Weyl cylinder form-domain invariance",
+    "same-form weighted square-root products",
+    "cross-orientation weighted square-root products",
+    "fixed-support volume uniformity in the bounded-degree class",
+    "independent reproduction and Lean R303 cross-check"
+  ],
+  "open": [
+    "all bounded local observables beyond Weyl multipliers",
+    "unbounded polynomial weighted products",
+    "exact CCR/common-core operator-domain transfer",
+    "cutoff- and beta-uniform modular transfer",
+    "direct D and delta-D Cauchy estimates",
+    "exhaustion independence and common alpha",
+    "Hamiltonian-to-OS/KMS/GNS identification, a sector gap, continuum, C6, Sector A and Pre-A"
+  ],
+  "adversarial_review": [
+    {"axis": "unitarity", "check": "The Weyl multiplier has modulus one, so potential and bond terms are unchanged; only the kinetic product rule is estimated.", "disposition": "UPHELD"},
+    {"axis": "gradient factor", "check": "The exact squared gradient norm is ||t||_2^2/chi and the factor two comes only from the explicit product-rule inequality.", "disposition": "UPHELD"},
+    {"axis": "form versus operator", "check": "The weighted products are defined through closed forms and K^{-1/2}; no arbitrary unbounded commutator or polynomial domain identity is promoted.", "disposition": "UPHELD-OPEN"},
+    {"axis": "orientation", "check": "Same-form and cross-orientation products are separately recorded, with the cross factor 21 inherited from EXP-001131.", "disposition": "UPHELD-OPEN"},
+    {"axis": "volume", "check": "For fixed t the constants do not depend on vertex count within degree six, but this is not a thermodynamic dynamics or common-alpha theorem.", "disposition": "UPHELD-OPEN"},
+    {"axis": "QFT promotion", "check": "The result is a bounded Weyl-cylinder bridge only; modular transfer, direct D/delta-D Cauchy, OS/KMS/GNS, gap, continuum, C6, Sector A and Pre-A remain open.", "disposition": "UPHELD-OPEN"}
+  ],
+  "evidence_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-weyl-cylinder-form-invariance-manifest.json#model",
+    "codes/foundations/pre_a_cp1_st8_q3lock_weyl_cylinder_form_invariance.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_weyl_cylinder_form_invariance_independent.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_weyl_cylinder_form_invariance_verify.py#run",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-primary-pre_a_cp1_st8_q3lock_weyl_cylinder_form_invariance/primary.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-independent-pre_a_cp1_st8_q3lock_weyl_cylinder_form_invariance/independent.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-integrated-pre_a_cp1_st8_q3lock_weyl_cylinder_form_invariance/integrated.json#lean",
+    "verification/lean/Tect/R303.lean#weyl_base_bound_fixture",
+    "verification/lean/registry.json#R303"
+  ],
+  "formal_integration": {
+    "events": [],
+    "results": [],
+    "negatives": [],
+    "lean": "R303 PASS; metadata to be regenerated",
+    "no_new_event": true,
+    "no_new_result": true,
+    "no_new_negative": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "qft_interface": {
+    "closed": "Finite-support Weyl cylinder form invariance and explicit same/cross-orientation weighted products uniform in bounded-degree volume.",
+    "open": "All bounded local observables, unbounded polynomial products, modular/cutoff/beta transfer, direct D/delta-D Cauchy, common alpha, OS/KMS/GNS, gap, continuum and Pre-A.",
+    "tect_boundary": "Bounded Weyl-cylinder bridge only; no heat_root_incidence or canonical A1/R-192 production owner."
+  },
+  "next_action": "Test whether a resolvent-smoothed polynomial cylinder, rather than a bare unbounded polynomial, can be admitted with an explicit K-form bound; if the estimate requires an unregistered cutoff or beta constant, record that obstruction separately.",
+  "related": [
+    {"id": "EXP-001131", "relation": "continues"},
+    {"id": "EXP-001130", "relation": "continues"}
+  ],
+  "prior_exploration_id": "EXP-001131",
+  "provenance": "contemporaneous",
+  "recorded_at": "2026-08-27T12:30:00Z",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-08-25",
+  "boundary": "This is a finite-support bounded Weyl-cylinder form-invariance checkpoint with explicit weighted products. It is not an arbitrary-observable domain theorem, a common infinite-volume dynamics, modular transfer, common alpha, OS/KMS/GNS reconstruction, a gap, continuum, C6, Sector A or Pre-A result, a TECT production map or a Clay result.",
+  "no_overclaim": "Only the declared bounded Weyl cylinder is closed. All polynomial, modular, exhaustion, QFT reconstruction, gap, continuum and production gates remain open."
+}
