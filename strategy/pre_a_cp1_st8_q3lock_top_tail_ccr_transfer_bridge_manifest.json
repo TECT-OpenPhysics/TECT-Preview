@@ -1,0 +1,60 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-TOP-TAIL-CCR-TRANSFER-BRIDGE-v0",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001102",
+  "claim_bearing": false,
+  "parent_explorations": ["EXP-001094", "EXP-001095", "EXP-001097"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "question": "Does the weighted top-tail condition required by the truncated CCR defect imply the unweighted defect amplitude tends to zero, independently of any Q3 dynamics?",
+  "exact_statement": {
+    "weighted_tail": "If p_n is the top-level probability and n^2 p_n -> 0, then n sqrt(p_n) -> 0.",
+    "defect_interpretation": "For a normalized vector psi_n, p_n=<psi_n,P_top^(n) psi_n>; the truncated CCR defect has norm n sqrt(p_n) on that vector.",
+    "proof": "The target is exactly sqrt(n^2 p_n); continuity of Real.sqrt at zero gives the limit and n>=0 removes the absolute-value factor."
+  },
+  "scope": {
+    "scalar_weighted_tail_to_ccr_transfer_closed": true,
+    "finite_core_zero_closed": true,
+    "q3_gibbs_tail_uniformity_closed": false,
+    "q3_evolved_history_tail_uniformity_closed": false,
+    "actual_unbounded_q3_domain_transfer_closed": false,
+    "source_volume_uniform_modular_history_closed": false,
+    "direct_d_delta_d_cauchy_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false
+  },
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R278.lean",
+    "command": "lake env lean Tect/R278.lean",
+    "declarations": [
+      "top_tail_to_ccr_defect",
+      "top_tail_squared_fixture",
+      "top_tail_defect_fixture",
+      "scope_fixture"
+    ],
+    "boundary": "R278 formalizes only the scalar limit bridge and rational fixture; it does not prove the weighted tail for Q3 Gibbs states, evolved histories, or a QFT limit."
+  },
+  "formal_integration": {
+    "results": [],
+    "events": [],
+    "negatives": [],
+    "lean": "R278 PASS",
+    "no_new_result": true,
+    "no_new_negative": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "boundary": "T0 claim-nonbearing analytic domain-transfer bridge. It converts a supplied weighted top-tail estimate into the corresponding truncated-CCR vector defect estimate, but supplies no weighted-tail estimate itself and no Q3, QFT, C6, Sector A, or Pre-A closure.",
+  "no_overclaim": "The scalar implication is a necessary interface condition, not evidence that the canonical Q3 Gibbs or positive-time histories satisfy the condition uniformly in oscillator cutoff, volume, source, orientation, beta, or history length.",
+  "next_action": "Prove the weighted top-tail estimate for the chosen Q3 local carrier uniformly in cutoff, volume, source, orientation, beta, and history length, or record the first exact failure before promoting direct D/delta-D or common-alpha gates."
+}

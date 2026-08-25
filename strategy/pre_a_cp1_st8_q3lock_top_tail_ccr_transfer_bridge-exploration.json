@@ -1,0 +1,65 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001102",
+  "title": "Weighted top-tail to truncated-CCR defect transfer bridge",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "question": "Does the weighted top-tail condition required by the truncated CCR defect imply the unweighted defect amplitude tends to zero, independently of any Q3 dynamics?",
+  "method": [
+    "Use the exact finite oscillator defect [q_n,p_n]-iI=-i*n*P_top and represent a normalized vector tail by p_n=<psi_n,P_top psi_n>.",
+    "Formalize the scalar identity n*sqrt(p_n)=sqrt(n^2*p_n) for n>=0.",
+    "Apply continuity of the real square-root map at zero to the hypothesis n^2*p_n -> 0.",
+    "Compile the general implication and rational fixture in the pinned Lean toolchain without importing any Q3 numerical implementation."
+  ],
+  "finding": "Lean R278 compiles without errors. The exact scalar bridge is proved: any supplied nonnegative top-tail sequence with n^2*p_n tending to zero has truncated-CCR defect amplitude n*sqrt(p_n) tending to zero. The rational fixture n=8, p=1/64 gives both weighted defect and defect amplitude equal to 1.",
+  "verdict": "advanced",
+  "decision_reason": "This isolates the precise analytic interface between the already-derived finite truncated-CCR defect and the missing Q3 domain estimate. It removes a possible ambiguity about whether a squared n-weighted tail is strong enough for vector defect convergence, while leaving the substantive uniform tail estimate untouched.",
+  "boundary": "T0 claim-nonbearing scalar Lean bridge only; no Q3 Gibbs tail, evolved-history tail, source/volume/orientation/beta uniformity, modular-history estimate, direct D/delta-D Cauchy, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector A, or Pre-A conclusion.",
+  "next_action": "Prove the weighted top-tail estimate for the selected Q3 local carrier uniformly in cutoff, volume, source, orientation, beta, and history length, or register the first exact failure before any direct D/delta-D or common-alpha promotion.",
+  "no_overclaim": "R278 proves only a scalar limit implication and a rational fixture; it does not establish its hypothesis for the actual Q3 regulator or any QFT state.",
+  "qft_interface": {
+    "closed": "The exact scalar top-tail-to-CCR transfer required by the finite Q3 domain boundary.",
+    "open": "The actual Q3 Gibbs/evolved-history weighted tail, unbounded common-core transfer, source/volume-uniform modular history, direct D/delta-D Cauchy, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector A, and Pre-A.",
+    "tect_boundary": "No heat_root_incidence or canonical A1/R-192 production owner is supplied."
+  },
+  "evidence_refs": [
+    "strategy/pre_a_cp1_st8_q3lock_top_tail_ccr_transfer_bridge_manifest.json#exact_statement",
+    "strategy/pre_a_cp1_st8_q3lock_truncated_ccr_boundary_manifest.json#exact_statement",
+    "strategy/pre_a_cp1_st8_q3lock_finite_particle_core_domain_manifest.json#remaining_gate",
+    "verification/lean/Tect/R278.lean#top_tail_to_ccr_defect",
+    "verification/lean/Tect/R278.lean#scope_fixture",
+    "verification/lean/registry.json#R278"
+  ],
+  "formal_integration": {
+    "events": [],
+    "results": [],
+    "negatives": [],
+    "lean": "R278 PASS",
+    "no_new_event": true,
+    "no_new_result": true,
+    "no_new_negative": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "adversarial_review": [
+    {"axis": "square-root sign", "check": "The proof uses n>=0 to replace sqrt(n^2) by n; no sign is hidden.", "disposition": "UPHELD"},
+    {"axis": "tail hypothesis", "check": "The weighted convergence is an explicit premise; R278 does not manufacture it from finite data.", "disposition": "UPHELD-OPEN"},
+    {"axis": "probability interpretation", "check": "The Lean implication is stronger than needed and does not assume p_n is a Gibbs or history probability.", "disposition": "UPHELD"},
+    {"axis": "finite CCR scope", "check": "The bridge is linked to the exact n-weighted defect condition but contains no unbounded operator-domain theorem.", "disposition": "UPHELD-OPEN"},
+    {"axis": "QFT promotion", "check": "No Q3 uniformity, common dynamics, OS/KMS/GNS, gap, continuum, C6, Sector A, or Pre-A status is changed.", "disposition": "UPHELD-OPEN"}
+  ],
+  "related": [
+    {"id": "EXP-001097", "relation": "continues"},
+    {"id": "EXP-001095", "relation": "continues"},
+    {"id": "EXP-001094", "relation": "continues"}
+  ],
+  "recorded_at": "2026-08-26T23:00:04Z",
+  "recorded_by": "Codex",
+  "provenance": "contemporaneous",
+  "reviewed_on": "2026-08-25"
+}
