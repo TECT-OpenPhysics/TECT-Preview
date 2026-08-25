@@ -1,0 +1,90 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-FINITE-SPECTRAL-PAIRING-SUM-v0",
+  "title": "Finite spectral-sum form of the actual Q3 Kubo-Mori generator pairing",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001142",
+  "claim_bearing": false,
+  "parent_explorations": ["EXP-001141", "EXP-001140", "EXP-001139"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "question": "Can the actual finite Q3 Kubo-Mori generator pairing be written as a nonnegative finite spectral sum over energy gaps, so that the remaining common-alpha obligation is isolated as a uniform control of that spectral second moment rather than another termwise cancellation?",
+  "finite_fixture": {
+    "volume_values": [2, 4, 6],
+    "oscillator_dimension": 3,
+    "observable_support": [0, 1],
+    "beta_values": [0.5, 1.0, 2.0],
+    "character_amplitude": 0.3333333333333333,
+    "time_values": [0.05],
+    "radius_values": [0.5],
+    "orientation_values": [-1, 1],
+    "two_sided_factor": 2.0,
+    "c": 0.6,
+    "chi": 1.0,
+    "r": -1.0,
+    "g": 0.6,
+    "lambda": 0.1,
+    "hbar": 1.0,
+    "commutator_tolerance": 1e-8,
+    "spectral_sum_tolerance": 1e-10,
+    "mean_gap_tolerance": 1e-12
+  },
+  "model": {
+    "graph": "registered edge, square, and six-site 2x3 Q3 graphs",
+    "observable": "A_2=exp(i*character_amplitude*(q_0+q_1)/hbar)",
+    "history": "D_sigma(t)=U_(H+sigma W_L)(t) A_2 U_(H+sigma W_L)(t)^* - U_H(t) A_2 U_H(t)^*",
+    "generator": "delta_H(X)=i[H,X]/hbar",
+    "spectral_pairing": "<delta_H^2 D,D>_KM=-2 sum_ij L(p_i,p_j) (E_i-E_j)^2 |D_hat_ij|^2/hbar^2 and <delta_H D,delta_H D>_KM is the opposite nonnegative sum",
+    "interpretation": "The finite spectral second moment is identified exactly; uniform source/volume/beta control of it is not assumed."
+  },
+  "scope": {
+    "finite_spectral_sum_identity_closed": true,
+    "nonnegative_spectral_second_moment_closed": true,
+    "edge_square_sixsite_rows_closed": true,
+    "two_orientation_history_closed": true,
+    "uniform_beta_volume_direct_d_delta_d_closed": false,
+    "common_core_spectral_tail_closed": false,
+    "exhaustion_independence_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false
+  },
+  "adversarial_review": [
+    {"axis": "spectral sign", "check": "The primary commutator lane and independent eigenbasis lane both use delta_H=i[H,·]/hbar and compare the complete signed pairing with the positive spectral sum.", "disposition": "UPHELD"},
+    {"axis": "finite sum versus limit", "check": "Every sum is over a finite H eigenbasis; no interchange with a volume, cutoff, beta, or continuum limit is made.", "disposition": "UPHELD-OPEN"},
+    {"axis": "Kubo-Mori diagonal", "check": "The equal-probability logarithmic-mean limit is explicit and the weights are built from the actual finite H Gibbs spectrum.", "disposition": "UPHELD"},
+    {"axis": "uniformity", "check": "The spectral second moment is the identified missing quantity; finite rows do not supply a uniform bound or a vanishing high-energy tail.", "disposition": "UPHELD-OPEN"},
+    {"axis": "Lean boundary", "check": "R312 formalizes the finite rational sum identity only; matrix diagonalization and unbounded domains remain outside Lean.", "disposition": "UPHELD-OPEN"},
+    {"axis": "QFT promotion", "check": "Common core, exhaustion, common alpha, OS/KMS/GNS identification, gap, continuum, C6, Sector A, and Pre-A remain open.", "disposition": "UPHELD-OPEN"}
+  ],
+  "files": {
+    "primary": "codes/foundations/pre_a_cp1_st8_q3lock_finite_spectral_pairing_sum.py",
+    "independent": "codes/foundations/pre_a_cp1_st8_q3lock_finite_spectral_pairing_sum_independent.py",
+    "integrated": "codes/foundations/pre_a_cp1_st8_q3lock_finite_spectral_pairing_sum_verify.py",
+    "lean": "verification/lean/Tect/R312.lean",
+    "primary_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-primary-pre_a_cp1_st8_q3lock_finite_spectral_pairing_sum/primary.json",
+    "independent_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-independent-pre_a_cp1_st8_q3lock_finite_spectral_pairing_sum/independent.json",
+    "integrated_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-integrated-pre_a_cp1_st8_q3lock_finite_spectral_pairing_sum/integrated.json"
+  },
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R312.lean",
+    "theorem_markers": ["finite_mode_pairing", "finite_mode_nonnegative", "gap_square_fixture", "two_sided_factor_fixture"],
+    "command": "lake env lean Tect/R312.lean",
+    "boundary": "Lean checks the exact finite rational sum identity and positivity fixtures; actual Q3 matrix spectra and all infinite-volume/domain claims remain finite-only."
+  },
+  "qft_interface": {
+    "closed": "The direct finite Kubo-Mori derivative norm is exactly the square root of a nonnegative Gibbs-weighted spectral second moment, with cancellation identity as its signed companion.",
+    "open": "A source/volume/beta-uniform common-core bound for that spectral second moment, high-energy tail control, product/core density, exhaustion independence, common alpha, OS/KMS/GNS identification, gap, continuum, and Pre-A.",
+    "tect_boundary": "This separates the exact finite spectral algebra from the unresolved uniform analytic estimate; it is not a QFT reconstruction."
+  },
+  "no_overclaim": "The finite spectral-sum identity is exact and reusable. It does not prove that the spectral second moment is uniformly bounded, does not close direct D/delta-D Cauchy, and does not close common alpha, Sector A, Pre-A, or any Clay statement."
+}

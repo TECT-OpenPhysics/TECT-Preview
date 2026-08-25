@@ -4480,6 +4480,131 @@
       "task_id": "T-054",
       "title": "Six-site actual-Q3 full-generator Kubo-Mori pairing and cutoff-family diagnostic",
       "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "axis": "spectral sign",
+          "check": "The primary commutator lane and independent eigenbasis lane use delta_H=i[H,·]/hbar and compare both signed pairing terms with the positive spectral sum.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "finite sum versus limit",
+          "check": "All identities are finite sums over the actual H eigenbasis; no volume, cutoff, beta, or continuum limit is interchanged.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "Kubo-Mori diagonal",
+          "check": "The equal-probability logarithmic-mean limit is explicit and formed from each actual finite Gibbs spectrum.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "growth interpretation",
+          "check": "Volume ratios are two finite endpoints at fixed cutoff/time and are not promoted to monotonicity, divergence, or a no-go theorem.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "uniform target",
+          "check": "The spectral second moment is named as the missing common-core quantity; finite agreement does not supply a source/volume/beta-uniform estimate.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "QFT promotion",
+          "check": "Common core, exhaustion, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector A, and Pre-A remain open.",
+          "disposition": "UPHELD-OPEN"
+        }
+      ],
+      "boundary": "This is a finite actual-Q3 spectral-sum audit over three graph volumes, three beta values, one cutoff, one time, and both orientations. It is not a source/volume-uniform common-core theorem, an infinite-volume dynamics, a full QFT reconstruction, a gap, continuum, C6, Sector A, or Pre-A result.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "closed": [
+        "finite spectral-sum representation of the full-generator Kubo-Mori pairing",
+        "nonnegative finite spectral second moment for delta_H D",
+        "actual edge, square, and six-site two-orientation history rows",
+        "beta values 0.5,1,2 at the declared finite cutoff and time",
+        "independent reproduction and Lean R312 cross-check"
+      ],
+      "decision_reason": "The finite pairing can now be stated without reference to a cancellation heuristic: it is exactly the negative of a nonnegative Gibbs-weighted spectral second moment. R312 confirms the finite sum algebra, while the two numerical lanes confirm it on actual Q3 histories across edge, square, and six-site graphs and three beta values. The observed volume growth identifies the unresolved analytic target—uniform control of this second moment and its high-energy tail on a common core—but does not prove divergence or refute all alternative carriers.",
+      "evidence_refs": [
+        "strategy/pre-a-cp1-st8-q3lock-finite-spectral-pairing-sum-manifest.json#model",
+        "codes/foundations/pre_a_cp1_st8_q3lock_finite_spectral_pairing_sum.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_finite_spectral_pairing_sum_independent.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_finite_spectral_pairing_sum_verify.py#run",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-primary-pre_a_cp1_st8_q3lock_finite_spectral_pairing_sum/primary.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-independent-pre_a_cp1_st8_q3lock_finite_spectral_pairing_sum/independent.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-25-integrated-pre_a_cp1_st8_q3lock_finite_spectral_pairing_sum/integrated.json#derived",
+        "verification/lean/Tect/R312.lean#finite_mode_pairing",
+        "verification/lean/registry.json#R312"
+      ],
+      "finding": "Primary 87/87, independent 85/85, integrated 12/12, and Lean R312 PASS over 18 actual rows. The signed identity and the nonnegative spectral sum agree in every row; the largest primary full-pairing error is 2.0330385858425025e-20 and the largest spectral-sum reconstruction error is 2.778268066994105e-19. The maximum spectral second moment grows from volume 2 to volume 6 by ratios 10.050582897427127 at beta=0.5, 15.069311246350424 at beta=1, and 22.16814654693396 at beta=2. The corresponding delta-D Kubo-Mori norm ratios are 3.1702654301220785, 3.8819210767802113, and 4.708306122899608. These are finite diagnostics, not asymptotic lower bounds.",
+      "formal_integration": {
+        "events": [],
+        "lean": "R312 PASS; metadata regenerated",
+        "negatives": [],
+        "no_new_event": true,
+        "no_new_negative": true,
+        "no_new_result": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "results": []
+      },
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": []
+      },
+      "gate_ids": [
+        "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+        "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+        "PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE",
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001142",
+      "method": [
+        "Build the registered edge, square, and six-site 2x3 Q3 Hamiltonians with oscillator dimension three and the observable supported on sites 0,1.",
+        "For beta in {0.5,1,2}, time 0.05, radius 0.5, and both cutoff orientations, generate the actual D history and its full-H generators delta_H D and delta_H^2 D.",
+        "In the H eigenbasis evaluate the Kubo-Mori form and independently reconstruct the nonnegative spectral second moment 2 sum_ij L(p_i,p_j) ((E_i-E_j)/hbar)^2 |D_hat_ij|^2.",
+        "Compare the primary commutator lane with an independent spectral-delta lane, compile Lean R312 for the finite rational sum identity and positivity, and report finite volume/beta growth only as a diagnostic."
+      ],
+      "next_action": "Prove or refute a source/volume/beta-uniform high-energy spectral-tail estimate for the actual Q3 D history on a declared unbounded common core. A finite growth trend alone must not fire the obstruction gate; if the tail estimate fails, record the exact candidate topology and its certified lower bound.",
+      "no_overclaim": "The finite spectral-sum identity is exact and reusable. It does not prove a uniform spectral second-moment bound, direct D/delta-D Cauchy, common alpha, Sector A, Pre-A, or any Clay statement.",
+      "open": [
+        "source-, volume-, beta-, cutoff-, and exhaustion-uniform bound for the spectral second moment",
+        "high-energy/common-core spectral tail control and modular-domain transfer",
+        "product/core density and group-law closure",
+        "common alpha and Hamiltonian-to-OS/KMS/GNS identification",
+        "broken-sector gap, continuum, C6, Sector A and Pre-A"
+      ],
+      "prior_exploration_id": "EXP-001141",
+      "provenance": "contemporaneous",
+      "qft_interface": {
+        "closed": "The finite actual-Q3 derivative seminorm is exactly a Gibbs-weighted spectral second moment, with a Lean-checked finite sum identity.",
+        "open": "Uniform common-core spectral-tail control, direct D/delta-D Cauchy, product/core density, exhaustion independence, common alpha, OS/KMS/GNS identification, gap, continuum and Pre-A.",
+        "tect_boundary": "This separates finite spectral algebra from the unresolved uniform analytic estimate; it is not a QFT reconstruction or no-go theorem."
+      },
+      "question": "Can the actual finite Q3 Kubo-Mori generator pairing be written as a nonnegative finite spectral sum over energy gaps, so that the remaining common-alpha obligation is isolated as a uniform control of that spectral second moment rather than another termwise cancellation?",
+      "recorded_at": "2026-08-27T16:30:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001141",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001140",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001139",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-08-26",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Finite spectral-sum form of the actual Q3 Kubo-Mori generator pairing",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",

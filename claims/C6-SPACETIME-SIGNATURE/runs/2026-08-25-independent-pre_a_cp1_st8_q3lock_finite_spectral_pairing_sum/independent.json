@@ -1,0 +1,242 @@
+{
+  "assertion_count": 85,
+  "assertions": [
+    {
+      "actual": "EXP-001142",
+      "expected": "EXP-001142/nonbearing",
+      "group": "provenance",
+      "name": "provenance",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2, 4, 6]",
+      "expected": "edge/square/six-site",
+      "group": "geometry",
+      "name": "geometry",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'finite_spectral_sum_identity_closed': True, 'nonnegative_spectral_second_moment_closed': True, 'edge_square_sixsite_rows_closed': True, 'two_orientation_history_closed': True, 'uniform_beta_volume_direct_d_delta_d_closed': False, 'common_core_spectral_tail_closed': False, 'exhaustion_independence_closed': False, 'common_alpha_closed': False, 'hamiltonian_os_identification_closed': False, 'kms_gns_gap_closed': False, 'continuum_closed': False, 'c6_closed': False, 'sector_a_closed': False, 'pre_a_closed': False}",
+      "expected": "finite spectral identity only",
+      "group": "scope",
+      "name": "scope firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": "5.160540528461638e-16",
+      "expected": "<=1e-08",
+      "group": "support locality",
+      "name": "V=2 beta=0.5 radius=0.5 source",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'D_km_norm': 0.0010212397885464152, 'delta_D_km_norm': 0.002321812528956918, 'delta2_D_km_norm': 0.0058295000039581945, 'spectral_second_moment': 5.3908134196213205e-06, 'pairing_delta2_D_D_real': -5.390813419621319e-06, 'pairing_delta_D_delta_D_real': 5.39081341962132e-06, 'pairing_identity_error': 8.493309518441687e-22, 'spectral_sum_error': 8.470329472543003e-22, 'signed_spectral_error': 1.6940658945086007e-21, 'source_commutator_norm': 5.160540528461638e-16, 'D_matrix_norm': 0.001503706634832147, 'delta_D_matrix_norm': 0.003552137818882065}",
+      "expected": "finite",
+      "group": "spectral rows",
+      "name": "V=2 beta=0.5 L=0.5 t=0.05 sign=-1 finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "8.493309518441687e-22",
+      "expected": "<=1e-08",
+      "group": "full-generator pairing",
+      "name": "V=2 beta=0.5 L=0.5 t=0.05 sign=-1 pairing",
+      "status": "PASS"
+    },
+    {
+      "actual": "[8.470329472543003e-22, 1.6940658945086007e-21]",
+      "expected": "<=1e-10",
+      "group": "spectral sum",
+      "name": "V=2 beta=0.5 L=0.5 t=0.05 sign=-1 spectral",
+      "status": "PASS"
+    },
+    {
+      "actual": "[5.3908134196213205e-06, (5.39081341962132e-06+1.2250867238633342e-23j), (3.3983070296148585e-05-3.764395449729106e-23j)]",
+      "expected": ">=-tolerance",
+      "group": "nonnegative spectral moment",
+      "name": "V=2 beta=0.5 L=0.5 t=0.05 sign=-1 positivity",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'D_km_norm': 0.00102045762670185, 'delta_D_km_norm': 0.002320761862505023, 'delta2_D_km_norm': 0.005827049335874328, 'spectral_second_moment': 5.385935622457783e-06, 'pairing_delta2_D_D_real': -5.385935622457783e-06, 'pairing_delta_D_delta_D_real': 5.385935622457783e-06, 'pairing_identity_error': 2.735005686056055e-22, 'spectral_sum_error': 0.0, 'signed_spectral_error': 0.0, 'source_commutator_norm': 5.160540528461638e-16, 'D_matrix_norm': 0.0015026349797884816, 'delta_D_matrix_norm': 0.003553123442235363}",
+      "expected": "finite",
+      "group": "spectral rows",
+      "name": "V=2 beta=0.5 L=0.5 t=0.05 sign=1 finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "2.735005686056055e-22",
+      "expected": "<=1e-08",
+      "group": "full-generator pairing",
+      "name": "V=2 beta=0.5 L=0.5 t=0.05 sign=1 pairing",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.0, 0.0]",
+      "expected": "<=1e-10",
+      "group": "spectral sum",
+      "name": "V=2 beta=0.5 L=0.5 t=0.05 sign=1 spectral",
+      "status": "PASS"
+    },
+    {
+      "actual": "[5.385935622457783e-06, (5.385935622457783e-06-1.0973656083996377e-23j), (3.3954503962713446e-05+1.005848635005729e-22j)]",
+      "expected": ">=-tolerance",
+      "group": "nonnegative spectral moment",
+      "name": "V=2 beta=0.5 L=0.5 t=0.05 sign=1 positivity",
+      "status": "PASS"
+    },
+    {
+      "actual": "5.160540528461638e-16",
+      "expected": "<=1e-08",
+      "group": "support locality",
+      "name": "V=2 beta=1.0 radius=0.5 source",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'D_km_norm': 0.0010085454048203216, 'delta_D_km_norm': 0.00219598342362947, 'delta2_D_km_norm': 0.00552061459397047, 'spectral_second_moment': 4.8223431968554075e-06, 'pairing_delta2_D_D_real': -4.822343196855406e-06, 'pairing_delta_D_delta_D_real': 4.8223431968554075e-06, 'pairing_identity_error': 1.6942684748335426e-21, 'spectral_sum_error': 0.0, 'signed_spectral_error': 1.6940658945086007e-21, 'source_commutator_norm': 5.160540528461638e-16, 'D_matrix_norm': 0.001503706634832147, 'delta_D_matrix_norm': 0.003552137818882065}",
+      "expected": "finite",
+      "group": "spectral rows",
+      "name": "V=2 beta=1.0 L=0.5 t=0.05 sign=-1 finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.6942684748335426e-21",
+      "expected": "<=1e-08",
+      "group": "full-generator pairing",
+      "name": "V=2 beta=1.0 L=0.5 t=0.05 sign=-1 pairing",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.0, 1.6940658945086007e-21]",
+      "expected": "<=1e-10",
+      "group": "spectral sum",
+      "name": "V=2 beta=1.0 L=0.5 t=0.05 sign=-1 spectral",
+      "status": "PASS"
+    },
+    {
+      "actual": "85",
+      "expected": "all executed assertions passed",
+      "group": "summary",
+      "name": "assertion_summary",
+      "status": "PASS"
+    }
+  ],
+  "audit_id": "PA-CP1-ST8-Q3LOCK-FINITE-SPECTRAL-PAIRING-SUM",
+  "boundary": {
+    "c6_closed": false,
+    "common_alpha_closed": false,
+    "common_core_spectral_tail_closed": false,
+    "continuum_closed": false,
+    "edge_square_sixsite_rows_closed": true,
+    "exhaustion_independence_closed": false,
+    "finite_spectral_sum_identity_closed": true,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "nonnegative_spectral_second_moment_closed": true,
+    "pre_a_closed": false,
+    "sector_a_closed": false,
+    "two_orientation_history_closed": true,
+    "uniform_beta_volume_direct_d_delta_d_closed": false
+  },
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "derived": {
+    "common_alpha_closed": false,
+    "common_core_spectral_tail_closed": false,
+    "edge_square_sixsite_rows_closed": true,
+    "finite_spectral_sum_identity_closed": true,
+    "nonnegative_spectral_second_moment_closed": true,
+    "pre_a_closed": false,
+    "row_count": 18,
+    "summary_rows": [
+      {
+        "beta": 0.5,
+        "max_D_km_norm": 0.0010212397885464152,
+        "max_delta_D_km_norm": 0.002321812528956918,
+        "max_pairing_identity_error": 8.493309518441687e-22,
+        "max_spectral_second_moment": 5.3908134196213205e-06,
+        "max_spectral_sum_error": 8.470329472543003e-22,
+        "volume": 2
+      },
+      {
+        "beta": 1.0,
+        "max_D_km_norm": 0.0010085454048203216,
+        "max_delta_D_km_norm": 0.00219598342362947,
+        "max_pairing_identity_error": 1.6942684748335426e-21,
+        "max_spectral_second_moment": 4.8223431968554075e-06,
+        "max_spectral_sum_error": 0.0,
+        "volume": 2
+      },
+      {
+        "beta": 2.0,
+        "max_D_km_norm": 0.0009470310644286823,
+        "max_delta_D_km_norm": 0.0018537526882970077,
+        "max_pairing_identity_error": 8.778287267898496e-22,
+        "max_spectral_second_moment": 3.4363990293683835e-06,
+        "max_spectral_sum_error": 8.470329472543003e-22,
+        "volume": 2
+      },
+      {
+        "beta": 0.5,
+        "max_D_km_norm": 0.0014299575165606674,
+        "max_delta_D_km_norm": 0.005597465161097818,
+        "max_pairing_identity_error": 6.776480484180313e-21,
+        "max_spectral_second_moment": 3.1331616229703775e-05,
+        "max_spectral_sum_error": 4.0657581468206416e-20,
+        "volume": 4
+      },
+      {
+        "beta": 1.0,
+        "max_D_km_norm": 0.0014947354553153346,
+        "max_delta_D_km_norm": 0.005986345451349565,
+        "max_pairing_identity_error": 6.824899817878444e-21,
+        "max_spectral_second_moment": 3.583633186289356e-05,
+        "max_spectral_sum_error": 7.453889935837843e-20,
+        "volume": 4
+      },
+      {
+        "beta": 2.0,
+        "max_D_km_norm": 0.0014509341645267265,
+        "max_delta_D_km_norm": 0.005805249073622862,
+        "max_pairing_identity_error": 6.810123946779848e-21,
+        "max_spectral_second_moment": 3.3700916806799016e-05,
+        "max_spectral_sum_error": 9.486769009248164e-20,
+        "volume": 4
+      },
+      {
+        "beta": 0.5,
+        "max_D_km_norm": 0.0015638575593734448,
+        "max_delta_D_km_norm": 0.007360761995776438,
+        "max_pairing_identity_error": 1.577710031358314e-22,
+        "max_spectral_second_moment": 5.418081715846669e-05,
+        "max_spectral_sum_error": 4.0657581468206416e-20,
+        "volume": 6
+      },
+      {
+        "beta": 1.0,
+        "max_D_km_norm": 0.0016740318839334471,
+        "max_delta_D_km_norm": 0.008524634336447205,
+        "max_pairing_identity_error": 5.045121826284452e-22,
+        "max_spectral_second_moment": 7.266939057013464e-05,
+        "max_spectral_sum_error": 4.0657581468206416e-20,
+        "volume": 6
+      },
+      {
+        "beta": 2.0,
+        "max_D_km_norm": 0.0016371396608797445,
+        "max_delta_D_km_norm": 0.008728035132650417,
+        "max_pairing_identity_error": 1.360064868003086e-20,
+        "max_spectral_second_moment": 7.617859727677994e-05,
+        "max_spectral_sum_error": 5.421010862427522e-20,
+        "volume": 6
+      }
+    ],
+    "two_orientation_history_closed": true,
+    "uniform_beta_volume_direct_d_delta_d_closed": false
+  },
+  "exploration_id": "EXP-001142",
+  "passed": 85,
+  "run_kind": "independent",
+  "schema": "tect/foundation-audit/1.0",
+  "task_id": "T-054",
+  "verdict": "PASS"
+}
