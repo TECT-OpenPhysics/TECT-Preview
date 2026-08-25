@@ -2512,6 +2512,118 @@
       "task_id": "T-054",
       "title": "Finite actual-Q3 evolved dual-integrand cross-term audit",
       "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "axis": "condition-number lemma",
+          "check": "Both trace legs and both extremal eigenvalues are retained.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "dual spectrum",
+          "check": "A rho A* is checked separately and only spectral invariance is reused.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "faithfulness",
+          "check": "Finite Gibbs minima are positive; no limit faithfulness is claimed.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "global versus local",
+          "check": "The full-H condition number is not identified with a local modular weight.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "uniformity",
+          "check": "The finite factor range is a route diagnostic, not an asymptotic theorem.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "Lean",
+          "check": "R297 is scalar bookkeeping only.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "QFT promotion",
+          "check": "Common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector A and Pre-A remain open.",
+          "disposition": "UPHELD-OPEN"
+        }
+      ],
+      "boundary": "T0 claim-nonbearing finite Gibbs condition-number transfer audit; not a thermodynamic QFT theorem.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "The global condition-number transfer is mathematically valid at fixed finite volume but its generic factor is strongly regulator-dependent and reaches about 14.8 million on the declared family. It cannot serve as the uniform QFT state-norm bridge. The proof route is narrowed to a local modular/energy weight or cancellation-aware common-core estimate; no asymptotic negative theorem is inferred.",
+      "evidence_refs": [
+        "strategy/pre_a_cp1_st8_q3lock_gibbs_isometry_condition_number_audit_manifest.json#exact_statement",
+        "strategy/pre-a-cp1-st8-q3lock-gibbs-isometry-condition-number-audit-certificate-260825.md#Finite comparison lemma",
+        "codes/foundations/pre_a_cp1_st8_q3lock_gibbs_isometry_condition_number_audit.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_gibbs_isometry_condition_number_audit_independent.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_gibbs_isometry_condition_number_audit_verify.py#main",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-27-primary-pre_a_cp1_st8_q3lock_gibbs_isometry_condition_number_audit/primary.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-27-independent-pre_a_cp1_st8_q3lock_gibbs_isometry_condition_number_audit/independent.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-27-integrated-pre_a_cp1_st8_q3lock_gibbs_isometry_condition_number_audit/integrated.json#lean",
+        "verification/lean/Tect/R297.lean#condition_number_fixture",
+        "verification/lean/registry.json#R297"
+      ],
+      "finding": "Primary 356/356, independent 356/356, and integrated 31/31 with Lean R297 PASS. The finite Gibbs comparison and dual spectral invariance hold on every tested row. log(kappa) ranges from 3.7746480326544107 to 33.02174678003; the largest generic square-root factor is exp(16.510873390015)=14810891.644688701. Direct C/E operator-specific state-isometry logs remain finite between -0.012750309285080705 and 0.02167455105053474, but they do not establish a uniform comparison constant.",
+      "formal_integration": {
+        "events": [],
+        "lean": "R297 PASS",
+        "negatives": [],
+        "no_new_event": true,
+        "no_new_negative": true,
+        "no_new_result": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "results": []
+      },
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": []
+      },
+      "gate_ids": [
+        "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+        "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+        "PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE",
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001126",
+      "method": [
+        "Derive the finite two-sided Gibbs seminorm comparison N_rho,#(U* X U)^2 <= kappa(rho) N_rho,#(X)^2 from lambda_min and lambda_max bounds on both trace legs.",
+        "Construct the actual finite Q3 Gibbs state and local-character dual state on the declared edge and square regulator family.",
+        "Compute log(kappa)=beta*(E_max-E_min), verify dual spectral invariance, and apply the comparison to C=delta_H^2(A) and E_L=delta_W_L delta_H(A) under full and signed finite unitaries.",
+        "Rebuild the matrix lane independently, compare every finite row, and compile Lean R297 for the rational condition-number bookkeeping."
+      ],
+      "next_action": "Construct a local energy/modular weight or cancellation-aware state estimate on the common Q3 core and require a source/volume/beta/cutoff-uniform constant.",
+      "parent_exploration_id": "EXP-001125",
+      "provenance": "contemporaneous",
+      "qft_interface": {
+        "closed": "Finite global Gibbs condition-number comparison, exact dual spectral invariance, and actual-Q3 finite condition-number stress.",
+        "open": "A local modular comparison, common core, evolved dual integrand Cauchy, exhaustion, common alpha, Hamiltonian-to-OS/KMS/GNS identification, gap, continuum, C6, Sector A and Pre-A.",
+        "tect_boundary": "No heat_root_incidence or canonical A1/R-192 production owner is supplied."
+      },
+      "question": "Can the finite operator-norm evolved-integrand bound be transferred through a faithful finite Gibbs two-sided seminorm using the global condition-number factor, and is that factor uniform across the tested actual-Q3 regulators?",
+      "recorded_at": "2026-08-27T08:30:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001125",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001066",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-08-25",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Finite actual-Q3 Gibbs condition-number transfer audit",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",
