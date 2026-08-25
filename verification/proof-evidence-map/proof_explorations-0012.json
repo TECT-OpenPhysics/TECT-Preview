@@ -6143,6 +6143,124 @@
       "task_id": "T-054",
       "title": "Actual finite-Q3 local commutator recurrence audit and unsplit-flow boundary",
       "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "axis": "unsplit-versus-split",
+          "check": "The product is formed from onsite and full bond factors; no exp(-i t H) substitution is made.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "term-order dependence",
+          "check": "Both onsite-first lexicographic order and the exact reverse order are evaluated; passing one order is not silently generalized.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "Hamiltonian decomposition",
+          "check": "The sum of all onsite and bond matrices is compared to the canonical build before recurrence rows are accepted.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "context coverage",
+          "check": "Both real-time signs and both A/A* contexts are tested for each order and each volume.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "finite tolerance",
+          "check": "The largest positive residuals are below 2e-14 while the declared recurrence tolerance is 1e-9; no fitted or post-selected constant is used.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "Lean scope",
+          "check": "R326 proves only rational fixture identities and the scope firewall; the matrix products remain Python evidence.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "QFT promotion",
+          "check": "Finite split recurrence rows do not imply volume uniformity, common alpha, OS/KMS/GNS, a gap, continuum, C6, Sector A or Pre-A.",
+          "disposition": "UPHELD-OPEN"
+        }
+      ],
+      "boundary": "Finite exact matrices with oscillator dimension 3, volumes 2/4/6, beta=1, one character source, six steps, two explicit term orders, both signs and both adjoint contexts. No thermodynamic limit, common alpha, exact CCR common core, OS/KMS/GNS reconstruction, spectral gap, continuum, C6, Sector A or Pre-A conclusion follows.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "The exact split product, rather than the exact unsplit flow tested in EXP-001155, satisfies the registered one-layer recurrence on the declared finite fixtures for both term orders. This advances the split-step applicability route locally, but it does not establish an operator theorem or any volume-, cutoff- or beta-uniform constant.",
+      "evidence_refs": [
+        "strategy/pre-a-cp1-st8-q3lock-actual-split-step-commutator-recurrence-audit-manifest.json#model",
+        "codes/foundations/pre_a_cp1_st8_q3lock_actual_split_step_commutator_recurrence_audit.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_actual_split_step_commutator_recurrence_audit_independent.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_actual_split_step_commutator_recurrence_audit_verify.py#run",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-28-primary-pre_a_cp1_st8_q3lock_actual_split_step_commutator_recurrence_audit/primary.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-28-independent-pre_a_cp1_st8_q3lock_actual_split_step_commutator_recurrence_audit/independent.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-28-integrated-pre_a_cp1_st8_q3lock_actual_split_step_commutator_recurrence_audit/integrated.json#lean",
+        "verification/lean/Tect/R326.lean#weighted_step_fixture",
+        "verification/lean/registry.json#R326"
+      ],
+      "finding": "Primary 190/190, independent 181/181, integrated 60/60, and Lean R326 compile PASS. Both declared split orders pass every finite recurrence row across all four contexts and volumes. The primary maximum residuals by order and volume are onsite_then_lexicographic_bonds: V2=-0.06071861939721224, V4=-0.02715599082635401, V6=1.533017413440373e-14; reverse_term_order: V2=-0.06093425967767341, V4=-0.027845919416709303, V6=1.645530484965069e-14. The recurrence tolerance is 1e-9, so no positive residual occurs on this finite grid.",
+      "formal_integration": {
+        "events": [],
+        "lean": "R326 PASS",
+        "negatives": [],
+        "no_new_negative": true,
+        "no_new_result": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "results": []
+      },
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": []
+      },
+      "gate_ids": [
+        "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+        "PA-CP1-ST8-Q3LOCK-ENERGY-WEIGHTED-COMMUTATOR-GEVREY-LR-CLOSURE",
+        "PA-CP1-ST8-Q3LOCK-FIRST-PASSAGE-BACKBONE-REAL-TIME-PRODUCT-AND-ENERGY-TAIL-CLOSURE",
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001156",
+      "method": [
+        "Construct the canonical quartic Q3 finite Hamiltonian on volumes 2, 4 and 6 with oscillator dimension 3, beta=1, character amplitude 1/3, and the declared chi, r, g, c and lambda parameters.",
+        "Decompose the exact Hamiltonian into every onsite term and every lexicographically ordered full bond term, verify that the sum reconstructs the canonical Hamiltonian, and form exact matrix exponentials for one delta=1/18 product step.",
+        "Test both the onsite-then-bonds product and its reverse term order, both real-time signs, and both A and A* contexts for six steps.",
+        "Evaluate the two-sided Gibbs q/p commutator seminorm and the registered C=J=1 local recurrence row by row, with an independent non-importing reconstruction and Lean R326 arithmetic cross-check."
+      ],
+      "next_action": "Vary source support, beta and volume/shape while retaining both split orders; require a uniform analytic or state-weighted bound before promoting the finite pass to a common-alpha hypothesis.",
+      "no_overclaim": "This is a finite split-step applicability advance only. It does not prove the infinite-volume recurrence, common alpha or any downstream QFT or TECT sector theorem.",
+      "provenance": "contemporaneous",
+      "qft_interface": {
+        "closed": "Finite actual split products satisfy the registered one-layer recurrence on the declared grid for two term orders and four contexts.",
+        "open": "Uniform source, beta, cutoff and volume constants; actual common-core recurrence theorem; direct D/delta-D Cauchy; exhaustion, group law, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector A and Pre-A.",
+        "tect_boundary": "No heat_root_incidence or canonical A1/R-192 production owner is supplied."
+      },
+      "question": "Does one exact onsite-plus-all-bond finite Q3 Lie-Trotter step satisfy the registered four-context local q/p commutator recurrence without substituting the unsplit Hamiltonian flow?",
+      "recorded_at": "2026-08-28T00:30:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001155",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001154",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001151",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001128",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-08-26",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Actual finite Q3 onsite-plus-all-bond split-step recurrence audit",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",
