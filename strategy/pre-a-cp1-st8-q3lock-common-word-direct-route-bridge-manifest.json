@@ -1,0 +1,81 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-COMMON-WORD-DIRECT-ROUTE-BRIDGE-v0",
+  "title": "Finite common-word OS versus direct D/delta-D route bridge",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001176",
+  "claim_bearing": false,
+  "parent_explorations": ["EXP-001175", "EXP-001174", "EXP-001169", "EXP-001149"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE",
+    "PA-CP1-ST8-Q3LOCK-FIXED-BETA-CANONICAL-OS-MIXTURE-COMMON-NORMAL-WSTAR-KMS-ENVELOPE",
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "question": "Does the finite OS common-word context decay seen in EXP-001174/001175 align with the direct D/delta-D route, or do the finite OS deltas decrease while direct seminorm maxima grow with volume?",
+  "inputs": {
+    "direction_source_primary": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-primary-pre-a-cp1-st8-q3lock-finite-common-word-direction-source/primary.json",
+    "direction_source_independent": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-independent-pre-a-cp1-st8-q3lock-finite-common-word-direction-source/independent.json",
+    "extended_direct_primary": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-primary-pre-a-cp1-st8-q3lock-extended-direct-d-delta-d-shape-beta/primary.json",
+    "extended_direct_independent": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-independent-pre-a-cp1-st8-q3lock-extended-direct-d-delta-d-shape-beta/independent.json",
+    "source_weight_primary": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-27-primary-pre_a_cp1_st8_q3lock_source_weight_direct_delta_audit/primary.json",
+    "source_weight_independent": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-27-independent-pre_a_cp1_st8_q3lock_source_weight_direct_delta_audit/independent.json"
+  },
+  "fixture": {
+    "os_beta_for_sequence": 0.25,
+    "minimum_positive_witness": 1e-15,
+    "agreement_tolerance": 1e-7,
+    "direct_growth_tolerance": 1e-12
+  },
+  "scope": {
+    "finite_input_provenance_closed": true,
+    "os_context_decay_diagnostic_closed": true,
+    "direct_seminorm_growth_diagnostic_closed": true,
+    "cross_route_bridge_closed": true,
+    "uniform_common_word_closed": false,
+    "volume_uniform_direct_d_cauchy_closed": false,
+    "volume_uniform_os_cauchy_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "adversarial_review": [
+    {"axis": "Input provenance", "check": "The bridge reads only committed EXP-001149, EXP-001169 and EXP-001175 run JSONs and records their paths; it does not recompute or silently alter upstream values.", "disposition": "UPHELD"},
+    {"axis": "Route comparability", "check": "OS Gram context deltas and direct D/delta-D maxima are different finite diagnostics; ratios are reported descriptively and are not treated as a common norm.", "disposition": "UPHELD-OPEN"},
+    {"axis": "Volume labels", "check": "Only matching declared volume labels are compared; path4/path5/path6 and source-weight volumes 2/4/6 are not conflated as one exhaustion theorem.", "disposition": "UPHELD"},
+    {"axis": "Monotonicity", "check": "Finite increase/decrease predicates are computed from the full recorded sequences and are not promoted to asymptotic bounds.", "disposition": "UPHELD-OPEN"},
+    {"axis": "Direct seminorm scope", "check": "D and delta-D maxima retain their source, beta, cutoff and finite fixture boundaries; growth is not called an impossibility theorem for every weighted norm.", "disposition": "UPHELD-OPEN"},
+    {"axis": "Independence", "check": "The independent bridge consumes only the independent upstream runs and reproduces all derived bridge fields independently of the primary lane.", "disposition": "UPHELD"},
+    {"axis": "Lean boundary", "check": "Lean R247 is rerun as an exact finite Gibbs/scope crosscheck; bridge arithmetic remains a transparent Python audit of committed JSON inputs.", "disposition": "UPHELD"},
+    {"axis": "QFT promotion", "check": "Mixed finite-route behavior does not prove or refute a thermodynamic OS state, common alpha, Hamiltonian-to-OS identification, mass gap, continuum, C6, Sector A or Pre-A.", "disposition": "UPHELD-OPEN"}
+  ],
+  "files": {
+    "primary": "codes/foundations/pre_a_cp1_st8_q3lock_common_word_direct_route_bridge.py",
+    "independent": "codes/foundations/pre_a_cp1_st8_q3lock_common_word_direct_route_bridge_independent.py",
+    "integrated": "codes/foundations/pre_a_cp1_st8_q3lock_common_word_direct_route_bridge_verify.py",
+    "lean": "verification/lean/Tect/R247.lean",
+    "primary_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-primary-pre-a-cp1-st8-q3lock-common-word-direct-route-bridge/primary.json",
+    "independent_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-independent-pre-a-cp1-st8-q3lock-common-word-direct-route-bridge/independent.json",
+    "integrated_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-integrated-pre-a-cp1-st8-q3lock-common-word-direct-route-bridge/integrated.json"
+  },
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R247.lean",
+    "command": "lake env lean Tect/R247.lean",
+    "theorem_markers": ["boltzmann_normalization", "diagonal_gibbs_commutation", "conditional_transfer_scope"],
+    "role": "R247 verifies the exact finite Gibbs and conditional-transfer boundary; the bridge does not claim Lean formalization of dense Q3 outputs."
+  },
+  "qft_interface": {
+    "closed": "The finite OS context deltas, direct D/delta-D volume maxima and source-weighted direct maxima are provenance-linked, independently reproduced and compared as route diagnostics.",
+    "open": "An analytic estimate connecting the OS word norm to a source/volume/cutoff/beta-uniform direct seminorm remains open, as do common-word exhaustion embedding, common alpha, Hamiltonian-to-OS identification, GNS gap, continuum and physical TECT gates.",
+    "tect_boundary": "Auxiliary C6/Q3 route-selection evidence only; no heat_root_incidence, canonical A1/R-192 production owner, physical-empty reference, Sector-A closure or Pre-A closure is supplied."
+  },
+  "next_action": "Use the mixed signal to seek an analytic inequality with explicit source-distance and direct-seminorm weights; do not infer that finite OS decay repairs the unclosed direct D/delta-D Cauchy gate.",
+  "boundary": "T0 claim-nonbearing finite route bridge. It is not a theorem identifying any finite diagnostic with a thermodynamic QFT norm or state.",
+  "no_overclaim": "This package only re-aggregates committed finite diagnostics. It does not prove a common OS carrier, direct Cauchy convergence, common alpha, Hamiltonian-to-OS identification, a mass gap, continuum removal, C6, Sector A, Pre-A or a Clay result."
+}

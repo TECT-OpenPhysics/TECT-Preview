@@ -1,0 +1,269 @@
+{
+  "assertion_count": 10,
+  "assertions": [
+    {
+      "actual": [
+        "EXP-001176",
+        "T-054"
+      ],
+      "expected": "EXP-001176/T-054",
+      "group": "provenance",
+      "name": "identity",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        false,
+        false
+      ],
+      "expected": "nonbearing/open",
+      "group": "scope",
+      "name": "claim firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "direction_source_primary",
+        "direction_source_independent",
+        "extended_direct_primary",
+        "extended_direct_independent",
+        "source_weight_primary",
+        "source_weight_independent"
+      ],
+      "expected": "six committed upstream paths",
+      "group": "provenance",
+      "name": "input provenance",
+      "status": "PASS"
+    },
+    {
+      "actual": 12,
+      "expected": 12,
+      "group": "coverage",
+      "name": "OS role coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "center": [
+          1.994630439627887e-05,
+          4.9703497650988027e-08
+        ],
+        "endpoint_left": [
+          1.3494971806693457e-10,
+          3.516076318987871e-13
+        ],
+        "endpoint_right": [
+          1.3494938500002718e-10,
+          3.519406988061746e-13
+        ]
+      },
+      "expected": "two nested pairs per role",
+      "group": "coverage",
+      "name": "OS sequence coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        4,
+        6
+      ],
+      "expected": "at least two declared volumes",
+      "group": "coverage",
+      "name": "direct volume coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        2,
+        4,
+        6
+      ],
+      "expected": "at least two declared volumes",
+      "group": "coverage",
+      "name": "source-weight volume coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "center": [
+          1.994630439627887e-05,
+          4.9703497650988027e-08
+        ],
+        "endpoint_left": [
+          1.3494971806693457e-10,
+          3.516076318987871e-13
+        ],
+        "endpoint_right": [
+          1.3494938500002718e-10,
+          3.519406988061746e-13
+        ]
+      },
+      "expected": "positive",
+      "group": "adversarial",
+      "name": "positive OS witness",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "all_os_roles_decrease": true,
+        "direct_D_increasing": true,
+        "direct_D_last_first_ratio": 1.002580664886537,
+        "direct_delta_D_increasing": true,
+        "direct_delta_D_last_first_ratio": 1.0029230653778658,
+        "mixed_finite_signal": true,
+        "os_decreasing_by_role": {
+          "center": true,
+          "endpoint_left": true,
+          "endpoint_right": true
+        },
+        "source_weight_D_increasing": true,
+        "source_weight_D_last_first_ratio": 2.4477906160754466,
+        "source_weight_delta_H_D_increasing": true,
+        "source_weight_delta_H_D_last_first_ratio": 6.577274347073025
+      },
+      "expected": "OS decrease and direct growth visible",
+      "group": "route bridge",
+      "name": "mixed finite signal",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "c6_closed": false,
+        "common_alpha_closed": false,
+        "cross_route_bridge_closed": true,
+        "direct_seminorm_growth_diagnostic_closed": true,
+        "finite_input_provenance_closed": true,
+        "hamiltonian_os_identification_closed": false,
+        "no_new_negative_result": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "os_context_decay_diagnostic_closed": true,
+        "pre_a_closed": false,
+        "sector_a_closed": false,
+        "uniform_common_word_closed": false,
+        "volume_uniform_direct_d_cauchy_closed": false,
+        "volume_uniform_os_cauchy_closed": false
+      },
+      "expected": "finite route bridge",
+      "group": "scope",
+      "name": "scope firewall",
+      "status": "PASS"
+    }
+  ],
+  "audit_id": "PA-CP1-ST8-Q3LOCK-COMMON-WORD-DIRECT-ROUTE-BRIDGE",
+  "boundary": {
+    "c6_closed": false,
+    "common_alpha_closed": false,
+    "cross_route_bridge_closed": true,
+    "direct_seminorm_growth_diagnostic_closed": true,
+    "finite_input_provenance_closed": true,
+    "hamiltonian_os_identification_closed": false,
+    "no_new_negative_result": true,
+    "no_pdf": true,
+    "no_tier_change": true,
+    "os_context_decay_diagnostic_closed": true,
+    "pre_a_closed": false,
+    "sector_a_closed": false,
+    "uniform_common_word_closed": false,
+    "volume_uniform_direct_d_cauchy_closed": false,
+    "volume_uniform_os_cauchy_closed": false
+  },
+  "bridge_metrics": {
+    "all_os_roles_decrease": true,
+    "direct_D_increasing": true,
+    "direct_D_last_first_ratio": 1.002580664886537,
+    "direct_delta_D_increasing": true,
+    "direct_delta_D_last_first_ratio": 1.0029230653778658,
+    "mixed_finite_signal": true,
+    "os_decreasing_by_role": {
+      "center": true,
+      "endpoint_left": true,
+      "endpoint_right": true
+    },
+    "source_weight_D_increasing": true,
+    "source_weight_D_last_first_ratio": 2.4477906160754466,
+    "source_weight_delta_H_D_increasing": true,
+    "source_weight_delta_H_D_last_first_ratio": 6.577274347073025
+  },
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "derived": {
+    "c6_closed": false,
+    "common_alpha_closed": false,
+    "cross_route_bridge_closed": true,
+    "direct_seminorm_growth_diagnostic_closed": true,
+    "finite_input_provenance_closed": true,
+    "hamiltonian_os_identification_closed": false,
+    "no_new_negative_result": true,
+    "no_pdf": true,
+    "no_tier_change": true,
+    "os_context_decay_diagnostic_closed": true,
+    "pre_a_closed": false,
+    "sector_a_closed": false,
+    "uniform_common_word_closed": false,
+    "volume_uniform_direct_d_cauchy_closed": false,
+    "volume_uniform_os_cauchy_closed": false
+  },
+  "direct_profile": {
+    "D_norm": [
+      0.01444013225061002,
+      0.014477397392866121
+    ],
+    "delta_D_norm": [
+      0.13004990276294592,
+      0.13043004713110712
+    ],
+    "volumes": [
+      4,
+      6
+    ]
+  },
+  "endpoint_symmetry": [
+    {
+      "absolute_delta_difference": 3.3306690738754696e-16,
+      "from_graph": "path4",
+      "to_graph": "path5"
+    },
+    {
+      "absolute_delta_difference": 3.3306690738754696e-16,
+      "from_graph": "path5",
+      "to_graph": "path6"
+    }
+  ],
+  "exploration_id": "EXP-001176",
+  "os_sequences": {
+    "center": [
+      1.994630439627887e-05,
+      4.9703497650988027e-08
+    ],
+    "endpoint_left": [
+      1.3494971806693457e-10,
+      3.516076318987871e-13
+    ],
+    "endpoint_right": [
+      1.3494938500002718e-10,
+      3.519406988061746e-13
+    ]
+  },
+  "passed": 10,
+  "run_kind": "primary",
+  "schema": "tect/foundation-audit/1.0",
+  "source_weight_profile": {
+    "normalized_D_gibbs": [
+      0.0014327605279529428,
+      0.00271734474677309,
+      0.0035070977754065157
+    ],
+    "normalized_delta_H_D_gibbs": [
+      0.0032618640071235103,
+      0.012291879427891618,
+      0.021454174457694285
+    ],
+    "volumes": [
+      2,
+      4,
+      6
+    ]
+  },
+  "task_id": "T-054",
+  "verdict": "PASS"
+}
