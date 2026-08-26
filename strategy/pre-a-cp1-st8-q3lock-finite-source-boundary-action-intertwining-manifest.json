@@ -1,0 +1,116 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-FINITE-SOURCE-BOUNDARY-ACTION-INTERTWINING-v0",
+  "title": "Finite Q3 source-boundary Duhamel action-intertwining diagnostic",
+  "exploration_id": "EXP-001183",
+  "prior_exploration_id": "EXP-001182",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "tier": "T0",
+  "claim_bearing": false,
+  "parent_explorations": ["EXP-001182", "EXP-001181", "EXP-001176"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE",
+    "PA-CP1-ST8-Q3LOCK-ALL-EXHAUSTION-MIXTURE-L2-LOCALITY-AND-BETA-INDEPENDENT-CSTAR-DYNAMICS",
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+  ],
+  "question": "For nested finite Q3 path volumes, does the exact source-boundary variation admit a finite Duhamel action-intertwining identity, and how does its real-time response scale with graph distance and Euclidean OS source mismatch?",
+  "finite_fixture": {
+    "graphs": {
+      "path2": {"vertices": 2, "edges": [[0, 1]], "source_sites": [0], "nested_order": 0},
+      "path3": {"vertices": 3, "edges": [[0, 1], [1, 2]], "source_sites": [0], "nested_order": 1},
+      "path4": {"vertices": 4, "edges": [[0, 1], [1, 2], [2, 3]], "source_sites": [0], "nested_order": 2}
+    },
+    "nested_pairs": [["path2", "path3"], ["path3", "path4"]],
+    "oscillator_dimension": 3,
+    "beta_values": [0.25, 0.5],
+    "euclidean_time_fractions": [0.125, 0.25, 0.375],
+    "real_time_values": [0.0, 0.05, 0.1, 0.2, 0.4],
+    "observable_kinds": ["q", "p"],
+    "character_amplitude": 0.25,
+    "hbar": 1.0,
+    "commutator_zero_tolerance": 1e-10,
+    "duhamel_tolerance": 5e-7,
+    "finite_tolerance": 1e-10,
+    "order_witness_floor": 1e-8,
+    "os_witness_floor": 1e-10,
+    "positive_partition_floor": 1e-12,
+    "quadrature_s_order": 5,
+    "quadrature_u_order": 9,
+    "max_commutator_order": 5
+  },
+  "model_parameters": {"chi": "1", "r": "-1", "g": "3/5", "c": "3/5", "lambda": "1/10"},
+  "model": {
+    "hamiltonian": "H=sum_x[p_x^2/(2 chi)+r q_x^2/2+g q_x^4/4]+sum_edges[c(q_x-q_y)^2/2+lambda(q_x-q_y)^2(q_x^2+q_y^2)/4]",
+    "real_time_action": "alpha_t^H(A)=exp(i t H/hbar) A exp(-i t H/hbar)",
+    "nested_difference": "Delta=H_large-(H_small tensor I_extension)",
+    "interpolation": "H_s=H_small tensor I_extension+s Delta, 0<=s<=1",
+    "duhamel_identity": "alpha_t^large(A)-alpha_t^small(A)=i/hbar integral_s integral_0^t alpha_u^{H_s}([Delta,alpha_{t-u}^{H_s}(A)]) du",
+    "euclidean_word": "F_(tau,A)=exp(-(beta*hbar/2-tau)H) A exp(-tau H)/sqrt(Z)",
+    "boundary": "The finite identity is an exact nested-volume diagnostic; no uniform limit is inferred."
+  },
+  "exact_interface": {
+    "lean": "R343 proves the finite commutator-difference identity and its vanishing when the source and boundary terms commute.",
+    "tangent": "The first real-time action derivative differs by i[Delta,A]/hbar; for a source separated from the new boundary this vanishes exactly at t=0.",
+    "distance_order": "Nested commutator differences are measured through max_commutator_order; the first nonzero order must be no earlier than distance(source,new-edge-near-site)+1, while higher order reflects model-specific cancellations.",
+    "duhamel": "The interpolated finite Duhamel integral is compared with the direct action difference at declared times using product Gauss-Legendre quadrature.",
+    "os": "Normalized Euclidean source words are compared after embedding the smaller volume; the nonzero mismatch is retained as a diagnostic."
+  },
+  "scope": {
+    "finite_source_boundary_commutator_zero_closed": true,
+    "finite_source_distance_order_diagnostic_closed": true,
+    "finite_duhamel_action_intertwining_identity_closed": true,
+    "finite_euclidean_source_boundary_diagnostic_closed": true,
+    "source_volume_cutoff_beta_uniform_closed": false,
+    "word_product_star_action_intertwining_closed": false,
+    "common_os_hilbert_carrier_closed": false,
+    "common_word_exhaustion_closed": false,
+    "direct_d_delta_d_cauchy_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "adversarial_review": [
+    {"axis": "finite scope", "check": "All Hamiltonians, actions and integrals are finite-dimensional; no thermodynamic or continuum limit is silently taken.", "disposition": "UPHELD"},
+    {"axis": "embedding", "check": "The smaller Hamiltonian and observables are embedded by an explicit identity tensor factor, and the boundary difference is retained rather than treated as zero.", "disposition": "UPHELD"},
+    {"axis": "Duhamel orientation", "check": "The direct action convention and the two nested integrations are declared and checked against the direct matrix difference; a sign or time-order reversal is a failing assertion.", "disposition": "UPHELD"},
+    {"axis": "quadrature", "check": "Quadrature orders are manifest inputs and the residual is reported; quadrature agreement is not called an analytic uniform estimate.", "disposition": "UPHELD-OPEN"},
+    {"axis": "source distance", "check": "The first nonzero nested-commutator order is required only to be no earlier than the declared graph-distance lower bound; higher order is retained as a possible cancellation.", "disposition": "UPHELD-OPEN"},
+    {"axis": "unbounded-model boundary", "check": "The oscillator is truncated at the declared dimension three; no bounded-matrix result is promoted to the unbounded Q3 operator domain.", "disposition": "UPHELD-OPEN"},
+    {"axis": "OS normalization", "check": "Euclidean words use each volume's own shifted Gibbs partition function and the normalized mismatch is retained rather than interpreted as a common-state failure.", "disposition": "UPHELD"},
+    {"axis": "independence", "check": "The independent lane rebuilds oscillator tensors, Hamiltonians, actions, quadrature and Euclidean words without importing the primary program.", "disposition": "UPHELD"},
+    {"axis": "Lean boundary", "check": "R343 certifies only the finite associative-algebra commutator identity; numerical actions, quadrature and all limits remain Python evidence.", "disposition": "UPHELD"},
+    {"axis": "QFT promotion", "check": "The finite source-boundary response does not prove a common OS carrier, all-shape Cauchy estimate, common alpha, Hamiltonian-OS identification, GNS gap, continuum, C6, Sector A or Pre-A.", "disposition": "UPHELD-OPEN"}
+  ],
+  "files": {
+    "primary": "codes/foundations/pre_a_cp1_st8_q3lock_finite_source_boundary_action_intertwining.py",
+    "independent": "codes/foundations/pre_a_cp1_st8_q3lock_finite_source_boundary_action_intertwining_independent.py",
+    "integrated": "codes/foundations/pre_a_cp1_st8_q3lock_finite_source_boundary_action_intertwining_verify.py",
+    "lean": "verification/lean/Tect/R343.lean",
+    "primary_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-primary-pre-a-cp1-st8-q3lock-finite-source-boundary-action-intertwining/primary.json",
+    "independent_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-independent-pre-a-cp1-st8-q3lock-finite-source-boundary-action-intertwining/independent.json",
+    "integrated_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-integrated-pre-a-cp1-st8-q3lock-finite-source-boundary-action-intertwining/integrated.json"
+  },
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R343.lean",
+    "command": "lake env lean Tect/R343.lean",
+    "theorem_markers": ["commutator_difference", "commutator_difference_zero"],
+    "role": "R343 checks the exact algebraic tangent/source-boundary identity used by the finite action audit; it does not assert a Duhamel limit or QFT theorem."
+  },
+  "qft_interface": {
+    "closed": "The finite nested-volume source-boundary commutator vanishes at the source-separated tangent, the finite Duhamel identity matches direct real-time action differences, and the Euclidean OS source mismatch is explicitly measured.",
+    "open": "A source-, volume-, cutoff- and beta-uniform boundary estimate, common OS carrier, all-shape exhaustion Cauchy, common alpha, Hamiltonian-OS identification, GNS gap and continuum remain open.",
+    "tect_boundary": "Auxiliary C6/Q3 finite evidence only; no heat_root_incidence, canonical A1/R-192 production owner, physical-empty reference, Sector-A closure or Pre-A closure is supplied."
+  },
+  "next_action": "Use the finite identity only as the boundary term in an analytic source/volume/cutoff/beta-uniform estimate. If that estimate cannot be proved on the unbounded Q3 core, record the exact obstruction rather than promoting the finite trend.",
+  "boundary": "T0 claim-nonbearing finite nested Q3 source-boundary/action-intertwining checkpoint. It is not a thermodynamic common-Hilbert theorem, a common-alpha construction, a mass-gap proof, a continuum result, or a QFT/Clay closure.",
+  "no_overclaim": "This package promotes only finite commutator separation, a checked finite Duhamel identity, a finite source-distance order diagnostic and an explicitly normalized Euclidean mismatch. It does not prove or refute another common OS carrier, uniform source-boundary decay, direct Cauchy convergence, Hamiltonian-to-OS identification, a GNS gap, continuum removal, C6, Sector A, Pre-A or a Clay result."
+}
