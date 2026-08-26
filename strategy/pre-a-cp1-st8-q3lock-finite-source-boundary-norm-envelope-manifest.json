@@ -1,0 +1,108 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-FINITE-SOURCE-BOUNDARY-NORM-ENVELOPE-v0",
+  "title": "Finite Q3 source-boundary quadratic Duhamel norm envelope and cutoff stress",
+  "exploration_id": "EXP-001184",
+  "prior_exploration_id": "EXP-001183",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "tier": "T0",
+  "claim_bearing": false,
+  "parent_explorations": ["EXP-001183", "EXP-001182", "EXP-001176"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE",
+    "PA-CP1-ST8-Q3LOCK-ALL-EXHAUSTION-MIXTURE-L2-LOCALITY-AND-BETA-INDEPENDENT-CSTAR-DYNAMICS",
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+  ],
+  "question": "Does source-boundary commutation give a finite quadratic-time action bound, and do the resulting norm constants remain controlled when the path volume and oscillator cutoff are varied?",
+  "finite_fixture": {
+    "graphs": {
+      "path2": {"vertices": 2, "edges": [[0, 1]], "source_sites": [0], "nested_order": 0},
+      "path3": {"vertices": 3, "edges": [[0, 1], [1, 2]], "source_sites": [0], "nested_order": 1},
+      "path4": {"vertices": 4, "edges": [[0, 1], [1, 2], [2, 3]], "source_sites": [0], "nested_order": 2}
+    },
+    "nested_pairs": [["path2", "path3"], ["path3", "path4"]],
+    "oscillator_dimensions": [2, 3],
+    "observable_kinds": ["q", "p"],
+    "character_amplitude": 0.25,
+    "hbar": 1.0,
+    "real_time_values": [0.01, 0.05, 0.1, 0.2, 0.4],
+    "commutator_zero_tolerance": 1e-10,
+    "bound_tolerance": 1e-9,
+    "order_witness_floor": 1e-10,
+    "positive_partition_floor": 1e-12,
+    "max_commutator_order": 5
+  },
+  "model_parameters": {"chi": "1", "r": "-1", "g": "3/5", "c": "3/5", "lambda": "1/10"},
+  "model": {
+    "hamiltonian": "H=sum_x[p_x^2/(2 chi)+r q_x^2/2+g q_x^4/4]+sum_edges[c(q_x-q_y)^2/2+lambda(q_x-q_y)^2(q_x^2+q_y^2)/4]",
+    "real_time_action": "alpha_t^H(A)=exp(i t H/hbar) A exp(-i t H/hbar)",
+    "nested_difference": "Delta=H_large-(H_small tensor I_extension)",
+    "finite_bound": "If [Delta,A]=0, ||alpha_t^(H_large)(A)-alpha_t^(H_small)(A)|| <= min(2||A||, 2||Delta||( ||H0||+||Delta|| )||A|| t^2/hbar^2)",
+    "derivation": "The bound follows from the finite Duhamel identity, source commutation, automorphism isometry and ||[X,Y]||<=2||X||||Y||.",
+    "stress": "The envelope is evaluated for oscillator dimensions 2 and 3 and nested path pairs; any growth is a cutoff/volume diagnostic, not a no-go theorem."
+  },
+  "exact_interface": {
+    "lean": "R343 proves commutator(h0+delta,a)-commutator(h0,a)=commutator(delta,a) and its zero form under source-boundary commutation.",
+    "finite_bound": "The operator-norm envelope is a conditional finite-matrix consequence of source commutation and the declared Duhamel action convention.",
+    "distance": "Nested commutator differences are recorded through the declared order cutoff; observed higher-order onset is retained as cancellation data.",
+    "uniformity": "The bound is not called source-, volume-, cutoff- or beta-uniform; its exact H0 and Delta norms are reported for every finite row."
+  },
+  "scope": {
+    "finite_source_boundary_commutator_zero_closed": true,
+    "finite_quadratic_action_norm_envelope_closed": true,
+    "finite_cutoff_volume_stress_closed": true,
+    "finite_source_distance_order_diagnostic_closed": true,
+    "source_volume_cutoff_beta_uniform_closed": false,
+    "word_product_star_action_intertwining_closed": false,
+    "common_os_hilbert_carrier_closed": false,
+    "common_word_exhaustion_closed": false,
+    "direct_d_delta_d_cauchy_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "adversarial_review": [
+    {"axis": "finite norm convention", "check": "All action defects and bounds use the induced operator norm; no Frobenius norm is substituted for the stated envelope.", "disposition": "UPHELD"},
+    {"axis": "source commutation", "check": "The exact Delta/source commutator is checked before the quadratic envelope is applied; a small numerical residual is not silently treated as an exact zero.", "disposition": "UPHELD"},
+    {"axis": "bound derivation", "check": "The coefficient is the conservative 2||Delta||( ||H0||+||Delta|| )||A||/hbar^2 obtained from Duhamel and two commutator norm inequalities; it is not fitted to the observed defects.", "disposition": "UPHELD"},
+    {"axis": "trivial cap", "check": "The min with 2||A|| uses unitary action isometry and is retained only as a second finite bound, not as a decay statement.", "disposition": "UPHELD"},
+    {"axis": "distance order", "check": "Higher-than-minimal first nonzero commutator orders are recorded as cancellations, while only the graph-distance lower bound is enforced.", "disposition": "UPHELD-OPEN"},
+    {"axis": "cutoff stress", "check": "Oscillator dimensions 2 and 3 are separate finite fixtures; their norm growth is evidence about this truncation family, not an unbounded-operator theorem.", "disposition": "UPHELD-OPEN"},
+    {"axis": "volume stress", "check": "Only path2, path3 and path4 are tested, and exact finite H0/Delta norms are reported; no volume-uniform extrapolation is made.", "disposition": "UPHELD-OPEN"},
+    {"axis": "independence", "check": "The independent lane rebuilds oscillator matrices, Q3 terms, nested embeddings, actions and norm envelopes without importing the primary lane.", "disposition": "UPHELD"},
+    {"axis": "Lean boundary", "check": "R343 certifies only the finite associative commutator decomposition; the norm inequality and all numerical values remain finite Python evidence.", "disposition": "UPHELD"},
+    {"axis": "QFT promotion", "check": "A finite norm envelope with cutoff/volume dependence does not prove a common OS carrier, uniform D/delta-D Cauchy, common alpha, Hamiltonian-OS identification, GNS gap, continuum, C6, Sector A or Pre-A.", "disposition": "UPHELD-OPEN"}
+  ],
+  "files": {
+    "primary": "codes/foundations/pre_a_cp1_st8_q3lock_finite_source_boundary_norm_envelope.py",
+    "independent": "codes/foundations/pre_a_cp1_st8_q3lock_finite_source_boundary_norm_envelope_independent.py",
+    "integrated": "codes/foundations/pre_a_cp1_st8_q3lock_finite_source_boundary_norm_envelope_verify.py",
+    "lean": "verification/lean/Tect/R343.lean",
+    "primary_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-primary-pre-a-cp1-st8-q3lock-finite-source-boundary-norm-envelope/primary.json",
+    "independent_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-independent-pre-a-cp1-st8-q3lock-finite-source-boundary-norm-envelope/independent.json",
+    "integrated_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-integrated-pre-a-cp1-st8-q3lock-finite-source-boundary-norm-envelope/integrated.json"
+  },
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R343.lean",
+    "command": "lake env lean Tect/R343.lean",
+    "theorem_markers": ["commutator_difference", "commutator_difference_zero"],
+    "role": "R343 checks the finite algebraic source-boundary tangent decomposition used by the envelope; it does not prove the analytic norm estimate or any QFT limit."
+  },
+  "qft_interface": {
+    "closed": "For the declared bounded finite Q3 matrices, source-boundary commutation, a conservative quadratic-time action envelope and its cutoff/volume stress rows are reproducible, with the finite Duhamel identity cross-checked by Lean R343.",
+    "open": "The envelope constants are not uniform in volume or oscillator cutoff, and no source/beta-uniform direct D,delta-D estimate, common OS carrier, exhaustion Cauchy, common alpha, Hamiltonian-OS identification, GNS gap or continuum has been established.",
+    "tect_boundary": "Auxiliary C6/Q3 finite evidence only; no heat_root_incidence, canonical A1/R-192 production owner, physical-empty reference, Sector-A closure or Pre-A closure is supplied."
+  },
+  "next_action": "Replace the global H0/Delta norms by a local energy- or modular-weighted bound on the unbounded Q3 core and test whether a source/volume/cutoff/beta-uniform coefficient can be proved. If not, register the precise failure boundary.",
+  "boundary": "T0 claim-nonbearing finite nested Q3 source-boundary norm-envelope checkpoint. It is not a thermodynamic common-Hilbert theorem, a common-alpha construction, a mass-gap proof, a continuum result, or a QFT/Clay closure.",
+  "no_overclaim": "This package promotes only a conditional bounded finite-matrix quadratic envelope, exact source-boundary commutation, finite cutoff/volume stress data and a causal distance diagnostic. It does not prove or refute another common OS carrier, uniform source-boundary decay, direct Cauchy convergence, Hamiltonian-to-OS identification, a GNS gap, continuum removal, C6, Sector A, Pre-A or a Clay result."
+}
