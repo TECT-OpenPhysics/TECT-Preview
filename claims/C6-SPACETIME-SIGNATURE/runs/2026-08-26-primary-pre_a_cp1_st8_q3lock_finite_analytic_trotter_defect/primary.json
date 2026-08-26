@@ -1,0 +1,4810 @@
+{
+  "assertion_count": 225,
+  "assertions": [
+    {
+      "actual": "['EXP-001162', 'T-054', False]",
+      "expected": "EXP-001162/T-054/false",
+      "group": "provenance",
+      "name": "identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "['EXP-001161', 'T-054']",
+      "expected": "EXP-001161/T-054",
+      "group": "provenance",
+      "name": "parent authority",
+      "status": "PASS"
+    },
+    {
+      "actual": "[[3, 6, 12], 0.3333333333333333]",
+      "expected": "3,6,12 and horizon 1/3",
+      "group": "fixture",
+      "name": "analytic fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'horizon': '1/3', 'step_counts': [3, 6, 12], 'orders': ['onsite_then_lexicographic_bonds', 'reverse_term_order'], 'time_signs': [-1, 1], 'commutator_sum': 'C_V=sum_{j<k} ||[H_j,H_k]||', 'unitary_defect_bound': '||S_delta^N-exp(-i sign*t*H)|| <= t^2*C_V/(2*N)', 'history_defect_bound': '||V_split(M)-V_exact(M)|| <= delta^3*C_V*N*(N-1)*||M||/2', 'history': 'V_N(M)=delta sum_{k=0}^{N-1} Ad(U_delta^k)(M)', 'right_orientation': 'f_x^(3/4) q_x^3 A_f^(-3/4)', 'left_orientation': 'f_x^(3/4) A_f^(-3/4) q_x^3', 'weight_ratio_per_edge': '1/16', 'multiplier_power': '3/4'}",
+      "expected": "two orders and two signs",
+      "group": "fixture",
+      "name": "order/sign grid",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'finite_local_commutator_sum_closed': True, 'finite_analytic_unitary_defect_closed': True, 'finite_two_orientation_history_bound_closed': True, 'finite_bound_both_orders_and_signs_closed': True, 'volume_uniform_trotter_bound_closed': False, 'analytic_infinite_dimensional_trotter_rate_closed': False, 'operator_domain_embedding_closed': False, 'actual_q3_thermodynamic_history_closed': False, 'direct_d_cauchy_closed': False, 'delta_d_cauchy_closed': False, 'source_volume_beta_uniformity_closed': False, 'exhaustion_independence_closed': False, 'common_alpha_closed': False, 'hamiltonian_os_identification_closed': False, 'kms_gns_gap_closed': False, 'continuum_closed': False, 'c6_closed': False, 'sector_a_closed': False, 'pre_a_closed': False, 'no_new_negative_result': True, 'no_tier_change': True, 'no_pdf': True, 'finite_fixed_cutoff_volume_linear_envelope_closed': True, 'cutoff_uniform_volume_linear_bound_closed': False}",
+      "expected": "finite analytic bound only",
+      "group": "scope",
+      "name": "scope firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": "<=1e-08",
+      "group": "decomposition",
+      "name": "V=2 full decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.6175067619642274",
+      "expected": ">1e-06",
+      "group": "commutator",
+      "name": "V=2 local commutator sum finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": "<=1e-08",
+      "group": "commutator",
+      "name": "V=2 tensor localization",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.6175067619642274, 20.25, 2, 2.25]",
+      "expected": "C_V<=2*overlap_pairs*K_n^2",
+      "group": "fixed cutoff",
+      "name": "V=2 fixed-cutoff volume envelope",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.9999999999999989",
+      "expected": ">=1.0",
+      "group": "energy",
+      "name": "V=2 pair=[0, 1] positive energy",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.43291523575391017",
+      "expected": ">1e-06",
+      "group": "orientation",
+      "name": "V=2 pair=[0, 1] multiplier noncommutation",
+      "status": "PASS"
+    },
+    {
+      "actual": "2.4853533275172278e-15",
+      "expected": "<=1e-08",
+      "group": "split",
+      "name": "V=2 onsite_then_lexicographic_bonds sign=-1 N=3 unitary",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.02797359426907873, 0.02995382892526347, 0.0019802346561847393]",
+      "expected": "final<=t^2*C/(2N)",
+      "group": "analytic Trotter",
+      "name": "V=2 onsite_then_lexicographic_bonds sign=-1 N=3 analytic unitary bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.0056551698573803775, 0.012064831440270787, 0.006409661582890409]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=2 onsite_then_lexicographic_bonds sign=-1 N=3 right history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.005655169857380408, 0.012064831440270778, 0.00640966158289037]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=2 onsite_then_lexicographic_bonds sign=-1 N=3 left history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.0013384212174920777, 0.0028816597579806058, 0.001543238540488528]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=2 onsite_then_lexicographic_bonds sign=-1 N=3 commutator history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.953807906047262e-15",
+      "expected": "<=1e-08",
+      "group": "split",
+      "name": "V=2 onsite_then_lexicographic_bonds sign=-1 N=6 unitary",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.013972843557674088, 0.014976914462631734, 0.0010040709049576463]",
+      "expected": "final<=t^2*C/(2N)",
+      "group": "analytic Trotter",
+      "name": "V=2 onsite_then_lexicographic_bonds sign=-1 N=6 analytic unitary bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.0035164994839852865, 0.007540519650169241, 0.004024020166183955]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=2 onsite_then_lexicographic_bonds sign=-1 N=6 right history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.003516499483985328, 0.007540519650169236, 0.004024020166183908]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=2 onsite_then_lexicographic_bonds sign=-1 N=6 left history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.0008322301280494419, 0.0018010373487378788, 0.0009688072206884368]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=2 onsite_then_lexicographic_bonds sign=-1 N=6 commutator history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.859476923874953e-15",
+      "expected": "<=1e-08",
+      "group": "split",
+      "name": "V=2 onsite_then_lexicographic_bonds sign=-1 N=12 unitary",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.006984678410131257, 0.007488457231315867, 0.0005037788211846098]",
+      "expected": "final<=t^2*C/(2N)",
+      "group": "analytic Trotter",
+      "name": "V=2 onsite_then_lexicographic_bonds sign=-1 N=12 analytic unitary bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.0019299245048385461, 0.004147285807593083, 0.002217361302754537]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=2 onsite_then_lexicographic_bonds sign=-1 N=12 right history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.0019299245048385065, 0.00414728580759308, 0.0022173613027545733]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=2 onsite_then_lexicographic_bonds sign=-1 N=12 left history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.0004567112311378398, 0.0009905705418058334, 0.0005338593106679935]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=2 onsite_then_lexicographic_bonds sign=-1 N=12 commutator history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[3, 6, 12]",
+      "expected": "analytic bound decreases with N",
+      "group": "analytic Trotter",
+      "name": "V=2 onsite_then_lexicographic_bonds sign=-1 bound refinement",
+      "status": "PASS"
+    },
+    {
+      "actual": "2.4853533275172278e-15",
+      "expected": "<=1e-08",
+      "group": "split",
+      "name": "V=2 onsite_then_lexicographic_bonds sign=1 N=3 unitary",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.02797359426907873, 0.02995382892526347, 0.0019802346561847393]",
+      "expected": "final<=t^2*C/(2N)",
+      "group": "analytic Trotter",
+      "name": "V=2 onsite_then_lexicographic_bonds sign=1 N=3 analytic unitary bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.0056551698573803775, 0.012064831440270787, 0.006409661582890409]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=2 onsite_then_lexicographic_bonds sign=1 N=3 right history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.005655169857380408, 0.012064831440270778, 0.00640966158289037]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=2 onsite_then_lexicographic_bonds sign=1 N=3 left history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.0013384212174920777, 0.0028816597579806058, 0.001543238540488528]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=2 onsite_then_lexicographic_bonds sign=1 N=3 commutator history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.953807906047262e-15",
+      "expected": "<=1e-08",
+      "group": "split",
+      "name": "V=2 onsite_then_lexicographic_bonds sign=1 N=6 unitary",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.013972843557674088, 0.014976914462631734, 0.0010040709049576463]",
+      "expected": "final<=t^2*C/(2N)",
+      "group": "analytic Trotter",
+      "name": "V=2 onsite_then_lexicographic_bonds sign=1 N=6 analytic unitary bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.0035164994839852865, 0.007540519650169241, 0.004024020166183955]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=2 onsite_then_lexicographic_bonds sign=1 N=6 right history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.003516499483985328, 0.007540519650169236, 0.004024020166183908]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=2 onsite_then_lexicographic_bonds sign=1 N=6 left history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.0008322301280494419, 0.0018010373487378788, 0.0009688072206884368]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=2 onsite_then_lexicographic_bonds sign=1 N=6 commutator history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.859476923874953e-15",
+      "expected": "<=1e-08",
+      "group": "split",
+      "name": "V=2 onsite_then_lexicographic_bonds sign=1 N=12 unitary",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.006984678410131257, 0.007488457231315867, 0.0005037788211846098]",
+      "expected": "final<=t^2*C/(2N)",
+      "group": "analytic Trotter",
+      "name": "V=2 onsite_then_lexicographic_bonds sign=1 N=12 analytic unitary bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.0019299245048385461, 0.004147285807593083, 0.002217361302754537]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=2 onsite_then_lexicographic_bonds sign=1 N=12 right history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.0019299245048385065, 0.00414728580759308, 0.0022173613027545733]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=2 onsite_then_lexicographic_bonds sign=1 N=12 left history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.0004567112311378398, 0.0009905705418058334, 0.0005338593106679935]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=2 onsite_then_lexicographic_bonds sign=1 N=12 commutator history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[3, 6, 12]",
+      "expected": "analytic bound decreases with N",
+      "group": "analytic Trotter",
+      "name": "V=2 onsite_then_lexicographic_bonds sign=1 bound refinement",
+      "status": "PASS"
+    },
+    {
+      "actual": "2.123824774256579e-15",
+      "expected": "<=1e-08",
+      "group": "split",
+      "name": "V=2 reverse_term_order sign=-1 N=3 unitary",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.027973594269078604, 0.02995382892526347, 0.0019802346561848642]",
+      "expected": "final<=t^2*C/(2N)",
+      "group": "analytic Trotter",
+      "name": "V=2 reverse_term_order sign=-1 N=3 analytic unitary bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.005655075882760578, 0.012064831440270787, 0.006409755557510209]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=2 reverse_term_order sign=-1 N=3 right history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.005655075882760602, 0.012064831440270778, 0.006409755557510176]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=2 reverse_term_order sign=-1 N=3 left history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.0013370777547016995, 0.0028816597579806058, 0.0015445820032789063]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=2 reverse_term_order sign=-1 N=3 commutator history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.9699219402050726e-15",
+      "expected": "<=1e-08",
+      "group": "split",
+      "name": "V=2 reverse_term_order sign=-1 N=6 unitary",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.013972843557674301, 0.014976914462631734, 0.001004070904957433]",
+      "expected": "final<=t^2*C/(2N)",
+      "group": "analytic Trotter",
+      "name": "V=2 reverse_term_order sign=-1 N=6 analytic unitary bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.003516463246572184, 0.007540519650169241, 0.004024056403597057]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=2 reverse_term_order sign=-1 N=6 right history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.0035164632465720575, 0.007540519650169236, 0.004024056403597178]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=2 reverse_term_order sign=-1 N=6 left history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.0008317738518466653, 0.0018010373487378788, 0.0009692634968912134]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=2 reverse_term_order sign=-1 N=6 commutator history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "2.1738721850985263e-15",
+      "expected": "<=1e-08",
+      "group": "split",
+      "name": "V=2 reverse_term_order sign=-1 N=12 unitary",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.00698467841013089, 0.007488457231315867, 0.0005037788211849767]",
+      "expected": "final<=t^2*C/(2N)",
+      "group": "analytic Trotter",
+      "name": "V=2 reverse_term_order sign=-1 N=12 analytic unitary bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.0019299136763063567, 0.004147285807593083, 0.0022173721312867267]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=2 reverse_term_order sign=-1 N=12 right history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.0019299136763062626, 0.00414728580759308, 0.002217372131286817]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=2 reverse_term_order sign=-1 N=12 left history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.0004565807192222145, 0.0009905705418058334, 0.0005339898225836189]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=2 reverse_term_order sign=-1 N=12 commutator history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[3, 6, 12]",
+      "expected": "analytic bound decreases with N",
+      "group": "analytic Trotter",
+      "name": "V=2 reverse_term_order sign=-1 bound refinement",
+      "status": "PASS"
+    },
+    {
+      "actual": "2.123824774256579e-15",
+      "expected": "<=1e-08",
+      "group": "split",
+      "name": "V=2 reverse_term_order sign=1 N=3 unitary",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.027973594269078604, 0.02995382892526347, 0.0019802346561848642]",
+      "expected": "final<=t^2*C/(2N)",
+      "group": "analytic Trotter",
+      "name": "V=2 reverse_term_order sign=1 N=3 analytic unitary bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.005655075882760578, 0.012064831440270787, 0.006409755557510209]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=2 reverse_term_order sign=1 N=3 right history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.005655075882760602, 0.012064831440270778, 0.006409755557510176]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=2 reverse_term_order sign=1 N=3 left history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.0013370777547016995, 0.0028816597579806058, 0.0015445820032789063]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=2 reverse_term_order sign=1 N=3 commutator history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.9699219402050726e-15",
+      "expected": "<=1e-08",
+      "group": "split",
+      "name": "V=2 reverse_term_order sign=1 N=6 unitary",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.013972843557674301, 0.014976914462631734, 0.001004070904957433]",
+      "expected": "final<=t^2*C/(2N)",
+      "group": "analytic Trotter",
+      "name": "V=2 reverse_term_order sign=1 N=6 analytic unitary bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.003516463246572184, 0.007540519650169241, 0.004024056403597057]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=2 reverse_term_order sign=1 N=6 right history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.0035164632465720575, 0.007540519650169236, 0.004024056403597178]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=2 reverse_term_order sign=1 N=6 left history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.0008317738518466653, 0.0018010373487378788, 0.0009692634968912134]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=2 reverse_term_order sign=1 N=6 commutator history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "2.1738721850985263e-15",
+      "expected": "<=1e-08",
+      "group": "split",
+      "name": "V=2 reverse_term_order sign=1 N=12 unitary",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.00698467841013089, 0.007488457231315867, 0.0005037788211849767]",
+      "expected": "final<=t^2*C/(2N)",
+      "group": "analytic Trotter",
+      "name": "V=2 reverse_term_order sign=1 N=12 analytic unitary bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.0019299136763063567, 0.004147285807593083, 0.0022173721312867267]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=2 reverse_term_order sign=1 N=12 right history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.0019299136763062626, 0.00414728580759308, 0.002217372131286817]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=2 reverse_term_order sign=1 N=12 left history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.0004565807192222145, 0.0009905705418058334, 0.0005339898225836189]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=2 reverse_term_order sign=1 N=12 commutator history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[3, 6, 12]",
+      "expected": "analytic bound decreases with N",
+      "group": "analytic Trotter",
+      "name": "V=2 reverse_term_order sign=1 bound refinement",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'right': 1.812514240389086, 'left': 1.8125142403890846, 'commutator': 0.43291523575391017}",
+      "expected": "finite",
+      "group": "orientation",
+      "name": "V=2 pair=[0, 1] multiplier norms finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "36",
+      "expected": "36",
+      "group": "coverage",
+      "name": "V=2 row coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": "8.950639343383556e-16",
+      "expected": "<=1e-08",
+      "group": "decomposition",
+      "name": "V=4 full decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": "6.4700270478569095",
+      "expected": ">1e-06",
+      "group": "commutator",
+      "name": "V=4 local commutator sum finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "2.220446049250313e-16",
+      "expected": "<=1e-08",
+      "group": "commutator",
+      "name": "V=4 tensor localization",
+      "status": "PASS"
+    },
+    {
+      "actual": "[6.4700270478569095, 121.50000000000014, 12, 2.2500000000000013]",
+      "expected": "C_V<=2*overlap_pairs*K_n^2",
+      "group": "fixed cutoff",
+      "name": "V=4 fixed-cutoff volume envelope",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.9999999999999989",
+      "expected": ">=1.0",
+      "group": "energy",
+      "name": "V=4 pair=[0, 1] positive energy",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.28070992971557124",
+      "expected": ">1e-06",
+      "group": "orientation",
+      "name": "V=4 pair=[0, 1] multiplier noncommutation",
+      "status": "PASS"
+    },
+    {
+      "actual": "9.211924843723458e-15",
+      "expected": "<=1e-08",
+      "group": "split",
+      "name": "V=4 onsite_then_lexicographic_bonds sign=-1 N=3 unitary",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.07553754605482876, 0.11981531570105387, 0.04427776964622511]",
+      "expected": "final<=t^2*C/(2N)",
+      "group": "analytic Trotter",
+      "name": "V=4 onsite_then_lexicographic_bonds sign=-1 N=3 analytic unitary bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.009331563456951016, 0.04861641989210413, 0.039284856435153115]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=4 onsite_then_lexicographic_bonds sign=-1 N=3 right history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.009331563456951008, 0.04861641989210416, 0.039284856435153157]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=4 onsite_then_lexicographic_bonds sign=-1 N=3 left history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.0016620483555898776, 0.007474077522064846, 0.005812029166474969]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=4 onsite_then_lexicographic_bonds sign=-1 N=3 commutator history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "9.27502501751073e-15",
+      "expected": "<=1e-08",
+      "group": "split",
+      "name": "V=4 onsite_then_lexicographic_bonds sign=-1 N=6 unitary",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.037669550781520796, 0.05990765785052694, 0.02223810706900614]",
+      "expected": "final<=t^2*C/(2N)",
+      "group": "analytic Trotter",
+      "name": "V=4 onsite_then_lexicographic_bonds sign=-1 N=6 analytic unitary bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.005766993857479966, 0.03038526243256508, 0.024618268575085114]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=4 onsite_then_lexicographic_bonds sign=-1 N=6 right history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.005766993857479953, 0.0303852624325651, 0.02461826857508515]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=4 onsite_then_lexicographic_bonds sign=-1 N=6 left history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.0010563126500433787, 0.004671298451290529, 0.0036149858012471505]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=4 onsite_then_lexicographic_bonds sign=-1 N=6 commutator history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "8.89151861083771e-15",
+      "expected": "<=1e-08",
+      "group": "split",
+      "name": "V=4 onsite_then_lexicographic_bonds sign=-1 N=12 unitary",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.01882247265040488, 0.02995382892526347, 0.01113135627485859]",
+      "expected": "final<=t^2*C/(2N)",
+      "group": "analytic Trotter",
+      "name": "V=4 onsite_then_lexicographic_bonds sign=-1 N=12 analytic unitary bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.003159062259151787, 0.016711894337910795, 0.013552832078759007]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=4 onsite_then_lexicographic_bonds sign=-1 N=12 right history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.003159062259151789, 0.016711894337910805, 0.013552832078759016]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=4 onsite_then_lexicographic_bonds sign=-1 N=12 left history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.000586780820442718, 0.002569214148209791, 0.001982433327767073]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=4 onsite_then_lexicographic_bonds sign=-1 N=12 commutator history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[3, 6, 12]",
+      "expected": "analytic bound decreases with N",
+      "group": "analytic Trotter",
+      "name": "V=4 onsite_then_lexicographic_bonds sign=-1 bound refinement",
+      "status": "PASS"
+    },
+    {
+      "actual": "9.211924843723458e-15",
+      "expected": "<=1e-08",
+      "group": "split",
+      "name": "V=4 onsite_then_lexicographic_bonds sign=1 N=3 unitary",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.07553754605482876, 0.11981531570105387, 0.04427776964622511]",
+      "expected": "final<=t^2*C/(2N)",
+      "group": "analytic Trotter",
+      "name": "V=4 onsite_then_lexicographic_bonds sign=1 N=3 analytic unitary bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.009331563456951016, 0.04861641989210413, 0.039284856435153115]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=4 onsite_then_lexicographic_bonds sign=1 N=3 right history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.009331563456951008, 0.04861641989210416, 0.039284856435153157]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=4 onsite_then_lexicographic_bonds sign=1 N=3 left history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.0016620483555898776, 0.007474077522064846, 0.005812029166474969]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=4 onsite_then_lexicographic_bonds sign=1 N=3 commutator history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "9.27502501751073e-15",
+      "expected": "<=1e-08",
+      "group": "split",
+      "name": "V=4 onsite_then_lexicographic_bonds sign=1 N=6 unitary",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.037669550781520796, 0.05990765785052694, 0.02223810706900614]",
+      "expected": "final<=t^2*C/(2N)",
+      "group": "analytic Trotter",
+      "name": "V=4 onsite_then_lexicographic_bonds sign=1 N=6 analytic unitary bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.005766993857479966, 0.03038526243256508, 0.024618268575085114]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=4 onsite_then_lexicographic_bonds sign=1 N=6 right history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.005766993857479953, 0.0303852624325651, 0.02461826857508515]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=4 onsite_then_lexicographic_bonds sign=1 N=6 left history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.0010563126500433787, 0.004671298451290529, 0.0036149858012471505]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=4 onsite_then_lexicographic_bonds sign=1 N=6 commutator history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "8.89151861083771e-15",
+      "expected": "<=1e-08",
+      "group": "split",
+      "name": "V=4 onsite_then_lexicographic_bonds sign=1 N=12 unitary",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.01882247265040488, 0.02995382892526347, 0.01113135627485859]",
+      "expected": "final<=t^2*C/(2N)",
+      "group": "analytic Trotter",
+      "name": "V=4 onsite_then_lexicographic_bonds sign=1 N=12 analytic unitary bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.003159062259151787, 0.016711894337910795, 0.013552832078759007]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=4 onsite_then_lexicographic_bonds sign=1 N=12 right history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.003159062259151789, 0.016711894337910805, 0.013552832078759016]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=4 onsite_then_lexicographic_bonds sign=1 N=12 left history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.000586780820442718, 0.002569214148209791, 0.001982433327767073]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=4 onsite_then_lexicographic_bonds sign=1 N=12 commutator history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[3, 6, 12]",
+      "expected": "analytic bound decreases with N",
+      "group": "analytic Trotter",
+      "name": "V=4 onsite_then_lexicographic_bonds sign=1 bound refinement",
+      "status": "PASS"
+    },
+    {
+      "actual": "9.227789166830361e-15",
+      "expected": "<=1e-08",
+      "group": "split",
+      "name": "V=4 reverse_term_order sign=-1 N=3 unitary",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.0755375460548287, 0.11981531570105387, 0.04427776964622518]",
+      "expected": "final<=t^2*C/(2N)",
+      "group": "analytic Trotter",
+      "name": "V=4 reverse_term_order sign=-1 N=3 analytic unitary bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.009475386543263832, 0.04861641989210413, 0.039141033348840296]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=4 reverse_term_order sign=-1 N=3 right history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.009475386543263822, 0.04861641989210416, 0.03914103334884034]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=4 reverse_term_order sign=-1 N=3 left history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.0017706374091790802, 0.007474077522064846, 0.0057034401128857656]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=4 reverse_term_order sign=-1 N=3 commutator history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "9.302786319739001e-15",
+      "expected": "<=1e-08",
+      "group": "split",
+      "name": "V=4 reverse_term_order sign=-1 N=6 unitary",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.037669550781521045, 0.05990765785052694, 0.02223810706900589]",
+      "expected": "final<=t^2*C/(2N)",
+      "group": "analytic Trotter",
+      "name": "V=4 reverse_term_order sign=-1 N=6 analytic unitary bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.005814252835976773, 0.03038526243256508, 0.024571009596588308]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=4 reverse_term_order sign=-1 N=6 right history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.005814252835976792, 0.0303852624325651, 0.02457100959658831]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=4 reverse_term_order sign=-1 N=6 left history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.0010905673375204384, 0.004671298451290529, 0.0035807311137700908]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=4 reverse_term_order sign=-1 N=6 commutator history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "8.770308019693606e-15",
+      "expected": "<=1e-08",
+      "group": "split",
+      "name": "V=4 reverse_term_order sign=-1 N=12 unitary",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.01882247265040424, 0.02995382892526347, 0.011131356274859228]",
+      "expected": "final<=t^2*C/(2N)",
+      "group": "analytic Trotter",
+      "name": "V=4 reverse_term_order sign=-1 N=12 analytic unitary bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.003172824885406763, 0.016711894337910795, 0.013539069452504032]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=4 reverse_term_order sign=-1 N=12 right history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.003172824885406748, 0.016711894337910805, 0.013539069452504058]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=4 reverse_term_order sign=-1 N=12 left history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.0005962222061532756, 0.002569214148209791, 0.0019729919420565156]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=4 reverse_term_order sign=-1 N=12 commutator history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[3, 6, 12]",
+      "expected": "analytic bound decreases with N",
+      "group": "analytic Trotter",
+      "name": "V=4 reverse_term_order sign=-1 bound refinement",
+      "status": "PASS"
+    },
+    {
+      "actual": "9.227789166830361e-15",
+      "expected": "<=1e-08",
+      "group": "split",
+      "name": "V=4 reverse_term_order sign=1 N=3 unitary",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.0755375460548287, 0.11981531570105387, 0.04427776964622518]",
+      "expected": "final<=t^2*C/(2N)",
+      "group": "analytic Trotter",
+      "name": "V=4 reverse_term_order sign=1 N=3 analytic unitary bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.009475386543263832, 0.04861641989210413, 0.039141033348840296]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=4 reverse_term_order sign=1 N=3 right history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.009475386543263822, 0.04861641989210416, 0.03914103334884034]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=4 reverse_term_order sign=1 N=3 left history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.0017706374091790802, 0.007474077522064846, 0.0057034401128857656]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=4 reverse_term_order sign=1 N=3 commutator history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "9.302786319739001e-15",
+      "expected": "<=1e-08",
+      "group": "split",
+      "name": "V=4 reverse_term_order sign=1 N=6 unitary",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.037669550781521045, 0.05990765785052694, 0.02223810706900589]",
+      "expected": "final<=t^2*C/(2N)",
+      "group": "analytic Trotter",
+      "name": "V=4 reverse_term_order sign=1 N=6 analytic unitary bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.005814252835976773, 0.03038526243256508, 0.024571009596588308]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=4 reverse_term_order sign=1 N=6 right history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.005814252835976792, 0.0303852624325651, 0.02457100959658831]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=4 reverse_term_order sign=1 N=6 left history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.0010905673375204384, 0.004671298451290529, 0.0035807311137700908]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=4 reverse_term_order sign=1 N=6 commutator history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "8.770308019693606e-15",
+      "expected": "<=1e-08",
+      "group": "split",
+      "name": "V=4 reverse_term_order sign=1 N=12 unitary",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.01882247265040424, 0.02995382892526347, 0.011131356274859228]",
+      "expected": "final<=t^2*C/(2N)",
+      "group": "analytic Trotter",
+      "name": "V=4 reverse_term_order sign=1 N=12 analytic unitary bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.003172824885406763, 0.016711894337910795, 0.013539069452504032]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=4 reverse_term_order sign=1 N=12 right history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.003172824885406748, 0.016711894337910805, 0.013539069452504058]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=4 reverse_term_order sign=1 N=12 left history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.0005962222061532756, 0.002569214148209791, 0.0019729919420565156]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=4 reverse_term_order sign=1 N=12 commutator history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[3, 6, 12]",
+      "expected": "analytic bound decreases with N",
+      "group": "analytic Trotter",
+      "name": "V=4 reverse_term_order sign=1 bound refinement",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'right': 1.8259259113444402, 'left': 1.8259259113444415, 'commutator': 0.28070992971557124}",
+      "expected": "finite",
+      "group": "orientation",
+      "name": "V=4 pair=[0, 1] multiplier norms finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "36",
+      "expected": "36",
+      "group": "coverage",
+      "name": "V=4 row coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.7943782924789355e-15",
+      "expected": "<=1e-08",
+      "group": "decomposition",
+      "name": "V=6 full decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": "11.322547333749593",
+      "expected": ">1e-06",
+      "group": "commutator",
+      "name": "V=6 local commutator sum finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "7.771561172376096e-16",
+      "expected": "<=1e-08",
+      "group": "commutator",
+      "name": "V=6 tensor localization",
+      "status": "PASS"
+    },
+    {
+      "actual": "[11.322547333749593, 243.00000000000048, 24, 2.250000000000002]",
+      "expected": "C_V<=2*overlap_pairs*K_n^2",
+      "group": "fixed cutoff",
+      "name": "V=6 fixed-cutoff volume envelope",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.9999999999999939",
+      "expected": ">=1.0",
+      "group": "energy",
+      "name": "V=6 pair=[0, 1] positive energy",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.2724390891040811",
+      "expected": ">1e-06",
+      "group": "orientation",
+      "name": "V=6 pair=[0, 1] multiplier noncommutation",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.683085643710557e-14",
+      "expected": "<=1e-08",
+      "group": "split",
+      "name": "V=6 onsite_then_lexicographic_bonds sign=-1 N=3 unitary",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.11789615563131246, 0.2096768024768443, 0.09178064684553185]",
+      "expected": "final<=t^2*C/(2N)",
+      "group": "analytic Trotter",
+      "name": "V=6 onsite_then_lexicographic_bonds sign=-1 N=3 analytic unitary bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.011120858466923813, 0.08510224707143825, 0.07398138860451443]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=6 onsite_then_lexicographic_bonds sign=-1 N=3 right history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.01112085846692382, 0.08510224707143813, 0.07398138860451431]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=6 onsite_then_lexicographic_bonds sign=-1 N=3 left history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.0019495330128539178, 0.012694257127343954, 0.010744724114490036]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=6 onsite_then_lexicographic_bonds sign=-1 N=3 commutator history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.647535078028579e-14",
+      "expected": "<=1e-08",
+      "group": "split",
+      "name": "V=6 onsite_then_lexicographic_bonds sign=-1 N=6 unitary",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.05875675506120655, 0.10483840123842215, 0.04608164617721561]",
+      "expected": "final<=t^2*C/(2N)",
+      "group": "analytic Trotter",
+      "name": "V=6 onsite_then_lexicographic_bonds sign=-1 N=6 analytic unitary bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.006819542852743212, 0.0531889044196489, 0.04636936156690569]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=6 onsite_then_lexicographic_bonds sign=-1 N=6 right history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.006819542852743226, 0.053188904419648825, 0.0463693615669056]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=6 onsite_then_lexicographic_bonds sign=-1 N=6 left history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.0012292245697600656, 0.00793391070458997, 0.006704686134829905]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=6 onsite_then_lexicographic_bonds sign=-1 N=6 commutator history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.630578833623473e-14",
+      "expected": "<=1e-08",
+      "group": "split",
+      "name": "V=6 onsite_then_lexicographic_bonds sign=-1 N=12 unitary",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.029354754101818824, 0.05241920061921108, 0.023064446517392253]",
+      "expected": "final<=t^2*C/(2N)",
+      "group": "analytic Trotter",
+      "name": "V=6 onsite_then_lexicographic_bonds sign=-1 N=12 analytic unitary bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.0037229760904366883, 0.029253897430806898, 0.02553092134037021]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=6 onsite_then_lexicographic_bonds sign=-1 N=12 right history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.003722976090436711, 0.029253897430806853, 0.025530921340370143]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=6 onsite_then_lexicographic_bonds sign=-1 N=12 left history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.0006801865365208066, 0.004363650887524484, 0.003683464351003677]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=6 onsite_then_lexicographic_bonds sign=-1 N=12 commutator history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[3, 6, 12]",
+      "expected": "analytic bound decreases with N",
+      "group": "analytic Trotter",
+      "name": "V=6 onsite_then_lexicographic_bonds sign=-1 bound refinement",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.683085643710557e-14",
+      "expected": "<=1e-08",
+      "group": "split",
+      "name": "V=6 onsite_then_lexicographic_bonds sign=1 N=3 unitary",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.11789615563131246, 0.2096768024768443, 0.09178064684553185]",
+      "expected": "final<=t^2*C/(2N)",
+      "group": "analytic Trotter",
+      "name": "V=6 onsite_then_lexicographic_bonds sign=1 N=3 analytic unitary bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.011120858466923813, 0.08510224707143825, 0.07398138860451443]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=6 onsite_then_lexicographic_bonds sign=1 N=3 right history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.01112085846692382, 0.08510224707143813, 0.07398138860451431]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=6 onsite_then_lexicographic_bonds sign=1 N=3 left history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.0019495330128539178, 0.012694257127343954, 0.010744724114490036]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=6 onsite_then_lexicographic_bonds sign=1 N=3 commutator history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.647535078028579e-14",
+      "expected": "<=1e-08",
+      "group": "split",
+      "name": "V=6 onsite_then_lexicographic_bonds sign=1 N=6 unitary",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.05875675506120655, 0.10483840123842215, 0.04608164617721561]",
+      "expected": "final<=t^2*C/(2N)",
+      "group": "analytic Trotter",
+      "name": "V=6 onsite_then_lexicographic_bonds sign=1 N=6 analytic unitary bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.006819542852743212, 0.0531889044196489, 0.04636936156690569]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=6 onsite_then_lexicographic_bonds sign=1 N=6 right history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.006819542852743226, 0.053188904419648825, 0.0463693615669056]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=6 onsite_then_lexicographic_bonds sign=1 N=6 left history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.0012292245697600656, 0.00793391070458997, 0.006704686134829905]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=6 onsite_then_lexicographic_bonds sign=1 N=6 commutator history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.630578833623473e-14",
+      "expected": "<=1e-08",
+      "group": "split",
+      "name": "V=6 onsite_then_lexicographic_bonds sign=1 N=12 unitary",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.029354754101818824, 0.05241920061921108, 0.023064446517392253]",
+      "expected": "final<=t^2*C/(2N)",
+      "group": "analytic Trotter",
+      "name": "V=6 onsite_then_lexicographic_bonds sign=1 N=12 analytic unitary bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.0037229760904366883, 0.029253897430806898, 0.02553092134037021]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=6 onsite_then_lexicographic_bonds sign=1 N=12 right history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.003722976090436711, 0.029253897430806853, 0.025530921340370143]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=6 onsite_then_lexicographic_bonds sign=1 N=12 left history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.0006801865365208066, 0.004363650887524484, 0.003683464351003677]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=6 onsite_then_lexicographic_bonds sign=1 N=12 commutator history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[3, 6, 12]",
+      "expected": "analytic bound decreases with N",
+      "group": "analytic Trotter",
+      "name": "V=6 onsite_then_lexicographic_bonds sign=1 bound refinement",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.674535407876202e-14",
+      "expected": "<=1e-08",
+      "group": "split",
+      "name": "V=6 reverse_term_order sign=-1 N=3 unitary",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.11789615563131231, 0.2096768024768443, 0.091780646845532]",
+      "expected": "final<=t^2*C/(2N)",
+      "group": "analytic Trotter",
+      "name": "V=6 reverse_term_order sign=-1 N=3 analytic unitary bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.01126046401717896, 0.08510224707143825, 0.07384178305425929]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=6 reverse_term_order sign=-1 N=3 right history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.011260464017178952, 0.08510224707143813, 0.07384178305425917]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=6 reverse_term_order sign=-1 N=3 left history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.00207214056241691, 0.012694257127343954, 0.010622116564927044]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=6 reverse_term_order sign=-1 N=3 commutator history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.6486636166686184e-14",
+      "expected": "<=1e-08",
+      "group": "split",
+      "name": "V=6 reverse_term_order sign=-1 N=6 unitary",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.05875675506120651, 0.10483840123842215, 0.04608164617721564]",
+      "expected": "final<=t^2*C/(2N)",
+      "group": "analytic Trotter",
+      "name": "V=6 reverse_term_order sign=-1 N=6 analytic unitary bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.006862727180015889, 0.0531889044196489, 0.04632617723963301]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=6 reverse_term_order sign=-1 N=6 right history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.006862727180015889, 0.053188904419648825, 0.046326177239632935]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=6 reverse_term_order sign=-1 N=6 left history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.0012673044782161912, 0.00793391070458997, 0.006666606226373779]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=6 reverse_term_order sign=-1 N=6 commutator history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.6357731752884655e-14",
+      "expected": "<=1e-08",
+      "group": "split",
+      "name": "V=6 reverse_term_order sign=-1 N=12 unitary",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.029354754101818273, 0.05241920061921108, 0.023064446517392805]",
+      "expected": "final<=t^2*C/(2N)",
+      "group": "analytic Trotter",
+      "name": "V=6 reverse_term_order sign=-1 N=12 analytic unitary bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.003734778167097294, 0.029253897430806898, 0.025519119263709603]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=6 reverse_term_order sign=-1 N=12 right history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.003734778167097323, 0.029253897430806853, 0.02551911926370953]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=6 reverse_term_order sign=-1 N=12 left history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.0006906246403754898, 0.004363650887524484, 0.0036730262471489942]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=6 reverse_term_order sign=-1 N=12 commutator history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[3, 6, 12]",
+      "expected": "analytic bound decreases with N",
+      "group": "analytic Trotter",
+      "name": "V=6 reverse_term_order sign=-1 bound refinement",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.674535407876202e-14",
+      "expected": "<=1e-08",
+      "group": "split",
+      "name": "V=6 reverse_term_order sign=1 N=3 unitary",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.11789615563131231, 0.2096768024768443, 0.091780646845532]",
+      "expected": "final<=t^2*C/(2N)",
+      "group": "analytic Trotter",
+      "name": "V=6 reverse_term_order sign=1 N=3 analytic unitary bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.01126046401717896, 0.08510224707143825, 0.07384178305425929]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=6 reverse_term_order sign=1 N=3 right history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.011260464017178952, 0.08510224707143813, 0.07384178305425917]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=6 reverse_term_order sign=1 N=3 left history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.00207214056241691, 0.012694257127343954, 0.010622116564927044]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=6 reverse_term_order sign=1 N=3 commutator history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.6486636166686184e-14",
+      "expected": "<=1e-08",
+      "group": "split",
+      "name": "V=6 reverse_term_order sign=1 N=6 unitary",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.05875675506120651, 0.10483840123842215, 0.04608164617721564]",
+      "expected": "final<=t^2*C/(2N)",
+      "group": "analytic Trotter",
+      "name": "V=6 reverse_term_order sign=1 N=6 analytic unitary bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.006862727180015889, 0.0531889044196489, 0.04632617723963301]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=6 reverse_term_order sign=1 N=6 right history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.006862727180015889, 0.053188904419648825, 0.046326177239632935]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=6 reverse_term_order sign=1 N=6 left history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.0012673044782161912, 0.00793391070458997, 0.006666606226373779]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=6 reverse_term_order sign=1 N=6 commutator history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.6357731752884655e-14",
+      "expected": "<=1e-08",
+      "group": "split",
+      "name": "V=6 reverse_term_order sign=1 N=12 unitary",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.029354754101818273, 0.05241920061921108, 0.023064446517392805]",
+      "expected": "final<=t^2*C/(2N)",
+      "group": "analytic Trotter",
+      "name": "V=6 reverse_term_order sign=1 N=12 analytic unitary bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.003734778167097294, 0.029253897430806898, 0.025519119263709603]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=6 reverse_term_order sign=1 N=12 right history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.003734778167097323, 0.029253897430806853, 0.02551911926370953]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=6 reverse_term_order sign=1 N=12 left history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.0006906246403754898, 0.004363650887524484, 0.0036730262471489942]",
+      "expected": "history<=delta^3*C*N*(N-1)||M||/2",
+      "group": "analytic history",
+      "name": "V=6 reverse_term_order sign=1 N=12 commutator history bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[3, 6, 12]",
+      "expected": "analytic bound decreases with N",
+      "group": "analytic Trotter",
+      "name": "V=6 reverse_term_order sign=1 bound refinement",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'right': 1.826430522106824, 'left': 1.8264305221068213, 'commutator': 0.2724390891040811}",
+      "expected": "finite",
+      "group": "orientation",
+      "name": "V=6 pair=[0, 1] multiplier norms finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "36",
+      "expected": "36",
+      "group": "coverage",
+      "name": "V=6 row coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2, 4, 6]",
+      "expected": "[2, 4, 6]",
+      "group": "volume",
+      "name": "volume sequence",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.0005037788211846098, 0.0005338593106679935]",
+      "expected": "finite",
+      "group": "summary",
+      "name": "all analytic slacks finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'finite_local_commutator_sum_closed': True, 'finite_analytic_unitary_defect_closed': True, 'finite_two_orientation_history_bound_closed': True, 'finite_bound_both_orders_and_signs_closed': True, 'volume_uniform_trotter_bound_closed': False, 'analytic_infinite_dimensional_trotter_rate_closed': False, 'operator_domain_embedding_closed': False, 'actual_q3_thermodynamic_history_closed': False, 'direct_d_cauchy_closed': False, 'delta_d_cauchy_closed': False, 'source_volume_beta_uniformity_closed': False, 'exhaustion_independence_closed': False, 'common_alpha_closed': False, 'hamiltonian_os_identification_closed': False, 'kms_gns_gap_closed': False, 'continuum_closed': False, 'c6_closed': False, 'sector_a_closed': False, 'pre_a_closed': False, 'no_new_negative_result': True, 'no_tier_change': True, 'no_pdf': True, 'finite_fixed_cutoff_volume_linear_envelope_closed': True, 'cutoff_uniform_volume_linear_bound_closed': False}",
+      "expected": "finite flags true",
+      "group": "summary",
+      "name": "analytic finite flags",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'finite_local_commutator_sum_closed': True, 'finite_analytic_unitary_defect_closed': True, 'finite_two_orientation_history_bound_closed': True, 'finite_bound_both_orders_and_signs_closed': True, 'volume_uniform_trotter_bound_closed': False, 'analytic_infinite_dimensional_trotter_rate_closed': False, 'operator_domain_embedding_closed': False, 'actual_q3_thermodynamic_history_closed': False, 'direct_d_cauchy_closed': False, 'delta_d_cauchy_closed': False, 'source_volume_beta_uniformity_closed': False, 'exhaustion_independence_closed': False, 'common_alpha_closed': False, 'hamiltonian_os_identification_closed': False, 'kms_gns_gap_closed': False, 'continuum_closed': False, 'c6_closed': False, 'sector_a_closed': False, 'pre_a_closed': False, 'no_new_negative_result': True, 'no_tier_change': True, 'no_pdf': True, 'finite_fixed_cutoff_volume_linear_envelope_closed': True, 'cutoff_uniform_volume_linear_bound_closed': False}",
+      "expected": "uniform/domain/QFT gates remain open",
+      "group": "scope",
+      "name": "QFT firewall",
+      "status": "PASS"
+    }
+  ],
+  "audit_id": "PA-CP1-ST8-Q3LOCK-FINITE-ANALYTIC-TROTTER-DEFECT",
+  "boundary": {
+    "actual_q3_thermodynamic_history_closed": false,
+    "analytic_infinite_dimensional_trotter_rate_closed": false,
+    "c6_closed": false,
+    "common_alpha_closed": false,
+    "continuum_closed": false,
+    "cutoff_uniform_volume_linear_bound_closed": false,
+    "delta_d_cauchy_closed": false,
+    "direct_d_cauchy_closed": false,
+    "exhaustion_independence_closed": false,
+    "finite_analytic_unitary_defect_closed": true,
+    "finite_bound_both_orders_and_signs_closed": true,
+    "finite_fixed_cutoff_volume_linear_envelope_closed": true,
+    "finite_local_commutator_sum_closed": true,
+    "finite_two_orientation_history_bound_closed": true,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "no_new_negative_result": true,
+    "no_pdf": true,
+    "no_tier_change": true,
+    "operator_domain_embedding_closed": false,
+    "pre_a_closed": false,
+    "sector_a_closed": false,
+    "source_volume_beta_uniformity_closed": false,
+    "volume_uniform_trotter_bound_closed": false
+  },
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "derived": {
+    "actual_q3_thermodynamic_history_closed": false,
+    "analytic_infinite_dimensional_trotter_rate_closed": false,
+    "common_alpha_closed": false,
+    "commutator_sum_by_volume": {
+      "2": 1.6175067619642274,
+      "4": 6.4700270478569095,
+      "6": 11.322547333749593
+    },
+    "commutator_sum_per_site_by_volume": {
+      "2": 0.8087533809821137,
+      "4": 1.6175067619642274,
+      "6": 1.887091222291599
+    },
+    "cutoff_uniform_volume_linear_bound_closed": false,
+    "delta_d_cauchy_closed": false,
+    "direct_d_cauchy_closed": false,
+    "exhaustion_independence_closed": false,
+    "finite_analytic_unitary_defect_closed": true,
+    "finite_bound_both_orders_and_signs_closed": true,
+    "finite_fixed_cutoff_volume_linear_envelope_closed": true,
+    "finite_local_commutator_sum_closed": true,
+    "finite_two_orientation_history_bound_closed": true,
+    "max_history_bound": 0.08510224707143825,
+    "max_unitary_bound": 0.2096768024768443,
+    "minimum_history_slack": 0.0005338593106679935,
+    "minimum_unitary_slack": 0.0005037788211846098,
+    "operator_domain_embedding_closed": false,
+    "parent_manifest_sha256": "60124e7f39f9eac2177208eb131f6ce5bd7d9c91aeaca77cccf4173481fbfae5",
+    "pre_a_closed": false,
+    "row_count": 108,
+    "source_manifest_sha256": "538ce22392f6cd3ba1bc4f7e5682e4c225645f2f0ff2d2017274c7f2fc1d59ff",
+    "source_volume_beta_uniformity_closed": false,
+    "volume_summaries": [
+      {
+        "coarse_volume_commutator_bound": 20.25,
+        "commutator_sum": 1.6175067619642274,
+        "commutator_sum_per_site": 0.8087533809821137,
+        "dimension": 9,
+        "max_final_unitary_error": 0.02797359426907873,
+        "max_history_bound": 0.012064831440270787,
+        "max_history_error": 0.005655169857380408,
+        "max_unitary_bound": 0.02995382892526347,
+        "overlap_pair_count": 2,
+        "pair_details": [
+          {
+            "disjoint": true,
+            "left": 0,
+            "norm": 0.0,
+            "right": 1
+          },
+          {
+            "disjoint": false,
+            "full_norm": 0.8087533809821137,
+            "left": 0,
+            "norm": 0.8087533809821137,
+            "residual": 0.0,
+            "right": 2
+          },
+          {
+            "disjoint": false,
+            "full_norm": 0.8087533809821138,
+            "left": 1,
+            "norm": 0.8087533809821138,
+            "residual": 0.0,
+            "right": 2
+          }
+        ],
+        "row_count": 36,
+        "term_count": 3,
+        "term_norm_max": 2.25,
+        "volume": 2
+      },
+      {
+        "coarse_volume_commutator_bound": 121.50000000000014,
+        "commutator_sum": 6.4700270478569095,
+        "commutator_sum_per_site": 1.6175067619642274,
+        "dimension": 81,
+        "max_final_unitary_error": 0.07553754605482876,
+        "max_history_bound": 0.04861641989210416,
+        "max_history_error": 0.009475386543263832,
+        "max_unitary_bound": 0.11981531570105387,
+        "overlap_pair_count": 12,
+        "pair_details": [
+          {
+            "disjoint": true,
+            "left": 0,
+            "norm": 0.0,
+            "right": 1
+          },
+          {
+            "disjoint": true,
+            "left": 0,
+            "norm": 0.0,
+            "right": 2
+          },
+          {
+            "disjoint": true,
+            "left": 0,
+            "norm": 0.0,
+            "right": 3
+          },
+          {
+            "disjoint": false,
+            "full_norm": 0.8087533809821139,
+            "left": 0,
+            "norm": 0.8087533809821137,
+            "residual": 2.220446049250313e-16,
+            "right": 4
+          },
+          {
+            "disjoint": false,
+            "full_norm": 0.808753380982114,
+            "left": 0,
+            "norm": 0.8087533809821137,
+            "residual": 3.3306690738754696e-16,
+            "right": 5
+          },
+          {
+            "disjoint": true,
+            "left": 0,
+            "norm": 0.0,
+            "right": 6
+          },
+          {
+            "disjoint": true,
+            "left": 0,
+            "norm": 0.0,
+            "right": 7
+          },
+          {
+            "disjoint": true,
+            "left": 1,
+            "norm": 0.0,
+            "right": 2
+          },
+          {
+            "disjoint": true,
+            "left": 1,
+            "norm": 0.0,
+            "right": 3
+          },
+          {
+            "disjoint": false,
+            "full_norm": 0.8087533809821138,
+            "left": 1,
+            "norm": 0.8087533809821138,
+            "residual": 0.0,
+            "right": 4
+          },
+          {
+            "disjoint": true,
+            "left": 1,
+            "norm": 0.0,
+            "right": 5
+          },
+          {
+            "disjoint": false,
+            "full_norm": 0.8087533809821137,
+            "left": 1,
+            "norm": 0.8087533809821137,
+            "residual": 0.0,
+            "right": 6
+          },
+          {
+            "disjoint": true,
+            "left": 1,
+            "norm": 0.0,
+            "right": 7
+          },
+          {
+            "disjoint": true,
+            "left": 2,
+            "norm": 0.0,
+            "right": 3
+          },
+          {
+            "disjoint": true,
+            "left": 2,
+            "norm": 0.0,
+            "right": 4
+          },
+          {
+            "disjoint": false,
+            "full_norm": 0.808753380982114,
+            "left": 2,
+            "norm": 0.8087533809821138,
+            "residual": 2.220446049250313e-16,
+            "right": 5
+          },
+          {
+            "disjoint": true,
+            "left": 2,
+            "norm": 0.0,
+            "right": 6
+          },
+          {
+            "disjoint": false,
+            "full_norm": 0.8087533809821137,
+            "left": 2,
+            "norm": 0.8087533809821137,
+            "residual": 0.0,
+            "right": 7
+          },
+          {
+            "disjoint": true,
+            "left": 3,
+            "norm": 0.0,
+            "right": 4
+          },
+          {
+            "disjoint": true,
+            "left": 3,
+            "norm": 0.0,
+            "right": 5
+          },
+          {
+            "disjoint": false,
+            "full_norm": 0.808753380982114,
+            "left": 3,
+            "norm": 0.8087533809821138,
+            "residual": 2.220446049250313e-16,
+            "right": 6
+          },
+          {
+            "disjoint": false,
+            "full_norm": 0.8087533809821138,
+            "left": 3,
+            "norm": 0.8087533809821138,
+            "residual": 0.0,
+            "right": 7
+          },
+          {
+            "disjoint": false,
+            "full_norm": 1.3583927237337563e-16,
+            "left": 4,
+            "norm": 1.3583927237337563e-16,
+            "residual": 0.0,
+            "right": 5
+          },
+          {
+            "disjoint": false,
+            "full_norm": 1.8874148371099427e-16,
+            "left": 4,
+            "norm": 1.8874148371099415e-16,
+            "residual": 1.232595164407831e-31,
+            "right": 6
+          },
+          {
+            "disjoint": true,
+            "left": 4,
+            "norm": 0.0,
+            "right": 7
+          },
+          {
+            "disjoint": true,
+            "left": 5,
+            "norm": 0.0,
+            "right": 6
+          },
+          {
+            "disjoint": false,
+            "full_norm": 1.8874148371099425e-16,
+            "left": 5,
+            "norm": 1.8874148371099415e-16,
+            "residual": 9.860761315262648e-32,
+            "right": 7
+          },
+          {
+            "disjoint": false,
+            "full_norm": 2.0655751110420978e-16,
+            "left": 6,
+            "norm": 2.0655751110420968e-16,
+            "residual": 9.860761315262648e-32,
+            "right": 7
+          }
+        ],
+        "row_count": 36,
+        "term_count": 8,
+        "term_norm_max": 2.2500000000000013,
+        "volume": 4
+      },
+      {
+        "coarse_volume_commutator_bound": 243.00000000000048,
+        "commutator_sum": 11.322547333749593,
+        "commutator_sum_per_site": 1.887091222291599,
+        "dimension": 729,
+        "max_final_unitary_error": 0.11789615563131246,
+        "max_history_bound": 0.08510224707143825,
+        "max_history_error": 0.01126046401717896,
+        "max_unitary_bound": 0.2096768024768443,
+        "overlap_pair_count": 24,
+        "pair_details": [
+          {
+            "disjoint": true,
+            "left": 0,
+            "norm": 0.0,
+            "right": 1
+          },
+          {
+            "disjoint": true,
+            "left": 0,
+            "norm": 0.0,
+            "right": 2
+          },
+          {
+            "disjoint": true,
+            "left": 0,
+            "norm": 0.0,
+            "right": 3
+          },
+          {
+            "disjoint": true,
+            "left": 0,
+            "norm": 0.0,
+            "right": 4
+          },
+          {
+            "disjoint": true,
+            "left": 0,
+            "norm": 0.0,
+            "right": 5
+          },
+          {
+            "disjoint": false,
+            "full_norm": 0.8087533809821145,
+            "left": 0,
+            "norm": 0.8087533809821137,
+            "residual": 7.771561172376096e-16,
+            "right": 6
+          },
+          {
+            "disjoint": true,
+            "left": 0,
+            "norm": 0.0,
+            "right": 7
+          },
+          {
+            "disjoint": true,
+            "left": 0,
+            "norm": 0.0,
+            "right": 8
+          },
+          {
+            "disjoint": true,
+            "left": 0,
+            "norm": 0.0,
+            "right": 9
+          },
+          {
+            "disjoint": false,
+            "full_norm": 0.8087533809821149,
+            "left": 0,
+            "norm": 0.8087533809821137,
+            "residual": 1.2212453270876722e-15,
+            "right": 10
+          },
+          {
+            "disjoint": true,
+            "left": 0,
+            "norm": 0.0,
+            "right": 11
+          },
+          {
+            "disjoint": true,
+            "left": 0,
+            "norm": 0.0,
+            "right": 12
+          },
+          {
+            "disjoint": true,
+            "left": 1,
+            "norm": 0.0,
+            "right": 2
+          },
+          {
+            "disjoint": true,
+            "left": 1,
+            "norm": 0.0,
+            "right": 3
+          },
+          {
+            "disjoint": true,
+            "left": 1,
+            "norm": 0.0,
+            "right": 4
+          },
+          {
+            "disjoint": true,
+            "left": 1,
+            "norm": 0.0,
+            "right": 5
+          },
+          {
+            "disjoint": false,
+            "full_norm": 0.8087533809821146,
+            "left": 1,
+            "norm": 0.8087533809821138,
+            "residual": 7.771561172376096e-16,
+            "right": 6
+          },
+          {
+            "disjoint": false,
+            "full_norm": 0.8087533809821141,
+            "left": 1,
+            "norm": 0.8087533809821137,
+            "residual": 4.440892098500626e-16,
+            "right": 7
+          },
+          {
+            "disjoint": true,
+            "left": 1,
+            "norm": 0.0,
+            "right": 8
+          },
+          {
+            "disjoint": true,
+            "left": 1,
+            "norm": 0.0,
+            "right": 9
+          },
+          {
+            "disjoint": true,
+            "left": 1,
+            "norm": 0.0,
+            "right": 10
+          },
+          {
+            "disjoint": false,
+            "full_norm": 0.8087533809821142,
+            "left": 1,
+            "norm": 0.8087533809821137,
+            "residual": 5.551115123125783e-16,
+            "right": 11
+          },
+          {
+            "disjoint": true,
+            "left": 1,
+            "norm": 0.0,
+            "right": 12
+          },
+          {
+            "disjoint": true,
+            "left": 2,
+            "norm": 0.0,
+            "right": 3
+          },
+          {
+            "disjoint": true,
+            "left": 2,
+            "norm": 0.0,
+            "right": 4
+          },
+          {
+            "disjoint": true,
+            "left": 2,
+            "norm": 0.0,
+            "right": 5
+          },
+          {
+            "disjoint": true,
+            "left": 2,
+            "norm": 0.0,
+            "right": 6
+          },
+          {
+            "disjoint": false,
+            "full_norm": 0.8087533809821142,
+            "left": 2,
+            "norm": 0.8087533809821138,
+            "residual": 4.440892098500626e-16,
+            "right": 7
+          },
+          {
+            "disjoint": true,
+            "left": 2,
+            "norm": 0.0,
+            "right": 8
+          },
+          {
+            "disjoint": true,
+            "left": 2,
+            "norm": 0.0,
+            "right": 9
+          },
+          {
+            "disjoint": true,
+            "left": 2,
+            "norm": 0.0,
+            "right": 10
+          },
+          {
+            "disjoint": true,
+            "left": 2,
+            "norm": 0.0,
+            "right": 11
+          },
+          {
+            "disjoint": false,
+            "full_norm": 0.8087533809821142,
+            "left": 2,
+            "norm": 0.8087533809821137,
+            "residual": 5.551115123125783e-16,
+            "right": 12
+          },
+          {
+            "disjoint": true,
+            "left": 3,
+            "norm": 0.0,
+            "right": 4
+          },
+          {
+            "disjoint": true,
+            "left": 3,
+            "norm": 0.0,
+            "right": 5
+          },
+          {
+            "disjoint": true,
+            "left": 3,
+            "norm": 0.0,
+            "right": 6
+          },
+          {
+            "disjoint": true,
+            "left": 3,
+            "norm": 0.0,
+            "right": 7
+          },
+          {
+            "disjoint": false,
+            "full_norm": 0.8087533809821142,
+            "left": 3,
+            "norm": 0.8087533809821137,
+            "residual": 5.551115123125783e-16,
+            "right": 8
+          },
+          {
+            "disjoint": true,
+            "left": 3,
+            "norm": 0.0,
+            "right": 9
+          },
+          {
+            "disjoint": false,
+            "full_norm": 0.8087533809821145,
+            "left": 3,
+            "norm": 0.8087533809821138,
+            "residual": 6.661338147750939e-16,
+            "right": 10
+          },
+          {
+            "disjoint": true,
+            "left": 3,
+            "norm": 0.0,
+            "right": 11
+          },
+          {
+            "disjoint": true,
+            "left": 3,
+            "norm": 0.0,
+            "right": 12
+          },
+          {
+            "disjoint": true,
+            "left": 4,
+            "norm": 0.0,
+            "right": 5
+          },
+          {
+            "disjoint": true,
+            "left": 4,
+            "norm": 0.0,
+            "right": 6
+          },
+          {
+            "disjoint": true,
+            "left": 4,
+            "norm": 0.0,
+            "right": 7
+          },
+          {
+            "disjoint": false,
+            "full_norm": 0.8087533809821139,
+            "left": 4,
+            "norm": 0.8087533809821138,
+            "residual": 1.1102230246251565e-16,
+            "right": 8
+          },
+          {
+            "disjoint": false,
+            "full_norm": 0.8087533809821139,
+            "left": 4,
+            "norm": 0.8087533809821137,
+            "residual": 2.220446049250313e-16,
+            "right": 9
+          },
+          {
+            "disjoint": true,
+            "left": 4,
+            "norm": 0.0,
+            "right": 10
+          },
+          {
+            "disjoint": false,
+            "full_norm": 0.8087533809821145,
+            "left": 4,
+            "norm": 0.8087533809821138,
+            "residual": 6.661338147750939e-16,
+            "right": 11
+          },
+          {
+            "disjoint": true,
+            "left": 4,
+            "norm": 0.0,
+            "right": 12
+          },
+          {
+            "disjoint": true,
+            "left": 5,
+            "norm": 0.0,
+            "right": 6
+          },
+          {
+            "disjoint": true,
+            "left": 5,
+            "norm": 0.0,
+            "right": 7
+          },
+          {
+            "disjoint": true,
+            "left": 5,
+            "norm": 0.0,
+            "right": 8
+          },
+          {
+            "disjoint": false,
+            "full_norm": 0.8087533809821139,
+            "left": 5,
+            "norm": 0.8087533809821138,
+            "residual": 1.1102230246251565e-16,
+            "right": 9
+          },
+          {
+            "disjoint": true,
+            "left": 5,
+            "norm": 0.0,
+            "right": 10
+          },
+          {
+            "disjoint": true,
+            "left": 5,
+            "norm": 0.0,
+            "right": 11
+          },
+          {
+            "disjoint": false,
+            "full_norm": 0.8087533809821141,
+            "left": 5,
+            "norm": 0.8087533809821138,
+            "residual": 3.3306690738754696e-16,
+            "right": 12
+          },
+          {
+            "disjoint": false,
+            "full_norm": 1.9694587287598812e-16,
+            "left": 6,
+            "norm": 1.8874148371099415e-16,
+            "residual": 8.204389164993975e-18,
+            "right": 7
+          },
+          {
+            "disjoint": true,
+            "left": 6,
+            "norm": 0.0,
+            "right": 8
+          },
+          {
+            "disjoint": true,
+            "left": 6,
+            "norm": 0.0,
+            "right": 9
+          },
+          {
+            "disjoint": false,
+            "full_norm": 1.963380050227516e-16,
+            "left": 6,
+            "norm": 1.3583927237337563e-16,
+            "residual": 6.049873264937597e-17,
+            "right": 10
+          },
+          {
+            "disjoint": false,
+            "full_norm": 1.97710578240847e-16,
+            "left": 6,
+            "norm": 1.8874148371099415e-16,
+            "residual": 8.969094529852845e-18,
+            "right": 11
+          },
+          {
+            "disjoint": true,
+            "left": 6,
+            "norm": 0.0,
+            "right": 12
+          },
+          {
+            "disjoint": true,
+            "left": 7,
+            "norm": 0.0,
+            "right": 8
+          },
+          {
+            "disjoint": true,
+            "left": 7,
+            "norm": 0.0,
+            "right": 9
+          },
+          {
+            "disjoint": true,
+            "left": 7,
+            "norm": 0.0,
+            "right": 10
+          },
+          {
+            "disjoint": false,
+            "full_norm": 1.9771057824084667e-16,
+            "left": 7,
+            "norm": 1.3583927237337563e-16,
+            "residual": 6.187130586747104e-17,
+            "right": 11
+          },
+          {
+            "disjoint": false,
+            "full_norm": 2.1510698477705046e-16,
+            "left": 7,
+            "norm": 1.8874148371099415e-16,
+            "residual": 2.6365501066056317e-17,
+            "right": 12
+          },
+          {
+            "disjoint": false,
+            "full_norm": 2.1510698477705002e-16,
+            "left": 8,
+            "norm": 1.8874148371099415e-16,
+            "residual": 2.6365501066055873e-17,
+            "right": 9
+          },
+          {
+            "disjoint": false,
+            "full_norm": 2.1510698477705076e-16,
+            "left": 8,
+            "norm": 1.8874148371099417e-16,
+            "residual": 2.6365501066056588e-17,
+            "right": 10
+          },
+          {
+            "disjoint": false,
+            "full_norm": 2.1320158772381017e-16,
+            "left": 8,
+            "norm": 2.065575111042096e-16,
+            "residual": 6.644076619600564e-18,
+            "right": 11
+          },
+          {
+            "disjoint": true,
+            "left": 8,
+            "norm": 0.0,
+            "right": 12
+          },
+          {
+            "disjoint": true,
+            "left": 9,
+            "norm": 0.0,
+            "right": 10
+          },
+          {
+            "disjoint": false,
+            "full_norm": 2.1510698477705012e-16,
+            "left": 9,
+            "norm": 1.8874148371099417e-16,
+            "residual": 2.6365501066055947e-17,
+            "right": 11
+          },
+          {
+            "disjoint": false,
+            "full_norm": 2.1320158772380975e-16,
+            "left": 9,
+            "norm": 2.065575111042096e-16,
+            "residual": 6.644076619600145e-18,
+            "right": 12
+          },
+          {
+            "disjoint": true,
+            "left": 10,
+            "norm": 0.0,
+            "right": 11
+          },
+          {
+            "disjoint": true,
+            "left": 10,
+            "norm": 0.0,
+            "right": 12
+          },
+          {
+            "disjoint": true,
+            "left": 11,
+            "norm": 0.0,
+            "right": 12
+          }
+        ],
+        "row_count": 36,
+        "term_count": 13,
+        "term_norm_max": 2.250000000000002,
+        "volume": 6
+      }
+    ],
+    "volume_uniform_trotter_bound_closed": false
+  },
+  "exploration_id": "EXP-001162",
+  "passed": 225,
+  "rows": [
+    {
+      "commutator_sum": 1.6175067619642274,
+      "delta": 0.1111111111111111,
+      "final_unitary_error": 0.02797359426907873,
+      "history_bound": 0.012064831440270787,
+      "history_error": 0.0056551698573803775,
+      "history_slack": 0.006409661582890409,
+      "multiplier_norm": 1.812514240389086,
+      "order": "onsite_then_lexicographic_bonds",
+      "orientation": "right",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 3,
+      "time_sign": -1,
+      "unitary_bound": 0.02995382892526347,
+      "unitary_slack": 0.0019802346561847393,
+      "unitary_step_error": 2.4853533275172278e-15,
+      "volume": 2
+    },
+    {
+      "commutator_sum": 1.6175067619642274,
+      "delta": 0.1111111111111111,
+      "final_unitary_error": 0.02797359426907873,
+      "history_bound": 0.012064831440270778,
+      "history_error": 0.005655169857380408,
+      "history_slack": 0.00640966158289037,
+      "multiplier_norm": 1.8125142403890846,
+      "order": "onsite_then_lexicographic_bonds",
+      "orientation": "left",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 3,
+      "time_sign": -1,
+      "unitary_bound": 0.02995382892526347,
+      "unitary_slack": 0.0019802346561847393,
+      "unitary_step_error": 2.4853533275172278e-15,
+      "volume": 2
+    },
+    {
+      "commutator_sum": 1.6175067619642274,
+      "delta": 0.1111111111111111,
+      "final_unitary_error": 0.02797359426907873,
+      "history_bound": 0.0028816597579806058,
+      "history_error": 0.0013384212174920777,
+      "history_slack": 0.001543238540488528,
+      "multiplier_norm": 0.43291523575391017,
+      "order": "onsite_then_lexicographic_bonds",
+      "orientation": "commutator",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 3,
+      "time_sign": -1,
+      "unitary_bound": 0.02995382892526347,
+      "unitary_slack": 0.0019802346561847393,
+      "unitary_step_error": 2.4853533275172278e-15,
+      "volume": 2
+    },
+    {
+      "commutator_sum": 1.6175067619642274,
+      "delta": 0.05555555555555555,
+      "final_unitary_error": 0.013972843557674088,
+      "history_bound": 0.007540519650169241,
+      "history_error": 0.0035164994839852865,
+      "history_slack": 0.004024020166183955,
+      "multiplier_norm": 1.812514240389086,
+      "order": "onsite_then_lexicographic_bonds",
+      "orientation": "right",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 6,
+      "time_sign": -1,
+      "unitary_bound": 0.014976914462631734,
+      "unitary_slack": 0.0010040709049576463,
+      "unitary_step_error": 1.953807906047262e-15,
+      "volume": 2
+    },
+    {
+      "commutator_sum": 1.6175067619642274,
+      "delta": 0.05555555555555555,
+      "final_unitary_error": 0.013972843557674088,
+      "history_bound": 0.007540519650169236,
+      "history_error": 0.003516499483985328,
+      "history_slack": 0.004024020166183908,
+      "multiplier_norm": 1.8125142403890846,
+      "order": "onsite_then_lexicographic_bonds",
+      "orientation": "left",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 6,
+      "time_sign": -1,
+      "unitary_bound": 0.014976914462631734,
+      "unitary_slack": 0.0010040709049576463,
+      "unitary_step_error": 1.953807906047262e-15,
+      "volume": 2
+    },
+    {
+      "commutator_sum": 1.6175067619642274,
+      "delta": 0.05555555555555555,
+      "final_unitary_error": 0.013972843557674088,
+      "history_bound": 0.0018010373487378788,
+      "history_error": 0.0008322301280494419,
+      "history_slack": 0.0009688072206884368,
+      "multiplier_norm": 0.43291523575391017,
+      "order": "onsite_then_lexicographic_bonds",
+      "orientation": "commutator",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 6,
+      "time_sign": -1,
+      "unitary_bound": 0.014976914462631734,
+      "unitary_slack": 0.0010040709049576463,
+      "unitary_step_error": 1.953807906047262e-15,
+      "volume": 2
+    },
+    {
+      "commutator_sum": 1.6175067619642274,
+      "delta": 0.027777777777777776,
+      "final_unitary_error": 0.006984678410131257,
+      "history_bound": 0.004147285807593083,
+      "history_error": 0.0019299245048385461,
+      "history_slack": 0.002217361302754537,
+      "multiplier_norm": 1.812514240389086,
+      "order": "onsite_then_lexicographic_bonds",
+      "orientation": "right",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 12,
+      "time_sign": -1,
+      "unitary_bound": 0.007488457231315867,
+      "unitary_slack": 0.0005037788211846098,
+      "unitary_step_error": 1.859476923874953e-15,
+      "volume": 2
+    },
+    {
+      "commutator_sum": 1.6175067619642274,
+      "delta": 0.027777777777777776,
+      "final_unitary_error": 0.006984678410131257,
+      "history_bound": 0.00414728580759308,
+      "history_error": 0.0019299245048385065,
+      "history_slack": 0.0022173613027545733,
+      "multiplier_norm": 1.8125142403890846,
+      "order": "onsite_then_lexicographic_bonds",
+      "orientation": "left",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 12,
+      "time_sign": -1,
+      "unitary_bound": 0.007488457231315867,
+      "unitary_slack": 0.0005037788211846098,
+      "unitary_step_error": 1.859476923874953e-15,
+      "volume": 2
+    },
+    {
+      "commutator_sum": 1.6175067619642274,
+      "delta": 0.027777777777777776,
+      "final_unitary_error": 0.006984678410131257,
+      "history_bound": 0.0009905705418058334,
+      "history_error": 0.0004567112311378398,
+      "history_slack": 0.0005338593106679935,
+      "multiplier_norm": 0.43291523575391017,
+      "order": "onsite_then_lexicographic_bonds",
+      "orientation": "commutator",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 12,
+      "time_sign": -1,
+      "unitary_bound": 0.007488457231315867,
+      "unitary_slack": 0.0005037788211846098,
+      "unitary_step_error": 1.859476923874953e-15,
+      "volume": 2
+    },
+    {
+      "commutator_sum": 1.6175067619642274,
+      "delta": 0.1111111111111111,
+      "final_unitary_error": 0.02797359426907873,
+      "history_bound": 0.012064831440270787,
+      "history_error": 0.0056551698573803775,
+      "history_slack": 0.006409661582890409,
+      "multiplier_norm": 1.812514240389086,
+      "order": "onsite_then_lexicographic_bonds",
+      "orientation": "right",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 3,
+      "time_sign": 1,
+      "unitary_bound": 0.02995382892526347,
+      "unitary_slack": 0.0019802346561847393,
+      "unitary_step_error": 2.4853533275172278e-15,
+      "volume": 2
+    },
+    {
+      "commutator_sum": 1.6175067619642274,
+      "delta": 0.1111111111111111,
+      "final_unitary_error": 0.02797359426907873,
+      "history_bound": 0.012064831440270778,
+      "history_error": 0.005655169857380408,
+      "history_slack": 0.00640966158289037,
+      "multiplier_norm": 1.8125142403890846,
+      "order": "onsite_then_lexicographic_bonds",
+      "orientation": "left",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 3,
+      "time_sign": 1,
+      "unitary_bound": 0.02995382892526347,
+      "unitary_slack": 0.0019802346561847393,
+      "unitary_step_error": 2.4853533275172278e-15,
+      "volume": 2
+    },
+    {
+      "commutator_sum": 1.6175067619642274,
+      "delta": 0.1111111111111111,
+      "final_unitary_error": 0.02797359426907873,
+      "history_bound": 0.0028816597579806058,
+      "history_error": 0.0013384212174920777,
+      "history_slack": 0.001543238540488528,
+      "multiplier_norm": 0.43291523575391017,
+      "order": "onsite_then_lexicographic_bonds",
+      "orientation": "commutator",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 3,
+      "time_sign": 1,
+      "unitary_bound": 0.02995382892526347,
+      "unitary_slack": 0.0019802346561847393,
+      "unitary_step_error": 2.4853533275172278e-15,
+      "volume": 2
+    },
+    {
+      "commutator_sum": 1.6175067619642274,
+      "delta": 0.05555555555555555,
+      "final_unitary_error": 0.013972843557674088,
+      "history_bound": 0.007540519650169241,
+      "history_error": 0.0035164994839852865,
+      "history_slack": 0.004024020166183955,
+      "multiplier_norm": 1.812514240389086,
+      "order": "onsite_then_lexicographic_bonds",
+      "orientation": "right",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 6,
+      "time_sign": 1,
+      "unitary_bound": 0.014976914462631734,
+      "unitary_slack": 0.0010040709049576463,
+      "unitary_step_error": 1.953807906047262e-15,
+      "volume": 2
+    },
+    {
+      "commutator_sum": 1.6175067619642274,
+      "delta": 0.05555555555555555,
+      "final_unitary_error": 0.013972843557674088,
+      "history_bound": 0.007540519650169236,
+      "history_error": 0.003516499483985328,
+      "history_slack": 0.004024020166183908,
+      "multiplier_norm": 1.8125142403890846,
+      "order": "onsite_then_lexicographic_bonds",
+      "orientation": "left",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 6,
+      "time_sign": 1,
+      "unitary_bound": 0.014976914462631734,
+      "unitary_slack": 0.0010040709049576463,
+      "unitary_step_error": 1.953807906047262e-15,
+      "volume": 2
+    },
+    {
+      "commutator_sum": 1.6175067619642274,
+      "delta": 0.05555555555555555,
+      "final_unitary_error": 0.013972843557674088,
+      "history_bound": 0.0018010373487378788,
+      "history_error": 0.0008322301280494419,
+      "history_slack": 0.0009688072206884368,
+      "multiplier_norm": 0.43291523575391017,
+      "order": "onsite_then_lexicographic_bonds",
+      "orientation": "commutator",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 6,
+      "time_sign": 1,
+      "unitary_bound": 0.014976914462631734,
+      "unitary_slack": 0.0010040709049576463,
+      "unitary_step_error": 1.953807906047262e-15,
+      "volume": 2
+    },
+    {
+      "commutator_sum": 1.6175067619642274,
+      "delta": 0.027777777777777776,
+      "final_unitary_error": 0.006984678410131257,
+      "history_bound": 0.004147285807593083,
+      "history_error": 0.0019299245048385461,
+      "history_slack": 0.002217361302754537,
+      "multiplier_norm": 1.812514240389086,
+      "order": "onsite_then_lexicographic_bonds",
+      "orientation": "right",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 12,
+      "time_sign": 1,
+      "unitary_bound": 0.007488457231315867,
+      "unitary_slack": 0.0005037788211846098,
+      "unitary_step_error": 1.859476923874953e-15,
+      "volume": 2
+    },
+    {
+      "commutator_sum": 1.6175067619642274,
+      "delta": 0.027777777777777776,
+      "final_unitary_error": 0.006984678410131257,
+      "history_bound": 0.00414728580759308,
+      "history_error": 0.0019299245048385065,
+      "history_slack": 0.0022173613027545733,
+      "multiplier_norm": 1.8125142403890846,
+      "order": "onsite_then_lexicographic_bonds",
+      "orientation": "left",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 12,
+      "time_sign": 1,
+      "unitary_bound": 0.007488457231315867,
+      "unitary_slack": 0.0005037788211846098,
+      "unitary_step_error": 1.859476923874953e-15,
+      "volume": 2
+    },
+    {
+      "commutator_sum": 1.6175067619642274,
+      "delta": 0.027777777777777776,
+      "final_unitary_error": 0.006984678410131257,
+      "history_bound": 0.0009905705418058334,
+      "history_error": 0.0004567112311378398,
+      "history_slack": 0.0005338593106679935,
+      "multiplier_norm": 0.43291523575391017,
+      "order": "onsite_then_lexicographic_bonds",
+      "orientation": "commutator",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 12,
+      "time_sign": 1,
+      "unitary_bound": 0.007488457231315867,
+      "unitary_slack": 0.0005037788211846098,
+      "unitary_step_error": 1.859476923874953e-15,
+      "volume": 2
+    },
+    {
+      "commutator_sum": 1.6175067619642274,
+      "delta": 0.1111111111111111,
+      "final_unitary_error": 0.027973594269078604,
+      "history_bound": 0.012064831440270787,
+      "history_error": 0.005655075882760578,
+      "history_slack": 0.006409755557510209,
+      "multiplier_norm": 1.812514240389086,
+      "order": "reverse_term_order",
+      "orientation": "right",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 3,
+      "time_sign": -1,
+      "unitary_bound": 0.02995382892526347,
+      "unitary_slack": 0.0019802346561848642,
+      "unitary_step_error": 2.123824774256579e-15,
+      "volume": 2
+    },
+    {
+      "commutator_sum": 1.6175067619642274,
+      "delta": 0.1111111111111111,
+      "final_unitary_error": 0.027973594269078604,
+      "history_bound": 0.012064831440270778,
+      "history_error": 0.005655075882760602,
+      "history_slack": 0.006409755557510176,
+      "multiplier_norm": 1.8125142403890846,
+      "order": "reverse_term_order",
+      "orientation": "left",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 3,
+      "time_sign": -1,
+      "unitary_bound": 0.02995382892526347,
+      "unitary_slack": 0.0019802346561848642,
+      "unitary_step_error": 2.123824774256579e-15,
+      "volume": 2
+    },
+    {
+      "commutator_sum": 1.6175067619642274,
+      "delta": 0.1111111111111111,
+      "final_unitary_error": 0.027973594269078604,
+      "history_bound": 0.0028816597579806058,
+      "history_error": 0.0013370777547016995,
+      "history_slack": 0.0015445820032789063,
+      "multiplier_norm": 0.43291523575391017,
+      "order": "reverse_term_order",
+      "orientation": "commutator",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 3,
+      "time_sign": -1,
+      "unitary_bound": 0.02995382892526347,
+      "unitary_slack": 0.0019802346561848642,
+      "unitary_step_error": 2.123824774256579e-15,
+      "volume": 2
+    },
+    {
+      "commutator_sum": 1.6175067619642274,
+      "delta": 0.05555555555555555,
+      "final_unitary_error": 0.013972843557674301,
+      "history_bound": 0.007540519650169241,
+      "history_error": 0.003516463246572184,
+      "history_slack": 0.004024056403597057,
+      "multiplier_norm": 1.812514240389086,
+      "order": "reverse_term_order",
+      "orientation": "right",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 6,
+      "time_sign": -1,
+      "unitary_bound": 0.014976914462631734,
+      "unitary_slack": 0.001004070904957433,
+      "unitary_step_error": 1.9699219402050726e-15,
+      "volume": 2
+    },
+    {
+      "commutator_sum": 1.6175067619642274,
+      "delta": 0.05555555555555555,
+      "final_unitary_error": 0.013972843557674301,
+      "history_bound": 0.007540519650169236,
+      "history_error": 0.0035164632465720575,
+      "history_slack": 0.004024056403597178,
+      "multiplier_norm": 1.8125142403890846,
+      "order": "reverse_term_order",
+      "orientation": "left",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 6,
+      "time_sign": -1,
+      "unitary_bound": 0.014976914462631734,
+      "unitary_slack": 0.001004070904957433,
+      "unitary_step_error": 1.9699219402050726e-15,
+      "volume": 2
+    },
+    {
+      "commutator_sum": 1.6175067619642274,
+      "delta": 0.05555555555555555,
+      "final_unitary_error": 0.013972843557674301,
+      "history_bound": 0.0018010373487378788,
+      "history_error": 0.0008317738518466653,
+      "history_slack": 0.0009692634968912134,
+      "multiplier_norm": 0.43291523575391017,
+      "order": "reverse_term_order",
+      "orientation": "commutator",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 6,
+      "time_sign": -1,
+      "unitary_bound": 0.014976914462631734,
+      "unitary_slack": 0.001004070904957433,
+      "unitary_step_error": 1.9699219402050726e-15,
+      "volume": 2
+    },
+    {
+      "commutator_sum": 1.6175067619642274,
+      "delta": 0.027777777777777776,
+      "final_unitary_error": 0.00698467841013089,
+      "history_bound": 0.004147285807593083,
+      "history_error": 0.0019299136763063567,
+      "history_slack": 0.0022173721312867267,
+      "multiplier_norm": 1.812514240389086,
+      "order": "reverse_term_order",
+      "orientation": "right",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 12,
+      "time_sign": -1,
+      "unitary_bound": 0.007488457231315867,
+      "unitary_slack": 0.0005037788211849767,
+      "unitary_step_error": 2.1738721850985263e-15,
+      "volume": 2
+    },
+    {
+      "commutator_sum": 1.6175067619642274,
+      "delta": 0.027777777777777776,
+      "final_unitary_error": 0.00698467841013089,
+      "history_bound": 0.00414728580759308,
+      "history_error": 0.0019299136763062626,
+      "history_slack": 0.002217372131286817,
+      "multiplier_norm": 1.8125142403890846,
+      "order": "reverse_term_order",
+      "orientation": "left",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 12,
+      "time_sign": -1,
+      "unitary_bound": 0.007488457231315867,
+      "unitary_slack": 0.0005037788211849767,
+      "unitary_step_error": 2.1738721850985263e-15,
+      "volume": 2
+    },
+    {
+      "commutator_sum": 1.6175067619642274,
+      "delta": 0.027777777777777776,
+      "final_unitary_error": 0.00698467841013089,
+      "history_bound": 0.0009905705418058334,
+      "history_error": 0.0004565807192222145,
+      "history_slack": 0.0005339898225836189,
+      "multiplier_norm": 0.43291523575391017,
+      "order": "reverse_term_order",
+      "orientation": "commutator",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 12,
+      "time_sign": -1,
+      "unitary_bound": 0.007488457231315867,
+      "unitary_slack": 0.0005037788211849767,
+      "unitary_step_error": 2.1738721850985263e-15,
+      "volume": 2
+    },
+    {
+      "commutator_sum": 1.6175067619642274,
+      "delta": 0.1111111111111111,
+      "final_unitary_error": 0.027973594269078604,
+      "history_bound": 0.012064831440270787,
+      "history_error": 0.005655075882760578,
+      "history_slack": 0.006409755557510209,
+      "multiplier_norm": 1.812514240389086,
+      "order": "reverse_term_order",
+      "orientation": "right",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 3,
+      "time_sign": 1,
+      "unitary_bound": 0.02995382892526347,
+      "unitary_slack": 0.0019802346561848642,
+      "unitary_step_error": 2.123824774256579e-15,
+      "volume": 2
+    },
+    {
+      "commutator_sum": 1.6175067619642274,
+      "delta": 0.1111111111111111,
+      "final_unitary_error": 0.027973594269078604,
+      "history_bound": 0.012064831440270778,
+      "history_error": 0.005655075882760602,
+      "history_slack": 0.006409755557510176,
+      "multiplier_norm": 1.8125142403890846,
+      "order": "reverse_term_order",
+      "orientation": "left",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 3,
+      "time_sign": 1,
+      "unitary_bound": 0.02995382892526347,
+      "unitary_slack": 0.0019802346561848642,
+      "unitary_step_error": 2.123824774256579e-15,
+      "volume": 2
+    },
+    {
+      "commutator_sum": 1.6175067619642274,
+      "delta": 0.1111111111111111,
+      "final_unitary_error": 0.027973594269078604,
+      "history_bound": 0.0028816597579806058,
+      "history_error": 0.0013370777547016995,
+      "history_slack": 0.0015445820032789063,
+      "multiplier_norm": 0.43291523575391017,
+      "order": "reverse_term_order",
+      "orientation": "commutator",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 3,
+      "time_sign": 1,
+      "unitary_bound": 0.02995382892526347,
+      "unitary_slack": 0.0019802346561848642,
+      "unitary_step_error": 2.123824774256579e-15,
+      "volume": 2
+    },
+    {
+      "commutator_sum": 1.6175067619642274,
+      "delta": 0.05555555555555555,
+      "final_unitary_error": 0.013972843557674301,
+      "history_bound": 0.007540519650169241,
+      "history_error": 0.003516463246572184,
+      "history_slack": 0.004024056403597057,
+      "multiplier_norm": 1.812514240389086,
+      "order": "reverse_term_order",
+      "orientation": "right",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 6,
+      "time_sign": 1,
+      "unitary_bound": 0.014976914462631734,
+      "unitary_slack": 0.001004070904957433,
+      "unitary_step_error": 1.9699219402050726e-15,
+      "volume": 2
+    },
+    {
+      "commutator_sum": 1.6175067619642274,
+      "delta": 0.05555555555555555,
+      "final_unitary_error": 0.013972843557674301,
+      "history_bound": 0.007540519650169236,
+      "history_error": 0.0035164632465720575,
+      "history_slack": 0.004024056403597178,
+      "multiplier_norm": 1.8125142403890846,
+      "order": "reverse_term_order",
+      "orientation": "left",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 6,
+      "time_sign": 1,
+      "unitary_bound": 0.014976914462631734,
+      "unitary_slack": 0.001004070904957433,
+      "unitary_step_error": 1.9699219402050726e-15,
+      "volume": 2
+    },
+    {
+      "commutator_sum": 1.6175067619642274,
+      "delta": 0.05555555555555555,
+      "final_unitary_error": 0.013972843557674301,
+      "history_bound": 0.0018010373487378788,
+      "history_error": 0.0008317738518466653,
+      "history_slack": 0.0009692634968912134,
+      "multiplier_norm": 0.43291523575391017,
+      "order": "reverse_term_order",
+      "orientation": "commutator",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 6,
+      "time_sign": 1,
+      "unitary_bound": 0.014976914462631734,
+      "unitary_slack": 0.001004070904957433,
+      "unitary_step_error": 1.9699219402050726e-15,
+      "volume": 2
+    },
+    {
+      "commutator_sum": 1.6175067619642274,
+      "delta": 0.027777777777777776,
+      "final_unitary_error": 0.00698467841013089,
+      "history_bound": 0.004147285807593083,
+      "history_error": 0.0019299136763063567,
+      "history_slack": 0.0022173721312867267,
+      "multiplier_norm": 1.812514240389086,
+      "order": "reverse_term_order",
+      "orientation": "right",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 12,
+      "time_sign": 1,
+      "unitary_bound": 0.007488457231315867,
+      "unitary_slack": 0.0005037788211849767,
+      "unitary_step_error": 2.1738721850985263e-15,
+      "volume": 2
+    },
+    {
+      "commutator_sum": 1.6175067619642274,
+      "delta": 0.027777777777777776,
+      "final_unitary_error": 0.00698467841013089,
+      "history_bound": 0.00414728580759308,
+      "history_error": 0.0019299136763062626,
+      "history_slack": 0.002217372131286817,
+      "multiplier_norm": 1.8125142403890846,
+      "order": "reverse_term_order",
+      "orientation": "left",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 12,
+      "time_sign": 1,
+      "unitary_bound": 0.007488457231315867,
+      "unitary_slack": 0.0005037788211849767,
+      "unitary_step_error": 2.1738721850985263e-15,
+      "volume": 2
+    },
+    {
+      "commutator_sum": 1.6175067619642274,
+      "delta": 0.027777777777777776,
+      "final_unitary_error": 0.00698467841013089,
+      "history_bound": 0.0009905705418058334,
+      "history_error": 0.0004565807192222145,
+      "history_slack": 0.0005339898225836189,
+      "multiplier_norm": 0.43291523575391017,
+      "order": "reverse_term_order",
+      "orientation": "commutator",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 12,
+      "time_sign": 1,
+      "unitary_bound": 0.007488457231315867,
+      "unitary_slack": 0.0005037788211849767,
+      "unitary_step_error": 2.1738721850985263e-15,
+      "volume": 2
+    },
+    {
+      "commutator_sum": 6.4700270478569095,
+      "delta": 0.1111111111111111,
+      "final_unitary_error": 0.07553754605482876,
+      "history_bound": 0.04861641989210413,
+      "history_error": 0.009331563456951016,
+      "history_slack": 0.039284856435153115,
+      "multiplier_norm": 1.8259259113444402,
+      "order": "onsite_then_lexicographic_bonds",
+      "orientation": "right",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 3,
+      "time_sign": -1,
+      "unitary_bound": 0.11981531570105387,
+      "unitary_slack": 0.04427776964622511,
+      "unitary_step_error": 9.211924843723458e-15,
+      "volume": 4
+    },
+    {
+      "commutator_sum": 6.4700270478569095,
+      "delta": 0.1111111111111111,
+      "final_unitary_error": 0.07553754605482876,
+      "history_bound": 0.04861641989210416,
+      "history_error": 0.009331563456951008,
+      "history_slack": 0.039284856435153157,
+      "multiplier_norm": 1.8259259113444415,
+      "order": "onsite_then_lexicographic_bonds",
+      "orientation": "left",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 3,
+      "time_sign": -1,
+      "unitary_bound": 0.11981531570105387,
+      "unitary_slack": 0.04427776964622511,
+      "unitary_step_error": 9.211924843723458e-15,
+      "volume": 4
+    },
+    {
+      "commutator_sum": 6.4700270478569095,
+      "delta": 0.1111111111111111,
+      "final_unitary_error": 0.07553754605482876,
+      "history_bound": 0.007474077522064846,
+      "history_error": 0.0016620483555898776,
+      "history_slack": 0.005812029166474969,
+      "multiplier_norm": 0.28070992971557124,
+      "order": "onsite_then_lexicographic_bonds",
+      "orientation": "commutator",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 3,
+      "time_sign": -1,
+      "unitary_bound": 0.11981531570105387,
+      "unitary_slack": 0.04427776964622511,
+      "unitary_step_error": 9.211924843723458e-15,
+      "volume": 4
+    },
+    {
+      "commutator_sum": 6.4700270478569095,
+      "delta": 0.05555555555555555,
+      "final_unitary_error": 0.037669550781520796,
+      "history_bound": 0.03038526243256508,
+      "history_error": 0.005766993857479966,
+      "history_slack": 0.024618268575085114,
+      "multiplier_norm": 1.8259259113444402,
+      "order": "onsite_then_lexicographic_bonds",
+      "orientation": "right",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 6,
+      "time_sign": -1,
+      "unitary_bound": 0.05990765785052694,
+      "unitary_slack": 0.02223810706900614,
+      "unitary_step_error": 9.27502501751073e-15,
+      "volume": 4
+    },
+    {
+      "commutator_sum": 6.4700270478569095,
+      "delta": 0.05555555555555555,
+      "final_unitary_error": 0.037669550781520796,
+      "history_bound": 0.0303852624325651,
+      "history_error": 0.005766993857479953,
+      "history_slack": 0.02461826857508515,
+      "multiplier_norm": 1.8259259113444415,
+      "order": "onsite_then_lexicographic_bonds",
+      "orientation": "left",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 6,
+      "time_sign": -1,
+      "unitary_bound": 0.05990765785052694,
+      "unitary_slack": 0.02223810706900614,
+      "unitary_step_error": 9.27502501751073e-15,
+      "volume": 4
+    },
+    {
+      "commutator_sum": 6.4700270478569095,
+      "delta": 0.05555555555555555,
+      "final_unitary_error": 0.037669550781520796,
+      "history_bound": 0.004671298451290529,
+      "history_error": 0.0010563126500433787,
+      "history_slack": 0.0036149858012471505,
+      "multiplier_norm": 0.28070992971557124,
+      "order": "onsite_then_lexicographic_bonds",
+      "orientation": "commutator",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 6,
+      "time_sign": -1,
+      "unitary_bound": 0.05990765785052694,
+      "unitary_slack": 0.02223810706900614,
+      "unitary_step_error": 9.27502501751073e-15,
+      "volume": 4
+    },
+    {
+      "commutator_sum": 6.4700270478569095,
+      "delta": 0.027777777777777776,
+      "final_unitary_error": 0.01882247265040488,
+      "history_bound": 0.016711894337910795,
+      "history_error": 0.003159062259151787,
+      "history_slack": 0.013552832078759007,
+      "multiplier_norm": 1.8259259113444402,
+      "order": "onsite_then_lexicographic_bonds",
+      "orientation": "right",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 12,
+      "time_sign": -1,
+      "unitary_bound": 0.02995382892526347,
+      "unitary_slack": 0.01113135627485859,
+      "unitary_step_error": 8.89151861083771e-15,
+      "volume": 4
+    },
+    {
+      "commutator_sum": 6.4700270478569095,
+      "delta": 0.027777777777777776,
+      "final_unitary_error": 0.01882247265040488,
+      "history_bound": 0.016711894337910805,
+      "history_error": 0.003159062259151789,
+      "history_slack": 0.013552832078759016,
+      "multiplier_norm": 1.8259259113444415,
+      "order": "onsite_then_lexicographic_bonds",
+      "orientation": "left",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 12,
+      "time_sign": -1,
+      "unitary_bound": 0.02995382892526347,
+      "unitary_slack": 0.01113135627485859,
+      "unitary_step_error": 8.89151861083771e-15,
+      "volume": 4
+    },
+    {
+      "commutator_sum": 6.4700270478569095,
+      "delta": 0.027777777777777776,
+      "final_unitary_error": 0.01882247265040488,
+      "history_bound": 0.002569214148209791,
+      "history_error": 0.000586780820442718,
+      "history_slack": 0.001982433327767073,
+      "multiplier_norm": 0.28070992971557124,
+      "order": "onsite_then_lexicographic_bonds",
+      "orientation": "commutator",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 12,
+      "time_sign": -1,
+      "unitary_bound": 0.02995382892526347,
+      "unitary_slack": 0.01113135627485859,
+      "unitary_step_error": 8.89151861083771e-15,
+      "volume": 4
+    },
+    {
+      "commutator_sum": 6.4700270478569095,
+      "delta": 0.1111111111111111,
+      "final_unitary_error": 0.07553754605482876,
+      "history_bound": 0.04861641989210413,
+      "history_error": 0.009331563456951016,
+      "history_slack": 0.039284856435153115,
+      "multiplier_norm": 1.8259259113444402,
+      "order": "onsite_then_lexicographic_bonds",
+      "orientation": "right",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 3,
+      "time_sign": 1,
+      "unitary_bound": 0.11981531570105387,
+      "unitary_slack": 0.04427776964622511,
+      "unitary_step_error": 9.211924843723458e-15,
+      "volume": 4
+    },
+    {
+      "commutator_sum": 6.4700270478569095,
+      "delta": 0.1111111111111111,
+      "final_unitary_error": 0.07553754605482876,
+      "history_bound": 0.04861641989210416,
+      "history_error": 0.009331563456951008,
+      "history_slack": 0.039284856435153157,
+      "multiplier_norm": 1.8259259113444415,
+      "order": "onsite_then_lexicographic_bonds",
+      "orientation": "left",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 3,
+      "time_sign": 1,
+      "unitary_bound": 0.11981531570105387,
+      "unitary_slack": 0.04427776964622511,
+      "unitary_step_error": 9.211924843723458e-15,
+      "volume": 4
+    },
+    {
+      "commutator_sum": 6.4700270478569095,
+      "delta": 0.1111111111111111,
+      "final_unitary_error": 0.07553754605482876,
+      "history_bound": 0.007474077522064846,
+      "history_error": 0.0016620483555898776,
+      "history_slack": 0.005812029166474969,
+      "multiplier_norm": 0.28070992971557124,
+      "order": "onsite_then_lexicographic_bonds",
+      "orientation": "commutator",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 3,
+      "time_sign": 1,
+      "unitary_bound": 0.11981531570105387,
+      "unitary_slack": 0.04427776964622511,
+      "unitary_step_error": 9.211924843723458e-15,
+      "volume": 4
+    },
+    {
+      "commutator_sum": 6.4700270478569095,
+      "delta": 0.05555555555555555,
+      "final_unitary_error": 0.037669550781520796,
+      "history_bound": 0.03038526243256508,
+      "history_error": 0.005766993857479966,
+      "history_slack": 0.024618268575085114,
+      "multiplier_norm": 1.8259259113444402,
+      "order": "onsite_then_lexicographic_bonds",
+      "orientation": "right",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 6,
+      "time_sign": 1,
+      "unitary_bound": 0.05990765785052694,
+      "unitary_slack": 0.02223810706900614,
+      "unitary_step_error": 9.27502501751073e-15,
+      "volume": 4
+    },
+    {
+      "commutator_sum": 6.4700270478569095,
+      "delta": 0.05555555555555555,
+      "final_unitary_error": 0.037669550781520796,
+      "history_bound": 0.0303852624325651,
+      "history_error": 0.005766993857479953,
+      "history_slack": 0.02461826857508515,
+      "multiplier_norm": 1.8259259113444415,
+      "order": "onsite_then_lexicographic_bonds",
+      "orientation": "left",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 6,
+      "time_sign": 1,
+      "unitary_bound": 0.05990765785052694,
+      "unitary_slack": 0.02223810706900614,
+      "unitary_step_error": 9.27502501751073e-15,
+      "volume": 4
+    },
+    {
+      "commutator_sum": 6.4700270478569095,
+      "delta": 0.05555555555555555,
+      "final_unitary_error": 0.037669550781520796,
+      "history_bound": 0.004671298451290529,
+      "history_error": 0.0010563126500433787,
+      "history_slack": 0.0036149858012471505,
+      "multiplier_norm": 0.28070992971557124,
+      "order": "onsite_then_lexicographic_bonds",
+      "orientation": "commutator",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 6,
+      "time_sign": 1,
+      "unitary_bound": 0.05990765785052694,
+      "unitary_slack": 0.02223810706900614,
+      "unitary_step_error": 9.27502501751073e-15,
+      "volume": 4
+    },
+    {
+      "commutator_sum": 6.4700270478569095,
+      "delta": 0.027777777777777776,
+      "final_unitary_error": 0.01882247265040488,
+      "history_bound": 0.016711894337910795,
+      "history_error": 0.003159062259151787,
+      "history_slack": 0.013552832078759007,
+      "multiplier_norm": 1.8259259113444402,
+      "order": "onsite_then_lexicographic_bonds",
+      "orientation": "right",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 12,
+      "time_sign": 1,
+      "unitary_bound": 0.02995382892526347,
+      "unitary_slack": 0.01113135627485859,
+      "unitary_step_error": 8.89151861083771e-15,
+      "volume": 4
+    },
+    {
+      "commutator_sum": 6.4700270478569095,
+      "delta": 0.027777777777777776,
+      "final_unitary_error": 0.01882247265040488,
+      "history_bound": 0.016711894337910805,
+      "history_error": 0.003159062259151789,
+      "history_slack": 0.013552832078759016,
+      "multiplier_norm": 1.8259259113444415,
+      "order": "onsite_then_lexicographic_bonds",
+      "orientation": "left",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 12,
+      "time_sign": 1,
+      "unitary_bound": 0.02995382892526347,
+      "unitary_slack": 0.01113135627485859,
+      "unitary_step_error": 8.89151861083771e-15,
+      "volume": 4
+    },
+    {
+      "commutator_sum": 6.4700270478569095,
+      "delta": 0.027777777777777776,
+      "final_unitary_error": 0.01882247265040488,
+      "history_bound": 0.002569214148209791,
+      "history_error": 0.000586780820442718,
+      "history_slack": 0.001982433327767073,
+      "multiplier_norm": 0.28070992971557124,
+      "order": "onsite_then_lexicographic_bonds",
+      "orientation": "commutator",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 12,
+      "time_sign": 1,
+      "unitary_bound": 0.02995382892526347,
+      "unitary_slack": 0.01113135627485859,
+      "unitary_step_error": 8.89151861083771e-15,
+      "volume": 4
+    },
+    {
+      "commutator_sum": 6.4700270478569095,
+      "delta": 0.1111111111111111,
+      "final_unitary_error": 0.0755375460548287,
+      "history_bound": 0.04861641989210413,
+      "history_error": 0.009475386543263832,
+      "history_slack": 0.039141033348840296,
+      "multiplier_norm": 1.8259259113444402,
+      "order": "reverse_term_order",
+      "orientation": "right",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 3,
+      "time_sign": -1,
+      "unitary_bound": 0.11981531570105387,
+      "unitary_slack": 0.04427776964622518,
+      "unitary_step_error": 9.227789166830361e-15,
+      "volume": 4
+    },
+    {
+      "commutator_sum": 6.4700270478569095,
+      "delta": 0.1111111111111111,
+      "final_unitary_error": 0.0755375460548287,
+      "history_bound": 0.04861641989210416,
+      "history_error": 0.009475386543263822,
+      "history_slack": 0.03914103334884034,
+      "multiplier_norm": 1.8259259113444415,
+      "order": "reverse_term_order",
+      "orientation": "left",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 3,
+      "time_sign": -1,
+      "unitary_bound": 0.11981531570105387,
+      "unitary_slack": 0.04427776964622518,
+      "unitary_step_error": 9.227789166830361e-15,
+      "volume": 4
+    },
+    {
+      "commutator_sum": 6.4700270478569095,
+      "delta": 0.1111111111111111,
+      "final_unitary_error": 0.0755375460548287,
+      "history_bound": 0.007474077522064846,
+      "history_error": 0.0017706374091790802,
+      "history_slack": 0.0057034401128857656,
+      "multiplier_norm": 0.28070992971557124,
+      "order": "reverse_term_order",
+      "orientation": "commutator",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 3,
+      "time_sign": -1,
+      "unitary_bound": 0.11981531570105387,
+      "unitary_slack": 0.04427776964622518,
+      "unitary_step_error": 9.227789166830361e-15,
+      "volume": 4
+    },
+    {
+      "commutator_sum": 6.4700270478569095,
+      "delta": 0.05555555555555555,
+      "final_unitary_error": 0.037669550781521045,
+      "history_bound": 0.03038526243256508,
+      "history_error": 0.005814252835976773,
+      "history_slack": 0.024571009596588308,
+      "multiplier_norm": 1.8259259113444402,
+      "order": "reverse_term_order",
+      "orientation": "right",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 6,
+      "time_sign": -1,
+      "unitary_bound": 0.05990765785052694,
+      "unitary_slack": 0.02223810706900589,
+      "unitary_step_error": 9.302786319739001e-15,
+      "volume": 4
+    },
+    {
+      "commutator_sum": 6.4700270478569095,
+      "delta": 0.05555555555555555,
+      "final_unitary_error": 0.037669550781521045,
+      "history_bound": 0.0303852624325651,
+      "history_error": 0.005814252835976792,
+      "history_slack": 0.02457100959658831,
+      "multiplier_norm": 1.8259259113444415,
+      "order": "reverse_term_order",
+      "orientation": "left",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 6,
+      "time_sign": -1,
+      "unitary_bound": 0.05990765785052694,
+      "unitary_slack": 0.02223810706900589,
+      "unitary_step_error": 9.302786319739001e-15,
+      "volume": 4
+    },
+    {
+      "commutator_sum": 6.4700270478569095,
+      "delta": 0.05555555555555555,
+      "final_unitary_error": 0.037669550781521045,
+      "history_bound": 0.004671298451290529,
+      "history_error": 0.0010905673375204384,
+      "history_slack": 0.0035807311137700908,
+      "multiplier_norm": 0.28070992971557124,
+      "order": "reverse_term_order",
+      "orientation": "commutator",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 6,
+      "time_sign": -1,
+      "unitary_bound": 0.05990765785052694,
+      "unitary_slack": 0.02223810706900589,
+      "unitary_step_error": 9.302786319739001e-15,
+      "volume": 4
+    },
+    {
+      "commutator_sum": 6.4700270478569095,
+      "delta": 0.027777777777777776,
+      "final_unitary_error": 0.01882247265040424,
+      "history_bound": 0.016711894337910795,
+      "history_error": 0.003172824885406763,
+      "history_slack": 0.013539069452504032,
+      "multiplier_norm": 1.8259259113444402,
+      "order": "reverse_term_order",
+      "orientation": "right",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 12,
+      "time_sign": -1,
+      "unitary_bound": 0.02995382892526347,
+      "unitary_slack": 0.011131356274859228,
+      "unitary_step_error": 8.770308019693606e-15,
+      "volume": 4
+    },
+    {
+      "commutator_sum": 6.4700270478569095,
+      "delta": 0.027777777777777776,
+      "final_unitary_error": 0.01882247265040424,
+      "history_bound": 0.016711894337910805,
+      "history_error": 0.003172824885406748,
+      "history_slack": 0.013539069452504058,
+      "multiplier_norm": 1.8259259113444415,
+      "order": "reverse_term_order",
+      "orientation": "left",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 12,
+      "time_sign": -1,
+      "unitary_bound": 0.02995382892526347,
+      "unitary_slack": 0.011131356274859228,
+      "unitary_step_error": 8.770308019693606e-15,
+      "volume": 4
+    },
+    {
+      "commutator_sum": 6.4700270478569095,
+      "delta": 0.027777777777777776,
+      "final_unitary_error": 0.01882247265040424,
+      "history_bound": 0.002569214148209791,
+      "history_error": 0.0005962222061532756,
+      "history_slack": 0.0019729919420565156,
+      "multiplier_norm": 0.28070992971557124,
+      "order": "reverse_term_order",
+      "orientation": "commutator",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 12,
+      "time_sign": -1,
+      "unitary_bound": 0.02995382892526347,
+      "unitary_slack": 0.011131356274859228,
+      "unitary_step_error": 8.770308019693606e-15,
+      "volume": 4
+    },
+    {
+      "commutator_sum": 6.4700270478569095,
+      "delta": 0.1111111111111111,
+      "final_unitary_error": 0.0755375460548287,
+      "history_bound": 0.04861641989210413,
+      "history_error": 0.009475386543263832,
+      "history_slack": 0.039141033348840296,
+      "multiplier_norm": 1.8259259113444402,
+      "order": "reverse_term_order",
+      "orientation": "right",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 3,
+      "time_sign": 1,
+      "unitary_bound": 0.11981531570105387,
+      "unitary_slack": 0.04427776964622518,
+      "unitary_step_error": 9.227789166830361e-15,
+      "volume": 4
+    },
+    {
+      "commutator_sum": 6.4700270478569095,
+      "delta": 0.1111111111111111,
+      "final_unitary_error": 0.0755375460548287,
+      "history_bound": 0.04861641989210416,
+      "history_error": 0.009475386543263822,
+      "history_slack": 0.03914103334884034,
+      "multiplier_norm": 1.8259259113444415,
+      "order": "reverse_term_order",
+      "orientation": "left",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 3,
+      "time_sign": 1,
+      "unitary_bound": 0.11981531570105387,
+      "unitary_slack": 0.04427776964622518,
+      "unitary_step_error": 9.227789166830361e-15,
+      "volume": 4
+    },
+    {
+      "commutator_sum": 6.4700270478569095,
+      "delta": 0.1111111111111111,
+      "final_unitary_error": 0.0755375460548287,
+      "history_bound": 0.007474077522064846,
+      "history_error": 0.0017706374091790802,
+      "history_slack": 0.0057034401128857656,
+      "multiplier_norm": 0.28070992971557124,
+      "order": "reverse_term_order",
+      "orientation": "commutator",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 3,
+      "time_sign": 1,
+      "unitary_bound": 0.11981531570105387,
+      "unitary_slack": 0.04427776964622518,
+      "unitary_step_error": 9.227789166830361e-15,
+      "volume": 4
+    },
+    {
+      "commutator_sum": 6.4700270478569095,
+      "delta": 0.05555555555555555,
+      "final_unitary_error": 0.037669550781521045,
+      "history_bound": 0.03038526243256508,
+      "history_error": 0.005814252835976773,
+      "history_slack": 0.024571009596588308,
+      "multiplier_norm": 1.8259259113444402,
+      "order": "reverse_term_order",
+      "orientation": "right",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 6,
+      "time_sign": 1,
+      "unitary_bound": 0.05990765785052694,
+      "unitary_slack": 0.02223810706900589,
+      "unitary_step_error": 9.302786319739001e-15,
+      "volume": 4
+    },
+    {
+      "commutator_sum": 6.4700270478569095,
+      "delta": 0.05555555555555555,
+      "final_unitary_error": 0.037669550781521045,
+      "history_bound": 0.0303852624325651,
+      "history_error": 0.005814252835976792,
+      "history_slack": 0.02457100959658831,
+      "multiplier_norm": 1.8259259113444415,
+      "order": "reverse_term_order",
+      "orientation": "left",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 6,
+      "time_sign": 1,
+      "unitary_bound": 0.05990765785052694,
+      "unitary_slack": 0.02223810706900589,
+      "unitary_step_error": 9.302786319739001e-15,
+      "volume": 4
+    },
+    {
+      "commutator_sum": 6.4700270478569095,
+      "delta": 0.05555555555555555,
+      "final_unitary_error": 0.037669550781521045,
+      "history_bound": 0.004671298451290529,
+      "history_error": 0.0010905673375204384,
+      "history_slack": 0.0035807311137700908,
+      "multiplier_norm": 0.28070992971557124,
+      "order": "reverse_term_order",
+      "orientation": "commutator",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 6,
+      "time_sign": 1,
+      "unitary_bound": 0.05990765785052694,
+      "unitary_slack": 0.02223810706900589,
+      "unitary_step_error": 9.302786319739001e-15,
+      "volume": 4
+    },
+    {
+      "commutator_sum": 6.4700270478569095,
+      "delta": 0.027777777777777776,
+      "final_unitary_error": 0.01882247265040424,
+      "history_bound": 0.016711894337910795,
+      "history_error": 0.003172824885406763,
+      "history_slack": 0.013539069452504032,
+      "multiplier_norm": 1.8259259113444402,
+      "order": "reverse_term_order",
+      "orientation": "right",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 12,
+      "time_sign": 1,
+      "unitary_bound": 0.02995382892526347,
+      "unitary_slack": 0.011131356274859228,
+      "unitary_step_error": 8.770308019693606e-15,
+      "volume": 4
+    },
+    {
+      "commutator_sum": 6.4700270478569095,
+      "delta": 0.027777777777777776,
+      "final_unitary_error": 0.01882247265040424,
+      "history_bound": 0.016711894337910805,
+      "history_error": 0.003172824885406748,
+      "history_slack": 0.013539069452504058,
+      "multiplier_norm": 1.8259259113444415,
+      "order": "reverse_term_order",
+      "orientation": "left",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 12,
+      "time_sign": 1,
+      "unitary_bound": 0.02995382892526347,
+      "unitary_slack": 0.011131356274859228,
+      "unitary_step_error": 8.770308019693606e-15,
+      "volume": 4
+    },
+    {
+      "commutator_sum": 6.4700270478569095,
+      "delta": 0.027777777777777776,
+      "final_unitary_error": 0.01882247265040424,
+      "history_bound": 0.002569214148209791,
+      "history_error": 0.0005962222061532756,
+      "history_slack": 0.0019729919420565156,
+      "multiplier_norm": 0.28070992971557124,
+      "order": "reverse_term_order",
+      "orientation": "commutator",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 12,
+      "time_sign": 1,
+      "unitary_bound": 0.02995382892526347,
+      "unitary_slack": 0.011131356274859228,
+      "unitary_step_error": 8.770308019693606e-15,
+      "volume": 4
+    },
+    {
+      "commutator_sum": 11.322547333749593,
+      "delta": 0.1111111111111111,
+      "final_unitary_error": 0.11789615563131246,
+      "history_bound": 0.08510224707143825,
+      "history_error": 0.011120858466923813,
+      "history_slack": 0.07398138860451443,
+      "multiplier_norm": 1.826430522106824,
+      "order": "onsite_then_lexicographic_bonds",
+      "orientation": "right",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 3,
+      "time_sign": -1,
+      "unitary_bound": 0.2096768024768443,
+      "unitary_slack": 0.09178064684553185,
+      "unitary_step_error": 1.683085643710557e-14,
+      "volume": 6
+    },
+    {
+      "commutator_sum": 11.322547333749593,
+      "delta": 0.1111111111111111,
+      "final_unitary_error": 0.11789615563131246,
+      "history_bound": 0.08510224707143813,
+      "history_error": 0.01112085846692382,
+      "history_slack": 0.07398138860451431,
+      "multiplier_norm": 1.8264305221068213,
+      "order": "onsite_then_lexicographic_bonds",
+      "orientation": "left",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 3,
+      "time_sign": -1,
+      "unitary_bound": 0.2096768024768443,
+      "unitary_slack": 0.09178064684553185,
+      "unitary_step_error": 1.683085643710557e-14,
+      "volume": 6
+    },
+    {
+      "commutator_sum": 11.322547333749593,
+      "delta": 0.1111111111111111,
+      "final_unitary_error": 0.11789615563131246,
+      "history_bound": 0.012694257127343954,
+      "history_error": 0.0019495330128539178,
+      "history_slack": 0.010744724114490036,
+      "multiplier_norm": 0.2724390891040811,
+      "order": "onsite_then_lexicographic_bonds",
+      "orientation": "commutator",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 3,
+      "time_sign": -1,
+      "unitary_bound": 0.2096768024768443,
+      "unitary_slack": 0.09178064684553185,
+      "unitary_step_error": 1.683085643710557e-14,
+      "volume": 6
+    },
+    {
+      "commutator_sum": 11.322547333749593,
+      "delta": 0.05555555555555555,
+      "final_unitary_error": 0.05875675506120655,
+      "history_bound": 0.0531889044196489,
+      "history_error": 0.006819542852743212,
+      "history_slack": 0.04636936156690569,
+      "multiplier_norm": 1.826430522106824,
+      "order": "onsite_then_lexicographic_bonds",
+      "orientation": "right",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 6,
+      "time_sign": -1,
+      "unitary_bound": 0.10483840123842215,
+      "unitary_slack": 0.04608164617721561,
+      "unitary_step_error": 1.647535078028579e-14,
+      "volume": 6
+    },
+    {
+      "commutator_sum": 11.322547333749593,
+      "delta": 0.05555555555555555,
+      "final_unitary_error": 0.05875675506120655,
+      "history_bound": 0.053188904419648825,
+      "history_error": 0.006819542852743226,
+      "history_slack": 0.0463693615669056,
+      "multiplier_norm": 1.8264305221068213,
+      "order": "onsite_then_lexicographic_bonds",
+      "orientation": "left",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 6,
+      "time_sign": -1,
+      "unitary_bound": 0.10483840123842215,
+      "unitary_slack": 0.04608164617721561,
+      "unitary_step_error": 1.647535078028579e-14,
+      "volume": 6
+    },
+    {
+      "commutator_sum": 11.322547333749593,
+      "delta": 0.05555555555555555,
+      "final_unitary_error": 0.05875675506120655,
+      "history_bound": 0.00793391070458997,
+      "history_error": 0.0012292245697600656,
+      "history_slack": 0.006704686134829905,
+      "multiplier_norm": 0.2724390891040811,
+      "order": "onsite_then_lexicographic_bonds",
+      "orientation": "commutator",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 6,
+      "time_sign": -1,
+      "unitary_bound": 0.10483840123842215,
+      "unitary_slack": 0.04608164617721561,
+      "unitary_step_error": 1.647535078028579e-14,
+      "volume": 6
+    },
+    {
+      "commutator_sum": 11.322547333749593,
+      "delta": 0.027777777777777776,
+      "final_unitary_error": 0.029354754101818824,
+      "history_bound": 0.029253897430806898,
+      "history_error": 0.0037229760904366883,
+      "history_slack": 0.02553092134037021,
+      "multiplier_norm": 1.826430522106824,
+      "order": "onsite_then_lexicographic_bonds",
+      "orientation": "right",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 12,
+      "time_sign": -1,
+      "unitary_bound": 0.05241920061921108,
+      "unitary_slack": 0.023064446517392253,
+      "unitary_step_error": 1.630578833623473e-14,
+      "volume": 6
+    },
+    {
+      "commutator_sum": 11.322547333749593,
+      "delta": 0.027777777777777776,
+      "final_unitary_error": 0.029354754101818824,
+      "history_bound": 0.029253897430806853,
+      "history_error": 0.003722976090436711,
+      "history_slack": 0.025530921340370143,
+      "multiplier_norm": 1.8264305221068213,
+      "order": "onsite_then_lexicographic_bonds",
+      "orientation": "left",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 12,
+      "time_sign": -1,
+      "unitary_bound": 0.05241920061921108,
+      "unitary_slack": 0.023064446517392253,
+      "unitary_step_error": 1.630578833623473e-14,
+      "volume": 6
+    },
+    {
+      "commutator_sum": 11.322547333749593,
+      "delta": 0.027777777777777776,
+      "final_unitary_error": 0.029354754101818824,
+      "history_bound": 0.004363650887524484,
+      "history_error": 0.0006801865365208066,
+      "history_slack": 0.003683464351003677,
+      "multiplier_norm": 0.2724390891040811,
+      "order": "onsite_then_lexicographic_bonds",
+      "orientation": "commutator",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 12,
+      "time_sign": -1,
+      "unitary_bound": 0.05241920061921108,
+      "unitary_slack": 0.023064446517392253,
+      "unitary_step_error": 1.630578833623473e-14,
+      "volume": 6
+    },
+    {
+      "commutator_sum": 11.322547333749593,
+      "delta": 0.1111111111111111,
+      "final_unitary_error": 0.11789615563131246,
+      "history_bound": 0.08510224707143825,
+      "history_error": 0.011120858466923813,
+      "history_slack": 0.07398138860451443,
+      "multiplier_norm": 1.826430522106824,
+      "order": "onsite_then_lexicographic_bonds",
+      "orientation": "right",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 3,
+      "time_sign": 1,
+      "unitary_bound": 0.2096768024768443,
+      "unitary_slack": 0.09178064684553185,
+      "unitary_step_error": 1.683085643710557e-14,
+      "volume": 6
+    },
+    {
+      "commutator_sum": 11.322547333749593,
+      "delta": 0.1111111111111111,
+      "final_unitary_error": 0.11789615563131246,
+      "history_bound": 0.08510224707143813,
+      "history_error": 0.01112085846692382,
+      "history_slack": 0.07398138860451431,
+      "multiplier_norm": 1.8264305221068213,
+      "order": "onsite_then_lexicographic_bonds",
+      "orientation": "left",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 3,
+      "time_sign": 1,
+      "unitary_bound": 0.2096768024768443,
+      "unitary_slack": 0.09178064684553185,
+      "unitary_step_error": 1.683085643710557e-14,
+      "volume": 6
+    },
+    {
+      "commutator_sum": 11.322547333749593,
+      "delta": 0.1111111111111111,
+      "final_unitary_error": 0.11789615563131246,
+      "history_bound": 0.012694257127343954,
+      "history_error": 0.0019495330128539178,
+      "history_slack": 0.010744724114490036,
+      "multiplier_norm": 0.2724390891040811,
+      "order": "onsite_then_lexicographic_bonds",
+      "orientation": "commutator",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 3,
+      "time_sign": 1,
+      "unitary_bound": 0.2096768024768443,
+      "unitary_slack": 0.09178064684553185,
+      "unitary_step_error": 1.683085643710557e-14,
+      "volume": 6
+    },
+    {
+      "commutator_sum": 11.322547333749593,
+      "delta": 0.05555555555555555,
+      "final_unitary_error": 0.05875675506120655,
+      "history_bound": 0.0531889044196489,
+      "history_error": 0.006819542852743212,
+      "history_slack": 0.04636936156690569,
+      "multiplier_norm": 1.826430522106824,
+      "order": "onsite_then_lexicographic_bonds",
+      "orientation": "right",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 6,
+      "time_sign": 1,
+      "unitary_bound": 0.10483840123842215,
+      "unitary_slack": 0.04608164617721561,
+      "unitary_step_error": 1.647535078028579e-14,
+      "volume": 6
+    },
+    {
+      "commutator_sum": 11.322547333749593,
+      "delta": 0.05555555555555555,
+      "final_unitary_error": 0.05875675506120655,
+      "history_bound": 0.053188904419648825,
+      "history_error": 0.006819542852743226,
+      "history_slack": 0.0463693615669056,
+      "multiplier_norm": 1.8264305221068213,
+      "order": "onsite_then_lexicographic_bonds",
+      "orientation": "left",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 6,
+      "time_sign": 1,
+      "unitary_bound": 0.10483840123842215,
+      "unitary_slack": 0.04608164617721561,
+      "unitary_step_error": 1.647535078028579e-14,
+      "volume": 6
+    },
+    {
+      "commutator_sum": 11.322547333749593,
+      "delta": 0.05555555555555555,
+      "final_unitary_error": 0.05875675506120655,
+      "history_bound": 0.00793391070458997,
+      "history_error": 0.0012292245697600656,
+      "history_slack": 0.006704686134829905,
+      "multiplier_norm": 0.2724390891040811,
+      "order": "onsite_then_lexicographic_bonds",
+      "orientation": "commutator",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 6,
+      "time_sign": 1,
+      "unitary_bound": 0.10483840123842215,
+      "unitary_slack": 0.04608164617721561,
+      "unitary_step_error": 1.647535078028579e-14,
+      "volume": 6
+    },
+    {
+      "commutator_sum": 11.322547333749593,
+      "delta": 0.027777777777777776,
+      "final_unitary_error": 0.029354754101818824,
+      "history_bound": 0.029253897430806898,
+      "history_error": 0.0037229760904366883,
+      "history_slack": 0.02553092134037021,
+      "multiplier_norm": 1.826430522106824,
+      "order": "onsite_then_lexicographic_bonds",
+      "orientation": "right",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 12,
+      "time_sign": 1,
+      "unitary_bound": 0.05241920061921108,
+      "unitary_slack": 0.023064446517392253,
+      "unitary_step_error": 1.630578833623473e-14,
+      "volume": 6
+    },
+    {
+      "commutator_sum": 11.322547333749593,
+      "delta": 0.027777777777777776,
+      "final_unitary_error": 0.029354754101818824,
+      "history_bound": 0.029253897430806853,
+      "history_error": 0.003722976090436711,
+      "history_slack": 0.025530921340370143,
+      "multiplier_norm": 1.8264305221068213,
+      "order": "onsite_then_lexicographic_bonds",
+      "orientation": "left",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 12,
+      "time_sign": 1,
+      "unitary_bound": 0.05241920061921108,
+      "unitary_slack": 0.023064446517392253,
+      "unitary_step_error": 1.630578833623473e-14,
+      "volume": 6
+    },
+    {
+      "commutator_sum": 11.322547333749593,
+      "delta": 0.027777777777777776,
+      "final_unitary_error": 0.029354754101818824,
+      "history_bound": 0.004363650887524484,
+      "history_error": 0.0006801865365208066,
+      "history_slack": 0.003683464351003677,
+      "multiplier_norm": 0.2724390891040811,
+      "order": "onsite_then_lexicographic_bonds",
+      "orientation": "commutator",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 12,
+      "time_sign": 1,
+      "unitary_bound": 0.05241920061921108,
+      "unitary_slack": 0.023064446517392253,
+      "unitary_step_error": 1.630578833623473e-14,
+      "volume": 6
+    },
+    {
+      "commutator_sum": 11.322547333749593,
+      "delta": 0.1111111111111111,
+      "final_unitary_error": 0.11789615563131231,
+      "history_bound": 0.08510224707143825,
+      "history_error": 0.01126046401717896,
+      "history_slack": 0.07384178305425929,
+      "multiplier_norm": 1.826430522106824,
+      "order": "reverse_term_order",
+      "orientation": "right",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 3,
+      "time_sign": -1,
+      "unitary_bound": 0.2096768024768443,
+      "unitary_slack": 0.091780646845532,
+      "unitary_step_error": 1.674535407876202e-14,
+      "volume": 6
+    },
+    {
+      "commutator_sum": 11.322547333749593,
+      "delta": 0.1111111111111111,
+      "final_unitary_error": 0.11789615563131231,
+      "history_bound": 0.08510224707143813,
+      "history_error": 0.011260464017178952,
+      "history_slack": 0.07384178305425917,
+      "multiplier_norm": 1.8264305221068213,
+      "order": "reverse_term_order",
+      "orientation": "left",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 3,
+      "time_sign": -1,
+      "unitary_bound": 0.2096768024768443,
+      "unitary_slack": 0.091780646845532,
+      "unitary_step_error": 1.674535407876202e-14,
+      "volume": 6
+    },
+    {
+      "commutator_sum": 11.322547333749593,
+      "delta": 0.1111111111111111,
+      "final_unitary_error": 0.11789615563131231,
+      "history_bound": 0.012694257127343954,
+      "history_error": 0.00207214056241691,
+      "history_slack": 0.010622116564927044,
+      "multiplier_norm": 0.2724390891040811,
+      "order": "reverse_term_order",
+      "orientation": "commutator",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 3,
+      "time_sign": -1,
+      "unitary_bound": 0.2096768024768443,
+      "unitary_slack": 0.091780646845532,
+      "unitary_step_error": 1.674535407876202e-14,
+      "volume": 6
+    },
+    {
+      "commutator_sum": 11.322547333749593,
+      "delta": 0.05555555555555555,
+      "final_unitary_error": 0.05875675506120651,
+      "history_bound": 0.0531889044196489,
+      "history_error": 0.006862727180015889,
+      "history_slack": 0.04632617723963301,
+      "multiplier_norm": 1.826430522106824,
+      "order": "reverse_term_order",
+      "orientation": "right",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 6,
+      "time_sign": -1,
+      "unitary_bound": 0.10483840123842215,
+      "unitary_slack": 0.04608164617721564,
+      "unitary_step_error": 1.6486636166686184e-14,
+      "volume": 6
+    },
+    {
+      "commutator_sum": 11.322547333749593,
+      "delta": 0.05555555555555555,
+      "final_unitary_error": 0.05875675506120651,
+      "history_bound": 0.053188904419648825,
+      "history_error": 0.006862727180015889,
+      "history_slack": 0.046326177239632935,
+      "multiplier_norm": 1.8264305221068213,
+      "order": "reverse_term_order",
+      "orientation": "left",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 6,
+      "time_sign": -1,
+      "unitary_bound": 0.10483840123842215,
+      "unitary_slack": 0.04608164617721564,
+      "unitary_step_error": 1.6486636166686184e-14,
+      "volume": 6
+    },
+    {
+      "commutator_sum": 11.322547333749593,
+      "delta": 0.05555555555555555,
+      "final_unitary_error": 0.05875675506120651,
+      "history_bound": 0.00793391070458997,
+      "history_error": 0.0012673044782161912,
+      "history_slack": 0.006666606226373779,
+      "multiplier_norm": 0.2724390891040811,
+      "order": "reverse_term_order",
+      "orientation": "commutator",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 6,
+      "time_sign": -1,
+      "unitary_bound": 0.10483840123842215,
+      "unitary_slack": 0.04608164617721564,
+      "unitary_step_error": 1.6486636166686184e-14,
+      "volume": 6
+    },
+    {
+      "commutator_sum": 11.322547333749593,
+      "delta": 0.027777777777777776,
+      "final_unitary_error": 0.029354754101818273,
+      "history_bound": 0.029253897430806898,
+      "history_error": 0.003734778167097294,
+      "history_slack": 0.025519119263709603,
+      "multiplier_norm": 1.826430522106824,
+      "order": "reverse_term_order",
+      "orientation": "right",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 12,
+      "time_sign": -1,
+      "unitary_bound": 0.05241920061921108,
+      "unitary_slack": 0.023064446517392805,
+      "unitary_step_error": 1.6357731752884655e-14,
+      "volume": 6
+    },
+    {
+      "commutator_sum": 11.322547333749593,
+      "delta": 0.027777777777777776,
+      "final_unitary_error": 0.029354754101818273,
+      "history_bound": 0.029253897430806853,
+      "history_error": 0.003734778167097323,
+      "history_slack": 0.02551911926370953,
+      "multiplier_norm": 1.8264305221068213,
+      "order": "reverse_term_order",
+      "orientation": "left",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 12,
+      "time_sign": -1,
+      "unitary_bound": 0.05241920061921108,
+      "unitary_slack": 0.023064446517392805,
+      "unitary_step_error": 1.6357731752884655e-14,
+      "volume": 6
+    },
+    {
+      "commutator_sum": 11.322547333749593,
+      "delta": 0.027777777777777776,
+      "final_unitary_error": 0.029354754101818273,
+      "history_bound": 0.004363650887524484,
+      "history_error": 0.0006906246403754898,
+      "history_slack": 0.0036730262471489942,
+      "multiplier_norm": 0.2724390891040811,
+      "order": "reverse_term_order",
+      "orientation": "commutator",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 12,
+      "time_sign": -1,
+      "unitary_bound": 0.05241920061921108,
+      "unitary_slack": 0.023064446517392805,
+      "unitary_step_error": 1.6357731752884655e-14,
+      "volume": 6
+    },
+    {
+      "commutator_sum": 11.322547333749593,
+      "delta": 0.1111111111111111,
+      "final_unitary_error": 0.11789615563131231,
+      "history_bound": 0.08510224707143825,
+      "history_error": 0.01126046401717896,
+      "history_slack": 0.07384178305425929,
+      "multiplier_norm": 1.826430522106824,
+      "order": "reverse_term_order",
+      "orientation": "right",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 3,
+      "time_sign": 1,
+      "unitary_bound": 0.2096768024768443,
+      "unitary_slack": 0.091780646845532,
+      "unitary_step_error": 1.674535407876202e-14,
+      "volume": 6
+    },
+    {
+      "commutator_sum": 11.322547333749593,
+      "delta": 0.1111111111111111,
+      "final_unitary_error": 0.11789615563131231,
+      "history_bound": 0.08510224707143813,
+      "history_error": 0.011260464017178952,
+      "history_slack": 0.07384178305425917,
+      "multiplier_norm": 1.8264305221068213,
+      "order": "reverse_term_order",
+      "orientation": "left",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 3,
+      "time_sign": 1,
+      "unitary_bound": 0.2096768024768443,
+      "unitary_slack": 0.091780646845532,
+      "unitary_step_error": 1.674535407876202e-14,
+      "volume": 6
+    },
+    {
+      "commutator_sum": 11.322547333749593,
+      "delta": 0.1111111111111111,
+      "final_unitary_error": 0.11789615563131231,
+      "history_bound": 0.012694257127343954,
+      "history_error": 0.00207214056241691,
+      "history_slack": 0.010622116564927044,
+      "multiplier_norm": 0.2724390891040811,
+      "order": "reverse_term_order",
+      "orientation": "commutator",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 3,
+      "time_sign": 1,
+      "unitary_bound": 0.2096768024768443,
+      "unitary_slack": 0.091780646845532,
+      "unitary_step_error": 1.674535407876202e-14,
+      "volume": 6
+    },
+    {
+      "commutator_sum": 11.322547333749593,
+      "delta": 0.05555555555555555,
+      "final_unitary_error": 0.05875675506120651,
+      "history_bound": 0.0531889044196489,
+      "history_error": 0.006862727180015889,
+      "history_slack": 0.04632617723963301,
+      "multiplier_norm": 1.826430522106824,
+      "order": "reverse_term_order",
+      "orientation": "right",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 6,
+      "time_sign": 1,
+      "unitary_bound": 0.10483840123842215,
+      "unitary_slack": 0.04608164617721564,
+      "unitary_step_error": 1.6486636166686184e-14,
+      "volume": 6
+    },
+    {
+      "commutator_sum": 11.322547333749593,
+      "delta": 0.05555555555555555,
+      "final_unitary_error": 0.05875675506120651,
+      "history_bound": 0.053188904419648825,
+      "history_error": 0.006862727180015889,
+      "history_slack": 0.046326177239632935,
+      "multiplier_norm": 1.8264305221068213,
+      "order": "reverse_term_order",
+      "orientation": "left",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 6,
+      "time_sign": 1,
+      "unitary_bound": 0.10483840123842215,
+      "unitary_slack": 0.04608164617721564,
+      "unitary_step_error": 1.6486636166686184e-14,
+      "volume": 6
+    },
+    {
+      "commutator_sum": 11.322547333749593,
+      "delta": 0.05555555555555555,
+      "final_unitary_error": 0.05875675506120651,
+      "history_bound": 0.00793391070458997,
+      "history_error": 0.0012673044782161912,
+      "history_slack": 0.006666606226373779,
+      "multiplier_norm": 0.2724390891040811,
+      "order": "reverse_term_order",
+      "orientation": "commutator",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 6,
+      "time_sign": 1,
+      "unitary_bound": 0.10483840123842215,
+      "unitary_slack": 0.04608164617721564,
+      "unitary_step_error": 1.6486636166686184e-14,
+      "volume": 6
+    },
+    {
+      "commutator_sum": 11.322547333749593,
+      "delta": 0.027777777777777776,
+      "final_unitary_error": 0.029354754101818273,
+      "history_bound": 0.029253897430806898,
+      "history_error": 0.003734778167097294,
+      "history_slack": 0.025519119263709603,
+      "multiplier_norm": 1.826430522106824,
+      "order": "reverse_term_order",
+      "orientation": "right",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 12,
+      "time_sign": 1,
+      "unitary_bound": 0.05241920061921108,
+      "unitary_slack": 0.023064446517392805,
+      "unitary_step_error": 1.6357731752884655e-14,
+      "volume": 6
+    },
+    {
+      "commutator_sum": 11.322547333749593,
+      "delta": 0.027777777777777776,
+      "final_unitary_error": 0.029354754101818273,
+      "history_bound": 0.029253897430806853,
+      "history_error": 0.003734778167097323,
+      "history_slack": 0.02551911926370953,
+      "multiplier_norm": 1.8264305221068213,
+      "order": "reverse_term_order",
+      "orientation": "left",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 12,
+      "time_sign": 1,
+      "unitary_bound": 0.05241920061921108,
+      "unitary_slack": 0.023064446517392805,
+      "unitary_step_error": 1.6357731752884655e-14,
+      "volume": 6
+    },
+    {
+      "commutator_sum": 11.322547333749593,
+      "delta": 0.027777777777777776,
+      "final_unitary_error": 0.029354754101818273,
+      "history_bound": 0.004363650887524484,
+      "history_error": 0.0006906246403754898,
+      "history_slack": 0.0036730262471489942,
+      "multiplier_norm": 0.2724390891040811,
+      "order": "reverse_term_order",
+      "orientation": "commutator",
+      "probe_site": 0,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 12,
+      "time_sign": 1,
+      "unitary_bound": 0.05241920061921108,
+      "unitary_slack": 0.023064446517392805,
+      "unitary_step_error": 1.6357731752884655e-14,
+      "volume": 6
+    }
+  ],
+  "run_kind": "primary",
+  "schema": "tect/foundation-audit/1.0",
+  "task_id": "T-054",
+  "verdict": "PASS"
+}

@@ -1,0 +1,81 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001162",
+  "title": "Finite Q3 commutator-sum Lie-Trotter defect and two-orientation history bound",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "question": "For the declared finite Q3 split Hamiltonians, does an explicit commutator-sum Lie-Trotter defect bound control both product orders and both time signs, and does the induced two-orientation history admit the corresponding finite operator-norm bound?",
+  "method": [
+    "Reuse the hash-pinned finite Q3 oscillator fixture from EXP-001161 and reconstruct every onsite and bond term as a self-adjoint finite matrix on volumes 2, 4 and 6.",
+    "Use tensor support locality to set disjoint commutators to zero and evaluate each overlapping commutator on its union support; compare one full-matrix embedding per volume.",
+    "Apply the bounded unitary Duhamel interpolation bound ||S_delta-exp(delta sum H_j)|| <= delta^2 sum_{j<k}||[H_j,H_k]||/2 and unitary telescoping over N steps.",
+    "Propagate the right, left and difference cubic-multiplier histories and check ||V_split(M)-V_exact(M)|| <= delta^3 C_V N(N-1)||M||/2 for both split orders and time signs.",
+    "Independently rebuild all matrices and compare commutator sums, volume summaries, bound slacks and scope flags; compile Lean R332 for the exact rational coefficients and finite k-sum factor."
+  ],
+  "finding": "Primary 225/225 and independent 108/108 assertions pass over 108 finite history rows; the integrated verifier passes 20/20 and Lean R332 compiles. The commutator sums are C_2=1.6175067619642274, C_4=6.4700270478569095 and C_6=11.322547333749593, with per-site values 0.8087533809821137, 1.6175067619642274 and 1.887091222291599. The fixed-cutoff envelope C_V<=2*(overlapping term pairs)*K_n^2 passes with overlap counts 2, 12 and 24 and K_n approximately 2.25. The minimum unitary and history bound slacks are 0.0005037788211846098 and 0.0005338593106679935; primary and independent aggregate values agree within 4e-16.",
+  "verdict": "advanced",
+  "decision_reason": "The finite Q3 split-to-exact bridge now has an explicit bounded-matrix commutator-sum rate, and the same rate yields a separate two-sided history estimate retaining both noncommuting multiplier orientations. The fixed oscillator-cutoff locality argument gives only a finite-cutoff volume-linear envelope; the observed C_V/V values are diagnostics and do not establish cutoff-uniformity, a common unbounded domain, or a thermodynamic QFT dynamics.",
+  "boundary": "Finite oscillator dimension three, volumes 2, 4 and 6, source pair [0,1], one probe site per volume, horizon 1/3, step counts 3, 6 and 12, two term orders and time signs -1,+1 only. No infinite-dimensional operator-domain theorem, cutoff-uniform bound, direct D/delta-D Cauchy estimate, exhaustion independence, common alpha, OS/KMS/GNS reconstruction, gap, continuum, C6, Sector A or Pre-A conclusion.",
+  "evidence_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-finite-analytic-trotter-defect-manifest.json#analytic_fixture",
+    "codes/foundations/pre_a_cp1_st8_q3lock_finite_analytic_trotter_defect.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_finite_analytic_trotter_defect_independent.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_finite_analytic_trotter_defect_verify.py#run",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-primary-pre_a_cp1_st8_q3lock_finite_analytic_trotter_defect/primary.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-independent-pre_a_cp1_st8_q3lock_finite_analytic_trotter_defect/independent.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-integrated-pre_a_cp1_st8_q3lock_finite_analytic_trotter_defect/integrated.json#lean",
+    "verification/lean/Tect/R332.lean#history_bound_fixture",
+    "verification/lean/registry.json#R332"
+  ],
+  "next_action": "Derive a cutoff-aware analytic finite-volume rate on a specified common core and test whether the local commutator coefficient can be replaced by a source- and volume-uniform energy/state-weighted bound. If K_n or the domain grows uncontrollably with cutoff, record that exact route-local obstruction and keep common-alpha and QFT reconstruction open.",
+  "open": [
+    "cutoff-uniform commutator and history coefficient",
+    "common unbounded operator domain and core density",
+    "actual thermodynamic two-orientation history",
+    "source/beta/volume-uniform direct D and delta-D Cauchy",
+    "exhaustion independence and common alpha",
+    "Hamiltonian-to-OS/KMS/GNS identification",
+    "gap, continuum, C6, Sector A and Pre-A"
+  ],
+  "adversarial_review": [
+    {"axis": "commutator theorem", "check": "The unitary Duhamel interpolation and pairwise commutator sum are used as an inequality; no empirical convergence slope is substituted.", "disposition": "UPHELD"},
+    {"axis": "self-adjoint generator", "check": "Onsite and bond terms are explicitly hermitianized before exponentiation, and their sum is checked against the pinned full Hamiltonian.", "disposition": "UPHELD"},
+    {"axis": "support locality", "check": "Disjoint tensor supports are zero by construction; overlapping local norms are compared with a full-matrix commutator residual on every declared volume.", "disposition": "UPHELD"},
+    {"axis": "history factor", "check": "The history bound retains the factor two from the two-sided adjoint difference and the exact sum of k=0,...,N-1; it is checked separately for right, left and commutator multipliers.", "disposition": "UPHELD"},
+    {"axis": "cutoff and volume", "check": "The 2*overlap_pairs*K_n^2 envelope is explicitly labelled fixed-cutoff; C_V/V is reported but no cutoff- or volume-uniform theorem is inferred.", "disposition": "UPHELD-OPEN"},
+    {"axis": "QFT promotion", "check": "Finite bounded matrices do not supply a common unbounded core, direct D/delta-D Cauchy, exhaustion, common alpha, OS/KMS/GNS dynamics, a gap, continuum, C6, Sector A or Pre-A closure.", "disposition": "UPHELD-OPEN"}
+  ],
+  "formal_integration": {
+    "events": [],
+    "results": [],
+    "negatives": [],
+    "lean": "R332 PASS; metadata regenerated",
+    "no_new_event": true,
+    "no_new_result": true,
+    "no_new_negative": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "qft_interface": {
+    "closed": "A finite commutator-sum Lie-Trotter rate and its two-orientation history consequence are verified for the declared bounded Q3 matrices, with a fixed-cutoff volume-linear envelope.",
+    "open": "Cutoff-uniform analytic rate, common domain, thermodynamic history, direct D/delta-D Cauchy, exhaustion, common alpha, OS/KMS/GNS, gap, continuum and Pre-A remain open.",
+    "tect_boundary": "Auxiliary C6/Q3 evidence only; no TECT production owner, physical-empty reference or Sector-A closure is supplied."
+  },
+  "no_overclaim": "This finite audit proves only bounded-matrix inequalities and a fixed-cutoff locality envelope. It does not prove a thermodynamic QFT dynamics or close any C6, Sector A or Pre-A gate.",
+  "provenance": "contemporaneous",
+  "recorded_at": "2026-08-29T00:55:00Z",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-08-26",
+  "related": [
+    {"id": "EXP-001161", "relation": "continues"},
+    {"id": "EXP-001160", "relation": "continues"},
+    {"id": "EXP-001159", "relation": "continues"},
+    {"id": "EXP-001015", "relation": "continues"}
+  ]
+}

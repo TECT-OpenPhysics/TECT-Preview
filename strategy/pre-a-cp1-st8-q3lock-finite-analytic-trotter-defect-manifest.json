@@ -1,0 +1,177 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-FINITE-ANALYTIC-TROTTER-DEFECT-v0",
+  "title": "Finite Q3 commutator-sum Lie-Trotter defect and two-orientation history bound",
+  "task_id": "T-054",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "exploration_id": "EXP-001162",
+  "claim_bearing": false,
+  "parent_explorations": [
+    "EXP-001161",
+    "EXP-001160",
+    "EXP-001159",
+    "EXP-001015"
+  ],
+  "parent_authorities": [
+    "strategy/pre-a-cp1-st8-q3lock-cubic-multiplier-finite-trotter-convergence-manifest.json",
+    "strategy/pre-a-cp1-st8-q3lock-cubic-multiplier-split-history-volterra-manifest.json",
+    "strategy/pre-a-cp1-st8-q3lock-common-alpha-topology-critical-graph-route-split-manifest.json"
+  ],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "question": "For the declared finite Q3 split Hamiltonians, does an explicit commutator-sum Lie-Trotter defect bound control both product orders and both time signs, and does the induced two-orientation history admit the corresponding finite operator-norm bound?",
+  "source_fixture": {
+    "manifest": "strategy/pre-a-cp1-st8-q3lock-cubic-multiplier-finite-trotter-convergence-manifest.json",
+    "volume_values": [
+      2,
+      4,
+      6
+    ],
+    "oscillator_dimension": 3,
+    "source_pairs": {
+      "2": [
+        [
+          0,
+          1
+        ]
+      ],
+      "4": [
+        [
+          0,
+          1
+        ]
+      ],
+      "6": [
+        [
+          0,
+          1
+        ]
+      ]
+    },
+    "probe_sites": {
+      "2": [
+        0
+      ],
+      "4": [
+        0
+      ],
+      "6": [
+        0
+      ]
+    }
+  },
+  "analytic_fixture": {
+    "horizon": "1/3",
+    "step_counts": [
+      3,
+      6,
+      12
+    ],
+    "orders": [
+      "onsite_then_lexicographic_bonds",
+      "reverse_term_order"
+    ],
+    "time_signs": [
+      -1,
+      1
+    ],
+    "commutator_sum": "C_V=sum_{j<k} ||[H_j,H_k]||",
+    "unitary_defect_bound": "||S_delta^N-exp(-i sign*t*H)|| <= t^2*C_V/(2*N)",
+    "history_defect_bound": "||V_split(M)-V_exact(M)|| <= delta^3*C_V*N*(N-1)*||M||/2",
+    "history": "V_N(M)=delta sum_{k=0}^{N-1} Ad(U_delta^k)(M)",
+    "right_orientation": "f_x^(3/4) q_x^3 A_f^(-3/4)",
+    "left_orientation": "f_x^(3/4) A_f^(-3/4) q_x^3",
+    "weight_ratio_per_edge": "1/16",
+    "multiplier_power": "3/4"
+  },
+  "finite_fixture": {
+    "decomposition_tolerance": 1e-08,
+    "bound_slack_tolerance": 1e-07,
+    "localization_tolerance": 1e-08,
+    "unitarity_tolerance": 1e-08,
+    "positive_energy_floor": 1.0,
+    "commutator_floor": 1e-06,
+    "finite_only": true
+  },
+  "scope": {
+    "finite_local_commutator_sum_closed": true,
+    "finite_analytic_unitary_defect_closed": true,
+    "finite_two_orientation_history_bound_closed": true,
+    "finite_bound_both_orders_and_signs_closed": true,
+    "volume_uniform_trotter_bound_closed": false,
+    "analytic_infinite_dimensional_trotter_rate_closed": false,
+    "operator_domain_embedding_closed": false,
+    "actual_q3_thermodynamic_history_closed": false,
+    "direct_d_cauchy_closed": false,
+    "delta_d_cauchy_closed": false,
+    "source_volume_beta_uniformity_closed": false,
+    "exhaustion_independence_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true,
+    "finite_fixed_cutoff_volume_linear_envelope_closed": true,
+    "cutoff_uniform_volume_linear_bound_closed": false
+  },
+  "adversarial_review": [
+    {
+      "axis": "commutator theorem",
+      "check": "The finite bound is derived from a unitary Duhamel interpolation and the exact pairwise commutator sum; no empirical slope is substituted for the inequality.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "localization",
+      "check": "Disjoint tensor supports are assigned zero commutator and overlapping terms are evaluated on their union support; one full-matrix embedding residual is checked per volume.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "order and sign",
+      "check": "Both declared product orders and both time signs are tested against the same exact full-Hamiltonian exponential; the bound is order/sign agnostic only after the finite commutator sum is computed.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "history factor",
+      "check": "The history estimate retains the factor 2 from the two-sided adjoint difference and the exact sum of k=0,...,N-1; it is not inferred from the final-unitary error alone.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "volume uniformity",
+      "check": "The computed C_V values and finite bounds are reported by volume; no finite list is promoted to a volume-uniform estimate.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "QFT promotion",
+      "check": "Bounded finite matrices do not supply a common unbounded-operator core, thermodynamic Cauchy estimate, common alpha, OS/KMS/GNS reconstruction, gap, continuum, C6, Sector A or Pre-A closure.",
+      "disposition": "UPHELD-OPEN"
+    }
+  ],
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R332.lean",
+    "theorem_markers": [
+      "local_defect_fixture",
+      "history_sum_fixture",
+      "history_bound_fixture",
+      "scope_fixture"
+    ],
+    "command": "lake env lean Tect/R332.lean",
+    "boundary": "Lean checks exact rational coefficients and the finite sum factor only; matrix commutators, unbounded domains and all QFT limits remain Python/open analysis."
+  },
+  "qft_interface": {
+    "closed": "For each declared finite Q3 graph, the exact pairwise commutator sum gives a proven finite unitary defect bound and a derived two-orientation history operator-norm bound for both split orders and time signs.",
+    "open": "Uniform control of C_V under volume/cutoff/source changes, common operator domains, direct D/delta-D Cauchy, exhaustion, common alpha, OS/KMS/GNS, gap, continuum and Pre-A remain open.",
+    "tect_boundary": "Auxiliary C6/Q3 evidence only; no TECT production owner, physical-empty reference or Sector-A closure is supplied."
+  },
+  "no_overclaim": "This package proves only a bounded finite-matrix commutator-sum rate and its finite history consequence. It does not prove a volume-uniform Q3 dynamics, an infinite-dimensional Trotter theorem, common alpha, or any C6, Sector A or Pre-A closure."
+}
