@@ -1,0 +1,96 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-EXTENDED-DIRECT-D-DELTA-D-SHAPE-BETA-v0",
+  "title": "Extended finite direct D and modular derivative across path exhaustion and beta",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001169",
+  "claim_bearing": false,
+  "parent_explorations": ["EXP-001085", "EXP-001168", "EXP-001164"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "question": "On finite actual-Q3 Gibbs members along a path4/path6 exhaustion pair, do direct two-orientation D and modular derivative delta-D norms remain bounded uniformly over the declared coordinate cutoffs, times and beta values?",
+  "finite_fixture": {
+    "graphs": {
+      "path4": {"vertices": 4, "edges": [[0, 1], [1, 2], [2, 3]]},
+      "path6": {"vertices": 6, "edges": [[0, 1], [1, 2], [2, 3], [3, 4], [4, 5]]}
+    },
+    "source_site": 1,
+    "oscillator_dimension": 3,
+    "beta_values": [0.5, 1.0, 2.0],
+    "time_values": [0.05, 0.1],
+    "radius_values": [0.5, 1.0, 2.0],
+    "hbar": 1.0,
+    "character_amplitude": 0.3333333333333333,
+    "tail_tolerance": 1e-9,
+    "finite_tolerance": 1e-8,
+    "agreement_tolerance": 1e-7,
+    "time_signs": [-1, 1]
+  },
+  "model_parameters": {"chi": "1", "r": "-1", "g": "3/5", "c": "3/5", "lambda": "1/10"},
+  "model": {
+    "hamiltonian": "H=sum_x[p_x^2/(2 chi)+r q_x^2/2+g q_x^4/4]+sum_edges[c(q_x-q_y)^2/2+lambda(q_x-q_y)^2(q_x^2+q_y^2)/4]",
+    "cutoff": "replace every bond coordinate q by the smooth cosine spectral cutoff q_L; W_L=H-H_L",
+    "direct_difference": "D_sigma(t)=Ad(exp(-it(H+sigma W_L)/hbar))(A)-Ad(exp(-itH/hbar))(A)",
+    "modular_difference": "delta D_sigma=[-beta H,D_sigma] in the finite Gibbs representation",
+    "seminorm": "||X||_(beta,#)^2=Tr(rho X*X)+Tr(rho XX*)",
+    "shape": "path4 is lifted by identities on sites 4,5 when compared with path6; this is a structured exhaustion diagnostic, not arbitrary-shape uniformity"
+  },
+  "scope": {
+    "finite_direct_D_closed": true,
+    "finite_direct_delta_D_closed": true,
+    "finite_two_orientation_difference_closed": true,
+    "cutoff_zero_tail_fixture_closed": true,
+    "path_exhaustion_fixture_closed": true,
+    "beta_grid_fixture_closed": true,
+    "volume_uniform_direct_d_cauchy_closed": false,
+    "beta_uniform_direct_d_cauchy_closed": false,
+    "delta_d_cauchy_closed": false,
+    "product_core_density_closed": false,
+    "exhaustion_independence_closed": false,
+    "group_law_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "adversarial_review": [
+    {"axis": "reference state", "check": "Each beta row uses the uncut finite-H Gibbs state for its own volume; no local Gibbs replacement is made.", "disposition": "UPHELD"},
+    {"axis": "orientations", "check": "H+W_L and H-W_L are evolved separately for both time signs in both lanes.", "disposition": "UPHELD"},
+    {"axis": "modular derivative", "check": "delta-D is the explicit finite commutator with -beta H and is not inferred from D alone.", "disposition": "UPHELD"},
+    {"axis": "cutoff", "check": "Radii 0.5 and 1.0 retain nonzero tails while radius 2.0 is checked as a zero-tail control.", "disposition": "UPHELD"},
+    {"axis": "exhaustion", "check": "Path4/path6 is only a structured finite pair; its beta- and volume-dependent values are reported rather than promoted to a uniform theorem.", "disposition": "UPHELD-OPEN"},
+    {"axis": "independence", "check": "The independent lane reconstructs oscillator, Hamiltonian, cutoff and Gibbs seminorm without importing the primary module.", "disposition": "UPHELD"},
+    {"axis": "numerics", "check": "Hermiticity, finite values, t=0 anchoring and both-lane agreement are asserted with explicit tolerances.", "disposition": "UPHELD-OPEN"},
+    {"axis": "QFT promotion", "check": "Uniform direct D/delta-D, common core, exhaustion, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector A and Pre-A remain open.", "disposition": "UPHELD-OPEN"},
+    {"axis": "Lean boundary", "check": "Lean R267 is reused for rational direct-bound and zero-tail bookkeeping only; dense matrices remain Python evidence.", "disposition": "UPHELD"}
+  ],
+  "files": {
+    "primary": "codes/foundations/pre_a_cp1_st8_q3lock_extended_direct_d_delta_d_shape_beta.py",
+    "independent": "codes/foundations/pre_a_cp1_st8_q3lock_extended_direct_d_delta_d_shape_beta_independent.py",
+    "integrated": "codes/foundations/pre_a_cp1_st8_q3lock_extended_direct_d_delta_d_shape_beta_verify.py",
+    "lean": "verification/lean/Tect/R267.lean",
+    "primary_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-primary-pre-a-cp1-st8-q3lock-extended-direct-d-delta-d-shape-beta/primary.json",
+    "independent_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-independent-pre-a-cp1-st8-q3lock-extended-direct-d-delta-d-shape-beta/independent.json",
+    "integrated_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-integrated-pre-a-cp1-st8-q3lock-extended-direct-d-delta-d-shape-beta/integrated.json"
+  },
+  "lean_crosscheck": {"path": "verification/lean/Tect/R267.lean", "command": "lake env lean Tect/R267.lean", "role": "R267 checks rational direct-bound, orientation and zero-tail fixtures; Python checks all matrix rows."},
+  "qft_interface": {
+    "closed": "Finite direct D and delta-D rows for both orientations over the path4/path6 pair, three beta values, two times and three coordinate radii.",
+    "open": "The finite maxima are diagnostics only; volume-, source-, cutoff- and beta-uniform Cauchy, product/core density, exhaustion interchange, common alpha and all QFT reconstruction gates remain open.",
+    "tect_boundary": "Auxiliary C6/Q3 evidence only; no heat_root_incidence, canonical A1/R-192 production owner, physical-empty reference or Sector-A closure is supplied."
+  },
+  "next_action": "Use the measured volume/beta dependence to select a genuinely local or modular common-core norm; if a uniform coefficient cannot be derived analytically, record that obstruction before common-alpha promotion.",
+  "boundary": "T0 claim-nonbearing finite Gibbs diagnostic on d=3 path4/path6 matrices. It is not an exhaustion-independent thermodynamic D,delta-D theorem or a QFT/Clay result.",
+  "no_overclaim": "This package does not prove any volume-, source-, cutoff- or beta-uniform direct D/delta-D Cauchy estimate, common unbounded core, exhaustion independence, common alpha, OS/KMS/GNS identification, gap, continuum, C6, Sector A or Pre-A."
+}
