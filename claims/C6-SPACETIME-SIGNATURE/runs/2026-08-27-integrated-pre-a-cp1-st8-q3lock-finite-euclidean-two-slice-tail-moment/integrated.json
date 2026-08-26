@@ -1,0 +1,554 @@
+{
+  "assertion_count": 17,
+  "assertions": [
+    {
+      "actual": "['EXP-001189', 'T-054']",
+      "expected": "EXP-001189/T-054",
+      "name": "identity",
+      "pass": true
+    },
+    {
+      "actual": "['EXP-001188', 'T-054']",
+      "expected": "EXP-001188/T-054",
+      "name": "fixture lineage",
+      "pass": true
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "name": "claim nonbearing",
+      "pass": true
+    },
+    {
+      "actual": "['e1fbd5049fe2637677d1a770fa0c51b2e53e84d027be852778382874db632caf', 'e3d990e5a340ace3512d322b3aa84da409b0ae0c2e162cc04747588d32587de4']",
+      "expected": "distinct SHA-256",
+      "name": "source lanes distinct",
+      "pass": true
+    },
+    {
+      "actual": "['two_slice_arithmetic_mean', 'euclidean_tail_scalar_envelope']",
+      "expected": "present",
+      "name": "Lean source",
+      "pass": true
+    },
+    {
+      "actual": "[]",
+      "expected": "none",
+      "name": "Lean forbidden",
+      "pass": true
+    },
+    {
+      "actual": "PRIMARY FINITE-EUCLIDEAN-TWO-SLICE-TAIL-MOMENT PASS 249/249 rows=30\n",
+      "expected": "PASS",
+      "name": "primary child",
+      "pass": true
+    },
+    {
+      "actual": "INDEPENDENT FINITE-EUCLIDEAN-TWO-SLICE-TAIL-MOMENT PASS 249/249 rows=30\n",
+      "expected": "PASS",
+      "name": "independent child",
+      "pass": true
+    },
+    {
+      "actual": "[30, 30]",
+      "expected": "30",
+      "name": "row coverage",
+      "pass": true
+    },
+    {
+      "actual": "[]",
+      "expected": "within lane tolerance",
+      "name": "summary agreement",
+      "pass": true
+    },
+    {
+      "actual": "[True, True]",
+      "expected": "True",
+      "name": "finite_tail_fourth_leg_identity_closed",
+      "pass": true
+    },
+    {
+      "actual": "[True, True]",
+      "expected": "True",
+      "name": "finite_euclidean_two_slice_identity_closed",
+      "pass": true
+    },
+    {
+      "actual": "[True, True]",
+      "expected": "True",
+      "name": "finite_spectral_two_slice_crosscheck_closed",
+      "pass": true
+    },
+    {
+      "actual": "[True, True]",
+      "expected": "True",
+      "name": "finite_equal_time_coercive_envelope_closed",
+      "pass": true
+    },
+    {
+      "actual": "[False, False]",
+      "expected": "False",
+      "name": "tail uniformity remains open",
+      "pass": true
+    },
+    {
+      "actual": "{'finite_tail_fourth_leg_identity_closed': True, 'finite_euclidean_two_slice_identity_closed': True, 'finite_spectral_two_slice_crosscheck_closed': True, 'finite_equal_time_coercive_envelope_closed': True, 'finite_actual_q3_rows_closed': True, 'tail_fourth_moment_uniform_closed': False, 'source_volume_cutoff_beta_uniform_closed': False, 'local_coercive_common_core_closed': False, 'direct_d_delta_d_cauchy_closed': False, 'common_os_hilbert_carrier_closed': False, 'common_word_exhaustion_closed': False, 'common_alpha_closed': False, 'hamiltonian_os_identification_closed': False, 'kms_gns_gap_closed': False, 'continuum_closed': False, 'c6_closed': False, 'sector_a_closed': False, 'pre_a_closed': False, 'no_new_negative_result': True, 'no_tier_change': True, 'no_pdf': True}",
+      "expected": "finite bridge; QFT gates open",
+      "name": "scope firewall",
+      "pass": true
+    },
+    {
+      "actual": "{'status': 'PASS', 'command': 'lake env lean Tect/R348.lean', 'returncode': 0, 'output': 'Tect/R348.lean:5:47: warning: Variable name `h` is not explicitly referenced.\\n\\nThe binding can be removed (if unused) or named `_` (if used implicitly).\\n\\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\\nTect/R348.lean:11:5: warning: Variable name `h_two_nonnegative` is not explicitly referenced.\\n\\nThe binding can be removed (if unused) or named `_` (if used implicitly).\\n\\nNote: This linter can be disabled with `set_option linter.unusedVariables false`'}",
+      "expected": "PASS",
+      "name": "Lean compile",
+      "pass": true
+    }
+  ],
+  "audit_id": "PA-CP1-ST8-Q3LOCK-FINITE-EUCLIDEAN-TWO-SLICE-TAIL-MOMENT",
+  "boundary": {
+    "c6_closed": false,
+    "common_alpha_closed": false,
+    "common_os_hilbert_carrier_closed": false,
+    "common_word_exhaustion_closed": false,
+    "continuum_closed": false,
+    "direct_d_delta_d_cauchy_closed": false,
+    "finite_actual_q3_rows_closed": true,
+    "finite_equal_time_coercive_envelope_closed": true,
+    "finite_euclidean_two_slice_identity_closed": true,
+    "finite_spectral_two_slice_crosscheck_closed": true,
+    "finite_tail_fourth_leg_identity_closed": true,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "local_coercive_common_core_closed": false,
+    "no_new_negative_result": true,
+    "no_pdf": true,
+    "no_tier_change": true,
+    "pre_a_closed": false,
+    "sector_a_closed": false,
+    "source_volume_cutoff_beta_uniform_closed": false,
+    "tail_fourth_moment_uniform_closed": false
+  },
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "derived": {
+    "common_alpha_promoted": false,
+    "finite_equal_time_coercive_envelope_closed": true,
+    "finite_euclidean_two_slice_identity_closed": true,
+    "finite_spectral_two_slice_crosscheck_closed": true,
+    "finite_tail_fourth_leg_identity_closed": true,
+    "independent_summary_rows": [
+      {
+        "beta": 0.125,
+        "max_equal_time_fourth_moment": 4.9841385598184536,
+        "max_holder_moment": 4.97809649031375,
+        "max_identity_residual": 6.217248937900877e-15,
+        "max_operator_fourth_bound": 25.62890625,
+        "max_spectral_residual": 6.938893903907228e-18,
+        "max_two_slice": 4.978096490313757,
+        "min_amgm_slack": 2.750949390168192e-05,
+        "min_operator_slack": 0.09384319500311752,
+        "oscillator_dimension": 3,
+        "volume": 2
+      },
+      {
+        "beta": 0.25,
+        "max_equal_time_fourth_moment": 4.31072098881917,
+        "max_holder_moment": 4.286812993506903,
+        "max_identity_residual": 8.881784197001252e-16,
+        "max_operator_fourth_bound": 25.62890625,
+        "max_spectral_residual": 8.881784197001252e-16,
+        "max_two_slice": 4.286812993506902,
+        "min_amgm_slack": 0.0001088405956051336,
+        "min_operator_slack": 0.09690294628282534,
+        "oscillator_dimension": 3,
+        "volume": 2
+      },
+      {
+        "beta": 0.5,
+        "max_equal_time_fourth_moment": 3.184388965268901,
+        "max_holder_moment": 3.0927711359602004,
+        "max_identity_residual": 8.881784197001252e-16,
+        "max_operator_fourth_bound": 25.62890625,
+        "max_spectral_residual": 4.440892098500626e-16,
+        "max_two_slice": 3.0927711359602013,
+        "min_amgm_slack": 0.00041699913838347605,
+        "min_operator_slack": 0.10201970598828945,
+        "oscillator_dimension": 3,
+        "volume": 2
+      },
+      {
+        "beta": 1.0,
+        "max_equal_time_fourth_moment": 1.7926482210507462,
+        "max_holder_moment": 1.4806072773075591,
+        "max_identity_residual": 4.440892098500626e-16,
+        "max_operator_fourth_bound": 25.62890625,
+        "max_spectral_residual": 4.440892098500626e-16,
+        "max_two_slice": 1.4806072773075596,
+        "min_amgm_slack": 0.0014197396398744596,
+        "min_operator_slack": 0.10833905652786043,
+        "oscillator_dimension": 3,
+        "volume": 2
+      },
+      {
+        "beta": 2.0,
+        "max_equal_time_fourth_moment": 1.1091667655723398,
+        "max_holder_moment": 0.34340997080309277,
+        "max_identity_residual": 4.336808689942018e-19,
+        "max_operator_fourth_bound": 25.62890625,
+        "max_spectral_residual": 1.1102230246251565e-16,
+        "max_two_slice": 0.34340997080309277,
+        "min_amgm_slack": 0.0034824470089616054,
+        "min_operator_slack": 0.11143498054121323,
+        "oscillator_dimension": 3,
+        "volume": 2
+      },
+      {
+        "beta": 0.125,
+        "max_equal_time_fourth_moment": 237.58147755921354,
+        "max_holder_moment": 237.32568358717901,
+        "max_identity_residual": 2.8421709430404007e-13,
+        "max_operator_fourth_bound": 6561.0,
+        "max_spectral_residual": 2.220446049250313e-16,
+        "max_two_slice": 237.3256835871793,
+        "min_amgm_slack": 0.0011491887255503652,
+        "min_operator_slack": 28.760414456639406,
+        "oscillator_dimension": 3,
+        "volume": 4
+      },
+      {
+        "beta": 0.25,
+        "max_equal_time_fourth_moment": 166.45658673824397,
+        "max_holder_moment": 165.62349719245782,
+        "max_identity_residual": 2.842170943040401e-14,
+        "max_operator_fourth_bound": 6561.0,
+        "max_spectral_residual": 2.842170943040401e-14,
+        "max_two_slice": 165.62349719245785,
+        "min_amgm_slack": 0.0037336581867463137,
+        "min_operator_slack": 29.078895384264833,
+        "oscillator_dimension": 3,
+        "volume": 4
+      },
+      {
+        "beta": 0.5,
+        "max_equal_time_fourth_moment": 88.54773612404603,
+        "max_holder_moment": 86.19251112568405,
+        "max_identity_residual": 8.526512829121202e-14,
+        "max_operator_fourth_bound": 6561.0,
+        "max_spectral_residual": 4.263256414560601e-14,
+        "max_two_slice": 86.19251112568396,
+        "min_amgm_slack": 0.01051964324441873,
+        "min_operator_slack": 29.425648990751526,
+        "oscillator_dimension": 3,
+        "volume": 4
+      },
+      {
+        "beta": 1.0,
+        "max_equal_time_fourth_moment": 30.458234629113665,
+        "max_holder_moment": 24.764019618109227,
+        "max_identity_residual": 3.552713678800501e-15,
+        "max_operator_fourth_bound": 6561.0,
+        "max_spectral_residual": 1.3877787807814457e-17,
+        "max_two_slice": 24.764019618109224,
+        "min_amgm_slack": 0.025449350094189915,
+        "min_operator_slack": 29.681623373017505,
+        "oscillator_dimension": 3,
+        "volume": 4
+      },
+      {
+        "beta": 2.0,
+        "max_equal_time_fourth_moment": 11.648674561752301,
+        "max_holder_moment": 2.079083265341849,
+        "max_identity_residual": 4.440892098500626e-16,
+        "max_operator_fourth_bound": 6561.0,
+        "max_spectral_residual": 8.881784197001252e-16,
+        "max_two_slice": 2.0790832653418496,
+        "min_amgm_slack": 0.043169480401246435,
+        "min_operator_slack": 29.762676044222943,
+        "oscillator_dimension": 3,
+        "volume": 4
+      },
+      {
+        "beta": 0.125,
+        "max_equal_time_fourth_moment": 6.622793460974427,
+        "max_holder_moment": 6.622793460974435,
+        "max_identity_residual": 3.552713678800501e-15,
+        "max_operator_fourth_bound": 62.36515726132087,
+        "max_spectral_residual": 2.6645352591003757e-15,
+        "max_two_slice": 6.622793460974432,
+        "min_amgm_slack": -1.7763568394002505e-15,
+        "min_operator_slack": 3.260441699076526e-61,
+        "oscillator_dimension": 2,
+        "volume": 6
+      },
+      {
+        "beta": 0.25,
+        "max_equal_time_fourth_moment": 5.818122173018378,
+        "max_holder_moment": 5.818122173018379,
+        "max_identity_residual": 1.7763568394002505e-15,
+        "max_operator_fourth_bound": 62.36515726132087,
+        "max_spectral_residual": 1.7763568394002505e-15,
+        "max_two_slice": 5.818122173018377,
+        "min_amgm_slack": -8.881784197001252e-16,
+        "min_operator_slack": 3.3075079453286305e-61,
+        "oscillator_dimension": 2,
+        "volume": 6
+      },
+      {
+        "beta": 0.5,
+        "max_equal_time_fourth_moment": 4.469529768179349,
+        "max_holder_moment": 4.469529768179355,
+        "max_identity_residual": 4.440892098500626e-15,
+        "max_operator_fourth_bound": 62.36515726132087,
+        "max_spectral_residual": 8.636168555094445e-78,
+        "max_two_slice": 4.469529768179351,
+        "min_amgm_slack": -1.7763568394002505e-15,
+        "min_operator_slack": 3.386388828951433e-61,
+        "oscillator_dimension": 2,
+        "volume": 6
+      },
+      {
+        "beta": 1.0,
+        "max_equal_time_fourth_moment": 2.538541935125637,
+        "max_holder_moment": 2.5385419351256377,
+        "max_identity_residual": 4.440892098500626e-16,
+        "max_operator_fourth_bound": 62.36515726132087,
+        "max_spectral_residual": 8.881784197001252e-16,
+        "max_two_slice": 2.538541935125638,
+        "min_amgm_slack": -4.440892098500626e-16,
+        "min_operator_slack": 3.49933476130995e-61,
+        "oscillator_dimension": 2,
+        "volume": 6
+      },
+      {
+        "beta": 2.0,
+        "max_equal_time_fourth_moment": 0.6237673956901514,
+        "max_holder_moment": 0.6237673956901499,
+        "max_identity_residual": 4.440892098500626e-16,
+        "max_operator_fourth_bound": 62.36515726132087,
+        "max_spectral_residual": 5.397605346934028e-79,
+        "max_two_slice": 0.6237673956901495,
+        "min_amgm_slack": 1.8351858179575695e-77,
+        "min_operator_slack": 3.611332357520011e-61,
+        "oscillator_dimension": 2,
+        "volume": 6
+      }
+    ],
+    "local_coercive_common_core_closed": false,
+    "primary_summary_rows": [
+      {
+        "beta": 0.125,
+        "max_equal_time_fourth_moment": 4.9841385598184536,
+        "max_holder_moment": 4.97809649031375,
+        "max_identity_residual": 6.217248937900877e-15,
+        "max_operator_fourth_bound": 25.62890625,
+        "max_spectral_residual": 6.938893903907228e-18,
+        "max_two_slice": 4.978096490313757,
+        "min_amgm_slack": 2.750949390168192e-05,
+        "min_operator_slack": 0.09384319500311752,
+        "oscillator_dimension": 3,
+        "volume": 2
+      },
+      {
+        "beta": 0.25,
+        "max_equal_time_fourth_moment": 4.31072098881917,
+        "max_holder_moment": 4.286812993506903,
+        "max_identity_residual": 8.881784197001252e-16,
+        "max_operator_fourth_bound": 25.62890625,
+        "max_spectral_residual": 8.881784197001252e-16,
+        "max_two_slice": 4.286812993506902,
+        "min_amgm_slack": 0.0001088405956051336,
+        "min_operator_slack": 0.09690294628282534,
+        "oscillator_dimension": 3,
+        "volume": 2
+      },
+      {
+        "beta": 0.5,
+        "max_equal_time_fourth_moment": 3.184388965268901,
+        "max_holder_moment": 3.0927711359602004,
+        "max_identity_residual": 8.881784197001252e-16,
+        "max_operator_fourth_bound": 25.62890625,
+        "max_spectral_residual": 4.440892098500626e-16,
+        "max_two_slice": 3.0927711359602013,
+        "min_amgm_slack": 0.00041699913838347605,
+        "min_operator_slack": 0.10201970598828945,
+        "oscillator_dimension": 3,
+        "volume": 2
+      },
+      {
+        "beta": 1.0,
+        "max_equal_time_fourth_moment": 1.7926482210507462,
+        "max_holder_moment": 1.4806072773075591,
+        "max_identity_residual": 4.440892098500626e-16,
+        "max_operator_fourth_bound": 25.62890625,
+        "max_spectral_residual": 4.440892098500626e-16,
+        "max_two_slice": 1.4806072773075596,
+        "min_amgm_slack": 0.0014197396398744596,
+        "min_operator_slack": 0.10833905652786043,
+        "oscillator_dimension": 3,
+        "volume": 2
+      },
+      {
+        "beta": 2.0,
+        "max_equal_time_fourth_moment": 1.1091667655723398,
+        "max_holder_moment": 0.34340997080309277,
+        "max_identity_residual": 4.336808689942018e-19,
+        "max_operator_fourth_bound": 25.62890625,
+        "max_spectral_residual": 1.1102230246251565e-16,
+        "max_two_slice": 0.34340997080309277,
+        "min_amgm_slack": 0.0034824470089616054,
+        "min_operator_slack": 0.11143498054121323,
+        "oscillator_dimension": 3,
+        "volume": 2
+      },
+      {
+        "beta": 0.125,
+        "max_equal_time_fourth_moment": 237.58147755921354,
+        "max_holder_moment": 237.32568358717901,
+        "max_identity_residual": 2.8421709430404007e-13,
+        "max_operator_fourth_bound": 6561.0,
+        "max_spectral_residual": 2.220446049250313e-16,
+        "max_two_slice": 237.3256835871793,
+        "min_amgm_slack": 0.0011491887255503652,
+        "min_operator_slack": 28.760414456639406,
+        "oscillator_dimension": 3,
+        "volume": 4
+      },
+      {
+        "beta": 0.25,
+        "max_equal_time_fourth_moment": 166.45658673824397,
+        "max_holder_moment": 165.62349719245782,
+        "max_identity_residual": 2.842170943040401e-14,
+        "max_operator_fourth_bound": 6561.0,
+        "max_spectral_residual": 2.842170943040401e-14,
+        "max_two_slice": 165.62349719245785,
+        "min_amgm_slack": 0.0037336581867463137,
+        "min_operator_slack": 29.078895384264833,
+        "oscillator_dimension": 3,
+        "volume": 4
+      },
+      {
+        "beta": 0.5,
+        "max_equal_time_fourth_moment": 88.54773612404603,
+        "max_holder_moment": 86.19251112568405,
+        "max_identity_residual": 8.526512829121202e-14,
+        "max_operator_fourth_bound": 6561.0,
+        "max_spectral_residual": 4.263256414560601e-14,
+        "max_two_slice": 86.19251112568396,
+        "min_amgm_slack": 0.01051964324441873,
+        "min_operator_slack": 29.425648990751526,
+        "oscillator_dimension": 3,
+        "volume": 4
+      },
+      {
+        "beta": 1.0,
+        "max_equal_time_fourth_moment": 30.458234629113665,
+        "max_holder_moment": 24.764019618109227,
+        "max_identity_residual": 3.552713678800501e-15,
+        "max_operator_fourth_bound": 6561.0,
+        "max_spectral_residual": 1.3877787807814457e-17,
+        "max_two_slice": 24.764019618109224,
+        "min_amgm_slack": 0.025449350094189915,
+        "min_operator_slack": 29.681623373017505,
+        "oscillator_dimension": 3,
+        "volume": 4
+      },
+      {
+        "beta": 2.0,
+        "max_equal_time_fourth_moment": 11.648674561752301,
+        "max_holder_moment": 2.079083265341849,
+        "max_identity_residual": 4.440892098500626e-16,
+        "max_operator_fourth_bound": 6561.0,
+        "max_spectral_residual": 8.881784197001252e-16,
+        "max_two_slice": 2.0790832653418496,
+        "min_amgm_slack": 0.043169480401246435,
+        "min_operator_slack": 29.762676044222943,
+        "oscillator_dimension": 3,
+        "volume": 4
+      },
+      {
+        "beta": 0.125,
+        "max_equal_time_fourth_moment": 6.622793460974427,
+        "max_holder_moment": 6.622793460974435,
+        "max_identity_residual": 3.552713678800501e-15,
+        "max_operator_fourth_bound": 62.36515726132087,
+        "max_spectral_residual": 2.6645352591003757e-15,
+        "max_two_slice": 6.622793460974432,
+        "min_amgm_slack": -1.7763568394002505e-15,
+        "min_operator_slack": 3.260441699076526e-61,
+        "oscillator_dimension": 2,
+        "volume": 6
+      },
+      {
+        "beta": 0.25,
+        "max_equal_time_fourth_moment": 5.818122173018378,
+        "max_holder_moment": 5.818122173018379,
+        "max_identity_residual": 1.7763568394002505e-15,
+        "max_operator_fourth_bound": 62.36515726132087,
+        "max_spectral_residual": 1.7763568394002505e-15,
+        "max_two_slice": 5.818122173018377,
+        "min_amgm_slack": -8.881784197001252e-16,
+        "min_operator_slack": 3.3075079453286305e-61,
+        "oscillator_dimension": 2,
+        "volume": 6
+      },
+      {
+        "beta": 0.5,
+        "max_equal_time_fourth_moment": 4.469529768179349,
+        "max_holder_moment": 4.469529768179355,
+        "max_identity_residual": 4.440892098500626e-15,
+        "max_operator_fourth_bound": 62.36515726132087,
+        "max_spectral_residual": 8.636168555094445e-78,
+        "max_two_slice": 4.469529768179351,
+        "min_amgm_slack": -1.7763568394002505e-15,
+        "min_operator_slack": 3.386388828951433e-61,
+        "oscillator_dimension": 2,
+        "volume": 6
+      },
+      {
+        "beta": 1.0,
+        "max_equal_time_fourth_moment": 2.538541935125637,
+        "max_holder_moment": 2.5385419351256377,
+        "max_identity_residual": 4.440892098500626e-16,
+        "max_operator_fourth_bound": 62.36515726132087,
+        "max_spectral_residual": 8.881784197001252e-16,
+        "max_two_slice": 2.538541935125638,
+        "min_amgm_slack": -4.440892098500626e-16,
+        "min_operator_slack": 3.49933476130995e-61,
+        "oscillator_dimension": 2,
+        "volume": 6
+      },
+      {
+        "beta": 2.0,
+        "max_equal_time_fourth_moment": 0.6237673956901514,
+        "max_holder_moment": 0.6237673956901499,
+        "max_identity_residual": 4.440892098500626e-16,
+        "max_operator_fourth_bound": 62.36515726132087,
+        "max_spectral_residual": 5.397605346934028e-79,
+        "max_two_slice": 0.6237673956901495,
+        "min_amgm_slack": 1.8351858179575695e-77,
+        "min_operator_slack": 3.611332357520011e-61,
+        "oscillator_dimension": 2,
+        "volume": 6
+      }
+    ],
+    "qft_promoted": false,
+    "tail_fourth_moment_uniform_closed": false
+  },
+  "exploration_id": "EXP-001189",
+  "lean": {
+    "command": "lake env lean Tect/R348.lean",
+    "output": "Tect/R348.lean:5:47: warning: Variable name `h` is not explicitly referenced.\n\nThe binding can be removed (if unused) or named `_` (if used implicitly).\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\nTect/R348.lean:11:5: warning: Variable name `h_two_nonnegative` is not explicitly referenced.\n\nThe binding can be removed (if unused) or named `_` (if used implicitly).\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`",
+    "returncode": 0,
+    "status": "PASS"
+  },
+  "provenance": {
+    "independent_sha256": "e3d990e5a340ace3512d322b3aa84da409b0ae0c2e162cc04747588d32587de4",
+    "lean_sha256": "ef6363ed695cff3e1059375e1261187652bb068877f43ef0efb98dd3e922d3db",
+    "manifest_sha256": "bd94c418ccf8f87cc15e9a666ef268d6b8901ba460f6037773f9fddeeab0fb2a",
+    "primary_sha256": "e1fbd5049fe2637677d1a770fa0c51b2e53e84d027be852778382874db632caf"
+  },
+  "recorded_at": "2026-08-26T16:37:49.217571Z",
+  "run_kind": "integrated",
+  "schema": "tect/foundation-audit/1.0",
+  "task_id": "T-054",
+  "verdict": "PASS"
+}

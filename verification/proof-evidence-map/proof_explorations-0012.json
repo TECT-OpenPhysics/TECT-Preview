@@ -10245,6 +10245,156 @@
       "task_id": "T-054",
       "title": "Finite Q3 unitary-history tail Holder corollary",
       "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "axis": "trace order",
+          "check": "The identity retains Tr(rho^(1/2)W^2rho^(1/2)W^2); only legal cyclic trace rotations are used.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "Euclidean separation",
+          "check": "The two Gibbs half-factors correspond to beta/2, not beta or beta/4, and the spectral formula uses sqrt(p_i p_j).",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "energy shift",
+          "check": "The common energy shift used for stable exponentials cancels after normalization and is not treated as a physical modification.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "tail positivity",
+          "check": "W is symmetrized before W^2 and W^4 are formed; no positivity is assigned to an unsymmetrized tail.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "noncommutativity",
+          "check": "The calculation never assumes [rho,W]=0; the two-slice and equal-time terms are compared through the H eigenbasis and Hermitian symmetry of W^2.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "AM-GM step",
+          "check": "The coefficient sqrt(p_i p_j) is bounded by (p_i+p_j)/2 and the symmetric matrix-entry sum is retained; no unproved operator ordering is invoked.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "operator bound",
+          "check": "Tr(rho W^4)<=||W||_infinity^4 is used only for normalized finite matrices, while its volume/cutoff behavior is reported as open.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "truncated oscillator",
+          "check": "Dimensions 3, 3 and 2 are declared finite fixtures and do not establish unbounded CCR or common-core control.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "independence",
+          "check": "The independent lane reconstructs the oscillator, Q3 bonds, cutoff, Gibbs roots and spectral sums without importing the primary script.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "Lean boundary",
+          "check": "R348 certifies scalar AM-GM and envelope assembly only; Python supplies matrix spectral identities and all limiting statements remain open.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "QFT promotion",
+          "check": "The finite Euclidean interface does not prove reflection positivity, OS reconstruction, common dynamics, a GNS gap, continuum, C6, Sector A or Pre-A.",
+          "disposition": "UPHELD-OPEN"
+        }
+      ],
+      "boundary": "T0 claim-nonbearing finite Q3 Euclidean/OS-KMS interface checkpoint. It is not a thermodynamic common-Hilbert theorem, a common-alpha construction, a mass-gap proof, a continuum result, or a QFT/Clay closure.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "closed": [
+        "finite self-adjoint-tail fourth-leg identity",
+        "finite beta/2 Euclidean two-slice trace identity",
+        "finite H-eigenbasis spectral cross-check",
+        "finite AM-GM equal-time fourth-moment envelope",
+        "finite normalized-state operator fourth envelope",
+        "independent Q3 reproduction and Lean R348 scalar cross-check"
+      ],
+      "decision_reason": "The matrix trace identity is exact in finite dimension: the positive quarter-root Schatten-4 fourth power equals the beta/2 Euclidean two-slice correlation of W^2. In the Gibbs eigenbasis, the AM-GM inequality on sqrt(p_i p_j) gives a valid noncommutative coercive envelope by the equal-time fourth moment, and normalization gives the finite operator-norm envelope. The independent reconstruction and R348 cross-check confirm the declared finite scope. The tested moment values vary with the finite graph, oscillator dimension, beta and cutoff, so no source/volume/cutoff/beta-uniform local estimate or QFT reconstruction is promoted.",
+      "evidence_refs": [
+        "strategy/pre-a-cp1-st8-q3lock-finite-euclidean-two-slice-tail-moment-manifest.json#mathematical_interface",
+        "codes/foundations/pre_a_cp1_st8_q3lock_finite_euclidean_two_slice_tail_moment.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_finite_euclidean_two_slice_tail_moment_independent.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_finite_euclidean_two_slice_tail_moment_verify.py#run",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-27-primary-pre-a-cp1-st8-q3lock-finite-euclidean-two-slice-tail-moment/primary.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-27-independent-pre-a-cp1-st8-q3lock-finite-euclidean-two-slice-tail-moment/independent.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-27-integrated-pre-a-cp1-st8-q3lock-finite-euclidean-two-slice-tail-moment/integrated.json#lean",
+        "verification/lean/Tect/R348.lean#two_slice_arithmetic_mean",
+        "verification/lean/Tect/R348.lean#euclidean_tail_scalar_envelope",
+        "verification/lean/registry.json#R348"
+      ],
+      "finding": "Primary 249/249 and independent 249/249 assertions pass; the integrated verifier passes 17/17 with Lean R348 PASS over 30 finite Q3 tail rows and 15 volume-beta summaries. The largest ||rho^(1/4)W||_4^4-to-two-slice identity residual is 2.8421709430404007e-13, the largest spectral-form residual is 4.263256414560601e-14, the smallest AM-GM slack is -1.7763568394002505e-15 (roundoff), and the smallest operator-envelope slack is 3.260441699076526e-61. The largest two-slice moment is 237.3256835871793, the largest equal-time fourth moment is 237.58147755921354, and the largest finite operator fourth bound is 6561.0 on the declared grid. These values are finite diagnostics with substantial parameter dependence, not a uniformity result.",
+      "formal_integration": {
+        "events": [],
+        "lean": "R348 PASS",
+        "negatives": [],
+        "no_new_event": true,
+        "no_new_negative": true,
+        "no_new_result": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "results": []
+      },
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": []
+      },
+      "gate_ids": [
+        "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+        "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+        "PA-CP1-ST8-Q3LOCK-ALL-EXHAUSTION-MIXTURE-L2-LOCALITY-AND-BETA-INDEPENDENT-CSTAR-DYNAMICS",
+        "PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE"
+      ],
+      "id": "EXP-001189",
+      "method": [
+        "Load the declared EXP-001188 Q3 fixture so geometry, oscillator dimensions, couplings, beta values and cutoff radii are inherited from one upstream source.",
+        "For each finite volume, beta and coordinate cutoff, construct the normalized Gibbs spectrum, rho^(1/2), rho^(1/4), and the explicitly symmetrized cutoff tail W.",
+        "Compute ||rho^(1/4)W||_4^4, Tr(rho^(1/2)W^2rho^(1/2)W^2), and the H-eigenbasis sum of sqrt(p_i p_j)|(W^2)_ij|^2; compare all three without commuting W through rho.",
+        "Check the finite arithmetic-mean envelope by Tr(rho W^4) and the normalized-state operator envelope ||W||_infinity^4, retaining numerical slacks and beta/volume variation.",
+        "Reconstruct the Q3 matrices and all rows in a non-importing independent lane, compare grouped summaries, and compile Lean R348 for the scalar AM-GM/envelope assembly."
+      ],
+      "next_action": "Use the two-slice identity to formulate and test a source-local Euclidean fourth-moment estimate on a named Q3 common core, then stress its volume/cutoff/beta dependence before inserting it into the direct Duhamel recurrence.",
+      "no_overclaim": "This record promotes only the finite trace/spectral two-slice identity and finite AM-GM/operator envelopes. It does not prove uniform local moments, modular-domain transfer, direct Cauchy convergence, exhaustion independence, common alpha, Hamiltonian-OS identification, a GNS gap, continuum, C6, Sector A or Pre-A.",
+      "open": [
+        "source-, volume-, cutoff- and beta-uniform local fourth-moment estimate on a named unbounded Q3 common core",
+        "continuity of the Euclidean four-point form under oscillator-cutoff and spatial-exhaustion limits",
+        "modular-domain transfer and direct D,delta-D Cauchy",
+        "all-shape exhaustion, product/core density and common alpha",
+        "Hamiltonian-to-OS/KMS/GNS identification and a phasewise GNS gap",
+        "continuum, C6, Sector A and Pre-A"
+      ],
+      "prior_exploration_id": "EXP-001188",
+      "provenance": "contemporaneous",
+      "qft_interface": {
+        "closed": "On the declared finite Q3 matrices, the Holder tail factor is exactly a beta/2 Euclidean two-slice correlation of W^2 and is bounded by the equal-time fourth moment and finite operator norm.",
+        "open": "A source-, volume-, cutoff- and beta-uniform local coercive estimate, unbounded common core, direct D/delta-D Cauchy, common OS carrier/dynamics, OS/KMS/GNS identification, gap, continuum, C6, Sector A and Pre-A remain open.",
+        "tect_boundary": "Auxiliary C6/Q3 finite evidence only; no heat_root_incidence or canonical A1/R-192 production owner is supplied."
+      },
+      "question": "Can the finite Q3 tail fourth leg be identified with a beta/2 Euclidean two-slice correlation and bounded by an equal-time fourth moment without assuming Gibbs commutation?",
+      "recorded_at": "2026-08-29T05:03:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001188",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001187",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-08-27",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Finite Q3 Euclidean two-slice tail-moment bridge",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",

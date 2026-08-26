@@ -1,0 +1,71 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "exploration_id": "EXP-001189",
+  "prior_exploration_id": "EXP-001188",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "claim_bearing": false,
+  "tier": "T0",
+  "title": "Finite Q3 Euclidean two-slice tail-moment bridge",
+  "question": "Can the finite Q3 tail fourth leg be identified with a beta/2 Euclidean two-slice correlation and bounded by an equal-time fourth moment without assuming Gibbs commutation?",
+  "parent_explorations": ["EXP-001188", "EXP-001187"],
+  "fixture_source": "strategy/pre-a-cp1-st8-q3lock-finite-unitary-tail-holder-corollary-manifest.json",
+  "mathematical_interface": {
+    "quarter_root": "For normalized rho, set S=rho^(1/4) and R=rho^(1/2).",
+    "tail_moment": "For self-adjoint W, ||S W||_4^4 = Tr(R W^2 R W^2).",
+    "euclidean_two_slice": "Tr(R W^2 R W^2) = Z^(-1) Tr(exp(-beta H/2) W^2 exp(-beta H/2) W^2), the beta/2 Euclidean two-slice correlation of W^2.",
+    "spectral_form": "In an H eigenbasis the same quantity is sum_ij sqrt(p_i p_j) |(W^2)_ij|^2.",
+    "coercive_envelope": "The arithmetic-geometric mean inequality gives 0 <= two_slice <= Tr(rho W^4) <= ||W||_infinity^4 for every finite self-adjoint W.",
+    "qft_role": "This is the finite OS/KMS-facing insertion needed by the direct Duhamel lane; it does not supply a source/volume/cutoff-uniform local moment or a common infinite-volume dynamics."
+  },
+  "scope": {
+    "finite_tail_fourth_leg_identity_closed": true,
+    "finite_euclidean_two_slice_identity_closed": true,
+    "finite_spectral_two_slice_crosscheck_closed": true,
+    "finite_equal_time_coercive_envelope_closed": true,
+    "finite_actual_q3_rows_closed": true,
+    "tail_fourth_moment_uniform_closed": false,
+    "source_volume_cutoff_beta_uniform_closed": false,
+    "local_coercive_common_core_closed": false,
+    "direct_d_delta_d_cauchy_closed": false,
+    "common_os_hilbert_carrier_closed": false,
+    "common_word_exhaustion_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R348.lean",
+    "command": "lake env lean Tect/R348.lean",
+    "theorem_markers": ["two_slice_arithmetic_mean", "euclidean_tail_scalar_envelope"],
+    "role": "R348 checks the nonnegative scalar AM-GM and envelope assembly; matrix trace identities, Q3 rows, and all thermodynamic limits remain Python evidence."
+  },
+  "adversarial_review": [
+    {"axis": "trace order", "check": "The identity is evaluated as Tr(rho^(1/2) W^2 rho^(1/2) W^2); no cyclic rearrangement moves W through rho beyond a legal trace rotation.", "disposition": "UPHELD"},
+    {"axis": "Euclidean separation", "check": "The half-beta insertion is derived from exp(-beta H/2) on both sides, so the separation is beta/2 rather than beta or beta/4.", "disposition": "UPHELD"},
+    {"axis": "energy shift", "check": "The Gibbs construction uses shifted energies only to avoid overflow; the common scalar shift cancels in the normalized two-slice expression.", "disposition": "UPHELD"},
+    {"axis": "tail adjoint", "check": "The cutoff tail is symmetrized and W^2 is therefore positive; no positivity is asserted for an unsymmetrized tail.", "disposition": "UPHELD"},
+    {"axis": "noncommutativity", "check": "The two-slice term retains both R factors and is compared in the H eigenbasis; [rho,W] is never set to zero.", "disposition": "UPHELD"},
+    {"axis": "coercive bound", "check": "The finite bound uses sqrt(p_i p_j) <= (p_i+p_j)/2 and the exact Hermitian symmetry of W^2 matrix entries, not an unproved operator ordering.", "disposition": "UPHELD"},
+    {"axis": "operator envelope", "check": "Tr(rho W^4) <= ||W||_infinity^4 is checked only in finite normalized states; its uniformity in volume and cutoff is explicitly left open.", "disposition": "UPHELD-OPEN"},
+    {"axis": "truncated oscillator", "check": "All Q3 rows use the declared finite oscillator dimensions and do not establish an unbounded CCR or common-core theorem.", "disposition": "UPHELD-OPEN"},
+    {"axis": "independence", "check": "The independent lane reconstructs the Q3 Hamiltonian, Gibbs weights, tail and spectral sums without importing the primary script.", "disposition": "UPHELD"},
+    {"axis": "Lean boundary", "check": "R348 formalizes scalar inequalities only; it does not pretend to formalize matrix Schatten norms, OS reconstruction or thermodynamic limits.", "disposition": "UPHELD-OPEN"},
+    {"axis": "QFT promotion", "check": "The finite two-slice identity is an interface to OS/KMS correlation language, not a proof of reflection positivity, common dynamics, a GNS gap, continuum, C6, Sector A or Pre-A.", "disposition": "UPHELD-OPEN"}
+  ],
+  "qft_interface": {
+    "closed": "The finite Gibbs tail leg is exactly a beta/2 Euclidean two-slice correlation of W^2 and is bounded by the equal-time fourth moment and finite operator norm.",
+    "open": "A source-, volume-, cutoff- and beta-uniform local fourth-moment/coercive estimate, common core, direct D/delta-D Cauchy convergence, OS/KMS/GNS identification, common alpha, gap, continuum, C6, Sector A and Pre-A remain open.",
+    "tect_boundary": "Auxiliary C6/Q3 finite evidence only; no heat_root_incidence or canonical A1/R-192 production owner is supplied."
+  },
+  "next_action": "Use the two-slice identity to formulate a source-local Euclidean fourth-moment estimate on the named Q3 common core, then stress its volume/cutoff/beta dependence before inserting it into the direct Duhamel recurrence.",
+  "boundary": "T0 claim-nonbearing finite Q3 Euclidean/OS-KMS interface checkpoint. It is not a thermodynamic common-Hilbert theorem, a common-alpha construction, a mass-gap proof, a continuum result, or a QFT/Clay closure.",
+  "no_overclaim": "This package promotes only the finite trace/spectral two-slice identity and its finite AM-GM/operator envelope. It does not prove a uniform local moment, modular-domain transfer, direct Cauchy convergence, exhaustion independence, common alpha, Hamiltonian-OS identification, a GNS gap, continuum, C6, Sector A or Pre-A."
+}
