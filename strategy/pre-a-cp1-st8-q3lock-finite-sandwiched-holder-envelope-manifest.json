@@ -1,0 +1,147 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "exploration_id": "EXP-001187",
+  "prior_exploration_id": "EXP-001186",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "claim_bearing": false,
+  "tier": "T0",
+  "title": "Finite Q3 inverse-free sandwiched Schatten-Hoelder commutator envelope",
+  "question": "Can a symmetric rho^(1/4)-sandwiched state norm bound a Q3 cutoff commutator by four-leg Schatten-4 factors without inverse Gibbs powers, and do the finite rows provide a uniform local fourth-moment estimate?",
+  "parent_explorations": [
+    "EXP-001186",
+    "EXP-001185",
+    "EXP-001143",
+    "EXP-001089"
+  ],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-CP1-ST8-Q3LOCK-ALL-EXHAUSTION-MIXTURE-L2-LOCALITY-AND-BETA-INDEPENDENT-CSTAR-DYNAMICS",
+    "PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE"
+  ],
+  "mathematical_interface": {
+    "state": "rho is a finite-dimensional positive Gibbs density matrix and S=rho^(1/4).",
+    "symmetric_norm": "N2_sym(X)=||S X S||_2.",
+    "four_leg_norms": "L4_left(X)=||S X||_4 and L4_right(X)=||X S||_4.",
+    "envelope": "N2_sym([W,A]) <= L4_left(W)L4_right(A)+L4_left(A)L4_right(W).",
+    "reason": "Write S[W,A]S=(SW)(AS)-(SA)(WS), apply Schatten Holder to each product, then use the triangle inequality.",
+    "domain_advantage": "Only positive quarter powers of the finite Gibbs state are used; no rho^(-1/2), modular inverse, or finite support floor is used in the inequality."
+  },
+  "finite_fixture": {
+    "scenarios": [
+      {"volume": 2, "oscillator_dimension": 3},
+      {"volume": 4, "oscillator_dimension": 3},
+      {"volume": 6, "oscillator_dimension": 2}
+    ],
+    "beta_values": [0.125, 0.25, 0.5, 1.0, 2.0],
+    "radius_values": [0.5, 1.0],
+    "time_values": [0.05, 0.15],
+    "interpolation_values": [0.0, 0.5, 1.0],
+    "orientation_values": [-1, 1],
+    "observable_support": [0, 1],
+    "character_amplitude": 0.3333333333333333,
+    "hbar": 1.0,
+    "chi": 1.0,
+    "r": -1.0,
+    "g": 0.6,
+    "c": 0.6,
+    "lambda": 0.1,
+    "holder_tolerance": 1.0e-8,
+    "support_tolerance": 1.0e-7,
+    "positivity_floor": 1.0e-300,
+    "lane_tolerance": 1.0e-6
+  },
+  "scope": {
+    "finite_inverse_free_sandwiched_holder_closed": true,
+    "finite_actual_q3_history_rows_closed": true,
+    "finite_two_orientation_rows_closed": true,
+    "finite_support_commutation_rows_closed": true,
+    "local_fourth_moment_uniform_closed": false,
+    "source_volume_cutoff_beta_uniform_closed": false,
+    "modular_domain_transfer_closed": false,
+    "unbounded_common_core_closed": false,
+    "direct_d_delta_d_cauchy_closed": false,
+    "common_os_hilbert_carrier_closed": false,
+    "common_word_exhaustion_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R346.lean",
+    "command": "lake env lean Tect/R346.lean",
+    "theorem_markers": [
+      "two_term_holder_assembly",
+      "holder_envelope_fixture"
+    ],
+    "role": "R346 checks the exact nonnegative two-leg scalar assembly used by the finite Schatten-Hoelder envelope; matrix Schatten calculus and all limits remain Python evidence."
+  },
+  "adversarial_review": [
+    {
+      "axis": "noncommutativity",
+      "check": "The factorization keeps S on the displayed side of each factor and never commutes rho, W, or A.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "Schatten exponents",
+      "check": "Each product uses 1/2=1/4+1/4, and the finite code computes singular-value p=4 norms rather than an entrywise surrogate.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "commutator sign",
+      "check": "Both W A-A W and its adjoint history are evaluated; reversing the sign cannot improve the declared two-sided bound.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "inverse Gibbs powers",
+      "check": "The new norm uses only rho^(1/4); no inverse power is formed. Full-rank probabilities are reported only as finite Gibbs construction diagnostics.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "support locality",
+      "check": "Source and disjoint-tail commutators are measured for every finite volume and cutoff instead of inferred from labels.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "uniformity",
+      "check": "The finite four-leg factors are summarized across beta, volume, radius, time, interpolation and both orientations; finite maxima are not called a common-core bound.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "truncated oscillator",
+      "check": "Oscillator dimensions are explicit and no finite matrix inequality is promoted to the unbounded CCR domain.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "independence",
+      "check": "The independent lane reconstructs the oscillator, graph, Q3 Hamiltonian, cutoff, Gibbs quarter root, histories and singular-value norms without importing the primary lane.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "Lean boundary",
+      "check": "R346 certifies only scalar nonnegative assembly and an exact rational fixture, not Schatten Holder, spectral calculus, or QFT limits.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "QFT promotion",
+      "check": "No direct D/delta-D Cauchy theorem, modular-domain transfer, common OS carrier, exhaustion, common alpha, Hamiltonian-OS identification, GNS gap, continuum, C6, Sector A or Pre-A closure is inferred.",
+      "disposition": "UPHELD-OPEN"
+    }
+  ],
+  "qft_interface": {
+    "closed": "A finite inverse-free state-norm commutator envelope and its actual-Q3 two-orientation history rows, independently reproduced and scalar-cross-checked in Lean.",
+    "open": "A source-, volume-, cutoff- and beta-uniform local fourth-moment bound, unbounded common-core continuity, modular-domain transfer, direct D/delta-D Cauchy, exhaustion, common alpha, OS/KMS/GNS identification, gap, continuum, C6, Sector A and Pre-A remain open.",
+    "tect_boundary": "Auxiliary C6/Q3 finite evidence only; no heat_root_incidence, canonical A1/R-192 production owner or physical reference is supplied."
+  },
+  "next_action": "Use the four-leg expression as the candidate integrand in the direct Duhamel route only after proving a local, source/volume/beta-uniform fourth-moment estimate on a named Q3 common core; if the factors grow, retain that as route-local evidence and do not promote it to a global no-go.",
+  "boundary": "T0 claim-nonbearing finite Q3 inverse-free Schatten-Hoelder checkpoint. It is not a thermodynamic common-Hilbert theorem, a common-alpha construction, a mass-gap proof, a continuum result, or a QFT/Clay closure.",
+  "no_overclaim": "This package promotes only the finite noncommutative Holder envelope and its declared matrix rows. It does not prove local moment uniformity, an unbounded domain theorem, direct Cauchy convergence, OS/KMS/GNS reconstruction, a gap, continuum, C6, Sector A or Pre-A."
+}

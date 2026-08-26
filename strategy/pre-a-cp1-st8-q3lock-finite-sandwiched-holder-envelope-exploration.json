@@ -1,0 +1,91 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001187",
+  "title": "Finite Q3 inverse-free sandwiched Schatten-Holder commutator envelope",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-CP1-ST8-Q3LOCK-ALL-EXHAUSTION-MIXTURE-L2-LOCALITY-AND-BETA-INDEPENDENT-CSTAR-DYNAMICS",
+    "PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE"
+  ],
+  "prior_exploration_id": "EXP-001186",
+  "related": [
+    {"id": "EXP-001185", "relation": "continues"},
+    {"id": "EXP-001143", "relation": "alternative_to"},
+    {"id": "EXP-001089", "relation": "alternative_to"}
+  ],
+  "provenance": "contemporaneous",
+  "recorded_at": "2026-08-29T05:01:00Z",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-08-26",
+  "question": "Can a symmetric rho^(1/4)-sandwiched state norm bound a Q3 cutoff commutator by four-leg Schatten-4 factors without inverse Gibbs powers, and do finite rows provide a uniform local fourth-moment estimate?",
+  "method": [
+    "For each declared volume, beta, and cutoff, build the finite actual-Q3 Hamiltonian, its normalized Gibbs density rho, and S=rho^(1/4) from the positive spectral root only.",
+    "For both cutoff orientations, all interpolation values, and both declared times, evolve the supported character with the finite perturbed Hamiltonian and set W to the cutoff tail and A to the evolved history.",
+    "Compute N2_sym(X)=||S X S||_2 and the four Schatten-4 legs L4_left(X)=||S X||_4 and L4_right(X)=||X S||_4. Check N2_sym([W,A]) <= L4_left(W)L4_right(A)+L4_left(A)L4_right(W), and repeat for the adjoint history.",
+    "Measure source and disjoint-tail commutators, summarize all 360 history rows and 30 support rows by volume and beta, reconstruct the entire lane independently, and compile Lean R346 for the scalar two-term assembly."
+  ],
+  "finding": "Primary 821/821 and independent 819/819 pass. The integrated verifier passes 13/13 with Lean R346 PASS. The inverse-free Holder inequality holds for all 360 finite history rows and both adjoint orientations. The largest observed lhs/bound ratio is 0.041931489103944904. The largest finite envelope is 7.8499371712268875 and the largest lhs is 0.11986154052772928. At beta=0.125 the volume maxima are 2.9874168293939736 (V=2), 7.8499371712268875 (V=4), and 3.2084132299428685 (V=6); at beta=2 they are 1.5310283085027718, 2.4015850221048702, and 1.777401994922689. The largest tail fourth-leg factor is 3.9249685856134424. Measured source and disjoint-tail commutators remain below 7.82258885373977e-15 and 3.2040556572188632e-15 respectively.",
+  "verdict": "advanced",
+  "decision_reason": "The finite noncommutative factorization is a genuine inverse-free replacement for the prior Gibbs-similarity envelope: it keeps the state on the displayed side of every factor and uses the Schatten 1/4+1/4=1/2 Holder exponents. It therefore identifies a candidate direct-Duhamel integrand that does not require a finite Gibbs spectral floor. The finite envelope is loose and varies with beta and volume, and the tested finite maxima do not supply a local or common-core fourth-moment theorem. No asymptotic divergence or global no-go is inferred.",
+  "closed": [
+    "finite inverse-free sandwiched Schatten-Holder commutator envelope",
+    "finite actual-Q3 history rows for both cutoff orientations and adjoints",
+    "finite source and disjoint-tail support checks",
+    "independent numerical reproduction",
+    "Lean R346 scalar cross-check"
+  ],
+  "open": [
+    "source-, volume-, cutoff- and beta-uniform local fourth-moment estimate on a named unbounded Q3 common core",
+    "continuity of the four-leg map under oscillator-cutoff removal",
+    "modular-domain transfer and direct D,delta-D Cauchy",
+    "all-shape exhaustion, product/core density and common alpha",
+    "Hamiltonian-to-OS/KMS/GNS identification and a phasewise GNS gap",
+    "continuum, C6, Sector A and Pre-A"
+  ],
+  "adversarial_review": [
+    {"axis": "noncommuting factor placement", "check": "The proof uses S[W,A]S=(SW)(AS)-(SA)(WS) exactly; no Gibbs factor is commuted through W or A.", "disposition": "UPHELD"},
+    {"axis": "Schatten exponents", "check": "Both products use Schatten 4 times Schatten 4 into Schatten 2, and the code computes singular-value norms rather than entrywise maxima.", "disposition": "UPHELD"},
+    {"axis": "adjoint and orientation", "check": "Both W signs, every interpolation/time row, and the adjoint history are checked independently.", "disposition": "UPHELD"},
+    {"axis": "inverse powers", "check": "The new path constructs only the positive quarter root of rho; no inverse Gibbs power appears in the primary or independent code.", "disposition": "UPHELD"},
+    {"axis": "support inference", "check": "Source and disjoint-tail commutators are measured numerically in every finite row and are not inferred from graph labels.", "disposition": "UPHELD"},
+    {"axis": "finite conditioning", "check": "Finite Gibbs positivity and spectral-root residuals are retained as diagnostics; no finite floor is interpreted as a thermodynamic lower bound.", "disposition": "UPHELD-OPEN"},
+    {"axis": "uniformity", "check": "The beta/volume/cutoff summaries show finite parameter dependence; neither their maxima nor the Holder residual closes a common-core uniform estimate.", "disposition": "UPHELD-OPEN"},
+    {"axis": "truncated CCR", "check": "Oscillator dimensions 3, 3, and 2 are explicit, so no exact infinite CCR or unbounded-domain statement is claimed.", "disposition": "UPHELD-OPEN"},
+    {"axis": "independence", "check": "The independent lane reconstructs the model and singular-value calculations without importing the primary program.", "disposition": "UPHELD"},
+    {"axis": "Lean boundary", "check": "R346 certifies only nonnegative scalar two-term assembly and an exact rational fixture; matrix Holder and limits remain outside Lean.", "disposition": "UPHELD-OPEN"},
+    {"axis": "QFT promotion", "check": "Direct Cauchy, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector A and Pre-A remain false in the manifest and run artefacts.", "disposition": "UPHELD-OPEN"}
+  ],
+  "formal_integration": {
+    "lean": "R346 PASS",
+    "events": [],
+    "results": [],
+    "negatives": [],
+    "no_new_event": true,
+    "no_new_result": true,
+    "no_new_negative": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "evidence_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-finite-sandwiched-holder-envelope-manifest.json#mathematical_interface",
+    "codes/foundations/pre_a_cp1_st8_q3lock_finite_sandwiched_holder_envelope.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_finite_sandwiched_holder_envelope_independent.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_finite_sandwiched_holder_envelope_verify.py#run",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-primary-pre-a-cp1-st8-q3lock-finite-sandwiched-holder-envelope/primary.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-independent-pre-a-cp1-st8-q3lock-finite-sandwiched-holder-envelope/independent.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-integrated-pre-a-cp1-st8-q3lock-finite-sandwiched-holder-envelope/integrated.json#lean",
+    "verification/lean/Tect/R346.lean#two_term_holder_assembly",
+    "verification/lean/registry.json#R346"
+  ],
+  "qft_interface": {
+    "closed": "Finite inverse-free state-norm control of the cutoff commutator on the declared Q3 matrix fixtures, with independent and Lean cross-checks.",
+    "open": "The local fourth-leg moments may depend on volume, source, cutoff and beta; an unbounded common-core estimate, direct D/delta-D Cauchy, common carrier/dynamics, OS/KMS/GNS reconstruction, a gap, continuum, C6, Sector A and Pre-A remain open.",
+    "tect_boundary": "Auxiliary C6/Q3 finite evidence only; no heat_root_incidence, canonical A1/R-192 production owner or physical-empty comparison is supplied."
+  },
+  "next_action": "Derive a local fourth-moment bound from the actual Q3 coercive energy form on a named common core, and prove its cutoff/source/volume/beta uniformity before inserting this Holder envelope into the direct Duhamel history recurrence. If that estimate fails, record the failure as route-local and keep the OS/KMS/GNS gates open.",
+  "boundary": "T0 claim-nonbearing finite Q3 inverse-free Holder checkpoint. It is not a thermodynamic common-Hilbert theorem, a common-alpha construction, a mass-gap proof, a continuum result, or a QFT/Clay closure.",
+  "no_overclaim": "This record promotes only the finite matrix Holder envelope and its declared diagnostics. It does not prove local moment uniformity, modular-domain transfer, direct Cauchy convergence, exhaustion independence, common alpha, Hamiltonian-OS identification, a GNS gap, continuum, C6, Sector A or Pre-A."
+}
