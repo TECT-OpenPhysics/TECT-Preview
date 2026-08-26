@@ -9695,6 +9695,129 @@
       "task_id": "T-054",
       "title": "Finite Q3 source-boundary quadratic Duhamel norm envelope and cutoff stress",
       "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "axis": "weight noncommutation",
+          "check": "K is retained as a full matrix and inverse-square-root factors are inserted by multiplication only; no simultaneous diagonalization with Delta, B or rho is assumed.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "Gibbs modular orientation",
+          "check": "Both rho^(-1/2)Delta rho^(1/2) and its adjoint orientation enter the left-leg coefficients, while the right-leg K similarity constants are kept separate.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "component aggregation",
+          "check": "All four component inequalities are checked numerically, and Gamma is the maximum of their four explicit coefficients rather than a fitted post hoc constant.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "finite inverse powers",
+          "check": "Positive K and full-rank finite Gibbs rho are checked before inverse powers; the declared eigenvalue floor is only finite admissibility and not a thermodynamic lower bound.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "cutoff and volume",
+          "check": "Both cutoff radii, all three volumes, three beta values, both orientations, three interpolation points and two times are retained; coefficient growth is not promoted to divergence.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "independence",
+          "check": "The independent lane rebuilds oscillator tensors, Q3 onsite/bond matrices, cutoff bonds, Gibbs powers, similarity constants and weighted legs without importing the primary audit.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "Lean boundary",
+          "check": "R344 certifies only the nonnegative scalar component aggregation used after finite matrix factorization; Python supplies the spectral and matrix calculations.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "QFT promotion",
+          "check": "The finite multiplier envelope does not prove modular-domain transfer, source/volume/cutoff/beta uniformity, a common OS carrier, exhaustion, common alpha, Hamiltonian-OS identification, a GNS gap, continuum, C6, Sector A or Pre-A.",
+          "disposition": "UPHELD-OPEN"
+        }
+      ],
+      "boundary": "T0 claim-nonbearing finite Q3 modular multiplier checkpoint. It is not a thermodynamic common-Hilbert theorem, a common-alpha construction, a mass-gap proof, a continuum result, or a QFT/Clay closure.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "The exact finite matrix factorization supplies the missing bookkeeping between a source-boundary commutator and a local/modular four-leg norm: all noncommuting left/right energy and Gibbs similarity factors are explicit, and every component is checked before aggregation. The coefficient is finite on each declared matrix fixture but grows across the tested graph family and is built from finite inverse Gibbs powers. Consequently this is a reusable QFT-facing finite interface, not a source-, volume-, cutoff- or beta-uniform common-core theorem.",
+      "evidence_refs": [
+        "strategy/pre-a-cp1-st8-q3lock-finite-modular-multiplier-bound-manifest.json#model",
+        "codes/foundations/pre_a_cp1_st8_q3lock_finite_modular_multiplier_bound.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_finite_modular_multiplier_bound_independent.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_finite_modular_multiplier_bound_verify.py#main",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-primary-pre-a-cp1-st8-q3lock-finite-modular-multiplier-bound/primary.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-independent-pre-a-cp1-st8-q3lock-finite-modular-multiplier-bound/independent.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-integrated-pre-a-cp1-st8-q3lock-finite-modular-multiplier-bound/integrated.json#lean",
+        "verification/lean/Tect/R344.lean#four_component_envelope",
+        "verification/lean/Tect/R344.lean#max_pair_sum_bound",
+        "verification/lean/registry.json#R344"
+      ],
+      "finding": "The primary lane passes 2681/2681 assertions and the non-importing independent lane passes 2681/2681; the integrated verifier passes 20/20 with Lean R344 PASS over 432 finite history rows. The observed total-envelope ratio ranges from 0.00147071505671914 to 0.02072824639421533. Local similarity coefficients range from 1.2140841181193966 to 41.49710357382465, while the full-weight range is 1.2140841181193966 to 41.38834636668369. Grouped by volume, local coefficients range 1.2140841181193966..5.454967474922331 for volume 2, 4.713637185797617..21.40228838529802 for volume 4, and 8.23252352220171..41.49710357382465 for volume 6. The finite envelope is therefore verified, but its coefficient growth remains visible.",
+      "formal_integration": {
+        "events": [],
+        "lean": "R344 PASS",
+        "negatives": [],
+        "no_new_event": true,
+        "no_new_negative": true,
+        "no_new_result": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "results": []
+      },
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": []
+      },
+      "gate_ids": [
+        "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+        "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+        "PA-CP1-ST8-Q3LOCK-ALL-EXHAUSTION-MIXTURE-L2-LOCALITY-AND-BETA-INDEPENDENT-CSTAR-DYNAMICS",
+        "PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE"
+      ],
+      "id": "EXP-001185",
+      "method": [
+        "Construct the canonical finite Q3 Hamiltonians on the registered edge, square and six-site graphs with oscillator dimension three, chi=1, r=-1, g=3/5, c=3/5 and lambda=1/10.",
+        "For each beta and cutoff radius form the full Gibbs matrix rho, the local source-support energy weight K_X and the full shifted energy weight K_full; retain both signs of the source-boundary tail Delta.",
+        "Define the four weighted Hilbert-Schmidt legs using K^(1/2) and rho^(1/2). Insert the finite identities K^(1/2)K^(-1/2) and rho^(1/2)rho^(-1/2) without commuting any factors, yielding separate left, left-adjoint, right and right-adjoint similarity constants.",
+        "For B=exp(-i t(H+s Delta)/hbar) A exp(i t(H+s Delta)/hbar), check every component inequality and the aggregate bound N_K,rho([Delta,B]) <= Gamma_K,rho(Delta) N_K,rho(B) over both orientations, interpolation values and times.",
+        "Run the non-importing independent reconstruction, compare every finite row and derived range, compile and registry-check Lean R344, and enforce the downstream QFT scope firewall."
+      ],
+      "next_action": "Use the explicit similarity constants as the analytic target: derive a source-, volume-, cutoff- and beta-uniform bound on a named unbounded Q3 core, or register a route-local failure if any constant necessarily escapes. Do not promote finite inverse-power data to a common QFT modular estimate.",
+      "no_overclaim": "This record promotes only the finite matrix factorization and component-wise four-leg envelope on the declared rows. It does not prove source/volume/cutoff/beta uniformity, an unbounded common-core theorem, modular transfer, direct Cauchy convergence, OS/KMS/GNS reconstruction, a gap, continuum, C6, Sector A or Pre-A.",
+      "prior_exploration_id": "EXP-001184",
+      "provenance": "contemporaneous",
+      "qft_interface": {
+        "closed": "A finite noncommuting local/global energy-weighted multiplier inequality for source-boundary commutators, with explicit left/right Gibbs and energy similarity constants, independent reconstruction and Lean scalar aggregation.",
+        "open": "Uniform control of the similarity constants on the unbounded Q3 common core, modular-domain transfer, direct D/delta-D Cauchy, products, exhaustion, common alpha, OS/KMS/GNS identification, gap, continuum, C6, Sector A and Pre-A remain open.",
+        "tect_boundary": "Auxiliary C6/Q3 finite evidence only; no heat_root_incidence, canonical A1/R-192 production owner, physical-empty reference, Sector-A closure or Pre-A closure is supplied."
+      },
+      "question": "For finite Q3 source-boundary histories B, does the four-leg local-energy norm of [Delta,B] admit an explicit similarity-constant envelope that keeps all noncommuting K and Gibbs modular factors visible?",
+      "recorded_at": "2026-08-29T04:59:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001184",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001149",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001176",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-08-26",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Finite Q3 local-energy modular multiplier envelope for source-boundary Duhamel histories",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",

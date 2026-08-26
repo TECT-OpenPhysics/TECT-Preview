@@ -1,0 +1,100 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "exploration_id": "EXP-001185",
+  "prior_exploration_id": "EXP-001184",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "claim_bearing": false,
+  "tier": "T0",
+  "title": "Finite Q3 local-energy modular multiplier envelope for source-boundary Duhamel histories",
+  "parent_explorations": ["EXP-001184", "EXP-001149", "EXP-001176"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-CP1-ST8-Q3LOCK-ALL-EXHAUSTION-MIXTURE-L2-LOCALITY-AND-BETA-INDEPENDENT-CSTAR-DYNAMICS",
+    "PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE"
+  ],
+  "question": "For finite Q3 source-boundary histories B, does the four-leg local-energy norm of [Delta,B] admit an explicit similarity-constant envelope that keeps all noncommuting K and Gibbs modular factors visible?",
+  "finite_fixture": {
+    "volume_values": [2, 4, 6],
+    "oscillator_dimension": 3,
+    "beta_values": [0.25, 0.5, 1.0],
+    "radius_values": [0.5, 1.0],
+    "time_values": [0.05, 0.15],
+    "interpolation_values": [0.0, 0.5, 1.0],
+    "orientation_values": [-1, 1],
+    "character_amplitude": 0.3333333333333333,
+    "hbar": 1.0,
+    "chi": 1.0,
+    "r": -1.0,
+    "g": 0.6,
+    "c": 0.6,
+    "lambda": 0.1,
+    "finite_tolerance": 1.0e-7,
+    "positivity_floor": 1.0e-300
+  },
+  "model": {
+    "weight": "K=I+H-min(spec(H))I, or the analogous local H_X weight, so K>=I",
+    "four_leg_norm": "N_K,rho(M)^2=sum(||K^(1/2)M rho^(1/2)||_2^2, ||K^(1/2)M* rho^(1/2)||_2^2, ||M K^(1/2)rho^(1/2)||_2^2, ||M* K^(1/2)rho^(1/2)||_2^2)",
+    "similarity_constants": "a=||K^(1/2)Delta K^(-1/2)||, b=||rho^(-1/2)Delta rho^(1/2)||, d=||Delta||, e=||K^(-1/2)Delta K^(1/2)||, with adjoint analogues",
+    "component_bound": "Each commutator leg is bounded by (a+b), (a_star+b_star), (d+e), or (d_star+e_star) times the matching B leg",
+    "total_bound": "N_K,rho([Delta,B]) <= Gamma_K,rho(Delta) N_K,rho(B), Gamma=max of the four component coefficients",
+    "history": "B=exp(-i t(H+s Delta)/hbar) A exp(i t(H+s Delta)/hbar), s in the declared finite interpolation grid"
+  },
+  "scope": {
+    "finite_modular_multiplier_envelope_closed": true,
+    "finite_component_envelopes_closed": true,
+    "independent_trace_reconstruction_closed": true,
+    "source_volume_cutoff_beta_uniform_closed": false,
+    "modular_domain_transfer_closed": false,
+    "unbounded_common_core_closed": false,
+    "direct_d_delta_d_cauchy_closed": false,
+    "common_os_hilbert_carrier_closed": false,
+    "common_word_exhaustion_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "adversarial_review": [
+    {"axis": "weight noncommutation", "check": "K is retained as a full matrix and K^(1/2)K^(-1/2) is inserted only by exact finite multiplication; no simultaneous diagonalization with Delta, B, or rho is assumed.", "disposition": "UPHELD"},
+    {"axis": "Gibbs modular orientation", "check": "Both rho^(-1/2)Delta rho^(1/2) and the adjoint orientation are included, so a one-sided Gibbs estimate is not substituted for the four-leg statement.", "disposition": "UPHELD"},
+    {"axis": "right-leg orientation", "check": "The right legs use K^(-1/2)Delta K^(1/2) separately from the left similarity constant; no commutation with K is assumed.", "disposition": "UPHELD"},
+    {"axis": "component-to-total step", "check": "The total coefficient is the maximum of the four component sums, and every component inequality is checked before the aggregate envelope is accepted.", "disposition": "UPHELD"},
+    {"axis": "finite inverse powers", "check": "Positive finite K and full-rank finite Gibbs rho are checked before inverse square roots; the tiny eigenvalue floor is numerical admissibility only, not a thermodynamic lower bound.", "disposition": "UPHELD-OPEN"},
+    {"axis": "source and volume", "check": "The declared finite volumes, cutoff radii, beta values, interpolation points and both signs are all retained; finite coefficient growth is not called a divergence or a uniform theorem.", "disposition": "UPHELD-OPEN"},
+    {"axis": "independence", "check": "The independent lane rebuilds oscillator tensors, Q3 onsite/bond matrices, cutoff bonds, Gibbs powers, similarity constants and weighted legs without importing the primary audit.", "disposition": "UPHELD"},
+    {"axis": "Lean boundary", "check": "R344 checks only the nonnegative scalar component aggregation used after the matrix factorization; Python carries the finite matrix spectral calculation and no analytic limit is encoded.", "disposition": "UPHELD-OPEN"},
+    {"axis": "QFT promotion", "check": "This finite multiplier envelope does not prove modular-domain transfer, source/volume/cutoff/beta uniformity, a common OS carrier, exhaustion, common alpha, Hamiltonian-OS identification, a GNS gap, continuum, C6, Sector A or Pre-A.", "disposition": "UPHELD-OPEN"}
+  ],
+  "files": {
+    "primary": "codes/foundations/pre_a_cp1_st8_q3lock_finite_modular_multiplier_bound.py",
+    "independent": "codes/foundations/pre_a_cp1_st8_q3lock_finite_modular_multiplier_bound_independent.py",
+    "integrated": "codes/foundations/pre_a_cp1_st8_q3lock_finite_modular_multiplier_bound_verify.py",
+    "lean": "verification/lean/Tect/R344.lean",
+    "primary_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-primary-pre-a-cp1-st8-q3lock-finite-modular-multiplier-bound/primary.json",
+    "independent_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-independent-pre-a-cp1-st8-q3lock-finite-modular-multiplier-bound/independent.json",
+    "integrated_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-integrated-pre-a-cp1-st8-q3lock-finite-modular-multiplier-bound/integrated.json"
+  },
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R344.lean",
+    "command": "lake env lean Tect/R344.lean",
+    "theorem_markers": ["four_component_envelope", "max_pair_sum_bound"],
+    "role": "R344 checks the nonnegative scalar aggregation used when the four finite matrix leg bounds are combined; it does not formalize matrix spectral calculus, modular domains, or QFT limits."
+  },
+  "formal_integration": {"lean_entry": "verification/lean/Tect/R344.lean", "result_ids": [], "negative_ids": [], "changelog_event": null},
+  "qft_interface": {
+    "closed": "A finite noncommuting local/global energy-weighted multiplier inequality for source-boundary commutators, with explicit left/right Gibbs and energy similarity constants, independent reconstruction and a Lean scalar aggregation check.",
+    "open": "Uniform control of the similarity constants on the unbounded Q3 common core, modular-domain transfer, direct D/delta-D Cauchy, products, exhaustion, common alpha, OS/KMS/GNS identification, gap, continuum, C6, Sector A and Pre-A remain open.",
+    "tect_boundary": "Auxiliary C6/Q3 finite evidence only; no heat_root_incidence, canonical A1/R-192 production owner, physical-empty reference, Sector-A closure or Pre-A closure is supplied."
+  },
+  "next_action": "Use the explicit similarity constants as the analytic target: derive a source-, volume-, cutoff- and beta-uniform bound on a named unbounded Q3 core, or record a route-local failure if any constant necessarily escapes. Do not promote finite inverse-power data to a common QFT modular estimate.",
+  "boundary": "T0 claim-nonbearing finite Q3 modular multiplier checkpoint. It is not a thermodynamic common-Hilbert theorem, a common-alpha construction, a mass-gap proof, a continuum result, or a QFT/Clay closure.",
+  "no_overclaim": "The package promotes only the finite matrix factorization and component-wise four-leg envelope on the declared rows. It does not prove source/volume/cutoff/beta uniformity, an unbounded common-core theorem, modular transfer, direct Cauchy convergence, OS/KMS/GNS reconstruction, a gap, continuum, C6, Sector A or Pre-A."
+}
