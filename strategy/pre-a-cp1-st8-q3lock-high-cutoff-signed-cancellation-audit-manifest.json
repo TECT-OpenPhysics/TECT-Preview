@@ -1,0 +1,159 @@
+{
+  "adversarial_review": [
+    {
+      "axis": "finite versus asymptotic",
+      "check": "Every high-cutoff row is finite; growth ratios are diagnostics on the registered dimensions and are not an untruncated divergence theorem.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "signed versus absolute",
+      "check": "Signs are retained only inside the exact union-support group; absolute pair sums remain separately reported.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "reverse order",
+      "check": "The reversed term order is rebuilt and compared matrix-wise with the negative forward group.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "local versus global state",
+      "check": "Each rho_U is an induced finite two-site Gibbs matrix and is not identified with an infinite-volume KMS restriction.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "weight orientation",
+      "check": "All four K_U^(1/2)-Gibbs legs are evaluated separately without commuting K_U through the commutator.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "source and truncation boundary",
+      "check": "The source support and oscillator dimensions are exactly those in the manifest; no external bond or untruncated CCR is inserted.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "QFT promotion",
+      "check": "Common core, cutoff removal, thermodynamic history, exhaustion, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector A and Pre-A remain open.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "Lean scope",
+      "check": "R358 checks fixture counts, exact rational growth arithmetic and the scope firewall; matrix spectra and asymptotics remain Python evidence.",
+      "disposition": "UPHELD"
+    }
+  ],
+  "audit_fixture": {
+    "commutator_floor": 1e-12,
+    "finite_only": true,
+    "growth_ratio_threshold": 1.05,
+    "localization_tolerance": 1e-08,
+    "orientation_tolerance": 1e-08,
+    "positivity_tolerance": 1e-08,
+    "weight_exponent": "1/2"
+  },
+  "authority_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-source-edge-high-cutoff-commutator-stress-manifest.json#next_action",
+    "strategy/pre-a-cp1-st8-q3lock-cancellation-aware-signed-commutator-audit-manifest.json#next_action",
+    "claims/GATES.md#pa-cp1-st8-q3lock-energy-weighted-commutator-gevrey-lr-closure",
+    "claims/GATES.md#pa-cp1-st8-q3lock-local-strict-all-exhaustion-two-orientation-history-common-alpha"
+  ],
+  "boundary": "T0 claim-nonbearing finite high-cutoff signed-cancellation stress only. It is not a global no-go theorem or a QFT/Clay result.",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-HIGH-CUTOFF-SIGNED-CANCELLATION-AUDIT-v0",
+  "claim_bearing": false,
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "exploration_id": "EXP-001199",
+  "lean_crosscheck": {
+    "command": "lake env lean Tect/R358.lean",
+    "path": "verification/lean/Tect/R358.lean",
+    "role": "R358 checks exact high-cutoff fixture/count arithmetic and finite-only scope; matrix norms, Gibbs factors, common domains and QFT limits remain Python/open analysis.",
+    "theorem_markers": [
+      "dimension_count_fixture",
+      "slope_last_fixture",
+      "beta_count_fixture",
+      "source_edge_count_fixture",
+      "scope_fixture"
+    ]
+  },
+  "named_proxy": {
+    "coefficient": "the signed, absolute and source-touching group seminorms are reported per site for every high-cutoff row",
+    "core": "finite oscillator matrix proxy on the exact two-site union support U={0,1}",
+    "energy": "K_U=I+H_U-min(spec(H_U)) I and four-leg K_U^(1/2)-Gibbs seminorm",
+    "reverse_order": "the explicit reverse term order, checked against -S_U",
+    "signed_group": "S_U=sum of [H_j,H_k] with the declared term-order sign for all overlapping pairs",
+    "state": "rho_U=exp(-beta H_U)/Tr(exp(-beta H_U)) for the induced two-site Hamiltonian"
+  },
+  "next_action": "If the signed energy-weighted coefficient still grows at high cutoff, retain this route-local boundary and seek a cancellation kernel or state-weighted history estimate with an analytic cutoff-uniform proof; if it stabilizes, prove the global-state/common-core transfer and exhaustion before any common-alpha promotion.",
+  "no_overclaim": "Finite high-cutoff cancellation, even when bounded on this grid, would not establish an unbounded common core, thermodynamic dynamics, OS/KMS/GNS reconstruction, a mass gap, continuum, C6, Sector A, Pre-A or a Clay result.",
+  "prior_exploration_id": "EXP-001198",
+  "qft_interface": {
+    "closed": "A reproducible high-cutoff two-site signed-union table with reverse-order antisymmetry and local Gibbs/energy-weighted diagnostics across three beta values.",
+    "open": "A cutoff-uniform global-state-compatible cancellation estimate, common core, actual Trotter defect, thermodynamic history, exhaustion, common alpha, OS/KMS/GNS identification, gap, continuum, C6, Sector A and Pre-A remain open.",
+    "tect_boundary": "Auxiliary C6/Q3 evidence only; no heat_root_incidence, canonical A1/R-192 production owner, physical-empty reference or Sector-A closure is supplied."
+  },
+  "question": "Does exact union-support sign cancellation remain cutoff-stable on the fixed two-site source edge under high oscillator dimensions and local Gibbs/energy weights?",
+  "schema": "tect/pre-a-route-split/1.0",
+  "scope": {
+    "actual_q3_thermodynamic_history_closed": false,
+    "actual_q3_trotter_defect_closed": false,
+    "c6_closed": false,
+    "cancellation_diagnostic_closed": true,
+    "candidate_cutoff_uniform_bound_closed": false,
+    "candidate_cutoff_volume_beta_uniform_bound_closed": false,
+    "common_alpha_closed": false,
+    "common_core_operator_embedding_closed": false,
+    "continuum_closed": false,
+    "delta_d_cauchy_closed": false,
+    "direct_d_cauchy_closed": false,
+    "exhaustion_independence_closed": false,
+    "finite_beta_grid_closed": true,
+    "finite_high_cutoff_signed_rows_closed": true,
+    "finite_reverse_order_antisymmetry_closed": true,
+    "finite_signed_union_rows_closed": true,
+    "finite_source_beta_volume_cutoff_grid_closed": true,
+    "finite_source_edge_rows_closed": true,
+    "global_gibbs_state_transfer_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "high_cutoff_cancellation_diagnostic_closed": true,
+    "kms_gns_gap_closed": false,
+    "no_new_negative_result": true,
+    "no_pdf": true,
+    "no_tier_change": true,
+    "pre_a_closed": false,
+    "sector_a_closed": false
+  },
+  "source_fixture": {
+    "beta_values": [
+      0.5,
+      1.0,
+      2.0
+    ],
+    "cutoff_values": [
+      3,
+      4,
+      5,
+      6,
+      8,
+      10,
+      12,
+      16,
+      20,
+      24
+    ],
+    "manifest": "strategy/pre-a-cp1-st8-q3lock-cancellation-aware-signed-commutator-audit-manifest.json",
+    "source_supports_by_volume": {
+      "2": [
+        [
+          0,
+          1
+        ]
+      ]
+    },
+    "volume_values": [
+      2
+    ]
+  },
+  "task_id": "T-054",
+  "tier": "T0",
+  "title": "Finite Q3 high-cutoff signed cancellation audit"
+}

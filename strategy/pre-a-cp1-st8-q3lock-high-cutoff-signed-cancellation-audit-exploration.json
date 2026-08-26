@@ -1,0 +1,121 @@
+{
+  "adversarial_review": [
+    {
+      "axis": "finite versus asymptotic",
+      "check": "All statements are restricted to the ten registered dimensions and three beta values; endpoint ratios and maxima are diagnostics, not limits.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "signed versus absolute",
+      "check": "Signs are retained only within the exact union-support group and absolute pair aggregates are reported separately.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "reverse order",
+      "check": "The reversed term order is rebuilt in each lane and compared with the negative forward group; residuals pass the declared tolerance.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "local versus global state",
+      "check": "rho_U is the normalized finite induced two-site Gibbs matrix and is not identified with an infinite-volume KMS restriction.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "weight orientation",
+      "check": "Each of the four K_U^(1/2)-Gibbs legs is computed separately, with no spectral commutation assumed.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "source and truncation boundary",
+      "check": "Only the fixed source edge {0,1} and declared finite oscillator matrices are used; no external bond or exact untruncated CCR is inserted.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "independence",
+      "check": "The independent lane reconstructs oscillator, support terms, Gibbs/energy factors and signed groups without importing the primary module.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "QFT promotion",
+      "check": "Common core, cutoff removal, thermodynamic history, exhaustion, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector A and Pre-A remain open.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "Lean scope",
+      "check": "R358 checks exact dimensions, beta/source counts, rational slope arithmetic and scope only; matrix spectra and QFT limits remain Python/open analysis.",
+      "disposition": "UPHELD"
+    }
+  ],
+  "boundary": "T0 claim-nonbearing finite high-cutoff signed-cancellation stress on a fixed two-site graph. It is not an asymptotic divergence theorem, global no-go, common-core construction, thermodynamic dynamics, OS/KMS/GNS result, mass-gap proof, continuum result, C6, Sector A, Pre-A or Clay closure.",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "decision_reason": "The high-cutoff extension confirms that exact union-support sign grouping does not by itself stabilize the energy-weighted history coefficient. The coefficient fluctuates with truncation and beta but remains finite-grid growing relative to d=3, while signed cancellation leaves roughly 71-83 percent of the absolute endpoint aggregate. This is enough to reject this finite signed-group coefficient as an unqualified common-core input. The result is route-local: it does not decide a cancellation kernel with additional spectral/state weights, nor does it establish untruncated divergence.",
+  "evidence_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-high-cutoff-signed-cancellation-audit-manifest.json#named_proxy",
+    "strategy/pre-a-cp1-st8-q3lock-high-cutoff-signed-cancellation-audit-certificate-260827.md#Result",
+    "codes/foundations/pre_a_cp1_st8_q3lock_high_cutoff_signed_cancellation_audit.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_high_cutoff_signed_cancellation_audit_independent.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_high_cutoff_signed_cancellation_audit_verify.py#run",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-27-primary-pre_a_cp1_st8_q3lock_high_cutoff_signed_cancellation_audit/primary.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-27-independent-pre_a_cp1_st8_q3lock_high_cutoff_signed_cancellation_audit/independent.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-27-integrated-pre_a_cp1_st8_q3lock_high_cutoff_signed_cancellation_audit/integrated.json#lean",
+    "verification/lean/Tect/R358.lean#scope_fixture",
+    "verification/lean/registry.json#R358"
+  ],
+  "finding": "Primary and independent lanes each pass 134/134 assertions over 30 high-cutoff beta rows. The integrated verifier passes 1381/1381 and Lean R358 compiles. Reverse-order residuals are zero on this finite matrix fixture. The signed energy-weighted per-site coefficient is nonmonotone but reaches 38.01539989463614 at d=20,beta=0.5 and 8.670037823582929 at d=10,beta=1; the d=24/d=3 endpoint ratios are 27.178403353918984 (beta=0.5), 2.732285890441825 (beta=1) and 1.390589686602203 (beta=2). Signed-to-absolute endpoint ratios remain 0.7092101515841736, 0.7739775356170933 and 0.8276235228192911, so cancellation is substantial but incomplete. The finite maxima and endpoint growth do not supply a cutoff-, beta- or global-state-uniform coefficient.",
+  "formal_integration": {
+    "events": [],
+    "lean": "R358 PASS",
+    "negatives": [],
+    "no_new_negative": true,
+    "no_new_result": true,
+    "no_pdf": true,
+    "no_tier_change": true,
+    "results": []
+  },
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-ENERGY-WEIGHTED-COMMUTATOR-GEVREY-LR-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "id": "EXP-001199",
+  "method": [
+    "Hold the exact two-site Q3 edge and source support {0,1} fixed while sweeping oscillator dimensions d in {3,4,5,6,8,10,12,16,20,24}.",
+    "For each d and beta in {0.5,1,2}, rebuild the local induced Hamiltonian, Gibbs matrix, positive shifted energy and every overlapping signed union group.",
+    "Compare the signed union-group raw, two-sided Gibbs and K^(1/2)-Gibbs seminorms with the corresponding absolute pair aggregates and explicitly reverse the term order.",
+    "Reconstruct the same table in an independent implementation and cross-check finite counts, exact fixture arithmetic and the scope firewall in Lean R358."
+  ],
+  "next_action": "Seek a genuinely state-compatible cancellation kernel or spectral-window history estimate, with an analytic cutoff-uniform bound on a declared common core; do not promote the finite signed-group coefficient or common alpha until that proof is supplied.",
+  "no_overclaim": "Finite high-cutoff signed cancellation remains a route-local diagnostic. It neither proves nor disproves an untruncated Q3 limit, global KMS state, common core, mass gap, continuum, C6, Sector A, Pre-A or a Clay result.",
+  "provenance": "contemporaneous",
+  "qft_interface": {
+    "closed": "A reproducible high-cutoff two-site signed-union table with reverse-order antisymmetry and local Gibbs/energy-weighted diagnostics across three beta values.",
+    "open": "A cutoff-uniform global-state-compatible cancellation estimate, common core, actual Trotter defect, thermodynamic history, exhaustion, common alpha, OS/KMS/GNS identification, gap, continuum, C6, Sector A and Pre-A remain open.",
+    "tect_boundary": "Auxiliary C6/Q3 evidence only; no heat_root_incidence, canonical A1/R-192 production owner, physical-empty reference or Sector-A closure is supplied."
+  },
+  "question": "Does exact union-support sign cancellation remain cutoff-stable on the fixed two-site source edge under high oscillator dimensions and local Gibbs/energy weights?",
+  "recorded_at": "2026-08-29T07:10:00Z",
+  "recorded_by": "Codex",
+  "related": [
+    {
+      "id": "EXP-001198",
+      "relation": "continues"
+    },
+    {
+      "id": "EXP-001197",
+      "relation": "continues"
+    },
+    {
+      "id": "EXP-001165",
+      "relation": "continues"
+    }
+  ],
+  "reviewed_on": "2026-08-27",
+  "schema": "tect/proof-exploration/1.0",
+  "task_id": "T-054",
+  "title": "Finite Q3 high-cutoff signed cancellation audit",
+  "verdict": "advanced"
+}
