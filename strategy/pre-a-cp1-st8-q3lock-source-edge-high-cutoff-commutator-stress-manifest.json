@@ -1,0 +1,116 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-SOURCE-EDGE-HIGH-CUTOFF-COMMUTATOR-STRESS-v0",
+  "exploration_id": "EXP-001198",
+  "prior_exploration_id": "EXP-001197",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "claim_bearing": false,
+  "tier": "T0",
+  "title": "Finite Q3 source-edge high-cutoff commutator stress",
+  "question": "Does the source-edge graph commutator retain a cutoff-growing lower bound on explicit high-occupation Fock vectors when the target edge is kept fixed and the oscillator dimension is increased?",
+  "authority_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-source-local-graph-norm-transfer-stress-manifest.json#next_action",
+    "strategy/pre-a-cp1-st8-q3lock-kinetic-inclusive-transfer-boundary-manifest.json#next_action",
+    "claims/GATES.md#pa-cp1-st8-q3lock-higher-weighted-energy-moments-and-thermodynamic-cauchy-closure",
+    "claims/GATES.md#pa-cp1-st8-q3lock-energy-weighted-commutator-gevrey-lr-closure"
+  ],
+  "finite_fixture": {
+    "volume": 2,
+    "source_support": [0, 1],
+    "oscillator_dimensions": [3, 4, 5, 6, 8, 10, 12, 16, 20, 24],
+    "high_core_indices": ["diagonal_top", "one_top_one_vacuum"],
+    "chi": 1.0,
+    "r": -1.0,
+    "g": 0.6,
+    "c": 0.6,
+    "lambda": 0.1,
+    "core_linear_slope_threshold": 0.25,
+    "core_linear_offset": 2,
+    "tolerance": 1.0e-8,
+    "agreement_tolerance": 1.0e-7
+  },
+  "model": {
+    "graph": "the exact two-site Q3 target edge",
+    "hamiltonian": "H=p_0^2/(2 chi)+p_1^2/(2 chi)+sum_x[r q_x^2/2+g q_x^4/4]+c(q_0-q_1)^2/2+lambda(q_0-q_1)^2(q_0^2+q_1^2)/4",
+    "full_weight": "K_full=I+H-min(spec(H))I",
+    "source_edge_weight": "K_edge=I+V_0+V_1+B_01-min(spec(V_0+V_1+B_01))I",
+    "commutator_operator": "C=[K_full,K_edge]K_full^{-1}",
+    "high_core_vectors": "tensor Fock vectors |d-1,d-1> and |d-1,0> in each d-dimensional truncation",
+    "diagnostic": "the ratio ||[K_full,K_edge]psi||/||K_full psi|| and the global operator norm ||C||"
+  },
+  "scope": {
+    "finite_high_cutoff_rows_closed": true,
+    "explicit_high_core_lower_bound_rows_closed": true,
+    "independent_reconstruction_closed": true,
+    "cutoff_growth_diagnostic_closed": true,
+    "uniform_commutator_bound_closed": false,
+    "cutoff_removal_closed": false,
+    "unbounded_common_core_closed": false,
+    "source_volume_uniformity_closed": false,
+    "exact_ccr_common_core_closed": false,
+    "modular_domain_transfer_closed": false,
+    "direct_d_delta_d_cauchy_closed": false,
+    "all_shape_exhaustion_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "adversarial_review": [
+    {
+      "axis": "lower-bound meaning",
+      "check": "The linear inequality is checked only on the declared finite dimensions and explicit vectors; it is not asserted as an asymptotic theorem.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "truncation boundary",
+      "check": "The high vectors are genuine basis vectors of each finite oscillator matrix; no untruncated CCR or continuum limit is substituted.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "source locality",
+      "check": "The source-edge weight is exactly the two-site onsite-plus-internal-bond weight; no external bonds are hidden in K_edge.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "graph versus form",
+      "check": "The commutator is evaluated after the full graph inverse; the form constant from EXP-001197 is not used to manufacture this lower bound.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "independence",
+      "check": "The independent lane reconstructs the oscillator, two-site Hamiltonian and source-edge matrix from scratch.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "route scope",
+      "check": "A cutoff-growing sample rejects only the tested fixed graph-commutator route as a candidate uniform input; it does not reject cancellation-aware or state-weighted histories.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "QFT promotion",
+      "check": "No common core, thermodynamic dynamics, OS/KMS/GNS reconstruction, mass gap, continuum, C6, Sector A, Pre-A or Clay conclusion follows.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "Lean scope",
+      "check": "R357 checks dimension, slope and scope arithmetic only; matrix norms and high-cutoff behavior remain Python evidence.",
+      "disposition": "UPHELD"
+    }
+  ],
+  "next_action": "Treat the high-cutoff trend as a route-local boundary for a raw source-edge commutator coefficient. Replace it with a cancellation-aware or state-weighted history estimate whose coefficient is controlled on the common core, and require an analytic cutoff-uniform proof before any common-alpha promotion.",
+  "qft_interface": {
+    "closed": "A reproducible two-site Q3 high-cutoff stress shows an explicit high-occupation commutator ratio and its finite linear lower-bound diagnostic, independently reconstructed and Lean-bookkept.",
+    "open": "An asymptotic theorem, source/volume/cutoff-uniform common-core estimate, cutoff removal, direct D/delta-D Cauchy, exhaustion, common alpha, Hamiltonian-to-OS identification, KMS/GNS gap, continuum, C6, Sector A and Pre-A remain open.",
+    "tect_boundary": "Auxiliary C6/Q3 route evidence only; no heat_root_incidence or canonical A1/R-192 production owner is supplied."
+  },
+  "boundary": "T0 claim-nonbearing finite high-cutoff route stress. It is not a global no-go theorem or a QFT/Clay result.",
+  "no_overclaim": "The sampled linear lower bound is finite and route-specific. It does not establish divergence in the untruncated theory or rule out other topologies."
+}
