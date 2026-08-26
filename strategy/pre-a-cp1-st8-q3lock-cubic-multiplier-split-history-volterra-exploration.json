@@ -1,0 +1,106 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001160",
+  "title": "Finite Q3 split-history Volterra carrier with both cubic-multiplier orientations",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-ENERGY-WEIGHTED-COMMUTATOR-GEVREY-LR-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-FIRST-PASSAGE-BACKBONE-REAL-TIME-PRODUCT-AND-ENERGY-TAIL-CLOSURE",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "question": "For the declared finite Q3 split dynamics, can both noncommuting cubic-multiplier orientations be propagated through an explicit Volterra history with finite operator and Gibbs-state controls, without silently replacing the split evolution by an unsplit exponential?",
+  "method": [
+    "Use the hash-pinned finite Q3 edge, square and 2x3 graph fixture from EXP-001158 with oscillator dimension three, source pair [0,1], probe sites, and beta values copied into the manifest.",
+    "Construct the weighted positive energy proxy and the two products f_x^(3/4) q_x^3 A_f^(-3/4) and f_x^(3/4) A_f^(-3/4) q_x^3 separately, then propagate each product and their difference by V_N(M)=delta sum_{k=0}^{N-1} Ad(U^k)(M) for delta=1/18 and N in {1,3,6}.",
+    "Run both onsite-then-lexicographic-bonds and reverse-term split orders with both time signs, check unitary errors, the history difference identity, operator triangles, finite telescoping bounds, and normalized full-Hamiltonian Gibbs four-leg envelopes on all 96 declared history rows.",
+    "Recompute the same finite grid independently by diagonalizing each split term once, and compile Lean R330 for the exact rational time-horizon, difference, triangle, and scope bookkeeping."
+  ],
+  "finding": "Primary 1402/1402 and independent 1304/1304 assertions pass on the complete 96-row grid (volumes 2, 4, 6; eight probe/order/sign combinations per declared time count). The integrated verifier passes 14/14 and Lean R330 compiles. Primary and independent maxima agree within approximately 3e-15: right operator norm 0.607485470838267, left operator norm 0.6074854708382673, commutator-history operator norm 0.14231441030898842, and Gibbs four-leg norm 1.1419245640005118. Every declared row satisfies the nonzero orientation floor, Volterra difference identity, operator triangle, finite telescoping bound, and Gibbs-state triangle/envelope checks.",
+  "verdict": "advanced",
+  "decision_reason": "The finite split evolution now carries both noncommuting multiplier orientations through an explicit discrete Volterra history for both orderings and time signs. This closes a reusable finite carrier and finite telescoping firewall, but it does not provide an analytic infinite-dimensional Volterra estimate or any source/volume/beta-uniform control; the QFT construction therefore remains open.",
+  "boundary": "Finite oscillator-dimension-three matrices on the declared edge, square and 2x3 graphs, finite split orders, time signs, step counts and Gibbs probes only; no common-core operator-domain embedding, actual Q3 dynamics identification, direct D/delta-D Cauchy estimate, uniformity, exhaustion, common alpha, OS/KMS/GNS reconstruction, gap, continuum, C6, Sector A or Pre-A conclusion.",
+  "evidence_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-cubic-multiplier-split-history-volterra-manifest.json#split_history",
+    "codes/foundations/pre_a_cp1_st8_q3lock_cubic_multiplier_split_history_volterra.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_cubic_multiplier_split_history_volterra_independent.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_cubic_multiplier_split_history_volterra_verify.py#run",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-primary-pre_a_cp1_st8_q3lock_cubic_multiplier_split_history_volterra/primary.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-independent-pre_a_cp1_st8_q3lock_cubic_multiplier_split_history_volterra/independent.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-integrated-pre_a_cp1_st8_q3lock_cubic_multiplier_split_history_volterra/integrated.json#lean",
+    "verification/lean/Tect/R330.lean#volterra_difference_fixture",
+    "verification/lean/registry.json#R330"
+  ],
+  "next_action": "Use the two-orientation split history as the carrier for an analytic source/beta/volume-uniform Volterra or direct D/delta-D Cauchy estimate. If the required constants or domains fail, register only that precise route-local obstruction and keep common-alpha and QFT reconstruction open.",
+  "no_overclaim": "This finite split-history audit validates discrete matrix bookkeeping and preserves both operator orientations. It neither proves an infinite-dimensional Volterra estimate nor establishes OS/KMS/GNS dynamics, a mass gap, a continuum limit, C6, Sector A or Pre-A.",
+  "open": [
+    "analytic Volterra estimate with source and volume control",
+    "common-core cubic multiplier embedding",
+    "actual Q3 history identification",
+    "source/beta/volume-uniform direct D and delta-D Cauchy",
+    "operator-domain and product/core density control",
+    "exhaustion independence and common alpha",
+    "Hamiltonian-to-OS/KMS/GNS identification",
+    "gap, continuum, C6, Sector A and Pre-A"
+  ],
+  "formal_integration": {
+    "events": [],
+    "results": [],
+    "negatives": [],
+    "lean": "R330 PASS; metadata regenerated",
+    "no_new_event": true,
+    "no_new_result": true,
+    "no_new_negative": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "adversarial_review": [
+    {
+      "axis": "split dynamics",
+      "check": "Each history is built from onsite-plus-bond unitary factors in both declared term orders and both time signs; no unsplit exponential is substituted.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "orientation ordering",
+      "check": "Right and left cubic multiplier products are propagated separately and their difference is propagated as its own history.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "Volterra bookkeeping",
+      "check": "The discrete history identity and finite telescoping bounds are checked row by row and also represented by exact rational Lean lemmas.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "Gibbs norm",
+      "check": "The four-leg norms use the normalized full-Hamiltonian Gibbs square root at each beta; split invariance of the Gibbs state is not assumed.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "finite versus uniform",
+      "check": "Volumes, probes, beta values and time windows are a declared finite grid; extrema and agreement are diagnostics, not asymptotic or uniform estimates.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "QFT promotion",
+      "check": "No common core, analytic history bound, exhaustion, common alpha, OS/KMS/GNS reconstruction, gap, continuum, C6, Sector A or Pre-A conclusion is drawn.",
+      "disposition": "UPHELD-OPEN"
+    }
+  ],
+  "provenance": "contemporaneous",
+  "recorded_at": "2026-08-29T00:45:00Z",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-08-26",
+  "related": [
+    {"id": "EXP-001159", "relation": "continues"},
+    {"id": "EXP-001158", "relation": "continues"},
+    {"id": "EXP-001157", "relation": "continues"},
+    {"id": "EXP-001156", "relation": "continues"}
+  ],
+  "qft_interface": {
+    "closed": "A finite split-history carrier with explicit right/left cubic-multiplier orientations, orientation-difference identity, finite operator/Gibbs bounds, and Lean bookkeeping is recorded.",
+    "open": "The analytic infinite-dimensional Volterra estimate, operator domains, actual Q3 history, source/volume/beta uniformity, exhaustion, common alpha, OS/KMS/GNS, gap, continuum and Pre-A remain open.",
+    "tect_boundary": "Auxiliary C6 evidence only; no TECT production owner, heat_root_incidence, physical-empty reference or Sector-A closure is supplied."
+  }
+}

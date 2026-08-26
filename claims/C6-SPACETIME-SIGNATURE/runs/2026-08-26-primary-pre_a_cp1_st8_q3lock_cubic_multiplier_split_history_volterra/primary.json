@@ -1,0 +1,902 @@
+{
+  "assertion_count": 1402,
+  "assertions": [
+    {
+      "actual": "['EXP-001160', 'T-054', False]",
+      "expected": "EXP-001160/T-054/false",
+      "group": "provenance",
+      "name": "identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "['EXP-001158', 'T-054']",
+      "expected": "EXP-001158/T-054",
+      "group": "upstream",
+      "name": "source authority",
+      "status": "PASS"
+    },
+    {
+      "actual": "[[1, 3, 6], 0.05555555555555555]",
+      "expected": "6*(1/18)=1/3",
+      "group": "fixture",
+      "name": "time fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'time_step': '1/18', 'step_counts': [1, 3, 6], 'orders': ['onsite_then_lexicographic_bonds', 'reverse_term_order'], 'time_signs': [-1, 1], 'right_orientation': 'f_x^(3/4) q_x^3 A_f^(-3/4)', 'left_orientation': 'f_x^(3/4) A_f^(-3/4) q_x^3', 'volterra_sum': 'V_N(M)=delta sum_{k=0}^{N-1} Ad(U^k)(M)', 'weight_ratio_per_edge': '1/16', 'multiplier_power': '3/4'}",
+      "expected": "two orders and two signs",
+      "group": "orientation",
+      "name": "orientation fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'finite_split_history_both_orientations_closed': True, 'finite_volterra_telescoping_bound_closed': True, 'finite_orientation_difference_closed': True, 'analytic_volterra_bound_closed': False, 'operator_domain_embedding_closed': False, 'actual_q3_history_closed': False, 'direct_d_cauchy_closed': False, 'delta_d_cauchy_closed': False, 'source_volume_beta_uniformity_closed': False, 'exhaustion_independence_closed': False, 'common_alpha_closed': False, 'hamiltonian_os_identification_closed': False, 'kms_gns_gap_closed': False, 'continuum_closed': False, 'c6_closed': False, 'sector_a_closed': False, 'pre_a_closed': False, 'no_new_negative_result': True, 'no_tier_change': True, 'no_pdf': True}",
+      "expected": "finite carrier only",
+      "group": "scope",
+      "name": "scope firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": "<=1e-08",
+      "group": "split",
+      "name": "V=2 split decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.9999999999999989",
+      "expected": ">=1.0",
+      "group": "energy",
+      "name": "V=2 pair=[0, 1] energy floor",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.953807906047262e-15",
+      "expected": "<=1e-08",
+      "group": "split",
+      "name": "V=2 pair=[0, 1] order=onsite_then_lexicographic_bonds sign=-1 unitary",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.43291523575391017",
+      "expected": ">1e-06",
+      "group": "orientation",
+      "name": "V=2 pair=[0, 1] site=0 commutator floor",
+      "status": "PASS"
+    },
+    {
+      "actual": "6.025112058614534e-18",
+      "expected": "<=1e-08",
+      "group": "Volterra",
+      "name": "V=2 pair=[0, 1] site=0 N=1 history identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.1006952355771714, 0.1006952355771714, 0.024050846430772783]",
+      "expected": "finite",
+      "group": "Volterra",
+      "name": "V=2 pair=[0, 1] site=0 N=1 operator finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.024050846430772783",
+      "expected": "<=0.2013904811543428",
+      "group": "norm",
+      "name": "V=2 pair=[0, 1] site=0 N=1 operator triangle",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.1006952355771714",
+      "expected": "<=0.10069524557717142",
+      "group": "Volterra bound",
+      "name": "V=2 pair=[0, 1] site=0 N=1 telescoping right",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.1006952355771714",
+      "expected": "<=0.10069524557717136",
+      "group": "Volterra bound",
+      "name": "V=2 pair=[0, 1] site=0 N=1 telescoping left",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.12809804859539978, 0.12809804859539975, 0.030824673575490992]",
+      "expected": "finite nonnegative",
+      "group": "Gibbs",
+      "name": "V=2 pair=[0, 1] site=0 N=1 beta=0.5 state finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.030824673575490992",
+      "expected": "<=0.2561961071907995",
+      "group": "Gibbs norm",
+      "name": "V=2 pair=[0, 1] site=0 N=1 beta=0.5 state triangle",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.12809804859539978, 0.12809804859539975, 0.030824673575490992]",
+      "expected": "<=2 operator norm",
+      "group": "Gibbs envelope",
+      "name": "V=2 pair=[0, 1] site=0 N=1 beta=0.5 state operator envelope",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.14646699959741508, 0.14646699959741508, 0.034515525139775044]",
+      "expected": "finite nonnegative",
+      "group": "Gibbs",
+      "name": "V=2 pair=[0, 1] site=0 N=1 beta=1.0 state finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.034515525139775044",
+      "expected": "<=0.29293400919483015",
+      "group": "Gibbs norm",
+      "name": "V=2 pair=[0, 1] site=0 N=1 beta=1.0 state triangle",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.14646699959741508, 0.14646699959741508, 0.034515525139775044]",
+      "expected": "<=2 operator norm",
+      "group": "Gibbs envelope",
+      "name": "V=2 pair=[0, 1] site=0 N=1 beta=1.0 state operator envelope",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.16944201206214715, 0.16944201206214715, 0.039625709726464425]",
+      "expected": "finite nonnegative",
+      "group": "Gibbs",
+      "name": "V=2 pair=[0, 1] site=0 N=1 beta=2.0 state finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.039625709726464425",
+      "expected": "<=0.3388840341242943",
+      "group": "Gibbs norm",
+      "name": "V=2 pair=[0, 1] site=0 N=1 beta=2.0 state triangle",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.16944201206214715, 0.16944201206214715, 0.039625709726464425]",
+      "expected": "<=2 operator norm",
+      "group": "Gibbs envelope",
+      "name": "V=2 pair=[0, 1] site=0 N=1 beta=2.0 state operator envelope",
+      "status": "PASS"
+    },
+    {
+      "actual": "4.4308681951514265e-17",
+      "expected": "<=1e-08",
+      "group": "Volterra",
+      "name": "V=2 pair=[0, 1] site=0 N=3 history identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.3019274529076069, 0.3019274529076069, 0.07192267172720429]",
+      "expected": "finite",
+      "group": "Volterra",
+      "name": "V=2 pair=[0, 1] site=0 N=3 operator finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.07192267172720429",
+      "expected": "<=0.6038549158152139",
+      "group": "norm",
+      "name": "V=2 pair=[0, 1] site=0 N=3 operator triangle",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.3019274529076069",
+      "expected": "<=0.3020857167315143",
+      "group": "Volterra bound",
+      "name": "V=2 pair=[0, 1] site=0 N=3 telescoping right",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.3019274529076069",
+      "expected": "<=0.3020857167315141",
+      "group": "Volterra bound",
+      "name": "V=2 pair=[0, 1] site=0 N=3 telescoping left",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.3841537472626093, 0.38415374726260926, 0.09216949662002065]",
+      "expected": "finite nonnegative",
+      "group": "Gibbs",
+      "name": "V=2 pair=[0, 1] site=0 N=3 beta=0.5 state finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.09216949662002065",
+      "expected": "<=0.7683075045252187",
+      "group": "Gibbs norm",
+      "name": "V=2 pair=[0, 1] site=0 N=3 beta=0.5 state triangle",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.3841537472626093, 0.38415374726260926, 0.09216949662002065]",
+      "expected": "<=2 operator norm",
+      "group": "Gibbs envelope",
+      "name": "V=2 pair=[0, 1] site=0 N=3 beta=0.5 state operator envelope",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.4392740455024979, 0.4392740455024978, 0.10319902958254151]",
+      "expected": "finite nonnegative",
+      "group": "Gibbs",
+      "name": "V=2 pair=[0, 1] site=0 N=3 beta=1.0 state finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.10319902958254151",
+      "expected": "<=0.8785481010049957",
+      "group": "Gibbs norm",
+      "name": "V=2 pair=[0, 1] site=0 N=3 beta=1.0 state triangle",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.4392740455024979, 0.4392740455024978, 0.10319902958254151]",
+      "expected": "<=2 operator norm",
+      "group": "Gibbs envelope",
+      "name": "V=2 pair=[0, 1] site=0 N=3 beta=1.0 state operator envelope",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.5082069966066342, 0.5082069966066342, 0.11845612440987395]",
+      "expected": "finite nonnegative",
+      "group": "Gibbs",
+      "name": "V=2 pair=[0, 1] site=0 N=3 beta=2.0 state finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.11845612440987395",
+      "expected": "<=1.0164140032132682",
+      "group": "Gibbs norm",
+      "name": "V=2 pair=[0, 1] site=0 N=3 beta=2.0 state triangle",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.5082069966066342, 0.5082069966066342, 0.11845612440987395]",
+      "expected": "<=2 operator norm",
+      "group": "Gibbs envelope",
+      "name": "V=2 pair=[0, 1] site=0 N=3 beta=2.0 state operator envelope",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.3113306067355196e-16",
+      "expected": "<=1e-08",
+      "group": "Volterra",
+      "name": "V=2 pair=[0, 1] site=0 N=6 history identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.6028047164918086, 0.6028047164918084, 0.1423144103089884]",
+      "expected": "finite",
+      "group": "Volterra",
+      "name": "V=2 pair=[0, 1] site=0 N=6 operator finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.1423144103089884",
+      "expected": "<=1.2056094429836168",
+      "group": "norm",
+      "name": "V=2 pair=[0, 1] site=0 N=6 operator triangle",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.6028047164918086",
+      "expected": "<=0.6041714234630287",
+      "group": "Volterra bound",
+      "name": "V=2 pair=[0, 1] site=0 N=6 telescoping right",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.6028047164918084",
+      "expected": "<=0.6041714234630282",
+      "group": "Volterra bound",
+      "name": "V=2 pair=[0, 1] site=0 N=6 telescoping left",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.7672779685967639, 0.7672779685967637, 0.182391102179393]",
+      "expected": "finite nonnegative",
+      "group": "Gibbs",
+      "name": "V=2 pair=[0, 1] site=0 N=6 beta=0.5 state finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.182391102179393",
+      "expected": "<=1.5345559471935275",
+      "group": "Gibbs norm",
+      "name": "V=2 pair=[0, 1] site=0 N=6 beta=0.5 state triangle",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.7672779685967639, 0.7672779685967637, 0.182391102179393]",
+      "expected": "<=2 operator norm",
+      "group": "Gibbs envelope",
+      "name": "V=2 pair=[0, 1] site=0 N=6 beta=0.5 state operator envelope",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.8775378452306898, 0.8775378452306898, 0.20422044079431464]",
+      "expected": "finite nonnegative",
+      "group": "Gibbs",
+      "name": "V=2 pair=[0, 1] site=0 N=6 beta=1.0 state finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.20422044079431464",
+      "expected": "<=1.7550757004613795",
+      "group": "Gibbs norm",
+      "name": "V=2 pair=[0, 1] site=0 N=6 beta=1.0 state triangle",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.8775378452306898, 0.8775378452306898, 0.20422044079431464]",
+      "expected": "<=2 operator norm",
+      "group": "Gibbs envelope",
+      "name": "V=2 pair=[0, 1] site=0 N=6 beta=1.0 state operator envelope",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.0153706782888263, 1.0153706782888263, 0.23430923037591092]",
+      "expected": "finite nonnegative",
+      "group": "Gibbs",
+      "name": "V=2 pair=[0, 1] site=0 N=6 beta=2.0 state finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.23430923037591092",
+      "expected": "<=2.0307413665776526",
+      "group": "Gibbs norm",
+      "name": "V=2 pair=[0, 1] site=0 N=6 beta=2.0 state triangle",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.0153706782888263, 1.0153706782888263, 0.23430923037591092]",
+      "expected": "<=2 operator norm",
+      "group": "Gibbs envelope",
+      "name": "V=2 pair=[0, 1] site=0 N=6 beta=2.0 state operator envelope",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.4329152357539098",
+      "expected": ">1e-06",
+      "group": "orientation",
+      "name": "V=2 pair=[0, 1] site=1 commutator floor",
+      "status": "PASS"
+    },
+    {
+      "actual": "7.492518173961673e-18",
+      "expected": "<=1e-08",
+      "group": "Volterra",
+      "name": "V=2 pair=[0, 1] site=1 N=1 history identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.10069523557717143, 0.10069523557717143, 0.024050846430772755]",
+      "expected": "finite",
+      "group": "Volterra",
+      "name": "V=2 pair=[0, 1] site=1 N=1 operator finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.024050846430772755",
+      "expected": "<=0.20139048115434285",
+      "group": "norm",
+      "name": "V=2 pair=[0, 1] site=1 N=1 operator triangle",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.10069523557717143",
+      "expected": "<=0.10069524557717144",
+      "group": "Volterra bound",
+      "name": "V=2 pair=[0, 1] site=1 N=1 telescoping right",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.10069523557717143",
+      "expected": "<=0.10069524557717145",
+      "group": "Volterra bound",
+      "name": "V=2 pair=[0, 1] site=1 N=1 telescoping left",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.12809804859539978, 0.12809804859539978, 0.030824673575490957]",
+      "expected": "finite nonnegative",
+      "group": "Gibbs",
+      "name": "V=2 pair=[0, 1] site=1 N=1 beta=0.5 state finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.030824673575490957",
+      "expected": "<=0.25619610719079955",
+      "group": "Gibbs norm",
+      "name": "V=2 pair=[0, 1] site=1 N=1 beta=0.5 state triangle",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.12809804859539978, 0.12809804859539978, 0.030824673575490957]",
+      "expected": "<=2 operator norm",
+      "group": "Gibbs envelope",
+      "name": "V=2 pair=[0, 1] site=1 N=1 beta=0.5 state operator envelope",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.14646699959741508, 0.14646699959741508, 0.034515525139774995]",
+      "expected": "finite nonnegative",
+      "group": "Gibbs",
+      "name": "V=2 pair=[0, 1] site=1 N=1 beta=1.0 state finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.034515525139774995",
+      "expected": "<=0.29293400919483015",
+      "group": "Gibbs norm",
+      "name": "V=2 pair=[0, 1] site=1 N=1 beta=1.0 state triangle",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.14646699959741508, 0.14646699959741508, 0.034515525139774995]",
+      "expected": "<=2 operator norm",
+      "group": "Gibbs envelope",
+      "name": "V=2 pair=[0, 1] site=1 N=1 beta=1.0 state operator envelope",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.16944201206214712, 0.16944201206214715, 0.03962570972646438]",
+      "expected": "finite nonnegative",
+      "group": "Gibbs",
+      "name": "V=2 pair=[0, 1] site=1 N=1 beta=2.0 state finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.03962570972646438",
+      "expected": "<=0.3388840341242943",
+      "group": "Gibbs norm",
+      "name": "V=2 pair=[0, 1] site=1 N=1 beta=2.0 state triangle",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.16944201206214712, 0.16944201206214715, 0.03962570972646438]",
+      "expected": "<=2 operator norm",
+      "group": "Gibbs envelope",
+      "name": "V=2 pair=[0, 1] site=1 N=1 beta=2.0 state operator envelope",
+      "status": "PASS"
+    },
+    {
+      "actual": "3.5110690592845e-17",
+      "expected": "<=1e-08",
+      "group": "Volterra",
+      "name": "V=2 pair=[0, 1] site=1 N=3 history identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.30192745290760703, 0.301927452907607, 0.07192267172720429]",
+      "expected": "finite",
+      "group": "Volterra",
+      "name": "V=2 pair=[0, 1] site=1 N=3 operator finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.07192267172720429",
+      "expected": "<=0.6038549158152141",
+      "group": "norm",
+      "name": "V=2 pair=[0, 1] site=1 N=3 operator triangle",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.30192745290760703",
+      "expected": "<=0.30208571673151435",
+      "group": "Volterra bound",
+      "name": "V=2 pair=[0, 1] site=1 N=3 telescoping right",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.301927452907607",
+      "expected": "<=0.30208571673151435",
+      "group": "Volterra bound",
+      "name": "V=2 pair=[0, 1] site=1 N=3 telescoping left",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.3841537472626093, 0.3841537472626093, 0.09216949662002061]",
+      "expected": "finite nonnegative",
+      "group": "Gibbs",
+      "name": "V=2 pair=[0, 1] site=1 N=3 beta=0.5 state finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.09216949662002061",
+      "expected": "<=0.7683075045252187",
+      "group": "Gibbs norm",
+      "name": "V=2 pair=[0, 1] site=1 N=3 beta=0.5 state triangle",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.3841537472626093, 0.3841537472626093, 0.09216949662002061]",
+      "expected": "<=2 operator norm",
+      "group": "Gibbs envelope",
+      "name": "V=2 pair=[0, 1] site=1 N=3 beta=0.5 state operator envelope",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.4392740455024979, 0.4392740455024979, 0.10319902958254142]",
+      "expected": "finite nonnegative",
+      "group": "Gibbs",
+      "name": "V=2 pair=[0, 1] site=1 N=3 beta=1.0 state finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.10319902958254142",
+      "expected": "<=0.8785481010049958",
+      "group": "Gibbs norm",
+      "name": "V=2 pair=[0, 1] site=1 N=3 beta=1.0 state triangle",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.4392740455024979, 0.4392740455024979, 0.10319902958254142]",
+      "expected": "<=2 operator norm",
+      "group": "Gibbs envelope",
+      "name": "V=2 pair=[0, 1] site=1 N=3 beta=1.0 state operator envelope",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.5082069966066342, 0.5082069966066342, 0.11845612440987388]",
+      "expected": "finite nonnegative",
+      "group": "Gibbs",
+      "name": "V=2 pair=[0, 1] site=1 N=3 beta=2.0 state finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.11845612440987388",
+      "expected": "<=1.0164140032132682",
+      "group": "Gibbs norm",
+      "name": "V=2 pair=[0, 1] site=1 N=3 beta=2.0 state triangle",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.5082069966066342, 0.5082069966066342, 0.11845612440987388]",
+      "expected": "<=2 operator norm",
+      "group": "Gibbs envelope",
+      "name": "V=2 pair=[0, 1] site=1 N=3 beta=2.0 state operator envelope",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.3274488814093043e-16",
+      "expected": "<=1e-08",
+      "group": "Volterra",
+      "name": "V=2 pair=[0, 1] site=1 N=6 history identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.6028047164918087, 0.6028047164918088, 0.1423144103089884]",
+      "expected": "finite",
+      "group": "Volterra",
+      "name": "V=2 pair=[0, 1] site=1 N=6 operator finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.1423144103089884",
+      "expected": "<=1.2056094429836173",
+      "group": "norm",
+      "name": "V=2 pair=[0, 1] site=1 N=6 operator triangle",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.6028047164918087",
+      "expected": "<=0.6041714234630288",
+      "group": "Volterra bound",
+      "name": "V=2 pair=[0, 1] site=1 N=6 telescoping right",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.6028047164918088",
+      "expected": "<=0.6041714234630288",
+      "group": "Volterra bound",
+      "name": "V=2 pair=[0, 1] site=1 N=6 telescoping left",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.7672779685967639, 0.7672779685967639, 0.18239110217939292]",
+      "expected": "finite nonnegative",
+      "group": "Gibbs",
+      "name": "V=2 pair=[0, 1] site=1 N=6 beta=0.5 state finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.18239110217939292",
+      "expected": "<=1.5345559471935277",
+      "group": "Gibbs norm",
+      "name": "V=2 pair=[0, 1] site=1 N=6 beta=0.5 state triangle",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.7672779685967639, 0.7672779685967639, 0.18239110217939292]",
+      "expected": "<=2 operator norm",
+      "group": "Gibbs envelope",
+      "name": "V=2 pair=[0, 1] site=1 N=6 beta=0.5 state operator envelope",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.8775378452306898, 0.8775378452306898, 0.20422044079431456]",
+      "expected": "finite nonnegative",
+      "group": "Gibbs",
+      "name": "V=2 pair=[0, 1] site=1 N=6 beta=1.0 state finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.20422044079431456",
+      "expected": "<=1.7550757004613795",
+      "group": "Gibbs norm",
+      "name": "V=2 pair=[0, 1] site=1 N=6 beta=1.0 state triangle",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.8775378452306898, 0.8775378452306898, 0.20422044079431456]",
+      "expected": "<=2 operator norm",
+      "group": "Gibbs envelope",
+      "name": "V=2 pair=[0, 1] site=1 N=6 beta=1.0 state operator envelope",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.0153706782888265, 1.0153706782888265, 0.23430923037591084]",
+      "expected": "finite nonnegative",
+      "group": "Gibbs",
+      "name": "V=2 pair=[0, 1] site=1 N=6 beta=2.0 state finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.23430923037591084",
+      "expected": "<=2.030741366577653",
+      "group": "Gibbs norm",
+      "name": "V=2 pair=[0, 1] site=1 N=6 beta=2.0 state triangle",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.0153706782888265, 1.0153706782888265, 0.23430923037591084]",
+      "expected": "<=2 operator norm",
+      "group": "Gibbs envelope",
+      "name": "V=2 pair=[0, 1] site=1 N=6 beta=2.0 state operator envelope",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.953807906047262e-15",
+      "expected": "<=1e-08",
+      "group": "split",
+      "name": "V=2 pair=[0, 1] order=onsite_then_lexicographic_bonds sign=1 unitary",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.43291523575391017",
+      "expected": ">1e-06",
+      "group": "orientation",
+      "name": "V=2 pair=[0, 1] site=0 commutator floor",
+      "status": "PASS"
+    },
+    {
+      "actual": "6.025112058614534e-18",
+      "expected": "<=1e-08",
+      "group": "Volterra",
+      "name": "V=2 pair=[0, 1] site=0 N=1 history identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.1006952355771714, 0.1006952355771714, 0.024050846430772783]",
+      "expected": "finite",
+      "group": "Volterra",
+      "name": "V=2 pair=[0, 1] site=0 N=1 operator finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.024050846430772783",
+      "expected": "<=0.2013904811543428",
+      "group": "norm",
+      "name": "V=2 pair=[0, 1] site=0 N=1 operator triangle",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.1006952355771714",
+      "expected": "<=0.10069524557717142",
+      "group": "Volterra bound",
+      "name": "V=2 pair=[0, 1] site=0 N=1 telescoping right",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.1006952355771714",
+      "expected": "<=0.10069524557717136",
+      "group": "Volterra bound",
+      "name": "V=2 pair=[0, 1] site=0 N=1 telescoping left",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.12809804859539978, 0.12809804859539975, 0.030824673575490992]",
+      "expected": "finite nonnegative",
+      "group": "Gibbs",
+      "name": "V=2 pair=[0, 1] site=0 N=1 beta=0.5 state finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.030824673575490992",
+      "expected": "<=0.2561961071907995",
+      "group": "Gibbs norm",
+      "name": "V=2 pair=[0, 1] site=0 N=1 beta=0.5 state triangle",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.12809804859539978, 0.12809804859539975, 0.030824673575490992]",
+      "expected": "<=2 operator norm",
+      "group": "Gibbs envelope",
+      "name": "V=2 pair=[0, 1] site=0 N=1 beta=0.5 state operator envelope",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.14646699959741508, 0.14646699959741508, 0.034515525139775044]",
+      "expected": "finite nonnegative",
+      "group": "Gibbs",
+      "name": "V=2 pair=[0, 1] site=0 N=1 beta=1.0 state finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.034515525139775044",
+      "expected": "<=0.29293400919483015",
+      "group": "Gibbs norm",
+      "name": "V=2 pair=[0, 1] site=0 N=1 beta=1.0 state triangle",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.14646699959741508, 0.14646699959741508, 0.034515525139775044]",
+      "expected": "<=2 operator norm",
+      "group": "Gibbs envelope",
+      "name": "V=2 pair=[0, 1] site=0 N=1 beta=1.0 state operator envelope",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.16944201206214715, 0.16944201206214715, 0.039625709726464425]",
+      "expected": "finite nonnegative",
+      "group": "Gibbs",
+      "name": "V=2 pair=[0, 1] site=0 N=1 beta=2.0 state finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.039625709726464425",
+      "expected": "<=0.3388840341242943",
+      "group": "Gibbs norm",
+      "name": "V=2 pair=[0, 1] site=0 N=1 beta=2.0 state triangle",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.16944201206214715, 0.16944201206214715, 0.039625709726464425]",
+      "expected": "<=2 operator norm",
+      "group": "Gibbs envelope",
+      "name": "V=2 pair=[0, 1] site=0 N=1 beta=2.0 state operator envelope",
+      "status": "PASS"
+    },
+    {
+      "actual": "4.4308681951514265e-17",
+      "expected": "<=1e-08",
+      "group": "Volterra",
+      "name": "V=2 pair=[0, 1] site=0 N=3 history identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.3019274529076069, 0.3019274529076069, 0.07192267172720429]",
+      "expected": "finite",
+      "group": "Volterra",
+      "name": "V=2 pair=[0, 1] site=0 N=3 operator finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.07192267172720429",
+      "expected": "<=0.6038549158152139",
+      "group": "norm",
+      "name": "V=2 pair=[0, 1] site=0 N=3 operator triangle",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.3019274529076069",
+      "expected": "<=0.3020857167315143",
+      "group": "Volterra bound",
+      "name": "V=2 pair=[0, 1] site=0 N=3 telescoping right",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.3019274529076069",
+      "expected": "<=0.3020857167315141",
+      "group": "Volterra bound",
+      "name": "V=2 pair=[0, 1] site=0 N=3 telescoping left",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.3841537472626093, 0.38415374726260926, 0.09216949662002065]",
+      "expected": "finite nonnegative",
+      "group": "Gibbs",
+      "name": "V=2 pair=[0, 1] site=0 N=3 beta=0.5 state finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.09216949662002065",
+      "expected": "<=0.7683075045252187",
+      "group": "Gibbs norm",
+      "name": "V=2 pair=[0, 1] site=0 N=3 beta=0.5 state triangle",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.3841537472626093, 0.38415374726260926, 0.09216949662002065]",
+      "expected": "<=2 operator norm",
+      "group": "Gibbs envelope",
+      "name": "V=2 pair=[0, 1] site=0 N=3 beta=0.5 state operator envelope",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.4392740455024979, 0.4392740455024978, 0.10319902958254151]",
+      "expected": "finite nonnegative",
+      "group": "Gibbs",
+      "name": "V=2 pair=[0, 1] site=0 N=3 beta=1.0 state finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.10319902958254151",
+      "expected": "<=0.8785481010049957",
+      "group": "Gibbs norm",
+      "name": "V=2 pair=[0, 1] site=0 N=3 beta=1.0 state triangle",
+      "status": "PASS"
+    },
+    {
+      "actual": "1402",
+      "expected": "all executed assertions passed",
+      "group": "summary",
+      "name": "assertion_summary",
+      "status": "PASS"
+    }
+  ],
+  "audit_id": "PA-CP1-ST8-Q3LOCK-CUBIC-MULTIPLIER-SPLIT-HISTORY-VOLTERRA",
+  "boundary": {
+    "actual_q3_history_closed": false,
+    "analytic_volterra_bound_closed": false,
+    "c6_closed": false,
+    "common_alpha_closed": false,
+    "continuum_closed": false,
+    "delta_d_cauchy_closed": false,
+    "direct_d_cauchy_closed": false,
+    "exhaustion_independence_closed": false,
+    "finite_orientation_difference_closed": true,
+    "finite_split_history_both_orientations_closed": true,
+    "finite_volterra_telescoping_bound_closed": true,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "no_new_negative_result": true,
+    "no_pdf": true,
+    "no_tier_change": true,
+    "operator_domain_embedding_closed": false,
+    "pre_a_closed": false,
+    "sector_a_closed": false,
+    "source_volume_beta_uniformity_closed": false
+  },
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "derived": {
+    "actual_q3_history_closed": false,
+    "analytic_volterra_bound_closed": false,
+    "common_alpha_closed": false,
+    "delta_d_cauchy_closed": false,
+    "direct_d_cauchy_closed": false,
+    "exhaustion_independence_closed": false,
+    "finite_orientation_difference_closed": true,
+    "finite_split_history_both_orientations_closed": true,
+    "finite_volterra_telescoping_bound_closed": true,
+    "history_row_count": 96,
+    "max_commutator_operator_norm": 0.14231441030898842,
+    "max_left_operator_norm": 0.6074854708382673,
+    "max_right_operator_norm": 0.607485470838267,
+    "max_state_weighted_norm": 1.1419245640005118,
+    "operator_domain_embedding_closed": false,
+    "pre_a_closed": false,
+    "source_manifest_sha256": "3ef2893c3d16edf0d558e21c26f7508ed5db03ea0bc77cac040123740d78ed17",
+    "source_volume_beta_uniformity_closed": false
+  },
+  "exploration_id": "EXP-001160",
+  "passed": 1402,
+  "run_kind": "primary",
+  "schema": "tect/foundation-audit/1.0",
+  "task_id": "T-054",
+  "verdict": "PASS"
+}

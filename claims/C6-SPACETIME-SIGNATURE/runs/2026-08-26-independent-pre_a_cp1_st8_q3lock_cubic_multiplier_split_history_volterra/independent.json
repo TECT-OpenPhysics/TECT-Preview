@@ -1,0 +1,902 @@
+{
+  "assertion_count": 1304,
+  "assertions": [
+    {
+      "actual": "['EXP-001160', 'T-054', False]",
+      "expected": "EXP-001160/T-054/false",
+      "group": "provenance",
+      "name": "identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "['EXP-001158', 'T-054']",
+      "expected": "EXP-001158/T-054",
+      "group": "upstream",
+      "name": "source authority",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'time_step': '1/18', 'step_counts': [1, 3, 6], 'orders': ['onsite_then_lexicographic_bonds', 'reverse_term_order'], 'time_signs': [-1, 1], 'right_orientation': 'f_x^(3/4) q_x^3 A_f^(-3/4)', 'left_orientation': 'f_x^(3/4) A_f^(-3/4) q_x^3', 'volterra_sum': 'V_N(M)=delta sum_{k=0}^{N-1} Ad(U^k)(M)', 'weight_ratio_per_edge': '1/16', 'multiplier_power': '3/4'}",
+      "expected": "declared finite grid",
+      "group": "fixture",
+      "name": "history grid",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'finite_split_history_both_orientations_closed': True, 'finite_volterra_telescoping_bound_closed': True, 'finite_orientation_difference_closed': True, 'analytic_volterra_bound_closed': False, 'operator_domain_embedding_closed': False, 'actual_q3_history_closed': False, 'direct_d_cauchy_closed': False, 'delta_d_cauchy_closed': False, 'source_volume_beta_uniformity_closed': False, 'exhaustion_independence_closed': False, 'common_alpha_closed': False, 'hamiltonian_os_identification_closed': False, 'kms_gns_gap_closed': False, 'continuum_closed': False, 'c6_closed': False, 'sector_a_closed': False, 'pre_a_closed': False, 'no_new_negative_result': True, 'no_tier_change': True, 'no_pdf': True}",
+      "expected": "finite carrier only",
+      "group": "scope",
+      "name": "scope firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": "3.3306690738754696e-16",
+      "expected": "<=1e-08",
+      "group": "split",
+      "name": "V=2 split decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.0000000000000004",
+      "expected": ">=1.0",
+      "group": "energy",
+      "name": "V=2 weighted energy floor",
+      "status": "PASS"
+    },
+    {
+      "actual": "2.0138845992153392e-15",
+      "expected": "<=1e-08",
+      "group": "split",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=-1 unitary",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.43291523575390956",
+      "expected": ">1e-06",
+      "group": "orientation",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=-1 site=0 order floor",
+      "status": "PASS"
+    },
+    {
+      "actual": "4.5201532114855266e-18",
+      "expected": "<=1e-08",
+      "group": "Volterra",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=-1 site=0 N=1 identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.024050846430772748",
+      "expected": "<=0.20139048115434283",
+      "group": "norm",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=-1 site=0 N=1 triangle",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.10069523557717137",
+      "expected": "<=0.10069524557717137",
+      "group": "Volterra bound",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=-1 site=0 N=1 right bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.10069523557717144",
+      "expected": "<=0.10069524557717136",
+      "group": "Volterra bound",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=-1 site=0 N=1 left bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.12809804859539972, 0.12809804859539972, 0.03082467357549095]",
+      "expected": "finite nonnegative",
+      "group": "Gibbs",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=-1 site=0 N=1 beta=0.5 state",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.03082467357549095",
+      "expected": "<=0.25619610719079944",
+      "group": "Gibbs norm",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=-1 site=0 N=1 beta=0.5 state triangle",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.12809804859539972, 0.12809804859539972, 0.03082467357549095]",
+      "expected": "<=2 operator norm",
+      "group": "Gibbs envelope",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=-1 site=0 N=1 beta=0.5 state envelope",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.14646699959741494, 0.14646699959741494, 0.03451552513977498]",
+      "expected": "finite nonnegative",
+      "group": "Gibbs",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=-1 site=0 N=1 beta=1.0 state",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.03451552513977498",
+      "expected": "<=0.29293400919482987",
+      "group": "Gibbs norm",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=-1 site=0 N=1 beta=1.0 state triangle",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.14646699959741494, 0.14646699959741494, 0.03451552513977498]",
+      "expected": "<=2 operator norm",
+      "group": "Gibbs envelope",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=-1 site=0 N=1 beta=1.0 state envelope",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.1694420120621471, 0.1694420120621471, 0.03962570972646437]",
+      "expected": "finite nonnegative",
+      "group": "Gibbs",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=-1 site=0 N=1 beta=2.0 state",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.03962570972646437",
+      "expected": "<=0.3388840341242942",
+      "group": "Gibbs norm",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=-1 site=0 N=1 beta=2.0 state triangle",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.1694420120621471, 0.1694420120621471, 0.03962570972646437]",
+      "expected": "<=2 operator norm",
+      "group": "Gibbs envelope",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=-1 site=0 N=1 beta=2.0 state envelope",
+      "status": "PASS"
+    },
+    {
+      "actual": "4.133554091673771e-17",
+      "expected": "<=1e-08",
+      "group": "Volterra",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=-1 site=0 N=3 identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.07192267172720425",
+      "expected": "<=0.6038549158152139",
+      "group": "norm",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=-1 site=0 N=3 triangle",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.3019274529076069",
+      "expected": "<=0.30208571673151413",
+      "group": "Volterra bound",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=-1 site=0 N=3 right bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.30192745290760686",
+      "expected": "<=0.3020857167315141",
+      "group": "Volterra bound",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=-1 site=0 N=3 left bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.38415374726260915, 0.38415374726260915, 0.09216949662002058]",
+      "expected": "finite nonnegative",
+      "group": "Gibbs",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=-1 site=0 N=3 beta=0.5 state",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.09216949662002058",
+      "expected": "<=0.7683075045252183",
+      "group": "Gibbs norm",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=-1 site=0 N=3 beta=0.5 state triangle",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.38415374726260915, 0.38415374726260915, 0.09216949662002058]",
+      "expected": "<=2 operator norm",
+      "group": "Gibbs envelope",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=-1 site=0 N=3 beta=0.5 state envelope",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.43927404550249743, 0.43927404550249743, 0.10319902958254136]",
+      "expected": "finite nonnegative",
+      "group": "Gibbs",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=-1 site=0 N=3 beta=1.0 state",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.10319902958254136",
+      "expected": "<=0.8785481010049949",
+      "group": "Gibbs norm",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=-1 site=0 N=3 beta=1.0 state triangle",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.43927404550249743, 0.43927404550249743, 0.10319902958254136]",
+      "expected": "<=2 operator norm",
+      "group": "Gibbs envelope",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=-1 site=0 N=3 beta=1.0 state envelope",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.508206996606634, 0.508206996606634, 0.11845612440987384]",
+      "expected": "finite nonnegative",
+      "group": "Gibbs",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=-1 site=0 N=3 beta=2.0 state",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.11845612440987384",
+      "expected": "<=1.016414003213268",
+      "group": "Gibbs norm",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=-1 site=0 N=3 beta=2.0 state triangle",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.508206996606634, 0.508206996606634, 0.11845612440987384]",
+      "expected": "<=2 operator norm",
+      "group": "Gibbs envelope",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=-1 site=0 N=3 beta=2.0 state envelope",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.0273223213085185e-16",
+      "expected": "<=1e-08",
+      "group": "Volterra",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=-1 site=0 N=6 identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.14231441030898834",
+      "expected": "<=1.2056094429836168",
+      "group": "norm",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=-1 site=0 N=6 triangle",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.6028047164918084",
+      "expected": "<=0.6041714234630283",
+      "group": "Volterra bound",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=-1 site=0 N=6 right bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.6028047164918083",
+      "expected": "<=0.6041714234630282",
+      "group": "Volterra bound",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=-1 site=0 N=6 left bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.7672779685967633, 0.7672779685967633, 0.1823911021793929]",
+      "expected": "finite nonnegative",
+      "group": "Gibbs",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=-1 site=0 N=6 beta=0.5 state",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.1823911021793929",
+      "expected": "<=1.5345559471935266",
+      "group": "Gibbs norm",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=-1 site=0 N=6 beta=0.5 state triangle",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.7672779685967633, 0.7672779685967633, 0.1823911021793929]",
+      "expected": "<=2 operator norm",
+      "group": "Gibbs envelope",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=-1 site=0 N=6 beta=0.5 state envelope",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.877537845230689, 0.8775378452306891, 0.20422044079431442]",
+      "expected": "finite nonnegative",
+      "group": "Gibbs",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=-1 site=0 N=6 beta=1.0 state",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.20422044079431442",
+      "expected": "<=1.755075700461378",
+      "group": "Gibbs norm",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=-1 site=0 N=6 beta=1.0 state triangle",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.877537845230689, 0.8775378452306891, 0.20422044079431442]",
+      "expected": "<=2 operator norm",
+      "group": "Gibbs envelope",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=-1 site=0 N=6 beta=1.0 state envelope",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.0153706782888263, 1.0153706782888263, 0.2343092303759108]",
+      "expected": "finite nonnegative",
+      "group": "Gibbs",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=-1 site=0 N=6 beta=2.0 state",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.2343092303759108",
+      "expected": "<=2.0307413665776526",
+      "group": "Gibbs norm",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=-1 site=0 N=6 beta=2.0 state triangle",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.0153706782888263, 1.0153706782888263, 0.2343092303759108]",
+      "expected": "<=2 operator norm",
+      "group": "Gibbs envelope",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=-1 site=0 N=6 beta=2.0 state envelope",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.4329152357539097",
+      "expected": ">1e-06",
+      "group": "orientation",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=-1 site=1 order floor",
+      "status": "PASS"
+    },
+    {
+      "actual": "3.711809203124421e-18",
+      "expected": "<=1e-08",
+      "group": "Volterra",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=-1 site=1 N=1 identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.024050846430772776",
+      "expected": "<=0.20139048115434277",
+      "group": "norm",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=-1 site=1 N=1 triangle",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.10069523557717137",
+      "expected": "<=0.1006952455771714",
+      "group": "Volterra bound",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=-1 site=1 N=1 right bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.10069523557717142",
+      "expected": "<=0.10069524557717141",
+      "group": "Volterra bound",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=-1 site=1 N=1 left bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.12809804859539972, 0.12809804859539972, 0.030824673575490975]",
+      "expected": "finite nonnegative",
+      "group": "Gibbs",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=-1 site=1 N=1 beta=0.5 state",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.030824673575490975",
+      "expected": "<=0.25619610719079944",
+      "group": "Gibbs norm",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=-1 site=1 N=1 beta=0.5 state triangle",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.12809804859539972, 0.12809804859539972, 0.030824673575490975]",
+      "expected": "<=2 operator norm",
+      "group": "Gibbs envelope",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=-1 site=1 N=1 beta=0.5 state envelope",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.14646699959741497, 0.14646699959741497, 0.034515525139774995]",
+      "expected": "finite nonnegative",
+      "group": "Gibbs",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=-1 site=1 N=1 beta=1.0 state",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.034515525139774995",
+      "expected": "<=0.2929340091948299",
+      "group": "Gibbs norm",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=-1 site=1 N=1 beta=1.0 state triangle",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.14646699959741497, 0.14646699959741497, 0.034515525139774995]",
+      "expected": "<=2 operator norm",
+      "group": "Gibbs envelope",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=-1 site=1 N=1 beta=1.0 state envelope",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.16944201206214712, 0.1694420120621471, 0.03962570972646439]",
+      "expected": "finite nonnegative",
+      "group": "Gibbs",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=-1 site=1 N=1 beta=2.0 state",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.03962570972646439",
+      "expected": "<=0.3388840341242942",
+      "group": "Gibbs norm",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=-1 site=1 N=1 beta=2.0 state triangle",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.16944201206214712, 0.1694420120621471, 0.03962570972646439]",
+      "expected": "<=2 operator norm",
+      "group": "Gibbs envelope",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=-1 site=1 N=1 beta=2.0 state envelope",
+      "status": "PASS"
+    },
+    {
+      "actual": "4.1426005788733394e-17",
+      "expected": "<=1e-08",
+      "group": "Volterra",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=-1 site=1 N=3 identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.07192267172720432",
+      "expected": "<=0.6038549158152137",
+      "group": "norm",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=-1 site=1 N=3 triangle",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.3019274529076069",
+      "expected": "<=0.3020857167315142",
+      "group": "Volterra bound",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=-1 site=1 N=3 right bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.30192745290760675",
+      "expected": "<=0.30208571673151424",
+      "group": "Volterra bound",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=-1 site=1 N=3 left bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.3841537472626091, 0.3841537472626091, 0.09216949662002064]",
+      "expected": "finite nonnegative",
+      "group": "Gibbs",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=-1 site=1 N=3 beta=0.5 state",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.09216949662002064",
+      "expected": "<=0.7683075045252182",
+      "group": "Gibbs norm",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=-1 site=1 N=3 beta=0.5 state triangle",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.3841537472626091, 0.3841537472626091, 0.09216949662002064]",
+      "expected": "<=2 operator norm",
+      "group": "Gibbs envelope",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=-1 site=1 N=3 beta=0.5 state envelope",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.4392740455024975, 0.43927404550249743, 0.10319902958254142]",
+      "expected": "finite nonnegative",
+      "group": "Gibbs",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=-1 site=1 N=3 beta=1.0 state",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.10319902958254142",
+      "expected": "<=0.878548101004995",
+      "group": "Gibbs norm",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=-1 site=1 N=3 beta=1.0 state triangle",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.4392740455024975, 0.43927404550249743, 0.10319902958254142]",
+      "expected": "<=2 operator norm",
+      "group": "Gibbs envelope",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=-1 site=1 N=3 beta=1.0 state envelope",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.508206996606634, 0.508206996606634, 0.11845612440987391]",
+      "expected": "finite nonnegative",
+      "group": "Gibbs",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=-1 site=1 N=3 beta=2.0 state",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.11845612440987391",
+      "expected": "<=1.016414003213268",
+      "group": "Gibbs norm",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=-1 site=1 N=3 beta=2.0 state triangle",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.508206996606634, 0.508206996606634, 0.11845612440987391]",
+      "expected": "<=2 operator norm",
+      "group": "Gibbs envelope",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=-1 site=1 N=3 beta=2.0 state envelope",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.3497493480097284e-16",
+      "expected": "<=1e-08",
+      "group": "Volterra",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=-1 site=1 N=6 identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.1423144103089884",
+      "expected": "<=1.2056094429836168",
+      "group": "norm",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=-1 site=1 N=6 triangle",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.6028047164918083",
+      "expected": "<=0.6041714234630284",
+      "group": "Volterra bound",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=-1 site=1 N=6 right bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.6028047164918086",
+      "expected": "<=0.6041714234630285",
+      "group": "Volterra bound",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=-1 site=1 N=6 left bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.7672779685967633, 0.7672779685967632, 0.182391102179393]",
+      "expected": "finite nonnegative",
+      "group": "Gibbs",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=-1 site=1 N=6 beta=0.5 state",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.182391102179393",
+      "expected": "<=1.5345559471935264",
+      "group": "Gibbs norm",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=-1 site=1 N=6 beta=0.5 state triangle",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.7672779685967633, 0.7672779685967632, 0.182391102179393]",
+      "expected": "<=2 operator norm",
+      "group": "Gibbs envelope",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=-1 site=1 N=6 beta=0.5 state envelope",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.877537845230689, 0.8775378452306889, 0.20422044079431453]",
+      "expected": "finite nonnegative",
+      "group": "Gibbs",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=-1 site=1 N=6 beta=1.0 state",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.20422044079431453",
+      "expected": "<=1.755075700461378",
+      "group": "Gibbs norm",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=-1 site=1 N=6 beta=1.0 state triangle",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.877537845230689, 0.8775378452306889, 0.20422044079431453]",
+      "expected": "<=2 operator norm",
+      "group": "Gibbs envelope",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=-1 site=1 N=6 beta=1.0 state envelope",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.015370678288826, 1.015370678288826, 0.2343092303759109]",
+      "expected": "finite nonnegative",
+      "group": "Gibbs",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=-1 site=1 N=6 beta=2.0 state",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.2343092303759109",
+      "expected": "<=2.030741366577652",
+      "group": "Gibbs norm",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=-1 site=1 N=6 beta=2.0 state triangle",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.015370678288826, 1.015370678288826, 0.2343092303759109]",
+      "expected": "<=2 operator norm",
+      "group": "Gibbs envelope",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=-1 site=1 N=6 beta=2.0 state envelope",
+      "status": "PASS"
+    },
+    {
+      "actual": "2.0138845992153392e-15",
+      "expected": "<=1e-08",
+      "group": "split",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=1 unitary",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.43291523575390956",
+      "expected": ">1e-06",
+      "group": "orientation",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=1 site=0 order floor",
+      "status": "PASS"
+    },
+    {
+      "actual": "4.5201532114855266e-18",
+      "expected": "<=1e-08",
+      "group": "Volterra",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=1 site=0 N=1 identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.024050846430772748",
+      "expected": "<=0.20139048115434283",
+      "group": "norm",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=1 site=0 N=1 triangle",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.10069523557717137",
+      "expected": "<=0.10069524557717137",
+      "group": "Volterra bound",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=1 site=0 N=1 right bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.10069523557717144",
+      "expected": "<=0.10069524557717136",
+      "group": "Volterra bound",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=1 site=0 N=1 left bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.12809804859539972, 0.12809804859539972, 0.03082467357549095]",
+      "expected": "finite nonnegative",
+      "group": "Gibbs",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=1 site=0 N=1 beta=0.5 state",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.03082467357549095",
+      "expected": "<=0.25619610719079944",
+      "group": "Gibbs norm",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=1 site=0 N=1 beta=0.5 state triangle",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.12809804859539972, 0.12809804859539972, 0.03082467357549095]",
+      "expected": "<=2 operator norm",
+      "group": "Gibbs envelope",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=1 site=0 N=1 beta=0.5 state envelope",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.14646699959741494, 0.14646699959741494, 0.03451552513977498]",
+      "expected": "finite nonnegative",
+      "group": "Gibbs",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=1 site=0 N=1 beta=1.0 state",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.03451552513977498",
+      "expected": "<=0.29293400919482987",
+      "group": "Gibbs norm",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=1 site=0 N=1 beta=1.0 state triangle",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.14646699959741494, 0.14646699959741494, 0.03451552513977498]",
+      "expected": "<=2 operator norm",
+      "group": "Gibbs envelope",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=1 site=0 N=1 beta=1.0 state envelope",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.1694420120621471, 0.1694420120621471, 0.03962570972646437]",
+      "expected": "finite nonnegative",
+      "group": "Gibbs",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=1 site=0 N=1 beta=2.0 state",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.03962570972646437",
+      "expected": "<=0.3388840341242942",
+      "group": "Gibbs norm",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=1 site=0 N=1 beta=2.0 state triangle",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.1694420120621471, 0.1694420120621471, 0.03962570972646437]",
+      "expected": "<=2 operator norm",
+      "group": "Gibbs envelope",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=1 site=0 N=1 beta=2.0 state envelope",
+      "status": "PASS"
+    },
+    {
+      "actual": "4.133554091673771e-17",
+      "expected": "<=1e-08",
+      "group": "Volterra",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=1 site=0 N=3 identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.07192267172720425",
+      "expected": "<=0.6038549158152139",
+      "group": "norm",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=1 site=0 N=3 triangle",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.3019274529076069",
+      "expected": "<=0.30208571673151413",
+      "group": "Volterra bound",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=1 site=0 N=3 right bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.30192745290760686",
+      "expected": "<=0.3020857167315141",
+      "group": "Volterra bound",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=1 site=0 N=3 left bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.38415374726260915, 0.38415374726260915, 0.09216949662002058]",
+      "expected": "finite nonnegative",
+      "group": "Gibbs",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=1 site=0 N=3 beta=0.5 state",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.09216949662002058",
+      "expected": "<=0.7683075045252183",
+      "group": "Gibbs norm",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=1 site=0 N=3 beta=0.5 state triangle",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.38415374726260915, 0.38415374726260915, 0.09216949662002058]",
+      "expected": "<=2 operator norm",
+      "group": "Gibbs envelope",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=1 site=0 N=3 beta=0.5 state envelope",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.43927404550249743, 0.43927404550249743, 0.10319902958254136]",
+      "expected": "finite nonnegative",
+      "group": "Gibbs",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=1 site=0 N=3 beta=1.0 state",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.10319902958254136",
+      "expected": "<=0.8785481010049949",
+      "group": "Gibbs norm",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=1 site=0 N=3 beta=1.0 state triangle",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.43927404550249743, 0.43927404550249743, 0.10319902958254136]",
+      "expected": "<=2 operator norm",
+      "group": "Gibbs envelope",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=1 site=0 N=3 beta=1.0 state envelope",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.508206996606634, 0.508206996606634, 0.11845612440987384]",
+      "expected": "finite nonnegative",
+      "group": "Gibbs",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=1 site=0 N=3 beta=2.0 state",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.11845612440987384",
+      "expected": "<=1.016414003213268",
+      "group": "Gibbs norm",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=1 site=0 N=3 beta=2.0 state triangle",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.508206996606634, 0.508206996606634, 0.11845612440987384]",
+      "expected": "<=2 operator norm",
+      "group": "Gibbs envelope",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=1 site=0 N=3 beta=2.0 state envelope",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.0273223213085185e-16",
+      "expected": "<=1e-08",
+      "group": "Volterra",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=1 site=0 N=6 identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.14231441030898834",
+      "expected": "<=1.2056094429836168",
+      "group": "norm",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=1 site=0 N=6 triangle",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.6028047164918084",
+      "expected": "<=0.6041714234630283",
+      "group": "Volterra bound",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=1 site=0 N=6 right bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.6028047164918083",
+      "expected": "<=0.6041714234630282",
+      "group": "Volterra bound",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=1 site=0 N=6 left bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.7672779685967633, 0.7672779685967633, 0.1823911021793929]",
+      "expected": "finite nonnegative",
+      "group": "Gibbs",
+      "name": "V=2 order=onsite_then_lexicographic_bonds sign=1 site=0 N=6 beta=0.5 state",
+      "status": "PASS"
+    },
+    {
+      "actual": "1304",
+      "expected": "all executed assertions passed",
+      "group": "summary",
+      "name": "assertion_summary",
+      "status": "PASS"
+    }
+  ],
+  "audit_id": "PA-CP1-ST8-Q3LOCK-CUBIC-MULTIPLIER-SPLIT-HISTORY-VOLTERRA",
+  "boundary": {
+    "actual_q3_history_closed": false,
+    "analytic_volterra_bound_closed": false,
+    "c6_closed": false,
+    "common_alpha_closed": false,
+    "continuum_closed": false,
+    "delta_d_cauchy_closed": false,
+    "direct_d_cauchy_closed": false,
+    "exhaustion_independence_closed": false,
+    "finite_orientation_difference_closed": true,
+    "finite_split_history_both_orientations_closed": true,
+    "finite_volterra_telescoping_bound_closed": true,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "no_new_negative_result": true,
+    "no_pdf": true,
+    "no_tier_change": true,
+    "operator_domain_embedding_closed": false,
+    "pre_a_closed": false,
+    "sector_a_closed": false,
+    "source_volume_beta_uniformity_closed": false
+  },
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "derived": {
+    "actual_q3_history_closed": false,
+    "analytic_volterra_bound_closed": false,
+    "common_alpha_closed": false,
+    "delta_d_cauchy_closed": false,
+    "direct_d_cauchy_closed": false,
+    "exhaustion_independence_closed": false,
+    "finite_orientation_difference_closed": true,
+    "finite_split_history_both_orientations_closed": true,
+    "finite_volterra_telescoping_bound_closed": true,
+    "history_row_count": 96,
+    "max_commutator_operator_norm": 0.14231441030898842,
+    "max_left_operator_norm": 0.6074854708382645,
+    "max_right_operator_norm": 0.6074854708382647,
+    "max_state_weighted_norm": 1.1419245640005078,
+    "operator_domain_embedding_closed": false,
+    "pre_a_closed": false,
+    "source_manifest_sha256": "3ef2893c3d16edf0d558e21c26f7508ed5db03ea0bc77cac040123740d78ed17",
+    "source_volume_beta_uniformity_closed": false
+  },
+  "exploration_id": "EXP-001160",
+  "passed": 1304,
+  "run_kind": "independent",
+  "schema": "tect/foundation-audit/1.0",
+  "task_id": "T-054",
+  "verdict": "PASS"
+}

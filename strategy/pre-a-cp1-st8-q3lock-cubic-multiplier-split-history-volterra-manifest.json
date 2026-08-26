@@ -1,0 +1,129 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-CUBIC-MULTIPLIER-SPLIT-HISTORY-VOLTERRA-v0",
+  "title": "Finite split-history Volterra carrier with both cubic-multiplier orientations",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001160",
+  "claim_bearing": false,
+  "parent_explorations": ["EXP-001159", "EXP-001158", "EXP-001157", "EXP-001156"],
+  "parent_authorities": [
+    "strategy/pre-a-cp1-st8-q3lock-cubic-multiplier-noncommuting-order-stress-manifest.json",
+    "strategy/pre-a-cp1-st8-q3lock-cubic-multiplier-finite-stress-manifest.json",
+    "strategy/pre-a-cp1-st8-q3lock-actual-split-step-commutator-recurrence-audit-manifest.json"
+  ],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-ENERGY-WEIGHTED-COMMUTATOR-GEVREY-LR-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-FIRST-PASSAGE-BACKBONE-REAL-TIME-PRODUCT-AND-ENERGY-TAIL-CLOSURE",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "source_fixture": {
+    "manifest": "strategy/pre-a-cp1-st8-q3lock-cubic-multiplier-finite-stress-manifest.json",
+    "volume_values": [2, 4, 6],
+    "oscillator_dimension": 3,
+    "beta_values": [0.5, 1.0, 2.0],
+    "source_pairs": {
+      "2": [[0, 1]],
+      "4": [[0, 1]],
+      "6": [[0, 1]]
+    },
+    "probe_sites": {
+      "2": [0, 1],
+      "4": [0, 1, 3],
+      "6": [0, 1, 5]
+    }
+  },
+  "split_history": {
+    "time_step": "1/18",
+    "step_counts": [1, 3, 6],
+    "orders": ["onsite_then_lexicographic_bonds", "reverse_term_order"],
+    "time_signs": [-1, 1],
+    "right_orientation": "f_x^(3/4) q_x^3 A_f^(-3/4)",
+    "left_orientation": "f_x^(3/4) A_f^(-3/4) q_x^3",
+    "volterra_sum": "V_N(M)=delta sum_{k=0}^{N-1} Ad(U^k)(M)",
+    "weight_ratio_per_edge": "1/16",
+    "multiplier_power": "3/4"
+  },
+  "finite_fixture": {
+    "agreement_tolerance": 1e-8,
+    "unitarity_tolerance": 1e-8,
+    "triangle_tolerance": 1e-8,
+    "positive_energy_floor": 1.0,
+    "commutator_floor": 1e-6,
+    "normalized_gibbs_trace": 1.0,
+    "finite_only": true
+  },
+  "scope": {
+    "finite_split_history_both_orientations_closed": true,
+    "finite_volterra_telescoping_bound_closed": true,
+    "finite_orientation_difference_closed": true,
+    "analytic_volterra_bound_closed": false,
+    "operator_domain_embedding_closed": false,
+    "actual_q3_history_closed": false,
+    "direct_d_cauchy_closed": false,
+    "delta_d_cauchy_closed": false,
+    "source_volume_beta_uniformity_closed": false,
+    "exhaustion_independence_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "adversarial_review": [
+    {
+      "axis": "split dynamics",
+      "check": "Each history uses exact onsite-plus-bond unitary factors in both declared term orders and both time signs; the unsplit exponential is not substituted.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "orientation ordering",
+      "check": "The right and left cubic multiplier products are propagated separately and their difference is propagated as an independent commutator history.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "finite Volterra bound",
+      "check": "The operator telescoping bound uses unitary invariance and the declared finite step count; no infinite-volume supremum is inferred.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "Gibbs norm",
+      "check": "The four-leg norms use the normalized full-Hamiltonian Gibbs square root at each beta; no split-invariant Gibbs state is assumed.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "finite versus uniform",
+      "check": "The volumes, probes, beta values and step counts are a declared finite grid; the measured extrema are diagnostics, not a uniform theorem.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "QFT promotion",
+      "check": "No common core, source/volume/beta-uniform Cauchy estimate, exhaustion, common alpha, OS/KMS/GNS reconstruction, gap, continuum, C6, Sector A or Pre-A conclusion follows.",
+      "disposition": "UPHELD-OPEN"
+    }
+  ],
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R330.lean",
+    "theorem_markers": [
+      "time_horizon_fixture",
+      "volterra_difference_fixture",
+      "triangle_fixture",
+      "scope_fixture"
+    ],
+    "command": "lake env lean Tect/R330.lean",
+    "boundary": "Lean checks exact rational discrete-sum bookkeeping and the orientation triangle only; finite matrix histories and all QFT limits remain Python/open analysis."
+  },
+  "qft_interface": {
+    "closed": "The declared finite split histories admit an explicit two-orientation Volterra sum, a commutator-history identity, and finite operator/state norm checks across the source, beta and volume grid.",
+    "open": "Analytic Volterra control, operator domains, actual Q3 history identification, source/volume/beta uniformity, exhaustion, common alpha, OS/KMS/GNS, gap, continuum and Pre-A remain open.",
+    "tect_boundary": "No TECT production owner, heat_root_incidence, physical-empty reference or Sector-A closure is supplied."
+  },
+  "no_overclaim": "This is a finite split-history carrier audit. It preserves both noncommuting multiplier orientations but neither proves an infinite-dimensional Volterra estimate nor closes any QFT or TECT gate."
+}

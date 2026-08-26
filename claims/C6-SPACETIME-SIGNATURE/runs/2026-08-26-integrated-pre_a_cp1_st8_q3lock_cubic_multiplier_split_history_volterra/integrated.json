@@ -1,0 +1,131 @@
+{
+  "assertion_count": 14,
+  "assertions": [
+    {
+      "actual": "['EXP-001160', 'T-054', False]",
+      "expected": "EXP-001160/T-054/false",
+      "name": "identity",
+      "pass": true
+    },
+    {
+      "actual": "[WindowsPath('E:/Dev/TECT/codes/foundations/pre_a_cp1_st8_q3lock_cubic_multiplier_split_history_volterra.py'), WindowsPath('E:/Dev/TECT/codes/foundations/pre_a_cp1_st8_q3lock_cubic_multiplier_split_history_volterra_independent.py'), WindowsPath('E:/Dev/TECT/verification/lean/Tect/R330.lean')]",
+      "expected": "present",
+      "name": "source files",
+      "pass": true
+    },
+    {
+      "actual": "['time_horizon_fixture', 'volterra_difference_fixture', 'triangle_fixture', 'scope_fixture']",
+      "expected": "present",
+      "name": "Lean markers",
+      "pass": true
+    },
+    {
+      "actual": "[]",
+      "expected": "none",
+      "name": "Lean forbidden",
+      "pass": true
+    },
+    {
+      "actual": "PRIMARY CUBIC-MULTIPLIER-SPLIT-HISTORY-VOLTERRA PASS 1402/1402 rows=96\n",
+      "expected": "PASS",
+      "name": "primary child",
+      "pass": true
+    },
+    {
+      "actual": "INDEPENDENT CUBIC-MULTIPLIER-SPLIT-HISTORY-VOLTERRA PASS 1304/1304 rows=96\n",
+      "expected": "PASS",
+      "name": "independent child",
+      "pass": true
+    },
+    {
+      "actual": "[96, 96]",
+      "expected": "96",
+      "name": "history row count",
+      "pass": true
+    },
+    {
+      "actual": "[0.607485470838267, 0.6074854708382647]",
+      "expected": "within 1e-08",
+      "name": "max_right_operator_norm agreement",
+      "pass": true
+    },
+    {
+      "actual": "[0.6074854708382673, 0.6074854708382645]",
+      "expected": "within 1e-08",
+      "name": "max_left_operator_norm agreement",
+      "pass": true
+    },
+    {
+      "actual": "[0.14231441030898842, 0.14231441030898842]",
+      "expected": "within 1e-08",
+      "name": "max_commutator_operator_norm agreement",
+      "pass": true
+    },
+    {
+      "actual": "[1.1419245640005118, 1.1419245640005078]",
+      "expected": "within 1e-08",
+      "name": "max_state_weighted_norm agreement",
+      "pass": true
+    },
+    {
+      "actual": "[{'actual_q3_history_closed': False, 'analytic_volterra_bound_closed': False, 'common_alpha_closed': False, 'delta_d_cauchy_closed': False, 'direct_d_cauchy_closed': False, 'exhaustion_independence_closed': False, 'finite_orientation_difference_closed': True, 'finite_split_history_both_orientations_closed': True, 'finite_volterra_telescoping_bound_closed': True, 'history_row_count': 96, 'max_commutator_operator_norm': 0.14231441030898842, 'max_left_operator_norm': 0.6074854708382673, 'max_right_operator_norm': 0.607485470838267, 'max_state_weighted_norm': 1.1419245640005118, 'operator_domain_embedding_closed': False, 'pre_a_closed': False, 'source_manifest_sha256': '3ef2893c3d16edf0d558e21c26f7508ed5db03ea0bc77cac040123740d78ed17', 'source_volume_beta_uniformity_closed': False}, {'actual_q3_history_closed': False, 'analytic_volterra_bound_closed': False, 'common_alpha_closed': False, 'delta_d_cauchy_closed': False, 'direct_d_cauchy_closed': False, 'exhaustion_independence_closed': False, 'finite_orientation_difference_closed': True, 'finite_split_history_both_orientations_closed': True, 'finite_volterra_telescoping_bound_closed': True, 'history_row_count': 96, 'max_commutator_operator_norm': 0.14231441030898842, 'max_left_operator_norm': 0.6074854708382645, 'max_right_operator_norm': 0.6074854708382647, 'max_state_weighted_norm': 1.1419245640005078, 'operator_domain_embedding_closed': False, 'pre_a_closed': False, 'source_manifest_sha256': '3ef2893c3d16edf0d558e21c26f7508ed5db03ea0bc77cac040123740d78ed17', 'source_volume_beta_uniformity_closed': False}]",
+      "expected": "closed finite flags",
+      "name": "finite Volterra flags",
+      "pass": true
+    },
+    {
+      "actual": "{'finite_split_history_both_orientations_closed': True, 'finite_volterra_telescoping_bound_closed': True, 'finite_orientation_difference_closed': True, 'analytic_volterra_bound_closed': False, 'operator_domain_embedding_closed': False, 'actual_q3_history_closed': False, 'direct_d_cauchy_closed': False, 'delta_d_cauchy_closed': False, 'source_volume_beta_uniformity_closed': False, 'exhaustion_independence_closed': False, 'common_alpha_closed': False, 'hamiltonian_os_identification_closed': False, 'kms_gns_gap_closed': False, 'continuum_closed': False, 'c6_closed': False, 'sector_a_closed': False, 'pre_a_closed': False, 'no_new_negative_result': True, 'no_tier_change': True, 'no_pdf': True}",
+      "expected": "downstream gates open",
+      "name": "QFT scope firewall",
+      "pass": true
+    },
+    {
+      "actual": "{'status': 'PASS', 'command': 'lake env lean Tect/R330.lean', 'returncode': 0, 'output': ''}",
+      "expected": "PASS",
+      "name": "Lean compile",
+      "pass": true
+    }
+  ],
+  "audit_id": "PA-CP1-ST8-Q3LOCK-CUBIC-MULTIPLIER-SPLIT-HISTORY-VOLTERRA",
+  "boundary": {
+    "actual_q3_history_closed": false,
+    "analytic_volterra_bound_closed": false,
+    "c6_closed": false,
+    "common_alpha_closed": false,
+    "continuum_closed": false,
+    "delta_d_cauchy_closed": false,
+    "direct_d_cauchy_closed": false,
+    "exhaustion_independence_closed": false,
+    "finite_orientation_difference_closed": true,
+    "finite_split_history_both_orientations_closed": true,
+    "finite_volterra_telescoping_bound_closed": true,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "no_new_negative_result": true,
+    "no_pdf": true,
+    "no_tier_change": true,
+    "operator_domain_embedding_closed": false,
+    "pre_a_closed": false,
+    "sector_a_closed": false,
+    "source_volume_beta_uniformity_closed": false
+  },
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "exploration_id": "EXP-001160",
+  "lean": {
+    "command": "lake env lean Tect/R330.lean",
+    "output": "",
+    "returncode": 0,
+    "status": "PASS"
+  },
+  "provenance": {
+    "independent_sha256": "fb74ae816ea4dd54a4f9521940877ae34816fad01f9798760530b2e4a0159ecc",
+    "lean_sha256": "b6af04f8cb244eda2ca2b265c0f8d67c6fdf5192c4cf92c9ece7d678992b1c0e",
+    "manifest_sha256": "538ce22392f6cd3ba1bc4f7e5682e4c225645f2f0ff2d2017274c7f2fc1d59ff",
+    "primary_sha256": "162b045142bd7c97381d6466ada8406f1734a8616dc6e482573580a938baf4a5"
+  },
+  "recorded_at": "2026-08-26T01:19:25.771127Z",
+  "run_kind": "integrated",
+  "schema": "tect/foundation-audit/1.0",
+  "task_id": "T-054",
+  "verdict": "PASS"
+}
