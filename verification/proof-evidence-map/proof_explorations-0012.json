@@ -7606,6 +7606,126 @@
       "task_id": "T-054",
       "title": "Exact finite-step support locality for the all-bond Q3 split approximant",
       "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "axis": "truncation",
+          "check": "d=3 is a finite matrix fixture; no CCR, essential self-adjointness or unbounded-domain conclusion is inferred.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "factor order and sign",
+          "check": "Both declared orders, both signs and both A/A* contexts are evaluated by spectral factors in each lane.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "off-by-one",
+          "check": "The first external step is checked separately by order: N=3 for onsite-then-bonds and N=4 for reverse order; earlier rows remain below tolerance.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "operator equality",
+          "check": "The comparison is a full embedded operator norm and Frobenius norm, not only a support-set trajectory.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "shape scope",
+          "check": "Only the path4/path6 rooted radius-2 fixture is tested; arbitrary shapes and uniform graph constants remain open.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "numerical stability",
+          "check": "Term hermiticity, factor unitarity, finite norms and independent row agreement are asserted with explicit tolerances.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "Lean boundary",
+          "check": "R337 covers the finite rooted-ball and scalar bookkeeping only; Python carries the dense matrix identity.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "QFT promotion",
+          "check": "Common core, analytic Trotter rate, direct D/delta-D Cauchy, exhaustion, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector A and Pre-A remain open.",
+          "disposition": "UPHELD-OPEN"
+        }
+      ],
+      "boundary": "T0 claim-nonbearing finite d=3 matrix shape test. It is not an exhaustion-independent thermodynamic dynamics theorem or a QFT/Clay result.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "This closes a bounded operator-level shape-compatibility fixture for the actual finite Q3 split products and exposes an order-dependent off-by-one that a radius-only slogan would miss. It is a useful finite input to an eventual common-core Trotter argument, but the calculation is not a uniform graph theorem and does not supply the analytic rate, unbounded domain, or N-to-infinity/exhaustion interchange required for common dynamics.",
+      "evidence_refs": [
+        "strategy/pre-a-cp1-st8-q3lock-finite-shape-split-operator-equality-manifest.json#finite_fixture",
+        "codes/foundations/pre_a_cp1_st8_q3lock_finite_shape_split_operator_equality.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_finite_shape_split_operator_equality_independent.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_finite_shape_split_operator_equality_verify.py#main",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-primary-pre-a-cp1-st8-q3lock-finite-shape-split-operator-equality/primary.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-independent-pre-a-cp1-st8-q3lock-finite-shape-split-operator-equality/independent.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-integrated-pre-a-cp1-st8-q3lock-finite-shape-split-operator-equality/integrated.json#lean",
+        "verification/lean/Tect/R337.lean#scope_fixture",
+        "verification/lean/registry.json#R337"
+      ],
+      "finding": "Primary 87/87 and independent 85/85 assertions pass. Across 40 context rows (two term orders, two time signs, A/A* and five split counts), the embedded path4/path6 operator norms agree below the 1e-9 finite tolerance before the first external edge. The minimum first external witness is 4.287615e-08. The first reachable difference is order-dependent: N=3 for onsite_then_lexicographic_bonds and N=4 for reverse_term_order. The integrated verifier passes 31/31 assertions, including row-wise primary/independent agreement and Lean R337 PASS.",
+      "formal_integration": {
+        "events": [],
+        "lean": "R337 PASS",
+        "negatives": [],
+        "no_new_negative": true,
+        "no_new_result": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "results": []
+      },
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": []
+      },
+      "gate_ids": [
+        "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+        "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+        "PA-CP1-ST8-Q3LOCK-FIRST-PASSAGE-BACKBONE-REAL-TIME-PRODUCT-AND-ENERGY-TAIL-CLOSURE",
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001168",
+      "method": [
+        "Reconstruct the actual Q3 onsite and nonlinear bond matrices independently on path4 and path6 at oscillator dimension d=3, with the manifest parameters chi=1, r=-1, g=3/5, c=3/5 and lambda=1/10.",
+        "Form exact spectral split-step unitaries for both onsite-then-lexicographic-bonds and reverse-term orders, for time signs -1 and +1, and evolve both A and A* from source site 1 through split counts N=0,...,4.",
+        "Tensor the path4 result with identities on sites 4 and 5 and compare it to path6 in full operator norm; require equality before the order-specific first external step and a positive witness at that step.",
+        "Run the non-importing independent lane, compare every context row and aggregate within the manifest comparison tolerance, and compile Lean R337 for the rooted finite-ball/BCH fixture without promoting the matrix identity to an analytic theorem."
+      ],
+      "next_action": "Use the order-aware finite locality input while attempting a uniform graph-Lipschitz/Trotter estimate on a declared common core; if its constants depend on volume, cutoff, shape or split count, record that obstruction before common-alpha promotion.",
+      "no_overclaim": "This package is limited to d=3 path4/path6 matrices and N=0,...,4. It does not prove a split-count limit, arbitrary-shape independence, common generator, KMS/GNS reconstruction, a mass gap, continuum, C6, Sector A, Pre-A, TECT production or a Clay result.",
+      "prior_exploration_id": "EXP-001167",
+      "provenance": "contemporaneous",
+      "qft_interface": {
+        "closed": "At fixed split counts before the order-specific first external step, the two finite Q3 products agree on the embedded local observable for the tested rooted-ball pair. The first external edge has a positive finite witness at N=3 or N=4 according to term order.",
+        "open": "A volume/cutoff/shape-uniform analytic Trotter rate, common unbounded core, direct D/delta-D Cauchy estimate, exhaustion interchange, common alpha, OS/KMS/GNS identification, mass gap, continuum and Pre-A remain open.",
+        "tect_boundary": "Auxiliary C6/Q3 finite evidence only; no heat_root_incidence, canonical A1/R-192 production owner, physical-empty reference or Sector-A closure is supplied."
+      },
+      "question": "For the actual finite-dimensional Q3 onsite-plus-all-bond split products on path4 and path6, does a local observable at site 1 agree while the tested rooted ball agrees, and does the first external edge produce a nonzero difference at the order-dependent first reachable split count?",
+      "recorded_at": "2026-08-29T02:35:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001167",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001161",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001156",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-08-26",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Finite Q3 split-operator equality on common rooted balls",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",

@@ -1,0 +1,97 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-FINITE-SHAPE-SPLIT-OPERATOR-EQUALITY-v0",
+  "title": "Finite Q3 split-operator equality on common rooted balls",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001168",
+  "claim_bearing": false,
+  "parent_explorations": ["EXP-001167", "EXP-001161", "EXP-001156"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-CP1-ST8-Q3LOCK-FIRST-PASSAGE-BACKBONE-REAL-TIME-PRODUCT-AND-ENERGY-TAIL-CLOSURE",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "question": "For the actual finite-dimensional Q3 onsite-plus-all-bond split products on path4 and path6, does a local observable at site 1 agree while the tested rooted ball agrees, and does the first external edge produce a nonzero difference at the order-dependent first reachable split count?",
+  "finite_fixture": {
+    "graphs": {
+      "path4": {"vertices": 4, "edges": [[0, 1], [1, 2], [2, 3]]},
+      "path6": {"vertices": 6, "edges": [[0, 1], [1, 2], [2, 3], [3, 4], [4, 5]]}
+    },
+    "source_site": 1,
+    "rooted_radius": 2,
+    "steps": [0, 1, 2, 3, 4],
+    "oscillator_dimension": 3,
+    "beta": "1",
+    "character_amplitude": "1/3",
+    "hbar": "1",
+    "time_step": "1/18",
+    "finite_tolerance": 1e-9,
+    "comparison_tolerance": 1e-8,
+    "first_external_step_floor": 1e-8,
+    "first_external_step_by_order": {"onsite_then_lexicographic_bonds": 3, "reverse_term_order": 4},
+    "time_signs": [-1, 1],
+    "term_orders": ["onsite_then_lexicographic_bonds", "reverse_term_order"]
+  },
+  "model_parameters": {"chi": "1", "r": "-1", "g": "3/5", "c": "3/5", "lambda": "1/10"},
+  "model": {
+    "hamiltonian": "H=sum_x[p_x^2/(2 chi)+r q_x^2/2+g q_x^4/4]+sum_edges[c(q_x-q_y)^2/2+lambda(q_x-q_y)^2(q_x^2+q_y^2)/4]",
+    "split_step": "U_delta=product of exact spectral exp(-i sign delta h_term/hbar) factors with the declared term order",
+    "observable": "A=(exp(i (1/3) q_2) on the source site) and A*",
+    "embedding": "path4 acts on sites 0..3 and is tensored with identities on sites 4,5 before comparison with path6",
+    "shape_test": "Both paths have the same rooted induced radius-2 ball at source site 1; the first external edge is (3,4)."
+  },
+  "scope": {
+    "finite_operator_shape_equality_closed": true,
+    "finite_first_external_step_witness_closed": true,
+    "rooted_ball_hypothesis_explicit": true,
+    "analytic_trotter_rate_closed": false,
+    "uniform_graph_lipschitz_closed": false,
+    "common_core_domain_closed": false,
+    "direct_d_delta_d_cauchy_closed": false,
+    "N_to_infinity_common_alpha_closed": false,
+    "exhaustion_independence_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "adversarial_review": [
+    {"axis": "truncation", "check": "d=2 is a bounded matrix fixture only; no CCR or unbounded-domain statement is inferred.", "disposition": "UPHELD-OPEN"},
+    {"axis": "factor order and sign", "check": "Both declared term orders, both time signs, and A/A* are evaluated with exact spectral factors.", "disposition": "UPHELD"},
+    {"axis": "off-by-one", "check": "Steps 0,1,2 are required below tolerance while step 3 is required above the declared witness floor.", "disposition": "UPHELD"},
+    {"axis": "local equality", "check": "The comparison is a full embedded operator norm, not only a support-set comparison.", "disposition": "UPHELD"},
+    {"axis": "shape scope", "check": "Only path4/path6 with one source and radius two are tested; arbitrary graphs and all-shape uniformity remain open.", "disposition": "UPHELD-OPEN"},
+    {"axis": "numerical tolerance", "check": "Finite matrix eigendecompositions are checked for finite values and the tolerance/floor are explicit manifest inputs.", "disposition": "UPHELD-OPEN"},
+    {"axis": "QFT promotion", "check": "No analytic Trotter rate, common core, D/delta-D Cauchy estimate, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector A or Pre-A closure is claimed.", "disposition": "UPHELD-OPEN"},
+    {"axis": "Lean role", "check": "Lean R337 is reused for the rooted path-ball fixture; Python carries the finite matrix identity.", "disposition": "UPHELD"}
+  ],
+  "files": {
+    "primary": "codes/foundations/pre_a_cp1_st8_q3lock_finite_shape_split_operator_equality.py",
+    "independent": "codes/foundations/pre_a_cp1_st8_q3lock_finite_shape_split_operator_equality_independent.py",
+    "integrated": "codes/foundations/pre_a_cp1_st8_q3lock_finite_shape_split_operator_equality_verify.py",
+    "lean": "verification/lean/Tect/R337.lean",
+    "primary_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-primary-pre-a-cp1-st8-q3lock-finite-shape-split-operator-equality/primary.json",
+    "independent_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-independent-pre-a-cp1-st8-q3lock-finite-shape-split-operator-equality/independent.json",
+    "integrated_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-integrated-pre-a-cp1-st8-q3lock-finite-shape-split-operator-equality/integrated.json"
+  },
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R337.lean",
+    "command": "lake env lean Tect/R337.lean",
+    "role": "R337 checks the exact rooted path-ball fixture and scalar BCH bookkeeping; Python checks the full finite matrix split products."
+  },
+  "qft_interface": {
+    "closed": "At fixed split counts before the order-dependent first external step, the two finite products agree on the embedded local observable; the first reachable external edge (3,4) has an explicit nonzero witness at N=3 for onsite-then-bonds and N=4 for reverse order.",
+    "open": "A volume- and cutoff-uniform analytic Trotter rate, unbounded common core, direct D/delta-D Cauchy estimate, exhaustion interchange, common alpha, OS/KMS/GNS identification, gap, continuum and Pre-A remain open.",
+    "tect_boundary": "This is a claim-nonbearing finite Q3 interface only; it supplies no heat-root-incidence, canonical A1/R-192 production owner, physical-empty reference or Sector-A closure."
+  },
+  "next_action": "Use the finite operator equality as a local input while attempting a uniform graph-Lipschitz/Trotter estimate on a declared common core; if the estimate depends on volume, cutoff, shape or split count, record that obstruction before common-alpha promotion.",
+  "boundary": "T0 claim-nonbearing finite matrix shape test. It is not an exhaustion-independent thermodynamic dynamics theorem and does not close any Clay or QFT gate.",
+  "no_overclaim": "The result is limited to the declared d=3 path4/path6 matrices and fixed split counts. It does not establish an N-to-infinity limit, arbitrary-shape independence, a common generator, KMS/GNS reconstruction, a mass gap, continuum, C6, Sector A or Pre-A."
+}
