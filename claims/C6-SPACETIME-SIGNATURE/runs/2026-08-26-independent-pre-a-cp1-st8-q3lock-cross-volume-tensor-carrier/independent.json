@@ -1,0 +1,646 @@
+{
+  "algebra_rows": [
+    {
+      "j_multiplication_residual": 0.0,
+      "j_norm_dilation_residual": 2.220446049250313e-16,
+      "large_dimension": 27,
+      "large_graph": "path3",
+      "raw_hs_inner_residual": 3.552714019726055e-15,
+      "s_multiplication_defect": 1.267949192431123,
+      "s_norm_isometry_residual": 0.0,
+      "s_vs_scaled_product_defect": 6.766579909085315e-16,
+      "small_dimension": 9,
+      "small_graph": "path2",
+      "tracial_inner_residual": 1.1102243714907908e-16
+    },
+    {
+      "j_multiplication_residual": 3.146492935425406e-16,
+      "j_norm_dilation_residual": 4.440892098500626e-16,
+      "large_dimension": 81,
+      "large_graph": "path4",
+      "raw_hs_inner_residual": 7.105428713850055e-15,
+      "s_multiplication_defect": 2.196152422706633,
+      "s_norm_isometry_residual": 0.0,
+      "s_vs_scaled_product_defect": 1.1379898905948845e-15,
+      "small_dimension": 27,
+      "small_graph": "path3",
+      "tracial_inner_residual": 1.1123263917265395e-16
+    }
+  ],
+  "assertion_count": 24,
+  "assertions": [
+    {
+      "actual": [
+        "EXP-001180",
+        "T-054",
+        false
+      ],
+      "expected": "EXP-001180/T-054/false",
+      "group": "provenance",
+      "name": "identity",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "path2",
+        "path3",
+        "path4"
+      ],
+      "expected": "path2/path3/path4",
+      "group": "fixture",
+      "name": "graph fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          "path2",
+          "path3"
+        ],
+        [
+          "path3",
+          "path4"
+        ]
+      ],
+      "expected": "path2->path3 and path3->path4",
+      "group": "fixture",
+      "name": "nested pairs",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "c6_closed": false,
+        "common_alpha_closed": false,
+        "common_os_hilbert_carrier_closed": false,
+        "common_word_exhaustion_closed": false,
+        "continuum_closed": false,
+        "direct_d_delta_d_cauchy_closed": false,
+        "finite_algebraic_lift_multiplicativity_closed": true,
+        "finite_gibbs_functional_defect_closed": true,
+        "finite_os_word_lift_defect_closed": true,
+        "finite_q3_nested_transfer_closed": true,
+        "finite_tracial_lift_identity_closed": true,
+        "hamiltonian_os_identification_closed": false,
+        "kms_gns_gap_closed": false,
+        "no_new_negative_result": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "pre_a_closed": false,
+        "sector_a_closed": false,
+        "source_volume_cutoff_beta_uniform_closed": false
+      },
+      "expected": "finite carrier stress only",
+      "group": "scope",
+      "name": "scope firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "normalized_product_sum_lift"
+      ],
+      "expected": [
+        "normalized_product_sum_lift"
+      ],
+      "group": "Lean",
+      "name": "Lean declarations",
+      "status": "PASS"
+    },
+    {
+      "actual": 1,
+      "expected": 1,
+      "group": "registry",
+      "name": "registry uniqueness",
+      "status": "PASS"
+    },
+    {
+      "actual": "56e1cf05c6103543255dabbbda9eb02fdb205d8931f904832e05623de1bb5377",
+      "expected": "56e1cf05c6103543255dabbbda9eb02fdb205d8931f904832e05623de1bb5377",
+      "group": "registry",
+      "name": "registry hash",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        9,
+        27
+      ],
+      "expected": "large=9*3",
+      "group": "tensor",
+      "name": "path2->path3 dimensions",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        6.450497314837006,
+        15.684148081343993
+      ],
+      "expected": ">1e-12",
+      "group": "normalization",
+      "name": "path2->path3 beta=0.25 partitions",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        4.857797358831654,
+        9.938217312629908
+      ],
+      "expected": ">1e-12",
+      "group": "normalization",
+      "name": "path2->path3 beta=0.5 partitions",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        27,
+        81
+      ],
+      "expected": "large=27*3",
+      "group": "tensor",
+      "name": "path3->path4 dimensions",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        15.684148081343993,
+        37.7573107643544
+      ],
+      "expected": ">1e-12",
+      "group": "normalization",
+      "name": "path3->path4 beta=0.25 partitions",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        9.938217312629908,
+        19.933391484178316
+      ],
+      "expected": ">1e-12",
+      "group": "normalization",
+      "name": "path3->path4 beta=0.5 partitions",
+      "status": "PASS"
+    },
+    {
+      "actual": 16,
+      "expected": 16,
+      "group": "coverage",
+      "name": "row coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": 16,
+      "expected": "all numeric fields finite",
+      "group": "numerics",
+      "name": "finite row fields",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.1123263917265395e-16,
+      "expected": 1.1000000000000001e-08,
+      "group": "tensor identity",
+      "name": "J normalized-trace isometry",
+      "status": "PASS"
+    },
+    {
+      "actual": 7.105428713850055e-15,
+      "expected": 1.1000000000000001e-08,
+      "group": "tensor identity",
+      "name": "S raw-Frobenius isometry",
+      "status": "PASS"
+    },
+    {
+      "actual": 3.146492935425406e-16,
+      "expected": 1.1000000000000001e-08,
+      "group": "algebra lift",
+      "name": "J multiplication",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.267949192431123,
+      "expected": ">=1e-12",
+      "group": "algebra lift",
+      "name": "S multiplication witness",
+      "status": "PASS"
+    },
+    {
+      "actual": 4.440892098500626e-16,
+      "expected": 1.1000000000000001e-08,
+      "group": "tensor identity",
+      "name": "J raw norm dilation",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.0,
+      "expected": 1.1000000000000001e-08,
+      "group": "tensor identity",
+      "name": "S raw norm isometry",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.2607234124856268,
+        0.3318293986333038
+      ],
+      "expected": ">=1e-12",
+      "group": "Q3 carrier",
+      "name": "OS word defect witness",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        3.6352918461712846e-05,
+        0.00011512595877716247
+      ],
+      "expected": ">=1e-12",
+      "group": "Q3 Gibbs",
+      "name": "Gibbs compatibility witness",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "c6_closed": false,
+        "common_alpha_closed": false,
+        "common_os_hilbert_carrier_closed": false,
+        "common_word_exhaustion_closed": false,
+        "continuum_closed": false,
+        "direct_d_delta_d_cauchy_closed": false,
+        "hamiltonian_os_identification_closed": false,
+        "kms_gns_gap_closed": false,
+        "pre_a_closed": false,
+        "sector_a_closed": false,
+        "source_volume_cutoff_beta_uniform_closed": false
+      },
+      "expected": "all downstream QFT gates open",
+      "group": "scope",
+      "name": "scope firewall",
+      "status": "PASS"
+    }
+  ],
+  "audit_id": "PA-CP1-ST8-Q3LOCK-CROSS-VOLUME-TENSOR-CARRIER",
+  "boundary": "T0 claim-nonbearing finite nested Q3 carrier stress test. It is not a thermodynamic common-Hilbert theorem, a common-alpha construction, a mass-gap proof, a continuum result, or a QFT/Clay closure.",
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "derived": {
+    "algebra_row_count": 2,
+    "lean_marker": "normalized_product_sum_lift",
+    "max_gibbs_functional_defect": 3.6352918461712846e-05,
+    "max_gibbs_gram_defect": 0.00011512595877716247,
+    "max_word_j_relative_defect": 0.2607234124856268,
+    "max_word_s_relative_defect": 0.3318293986333038,
+    "min_s_multiplication_defect": 1.267949192431123,
+    "row_count": 16
+  },
+  "exploration_id": "EXP-001180",
+  "passed": 24,
+  "provenance": {
+    "lean_sha256": "56e1cf05c6103543255dabbbda9eb02fdb205d8931f904832e05623de1bb5377",
+    "manifest_sha256": "59884893b5c42e6969932c0c388ae8140061c2cee6d8d2a2b58c64441e4ae5fa",
+    "registry_sha256": "0f92a7bf54144ec79f173b8998c5d79287f788ccd8b108727c4b51b332b87c47",
+    "script_sha256": "3dc569f12edef0ca665ba13aabfe6a592d0763b5d3a4ed0817de0d2fa9a96f24"
+  },
+  "rows": [
+    {
+      "beta": 0.25,
+      "frob_large": 3.959967358051153,
+      "frob_small": 2.5395558276642576,
+      "gibbs_functional_defect": 2.889962862240303e-06,
+      "gibbs_gram_defect": 1.198566070836904e-07,
+      "j_word_frob": 4.398639722172125,
+      "kind": "q",
+      "large_graph": "path3",
+      "large_volume": 3,
+      "partition_large": 15.684148081343993,
+      "partition_small": 6.450497314837006,
+      "s_word_frob": 2.539555827664257,
+      "small_graph": "path2",
+      "small_volume": 2,
+      "tau": 0.03125,
+      "tau_fraction": 0.125,
+      "word_j_relative_defect": 0.14156350100408938,
+      "word_s_relative_defect": 0.33182179199437895
+    },
+    {
+      "beta": 0.25,
+      "frob_large": 3.959560925779366,
+      "frob_small": 2.539275259689979,
+      "gibbs_functional_defect": 1.422892192959324e-07,
+      "gibbs_gram_defect": 1.55634790933723e-05,
+      "j_word_frob": 4.3981537641857,
+      "kind": "p",
+      "large_graph": "path3",
+      "large_volume": 3,
+      "partition_large": 15.684148081343993,
+      "partition_small": 6.450497314837006,
+      "s_word_frob": 2.5392752596899792,
+      "small_graph": "path2",
+      "small_volume": 2,
+      "tau": 0.03125,
+      "tau_fraction": 0.125,
+      "word_j_relative_defect": 0.14155385291040312,
+      "word_s_relative_defect": 0.3318275140638049
+    },
+    {
+      "beta": 0.25,
+      "frob_large": 3.9598497743078904,
+      "frob_small": 2.539480482918321,
+      "gibbs_functional_defect": 2.889962862240303e-06,
+      "gibbs_gram_defect": 1.6910973799078022e-07,
+      "j_word_frob": 4.398509221244079,
+      "kind": "q",
+      "large_graph": "path3",
+      "large_volume": 3,
+      "partition_large": 15.684148081343993,
+      "partition_small": 6.450497314837006,
+      "s_word_frob": 2.539480482918321,
+      "small_graph": "path2",
+      "small_volume": 2,
+      "tau": 0.0625,
+      "tau_fraction": 0.25,
+      "word_j_relative_defect": 0.14156353128706928,
+      "word_s_relative_defect": 0.3318217740207618
+    },
+    {
+      "beta": 0.25,
+      "frob_large": 3.959308328561762,
+      "frob_small": 2.539106704917224,
+      "gibbs_functional_defect": 1.422892192959324e-07,
+      "gibbs_gram_defect": 2.0728765119826242e-05,
+      "j_word_frob": 4.397861818755428,
+      "kind": "p",
+      "large_graph": "path3",
+      "large_volume": 3,
+      "partition_large": 15.684148081343993,
+      "partition_small": 6.450497314837006,
+      "s_word_frob": 2.539106704917224,
+      "small_graph": "path2",
+      "small_volume": 2,
+      "tau": 0.0625,
+      "tau_fraction": 0.25,
+      "word_j_relative_defect": 0.14155066953317477,
+      "word_s_relative_defect": 0.3318293986333038
+    },
+    {
+      "beta": 0.5,
+      "frob_large": 3.1513888115118225,
+      "frob_small": 2.2032712026311345,
+      "gibbs_functional_defect": 3.6352918461712846e-05,
+      "gibbs_gram_defect": 2.3774396071818416e-06,
+      "j_word_frob": 3.8161776658105095,
+      "kind": "q",
+      "large_graph": "path3",
+      "large_volume": 3,
+      "partition_large": 9.938217312629908,
+      "partition_small": 4.857797358831654,
+      "s_word_frob": 2.203271202631135,
+      "small_graph": "path2",
+      "small_volume": 2,
+      "tau": 0.0625,
+      "tau_fraction": 0.125,
+      "word_j_relative_defect": 0.25584196843405077,
+      "word_s_relative_defect": 0.28634904260145416
+    },
+    {
+      "beta": 0.5,
+      "frob_large": 3.150259035085649,
+      "frob_small": 2.2023830144110383,
+      "gibbs_functional_defect": 3.653107593093452e-06,
+      "gibbs_gram_defect": 8.677074164142873e-05,
+      "j_word_frob": 3.814639278686617,
+      "kind": "p",
+      "large_graph": "path3",
+      "large_volume": 3,
+      "partition_large": 9.938217312629908,
+      "partition_small": 4.857797358831654,
+      "s_word_frob": 2.2023830144110392,
+      "small_graph": "path2",
+      "small_volume": 2,
+      "tau": 0.0625,
+      "tau_fraction": 0.125,
+      "word_j_relative_defect": 0.25578372229505414,
+      "word_s_relative_defect": 0.2863639323113089
+    },
+    {
+      "beta": 0.5,
+      "frob_large": 3.1510268936292887,
+      "frob_small": 2.2030192740857353,
+      "gibbs_functional_defect": 3.6352918461712846e-05,
+      "gibbs_gram_defect": 3.3780281086803754e-06,
+      "j_word_frob": 3.8157413127699997,
+      "kind": "q",
+      "large_graph": "path3",
+      "large_volume": 3,
+      "partition_large": 9.938217312629908,
+      "partition_small": 4.857797358831654,
+      "s_word_frob": 2.2030192740857357,
+      "small_graph": "path2",
+      "small_volume": 2,
+      "tau": 0.125,
+      "tau_fraction": 0.25,
+      "word_j_relative_defect": 0.25584262256195883,
+      "word_s_relative_defect": 0.28634887571826406
+    },
+    {
+      "beta": 0.5,
+      "frob_large": 3.1495258611065053,
+      "frob_small": 2.2018391202796117,
+      "gibbs_functional_defect": 3.653107593093452e-06,
+      "gibbs_gram_defect": 0.00011512595877716247,
+      "j_word_frob": 3.813697226417049,
+      "kind": "p",
+      "large_graph": "path3",
+      "large_volume": 3,
+      "partition_large": 9.938217312629908,
+      "partition_small": 4.857797358831654,
+      "s_word_frob": 2.2018391202796113,
+      "small_graph": "path2",
+      "small_volume": 2,
+      "tau": 0.125,
+      "tau_fraction": 0.25,
+      "word_j_relative_defect": 0.25576502273274715,
+      "word_s_relative_defect": 0.2863686091387315
+    },
+    {
+      "beta": 0.25,
+      "frob_large": 6.144147968595966,
+      "frob_small": 3.959967358051153,
+      "gibbs_functional_defect": 7.550583935866939e-09,
+      "gibbs_gram_defect": 2.9715474525460195e-10,
+      "j_word_frob": 6.8588646604589005,
+      "kind": "q",
+      "large_graph": "path4",
+      "large_volume": 4,
+      "partition_large": 37.7573107643544,
+      "partition_small": 15.684148081343993,
+      "s_word_frob": 3.9599673580511534,
+      "small_graph": "path3",
+      "small_volume": 3,
+      "tau": 0.03125,
+      "tau_fraction": 0.125,
+      "word_j_relative_defect": 0.14457457683153496,
+      "word_s_relative_defect": 0.32742433590628667
+    },
+    {
+      "beta": 0.25,
+      "frob_large": 6.143517482421086,
+      "frob_small": 3.959560925779366,
+      "gibbs_functional_defect": 4.801357089689873e-10,
+      "gibbs_gram_defect": 3.876569332206259e-08,
+      "j_word_frob": 6.858160699114321,
+      "kind": "p",
+      "large_graph": "path4",
+      "large_volume": 4,
+      "partition_large": 37.7573107643544,
+      "partition_small": 15.684148081343993,
+      "s_word_frob": 3.959560925779366,
+      "small_graph": "path3",
+      "small_volume": 3,
+      "tau": 0.03125,
+      "tau_fraction": 0.125,
+      "word_j_relative_defect": 0.14457455262321392,
+      "word_s_relative_defect": 0.32742434997384784
+    },
+    {
+      "beta": 0.25,
+      "frob_large": 6.143965529363354,
+      "frob_small": 3.9598497743078904,
+      "gibbs_functional_defect": 7.550583935866939e-09,
+      "gibbs_gram_defect": 4.19479673219314e-10,
+      "j_word_frob": 6.858660999441418,
+      "kind": "q",
+      "large_graph": "path4",
+      "large_volume": 4,
+      "partition_large": 37.7573107643544,
+      "partition_small": 15.684148081343993,
+      "s_word_frob": 3.9598497743078935,
+      "small_graph": "path3",
+      "small_volume": 3,
+      "tau": 0.0625,
+      "tau_fraction": 0.25,
+      "word_j_relative_defect": 0.14457457690734593,
+      "word_s_relative_defect": 0.3274243358622349
+    },
+    {
+      "beta": 0.25,
+      "frob_large": 6.143125601122606,
+      "frob_small": 3.959308328561762,
+      "gibbs_functional_defect": 4.801357089689873e-10,
+      "gibbs_gram_defect": 5.17079761230832e-08,
+      "j_word_frob": 6.8577231878995795,
+      "kind": "p",
+      "large_graph": "path4",
+      "large_volume": 4,
+      "partition_large": 37.7573107643544,
+      "partition_small": 15.684148081343993,
+      "s_word_frob": 3.9593083285617645,
+      "small_graph": "path3",
+      "small_volume": 3,
+      "tau": 0.0625,
+      "tau_fraction": 0.25,
+      "word_j_relative_defect": 0.14457454459887653,
+      "word_s_relative_defect": 0.32742435463720365
+    },
+    {
+      "beta": 0.5,
+      "frob_large": 4.463117610701597,
+      "frob_small": 3.1513888115118225,
+      "gibbs_functional_defect": 7.923757392447328e-07,
+      "gibbs_gram_defect": 5.079634357585405e-08,
+      "j_word_frob": 5.458365535942575,
+      "kind": "q",
+      "large_graph": "path4",
+      "large_volume": 4,
+      "partition_large": 19.933391484178316,
+      "partition_small": 9.938217312629908,
+      "s_word_frob": 3.1513888115118247,
+      "small_graph": "path3",
+      "small_volume": 3,
+      "tau": 0.0625,
+      "tau_fraction": 0.125,
+      "word_j_relative_defect": 0.26072339846522036,
+      "word_s_relative_defect": 0.2789324518238558
+    },
+    {
+      "beta": 0.5,
+      "frob_large": 4.461521844703799,
+      "frob_small": 3.150259035085649,
+      "gibbs_functional_defect": 8.32413739049187e-08,
+      "gibbs_gram_defect": 1.8591865681427677e-06,
+      "j_word_frob": 5.456408705771253,
+      "kind": "p",
+      "large_graph": "path4",
+      "large_volume": 4,
+      "partition_large": 19.933391484178316,
+      "partition_small": 9.938217312629908,
+      "s_word_frob": 3.1502590350856523,
+      "small_graph": "path3",
+      "small_volume": 3,
+      "tau": 0.0625,
+      "tau_fraction": 0.125,
+      "word_j_relative_defect": 0.26072214940327504,
+      "word_s_relative_defect": 0.2789327465698476
+    },
+    {
+      "beta": 0.5,
+      "frob_large": 4.462605000822057,
+      "frob_small": 3.1510268936292887,
+      "gibbs_functional_defect": 7.923757392447328e-07,
+      "gibbs_gram_defect": 7.223373965636881e-08,
+      "j_word_frob": 5.457738675781869,
+      "kind": "q",
+      "large_graph": "path4",
+      "large_volume": 4,
+      "partition_large": 19.933391484178316,
+      "partition_small": 9.938217312629908,
+      "s_word_frob": 3.1510268936292882,
+      "small_graph": "path3",
+      "small_volume": 3,
+      "tau": 0.125,
+      "tau_fraction": 0.25,
+      "word_j_relative_defect": 0.2607234124856268,
+      "word_s_relative_defect": 0.2789324485154525
+    },
+    {
+      "beta": 0.5,
+      "frob_large": 4.460484872499018,
+      "frob_small": 3.1495258611065053,
+      "gibbs_functional_defect": 8.32413739049187e-08,
+      "gibbs_gram_defect": 2.4749744522711836e-06,
+      "j_word_frob": 5.455138811188588,
+      "kind": "p",
+      "large_graph": "path4",
+      "large_volume": 4,
+      "partition_large": 19.933391484178316,
+      "partition_small": 9.938217312629908,
+      "s_word_frob": 3.1495258611065045,
+      "small_graph": "path3",
+      "small_volume": 3,
+      "tau": 0.125,
+      "tau_fraction": 0.25,
+      "word_j_relative_defect": 0.26072174596780906,
+      "word_s_relative_defect": 0.2789328417936504
+    }
+  ],
+  "run_kind": "independent",
+  "schema": "tect/foundation-audit/1.0",
+  "scope": {
+    "c6_closed": false,
+    "common_alpha_closed": false,
+    "common_os_hilbert_carrier_closed": false,
+    "common_word_exhaustion_closed": false,
+    "continuum_closed": false,
+    "direct_d_delta_d_cauchy_closed": false,
+    "finite_algebraic_lift_multiplicativity_closed": true,
+    "finite_gibbs_functional_defect_closed": true,
+    "finite_os_word_lift_defect_closed": true,
+    "finite_q3_nested_transfer_closed": true,
+    "finite_tracial_lift_identity_closed": true,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "no_new_negative_result": true,
+    "no_pdf": true,
+    "no_tier_change": true,
+    "pre_a_closed": false,
+    "sector_a_closed": false,
+    "source_volume_cutoff_beta_uniform_closed": false
+  },
+  "task_id": "T-054",
+  "verdict": "PASS"
+}

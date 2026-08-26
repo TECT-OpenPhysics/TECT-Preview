@@ -9091,6 +9091,120 @@
       "task_id": "T-054",
       "title": "Finite Q3 complex OS transfer-word Gram perturbation",
       "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "axis": "lift distinction",
+          "check": "The unscaled lift is tested for algebraic multiplication and normalized-trace isometry, while the scaled lift is tested only for raw Frobenius isometry; neither property is silently substituted for the other.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "Hamiltonian boundary",
+          "check": "The larger path Hamiltonian is rebuilt with its new boundary onsite and bond terms; it is not assumed to equal the tensor lift of the smaller Hamiltonian.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "Gibbs normalization",
+          "check": "Each volume uses its own shifted finite Hamiltonian, partition function and beta; a partition ratio is not treated as state compatibility.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "OS word comparison",
+          "check": "F_N and F_{N+1} are compared in the common computational tensor matrix space only after an explicitly declared lift; positive defects are route diagnostics, not a thermodynamic obstruction theorem.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "nested scope",
+          "check": "Only path2/path3/path4 with source site 0, d=3, beta and tau grids in the manifest are evaluated; arbitrary shapes and all sources remain open.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "independence",
+          "check": "The independent lane reconstructs oscillator tensors, Q3 terms, spectra, transfer words and lift defects without importing the primary program.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "Lean boundary",
+          "check": "R341 proves the finite normalized product-sum identity only; dense Q3 matrices and Gibbs/OS defects remain Python evidence.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "QFT promotion",
+          "check": "Failure of these naive lifts does not rule out a state-dependent GNS transport or prove a thermodynamic QFT, common alpha, gap, continuum, C6, Sector A or Pre-A.",
+          "disposition": "UPHELD-OPEN"
+        }
+      ],
+      "boundary": "T0 claim-nonbearing finite nested Q3 carrier stress test. It is not a thermodynamic common-Hilbert theorem, a common-alpha construction, a mass-gap proof, a continuum result, or a QFT/Clay closure.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "The exact finite tensor identities separate two tempting shortcuts: an algebraic tensor lift can be normalized-trace isometric but does not make the interacting Gibbs functionals compatible, while a raw-Frobenius rescaling is not multiplicative. Positive finite Q3 word and Gibbs defects show that the naive lift is not the missing cross-volume OS identification for this fixture. This is a route-local stress test only; a state-dependent GNS transport or an analytic boundary-decay estimate could still exist.",
+      "evidence_refs": [
+        "strategy/pre-a-cp1-st8-q3lock-cross-volume-tensor-carrier-manifest.json#exact_interface",
+        "codes/foundations/pre_a_cp1_st8_q3lock_cross_volume_tensor_carrier.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_cross_volume_tensor_carrier_independent.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_cross_volume_tensor_carrier_verify.py#main",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-primary-pre-a-cp1-st8-q3lock-cross-volume-tensor-carrier/primary.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-independent-pre-a-cp1-st8-q3lock-cross-volume-tensor-carrier/independent.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-integrated-pre-a-cp1-st8-q3lock-cross-volume-tensor-carrier/integrated.json#lean",
+        "verification/lean/Tect/R341.lean#normalized_product_sum_lift",
+        "verification/lean/registry.json#R341"
+      ],
+      "finding": "R341 compiles and the primary lane passes 23/23 assertions on 16 nested word rows; the independent lane passes 24/24 and the integrated lane passes 12/12 with Lean PASS. J_d preserves normalized-trace inner products and multiplication to machine precision, while its raw Frobenius norm dilates by sqrt(3). S_d preserves raw Frobenius norms but has a positive multiplication defect (minimum 1.267949192431123). The actual Q3 transfer words show a maximum algebraic-lift relative defect of 0.26072341248562714, raw-Frobenius-lift relative defect of 0.331829398633304, Gibbs-functional defect of 3.6352918461712846e-05 and Gibbs Gram defect of 0.00011512595877749554 across the declared finite rows.",
+      "formal_integration": {
+        "events": [],
+        "lean": "R341 PASS",
+        "negatives": [],
+        "no_new_event": true,
+        "no_new_negative": true,
+        "no_new_result": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "results": []
+      },
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": []
+      },
+      "gate_ids": [
+        "PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE",
+        "PA-CP1-ST8-Q3LOCK-ALL-EXHAUSTION-MIXTURE-L2-LOCALITY-AND-BETA-INDEPENDENT-CSTAR-DYNAMICS",
+        "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+        "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+      ],
+      "id": "EXP-001180",
+      "method": [
+        "Compile verification/lean/Tect/R341.lean with the pinned lake toolchain and require a zero exit status with the normalized_product_sum_lift declaration registered at its LF-normalized SHA-256.",
+        "Rebuild the d=3 Q3 Hamiltonians independently on path2, path3 and path4 with chi=1, r=-1, g=3/5, c=3/5 and lambda=1/10, using shifted finite spectra for the Euclidean transfer words.",
+        "For path2->path3 and path3->path4 compare the same source-0 q and p positive-half transfer words under the algebraic lift J_d(A)=A tensor I_d and raw-Frobenius lift S_d(A)=J_d(A)/sqrt(d) over beta=0.25,0.5 and tau fractions 0.125,0.25.",
+        "Check the exact normalized-trace inner-product identity for J_d, raw Frobenius identity for S_d, multiplicativity of J_d, nonmultiplicative witness for S_d, finite OS-word lift defects and finite Gibbs-functional/Gram defects.",
+        "Run a non-importing independent reconstruction and an integrated verifier that compares all rows, algebra witnesses, Lean R341, registry integrity and the finite-only QFT scope firewall."
+      ],
+      "next_action": "Replace the naive tensor lift by an explicitly state-dependent GNS transport, or derive a source-to-boundary estimate showing that the Gibbs/OS defects vanish uniformly; do not promote finite lift defects to a global no-go theorem.",
+      "no_overclaim": "This package proves only the exact finite normalized lift identity and finite path-volume tensor/Gibbs/OS diagnostics. It does not prove or refute the existence of another common OS carrier, direct Cauchy convergence, Hamiltonian-to-OS identification, a GNS gap, continuum removal, C6, Sector A, Pre-A or a Clay result.",
+      "prior_exploration_id": "EXP-001179",
+      "provenance": "contemporaneous",
+      "qft_interface": {
+        "closed": "The declared finite nested Q3 words, the normalized-trace tensor identity, the algebraic tensor lift, and their explicit Gibbs/OS comparison defects are independently reproducible.",
+        "open": "A state-compatible common OS carrier, source/volume/cutoff/beta-uniform vector estimate, exhaustion Cauchy, direct D/delta-D convergence, common alpha, Hamiltonian-to-OS identification, GNS gap and continuum remain open.",
+        "tect_boundary": "Auxiliary C6/Q3 finite evidence only; no heat_root_incidence, canonical A1/R-192 production owner, physical-empty reference, Sector-A closure or Pre-A closure is supplied."
+      },
+      "question": "For the actual finite Q3 Hamiltonians on nested path volumes, can the canonical tensor lift supply a common OS carrier while retaining both normalized-trace Hilbert-Schmidt isometry and algebraic multiplication, and does it preserve the finite Gibbs word functional?",
+      "recorded_at": "2026-08-29T04:54:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001179",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-08-26",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Finite Q3 cross-volume tensor-carrier stress test",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",

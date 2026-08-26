@@ -1,0 +1,637 @@
+{
+  "algebra_rows": [
+    {
+      "j_multiplication_residual": 0.0,
+      "j_norm_dilation_residual": 2.220446049250313e-16,
+      "large_dimension": 27,
+      "large_graph": "path3",
+      "raw_hs_inner_residual": 3.552714019726055e-15,
+      "s_multiplication_defect": 1.267949192431123,
+      "s_norm_isometry_residual": 0.0,
+      "s_vs_scaled_product_defect": 6.766579909085315e-16,
+      "small_dimension": 9,
+      "small_graph": "path2",
+      "tracial_inner_residual": 1.1102243714907908e-16
+    },
+    {
+      "j_multiplication_residual": 3.146492935425406e-16,
+      "j_norm_dilation_residual": 4.440892098500626e-16,
+      "large_dimension": 81,
+      "large_graph": "path4",
+      "raw_hs_inner_residual": 7.105428713850055e-15,
+      "s_multiplication_defect": 2.196152422706633,
+      "s_norm_isometry_residual": 0.0,
+      "s_vs_scaled_product_defect": 1.1379898905948845e-15,
+      "small_dimension": 27,
+      "small_graph": "path3",
+      "tracial_inner_residual": 1.1123263917265395e-16
+    }
+  ],
+  "assertion_count": 23,
+  "assertions": [
+    {
+      "actual": [
+        "EXP-001180",
+        "T-054",
+        false
+      ],
+      "expected": "EXP-001180/T-054/false",
+      "group": "provenance",
+      "name": "identity",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "path2",
+        "path3",
+        "path4"
+      ],
+      "expected": "path2/path3/path4",
+      "group": "fixture",
+      "name": "graph fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          "path2",
+          "path3"
+        ],
+        [
+          "path3",
+          "path4"
+        ]
+      ],
+      "expected": "path2->path3 and path3->path4",
+      "group": "fixture",
+      "name": "nested pairs",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "c6_closed": false,
+        "common_alpha_closed": false,
+        "common_os_hilbert_carrier_closed": false,
+        "common_word_exhaustion_closed": false,
+        "continuum_closed": false,
+        "direct_d_delta_d_cauchy_closed": false,
+        "finite_algebraic_lift_multiplicativity_closed": true,
+        "finite_gibbs_functional_defect_closed": true,
+        "finite_os_word_lift_defect_closed": true,
+        "finite_q3_nested_transfer_closed": true,
+        "finite_tracial_lift_identity_closed": true,
+        "hamiltonian_os_identification_closed": false,
+        "kms_gns_gap_closed": false,
+        "no_new_negative_result": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "pre_a_closed": false,
+        "sector_a_closed": false,
+        "source_volume_cutoff_beta_uniform_closed": false
+      },
+      "expected": "finite carrier stress only",
+      "group": "scope",
+      "name": "scope firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "normalized_product_sum_lift"
+      ],
+      "expected": "normalized_product_sum_lift",
+      "group": "Lean",
+      "name": "Lean declaration",
+      "status": "PASS"
+    },
+    {
+      "actual": "56e1cf05c6103543255dabbbda9eb02fdb205d8931f904832e05623de1bb5377",
+      "expected": "56e1cf05c6103543255dabbbda9eb02fdb205d8931f904832e05623de1bb5377",
+      "group": "Lean",
+      "name": "Lean registry hash",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        9,
+        27
+      ],
+      "expected": "large=9*3",
+      "group": "tensor",
+      "name": "path2->path3 dimensions",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        6.450497314837006,
+        15.684148081343997
+      ],
+      "expected": ">1e-12",
+      "group": "normalization",
+      "name": "path2->path3 beta=0.25 partitions",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        4.857797358831654,
+        9.93821731262991
+      ],
+      "expected": ">1e-12",
+      "group": "normalization",
+      "name": "path2->path3 beta=0.5 partitions",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        27,
+        81
+      ],
+      "expected": "large=27*3",
+      "group": "tensor",
+      "name": "path3->path4 dimensions",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        15.684148081343997,
+        37.75731076435441
+      ],
+      "expected": ">1e-12",
+      "group": "normalization",
+      "name": "path3->path4 beta=0.25 partitions",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        9.93821731262991,
+        19.93339148417832
+      ],
+      "expected": ">1e-12",
+      "group": "normalization",
+      "name": "path3->path4 beta=0.5 partitions",
+      "status": "PASS"
+    },
+    {
+      "actual": 16,
+      "expected": 16,
+      "group": "coverage",
+      "name": "row coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": 16,
+      "expected": "all numeric fields finite",
+      "group": "numerics",
+      "name": "finite row fields",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.1123263917265395e-16,
+      "expected": 1.1000000000000001e-08,
+      "group": "tensor identity",
+      "name": "J normalized-trace isometry",
+      "status": "PASS"
+    },
+    {
+      "actual": 7.105428713850055e-15,
+      "expected": 1.1000000000000001e-08,
+      "group": "tensor identity",
+      "name": "S raw-Frobenius isometry",
+      "status": "PASS"
+    },
+    {
+      "actual": 3.146492935425406e-16,
+      "expected": 1.1000000000000001e-08,
+      "group": "algebra lift",
+      "name": "J multiplication",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.267949192431123,
+      "expected": ">=1e-12",
+      "group": "algebra lift",
+      "name": "S multiplication witness",
+      "status": "PASS"
+    },
+    {
+      "actual": 4.440892098500626e-16,
+      "expected": 1.1000000000000001e-08,
+      "group": "tensor identity",
+      "name": "J raw norm dilation",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.0,
+      "expected": 1.1000000000000001e-08,
+      "group": "tensor identity",
+      "name": "S raw norm isometry",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.26072341248562714,
+        0.331829398633304
+      ],
+      "expected": ">=1e-12",
+      "group": "Q3 carrier",
+      "name": "OS word defect witness",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        3.6352918461712846e-05,
+        0.00011512595877749554
+      ],
+      "expected": ">=1e-12",
+      "group": "Q3 Gibbs",
+      "name": "Gibbs compatibility witness",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "c6_closed": false,
+        "common_alpha_closed": false,
+        "common_os_hilbert_carrier_closed": false,
+        "common_word_exhaustion_closed": false,
+        "continuum_closed": false,
+        "direct_d_delta_d_cauchy_closed": false,
+        "hamiltonian_os_identification_closed": false,
+        "kms_gns_gap_closed": false,
+        "pre_a_closed": false,
+        "sector_a_closed": false,
+        "source_volume_cutoff_beta_uniform_closed": false
+      },
+      "expected": "all downstream QFT gates open",
+      "group": "scope",
+      "name": "scope firewall",
+      "status": "PASS"
+    }
+  ],
+  "audit_id": "PA-CP1-ST8-Q3LOCK-CROSS-VOLUME-TENSOR-CARRIER",
+  "boundary": "T0 claim-nonbearing finite nested Q3 carrier stress test. It is not a thermodynamic common-Hilbert theorem, a common-alpha construction, a mass-gap proof, a continuum result, or a QFT/Clay closure.",
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "derived": {
+    "algebra_row_count": 2,
+    "lean_marker": "normalized_product_sum_lift",
+    "max_gibbs_functional_defect": 3.6352918461712846e-05,
+    "max_gibbs_gram_defect": 0.00011512595877749554,
+    "max_word_j_relative_defect": 0.26072341248562714,
+    "max_word_s_relative_defect": 0.331829398633304,
+    "min_s_multiplication_defect": 1.267949192431123,
+    "row_count": 16
+  },
+  "exploration_id": "EXP-001180",
+  "passed": 23,
+  "provenance": {
+    "lean_sha256": "56e1cf05c6103543255dabbbda9eb02fdb205d8931f904832e05623de1bb5377",
+    "manifest_sha256": "59884893b5c42e6969932c0c388ae8140061c2cee6d8d2a2b58c64441e4ae5fa",
+    "registry_sha256": "0f92a7bf54144ec79f173b8998c5d79287f788ccd8b108727c4b51b332b87c47",
+    "script_sha256": "a94566cdb9b741e379d440a21dfe94636059cd4710c1c7a1761e28e524f2e5ab"
+  },
+  "rows": [
+    {
+      "beta": 0.25,
+      "frob_large": 3.959967358051152,
+      "frob_small": 2.539555827664257,
+      "gibbs_functional_defect": 2.889962862240303e-06,
+      "gibbs_gram_defect": 1.198566068616458e-07,
+      "j_word_frob": 4.398639722172124,
+      "kind": "q",
+      "large_graph": "path3",
+      "large_volume": 3,
+      "partition_large": 15.684148081343997,
+      "partition_small": 6.450497314837006,
+      "s_word_frob": 2.539555827664257,
+      "small_graph": "path2",
+      "small_volume": 2,
+      "tau": 0.03125,
+      "tau_fraction": 0.125,
+      "word_j_relative_defect": 0.14156350100408924,
+      "word_s_relative_defect": 0.33182179199437917
+    },
+    {
+      "beta": 0.25,
+      "frob_large": 3.959560925779365,
+      "frob_small": 2.5392752596899784,
+      "gibbs_functional_defect": 1.422892192959324e-07,
+      "gibbs_gram_defect": 1.5563479093594346e-05,
+      "j_word_frob": 4.398153764185699,
+      "kind": "p",
+      "large_graph": "path3",
+      "large_volume": 3,
+      "partition_large": 15.684148081343997,
+      "partition_small": 6.450497314837006,
+      "s_word_frob": 2.539275259689979,
+      "small_graph": "path2",
+      "small_volume": 2,
+      "tau": 0.03125,
+      "tau_fraction": 0.125,
+      "word_j_relative_defect": 0.14155385291040293,
+      "word_s_relative_defect": 0.33182751406380495
+    },
+    {
+      "beta": 0.25,
+      "frob_large": 3.95984977430789,
+      "frob_small": 2.5394804829183197,
+      "gibbs_functional_defect": 2.889962862240303e-06,
+      "gibbs_gram_defect": 1.691097374356687e-07,
+      "j_word_frob": 4.398509221244078,
+      "kind": "q",
+      "large_graph": "path3",
+      "large_volume": 3,
+      "partition_large": 15.684148081343997,
+      "partition_small": 6.450497314837006,
+      "s_word_frob": 2.5394804829183197,
+      "small_graph": "path2",
+      "small_volume": 2,
+      "tau": 0.0625,
+      "tau_fraction": 0.25,
+      "word_j_relative_defect": 0.14156353128706903,
+      "word_s_relative_defect": 0.3318217740207621
+    },
+    {
+      "beta": 0.25,
+      "frob_large": 3.9593083285617623,
+      "frob_small": 2.539106704917223,
+      "gibbs_functional_defect": 1.422892192959324e-07,
+      "gibbs_gram_defect": 2.072876512027033e-05,
+      "j_word_frob": 4.397861818755427,
+      "kind": "p",
+      "large_graph": "path3",
+      "large_volume": 3,
+      "partition_large": 15.684148081343997,
+      "partition_small": 6.450497314837006,
+      "s_word_frob": 2.539106704917224,
+      "small_graph": "path2",
+      "small_volume": 2,
+      "tau": 0.0625,
+      "tau_fraction": 0.25,
+      "word_j_relative_defect": 0.14155066953317455,
+      "word_s_relative_defect": 0.331829398633304
+    },
+    {
+      "beta": 0.5,
+      "frob_large": 3.1513888115118216,
+      "frob_small": 2.203271202631134,
+      "gibbs_functional_defect": 3.6352918461712846e-05,
+      "gibbs_gram_defect": 2.3774396071818416e-06,
+      "j_word_frob": 3.8161776658105078,
+      "kind": "q",
+      "large_graph": "path3",
+      "large_volume": 3,
+      "partition_large": 9.93821731262991,
+      "partition_small": 4.857797358831654,
+      "s_word_frob": 2.203271202631135,
+      "small_graph": "path2",
+      "small_volume": 2,
+      "tau": 0.0625,
+      "tau_fraction": 0.125,
+      "word_j_relative_defect": 0.2558419684340505,
+      "word_s_relative_defect": 0.2863490426014544
+    },
+    {
+      "beta": 0.5,
+      "frob_large": 3.1502590350856483,
+      "frob_small": 2.202383014411038,
+      "gibbs_functional_defect": 3.6531075928714074e-06,
+      "gibbs_gram_defect": 8.677074164153975e-05,
+      "j_word_frob": 3.8146392786866157,
+      "kind": "p",
+      "large_graph": "path3",
+      "large_volume": 3,
+      "partition_large": 9.93821731262991,
+      "partition_small": 4.857797358831654,
+      "s_word_frob": 2.202383014411038,
+      "small_graph": "path2",
+      "small_volume": 2,
+      "tau": 0.0625,
+      "tau_fraction": 0.125,
+      "word_j_relative_defect": 0.255783722295054,
+      "word_s_relative_defect": 0.2863639323113091
+    },
+    {
+      "beta": 0.5,
+      "frob_large": 3.151026893629289,
+      "frob_small": 2.203019274085735,
+      "gibbs_functional_defect": 3.6352918461712846e-05,
+      "gibbs_gram_defect": 3.3780281087913977e-06,
+      "j_word_frob": 3.8157413127699993,
+      "kind": "q",
+      "large_graph": "path3",
+      "large_volume": 3,
+      "partition_large": 9.93821731262991,
+      "partition_small": 4.857797358831654,
+      "s_word_frob": 2.2030192740857353,
+      "small_graph": "path2",
+      "small_volume": 2,
+      "tau": 0.125,
+      "tau_fraction": 0.25,
+      "word_j_relative_defect": 0.25584262256195855,
+      "word_s_relative_defect": 0.28634887571826406
+    },
+    {
+      "beta": 0.5,
+      "frob_large": 3.1495258611065053,
+      "frob_small": 2.2018391202796117,
+      "gibbs_functional_defect": 3.6531075928714074e-06,
+      "gibbs_gram_defect": 0.00011512595877749554,
+      "j_word_frob": 3.8136972264170477,
+      "kind": "p",
+      "large_graph": "path3",
+      "large_volume": 3,
+      "partition_large": 9.93821731262991,
+      "partition_small": 4.857797358831654,
+      "s_word_frob": 2.201839120279611,
+      "small_graph": "path2",
+      "small_volume": 2,
+      "tau": 0.125,
+      "tau_fraction": 0.25,
+      "word_j_relative_defect": 0.2557650227327469,
+      "word_s_relative_defect": 0.2863686091387317
+    },
+    {
+      "beta": 0.25,
+      "frob_large": 6.144147968595965,
+      "frob_small": 3.959967358051152,
+      "gibbs_functional_defect": 7.550583935866939e-09,
+      "gibbs_gram_defect": 2.9715563343302165e-10,
+      "j_word_frob": 6.858864660458902,
+      "kind": "q",
+      "large_graph": "path4",
+      "large_volume": 4,
+      "partition_large": 37.75731076435441,
+      "partition_small": 15.684148081343997,
+      "s_word_frob": 3.959967358051152,
+      "small_graph": "path3",
+      "small_volume": 3,
+      "tau": 0.03125,
+      "tau_fraction": 0.125,
+      "word_j_relative_defect": 0.1445745768315351,
+      "word_s_relative_defect": 0.32742433590628617
+    },
+    {
+      "beta": 0.25,
+      "frob_large": 6.143517482421083,
+      "frob_small": 3.959560925779365,
+      "gibbs_functional_defect": 4.801361530581971e-10,
+      "gibbs_gram_defect": 3.876569254490647e-08,
+      "j_word_frob": 6.858160699114321,
+      "kind": "p",
+      "large_graph": "path4",
+      "large_volume": 4,
+      "partition_large": 37.75731076435441,
+      "partition_small": 15.684148081343997,
+      "s_word_frob": 3.959560925779365,
+      "small_graph": "path3",
+      "small_volume": 3,
+      "tau": 0.03125,
+      "tau_fraction": 0.125,
+      "word_j_relative_defect": 0.14457455262321398,
+      "word_s_relative_defect": 0.32742434997384756
+    },
+    {
+      "beta": 0.25,
+      "frob_large": 6.143965529363352,
+      "frob_small": 3.95984977430789,
+      "gibbs_functional_defect": 7.550583935866939e-09,
+      "gibbs_gram_defect": 4.194803393531288e-10,
+      "j_word_frob": 6.858660999441417,
+      "kind": "q",
+      "large_graph": "path4",
+      "large_volume": 4,
+      "partition_large": 37.75731076435441,
+      "partition_small": 15.684148081343997,
+      "s_word_frob": 3.959849774307893,
+      "small_graph": "path3",
+      "small_volume": 3,
+      "tau": 0.0625,
+      "tau_fraction": 0.25,
+      "word_j_relative_defect": 0.14457457690734604,
+      "word_s_relative_defect": 0.32742433586223446
+    },
+    {
+      "beta": 0.25,
+      "frob_large": 6.143125601122603,
+      "frob_small": 3.9593083285617623,
+      "gibbs_functional_defect": 4.801361530581971e-10,
+      "gibbs_gram_defect": 5.170797523490478e-08,
+      "j_word_frob": 6.85772318789958,
+      "kind": "p",
+      "large_graph": "path4",
+      "large_volume": 4,
+      "partition_large": 37.75731076435441,
+      "partition_small": 15.684148081343997,
+      "s_word_frob": 3.9593083285617623,
+      "small_graph": "path3",
+      "small_volume": 3,
+      "tau": 0.0625,
+      "tau_fraction": 0.25,
+      "word_j_relative_defect": 0.14457454459887675,
+      "word_s_relative_defect": 0.3274243546372032
+    },
+    {
+      "beta": 0.5,
+      "frob_large": 4.4631176107015955,
+      "frob_small": 3.1513888115118216,
+      "gibbs_functional_defect": 7.923757390226882e-07,
+      "gibbs_gram_defect": 5.079634446403247e-08,
+      "j_word_frob": 5.458365535942576,
+      "kind": "q",
+      "large_graph": "path4",
+      "large_volume": 4,
+      "partition_large": 19.93339148417832,
+      "partition_small": 9.93821731262991,
+      "s_word_frob": 3.1513888115118256,
+      "small_graph": "path3",
+      "small_volume": 3,
+      "tau": 0.0625,
+      "tau_fraction": 0.125,
+      "word_j_relative_defect": 0.2607233984652204,
+      "word_s_relative_defect": 0.2789324518238552
+    },
+    {
+      "beta": 0.5,
+      "frob_large": 4.461521844703796,
+      "frob_small": 3.1502590350856483,
+      "gibbs_functional_defect": 8.324137446003022e-08,
+      "gibbs_gram_defect": 1.859186567143567e-06,
+      "j_word_frob": 5.456408705771253,
+      "kind": "p",
+      "large_graph": "path4",
+      "large_volume": 4,
+      "partition_large": 19.93339148417832,
+      "partition_small": 9.93821731262991,
+      "s_word_frob": 3.150259035085652,
+      "small_graph": "path3",
+      "small_volume": 3,
+      "tau": 0.0625,
+      "tau_fraction": 0.125,
+      "word_j_relative_defect": 0.2607221494032751,
+      "word_s_relative_defect": 0.27893274656984707
+    },
+    {
+      "beta": 0.5,
+      "frob_large": 4.462605000822054,
+      "frob_small": 3.151026893629289,
+      "gibbs_functional_defect": 7.923757390226882e-07,
+      "gibbs_gram_defect": 7.223374065556953e-08,
+      "j_word_frob": 5.4577386757818696,
+      "kind": "q",
+      "large_graph": "path4",
+      "large_volume": 4,
+      "partition_large": 19.93339148417832,
+      "partition_small": 9.93821731262991,
+      "s_word_frob": 3.1510268936292882,
+      "small_graph": "path3",
+      "small_volume": 3,
+      "tau": 0.125,
+      "tau_fraction": 0.25,
+      "word_j_relative_defect": 0.26072341248562714,
+      "word_s_relative_defect": 0.278932448515452
+    },
+    {
+      "beta": 0.5,
+      "frob_large": 4.460484872499017,
+      "frob_small": 3.1495258611065053,
+      "gibbs_functional_defect": 8.324137446003022e-08,
+      "gibbs_gram_defect": 2.4749744510499383e-06,
+      "j_word_frob": 5.455138811188589,
+      "kind": "p",
+      "large_graph": "path4",
+      "large_volume": 4,
+      "partition_large": 19.93339148417832,
+      "partition_small": 9.93821731262991,
+      "s_word_frob": 3.149525861106506,
+      "small_graph": "path3",
+      "small_volume": 3,
+      "tau": 0.125,
+      "tau_fraction": 0.25,
+      "word_j_relative_defect": 0.26072174596780945,
+      "word_s_relative_defect": 0.27893284179365
+    }
+  ],
+  "run_kind": "primary",
+  "schema": "tect/foundation-audit/1.0",
+  "scope": {
+    "c6_closed": false,
+    "common_alpha_closed": false,
+    "common_os_hilbert_carrier_closed": false,
+    "common_word_exhaustion_closed": false,
+    "continuum_closed": false,
+    "direct_d_delta_d_cauchy_closed": false,
+    "finite_algebraic_lift_multiplicativity_closed": true,
+    "finite_gibbs_functional_defect_closed": true,
+    "finite_os_word_lift_defect_closed": true,
+    "finite_q3_nested_transfer_closed": true,
+    "finite_tracial_lift_identity_closed": true,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "no_new_negative_result": true,
+    "no_pdf": true,
+    "no_tier_change": true,
+    "pre_a_closed": false,
+    "sector_a_closed": false,
+    "source_volume_cutoff_beta_uniform_closed": false
+  },
+  "task_id": "T-054",
+  "verdict": "PASS"
+}
