@@ -1,0 +1,130 @@
+{
+  "schema": "tect/pre-a-cp1-st8-q3lock-conditional-os-kms-limit-passage/1.0",
+  "exploration_id": "EXP-001194",
+  "prior_explorations": ["EXP-001173", "EXP-001065", "EXP-001193"],
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "tier": "T0",
+  "claim_bearing": false,
+  "title": "Conditional thermodynamic OS/KMS positivity passage contract",
+  "question": "If finite Q3 transfer-word Gram entries and thermal two-word values converge on every fixed local word list along every declared exhaustion, which OS reflection-positivity and KMS identities pass to the limit, and which additional hypotheses are still required for a common QFT dynamics?",
+  "authority_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-finite-euclidean-os-gram-kms-bridge-manifest.json#model",
+    "strategy/pre-a-cp1-st8-q3lock-finite-gibbs-invariance-conditional-os-intertwiner-manifest.json#conditional_os_transfer",
+    "strategy/pre-a-cp1-st8-q3lock-hamiltonian-os-tangent-transport-generator-current-revalidation-manifest.json#qft_interface",
+    "strategy/pre-a-cp1-st8-q3lock-kinetic-inclusive-transfer-boundary-manifest.json#qft_interface"
+  ],
+  "model": {
+    "finite_os_gram": "G^Lambda_ij=Tr(F^Lambda_i* F^Lambda_j)/Z_Lambda for a finite positive-half transfer-word list",
+    "finite_kms_word": "W^Lambda_AB(s)=Tr(T_Lambda(beta hbar-s) A T_Lambda(s) B)/Z_Lambda",
+    "hypotheses": [
+      "For every finite word list and coefficient vector, G^Lambda_ij converges entrywise to G_ij along the chosen exhaustion.",
+      "The word embeddings are compatible on overlaps and the limiting Gram form is independent of the exhaustion.",
+      "For every local A,B and allowed s, both W^Lambda_AB(s) and W^Lambda_BA(beta hbar-s) converge to finite limits.",
+      "The same beta and Euclidean time convention is used on both sides, and finite KMS cyclicity holds before taking the limit."
+    ],
+    "os_passage": "For every finite coefficient vector c, c*Gc=lim_Lambda c*G^Lambda c>=0; hence the limiting word form is positive semidefinite and may be quotiented/completed once overlap null vectors are identified.",
+    "kms_passage": "Equality W^Lambda_AB(s)=W^Lambda_BA(beta hbar-s) plus convergence of both sides implies W_AB(s)=W_BA(beta hbar-s).",
+    "dynamics_boundary": "A positive limiting word form does not by itself provide a common Hamiltonian-derived alpha_t; action intertwining, product/core density, direct Cauchy estimates, exhaustion independence and group law remain separate obligations."
+  },
+  "finite_fixture": {
+    "gram_vectors": [["1", "0"], ["1", "1"], ["0", "1"]],
+    "gram_limit": [["1", "1", "0"], ["1", "2", "1"], ["0", "1", "1"]],
+    "coefficient_vectors": [["1", "-2", "3"], ["-2", "1", "1"], ["0", "3", "-1"]],
+    "exhaustions": {
+      "path_a_scale": "1",
+      "path_b_scale": "2",
+      "denominators": ["1", "2", "4", "8"]
+    },
+    "kms_limit": "2",
+    "kms_error_scale": "1",
+    "beta_hbar": "2",
+    "euclidean_times": ["1/2", "1"],
+    "entry_bound": "4",
+    "kms_bound": "4"
+  },
+  "scope": {
+    "conditional_entrywise_os_positivity_passage_closed": true,
+    "conditional_kms_limit_passage_closed": true,
+    "conditional_word_form_completion_contract_closed": true,
+    "finite_fixture_psd_and_convergence_closed": true,
+    "finite_fixture_kms_convergence_closed": true,
+    "actual_q3_word_convergence_closed": false,
+    "common_word_embedding_closed": false,
+    "exhaustion_independence_proved": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "product_core_density_closed": false,
+    "direct_d_delta_d_cauchy_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "adversarial_review": [
+    {
+      "axis": "positivity passage",
+      "check": "The limit argument uses a fixed finite coefficient vector and entrywise convergence; no uniform operator norm or infinite matrix positivity is inferred without the stated word-wise hypotheses.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "complex versus real fixture",
+      "check": "The executable fixture uses real rational vectors only as a concrete Gram subcase; the contract itself is stated for complex coefficients and requires the corresponding sesquilinear convergence.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "KMS complement",
+      "check": "The complement beta*hbar-s and the common beta convention are explicit; finite cyclicity is not replaced by commutativity of A and B.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "exhaustion",
+      "check": "Two toy exhaustion scales share the same limit in the fixture, but actual Q3 exhaustion independence is an unproved hypothesis and remains open.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "OS completion",
+      "check": "Positive semidefinite word forms support a quotient/completion only after overlap compatibility and null-space identification; these are stated conditions, not actual Q3 results.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "Hamiltonian dynamics",
+      "check": "The contract does not identify finite Hamiltonian actions with one common alpha_t or prove a generator on the limiting carrier.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "Lean",
+      "check": "R353 verifies the exact rational Gram sum-of-squares and KMS fixtures only; convergence and Q3 operator limits remain analytic hypotheses.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "physical promotion",
+      "check": "No KMS/GNS gap, continuum, C6, Sector A, Pre-A or Clay conclusion follows from this conditional passage contract.",
+      "disposition": "UPHELD-OPEN"
+    }
+  ],
+  "formal_integration": {
+    "lean_entry": "verification/lean/Tect/R353.lean",
+    "result_ids": [],
+    "negative_ids": [],
+    "changelog_event": null
+  },
+  "qft_interface": {
+    "closed": "The exact logical passage from word-wise finite OS Gram convergence and finite thermal cyclicity to limiting OS positivity and KMS equality is isolated and verified on a reproducible rational fixture.",
+    "open": "Actual Q3 word-wise convergence, common-word embeddings, exhaustion independence, action intertwining, product/core density, direct D/delta-D Cauchy, common alpha, Hamiltonian-to-OS identification, GNS gap, continuum, C6, Sector A and Pre-A remain open.",
+    "tect_boundary": "This is a conditional QFT interface contract only; it supplies no heat_root_incidence, canonical A1/R-192 production owner, physical-empty reference or mass-gap theorem."
+  },
+  "boundary": "T0 claim-nonbearing conditional OS/KMS limit-passage contract. It is not an actual thermodynamic Q3 construction or a Clay result.",
+  "next_action": "Use this contract as the acceptance test for the actual Q3 all-exhaustion word map: prove a source-, volume-, cutoff- and beta-uniform common-word Cauchy estimate and action intertwining; otherwise record the exact route-local obstruction before any common-alpha or GNS-gap promotion.",
+  "verification": {
+    "primary_script": "codes/foundations/pre_a_cp1_st8_q3lock_conditional_os_kms_limit_passage.py",
+    "independent_script": "codes/foundations/pre_a_cp1_st8_q3lock_conditional_os_kms_limit_passage_independent.py",
+    "integrated_script": "codes/foundations/pre_a_cp1_st8_q3lock_conditional_os_kms_limit_passage_verify.py",
+    "lean": "verification/lean/Tect/R353.lean"
+  },
+  "no_overclaim": "The package closes only the conditional limit logic and toy finite fixtures. It does not prove actual Q3 thermodynamic word convergence, a common OS carrier, alpha_t, KMS/GNS gap, continuum, C6, Sector A, Pre-A or a Clay result."
+}
