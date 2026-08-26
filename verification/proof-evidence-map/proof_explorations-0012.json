@@ -9818,6 +9818,134 @@
       "task_id": "T-054",
       "title": "Finite Q3 local-energy modular multiplier envelope for source-boundary Duhamel histories",
       "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "axis": "Gibbs normalization",
+          "check": "The partition function cancels only in the band ratio; the normalized finite Gibbs matrix and its rank are independently constructed for every row.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "spectral orientation",
+          "check": "Both modular orientations and both source signs are compared with their H-eigenbasis formulas, so one-sided modular control is not substituted.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "operator norm",
+          "check": "The band envelope is derived from submultiplicativity and is checked against direct norms; no entrywise bound is promoted to an unproved Schur-multiplier estimate.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "conditioning tolerance",
+          "check": "The maximum identity residual is retained and covered by a separately declared 1e-6 finite tolerance; this tolerance is not called a physical or uniform error estimate.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "beta and energy width",
+          "check": "The factor exp(beta(E_max-E_min)/2) is reported across the full declared sweep, and its growth is treated as a route-local stress rather than a global divergence theorem.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "local versus full energy",
+          "check": "Local K_X and full K bands are kept separate and neither finite shift is identified with the infinite-volume modular generator.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "independence",
+          "check": "The independent lane rebuilds the Q3 model, Gibbs spectra, cutoff bonds, spectral identities and history rows without importing the primary audit.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "Lean boundary",
+          "check": "R345 certifies the ordered-field exponential band inequality only; matrix spectral calculus, inverse-power conditioning and all QFT limits remain Python evidence/open analysis.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "QFT promotion",
+          "check": "This finite spectral checkpoint does not prove modular-domain transfer, common-core uniformity, direct D/delta-D Cauchy, a common OS carrier, exhaustion, common alpha, Hamiltonian-OS identification, a GNS gap, continuum, C6, Sector A or Pre-A.",
+          "disposition": "UPHELD-OPEN"
+        }
+      ],
+      "boundary": "T0 claim-nonbearing finite Q3 Gibbs-modular spectral checkpoint. It is not a thermodynamic common-Hilbert theorem, a common-alpha construction, a mass-gap proof, a continuum result, or a QFT/Clay closure.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "The eigenbasis calculation makes the modular multiplier cost explicit: finite Gibbs inverse powers insert an energy-band factor that is harmless on each bounded matrix but can become very large with beta and spectral width. The exact finite identity and conservative norm envelope are reusable QFT-facing bookkeeping, while the observed band growth and the conditioning-sensitive residual prevent any claim of beta-, volume- or cutoff-uniform modular-domain control. This is a route-local stress boundary, not a global no-go theorem.",
+      "evidence_refs": [
+        "strategy/pre-a-cp1-st8-q3lock-finite-gibbs-modular-band-manifest.json#model",
+        "codes/foundations/pre_a_cp1_st8_q3lock_finite_gibbs_modular_band.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_finite_gibbs_modular_band_independent.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_finite_gibbs_modular_band_verify.py#main",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-primary-pre-a-cp1-st8-q3lock-finite-gibbs-modular-band/primary.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-independent-pre-a-cp1-st8-q3lock-finite-gibbs-modular-band/independent.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-integrated-pre-a-cp1-st8-q3lock-finite-gibbs-modular-band/integrated.json#lean",
+        "verification/lean/Tect/R345.lean#exponential_band_bound",
+        "verification/lean/Tect/R345.lean#similarity_band_scalar",
+        "verification/lean/registry.json#R345"
+      ],
+      "finding": "The primary lane passes 922/922 assertions and the non-importing independent lane passes 922/922; the integrated verifier passes 18/18 with Lean R345 PASS. There are 60 coefficient rows and 720 history rows. The largest direct spectral-identity residual is 2.09551902400554e-7 under the separately declared 1e-6 finite conditioning tolerance. The Gibbs energy-band factor ranges from 1.1850038335904713 to 11115.995140263556 across the declared beta/volume/cutoff scenarios; representative volume-4, dimension-3, beta-2, radius-0.5 rows have band factor 11115.995140263556 and Gibbs similarity norm 116.167425341673 for tail norm 9. The finite history envelope ratios range from 3.66711896042345e-16 to 0.0750654451645886.",
+      "formal_integration": {
+        "events": [],
+        "lean": "R345 PASS",
+        "negatives": [],
+        "no_new_event": true,
+        "no_new_negative": true,
+        "no_new_result": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "results": []
+      },
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": []
+      },
+      "gate_ids": [
+        "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+        "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+        "PA-CP1-ST8-Q3LOCK-ALL-EXHAUSTION-MIXTURE-L2-LOCALITY-AND-BETA-INDEPENDENT-CSTAR-DYNAMICS",
+        "PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE"
+      ],
+      "id": "EXP-001186",
+      "method": [
+        "Construct the canonical finite Q3 Hamiltonians on volume 2 and volume 4 with oscillator dimension three, and volume 6 with oscillator dimension two, using chi=1, r=-1, g=3/5, c=3/5 and lambda=1/10.",
+        "For beta in the declared five-point sweep and both cutoff radii, form the normalized Gibbs spectrum p_i=exp(-beta(E_i-E_min))/Z and the full/local shifted energy weights.",
+        "Transform the direct matrices rho^(-1/2) Delta rho^(1/2) and rho^(1/2) Delta rho^(-1/2) into the H eigenbasis and compare them with the explicit diagonal spectral formulas.",
+        "Check the finite operator-norm energy-band envelope with factor exp(beta(E_max-E_min)/2), the analogous local/full K envelope, and the corresponding source-boundary history rows for both orientations and interpolation values.",
+        "Run the non-importing independent reconstruction, compare coefficient and history rows, compile and registry-check Lean R345, and retain all common-core and QFT promotion gates as open."
+      ],
+      "next_action": "Replace the finite Gibbs band prefactor by a local state estimate uniform on a named Q3 common core, or prove a route-local lower-bound obstruction for the current modular topology and then switch to a different QFT-facing carrier.",
+      "no_overclaim": "This record promotes only the finite spectral identity and finite energy-band envelope. It does not prove source/volume/cutoff/beta uniformity, an unbounded common-core theorem, modular transfer, direct Cauchy convergence, OS/KMS/GNS reconstruction, a gap, continuum, C6, Sector A or Pre-A.",
+      "prior_exploration_id": "EXP-001185",
+      "provenance": "contemporaneous",
+      "qft_interface": {
+        "closed": "The finite Gibbs modular similarity has an exact H-eigenbasis representation and an energy-band norm envelope; actual Q3 rows, both orientations, an independent lane and Lean R345 all pass.",
+        "open": "The energy-band factor is beta- and spectral-width-dependent; uniform control on an unbounded common core, modular-domain transfer, direct D/delta-D Cauchy, products, exhaustion, common alpha, OS/KMS/GNS identification, gap, continuum, C6, Sector A and Pre-A remain open.",
+        "tect_boundary": "Auxiliary C6/Q3 finite evidence only; no heat_root_incidence, canonical A1/R-192 production owner, physical-empty reference, Sector-A closure or Pre-A closure is supplied."
+      },
+      "question": "For finite Q3 Gibbs states rho_beta proportional to exp(-beta H), can the modular similarity rho_beta^(-1/2) Delta rho_beta^(1/2) be represented exactly in the H eigenbasis and bounded by the finite energy-band factor, and how does that factor stress the uniformity gate?",
+      "recorded_at": "2026-08-29T05:00:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001185",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001149",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001144",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-08-26",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Finite Q3 Gibbs modular-band identity and similarity-factor stress",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",
