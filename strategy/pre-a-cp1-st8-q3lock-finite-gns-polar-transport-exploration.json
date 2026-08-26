@@ -1,0 +1,72 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001181",
+  "recorded_at": "2026-08-29T04:55:00Z",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-08-26",
+  "title": "Finite Q3 state-dependent GNS Gram polar transport",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "prior_exploration_id": "EXP-001180",
+  "related": [{"id": "EXP-001180", "relation": "continues"}],
+  "question": "For the same finite Q3 OS word block on nested path volumes, does a state-dependent Gram polar transport give an exact finite GNS metric congruence, and which compatibility conditions remain unproved for a thermodynamic common carrier?",
+  "method": [
+    "Compile verification/lean/Tect/R342.lean with the pinned lake toolchain and require a zero exit status with the gram_transport_congruence declaration registered at its LF-normalized SHA-256.",
+    "Rebuild the d=3 Q3 Hamiltonians independently on path2, path3 and path4 with chi=1, r=-1, g=3/5, c=3/5 and lambda=1/10, using shifted finite spectra for the Euclidean transfer words.",
+    "For path2->path3 and path3->path4 compare source-0 q, p, qp and pq positive-half transfer-word blocks at beta=0.25,0.5 and tau fractions 0.125,0.25. Form each volume's normalized finite Gram matrix, positive square root and state-dependent map M=R_large^-1 R_small.",
+    "Check positive support, the finite congruence M^* G_large M=G_small, relative Gram changes, transport distance, condition numbers, and the dependence of a q,p subblock on the full q,p,qp,pq block.",
+    "Run a non-importing independent reconstruction and an integrated verifier that compares all rows, scope flags, Lean R342, registry integrity and the finite-only QFT scope firewall."
+  ],
+  "finding": "R342 compiles and the primary lane passes 29/29 assertions on four nested word blocks; the independent lane passes 28/28 and the integrated lane passes 13/13 with Lean PASS. Every declared Gram block has positive support above 1e-10. The state-dependent polar map gives a maximum relative congruence residual of 3.264003583537878e-13 in the primary lane and 4.89663115986951e-13 independently, with maximum relative Gram change 9.057857978223803e-05 and maximum transport distance 0.047556166181807864. The q,p subblock differs materially from the full-block restriction (maximum dependence 4.352447611324977; subblock residual up to 5.881899365965393e-05), while all four full blocks remain finite positive and congruent.",
+  "decision_reason": "The finite data support an exact state-dependent metric transport for each declared nested word block, but the transport depends on the volume, beta and selected word block and is not an algebra/action embedding. The positive subblock dependence and large condition numbers show why this cannot be promoted to a canonical common carrier without compatibility and uniformity estimates. It is a route-local finite advance, not a thermodynamic obstruction theorem or QFT closure.",
+  "verdict": "advanced",
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE",
+    "PA-CP1-ST8-Q3LOCK-ALL-EXHAUSTION-MIXTURE-L2-LOCALITY-AND-BETA-INDEPENDENT-CSTAR-DYNAMICS",
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+  ],
+  "evidence_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-finite-gns-polar-transport-manifest.json#exact_interface",
+    "codes/foundations/pre_a_cp1_st8_q3lock_finite_gns_polar_transport.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_finite_gns_polar_transport_independent.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_finite_gns_polar_transport_verify.py#main",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-primary-pre-a-cp1-st8-q3lock-finite-gns-polar-transport/primary.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-independent-pre-a-cp1-st8-q3lock-finite-gns-polar-transport/independent.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-integrated-pre-a-cp1-st8-q3lock-finite-gns-polar-transport/integrated.json#lean",
+    "verification/lean/Tect/R342.lean#gram_transport_congruence",
+    "verification/lean/registry.json#R342"
+  ],
+  "formal_integration": {
+    "lean": "R342 PASS",
+    "events": [],
+    "results": [],
+    "negatives": [],
+    "no_new_event": true,
+    "no_new_result": true,
+    "no_new_negative": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "formal_refs": {"events": [], "results": [], "negatives": []},
+  "adversarial_review": [
+    {"axis": "positive support", "check": "Each finite Gram block is checked for positive eigenvalues above the declared support floor before inverse square roots are formed; singular-limit directions would require a separate support reduction.", "disposition": "UPHELD"},
+    {"axis": "transport direction", "check": "M=R_large^-1 R_small is tested through M^*G_large M=G_small; the map is not confused with an operator embedding from the smaller tensor algebra.", "disposition": "UPHELD"},
+    {"axis": "word scope", "check": "The block contains q, p, qp and pq at two finite times only; arbitrary products, adjoints, rational translates and the full local algebra are not silently included.", "disposition": "UPHELD-OPEN"},
+    {"axis": "state dependence", "check": "The Gram matrices use each volume's own finite Gibbs partition function; the polar map is allowed to depend on beta, volume and the selected word block.", "disposition": "UPHELD"},
+    {"axis": "conditioning", "check": "Condition numbers and minimum eigenvalues are recorded; numerical congruence residuals are compared with an explicit tolerance and are not called exact QFT equalities.", "disposition": "UPHELD-OPEN"},
+    {"axis": "block compatibility", "check": "The q,p subblock is compared with the restriction of the full q,p,qp,pq transport and its nonzero residual is retained as a compatibility diagnostic rather than hidden.", "disposition": "UPHELD-OPEN"},
+    {"axis": "independence", "check": "The independent lane rebuilds the Q3 Hamiltonian, transfer words, Gram blocks and polar factors without importing the primary program.", "disposition": "UPHELD"},
+    {"axis": "Lean boundary", "check": "R342 certifies only the finite matrix congruence identity under invertibility; spectral values and thermodynamic statements remain Python evidence/open analysis.", "disposition": "UPHELD"},
+    {"axis": "QFT promotion", "check": "Finite support-aware Gram transport does not prove action intertwining, spatial net compatibility, all-shape Cauchy, common alpha, Hamiltonian-OS identification, a gap, continuum, C6, Sector A or Pre-A.", "disposition": "UPHELD-OPEN"}
+  ],
+  "qft_interface": {
+    "closed": "For the declared finite nested Q3 word blocks, positive Gram support and a state-dependent polar congruence are explicitly computed and independently reproduced.",
+    "open": "Compatibility under word enlargement and time translates, product/star/action intertwining, a spatial inductive net, source/volume/cutoff/beta-uniform Cauchy, common alpha, Hamiltonian-to-OS identification, GNS gap and continuum remain open.",
+    "tect_boundary": "Auxiliary C6/Q3 finite evidence only; no heat_root_incidence, canonical A1/R-192 production owner, physical-empty reference, Sector-A closure or Pre-A closure is supplied."
+  },
+  "next_action": "Test transport compatibility under one additional ordered product and a time translate across the nested pair; if residuals depend on the chosen block or beta, keep the state-dependent map as finite-only and derive the missing uniform action-intertwining estimate.",
+  "boundary": "T0 claim-nonbearing finite nested Q3 GNS Gram-polar checkpoint. It is not a thermodynamic common-Hilbert theorem, a common-alpha construction, a mass-gap proof, a continuum result, or a QFT/Clay closure.",
+  "no_overclaim": "This record promotes only the finite positive Gram support and support-aware polar metric congruence for the declared word blocks. It does not prove or refute another common OS carrier, action-compatible spatial transport, direct Cauchy convergence, Hamiltonian-to-OS identification, a GNS gap, continuum removal, C6, Sector A, Pre-A or a Clay result.",
+  "provenance": "contemporaneous"
+}

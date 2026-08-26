@@ -1,0 +1,331 @@
+{
+  "assertion_count": 13,
+  "assertions": [
+    {
+      "actual": [
+        "EXP-001181",
+        "T-054",
+        false
+      ],
+      "expected": "EXP-001181/T-054/false",
+      "name": "identity",
+      "pass": true
+    },
+    {
+      "actual": {
+        "c6_closed": false,
+        "common_alpha_closed": false,
+        "common_os_hilbert_carrier_closed": false,
+        "common_word_exhaustion_closed": false,
+        "continuum_closed": false,
+        "direct_d_delta_d_cauchy_closed": false,
+        "finite_positive_gram_support_closed": true,
+        "finite_q3_nested_word_blocks_closed": true,
+        "finite_state_dependent_polar_congruence_closed": true,
+        "finite_word_block_transport_diagnostic_closed": true,
+        "hamiltonian_os_identification_closed": false,
+        "kms_gns_gap_closed": false,
+        "no_new_negative_result": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "pre_a_closed": false,
+        "sector_a_closed": false,
+        "source_volume_cutoff_beta_uniform_closed": false,
+        "word_product_star_action_intertwining_closed": false
+      },
+      "expected": "finite GNS block only",
+      "name": "scope firewall",
+      "pass": true
+    },
+    {
+      "actual": "PRIMARY FINITE-GNS-POLAR-TRANSPORT PASS 29/29 blocks=4\n",
+      "expected": "PASS",
+      "name": "primary child",
+      "pass": true
+    },
+    {
+      "actual": "INDEPENDENT FINITE-GNS-POLAR-TRANSPORT PASS 28/28 blocks=4\n",
+      "expected": "PASS",
+      "name": "independent child",
+      "pass": true
+    },
+    {
+      "actual": [
+        "PA-CP1-ST8-Q3LOCK-FINITE-GNS-POLAR-TRANSPORT",
+        "PA-CP1-ST8-Q3LOCK-FINITE-GNS-POLAR-TRANSPORT"
+      ],
+      "expected": "common audit id",
+      "name": "child audit identity",
+      "pass": true
+    },
+    {
+      "actual": {
+        "c6_closed": false,
+        "common_alpha_closed": false,
+        "common_os_hilbert_carrier_closed": false,
+        "common_word_exhaustion_closed": false,
+        "continuum_closed": false,
+        "direct_d_delta_d_cauchy_closed": false,
+        "finite_positive_gram_support_closed": true,
+        "finite_q3_nested_word_blocks_closed": true,
+        "finite_state_dependent_polar_congruence_closed": true,
+        "finite_word_block_transport_diagnostic_closed": true,
+        "hamiltonian_os_identification_closed": false,
+        "kms_gns_gap_closed": false,
+        "no_new_negative_result": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "pre_a_closed": false,
+        "sector_a_closed": false,
+        "source_volume_cutoff_beta_uniform_closed": false,
+        "word_product_star_action_intertwining_closed": false
+      },
+      "expected": "identical scope",
+      "name": "scope agreement",
+      "pass": true
+    },
+    {
+      "actual": "all rows agree within tolerance",
+      "expected": "all primary/independent block rows",
+      "name": "block row agreement",
+      "pass": true
+    },
+    {
+      "actual": "all rows agree within tolerance",
+      "expected": "all primary/independent support rows",
+      "name": "support row agreement",
+      "pass": true
+    },
+    {
+      "actual": [
+        4,
+        4
+      ],
+      "expected": "4 block rows",
+      "name": "coverage agreement",
+      "pass": true
+    },
+    {
+      "actual": [
+        2.282077009539718e-07,
+        2.282077029639181e-07
+      ],
+      "expected": ">1e-10",
+      "name": "positive support",
+      "pass": true
+    },
+    {
+      "actual": [
+        {
+          "lean_marker": "gram_transport_congruence",
+          "max_block_dependence": 4.352447611324977,
+          "max_congruence_residual": 3.264003583537878e-13,
+          "max_gram_delta_relative": 9.057857978223803e-05,
+          "max_transport_distance": 0.047556166181807864,
+          "min_gram_eigenvalue": 2.282077009539718e-07,
+          "row_count": 4
+        },
+        {
+          "lean_marker": "gram_transport_congruence",
+          "max_block_dependence": 4.352447609968919,
+          "max_congruence_residual": 4.89663115986951e-13,
+          "max_gram_delta_relative": 9.057857978225945e-05,
+          "max_transport_distance": 0.04755616601828273,
+          "min_gram_eigenvalue": 2.282077029639181e-07,
+          "row_count": 4
+        }
+      ],
+      "expected": "positive finite diagnostics",
+      "name": "route witnesses",
+      "pass": true
+    },
+    {
+      "actual": {
+        "command": "lake env lean Tect/R342.lean",
+        "output": "",
+        "returncode": 0,
+        "status": "PASS"
+      },
+      "expected": "PASS",
+      "name": "Lean compile",
+      "pass": true
+    },
+    {
+      "actual": "eb3b66f5518cd38690625bc35f9527b143061e84eb59b05a347b9ac2ce8ed0ef",
+      "expected": "eb3b66f5518cd38690625bc35f9527b143061e84eb59b05a347b9ac2ce8ed0ef",
+      "name": "registry integrity",
+      "pass": true
+    }
+  ],
+  "audit_id": "PA-CP1-ST8-Q3LOCK-FINITE-GNS-POLAR-TRANSPORT",
+  "boundary": "T0 claim-nonbearing finite nested Q3 GNS Gram-polar checkpoint. It is not a thermodynamic common-Hilbert theorem, a common-alpha construction, a mass-gap proof, a continuum result, or a QFT/Clay closure.",
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "exploration_id": "EXP-001181",
+  "lean": {
+    "command": "lake env lean Tect/R342.lean",
+    "output": "",
+    "returncode": 0,
+    "status": "PASS"
+  },
+  "provenance": {
+    "independent_sha256": "71b3bc30840d6d82067e551e031b4f4652149d16a4f196a9880b6d405338017a",
+    "lean_sha256": "eb3b66f5518cd38690625bc35f9527b143061e84eb59b05a347b9ac2ce8ed0ef",
+    "manifest_sha256": "c67a004a9067a4ac984e5871898db379e616cf7ddebf73b9375c30999b8280dc",
+    "primary_sha256": "b63574abbea94aeafa8629aca26734d47bbb030a9e95fa410f47d1bbab45abef",
+    "registry_sha256": "5f8e0cb421dcf5bc198175eb4a0c97d65ab690930046a465ebb16169ab59d5e1"
+  },
+  "recorded_at": "2026-08-26T11:50:53.668240Z",
+  "rows": [
+    {
+      "beta": 0.25,
+      "condition_large": 34230616.2941293,
+      "condition_small": 33132516.470938385,
+      "congruence_relative_residual": 1.3346420899170316e-13,
+      "gram_delta_relative": 1.497802823892836e-05,
+      "large_graph": "path3",
+      "min_eigen_large": 2.2822663453313105e-07,
+      "min_eigen_small": 2.3578799127205021e-07,
+      "small_graph": "path2",
+      "subblock_congruence_residual": 9.925167207203547e-06,
+      "subblock_transport_dependence": 4.225806030278186,
+      "transport_distance": 0.03160543442057203
+    },
+    {
+      "beta": 0.5,
+      "condition_large": 9633851.590818666,
+      "condition_small": 9190136.695019096,
+      "congruence_relative_residual": 1.2367611017490936e-13,
+      "gram_delta_relative": 9.057857978223803e-05,
+      "large_graph": "path3",
+      "min_eigen_large": 8.103801851182525e-07,
+      "min_eigen_small": 8.494487283672104e-07,
+      "small_graph": "path2",
+      "subblock_congruence_residual": 5.881899365965393e-05,
+      "subblock_transport_dependence": 4.352447611324977,
+      "transport_distance": 0.047556166181807864
+    },
+    {
+      "beta": 0.25,
+      "condition_large": 34233457.25974672,
+      "condition_small": 34230616.2941293,
+      "congruence_relative_residual": 3.264003583537878e-13,
+      "gram_delta_relative": 3.746866331328891e-08,
+      "large_graph": "path4",
+      "min_eigen_large": 2.282077009539718e-07,
+      "min_eigen_small": 2.2822663453313105e-07,
+      "small_graph": "path3",
+      "subblock_congruence_residual": 2.477719739868637e-08,
+      "subblock_transport_dependence": 4.169178725817527,
+      "transport_distance": 7.986646232061e-05
+    },
+    {
+      "beta": 0.5,
+      "condition_large": 9643950.653732454,
+      "condition_small": 9633851.590818666,
+      "congruence_relative_residual": 1.3562998545722562e-13,
+      "gram_delta_relative": 1.9498239189486385e-06,
+      "large_graph": "path4",
+      "min_eigen_large": 8.095327497915962e-07,
+      "min_eigen_small": 8.103801851182525e-07,
+      "small_graph": "path3",
+      "subblock_congruence_residual": 1.2650256481659325e-06,
+      "subblock_transport_dependence": 4.270390590232256,
+      "transport_distance": 0.001045256837968581
+    }
+  ],
+  "run_kind": "integrated",
+  "schema": "tect/foundation-audit/1.0",
+  "scope": {
+    "c6_closed": false,
+    "common_alpha_closed": false,
+    "common_os_hilbert_carrier_closed": false,
+    "common_word_exhaustion_closed": false,
+    "continuum_closed": false,
+    "direct_d_delta_d_cauchy_closed": false,
+    "finite_positive_gram_support_closed": true,
+    "finite_q3_nested_word_blocks_closed": true,
+    "finite_state_dependent_polar_congruence_closed": true,
+    "finite_word_block_transport_diagnostic_closed": true,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "no_new_negative_result": true,
+    "no_pdf": true,
+    "no_tier_change": true,
+    "pre_a_closed": false,
+    "sector_a_closed": false,
+    "source_volume_cutoff_beta_uniform_closed": false,
+    "word_product_star_action_intertwining_closed": false
+  },
+  "support_rows": [
+    {
+      "beta": 0.25,
+      "condition_large": 34230616.2941293,
+      "condition_small": 33132516.470938385,
+      "congruence_relative_residual": 1.3346420899170316e-13,
+      "gram_delta_relative": 1.497802823892836e-05,
+      "large_graph": "path3",
+      "min_eigen_large": 2.2822663453313105e-07,
+      "min_eigen_small": 2.3578799127205021e-07,
+      "partition_large": 15.684148081343997,
+      "partition_small": 6.450497314837006,
+      "small_graph": "path2",
+      "subblock_congruence_residual": 9.925167207203547e-06,
+      "subblock_transport_dependence": 4.225806030278186,
+      "transport_distance": 0.03160543442057203,
+      "word_count": 8
+    },
+    {
+      "beta": 0.5,
+      "condition_large": 9633851.590818666,
+      "condition_small": 9190136.695019096,
+      "congruence_relative_residual": 1.2367611017490936e-13,
+      "gram_delta_relative": 9.057857978223803e-05,
+      "large_graph": "path3",
+      "min_eigen_large": 8.103801851182525e-07,
+      "min_eigen_small": 8.494487283672104e-07,
+      "partition_large": 9.93821731262991,
+      "partition_small": 4.857797358831654,
+      "small_graph": "path2",
+      "subblock_congruence_residual": 5.881899365965393e-05,
+      "subblock_transport_dependence": 4.352447611324977,
+      "transport_distance": 0.047556166181807864,
+      "word_count": 8
+    },
+    {
+      "beta": 0.25,
+      "condition_large": 34233457.25974672,
+      "condition_small": 34230616.2941293,
+      "congruence_relative_residual": 3.264003583537878e-13,
+      "gram_delta_relative": 3.746866331328891e-08,
+      "large_graph": "path4",
+      "min_eigen_large": 2.282077009539718e-07,
+      "min_eigen_small": 2.2822663453313105e-07,
+      "partition_large": 37.75731076435441,
+      "partition_small": 15.684148081343997,
+      "small_graph": "path3",
+      "subblock_congruence_residual": 2.477719739868637e-08,
+      "subblock_transport_dependence": 4.169178725817527,
+      "transport_distance": 7.986646232061e-05,
+      "word_count": 8
+    },
+    {
+      "beta": 0.5,
+      "condition_large": 9643950.653732454,
+      "condition_small": 9633851.590818666,
+      "congruence_relative_residual": 1.3562998545722562e-13,
+      "gram_delta_relative": 1.9498239189486385e-06,
+      "large_graph": "path4",
+      "min_eigen_large": 8.095327497915962e-07,
+      "min_eigen_small": 8.103801851182525e-07,
+      "partition_large": 19.93339148417832,
+      "partition_small": 9.93821731262991,
+      "small_graph": "path3",
+      "subblock_congruence_residual": 1.2650256481659325e-06,
+      "subblock_transport_dependence": 4.270390590232256,
+      "transport_distance": 0.001045256837968581,
+      "word_count": 8
+    }
+  ],
+  "task_id": "T-054",
+  "verdict": "PASS"
+}
