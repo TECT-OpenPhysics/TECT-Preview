@@ -7499,6 +7499,113 @@
       "task_id": "T-054",
       "title": "Centered global-energy context obstruction for local Gibbs members",
       "verdict": "failed"
+    },
+    {
+      "adversarial_review": [
+        {
+          "axis": "bond commutation",
+          "check": "All bond generators are q-polynomials, so shared vertices do not create nonzero bond-bond commutators; momentum commutators are not used in the factorization.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "BCH sign",
+          "check": "The p-shift sign follows from [p_x,V]=-i*hbar*c*sum_{y~x}q_y, and the opposite time sign reverses the shift; both are checked by the scalar fixtures.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "onsite locality",
+          "check": "Onsite support preservation is explicitly conditional on the site-local self-adjoint flow and is not inferred from finite-dimensional truncations.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "finite-N scope",
+          "check": "The N-ball statement is exact at fixed split count N only; no Trotter-count limit or uniform-in-N bound is asserted.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "shape comparison",
+          "check": "Only the induced rooted N-ball and an explicit isomorphism are compared; no arbitrary-shape norm or global graph equivalence is claimed.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "operator domains",
+          "check": "The support map is algebraic cylinder bookkeeping and does not establish unbounded-domain invariance, product density or a common core.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "Lean promotion",
+          "check": "R337 proves exact rational BCH and finite neighborhood fixtures only; it does not formalize Q3 unbounded dynamics or limits.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "QFT promotion",
+          "check": "Uniform Trotter convergence, direct D/delta-D Cauchy, exhaustion interchange, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector A and Pre-A remain open.",
+          "disposition": "UPHELD-OPEN"
+        }
+      ],
+      "boundary": "T0 claim-nonbearing finite-step support theorem under an explicit site-local onsite-flow hypothesis. It is not a thermodynamic dynamics theorem or a QFT/Clay result.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "This closes the finite-N combinatorial locality input that had previously appeared only as an informal one-layer statement. It isolates the remaining analytic obligation: a uniform split-to-exact Trotter rate and domain control sufficient to exchange N-to-infinity with volume exhaustion. The result is not promoted to common alpha or QFT dynamics.",
+      "evidence_refs": [
+        "strategy/pre-a-cp1-st8-q3lock-finite-step-support-locality-manifest.json#model",
+        "codes/foundations/pre_a_cp1_st8_q3lock_finite_step_support_locality.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_finite_step_support_locality_independent.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_finite_step_support_locality_verify.py#main",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-primary-pre-a-cp1-st8-q3lock-finite-step-support-locality/primary.json#assertions",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-independent-pre-a-cp1-st8-q3lock-finite-step-support-locality/independent.json#assertions",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-integrated-pre-a-cp1-st8-q3lock-finite-step-support-locality/integrated.json#lean",
+        "verification/lean/Tect/R337.lean#kick_p_edge",
+        "verification/lean/registry.json#R337"
+      ],
+      "finding": "The exact all-bond kick leaves q_x fixed and shifts p_x only by neighboring q coordinates; the second BCH commutator vanishes. Under the explicit site-local onsite-flow hypothesis, both split orders and both time signs map a source support into its closed one-layer neighborhood at each step. Iterating gives the exact N-ball envelope for N steps. The path5/path7 rooted radius-two balls are isomorphic and their mapped three-step support trajectories agree, so fixed-N split support is independent of distant shape.",
+      "formal_integration": {
+        "events": [],
+        "lean": "R337 PASS",
+        "negatives": [],
+        "no_new_negative": true,
+        "no_new_result": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "results": []
+      },
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": []
+      },
+      "gate_ids": [
+        "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+        "PA-CP1-ST8-Q3LOCK-FIRST-PASSAGE-BACKBONE-REAL-TIME-PRODUCT-AND-ENERGY-TAIL-CLOSURE",
+        "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001167",
+      "method": [
+        "Represent the all-bond interaction as V=c sum_{<xy>} q_x q_y and verify exact pairwise commutation of all configuration-multiplication factors.",
+        "Derive the kick identities Ad(B_delta)(q_x)=q_x and Ad(B_delta)(p_x)=p_x+delta*c*sum_{y~x}q_y by the first BCH commutator, with the second commutator zero and both time signs retained.",
+        "Combine the kick closed-neighborhood map with the declared site-local onsite-flow support hypothesis and iterate it on edge, square, rectangular, cube and path graphs for every registered source and step.",
+        "Check rooted induced-ball isomorphism between path5 and path7 at radius two, compare the mapped support trajectories, reproduce the rows in a non-importing graph-construction lane and compile Lean R337 for the scalar BCH and neighborhood fixtures."
+      ],
+      "next_action": "Use this exact finite-N locality lemma as the combinatorial input for a uniform split-to-exact Trotter estimate on the Q3 common core; if the estimate cannot be made uniform in N and volume, record the precise route obstruction before common-alpha promotion.",
+      "no_overclaim": "This package proves only algebraic finite-N support locality under a declared site-local onsite-flow hypothesis. It does not prove the N-to-infinity Trotter limit, exhaustion independence, common alpha, KMS/GNS, a mass gap, continuum, C6, Sector A, Pre-A, TECT production or a Clay result.",
+      "prior_exploration_id": "EXP-001166",
+      "provenance": "contemporaneous",
+      "qft_interface": {
+        "closed": "At fixed split count N, the support of a cylinder observable is confined to the graph N-ball and is determined by the rooted N-ball, for both term orders and time signs.",
+        "open": "A volume- and cutoff-uniform analytic Trotter rate, common unbounded core, direct D/delta-D Cauchy, N-to-infinity/exhaustion interchange, common alpha, OS/KMS/GNS identification, gap, continuum, C6, Sector A and Pre-A remain open.",
+        "tect_boundary": "No heat_root_incidence, canonical A1/R-192 production owner, physical-empty reference or Sector-A closure is supplied."
+      },
+      "question": "For a finite Q3 graph, does an onsite-plus-all-bond split step map every cylinder support into its closed one-layer neighborhood, so that N split steps depend only on the rooted N-ball and not on the distant shape?",
+      "recorded_at": "2026-08-29T02:15:00Z",
+      "recorded_by": "Codex",
+      "related": [],
+      "reviewed_on": "2026-08-26",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Exact finite-step support locality for the all-bond Q3 split approximant",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",

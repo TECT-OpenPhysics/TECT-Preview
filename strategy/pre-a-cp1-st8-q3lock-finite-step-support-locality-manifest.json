@@ -1,0 +1,421 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-FINITE-STEP-SUPPORT-LOCALITY-v0",
+  "title": "Exact finite-step support locality for the all-bond Q3 split approximant",
+  "task_id": "T-054",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "exploration_id": "EXP-001167",
+  "claim_bearing": false,
+  "parent_explorations": [
+    "EXP-001156",
+    "EXP-001157",
+    "EXP-001161",
+    "EXP-001166"
+  ],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-FIRST-PASSAGE-BACKBONE-REAL-TIME-PRODUCT-AND-ENERGY-TAIL-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "question": "For a finite Q3 graph, does an onsite-plus-all-bond split step map every cylinder support into its closed one-layer neighborhood, so that N split steps depend only on the rooted N-ball and not on the distant shape?",
+  "fixture": {
+    "graphs": {
+      "edge2": {
+        "vertices": 2,
+        "edges": [
+          [
+            0,
+            1
+          ]
+        ],
+        "sources": [
+          [
+            0
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "steps": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "square4": {
+        "vertices": 4,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "sources": [
+          [
+            0
+          ],
+          [
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "steps": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "rect2x3": {
+        "vertices": 6,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        "sources": [
+          [
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "steps": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "cube8": {
+        "vertices": 8,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            6,
+            7
+          ]
+        ],
+        "sources": [
+          [
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "steps": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "path5": {
+        "vertices": 5,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "sources": [
+          [
+            2
+          ]
+        ],
+        "steps": [
+          0,
+          1,
+          2
+        ]
+      },
+      "path7": {
+        "vertices": 7,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            5,
+            6
+          ]
+        ],
+        "sources": [
+          [
+            2
+          ]
+        ],
+        "steps": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    "time_step_symbol": "delta",
+    "coupling_symbol": "c",
+    "time_signs": [
+      -1,
+      1
+    ],
+    "term_orders": [
+      "onsite_then_all_bonds",
+      "all_bonds_then_onsite"
+    ],
+    "shape_equivalence": {
+      "left": "path5",
+      "right": "path7",
+      "source": [
+        2
+      ],
+      "steps": 2,
+      "mapping": {
+        "0": 0,
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4
+      }
+    }
+  },
+  "model": {
+    "bond_generator": "V=c sum_{<xy>} q_x q_y",
+    "commuting_bonds": "[q_x q_y,q_u q_v]=0 for all edges",
+    "kick": "B_delta=exp(i delta V/hbar)",
+    "kick_generators": "Ad(B_delta)(q_x)=q_x and Ad(B_delta)(p_x)=p_x+delta*c*sum_{y~x}q_y",
+    "bch": "The second commutator vanishes because the first commutator is a configuration multiplier.",
+    "onsite_layer": "Each exact onsite factor is site-local and preserves cylinder support, conditional on the declared site flow.",
+    "support_map": "S -> S union {y: y is adjacent to some x in S}",
+    "split_step": "Either order of the onsite layer and the all-bond kick has support contained in the closed one-layer neighborhood.",
+    "N_step": "The support after N steps is contained in the closed N-ball of the initial support."
+  },
+  "statement": {
+    "finite_shape_locality": "If two rooted finite graphs have isomorphic induced N-balls around the source, the N-step split support trajectories agree under that isomorphism.",
+    "qft_role": "This supplies an exact finite-N exhaustion-locality input; it does not supply a uniform Trotter rate or the N-to-infinity common dynamics."
+  },
+  "scope": {
+    "all_bond_commuting_factorization_closed": true,
+    "exact_qp_kick_closed": true,
+    "onsite_support_preservation_conditional": true,
+    "one_step_support_inclusion_closed": true,
+    "N_step_support_inclusion_closed": true,
+    "rooted_N_ball_shape_independence_closed": true,
+    "finite_N_exhaustion_locality_closed": true,
+    "analytic_trotter_rate_closed": false,
+    "uniform_graph_lipschitz_closed": false,
+    "common_core_domain_closed": false,
+    "direct_d_delta_d_cauchy_closed": false,
+    "N_to_infinity_common_alpha_closed": false,
+    "exhaustion_independence_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "adversarial_review": [
+    {
+      "axis": "bond commutation",
+      "check": "Every bond generator is a polynomial in commuting q coordinates; no momentum commutation is used in the factorization.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "BCH sign",
+      "check": "The sign is derived from [p_x,V]=-i*hbar*c*sum_{y~x}q_y and checked for both time signs; the second commutator is explicitly zero.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "onsite assumption",
+      "check": "Support preservation of the onsite factor is a declared site-local flow hypothesis, not inferred from finite matrices.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "finite N versus limit",
+      "check": "The N-ball statement is exact only at fixed split-step count N; it does not interchange N-to-infinity with volume exhaustion.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "shape independence",
+      "check": "Only rooted induced N-ball agreement is used; no global graph isomorphism or arbitrary-shape uniform norm is claimed.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "operator domains",
+      "check": "The support calculation is an algebraic cylinder statement and does not prove unbounded-domain invariance or a common core.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "QFT promotion",
+      "check": "Uniform Trotter convergence, direct D/delta-D Cauchy, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector A and Pre-A remain open.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "Lean promotion",
+      "check": "R337 checks exact finite graph neighborhoods and scalar BCH bookkeeping only; it does not formalize the unbounded Q3 flow.",
+      "disposition": "UPHELD"
+    }
+  ],
+  "files": {
+    "primary": "codes/foundations/pre_a_cp1_st8_q3lock_finite_step_support_locality.py",
+    "independent": "codes/foundations/pre_a_cp1_st8_q3lock_finite_step_support_locality_independent.py",
+    "integrated": "codes/foundations/pre_a_cp1_st8_q3lock_finite_step_support_locality_verify.py",
+    "lean": "verification/lean/Tect/R337.lean",
+    "primary_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-primary-pre_a_cp1_st8_q3lock_finite_step_support_locality/primary.json",
+    "independent_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-independent-pre_a_cp1_st8_q3lock_finite_step_support_locality/independent.json",
+    "integrated_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-integrated-pre_a_cp1_st8_q3lock_finite_step_support_locality/integrated.json"
+  },
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R337.lean",
+    "command": "lake env lean Tect/R337.lean",
+    "theorem_markers": [
+      "kick_q_fixed",
+      "kick_p_edge",
+      "kick_second_commutator_zero",
+      "square_ball_fixture",
+      "cube_ball_fixture",
+      "scope_fixture"
+    ],
+    "boundary": "Lean checks exact rational BCH and finite neighborhood fixtures; Python checks all declared graph/source/order/sign trajectories."
+  },
+  "qft_interface": {
+    "closed": "At fixed split count N, support is confined to the N-ball and is determined by the rooted N-ball, for both term orders and time signs.",
+    "open": "A volume- and cutoff-uniform analytic Trotter rate, unbounded common core, direct D/delta-D Cauchy, N-to-infinity exhaustion interchange, common alpha, OS/KMS/GNS identification, gap, continuum and Pre-A remain open.",
+    "tect_boundary": "No heat_root_incidence, canonical A1/R-192 production owner, physical-empty reference or Sector-A closure is supplied."
+  },
+  "next_action": "Use the exact finite-N locality lemma as the combinatorial input for a uniform split-to-exact Trotter estimate on the Q3 common core; if that estimate cannot be made uniform in N and volume, record the obstruction before common-alpha promotion.",
+  "boundary": "T0 claim-nonbearing finite-step support theorem. It is not a thermodynamic dynamics theorem or a QFT/Clay result.",
+  "no_overclaim": "The package proves only algebraic finite-N support locality under a declared site-local onsite-flow hypothesis. It does not prove the N-to-infinity Trotter limit, exhaustion independence, common alpha, KMS/GNS, a mass gap, continuum, C6, Sector A, Pre-A, TECT production or a Clay result."
+}
