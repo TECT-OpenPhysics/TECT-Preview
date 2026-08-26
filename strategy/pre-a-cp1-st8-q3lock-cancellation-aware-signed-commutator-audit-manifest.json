@@ -1,0 +1,152 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-CANCELLATION-AWARE-SIGNED-COMMUTATOR-AUDIT-v0",
+  "title": "Finite Q3 cancellation-aware signed union-commutator audit",
+  "task_id": "T-054",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "exploration_id": "EXP-001165",
+  "claim_bearing": false,
+  "parent_explorations": [
+    "EXP-001164",
+    "EXP-001163",
+    "EXP-001162",
+    "EXP-001159"
+  ],
+  "parent_authorities": [
+    "strategy/pre-a-cp1-st8-q3lock-state-weighted-commutator-sum-audit-manifest.json",
+    "strategy/pre-a-cp1-st8-q3lock-finite-trotter-cutoff-scaling-manifest.json",
+    "strategy/pre-a-cp1-st8-q3lock-finite-analytic-trotter-defect-manifest.json",
+    "strategy/pre-a-cp1-st8-q3lock-cubic-multiplier-noncommuting-order-stress-manifest.json"
+  ],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-ENERGY-WEIGHTED-COMMUTATOR-GEVREY-LR-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "question": "When the first-order Lie-Trotter commutator defect is grouped by exact union support and its signs are retained, do finite Q3 cancellations produce a cutoff-, beta-, volume- and source-uniform state-weighted coefficient?",
+  "source_fixture": {
+    "manifest": "strategy/pre-a-cp1-st8-q3lock-state-weighted-commutator-sum-audit-manifest.json",
+    "volume_values": [
+      2,
+      4,
+      6
+    ],
+    "cutoff_values": [
+      3,
+      4,
+      5,
+      6
+    ],
+    "beta_values": [
+      0.5,
+      1.0,
+      2.0
+    ],
+    "source_supports_by_volume": {
+      "2": [[0, 1]],
+      "4": [[0, 1], [1, 2]],
+      "6": [[0, 1], [1, 2], [3, 4]]
+    }
+  },
+  "audit_fixture": {
+    "weight_exponent": "1/2",
+    "localization_tolerance": 1e-8,
+    "positivity_tolerance": 1e-8,
+    "orientation_tolerance": 1e-8,
+    "commutator_floor": 1e-12,
+    "growth_ratio_threshold": 1.05,
+    "finite_only": true
+  },
+  "named_proxy": {
+    "core": "finite oscillator matrix proxy on each exact union U of overlapping Q3 term supports",
+    "signed_group": "S_U=sum of [H_j,H_k] with the declared term-order sign for all pairs whose exact union is U",
+    "reverse_order": "the explicit reverse term order, checked against -S_U rather than silently identified",
+    "state": "rho_U=exp(-beta H_U)/Tr(exp(-beta H_U)) for the induced local Hamiltonian",
+    "energy": "K_U=I+H_U-min(spec(H_U)) I and four-leg K_U^(1/2)-Gibbs seminorm",
+    "coefficient": "sum over U of the signed-group seminorms; all-union and source-touching aggregates are both reported"
+  },
+  "scope": {
+    "finite_signed_union_rows_closed": true,
+    "finite_reverse_order_antisymmetry_closed": true,
+    "finite_source_beta_volume_cutoff_grid_closed": true,
+    "cancellation_diagnostic_closed": true,
+    "candidate_cutoff_volume_beta_uniform_bound_closed": false,
+    "global_gibbs_state_transfer_closed": false,
+    "common_core_operator_embedding_closed": false,
+    "actual_q3_trotter_defect_closed": false,
+    "actual_q3_thermodynamic_history_closed": false,
+    "direct_d_cauchy_closed": false,
+    "delta_d_cauchy_closed": false,
+    "exhaustion_independence_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "adversarial_review": [
+    {
+      "axis": "signed versus absolute defect",
+      "check": "Signs are retained only within an exact union-support group; the result is not relabelled as the absolute pair-sum bound used by EXP-001162.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "reverse order",
+      "check": "The reverse term order is explicitly rebuilt and its group matrix is compared with the negative forward group matrix.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "local-state versus global-state",
+      "check": "rho_U is an induced finite union Gibbs matrix and is not identified with a restriction of an infinite-volume KMS state.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "weight orientation",
+      "check": "The four K_U^(1/2)-Gibbs legs are computed separately for every signed group; no spectral commutation is assumed.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "cutoff and beta scope",
+      "check": "Every volume, cutoff and beta row rebuilds all matrices and spectral factors; finite growth ratios are not asymptotic bounds.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "source and boundary scope",
+      "check": "Only the declared source supports and exact union groups are aggregated; boundary-dependent counts are retained.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "QFT promotion",
+      "check": "Signed finite cancellations do not prove a common unbounded core, global-state transfer, thermodynamic history, common alpha, OS/KMS/GNS reconstruction, gap, continuum, C6, Sector A or Pre-A.",
+      "disposition": "UPHELD-OPEN"
+    }
+  ],
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R335.lean",
+    "theorem_markers": [
+      "signed_pair_fixture",
+      "reverse_antisymmetry_fixture",
+      "weighted_proxy_fixture",
+      "scope_fixture"
+    ],
+    "command": "lake env lean Tect/R335.lean",
+    "role": "R335 checks exact rational signed-pair cancellation, reverse-order antisymmetry and proxy coefficient bookkeeping; matrix spectra, domains and QFT limits remain Python/open analysis."
+  },
+  "qft_interface": {
+    "closed": "A finite union-support signed-defect table with explicit reverse-order antisymmetry and local Gibbs/energy-weighted diagnostics across the declared grid.",
+    "open": "A global-state-compatible cancellation estimate, cutoff/volume/beta-uniform coefficient, common core, actual Trotter defect theorem, thermodynamic history, exhaustion, common alpha, OS/KMS/GNS identification, gap, continuum, C6, Sector A and Pre-A remain open.",
+    "tect_boundary": "Auxiliary C6/Q3 evidence only; no heat_root_incidence, canonical A1/R-192 production owner, physical-empty reference or Sector-A closure is supplied."
+  },
+  "next_action": "Compare the signed-group coefficient with EXP-001164 and attempt an analytic cancellation-aware D,delta-D estimate on the matching-layer common core; if the group coefficient still grows, retain the route-local boundary and do not promote common alpha.",
+  "no_overclaim": "This is a finite cancellation-aware local-state proxy audit. It does not prove a global KMS state, common unbounded core, thermodynamic QFT dynamics, a mass gap, continuum, C6, Sector A, Pre-A or a Clay result.",
+  "boundary": "T0 claim-nonbearing finite signed union-commutator diagnostic only."
+}

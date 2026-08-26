@@ -1,0 +1,125 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001165",
+  "title": "Finite Q3 cancellation-aware signed union-commutator audit",
+  "task_id": "T-054",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-ENERGY-WEIGHTED-COMMUTATOR-GEVREY-LR-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "question": "When the first-order Lie-Trotter commutator defect is grouped by exact union support and its signs are retained, do finite Q3 cancellations produce a cutoff-, beta-, volume- and source-uniform state-weighted coefficient?",
+  "method": [
+    "Follow the hash-pinned EXP-001164 local-state Q3 fixture and rebuild every truncated oscillator, onsite term and bond term on volumes 2, 4 and 6 for cutoffs 3, 4, 5 and 6.",
+    "Group every overlapping pair commutator by its exact union support U, sum with the declared term-order sign, and explicitly rebuild the reverse term order to test antisymmetry.",
+    "For each signed group construct the induced H_U, normalized local Gibbs matrix rho_U at beta in {1/2,1,2}, and shifted K_U; evaluate raw, Gibbs and four-leg K_U^(1/2)-Gibbs seminorms for both the signed group and the corresponding absolute pair costs.",
+    "Check one full tensor embedding per volume, independently reconstruct all groups and aggregates, compare both lanes, and compile Lean R335 for exact signed cancellation and proxy bookkeeping."
+  ],
+  "finding": "Primary 166/166 and independent 166/166 assertions pass over 36 volume/cutoff/beta rows; the integrated verifier passes 5743/5743 and Lean R335 compiles. Reverse-order groups are antisymmetric within the declared tolerance. Grouping retains finite cancellation: at the cutoff-6 endpoint the signed-to-absolute energy-weighted aggregate ratio is 0.7318002601630961 for beta=1/2, 0.7588370003593856 for beta=1 and 0.7740816491926341 for beta=2. The cancellation is incomplete: the signed energy-weighted sum per site still grows from cutoff 3 to 6 by ratios 7.975223006126479, 4.4727553658804275 and 2.1093674337122605 for beta=1/2,1 and 2, respectively, and the maximum signed weighted per-site value is 23.382788529134057. The same finite-grid ratios recur across the three graph volumes, while source-touching groups remain boundary-dependent. These observations do not establish a cutoff-, volume- or beta-uniform coefficient.",
+  "verdict": "advanced",
+  "decision_reason": "The signed union grouping demonstrates a real but partial cancellation relative to the absolute pair-sum proxy, so it is the appropriate finite diagnostic for a cancellation-aware Duhamel route. Because the signed weighted coefficient still grows strongly with cutoff on the declared grid, it cannot be promoted as a uniform replacement. The next proof obligation is analytic: derive cancellations before taking norms on a global-state-compatible common core, or prove a direct D,delta-D estimate; local finite Gibbs matrices alone cannot supply that transfer.",
+  "boundary": "Finite oscillator matrices with inherited Q3 parameters, volumes 2, 4 and 6, cutoffs 3 through 6, beta in {1/2,1,2}, induced union Hamiltonians and listed source supports. No global KMS restriction, common unbounded domain, actual Trotter defect theorem, thermodynamic history, exhaustion independence, common alpha, OS/KMS/GNS reconstruction, gap, continuum, C6, Sector A, Pre-A or Clay conclusion follows.",
+  "evidence_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-cancellation-aware-signed-commutator-audit-manifest.json#named_proxy",
+    "codes/foundations/pre_a_cp1_st8_q3lock_cancellation_aware_signed_commutator_audit.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_cancellation_aware_signed_commutator_audit_independent.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_cancellation_aware_signed_commutator_audit_verify.py#run",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-29-primary-pre_a_cp1_st8_q3lock_cancellation_aware_signed_commutator_audit/primary.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-29-independent-pre_a_cp1_st8_q3lock_cancellation_aware_signed_commutator_audit/independent.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-29-integrated-pre_a_cp1_st8_q3lock_cancellation_aware_signed_commutator_audit/integrated.json#lean",
+    "verification/lean/Tect/R335.lean#signed_pair_fixture",
+    "verification/lean/registry.json#R335"
+  ],
+  "next_action": "Attempt an analytic global-state-compatible cancellation-aware D,delta-D estimate on the matching-layer common core, using the finite signed groups only as calibration; if uniformity fails, record the exact route obstruction before any common-alpha promotion.",
+  "open": [
+    "global Gibbs/KMS state transfer for signed local groups",
+    "cutoff-, volume- and beta-uniform cancellation estimate",
+    "common unbounded operator domain and core density",
+    "actual Q3 Trotter defect and two-orientation history",
+    "source/beta/volume-uniform direct D and delta-D Cauchy",
+    "exhaustion independence and common alpha",
+    "Hamiltonian-to-OS/KMS/GNS identification",
+    "gap, continuum, C6, Sector A and Pre-A"
+  ],
+  "adversarial_review": [
+    {
+      "axis": "signed versus absolute defect",
+      "check": "Signs are retained only within exact union-support groups and the absolute pair costs are reported separately.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "reverse order",
+      "check": "The reverse term order is rebuilt and compared with the negative forward group matrix and all three seminorms.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "local-state versus global-state",
+      "check": "rho_U is explicitly an induced finite Gibbs matrix and is not identified with an infinite-volume KMS restriction.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "weight orientation",
+      "check": "The four K_U^(1/2)-Gibbs legs are evaluated separately; no commutation of K_U, rho_U and the signed group is assumed.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "cutoff and beta scope",
+      "check": "Every declared row rebuilds all matrices and spectral factors; finite growth ratios are not asymptotic bounds.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "source and boundary scope",
+      "check": "Only declared source supports and exact union groups are aggregated, retaining boundary dependence.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "Lean boundary",
+      "check": "R335 checks exact rational signed cancellation only; spectra, domains and QFT limits remain Python/open analysis.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "QFT promotion",
+      "check": "Finite signed cancellation does not prove a global KMS state, common core, thermodynamic dynamics, common alpha, OS/KMS/GNS reconstruction, gap, continuum, C6, Sector A or Pre-A.",
+      "disposition": "UPHELD-OPEN"
+    }
+  ],
+  "formal_integration": {
+    "events": [],
+    "results": [],
+    "negatives": [],
+    "lean": "R335 PASS",
+    "no_new_event": true,
+    "no_new_negative": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "qft_interface": {
+    "closed": "Finite union-support signed cancellation tables with explicit reverse-order antisymmetry and local Gibbs/energy-weighted diagnostics.",
+    "open": "Global-state transfer, a cutoff/volume/beta-uniform cancellation estimate, common core, actual Trotter defect, thermodynamic history, exhaustion, common alpha, OS/KMS/GNS identification, gap, continuum and Pre-A remain open.",
+    "tect_boundary": "Auxiliary C6/Q3 evidence only; no heat_root_incidence, canonical A1/R-192 production owner, physical-empty reference or Sector-A closure is supplied."
+  },
+  "no_overclaim": "This finite cancellation-aware local-state proxy audit does not prove a global KMS state, common unbounded core, thermodynamic QFT dynamics, a mass gap, continuum, C6, Sector A, Pre-A or a Clay result.",
+  "provenance": "contemporaneous",
+  "recorded_at": "2026-08-29T01:40:00Z",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-08-26",
+  "related": [
+    {
+      "id": "EXP-001164",
+      "relation": "continues"
+    },
+    {
+      "id": "EXP-001163",
+      "relation": "continues"
+    },
+    {
+      "id": "EXP-001162",
+      "relation": "continues"
+    }
+  ]
+}
