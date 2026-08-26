@@ -1,0 +1,104 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-FINITE-EUCLIDEAN-OS-GRAM-KMS-BRIDGE-v0",
+  "title": "Finite Q3 Euclidean OS reflection Gram and thermal KMS bridge",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001173",
+  "claim_bearing": false,
+  "parent_explorations": ["EXP-001172", "EXP-001065", "EXP-000773"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE",
+    "PA-CP1-ST8-Q3LOCK-FIXED-BETA-CANONICAL-OS-MIXTURE-COMMON-NORMAL-WSTAR-KMS-ENVELOPE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "question": "For the actual finite d=3 Q3 Hamiltonians on the registered bond2, square4 and grid2x3 controls, do Euclidean transfer words give a positive OS reflection Gram on the half-period and satisfy the finite thermal cyclic/KMS word identity for every source site?",
+  "finite_fixture": {
+    "graphs": {
+      "bond2": {"vertices": 2, "edges": [[0, 1]], "source_sites": [0, 1]},
+      "square4": {"vertices": 4, "edges": [[0, 1], [0, 2], [1, 3], [2, 3]], "source_sites": [0, 1, 2, 3]},
+      "grid2x3": {"vertices": 6, "edges": [[0, 1], [1, 2], [3, 4], [4, 5], [0, 3], [1, 4], [2, 5]], "source_sites": [0, 1, 2, 3, 4, 5]}
+    },
+    "oscillator_dimension": 3,
+    "beta_values": [0.25, 0.5],
+    "euclidean_time_fractions": [0.125, 0.25],
+    "cyclicity_fractions": [0.125, 0.25, 0.375],
+    "character_amplitude": 0.25,
+    "hbar": 1.0,
+    "finite_tolerance": 1e-9,
+    "positive_tolerance": 1e-9,
+    "agreement_tolerance": 1e-7,
+    "positive_diagonal_floor": 1e-8,
+    "cyclicity_witness_floor": 1e-10
+  },
+  "model_parameters": {"chi": "1", "r": "-1", "g": "3/5", "c": "3/5", "lambda": "1/10"},
+  "model": {
+    "hamiltonian": "H=sum_x[p_x^2/(2 chi)+r q_x^2/2+g q_x^4/4]+sum_edges[c(q_x-q_y)^2/2+lambda(q_x-q_y)^2(q_x^2+q_y^2)/4]",
+    "euclidean_transfer": "T(s)=exp(-s H/hbar), period beta*hbar",
+    "positive_half_word": "F_(tau,A)=T(beta*hbar/2-tau) A T(tau), 0<=tau<=beta*hbar/2",
+    "os_gram": "G_ij=Tr(F_i^* F_j)/Tr(T(beta*hbar))",
+    "reflection_form": "G_ij=Tr(T(tau_i+tau_j) A_i^* T(beta*hbar-tau_i-tau_j) A_j)/Z",
+    "thermal_word": "W_AB(s)=Tr(T(beta*hbar-s) A T(s) B)/Z",
+    "thermal_cyclicity": "W_AB(s)=W_BA(beta*hbar-s) by finite trace cyclicity",
+    "observables": "A_x=exp(i a q_x/hbar), B_x=exp(i a p_x/hbar) for every site x"
+  },
+  "scope": {
+    "finite_q3_euclidean_transfer_closed": true,
+    "finite_os_reflection_gram_closed": true,
+    "finite_thermal_cyclicity_closed": true,
+    "all_source_sites_closed": true,
+    "shape_degree_diagnostic_closed": true,
+    "finite_to_os_intertwiner_closed": false,
+    "source_uniform_direct_d_cauchy_closed": false,
+    "volume_uniform_direct_d_cauchy_closed": false,
+    "beta_uniform_direct_d_cauchy_closed": false,
+    "product_core_density_closed": false,
+    "exhaustion_independence_closed": false,
+    "group_law_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "adversarial_review": [
+    {"axis": "Euclidean sign and units", "check": "All transfer exponents use T(s)=exp(-sH/hbar), the period beta*hbar and half-period reflection; no real-time sign is silently reused.", "disposition": "UPHELD"},
+    {"axis": "OS Gram meaning", "check": "The positive statement is the finite transfer-word Gram identity G_ij=Tr(F_i^*F_j)/Z; it is not asserted as an infinite-volume OS reconstruction.", "disposition": "UPHELD"},
+    {"axis": "reflection formula", "check": "The direct reflected trace formula is compared entrywise with the Hilbert-Schmidt Gram construction for every source and beta.", "disposition": "UPHELD"},
+    {"axis": "thermal cyclicity", "check": "The W_AB(s)=W_BA(beta*hbar-s) relation is checked by two separately ordered finite transfer words, not by assuming commutativity of A and B.", "disposition": "UPHELD"},
+    {"axis": "cutoff and graph scope", "check": "Only d=3 and the explicit bond2, square4 and grid2x3 finite controls are covered; no torus limit or arbitrary graph class is inferred.", "disposition": "UPHELD-OPEN"},
+    {"axis": "source uniformity", "check": "Every finite source site is included, but finite Gram positivity and cyclicity do not supply a source/volume/cutoff-uniform common core or Cauchy rate.", "disposition": "UPHELD-OPEN"},
+    {"axis": "independence", "check": "The independent lane reconstructs oscillator tensors, Q3 terms, spectral transfer factors and Gram/cyclicity rows without importing primary code.", "disposition": "UPHELD"},
+    {"axis": "Lean boundary", "check": "Lean R247 checks exact rational finite Gibbs normalization/commutation and conditional transfer scope; dense Euclidean Q3 matrices remain Python evidence.", "disposition": "UPHELD"},
+    {"axis": "QFT promotion", "check": "Finite OS Gram positivity and thermal cyclicity do not identify the Hamiltonian limit with an OS mixture, construct one common alpha, prove a GNS gap, remove the cutoff, or close C6, Sector A or Pre-A.", "disposition": "UPHELD-OPEN"}
+  ],
+  "files": {
+    "primary": "codes/foundations/pre_a_cp1_st8_q3lock_finite_euclidean_os_gram_kms_bridge.py",
+    "independent": "codes/foundations/pre_a_cp1_st8_q3lock_finite_euclidean_os_gram_kms_bridge_independent.py",
+    "integrated": "codes/foundations/pre_a_cp1_st8_q3lock_finite_euclidean_os_gram_kms_bridge_verify.py",
+    "lean": "verification/lean/Tect/R247.lean",
+    "primary_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-primary-pre-a-cp1-st8-q3lock-finite-euclidean-os-gram-kms-bridge/primary.json",
+    "independent_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-independent-pre-a-cp1-st8-q3lock-finite-euclidean-os-gram-kms-bridge/independent.json",
+    "integrated_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-integrated-pre-a-cp1-st8-q3lock-finite-euclidean-os-gram-kms-bridge/integrated.json"
+  },
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R247.lean",
+    "command": "lake env lean Tect/R247.lean",
+    "theorem_markers": ["boltzmann_normalization", "diagonal_gibbs_commutation", "conditional_transfer_scope"],
+    "role": "R247 checks exact rational finite Gibbs normalization/commutation; Python checks Euclidean transfer Gram positivity and thermal cyclicity for actual Q3 matrices."
+  },
+  "qft_interface": {
+    "closed": "At finite volume, every declared source yields a positive semidefinite half-period transfer-word Gram and the finite thermal two-word cyclic/KMS identity is reproduced for the manifest beta/time grids.",
+    "open": "A common-word exhaustion-compatible embedding into one OS carrier, direct D/delta-D Cauchy, common core, source/volume/beta uniformity, one common alpha, Hamiltonian-to-OS identification, GNS gap, continuum and physical TECT gates remain open.",
+    "tect_boundary": "Auxiliary C6/Q3 finite evidence only; no heat_root_incidence, canonical A1/R-192 production owner, physical-empty reference, Sector-A closure or Pre-A closure is supplied."
+  },
+  "next_action": "Use the finite OS Gram and thermal cyclicity identities as the exact input for an exhaustion-compatible common-word map; target a source/volume-uniform two-sided seminorm Cauchy estimate, and record any failure before claiming Hamiltonian-to-OS identification.",
+  "boundary": "T0 claim-nonbearing finite d=3 Euclidean transfer diagnostic. It is not an OS reconstruction theorem, thermodynamic limit, common-alpha construction, mass-gap proof, continuum result, or QFT/Clay closure.",
+  "no_overclaim": "This package proves only finite matrix transfer-word positivity and cyclicity. It does not prove a thermodynamic OS measure, Hamiltonian-to-OS identification, a source-uniform common alpha, a GNS mass gap, continuum removal, C6, Sector A, Pre-A or a Clay result."
+}

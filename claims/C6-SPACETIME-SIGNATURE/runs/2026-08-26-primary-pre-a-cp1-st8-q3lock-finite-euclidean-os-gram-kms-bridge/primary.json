@@ -1,0 +1,4116 @@
+{
+  "assertion_count": 334,
+  "assertions": [
+    {
+      "actual": [
+        "EXP-001173",
+        "T-054"
+      ],
+      "expected": "EXP-001173/T-054",
+      "group": "provenance",
+      "name": "identity",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "claim nonbearing",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "bond2",
+        "square4",
+        "grid2x3"
+      ],
+      "expected": "bond2/square4/grid2x3",
+      "group": "fixture",
+      "name": "periodic graph fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": 3,
+      "expected": 3,
+      "group": "nondegenerate d=3",
+      "name": "dimension fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "bond2": {
+          "edges": [
+            [
+              0,
+              1
+            ]
+          ],
+          "source_sites": [
+            0,
+            1
+          ],
+          "vertices": 2
+        },
+        "grid2x3": {
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              4,
+              5
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              5
+            ]
+          ],
+          "source_sites": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "vertices": 6
+        },
+        "square4": {
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              2,
+              3
+            ]
+          ],
+          "source_sites": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "vertices": 4
+        }
+      },
+      "expected": "all finite sites",
+      "group": "fixture",
+      "name": "source coverage fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "all_source_sites_closed": true,
+        "beta_uniform_direct_d_cauchy_closed": false,
+        "c6_closed": false,
+        "common_alpha_closed": false,
+        "continuum_closed": false,
+        "exhaustion_independence_closed": false,
+        "finite_os_reflection_gram_closed": true,
+        "finite_q3_euclidean_transfer_closed": true,
+        "finite_thermal_cyclicity_closed": true,
+        "finite_to_os_intertwiner_closed": false,
+        "group_law_closed": false,
+        "hamiltonian_os_identification_closed": false,
+        "kms_gns_gap_closed": false,
+        "no_new_negative_result": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "pre_a_closed": false,
+        "product_core_density_closed": false,
+        "sector_a_closed": false,
+        "shape_degree_diagnostic_closed": true,
+        "source_uniform_direct_d_cauchy_closed": false,
+        "volume_uniform_direct_d_cauchy_closed": false
+      },
+      "expected": "finite OS-facing diagnostic",
+      "group": "scope",
+      "name": "scope firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "degree_max": 1,
+        "degree_min": 1,
+        "edges": [
+          [
+            0,
+            1
+          ]
+        ]
+      },
+      "expected": "nonempty control",
+      "group": "graph",
+      "name": "bond2 edge validity",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.8087533809821137,
+      "expected": "positive Q3 witness",
+      "group": "nondegenerate Q3",
+      "name": "bond2 noncommutation",
+      "status": "PASS"
+    },
+    {
+      "actual": 6.450497314837006,
+      "expected": ">0 finite",
+      "group": "Euclidean transfer",
+      "name": "bond2 beta=0.25 partition",
+      "status": "PASS"
+    },
+    {
+      "actual": 3.3306690738754696e-16,
+      "expected": "finite",
+      "group": "OS Gram",
+      "name": "bond2 site=0 beta=0.25 Gram finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 3.3306690738754696e-16,
+      "expected": "<=1e-07",
+      "group": "OS Gram",
+      "name": "bond2 site=0 beta=0.25 Gram reflection",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.4827873434807455e-05,
+      "expected": ">=-1e-09",
+      "group": "OS Gram",
+      "name": "bond2 site=0 beta=0.25 Gram positive",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.9994675672721383,
+      "expected": ">=1e-08",
+      "group": "OS Gram",
+      "name": "bond2 site=0 beta=0.25 Gram diagonal",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        1.110233013303107e-16,
+        1.8802895899602872
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "bond2 site=0 beta=0.25 s=0.03125 cyclic finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.110233013303107e-16,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "bond2 site=0 beta=0.25 s=0.03125 cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.8802895899602872,
+      "expected": ">=1e-10",
+      "group": "thermal KMS",
+      "name": "bond2 site=0 beta=0.25 s=0.03125 cyclic witness",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        4.70950318673391e-19,
+        1.8802896245594944
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "bond2 site=0 beta=0.25 s=0.0625 cyclic finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 4.70950318673391e-19,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "bond2 site=0 beta=0.25 s=0.0625 cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.8802896245594944,
+      "expected": ">=1e-10",
+      "group": "thermal KMS",
+      "name": "bond2 site=0 beta=0.25 s=0.0625 cyclic witness",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        2.2204476829960453e-16,
+        1.8802896448937252
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "bond2 site=0 beta=0.25 s=0.09375 cyclic finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 2.2204476829960453e-16,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "bond2 site=0 beta=0.25 s=0.09375 cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.8802896448937252,
+      "expected": ">=1e-10",
+      "group": "thermal KMS",
+      "name": "bond2 site=0 beta=0.25 s=0.09375 cyclic witness",
+      "status": "PASS"
+    },
+    {
+      "actual": 2.220446049250313e-16,
+      "expected": "finite",
+      "group": "OS Gram",
+      "name": "bond2 site=1 beta=0.25 Gram finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 2.220446049250313e-16,
+      "expected": "<=1e-07",
+      "group": "OS Gram",
+      "name": "bond2 site=1 beta=0.25 Gram reflection",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.4827873434701539e-05,
+      "expected": ">=-1e-09",
+      "group": "OS Gram",
+      "name": "bond2 site=1 beta=0.25 Gram positive",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.9994675672721381,
+      "expected": ">=1e-08",
+      "group": "OS Gram",
+      "name": "bond2 site=1 beta=0.25 Gram diagonal",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        3.3306788352817107e-16,
+        1.8802895899602867
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "bond2 site=1 beta=0.25 s=0.03125 cyclic finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 3.3306788352817107e-16,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "bond2 site=1 beta=0.25 s=0.03125 cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.8802895899602867,
+      "expected": ">=1e-10",
+      "group": "thermal KMS",
+      "name": "bond2 site=1 beta=0.25 s=0.03125 cyclic witness",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        6.06475590234079e-19,
+        1.8802896245594942
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "bond2 site=1 beta=0.25 s=0.0625 cyclic finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 6.06475590234079e-19,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "bond2 site=1 beta=0.25 s=0.0625 cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.8802896245594942,
+      "expected": ">=1e-10",
+      "group": "thermal KMS",
+      "name": "bond2 site=1 beta=0.25 s=0.0625 cyclic witness",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        2.2204464525654487e-16,
+        1.8802896448937252
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "bond2 site=1 beta=0.25 s=0.09375 cyclic finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 2.2204464525654487e-16,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "bond2 site=1 beta=0.25 s=0.09375 cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.8802896448937252,
+      "expected": ">=1e-10",
+      "group": "thermal KMS",
+      "name": "bond2 site=1 beta=0.25 s=0.09375 cyclic witness",
+      "status": "PASS"
+    },
+    {
+      "actual": 4.857797358831654,
+      "expected": ">0 finite",
+      "group": "Euclidean transfer",
+      "name": "bond2 beta=0.5 partition",
+      "status": "PASS"
+    },
+    {
+      "actual": 4.440892098500626e-16,
+      "expected": "finite",
+      "group": "OS Gram",
+      "name": "bond2 site=0 beta=0.5 Gram finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 4.440892098500626e-16,
+      "expected": "<=1e-07",
+      "group": "OS Gram",
+      "name": "bond2 site=0 beta=0.5 Gram reflection",
+      "status": "PASS"
+    },
+    {
+      "actual": 5.706957469012268e-05,
+      "expected": ">=-1e-09",
+      "group": "OS Gram",
+      "name": "bond2 site=0 beta=0.5 Gram positive",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.9980028299821274,
+      "expected": ">=1e-08",
+      "group": "OS Gram",
+      "name": "bond2 site=0 beta=0.5 Gram diagonal",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        1.111307226797642e-18,
+        1.8822726234254266
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "bond2 site=0 beta=0.5 s=0.0625 cyclic finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.111307226797642e-18,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "bond2 site=0 beta=0.5 s=0.0625 cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.8822726234254266,
+      "expected": ">=1e-10",
+      "group": "thermal KMS",
+      "name": "bond2 site=0 beta=0.5 s=0.0625 cyclic witness",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        2.2204468598871655e-16,
+        1.8822725466679437
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "bond2 site=0 beta=0.5 s=0.125 cyclic finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 2.2204468598871655e-16,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "bond2 site=0 beta=0.5 s=0.125 cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.8822725466679437,
+      "expected": ">=1e-10",
+      "group": "thermal KMS",
+      "name": "bond2 site=0 beta=0.5 s=0.125 cyclic witness",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        2.2204462239922106e-16,
+        1.8822724932379926
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "bond2 site=0 beta=0.5 s=0.1875 cyclic finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 2.2204462239922106e-16,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "bond2 site=0 beta=0.5 s=0.1875 cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.8822724932379926,
+      "expected": ">=1e-10",
+      "group": "thermal KMS",
+      "name": "bond2 site=0 beta=0.5 s=0.1875 cyclic witness",
+      "status": "PASS"
+    },
+    {
+      "actual": 2.220446049250313e-16,
+      "expected": "finite",
+      "group": "OS Gram",
+      "name": "bond2 site=1 beta=0.5 Gram finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 2.220446049250313e-16,
+      "expected": "<=1e-07",
+      "group": "OS Gram",
+      "name": "bond2 site=1 beta=0.5 Gram reflection",
+      "status": "PASS"
+    },
+    {
+      "actual": 5.706957469044524e-05,
+      "expected": ">=-1e-09",
+      "group": "OS Gram",
+      "name": "bond2 site=1 beta=0.5 Gram positive",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.9980028299821274,
+      "expected": ">=1e-08",
+      "group": "OS Gram",
+      "name": "bond2 site=1 beta=0.5 Gram diagonal",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        1.1102489647061245e-16,
+        1.8822726234254263
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "bond2 site=1 beta=0.5 s=0.0625 cyclic finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.1102489647061245e-16,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "bond2 site=1 beta=0.5 s=0.0625 cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.8822726234254263,
+      "expected": ">=1e-10",
+      "group": "thermal KMS",
+      "name": "bond2 site=1 beta=0.5 s=0.0625 cyclic witness",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        8.944667923005412e-19,
+        1.8822725466679435
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "bond2 site=1 beta=0.5 s=0.125 cyclic finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 8.944667923005412e-19,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "bond2 site=1 beta=0.5 s=0.125 cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.8822725466679435,
+      "expected": ">=1e-10",
+      "group": "thermal KMS",
+      "name": "bond2 site=1 beta=0.5 s=0.125 cyclic witness",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        2.2204467482178207e-16,
+        1.8822724932379926
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "bond2 site=1 beta=0.5 s=0.1875 cyclic finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 2.2204467482178207e-16,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "bond2 site=1 beta=0.5 s=0.1875 cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.8822724932379926,
+      "expected": ">=1e-10",
+      "group": "thermal KMS",
+      "name": "bond2 site=1 beta=0.5 s=0.1875 cyclic witness",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "degree_max": 2,
+        "degree_min": 2,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      },
+      "expected": "nonempty control",
+      "group": "graph",
+      "name": "square4 edge validity",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.6175067619642283,
+      "expected": "positive Q3 witness",
+      "group": "nondegenerate Q3",
+      "name": "square4 noncommutation",
+      "status": "PASS"
+    },
+    {
+      "actual": 32.77604409650846,
+      "expected": ">0 finite",
+      "group": "Euclidean transfer",
+      "name": "square4 beta=0.25 partition",
+      "status": "PASS"
+    },
+    {
+      "actual": 8.881784197001252e-16,
+      "expected": "finite",
+      "group": "OS Gram",
+      "name": "square4 site=0 beta=0.25 Gram finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 8.881784197001252e-16,
+      "expected": "<=1e-07",
+      "group": "OS Gram",
+      "name": "square4 site=0 beta=0.25 Gram reflection",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.4041082329227201e-05,
+      "expected": ">=-1e-09",
+      "group": "OS Gram",
+      "name": "square4 site=0 beta=0.25 Gram positive",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.9988420349669342,
+      "expected": ">=1e-08",
+      "group": "OS Gram",
+      "name": "square4 site=0 beta=0.25 Gram diagonal",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        2.574980159653073e-19,
+        1.881756953288753
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "square4 site=0 beta=0.25 s=0.03125 cyclic finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 2.574980159653073e-19,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "square4 site=0 beta=0.25 s=0.03125 cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.881756953288753,
+      "expected": ">=1e-10",
+      "group": "thermal KMS",
+      "name": "square4 site=0 beta=0.25 s=0.03125 cyclic witness",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        3.9302328752599536e-19,
+        1.8817572386022305
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "square4 site=0 beta=0.25 s=0.0625 cyclic finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 3.9302328752599536e-19,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "square4 site=0 beta=0.25 s=0.0625 cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.8817572386022305,
+      "expected": ">=1e-10",
+      "group": "thermal KMS",
+      "name": "square4 site=0 beta=0.25 s=0.0625 cyclic witness",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        2.642742795433417e-19,
+        1.8817574081431827
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "square4 site=0 beta=0.25 s=0.09375 cyclic finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 2.642742795433417e-19,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "square4 site=0 beta=0.25 s=0.09375 cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.8817574081431827,
+      "expected": ">=1e-10",
+      "group": "thermal KMS",
+      "name": "square4 site=0 beta=0.25 s=0.09375 cyclic witness",
+      "status": "PASS"
+    },
+    {
+      "actual": 7.771561799634541e-16,
+      "expected": "finite",
+      "group": "OS Gram",
+      "name": "square4 site=1 beta=0.25 Gram finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 7.771561799634541e-16,
+      "expected": "<=1e-07",
+      "group": "OS Gram",
+      "name": "square4 site=1 beta=0.25 Gram reflection",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.4041082329644477e-05,
+      "expected": ">=-1e-09",
+      "group": "OS Gram",
+      "name": "square4 site=1 beta=0.25 Gram positive",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.998842034966934,
+      "expected": ">=1e-08",
+      "group": "OS Gram",
+      "name": "square4 site=1 beta=0.25 Gram diagonal",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        1.1102263333426764e-16,
+        1.881756953288753
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "square4 site=1 beta=0.25 s=0.03125 cyclic finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.1102263333426764e-16,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "square4 site=1 beta=0.25 s=0.03125 cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.881756953288753,
+      "expected": ">=1e-10",
+      "group": "thermal KMS",
+      "name": "square4 site=1 beta=0.25 s=0.03125 cyclic witness",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        2.574980159653073e-19,
+        1.8817572386022303
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "square4 site=1 beta=0.25 s=0.0625 cyclic finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 2.574980159653073e-19,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "square4 site=1 beta=0.25 s=0.0625 cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.8817572386022303,
+      "expected": ">=1e-10",
+      "group": "thermal KMS",
+      "name": "square4 site=1 beta=0.25 s=0.0625 cyclic witness",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        1.6263032587282567e-19,
+        1.8817574081431827
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "square4 site=1 beta=0.25 s=0.09375 cyclic finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.6263032587282567e-19,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "square4 site=1 beta=0.25 s=0.09375 cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.8817574081431827,
+      "expected": ">=1e-10",
+      "group": "thermal KMS",
+      "name": "square4 site=1 beta=0.25 s=0.09375 cyclic witness",
+      "status": "PASS"
+    },
+    {
+      "actual": 7.771561711129991e-16,
+      "expected": "finite",
+      "group": "OS Gram",
+      "name": "square4 site=2 beta=0.25 Gram finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 7.771561711129991e-16,
+      "expected": "<=1e-07",
+      "group": "OS Gram",
+      "name": "square4 site=2 beta=0.25 Gram reflection",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.4041082329586594e-05,
+      "expected": ">=-1e-09",
+      "group": "OS Gram",
+      "name": "square4 site=2 beta=0.25 Gram positive",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.998842034966934,
+      "expected": ">=1e-08",
+      "group": "OS Gram",
+      "name": "square4 site=2 beta=0.25 Gram diagonal",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        1.0842021724855044e-19,
+        1.8817569532887526
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "square4 site=2 beta=0.25 s=0.03125 cyclic finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.0842021724855044e-19,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "square4 site=2 beta=0.25 s=0.03125 cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.8817569532887526,
+      "expected": ">=1e-10",
+      "group": "thermal KMS",
+      "name": "square4 site=2 beta=0.25 s=0.03125 cyclic witness",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        1.1102290547554458e-16,
+        1.8817572386022303
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "square4 site=2 beta=0.25 s=0.0625 cyclic finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.1102290547554458e-16,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "square4 site=2 beta=0.25 s=0.0625 cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.8817572386022303,
+      "expected": ">=1e-10",
+      "group": "thermal KMS",
+      "name": "square4 site=2 beta=0.25 s=0.0625 cyclic witness",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        2.168404344971009e-19,
+        1.8817574081431827
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "square4 site=2 beta=0.25 s=0.09375 cyclic finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 2.168404344971009e-19,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "square4 site=2 beta=0.25 s=0.09375 cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.8817574081431827,
+      "expected": ">=1e-10",
+      "group": "thermal KMS",
+      "name": "square4 site=2 beta=0.25 s=0.09375 cyclic witness",
+      "status": "PASS"
+    },
+    {
+      "actual": 6.661338147750939e-16,
+      "expected": "finite",
+      "group": "OS Gram",
+      "name": "square4 site=3 beta=0.25 Gram finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 6.661338147750939e-16,
+      "expected": "<=1e-07",
+      "group": "OS Gram",
+      "name": "square4 site=3 beta=0.25 Gram reflection",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.4041082329289638e-05,
+      "expected": ">=-1e-09",
+      "group": "OS Gram",
+      "name": "square4 site=3 beta=0.25 Gram positive",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.9988420349669342,
+      "expected": ">=1e-08",
+      "group": "OS Gram",
+      "name": "square4 site=3 beta=0.25 Gram diagonal",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        1.1102230577123805e-16,
+        1.8817569532887526
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "square4 site=3 beta=0.25 s=0.03125 cyclic finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.1102230577123805e-16,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "square4 site=3 beta=0.25 s=0.03125 cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.8817569532887526,
+      "expected": ">=1e-10",
+      "group": "thermal KMS",
+      "name": "square4 site=3 beta=0.25 s=0.03125 cyclic witness",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        1.1102230577123805e-16,
+        1.8817572386022305
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "square4 site=3 beta=0.25 s=0.0625 cyclic finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.1102230577123805e-16,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "square4 site=3 beta=0.25 s=0.0625 cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.8817572386022305,
+      "expected": ">=1e-10",
+      "group": "thermal KMS",
+      "name": "square4 site=3 beta=0.25 s=0.0625 cyclic witness",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        1.1102242157645996e-16,
+        1.8817574081431827
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "square4 site=3 beta=0.25 s=0.09375 cyclic finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.1102242157645996e-16,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "square4 site=3 beta=0.25 s=0.09375 cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.8817574081431827,
+      "expected": ">=1e-10",
+      "group": "thermal KMS",
+      "name": "square4 site=3 beta=0.25 s=0.09375 cyclic witness",
+      "status": "PASS"
+    },
+    {
+      "actual": 15.57740114683175,
+      "expected": ">0 finite",
+      "group": "Euclidean transfer",
+      "name": "square4 beta=0.5 partition",
+      "status": "PASS"
+    },
+    {
+      "actual": 8.88178423422438e-16,
+      "expected": "finite",
+      "group": "OS Gram",
+      "name": "square4 site=0 beta=0.5 Gram finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 8.88178423422438e-16,
+      "expected": "<=1e-07",
+      "group": "OS Gram",
+      "name": "square4 site=0 beta=0.5 Gram reflection",
+      "status": "PASS"
+    },
+    {
+      "actual": 4.97339812759884e-05,
+      "expected": ">=-1e-09",
+      "group": "OS Gram",
+      "name": "square4 site=0 beta=0.5 Gram positive",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.9958723497955618,
+      "expected": ">=1e-08",
+      "group": "OS Gram",
+      "name": "square4 site=0 beta=0.5 Gram diagonal",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        1.1102314949223176e-16,
+        1.8840796965020283
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "square4 site=0 beta=0.5 s=0.0625 cyclic finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.1102314949223176e-16,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "square4 site=0 beta=0.5 s=0.0625 cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.8840796965020283,
+      "expected": ">=1e-10",
+      "group": "thermal KMS",
+      "name": "square4 site=0 beta=0.5 s=0.0625 cyclic witness",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        3.7947076036992655e-19,
+        1.8840802884636263
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "square4 site=0 beta=0.5 s=0.125 cyclic finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 3.7947076036992655e-19,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "square4 site=0 beta=0.5 s=0.125 cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.8840802884636263,
+      "expected": ">=1e-10",
+      "group": "thermal KMS",
+      "name": "square4 site=0 beta=0.5 s=0.125 cyclic witness",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        1.1102548209925851e-16,
+        1.8840806145019013
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "square4 site=0 beta=0.5 s=0.1875 cyclic finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.1102548209925851e-16,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "square4 site=0 beta=0.5 s=0.1875 cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.8840806145019013,
+      "expected": ">=1e-10",
+      "group": "thermal KMS",
+      "name": "square4 site=0 beta=0.5 s=0.1875 cyclic witness",
+      "status": "PASS"
+    },
+    {
+      "actual": 9.992007221626409e-16,
+      "expected": "finite",
+      "group": "OS Gram",
+      "name": "square4 site=1 beta=0.5 Gram finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 9.992007221626409e-16,
+      "expected": "<=1e-07",
+      "group": "OS Gram",
+      "name": "square4 site=1 beta=0.5 Gram reflection",
+      "status": "PASS"
+    },
+    {
+      "actual": 4.973398127658425e-05,
+      "expected": ">=-1e-09",
+      "group": "OS Gram",
+      "name": "square4 site=1 beta=0.5 Gram positive",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.9958723497955613,
+      "expected": ">=1e-08",
+      "group": "OS Gram",
+      "name": "square4 site=1 beta=0.5 Gram diagonal",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        1.1102231569740467e-16,
+        1.8840796965020283
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "square4 site=1 beta=0.5 s=0.0625 cyclic finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.1102231569740467e-16,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "square4 site=1 beta=0.5 s=0.0625 cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.8840796965020283,
+      "expected": ">=1e-10",
+      "group": "thermal KMS",
+      "name": "square4 site=1 beta=0.5 s=0.0625 cyclic witness",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        2.168404344971009e-19,
+        1.8840802884636265
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "square4 site=1 beta=0.5 s=0.125 cyclic finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 2.168404344971009e-19,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "square4 site=1 beta=0.5 s=0.125 cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.8840802884636265,
+      "expected": ">=1e-10",
+      "group": "thermal KMS",
+      "name": "square4 site=1 beta=0.5 s=0.125 cyclic witness",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        1.1102235540206224e-16,
+        1.8840806145019013
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "square4 site=1 beta=0.5 s=0.1875 cyclic finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.1102235540206224e-16,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "square4 site=1 beta=0.5 s=0.1875 cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.8840806145019013,
+      "expected": ">=1e-10",
+      "group": "thermal KMS",
+      "name": "square4 site=1 beta=0.5 s=0.1875 cyclic witness",
+      "status": "PASS"
+    },
+    {
+      "actual": 9.992007221626409e-16,
+      "expected": "finite",
+      "group": "OS Gram",
+      "name": "square4 site=2 beta=0.5 Gram finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 9.992007221626409e-16,
+      "expected": "<=1e-07",
+      "group": "OS Gram",
+      "name": "square4 site=2 beta=0.5 Gram reflection",
+      "status": "PASS"
+    },
+    {
+      "actual": 4.973398127613176e-05,
+      "expected": ">=-1e-09",
+      "group": "OS Gram",
+      "name": "square4 site=2 beta=0.5 Gram positive",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.9958723497955613,
+      "expected": ">=1e-08",
+      "group": "OS Gram",
+      "name": "square4 site=2 beta=0.5 Gram diagonal",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        2.168404344971009e-19,
+        1.8840796965020281
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "square4 site=2 beta=0.5 s=0.0625 cyclic finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 2.168404344971009e-19,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "square4 site=2 beta=0.5 s=0.0625 cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.8840796965020281,
+      "expected": ">=1e-10",
+      "group": "thermal KMS",
+      "name": "square4 site=2 beta=0.5 s=0.0625 cyclic witness",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        1.1102295097022184e-16,
+        1.8840802884636263
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "square4 site=2 beta=0.5 s=0.125 cyclic finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.1102295097022184e-16,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "square4 site=2 beta=0.5 s=0.125 cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.8840802884636263,
+      "expected": ">=1e-10",
+      "group": "thermal KMS",
+      "name": "square4 site=2 beta=0.5 s=0.125 cyclic witness",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        1.1102231569740467e-16,
+        1.8840806145019013
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "square4 site=2 beta=0.5 s=0.1875 cyclic finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.1102231569740467e-16,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "square4 site=2 beta=0.5 s=0.1875 cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.8840806145019013,
+      "expected": ">=1e-10",
+      "group": "thermal KMS",
+      "name": "square4 site=2 beta=0.5 s=0.1875 cyclic witness",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.1102230246251565e-15,
+      "expected": "finite",
+      "group": "OS Gram",
+      "name": "square4 site=3 beta=0.5 Gram finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.1102230246251565e-15,
+      "expected": "<=1e-07",
+      "group": "OS Gram",
+      "name": "square4 site=3 beta=0.5 Gram reflection",
+      "status": "PASS"
+    },
+    {
+      "actual": 4.9733981276063674e-05,
+      "expected": ">=-1e-09",
+      "group": "OS Gram",
+      "name": "square4 site=3 beta=0.5 Gram positive",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.9958723497955612,
+      "expected": ">=1e-08",
+      "group": "OS Gram",
+      "name": "square4 site=3 beta=0.5 Gram diagonal",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        1.1102230246251565e-16,
+        1.884079696502028
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "square4 site=3 beta=0.5 s=0.0625 cyclic finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.1102230246251565e-16,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "square4 site=3 beta=0.5 s=0.0625 cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.884079696502028,
+      "expected": ">=1e-10",
+      "group": "thermal KMS",
+      "name": "square4 site=3 beta=0.5 s=0.0625 cyclic witness",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        1.1102420827028943e-16,
+        1.8840802884636263
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "square4 site=3 beta=0.5 s=0.125 cyclic finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.1102420827028943e-16,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "square4 site=3 beta=0.5 s=0.125 cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.8840802884636263,
+      "expected": ">=1e-10",
+      "group": "thermal KMS",
+      "name": "square4 site=3 beta=0.5 s=0.125 cyclic witness",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        2.439454888092385e-19,
+        1.8840806145019011
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "square4 site=3 beta=0.5 s=0.1875 cyclic finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 2.439454888092385e-19,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "square4 site=3 beta=0.5 s=0.1875 cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.8840806145019011,
+      "expected": ">=1e-10",
+      "group": "thermal KMS",
+      "name": "square4 site=3 beta=0.5 s=0.1875 cyclic witness",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "degree_max": 3,
+        "degree_min": 2,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            5
+          ]
+        ]
+      },
+      "expected": "nonempty control",
+      "group": "graph",
+      "name": "grid2x3 edge validity",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.6175067619642287,
+      "expected": "positive Q3 witness",
+      "group": "nondegenerate Q3",
+      "name": "grid2x3 noncommutation",
+      "status": "PASS"
+    },
+    {
+      "actual": 161.84802621236074,
+      "expected": ">0 finite",
+      "group": "Euclidean transfer",
+      "name": "grid2x3 beta=0.25 partition",
+      "status": "PASS"
+    },
+    {
+      "actual": 3.3306690738754696e-16,
+      "expected": "finite",
+      "group": "OS Gram",
+      "name": "grid2x3 site=0 beta=0.25 Gram finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 3.3306690738754696e-16,
+      "expected": "<=1e-07",
+      "group": "OS Gram",
+      "name": "grid2x3 site=0 beta=0.25 Gram reflection",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.405352199403608e-05,
+      "expected": ">=-1e-09",
+      "group": "OS Gram",
+      "name": "grid2x3 site=0 beta=0.25 Gram positive",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.9988640935300992,
+      "expected": ">=1e-08",
+      "group": "OS Gram",
+      "name": "grid2x3 site=0 beta=0.25 Gram diagonal",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.0,
+        1.8817636810705094
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=0 beta=0.25 s=0.03125 cyclic finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.0,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=0 beta=0.25 s=0.03125 cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.8817636810705094,
+      "expected": ">=1e-10",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=0 beta=0.25 s=0.03125 cyclic witness",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        4.0657581468206416e-20,
+        1.8817639673277708
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=0 beta=0.25 s=0.0625 cyclic finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 4.0657581468206416e-20,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=0 beta=0.25 s=0.0625 cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.8817639673277708,
+      "expected": ">=1e-10",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=0 beta=0.25 s=0.0625 cyclic witness",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        1.11022304323672e-16,
+        1.8817641374744727
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=0 beta=0.25 s=0.09375 cyclic finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.11022304323672e-16,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=0 beta=0.25 s=0.09375 cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.8817641374744727,
+      "expected": ">=1e-10",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=0 beta=0.25 s=0.09375 cyclic witness",
+      "status": "PASS"
+    },
+    {
+      "actual": 4.440892305295774e-16,
+      "expected": "finite",
+      "group": "OS Gram",
+      "name": "grid2x3 site=1 beta=0.25 Gram finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 4.440892305295774e-16,
+      "expected": "<=1e-07",
+      "group": "OS Gram",
+      "name": "grid2x3 site=1 beta=0.25 Gram reflection",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.325568819215423e-05,
+      "expected": ">=-1e-09",
+      "group": "OS Gram",
+      "name": "grid2x3 site=1 beta=0.25 Gram positive",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.9980418960106372,
+      "expected": ">=1e-08",
+      "group": "OS Gram",
+      "name": "grid2x3 site=1 beta=0.25 Gram diagonal",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        1.0842021724855044e-19,
+        1.8832813231813827
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=1 beta=0.25 s=0.03125 cyclic finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.0842021724855044e-19,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=1 beta=0.25 s=0.03125 cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.8832813231813827,
+      "expected": ">=1e-10",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=1 beta=0.25 s=0.03125 cyclic witness",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        1.1102246458979734e-16,
+        1.8832818572526309
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=1 beta=0.25 s=0.0625 cyclic finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.1102246458979734e-16,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=1 beta=0.25 s=0.0625 cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.8832818572526309,
+      "expected": ">=1e-10",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=1 beta=0.25 s=0.0625 cyclic witness",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        2.2204460657939253e-16,
+        1.8832821742809025
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=1 beta=0.25 s=0.09375 cyclic finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 2.2204460657939253e-16,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=1 beta=0.25 s=0.09375 cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.8832821742809025,
+      "expected": ">=1e-10",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=1 beta=0.25 s=0.09375 cyclic witness",
+      "status": "PASS"
+    },
+    {
+      "actual": 3.3306690738754696e-16,
+      "expected": "finite",
+      "group": "OS Gram",
+      "name": "grid2x3 site=2 beta=0.25 Gram finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 3.3306690738754696e-16,
+      "expected": "<=1e-07",
+      "group": "OS Gram",
+      "name": "grid2x3 site=2 beta=0.25 Gram reflection",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.4053521994208428e-05,
+      "expected": ">=-1e-09",
+      "group": "OS Gram",
+      "name": "grid2x3 site=2 beta=0.25 Gram positive",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.9988640935300992,
+      "expected": ">=1e-08",
+      "group": "OS Gram",
+      "name": "grid2x3 site=2 beta=0.25 Gram diagonal",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        1.8973538018496328e-19,
+        1.8817636810705094
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=2 beta=0.25 s=0.03125 cyclic finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.8973538018496328e-19,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=2 beta=0.25 s=0.03125 cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.8817636810705094,
+      "expected": ">=1e-10",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=2 beta=0.25 s=0.03125 cyclic witness",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        5.421010862427522e-20,
+        1.8817639673277708
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=2 beta=0.25 s=0.0625 cyclic finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 5.421010862427522e-20,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=2 beta=0.25 s=0.0625 cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.8817639673277708,
+      "expected": ">=1e-10",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=2 beta=0.25 s=0.0625 cyclic witness",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        1.110223125954777e-16,
+        1.8817641374744727
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=2 beta=0.25 s=0.09375 cyclic finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.110223125954777e-16,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=2 beta=0.25 s=0.09375 cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.8817641374744727,
+      "expected": ">=1e-10",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=2 beta=0.25 s=0.09375 cyclic witness",
+      "status": "PASS"
+    },
+    {
+      "actual": 3.3306690738754696e-16,
+      "expected": "finite",
+      "group": "OS Gram",
+      "name": "grid2x3 site=3 beta=0.25 Gram finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 3.3306690738754696e-16,
+      "expected": "<=1e-07",
+      "group": "OS Gram",
+      "name": "grid2x3 site=3 beta=0.25 Gram reflection",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.405352199413153e-05,
+      "expected": ">=-1e-09",
+      "group": "OS Gram",
+      "name": "grid2x3 site=3 beta=0.25 Gram positive",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.998864093530099,
+      "expected": ">=1e-08",
+      "group": "OS Gram",
+      "name": "grid2x3 site=3 beta=0.25 Gram diagonal",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.0,
+        1.8817636810705094
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=3 beta=0.25 s=0.03125 cyclic finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.0,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=3 beta=0.25 s=0.03125 cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.8817636810705094,
+      "expected": ">=1e-10",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=3 beta=0.25 s=0.03125 cyclic witness",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        8.131516293641283e-20,
+        1.8817639673277708
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=3 beta=0.25 s=0.0625 cyclic finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 8.131516293641283e-20,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=3 beta=0.25 s=0.0625 cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.8817639673277708,
+      "expected": ">=1e-10",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=3 beta=0.25 s=0.0625 cyclic witness",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        1.3552527156068805e-20,
+        1.8817641374744727
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=3 beta=0.25 s=0.09375 cyclic finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.3552527156068805e-20,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=3 beta=0.25 s=0.09375 cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.8817641374744727,
+      "expected": ">=1e-10",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=3 beta=0.25 s=0.09375 cyclic witness",
+      "status": "PASS"
+    },
+    {
+      "actual": 3.3306690738754696e-16,
+      "expected": "finite",
+      "group": "OS Gram",
+      "name": "grid2x3 site=4 beta=0.25 Gram finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 3.3306690738754696e-16,
+      "expected": "<=1e-07",
+      "group": "OS Gram",
+      "name": "grid2x3 site=4 beta=0.25 Gram reflection",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.325568819167176e-05,
+      "expected": ">=-1e-09",
+      "group": "OS Gram",
+      "name": "grid2x3 site=4 beta=0.25 Gram positive",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.9980418960106372,
+      "expected": ">=1e-08",
+      "group": "OS Gram",
+      "name": "grid2x3 site=4 beta=0.25 Gram diagonal",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        8.131516293641283e-20,
+        1.8832813231813827
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=4 beta=0.25 s=0.03125 cyclic finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 8.131516293641283e-20,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=4 beta=0.25 s=0.03125 cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.8832813231813827,
+      "expected": ">=1e-10",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=4 beta=0.25 s=0.03125 cyclic witness",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        5.421010862427522e-20,
+        1.8832818572526309
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=4 beta=0.25 s=0.0625 cyclic finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 5.421010862427522e-20,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=4 beta=0.25 s=0.0625 cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.8832818572526309,
+      "expected": ">=1e-10",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=4 beta=0.25 s=0.0625 cyclic witness",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        2.220446053386216e-16,
+        1.8832821742809025
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=4 beta=0.25 s=0.09375 cyclic finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 2.220446053386216e-16,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=4 beta=0.25 s=0.09375 cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.8832821742809025,
+      "expected": ">=1e-10",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=4 beta=0.25 s=0.09375 cyclic witness",
+      "status": "PASS"
+    },
+    {
+      "actual": 3.330669382387268e-16,
+      "expected": "finite",
+      "group": "OS Gram",
+      "name": "grid2x3 site=5 beta=0.25 Gram finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 3.330669382387268e-16,
+      "expected": "<=1e-07",
+      "group": "OS Gram",
+      "name": "grid2x3 site=5 beta=0.25 Gram reflection",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.4053521994117694e-05,
+      "expected": ">=-1e-09",
+      "group": "OS Gram",
+      "name": "grid2x3 site=5 beta=0.25 Gram positive",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.9988640935300992,
+      "expected": ">=1e-08",
+      "group": "OS Gram",
+      "name": "grid2x3 site=5 beta=0.25 Gram diagonal",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        1.8973538018496328e-19,
+        1.8817636810705094
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=5 beta=0.25 s=0.03125 cyclic finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.8973538018496328e-19,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=5 beta=0.25 s=0.03125 cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.8817636810705094,
+      "expected": ">=1e-10",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=5 beta=0.25 s=0.03125 cyclic witness",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        1.0842021724855044e-19,
+        1.8817639673277708
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=5 beta=0.25 s=0.0625 cyclic finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.0842021724855044e-19,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=5 beta=0.25 s=0.0625 cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.8817639673277708,
+      "expected": ">=1e-10",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=5 beta=0.25 s=0.0625 cyclic witness",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        1.1102230577123805e-16,
+        1.8817641374744727
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=5 beta=0.25 s=0.09375 cyclic finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.1102230577123805e-16,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=5 beta=0.25 s=0.09375 cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.8817641374744727,
+      "expected": ">=1e-10",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=5 beta=0.25 s=0.09375 cyclic witness",
+      "status": "PASS"
+    },
+    {
+      "actual": 47.28285992934969,
+      "expected": ">0 finite",
+      "group": "Euclidean transfer",
+      "name": "grid2x3 beta=0.5 partition",
+      "status": "PASS"
+    },
+    {
+      "actual": 8.881784197001252e-16,
+      "expected": "finite",
+      "group": "OS Gram",
+      "name": "grid2x3 site=0 beta=0.5 Gram finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 8.881784197001252e-16,
+      "expected": "<=1e-07",
+      "group": "OS Gram",
+      "name": "grid2x3 site=0 beta=0.5 Gram reflection",
+      "status": "PASS"
+    },
+    {
+      "actual": 4.9968295204649456e-05,
+      "expected": ">=-1e-09",
+      "group": "OS Gram",
+      "name": "grid2x3 site=0 beta=0.5 Gram positive",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.9959863325583248,
+      "expected": ">=1e-08",
+      "group": "OS Gram",
+      "name": "grid2x3 site=0 beta=0.5 Gram diagonal",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        1.0842021724855044e-19,
+        1.8841566832804526
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=0 beta=0.5 s=0.0625 cyclic finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.0842021724855044e-19,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=0 beta=0.5 s=0.0625 cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.8841566832804526,
+      "expected": ">=1e-10",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=0 beta=0.5 s=0.0625 cyclic witness",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        1.1102235540206224e-16,
+        1.8841572979149723
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=0 beta=0.5 s=0.125 cyclic finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.1102235540206224e-16,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=0 beta=0.5 s=0.125 cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.8841572979149723,
+      "expected": ">=1e-10",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=0 beta=0.5 s=0.125 cyclic witness",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        2.2204461981428184e-16,
+        1.8841576385862904
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=0 beta=0.5 s=0.1875 cyclic finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 2.2204461981428184e-16,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=0 beta=0.5 s=0.1875 cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.8841576385862904,
+      "expected": ">=1e-10",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=0 beta=0.5 s=0.1875 cyclic witness",
+      "status": "PASS"
+    },
+    {
+      "actual": 4.440894216082489e-16,
+      "expected": "finite",
+      "group": "OS Gram",
+      "name": "grid2x3 site=1 beta=0.5 Gram finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 4.440894216082489e-16,
+      "expected": "<=1e-07",
+      "group": "OS Gram",
+      "name": "grid2x3 site=1 beta=0.5 Gram reflection",
+      "status": "PASS"
+    },
+    {
+      "actual": 4.3095015561487686e-05,
+      "expected": ">=-1e-09",
+      "group": "OS Gram",
+      "name": "grid2x3 site=1 beta=0.5 Gram positive",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.9935023884560267,
+      "expected": ">=1e-08",
+      "group": "OS Gram",
+      "name": "grid2x3 site=1 beta=0.5 Gram diagonal",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        4.336808689942018e-19,
+        1.886069521241369
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=1 beta=0.5 s=0.0625 cyclic finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 4.336808689942018e-19,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=1 beta=0.5 s=0.0625 cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.886069521241369,
+      "expected": ">=1e-10",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=1 beta=0.5 s=0.0625 cyclic witness",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        1.0842021724855044e-19,
+        1.886070706509138
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=1 beta=0.5 s=0.125 cyclic finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.0842021724855044e-19,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=1 beta=0.5 s=0.125 cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.886070706509138,
+      "expected": ">=1e-10",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=1 beta=0.5 s=0.125 cyclic witness",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        2.168404344971009e-19,
+        1.8860713637978304
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=1 beta=0.5 s=0.1875 cyclic finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 2.168404344971009e-19,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=1 beta=0.5 s=0.1875 cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.8860713637978304,
+      "expected": ">=1e-10",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=1 beta=0.5 s=0.1875 cyclic witness",
+      "status": "PASS"
+    },
+    {
+      "actual": 5.551115123125783e-16,
+      "expected": "finite",
+      "group": "OS Gram",
+      "name": "grid2x3 site=2 beta=0.5 Gram finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 5.551115123125783e-16,
+      "expected": "<=1e-07",
+      "group": "OS Gram",
+      "name": "grid2x3 site=2 beta=0.5 Gram reflection",
+      "status": "PASS"
+    },
+    {
+      "actual": 4.99682952047144e-05,
+      "expected": ">=-1e-09",
+      "group": "OS Gram",
+      "name": "grid2x3 site=2 beta=0.5 Gram positive",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.9959863325583252,
+      "expected": ">=1e-08",
+      "group": "OS Gram",
+      "name": "grid2x3 site=2 beta=0.5 Gram diagonal",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        5.421010862427522e-20,
+        1.8841566832804526
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=2 beta=0.5 s=0.0625 cyclic finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 5.421010862427522e-20,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=2 beta=0.5 s=0.0625 cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.8841566832804526,
+      "expected": ">=1e-10",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=2 beta=0.5 s=0.0625 cyclic witness",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        1.1102251422055052e-16,
+        1.8841572979149723
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=2 beta=0.5 s=0.125 cyclic finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.1102251422055052e-16,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=2 beta=0.5 s=0.125 cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.8841572979149723,
+      "expected": ">=1e-10",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=2 beta=0.5 s=0.125 cyclic witness",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        2.2204460657939253e-16,
+        1.8841576385862904
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=2 beta=0.5 s=0.1875 cyclic finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 2.2204460657939253e-16,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=2 beta=0.5 s=0.1875 cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.8841576385862904,
+      "expected": ">=1e-10",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=2 beta=0.5 s=0.1875 cyclic witness",
+      "status": "PASS"
+    },
+    {
+      "actual": 5.551115123125783e-16,
+      "expected": "finite",
+      "group": "OS Gram",
+      "name": "grid2x3 site=3 beta=0.5 Gram finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 5.551115123125783e-16,
+      "expected": "<=1e-07",
+      "group": "OS Gram",
+      "name": "grid2x3 site=3 beta=0.5 Gram reflection",
+      "status": "PASS"
+    },
+    {
+      "actual": 4.996829520494593e-05,
+      "expected": ">=-1e-09",
+      "group": "OS Gram",
+      "name": "grid2x3 site=3 beta=0.5 Gram positive",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.9959863325583251,
+      "expected": ">=1e-08",
+      "group": "OS Gram",
+      "name": "grid2x3 site=3 beta=0.5 Gram diagonal",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        1.0842021724855044e-19,
+        1.8841566832804526
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=3 beta=0.5 s=0.0625 cyclic finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.0842021724855044e-19,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=3 beta=0.5 s=0.0625 cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.8841566832804526,
+      "expected": ">=1e-10",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=3 beta=0.5 s=0.0625 cyclic witness",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        5.421010862427522e-20,
+        1.8841572979149726
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=3 beta=0.5 s=0.125 cyclic finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 5.421010862427522e-20,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=3 beta=0.5 s=0.125 cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.8841572979149726,
+      "expected": ">=1e-10",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=3 beta=0.5 s=0.125 cyclic witness",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        2.220446462840581e-16,
+        1.8841576385862904
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=3 beta=0.5 s=0.1875 cyclic finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 2.220446462840581e-16,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=3 beta=0.5 s=0.1875 cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.8841576385862904,
+      "expected": ">=1e-10",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=3 beta=0.5 s=0.1875 cyclic witness",
+      "status": "PASS"
+    },
+    {
+      "actual": 4.440892098500626e-16,
+      "expected": "finite",
+      "group": "OS Gram",
+      "name": "grid2x3 site=4 beta=0.5 Gram finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 4.440892098500626e-16,
+      "expected": "<=1e-07",
+      "group": "OS Gram",
+      "name": "grid2x3 site=4 beta=0.5 Gram reflection",
+      "status": "PASS"
+    },
+    {
+      "actual": 4.309501556173125e-05,
+      "expected": ">=-1e-09",
+      "group": "OS Gram",
+      "name": "grid2x3 site=4 beta=0.5 Gram positive",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.9935023884560266,
+      "expected": ">=1e-08",
+      "group": "OS Gram",
+      "name": "grid2x3 site=4 beta=0.5 Gram diagonal",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.0,
+        1.886069521241369
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=4 beta=0.5 s=0.0625 cyclic finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.0,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=4 beta=0.5 s=0.0625 cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.886069521241369,
+      "expected": ">=1e-10",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=4 beta=0.5 s=0.0625 cyclic witness",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        3.2526065174565133e-19,
+        1.886070706509138
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=4 beta=0.5 s=0.125 cyclic finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 3.2526065174565133e-19,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=4 beta=0.5 s=0.125 cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.886070706509138,
+      "expected": ">=1e-10",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=4 beta=0.5 s=0.125 cyclic witness",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        1.0842021724855044e-19,
+        1.8860713637978304
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=4 beta=0.5 s=0.1875 cyclic finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.0842021724855044e-19,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=4 beta=0.5 s=0.1875 cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.8860713637978304,
+      "expected": ">=1e-10",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=4 beta=0.5 s=0.1875 cyclic witness",
+      "status": "PASS"
+    },
+    {
+      "actual": 8.881784197001252e-16,
+      "expected": "finite",
+      "group": "OS Gram",
+      "name": "grid2x3 site=5 beta=0.5 Gram finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 8.881784197001252e-16,
+      "expected": "<=1e-07",
+      "group": "OS Gram",
+      "name": "grid2x3 site=5 beta=0.5 Gram reflection",
+      "status": "PASS"
+    },
+    {
+      "actual": 4.996829520460289e-05,
+      "expected": ">=-1e-09",
+      "group": "OS Gram",
+      "name": "grid2x3 site=5 beta=0.5 Gram positive",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.9959863325583248,
+      "expected": ">=1e-08",
+      "group": "OS Gram",
+      "name": "grid2x3 site=5 beta=0.5 Gram diagonal",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        2.710505431213761e-19,
+        1.8841566832804526
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=5 beta=0.5 s=0.0625 cyclic finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 2.710505431213761e-19,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=5 beta=0.5 s=0.0625 cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.8841566832804526,
+      "expected": ">=1e-10",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=5 beta=0.5 s=0.0625 cyclic witness",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        5.421010862427522e-20,
+        1.8841572979149726
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=5 beta=0.5 s=0.125 cyclic finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 5.421010862427522e-20,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=5 beta=0.5 s=0.125 cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.8841572979149726,
+      "expected": ">=1e-10",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=5 beta=0.5 s=0.125 cyclic witness",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        2.220446115424761e-16,
+        1.8841576385862904
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=5 beta=0.5 s=0.1875 cyclic finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 2.220446115424761e-16,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=5 beta=0.5 s=0.1875 cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.8841576385862904,
+      "expected": ">=1e-10",
+      "group": "thermal KMS",
+      "name": "grid2x3 site=5 beta=0.5 s=0.1875 cyclic witness",
+      "status": "PASS"
+    },
+    {
+      "actual": 24,
+      "expected": 24,
+      "group": "coverage",
+      "name": "Gram coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": 72,
+      "expected": 72,
+      "group": "coverage",
+      "name": "thermal coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": 3,
+      "expected": 3,
+      "group": "coverage",
+      "name": "shape coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": 96,
+      "expected": "finite",
+      "group": "numerics",
+      "name": "all rows finite",
+      "status": "PASS"
+    }
+  ],
+  "audit_id": "PA-CP1-ST8-Q3LOCK-FINITE-EUCLIDEAN-OS-GRAM-KMS-BRIDGE",
+  "boundary": {
+    "all_source_sites_closed": true,
+    "beta_uniform_direct_d_cauchy_closed": false,
+    "c6_closed": false,
+    "common_alpha_closed": false,
+    "continuum_closed": false,
+    "exhaustion_independence_closed": false,
+    "finite_os_reflection_gram_closed": true,
+    "finite_q3_euclidean_transfer_closed": true,
+    "finite_thermal_cyclicity_closed": true,
+    "finite_to_os_intertwiner_closed": false,
+    "group_law_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "no_new_negative_result": true,
+    "no_pdf": true,
+    "no_tier_change": true,
+    "pre_a_closed": false,
+    "product_core_density_closed": false,
+    "sector_a_closed": false,
+    "shape_degree_diagnostic_closed": true,
+    "source_uniform_direct_d_cauchy_closed": false,
+    "volume_uniform_direct_d_cauchy_closed": false
+  },
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "derived": {
+    "all_source_sites_closed": true,
+    "beta_uniform_direct_d_cauchy_closed": false,
+    "c6_closed": false,
+    "common_alpha_closed": false,
+    "continuum_closed": false,
+    "exhaustion_independence_closed": false,
+    "finite_os_reflection_gram_closed": true,
+    "finite_q3_euclidean_transfer_closed": true,
+    "finite_thermal_cyclicity_closed": true,
+    "finite_to_os_intertwiner_closed": false,
+    "gram_row_count": 24,
+    "group_law_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "max_cyclicity_residual": 3.3306788352817107e-16,
+    "max_gram_reflection_error": 1.1102230246251565e-15,
+    "min_gram_eigenvalue": 1.325568819167176e-05,
+    "no_new_negative_result": true,
+    "no_pdf": true,
+    "no_tier_change": true,
+    "pre_a_closed": false,
+    "product_core_density_closed": false,
+    "sector_a_closed": false,
+    "shape_count": 3,
+    "shape_degree_diagnostic_closed": true,
+    "source_uniform_direct_d_cauchy_closed": false,
+    "thermal_row_count": 72,
+    "volume_uniform_direct_d_cauchy_closed": false
+  },
+  "exploration_id": "EXP-001173",
+  "gram_rows": [
+    {
+      "beta": 0.25,
+      "diagonal_min": 0.9994675672721383,
+      "graph": "bond2",
+      "max_eigenvalue": 3.879591067926995,
+      "min_eigenvalue": 1.4827873434807455e-05,
+      "reflection_error": 3.3306690738754696e-16,
+      "source_site": 0,
+      "vector_count": 4,
+      "volume": 2
+    },
+    {
+      "beta": 0.25,
+      "diagonal_min": 0.9994675672721381,
+      "graph": "bond2",
+      "max_eigenvalue": 3.8795910679269934,
+      "min_eigenvalue": 1.4827873434701539e-05,
+      "reflection_error": 2.220446049250313e-16,
+      "source_site": 1,
+      "vector_count": 4,
+      "volume": 2
+    },
+    {
+      "beta": 0.5,
+      "diagonal_min": 0.9980028299821274,
+      "graph": "bond2",
+      "max_eigenvalue": 3.87961885486267,
+      "min_eigenvalue": 5.706957469012268e-05,
+      "reflection_error": 4.440892098500626e-16,
+      "source_site": 0,
+      "vector_count": 4,
+      "volume": 2
+    },
+    {
+      "beta": 0.5,
+      "diagonal_min": 0.9980028299821274,
+      "graph": "bond2",
+      "max_eigenvalue": 3.87961885486267,
+      "min_eigenvalue": 5.706957469044524e-05,
+      "reflection_error": 2.220446049250313e-16,
+      "source_site": 1,
+      "vector_count": 4,
+      "volume": 2
+    },
+    {
+      "beta": 0.25,
+      "diagonal_min": 0.9988420349669342,
+      "graph": "square4",
+      "max_eigenvalue": 3.8805022406896246,
+      "min_eigenvalue": 1.4041082329227201e-05,
+      "reflection_error": 8.881784197001252e-16,
+      "source_site": 0,
+      "vector_count": 4,
+      "volume": 4
+    },
+    {
+      "beta": 0.25,
+      "diagonal_min": 0.998842034966934,
+      "graph": "square4",
+      "max_eigenvalue": 3.880502240689625,
+      "min_eigenvalue": 1.4041082329644477e-05,
+      "reflection_error": 7.771561799634541e-16,
+      "source_site": 1,
+      "vector_count": 4,
+      "volume": 4
+    },
+    {
+      "beta": 0.25,
+      "diagonal_min": 0.998842034966934,
+      "graph": "square4",
+      "max_eigenvalue": 3.8805022406896246,
+      "min_eigenvalue": 1.4041082329586594e-05,
+      "reflection_error": 7.771561711129991e-16,
+      "source_site": 2,
+      "vector_count": 4,
+      "volume": 4
+    },
+    {
+      "beta": 0.25,
+      "diagonal_min": 0.9988420349669342,
+      "graph": "square4",
+      "max_eigenvalue": 3.880502240689624,
+      "min_eigenvalue": 1.4041082329289638e-05,
+      "reflection_error": 6.661338147750939e-16,
+      "source_site": 3,
+      "vector_count": 4,
+      "volume": 4
+    },
+    {
+      "beta": 0.5,
+      "diagonal_min": 0.9958723497955618,
+      "graph": "square4",
+      "max_eigenvalue": 3.879587199701282,
+      "min_eigenvalue": 4.97339812759884e-05,
+      "reflection_error": 8.88178423422438e-16,
+      "source_site": 0,
+      "vector_count": 4,
+      "volume": 4
+    },
+    {
+      "beta": 0.5,
+      "diagonal_min": 0.9958723497955613,
+      "graph": "square4",
+      "max_eigenvalue": 3.879587199701283,
+      "min_eigenvalue": 4.973398127658425e-05,
+      "reflection_error": 9.992007221626409e-16,
+      "source_site": 1,
+      "vector_count": 4,
+      "volume": 4
+    },
+    {
+      "beta": 0.5,
+      "diagonal_min": 0.9958723497955613,
+      "graph": "square4",
+      "max_eigenvalue": 3.879587199701281,
+      "min_eigenvalue": 4.973398127613176e-05,
+      "reflection_error": 9.992007221626409e-16,
+      "source_site": 2,
+      "vector_count": 4,
+      "volume": 4
+    },
+    {
+      "beta": 0.5,
+      "diagonal_min": 0.9958723497955612,
+      "graph": "square4",
+      "max_eigenvalue": 3.879587199701281,
+      "min_eigenvalue": 4.9733981276063674e-05,
+      "reflection_error": 1.1102230246251565e-15,
+      "source_site": 3,
+      "vector_count": 4,
+      "volume": 4
+    },
+    {
+      "beta": 0.25,
+      "diagonal_min": 0.9988640935300992,
+      "graph": "grid2x3",
+      "max_eigenvalue": 3.8805288278027756,
+      "min_eigenvalue": 1.405352199403608e-05,
+      "reflection_error": 3.3306690738754696e-16,
+      "source_site": 0,
+      "vector_count": 4,
+      "volume": 6
+    },
+    {
+      "beta": 0.25,
+      "diagonal_min": 0.9980418960106372,
+      "graph": "grid2x3",
+      "max_eigenvalue": 3.8813115981683963,
+      "min_eigenvalue": 1.325568819215423e-05,
+      "reflection_error": 4.440892305295774e-16,
+      "source_site": 1,
+      "vector_count": 4,
+      "volume": 6
+    },
+    {
+      "beta": 0.25,
+      "diagonal_min": 0.9988640935300992,
+      "graph": "grid2x3",
+      "max_eigenvalue": 3.8805288278027756,
+      "min_eigenvalue": 1.4053521994208428e-05,
+      "reflection_error": 3.3306690738754696e-16,
+      "source_site": 2,
+      "vector_count": 4,
+      "volume": 6
+    },
+    {
+      "beta": 0.25,
+      "diagonal_min": 0.998864093530099,
+      "graph": "grid2x3",
+      "max_eigenvalue": 3.8805288278027765,
+      "min_eigenvalue": 1.405352199413153e-05,
+      "reflection_error": 3.3306690738754696e-16,
+      "source_site": 3,
+      "vector_count": 4,
+      "volume": 6
+    },
+    {
+      "beta": 0.25,
+      "diagonal_min": 0.9980418960106372,
+      "graph": "grid2x3",
+      "max_eigenvalue": 3.881311598168396,
+      "min_eigenvalue": 1.325568819167176e-05,
+      "reflection_error": 3.3306690738754696e-16,
+      "source_site": 4,
+      "vector_count": 4,
+      "volume": 6
+    },
+    {
+      "beta": 0.25,
+      "diagonal_min": 0.9988640935300992,
+      "graph": "grid2x3",
+      "max_eigenvalue": 3.8805288278027756,
+      "min_eigenvalue": 1.4053521994117694e-05,
+      "reflection_error": 3.330669382387268e-16,
+      "source_site": 5,
+      "vector_count": 4,
+      "volume": 6
+    },
+    {
+      "beta": 0.5,
+      "diagonal_min": 0.9959863325583248,
+      "graph": "grid2x3",
+      "max_eigenvalue": 3.879765121496719,
+      "min_eigenvalue": 4.9968295204649456e-05,
+      "reflection_error": 8.881784197001252e-16,
+      "source_site": 0,
+      "vector_count": 4,
+      "volume": 6
+    },
+    {
+      "beta": 0.5,
+      "diagonal_min": 0.9935023884560267,
+      "graph": "grid2x3",
+      "max_eigenvalue": 3.879505656276741,
+      "min_eigenvalue": 4.3095015561487686e-05,
+      "reflection_error": 4.440894216082489e-16,
+      "source_site": 1,
+      "vector_count": 4,
+      "volume": 6
+    },
+    {
+      "beta": 0.5,
+      "diagonal_min": 0.9959863325583252,
+      "graph": "grid2x3",
+      "max_eigenvalue": 3.8797651214967193,
+      "min_eigenvalue": 4.99682952047144e-05,
+      "reflection_error": 5.551115123125783e-16,
+      "source_site": 2,
+      "vector_count": 4,
+      "volume": 6
+    },
+    {
+      "beta": 0.5,
+      "diagonal_min": 0.9959863325583251,
+      "graph": "grid2x3",
+      "max_eigenvalue": 3.8797651214967175,
+      "min_eigenvalue": 4.996829520494593e-05,
+      "reflection_error": 5.551115123125783e-16,
+      "source_site": 3,
+      "vector_count": 4,
+      "volume": 6
+    },
+    {
+      "beta": 0.5,
+      "diagonal_min": 0.9935023884560266,
+      "graph": "grid2x3",
+      "max_eigenvalue": 3.8795056562767414,
+      "min_eigenvalue": 4.309501556173125e-05,
+      "reflection_error": 4.440892098500626e-16,
+      "source_site": 4,
+      "vector_count": 4,
+      "volume": 6
+    },
+    {
+      "beta": 0.5,
+      "diagonal_min": 0.9959863325583248,
+      "graph": "grid2x3",
+      "max_eigenvalue": 3.8797651214967193,
+      "min_eigenvalue": 4.996829520460289e-05,
+      "reflection_error": 8.881784197001252e-16,
+      "source_site": 5,
+      "vector_count": 4,
+      "volume": 6
+    }
+  ],
+  "passed": 334,
+  "run_kind": "primary",
+  "schema": "tect/foundation-audit/1.0",
+  "shape_summaries": [
+    {
+      "degree_max": 1,
+      "degree_mean": 1.0,
+      "degree_min": 1,
+      "edge_count": 1,
+      "graph": "bond2",
+      "max_cyclicity_residual": 3.3306788352817107e-16,
+      "max_gram_reflection_error": 4.440892098500626e-16,
+      "min_cyclicity_witness": 1.8802895899602867,
+      "min_gram_diagonal": 0.9980028299821274,
+      "min_gram_eigenvalue": 1.4827873434701539e-05,
+      "source_count": 2,
+      "volume": 2
+    },
+    {
+      "degree_max": 2,
+      "degree_mean": 2.0,
+      "degree_min": 2,
+      "edge_count": 4,
+      "graph": "square4",
+      "max_cyclicity_residual": 1.1102548209925851e-16,
+      "max_gram_reflection_error": 1.1102230246251565e-15,
+      "min_cyclicity_witness": 1.8817569532887526,
+      "min_gram_diagonal": 0.9958723497955612,
+      "min_gram_eigenvalue": 1.4041082329227201e-05,
+      "source_count": 4,
+      "volume": 4
+    },
+    {
+      "degree_max": 3,
+      "degree_mean": 2.3333333333333335,
+      "degree_min": 2,
+      "edge_count": 7,
+      "graph": "grid2x3",
+      "max_cyclicity_residual": 2.220446462840581e-16,
+      "max_gram_reflection_error": 8.881784197001252e-16,
+      "min_cyclicity_witness": 1.8817636810705094,
+      "min_gram_diagonal": 0.9935023884560266,
+      "min_gram_eigenvalue": 1.325568819167176e-05,
+      "source_count": 6,
+      "volume": 6
+    }
+  ],
+  "task_id": "T-054",
+  "thermal_rows": [
+    {
+      "beta": 0.25,
+      "cyclicity_residual": 1.110233013303107e-16,
+      "forward_imag": -2.9638391169602504e-05,
+      "forward_real": 0.9401447945129632,
+      "fraction": 0.125,
+      "graph": "bond2",
+      "reverse_imag": -2.9638391169602975e-05,
+      "reverse_real": 0.9401447945129633,
+      "seconds": 0.03125,
+      "source_site": 0,
+      "volume": 2,
+      "witness": 1.8802895899602872
+    },
+    {
+      "beta": 0.25,
+      "cyclicity_residual": 4.70950318673391e-19,
+      "forward_imag": -2.134012077538474e-05,
+      "forward_real": 0.9401448120375501,
+      "fraction": 0.25,
+      "graph": "bond2",
+      "reverse_imag": -2.1340120775385212e-05,
+      "reverse_real": 0.9401448120375501,
+      "seconds": 0.0625,
+      "source_site": 0,
+      "volume": 2,
+      "witness": 1.8802896245594944
+    },
+    {
+      "beta": 0.25,
+      "cyclicity_residual": 2.2204476829960453e-16,
+      "forward_imag": -1.1142960156383423e-05,
+      "forward_real": 0.9401448223808274,
+      "fraction": 0.375,
+      "graph": "bond2",
+      "reverse_imag": -1.1142960156383692e-05,
+      "reverse_real": 0.9401448223808272,
+      "seconds": 0.09375,
+      "source_site": 0,
+      "volume": 2,
+      "witness": 1.8802896448937252
+    },
+    {
+      "beta": 0.25,
+      "cyclicity_residual": 3.3306788352817107e-16,
+      "forward_imag": -2.9638391169631144e-05,
+      "forward_real": 0.940144794512963,
+      "fraction": 0.125,
+      "graph": "bond2",
+      "reverse_imag": -2.963839116963195e-05,
+      "reverse_real": 0.9401447945129633,
+      "seconds": 0.03125,
+      "source_site": 1,
+      "volume": 2,
+      "witness": 1.8802895899602867
+    },
+    {
+      "beta": 0.25,
+      "cyclicity_residual": 6.06475590234079e-19,
+      "forward_imag": -2.1340120775414527e-05,
+      "forward_real": 0.94014481203755,
+      "fraction": 0.25,
+      "graph": "bond2",
+      "reverse_imag": -2.134012077541392e-05,
+      "reverse_real": 0.94014481203755,
+      "seconds": 0.0625,
+      "source_site": 1,
+      "volume": 2,
+      "witness": 1.8802896245594942
+    },
+    {
+      "beta": 0.25,
+      "cyclicity_residual": 2.2204464525654487e-16,
+      "forward_imag": -1.1142960156412669e-05,
+      "forward_real": 0.9401448223808274,
+      "fraction": 0.375,
+      "graph": "bond2",
+      "reverse_imag": -1.1142960156412535e-05,
+      "reverse_real": 0.9401448223808272,
+      "seconds": 0.09375,
+      "source_site": 1,
+      "volume": 2,
+      "witness": 1.8802896448937252
+    },
+    {
+      "beta": 0.5,
+      "cyclicity_residual": 1.111307226797642e-18,
+      "forward_imag": -0.00012593085601680782,
+      "forward_real": 0.9411363032874829,
+      "fraction": 0.125,
+      "graph": "bond2",
+      "reverse_imag": -0.00012593085601680893,
+      "reverse_real": 0.9411363032874829,
+      "seconds": 0.0625,
+      "source_site": 0,
+      "volume": 2,
+      "witness": 1.8822726234254266
+    },
+    {
+      "beta": 0.5,
+      "cyclicity_residual": 2.2204468598871655e-16,
+      "forward_imag": -9.569659740086151e-05,
+      "forward_real": 0.9411362684686624,
+      "fraction": 0.25,
+      "graph": "bond2",
+      "reverse_imag": -9.56965974008617e-05,
+      "reverse_real": 0.9411362684686622,
+      "seconds": 0.125,
+      "source_site": 0,
+      "volume": 2,
+      "witness": 1.8822725466679437
+    },
+    {
+      "beta": 0.5,
+      "cyclicity_residual": 2.2204462239922106e-16,
+      "forward_imag": -5.132737086208964e-05,
+      "forward_real": 0.941136245219359,
+      "fraction": 0.375,
+      "graph": "bond2",
+      "reverse_imag": -5.132737086208955e-05,
+      "reverse_real": 0.9411362452193588,
+      "seconds": 0.1875,
+      "source_site": 0,
+      "volume": 2,
+      "witness": 1.8822724932379926
+    },
+    {
+      "beta": 0.5,
+      "cyclicity_residual": 1.1102489647061245e-16,
+      "forward_imag": -0.0001259308560168321,
+      "forward_real": 0.9411363032874829,
+      "fraction": 0.125,
+      "graph": "bond2",
+      "reverse_imag": -0.00012593085601683135,
+      "reverse_real": 0.9411363032874828,
+      "seconds": 0.0625,
+      "source_site": 1,
+      "volume": 2,
+      "witness": 1.8822726234254263
+    },
+    {
+      "beta": 0.5,
+      "cyclicity_residual": 8.944667923005412e-19,
+      "forward_imag": -9.569659740088455e-05,
+      "forward_real": 0.9411362684686622,
+      "fraction": 0.25,
+      "graph": "bond2",
+      "reverse_imag": -9.569659740088366e-05,
+      "reverse_real": 0.9411362684686622,
+      "seconds": 0.125,
+      "source_site": 1,
+      "volume": 2,
+      "witness": 1.8822725466679435
+    },
+    {
+      "beta": 0.5,
+      "cyclicity_residual": 2.2204467482178207e-16,
+      "forward_imag": -5.132737086211187e-05,
+      "forward_real": 0.941136245219359,
+      "fraction": 0.375,
+      "graph": "bond2",
+      "reverse_imag": -5.132737086211205e-05,
+      "reverse_real": 0.9411362452193588,
+      "seconds": 0.1875,
+      "source_site": 1,
+      "volume": 2,
+      "witness": 1.8822724932379926
+    },
+    {
+      "beta": 0.25,
+      "cyclicity_residual": 2.574980159653073e-19,
+      "forward_imag": -0.0001194880793473325,
+      "forward_real": 0.9408784690571048,
+      "fraction": 0.125,
+      "graph": "square4",
+      "reverse_imag": -0.00011948807934733276,
+      "reverse_real": 0.9408784690571048,
+      "seconds": 0.03125,
+      "source_site": 0,
+      "volume": 4,
+      "witness": 1.881756953288753
+    },
+    {
+      "beta": 0.25,
+      "cyclicity_residual": 3.9302328752599536e-19,
+      "forward_imag": -8.212347046838803e-05,
+      "forward_real": 0.9408786157170906,
+      "fraction": 0.25,
+      "graph": "square4",
+      "reverse_imag": -8.212347046838764e-05,
+      "reverse_real": 0.9408786157170906,
+      "seconds": 0.0625,
+      "source_site": 0,
+      "volume": 4,
+      "witness": 1.8817572386022305
+    },
+    {
+      "beta": 0.25,
+      "cyclicity_residual": 2.642742795433417e-19,
+      "forward_imag": -4.179463739922649e-05,
+      "forward_real": 0.9408787031433146,
+      "fraction": 0.375,
+      "graph": "square4",
+      "reverse_imag": -4.1794637399226756e-05,
+      "reverse_real": 0.9408787031433146,
+      "seconds": 0.09375,
+      "source_site": 0,
+      "volume": 4,
+      "witness": 1.8817574081431827
+    },
+    {
+      "beta": 0.25,
+      "cyclicity_residual": 1.1102263333426764e-16,
+      "forward_imag": -0.00011948807934734737,
+      "forward_real": 0.9408784690571048,
+      "fraction": 0.125,
+      "graph": "square4",
+      "reverse_imag": -0.0001194880793473471,
+      "reverse_real": 0.9408784690571047,
+      "seconds": 0.03125,
+      "source_site": 1,
+      "volume": 4,
+      "witness": 1.881756953288753
+    },
+    {
+      "beta": 0.25,
+      "cyclicity_residual": 2.574980159653073e-19,
+      "forward_imag": -8.21234704684025e-05,
+      "forward_real": 0.9408786157170904,
+      "fraction": 0.25,
+      "graph": "square4",
+      "reverse_imag": -8.212347046840276e-05,
+      "reverse_real": 0.9408786157170904,
+      "seconds": 0.0625,
+      "source_site": 1,
+      "volume": 4,
+      "witness": 1.8817572386022303
+    },
+    {
+      "beta": 0.25,
+      "cyclicity_residual": 1.6263032587282567e-19,
+      "forward_imag": -4.179463739924179e-05,
+      "forward_real": 0.9408787031433146,
+      "fraction": 0.375,
+      "graph": "square4",
+      "reverse_imag": -4.179463739924163e-05,
+      "reverse_real": 0.9408787031433146,
+      "seconds": 0.09375,
+      "source_site": 1,
+      "volume": 4,
+      "witness": 1.8817574081431827
+    },
+    {
+      "beta": 0.25,
+      "cyclicity_residual": 1.0842021724855044e-19,
+      "forward_imag": -0.00011948807934732418,
+      "forward_real": 0.9408784690571046,
+      "fraction": 0.125,
+      "graph": "square4",
+      "reverse_imag": -0.00011948807934732429,
+      "reverse_real": 0.9408784690571046,
+      "seconds": 0.03125,
+      "source_site": 2,
+      "volume": 4,
+      "witness": 1.8817569532887526
+    },
+    {
+      "beta": 0.25,
+      "cyclicity_residual": 1.1102290547554458e-16,
+      "forward_imag": -8.2123470468379e-05,
+      "forward_real": 0.9408786157170904,
+      "fraction": 0.25,
+      "graph": "square4",
+      "reverse_imag": -8.212347046837864e-05,
+      "reverse_real": 0.9408786157170905,
+      "seconds": 0.0625,
+      "source_site": 2,
+      "volume": 4,
+      "witness": 1.8817572386022303
+    },
+    {
+      "beta": 0.25,
+      "cyclicity_residual": 2.168404344971009e-19,
+      "forward_imag": -4.179463739921718e-05,
+      "forward_real": 0.9408787031433146,
+      "fraction": 0.375,
+      "graph": "square4",
+      "reverse_imag": -4.1794637399216964e-05,
+      "reverse_real": 0.9408787031433146,
+      "seconds": 0.09375,
+      "source_site": 2,
+      "volume": 4,
+      "witness": 1.8817574081431827
+    },
+    {
+      "beta": 0.25,
+      "cyclicity_residual": 1.1102230577123805e-16,
+      "forward_imag": -0.00011948807934732967,
+      "forward_real": 0.9408784690571046,
+      "fraction": 0.125,
+      "graph": "square4",
+      "reverse_imag": -0.0001194880793473297,
+      "reverse_real": 0.9408784690571047,
+      "seconds": 0.03125,
+      "source_site": 3,
+      "volume": 4,
+      "witness": 1.8817569532887526
+    },
+    {
+      "beta": 0.25,
+      "cyclicity_residual": 1.1102230577123805e-16,
+      "forward_imag": -8.212347046838437e-05,
+      "forward_real": 0.9408786157170905,
+      "fraction": 0.25,
+      "graph": "square4",
+      "reverse_imag": -8.212347046838434e-05,
+      "reverse_real": 0.9408786157170906,
+      "seconds": 0.0625,
+      "source_site": 3,
+      "volume": 4,
+      "witness": 1.8817572386022305
+    },
+    {
+      "beta": 0.25,
+      "cyclicity_residual": 1.1102242157645996e-16,
+      "forward_imag": -4.179463739922316e-05,
+      "forward_real": 0.9408787031433145,
+      "fraction": 0.375,
+      "graph": "square4",
+      "reverse_imag": -4.179463739922332e-05,
+      "reverse_real": 0.9408787031433146,
+      "seconds": 0.09375,
+      "source_site": 3,
+      "volume": 4,
+      "witness": 1.8817574081431827
+    },
+    {
+      "beta": 0.5,
+      "cyclicity_residual": 1.1102314949223176e-16,
+      "forward_imag": -0.0004586879552606389,
+      "forward_real": 0.9420397365812939,
+      "fraction": 0.125,
+      "graph": "square4",
+      "reverse_imag": -0.0004586879552606385,
+      "reverse_real": 0.9420397365812938,
+      "seconds": 0.0625,
+      "source_site": 0,
+      "volume": 4,
+      "witness": 1.8840796965020283
+    },
+    {
+      "beta": 0.5,
+      "cyclicity_residual": 3.7947076036992655e-19,
+      "forward_imag": -0.00032375755161213274,
+      "forward_real": 0.9420400885977959,
+      "fraction": 0.25,
+      "graph": "square4",
+      "reverse_imag": -0.0003237575516121331,
+      "reverse_real": 0.9420400885977959,
+      "seconds": 0.125,
+      "source_site": 0,
+      "volume": 4,
+      "witness": 1.8840802884636263
+    },
+    {
+      "beta": 0.5,
+      "cyclicity_residual": 1.1102548209925851e-16,
+      "forward_imag": -0.00016707739288197921,
+      "forward_real": 0.9420402924347823,
+      "fraction": 0.375,
+      "graph": "square4",
+      "reverse_imag": -0.00016707739288198005,
+      "reverse_real": 0.9420402924347824,
+      "seconds": 0.1875,
+      "source_site": 0,
+      "volume": 4,
+      "witness": 1.8840806145019013
+    },
+    {
+      "beta": 0.5,
+      "cyclicity_residual": 1.1102231569740467e-16,
+      "forward_imag": -0.00045868795526064,
+      "forward_real": 0.9420397365812939,
+      "fraction": 0.125,
+      "graph": "square4",
+      "reverse_imag": -0.00045868795526064006,
+      "reverse_real": 0.9420397365812938,
+      "seconds": 0.0625,
+      "source_site": 1,
+      "volume": 4,
+      "witness": 1.8840796965020283
+    },
+    {
+      "beta": 0.5,
+      "cyclicity_residual": 2.168404344971009e-19,
+      "forward_imag": -0.0003237575516121346,
+      "forward_real": 0.942040088597796,
+      "fraction": 0.25,
+      "graph": "square4",
+      "reverse_imag": -0.00032375755161213437,
+      "reverse_real": 0.942040088597796,
+      "seconds": 0.125,
+      "source_site": 1,
+      "volume": 4,
+      "witness": 1.8840802884636265
+    },
+    {
+      "beta": 0.5,
+      "cyclicity_residual": 1.1102235540206224e-16,
+      "forward_imag": -0.00016707739288198144,
+      "forward_real": 0.9420402924347823,
+      "fraction": 0.375,
+      "graph": "square4",
+      "reverse_imag": -0.00016707739288198155,
+      "reverse_real": 0.9420402924347824,
+      "seconds": 0.1875,
+      "source_site": 1,
+      "volume": 4,
+      "witness": 1.8840806145019013
+    },
+    {
+      "beta": 0.5,
+      "cyclicity_residual": 2.168404344971009e-19,
+      "forward_imag": -0.0004586879552606205,
+      "forward_real": 0.9420397365812938,
+      "fraction": 0.125,
+      "graph": "square4",
+      "reverse_imag": -0.0004586879552606207,
+      "reverse_real": 0.9420397365812938,
+      "seconds": 0.0625,
+      "source_site": 2,
+      "volume": 4,
+      "witness": 1.8840796965020281
+    },
+    {
+      "beta": 0.5,
+      "cyclicity_residual": 1.1102295097022184e-16,
+      "forward_imag": -0.00032375755161211377,
+      "forward_real": 0.9420400885977959,
+      "fraction": 0.25,
+      "graph": "square4",
+      "reverse_imag": -0.0003237575516121134,
+      "reverse_real": 0.942040088597796,
+      "seconds": 0.125,
+      "source_site": 2,
+      "volume": 4,
+      "witness": 1.8840802884636263
+    },
+    {
+      "beta": 0.5,
+      "cyclicity_residual": 1.1102231569740467e-16,
+      "forward_imag": -0.00016707739288195935,
+      "forward_real": 0.9420402924347823,
+      "fraction": 0.375,
+      "graph": "square4",
+      "reverse_imag": -0.0001670773928819594,
+      "reverse_real": 0.9420402924347824,
+      "seconds": 0.1875,
+      "source_site": 2,
+      "volume": 4,
+      "witness": 1.8840806145019013
+    },
+    {
+      "beta": 0.5,
+      "cyclicity_residual": 1.1102230246251565e-16,
+      "forward_imag": -0.0004586879552606274,
+      "forward_real": 0.9420397365812937,
+      "fraction": 0.125,
+      "graph": "square4",
+      "reverse_imag": -0.0004586879552606274,
+      "reverse_real": 0.9420397365812938,
+      "seconds": 0.0625,
+      "source_site": 3,
+      "volume": 4,
+      "witness": 1.884079696502028
+    },
+    {
+      "beta": 0.5,
+      "cyclicity_residual": 1.1102420827028943e-16,
+      "forward_imag": -0.00032375755161212147,
+      "forward_real": 0.942040088597796,
+      "fraction": 0.25,
+      "graph": "square4",
+      "reverse_imag": -0.0003237575516121221,
+      "reverse_real": 0.9420400885977959,
+      "seconds": 0.125,
+      "source_site": 3,
+      "volume": 4,
+      "witness": 1.8840802884636263
+    },
+    {
+      "beta": 0.5,
+      "cyclicity_residual": 2.439454888092385e-19,
+      "forward_imag": -0.0001670773928819685,
+      "forward_real": 0.9420402924347823,
+      "fraction": 0.375,
+      "graph": "square4",
+      "reverse_imag": -0.00016707739288196875,
+      "reverse_real": 0.9420402924347823,
+      "seconds": 0.1875,
+      "source_site": 3,
+      "volume": 4,
+      "witness": 1.8840806145019011
+    },
+    {
+      "beta": 0.25,
+      "cyclicity_residual": 0.0,
+      "forward_imag": -0.00011893733088516125,
+      "forward_real": 0.9408818330177918,
+      "fraction": 0.125,
+      "graph": "grid2x3",
+      "reverse_imag": -0.00011893733088516125,
+      "reverse_real": 0.9408818330177918,
+      "seconds": 0.03125,
+      "source_site": 0,
+      "volume": 6,
+      "witness": 1.8817636810705094
+    },
+    {
+      "beta": 0.25,
+      "cyclicity_residual": 4.0657581468206416e-20,
+      "forward_imag": -8.169073089204574e-05,
+      "forward_real": 0.9408819801175451,
+      "fraction": 0.25,
+      "graph": "grid2x3",
+      "reverse_imag": -8.16907308920457e-05,
+      "reverse_real": 0.9408819801175451,
+      "seconds": 0.0625,
+      "source_site": 0,
+      "volume": 6,
+      "witness": 1.8817639673277708
+    },
+    {
+      "beta": 0.25,
+      "cyclicity_residual": 1.11022304323672e-16,
+      "forward_imag": -4.1558834098774754e-05,
+      "forward_real": 0.9408820678194078,
+      "fraction": 0.375,
+      "graph": "grid2x3",
+      "reverse_imag": -4.1558834098774734e-05,
+      "reverse_real": 0.9408820678194079,
+      "seconds": 0.09375,
+      "source_site": 0,
+      "volume": 6,
+      "witness": 1.8817641374744727
+    },
+    {
+      "beta": 0.25,
+      "cyclicity_residual": 1.0842021724855044e-19,
+      "forward_imag": -0.00020550041480923295,
+      "forward_real": 0.9416406391668397,
+      "fraction": 0.125,
+      "graph": "grid2x3",
+      "reverse_imag": -0.00020550041480923284,
+      "reverse_real": 0.9416406391668397,
+      "seconds": 0.03125,
+      "source_site": 1,
+      "volume": 6,
+      "witness": 1.8832813231813827
+    },
+    {
+      "beta": 0.25,
+      "cyclicity_residual": 1.1102246458979734e-16,
+      "forward_imag": -0.00013978238392526828,
+      "forward_real": 0.9416409182512805,
+      "fraction": 0.25,
+      "graph": "grid2x3",
+      "reverse_imag": -0.0001397823839252681,
+      "reverse_real": 0.9416409182512806,
+      "seconds": 0.0625,
+      "source_site": 1,
+      "volume": 6,
+      "witness": 1.8832818572526309
+    },
+    {
+      "beta": 0.25,
+      "cyclicity_residual": 2.2204460657939253e-16,
+      "forward_imag": -7.071219535763027e-05,
+      "forward_real": 0.9416410844853981,
+      "fraction": 0.375,
+      "graph": "grid2x3",
+      "reverse_imag": -7.071219535763024e-05,
+      "reverse_real": 0.9416410844853979,
+      "seconds": 0.09375,
+      "source_site": 1,
+      "volume": 6,
+      "witness": 1.8832821742809025
+    },
+    {
+      "beta": 0.25,
+      "cyclicity_residual": 1.8973538018496328e-19,
+      "forward_imag": -0.00011893733088514997,
+      "forward_real": 0.9408818330177918,
+      "fraction": 0.125,
+      "graph": "grid2x3",
+      "reverse_imag": -0.00011893733088515016,
+      "reverse_real": 0.9408818330177918,
+      "seconds": 0.03125,
+      "source_site": 2,
+      "volume": 6,
+      "witness": 1.8817636810705094
+    },
+    {
+      "beta": 0.25,
+      "cyclicity_residual": 5.421010862427522e-20,
+      "forward_imag": -8.169073089203404e-05,
+      "forward_real": 0.9408819801175451,
+      "fraction": 0.25,
+      "graph": "grid2x3",
+      "reverse_imag": -8.16907308920341e-05,
+      "reverse_real": 0.9408819801175451,
+      "seconds": 0.0625,
+      "source_site": 2,
+      "volume": 6,
+      "witness": 1.8817639673277708
+    },
+    {
+      "beta": 0.25,
+      "cyclicity_residual": 1.110223125954777e-16,
+      "forward_imag": -4.1558834098762557e-05,
+      "forward_real": 0.9408820678194079,
+      "fraction": 0.375,
+      "graph": "grid2x3",
+      "reverse_imag": -4.1558834098762604e-05,
+      "reverse_real": 0.9408820678194078,
+      "seconds": 0.09375,
+      "source_site": 2,
+      "volume": 6,
+      "witness": 1.8817641374744727
+    },
+    {
+      "beta": 0.25,
+      "cyclicity_residual": 0.0,
+      "forward_imag": -0.00011893733088515583,
+      "forward_real": 0.9408818330177918,
+      "fraction": 0.125,
+      "graph": "grid2x3",
+      "reverse_imag": -0.00011893733088515583,
+      "reverse_real": 0.9408818330177918,
+      "seconds": 0.03125,
+      "source_site": 3,
+      "volume": 6,
+      "witness": 1.8817636810705094
+    },
+    {
+      "beta": 0.25,
+      "cyclicity_residual": 8.131516293641283e-20,
+      "forward_imag": -8.169073089203988e-05,
+      "forward_real": 0.9408819801175451,
+      "fraction": 0.25,
+      "graph": "grid2x3",
+      "reverse_imag": -8.16907308920398e-05,
+      "reverse_real": 0.9408819801175451,
+      "seconds": 0.0625,
+      "source_site": 3,
+      "volume": 6,
+      "witness": 1.8817639673277708
+    },
+    {
+      "beta": 0.25,
+      "cyclicity_residual": 1.3552527156068805e-20,
+      "forward_imag": -4.155883409876841e-05,
+      "forward_real": 0.9408820678194079,
+      "fraction": 0.375,
+      "graph": "grid2x3",
+      "reverse_imag": -4.15588340987684e-05,
+      "reverse_real": 0.9408820678194079,
+      "seconds": 0.09375,
+      "source_site": 3,
+      "volume": 6,
+      "witness": 1.8817641374744727
+    },
+    {
+      "beta": 0.25,
+      "cyclicity_residual": 8.131516293641283e-20,
+      "forward_imag": -0.00020550041480922926,
+      "forward_real": 0.9416406391668397,
+      "fraction": 0.125,
+      "graph": "grid2x3",
+      "reverse_imag": -0.00020550041480922935,
+      "reverse_real": 0.9416406391668397,
+      "seconds": 0.03125,
+      "source_site": 4,
+      "volume": 6,
+      "witness": 1.8832813231813827
+    },
+    {
+      "beta": 0.25,
+      "cyclicity_residual": 5.421010862427522e-20,
+      "forward_imag": -0.00013978238392526476,
+      "forward_real": 0.9416409182512805,
+      "fraction": 0.25,
+      "graph": "grid2x3",
+      "reverse_imag": -0.00013978238392526481,
+      "reverse_real": 0.9416409182512805,
+      "seconds": 0.0625,
+      "source_site": 4,
+      "volume": 6,
+      "witness": 1.8832818572526309
+    },
+    {
+      "beta": 0.25,
+      "cyclicity_residual": 2.220446053386216e-16,
+      "forward_imag": -7.071219535762714e-05,
+      "forward_real": 0.9416410844853981,
+      "fraction": 0.375,
+      "graph": "grid2x3",
+      "reverse_imag": -7.071219535762715e-05,
+      "reverse_real": 0.9416410844853979,
+      "seconds": 0.09375,
+      "source_site": 4,
+      "volume": 6,
+      "witness": 1.8832821742809025
+    },
+    {
+      "beta": 0.25,
+      "cyclicity_residual": 1.8973538018496328e-19,
+      "forward_imag": -0.00011893733088514913,
+      "forward_real": 0.9408818330177918,
+      "fraction": 0.125,
+      "graph": "grid2x3",
+      "reverse_imag": -0.00011893733088514932,
+      "reverse_real": 0.9408818330177918,
+      "seconds": 0.03125,
+      "source_site": 5,
+      "volume": 6,
+      "witness": 1.8817636810705094
+    },
+    {
+      "beta": 0.25,
+      "cyclicity_residual": 1.0842021724855044e-19,
+      "forward_imag": -8.169073089203423e-05,
+      "forward_real": 0.9408819801175451,
+      "fraction": 0.25,
+      "graph": "grid2x3",
+      "reverse_imag": -8.169073089203412e-05,
+      "reverse_real": 0.9408819801175451,
+      "seconds": 0.0625,
+      "source_site": 5,
+      "volume": 6,
+      "witness": 1.8817639673277708
+    },
+    {
+      "beta": 0.25,
+      "cyclicity_residual": 1.1102230577123805e-16,
+      "forward_imag": -4.1558834098763736e-05,
+      "forward_real": 0.9408820678194078,
+      "fraction": 0.375,
+      "graph": "grid2x3",
+      "reverse_imag": -4.155883409876371e-05,
+      "reverse_real": 0.9408820678194079,
+      "seconds": 0.09375,
+      "source_site": 5,
+      "volume": 6,
+      "witness": 1.8817641374744727
+    },
+    {
+      "beta": 0.5,
+      "cyclicity_residual": 1.0842021724855044e-19,
+      "forward_imag": -0.00045585080395963985,
+      "forward_real": 0.9420782313521757,
+      "fraction": 0.125,
+      "graph": "grid2x3",
+      "reverse_imag": -0.00045585080395963996,
+      "reverse_real": 0.9420782313521757,
+      "seconds": 0.0625,
+      "source_site": 0,
+      "volume": 6,
+      "witness": 1.8841566832804526
+    },
+    {
+      "beta": 0.5,
+      "cyclicity_residual": 1.1102235540206224e-16,
+      "forward_imag": -0.00032118233455463203,
+      "forward_real": 0.94207859420723,
+      "fraction": 0.25,
+      "graph": "grid2x3",
+      "reverse_imag": -0.00032118233455463214,
+      "reverse_real": 0.9420785942072298,
+      "seconds": 0.125,
+      "source_site": 0,
+      "volume": 6,
+      "witness": 1.8841572979149723
+    },
+    {
+      "beta": 0.5,
+      "cyclicity_residual": 2.2204461981428184e-16,
+      "forward_imag": -0.00016559456880554935,
+      "forward_real": 0.9420788047393939,
+      "fraction": 0.375,
+      "graph": "grid2x3",
+      "reverse_imag": -0.00016559456880554927,
+      "reverse_real": 0.9420788047393941,
+      "seconds": 0.1875,
+      "source_site": 0,
+      "volume": 6,
+      "witness": 1.8841576385862904
+    },
+    {
+      "beta": 0.5,
+      "cyclicity_residual": 4.336808689942018e-19,
+      "forward_imag": -0.0007477906366780787,
+      "forward_real": 0.9430344641358954,
+      "fraction": 0.125,
+      "graph": "grid2x3",
+      "reverse_imag": -0.0007477906366780791,
+      "reverse_real": 0.9430344641358954,
+      "seconds": 0.0625,
+      "source_site": 1,
+      "volume": 6,
+      "witness": 1.886069521241369
+    },
+    {
+      "beta": 0.5,
+      "cyclicity_residual": 1.0842021724855044e-19,
+      "forward_imag": -0.0005176176591188638,
+      "forward_real": 0.9430352111983564,
+      "fraction": 0.25,
+      "graph": "grid2x3",
+      "reverse_imag": -0.0005176176591188637,
+      "reverse_real": 0.9430352111983564,
+      "seconds": 0.125,
+      "source_site": 1,
+      "volume": 6,
+      "witness": 1.886070706509138
+    },
+    {
+      "beta": 0.5,
+      "cyclicity_residual": 2.168404344971009e-19,
+      "forward_imag": -0.00026415203603117845,
+      "forward_real": 0.9430356449033376,
+      "fraction": 0.375,
+      "graph": "grid2x3",
+      "reverse_imag": -0.00026415203603117867,
+      "reverse_real": 0.9430356449033376,
+      "seconds": 0.1875,
+      "source_site": 1,
+      "volume": 6,
+      "witness": 1.8860713637978304
+    },
+    {
+      "beta": 0.5,
+      "cyclicity_residual": 5.421010862427522e-20,
+      "forward_imag": -0.0004558508039596138,
+      "forward_real": 0.9420782313521757,
+      "fraction": 0.125,
+      "graph": "grid2x3",
+      "reverse_imag": -0.00045585080395961383,
+      "reverse_real": 0.9420782313521757,
+      "seconds": 0.0625,
+      "source_site": 2,
+      "volume": 6,
+      "witness": 1.8841566832804526
+    },
+    {
+      "beta": 0.5,
+      "cyclicity_residual": 1.1102251422055052e-16,
+      "forward_imag": -0.0003211823345546049,
+      "forward_real": 0.94207859420723,
+      "fraction": 0.25,
+      "graph": "grid2x3",
+      "reverse_imag": -0.0003211823345546051,
+      "reverse_real": 0.9420785942072298,
+      "seconds": 0.125,
+      "source_site": 2,
+      "volume": 6,
+      "witness": 1.8841572979149723
+    },
+    {
+      "beta": 0.5,
+      "cyclicity_residual": 2.2204460657939253e-16,
+      "forward_imag": -0.00016559456880552156,
+      "forward_real": 0.9420788047393939,
+      "fraction": 0.375,
+      "graph": "grid2x3",
+      "reverse_imag": -0.00016559456880552154,
+      "reverse_real": 0.9420788047393941,
+      "seconds": 0.1875,
+      "source_site": 2,
+      "volume": 6,
+      "witness": 1.8841576385862904
+    },
+    {
+      "beta": 0.5,
+      "cyclicity_residual": 1.0842021724855044e-19,
+      "forward_imag": -0.00045585080395963,
+      "forward_real": 0.9420782313521757,
+      "fraction": 0.125,
+      "graph": "grid2x3",
+      "reverse_imag": -0.0004558508039596301,
+      "reverse_real": 0.9420782313521757,
+      "seconds": 0.0625,
+      "source_site": 3,
+      "volume": 6,
+      "witness": 1.8841566832804526
+    },
+    {
+      "beta": 0.5,
+      "cyclicity_residual": 5.421010862427522e-20,
+      "forward_imag": -0.00032118233455462135,
+      "forward_real": 0.94207859420723,
+      "fraction": 0.25,
+      "graph": "grid2x3",
+      "reverse_imag": -0.0003211823345546214,
+      "reverse_real": 0.94207859420723,
+      "seconds": 0.125,
+      "source_site": 3,
+      "volume": 6,
+      "witness": 1.8841572979149726
+    },
+    {
+      "beta": 0.5,
+      "cyclicity_residual": 2.220446462840581e-16,
+      "forward_imag": -0.0001655945688055377,
+      "forward_real": 0.9420788047393939,
+      "fraction": 0.375,
+      "graph": "grid2x3",
+      "reverse_imag": -0.00016559456880553783,
+      "reverse_real": 0.9420788047393941,
+      "seconds": 0.1875,
+      "source_site": 3,
+      "volume": 6,
+      "witness": 1.8841576385862904
+    },
+    {
+      "beta": 0.5,
+      "cyclicity_residual": 0.0,
+      "forward_imag": -0.0007477906366780637,
+      "forward_real": 0.9430344641358954,
+      "fraction": 0.125,
+      "graph": "grid2x3",
+      "reverse_imag": -0.0007477906366780637,
+      "reverse_real": 0.9430344641358954,
+      "seconds": 0.0625,
+      "source_site": 4,
+      "volume": 6,
+      "witness": 1.886069521241369
+    },
+    {
+      "beta": 0.5,
+      "cyclicity_residual": 3.2526065174565133e-19,
+      "forward_imag": -0.0005176176591188484,
+      "forward_real": 0.9430352111983564,
+      "fraction": 0.25,
+      "graph": "grid2x3",
+      "reverse_imag": -0.0005176176591188487,
+      "reverse_real": 0.9430352111983564,
+      "seconds": 0.125,
+      "source_site": 4,
+      "volume": 6,
+      "witness": 1.886070706509138
+    },
+    {
+      "beta": 0.5,
+      "cyclicity_residual": 1.0842021724855044e-19,
+      "forward_imag": -0.00026415203603116403,
+      "forward_real": 0.9430356449033376,
+      "fraction": 0.375,
+      "graph": "grid2x3",
+      "reverse_imag": -0.0002641520360311639,
+      "reverse_real": 0.9430356449033376,
+      "seconds": 0.1875,
+      "source_site": 4,
+      "volume": 6,
+      "witness": 1.8860713637978304
+    },
+    {
+      "beta": 0.5,
+      "cyclicity_residual": 2.710505431213761e-19,
+      "forward_imag": -0.00045585080395960987,
+      "forward_real": 0.9420782313521757,
+      "fraction": 0.125,
+      "graph": "grid2x3",
+      "reverse_imag": -0.00045585080395961014,
+      "reverse_real": 0.9420782313521757,
+      "seconds": 0.0625,
+      "source_site": 5,
+      "volume": 6,
+      "witness": 1.8841566832804526
+    },
+    {
+      "beta": 0.5,
+      "cyclicity_residual": 5.421010862427522e-20,
+      "forward_imag": -0.00032118233455460325,
+      "forward_real": 0.94207859420723,
+      "fraction": 0.25,
+      "graph": "grid2x3",
+      "reverse_imag": -0.0003211823345546032,
+      "reverse_real": 0.94207859420723,
+      "seconds": 0.125,
+      "source_site": 5,
+      "volume": 6,
+      "witness": 1.8841572979149726
+    },
+    {
+      "beta": 0.5,
+      "cyclicity_residual": 2.220446115424761e-16,
+      "forward_imag": -0.00016559456880552156,
+      "forward_real": 0.9420788047393939,
+      "fraction": 0.375,
+      "graph": "grid2x3",
+      "reverse_imag": -0.00016559456880552162,
+      "reverse_real": 0.9420788047393941,
+      "seconds": 0.1875,
+      "source_site": 5,
+      "volume": 6,
+      "witness": 1.8841576385862904
+    }
+  ],
+  "verdict": "PASS"
+}
