@@ -11091,6 +11091,121 @@
       "task_id": "T-054",
       "title": "Conditional thermodynamic OS/KMS positivity passage contract",
       "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "axis": "finite grid versus uniform estimate",
+          "check": "Only volumes 2,4,6, two steps, three beta values and two source supports are sampled; no volume/cutoff/beta supremum is taken.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "roundoff versus exact sign",
+          "check": "The largest positive residual is about 2.3e-14 while the acceptance threshold is 1e-9; this is recorded as tolerance-level roundoff, not exact nonpositivity.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "split versus unsplit dynamics",
+          "check": "Every tested history uses exact onsite-plus-bond split products in both orders; no unsplit Hamiltonian flow is substituted.",
+          "disposition": "DISMISSED for this finite construction; analytic split recurrence remains open"
+        },
+        {
+          "axis": "source locality",
+          "check": "Initial outside-support commutators are checked at every beta and volume, but locality of the infinite-volume algebra is not inferred.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "Lean promotion",
+          "check": "R354 proves only rational parameter-grid and scope fixtures; Python carries the matrix evidence.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "QFT promotion",
+          "check": "No word-wise exhaustion convergence, common carrier, action intertwining, OS/KMS limit, GNS gap or continuum statement is present.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "TECT transfer",
+          "check": "No heat_root_incidence or canonical A1/R-192 production owner is supplied.",
+          "disposition": "UPHELD"
+        }
+      ],
+      "boundary": "T0 claim-nonbearing finite actual-Q3 split-step stress. It does not prove a common-core recurrence, volume/cutoff/beta uniformity, an exhaustion Cauchy estimate, a thermodynamic dynamics, a common alpha, Hamiltonian-to-OS identification, KMS/GNS gap, continuum, C6, Sector A, Pre-A or a Clay result.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "The parameter stress removes beta and source-support variation as immediate finite-grid counterexamples to the declared split-step recurrence, while preserving exact split-product construction and independent agreement. The residuals at the largest positive scale are numerical roundoff, not an analytic sign margin. The pass is therefore a finite input-strengthening checkpoint and cannot be promoted to a uniform recurrence theorem.",
+      "evidence_refs": [
+        "strategy/pre-a-cp1-st8-q3lock-split-step-parameter-stress-manifest.json#finite_fixture",
+        "strategy/pre-a-cp1-st8-q3lock-split-step-parameter-stress-certificate-260827.md#Result",
+        "codes/foundations/pre_a_cp1_st8_q3lock_split_step_parameter_stress.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_split_step_parameter_stress_independent.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_split_step_parameter_stress_verify.py#run",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-27-primary-pre_a_cp1_st8_q3lock_split_step_parameter_stress/primary.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-27-independent-pre_a_cp1_st8_q3lock_split_step_parameter_stress/independent.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-27-integrated-pre_a_cp1_st8_q3lock_split_step_parameter_stress/integrated.json#lean",
+        "verification/lean/Tect/R354.lean#parameter_grid_fixture",
+        "verification/lean/registry.json#R354"
+      ],
+      "finding": "The primary lane passes 487/487 assertions and the independent lane passes 470/470. Both cover 144 parameter/context histories, 1728 length rows and 1152 recurrence rows. The integrated verifier passes 444/444 with Lean R354 PASS. No recurrence residual exceeds the 1e-9 threshold. The primary maximum residual is 2.3028728945237117e-14, the minimum is -0.07221929223985579, and the beta-wise maxima are 2.1538594548489452e-14 (1/2), 2.1890950777805194e-14 (1), and 2.3028728945237117e-14 (2).",
+      "formal_integration": {
+        "no_new_negative": true,
+        "no_new_result": true,
+        "no_pdf": true,
+        "no_tier_change": true
+      },
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": []
+      },
+      "gate_ids": [
+        "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+        "PA-CP1-ST8-Q3LOCK-ENERGY-WEIGHTED-COMMUTATOR-GEVREY-LR-CLOSURE",
+        "PA-CP1-ST8-Q3LOCK-FIRST-PASSAGE-BACKBONE-REAL-TIME-PRODUCT-AND-ENERGY-TAIL-CLOSURE",
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001195",
+      "method": [
+        "Rebuild the canonical quartic Q3 Hamiltonian independently on the target edge, square face, and 2x3 rectangular grid with oscillator truncation 3.",
+        "Evaluate source words exp(i q_0/3) and exp(i(q_0+q_1)/3) at beta in {1/2,1,2}.",
+        "Construct exact matrix exponentials for all onsite and lexicographic bond terms in both declared product orders, for both real-time signs and both A/A* contexts.",
+        "Measure the two-sided Gibbs q/p commutator seminorm for two split steps and test the registered local recurrence at every site and step.",
+        "Reconstruct the same grid in a separate implementation and compile the rational fixture cross-check in Lean R354."
+      ],
+      "next_action": "Use the finite stress only as input and attack a source-, volume-, cutoff- and beta-uniform common-core recurrence; if that estimate fails, append its exact route-local obstruction before common-alpha or GNS-gap promotion.",
+      "provenance": "contemporaneous",
+      "qft_interface": {
+        "closed": "A reproducible finite split-step recurrence stress survives the declared beta, source-support, volume/shape, sign, adjoint and order grid, with independent reconstruction and Lean fixture support.",
+        "open": "An analytic common-core recurrence, volume/cutoff/beta-uniform bound, boundary commutator decay, exhaustion-compatible common word map, Hamiltonian-to-OS action intertwining, common alpha, KMS/GNS identification, phasewise gap and continuum remain open.",
+        "tect_boundary": "Auxiliary C6/Q3 finite evidence only; no heat_root_incidence, canonical A1/R-192 production owner, physical-empty reference or Sector-A closure is supplied."
+      },
+      "question": "Do the actual finite-Q3 split-step four-context recurrence rows remain nonpositive when source support, beta, and finite volume/shape are varied?",
+      "recorded_at": "2026-08-29T05:20:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001156",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001151",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001194",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001193",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-08-27",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Actual finite-Q3 split-step recurrence parameter stress",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",
