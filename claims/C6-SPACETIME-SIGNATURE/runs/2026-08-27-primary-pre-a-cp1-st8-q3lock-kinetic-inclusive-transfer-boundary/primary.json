@@ -1,0 +1,646 @@
+{
+  "assertion_count": 50,
+  "assertions": [
+    {
+      "actual": "['EXP-001193', 'T-054']",
+      "expected": "EXP-001193/T-054",
+      "group": "provenance",
+      "name": "identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "['EXP-001193', 'EXP-001192', 'EXP-001191', 'EXP-001190', 'EXP-001189', 'EXP-001188']",
+      "expected": "ends at EXP-001188",
+      "group": "provenance",
+      "name": "fixture lineage",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "group": "scope",
+      "name": "claim nonbearing",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'generic_form_order_shortcut_refuted': True, 'finite_q3_kinetic_diagnostic_closed': True, 'finite_q3_relative_quotient_rows_closed': True, 'finite_q3_trace_rows_closed': True, 'uniform_kinetic_inclusive_operator_order_closed': False, 'uniform_gibbs_potential_moment_closed': False, 'unbounded_common_core_closed': False, 'modular_domain_transfer_closed': False, 'direct_d_delta_d_cauchy_closed': False, 'all_shape_exhaustion_closed': False, 'common_alpha_closed': False, 'hamiltonian_os_identification_closed': False, 'kms_gns_gap_closed': False, 'continuum_closed': False, 'c6_closed': False, 'sector_a_closed': False, 'pre_a_closed': False, 'no_new_negative_result': True, 'no_tier_change': True, 'no_pdf': True}",
+      "expected": "finite diagnostic; analytic/QFT gates open",
+      "group": "scope",
+      "name": "scope firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.0, 1.0]",
+      "expected": ">=0",
+      "group": "generic boundary",
+      "name": "generic A positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.0, 5.0]",
+      "expected": ">=0",
+      "group": "generic boundary",
+      "name": "generic B positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "[[1.0, -2.0], [-2.0, 5.0]]",
+      "expected": "A+B",
+      "group": "generic boundary",
+      "name": "generic K decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.17157287525380993, 5.82842712474619]",
+      "expected": ">0",
+      "group": "generic boundary",
+      "name": "generic K positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "[[169.0, -408.0], [-408.0, 984.0]]",
+      "expected": "[[169.0, -408.0], [-408.0, 984.0]]",
+      "group": "generic boundary",
+      "name": "generic fourth arithmetic",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": "0",
+      "group": "generic boundary",
+      "name": "rank-one B determinant",
+      "status": "PASS"
+    },
+    {
+      "actual": "-168.00000000000952",
+      "expected": "< -1",
+      "group": "generic boundary",
+      "name": "fourth determinant negative",
+      "status": "PASS"
+    },
+    {
+      "actual": "[-0.14568844308544726, 1153.1456884430854]",
+      "expected": "not positive semidefinite",
+      "group": "generic boundary",
+      "name": "fourth order shortcut fails",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.576764430615741",
+      "expected": ">0",
+      "group": "finite kinetic",
+      "name": "V=2 full floor",
+      "status": "PASS"
+    },
+    {
+      "actual": "4.859077918599313",
+      "expected": ">=0 within finite tolerance",
+      "group": "finite kinetic",
+      "name": "V=2 direct fourth defect",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'volume': 2, 'oscillator_dimension': 3, 'beta': 0.125, 'full_shifted_floor': 1.576764430615741, 'min_fourth_defect': 4.859077918599313, 'kinetic_relative_quotient': 0.24309945427679083, 'potential_fourth_moment': 3.491078859406437, 'full_fourth_moment': 112.96320576139173, 'trace_slack': 109.47212690198529}",
+      "expected": "finite",
+      "group": "finite kinetic",
+      "name": "V=2 beta=0.125 finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "109.47212690198529",
+      "expected": "finite tolerance",
+      "group": "finite Gibbs",
+      "name": "V=2 beta=0.125 trace diagnostic",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'volume': 2, 'oscillator_dimension': 3, 'beta': 0.25, 'full_shifted_floor': 1.576764430615741, 'min_fourth_defect': 4.859077918599313, 'kinetic_relative_quotient': 0.24309945427679083, 'potential_fourth_moment': 3.4330426100292564, 'full_fourth_moment': 101.82829047140262, 'trace_slack': 98.39524786137336}",
+      "expected": "finite",
+      "group": "finite kinetic",
+      "name": "V=2 beta=0.25 finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "98.39524786137336",
+      "expected": "finite tolerance",
+      "group": "finite Gibbs",
+      "name": "V=2 beta=0.25 trace diagnostic",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'volume': 2, 'oscillator_dimension': 3, 'beta': 0.5, 'full_shifted_floor': 1.576764430615741, 'min_fourth_defect': 4.859077918599313, 'kinetic_relative_quotient': 0.24309945427679083, 'potential_fourth_moment': 3.2564558402895716, 'full_fourth_moment': 81.34171070653008, 'trace_slack': 78.0852548662405}",
+      "expected": "finite",
+      "group": "finite kinetic",
+      "name": "V=2 beta=0.5 finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "78.0852548662405",
+      "expected": "finite tolerance",
+      "group": "finite Gibbs",
+      "name": "V=2 beta=0.5 trace diagnostic",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'volume': 2, 'oscillator_dimension': 3, 'beta': 1.0, 'full_shifted_floor': 1.576764430615741, 'min_fourth_defect': 4.859077918599313, 'kinetic_relative_quotient': 0.24309945427679083, 'potential_fourth_moment': 2.7598255992272716, 'full_fourth_moment': 49.629550730029024, 'trace_slack': 46.869725130801754}",
+      "expected": "finite",
+      "group": "finite kinetic",
+      "name": "V=2 beta=1.0 finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "46.869725130801754",
+      "expected": "finite tolerance",
+      "group": "finite Gibbs",
+      "name": "V=2 beta=1.0 trace diagnostic",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'volume': 2, 'oscillator_dimension': 3, 'beta': 2.0, 'full_shifted_floor': 1.576764430615741, 'min_fourth_defect': 4.859077918599313, 'kinetic_relative_quotient': 0.24309945427679083, 'potential_fourth_moment': 1.8783541741538428, 'full_fourth_moment': 19.598738671498104, 'trace_slack': 17.720384497344263}",
+      "expected": "finite",
+      "group": "finite kinetic",
+      "name": "V=2 beta=2.0 finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "17.720384497344263",
+      "expected": "finite tolerance",
+      "group": "finite Gibbs",
+      "name": "V=2 beta=2.0 trace diagnostic",
+      "status": "PASS"
+    },
+    {
+      "actual": "2.5021635521438785",
+      "expected": ">0",
+      "group": "finite kinetic",
+      "name": "V=4 full floor",
+      "status": "PASS"
+    },
+    {
+      "actual": "38.08487570500183",
+      "expected": ">=0 within finite tolerance",
+      "group": "finite kinetic",
+      "name": "V=4 direct fourth defect",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'volume': 4, 'oscillator_dimension': 3, 'beta': 0.125, 'full_shifted_floor': 2.5021635521438785, 'min_fourth_defect': 38.08487570500183, 'kinetic_relative_quotient': 0.031447684493560515, 'potential_fourth_moment': 3.6219955302776787, 'full_fourth_moment': 2066.1832202572123, 'trace_slack': 2062.5612247269346}",
+      "expected": "finite",
+      "group": "finite kinetic",
+      "name": "V=4 beta=0.125 finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "2062.5612247269346",
+      "expected": "finite tolerance",
+      "group": "finite Gibbs",
+      "name": "V=4 beta=0.125 trace diagnostic",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'volume': 4, 'oscillator_dimension': 3, 'beta': 0.25, 'full_shifted_floor': 2.5021635521438785, 'min_fourth_defect': 38.08487570500183, 'kinetic_relative_quotient': 0.031447684493560515, 'potential_fourth_moment': 3.6680136087680353, 'full_fourth_moment': 1679.6657201687008, 'trace_slack': 1675.9977065599328}",
+      "expected": "finite",
+      "group": "finite kinetic",
+      "name": "V=4 beta=0.25 finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "1675.9977065599328",
+      "expected": "finite tolerance",
+      "group": "finite Gibbs",
+      "name": "V=4 beta=0.25 trace diagnostic",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'volume': 4, 'oscillator_dimension': 3, 'beta': 0.5, 'full_shifted_floor': 2.5021635521438785, 'min_fourth_defect': 38.08487570500183, 'kinetic_relative_quotient': 0.031447684493560515, 'potential_fourth_moment': 3.6019211795290067, 'full_fourth_moment': 1129.4274783811695, 'trace_slack': 1125.8255572016405}",
+      "expected": "finite",
+      "group": "finite kinetic",
+      "name": "V=4 beta=0.5 finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "1125.8255572016405",
+      "expected": "finite tolerance",
+      "group": "finite Gibbs",
+      "name": "V=4 beta=0.5 trace diagnostic",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'volume': 4, 'oscillator_dimension': 3, 'beta': 1.0, 'full_shifted_floor': 2.5021635521438785, 'min_fourth_defect': 38.08487570500183, 'kinetic_relative_quotient': 0.031447684493560515, 'potential_fourth_moment': 2.9272611604150436, 'full_fourth_moment': 496.4271049456461, 'trace_slack': 493.499843785231}",
+      "expected": "finite",
+      "group": "finite kinetic",
+      "name": "V=4 beta=1.0 finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "493.499843785231",
+      "expected": "finite tolerance",
+      "group": "finite Gibbs",
+      "name": "V=4 beta=1.0 trace diagnostic",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'volume': 4, 'oscillator_dimension': 3, 'beta': 2.0, 'full_shifted_floor': 2.5021635521438785, 'min_fourth_defect': 38.08487570500183, 'kinetic_relative_quotient': 0.031447684493560515, 'potential_fourth_moment': 1.5415084112101733, 'full_fourth_moment': 104.65692065792695, 'trace_slack': 103.11541224671677}",
+      "expected": "finite",
+      "group": "finite kinetic",
+      "name": "V=4 beta=2.0 finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "103.11541224671677",
+      "expected": "finite tolerance",
+      "group": "finite Gibbs",
+      "name": "V=4 beta=2.0 trace diagnostic",
+      "status": "PASS"
+    },
+    {
+      "actual": "3.724999999999999",
+      "expected": ">0",
+      "group": "finite kinetic",
+      "name": "V=6 full floor",
+      "status": "PASS"
+    },
+    {
+      "actual": "188.5990825617291",
+      "expected": ">=0 within finite tolerance",
+      "group": "finite kinetic",
+      "name": "V=6 direct fourth defect",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'volume': 6, 'oscillator_dimension': 2, 'beta': 0.125, 'full_shifted_floor': 3.724999999999999, 'min_fourth_defect': 188.5990825617291, 'kinetic_relative_quotient': 0.020432275035572316, 'potential_fourth_moment': 3.93388657889661, 'full_fourth_moment': 1374.21808912798, 'trace_slack': 1370.2842025490834}",
+      "expected": "finite",
+      "group": "finite kinetic",
+      "name": "V=6 beta=0.125 finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "1370.2842025490834",
+      "expected": "finite tolerance",
+      "group": "finite Gibbs",
+      "name": "V=6 beta=0.125 trace diagnostic",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'volume': 6, 'oscillator_dimension': 2, 'beta': 0.25, 'full_shifted_floor': 3.724999999999999, 'min_fourth_defect': 188.5990825617291, 'kinetic_relative_quotient': 0.020432275035572316, 'potential_fourth_moment': 3.933886578896609, 'full_fourth_moment': 1294.987363677575, 'trace_slack': 1291.0534770986785}",
+      "expected": "finite",
+      "group": "finite kinetic",
+      "name": "V=6 beta=0.25 finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "1291.0534770986785",
+      "expected": "finite tolerance",
+      "group": "finite Gibbs",
+      "name": "V=6 beta=0.25 trace diagnostic",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'volume': 6, 'oscillator_dimension': 2, 'beta': 0.5, 'full_shifted_floor': 3.724999999999999, 'min_fourth_defect': 188.5990825617291, 'kinetic_relative_quotient': 0.020432275035572316, 'potential_fourth_moment': 3.933886578896609, 'full_fourth_moment': 1146.5356023212494, 'trace_slack': 1142.6017157423528}",
+      "expected": "finite",
+      "group": "finite kinetic",
+      "name": "V=6 beta=0.5 finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "1142.6017157423528",
+      "expected": "finite tolerance",
+      "group": "finite Gibbs",
+      "name": "V=6 beta=0.5 trace diagnostic",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'volume': 6, 'oscillator_dimension': 2, 'beta': 1.0, 'full_shifted_floor': 3.724999999999999, 'min_fourth_defect': 188.5990825617291, 'kinetic_relative_quotient': 0.020432275035572316, 'potential_fourth_moment': 3.93388657889661, 'full_fourth_moment': 876.9351173992314, 'trace_slack': 873.0012308203349}",
+      "expected": "finite",
+      "group": "finite kinetic",
+      "name": "V=6 beta=1.0 finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "873.0012308203349",
+      "expected": "finite tolerance",
+      "group": "finite Gibbs",
+      "name": "V=6 beta=1.0 trace diagnostic",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'volume': 6, 'oscillator_dimension': 2, 'beta': 2.0, 'full_shifted_floor': 3.724999999999999, 'min_fourth_defect': 188.5990825617291, 'kinetic_relative_quotient': 0.020432275035572316, 'potential_fourth_moment': 3.9338865788966113, 'full_fourth_moment': 454.7380314495236, 'trace_slack': 450.804144870627}",
+      "expected": "finite",
+      "group": "finite kinetic",
+      "name": "V=6 beta=2.0 finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "450.804144870627",
+      "expected": "finite tolerance",
+      "group": "finite Gibbs",
+      "name": "V=6 beta=2.0 trace diagnostic",
+      "status": "PASS"
+    },
+    {
+      "actual": "15",
+      "expected": "15",
+      "group": "coverage",
+      "name": "row coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": "3",
+      "expected": "3",
+      "group": "coverage",
+      "name": "summary coverage",
+      "status": "PASS"
+    }
+  ],
+  "audit_id": "PA-CP1-ST8-Q3LOCK-KINETIC-INCLUSIVE-TRANSFER-BOUNDARY",
+  "boundary": {
+    "all_shape_exhaustion_closed": false,
+    "c6_closed": false,
+    "common_alpha_closed": false,
+    "continuum_closed": false,
+    "direct_d_delta_d_cauchy_closed": false,
+    "finite_q3_kinetic_diagnostic_closed": true,
+    "finite_q3_relative_quotient_rows_closed": true,
+    "finite_q3_trace_rows_closed": true,
+    "generic_form_order_shortcut_refuted": true,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "modular_domain_transfer_closed": false,
+    "no_new_negative_result": true,
+    "no_pdf": true,
+    "no_tier_change": true,
+    "pre_a_closed": false,
+    "sector_a_closed": false,
+    "unbounded_common_core_closed": false,
+    "uniform_gibbs_potential_moment_closed": false,
+    "uniform_kinetic_inclusive_operator_order_closed": false
+  },
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "derived": {
+    "common_alpha_closed": false,
+    "finite_q3_kinetic_diagnostic_closed": true,
+    "finite_q3_relative_quotient_rows_closed": true,
+    "finite_q3_trace_rows_closed": true,
+    "generic_A": [
+      [
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0
+      ]
+    ],
+    "generic_B": [
+      [
+        1.0,
+        -2.0
+      ],
+      [
+        -2.0,
+        4.0
+      ]
+    ],
+    "generic_K": [
+      [
+        1.0,
+        -2.0
+      ],
+      [
+        -2.0,
+        5.0
+      ]
+    ],
+    "generic_form_order_shortcut_refuted": true,
+    "generic_fourth_difference": [
+      [
+        169.0,
+        -408.0
+      ],
+      [
+        -408.0,
+        984.0
+      ]
+    ],
+    "generic_fourth_difference_determinant": -168.00000000000952,
+    "generic_fourth_difference_min_eigenvalue": -0.14568844308544726,
+    "qft_promoted": false,
+    "rows": [
+      {
+        "beta": 0.125,
+        "full_fourth_moment": 112.96320576139173,
+        "full_shifted_floor": 1.576764430615741,
+        "kinetic_relative_quotient": 0.24309945427679083,
+        "min_fourth_defect": 4.859077918599313,
+        "oscillator_dimension": 3,
+        "potential_fourth_moment": 3.491078859406437,
+        "trace_slack": 109.47212690198529,
+        "volume": 2
+      },
+      {
+        "beta": 0.25,
+        "full_fourth_moment": 101.82829047140262,
+        "full_shifted_floor": 1.576764430615741,
+        "kinetic_relative_quotient": 0.24309945427679083,
+        "min_fourth_defect": 4.859077918599313,
+        "oscillator_dimension": 3,
+        "potential_fourth_moment": 3.4330426100292564,
+        "trace_slack": 98.39524786137336,
+        "volume": 2
+      },
+      {
+        "beta": 0.5,
+        "full_fourth_moment": 81.34171070653008,
+        "full_shifted_floor": 1.576764430615741,
+        "kinetic_relative_quotient": 0.24309945427679083,
+        "min_fourth_defect": 4.859077918599313,
+        "oscillator_dimension": 3,
+        "potential_fourth_moment": 3.2564558402895716,
+        "trace_slack": 78.0852548662405,
+        "volume": 2
+      },
+      {
+        "beta": 1.0,
+        "full_fourth_moment": 49.629550730029024,
+        "full_shifted_floor": 1.576764430615741,
+        "kinetic_relative_quotient": 0.24309945427679083,
+        "min_fourth_defect": 4.859077918599313,
+        "oscillator_dimension": 3,
+        "potential_fourth_moment": 2.7598255992272716,
+        "trace_slack": 46.869725130801754,
+        "volume": 2
+      },
+      {
+        "beta": 2.0,
+        "full_fourth_moment": 19.598738671498104,
+        "full_shifted_floor": 1.576764430615741,
+        "kinetic_relative_quotient": 0.24309945427679083,
+        "min_fourth_defect": 4.859077918599313,
+        "oscillator_dimension": 3,
+        "potential_fourth_moment": 1.8783541741538428,
+        "trace_slack": 17.720384497344263,
+        "volume": 2
+      },
+      {
+        "beta": 0.125,
+        "full_fourth_moment": 2066.1832202572123,
+        "full_shifted_floor": 2.5021635521438785,
+        "kinetic_relative_quotient": 0.031447684493560515,
+        "min_fourth_defect": 38.08487570500183,
+        "oscillator_dimension": 3,
+        "potential_fourth_moment": 3.6219955302776787,
+        "trace_slack": 2062.5612247269346,
+        "volume": 4
+      },
+      {
+        "beta": 0.25,
+        "full_fourth_moment": 1679.6657201687008,
+        "full_shifted_floor": 2.5021635521438785,
+        "kinetic_relative_quotient": 0.031447684493560515,
+        "min_fourth_defect": 38.08487570500183,
+        "oscillator_dimension": 3,
+        "potential_fourth_moment": 3.6680136087680353,
+        "trace_slack": 1675.9977065599328,
+        "volume": 4
+      },
+      {
+        "beta": 0.5,
+        "full_fourth_moment": 1129.4274783811695,
+        "full_shifted_floor": 2.5021635521438785,
+        "kinetic_relative_quotient": 0.031447684493560515,
+        "min_fourth_defect": 38.08487570500183,
+        "oscillator_dimension": 3,
+        "potential_fourth_moment": 3.6019211795290067,
+        "trace_slack": 1125.8255572016405,
+        "volume": 4
+      },
+      {
+        "beta": 1.0,
+        "full_fourth_moment": 496.4271049456461,
+        "full_shifted_floor": 2.5021635521438785,
+        "kinetic_relative_quotient": 0.031447684493560515,
+        "min_fourth_defect": 38.08487570500183,
+        "oscillator_dimension": 3,
+        "potential_fourth_moment": 2.9272611604150436,
+        "trace_slack": 493.499843785231,
+        "volume": 4
+      },
+      {
+        "beta": 2.0,
+        "full_fourth_moment": 104.65692065792695,
+        "full_shifted_floor": 2.5021635521438785,
+        "kinetic_relative_quotient": 0.031447684493560515,
+        "min_fourth_defect": 38.08487570500183,
+        "oscillator_dimension": 3,
+        "potential_fourth_moment": 1.5415084112101733,
+        "trace_slack": 103.11541224671677,
+        "volume": 4
+      },
+      {
+        "beta": 0.125,
+        "full_fourth_moment": 1374.21808912798,
+        "full_shifted_floor": 3.724999999999999,
+        "kinetic_relative_quotient": 0.020432275035572316,
+        "min_fourth_defect": 188.5990825617291,
+        "oscillator_dimension": 2,
+        "potential_fourth_moment": 3.93388657889661,
+        "trace_slack": 1370.2842025490834,
+        "volume": 6
+      },
+      {
+        "beta": 0.25,
+        "full_fourth_moment": 1294.987363677575,
+        "full_shifted_floor": 3.724999999999999,
+        "kinetic_relative_quotient": 0.020432275035572316,
+        "min_fourth_defect": 188.5990825617291,
+        "oscillator_dimension": 2,
+        "potential_fourth_moment": 3.933886578896609,
+        "trace_slack": 1291.0534770986785,
+        "volume": 6
+      },
+      {
+        "beta": 0.5,
+        "full_fourth_moment": 1146.5356023212494,
+        "full_shifted_floor": 3.724999999999999,
+        "kinetic_relative_quotient": 0.020432275035572316,
+        "min_fourth_defect": 188.5990825617291,
+        "oscillator_dimension": 2,
+        "potential_fourth_moment": 3.933886578896609,
+        "trace_slack": 1142.6017157423528,
+        "volume": 6
+      },
+      {
+        "beta": 1.0,
+        "full_fourth_moment": 876.9351173992314,
+        "full_shifted_floor": 3.724999999999999,
+        "kinetic_relative_quotient": 0.020432275035572316,
+        "min_fourth_defect": 188.5990825617291,
+        "oscillator_dimension": 2,
+        "potential_fourth_moment": 3.93388657889661,
+        "trace_slack": 873.0012308203349,
+        "volume": 6
+      },
+      {
+        "beta": 2.0,
+        "full_fourth_moment": 454.7380314495236,
+        "full_shifted_floor": 3.724999999999999,
+        "kinetic_relative_quotient": 0.020432275035572316,
+        "min_fourth_defect": 188.5990825617291,
+        "oscillator_dimension": 2,
+        "potential_fourth_moment": 3.9338865788966113,
+        "trace_slack": 450.804144870627,
+        "volume": 6
+      }
+    ],
+    "shift_per_site": 0.4166666666666667,
+    "summary_rows": [
+      {
+        "max_full_fourth_moment": 112.96320576139173,
+        "max_kinetic_relative_quotient": 0.24309945427679083,
+        "max_potential_fourth_moment": 3.491078859406437,
+        "min_fourth_defect": 4.859077918599313,
+        "min_trace_slack": 17.720384497344263,
+        "oscillator_dimension": 3,
+        "volume": 2
+      },
+      {
+        "max_full_fourth_moment": 2066.1832202572123,
+        "max_kinetic_relative_quotient": 0.031447684493560515,
+        "max_potential_fourth_moment": 3.6680136087680353,
+        "min_fourth_defect": 38.08487570500183,
+        "min_trace_slack": 103.11541224671677,
+        "oscillator_dimension": 3,
+        "volume": 4
+      },
+      {
+        "max_full_fourth_moment": 1374.21808912798,
+        "max_kinetic_relative_quotient": 0.020432275035572316,
+        "max_potential_fourth_moment": 3.9338865788966113,
+        "min_fourth_defect": 188.5990825617291,
+        "min_trace_slack": 450.804144870627,
+        "oscillator_dimension": 2,
+        "volume": 6
+      }
+    ],
+    "unbounded_common_core_closed": false,
+    "uniform_gibbs_potential_moment_closed": false,
+    "uniform_kinetic_inclusive_operator_order_closed": false
+  },
+  "exploration_id": "EXP-001193",
+  "passed": 50,
+  "provenance": {
+    "fixture_lineage": [
+      "EXP-001193",
+      "EXP-001192",
+      "EXP-001191",
+      "EXP-001190",
+      "EXP-001189",
+      "EXP-001188"
+    ],
+    "script": "codes/foundations/pre_a_cp1_st8_q3lock_kinetic_inclusive_transfer_boundary.py"
+  },
+  "run_kind": "primary",
+  "schema": "tect/foundation-audit/1.0",
+  "task_id": "T-054",
+  "verdict": "PASS"
+}

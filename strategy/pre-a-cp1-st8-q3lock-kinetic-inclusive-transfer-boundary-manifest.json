@@ -1,0 +1,72 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "exploration_id": "EXP-001193",
+  "prior_exploration_id": "EXP-001192",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "claim_bearing": false,
+  "tier": "T0",
+  "title": "Kinetic-inclusive Q3 transfer diagnostic and fourth-power order boundary",
+  "question": "Can the commuting configuration-order bound be transferred to the kinetic-inclusive Q3 Hamiltonian by a generic fourth-power order shortcut, and what finite Q3 evidence remains after that shortcut is tested?",
+  "parent_explorations": ["EXP-001192", "EXP-001191", "EXP-001190"],
+  "fixture_source": "strategy/pre-a-cp1-st8-q3lock-source-local-tail-configuration-order-manifest.json",
+  "finite_test": {
+    "generic_A": [[0, 0], [0, 1]],
+    "generic_B": [[1, -2], [-2, 4]],
+    "generic_K": [[1, -2], [-2, 5]],
+    "generic_fourth_difference": [[169, -408], [-408, 984]],
+    "description": "The exact 2x2 witness has A>=0, B>=0, K=A+B, but det(K^4-A^4)=-168, so form order alone cannot imply fourth-power order."
+  },
+  "mathematical_interface": {
+    "configuration_input": "EXP-001192 supplies T^4 <= C K_pot^4 in the commuting q_0,q_1 algebra and finite positive-state trace transfer.",
+    "kinetic_candidate": "The full shifted Q3 operator K_full=I+H+|Lambda|d is form-dominant over the local K_pot, but does not commute with K_pot because of p^2.",
+    "generic_boundary": "A<=A+B with A,B>=0 does not by itself imply A^4<=(A+B)^4; the exact 2x2 integer fixture supplies a determinant obstruction.",
+    "finite_q3_diagnostic": "For the inherited finite Q3 volumes, compute K_full^4-K_pot^4, the generalized quotient ||K_full^-2 K_pot^4 K_full^-2||, and beta-weighted trace slack; these rows are diagnostics rather than a uniform theorem.",
+    "qft_role": "This identifies the precise additional QFT input: an analytic common-core commutator/graph-norm estimate (or a different monotone functional-calculus route) is required before the potential tail can enter OS/KMS/GNS history."
+  },
+  "scope": {
+    "generic_form_order_shortcut_refuted": true,
+    "finite_q3_kinetic_diagnostic_closed": true,
+    "finite_q3_relative_quotient_rows_closed": true,
+    "finite_q3_trace_rows_closed": true,
+    "uniform_kinetic_inclusive_operator_order_closed": false,
+    "uniform_gibbs_potential_moment_closed": false,
+    "unbounded_common_core_closed": false,
+    "modular_domain_transfer_closed": false,
+    "direct_d_delta_d_cauchy_closed": false,
+    "all_shape_exhaustion_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R352.lean",
+    "command": "lake env lean Tect/R352.lean",
+    "theorem_markers": ["generic_form_order_shortcut_counterexample", "fourth_difference_determinant_negative", "rank_one_b_fixture"],
+    "role": "R352 checks the exact integer determinant arithmetic behind the generic shortcut boundary; positive-semidefinite matrix checks and finite Q3 diagnostics remain Python evidence, and no QFT limit is formalized."
+  },
+  "adversarial_review": [
+    {"axis": "scope of counterexample", "check": "The 2x2 witness refutes only the generic implication from form order to fourth-power order; it is not presented as a Q3 or physical no-go.", "disposition": "UPHELD"},
+    {"axis": "positivity", "check": "A and B are checked positive semidefinite, K=A+B is positive definite, and the negative determinant of K^4-A^4 is the exact obstruction.", "disposition": "UPHELD"},
+    {"axis": "noncommutation", "check": "The obstruction is aligned with the Q3 issue that p^2 does not commute with q-potential multiplication; no commutation is silently inserted.", "disposition": "UPHELD"},
+    {"axis": "finite Q3 interpretation", "check": "Finite Q3 rows report direct defects, relative quotients and Gibbs traces without promoting their finite extrema to uniform constants.", "disposition": "UPHELD-OPEN"},
+    {"axis": "quotient meaning", "check": "K_full^-2 K_pot^4 K_full^-2 is used only as a finite generalized quotient diagnostic; it is not treated as an analytic common-core bound.", "disposition": "UPHELD-OPEN"},
+    {"axis": "Lean boundary", "check": "R352 certifies determinant and rank-one arithmetic only; Python supplies PSD spectra and Q3 matrices, while domains and limits remain open.", "disposition": "UPHELD-OPEN"},
+    {"axis": "QFT promotion", "check": "The diagnostic does not close kinetic transfer, Gibbs uniformity, direct history, common alpha, OS/KMS/GNS identification, gap, continuum, C6, Sector A or Pre-A.", "disposition": "UPHELD-OPEN"}
+  ],
+  "qft_interface": {
+    "closed": "The generic fourth-power shortcut is exactly invalidated, and the inherited finite Q3 kinetic-inclusive defects/quotients/traces are measured as bounded diagnostics.",
+    "open": "An analytic Q3 common-core graph-norm or commutator estimate, uniform Gibbs moment, modular transfer, direct history, exhaustion, common alpha, OS/KMS/GNS identification, gap, continuum, C6, Sector A and Pre-A remain open.",
+    "tect_boundary": "Auxiliary C6/Q3 finite evidence only; no heat_root_incidence or canonical A1/R-192 production owner is supplied."
+  },
+  "next_action": "Attempt a source-local Q3 commutator/graph-norm estimate for K_pot relative to K_full on an explicit polynomial core; if the estimate cannot be made volume- and cutoff-uniform, record the exact obstruction before history promotion.",
+  "boundary": "T0 claim-nonbearing kinetic-transfer diagnostic and generic fourth-power order boundary. It is not a Q3 operator theorem, a thermodynamic QFT dynamics, a common-alpha theorem, a mass-gap proof, a continuum result, C6, Sector A or Pre-A closure.",
+  "no_overclaim": "Only the generic shortcut boundary and finite Q3 kinetic diagnostics are promoted. No uniform kinetic operator order, Gibbs moment, common core, modular transfer, direct Cauchy, exhaustion, common alpha, Hamiltonian-OS/KMS/GNS identification, gap, continuum, C6, Sector A or Pre-A is claimed."
+}
