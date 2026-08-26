@@ -1,0 +1,104 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-FINITE-COMMON-WORD-CAUCHY-v0",
+  "title": "Finite Q3 common-word OS Gram/KMS context Cauchy stress",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001174",
+  "claim_bearing": false,
+  "parent_explorations": ["EXP-001173", "EXP-001169", "EXP-001065"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE",
+    "PA-CP1-ST8-Q3LOCK-FIXED-BETA-CANONICAL-OS-MIXTURE-COMMON-NORMAL-WSTAR-KMS-ENVELOPE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "question": "For actual finite d=3 Q3 Hamiltonians on nested path volumes and registered shape controls, do identical local half-period OS words have a source-fixed, volume-Cauchy Gram/KMS envelope, or does finite context dependence remain visible?",
+  "finite_fixture": {
+    "graphs": {
+      "path2": {"vertices": 2, "edges": [[0, 1]], "source_sites": [0], "nested_order": 0},
+      "path3": {"vertices": 3, "edges": [[0, 1], [1, 2]], "source_sites": [0], "nested_order": 1},
+      "path4": {"vertices": 4, "edges": [[0, 1], [1, 2], [2, 3]], "source_sites": [0], "nested_order": 2},
+      "path5": {"vertices": 5, "edges": [[0, 1], [1, 2], [2, 3], [3, 4]], "source_sites": [0], "nested_order": 3},
+      "bond2": {"vertices": 2, "edges": [[0, 1]], "source_sites": [0], "nested_order": null},
+      "square4": {"vertices": 4, "edges": [[0, 1], [0, 2], [1, 3], [2, 3]], "source_sites": [0], "nested_order": null},
+      "grid2x3": {"vertices": 6, "edges": [[0, 1], [1, 2], [3, 4], [4, 5], [0, 3], [1, 4], [2, 5]], "source_sites": [0], "nested_order": null}
+    },
+    "nested_graphs": ["path2", "path3", "path4", "path5"],
+    "oscillator_dimension": 3,
+    "beta_values": [0.25, 0.5],
+    "euclidean_time_fractions": [0.125, 0.25],
+    "cyclicity_fractions": [0.125, 0.25, 0.375],
+    "character_amplitude": 0.25,
+    "hbar": 1.0,
+    "finite_tolerance": 1e-9,
+    "positive_tolerance": 1e-9,
+    "agreement_tolerance": 1e-7,
+    "positive_diagonal_floor": 1e-8,
+    "context_witness_floor": 1e-12
+  },
+  "model_parameters": {"chi": "1", "r": "-1", "g": "3/5", "c": "3/5", "lambda": "1/10"},
+  "model": {
+    "hamiltonian": "H=sum_x[p_x^2/(2 chi)+r q_x^2/2+g q_x^4/4]+sum_edges[c(q_x-q_y)^2/2+lambda(q_x-q_y)^2(q_x^2+q_y^2)/4]",
+    "euclidean_transfer": "T(s)=exp(-s H/hbar), period beta*hbar",
+    "positive_half_word": "F_(tau,A)=T(beta*hbar/2-tau) A T(tau), 0<=tau<=beta*hbar/2",
+    "os_gram": "G_ij=Tr(F_i^* F_j)/Tr(T(beta*hbar))",
+    "common_word_test": "Compare identical (source=0, beta, tau, observable) descriptors across nested path contexts",
+    "thermal_word": "W_AB(s)=Tr(T(beta*hbar-s) A T(s) B)/Z",
+    "observables": "A_x=exp(i a q_x/hbar), B_x=exp(i a p_x/hbar)"
+  },
+  "scope": {
+    "finite_q3_transfer_closed": true,
+    "finite_os_gram_closed": true,
+    "finite_thermal_cyclicity_closed": true,
+    "identical_local_word_descriptor_closed": true,
+    "finite_context_comparison_closed": true,
+    "source_uniform_common_word_closed": false,
+    "volume_uniform_direct_d_cauchy_closed": false,
+    "volume_uniform_os_cauchy_closed": false,
+    "exhaustion_independence_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "adversarial_review": [
+    {"axis": "Common word identity", "check": "Only the source-0 q/p character descriptors and the same beta/time grids are compared across contexts; no unproved tensor embedding is called an equality of Hamiltonians.", "disposition": "UPHELD"},
+    {"axis": "OS sign and units", "check": "Every transfer factor uses exp(-s H/hbar), period beta*hbar, and the half-period reflection convention from EXP-001173.", "disposition": "UPHELD"},
+    {"axis": "Cauchy meaning", "check": "The reported adjacent-context deltas are finite diagnostics only; a decreasing finite sequence is not promoted to a uniform thermodynamic Cauchy theorem.", "disposition": "UPHELD-OPEN"},
+    {"axis": "Boundary interaction", "check": "Nested path contexts add the edge at the far boundary, but no locality estimate is assumed to make its effect vanish at the source.", "disposition": "UPHELD-OPEN"},
+    {"axis": "Shape controls", "check": "Bond2, square4 and grid2x3 are separate finite controls and are never substituted for a path exhaustion.", "disposition": "UPHELD"},
+    {"axis": "Independent lane", "check": "The independent program reconstructs oscillator, tensor, Q3 Hamiltonian, spectral transfer, Gram, KMS and comparison values without importing the primary program.", "disposition": "UPHELD"},
+    {"axis": "Lean boundary", "check": "Lean R247 checks exact finite Gibbs normalization/commutation and conditional transfer scope; dense Q3 spectral values and context deltas remain Python evidence.", "disposition": "UPHELD"},
+    {"axis": "QFT promotion", "check": "Finite context comparisons cannot identify a common OS carrier, prove source/volume-uniform Cauchy control, establish one common alpha, a GNS gap, continuum removal, C6, Sector A or Pre-A.", "disposition": "UPHELD-OPEN"}
+  ],
+  "files": {
+    "primary": "codes/foundations/pre_a_cp1_st8_q3lock_finite_common_word_cauchy.py",
+    "independent": "codes/foundations/pre_a_cp1_st8_q3lock_finite_common_word_cauchy_independent.py",
+    "integrated": "codes/foundations/pre_a_cp1_st8_q3lock_finite_common_word_cauchy_verify.py",
+    "lean": "verification/lean/Tect/R247.lean",
+    "primary_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-primary-pre-a-cp1-st8-q3lock-finite-common-word-cauchy/primary.json",
+    "independent_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-independent-pre-a-cp1-st8-q3lock-finite-common-word-cauchy/independent.json",
+    "integrated_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-integrated-pre-a-cp1-st8-q3lock-finite-common-word-cauchy/integrated.json"
+  },
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R247.lean",
+    "command": "lake env lean Tect/R247.lean",
+    "theorem_markers": ["boltzmann_normalization", "diagonal_gibbs_commutation", "conditional_transfer_scope"],
+    "role": "R247 supplies exact rational finite Gibbs checks and a scope firewall; Python supplies the dense finite Q3 context comparisons."
+  },
+  "qft_interface": {
+    "closed": "For the declared finite contexts, the same source-0 transfer-word descriptors produce positive OS Gram matrices and finite KMS cyclicity, and their context deltas are explicitly computed.",
+    "open": "The context deltas do not constitute a source/volume-uniform Cauchy estimate or an exhaustion-independent OS state. Common-word embedding, direct D/delta-D Cauchy, common core, common alpha, Hamiltonian-to-OS identification, GNS gap, continuum and physical TECT gates remain open.",
+    "tect_boundary": "Auxiliary C6/Q3 finite evidence only; no heat_root_incidence, canonical A1/R-192 production owner, physical-empty reference, Sector-A closure or Pre-A closure is supplied."
+  },
+  "next_action": "If the finite deltas are bounded but nonzero, formulate an analytic source-to-boundary decay estimate with an explicit volume rate; if they fail to decrease or grow with context, register that as a route-local obstruction before attempting OS promotion.",
+  "boundary": "T0 claim-nonbearing finite d=3 context comparison. It is not a common OS carrier theorem, thermodynamic limit, common-alpha construction, mass-gap proof, continuum result, or QFT/Clay closure.",
+  "no_overclaim": "This package proves only finite matrix transfer-word positivity, finite cyclicity, and explicit context-delta diagnostics for the declared graphs. It does not prove a thermodynamic OS measure, Hamiltonian-to-OS identification, source/volume-uniform Cauchy convergence, a common alpha, a GNS mass gap, continuum removal, C6, Sector A, Pre-A or a Clay result."
+}

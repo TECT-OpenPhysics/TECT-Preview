@@ -1,0 +1,194 @@
+{
+  "assertion_count": 16,
+  "assertions": [
+    {
+      "actual": [
+        "EXP-001174",
+        "T-054"
+      ],
+      "expected": "EXP-001174/T-054",
+      "name": "identity",
+      "pass": true
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "claim nonbearing",
+      "pass": true
+    },
+    {
+      "actual": [
+        "path2",
+        "path3",
+        "path4",
+        "path5",
+        "bond2",
+        "square4",
+        "grid2x3"
+      ],
+      "expected": "registered contexts",
+      "name": "graph fixture",
+      "pass": true
+    },
+    {
+      "actual": {
+        "c6_closed": false,
+        "common_alpha_closed": false,
+        "continuum_closed": false,
+        "exhaustion_independence_closed": false,
+        "finite_context_comparison_closed": true,
+        "finite_os_gram_closed": true,
+        "finite_q3_transfer_closed": true,
+        "finite_thermal_cyclicity_closed": true,
+        "hamiltonian_os_identification_closed": false,
+        "identical_local_word_descriptor_closed": true,
+        "kms_gns_gap_closed": false,
+        "no_new_negative_result": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "pre_a_closed": false,
+        "sector_a_closed": false,
+        "source_uniform_common_word_closed": false,
+        "volume_uniform_direct_d_cauchy_closed": false,
+        "volume_uniform_os_cauchy_closed": false
+      },
+      "expected": "finite comparison only",
+      "name": "scope firewall",
+      "pass": true
+    },
+    {
+      "actual": [
+        "boltzmann_normalization",
+        "diagonal_gibbs_commutation",
+        "conditional_transfer_scope"
+      ],
+      "expected": "present",
+      "name": "Lean source",
+      "pass": true
+    },
+    {
+      "actual": [],
+      "expected": "none",
+      "name": "Lean forbidden",
+      "pass": true
+    },
+    {
+      "actual": "PRIMARY FINITE-COMMON-WORD-CAUCHY PASS 171/171 contexts=7 comparisons=6 max_delta=0.0001151259587772735\n",
+      "expected": "PASS",
+      "name": "primary child",
+      "pass": true
+    },
+    {
+      "actual": "INDEPENDENT FINITE-COMMON-WORD-CAUCHY PASS 171/171 contexts=7 comparisons=6 max_delta=0.0001151259587772735\n",
+      "expected": "PASS",
+      "name": "independent child",
+      "pass": true
+    },
+    {
+      "actual": "all contexts agree within tolerance",
+      "expected": "same contexts and values",
+      "name": "OS Gram crosscheck",
+      "pass": true
+    },
+    {
+      "actual": "all contexts agree within tolerance",
+      "expected": "same contexts and values",
+      "name": "thermal word crosscheck",
+      "pass": true
+    },
+    {
+      "actual": "all contexts agree within tolerance",
+      "expected": "same adjacent context deltas",
+      "name": "context delta crosscheck",
+      "pass": true
+    },
+    {
+      "actual": [
+        14,
+        14,
+        14
+      ],
+      "expected": "equal",
+      "name": "Gram row count",
+      "pass": true
+    },
+    {
+      "actual": [
+        42,
+        42,
+        42
+      ],
+      "expected": "equal",
+      "name": "thermal row count",
+      "pass": true
+    },
+    {
+      "actual": [
+        6,
+        6,
+        6
+      ],
+      "expected": "equal",
+      "name": "comparison row count",
+      "pass": true
+    },
+    {
+      "actual": "derived values agree",
+      "expected": "equal within tolerance",
+      "name": "derived crosscheck",
+      "pass": true
+    },
+    {
+      "actual": {
+        "command": "lake env lean Tect/R247.lean",
+        "output": "",
+        "returncode": 0,
+        "status": "PASS"
+      },
+      "expected": "PASS",
+      "name": "Lean compile",
+      "pass": true
+    }
+  ],
+  "audit_id": "PA-CP1-ST8-Q3LOCK-FINITE-COMMON-WORD-CAUCHY",
+  "boundary": {
+    "c6_closed": false,
+    "common_alpha_closed": false,
+    "continuum_closed": false,
+    "exhaustion_independence_closed": false,
+    "finite_context_comparison_closed": true,
+    "finite_os_gram_closed": true,
+    "finite_q3_transfer_closed": true,
+    "finite_thermal_cyclicity_closed": true,
+    "hamiltonian_os_identification_closed": false,
+    "identical_local_word_descriptor_closed": true,
+    "kms_gns_gap_closed": false,
+    "no_new_negative_result": true,
+    "no_pdf": true,
+    "no_tier_change": true,
+    "pre_a_closed": false,
+    "sector_a_closed": false,
+    "source_uniform_common_word_closed": false,
+    "volume_uniform_direct_d_cauchy_closed": false,
+    "volume_uniform_os_cauchy_closed": false
+  },
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "exploration_id": "EXP-001174",
+  "lean": {
+    "command": "lake env lean Tect/R247.lean",
+    "output": "",
+    "returncode": 0,
+    "status": "PASS"
+  },
+  "provenance": {
+    "independent_sha256": "77fa9414af950c5bc1c5f2fbcd6d1b7d2e9634be6574b4909cdeba4b0ed8a049",
+    "lean_sha256": "2cd2be45cf293f49e9c8a4c3bb0a93adc1ce97e537e6c4720761c841612bb3aa",
+    "manifest_sha256": "50b949b88a4121a68ea641f9ccab0b9c6d2494968f7a36d519bae11a2579b60f",
+    "primary_sha256": "205c545c99d123eb9e24107392cf8961fcc7a5333e4ebc903d62995bed7caad9"
+  },
+  "recorded_at": "2026-08-26T08:55:09.223423Z",
+  "run_kind": "integrated",
+  "schema": "tect/foundation-audit/1.0",
+  "task_id": "T-054",
+  "verdict": "PASS"
+}

@@ -1,0 +1,3460 @@
+{
+  "assertion_count": 171,
+  "assertions": [
+    {
+      "actual": [
+        "EXP-001174",
+        "T-054"
+      ],
+      "expected": "EXP-001174/T-054",
+      "group": "provenance",
+      "name": "identity",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        false,
+        false
+      ],
+      "expected": "nonbearing/open",
+      "group": "scope",
+      "name": "claim firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "path2",
+        "path3",
+        "path4",
+        "path5",
+        "bond2",
+        "square4",
+        "grid2x3"
+      ],
+      "expected": "registered contexts",
+      "group": "fixture",
+      "name": "graph order",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "path2",
+        "path3",
+        "path4",
+        "path5"
+      ],
+      "expected": "path2->path5",
+      "group": "fixture",
+      "name": "nested order",
+      "status": "PASS"
+    },
+    {
+      "actual": 3,
+      "expected": 3,
+      "group": "nondegenerate d=3",
+      "name": "dimension",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "bond2": {
+          "edges": [
+            [
+              0,
+              1
+            ]
+          ],
+          "nested_order": null,
+          "source_sites": [
+            0
+          ],
+          "vertices": 2
+        },
+        "grid2x3": {
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              4,
+              5
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              5
+            ]
+          ],
+          "nested_order": null,
+          "source_sites": [
+            0
+          ],
+          "vertices": 6
+        },
+        "path2": {
+          "edges": [
+            [
+              0,
+              1
+            ]
+          ],
+          "nested_order": 0,
+          "source_sites": [
+            0
+          ],
+          "vertices": 2
+        },
+        "path3": {
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "nested_order": 1,
+          "source_sites": [
+            0
+          ],
+          "vertices": 3
+        },
+        "path4": {
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              2,
+              3
+            ]
+          ],
+          "nested_order": 2,
+          "source_sites": [
+            0
+          ],
+          "vertices": 4
+        },
+        "path5": {
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              3,
+              4
+            ]
+          ],
+          "nested_order": 3,
+          "source_sites": [
+            0
+          ],
+          "vertices": 5
+        },
+        "square4": {
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              2,
+              3
+            ]
+          ],
+          "nested_order": null,
+          "source_sites": [
+            0
+          ],
+          "vertices": 4
+        }
+      },
+      "expected": "source site 0",
+      "group": "fixture",
+      "name": "common source",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "c6_closed": false,
+        "common_alpha_closed": false,
+        "continuum_closed": false,
+        "exhaustion_independence_closed": false,
+        "finite_context_comparison_closed": true,
+        "finite_os_gram_closed": true,
+        "finite_q3_transfer_closed": true,
+        "finite_thermal_cyclicity_closed": true,
+        "hamiltonian_os_identification_closed": false,
+        "identical_local_word_descriptor_closed": true,
+        "kms_gns_gap_closed": false,
+        "no_new_negative_result": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "pre_a_closed": false,
+        "sector_a_closed": false,
+        "source_uniform_common_word_closed": false,
+        "volume_uniform_direct_d_cauchy_closed": false,
+        "volume_uniform_os_cauchy_closed": false
+      },
+      "expected": "finite comparison only",
+      "group": "scope",
+      "name": "scope firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.8087533809821137,
+      "expected": "positive Q3 witness",
+      "group": "nondegenerate Q3",
+      "name": "path2 noncommutation",
+      "status": "PASS"
+    },
+    {
+      "actual": 2,
+      "expected": 2,
+      "group": "coverage",
+      "name": "path2 gram coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": 6,
+      "expected": 6,
+      "group": "coverage",
+      "name": "path2 thermal coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": 3.3306690738754696e-16,
+      "expected": "finite",
+      "group": "OS Gram",
+      "name": "path2 beta=0.25 Gram finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 3.3306690738754696e-16,
+      "expected": "<=1e-07",
+      "group": "OS Gram",
+      "name": "path2 beta=0.25 Gram reflection",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.4827873434807455e-05,
+      "expected": ">=-1e-09",
+      "group": "OS Gram",
+      "name": "path2 beta=0.25 Gram positive",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.9994675672721383,
+      "expected": ">=1e-08",
+      "group": "OS Gram",
+      "name": "path2 beta=0.25 Gram diagonal",
+      "status": "PASS"
+    },
+    {
+      "actual": 4.440892098500626e-16,
+      "expected": "finite",
+      "group": "OS Gram",
+      "name": "path2 beta=0.5 Gram finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 4.440892098500626e-16,
+      "expected": "<=1e-07",
+      "group": "OS Gram",
+      "name": "path2 beta=0.5 Gram reflection",
+      "status": "PASS"
+    },
+    {
+      "actual": 5.706957469012268e-05,
+      "expected": ">=-1e-09",
+      "group": "OS Gram",
+      "name": "path2 beta=0.5 Gram positive",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.9980028299821274,
+      "expected": ">=1e-08",
+      "group": "OS Gram",
+      "name": "path2 beta=0.5 Gram diagonal",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        1.110233013303107e-16,
+        1.8802895899602872
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "path2 beta=0.25 s=0.03125 KMS finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.110233013303107e-16,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "path2 beta=0.25 s=0.03125 KMS cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        4.70950318673391e-19,
+        1.8802896245594944
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "path2 beta=0.25 s=0.0625 KMS finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 4.70950318673391e-19,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "path2 beta=0.25 s=0.0625 KMS cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        2.2204476829960453e-16,
+        1.8802896448937252
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "path2 beta=0.25 s=0.09375 KMS finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 2.2204476829960453e-16,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "path2 beta=0.25 s=0.09375 KMS cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        1.111307226797642e-18,
+        1.8822726234254266
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "path2 beta=0.5 s=0.0625 KMS finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.111307226797642e-18,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "path2 beta=0.5 s=0.0625 KMS cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        2.2204468598871655e-16,
+        1.8822725466679437
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "path2 beta=0.5 s=0.125 KMS finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 2.2204468598871655e-16,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "path2 beta=0.5 s=0.125 KMS cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        2.2204462239922106e-16,
+        1.8822724932379926
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "path2 beta=0.5 s=0.1875 KMS finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 2.2204462239922106e-16,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "path2 beta=0.5 s=0.1875 KMS cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.8087533809821139,
+      "expected": "positive Q3 witness",
+      "group": "nondegenerate Q3",
+      "name": "path3 noncommutation",
+      "status": "PASS"
+    },
+    {
+      "actual": 2,
+      "expected": 2,
+      "group": "coverage",
+      "name": "path3 gram coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": 6,
+      "expected": 6,
+      "group": "coverage",
+      "name": "path3 thermal coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": 4.440892098500626e-16,
+      "expected": "finite",
+      "group": "OS Gram",
+      "name": "path3 beta=0.25 Gram finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 4.440892098500626e-16,
+      "expected": "<=1e-07",
+      "group": "OS Gram",
+      "name": "path3 beta=0.25 Gram reflection",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.483988225733145e-05,
+      "expected": ">=-1e-09",
+      "group": "OS Gram",
+      "name": "path3 beta=0.25 Gram positive",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.9994882960372584,
+      "expected": ">=1e-08",
+      "group": "OS Gram",
+      "name": "path3 beta=0.25 Gram diagonal",
+      "status": "PASS"
+    },
+    {
+      "actual": 3.3306754266165156e-16,
+      "expected": "finite",
+      "group": "OS Gram",
+      "name": "path3 beta=0.5 Gram finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 3.3306754266165156e-16,
+      "expected": "<=1e-07",
+      "group": "OS Gram",
+      "name": "path3 beta=0.5 Gram reflection",
+      "status": "PASS"
+    },
+    {
+      "actual": 5.731174193024494e-05,
+      "expected": ">=-1e-09",
+      "group": "OS Gram",
+      "name": "path3 beta=0.5 Gram positive",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.9981179559409047,
+      "expected": ">=1e-08",
+      "group": "OS Gram",
+      "name": "path3 beta=0.5 Gram diagonal",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        2.744386749103933e-19,
+        1.8802948666856558
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "path3 beta=0.25 s=0.03125 KMS finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 2.744386749103933e-19,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "path3 beta=0.25 s=0.03125 KMS cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        1.6601845766184287e-19,
+        1.8802949019050423
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "path3 beta=0.25 s=0.0625 KMS finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.6601845766184287e-19,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "path3 beta=0.25 s=0.0625 KMS cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        2.2204494381679226e-16,
+        1.8802949226294228
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "path3 beta=0.25 s=0.09375 KMS finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 2.2204494381679226e-16,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "path3 beta=0.25 s=0.09375 KMS cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        2.220446462840581e-16,
+        1.882335473786799
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "path3 beta=0.5 s=0.0625 KMS finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 2.220446462840581e-16,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "path3 beta=0.5 s=0.0625 KMS cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        3.9302328752599536e-19,
+        1.882335413418707
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "path3 beta=0.5 s=0.125 KMS finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 3.9302328752599536e-19,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "path3 beta=0.5 s=0.125 KMS cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        8.131516293641283e-20,
+        1.8823353703301058
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "path3 beta=0.5 s=0.1875 KMS finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 8.131516293641283e-20,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "path3 beta=0.5 s=0.1875 KMS cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.8087533809821138,
+      "expected": "positive Q3 witness",
+      "group": "nondegenerate Q3",
+      "name": "path4 noncommutation",
+      "status": "PASS"
+    },
+    {
+      "actual": 2,
+      "expected": 2,
+      "group": "coverage",
+      "name": "path4 gram coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": 6,
+      "expected": 6,
+      "group": "coverage",
+      "name": "path4 thermal coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": 7.771561172376096e-16,
+      "expected": "finite",
+      "group": "OS Gram",
+      "name": "path4 beta=0.25 Gram finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 7.771561172376096e-16,
+      "expected": "<=1e-07",
+      "group": "OS Gram",
+      "name": "path4 beta=0.25 Gram reflection",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.4839912045487532e-05,
+      "expected": ">=-1e-09",
+      "group": "OS Gram",
+      "name": "path4 beta=0.25 Gram positive",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.9994883477452331,
+      "expected": ">=1e-08",
+      "group": "OS Gram",
+      "name": "path4 beta=0.25 Gram diagonal",
+      "status": "PASS"
+    },
+    {
+      "actual": 8.881791667473018e-16,
+      "expected": "finite",
+      "group": "OS Gram",
+      "name": "path4 beta=0.5 Gram finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 8.881791667473018e-16,
+      "expected": "<=1e-07",
+      "group": "OS Gram",
+      "name": "path4 beta=0.5 Gram reflection",
+      "status": "PASS"
+    },
+    {
+      "actual": 5.731691524943449e-05,
+      "expected": ">=-1e-09",
+      "group": "OS Gram",
+      "name": "path4 beta=0.5 Gram positive",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.9981204309153558,
+      "expected": ">=1e-08",
+      "group": "OS Gram",
+      "name": "path4 beta=0.5 Gram diagonal",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        3.9302328752599536e-19,
+        1.8802948802648463
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "path4 beta=0.25 s=0.03125 KMS finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 3.9302328752599536e-19,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "path4 beta=0.25 s=0.03125 KMS cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        6.776263578034403e-20,
+        1.8802949154858506
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "path4 beta=0.25 s=0.0625 KMS finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 6.776263578034403e-20,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "path4 beta=0.25 s=0.0625 KMS cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        1.3891340334970526e-19,
+        1.8802949362112473
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "path4 beta=0.25 s=0.09375 KMS finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.3891340334970526e-19,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "path4 beta=0.25 s=0.09375 KMS cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.0,
+        1.8823368368059215
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "path4 beta=0.5 s=0.0625 KMS finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.0,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "path4 beta=0.5 s=0.0625 KMS cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        1.3552527156068805e-19,
+        1.8823367767945411
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "path4 beta=0.5 s=0.125 KMS finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.3552527156068805e-19,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "path4 beta=0.5 s=0.125 KMS cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        2.220446422515533e-16,
+        1.8823367339307824
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "path4 beta=0.5 s=0.1875 KMS finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 2.220446422515533e-16,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "path4 beta=0.5 s=0.1875 KMS cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.8087533809821141,
+      "expected": "positive Q3 witness",
+      "group": "nondegenerate Q3",
+      "name": "path5 noncommutation",
+      "status": "PASS"
+    },
+    {
+      "actual": 2,
+      "expected": 2,
+      "group": "coverage",
+      "name": "path5 gram coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": 6,
+      "expected": 6,
+      "group": "coverage",
+      "name": "path5 thermal coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": 3.3306692289718305e-16,
+      "expected": "finite",
+      "group": "OS Gram",
+      "name": "path5 beta=0.25 Gram finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 3.3306692289718305e-16,
+      "expected": "<=1e-07",
+      "group": "OS Gram",
+      "name": "path5 beta=0.25 Gram reflection",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.4839912122859787e-05,
+      "expected": ">=-1e-09",
+      "group": "OS Gram",
+      "name": "path5 beta=0.25 Gram positive",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.9994883478801828,
+      "expected": ">=1e-08",
+      "group": "OS Gram",
+      "name": "path5 beta=0.25 Gram diagonal",
+      "status": "PASS"
+    },
+    {
+      "actual": 5.551117387945838e-16,
+      "expected": "finite",
+      "group": "OS Gram",
+      "name": "path5 beta=0.5 Gram finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 5.551117387945838e-16,
+      "expected": "<=1e-07",
+      "group": "OS Gram",
+      "name": "path5 beta=0.5 Gram reflection",
+      "status": "PASS"
+    },
+    {
+      "actual": 5.7317027922577946e-05,
+      "expected": ">=-1e-09",
+      "group": "OS Gram",
+      "name": "path5 beta=0.5 Gram positive",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.9981204848212508,
+      "expected": ">=1e-08",
+      "group": "OS Gram",
+      "name": "path5 beta=0.5 Gram diagonal",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        1.1102232748472637e-16,
+        1.88029488030024
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "path5 beta=0.25 s=0.03125 KMS finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.1102232748472637e-16,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "path5 beta=0.25 s=0.03125 KMS cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        6.437450399132683e-20,
+        1.8802949155212494
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "path5 beta=0.25 s=0.0625 KMS finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 6.437450399132683e-20,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "path5 beta=0.25 s=0.0625 KMS cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        1.1102231740346446e-16,
+        1.8802949362466483
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "path5 beta=0.25 s=0.09375 KMS finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.1102231740346446e-16,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "path5 beta=0.25 s=0.09375 KMS cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        4.0657581468206416e-20,
+        1.882336866490133
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "path5 beta=0.5 s=0.0625 KMS finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 4.0657581468206416e-20,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "path5 beta=0.5 s=0.0625 KMS cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        3.5236570605778894e-19,
+        1.8823368064865207
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "path5 beta=0.5 s=0.125 KMS finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 3.5236570605778894e-19,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "path5 beta=0.5 s=0.125 KMS cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        3.1848438816761693e-19,
+        1.8823367636276587
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "path5 beta=0.5 s=0.1875 KMS finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 3.1848438816761693e-19,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "path5 beta=0.5 s=0.1875 KMS cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.8087533809821137,
+      "expected": "positive Q3 witness",
+      "group": "nondegenerate Q3",
+      "name": "bond2 noncommutation",
+      "status": "PASS"
+    },
+    {
+      "actual": 2,
+      "expected": 2,
+      "group": "coverage",
+      "name": "bond2 gram coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": 6,
+      "expected": 6,
+      "group": "coverage",
+      "name": "bond2 thermal coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": 3.3306690738754696e-16,
+      "expected": "finite",
+      "group": "OS Gram",
+      "name": "bond2 beta=0.25 Gram finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 3.3306690738754696e-16,
+      "expected": "<=1e-07",
+      "group": "OS Gram",
+      "name": "bond2 beta=0.25 Gram reflection",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.4827873434807455e-05,
+      "expected": ">=-1e-09",
+      "group": "OS Gram",
+      "name": "bond2 beta=0.25 Gram positive",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.9994675672721383,
+      "expected": ">=1e-08",
+      "group": "OS Gram",
+      "name": "bond2 beta=0.25 Gram diagonal",
+      "status": "PASS"
+    },
+    {
+      "actual": 4.440892098500626e-16,
+      "expected": "finite",
+      "group": "OS Gram",
+      "name": "bond2 beta=0.5 Gram finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 4.440892098500626e-16,
+      "expected": "<=1e-07",
+      "group": "OS Gram",
+      "name": "bond2 beta=0.5 Gram reflection",
+      "status": "PASS"
+    },
+    {
+      "actual": 5.706957469012268e-05,
+      "expected": ">=-1e-09",
+      "group": "OS Gram",
+      "name": "bond2 beta=0.5 Gram positive",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.9980028299821274,
+      "expected": ">=1e-08",
+      "group": "OS Gram",
+      "name": "bond2 beta=0.5 Gram diagonal",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        1.110233013303107e-16,
+        1.8802895899602872
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "bond2 beta=0.25 s=0.03125 KMS finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.110233013303107e-16,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "bond2 beta=0.25 s=0.03125 KMS cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        4.70950318673391e-19,
+        1.8802896245594944
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "bond2 beta=0.25 s=0.0625 KMS finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 4.70950318673391e-19,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "bond2 beta=0.25 s=0.0625 KMS cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        2.2204476829960453e-16,
+        1.8802896448937252
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "bond2 beta=0.25 s=0.09375 KMS finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 2.2204476829960453e-16,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "bond2 beta=0.25 s=0.09375 KMS cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        1.111307226797642e-18,
+        1.8822726234254266
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "bond2 beta=0.5 s=0.0625 KMS finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.111307226797642e-18,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "bond2 beta=0.5 s=0.0625 KMS cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        2.2204468598871655e-16,
+        1.8822725466679437
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "bond2 beta=0.5 s=0.125 KMS finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 2.2204468598871655e-16,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "bond2 beta=0.5 s=0.125 KMS cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        2.2204462239922106e-16,
+        1.8822724932379926
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "bond2 beta=0.5 s=0.1875 KMS finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 2.2204462239922106e-16,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "bond2 beta=0.5 s=0.1875 KMS cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.6175067619642283,
+      "expected": "positive Q3 witness",
+      "group": "nondegenerate Q3",
+      "name": "square4 noncommutation",
+      "status": "PASS"
+    },
+    {
+      "actual": 2,
+      "expected": 2,
+      "group": "coverage",
+      "name": "square4 gram coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": 6,
+      "expected": 6,
+      "group": "coverage",
+      "name": "square4 thermal coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": 8.881784197001252e-16,
+      "expected": "finite",
+      "group": "OS Gram",
+      "name": "square4 beta=0.25 Gram finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 8.881784197001252e-16,
+      "expected": "<=1e-07",
+      "group": "OS Gram",
+      "name": "square4 beta=0.25 Gram reflection",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.4041082329227201e-05,
+      "expected": ">=-1e-09",
+      "group": "OS Gram",
+      "name": "square4 beta=0.25 Gram positive",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.9988420349669342,
+      "expected": ">=1e-08",
+      "group": "OS Gram",
+      "name": "square4 beta=0.25 Gram diagonal",
+      "status": "PASS"
+    },
+    {
+      "actual": 8.88178423422438e-16,
+      "expected": "finite",
+      "group": "OS Gram",
+      "name": "square4 beta=0.5 Gram finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 8.88178423422438e-16,
+      "expected": "<=1e-07",
+      "group": "OS Gram",
+      "name": "square4 beta=0.5 Gram reflection",
+      "status": "PASS"
+    },
+    {
+      "actual": 4.97339812759884e-05,
+      "expected": ">=-1e-09",
+      "group": "OS Gram",
+      "name": "square4 beta=0.5 Gram positive",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.9958723497955618,
+      "expected": ">=1e-08",
+      "group": "OS Gram",
+      "name": "square4 beta=0.5 Gram diagonal",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        2.574980159653073e-19,
+        1.881756953288753
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "square4 beta=0.25 s=0.03125 KMS finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 2.574980159653073e-19,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "square4 beta=0.25 s=0.03125 KMS cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        3.9302328752599536e-19,
+        1.8817572386022305
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "square4 beta=0.25 s=0.0625 KMS finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 3.9302328752599536e-19,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "square4 beta=0.25 s=0.0625 KMS cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        2.642742795433417e-19,
+        1.8817574081431827
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "square4 beta=0.25 s=0.09375 KMS finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 2.642742795433417e-19,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "square4 beta=0.25 s=0.09375 KMS cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        1.1102314949223176e-16,
+        1.8840796965020283
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "square4 beta=0.5 s=0.0625 KMS finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.1102314949223176e-16,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "square4 beta=0.5 s=0.0625 KMS cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        3.7947076036992655e-19,
+        1.8840802884636263
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "square4 beta=0.5 s=0.125 KMS finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 3.7947076036992655e-19,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "square4 beta=0.5 s=0.125 KMS cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        1.1102548209925851e-16,
+        1.8840806145019013
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "square4 beta=0.5 s=0.1875 KMS finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.1102548209925851e-16,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "square4 beta=0.5 s=0.1875 KMS cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.6175067619642287,
+      "expected": "positive Q3 witness",
+      "group": "nondegenerate Q3",
+      "name": "grid2x3 noncommutation",
+      "status": "PASS"
+    },
+    {
+      "actual": 2,
+      "expected": 2,
+      "group": "coverage",
+      "name": "grid2x3 gram coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": 6,
+      "expected": 6,
+      "group": "coverage",
+      "name": "grid2x3 thermal coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": 3.3306690738754696e-16,
+      "expected": "finite",
+      "group": "OS Gram",
+      "name": "grid2x3 beta=0.25 Gram finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 3.3306690738754696e-16,
+      "expected": "<=1e-07",
+      "group": "OS Gram",
+      "name": "grid2x3 beta=0.25 Gram reflection",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.405352199403608e-05,
+      "expected": ">=-1e-09",
+      "group": "OS Gram",
+      "name": "grid2x3 beta=0.25 Gram positive",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.9988640935300992,
+      "expected": ">=1e-08",
+      "group": "OS Gram",
+      "name": "grid2x3 beta=0.25 Gram diagonal",
+      "status": "PASS"
+    },
+    {
+      "actual": 8.881784197001252e-16,
+      "expected": "finite",
+      "group": "OS Gram",
+      "name": "grid2x3 beta=0.5 Gram finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 8.881784197001252e-16,
+      "expected": "<=1e-07",
+      "group": "OS Gram",
+      "name": "grid2x3 beta=0.5 Gram reflection",
+      "status": "PASS"
+    },
+    {
+      "actual": 4.9968295204649456e-05,
+      "expected": ">=-1e-09",
+      "group": "OS Gram",
+      "name": "grid2x3 beta=0.5 Gram positive",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.9959863325583248,
+      "expected": ">=1e-08",
+      "group": "OS Gram",
+      "name": "grid2x3 beta=0.5 Gram diagonal",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.0,
+        1.8817636810705094
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "grid2x3 beta=0.25 s=0.03125 KMS finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.0,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "grid2x3 beta=0.25 s=0.03125 KMS cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        4.0657581468206416e-20,
+        1.8817639673277708
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "grid2x3 beta=0.25 s=0.0625 KMS finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 4.0657581468206416e-20,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "grid2x3 beta=0.25 s=0.0625 KMS cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        1.11022304323672e-16,
+        1.8817641374744727
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "grid2x3 beta=0.25 s=0.09375 KMS finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.11022304323672e-16,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "grid2x3 beta=0.25 s=0.09375 KMS cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        1.0842021724855044e-19,
+        1.8841566832804526
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "grid2x3 beta=0.5 s=0.0625 KMS finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.0842021724855044e-19,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "grid2x3 beta=0.5 s=0.0625 KMS cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        1.1102235540206224e-16,
+        1.8841572979149723
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "grid2x3 beta=0.5 s=0.125 KMS finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.1102235540206224e-16,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "grid2x3 beta=0.5 s=0.125 KMS cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        2.2204461981428184e-16,
+        1.8841576385862904
+      ],
+      "expected": "finite",
+      "group": "thermal KMS",
+      "name": "grid2x3 beta=0.5 s=0.1875 KMS finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 2.2204461981428184e-16,
+      "expected": "<=1e-09",
+      "group": "thermal KMS",
+      "name": "grid2x3 beta=0.5 s=0.1875 KMS cyclicity",
+      "status": "PASS"
+    },
+    {
+      "actual": 6,
+      "expected": 6,
+      "group": "coverage",
+      "name": "comparison coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": 6,
+      "expected": "finite",
+      "group": "context comparison",
+      "name": "comparison finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.0001151259587772735,
+      "expected": ">=1e-12",
+      "group": "adversarial context",
+      "name": "context sensitivity witness",
+      "status": "PASS"
+    }
+  ],
+  "audit_id": "PA-CP1-ST8-Q3LOCK-FINITE-COMMON-WORD-CAUCHY",
+  "boundary": {
+    "c6_closed": false,
+    "common_alpha_closed": false,
+    "continuum_closed": false,
+    "exhaustion_independence_closed": false,
+    "finite_context_comparison_closed": true,
+    "finite_os_gram_closed": true,
+    "finite_q3_transfer_closed": true,
+    "finite_thermal_cyclicity_closed": true,
+    "hamiltonian_os_identification_closed": false,
+    "identical_local_word_descriptor_closed": true,
+    "kms_gns_gap_closed": false,
+    "no_new_negative_result": true,
+    "no_pdf": true,
+    "no_tier_change": true,
+    "pre_a_closed": false,
+    "sector_a_closed": false,
+    "source_uniform_common_word_closed": false,
+    "volume_uniform_direct_d_cauchy_closed": false,
+    "volume_uniform_os_cauchy_closed": false
+  },
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "comparisons": [
+    {
+      "beta": 0.25,
+      "from_graph": "path2",
+      "from_volume": 2,
+      "gram_frobenius_delta": 3.852370335941096e-05,
+      "gram_max_delta": 2.072876512015931e-05,
+      "gram_relative_max_delta": 2.0732472613674142e-05,
+      "max_context_delta": 2.072876512015931e-05,
+      "thermal_max_delta": 2.703222060848008e-06,
+      "thermal_relative_max_delta": 2.875317088095729e-06,
+      "to_graph": "path3",
+      "to_volume": 3
+    },
+    {
+      "beta": 0.5,
+      "from_graph": "path2",
+      "from_volume": 2,
+      "gram_frobenius_delta": 0.00022829563565998734,
+      "gram_max_delta": 0.0001151259587772735,
+      "gram_relative_max_delta": 0.0001152064350975449,
+      "max_context_delta": 0.0001151259587772735,
+      "thermal_max_delta": 3.167750610537838e-05,
+      "thermal_relative_max_delta": 3.365766256495287e-05,
+      "to_graph": "path3",
+      "to_volume": 3
+    },
+    {
+      "beta": 0.25,
+      "from_graph": "path3",
+      "from_volume": 3,
+      "gram_frobenius_delta": 9.61713132325373e-08,
+      "gram_max_delta": 5.170797467979327e-08,
+      "gram_relative_max_delta": 5.1717229234662e-08,
+      "max_context_delta": 5.170797467979327e-08,
+      "thermal_max_delta": 6.94191643222493e-09,
+      "thermal_relative_max_delta": 7.383859094161832e-09,
+      "to_graph": "path4",
+      "to_volume": 4
+    },
+    {
+      "beta": 0.5,
+      "from_graph": "path3",
+      "from_volume": 3,
+      "gram_frobenius_delta": 4.910184991115563e-06,
+      "gram_max_delta": 2.4749744511609606e-06,
+      "gram_relative_max_delta": 2.476710421055516e-06,
+      "max_context_delta": 2.4749744511609606e-06,
+      "thermal_max_delta": 6.866845169414484e-07,
+      "thermal_relative_max_delta": 7.296085413773891e-07,
+      "to_graph": "path4",
+      "to_volume": 4
+    },
+    {
+      "beta": 0.25,
+      "from_graph": "path4",
+      "from_volume": 4,
+      "gram_frobenius_delta": 2.5098329015784247e-10,
+      "gram_max_delta": 1.3494971806693457e-10,
+      "gram_relative_max_delta": 1.3497387104628426e-10,
+      "max_context_delta": 1.3494971806693457e-10,
+      "thermal_max_delta": 1.8095483556743696e-11,
+      "thermal_relative_max_delta": 1.9247494856168684e-11,
+      "to_graph": "path5",
+      "to_volume": 5
+    },
+    {
+      "beta": 0.5,
+      "from_graph": "path4",
+      "from_volume": 4,
+      "gram_frobenius_delta": 1.0694504652662694e-07,
+      "gram_max_delta": 5.390589497000775e-08,
+      "gram_relative_max_delta": 5.394370780371365e-08,
+      "max_context_delta": 5.390589497000775e-08,
+      "thermal_max_delta": 1.4954876327877237e-08,
+      "thermal_relative_max_delta": 1.5889691791206947e-08,
+      "to_graph": "path5",
+      "to_volume": 5
+    }
+  ],
+  "contexts": [
+    {
+      "degree_max": 1,
+      "degree_min": 1,
+      "edge_count": 1,
+      "max_reflection_error": 4.440892098500626e-16,
+      "name": "path2",
+      "noncommutation": 0.8087533809821137,
+      "source_site": 0,
+      "volume": 2
+    },
+    {
+      "degree_max": 2,
+      "degree_min": 1,
+      "edge_count": 2,
+      "max_reflection_error": 4.440892098500626e-16,
+      "name": "path3",
+      "noncommutation": 0.8087533809821139,
+      "source_site": 0,
+      "volume": 3
+    },
+    {
+      "degree_max": 2,
+      "degree_min": 1,
+      "edge_count": 3,
+      "max_reflection_error": 8.881791667473018e-16,
+      "name": "path4",
+      "noncommutation": 0.8087533809821138,
+      "source_site": 0,
+      "volume": 4
+    },
+    {
+      "degree_max": 2,
+      "degree_min": 1,
+      "edge_count": 4,
+      "max_reflection_error": 5.551117387945838e-16,
+      "name": "path5",
+      "noncommutation": 0.8087533809821141,
+      "source_site": 0,
+      "volume": 5
+    },
+    {
+      "degree_max": 1,
+      "degree_min": 1,
+      "edge_count": 1,
+      "max_reflection_error": 4.440892098500626e-16,
+      "name": "bond2",
+      "noncommutation": 0.8087533809821137,
+      "source_site": 0,
+      "volume": 2
+    },
+    {
+      "degree_max": 2,
+      "degree_min": 2,
+      "edge_count": 4,
+      "max_reflection_error": 8.88178423422438e-16,
+      "name": "square4",
+      "noncommutation": 1.6175067619642283,
+      "source_site": 0,
+      "volume": 4
+    },
+    {
+      "degree_max": 3,
+      "degree_min": 2,
+      "edge_count": 7,
+      "max_reflection_error": 8.881784197001252e-16,
+      "name": "grid2x3",
+      "noncommutation": 1.6175067619642287,
+      "source_site": 0,
+      "volume": 6
+    }
+  ],
+  "derived": {
+    "c6_closed": false,
+    "common_alpha_closed": false,
+    "comparison_count": 6,
+    "context_count": 7,
+    "continuum_closed": false,
+    "exhaustion_independence_closed": false,
+    "finite_context_comparison_closed": true,
+    "finite_os_gram_closed": true,
+    "finite_q3_transfer_closed": true,
+    "finite_thermal_cyclicity_closed": true,
+    "gram_row_count": 14,
+    "hamiltonian_os_identification_closed": false,
+    "identical_local_word_descriptor_closed": true,
+    "kms_gns_gap_closed": false,
+    "max_context_delta": 0.0001151259587772735,
+    "min_context_delta": 1.3494971806693457e-10,
+    "nested_pair_count": 3,
+    "no_new_negative_result": true,
+    "no_pdf": true,
+    "no_tier_change": true,
+    "path_beta0_delta_nonincreasing": true,
+    "path_beta0_delta_sequence": [
+      2.072876512015931e-05,
+      5.170797467979327e-08,
+      1.3494971806693457e-10
+    ],
+    "pre_a_closed": false,
+    "sector_a_closed": false,
+    "source_uniform_common_word_closed": false,
+    "thermal_row_count": 42,
+    "volume_uniform_direct_d_cauchy_closed": false,
+    "volume_uniform_os_cauchy_closed": false
+  },
+  "exploration_id": "EXP-001174",
+  "gram_rows": [
+    {
+      "beta": 0.25,
+      "descriptor_order": [
+        {
+          "kind": "q",
+          "tau_fraction": 0.125
+        },
+        {
+          "kind": "p",
+          "tau_fraction": 0.125
+        },
+        {
+          "kind": "q",
+          "tau_fraction": 0.25
+        },
+        {
+          "kind": "p",
+          "tau_fraction": 0.25
+        }
+      ],
+      "diagonal_min": 0.9994675672721383,
+      "graph": "path2",
+      "matrix_imag": [
+        [
+          0.0,
+          -2.1340120775454825e-05,
+          -3.0573646756139495e-32,
+          -1.1142960156453776e-05
+        ],
+        [
+          2.1340120775454825e-05,
+          0.0,
+          1.1142960156452935e-05,
+          0.0
+        ],
+        [
+          3.0573646756139495e-32,
+          -1.1142960156452935e-05,
+          0.0,
+          -7.644046075085919e-18
+        ],
+        [
+          1.1142960156453776e-05,
+          0.0,
+          7.644046075085919e-18,
+          0.0
+        ]
+      ],
+      "matrix_real": [
+        [
+          0.9998211745610899,
+          0.9401448120375501,
+          0.9997766672387922,
+          0.9401448223808272
+        ],
+        [
+          0.9401448120375501,
+          0.9996002679735304,
+          0.9401448223808274,
+          0.9995007170384316
+        ],
+        [
+          0.9997766672387922,
+          0.9401448223808274,
+          0.9997618491041911,
+          0.9401448258000755
+        ],
+        [
+          0.9401448223808272,
+          0.9995007170384316,
+          0.9401448258000755,
+          0.9994675672721383
+        ]
+      ],
+      "max_eigenvalue": 3.879591067926995,
+      "min_eigenvalue": 1.4827873434807455e-05,
+      "partition_function": 6.450497314837006,
+      "reflection_error": 3.3306690738754696e-16,
+      "source_site": 0,
+      "volume": 2
+    },
+    {
+      "beta": 0.5,
+      "descriptor_order": [
+        {
+          "kind": "q",
+          "tau_fraction": 0.125
+        },
+        {
+          "kind": "p",
+          "tau_fraction": 0.125
+        },
+        {
+          "kind": "q",
+          "tau_fraction": 0.25
+        },
+        {
+          "kind": "p",
+          "tau_fraction": 0.25
+        }
+      ],
+      "diagonal_min": 0.9980028299821274,
+      "graph": "path2",
+      "matrix_imag": [
+        [
+          0.0,
+          -9.569659740092846e-05,
+          1.0149416069543764e-32,
+          -5.132737086215507e-05
+        ],
+        [
+          9.569659740092846e-05,
+          0.0,
+          5.132737086215525e-05,
+          -2.537354017385941e-33
+        ],
+        [
+          -1.0149416069543764e-32,
+          -5.132737086215525e-05,
+          0.0,
+          -1.0421831242862895e-17
+        ],
+        [
+          5.132737086215507e-05,
+          2.537354017385941e-33,
+          1.0421831242862895e-17,
+          0.0
+        ]
+      ],
+      "matrix_real": [
+        [
+          0.9993014598515849,
+          0.9411362684686622,
+          0.9991298741402473,
+          0.941136245219359
+        ],
+        [
+          0.9411362684686622,
+          0.9984959404179102,
+          0.941136245219359,
+          0.998125724771124
+        ],
+        [
+          0.9991298741402473,
+          0.941136245219359,
+          0.9990729467481336,
+          0.9411362370806423
+        ],
+        [
+          0.941136245219359,
+          0.998125724771124,
+          0.9411362370806423,
+          0.9980028299821274
+        ]
+      ],
+      "max_eigenvalue": 3.87961885486267,
+      "min_eigenvalue": 5.706957469012268e-05,
+      "partition_function": 4.857797358831654,
+      "reflection_error": 4.440892098500626e-16,
+      "source_site": 0,
+      "volume": 2
+    },
+    {
+      "beta": 0.25,
+      "descriptor_order": [
+        {
+          "kind": "q",
+          "tau_fraction": 0.125
+        },
+        {
+          "kind": "p",
+          "tau_fraction": 0.125
+        },
+        {
+          "kind": "q",
+          "tau_fraction": 0.25
+        },
+        {
+          "kind": "p",
+          "tau_fraction": 0.25
+        }
+      ],
+      "diagonal_min": 0.9994882960372584,
+      "graph": "path3",
+      "matrix_imag": [
+        [
+          0.0,
+          -2.088364436096209e-05,
+          5.029670091927704e-32,
+          -1.0895541634659988e-05
+        ],
+        [
+          2.088364436096209e-05,
+          0.0,
+          1.0895541634659878e-05,
+          -1.5717719037274076e-33
+        ],
+        [
+          -5.029670091927704e-32,
+          -1.0895541634659878e-05,
+          0.0,
+          -2.898390384723393e-17
+        ],
+        [
+          1.0895541634659988e-05,
+          1.5717719037274076e-33,
+          2.898390384723393e-17,
+          0.0
+        ]
+      ],
+      "matrix_real": [
+        [
+          0.9998210547044828,
+          0.9401474507205749,
+          0.9997765108768476,
+          0.940147461251576
+        ],
+        [
+          0.9401474507205749,
+          0.9996158314526239,
+          0.940147461251576,
+          0.9995201555423283
+        ],
+        [
+          0.9997765108768476,
+          0.940147461251576,
+          0.9997616799944536,
+          0.9401474647344867
+        ],
+        [
+          0.940147461251576,
+          0.9995201555423283,
+          0.9401474647344867,
+          0.9994882960372584
+        ]
+      ],
+      "max_eigenvalue": 3.879614984854901,
+      "min_eigenvalue": 1.483988225733145e-05,
+      "partition_function": 15.684148081343997,
+      "reflection_error": 4.440892098500626e-16,
+      "source_site": 0,
+      "volume": 3
+    },
+    {
+      "beta": 0.5,
+      "descriptor_order": [
+        {
+          "kind": "q",
+          "tau_fraction": 0.125
+        },
+        {
+          "kind": "p",
+          "tau_fraction": 0.125
+        },
+        {
+          "kind": "q",
+          "tau_fraction": 0.25
+        },
+        {
+          "kind": "p",
+          "tau_fraction": 0.25
+        }
+      ],
+      "diagonal_min": 0.9981179559409047,
+      "graph": "path3",
+      "matrix_imag": [
+        [
+          0.0,
+          -9.233281812597781e-05,
+          0.0,
+          -4.9436317119025496e-05
+        ],
+        [
+          9.233281812597781e-05,
+          0.0,
+          4.943631711902637e-05,
+          0.0
+        ],
+        [
+          0.0,
+          -4.943631711902637e-05,
+          0.0,
+          -3.038642764763209e-17
+        ],
+        [
+          4.9436317119025496e-05,
+          0.0,
+          3.038642764763209e-17,
+          0.0
+        ]
+      ],
+      "matrix_real": [
+        [
+          0.9992990824119778,
+          0.9411677021802195,
+          0.9991267558736857,
+          0.9411676838666925
+        ],
+        [
+          0.9411677021802195,
+          0.9985827111595518,
+          0.9411676838666923,
+          0.998233788657508
+        ],
+        [
+          0.9991267558736857,
+          0.9411676838666923,
+          0.9990695687200252,
+          0.9411676773950276
+        ],
+        [
+          0.9411676838666925,
+          0.998233788657508,
+          0.9411676773950276,
+          0.9981179559409047
+        ]
+      ],
+      "max_eigenvalue": 3.8797831851615925,
+      "min_eigenvalue": 5.731174193024494e-05,
+      "partition_function": 9.93821731262991,
+      "reflection_error": 3.3306754266165156e-16,
+      "source_site": 0,
+      "volume": 3
+    },
+    {
+      "beta": 0.25,
+      "descriptor_order": [
+        {
+          "kind": "q",
+          "tau_fraction": 0.125
+        },
+        {
+          "kind": "p",
+          "tau_fraction": 0.125
+        },
+        {
+          "kind": "q",
+          "tau_fraction": 0.25
+        },
+        {
+          "kind": "p",
+          "tau_fraction": 0.25
+        }
+      ],
+      "diagonal_min": 0.9994883477452331,
+      "graph": "path4",
+      "matrix_imag": [
+        [
+          0.0,
+          -2.0882519765866765e-05,
+          1.0446465720828729e-32,
+          -1.0894931223505131e-05
+        ],
+        [
+          2.0882519765866765e-05,
+          0.0,
+          1.0894931223505008e-05,
+          -2.6116164302071822e-33
+        ],
+        [
+          -1.0446465720828729e-32,
+          -1.0894931223505008e-05,
+          0.0,
+          -2.2587993819663575e-17
+        ],
+        [
+          1.0894931223505131e-05,
+          2.6116164302071822e-33,
+          2.2587993819663575e-17,
+          0.0
+        ]
+      ],
+      "matrix_real": [
+        [
+          0.9998210544073273,
+          0.9401474575110047,
+          0.9997765104890376,
+          0.9401474680424953
+        ],
+        [
+          0.9401474575110047,
+          0.9996158702183157,
+          0.9401474680424953,
+          0.9995202040135528
+        ],
+        [
+          0.9997765104890376,
+          0.9401474680424953,
+          0.9997616795749726,
+          0.9401474715255719
+        ],
+        [
+          0.9401474680424953,
+          0.9995202040135528,
+          0.9401474715255719,
+          0.9994883477452331
+        ]
+      ],
+      "max_eigenvalue": 3.879615044911195,
+      "min_eigenvalue": 1.4839912045487532e-05,
+      "partition_function": 37.75731076435441,
+      "reflection_error": 7.771561172376096e-16,
+      "source_site": 0,
+      "volume": 4
+    },
+    {
+      "beta": 0.5,
+      "descriptor_order": [
+        {
+          "kind": "q",
+          "tau_fraction": 0.125
+        },
+        {
+          "kind": "p",
+          "tau_fraction": 0.125
+        },
+        {
+          "kind": "q",
+          "tau_fraction": 0.25
+        },
+        {
+          "kind": "p",
+          "tau_fraction": 0.25
+        }
+      ],
+      "diagonal_min": 0.9981204309153558,
+      "graph": "path4",
+      "matrix_imag": [
+        [
+          0.0,
+          -9.22614836912681e-05,
+          3.957484635001286e-32,
+          -4.939610219084513e-05
+        ],
+        [
+          9.22614836912681e-05,
+          0.0,
+          4.9396102190844965e-05,
+          0.0
+        ],
+        [
+          -3.957484635001286e-32,
+          -4.9396102190844965e-05,
+          0.0,
+          -2.7318983441233405e-17
+        ],
+        [
+          4.939610219084513e-05,
+          0.0,
+          2.7318983441233405e-17,
+          0.0
+        ]
+      ],
+      "matrix_real": [
+        [
+          0.9992990316156337,
+          0.9411683838751345,
+          0.9991266892085564,
+          0.9411683656691442
+        ],
+        [
+          0.9411683838751345,
+          0.99858457034612,
+          0.9411683656691442,
+          0.9982361098499094
+        ],
+        [
+          0.9991266892085564,
+          0.9411683656691442,
+          0.9990694964862843,
+          0.9411683592337973
+        ],
+        [
+          0.9411683656691442,
+          0.9982361098499094,
+          0.9411683592337973,
+          0.9981204309153558
+        ]
+      ],
+      "max_eigenvalue": 3.8797867276968665,
+      "min_eigenvalue": 5.731691524943449e-05,
+      "partition_function": 19.93339148417832,
+      "reflection_error": 8.881791667473018e-16,
+      "source_site": 0,
+      "volume": 4
+    },
+    {
+      "beta": 0.25,
+      "descriptor_order": [
+        {
+          "kind": "q",
+          "tau_fraction": 0.125
+        },
+        {
+          "kind": "p",
+          "tau_fraction": 0.125
+        },
+        {
+          "kind": "q",
+          "tau_fraction": 0.25
+        },
+        {
+          "kind": "p",
+          "tau_fraction": 0.25
+        }
+      ],
+      "diagonal_min": 0.9994883478801828,
+      "graph": "path5",
+      "matrix_imag": [
+        [
+          0.0,
+          -2.088251682930411e-05,
+          -5.115897494796577e-31,
+          -1.0894929629678414e-05
+        ],
+        [
+          2.088251682930411e-05,
+          0.0,
+          1.0894929629678375e-05,
+          -3.4033378757294953e-35
+        ],
+        [
+          5.115897494796577e-31,
+          -1.0894929629678375e-05,
+          0.0,
+          -1.031716941906281e-17
+        ],
+        [
+          1.0894929629678414e-05,
+          3.4033378757294953e-35,
+          1.031716941906281e-17,
+          0.0
+        ]
+      ],
+      "matrix_real": [
+        [
+          0.9998210544065521,
+          0.940147457528704,
+          0.9997765104880258,
+          0.9401474680601963
+        ],
+        [
+          0.940147457528704,
+          0.9996158703194948,
+          0.9401474680601963,
+          0.9995202041400562
+        ],
+        [
+          0.9997765104880258,
+          0.9401474680601963,
+          0.9997616795738777,
+          0.940147471543273
+        ],
+        [
+          0.9401474680601963,
+          0.9995202041400562,
+          0.940147471543273,
+          0.9994883478801828
+        ]
+      ],
+      "max_eigenvalue": 3.879615045067891,
+      "min_eigenvalue": 1.4839912122859787e-05,
+      "partition_function": 90.54310866384577,
+      "reflection_error": 3.3306692289718305e-16,
+      "source_site": 0,
+      "volume": 5
+    },
+    {
+      "beta": 0.5,
+      "descriptor_order": [
+        {
+          "kind": "q",
+          "tau_fraction": 0.125
+        },
+        {
+          "kind": "p",
+          "tau_fraction": 0.125
+        },
+        {
+          "kind": "q",
+          "tau_fraction": 0.25
+        },
+        {
+          "kind": "p",
+          "tau_fraction": 0.25
+        }
+      ],
+      "diagonal_min": 0.9981204848212508,
+      "graph": "path5",
+      "matrix_imag": [
+        [
+          0.0,
+          -9.225992976732034e-05,
+          -7.853636818228266e-31,
+          -4.939522618906421e-05
+        ],
+        [
+          9.225992976732034e-05,
+          0.0,
+          4.9395226189064295e-05,
+          -7.379047549517211e-34
+        ],
+        [
+          7.853636818228266e-31,
+          -4.9395226189064295e-05,
+          0.0,
+          -9.229062118218458e-18
+        ],
+        [
+          4.939522618906421e-05,
+          7.379047549517211e-34,
+          9.229062118218458e-18,
+          0.0
+        ]
+      ],
+      "matrix_real": [
+        [
+          0.9992990305091971,
+          0.9411683987212771,
+          0.9991266877564784,
+          0.941168380517627
+        ],
+        [
+          0.9411683987212771,
+          0.9985846108412681,
+          0.941168380517627,
+          0.9982361604067943
+        ],
+        [
+          0.9991266877564784,
+          0.941168380517627,
+          0.999069494912915,
+          0.9411683740830721
+        ],
+        [
+          0.941168380517627,
+          0.9982361604067943,
+          0.9411683740830721,
+          0.9981204848212508
+        ]
+      ],
+      "max_eigenvalue": 3.8797868048522695,
+      "min_eigenvalue": 5.7317027922577946e-05,
+      "partition_function": 39.671969801307625,
+      "reflection_error": 5.551117387945838e-16,
+      "source_site": 0,
+      "volume": 5
+    },
+    {
+      "beta": 0.25,
+      "descriptor_order": [
+        {
+          "kind": "q",
+          "tau_fraction": 0.125
+        },
+        {
+          "kind": "p",
+          "tau_fraction": 0.125
+        },
+        {
+          "kind": "q",
+          "tau_fraction": 0.25
+        },
+        {
+          "kind": "p",
+          "tau_fraction": 0.25
+        }
+      ],
+      "diagonal_min": 0.9994675672721383,
+      "graph": "bond2",
+      "matrix_imag": [
+        [
+          0.0,
+          -2.1340120775454825e-05,
+          -3.0573646756139495e-32,
+          -1.1142960156453776e-05
+        ],
+        [
+          2.1340120775454825e-05,
+          0.0,
+          1.1142960156452935e-05,
+          0.0
+        ],
+        [
+          3.0573646756139495e-32,
+          -1.1142960156452935e-05,
+          0.0,
+          -7.644046075085919e-18
+        ],
+        [
+          1.1142960156453776e-05,
+          0.0,
+          7.644046075085919e-18,
+          0.0
+        ]
+      ],
+      "matrix_real": [
+        [
+          0.9998211745610899,
+          0.9401448120375501,
+          0.9997766672387922,
+          0.9401448223808272
+        ],
+        [
+          0.9401448120375501,
+          0.9996002679735304,
+          0.9401448223808274,
+          0.9995007170384316
+        ],
+        [
+          0.9997766672387922,
+          0.9401448223808274,
+          0.9997618491041911,
+          0.9401448258000755
+        ],
+        [
+          0.9401448223808272,
+          0.9995007170384316,
+          0.9401448258000755,
+          0.9994675672721383
+        ]
+      ],
+      "max_eigenvalue": 3.879591067926995,
+      "min_eigenvalue": 1.4827873434807455e-05,
+      "partition_function": 6.450497314837006,
+      "reflection_error": 3.3306690738754696e-16,
+      "source_site": 0,
+      "volume": 2
+    },
+    {
+      "beta": 0.5,
+      "descriptor_order": [
+        {
+          "kind": "q",
+          "tau_fraction": 0.125
+        },
+        {
+          "kind": "p",
+          "tau_fraction": 0.125
+        },
+        {
+          "kind": "q",
+          "tau_fraction": 0.25
+        },
+        {
+          "kind": "p",
+          "tau_fraction": 0.25
+        }
+      ],
+      "diagonal_min": 0.9980028299821274,
+      "graph": "bond2",
+      "matrix_imag": [
+        [
+          0.0,
+          -9.569659740092846e-05,
+          1.0149416069543764e-32,
+          -5.132737086215507e-05
+        ],
+        [
+          9.569659740092846e-05,
+          0.0,
+          5.132737086215525e-05,
+          -2.537354017385941e-33
+        ],
+        [
+          -1.0149416069543764e-32,
+          -5.132737086215525e-05,
+          0.0,
+          -1.0421831242862895e-17
+        ],
+        [
+          5.132737086215507e-05,
+          2.537354017385941e-33,
+          1.0421831242862895e-17,
+          0.0
+        ]
+      ],
+      "matrix_real": [
+        [
+          0.9993014598515849,
+          0.9411362684686622,
+          0.9991298741402473,
+          0.941136245219359
+        ],
+        [
+          0.9411362684686622,
+          0.9984959404179102,
+          0.941136245219359,
+          0.998125724771124
+        ],
+        [
+          0.9991298741402473,
+          0.941136245219359,
+          0.9990729467481336,
+          0.9411362370806423
+        ],
+        [
+          0.941136245219359,
+          0.998125724771124,
+          0.9411362370806423,
+          0.9980028299821274
+        ]
+      ],
+      "max_eigenvalue": 3.87961885486267,
+      "min_eigenvalue": 5.706957469012268e-05,
+      "partition_function": 4.857797358831654,
+      "reflection_error": 4.440892098500626e-16,
+      "source_site": 0,
+      "volume": 2
+    },
+    {
+      "beta": 0.25,
+      "descriptor_order": [
+        {
+          "kind": "q",
+          "tau_fraction": 0.125
+        },
+        {
+          "kind": "p",
+          "tau_fraction": 0.125
+        },
+        {
+          "kind": "q",
+          "tau_fraction": 0.25
+        },
+        {
+          "kind": "p",
+          "tau_fraction": 0.25
+        }
+      ],
+      "diagonal_min": 0.9988420349669342,
+      "graph": "square4",
+      "matrix_imag": [
+        [
+          0.0,
+          -8.212347046844328e-05,
+          -9.627286354609793e-32,
+          -4.179463739928275e-05
+        ],
+        [
+          8.212347046844328e-05,
+          0.0,
+          4.1794637399282464e-05,
+          0.0
+        ],
+        [
+          9.627286354609793e-32,
+          -4.1794637399282464e-05,
+          0.0,
+          5.50780677720984e-20
+        ],
+        [
+          4.179463739928275e-05,
+          0.0,
+          -5.50780677720984e-20,
+          0.0
+        ]
+      ],
+      "matrix_real": [
+        [
+          0.9998300409943401,
+          0.9408786157170906,
+          0.999787900992272,
+          0.9408787031433147
+        ],
+        [
+          0.9408786157170906,
+          0.9991294144264784,
+          0.9408787031433146,
+          0.9989137487570062
+        ],
+        [
+          0.999787900992272,
+          0.9408787031433146,
+          0.9997738851727694,
+          0.9408787321908582
+        ],
+        [
+          0.9408787031433147,
+          0.9989137487570062,
+          0.9408787321908582,
+          0.9988420349669342
+        ]
+      ],
+      "max_eigenvalue": 3.8805022406896246,
+      "min_eigenvalue": 1.4041082329227201e-05,
+      "partition_function": 32.77604409650846,
+      "reflection_error": 8.881784197001252e-16,
+      "source_site": 0,
+      "volume": 4
+    },
+    {
+      "beta": 0.5,
+      "descriptor_order": [
+        {
+          "kind": "q",
+          "tau_fraction": 0.125
+        },
+        {
+          "kind": "p",
+          "tau_fraction": 0.125
+        },
+        {
+          "kind": "q",
+          "tau_fraction": 0.25
+        },
+        {
+          "kind": "p",
+          "tau_fraction": 0.25
+        }
+      ],
+      "diagonal_min": 0.9958723497955618,
+      "graph": "square4",
+      "matrix_imag": [
+        [
+          0.0,
+          -0.00032375755161217687,
+          2.152258143439536e-31,
+          -0.0001670773928820235
+        ],
+        [
+          0.00032375755161217687,
+          0.0,
+          0.0001670773928820234,
+          0.0
+        ],
+        [
+          -2.152258143439536e-31,
+          -0.0001670773928820234,
+          0.0,
+          3.2766768131469914e-18
+        ],
+        [
+          0.0001670773928820235,
+          0.0,
+          -3.2766768131469914e-18,
+          0.0
+        ]
+      ],
+      "matrix_real": [
+        [
+          0.9993813256613411,
+          0.942040088597796,
+          0.9992318141672974,
+          0.9420402924347832
+        ],
+        [
+          0.942040088597796,
+          0.9968747840608715,
+          0.942040292434783,
+          0.9961211669715968
+        ],
+        [
+          0.9992318141672974,
+          0.942040292434783,
+          0.9991824213040409,
+          0.9420403591754932
+        ],
+        [
+          0.9420402924347832,
+          0.9961211669715968,
+          0.9420403591754932,
+          0.9958723497955618
+        ]
+      ],
+      "max_eigenvalue": 3.879587199701282,
+      "min_eigenvalue": 4.97339812759884e-05,
+      "partition_function": 15.57740114683175,
+      "reflection_error": 8.88178423422438e-16,
+      "source_site": 0,
+      "volume": 4
+    },
+    {
+      "beta": 0.25,
+      "descriptor_order": [
+        {
+          "kind": "q",
+          "tau_fraction": 0.125
+        },
+        {
+          "kind": "p",
+          "tau_fraction": 0.125
+        },
+        {
+          "kind": "q",
+          "tau_fraction": 0.25
+        },
+        {
+          "kind": "p",
+          "tau_fraction": 0.25
+        }
+      ],
+      "diagonal_min": 0.9988640935300992,
+      "graph": "grid2x3",
+      "matrix_imag": [
+        [
+          0.0,
+          -8.169073089209062e-05,
+          -4.763731874475335e-30,
+          -4.1558834098819586e-05
+        ],
+        [
+          8.169073089209062e-05,
+          0.0,
+          4.15588340988196e-05,
+          -3.8078782709112046e-35
+        ],
+        [
+          4.763731874475335e-30,
+          -4.15588340988196e-05,
+          0.0,
+          6.6605391506819365e-18
+        ],
+        [
+          4.1558834098819586e-05,
+          3.8078782709112046e-35,
+          -6.6605391506819365e-18,
+          0.0
+        ]
+      ],
+      "matrix_real": [
+        [
+          0.9998299195769299,
+          0.9408819801175449,
+          0.9997877424565704,
+          0.9408820678194078
+        ],
+        [
+          0.9408819801175449,
+          0.9991460294114516,
+          0.9408820678194078,
+          0.998934450835445
+        ],
+        [
+          0.9997877424565704,
+          0.9408820678194078,
+          0.9997737136712015,
+          0.9408820969607794
+        ],
+        [
+          0.9408820678194078,
+          0.998934450835445,
+          0.9408820969607794,
+          0.9988640935300992
+        ]
+      ],
+      "max_eigenvalue": 3.8805288278027756,
+      "min_eigenvalue": 1.405352199403608e-05,
+      "partition_function": 161.84802621236074,
+      "reflection_error": 3.3306690738754696e-16,
+      "source_site": 0,
+      "volume": 6
+    },
+    {
+      "beta": 0.5,
+      "descriptor_order": [
+        {
+          "kind": "q",
+          "tau_fraction": 0.125
+        },
+        {
+          "kind": "p",
+          "tau_fraction": 0.125
+        },
+        {
+          "kind": "q",
+          "tau_fraction": 0.25
+        },
+        {
+          "kind": "p",
+          "tau_fraction": 0.25
+        }
+      ],
+      "diagonal_min": 0.9959863325583248,
+      "graph": "grid2x3",
+      "matrix_imag": [
+        [
+          0.0,
+          -0.00032118233455466266,
+          3.5775487858437315e-30,
+          -0.00016559456880558033
+        ],
+        [
+          0.00032118233455466266,
+          0.0,
+          0.00016559456880558036,
+          -2.6883182726148142e-34
+        ],
+        [
+          -3.5775487858437315e-30,
+          -0.00016559456880558036,
+          0.0,
+          1.0231137827929805e-17
+        ],
+        [
+          0.00016559456880558033,
+          2.6883182726148142e-34,
+          -1.0231137827929805e-17,
+          0.0
+        ]
+      ],
+      "matrix_real": [
+        [
+          0.9993790981745653,
+          0.94207859420723,
+          0.9992288890945158,
+          0.9420788047393939
+        ],
+        [
+          0.94207859420723,
+          0.9969617122917261,
+          0.9420788047393939,
+          0.9962284733958968
+        ],
+        [
+          0.9992288890945158,
+          0.9420788047393939,
+          0.9991792518731946,
+          0.9420788737426851
+        ],
+        [
+          0.9420788047393939,
+          0.9962284733958968,
+          0.9420788737426851,
+          0.9959863325583248
+        ]
+      ],
+      "max_eigenvalue": 3.879765121496719,
+      "min_eigenvalue": 4.9968295204649456e-05,
+      "partition_function": 47.28285992934969,
+      "reflection_error": 8.881784197001252e-16,
+      "source_site": 0,
+      "volume": 6
+    }
+  ],
+  "passed": 171,
+  "run_kind": "primary",
+  "schema": "tect/foundation-audit/1.0",
+  "task_id": "T-054",
+  "thermal_rows": [
+    {
+      "beta": 0.25,
+      "cyclicity_residual": 1.110233013303107e-16,
+      "forward_imag": -2.9638391169602504e-05,
+      "forward_real": 0.9401447945129632,
+      "fraction": 0.125,
+      "graph": "path2",
+      "reverse_imag": -2.9638391169602975e-05,
+      "reverse_real": 0.9401447945129633,
+      "seconds": 0.03125,
+      "source_site": 0,
+      "volume": 2,
+      "witness": 1.8802895899602872
+    },
+    {
+      "beta": 0.25,
+      "cyclicity_residual": 4.70950318673391e-19,
+      "forward_imag": -2.134012077538474e-05,
+      "forward_real": 0.9401448120375501,
+      "fraction": 0.25,
+      "graph": "path2",
+      "reverse_imag": -2.1340120775385212e-05,
+      "reverse_real": 0.9401448120375501,
+      "seconds": 0.0625,
+      "source_site": 0,
+      "volume": 2,
+      "witness": 1.8802896245594944
+    },
+    {
+      "beta": 0.25,
+      "cyclicity_residual": 2.2204476829960453e-16,
+      "forward_imag": -1.1142960156383423e-05,
+      "forward_real": 0.9401448223808274,
+      "fraction": 0.375,
+      "graph": "path2",
+      "reverse_imag": -1.1142960156383692e-05,
+      "reverse_real": 0.9401448223808272,
+      "seconds": 0.09375,
+      "source_site": 0,
+      "volume": 2,
+      "witness": 1.8802896448937252
+    },
+    {
+      "beta": 0.5,
+      "cyclicity_residual": 1.111307226797642e-18,
+      "forward_imag": -0.00012593085601680782,
+      "forward_real": 0.9411363032874829,
+      "fraction": 0.125,
+      "graph": "path2",
+      "reverse_imag": -0.00012593085601680893,
+      "reverse_real": 0.9411363032874829,
+      "seconds": 0.0625,
+      "source_site": 0,
+      "volume": 2,
+      "witness": 1.8822726234254266
+    },
+    {
+      "beta": 0.5,
+      "cyclicity_residual": 2.2204468598871655e-16,
+      "forward_imag": -9.569659740086151e-05,
+      "forward_real": 0.9411362684686624,
+      "fraction": 0.25,
+      "graph": "path2",
+      "reverse_imag": -9.56965974008617e-05,
+      "reverse_real": 0.9411362684686622,
+      "seconds": 0.125,
+      "source_site": 0,
+      "volume": 2,
+      "witness": 1.8822725466679437
+    },
+    {
+      "beta": 0.5,
+      "cyclicity_residual": 2.2204462239922106e-16,
+      "forward_imag": -5.132737086208964e-05,
+      "forward_real": 0.941136245219359,
+      "fraction": 0.375,
+      "graph": "path2",
+      "reverse_imag": -5.132737086208955e-05,
+      "reverse_real": 0.9411362452193588,
+      "seconds": 0.1875,
+      "source_site": 0,
+      "volume": 2,
+      "witness": 1.8822724932379926
+    },
+    {
+      "beta": 0.25,
+      "cyclicity_residual": 2.744386749103933e-19,
+      "forward_imag": -2.904987190888893e-05,
+      "forward_real": 0.9401474328940179,
+      "fraction": 0.125,
+      "graph": "path3",
+      "reverse_imag": -2.9049871908888655e-05,
+      "reverse_real": 0.9401474328940179,
+      "seconds": 0.03125,
+      "source_site": 0,
+      "volume": 3,
+      "witness": 1.8802948666856558
+    },
+    {
+      "beta": 0.25,
+      "cyclicity_residual": 1.6601845766184287e-19,
+      "forward_imag": -2.0883644360849322e-05,
+      "forward_real": 0.9401474507205753,
+      "fraction": 0.25,
+      "graph": "path3",
+      "reverse_imag": -2.0883644360849488e-05,
+      "reverse_real": 0.9401474507205753,
+      "seconds": 0.0625,
+      "source_site": 0,
+      "volume": 3,
+      "witness": 1.8802949019050423
+    },
+    {
+      "beta": 0.25,
+      "cyclicity_residual": 2.2204494381679226e-16,
+      "forward_imag": -1.0895541634549489e-05,
+      "forward_real": 0.9401474612515762,
+      "fraction": 0.375,
+      "graph": "path3",
+      "reverse_imag": -1.0895541634549101e-05,
+      "reverse_real": 0.940147461251576,
+      "seconds": 0.09375,
+      "source_site": 0,
+      "volume": 3,
+      "witness": 1.8802949226294228
+    },
+    {
+      "beta": 0.5,
+      "cyclicity_residual": 2.220446462840581e-16,
+      "forward_imag": -0.00012194470464973583,
+      "forward_real": 0.9411677289933671,
+      "fraction": 0.125,
+      "graph": "path3",
+      "reverse_imag": -0.00012194470464973569,
+      "reverse_real": 0.9411677289933673,
+      "seconds": 0.0625,
+      "source_site": 0,
+      "volume": 3,
+      "witness": 1.882335473786799
+    },
+    {
+      "beta": 0.5,
+      "cyclicity_residual": 3.9302328752599536e-19,
+      "forward_imag": -9.233281812586917e-05,
+      "forward_real": 0.9411677021802195,
+      "fraction": 0.25,
+      "graph": "path3",
+      "reverse_imag": -9.233281812586956e-05,
+      "reverse_real": 0.9411677021802195,
+      "seconds": 0.125,
+      "source_site": 0,
+      "volume": 3,
+      "witness": 1.882335413418707
+    },
+    {
+      "beta": 0.5,
+      "cyclicity_residual": 8.131516293641283e-20,
+      "forward_imag": -4.943631711891847e-05,
+      "forward_real": 0.9411676838666926,
+      "fraction": 0.375,
+      "graph": "path3",
+      "reverse_imag": -4.943631711891839e-05,
+      "reverse_real": 0.9411676838666926,
+      "seconds": 0.1875,
+      "source_site": 0,
+      "volume": 3,
+      "witness": 1.8823353703301058
+    },
+    {
+      "beta": 0.25,
+      "cyclicity_residual": 3.9302328752599536e-19,
+      "forward_imag": -2.9048425882282453e-05,
+      "forward_real": 0.9401474396836579,
+      "fraction": 0.125,
+      "graph": "path4",
+      "reverse_imag": -2.904842588228206e-05,
+      "reverse_real": 0.9401474396836579,
+      "seconds": 0.03125,
+      "source_site": 0,
+      "volume": 4,
+      "witness": 1.8802948802648463
+    },
+    {
+      "beta": 0.25,
+      "cyclicity_residual": 6.776263578034403e-20,
+      "forward_imag": -2.0882519765766767e-05,
+      "forward_real": 0.9401474575110045,
+      "fraction": 0.25,
+      "graph": "path4",
+      "reverse_imag": -2.0882519765766835e-05,
+      "reverse_real": 0.9401474575110045,
+      "seconds": 0.0625,
+      "source_site": 0,
+      "volume": 4,
+      "witness": 1.8802949154858506
+    },
+    {
+      "beta": 0.25,
+      "cyclicity_residual": 1.3891340334970526e-19,
+      "forward_imag": -1.0894931223404993e-05,
+      "forward_real": 0.9401474680424955,
+      "fraction": 0.375,
+      "graph": "path4",
+      "reverse_imag": -1.0894931223404855e-05,
+      "reverse_real": 0.9401474680424955,
+      "seconds": 0.09375,
+      "source_site": 0,
+      "volume": 4,
+      "witness": 1.8802949362112473
+    },
+    {
+      "beta": 0.5,
+      "cyclicity_residual": 0.0,
+      "forward_imag": -0.00012186064814381767,
+      "forward_real": 0.9411684105138214,
+      "fraction": 0.125,
+      "graph": "path4",
+      "reverse_imag": -0.00012186064814381767,
+      "reverse_real": 0.9411684105138214,
+      "seconds": 0.0625,
+      "source_site": 0,
+      "volume": 4,
+      "witness": 1.8823368368059215
+    },
+    {
+      "beta": 0.5,
+      "cyclicity_residual": 1.3552527156068805e-19,
+      "forward_imag": -9.226148369116498e-05,
+      "forward_real": 0.9411683838751354,
+      "fraction": 0.25,
+      "graph": "path4",
+      "reverse_imag": -9.226148369116484e-05,
+      "reverse_real": 0.9411683838751354,
+      "seconds": 0.125,
+      "source_site": 0,
+      "volume": 4,
+      "witness": 1.8823367767945411
+    },
+    {
+      "beta": 0.5,
+      "cyclicity_residual": 2.220446422515533e-16,
+      "forward_imag": -4.939610219074317e-05,
+      "forward_real": 0.9411683656691433,
+      "fraction": 0.375,
+      "graph": "path4",
+      "reverse_imag": -4.939610219074304e-05,
+      "reverse_real": 0.9411683656691435,
+      "seconds": 0.1875,
+      "source_site": 0,
+      "volume": 4,
+      "witness": 1.8823367339307824
+    },
+    {
+      "beta": 0.25,
+      "cyclicity_residual": 1.1102232748472637e-16,
+      "forward_imag": -2.9048422105990766e-05,
+      "forward_real": 0.940147439701355,
+      "fraction": 0.125,
+      "graph": "path5",
+      "reverse_imag": -2.904842210599084e-05,
+      "reverse_real": 0.9401474397013548,
+      "seconds": 0.03125,
+      "source_site": 0,
+      "volume": 5,
+      "witness": 1.88029488030024
+    },
+    {
+      "beta": 0.25,
+      "cyclicity_residual": 6.437450399132683e-20,
+      "forward_imag": -2.0882516829230126e-05,
+      "forward_real": 0.9401474575287039,
+      "fraction": 0.25,
+      "graph": "path5",
+      "reverse_imag": -2.0882516829230062e-05,
+      "reverse_real": 0.9401474575287039,
+      "seconds": 0.0625,
+      "source_site": 0,
+      "volume": 5,
+      "witness": 1.8802949155212494
+    },
+    {
+      "beta": 0.25,
+      "cyclicity_residual": 1.1102231740346446e-16,
+      "forward_imag": -1.0894929629603697e-05,
+      "forward_real": 0.9401474680601961,
+      "fraction": 0.375,
+      "graph": "path5",
+      "reverse_imag": -1.0894929629603754e-05,
+      "reverse_real": 0.940147468060196,
+      "seconds": 0.09375,
+      "source_site": 0,
+      "volume": 5,
+      "witness": 1.8802949362466483
+    },
+    {
+      "beta": 0.5,
+      "cyclicity_residual": 4.0657581468206416e-20,
+      "forward_imag": -0.00012185881697489581,
+      "forward_real": 0.9411684253561644,
+      "fraction": 0.125,
+      "graph": "path5",
+      "reverse_imag": -0.00012185881697489585,
+      "reverse_real": 0.9411684253561644,
+      "seconds": 0.0625,
+      "source_site": 0,
+      "volume": 5,
+      "witness": 1.882336866490133
+    },
+    {
+      "beta": 0.5,
+      "cyclicity_residual": 3.5236570605778894e-19,
+      "forward_imag": -9.225992976725376e-05,
+      "forward_real": 0.9411683987212776,
+      "fraction": 0.25,
+      "graph": "path5",
+      "reverse_imag": -9.225992976725341e-05,
+      "reverse_real": 0.9411683987212776,
+      "seconds": 0.125,
+      "source_site": 0,
+      "volume": 5,
+      "witness": 1.8823368064865207
+    },
+    {
+      "beta": 0.5,
+      "cyclicity_residual": 3.1848438816761693e-19,
+      "forward_imag": -4.9395226188996966e-05,
+      "forward_real": 0.9411683805176275,
+      "fraction": 0.375,
+      "graph": "path5",
+      "reverse_imag": -4.9395226188997285e-05,
+      "reverse_real": 0.9411683805176275,
+      "seconds": 0.1875,
+      "source_site": 0,
+      "volume": 5,
+      "witness": 1.8823367636276587
+    },
+    {
+      "beta": 0.25,
+      "cyclicity_residual": 1.110233013303107e-16,
+      "forward_imag": -2.9638391169602504e-05,
+      "forward_real": 0.9401447945129632,
+      "fraction": 0.125,
+      "graph": "bond2",
+      "reverse_imag": -2.9638391169602975e-05,
+      "reverse_real": 0.9401447945129633,
+      "seconds": 0.03125,
+      "source_site": 0,
+      "volume": 2,
+      "witness": 1.8802895899602872
+    },
+    {
+      "beta": 0.25,
+      "cyclicity_residual": 4.70950318673391e-19,
+      "forward_imag": -2.134012077538474e-05,
+      "forward_real": 0.9401448120375501,
+      "fraction": 0.25,
+      "graph": "bond2",
+      "reverse_imag": -2.1340120775385212e-05,
+      "reverse_real": 0.9401448120375501,
+      "seconds": 0.0625,
+      "source_site": 0,
+      "volume": 2,
+      "witness": 1.8802896245594944
+    },
+    {
+      "beta": 0.25,
+      "cyclicity_residual": 2.2204476829960453e-16,
+      "forward_imag": -1.1142960156383423e-05,
+      "forward_real": 0.9401448223808274,
+      "fraction": 0.375,
+      "graph": "bond2",
+      "reverse_imag": -1.1142960156383692e-05,
+      "reverse_real": 0.9401448223808272,
+      "seconds": 0.09375,
+      "source_site": 0,
+      "volume": 2,
+      "witness": 1.8802896448937252
+    },
+    {
+      "beta": 0.5,
+      "cyclicity_residual": 1.111307226797642e-18,
+      "forward_imag": -0.00012593085601680782,
+      "forward_real": 0.9411363032874829,
+      "fraction": 0.125,
+      "graph": "bond2",
+      "reverse_imag": -0.00012593085601680893,
+      "reverse_real": 0.9411363032874829,
+      "seconds": 0.0625,
+      "source_site": 0,
+      "volume": 2,
+      "witness": 1.8822726234254266
+    },
+    {
+      "beta": 0.5,
+      "cyclicity_residual": 2.2204468598871655e-16,
+      "forward_imag": -9.569659740086151e-05,
+      "forward_real": 0.9411362684686624,
+      "fraction": 0.25,
+      "graph": "bond2",
+      "reverse_imag": -9.56965974008617e-05,
+      "reverse_real": 0.9411362684686622,
+      "seconds": 0.125,
+      "source_site": 0,
+      "volume": 2,
+      "witness": 1.8822725466679437
+    },
+    {
+      "beta": 0.5,
+      "cyclicity_residual": 2.2204462239922106e-16,
+      "forward_imag": -5.132737086208964e-05,
+      "forward_real": 0.941136245219359,
+      "fraction": 0.375,
+      "graph": "bond2",
+      "reverse_imag": -5.132737086208955e-05,
+      "reverse_real": 0.9411362452193588,
+      "seconds": 0.1875,
+      "source_site": 0,
+      "volume": 2,
+      "witness": 1.8822724932379926
+    },
+    {
+      "beta": 0.25,
+      "cyclicity_residual": 2.574980159653073e-19,
+      "forward_imag": -0.0001194880793473325,
+      "forward_real": 0.9408784690571048,
+      "fraction": 0.125,
+      "graph": "square4",
+      "reverse_imag": -0.00011948807934733276,
+      "reverse_real": 0.9408784690571048,
+      "seconds": 0.03125,
+      "source_site": 0,
+      "volume": 4,
+      "witness": 1.881756953288753
+    },
+    {
+      "beta": 0.25,
+      "cyclicity_residual": 3.9302328752599536e-19,
+      "forward_imag": -8.212347046838803e-05,
+      "forward_real": 0.9408786157170906,
+      "fraction": 0.25,
+      "graph": "square4",
+      "reverse_imag": -8.212347046838764e-05,
+      "reverse_real": 0.9408786157170906,
+      "seconds": 0.0625,
+      "source_site": 0,
+      "volume": 4,
+      "witness": 1.8817572386022305
+    },
+    {
+      "beta": 0.25,
+      "cyclicity_residual": 2.642742795433417e-19,
+      "forward_imag": -4.179463739922649e-05,
+      "forward_real": 0.9408787031433146,
+      "fraction": 0.375,
+      "graph": "square4",
+      "reverse_imag": -4.1794637399226756e-05,
+      "reverse_real": 0.9408787031433146,
+      "seconds": 0.09375,
+      "source_site": 0,
+      "volume": 4,
+      "witness": 1.8817574081431827
+    },
+    {
+      "beta": 0.5,
+      "cyclicity_residual": 1.1102314949223176e-16,
+      "forward_imag": -0.0004586879552606389,
+      "forward_real": 0.9420397365812939,
+      "fraction": 0.125,
+      "graph": "square4",
+      "reverse_imag": -0.0004586879552606385,
+      "reverse_real": 0.9420397365812938,
+      "seconds": 0.0625,
+      "source_site": 0,
+      "volume": 4,
+      "witness": 1.8840796965020283
+    },
+    {
+      "beta": 0.5,
+      "cyclicity_residual": 3.7947076036992655e-19,
+      "forward_imag": -0.00032375755161213274,
+      "forward_real": 0.9420400885977959,
+      "fraction": 0.25,
+      "graph": "square4",
+      "reverse_imag": -0.0003237575516121331,
+      "reverse_real": 0.9420400885977959,
+      "seconds": 0.125,
+      "source_site": 0,
+      "volume": 4,
+      "witness": 1.8840802884636263
+    },
+    {
+      "beta": 0.5,
+      "cyclicity_residual": 1.1102548209925851e-16,
+      "forward_imag": -0.00016707739288197921,
+      "forward_real": 0.9420402924347823,
+      "fraction": 0.375,
+      "graph": "square4",
+      "reverse_imag": -0.00016707739288198005,
+      "reverse_real": 0.9420402924347824,
+      "seconds": 0.1875,
+      "source_site": 0,
+      "volume": 4,
+      "witness": 1.8840806145019013
+    },
+    {
+      "beta": 0.25,
+      "cyclicity_residual": 0.0,
+      "forward_imag": -0.00011893733088516125,
+      "forward_real": 0.9408818330177918,
+      "fraction": 0.125,
+      "graph": "grid2x3",
+      "reverse_imag": -0.00011893733088516125,
+      "reverse_real": 0.9408818330177918,
+      "seconds": 0.03125,
+      "source_site": 0,
+      "volume": 6,
+      "witness": 1.8817636810705094
+    },
+    {
+      "beta": 0.25,
+      "cyclicity_residual": 4.0657581468206416e-20,
+      "forward_imag": -8.169073089204574e-05,
+      "forward_real": 0.9408819801175451,
+      "fraction": 0.25,
+      "graph": "grid2x3",
+      "reverse_imag": -8.16907308920457e-05,
+      "reverse_real": 0.9408819801175451,
+      "seconds": 0.0625,
+      "source_site": 0,
+      "volume": 6,
+      "witness": 1.8817639673277708
+    },
+    {
+      "beta": 0.25,
+      "cyclicity_residual": 1.11022304323672e-16,
+      "forward_imag": -4.1558834098774754e-05,
+      "forward_real": 0.9408820678194078,
+      "fraction": 0.375,
+      "graph": "grid2x3",
+      "reverse_imag": -4.1558834098774734e-05,
+      "reverse_real": 0.9408820678194079,
+      "seconds": 0.09375,
+      "source_site": 0,
+      "volume": 6,
+      "witness": 1.8817641374744727
+    },
+    {
+      "beta": 0.5,
+      "cyclicity_residual": 1.0842021724855044e-19,
+      "forward_imag": -0.00045585080395963985,
+      "forward_real": 0.9420782313521757,
+      "fraction": 0.125,
+      "graph": "grid2x3",
+      "reverse_imag": -0.00045585080395963996,
+      "reverse_real": 0.9420782313521757,
+      "seconds": 0.0625,
+      "source_site": 0,
+      "volume": 6,
+      "witness": 1.8841566832804526
+    },
+    {
+      "beta": 0.5,
+      "cyclicity_residual": 1.1102235540206224e-16,
+      "forward_imag": -0.00032118233455463203,
+      "forward_real": 0.94207859420723,
+      "fraction": 0.25,
+      "graph": "grid2x3",
+      "reverse_imag": -0.00032118233455463214,
+      "reverse_real": 0.9420785942072298,
+      "seconds": 0.125,
+      "source_site": 0,
+      "volume": 6,
+      "witness": 1.8841572979149723
+    },
+    {
+      "beta": 0.5,
+      "cyclicity_residual": 2.2204461981428184e-16,
+      "forward_imag": -0.00016559456880554935,
+      "forward_real": 0.9420788047393939,
+      "fraction": 0.375,
+      "graph": "grid2x3",
+      "reverse_imag": -0.00016559456880554927,
+      "reverse_real": 0.9420788047393941,
+      "seconds": 0.1875,
+      "source_site": 0,
+      "volume": 6,
+      "witness": 1.8841576385862904
+    }
+  ],
+  "verdict": "PASS"
+}
