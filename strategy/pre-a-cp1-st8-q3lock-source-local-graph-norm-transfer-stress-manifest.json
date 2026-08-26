@@ -1,0 +1,128 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-SOURCE-LOCAL-GRAPH-NORM-TRANSFER-STRESS-v0",
+  "exploration_id": "EXP-001197",
+  "prior_exploration_id": "EXP-001193",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "claim_bearing": false,
+  "tier": "T0",
+  "title": "Finite Q3 source-local graph-norm transfer and cutoff commutator stress",
+  "question": "On an explicit low-occupation polynomial core, do the shifted source-local Q3 potential weights transfer through the full shifted Hamiltonian with finite graph and form constants, and does the associated commutator coefficient stay stable under volume, source translation and oscillator-cutoff stress?",
+  "authority_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-kinetic-inclusive-transfer-boundary-manifest.json#next_action",
+    "strategy/pre-a-cp1-st8-q3lock-finite-q3-weighted-top-tail-history_manifest.json#model",
+    "claims/GATES.md#pa-cp1-st8-q3lock-higher-weighted-energy-moments-and-thermodynamic-cauchy-closure",
+    "claims/GATES.md#pa-cp1-st8-q3lock-local-strict-all-exhaustion-two-orientation-history-common-alpha"
+  ],
+  "finite_fixture": {
+    "volume_values": [2, 4, 6],
+    "oscillator_dimensions_by_volume": {
+      "2": [2, 3, 4, 5, 6, 7, 8],
+      "4": [2, 3, 4],
+      "6": [2, 3]
+    },
+    "source_supports_by_volume": {
+      "2": [[0, 1]],
+      "4": [[0, 1], [1, 2]],
+      "6": [[0, 1], [1, 2], [3, 4]]
+    },
+    "core_total_occupation": 2,
+    "chi": 1.0,
+    "r": -1.0,
+    "g": 0.6,
+    "c": 0.6,
+    "lambda": 0.1,
+    "graph_norm_tolerance": 1.0e-8,
+    "positive_tolerance": 1.0e-8,
+    "agreement_tolerance": 1.0e-7,
+    "cutoff_growth_threshold": 1.5
+  },
+  "model": {
+    "graph": "Q3 target edge, square face and 2x3 rectangular control with the registered seven-edge volume-6 subgraph",
+    "hamiltonian": "H_Lambda=sum_x[p_x^2/(2 chi)+r q_x^2/2+g q_x^4/4]+sum_<xy>[c(q_x-q_y)^2/2+lambda(q_x-q_y)^2(q_x^2+q_y^2)/4]",
+    "full_weight": "K_Lambda=I+H_Lambda-min(spec(H_Lambda))I",
+    "source_potential": "V_S=sum_{x in S}[r q_x^2/2+g q_x^4/4]",
+    "source_edge_weight": "K_S=I+V_S+B_S-min(spec(V_S+B_S))I with B_S containing only bonds internal to S",
+    "polynomial_core": "span of tensor Fock basis vectors with total occupation at most core_total_occupation",
+    "graph_transfer": "||K_S psi|| <= ||K_S K_Lambda^{-1}|| ||K_Lambda psi||",
+    "commutator_transfer": "||[K_Lambda,K_S] psi|| <= ||[K_Lambda,K_S]K_Lambda^{-1}|| ||K_Lambda psi||",
+    "form_transfer": "lambda_max(K_Lambda^{-1/2} K_S K_Lambda^{-1/2})"
+  },
+  "scope": {
+    "finite_source_graph_form_rows_closed": true,
+    "finite_source_graph_norm_rows_closed": true,
+    "finite_source_commutator_rows_closed": true,
+    "explicit_polynomial_core_rows_closed": true,
+    "source_translation_stress_closed": true,
+    "oscillator_cutoff_stress_closed": true,
+    "volume_shape_stress_closed": true,
+    "uniform_common_core_graph_bound_closed": false,
+    "uniform_commutator_bound_closed": false,
+    "cutoff_removal_closed": false,
+    "exact_ccr_common_core_closed": false,
+    "modular_domain_transfer_closed": false,
+    "direct_d_delta_d_cauchy_closed": false,
+    "all_shape_exhaustion_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "adversarial_review": [
+    {
+      "axis": "operator versus form norm",
+      "check": "The form constant, graph constant and commutator constant are computed separately; form domination is not substituted for an operator graph estimate.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "source definition",
+      "check": "The onsite source potential and internal source-edge potential are declared explicitly; bonds crossing the source boundary are not silently included in K_S.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "polynomial core",
+      "check": "Only the declared finite tensor Fock span with total occupation at most two is tested; no dense-domain or cutoff-removal claim is inferred.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "cutoff interpretation",
+      "check": "Oscillator dimension is the finite cutoff stress variable; its sampled dependence is not identified with a continuum limit.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "inverse use",
+      "check": "K_Lambda is shifted strictly positive before K_Lambda^{-1} and K_Lambda^{-1/2} are formed; no Gibbs inverse or modular floor is used.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "independent lane",
+      "check": "The independent script rebuilds oscillator, graph, Hamiltonian, source weights and core rows without importing the primary script.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "finite growth",
+      "check": "A cutoff commutator growth ratio is reported only for the declared V=2 support and dimensions; it is a route diagnostic, not an asymptotic no-go.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "QFT promotion",
+      "check": "No common unbounded core, exhaustion independence, common alpha, OS/KMS/GNS identification, gap, continuum, C6, Sector A or Pre-A conclusion follows.",
+      "disposition": "UPHELD-OPEN"
+    }
+  ],
+  "next_action": "Use the finite graph constants as calibration only. Derive a source-, volume- and cutoff-uniform analytic commutator/graph estimate on a declared Q3 core; if the cutoff coefficient cannot be bounded, retain the finite growth as route-local and move to a cancellation-aware history topology before any common-alpha promotion.",
+  "qft_interface": {
+    "closed": "Finite source-local Q3 potential and source-edge weights admit explicitly measured form, graph and commutator transfer constants on a low-occupation core across the declared volume, source and oscillator-cutoff grid.",
+    "open": "The analytic uniform graph/commutator estimate, cutoff removal, common unbounded core, direct D/delta-D Cauchy, all-shape exhaustion, common alpha, Hamiltonian-to-OS identification, KMS/GNS gap, continuum, C6, Sector A and Pre-A remain open.",
+    "tect_boundary": "Auxiliary C6/Q3 finite evidence only; no heat_root_incidence or canonical A1/R-192 production owner is supplied."
+  },
+  "boundary": "T0 claim-nonbearing finite graph-norm transfer stress. It is neither a common-core theorem nor a thermodynamic QFT or Clay result.",
+  "no_overclaim": "Finite matrix graph/form/commutator constants and a sampled cutoff trend do not prove source/volume/cutoff uniformity, a common dynamics, OS/KMS/GNS reconstruction, a mass gap, continuum, C6, Sector A, Pre-A or a Clay result."
+}

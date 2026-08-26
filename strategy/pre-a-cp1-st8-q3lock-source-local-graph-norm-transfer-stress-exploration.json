@@ -1,0 +1,74 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001197",
+  "title": "Finite Q3 source-local graph-norm transfer and cutoff commutator stress",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "related": [
+    {"id": "EXP-001193", "relation": "continues"},
+    {"id": "EXP-001196", "relation": "continues"},
+    {"id": "EXP-001194", "relation": "continues"}
+  ],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "question": "On an explicit low-occupation polynomial core, do the shifted source-local Q3 potential weights transfer through the full shifted Hamiltonian with finite graph and form constants, and does the associated commutator coefficient stay stable under volume, source translation and oscillator-cutoff stress?",
+  "method": [
+    "Rebuild the canonical Q3 Hamiltonian on the target edge, square face and registered 2x3 seven-edge control graph for every manifest oscillator dimension.",
+    "For each declared source support, form the shifted onsite source potential weight and the shifted source-edge weight, retaining only bonds internal to the support.",
+    "Compute the form constant lambda_max(K_Lambda^(-1/2) K_S K_Lambda^(-1/2)), graph constant ||K_S K_Lambda^(-1)||, and right commutator constant ||[K_Lambda,K_S] K_Lambda^(-1)|| after shifting K_Lambda to spectral floor one.",
+    "Enumerate tensor Fock basis vectors with total occupation at most two and check the graph and commutator inequalities row by row against their finite operator constants.",
+    "Reconstruct all rows in a non-importing independent lane and cross-check the rational scenario, core-count and scope fixtures in Lean R356."
+  ],
+  "finding": "The primary lane passes 1292/1292 assertions and the independent lane passes 1196/1196. The integrated verifier passes 206/206 with Lean R356 PASS. There are 38 source-weight scenarios and 544 explicit polynomial-core basis rows. Primary maxima are form=1.8039836560045446, graph=1.865789999507254 and commutator=4.015684693477961, with independent maxima agreeing within the 1e-7 lane tolerance. On the V=2 source-edge row, the commutator constant increases from 1.5449241615861335 at oscillator dimension 3 to 4.015684693477961 at dimension 8, giving the declared finite cutoff growth ratio 2.5992762579071593.",
+  "decision_reason": "The calculation closes the finite bookkeeping needed to distinguish form domination from an operator graph estimate and exposes the exact source-edge commutator cost on an explicit core. The cutoff trend is a sampled route diagnostic, not an asymptotic divergence theorem; therefore it strengthens the calibration of the common-core gate without promoting a uniform estimate or a QFT construction.",
+  "verdict": "advanced",
+  "boundary": "T0 claim-nonbearing finite graph/form/commutator transfer stress. The finite core is not asserted dense, the cutoff is not removed, and no common dynamics, exhaustion independence, OS/KMS/GNS reconstruction, mass gap, continuum, C6, Sector A, Pre-A or Clay conclusion follows.",
+  "adversarial_review": [
+    {"axis": "operator versus form norm", "check": "Form, graph and commutator constants are evaluated separately; no form-order implication is used as an operator theorem.", "disposition": "UPHELD"},
+    {"axis": "source support", "check": "The source weight contains only onsite terms on the declared support and internal source bonds; crossing bonds are excluded.", "disposition": "UPHELD"},
+    {"axis": "polynomial core", "check": "Only the finite total-occupation-at-most-two Fock span is tested; domain density and cutoff removal remain open.", "disposition": "UPHELD-OPEN"},
+    {"axis": "inverse stability", "check": "Both full and source weights are shifted to floor one before inverse and inverse-square-root factors are formed; no Gibbs inverse is used.", "disposition": "UPHELD"},
+    {"axis": "independent reconstruction", "check": "The independent lane rebuilds the matrix model and core rows without importing the primary implementation.", "disposition": "UPHELD"},
+    {"axis": "cutoff trend", "check": "The 2.5992762579071593 ratio compares only the declared V=2 dimensions and is not a global no-go.", "disposition": "UPHELD-OPEN"},
+    {"axis": "QFT promotion", "check": "Common unbounded-core construction, exhaustion, common alpha, Hamiltonian-to-OS identification, KMS/GNS, gap and continuum remain open.", "disposition": "UPHELD-OPEN"},
+    {"axis": "Lean scope", "check": "R356 checks exact rational counts and scope only; matrix spectral calculus and thermodynamic limits remain Python/open analysis.", "disposition": "UPHELD"}
+  ],
+  "evidence_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-source-local-graph-norm-transfer-stress-manifest.json#model",
+    "strategy/pre-a-cp1-st8-q3lock-source-local-graph-norm-transfer-stress-certificate-260827.md#Result",
+    "codes/foundations/pre_a_cp1_st8_q3lock_source_local_graph_norm_transfer_stress.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_source_local_graph_norm_transfer_stress_independent.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_source_local_graph_norm_transfer_stress_verify.py#run",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-29-primary-pre_a_cp1_st8_q3lock_source_local_graph_norm_transfer_stress/primary.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-29-independent-pre_a_cp1_st8_q3lock_source_local_graph_norm_transfer_stress/independent.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-29-integrated-pre_a_cp1_st8_q3lock_source_local_graph_norm_transfer_stress/integrated.json#lean",
+    "verification/lean/Tect/R356.lean#volume_fixture",
+    "verification/lean/registry.json#R356"
+  ],
+  "formal_integration": {
+    "lean": "R356 PASS",
+    "results": [],
+    "negatives": [],
+    "events": [],
+    "no_new_result": true,
+    "no_new_negative": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "qft_interface": {
+    "closed": "Finite source-local Q3 potential and source-edge weights have explicit form, graph and commutator transfer constants on a low-occupation core across the declared volume, source and oscillator-cutoff grid.",
+    "open": "A source-, volume- and cutoff-uniform analytic estimate, cutoff removal, a common unbounded core, direct D/delta-D Cauchy, all-shape exhaustion, common alpha, Hamiltonian-to-OS identification, KMS/GNS gap, continuum, C6, Sector A and Pre-A remain open.",
+    "tect_boundary": "Auxiliary C6/Q3 finite evidence only; no heat_root_incidence or canonical A1/R-192 production owner is supplied."
+  },
+  "next_action": "Use the finite constants as calibration only. Derive a source-, volume- and cutoff-uniform analytic commutator/graph estimate on a declared Q3 common core; if the cutoff coefficient cannot be bounded, retain the finite growth as route-local and switch to a cancellation-aware history topology before common-alpha promotion.",
+  "no_overclaim": "This finite stress does not prove source/volume/cutoff uniformity, a thermodynamic dynamics, an OS/KMS/GNS construction, a mass gap, continuum, C6, Sector A, Pre-A or a Clay result.",
+  "recorded_at": "2026-08-29T06:20:00Z",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-08-27",
+  "provenance": "contemporaneous"
+}
