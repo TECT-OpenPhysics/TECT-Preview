@@ -8111,6 +8111,138 @@
       "task_id": "T-054",
       "title": "Finite Q3 split Gibbs/KMS source-uniformity stress",
       "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "axis": "periodic graph scope",
+          "check": "The three explicit manifest edge sets and all source sites are checked; the controls are not labelled an infinite periodic torus or thermodynamic limit.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "KMS sign and units",
+          "check": "The alpha convention uses t+i beta hbar at every source and both real-time signs with hbar=1; exact-H controls are checked before split residuals.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "complex inverse",
+          "check": "Complex products use reverse factor order and -z for their inverse, not a complex adjoint shortcut; inverse errors are asserted for every graph/order/mesh/sign/beta row.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "cutoff degeneracy",
+          "check": "Only d=3 is admitted and a positive [H,H_onsite] witness is required for every graph; the commuting d=2 degeneration is excluded.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "source uniformity",
+          "check": "All finite sites are measured and degree-three versus degree-two variation is reported; no source-uniform direct Cauchy or limiting bound is inferred.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "mesh trend",
+          "check": "Per-source coarse/fine decreases are checked on two mesh values only; their ratios are not promoted to a uniform analytic Trotter rate.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "shape and degree inference",
+          "check": "Bond2, square4 and grid2x3 expose finite degree/shape dependence; three finite controls do not establish arbitrary-shape exhaustion independence.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "independence",
+          "check": "The independent lane rebuilds oscillator tensors, periodic bond terms and residuals without importing the primary; the maximum numerical discrepancy is below 9e-13.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "Lean boundary",
+          "check": "R247 checks exact rational finite Gibbs normalization/commutation and conditional-transfer scope; dense periodic matrices and all limiting interfaces remain Python evidence/open analysis.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "QFT promotion",
+          "check": "Finite periodic controls do not prove a common core, direct Cauchy convergence, common alpha, OS/KMS/GNS identification, gap, continuum, C6, Sector A or Pre-A.",
+          "disposition": "UPHELD-OPEN"
+        }
+      ],
+      "boundary": "T0 claim-nonbearing finite d=3 periodic-control Q3 KMS diagnostic. It is not a thermodynamic-limit source-uniformity theorem, a common-alpha construction, an OS/KMS identification, a mass-gap proof, a continuum result, or a QFT/Clay closure.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "This extends the finite Q3 equilibrium-interface diagnostic from path exhaustions to explicit periodic-control shapes and makes graph degree dependence visible. It is useful QFT-facing evidence for targeting a weighted common-core/Trotter estimate, while the observed finite mesh decrease cannot replace a direct D/delta-D Cauchy bound uniform in source, volume, cutoff and beta. The graph set is finite and does not establish arbitrary-shape exhaustion independence or a thermodynamic torus dynamics.",
+      "evidence_refs": [
+        "strategy/pre-a-cp1-st8-q3lock-finite-periodic-split-gibbs-kms-source-stress-manifest.json#finite_fixture",
+        "codes/foundations/pre_a_cp1_st8_q3lock_finite_periodic_split_gibbs_kms_source_stress.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_finite_periodic_split_gibbs_kms_source_stress_independent.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_finite_periodic_split_gibbs_kms_source_stress_verify.py#main",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-primary-pre-a-cp1-st8-q3lock-finite-periodic-split-gibbs-kms-source-stress/primary.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-independent-pre-a-cp1-st8-q3lock-finite-periodic-split-gibbs-kms-source-stress/independent.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-integrated-pre-a-cp1-st8-q3lock-finite-periodic-split-gibbs-kms-source-stress/integrated.json#lean",
+        "verification/lean/Tect/R247.lean#diagonal_gibbs_commutation",
+        "verification/lean/registry.json#R247"
+      ],
+      "finding": "Primary 930/930 and independent 929/929 assertions pass over 192 finite source/order/sign/beta/mesh rows, with 48 exact controls, 96 mesh rows, 12 source sites and 3 graph shapes; the integrated verifier passes 40/40 with Lean R247 PASS. The maximum primary-independent discrepancy over stationarity, KMS and inverse-error fields is 8.906604324797492e-13. Across all rows the KMS residual ranges from 9.203548117557915e-05 to 0.02045220126762285 and the stationarity defect from 0.0006767190119555736 to 0.014182652533020666. Every source context decreases from delta=0.1 to 0.05; KMS fine/coarse ratios range from 0.4267810916211172 to 0.6709540230112263 and stationarity ratios from 0.49891203239653653 to 0.49990755630506695. Shape maxima increase from bond2 KMS 0.002642760989279424 to square4 0.008505633932616146 to grid2x3 0.02045220126762285; degree-three grid sources reach about 0.02045 while degree-two grid sources reach about 0.00812. The finite pattern is reproducible, but the degree/shape dependence is a concrete warning against treating this as a source- or volume-uniform rate.",
+      "formal_integration": {
+        "events": [],
+        "lean": "R247 PASS",
+        "negatives": [],
+        "no_new_event": true,
+        "no_new_negative": true,
+        "no_new_result": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "results": []
+      },
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": []
+      },
+      "gate_ids": [
+        "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+        "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+        "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001172",
+      "method": [
+        "Reconstruct the manifest-defined d=3 Q3 onsite quartic and nonlinear bond matrices on bond2, square4 and grid2x3 with chi=1, r=-1, g=3/5, c=3/5 and lambda=1/10; validate edge bounds, uniqueness and all-site source coverage.",
+        "At every declared source site, use A_x=exp(i a q_x/hbar) and B_x=exp(i a p_x/hbar), the exact finite-H Gibbs state at beta=0.25 and 0.5, and the KMS boundary t+i beta hbar with horizon t=0.1.",
+        "Evaluate onsite-then-manifest-bonds and reverse-term split products at delta=0.1 and 0.05 for both real-time signs. Build each complex inverse with reverse factor order and -z, and retain trace-norm Gibbs stationarity defects and scalar KMS residuals.",
+        "Require exact-H controls below 1e-9, positive finite split witnesses, all-source coverage, per-source coarse/fine decrease and shape/degree summaries; treat the two-mesh ratios as finite diagnostics rather than analytic uniform constants.",
+        "Run a non-importing independent reconstruction and an integrated verifier comparing all 192 source rows, 48 exact rows, 96 mesh rows, 12 source summaries, 3 shape summaries, provenance hashes, Lean R247 and scope firewalls."
+      ],
+      "next_action": "Use the degree/shape residual range to target a periodic common-core estimate with explicit degree constants and a direct D/delta-D Cauchy comparison across increasing controls; if those constants grow with cutoff, volume or degree, record the route-local obstruction before common-alpha promotion.",
+      "no_overclaim": "This package proves only finite d=3 matrix identities and diagnostics. It does not prove a source-uniform thermodynamic Q3 dynamics, common alpha, OS/KMS identification, a mass gap, continuum removal, C6, Sector A, Pre-A or a Clay result.",
+      "prior_exploration_id": "EXP-001171",
+      "provenance": "contemporaneous",
+      "qft_interface": {
+        "closed": "Exact finite-H Gibbs controls and source-wise split stationarity/KMS residuals are reproduced on every site of the manifest-defined bond2, square4 and grid2x3 controls for both split orders, signs, beta values and meshes; finite degree/shape summaries are recorded.",
+        "open": "A source-, volume-, cutoff- and beta-uniform analytic rate, direct D/delta-D Cauchy, common unbounded core, arbitrary-shape exhaustion independence, one common alpha, Hamiltonian-to-OS/KMS quotient, GNS gap, continuum and physical TECT gates remain open.",
+        "tect_boundary": "Auxiliary C6/Q3 finite evidence only; no heat_root_incidence, canonical A1/R-192 production owner, physical-empty reference, Sector-A closure or Pre-A closure is supplied."
+      },
+      "question": "On the registered finite periodic-control graphs (bond2, square4 and grid2x3), do all source sites retain the finite Gibbs stationarity and analytic KMS mesh-decrease pattern for both split orders, signs and beta values, and how does the residual change with graph degree and shape?",
+      "recorded_at": "2026-08-29T03:35:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001171",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001170",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001088",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-08-26",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Finite periodic Q3 split Gibbs/KMS source and shape stress",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",
