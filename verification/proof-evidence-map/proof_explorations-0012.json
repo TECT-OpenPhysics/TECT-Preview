@@ -8977,6 +8977,120 @@
       "task_id": "T-054",
       "title": "Finite Gram perturbation bridge for OS context changes",
       "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "axis": "Complex inner-product orientation",
+          "check": "Conjugation is on the first vector in every Gram sum and the product difference uses conjugate(f-g) f plus conjugate(g)(f-g).",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "Finite model provenance",
+          "check": "Hamiltonian, oscillator dimension, graph edges, parameters, sources, beta values and tau values are read from the manifest or canonical Q3 builder; no physical number is inserted from the output.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "Normalization",
+          "check": "The raw inequality is evaluated before division by the positive partition function, and the script separately checks positivity of every declared finite partition.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "Degenerate eigenspaces",
+          "check": "Independent diagonalization may choose a different basis in a degenerate subspace; the integrated comparison records this with an explicit manifest tolerance and does not call coordinate equality a carrier identification.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "Source coverage",
+          "check": "All source sites of the three finite graphs are recomputed, but finite coverage is not a source-uniform thermodynamic estimate.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "Numerical stability",
+          "check": "Every decomposition and bound row has finite fields, an explicit absolute-plus-relative tolerance, and a nonnegative recorded slack within that tolerance.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "Independent reconstruction",
+          "check": "The independent lane rebuilds oscillator tensors, Q3 Hamiltonians, spectra, characters, transfer matrices and complex sums without importing the primary lane.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "QFT promotion",
+          "check": "The finite Complex bridge does not close a cross-volume common OS carrier, exhaustion Cauchy, common alpha, Hamiltonian-to-OS identification, GNS gap, continuum, C6, Sector A or Pre-A.",
+          "disposition": "UPHELD-OPEN"
+        }
+      ],
+      "boundary": "T0 claim-nonbearing finite Complex Q3 transfer-word instantiation. It is not a common OS Hilbert-carrier theorem, a thermodynamic limit, a common-alpha construction, a mass-gap proof, a continuum result, or a Clay result.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "The finite Q3 OS transfer-word matrices now instantiate the Complex Hilbert-Schmidt bridge rather than a Real-only toy fixture. This closes a precise finite interface for subsequent analytic estimates, but it does not supply an isometric transport between different volumes or any source, volume, cutoff or beta uniformity.",
+      "evidence_refs": [
+        "strategy/pre-a-cp1-st8-q3lock-complex-os-gram-perturbation-manifest.json#exact_statement",
+        "codes/foundations/pre_a_cp1_st8_q3lock_complex_os_gram_perturbation.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_complex_os_gram_perturbation_independent.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_complex_os_gram_perturbation_verify.py#main",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-primary-pre-a-cp1-st8-q3lock-complex-os-gram-perturbation/primary.json#rows",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-independent-pre-a-cp1-st8-q3lock-complex-os-gram-perturbation/independent.json#rows",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-integrated-pre-a-cp1-st8-q3lock-complex-os-gram-perturbation/integrated.json#lean",
+        "verification/lean/Tect/R340.lean#finite_complex_gram_entry_perturbation",
+        "verification/lean/registry.json#R340"
+      ],
+      "finding": "R340 proves the exact Complex inequality |G_f(i,j)-G_g(i,j)| <= sum_k |f(i,k)-g(i,k)| |f(j,k)| + sum_k |g(i,k)| |f(j,k)-g(j,k)|. The primary lane passes 234/234 assertions and 96 rows, the independent lane passes 235/235 and 96 rows, and the integrated lane passes 11/11 with Lean PASS. The two lanes agree within the declared 1e-4 comparison tolerance; the largest raw discrepancy is caused by independent eigenspace bases on a finite degenerate spectrum, not by a failed R340 inequality. The minimum normalized slack is approximately 0.0012248084683 and the largest normalized decomposition residual is below 4e-14 in both lanes.",
+      "formal_integration": {
+        "events": [],
+        "lean": "R340 PASS",
+        "negatives": [],
+        "no_new_event": true,
+        "no_new_negative": true,
+        "no_new_result": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "results": []
+      },
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": []
+      },
+      "gate_ids": [
+        "PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE",
+        "PA-CP1-ST8-Q3LOCK-FIXED-BETA-CANONICAL-OS-MIXTURE-COMMON-NORMAL-WSTAR-KMS-ENVELOPE",
+        "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001179",
+      "method": [
+        "Compile verification/lean/Tect/R340.lean with the pinned Lean toolchain and require a zero exit status with no Lean errors.",
+        "Build the declared d=3 Q3 Hamiltonian independently on bond2, square4 and grid2x3, diagonalize each finite Hamiltonian, and form the energy-basis transfer-word matrices at every declared source site.",
+        "For each graph, source, beta and the two declared tau contexts, flatten the q and p transfer-word matrices into complex Hilbert-Schmidt vectors and compute all four Gram-entry differences and the two R340 right-hand terms.",
+        "Require the conjugate-product decomposition residual and the R340 bound within the manifest absolute and relative tolerances, then repeat the calculation in a non-importing independent lane.",
+        "Run the integrated verifier to compare row keys and numerical fields within the declared eigenspace-basis tolerance, rerun Lean R340 and enforce the finite-only QFT scope firewall."
+      ],
+      "next_action": "Use the recorded vector-difference terms as the input contract for a cross-volume common-carrier test. Prove an explicit isometric transport or a source/volume/cutoff/beta-uniform bound; if neither can be derived for the exact Q3 data, register that missing-interface obstruction rather than promoting finite Gram control.",
+      "no_overclaim": "This record promotes only the finite Complex R340 theorem and its numerical instantiation on the declared Q3 matrices. It does not prove a common OS Hilbert space, thermodynamic dynamics, common alpha, Hamiltonian-to-OS identification, a GNS mass gap, continuum removal, C6, Sector A, Pre-A or a Clay result.",
+      "prior_exploration_id": "EXP-001178",
+      "provenance": "contemporaneous",
+      "qft_interface": {
+        "closed": "For each declared finite Q3 graph and source, the energy-basis transfer-word matrices at the two tau contexts are explicit complex Hilbert-Schmidt vectors and satisfy the R340 Gram perturbation bound after finite Gibbs normalization.",
+        "open": "An isometric transport between different finite volumes, source/volume/cutoff/beta-uniform vector bounds, common-word exhaustion Cauchy, direct D/delta-D convergence, common alpha, Hamiltonian-to-OS identification, GNS gap, continuum, C6, Sector A and Pre-A remain open.",
+        "tect_boundary": "Auxiliary finite QFT interface only; no physical reference, heat_root_incidence, canonical A1/R-192 production owner, Sector-A closure or Pre-A closure is supplied."
+      },
+      "question": "Can the exact Complex R340 Gram perturbation inequality be instantiated on actual finite Q3 Euclidean transfer-word matrices without asserting a cross-volume common carrier?",
+      "recorded_at": "2026-08-29T04:53:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001178",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-08-26",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Finite Q3 complex OS transfer-word Gram perturbation",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",

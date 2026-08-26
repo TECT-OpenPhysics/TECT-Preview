@@ -1,0 +1,4277 @@
+{
+  "assertion_count": 235,
+  "assertions": [
+    {
+      "actual": [
+        "EXP-001179",
+        "T-054",
+        false
+      ],
+      "expected": [
+        "EXP-001179",
+        "T-054",
+        false
+      ],
+      "group": "provenance",
+      "name": "identity",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "bond2",
+        "square4",
+        "grid2x3"
+      ],
+      "expected": "bond2/square4/grid2x3",
+      "group": "fixture",
+      "name": "graph fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "c6_closed": false,
+        "common_alpha_closed": false,
+        "common_word_exhaustion_closed": false,
+        "continuum_closed": false,
+        "direct_d_delta_d_cauchy_closed": false,
+        "finite_partition_positive_closed": true,
+        "finite_q3_hilbert_schmidt_vectors_reproduced": true,
+        "finite_q3_os_transfer_word_factorization_closed": true,
+        "finite_q3_source_sites_reproduced": true,
+        "hamiltonian_os_identification_closed": false,
+        "kms_gns_gap_closed": false,
+        "no_new_negative_result": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "pre_a_closed": false,
+        "r340_complex_gram_bound_closed": true,
+        "sector_a_closed": false,
+        "source_volume_cutoff_beta_uniform_closed": false,
+        "thermodynamic_common_os_hilbert_carrier_closed": false
+      },
+      "expected": "finite bridge only",
+      "group": "scope",
+      "name": "scope firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "finite_complex_gram_entry_perturbation"
+      ],
+      "expected": [
+        "finite_complex_gram_entry_perturbation"
+      ],
+      "group": "Lean",
+      "name": "Lean declarations",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "admit": 0,
+        "axiom": 0,
+        "sorry": 0,
+        "unsafe": 0
+      },
+      "expected": {
+        "admit": 0,
+        "axiom": 0,
+        "sorry": 0,
+        "unsafe": 0
+      },
+      "group": "Lean",
+      "name": "forbidden Lean tokens",
+      "status": "PASS"
+    },
+    {
+      "actual": 1,
+      "expected": 1,
+      "group": "registry",
+      "name": "registry uniqueness",
+      "status": "PASS"
+    },
+    {
+      "actual": "08bc5502a0fb3bceb53837209c43f34137d310d8022f12877cf674815ad55e1a",
+      "expected": "08bc5502a0fb3bceb53837209c43f34137d310d8022f12877cf674815ad55e1a",
+      "group": "registry",
+      "name": "registry hash",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.8087533809821137,
+      "expected": ">=1e-06",
+      "group": "Q3 dynamics",
+      "name": "bond2 noncommutation witness",
+      "status": "PASS"
+    },
+    {
+      "actual": 6.450497314837006,
+      "expected": ">1e-12",
+      "group": "normalization",
+      "name": "bond2 beta=0.25 partition",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        81,
+        81,
+        81,
+        81
+      ],
+      "expected": 81,
+      "group": "Hilbert-Schmidt",
+      "name": "bond2 site=0 beta=0.25 vector shape",
+      "status": "PASS"
+    },
+    {
+      "actual": 8.914144043670792e-17,
+      "expected": 1.0018307655498037e-08,
+      "group": "R340 instantiation",
+      "name": "bond2 site=0 beta=0.25 pair=(0,0) decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        5.9325456898713625e-05,
+        0.0018307655498036703
+      ],
+      "expected": "lhs<=rhs+1.0018307655498037e-08",
+      "group": "R340 instantiation",
+      "name": "bond2 site=0 beta=0.25 pair=(0,0) bound",
+      "status": "PASS"
+    },
+    {
+      "actual": 5.64567301684934e-16,
+      "expected": 1.001364485251919e-08,
+      "group": "R340 instantiation",
+      "name": "bond2 site=0 beta=0.25 pair=(0,1) decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        2.1340125213265567e-05,
+        0.0013644852519189576
+      ],
+      "expected": "lhs<=rhs+1.001364485251919e-08",
+      "group": "R340 instantiation",
+      "name": "bond2 site=0 beta=0.25 pair=(0,1) bound",
+      "status": "PASS"
+    },
+    {
+      "actual": 5.64567039059317e-16,
+      "expected": 1.001364485251919e-08,
+      "group": "R340 instantiation",
+      "name": "bond2 site=0 beta=0.25 pair=(1,0) decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        2.1340125213265567e-05,
+        0.0013644852519189583
+      ],
+      "expected": "lhs<=rhs+1.001364485251919e-08",
+      "group": "R340 instantiation",
+      "name": "bond2 site=0 beta=0.25 pair=(1,0) bound",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.1412659197987116e-16,
+      "expected": 1.0031072180984559e-08,
+      "group": "R340 instantiation",
+      "name": "bond2 site=0 beta=0.25 pair=(1,1) decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.0001327007013925942,
+        0.0031072180984559224
+      ],
+      "expected": "lhs<=rhs+1.0031072180984559e-08",
+      "group": "R340 instantiation",
+      "name": "bond2 site=0 beta=0.25 pair=(1,1) bound",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        81,
+        81,
+        81,
+        81
+      ],
+      "expected": 81,
+      "group": "Hilbert-Schmidt",
+      "name": "bond2 site=1 beta=0.25 vector shape",
+      "status": "PASS"
+    },
+    {
+      "actual": 2.4665798782100285e-17,
+      "expected": 1.0018307655498037e-08,
+      "group": "R340 instantiation",
+      "name": "bond2 site=1 beta=0.25 pair=(0,0) decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        5.932545689857594e-05,
+        0.0018307655498036935
+      ],
+      "expected": "lhs<=rhs+1.0018307655498037e-08",
+      "group": "R340 instantiation",
+      "name": "bond2 site=1 beta=0.25 pair=(0,0) bound",
+      "status": "PASS"
+    },
+    {
+      "actual": 4.3876200915538437e-16,
+      "expected": 1.001364485251919e-08,
+      "group": "R340 instantiation",
+      "name": "bond2 site=1 beta=0.25 pair=(0,1) decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        2.1340125213266736e-05,
+        0.00136448525191897
+      ],
+      "expected": "lhs<=rhs+1.001364485251919e-08",
+      "group": "R340 instantiation",
+      "name": "bond2 site=1 beta=0.25 pair=(0,1) bound",
+      "status": "PASS"
+    },
+    {
+      "actual": 4.3876198629763343e-16,
+      "expected": 1.001364485251919e-08,
+      "group": "R340 instantiation",
+      "name": "bond2 site=1 beta=0.25 pair=(1,0) decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        2.1340125213266736e-05,
+        0.00136448525191897
+      ],
+      "expected": "lhs<=rhs+1.001364485251919e-08",
+      "group": "R340 instantiation",
+      "name": "bond2 site=1 beta=0.25 pair=(1,0) bound",
+      "status": "PASS"
+    },
+    {
+      "actual": 2.570453565755773e-16,
+      "expected": 1.0031072180984559e-08,
+      "group": "R340 instantiation",
+      "name": "bond2 site=1 beta=0.25 pair=(1,1) decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.0001327007013927319,
+        0.0031072180984559185
+      ],
+      "expected": "lhs<=rhs+1.0031072180984559e-08",
+      "group": "R340 instantiation",
+      "name": "bond2 site=1 beta=0.25 pair=(1,1) bound",
+      "status": "PASS"
+    },
+    {
+      "actual": 4.857797358831654,
+      "expected": ">1e-12",
+      "group": "normalization",
+      "name": "bond2 beta=0.5 partition",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        81,
+        81,
+        81,
+        81
+      ],
+      "expected": 81,
+      "group": "Hilbert-Schmidt",
+      "name": "bond2 site=0 beta=0.5 vector shape",
+      "status": "PASS"
+    },
+    {
+      "actual": 2.37695240950679e-16,
+      "expected": 1.0036539909125728e-08,
+      "group": "R340 instantiation",
+      "name": "bond2 site=0 beta=0.5 pair=(0,0) decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.00022851310345188672,
+        0.003653990912572715
+      ],
+      "expected": "lhs<=rhs+1.0036539909125728e-08",
+      "group": "R340 instantiation",
+      "name": "bond2 site=0 beta=0.5 pair=(0,0) bound",
+      "status": "PASS"
+    },
+    {
+      "actual": 3.908996862109904e-17,
+      "expected": 1.002583041080724e-08,
+      "group": "R340 instantiation",
+      "name": "bond2 site=0 beta=0.5 pair=(0,1) decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        9.56966025484813e-05,
+        0.002583041080723847
+      ],
+      "expected": "lhs<=rhs+1.002583041080724e-08",
+      "group": "R340 instantiation",
+      "name": "bond2 site=0 beta=0.5 pair=(0,1) bound",
+      "status": "PASS"
+    },
+    {
+      "actual": 3.908739442217046e-17,
+      "expected": 1.002583041080724e-08,
+      "group": "R340 instantiation",
+      "name": "bond2 site=0 beta=0.5 pair=(1,0) decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        9.56966025484813e-05,
+        0.002583041080723848
+      ],
+      "expected": "lhs<=rhs+1.002583041080724e-08",
+      "group": "R340 instantiation",
+      "name": "bond2 site=0 beta=0.5 pair=(1,0) bound",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.6453420810219774e-16,
+      "expected": 1.005743971693516e-08,
+      "group": "R340 instantiation",
+      "name": "bond2 site=0 beta=0.5 pair=(1,1) decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.00049311043578261,
+        0.005743971693515879
+      ],
+      "expected": "lhs<=rhs+1.005743971693516e-08",
+      "group": "R340 instantiation",
+      "name": "bond2 site=0 beta=0.5 pair=(1,1) bound",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        81,
+        81,
+        81,
+        81
+      ],
+      "expected": 81,
+      "group": "Hilbert-Schmidt",
+      "name": "bond2 site=1 beta=0.5 vector shape",
+      "status": "PASS"
+    },
+    {
+      "actual": 2.6956649015984053e-16,
+      "expected": 1.0036539909125728e-08,
+      "group": "R340 instantiation",
+      "name": "bond2 site=1 beta=0.5 pair=(0,0) decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.00022851310345188672,
+        0.003653990912572748
+      ],
+      "expected": "lhs<=rhs+1.0036539909125728e-08",
+      "group": "R340 instantiation",
+      "name": "bond2 site=1 beta=0.5 pair=(0,0) bound",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.7508107739062895e-16,
+      "expected": 1.002583041080724e-08,
+      "group": "R340 instantiation",
+      "name": "bond2 site=1 beta=0.5 pair=(0,1) decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        9.569660254847779e-05,
+        0.002583041080723877
+      ],
+      "expected": "lhs<=rhs+1.002583041080724e-08",
+      "group": "R340 instantiation",
+      "name": "bond2 site=1 beta=0.5 pair=(0,1) bound",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.750802956430329e-16,
+      "expected": 1.002583041080724e-08,
+      "group": "R340 instantiation",
+      "name": "bond2 site=1 beta=0.5 pair=(1,0) decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        9.569660254847779e-05,
+        0.0025830410807238767
+      ],
+      "expected": "lhs<=rhs+1.002583041080724e-08",
+      "group": "R340 instantiation",
+      "name": "bond2 site=1 beta=0.5 pair=(1,0) bound",
+      "status": "PASS"
+    },
+    {
+      "actual": 3.7513442346469606e-16,
+      "expected": 1.005743971693516e-08,
+      "group": "R340 instantiation",
+      "name": "bond2 site=1 beta=0.5 pair=(1,1) decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.0004931104357827929,
+        0.0057439716935159014
+      ],
+      "expected": "lhs<=rhs+1.005743971693516e-08",
+      "group": "R340 instantiation",
+      "name": "bond2 site=1 beta=0.5 pair=(1,1) bound",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.617506761964228,
+      "expected": ">=1e-06",
+      "group": "Q3 dynamics",
+      "name": "square4 noncommutation witness",
+      "status": "PASS"
+    },
+    {
+      "actual": 32.776044096508436,
+      "expected": ">1e-12",
+      "group": "normalization",
+      "name": "square4 beta=0.25 partition",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        6561,
+        6561,
+        6561,
+        6561
+      ],
+      "expected": 6561,
+      "group": "Hilbert-Schmidt",
+      "name": "square4 site=0 beta=0.25 vector shape",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.9287036239751558e-15,
+      "expected": 1.001458956137858e-08,
+      "group": "R340 instantiation",
+      "name": "square4 site=0 beta=0.25 pair=(0,0) decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        5.6155821568967385e-05,
+        0.001458956137857974
+      ],
+      "expected": "lhs<=rhs+1.001458956137858e-08",
+      "group": "R340 instantiation",
+      "name": "square4 site=0 beta=0.25 pair=(0,0) bound",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.6378438432716084e-15,
+      "expected": 1.0015340675800308e-08,
+      "group": "R340 instantiation",
+      "name": "square4 site=0 beta=0.25 pair=(0,1) decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        8.212355306438826e-05,
+        0.0015340675800309081
+      ],
+      "expected": "lhs<=rhs+1.0015340675800308e-08",
+      "group": "R340 instantiation",
+      "name": "square4 site=0 beta=0.25 pair=(0,1) bound",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.6378436365272212e-15,
+      "expected": 1.0015340675800308e-08,
+      "group": "R340 instantiation",
+      "name": "square4 site=0 beta=0.25 pair=(1,0) decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        8.212355306438826e-05,
+        0.0015340675800309086
+      ],
+      "expected": "lhs<=rhs+1.0015340675800308e-08",
+      "group": "R340 instantiation",
+      "name": "square4 site=0 beta=0.25 pair=(1,0) bound",
+      "status": "PASS"
+    },
+    {
+      "actual": 2.9767488770787036e-15,
+      "expected": 1.0048074890527087e-08,
+      "group": "R340 instantiation",
+      "name": "square4 site=0 beta=0.25 pair=(1,1) decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.000287379459546582,
+        0.004807489052708715
+      ],
+      "expected": "lhs<=rhs+1.0048074890527087e-08",
+      "group": "R340 instantiation",
+      "name": "square4 site=0 beta=0.25 pair=(1,1) bound",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        6561,
+        6561,
+        6561,
+        6561
+      ],
+      "expected": 6561,
+      "group": "Hilbert-Schmidt",
+      "name": "square4 site=1 beta=0.25 vector shape",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.9283463696515902e-15,
+      "expected": 1.001458956137858e-08,
+      "group": "R340 instantiation",
+      "name": "square4 site=1 beta=0.25 pair=(0,0) decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        5.6155821568967385e-05,
+        0.0014589561378579928
+      ],
+      "expected": "lhs<=rhs+1.001458956137858e-08",
+      "group": "R340 instantiation",
+      "name": "square4 site=1 beta=0.25 pair=(0,0) bound",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.5104025297578244e-15,
+      "expected": 1.0015340675800308e-08,
+      "group": "R340 instantiation",
+      "name": "square4 site=1 beta=0.25 pair=(0,1) decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        8.212355306439124e-05,
+        0.0015340675800309107
+      ],
+      "expected": "lhs<=rhs+1.0015340675800308e-08",
+      "group": "R340 instantiation",
+      "name": "square4 site=1 beta=0.25 pair=(0,1) bound",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.5104025297578244e-15,
+      "expected": 1.0015340675800308e-08,
+      "group": "R340 instantiation",
+      "name": "square4 site=1 beta=0.25 pair=(1,0) decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        8.212355306439124e-05,
+        0.0015340675800309097
+      ],
+      "expected": "lhs<=rhs+1.0015340675800308e-08",
+      "group": "R340 instantiation",
+      "name": "square4 site=1 beta=0.25 pair=(1,0) bound",
+      "status": "PASS"
+    },
+    {
+      "actual": 2.9341429910831425e-15,
+      "expected": 1.0048074890527087e-08,
+      "group": "R340 instantiation",
+      "name": "square4 site=1 beta=0.25 pair=(1,1) decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.000287379459546582,
+        0.0048074890527086975
+      ],
+      "expected": "lhs<=rhs+1.0048074890527087e-08",
+      "group": "R340 instantiation",
+      "name": "square4 site=1 beta=0.25 pair=(1,1) bound",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        6561,
+        6561,
+        6561,
+        6561
+      ],
+      "expected": 6561,
+      "group": "Hilbert-Schmidt",
+      "name": "square4 site=2 beta=0.25 vector shape",
+      "status": "PASS"
+    },
+    {
+      "actual": 4.2708431218066185e-16,
+      "expected": 1.001458956137858e-08,
+      "group": "R340 instantiation",
+      "name": "square4 site=2 beta=0.25 pair=(0,0) decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        5.615582157135205e-05,
+        0.001458956137858009
+      ],
+      "expected": "lhs<=rhs+1.001458956137858e-08",
+      "group": "R340 instantiation",
+      "name": "square4 site=2 beta=0.25 pair=(0,0) bound",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.929600921991525e-15,
+      "expected": 1.001534067580031e-08,
+      "group": "R340 instantiation",
+      "name": "square4 site=2 beta=0.25 pair=(0,1) decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        8.212355306438623e-05,
+        0.0015340675800309344
+      ],
+      "expected": "lhs<=rhs+1.001534067580031e-08",
+      "group": "R340 instantiation",
+      "name": "square4 site=2 beta=0.25 pair=(0,1) bound",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.9296008703054886e-15,
+      "expected": 1.001534067580031e-08,
+      "group": "R340 instantiation",
+      "name": "square4 site=2 beta=0.25 pair=(1,0) decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        8.212355306438623e-05,
+        0.0015340675800309346
+      ],
+      "expected": "lhs<=rhs+1.001534067580031e-08",
+      "group": "R340 instantiation",
+      "name": "square4 site=2 beta=0.25 pair=(1,0) bound",
+      "status": "PASS"
+    },
+    {
+      "actual": 3.802562093462236e-15,
+      "expected": 1.0048074890527087e-08,
+      "group": "R340 instantiation",
+      "name": "square4 site=2 beta=0.25 pair=(1,1) decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.0002873794595474491,
+        0.004807489052708727
+      ],
+      "expected": "lhs<=rhs+1.0048074890527087e-08",
+      "group": "R340 instantiation",
+      "name": "square4 site=2 beta=0.25 pair=(1,1) bound",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        6561,
+        6561,
+        6561,
+        6561
+      ],
+      "expected": 6561,
+      "group": "Hilbert-Schmidt",
+      "name": "square4 site=3 beta=0.25 vector shape",
+      "status": "PASS"
+    },
+    {
+      "actual": 2.863208160393017e-15,
+      "expected": 1.001458956137858e-08,
+      "group": "R340 instantiation",
+      "name": "square4 site=3 beta=0.25 pair=(0,0) decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        5.615582156810023e-05,
+        0.001458956137858017
+      ],
+      "expected": "lhs<=rhs+1.001458956137858e-08",
+      "group": "R340 instantiation",
+      "name": "square4 site=3 beta=0.25 pair=(0,0) bound",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.70451908848934e-15,
+      "expected": 1.001534067580031e-08,
+      "group": "R340 instantiation",
+      "name": "square4 site=3 beta=0.25 pair=(0,1) decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        8.212355306438689e-05,
+        0.0015340675800309333
+      ],
+      "expected": "lhs<=rhs+1.001534067580031e-08",
+      "group": "R340 instantiation",
+      "name": "square4 site=3 beta=0.25 pair=(0,1) bound",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.70451908848934e-15,
+      "expected": 1.001534067580031e-08,
+      "group": "R340 instantiation",
+      "name": "square4 site=3 beta=0.25 pair=(1,0) decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        8.212355306438689e-05,
+        0.0015340675800309337
+      ],
+      "expected": "lhs<=rhs+1.001534067580031e-08",
+      "group": "R340 instantiation",
+      "name": "square4 site=3 beta=0.25 pair=(1,0) bound",
+      "status": "PASS"
+    },
+    {
+      "actual": 2.9566897083925945e-15,
+      "expected": 1.0048074890527087e-08,
+      "group": "R340 instantiation",
+      "name": "square4 site=3 beta=0.25 pair=(1,1) decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.000287379459546582,
+        0.004807489052708728
+      ],
+      "expected": "lhs<=rhs+1.0048074890527087e-08",
+      "group": "R340 instantiation",
+      "name": "square4 site=3 beta=0.25 pair=(1,1) bound",
+      "status": "PASS"
+    },
+    {
+      "actual": 15.577401146831727,
+      "expected": ">1e-12",
+      "group": "normalization",
+      "name": "square4 beta=0.5 partition",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        6561,
+        6561,
+        6561,
+        6561
+      ],
+      "expected": 6561,
+      "group": "Hilbert-Schmidt",
+      "name": "square4 site=0 beta=0.5 vector shape",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.005594761309499e-16,
+      "expected": 1.0025815799765619e-08,
+      "group": "R340 instantiation",
+      "name": "square4 site=0 beta=0.5 pair=(0,0) decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.0001989043572995812,
+        0.002581579976561965
+      ],
+      "expected": "lhs<=rhs+1.0025815799765619e-08",
+      "group": "R340 instantiation",
+      "name": "square4 site=0 beta=0.5 pair=(0,0) bound",
+      "status": "PASS"
+    },
+    {
+      "actual": 3.708692425675641e-16,
+      "expected": 1.0027807190004166e-08,
+      "group": "R340 instantiation",
+      "name": "square4 site=0 beta=0.5 pair=(0,1) decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.0003237576646786968,
+        0.0027807190004166655
+      ],
+      "expected": "lhs<=rhs+1.0027807190004166e-08",
+      "group": "R340 instantiation",
+      "name": "square4 site=0 beta=0.5 pair=(0,1) bound",
+      "status": "PASS"
+    },
+    {
+      "actual": 3.70868372555495e-16,
+      "expected": 1.0027807190004166e-08,
+      "group": "R340 instantiation",
+      "name": "square4 site=0 beta=0.5 pair=(1,0) decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.0003237576646786968,
+        0.0027807190004166655
+      ],
+      "expected": "lhs<=rhs+1.0027807190004166e-08",
+      "group": "R340 instantiation",
+      "name": "square4 site=0 beta=0.5 pair=(1,0) bound",
+      "status": "PASS"
+    },
+    {
+      "actual": 5.5024853544921e-15,
+      "expected": 1.0085530474864743e-08,
+      "group": "R340 instantiation",
+      "name": "square4 site=0 beta=0.5 pair=(1,1) decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.0010024342653031752,
+        0.00855304748647439
+      ],
+      "expected": "lhs<=rhs+1.0085530474864743e-08",
+      "group": "R340 instantiation",
+      "name": "square4 site=0 beta=0.5 pair=(1,1) bound",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        6561,
+        6561,
+        6561,
+        6561
+      ],
+      "expected": 6561,
+      "group": "Hilbert-Schmidt",
+      "name": "square4 site=1 beta=0.5 vector shape",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.0156173004587632e-16,
+      "expected": 1.0025815799765619e-08,
+      "group": "R340 instantiation",
+      "name": "square4 site=1 beta=0.5 pair=(0,0) decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.00019890435729980925,
+        0.002581579976561973
+      ],
+      "expected": "lhs<=rhs+1.0025815799765619e-08",
+      "group": "R340 instantiation",
+      "name": "square4 site=1 beta=0.5 pair=(0,0) bound",
+      "status": "PASS"
+    },
+    {
+      "actual": 2.2069447367637943e-16,
+      "expected": 1.0027807190004166e-08,
+      "group": "R340 instantiation",
+      "name": "square4 site=1 beta=0.5 pair=(0,1) decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.00032375766467869976,
+        0.0027807190004166585
+      ],
+      "expected": "lhs<=rhs+1.0027807190004166e-08",
+      "group": "R340 instantiation",
+      "name": "square4 site=1 beta=0.5 pair=(0,1) bound",
+      "status": "PASS"
+    },
+    {
+      "actual": 2.2069458242088004e-16,
+      "expected": 1.0027807190004166e-08,
+      "group": "R340 instantiation",
+      "name": "square4 site=1 beta=0.5 pair=(1,0) decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.00032375766467869976,
+        0.0027807190004166594
+      ],
+      "expected": "lhs<=rhs+1.0027807190004166e-08",
+      "group": "R340 instantiation",
+      "name": "square4 site=1 beta=0.5 pair=(1,0) bound",
+      "status": "PASS"
+    },
+    {
+      "actual": 7.157874737312222e-15,
+      "expected": 1.0085530474864743e-08,
+      "group": "R340 instantiation",
+      "name": "square4 site=1 beta=0.5 pair=(1,1) decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.0010024342653015786,
+        0.00855304748647438
+      ],
+      "expected": "lhs<=rhs+1.0085530474864743e-08",
+      "group": "R340 instantiation",
+      "name": "square4 site=1 beta=0.5 pair=(1,1) bound",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        6561,
+        6561,
+        6561,
+        6561
+      ],
+      "expected": 6561,
+      "group": "Hilbert-Schmidt",
+      "name": "square4 site=2 beta=0.5 vector shape",
+      "status": "PASS"
+    },
+    {
+      "actual": 4.3876449164556216e-16,
+      "expected": 1.0025815799765619e-08,
+      "group": "R340 instantiation",
+      "name": "square4 site=2 beta=0.5 pair=(0,0) decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.00019890435730015134,
+        0.002581579976561963
+      ],
+      "expected": "lhs<=rhs+1.0025815799765619e-08",
+      "group": "R340 instantiation",
+      "name": "square4 site=2 beta=0.5 pair=(0,0) bound",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.0390224122646594e-16,
+      "expected": 1.0027807190004166e-08,
+      "group": "R340 instantiation",
+      "name": "square4 site=2 beta=0.5 pair=(0,1) decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.0003237576646787007,
+        0.0027807190004166668
+      ],
+      "expected": "lhs<=rhs+1.0027807190004166e-08",
+      "group": "R340 instantiation",
+      "name": "square4 site=2 beta=0.5 pair=(0,1) bound",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.0389985407171995e-16,
+      "expected": 1.0027807190004166e-08,
+      "group": "R340 instantiation",
+      "name": "square4 site=2 beta=0.5 pair=(1,0) decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.0003237576646787007,
+        0.002780719000416667
+      ],
+      "expected": "lhs<=rhs+1.0027807190004166e-08",
+      "group": "R340 instantiation",
+      "name": "square4 site=2 beta=0.5 pair=(1,0) bound",
+      "status": "PASS"
+    },
+    {
+      "actual": 7.488284444599628e-15,
+      "expected": 1.0085530474864745e-08,
+      "group": "R340 instantiation",
+      "name": "square4 site=2 beta=0.5 pair=(1,1) decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.0010024342653012365,
+        0.008553047486474397
+      ],
+      "expected": "lhs<=rhs+1.0085530474864745e-08",
+      "group": "R340 instantiation",
+      "name": "square4 site=2 beta=0.5 pair=(1,1) bound",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        6561,
+        6561,
+        6561,
+        6561
+      ],
+      "expected": 6561,
+      "group": "Hilbert-Schmidt",
+      "name": "square4 site=3 beta=0.5 vector shape",
+      "status": "PASS"
+    },
+    {
+      "actual": 3.454156756247773e-16,
+      "expected": 1.0025815799765619e-08,
+      "group": "R340 instantiation",
+      "name": "square4 site=3 beta=0.5 pair=(0,0) decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.0001989043572993531,
+        0.002581579976561966
+      ],
+      "expected": "lhs<=rhs+1.0025815799765619e-08",
+      "group": "R340 instantiation",
+      "name": "square4 site=3 beta=0.5 pair=(0,0) bound",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.1330239528263304e-16,
+      "expected": 1.0027807190004166e-08,
+      "group": "R340 instantiation",
+      "name": "square4 site=3 beta=0.5 pair=(0,1) decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.00032375766467870214,
+        0.0027807190004166408
+      ],
+      "expected": "lhs<=rhs+1.0027807190004166e-08",
+      "group": "R340 instantiation",
+      "name": "square4 site=3 beta=0.5 pair=(0,1) bound",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.1330473177751967e-16,
+      "expected": 1.0027807190004166e-08,
+      "group": "R340 instantiation",
+      "name": "square4 site=3 beta=0.5 pair=(1,0) decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.00032375766467870214,
+        0.0027807190004166408
+      ],
+      "expected": "lhs<=rhs+1.0027807190004166e-08",
+      "group": "R340 instantiation",
+      "name": "square4 site=3 beta=0.5 pair=(1,0) bound",
+      "status": "PASS"
+    },
+    {
+      "actual": 7.483607259663305e-15,
+      "expected": 1.0085530474864743e-08,
+      "group": "R340 instantiation",
+      "name": "square4 site=3 beta=0.5 pair=(1,1) decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.0010024342653012365,
+        0.008553047486474332
+      ],
+      "expected": "lhs<=rhs+1.0085530474864743e-08",
+      "group": "R340 instantiation",
+      "name": "square4 site=3 beta=0.5 pair=(1,1) bound",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.6175067619642296,
+      "expected": ">=1e-06",
+      "group": "Q3 dynamics",
+      "name": "grid2x3 noncommutation witness",
+      "status": "PASS"
+    },
+    {
+      "actual": 161.84802621236062,
+      "expected": ">1e-12",
+      "group": "normalization",
+      "name": "grid2x3 beta=0.25 partition",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        531441,
+        531441,
+        531441,
+        531441
+      ],
+      "expected": 531441,
+      "group": "Hilbert-Schmidt",
+      "name": "grid2x3 site=0 beta=0.25 vector shape",
+      "status": "PASS"
+    },
+    {
+      "actual": 5.321491270197202e-15,
+      "expected": 1.001459316921001e-08,
+      "group": "R340 instantiation",
+      "name": "grid2x3 site=0 beta=0.25 pair=(0,0) decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        5.620590572292408e-05,
+        0.0014593169210010376
+      ],
+      "expected": "lhs<=rhs+1.001459316921001e-08",
+      "group": "R340 instantiation",
+      "name": "grid2x3 site=0 beta=0.25 pair=(0,0) bound",
+      "status": "PASS"
+    },
+    {
+      "actual": 3.9396513318097657e-14,
+      "expected": 1.0015508071876318e-08,
+      "group": "R340 instantiation",
+      "name": "grid2x3 site=0 beta=0.25 pair=(0,1) decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        8.169081445313654e-05,
+        0.0015508071876318185
+      ],
+      "expected": "lhs<=rhs+1.0015508071876318e-08",
+      "group": "R340 instantiation",
+      "name": "grid2x3 site=0 beta=0.25 pair=(0,1) bound",
+      "status": "PASS"
+    },
+    {
+      "actual": 3.939651340183378e-14,
+      "expected": 1.0015508071876318e-08,
+      "group": "R340 instantiation",
+      "name": "grid2x3 site=0 beta=0.25 pair=(1,0) decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        8.169081445313654e-05,
+        0.0015508071876318185
+      ],
+      "expected": "lhs<=rhs+1.0015508071876318e-08",
+      "group": "R340 instantiation",
+      "name": "grid2x3 site=0 beta=0.25 pair=(1,0) bound",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.488242617681955e-14,
+      "expected": 1.004764575147721e-08,
+      "group": "R340 instantiation",
+      "name": "grid2x3 site=0 beta=0.25 pair=(1,1) decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.0002819358813669225,
+        0.004764575147720875
+      ],
+      "expected": "lhs<=rhs+1.004764575147721e-08",
+      "group": "R340 instantiation",
+      "name": "grid2x3 site=0 beta=0.25 pair=(1,1) bound",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        531441,
+        531441,
+        531441,
+        531441
+      ],
+      "expected": 531441,
+      "group": "Hilbert-Schmidt",
+      "name": "grid2x3 site=1 beta=0.25 vector shape",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.492212648027946e-14,
+      "expected": 1.0012778345216214e-08,
+      "group": "R340 instantiation",
+      "name": "grid2x3 site=1 beta=0.25 pair=(0,0) decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        5.302605329266137e-05,
+        0.0012778345216213904
+      ],
+      "expected": "lhs<=rhs+1.0012778345216214e-08",
+      "group": "R340 instantiation",
+      "name": "grid2x3 site=1 beta=0.25 pair=(0,0) bound",
+      "status": "PASS"
+    },
+    {
+      "actual": 9.336611142720812e-15,
+      "expected": 1.001557258564775e-08,
+      "group": "R340 instantiation",
+      "name": "grid2x3 site=1 beta=0.25 pair=(0,1) decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.00013978255933164846,
+        0.0015572585647748306
+      ],
+      "expected": "lhs<=rhs+1.001557258564775e-08",
+      "group": "R340 instantiation",
+      "name": "grid2x3 site=1 beta=0.25 pair=(0,1) bound",
+      "status": "PASS"
+    },
+    {
+      "actual": 9.336610975248562e-15,
+      "expected": 1.001557258564775e-08,
+      "group": "R340 instantiation",
+      "name": "grid2x3 site=1 beta=0.25 pair=(1,0) decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.00013978255933164846,
+        0.0015572585647748315
+      ],
+      "expected": "lhs<=rhs+1.001557258564775e-08",
+      "group": "R340 instantiation",
+      "name": "grid2x3 site=1 beta=0.25 pair=(1,0) bound",
+      "status": "PASS"
+    },
+    {
+      "actual": 4.925410002903062e-15,
+      "expected": 1.0062353529190963e-08,
+      "group": "R340 instantiation",
+      "name": "grid2x3 site=1 beta=0.25 pair=(1,1) decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.0004837106212285763,
+        0.0062353529190963325
+      ],
+      "expected": "lhs<=rhs+1.0062353529190963e-08",
+      "group": "R340 instantiation",
+      "name": "grid2x3 site=1 beta=0.25 pair=(1,1) bound",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        531441,
+        531441,
+        531441,
+        531441
+      ],
+      "expected": 531441,
+      "group": "Hilbert-Schmidt",
+      "name": "grid2x3 site=2 beta=0.25 vector shape",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.4502079263056497e-15,
+      "expected": 1.001459316921001e-08,
+      "group": "R340 instantiation",
+      "name": "grid2x3 site=2 beta=0.25 pair=(0,0) decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        5.6205905726787436e-05,
+        0.001459316921001052
+      ],
+      "expected": "lhs<=rhs+1.001459316921001e-08",
+      "group": "R340 instantiation",
+      "name": "grid2x3 site=2 beta=0.25 pair=(0,0) bound",
+      "status": "PASS"
+    },
+    {
+      "actual": 3.9222506772827483e-14,
+      "expected": 1.001550807187632e-08,
+      "group": "R340 instantiation",
+      "name": "grid2x3 site=2 beta=0.25 pair=(0,1) decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        8.169081445314e-05,
+        0.0015508071876318972
+      ],
+      "expected": "lhs<=rhs+1.001550807187632e-08",
+      "group": "R340 instantiation",
+      "name": "grid2x3 site=2 beta=0.25 pair=(0,1) bound",
+      "status": "PASS"
+    },
+    {
+      "actual": 3.922250660632763e-14,
+      "expected": 1.001550807187632e-08,
+      "group": "R340 instantiation",
+      "name": "grid2x3 site=2 beta=0.25 pair=(1,0) decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        8.169081445314e-05,
+        0.0015508071876318965
+      ],
+      "expected": "lhs<=rhs+1.001550807187632e-08",
+      "group": "R340 instantiation",
+      "name": "grid2x3 site=2 beta=0.25 pair=(1,0) bound",
+      "status": "PASS"
+    },
+    {
+      "actual": 2.2613352872821483e-14,
+      "expected": 1.0047645751477208e-08,
+      "group": "R340 instantiation",
+      "name": "grid2x3 site=2 beta=0.25 pair=(1,1) decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.00028193588137464924,
+        0.004764575147720826
+      ],
+      "expected": "lhs<=rhs+1.0047645751477208e-08",
+      "group": "R340 instantiation",
+      "name": "grid2x3 site=2 beta=0.25 pair=(1,1) bound",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        531441,
+        531441,
+        531441,
+        531441
+      ],
+      "expected": 531441,
+      "group": "Hilbert-Schmidt",
+      "name": "grid2x3 site=3 beta=0.25 vector shape",
+      "status": "PASS"
+    },
+    {
+      "actual": 3.2257246836889753e-15,
+      "expected": 1.001459316921001e-08,
+      "group": "R340 instantiation",
+      "name": "grid2x3 site=3 beta=0.25 pair=(0,0) decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        5.620590572503137e-05,
+        0.0014593169210010322
+      ],
+      "expected": "lhs<=rhs+1.001459316921001e-08",
+      "group": "R340 instantiation",
+      "name": "grid2x3 site=3 beta=0.25 pair=(0,0) bound",
+      "status": "PASS"
+    },
+    {
+      "actual": 3.921523287186736e-14,
+      "expected": 1.0015508071876318e-08,
+      "group": "R340 instantiation",
+      "name": "grid2x3 site=3 beta=0.25 pair=(0,1) decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        8.169081445314295e-05,
+        0.0015508071876318016
+      ],
+      "expected": "lhs<=rhs+1.0015508071876318e-08",
+      "group": "R340 instantiation",
+      "name": "grid2x3 site=3 beta=0.25 pair=(0,1) bound",
+      "status": "PASS"
+    },
+    {
+      "actual": 3.921523303933962e-14,
+      "expected": 1.0015508071876318e-08,
+      "group": "R340 instantiation",
+      "name": "grid2x3 site=3 beta=0.25 pair=(1,0) decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        8.169081445314295e-05,
+        0.001550807187631802
+      ],
+      "expected": "lhs<=rhs+1.0015508071876318e-08",
+      "group": "R340 instantiation",
+      "name": "grid2x3 site=3 beta=0.25 pair=(1,0) bound",
+      "status": "PASS"
+    },
+    {
+      "actual": 2.0325526421923913e-14,
+      "expected": 1.0047645751477208e-08,
+      "group": "R340 instantiation",
+      "name": "grid2x3 site=3 beta=0.25 pair=(1,1) decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.00028193588137236634,
+        0.004764575147720826
+      ],
+      "expected": "lhs<=rhs+1.0047645751477208e-08",
+      "group": "R340 instantiation",
+      "name": "grid2x3 site=3 beta=0.25 pair=(1,1) bound",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        531441,
+        531441,
+        531441,
+        531441
+      ],
+      "expected": 531441,
+      "group": "Hilbert-Schmidt",
+      "name": "grid2x3 site=4 beta=0.25 vector shape",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.5281015508641125e-14,
+      "expected": 1.0012778345216214e-08,
+      "group": "R340 instantiation",
+      "name": "grid2x3 site=4 beta=0.25 pair=(0,0) decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        5.3026053293012585e-05,
+        0.0012778345216213904
+      ],
+      "expected": "lhs<=rhs+1.0012778345216214e-08",
+      "group": "R340 instantiation",
+      "name": "grid2x3 site=4 beta=0.25 pair=(0,0) bound",
+      "status": "PASS"
+    },
+    {
+      "actual": 8.801589367600148e-15,
+      "expected": 1.0015572585647748e-08,
+      "group": "R340 instantiation",
+      "name": "grid2x3 site=4 beta=0.25 pair=(0,1) decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.00013978255933163556,
+        0.001557258564774817
+      ],
+      "expected": "lhs<=rhs+1.0015572585647748e-08",
+      "group": "R340 instantiation",
+      "name": "grid2x3 site=4 beta=0.25 pair=(0,1) bound",
+      "status": "PASS"
+    },
+    {
+      "actual": 8.801589283864057e-15,
+      "expected": 1.0015572585647748e-08,
+      "group": "R340 instantiation",
+      "name": "grid2x3 site=4 beta=0.25 pair=(1,0) decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.00013978255933163556,
+        0.0015572585647748176
+      ],
+      "expected": "lhs<=rhs+1.0015572585647748e-08",
+      "group": "R340 instantiation",
+      "name": "grid2x3 site=4 beta=0.25 pair=(1,0) bound",
+      "status": "PASS"
+    },
+    {
+      "actual": 5.432682130913481e-15,
+      "expected": 1.0062353529190963e-08,
+      "group": "R340 instantiation",
+      "name": "grid2x3 site=4 beta=0.25 pair=(1,1) decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.00048371062122804946,
+        0.006235352919096302
+      ],
+      "expected": "lhs<=rhs+1.0062353529190963e-08",
+      "group": "R340 instantiation",
+      "name": "grid2x3 site=4 beta=0.25 pair=(1,1) bound",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        531441,
+        531441,
+        531441,
+        531441
+      ],
+      "expected": 531441,
+      "group": "Hilbert-Schmidt",
+      "name": "grid2x3 site=5 beta=0.25 vector shape",
+      "status": "PASS"
+    },
+    {
+      "actual": 4.9335987264028924e-17,
+      "expected": 1.001459316921001e-08,
+      "group": "R340 instantiation",
+      "name": "grid2x3 site=5 beta=0.25 pair=(0,0) decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        5.62059057281923e-05,
+        0.0014593169210010304
+      ],
+      "expected": "lhs<=rhs+1.001459316921001e-08",
+      "group": "R340 instantiation",
+      "name": "grid2x3 site=5 beta=0.25 pair=(0,0) bound",
+      "status": "PASS"
+    },
+    {
+      "actual": 3.8871946564004825e-14,
+      "expected": 1.001550807187632e-08,
+      "group": "R340 instantiation",
+      "name": "grid2x3 site=5 beta=0.25 pair=(0,1) decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        8.169081445313534e-05,
+        0.0015508071876318846
+      ],
+      "expected": "lhs<=rhs+1.001550807187632e-08",
+      "group": "R340 instantiation",
+      "name": "grid2x3 site=5 beta=0.25 pair=(0,1) bound",
+      "status": "PASS"
+    },
+    {
+      "actual": 3.88719465624843e-14,
+      "expected": 1.001550807187632e-08,
+      "group": "R340 instantiation",
+      "name": "grid2x3 site=5 beta=0.25 pair=(1,0) decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        8.169081445313534e-05,
+        0.0015508071876318842
+      ],
+      "expected": "lhs<=rhs+1.001550807187632e-08",
+      "group": "R340 instantiation",
+      "name": "grid2x3 site=5 beta=0.25 pair=(1,0) bound",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.540457520040296e-14,
+      "expected": 1.0047645751477208e-08,
+      "group": "R340 instantiation",
+      "name": "grid2x3 site=5 beta=0.25 pair=(1,1) decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.0002819358813674494,
+        0.004764575147720785
+      ],
+      "expected": "lhs<=rhs+1.0047645751477208e-08",
+      "group": "R340 instantiation",
+      "name": "grid2x3 site=5 beta=0.25 pair=(1,1) bound",
+      "status": "PASS"
+    },
+    {
+      "actual": 47.28285992934961,
+      "expected": ">1e-12",
+      "group": "normalization",
+      "name": "grid2x3 beta=0.5 partition",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        531441,
+        531441,
+        531441,
+        531441
+      ],
+      "expected": 531441,
+      "group": "Hilbert-Schmidt",
+      "name": "grid2x3 site=0 beta=0.5 vector shape",
+      "status": "PASS"
+    },
+    {
+      "actual": 7.772727399444886e-15,
+      "expected": 1.0025779240285008e-08,
+      "group": "R340 instantiation",
+      "name": "grid2x3 site=0 beta=0.5 pair=(0,0) decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.00019984630137804014,
+        0.002577924028500808
+      ],
+      "expected": "lhs<=rhs+1.0025779240285008e-08",
+      "group": "R340 instantiation",
+      "name": "grid2x3 site=0 beta=0.5 pair=(0,0) bound",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.6867511356117796e-14,
+      "expected": 1.0028178036013877e-08,
+      "group": "R340 instantiation",
+      "name": "grid2x3 site=0 beta=0.5 pair=(0,1) decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.00032118245619908024,
+        0.002817803601387661
+      ],
+      "expected": "lhs<=rhs+1.0028178036013877e-08",
+      "group": "R340 instantiation",
+      "name": "grid2x3 site=0 beta=0.5 pair=(0,1) bound",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.6867511146737445e-14,
+      "expected": 1.0028178036013877e-08,
+      "group": "R340 instantiation",
+      "name": "grid2x3 site=0 beta=0.5 pair=(1,0) decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.00032118245619908024,
+        0.002817803601387659
+      ],
+      "expected": "lhs<=rhs+1.0028178036013877e-08",
+      "group": "R340 instantiation",
+      "name": "grid2x3 site=0 beta=0.5 pair=(1,0) bound",
+      "status": "PASS"
+    },
+    {
+      "actual": 2.9189579823029204e-14,
+      "expected": 1.0084443627200925e-08,
+      "group": "R340 instantiation",
+      "name": "grid2x3 site=0 beta=0.5 pair=(1,1) decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.0009753797334313825,
+        0.008444362720092522
+      ],
+      "expected": "lhs<=rhs+1.0084443627200925e-08",
+      "group": "R340 instantiation",
+      "name": "grid2x3 site=0 beta=0.5 pair=(1,1) bound",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        531441,
+        531441,
+        531441,
+        531441
+      ],
+      "expected": 531441,
+      "group": "Hilbert-Schmidt",
+      "name": "grid2x3 site=1 beta=0.5 vector shape",
+      "status": "PASS"
+    },
+    {
+      "actual": 2.435271633287483e-14,
+      "expected": 1.0020991486997124e-08,
+      "group": "R340 instantiation",
+      "name": "grid2x3 site=1 beta=0.5 pair=(0,0) decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.00017259487495336538,
+        0.0020991486997123205
+      ],
+      "expected": "lhs<=rhs+1.0020991486997124e-08",
+      "group": "R340 instantiation",
+      "name": "grid2x3 site=1 beta=0.5 pair=(0,0) bound",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.7266819111338314e-14,
+      "expected": 1.0026802057674334e-08,
+      "group": "R340 instantiation",
+      "name": "grid2x3 site=1 beta=0.5 pair=(0,1) decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.0005176179795100298,
+        0.0026802057674334035
+      ],
+      "expected": "lhs<=rhs+1.0026802057674334e-08",
+      "group": "R340 instantiation",
+      "name": "grid2x3 site=1 beta=0.5 pair=(0,1) bound",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.726681925465138e-14,
+      "expected": 1.0026802057674334e-08,
+      "group": "R340 instantiation",
+      "name": "grid2x3 site=1 beta=0.5 pair=(1,0) decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.0005176179795100298,
+        0.0026802057674334026
+      ],
+      "expected": "lhs<=rhs+1.0026802057674334e-08",
+      "group": "R340 instantiation",
+      "name": "grid2x3 site=1 beta=0.5 pair=(1,0) bound",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.982630847242749e-15,
+      "expected": 1.0104786103550064e-08,
+      "group": "R340 instantiation",
+      "name": "grid2x3 site=1 beta=0.5 pair=(1,1) decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.0015496298793205615,
+        0.010478610355006367
+      ],
+      "expected": "lhs<=rhs+1.0104786103550064e-08",
+      "group": "R340 instantiation",
+      "name": "grid2x3 site=1 beta=0.5 pair=(1,1) bound",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        531441,
+        531441,
+        531441,
+        531441
+      ],
+      "expected": 531441,
+      "group": "Hilbert-Schmidt",
+      "name": "grid2x3 site=2 beta=0.5 vector shape",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.814969398152915e-14,
+      "expected": 1.0025779240285008e-08,
+      "group": "R340 instantiation",
+      "name": "grid2x3 site=2 beta=0.5 pair=(0,0) decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.0001998463013884091,
+        0.002577924028500835
+      ],
+      "expected": "lhs<=rhs+1.0025779240285008e-08",
+      "group": "R340 instantiation",
+      "name": "grid2x3 site=2 beta=0.5 pair=(0,0) bound",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.7303065087172844e-14,
+      "expected": 1.0028178036013878e-08,
+      "group": "R340 instantiation",
+      "name": "grid2x3 site=2 beta=0.5 pair=(0,1) decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.0003211824561990695,
+        0.002817803601387863
+      ],
+      "expected": "lhs<=rhs+1.0028178036013878e-08",
+      "group": "R340 instantiation",
+      "name": "grid2x3 site=2 beta=0.5 pair=(0,1) bound",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.7303064800546258e-14,
+      "expected": 1.0028178036013878e-08,
+      "group": "R340 instantiation",
+      "name": "grid2x3 site=2 beta=0.5 pair=(1,0) decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.0003211824561990695,
+        0.0028178036013878603
+      ],
+      "expected": "lhs<=rhs+1.0028178036013878e-08",
+      "group": "R340 instantiation",
+      "name": "grid2x3 site=2 beta=0.5 pair=(1,0) bound",
+      "status": "PASS"
+    },
+    {
+      "actual": 3.361593893587419e-14,
+      "expected": 1.0084443627200925e-08,
+      "group": "R340 instantiation",
+      "name": "grid2x3 site=2 beta=0.5 pair=(1,1) decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.0009753797334357405,
+        0.008444362720092517
+      ],
+      "expected": "lhs<=rhs+1.0084443627200925e-08",
+      "group": "R340 instantiation",
+      "name": "grid2x3 site=2 beta=0.5 pair=(1,1) bound",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        531441,
+        531441,
+        531441,
+        531441
+      ],
+      "expected": 531441,
+      "group": "Hilbert-Schmidt",
+      "name": "grid2x3 site=3 beta=0.5 vector shape",
+      "status": "PASS"
+    },
+    {
+      "actual": 6.2924682063711765e-15,
+      "expected": 1.0025779240285008e-08,
+      "group": "R340 instantiation",
+      "name": "grid2x3 site=3 beta=0.5 pair=(0,0) decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.00019984630137653738,
+        0.002577924028500797
+      ],
+      "expected": "lhs<=rhs+1.0025779240285008e-08",
+      "group": "R340 instantiation",
+      "name": "grid2x3 site=3 beta=0.5 pair=(0,0) bound",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.686384916030978e-14,
+      "expected": 1.0028178036013877e-08,
+      "group": "R340 instantiation",
+      "name": "grid2x3 site=3 beta=0.5 pair=(0,1) decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.000321182456199075,
+        0.0028178036013876643
+      ],
+      "expected": "lhs<=rhs+1.0028178036013877e-08",
+      "group": "R340 instantiation",
+      "name": "grid2x3 site=3 beta=0.5 pair=(0,1) bound",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.6863849303623098e-14,
+      "expected": 1.0028178036013877e-08,
+      "group": "R340 instantiation",
+      "name": "grid2x3 site=3 beta=0.5 pair=(1,0) decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.000321182456199075,
+        0.0028178036013876634
+      ],
+      "expected": "lhs<=rhs+1.0028178036013877e-08",
+      "group": "R340 instantiation",
+      "name": "grid2x3 site=3 beta=0.5 pair=(1,0) bound",
+      "status": "PASS"
+    },
+    {
+      "actual": 2.75719232849717e-14,
+      "expected": 1.0084443627200926e-08,
+      "group": "R340 instantiation",
+      "name": "grid2x3 site=3 beta=0.5 pair=(1,1) decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.0009753797334297295,
+        0.008444362720092587
+      ],
+      "expected": "lhs<=rhs+1.0084443627200926e-08",
+      "group": "R340 instantiation",
+      "name": "grid2x3 site=3 beta=0.5 pair=(1,1) bound",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        531441,
+        531441,
+        531441,
+        531441
+      ],
+      "expected": 531441,
+      "group": "Hilbert-Schmidt",
+      "name": "grid2x3 site=4 beta=0.5 vector shape",
+      "status": "PASS"
+    },
+    {
+      "actual": 2.406254928308129e-14,
+      "expected": 1.0020991486997123e-08,
+      "group": "R340 instantiation",
+      "name": "grid2x3 site=4 beta=0.5 pair=(0,0) decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.00017259487495366595,
+        0.002099148699712297
+      ],
+      "expected": "lhs<=rhs+1.0020991486997123e-08",
+      "group": "R340 instantiation",
+      "name": "grid2x3 site=4 beta=0.5 pair=(0,0) bound",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.6504455397594967e-14,
+      "expected": 1.0026802057674334e-08,
+      "group": "R340 instantiation",
+      "name": "grid2x3 site=4 beta=0.5 pair=(0,1) decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.0005176179795100379,
+        0.002680205767433378
+      ],
+      "expected": "lhs<=rhs+1.0026802057674334e-08",
+      "group": "R340 instantiation",
+      "name": "grid2x3 site=4 beta=0.5 pair=(0,1) bound",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.6504455397594967e-14,
+      "expected": 1.0026802057674334e-08,
+      "group": "R340 instantiation",
+      "name": "grid2x3 site=4 beta=0.5 pair=(1,0) decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.0005176179795100379,
+        0.002680205767433378
+      ],
+      "expected": "lhs<=rhs+1.0026802057674334e-08",
+      "group": "R340 instantiation",
+      "name": "grid2x3 site=4 beta=0.5 pair=(1,0) bound",
+      "status": "PASS"
+    },
+    {
+      "actual": 2.8343843215134314e-15,
+      "expected": 1.0104786103550064e-08,
+      "group": "R340 instantiation",
+      "name": "grid2x3 site=4 beta=0.5 pair=(1,1) decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.0015496298793214631,
+        0.010478610355006317
+      ],
+      "expected": "lhs<=rhs+1.0104786103550064e-08",
+      "group": "R340 instantiation",
+      "name": "grid2x3 site=4 beta=0.5 pair=(1,1) bound",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        531441,
+        531441,
+        531441,
+        531441
+      ],
+      "expected": 531441,
+      "group": "Hilbert-Schmidt",
+      "name": "grid2x3 site=5 beta=0.5 vector shape",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.6371966784949812e-14,
+      "expected": 1.0025779240285008e-08,
+      "group": "R340 instantiation",
+      "name": "grid2x3 site=5 beta=0.5 pair=(0,0) decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.0001998463013866058,
+        0.002577924028500798
+      ],
+      "expected": "lhs<=rhs+1.0025779240285008e-08",
+      "group": "R340 instantiation",
+      "name": "grid2x3 site=5 beta=0.5 pair=(0,0) bound",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.6841298830304202e-14,
+      "expected": 1.0028178036013878e-08,
+      "group": "R340 instantiation",
+      "name": "grid2x3 site=5 beta=0.5 pair=(0,1) decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.00032118245619907357,
+        0.0028178036013878534
+      ],
+      "expected": "lhs<=rhs+1.0028178036013878e-08",
+      "group": "R340 instantiation",
+      "name": "grid2x3 site=5 beta=0.5 pair=(0,1) bound",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.684129854367757e-14,
+      "expected": 1.0028178036013878e-08,
+      "group": "R340 instantiation",
+      "name": "grid2x3 site=5 beta=0.5 pair=(1,0) decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.00032118245619907357,
+        0.002817803601387852
+      ],
+      "expected": "lhs<=rhs+1.0028178036013878e-08",
+      "group": "R340 instantiation",
+      "name": "grid2x3 site=5 beta=0.5 pair=(1,0) bound",
+      "status": "PASS"
+    },
+    {
+      "actual": 2.895418827018114e-14,
+      "expected": 1.0084443627200926e-08,
+      "group": "R340 instantiation",
+      "name": "grid2x3 site=5 beta=0.5 pair=(1,1) decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.000975379733431082,
+        0.008444362720092562
+      ],
+      "expected": "lhs<=rhs+1.0084443627200926e-08",
+      "group": "R340 instantiation",
+      "name": "grid2x3 site=5 beta=0.5 pair=(1,1) bound",
+      "status": "PASS"
+    },
+    {
+      "actual": 96,
+      "expected": 96,
+      "group": "coverage",
+      "name": "row coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": 96,
+      "expected": "all numeric fields finite",
+      "group": "numerics",
+      "name": "finite rows",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "c6_closed": false,
+        "common_alpha_closed": false,
+        "common_word_exhaustion_closed": false,
+        "continuum_closed": false,
+        "direct_d_delta_d_cauchy_closed": false,
+        "finite_partition_positive_closed": true,
+        "finite_q3_hilbert_schmidt_vectors_reproduced": true,
+        "finite_q3_os_transfer_word_factorization_closed": true,
+        "finite_q3_source_sites_reproduced": true,
+        "hamiltonian_os_identification_closed": false,
+        "kms_gns_gap_closed": false,
+        "no_new_negative_result": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "pre_a_closed": false,
+        "r340_complex_gram_bound_closed": true,
+        "sector_a_closed": false,
+        "source_volume_cutoff_beta_uniform_closed": false,
+        "thermodynamic_common_os_hilbert_carrier_closed": false
+      },
+      "expected": "downstream QFT gates open",
+      "group": "scope",
+      "name": "scope firewall",
+      "status": "PASS"
+    }
+  ],
+  "audit_id": "PA-CP1-ST8-Q3LOCK-COMPLEX-OS-GRAM-PERTURBATION",
+  "boundary": "T0 claim-nonbearing finite Complex transfer-word instantiation. It is not a thermodynamic OS reconstruction, common-alpha theorem, mass-gap proof, continuum result, or Clay result.",
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "exploration_id": "EXP-001179",
+  "formal_checks": [
+    "finite_complex_gram_entry_perturbation"
+  ],
+  "passed": 235,
+  "provenance": {
+    "lean_sha256": "08bc5502a0fb3bceb53837209c43f34137d310d8022f12877cf674815ad55e1a",
+    "manifest_sha256": "7f2db23ec6f5a4758f987395e88c2c0b809ddf14b1500f99fd5ff8e509f4fae8",
+    "registry_sha256": "983ef5900978e49e2a6945ad97fdf34870c748ac8c3c51dc6706d2cde6d27a25",
+    "script_sha256": "84d64083014efc6ada13c9d4a9568214c9546657ec219354f0ef2177c321f6aa"
+  },
+  "rows": [
+    {
+      "beta": 0.25,
+      "graph": "bond2",
+      "i": 0,
+      "identity_residual": 5.750066221776873e-16,
+      "j": 0,
+      "normalized_identity_residual": 8.914144043670792e-17,
+      "normalized_lhs": 5.9325456898713625e-05,
+      "normalized_rhs": 0.0018307655498036703,
+      "normalized_slack": 0.0017714400929049567,
+      "partition": 6.450497314837006,
+      "raw_left_term": 0.005909774361144501,
+      "raw_lhs": 0.00038267870042663077,
+      "raw_rhs": 0.011809348263104669,
+      "raw_right_term": 0.005899573901960168,
+      "source_site": 0,
+      "tau_f": 0.03125,
+      "tau_g": 0.0625,
+      "tolerance": 1.0018307655498037e-08,
+      "vector_dimension": 81,
+      "volume": 2
+    },
+    {
+      "beta": 0.25,
+      "graph": "bond2",
+      "i": 0,
+      "identity_residual": 3.641739863563441e-15,
+      "j": 1,
+      "normalized_identity_residual": 5.64567301684934e-16,
+      "normalized_lhs": 2.1340125213265567e-05,
+      "normalized_rhs": 0.0013644852519189576,
+      "normalized_slack": 0.001343145126705692,
+      "partition": 6.450497314837006,
+      "raw_left_term": 0.004406767460717164,
+      "raw_lhs": 0.00013765442038645502,
+      "raw_rhs": 0.008801608453637932,
+      "raw_right_term": 0.004394840992920769,
+      "source_site": 0,
+      "tau_f": 0.03125,
+      "tau_g": 0.0625,
+      "tolerance": 1.001364485251919e-08,
+      "vector_dimension": 81,
+      "volume": 2
+    },
+    {
+      "beta": 0.25,
+      "graph": "bond2",
+      "i": 1,
+      "identity_residual": 3.641738169497603e-15,
+      "j": 0,
+      "normalized_identity_residual": 5.64567039059317e-16,
+      "normalized_lhs": 2.1340125213265567e-05,
+      "normalized_rhs": 0.0013644852519189583,
+      "normalized_slack": 0.0013431451267056926,
+      "partition": 6.450497314837006,
+      "raw_left_term": 0.004406767460717546,
+      "raw_lhs": 0.00013765442038645502,
+      "raw_rhs": 0.008801608453637935,
+      "raw_right_term": 0.004394840992920388,
+      "source_site": 0,
+      "tau_f": 0.03125,
+      "tau_g": 0.0625,
+      "tolerance": 1.001364485251919e-08,
+      "vector_dimension": 81,
+      "volume": 2
+    },
+    {
+      "beta": 0.25,
+      "graph": "bond2",
+      "i": 1,
+      "identity_residual": 7.361732751176575e-16,
+      "j": 1,
+      "normalized_identity_residual": 1.1412659197987116e-16,
+      "normalized_lhs": 0.0001327007013925942,
+      "normalized_rhs": 0.0031072180984559224,
+      "normalized_slack": 0.0029745173970633283,
+      "partition": 6.450497314837006,
+      "raw_left_term": 0.010032588614348283,
+      "raw_lhs": 0.0008559855180099163,
+      "raw_rhs": 0.020043102000702875,
+      "raw_right_term": 0.010010513386354593,
+      "source_site": 0,
+      "tau_f": 0.03125,
+      "tau_g": 0.0625,
+      "tolerance": 1.0031072180984559e-08,
+      "vector_dimension": 81,
+      "volume": 2
+    },
+    {
+      "beta": 0.25,
+      "graph": "bond2",
+      "i": 0,
+      "identity_residual": 1.5910666881224778e-16,
+      "j": 0,
+      "normalized_identity_residual": 2.4665798782100285e-17,
+      "normalized_lhs": 5.932545689857594e-05,
+      "normalized_rhs": 0.0018307655498036935,
+      "normalized_slack": 0.0017714400929051176,
+      "partition": 6.450497314837006,
+      "raw_left_term": 0.005909774361144578,
+      "raw_lhs": 0.0003826787004257426,
+      "raw_rhs": 0.01180934826310482,
+      "raw_right_term": 0.005899573901960243,
+      "source_site": 1,
+      "tau_f": 0.03125,
+      "tau_g": 0.0625,
+      "tolerance": 1.0018307655498037e-08,
+      "vector_dimension": 81,
+      "volume": 2
+    },
+    {
+      "beta": 0.25,
+      "graph": "bond2",
+      "i": 0,
+      "identity_residual": 2.8302331619092967e-15,
+      "j": 1,
+      "normalized_identity_residual": 4.3876200915538437e-16,
+      "normalized_lhs": 2.1340125213266736e-05,
+      "normalized_rhs": 0.00136448525191897,
+      "normalized_slack": 0.0013431451267057032,
+      "partition": 6.450497314837006,
+      "raw_left_term": 0.004406767460717244,
+      "raw_lhs": 0.00013765442038646256,
+      "raw_rhs": 0.008801608453638012,
+      "raw_right_term": 0.004394840992920767,
+      "source_site": 1,
+      "tau_f": 0.03125,
+      "tau_g": 0.0625,
+      "tolerance": 1.001364485251919e-08,
+      "vector_dimension": 81,
+      "volume": 2
+    },
+    {
+      "beta": 0.25,
+      "graph": "bond2",
+      "i": 1,
+      "identity_residual": 2.8302330144654356e-15,
+      "j": 0,
+      "normalized_identity_residual": 4.3876198629763343e-16,
+      "normalized_lhs": 2.1340125213266736e-05,
+      "normalized_rhs": 0.00136448525191897,
+      "normalized_slack": 0.0013431451267057032,
+      "partition": 6.450497314837006,
+      "raw_left_term": 0.004406767460717544,
+      "raw_lhs": 0.00013765442038646256,
+      "raw_rhs": 0.008801608453638012,
+      "raw_right_term": 0.004394840992920469,
+      "source_site": 1,
+      "tau_f": 0.03125,
+      "tau_g": 0.0625,
+      "tolerance": 1.001364485251919e-08,
+      "vector_dimension": 81,
+      "volume": 2
+    },
+    {
+      "beta": 0.25,
+      "graph": "bond2",
+      "i": 1,
+      "identity_residual": 1.658070382382082e-15,
+      "j": 1,
+      "normalized_identity_residual": 2.570453565755773e-16,
+      "normalized_lhs": 0.0001327007013927319,
+      "normalized_rhs": 0.0031072180984559185,
+      "normalized_slack": 0.0029745173970631865,
+      "partition": 6.450497314837006,
+      "raw_left_term": 0.010032588614348264,
+      "raw_lhs": 0.0008559855180108045,
+      "raw_rhs": 0.020043102000702848,
+      "raw_right_term": 0.010010513386354582,
+      "source_site": 1,
+      "tau_f": 0.03125,
+      "tau_g": 0.0625,
+      "tolerance": 1.0031072180984559e-08,
+      "vector_dimension": 81,
+      "volume": 2
+    },
+    {
+      "beta": 0.5,
+      "graph": "bond2",
+      "i": 0,
+      "identity_residual": 1.1546753136970622e-15,
+      "j": 0,
+      "normalized_identity_residual": 2.37695240950679e-16,
+      "normalized_lhs": 0.00022851310345188672,
+      "normalized_rhs": 0.003653990912572715,
+      "normalized_slack": 0.003425477809120828,
+      "partition": 4.857797358831654,
+      "raw_left_term": 0.008904443566115245,
+      "raw_lhs": 0.0011100703504069998,
+      "raw_rhs": 0.0177503474042906,
+      "raw_right_term": 0.008845903838175354,
+      "source_site": 0,
+      "tau_f": 0.0625,
+      "tau_g": 0.125,
+      "tolerance": 1.0036539909125728e-08,
+      "vector_dimension": 81,
+      "volume": 2
+    },
+    {
+      "beta": 0.5,
+      "graph": "bond2",
+      "i": 0,
+      "identity_residual": 1.8989114632438715e-16,
+      "j": 1,
+      "normalized_identity_residual": 3.908996862109904e-17,
+      "normalized_lhs": 9.56966025484813e-05,
+      "normalized_rhs": 0.002583041080723847,
+      "normalized_slack": 0.002487344478175366,
+      "partition": 4.857797358831654,
+      "raw_left_term": 0.006307886393018647,
+      "raw_lhs": 0.000464874703109175,
+      "raw_rhs": 0.012547890139693966,
+      "raw_right_term": 0.006240003746675319,
+      "source_site": 0,
+      "tau_f": 0.0625,
+      "tau_g": 0.125,
+      "tolerance": 1.002583041080724e-08,
+      "vector_dimension": 81,
+      "volume": 2
+    },
+    {
+      "beta": 0.5,
+      "graph": "bond2",
+      "i": 1,
+      "identity_residual": 1.8987864138763078e-16,
+      "j": 0,
+      "normalized_identity_residual": 3.908739442217046e-17,
+      "normalized_lhs": 9.56966025484813e-05,
+      "normalized_rhs": 0.002583041080723848,
+      "normalized_slack": 0.0024873444781753668,
+      "partition": 4.857797358831654,
+      "raw_left_term": 0.006307886393018681,
+      "raw_lhs": 0.000464874703109175,
+      "raw_rhs": 0.012547890139693969,
+      "raw_right_term": 0.006240003746675288,
+      "source_site": 0,
+      "tau_f": 0.0625,
+      "tau_g": 0.125,
+      "tolerance": 1.002583041080724e-08,
+      "vector_dimension": 81,
+      "volume": 2
+    },
+    {
+      "beta": 0.5,
+      "graph": "bond2",
+      "i": 1,
+      "identity_residual": 7.992738415563139e-16,
+      "j": 1,
+      "normalized_identity_residual": 1.6453420810219774e-16,
+      "normalized_lhs": 0.00049311043578261,
+      "normalized_rhs": 0.005743971693515879,
+      "normalized_slack": 0.005250861257733269,
+      "partition": 4.857797358831654,
+      "raw_left_term": 0.014013772843032965,
+      "raw_lhs": 0.002395430572557089,
+      "raw_rhs": 0.02790305052196522,
+      "raw_right_term": 0.013889277678932254,
+      "source_site": 0,
+      "tau_f": 0.0625,
+      "tau_g": 0.125,
+      "tolerance": 1.005743971693516e-08,
+      "vector_dimension": 81,
+      "volume": 2
+    },
+    {
+      "beta": 0.5,
+      "graph": "bond2",
+      "i": 0,
+      "identity_residual": 1.3094993839279923e-15,
+      "j": 0,
+      "normalized_identity_residual": 2.6956649015984053e-16,
+      "normalized_lhs": 0.00022851310345188672,
+      "normalized_rhs": 0.003653990912572748,
+      "normalized_slack": 0.003425477809120861,
+      "partition": 4.857797358831654,
+      "raw_left_term": 0.008904443566115326,
+      "raw_lhs": 0.0011100703504069998,
+      "raw_rhs": 0.01775034740429076,
+      "raw_right_term": 0.008845903838175432,
+      "source_site": 1,
+      "tau_f": 0.0625,
+      "tau_g": 0.125,
+      "tolerance": 1.0036539909125728e-08,
+      "vector_dimension": 81,
+      "volume": 2
+    },
+    {
+      "beta": 0.5,
+      "graph": "bond2",
+      "i": 0,
+      "identity_residual": 8.505083953295977e-16,
+      "j": 1,
+      "normalized_identity_residual": 1.7508107739062895e-16,
+      "normalized_lhs": 9.569660254847779e-05,
+      "normalized_rhs": 0.002583041080723877,
+      "normalized_slack": 0.0024873444781753993,
+      "partition": 4.857797358831654,
+      "raw_left_term": 0.006307886393018728,
+      "raw_lhs": 0.0004648747031091579,
+      "raw_rhs": 0.012547890139694111,
+      "raw_right_term": 0.006240003746675383,
+      "source_site": 1,
+      "tau_f": 0.0625,
+      "tau_g": 0.125,
+      "tolerance": 1.002583041080724e-08,
+      "vector_dimension": 81,
+      "volume": 2
+    },
+    {
+      "beta": 0.5,
+      "graph": "bond2",
+      "i": 1,
+      "identity_residual": 8.505045977581903e-16,
+      "j": 0,
+      "normalized_identity_residual": 1.750802956430329e-16,
+      "normalized_lhs": 9.569660254847779e-05,
+      "normalized_rhs": 0.0025830410807238767,
+      "normalized_slack": 0.002487344478175399,
+      "partition": 4.857797358831654,
+      "raw_left_term": 0.006307886393018746,
+      "raw_lhs": 0.0004648747031091579,
+      "raw_rhs": 0.01254789013969411,
+      "raw_right_term": 0.006240003746675364,
+      "source_site": 1,
+      "tau_f": 0.0625,
+      "tau_g": 0.125,
+      "tolerance": 1.002583041080724e-08,
+      "vector_dimension": 81,
+      "volume": 2
+    },
+    {
+      "beta": 0.5,
+      "graph": "bond2",
+      "i": 1,
+      "identity_residual": 1.822327011513636e-15,
+      "j": 1,
+      "normalized_identity_residual": 3.7513442346469606e-16,
+      "normalized_lhs": 0.0004931104357827929,
+      "normalized_rhs": 0.0057439716935159014,
+      "normalized_slack": 0.005250861257733108,
+      "partition": 4.857797358831654,
+      "raw_left_term": 0.014013772843033019,
+      "raw_lhs": 0.002395430572557977,
+      "raw_rhs": 0.027903050521965327,
+      "raw_right_term": 0.013889277678932308,
+      "source_site": 1,
+      "tau_f": 0.0625,
+      "tau_g": 0.125,
+      "tolerance": 1.005743971693516e-08,
+      "vector_dimension": 81,
+      "volume": 2
+    },
+    {
+      "beta": 0.25,
+      "graph": "square4",
+      "i": 0,
+      "identity_residual": 6.321527502850532e-14,
+      "j": 0,
+      "normalized_identity_residual": 1.9287036239751558e-15,
+      "normalized_lhs": 5.6155821568967385e-05,
+      "normalized_rhs": 0.001458956137857974,
+      "normalized_slack": 0.0014028003162890065,
+      "partition": 32.776044096508436,
+      "raw_left_term": 0.02394125888019979,
+      "raw_lhs": 0.0018405656840201345,
+      "raw_rhs": 0.04781881070930459,
+      "raw_right_term": 0.0238775518291048,
+      "source_site": 0,
+      "tau_f": 0.03125,
+      "tau_g": 0.0625,
+      "tolerance": 1.001458956137858e-08,
+      "vector_dimension": 6561,
+      "volume": 4
+    },
+    {
+      "beta": 0.25,
+      "graph": "square4",
+      "i": 0,
+      "identity_residual": 5.368204203026509e-14,
+      "j": 1,
+      "normalized_identity_residual": 1.6378438432716084e-15,
+      "normalized_lhs": 8.212355306438826e-05,
+      "normalized_rhs": 0.0015340675800309081,
+      "normalized_slack": 0.0014519440269665199,
+      "partition": 32.776044096508436,
+      "raw_left_term": 0.025192852172823434,
+      "raw_lhs": 0.00269168519660034,
+      "raw_rhs": 0.05028066665011703,
+      "raw_right_term": 0.0250878144772936,
+      "source_site": 0,
+      "tau_f": 0.03125,
+      "tau_g": 0.0625,
+      "tolerance": 1.0015340675800308e-08,
+      "vector_dimension": 6561,
+      "volume": 4
+    },
+    {
+      "beta": 0.25,
+      "graph": "square4",
+      "i": 1,
+      "identity_residual": 5.368203525400194e-14,
+      "j": 0,
+      "normalized_identity_residual": 1.6378436365272212e-15,
+      "normalized_lhs": 8.212355306438826e-05,
+      "normalized_rhs": 0.0015340675800309086,
+      "normalized_slack": 0.0014519440269665203,
+      "partition": 32.776044096508436,
+      "raw_left_term": 0.025192852172823733,
+      "raw_lhs": 0.00269168519660034,
+      "raw_rhs": 0.050280666650117045,
+      "raw_right_term": 0.025087814477293316,
+      "source_site": 0,
+      "tau_f": 0.03125,
+      "tau_g": 0.0625,
+      "tolerance": 1.0015340675800308e-08,
+      "vector_dimension": 6561,
+      "volume": 4
+    },
+    {
+      "beta": 0.25,
+      "graph": "square4",
+      "i": 1,
+      "identity_residual": 9.756605245936356e-14,
+      "j": 1,
+      "normalized_identity_residual": 2.9767488770787036e-15,
+      "normalized_lhs": 0.000287379459546582,
+      "normalized_rhs": 0.004807489052708715,
+      "normalized_slack": 0.004520109593162133,
+      "partition": 32.776044096508436,
+      "raw_left_term": 0.07896669098349168,
+      "raw_lhs": 0.009419161838529533,
+      "raw_rhs": 0.1575704731850624,
+      "raw_right_term": 0.07860378220157073,
+      "source_site": 0,
+      "tau_f": 0.03125,
+      "tau_g": 0.0625,
+      "tolerance": 1.0048074890527087e-08,
+      "vector_dimension": 6561,
+      "volume": 4
+    },
+    {
+      "beta": 0.25,
+      "graph": "square4",
+      "i": 0,
+      "identity_residual": 6.320356564504248e-14,
+      "j": 0,
+      "normalized_identity_residual": 1.9283463696515902e-15,
+      "normalized_lhs": 5.6155821568967385e-05,
+      "normalized_rhs": 0.0014589561378579928,
+      "normalized_slack": 0.0014028003162890254,
+      "partition": 32.776044096508436,
+      "raw_left_term": 0.02394125888020018,
+      "raw_lhs": 0.0018405656840201345,
+      "raw_rhs": 0.047818810709305215,
+      "raw_right_term": 0.02387755182910504,
+      "source_site": 1,
+      "tau_f": 0.03125,
+      "tau_g": 0.0625,
+      "tolerance": 1.001458956137858e-08,
+      "vector_dimension": 6561,
+      "volume": 4
+    },
+    {
+      "beta": 0.25,
+      "graph": "square4",
+      "i": 0,
+      "identity_residual": 4.9505019918820346e-14,
+      "j": 1,
+      "normalized_identity_residual": 1.5104025297578244e-15,
+      "normalized_lhs": 8.212355306439124e-05,
+      "normalized_rhs": 0.0015340675800309107,
+      "normalized_slack": 0.0014519440269665194,
+      "partition": 32.776044096508436,
+      "raw_left_term": 0.025192852172823726,
+      "raw_lhs": 0.002691685196600438,
+      "raw_rhs": 0.050280666650117115,
+      "raw_right_term": 0.025087814477293392,
+      "source_site": 1,
+      "tau_f": 0.03125,
+      "tau_g": 0.0625,
+      "tolerance": 1.0015340675800308e-08,
+      "vector_dimension": 6561,
+      "volume": 4
+    },
+    {
+      "beta": 0.25,
+      "graph": "square4",
+      "i": 1,
+      "identity_residual": 4.9505019918820346e-14,
+      "j": 0,
+      "normalized_identity_residual": 1.5104025297578244e-15,
+      "normalized_lhs": 8.212355306439124e-05,
+      "normalized_rhs": 0.0015340675800309097,
+      "normalized_slack": 0.0014519440269665184,
+      "partition": 32.776044096508436,
+      "raw_left_term": 0.025192852172823476,
+      "raw_lhs": 0.002691685196600438,
+      "raw_rhs": 0.05028066665011708,
+      "raw_right_term": 0.025087814477293604,
+      "source_site": 1,
+      "tau_f": 0.03125,
+      "tau_g": 0.0625,
+      "tolerance": 1.0015340675800308e-08,
+      "vector_dimension": 6561,
+      "volume": 4
+    },
+    {
+      "beta": 0.25,
+      "graph": "square4",
+      "i": 1,
+      "identity_residual": 9.616960006120223e-14,
+      "j": 1,
+      "normalized_identity_residual": 2.9341429910831425e-15,
+      "normalized_lhs": 0.000287379459546582,
+      "normalized_rhs": 0.0048074890527086975,
+      "normalized_slack": 0.004520109593162115,
+      "partition": 32.776044096508436,
+      "raw_left_term": 0.0789666909834915,
+      "raw_lhs": 0.009419161838529533,
+      "raw_rhs": 0.15757047318506184,
+      "raw_right_term": 0.07860378220157035,
+      "source_site": 1,
+      "tau_f": 0.03125,
+      "tau_g": 0.0625,
+      "tolerance": 1.0048074890527087e-08,
+      "vector_dimension": 6561,
+      "volume": 4
+    },
+    {
+      "beta": 0.25,
+      "graph": "square4",
+      "i": 0,
+      "identity_residual": 1.3998134248960348e-14,
+      "j": 0,
+      "normalized_identity_residual": 4.2708431218066185e-16,
+      "normalized_lhs": 5.615582157135205e-05,
+      "normalized_rhs": 0.001458956137858009,
+      "normalized_slack": 0.001402800316286657,
+      "partition": 32.776044096508436,
+      "raw_left_term": 0.023941258880200413,
+      "raw_lhs": 0.0018405656840982942,
+      "raw_rhs": 0.04781881070930574,
+      "raw_right_term": 0.023877551829105333,
+      "source_site": 2,
+      "tau_f": 0.03125,
+      "tau_g": 0.0625,
+      "tolerance": 1.001458956137858e-08,
+      "vector_dimension": 6561,
+      "volume": 4
+    },
+    {
+      "beta": 0.25,
+      "graph": "square4",
+      "i": 0,
+      "identity_residual": 6.324468490785756e-14,
+      "j": 1,
+      "normalized_identity_residual": 1.929600921991525e-15,
+      "normalized_lhs": 8.212355306438623e-05,
+      "normalized_rhs": 0.0015340675800309344,
+      "normalized_slack": 0.001451944026966548,
+      "partition": 32.776044096508436,
+      "raw_left_term": 0.025192852172824076,
+      "raw_lhs": 0.0026916851966002735,
+      "raw_rhs": 0.05028066665011789,
+      "raw_right_term": 0.02508781447729382,
+      "source_site": 2,
+      "tau_f": 0.03125,
+      "tau_g": 0.0625,
+      "tolerance": 1.001534067580031e-08,
+      "vector_dimension": 6561,
+      "volume": 4
+    },
+    {
+      "beta": 0.25,
+      "graph": "square4",
+      "i": 1,
+      "identity_residual": 6.324468321379375e-14,
+      "j": 0,
+      "normalized_identity_residual": 1.9296008703054886e-15,
+      "normalized_lhs": 8.212355306438623e-05,
+      "normalized_rhs": 0.0015340675800309346,
+      "normalized_slack": 0.0014519440269665483,
+      "partition": 32.776044096508436,
+      "raw_left_term": 0.025192852172823976,
+      "raw_lhs": 0.0026916851966002735,
+      "raw_rhs": 0.0502806666501179,
+      "raw_right_term": 0.025087814477293923,
+      "source_site": 2,
+      "tau_f": 0.03125,
+      "tau_g": 0.0625,
+      "tolerance": 1.001534067580031e-08,
+      "vector_dimension": 6561,
+      "volume": 4
+    },
+    {
+      "beta": 0.25,
+      "graph": "square4",
+      "i": 1,
+      "identity_residual": 1.2463294285502968e-13,
+      "j": 1,
+      "normalized_identity_residual": 3.802562093462236e-15,
+      "normalized_lhs": 0.0002873794595474491,
+      "normalized_rhs": 0.004807489052708727,
+      "normalized_slack": 0.0045201095931612775,
+      "partition": 32.776044096508436,
+      "raw_left_term": 0.07896669098349197,
+      "raw_lhs": 0.009419161838557955,
+      "raw_rhs": 0.15757047318506281,
+      "raw_right_term": 0.07860378220157084,
+      "source_site": 2,
+      "tau_f": 0.03125,
+      "tau_g": 0.0625,
+      "tolerance": 1.0048074890527087e-08,
+      "vector_dimension": 6561,
+      "volume": 4
+    },
+    {
+      "beta": 0.25,
+      "graph": "square4",
+      "i": 0,
+      "identity_residual": 9.384463692252432e-14,
+      "j": 0,
+      "normalized_identity_residual": 2.863208160393017e-15,
+      "normalized_lhs": 5.615582156810023e-05,
+      "normalized_rhs": 0.001458956137858017,
+      "normalized_slack": 0.0014028003162899168,
+      "partition": 32.776044096508436,
+      "raw_left_term": 0.02394125888020053,
+      "raw_lhs": 0.0018405656839917128,
+      "raw_rhs": 0.047818810709306006,
+      "raw_right_term": 0.023877551829105472,
+      "source_site": 3,
+      "tau_f": 0.03125,
+      "tau_g": 0.0625,
+      "tolerance": 1.001458956137858e-08,
+      "vector_dimension": 6561,
+      "volume": 4
+    },
+    {
+      "beta": 0.25,
+      "graph": "square4",
+      "i": 0,
+      "identity_residual": 5.586739280766697e-14,
+      "j": 1,
+      "normalized_identity_residual": 1.70451908848934e-15,
+      "normalized_lhs": 8.212355306438689e-05,
+      "normalized_rhs": 0.0015340675800309333,
+      "normalized_slack": 0.0014519440269665463,
+      "partition": 32.776044096508436,
+      "raw_left_term": 0.02519285217282409,
+      "raw_lhs": 0.002691685196600295,
+      "raw_rhs": 0.05028066665011785,
+      "raw_right_term": 0.02508781447729376,
+      "source_site": 3,
+      "tau_f": 0.03125,
+      "tau_g": 0.0625,
+      "tolerance": 1.001534067580031e-08,
+      "vector_dimension": 6561,
+      "volume": 4
+    },
+    {
+      "beta": 0.25,
+      "graph": "square4",
+      "i": 1,
+      "identity_residual": 5.586739280766697e-14,
+      "j": 0,
+      "normalized_identity_residual": 1.70451908848934e-15,
+      "normalized_lhs": 8.212355306438689e-05,
+      "normalized_rhs": 0.0015340675800309337,
+      "normalized_slack": 0.0014519440269665468,
+      "partition": 32.776044096508436,
+      "raw_left_term": 0.025192852172823917,
+      "raw_lhs": 0.002691685196600295,
+      "raw_rhs": 0.050280666650117864,
+      "raw_right_term": 0.02508781447729395,
+      "source_site": 3,
+      "tau_f": 0.03125,
+      "tau_g": 0.0625,
+      "tolerance": 1.001534067580031e-08,
+      "vector_dimension": 6561,
+      "volume": 4
+    },
+    {
+      "beta": 0.25,
+      "graph": "square4",
+      "i": 1,
+      "identity_residual": 9.690859226196835e-14,
+      "j": 1,
+      "normalized_identity_residual": 2.9566897083925945e-15,
+      "normalized_lhs": 0.000287379459546582,
+      "normalized_rhs": 0.004807489052708728,
+      "normalized_slack": 0.004520109593162146,
+      "partition": 32.776044096508436,
+      "raw_left_term": 0.07896669098349195,
+      "raw_lhs": 0.009419161838529533,
+      "raw_rhs": 0.15757047318506284,
+      "raw_right_term": 0.07860378220157088,
+      "source_site": 3,
+      "tau_f": 0.03125,
+      "tau_g": 0.0625,
+      "tolerance": 1.0048074890527087e-08,
+      "vector_dimension": 6561,
+      "volume": 4
+    },
+    {
+      "beta": 0.5,
+      "graph": "square4",
+      "i": 0,
+      "identity_residual": 1.5664552988070568e-15,
+      "j": 0,
+      "normalized_identity_residual": 1.005594761309499e-16,
+      "normalized_lhs": 0.0001989043572995812,
+      "normalized_rhs": 0.002581579976561965,
+      "normalized_slack": 0.002382675619262384,
+      "partition": 15.577401146831727,
+      "raw_left_term": 0.020215665420288468,
+      "raw_lhs": 0.0030984129635083235,
+      "raw_rhs": 0.040214306887534176,
+      "raw_right_term": 0.019998641467245705,
+      "source_site": 0,
+      "tau_f": 0.0625,
+      "tau_g": 0.125,
+      "tolerance": 1.0025815799765619e-08,
+      "vector_dimension": 6561,
+      "volume": 4
+    },
+    {
+      "beta": 0.5,
+      "graph": "square4",
+      "i": 0,
+      "identity_residual": 5.777178964496587e-15,
+      "j": 1,
+      "normalized_identity_residual": 3.708692425675641e-16,
+      "normalized_lhs": 0.0003237576646786968,
+      "normalized_rhs": 0.0027807190004166655,
+      "normalized_slack": 0.002456961335737969,
+      "partition": 15.577401146831727,
+      "raw_left_term": 0.021839334708371985,
+      "raw_lhs": 0.005043303017061493,
+      "raw_rhs": 0.04331637534610734,
+      "raw_right_term": 0.02147704063773536,
+      "source_site": 0,
+      "tau_f": 0.0625,
+      "tau_g": 0.125,
+      "tolerance": 1.0027807190004166e-08,
+      "vector_dimension": 6561,
+      "volume": 4
+    },
+    {
+      "beta": 0.5,
+      "graph": "square4",
+      "i": 1,
+      "identity_residual": 5.777165411969584e-15,
+      "j": 0,
+      "normalized_identity_residual": 3.70868372555495e-16,
+      "normalized_lhs": 0.0003237576646786968,
+      "normalized_rhs": 0.0027807190004166655,
+      "normalized_slack": 0.002456961335737969,
+      "partition": 15.577401146831727,
+      "raw_left_term": 0.021839334708372037,
+      "raw_lhs": 0.005043303017061493,
+      "raw_rhs": 0.04331637534610734,
+      "raw_right_term": 0.02147704063773531,
+      "source_site": 0,
+      "tau_f": 0.0625,
+      "tau_g": 0.125,
+      "tolerance": 1.0027807190004166e-08,
+      "vector_dimension": 6561,
+      "volume": 4
+    },
+    {
+      "beta": 0.5,
+      "graph": "square4",
+      "i": 1,
+      "identity_residual": 8.571442167149002e-14,
+      "j": 1,
+      "normalized_identity_residual": 5.5024853544921e-15,
+      "normalized_lhs": 0.0010024342653031752,
+      "normalized_rhs": 0.00855304748647439,
+      "normalized_slack": 0.0075506132211712144,
+      "partition": 15.577401146831727,
+      "raw_left_term": 0.06721032684793814,
+      "raw_lhs": 0.0156153206739571,
+      "raw_rhs": 0.13323425172471237,
+      "raw_right_term": 0.06602392487677423,
+      "source_site": 0,
+      "tau_f": 0.0625,
+      "tau_g": 0.125,
+      "tolerance": 1.0085530474864743e-08,
+      "vector_dimension": 6561,
+      "volume": 4
+    },
+    {
+      "beta": 0.5,
+      "graph": "square4",
+      "i": 0,
+      "identity_residual": 1.582067810090848e-15,
+      "j": 0,
+      "normalized_identity_residual": 1.0156173004587632e-16,
+      "normalized_lhs": 0.00019890435729980925,
+      "normalized_rhs": 0.002581579976561973,
+      "normalized_slack": 0.0023826756192621636,
+      "partition": 15.577401146831727,
+      "raw_left_term": 0.020215665420288527,
+      "raw_lhs": 0.0030984129635118762,
+      "raw_rhs": 0.0402143068875343,
+      "raw_right_term": 0.019998641467245778,
+      "source_site": 1,
+      "tau_f": 0.0625,
+      "tau_g": 0.125,
+      "tolerance": 1.0025815799765619e-08,
+      "vector_dimension": 6561,
+      "volume": 4
+    },
+    {
+      "beta": 0.5,
+      "graph": "square4",
+      "i": 0,
+      "identity_residual": 3.4378463473458573e-15,
+      "j": 1,
+      "normalized_identity_residual": 2.2069447367637943e-16,
+      "normalized_lhs": 0.00032375766467869976,
+      "normalized_rhs": 0.0027807190004166585,
+      "normalized_slack": 0.002456961335737959,
+      "partition": 15.577401146831727,
+      "raw_left_term": 0.021839334708372016,
+      "raw_lhs": 0.0050433030170615395,
+      "raw_rhs": 0.04331637534610723,
+      "raw_right_term": 0.021477040637735215,
+      "source_site": 1,
+      "tau_f": 0.0625,
+      "tau_g": 0.125,
+      "tolerance": 1.0027807190004166e-08,
+      "vector_dimension": 6561,
+      "volume": 4
+    },
+    {
+      "beta": 0.5,
+      "graph": "square4",
+      "i": 1,
+      "identity_residual": 3.437848041302566e-15,
+      "j": 0,
+      "normalized_identity_residual": 2.2069458242088004e-16,
+      "normalized_lhs": 0.00032375766467869976,
+      "normalized_rhs": 0.0027807190004166594,
+      "normalized_slack": 0.0024569613357379597,
+      "partition": 15.577401146831727,
+      "raw_left_term": 0.02183933470837189,
+      "raw_lhs": 0.0050433030170615395,
+      "raw_rhs": 0.043316375346107244,
+      "raw_right_term": 0.02147704063773535,
+      "source_site": 1,
+      "tau_f": 0.0625,
+      "tau_g": 0.125,
+      "tolerance": 1.0027807190004166e-08,
+      "vector_dimension": 6561,
+      "volume": 4
+    },
+    {
+      "beta": 0.5,
+      "graph": "square4",
+      "i": 1,
+      "identity_residual": 1.1150108614188525e-13,
+      "j": 1,
+      "normalized_identity_residual": 7.157874737312222e-15,
+      "normalized_lhs": 0.0010024342653015786,
+      "normalized_rhs": 0.00855304748647438,
+      "normalized_slack": 0.007550613221172801,
+      "partition": 15.577401146831727,
+      "raw_left_term": 0.067210326847938,
+      "raw_lhs": 0.015615320673932231,
+      "raw_rhs": 0.1332342517247122,
+      "raw_right_term": 0.0660239248767742,
+      "source_site": 1,
+      "tau_f": 0.0625,
+      "tau_g": 0.125,
+      "tolerance": 1.0085530474864743e-08,
+      "vector_dimension": 6561,
+      "volume": 4
+    },
+    {
+      "beta": 0.5,
+      "graph": "square4",
+      "i": 0,
+      "identity_residual": 6.83481049534862e-15,
+      "j": 0,
+      "normalized_identity_residual": 4.3876449164556216e-16,
+      "normalized_lhs": 0.00019890435730015134,
+      "normalized_rhs": 0.002581579976561963,
+      "normalized_slack": 0.0023826756192618114,
+      "partition": 15.577401146831727,
+      "raw_left_term": 0.020215665420288454,
+      "raw_lhs": 0.0030984129635172053,
+      "raw_rhs": 0.04021430688753414,
+      "raw_right_term": 0.019998641467245688,
+      "source_site": 2,
+      "tau_f": 0.0625,
+      "tau_g": 0.125,
+      "tolerance": 1.0025815799765619e-08,
+      "vector_dimension": 6561,
+      "volume": 4
+    },
+    {
+      "beta": 0.5,
+      "graph": "square4",
+      "i": 0,
+      "identity_residual": 1.6185268916395372e-15,
+      "j": 1,
+      "normalized_identity_residual": 1.0390224122646594e-16,
+      "normalized_lhs": 0.0003237576646787007,
+      "normalized_rhs": 0.0027807190004166668,
+      "normalized_slack": 0.002456961335737966,
+      "partition": 15.577401146831727,
+      "raw_left_term": 0.021839334708372005,
+      "raw_lhs": 0.005043303017061553,
+      "raw_rhs": 0.04331637534610736,
+      "raw_right_term": 0.021477040637735357,
+      "source_site": 2,
+      "tau_f": 0.0625,
+      "tau_g": 0.125,
+      "tolerance": 1.0027807190004166e-08,
+      "vector_dimension": 6561,
+      "volume": 4
+    },
+    {
+      "beta": 0.5,
+      "graph": "square4",
+      "i": 1,
+      "identity_residual": 1.6184897059724595e-15,
+      "j": 0,
+      "normalized_identity_residual": 1.0389985407171995e-16,
+      "normalized_lhs": 0.0003237576646787007,
+      "normalized_rhs": 0.002780719000416667,
+      "normalized_slack": 0.0024569613357379666,
+      "partition": 15.577401146831727,
+      "raw_left_term": 0.0218393347083721,
+      "raw_lhs": 0.005043303017061553,
+      "raw_rhs": 0.04331637534610737,
+      "raw_right_term": 0.02147704063773527,
+      "source_site": 2,
+      "tau_f": 0.0625,
+      "tau_g": 0.125,
+      "tolerance": 1.0027807190004166e-08,
+      "vector_dimension": 6561,
+      "volume": 4
+    },
+    {
+      "beta": 0.5,
+      "graph": "square4",
+      "i": 1,
+      "identity_residual": 1.1664801069510844e-13,
+      "j": 1,
+      "normalized_identity_residual": 7.488284444599628e-15,
+      "normalized_lhs": 0.0010024342653012365,
+      "normalized_rhs": 0.008553047486474397,
+      "normalized_slack": 0.00755061322117316,
+      "partition": 15.577401146831727,
+      "raw_left_term": 0.06721032684793814,
+      "raw_lhs": 0.015615320673926902,
+      "raw_rhs": 0.13323425172471248,
+      "raw_right_term": 0.06602392487677433,
+      "source_site": 2,
+      "tau_f": 0.0625,
+      "tau_g": 0.125,
+      "tolerance": 1.0085530474864745e-08,
+      "vector_dimension": 6561,
+      "volume": 4
+    },
+    {
+      "beta": 0.5,
+      "graph": "square4",
+      "i": 0,
+      "identity_residual": 5.3806785416110614e-15,
+      "j": 0,
+      "normalized_identity_residual": 3.454156756247773e-16,
+      "normalized_lhs": 0.0001989043572993531,
+      "normalized_rhs": 0.002581579976561966,
+      "normalized_slack": 0.002382675619262613,
+      "partition": 15.577401146831727,
+      "raw_left_term": 0.020215665420288458,
+      "raw_lhs": 0.003098412963504771,
+      "raw_rhs": 0.04021430688753419,
+      "raw_right_term": 0.019998641467245736,
+      "source_site": 3,
+      "tau_f": 0.0625,
+      "tau_g": 0.125,
+      "tolerance": 1.0025815799765619e-08,
+      "vector_dimension": 6561,
+      "volume": 4
+    },
+    {
+      "beta": 0.5,
+      "graph": "square4",
+      "i": 0,
+      "identity_residual": 1.7649568622144694e-15,
+      "j": 1,
+      "normalized_identity_residual": 1.1330239528263304e-16,
+      "normalized_lhs": 0.00032375766467870214,
+      "normalized_rhs": 0.0027807190004166408,
+      "normalized_slack": 0.0024569613357379384,
+      "partition": 15.577401146831727,
+      "raw_left_term": 0.021839334708372023,
+      "raw_lhs": 0.005043303017061577,
+      "raw_rhs": 0.04331637534610695,
+      "raw_right_term": 0.021477040637734934,
+      "source_site": 3,
+      "tau_f": 0.0625,
+      "tau_g": 0.125,
+      "tolerance": 1.0027807190004166e-08,
+      "vector_dimension": 6561,
+      "volume": 4
+    },
+    {
+      "beta": 0.5,
+      "graph": "square4",
+      "i": 1,
+      "identity_residual": 1.764993258732596e-15,
+      "j": 0,
+      "normalized_identity_residual": 1.1330473177751967e-16,
+      "normalized_lhs": 0.00032375766467870214,
+      "normalized_rhs": 0.0027807190004166408,
+      "normalized_slack": 0.0024569613357379384,
+      "partition": 15.577401146831727,
+      "raw_left_term": 0.021839334708371665,
+      "raw_lhs": 0.005043303017061577,
+      "raw_rhs": 0.04331637534610695,
+      "raw_right_term": 0.02147704063773529,
+      "source_site": 3,
+      "tau_f": 0.0625,
+      "tau_g": 0.125,
+      "tolerance": 1.0027807190004166e-08,
+      "vector_dimension": 6561,
+      "volume": 4
+    },
+    {
+      "beta": 0.5,
+      "graph": "square4",
+      "i": 1,
+      "identity_residual": 1.1657515230911741e-13,
+      "j": 1,
+      "normalized_identity_residual": 7.483607259663305e-15,
+      "normalized_lhs": 0.0010024342653012365,
+      "normalized_rhs": 0.008553047486474332,
+      "normalized_slack": 0.007550613221173096,
+      "partition": 15.577401146831727,
+      "raw_left_term": 0.06721032684793773,
+      "raw_lhs": 0.015615320673926902,
+      "raw_rhs": 0.13323425172471148,
+      "raw_right_term": 0.06602392487677375,
+      "source_site": 3,
+      "tau_f": 0.0625,
+      "tau_g": 0.125,
+      "tolerance": 1.0085530474864743e-08,
+      "vector_dimension": 6561,
+      "volume": 4
+    },
+    {
+      "beta": 0.25,
+      "graph": "grid2x3",
+      "i": 0,
+      "identity_residual": 8.61272858587725e-13,
+      "j": 0,
+      "normalized_identity_residual": 5.321491270197202e-15,
+      "normalized_lhs": 5.620590572292408e-05,
+      "normalized_rhs": 0.0014593169210010376,
+      "normalized_slack": 0.0014031110152781135,
+      "partition": 161.84802621236062,
+      "raw_left_term": 0.11824967511177557,
+      "raw_lhs": 0.009096814902733286,
+      "raw_rhs": 0.23618756328231733,
+      "raw_right_term": 0.11793788817054177,
+      "source_site": 0,
+      "tau_f": 0.03125,
+      "tau_g": 0.0625,
+      "tolerance": 1.001459316921001e-08,
+      "vector_dimension": 531441,
+      "volume": 6
+    },
+    {
+      "beta": 0.25,
+      "graph": "grid2x3",
+      "i": 0,
+      "identity_residual": 6.376247920183084e-12,
+      "j": 1,
+      "normalized_identity_residual": 3.9396513318097657e-14,
+      "normalized_lhs": 8.169081445313654e-05,
+      "normalized_rhs": 0.0015508071876318185,
+      "normalized_slack": 0.0014691163731786819,
+      "partition": 161.84802621236062,
+      "raw_left_term": 0.12575628840051098,
+      "raw_lhs": 0.01322149707892033,
+      "raw_rhs": 0.2509950823541518,
+      "raw_right_term": 0.12523879395364082,
+      "source_site": 0,
+      "tau_f": 0.03125,
+      "tau_g": 0.0625,
+      "tolerance": 1.0015508071876318e-08,
+      "vector_dimension": 531441,
+      "volume": 6
+    },
+    {
+      "beta": 0.25,
+      "graph": "grid2x3",
+      "i": 1,
+      "identity_residual": 6.37624793373561e-12,
+      "j": 0,
+      "normalized_identity_residual": 3.939651340183378e-14,
+      "normalized_lhs": 8.169081445313654e-05,
+      "normalized_rhs": 0.0015508071876318185,
+      "normalized_slack": 0.0014691163731786819,
+      "partition": 161.84802621236062,
+      "raw_left_term": 0.12575628840051184,
+      "raw_lhs": 0.01322149707892033,
+      "raw_rhs": 0.2509950823541518,
+      "raw_right_term": 0.12523879395364,
+      "source_site": 0,
+      "tau_f": 0.03125,
+      "tau_g": 0.0625,
+      "tolerance": 1.0015508071876318e-08,
+      "vector_dimension": 531441,
+      "volume": 6
+    },
+    {
+      "beta": 0.25,
+      "graph": "grid2x3",
+      "i": 1,
+      "identity_residual": 2.4086913019694123e-12,
+      "j": 1,
+      "normalized_identity_residual": 1.488242617681955e-14,
+      "normalized_lhs": 0.0002819358813669225,
+      "normalized_rhs": 0.004764575147720875,
+      "normalized_slack": 0.004482639266353952,
+      "partition": 161.84802621236062,
+      "raw_left_term": 0.3864398397832498,
+      "raw_lhs": 0.04563076591767867,
+      "raw_rhs": 0.77113708339909,
+      "raw_right_term": 0.3846972436158403,
+      "source_site": 0,
+      "tau_f": 0.03125,
+      "tau_g": 0.0625,
+      "tolerance": 1.004764575147721e-08,
+      "vector_dimension": 531441,
+      "volume": 6
+    },
+    {
+      "beta": 0.25,
+      "graph": "grid2x3",
+      "i": 0,
+      "identity_residual": 2.4151167177244304e-12,
+      "j": 0,
+      "normalized_identity_residual": 1.492212648027946e-14,
+      "normalized_lhs": 5.302605329266137e-05,
+      "normalized_rhs": 0.0012778345216213904,
+      "normalized_slack": 0.001224808468328729,
+      "partition": 161.84802621236062,
+      "raw_left_term": 0.10358397892518627,
+      "raw_lhs": 0.008582162063248688,
+      "raw_rhs": 0.2068149951504381,
+      "raw_right_term": 0.10323101622525184,
+      "source_site": 1,
+      "tau_f": 0.03125,
+      "tau_g": 0.0625,
+      "tolerance": 1.0012778345216214e-08,
+      "vector_dimension": 531441,
+      "volume": 6
+    },
+    {
+      "beta": 0.25,
+      "graph": "grid2x3",
+      "i": 0,
+      "identity_residual": 1.5111120849616961e-12,
+      "j": 1,
+      "normalized_identity_residual": 9.336611142720812e-15,
+      "normalized_lhs": 0.00013978255933164846,
+      "normalized_rhs": 0.0015572585647748306,
+      "normalized_slack": 0.0014174760054431821,
+      "partition": 161.84802621236062,
+      "raw_left_term": 0.12641580534491514,
+      "raw_lhs": 0.022623531326739492,
+      "raw_rhs": 0.2520392250110999,
+      "raw_right_term": 0.1256234196661847,
+      "source_site": 1,
+      "tau_f": 0.03125,
+      "tau_g": 0.0625,
+      "tolerance": 1.001557258564775e-08,
+      "vector_dimension": 531441,
+      "volume": 6
+    },
+    {
+      "beta": 0.25,
+      "graph": "grid2x3",
+      "i": 1,
+      "identity_residual": 1.511112057856643e-12,
+      "j": 0,
+      "normalized_identity_residual": 9.336610975248562e-15,
+      "normalized_lhs": 0.00013978255933164846,
+      "normalized_rhs": 0.0015572585647748315,
+      "normalized_slack": 0.001417476005443183,
+      "partition": 161.84802621236062,
+      "raw_left_term": 0.1264158053449153,
+      "raw_lhs": 0.022623531326739492,
+      "raw_rhs": 0.2520392250111,
+      "raw_right_term": 0.12562341966618468,
+      "source_site": 1,
+      "tau_f": 0.03125,
+      "tau_g": 0.0625,
+      "tolerance": 1.001557258564775e-08,
+      "vector_dimension": 531441,
+      "volume": 6
+    },
+    {
+      "beta": 0.25,
+      "graph": "grid2x3",
+      "i": 1,
+      "identity_residual": 7.97167887256478e-13,
+      "j": 1,
+      "normalized_identity_residual": 4.925410002903062e-15,
+      "normalized_lhs": 0.0004837106212285763,
+      "normalized_rhs": 0.0062353529190963325,
+      "normalized_slack": 0.005751642297867756,
+      "partition": 161.84802621236062,
+      "raw_left_term": 0.5065229352688755,
+      "raw_lhs": 0.07828760930379985,
+      "raw_rhs": 1.0091795626932225,
+      "raw_right_term": 0.502656627424347,
+      "source_site": 1,
+      "tau_f": 0.03125,
+      "tau_g": 0.0625,
+      "tolerance": 1.0062353529190963e-08,
+      "vector_dimension": 531441,
+      "volume": 6
+    },
+    {
+      "beta": 0.25,
+      "graph": "grid2x3",
+      "i": 0,
+      "identity_residual": 2.3471329047008993e-13,
+      "j": 0,
+      "normalized_identity_residual": 1.4502079263056497e-15,
+      "normalized_lhs": 5.6205905726787436e-05,
+      "normalized_rhs": 0.001459316921001052,
+      "normalized_slack": 0.0014031110152742646,
+      "partition": 161.84802621236062,
+      "raw_left_term": 0.11824967511177743,
+      "raw_lhs": 0.009096814903358563,
+      "raw_rhs": 0.23618756328231966,
+      "raw_right_term": 0.11793788817054221,
+      "source_site": 2,
+      "tau_f": 0.03125,
+      "tau_g": 0.0625,
+      "tolerance": 1.001459316921001e-08,
+      "vector_dimension": 531441,
+      "volume": 6
+    },
+    {
+      "beta": 0.25,
+      "graph": "grid2x3",
+      "i": 0,
+      "identity_residual": 6.348085304283074e-12,
+      "j": 1,
+      "normalized_identity_residual": 3.9222506772827483e-14,
+      "normalized_lhs": 8.169081445314e-05,
+      "normalized_rhs": 0.0015508071876318972,
+      "normalized_slack": 0.0014691163731787571,
+      "partition": 161.84802621236062,
+      "raw_left_term": 0.1257562884005183,
+      "raw_lhs": 0.013221497078920891,
+      "raw_rhs": 0.25099508235416457,
+      "raw_right_term": 0.12523879395364623,
+      "source_site": 2,
+      "tau_f": 0.03125,
+      "tau_g": 0.0625,
+      "tolerance": 1.001550807187632e-08,
+      "vector_dimension": 531441,
+      "volume": 6
+    },
+    {
+      "beta": 0.25,
+      "graph": "grid2x3",
+      "i": 1,
+      "identity_residual": 6.348085277335402e-12,
+      "j": 0,
+      "normalized_identity_residual": 3.922250660632763e-14,
+      "normalized_lhs": 8.169081445314e-05,
+      "normalized_rhs": 0.0015508071876318965,
+      "normalized_slack": 0.0014691163731787565,
+      "partition": 161.84802621236062,
+      "raw_left_term": 0.1257562884005179,
+      "raw_lhs": 0.013221497078920891,
+      "raw_rhs": 0.25099508235416446,
+      "raw_right_term": 0.12523879395364654,
+      "source_site": 2,
+      "tau_f": 0.03125,
+      "tau_g": 0.0625,
+      "tolerance": 1.001550807187632e-08,
+      "vector_dimension": 531441,
+      "volume": 6
+    },
+    {
+      "beta": 0.25,
+      "graph": "grid2x3",
+      "i": 1,
+      "identity_residual": 3.6599265285097715e-12,
+      "j": 1,
+      "normalized_identity_residual": 2.2613352872821483e-14,
+      "normalized_lhs": 0.00028193588137464924,
+      "normalized_rhs": 0.004764575147720826,
+      "normalized_slack": 0.004482639266346177,
+      "partition": 161.84802621236062,
+      "raw_left_term": 0.3864398397832458,
+      "raw_lhs": 0.04563076591892923,
+      "raw_rhs": 0.7711370833990823,
+      "raw_right_term": 0.38469724361583646,
+      "source_site": 2,
+      "tau_f": 0.03125,
+      "tau_g": 0.0625,
+      "tolerance": 1.0047645751477208e-08,
+      "vector_dimension": 531441,
+      "volume": 6
+    },
+    {
+      "beta": 0.25,
+      "graph": "grid2x3",
+      "i": 0,
+      "identity_residual": 5.220771731595519e-13,
+      "j": 0,
+      "normalized_identity_residual": 3.2257246836889753e-15,
+      "normalized_lhs": 5.620590572503137e-05,
+      "normalized_rhs": 0.0014593169210010322,
+      "normalized_slack": 0.0014031110152760008,
+      "partition": 161.84802621236062,
+      "raw_left_term": 0.11824967511177602,
+      "raw_lhs": 0.009096814903074346,
+      "raw_rhs": 0.23618756328231644,
+      "raw_right_term": 0.11793788817054042,
+      "source_site": 3,
+      "tau_f": 0.03125,
+      "tau_g": 0.0625,
+      "tolerance": 1.001459316921001e-08,
+      "vector_dimension": 531441,
+      "volume": 6
+    },
+    {
+      "beta": 0.25,
+      "graph": "grid2x3",
+      "i": 0,
+      "identity_residual": 6.3469080377698145e-12,
+      "j": 1,
+      "normalized_identity_residual": 3.921523287186736e-14,
+      "normalized_lhs": 8.169081445314295e-05,
+      "normalized_rhs": 0.0015508071876318016,
+      "normalized_slack": 0.0014691163731786587,
+      "partition": 161.84802621236062,
+      "raw_left_term": 0.12575628840050948,
+      "raw_lhs": 0.013221497078921368,
+      "raw_rhs": 0.2509950823541491,
+      "raw_right_term": 0.1252387939536396,
+      "source_site": 3,
+      "tau_f": 0.03125,
+      "tau_g": 0.0625,
+      "tolerance": 1.0015508071876318e-08,
+      "vector_dimension": 531441,
+      "volume": 6
+    },
+    {
+      "beta": 0.25,
+      "graph": "grid2x3",
+      "i": 1,
+      "identity_residual": 6.346908064874869e-12,
+      "j": 0,
+      "normalized_identity_residual": 3.921523303933962e-14,
+      "normalized_lhs": 8.169081445314295e-05,
+      "normalized_rhs": 0.001550807187631802,
+      "normalized_slack": 0.0014691163731786591,
+      "partition": 161.84802621236062,
+      "raw_left_term": 0.12575628840051029,
+      "raw_lhs": 0.013221497078921368,
+      "raw_rhs": 0.25099508235414913,
+      "raw_right_term": 0.12523879395363888,
+      "source_site": 3,
+      "tau_f": 0.03125,
+      "tau_g": 0.0625,
+      "tolerance": 1.0015508071876318e-08,
+      "vector_dimension": 531441,
+      "volume": 6
+    },
+    {
+      "beta": 0.25,
+      "graph": "grid2x3",
+      "i": 1,
+      "identity_residual": 3.28964633311557e-12,
+      "j": 1,
+      "normalized_identity_residual": 2.0325526421923913e-14,
+      "normalized_lhs": 0.00028193588137236634,
+      "normalized_rhs": 0.004764575147720826,
+      "normalized_slack": 0.00448263926634846,
+      "partition": 161.84802621236062,
+      "raw_left_term": 0.38643983978324536,
+      "raw_lhs": 0.045630765918559746,
+      "raw_rhs": 0.7711370833990823,
+      "raw_right_term": 0.38469724361583696,
+      "source_site": 3,
+      "tau_f": 0.03125,
+      "tau_g": 0.0625,
+      "tolerance": 1.0047645751477208e-08,
+      "vector_dimension": 531441,
+      "volume": 6
+    },
+    {
+      "beta": 0.25,
+      "graph": "grid2x3",
+      "i": 0,
+      "identity_residual": 2.4732021985940378e-12,
+      "j": 0,
+      "normalized_identity_residual": 1.5281015508641125e-14,
+      "normalized_lhs": 5.3026053293012585e-05,
+      "normalized_rhs": 0.0012778345216213904,
+      "normalized_slack": 0.0012248084683283778,
+      "partition": 161.84802621236062,
+      "raw_left_term": 0.1035839789251866,
+      "raw_lhs": 0.008582162063305532,
+      "raw_rhs": 0.2068149951504381,
+      "raw_right_term": 0.1032310162252515,
+      "source_site": 4,
+      "tau_f": 0.03125,
+      "tau_g": 0.0625,
+      "tolerance": 1.0012778345216214e-08,
+      "vector_dimension": 531441,
+      "volume": 6
+    },
+    {
+      "beta": 0.25,
+      "graph": "grid2x3",
+      "i": 0,
+      "identity_residual": 1.4245198666777833e-12,
+      "j": 1,
+      "normalized_identity_residual": 8.801589367600148e-15,
+      "normalized_lhs": 0.00013978255933163556,
+      "normalized_rhs": 0.001557258564774817,
+      "normalized_slack": 0.0014174760054431815,
+      "partition": 161.84802621236062,
+      "raw_left_term": 0.12641580534491348,
+      "raw_lhs": 0.022623531326737407,
+      "raw_rhs": 0.25203922501109766,
+      "raw_right_term": 0.12562341966618418,
+      "source_site": 4,
+      "tau_f": 0.03125,
+      "tau_g": 0.0625,
+      "tolerance": 1.0015572585647748e-08,
+      "vector_dimension": 531441,
+      "volume": 6
+    },
+    {
+      "beta": 0.25,
+      "graph": "grid2x3",
+      "i": 1,
+      "identity_residual": 1.4245198531252624e-12,
+      "j": 0,
+      "normalized_identity_residual": 8.801589283864057e-15,
+      "normalized_lhs": 0.00013978255933163556,
+      "normalized_rhs": 0.0015572585647748176,
+      "normalized_slack": 0.001417476005443182,
+      "partition": 161.84802621236062,
+      "raw_left_term": 0.1264158053449142,
+      "raw_lhs": 0.022623531326737407,
+      "raw_rhs": 0.25203922501109777,
+      "raw_right_term": 0.1256234196661836,
+      "source_site": 4,
+      "tau_f": 0.03125,
+      "tau_g": 0.0625,
+      "tolerance": 1.0015572585647748e-08,
+      "vector_dimension": 531441,
+      "volume": 6
+    },
+    {
+      "beta": 0.25,
+      "graph": "grid2x3",
+      "i": 1,
+      "identity_residual": 8.792688799275084e-13,
+      "j": 1,
+      "normalized_identity_residual": 5.432682130913481e-15,
+      "normalized_lhs": 0.00048371062122804946,
+      "normalized_rhs": 0.006235352919096302,
+      "normalized_slack": 0.005751642297868253,
+      "partition": 161.84802621236062,
+      "raw_left_term": 0.5065229352688729,
+      "raw_lhs": 0.07828760930371459,
+      "raw_rhs": 1.0091795626932176,
+      "raw_right_term": 0.5026566274243447,
+      "source_site": 4,
+      "tau_f": 0.03125,
+      "tau_g": 0.0625,
+      "tolerance": 1.0062353529190963e-08,
+      "vector_dimension": 531441,
+      "volume": 6
+    },
+    {
+      "beta": 0.25,
+      "graph": "grid2x3",
+      "i": 0,
+      "identity_residual": 7.984932159921243e-15,
+      "j": 0,
+      "normalized_identity_residual": 4.9335987264028924e-17,
+      "normalized_lhs": 5.62059057281923e-05,
+      "normalized_rhs": 0.0014593169210010304,
+      "normalized_slack": 0.0014031110152728382,
+      "partition": 161.84802621236062,
+      "raw_left_term": 0.11824967511177518,
+      "raw_lhs": 0.009096814903585937,
+      "raw_rhs": 0.23618756328231616,
+      "raw_right_term": 0.11793788817054096,
+      "source_site": 5,
+      "tau_f": 0.03125,
+      "tau_g": 0.0625,
+      "tolerance": 1.001459316921001e-08,
+      "vector_dimension": 531441,
+      "volume": 6
+    },
+    {
+      "beta": 0.25,
+      "graph": "grid2x3",
+      "i": 0,
+      "identity_residual": 6.291347826416534e-12,
+      "j": 1,
+      "normalized_identity_residual": 3.8871946564004825e-14,
+      "normalized_lhs": 8.169081445313534e-05,
+      "normalized_rhs": 0.0015508071876318846,
+      "normalized_slack": 0.0014691163731787493,
+      "partition": 161.84802621236062,
+      "raw_left_term": 0.1257562884005162,
+      "raw_lhs": 0.013221497078920138,
+      "raw_rhs": 0.2509950823541625,
+      "raw_right_term": 0.12523879395364632,
+      "source_site": 5,
+      "tau_f": 0.03125,
+      "tau_g": 0.0625,
+      "tolerance": 1.001550807187632e-08,
+      "vector_dimension": 531441,
+      "volume": 6
+    },
+    {
+      "beta": 0.25,
+      "graph": "grid2x3",
+      "i": 1,
+      "identity_residual": 6.29134782617044e-12,
+      "j": 0,
+      "normalized_identity_residual": 3.88719465624843e-14,
+      "normalized_lhs": 8.169081445313534e-05,
+      "normalized_rhs": 0.0015508071876318842,
+      "normalized_slack": 0.0014691163731787489,
+      "partition": 161.84802621236062,
+      "raw_left_term": 0.12575628840051664,
+      "raw_lhs": 0.013221497078920138,
+      "raw_rhs": 0.25099508235416246,
+      "raw_right_term": 0.1252387939536458,
+      "source_site": 5,
+      "tau_f": 0.03125,
+      "tau_g": 0.0625,
+      "tolerance": 1.001550807187632e-08,
+      "vector_dimension": 531441,
+      "volume": 6
+    },
+    {
+      "beta": 0.25,
+      "graph": "grid2x3",
+      "i": 1,
+      "identity_residual": 2.4932000908250984e-12,
+      "j": 1,
+      "normalized_identity_residual": 1.540457520040296e-14,
+      "normalized_lhs": 0.0002819358813674494,
+      "normalized_rhs": 0.004764575147720785,
+      "normalized_slack": 0.004482639266353336,
+      "partition": 161.84802621236062,
+      "raw_left_term": 0.38643983978324287,
+      "raw_lhs": 0.04563076591776394,
+      "raw_rhs": 0.7711370833990756,
+      "raw_right_term": 0.38469724361583274,
+      "source_site": 5,
+      "tau_f": 0.03125,
+      "tau_g": 0.0625,
+      "tolerance": 1.0047645751477208e-08,
+      "vector_dimension": 531441,
+      "volume": 6
+    },
+    {
+      "beta": 0.5,
+      "graph": "grid2x3",
+      "i": 0,
+      "identity_residual": 3.6751678089697037e-13,
+      "j": 0,
+      "normalized_identity_residual": 7.772727399444886e-15,
+      "normalized_lhs": 0.00019984630137804014,
+      "normalized_rhs": 0.002577924028500808,
+      "normalized_slack": 0.002378077727122768,
+      "partition": 47.28285992934961,
+      "raw_left_term": 0.06127158075704726,
+      "raw_lhs": 0.00944930467545646,
+      "raw_rhs": 0.12189162074810839,
+      "raw_right_term": 0.060620039991061136,
+      "source_site": 0,
+      "tau_f": 0.0625,
+      "tau_g": 0.125,
+      "tolerance": 1.0025779240285008e-08,
+      "vector_dimension": 531441,
+      "volume": 6
+    },
+    {
+      "beta": 0.5,
+      "graph": "grid2x3",
+      "i": 0,
+      "identity_residual": 7.975441768080317e-13,
+      "j": 1,
+      "normalized_identity_residual": 1.6867511356117796e-14,
+      "normalized_lhs": 0.00032118245619908024,
+      "normalized_rhs": 0.002817803601387661,
+      "normalized_slack": 0.0024966211451885804,
+      "partition": 47.28285992934961,
+      "raw_left_term": 0.06715792221202015,
+      "raw_lhs": 0.015186425088225578,
+      "raw_rhs": 0.13323381299282966,
+      "raw_right_term": 0.06607589078080951,
+      "source_site": 0,
+      "tau_f": 0.0625,
+      "tau_g": 0.125,
+      "tolerance": 1.0028178036013877e-08,
+      "vector_dimension": 531441,
+      "volume": 6
+    },
+    {
+      "beta": 0.5,
+      "graph": "grid2x3",
+      "i": 1,
+      "identity_residual": 7.975441669079299e-13,
+      "j": 0,
+      "normalized_identity_residual": 1.6867511146737445e-14,
+      "normalized_lhs": 0.00032118245619908024,
+      "normalized_rhs": 0.002817803601387659,
+      "normalized_slack": 0.0024966211451885787,
+      "partition": 47.28285992934961,
+      "raw_left_term": 0.06715792221202022,
+      "raw_lhs": 0.015186425088225578,
+      "raw_rhs": 0.13323381299282958,
+      "raw_right_term": 0.06607589078080936,
+      "source_site": 0,
+      "tau_f": 0.0625,
+      "tau_g": 0.125,
+      "tolerance": 1.0028178036013877e-08,
+      "vector_dimension": 531441,
+      "volume": 6
+    },
+    {
+      "beta": 0.5,
+      "graph": "grid2x3",
+      "i": 1,
+      "identity_residual": 1.3801668141688594e-12,
+      "j": 1,
+      "normalized_identity_residual": 2.9189579823029204e-14,
+      "normalized_lhs": 0.0009753797334313825,
+      "normalized_rhs": 0.008444362720092522,
+      "normalized_slack": 0.00746898298666114,
+      "partition": 47.28285992934961,
+      "raw_left_term": 0.2013664092426932,
+      "raw_lhs": 0.04611874331376242,
+      "raw_rhs": 0.39927361968675645,
+      "raw_right_term": 0.19790721044406323,
+      "source_site": 0,
+      "tau_f": 0.0625,
+      "tau_g": 0.125,
+      "tolerance": 1.0084443627200925e-08,
+      "vector_dimension": 531441,
+      "volume": 6
+    },
+    {
+      "beta": 0.5,
+      "graph": "grid2x3",
+      "i": 0,
+      "identity_residual": 1.1514660752665051e-12,
+      "j": 0,
+      "normalized_identity_residual": 2.435271633287483e-14,
+      "normalized_lhs": 0.00017259487495336538,
+      "normalized_rhs": 0.0020991486997123205,
+      "normalized_slack": 0.0019265538247589553,
+      "partition": 47.28285992934961,
+      "raw_left_term": 0.049965006909987814,
+      "raw_lhs": 0.008160779296943588,
+      "raw_rhs": 0.09925375393937402,
+      "raw_right_term": 0.049288747029386216,
+      "source_site": 1,
+      "tau_f": 0.0625,
+      "tau_g": 0.125,
+      "tolerance": 1.0020991486997124e-08,
+      "vector_dimension": 531441,
+      "volume": 6
+    },
+    {
+      "beta": 0.5,
+      "graph": "grid2x3",
+      "i": 0,
+      "identity_residual": 8.164245894668264e-13,
+      "j": 1,
+      "normalized_identity_residual": 1.7266819111338314e-14,
+      "normalized_lhs": 0.0005176179795100298,
+      "normalized_rhs": 0.0026802057674334035,
+      "normalized_slack": 0.002162587787923374,
+      "partition": 47.28285992934961,
+      "raw_left_term": 0.06412628558405,
+      "raw_lhs": 0.024474458422085694,
+      "raw_rhs": 0.1267277938833886,
+      "raw_right_term": 0.0626015082993386,
+      "source_site": 1,
+      "tau_f": 0.0625,
+      "tau_g": 0.125,
+      "tolerance": 1.0026802057674334e-08,
+      "vector_dimension": 531441,
+      "volume": 6
+    },
+    {
+      "beta": 0.5,
+      "graph": "grid2x3",
+      "i": 1,
+      "identity_residual": 8.164245962430781e-13,
+      "j": 0,
+      "normalized_identity_residual": 1.726681925465138e-14,
+      "normalized_lhs": 0.0005176179795100298,
+      "normalized_rhs": 0.0026802057674334026,
+      "normalized_slack": 0.002162587787923373,
+      "partition": 47.28285992934961,
+      "raw_left_term": 0.06412628558404979,
+      "raw_lhs": 0.024474458422085694,
+      "raw_rhs": 0.12672779388338856,
+      "raw_right_term": 0.06260150829933878,
+      "source_site": 1,
+      "tau_f": 0.0625,
+      "tau_g": 0.125,
+      "tolerance": 1.0026802057674334e-08,
+      "vector_dimension": 531441,
+      "volume": 6
+    },
+    {
+      "beta": 0.5,
+      "graph": "grid2x3",
+      "i": 1,
+      "identity_residual": 9.374445664178666e-14,
+      "j": 1,
+      "normalized_identity_residual": 1.982630847242749e-15,
+      "normalized_lhs": 0.0015496298793205615,
+      "normalized_rhs": 0.010478610355006367,
+      "normalized_slack": 0.008928980475685806,
+      "partition": 47.28285992934961,
+      "raw_left_term": 0.2512589901360537,
+      "raw_lhs": 0.07327093252624906,
+      "raw_rhs": 0.4954586656699985,
+      "raw_right_term": 0.24419967553394487,
+      "source_site": 1,
+      "tau_f": 0.0625,
+      "tau_g": 0.125,
+      "tolerance": 1.0104786103550064e-08,
+      "vector_dimension": 531441,
+      "volume": 6
+    },
+    {
+      "beta": 0.5,
+      "graph": "grid2x3",
+      "i": 0,
+      "identity_residual": 8.581694382892024e-13,
+      "j": 0,
+      "normalized_identity_residual": 1.814969398152915e-14,
+      "normalized_lhs": 0.0001998463013884091,
+      "normalized_rhs": 0.002577924028500835,
+      "normalized_slack": 0.002378077727112426,
+      "partition": 47.28285992934961,
+      "raw_left_term": 0.06127158075704778,
+      "raw_lhs": 0.009449304675946735,
+      "raw_rhs": 0.12189162074810966,
+      "raw_right_term": 0.06062003999106189,
+      "source_site": 2,
+      "tau_f": 0.0625,
+      "tau_g": 0.125,
+      "tolerance": 1.0025779240285008e-08,
+      "vector_dimension": 531441,
+      "volume": 6
+    },
+    {
+      "beta": 0.5,
+      "graph": "grid2x3",
+      "i": 0,
+      "identity_residual": 8.181384028652131e-13,
+      "j": 1,
+      "normalized_identity_residual": 1.7303065087172844e-14,
+      "normalized_lhs": 0.0003211824561990695,
+      "normalized_rhs": 0.002817803601387863,
+      "normalized_slack": 0.0024966211451887934,
+      "partition": 47.28285992934961,
+      "raw_left_term": 0.06715792221202553,
+      "raw_lhs": 0.01518642508822507,
+      "raw_rhs": 0.1332338129928392,
+      "raw_right_term": 0.06607589078081366,
+      "source_site": 2,
+      "tau_f": 0.0625,
+      "tau_g": 0.125,
+      "tolerance": 1.0028178036013878e-08,
+      "vector_dimension": 531441,
+      "volume": 6
+    },
+    {
+      "beta": 0.5,
+      "graph": "grid2x3",
+      "i": 1,
+      "identity_residual": 8.181383893126883e-13,
+      "j": 0,
+      "normalized_identity_residual": 1.7303064800546258e-14,
+      "normalized_lhs": 0.0003211824561990695,
+      "normalized_rhs": 0.0028178036013878603,
+      "normalized_slack": 0.0024966211451887908,
+      "partition": 47.28285992934961,
+      "raw_left_term": 0.06715792221202478,
+      "raw_lhs": 0.01518642508822507,
+      "raw_rhs": 0.1332338129928391,
+      "raw_right_term": 0.0660758907808143,
+      "source_site": 2,
+      "tau_f": 0.0625,
+      "tau_g": 0.125,
+      "tolerance": 1.0028178036013878e-08,
+      "vector_dimension": 531441,
+      "volume": 6
+    },
+    {
+      "beta": 0.5,
+      "graph": "grid2x3",
+      "i": 1,
+      "identity_residual": 1.5894577320985093e-12,
+      "j": 1,
+      "normalized_identity_residual": 3.361593893587419e-14,
+      "normalized_lhs": 0.0009753797334357405,
+      "normalized_rhs": 0.008444362720092517,
+      "normalized_slack": 0.007468982986656777,
+      "partition": 47.28285992934961,
+      "raw_left_term": 0.2013664092426908,
+      "raw_lhs": 0.04611874331396848,
+      "raw_rhs": 0.3992736196867562,
+      "raw_right_term": 0.19790721044406537,
+      "source_site": 2,
+      "tau_f": 0.0625,
+      "tau_g": 0.125,
+      "tolerance": 1.0084443627200925e-08,
+      "vector_dimension": 531441,
+      "volume": 6
+    },
+    {
+      "beta": 0.5,
+      "graph": "grid2x3",
+      "i": 0,
+      "identity_residual": 2.9752589281173414e-13,
+      "j": 0,
+      "normalized_identity_residual": 6.2924682063711765e-15,
+      "normalized_lhs": 0.00019984630137653738,
+      "normalized_rhs": 0.002577924028500797,
+      "normalized_slack": 0.0023780777271242594,
+      "partition": 47.28285992934961,
+      "raw_left_term": 0.06127158075704669,
+      "raw_lhs": 0.009449304675385406,
+      "raw_rhs": 0.12189162074810786,
+      "raw_right_term": 0.060620039991061164,
+      "source_site": 3,
+      "tau_f": 0.0625,
+      "tau_g": 0.125,
+      "tolerance": 1.0025779240285008e-08,
+      "vector_dimension": 531441,
+      "volume": 6
+    },
+    {
+      "beta": 0.5,
+      "graph": "grid2x3",
+      "i": 0,
+      "identity_residual": 7.973710177166074e-13,
+      "j": 1,
+      "normalized_identity_residual": 1.686384916030978e-14,
+      "normalized_lhs": 0.000321182456199075,
+      "normalized_rhs": 0.0028178036013876643,
+      "normalized_slack": 0.0024966211451885895,
+      "partition": 47.28285992934961,
+      "raw_left_term": 0.06715792221202041,
+      "raw_lhs": 0.01518642508822533,
+      "raw_rhs": 0.13323381299282983,
+      "raw_right_term": 0.0660758907808094,
+      "source_site": 3,
+      "tau_f": 0.0625,
+      "tau_g": 0.125,
+      "tolerance": 1.0028178036013877e-08,
+      "vector_dimension": 531441,
+      "volume": 6
+    },
+    {
+      "beta": 0.5,
+      "graph": "grid2x3",
+      "i": 1,
+      "identity_residual": 7.97371024492871e-13,
+      "j": 0,
+      "normalized_identity_residual": 1.6863849303623098e-14,
+      "normalized_lhs": 0.000321182456199075,
+      "normalized_rhs": 0.0028178036013876634,
+      "normalized_slack": 0.0024966211451885887,
+      "partition": 47.28285992934961,
+      "raw_left_term": 0.0671579222120207,
+      "raw_lhs": 0.01518642508822533,
+      "raw_rhs": 0.13323381299282977,
+      "raw_right_term": 0.06607589078080905,
+      "source_site": 3,
+      "tau_f": 0.0625,
+      "tau_g": 0.125,
+      "tolerance": 1.0028178036013877e-08,
+      "vector_dimension": 531441,
+      "volume": 6
+    },
+    {
+      "beta": 0.5,
+      "graph": "grid2x3",
+      "i": 1,
+      "identity_residual": 1.30367938666609e-12,
+      "j": 1,
+      "normalized_identity_residual": 2.75719232849717e-14,
+      "normalized_lhs": 0.0009753797334297295,
+      "normalized_rhs": 0.008444362720092587,
+      "normalized_slack": 0.007468982986662857,
+      "partition": 47.28285992934961,
+      "raw_left_term": 0.2013664092426931,
+      "raw_lhs": 0.04611874331368426,
+      "raw_rhs": 0.39927361968675945,
+      "raw_right_term": 0.19790721044406637,
+      "source_site": 3,
+      "tau_f": 0.0625,
+      "tau_g": 0.125,
+      "tolerance": 1.0084443627200926e-08,
+      "vector_dimension": 531441,
+      "volume": 6
+    },
+    {
+      "beta": 0.5,
+      "graph": "grid2x3",
+      "i": 0,
+      "identity_residual": 1.1377461472950046e-12,
+      "j": 0,
+      "normalized_identity_residual": 2.406254928308129e-14,
+      "normalized_lhs": 0.00017259487495366595,
+      "normalized_rhs": 0.002099148699712297,
+      "normalized_slack": 0.001926553824758631,
+      "partition": 47.28285992934961,
+      "raw_left_term": 0.04996500690998719,
+      "raw_lhs": 0.008160779296957799,
+      "raw_rhs": 0.09925375393937291,
+      "raw_right_term": 0.04928874702938572,
+      "source_site": 4,
+      "tau_f": 0.0625,
+      "tau_g": 0.125,
+      "tolerance": 1.0020991486997123e-08,
+      "vector_dimension": 531441,
+      "volume": 6
+    },
+    {
+      "beta": 0.5,
+      "graph": "grid2x3",
+      "i": 0,
+      "identity_residual": 7.80377852774681e-13,
+      "j": 1,
+      "normalized_identity_residual": 1.6504455397594967e-14,
+      "normalized_lhs": 0.0005176179795100379,
+      "normalized_rhs": 0.002680205767433378,
+      "normalized_slack": 0.00216258778792334,
+      "partition": 47.28285992934961,
+      "raw_left_term": 0.06412628558404934,
+      "raw_lhs": 0.024474458422086082,
+      "raw_rhs": 0.1267277938833874,
+      "raw_right_term": 0.06260150829933805,
+      "source_site": 4,
+      "tau_f": 0.0625,
+      "tau_g": 0.125,
+      "tolerance": 1.0026802057674334e-08,
+      "vector_dimension": 531441,
+      "volume": 6
+    },
+    {
+      "beta": 0.5,
+      "graph": "grid2x3",
+      "i": 1,
+      "identity_residual": 7.80377852774681e-13,
+      "j": 0,
+      "normalized_identity_residual": 1.6504455397594967e-14,
+      "normalized_lhs": 0.0005176179795100379,
+      "normalized_rhs": 0.002680205767433378,
+      "normalized_slack": 0.00216258778792334,
+      "partition": 47.28285992934961,
+      "raw_left_term": 0.06412628558404936,
+      "raw_lhs": 0.024474458422086082,
+      "raw_rhs": 0.1267277938833874,
+      "raw_right_term": 0.06260150829933805,
+      "source_site": 4,
+      "tau_f": 0.0625,
+      "tau_g": 0.125,
+      "tolerance": 1.0026802057674334e-08,
+      "vector_dimension": 531441,
+      "volume": 6
+    },
+    {
+      "beta": 0.5,
+      "graph": "grid2x3",
+      "i": 1,
+      "identity_residual": 1.340177968600642e-13,
+      "j": 1,
+      "normalized_identity_residual": 2.8343843215134314e-15,
+      "normalized_lhs": 0.0015496298793214631,
+      "normalized_rhs": 0.010478610355006317,
+      "normalized_slack": 0.008928980475684854,
+      "partition": 47.28285992934961,
+      "raw_left_term": 0.2512589901360529,
+      "raw_lhs": 0.07327093252629169,
+      "raw_rhs": 0.4954586656699961,
+      "raw_right_term": 0.2441996755339432,
+      "source_site": 4,
+      "tau_f": 0.0625,
+      "tau_g": 0.125,
+      "tolerance": 1.0104786103550064e-08,
+      "vector_dimension": 531441,
+      "volume": 6
+    },
+    {
+      "beta": 0.5,
+      "graph": "grid2x3",
+      "i": 0,
+      "identity_residual": 7.741134122607463e-13,
+      "j": 0,
+      "normalized_identity_residual": 1.6371966784949812e-14,
+      "normalized_lhs": 0.0001998463013866058,
+      "normalized_rhs": 0.002577924028500798,
+      "normalized_slack": 0.0023780777271141923,
+      "partition": 47.28285992934961,
+      "raw_left_term": 0.06127158075704671,
+      "raw_lhs": 0.00944930467586147,
+      "raw_rhs": 0.12189162074810792,
+      "raw_right_term": 0.0606200399910612,
+      "source_site": 5,
+      "tau_f": 0.0625,
+      "tau_g": 0.125,
+      "tolerance": 1.0025779240285008e-08,
+      "vector_dimension": 531441,
+      "volume": 6
+    },
+    {
+      "beta": 0.5,
+      "graph": "grid2x3",
+      "i": 0,
+      "identity_residual": 7.963047736215931e-13,
+      "j": 1,
+      "normalized_identity_residual": 1.6841298830304202e-14,
+      "normalized_lhs": 0.00032118245619907357,
+      "normalized_rhs": 0.0028178036013878534,
+      "normalized_slack": 0.00249662114518878,
+      "partition": 47.28285992934961,
+      "raw_left_term": 0.0671579222120248,
+      "raw_lhs": 0.015186425088225264,
+      "raw_rhs": 0.13323381299283876,
+      "raw_right_term": 0.06607589078081395,
+      "source_site": 5,
+      "tau_f": 0.0625,
+      "tau_g": 0.125,
+      "tolerance": 1.0028178036013878e-08,
+      "vector_dimension": 531441,
+      "volume": 6
+    },
+    {
+      "beta": 0.5,
+      "graph": "grid2x3",
+      "i": 1,
+      "identity_residual": 7.963047600690661e-13,
+      "j": 0,
+      "normalized_identity_residual": 1.684129854367757e-14,
+      "normalized_lhs": 0.00032118245619907357,
+      "normalized_rhs": 0.002817803601387852,
+      "normalized_slack": 0.0024966211451887786,
+      "partition": 47.28285992934961,
+      "raw_left_term": 0.06715792221202513,
+      "raw_lhs": 0.015186425088225264,
+      "raw_rhs": 0.1332338129928387,
+      "raw_right_term": 0.06607589078081359,
+      "source_site": 5,
+      "tau_f": 0.0625,
+      "tau_g": 0.125,
+      "tolerance": 1.0028178036013878e-08,
+      "vector_dimension": 531441,
+      "volume": 6
+    },
+    {
+      "beta": 0.5,
+      "graph": "grid2x3",
+      "i": 1,
+      "identity_residual": 1.3690368283469923e-12,
+      "j": 1,
+      "normalized_identity_residual": 2.895418827018114e-14,
+      "normalized_lhs": 0.000975379733431082,
+      "normalized_rhs": 0.008444362720092562,
+      "normalized_slack": 0.007468982986661481,
+      "partition": 47.28285992934961,
+      "raw_left_term": 0.20136640924269267,
+      "raw_lhs": 0.04611874331374821,
+      "raw_rhs": 0.39927361968675834,
+      "raw_right_term": 0.1979072104440657,
+      "source_site": 5,
+      "tau_f": 0.0625,
+      "tau_g": 0.125,
+      "tolerance": 1.0084443627200926e-08,
+      "vector_dimension": 531441,
+      "volume": 6
+    }
+  ],
+  "run_kind": "independent",
+  "schema": "tect/foundation-audit/1.0",
+  "scope": {
+    "c6_closed": false,
+    "common_alpha_closed": false,
+    "common_word_exhaustion_closed": false,
+    "continuum_closed": false,
+    "direct_d_delta_d_cauchy_closed": false,
+    "finite_partition_positive_closed": true,
+    "finite_q3_hilbert_schmidt_vectors_reproduced": true,
+    "finite_q3_os_transfer_word_factorization_closed": true,
+    "finite_q3_source_sites_reproduced": true,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "no_new_negative_result": true,
+    "no_pdf": true,
+    "no_tier_change": true,
+    "pre_a_closed": false,
+    "r340_complex_gram_bound_closed": true,
+    "sector_a_closed": false,
+    "source_volume_cutoff_beta_uniform_closed": false,
+    "thermodynamic_common_os_hilbert_carrier_closed": false
+  },
+  "task_id": "T-054",
+  "verdict": "PASS"
+}

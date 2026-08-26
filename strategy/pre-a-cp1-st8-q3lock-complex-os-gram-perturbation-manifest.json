@@ -1,0 +1,236 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-COMPLEX-OS-GRAM-PERTURBATION-v0",
+  "title": "Finite Q3 complex OS transfer-word Gram perturbation",
+  "task_id": "T-054",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "exploration_id": "EXP-001179",
+  "claim_bearing": false,
+  "parent_explorations": [
+    "EXP-001178",
+    "EXP-001173"
+  ],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE",
+    "PA-CP1-ST8-Q3LOCK-FIXED-BETA-CANONICAL-OS-MIXTURE-COMMON-NORMAL-WSTAR-KMS-ENVELOPE",
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "question": "Can the R340 Complex Gram perturbation inequality be instantiated on actual finite Q3 Euclidean transfer-word matrices, while keeping common-carrier and thermodynamic uniformity hypotheses open?",
+  "exact_statement": {
+    "complex_gram_entry": "G_f(i,j)=sum_k conjugate(f(i,k)) f(j,k) for finite complex vectors.",
+    "bound": "|G_f(i,j)-G_g(i,j)| <= sum_k |f(i,k)-g(i,k)| |f(j,k)| + sum_k |g(i,k)| |f(j,k)-g(j,k)|.",
+    "decomposition": "conjugate(f_i) f_j-conjugate(g_i) g_j = conjugate(f_i-g_i) f_j + conjugate(g_i)(f_j-g_j).",
+    "q3_vectorization": "Each finite energy-basis transfer-word matrix F is flattened into a complex Hilbert-Schmidt vector; the finite Gram entry is sum conjugate(F_i)F_j divided by the positive partition function."
+  },
+  "finite_fixture": {
+    "graphs": {
+      "bond2": {
+        "vertices": 2,
+        "edges": [
+          [
+            0,
+            1
+          ]
+        ],
+        "source_sites": [
+          0,
+          1
+        ]
+      },
+      "square4": {
+        "vertices": 4,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "source_sites": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "grid2x3": {
+        "vertices": 6,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            5
+          ]
+        ],
+        "source_sites": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      }
+    },
+    "oscillator_dimension": 3,
+    "beta_values": [
+      0.25,
+      0.5
+    ],
+    "tau_pair_fractions": [
+      0.125,
+      0.25
+    ],
+    "character_amplitude": 0.25,
+    "hbar": 1.0,
+    "observable_kinds": [
+      "q",
+      "p"
+    ],
+    "absolute_tolerance": 1e-08,
+    "relative_tolerance": 1e-08,
+    "agreement_tolerance": 0.0001,
+    "positive_partition_floor": 1e-12,
+    "noncommutation_witness_floor": 1e-06
+  },
+  "model_parameters": {
+    "chi": "1",
+    "r": "-1",
+    "g": "3/5",
+    "c": "3/5",
+    "lambda": "1/10"
+  },
+  "model": {
+    "hamiltonian": "H=sum_x[p_x^2/(2 chi)+r q_x^2/2+g q_x^4/4]+sum_edges[c(q_x-q_y)^2/2+lambda(q_x-q_y)^2(q_x^2+q_y^2)/4]",
+    "euclidean_transfer": "T(s)=exp(-s H/hbar), period beta*hbar",
+    "positive_half_word": "F_(tau,A)=T(beta*hbar/2-tau) A T(tau)",
+    "comparison": "f uses tau_pair_fractions[0] and g uses tau_pair_fractions[1] for the same graph, source and observable kinds",
+    "observables": "A_x=exp(i a q_x/hbar), B_x=exp(i a p_x/hbar)"
+  },
+  "scope": {
+    "r340_complex_gram_bound_closed": true,
+    "finite_q3_os_transfer_word_factorization_closed": true,
+    "finite_q3_hilbert_schmidt_vectors_reproduced": true,
+    "finite_q3_source_sites_reproduced": true,
+    "finite_partition_positive_closed": true,
+    "thermodynamic_common_os_hilbert_carrier_closed": false,
+    "source_volume_cutoff_beta_uniform_closed": false,
+    "common_word_exhaustion_closed": false,
+    "direct_d_delta_d_cauchy_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "adversarial_review": [
+    {
+      "axis": "Complex inner-product convention",
+      "check": "The Gram uses conjugation on the first vector and the two-term decomposition keeps that orientation; no real-only substitution is made.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "Finite Hilbert-Schmidt realization",
+      "check": "Each F matrix is flattened only within one declared finite graph and energy basis; no cross-volume identification is assumed.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "Partition normalization",
+      "check": "The raw R340 inequality is applied before division by the positive finite partition function, so normalization cannot reverse the inequality.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "Numerical roundoff",
+      "check": "Identity and inequality residuals use manifest absolute and relative tolerances; no floating value is promoted as an exact physical constant.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "Source coverage",
+      "check": "All finite source sites in bond2, square4 and grid2x3 are recomputed, but this finite coverage is not source-uniform thermodynamic control.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "Noncommuting dynamics",
+      "check": "A positive Hamiltonian-observable commutator witness is retained for each graph; the transfer words are not treated as commuting factors.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "Independent reconstruction",
+      "check": "The independent lane rebuilds tensor operators, Q3 Hamiltonian, spectra, transfer matrices and complex sums without importing the primary lane.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "QFT promotion",
+      "check": "Finite complex vector instantiation does not close a common OS carrier, exhaustion Cauchy estimate, common alpha, Hamiltonian-to-OS identification, GNS gap, continuum, C6, Sector A or Pre-A.",
+      "disposition": "UPHELD-OPEN"
+    }
+  ],
+  "files": {
+    "primary": "codes/foundations/pre_a_cp1_st8_q3lock_complex_os_gram_perturbation.py",
+    "independent": "codes/foundations/pre_a_cp1_st8_q3lock_complex_os_gram_perturbation_independent.py",
+    "integrated": "codes/foundations/pre_a_cp1_st8_q3lock_complex_os_gram_perturbation_verify.py",
+    "lean": "verification/lean/Tect/R340.lean",
+    "registry": "verification/lean/registry.json",
+    "primary_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-primary-pre-a-cp1-st8-q3lock-complex-os-gram-perturbation/primary.json",
+    "independent_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-independent-pre-a-cp1-st8-q3lock-complex-os-gram-perturbation/independent.json",
+    "integrated_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-integrated-pre-a-cp1-st8-q3lock-complex-os-gram-perturbation/integrated.json"
+  },
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R340.lean",
+    "command": "lake env lean Tect/R340.lean",
+    "theorem_markers": [
+      "finite_complex_gram_entry_perturbation"
+    ],
+    "role": "R340 is the exact Complex Hilbert-space perturbation bridge; Python instantiates it on finite Q3 transfer-word matrices, while all common-carrier and limit assumptions remain explicit."
+  },
+  "qft_interface": {
+    "closed": "For the declared finite Q3 graphs, sources, beta values and two tau contexts, the actual energy-basis transfer-word matrices are finite complex Hilbert-Schmidt vectors and satisfy the R340 Gram perturbation bound within recorded numerical tolerances.",
+    "open": "No cross-volume common Hilbert carrier, source/volume/cutoff/beta-uniform vector estimate, exhaustion Cauchy theorem, direct D/delta-D convergence, common alpha, Hamiltonian-to-OS identification, GNS gap, continuum, C6, Sector A or Pre-A follows.",
+    "tect_boundary": "Auxiliary finite QFT interface only; no physical reference, heat_root_incidence, canonical A1/R-192 production owner, Sector-A closure or Pre-A closure is supplied."
+  },
+  "next_action": "Use the explicit finite vector-difference terms as the input contract for a cross-volume common-carrier test. Supply an actual isometric transport or a uniform source/volume/cutoff/beta bound; if neither exists, record the missing-interface obstruction rather than promoting finite Gram control.",
+  "boundary": "T0 claim-nonbearing finite Complex transfer-word instantiation. It is not a thermodynamic OS reconstruction, common-alpha theorem, mass-gap proof, continuum result, or Clay result.",
+  "no_overclaim": "This package proves only the finite Complex Gram perturbation theorem and its numerical instantiation on the declared Q3 matrices. It does not prove a common OS Hilbert space, thermodynamic dynamics, common alpha, Hamiltonian-to-OS identification, GNS mass gap, continuum removal, C6, Sector A, Pre-A or a Clay result."
+}
