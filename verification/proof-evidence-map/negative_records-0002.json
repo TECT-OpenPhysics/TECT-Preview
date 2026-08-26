@@ -1,6 +1,28 @@
 {
   "data": [
     {
+      "anchor": "ng-2026-08-04-pre-a-cp1-cl8-nonlinear-floquet-weyl-normalizer",
+      "branch": "promote the exact nonlinear CL8 split-circuit automorphism on `B(H_a)` to an automorphism of the concrete unital Weyl C-star algebra",
+      "claim_ref_basis": {
+        "C6-SPACETIME-SIGNATURE": "explicit_negative_event:20260804-split-the-common-cl8-regulator-into-a-causal-ca"
+      },
+      "claim_refs": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "detail": {
+        "boundary": "This does not reject the exact normal automorphism on `B(H_a)`, the full quadratic metaplectic Weyl sector, the regularity of transported states after restriction, or a resolvent, crossed-product, or other explicitly defined enlarged algebra. It is stronger in scope than merely observing that one nonlinear classical label map is not linear, but it is still specific to the current quartic kick and concrete unital Weyl algebra.",
+        "consequence": "Keep nonlinear dynamics on `B(H_a)` until an enlarged observable algebra is defined and proved invariant. Do not label inner `B(H_a)` dynamics as interacting Weyl C-star dynamics.",
+        "evidence": "Let `T_y` be a nonzero one-coordinate configuration translation, hence a Weyl unitary. The position kick satisfies `Khat_delta T_y Khat_delta^* = M_f T_y`, where `f(x)=exp[-i delta (U(x)-U(x-y))/hbar]`. The `g>0` quartic term makes a one-coordinate phase difference a polynomial with nonzero cubic leading coefficient. For a cubic `P`, increments `epsilon_n=pi/P'(x_n)` tend to zero as `x_n` tends to infinity, while `P(x_n+epsilon_n)-P(x_n)` tends to `pi`. Thus `exp(iP)` is not uniformly continuous and cannot be almost periodic. The multiplication-operator intersection of the concrete unital Weyl algebra is the almost-periodic multiplication algebra, so `M_f T_y` is outside `A_W`. The surrounding kinetic drifts are metaplectic Weyl normalizers and cannot repair the failed kick normalization.",
+        "evidence_files": "`strategy/pre-a-cp1-cl8-common-finite-regulator-characteristic-route-split-certificate-260804.md`; `strategy/pre-a-cp1-cl8-common-finite-regulator-characteristic-route-split-manifest.json`; `codes/foundations/pre_a_cp1_cl8_common_finite_regulator_characteristic_route_split.py`; `codes/foundations/pre_a_cp1_cl8_common_finite_regulator_characteristic_route_split_independent.py`.",
+        "failure_mode": "Promote the exact nonlinear split-circuit automorphism on `B(H_a)` to an automorphism of the concrete unital Weyl C-star algebra `A_W=C*(1,W(z))` without enlarging the observable algebra."
+      },
+      "detail_title": "the quartic split kick does not normalize the Weyl C-star algebra",
+      "family_refs": [],
+      "kind": "no_go",
+      "summary": "conjugating a Weyl configuration translation by the quartic position kick produces a cubic-phase multiplier that is not uniformly continuous and therefore not almost periodic; it lies outside the Weyl algebra. Retain the exact `B(H_a)` automorphism, the quadratic metaplectic Weyl sector, or define and verify an enlarged observable algebra",
+      "tag": "NG-2026-08-04-PRE-A-CP1-CL8-NONLINEAR-FLOQUET-WEYL-NORMALIZER"
+    },
+    {
       "anchor": "ng-2026-08-04-pre-a-cp1-cl8-natural-low-mode-interacting-ground-projectivity",
       "branch": "identify the registered interacting fine ground with the coarse ground by restricting the natural low-mode `B(H)` factor under strict refinement `N=2M`",
       "claim_ref_basis": {
@@ -2216,29 +2238,6 @@
       "kind": "no_go",
       "summary": "on the active real doublet, `u_H=H(2+cos x)e1` in direction `z=(2-cos x)e1` gives normalized unit-frequency Hessian `-117 H^2/(500P)+3e/(100P)+O_e(H^-2)<0`; the full action is not tested",
       "tag": "NG-2026-07-30-A13-RAW-SIX-CURRENT-HESSIAN-POSITIVITY"
-    },
-    {
-      "anchor": "ng-2026-07-30-a13-one-sided-shell-projection-adjoint",
-      "branch": "infer a legal reverse block by taking the adjoint of a one-sided projected common Hessian",
-      "claim_ref_basis": {
-        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION": "structured_unique_family:A13"
-      },
-      "claim_refs": [
-        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
-      ],
-      "detail": {
-        "claim_route": "Obtain a reverse root/shell estimate for free by taking the adjoint of a one-sided spatial projection of a selfadjoint common Hessian.",
-        "consequence": "A successor must prove the production identification `A_mr=Q_m H_pi Q_r` for one common source-space shell resolution, or an equivalent intertwiner. Only then does the legal reverse equal the forward adjoint.",
-        "evidence": "R-128 proof note, Section 6; exact primary and independent matrix audits; original route `EXP-000443` and scoped-verdict correction `EXP-000448`.",
-        "failure_mode": "For `H=[[0,1],[1,0]]` and `P=diag(1,0)`, `(PH)^*=HP != PH`. By contrast, two-sided blocks `PH(I-P)` and `(I-P)HP` are adjoints."
-      },
-      "detail_title": "selfadjointness does not survive one-sided shell projection",
-      "family_refs": [
-        "A13"
-      ],
-      "kind": "no_go",
-      "summary": "for selfadjoint `H=[[0,1],[1,0]]` and `P=diag(1,0)`, `(PH)^*=HP != PH`. Adjoint reverse symmetry is automatic only for two-sided blocks `Q_m H Q_r` of one common source-space shell resolution, or after proving an equivalent intertwiner",
-      "tag": "NG-2026-07-30-A13-ONE-SIDED-SHELL-PROJECTION-ADJOINT"
     }
   ],
   "kind": "negative_records",

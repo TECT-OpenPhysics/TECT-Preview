@@ -65,6 +65,7 @@ Tier profile: T6x4 T5x1 T1x1
 | R-2026-legacy-newtonG-label | Newton $G$ "independently predicted / T7" label | independent prediction missing ($a_{\rm BCC}$ fixed by $G_{\rm obs}$) |
 | NG-2026-08-24-PRE-A-ST8-Q3LOCK-QUARTIC-WEYL-FOURIER-POSITIVE-STRIP-INVARIANCE | quartic onsite destroys positive-strip Weyl-Fourier… | Require a positive-strip L1 Weyl-Fourier coefficient density or all-moment orbit-Frechet carrier to remain invariant under the exact… |
 | NG-2026-08-25-PRE-A-ST8-Q3LOCK-LOCAL-QUARTIC-TAIL-FORCE-A34-OPERATOR-FACTORIZATION | the local quartic tail-force A^(-3/4) factorization fails | Use a local quartic energy graph power `K^(-3/4)` to |
+| NG-2026-08-26-PRE-A-ST8-Q3LOCK-CENTERED-GLOBAL-ENERGY-CONTEXT-VOLUME-OBSTRUCTION | centered global energy remains volume-nonuniform | Use the centered global shifted total energy `Kbar_n=K_n-rho_n(K_n)I` as a volume-uniform two-sided local context for a strictly local… |
 
 ---
 

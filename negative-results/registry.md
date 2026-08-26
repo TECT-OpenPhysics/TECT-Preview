@@ -8,6 +8,7 @@ Failures are trust assets. Entries are never deleted. Format:
 result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
+| [NG-2026-08-26-PRE-A-ST8-Q3LOCK-CENTERED-GLOBAL-ENERGY-CONTEXT-VOLUME-OBSTRUCTION](#ng-2026-08-26-pre-a-st8-q3lock-centered-global-energy-context-volume-obstruction) | use centered global total-energy contexts as a volume-uniform local transfer | in an exact tensor-product Gibbs family, subtracting the full Gibbs mean removes the quadratic remote mean but leaves a positive linear remote variance for every local transition leg; retain local or modular Q3 weights |
 | [NG-2026-08-25-PRE-A-ST8-Q3LOCK-LOCAL-QUARTIC-TAIL-FORCE-A34-OPERATOR-FACTORIZATION](#ng-2026-08-25-pre-a-st8-q3lock-local-quartic-tail-force-a34-operator-factorization) | use a local quartic A^(-3/4) operator factorization for the cutoff bond-tail times force | on the exact q>=2L cutoff sector, W_L F=c^2 q^3/2+3c lambda q^5/4+lambda^2 q^7/4; translated packets leave a ratio growing as q^4 for lambda>0; retain state-weighted, product-level or direct D,delta-D routes |
 |---|---|---|
 | [NG-2026-08-24-PRE-A-ST8-Q3LOCK-QUARTIC-WEYL-FOURIER-POSITIVE-STRIP-INVARIANCE](#ng-2026-08-24-pre-a-st8-q3lock-quartic-weyl-fourier-positive-strip-invariance) | require a positive-strip L1 Weyl-Fourier coefficient carrier to remain invariant under the exact quartic onsite subflow | the quartic translation phase has a nonzero cubic coefficient and grows like exp((51/70)x^2) on a sign-chosen strip, contradicting bounded strip extension; this retires only the named carrier |
@@ -10432,3 +10433,12 @@ product-level resummation, direct projected D,delta-D locality, common
 dynamics, OS/KMS/GNS reconstruction, a gap, continuum, C6, Sector A or
 Pre-A closure. Evidence: EXP-001127, its R298 cross-check and the
 contemporaneous certificate.
+
+<a id="ng-2026-08-26-pre-a-st8-q3lock-centered-global-energy-context-volume-obstruction"></a>
+### NG-2026-08-26-PRE-A-ST8-Q3LOCK-CENTERED-GLOBAL-ENERGY-CONTEXT-VOLUME-OBSTRUCTION -- centered global energy remains volume-nonuniform
+
+**Failure mode.** Use the centered global shifted total energy `Kbar_n=K_n-rho_n(K_n)I` as a volume-uniform two-sided local context for a strictly local transition.
+
+**Evidence.** In the exact product Gibbs family with local and remote gap one and excited-weight ratio `1/2`, let `D_n=|0><1| tensor I_remote` and let the remote excitation count be `M~Binomial(n,1/3)`. For the four D/D* row/column legs, direct enumeration and the independent moment calculation give the exact centered contexts `4*n/27+8/27`, `2*n/27+1/27`, `2*n/27+1/27`, and `4*n/27+8/27`. The minimum slope is `2/27>0`, so every centered global-energy context is unbounded as remote volume grows. The uncentered first leg is `8/3+28*n/27+2*n^2/27`; centering removes the quadratic mean term but not the remote variance. Primary 112/112, independent 79/79, integrated 15/15, and Lean R336 all pass.
+
+**Consequence.** Centering alone is retired as a volume-uniform global-K transfer shortcut for local QFT estimates. The surviving Q3 target is a genuinely local or modular state-weighted estimate with a common core and direct `D,delta-D` control. This is a method no-go only: it does not refute interacting Q3 dynamics, cancellation-aware local bounds, common alpha, OS/KMS/GNS reconstruction, a gap, continuum, C6, Sector A or Pre-A. Evidence: EXP-001166 and R336.

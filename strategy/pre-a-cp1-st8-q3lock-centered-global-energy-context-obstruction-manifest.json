@@ -1,0 +1,113 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-CENTERED-GLOBAL-ENERGY-CONTEXT-VOLUME-OBSTRUCTION-v0",
+  "title": "Centered global-energy context obstruction for local Gibbs members",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001166",
+  "claim_bearing": false,
+  "parent_explorations": ["EXP-001146", "EXP-001147", "EXP-001165"],
+  "negative_ids": ["NG-2026-08-26-PRE-A-ST8-Q3LOCK-CENTERED-GLOBAL-ENERGY-CONTEXT-VOLUME-OBSTRUCTION"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "question": "Does subtracting the Gibbs mean from a global shifted total-energy weight restore a volume-uniform two-sided local context, or does remote thermal variance still force growth?",
+  "exact_statement": {
+    "product_model": "rho_n=rho_local tensor rho_remote^(tensor n), with local and remote two-level gaps and independent remote excitation count M~Binomial(n,q)",
+    "centered_weight": "Kbar_n=K_n-rho_n(K_n)I for K_n=H_n+shift*I",
+    "local_observable": "D_n=|0><1| tensor I_remote, with D_n^* as the reverse local transition",
+    "centered_context_formula": "For every four two-sided D/D* legs, C(n)=p_local*(n*remote_gap^2*q*(1-q)+(local_target-local_mean)^2)",
+    "lower_bound": "Each leg has positive slope p_local*remote_gap^2*q*(1-q), so centered global-energy contexts are unbounded in n even after mean subtraction",
+    "qft_boundary": "This exact tensor-product obstruction rules out centering alone as a volume-uniform global-K transfer; it does not refute interacting Q3 or a genuinely local/modular topology"
+  },
+  "finite_fixture": {
+    "local_gap": "1",
+    "remote_gap": "1",
+    "gibbs_excited_weight_ratio": "1/2",
+    "shift_constant": "1",
+    "amplitude_squared": "1",
+    "remote_site_values": [0, 1, 2, 4, 8, 16, 32, 64]
+  },
+  "model": {
+    "local_hamiltonian": "diag(0,local_gap)",
+    "remote_hamiltonian": "sum_{a=1}^n diag(0,remote_gap)_a",
+    "total_hamiltonian": "H_n=H_local+H_remote",
+    "state": "rho_n proportional to exp(-beta H_n), with excited-weight ratio w and q=w/(1+w)",
+    "shifted_energy": "K_n=H_n+shift*I",
+    "centered_energy": "Kbar_n=K_n-Tr(rho_n K_n)I",
+    "contexts": [
+      "sum p_i |Kbar_j|^2 |D_ij|^2",
+      "sum p_j |Kbar_i|^2 |D_ij|^2",
+      "the same two legs for D*"
+    ],
+    "uncentered_comparison": "The same row-weight context without centering has a positive n^2 coefficient; centering removes only the mean square, leaving the remote variance term linear in n."
+  },
+  "scope": {
+    "exact_tensor_product_centered_contexts_closed": true,
+    "all_n_closed_form_closed": true,
+    "positive_linear_lower_bound_closed": true,
+    "uncentered_quadratic_comparison_closed": true,
+    "centered_global_energy_uniformity_refuted": true,
+    "actual_q3_interacting_uniformity_refuted": false,
+    "local_energy_route_selected": true,
+    "global_k_shortcut_retired": true,
+    "direct_d_delta_d_cauchy_closed": false,
+    "modular_domain_transfer_closed": false,
+    "common_unbounded_core_closed": false,
+    "exhaustion_independence_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": false,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "adversarial_review": [
+    {"axis": "centering", "check": "The exact Gibbs mean, including local and all remote contributions and the arbitrary scalar shift, is subtracted before every context is evaluated.", "disposition": "UPHELD"},
+    {"axis": "remote variance", "check": "The remaining term is the exact Binomial variance n*q*(1-q), not a guessed extensive mean or a finite-sample fit.", "disposition": "UPHELD"},
+    {"axis": "four legs", "check": "D and D* and both row/column placements are evaluated separately; no commutation of Kbar with D is used.", "disposition": "UPHELD"},
+    {"axis": "comparison", "check": "The uncentered quadratic term is reported only as a comparison; the negative conclusion uses the exact centered positive linear slope.", "disposition": "UPHELD"},
+    {"axis": "model scope", "check": "The witness is an exactly solvable tensor-product Gibbs family, not the interacting Q3 Hamiltonian; it rejects only a topology shortcut.", "disposition": "UPHELD"},
+    {"axis": "QFT promotion", "check": "Interacting Q3 local/modular transfer, common core, direct D/delta-D Cauchy, exhaustion, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector A and Pre-A remain open.", "disposition": "UPHELD-OPEN"},
+    {"axis": "Lean", "check": "R336 checks exact rational formulas and threshold arithmetic only; no operator-domain or thermodynamic theorem is encoded.", "disposition": "UPHELD"}
+  ],
+  "files": {
+    "primary": "codes/foundations/pre_a_cp1_st8_q3lock_centered_global_energy_context_obstruction.py",
+    "independent": "codes/foundations/pre_a_cp1_st8_q3lock_centered_global_energy_context_obstruction_independent.py",
+    "integrated": "codes/foundations/pre_a_cp1_st8_q3lock_centered_global_energy_context_obstruction_verify.py",
+    "lean": "verification/lean/Tect/R336.lean",
+    "primary_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-primary-pre_a_cp1_st8_q3lock_centered_global_energy_context_obstruction/primary.json",
+    "independent_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-independent-pre_a_cp1_st8_q3lock_centered_global_energy_context_obstruction/independent.json",
+    "integrated_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-integrated-pre_a_cp1_st8_q3lock_centered_global_energy_context_obstruction/integrated.json"
+  },
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R336.lean",
+    "command": "lake env lean Tect/R336.lean",
+    "theorem_markers": ["centered_D_row_formula", "centered_D_column_formula", "centered_linear_lower", "uncentered_quadratic_formula", "scope_fixture"],
+    "boundary": "Lean checks exact rational variance formulas and the linear threshold implication; Python checks the binomial enumeration and lane agreement."
+  },
+  "qft_interface": {
+    "closed": "An exact all-n centered-global-energy calculation shows that mean subtraction removes the quadratic remote mean but leaves a positive extensive remote variance for every local transition leg.",
+    "open": "A genuinely local or modular source/volume/cutoff/beta-uniform Q3 estimate, common unbounded core, direct D/delta-D Cauchy, exhaustion, common alpha, OS/KMS/GNS identification, gap, continuum, C6, Sector A and Pre-A remain open.",
+    "tect_boundary": "No heat_root_incidence or canonical A1/R-192 production owner is supplied."
+  },
+  "boundary": "T0 claim-nonbearing exact tensor-product route obstruction. It does not refute interacting Q3 dynamics or any weaker local/modular topology.",
+  "formal_integration": {
+    "results": [],
+    "negatives": ["NG-2026-08-26-PRE-A-ST8-Q3LOCK-CENTERED-GLOBAL-ENERGY-CONTEXT-VOLUME-OBSTRUCTION"],
+    "events": [],
+    "lean": "R336 pending",
+    "no_new_result": true,
+    "no_new_negative": false,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "no_overclaim": "This exact product-family result retires centered global-total-energy context control as a volume-uniform local shortcut. It does not prove or disprove an interacting Q3 common-core estimate, common alpha, OS/KMS/GNS reconstruction, a gap, continuum, C6, Sector A, Pre-A or any Clay conclusion."
+}
