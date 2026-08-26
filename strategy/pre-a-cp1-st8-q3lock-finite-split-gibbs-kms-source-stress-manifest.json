@@ -1,0 +1,103 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-FINITE-SPLIT-GIBBS-KMS-SOURCE-STRESS-v0",
+  "title": "Finite Q3 split Gibbs/KMS source-uniformity stress",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001171",
+  "claim_bearing": false,
+  "parent_explorations": ["EXP-001170", "EXP-001169", "EXP-001161"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "question": "When the source site of the local q/p-character pair is moved through every site of the finite path4/path6 Q3 graphs, do the Gibbs stationarity and analytic KMS residuals retain the finite mesh-decrease pattern for both split orders, signs and beta values?",
+  "finite_fixture": {
+    "graphs": {
+      "path4": {"vertices": 4, "edges": [[0, 1], [1, 2], [2, 3]], "source_sites": [0, 1, 2, 3]},
+      "path6": {"vertices": 6, "edges": [[0, 1], [1, 2], [2, 3], [3, 4], [4, 5]], "source_sites": [0, 1, 2, 3, 4, 5]}
+    },
+    "oscillator_dimension": 3,
+    "beta_values": [0.25, 0.5],
+    "horizon": 0.1,
+    "delta_values": [0.1, 0.05],
+    "time_signs": [-1, 1],
+    "character_amplitude": 0.25,
+    "hbar": 1.0,
+    "exact_kms_tolerance": 1e-9,
+    "finite_tolerance": 1e-8,
+    "agreement_tolerance": 1e-7,
+    "kms_witness_floor": 1e-8,
+    "stationarity_witness_floor": 1e-8,
+    "noncommutation_witness_floor": 1e-6
+  },
+  "model_parameters": {"chi": "1", "r": "-1", "g": "3/5", "c": "3/5", "lambda": "1/10"},
+  "model": {
+    "observable_pair": "A_x=exp(i a q_x/hbar), B_x=exp(i a p_x/hbar) at each source site x",
+    "gibbs_state": "rho_beta=exp(-beta H)/Tr(exp(-beta H)) for the same finite Q3 H",
+    "stationarity_defect": "||S rho_beta S^* - rho_beta||_1",
+    "kms_boundary": "R_x=Tr(rho A_x alpha^S_t(B_x))-Tr(rho alpha^S_{t+i beta hbar}(B_x) A_x)",
+    "source_scope": "All sites in each declared path graph; no source-uniform limit is inferred from the finite range."
+  },
+  "scope": {
+    "finite_exact_gibbs_control_closed": true,
+    "finite_source_stationarity_rows_closed": true,
+    "finite_source_kms_residual_rows_closed": true,
+    "source_uniformity_diagnostic_closed": true,
+    "mesh_decrease_diagnostic_closed": true,
+    "path_exhaustion_diagnostic_closed": true,
+    "source_uniform_direct_d_cauchy_closed": false,
+    "volume_uniform_direct_d_cauchy_closed": false,
+    "beta_uniform_direct_d_cauchy_closed": false,
+    "modular_domain_transfer_closed": false,
+    "product_core_density_closed": false,
+    "exhaustion_independence_closed": false,
+    "group_law_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "adversarial_review": [
+    {"axis": "source coverage", "check": "Every declared site in path4 and path6 is tested; source variation is reported instead of replacing the graph by a translation-invariant torus.", "disposition": "UPHELD"},
+    {"axis": "KMS sign and units", "check": "The alpha convention uses t+i beta hbar and the same convention is applied at every source site and both time signs.", "disposition": "UPHELD"},
+    {"axis": "complex inverse", "check": "Complex split products use reverse factor order and -z for the inverse; no complex adjoint shortcut is used.", "disposition": "UPHELD"},
+    {"axis": "cutoff degeneracy", "check": "Only the nondegenerate d=3 fixture is admitted and a positive [H,H_onsite] witness is checked for each graph.", "disposition": "UPHELD"},
+    {"axis": "mesh trend", "check": "Coarse/fine decreases are checked per source context but are not promoted to a uniform analytic rate.", "disposition": "UPHELD-OPEN"},
+    {"axis": "shape inference", "check": "Path4/path6 is a structured finite exhaustion pair; source-wise similarity does not prove arbitrary-shape exhaustion independence.", "disposition": "UPHELD-OPEN"},
+    {"axis": "independence", "check": "The independent lane rebuilds all tensor matrices and residuals without importing the primary script.", "disposition": "UPHELD"},
+    {"axis": "Lean boundary", "check": "Lean R247 checks finite Gibbs normalization/commutation and conditional-transfer scope; Python carries dense source-wise Q3 rows.", "disposition": "UPHELD"},
+    {"axis": "QFT promotion", "check": "Source-wise finite residuals do not prove source-uniform common-core Cauchy, common alpha, OS/KMS identification, gap, continuum, C6, Sector A or Pre-A.", "disposition": "UPHELD-OPEN"}
+  ],
+  "files": {
+    "primary": "codes/foundations/pre_a_cp1_st8_q3lock_finite_split_gibbs_kms_source_stress.py",
+    "independent": "codes/foundations/pre_a_cp1_st8_q3lock_finite_split_gibbs_kms_source_stress_independent.py",
+    "integrated": "codes/foundations/pre_a_cp1_st8_q3lock_finite_split_gibbs_kms_source_stress_verify.py",
+    "lean": "verification/lean/Tect/R247.lean",
+    "primary_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-primary-pre-a-cp1-st8-q3lock-finite-split-gibbs-kms-source-stress/primary.json",
+    "independent_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-independent-pre-a-cp1-st8-q3lock-finite-split-gibbs-kms-source-stress/independent.json",
+    "integrated_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-integrated-pre-a-cp1-st8-q3lock-finite-split-gibbs-kms-source-stress/integrated.json"
+  },
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R247.lean",
+    "command": "lake env lean Tect/R247.lean",
+    "theorem_markers": ["boltzmann_normalization", "diagonal_gibbs_commutation", "conditional_transfer_scope"],
+    "role": "R247 checks exact rational finite Gibbs normalization/commutation; Python checks source-wise noncommuting Q3 residuals."
+  },
+  "qft_interface": {
+    "closed": "The exact finite-H Gibbs controls and source-wise split stationarity/KMS residuals are reproduced over all declared sites, orders, signs, beta values and two meshes.",
+    "open": "Source-uniform analytic rate, direct D/delta-D Cauchy, common unbounded core, all-shape exhaustion independence, one common alpha, Hamiltonian-to-OS/KMS quotient, gap, continuum and physical TECT gates remain open.",
+    "tect_boundary": "Auxiliary C6/Q3 finite evidence only; no heat_root_incidence, canonical A1/R-192 production owner, physical-empty reference, Sector-A closure or Pre-A closure is supplied."
+  },
+  "next_action": "Use the source-wise residual range to choose a source-uniform weighted core estimate; if boundary/interior constants diverge under volume or cutoff, record that route-local obstruction before common-alpha promotion.",
+  "boundary": "T0 claim-nonbearing finite d=3 source-wise Q3 KMS diagnostic. It is not a thermodynamic-limit source-uniformity theorem, common-alpha construction, or QFT/Clay result.",
+  "no_overclaim": "All-site finite residuals and their mesh decrease do not identify a common thermodynamic Q3 dynamics or close OS/KMS, gap, continuum, C6, Sector A or Pre-A gates."
+}

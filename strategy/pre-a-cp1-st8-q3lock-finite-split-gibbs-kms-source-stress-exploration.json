@@ -1,0 +1,76 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001171",
+  "title": "Finite Q3 split Gibbs/KMS source-uniformity stress",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "verdict": "advanced",
+  "provenance": "contemporaneous",
+  "prior_exploration_id": "EXP-001170",
+  "related": [
+    {"id": "EXP-001170", "relation": "continues"},
+    {"id": "EXP-001169", "relation": "continues"},
+    {"id": "EXP-001161", "relation": "continues"}
+  ],
+  "question": "When the source site of the local q/p-character pair is moved through every site of the finite path4/path6 Q3 graphs, do the Gibbs stationarity and analytic KMS residuals retain the finite mesh-decrease pattern for both split orders, signs and beta values?",
+  "method": [
+    "Reconstruct the registered d=3 Q3 onsite quartic and nonlinear bond matrices on path4 and path6 with chi=1, r=-1, g=3/5, c=3/5 and lambda=1/10.",
+    "At every declared source site, use A_x=exp(i a q_x/hbar) and B_x=exp(i a p_x/hbar), the exact finite-H Gibbs state at beta=0.25 and 0.5, and the KMS boundary t+i beta hbar with horizon t=0.1.",
+    "Evaluate both onsite-then-lexicographic-bonds and reverse-term split products at delta=0.1 and 0.05 for both real-time signs.  Build the complex inverse in reverse factor order and retain the trace-norm Gibbs stationarity defect and scalar KMS residual.",
+    "Require exact-H controls below 1e-9, positive finite split witnesses, source coverage and per-source coarse/fine decrease; treat all ratios as finite diagnostics rather than uniform constants.",
+    "Run a non-importing independent reconstruction and an integrated verifier that compares all 160 source rows, 80 mesh rows, provenance hashes, Lean R247 and scope firewalls."
+  ],
+  "finding": "Primary 759/759 and independent 757/757 assertions pass over 160 source/order/sign/beta/mesh rows and 10 source sites; the integrated verifier passes 36/36 with Lean R247 PASS. All source rows have finite nonzero stationarity and KMS residuals. Across the full grid the KMS residual ranges from 8.858509182455559e-05 to 0.007892721200547646 and the stationarity defect from 0.0018261413113423613 to 0.010265665577336547. Every source context decreases when delta goes from 0.1 to 0.05; KMS fine/coarse ratios range from 0.4382134378051144 to 0.6176424250777085 and stationarity ratios from 0.49929112008492216 to 0.4993950046196581. Interior sources have a larger finite KMS residual than boundary sources (path4 maximum-source ratio about 3.19), so source dependence is real even though the path4/path6 ranges are close. No source-uniform or thermodynamic theorem follows.",
+  "decision_reason": "This extends EXP-001170 from one local source to every site and confirms that the finite equilibrium-interface diagnostic is reproducible while exposing boundary/interior source dependence. The result is a QFT-facing stress test for the required source-uniform common-core estimate, not a proof of that estimate. The observed finite mesh trend and near path-shape agreement cannot replace volume-, source-, cutoff- and beta-uniform analytic control.",
+  "boundary": "T0 claim-nonbearing finite d=3 source-wise Q3 KMS diagnostic. It is not a thermodynamic-limit source-uniformity theorem, a common-alpha construction, a mass-gap proof, a continuum result, or a QFT/Clay closure.",
+  "qft_interface": {
+    "closed": "Exact finite-H Gibbs controls and source-wise split stationarity/KMS residuals are reproduced for all sites of path4/path6, both orders and signs, beta=0.25/0.5 and both meshes.",
+    "open": "A source- and volume-uniform analytic rate, direct D/delta-D Cauchy, common unbounded core, all-shape exhaustion independence, one common alpha, Hamiltonian-to-OS/KMS quotient, GNS gap, continuum and physical TECT gates remain open.",
+    "tect_boundary": "Auxiliary C6/Q3 finite evidence only; no heat_root_incidence, canonical A1/R-192 production owner, physical-empty reference, Sector-A closure or Pre-A closure is supplied."
+  },
+  "adversarial_review": [
+    {"axis": "source coverage", "check": "Every declared site in both finite path graphs is tested; no translation-invariance shortcut is used.", "disposition": "UPHELD"},
+    {"axis": "KMS sign and units", "check": "The alpha_t=exp(-iHt/hbar) convention and t+i beta hbar boundary are applied uniformly at every source and both signs.", "disposition": "UPHELD"},
+    {"axis": "complex inverse", "check": "The inverse of each complex product is constructed with reversed factor order and -z, not by a complex adjoint.", "disposition": "UPHELD"},
+    {"axis": "cutoff degeneracy", "check": "The d=3 fixture is enforced and a positive noncommutation witness is checked for each graph; the commuting d=2 degeneration is excluded.", "disposition": "UPHELD"},
+    {"axis": "source-uniformity", "check": "Boundary/interior variation is reported explicitly; finite all-site coverage is not promoted to a source-uniform limiting bound.", "disposition": "UPHELD-OPEN"},
+    {"axis": "mesh trend", "check": "Per-source coarse/fine decreases are checked on two deltas only and are not promoted to an analytic Trotter rate.", "disposition": "UPHELD-OPEN"},
+    {"axis": "shape inference", "check": "Path4/path6 is a structured finite pair; close residual ranges do not establish arbitrary-shape exhaustion independence.", "disposition": "UPHELD-OPEN"},
+    {"axis": "independence", "check": "The independent lane rebuilds matrices and residuals without importing the primary; maximum row discrepancy is approximately 1.3e-13.", "disposition": "UPHELD"},
+    {"axis": "Lean promotion", "check": "R247 checks exact rational finite Gibbs normalization/commutation and conditional-transfer scope; dense source-wise matrices and limits remain Python/open analysis.", "disposition": "UPHELD"},
+    {"axis": "QFT promotion", "check": "Common core, direct D/delta-D Cauchy, common alpha, OS/KMS/GNS identification, gap, continuum, C6, Sector A and Pre-A remain open.", "disposition": "UPHELD-OPEN"}
+  ],
+  "evidence_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-finite-split-gibbs-kms-source-stress-manifest.json#finite_fixture",
+    "codes/foundations/pre_a_cp1_st8_q3lock_finite_split_gibbs_kms_source_stress.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_finite_split_gibbs_kms_source_stress_independent.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_finite_split_gibbs_kms_source_stress_verify.py#main",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-primary-pre-a-cp1-st8-q3lock-finite-split-gibbs-kms-source-stress/primary.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-independent-pre-a-cp1-st8-q3lock-finite-split-gibbs-kms-source-stress/independent.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-integrated-pre-a-cp1-st8-q3lock-finite-split-gibbs-kms-source-stress/integrated.json#lean",
+    "verification/lean/Tect/R247.lean#diagonal_gibbs_commutation",
+    "verification/lean/registry.json#R247"
+  ],
+  "formal_integration": {
+    "events": [],
+    "results": [],
+    "negatives": [],
+    "lean": "R247 PASS",
+    "no_new_event": true,
+    "no_new_result": true,
+    "no_new_negative": true,
+    "no_pdf": true,
+    "no_tier_change": true
+  },
+  "next_action": "Use the source variation as a concrete target for a source-uniform weighted common-core estimate; if its constants grow with boundary distance, volume or cutoff, record that route-local obstruction before common-alpha promotion.",
+  "no_overclaim": "This package proves only finite d=3 matrix identities and diagnostics. It does not prove a source-uniform thermodynamic dynamics, common alpha, OS/KMS identification, a mass gap, continuum removal, C6, Sector A, Pre-A or a Clay result.",
+  "recorded_at": "2026-08-29T03:20:00Z",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-08-26"
+}
