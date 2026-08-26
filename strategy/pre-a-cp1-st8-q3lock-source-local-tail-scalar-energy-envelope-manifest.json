@@ -1,0 +1,77 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "exploration_id": "EXP-001191",
+  "prior_exploration_id": "EXP-001190",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "claim_bearing": false,
+  "tier": "T0",
+  "title": "Source-local Q3 cutoff-tail scalar energy envelope",
+  "question": "Can a cutoff tail restricted to one source-support edge be bounded by a source- and volume-independent fourth power of the local shifted Q3 potential, while finite matrix quotients are stress-tested separately?",
+  "parent_explorations": ["EXP-001190", "EXP-001189", "EXP-001129", "EXP-001127"],
+  "fixture_source": "strategy/pre-a-cp1-st8-q3lock-finite-energy-fourth-coercive-quotient-manifest.json",
+  "finite_test": {
+    "field_values": [-3, -2, -1, 0, 1, 2, 3],
+    "contraction_factors": ["-1", "-1/2", "0", "1/2", "1"],
+    "tail_edge": [0, 1],
+    "description": "Scalar tests use arbitrary contractions u=a x and v=b y with |a|,|b|<=1; matrix tests use the registered smooth spectral cutoff on the source edge only."
+  },
+  "mathematical_interface": {
+    "bond": "B(x,y)=c*(x-y)^2/2+lambda*(x-y)^2*(x^2+y^2)/4 with c,lambda>=0.",
+    "contraction": "For |u|<=|x| and |v|<=|y|, B(u,v)<= (c+lambda)*(1+x^4+y^4), and the same bound holds for B(x,y).",
+    "tail": "T=B(x,y)-B(u,v) therefore satisfies |T|<=2*(c+lambda)*S, S=1+x^4+y^4.",
+    "onsite_shift": "With v(t)=r*t^2/2+g*t^4/4 and d=r^2/(4g), t^4 <= (8/g)*(v(t)+d)+2*(r/g)^2.",
+    "local_potential": "For k_pot=1+v(x)+v(y)+2*d, the registered parameters satisfy S<=(8/g)*k_pot because 1+4*(r/g)^2-8/g<=0.",
+    "fourth_envelope": "|T|^4 <= [16*(c+lambda)/g]^4*k_pot^4. This is a scalar potential-level envelope; it is not an operator inequality for the kinetic Hamiltonian.",
+    "qft_role": "The result supplies a source-edge polynomial input for the OS/KMS-facing tail lane and isolates the remaining noncommutative Gibbs/domain step."
+  },
+  "scope": {
+    "scalar_contraction_bond_envelope_closed": true,
+    "scalar_local_fourth_tail_envelope_closed": true,
+    "finite_source_edge_tail_rows_closed": true,
+    "finite_local_quotient_rows_closed": true,
+    "source_volume_uniform_scalar_constant_closed": true,
+    "operator_fourth_order_envelope_closed": false,
+    "gibbs_local_fourth_moment_uniform_closed": false,
+    "unbounded_common_core_closed": false,
+    "modular_domain_transfer_closed": false,
+    "direct_d_delta_d_cauchy_closed": false,
+    "all_shape_exhaustion_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R350.lean",
+    "command": "lake env lean Tect/R350.lean",
+    "theorem_markers": ["contraction_bond_envelope", "onsite_shift_tail_envelope", "local_tail_fourth_envelope"],
+    "role": "R350 checks the exact rational scalar inequalities and fourth-power composition only; matrix quotients, Gibbs traces, operator domains and QFT limits remain Python evidence/open analysis."
+  },
+  "adversarial_review": [
+    {"axis": "contraction hypothesis", "check": "The scalar bound is used only under explicit |u|<=|x| and |v|<=|y|; the smooth spectral cutoff is checked separately as a contraction.", "disposition": "UPHELD"},
+    {"axis": "bond positivity", "check": "B is a sum of nonnegative terms for c,lambda>=0, so |B(x,y)-B(u,v)|<=B(x,y)+B(u,v) is legal; no monotonicity of B under contraction is assumed.", "disposition": "UPHELD"},
+    {"axis": "quadratic term", "check": "The estimate uses t^2<=(1+t^4)/2 before the quartic comparison, retaining the c contribution rather than dropping it.", "disposition": "UPHELD"},
+    {"axis": "negative mass", "check": "The exact square completion carries the r<0 term and records the residual 1+4(r/g)^2-8/g, which is nonpositive for the inherited fixture.", "disposition": "UPHELD"},
+    {"axis": "fourth power", "check": "The fourth-power constant is recomputed as [16(c+lambda)/g]^4 from the manifest inputs; it is not a pasted derived number.", "disposition": "UPHELD"},
+    {"axis": "potential versus operator", "check": "The closed statement is scalar/potential-level only. The kinetic operator does not commute with the cutoff tail, so no operator order T^4<=C K^4 is inferred.", "disposition": "UPHELD-OPEN"},
+    {"axis": "volume and source", "check": "The scalar constant is local and source/volume independent, while finite matrix quotient rows are diagnostics and do not prove uniform Gibbs moments.", "disposition": "UPHELD-OPEN"},
+    {"axis": "cutoff", "check": "Matrix rows use the inherited cosine spectral cutoff on the selected edge; scalar rows cover every contraction, which is the only property used by the envelope.", "disposition": "UPHELD"},
+    {"axis": "Lean boundary", "check": "R350 formalizes rational inequalities only and does not encode matrices, Gibbs traces, unbounded domains, OS reconstruction or thermodynamic limits.", "disposition": "UPHELD-OPEN"},
+    {"axis": "QFT promotion", "check": "The source-edge envelope does not close local Gibbs moments, direct D/delta-D Cauchy, common alpha, Hamiltonian-to-OS/KMS/GNS identification, a gap, continuum, C6, Sector A or Pre-A.", "disposition": "UPHELD-OPEN"}
+  ],
+  "qft_interface": {
+    "closed": "A source-edge scalar fourth-power envelope with an explicit constant independent of source and total volume, plus finite local-tail quotient diagnostics.",
+    "open": "An operator fourth-order envelope through the kinetic Q3 Hamiltonian, uniform local Gibbs moment, common unbounded core, modular transfer, direct D/delta-D history, exhaustion, common alpha, OS/KMS/GNS identification, gap, continuum, C6, Sector A and Pre-A remain open.",
+    "tect_boundary": "Auxiliary C6/Q3 finite evidence only; no heat_root_incidence or canonical A1/R-192 production owner is supplied."
+  },
+  "next_action": "Use the scalar source-edge envelope as the potential input for a state-weighted local Gibbs estimate; prove or obstruct the missing kinetic/noncommutative transfer before inserting it into the two-orientation history recurrence.",
+  "boundary": "T0 claim-nonbearing source-local scalar/potential envelope and finite quotient stress checkpoint. It is not an operator common-core theorem, a thermodynamic QFT dynamics, a common-alpha theorem, a mass-gap proof, a continuum result, C6, Sector A or Pre-A closure.",
+  "no_overclaim": "Only the scalar contraction inequality, local fourth-power potential envelope and finite source-edge matrix diagnostics are promoted. The kinetic operator, Gibbs moment uniformity, modular/domain transfer, direct Cauchy, exhaustion, common alpha, Hamiltonian-OS/KMS/GNS identification, gap, continuum, C6, Sector A and Pre-A remain open."
+}

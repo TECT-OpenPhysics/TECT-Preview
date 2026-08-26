@@ -1,0 +1,586 @@
+{
+  "assertion_count": 22,
+  "assertions": [
+    {
+      "actual": "['EXP-001191', 'T-054']",
+      "expected": "EXP-001191/T-054",
+      "name": "identity",
+      "pass": true
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "name": "claim nonbearing",
+      "pass": true
+    },
+    {
+      "actual": "['b247bf995b36cac0a4afedcbb56f1b1630fc3b375b2f189668914047970cda7a', '9bb77cd50b68b0e879d04842d1aba76536734b6d61073ab678852f4d01139c33']",
+      "expected": "distinct SHA-256",
+      "name": "source lanes distinct",
+      "pass": true
+    },
+    {
+      "actual": "['contraction_bond_envelope', 'onsite_shift_tail_envelope', 'local_tail_fourth_envelope']",
+      "expected": "present",
+      "name": "Lean source",
+      "pass": true
+    },
+    {
+      "actual": "[]",
+      "expected": "none",
+      "name": "Lean forbidden",
+      "pass": true
+    },
+    {
+      "actual": "PRIMARY SOURCE-LOCAL-TAIL-SCALAR-ENERGY-ENVELOPE PASS 2708/2708 scalar=1225 matrix=30\n",
+      "expected": "PASS",
+      "name": "primary child",
+      "pass": true
+    },
+    {
+      "actual": "INDEPENDENT SOURCE-LOCAL-TAIL-SCALAR-ENERGY-ENVELOPE PASS 2597/2597 scalar=1225 matrix=30\n",
+      "expected": "PASS",
+      "name": "independent child",
+      "pass": true
+    },
+    {
+      "actual": "[1225, 1225]",
+      "expected": "1225",
+      "name": "scalar coverage",
+      "pass": true
+    },
+    {
+      "actual": "[30, 30]",
+      "expected": "30",
+      "name": "matrix coverage",
+      "pass": true
+    },
+    {
+      "actual": "[]",
+      "expected": "within lane tolerance",
+      "name": "summary agreement",
+      "pass": true
+    },
+    {
+      "actual": "[True, True]",
+      "expected": "True",
+      "name": "scalar_contraction_bond_envelope_closed",
+      "pass": true
+    },
+    {
+      "actual": "[True, True]",
+      "expected": "True",
+      "name": "scalar_local_fourth_tail_envelope_closed",
+      "pass": true
+    },
+    {
+      "actual": "[True, True]",
+      "expected": "True",
+      "name": "finite_source_edge_tail_rows_closed",
+      "pass": true
+    },
+    {
+      "actual": "[True, True]",
+      "expected": "True",
+      "name": "finite_local_quotient_rows_closed",
+      "pass": true
+    },
+    {
+      "actual": "[True, True]",
+      "expected": "True",
+      "name": "source_volume_uniform_scalar_constant_closed",
+      "pass": true
+    },
+    {
+      "actual": "[False, False]",
+      "expected": "False",
+      "name": "operator_fourth_order_envelope_closed remains open",
+      "pass": true
+    },
+    {
+      "actual": "[False, False]",
+      "expected": "False",
+      "name": "gibbs_local_fourth_moment_uniform_closed remains open",
+      "pass": true
+    },
+    {
+      "actual": "[False, False]",
+      "expected": "False",
+      "name": "unbounded_common_core_closed remains open",
+      "pass": true
+    },
+    {
+      "actual": "[False, False]",
+      "expected": "False",
+      "name": "common_alpha_closed remains open",
+      "pass": true
+    },
+    {
+      "actual": "[False, False]",
+      "expected": "False",
+      "name": "qft_promoted remains open",
+      "pass": true
+    },
+    {
+      "actual": "{'scalar_contraction_bond_envelope_closed': True, 'scalar_local_fourth_tail_envelope_closed': True, 'finite_source_edge_tail_rows_closed': True, 'finite_local_quotient_rows_closed': True, 'source_volume_uniform_scalar_constant_closed': True, 'operator_fourth_order_envelope_closed': False, 'gibbs_local_fourth_moment_uniform_closed': False, 'unbounded_common_core_closed': False, 'modular_domain_transfer_closed': False, 'direct_d_delta_d_cauchy_closed': False, 'all_shape_exhaustion_closed': False, 'common_alpha_closed': False, 'hamiltonian_os_identification_closed': False, 'kms_gns_gap_closed': False, 'continuum_closed': False, 'c6_closed': False, 'sector_a_closed': False, 'pre_a_closed': False, 'no_new_negative_result': True, 'no_tier_change': True, 'no_pdf': True}",
+      "expected": "scalar/finite only",
+      "name": "scope firewall",
+      "pass": true
+    },
+    {
+      "actual": "{'status': 'PASS', 'command': 'lake env lean Tect/R350.lean', 'returncode': 0, 'output': 'Tect/R350.lean:9:5: warning: Variable name `hu` is not explicitly referenced.\\n\\nThe binding can be removed (if unused) or named `_` (if used implicitly).\\n\\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\\nTect/R350.lean:10:5: warning: Variable name `hv` is not explicitly referenced.\\n\\nThe binding can be removed (if unused) or named `_` (if used implicitly).\\n\\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\\nTect/R350.lean:11:5: warning: Variable name `hS` is not explicitly referenced.\\n\\nThe binding can be removed (if unused) or named `_` (if used implicitly).\\n\\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\\nTect/R350.lean:22:7: warning: Variable name `r` is not explicitly referenced.\\n\\nThe binding can be removed (if unused) or named `_` (if used implicitly).\\n\\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\\nTect/R350.lean:23:5: warning: Variable name `hg` is not explicitly referenced.\\n\\nThe binding can be removed (if unused) or named `_` (if used implicitly).\\n\\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\\nTect/R350.lean:24:5: warning: Variable name `hkp` is not explicitly referenced.\\n\\nThe binding can be removed (if unused) or named `_` (if used implicitly).\\n\\nNote: This linter can be disabled with `set_option linter.unusedVariables false`'}",
+      "expected": "PASS",
+      "name": "Lean compile",
+      "pass": true
+    }
+  ],
+  "audit_id": "PA-CP1-ST8-Q3LOCK-SOURCE-LOCAL-TAIL-SCALAR-ENERGY-ENVELOPE",
+  "boundary": {
+    "all_shape_exhaustion_closed": false,
+    "c6_closed": false,
+    "common_alpha_closed": false,
+    "continuum_closed": false,
+    "direct_d_delta_d_cauchy_closed": false,
+    "finite_local_quotient_rows_closed": true,
+    "finite_source_edge_tail_rows_closed": true,
+    "gibbs_local_fourth_moment_uniform_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "modular_domain_transfer_closed": false,
+    "no_new_negative_result": true,
+    "no_pdf": true,
+    "no_tier_change": true,
+    "operator_fourth_order_envelope_closed": false,
+    "pre_a_closed": false,
+    "scalar_contraction_bond_envelope_closed": true,
+    "scalar_local_fourth_tail_envelope_closed": true,
+    "sector_a_closed": false,
+    "source_volume_uniform_scalar_constant_closed": true,
+    "unbounded_common_core_closed": false
+  },
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "derived": {
+    "common_alpha_closed": false,
+    "finite_local_quotient_rows_closed": true,
+    "finite_source_edge_tail_rows_closed": true,
+    "gibbs_local_fourth_moment_uniform_closed": false,
+    "independent_summary_rows": [
+      {
+        "beta": 0.125,
+        "max_equal_time_fourth_moment": 4.9841385598184536,
+        "max_full_quotient_constant": 0.3730931793691604,
+        "max_full_trace_bound": 42.145801589250304,
+        "max_local_quotient_constant": 0.3730931793691604,
+        "max_local_trace_bound": 42.145801589250304,
+        "max_two_slice": 4.978096490313759,
+        "min_full_trace_slack": 0.1688269573399818,
+        "min_local_trace_slack": 0.1688269573399818,
+        "oscillator_dimension": 3,
+        "volume": 2
+      },
+      {
+        "beta": 0.25,
+        "max_equal_time_fourth_moment": 4.31072098881917,
+        "max_full_quotient_constant": 0.3730931793691604,
+        "max_full_trace_bound": 37.99144064170199,
+        "max_local_quotient_constant": 0.3730931793691604,
+        "max_local_trace_bound": 37.99144064170199,
+        "max_two_slice": 4.286812993506907,
+        "min_full_trace_slack": 0.15301553472658688,
+        "min_local_trace_slack": 0.15301553472658688,
+        "oscillator_dimension": 3,
+        "volume": 2
+      },
+      {
+        "beta": 0.5,
+        "max_equal_time_fourth_moment": 3.184388965268901,
+        "max_full_quotient_constant": 0.3730931793691604,
+        "max_full_trace_bound": 30.348037462825783,
+        "max_local_quotient_constant": 0.3730931793691604,
+        "max_local_trace_bound": 30.348037462825783,
+        "max_two_slice": 3.092771135960198,
+        "min_full_trace_slack": 0.12341215519889412,
+        "min_local_trace_slack": 0.12341215519889412,
+        "oscillator_dimension": 3,
+        "volume": 2
+      },
+      {
+        "beta": 1.0,
+        "max_equal_time_fourth_moment": 1.7926482210507462,
+        "max_full_quotient_constant": 0.3730931793691604,
+        "max_full_trace_bound": 18.516446872529563,
+        "max_local_quotient_constant": 0.3730931793691604,
+        "max_local_trace_bound": 18.516446872529563,
+        "max_two_slice": 1.4806072773075585,
+        "min_full_trace_slack": 0.07598653598728264,
+        "min_local_trace_slack": 0.07598653598728264,
+        "oscillator_dimension": 3,
+        "volume": 2
+      },
+      {
+        "beta": 2.0,
+        "max_equal_time_fourth_moment": 1.1091667655723398,
+        "max_full_quotient_constant": 0.3730931793691604,
+        "max_full_trace_bound": 7.312155722574543,
+        "max_local_quotient_constant": 0.3730931793691604,
+        "max_local_trace_bound": 7.312155722574543,
+        "max_two_slice": 0.343409970803094,
+        "min_full_trace_slack": 0.02818699633984478,
+        "min_local_trace_slack": 0.02818699633984478,
+        "oscillator_dimension": 3,
+        "volume": 2
+      },
+      {
+        "beta": 0.125,
+        "max_equal_time_fourth_moment": 4.763308815531092,
+        "max_full_quotient_constant": 0.023883433289177237,
+        "max_full_trace_bound": 49.347549104230524,
+        "max_local_quotient_constant": 0.373093179369161,
+        "max_local_trace_bound": 41.83279122923245,
+        "max_two_slice": 4.757522361645373,
+        "min_full_trace_slack": 0.2025808430494434,
+        "min_local_trace_slack": 0.16840923305491412,
+        "oscillator_dimension": 3,
+        "volume": 4
+      },
+      {
+        "beta": 0.25,
+        "max_equal_time_fourth_moment": 3.943445226986282,
+        "max_full_quotient_constant": 0.023883433289177237,
+        "max_full_trace_bound": 40.116184175767,
+        "max_local_quotient_constant": 0.373093179369161,
+        "max_local_trace_bound": 37.590900140487825,
+        "max_two_slice": 3.92157331725738,
+        "min_full_trace_slack": 0.16436640210084974,
+        "min_local_trace_slack": 0.15286616901109426,
+        "oscillator_dimension": 3,
+        "volume": 4
+      },
+      {
+        "beta": 0.5,
+        "max_equal_time_fourth_moment": 2.626095180277007,
+        "max_full_quotient_constant": 0.023883433289177237,
+        "max_full_trace_bound": 26.97460583488033,
+        "max_local_quotient_constant": 0.373093179369161,
+        "max_local_trace_bound": 29.911258599941558,
+        "max_two_slice": 2.550191260396528,
+        "min_full_trace_slack": 0.11064649923819594,
+        "min_local_trace_slack": 0.12396664486904965,
+        "oscillator_dimension": 3,
+        "volume": 4
+      },
+      {
+        "beta": 1.0,
+        "max_equal_time_fourth_moment": 1.0554760585182108,
+        "max_full_quotient_constant": 0.023883433289177237,
+        "max_full_trace_bound": 11.856383643908725,
+        "max_local_quotient_constant": 0.373093179369161,
+        "max_local_trace_bound": 17.621398140763958,
+        "max_two_slice": 0.8509974352999145,
+        "min_full_trace_slack": 0.04909153489446709,
+        "min_local_trace_slack": 0.07527048694753788,
+        "oscillator_dimension": 3,
+        "volume": 4
+      },
+      {
+        "beta": 2.0,
+        "max_equal_time_fourth_moment": 0.3666552458625367,
+        "max_full_quotient_constant": 0.023883433289177237,
+        "max_full_trace_bound": 2.4995665827843134,
+        "max_local_quotient_constant": 0.373093179369161,
+        "max_local_trace_bound": 6.62101802247139,
+        "max_two_slice": 0.057197055411322986,
+        "min_full_trace_slack": 0.009696998928361247,
+        "min_local_trace_slack": 0.028416866001373546,
+        "oscillator_dimension": 3,
+        "volume": 4
+      },
+      {
+        "beta": 0.125,
+        "max_equal_time_fourth_moment": 0.012459140181586068,
+        "max_full_quotient_constant": 4.073855283360057e-05,
+        "max_full_trace_bound": 0.05598365622882983,
+        "max_local_quotient_constant": 0.0006063471547832498,
+        "max_local_trace_bound": 0.01664342426526763,
+        "max_two_slice": 0.01245914018158607,
+        "min_full_trace_slack": 2.545804256899435e-64,
+        "min_local_trace_slack": 2.4474409366781803e-65,
+        "oscillator_dimension": 2,
+        "volume": 6
+      },
+      {
+        "beta": 0.25,
+        "max_equal_time_fourth_moment": 0.011927505649274316,
+        "max_full_quotient_constant": 4.073855283360057e-05,
+        "max_full_trace_bound": 0.05275591113402401,
+        "max_local_quotient_constant": 0.0006063471547832498,
+        "max_local_trace_bound": 0.016276379037522378,
+        "max_two_slice": 0.011927505649274313,
+        "min_full_trace_slack": 2.388105323736833e-64,
+        "min_local_trace_slack": 2.543711312608539e-65,
+        "oscillator_dimension": 2,
+        "volume": 6
+      },
+      {
+        "beta": 0.5,
+        "max_equal_time_fourth_moment": 0.010841095951459014,
+        "max_full_quotient_constant": 4.073855283360057e-05,
+        "max_full_trace_bound": 0.04670820121076827,
+        "max_local_quotient_constant": 0.0006063471547832498,
+        "max_local_trace_bound": 0.015526312082267794,
+        "max_two_slice": 0.010841095951459013,
+        "min_full_trace_slack": 2.0979125684636302e-64,
+        "min_local_trace_slack": 2.7404424571567935e-65,
+        "oscillator_dimension": 2,
+        "volume": 6
+      },
+      {
+        "beta": 1.0,
+        "max_equal_time_fourth_moment": 0.008518754141875064,
+        "max_full_quotient_constant": 4.073855283360057e-05,
+        "max_full_trace_bound": 0.035725067611808305,
+        "max_local_quotient_constant": 0.0006063471547832498,
+        "max_local_trace_bound": 0.013922946562171707,
+        "max_two_slice": 0.008518754141875065,
+        "min_full_trace_slack": 1.5913318501029627e-64,
+        "min_local_trace_slack": 3.1609808260156652e-65,
+        "oscillator_dimension": 2,
+        "volume": 6
+      },
+      {
+        "beta": 2.0,
+        "max_equal_time_fourth_moment": 0.003827014655012391,
+        "max_full_quotient_constant": 4.073855283360057e-05,
+        "max_full_trace_bound": 0.018525369319653935,
+        "max_local_quotient_constant": 0.0006063471547832498,
+        "max_local_trace_bound": 0.010683727730790222,
+        "max_two_slice": 0.0038270146550123904,
+        "min_full_trace_slack": 8.597254437946065e-65,
+        "min_local_trace_slack": 4.010578616820403e-65,
+        "oscillator_dimension": 2,
+        "volume": 6
+      }
+    ],
+    "operator_fourth_order_envelope_closed": false,
+    "primary_summary_rows": [
+      {
+        "beta": 0.125,
+        "max_equal_time_fourth_moment": 4.9841385598184536,
+        "max_full_quotient_constant": 0.3730931793691604,
+        "max_full_trace_bound": 42.145801589250304,
+        "max_local_quotient_constant": 0.3730931793691604,
+        "max_local_trace_bound": 42.145801589250304,
+        "max_two_slice": 4.978096490313759,
+        "min_full_trace_slack": 0.1688269573399818,
+        "min_local_trace_slack": 0.1688269573399818,
+        "oscillator_dimension": 3,
+        "volume": 2
+      },
+      {
+        "beta": 0.25,
+        "max_equal_time_fourth_moment": 4.31072098881917,
+        "max_full_quotient_constant": 0.3730931793691604,
+        "max_full_trace_bound": 37.99144064170199,
+        "max_local_quotient_constant": 0.3730931793691604,
+        "max_local_trace_bound": 37.99144064170199,
+        "max_two_slice": 4.286812993506907,
+        "min_full_trace_slack": 0.15301553472658688,
+        "min_local_trace_slack": 0.15301553472658688,
+        "oscillator_dimension": 3,
+        "volume": 2
+      },
+      {
+        "beta": 0.5,
+        "max_equal_time_fourth_moment": 3.184388965268901,
+        "max_full_quotient_constant": 0.3730931793691604,
+        "max_full_trace_bound": 30.348037462825783,
+        "max_local_quotient_constant": 0.3730931793691604,
+        "max_local_trace_bound": 30.348037462825783,
+        "max_two_slice": 3.092771135960198,
+        "min_full_trace_slack": 0.12341215519889412,
+        "min_local_trace_slack": 0.12341215519889412,
+        "oscillator_dimension": 3,
+        "volume": 2
+      },
+      {
+        "beta": 1.0,
+        "max_equal_time_fourth_moment": 1.7926482210507462,
+        "max_full_quotient_constant": 0.3730931793691604,
+        "max_full_trace_bound": 18.516446872529563,
+        "max_local_quotient_constant": 0.3730931793691604,
+        "max_local_trace_bound": 18.516446872529563,
+        "max_two_slice": 1.4806072773075585,
+        "min_full_trace_slack": 0.07598653598728264,
+        "min_local_trace_slack": 0.07598653598728264,
+        "oscillator_dimension": 3,
+        "volume": 2
+      },
+      {
+        "beta": 2.0,
+        "max_equal_time_fourth_moment": 1.1091667655723398,
+        "max_full_quotient_constant": 0.3730931793691604,
+        "max_full_trace_bound": 7.312155722574543,
+        "max_local_quotient_constant": 0.3730931793691604,
+        "max_local_trace_bound": 7.312155722574543,
+        "max_two_slice": 0.343409970803094,
+        "min_full_trace_slack": 0.02818699633984478,
+        "min_local_trace_slack": 0.02818699633984478,
+        "oscillator_dimension": 3,
+        "volume": 2
+      },
+      {
+        "beta": 0.125,
+        "max_equal_time_fourth_moment": 4.763308815531092,
+        "max_full_quotient_constant": 0.023883433289177237,
+        "max_full_trace_bound": 49.347549104230524,
+        "max_local_quotient_constant": 0.373093179369161,
+        "max_local_trace_bound": 41.83279122923245,
+        "max_two_slice": 4.757522361645373,
+        "min_full_trace_slack": 0.2025808430494434,
+        "min_local_trace_slack": 0.16840923305491412,
+        "oscillator_dimension": 3,
+        "volume": 4
+      },
+      {
+        "beta": 0.25,
+        "max_equal_time_fourth_moment": 3.943445226986282,
+        "max_full_quotient_constant": 0.023883433289177237,
+        "max_full_trace_bound": 40.116184175767,
+        "max_local_quotient_constant": 0.373093179369161,
+        "max_local_trace_bound": 37.590900140487825,
+        "max_two_slice": 3.92157331725738,
+        "min_full_trace_slack": 0.16436640210084974,
+        "min_local_trace_slack": 0.15286616901109426,
+        "oscillator_dimension": 3,
+        "volume": 4
+      },
+      {
+        "beta": 0.5,
+        "max_equal_time_fourth_moment": 2.626095180277007,
+        "max_full_quotient_constant": 0.023883433289177237,
+        "max_full_trace_bound": 26.97460583488033,
+        "max_local_quotient_constant": 0.373093179369161,
+        "max_local_trace_bound": 29.911258599941558,
+        "max_two_slice": 2.550191260396528,
+        "min_full_trace_slack": 0.11064649923819594,
+        "min_local_trace_slack": 0.12396664486904965,
+        "oscillator_dimension": 3,
+        "volume": 4
+      },
+      {
+        "beta": 1.0,
+        "max_equal_time_fourth_moment": 1.0554760585182108,
+        "max_full_quotient_constant": 0.023883433289177237,
+        "max_full_trace_bound": 11.856383643908725,
+        "max_local_quotient_constant": 0.373093179369161,
+        "max_local_trace_bound": 17.621398140763958,
+        "max_two_slice": 0.8509974352999145,
+        "min_full_trace_slack": 0.04909153489446709,
+        "min_local_trace_slack": 0.07527048694753788,
+        "oscillator_dimension": 3,
+        "volume": 4
+      },
+      {
+        "beta": 2.0,
+        "max_equal_time_fourth_moment": 0.3666552458625367,
+        "max_full_quotient_constant": 0.023883433289177237,
+        "max_full_trace_bound": 2.4995665827843134,
+        "max_local_quotient_constant": 0.373093179369161,
+        "max_local_trace_bound": 6.62101802247139,
+        "max_two_slice": 0.057197055411322986,
+        "min_full_trace_slack": 0.009696998928361247,
+        "min_local_trace_slack": 0.028416866001373546,
+        "oscillator_dimension": 3,
+        "volume": 4
+      },
+      {
+        "beta": 0.125,
+        "max_equal_time_fourth_moment": 0.012459140181586068,
+        "max_full_quotient_constant": 4.073855283360057e-05,
+        "max_full_trace_bound": 0.05598365622882983,
+        "max_local_quotient_constant": 0.0006063471547832498,
+        "max_local_trace_bound": 0.01664342426526763,
+        "max_two_slice": 0.01245914018158607,
+        "min_full_trace_slack": 2.545804256899435e-64,
+        "min_local_trace_slack": 2.4474409366781803e-65,
+        "oscillator_dimension": 2,
+        "volume": 6
+      },
+      {
+        "beta": 0.25,
+        "max_equal_time_fourth_moment": 0.011927505649274316,
+        "max_full_quotient_constant": 4.073855283360057e-05,
+        "max_full_trace_bound": 0.05275591113402401,
+        "max_local_quotient_constant": 0.0006063471547832498,
+        "max_local_trace_bound": 0.016276379037522378,
+        "max_two_slice": 0.011927505649274313,
+        "min_full_trace_slack": 2.388105323736833e-64,
+        "min_local_trace_slack": 2.543711312608539e-65,
+        "oscillator_dimension": 2,
+        "volume": 6
+      },
+      {
+        "beta": 0.5,
+        "max_equal_time_fourth_moment": 0.010841095951459014,
+        "max_full_quotient_constant": 4.073855283360057e-05,
+        "max_full_trace_bound": 0.04670820121076827,
+        "max_local_quotient_constant": 0.0006063471547832498,
+        "max_local_trace_bound": 0.015526312082267794,
+        "max_two_slice": 0.010841095951459013,
+        "min_full_trace_slack": 2.0979125684636302e-64,
+        "min_local_trace_slack": 2.7404424571567935e-65,
+        "oscillator_dimension": 2,
+        "volume": 6
+      },
+      {
+        "beta": 1.0,
+        "max_equal_time_fourth_moment": 0.008518754141875064,
+        "max_full_quotient_constant": 4.073855283360057e-05,
+        "max_full_trace_bound": 0.035725067611808305,
+        "max_local_quotient_constant": 0.0006063471547832498,
+        "max_local_trace_bound": 0.013922946562171707,
+        "max_two_slice": 0.008518754141875065,
+        "min_full_trace_slack": 1.5913318501029627e-64,
+        "min_local_trace_slack": 3.1609808260156652e-65,
+        "oscillator_dimension": 2,
+        "volume": 6
+      },
+      {
+        "beta": 2.0,
+        "max_equal_time_fourth_moment": 0.003827014655012391,
+        "max_full_quotient_constant": 4.073855283360057e-05,
+        "max_full_trace_bound": 0.018525369319653935,
+        "max_local_quotient_constant": 0.0006063471547832498,
+        "max_local_trace_bound": 0.010683727730790222,
+        "max_two_slice": 0.0038270146550123904,
+        "min_full_trace_slack": 8.597254437946065e-65,
+        "min_local_trace_slack": 4.010578616820403e-65,
+        "oscillator_dimension": 2,
+        "volume": 6
+      }
+    ],
+    "qft_promoted": false,
+    "scalar_contraction_bond_envelope_closed": true,
+    "scalar_local_fourth_tail_envelope_closed": true,
+    "source_volume_uniform_scalar_constant_closed": true,
+    "unbounded_common_core_closed": false
+  },
+  "exploration_id": "EXP-001191",
+  "lean": {
+    "command": "lake env lean Tect/R350.lean",
+    "output": "Tect/R350.lean:9:5: warning: Variable name `hu` is not explicitly referenced.\n\nThe binding can be removed (if unused) or named `_` (if used implicitly).\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\nTect/R350.lean:10:5: warning: Variable name `hv` is not explicitly referenced.\n\nThe binding can be removed (if unused) or named `_` (if used implicitly).\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\nTect/R350.lean:11:5: warning: Variable name `hS` is not explicitly referenced.\n\nThe binding can be removed (if unused) or named `_` (if used implicitly).\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\nTect/R350.lean:22:7: warning: Variable name `r` is not explicitly referenced.\n\nThe binding can be removed (if unused) or named `_` (if used implicitly).\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\nTect/R350.lean:23:5: warning: Variable name `hg` is not explicitly referenced.\n\nThe binding can be removed (if unused) or named `_` (if used implicitly).\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\nTect/R350.lean:24:5: warning: Variable name `hkp` is not explicitly referenced.\n\nThe binding can be removed (if unused) or named `_` (if used implicitly).\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`",
+    "returncode": 0,
+    "status": "PASS"
+  },
+  "provenance": {
+    "independent_sha256": "9bb77cd50b68b0e879d04842d1aba76536734b6d61073ab678852f4d01139c33",
+    "lean_sha256": "5b5ae5f02f66d2ad950c2852f70797eeb398bd69b6520c81cf58a04e8f8fffcc",
+    "manifest_sha256": "fac72ddaf9afe57e0cad4248cb11dbd934398d1b3e660395f982ed49ce5e689f",
+    "primary_sha256": "b247bf995b36cac0a4afedcbb56f1b1630fc3b375b2f189668914047970cda7a"
+  },
+  "recorded_at": "2026-08-26T18:06:16.674541Z",
+  "run_kind": "integrated",
+  "schema": "tect/foundation-audit/1.0",
+  "task_id": "T-054",
+  "verdict": "PASS"
+}

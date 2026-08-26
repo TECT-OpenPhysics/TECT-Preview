@@ -10553,6 +10553,147 @@
       "task_id": "T-054",
       "title": "Finite Q3 energy-fourth coercive quotient for the Euclidean tail moment",
       "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "axis": "contraction",
+          "check": "Both scalar factors are explicitly constrained by absolute-value contraction; no cutoff monotonicity is used.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "bond sign",
+          "check": "The bond is a sum of nonnegative quadratic and quartic terms, so the tail difference is bounded by the sum of the two envelopes; no false ordering B(u,v)<=B(x,y) is assumed.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "negative mass",
+          "check": "The r=-1 contribution is retained through the exact square-completion residual -11/9 rather than discarded.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "fourth power",
+          "check": "The factor 56/3 and constant 9834496/81 are recomputed from the manifest inputs and cross-checked by Lean R350.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "kinetic noncommutativity",
+          "check": "The scalar k_pot envelope is not presented as T^4<=C K^4; local/full finite quotients are reported precisely to expose this remaining step.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "finite matrix scope",
+          "check": "The 30 matrix rows inherit only the registered finite volumes, oscillator cutoffs, beta values and radii; no asymptotic bound is inferred from their extrema.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "Lean boundary",
+          "check": "R350 checks rational inequality composition only; it does not formalize matrix quotients, Gibbs traces, unbounded domains or limits.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "QFT promotion",
+          "check": "The result does not close a local Gibbs moment, direct D/delta-D history, common alpha, OS/KMS/GNS identification, gap, continuum, C6, Sector A or Pre-A.",
+          "disposition": "UPHELD-OPEN"
+        }
+      ],
+      "boundary": "T0 claim-nonbearing source-local scalar/potential envelope and finite quotient stress checkpoint. It is not an operator common-core theorem, a thermodynamic QFT dynamics, a common-alpha theorem, a mass-gap proof, a continuum result, C6, Sector A or Pre-A closure.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "closed": [
+        "contraction-only scalar bond envelope",
+        "exact onsite square-completion residual for the inherited Q3 parameters",
+        "source- and total-volume-independent scalar fourth-power tail constant",
+        "finite source-edge Q3 tail rows across volume, beta and cutoff",
+        "independent reproduction and Lean R350 scalar cross-check"
+      ],
+      "decision_reason": "The source-edge cutoff tail has a genuinely local scalar fourth-power envelope whose constant is independent of total volume and source contraction. The finite local/full quotient rows show how the kinetic noncommutativity enters without being hidden. This advances the potential input for the OS/KMS-facing tail lane but does not convert the scalar bound into an operator order or a uniform Gibbs moment.",
+      "evidence_refs": [
+        "strategy/pre-a-cp1-st8-q3lock-source-local-tail-scalar-energy-envelope-manifest.json#mathematical_interface",
+        "codes/foundations/pre_a_cp1_st8_q3lock_source_local_tail_scalar_energy_envelope.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_source_local_tail_scalar_energy_envelope_independent.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_source_local_tail_scalar_energy_envelope_verify.py#run",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-27-primary-pre-a-cp1-st8-q3lock-source-local-tail-scalar-energy-envelope/primary.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-27-independent-pre-a-cp1-st8-q3lock-source-local-tail-scalar-energy-envelope/independent.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-27-integrated-pre-a-cp1-st8-q3lock-source-local-tail-scalar-energy-envelope/integrated.json#lean",
+        "verification/lean/Tect/R350.lean#local_tail_fourth_envelope",
+        "verification/lean/registry.json#R350"
+      ],
+      "finding": "Primary 2708/2708 and independent 2597/2597 assertions pass; the integrated verifier passes 22/22 with Lean R350 PASS. The scalar rows cover 1225 contraction combinations and the finite matrix rows cover 30 source-edge Q3 cases. For the inherited coefficients c=3/5, lambda=1/10, g=3/5, r=-1, the exact factors are 8/g=40/3, tail factor 16(c+lambda)/g=56/3, fourth-power constant 9834496/81, and onsite residual -11/9. The largest local quotient constant is 0.373093179369161, largest full quotient constant 0.3730931793691604, largest equal-time fourth moment 4.9841385598184536, largest beta/2 two-slice moment 4.978096490313759, largest local Gibbs K^4 moment 112.96320576139173, and largest full Gibbs K^4 moment 2066.1832202572123. These finite values are diagnostics only.",
+      "formal_integration": {
+        "events": [],
+        "lean": "R350 PASS; metadata PASS",
+        "negatives": [],
+        "no_new_event": true,
+        "no_new_negative": true,
+        "no_new_result": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "results": []
+      },
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": []
+      },
+      "gate_ids": [
+        "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+        "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+        "PA-CP1-ST8-Q3LOCK-ALL-EXHAUSTION-MIXTURE-L2-LOCALITY-AND-BETA-INDEPENDENT-CSTAR-DYNAMICS",
+        "PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE"
+      ],
+      "id": "EXP-001191",
+      "method": [
+        "Load the EXP-001190 -> EXP-001189 -> EXP-001188 fixture lineage so the Q3 coefficients, graph volumes, oscillator dimensions, beta values and cosine cutoff are inherited rather than recopied.",
+        "For arbitrary contractions |u|<=|x| and |v|<=|y|, bound each nonnegative bond by (c+lambda)(1+x^4+y^4), then use the exact negative-mass square completion to show 1+x^4+y^4 <= (8/g) k_pot for k_pot=1+v(x)+v(y)+2r^2/(4g).",
+        "Combine the two bond bounds without assuming contraction monotonicity to obtain |B(x,y)-B(u,v)| <= 16(c+lambda)k_pot/g and raise the nonnegative scalar inequality to the fourth power.",
+        "Rebuild the finite Q3 matrices and replace the bond coordinates only on the source edge (0,1); evaluate the local and full shifted-H fourth-power quotients, the beta/2 two-slice moment, and cutoff contraction on every inherited volume, beta and radius row.",
+        "Run primary and non-importing independent lanes and compile Lean R350 for the rational inequality composition; preserve the kinetic/operator and thermodynamic boundary explicitly."
+      ],
+      "next_action": "Use the scalar source-edge envelope as the potential input for a state-weighted local Gibbs estimate; prove or obstruct the missing kinetic/noncommutative transfer before inserting it into the two-orientation history recurrence.",
+      "no_overclaim": "Only the scalar contraction inequality, local fourth-power potential envelope and finite source-edge matrix diagnostics are promoted. The kinetic operator, Gibbs moment uniformity, modular/domain transfer, direct Cauchy, exhaustion, common alpha, Hamiltonian-OS/KMS/GNS identification, gap, continuum, C6, Sector A and Pre-A remain open.",
+      "open": [
+        "operator fourth-order domination through the kinetic Q3 Hamiltonian",
+        "uniform local Gibbs K^4 moment and quotient under spatial and oscillator exhaustion",
+        "unbounded common-core and product-domain realization",
+        "modular-domain transfer and direct D/delta-D Cauchy",
+        "all-shape exhaustion, common alpha and Hamiltonian-to-OS/KMS/GNS identification",
+        "broken-sector GNS gap, continuum, C6, Sector A and Pre-A"
+      ],
+      "prior_exploration_id": "EXP-001190",
+      "provenance": "contemporaneous",
+      "qft_interface": {
+        "closed": "A source-edge scalar fourth-power tail envelope with an explicit source/volume-independent constant, and finite local/full shifted-H quotient diagnostics.",
+        "open": "The operator fourth-power transfer, uniform Gibbs moment, common unbounded core, modular tail, direct Cauchy, exhaustion, common alpha, Hamiltonian-OS/KMS/GNS identification, gap, continuum, C6, Sector A and Pre-A remain open.",
+        "tect_boundary": "Auxiliary C6/Q3 finite evidence only; no heat_root_incidence or canonical A1/R-192 production owner is supplied."
+      },
+      "question": "Can a cutoff tail restricted to one source-support edge be bounded by a source- and volume-independent fourth power of the local shifted Q3 potential, while finite matrix quotients are stress-tested separately?",
+      "recorded_at": "2026-08-29T05:05:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001190",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001189",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001129",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001127",
+          "relation": "alternative_to"
+        }
+      ],
+      "reviewed_on": "2026-08-27",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Source-local Q3 cutoff-tail scalar energy envelope",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",
