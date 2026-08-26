@@ -1,0 +1,76 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001175",
+  "title": "Finite Q3 common-word direction and source-position stress",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "question": "When the same finite local OS words are evaluated at endpoint and interior source positions on path4, path5 and path6, do adjacent context deltas persistently decrease for both endpoint orientations, or is the apparent common-word decay direction/source dependent?",
+  "method": [
+    "Reconstruct the manifest-defined d=3 Q3 onsite quartic and nonlinear bond matrices on path4, path5 and path6 with chi=1, r=-1, g=3/5, c=3/5 and lambda=1/10; validate edge bounds, uniqueness and the endpoint-left, center and endpoint-right source-role declarations.",
+    "Diagonalize each finite H and form T(s)=exp(-sH/hbar) in a shifted energy basis. For every role, use the same q- and p-character descriptors, beta=0.25,0.5 and the registered positive half-period time grid.",
+    "Compute normalized Hilbert-Schmidt OS Gram matrices, compare each with its reflected transfer trace, and require finite positive spectra, positive diagonals and reflection agreement for every role and volume.",
+    "Compute the finite q/p thermal cyclic word identity for the three interior fractions of the thermal period and require residuals below 1e-9.",
+    "Compare identical descriptor values across path4->path5 and path5->path6 by physical source role, including both endpoint orientations and the center diagnostic. Run an independent non-importing reconstruction and an integrated verifier with Lean R247."
+  ],
+  "verdict": "advanced",
+  "decision_reason": "Both endpoint orientations show the same finite context response within numerical precision, so the one-sided path2->path5 pattern is not an artefact of choosing only the left endpoint. The center role has much larger deltas, exposing a real source-position dependence. At beta=0.25 the endpoint-left, center and endpoint-right maximum deltas for path4->path5 are 1.3494971806693457e-10, 1.994630439627887e-05 and 1.3494938500002718e-10, while path5->path6 gives 3.516076318987871e-13, 4.9703497650988027e-08 and 3.519406988061746e-13. At beta=0.5 the largest context delta is 1.0034712792295064e-04 on the center role. This advances the finite QFT-facing boundary-decay target but does not supply source-uniform constants, a common OS carrier or a thermodynamic Cauchy theorem.",
+  "finding": "Primary 198/198 and independent 198/198 assertions pass over 3 finite path contexts, 18 OS Gram rows, 54 thermal rows and 12 adjacent role comparisons; the integrated verifier passes 42/42 with Lean R247 PASS. Every declared role and beta has finite positive OS Gram data and finite thermal cyclicity. Endpoint-left and endpoint-right deltas agree to about 4e-16 at the largest beta=0.25 comparison and both decrease across the two extensions. The center deltas are roughly five orders of magnitude larger than endpoint deltas at beta=0.25, so source-position dependence remains visible even when orientation symmetry is numerically stable. The run keeps source/volume-uniform Cauchy and common-alpha flags false.",
+  "next_action": "Use the endpoint/center contrast to formulate an analytic local-to-boundary estimate with an explicit source-distance and degree dependence. Compare it against direct D/delta-D growth and require a bound uniform in source, volume, cutoff and beta before any common-alpha or Hamiltonian-to-OS promotion.",
+  "prior_exploration_id": "EXP-001174",
+  "related": [
+    {"id": "EXP-001174", "relation": "continues"},
+    {"id": "EXP-001173", "relation": "continues"},
+    {"id": "EXP-001169", "relation": "continues"}
+  ],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE",
+    "PA-CP1-ST8-Q3LOCK-FIXED-BETA-CANONICAL-OS-MIXTURE-COMMON-NORMAL-WSTAR-KMS-ENVELOPE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "evidence_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-finite-common-word-direction-source-manifest.json#model",
+    "codes/foundations/pre_a_cp1_st8_q3lock_finite_common_word_direction_source.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_finite_common_word_direction_source_independent.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_finite_common_word_direction_source_verify.py#main",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-primary-pre-a-cp1-st8-q3lock-finite-common-word-direction-source/primary.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-independent-pre-a-cp1-st8-q3lock-finite-common-word-direction-source/independent.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-integrated-pre-a-cp1-st8-q3lock-finite-common-word-direction-source/integrated.json#lean",
+    "verification/lean/Tect/R247.lean#conditional_transfer_scope",
+    "verification/lean/registry.json#R247"
+  ],
+  "formal_integration": {
+    "events": [],
+    "results": [],
+    "negatives": [],
+    "lean": "R247 PASS",
+    "no_new_event": true,
+    "no_new_result": true,
+    "no_new_negative": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "formal_refs": {"events": [], "results": [], "negatives": []},
+  "adversarial_review": [
+    {"axis": "Direction mapping", "check": "Endpoint comparisons are keyed by physical source role, so the endpoint-right sequence uses relabelled path vertices and does not claim raw tensor-index equality.", "disposition": "UPHELD"},
+    {"axis": "Center role", "check": "The center index changes between path4, path5 and path6; it is retained as a source-position diagnostic and not treated as a translation-invariant embedding.", "disposition": "UPHELD-OPEN"},
+    {"axis": "OS sign and units", "check": "All transfer factors use exp(-sH/hbar), period beta*hbar and the half-period reflection convention from EXP-001173.", "disposition": "UPHELD"},
+    {"axis": "Cauchy interpretation", "check": "The observed endpoint decay and center decay are finite sequences only; neither is promoted to a uniform thermodynamic Cauchy estimate.", "disposition": "UPHELD-OPEN"},
+    {"axis": "Source dependence", "check": "The larger center deltas are reported rather than averaged away, so finite endpoint symmetry is not confused with source-uniformity.", "disposition": "UPHELD-OPEN"},
+    {"axis": "Positive Gram", "check": "Every role, beta and volume has a positive finite Gram spectrum, reflected-trace agreement and positive diagonal witness.", "disposition": "UPHELD"},
+    {"axis": "Independence", "check": "The independent lane rebuilds oscillator tensors, Q3 terms, spectra, transfer words, role comparisons and KMS values without importing primary code.", "disposition": "UPHELD"},
+    {"axis": "Lean boundary", "check": "R247 checks exact rational finite Gibbs normalization/commutation and conditional transfer scope; dense Q3 matrices and role deltas remain Python evidence.", "disposition": "UPHELD"},
+    {"axis": "QFT promotion", "check": "Finite two-orientation/source rows cannot construct a common OS carrier, prove uniformity, establish common alpha, Hamiltonian-to-OS identification, a GNS gap, continuum removal, C6, Sector A or Pre-A.", "disposition": "UPHELD-OPEN"}
+  ],
+  "qft_interface": {
+    "closed": "For path4/path5/path6, identical finite source-role transfer words have positive OS Gram and finite KMS cyclicity, and both endpoint directions plus the center source have explicit adjacent context deltas with independent and Lean checks.",
+    "open": "A source/volume/cutoff/beta-uniform direction-independent analytic estimate, common-word exhaustion embedding, direct D/delta-D convergence, common core, one common alpha, Hamiltonian-to-OS identification, GNS gap, continuum and physical TECT gates remain open.",
+    "tect_boundary": "Auxiliary C6/Q3 finite evidence only; no heat_root_incidence, canonical A1/R-192 production owner, physical-empty reference, Sector-A closure or Pre-A closure is supplied."
+  },
+  "boundary": "T0 claim-nonbearing finite d=3 direction/source context comparison. It is not a common OS carrier theorem, thermodynamic limit, common-alpha construction, mass-gap proof, continuum result, or QFT/Clay closure.",
+  "no_overclaim": "This package proves only finite matrix transfer-word positivity, finite cyclicity and explicit direction/source context-delta diagnostics for the declared path graphs. It does not prove a thermodynamic OS measure, Hamiltonian-to-OS identification, source/volume-uniform Cauchy convergence, a common alpha, a GNS mass gap, continuum removal, C6, Sector A, Pre-A or a Clay result.",
+  "recorded_at": "2026-08-29T04:30:00Z",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-08-26",
+  "provenance": "contemporaneous"
+}
