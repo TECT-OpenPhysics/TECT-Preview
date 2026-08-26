@@ -1,0 +1,125 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001164",
+  "title": "Finite Q3 local Gibbs and energy-weighted commutator-sum replacement audit",
+  "task_id": "T-054",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-ENERGY-WEIGHTED-COMMUTATOR-GEVREY-LR-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "question": "Can the raw finite-Q3 commutator-sum coefficient be replaced, on a named local common-core proxy, by two-sided Gibbs and energy-weighted pair seminorms that remain controlled across the declared cutoff, beta, volume, and shifted source supports?",
+  "method": [
+    "Follow the hash-pinned EXP-001163 Q3 fixture and rebuild every truncated oscillator, onsite term and bond term on volumes 2, 4 and 6 for cutoffs 3, 4, 5 and 6.",
+    "For every overlapping term pair compute X=[H_j,H_k] on its union support U; construct the induced local Hamiltonian H_U, normalized local Gibbs matrix rho_U at beta in {1/2,1,2}, and shifted positive K_U.",
+    "Evaluate the raw operator norm, two-sided Gibbs Hilbert-Schmidt seminorm, and four-leg K_U^(1/2)-Gibbs seminorm for each pair, then aggregate all pairs and the explicit source-touching support sets.",
+    "Check one full tensor embedding per volume for support locality, independently reconstruct the matrix calculation, compare every aggregate row, and compile Lean R334 for exact rational bookkeeping and scope flags."
+  ],
+  "finding": "Primary 247/247 and independent 130/130 assertions pass over 36 volume/cutoff/beta rows; the integrated verifier passes 1129/1129 and Lean R334 compiles. The raw, Gibbs and K^(1/2)-Gibbs sums are finite and agree between lanes within the declared tolerance. The energy-weighted all-pair sum per site grows from cutoff 3 to 6 by ratios 7.8113148179745755 at beta=1/2, 4.35073144591442 at beta=1, and 2.127796987484661 at beta=2, with the same values across the three finite volumes because the induced graph sums are additive on this fixture. The largest weighted per-site value is 31.952418989196214. Source-touching aggregates are finite but boundary-dependent; for example at beta=1, cutoff 6 they are 8.315925195821489 for V=2 source {0,1}, 24.94777558746448 for V=4 source {0,1}, 33.263700783285955 for V=4 source {1,2}, and 33.263700783285955 for each listed V=6 source support. These finite trends do not establish a cutoff-, volume- or beta-uniform coefficient.",
+  "verdict": "advanced",
+  "decision_reason": "The finite local-state proxy is reproducible and lane-independent, so it is retained as the next QFT-facing diagnostic after the raw-norm cutoff boundary. The observed cutoff growth means this particular K_U^(1/2)-Gibbs pair sum cannot be promoted as an unqualified uniform replacement. More importantly, rho_U is only an induced local Gibbs matrix: a global-state transfer, common unbounded core, and cancellation-aware D/delta-D estimate are still required before a common-alpha argument.",
+  "boundary": "Finite oscillator matrices with the inherited Q3 parameters, volumes 2, 4 and 6, cutoffs 3 through 6, beta in {1/2,1,2}, induced union Hamiltonians and the listed source supports. No global KMS restriction, common operator domain, thermodynamic history, exhaustion independence, common alpha, OS/KMS/GNS reconstruction, gap, continuum, C6, Sector A, Pre-A or Clay conclusion follows.",
+  "evidence_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-state-weighted-commutator-sum-audit-manifest.json#named_proxy",
+    "codes/foundations/pre_a_cp1_st8_q3lock_state_weighted_commutator_sum_audit.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_state_weighted_commutator_sum_audit_independent.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_state_weighted_commutator_sum_audit_verify.py#run",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-29-primary-pre_a_cp1_st8_q3lock_state_weighted_commutator_sum_audit/primary.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-29-independent-pre_a_cp1_st8_q3lock_state_weighted_commutator_sum_audit/independent.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-29-integrated-pre_a_cp1_st8_q3lock_state_weighted_commutator_sum_audit/integrated.json#lean",
+    "verification/lean/Tect/R334.lean#two_sided_square_fixture",
+    "verification/lean/registry.json#R334"
+  ],
+  "next_action": "Use the finite growth as a route-local boundary and attempt a global-state-compatible cancellation-aware D,delta-D estimate on the analytic matching-layer common core; if no uniform estimate survives, record the obstruction before any common-alpha promotion.",
+  "open": [
+    "global Gibbs/KMS state transfer for local seminorms",
+    "cutoff-, volume- and beta-uniform weighted commutator coefficient",
+    "common unbounded operator domain and core density",
+    "actual thermodynamic two-orientation history",
+    "source/beta/volume-uniform direct D and delta-D Cauchy",
+    "exhaustion independence and common alpha",
+    "Hamiltonian-to-OS/KMS/GNS identification",
+    "gap, continuum, C6, Sector A and Pre-A"
+  ],
+  "adversarial_review": [
+    {
+      "axis": "local-state versus global-state",
+      "check": "The normalized rho_U is explicitly induced by H_U and is never treated as an infinite-volume KMS restriction or product state.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "weight orientation",
+      "check": "All four K^(1/2)-Gibbs legs are evaluated separately, so no commutation of K_U, rho_U and X is assumed.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "support locality",
+      "check": "Disjoint pairs are excluded by tensor support and one full embedding per volume agrees with the union-support norm within tolerance.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "cutoff and beta scope",
+      "check": "Every row rebuilds oscillator, H_U, rho_U and K_U for its own cutoff and beta; finite ratios are not asymptotic statements.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "source shifts",
+      "check": "Only the explicitly declared source supports are aggregated, and boundary-dependent counts are retained rather than generalized.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "Trotter substitution",
+      "check": "Weighted sums are candidate diagnostics; no raw operator-norm Lie-Trotter inequality is silently reused for a seminorm without a proved defect estimate.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "Lean boundary",
+      "check": "R334 checks exact rational fixtures only; spectral matrix calculations and all domain/limit claims remain Python/open analysis.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "QFT promotion",
+      "check": "Common core, thermodynamic dynamics, exhaustion, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector A and Pre-A remain open.",
+      "disposition": "UPHELD-OPEN"
+    }
+  ],
+  "formal_integration": {
+    "events": [],
+    "results": [],
+    "negatives": [],
+    "lean": "R334 PASS",
+    "no_new_event": true,
+    "no_new_negative": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "qft_interface": {
+    "closed": "Finite local-union raw, Gibbs and K^(1/2)-Gibbs commutator-sum tables with independent and Lean cross-checks.",
+    "open": "Global-state transfer, a cutoff/volume/beta-uniform weighted coefficient, common domain, direct D/delta-D Cauchy, thermodynamic history, exhaustion, common alpha, OS/KMS/GNS, gap, continuum and Pre-A remain open.",
+    "tect_boundary": "Auxiliary C6/Q3 evidence only; no heat_root_incidence, canonical A1/R-192 production owner, physical-empty reference or Sector-A closure is supplied."
+  },
+  "no_overclaim": "This finite local-state proxy audit does not prove a global KMS state, common unbounded core, thermodynamic QFT dynamics, a mass gap, continuum, C6, Sector A, Pre-A or a Clay result.",
+  "provenance": "contemporaneous",
+  "recorded_at": "2026-08-29T01:25:00Z",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-08-26",
+  "related": [
+    {
+      "id": "EXP-001163",
+      "relation": "continues"
+    },
+    {
+      "id": "EXP-001162",
+      "relation": "continues"
+    },
+    {
+      "id": "EXP-001158",
+      "relation": "continues"
+    }
+  ]
+}
