@@ -7852,6 +7852,133 @@
       "task_id": "T-054",
       "title": "Extended finite direct D and modular derivative across path exhaustion and beta",
       "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "axis": "KMS sign and units",
+          "check": "The alpha convention and t+i beta hbar boundary are used consistently; exact-H residuals are independently checked below the exact tolerance.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "complex inverse",
+          "check": "The complex split inverse uses reversed factor order and -z, rather than a false complex adjoint.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "cutoff degeneracy",
+          "check": "Dimension 2 is excluded because the truncated terms commute there; all reported rows use the nondegenerate d=3 fixture and a positive commutator witness.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "thermal identification",
+          "check": "Each residual uses the Gibbs state of the same exact finite H; split products are not treated as exact Gibbs-preserving dynamics.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "mesh inference",
+          "check": "The coarse/fine decrease is recorded only on two finite deltas and is not promoted to a cutoff-, volume- or source-uniform rate.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "shape inference",
+          "check": "Path4/path6 is a structured finite pair; finite similarity of residuals does not establish arbitrary-shape exhaustion independence.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "independence",
+          "check": "The independent lane does not import the primary module; maximum row discrepancy is approximately 1.3e-13, below the declared tolerance.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "Lean promotion",
+          "check": "R247 checks exact rational finite Gibbs normalization/commutation and conditional-transfer scope; it does not formalize the dense Q3 matrices or thermodynamic limits.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "QFT promotion",
+          "check": "Common core, direct D/delta-D Cauchy, common alpha, OS/KMS/GNS identification, gap, continuum, C6, Sector A and Pre-A remain open.",
+          "disposition": "UPHELD-OPEN"
+        }
+      ],
+      "boundary": "T0 claim-nonbearing finite d=3 Q3 KMS diagnostic. It is not a thermodynamic-limit KMS theorem, a common-alpha construction, a mass-gap proof, a continuum result, or a QFT/Clay closure.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "The finite Q3 calculation supplies a direct equilibrium-interface diagnostic: the exact Hamiltonian orbit satisfies the finite Gibbs KMS identity, whereas the noncommuting split products have measurable stationarity and KMS defects that decrease on the declared mesh. This is a non-duplicate QFT-facing complement to the prior Trotter/operator and direct-D audits. The two-point mesh trend is only a finite diagnostic; the analytic common-core, all-shape exhaustion and common-alpha obligations remain unproved.",
+      "evidence_refs": [
+        "strategy/pre-a-cp1-st8-q3lock-finite-split-gibbs-kms-residual-manifest.json#finite_fixture",
+        "codes/foundations/pre_a_cp1_st8_q3lock_finite_split_gibbs_kms_residual.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_finite_split_gibbs_kms_residual_independent.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_finite_split_gibbs_kms_residual_verify.py#main",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-primary-pre-a-cp1-st8-q3lock-finite-split-gibbs-kms-residual/primary.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-independent-pre-a-cp1-st8-q3lock-finite-split-gibbs-kms-residual/independent.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-integrated-pre-a-cp1-st8-q3lock-finite-split-gibbs-kms-residual/integrated.json#lean",
+        "verification/lean/Tect/R247.lean#diagonal_gibbs_commutation",
+        "verification/lean/registry.json#R247"
+      ],
+      "finding": "Primary 245/245 and independent 210/210 assertions pass; the integrated verifier passes 34/34 with Lean R247 PASS. All 32 split rows are finite and nonzero in both the Gibbs stationarity and analytic KMS residual tests. The minimum KMS residual is 0.00018883644920865102 and the maximum is 0.007892721200547535; the minimum stationarity defect is 0.0018261413113423613 and the maximum is 0.010265665577336547. Refining delta from 0.1 to 0.05 lowers every recorded residual in both term orders, signs, beta values and graphs; the largest KMS fine/coarse ratio is 0.6176424250777024 and the stationarity ratio is about 0.4994. Path4/path6 ratios are finite and nearly coincident for this fixture, but no volume- or beta-uniform theorem follows.",
+      "formal_integration": {
+        "events": [],
+        "lean": "R247 PASS",
+        "negatives": [],
+        "no_new_event": true,
+        "no_new_negative": true,
+        "no_new_result": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "results": []
+      },
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": []
+      },
+      "gate_ids": [
+        "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+        "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+        "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001170",
+      "method": [
+        "Reconstruct the registered d=3 Q3 onsite quartic and nonlinear bond matrices on path4 and path6 with chi=1, r=-1, g=3/5, c=3/5 and lambda=1/10.",
+        "Use the exact finite-H Gibbs state rho_beta at beta=0.25 and 0.5 and the source-site-1 q-character A together with the p-character B.  The exact control uses alpha_t(X)=exp(-iHt/hbar) X exp(iHt/hbar) and the KMS boundary t+i beta hbar.",
+        "Form both registered onsite-then-lexicographic-bonds and reverse-term split products at horizon t=0.1 with delta=0.1 and 0.05, both time signs, and construct the complex inverse in reverse factor order.",
+        "Record the trace-norm Gibbs stationarity defect and scalar KMS boundary residual, require the exact-H controls to be below 1e-9, require finite split witnesses, and compare coarse/fine mesh ratios without promoting them to a uniform rate.",
+        "Run a non-importing independent reconstruction and an integrated verifier that checks all rows, mesh ratios, provenance hashes, forbidden Lean escapes, and Lean R247 compilation."
+      ],
+      "next_action": "Use this finite equilibrium-interface diagnostic while deriving a genuine volume/source/cutoff-uniform direct-D/delta-D history estimate on a common core; preserve the common-alpha and Hamiltonian-to-OS/KMS firewalls until those estimates and exhaustion maps are proved.",
+      "no_overclaim": "This package proves only finite matrix identities and diagnostics for the registered d=3 path4/path6 fixture. It does not prove a thermodynamic-limit dynamics, common alpha, OS/KMS identification, a mass gap, continuum removal, C6, Sector A, Pre-A or a Clay result.",
+      "prior_exploration_id": "EXP-001169",
+      "provenance": "contemporaneous",
+      "qft_interface": {
+        "closed": "At each tested finite path4/path6 member, exact-H Gibbs stationarity and the finite KMS boundary are reproduced, and the split approximants' corresponding defects decrease under the two-point mesh refinement in both orders and signs.",
+        "open": "A volume-, source-, cutoff- and beta-uniform analytic Trotter rate, direct D/delta-D Cauchy estimate, common unbounded core, exhaustion independence, one beta-independent alpha, Hamiltonian-to-OS/KMS quotient, GNS gap, continuum and physical reference remain open.",
+        "tect_boundary": "Auxiliary C6/Q3 finite evidence only; no heat_root_incidence, canonical A1/R-192 production owner, physical-empty reference, Sector-A closure or Pre-A closure is supplied."
+      },
+      "question": "For the actual finite-Q3 onsite-plus-all-bond Lie--Trotter products, does the finite Gibbs stationarity defect and the analytic KMS boundary defect decrease under mesh refinement for both term orders, time signs, beta values and the path4/path6 exhaustion pair?",
+      "recorded_at": "2026-08-29T03:00:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001065",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001161",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001169",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-08-26",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Finite Q3 split-step Gibbs stationarity and KMS boundary residual",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",

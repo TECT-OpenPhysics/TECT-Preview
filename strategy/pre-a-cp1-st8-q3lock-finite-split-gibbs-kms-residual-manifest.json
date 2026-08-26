@@ -1,0 +1,103 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-FINITE-SPLIT-GIBBS-KMS-RESIDUAL-v0",
+  "title": "Finite Q3 split-step Gibbs stationarity and KMS boundary residual",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001170",
+  "claim_bearing": false,
+  "parent_explorations": ["EXP-001065", "EXP-001161", "EXP-001169"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "question": "For the actual finite-Q3 onsite-plus-all-bond Lie--Trotter products, does the finite Gibbs stationarity defect and the analytic KMS boundary defect decrease under mesh refinement for both term orders, time signs, beta values and the path4/path6 exhaustion pair?",
+  "finite_fixture": {
+    "graphs": {
+      "path4": {"vertices": 4, "edges": [[0, 1], [1, 2], [2, 3]]},
+      "path6": {"vertices": 6, "edges": [[0, 1], [1, 2], [2, 3], [3, 4], [4, 5]]}
+    },
+    "source_site": 1,
+    "oscillator_dimension": 3,
+    "beta_values": [0.25, 0.5],
+    "horizon": 0.1,
+    "delta_values": [0.1, 0.05],
+    "time_signs": [-1, 1],
+    "character_amplitude": 0.25,
+    "hbar": 1.0,
+    "exact_kms_tolerance": 1e-9,
+    "finite_tolerance": 1e-8,
+    "agreement_tolerance": 1e-7,
+    "kms_witness_floor": 1e-8,
+    "stationarity_witness_floor": 1e-8,
+    "noncommutation_witness_floor": 1e-6
+  },
+  "model_parameters": {"chi": "1", "r": "-1", "g": "3/5", "c": "3/5", "lambda": "1/10"},
+  "model": {
+    "hamiltonian": "H=sum_x[p_x^2/(2 chi)+r q_x^2/2+g q_x^4/4]+sum_edges[c(q_x-q_y)^2/2+lambda(q_x-q_y)^2(q_x^2+q_y^2)/4]",
+    "real_split": "S_{delta,order}(t)=prod_k exp(-i delta H_k/hbar) in each registered order, repeated N=t/delta times",
+    "gibbs_state": "rho_beta=exp(-beta H)/Tr(exp(-beta H)) for the same finite H",
+    "stationarity_defect": "||S rho_beta S^* - rho_beta||_1",
+    "kms_boundary": "R=Tr(rho A alpha^S_t(B))-Tr(rho alpha^S_{t+i beta hbar}(B) A), with complex split inverse constructed in reverse factor order",
+    "exact_control": "The exact H orbit has stationarity defect and KMS residual zero up to floating-point tolerance."
+  },
+  "scope": {
+    "finite_exact_gibbs_control_closed": true,
+    "finite_split_stationarity_rows_closed": true,
+    "finite_split_kms_residual_rows_closed": true,
+    "mesh_decrease_diagnostic_closed": true,
+    "path_exhaustion_diagnostic_closed": true,
+    "volume_uniform_direct_d_cauchy_closed": false,
+    "beta_uniform_direct_d_cauchy_closed": false,
+    "modular_domain_transfer_closed": false,
+    "product_core_density_closed": false,
+    "exhaustion_independence_closed": false,
+    "group_law_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "adversarial_review": [
+    {"axis": "KMS sign and units", "check": "With alpha_t(X)=exp(-iHt/hbar) X exp(iHt/hbar), the finite KMS boundary is evaluated at t+i beta hbar; the manifest hbar=1 convention is explicit and the exact control is checked.", "disposition": "UPHELD"},
+    {"axis": "complex split inverse", "check": "The inverse of the complex product is built from reversed factor order and -z; it is not replaced by a Hermitian adjoint outside the real axis.", "disposition": "UPHELD"},
+    {"axis": "thermal state", "check": "Every row uses the Gibbs state of the same exact H that defines the reference orbit; the split product is not falsely treated as its generator.", "disposition": "UPHELD"},
+    {"axis": "cutoff degeneracy", "check": "Only oscillator dimension 3 is admitted; a dimension-2 control that makes the registered terms commute is excluded from the result.", "disposition": "UPHELD"},
+    {"axis": "mesh trend", "check": "Coarse/fine residuals are reported and checked as a finite diagnostic; a two-point decrease is not promoted to a uniform Trotter rate.", "disposition": "UPHELD-OPEN"},
+    {"axis": "shape and order", "check": "Both path4/path6, both registered term orders and both real-time signs are retained; path6 is a finite structured exhaustion member only.", "disposition": "UPHELD-OPEN"},
+    {"axis": "independence", "check": "The independent lane reconstructs the oscillator, Hamiltonian, Gibbs state, real/complex products and trace residuals without importing the primary module.", "disposition": "UPHELD"},
+    {"axis": "Lean boundary", "check": "Lean R247 checks the exact finite Gibbs normalization/commutation fixture; Python carries the noncommuting 3-level matrices and KMS residual.", "disposition": "UPHELD"},
+    {"axis": "QFT promotion", "check": "No volume/source/cutoff-uniform common core, all-shape Cauchy theorem, common alpha, OS/KMS identification, gap, continuum, C6, Sector A or Pre-A follows.", "disposition": "UPHELD-OPEN"}
+  ],
+  "files": {
+    "primary": "codes/foundations/pre_a_cp1_st8_q3lock_finite_split_gibbs_kms_residual.py",
+    "independent": "codes/foundations/pre_a_cp1_st8_q3lock_finite_split_gibbs_kms_residual_independent.py",
+    "integrated": "codes/foundations/pre_a_cp1_st8_q3lock_finite_split_gibbs_kms_residual_verify.py",
+    "lean": "verification/lean/Tect/R247.lean",
+    "primary_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-primary-pre-a-cp1-st8-q3lock-finite-split-gibbs-kms-residual/primary.json",
+    "independent_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-independent-pre-a-cp1-st8-q3lock-finite-split-gibbs-kms-residual/independent.json",
+    "integrated_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-integrated-pre-a-cp1-st8-q3lock-finite-split-gibbs-kms-residual/integrated.json"
+  },
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R247.lean",
+    "command": "lake env lean Tect/R247.lean",
+    "theorem_markers": ["boltzmann_normalization", "diagonal_gibbs_commutation", "conditional_transfer_scope"],
+    "role": "R247 checks the exact rational finite Gibbs normalization/commutation and the conditional-transfer scope; Python checks the actual 3-level Q3 split and KMS matrices."
+  },
+  "qft_interface": {
+    "closed": "For each finite path4/path6 member, exact-H Gibbs control is KMS-stationary, while the noncommuting split products have explicitly measured stationarity and analytic KMS boundary residuals that decrease on the declared two-point mesh in both orders and signs.",
+    "open": "The finite trend does not supply a volume-, source-, cutoff- or beta-uniform rate, a common unbounded core, direct D/delta-D Cauchy, exhaustion independence, one common alpha, or a Hamiltonian-to-OS/KMS quotient.",
+    "tect_boundary": "Auxiliary C6/Q3 finite evidence only; no heat_root_incidence, canonical A1/R-192 production owner, physical-empty reference, Sector-A closure or Pre-A closure is supplied."
+  },
+  "next_action": "Use the measured KMS/stationarity residual as a finite compatibility check while attacking the missing uniform direct-D/delta-D history estimate and common-core exhaustion theorem; do not promote the two-point mesh trend.",
+  "boundary": "T0 claim-nonbearing finite d=3 Q3 KMS diagnostic. It is not a thermodynamic-limit KMS theorem, a common-alpha construction, a mass-gap proof, or a QFT/Clay result.",
+  "no_overclaim": "A finite split product approaching the exact Gibbs KMS orbit on path4/path6 does not identify the two OS phases with one thermodynamic Q3 dynamics and does not close any downstream physical gate."
+}
