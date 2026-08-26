@@ -1,0 +1,191 @@
+{
+  "adversarial_review": [
+    {
+      "axis": "union-level state separation",
+      "check": "Different local Gibbs matrices are kept as separate union-level records; no cross-union sum is interpreted as a single state seminorm.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "source and boundary coverage",
+      "check": "All registered source supports are retained, and every selected union is labelled by the source supports it touches; no unlisted translation is claimed.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "fixed-energy meaning",
+      "check": "E is fixed independently of oscillator dimension and volume, with rank and mass recorded for each union.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "finite versus asymptotic",
+      "check": "Tail spreads use only d={5,6,8}; no spatial or cutoff limit is asserted.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "signed versus absolute",
+      "check": "Signed and absolute pair aggregates remain separate for every union and window.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "reverse order",
+      "check": "Forward and reversed term orders are rebuilt and compared at every selected union.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "weight orientation",
+      "check": "All four weighted legs use the projected Gibbs square root separately; no commutation through the operator is assumed.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "independence",
+      "check": "The independent lane reconstructs oscillator, local terms, spectral projectors and union rows without importing the primary module.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "QFT promotion",
+      "check": "Spatial finite-window behavior is only a topology diagnostic; global KMS transfer, common core, thermodynamic history, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector A and Pre-A remain open.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "Lean scope",
+      "check": "R360 checks exact finite grid/count arithmetic and scope only; matrix spectra and QFT limits remain Python/open analysis.",
+      "disposition": "UPHELD"
+    }
+  ],
+  "audit_fixture": {
+    "commutator_floor": 1e-12,
+    "energy_windows": [
+      0.5,
+      2.0,
+      4.0
+    ],
+    "finite_only": true,
+    "localization_tolerance": 1e-08,
+    "max_union_size": 3,
+    "orientation_tolerance": 1e-08,
+    "positivity_tolerance": 1e-08,
+    "tail_cutoff_start": 5,
+    "tail_stability_ratio_threshold": 1.5,
+    "weight_exponent": "1/2"
+  },
+  "authority_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-low-energy-spectral-window-audit-manifest.json#next_action",
+    "strategy/pre-a-cp1-st8-q3lock-high-cutoff-signed-cancellation-audit-manifest.json#next_action",
+    "claims/GATES.md#pa-cp1-st8-q3lock-local-strict-all-exhaustion-two-orientation-history-common-alpha"
+  ],
+  "boundary": "T0 claim-nonbearing finite spatial/source spectral-window stress only. It is not a global state theorem, cutoff-removal theorem or QFT/Clay result.",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-SPATIAL-SOURCE-SPECTRAL-WINDOW-STRESS-v0",
+  "claim_bearing": false,
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "exploration_id": "EXP-001201",
+  "lean_crosscheck": {
+    "command": "lake env lean Tect/R360.lean",
+    "path": "verification/lean/Tect/R360.lean",
+    "role": "R360 checks exact finite spatial/source/window counts and finite-only scope; local spectral projectors, norms and QFT limits remain Python/open analysis.",
+    "theorem_markers": [
+      "volume_count_fixture",
+      "cutoff_count_fixture",
+      "beta_count_fixture",
+      "window_count_fixture",
+      "source_support_count_fixture",
+      "scope_fixture"
+    ]
+  },
+  "named_proxy": {
+    "aggregation": "union-level rows are never normalized or summed across different U; tail spread is evaluated per (volume,beta,E,U) key",
+    "coefficient": "signed and absolute window seminorms, conditional normalization, Gibbs mass/rank and source-touching labels are reported per union",
+    "core": "finite oscillator matrix proxy on each source-touching union U with |U|<=3",
+    "state": "rho_U=exp(-beta H_U)/Tr(exp(-beta H_U)) for the induced local Hamiltonian on each union separately",
+    "window": "P_E is the spectral projector of H_U-min(spec H_U) onto energies <= E, with E fixed independently of oscillator dimension and volume"
+  },
+  "next_action": "Use the union-level spatial stress to choose the analytic interface: if any source/volume context has tail spread beyond the registered threshold, retain that exact route-local boundary; otherwise prove a uniform Gibbs-tail and common-core transfer before any common-alpha promotion.",
+  "no_overclaim": "Finite union-level stabilization or instability does not prove or disprove a global KMS state, an unbounded common core, a thermodynamic QFT dynamics, a mass gap, continuum, C6, Sector A, Pre-A or a Clay result.",
+  "prior_exploration_id": "EXP-001200",
+  "qft_interface": {
+    "closed": "A union-level finite spatial/source spectral-window table that tests fixed-energy Gibbs contributions separately across volume, source position and boundary-touching contexts.",
+    "open": "A source/volume-uniform global KMS-compatible window decomposition, cutoff removal, common core, actual Trotter history, exhaustion, common alpha, OS/KMS/GNS identification, gap, continuum, C6, Sector A and Pre-A remain open.",
+    "tect_boundary": "Auxiliary C6/Q3 evidence only; no heat_root_incidence, canonical A1/R-192 production owner, physical-empty reference or Sector-A closure is supplied."
+  },
+  "question": "Does the fixed-energy spectral-window stabilization survive spatial volume, source translation and boundary-touching local unions on the finite Q3 graphs?",
+  "schema": "tect/pre-a-route-split/1.0",
+  "scope": {
+    "actual_q3_thermodynamic_history_closed": false,
+    "actual_q3_trotter_defect_closed": false,
+    "c6_closed": false,
+    "candidate_source_volume_uniform_bound_closed": false,
+    "common_alpha_closed": false,
+    "common_core_operator_embedding_closed": false,
+    "continuum_closed": false,
+    "delta_d_cauchy_closed": false,
+    "direct_d_cauchy_closed": false,
+    "exhaustion_independence_closed": false,
+    "finite_reverse_order_antisymmetry_closed": true,
+    "finite_spatial_source_rows_closed": true,
+    "finite_spatial_tail_spread_diagnostic_closed": true,
+    "finite_union_level_window_rows_closed": true,
+    "finite_window_mass_rank_closed": true,
+    "global_gibbs_state_transfer_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "no_new_negative_result": true,
+    "no_pdf": true,
+    "no_tier_change": true,
+    "pre_a_closed": false,
+    "sector_a_closed": false
+  },
+  "source_fixture": {
+    "beta_values": [
+      0.5,
+      2.0
+    ],
+    "cutoff_values": [
+      3,
+      4,
+      5,
+      6,
+      8
+    ],
+    "manifest": "strategy/pre-a-cp1-st8-q3lock-low-energy-spectral-window-audit-manifest.json",
+    "source_supports_by_volume": {
+      "2": [
+        [
+          0,
+          1
+        ]
+      ],
+      "4": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "6": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ]
+      ]
+    },
+    "volume_values": [
+      2,
+      4,
+      6
+    ]
+  },
+  "task_id": "T-054",
+  "tier": "T0",
+  "title": "Finite Q3 spatial/source low-energy spectral-window stress"
+}

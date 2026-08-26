@@ -1,0 +1,126 @@
+{
+  "adversarial_review": [
+    {
+      "axis": "union-level state separation",
+      "check": "Local Gibbs matrices are kept separate for each union U; no cross-union aggregation is treated as one state.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "source and boundary coverage",
+      "check": "All registered finite source supports are retained and every selected union has source-touching labels; unlisted translations are not claimed.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "fixed-energy meaning",
+      "check": "E is a manifest input independent of cutoff and volume, with rank and Gibbs mass recorded for each union.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "finite versus asymptotic",
+      "check": "Tail spreads use only d={5,6,8} on three finite volumes; no cutoff, spatial or thermodynamic limit is inferred.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "signed versus absolute",
+      "check": "Signed and absolute aggregates remain separate for every union and window.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "reverse order",
+      "check": "Both lanes rebuild the reversed term order and compare every selected union at every row.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "weight orientation",
+      "check": "Each weighted leg inserts the projected Gibbs square root separately; no commutation through the operator is assumed.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "independence",
+      "check": "The independent lane reconstructs oscillator, local terms, projectors and union rows without importing the primary audit.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "QFT promotion",
+      "check": "The 93 unstable contexts are retained as a route-local boundary; global Gibbs/KMS transfer, common core, thermodynamic history, exhaustion, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector A and Pre-A remain open.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "Lean scope",
+      "check": "R360 checks exact finite grid/count arithmetic and the finite-only scope firewall; matrix spectra and QFT limits remain Python/open analysis.",
+      "disposition": "UPHELD"
+    }
+  ],
+  "boundary": "T0 claim-nonbearing finite spatial/source spectral-window stress. It is not a global KMS state theorem, cutoff-removal theorem, common-core construction, thermodynamic dynamics, OS/KMS/GNS result, mass-gap proof, continuum result, C6, Sector A, Pre-A or Clay closure.",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "decision_reason": "The finite fixed-energy window can be computed separately on source-touching unions, but it does not remain below the registered tail-spread threshold uniformly across the tested spatial/source contexts. Because 93 of 156 union-level summaries are unstable, the current proxy cannot be promoted to a source- or volume-uniform Gibbs-tail/common-core estimate. This is a route-local finite boundary, not an untruncated divergence or a global QFT no-go.",
+  "evidence_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-spatial-source-spectral-window-stress-manifest.json#named_proxy",
+    "strategy/pre-a-cp1-st8-q3lock-spatial-source-spectral-window-stress-certificate-260827.md#Result",
+    "codes/foundations/pre_a_cp1_st8_q3lock_spatial_source_spectral_window_stress.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_spatial_source_spectral_window_stress_independent.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_spatial_source_spectral_window_stress_verify.py#run",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-27-primary-pre_a_cp1_st8_q3lock_spatial_source_spectral_window_stress/primary.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-27-independent-pre_a_cp1_st8_q3lock_spatial_source_spectral_window_stress/independent.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-27-integrated-pre_a_cp1_st8_q3lock_spatial_source_spectral_window_stress/integrated.json#lean",
+    "verification/lean/Tect/R360.lean#scope_fixture",
+    "verification/lean/registry.json#R360"
+  ],
+  "finding": "Primary and independent lanes each pass 322/322 assertions over 30 finite volume/cutoff/beta rows and 156 union-level energy-window summaries. The integrated verifier passes 12,595/12,595 assertions and Lean R360 compiles with the pinned toolchain. Source supports are {0,1} for V=2, {0,1} and {1,2} for V=4, and {0,1}, {1,2}, and {3,4} for V=6; all selected unions have size at most 3 and explicit source-touching labels. With tail d>=5 and threshold 1.5, 63 summaries are stable and 93 are unstable. The maximum signed-weighted tail spread ratio is 1.9734189022408282 and the maximum conditional ratio is 2.1596678443595425. Window masses range from 0.10199579573556163 to 1.0 and ranks from 2 to 46. The finite rows and reverse-order checks close, but a source/volume-uniform bound is not established.",
+  "formal_integration": {
+    "events": [],
+    "lean": "R360 PASS",
+    "negatives": [],
+    "no_new_negative": true,
+    "no_new_result": true,
+    "no_pdf": true,
+    "no_tier_change": true,
+    "results": []
+  },
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-CP1-ST8-Q3LOCK-ENERGY-WEIGHTED-COMMUTATOR-GEVREY-LR-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "id": "EXP-001201",
+  "method": [
+    "Use Q3 graph volumes V in {2,4,6}, oscillator cutoffs d in {3,4,5,6,8}, beta in {0.5,2.0}, and fixed local-energy thresholds E in {0.5,2.0,4.0}.",
+    "Rebuild forward and reversed overlapping term groups, retain only source-touching unions U with |U|<=3, and keep each local Gibbs matrix separate for each U.",
+    "Diagonalize each induced local Hamiltonian, project the Gibbs square root to shifted energies <=E, and record signed and absolute weighted contributions, ranks, masses and tail masses for every union.",
+    "Evaluate tail spreads separately for each (V,beta,E,U) key on d>=5, reconstruct the same table in an independent implementation, compare all row/group/window scalars, and compile the exact finite fixture/scope propositions in Lean R360."
+  ],
+  "next_action": "Do not promote common alpha from this proxy. Replace the unstable finite table with an analytic source/volume-uniform spectral decomposition and proved Gibbs-tail estimate on a cutoff-independent common core, or register a formal obstruction identifying the missing hypotheses before returning to the QFT OS/KMS/GNS bridge.",
+  "no_overclaim": "Finite union-level stability or instability neither proves nor disproves a global KMS state, common core, cutoff removal, thermodynamic QFT dynamics, mass gap, continuum, C6, Sector A, Pre-A or a Clay result.",
+  "provenance": "contemporaneous",
+  "qft_interface": {
+    "closed": "A finite, source-labelled union-level spatial/source spectral-window table with reverse-order antisymmetry, Gibbs mass/rank and two independent implementations.",
+    "open": "A source/volume-uniform global KMS-compatible window decomposition, Gibbs complement control, cutoff-independent common core, actual Trotter defect, thermodynamic history, exhaustion, common alpha, OS/KMS/GNS identification, gap, continuum, C6, Sector A and Pre-A remain open.",
+    "tect_boundary": "Auxiliary C6/Q3 evidence only; no heat_root_incidence, canonical A1/R-192 production owner, physical-empty reference or Sector-A closure is supplied."
+  },
+  "question": "Does the fixed-energy spectral-window diagnostic remain tail-stable when Q3 spatial volume, source support and boundary-touching local unions are varied?",
+  "recorded_at": "2026-08-29T08:10:00Z",
+  "recorded_by": "Codex",
+  "related": [
+    {
+      "id": "EXP-001200",
+      "relation": "continues"
+    },
+    {
+      "id": "EXP-001199",
+      "relation": "continues"
+    },
+    {
+      "id": "EXP-001198",
+      "relation": "continues"
+    }
+  ],
+  "reviewed_on": "2026-08-27",
+  "schema": "tect/proof-exploration/1.0",
+  "task_id": "T-054",
+  "title": "Finite Q3 spatial/source low-energy spectral-window stress",
+  "verdict": "advanced"
+}
