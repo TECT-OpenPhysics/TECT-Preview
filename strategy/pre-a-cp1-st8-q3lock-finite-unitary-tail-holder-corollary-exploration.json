@@ -1,0 +1,91 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001188",
+  "title": "Finite Q3 unitary-history tail Holder corollary",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-CP1-ST8-Q3LOCK-ALL-EXHAUSTION-MIXTURE-L2-LOCALITY-AND-BETA-INDEPENDENT-CSTAR-DYNAMICS",
+    "PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE"
+  ],
+  "prior_exploration_id": "EXP-001187",
+  "related": [
+    {"id": "EXP-001187", "relation": "continues"},
+    {"id": "EXP-001186", "relation": "continues"}
+  ],
+  "provenance": "contemporaneous",
+  "recorded_at": "2026-08-29T05:02:00Z",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-08-26",
+  "question": "For unitary Q3 character histories, can the inverse-free sandwiched Holder envelope remove all history-side L4 factors and leave only one cutoff-tail fourth-moment factor?",
+  "method": [
+    "Use the finite Gibbs density rho and S=rho^(1/4) for the declared Q3 volumes 2, 4, and 6 and beta values 0.125, 0.25, 0.5, 1, and 2.",
+    "For both cutoff orientations, all interpolation values, both positive times, and each cutoff radius, evolve the unitary configuration character with the finite perturbed Hamiltonian and form W as the self-adjoint cutoff tail.",
+    "Check the unitary identities and the exact normalized-state relation ||S||_4=1. Apply finite Schatten Holder to S[W,A_t]S=(SW)(A_tS)-(SA_t)(WS), so the history legs are at most one; check the stronger reduced bound N2_sym([W,A_t])<=2||SW||_4 and the adjoint-history version.",
+    "Check the self-adjoint tail left/right fourth-leg equality, measure source and disjoint-tail commutators, reconstruct all rows in a non-importing independent lane, and compile Lean R347 for the scalar corollary."
+  ],
+  "finding": "Primary 851/851 and independent 851/851 pass. The integrated verifier passes 14/14 with Lean R347 PASS. All 360 finite history rows and both adjoint orientations satisfy the reduced inverse-free Holder bound. The largest lhs/(2 tail-leg) ratio is 0.04193148910394488, the largest tail fourth-leg factor is 3.9249685856134424, the largest reduced envelope is 7.849937171226885, and the largest sandwich lhs is 0.11986154052772928. History-side L4 factors stay at 1 within numerical tolerance for every normalized unitary history. The volume maxima of the tail leg are 1.4937084146969866 at V=2, 3.9249685856134424 at V=4, and 1.6042066149714334 at V=6; beta maxima decrease from 3.9249685856134424 at beta=0.125 to 1.2007925110524327 at beta=2. Source and disjoint-tail commutators remain below 7.82258885373977e-15 and 3.2040556572188632e-15.",
+  "verdict": "advanced",
+  "decision_reason": "The unitary specialization is a genuine reduction of the prior four-leg Holder expression: normalized unitarity removes the history-dependent L4 factors exactly, and self-adjointness removes the two distinct tail-leg values up to the tested finite trace identity. Thus the direct Duhamel route has one explicit remaining state-weighted tail quantity. Its finite beta/volume dependence, finite oscillator truncation, and lack of cutoff removal mean that no common-core uniform estimate is closed and no no-go is inferred.",
+  "closed": [
+    "finite normalized-unitary history-side L4 bound",
+    "finite self-adjoint-tail left/right Schatten-4 symmetry",
+    "finite inverse-free reduced Holder envelope for both orientations and adjoints",
+    "finite actual-Q3 history and support rows",
+    "independent numerical reproduction",
+    "Lean R347 scalar cross-check"
+  ],
+  "open": [
+    "source-, volume-, cutoff- and beta-uniform local tail fourth-moment estimate on a named unbounded Q3 common core",
+    "continuity of the tail four-point Euclidean form under oscillator-cutoff and spatial-exhaustion limits",
+    "modular-domain transfer and direct D,delta-D Cauchy",
+    "all-shape exhaustion, product/core density and common alpha",
+    "Hamiltonian-to-OS/KMS/GNS identification and a phasewise GNS gap",
+    "continuum, C6, Sector A and Pre-A"
+  ],
+  "adversarial_review": [
+    {"axis": "unitarity", "check": "Every history and adjoint is checked against both U*U=I and UU*=I before the L4 reduction is used.", "disposition": "UPHELD"},
+    {"axis": "state normalization", "check": "The Gibbs probabilities are normalized and ||rho^(1/4)||_4 is checked against one; no partition-function factor is omitted.", "disposition": "UPHELD"},
+    {"axis": "tail adjoint", "check": "The tail is explicitly symmetrized and the left/right fourth-leg equality is checked without commuting it through rho.", "disposition": "UPHELD"},
+    {"axis": "noncommutative order", "check": "The factors remain SW, A_tS, SA_t, and WS in the Holder products; only unitary norm invariance is used.", "disposition": "UPHELD"},
+    {"axis": "inverse powers", "check": "Only a positive quarter root is formed, so the reduced corollary has no finite Gibbs inverse or spectral-floor hypothesis.", "disposition": "UPHELD"},
+    {"axis": "finite conditioning", "check": "Numerical root and unitarity residuals are reported as finite diagnostics and are not interpreted as infinite-dimensional domain control.", "disposition": "UPHELD-OPEN"},
+    {"axis": "uniformity", "check": "The tail leg varies across beta and volume; the finite maxima are not promoted to a uniform local moment theorem.", "disposition": "UPHELD-OPEN"},
+    {"axis": "truncated CCR", "check": "The oscillator dimensions are the declared finite fixtures and no exact CCR or common unbounded core is claimed.", "disposition": "UPHELD-OPEN"},
+    {"axis": "independence", "check": "The independent lane reconstructs all model and singular-value calculations without importing the primary lane.", "disposition": "UPHELD"},
+    {"axis": "Lean boundary", "check": "R347 checks scalar nonnegative assembly only; matrix Holder, Gibbs spectral calculus and limits remain outside Lean.", "disposition": "UPHELD-OPEN"},
+    {"axis": "QFT promotion", "check": "The result does not close the local tail moment, direct Cauchy, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector A or Pre-A gates.", "disposition": "UPHELD-OPEN"}
+  ],
+  "formal_integration": {
+    "lean": "R347 PASS",
+    "events": [],
+    "results": [],
+    "negatives": [],
+    "no_new_event": true,
+    "no_new_result": true,
+    "no_new_negative": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "evidence_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-finite-unitary-tail-holder-corollary-manifest.json#mathematical_interface",
+    "codes/foundations/pre_a_cp1_st8_q3lock_finite_unitary_tail_holder_corollary.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_finite_unitary_tail_holder_corollary_independent.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_finite_unitary_tail_holder_corollary_verify.py#run",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-primary-pre-a-cp1-st8-q3lock-finite-unitary-tail-holder-corollary/primary.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-independent-pre-a-cp1-st8-q3lock-finite-unitary-tail-holder-corollary/independent.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-integrated-pre-a-cp1-st8-q3lock-finite-unitary-tail-holder-corollary/integrated.json#lean",
+    "verification/lean/Tect/R347.lean#unitary_holder_corollary",
+    "verification/lean/registry.json#R347"
+  ],
+  "qft_interface": {
+    "closed": "For normalized unitary finite Q3 histories, the Holder integrand reduces to the single self-adjoint cutoff-tail fourth-leg factor, uniformly in history time and interpolation at fixed finite state.",
+    "open": "The tail fourth-leg factor still needs a local source/volume/cutoff/beta-uniform common-core estimate and cutoff/exhaustion continuity before direct Duhamel, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector A or Pre-A promotion.",
+    "tect_boundary": "Auxiliary C6/Q3 finite evidence only; no heat_root_incidence, canonical A1/R-192 production owner or physical-empty comparison is supplied."
+  },
+  "next_action": "Express the tail fourth-leg factor as a two-slice Euclidean local correlation and derive a coercive local moment bound uniform in spatial volume and oscillator cutoff on the declared Q3 common core; test the first cutoff-growth obstruction if the bound cannot be obtained.",
+  "boundary": "T0 claim-nonbearing finite Q3 unitary-history Holder corollary. It is not a thermodynamic common-Hilbert theorem, a common-alpha construction, a mass-gap proof, a continuum result, or a QFT/Clay closure.",
+  "no_overclaim": "This record promotes only the finite normalized-unitary reduction and tail-leg identity. It does not prove tail moment uniformity, unbounded-domain transfer, direct Cauchy convergence, exhaustion independence, common alpha, Hamiltonian-OS identification, a GNS gap, continuum, C6, Sector A or Pre-A."
+}
