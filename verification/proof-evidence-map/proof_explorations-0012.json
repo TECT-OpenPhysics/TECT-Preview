@@ -6744,6 +6744,129 @@
       "task_id": "T-054",
       "title": "Finite Q3 split-history Volterra carrier with both cubic-multiplier orientations",
       "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "axis": "generator identity",
+          "check": "The exact comparison exponential uses the same finite full Hamiltonian reconstructed from every onsite and bond term; no hidden parameter substitution is made.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "order and sign",
+          "check": "Both split orders and both time signs are run, and each is compared with the corresponding exact sign of the same full Hamiltonian.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "history orientation",
+          "check": "Right and left noncommuting cubic products and their difference are propagated separately under split and exact increments; no commutation is assumed.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "convergence interpretation",
+          "check": "The monotone coarse-to-fine test is a finite diagnostic with a declared tolerance; it is not an analytic rate or an infinite sequence proof.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "state weighting",
+          "check": "Gibbs four-leg errors use the normalized full-Hamiltonian state at each declared beta and remain diagnostics, not beta-uniform bounds.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "QFT promotion",
+          "check": "Finite split-to-exact agreement does not prove a common core, exhaustion-independent dynamics, OS/KMS/GNS reconstruction, a gap, continuum, C6, Sector A or Pre-A.",
+          "disposition": "UPHELD-OPEN"
+        }
+      ],
+      "boundary": "Finite oscillator-dimension-three matrices on volumes 2, 4 and 6, source pair [0,1], one probe per volume, beta values 0.5, 1 and 2, finite horizon 1/3 and step counts 3, 6 and 12 only; no common operator domain, analytic Trotter estimate, thermodynamic Q3 history, direct D/delta-D Cauchy, source/volume/beta uniformity, exhaustion independence, common alpha, OS/KMS/GNS identification, gap, continuum, C6, Sector A or Pre-A conclusion.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "The finite split-history carrier is now explicitly connected to the exact finite-Q3 Hamiltonian flow for both product orders and both time orientations, including the two noncommuting multiplier histories. This removes an unverified finite-model substitution from the QFT route. The observed coarse-to-fine decrease is not an analytic rate and does not establish a volume-, cutoff- or beta-uniform thermodynamic history.",
+      "evidence_refs": [
+        "strategy/pre-a-cp1-st8-q3lock-cubic-multiplier-finite-trotter-convergence-manifest.json#trotter_fixture",
+        "codes/foundations/pre_a_cp1_st8_q3lock_cubic_multiplier_finite_trotter_convergence.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_cubic_multiplier_finite_trotter_convergence_independent.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_cubic_multiplier_finite_trotter_convergence_verify.py#run",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-primary-pre_a_cp1_st8_q3lock_cubic_multiplier_finite_trotter_convergence/primary.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-independent-pre_a_cp1_st8_q3lock_cubic_multiplier_finite_trotter_convergence/independent.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-integrated-pre_a_cp1_st8_q3lock_cubic_multiplier_finite_trotter_convergence/integrated.json#lean",
+        "verification/lean/Tect/R331.lean#step_refinement_fixture",
+        "verification/lean/registry.json#R331"
+      ],
+      "finding": "Primary 221/221 and independent 221/221 assertions pass over 36 finite rows; the integrated verifier passes 15/15 and Lean R331 compiles. The maximum primary final-unitary errors decrease from 0.11789615563131273 at N=3 to 0.058756755061206756 at N=6 and 0.029354754101819213 at N=12. Maximum right/left/commutator history errors decrease from 0.011260464017179114 to 0.0068627271800160905 to 0.0037347781670976302, while maximum Gibbs history error decreases from 0.019690880828081722 to 0.012001607313485603 to 0.00653143372234928. Primary and independent derived maxima agree within 2e-16, and all declared split/exact identities and positive-energy checks pass.",
+      "formal_integration": {
+        "events": [],
+        "lean": "R331 PASS; metadata regenerated",
+        "negatives": [],
+        "no_new_event": true,
+        "no_new_negative": true,
+        "no_new_result": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "results": []
+      },
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": []
+      },
+      "gate_ids": [
+        "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+        "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+        "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001161",
+      "method": [
+        "Reuse the hash-pinned oscillator-dimension-three edge, square and 2x3 Q3 fixture from EXP-001160, with source pair [0,1], one probe site per volume, beta values 0.5, 1 and 2, and volumes 2, 4 and 6.",
+        "Reconstruct the full Hamiltonian as the sum of onsite and lexicographically ordered bond terms, form the exact full-Hamiltonian exponential at horizon 1/3, and compare it with both onsite-first and reverse-term products for N in {3,6,12} and time signs -1,+1.",
+        "Propagate the right and left cubic multiplier orientations and their difference under the split and exact discrete adjoint histories at the same step size; check unitary, identity, finiteness and Gibbs four-leg errors row by row, with the fine-grid error no larger than the coarser declared grids.",
+        "Rebuild oscillator embeddings, split terms, spectral factors and histories independently, and compile Lean R331 for exact rational horizon/refinement and orientation-difference bookkeeping."
+      ],
+      "next_action": "Replace the finite error trend with an analytic finite-volume Lie-Trotter rate on a specified common core, then combine it with a pairwise-union volume estimate for the two-orientation histories. If the constants grow with volume or the domain cannot be made common, record that exact route-local obstruction and keep common-alpha open.",
+      "no_overclaim": "This audit validates only a finite split-to-exact-Q3 bridge and finite history convergence trend. It neither proves a thermodynamic QFT dynamics nor establishes common alpha, OS/KMS/GNS, a mass gap, continuum, C6, Sector A or Pre-A.",
+      "open": [
+        "analytic finite-volume Lie-Trotter rate",
+        "common operator domain and product/core density",
+        "thermodynamic two-orientation history",
+        "source/volume/beta-uniform direct D and delta-D Cauchy",
+        "exhaustion independence and common alpha",
+        "Hamiltonian-to-OS/KMS/GNS identification",
+        "gap, continuum, C6, Sector A and Pre-A"
+      ],
+      "provenance": "contemporaneous",
+      "qft_interface": {
+        "closed": "The finite split-history carrier is tied to the exact finite-Q3 Hamiltonian by two-order, two-sign Lie-Trotter comparisons and matching two-orientation history checks.",
+        "open": "Analytic Trotter control, common domains, thermodynamic history, direct D/delta-D Cauchy, source/volume/beta uniformity, exhaustion, common alpha, OS/KMS/GNS, gap, continuum and Pre-A remain open.",
+        "tect_boundary": "Auxiliary C6 evidence only; no TECT production owner, heat_root_incidence, physical-empty reference or Sector-A closure is supplied."
+      },
+      "question": "For the declared finite Q3 Hamiltonians, do both onsite-plus-bond Lie-Trotter orders and both time signs converge to the same exact full-Hamiltonian unitary at a fixed horizon, and does the associated two-orientation Volterra history converge with them?",
+      "recorded_at": "2026-08-29T00:50:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001160",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001159",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001156",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001015",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-08-26",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Finite Q3 split-history to exact-Hamiltonian Lie-Trotter convergence carrier",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",

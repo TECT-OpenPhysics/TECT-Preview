@@ -1,0 +1,138 @@
+{
+  "assertion_count": 15,
+  "assertions": [
+    {
+      "actual": "['EXP-001161', 'T-054', False]",
+      "expected": "EXP-001161/T-054/false",
+      "name": "identity",
+      "pass": true
+    },
+    {
+      "actual": "[WindowsPath('E:/Dev/TECT/codes/foundations/pre_a_cp1_st8_q3lock_cubic_multiplier_finite_trotter_convergence.py'), WindowsPath('E:/Dev/TECT/codes/foundations/pre_a_cp1_st8_q3lock_cubic_multiplier_finite_trotter_convergence_independent.py'), WindowsPath('E:/Dev/TECT/verification/lean/Tect/R331.lean')]",
+      "expected": "present",
+      "name": "source files",
+      "pass": true
+    },
+    {
+      "actual": "['horizon_fixture', 'step_refinement_fixture', 'history_difference_fixture', 'scope_fixture']",
+      "expected": "present",
+      "name": "Lean markers",
+      "pass": true
+    },
+    {
+      "actual": "[]",
+      "expected": "none",
+      "name": "Lean forbidden",
+      "pass": true
+    },
+    {
+      "actual": "PRIMARY FINITE-TROTTER-CONVERGENCE PASS 221/221 rows=36\n",
+      "expected": "PASS",
+      "name": "primary child",
+      "pass": true
+    },
+    {
+      "actual": "INDEPENDENT FINITE-TROTTER-CONVERGENCE PASS 221/221 rows=36\n",
+      "expected": "PASS",
+      "name": "independent child",
+      "pass": true
+    },
+    {
+      "actual": "[36, 36]",
+      "expected": "36",
+      "name": "row count",
+      "pass": true
+    },
+    {
+      "actual": "[0.11789615563131273, 0.11789615563131273]",
+      "expected": "within 1e-07",
+      "name": "max_final_unitary_error agreement",
+      "pass": true
+    },
+    {
+      "actual": "[0.011260464017179114, 0.011260464017179162]",
+      "expected": "within 1e-07",
+      "name": "max_right_history_error agreement",
+      "pass": true
+    },
+    {
+      "actual": "[0.011260464017179105, 0.011260464017179159]",
+      "expected": "within 1e-07",
+      "name": "max_left_history_error agreement",
+      "pass": true
+    },
+    {
+      "actual": "[0.002072140562416924, 0.002072140562416935]",
+      "expected": "within 1e-07",
+      "name": "max_commutator_history_error agreement",
+      "pass": true
+    },
+    {
+      "actual": "[0.019690880828081722, 0.019690880828081788]",
+      "expected": "within 1e-07",
+      "name": "max_gibbs_history_error agreement",
+      "pass": true
+    },
+    {
+      "actual": "[{'actual_q3_thermodynamic_history_closed': False, 'analytic_trotter_rate_closed': False, 'common_alpha_closed': False, 'delta_d_cauchy_closed': False, 'direct_d_cauchy_closed': False, 'exhaustion_independence_closed': False, 'finite_full_unitary_decomposition_closed': True, 'finite_split_exact_q3_bridge_closed': True, 'finite_two_order_two_sign_trotter_convergence_closed': True, 'finite_two_orientation_history_convergence_closed': True, 'max_commutator_history_error': 0.002072140562416924, 'max_final_unitary_error': 0.11789615563131273, 'max_gibbs_history_error': 0.019690880828081722, 'max_left_history_error': 0.011260464017179105, 'max_right_history_error': 0.011260464017179114, 'parent_manifest_sha256': '538ce22392f6cd3ba1bc4f7e5682e4c225645f2f0ff2d2017274c7f2fc1d59ff', 'pre_a_closed': False, 'row_count': 36, 'source_manifest_sha256': '3ef2893c3d16edf0d558e21c26f7508ed5db03ea0bc77cac040123740d78ed17', 'source_volume_beta_uniformity_closed': False, 'step_counts': [3, 6, 12], 'volumes': [2, 4, 6]}, {'actual_q3_thermodynamic_history_closed': False, 'analytic_trotter_rate_closed': False, 'common_alpha_closed': False, 'delta_d_cauchy_closed': False, 'direct_d_cauchy_closed': False, 'exhaustion_independence_closed': False, 'finite_full_unitary_decomposition_closed': True, 'finite_split_exact_q3_bridge_closed': True, 'finite_two_order_two_sign_trotter_convergence_closed': True, 'finite_two_orientation_history_convergence_closed': True, 'max_commutator_history_error': 0.002072140562416935, 'max_final_unitary_error': 0.11789615563131273, 'max_gibbs_history_error': 0.019690880828081788, 'max_left_history_error': 0.011260464017179159, 'max_right_history_error': 0.011260464017179162, 'parent_manifest_sha256': '538ce22392f6cd3ba1bc4f7e5682e4c225645f2f0ff2d2017274c7f2fc1d59ff', 'pre_a_closed': False, 'row_count': 36, 'source_manifest_sha256': '3ef2893c3d16edf0d558e21c26f7508ed5db03ea0bc77cac040123740d78ed17', 'source_volume_beta_uniformity_closed': False, 'step_counts': [3, 6, 12], 'volumes': [2, 4, 6]}]",
+      "expected": "finite flags true",
+      "name": "finite flags",
+      "pass": true
+    },
+    {
+      "actual": "{'finite_full_unitary_decomposition_closed': True, 'finite_two_order_two_sign_trotter_convergence_closed': True, 'finite_two_orientation_history_convergence_closed': True, 'finite_split_exact_q3_bridge_closed': True, 'analytic_trotter_rate_closed': False, 'operator_domain_embedding_closed': False, 'actual_q3_thermodynamic_history_closed': False, 'direct_d_cauchy_closed': False, 'delta_d_cauchy_closed': False, 'source_volume_beta_uniformity_closed': False, 'exhaustion_independence_closed': False, 'common_alpha_closed': False, 'hamiltonian_os_identification_closed': False, 'kms_gns_gap_closed': False, 'continuum_closed': False, 'c6_closed': False, 'sector_a_closed': False, 'pre_a_closed': False, 'no_new_negative_result': True, 'no_tier_change': True, 'no_pdf': True}",
+      "expected": "downstream gates open",
+      "name": "QFT scope firewall",
+      "pass": true
+    },
+    {
+      "actual": "{'status': 'PASS', 'command': 'lake env lean Tect/R331.lean', 'returncode': 0, 'output': ''}",
+      "expected": "PASS",
+      "name": "Lean compile",
+      "pass": true
+    }
+  ],
+  "audit_id": "PA-CP1-ST8-Q3LOCK-CUBIC-MULTIPLIER-FINITE-TROTTER-CONVERGENCE",
+  "boundary": {
+    "actual_q3_thermodynamic_history_closed": false,
+    "analytic_trotter_rate_closed": false,
+    "c6_closed": false,
+    "common_alpha_closed": false,
+    "continuum_closed": false,
+    "delta_d_cauchy_closed": false,
+    "direct_d_cauchy_closed": false,
+    "exhaustion_independence_closed": false,
+    "finite_full_unitary_decomposition_closed": true,
+    "finite_split_exact_q3_bridge_closed": true,
+    "finite_two_order_two_sign_trotter_convergence_closed": true,
+    "finite_two_orientation_history_convergence_closed": true,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "no_new_negative_result": true,
+    "no_pdf": true,
+    "no_tier_change": true,
+    "operator_domain_embedding_closed": false,
+    "pre_a_closed": false,
+    "sector_a_closed": false,
+    "source_volume_beta_uniformity_closed": false
+  },
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "exploration_id": "EXP-001161",
+  "lean": {
+    "command": "lake env lean Tect/R331.lean",
+    "output": "",
+    "returncode": 0,
+    "status": "PASS"
+  },
+  "provenance": {
+    "independent_sha256": "cc9007cb7cc153c5fbb9f3cd72ee009b36980814948ba8352707b6ea6c7532e2",
+    "lean_sha256": "c53cdb288bfaca0faa470eff57562fc9f8f40264ca6707b918de5051082622b1",
+    "manifest_sha256": "60124e7f39f9eac2177208eb131f6ce5bd7d9c91aeaca77cccf4173481fbfae5",
+    "primary_sha256": "db446542be51b5fc0c512f6b88fd3d359246216c1a341528e6da609b75d2ea36"
+  },
+  "recorded_at": "2026-08-26T01:55:05.145555Z",
+  "run_kind": "integrated",
+  "schema": "tect/foundation-audit/1.0",
+  "task_id": "T-054",
+  "verdict": "PASS"
+}

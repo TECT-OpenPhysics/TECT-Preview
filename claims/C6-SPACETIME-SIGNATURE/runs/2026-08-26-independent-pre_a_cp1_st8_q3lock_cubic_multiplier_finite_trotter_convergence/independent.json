@@ -1,0 +1,1565 @@
+{
+  "assertion_count": 221,
+  "assertions": [
+    {
+      "actual": "['EXP-001161', 'T-054', False]",
+      "expected": "EXP-001161/T-054/false",
+      "group": "provenance",
+      "name": "identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "['EXP-001160', 'T-054']",
+      "expected": "EXP-001160/T-054",
+      "group": "provenance",
+      "name": "parent authority",
+      "status": "PASS"
+    },
+    {
+      "actual": "[[3, 6, 12], 0.3333333333333333]",
+      "expected": "3,6,12 and horizon 1/3",
+      "group": "fixture",
+      "name": "time grid",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'horizon': '1/3', 'step_counts': [3, 6, 12], 'orders': ['onsite_then_lexicographic_bonds', 'reverse_term_order'], 'time_signs': [-1, 1], 'right_orientation': 'f_x^(3/4) q_x^3 A_f^(-3/4)', 'left_orientation': 'f_x^(3/4) A_f^(-3/4) q_x^3', 'history': 'V_N(M)=delta sum_{k=0}^{N-1} Ad(U_delta^k)(M)', 'weight_ratio_per_edge': '1/16', 'multiplier_power': '3/4'}",
+      "expected": "two orders and two signs",
+      "group": "fixture",
+      "name": "order/sign grid",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'finite_full_unitary_decomposition_closed': True, 'finite_two_order_two_sign_trotter_convergence_closed': True, 'finite_two_orientation_history_convergence_closed': True, 'finite_split_exact_q3_bridge_closed': True, 'analytic_trotter_rate_closed': False, 'operator_domain_embedding_closed': False, 'actual_q3_thermodynamic_history_closed': False, 'direct_d_cauchy_closed': False, 'delta_d_cauchy_closed': False, 'source_volume_beta_uniformity_closed': False, 'exhaustion_independence_closed': False, 'common_alpha_closed': False, 'hamiltonian_os_identification_closed': False, 'kms_gns_gap_closed': False, 'continuum_closed': False, 'c6_closed': False, 'sector_a_closed': False, 'pre_a_closed': False, 'no_new_negative_result': True, 'no_tier_change': True, 'no_pdf': True}",
+      "expected": "finite bridge only",
+      "group": "scope",
+      "name": "scope firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": "<=1e-08",
+      "group": "decomposition",
+      "name": "V=2 full decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.9999999999999989",
+      "expected": ">=1.0",
+      "group": "energy",
+      "name": "V=2 pair=[0, 1] positive energy",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.43291523575391017",
+      "expected": ">1e-06",
+      "group": "orientation",
+      "name": "V=2 multiplier floor",
+      "status": "PASS"
+    },
+    {
+      "actual": "2.4853533275172278e-15",
+      "expected": "<=1e-08",
+      "group": "split",
+      "name": "V=2 onsite_then_lexicographic_bonds sign=-1 N=3 unitary",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.02797359426907873",
+      "expected": "finite",
+      "group": "Trotter",
+      "name": "V=2 onsite_then_lexicographic_bonds sign=-1 N=3 final finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.0552003561690838e-16, 1.0062076865352148e-16]",
+      "expected": "<=1e-07",
+      "group": "history",
+      "name": "V=2 onsite_then_lexicographic_bonds sign=-1 N=3 history identities",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.0056551698573803775, 0.005655169857380408, 0.0013384212174920777]",
+      "expected": "finite",
+      "group": "history",
+      "name": "V=2 onsite_then_lexicographic_bonds sign=-1 N=3 history finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.005614945531355342, 0.005614945531355362, 0.001426719246212259, 0.0060761264746860945, 0.006076126474686117, 0.0015138358978769066, 0.006739621171483413, 0.006739621171483438, 0.00168303397225207]",
+      "expected": "finite",
+      "group": "Gibbs",
+      "name": "V=2 onsite_then_lexicographic_bonds sign=-1 N=3 Gibbs history finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.953807906047262e-15",
+      "expected": "<=1e-08",
+      "group": "split",
+      "name": "V=2 onsite_then_lexicographic_bonds sign=-1 N=6 unitary",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.013972843557674088",
+      "expected": "finite",
+      "group": "Trotter",
+      "name": "V=2 onsite_then_lexicographic_bonds sign=-1 N=6 final finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.3113306067355196e-16, 1.6960295900206376e-16]",
+      "expected": "<=1e-07",
+      "group": "history",
+      "name": "V=2 onsite_then_lexicographic_bonds sign=-1 N=6 history identities",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.0035164994839852865, 0.003516499483985328, 0.0008322301280494419]",
+      "expected": "finite",
+      "group": "history",
+      "name": "V=2 onsite_then_lexicographic_bonds sign=-1 N=6 history finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.0034905611520079432, 0.003490561152008012, 0.000887451927783306, 0.003776483863094284, 0.0037764838630943527, 0.0009414592495404553, 0.0041879802735771444, 0.00418798027357721, 0.0010464894109024972]",
+      "expected": "finite",
+      "group": "Gibbs",
+      "name": "V=2 onsite_then_lexicographic_bonds sign=-1 N=6 Gibbs history finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.859476923874953e-15",
+      "expected": "<=1e-08",
+      "group": "split",
+      "name": "V=2 onsite_then_lexicographic_bonds sign=-1 N=12 unitary",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.006984678410131257",
+      "expected": "finite",
+      "group": "Trotter",
+      "name": "V=2 onsite_then_lexicographic_bonds sign=-1 N=12 final finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.158981524693261e-16, 2.4568616196647627e-16]",
+      "expected": "<=1e-07",
+      "group": "history",
+      "name": "V=2 onsite_then_lexicographic_bonds sign=-1 N=12 history identities",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.0019299245048385461, 0.0019299245048385065, 0.0004567112311378398]",
+      "expected": "finite",
+      "group": "history",
+      "name": "V=2 onsite_then_lexicographic_bonds sign=-1 N=12 history finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.001915536793259687, 0.0019155367932596652, 0.0004871553132266301, 0.002072315723034468, 0.002072315723034443, 0.0005167786945666225, 0.002297969887771551, 0.002297969887771518, 0.0005744050806098756]",
+      "expected": "finite",
+      "group": "Gibbs",
+      "name": "V=2 onsite_then_lexicographic_bonds sign=-1 N=12 Gibbs history finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.02797359426907873, 0.013972843557674088, 0.006984678410131257]",
+      "expected": "fine no worse than coarse",
+      "group": "Trotter convergence",
+      "name": "V=2 onsite_then_lexicographic_bonds sign=-1 final convergence",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.005655169857380408, 0.003516499483985328, 0.0019299245048385461]",
+      "expected": "fine no worse than coarse",
+      "group": "history convergence",
+      "name": "V=2 onsite_then_lexicographic_bonds sign=-1 history convergence",
+      "status": "PASS"
+    },
+    {
+      "actual": "2.4853533275172278e-15",
+      "expected": "<=1e-08",
+      "group": "split",
+      "name": "V=2 onsite_then_lexicographic_bonds sign=1 N=3 unitary",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.02797359426907873",
+      "expected": "finite",
+      "group": "Trotter",
+      "name": "V=2 onsite_then_lexicographic_bonds sign=1 N=3 final finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.0552003561690838e-16, 1.0062076865352148e-16]",
+      "expected": "<=1e-07",
+      "group": "history",
+      "name": "V=2 onsite_then_lexicographic_bonds sign=1 N=3 history identities",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.0056551698573803775, 0.005655169857380408, 0.0013384212174920777]",
+      "expected": "finite",
+      "group": "history",
+      "name": "V=2 onsite_then_lexicographic_bonds sign=1 N=3 history finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.005614945531355342, 0.005614945531355362, 0.001426719246212259, 0.0060761264746860945, 0.006076126474686117, 0.0015138358978769066, 0.006739621171483413, 0.006739621171483438, 0.00168303397225207]",
+      "expected": "finite",
+      "group": "Gibbs",
+      "name": "V=2 onsite_then_lexicographic_bonds sign=1 N=3 Gibbs history finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.953807906047262e-15",
+      "expected": "<=1e-08",
+      "group": "split",
+      "name": "V=2 onsite_then_lexicographic_bonds sign=1 N=6 unitary",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.013972843557674088",
+      "expected": "finite",
+      "group": "Trotter",
+      "name": "V=2 onsite_then_lexicographic_bonds sign=1 N=6 final finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.3113306067355196e-16, 1.6960295900206376e-16]",
+      "expected": "<=1e-07",
+      "group": "history",
+      "name": "V=2 onsite_then_lexicographic_bonds sign=1 N=6 history identities",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.0035164994839852865, 0.003516499483985328, 0.0008322301280494419]",
+      "expected": "finite",
+      "group": "history",
+      "name": "V=2 onsite_then_lexicographic_bonds sign=1 N=6 history finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.0034905611520079432, 0.003490561152008012, 0.000887451927783306, 0.003776483863094284, 0.0037764838630943527, 0.0009414592495404553, 0.0041879802735771444, 0.00418798027357721, 0.0010464894109024972]",
+      "expected": "finite",
+      "group": "Gibbs",
+      "name": "V=2 onsite_then_lexicographic_bonds sign=1 N=6 Gibbs history finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.859476923874953e-15",
+      "expected": "<=1e-08",
+      "group": "split",
+      "name": "V=2 onsite_then_lexicographic_bonds sign=1 N=12 unitary",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.006984678410131257",
+      "expected": "finite",
+      "group": "Trotter",
+      "name": "V=2 onsite_then_lexicographic_bonds sign=1 N=12 final finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.158981524693261e-16, 2.4568616196647627e-16]",
+      "expected": "<=1e-07",
+      "group": "history",
+      "name": "V=2 onsite_then_lexicographic_bonds sign=1 N=12 history identities",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.0019299245048385461, 0.0019299245048385065, 0.0004567112311378398]",
+      "expected": "finite",
+      "group": "history",
+      "name": "V=2 onsite_then_lexicographic_bonds sign=1 N=12 history finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.001915536793259687, 0.0019155367932596652, 0.0004871553132266301, 0.002072315723034468, 0.002072315723034443, 0.0005167786945666225, 0.002297969887771551, 0.002297969887771518, 0.0005744050806098756]",
+      "expected": "finite",
+      "group": "Gibbs",
+      "name": "V=2 onsite_then_lexicographic_bonds sign=1 N=12 Gibbs history finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.02797359426907873, 0.013972843557674088, 0.006984678410131257]",
+      "expected": "fine no worse than coarse",
+      "group": "Trotter convergence",
+      "name": "V=2 onsite_then_lexicographic_bonds sign=1 final convergence",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.005655169857380408, 0.003516499483985328, 0.0019299245048385461]",
+      "expected": "fine no worse than coarse",
+      "group": "history convergence",
+      "name": "V=2 onsite_then_lexicographic_bonds sign=1 history convergence",
+      "status": "PASS"
+    },
+    {
+      "actual": "2.123824774256579e-15",
+      "expected": "<=1e-08",
+      "group": "split",
+      "name": "V=2 reverse_term_order sign=-1 N=3 unitary",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.027973594269078604",
+      "expected": "finite",
+      "group": "Trotter",
+      "name": "V=2 reverse_term_order sign=-1 N=3 final finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "[5.594489722905292e-17, 1.0062076865352148e-16]",
+      "expected": "<=1e-07",
+      "group": "history",
+      "name": "V=2 reverse_term_order sign=-1 N=3 history identities",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.005655075882760578, 0.005655075882760602, 0.0013370777547016995]",
+      "expected": "finite",
+      "group": "history",
+      "name": "V=2 reverse_term_order sign=-1 N=3 history finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.005613400623992885, 0.005613400623992887, 0.0014274349598731913, 0.006073755614985352, 0.006073755614985351, 0.0015148475333595125, 0.006736132938166285, 0.0067361329381662805, 0.0016843090601762999]",
+      "expected": "finite",
+      "group": "Gibbs",
+      "name": "V=2 reverse_term_order sign=-1 N=3 Gibbs history finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.9699219402050726e-15",
+      "expected": "<=1e-08",
+      "group": "split",
+      "name": "V=2 reverse_term_order sign=-1 N=6 unitary",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.013972843557674301",
+      "expected": "finite",
+      "group": "Trotter",
+      "name": "V=2 reverse_term_order sign=-1 N=6 final finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.5442168487273632e-16, 1.6960295900206376e-16]",
+      "expected": "<=1e-07",
+      "group": "history",
+      "name": "V=2 reverse_term_order sign=-1 N=6 history identities",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.003516463246572184, 0.0035164632465720575, 0.0008317738518466653]",
+      "expected": "finite",
+      "group": "history",
+      "name": "V=2 reverse_term_order sign=-1 N=6 history finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.003490022014773077, 0.0034900220147730068, 0.0008877016491644189, 0.0037756605109835273, 0.0037756605109834614, 0.0009418111428300545, 0.0041867720878831765, 0.004186772087883115, 0.0010469326684511547]",
+      "expected": "finite",
+      "group": "Gibbs",
+      "name": "V=2 reverse_term_order sign=-1 N=6 Gibbs history finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "2.1738721850985263e-15",
+      "expected": "<=1e-08",
+      "group": "split",
+      "name": "V=2 reverse_term_order sign=-1 N=12 unitary",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.00698467841013089",
+      "expected": "finite",
+      "group": "Trotter",
+      "name": "V=2 reverse_term_order sign=-1 N=12 final finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.0554413312517996e-16, 2.4568616196647627e-16]",
+      "expected": "<=1e-07",
+      "group": "history",
+      "name": "V=2 reverse_term_order sign=-1 N=12 history identities",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.0019299136763063567, 0.0019299136763062626, 0.0004565807192222145]",
+      "expected": "finite",
+      "group": "history",
+      "name": "V=2 reverse_term_order sign=-1 N=12 history finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.0019153809906634102, 0.0019153809906633746, 0.00048722747774472113, 0.0020720782093200146, 0.0020720782093199804, 0.000516880289140235, 0.0022976217016532647, 0.0022976217016532365, 0.0005745330415164088]",
+      "expected": "finite",
+      "group": "Gibbs",
+      "name": "V=2 reverse_term_order sign=-1 N=12 Gibbs history finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.027973594269078604, 0.013972843557674301, 0.00698467841013089]",
+      "expected": "fine no worse than coarse",
+      "group": "Trotter convergence",
+      "name": "V=2 reverse_term_order sign=-1 final convergence",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.005655075882760602, 0.003516463246572184, 0.0019299136763063567]",
+      "expected": "fine no worse than coarse",
+      "group": "history convergence",
+      "name": "V=2 reverse_term_order sign=-1 history convergence",
+      "status": "PASS"
+    },
+    {
+      "actual": "2.123824774256579e-15",
+      "expected": "<=1e-08",
+      "group": "split",
+      "name": "V=2 reverse_term_order sign=1 N=3 unitary",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.027973594269078604",
+      "expected": "finite",
+      "group": "Trotter",
+      "name": "V=2 reverse_term_order sign=1 N=3 final finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "[5.594489722905292e-17, 1.0062076865352148e-16]",
+      "expected": "<=1e-07",
+      "group": "history",
+      "name": "V=2 reverse_term_order sign=1 N=3 history identities",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.005655075882760578, 0.005655075882760602, 0.0013370777547016995]",
+      "expected": "finite",
+      "group": "history",
+      "name": "V=2 reverse_term_order sign=1 N=3 history finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.005613400623992885, 0.005613400623992887, 0.0014274349598731913, 0.006073755614985352, 0.006073755614985351, 0.0015148475333595125, 0.006736132938166285, 0.0067361329381662805, 0.0016843090601762999]",
+      "expected": "finite",
+      "group": "Gibbs",
+      "name": "V=2 reverse_term_order sign=1 N=3 Gibbs history finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.9699219402050726e-15",
+      "expected": "<=1e-08",
+      "group": "split",
+      "name": "V=2 reverse_term_order sign=1 N=6 unitary",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.013972843557674301",
+      "expected": "finite",
+      "group": "Trotter",
+      "name": "V=2 reverse_term_order sign=1 N=6 final finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.5442168487273632e-16, 1.6960295900206376e-16]",
+      "expected": "<=1e-07",
+      "group": "history",
+      "name": "V=2 reverse_term_order sign=1 N=6 history identities",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.003516463246572184, 0.0035164632465720575, 0.0008317738518466653]",
+      "expected": "finite",
+      "group": "history",
+      "name": "V=2 reverse_term_order sign=1 N=6 history finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.003490022014773077, 0.0034900220147730068, 0.0008877016491644189, 0.0037756605109835273, 0.0037756605109834614, 0.0009418111428300545, 0.0041867720878831765, 0.004186772087883115, 0.0010469326684511547]",
+      "expected": "finite",
+      "group": "Gibbs",
+      "name": "V=2 reverse_term_order sign=1 N=6 Gibbs history finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "2.1738721850985263e-15",
+      "expected": "<=1e-08",
+      "group": "split",
+      "name": "V=2 reverse_term_order sign=1 N=12 unitary",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.00698467841013089",
+      "expected": "finite",
+      "group": "Trotter",
+      "name": "V=2 reverse_term_order sign=1 N=12 final finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.0554413312517996e-16, 2.4568616196647627e-16]",
+      "expected": "<=1e-07",
+      "group": "history",
+      "name": "V=2 reverse_term_order sign=1 N=12 history identities",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.0019299136763063567, 0.0019299136763062626, 0.0004565807192222145]",
+      "expected": "finite",
+      "group": "history",
+      "name": "V=2 reverse_term_order sign=1 N=12 history finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.0019153809906634102, 0.0019153809906633746, 0.00048722747774472113, 0.0020720782093200146, 0.0020720782093199804, 0.000516880289140235, 0.0022976217016532647, 0.0022976217016532365, 0.0005745330415164088]",
+      "expected": "finite",
+      "group": "Gibbs",
+      "name": "V=2 reverse_term_order sign=1 N=12 Gibbs history finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.027973594269078604, 0.013972843557674301, 0.00698467841013089]",
+      "expected": "fine no worse than coarse",
+      "group": "Trotter convergence",
+      "name": "V=2 reverse_term_order sign=1 final convergence",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.005655075882760602, 0.003516463246572184, 0.0019299136763063567]",
+      "expected": "fine no worse than coarse",
+      "group": "history convergence",
+      "name": "V=2 reverse_term_order sign=1 history convergence",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": "<=1e-08",
+      "group": "decomposition",
+      "name": "V=4 full decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.9999999999999971",
+      "expected": ">=1.0",
+      "group": "energy",
+      "name": "V=4 pair=[0, 1] positive energy",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.2807099297155712",
+      "expected": ">1e-06",
+      "group": "orientation",
+      "name": "V=4 multiplier floor",
+      "status": "PASS"
+    },
+    {
+      "actual": "9.211924843723458e-15",
+      "expected": "<=1e-08",
+      "group": "split",
+      "name": "V=4 onsite_then_lexicographic_bonds sign=-1 N=3 unitary",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.07553754605482753",
+      "expected": "finite",
+      "group": "Trotter",
+      "name": "V=4 onsite_then_lexicographic_bonds sign=-1 N=3 final finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.8119264080725747e-16, 2.579632181287319e-16]",
+      "expected": "<=1e-07",
+      "group": "history",
+      "name": "V=4 onsite_then_lexicographic_bonds sign=-1 N=3 history identities",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.009331563456951082, 0.00933156345695109, 0.0016620483555898442]",
+      "expected": "finite",
+      "group": "history",
+      "name": "V=4 onsite_then_lexicographic_bonds sign=-1 N=3 history finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.008252064580810499, 0.00825206458081049, 0.0012332983819118625, 0.01175344417207515, 0.01175344417207514, 0.001456076965245438, 0.016336563538145367, 0.016336563538145353, 0.0018087876516291947]",
+      "expected": "finite",
+      "group": "Gibbs",
+      "name": "V=4 onsite_then_lexicographic_bonds sign=-1 N=3 Gibbs history finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "9.27502501751073e-15",
+      "expected": "<=1e-08",
+      "group": "split",
+      "name": "V=4 onsite_then_lexicographic_bonds sign=-1 N=6 unitary",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.03766955078151959",
+      "expected": "finite",
+      "group": "Trotter",
+      "name": "V=4 onsite_then_lexicographic_bonds sign=-1 N=6 final finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "[3.4462310344332697e-16, 3.198630716021165e-16]",
+      "expected": "<=1e-07",
+      "group": "history",
+      "name": "V=4 onsite_then_lexicographic_bonds sign=-1 N=6 history identities",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.005766993857480072, 0.005766993857480032, 0.0010563126500433091]",
+      "expected": "finite",
+      "group": "history",
+      "name": "V=4 onsite_then_lexicographic_bonds sign=-1 N=6 history finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.005085163299668879, 0.00508516329966887, 0.0007801682354900129, 0.007235387709856209, 0.0072353877098561906, 0.0009311304844615021, 0.010050505204359649, 0.010050505204359614, 0.0011661877172508778]",
+      "expected": "finite",
+      "group": "Gibbs",
+      "name": "V=4 onsite_then_lexicographic_bonds sign=-1 N=6 Gibbs history finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "8.89151861083771e-15",
+      "expected": "<=1e-08",
+      "group": "split",
+      "name": "V=4 onsite_then_lexicographic_bonds sign=-1 N=12 unitary",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.018822472650403696",
+      "expected": "finite",
+      "group": "Trotter",
+      "name": "V=4 onsite_then_lexicographic_bonds sign=-1 N=12 final finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "[6.436481162245047e-16, 6.62975964046317e-16]",
+      "expected": "<=1e-07",
+      "group": "history",
+      "name": "V=4 onsite_then_lexicographic_bonds sign=-1 N=12 history identities",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.0031590622591520265, 0.00315906225915197, 0.000586780820442557]",
+      "expected": "finite",
+      "group": "history",
+      "name": "V=4 onsite_then_lexicographic_bonds sign=-1 N=12 history finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.002780556573663467, 0.0027805565736634544, 0.0004328671271597023, 0.003954634936385362, 0.003954634936385332, 0.0005199480198237448, 0.005491880781476262, 0.005491880781476208, 0.0006543637706051557]",
+      "expected": "finite",
+      "group": "Gibbs",
+      "name": "V=4 onsite_then_lexicographic_bonds sign=-1 N=12 Gibbs history finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.07553754605482753, 0.03766955078151959, 0.018822472650403696]",
+      "expected": "fine no worse than coarse",
+      "group": "Trotter convergence",
+      "name": "V=4 onsite_then_lexicographic_bonds sign=-1 final convergence",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.00933156345695109, 0.005766993857480072, 0.0031590622591520265]",
+      "expected": "fine no worse than coarse",
+      "group": "history convergence",
+      "name": "V=4 onsite_then_lexicographic_bonds sign=-1 history convergence",
+      "status": "PASS"
+    },
+    {
+      "actual": "9.211924843723458e-15",
+      "expected": "<=1e-08",
+      "group": "split",
+      "name": "V=4 onsite_then_lexicographic_bonds sign=1 N=3 unitary",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.07553754605482753",
+      "expected": "finite",
+      "group": "Trotter",
+      "name": "V=4 onsite_then_lexicographic_bonds sign=1 N=3 final finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.8119264080725747e-16, 2.579632181287319e-16]",
+      "expected": "<=1e-07",
+      "group": "history",
+      "name": "V=4 onsite_then_lexicographic_bonds sign=1 N=3 history identities",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.009331563456951082, 0.00933156345695109, 0.0016620483555898442]",
+      "expected": "finite",
+      "group": "history",
+      "name": "V=4 onsite_then_lexicographic_bonds sign=1 N=3 history finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.008252064580810499, 0.00825206458081049, 0.0012332983819118625, 0.01175344417207515, 0.01175344417207514, 0.001456076965245438, 0.016336563538145367, 0.016336563538145353, 0.0018087876516291947]",
+      "expected": "finite",
+      "group": "Gibbs",
+      "name": "V=4 onsite_then_lexicographic_bonds sign=1 N=3 Gibbs history finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "9.27502501751073e-15",
+      "expected": "<=1e-08",
+      "group": "split",
+      "name": "V=4 onsite_then_lexicographic_bonds sign=1 N=6 unitary",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.03766955078151959",
+      "expected": "finite",
+      "group": "Trotter",
+      "name": "V=4 onsite_then_lexicographic_bonds sign=1 N=6 final finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "[3.4462310344332697e-16, 3.198630716021165e-16]",
+      "expected": "<=1e-07",
+      "group": "history",
+      "name": "V=4 onsite_then_lexicographic_bonds sign=1 N=6 history identities",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.005766993857480072, 0.005766993857480032, 0.0010563126500433091]",
+      "expected": "finite",
+      "group": "history",
+      "name": "V=4 onsite_then_lexicographic_bonds sign=1 N=6 history finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.005085163299668879, 0.00508516329966887, 0.0007801682354900129, 0.007235387709856209, 0.0072353877098561906, 0.0009311304844615021, 0.010050505204359649, 0.010050505204359614, 0.0011661877172508778]",
+      "expected": "finite",
+      "group": "Gibbs",
+      "name": "V=4 onsite_then_lexicographic_bonds sign=1 N=6 Gibbs history finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "8.89151861083771e-15",
+      "expected": "<=1e-08",
+      "group": "split",
+      "name": "V=4 onsite_then_lexicographic_bonds sign=1 N=12 unitary",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.018822472650403696",
+      "expected": "finite",
+      "group": "Trotter",
+      "name": "V=4 onsite_then_lexicographic_bonds sign=1 N=12 final finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "[6.436481162245047e-16, 6.62975964046317e-16]",
+      "expected": "<=1e-07",
+      "group": "history",
+      "name": "V=4 onsite_then_lexicographic_bonds sign=1 N=12 history identities",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.0031590622591520265, 0.00315906225915197, 0.000586780820442557]",
+      "expected": "finite",
+      "group": "history",
+      "name": "V=4 onsite_then_lexicographic_bonds sign=1 N=12 history finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.002780556573663467, 0.0027805565736634544, 0.0004328671271597023, 0.003954634936385362, 0.003954634936385332, 0.0005199480198237448, 0.005491880781476262, 0.005491880781476208, 0.0006543637706051557]",
+      "expected": "finite",
+      "group": "Gibbs",
+      "name": "V=4 onsite_then_lexicographic_bonds sign=1 N=12 Gibbs history finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.07553754605482753, 0.03766955078151959, 0.018822472650403696]",
+      "expected": "fine no worse than coarse",
+      "group": "Trotter convergence",
+      "name": "V=4 onsite_then_lexicographic_bonds sign=1 final convergence",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.00933156345695109, 0.005766993857480072, 0.0031590622591520265]",
+      "expected": "fine no worse than coarse",
+      "group": "history convergence",
+      "name": "V=4 onsite_then_lexicographic_bonds sign=1 history convergence",
+      "status": "PASS"
+    },
+    {
+      "actual": "9.227789166830361e-15",
+      "expected": "<=1e-08",
+      "group": "split",
+      "name": "V=4 reverse_term_order sign=-1 N=3 unitary",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.07553754605482739",
+      "expected": "finite",
+      "group": "Trotter",
+      "name": "V=4 reverse_term_order sign=-1 N=3 final finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.9667857687315782e-16, 2.579632181287319e-16]",
+      "expected": "<=1e-07",
+      "group": "history",
+      "name": "V=4 reverse_term_order sign=-1 N=3 history identities",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.009475386543263886, 0.009475386543263856, 0.0017706374091791045]",
+      "expected": "finite",
+      "group": "history",
+      "name": "V=4 reverse_term_order sign=-1 N=3 history finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.008269624407099028, 0.008269624407099023, 0.0013078601041246957, 0.011784604477337977, 0.011784604477337967, 0.0015925476535095416, 0.016384456689967526, 0.01638445668996751, 0.002027274331044747]",
+      "expected": "finite",
+      "group": "Gibbs",
+      "name": "V=4 reverse_term_order sign=-1 N=3 Gibbs history finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "9.302786319739001e-15",
+      "expected": "<=1e-08",
+      "group": "split",
+      "name": "V=4 reverse_term_order sign=-1 N=6 unitary",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.037669550781519845",
+      "expected": "finite",
+      "group": "Trotter",
+      "name": "V=4 reverse_term_order sign=-1 N=6 final finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "221",
+      "expected": "all executed assertions passed",
+      "group": "summary",
+      "name": "assertion_summary",
+      "status": "PASS"
+    }
+  ],
+  "audit_id": "PA-CP1-ST8-Q3LOCK-CUBIC-MULTIPLIER-FINITE-TROTTER-CONVERGENCE",
+  "boundary": {
+    "actual_q3_thermodynamic_history_closed": false,
+    "analytic_trotter_rate_closed": false,
+    "c6_closed": false,
+    "common_alpha_closed": false,
+    "continuum_closed": false,
+    "delta_d_cauchy_closed": false,
+    "direct_d_cauchy_closed": false,
+    "exhaustion_independence_closed": false,
+    "finite_full_unitary_decomposition_closed": true,
+    "finite_split_exact_q3_bridge_closed": true,
+    "finite_two_order_two_sign_trotter_convergence_closed": true,
+    "finite_two_orientation_history_convergence_closed": true,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "no_new_negative_result": true,
+    "no_pdf": true,
+    "no_tier_change": true,
+    "operator_domain_embedding_closed": false,
+    "pre_a_closed": false,
+    "sector_a_closed": false,
+    "source_volume_beta_uniformity_closed": false
+  },
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "derived": {
+    "actual_q3_thermodynamic_history_closed": false,
+    "analytic_trotter_rate_closed": false,
+    "common_alpha_closed": false,
+    "delta_d_cauchy_closed": false,
+    "direct_d_cauchy_closed": false,
+    "exhaustion_independence_closed": false,
+    "finite_full_unitary_decomposition_closed": true,
+    "finite_split_exact_q3_bridge_closed": true,
+    "finite_two_order_two_sign_trotter_convergence_closed": true,
+    "finite_two_orientation_history_convergence_closed": true,
+    "max_commutator_history_error": 0.002072140562416935,
+    "max_final_unitary_error": 0.11789615563131273,
+    "max_gibbs_history_error": 0.019690880828081788,
+    "max_left_history_error": 0.011260464017179159,
+    "max_right_history_error": 0.011260464017179162,
+    "parent_manifest_sha256": "538ce22392f6cd3ba1bc4f7e5682e4c225645f2f0ff2d2017274c7f2fc1d59ff",
+    "pre_a_closed": false,
+    "row_count": 36,
+    "source_manifest_sha256": "3ef2893c3d16edf0d558e21c26f7508ed5db03ea0bc77cac040123740d78ed17",
+    "source_volume_beta_uniformity_closed": false,
+    "step_counts": [
+      3,
+      6,
+      12
+    ],
+    "volumes": [
+      2,
+      4,
+      6
+    ]
+  },
+  "exploration_id": "EXP-001161",
+  "passed": 221,
+  "rows": [
+    {
+      "commutator_history_error": 0.0013384212174920777,
+      "delta": 0.1111111111111111,
+      "final_unitary_error": 0.02797359426907873,
+      "left_history_error": 0.005655169857380408,
+      "max_gibbs_history_error": 0.006739621171483438,
+      "order": "onsite_then_lexicographic_bonds",
+      "probe_site": 0,
+      "right_history_error": 0.0056551698573803775,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 3,
+      "time_sign": -1,
+      "unitary_error": 2.4853533275172278e-15,
+      "volume": 2
+    },
+    {
+      "commutator_history_error": 0.0008322301280494419,
+      "delta": 0.05555555555555555,
+      "final_unitary_error": 0.013972843557674088,
+      "left_history_error": 0.003516499483985328,
+      "max_gibbs_history_error": 0.00418798027357721,
+      "order": "onsite_then_lexicographic_bonds",
+      "probe_site": 0,
+      "right_history_error": 0.0035164994839852865,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 6,
+      "time_sign": -1,
+      "unitary_error": 1.953807906047262e-15,
+      "volume": 2
+    },
+    {
+      "commutator_history_error": 0.0004567112311378398,
+      "delta": 0.027777777777777776,
+      "final_unitary_error": 0.006984678410131257,
+      "left_history_error": 0.0019299245048385065,
+      "max_gibbs_history_error": 0.002297969887771551,
+      "order": "onsite_then_lexicographic_bonds",
+      "probe_site": 0,
+      "right_history_error": 0.0019299245048385461,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 12,
+      "time_sign": -1,
+      "unitary_error": 1.859476923874953e-15,
+      "volume": 2
+    },
+    {
+      "commutator_history_error": 0.0013384212174920777,
+      "delta": 0.1111111111111111,
+      "final_unitary_error": 0.02797359426907873,
+      "left_history_error": 0.005655169857380408,
+      "max_gibbs_history_error": 0.006739621171483438,
+      "order": "onsite_then_lexicographic_bonds",
+      "probe_site": 0,
+      "right_history_error": 0.0056551698573803775,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 3,
+      "time_sign": 1,
+      "unitary_error": 2.4853533275172278e-15,
+      "volume": 2
+    },
+    {
+      "commutator_history_error": 0.0008322301280494419,
+      "delta": 0.05555555555555555,
+      "final_unitary_error": 0.013972843557674088,
+      "left_history_error": 0.003516499483985328,
+      "max_gibbs_history_error": 0.00418798027357721,
+      "order": "onsite_then_lexicographic_bonds",
+      "probe_site": 0,
+      "right_history_error": 0.0035164994839852865,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 6,
+      "time_sign": 1,
+      "unitary_error": 1.953807906047262e-15,
+      "volume": 2
+    },
+    {
+      "commutator_history_error": 0.0004567112311378398,
+      "delta": 0.027777777777777776,
+      "final_unitary_error": 0.006984678410131257,
+      "left_history_error": 0.0019299245048385065,
+      "max_gibbs_history_error": 0.002297969887771551,
+      "order": "onsite_then_lexicographic_bonds",
+      "probe_site": 0,
+      "right_history_error": 0.0019299245048385461,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 12,
+      "time_sign": 1,
+      "unitary_error": 1.859476923874953e-15,
+      "volume": 2
+    },
+    {
+      "commutator_history_error": 0.0013370777547016995,
+      "delta": 0.1111111111111111,
+      "final_unitary_error": 0.027973594269078604,
+      "left_history_error": 0.005655075882760602,
+      "max_gibbs_history_error": 0.006736132938166285,
+      "order": "reverse_term_order",
+      "probe_site": 0,
+      "right_history_error": 0.005655075882760578,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 3,
+      "time_sign": -1,
+      "unitary_error": 2.123824774256579e-15,
+      "volume": 2
+    },
+    {
+      "commutator_history_error": 0.0008317738518466653,
+      "delta": 0.05555555555555555,
+      "final_unitary_error": 0.013972843557674301,
+      "left_history_error": 0.0035164632465720575,
+      "max_gibbs_history_error": 0.0041867720878831765,
+      "order": "reverse_term_order",
+      "probe_site": 0,
+      "right_history_error": 0.003516463246572184,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 6,
+      "time_sign": -1,
+      "unitary_error": 1.9699219402050726e-15,
+      "volume": 2
+    },
+    {
+      "commutator_history_error": 0.0004565807192222145,
+      "delta": 0.027777777777777776,
+      "final_unitary_error": 0.00698467841013089,
+      "left_history_error": 0.0019299136763062626,
+      "max_gibbs_history_error": 0.0022976217016532647,
+      "order": "reverse_term_order",
+      "probe_site": 0,
+      "right_history_error": 0.0019299136763063567,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 12,
+      "time_sign": -1,
+      "unitary_error": 2.1738721850985263e-15,
+      "volume": 2
+    },
+    {
+      "commutator_history_error": 0.0013370777547016995,
+      "delta": 0.1111111111111111,
+      "final_unitary_error": 0.027973594269078604,
+      "left_history_error": 0.005655075882760602,
+      "max_gibbs_history_error": 0.006736132938166285,
+      "order": "reverse_term_order",
+      "probe_site": 0,
+      "right_history_error": 0.005655075882760578,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 3,
+      "time_sign": 1,
+      "unitary_error": 2.123824774256579e-15,
+      "volume": 2
+    },
+    {
+      "commutator_history_error": 0.0008317738518466653,
+      "delta": 0.05555555555555555,
+      "final_unitary_error": 0.013972843557674301,
+      "left_history_error": 0.0035164632465720575,
+      "max_gibbs_history_error": 0.0041867720878831765,
+      "order": "reverse_term_order",
+      "probe_site": 0,
+      "right_history_error": 0.003516463246572184,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 6,
+      "time_sign": 1,
+      "unitary_error": 1.9699219402050726e-15,
+      "volume": 2
+    },
+    {
+      "commutator_history_error": 0.0004565807192222145,
+      "delta": 0.027777777777777776,
+      "final_unitary_error": 0.00698467841013089,
+      "left_history_error": 0.0019299136763062626,
+      "max_gibbs_history_error": 0.0022976217016532647,
+      "order": "reverse_term_order",
+      "probe_site": 0,
+      "right_history_error": 0.0019299136763063567,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 12,
+      "time_sign": 1,
+      "unitary_error": 2.1738721850985263e-15,
+      "volume": 2
+    },
+    {
+      "commutator_history_error": 0.0016620483555898442,
+      "delta": 0.1111111111111111,
+      "final_unitary_error": 0.07553754605482753,
+      "left_history_error": 0.00933156345695109,
+      "max_gibbs_history_error": 0.016336563538145367,
+      "order": "onsite_then_lexicographic_bonds",
+      "probe_site": 0,
+      "right_history_error": 0.009331563456951082,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 3,
+      "time_sign": -1,
+      "unitary_error": 9.211924843723458e-15,
+      "volume": 4
+    },
+    {
+      "commutator_history_error": 0.0010563126500433091,
+      "delta": 0.05555555555555555,
+      "final_unitary_error": 0.03766955078151959,
+      "left_history_error": 0.005766993857480032,
+      "max_gibbs_history_error": 0.010050505204359649,
+      "order": "onsite_then_lexicographic_bonds",
+      "probe_site": 0,
+      "right_history_error": 0.005766993857480072,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 6,
+      "time_sign": -1,
+      "unitary_error": 9.27502501751073e-15,
+      "volume": 4
+    },
+    {
+      "commutator_history_error": 0.000586780820442557,
+      "delta": 0.027777777777777776,
+      "final_unitary_error": 0.018822472650403696,
+      "left_history_error": 0.00315906225915197,
+      "max_gibbs_history_error": 0.005491880781476262,
+      "order": "onsite_then_lexicographic_bonds",
+      "probe_site": 0,
+      "right_history_error": 0.0031590622591520265,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 12,
+      "time_sign": -1,
+      "unitary_error": 8.89151861083771e-15,
+      "volume": 4
+    },
+    {
+      "commutator_history_error": 0.0016620483555898442,
+      "delta": 0.1111111111111111,
+      "final_unitary_error": 0.07553754605482753,
+      "left_history_error": 0.00933156345695109,
+      "max_gibbs_history_error": 0.016336563538145367,
+      "order": "onsite_then_lexicographic_bonds",
+      "probe_site": 0,
+      "right_history_error": 0.009331563456951082,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 3,
+      "time_sign": 1,
+      "unitary_error": 9.211924843723458e-15,
+      "volume": 4
+    },
+    {
+      "commutator_history_error": 0.0010563126500433091,
+      "delta": 0.05555555555555555,
+      "final_unitary_error": 0.03766955078151959,
+      "left_history_error": 0.005766993857480032,
+      "max_gibbs_history_error": 0.010050505204359649,
+      "order": "onsite_then_lexicographic_bonds",
+      "probe_site": 0,
+      "right_history_error": 0.005766993857480072,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 6,
+      "time_sign": 1,
+      "unitary_error": 9.27502501751073e-15,
+      "volume": 4
+    },
+    {
+      "commutator_history_error": 0.000586780820442557,
+      "delta": 0.027777777777777776,
+      "final_unitary_error": 0.018822472650403696,
+      "left_history_error": 0.00315906225915197,
+      "max_gibbs_history_error": 0.005491880781476262,
+      "order": "onsite_then_lexicographic_bonds",
+      "probe_site": 0,
+      "right_history_error": 0.0031590622591520265,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 12,
+      "time_sign": 1,
+      "unitary_error": 8.89151861083771e-15,
+      "volume": 4
+    },
+    {
+      "commutator_history_error": 0.0017706374091791045,
+      "delta": 0.1111111111111111,
+      "final_unitary_error": 0.07553754605482739,
+      "left_history_error": 0.009475386543263856,
+      "max_gibbs_history_error": 0.016384456689967526,
+      "order": "reverse_term_order",
+      "probe_site": 0,
+      "right_history_error": 0.009475386543263886,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 3,
+      "time_sign": -1,
+      "unitary_error": 9.227789166830361e-15,
+      "volume": 4
+    },
+    {
+      "commutator_history_error": 0.0010905673375204935,
+      "delta": 0.05555555555555555,
+      "final_unitary_error": 0.037669550781519845,
+      "left_history_error": 0.005814252835976819,
+      "max_gibbs_history_error": 0.010066379464178127,
+      "order": "reverse_term_order",
+      "probe_site": 0,
+      "right_history_error": 0.005814252835976841,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 6,
+      "time_sign": -1,
+      "unitary_error": 9.302786319739001e-15,
+      "volume": 4
+    },
+    {
+      "commutator_history_error": 0.0005962222061533892,
+      "delta": 0.027777777777777776,
+      "final_unitary_error": 0.01882247265040307,
+      "left_history_error": 0.003172824885406762,
+      "max_gibbs_history_error": 0.005496364029664026,
+      "order": "reverse_term_order",
+      "probe_site": 0,
+      "right_history_error": 0.0031728248854067435,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 12,
+      "time_sign": -1,
+      "unitary_error": 8.770308019693606e-15,
+      "volume": 4
+    },
+    {
+      "commutator_history_error": 0.0017706374091791045,
+      "delta": 0.1111111111111111,
+      "final_unitary_error": 0.07553754605482739,
+      "left_history_error": 0.009475386543263856,
+      "max_gibbs_history_error": 0.016384456689967526,
+      "order": "reverse_term_order",
+      "probe_site": 0,
+      "right_history_error": 0.009475386543263886,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 3,
+      "time_sign": 1,
+      "unitary_error": 9.227789166830361e-15,
+      "volume": 4
+    },
+    {
+      "commutator_history_error": 0.0010905673375204935,
+      "delta": 0.05555555555555555,
+      "final_unitary_error": 0.037669550781519845,
+      "left_history_error": 0.005814252835976819,
+      "max_gibbs_history_error": 0.010066379464178127,
+      "order": "reverse_term_order",
+      "probe_site": 0,
+      "right_history_error": 0.005814252835976841,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 6,
+      "time_sign": 1,
+      "unitary_error": 9.302786319739001e-15,
+      "volume": 4
+    },
+    {
+      "commutator_history_error": 0.0005962222061533892,
+      "delta": 0.027777777777777776,
+      "final_unitary_error": 0.01882247265040307,
+      "left_history_error": 0.003172824885406762,
+      "max_gibbs_history_error": 0.005496364029664026,
+      "order": "reverse_term_order",
+      "probe_site": 0,
+      "right_history_error": 0.0031728248854067435,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 12,
+      "time_sign": 1,
+      "unitary_error": 8.770308019693606e-15,
+      "volume": 4
+    },
+    {
+      "commutator_history_error": 0.0019495330128539439,
+      "delta": 0.1111111111111111,
+      "final_unitary_error": 0.11789615563131273,
+      "left_history_error": 0.01112085846692374,
+      "max_gibbs_history_error": 0.019630118233970945,
+      "order": "onsite_then_lexicographic_bonds",
+      "probe_site": 0,
+      "right_history_error": 0.011120858466923752,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 3,
+      "time_sign": -1,
+      "unitary_error": 1.683085643710557e-14,
+      "volume": 6
+    },
+    {
+      "commutator_history_error": 0.001229224569760101,
+      "delta": 0.05555555555555555,
+      "final_unitary_error": 0.058756755061206756,
+      "left_history_error": 0.006819542852743111,
+      "max_gibbs_history_error": 0.011981242338279198,
+      "order": "onsite_then_lexicographic_bonds",
+      "probe_site": 0,
+      "right_history_error": 0.006819542852743124,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 6,
+      "time_sign": -1,
+      "unitary_error": 1.647535078028579e-14,
+      "volume": 6
+    },
+    {
+      "commutator_history_error": 0.000680186536520846,
+      "delta": 0.027777777777777776,
+      "final_unitary_error": 0.029354754101819213,
+      "left_history_error": 0.0037229760904364663,
+      "max_gibbs_history_error": 0.006525666231588365,
+      "order": "onsite_then_lexicographic_bonds",
+      "probe_site": 0,
+      "right_history_error": 0.003722976090436444,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 12,
+      "time_sign": -1,
+      "unitary_error": 1.630578833623473e-14,
+      "volume": 6
+    },
+    {
+      "commutator_history_error": 0.0019495330128539439,
+      "delta": 0.1111111111111111,
+      "final_unitary_error": 0.11789615563131273,
+      "left_history_error": 0.01112085846692374,
+      "max_gibbs_history_error": 0.019630118233970945,
+      "order": "onsite_then_lexicographic_bonds",
+      "probe_site": 0,
+      "right_history_error": 0.011120858466923752,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 3,
+      "time_sign": 1,
+      "unitary_error": 1.683085643710557e-14,
+      "volume": 6
+    },
+    {
+      "commutator_history_error": 0.001229224569760101,
+      "delta": 0.05555555555555555,
+      "final_unitary_error": 0.058756755061206756,
+      "left_history_error": 0.006819542852743111,
+      "max_gibbs_history_error": 0.011981242338279198,
+      "order": "onsite_then_lexicographic_bonds",
+      "probe_site": 0,
+      "right_history_error": 0.006819542852743124,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 6,
+      "time_sign": 1,
+      "unitary_error": 1.647535078028579e-14,
+      "volume": 6
+    },
+    {
+      "commutator_history_error": 0.000680186536520846,
+      "delta": 0.027777777777777776,
+      "final_unitary_error": 0.029354754101819213,
+      "left_history_error": 0.0037229760904364663,
+      "max_gibbs_history_error": 0.006525666231588365,
+      "order": "onsite_then_lexicographic_bonds",
+      "probe_site": 0,
+      "right_history_error": 0.003722976090436444,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 12,
+      "time_sign": 1,
+      "unitary_error": 1.630578833623473e-14,
+      "volume": 6
+    },
+    {
+      "commutator_history_error": 0.002072140562416935,
+      "delta": 0.1111111111111111,
+      "final_unitary_error": 0.11789615563131271,
+      "left_history_error": 0.011260464017179159,
+      "max_gibbs_history_error": 0.019690880828081788,
+      "order": "reverse_term_order",
+      "probe_site": 0,
+      "right_history_error": 0.011260464017179162,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 3,
+      "time_sign": -1,
+      "unitary_error": 1.674535407876202e-14,
+      "volume": 6
+    },
+    {
+      "commutator_history_error": 0.0012673044782162337,
+      "delta": 0.05555555555555555,
+      "final_unitary_error": 0.058756755061206756,
+      "left_history_error": 0.006862727180016099,
+      "max_gibbs_history_error": 0.012001607313485643,
+      "order": "reverse_term_order",
+      "probe_site": 0,
+      "right_history_error": 0.006862727180016091,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 6,
+      "time_sign": -1,
+      "unitary_error": 1.6486636166686184e-14,
+      "volume": 6
+    },
+    {
+      "commutator_history_error": 0.0006906246403755944,
+      "delta": 0.027777777777777776,
+      "final_unitary_error": 0.029354754101818512,
+      "left_history_error": 0.003734778167097641,
+      "max_gibbs_history_error": 0.006531433722349308,
+      "order": "reverse_term_order",
+      "probe_site": 0,
+      "right_history_error": 0.003734778167097633,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 12,
+      "time_sign": -1,
+      "unitary_error": 1.6357731752884655e-14,
+      "volume": 6
+    },
+    {
+      "commutator_history_error": 0.002072140562416935,
+      "delta": 0.1111111111111111,
+      "final_unitary_error": 0.11789615563131271,
+      "left_history_error": 0.011260464017179159,
+      "max_gibbs_history_error": 0.019690880828081788,
+      "order": "reverse_term_order",
+      "probe_site": 0,
+      "right_history_error": 0.011260464017179162,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 3,
+      "time_sign": 1,
+      "unitary_error": 1.674535407876202e-14,
+      "volume": 6
+    },
+    {
+      "commutator_history_error": 0.0012673044782162337,
+      "delta": 0.05555555555555555,
+      "final_unitary_error": 0.058756755061206756,
+      "left_history_error": 0.006862727180016099,
+      "max_gibbs_history_error": 0.012001607313485643,
+      "order": "reverse_term_order",
+      "probe_site": 0,
+      "right_history_error": 0.006862727180016091,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 6,
+      "time_sign": 1,
+      "unitary_error": 1.6486636166686184e-14,
+      "volume": 6
+    },
+    {
+      "commutator_history_error": 0.0006906246403755944,
+      "delta": 0.027777777777777776,
+      "final_unitary_error": 0.029354754101818512,
+      "left_history_error": 0.003734778167097641,
+      "max_gibbs_history_error": 0.006531433722349308,
+      "order": "reverse_term_order",
+      "probe_site": 0,
+      "right_history_error": 0.003734778167097633,
+      "source_pair": [
+        0,
+        1
+      ],
+      "step_count": 12,
+      "time_sign": 1,
+      "unitary_error": 1.6357731752884655e-14,
+      "volume": 6
+    }
+  ],
+  "run_kind": "independent",
+  "schema": "tect/foundation-audit/1.0",
+  "task_id": "T-054",
+  "verdict": "PASS"
+}
