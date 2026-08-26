@@ -10694,6 +10694,150 @@
       "task_id": "T-054",
       "title": "Source-local Q3 cutoff-tail scalar energy envelope",
       "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "axis": "commutation",
+          "check": "Only q_0,q_1 and spectral cutoff functions are placed in the commuting configuration algebra; kinetic p terms are excluded from the order claim.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "tail sign",
+          "check": "The scalar absolute-difference bound is raised to the fourth power, so no monotonicity of the cutoff bond is assumed.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "trace positivity",
+          "check": "The trace transfer uses only rho>=0 and the finite configuration order; rho is never commuted through the tail or K_pot.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "constant provenance",
+          "check": "The shift, residual, 56/3 factor and 9834496/81 constant are recomputed from manifest inputs and the rational identities are checked in Lean R351.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "kinetic transfer",
+          "check": "K_pot is not identified with the kinetic-inclusive Hamiltonian; the noncommutative transfer remains an explicit open gate.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "volume uniformity",
+          "check": "The scalar constant is local and volume-independent, but finite potential moments and slacks are reported only as regulator diagnostics.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "Lean boundary",
+          "check": "R351 formalizes the abstraction and exact rational constants only; it does not certify matrix functional calculus, Gibbs states, unbounded domains or limits.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "QFT promotion",
+          "check": "The lift does not close direct D/delta-D history, exhaustion, common alpha, OS/KMS/GNS identification, gap, continuum, C6, Sector A or Pre-A.",
+          "disposition": "UPHELD-OPEN"
+        }
+      ],
+      "boundary": "T0 claim-nonbearing commuting-configuration order and finite potential-trace checkpoint. It is not a kinetic operator common-core theorem, a thermodynamic QFT dynamics, a common-alpha theorem, a mass-gap proof, a continuum result, C6, Sector A or Pre-A closure.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "closed": [
+        "commuting q_0,q_1 configuration-algebra fourth-power order",
+        "exact inherited onsite shift and source-edge fourth-power constant",
+        "finite positive-state Gibbs trace transfer from tail^4 to K_pot^4",
+        "finite source-edge Q3 order and trace rows across volume, beta and cutoff",
+        "independent reproduction and Lean R351 cross-check"
+      ],
+      "decision_reason": "The source-edge scalar envelope is now an exact fourth-power order in the commuting q_0,q_1 configuration algebra, and positivity of a finite Gibbs state gives the corresponding trace transfer to K_pot^4. This supplies a clean potential-side input for the OS/KMS-facing tail lane while isolating, rather than hiding, the missing kinetic/noncommutative Hamiltonian estimate.",
+      "evidence_refs": [
+        "strategy/pre-a-cp1-st8-q3lock-source-local-tail-configuration-order-manifest.json#mathematical_interface",
+        "codes/foundations/pre_a_cp1_st8_q3lock_source_local_tail_configuration_order.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_source_local_tail_configuration_order_independent.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_source_local_tail_configuration_order_verify.py#run",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-27-primary-pre-a-cp1-st8-q3lock-source-local-tail-configuration-order/primary.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-27-independent-pre-a-cp1-st8-q3lock-source-local-tail-configuration-order/independent.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-27-integrated-pre-a-cp1-st8-q3lock-source-local-tail-configuration-order/integrated.json#lean",
+        "verification/lean/Tect/R351.lean#pointwise_to_configuration_order",
+        "verification/lean/registry.json#R351"
+      ],
+      "finding": "Primary 1327/1327 and independent 1376/1376 assertions pass; the integrated verifier passes 21/21 with Lean R351 PASS. Scalar rows cover 1225 contractions and finite matrix rows cover 30 source-edge Q3 cases. For c=3/5, lambda=1/10, g=3/5, r=-1, the exact values are d=5/12, 8/g=40/3, tail factor 16(c+lambda)/g=56/3, fourth-power constant 9834496/81, and residual -11/9. Across the declared finite rows the largest tail fourth moment is 4.9841385598184536, largest potential fourth moment 3.9338865788966113, largest finite trace bound 477627.0595631161, largest beta/2 two-slice moment 4.978096490313759, minimum order slack 125485.89025997455, and minimum trace slack 187159.6124066406. These are finite diagnostics, not uniform estimates.",
+      "formal_integration": {
+        "events": [],
+        "lean": "R351 PASS; metadata pending regeneration",
+        "negatives": [],
+        "no_new_event": true,
+        "no_new_negative": true,
+        "no_new_result": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "results": []
+      },
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": []
+      },
+      "gate_ids": [
+        "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+        "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+        "PA-CP1-ST8-Q3LOCK-ALL-EXHAUSTION-MIXTURE-L2-LOCALITY-AND-BETA-INDEPENDENT-CSTAR-DYNAMICS",
+        "PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE"
+      ],
+      "id": "EXP-001192",
+      "method": [
+        "Load the EXP-001191 -> EXP-001190 -> EXP-001189 -> EXP-001188 fixture lineage so couplings, graph volumes, oscillator dimensions, beta values and cutoff radii remain inherited rather than recopied.",
+        "Use joint functional calculus for q_0, q_1 and their spectral cutoffs: the scalar pointwise inequality lifts to the commuting configuration algebra, while no kinetic p-term is included in the order statement.",
+        "Recompute the exact local potential shift d=r^2/(4g), the residual 1+4(r/g)^2-8/g, and the fourth-power constant [16(c+lambda)/g]^4 from the inherited inputs.",
+        "Rebuild finite Q3 matrices and form K_pot=I+v(q_0)+v(q_1)+2dI; check the source-edge fourth-power order slack and transfer it through each normalized positive Gibbs trace without commuting rho through the tail.",
+        "Run primary and non-importing independent lanes and compile Lean R351 for the pointwise-to-configuration abstraction and exact rational constants; retain the kinetic, domain, modular and QFT boundary explicitly."
+      ],
+      "next_action": "Derive a kinetic-inclusive local Gibbs moment estimate from the Q3 form, or record an exact route-local obstruction, before inserting the potential order into the two-orientation history recurrence.",
+      "no_overclaim": "Only the commuting configuration-algebra fourth-power order and finite positive-state trace transfer are promoted. Kinetic transfer, uniform Gibbs moments, modular/domain control, direct Cauchy, exhaustion, common alpha, Hamiltonian-OS/KMS/GNS identification, gap, continuum, C6, Sector A and Pre-A remain open.",
+      "open": [
+        "kinetic-inclusive operator domination and a uniform Gibbs potential moment",
+        "unbounded common core, product-domain and modular-domain transfer",
+        "direct D/delta-D Cauchy and two-orientation history insertion",
+        "all-shape exhaustion, common alpha and Hamiltonian-to-OS/KMS/GNS identification",
+        "broken-sector GNS gap, continuum, C6, Sector A and Pre-A"
+      ],
+      "prior_exploration_id": "EXP-001191",
+      "provenance": "contemporaneous",
+      "qft_interface": {
+        "closed": "A source-edge tail^4 <= C K_pot^4 order in the commuting configuration algebra and its finite positive-Gibbs trace transfer, supplying the potential-side input for the Euclidean/OS/KMS tail route.",
+        "open": "Kinetic-inclusive Hamiltonian domination, uniform Gibbs moments, common core and modular transfer, direct history, exhaustion, common alpha, OS/KMS/GNS identification, gap, continuum, C6, Sector A and Pre-A remain open.",
+        "tect_boundary": "Auxiliary C6/Q3 finite evidence only; no heat_root_incidence or canonical A1/R-192 production owner is supplied."
+      },
+      "question": "Does the EXP-001191 scalar source-edge tail envelope lift to an exact fourth-power order in the commuting configuration algebra, and what finite Gibbs trace input does that provide before kinetic transfer?",
+      "recorded_at": "2026-08-29T05:06:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001191",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001190",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001189",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001129",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001127",
+          "relation": "alternative_to"
+        }
+      ],
+      "reviewed_on": "2026-08-27",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Source-local Q3 cutoff-tail configuration-order lift",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",

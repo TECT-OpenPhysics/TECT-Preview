@@ -1,0 +1,488 @@
+{
+  "assertion_count": 21,
+  "assertions": [
+    {
+      "actual": "['EXP-001192', 'T-054']",
+      "expected": "EXP-001192/T-054",
+      "name": "identity",
+      "pass": true
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "name": "claim nonbearing",
+      "pass": true
+    },
+    {
+      "actual": "['7d50d59a98a1ef947fc42d7b8581edac2e3026379238ac979748c9cfdbea4b5a', '99ffc1ac63589a71bb3c3307c171a942cf470b90571034830da0be6c3f255597']",
+      "expected": "distinct SHA-256",
+      "name": "source lanes distinct",
+      "pass": true
+    },
+    {
+      "actual": "['pointwise_to_configuration_order', 'source_tail_constant_fixture', 'source_tail_fourth_fixture']",
+      "expected": "present",
+      "name": "Lean source",
+      "pass": true
+    },
+    {
+      "actual": "[]",
+      "expected": "none",
+      "name": "Lean forbidden",
+      "pass": true
+    },
+    {
+      "actual": "PRIMARY SOURCE-LOCAL-TAIL-CONFIGURATION-ORDER PASS 1327/1327 scalar=1225 matrix=30\n",
+      "expected": "PASS",
+      "name": "primary child",
+      "pass": true
+    },
+    {
+      "actual": "INDEPENDENT SOURCE-LOCAL-TAIL-CONFIGURATION-ORDER PASS 1376/1376 scalar=1225 matrix=30\n",
+      "expected": "PASS",
+      "name": "independent child",
+      "pass": true
+    },
+    {
+      "actual": "[1225, 1225]",
+      "expected": "1225",
+      "name": "scalar coverage",
+      "pass": true
+    },
+    {
+      "actual": "[30, 30]",
+      "expected": "30",
+      "name": "matrix coverage",
+      "pass": true
+    },
+    {
+      "actual": "[]",
+      "expected": "within lane tolerance",
+      "name": "summary agreement",
+      "pass": true
+    },
+    {
+      "actual": "[True, True]",
+      "expected": "True",
+      "name": "commuting_configuration_order_closed",
+      "pass": true
+    },
+    {
+      "actual": "[True, True]",
+      "expected": "True",
+      "name": "finite_potential_order_rows_closed",
+      "pass": true
+    },
+    {
+      "actual": "[True, True]",
+      "expected": "True",
+      "name": "finite_gibbs_potential_trace_transfer_closed",
+      "pass": true
+    },
+    {
+      "actual": "[True, True]",
+      "expected": "True",
+      "name": "source_volume_uniform_potential_constant_closed",
+      "pass": true
+    },
+    {
+      "actual": "[False, False]",
+      "expected": "False",
+      "name": "kinetic_inclusive_operator_order_closed remains open",
+      "pass": true
+    },
+    {
+      "actual": "[False, False]",
+      "expected": "False",
+      "name": "uniform_gibbs_potential_moment_closed remains open",
+      "pass": true
+    },
+    {
+      "actual": "[False, False]",
+      "expected": "False",
+      "name": "unbounded_common_core_closed remains open",
+      "pass": true
+    },
+    {
+      "actual": "[False, False]",
+      "expected": "False",
+      "name": "common_alpha_closed remains open",
+      "pass": true
+    },
+    {
+      "actual": "[False, False]",
+      "expected": "False",
+      "name": "qft_promoted remains open",
+      "pass": true
+    },
+    {
+      "actual": "{'commuting_configuration_order_closed': True, 'finite_potential_order_rows_closed': True, 'finite_gibbs_potential_trace_transfer_closed': True, 'source_volume_uniform_potential_constant_closed': True, 'kinetic_inclusive_operator_order_closed': False, 'uniform_gibbs_potential_moment_closed': False, 'unbounded_common_core_closed': False, 'modular_domain_transfer_closed': False, 'direct_d_delta_d_cauchy_closed': False, 'all_shape_exhaustion_closed': False, 'common_alpha_closed': False, 'hamiltonian_os_identification_closed': False, 'kms_gns_gap_closed': False, 'continuum_closed': False, 'c6_closed': False, 'sector_a_closed': False, 'pre_a_closed': False, 'no_new_negative_result': True, 'no_tier_change': True, 'no_pdf': True}",
+      "expected": "configuration order only",
+      "name": "scope firewall",
+      "pass": true
+    },
+    {
+      "actual": "{'status': 'PASS', 'command': 'lake env lean Tect/R351.lean', 'returncode': 0, 'output': 'Tect/R351.lean:7:5: warning: Variable name `hconstant` is not explicitly referenced.\\n\\nThe binding can be removed (if unused) or named `_` (if used implicitly).\\n\\nNote: This linter can be disabled with `set_option linter.unusedVariables false`'}",
+      "expected": "PASS",
+      "name": "Lean compile",
+      "pass": true
+    }
+  ],
+  "audit_id": "PA-CP1-ST8-Q3LOCK-SOURCE-LOCAL-TAIL-CONFIGURATION-ORDER",
+  "boundary": {
+    "all_shape_exhaustion_closed": false,
+    "c6_closed": false,
+    "common_alpha_closed": false,
+    "commuting_configuration_order_closed": true,
+    "continuum_closed": false,
+    "direct_d_delta_d_cauchy_closed": false,
+    "finite_gibbs_potential_trace_transfer_closed": true,
+    "finite_potential_order_rows_closed": true,
+    "hamiltonian_os_identification_closed": false,
+    "kinetic_inclusive_operator_order_closed": false,
+    "kms_gns_gap_closed": false,
+    "modular_domain_transfer_closed": false,
+    "no_new_negative_result": true,
+    "no_pdf": true,
+    "no_tier_change": true,
+    "pre_a_closed": false,
+    "sector_a_closed": false,
+    "source_volume_uniform_potential_constant_closed": true,
+    "unbounded_common_core_closed": false,
+    "uniform_gibbs_potential_moment_closed": false
+  },
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "derived": {
+    "common_alpha_closed": false,
+    "commuting_configuration_order_closed": true,
+    "finite_gibbs_potential_trace_transfer_closed": true,
+    "finite_potential_order_rows_closed": true,
+    "independent_summary_rows": [
+      {
+        "beta": 0.125,
+        "max_potential_fourth_moment": 3.491078859406437,
+        "max_tail_fourth_moment": 4.9841385598184536,
+        "max_trace_bound": 423864.2108458909,
+        "min_order_slack": 125485.89025997468,
+        "min_trace_slack": 423859.2267073311,
+        "oscillator_dimension": 3,
+        "volume": 2
+      },
+      {
+        "beta": 0.25,
+        "max_potential_fourth_moment": 3.4330426100292564,
+        "max_tail_fourth_moment": 4.31072098881917,
+        "max_trace_bound": 416817.82489089237,
+        "min_order_slack": 125485.89025997468,
+        "min_trace_slack": 416813.51416990353,
+        "oscillator_dimension": 3,
+        "volume": 2
+      },
+      {
+        "beta": 0.5,
+        "max_potential_fourth_moment": 3.2564558402895716,
+        "max_tail_fourth_moment": 3.184388965268901,
+        "max_trace_bound": 395377.8016728942,
+        "min_order_slack": 125485.89025997468,
+        "min_trace_slack": 395374.61728392896,
+        "oscillator_dimension": 3,
+        "volume": 2
+      },
+      {
+        "beta": 1.0,
+        "max_potential_fourth_moment": 2.7598255992272716,
+        "max_tail_fourth_moment": 1.7926482210507462,
+        "max_trace_bound": 335080.1705715828,
+        "min_order_slack": 125485.89025997468,
+        "min_trace_slack": 335078.3779233617,
+        "oscillator_dimension": 3,
+        "volume": 2
+      },
+      {
+        "beta": 2.0,
+        "max_potential_fourth_moment": 1.8783541741538428,
+        "max_tail_fourth_moment": 1.1091667655723398,
+        "max_trace_bound": 228057.61249752186,
+        "min_order_slack": 125485.89025997468,
+        "min_trace_slack": 228056.50333075627,
+        "oscillator_dimension": 3,
+        "volume": 2
+      },
+      {
+        "beta": 0.125,
+        "max_potential_fourth_moment": 3.6219955302776787,
+        "max_tail_fourth_moment": 4.763308815531092,
+        "max_trace_bound": 439759.2661053544,
+        "min_order_slack": 125485.89025997455,
+        "min_trace_slack": 439754.5027965389,
+        "oscillator_dimension": 3,
+        "volume": 4
+      },
+      {
+        "beta": 0.25,
+        "max_potential_fourth_moment": 3.6680136087680353,
+        "max_tail_fourth_moment": 3.943445226986282,
+        "max_trace_bound": 445346.4834984544,
+        "min_order_slack": 125485.89025997455,
+        "min_trace_slack": 445342.5400532274,
+        "oscillator_dimension": 3,
+        "volume": 4
+      },
+      {
+        "beta": 0.5,
+        "max_potential_fourth_moment": 3.6019211795290067,
+        "max_tail_fourth_moment": 2.626095180277007,
+        "max_trace_bound": 437321.9683011518,
+        "min_order_slack": 125485.89025997455,
+        "min_trace_slack": 437319.34220597154,
+        "oscillator_dimension": 3,
+        "volume": 4
+      },
+      {
+        "beta": 1.0,
+        "max_potential_fourth_moment": 2.9272611604150436,
+        "max_tail_fourth_moment": 1.0554760585182108,
+        "max_trace_bound": 355409.11324761854,
+        "min_order_slack": 125485.89025997455,
+        "min_trace_slack": 355408.05777156004,
+        "oscillator_dimension": 3,
+        "volume": 4
+      },
+      {
+        "beta": 2.0,
+        "max_potential_fourth_moment": 1.5415084112101733,
+        "max_tail_fourth_moment": 0.3666552458625367,
+        "max_trace_bound": 187159.97906188646,
+        "min_order_slack": 125485.89025997455,
+        "min_trace_slack": 187159.6124066406,
+        "oscillator_dimension": 3,
+        "volume": 4
+      },
+      {
+        "beta": 0.125,
+        "max_potential_fourth_moment": 3.93388657889661,
+        "max_tail_fourth_moment": 0.012459140181586068,
+        "max_trace_bound": 477627.059563116,
+        "min_order_slack": 477627.03358845576,
+        "min_trace_slack": 477627.04710397584,
+        "oscillator_dimension": 2,
+        "volume": 6
+      },
+      {
+        "beta": 0.25,
+        "max_potential_fourth_moment": 3.933886578896609,
+        "max_tail_fourth_moment": 0.011927505649274316,
+        "max_trace_bound": 477627.0595631159,
+        "min_order_slack": 477627.03358845576,
+        "min_trace_slack": 477627.0476356102,
+        "oscillator_dimension": 2,
+        "volume": 6
+      },
+      {
+        "beta": 0.5,
+        "max_potential_fourth_moment": 3.933886578896609,
+        "max_tail_fourth_moment": 0.010841095951459014,
+        "max_trace_bound": 477627.0595631159,
+        "min_order_slack": 477627.03358845576,
+        "min_trace_slack": 477627.04872201994,
+        "oscillator_dimension": 2,
+        "volume": 6
+      },
+      {
+        "beta": 1.0,
+        "max_potential_fourth_moment": 3.93388657889661,
+        "max_tail_fourth_moment": 0.008518754141875064,
+        "max_trace_bound": 477627.059563116,
+        "min_order_slack": 477627.03358845576,
+        "min_trace_slack": 477627.05104436184,
+        "oscillator_dimension": 2,
+        "volume": 6
+      },
+      {
+        "beta": 2.0,
+        "max_potential_fourth_moment": 3.9338865788966113,
+        "max_tail_fourth_moment": 0.003827014655012391,
+        "max_trace_bound": 477627.0595631161,
+        "min_order_slack": 477627.03358845576,
+        "min_trace_slack": 477627.05573610147,
+        "oscillator_dimension": 2,
+        "volume": 6
+      }
+    ],
+    "kinetic_inclusive_operator_order_closed": false,
+    "primary_summary_rows": [
+      {
+        "beta": 0.125,
+        "max_potential_fourth_moment": 3.491078859406437,
+        "max_tail_fourth_moment": 4.9841385598184536,
+        "max_trace_bound": 423864.2108458909,
+        "min_order_slack": 125485.89025997468,
+        "min_trace_slack": 423859.2267073311,
+        "oscillator_dimension": 3,
+        "volume": 2
+      },
+      {
+        "beta": 0.25,
+        "max_potential_fourth_moment": 3.4330426100292564,
+        "max_tail_fourth_moment": 4.31072098881917,
+        "max_trace_bound": 416817.82489089237,
+        "min_order_slack": 125485.89025997468,
+        "min_trace_slack": 416813.51416990353,
+        "oscillator_dimension": 3,
+        "volume": 2
+      },
+      {
+        "beta": 0.5,
+        "max_potential_fourth_moment": 3.2564558402895716,
+        "max_tail_fourth_moment": 3.184388965268901,
+        "max_trace_bound": 395377.8016728942,
+        "min_order_slack": 125485.89025997468,
+        "min_trace_slack": 395374.61728392896,
+        "oscillator_dimension": 3,
+        "volume": 2
+      },
+      {
+        "beta": 1.0,
+        "max_potential_fourth_moment": 2.7598255992272716,
+        "max_tail_fourth_moment": 1.7926482210507462,
+        "max_trace_bound": 335080.1705715828,
+        "min_order_slack": 125485.89025997468,
+        "min_trace_slack": 335078.3779233617,
+        "oscillator_dimension": 3,
+        "volume": 2
+      },
+      {
+        "beta": 2.0,
+        "max_potential_fourth_moment": 1.8783541741538428,
+        "max_tail_fourth_moment": 1.1091667655723398,
+        "max_trace_bound": 228057.61249752186,
+        "min_order_slack": 125485.89025997468,
+        "min_trace_slack": 228056.50333075627,
+        "oscillator_dimension": 3,
+        "volume": 2
+      },
+      {
+        "beta": 0.125,
+        "max_potential_fourth_moment": 3.6219955302776787,
+        "max_tail_fourth_moment": 4.763308815531092,
+        "max_trace_bound": 439759.2661053544,
+        "min_order_slack": 125485.89025997455,
+        "min_trace_slack": 439754.5027965389,
+        "oscillator_dimension": 3,
+        "volume": 4
+      },
+      {
+        "beta": 0.25,
+        "max_potential_fourth_moment": 3.6680136087680353,
+        "max_tail_fourth_moment": 3.943445226986282,
+        "max_trace_bound": 445346.4834984544,
+        "min_order_slack": 125485.89025997455,
+        "min_trace_slack": 445342.5400532274,
+        "oscillator_dimension": 3,
+        "volume": 4
+      },
+      {
+        "beta": 0.5,
+        "max_potential_fourth_moment": 3.6019211795290067,
+        "max_tail_fourth_moment": 2.626095180277007,
+        "max_trace_bound": 437321.9683011518,
+        "min_order_slack": 125485.89025997455,
+        "min_trace_slack": 437319.34220597154,
+        "oscillator_dimension": 3,
+        "volume": 4
+      },
+      {
+        "beta": 1.0,
+        "max_potential_fourth_moment": 2.9272611604150436,
+        "max_tail_fourth_moment": 1.0554760585182108,
+        "max_trace_bound": 355409.11324761854,
+        "min_order_slack": 125485.89025997455,
+        "min_trace_slack": 355408.05777156004,
+        "oscillator_dimension": 3,
+        "volume": 4
+      },
+      {
+        "beta": 2.0,
+        "max_potential_fourth_moment": 1.5415084112101733,
+        "max_tail_fourth_moment": 0.3666552458625367,
+        "max_trace_bound": 187159.97906188646,
+        "min_order_slack": 125485.89025997455,
+        "min_trace_slack": 187159.6124066406,
+        "oscillator_dimension": 3,
+        "volume": 4
+      },
+      {
+        "beta": 0.125,
+        "max_potential_fourth_moment": 3.93388657889661,
+        "max_tail_fourth_moment": 0.012459140181586068,
+        "max_trace_bound": 477627.059563116,
+        "min_order_slack": 477627.03358845576,
+        "min_trace_slack": 477627.04710397584,
+        "oscillator_dimension": 2,
+        "volume": 6
+      },
+      {
+        "beta": 0.25,
+        "max_potential_fourth_moment": 3.933886578896609,
+        "max_tail_fourth_moment": 0.011927505649274316,
+        "max_trace_bound": 477627.0595631159,
+        "min_order_slack": 477627.03358845576,
+        "min_trace_slack": 477627.0476356102,
+        "oscillator_dimension": 2,
+        "volume": 6
+      },
+      {
+        "beta": 0.5,
+        "max_potential_fourth_moment": 3.933886578896609,
+        "max_tail_fourth_moment": 0.010841095951459014,
+        "max_trace_bound": 477627.0595631159,
+        "min_order_slack": 477627.03358845576,
+        "min_trace_slack": 477627.04872201994,
+        "oscillator_dimension": 2,
+        "volume": 6
+      },
+      {
+        "beta": 1.0,
+        "max_potential_fourth_moment": 3.93388657889661,
+        "max_tail_fourth_moment": 0.008518754141875064,
+        "max_trace_bound": 477627.059563116,
+        "min_order_slack": 477627.03358845576,
+        "min_trace_slack": 477627.05104436184,
+        "oscillator_dimension": 2,
+        "volume": 6
+      },
+      {
+        "beta": 2.0,
+        "max_potential_fourth_moment": 3.9338865788966113,
+        "max_tail_fourth_moment": 0.003827014655012391,
+        "max_trace_bound": 477627.0595631161,
+        "min_order_slack": 477627.03358845576,
+        "min_trace_slack": 477627.05573610147,
+        "oscillator_dimension": 2,
+        "volume": 6
+      }
+    ],
+    "qft_promoted": false,
+    "source_volume_uniform_potential_constant_closed": true,
+    "unbounded_common_core_closed": false,
+    "uniform_gibbs_potential_moment_closed": false
+  },
+  "exploration_id": "EXP-001192",
+  "lean": {
+    "command": "lake env lean Tect/R351.lean",
+    "output": "Tect/R351.lean:7:5: warning: Variable name `hconstant` is not explicitly referenced.\n\nThe binding can be removed (if unused) or named `_` (if used implicitly).\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`",
+    "returncode": 0,
+    "status": "PASS"
+  },
+  "provenance": {
+    "independent_sha256": "99ffc1ac63589a71bb3c3307c171a942cf470b90571034830da0be6c3f255597",
+    "lean_sha256": "dc0f44bc119ccc3514845f4e099476f686be46d82f53eb42dbc0d5f559a2ff7a",
+    "manifest_sha256": "c2e99d93becafbe169383e5787f097a023ced4e86b9d658f29991ee668a7596d",
+    "primary_sha256": "7d50d59a98a1ef947fc42d7b8581edac2e3026379238ac979748c9cfdbea4b5a"
+  },
+  "recorded_at": "2026-08-26T18:31:54.791976Z",
+  "run_kind": "integrated",
+  "schema": "tect/foundation-audit/1.0",
+  "task_id": "T-054",
+  "verdict": "PASS"
+}

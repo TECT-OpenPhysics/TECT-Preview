@@ -1,0 +1,131 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "exploration_id": "EXP-001192",
+  "prior_exploration_id": "EXP-001191",
+  "task_id": "T-054",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "claim_bearing": false,
+  "tier": "T0",
+  "title": "Source-local Q3 cutoff-tail configuration-order lift",
+  "question": "Does the EXP-001191 scalar source-edge tail envelope lift to an exact fourth-power order in the commuting configuration algebra, and what finite Gibbs trace input does that provide before kinetic transfer?",
+  "parent_explorations": [
+    "EXP-001191",
+    "EXP-001190",
+    "EXP-001189"
+  ],
+  "fixture_source": "strategy/pre-a-cp1-st8-q3lock-source-local-tail-scalar-energy-envelope-manifest.json",
+  "mathematical_interface": {
+    "commuting_coordinates": "The source-edge q_0,q_1 and their spectral cutoffs are commuting multiplication coordinates, so pointwise scalar inequalities lift through joint functional calculus.",
+    "potential_weight": "K_pot=I+v(q_0)+v(q_1)+2r^2/(4g)I is positive and commutes with the source-edge tail T.",
+    "order_lift": "The EXP-001191 scalar bound yields T^4 <= [16(c+lambda)/g]^4 K_pot^4 on the configuration algebra and its natural core.",
+    "gibbs_trace": "For every finite positive Gibbs state rho, operator order gives Tr(rho T^4) <= C Tr(rho K_pot^4); no commutation of rho with T or K_pot is required.",
+    "qft_role": "This isolates the remaining QFT step: control of the local potential moment by the kinetic-inclusive Hamiltonian and its common modular domain."
+  },
+  "scope": {
+    "commuting_configuration_order_closed": true,
+    "finite_potential_order_rows_closed": true,
+    "finite_gibbs_potential_trace_transfer_closed": true,
+    "source_volume_uniform_potential_constant_closed": true,
+    "kinetic_inclusive_operator_order_closed": false,
+    "uniform_gibbs_potential_moment_closed": false,
+    "unbounded_common_core_closed": false,
+    "modular_domain_transfer_closed": false,
+    "direct_d_delta_d_cauchy_closed": false,
+    "all_shape_exhaustion_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R351.lean",
+    "command": "lake env lean Tect/R351.lean",
+    "theorem_markers": [
+      "pointwise_to_configuration_order",
+      "source_tail_constant_fixture",
+      "source_tail_fourth_fixture"
+    ],
+    "role": "R351 checks the pointwise-to-configuration order abstraction and exact rational constants; matrix functional calculus, Gibbs traces, kinetic transfer and limits remain Python evidence/open analysis."
+  },
+  "adversarial_review": [
+    {
+      "axis": "joint commutation",
+      "check": "Only q_0,q_1 and their spectral functions are used in the order lift; the kinetic p terms are not treated as commuting.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "tail sign",
+      "check": "The fourth power is formed after the scalar absolute-difference bound, so no monotonicity of the cutoff bond is assumed.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "Gibbs trace",
+      "check": "Trace positivity is used only after the configuration order is established; rho is not commuted through T or K_pot.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "constant provenance",
+      "check": "The factor 56/3 and fourth constant 9834496/81 are recomputed from inherited c, lambda and g, then checked in Lean R351.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "kinetic transfer",
+      "check": "K_pot is not identified with the full H-inclusive weight; the kinetic/noncommutative transfer is explicitly open.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "volume uniformity",
+      "check": "The scalar constant is local and volume independent, while finite potential moments and quotient rows remain regulator diagnostics.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "Lean boundary",
+      "check": "R351 formalizes scalar/order abstraction only; it does not certify unbounded operator domains, Gibbs states or thermodynamic limits.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "QFT promotion",
+      "check": "The configuration-order lift does not close the local Gibbs moment, direct D/delta-D history, common alpha, OS/KMS/GNS identification, gap, continuum, C6, Sector A or Pre-A.",
+      "disposition": "UPHELD-OPEN"
+    }
+  ],
+  "qft_interface": {
+    "closed": "The source-edge scalar tail bound is an exact fourth-power configuration-algebra order, with a finite positive-Gibbs trace transfer to the local potential weight.",
+    "open": "Kinetic-inclusive Hamiltonian domination, uniform Gibbs potential moments, common unbounded core, modular transfer, direct D/delta-D history, exhaustion, common alpha, Hamiltonian-OS/KMS/GNS identification, gap, continuum, C6, Sector A and Pre-A remain open.",
+    "tect_boundary": "Auxiliary C6/Q3 finite evidence only; no heat_root_incidence or canonical A1/R-192 production owner is supplied."
+  },
+  "next_action": "Derive a kinetic-inclusive local Gibbs moment estimate from the Q3 form (or an exact obstruction to the chosen transfer) and only then insert the potential order into the two-orientation history recurrence.",
+  "boundary": "T0 claim-nonbearing commuting-configuration order and finite potential-trace checkpoint. It is not a kinetic operator common-core theorem, a thermodynamic QFT dynamics, a common-alpha theorem, a mass-gap proof, a continuum result, C6, Sector A or Pre-A closure.",
+  "no_overclaim": "Only the configuration-algebra fourth-power order and finite positive-state trace transfer are promoted. Kinetic transfer, uniform Gibbs moments, modular/domain control, direct Cauchy, exhaustion, common alpha, Hamiltonian-OS/KMS/GNS identification, gap, continuum, C6, Sector A and Pre-A remain open.",
+  "finite_test": {
+    "field_values": [
+      -3,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      3
+    ],
+    "contraction_factors": [
+      "-1",
+      "-1/2",
+      "0",
+      "1/2",
+      "1"
+    ],
+    "tail_edge": [
+      0,
+      1
+    ],
+    "description": "Scalar tests use arbitrary contractions u=a x and v=b y with |a|,|b|<=1; matrix tests use the registered smooth spectral cutoff on the source edge only."
+  }
+}
