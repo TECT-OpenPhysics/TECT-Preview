@@ -6991,6 +6991,125 @@
       "task_id": "T-054",
       "title": "Finite Q3 commutator-sum Lie-Trotter defect and two-orientation history bound",
       "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "axis": "cutoff mutation",
+          "check": "Both lanes reconstruct q, p, onsite, bond, and commutator matrices for every declared cutoff; no n=3 row is reused.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "support locality",
+          "check": "Union-support commutators agree with a full tensor embedding at V=2,n=3 within the declared tolerance; disjoint pairs are exactly zero by tensor structure.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "raw versus weighted norm",
+          "check": "All reported coefficients are raw bounded operator norms; no weighted or quadratic-form estimate is smuggled into the result.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "finite data versus asymptotics",
+          "check": "The ratio and monotonicity fields are labelled finite-grid diagnostics; the zero n=2 row is retained and no infinite-cutoff lower bound is asserted.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "source and volume scope",
+          "check": "Only the inherited source fixture and three finite graph volumes are covered; source, beta, volume, exhaustion, and common-alpha uniformity remain open.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "QFT promotion",
+          "check": "The result records a QFT-facing route boundary and does not close a common core, thermodynamic dynamics, OS/KMS/GNS reconstruction, gap, continuum, C6, Sector A, or Pre-A.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "Lean boundary",
+          "check": "Lean R333 checks exact rational bookkeeping only; numerical matrix norms and all analytic promotion gates remain outside Lean and explicitly open.",
+          "disposition": "UPHELD"
+        }
+      ],
+      "boundary": "Finite oscillator cutoffs 2 through 6, volumes 2, 4, and 6, inherited compact-source fixture, fixed horizon 1/3 and N=12 coefficient only. No infinite-cutoff theorem, common unbounded core, direct D/delta-D Cauchy estimate, exhaustion independence, common alpha, OS/KMS/GNS reconstruction, gap, continuum, C6, Sector A, Pre-A, or Clay conclusion.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "The finite audit establishes a reproducible cutoff-scaling table for the exact bounded-matrix coefficient used by EXP-001162. The monotone finite-grid growth, together with the zero two-level commutator caused by the severe truncation, shows that the raw coefficient cannot be carried forward as an unqualified cutoff-independent numerical constant. This is a route-local diagnostic only: it is not an asymptotic divergence theorem and does not decide whether an energy/state-weighted or quadratic-form coefficient can be made uniform.",
+      "evidence_refs": [
+        "strategy/pre-a-cp1-st8-q3lock-finite-trotter-cutoff-scaling-manifest.json#source_fixture",
+        "codes/foundations/pre_a_cp1_st8_q3lock_finite_trotter_cutoff_scaling.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_finite_trotter_cutoff_scaling_independent.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_finite_trotter_cutoff_scaling_verify.py#run",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-primary-pre_a_cp1_st8_q3lock_finite_trotter_cutoff_scaling/primary.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-independent-pre_a_cp1_st8_q3lock_finite_trotter_cutoff_scaling/independent.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-integrated-pre_a_cp1_st8_q3lock_finite_trotter_cutoff_scaling/integrated.json#lean",
+        "verification/lean/Tect/R333.lean#raw_bound_fixture",
+        "verification/lean/registry.json#R333"
+      ],
+      "finding": "Primary and independent lanes each pass 61/61 assertions over 15 volume/cutoff rows; the integrated verifier passes 219/219 with Lean R333 PASS. At every declared volume the raw commutator sum is zero at the two-level truncation, becomes positive at cutoff 3, and is monotone on the finite grid: C_2 grows from 1.6175067619642274 at n=3 to 20.051691329669865 at n=6 (ratio 12.396666153852731), C_4 from 6.4700270478569095 to 80.20676531867952, and C_6 from 11.322547333749593 to 140.36183930768902. The associated fixed N=12 unitary coefficients grow to 0.09283190430402714, 0.37132761721610885, and 0.6498233301281898, while q norm grows by 3.324257433552119 and the maximum local term norm by 19.594303361153024 across n=2 to 6.",
+      "formal_integration": {
+        "events": [],
+        "lean": "R333 PASS; metadata pending regeneration",
+        "negatives": [],
+        "no_new_event": true,
+        "no_new_negative": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "results": []
+      },
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": []
+      },
+      "gate_ids": [
+        "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+        "PA-CP1-ST8-Q3LOCK-ENERGY-WEIGHTED-COMMUTATOR-GEVREY-LR-CLOSURE",
+        "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001163",
+      "method": [
+        "Follow the EXP-001162 manifest chain to the hash-pinned finite Q3 physical fixture and reconstruct truncated oscillator matrices for cutoffs 2, 3, 4, 5, and 6 on volumes 2, 4, and 6.",
+        "Compute every local onsite and bond norm and the exact overlapping-support commutator sum C_V(n), with disjoint supports set to zero and one full tensor embedding checked at the declared reference cutoff.",
+        "Evaluate the fixed-step unitary coefficient h^2 C_V(n)/(2N) and the corresponding unit-norm history coefficient without substituting a cutoff-independent constant.",
+        "Rebuild the calculation in an independent lane, compare all volume/cutoff rows and diagnostics, and compile Lean R333 for exact rational coefficient bookkeeping."
+      ],
+      "next_action": "Replace the raw operator-norm coefficient only with a separately proved energy/state-weighted or quadratic-form estimate on a named common core; test source, beta, volume, and cutoff uniformity before attempting any common-alpha or QFT reconstruction step.",
+      "no_overclaim": "This finite cutoff-scaling audit records a route-local boundary for the raw operator-norm Trotter coefficient. It does not prove asymptotic divergence or uniformity, and it does not prove any QFT, C6, Sector A, Pre-A, or Clay result.",
+      "open": [
+        "cutoff-uniform energy/state-weighted commutator coefficient",
+        "common unbounded operator domain and core density",
+        "actual thermodynamic two-orientation history",
+        "source/beta/volume-uniform direct D and delta-D Cauchy",
+        "exhaustion independence and common alpha",
+        "Hamiltonian-to-OS/KMS/GNS identification",
+        "gap, continuum, C6, Sector A and Pre-A"
+      ],
+      "provenance": "contemporaneous",
+      "qft_interface": {
+        "closed": "A reproducible finite-cutoff table and independent/Lean cross-check establish the behavior of the raw bounded-matrix Trotter coefficient on the inherited Q3 fixture.",
+        "open": "A cutoff-independent raw coefficient, energy/state-weighted replacement, common domain, thermodynamic history, direct D/delta-D Cauchy, exhaustion, common alpha, OS/KMS/GNS, gap, continuum and Pre-A remain open.",
+        "tect_boundary": "Auxiliary C6/Q3 evidence only; no TECT production owner, physical-empty reference or Sector-A closure is supplied."
+      },
+      "question": "When the registered finite Q3 oscillator cutoff is varied at fixed volume and source fixture, how does the raw operator-norm commutator coefficient entering the Lie-Trotter bound scale, and does this finite audit provide a cutoff-independent coefficient?",
+      "recorded_at": "2026-08-29T01:10:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001162",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001161",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-08-26",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Finite Q3 cutoff scaling of the raw commutator-sum Trotter coefficient",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",

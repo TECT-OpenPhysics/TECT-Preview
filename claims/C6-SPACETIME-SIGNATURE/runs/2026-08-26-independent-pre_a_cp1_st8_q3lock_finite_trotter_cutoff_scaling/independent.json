@@ -1,0 +1,819 @@
+{
+  "assertion_count": 61,
+  "assertions": [
+    {
+      "actual": "['EXP-001163', 'T-054', False]",
+      "expected": "EXP-001163/T-054/false",
+      "group": "provenance",
+      "name": "identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "[{'path': 'strategy/pre-a-cp1-st8-q3lock-finite-analytic-trotter-defect-manifest.json', 'sha256': 'af708a0e9f2dba1fc8970e80024ccd54fcdeea26965a947a822bd44064edffa7'}, {'path': 'strategy/pre-a-cp1-st8-q3lock-cubic-multiplier-finite-trotter-convergence-manifest.json', 'sha256': '60124e7f39f9eac2177208eb131f6ce5bd7d9c91aeaca77cccf4173481fbfae5'}, {'path': 'strategy/pre-a-cp1-st8-q3lock-cubic-multiplier-split-history-volterra-manifest.json', 'sha256': '538ce22392f6cd3ba1bc4f7e5682e4c225645f2f0ff2d2017274c7f2fc1d59ff'}, {'path': 'strategy/pre-a-cp1-st8-q3lock-cubic-multiplier-finite-stress-manifest.json', 'sha256': '3ef2893c3d16edf0d558e21c26f7508ed5db03ea0bc77cac040123740d78ed17'}, {'path': 'strategy/pre_a_cp1_st8_q3lock_weighted_triple_commutator_volume_stress_manifest.json', 'sha256': '787429a09faa1535da0394899d1d503fca53d518fdefd88b10614f17568b92a7'}]",
+      "expected": "physical fixture chain present",
+      "group": "provenance",
+      "name": "source chain",
+      "status": "PASS"
+    },
+    {
+      "actual": "['beta_values', 'c', 'chi', 'g', 'hbar', 'lambda', 'manifest', 'oscillator_dimension', 'r', 'source_pairs', 'volume_values']",
+      "expected": "('c', 'chi', 'r', 'g', 'lambda', 'hbar')",
+      "group": "fixture",
+      "name": "physical fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2, 4, 6]",
+      "expected": "registered Q3 graph volumes",
+      "group": "fixture",
+      "name": "graph volumes",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2, 3, 4, 5, 6]",
+      "expected": "declared increasing finite cutoffs",
+      "group": "fixture",
+      "name": "cutoff grid",
+      "status": "PASS"
+    },
+    {
+      "actual": "['1/3', 12]",
+      "expected": "['1/3', '>0']",
+      "group": "fixture",
+      "name": "fixed-step fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'finite_cutoff_scaling_rows_closed': True, 'fixed_volume_growth_diagnostic_closed': True, 'raw_operator_norm_cutoff_uniformity_closed': False, 'raw_operator_norm_route_boundary_recorded': True, 'energy_state_weighted_cutoff_uniform_route_open': True, 'volume_uniform_trotter_bound_closed': False, 'analytic_infinite_dimensional_trotter_rate_closed': False, 'operator_domain_embedding_closed': False, 'actual_q3_thermodynamic_history_closed': False, 'direct_d_cauchy_closed': False, 'delta_d_cauchy_closed': False, 'source_volume_beta_uniformity_closed': False, 'exhaustion_independence_closed': False, 'common_alpha_closed': False, 'hamiltonian_os_identification_closed': False, 'kms_gns_gap_closed': False, 'continuum_closed': False, 'c6_closed': False, 'sector_a_closed': False, 'pre_a_closed': False, 'no_new_negative_result': True, 'no_tier_change': True, 'no_pdf': True}",
+      "expected": "finite scaling only",
+      "group": "scope",
+      "name": "scope firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'volume': 2, 'cutoff': 2, 'local_max_dimension': 4, 'q_norm': 0.7071067811865475, 'p_norm': 0.7071067811865475, 'onsite_norm_max': 0.037499999999999985, 'bond_norm_max': 0.6499999999999998, 'term_norm_max': 0.6499999999999998, 'commutator_sum': 0.0, 'commutator_sum_per_site': 0.0, 'overlap_pair_count': 2, 'max_overlap_commutator': 0.0, 'coarse_fixed_cutoff_envelope': 1.689999999999999, 'unitary_bound_at_step_count': 0.0, 'history_unit_multiplier_coefficient': 0.0}",
+      "expected": "finite",
+      "group": "numeric",
+      "name": "V=2 n=2 finite norms",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": ">1e-08",
+      "group": "commutator",
+      "name": "V=2 n=2 nonnegative commutator",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.0, 1.689999999999999]",
+      "expected": "C_V<=2*overlap*K_n^2",
+      "group": "finite envelope",
+      "name": "V=2 n=2 fixed envelope",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'volume': 2, 'cutoff': 3, 'local_max_dimension': 9, 'q_norm': 1.224744871391589, 'p_norm': 1.224744871391589, 'onsite_norm_max': 0.7196370687355076, 'bond_norm_max': 2.25, 'term_norm_max': 2.25, 'commutator_sum': 1.6175067619642274, 'commutator_sum_per_site': 0.8087533809821137, 'overlap_pair_count': 2, 'max_overlap_commutator': 0.8087533809821138, 'coarse_fixed_cutoff_envelope': 20.25, 'unitary_bound_at_step_count': 0.007488457231315867, 'history_unit_multiplier_coefficient': 0.002288139709568737}",
+      "expected": "finite",
+      "group": "numeric",
+      "name": "V=2 n=3 finite norms",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.6175067619642274",
+      "expected": ">1e-08",
+      "group": "commutator",
+      "name": "V=2 n=3 nonnegative commutator",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.6175067619642274, 20.25]",
+      "expected": "C_V<=2*overlap*K_n^2",
+      "group": "finite envelope",
+      "name": "V=2 n=3 fixed envelope",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'volume': 2, 'cutoff': 4, 'local_max_dimension': 16, 'q_norm': 1.6506801238857844, 'p_norm': 1.6506801238857844, 'onsite_norm_max': 1.236109679265374, 'bond_norm_max': 4.754540768504859, 'term_norm_max': 4.754540768504859, 'commutator_sum': 4.984867703986229, 'commutator_sum_per_site': 2.4924338519931144, 'overlap_pair_count': 2, 'max_overlap_commutator': 2.492433851993115, 'coarse_fixed_cutoff_envelope': 90.42263167749911, 'unitary_bound_at_step_count': 0.023078091222158467, 'history_unit_multiplier_coefficient': 0.007051638984548419}",
+      "expected": "finite",
+      "group": "numeric",
+      "name": "V=2 n=4 finite norms",
+      "status": "PASS"
+    },
+    {
+      "actual": "4.984867703986229",
+      "expected": ">1e-08",
+      "group": "commutator",
+      "name": "V=2 n=4 nonnegative commutator",
+      "status": "PASS"
+    },
+    {
+      "actual": "[4.984867703986229, 90.42263167749911]",
+      "expected": "C_V<=2*overlap*K_n^2",
+      "group": "finite envelope",
+      "name": "V=2 n=4 fixed envelope",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'volume': 2, 'cutoff': 5, 'local_max_dimension': 25, 'q_norm': 2.0201828704560856, 'p_norm': 2.0201828704560856, 'onsite_norm_max': 2.1225925873009825, 'bond_norm_max': 8.228505426185219, 'term_norm_max': 8.228505426185219, 'commutator_sum': 10.888136073744358, 'commutator_sum_per_site': 5.444068036872179, 'overlap_pair_count': 2, 'max_overlap_commutator': 5.44406803687218, 'coarse_fixed_cutoff_envelope': 270.8332061950384, 'unitary_bound_at_step_count': 0.0504080373784461, 'history_unit_multiplier_coefficient': 0.015402455865636305}",
+      "expected": "finite",
+      "group": "numeric",
+      "name": "V=2 n=5 finite norms",
+      "status": "PASS"
+    },
+    {
+      "actual": "10.888136073744358",
+      "expected": ">1e-08",
+      "group": "commutator",
+      "name": "V=2 n=5 nonnegative commutator",
+      "status": "PASS"
+    },
+    {
+      "actual": "[10.888136073744358, 270.8332061950384]",
+      "expected": "C_V<=2*overlap*K_n^2",
+      "group": "finite envelope",
+      "name": "V=2 n=5 fixed envelope",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'volume': 2, 'cutoff': 6, 'local_max_dimension': 36, 'q_norm': 2.350604973674492, 'p_norm': 2.350604973674492, 'onsite_norm_max': 3.499618038575838, 'bond_norm_max': 12.73629718474946, 'term_norm_max': 12.73629718474946, 'commutator_sum': 20.051691329669865, 'commutator_sum_per_site': 10.025845664834932, 'overlap_pair_count': 2, 'max_overlap_commutator': 10.025845664834932, 'coarse_fixed_cutoff_envelope': 648.8530639130281, 'unitary_bound_at_step_count': 0.09283190430402714, 'history_unit_multiplier_coefficient': 0.02836530409289718}",
+      "expected": "finite",
+      "group": "numeric",
+      "name": "V=2 n=6 finite norms",
+      "status": "PASS"
+    },
+    {
+      "actual": "20.051691329669865",
+      "expected": ">1e-08",
+      "group": "commutator",
+      "name": "V=2 n=6 nonnegative commutator",
+      "status": "PASS"
+    },
+    {
+      "actual": "[20.051691329669865, 648.8530639130281]",
+      "expected": "C_V<=2*overlap*K_n^2",
+      "group": "finite envelope",
+      "name": "V=2 n=6 fixed envelope",
+      "status": "PASS"
+    },
+    {
+      "actual": "5",
+      "expected": "5",
+      "group": "coverage",
+      "name": "V=2 row coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.0, 1.6175067619642274, 4.984867703986229, 10.888136073744358, 20.051691329669865]",
+      "expected": "some value >1e-08",
+      "group": "commutator",
+      "name": "V=2 positive commutator somewhere",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'volume': 4, 'cutoff': 2, 'local_max_dimension': 8, 'q_norm': 0.7071067811865475, 'p_norm': 0.7071067811865475, 'onsite_norm_max': 0.037499999999999985, 'bond_norm_max': 0.6499999999999998, 'term_norm_max': 0.6499999999999998, 'commutator_sum': 0.0, 'commutator_sum_per_site': 0.0, 'overlap_pair_count': 12, 'max_overlap_commutator': 0.0, 'coarse_fixed_cutoff_envelope': 10.139999999999993, 'unitary_bound_at_step_count': 0.0, 'history_unit_multiplier_coefficient': 0.0}",
+      "expected": "finite",
+      "group": "numeric",
+      "name": "V=4 n=2 finite norms",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": ">1e-08",
+      "group": "commutator",
+      "name": "V=4 n=2 nonnegative commutator",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.0, 10.139999999999993]",
+      "expected": "C_V<=2*overlap*K_n^2",
+      "group": "finite envelope",
+      "name": "V=4 n=2 fixed envelope",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'volume': 4, 'cutoff': 3, 'local_max_dimension': 27, 'q_norm': 1.224744871391589, 'p_norm': 1.224744871391589, 'onsite_norm_max': 0.7196370687355076, 'bond_norm_max': 2.25, 'term_norm_max': 2.25, 'commutator_sum': 6.4700270478569095, 'commutator_sum_per_site': 1.6175067619642274, 'overlap_pair_count': 12, 'max_overlap_commutator': 0.8087533809821138, 'coarse_fixed_cutoff_envelope': 121.5, 'unitary_bound_at_step_count': 0.02995382892526347, 'history_unit_multiplier_coefficient': 0.009152558838274948}",
+      "expected": "finite",
+      "group": "numeric",
+      "name": "V=4 n=3 finite norms",
+      "status": "PASS"
+    },
+    {
+      "actual": "6.4700270478569095",
+      "expected": ">1e-08",
+      "group": "commutator",
+      "name": "V=4 n=3 nonnegative commutator",
+      "status": "PASS"
+    },
+    {
+      "actual": "[6.4700270478569095, 121.5]",
+      "expected": "C_V<=2*overlap*K_n^2",
+      "group": "finite envelope",
+      "name": "V=4 n=3 fixed envelope",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'volume': 4, 'cutoff': 4, 'local_max_dimension': 64, 'q_norm': 1.6506801238857844, 'p_norm': 1.6506801238857844, 'onsite_norm_max': 1.236109679265374, 'bond_norm_max': 4.754540768504859, 'term_norm_max': 4.754540768504859, 'commutator_sum': 19.939470815944915, 'commutator_sum_per_site': 4.984867703986229, 'overlap_pair_count': 12, 'max_overlap_commutator': 2.492433851993115, 'coarse_fixed_cutoff_envelope': 542.5357900649947, 'unitary_bound_at_step_count': 0.09231236488863387, 'history_unit_multiplier_coefficient': 0.028206555938193677}",
+      "expected": "finite",
+      "group": "numeric",
+      "name": "V=4 n=4 finite norms",
+      "status": "PASS"
+    },
+    {
+      "actual": "19.939470815944915",
+      "expected": ">1e-08",
+      "group": "commutator",
+      "name": "V=4 n=4 nonnegative commutator",
+      "status": "PASS"
+    },
+    {
+      "actual": "[19.939470815944915, 542.5357900649947]",
+      "expected": "C_V<=2*overlap*K_n^2",
+      "group": "finite envelope",
+      "name": "V=4 n=4 fixed envelope",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'volume': 4, 'cutoff': 5, 'local_max_dimension': 125, 'q_norm': 2.0201828704560856, 'p_norm': 2.0201828704560856, 'onsite_norm_max': 2.1225925873009825, 'bond_norm_max': 8.228505426185219, 'term_norm_max': 8.228505426185219, 'commutator_sum': 43.55254429497744, 'commutator_sum_per_site': 10.88813607374436, 'overlap_pair_count': 12, 'max_overlap_commutator': 5.44406803687218, 'coarse_fixed_cutoff_envelope': 1624.9992371702301, 'unitary_bound_at_step_count': 0.20163214951378441, 'history_unit_multiplier_coefficient': 0.061609823462545225}",
+      "expected": "finite",
+      "group": "numeric",
+      "name": "V=4 n=5 finite norms",
+      "status": "PASS"
+    },
+    {
+      "actual": "43.55254429497744",
+      "expected": ">1e-08",
+      "group": "commutator",
+      "name": "V=4 n=5 nonnegative commutator",
+      "status": "PASS"
+    },
+    {
+      "actual": "[43.55254429497744, 1624.9992371702301]",
+      "expected": "C_V<=2*overlap*K_n^2",
+      "group": "finite envelope",
+      "name": "V=4 n=5 fixed envelope",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'volume': 4, 'cutoff': 6, 'local_max_dimension': 216, 'q_norm': 2.350604973674492, 'p_norm': 2.350604973674492, 'onsite_norm_max': 3.499618038575838, 'bond_norm_max': 12.73629718474946, 'term_norm_max': 12.73629718474946, 'commutator_sum': 80.20676531867952, 'commutator_sum_per_site': 20.05169132966988, 'overlap_pair_count': 12, 'max_overlap_commutator': 10.025845664834932, 'coarse_fixed_cutoff_envelope': 3893.1183834781687, 'unitary_bound_at_step_count': 0.37132761721610885, 'history_unit_multiplier_coefficient': 0.11346121637158879}",
+      "expected": "finite",
+      "group": "numeric",
+      "name": "V=4 n=6 finite norms",
+      "status": "PASS"
+    },
+    {
+      "actual": "80.20676531867952",
+      "expected": ">1e-08",
+      "group": "commutator",
+      "name": "V=4 n=6 nonnegative commutator",
+      "status": "PASS"
+    },
+    {
+      "actual": "[80.20676531867952, 3893.1183834781687]",
+      "expected": "C_V<=2*overlap*K_n^2",
+      "group": "finite envelope",
+      "name": "V=4 n=6 fixed envelope",
+      "status": "PASS"
+    },
+    {
+      "actual": "5",
+      "expected": "5",
+      "group": "coverage",
+      "name": "V=4 row coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.0, 6.4700270478569095, 19.939470815944915, 43.55254429497744, 80.20676531867952]",
+      "expected": "some value >1e-08",
+      "group": "commutator",
+      "name": "V=4 positive commutator somewhere",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'volume': 6, 'cutoff': 2, 'local_max_dimension': 8, 'q_norm': 0.7071067811865475, 'p_norm': 0.7071067811865475, 'onsite_norm_max': 0.037499999999999985, 'bond_norm_max': 0.6499999999999998, 'term_norm_max': 0.6499999999999998, 'commutator_sum': 0.0, 'commutator_sum_per_site': 0.0, 'overlap_pair_count': 24, 'max_overlap_commutator': 0.0, 'coarse_fixed_cutoff_envelope': 20.279999999999987, 'unitary_bound_at_step_count': 0.0, 'history_unit_multiplier_coefficient': 0.0}",
+      "expected": "finite",
+      "group": "numeric",
+      "name": "V=6 n=2 finite norms",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": ">1e-08",
+      "group": "commutator",
+      "name": "V=6 n=2 nonnegative commutator",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.0, 20.279999999999987]",
+      "expected": "C_V<=2*overlap*K_n^2",
+      "group": "finite envelope",
+      "name": "V=6 n=2 fixed envelope",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'volume': 6, 'cutoff': 3, 'local_max_dimension': 27, 'q_norm': 1.224744871391589, 'p_norm': 1.224744871391589, 'onsite_norm_max': 0.7196370687355076, 'bond_norm_max': 2.25, 'term_norm_max': 2.25, 'commutator_sum': 11.322547333749593, 'commutator_sum_per_site': 1.887091222291599, 'overlap_pair_count': 24, 'max_overlap_commutator': 0.8087533809821138, 'coarse_fixed_cutoff_envelope': 243.0, 'unitary_bound_at_step_count': 0.05241920061921108, 'history_unit_multiplier_coefficient': 0.01601697796698116}",
+      "expected": "finite",
+      "group": "numeric",
+      "name": "V=6 n=3 finite norms",
+      "status": "PASS"
+    },
+    {
+      "actual": "11.322547333749593",
+      "expected": ">1e-08",
+      "group": "commutator",
+      "name": "V=6 n=3 nonnegative commutator",
+      "status": "PASS"
+    },
+    {
+      "actual": "[11.322547333749593, 243.0]",
+      "expected": "C_V<=2*overlap*K_n^2",
+      "group": "finite envelope",
+      "name": "V=6 n=3 fixed envelope",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'volume': 6, 'cutoff': 4, 'local_max_dimension': 64, 'q_norm': 1.6506801238857844, 'p_norm': 1.6506801238857844, 'onsite_norm_max': 1.236109679265374, 'bond_norm_max': 4.754540768504859, 'term_norm_max': 4.754540768504859, 'commutator_sum': 34.8940739279036, 'commutator_sum_per_site': 5.815678987983933, 'overlap_pair_count': 24, 'max_overlap_commutator': 2.492433851993115, 'coarse_fixed_cutoff_envelope': 1085.0715801299893, 'unitary_bound_at_step_count': 0.16154663855510923, 'history_unit_multiplier_coefficient': 0.04936147289183892}",
+      "expected": "finite",
+      "group": "numeric",
+      "name": "V=6 n=4 finite norms",
+      "status": "PASS"
+    },
+    {
+      "actual": "34.8940739279036",
+      "expected": ">1e-08",
+      "group": "commutator",
+      "name": "V=6 n=4 nonnegative commutator",
+      "status": "PASS"
+    },
+    {
+      "actual": "[34.8940739279036, 1085.0715801299893]",
+      "expected": "C_V<=2*overlap*K_n^2",
+      "group": "finite envelope",
+      "name": "V=6 n=4 fixed envelope",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'volume': 6, 'cutoff': 5, 'local_max_dimension': 125, 'q_norm': 2.0201828704560856, 'p_norm': 2.0201828704560856, 'onsite_norm_max': 2.1225925873009825, 'bond_norm_max': 8.228505426185219, 'term_norm_max': 8.228505426185219, 'commutator_sum': 76.21695251621053, 'commutator_sum_per_site': 12.702825419368422, 'overlap_pair_count': 24, 'max_overlap_commutator': 5.44406803687218, 'coarse_fixed_cutoff_envelope': 3249.9984743404602, 'unitary_bound_at_step_count': 0.3528562616491228, 'history_unit_multiplier_coefficient': 0.10781719105945416}",
+      "expected": "finite",
+      "group": "numeric",
+      "name": "V=6 n=5 finite norms",
+      "status": "PASS"
+    },
+    {
+      "actual": "76.21695251621053",
+      "expected": ">1e-08",
+      "group": "commutator",
+      "name": "V=6 n=5 nonnegative commutator",
+      "status": "PASS"
+    },
+    {
+      "actual": "[76.21695251621053, 3249.9984743404602]",
+      "expected": "C_V<=2*overlap*K_n^2",
+      "group": "finite envelope",
+      "name": "V=6 n=5 fixed envelope",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'volume': 6, 'cutoff': 6, 'local_max_dimension': 216, 'q_norm': 2.350604973674492, 'p_norm': 2.350604973674492, 'onsite_norm_max': 3.499618038575838, 'bond_norm_max': 12.73629718474946, 'term_norm_max': 12.73629718474946, 'commutator_sum': 140.36183930768902, 'commutator_sum_per_site': 23.39363988461484, 'overlap_pair_count': 24, 'max_overlap_commutator': 10.025845664834932, 'coarse_fixed_cutoff_envelope': 7786.236766956337, 'unitary_bound_at_step_count': 0.6498233301281898, 'history_unit_multiplier_coefficient': 0.19855712865028022}",
+      "expected": "finite",
+      "group": "numeric",
+      "name": "V=6 n=6 finite norms",
+      "status": "PASS"
+    },
+    {
+      "actual": "140.36183930768902",
+      "expected": ">1e-08",
+      "group": "commutator",
+      "name": "V=6 n=6 nonnegative commutator",
+      "status": "PASS"
+    },
+    {
+      "actual": "[140.36183930768902, 7786.236766956337]",
+      "expected": "C_V<=2*overlap*K_n^2",
+      "group": "finite envelope",
+      "name": "V=6 n=6 fixed envelope",
+      "status": "PASS"
+    },
+    {
+      "actual": "5",
+      "expected": "5",
+      "group": "coverage",
+      "name": "V=6 row coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.0, 11.322547333749593, 34.8940739279036, 76.21695251621053, 140.36183930768902]",
+      "expected": "some value >1e-08",
+      "group": "commutator",
+      "name": "V=6 positive commutator somewhere",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": "<=1e-08",
+      "group": "locality",
+      "name": "reference tensor localization",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'all_declared_volumes_cross_threshold': True, 'all_declared_volumes_nondecreasing_on_grid': True, 'interpretation': 'finite-grid raw coefficient growth diagnostic; not an asymptotic divergence theorem', 'raw_operator_norm_cutoff_uniformity': 'not established by this audit', 'energy_state_weighted_route': 'open'}",
+      "expected": "finite diagnostic",
+      "group": "scope",
+      "name": "diagnostic is finite-only",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'finite_cutoff_scaling_rows_closed': True, 'fixed_volume_growth_diagnostic_closed': True, 'raw_operator_norm_cutoff_uniformity_closed': False, 'raw_operator_norm_route_boundary_recorded': True, 'energy_state_weighted_cutoff_uniform_route_open': True, 'volume_uniform_trotter_bound_closed': False, 'analytic_infinite_dimensional_trotter_rate_closed': False, 'operator_domain_embedding_closed': False, 'actual_q3_thermodynamic_history_closed': False, 'direct_d_cauchy_closed': False, 'delta_d_cauchy_closed': False, 'source_volume_beta_uniformity_closed': False, 'exhaustion_independence_closed': False, 'common_alpha_closed': False, 'hamiltonian_os_identification_closed': False, 'kms_gns_gap_closed': False, 'continuum_closed': False, 'c6_closed': False, 'sector_a_closed': False, 'pre_a_closed': False, 'no_new_negative_result': True, 'no_tier_change': True, 'no_pdf': True}",
+      "expected": "uniform/domain/QFT gates remain open",
+      "group": "scope",
+      "name": "QFT firewall",
+      "status": "PASS"
+    }
+  ],
+  "audit_id": "PA-CP1-ST8-Q3LOCK-FINITE-TROTTER-CUTOFF-SCALING",
+  "boundary": {
+    "actual_q3_thermodynamic_history_closed": false,
+    "analytic_infinite_dimensional_trotter_rate_closed": false,
+    "c6_closed": false,
+    "common_alpha_closed": false,
+    "continuum_closed": false,
+    "delta_d_cauchy_closed": false,
+    "direct_d_cauchy_closed": false,
+    "energy_state_weighted_cutoff_uniform_route_open": true,
+    "exhaustion_independence_closed": false,
+    "finite_cutoff_scaling_rows_closed": true,
+    "fixed_volume_growth_diagnostic_closed": true,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "no_new_negative_result": true,
+    "no_pdf": true,
+    "no_tier_change": true,
+    "operator_domain_embedding_closed": false,
+    "pre_a_closed": false,
+    "raw_operator_norm_cutoff_uniformity_closed": false,
+    "raw_operator_norm_route_boundary_recorded": true,
+    "sector_a_closed": false,
+    "source_volume_beta_uniformity_closed": false,
+    "volume_uniform_trotter_bound_closed": false
+  },
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "derived": {
+    "diagnostic": {
+      "all_declared_volumes_cross_threshold": true,
+      "all_declared_volumes_nondecreasing_on_grid": true,
+      "energy_state_weighted_route": "open",
+      "interpretation": "finite-grid raw coefficient growth diagnostic; not an asymptotic divergence theorem",
+      "raw_operator_norm_cutoff_uniformity": "not established by this audit"
+    },
+    "energy_state_weighted_cutoff_uniform_route_open": true,
+    "finite_cutoff_scaling_rows_closed": true,
+    "fixed_volume_growth_diagnostic_closed": true,
+    "raw_operator_norm_cutoff_uniformity_closed": false,
+    "raw_operator_norm_route_boundary_recorded": true,
+    "reference_localization_residual": 0.0,
+    "row_count": 15,
+    "rows": [
+      {
+        "bond_norm_max": 0.6499999999999998,
+        "coarse_fixed_cutoff_envelope": 1.689999999999999,
+        "commutator_sum": 0.0,
+        "commutator_sum_per_site": 0.0,
+        "cutoff": 2,
+        "history_unit_multiplier_coefficient": 0.0,
+        "local_max_dimension": 4,
+        "max_overlap_commutator": 0.0,
+        "onsite_norm_max": 0.037499999999999985,
+        "overlap_pair_count": 2,
+        "p_norm": 0.7071067811865475,
+        "q_norm": 0.7071067811865475,
+        "term_norm_max": 0.6499999999999998,
+        "unitary_bound_at_step_count": 0.0,
+        "volume": 2
+      },
+      {
+        "bond_norm_max": 2.25,
+        "coarse_fixed_cutoff_envelope": 20.25,
+        "commutator_sum": 1.6175067619642274,
+        "commutator_sum_per_site": 0.8087533809821137,
+        "cutoff": 3,
+        "history_unit_multiplier_coefficient": 0.002288139709568737,
+        "local_max_dimension": 9,
+        "max_overlap_commutator": 0.8087533809821138,
+        "onsite_norm_max": 0.7196370687355076,
+        "overlap_pair_count": 2,
+        "p_norm": 1.224744871391589,
+        "q_norm": 1.224744871391589,
+        "term_norm_max": 2.25,
+        "unitary_bound_at_step_count": 0.007488457231315867,
+        "volume": 2
+      },
+      {
+        "bond_norm_max": 4.754540768504859,
+        "coarse_fixed_cutoff_envelope": 90.42263167749911,
+        "commutator_sum": 4.984867703986229,
+        "commutator_sum_per_site": 2.4924338519931144,
+        "cutoff": 4,
+        "history_unit_multiplier_coefficient": 0.007051638984548419,
+        "local_max_dimension": 16,
+        "max_overlap_commutator": 2.492433851993115,
+        "onsite_norm_max": 1.236109679265374,
+        "overlap_pair_count": 2,
+        "p_norm": 1.6506801238857844,
+        "q_norm": 1.6506801238857844,
+        "term_norm_max": 4.754540768504859,
+        "unitary_bound_at_step_count": 0.023078091222158467,
+        "volume": 2
+      },
+      {
+        "bond_norm_max": 8.228505426185219,
+        "coarse_fixed_cutoff_envelope": 270.8332061950384,
+        "commutator_sum": 10.888136073744358,
+        "commutator_sum_per_site": 5.444068036872179,
+        "cutoff": 5,
+        "history_unit_multiplier_coefficient": 0.015402455865636305,
+        "local_max_dimension": 25,
+        "max_overlap_commutator": 5.44406803687218,
+        "onsite_norm_max": 2.1225925873009825,
+        "overlap_pair_count": 2,
+        "p_norm": 2.0201828704560856,
+        "q_norm": 2.0201828704560856,
+        "term_norm_max": 8.228505426185219,
+        "unitary_bound_at_step_count": 0.0504080373784461,
+        "volume": 2
+      },
+      {
+        "bond_norm_max": 12.73629718474946,
+        "coarse_fixed_cutoff_envelope": 648.8530639130281,
+        "commutator_sum": 20.051691329669865,
+        "commutator_sum_per_site": 10.025845664834932,
+        "cutoff": 6,
+        "history_unit_multiplier_coefficient": 0.02836530409289718,
+        "local_max_dimension": 36,
+        "max_overlap_commutator": 10.025845664834932,
+        "onsite_norm_max": 3.499618038575838,
+        "overlap_pair_count": 2,
+        "p_norm": 2.350604973674492,
+        "q_norm": 2.350604973674492,
+        "term_norm_max": 12.73629718474946,
+        "unitary_bound_at_step_count": 0.09283190430402714,
+        "volume": 2
+      },
+      {
+        "bond_norm_max": 0.6499999999999998,
+        "coarse_fixed_cutoff_envelope": 10.139999999999993,
+        "commutator_sum": 0.0,
+        "commutator_sum_per_site": 0.0,
+        "cutoff": 2,
+        "history_unit_multiplier_coefficient": 0.0,
+        "local_max_dimension": 8,
+        "max_overlap_commutator": 0.0,
+        "onsite_norm_max": 0.037499999999999985,
+        "overlap_pair_count": 12,
+        "p_norm": 0.7071067811865475,
+        "q_norm": 0.7071067811865475,
+        "term_norm_max": 0.6499999999999998,
+        "unitary_bound_at_step_count": 0.0,
+        "volume": 4
+      },
+      {
+        "bond_norm_max": 2.25,
+        "coarse_fixed_cutoff_envelope": 121.5,
+        "commutator_sum": 6.4700270478569095,
+        "commutator_sum_per_site": 1.6175067619642274,
+        "cutoff": 3,
+        "history_unit_multiplier_coefficient": 0.009152558838274948,
+        "local_max_dimension": 27,
+        "max_overlap_commutator": 0.8087533809821138,
+        "onsite_norm_max": 0.7196370687355076,
+        "overlap_pair_count": 12,
+        "p_norm": 1.224744871391589,
+        "q_norm": 1.224744871391589,
+        "term_norm_max": 2.25,
+        "unitary_bound_at_step_count": 0.02995382892526347,
+        "volume": 4
+      },
+      {
+        "bond_norm_max": 4.754540768504859,
+        "coarse_fixed_cutoff_envelope": 542.5357900649947,
+        "commutator_sum": 19.939470815944915,
+        "commutator_sum_per_site": 4.984867703986229,
+        "cutoff": 4,
+        "history_unit_multiplier_coefficient": 0.028206555938193677,
+        "local_max_dimension": 64,
+        "max_overlap_commutator": 2.492433851993115,
+        "onsite_norm_max": 1.236109679265374,
+        "overlap_pair_count": 12,
+        "p_norm": 1.6506801238857844,
+        "q_norm": 1.6506801238857844,
+        "term_norm_max": 4.754540768504859,
+        "unitary_bound_at_step_count": 0.09231236488863387,
+        "volume": 4
+      },
+      {
+        "bond_norm_max": 8.228505426185219,
+        "coarse_fixed_cutoff_envelope": 1624.9992371702301,
+        "commutator_sum": 43.55254429497744,
+        "commutator_sum_per_site": 10.88813607374436,
+        "cutoff": 5,
+        "history_unit_multiplier_coefficient": 0.061609823462545225,
+        "local_max_dimension": 125,
+        "max_overlap_commutator": 5.44406803687218,
+        "onsite_norm_max": 2.1225925873009825,
+        "overlap_pair_count": 12,
+        "p_norm": 2.0201828704560856,
+        "q_norm": 2.0201828704560856,
+        "term_norm_max": 8.228505426185219,
+        "unitary_bound_at_step_count": 0.20163214951378441,
+        "volume": 4
+      },
+      {
+        "bond_norm_max": 12.73629718474946,
+        "coarse_fixed_cutoff_envelope": 3893.1183834781687,
+        "commutator_sum": 80.20676531867952,
+        "commutator_sum_per_site": 20.05169132966988,
+        "cutoff": 6,
+        "history_unit_multiplier_coefficient": 0.11346121637158879,
+        "local_max_dimension": 216,
+        "max_overlap_commutator": 10.025845664834932,
+        "onsite_norm_max": 3.499618038575838,
+        "overlap_pair_count": 12,
+        "p_norm": 2.350604973674492,
+        "q_norm": 2.350604973674492,
+        "term_norm_max": 12.73629718474946,
+        "unitary_bound_at_step_count": 0.37132761721610885,
+        "volume": 4
+      },
+      {
+        "bond_norm_max": 0.6499999999999998,
+        "coarse_fixed_cutoff_envelope": 20.279999999999987,
+        "commutator_sum": 0.0,
+        "commutator_sum_per_site": 0.0,
+        "cutoff": 2,
+        "history_unit_multiplier_coefficient": 0.0,
+        "local_max_dimension": 8,
+        "max_overlap_commutator": 0.0,
+        "onsite_norm_max": 0.037499999999999985,
+        "overlap_pair_count": 24,
+        "p_norm": 0.7071067811865475,
+        "q_norm": 0.7071067811865475,
+        "term_norm_max": 0.6499999999999998,
+        "unitary_bound_at_step_count": 0.0,
+        "volume": 6
+      },
+      {
+        "bond_norm_max": 2.25,
+        "coarse_fixed_cutoff_envelope": 243.0,
+        "commutator_sum": 11.322547333749593,
+        "commutator_sum_per_site": 1.887091222291599,
+        "cutoff": 3,
+        "history_unit_multiplier_coefficient": 0.01601697796698116,
+        "local_max_dimension": 27,
+        "max_overlap_commutator": 0.8087533809821138,
+        "onsite_norm_max": 0.7196370687355076,
+        "overlap_pair_count": 24,
+        "p_norm": 1.224744871391589,
+        "q_norm": 1.224744871391589,
+        "term_norm_max": 2.25,
+        "unitary_bound_at_step_count": 0.05241920061921108,
+        "volume": 6
+      },
+      {
+        "bond_norm_max": 4.754540768504859,
+        "coarse_fixed_cutoff_envelope": 1085.0715801299893,
+        "commutator_sum": 34.8940739279036,
+        "commutator_sum_per_site": 5.815678987983933,
+        "cutoff": 4,
+        "history_unit_multiplier_coefficient": 0.04936147289183892,
+        "local_max_dimension": 64,
+        "max_overlap_commutator": 2.492433851993115,
+        "onsite_norm_max": 1.236109679265374,
+        "overlap_pair_count": 24,
+        "p_norm": 1.6506801238857844,
+        "q_norm": 1.6506801238857844,
+        "term_norm_max": 4.754540768504859,
+        "unitary_bound_at_step_count": 0.16154663855510923,
+        "volume": 6
+      },
+      {
+        "bond_norm_max": 8.228505426185219,
+        "coarse_fixed_cutoff_envelope": 3249.9984743404602,
+        "commutator_sum": 76.21695251621053,
+        "commutator_sum_per_site": 12.702825419368422,
+        "cutoff": 5,
+        "history_unit_multiplier_coefficient": 0.10781719105945416,
+        "local_max_dimension": 125,
+        "max_overlap_commutator": 5.44406803687218,
+        "onsite_norm_max": 2.1225925873009825,
+        "overlap_pair_count": 24,
+        "p_norm": 2.0201828704560856,
+        "q_norm": 2.0201828704560856,
+        "term_norm_max": 8.228505426185219,
+        "unitary_bound_at_step_count": 0.3528562616491228,
+        "volume": 6
+      },
+      {
+        "bond_norm_max": 12.73629718474946,
+        "coarse_fixed_cutoff_envelope": 7786.236766956337,
+        "commutator_sum": 140.36183930768902,
+        "commutator_sum_per_site": 23.39363988461484,
+        "cutoff": 6,
+        "history_unit_multiplier_coefficient": 0.19855712865028022,
+        "local_max_dimension": 216,
+        "max_overlap_commutator": 10.025845664834932,
+        "onsite_norm_max": 3.499618038575838,
+        "overlap_pair_count": 24,
+        "p_norm": 2.350604973674492,
+        "q_norm": 2.350604973674492,
+        "term_norm_max": 12.73629718474946,
+        "unitary_bound_at_step_count": 0.6498233301281898,
+        "volume": 6
+      }
+    ],
+    "source_chain": [
+      {
+        "path": "strategy/pre-a-cp1-st8-q3lock-finite-analytic-trotter-defect-manifest.json",
+        "sha256": "af708a0e9f2dba1fc8970e80024ccd54fcdeea26965a947a822bd44064edffa7"
+      },
+      {
+        "path": "strategy/pre-a-cp1-st8-q3lock-cubic-multiplier-finite-trotter-convergence-manifest.json",
+        "sha256": "60124e7f39f9eac2177208eb131f6ce5bd7d9c91aeaca77cccf4173481fbfae5"
+      },
+      {
+        "path": "strategy/pre-a-cp1-st8-q3lock-cubic-multiplier-split-history-volterra-manifest.json",
+        "sha256": "538ce22392f6cd3ba1bc4f7e5682e4c225645f2f0ff2d2017274c7f2fc1d59ff"
+      },
+      {
+        "path": "strategy/pre-a-cp1-st8-q3lock-cubic-multiplier-finite-stress-manifest.json",
+        "sha256": "3ef2893c3d16edf0d558e21c26f7508ed5db03ea0bc77cac040123740d78ed17"
+      },
+      {
+        "path": "strategy/pre_a_cp1_st8_q3lock_weighted_triple_commutator_volume_stress_manifest.json",
+        "sha256": "787429a09faa1535da0394899d1d503fca53d518fdefd88b10614f17568b92a7"
+      }
+    ],
+    "volume_summaries": [
+      {
+        "commutator_growth_ratio_from_first_positive": 12.396666153852731,
+        "commutator_nondecreasing_on_grid": true,
+        "commutator_sum_first": 0.0,
+        "commutator_sum_last": 20.051691329669865,
+        "first_cutoff": 2,
+        "first_positive_cutoff": 3,
+        "growth_ratio_threshold": 1.05,
+        "growth_threshold_crossed": true,
+        "history_coefficient_first": 0.0,
+        "history_coefficient_last": 0.02836530409289718,
+        "last_cutoff": 6,
+        "q_norm_growth_ratio": 3.324257433552119,
+        "row_count": 5,
+        "term_norm_growth_ratio": 19.594303361153024,
+        "unitary_bound_first": 0.0,
+        "unitary_bound_last": 0.09283190430402714,
+        "volume": 2
+      },
+      {
+        "commutator_growth_ratio_from_first_positive": 12.39666615385274,
+        "commutator_nondecreasing_on_grid": true,
+        "commutator_sum_first": 0.0,
+        "commutator_sum_last": 80.20676531867952,
+        "first_cutoff": 2,
+        "first_positive_cutoff": 3,
+        "growth_ratio_threshold": 1.05,
+        "growth_threshold_crossed": true,
+        "history_coefficient_first": 0.0,
+        "history_coefficient_last": 0.11346121637158879,
+        "last_cutoff": 6,
+        "q_norm_growth_ratio": 3.324257433552119,
+        "row_count": 5,
+        "term_norm_growth_ratio": 19.594303361153024,
+        "unitary_bound_first": 0.0,
+        "unitary_bound_last": 0.37132761721610885,
+        "volume": 4
+      },
+      {
+        "commutator_growth_ratio_from_first_positive": 12.396666153852728,
+        "commutator_nondecreasing_on_grid": true,
+        "commutator_sum_first": 0.0,
+        "commutator_sum_last": 140.36183930768902,
+        "first_cutoff": 2,
+        "first_positive_cutoff": 3,
+        "growth_ratio_threshold": 1.05,
+        "growth_threshold_crossed": true,
+        "history_coefficient_first": 0.0,
+        "history_coefficient_last": 0.19855712865028022,
+        "last_cutoff": 6,
+        "q_norm_growth_ratio": 3.324257433552119,
+        "row_count": 5,
+        "term_norm_growth_ratio": 19.594303361153024,
+        "unitary_bound_first": 0.0,
+        "unitary_bound_last": 0.6498233301281898,
+        "volume": 6
+      }
+    ]
+  },
+  "exploration_id": "EXP-001163",
+  "passed": 61,
+  "run_kind": "independent",
+  "schema": "tect/foundation-audit/1.0",
+  "task_id": "T-054",
+  "verdict": "PASS"
+}

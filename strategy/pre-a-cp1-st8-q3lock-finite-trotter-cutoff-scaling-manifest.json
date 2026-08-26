@@ -1,0 +1,130 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-FINITE-TROTTER-CUTOFF-SCALING-v0",
+  "title": "Finite Q3 cutoff scaling of the raw commutator-sum Trotter coefficient",
+  "task_id": "T-054",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "exploration_id": "EXP-001163",
+  "claim_bearing": false,
+  "parent_explorations": [
+    "EXP-001162",
+    "EXP-001161"
+  ],
+  "parent_authorities": [
+    "strategy/pre-a-cp1-st8-q3lock-finite-analytic-trotter-defect-manifest.json",
+    "strategy/pre-a-cp1-st8-q3lock-cubic-multiplier-finite-trotter-convergence-manifest.json",
+    "strategy/pre-a-cp1-st8-q3lock-cubic-multiplier-finite-stress-manifest.json"
+  ],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-ENERGY-WEIGHTED-COMMUTATOR-GEVREY-LR-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "question": "When the registered finite Q3 oscillator cutoff is varied at fixed volume and source fixture, how does the raw operator-norm commutator coefficient entering the Lie-Trotter bound scale, and does this finite audit provide a cutoff-independent coefficient?",
+  "source_fixture": {
+    "manifest": "strategy/pre-a-cp1-st8-q3lock-finite-analytic-trotter-defect-manifest.json",
+    "volume_values": [
+      2,
+      4,
+      6
+    ],
+    "cutoff_values": [
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "reference_embedding": {
+      "volume": 2,
+      "cutoff": 3
+    }
+  },
+  "audit_fixture": {
+    "horizon": "1/3",
+    "step_count": 12,
+    "weight_ratio_per_edge": "1/16",
+    "multiplier_power": "3/4",
+    "growth_ratio_threshold": 1.05,
+    "commutator_floor": 1e-08,
+    "localization_tolerance": 1e-08,
+    "finite_only": true
+  },
+  "scope": {
+    "finite_cutoff_scaling_rows_closed": true,
+    "fixed_volume_growth_diagnostic_closed": true,
+    "raw_operator_norm_cutoff_uniformity_closed": false,
+    "raw_operator_norm_route_boundary_recorded": true,
+    "energy_state_weighted_cutoff_uniform_route_open": true,
+    "volume_uniform_trotter_bound_closed": false,
+    "analytic_infinite_dimensional_trotter_rate_closed": false,
+    "operator_domain_embedding_closed": false,
+    "actual_q3_thermodynamic_history_closed": false,
+    "direct_d_cauchy_closed": false,
+    "delta_d_cauchy_closed": false,
+    "source_volume_beta_uniformity_closed": false,
+    "exhaustion_independence_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "adversarial_review": [
+    {
+      "axis": "cutoff mutation",
+      "check": "Each row reconstructs the oscillator and every local Q3 term from the declared cutoff; no n=3 value is reused as a derived number.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "support locality",
+      "check": "Overlapping commutators are evaluated on their union support and disjoint supports are exactly zero; one full tensor embedding is checked against the local norm.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "raw versus weighted norm",
+      "check": "The coefficient is explicitly the bounded raw operator-norm coefficient; no energy/state-weighted estimate is silently substituted or promoted.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "finite data versus asymptotics",
+      "check": "Growth ratios and monotonicity are diagnostics over the declared finite cutoff list only; they are not an asymptotic divergence theorem.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "source and volume scope",
+      "check": "The physical fixture and graph volumes are inherited by manifest chain; no source, beta, volume, or exhaustion uniformity is inferred.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "QFT promotion",
+      "check": "Finite cutoff rows do not establish a common unbounded domain, thermodynamic histories, OS/KMS/GNS reconstruction, a gap, continuum, C6, Sector A, or Pre-A closure.",
+      "disposition": "UPHELD-OPEN"
+    }
+  ],
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R333.lean",
+    "theorem_markers": [
+      "raw_bound_fixture",
+      "cutoff_ratio_fixture",
+      "history_coefficient_fixture",
+      "scope_fixture"
+    ],
+    "command": "lake env lean Tect/R333.lean",
+    "boundary": "Lean checks exact rational scaling bookkeeping and the fixed-step coefficient identity; matrix norms, cutoff asymptotics, unbounded domains and all QFT limits remain Python/open analysis."
+  },
+  "qft_interface": {
+    "closed": "A reproducible finite-cutoff table for the raw commutator-sum coefficient and its induced fixed-step Trotter/history coefficients is obtained for the inherited Q3 fixture.",
+    "open": "A cutoff-independent raw operator-norm coefficient, energy/state-weighted replacement, common domain, thermodynamic history, direct D/delta-D Cauchy, exhaustion, common alpha, OS/KMS/GNS, gap, continuum and Pre-A remain open.",
+    "tect_boundary": "Auxiliary C6/Q3 evidence only; no TECT production owner, physical-empty reference or Sector-A closure is supplied."
+  },
+  "no_overclaim": "This package is a finite cutoff-scaling audit. It records a route-local boundary for the raw bounded-operator-norm coefficient and does not prove its infinite-cutoff behavior or any QFT, C6, Sector A, Pre-A, or Clay result."
+}
