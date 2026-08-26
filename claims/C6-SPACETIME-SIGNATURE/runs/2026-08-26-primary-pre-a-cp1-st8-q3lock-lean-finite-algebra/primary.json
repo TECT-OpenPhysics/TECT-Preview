@@ -1,0 +1,152 @@
+{
+  "assertion_count": 10,
+  "assertions": [
+    {
+      "actual": [
+        "EXP-001177",
+        "T-054"
+      ],
+      "expected": "EXP-001177/T-054",
+      "group": "provenance",
+      "name": "identity",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        false,
+        false
+      ],
+      "expected": "nonbearing/open",
+      "group": "scope",
+      "name": "claim firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "no Hangul",
+      "group": "source",
+      "name": "source language",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "none",
+      "group": "source",
+      "name": "forbidden tokens",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "finite_trace_cyclicity",
+        "finite_thermal_four_cycle",
+        "finite_os_gram_real_possemidef",
+        "finite_transfer_scope"
+      ],
+      "expected": [
+        "finite_trace_cyclicity",
+        "finite_thermal_four_cycle",
+        "finite_os_gram_real_possemidef",
+        "finite_transfer_scope"
+      ],
+      "group": "source",
+      "name": "theorem markers",
+      "status": "PASS"
+    },
+    {
+      "actual": "verification/lean/Tect/R338.lean",
+      "expected": "verification/lean/Tect/R338.lean",
+      "group": "registry",
+      "name": "registry entry",
+      "status": "PASS"
+    },
+    {
+      "actual": "95b013150f62469b143aee4e99e8ac2284fa3a714e1bf9be09a6fdff561ba181",
+      "expected": "95b013150f62469b143aee4e99e8ac2284fa3a714e1bf9be09a6fdff561ba181",
+      "group": "registry",
+      "name": "registry hash",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "finite_trace_cyclicity",
+        "finite_thermal_four_cycle",
+        "finite_os_gram_real_possemidef",
+        "finite_transfer_scope"
+      ],
+      "expected": [
+        "finite_trace_cyclicity",
+        "finite_thermal_four_cycle",
+        "finite_os_gram_real_possemidef",
+        "finite_transfer_scope"
+      ],
+      "group": "registry",
+      "name": "registry declarations",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "c6_closed": false,
+        "common_alpha_closed": false,
+        "continuum_closed": false,
+        "hamiltonian_os_identification_closed": false,
+        "kms_gns_gap_closed": false,
+        "pre_a_closed": false,
+        "sector_a_closed": false
+      },
+      "expected": "all downstream QFT gates open",
+      "group": "scope",
+      "name": "scope firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "real_gram_possemidef": "finite_os_gram_real_possemidef",
+        "scope_fixture": "finite_transfer_scope",
+        "thermal_four_cycle": "finite_thermal_four_cycle",
+        "trace_cyclicity": "finite_trace_cyclicity"
+      },
+      "expected": [
+        "finite_trace_cyclicity",
+        "finite_thermal_four_cycle",
+        "finite_os_gram_real_possemidef",
+        "finite_transfer_scope"
+      ],
+      "group": "formal",
+      "name": "formal identity set",
+      "status": "PASS"
+    }
+  ],
+  "audit_id": "PA-CP1-ST8-Q3LOCK-LEAN-FINITE-ALGEBRA",
+  "boundary": "T0 claim-nonbearing formal finite-algebra cross-check. It is not an analytic theorem, thermodynamic limit, mass-gap proof, continuum result, TECT claim closure, or Clay result.",
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "exploration_id": "EXP-001177",
+  "formal_checks": {
+    "real_gram_possemidef": "finite_os_gram_real_possemidef",
+    "scope_fixture": "finite_transfer_scope",
+    "thermal_four_cycle": "finite_thermal_four_cycle",
+    "trace_cyclicity": "finite_trace_cyclicity"
+  },
+  "passed": 10,
+  "run_kind": "primary",
+  "schema": "tect/foundation-audit/1.0",
+  "scope": {
+    "c6_closed": false,
+    "common_alpha_closed": false,
+    "common_word_exhaustion_closed": false,
+    "continuum_closed": false,
+    "finite_os_gram_real_closed": true,
+    "finite_thermal_cyclicity_closed": true,
+    "finite_trace_cyclicity_closed": true,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "lean_entrypoint_registered": true,
+    "no_new_negative_result": true,
+    "no_pdf": true,
+    "no_tier_change": true,
+    "pre_a_closed": false,
+    "sector_a_closed": false
+  },
+  "source_sha256": "95b013150f62469b143aee4e99e8ac2284fa3a714e1bf9be09a6fdff561ba181",
+  "task_id": "T-054",
+  "verdict": "PASS"
+}

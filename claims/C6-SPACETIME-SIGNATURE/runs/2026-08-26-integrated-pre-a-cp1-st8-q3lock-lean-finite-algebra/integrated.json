@@ -1,0 +1,150 @@
+{
+  "assertion_count": 10,
+  "assertions": [
+    {
+      "actual": [
+        "EXP-001177",
+        "T-054"
+      ],
+      "expected": "EXP-001177/T-054",
+      "name": "identity",
+      "pass": true
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "claim nonbearing",
+      "pass": true
+    },
+    {
+      "actual": {
+        "c6_closed": false,
+        "common_alpha_closed": false,
+        "common_word_exhaustion_closed": false,
+        "continuum_closed": false,
+        "finite_os_gram_real_closed": true,
+        "finite_thermal_cyclicity_closed": true,
+        "finite_trace_cyclicity_closed": true,
+        "hamiltonian_os_identification_closed": false,
+        "kms_gns_gap_closed": false,
+        "lean_entrypoint_registered": true,
+        "no_new_negative_result": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "pre_a_closed": false,
+        "sector_a_closed": false
+      },
+      "expected": "finite algebra only",
+      "name": "scope firewall",
+      "pass": true
+    },
+    {
+      "actual": "PRIMARY LEAN-FINITE-ALGEBRA PASS 10/10 markers=4\n",
+      "expected": "PASS",
+      "name": "primary child",
+      "pass": true
+    },
+    {
+      "actual": "INDEPENDENT LEAN-FINITE-ALGEBRA PASS 9/9 markers=4\n",
+      "expected": "PASS",
+      "name": "independent child",
+      "pass": true
+    },
+    {
+      "actual": [
+        [
+          "finite_os_gram_real_possemidef",
+          "finite_transfer_scope",
+          "finite_thermal_four_cycle",
+          "finite_trace_cyclicity"
+        ],
+        [
+          "finite_trace_cyclicity",
+          "finite_thermal_four_cycle",
+          "finite_os_gram_real_possemidef",
+          "finite_transfer_scope"
+        ]
+      ],
+      "expected": "same marker set",
+      "name": "formal crosscheck",
+      "pass": true
+    },
+    {
+      "actual": [
+        "95b013150f62469b143aee4e99e8ac2284fa3a714e1bf9be09a6fdff561ba181",
+        "95b013150f62469b143aee4e99e8ac2284fa3a714e1bf9be09a6fdff561ba181"
+      ],
+      "expected": "equal",
+      "name": "source hash agreement",
+      "pass": true
+    },
+    {
+      "actual": "same finite/open flags",
+      "expected": "equal",
+      "name": "scope agreement",
+      "pass": true
+    },
+    {
+      "actual": {
+        "command": "lake env lean Tect/R338.lean",
+        "output": "",
+        "returncode": 0,
+        "status": "PASS"
+      },
+      "expected": "PASS",
+      "name": "Lean compile",
+      "pass": true
+    },
+    {
+      "actual": "95b013150f62469b143aee4e99e8ac2284fa3a714e1bf9be09a6fdff561ba181",
+      "expected": "95b013150f62469b143aee4e99e8ac2284fa3a714e1bf9be09a6fdff561ba181",
+      "name": "registry integrity",
+      "pass": true
+    }
+  ],
+  "audit_id": "PA-CP1-ST8-Q3LOCK-LEAN-FINITE-ALGEBRA",
+  "boundary": "T0 claim-nonbearing formal finite-algebra cross-check. It is not an analytic theorem, thermodynamic limit, mass-gap proof, continuum result, TECT claim closure, or Clay result.",
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "exploration_id": "EXP-001177",
+  "formal_checks": [
+    "finite_trace_cyclicity",
+    "finite_thermal_four_cycle",
+    "finite_os_gram_real_possemidef",
+    "finite_transfer_scope"
+  ],
+  "lean": {
+    "command": "lake env lean Tect/R338.lean",
+    "output": "",
+    "returncode": 0,
+    "status": "PASS"
+  },
+  "provenance": {
+    "independent_sha256": "e153c89c22f3c4800134a0b7427a50de76d563efc4f7d14e446b7d81629e9a3a",
+    "lean_sha256": "95b013150f62469b143aee4e99e8ac2284fa3a714e1bf9be09a6fdff561ba181",
+    "manifest_sha256": "8daa2b42db2672a9582cef156cdef2c77026d9e1766ae5ea43ffb92f7e2007b4",
+    "primary_sha256": "3419d5b914db3cde7e025974a07945eb460cbeb3e226f9fa4e24c6f6c3cfe5c6",
+    "registry_sha256": "fe7789e406e87d1bdbb04b03033a8ef0518dd903486ba162dad2a1d5fbb3f636"
+  },
+  "recorded_at": "2026-08-26T09:44:44.643572Z",
+  "run_kind": "integrated",
+  "schema": "tect/foundation-audit/1.0",
+  "scope": {
+    "c6_closed": false,
+    "common_alpha_closed": false,
+    "common_word_exhaustion_closed": false,
+    "continuum_closed": false,
+    "finite_os_gram_real_closed": true,
+    "finite_thermal_cyclicity_closed": true,
+    "finite_trace_cyclicity_closed": true,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "lean_entrypoint_registered": true,
+    "no_new_negative_result": true,
+    "no_pdf": true,
+    "no_tier_change": true,
+    "pre_a_closed": false,
+    "sector_a_closed": false
+  },
+  "task_id": "T-054",
+  "verdict": "PASS"
+}

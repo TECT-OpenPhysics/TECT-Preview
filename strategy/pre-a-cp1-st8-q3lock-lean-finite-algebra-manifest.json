@@ -1,0 +1,79 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-LEAN-FINITE-ALGEBRA-v0",
+  "title": "Pinned Lean finite QFT algebra cross-check",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001177",
+  "claim_bearing": false,
+  "parent_explorations": ["EXP-001176"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE",
+    "PA-CP1-ST8-Q3LOCK-FIXED-BETA-CANONICAL-OS-MIXTURE-COMMON-NORMAL-WSTAR-KMS-ENVELOPE",
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "question": "Does the pinned Lean toolchain formally verify the exact finite algebraic identities used as inputs to the QFT route - trace cyclicity, four-factor transfer-word rotation, and real OS Gram positive semidefiniteness - without silently promoting them to a thermodynamic QFT theorem?",
+  "formal_scope": {
+    "trace_cyclicity": "For finite matrix indices over Complex, Matrix.trace (A * B) = Matrix.trace (B * A).",
+    "thermal_four_cycle": "For finite matrices X,A,Y,B over Complex, cyclic rotation of X*A*Y*B to Y*B*X*A preserves the trace.",
+    "real_gram": "For finite real index sets, the Gram matrix sum_k f(i,k)*f(j,k) is positive semidefinite.",
+    "transfer_scope": "A typed Fin 1 fixture instantiates the exact finite transfer-word scope statements."
+  },
+  "scope": {
+    "finite_trace_cyclicity_closed": true,
+    "finite_thermal_cyclicity_closed": true,
+    "finite_os_gram_real_closed": true,
+    "lean_entrypoint_registered": true,
+    "common_word_exhaustion_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "adversarial_review": [
+    {"axis": "Finite index assumptions", "check": "Every trace and Gram theorem declares Fintype and DecidableEq index assumptions; no infinite-volume or continuum index is hidden in the formal statement.", "disposition": "UPHELD"},
+    {"axis": "Algebraic orientation", "check": "The four-cycle theorem is proved by Matrix.trace_mul_comm on grouped factors and simplification by associativity; the order X*A*Y*B -> Y*B*X*A is checked exactly.", "disposition": "UPHELD"},
+    {"axis": "Positivity domain", "check": "The Gram result is deliberately stated over Real because Matrix.PosSemidef requires an ordered scalar domain here; it is not mislabeled as a Complex physical-sector positivity theorem.", "disposition": "UPHELD"},
+    {"axis": "Registry integrity", "check": "The source is LF-normalized, hash-registered, declaration-marked and checked against the pinned Lean/mathlib registry.", "disposition": "UPHELD"},
+    {"axis": "Independence", "check": "Primary and independent Python lanes parse the source and registry through separate implementations; the integrated lane reruns the pinned lake command.", "disposition": "UPHELD"},
+    {"axis": "No numerical overreach", "check": "This package reports exact proposition and registry checks only; it introduces no derived physical number or asymptotic fit.", "disposition": "UPHELD"},
+    {"axis": "QFT promotion", "check": "Finite trace identities and a real Gram lemma do not construct a common OS carrier, KMS state, Hamiltonian identification, GNS representation, or mass gap.", "disposition": "UPHELD-OPEN"},
+    {"axis": "TECT boundary", "check": "The package remains auxiliary C6/Q3 infrastructure and supplies no heat_root_incidence, canonical A1/R-192 production owner, Sector-A closure or Pre-A closure.", "disposition": "UPHELD-OPEN"}
+  ],
+  "files": {
+    "primary": "codes/foundations/pre_a_cp1_st8_q3lock_lean_finite_algebra.py",
+    "independent": "codes/foundations/pre_a_cp1_st8_q3lock_lean_finite_algebra_independent.py",
+    "integrated": "codes/foundations/pre_a_cp1_st8_q3lock_lean_finite_algebra_verify.py",
+    "lean": "verification/lean/Tect/R338.lean",
+    "registry": "verification/lean/registry.json",
+    "primary_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-primary-pre-a-cp1-st8-q3lock-lean-finite-algebra/primary.json",
+    "independent_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-independent-pre-a-cp1-st8-q3lock-lean-finite-algebra/independent.json",
+    "integrated_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-integrated-pre-a-cp1-st8-q3lock-lean-finite-algebra/integrated.json"
+  },
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R338.lean",
+    "command": "lake env lean Tect/R338.lean",
+    "theorem_markers": [
+      "finite_trace_cyclicity",
+      "finite_thermal_four_cycle",
+      "finite_os_gram_real_possemidef",
+      "finite_transfer_scope"
+    ],
+    "role": "R338 is an exact finite algebra layer for the QFT-facing route. It validates identities used by finite OS/transfer diagnostics while leaving analytic, thermodynamic and physical gates explicit."
+  },
+  "qft_interface": {
+    "closed": "Pinned Lean confirms the finite matrix trace rotations and the real Gram positive-semidefinite construction used as exact algebraic inputs to the finite OS/Q3 route.",
+    "open": "The formal layer does not prove a common OS Hilbert-space carrier, source/volume-uniform Cauchy estimate, KMS state, common alpha, Hamiltonian-to-OS identification, GNS spectral gap, continuum limit, C6, Sector A or Pre-A.",
+    "tect_boundary": "Auxiliary formal infrastructure only; no physical observable, source-complete exhaustion, heat-root incidence, canonical A1/R-192 production owner, Sector-A closure or Pre-A closure is supplied."
+  },
+  "next_action": "Use R338 as a fixed exact-algebra prerequisite while attacking the still-open analytic bridge: a source-, volume-, cutoff- and beta-uniform estimate connecting finite OS words to the direct D/delta-D route.",
+  "boundary": "T0 claim-nonbearing formal finite-algebra cross-check. It is not an analytic theorem, thermodynamic limit, mass-gap proof, continuum result, TECT claim closure, or Clay result.",
+  "no_overclaim": "This package proves only the four declared finite Lean propositions and their registry integrity. It does not prove a QFT state, a common alpha, a Hamiltonian-to-OS theorem, a GNS mass gap, continuum removal, C6, Sector A, Pre-A or a Clay result."
+}
