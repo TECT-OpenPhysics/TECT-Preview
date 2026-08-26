@@ -1,0 +1,95 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-CUBIC-MULTIPLIER-FINITE-STRESS-v0",
+  "title": "Finite Q3 cubic multiplier stress for the energy-graph carrier",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001158",
+  "claim_bearing": false,
+  "parent_explorations": ["EXP-001157", "EXP-001149", "EXP-001045"],
+  "parent_authorities": [
+    "strategy/pre_a_cp1_st8_q3lock_weighted_triple_commutator_volume_stress_manifest.json",
+    "strategy/pre-a-cp1-st8-q3lock-second-weighted-energy-cauchy-gate-manifest.json",
+    "strategy/pre-a-cp1-st8-q3lock-common-alpha-topology-critical-graph-route-split-manifest.json"
+  ],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-ENERGY-WEIGHTED-COMMUTATOR-GEVREY-LR-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "question": "For the actual finite Q3 Hamiltonians, does the spatially weighted cubic multiplier f_x^(3/4) q_x^3 A_f^(-3/4) remain finite across source pairs, beta values and volumes, where A_f is the declared centered local-energy proxy?",
+  "source_fixture": {
+    "manifest": "strategy/pre_a_cp1_st8_q3lock_weighted_triple_commutator_volume_stress_manifest.json",
+    "volume_values": [2, 4, 6],
+    "oscillator_dimension": 3,
+    "beta_values": [0.5, 1.0, 2.0],
+    "c": 0.6,
+    "chi": 1.0,
+    "r": -1.0,
+    "g": 0.6,
+    "lambda": 0.1,
+    "hbar": 1.0,
+    "source_pairs": {
+      "2": [[0, 1]],
+      "4": [[0, 1], [1, 2]],
+      "6": [[0, 1], [1, 2], [3, 4]]
+    }
+  },
+  "energy_graph": {
+    "weight_ratio_per_edge": "1/16",
+    "weight_fourth_root": "1/2",
+    "multiplier_power": "3/4",
+    "onsite_weight": "f_x*(p_x^2/(2 chi)+r q_x^2/2+g q_x^4/4)",
+    "bond_weight": "(f_x+f_y)/2 times the canonical Q3 bond term",
+    "proxy": "A_f=I+weighted onsite and bond Hamiltonian, shifted to the positive finite-matrix representative when truncation produces a negative eigenvalue",
+    "orientation_pair": "q_x^3 A_f^(-3/4) and A_f^(-3/4) q_x^3"
+  },
+  "finite_fixture": {
+    "tolerance": 1e-9,
+    "source_weighted_operator": true,
+    "state_weighted_rows": true,
+    "distance_metric": "shortest-path distance in the declared finite graph",
+    "state_weighted_norm": "four-leg Hilbert-Schmidt norm against the full-volume Gibbs square root"
+  },
+  "scope": {
+    "finite_cubic_multiplier_rows_closed": true,
+    "finite_source_beta_volume_stress_closed": true,
+    "analytic_cubic_embedding_closed": false,
+    "operator_domain_embedding_closed": false,
+    "actual_q3_history_closed": false,
+    "direct_d_cauchy_closed": false,
+    "delta_d_cauchy_closed": false,
+    "exhaustion_independence_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "adversarial_review": [
+    {"axis": "proxy versus theorem", "check": "A_f is a finite truncated energy proxy; no Friedrichs form or infinite CCR domain is inferred from its eigendecomposition.", "disposition": "UPHELD"},
+    {"axis": "weight placement", "check": "The site factor is applied to both orientations and the graph distance is recomputed for every declared source pair; no unweighted moving-site claim is made.", "disposition": "UPHELD"},
+    {"axis": "beta interpretation", "check": "Beta changes only the finite Gibbs four-leg diagnostic; the operator norm is kept separate and no beta-independent state is assumed.", "disposition": "UPHELD"},
+    {"axis": "volume interpretation", "check": "All volumes and source pairs are finite declared cases; maxima are diagnostics and not a supremum or asymptotic theorem.", "disposition": "UPHELD-OPEN"},
+    {"axis": "analytic promotion", "check": "Even a finite PASS would not prove q^3 A^(-3/4) on the common core, the first-passage history, or thermodynamic Cauchy.", "disposition": "UPHELD-OPEN"},
+    {"axis": "QFT promotion", "check": "No common alpha, OS/KMS/GNS reconstruction, gap, continuum, C6, Sector A or Pre-A conclusion follows.", "disposition": "UPHELD-OPEN"}
+  ],
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R328.lean",
+    "theorem_markers": ["three_quarter_weight_fixture", "weight_decay_fixture", "scope_fixture"],
+    "command": "lake env lean Tect/R328.lean",
+    "boundary": "Lean checks exact rational weight bookkeeping and the scope firewall only; matrix spectra, operator domains and QFT limits remain Python/open analysis."
+  },
+  "qft_interface": {
+    "closed": "The primary and independent executable finite stress lanes, including the state-weighted four-leg rows, are closed for the declared source pairs, beta values and volumes.",
+    "open": "A volume/source/beta-uniform cubic embedding, actual split-history recurrence, direct projected D and delta-D locality, exhaustion, common alpha, OS/KMS/GNS, gap, continuum and Pre-A remain open.",
+    "tect_boundary": "No TECT production owner, heat_root_incidence, physical-empty reference or Sector-A closure is supplied."
+  },
+  "no_overclaim": "This package is a finite diagnostic for one spatially weighted energy-graph carrier. It neither proves nor disproves the analytic cubic multiplier embedding or any thermodynamic QFT construction; any growth is route-local only."
+}

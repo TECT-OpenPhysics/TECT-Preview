@@ -6384,6 +6384,122 @@
       "task_id": "T-054",
       "title": "Finite split-step source, beta, volume and shape uniformity stress audit",
       "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "axis": "finite proxy",
+          "check": "A_f is a truncated weighted energy matrix, not a Friedrichs operator; the positive shift is explicit and no infinite-domain theorem is inferred.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "orientation",
+          "check": "Both q_x^3 A_f^(-3/4) and A_f^(-3/4) q_x^3 are evaluated, together with the four Gibbs legs; no commutation of q with A is assumed.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "weight and source",
+          "check": "The distance and 3/4 factor are recomputed for every source pair, including shifted pairs; no support-uniform unweighted statement is made.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "beta",
+          "check": "Beta is varied only in the finite Gibbs diagnostic; the operator norm remains a separate quantity and no beta-independent state is asserted.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "finite versus analytic",
+          "check": "A finite PASS is not promoted to q^3 A^(-3/4) boundedness on the common core, a history recurrence, or a thermodynamic Cauchy theorem.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "QFT promotion",
+          "check": "Common alpha, OS/KMS/GNS reconstruction, a gap, continuum, C6, Sector A and Pre-A remain open.",
+          "disposition": "UPHELD-OPEN"
+        }
+      ],
+      "boundary": "Finite oscillator-dimension-three matrices on the declared edge, square and 2x3 graphs; no common-core operator-domain, history, exhaustion, common-alpha, OS/KMS/GNS, gap, continuum, C6, Sector A or Pre-A conclusion.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "closed": [
+        "finite cubic multiplier rows for both operator orientations",
+        "finite source-pair, beta and volume stress coverage",
+        "independent reconstruction and integrated provenance checks",
+        "Lean R328 exact weight identity"
+      ],
+      "decision_reason": "The declared finite carrier is numerically well-defined and lane-reproducible on the stress grid, so it is retained as a candidate interface for the QFT dynamics. The result is finite matrix evidence only; it does not discharge the noncommuting operator-domain embedding needed by the analytic route.",
+      "evidence_refs": [
+        "strategy/pre-a-cp1-st8-q3lock-cubic-multiplier-finite-stress-manifest.json#energy_graph",
+        "codes/foundations/pre_a_cp1_st8_q3lock_cubic_multiplier_finite_stress.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_cubic_multiplier_finite_stress_independent.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_cubic_multiplier_finite_stress_verify.py#run",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-primary-pre_a_cp1_st8_q3lock_cubic_multiplier_finite_stress/primary.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-independent-pre_a_cp1_st8_q3lock_cubic_multiplier_finite_stress/independent.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-integrated-pre_a_cp1_st8_q3lock_cubic_multiplier_finite_stress/integrated.json#lean",
+        "verification/lean/Tect/R328.lean#three_quarter_weight_fixture",
+        "verification/lean/registry.json#R328"
+      ],
+      "finding": "Primary 133/133 and independent 123/123 finite assertions pass over 28 site rows covering volumes 2,4,6 and six declared source-pair cases. The integrated verifier passes 12/12 and Lean R328 compiles. The largest spatially weighted operator norm is 1.82909696328808 (independent 1.82909696328806), and the largest state-weighted four-leg norm is 3.43631947039998 (independent 3.43631947039996).",
+      "formal_integration": {
+        "events": [],
+        "lean": "R328 PASS",
+        "negatives": [],
+        "no_new_negative": true,
+        "no_new_result": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "results": []
+      },
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": []
+      },
+      "gate_ids": [
+        "PA-CP1-ST8-Q3LOCK-ENERGY-WEIGHTED-COMMUTATOR-GEVREY-LR-CLOSURE",
+        "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+        "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001158",
+      "method": [
+        "Reuse the registered finite Q3 edge, square and 2x3 graph Hamiltonian fixture with oscillator dimension three and the source manifest pinned by hash.",
+        "For each declared source pair construct shortest-path weights with per-edge ratio 1/16 and form the centered weighted onsite-plus-bond energy proxy A_f, shifting the finite matrix representative to minimum one when truncation requires it.",
+        "Compute both operator orientations q_x^3 A_f^(-3/4) and A_f^(-3/4) q_x^3 for every site, and independently evaluate their four-leg Hilbert-Schmidt norms against beta in {1/2,1,2} Gibbs square roots.",
+        "Reconstruct the matrix and norm calculation in a non-importing independent lane and compile Lean R328 for the exact fourth-power spatial-weight identity and scope firewall."
+      ],
+      "next_action": "Prove the noncommuting common-core embedding or construct a direct cancellation-aware state-weighted Volterra estimate for the actual Q3 history; if either fails, record the precise route obstruction rather than promoting this finite carrier.",
+      "no_overclaim": "This is a finite diagnostic only. It neither proves nor disproves the analytic cubic multiplier embedding, a thermodynamic QFT dynamics, common alpha, or any downstream TECT/Clay conclusion.",
+      "prior_exploration_id": "EXP-001157",
+      "provenance": "contemporaneous",
+      "qft_interface": {
+        "closed": "Finite source-, beta- and volume-stress evidence for a weighted cubic carrier, with independent and Lean cross-checks.",
+        "open": "The noncommuting analytic cubic embedding, actual split-history recurrence, source/beta/volume-uniform D and delta-D bounds, exhaustion, common alpha, OS/KMS/GNS, gap, continuum and Pre-A remain open.",
+        "tect_boundary": "No TECT production owner, heat_root_incidence, physical-empty reference or Sector-A closure is supplied."
+      },
+      "question": "For the actual finite Q3 Hamiltonians, does the spatially weighted cubic multiplier f_x^(3/4) q_x^3 A_f^(-3/4) remain finite across source pairs, beta values and volumes?",
+      "recorded_at": "2026-08-29T00:35:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001149",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001045",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001088",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-08-26",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Finite Q3 cubic multiplier stress across source, beta and volume",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",
