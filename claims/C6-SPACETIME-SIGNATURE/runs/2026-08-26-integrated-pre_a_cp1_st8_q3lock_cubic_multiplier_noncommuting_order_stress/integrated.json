@@ -1,0 +1,141 @@
+{
+  "assertion_count": 16,
+  "assertions": [
+    {
+      "actual": "['EXP-001159', 'T-054', False]",
+      "expected": "EXP-001159/T-054/false",
+      "name": "identity",
+      "pass": true
+    },
+    {
+      "actual": "[WindowsPath('E:/Dev/TECT/codes/foundations/pre_a_cp1_st8_q3lock_cubic_multiplier_noncommuting_order_stress.py'), WindowsPath('E:/Dev/TECT/codes/foundations/pre_a_cp1_st8_q3lock_cubic_multiplier_noncommuting_order_stress_independent.py'), WindowsPath('E:/Dev/TECT/verification/lean/Tect/R329.lean')]",
+      "expected": "all present",
+      "name": "source files",
+      "pass": true
+    },
+    {
+      "actual": "['matrix_order_fixture', 'matrix_commutator_nonzero', 'triangle_fixture', 'scope_fixture']",
+      "expected": "present",
+      "name": "Lean markers",
+      "pass": true
+    },
+    {
+      "actual": "[]",
+      "expected": "none",
+      "name": "Lean forbidden",
+      "pass": true
+    },
+    {
+      "actual": "PRIMARY CUBIC-MULTIPLIER-NONCOMMUTING-ORDER-STRESS PASS 274/274 rows=28\n",
+      "expected": "PASS",
+      "name": "primary child",
+      "pass": true
+    },
+    {
+      "actual": "INDEPENDENT CUBIC-MULTIPLIER-NONCOMMUTING-ORDER-STRESS PASS 269/269 rows=28\n",
+      "expected": "PASS",
+      "name": "independent child",
+      "pass": true
+    },
+    {
+      "actual": "[28, 28]",
+      "expected": "28",
+      "name": "row count agreement",
+      "pass": true
+    },
+    {
+      "actual": "[0.00338289725875145, 0.003382897258753002]",
+      "expected": "within 1e-08",
+      "name": "minimum_operator_commutator_norm agreement",
+      "pass": true
+    },
+    {
+      "actual": "[0.43291523575391017, 0.4329152357539097]",
+      "expected": "within 1e-08",
+      "name": "maximum_operator_commutator_norm agreement",
+      "pass": true
+    },
+    {
+      "actual": "[0.0021578555824109526, 0.0021578555824112093]",
+      "expected": "within 1e-08",
+      "name": "minimum state beta=0.5 agreement",
+      "pass": true
+    },
+    {
+      "actual": "[0.0037948440974383863, 0.0037948440974393425]",
+      "expected": "within 1e-08",
+      "name": "minimum state beta=1.0 agreement",
+      "pass": true
+    },
+    {
+      "actual": "[0.0060973316177080515, 0.00609733161771033]",
+      "expected": "within 1e-08",
+      "name": "minimum state beta=2.0 agreement",
+      "pass": true
+    },
+    {
+      "actual": "0.00338289725875145",
+      "expected": ">1e-06",
+      "name": "positive commutator floor",
+      "pass": true
+    },
+    {
+      "actual": "{'0.5': 0.0021578555824109526, '1.0': 0.0037948440974383863, '2.0': 0.0060973316177080515}",
+      "expected": ">1e-06",
+      "name": "finite state floor",
+      "pass": true
+    },
+    {
+      "actual": "[{'actual_q3_history_closed': False, 'analytic_cubic_embedding_closed': False, 'common_alpha_closed': False, 'delta_d_cauchy_closed': False, 'direct_d_cauchy_closed': False, 'finite_noncommuting_orientation_rows_closed': True, 'maximum_operator_commutator_norm': 0.43291523575391017, 'maximum_state_weighted_commutator_norm_by_beta': {'0.5': 0.5548441243588379, '1.0': 0.6212794525159507, '2.0': 0.7132627750763595}, 'minimum_operator_commutator_norm': 0.00338289725875145, 'minimum_state_weighted_commutator_norm_by_beta': {'0.5': 0.0021578555824109526, '1.0': 0.0037948440974383863, '2.0': 0.0060973316177080515}, 'operator_domain_embedding_closed': False, 'orientation_interchangeability_rejected_on_fixture': True, 'pre_a_closed': False, 'row_count': 28, 'source_manifest_sha256': '787429a09faa1535da0394899d1d503fca53d518fdefd88b10614f17568b92a7', 'summary_rows': [{'distance_profile': [0, 0], 'max_operator_commutator_norm': 0.43291523575391017, 'max_state_weighted_by_beta': {'0.5': 0.5548441243588379, '1.0': 0.6212794525159507, '2.0': 0.7132627750763595}, 'max_weighted_operator_commutator_norm': 0.43291523575391017, 'min_operator_commutator_norm': 0.4329152357539098, 'source_pair': [0, 1], 'volume': 2}, {'distance_profile': [0, 0, 1, 1], 'max_operator_commutator_norm': 0.28070992971557146, 'max_state_weighted_by_beta': {'0.5': 0.35094839275014167, '1.0': 0.42747166915454493, '2.0': 0.5222407623498493}, 'max_weighted_operator_commutator_norm': 0.28070992971557146, 'min_operator_commutator_norm': 0.031056373444472932, 'source_pair': [0, 1], 'volume': 4}, {'distance_profile': [1, 0, 0, 1], 'max_operator_commutator_norm': 0.3532630176332376, 'max_state_weighted_by_beta': {'0.5': 0.395069755070615, '1.0': 0.4941141569586091, '2.0': 0.6189220465552052}, 'max_weighted_operator_commutator_norm': 0.3532630176332376, 'min_operator_commutator_norm': 0.02378205200851985, 'source_pair': [1, 2], 'volume': 4}, {'distance_profile': [0, 0, 1, 1, 1, 2], 'max_operator_commutator_norm': 0.2724390891040811, 'max_state_weighted_by_beta': {'0.5': 0.29436486778799287, '1.0': 0.38906547512563955, '2.0': 0.5129307137908635}, 'max_weighted_operator_commutator_norm': 0.2724390891040811, 'min_operator_commutator_norm': 0.003382897258753127, 'source_pair': [0, 1], 'volume': 6}, {'distance_profile': [1, 0, 0, 2, 1, 1], 'max_operator_commutator_norm': 0.27243908910407694, 'max_state_weighted_by_beta': {'0.5': 0.2943648677879918, '1.0': 0.3890654751256379, '2.0': 0.5129307137908615}, 'max_weighted_operator_commutator_norm': 0.27243908910407694, 'min_operator_commutator_norm': 0.0033828972587523778, 'source_pair': [1, 2], 'volume': 6}, {'distance_profile': [1, 1, 2, 0, 0, 1], 'max_operator_commutator_norm': 0.2724390891040818, 'max_state_weighted_by_beta': {'0.5': 0.29436486778799453, '1.0': 0.38906547512564205, '2.0': 0.5129307137908676}, 'max_weighted_operator_commutator_norm': 0.2724390891040818, 'min_operator_commutator_norm': 0.00338289725875145, 'source_pair': [3, 4], 'volume': 6}]}, {'actual_q3_history_closed': False, 'analytic_cubic_embedding_closed': False, 'common_alpha_closed': False, 'delta_d_cauchy_closed': False, 'direct_d_cauchy_closed': False, 'finite_noncommuting_orientation_rows_closed': True, 'maximum_operator_commutator_norm': 0.4329152357539097, 'maximum_state_weighted_commutator_norm_by_beta': {'0.5': 0.5548441243588377, '1.0': 0.6212794525159502, '2.0': 0.713262775076359}, 'minimum_operator_commutator_norm': 0.003382897258753002, 'minimum_state_weighted_commutator_norm_by_beta': {'0.5': 0.0021578555824112093, '1.0': 0.0037948440974393425, '2.0': 0.00609733161771033}, 'operator_domain_embedding_closed': False, 'orientation_interchangeability_rejected_on_fixture': True, 'pre_a_closed': False, 'row_count': 28, 'source_manifest_sha256': '787429a09faa1535da0394899d1d503fca53d518fdefd88b10614f17568b92a7'}, {'finite_noncommuting_orientation_rows_closed': True, 'orientation_interchangeability_rejected_on_fixture': True, 'analytic_cubic_embedding_closed': False, 'operator_domain_embedding_closed': False, 'actual_q3_history_closed': False, 'direct_d_cauchy_closed': False, 'delta_d_cauchy_closed': False, 'exhaustion_independence_closed': False, 'common_alpha_closed': False, 'hamiltonian_os_identification_closed': False, 'kms_gns_gap_closed': False, 'continuum_closed': False, 'c6_closed': False, 'sector_a_closed': False, 'pre_a_closed': False, 'no_new_negative_result': True, 'no_tier_change': True, 'no_pdf': True}]",
+      "expected": "finite order result only",
+      "name": "scope firewall",
+      "pass": true
+    },
+    {
+      "actual": "{'status': 'PASS', 'command': 'lake env lean Tect/R329.lean', 'returncode': 0, 'output': ''}",
+      "expected": "PASS",
+      "name": "Lean compile",
+      "pass": true
+    }
+  ],
+  "audit_id": "PA-CP1-ST8-Q3LOCK-CUBIC-MULTIPLIER-NONCOMMUTING-ORDER-STRESS",
+  "boundary": {
+    "actual_q3_history_closed": false,
+    "analytic_cubic_embedding_closed": false,
+    "c6_closed": false,
+    "common_alpha_closed": false,
+    "continuum_closed": false,
+    "delta_d_cauchy_closed": false,
+    "direct_d_cauchy_closed": false,
+    "exhaustion_independence_closed": false,
+    "finite_noncommuting_orientation_rows_closed": true,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "no_new_negative_result": true,
+    "no_pdf": true,
+    "no_tier_change": true,
+    "operator_domain_embedding_closed": false,
+    "orientation_interchangeability_rejected_on_fixture": true,
+    "pre_a_closed": false,
+    "sector_a_closed": false
+  },
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "exploration_id": "EXP-001159",
+  "lean": {
+    "command": "lake env lean Tect/R329.lean",
+    "output": "",
+    "returncode": 0,
+    "status": "PASS"
+  },
+  "provenance": {
+    "independent_sha256": "c8e0f26f34e59f8728e520128f0d48e634244a83ed1bfb62f21c1440f71d2ccd",
+    "lean_sha256": "4cd3a198be3a95316e3551d8d55b873e6477003bbb4b343f26d7324dfaa21963",
+    "manifest_sha256": "2f36fc44c48d67adc0bf6209ea020d32a2dec5f8346e945d61527e363736937f",
+    "primary_sha256": "e1075e1031f7d5115071bdc2236a360ef1310bac7421d014d3151a1fd84dc1e1"
+  },
+  "recorded_at": "2026-08-26T00:38:53.287724Z",
+  "run_kind": "integrated",
+  "schema": "tect/foundation-audit/1.0",
+  "task_id": "T-054",
+  "verdict": "PASS"
+}

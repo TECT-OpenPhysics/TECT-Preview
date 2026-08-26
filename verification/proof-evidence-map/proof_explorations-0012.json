@@ -6500,6 +6500,125 @@
       "task_id": "T-054",
       "title": "Finite Q3 cubic multiplier stress across source, beta and volume",
       "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "axis": "orientation definition",
+          "check": "The two products and their difference are constructed separately; no spectral commutation is assumed.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "finite positivity",
+          "check": "The weighted energy proxy is shifted to the declared positive floor before the negative fractional power is evaluated.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "numerical threshold",
+          "check": "The noncommutation floors and agreement tolerances are manifest inputs, and every row is checked against them without fitting.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "norm bookkeeping",
+          "check": "Operator and Gibbs four-leg commutator norms are separately checked against their two orientation norms by triangle inequalities.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "finite versus uniform",
+          "check": "The 28 rows and three beta values are finite samples; their positive minima are not asymptotic bounds.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "QFT promotion",
+          "check": "No common core, thermodynamic dynamics, common alpha, OS/KMS/GNS reconstruction, gap, continuum, C6, Sector A or Pre-A conclusion is drawn.",
+          "disposition": "UPHELD-OPEN"
+        }
+      ],
+      "boundary": "Finite oscillator-dimension-three matrices on the declared edge, square and 2x3 graphs; no common-core operator-domain, actual positive-time history, source/beta/volume-uniform Cauchy, exhaustion, common-alpha, OS/KMS/GNS, gap, continuum, C6, Sector A or Pre-A conclusion.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "The finite carrier is genuinely order-sensitive on every declared row, so a later proof may not replace the two Duhamel/Volterra orientations by one commuting expression. This closes a reusable finite orientation firewall and gives a bounded diagnostic, but the sampled positive minimum is not a volume- or cutoff-uniform lower bound and supplies no infinite-dimensional domain theorem.",
+      "evidence_refs": [
+        "strategy/pre-a-cp1-st8-q3lock-cubic-multiplier-noncommuting-order-stress-manifest.json#order_test",
+        "codes/foundations/pre_a_cp1_st8_q3lock_cubic_multiplier_noncommuting_order_stress.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_cubic_multiplier_noncommuting_order_stress_independent.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_cubic_multiplier_noncommuting_order_stress_verify.py#run",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-primary-pre_a_cp1_st8_q3lock_cubic_multiplier_noncommuting_order_stress/primary.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-independent-pre_a_cp1_st8_q3lock_cubic_multiplier_noncommuting_order_stress/independent.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-integrated-pre_a_cp1_st8_q3lock_cubic_multiplier_noncommuting_order_stress/integrated.json#lean",
+        "verification/lean/Tect/R329.lean#matrix_commutator_nonzero",
+        "verification/lean/registry.json#R329"
+      ],
+      "finding": "Primary 274/274 and independent 269/269 assertions pass on all 28 site rows and three beta values; the integrated verifier passes 16/16 and Lean R329 compiles. The primary operator commutator norm ranges from 0.00338289725875145 to 0.43291523575391017. The minimum state-weighted commutator norm is 0.0021578555824109526 at beta=0.5, 0.0037948440974383863 at beta=1, and 0.0060973316177080515 at beta=2. Every row exceeds the declared 1e-6 floors and satisfies both triangle checks.",
+      "formal_integration": {
+        "events": [],
+        "lean": "R329 PASS; metadata regenerated",
+        "negatives": [],
+        "no_new_event": true,
+        "no_new_negative": true,
+        "no_new_result": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "results": []
+      },
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": []
+      },
+      "gate_ids": [
+        "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+        "PA-CP1-ST8-Q3LOCK-ENERGY-WEIGHTED-COMMUTATOR-GEVREY-LR-CLOSURE",
+        "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001159",
+      "method": [
+        "Reuse the hash-pinned finite Q3 edge, square and 2x3 graph fixture from EXP-001158, with oscillator dimension three, source pairs, and beta values copied into the new manifest.",
+        "For every declared source pair form the centered weighted energy proxy A_f, shift it to the positive finite-matrix floor, and evaluate the right product q_x^3 A_f^(-3/4), the left product A_f^(-3/4) q_x^3, and their commutator without assuming spectral commutation.",
+        "Check nonzero operator and Gibbs four-leg commutator norms on all 28 site rows, verify the antisymmetry identity and the operator/state triangle bounds, and retain the finite minimum as a manifest-threshold diagnostic only.",
+        "Reconstruct the graph, energy, spectral power and four-leg norms independently, then compile Lean R329 for an exact rational 2-by-2 order witness and the scope firewall."
+      ],
+      "next_action": "Use both orientations in the smallest actual split-history Volterra estimate, then test whether a source/beta/volume-uniform bound survives; if it does not, register only the precise route-local obstruction and keep common-alpha open.",
+      "no_overclaim": "This finite order-sensitivity result prevents an invalid orientation swap. It neither proves nor disproves the analytic cubic multiplier embedding or any thermodynamic QFT construction.",
+      "open": [
+        "common-core cubic multiplier embedding",
+        "actual split-history Volterra estimate",
+        "source/beta/volume-uniform direct D and delta-D Cauchy",
+        "operator-domain and product/core density control",
+        "exhaustion independence and common alpha",
+        "Hamiltonian-to-OS/KMS/GNS identification",
+        "gap, continuum, C6, Sector A and Pre-A"
+      ],
+      "provenance": "contemporaneous",
+      "qft_interface": {
+        "closed": "Finite Q3 order sensitivity is now explicit for both operator orientations and all declared source, volume and beta rows.",
+        "open": "Actual split-history Volterra control, common-core embedding, uniform direct D/delta-D bounds, exhaustion, common alpha, OS/KMS/GNS, gap, continuum and Pre-A.",
+        "tect_boundary": "Auxiliary C6 evidence only; no TECT production owner or physical-empty reference is supplied."
+      },
+      "question": "For the actual finite Q3 weighted carrier, can q_x^3 A_f^(-3/4) and A_f^(-3/4) q_x^3 be interchanged, or must later Volterra and Duhamel estimates retain both orientations?",
+      "recorded_at": "2026-08-29T00:40:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001158",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001157",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001140",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-08-26",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Finite Q3 noncommuting cubic-multiplier order stress",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",

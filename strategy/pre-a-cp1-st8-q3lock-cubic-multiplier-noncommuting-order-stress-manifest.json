@@ -1,0 +1,118 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-CUBIC-MULTIPLIER-NONCOMMUTING-ORDER-STRESS-v0",
+  "title": "Finite Q3 noncommuting cubic-multiplier order stress",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001159",
+  "claim_bearing": false,
+  "parent_explorations": ["EXP-001158", "EXP-001157", "EXP-001140"],
+  "parent_authorities": [
+    "strategy/pre-a-cp1-st8-q3lock-cubic-multiplier-finite-stress-manifest.json",
+    "strategy/pre-a-cp1-st8-q3lock-generator-pairing-cancellation-manifest.json",
+    "strategy/pre-a-cp1-st8-q3lock-split-step-uniformity-stress-audit-manifest.json"
+  ],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-ENERGY-WEIGHTED-COMMUTATOR-GEVREY-LR-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "source_fixture": {
+    "manifest": "strategy/pre_a_cp1_st8_q3lock_weighted_triple_commutator_volume_stress_manifest.json",
+    "exploration_id": "EXP-001088",
+    "volume_values": [2, 4, 6],
+    "oscillator_dimension": 3,
+    "beta_values": [0.5, 1.0, 2.0],
+    "source_pairs": {
+      "2": [[0, 1]],
+      "4": [[0, 1], [1, 2]],
+      "6": [[0, 1], [1, 2], [3, 4]]
+    }
+  },
+  "order_test": {
+    "right_orientation": "q_x^3 A_f^(-3/4)",
+    "left_orientation": "A_f^(-3/4) q_x^3",
+    "commutator": "right-left",
+    "operator_noncommutation_floor": 1e-6,
+    "state_noncommutation_floor": 1e-6,
+    "agreement_tolerance": 1e-8,
+    "triangle_tolerance": 1e-8
+  },
+  "finite_fixture": {
+    "weight_ratio_per_edge": "1/16",
+    "multiplier_power": "3/4",
+    "positive_energy_floor": 1.0,
+    "row_count_expected": 28,
+    "finite_only": true
+  },
+  "scope": {
+    "finite_noncommuting_orientation_rows_closed": true,
+    "orientation_interchangeability_rejected_on_fixture": true,
+    "analytic_cubic_embedding_closed": false,
+    "operator_domain_embedding_closed": false,
+    "actual_q3_history_closed": false,
+    "direct_d_cauchy_closed": false,
+    "delta_d_cauchy_closed": false,
+    "exhaustion_independence_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "adversarial_review": [
+    {
+      "axis": "orientation definition",
+      "check": "The right and left products are formed separately; no commutation of q_x^3 with the spectral power is assumed.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "finite positivity",
+      "check": "The centered weighted energy proxy is shifted to the declared positive floor before its negative fractional power is evaluated.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "noncommutation threshold",
+      "check": "The floor is a manifest input and is checked on every declared row; it is not fitted from the observed minimum.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "norm bookkeeping",
+      "check": "The commutator norm is checked against the two orientation norms by the triangle inequality, with the state-weighted four-leg analogue checked independently.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "finite versus uniform",
+      "check": "The 28 rows and three beta values are a declared finite grid; their positive minimum is not a volume-uniform lower bound.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "QFT promotion",
+      "check": "The order stress does not establish a common core, thermodynamic dynamics, common alpha, OS/KMS/GNS reconstruction, a gap, continuum, C6, Sector A or Pre-A.",
+      "disposition": "UPHELD-OPEN"
+    }
+  ],
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R329.lean",
+    "theorem_markers": [
+      "matrix_order_fixture",
+      "matrix_commutator_nonzero",
+      "triangle_fixture",
+      "scope_fixture"
+    ],
+    "command": "lake env lean Tect/R329.lean",
+    "boundary": "Lean proves a small exact rational matrix order witness and bookkeeping only; Q3 spectra, unbounded domains and QFT limits remain Python/open analysis."
+  },
+  "qft_interface": {
+    "closed": "On the declared finite Q3 edge, square and 2x3 grids, both cubic-multiplier orientations differ by a nonzero operator commutator and satisfy the recorded norm triangle bounds for every source pair and beta.",
+    "open": "A common-core cubic embedding, source/beta/volume-uniform direct D and delta-D estimate, split-history completion, exhaustion independence, common alpha, OS/KMS/GNS, gap, continuum and Pre-A remain open.",
+    "tect_boundary": "No TECT production owner, heat_root_incidence, physical-empty reference or Sector-A closure is supplied."
+  },
+  "no_overclaim": "This is a finite order-sensitivity and noncommutation audit. It prevents an invalid orientation swap in later QFT estimates but neither proves nor disproves an infinite-volume cubic multiplier embedding."
+}
