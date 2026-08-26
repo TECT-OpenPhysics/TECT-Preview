@@ -1,0 +1,193 @@
+{
+  "assertion_count": 15,
+  "assertions": [
+    {
+      "actual": "['EXP-001178', 'T-054', False]",
+      "expected": "['EXP-001178', 'T-054', False]",
+      "group": "provenance",
+      "name": "identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2, 2, [3]]",
+      "expected": "2 rows x 3 coordinates",
+      "group": "fixture",
+      "name": "fixture shape",
+      "status": "PASS"
+    },
+    {
+      "actual": "['finite_gram_entry_perturbation']",
+      "expected": "['finite_gram_entry_perturbation']",
+      "group": "Lean",
+      "name": "declaration set",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'sorry': 0, 'admit': 0, 'axiom': 0, 'unsafe': 0}",
+      "expected": "{'sorry': 0, 'admit': 0, 'axiom': 0, 'unsafe': 0}",
+      "group": "Lean",
+      "name": "forbidden token scan",
+      "status": "PASS"
+    },
+    {
+      "actual": "1",
+      "expected": "1",
+      "group": "registry",
+      "name": "registry uniqueness",
+      "status": "PASS"
+    },
+    {
+      "actual": "018e07208c8e3f3535a98f0037f98e3507af32f9e233fe06aa054fcdbdaed481",
+      "expected": "018e07208c8e3f3535a98f0037f98e3507af32f9e233fe06aa054fcdbdaed481",
+      "group": "registry",
+      "name": "registry hash",
+      "status": "PASS"
+    },
+    {
+      "actual": "[Fraction(9, 1), Fraction(9, 1)]",
+      "expected": "lhs <= rhs",
+      "group": "fixture",
+      "name": "pair (0,0) exact inequality",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": ">=0",
+      "group": "fixture",
+      "name": "pair (0,0) exact slack",
+      "status": "PASS"
+    },
+    {
+      "actual": "[Fraction(4, 1), Fraction(6, 1)]",
+      "expected": "lhs <= rhs",
+      "group": "fixture",
+      "name": "pair (0,1) exact inequality",
+      "status": "PASS"
+    },
+    {
+      "actual": "2",
+      "expected": ">=0",
+      "group": "fixture",
+      "name": "pair (0,1) exact slack",
+      "status": "PASS"
+    },
+    {
+      "actual": "[Fraction(4, 1), Fraction(10, 1)]",
+      "expected": "lhs <= rhs",
+      "group": "fixture",
+      "name": "pair (1,0) exact inequality",
+      "status": "PASS"
+    },
+    {
+      "actual": "6",
+      "expected": ">=0",
+      "group": "fixture",
+      "name": "pair (1,0) exact slack",
+      "status": "PASS"
+    },
+    {
+      "actual": "[Fraction(1, 1), Fraction(7, 1)]",
+      "expected": "lhs <= rhs",
+      "group": "fixture",
+      "name": "pair (1,1) exact inequality",
+      "status": "PASS"
+    },
+    {
+      "actual": "6",
+      "expected": ">=0",
+      "group": "fixture",
+      "name": "pair (1,1) exact slack",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'finite_gram_perturbation_closed': True, 'lean_entrypoint_registered': True, 'finite_fixture_reproduced': True, 'actual_q3_os_vector_factorization_closed': False, 'common_os_hilbert_carrier_closed': False, 'source_volume_cutoff_beta_uniform_closed': False, 'common_word_exhaustion_closed': False, 'direct_d_delta_d_cauchy_closed': False, 'common_alpha_closed': False, 'hamiltonian_os_identification_closed': False, 'kms_gns_gap_closed': False, 'continuum_closed': False, 'c6_closed': False, 'sector_a_closed': False, 'pre_a_closed': False, 'no_new_negative_result': True, 'no_tier_change': True, 'no_pdf': True}",
+      "expected": "finite bridge only",
+      "group": "scope",
+      "name": "scope",
+      "status": "PASS"
+    }
+  ],
+  "audit_id": "PA-CP1-ST8-Q3LOCK-FINITE-GRAM-PERTURBATION",
+  "boundary": "T0 claim-nonbearing finite Gram perturbation theorem and exact fixture. It is not an analytic uniformity theorem, a thermodynamic OS construction, a mass-gap proof, a continuum result, or a Clay result.",
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "exploration_id": "EXP-001178",
+  "formal_checks": [
+    "finite_gram_entry_perturbation"
+  ],
+  "passed": 15,
+  "provenance": {
+    "lean_sha256": "018e07208c8e3f3535a98f0037f98e3507af32f9e233fe06aa054fcdbdaed481",
+    "manifest_sha256": "e4f62ad29da82bc12db546311ff34301f410a7586a64303dafe009abaec482c7",
+    "script_sha256": "889eeae9fad54e35a1d4ca0ed8faba8508c2cebcdae4f6fb9dee0e2f0e30b9d8"
+  },
+  "rows": [
+    {
+      "G_f": "14",
+      "G_g": "5",
+      "i": 0,
+      "j": 0,
+      "left_word_term": "6",
+      "lhs": "9",
+      "rhs": "9",
+      "right_word_term": "3",
+      "slack": "0"
+    },
+    {
+      "G_f": "-1",
+      "G_g": "-5",
+      "i": 0,
+      "j": 1,
+      "left_word_term": "3",
+      "lhs": "4",
+      "rhs": "6",
+      "right_word_term": "3",
+      "slack": "2"
+    },
+    {
+      "G_f": "-1",
+      "G_g": "-5",
+      "i": 1,
+      "j": 0,
+      "left_word_term": "6",
+      "lhs": "4",
+      "rhs": "10",
+      "right_word_term": "4",
+      "slack": "6"
+    },
+    {
+      "G_f": "5",
+      "G_g": "6",
+      "i": 1,
+      "j": 1,
+      "left_word_term": "3",
+      "lhs": "1",
+      "rhs": "7",
+      "right_word_term": "4",
+      "slack": "6"
+    }
+  ],
+  "run_kind": "independent",
+  "schema": "tect/foundation-audit/1.0",
+  "scope": {
+    "actual_q3_os_vector_factorization_closed": false,
+    "c6_closed": false,
+    "common_alpha_closed": false,
+    "common_os_hilbert_carrier_closed": false,
+    "common_word_exhaustion_closed": false,
+    "continuum_closed": false,
+    "direct_d_delta_d_cauchy_closed": false,
+    "finite_fixture_reproduced": true,
+    "finite_gram_perturbation_closed": true,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "lean_entrypoint_registered": true,
+    "no_new_negative_result": true,
+    "no_pdf": true,
+    "no_tier_change": true,
+    "pre_a_closed": false,
+    "sector_a_closed": false,
+    "source_volume_cutoff_beta_uniform_closed": false
+  },
+  "task_id": "T-054",
+  "verdict": "PASS"
+}

@@ -1,0 +1,82 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-FINITE-GRAM-PERTURBATION-v0",
+  "title": "Finite Gram perturbation bridge for OS context changes",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001178",
+  "claim_bearing": false,
+  "parent_explorations": ["EXP-001177", "EXP-001176"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE",
+    "PA-CP1-ST8-Q3LOCK-FIXED-BETA-CANONICAL-OS-MIXTURE-COMMON-NORMAL-WSTAR-KMS-ENVELOPE",
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "question": "Can an exact finite Gram-entry perturbation inequality translate OS context changes into explicit vector-difference terms, while keeping the actual Q3 common-Hilbert-space and uniformity hypotheses open?",
+  "exact_statement": {
+    "gram_entry": "G_f(i,j)=sum_k f(i,k) f(j,k) for finite real vectors.",
+    "bound": "|G_f(i,j)-G_g(i,j)| <= sum_k |f(i,k)-g(i,k)| |f(j,k)| + sum_k |g(i,k)| |f(j,k)-g(j,k)|.",
+    "interpretation": "The first term controls change in the left OS word and the second controls change in the right OS word; both vector families and the finite index set remain explicit."
+  },
+  "finite_fixture": {
+    "f": [[1, -2, 3], [2, 0, -1]],
+    "g": [[0, -1, 2], [1, 1, -2]],
+    "index_count": 2,
+    "coordinate_count": 3
+  },
+  "scope": {
+    "finite_gram_perturbation_closed": true,
+    "lean_entrypoint_registered": true,
+    "finite_fixture_reproduced": true,
+    "actual_q3_os_vector_factorization_closed": false,
+    "common_os_hilbert_carrier_closed": false,
+    "source_volume_cutoff_beta_uniform_closed": false,
+    "common_word_exhaustion_closed": false,
+    "direct_d_delta_d_cauchy_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "adversarial_review": [
+    {"axis": "Finite index assumptions", "check": "The inequality is stated for a finite coordinate index with an explicit Fintype and DecidableEq hypothesis; no infinite-volume sum is hidden.", "disposition": "UPHELD"},
+    {"axis": "Algebraic decomposition", "check": "The identity f_i f_j-g_i g_j=(f_i-g_i)f_j+g_i(f_j-g_j) is proved by ring and the absolute-value triangle inequality is applied before summation.", "disposition": "UPHELD"},
+    {"axis": "Scalar domain", "check": "R339 is deliberately Real-valued; it is not asserted to be a Complex physical-sector positivity or QFT state theorem.", "disposition": "UPHELD"},
+    {"axis": "Vector interpretation", "check": "The two terms are only finite coordinate-vector differences; identifying them with actual Q3 OS transfer-word differences requires a separate common-carrier and normalization proof.", "disposition": "UPHELD-OPEN"},
+    {"axis": "Fixture scope", "check": "The integer fixture is a self-test oracle for the general inequality and is not used as a physical Q3 value or asymptotic estimate.", "disposition": "UPHELD"},
+    {"axis": "Independence", "check": "Primary and independent lanes reconstruct the exact sums separately, while the integrated lane reruns both and the pinned Lean theorem.", "disposition": "UPHELD"},
+    {"axis": "Uniformity", "check": "No source, volume, cutoff or beta uniform constant is inferred from one finite fixture.", "disposition": "UPHELD-OPEN"},
+    {"axis": "QFT promotion", "check": "The bridge does not close a common OS carrier, Hamiltonian-to-OS identification, common alpha, GNS gap, continuum, C6, Sector A or Pre-A.", "disposition": "UPHELD-OPEN"}
+  ],
+  "files": {
+    "primary": "codes/foundations/pre_a_cp1_st8_q3lock_finite_gram_perturbation.py",
+    "independent": "codes/foundations/pre_a_cp1_st8_q3lock_finite_gram_perturbation_independent.py",
+    "integrated": "codes/foundations/pre_a_cp1_st8_q3lock_finite_gram_perturbation_verify.py",
+    "lean": "verification/lean/Tect/R339.lean",
+    "registry": "verification/lean/registry.json",
+    "primary_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-primary-pre-a-cp1-st8-q3lock-finite-gram-perturbation/primary.json",
+    "independent_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-independent-pre-a-cp1-st8-q3lock-finite-gram-perturbation/independent.json",
+    "integrated_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-integrated-pre-a-cp1-st8-q3lock-finite-gram-perturbation/integrated.json"
+  },
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R339.lean",
+    "command": "lake env lean Tect/R339.lean",
+    "theorem_markers": ["finite_gram_entry_perturbation"],
+    "role": "R339 is the exact finite algebraic bridge from Gram-entry changes to two vector-difference sums. It leaves the actual Q3 OS vector factorization and all uniform estimates as explicit hypotheses."
+  },
+  "qft_interface": {
+    "closed": "For finite real vector families, a Gram entry difference is bounded by the sum of the left-word and right-word vector differences weighted by the companion vectors.",
+    "open": "Actual Q3 transfer-word vector representations, common OS Hilbert carrier, source/volume/cutoff/beta-uniform vector bounds, exhaustion Cauchy, direct D/delta-D convergence, common alpha, Hamiltonian-to-OS identification, GNS gap, continuum, C6, Sector A and Pre-A remain open.",
+    "tect_boundary": "Auxiliary finite QFT bridge only; no physical reference, heat-root incidence, canonical A1/R-192 production owner, Sector-A closure or Pre-A closure is supplied."
+  },
+  "next_action": "Instantiate the two vector-difference terms on the committed finite Q3 OS transfer-word data, with explicit normalization and source/volume/cutoff/beta controls. If no common vector factorization can be certified, record that obstruction rather than treating Gram decay as vector Cauchy convergence.",
+  "boundary": "T0 claim-nonbearing finite Gram perturbation theorem and exact fixture. It is not an analytic uniformity theorem, a thermodynamic OS construction, a mass-gap proof, a continuum result, or a Clay result.",
+  "no_overclaim": "This package proves only the declared finite Real Gram-entry inequality and its exact fixture reproduction. It does not prove actual Q3 OS vector convergence, a common Hilbert carrier, common alpha, Hamiltonian-to-OS identification, a GNS mass gap, continuum removal, C6, Sector A, Pre-A or a Clay result."
+}

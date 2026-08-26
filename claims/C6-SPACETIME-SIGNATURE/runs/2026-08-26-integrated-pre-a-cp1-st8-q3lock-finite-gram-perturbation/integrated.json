@@ -1,0 +1,183 @@
+{
+  "assertion_count": 10,
+  "assertions": [
+    {
+      "actual": [
+        "EXP-001178",
+        "T-054"
+      ],
+      "expected": "EXP-001178/T-054",
+      "name": "identity",
+      "pass": true
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "claim nonbearing",
+      "pass": true
+    },
+    {
+      "actual": {
+        "actual_q3_os_vector_factorization_closed": false,
+        "c6_closed": false,
+        "common_alpha_closed": false,
+        "common_os_hilbert_carrier_closed": false,
+        "common_word_exhaustion_closed": false,
+        "continuum_closed": false,
+        "direct_d_delta_d_cauchy_closed": false,
+        "finite_fixture_reproduced": true,
+        "finite_gram_perturbation_closed": true,
+        "hamiltonian_os_identification_closed": false,
+        "kms_gns_gap_closed": false,
+        "lean_entrypoint_registered": true,
+        "no_new_negative_result": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "pre_a_closed": false,
+        "sector_a_closed": false,
+        "source_volume_cutoff_beta_uniform_closed": false
+      },
+      "expected": "finite bridge only",
+      "name": "scope firewall",
+      "pass": true
+    },
+    {
+      "actual": "PRIMARY FINITE-GRAM-PERTURBATION PASS 16/16 pairs=4\n",
+      "expected": "PASS",
+      "name": "primary child",
+      "pass": true
+    },
+    {
+      "actual": "INDEPENDENT FINITE-GRAM-PERTURBATION PASS 15/15 pairs=4\n",
+      "expected": "PASS",
+      "name": "independent child",
+      "pass": true
+    },
+    {
+      "actual": "equal",
+      "expected": "equal",
+      "name": "rows agreement",
+      "pass": true
+    },
+    {
+      "actual": "equal",
+      "expected": "equal",
+      "name": "formal_checks agreement",
+      "pass": true
+    },
+    {
+      "actual": "equal",
+      "expected": "equal",
+      "name": "scope agreement",
+      "pass": true
+    },
+    {
+      "actual": {
+        "command": "lake env lean Tect/R339.lean",
+        "output": "",
+        "returncode": 0,
+        "status": "PASS"
+      },
+      "expected": "PASS",
+      "name": "Lean compile",
+      "pass": true
+    },
+    {
+      "actual": "018e07208c8e3f3535a98f0037f98e3507af32f9e233fe06aa054fcdbdaed481",
+      "expected": "018e07208c8e3f3535a98f0037f98e3507af32f9e233fe06aa054fcdbdaed481",
+      "name": "registry integrity",
+      "pass": true
+    }
+  ],
+  "audit_id": "PA-CP1-ST8-Q3LOCK-FINITE-GRAM-PERTURBATION",
+  "boundary": "T0 claim-nonbearing finite Gram perturbation theorem and exact fixture. It is not an analytic uniformity theorem, a thermodynamic OS construction, a mass-gap proof, a continuum result, or a Clay result.",
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "exploration_id": "EXP-001178",
+  "formal_checks": [
+    "finite_gram_entry_perturbation"
+  ],
+  "lean": {
+    "command": "lake env lean Tect/R339.lean",
+    "output": "",
+    "returncode": 0,
+    "status": "PASS"
+  },
+  "provenance": {
+    "independent_sha256": "889eeae9fad54e35a1d4ca0ed8faba8508c2cebcdae4f6fb9dee0e2f0e30b9d8",
+    "lean_sha256": "018e07208c8e3f3535a98f0037f98e3507af32f9e233fe06aa054fcdbdaed481",
+    "manifest_sha256": "e4f62ad29da82bc12db546311ff34301f410a7586a64303dafe009abaec482c7",
+    "primary_sha256": "e84480f5eaf5f32794c6f6ab49c53c6c4999ed7a14cb0e33231c860a5490dabd",
+    "registry_sha256": "da7b0be63350cd52df0338fd9a8cdbb1c9ab98cbd324fa393ff81f3fef319df8"
+  },
+  "recorded_at": "2026-08-26T10:17:42.739402Z",
+  "rows": [
+    {
+      "G_f": "14",
+      "G_g": "5",
+      "i": 0,
+      "j": 0,
+      "left_word_term": "6",
+      "lhs": "9",
+      "rhs": "9",
+      "right_word_term": "3",
+      "slack": "0"
+    },
+    {
+      "G_f": "-1",
+      "G_g": "-5",
+      "i": 0,
+      "j": 1,
+      "left_word_term": "3",
+      "lhs": "4",
+      "rhs": "6",
+      "right_word_term": "3",
+      "slack": "2"
+    },
+    {
+      "G_f": "-1",
+      "G_g": "-5",
+      "i": 1,
+      "j": 0,
+      "left_word_term": "6",
+      "lhs": "4",
+      "rhs": "10",
+      "right_word_term": "4",
+      "slack": "6"
+    },
+    {
+      "G_f": "5",
+      "G_g": "6",
+      "i": 1,
+      "j": 1,
+      "left_word_term": "3",
+      "lhs": "1",
+      "rhs": "7",
+      "right_word_term": "4",
+      "slack": "6"
+    }
+  ],
+  "run_kind": "integrated",
+  "schema": "tect/foundation-audit/1.0",
+  "scope": {
+    "actual_q3_os_vector_factorization_closed": false,
+    "c6_closed": false,
+    "common_alpha_closed": false,
+    "common_os_hilbert_carrier_closed": false,
+    "common_word_exhaustion_closed": false,
+    "continuum_closed": false,
+    "direct_d_delta_d_cauchy_closed": false,
+    "finite_fixture_reproduced": true,
+    "finite_gram_perturbation_closed": true,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "lean_entrypoint_registered": true,
+    "no_new_negative_result": true,
+    "no_pdf": true,
+    "no_tier_change": true,
+    "pre_a_closed": false,
+    "sector_a_closed": false,
+    "source_volume_cutoff_beta_uniform_closed": false
+  },
+  "task_id": "T-054",
+  "verdict": "PASS"
+}
