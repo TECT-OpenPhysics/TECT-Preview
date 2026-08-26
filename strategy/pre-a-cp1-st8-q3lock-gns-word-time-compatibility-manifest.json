@@ -1,0 +1,113 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-FINITE-GNS-WORD-TIME-COMPATIBILITY-v0",
+  "title": "Finite Q3 GNS transport compatibility under word enlargement and Euclidean time translation",
+  "exploration_id": "EXP-001182",
+  "prior_exploration_id": "EXP-001181",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "tier": "T0",
+  "claim_bearing": false,
+  "parent_explorations": ["EXP-001181", "EXP-001180", "EXP-001179"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE",
+    "PA-CP1-ST8-Q3LOCK-ALL-EXHAUSTION-MIXTURE-L2-LOCALITY-AND-BETA-INDEPENDENT-CSTAR-DYNAMICS",
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+  ],
+  "question": "When the finite Q3 OS word block is enlarged by one ordered product and one Euclidean time translate, does the state-dependent polar transport remain compatible with the previously selected block across nested volumes?",
+  "finite_fixture": {
+    "graphs": {
+      "path2": {"vertices": 2, "edges": [[0, 1]], "source_sites": [0], "nested_order": 0},
+      "path3": {"vertices": 3, "edges": [[0, 1], [1, 2]], "source_sites": [0], "nested_order": 1},
+      "path4": {"vertices": 4, "edges": [[0, 1], [1, 2], [2, 3]], "source_sites": [0], "nested_order": 2}
+    },
+    "nested_pairs": [["path2", "path3"], ["path3", "path4"]],
+    "oscillator_dimension": 3,
+    "beta_values": [0.25, 0.5],
+    "base_tau_fractions": [0.125, 0.25],
+    "translated_tau_fraction": 0.375,
+    "base_word_kinds": ["q", "p", "qp", "pq"],
+    "added_word_kinds": ["qpq"],
+    "character_amplitude": 0.25,
+    "hbar": 1.0,
+    "support_floor": 1e-12,
+    "matrix_tolerance": 1e-7,
+    "agreement_tolerance": 2e-5,
+    "condition_agreement_tolerance": 5e-4,
+    "positive_partition_floor": 1e-12,
+    "witness_floor": 1e-10
+  },
+  "model_parameters": {"chi": "1", "r": "-1", "g": "3/5", "c": "3/5", "lambda": "1/10"},
+  "model": {
+    "hamiltonian": "H=sum_x[p_x^2/(2 chi)+r q_x^2/2+g q_x^4/4]+sum_edges[c(q_x-q_y)^2/2+lambda(q_x-q_y)^2(q_x^2+q_y^2)/4]",
+    "euclidean_transfer": "T(s)=exp(-s(H-min(H))/hbar), period beta*hbar",
+    "positive_half_word": "F_(tau,A)=T(beta*hbar/2-tau) A T(tau), 0<=tau<=beta*hbar/2",
+    "base_block": "At base tau values use q, p, qp and pq; this is the EXP-001181 block.",
+    "extension": "Add the ordered product qpq and the translated Euclidean time fraction 0.375, producing a finite expanded block.",
+    "gibbs_normalization": "v_(N,beta,tau,A)=vec(F_(tau,A))/sqrt(Z_N), G_N=v_N^*v_N"
+  },
+  "exact_interface": {
+    "lean": "R342 proves the finite invertible-matrix congruence used by every positive Gram polar map.",
+    "base_transport": "For base Gram blocks G_s=R_s^2 and G_l=R_l^2, M_base=R_l^-1 R_s obeys M_base^* G_l M_base=G_s.",
+    "expanded_transport": "The expanded block has M_exp=R_l,exp^-1 R_s,exp and the same finite congruence; compatibility is tested by restricting M_exp to the base coordinates and comparing it with M_base.",
+    "boundary": "A finite restricted-map residual is a block-compatibility diagnostic; it is not a spatial inductive embedding, an action intertwiner, a common representation, or an exhaustion theorem."
+  },
+  "scope": {
+    "finite_base_positive_gram_support_closed": true,
+    "finite_expanded_positive_gram_support_closed": true,
+    "finite_base_polar_congruence_closed": true,
+    "finite_expanded_polar_congruence_closed": true,
+    "finite_word_enlargement_time_translate_diagnostic_closed": true,
+    "word_product_star_action_intertwining_closed": false,
+    "common_os_hilbert_carrier_closed": false,
+    "source_volume_cutoff_beta_uniform_closed": false,
+    "common_word_exhaustion_closed": false,
+    "direct_d_delta_d_cauchy_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "adversarial_review": [
+    {"axis": "time-translate scope", "check": "The added point is exactly the declared translated_tau_fraction and remains inside the positive Euclidean half-period for both beta values; no continuous-time claim is inferred.", "disposition": "UPHELD-OPEN"},
+    {"axis": "ordered-product scope", "check": "Only qpq is added, with its order preserved; arbitrary products, adjoints, commutator closure and the full local algebra are not silently included.", "disposition": "UPHELD-OPEN"},
+    {"axis": "restriction map", "check": "The expanded polar map is restricted using the explicit base-coordinate index map, and this restriction is not called an algebra homomorphism or a canonical embedding.", "disposition": "UPHELD"},
+    {"axis": "positive support", "check": "Both base and expanded Gram blocks are checked above the support floor before inverse roots are formed; ill-conditioned directions remain reported.", "disposition": "UPHELD"},
+    {"axis": "congruence", "check": "Base and expanded congruence residuals are separately checked against the declared numerical tolerance, while compatibility residuals are reported without an unjustified smallness threshold.", "disposition": "UPHELD"},
+    {"axis": "state dependence", "check": "Each volume and beta uses its own partition function and polar factors; a beta-dependent finite map is not promoted to a state-independent carrier.", "disposition": "UPHELD"},
+    {"axis": "conditioning", "check": "Minimum eigenvalues and condition numbers are retained so a tiny residual is not confused with stable thermodynamic control.", "disposition": "UPHELD-OPEN"},
+    {"axis": "independence", "check": "The independent lane reconstructs the Q3 Hamiltonian, ordered words, time translates, Gram blocks and polar maps without importing the primary program.", "disposition": "UPHELD"},
+    {"axis": "Lean boundary", "check": "R342 certifies only the finite matrix congruence identity under invertibility; the word/time compatibility residuals and all limits remain Python evidence/open analysis.", "disposition": "UPHELD"},
+    {"axis": "QFT promotion", "check": "A finite compatibility diagnostic does not prove action intertwining, a spatial net, all-shape Cauchy, common alpha, Hamiltonian-OS identification, a gap, continuum, C6, Sector A or Pre-A.", "disposition": "UPHELD-OPEN"}
+  ],
+  "files": {
+    "primary": "codes/foundations/pre_a_cp1_st8_q3lock_gns_word_time_compatibility.py",
+    "independent": "codes/foundations/pre_a_cp1_st8_q3lock_gns_word_time_compatibility_independent.py",
+    "integrated": "codes/foundations/pre_a_cp1_st8_q3lock_gns_word_time_compatibility_verify.py",
+    "lean": "verification/lean/Tect/R342.lean",
+    "primary_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-primary-pre-a-cp1-st8-q3lock-gns-word-time-compatibility/primary.json",
+    "independent_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-independent-pre-a-cp1-st8-q3lock-gns-word-time-compatibility/independent.json",
+    "integrated_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-26-integrated-pre-a-cp1-st8-q3lock-gns-word-time-compatibility/integrated.json"
+  },
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R342.lean",
+    "command": "lake env lean Tect/R342.lean",
+    "theorem_markers": ["gram_transport_congruence"],
+    "role": "R342 supplies the exact finite algebraic congruence used for both base and expanded polar maps; it does not assert time-translate compatibility or any limit."
+  },
+  "qft_interface": {
+    "closed": "For the declared finite path pairs, both the original and enlarged/time-translated word blocks have positive support and exact finite polar congruence, with the restricted-map compatibility residual explicitly measured.",
+    "open": "Compatibility under further words and real-time translates, product/star/action intertwining, a spatial inductive net, source/volume/cutoff/beta-uniform Cauchy, common alpha, Hamiltonian-to-OS identification, GNS gap and continuum remain open.",
+    "tect_boundary": "Auxiliary C6/Q3 finite evidence only; no heat_root_incidence, canonical A1/R-192 production owner, physical-empty reference, Sector-A closure or Pre-A closure is supplied."
+  },
+  "next_action": "If the restricted-map residual remains block- or beta-dependent, retain this as finite compatibility evidence only and derive an analytic uniform action-intertwining/source-boundary estimate; if it is small on this fixture, test a second independent word/time extension before any promotion.",
+  "boundary": "T0 claim-nonbearing finite nested Q3 word/time compatibility checkpoint. It is not a thermodynamic common-Hilbert theorem, a common-alpha construction, a mass-gap proof, a continuum result, or a QFT/Clay closure.",
+  "no_overclaim": "This package promotes only the finite positive support, finite polar congruences, and the declared restricted-map/time-translate compatibility diagnostic. It does not prove or refute another common OS carrier, action-compatible spatial transport, direct Cauchy convergence, Hamiltonian-to-OS identification, a GNS gap, continuum removal, C6, Sector A, Pre-A or a Clay result."
+}

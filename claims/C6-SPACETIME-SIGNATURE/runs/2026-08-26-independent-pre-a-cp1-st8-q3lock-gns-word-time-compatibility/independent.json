@@ -1,0 +1,662 @@
+{
+  "assertion_count": 41,
+  "assertions": [
+    {
+      "actual": [
+        "EXP-001182",
+        "T-054",
+        false
+      ],
+      "expected": "EXP-001182/T-054/false",
+      "group": "provenance",
+      "name": "identity",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "path2",
+        "path3",
+        "path4"
+      ],
+      "expected": "path2/path3/path4",
+      "group": "fixture",
+      "name": "graph fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "added_word_kinds": [
+          "qpq"
+        ],
+        "base_tau_fractions": [
+          0.125,
+          0.25
+        ],
+        "base_word_kinds": [
+          "q",
+          "p",
+          "qp",
+          "pq"
+        ],
+        "translated_tau_fraction": 0.375
+      },
+      "expected": "base q/p/qp/pq; add qpq; translate to 0.375",
+      "group": "fixture",
+      "name": "word/time fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.375,
+      "expected": "max(base)<translated<=0.5",
+      "group": "fixture",
+      "name": "translation inside half period",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          "path2",
+          "path3"
+        ],
+        [
+          "path3",
+          "path4"
+        ]
+      ],
+      "expected": "path2->path3 and path3->path4",
+      "group": "fixture",
+      "name": "nested pairs",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "c6_closed": false,
+        "common_alpha_closed": false,
+        "common_os_hilbert_carrier_closed": false,
+        "common_word_exhaustion_closed": false,
+        "continuum_closed": false,
+        "direct_d_delta_d_cauchy_closed": false,
+        "finite_base_polar_congruence_closed": true,
+        "finite_base_positive_gram_support_closed": true,
+        "finite_expanded_polar_congruence_closed": true,
+        "finite_expanded_positive_gram_support_closed": true,
+        "finite_word_enlargement_time_translate_diagnostic_closed": true,
+        "hamiltonian_os_identification_closed": false,
+        "kms_gns_gap_closed": false,
+        "no_new_negative_result": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "pre_a_closed": false,
+        "sector_a_closed": false,
+        "source_volume_cutoff_beta_uniform_closed": false,
+        "word_product_star_action_intertwining_closed": false
+      },
+      "expected": "finite compatibility diagnostic only",
+      "group": "scope",
+      "name": "scope firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "gram_transport_congruence"
+      ],
+      "expected": [
+        "gram_transport_congruence"
+      ],
+      "group": "Lean",
+      "name": "Lean declarations",
+      "status": "PASS"
+    },
+    {
+      "actual": 1,
+      "expected": 1,
+      "group": "registry",
+      "name": "registry uniqueness",
+      "status": "PASS"
+    },
+    {
+      "actual": "eb3b66f5518cd38690625bc35f9527b143061e84eb59b05a347b9ac2ce8ed0ef",
+      "expected": "eb3b66f5518cd38690625bc35f9527b143061e84eb59b05a347b9ac2ce8ed0ef",
+      "group": "registry",
+      "name": "registry hash",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        9,
+        27
+      ],
+      "expected": "large=9*3",
+      "group": "tensor",
+      "name": "path2->path3 dimensions",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        6.450497314837006,
+        15.684148081343993,
+        6.450497314837006,
+        15.684148081343993
+      ],
+      "expected": ">1e-12",
+      "group": "normalization",
+      "name": "path2->path3 beta=0.25 partitions",
+      "status": "PASS"
+    },
+    {
+      "actual": 7.725785006932553e-12,
+      "expected": ">1e-12",
+      "group": "Gram support",
+      "name": "path2->path3 beta=0.25 support",
+      "status": "PASS"
+    },
+    {
+      "actual": 2.10590763779324e-13,
+      "expected": "<=1e-07",
+      "group": "base polar transport",
+      "name": "path2->path3 beta=0.25 base congruence",
+      "status": "PASS"
+    },
+    {
+      "actual": 2.1381276281191588e-11,
+      "expected": "<=1e-07",
+      "group": "expanded polar transport",
+      "name": "path2->path3 beta=0.25 expanded congruence",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.0,
+      "expected": "<=1e-07",
+      "group": "word enlargement",
+      "name": "path2->path3 beta=0.25 principal consistency",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.9999105832828704,
+        0.9998001140095606,
+        0.9997113640342061,
+        0.9997117898590089,
+        0.9999105233492058,
+        0.9998078972745835,
+        0.999719092513134,
+        0.9997195030766006
+      ],
+      "expected": ">1e-10 and finite",
+      "group": "time translation",
+      "name": "path2->path3 beta=0.25 translated support",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        4.857797358831654,
+        9.938217312629908,
+        4.857797358831654,
+        9.938217312629908
+      ],
+      "expected": ">1e-12",
+      "group": "normalization",
+      "name": "path2->path3 beta=0.5 partitions",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.1823444965117226e-10,
+      "expected": ">1e-12",
+      "group": "Gram support",
+      "name": "path2->path3 beta=0.5 support",
+      "status": "PASS"
+    },
+    {
+      "actual": 3.302250027669615e-14,
+      "expected": "<=1e-07",
+      "group": "base polar transport",
+      "name": "path2->path3 beta=0.5 base congruence",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.6047124073905127e-11,
+      "expected": "<=1e-07",
+      "group": "expanded polar transport",
+      "name": "path2->path3 beta=0.5 expanded congruence",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.0,
+      "expected": "<=1e-07",
+      "group": "word enlargement",
+      "name": "path2->path3 beta=0.5 principal consistency",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.9996506689096873,
+        0.9992476872216969,
+        0.9988976946313535,
+        0.9989009245088909,
+        0.9996494797737747,
+        0.9992911043132282,
+        0.9989401350509214,
+        0.9989431940171173
+      ],
+      "expected": ">1e-10 and finite",
+      "group": "time translation",
+      "name": "path2->path3 beta=0.5 translated support",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        27,
+        81
+      ],
+      "expected": "large=27*3",
+      "group": "tensor",
+      "name": "path3->path4 dimensions",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        15.684148081343993,
+        37.7573107643544,
+        15.684148081343993,
+        37.7573107643544
+      ],
+      "expected": ">1e-12",
+      "group": "normalization",
+      "name": "path3->path4 beta=0.25 partitions",
+      "status": "PASS"
+    },
+    {
+      "actual": 7.73539776549372e-12,
+      "expected": ">1e-12",
+      "group": "Gram support",
+      "name": "path3->path4 beta=0.25 support",
+      "status": "PASS"
+    },
+    {
+      "actual": 4.89663115986951e-13,
+      "expected": "<=1e-07",
+      "group": "base polar transport",
+      "name": "path3->path4 beta=0.25 base congruence",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.4781661240902843e-11,
+      "expected": "<=1e-07",
+      "group": "expanded polar transport",
+      "name": "path3->path4 beta=0.25 expanded congruence",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.0,
+      "expected": "<=1e-07",
+      "group": "word enlargement",
+      "name": "path3->path4 beta=0.25 principal consistency",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.9999105233492058,
+        0.9998078972745835,
+        0.999719092513134,
+        0.9997195030766006,
+        0.9999105232006156,
+        0.9998079166611542,
+        0.9997191117651186,
+        0.9997195222905935
+      ],
+      "expected": ">1e-10 and finite",
+      "group": "time translation",
+      "name": "path3->path4 beta=0.25 translated support",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        9.938217312629908,
+        19.933391484178316,
+        9.938217312629908,
+        19.933391484178316
+      ],
+      "expected": ">1e-12",
+      "group": "normalization",
+      "name": "path3->path4 beta=0.5 partitions",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.1823444965117226e-10,
+      "expected": ">1e-12",
+      "group": "Gram support",
+      "name": "path3->path4 beta=0.5 support",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.0863657460290506e-13,
+      "expected": "<=1e-07",
+      "group": "base polar transport",
+      "name": "path3->path4 beta=0.5 base congruence",
+      "status": "PASS"
+    },
+    {
+      "actual": 2.3797355615937376e-12,
+      "expected": "<=1e-07",
+      "group": "expanded polar transport",
+      "name": "path3->path4 beta=0.5 expanded congruence",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.0,
+      "expected": "<=1e-07",
+      "group": "word enlargement",
+      "name": "path3->path4 beta=0.5 principal consistency",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.9996494797737747,
+        0.9992911043132282,
+        0.9989401350509214,
+        0.9989431940171173,
+        0.9996494543666966,
+        0.9992920345655323,
+        0.9989410445396452,
+        0.9989440998459401
+      ],
+      "expected": ">1e-10 and finite",
+      "group": "time translation",
+      "name": "path3->path4 beta=0.5 translated support",
+      "status": "PASS"
+    },
+    {
+      "actual": 4,
+      "expected": 4,
+      "group": "coverage",
+      "name": "block coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": 4,
+      "expected": 4,
+      "group": "coverage",
+      "name": "support coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": 4,
+      "expected": "all finite",
+      "group": "numerics",
+      "name": "numeric fields",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.025070798657314746,
+      "expected": ">=1e-10",
+      "group": "route diagnostic",
+      "name": "nonzero compatibility witness",
+      "status": "PASS"
+    },
+    {
+      "actual": 7.753197785870475e-05,
+      "expected": ">=1e-10",
+      "group": "route diagnostic",
+      "name": "nonzero translated Gram witness",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "c6_closed": false,
+        "common_alpha_closed": false,
+        "common_os_hilbert_carrier_closed": false,
+        "common_word_exhaustion_closed": false,
+        "continuum_closed": false,
+        "direct_d_delta_d_cauchy_closed": false,
+        "hamiltonian_os_identification_closed": false,
+        "kms_gns_gap_closed": false,
+        "pre_a_closed": false,
+        "sector_a_closed": false,
+        "source_volume_cutoff_beta_uniform_closed": false,
+        "word_product_star_action_intertwining_closed": false
+      },
+      "expected": "all downstream QFT gates open",
+      "group": "scope",
+      "name": "scope firewall",
+      "status": "PASS"
+    }
+  ],
+  "audit_id": "PA-CP1-ST8-Q3LOCK-FINITE-GNS-WORD-TIME-COMPATIBILITY",
+  "boundary": "T0 claim-nonbearing finite nested Q3 word/time compatibility checkpoint. It is not a thermodynamic common-Hilbert theorem, a common-alpha construction, a mass-gap proof, a continuum result, or a QFT/Clay closure.",
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "derived": {
+    "lean_marker": "gram_transport_congruence",
+    "max_base_condition": 34233456.95823452,
+    "max_base_congruence_residual": 4.89663115986951e-13,
+    "max_base_transport_distance": 0.04755616601828273,
+    "max_expanded_condition": 1874518196422.2358,
+    "max_expanded_congruence_residual": 2.1381276281191588e-11,
+    "max_expanded_transport_distance": 0.13975077872943953,
+    "max_restricted_transport_compatibility_residual": 0.025070798657314746,
+    "max_translated_gram_delta_relative": 7.753197785870475e-05,
+    "min_support": 7.725785006932553e-12,
+    "row_count": 4
+  },
+  "exploration_id": "EXP-001182",
+  "passed": 41,
+  "provenance": {
+    "lean_sha256": "eb3b66f5518cd38690625bc35f9527b143061e84eb59b05a347b9ac2ce8ed0ef",
+    "manifest_sha256": "1e7b4d13f30c9678e4d8733383b4a15d3dab6ba20e1d1848122782d8d86b1f9b",
+    "registry_sha256": "5f8e0cb421dcf5bc198175eb4a0c97d65ab690930046a465ebb16169ab59d5e1",
+    "script_sha256": "e7ba7a9a9e58b6682e5ef153a1642be67f974d319e21433caec09501558d6c91"
+  },
+  "rows": [
+    {
+      "base_condition_large": 34230616.41428166,
+      "base_condition_small": 33132516.55018408,
+      "base_congruence_relative_residual": 2.10590763779324e-13,
+      "base_transport_distance": 0.031605434497413244,
+      "beta": 0.25,
+      "expanded_condition_large": 1872215307010.9917,
+      "expanded_condition_small": 1874518196422.2358,
+      "expanded_congruence_relative_residual": 2.1381276281191588e-11,
+      "expanded_transport_distance": 0.08863192465262171,
+      "large_graph": "path3",
+      "min_support": 7.725785006932553e-12,
+      "principal_base_consistency_residual": 0.0,
+      "restricted_transport_compatibility_residual": 0.017420908449127154,
+      "small_graph": "path2",
+      "translated_gram_delta_relative": 1.2538025441542955e-05
+    },
+    {
+      "base_condition_large": 9633851.583613953,
+      "base_condition_small": 9190136.694588136,
+      "base_congruence_relative_residual": 3.302250027669615e-14,
+      "base_transport_distance": 0.04755616601828273,
+      "beta": 0.5,
+      "expanded_condition_large": 122297121523.54015,
+      "expanded_condition_small": 120097188640.4435,
+      "expanded_congruence_relative_residual": 1.6047124073905127e-11,
+      "expanded_transport_distance": 0.13975077872943953,
+      "large_graph": "path3",
+      "min_support": 1.1823444965117226e-10,
+      "principal_base_consistency_residual": 0.0,
+      "restricted_transport_compatibility_residual": 0.025070798657314746,
+      "small_graph": "path2",
+      "translated_gram_delta_relative": 7.753197785870475e-05
+    },
+    {
+      "base_condition_large": 34233456.95823452,
+      "base_condition_small": 34230616.41428166,
+      "base_congruence_relative_residual": 4.89663115986951e-13,
+      "base_transport_distance": 7.986361253952125e-05,
+      "beta": 0.25,
+      "expanded_condition_large": 1871974331764.7627,
+      "expanded_condition_small": 1872215307010.9917,
+      "expanded_congruence_relative_residual": 1.4781661240902843e-11,
+      "expanded_transport_distance": 0.00038422381793446706,
+      "large_graph": "path4",
+      "min_support": 7.73539776549372e-12,
+      "principal_base_consistency_residual": 0.0,
+      "restricted_transport_compatibility_residual": 0.00011231459427223732,
+      "small_graph": "path3",
+      "translated_gram_delta_relative": 3.1357913423088064e-08
+    },
+    {
+      "base_condition_large": 9643950.643759605,
+      "base_condition_small": 9633851.583613953,
+      "base_congruence_relative_residual": 1.0863657460290506e-13,
+      "base_transport_distance": 0.0010452567887356198,
+      "beta": 0.5,
+      "expanded_condition_large": 122020018196.38564,
+      "expanded_condition_small": 122297121523.54015,
+      "expanded_congruence_relative_residual": 2.3797355615937376e-12,
+      "expanded_transport_distance": 0.003502877610917704,
+      "large_graph": "path4",
+      "min_support": 1.1823444965117226e-10,
+      "principal_base_consistency_residual": 0.0,
+      "restricted_transport_compatibility_residual": 0.0009212893411344189,
+      "small_graph": "path3",
+      "translated_gram_delta_relative": 1.6666836618432467e-06
+    }
+  ],
+  "run_kind": "independent",
+  "schema": "tect/foundation-audit/1.0",
+  "scope": {
+    "c6_closed": false,
+    "common_alpha_closed": false,
+    "common_os_hilbert_carrier_closed": false,
+    "common_word_exhaustion_closed": false,
+    "continuum_closed": false,
+    "direct_d_delta_d_cauchy_closed": false,
+    "finite_base_polar_congruence_closed": true,
+    "finite_base_positive_gram_support_closed": true,
+    "finite_expanded_polar_congruence_closed": true,
+    "finite_expanded_positive_gram_support_closed": true,
+    "finite_word_enlargement_time_translate_diagnostic_closed": true,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "no_new_negative_result": true,
+    "no_pdf": true,
+    "no_tier_change": true,
+    "pre_a_closed": false,
+    "sector_a_closed": false,
+    "source_volume_cutoff_beta_uniform_closed": false,
+    "word_product_star_action_intertwining_closed": false
+  },
+  "support_rows": [
+    {
+      "base_condition_large": 34230616.41428166,
+      "base_condition_small": 33132516.55018408,
+      "base_congruence_relative_residual": 2.10590763779324e-13,
+      "base_tau_count": 2,
+      "base_transport_distance": 0.031605434497413244,
+      "base_word_count": 8,
+      "beta": 0.25,
+      "expanded_condition_large": 1872215307010.9917,
+      "expanded_condition_small": 1874518196422.2358,
+      "expanded_congruence_relative_residual": 2.1381276281191588e-11,
+      "expanded_tau_count": 3,
+      "expanded_transport_distance": 0.08863192465262171,
+      "expanded_word_count": 15,
+      "large_graph": "path3",
+      "min_eigen_base_large": 2.282266337320361e-07,
+      "min_eigen_base_small": 2.3578799070809756e-07,
+      "min_eigen_expanded_large": 7.73539776549372e-12,
+      "min_eigen_expanded_small": 7.725785006932553e-12,
+      "partition_large": 15.684148081343993,
+      "partition_large_expanded": 15.684148081343993,
+      "partition_small": 6.450497314837006,
+      "partition_small_expanded": 6.450497314837006,
+      "principal_base_consistency_residual": 0.0,
+      "restricted_transport_compatibility_residual": 0.017420908449127154,
+      "small_graph": "path2",
+      "translated_gram_delta_relative": 1.2538025441542955e-05,
+      "translated_vector_norm_min": 0.9997113640342061
+    },
+    {
+      "base_condition_large": 9633851.583613953,
+      "base_condition_small": 9190136.694588136,
+      "base_congruence_relative_residual": 3.302250027669615e-14,
+      "base_tau_count": 2,
+      "base_transport_distance": 0.04755616601828273,
+      "base_word_count": 8,
+      "beta": 0.5,
+      "expanded_condition_large": 122297121523.54015,
+      "expanded_condition_small": 120097188640.4435,
+      "expanded_congruence_relative_residual": 1.6047124073905127e-11,
+      "expanded_tau_count": 3,
+      "expanded_transport_distance": 0.13975077872943953,
+      "expanded_word_count": 15,
+      "large_graph": "path3",
+      "min_eigen_base_large": 8.103801857242985e-07,
+      "min_eigen_base_small": 8.494487284070448e-07,
+      "min_eigen_expanded_large": 1.1823444965117226e-10,
+      "min_eigen_expanded_small": 1.203892610945354e-10,
+      "partition_large": 9.938217312629908,
+      "partition_large_expanded": 9.938217312629908,
+      "partition_small": 4.857797358831654,
+      "partition_small_expanded": 4.857797358831654,
+      "principal_base_consistency_residual": 0.0,
+      "restricted_transport_compatibility_residual": 0.025070798657314746,
+      "small_graph": "path2",
+      "translated_gram_delta_relative": 7.753197785870475e-05,
+      "translated_vector_norm_min": 0.9988976946313535
+    },
+    {
+      "base_condition_large": 34233456.95823452,
+      "base_condition_small": 34230616.41428166,
+      "base_congruence_relative_residual": 4.89663115986951e-13,
+      "base_tau_count": 2,
+      "base_transport_distance": 7.986361253952125e-05,
+      "base_word_count": 8,
+      "beta": 0.25,
+      "expanded_condition_large": 1871974331764.7627,
+      "expanded_condition_small": 1872215307010.9917,
+      "expanded_congruence_relative_residual": 1.4781661240902843e-11,
+      "expanded_tau_count": 3,
+      "expanded_transport_distance": 0.00038422381793446706,
+      "expanded_word_count": 15,
+      "large_graph": "path4",
+      "min_eigen_base_large": 2.282077029639181e-07,
+      "min_eigen_base_small": 2.282266337320361e-07,
+      "min_eigen_expanded_large": 7.736393802180496e-12,
+      "min_eigen_expanded_small": 7.73539776549372e-12,
+      "partition_large": 37.7573107643544,
+      "partition_large_expanded": 37.7573107643544,
+      "partition_small": 15.684148081343993,
+      "partition_small_expanded": 15.684148081343993,
+      "principal_base_consistency_residual": 0.0,
+      "restricted_transport_compatibility_residual": 0.00011231459427223732,
+      "small_graph": "path3",
+      "translated_gram_delta_relative": 3.1357913423088064e-08,
+      "translated_vector_norm_min": 0.999719092513134
+    },
+    {
+      "base_condition_large": 9643950.643759605,
+      "base_condition_small": 9633851.583613953,
+      "base_congruence_relative_residual": 1.0863657460290506e-13,
+      "base_tau_count": 2,
+      "base_transport_distance": 0.0010452567887356198,
+      "base_word_count": 8,
+      "beta": 0.5,
+      "expanded_condition_large": 122020018196.38564,
+      "expanded_condition_small": 122297121523.54015,
+      "expanded_congruence_relative_residual": 2.3797355615937376e-12,
+      "expanded_tau_count": 3,
+      "expanded_transport_distance": 0.003502877610917704,
+      "expanded_word_count": 15,
+      "large_graph": "path4",
+      "min_eigen_base_large": 8.095327506287384e-07,
+      "min_eigen_base_small": 8.103801857242985e-07,
+      "min_eigen_expanded_large": 1.1850318951998368e-10,
+      "min_eigen_expanded_small": 1.1823444965117226e-10,
+      "partition_large": 19.933391484178316,
+      "partition_large_expanded": 19.933391484178316,
+      "partition_small": 9.938217312629908,
+      "partition_small_expanded": 9.938217312629908,
+      "principal_base_consistency_residual": 0.0,
+      "restricted_transport_compatibility_residual": 0.0009212893411344189,
+      "small_graph": "path3",
+      "translated_gram_delta_relative": 1.6666836618432467e-06,
+      "translated_vector_norm_min": 0.9989401350509214
+    }
+  ],
+  "task_id": "T-054",
+  "verdict": "PASS"
+}
