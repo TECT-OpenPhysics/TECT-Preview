@@ -10395,6 +10395,164 @@
       "task_id": "T-054",
       "title": "Finite Q3 Euclidean two-slice tail-moment bridge",
       "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "axis": "shift sign",
+          "check": "The per-volume shift r^2/(4g) is derived from the exact onsite completion and is included explicitly in K.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "positive interactions",
+          "check": "The numerical K floor is checked on each finite matrix; positivity of bonds is not silently substituted for an infinite-dimensional form theorem.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "quotient congruence",
+          "check": "The order test uses K^(-2)W^4K^(-2)<=C I followed by finite congruence, without commuting K and W.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "tail adjoint",
+          "check": "W is symmetrized before W^4 and the quotient are constructed.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "Gibbs positivity",
+          "check": "rho is normalized and positive in every row; the trace transfer is not used with an indefinite state.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "inverse conditioning",
+          "check": "Only the positive shifted energy K is inverted; no rho inverse or finite Gibbs spectral floor enters the argument.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "roundoff",
+          "check": "Operator-order and trace slacks are retained with a separately declared finite tolerance, including near-zero tails.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "uniformity",
+          "check": "Quotient and K^4 summaries are reported across beta, volume and cutoff; their finite variation is preserved as an open gate.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "truncated oscillator",
+          "check": "The finite dimensions are the declared Q3 fixtures and do not establish an unbounded common form core.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "independence",
+          "check": "The independent lane rebuilds the oscillator, Q3 bonds, shifted K, quotient and Gibbs traces without importing the primary lane.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "Lean boundary",
+          "check": "R349 certifies scalar envelope assembly only; matrix order and all QFT limits remain Python evidence/open analysis.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "QFT promotion",
+          "check": "This finite energy bridge does not prove local common-core coercivity, direct Cauchy, OS/KMS/GNS reconstruction, common dynamics, gap, continuum, C6, Sector A or Pre-A.",
+          "disposition": "UPHELD-OPEN"
+        }
+      ],
+      "boundary": "T0 claim-nonbearing finite Q3 energy-fourth coercive quotient checkpoint. It is not a thermodynamic common-Hilbert theorem, a common-alpha construction, a mass-gap proof, a continuum result, or a QFT/Clay closure.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "closed": [
+        "finite positive shifted Q3 Hamiltonian form",
+        "finite generalized quotient and congruence operator order",
+        "finite Gibbs transfer from the Euclidean tail moment to K^4",
+        "finite actual Q3 rows and parameter summaries",
+        "independent reproduction and Lean R349 scalar assembly"
+      ],
+      "decision_reason": "The positive onsite shift derived from the Q3 quartic form makes K finite-positive on every declared matrix. The congruence quotient C then gives an exact finite operator-order envelope W^4<=C K^4, and positivity of the Gibbs state transfers the Euclidean two-slice tail moment to a Gibbs K^4 moment. Independent reconstruction and R349 confirm the finite bookkeeping. The quotient and energy moments are regulator- and volume-dependent diagnostics, not analytic uniform constants; no route-local no-go is inferred.",
+      "evidence_refs": [
+        "strategy/pre-a-cp1-st8-q3lock-finite-energy-fourth-coercive-quotient-manifest.json#mathematical_interface",
+        "codes/foundations/pre_a_cp1_st8_q3lock_finite_energy_fourth_coercive_quotient.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_finite_energy_fourth_coercive_quotient_independent.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_finite_energy_fourth_coercive_quotient_verify.py#run",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-27-primary-pre-a-cp1-st8-q3lock-finite-energy-fourth-coercive-quotient/primary.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-27-independent-pre-a-cp1-st8-q3lock-finite-energy-fourth-coercive-quotient/independent.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-27-integrated-pre-a-cp1-st8-q3lock-finite-energy-fourth-coercive-quotient/integrated.json#lean",
+        "verification/lean/Tect/R349.lean#moment_energy_assembly",
+        "verification/lean/Tect/R349.lean#positive_quotient_envelope",
+        "verification/lean/registry.json#R349"
+      ],
+      "finding": "Primary 147/147 and independent 147/147 assertions pass; the integrated verifier passes 19/19 with Lean R349 PASS over 30 finite Q3 quotient rows and 15 volume-beta summaries. The generalized quotient constant has maximum 0.6763398239126067, the largest two-slice moment is 237.3256835871793, the largest equal-time fourth moment is 237.58147755921354, the largest Gibbs shifted-Hamiltonian fourth moment is 2066.1832202572123, and the largest finite trace bound is 1397.4419953599456. The minimum operator-order slack is 6.478475802582136e-76 and the minimum Gibbs trace slack is 3.172861481846147e-62 on the declared finite grid. These finite constants vary with graph, oscillator dimension, beta and cutoff and therefore do not close a uniform common-core estimate.",
+      "formal_integration": {
+        "events": [],
+        "lean": "R349 PASS",
+        "negatives": [],
+        "no_new_event": true,
+        "no_new_negative": true,
+        "no_new_result": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "results": []
+      },
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": []
+      },
+      "gate_ids": [
+        "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+        "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+        "PA-CP1-ST8-Q3LOCK-ALL-EXHAUSTION-MIXTURE-L2-LOCALITY-AND-BETA-INDEPENDENT-CSTAR-DYNAMICS",
+        "PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE"
+      ],
+      "id": "EXP-001190",
+      "method": [
+        "Load the EXP-001189 fixture chain so geometry, oscillator dimensions, couplings, beta values and cutoff radii remain single-sourced.",
+        "For each finite Q3 volume construct K=I+H+|Lambda|r^2/(4g)I, verify its positive floor, and form K^(-2) by spectral inversion of this energy shift only.",
+        "For each symmetrized cutoff tail W compute C=||K^(-2)W^4K^(-2)||_infinity and check the finite congruence order W^4<=C K^4 by the minimum eigenvalue slack.",
+        "Transfer the two-slice Euclidean moment through Tr(rho W^4)<=C Tr(rho K^4), retain all finite slacks and parameter summaries, and do not assert uniformity.",
+        "Reconstruct the Q3 matrices in a non-importing independent lane, compare grouped summaries, and compile Lean R349 for scalar envelope assembly."
+      ],
+      "next_action": "Derive an analytic source-local bound for the generalized quotient and the Gibbs K^4 moment on a named Q3 common core, then stress both constants under spatial and oscillator exhaustions before attempting direct Duhamel promotion.",
+      "no_overclaim": "This record promotes only the finite positive-shift quotient, operator-order envelope and Gibbs trace transfer. It does not prove quotient or energy-moment uniformity, common-core closure, modular transfer, direct Cauchy convergence, common alpha, Hamiltonian-OS identification, a GNS gap, continuum, C6, Sector A or Pre-A.",
+      "open": [
+        "analytic source-local quotient bound on a named unbounded Q3 common core",
+        "uniform Gibbs K^4 moment and quotient under spatial/cutoff exhaustion",
+        "continuity of the Euclidean four-point form and tail under oscillator removal",
+        "modular-domain transfer and direct D,delta-D Cauchy",
+        "all-shape exhaustion, product/core density and common alpha",
+        "Hamiltonian-to-OS/KMS/GNS identification, gap, continuum, C6, Sector A and Pre-A"
+      ],
+      "prior_exploration_id": "EXP-001189",
+      "provenance": "contemporaneous",
+      "qft_interface": {
+        "closed": "Each declared finite Q3 tail moment is controlled by an explicit shifted-Hamiltonian fourth moment through a computable generalized quotient, providing the finite energy input for the OS/KMS-facing Duhamel lane.",
+        "open": "Uniform quotient and energy-moment bounds, common core, direct D/delta-D Cauchy, common OS carrier/dynamics, Hamiltonian-OS/KMS/GNS identification, gap, continuum, C6, Sector A and Pre-A remain open.",
+        "tect_boundary": "Auxiliary C6/Q3 finite evidence only; no heat_root_incidence or canonical A1/R-192 production owner is supplied."
+      },
+      "question": "Can the finite Q3 tail fourth moment be bounded by a positive shifted Hamiltonian fourth moment through an explicit generalized coercive quotient, while keeping its uniformity open?",
+      "recorded_at": "2026-08-29T05:04:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001189",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001188",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001057",
+          "relation": "alternative_to"
+        }
+      ],
+      "reviewed_on": "2026-08-27",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Finite Q3 energy-fourth coercive quotient for the Euclidean tail moment",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",

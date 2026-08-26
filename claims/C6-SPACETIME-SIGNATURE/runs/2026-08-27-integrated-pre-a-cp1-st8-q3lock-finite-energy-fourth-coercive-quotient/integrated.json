@@ -1,0 +1,535 @@
+{
+  "assertion_count": 19,
+  "assertions": [
+    {
+      "actual": "['EXP-001190', 'T-054']",
+      "expected": "EXP-001190/T-054",
+      "name": "identity",
+      "pass": true
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "name": "claim nonbearing",
+      "pass": true
+    },
+    {
+      "actual": "['d50c43bc1098632afd40d8b61ad54874f8f11a22e2ee2f546943e6dbc69dc89c', 'ce60a5a2b28173ae0414f75f713599df84604c01e963c30dc08aed9e13bf9bb0']",
+      "expected": "distinct SHA-256",
+      "name": "source lanes distinct",
+      "pass": true
+    },
+    {
+      "actual": "['moment_energy_assembly', 'positive_quotient_envelope']",
+      "expected": "present",
+      "name": "Lean source",
+      "pass": true
+    },
+    {
+      "actual": "[]",
+      "expected": "none",
+      "name": "Lean forbidden",
+      "pass": true
+    },
+    {
+      "actual": "PRIMARY FINITE-ENERGY-FOURTH-COERCIVE-QUOTIENT PASS 147/147 rows=30\n",
+      "expected": "PASS",
+      "name": "primary child",
+      "pass": true
+    },
+    {
+      "actual": "INDEPENDENT FINITE-ENERGY-FOURTH-COERCIVE-QUOTIENT PASS 147/147 rows=30\n",
+      "expected": "PASS",
+      "name": "independent child",
+      "pass": true
+    },
+    {
+      "actual": "[30, 30]",
+      "expected": "30",
+      "name": "row coverage",
+      "pass": true
+    },
+    {
+      "actual": "[]",
+      "expected": "within lane tolerance",
+      "name": "summary agreement",
+      "pass": true
+    },
+    {
+      "actual": "[True, True]",
+      "expected": "True",
+      "name": "finite_positive_shift_closed",
+      "pass": true
+    },
+    {
+      "actual": "[True, True]",
+      "expected": "True",
+      "name": "finite_generalized_coercive_quotient_closed",
+      "pass": true
+    },
+    {
+      "actual": "[True, True]",
+      "expected": "True",
+      "name": "finite_operator_order_envelope_closed",
+      "pass": true
+    },
+    {
+      "actual": "[True, True]",
+      "expected": "True",
+      "name": "finite_gibbs_energy_fourth_transfer_closed",
+      "pass": true
+    },
+    {
+      "actual": "[False, False]",
+      "expected": "False",
+      "name": "quotient_volume_cutoff_uniform_closed remains open",
+      "pass": true
+    },
+    {
+      "actual": "[False, False]",
+      "expected": "False",
+      "name": "energy_fourth_uniform_closed remains open",
+      "pass": true
+    },
+    {
+      "actual": "[False, False]",
+      "expected": "False",
+      "name": "local_coercive_common_core_closed remains open",
+      "pass": true
+    },
+    {
+      "actual": "[False, False]",
+      "expected": "False",
+      "name": "tail_fourth_moment_uniform_closed remains open",
+      "pass": true
+    },
+    {
+      "actual": "{'finite_positive_shift_closed': True, 'finite_generalized_coercive_quotient_closed': True, 'finite_operator_order_envelope_closed': True, 'finite_gibbs_energy_fourth_transfer_closed': True, 'finite_actual_q3_rows_closed': True, 'quotient_volume_cutoff_uniform_closed': False, 'energy_fourth_uniform_closed': False, 'local_coercive_common_core_closed': False, 'tail_fourth_moment_uniform_closed': False, 'direct_d_delta_d_cauchy_closed': False, 'common_os_hilbert_carrier_closed': False, 'common_word_exhaustion_closed': False, 'common_alpha_closed': False, 'hamiltonian_os_identification_closed': False, 'kms_gns_gap_closed': False, 'continuum_closed': False, 'c6_closed': False, 'sector_a_closed': False, 'pre_a_closed': False, 'no_new_negative_result': True, 'no_tier_change': True, 'no_pdf': True}",
+      "expected": "finite quotient; QFT gates open",
+      "name": "scope firewall",
+      "pass": true
+    },
+    {
+      "actual": "{'status': 'PASS', 'command': 'lake env lean Tect/R349.lean', 'returncode': 0, 'output': 'Tect/R349.lean:7:5: warning: Variable name `h_moment` is not explicitly referenced.\\n\\nThe binding can be removed (if unused) or named `_` (if used implicitly).\\n\\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\\nTect/R349.lean:8:5: warning: Variable name `h_coefficient` is not explicitly referenced.\\n\\nThe binding can be removed (if unused) or named `_` (if used implicitly).\\n\\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\\nTect/R349.lean:9:5: warning: Variable name `h_energy` is not explicitly referenced.\\n\\nThe binding can be removed (if unused) or named `_` (if used implicitly).\\n\\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\\nTect/R349.lean:16:5: warning: Variable name `h_two_slice` is not explicitly referenced.\\n\\nThe binding can be removed (if unused) or named `_` (if used implicitly).\\n\\nNote: This linter can be disabled with `set_option linter.unusedVariables false`'}",
+      "expected": "PASS",
+      "name": "Lean compile",
+      "pass": true
+    }
+  ],
+  "audit_id": "PA-CP1-ST8-Q3LOCK-FINITE-ENERGY-FOURTH-COERCIVE-QUOTIENT",
+  "boundary": {
+    "c6_closed": false,
+    "common_alpha_closed": false,
+    "common_os_hilbert_carrier_closed": false,
+    "common_word_exhaustion_closed": false,
+    "continuum_closed": false,
+    "direct_d_delta_d_cauchy_closed": false,
+    "energy_fourth_uniform_closed": false,
+    "finite_actual_q3_rows_closed": true,
+    "finite_generalized_coercive_quotient_closed": true,
+    "finite_gibbs_energy_fourth_transfer_closed": true,
+    "finite_operator_order_envelope_closed": true,
+    "finite_positive_shift_closed": true,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "local_coercive_common_core_closed": false,
+    "no_new_negative_result": true,
+    "no_pdf": true,
+    "no_tier_change": true,
+    "pre_a_closed": false,
+    "quotient_volume_cutoff_uniform_closed": false,
+    "sector_a_closed": false,
+    "tail_fourth_moment_uniform_closed": false
+  },
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "derived": {
+    "energy_fourth_uniform_closed": false,
+    "finite_generalized_coercive_quotient_closed": true,
+    "finite_gibbs_energy_fourth_transfer_closed": true,
+    "independent_summary_rows": [
+      {
+        "beta": 0.125,
+        "energy_fourth_moment": 112.96320576139173,
+        "max_equal_time_fourth_moment": 4.9841385598184536,
+        "max_quotient_constant": 0.3730931793691604,
+        "max_trace_bound": 42.145801589250304,
+        "max_two_slice": 4.978096490313757,
+        "min_order_slack": 5.683311605720812e-17,
+        "min_trace_slack": 0.1688269573399818,
+        "oscillator_dimension": 3,
+        "volume": 2
+      },
+      {
+        "beta": 0.25,
+        "energy_fourth_moment": 101.82829047140262,
+        "max_equal_time_fourth_moment": 4.31072098881917,
+        "max_quotient_constant": 0.3730931793691604,
+        "max_trace_bound": 37.99144064170199,
+        "max_two_slice": 4.286812993506902,
+        "min_order_slack": 5.683311605720812e-17,
+        "min_trace_slack": 0.15301553472658688,
+        "oscillator_dimension": 3,
+        "volume": 2
+      },
+      {
+        "beta": 0.5,
+        "energy_fourth_moment": 81.34171070653008,
+        "max_equal_time_fourth_moment": 3.184388965268901,
+        "max_quotient_constant": 0.3730931793691604,
+        "max_trace_bound": 30.348037462825783,
+        "max_two_slice": 3.0927711359602013,
+        "min_order_slack": 5.683311605720812e-17,
+        "min_trace_slack": 0.12341215519889412,
+        "oscillator_dimension": 3,
+        "volume": 2
+      },
+      {
+        "beta": 1.0,
+        "energy_fourth_moment": 49.629550730029024,
+        "max_equal_time_fourth_moment": 1.7926482210507462,
+        "max_quotient_constant": 0.3730931793691604,
+        "max_trace_bound": 18.516446872529563,
+        "max_two_slice": 1.4806072773075596,
+        "min_order_slack": 5.683311605720812e-17,
+        "min_trace_slack": 0.07598653598728264,
+        "oscillator_dimension": 3,
+        "volume": 2
+      },
+      {
+        "beta": 2.0,
+        "energy_fourth_moment": 19.598738671498104,
+        "max_equal_time_fourth_moment": 1.1091667655723398,
+        "max_quotient_constant": 0.3730931793691604,
+        "max_trace_bound": 7.312155722574543,
+        "max_two_slice": 0.34340997080309277,
+        "min_order_slack": 5.683311605720812e-17,
+        "min_trace_slack": 0.02818699633984478,
+        "oscillator_dimension": 3,
+        "volume": 2
+      },
+      {
+        "beta": 0.125,
+        "energy_fourth_moment": 2066.1832202572123,
+        "max_equal_time_fourth_moment": 237.58147755921354,
+        "max_quotient_constant": 0.6763398239126067,
+        "max_trace_bound": 1397.4419953599456,
+        "max_two_slice": 237.3256835871793,
+        "min_order_slack": 3.978741392974717e-15,
+        "min_trace_slack": 5.2694484367644545,
+        "oscillator_dimension": 3,
+        "volume": 4
+      },
+      {
+        "beta": 0.25,
+        "energy_fourth_moment": 1679.6657201687008,
+        "max_equal_time_fourth_moment": 166.45658673824397,
+        "max_quotient_constant": 0.6763398239126067,
+        "max_trace_bound": 1136.0248174109408,
+        "max_two_slice": 165.62349719245785,
+        "min_order_slack": 3.978741392974717e-15,
+        "min_trace_slack": 4.404970292285391,
+        "oscillator_dimension": 3,
+        "volume": 4
+      },
+      {
+        "beta": 0.5,
+        "energy_fourth_moment": 1129.4274783811695,
+        "max_equal_time_fourth_moment": 88.54773612404603,
+        "max_quotient_constant": 0.6763398239126067,
+        "max_trace_bound": 763.8767818503796,
+        "max_two_slice": 86.19251112568396,
+        "min_order_slack": 3.978741392974717e-15,
+        "min_trace_slack": 3.0676880665204367,
+        "oscillator_dimension": 3,
+        "volume": 4
+      },
+      {
+        "beta": 1.0,
+        "energy_fourth_moment": 496.4271049456461,
+        "max_equal_time_fourth_moment": 30.458234629113665,
+        "max_quotient_constant": 0.6763398239126067,
+        "max_trace_bound": 335.7534207443834,
+        "max_two_slice": 24.764019618109224,
+        "min_order_slack": 3.978741392974717e-15,
+        "min_trace_slack": 1.3863283455967663,
+        "oscillator_dimension": 3,
+        "volume": 4
+      },
+      {
+        "beta": 2.0,
+        "energy_fourth_moment": 104.65692065792695,
+        "max_equal_time_fourth_moment": 11.648674561752301,
+        "max_quotient_constant": 0.6763398239126067,
+        "max_trace_bound": 70.78364328901796,
+        "max_two_slice": 2.0790832653418496,
+        "min_order_slack": 3.978741392974717e-15,
+        "min_trace_slack": 0.26834580215584103,
+        "oscillator_dimension": 3,
+        "volume": 4
+      },
+      {
+        "beta": 0.125,
+        "energy_fourth_moment": 1374.21808912798,
+        "max_equal_time_fourth_moment": 6.622793460974427,
+        "max_quotient_constant": 0.013300562613926198,
+        "max_trace_bound": 18.27787373963671,
+        "max_two_slice": 6.622793460974432,
+        "min_order_slack": 6.478475802582136e-76,
+        "min_trace_slack": 6.817204574018947e-62,
+        "oscillator_dimension": 2,
+        "volume": 6
+      },
+      {
+        "beta": 0.25,
+        "energy_fourth_moment": 1294.987363677575,
+        "max_equal_time_fourth_moment": 5.818122173018378,
+        "max_quotient_constant": 0.013300562613926198,
+        "max_trace_bound": 17.224060514836804,
+        "max_two_slice": 5.818122173018377,
+        "min_order_slack": 6.478475802582136e-76,
+        "min_trace_slack": 6.67147828892923e-62,
+        "oscillator_dimension": 2,
+        "volume": 6
+      },
+      {
+        "beta": 0.5,
+        "energy_fourth_moment": 1146.5356023212494,
+        "max_equal_time_fourth_moment": 4.469529768179349,
+        "max_quotient_constant": 0.013300562613926198,
+        "max_trace_bound": 15.249568567769364,
+        "max_two_slice": 4.469529768179351,
+        "min_order_slack": 6.478475802582136e-76,
+        "min_trace_slack": 6.305381692411782e-62,
+        "oscillator_dimension": 2,
+        "volume": 6
+      },
+      {
+        "beta": 1.0,
+        "energy_fourth_moment": 876.9351173992314,
+        "max_equal_time_fourth_moment": 2.538541935125637,
+        "max_quotient_constant": 0.013300562613926198,
+        "max_trace_bound": 11.663730437319199,
+        "max_two_slice": 2.538541935125638,
+        "min_order_slack": 6.478475802582136e-76,
+        "min_trace_slack": 5.337438722736884e-62,
+        "oscillator_dimension": 2,
+        "volume": 6
+      },
+      {
+        "beta": 2.0,
+        "energy_fourth_moment": 454.7380314495236,
+        "max_equal_time_fourth_moment": 0.6237673956901514,
+        "max_quotient_constant": 0.013300562613926198,
+        "max_trace_bound": 6.048271660227929,
+        "max_two_slice": 0.6237673956901495,
+        "min_order_slack": 6.478475802582136e-76,
+        "min_trace_slack": 3.172861481846147e-62,
+        "oscillator_dimension": 2,
+        "volume": 6
+      }
+    ],
+    "local_coercive_common_core_closed": false,
+    "primary_summary_rows": [
+      {
+        "beta": 0.125,
+        "energy_fourth_moment": 112.96320576139173,
+        "max_equal_time_fourth_moment": 4.9841385598184536,
+        "max_quotient_constant": 0.3730931793691604,
+        "max_trace_bound": 42.145801589250304,
+        "max_two_slice": 4.978096490313757,
+        "min_order_slack": 5.683311605720812e-17,
+        "min_trace_slack": 0.1688269573399818,
+        "oscillator_dimension": 3,
+        "volume": 2
+      },
+      {
+        "beta": 0.25,
+        "energy_fourth_moment": 101.82829047140262,
+        "max_equal_time_fourth_moment": 4.31072098881917,
+        "max_quotient_constant": 0.3730931793691604,
+        "max_trace_bound": 37.99144064170199,
+        "max_two_slice": 4.286812993506902,
+        "min_order_slack": 5.683311605720812e-17,
+        "min_trace_slack": 0.15301553472658688,
+        "oscillator_dimension": 3,
+        "volume": 2
+      },
+      {
+        "beta": 0.5,
+        "energy_fourth_moment": 81.34171070653008,
+        "max_equal_time_fourth_moment": 3.184388965268901,
+        "max_quotient_constant": 0.3730931793691604,
+        "max_trace_bound": 30.348037462825783,
+        "max_two_slice": 3.0927711359602013,
+        "min_order_slack": 5.683311605720812e-17,
+        "min_trace_slack": 0.12341215519889412,
+        "oscillator_dimension": 3,
+        "volume": 2
+      },
+      {
+        "beta": 1.0,
+        "energy_fourth_moment": 49.629550730029024,
+        "max_equal_time_fourth_moment": 1.7926482210507462,
+        "max_quotient_constant": 0.3730931793691604,
+        "max_trace_bound": 18.516446872529563,
+        "max_two_slice": 1.4806072773075596,
+        "min_order_slack": 5.683311605720812e-17,
+        "min_trace_slack": 0.07598653598728264,
+        "oscillator_dimension": 3,
+        "volume": 2
+      },
+      {
+        "beta": 2.0,
+        "energy_fourth_moment": 19.598738671498104,
+        "max_equal_time_fourth_moment": 1.1091667655723398,
+        "max_quotient_constant": 0.3730931793691604,
+        "max_trace_bound": 7.312155722574543,
+        "max_two_slice": 0.34340997080309277,
+        "min_order_slack": 5.683311605720812e-17,
+        "min_trace_slack": 0.02818699633984478,
+        "oscillator_dimension": 3,
+        "volume": 2
+      },
+      {
+        "beta": 0.125,
+        "energy_fourth_moment": 2066.1832202572123,
+        "max_equal_time_fourth_moment": 237.58147755921354,
+        "max_quotient_constant": 0.6763398239126067,
+        "max_trace_bound": 1397.4419953599456,
+        "max_two_slice": 237.3256835871793,
+        "min_order_slack": 3.978741392974717e-15,
+        "min_trace_slack": 5.2694484367644545,
+        "oscillator_dimension": 3,
+        "volume": 4
+      },
+      {
+        "beta": 0.25,
+        "energy_fourth_moment": 1679.6657201687008,
+        "max_equal_time_fourth_moment": 166.45658673824397,
+        "max_quotient_constant": 0.6763398239126067,
+        "max_trace_bound": 1136.0248174109408,
+        "max_two_slice": 165.62349719245785,
+        "min_order_slack": 3.978741392974717e-15,
+        "min_trace_slack": 4.404970292285391,
+        "oscillator_dimension": 3,
+        "volume": 4
+      },
+      {
+        "beta": 0.5,
+        "energy_fourth_moment": 1129.4274783811695,
+        "max_equal_time_fourth_moment": 88.54773612404603,
+        "max_quotient_constant": 0.6763398239126067,
+        "max_trace_bound": 763.8767818503796,
+        "max_two_slice": 86.19251112568396,
+        "min_order_slack": 3.978741392974717e-15,
+        "min_trace_slack": 3.0676880665204367,
+        "oscillator_dimension": 3,
+        "volume": 4
+      },
+      {
+        "beta": 1.0,
+        "energy_fourth_moment": 496.4271049456461,
+        "max_equal_time_fourth_moment": 30.458234629113665,
+        "max_quotient_constant": 0.6763398239126067,
+        "max_trace_bound": 335.7534207443834,
+        "max_two_slice": 24.764019618109224,
+        "min_order_slack": 3.978741392974717e-15,
+        "min_trace_slack": 1.3863283455967663,
+        "oscillator_dimension": 3,
+        "volume": 4
+      },
+      {
+        "beta": 2.0,
+        "energy_fourth_moment": 104.65692065792695,
+        "max_equal_time_fourth_moment": 11.648674561752301,
+        "max_quotient_constant": 0.6763398239126067,
+        "max_trace_bound": 70.78364328901796,
+        "max_two_slice": 2.0790832653418496,
+        "min_order_slack": 3.978741392974717e-15,
+        "min_trace_slack": 0.26834580215584103,
+        "oscillator_dimension": 3,
+        "volume": 4
+      },
+      {
+        "beta": 0.125,
+        "energy_fourth_moment": 1374.21808912798,
+        "max_equal_time_fourth_moment": 6.622793460974427,
+        "max_quotient_constant": 0.013300562613926198,
+        "max_trace_bound": 18.27787373963671,
+        "max_two_slice": 6.622793460974432,
+        "min_order_slack": 6.478475802582136e-76,
+        "min_trace_slack": 6.817204574018947e-62,
+        "oscillator_dimension": 2,
+        "volume": 6
+      },
+      {
+        "beta": 0.25,
+        "energy_fourth_moment": 1294.987363677575,
+        "max_equal_time_fourth_moment": 5.818122173018378,
+        "max_quotient_constant": 0.013300562613926198,
+        "max_trace_bound": 17.224060514836804,
+        "max_two_slice": 5.818122173018377,
+        "min_order_slack": 6.478475802582136e-76,
+        "min_trace_slack": 6.67147828892923e-62,
+        "oscillator_dimension": 2,
+        "volume": 6
+      },
+      {
+        "beta": 0.5,
+        "energy_fourth_moment": 1146.5356023212494,
+        "max_equal_time_fourth_moment": 4.469529768179349,
+        "max_quotient_constant": 0.013300562613926198,
+        "max_trace_bound": 15.249568567769364,
+        "max_two_slice": 4.469529768179351,
+        "min_order_slack": 6.478475802582136e-76,
+        "min_trace_slack": 6.305381692411782e-62,
+        "oscillator_dimension": 2,
+        "volume": 6
+      },
+      {
+        "beta": 1.0,
+        "energy_fourth_moment": 876.9351173992314,
+        "max_equal_time_fourth_moment": 2.538541935125637,
+        "max_quotient_constant": 0.013300562613926198,
+        "max_trace_bound": 11.663730437319199,
+        "max_two_slice": 2.538541935125638,
+        "min_order_slack": 6.478475802582136e-76,
+        "min_trace_slack": 5.337438722736884e-62,
+        "oscillator_dimension": 2,
+        "volume": 6
+      },
+      {
+        "beta": 2.0,
+        "energy_fourth_moment": 454.7380314495236,
+        "max_equal_time_fourth_moment": 0.6237673956901514,
+        "max_quotient_constant": 0.013300562613926198,
+        "max_trace_bound": 6.048271660227929,
+        "max_two_slice": 0.6237673956901495,
+        "min_order_slack": 6.478475802582136e-76,
+        "min_trace_slack": 3.172861481846147e-62,
+        "oscillator_dimension": 2,
+        "volume": 6
+      }
+    ],
+    "qft_promoted": false,
+    "quotient_volume_cutoff_uniform_closed": false
+  },
+  "exploration_id": "EXP-001190",
+  "lean": {
+    "command": "lake env lean Tect/R349.lean",
+    "output": "Tect/R349.lean:7:5: warning: Variable name `h_moment` is not explicitly referenced.\n\nThe binding can be removed (if unused) or named `_` (if used implicitly).\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\nTect/R349.lean:8:5: warning: Variable name `h_coefficient` is not explicitly referenced.\n\nThe binding can be removed (if unused) or named `_` (if used implicitly).\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\nTect/R349.lean:9:5: warning: Variable name `h_energy` is not explicitly referenced.\n\nThe binding can be removed (if unused) or named `_` (if used implicitly).\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\nTect/R349.lean:16:5: warning: Variable name `h_two_slice` is not explicitly referenced.\n\nThe binding can be removed (if unused) or named `_` (if used implicitly).\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`",
+    "returncode": 0,
+    "status": "PASS"
+  },
+  "provenance": {
+    "independent_sha256": "ce60a5a2b28173ae0414f75f713599df84604c01e963c30dc08aed9e13bf9bb0",
+    "lean_sha256": "e1a1d699d6fb3c551f83e3fd2c5ed7ee5705c37581f7ede3c32b5178e2ccb79f",
+    "manifest_sha256": "f3e17c2ea6af3b53b6857920933516f396b9bcb7ef7237815d4baf16ff123e40",
+    "primary_sha256": "d50c43bc1098632afd40d8b61ad54874f8f11a22e2ee2f546943e6dbc69dc89c"
+  },
+  "recorded_at": "2026-08-26T17:38:00.669154Z",
+  "run_kind": "integrated",
+  "schema": "tect/foundation-audit/1.0",
+  "task_id": "T-054",
+  "verdict": "PASS"
+}

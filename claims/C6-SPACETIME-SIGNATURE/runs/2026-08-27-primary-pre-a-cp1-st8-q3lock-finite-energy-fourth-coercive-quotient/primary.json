@@ -1,0 +1,1780 @@
+{
+  "assertion_count": 147,
+  "assertions": [
+    {
+      "actual": "['EXP-001190', 'T-054']",
+      "expected": "EXP-001190/T-054",
+      "group": "provenance",
+      "name": "identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "['EXP-001190', 'EXP-001189', 'EXP-001188']",
+      "expected": "EXP-001189 -> EXP-001188",
+      "group": "provenance",
+      "name": "fixture lineage",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "group": "scope",
+      "name": "claim nonbearing",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'finite_positive_shift_closed': True, 'finite_generalized_coercive_quotient_closed': True, 'finite_operator_order_envelope_closed': True, 'finite_gibbs_energy_fourth_transfer_closed': True, 'finite_actual_q3_rows_closed': True, 'quotient_volume_cutoff_uniform_closed': False, 'energy_fourth_uniform_closed': False, 'local_coercive_common_core_closed': False, 'tail_fourth_moment_uniform_closed': False, 'direct_d_delta_d_cauchy_closed': False, 'common_os_hilbert_carrier_closed': False, 'common_word_exhaustion_closed': False, 'common_alpha_closed': False, 'hamiltonian_os_identification_closed': False, 'kms_gns_gap_closed': False, 'continuum_closed': False, 'c6_closed': False, 'sector_a_closed': False, 'pre_a_closed': False, 'no_new_negative_result': True, 'no_tier_change': True, 'no_pdf': True}",
+      "expected": "finite energy quotient; QFT gates open",
+      "group": "scope",
+      "name": "scope firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.576764430615741",
+      "expected": ">=1",
+      "group": "positive shift",
+      "name": "V=2 positive shifted form",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.9999999999999998, 0.09404707201276]",
+      "expected": "normalized positive",
+      "group": "state",
+      "name": "V=2 beta=0.125 Gibbs state",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'shift_per_volume': 0.8333333333333334, 'shifted_floor': 1.576764430615741, 'tail_operator_norm': 2.25, 'two_slice': 4.978096490313757, 'equal_time_fourth_moment': 4.9841385598184536, 'energy_fourth_moment': 112.96320576139173, 'quotient_constant': 0.3730931793691604, 'trace_bound': 42.145801589250304, 'order_slack': 1.2929869218105418e-14, 'trace_slack': 37.16166302943185, 'order_scale': 153.3181373009277}",
+      "expected": "finite",
+      "group": "quotient",
+      "name": "V=2 beta=0.125 L=0.5 finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "[4.978096490313757, 4.9841385598184536]",
+      "expected": "0<=two_slice<=Tr(rho W^4)",
+      "group": "Euclidean transfer",
+      "name": "V=2 beta=0.125 L=0.5 two-slice transfer",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.2929869218105418e-14, 153.3181373009277]",
+      "expected": ">=-finite tolerance",
+      "group": "operator order",
+      "name": "V=2 beta=0.125 L=0.5 quotient order",
+      "status": "PASS"
+    },
+    {
+      "actual": "[4.9841385598184536, 42.145801589250304]",
+      "expected": "Tr(rho W^4)<=C Tr(rho K^4)",
+      "group": "Gibbs transfer",
+      "name": "V=2 beta=0.125 L=0.5 Gibbs energy transfer",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'shift_per_volume': 0.8333333333333334, 'shifted_floor': 1.576764430615741, 'tail_operator_norm': 0.5841809581098106, 'two_slice': 0.022592728221306882, 'equal_time_fourth_moment': 0.022620237715208557, 'energy_fourth_moment': 112.96320576139173, 'quotient_constant': 0.0016947748053430568, 'trace_bound': 0.19144719505519034, 'order_slack': 5.683311605720812e-17, 'trace_slack': 0.1688269573399818, 'order_scale': 1.6919489381259472}",
+      "expected": "finite",
+      "group": "quotient",
+      "name": "V=2 beta=0.125 L=1.0 finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.022592728221306882, 0.022620237715208557]",
+      "expected": "0<=two_slice<=Tr(rho W^4)",
+      "group": "Euclidean transfer",
+      "name": "V=2 beta=0.125 L=1.0 two-slice transfer",
+      "status": "PASS"
+    },
+    {
+      "actual": "[5.683311605720812e-17, 1.6919489381259472]",
+      "expected": ">=-finite tolerance",
+      "group": "operator order",
+      "name": "V=2 beta=0.125 L=1.0 quotient order",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.022620237715208557, 0.19144719505519034]",
+      "expected": "Tr(rho W^4)<=C Tr(rho K^4)",
+      "group": "Gibbs transfer",
+      "name": "V=2 beta=0.125 L=1.0 Gibbs energy transfer",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.9999999999999998, 0.07861904786727253]",
+      "expected": "normalized positive",
+      "group": "state",
+      "name": "V=2 beta=0.25 Gibbs state",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'shift_per_volume': 0.8333333333333334, 'shifted_floor': 1.576764430615741, 'tail_operator_norm': 2.25, 'two_slice': 4.286812993506902, 'equal_time_fourth_moment': 4.31072098881917, 'energy_fourth_moment': 101.82829047140262, 'quotient_constant': 0.3730931793691604, 'trace_bound': 37.99144064170199, 'order_slack': 1.2929869218105418e-14, 'trace_slack': 33.68071965288282, 'order_scale': 153.3181373009277}",
+      "expected": "finite",
+      "group": "quotient",
+      "name": "V=2 beta=0.25 L=0.5 finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "[4.286812993506902, 4.31072098881917]",
+      "expected": "0<=two_slice<=Tr(rho W^4)",
+      "group": "Euclidean transfer",
+      "name": "V=2 beta=0.25 L=0.5 two-slice transfer",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.2929869218105418e-14, 153.3181373009277]",
+      "expected": ">=-finite tolerance",
+      "group": "operator order",
+      "name": "V=2 beta=0.25 L=0.5 quotient order",
+      "status": "PASS"
+    },
+    {
+      "actual": "[4.31072098881917, 37.99144064170199]",
+      "expected": "Tr(rho W^4)<=C Tr(rho K^4)",
+      "group": "Gibbs transfer",
+      "name": "V=2 beta=0.25 L=0.5 Gibbs energy transfer",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'shift_per_volume': 0.8333333333333334, 'shifted_floor': 1.576764430615741, 'tail_operator_norm': 0.5841809581098106, 'two_slice': 0.019451645839895608, 'equal_time_fourth_moment': 0.01956048643550074, 'energy_fourth_moment': 101.82829047140262, 'quotient_constant': 0.0016947748053430568, 'trace_bound': 0.17257602116208762, 'order_slack': 5.683311605720812e-17, 'trace_slack': 0.15301553472658688, 'order_scale': 1.6919489381259472}",
+      "expected": "finite",
+      "group": "quotient",
+      "name": "V=2 beta=0.25 L=1.0 finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.019451645839895608, 0.01956048643550074]",
+      "expected": "0<=two_slice<=Tr(rho W^4)",
+      "group": "Euclidean transfer",
+      "name": "V=2 beta=0.25 L=1.0 two-slice transfer",
+      "status": "PASS"
+    },
+    {
+      "actual": "[5.683311605720812e-17, 1.6919489381259472]",
+      "expected": ">=-finite tolerance",
+      "group": "operator order",
+      "name": "V=2 beta=0.25 L=1.0 quotient order",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.01956048643550074, 0.17257602116208762]",
+      "expected": "Tr(rho W^4)<=C Tr(rho K^4)",
+      "group": "Gibbs transfer",
+      "name": "V=2 beta=0.25 L=1.0 Gibbs energy transfer",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.0, 0.0529422705350788]",
+      "expected": "normalized positive",
+      "group": "state",
+      "name": "V=2 beta=0.5 Gibbs state",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'shift_per_volume': 0.8333333333333334, 'shifted_floor': 1.576764430615741, 'tail_operator_norm': 2.25, 'two_slice': 3.0927711359602013, 'equal_time_fourth_moment': 3.184388965268901, 'energy_fourth_moment': 81.34171070653008, 'quotient_constant': 0.3730931793691604, 'trace_bound': 30.348037462825783, 'order_slack': 1.2929869218105418e-14, 'trace_slack': 27.16364849755688, 'order_scale': 153.3181373009277}",
+      "expected": "finite",
+      "group": "quotient",
+      "name": "V=2 beta=0.5 L=0.5 finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "[3.0927711359602013, 3.184388965268901]",
+      "expected": "0<=two_slice<=Tr(rho W^4)",
+      "group": "Euclidean transfer",
+      "name": "V=2 beta=0.5 L=0.5 two-slice transfer",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.2929869218105418e-14, 153.3181373009277]",
+      "expected": ">=-finite tolerance",
+      "group": "operator order",
+      "name": "V=2 beta=0.5 L=0.5 quotient order",
+      "status": "PASS"
+    },
+    {
+      "actual": "[3.184388965268901, 30.348037462825783]",
+      "expected": "Tr(rho W^4)<=C Tr(rho K^4)",
+      "group": "Gibbs transfer",
+      "name": "V=2 beta=0.5 L=0.5 Gibbs energy transfer",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'shift_per_volume': 0.8333333333333334, 'shifted_floor': 1.576764430615741, 'tail_operator_norm': 0.5841809581098106, 'two_slice': 0.014026727591653156, 'equal_time_fourth_moment': 0.014443726730036632, 'energy_fourth_moment': 81.34171070653008, 'quotient_constant': 0.0016947748053430568, 'trace_bound': 0.13785588192893075, 'order_slack': 5.683311605720812e-17, 'trace_slack': 0.12341215519889412, 'order_scale': 1.6919489381259472}",
+      "expected": "finite",
+      "group": "quotient",
+      "name": "V=2 beta=0.5 L=1.0 finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.014026727591653156, 0.014443726730036632]",
+      "expected": "0<=two_slice<=Tr(rho W^4)",
+      "group": "Euclidean transfer",
+      "name": "V=2 beta=0.5 L=1.0 two-slice transfer",
+      "status": "PASS"
+    },
+    {
+      "actual": "[5.683311605720812e-17, 1.6919489381259472]",
+      "expected": ">=-finite tolerance",
+      "group": "operator order",
+      "name": "V=2 beta=0.5 L=1.0 quotient order",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.014443726730036632, 0.13785588192893075]",
+      "expected": "Tr(rho W^4)<=C Tr(rho K^4)",
+      "group": "Gibbs transfer",
+      "name": "V=2 beta=0.5 L=1.0 Gibbs energy transfer",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.9999999999999999, 0.02092916218802376]",
+      "expected": "normalized positive",
+      "group": "state",
+      "name": "V=2 beta=1.0 Gibbs state",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'shift_per_volume': 0.8333333333333334, 'shifted_floor': 1.576764430615741, 'tail_operator_norm': 2.25, 'two_slice': 1.4806072773075596, 'equal_time_fourth_moment': 1.7926482210507462, 'energy_fourth_moment': 49.629550730029024, 'quotient_constant': 0.3730931793691604, 'trace_bound': 18.516446872529563, 'order_slack': 1.2929869218105418e-14, 'trace_slack': 16.723798651478816, 'order_scale': 153.3181373009277}",
+      "expected": "finite",
+      "group": "quotient",
+      "name": "V=2 beta=1.0 L=0.5 finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.4806072773075596, 1.7926482210507462]",
+      "expected": "0<=two_slice<=Tr(rho W^4)",
+      "group": "Euclidean transfer",
+      "name": "V=2 beta=1.0 L=0.5 two-slice transfer",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.2929869218105418e-14, 153.3181373009277]",
+      "expected": ">=-finite tolerance",
+      "group": "operator order",
+      "name": "V=2 beta=1.0 L=0.5 quotient order",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.7926482210507462, 18.516446872529563]",
+      "expected": "Tr(rho W^4)<=C Tr(rho K^4)",
+      "group": "Gibbs transfer",
+      "name": "V=2 beta=1.0 L=0.5 Gibbs energy transfer",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'shift_per_volume': 0.8333333333333334, 'shifted_floor': 1.576764430615741, 'tail_operator_norm': 0.5841809581098106, 'two_slice': 0.0067046365505911976, 'equal_time_fourth_moment': 0.00812437619046566, 'energy_fourth_moment': 49.629550730029024, 'quotient_constant': 0.0016947748053430568, 'trace_bound': 0.0841109121777483, 'order_slack': 5.683311605720812e-17, 'trace_slack': 0.07598653598728264, 'order_scale': 1.6919489381259472}",
+      "expected": "finite",
+      "group": "quotient",
+      "name": "V=2 beta=1.0 L=1.0 finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.0067046365505911976, 0.00812437619046566]",
+      "expected": "0<=two_slice<=Tr(rho W^4)",
+      "group": "Euclidean transfer",
+      "name": "V=2 beta=1.0 L=1.0 two-slice transfer",
+      "status": "PASS"
+    },
+    {
+      "actual": "[5.683311605720812e-17, 1.6919489381259472]",
+      "expected": ">=-finite tolerance",
+      "group": "operator order",
+      "name": "V=2 beta=1.0 L=1.0 quotient order",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.00812437619046566, 0.0841109121777483]",
+      "expected": "Tr(rho W^4)<=C Tr(rho K^4)",
+      "group": "Gibbs transfer",
+      "name": "V=2 beta=1.0 L=1.0 Gibbs energy transfer",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.9999999999999999, 0.0022079537477371876]",
+      "expected": "normalized positive",
+      "group": "state",
+      "name": "V=2 beta=2.0 Gibbs state",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'shift_per_volume': 0.8333333333333334, 'shifted_floor': 1.576764430615741, 'tail_operator_norm': 2.25, 'two_slice': 0.34340997080309277, 'equal_time_fourth_moment': 1.1091667655723398, 'energy_fourth_moment': 19.598738671498104, 'quotient_constant': 0.3730931793691604, 'trace_bound': 7.312155722574543, 'order_slack': 1.2929869218105418e-14, 'trace_slack': 6.202988957002203, 'order_scale': 153.3181373009277}",
+      "expected": "finite",
+      "group": "quotient",
+      "name": "V=2 beta=2.0 L=0.5 finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.34340997080309277, 1.1091667655723398]",
+      "expected": "0<=two_slice<=Tr(rho W^4)",
+      "group": "Euclidean transfer",
+      "name": "V=2 beta=2.0 L=0.5 two-slice transfer",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.2929869218105418e-14, 153.3181373009277]",
+      "expected": ">=-finite tolerance",
+      "group": "operator order",
+      "name": "V=2 beta=2.0 L=0.5 quotient order",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.1091667655723398, 7.312155722574543]",
+      "expected": "Tr(rho W^4)<=C Tr(rho K^4)",
+      "group": "Gibbs transfer",
+      "name": "V=2 beta=2.0 L=0.5 Gibbs energy transfer",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'shift_per_volume': 0.8333333333333334, 'shifted_floor': 1.576764430615741, 'tail_operator_norm': 0.5841809581098106, 'two_slice': 0.0015460051681512523, 'equal_time_fourth_moment': 0.005028452177112858, 'energy_fourth_moment': 19.598738671498104, 'quotient_constant': 0.0016947748053430568, 'trace_bound': 0.03321544851695764, 'order_slack': 5.683311605720812e-17, 'trace_slack': 0.02818699633984478, 'order_scale': 1.6919489381259472}",
+      "expected": "finite",
+      "group": "quotient",
+      "name": "V=2 beta=2.0 L=1.0 finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.0015460051681512523, 0.005028452177112858]",
+      "expected": "0<=two_slice<=Tr(rho W^4)",
+      "group": "Euclidean transfer",
+      "name": "V=2 beta=2.0 L=1.0 two-slice transfer",
+      "status": "PASS"
+    },
+    {
+      "actual": "[5.683311605720812e-17, 1.6919489381259472]",
+      "expected": ">=-finite tolerance",
+      "group": "operator order",
+      "name": "V=2 beta=2.0 L=1.0 quotient order",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.005028452177112858, 0.03321544851695764]",
+      "expected": "Tr(rho W^4)<=C Tr(rho K^4)",
+      "group": "Gibbs transfer",
+      "name": "V=2 beta=2.0 L=1.0 Gibbs energy transfer",
+      "status": "PASS"
+    },
+    {
+      "actual": "2.5021635521438785",
+      "expected": ">=1",
+      "group": "positive shift",
+      "name": "V=4 positive shifted form",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.0, 0.006185624106565969]",
+      "expected": "normalized positive",
+      "group": "state",
+      "name": "V=4 beta=0.125 Gibbs state",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'shift_per_volume': 1.6666666666666667, 'shifted_floor': 2.5021635521438785, 'tail_operator_norm': 9.0, 'two_slice': 237.3256835871793, 'equal_time_fourth_moment': 237.58147755921354, 'energy_fourth_moment': 2066.1832202572123, 'quotient_constant': 0.6763398239126067, 'trace_bound': 1397.4419953599456, 'order_slack': 3.9267151806343424e-13, 'trace_slack': 1159.8605178007322, 'order_scale': 19756.276304374474}",
+      "expected": "finite",
+      "group": "quotient",
+      "name": "V=4 beta=0.125 L=0.5 finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "[237.3256835871793, 237.58147755921354]",
+      "expected": "0<=two_slice<=Tr(rho W^4)",
+      "group": "Euclidean transfer",
+      "name": "V=4 beta=0.125 L=0.5 two-slice transfer",
+      "status": "PASS"
+    },
+    {
+      "actual": "[3.9267151806343424e-13, 19756.276304374474]",
+      "expected": ">=-finite tolerance",
+      "group": "operator order",
+      "name": "V=4 beta=0.125 L=0.5 quotient order",
+      "status": "PASS"
+    },
+    {
+      "actual": "[237.58147755921354, 1397.4419953599456]",
+      "expected": "Tr(rho W^4)<=C Tr(rho K^4)",
+      "group": "Gibbs transfer",
+      "name": "V=4 beta=0.125 L=0.5 Gibbs energy transfer",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'shift_per_volume': 1.6666666666666667, 'shifted_floor': 2.5021635521438785, 'tail_operator_norm': 2.3367238324392425, 'two_slice': 1.0530751305265214, 'equal_time_fourth_moment': 1.0542243192520715, 'energy_fourth_moment': 2066.1832202572123, 'quotient_constant': 0.0030605575991606944, 'trace_bound': 6.323672756016526, 'order_slack': 3.978741392974717e-15, 'trace_slack': 5.2694484367644545, 'order_scale': 90.52107802586995}",
+      "expected": "finite",
+      "group": "quotient",
+      "name": "V=4 beta=0.125 L=1.0 finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.0530751305265214, 1.0542243192520715]",
+      "expected": "0<=two_slice<=Tr(rho W^4)",
+      "group": "Euclidean transfer",
+      "name": "V=4 beta=0.125 L=1.0 two-slice transfer",
+      "status": "PASS"
+    },
+    {
+      "actual": "[3.978741392974717e-15, 90.52107802586995]",
+      "expected": ">=-finite tolerance",
+      "group": "operator order",
+      "name": "V=4 beta=0.125 L=1.0 quotient order",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.0542243192520715, 6.323672756016526]",
+      "expected": "Tr(rho W^4)<=C Tr(rho K^4)",
+      "group": "Gibbs transfer",
+      "name": "V=4 beta=0.125 L=1.0 Gibbs energy transfer",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.0000000000000002, 0.0029713675605343923]",
+      "expected": "normalized positive",
+      "group": "state",
+      "name": "V=4 beta=0.25 Gibbs state",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'shift_per_volume': 1.6666666666666667, 'shifted_floor': 2.5021635521438785, 'tail_operator_norm': 9.0, 'two_slice': 165.62349719245785, 'equal_time_fourth_moment': 166.45658673824397, 'energy_fourth_moment': 1679.6657201687008, 'quotient_constant': 0.6763398239126067, 'trace_bound': 1136.0248174109408, 'order_slack': 3.9267151806343424e-13, 'trace_slack': 969.5682306726969, 'order_scale': 19756.276304374474}",
+      "expected": "finite",
+      "group": "quotient",
+      "name": "V=4 beta=0.25 L=0.5 finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "[165.62349719245785, 166.45658673824397]",
+      "expected": "0<=two_slice<=Tr(rho W^4)",
+      "group": "Euclidean transfer",
+      "name": "V=4 beta=0.25 L=0.5 two-slice transfer",
+      "status": "PASS"
+    },
+    {
+      "actual": "[3.9267151806343424e-13, 19756.276304374474]",
+      "expected": ">=-finite tolerance",
+      "group": "operator order",
+      "name": "V=4 beta=0.25 L=0.5 quotient order",
+      "status": "PASS"
+    },
+    {
+      "actual": "[166.45658673824397, 1136.0248174109408]",
+      "expected": "Tr(rho W^4)<=C Tr(rho K^4)",
+      "group": "Gibbs transfer",
+      "name": "V=4 beta=0.25 L=0.5 Gibbs energy transfer",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'shift_per_volume': 1.6666666666666667, 'shifted_floor': 2.5021635521438785, 'tail_operator_norm': 2.3367238324392425, 'two_slice': 0.7320097334399003, 'equal_time_fourth_moment': 0.7357433916266465, 'energy_fourth_moment': 1679.6657201687008, 'quotient_constant': 0.0030605575991606944, 'trace_bound': 5.140713683912037, 'order_slack': 3.978741392974717e-15, 'trace_slack': 4.404970292285391, 'order_scale': 90.52107802586995}",
+      "expected": "finite",
+      "group": "quotient",
+      "name": "V=4 beta=0.25 L=1.0 finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.7320097334399003, 0.7357433916266465]",
+      "expected": "0<=two_slice<=Tr(rho W^4)",
+      "group": "Euclidean transfer",
+      "name": "V=4 beta=0.25 L=1.0 two-slice transfer",
+      "status": "PASS"
+    },
+    {
+      "actual": "[3.978741392974717e-15, 90.52107802586995]",
+      "expected": ">=-finite tolerance",
+      "group": "operator order",
+      "name": "V=4 beta=0.25 L=1.0 quotient order",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.7357433916266465, 5.140713683912037]",
+      "expected": "Tr(rho W^4)<=C Tr(rho K^4)",
+      "group": "Gibbs transfer",
+      "name": "V=4 beta=0.25 L=1.0 Gibbs energy transfer",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.0000000000000002, 0.0006088787564516281]",
+      "expected": "normalized positive",
+      "group": "state",
+      "name": "V=4 beta=0.5 Gibbs state",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'shift_per_volume': 1.6666666666666667, 'shifted_floor': 2.5021635521438785, 'tail_operator_norm': 9.0, 'two_slice': 86.19251112568396, 'equal_time_fourth_moment': 88.54773612404603, 'energy_fourth_moment': 1129.4274783811695, 'quotient_constant': 0.6763398239126067, 'trace_bound': 763.8767818503796, 'order_slack': 3.9267151806343424e-13, 'trace_slack': 675.3290457263336, 'order_scale': 19756.276304374474}",
+      "expected": "finite",
+      "group": "quotient",
+      "name": "V=4 beta=0.5 L=0.5 finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "[86.19251112568396, 88.54773612404603]",
+      "expected": "0<=two_slice<=Tr(rho W^4)",
+      "group": "Euclidean transfer",
+      "name": "V=4 beta=0.5 L=0.5 two-slice transfer",
+      "status": "PASS"
+    },
+    {
+      "actual": "[3.9267151806343424e-13, 19756.276304374474]",
+      "expected": ">=-finite tolerance",
+      "group": "operator order",
+      "name": "V=4 beta=0.5 L=0.5 quotient order",
+      "status": "PASS"
+    },
+    {
+      "actual": "[88.54773612404603, 763.8767818503796]",
+      "expected": "Tr(rho W^4)<=C Tr(rho K^4)",
+      "group": "Gibbs transfer",
+      "name": "V=4 beta=0.5 L=0.5 Gibbs energy transfer",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'shift_per_volume': 1.6666666666666667, 'shifted_floor': 2.5021635521438785, 'tail_operator_norm': 2.3367238324392425, 'two_slice': 0.37847014189553385, 'equal_time_fourth_moment': 0.38898978513995264, 'energy_fourth_moment': 1129.4274783811695, 'quotient_constant': 0.0030605575991606944, 'trace_bound': 3.4566778516603893, 'order_slack': 3.978741392974717e-15, 'trace_slack': 3.0676880665204367, 'order_scale': 90.52107802586995}",
+      "expected": "finite",
+      "group": "quotient",
+      "name": "V=4 beta=0.5 L=1.0 finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.37847014189553385, 0.38898978513995264]",
+      "expected": "0<=two_slice<=Tr(rho W^4)",
+      "group": "Euclidean transfer",
+      "name": "V=4 beta=0.5 L=1.0 two-slice transfer",
+      "status": "PASS"
+    },
+    {
+      "actual": "[3.978741392974717e-15, 90.52107802586995]",
+      "expected": ">=-finite tolerance",
+      "group": "operator order",
+      "name": "V=4 beta=0.5 L=1.0 quotient order",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.38898978513995264, 3.4566778516603893]",
+      "expected": "Tr(rho W^4)<=C Tr(rho K^4)",
+      "group": "Gibbs transfer",
+      "name": "V=4 beta=0.5 L=1.0 Gibbs energy transfer",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.0000000000000004, 1.642633108539968e-05]",
+      "expected": "normalized positive",
+      "group": "state",
+      "name": "V=4 beta=1.0 Gibbs state",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'shift_per_volume': 1.6666666666666667, 'shifted_floor': 2.5021635521438785, 'tail_operator_norm': 9.0, 'two_slice': 24.764019618109224, 'equal_time_fourth_moment': 30.458234629113665, 'energy_fourth_moment': 496.4271049456461, 'quotient_constant': 0.6763398239126067, 'trace_bound': 335.7534207443834, 'order_slack': 3.9267151806343424e-13, 'trace_slack': 305.2951861152697, 'order_scale': 19756.276304374474}",
+      "expected": "finite",
+      "group": "quotient",
+      "name": "V=4 beta=1.0 L=0.5 finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "[24.764019618109224, 30.458234629113665]",
+      "expected": "0<=two_slice<=Tr(rho W^4)",
+      "group": "Euclidean transfer",
+      "name": "V=4 beta=1.0 L=0.5 two-slice transfer",
+      "status": "PASS"
+    },
+    {
+      "actual": "[3.9267151806343424e-13, 19756.276304374474]",
+      "expected": ">=-finite tolerance",
+      "group": "operator order",
+      "name": "V=4 beta=1.0 L=0.5 quotient order",
+      "status": "PASS"
+    },
+    {
+      "actual": "[30.458234629113665, 335.7534207443834]",
+      "expected": "Tr(rho W^4)<=C Tr(rho K^4)",
+      "group": "Gibbs transfer",
+      "name": "V=4 beta=1.0 L=0.5 Gibbs energy transfer",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'shift_per_volume': 1.6666666666666667, 'shifted_floor': 2.5021635521438785, 'tail_operator_norm': 2.3367238324392425, 'two_slice': 0.10756605277978439, 'equal_time_fourth_moment': 0.1330154028739743, 'energy_fourth_moment': 496.4271049456461, 'quotient_constant': 0.0030605575991606944, 'trace_bound': 1.5193437484707406, 'order_slack': 3.978741392974717e-15, 'trace_slack': 1.3863283455967663, 'order_scale': 90.52107802586995}",
+      "expected": "finite",
+      "group": "quotient",
+      "name": "V=4 beta=1.0 L=1.0 finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.10756605277978439, 0.1330154028739743]",
+      "expected": "0<=two_slice<=Tr(rho W^4)",
+      "group": "Euclidean transfer",
+      "name": "V=4 beta=1.0 L=1.0 two-slice transfer",
+      "status": "PASS"
+    },
+    {
+      "actual": "[3.978741392974717e-15, 90.52107802586995]",
+      "expected": ">=-finite tolerance",
+      "group": "operator order",
+      "name": "V=4 beta=1.0 L=1.0 quotient order",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.1330154028739743, 1.5193437484707406]",
+      "expected": "Tr(rho W^4)<=C Tr(rho K^4)",
+      "group": "Gibbs transfer",
+      "name": "V=4 beta=1.0 L=1.0 Gibbs energy transfer",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.0000000000000009, 3.3600290861526555e-09]",
+      "expected": "normalized positive",
+      "group": "state",
+      "name": "V=4 beta=2.0 Gibbs state",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'shift_per_volume': 1.6666666666666667, 'shifted_floor': 2.5021635521438785, 'tail_operator_norm': 9.0, 'two_slice': 2.0790832653418496, 'equal_time_fourth_moment': 11.648674561752301, 'energy_fourth_moment': 104.65692065792695, 'quotient_constant': 0.6763398239126067, 'trace_bound': 70.78364328901796, 'order_slack': 3.9267151806343424e-13, 'trace_slack': 59.13496872726566, 'order_scale': 19756.276304374474}",
+      "expected": "finite",
+      "group": "quotient",
+      "name": "V=4 beta=2.0 L=0.5 finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.0790832653418496, 11.648674561752301]",
+      "expected": "0<=two_slice<=Tr(rho W^4)",
+      "group": "Euclidean transfer",
+      "name": "V=4 beta=2.0 L=0.5 two-slice transfer",
+      "status": "PASS"
+    },
+    {
+      "actual": "[3.9267151806343424e-13, 19756.276304374474]",
+      "expected": ">=-finite tolerance",
+      "group": "operator order",
+      "name": "V=4 beta=2.0 L=0.5 quotient order",
+      "status": "PASS"
+    },
+    {
+      "actual": "[11.648674561752301, 70.78364328901796]",
+      "expected": "Tr(rho W^4)<=C Tr(rho K^4)",
+      "group": "Gibbs transfer",
+      "name": "V=4 beta=2.0 L=0.5 Gibbs energy transfer",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'shift_per_volume': 1.6666666666666667, 'shifted_floor': 2.5021635521438785, 'tail_operator_norm': 2.3367238324392425, 'two_slice': 0.008793251267288733, 'equal_time_fourth_moment': 0.05196273166853517, 'energy_fourth_moment': 104.65692065792695, 'quotient_constant': 0.0030605575991606944, 'trace_bound': 0.3203085338243762, 'order_slack': 3.978741392974717e-15, 'trace_slack': 0.26834580215584103, 'order_scale': 90.52107802586995}",
+      "expected": "finite",
+      "group": "quotient",
+      "name": "V=4 beta=2.0 L=1.0 finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.008793251267288733, 0.05196273166853517]",
+      "expected": "0<=two_slice<=Tr(rho W^4)",
+      "group": "Euclidean transfer",
+      "name": "V=4 beta=2.0 L=1.0 two-slice transfer",
+      "status": "PASS"
+    },
+    {
+      "actual": "[3.978741392974717e-15, 90.52107802586995]",
+      "expected": ">=-finite tolerance",
+      "group": "operator order",
+      "name": "V=4 beta=2.0 L=1.0 quotient order",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.05196273166853517, 0.3203085338243762]",
+      "expected": "Tr(rho W^4)<=C Tr(rho K^4)",
+      "group": "Gibbs transfer",
+      "name": "V=4 beta=2.0 L=1.0 Gibbs energy transfer",
+      "status": "PASS"
+    },
+    {
+      "actual": "3.724999999999999",
+      "expected": ">=1",
+      "group": "positive shift",
+      "name": "V=6 positive shifted form",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.0, 0.011689803621978849]",
+      "expected": "normalized positive",
+      "group": "state",
+      "name": "V=6 beta=0.125 Gibbs state",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'shift_per_volume': 2.5, 'shifted_floor': 3.724999999999999, 'tail_operator_norm': 2.810188844541171, 'two_slice': 6.622793460974432, 'equal_time_fourth_moment': 6.622793460974427, 'energy_fourth_moment': 1374.21808912798, 'quotient_constant': 0.013300562613926198, 'trace_bound': 18.27787373963671, 'order_slack': 1.0140846486800548e-13, 'trace_slack': 11.655080278662282, 'order_scale': 125.7303145226417}",
+      "expected": "finite",
+      "group": "quotient",
+      "name": "V=6 beta=0.125 L=0.5 finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "[6.622793460974432, 6.622793460974427]",
+      "expected": "0<=two_slice<=Tr(rho W^4)",
+      "group": "Euclidean transfer",
+      "name": "V=6 beta=0.125 L=0.5 two-slice transfer",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.0140846486800548e-13, 125.7303145226417]",
+      "expected": ">=-finite tolerance",
+      "group": "operator order",
+      "name": "V=6 beta=0.125 L=0.5 quotient order",
+      "status": "PASS"
+    },
+    {
+      "actual": "[6.622793460974427, 18.27787373963671]",
+      "expected": "Tr(rho W^4)<=C Tr(rho K^4)",
+      "group": "Gibbs transfer",
+      "name": "V=6 beta=0.125 L=0.5 Gibbs energy transfer",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'shift_per_volume': 2.5, 'shifted_floor': 3.724999999999999, 'tail_operator_norm': 7.771561172376097e-16, 'two_slice': 3.873756061345604e-62, 'equal_time_fourth_moment': 3.873756061345604e-62, 'energy_fourth_moment': 1374.21808912798, 'quotient_constant': 7.779668103589423e-65, 'trace_bound': 1.0690960635364552e-61, 'order_slack': 6.478475802582136e-76, 'trace_slack': 6.817204574018947e-62, 'order_scale': 1.0}",
+      "expected": "finite",
+      "group": "quotient",
+      "name": "V=6 beta=0.125 L=1.0 finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "[3.873756061345604e-62, 3.873756061345604e-62]",
+      "expected": "0<=two_slice<=Tr(rho W^4)",
+      "group": "Euclidean transfer",
+      "name": "V=6 beta=0.125 L=1.0 two-slice transfer",
+      "status": "PASS"
+    },
+    {
+      "actual": "[6.478475802582136e-76, 1.0]",
+      "expected": ">=-finite tolerance",
+      "group": "operator order",
+      "name": "V=6 beta=0.125 L=1.0 quotient order",
+      "status": "PASS"
+    },
+    {
+      "actual": "[3.873756061345604e-62, 1.0690960635364552e-61]",
+      "expected": "Tr(rho W^4)<=C Tr(rho K^4)",
+      "group": "Gibbs transfer",
+      "name": "V=6 beta=0.125 L=1.0 Gibbs energy transfer",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.0, 0.00864477788116456]",
+      "expected": "normalized positive",
+      "group": "state",
+      "name": "V=6 beta=0.25 Gibbs state",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'shift_per_volume': 2.5, 'shifted_floor': 3.724999999999999, 'tail_operator_norm': 2.810188844541171, 'two_slice': 5.818122173018377, 'equal_time_fourth_moment': 5.818122173018378, 'energy_fourth_moment': 1294.987363677575, 'quotient_constant': 0.013300562613926198, 'trace_bound': 17.224060514836804, 'order_slack': 1.0140846486800548e-13, 'trace_slack': 11.405938341818427, 'order_scale': 125.7303145226417}",
+      "expected": "finite",
+      "group": "quotient",
+      "name": "V=6 beta=0.25 L=0.5 finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "[5.818122173018377, 5.818122173018378]",
+      "expected": "0<=two_slice<=Tr(rho W^4)",
+      "group": "Euclidean transfer",
+      "name": "V=6 beta=0.25 L=0.5 two-slice transfer",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.0140846486800548e-13, 125.7303145226417]",
+      "expected": ">=-finite tolerance",
+      "group": "operator order",
+      "name": "V=6 beta=0.25 L=0.5 quotient order",
+      "status": "PASS"
+    },
+    {
+      "actual": "[5.818122173018378, 17.224060514836804]",
+      "expected": "Tr(rho W^4)<=C Tr(rho K^4)",
+      "group": "Gibbs transfer",
+      "name": "V=6 beta=0.25 L=0.5 Gibbs energy transfer",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'shift_per_volume': 2.5, 'shifted_floor': 3.724999999999999, 'tail_operator_norm': 7.771561172376097e-16, 'two_slice': 3.4030935988245568e-62, 'equal_time_fourth_moment': 3.4030935988245568e-62, 'energy_fourth_moment': 1294.987363677575, 'quotient_constant': 7.779668103589423e-65, 'trace_bound': 1.0074571887753787e-61, 'order_slack': 6.478475802582136e-76, 'trace_slack': 6.67147828892923e-62, 'order_scale': 1.0}",
+      "expected": "finite",
+      "group": "quotient",
+      "name": "V=6 beta=0.25 L=1.0 finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "[3.4030935988245568e-62, 3.4030935988245568e-62]",
+      "expected": "0<=two_slice<=Tr(rho W^4)",
+      "group": "Euclidean transfer",
+      "name": "V=6 beta=0.25 L=1.0 two-slice transfer",
+      "status": "PASS"
+    },
+    {
+      "actual": "[6.478475802582136e-76, 1.0]",
+      "expected": ">=-finite tolerance",
+      "group": "operator order",
+      "name": "V=6 beta=0.25 L=1.0 quotient order",
+      "status": "PASS"
+    },
+    {
+      "actual": "[3.4030935988245568e-62, 1.0074571887753787e-61]",
+      "expected": "Tr(rho W^4)<=C Tr(rho K^4)",
+      "group": "Gibbs transfer",
+      "name": "V=6 beta=0.25 L=1.0 Gibbs energy transfer",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.0, 0.004563049118727669]",
+      "expected": "normalized positive",
+      "group": "state",
+      "name": "V=6 beta=0.5 Gibbs state",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'shift_per_volume': 2.5, 'shifted_floor': 3.724999999999999, 'tail_operator_norm': 2.810188844541171, 'two_slice': 4.469529768179351, 'equal_time_fourth_moment': 4.469529768179349, 'energy_fourth_moment': 1146.5356023212494, 'quotient_constant': 0.013300562613926198, 'trace_bound': 15.249568567769364, 'order_slack': 1.0140846486800548e-13, 'trace_slack': 10.780038799590015, 'order_scale': 125.7303145226417}",
+      "expected": "finite",
+      "group": "quotient",
+      "name": "V=6 beta=0.5 L=0.5 finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "[4.469529768179351, 4.469529768179349]",
+      "expected": "0<=two_slice<=Tr(rho W^4)",
+      "group": "Euclidean transfer",
+      "name": "V=6 beta=0.5 L=0.5 two-slice transfer",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.0140846486800548e-13, 125.7303145226417]",
+      "expected": ">=-finite tolerance",
+      "group": "operator order",
+      "name": "V=6 beta=0.5 L=0.5 quotient order",
+      "status": "PASS"
+    },
+    {
+      "actual": "[4.469529768179349, 15.249568567769364]",
+      "expected": "Tr(rho W^4)<=C Tr(rho K^4)",
+      "group": "Gibbs transfer",
+      "name": "V=6 beta=0.5 L=0.5 Gibbs energy transfer",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'shift_per_volume': 2.5, 'shifted_floor': 3.724999999999999, 'tail_operator_norm': 7.771561172376097e-16, 'two_slice': 2.6142847625965284e-62, 'equal_time_fourth_moment': 2.6142847625965293e-62, 'energy_fourth_moment': 1146.5356023212494, 'quotient_constant': 7.779668103589423e-65, 'trace_bound': 8.919666455008311e-62, 'order_slack': 6.478475802582136e-76, 'trace_slack': 6.305381692411782e-62, 'order_scale': 1.0}",
+      "expected": "finite",
+      "group": "quotient",
+      "name": "V=6 beta=0.5 L=1.0 finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.6142847625965284e-62, 2.6142847625965293e-62]",
+      "expected": "0<=two_slice<=Tr(rho W^4)",
+      "group": "Euclidean transfer",
+      "name": "V=6 beta=0.5 L=1.0 two-slice transfer",
+      "status": "PASS"
+    },
+    {
+      "actual": "[6.478475802582136e-76, 1.0]",
+      "expected": ">=-finite tolerance",
+      "group": "operator order",
+      "name": "V=6 beta=0.5 L=1.0 quotient order",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.6142847625965293e-62, 8.919666455008311e-62]",
+      "expected": "Tr(rho W^4)<=C Tr(rho K^4)",
+      "group": "Gibbs transfer",
+      "name": "V=6 beta=0.5 L=1.0 Gibbs energy transfer",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.0, 0.0010945180751352158]",
+      "expected": "normalized positive",
+      "group": "state",
+      "name": "V=6 beta=1.0 Gibbs state",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'shift_per_volume': 2.5, 'shifted_floor': 3.724999999999999, 'tail_operator_norm': 2.810188844541171, 'two_slice': 2.538541935125638, 'equal_time_fourth_moment': 2.538541935125637, 'energy_fourth_moment': 876.9351173992314, 'quotient_constant': 0.013300562613926198, 'trace_bound': 11.663730437319199, 'order_slack': 1.0140846486800548e-13, 'trace_slack': 9.125188502193563, 'order_scale': 125.7303145226417}",
+      "expected": "finite",
+      "group": "quotient",
+      "name": "V=6 beta=1.0 L=0.5 finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.538541935125638, 2.538541935125637]",
+      "expected": "0<=two_slice<=Tr(rho W^4)",
+      "group": "Euclidean transfer",
+      "name": "V=6 beta=1.0 L=0.5 two-slice transfer",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.0140846486800548e-13, 125.7303145226417]",
+      "expected": ">=-finite tolerance",
+      "group": "operator order",
+      "name": "V=6 beta=1.0 L=0.5 quotient order",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.538541935125637, 11.663730437319199]",
+      "expected": "Tr(rho W^4)<=C Tr(rho K^4)",
+      "group": "Gibbs transfer",
+      "name": "V=6 beta=1.0 L=0.5 Gibbs energy transfer",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'shift_per_volume': 2.5, 'shifted_floor': 3.724999999999999, 'tail_operator_norm': 7.771561172376097e-16, 'two_slice': 1.484825439011364e-62, 'equal_time_fourth_moment': 1.4848254390113635e-62, 'energy_fourth_moment': 876.9351173992314, 'quotient_constant': 7.779668103589423e-65, 'trace_bound': 6.822264161748247e-62, 'order_slack': 6.478475802582136e-76, 'trace_slack': 5.337438722736884e-62, 'order_scale': 1.0}",
+      "expected": "finite",
+      "group": "quotient",
+      "name": "V=6 beta=1.0 L=1.0 finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.484825439011364e-62, 1.4848254390113635e-62]",
+      "expected": "0<=two_slice<=Tr(rho W^4)",
+      "group": "Euclidean transfer",
+      "name": "V=6 beta=1.0 L=1.0 two-slice transfer",
+      "status": "PASS"
+    },
+    {
+      "actual": "[6.478475802582136e-76, 1.0]",
+      "expected": ">=-finite tolerance",
+      "group": "operator order",
+      "name": "V=6 beta=1.0 L=1.0 quotient order",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.4848254390113635e-62, 6.822264161748247e-62]",
+      "expected": "Tr(rho W^4)<=C Tr(rho K^4)",
+      "group": "Gibbs transfer",
+      "name": "V=6 beta=1.0 L=1.0 Gibbs energy transfer",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.0000000000000004, 3.3103819808402693e-05]",
+      "expected": "normalized positive",
+      "group": "state",
+      "name": "V=6 beta=2.0 Gibbs state",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'shift_per_volume': 2.5, 'shifted_floor': 3.724999999999999, 'tail_operator_norm': 2.810188844541171, 'two_slice': 0.6237673956901495, 'equal_time_fourth_moment': 0.6237673956901514, 'energy_fourth_moment': 454.7380314495236, 'quotient_constant': 0.013300562613926198, 'trace_bound': 6.048271660227929, 'order_slack': 1.0140846486800548e-13, 'trace_slack': 5.424504264537777, 'order_scale': 125.7303145226417}",
+      "expected": "finite",
+      "group": "quotient",
+      "name": "V=6 beta=2.0 L=0.5 finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.6237673956901495, 0.6237673956901514]",
+      "expected": "0<=two_slice<=Tr(rho W^4)",
+      "group": "Euclidean transfer",
+      "name": "V=6 beta=2.0 L=0.5 two-slice transfer",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.0140846486800548e-13, 125.7303145226417]",
+      "expected": ">=-finite tolerance",
+      "group": "operator order",
+      "name": "V=6 beta=2.0 L=0.5 quotient order",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.6237673956901514, 6.048271660227929]",
+      "expected": "Tr(rho W^4)<=C Tr(rho K^4)",
+      "group": "Gibbs transfer",
+      "name": "V=6 beta=2.0 L=0.5 Gibbs energy transfer",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'shift_per_volume': 2.5, 'shifted_floor': 3.724999999999999, 'tail_operator_norm': 7.771561172376097e-16, 'two_slice': 3.648494769107537e-63, 'equal_time_fourth_moment': 3.6484947691075557e-63, 'energy_fourth_moment': 454.7380314495236, 'quotient_constant': 7.779668103589423e-65, 'trace_bound': 3.5377109587569026e-62, 'order_slack': 6.478475802582136e-76, 'trace_slack': 3.172861481846147e-62, 'order_scale': 1.0}",
+      "expected": "finite",
+      "group": "quotient",
+      "name": "V=6 beta=2.0 L=1.0 finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "[3.648494769107537e-63, 3.6484947691075557e-63]",
+      "expected": "0<=two_slice<=Tr(rho W^4)",
+      "group": "Euclidean transfer",
+      "name": "V=6 beta=2.0 L=1.0 two-slice transfer",
+      "status": "PASS"
+    },
+    {
+      "actual": "[6.478475802582136e-76, 1.0]",
+      "expected": ">=-finite tolerance",
+      "group": "operator order",
+      "name": "V=6 beta=2.0 L=1.0 quotient order",
+      "status": "PASS"
+    },
+    {
+      "actual": "[3.6484947691075557e-63, 3.5377109587569026e-62]",
+      "expected": "Tr(rho W^4)<=C Tr(rho K^4)",
+      "group": "Gibbs transfer",
+      "name": "V=6 beta=2.0 L=1.0 Gibbs energy transfer",
+      "status": "PASS"
+    },
+    {
+      "actual": "30",
+      "expected": "30",
+      "group": "coverage",
+      "name": "row coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": "30",
+      "expected": "finite congruence tolerance",
+      "group": "operator order",
+      "name": "all quotient orders",
+      "status": "PASS"
+    },
+    {
+      "actual": "30",
+      "expected": "finite trace tolerance",
+      "group": "Gibbs transfer",
+      "name": "all Gibbs transfers",
+      "status": "PASS"
+    },
+    {
+      "actual": "15",
+      "expected": "15",
+      "group": "coverage",
+      "name": "summary coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.3730931793691604, 0.3730931793691604, 0.3730931793691604, 0.3730931793691604, 0.3730931793691604, 0.6763398239126067, 0.6763398239126067, 0.6763398239126067, 0.6763398239126067, 0.6763398239126067, 0.013300562613926198, 0.013300562613926198, 0.013300562613926198, 0.013300562613926198, 0.013300562613926198]",
+      "expected": "finite nonnegative diagnostics",
+      "group": "summary",
+      "name": "finite diagnostic",
+      "status": "PASS"
+    }
+  ],
+  "audit_id": "PA-CP1-ST8-Q3LOCK-FINITE-ENERGY-FOURTH-COERCIVE-QUOTIENT",
+  "boundary": {
+    "c6_closed": false,
+    "common_alpha_closed": false,
+    "common_os_hilbert_carrier_closed": false,
+    "common_word_exhaustion_closed": false,
+    "continuum_closed": false,
+    "direct_d_delta_d_cauchy_closed": false,
+    "energy_fourth_uniform_closed": false,
+    "finite_actual_q3_rows_closed": true,
+    "finite_generalized_coercive_quotient_closed": true,
+    "finite_gibbs_energy_fourth_transfer_closed": true,
+    "finite_operator_order_envelope_closed": true,
+    "finite_positive_shift_closed": true,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "local_coercive_common_core_closed": false,
+    "no_new_negative_result": true,
+    "no_pdf": true,
+    "no_tier_change": true,
+    "pre_a_closed": false,
+    "quotient_volume_cutoff_uniform_closed": false,
+    "sector_a_closed": false,
+    "tail_fourth_moment_uniform_closed": false
+  },
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "derived": {
+    "common_alpha_closed": false,
+    "energy_fourth_uniform_closed": false,
+    "finite_generalized_coercive_quotient_closed": true,
+    "finite_gibbs_energy_fourth_transfer_closed": true,
+    "finite_operator_order_envelope_closed": true,
+    "finite_positive_shift_closed": true,
+    "local_coercive_common_core_closed": false,
+    "qft_promoted": false,
+    "quotient_volume_cutoff_uniform_closed": false,
+    "rows": [
+      {
+        "beta": 0.125,
+        "energy_fourth_moment": 112.96320576139173,
+        "equal_time_fourth_moment": 4.9841385598184536,
+        "order_scale": 153.3181373009277,
+        "order_slack": 1.2929869218105418e-14,
+        "oscillator_dimension": 3,
+        "quotient_constant": 0.3730931793691604,
+        "radius": 0.5,
+        "shift_per_volume": 0.8333333333333334,
+        "shifted_floor": 1.576764430615741,
+        "tail_operator_norm": 2.25,
+        "trace_bound": 42.145801589250304,
+        "trace_slack": 37.16166302943185,
+        "two_slice": 4.978096490313757,
+        "volume": 2
+      },
+      {
+        "beta": 0.125,
+        "energy_fourth_moment": 112.96320576139173,
+        "equal_time_fourth_moment": 0.022620237715208557,
+        "order_scale": 1.6919489381259472,
+        "order_slack": 5.683311605720812e-17,
+        "oscillator_dimension": 3,
+        "quotient_constant": 0.0016947748053430568,
+        "radius": 1.0,
+        "shift_per_volume": 0.8333333333333334,
+        "shifted_floor": 1.576764430615741,
+        "tail_operator_norm": 0.5841809581098106,
+        "trace_bound": 0.19144719505519034,
+        "trace_slack": 0.1688269573399818,
+        "two_slice": 0.022592728221306882,
+        "volume": 2
+      },
+      {
+        "beta": 0.25,
+        "energy_fourth_moment": 101.82829047140262,
+        "equal_time_fourth_moment": 4.31072098881917,
+        "order_scale": 153.3181373009277,
+        "order_slack": 1.2929869218105418e-14,
+        "oscillator_dimension": 3,
+        "quotient_constant": 0.3730931793691604,
+        "radius": 0.5,
+        "shift_per_volume": 0.8333333333333334,
+        "shifted_floor": 1.576764430615741,
+        "tail_operator_norm": 2.25,
+        "trace_bound": 37.99144064170199,
+        "trace_slack": 33.68071965288282,
+        "two_slice": 4.286812993506902,
+        "volume": 2
+      },
+      {
+        "beta": 0.25,
+        "energy_fourth_moment": 101.82829047140262,
+        "equal_time_fourth_moment": 0.01956048643550074,
+        "order_scale": 1.6919489381259472,
+        "order_slack": 5.683311605720812e-17,
+        "oscillator_dimension": 3,
+        "quotient_constant": 0.0016947748053430568,
+        "radius": 1.0,
+        "shift_per_volume": 0.8333333333333334,
+        "shifted_floor": 1.576764430615741,
+        "tail_operator_norm": 0.5841809581098106,
+        "trace_bound": 0.17257602116208762,
+        "trace_slack": 0.15301553472658688,
+        "two_slice": 0.019451645839895608,
+        "volume": 2
+      },
+      {
+        "beta": 0.5,
+        "energy_fourth_moment": 81.34171070653008,
+        "equal_time_fourth_moment": 3.184388965268901,
+        "order_scale": 153.3181373009277,
+        "order_slack": 1.2929869218105418e-14,
+        "oscillator_dimension": 3,
+        "quotient_constant": 0.3730931793691604,
+        "radius": 0.5,
+        "shift_per_volume": 0.8333333333333334,
+        "shifted_floor": 1.576764430615741,
+        "tail_operator_norm": 2.25,
+        "trace_bound": 30.348037462825783,
+        "trace_slack": 27.16364849755688,
+        "two_slice": 3.0927711359602013,
+        "volume": 2
+      },
+      {
+        "beta": 0.5,
+        "energy_fourth_moment": 81.34171070653008,
+        "equal_time_fourth_moment": 0.014443726730036632,
+        "order_scale": 1.6919489381259472,
+        "order_slack": 5.683311605720812e-17,
+        "oscillator_dimension": 3,
+        "quotient_constant": 0.0016947748053430568,
+        "radius": 1.0,
+        "shift_per_volume": 0.8333333333333334,
+        "shifted_floor": 1.576764430615741,
+        "tail_operator_norm": 0.5841809581098106,
+        "trace_bound": 0.13785588192893075,
+        "trace_slack": 0.12341215519889412,
+        "two_slice": 0.014026727591653156,
+        "volume": 2
+      },
+      {
+        "beta": 1.0,
+        "energy_fourth_moment": 49.629550730029024,
+        "equal_time_fourth_moment": 1.7926482210507462,
+        "order_scale": 153.3181373009277,
+        "order_slack": 1.2929869218105418e-14,
+        "oscillator_dimension": 3,
+        "quotient_constant": 0.3730931793691604,
+        "radius": 0.5,
+        "shift_per_volume": 0.8333333333333334,
+        "shifted_floor": 1.576764430615741,
+        "tail_operator_norm": 2.25,
+        "trace_bound": 18.516446872529563,
+        "trace_slack": 16.723798651478816,
+        "two_slice": 1.4806072773075596,
+        "volume": 2
+      },
+      {
+        "beta": 1.0,
+        "energy_fourth_moment": 49.629550730029024,
+        "equal_time_fourth_moment": 0.00812437619046566,
+        "order_scale": 1.6919489381259472,
+        "order_slack": 5.683311605720812e-17,
+        "oscillator_dimension": 3,
+        "quotient_constant": 0.0016947748053430568,
+        "radius": 1.0,
+        "shift_per_volume": 0.8333333333333334,
+        "shifted_floor": 1.576764430615741,
+        "tail_operator_norm": 0.5841809581098106,
+        "trace_bound": 0.0841109121777483,
+        "trace_slack": 0.07598653598728264,
+        "two_slice": 0.0067046365505911976,
+        "volume": 2
+      },
+      {
+        "beta": 2.0,
+        "energy_fourth_moment": 19.598738671498104,
+        "equal_time_fourth_moment": 1.1091667655723398,
+        "order_scale": 153.3181373009277,
+        "order_slack": 1.2929869218105418e-14,
+        "oscillator_dimension": 3,
+        "quotient_constant": 0.3730931793691604,
+        "radius": 0.5,
+        "shift_per_volume": 0.8333333333333334,
+        "shifted_floor": 1.576764430615741,
+        "tail_operator_norm": 2.25,
+        "trace_bound": 7.312155722574543,
+        "trace_slack": 6.202988957002203,
+        "two_slice": 0.34340997080309277,
+        "volume": 2
+      },
+      {
+        "beta": 2.0,
+        "energy_fourth_moment": 19.598738671498104,
+        "equal_time_fourth_moment": 0.005028452177112858,
+        "order_scale": 1.6919489381259472,
+        "order_slack": 5.683311605720812e-17,
+        "oscillator_dimension": 3,
+        "quotient_constant": 0.0016947748053430568,
+        "radius": 1.0,
+        "shift_per_volume": 0.8333333333333334,
+        "shifted_floor": 1.576764430615741,
+        "tail_operator_norm": 0.5841809581098106,
+        "trace_bound": 0.03321544851695764,
+        "trace_slack": 0.02818699633984478,
+        "two_slice": 0.0015460051681512523,
+        "volume": 2
+      },
+      {
+        "beta": 0.125,
+        "energy_fourth_moment": 2066.1832202572123,
+        "equal_time_fourth_moment": 237.58147755921354,
+        "order_scale": 19756.276304374474,
+        "order_slack": 3.9267151806343424e-13,
+        "oscillator_dimension": 3,
+        "quotient_constant": 0.6763398239126067,
+        "radius": 0.5,
+        "shift_per_volume": 1.6666666666666667,
+        "shifted_floor": 2.5021635521438785,
+        "tail_operator_norm": 9.0,
+        "trace_bound": 1397.4419953599456,
+        "trace_slack": 1159.8605178007322,
+        "two_slice": 237.3256835871793,
+        "volume": 4
+      },
+      {
+        "beta": 0.125,
+        "energy_fourth_moment": 2066.1832202572123,
+        "equal_time_fourth_moment": 1.0542243192520715,
+        "order_scale": 90.52107802586995,
+        "order_slack": 3.978741392974717e-15,
+        "oscillator_dimension": 3,
+        "quotient_constant": 0.0030605575991606944,
+        "radius": 1.0,
+        "shift_per_volume": 1.6666666666666667,
+        "shifted_floor": 2.5021635521438785,
+        "tail_operator_norm": 2.3367238324392425,
+        "trace_bound": 6.323672756016526,
+        "trace_slack": 5.2694484367644545,
+        "two_slice": 1.0530751305265214,
+        "volume": 4
+      },
+      {
+        "beta": 0.25,
+        "energy_fourth_moment": 1679.6657201687008,
+        "equal_time_fourth_moment": 166.45658673824397,
+        "order_scale": 19756.276304374474,
+        "order_slack": 3.9267151806343424e-13,
+        "oscillator_dimension": 3,
+        "quotient_constant": 0.6763398239126067,
+        "radius": 0.5,
+        "shift_per_volume": 1.6666666666666667,
+        "shifted_floor": 2.5021635521438785,
+        "tail_operator_norm": 9.0,
+        "trace_bound": 1136.0248174109408,
+        "trace_slack": 969.5682306726969,
+        "two_slice": 165.62349719245785,
+        "volume": 4
+      },
+      {
+        "beta": 0.25,
+        "energy_fourth_moment": 1679.6657201687008,
+        "equal_time_fourth_moment": 0.7357433916266465,
+        "order_scale": 90.52107802586995,
+        "order_slack": 3.978741392974717e-15,
+        "oscillator_dimension": 3,
+        "quotient_constant": 0.0030605575991606944,
+        "radius": 1.0,
+        "shift_per_volume": 1.6666666666666667,
+        "shifted_floor": 2.5021635521438785,
+        "tail_operator_norm": 2.3367238324392425,
+        "trace_bound": 5.140713683912037,
+        "trace_slack": 4.404970292285391,
+        "two_slice": 0.7320097334399003,
+        "volume": 4
+      },
+      {
+        "beta": 0.5,
+        "energy_fourth_moment": 1129.4274783811695,
+        "equal_time_fourth_moment": 88.54773612404603,
+        "order_scale": 19756.276304374474,
+        "order_slack": 3.9267151806343424e-13,
+        "oscillator_dimension": 3,
+        "quotient_constant": 0.6763398239126067,
+        "radius": 0.5,
+        "shift_per_volume": 1.6666666666666667,
+        "shifted_floor": 2.5021635521438785,
+        "tail_operator_norm": 9.0,
+        "trace_bound": 763.8767818503796,
+        "trace_slack": 675.3290457263336,
+        "two_slice": 86.19251112568396,
+        "volume": 4
+      },
+      {
+        "beta": 0.5,
+        "energy_fourth_moment": 1129.4274783811695,
+        "equal_time_fourth_moment": 0.38898978513995264,
+        "order_scale": 90.52107802586995,
+        "order_slack": 3.978741392974717e-15,
+        "oscillator_dimension": 3,
+        "quotient_constant": 0.0030605575991606944,
+        "radius": 1.0,
+        "shift_per_volume": 1.6666666666666667,
+        "shifted_floor": 2.5021635521438785,
+        "tail_operator_norm": 2.3367238324392425,
+        "trace_bound": 3.4566778516603893,
+        "trace_slack": 3.0676880665204367,
+        "two_slice": 0.37847014189553385,
+        "volume": 4
+      },
+      {
+        "beta": 1.0,
+        "energy_fourth_moment": 496.4271049456461,
+        "equal_time_fourth_moment": 30.458234629113665,
+        "order_scale": 19756.276304374474,
+        "order_slack": 3.9267151806343424e-13,
+        "oscillator_dimension": 3,
+        "quotient_constant": 0.6763398239126067,
+        "radius": 0.5,
+        "shift_per_volume": 1.6666666666666667,
+        "shifted_floor": 2.5021635521438785,
+        "tail_operator_norm": 9.0,
+        "trace_bound": 335.7534207443834,
+        "trace_slack": 305.2951861152697,
+        "two_slice": 24.764019618109224,
+        "volume": 4
+      },
+      {
+        "beta": 1.0,
+        "energy_fourth_moment": 496.4271049456461,
+        "equal_time_fourth_moment": 0.1330154028739743,
+        "order_scale": 90.52107802586995,
+        "order_slack": 3.978741392974717e-15,
+        "oscillator_dimension": 3,
+        "quotient_constant": 0.0030605575991606944,
+        "radius": 1.0,
+        "shift_per_volume": 1.6666666666666667,
+        "shifted_floor": 2.5021635521438785,
+        "tail_operator_norm": 2.3367238324392425,
+        "trace_bound": 1.5193437484707406,
+        "trace_slack": 1.3863283455967663,
+        "two_slice": 0.10756605277978439,
+        "volume": 4
+      },
+      {
+        "beta": 2.0,
+        "energy_fourth_moment": 104.65692065792695,
+        "equal_time_fourth_moment": 11.648674561752301,
+        "order_scale": 19756.276304374474,
+        "order_slack": 3.9267151806343424e-13,
+        "oscillator_dimension": 3,
+        "quotient_constant": 0.6763398239126067,
+        "radius": 0.5,
+        "shift_per_volume": 1.6666666666666667,
+        "shifted_floor": 2.5021635521438785,
+        "tail_operator_norm": 9.0,
+        "trace_bound": 70.78364328901796,
+        "trace_slack": 59.13496872726566,
+        "two_slice": 2.0790832653418496,
+        "volume": 4
+      },
+      {
+        "beta": 2.0,
+        "energy_fourth_moment": 104.65692065792695,
+        "equal_time_fourth_moment": 0.05196273166853517,
+        "order_scale": 90.52107802586995,
+        "order_slack": 3.978741392974717e-15,
+        "oscillator_dimension": 3,
+        "quotient_constant": 0.0030605575991606944,
+        "radius": 1.0,
+        "shift_per_volume": 1.6666666666666667,
+        "shifted_floor": 2.5021635521438785,
+        "tail_operator_norm": 2.3367238324392425,
+        "trace_bound": 0.3203085338243762,
+        "trace_slack": 0.26834580215584103,
+        "two_slice": 0.008793251267288733,
+        "volume": 4
+      },
+      {
+        "beta": 0.125,
+        "energy_fourth_moment": 1374.21808912798,
+        "equal_time_fourth_moment": 6.622793460974427,
+        "order_scale": 125.7303145226417,
+        "order_slack": 1.0140846486800548e-13,
+        "oscillator_dimension": 2,
+        "quotient_constant": 0.013300562613926198,
+        "radius": 0.5,
+        "shift_per_volume": 2.5,
+        "shifted_floor": 3.724999999999999,
+        "tail_operator_norm": 2.810188844541171,
+        "trace_bound": 18.27787373963671,
+        "trace_slack": 11.655080278662282,
+        "two_slice": 6.622793460974432,
+        "volume": 6
+      },
+      {
+        "beta": 0.125,
+        "energy_fourth_moment": 1374.21808912798,
+        "equal_time_fourth_moment": 3.873756061345604e-62,
+        "order_scale": 1.0,
+        "order_slack": 6.478475802582136e-76,
+        "oscillator_dimension": 2,
+        "quotient_constant": 7.779668103589423e-65,
+        "radius": 1.0,
+        "shift_per_volume": 2.5,
+        "shifted_floor": 3.724999999999999,
+        "tail_operator_norm": 7.771561172376097e-16,
+        "trace_bound": 1.0690960635364552e-61,
+        "trace_slack": 6.817204574018947e-62,
+        "two_slice": 3.873756061345604e-62,
+        "volume": 6
+      },
+      {
+        "beta": 0.25,
+        "energy_fourth_moment": 1294.987363677575,
+        "equal_time_fourth_moment": 5.818122173018378,
+        "order_scale": 125.7303145226417,
+        "order_slack": 1.0140846486800548e-13,
+        "oscillator_dimension": 2,
+        "quotient_constant": 0.013300562613926198,
+        "radius": 0.5,
+        "shift_per_volume": 2.5,
+        "shifted_floor": 3.724999999999999,
+        "tail_operator_norm": 2.810188844541171,
+        "trace_bound": 17.224060514836804,
+        "trace_slack": 11.405938341818427,
+        "two_slice": 5.818122173018377,
+        "volume": 6
+      },
+      {
+        "beta": 0.25,
+        "energy_fourth_moment": 1294.987363677575,
+        "equal_time_fourth_moment": 3.4030935988245568e-62,
+        "order_scale": 1.0,
+        "order_slack": 6.478475802582136e-76,
+        "oscillator_dimension": 2,
+        "quotient_constant": 7.779668103589423e-65,
+        "radius": 1.0,
+        "shift_per_volume": 2.5,
+        "shifted_floor": 3.724999999999999,
+        "tail_operator_norm": 7.771561172376097e-16,
+        "trace_bound": 1.0074571887753787e-61,
+        "trace_slack": 6.67147828892923e-62,
+        "two_slice": 3.4030935988245568e-62,
+        "volume": 6
+      },
+      {
+        "beta": 0.5,
+        "energy_fourth_moment": 1146.5356023212494,
+        "equal_time_fourth_moment": 4.469529768179349,
+        "order_scale": 125.7303145226417,
+        "order_slack": 1.0140846486800548e-13,
+        "oscillator_dimension": 2,
+        "quotient_constant": 0.013300562613926198,
+        "radius": 0.5,
+        "shift_per_volume": 2.5,
+        "shifted_floor": 3.724999999999999,
+        "tail_operator_norm": 2.810188844541171,
+        "trace_bound": 15.249568567769364,
+        "trace_slack": 10.780038799590015,
+        "two_slice": 4.469529768179351,
+        "volume": 6
+      },
+      {
+        "beta": 0.5,
+        "energy_fourth_moment": 1146.5356023212494,
+        "equal_time_fourth_moment": 2.6142847625965293e-62,
+        "order_scale": 1.0,
+        "order_slack": 6.478475802582136e-76,
+        "oscillator_dimension": 2,
+        "quotient_constant": 7.779668103589423e-65,
+        "radius": 1.0,
+        "shift_per_volume": 2.5,
+        "shifted_floor": 3.724999999999999,
+        "tail_operator_norm": 7.771561172376097e-16,
+        "trace_bound": 8.919666455008311e-62,
+        "trace_slack": 6.305381692411782e-62,
+        "two_slice": 2.6142847625965284e-62,
+        "volume": 6
+      },
+      {
+        "beta": 1.0,
+        "energy_fourth_moment": 876.9351173992314,
+        "equal_time_fourth_moment": 2.538541935125637,
+        "order_scale": 125.7303145226417,
+        "order_slack": 1.0140846486800548e-13,
+        "oscillator_dimension": 2,
+        "quotient_constant": 0.013300562613926198,
+        "radius": 0.5,
+        "shift_per_volume": 2.5,
+        "shifted_floor": 3.724999999999999,
+        "tail_operator_norm": 2.810188844541171,
+        "trace_bound": 11.663730437319199,
+        "trace_slack": 9.125188502193563,
+        "two_slice": 2.538541935125638,
+        "volume": 6
+      },
+      {
+        "beta": 1.0,
+        "energy_fourth_moment": 876.9351173992314,
+        "equal_time_fourth_moment": 1.4848254390113635e-62,
+        "order_scale": 1.0,
+        "order_slack": 6.478475802582136e-76,
+        "oscillator_dimension": 2,
+        "quotient_constant": 7.779668103589423e-65,
+        "radius": 1.0,
+        "shift_per_volume": 2.5,
+        "shifted_floor": 3.724999999999999,
+        "tail_operator_norm": 7.771561172376097e-16,
+        "trace_bound": 6.822264161748247e-62,
+        "trace_slack": 5.337438722736884e-62,
+        "two_slice": 1.484825439011364e-62,
+        "volume": 6
+      },
+      {
+        "beta": 2.0,
+        "energy_fourth_moment": 454.7380314495236,
+        "equal_time_fourth_moment": 0.6237673956901514,
+        "order_scale": 125.7303145226417,
+        "order_slack": 1.0140846486800548e-13,
+        "oscillator_dimension": 2,
+        "quotient_constant": 0.013300562613926198,
+        "radius": 0.5,
+        "shift_per_volume": 2.5,
+        "shifted_floor": 3.724999999999999,
+        "tail_operator_norm": 2.810188844541171,
+        "trace_bound": 6.048271660227929,
+        "trace_slack": 5.424504264537777,
+        "two_slice": 0.6237673956901495,
+        "volume": 6
+      },
+      {
+        "beta": 2.0,
+        "energy_fourth_moment": 454.7380314495236,
+        "equal_time_fourth_moment": 3.6484947691075557e-63,
+        "order_scale": 1.0,
+        "order_slack": 6.478475802582136e-76,
+        "oscillator_dimension": 2,
+        "quotient_constant": 7.779668103589423e-65,
+        "radius": 1.0,
+        "shift_per_volume": 2.5,
+        "shifted_floor": 3.724999999999999,
+        "tail_operator_norm": 7.771561172376097e-16,
+        "trace_bound": 3.5377109587569026e-62,
+        "trace_slack": 3.172861481846147e-62,
+        "two_slice": 3.648494769107537e-63,
+        "volume": 6
+      }
+    ],
+    "summary_rows": [
+      {
+        "beta": 0.125,
+        "energy_fourth_moment": 112.96320576139173,
+        "max_equal_time_fourth_moment": 4.9841385598184536,
+        "max_quotient_constant": 0.3730931793691604,
+        "max_trace_bound": 42.145801589250304,
+        "max_two_slice": 4.978096490313757,
+        "min_order_slack": 5.683311605720812e-17,
+        "min_trace_slack": 0.1688269573399818,
+        "oscillator_dimension": 3,
+        "volume": 2
+      },
+      {
+        "beta": 0.25,
+        "energy_fourth_moment": 101.82829047140262,
+        "max_equal_time_fourth_moment": 4.31072098881917,
+        "max_quotient_constant": 0.3730931793691604,
+        "max_trace_bound": 37.99144064170199,
+        "max_two_slice": 4.286812993506902,
+        "min_order_slack": 5.683311605720812e-17,
+        "min_trace_slack": 0.15301553472658688,
+        "oscillator_dimension": 3,
+        "volume": 2
+      },
+      {
+        "beta": 0.5,
+        "energy_fourth_moment": 81.34171070653008,
+        "max_equal_time_fourth_moment": 3.184388965268901,
+        "max_quotient_constant": 0.3730931793691604,
+        "max_trace_bound": 30.348037462825783,
+        "max_two_slice": 3.0927711359602013,
+        "min_order_slack": 5.683311605720812e-17,
+        "min_trace_slack": 0.12341215519889412,
+        "oscillator_dimension": 3,
+        "volume": 2
+      },
+      {
+        "beta": 1.0,
+        "energy_fourth_moment": 49.629550730029024,
+        "max_equal_time_fourth_moment": 1.7926482210507462,
+        "max_quotient_constant": 0.3730931793691604,
+        "max_trace_bound": 18.516446872529563,
+        "max_two_slice": 1.4806072773075596,
+        "min_order_slack": 5.683311605720812e-17,
+        "min_trace_slack": 0.07598653598728264,
+        "oscillator_dimension": 3,
+        "volume": 2
+      },
+      {
+        "beta": 2.0,
+        "energy_fourth_moment": 19.598738671498104,
+        "max_equal_time_fourth_moment": 1.1091667655723398,
+        "max_quotient_constant": 0.3730931793691604,
+        "max_trace_bound": 7.312155722574543,
+        "max_two_slice": 0.34340997080309277,
+        "min_order_slack": 5.683311605720812e-17,
+        "min_trace_slack": 0.02818699633984478,
+        "oscillator_dimension": 3,
+        "volume": 2
+      },
+      {
+        "beta": 0.125,
+        "energy_fourth_moment": 2066.1832202572123,
+        "max_equal_time_fourth_moment": 237.58147755921354,
+        "max_quotient_constant": 0.6763398239126067,
+        "max_trace_bound": 1397.4419953599456,
+        "max_two_slice": 237.3256835871793,
+        "min_order_slack": 3.978741392974717e-15,
+        "min_trace_slack": 5.2694484367644545,
+        "oscillator_dimension": 3,
+        "volume": 4
+      },
+      {
+        "beta": 0.25,
+        "energy_fourth_moment": 1679.6657201687008,
+        "max_equal_time_fourth_moment": 166.45658673824397,
+        "max_quotient_constant": 0.6763398239126067,
+        "max_trace_bound": 1136.0248174109408,
+        "max_two_slice": 165.62349719245785,
+        "min_order_slack": 3.978741392974717e-15,
+        "min_trace_slack": 4.404970292285391,
+        "oscillator_dimension": 3,
+        "volume": 4
+      },
+      {
+        "beta": 0.5,
+        "energy_fourth_moment": 1129.4274783811695,
+        "max_equal_time_fourth_moment": 88.54773612404603,
+        "max_quotient_constant": 0.6763398239126067,
+        "max_trace_bound": 763.8767818503796,
+        "max_two_slice": 86.19251112568396,
+        "min_order_slack": 3.978741392974717e-15,
+        "min_trace_slack": 3.0676880665204367,
+        "oscillator_dimension": 3,
+        "volume": 4
+      },
+      {
+        "beta": 1.0,
+        "energy_fourth_moment": 496.4271049456461,
+        "max_equal_time_fourth_moment": 30.458234629113665,
+        "max_quotient_constant": 0.6763398239126067,
+        "max_trace_bound": 335.7534207443834,
+        "max_two_slice": 24.764019618109224,
+        "min_order_slack": 3.978741392974717e-15,
+        "min_trace_slack": 1.3863283455967663,
+        "oscillator_dimension": 3,
+        "volume": 4
+      },
+      {
+        "beta": 2.0,
+        "energy_fourth_moment": 104.65692065792695,
+        "max_equal_time_fourth_moment": 11.648674561752301,
+        "max_quotient_constant": 0.6763398239126067,
+        "max_trace_bound": 70.78364328901796,
+        "max_two_slice": 2.0790832653418496,
+        "min_order_slack": 3.978741392974717e-15,
+        "min_trace_slack": 0.26834580215584103,
+        "oscillator_dimension": 3,
+        "volume": 4
+      },
+      {
+        "beta": 0.125,
+        "energy_fourth_moment": 1374.21808912798,
+        "max_equal_time_fourth_moment": 6.622793460974427,
+        "max_quotient_constant": 0.013300562613926198,
+        "max_trace_bound": 18.27787373963671,
+        "max_two_slice": 6.622793460974432,
+        "min_order_slack": 6.478475802582136e-76,
+        "min_trace_slack": 6.817204574018947e-62,
+        "oscillator_dimension": 2,
+        "volume": 6
+      },
+      {
+        "beta": 0.25,
+        "energy_fourth_moment": 1294.987363677575,
+        "max_equal_time_fourth_moment": 5.818122173018378,
+        "max_quotient_constant": 0.013300562613926198,
+        "max_trace_bound": 17.224060514836804,
+        "max_two_slice": 5.818122173018377,
+        "min_order_slack": 6.478475802582136e-76,
+        "min_trace_slack": 6.67147828892923e-62,
+        "oscillator_dimension": 2,
+        "volume": 6
+      },
+      {
+        "beta": 0.5,
+        "energy_fourth_moment": 1146.5356023212494,
+        "max_equal_time_fourth_moment": 4.469529768179349,
+        "max_quotient_constant": 0.013300562613926198,
+        "max_trace_bound": 15.249568567769364,
+        "max_two_slice": 4.469529768179351,
+        "min_order_slack": 6.478475802582136e-76,
+        "min_trace_slack": 6.305381692411782e-62,
+        "oscillator_dimension": 2,
+        "volume": 6
+      },
+      {
+        "beta": 1.0,
+        "energy_fourth_moment": 876.9351173992314,
+        "max_equal_time_fourth_moment": 2.538541935125637,
+        "max_quotient_constant": 0.013300562613926198,
+        "max_trace_bound": 11.663730437319199,
+        "max_two_slice": 2.538541935125638,
+        "min_order_slack": 6.478475802582136e-76,
+        "min_trace_slack": 5.337438722736884e-62,
+        "oscillator_dimension": 2,
+        "volume": 6
+      },
+      {
+        "beta": 2.0,
+        "energy_fourth_moment": 454.7380314495236,
+        "max_equal_time_fourth_moment": 0.6237673956901514,
+        "max_quotient_constant": 0.013300562613926198,
+        "max_trace_bound": 6.048271660227929,
+        "max_two_slice": 0.6237673956901495,
+        "min_order_slack": 6.478475802582136e-76,
+        "min_trace_slack": 3.172861481846147e-62,
+        "oscillator_dimension": 2,
+        "volume": 6
+      }
+    ],
+    "tail_fourth_moment_uniform_closed": false
+  },
+  "exploration_id": "EXP-001190",
+  "passed": 147,
+  "provenance": {
+    "fixture_lineage": [
+      "EXP-001190",
+      "EXP-001189",
+      "EXP-001188"
+    ],
+    "script": "codes/foundations/pre_a_cp1_st8_q3lock_finite_energy_fourth_coercive_quotient.py"
+  },
+  "run_kind": "primary",
+  "schema": "tect/foundation-audit/1.0",
+  "task_id": "T-054",
+  "verdict": "PASS"
+}
