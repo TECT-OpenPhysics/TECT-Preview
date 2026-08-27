@@ -39,6 +39,7 @@ policy in `governance/development-history.md`.
 | [R-192](#r-192) | Bounded complete finite production-cylinder integration trial | R-192 v1.0 is a T0 claim-nonbearing T-058 integration audit under EXP-000909. Lean and both exact lanes confirm the R-183 reserve fixtures, R-184 temporal identity and R-191 telescope, then stop at the first missing production heat/root raw-current map. The audit does not close the q-ledger, either A13 gate, Sector-A or Pre-A |
 | [R-194](#r-194) | Sharp running-mass counterterm boundary | R-194 v1.0 is a T0 claim-nonbearing Lean/Fraction boundary under EXP-000932. It proves the sharp local coefficient h_min=9*(a+2*b+c), a nonnegative endpoint correction, a subsharp negative witness, and a third-component escape with no uniform coercivity. The full renormalised A6 owner, tightness, removal, Sector-A and Pre-A remain open |
 | [R-195](#r-195) | Spatial constant-field lift of the A6 running-mass escape | R-195 v1.0 is a T0 claim-nonbearing Lean/Fraction spatial lift under EXP-000933. On the declared finite torus, constant fields multiply the R-194 correction by the exact volume and the volume-cancelled ratio is bounded by 6*s*(b+c)/r, so no positive volume-uniform coercivity holds even on that subspace. Full-field concentration, partition/tightness, A7, A13, Sector-A and Pre-A remain open |
+| [R-370](#r-370) | Kubo-Mori Liouvillian energy-window and tail decomposition | R-370 v1.0 is a T0 claim-nonbearing finite diagnostic under EXP-001212. The doubled-bond theta-half shell splits exactly into low/high transition-energy parts across 2816 all-prefix contexts; at edge d=6 the high-gap squared-norm fraction reaches 0.891745 for E=1, while square d=2 is low-gap at E>=2. A cutoff-independent collar, Gibbs-tail theorem, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
 | [R-369](#r-369) | Kubo-Mori translation and exhaustion-shape stress | R-369 v1.0 is a T0 claim-nonbearing finite stress under EXP-001211. All translated bond/site positions pass on the V=2 edge and V=4 square with 2816 all-prefix contexts; square values stay near 3.2e-08--3.5e-08 while edge values grow to 1.208758 at d=6, so source/shape/cutoff/volume-uniform comparison, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
 | [R-368](#r-368) | Local Kubo-Mori weighted fractional shell with arbitrary-prefix coverage | R-368 v1.0 is a T0 claim-nonbearing finite topology diagnostic under EXP-001210. The local Gibbs logarithmic-mean weight suppresses the R-367 unweighted d=6 maximum from 69.908699 to 1.208758 across 656 all-prefix contexts, but the weight is a doubled-bond proxy; cutoff/volume-uniform comparison, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
 | [R-367](#r-367) | Larger-cutoff and volume stress for the fractional Liouvillian shell | R-367 v1.0 is a T0 claim-nonbearing finite stress under EXP-001209. The theta=1/2 pilot passes on V=2 d=3..6 and V=4 d=2 selected prefixes, but the unweighted fractional norm reaches 69.908699 at V=2,d=6; this is a finite growth warning, not a divergence theorem. Uniform modular comparison, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
@@ -576,6 +577,37 @@ tier/lifecycle change follows. A13 gates remain open. No R-192 PDF is issued.
 <a id="r-363"></a>
 <a id="r-364"></a>
 
+
+<a id="r-370"></a>
+### R-370 -- Kubo-Mori Liouvillian energy-window and tail decomposition
+
+**Result ID.** R-370 is a T0, claim-nonbearing finite diagnostic under
+EXP-001212.
+
+**Statement.** The R-369 doubled-bond Kubo-Mori theta-half shell is split by
+the transition energy `|lambda_i-lambda_j|` in the selected bond eigenbasis.
+For each fixed `E` in `{1,2,4}`, the low-gap and high-gap masked sums are
+nonnegative and their squared norms add to the full shell.  This is a
+Liouvillian-frequency split, distinct from the earlier full-Hamiltonian
+state-energy window.
+
+**Verification.** Primary and non-importing independent lanes each pass
+`50845/50845` assertions over `2816` contexts and three energy-gap windows.
+The integrated verifier passes `236/236`, Lean R370 compiles, and the largest
+primary-independent numeric difference is `4.219e-15`.  The maximum finite
+decomposition residual is `4.441e-16`.  At edge `d=6`, high-gap squared-norm
+fractions reach `0.891744980249774`, `0.7429364350925435`, and
+`0.49969239659272124` for `E=1,2,4`; at square `d=2`, the high-gap part is
+zero for `E>=2` and roundoff-sized at `E=1`.
+
+**Boundary.** The split identifies where the sampled finite norm lives but
+does not prove a cutoff-independent low-gap collar or a Gibbs-tail estimate.
+The weights remain a finite doubled local-bond Gibbs proxy, and high-energy
+pairs with small transition gap remain in the low-gap mask.  Common core,
+common alpha, global KMS transfer, OS/KMS/GNS dynamics, a mass gap,
+continuum, C6, Sector-A and Pre-A remain open.  No R-370 PDF is issued.
+
+**Proven in:** [manifest](strategy/pre-a-cp1-st8-q3lock-local-q2-kubo-mori-energy-window-manifest.json), [certificate](strategy/pre-a-cp1-st8-q3lock-local-q2-kubo-mori-energy-window-certificate-260827.md), [Lean entrypoint](verification/lean/Tect/R370.lean), [primary script](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_kubo_mori_energy_window.py), [independent script](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_kubo_mori_energy_window_independent.py), [integrated verifier](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_kubo_mori_energy_window_verify.py), [scope note](claims/C6-SPACETIME-SIGNATURE/notes/q3lock-local-q2-kubo-mori-energy-window-boundary-260827.md), and stored run artefacts.
 
 <a id="r-369"></a>
 ### R-369 -- Kubo-Mori translation and exhaustion-shape stress

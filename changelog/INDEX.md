@@ -5,7 +5,7 @@ Compact generated reader surface. The append-only authority is
 record 568 / commit `4db22f4e` and no longer grows.
 Post-cutover full bodies live exactly once in bounded pages under `pages/`.
 
-**710 accepted events** · latest 25 shown below · machine locator: `index.json`
+**711 accepted events** · latest 25 shown below · machine locator: `index.json`
 
 Search the complete authority without loading every page:
 
@@ -17,6 +17,7 @@ python verification/scripts/changelog.py search --text <phrase>
 
 | Date | Event | Claims | Full entry |
 |---|---|---|---|
+| 2026-08-28 | `20260828-r-370-kubo-mori-liouvillian-energy-window-and-t` — [R-370 Kubo-Mori Liouvillian energy-window and tail decomposition] - 2026-08-28 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000669-000718.md#20260828-r-370-kubo-mori-liouvillian-energy-window-and-t) |
 | 2026-08-27 | `20260827-r-369-kubo-mori-translation-and-shape-stress-20` — [R-369 Kubo-Mori translation and shape stress] - 2026-08-27 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000669-000718.md#20260827-r-369-kubo-mori-translation-and-shape-stress-20) |
 | 2026-08-27 | `20260827-r-368-local-kubo-mori-weighted-fractional-prefi` — [R-368 local Kubo-Mori weighted fractional prefix] - 2026-08-27 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000669-000718.md#20260827-r-368-local-kubo-mori-weighted-fractional-prefi) |
 | 2026-08-27 | `20260827-r-367-larger-cutoff-and-volume-fractional-liouv` — [R-367 larger-cutoff and volume fractional Liouvillian stress] - 2026-08-27 | C6-SPACETIME-SIGNATURE,EXP-001209,R-367 | [bounded page](pages/000669-000718.md#20260827-r-367-larger-cutoff-and-volume-fractional-liouv) |
@@ -41,7 +42,6 @@ python verification/scripts/changelog.py search --text <phrase>
 | 2026-08-22 | `20260822-r-192-t-058-bounded-complete-finite-production` — [R-192 T-058 bounded complete finite production-cylinder integration trial] - 2026-08-22 | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION, EXP-000909, R-192 | [bounded page](pages/000669-000718.md#20260822-r-192-t-058-bounded-complete-finite-production) |
 | 2026-08-22 | `20260822-if-tect-ym-0001-scope-preserving-tect-to-yang-m` — [[IF-TECT-YM-0001] Scope-preserving TECT-to-Yang-Mills evidence export] - 2026-08-22 | A3-PERTURBATIVE-CONTINUUM-CORRELATORS, A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE, B1-RH-ENUM, B2-PROPA-HLAYER, B3-BCC-STRUCT, B3-RH-TESTED-STRUCTURE-RANKING, B4-CONE-CURVATURE-ANCHOR, B4-MASS-GAP, B5-BEYOND-LAYER-BOUND, C6-SPACETIME-SIGNATURE | [bounded page](pages/000669-000718.md#20260822-if-tect-ym-0001-scope-preserving-tect-to-yang-m) |
 | 2026-08-22 | `20260822-r-191-complete-finite-two-root-a1-scalar-owner` — [R-191 complete finite two-root A1 scalar owner telescope] - 2026-08-22 | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION, EXP-000906, R-191 | [bounded page](pages/000669-000718.md#20260822-r-191-complete-finite-two-root-a1-scalar-owner) |
-| 2026-08-22 | `20260822-r-190-a1-arbitrary-polarization-two-mode-positi` — [R-190 A1 arbitrary-polarization two-mode positivity Lean cross-check] - 2026-08-22 | A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE, A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION, A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION, EXP-000905, R-190 | [bounded page](pages/000669-000718.md#20260822-r-190-a1-arbitrary-polarization-two-mode-positi) |
 
 ## Post-cutover pages
 
@@ -49,6 +49,6 @@ Each full event body after the cutover occurs in exactly one page.
 
 | Ordinals | Events | Page |
 |---|---:|---|
-| 669–710 | 42 | [000669-000718.md](pages/000669-000718.md) |
+| 669–711 | 43 | [000669-000718.md](pages/000669-000718.md) |
 | 619–668 | 50 | [000619-000668.md](pages/000619-000668.md) |
 | 569–618 | 50 | [000569-000618.md](pages/000569-000618.md) |

@@ -1,0 +1,73 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001212",
+  "title": "Kubo-Mori Liouvillian energy-window and tail decomposition",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-ENERGY-WEIGHTED-COMMUTATOR-GEVREY-LR-CLOSURE"
+  ],
+  "related": [
+    {"id": "EXP-001211", "relation": "continues"},
+    {"id": "EXP-001210", "relation": "continues"},
+    {"id": "EXP-001200", "relation": "continues"}
+  ],
+  "question": "Does splitting the local Kubo--Mori fractional shell by doubled-bond transition energy isolate a finite low-gap component and diagnose whether the R-369 cutoff growth is carried by high-gap transitions?",
+  "method": [
+    "Use the actual-Q3 V=2 edge at d=3,4,5,6 and V=4 square at d=2 with every translated measured site and selected bond, both split orientations, signs, history adjoints, beta values and all prefix positions.",
+    "Diagonalize each selected doubled bond generator and form its finite Gibbs logarithmic-mean Kubo--Mori weights.",
+    "For each fixed transition-energy threshold E in {1,2,4}, split the nonnegative theta-half square-function sum by |lambda_i-lambda_j| <= E and its complement; check the two masked finite-time bounds and the squared-norm decomposition.",
+    "Rebuild the complete table in a non-importing independent lane, compare global/regime/per-cutoff rows, and compile Lean R370 for the scalar envelope, split arithmetic and scope only."
+  ],
+  "finding": "Primary and independent lanes each pass 50845/50845 assertions over 2816 contexts and three energy-gap windows; the integrated verifier passes 236/236 and Lean R370 passes. The largest primary-independent numeric difference is 4.219e-15 and the maximum low/high squared-norm decomposition residual is 4.441e-16. At edge d=6, the high-gap squared-norm fraction reaches 0.891744980249774, 0.7429364350925435 and 0.49969239659272124 for E=1,2,4, with high-gap norm maxima 1.1400602287279082, 1.0418743270642477 and 0.8544583112628602. At square d=2, the high-gap component is zero for E>=2 and roundoff-sized at E=1.",
+  "verdict": "advanced",
+  "decision_reason": "The finite frequency split shows that the edge cutoff growth is substantially carried by large transition-energy differences in the sampled contexts, while the square fixture is already captured by the low-gap sector at E>=2. This identifies a live analytic route combining a cutoff-independent low-frequency Dirichlet collar with a separately proved high-frequency Gibbs-tail estimate. The finite split itself supplies neither estimate and does not close any QFT gate.",
+  "adversarial_review": [
+    {"axis": "newness of window", "check": "The mask is on doubled-bond transition energy, not on the full local Hamiltonian eigenvalue used by the earlier state-energy audit; the two diagnostics remain separate.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "exact decomposition", "check": "Low and high terms are disjoint nonnegative sums, so the squared-norm identity is checked directly; no cancellation is assumed.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "high-gap interpretation", "check": "A large high-gap fraction is recorded only as finite localization of the sampled norm. It is not called a divergent tail or a vanishing Gibbs tail; high-energy pairs with small transition gap remain in the low mask.", "disposition": "UPHELD-OPEN"},
+    {"axis": "cutoff uniformity", "check": "The edge d=3..6 rows are finite samples and the low/high maxima are not promoted to a cutoff-independent bound.", "disposition": "UPHELD-OPEN"},
+    {"axis": "bound application", "check": "The scalar half-envelope is applied separately to each masked sum, with no use of low/high cancellation.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "independence", "check": "The independent lane reconstructs the oscillator, graph, witnesses, spectra, weights and prefixes without importing the primary R-370 module.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "Lean scope", "check": "Lean R370 checks scalar envelope, exact split fixture arithmetic and false scope flags only; numerical matrix spectra remain executable evidence.", "disposition": "UPHELD"},
+    {"axis": "QFT promotion", "check": "KMS transfer, common core, common alpha, OS/KMS/GNS dynamics, gap, continuum, C6, Sector-A and Pre-A remain open.", "disposition": "UPHELD-OPEN"}
+  ],
+  "evidence_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-local-q2-kubo-mori-energy-window-manifest.json#finite_fixture",
+    "strategy/pre-a-cp1-st8-q3lock-local-q2-kubo-mori-energy-window-certificate-260827.md#2-verification",
+    "codes/foundations/pre_a_cp1_st8_q3lock_local_q2_kubo_mori_energy_window.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_local_q2_kubo_mori_energy_window_independent.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_local_q2_kubo_mori_energy_window_verify.py#run",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-28-primary-pre_a_cp1_st8_q3lock_local_q2_kubo_mori_energy_window/primary.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-28-independent-pre_a_cp1_st8_q3lock_local_q2_kubo_mori_energy_window/independent.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-28-integrated-pre_a_cp1_st8_q3lock_local_q2_kubo_mori_energy_window/integrated.json#lean",
+    "verification/lean/Tect/R370.lean#energy_gap_decomposition_fixture",
+    "claims/C6-SPACETIME-SIGNATURE/notes/q3lock-local-q2-kubo-mori-energy-window-boundary-260827.md#boundary"
+  ],
+  "formal_integration": {
+    "results": ["R-370"],
+    "negatives": [],
+    "events": ["20260828-r-370-kubo-mori-liouvillian-energy-window-and-t"],
+    "lean": "R370 PASS",
+    "no_new_result": false,
+    "no_new_negative": true,
+    "no_changelog_event": false,
+    "no_pdf": true,
+    "no_tier_change": true
+  },
+  "formal_refs": {
+    "results": ["R-370"],
+    "negatives": [],
+    "events": ["20260828-r-370-kubo-mori-liouvillian-energy-window-and-t"]
+  },
+  "next_action": "Derive an analytic cutoff-independent local Dirichlet comparison for the low-transition-energy sector and a separate Gibbs-tail estimate for its complement, then test both on source-complete exhaustion shapes.",
+  "boundary": "T0 claim-nonbearing finite Liouvillian energy-window stress only. The local doubled-bond Gibbs proxy is not a global KMS state; cutoff, volume, source, shape, common-core, common-alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A gates remain open.",
+  "no_overclaim": "R-370 identifies finite frequency localization of R-369 growth but does not prove a uniform collar, a Gibbs-tail theorem, regulator removal, or a QFT/Clay result.",
+  "provenance": "contemporaneous",
+  "recorded_at": "2026-08-29T16:00:00Z",
+  "reviewed_on": "2026-08-28",
+  "recorded_by": "Codex"
+}

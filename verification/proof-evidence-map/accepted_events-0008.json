@@ -388,6 +388,45 @@
       },
       "scripts": [],
       "unresolved_claim_ids": []
+    },
+    {
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "claim_ref_basis": {
+        "C6-SPACETIME-SIGNATURE": "explicit_claim_ids"
+      },
+      "claim_refs": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "date": "2026-08-28",
+      "header": "[R-370 Kubo-Mori Liouvillian energy-window and tail decomposition] - 2026-08-28",
+      "id": "20260828-r-370-kubo-mori-liouvillian-energy-window-and-t",
+      "keywords": [],
+      "linked_result_ids": [
+        "R-369",
+        "R-370"
+      ],
+      "negative_results": [],
+      "notes": [
+        "claims/C6-SPACETIME-SIGNATURE/notes/q3lock-local-q2-kubo-mori-energy-window-boundary-260827.md"
+      ],
+      "raw": "## [R-370 Kubo-Mori Liouvillian energy-window and tail decomposition] - 2026-08-28\n\n- **New perspective.** R-370 splits the R-369 local doubled-bond Kubo--Mori theta-half shell by transition energy `|lambda_i-lambda_j|`, which is distinct from the earlier full-Hamiltonian state-energy window.\n- **Finite result.** For E=1,2,4 the low/high masked squared norms add with maximum residual 4.441e-16. Primary and independent lanes each pass 50845/50845 assertions over 2816 all-prefix contexts; integrated passes 236/236; Lean R370 compiles; largest lane difference is 4.219e-15.\n- **Diagnostic.** On the V=2 edge at d=6, the high-gap squared-norm fraction reaches 0.891745 at E=1, 0.742936 at E=2, and 0.499692 at E=4. On the V=4 square at d=2, the high-gap part is zero for E>=2. This identifies a live low-frequency-collar plus explicit high-frequency-tail route, but does not prove either a cutoff-uniform collar or a Gibbs-tail theorem.\n- **Boundary.** The Kubo--Mori weight remains a finite doubled local-bond proxy; high-energy pairs with small transition gap remain in the low-gap mask. Common core, common alpha, global KMS transfer, OS/KMS/GNS dynamics, mass gap, continuum, C6, Sector-A and Pre-A remain open. No new negative result or PDF is issued.\n\n",
+      "result_ids": [
+        "R-369",
+        "R-370"
+      ],
+      "result_link_basis": {
+        "R-369": "explicit_result_id",
+        "R-370": "explicit_result_id"
+      },
+      "scripts": [
+        "codes/foundations/pre_a_cp1_st8_q3lock_local_q2_kubo_mori_energy_window.py",
+        "codes/foundations/pre_a_cp1_st8_q3lock_local_q2_kubo_mori_energy_window_independent.py",
+        "codes/foundations/pre_a_cp1_st8_q3lock_local_q2_kubo_mori_energy_window_verify.py",
+        "verification/lean/Tect/R370.lean"
+      ],
+      "unresolved_claim_ids": []
     }
   ],
   "kind": "accepted_events",
