@@ -1912,6 +1912,153 @@
       "task_id": "T-054",
       "title": "Positive odd-Matsubara resolvent expansion of the capped Gibbs kernel",
       "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "axis": "odd Basel sum",
+          "check": "The infinite odd-frequency identity is used only as a recorded analytic interface; executable assertions use finite budgets.",
+          "disposition": "UPHELD-INTERFACE"
+        },
+        {
+          "axis": "scalar-to-operator",
+          "check": "A scalar Lipschitz estimate might be mistaken for an operator-norm locality estimate.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "zero transition",
+          "check": "The derivative envelope remains finite at Delta=0 because the odd frequency is positive.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "grid coverage",
+          "check": "A sampled energy grid could hide a larger finite transition.",
+          "disposition": "VALID-with-mitigation"
+        },
+        {
+          "axis": "beta extremes",
+          "check": "The capped-kernel slope may exceed one at a temperature endpoint.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "prefix semantics",
+          "check": "Context counting could be confused with evolved-witness evaluation.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "unbounded energy",
+          "check": "A convergent frequency budget can still multiply an unbounded local energy.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "downstream promotion",
+          "check": "The finite spectral interface could silently advance C6, Sector-A or Pre-A.",
+          "disposition": "DISMISSED-FIREWALL"
+        },
+        {
+          "axis": "independence",
+          "check": "Primary and independent scripts could accidentally share the primary implementation.",
+          "disposition": "DISMISSED-FINITE"
+        }
+      ],
+      "boundary": "T0 claim-nonbearing finite scalar spectral-sensitivity result. No common core, common alpha, resolvent locality, KMS/GNS dynamics, gap, continuum, C6, Sector-A or Pre-A closure.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "R-375 changes the interface from tail approximation to a summable first-variation budget. It can reduce a matched spectral comparison to one Liouvillian variation if eigenvector rotation and locality are controlled separately. The finite result does not supply those operator estimates, so no promotion is justified.",
+      "evidence": {
+        "certificate": "strategy/pre-a-cp1-st8-q3lock-local-q2-kubo-mori-matsubara-lipschitz-budget-certificate-260827.md",
+        "independent_script": "codes/foundations/pre_a_cp1_st8_q3lock_local_q2_kubo_mori_matsubara_lipschitz_budget_independent.py",
+        "integrated_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-28-integrated-pre_a_cp1_st8_q3lock_local_q2_kubo_mori_matsubara_lipschitz_budget/integrated.json",
+        "integrated_verifier": "codes/foundations/pre_a_cp1_st8_q3lock_local_q2_kubo_mori_matsubara_lipschitz_budget_verify.py",
+        "lean": "verification/lean/Tect/R375.lean",
+        "manifest": "strategy/pre-a-cp1-st8-q3lock-local-q2-kubo-mori-matsubara-lipschitz-budget-manifest.json",
+        "primary_script": "codes/foundations/pre_a_cp1_st8_q3lock_local_q2_kubo_mori_matsubara_lipschitz_budget.py"
+      },
+      "evidence_refs": [
+        "strategy/pre-a-cp1-st8-q3lock-local-q2-kubo-mori-matsubara-lipschitz-budget-manifest.json#finite_fixture",
+        "strategy/pre-a-cp1-st8-q3lock-local-q2-kubo-mori-matsubara-lipschitz-budget-certificate-260827.md#verification",
+        "codes/foundations/pre_a_cp1_st8_q3lock_local_q2_kubo_mori_matsubara_lipschitz_budget.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_local_q2_kubo_mori_matsubara_lipschitz_budget_independent.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_local_q2_kubo_mori_matsubara_lipschitz_budget_verify.py#run",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-28-primary-pre_a_cp1_st8_q3lock_local_q2_kubo_mori_matsubara_lipschitz_budget/primary.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-28-independent-pre_a_cp1_st8_q3lock_local_q2_kubo_mori_matsubara_lipschitz_budget/independent.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-28-integrated-pre_a_cp1_st8_q3lock_local_q2_kubo_mori_matsubara_lipschitz_budget/integrated.json#derived",
+        "verification/lean/Tect/R375.lean#derivative_envelope",
+        "claims/C6-SPACETIME-SIGNATURE/notes/q3lock-local-q2-kubo-mori-matsubara-lipschitz-budget-boundary-260827.md#boundary"
+      ],
+      "finding": "The primary and independent lanes agree exactly at reported precision. The observed 64-layer budget is 0.9968337774239473, the largest partial finite-difference ratio is 0.9968270508959253, the largest capped-kernel ratio is 0.9999932734714507, and all envelope violations are roundoff-sized or negative.",
+      "finite_checks": [
+        "all declared edge and square spectra",
+        "2816 all-prefix orientation/sign/adjoint context count",
+        "257-point grid through every observed transition span",
+        "three declared positive perturbation scales",
+        "layer derivative envelope, partial budget finite differences, capped-kernel finite differences, positivity and monotonicity"
+      ],
+      "formal_integration": {
+        "events": [
+          "20260828-r-375-summable-odd-matsubara-lipschitz-budget-2"
+        ],
+        "lean": "R375 PASS",
+        "negatives": [],
+        "no_changelog_event": false,
+        "no_new_negative": true,
+        "no_new_result": false,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "results": [
+          "R-375"
+        ]
+      },
+      "formal_refs": {
+        "events": [
+          "20260828-r-375-summable-odd-matsubara-lipschitz-budget-2"
+        ],
+        "negatives": [],
+        "results": [
+          "R-375"
+        ]
+      },
+      "gate_ids": [
+        "PA-CP1-ST8-Q3LOCK-RESOLVENT-ALGEBRA-EXACT-POLYNOMIAL-COMMON-ALPHA-CLOSURE",
+        "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+        "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+      ],
+      "id": "EXP-001217",
+      "method": [
+        "Use the scalar odd-Matsubara layer m_n(beta,Delta)=8 Delta/(omega_n^2+beta^2 Delta^2) and differentiate each layer in the transition energy.",
+        "Bound each slope by 8/omega_n^2, sum the finite budget, and compare finite differences with the exact capped-kernel unit-Lipschitz bound.",
+        "Evaluate the envelopes on every actual-Q3 edge and square bond spectrum, count every all-prefix orientation/sign/adjoint context, and retain all declared beta values.",
+        "Reconstruct the implementation with the independent R-372 helper and compile Lean R375 for scalar positivity and the derivative envelope."
+      ],
+      "next_action": "Prove an energy-constrained first-Liouvillian-variation estimate on the common polynomial core and separately bound eigenvector rotation before transferring the scalar budget to a resolvent/locality theorem.",
+      "no_new_negative": true,
+      "no_overclaim": "R-375 is a finite scalar spectral-sensitivity interface only; it does not prove an operator locality estimate or any QFT closure.",
+      "no_pdf": true,
+      "no_tier_change": true,
+      "provenance": "contemporaneous",
+      "question": "Can the positive odd-Matsubara layers provide a summable first-variation budget for transition-energy perturbations, while keeping eigenvector rotation and spatial locality as explicit separate obligations?",
+      "reason": "The Matsubara expansion supplies a finite, summable scalar stability budget that can be used as an interface for matched spectral comparisons. It does not by itself control eigenvectors, commutators, spatial locality, or thermodynamic limits.",
+      "recorded_at": "2026-08-29T21:00:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001216",
+          "relation": "continues"
+        }
+      ],
+      "related_explorations": [
+        "EXP-001216"
+      ],
+      "result_ids": [
+        "R-375"
+      ],
+      "reviewed_on": "2026-08-28",
+      "route": "Use the exact scalar layer derivative envelope 8/omega_n^2, the finite partial budget, and the capped-kernel unit slope on actual-Q3 spectra; cross-check the scalar inequalities in Lean and compare an independent implementation.",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Summable odd-Matsubara Lipschitz budget for transition-energy perturbations",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",
