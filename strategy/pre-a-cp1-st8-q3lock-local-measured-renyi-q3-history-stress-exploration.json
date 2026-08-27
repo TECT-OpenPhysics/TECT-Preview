@@ -1,0 +1,71 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001202",
+  "title": "Finite Q3 local measured-Renyi history stress",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE",
+    "PA-CP1-ST8-Q3LOCK-ALL-EXHAUSTION-MIXTURE-L2-LOCALITY-AND-BETA-INDEPENDENT-CSTAR-DYNAMICS"
+  ],
+  "related": [
+    {"id": "EXP-001201", "relation": "continues"},
+    {"id": "EXP-000806", "relation": "continues"},
+    {"id": "EXP-001194", "relation": "continues"}
+  ],
+  "question": "On the registered finite Q3 split-step model, do local coordinate-marginal alpha=2 likelihoods remain finite across partial histories, adjoints, source orientations, beta values, volumes and a small cutoff stress?",
+  "method": [
+    "Rebuild the exact truncated Q3 onsite quartic and nearest-neighbour bond Hamiltonian on V=2,4,6 graphs, using d={3,4,5,6} for V=2 and d=3 for V=4,6.",
+    "For beta in {1/2,1,2}, source supports {0} and {0,1}, source signs +/- and each forward/reverse split order with signs +/-, form zero, first-term and full prefixes.",
+    "Evolve the finite Gibbs density matrix by each prefix and its adjoint, measure every local q coordinate marginal, and compute Q_2=sum p_sigma^2/p_rho.",
+    "Check the finite event inequality p_sigma(E)<=Q_2^(1/2)p_rho(E)^(1/2) for thresholds |q|>=1/2 and |q|>=1 in both primary and non-importing independent lanes.",
+    "Compile the exact finite count and scope firewall in Lean R361."
+  ],
+  "finding": "Primary passes 15868/15868 assertions and independent passes 15578/15578. Both lanes reproduce 1728 contexts and agree on the maximum local Q_2 within the declared tolerance. The maximum is 1.0003971102366709 at V=2,d=6; no context exceeds the diagnostic threshold 4. The maximum values by (V,d) are 1.0001012462665797, 1.000204361079445, 1.0003136084554662, 1.0003971102366709, 1.000030808663065 and 1.0000307220480802 for (2,3),(2,4),(2,5),(2,6),(4,3),(6,3), respectively.",
+  "verdict": "advanced",
+  "decision_reason": "The finite actual-Q3 local measured-Renyi interface is numerically well behaved on the declared grid, including both history orientations, adjoints, source signs and local tail inequalities. This identifies a live QFT-facing route but does not prove a cutoff-, source-, volume-, beta- or history-uniform estimate.",
+  "qft_interface": {
+    "closed": "A finite coordinate-marginal Q_2 table and its event inequality are reproducible for explicit Q3 Gibbs/split-step matrices.",
+    "open": "An analytic uniform local likelihood or restricted-tail estimate, all-prefix coverage, common core, split/exhaustion limit, common alpha, Hamiltonian-to-OS identification, KMS/GNS gap, regulator removal and continuum remain open.",
+    "chain": "local measured Renyi -> two-orientation Gaussian history tail -> common core/exhaustion -> OS/KMS/GNS -> phasewise gap",
+    "tect_boundary": "Auxiliary C6/Q3 evidence only; no heat_root_incidence or canonical A1/R-192 production owner is supplied."
+  },
+  "adversarial_review": [
+    {"axis": "finite-to-uniform promotion", "check": "A finite maximum over 1728 contexts is not an analytic uniform theorem.", "disposition": "UPHELD-OPEN"},
+    {"axis": "partial-history coverage", "check": "Only zero, first and full prefixes are sampled; every intermediate prefix remains open.", "disposition": "UPHELD-OPEN"},
+    {"axis": "reference orientation", "check": "The denominator is the unsplit finite Gibbs marginal and no infinite-volume state is inferred.", "disposition": "UPHELD"},
+    {"axis": "tail inequality", "check": "The alpha=2 event bound is checked from computed finite marginals without substituting a Gaussian tail.", "disposition": "DISMISSED"},
+    {"axis": "cutoff stress", "check": "The V=2 d=3..6 sweep is finite and does not establish an asymptotic cutoff limit.", "disposition": "UPHELD-OPEN"},
+    {"axis": "independent reconstruction", "check": "The independent lane rebuilds the oscillator, Hamiltonian, Gibbs, source, prefixes and marginals without importing the primary module.", "disposition": "DISMISSED"},
+    {"axis": "Lean scope", "check": "R361 checks exact fixture arithmetic and the finite-only firewall, not matrix spectra or QFT limits.", "disposition": "UPHELD-OPEN"}
+  ],
+  "evidence_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-local-measured-renyi-q3-history-stress-manifest.json#finite_fixture",
+    "strategy/pre-a-cp1-st8-q3lock-local-measured-renyi-q3-history-stress-certificate-260827.md#Result",
+    "codes/foundations/pre_a_cp1_st8_q3lock_local_measured_renyi_q3_history_stress.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_local_measured_renyi_q3_history_stress_independent.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_local_measured_renyi_q3_history_stress_verify.py#run",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-27-primary-pre_a_cp1_st8_q3lock_local_measured_renyi_q3_history_stress/primary.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-27-independent-pre_a_cp1_st8_q3lock_local_measured_renyi_q3_history_stress/independent.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-27-integrated-pre_a_cp1_st8_q3lock_local_measured_renyi_q3_history_stress/integrated.json#lean",
+    "verification/lean/Tect/R361.lean#context_count_fixture",
+    "verification/lean/registry.json#R361"
+  ],
+  "formal_integration": {
+    "results": [],
+    "negatives": [],
+    "events": [],
+    "lean": "R361 PASS",
+    "no_new_result": true,
+    "no_new_negative": true,
+    "no_changelog_event": true,
+    "no_pdf": true,
+    "no_tier_change": true
+  },
+  "next_action": "Prove an analytic Gibbs-tail/common-core estimate uniform in cutoff, source, volume, beta and every partial history, or register a scoped obstruction; do not close common alpha from this finite table.",
+  "boundary": "Finite matrix diagnostic only. It does not prove a Q3 common alpha, common unbounded core, all-shape split limit, OS/KMS/GNS reconstruction, mass gap, continuum, C6, Sector A, Pre-A or a TECT production map.",
+  "no_overclaim": "The observed Q_2 stability is restricted to the declared finite grid and threshold. It is not evidence of a thermodynamic or continuum theorem.",
+  "recorded_at": "2026-08-29T09:00:00Z",
+  "recorded_by": "Codex"
+}
