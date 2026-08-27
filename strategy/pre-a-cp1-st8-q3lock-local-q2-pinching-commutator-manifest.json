@@ -1,0 +1,79 @@
+{
+  "schema": "tect/pre-a-cp1-st8-q3lock-local-q2-pinching-commutator/1.0",
+  "exploration_id": "EXP-001205",
+  "result_id": "R-363",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "claim_bearing": false,
+  "parent_explorations": ["EXP-001204", "EXP-001203"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE",
+    "PA-CP1-ST8-Q3LOCK-ALL-EXHAUSTION-MIXTURE-L2-LOCALITY-AND-BETA-INDEPENDENT-CSTAR-DYNAMICS"
+  ],
+  "title": "Finite pinching reduction and state-weighted shell commutator bound",
+  "question": "Can the FI-2b bond commutator be reduced exactly to the coordinate-off-diagonal part of a centered doubled collision witness, with a reference-weighted Cauchy bound that introduces no dimension or volume factor?",
+  "theorem": {
+    "setting": "A finite doubled Hilbert space with faithful reference state omega=rho tensor rho, a coordinate basis and its dephasing conditional expectation E_D, a Hermitian coordinate-diagonal bond generator B, and any witness X.",
+    "centered_witness": "X_0=X-Tr(omega X) I. Set X_perp=X_0-E_D(X_0).",
+    "exact_reduction": "[B,X]=[B,X_perp] because [B,E_D(X_0)]=0 and scalar centers commute.",
+    "weighted_bound": "|Tr(omega[B,X])| <= ||B||_omega (||omega^(1/2)X_perp||_HS + ||X_perp omega^(1/2)||_HS), where ||B||_omega^2=Tr(omega B^2).",
+    "finite_scope": "The identity and bound are finite-dimensional; their constants are exactly 1 at the Cauchy step, but no cutoff, volume, prefix, source or exhaustion uniformity follows."
+  },
+  "finite_fixture": {
+    "volume": 2,
+    "cutoff_values": [3, 4],
+    "beta_values": ["1/2", "1"],
+    "site_values": [0, 1],
+    "split_order_values": ["forward", "reverse"],
+    "time_sign_values": [-1, 1],
+    "history_adjoint_values": [0, 1],
+    "prefix_policy": "every prefix",
+    "time_step": "1/18",
+    "hbar": "1",
+    "parameters": {"chi": "1", "r": "-1", "g": "3/5", "c": "3/5", "lambda": "1/10"},
+    "finite_tolerance": 1e-9,
+    "agreement_tolerance": 2e-8
+  },
+  "verification_contract": {
+    "primary": "codes/foundations/pre_a_cp1_st8_q3lock_local_q2_pinching_commutator.py",
+    "independent": "codes/foundations/pre_a_cp1_st8_q3lock_local_q2_pinching_commutator_independent.py",
+    "integrated": "codes/foundations/pre_a_cp1_st8_q3lock_local_q2_pinching_commutator_verify.py",
+    "lean": "verification/lean/Tect/R363.lean",
+    "lean_scope": "finite coordinate dephasing/off-diagonal commutator identity and scalar-centering invariance",
+    "stored_runs": {
+      "primary": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-27-primary-pre_a_cp1_st8_q3lock_local_q2_pinching_commutator/primary.json",
+      "independent": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-27-independent-pre_a_cp1_st8_q3lock_local_q2_pinching_commutator/independent.json",
+      "integrated": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-27-integrated-pre_a_cp1_st8_q3lock_local_q2_pinching_commutator/integrated.json"
+    }
+  },
+  "scope": {
+    "finite_pinching_reduction_closed": true,
+    "finite_state_weighted_commutator_bound_closed": true,
+    "finite_prefix_fixture_checked": true,
+    "local_collar_bound_proved": false,
+    "positive_Euclidean_path_measure_constructed": false,
+    "phase_weight_preservation_proved": false,
+    "phase_conditioned_influence_contraction_proved": false,
+    "cutoff_uniformity_proved": false,
+    "volume_uniformity_proved": false,
+    "history_uniformity_proved": false,
+    "common_core_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "promotion_boundary": "R-363 closes only the finite conditional-expectation reduction and its state-weighted Cauchy bound. FI-2b remains open until the off-diagonal weighted norms are controlled uniformly for every source, cutoff, volume, prefix and allowed exhaustion shape.",
+  "next_action": "Measure the off-diagonal weighted norms along increasing cutoffs and volumes; seek a local modular or Lieb-Robinson estimate, and register a scoped growth obstruction if the normalized bound diverges.",
+  "boundary": "Finite exact algebra plus finite V=2 Q3 diagnostics. No uniform local collar, phase-weight theorem, common core, common alpha, OS/KMS/GNS reconstruction, mass gap, continuum, C6, Sector-A or Pre-A closure follows.",
+  "no_overclaim": "The pinching identity removes diagonal bond contributions exactly and the Cauchy constant is one; it does not show that the remaining off-diagonal witness norm is uniformly bounded.",
+  "recorded_at": "2026-08-27T12:00:00Z",
+  "recorded_by": "Codex"
+}

@@ -1,0 +1,72 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001208",
+  "title": "Test a fractional Liouvillian square-function route for FI-2b",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE",
+    "PA-CP1-ST8-Q3LOCK-ALL-EXHAUSTION-MIXTURE-L2-LOCALITY-AND-BETA-INDEPENDENT-CSTAR-DYNAMICS"
+  ],
+  "related": [
+    {"id": "EXP-001207", "relation": "continues"},
+    {"id": "EXP-001206", "relation": "continues"},
+    {"id": "EXP-001203", "relation": "alternative_to"}
+  ],
+  "question": "Can the finite-time local-Q2 shell be controlled by a fractional power of the bond Liouvillian, so that a local Dirichlet or Kubo--Mori estimate can replace the potentially cutoff-growing full commutator norm?",
+  "method": [
+    "Use the exact B spectral blocks of the doubled bond and define the fractional seminorm |||ad_B|^theta X||_HS by energy-difference weights.",
+    "Apply the scalar interpolation min(2,|y|)<=2^(1-theta)|y|^theta for theta in {1/2,3/4,1} to obtain a finite-time shell bound.",
+    "Center the moved R-362 collision witness and remove B-commuting blocks with the R-364 spectral commutant before measuring the fractional shell.",
+    "Run a primary and non-importing independent reconstruction over every R-362 split orientation, sign, prefix, adjoint, beta and site, then compare all derived fields in an integrated verifier.",
+    "Compile Lean R366 for the theta=1/2 scalar envelope and the theta=1 reduction fixture; keep matrix exponentials and all limits in the executable lanes."
+  ],
+  "finding": "R-366 closes the finite fractional interpolation pilot. Primary and independent lanes each pass 3082/3082 assertions over 768 contexts; integrated passes 46/46 and Lean R366 passes. The primary maximum phase-identity error is 6.178e-14, maximum fractional-envelope violation is 0, maximum fractional-bound violation is 6.176e-14, maximum state-trace violation is -2.756e-16, and the maximum primary-independent numeric difference is 6.661e-16. The largest finite-time-to-fractional-bound ratio is 0.999422.",
+  "verdict": "advanced",
+  "decision_reason": "The fractional phase envelope changes the decisive open analytic target from an unweighted first commutator to a fractional Liouvillian square function. At theta=1/2 this is compatible with local Dirichlet/Kubo--Mori forms and can exploit high-frequency interpolation without claiming a global energy estimate. The finite pilot verifies the algebra and identifies the next theorem, but it does not show that the fractional norm is uniform.",
+  "adversarial_review": [
+    {"axis": "interpolation constant", "check": "The bound is derived from min(2,|y|), so it remains valid in both low- and high-frequency regimes; no Taylor estimate is used outside its range.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "degenerate bond spectrum", "check": "Zero energy differences contribute zero to the fractional seminorm and arbitrary matrices inside degenerate blocks are retained by spectral pinching.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "state ordering", "check": "The density-state trace step uses Hilbert--Schmidt Cauchy and does not assume [omega,B]=0.", "disposition": "DISMISSED"},
+    {"axis": "uniformity", "check": "The pilot samples V=2 and cutoffs 3,4 only; the fractional norm may still grow with cutoff, volume, source or prefix length.", "disposition": "UPHELD-OPEN"},
+    {"axis": "modular identification", "check": "The finite seminorm is unweighted; no Kubo--Mori weight, common core, or phase-conditioned form comparison has been proved.", "disposition": "UPHELD-OPEN"},
+    {"axis": "QFT promotion", "check": "Common alpha, OS/KMS/GNS reconstruction, mass gap, continuum, C6, Sector-A and Pre-A remain outside the finite pilot.", "disposition": "UPHELD-OPEN"},
+    {"axis": "independence and Lean", "check": "The independent source reconstructs the finite system without importing the primary, and Lean R366 contains no sorry/admit/axiom/unsafe.", "disposition": "DISMISSED"}
+  ],
+  "evidence_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-local-q2-fractional-liouvillian-manifest.json#theorem",
+    "strategy/pre-a-cp1-st8-q3lock-local-q2-fractional-liouvillian-certificate-260827.md#1-fractional-spectral-statement",
+    "codes/foundations/pre_a_cp1_st8_q3lock_local_q2_fractional_liouvillian.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_local_q2_fractional_liouvillian_independent.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_local_q2_fractional_liouvillian_verify.py#run",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-27-primary-pre_a_cp1_st8_q3lock_local_q2_fractional_liouvillian/primary.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-27-independent-pre_a_cp1_st8_q3lock_local_q2_fractional_liouvillian/independent.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-27-integrated-pre_a_cp1_st8_q3lock_local_q2_fractional_liouvillian/integrated.json#lean",
+    "verification/lean/Tect/R366.lean#fractional_half_envelope",
+    "claims/C6-SPACETIME-SIGNATURE/notes/q3lock-local-q2-fractional-liouvillian-boundary-260827.md#q3lock-local-q2-fractional-liouvillian-boundary"
+  ],
+  "formal_integration": {
+    "results": ["R-366"],
+    "negatives": [],
+    "events": ["20260827-r-366-finite-fractional-liouvillian-square-func"],
+    "lean": "R366 PASS",
+    "no_new_result": false,
+    "no_new_negative": true,
+    "no_changelog_event": false,
+    "no_pdf": true,
+    "no_tier_change": true
+  },
+  "formal_refs": {
+    "results": ["R-366"],
+    "negatives": [],
+    "events": ["20260827-r-366-finite-fractional-liouvillian-square-func"]
+  },
+  "next_action": "Stress theta=1/2 at larger cutoffs and graph volumes, then prove or refute a source- and volume-uniform local Kubo--Mori/Dirichlet comparison for the actual Q3 bond. If the fractional norm grows, record the exact growth rather than promote the finite interpolation.",
+  "boundary": "T0 claim-nonbearing finite exact fractional spectral reduction and actual-Q3 diagnostic. No modular estimate, local collar, phase-weight theorem, common core, common alpha, OS/KMS/GNS reconstruction, mass gap, continuum, C6, Sector-A or Pre-A closure follows.",
+  "no_overclaim": "R-366 supplies a finite interpolation inequality and a sharper analytic target only; it does not establish a regulator-uniform square function or any QFT limit.",
+  "provenance": "contemporaneous",
+  "recorded_at": "2026-08-29T12:00:00Z",
+  "reviewed_on": "2026-08-27",
+  "recorded_by": "Codex"
+}

@@ -39,6 +39,10 @@ policy in `governance/development-history.md`.
 | [R-192](#r-192) | Bounded complete finite production-cylinder integration trial | R-192 v1.0 is a T0 claim-nonbearing T-058 integration audit under EXP-000909. Lean and both exact lanes confirm the R-183 reserve fixtures, R-184 temporal identity and R-191 telescope, then stop at the first missing production heat/root raw-current map. The audit does not close the q-ledger, either A13 gate, Sector-A or Pre-A |
 | [R-194](#r-194) | Sharp running-mass counterterm boundary | R-194 v1.0 is a T0 claim-nonbearing Lean/Fraction boundary under EXP-000932. It proves the sharp local coefficient h_min=9*(a+2*b+c), a nonnegative endpoint correction, a subsharp negative witness, and a third-component escape with no uniform coercivity. The full renormalised A6 owner, tightness, removal, Sector-A and Pre-A remain open |
 | [R-195](#r-195) | Spatial constant-field lift of the A6 running-mass escape | R-195 v1.0 is a T0 claim-nonbearing Lean/Fraction spatial lift under EXP-000933. On the declared finite torus, constant fields multiply the R-194 correction by the exact volume and the volume-cancelled ratio is bounded by 6*s*(b+c)/r, so no positive volume-uniform coercivity holds even on that subspace. Full-field concentration, partition/tightness, A7, A13, Sector-A and Pre-A remain open |
+| [R-366](#r-366) | Finite fractional Liouvillian square-function shell bound | R-366 v1.0 is a T0 claim-nonbearing finite interpolation result under EXP-001208. The exact spectral phase envelope gives a fractional `|ad_B|^theta` finite-time bound and density-trace corollary, with a primary/independent/Lean Q3 pilot. A local modular/Dirichlet comparison, source/cutoff/volume/history uniformity, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
+| [R-365](#r-365) | Finite spectral-gap commutator and Duhamel shell bound | R-365 v1.0 is a T0 claim-nonbearing finite exact result under EXP-001207. Spectral-gap coefficients give a constant-one finite-time Duhamel bound and a density-state trace corollary after R-364 commutant pinching. The commutator norm's source/cutoff/volume/prefix/shape uniformity, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
+| [R-364](#r-364) | Finite bond-spectral pinching and commutant shell reduction | R-364 v1.0 is a T0 claim-nonbearing finite exact refinement under EXP-001206. Spectral pinching removes every B-commuting bond-energy block, retains the exact state-weighted Cauchy commutator bound with constant one, and improves the finite unweighted residual comparison. Weighted uniformity, finite-time collar, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
+| [R-363](#r-363) | Finite pinching reduction and state-weighted shell commutator | R-363 v1.0 is a T0 claim-nonbearing finite exact reduction under EXP-001205. Coordinate pinching removes the bond-invisible diagonal part of a centered doubled collision witness, and a two-sided state-weighted Cauchy bound controls the remaining commutator with constant one. The required source/cutoff/volume/prefix/shape-uniform collar, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
 | [R-362](#r-362) | Finite local-Q2 positive replica folding and common-weight mixture convexity | R-362 v1.0 is a T0 claim-nonbearing exact finite reduction under EXP-001204. For every faithful finite reference and local PVM, measured Q2 is the expectation of the positive collision witness `sum_j p_j^(-1) E_j tensor E_j` in two output replicas, with equality constant one; common-weight phase mixtures obey an exact nonnegative square gap and outermost coordinate-diagonal layers peel. The evolved-witness collar estimate, phase weights, all uniformities, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
 | [R-193](#r-193) | Static-owner to heat-map non-identifiability witness | R-193 v1.0 is a T0 claim-nonbearing interface result under EXP-000910. Two exact positive diagonal contractions share the same static inverse-covariance data but reverse relative decay order; A1/A7 do not supply the missing heat/root/raw-current/q-ledger fields. This sharpens, but does not close, the R-192 blocker or either A13 gate |
 | [R-182](#r-182) | Feedback-pulled cross-Hessian margin Lean cross-check | R-182 v1.0 is a T0 claim-nonbearing Lean checkpoint under EXP-000897. It combines the active R-178 cross coefficient with the R-181 feedback map and proves the exact pulled Hessian `[-2,4;4,-8]` with eigenvalues -10 and 0. The diagonal production owner, source/sextic one-use, T-050, A13, Sector-A and Pre-A remain open |
@@ -566,6 +570,189 @@ tier/lifecycle change follows. A13 gates remain open. No R-192 PDF is issued.
 **Proven in:** [R-192 certificate](strategy/pre-a13-t058-bounded-complete-production-cylinder-certificate-260822.md), [Lean entrypoint](verification/lean/Tect/R192.lean), [primary script](verification/scripts/lean_a13_t058_bounded_complete_production_cylinder.py), [independent script](codes/foundations/lean_a13_t058_bounded_complete_production_cylinder_independent.py), [integrated verifier](verification/scripts/lean_a13_t058_bounded_complete_production_cylinder_verify.py), [scope note](claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/a13-t058-bounded-complete-production-cylinder-260822.md), and saved run artefacts. No R-192 PDF is issued.
 
 <a id="r-193"></a>
+<a id="r-363"></a>
+<a id="r-364"></a>
+
+<a id="r-366"></a>
+### R-366 -- Finite fractional Liouvillian square-function shell bound
+
+**Result ID.** R-366 is a T0, claim-nonbearing finite interpolation result
+under EXP-001208.
+
+**Statement.** Let `B=sum_a lambda_a P_a` be finite Hermitian and let
+`U_t=exp(-i t B)`. For `0<theta<=1`, define
+
+```text
+|| |ad_B|^theta X ||_HS^2
+  = sum_(a,b) |lambda_a-lambda_b|^(2 theta) ||P_a X P_b||_HS^2.
+```
+
+The exact spectral block identity and the scalar envelope
+`min(2,|y|)<=2^(1-theta)|y|^theta` give
+
+```text
+||U_t^* X U_t-X||_HS
+  <= 2^(1-theta) |t|^theta || |ad_B|^theta X ||_HS.
+```
+
+For a density matrix `omega`, Hilbert--Schmidt Cauchy gives the same bound
+for `|Tr(omega(U_t^* X U_t-X))|` after multiplication by
+`||omega||_HS<=1`. At `theta=1` this reduces to R-365; at `theta=1/2` it
+targets a local square-function estimate.
+
+**Verification.** Primary and independent lanes each pass `3082/3082`
+assertions over `768` actual-Q3 contexts (`theta=1/2,3/4,1` on every R-362
+prefix, orientation, sign, adjoint, beta and site). The integrated verifier
+passes `46/46`, Lean R366 compiles, and the largest primary-independent
+numeric difference is `6.661e-16`. The largest finite-time/fractional-bound
+ratio is `0.999422`.
+
+**Boundary.** R-366 closes only a finite unweighted fractional spectral
+inequality and diagnostic. It does not prove a local Kubo--Mori or
+Dirichlet-form comparison, source/cutoff/volume/history/shape uniformity,
+common core, common alpha, OS/KMS/GNS dynamics, a mass gap, continuum, C6,
+Sector-A or Pre-A. No R-366 PDF is issued.
+
+**Proven in:** [manifest](strategy/pre-a-cp1-st8-q3lock-local-q2-fractional-liouvillian-manifest.json), [certificate](strategy/pre-a-cp1-st8-q3lock-local-q2-fractional-liouvillian-certificate-260827.md), [Lean entrypoint](verification/lean/Tect/R366.lean), [primary script](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_fractional_liouvillian.py), [independent script](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_fractional_liouvillian_independent.py), [integrated verifier](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_fractional_liouvillian_verify.py), [scope note](claims/C6-SPACETIME-SIGNATURE/notes/q3lock-local-q2-fractional-liouvillian-boundary-260827.md), and stored run artefacts.
+
+<a id="r-365"></a>
+### R-365 -- Finite spectral-gap commutator and Duhamel shell bound
+
+**Result ID.** R-365 is a T0, claim-nonbearing finite exact result under
+EXP-001207.
+
+**Statement.** Let `B` be a finite Hermitian bond generator,
+`U_t=exp(-i t B)`, and `B=sum_a lambda_a P_a`. Then
+
+```text
+||U_t^* X U_t-X||_HS^2
+ = sum_(a,b) |exp(i t(lambda_a-lambda_b))-1|^2 ||P_a X P_b||_HS^2
+ <= t^2 ||[B,X]||_HS^2.
+```
+
+For a density matrix `omega`, Hilbert--Schmidt Cauchy gives
+
+```text
+|Tr(omega(U_t^* X U_t-X))| <= ||omega||_HS |t| ||[B,X]||_HS
+ <= |t| ||[B,X]||_HS.
+```
+
+The R-364 spectral commutant pinching can be applied first because its blocks
+have zero commutator. No commutation between `omega` and `B` is assumed.
+
+**Verification.** Primary and independent lanes check the R-362 `V=2`, cutoff
+`3,4` fixture over both split orientations, time signs, every prefix, history
+adjoints, beta values and local sites. Primary passes `777/777`, independent
+`776/776`, both cover `256` contexts, integrated passes `49/49`, and Lean R365
+compiles. The maximum spectral coefficient error is `1.505e-13`, maximum phase
+identity error `6.178e-14`, maximum Duhamel violation `7.006e-14`, and maximum
+state-trace violation `-3.206e-17`. The largest finite-time/bound ratio is
+`0.999422`; the maximum change is `0.267414` against bound `0.267991`.
+
+**Boundary.** R-365 closes only the finite unweighted spectral-gap inequality
+and finite density-trace corollary. It does not control the commutator norm
+uniformly in source, cutoff, volume, prefix or exhaustion shape, and it does
+not prove a finite-time local collar, phase-weight preservation, common core,
+common alpha, OS/KMS/GNS dynamics, a mass gap, continuum, C6, Sector-A or
+Pre-A. No R-365 PDF is issued.
+
+**Proven in:** [certificate](strategy/pre-a-cp1-st8-q3lock-local-q2-spectral-gap-dyson-certificate-260827.md), [Lean entrypoint](verification/lean/Tect/R365.lean), [primary script](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_spectral_gap_dyson.py), [independent script](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_spectral_gap_dyson_independent.py), [integrated verifier](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_spectral_gap_dyson_verify.py), and stored run artefacts.
+
+
+### R-364 -- Finite bond-spectral pinching and commutant shell reduction
+
+**Result ID.** R-364 is a T0, claim-nonbearing finite exact refinement under
+EXP-001206.
+
+**Statement.** Let a finite Hermitian bond generator have spectral resolution
+`B=sum_lambda lambda P_lambda`. Define the spectral pinching
+`E_B(X)=sum_lambda P_lambda X P_lambda`. For
+`X_0=X-Tr(omega X)I` and `X_perp=X_0-E_B(X_0)`, the block part commutes with
+`B`, so
+
+```text
+[B,X] = [B,X_perp].
+```
+
+The two-sided weighted Hilbert--Schmidt Cauchy inequality is
+
+```text
+|Tr(omega [B,X])|
+  <= ||B||_omega (||omega^(1/2) X_perp||_HS
+                  + ||X_perp omega^(1/2)||_HS),
+```
+
+with constant one and without assuming `[omega,B]=0`. If coordinate pinching is
+also B-commuting, spectral pinching is the Hilbert--Schmidt orthogonal
+projection onto a larger block algebra, hence its unweighted residual is no
+larger up to numerical tolerance.
+
+**Verification.** Primary checks the R-362 `V=2`, cutoff `3,4` fixture over
+both split orientations, time signs, every prefix, history adjoints, beta
+values and local sites; independent reconstructs all finite objects without
+importing the primary. Primary passes `777/777`, independent `776/776`, both
+cover `256` contexts, integrated passes `51/51`, and Lean R364 compiles. The
+maximum spectral reduction error is `1.713e-13`, maximum residual commutator is
+`1.715e-13`, maximum bound violation is `-1.069e-14`, and the largest
+spectral-to-coordinate weighted residual ratio is `0.999917`. The spectral
+residual remains nonzero with minimum Frobenius norm `0.503109`.
+
+**Boundary.** R-364 closes only the finite spectral-commutant reduction and its
+state-weighted inequality. It does not establish weighted-norm monotonicity,
+source/cutoff/volume/prefix/shape uniformity, a finite-time collar,
+phase-weight preservation, common core, common alpha, OS/KMS/GNS dynamics, a
+mass gap, continuum, C6, Sector-A or Pre-A. No R-364 PDF is issued.
+
+**Proven in:** [certificate](strategy/pre-a-cp1-st8-q3lock-local-q2-spectral-commutant-certificate-260827.md), [Lean entrypoint](verification/lean/Tect/R364.lean), [primary script](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_spectral_commutant.py), [independent script](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_spectral_commutant_independent.py), [integrated verifier](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_spectral_commutant_verify.py), and stored run artefacts.
+
+
+### R-363 -- Finite pinching reduction and state-weighted shell commutator
+
+**Result ID.** R-363 is a T0, claim-nonbearing finite exact reduction under
+EXP-001205.
+
+**Statement.** On a finite doubled Hilbert space, let `omega` be a faithful
+reference state, `D` the pinching conditional expectation in the joint
+coordinate basis, and `B` a Hermitian coordinate-diagonal bond generator. For
+any moved witness `X`, set `X_0=X-Tr(omega X)I` and
+`X_perp=X_0-D(X_0)`. Then
+
+```text
+[B,X] = [B,X_perp].
+```
+
+With `||Y||_(omega,L)^2=Tr(Y* omega Y)`,
+`||Y||_(omega,R)^2=Tr(omega Y*Y)`, and
+`||B||_omega^2=Tr(omega B^2)`, two Hilbert--Schmidt Cauchy inequalities give
+
+```text
+|Tr(omega [B,X])|
+  <= ||B||_omega (||X_perp||_(omega,L) + ||X_perp||_(omega,R)).
+```
+
+The finite Cauchy constant is exactly one; no commutation between `omega` and
+`B` is assumed.
+
+**Verification.** The primary lane checks all 256 combinations of the R-362
+`V=2`, cutoff `3,4` fixture: both split orientations, both time signs, every
+prefix, both history adjoints, both beta values and both local sites. The
+independent lane reconstructs the oscillator, Hamiltonian, Gibbs state, PVM,
+witness, prefix products and pinching without importing the primary. Primary
+passes `778/778`, independent `519/519`, and the integrated verifier passes
+`46/46` with Lean R363. The maximum pinching reduction error is `8.489e-14`,
+the maximum diagonal commutator is `8.487e-14`, the maximum bound violation is
+`-3.897e-15`, and the minimum nonzero off-diagonal Frobenius norm is `0.565970`.
+
+**Boundary.** R-363 closes only the finite conditional-expectation reduction
+and state-weighted commutator inequality. It does not bound the off-diagonal
+weighted norms uniformly in source, cutoff, volume, prefix or exhaustion
+shape, and it does not prove a finite-time collar, phase-weight preservation,
+common core, common alpha, OS/KMS/GNS dynamics, a mass gap, continuum, C6,
+Sector-A or Pre-A. No R-363 PDF is issued.
+
+**Proven in:** [certificate](strategy/pre-a-cp1-st8-q3lock-local-q2-pinching-commutator-certificate-260827.md), [Lean entrypoint](verification/lean/Tect/R363.lean), [primary script](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_pinching_commutator.py), [independent script](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_pinching_commutator_independent.py), [integrated verifier](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_pinching_commutator_verify.py), and stored run artefacts.
+
+
 <a id="r-195"></a>
 <a id="r-362"></a>
 ### R-362 -- Finite local-Q2 positive replica folding and mixture convexity

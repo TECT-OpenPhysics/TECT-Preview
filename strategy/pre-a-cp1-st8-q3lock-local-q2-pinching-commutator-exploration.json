@@ -1,0 +1,111 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001205",
+  "title": "Reduce the moved-witness collar to centered off-diagonal coherence",
+  "task_id": "T-054",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE",
+    "PA-CP1-ST8-Q3LOCK-ALL-EXHAUSTION-MIXTURE-L2-LOCALITY-AND-BETA-INDEPENDENT-CSTAR-DYNAMICS"
+  ],
+  "related": [
+    {
+      "id": "EXP-001204",
+      "relation": "continues"
+    },
+    {
+      "id": "EXP-001203",
+      "relation": "continues"
+    }
+  ],
+  "question": "Can FI-2b be localized before estimating by pinching the doubled collision witness in the coordinate algebra and paying only for its centered off-diagonal coherence?",
+  "method": [
+    "Define the finite coordinate pinching D(X)=sum_x Pi_x X Pi_x in the joint basis of the onsite coordinate PVM.",
+    "Center every moved collision witness by c=Tr(omega X), with omega=rho tensor rho, and set X_perp=(X-cI)-D(X-cI).",
+    "Use that the doubled coordinate bond generator B and D(X-cI) are diagonal in the same basis to prove [B,X]=[B,X_perp].",
+    "Apply two Hilbert--Schmidt Cauchy inequalities to obtain |Tr(omega[B,X])| <= ||B||_omega (||omega^(1/2)X_perp||_HS + ||X_perp omega^(1/2)||_HS).",
+    "Run the exact R-362 Q3 fixture over both split orientations, time signs, every prefix, both history adjoints, beta values and local sites in primary and non-importing independent lanes.",
+    "Formalize the finite entrywise diagonal/off-diagonal and scalar-centering identities in Lean R363."
+  ],
+  "finding": "R-363 advances FI-2b at finite level. The diagonal conditional expectation removes the bond-invisible component exactly, and the two-sided state-weighted Cauchy bound passes all 256 finite contexts in both lanes. Primary passes 778/778 and independent passes 519/519; integrated 46/46 and Lean R363 pass. The maximum reduction error is 8.489e-14, the maximum diagonal commutator is 8.487e-14, the maximum bound violation is -3.897e-15, and the minimum nonzero off-diagonal Frobenius norm is 0.565970. The remaining off-diagonal weighted norm is therefore nontrivial.",
+  "verdict": "advanced",
+  "decision_reason": "Pinching before estimating removes a precisely identified diagonal contribution without assuming that the Gibbs state commutes with the bond. It supplies a finite state-weighted shell inequality with Cauchy constant one and isolates the only quantity that must be made uniform. The result does not yet provide that uniform estimate.",
+  "adversarial_review": [
+    {
+      "axis": "state-weighted trace ordering",
+      "check": "The two commutator terms are factorized separately, so no omega-B commutation is assumed.",
+      "disposition": "DISMISSED"
+    },
+    {
+      "axis": "diagonal conditional expectation",
+      "check": "The bond generator is coordinate diagonal in the independently computed joint basis; residual commutators are roundoff-level.",
+      "disposition": "DISMISSED-FINITE"
+    },
+    {
+      "axis": "centering",
+      "check": "Scalar centering changes neither the commutator nor the off-diagonal part.",
+      "disposition": "DISMISSED"
+    },
+    {
+      "axis": "finite-to-uniform promotion",
+      "check": "V=2 and cutoffs 3,4 do not bound off-diagonal weighted norms in larger volumes or cutoffs.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "finite-time collar",
+      "check": "The Cauchy bound controls an infinitesimal bond generator expectation, not a finite-time local influence.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "independence",
+      "check": "The independent lane reconstructs the oscillator, Hamiltonian, Gibbs state, PVM, witness, prefix products and pinching without importing the primary module.",
+      "disposition": "DISMISSED"
+    },
+    {
+      "axis": "Lean scope",
+      "check": "Lean proves finite entrywise algebra only; numerical matrix rows and all QFT limits remain outside the kernel.",
+      "disposition": "UPHELD-OPEN"
+    }
+  ],
+  "evidence_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-local-q2-pinching-commutator-manifest.json#theorem",
+    "strategy/pre-a-cp1-st8-q3lock-local-q2-pinching-commutator-certificate-260827.md#2-finite-conditional-expectation-lemma",
+    "codes/foundations/pre_a_cp1_st8_q3lock_local_q2_pinching_commutator.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_local_q2_pinching_commutator_independent.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_local_q2_pinching_commutator_verify.py#run",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-27-primary-pre_a_cp1_st8_q3lock_local_q2_pinching_commutator/primary.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-27-independent-pre_a_cp1_st8_q3lock_local_q2_pinching_commutator/independent.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-27-integrated-pre_a_cp1_st8_q3lock_local_q2_pinching_commutator/integrated.json#lean",
+    "verification/lean/Tect/R363.lean#diagonal_multiplier_commutator_reduction",
+    "claims/C6-SPACETIME-SIGNATURE/notes/q3lock-local-q2-pinching-commutator-boundary-260827.md#q3lock-local-q2-pinching-commutator-boundary"
+  ],
+  "formal_integration": {
+    "results": [
+      "R-363"
+    ],
+    "negatives": [],
+    "events": [],
+    "lean": "R363 PASS",
+    "no_new_result": false,
+    "no_new_negative": true,
+    "no_changelog_event": false,
+    "no_pdf": true,
+    "no_tier_change": true
+  },
+  "formal_refs": {
+    "results": [
+      "R-363"
+    ],
+    "negatives": [],
+    "events": []
+  },
+  "next_action": "Stress the normalized off-diagonal weighted norms at larger cutoffs and graph volumes. Seek a modular or Lieb--Robinson estimate uniform in source, cutoff, volume, prefix and exhaustion shape; register a scoped growth obstruction if the stress diverges.",
+  "boundary": "T0 claim-nonbearing finite exact reduction and finite actual-Q3 diagnostic. No local collar theorem, phase-weight theorem, common core, common alpha, OS/KMS/GNS reconstruction, mass gap, continuum, C6, Sector-A or Pre-A closure follows.",
+  "no_overclaim": "The exact pinching reduction and finite state-weighted inequality identify the remaining norm but do not establish its required uniformity.",
+  "recorded_at": "2026-08-29T10:30:00Z",
+  "reviewed_on": "2026-08-27",
+  "recorded_by": "Codex"
+}

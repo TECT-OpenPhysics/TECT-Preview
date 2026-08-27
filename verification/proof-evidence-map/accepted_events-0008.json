@@ -114,6 +114,187 @@
         "EXP-001204",
         "R-362"
       ]
+    },
+    {
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE",
+        "EXP-001205",
+        "R-363"
+      ],
+      "claim_ref_basis": {
+        "C6-SPACETIME-SIGNATURE": "explicit_claim_ids"
+      },
+      "claim_refs": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "date": "2026-08-27",
+      "header": "[R-363 finite pinching and state-weighted shell commutator] - 2026-08-27",
+      "id": "20260827-r-363-finite-pinching-and-state-weighted-shell",
+      "keywords": [
+        "FI-2b",
+        "Lean",
+        "commutator",
+        "conditional-expectation",
+        "pinching",
+        "replica"
+      ],
+      "linked_result_ids": [
+        "R-363"
+      ],
+      "negative_results": [],
+      "notes": [
+        "claims/C6-SPACETIME-SIGNATURE/notes/q3lock-local-q2-pinching-commutator-boundary-260827.md"
+      ],
+      "raw": "## [R-363 finite pinching and state-weighted shell commutator] - 2026-08-27\n\n- **Finite FI-2b reduction.** R-363 introduces coordinate pinching on the doubled Hilbert space. For a centered moved collision witness `X` and a coordinate-diagonal bond generator `B`, the exact identity `[B,X]=[B,X_perp]` removes the bond-invisible diagonal part, where `X_perp=(X-Tr(omega X)I)-D(X-Tr(omega X)I)`.\n- **State-weighted control.** Two Hilbert--Schmidt Cauchy inequalities give `|Tr(omega [B,X])| <= ||B||_omega (||X_perp||_(omega,L)+||X_perp||_(omega,R))` with constant one and without assuming that `omega` commutes with `B`.\n- **Cross-check.** Primary `778/778`, independent `519/519`, integrated `46/46`, and pinned Lean R363 pass over 256 V=2 cutoff/prefix/orientation/sign/adjoint/beta/site contexts. The maximum reduction error is `8.489e-14`; the minimum nonzero off-diagonal Frobenius norm is `0.565970`.\n- **Boundary.** The off-diagonal weighted norms still require source-, cutoff-, volume-, prefix- and shape-uniform control. No finite-time collar, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A or Pre-A gate closes. No R-363 PDF is issued.\n\n",
+      "result_ids": [
+        "R-363"
+      ],
+      "result_link_basis": {
+        "R-363": "explicit_result_id"
+      },
+      "scripts": [
+        "codes/foundations/pre_a_cp1_st8_q3lock_local_q2_pinching_commutator.py",
+        "codes/foundations/pre_a_cp1_st8_q3lock_local_q2_pinching_commutator_independent.py",
+        "codes/foundations/pre_a_cp1_st8_q3lock_local_q2_pinching_commutator_verify.py",
+        "verification/lean/Tect/R363.lean"
+      ],
+      "unresolved_claim_ids": [
+        "EXP-001205",
+        "R-363"
+      ]
+    },
+    {
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE",
+        "EXP-001206",
+        "R-364"
+      ],
+      "claim_ref_basis": {
+        "C6-SPACETIME-SIGNATURE": "explicit_claim_ids"
+      },
+      "claim_refs": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "date": "2026-08-27",
+      "header": "[R-364 finite bond-spectral pinching and commutant shell reduction] - 2026-08-27",
+      "id": "20260827-r-364-finite-bond-spectral-pinching-and-commuta",
+      "keywords": [
+        "FI-2b",
+        "Lean",
+        "commutant",
+        "commutator",
+        "conditional-expectation",
+        "replica",
+        "spectral-pinching"
+      ],
+      "linked_result_ids": [
+        "R-364"
+      ],
+      "negative_results": [],
+      "notes": [
+        "claims/C6-SPACETIME-SIGNATURE/notes/q3lock-local-q2-spectral-commutant-boundary-260827.md"
+      ],
+      "raw": "## [R-364 finite bond-spectral pinching and commutant shell reduction] - 2026-08-27\n\n- **Spectral commutant refinement.** R-364 replaces coordinate pinching with the spectral pinching `E_B(X)=sum_lambda P_lambda X P_lambda` of the Hermitian doubled bond generator. For the centered witness residual `X_perp`, `[B,X]=[B,X_perp]` exactly, including degenerate bond-energy blocks.\n- **Bound retained.** Two-sided state-weighted Hilbert--Schmidt Cauchy gives `|Tr(omega[B,X])| <= ||B||_omega (||X_perp||_(omega,L)+||X_perp||_(omega,R))` with constant one and no `[omega,B]=0` assumption. The spectral block projection is unweighted-Hilbert--Schmidt no larger than coordinate residuals on the declared fixture.\n- **Cross-check.** Primary `777/777`, independent `776/776`, integrated `51/51`, and pinned Lean R364 pass over 256 V=2 cutoff/prefix/orientation/sign/adjoint/beta/site contexts. Maximum spectral reduction error is `1.713e-13`; the spectral residual remains nonzero with minimum Frobenius norm `0.503109`; the largest spectral-to-coordinate weighted residual ratio is `0.999917`.\n- **Boundary.** Weighted residual uniformity, finite-time collar control, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open. No R-364 PDF is issued.\n\n",
+      "result_ids": [
+        "R-364"
+      ],
+      "result_link_basis": {
+        "R-364": "explicit_result_id"
+      },
+      "scripts": [
+        "codes/foundations/pre_a_cp1_st8_q3lock_local_q2_spectral_commutant.py",
+        "codes/foundations/pre_a_cp1_st8_q3lock_local_q2_spectral_commutant_independent.py",
+        "codes/foundations/pre_a_cp1_st8_q3lock_local_q2_spectral_commutant_verify.py",
+        "verification/lean/Tect/R364.lean"
+      ],
+      "unresolved_claim_ids": [
+        "EXP-001206",
+        "R-364"
+      ]
+    },
+    {
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE",
+        "EXP-001207",
+        "R-365"
+      ],
+      "claim_ref_basis": {
+        "C6-SPACETIME-SIGNATURE": "explicit_claim_ids"
+      },
+      "claim_refs": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "date": "2026-08-27",
+      "header": "[R-365 finite spectral-gap commutator and Duhamel shell bound] - 2026-08-27",
+      "id": "20260827-r-365-finite-spectral-gap-commutator-and-duhame",
+      "keywords": [
+        "Duhamel",
+        "Dyson",
+        "FI-2b",
+        "Lean",
+        "commutator",
+        "replica",
+        "spectral-gap"
+      ],
+      "linked_result_ids": [
+        "R-364",
+        "R-365"
+      ],
+      "negative_results": [],
+      "notes": [
+        "claims/C6-SPACETIME-SIGNATURE/notes/q3lock-local-q2-spectral-gap-dyson-boundary-260827.md"
+      ],
+      "raw": "## [R-365 finite spectral-gap commutator and Duhamel shell bound] - 2026-08-27\n\n- **Spectral-gap finite-time control.** R-365 proves the exact spectral formula for `U_t^* X U_t-X` and the constant-one Duhamel inequality `||U_t^* X U_t-X||_HS <= |t| ||[B,X]||_HS`. R-364 spectral commutant pinching removes the B-commuting blocks first.\n- **State-trace corollary.** For any density `omega`, `|Tr(omega(U_t^* X U_t-X))| <= ||omega||_HS |t| ||[B,X]||_HS <= |t| ||[B,X]||_HS`; no `[omega,B]=0` assumption is used.\n- **Cross-check.** Primary `777/777`, independent `776/776`, integrated `49/49`, and pinned Lean R365 pass over 256 V=2 cutoff/prefix/orientation/sign/adjoint/beta/site contexts. The largest finite-time/bound ratio is `0.999422`; the maximum change is `0.267414` against bound `0.267991`.\n- **Boundary.** The spectral commutator norm still needs source-, cutoff-, volume-, prefix- and shape-uniform control. No local collar, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A or Pre-A gate closes. No R-365 PDF is issued.\n\n",
+      "result_ids": [
+        "R-364",
+        "R-365"
+      ],
+      "result_link_basis": {
+        "R-364": "explicit_result_id",
+        "R-365": "explicit_result_id"
+      },
+      "scripts": [
+        "codes/foundations/pre_a_cp1_st8_q3lock_local_q2_spectral_gap_dyson.py",
+        "codes/foundations/pre_a_cp1_st8_q3lock_local_q2_spectral_gap_dyson_independent.py",
+        "codes/foundations/pre_a_cp1_st8_q3lock_local_q2_spectral_gap_dyson_verify.py",
+        "verification/lean/Tect/R365.lean"
+      ],
+      "unresolved_claim_ids": [
+        "EXP-001207",
+        "R-365"
+      ]
+    },
+    {
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE,EXP-001208,R-366"
+      ],
+      "claim_ref_basis": {},
+      "claim_refs": [],
+      "date": "2026-08-27",
+      "header": "[R-366 finite fractional Liouvillian square-function shell bound] - 2026-08-27",
+      "id": "20260827-r-366-finite-fractional-liouvillian-square-func",
+      "keywords": [
+        "fractional,Liouvillian,square-function,Dirichlet,Lean,Q3LOCK"
+      ],
+      "linked_result_ids": [
+        "R-362",
+        "R-366"
+      ],
+      "negative_results": [],
+      "notes": [],
+      "raw": "## [R-366 finite fractional Liouvillian square-function shell bound] - 2026-08-27\n\n- **Fractional spectral interpolation.** R-366 adds the finite inequality `||U_t^* X U_t-X||_HS <= 2^(1-theta)|t|^theta || |ad_B|^theta X ||_HS` for `0<theta<=1`, derived from the exact spectral phase blocks and the envelope `min(2,|y|) <= 2^(1-theta)|y|^theta`.\n- **Finite Q3 cross-check.** Primary and non-importing independent lanes pass `3082/3082` each over `768` contexts (`theta=1/2,3/4,1` on every R-362 prefix, order, sign, adjoint, beta and site); integrated passes `46/46` and Lean R366 passes. The largest primary/independent numeric difference is `6.661e-16`.\n- **Boundary.** The result is a finite unweighted square-function pilot. A local Kubo--Mori/Dirichlet comparison, source/cutoff/volume/history uniformity, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open. No R-366 PDF is issued.\n\n",
+      "result_ids": [
+        "R-362",
+        "R-366"
+      ],
+      "result_link_basis": {
+        "R-362": "explicit_result_id",
+        "R-366": "explicit_result_id"
+      },
+      "scripts": [],
+      "unresolved_claim_ids": [
+        "C6-SPACETIME-SIGNATURE,EXP-001208,R-366"
+      ]
     }
   ],
   "kind": "accepted_events",

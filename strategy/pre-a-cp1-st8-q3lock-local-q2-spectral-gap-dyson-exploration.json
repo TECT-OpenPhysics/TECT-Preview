@@ -1,0 +1,114 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001207",
+  "title": "Replace the coarse shell norm by a spectral-gap Duhamel bound",
+  "task_id": "T-054",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE",
+    "PA-CP1-ST8-Q3LOCK-ALL-EXHAUSTION-MIXTURE-L2-LOCALITY-AND-BETA-INDEPENDENT-CSTAR-DYNAMICS"
+  ],
+  "related": [
+    {
+      "id": "EXP-001206",
+      "relation": "continues"
+    },
+    {
+      "id": "EXP-001205",
+      "relation": "continues"
+    }
+  ],
+  "question": "Can finite-time bond influence be controlled directly by the spectral-gap-weighted commutator of the moved doubled witness, avoiding a separate operator-norm factor?",
+  "method": [
+    "Use the B spectral decomposition and the exact coefficient identity ||U_t* X U_t-X||_HS^2=sum_ab |exp(i t(lambda_a-lambda_b))-1|^2 ||P_a X P_b||_HS^2.",
+    "Apply |exp(i y)-1|<=|y| to obtain the finite-time Duhamel bound ||U_t* X U_t-X||_HS <= |t| ||[B,X]||_HS.",
+    "Use Hilbert--Schmidt Cauchy with a density omega to bound the state trace by ||omega||_HS times the same Duhamel quantity, without assuming [omega,B]=0.",
+    "Remove B-commuting blocks first with the R-364 spectral pinching, then check doubled bond-unitary factorisation and the spectral formula on every R-362 finite prefix.",
+    "Formalize the finite spectral coefficient, gap-square nonnegativity and block commutator reduction in Lean R365."
+  ],
+  "finding": "R-365 advances FI-2b at finite time. Primary passes 777/777 and independent 776/776 over 256 contexts; integrated 49/49 and Lean R365 pass. Maximum spectral coefficient error is 1.505e-13, maximum phase identity error 6.178e-14, maximum Duhamel violation 7.006e-14, and maximum state-trace violation -3.206e-17. The largest finite-time/bound ratio is 0.999422, with maximum change 0.267414 against bound 0.267991. The spectral commutator remains nonzero with minimum nonzero norm 0.867344.",
+  "verdict": "advanced",
+  "decision_reason": "The spectral-gap form controls the actual finite-time bond unitary by energy differences and avoids multiplying a residual by a separate operator norm. It supplies an exact finite-time shell inequality and a dimension-free density-trace corollary, while leaving the commutator norm's asymptotic uniformity as the decisive open obligation.",
+  "adversarial_review": [
+    {
+      "axis": "time orientation",
+      "check": "The lane derives and checks the U_t* X U_t phase factors in the same orientation as the finite-time difference.",
+      "disposition": "DISMISSED"
+    },
+    {
+      "axis": "doubled-unitary factor",
+      "check": "The tensor-product bond unitary is compared directly with exp(-i t B), not assumed from notation.",
+      "disposition": "DISMISSED-FINITE"
+    },
+    {
+      "axis": "density-state trace",
+      "check": "The state-trace corollary uses Hilbert--Schmidt Cauchy and ||omega||_HS<=1; no state-generator commutation is used.",
+      "disposition": "DISMISSED"
+    },
+    {
+      "axis": "zero commutator",
+      "check": "Some contexts have a numerical zero, but the minimum nonzero spectral commutator is positive and no universal cancellation is claimed.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "finite-to-uniform promotion",
+      "check": "The finite Duhamel constant one does not control ||[B,X]||_HS uniformly in cutoff, volume, source, prefix or shape.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "QFT promotion",
+      "check": "No common alpha, local collar, OS/KMS/GNS reconstruction, mass gap, continuum, C6, Sector-A or Pre-A closure follows.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "Lean scope",
+      "check": "Lean proves finite spectral algebra only; exponentials, matrix spectra and limits remain in the executable lanes.",
+      "disposition": "UPHELD-OPEN"
+    }
+  ],
+  "evidence_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-local-q2-spectral-gap-dyson-manifest.json#theorem",
+    "strategy/pre-a-cp1-st8-q3lock-local-q2-spectral-gap-dyson-certificate-260827.md#2-spectral-gap-identity",
+    "codes/foundations/pre_a_cp1_st8_q3lock_local_q2_spectral_gap_dyson.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_local_q2_spectral_gap_dyson_independent.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_local_q2_spectral_gap_dyson_verify.py#run",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-27-primary-pre_a_cp1_st8_q3lock_local_q2_spectral_gap_dyson/primary.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-27-independent-pre_a_cp1_st8_q3lock_local_q2_spectral_gap_dyson/independent.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-27-integrated-pre_a_cp1_st8_q3lock_local_q2_spectral_gap_dyson/integrated.json#lean",
+    "verification/lean/Tect/R365.lean#spectral_commutator_coefficient",
+    "claims/C6-SPACETIME-SIGNATURE/notes/q3lock-local-q2-spectral-gap-dyson-boundary-260827.md#q3lock-local-q2-spectral-gap-dyson-boundary"
+  ],
+  "formal_integration": {
+    "results": [
+      "R-365"
+    ],
+    "negatives": [],
+    "events": [
+      "20260827-r-365-finite-spectral-gap-commutator-and-duhame"
+    ],
+    "lean": "R365 PASS",
+    "no_new_result": false,
+    "no_new_negative": true,
+    "no_changelog_event": false,
+    "no_pdf": true,
+    "no_tier_change": true
+  },
+  "formal_refs": {
+    "results": [
+      "R-365"
+    ],
+    "negatives": [],
+    "events": [
+      "20260827-r-365-finite-spectral-gap-commutator-and-duhame"
+    ]
+  },
+  "next_action": "Obtain a local modular or Lieb--Robinson estimate on the spectral-gap commutator norm uniform in source, cutoff, volume, prefix and exhaustion shape; register exact growth if unavailable.",
+  "boundary": "T0 claim-nonbearing finite exact Duhamel reduction and actual-Q3 diagnostic. No uniform local collar, phase-weight theorem, common core, common alpha, OS/KMS/GNS reconstruction, mass gap, continuum, C6, Sector-A or Pre-A closure follows.",
+  "no_overclaim": "The finite-time spectral-gap inequality has constant one, but the commutator norm can still grow with the regulator and no QFT limit is established.",
+  "recorded_at": "2026-08-29T11:30:00Z",
+  "reviewed_on": "2026-08-27",
+  "recorded_by": "Codex"
+}

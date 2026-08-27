@@ -1,0 +1,86 @@
+{
+  "schema": "tect/pre-a-cp1-st8-q3lock-local-q2-fractional-liouvillian/1.0",
+  "exploration_id": "EXP-001208",
+  "result_id": "R-366",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "claim_bearing": false,
+  "parent_explorations": ["EXP-001207", "EXP-001206", "EXP-001203"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE",
+    "PA-CP1-ST8-Q3LOCK-ALL-EXHAUSTION-MIXTURE-L2-LOCALITY-AND-BETA-INDEPENDENT-CSTAR-DYNAMICS"
+  ],
+  "title": "Finite fractional Liouvillian square-function shell bound",
+  "question": "Can a fractional power of the bond Liouvillian control finite-time local influence with a local Dirichlet-form target, avoiding the regulator growth of the full commutator norm?",
+  "new_perspective": {
+    "principle": "Replace the first Liouvillian derivative by a fractional spectral square function.",
+    "motivation": "R-365 gives a sharp constant-one bound but leaves ||[B,X]||_HS as the potentially cutoff-growing quantity. The scalar phase factor has the stronger interpolation envelope min(2,|y|) <= 2^(1-theta)|y|^theta for 0<=theta<=1.",
+    "qft_bridge": "At theta=1/2 the target is a bond Dirichlet or Kubo--Mori square function, which is closer to a local modular/Lieb--Robinson estimate than an unweighted total-energy norm.",
+    "non_claim": "The fractional norm is still an unweighted finite spectral norm here; no modular weight or uniform limit is assumed."
+  },
+  "theorem": {
+    "setting": "Finite Hermitian B with spectral blocks P_a X P_b and Liouvillian L_B(X)=[B,X].",
+    "block_identity": "||exp(i t L_B)X-X||_HS^2=sum_ab |exp(i t(lambda_a-lambda_b))-1|^2 ||P_a X P_b||_HS^2.",
+    "fractional_envelope": "For 0<=theta<=1, |exp(i y)-1|^2 <= 4^(1-theta)|y|^(2 theta).",
+    "fractional_bound": "||U_t^* X U_t-X||_HS <= 2^(1-theta)|t|^theta || |L_B|^theta X ||_HS.",
+    "state_trace": "|Tr(omega(U_t^* X U_t-X))| <= ||omega||_HS times the fractional bound <= the fractional bound for a density omega."
+  },
+  "finite_fixture": {
+    "volume": 2,
+    "cutoff_values": [3, 4],
+    "beta_values": ["1/2", "1"],
+    "site_values": [0, 1],
+    "split_order_values": ["forward", "reverse"],
+    "time_sign_values": [-1, 1],
+    "history_adjoint_values": [0, 1],
+    "theta_values": ["1/2", "3/4", "1"],
+    "prefix_policy": "every prefix",
+    "time_step": "1/18",
+    "hbar": "1",
+    "parameters": {"chi": "1", "r": "-1", "g": "3/5", "c": "3/5", "lambda": "1/10"},
+    "finite_tolerance": 1e-9,
+    "agreement_tolerance": 2e-8
+  },
+  "verification_contract": {
+    "primary": "codes/foundations/pre_a_cp1_st8_q3lock_local_q2_fractional_liouvillian.py",
+    "independent": "codes/foundations/pre_a_cp1_st8_q3lock_local_q2_fractional_liouvillian_independent.py",
+    "integrated": "codes/foundations/pre_a_cp1_st8_q3lock_local_q2_fractional_liouvillian_verify.py",
+    "lean": "verification/lean/Tect/R366.lean",
+    "lean_scope": "finite scalar fractional phase envelope and scope firewall",
+    "stored_runs": {
+      "primary": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-27-primary-pre_a_cp1_st8_q3lock_local_q2_fractional_liouvillian/primary.json",
+      "independent": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-27-independent-pre_a_cp1_st8_q3lock_local_q2_fractional_liouvillian/independent.json",
+      "integrated": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-27-integrated-pre_a_cp1_st8_q3lock_local_q2_fractional_liouvillian/integrated.json"
+    }
+  },
+  "scope": {
+    "fractional_liouvillian_bound_closed": true,
+    "fractional_theta_half_pilot_checked": true,
+    "local_modular_square_function_proved": false,
+    "local_collar_bound_proved": false,
+    "positive_Euclidean_path_measure_constructed": false,
+    "phase_weight_preservation_proved": false,
+    "phase_conditioned_influence_contraction_proved": false,
+    "cutoff_uniformity_proved": false,
+    "volume_uniformity_proved": false,
+    "history_uniformity_proved": false,
+    "common_core_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "promotion_boundary": "R-366 is only a finite fractional spectral inequality and diagnostic. Promotion requires a source- and volume-uniform modular or Dirichlet-form estimate for the fractional Liouvillian on a common local core.",
+  "next_action": "Test theta=1/2 against larger cutoffs and volumes, then derive or refute a local Kubo--Mori/Dirichlet comparison for the actual Q3 bond; do not infer uniformity from the finite ratio.",
+  "boundary": "Finite exact spectral algebra plus V=2 Q3 diagnostics. No local collar, phase-weight, common-alpha, OS/KMS/GNS, mass-gap, continuum, C6, Sector-A or Pre-A closure follows.",
+  "no_overclaim": "Fractional interpolation softens the finite-time phase factor but does not by itself bound the fractional Liouvillian norm uniformly or establish QFT dynamics.",
+  "recorded_at": "2026-08-29T12:00:00Z",
+  "recorded_by": "Codex"
+}

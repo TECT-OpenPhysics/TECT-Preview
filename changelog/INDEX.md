@@ -5,7 +5,7 @@ Compact generated reader surface. The append-only authority is
 record 568 / commit `4db22f4e` and no longer grows.
 Post-cutover full bodies live exactly once in bounded pages under `pages/`.
 
-**703 accepted events** · latest 25 shown below · machine locator: `index.json`
+**707 accepted events** · latest 25 shown below · machine locator: `index.json`
 
 Search the complete authority without loading every page:
 
@@ -17,6 +17,10 @@ python verification/scripts/changelog.py search --text <phrase>
 
 | Date | Event | Claims | Full entry |
 |---|---|---|---|
+| 2026-08-27 | `20260827-r-366-finite-fractional-liouvillian-square-func` — [R-366 finite fractional Liouvillian square-function shell bound] - 2026-08-27 | C6-SPACETIME-SIGNATURE,EXP-001208,R-366 | [bounded page](pages/000669-000718.md#20260827-r-366-finite-fractional-liouvillian-square-func) |
+| 2026-08-27 | `20260827-r-365-finite-spectral-gap-commutator-and-duhame` — [R-365 finite spectral-gap commutator and Duhamel shell bound] - 2026-08-27 | C6-SPACETIME-SIGNATURE, EXP-001207, R-365 | [bounded page](pages/000669-000718.md#20260827-r-365-finite-spectral-gap-commutator-and-duhame) |
+| 2026-08-27 | `20260827-r-364-finite-bond-spectral-pinching-and-commuta` — [R-364 finite bond-spectral pinching and commutant shell reduction] - 2026-08-27 | C6-SPACETIME-SIGNATURE, EXP-001206, R-364 | [bounded page](pages/000669-000718.md#20260827-r-364-finite-bond-spectral-pinching-and-commuta) |
+| 2026-08-27 | `20260827-r-363-finite-pinching-and-state-weighted-shell` — [R-363 finite pinching and state-weighted shell commutator] - 2026-08-27 | C6-SPACETIME-SIGNATURE, EXP-001205, R-363 | [bounded page](pages/000669-000718.md#20260827-r-363-finite-pinching-and-state-weighted-shell) |
 | 2026-08-27 | `20260827-r-362-finite-local-q2-positive-replica-folding` — [R-362 finite local-Q2 positive replica folding] - 2026-08-27 | C6-SPACETIME-SIGNATURE, EXP-001204, R-362 | [bounded page](pages/000669-000718.md#20260827-r-362-finite-local-q2-positive-replica-folding) |
 | 2026-08-24 | `20260824-exp-001028-conditional-first-passage-poisson-bo` — [EXP-001028: conditional first-passage Poisson boundary bridge] - 2026-08-24 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000669-000718.md#20260824-exp-001028-conditional-first-passage-poisson-bo) |
 | 2026-08-24 | `20260824-exp-001027-critical-graph-seminorm-onsite-stabi` — [EXP-001027: critical graph seminorm onsite-stability obstruction] - 2026-08-24 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000669-000718.md#20260824-exp-001027-critical-graph-seminorm-onsite-stabi) |
@@ -38,10 +42,6 @@ python verification/scripts/changelog.py search --text <phrase>
 | 2026-08-22 | `20260822-r-189-a1-e3-two-mode-production-cylinder-positi` — [R-189 A1 e3 two-mode production-cylinder positivity Lean cross-check] - 2026-08-22 | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION, EXP-000904, R-189 | [bounded page](pages/000669-000718.md#20260822-r-189-a1-e3-two-mode-production-cylinder-positi) |
 | 2026-08-22 | `20260822-r-188-signed-jensen-defect-telescope-lean-cross` — [R-188 signed Jensen-defect telescope Lean cross-check] - 2026-08-22 | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION, EXP-000903, R-188 | [bounded page](pages/000669-000718.md#20260822-r-188-signed-jensen-defect-telescope-lean-cross) |
 | 2026-08-22 | `20260822-r-187-adapted-near-obstruction-lean-cross-check` — [R-187 adapted NEAR obstruction Lean cross-check] - 2026-08-22 | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION, EXP-000902, R-187 | [bounded page](pages/000669-000718.md#20260822-r-187-adapted-near-obstruction-lean-cross-check) |
-| 2026-08-22 | `20260822-r-186-r-081-temporal-packet-algebra-lean-cross` — [R-186 R-081 temporal packet algebra Lean cross-check] - 2026-08-22 | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION, EXP-000901, R-186 | [bounded page](pages/000669-000718.md#20260822-r-186-r-081-temporal-packet-algebra-lean-cross) |
-| 2026-08-22 | `20260822-r-185-finite-packet-cauchy-lean-cross-check-202` — [R-185 finite packet Cauchy Lean cross-check] - 2026-08-22 | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION, EXP-000900, R-185 | [bounded page](pages/000669-000718.md#20260822-r-185-finite-packet-cauchy-lean-cross-check-202) |
-| 2026-08-22 | `20260822-r-184-two-block-douglas-identity-lean-cross-che` — [R-184 two-block Douglas identity Lean cross-check] - 2026-08-22 | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION, EXP-000899, R-184 | [bounded page](pages/000669-000718.md#20260822-r-184-two-block-douglas-identity-lean-cross-che) |
-| 2026-08-22 | `20260822-r-183-diagonal-reserve-margin-cross-hessian-thr` — [R-183 diagonal reserve margin cross-Hessian threshold] - 2026-08-22 | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION, EXP-000898, R-183 | [bounded page](pages/000669-000718.md#20260822-r-183-diagonal-reserve-margin-cross-hessian-thr) |
 
 ## Post-cutover pages
 
@@ -49,6 +49,6 @@ Each full event body after the cutover occurs in exactly one page.
 
 | Ordinals | Events | Page |
 |---|---:|---|
-| 669–703 | 35 | [000669-000718.md](pages/000669-000718.md) |
+| 669–707 | 39 | [000669-000718.md](pages/000669-000718.md) |
 | 619–668 | 50 | [000619-000668.md](pages/000619-000668.md) |
 | 569–618 | 50 | [000569-000618.md](pages/000569-000618.md) |

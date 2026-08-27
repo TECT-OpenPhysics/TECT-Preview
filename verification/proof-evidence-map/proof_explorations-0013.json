@@ -480,6 +480,466 @@
       "task_id": "T-054",
       "title": "Close finite positive local-Q2 replica folding and isolate the moved-witness collar",
       "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "axis": "state-weighted trace ordering",
+          "check": "The two commutator terms are factorized separately, so no omega-B commutation is assumed.",
+          "disposition": "DISMISSED"
+        },
+        {
+          "axis": "diagonal conditional expectation",
+          "check": "The bond generator is coordinate diagonal in the independently computed joint basis; residual commutators are roundoff-level.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "centering",
+          "check": "Scalar centering changes neither the commutator nor the off-diagonal part.",
+          "disposition": "DISMISSED"
+        },
+        {
+          "axis": "finite-to-uniform promotion",
+          "check": "V=2 and cutoffs 3,4 do not bound off-diagonal weighted norms in larger volumes or cutoffs.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "finite-time collar",
+          "check": "The Cauchy bound controls an infinitesimal bond generator expectation, not a finite-time local influence.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "independence",
+          "check": "The independent lane reconstructs the oscillator, Hamiltonian, Gibbs state, PVM, witness, prefix products and pinching without importing the primary module.",
+          "disposition": "DISMISSED"
+        },
+        {
+          "axis": "Lean scope",
+          "check": "Lean proves finite entrywise algebra only; numerical matrix rows and all QFT limits remain outside the kernel.",
+          "disposition": "UPHELD-OPEN"
+        }
+      ],
+      "boundary": "T0 claim-nonbearing finite exact reduction and finite actual-Q3 diagnostic. No local collar theorem, phase-weight theorem, common core, common alpha, OS/KMS/GNS reconstruction, mass gap, continuum, C6, Sector-A or Pre-A closure follows.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "Pinching before estimating removes a precisely identified diagonal contribution without assuming that the Gibbs state commutes with the bond. It supplies a finite state-weighted shell inequality with Cauchy constant one and isolates the only quantity that must be made uniform. The result does not yet provide that uniform estimate.",
+      "evidence_refs": [
+        "strategy/pre-a-cp1-st8-q3lock-local-q2-pinching-commutator-manifest.json#theorem",
+        "strategy/pre-a-cp1-st8-q3lock-local-q2-pinching-commutator-certificate-260827.md#2-finite-conditional-expectation-lemma",
+        "codes/foundations/pre_a_cp1_st8_q3lock_local_q2_pinching_commutator.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_local_q2_pinching_commutator_independent.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_local_q2_pinching_commutator_verify.py#run",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-27-primary-pre_a_cp1_st8_q3lock_local_q2_pinching_commutator/primary.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-27-independent-pre_a_cp1_st8_q3lock_local_q2_pinching_commutator/independent.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-27-integrated-pre_a_cp1_st8_q3lock_local_q2_pinching_commutator/integrated.json#lean",
+        "verification/lean/Tect/R363.lean#diagonal_multiplier_commutator_reduction",
+        "claims/C6-SPACETIME-SIGNATURE/notes/q3lock-local-q2-pinching-commutator-boundary-260827.md#q3lock-local-q2-pinching-commutator-boundary"
+      ],
+      "finding": "R-363 advances FI-2b at finite level. The diagonal conditional expectation removes the bond-invisible component exactly, and the two-sided state-weighted Cauchy bound passes all 256 finite contexts in both lanes. Primary passes 778/778 and independent passes 519/519; integrated 46/46 and Lean R363 pass. The maximum reduction error is 8.489e-14, the maximum diagonal commutator is 8.487e-14, the maximum bound violation is -3.897e-15, and the minimum nonzero off-diagonal Frobenius norm is 0.565970. The remaining off-diagonal weighted norm is therefore nontrivial.",
+      "formal_integration": {
+        "events": [],
+        "lean": "R363 PASS",
+        "negatives": [],
+        "no_changelog_event": false,
+        "no_new_negative": true,
+        "no_new_result": false,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "results": [
+          "R-363"
+        ]
+      },
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": [
+          "R-363"
+        ]
+      },
+      "gate_ids": [
+        "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+        "PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE",
+        "PA-CP1-ST8-Q3LOCK-ALL-EXHAUSTION-MIXTURE-L2-LOCALITY-AND-BETA-INDEPENDENT-CSTAR-DYNAMICS"
+      ],
+      "id": "EXP-001205",
+      "method": [
+        "Define the finite coordinate pinching D(X)=sum_x Pi_x X Pi_x in the joint basis of the onsite coordinate PVM.",
+        "Center every moved collision witness by c=Tr(omega X), with omega=rho tensor rho, and set X_perp=(X-cI)-D(X-cI).",
+        "Use that the doubled coordinate bond generator B and D(X-cI) are diagonal in the same basis to prove [B,X]=[B,X_perp].",
+        "Apply two Hilbert--Schmidt Cauchy inequalities to obtain |Tr(omega[B,X])| <= ||B||_omega (||omega^(1/2)X_perp||_HS + ||X_perp omega^(1/2)||_HS).",
+        "Run the exact R-362 Q3 fixture over both split orientations, time signs, every prefix, both history adjoints, beta values and local sites in primary and non-importing independent lanes.",
+        "Formalize the finite entrywise diagonal/off-diagonal and scalar-centering identities in Lean R363."
+      ],
+      "next_action": "Stress the normalized off-diagonal weighted norms at larger cutoffs and graph volumes. Seek a modular or Lieb--Robinson estimate uniform in source, cutoff, volume, prefix and exhaustion shape; register a scoped growth obstruction if the stress diverges.",
+      "no_overclaim": "The exact pinching reduction and finite state-weighted inequality identify the remaining norm but do not establish its required uniformity.",
+      "provenance": "contemporaneous",
+      "question": "Can FI-2b be localized before estimating by pinching the doubled collision witness in the coordinate algebra and paying only for its centered off-diagonal coherence?",
+      "recorded_at": "2026-08-29T10:30:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001204",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001203",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-08-27",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Reduce the moved-witness collar to centered off-diagonal coherence",
+      "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "axis": "degenerate bond spectrum",
+          "check": "Spectral blocks retain arbitrary matrices inside equal-energy eigenspaces rather than splitting them by a numerically chosen eigenvector basis.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "reference-bond commutation",
+          "check": "The trace terms are factorized separately, so no commutation of omega and B is used.",
+          "disposition": "DISMISSED"
+        },
+        {
+          "axis": "projection optimality",
+          "check": "The unweighted residual comparison follows from Hilbert--Schmidt block projection; weighted residual monotonicity is not asserted.",
+          "disposition": "VALID-WITH-SCOPE"
+        },
+        {
+          "axis": "spectral grouping",
+          "check": "A declared finite grouping tolerance is used and the residual commutator is checked at roundoff; exact/asymptotic spectral gap control remains open.",
+          "disposition": "VALID-WITH-MITIGATION"
+        },
+        {
+          "axis": "finite-to-uniform promotion",
+          "check": "V=2 and cutoffs 3,4 do not control the spectral off-block weighted norm in larger systems or limits.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "finite-time collar",
+          "check": "The result controls an infinitesimal generator expectation, not a finite-time local influence or common-alpha likelihood.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "Lean scope",
+          "check": "Lean proves finite entrywise spectral algebra only; matrix numerics and QFT reconstruction remain outside the kernel.",
+          "disposition": "UPHELD-OPEN"
+        }
+      ],
+      "boundary": "T0 claim-nonbearing finite exact refinement and finite actual-Q3 diagnostic. No uniform local collar, phase-weight theorem, common core, common alpha, OS/KMS/GNS reconstruction, mass gap, continuum, C6, Sector-A or Pre-A closure follows.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "The spectral commutant is the largest canonical finite block algebra invisible to the bond generator, so this refinement removes more irrelevant shell content than coordinate pinching while preserving the exact constant-one Cauchy bound. The finite data do not establish weighted monotonicity or any asymptotic uniformity.",
+      "evidence_refs": [
+        "strategy/pre-a-cp1-st8-q3lock-local-q2-spectral-commutant-manifest.json#theorem",
+        "strategy/pre-a-cp1-st8-q3lock-local-q2-spectral-commutant-certificate-260827.md#2-spectral-pinching-theorem",
+        "codes/foundations/pre_a_cp1_st8_q3lock_local_q2_spectral_commutant.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_local_q2_spectral_commutant_independent.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_local_q2_spectral_commutant_verify.py#run",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-27-primary-pre_a_cp1_st8_q3lock_local_q2_spectral_commutant/primary.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-27-independent-pre_a_cp1_st8_q3lock_local_q2_spectral_commutant/independent.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-27-integrated-pre_a_cp1_st8_q3lock_local_q2_spectral_commutant/integrated.json#lean",
+        "verification/lean/Tect/R364.lean#spectral_offdiagonal_reduction",
+        "claims/C6-SPACETIME-SIGNATURE/notes/q3lock-local-q2-spectral-commutant-boundary-260827.md#q3lock-local-q2-spectral-commutant-boundary"
+      ],
+      "finding": "R-364 advances FI-2b at finite level. Spectral pinching onto the bond commutant removes all exactly B-commuting blocks and retains the exact state-weighted Cauchy bound. Primary passes 777/777 and independent 776/776 over 256 contexts; integrated 51/51 and Lean R364 pass. The maximum spectral reduction error is 1.713e-13, the maximum spectral residual commutator is 1.715e-13, the maximum bound violation is -1.069e-14, and the maximum spectral-to-coordinate weighted residual ratio is 0.999917. The spectral residual remains nonzero with minimum Frobenius norm 0.503109.",
+      "formal_integration": {
+        "events": [],
+        "lean": "R364 PASS",
+        "negatives": [],
+        "no_changelog_event": false,
+        "no_new_negative": true,
+        "no_new_result": false,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "results": [
+          "R-364"
+        ]
+      },
+      "formal_refs": {
+        "events": [
+          "20260827-r-364-finite-bond-spectral-pinching-and-commuta"
+        ],
+        "negatives": [],
+        "results": [
+          "R-364"
+        ]
+      },
+      "gate_ids": [
+        "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+        "PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE",
+        "PA-CP1-ST8-Q3LOCK-ALL-EXHAUSTION-MIXTURE-L2-LOCALITY-AND-BETA-INDEPENDENT-CSTAR-DYNAMICS"
+      ],
+      "id": "EXP-001206",
+      "method": [
+        "Diagonalize the Hermitian doubled bond generator B and group equal spectral values into projections P_lambda.",
+        "Define E_B(X)=sum_lambda P_lambda X P_lambda and the centered residual X_perp=(X-Tr(omega X)I)-E_B(X-Tr(omega X)I).",
+        "Use the exact spectral-block identity [B,X]=[B,X_perp] and two-sided Hilbert--Schmidt Cauchy to bound Tr(omega[B,X]) without assuming [omega,B]=0.",
+        "Compare spectral residuals with the coordinate-pinched residuals in unweighted Frobenius norm; retain weighted comparison only as a diagnostic, not a theorem.",
+        "Run both lanes over every prefix, split orientation, time sign, history adjoint, beta value and local site of the R-362 V=2 cutoff-3,4 fixture.",
+        "Formalize spectral block/off-block splitting, commutator reduction, scalar-centering invariance and block disjointness in Lean R364."
+      ],
+      "next_action": "Stress the spectral off-block weighted norm at larger cutoffs and graph volumes; pursue a modular/Lieb--Robinson estimate or record its exact growth obstruction.",
+      "no_overclaim": "Spectral pinching removes exactly commuting bond blocks and improves a finite unweighted residual, but it does not prove weighted monotonicity, finite-time locality or any limit theorem.",
+      "provenance": "contemporaneous",
+      "question": "Can the remaining FI-2b commutator be reduced onto the full spectral commutant of the bond generator, including degenerate bond-energy blocks, while retaining the state-weighted bound?",
+      "recorded_at": "2026-08-29T11:00:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001205",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001204",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-08-27",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Refine FI-2b with bond-spectral commutant pinching",
+      "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "axis": "time orientation",
+          "check": "The lane derives and checks the U_t* X U_t phase factors in the same orientation as the finite-time difference.",
+          "disposition": "DISMISSED"
+        },
+        {
+          "axis": "doubled-unitary factor",
+          "check": "The tensor-product bond unitary is compared directly with exp(-i t B), not assumed from notation.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "density-state trace",
+          "check": "The state-trace corollary uses Hilbert--Schmidt Cauchy and ||omega||_HS<=1; no state-generator commutation is used.",
+          "disposition": "DISMISSED"
+        },
+        {
+          "axis": "zero commutator",
+          "check": "Some contexts have a numerical zero, but the minimum nonzero spectral commutator is positive and no universal cancellation is claimed.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "finite-to-uniform promotion",
+          "check": "The finite Duhamel constant one does not control ||[B,X]||_HS uniformly in cutoff, volume, source, prefix or shape.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "QFT promotion",
+          "check": "No common alpha, local collar, OS/KMS/GNS reconstruction, mass gap, continuum, C6, Sector-A or Pre-A closure follows.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "Lean scope",
+          "check": "Lean proves finite spectral algebra only; exponentials, matrix spectra and limits remain in the executable lanes.",
+          "disposition": "UPHELD-OPEN"
+        }
+      ],
+      "boundary": "T0 claim-nonbearing finite exact Duhamel reduction and actual-Q3 diagnostic. No uniform local collar, phase-weight theorem, common core, common alpha, OS/KMS/GNS reconstruction, mass gap, continuum, C6, Sector-A or Pre-A closure follows.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "The spectral-gap form controls the actual finite-time bond unitary by energy differences and avoids multiplying a residual by a separate operator norm. It supplies an exact finite-time shell inequality and a dimension-free density-trace corollary, while leaving the commutator norm's asymptotic uniformity as the decisive open obligation.",
+      "evidence_refs": [
+        "strategy/pre-a-cp1-st8-q3lock-local-q2-spectral-gap-dyson-manifest.json#theorem",
+        "strategy/pre-a-cp1-st8-q3lock-local-q2-spectral-gap-dyson-certificate-260827.md#2-spectral-gap-identity",
+        "codes/foundations/pre_a_cp1_st8_q3lock_local_q2_spectral_gap_dyson.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_local_q2_spectral_gap_dyson_independent.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_local_q2_spectral_gap_dyson_verify.py#run",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-27-primary-pre_a_cp1_st8_q3lock_local_q2_spectral_gap_dyson/primary.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-27-independent-pre_a_cp1_st8_q3lock_local_q2_spectral_gap_dyson/independent.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-27-integrated-pre_a_cp1_st8_q3lock_local_q2_spectral_gap_dyson/integrated.json#lean",
+        "verification/lean/Tect/R365.lean#spectral_commutator_coefficient",
+        "claims/C6-SPACETIME-SIGNATURE/notes/q3lock-local-q2-spectral-gap-dyson-boundary-260827.md#q3lock-local-q2-spectral-gap-dyson-boundary"
+      ],
+      "finding": "R-365 advances FI-2b at finite time. Primary passes 777/777 and independent 776/776 over 256 contexts; integrated 49/49 and Lean R365 pass. Maximum spectral coefficient error is 1.505e-13, maximum phase identity error 6.178e-14, maximum Duhamel violation 7.006e-14, and maximum state-trace violation -3.206e-17. The largest finite-time/bound ratio is 0.999422, with maximum change 0.267414 against bound 0.267991. The spectral commutator remains nonzero with minimum nonzero norm 0.867344.",
+      "formal_integration": {
+        "events": [
+          "20260827-r-365-finite-spectral-gap-commutator-and-duhame"
+        ],
+        "lean": "R365 PASS",
+        "negatives": [],
+        "no_changelog_event": false,
+        "no_new_negative": true,
+        "no_new_result": false,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "results": [
+          "R-365"
+        ]
+      },
+      "formal_refs": {
+        "events": [
+          "20260827-r-365-finite-spectral-gap-commutator-and-duhame"
+        ],
+        "negatives": [],
+        "results": [
+          "R-365"
+        ]
+      },
+      "gate_ids": [
+        "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+        "PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE",
+        "PA-CP1-ST8-Q3LOCK-ALL-EXHAUSTION-MIXTURE-L2-LOCALITY-AND-BETA-INDEPENDENT-CSTAR-DYNAMICS"
+      ],
+      "id": "EXP-001207",
+      "method": [
+        "Use the B spectral decomposition and the exact coefficient identity ||U_t* X U_t-X||_HS^2=sum_ab |exp(i t(lambda_a-lambda_b))-1|^2 ||P_a X P_b||_HS^2.",
+        "Apply |exp(i y)-1|<=|y| to obtain the finite-time Duhamel bound ||U_t* X U_t-X||_HS <= |t| ||[B,X]||_HS.",
+        "Use Hilbert--Schmidt Cauchy with a density omega to bound the state trace by ||omega||_HS times the same Duhamel quantity, without assuming [omega,B]=0.",
+        "Remove B-commuting blocks first with the R-364 spectral pinching, then check doubled bond-unitary factorisation and the spectral formula on every R-362 finite prefix.",
+        "Formalize the finite spectral coefficient, gap-square nonnegativity and block commutator reduction in Lean R365."
+      ],
+      "next_action": "Obtain a local modular or Lieb--Robinson estimate on the spectral-gap commutator norm uniform in source, cutoff, volume, prefix and exhaustion shape; register exact growth if unavailable.",
+      "no_overclaim": "The finite-time spectral-gap inequality has constant one, but the commutator norm can still grow with the regulator and no QFT limit is established.",
+      "provenance": "contemporaneous",
+      "question": "Can finite-time bond influence be controlled directly by the spectral-gap-weighted commutator of the moved doubled witness, avoiding a separate operator-norm factor?",
+      "recorded_at": "2026-08-29T11:30:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001206",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001205",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-08-27",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Replace the coarse shell norm by a spectral-gap Duhamel bound",
+      "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "axis": "interpolation constant",
+          "check": "The bound is derived from min(2,|y|), so it remains valid in both low- and high-frequency regimes; no Taylor estimate is used outside its range.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "degenerate bond spectrum",
+          "check": "Zero energy differences contribute zero to the fractional seminorm and arbitrary matrices inside degenerate blocks are retained by spectral pinching.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "state ordering",
+          "check": "The density-state trace step uses Hilbert--Schmidt Cauchy and does not assume [omega,B]=0.",
+          "disposition": "DISMISSED"
+        },
+        {
+          "axis": "uniformity",
+          "check": "The pilot samples V=2 and cutoffs 3,4 only; the fractional norm may still grow with cutoff, volume, source or prefix length.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "modular identification",
+          "check": "The finite seminorm is unweighted; no Kubo--Mori weight, common core, or phase-conditioned form comparison has been proved.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "QFT promotion",
+          "check": "Common alpha, OS/KMS/GNS reconstruction, mass gap, continuum, C6, Sector-A and Pre-A remain outside the finite pilot.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "independence and Lean",
+          "check": "The independent source reconstructs the finite system without importing the primary, and Lean R366 contains no sorry/admit/axiom/unsafe.",
+          "disposition": "DISMISSED"
+        }
+      ],
+      "boundary": "T0 claim-nonbearing finite exact fractional spectral reduction and actual-Q3 diagnostic. No modular estimate, local collar, phase-weight theorem, common core, common alpha, OS/KMS/GNS reconstruction, mass gap, continuum, C6, Sector-A or Pre-A closure follows.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "The fractional phase envelope changes the decisive open analytic target from an unweighted first commutator to a fractional Liouvillian square function. At theta=1/2 this is compatible with local Dirichlet/Kubo--Mori forms and can exploit high-frequency interpolation without claiming a global energy estimate. The finite pilot verifies the algebra and identifies the next theorem, but it does not show that the fractional norm is uniform.",
+      "evidence_refs": [
+        "strategy/pre-a-cp1-st8-q3lock-local-q2-fractional-liouvillian-manifest.json#theorem",
+        "strategy/pre-a-cp1-st8-q3lock-local-q2-fractional-liouvillian-certificate-260827.md#1-fractional-spectral-statement",
+        "codes/foundations/pre_a_cp1_st8_q3lock_local_q2_fractional_liouvillian.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_local_q2_fractional_liouvillian_independent.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_local_q2_fractional_liouvillian_verify.py#run",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-27-primary-pre_a_cp1_st8_q3lock_local_q2_fractional_liouvillian/primary.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-27-independent-pre_a_cp1_st8_q3lock_local_q2_fractional_liouvillian/independent.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-27-integrated-pre_a_cp1_st8_q3lock_local_q2_fractional_liouvillian/integrated.json#lean",
+        "verification/lean/Tect/R366.lean#fractional_half_envelope",
+        "claims/C6-SPACETIME-SIGNATURE/notes/q3lock-local-q2-fractional-liouvillian-boundary-260827.md#q3lock-local-q2-fractional-liouvillian-boundary"
+      ],
+      "finding": "R-366 closes the finite fractional interpolation pilot. Primary and independent lanes each pass 3082/3082 assertions over 768 contexts; integrated passes 46/46 and Lean R366 passes. The primary maximum phase-identity error is 6.178e-14, maximum fractional-envelope violation is 0, maximum fractional-bound violation is 6.176e-14, maximum state-trace violation is -2.756e-16, and the maximum primary-independent numeric difference is 6.661e-16. The largest finite-time-to-fractional-bound ratio is 0.999422.",
+      "formal_integration": {
+        "events": [
+          "20260827-r-366-finite-fractional-liouvillian-square-func"
+        ],
+        "lean": "R366 PASS",
+        "negatives": [],
+        "no_changelog_event": false,
+        "no_new_negative": true,
+        "no_new_result": false,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "results": [
+          "R-366"
+        ]
+      },
+      "formal_refs": {
+        "events": [
+          "20260827-r-366-finite-fractional-liouvillian-square-func"
+        ],
+        "negatives": [],
+        "results": [
+          "R-366"
+        ]
+      },
+      "gate_ids": [
+        "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+        "PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE",
+        "PA-CP1-ST8-Q3LOCK-ALL-EXHAUSTION-MIXTURE-L2-LOCALITY-AND-BETA-INDEPENDENT-CSTAR-DYNAMICS"
+      ],
+      "id": "EXP-001208",
+      "method": [
+        "Use the exact B spectral blocks of the doubled bond and define the fractional seminorm |||ad_B|^theta X||_HS by energy-difference weights.",
+        "Apply the scalar interpolation min(2,|y|)<=2^(1-theta)|y|^theta for theta in {1/2,3/4,1} to obtain a finite-time shell bound.",
+        "Center the moved R-362 collision witness and remove B-commuting blocks with the R-364 spectral commutant before measuring the fractional shell.",
+        "Run a primary and non-importing independent reconstruction over every R-362 split orientation, sign, prefix, adjoint, beta and site, then compare all derived fields in an integrated verifier.",
+        "Compile Lean R366 for the theta=1/2 scalar envelope and the theta=1 reduction fixture; keep matrix exponentials and all limits in the executable lanes."
+      ],
+      "next_action": "Stress theta=1/2 at larger cutoffs and graph volumes, then prove or refute a source- and volume-uniform local Kubo--Mori/Dirichlet comparison for the actual Q3 bond. If the fractional norm grows, record the exact growth rather than promote the finite interpolation.",
+      "no_overclaim": "R-366 supplies a finite interpolation inequality and a sharper analytic target only; it does not establish a regulator-uniform square function or any QFT limit.",
+      "provenance": "contemporaneous",
+      "question": "Can the finite-time local-Q2 shell be controlled by a fractional power of the bond Liouvillian, so that a local Dirichlet or Kubo--Mori estimate can replace the potentially cutoff-growing full commutator norm?",
+      "recorded_at": "2026-08-29T12:00:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001207",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001206",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001203",
+          "relation": "alternative_to"
+        }
+      ],
+      "reviewed_on": "2026-08-27",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Test a fractional Liouvillian square-function route for FI-2b",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",

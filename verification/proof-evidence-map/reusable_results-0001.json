@@ -2,7 +2,125 @@
   "data": [
     {
       "accepted_event_ids": [
-        "20260827-r-362-finite-local-q2-positive-replica-folding"
+        "20260827-r-366-finite-fractional-liouvillian-square-func"
+      ],
+      "anchor": "r-366",
+      "claim_ref_basis": {
+        "C6-SPACETIME-SIGNATURE": "proof_anchor_exact"
+      },
+      "claim_refs": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "co_recorded_negative_tags": [],
+      "detail": {
+        "boundary": "R-366 closes only a finite unweighted fractional spectral inequality and diagnostic. It does not prove a local Kubo--Mori or Dirichlet-form comparison, source/cutoff/volume/history/shape uniformity, common core, common alpha, OS/KMS/GNS dynamics, a mass gap, continuum, C6, Sector-A or Pre-A. No R-366 PDF is issued.",
+        "proven_in": "[manifest](strategy/pre-a-cp1-st8-q3lock-local-q2-fractional-liouvillian-manifest.json), [certificate](strategy/pre-a-cp1-st8-q3lock-local-q2-fractional-liouvillian-certificate-260827.md), [Lean entrypoint](verification/lean/Tect/R366.lean), [primary script](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_fractional_liouvillian.py), [independent script](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_fractional_liouvillian_independent.py), [integrated verifier](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_fractional_liouvillian_verify.py), [scope note](claims/C6-SPACETIME-SIGNATURE/notes/q3lock-local-q2-fractional-liouvillian-boundary-260827.md), and stored run artefacts.",
+        "result_id": "R-366 is a T0, claim-nonbearing finite interpolation result under EXP-001208.",
+        "statement": "Let `B=sum_a lambda_a P_a` be finite Hermitian and let `U_t=exp(-i t B)`. For `0<theta<=1`, define ```text || |ad_B|^theta X ||_HS^2 = sum_(a,b) |lambda_a-lambda_b|^(2 theta) ||P_a X P_b||_HS^2. ``` The exact spectral block identity and the scalar envelope `min(2,|y|)<=2^(1-theta)|y|^theta` give ```text ||U_t^* X U_t-X||_HS <= 2^(1-theta) |t|^theta || |ad_B|^theta X ||_HS. ``` For a density matrix `omega`, Hilbert--Schmidt Cauchy gives the same bound for `|Tr(omega(U_t^* X U_t-X))|` after multiplication by `||omega||_HS<=1`. At `theta=1` this reduces to R-365; at `theta=1/2` it targets a local square-function estimate.",
+        "verification": "Primary and independent lanes each pass `3082/3082` assertions over `768` actual-Q3 contexts (`theta=1/2,3/4,1` on every R-362 prefix, orientation, sign, adjoint, beta and site). The integrated verifier passes `46/46`, Lean R366 compiles, and the largest primary-independent numeric difference is `6.661e-16`. The largest finite-time/fractional-bound ratio is `0.999422`."
+      },
+      "detail_title": "Finite fractional Liouvillian square-function shell bound",
+      "family_refs": [],
+      "id": "R-366",
+      "normalized_detail": {
+        "boundary": "R-366 closes only a finite unweighted fractional spectral inequality and diagnostic. It does not prove a local Kubo--Mori or Dirichlet-form comparison, source/cutoff/volume/history/shape uniformity, common core, common alpha, OS/KMS/GNS dynamics, a mass gap, continuum, C6, Sector-A or Pre-A. No R-366 PDF is issued.",
+        "proof_anchor": "[manifest](strategy/pre-a-cp1-st8-q3lock-local-q2-fractional-liouvillian-manifest.json), [certificate](strategy/pre-a-cp1-st8-q3lock-local-q2-fractional-liouvillian-certificate-260827.md), [Lean entrypoint](verification/lean/Tect/R366.lean), [primary script](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_fractional_liouvillian.py), [independent script](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_fractional_liouvillian_independent.py), [integrated verifier](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_fractional_liouvillian_verify.py), [scope note](claims/C6-SPACETIME-SIGNATURE/notes/q3lock-local-q2-fractional-liouvillian-boundary-260827.md), and stored run artefacts.",
+        "publication_target": "",
+        "reuse": "",
+        "statement": "Let `B=sum_a lambda_a P_a` be finite Hermitian and let `U_t=exp(-i t B)`. For `0<theta<=1`, define ```text || |ad_B|^theta X ||_HS^2 = sum_(a,b) |lambda_a-lambda_b|^(2 theta) ||P_a X P_b||_HS^2. ``` The exact spectral block identity and the scalar envelope `min(2,|y|)<=2^(1-theta)|y|^theta` give ```text ||U_t^* X U_t-X||_HS <= 2^(1-theta) |t|^theta || |ad_B|^theta X ||_HS. ``` For a density matrix `omega`, Hilbert--Schmidt Cauchy gives the same bound for `|Tr(omega(U_t^* X U_t-X))|` after multiplication by `||omega||_HS<=1`. At `theta=1` this reduces to R-365; at `theta=1/2` it targets a local square-function estimate."
+      },
+      "summary": "R-366 v1.0 is a T0 claim-nonbearing finite interpolation result under EXP-001208. The exact spectral phase envelope gives a fractional `|ad_B|^theta` finite-time bound and density-trace corollary, with a primary/independent/Lean Q3 pilot. A local modular/Dirichlet comparison, source/cutoff/volume/history uniformity, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open",
+      "title": "Finite fractional Liouvillian square-function shell bound"
+    },
+    {
+      "accepted_event_ids": [
+        "20260827-r-365-finite-spectral-gap-commutator-and-duhame"
+      ],
+      "anchor": "r-365",
+      "claim_ref_basis": {},
+      "claim_refs": [],
+      "co_recorded_negative_tags": [],
+      "detail": {
+        "boundary": "R-365 closes only the finite unweighted spectral-gap inequality and finite density-trace corollary. It does not control the commutator norm uniformly in source, cutoff, volume, prefix or exhaustion shape, and it does not prove a finite-time local collar, phase-weight preservation, common core, common alpha, OS/KMS/GNS dynamics, a mass gap, continuum, C6, Sector-A or Pre-A. No R-365 PDF is issued.",
+        "proven_in": "[certificate](strategy/pre-a-cp1-st8-q3lock-local-q2-spectral-gap-dyson-certificate-260827.md), [Lean entrypoint](verification/lean/Tect/R365.lean), [primary script](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_spectral_gap_dyson.py), [independent script](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_spectral_gap_dyson_independent.py), [integrated verifier](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_spectral_gap_dyson_verify.py), and stored run artefacts.",
+        "result_id": "R-365 is a T0, claim-nonbearing finite exact result under EXP-001207.",
+        "statement": "Let `B` be a finite Hermitian bond generator, `U_t=exp(-i t B)`, and `B=sum_a lambda_a P_a`. Then ```text ||U_t^* X U_t-X||_HS^2 = sum_(a,b) |exp(i t(lambda_a-lambda_b))-1|^2 ||P_a X P_b||_HS^2 <= t^2 ||[B,X]||_HS^2. ``` For a density matrix `omega`, Hilbert--Schmidt Cauchy gives ```text |Tr(omega(U_t^* X U_t-X))| <= ||omega||_HS |t| ||[B,X]||_HS <= |t| ||[B,X]||_HS. ``` The R-364 spectral commutant pinching can be applied first because its blocks have zero commutator. No commutation between `omega` and `B` is assumed.",
+        "verification": "Primary and independent lanes check the R-362 `V=2`, cutoff `3,4` fixture over both split orientations, time signs, every prefix, history adjoints, beta values and local sites. Primary passes `777/777`, independent `776/776`, both cover `256` contexts, integrated passes `49/49`, and Lean R365 compiles. The maximum spectral coefficient error is `1.505e-13`, maximum phase identity error `6.178e-14`, maximum Duhamel violation `7.006e-14`, and maximum state-trace violation `-3.206e-17`. The largest finite-time/bound ratio is `0.999422`; the maximum change is `0.267414` against bound `0.267991`."
+      },
+      "detail_title": "Finite spectral-gap commutator and Duhamel shell bound",
+      "family_refs": [],
+      "id": "R-365",
+      "normalized_detail": {
+        "boundary": "R-365 closes only the finite unweighted spectral-gap inequality and finite density-trace corollary. It does not control the commutator norm uniformly in source, cutoff, volume, prefix or exhaustion shape, and it does not prove a finite-time local collar, phase-weight preservation, common core, common alpha, OS/KMS/GNS dynamics, a mass gap, continuum, C6, Sector-A or Pre-A. No R-365 PDF is issued.",
+        "proof_anchor": "[certificate](strategy/pre-a-cp1-st8-q3lock-local-q2-spectral-gap-dyson-certificate-260827.md), [Lean entrypoint](verification/lean/Tect/R365.lean), [primary script](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_spectral_gap_dyson.py), [independent script](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_spectral_gap_dyson_independent.py), [integrated verifier](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_spectral_gap_dyson_verify.py), and stored run artefacts.",
+        "publication_target": "",
+        "reuse": "",
+        "statement": "Let `B` be a finite Hermitian bond generator, `U_t=exp(-i t B)`, and `B=sum_a lambda_a P_a`. Then ```text ||U_t^* X U_t-X||_HS^2 = sum_(a,b) |exp(i t(lambda_a-lambda_b))-1|^2 ||P_a X P_b||_HS^2 <= t^2 ||[B,X]||_HS^2. ``` For a density matrix `omega`, Hilbert--Schmidt Cauchy gives ```text |Tr(omega(U_t^* X U_t-X))| <= ||omega||_HS |t| ||[B,X]||_HS <= |t| ||[B,X]||_HS. ``` The R-364 spectral commutant pinching can be applied first because its blocks have zero commutator. No commutation between `omega` and `B` is assumed."
+      },
+      "summary": "R-365 v1.0 is a T0 claim-nonbearing finite exact result under EXP-001207. Spectral-gap coefficients give a constant-one finite-time Duhamel bound and a density-state trace corollary after R-364 commutant pinching. The commutator norm's source/cutoff/volume/prefix/shape uniformity, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open",
+      "title": "Finite spectral-gap commutator and Duhamel shell bound"
+    },
+    {
+      "accepted_event_ids": [
+        "20260827-r-364-finite-bond-spectral-pinching-and-commuta",
+        "20260827-r-365-finite-spectral-gap-commutator-and-duhame"
+      ],
+      "anchor": "r-364",
+      "claim_ref_basis": {},
+      "claim_refs": [],
+      "co_recorded_negative_tags": [],
+      "detail": {
+        "boundary": "R-364 closes only the finite spectral-commutant reduction and its state-weighted inequality. It does not establish weighted-norm monotonicity, source/cutoff/volume/prefix/shape uniformity, a finite-time collar, phase-weight preservation, common core, common alpha, OS/KMS/GNS dynamics, a mass gap, continuum, C6, Sector-A or Pre-A. No R-364 PDF is issued.",
+        "proven_in": "[certificate](strategy/pre-a-cp1-st8-q3lock-local-q2-spectral-commutant-certificate-260827.md), [Lean entrypoint](verification/lean/Tect/R364.lean), [primary script](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_spectral_commutant.py), [independent script](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_spectral_commutant_independent.py), [integrated verifier](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_spectral_commutant_verify.py), and stored run artefacts.",
+        "result_id": "R-364 is a T0, claim-nonbearing finite exact refinement under EXP-001206.",
+        "statement": "Let a finite Hermitian bond generator have spectral resolution `B=sum_lambda lambda P_lambda`. Define the spectral pinching `E_B(X)=sum_lambda P_lambda X P_lambda`. For `X_0=X-Tr(omega X)I` and `X_perp=X_0-E_B(X_0)`, the block part commutes with `B`, so ```text [B,X] = [B,X_perp]. ``` The two-sided weighted Hilbert--Schmidt Cauchy inequality is ```text |Tr(omega [B,X])| <= ||B||_omega (||omega^(1/2) X_perp||_HS + ||X_perp omega^(1/2)||_HS), ``` with constant one and without assuming `[omega,B]=0`. If coordinate pinching is also B-commuting, spectral pinching is the Hilbert--Schmidt orthogonal projection onto a larger block algebra, hence its unweighted residual is no larger up to numerical tolerance.",
+        "verification": "Primary checks the R-362 `V=2`, cutoff `3,4` fixture over both split orientations, time signs, every prefix, history adjoints, beta values and local sites; independent reconstructs all finite objects without importing the primary. Primary passes `777/777`, independent `776/776`, both cover `256` contexts, integrated passes `51/51`, and Lean R364 compiles. The maximum spectral reduction error is `1.713e-13`, maximum residual commutator is `1.715e-13`, maximum bound violation is `-1.069e-14`, and the largest spectral-to-coordinate weighted residual ratio is `0.999917`. The spectral residual remains nonzero with minimum Frobenius norm `0.503109`."
+      },
+      "detail_title": "Finite bond-spectral pinching and commutant shell reduction",
+      "family_refs": [],
+      "id": "R-364",
+      "normalized_detail": {
+        "boundary": "R-364 closes only the finite spectral-commutant reduction and its state-weighted inequality. It does not establish weighted-norm monotonicity, source/cutoff/volume/prefix/shape uniformity, a finite-time collar, phase-weight preservation, common core, common alpha, OS/KMS/GNS dynamics, a mass gap, continuum, C6, Sector-A or Pre-A. No R-364 PDF is issued.",
+        "proof_anchor": "[certificate](strategy/pre-a-cp1-st8-q3lock-local-q2-spectral-commutant-certificate-260827.md), [Lean entrypoint](verification/lean/Tect/R364.lean), [primary script](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_spectral_commutant.py), [independent script](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_spectral_commutant_independent.py), [integrated verifier](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_spectral_commutant_verify.py), and stored run artefacts.",
+        "publication_target": "",
+        "reuse": "",
+        "statement": "Let a finite Hermitian bond generator have spectral resolution `B=sum_lambda lambda P_lambda`. Define the spectral pinching `E_B(X)=sum_lambda P_lambda X P_lambda`. For `X_0=X-Tr(omega X)I` and `X_perp=X_0-E_B(X_0)`, the block part commutes with `B`, so ```text [B,X] = [B,X_perp]. ``` The two-sided weighted Hilbert--Schmidt Cauchy inequality is ```text |Tr(omega [B,X])| <= ||B||_omega (||omega^(1/2) X_perp||_HS + ||X_perp omega^(1/2)||_HS), ``` with constant one and without assuming `[omega,B]=0`. If coordinate pinching is also B-commuting, spectral pinching is the Hilbert--Schmidt orthogonal projection onto a larger block algebra, hence its unweighted residual is no larger up to numerical tolerance."
+      },
+      "summary": "R-364 v1.0 is a T0 claim-nonbearing finite exact refinement under EXP-001206. Spectral pinching removes every B-commuting bond-energy block, retains the exact state-weighted Cauchy commutator bound with constant one, and improves the finite unweighted residual comparison. Weighted uniformity, finite-time collar, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open",
+      "title": "Finite bond-spectral pinching and commutant shell reduction"
+    },
+    {
+      "accepted_event_ids": [
+        "20260827-r-363-finite-pinching-and-state-weighted-shell"
+      ],
+      "anchor": "r-363",
+      "claim_ref_basis": {},
+      "claim_refs": [],
+      "co_recorded_negative_tags": [],
+      "detail": {
+        "boundary": "R-363 closes only the finite conditional-expectation reduction and state-weighted commutator inequality. It does not bound the off-diagonal weighted norms uniformly in source, cutoff, volume, prefix or exhaustion shape, and it does not prove a finite-time collar, phase-weight preservation, common core, common alpha, OS/KMS/GNS dynamics, a mass gap, continuum, C6, Sector-A or Pre-A. No R-363 PDF is issued.",
+        "proven_in": "[certificate](strategy/pre-a-cp1-st8-q3lock-local-q2-pinching-commutator-certificate-260827.md), [Lean entrypoint](verification/lean/Tect/R363.lean), [primary script](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_pinching_commutator.py), [independent script](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_pinching_commutator_independent.py), [integrated verifier](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_pinching_commutator_verify.py), and stored run artefacts.",
+        "result_id": "R-363 is a T0, claim-nonbearing finite exact reduction under EXP-001205.",
+        "statement": "On a finite doubled Hilbert space, let `omega` be a faithful reference state, `D` the pinching conditional expectation in the joint coordinate basis, and `B` a Hermitian coordinate-diagonal bond generator. For any moved witness `X`, set `X_0=X-Tr(omega X)I` and `X_perp=X_0-D(X_0)`. Then ```text [B,X] = [B,X_perp]. ``` With `||Y||_(omega,L)^2=Tr(Y* omega Y)`, `||Y||_(omega,R)^2=Tr(omega Y*Y)`, and `||B||_omega^2=Tr(omega B^2)`, two Hilbert--Schmidt Cauchy inequalities give ```text |Tr(omega [B,X])| <= ||B||_omega (||X_perp||_(omega,L) + ||X_perp||_(omega,R)). ``` The finite Cauchy constant is exactly one; no commutation between `omega` and `B` is assumed.",
+        "verification": "The primary lane checks all 256 combinations of the R-362 `V=2`, cutoff `3,4` fixture: both split orientations, both time signs, every prefix, both history adjoints, both beta values and both local sites. The independent lane reconstructs the oscillator, Hamiltonian, Gibbs state, PVM, witness, prefix products and pinching without importing the primary. Primary passes `778/778`, independent `519/519`, and the integrated verifier passes `46/46` with Lean R363. The maximum pinching reduction error is `8.489e-14`, the maximum diagonal commutator is `8.487e-14`, the maximum bound violation is `-3.897e-15`, and the minimum nonzero off-diagonal Frobenius norm is `0.565970`."
+      },
+      "detail_title": "Finite pinching reduction and state-weighted shell commutator",
+      "family_refs": [],
+      "id": "R-363",
+      "normalized_detail": {
+        "boundary": "R-363 closes only the finite conditional-expectation reduction and state-weighted commutator inequality. It does not bound the off-diagonal weighted norms uniformly in source, cutoff, volume, prefix or exhaustion shape, and it does not prove a finite-time collar, phase-weight preservation, common core, common alpha, OS/KMS/GNS dynamics, a mass gap, continuum, C6, Sector-A or Pre-A. No R-363 PDF is issued.",
+        "proof_anchor": "[certificate](strategy/pre-a-cp1-st8-q3lock-local-q2-pinching-commutator-certificate-260827.md), [Lean entrypoint](verification/lean/Tect/R363.lean), [primary script](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_pinching_commutator.py), [independent script](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_pinching_commutator_independent.py), [integrated verifier](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_pinching_commutator_verify.py), and stored run artefacts.",
+        "publication_target": "",
+        "reuse": "",
+        "statement": "On a finite doubled Hilbert space, let `omega` be a faithful reference state, `D` the pinching conditional expectation in the joint coordinate basis, and `B` a Hermitian coordinate-diagonal bond generator. For any moved witness `X`, set `X_0=X-Tr(omega X)I` and `X_perp=X_0-D(X_0)`. Then ```text [B,X] = [B,X_perp]. ``` With `||Y||_(omega,L)^2=Tr(Y* omega Y)`, `||Y||_(omega,R)^2=Tr(omega Y*Y)`, and `||B||_omega^2=Tr(omega B^2)`, two Hilbert--Schmidt Cauchy inequalities give ```text |Tr(omega [B,X])| <= ||B||_omega (||X_perp||_(omega,L) + ||X_perp||_(omega,R)). ``` The finite Cauchy constant is exactly one; no commutation between `omega` and `B` is assumed."
+      },
+      "summary": "R-363 v1.0 is a T0 claim-nonbearing finite exact reduction under EXP-001205. Coordinate pinching removes the bond-invisible diagonal part of a centered doubled collision witness, and a two-sided state-weighted Cauchy bound controls the remaining commutator with constant one. The required source/cutoff/volume/prefix/shape-uniform collar, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open",
+      "title": "Finite pinching reduction and state-weighted shell commutator"
+    },
+    {
+      "accepted_event_ids": [
+        "20260827-r-362-finite-local-q2-positive-replica-folding",
+        "20260827-r-366-finite-fractional-liouvillian-square-func"
       ],
       "anchor": "r-362",
       "claim_ref_basis": {
@@ -3740,153 +3858,6 @@
       },
       "summary": "Scoped T4 analytic/exact/executed advance: for a pointwise coefficient, real-even Gaussian covariance, and regular strict-past control, the moving heat coefficient is conditionally orthogonal to the fresh full-Wick increment. Cross-Doob terminalization therefore assigns the complete terminal raw-Wick block to one fixed low endpoint plus exactly the R-100 future-control residual, with no second secant charge. Exact derivative-current and Taylor ledgers telescope the control-only square and reduce the rational row from old (6.5) to the single signed packet `K_R=G^T L c+c^T(P_(Sigma_tar)B_R)(U+a)c/2`. The retained square is heat-lifted. The production rational vector satisfies an exact norm contraction, but Wick order and the heat-lifted coefficient-balanced rational-current Carleson inequality remain open. Unheated or zero-heat-uniform Schur completion fails; fixed-positive-heat coercivity is unproved. Complete `H_N`, REG, progressive `H_A`, `OVERLAP_src`, Nelson, the measure, and Sector A remain open",
       "title": "Raw-Wick heat-baseline orthogonality and rational current reduction"
-    },
-    {
-      "accepted_event_ids": [
-        "20260727-r-100-owner-gauge-and-heat-centred-covariance-d",
-        "20260727-r-101-raw-wick-heat-baseline-orthogonality-and",
-        "20260728-r-104-fixed-chart-endpoint-owner-assembly-and-d"
-      ],
-      "anchor": "r-100",
-      "claim_ref_basis": {},
-      "claim_refs": [],
-      "co_recorded_negative_tags": [
-        "NG-2026-07-27-A13-ABSTRACT-FIBRE-XY-COVARIANCE-DEBT",
-        "NG-2026-07-27-A13-COMPLETE-OWNER-CROSS-ROW-SCHUR-RESERVE",
-        "NG-2026-07-28-A13-ANTICIPATIVE-RANDOM-HEAT-CONDITIONING"
-      ],
-      "detail": {
-        "adversarial_boundaries": "A centred three-atom family has `B=Z^2`, `X=E Z^2=N^-4`, `Y=E Z^6=1`, and complete owner `-N^2/2+N^-4/2`. Hence PSD Gram structure and separate `X/Y` moments cannot control an abstract covariance debt without production spatial/root coupling. This is not a production counterexample. In a reduced complete-production- frame two-frequency ray retaining the actual `c=Da`, the zero-floor rational quadratic coefficient is `-9/400` at `m=2,P=4`; the three linear rows vanish quadratically and the Bessel `H2` coefficient is `867/2`, giving reserve ratio `3/57800`. This diagnostic points toward scale-weighted spatial absorption but omits production roots and the exact source preimage.",
-        "boundary": "R-100 does not prove the moving heat-baseline production covariance-debt lower form, rational shifted-Hessian (6.5), complete `H_N`, REG, arbitrary progressive/revisit `H_A`, `OVERLAP_src`, the `q=10/9` Nelson estimate, cutoff or floor removal, an interacting measure, Sector-A closure, or a higher tier. The next target is a rowwise scale-weighted bound for the complete moving heat row with mean, low, heat, trace, `q/r`, actual payment, and R-063 forest retained exactly once.",
-        "complete_owner_gauge_theorem": "On one conditional fibre let `K=E_F B`, `q=E_F(BG)`, `A=K+2R`, `S_R=|c+A^(-1)q|_A^2/2`, `P_R=c^TRc`, and `C_post=E_F[B:(G tensor G-Gamma)]-q^TA^(-1)q`. Then `S_R+C_post/2-P_R =E_F[B:((G+c) tensor (G+c)-Gamma)]/2`. After subtracting the once-only baseline `W_0`, this is the physical terminal Wick increment. It is independent of the matching ridge/payment coordinate; payment tuning can only repartition its square, posterior rebate, and paid subtraction.",
-        "covariance_debt_normal_form": "For any `H` revealing `B`, the target is `T=(M_H-D_H)/2`, where `M_H` is the nonnegative production posterior-mean current and `D_H` is the weighted covariance depletion plus twice the low baseline. Therefore the exact successor is `D_H<=M_H+2 eta E X+2 zeta E Y+C_(eta,zeta)`. This is the physical theorem; positivity of `C_post`, a favorable ridge, or finer conditioning is neither necessary nor sufficient.",
-        "evidence": "The self-contained referee note is `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-owner-gauge-heat-centered-covariance-debt-reduction-260727-v1.0.tex.txt` and its paired nine-page PDF. Primary and standard-library independent executables, the hash-pinned integrated verifier, manifest, and JSON artifacts sit under the A13 code and runs trees. Primary `167/167`, independent `84/84`, integrated `202/202`, and aggregate `453/453` assertions pass and are pinned by the manifest; the PDF passed form, zero-overfull, extraction, and all-page Poppler visual QA.",
-        "exact_row_and_revelation_exchange": "For a matching split `B=sum_a B_a`, `R=sum_a R_a`, `W_0=sum_a W_(0,a)`, define the R-098 gap `D_row=sum_a q_a^T A_a^(-1)q_a-q^TA^(-1)q>=0`. The posterior gap is `D_row`, but the complete-square gap is exactly `-D_row/2`; because the bracket has weight one half, the complete owner is exactly row-additive. Thus R-098 bracket-only superadditivity remains valid, but its gap cannot be counted after restoring the full square. If `H_0 subset H_1` both reveal `B`, conditional Pythagoras gives an equal and opposite exchange between `E[B:V_H]` and `E[(mu_H+c)^TB(mu_H+c)]`; finer revelation creates no net sign or free entropy.",
-        "heat_centred_full_wick_residual": "In the R-094 regular mutually orthogonal strict-past no-revisit class, put `Z_*=U_J+A*`, `Z_j=U_J+A^(j)`, `F_j=E_j B(Z_*)`, `L_j=E_j B(Z_j)`, and `H_j=E_j[B(Z_*)-B(Z_j)]`. Then `F_j=L_j+H_j`, and for `Delta Q_j=2G_(j-1) sym d_j+(d_j tensor d_j-Delta Gamma_j)`, `E<d_jH,Delta Q_j> =E<[B(Z_*)-B(Z_j)],Delta Q_j>`. The Gaussian identity `E|G|^6=(tr C)^3+6(tr C)(tr C^2)+8tr C^3<=15(tr C)^3` gives `||Delta Q_j||_3<=C 2^j`. Reusing the R-094 Gram secant, weighted Hardy constant `3+2sqrt(2)`, product-space `L2`--`L6` interpolation, and Young slack `1/3` yields `sum_j |E int [B(Z_*)-B(Z_j)]:Delta Q_j| <=eta X+zeta Y+C_(eta,zeta)`. This closes the signed future-control/Jensen residual, not `sum_j||H_j||^2`. It consumes the R-094 secant allowance once. The moving heat baseline `L_j` has no standalone centering; only its complete R-077/R-097 covariance-normal row telescopes.",
-        "negative_results": "`NG-2026-07-27-A13-COMPLETE-OWNER-CROSS-ROW-SCHUR-RESERVE` and `NG-2026-07-27-A13-ABSTRACT-FIBRE-XY-COVARIANCE-DEBT`.",
-        "result_id": "`A13-CLASSII-OWNER-GAUGE-HEAT-CENTERED-COVARIANCE-DEBT-REDUCTION`.",
-        "tier": "T4 scoped analytic/exact/executed advance and method boundary. No tier promotion."
-      },
-      "detail_title": "Owner gauge, heat-centred full-Wick reveal, and covariance-debt frontier",
-      "family_refs": [],
-      "id": "R-100",
-      "normalized_detail": {
-        "boundary": "R-100 does not prove the moving heat-baseline production covariance-debt lower form, rational shifted-Hessian (6.5), complete `H_N`, REG, arbitrary progressive/revisit `H_A`, `OVERLAP_src`, the `q=10/9` Nelson estimate, cutoff or floor removal, an interacting measure, Sector-A closure, or a higher tier. The next target is a rowwise scale-weighted bound for the complete moving heat row with mean, low, heat, trace, `q/r`, actual payment, and R-063 forest retained exactly once.",
-        "proof_anchor": "",
-        "publication_target": "",
-        "reuse": "",
-        "statement": ""
-      },
-      "summary": "Scoped T4 analytic/exact/executed advance and method boundary: the complete R-099 owner is exactly the conditional terminal Wick increment and is independent of its matching ridge/payment coordinate. Under matching coefficient, payment, and baseline splits it is exactly row-additive: the R-098 posterior Schur gap cancels an equal opposite complete-square gap. Finer coefficient revelation likewise exchanges covariance mass with posterior-mean mass without changing the owner. The target is exactly posterior mean current minus covariance debt. For regular mutually orthogonal strict-past no-revisit controls, the heat-centred split `F_j=L_j+H_j` and a full-Wick extension of the R-094 secant estimate pay the entire future-control/Jensen `H_j` residual with one `X/Y` allocation. A three-atom family proves that PSD Gram structure and separate `X/Y` moments alone cannot control abstract covariance debt, while a reduced complete-production-frame ray retains `c=Da`, has rational quadratic coefficient `-9/400`, and is `H2`-subcritical with ratio `3/57800`; it is a zero-floor diagnostic, not a production counterexample. The moving heat-baseline production debt bound, rational (6.5), complete `H_N`, REG, `OVERLAP_src`, Nelson, a measure, and Sector A remain open",
-      "title": "Owner gauge, heat-centred full-Wick reveal, and covariance-debt frontier"
-    },
-    {
-      "accepted_event_ids": [
-        "20260727-a13-r-099-extended-state-cartan-causal-doob-and",
-        "20260727-r-099-adversarial-boundary-and-certificate-repa",
-        "20260727-r-100-owner-gauge-and-heat-centred-covariance-d"
-      ],
-      "anchor": "r-099",
-      "claim_ref_basis": {},
-      "claim_refs": [],
-      "co_recorded_negative_tags": [
-        "NG-2026-07-27-A13-ABSOLUTE-LAST-ROOT-FRAME-TRANSFER",
-        "NG-2026-07-27-A13-ABSTRACT-FIBRE-XY-COVARIANCE-DEBT",
-        "NG-2026-07-27-A13-COMPLETE-OWNER-CROSS-ROW-SCHUR-RESERVE",
-        "NG-2026-07-27-A13-PROGRESSIVE-REVISIT-CARTAN-MIXED-PAYLOAD"
-      ],
-      "detail": {
-        "adversarial_review": "The theorem card explicitly upholds six objections: the telescope is not Cartan (4.11); terminal reversal does not cancel distinct root squares; Doob--Hardy does not control the nonlinear frame; the Jensen residual is not yet the production forest; a favorable ridge creates no free sign after actual payment; and the rational two-sided theorem is not progressive. It dismisses only the false claims that R-098 was invalidated by Hoeffding multiplicity or that the scoped revisit no-go withdraws R-092.",
-        "boundary": "R-099 does not prove the coefficient-unconditioned production posterior/source-action lower form, rational shifted-Hessian (6.5), complete `H_N`, REG, arbitrary progressive `H_A`, `OVERLAP_src`, the `q=10/9` Nelson estimate, cutoff or floor removal, an interacting measure, Sector-A closure, or a higher tier. The next target is the complete signed owner form with pure `X`, linear frame/Jensen, Schur, low, heat, trace, `q/r`, payment, and the R-063 forest each retained exactly once.",
-        "causal_doob_hardy_theorem": "If deterministic `||K_k||<=kappa 2^(-alpha k)` and `h_k in L2(F_(k-1);H)`, then `d_j A*=sum_(k>j) K_k d_j h_k` and, for `beta>0`, `sum_j 2^(beta j) E||d_jA*||^2` is at most `S_beta kappa^2 sum_k 2^(-(2alpha-beta)k) sum_(j<k)E||d_jh_k||^2`. Martingale orthogonality replaces the last sum by the variance relative to the base filtration. At the production `L2` exponent this is the sharp constant-one `2^(-3k)` ledger; at `r=2,3,6` the spatial decays are `3,2,1`. Chronological revelation owns each Hoeffding component at `max S`. R-098's weighted resampling estimate remains valid; the improvement is exact ownership, removal of the resampling factor, and signed grouping of all future smoothing shells before squaring.",
-        "common_root_cartan_theorem": "For one fixed Malliavin root and any finite extended-state path `(Sigma_l,z_l)`, the complete edge `J_(Sigma_l)(z_l)-J_(Sigma_l)(z_(l-1)) +J_(Sigma_l)(z_(l-1))-J_(Sigma_(l-1))(z_(l-1))` telescopes exactly to the extended endpoint difference. The second bracket is the mandatory target-heat compensator. Applying the same linear root derivative, OU operator, and FAR projector after grouping preserves the identity. Equality of both extended endpoints guarantees cancellation but is not necessary because the current map need not be injective; equality of `z` endpoints alone does not guarantee it, and a heat change generically leaves the omitted-heat defect. For the production trace-free Cartan vector, `D_z Delta F_S(0)=4S/e` and the heat generator gives `2 tau S/e+O(tau^2)`, so omitting the heat owner leaves a genuine production defect; the low-harmonic diagnostic is not itself a FAR counterexample.",
-        "complete_frame_boundary": "With `Z_j=E_j Z`, `Bhat_j=E_j B_fr(Z)`, and `J_j=Bhat_j-B_fr(Z_j)`, `d_jBhat=B_fr(Z_j)-B_fr(Z_(j-1))+J_j-J_(j-1)` exactly. For a quadratic Gram, `J_j` is conditional covariance. A bounded three-point product has frame martingale mass `4^n-1` but same-level shift mass one, so the Jensen residual cannot be discarded. The rare-event fixture `P(E)=N^(-6), u=N^3 1_E, z=N 1_E` has unit `E u^2`, `E z^6`, and `E(|u|z^3)` but `E(z^2u^2)=N^2`; the R-098 frame secant must remain linearly paired. The abstract Jensen residual is not identified here with the R-097 `J_B` or R-063 forest.",
-        "evidence": "The self-contained referee note is `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-extended-state-cartan-doob-rational-recovery-260727-v1.0.tex.txt` and its paired ten-page PDF. Primary and standard-library independent executables, the hash-pinned integrated verifier, manifest, and JSON artifacts sit under the A13 code and runs trees. Primary `183/183`, independent `124/124`, integrated `240/240`, and aggregate `547/547` assertions pass; the PDF passed form, zero-overfull, and all-page Poppler visual QA.",
-        "negative_results": "`NG-2026-07-27-A13-PROGRESSIVE-REVISIT-CARTAN-MIXED-PAYLOAD` and `NG-2026-07-27-A13-ABSOLUTE-LAST-ROOT-FRAME-TRANSFER`.",
-        "progressive_mixed_only_no_go": "In an accepted repeated-range temporal chart, an early predictable `A f_epsilon` visit followed by a later inverse visit has terminal `A*=0`. The first root nevertheless contains an actual nonzero production Cartan output with CFAR lower bound `c_C A^2`, whereas `X=kappa_loop A^2`, terminal `Y` is fixed, and `1+E[X^(1/2)Y^(1/2)]=O(1+A)`. Therefore a cutoff/partition/revisit-uniform arbitrary-progressive extension using only that terminal mixed payload is false. This does not refute an `eta X` allowance, the complete signed source action/posterior packet, or R-092's regular no-revisit theorem.",
-        "rational_recovery": "The five R-085 unshifted families have exact `(X,Y)` powers `(11/40,3/40)`, `(11/20,3/20)`, `(2/5,1/30)`, `(2/5,1/5)`, and `(2/5,11/30)`. Their generalized-Young moments are at most `30/7`, so the accepted absolute estimates imply the two-sided form `E|U_R|<=eta E X+zeta E Y+C` on the fixed-floor regular mutually-orthogonal strict-past one-shot class. With `B` positive semidefinite, `K=E_F B`, `q=E_F(BG)`, and `A=K+2R`, the exact payment gauge `1/2||c+A^(-1)q||_A^2+1/2{E_F[B:(G^2-Gamma)]-q^TA^(-1)q}-c^TRc =1/2E_F[B:((G+c)^2-Gamma)]` shows that changing `R` only repartitions its matched square/bracket/payment owners. Consequently (6.5) reduces to a lower form for `S_R+C_post/2-P_R-W_0`, not to posterior-bracket positivity alone.",
-        "result_id": "`A13-CLASSII-EXTENDED-STATE-CARTAN-DOOB-RATIONAL-RECOVERY`.",
-        "tier": "T4 scoped analytic/exact/executed advance and method boundary. No tier promotion."
-      },
-      "detail_title": "Extended-state Cartan telescope, causal Doob one-use, and rational recovery boundary",
-      "family_refs": [],
-      "id": "R-099",
-      "normalized_detail": {
-        "boundary": "R-099 does not prove the coefficient-unconditioned production posterior/source-action lower form, rational shifted-Hessian (6.5), complete `H_N`, REG, arbitrary progressive `H_A`, `OVERLAP_src`, the `q=10/9` Nelson estimate, cutoff or floor removal, an interacting measure, Sector-A closure, or a higher tier. The next target is the complete signed owner form with pure `X`, linear frame/Jensen, Schur, low, heat, trace, `q/r`, payment, and the R-063 forest each retained exactly once.",
-        "proof_anchor": "",
-        "publication_target": "",
-        "reuse": "",
-        "statement": ""
-      },
-      "summary": "Scoped T4 analytic/exact/executed advance and method boundary: complete value plus target-heat Cartan edges telescope exactly inside one common Malliavin root before common linear differentiation, OU evolution, FAR projection, and squaring. A production repeated-range loop proves that terminal `X^(1/2)Y^(1/2)` alone cannot support an arbitrary-progressive extension: the first root retains a positive `c_C A^2` square although a later inverse visit makes `A*=0` and the mixed payload is only `O(A)`. This leaves a once-only pure-`X` allowance and R-092 regular `H_C` intact. Chronological Doob differences give a sharp derivative-free one-use Hardy ledger for the control coordinate, while the exact complete-frame ordered reveal retains a mandatory Jensen/covariance residual; product and spike fixtures exclude same-level-only and absolute frame-square transfers. The five rational unshifted families now have a two-sided form on the regular one-shot class, and an exact payment-gauge identity reduces (6.5) to the complete owner lower form. That production posterior/source-action lower form, rational (6.5), complete `H_N`, REG, `OVERLAP_src`, Nelson, measure construction, and Sector A remain open",
-      "title": "Extended-state Cartan telescope, causal Doob one-use, and rational recovery boundary"
-    },
-    {
-      "accepted_event_ids": [
-        "20260727-r-098-signed-first-cartan-partition-refinement",
-        "20260727-r-098-explicit-three-atom-symmetry-verification"
-      ],
-      "anchor": "r-098",
-      "claim_ref_basis": {},
-      "claim_refs": [],
-      "co_recorded_negative_tags": [
-        "NG-2026-07-27-A13-NONNEGATIVE-PER-SUBVISIT-CARTAN-ATOMIZATION"
-      ],
-      "detail": {
-        "boundary": "R-098 does not prove a production posterior lower form, standalone Cartan one-use (4.11), rational shifted-Hessian form (6.5), complete coefficient-unconditioned `H_N`, REG, arbitrary progressive/revisit assembly, `OVERLAP_src`, the `q=10/9` Nelson estimate, cutoff or floor removal, an interacting measure, Sector-A closure, or a higher tier. R-092's regular no-revisit one-shot `H_C` theorem remains intact.",
-        "derivative_free_successor": "The complete production frame satisfies `||B_fr(z)-B_fr(w)||_F <=3||Q_II||_op sqrt(20*68)(|z|+|w|)|z-w|`. Independent-root resampling avoids derivatives of adapted selectors and has the exact bare Hardy mass `sum_(j=j0)^(k-1) 2^j 2^(-4k) =(2^k-2^j0)2^(-4k)<2^(-3k)`. This does not yet supply a once-only ANOVA ledger or control the spatial multiplier, Schur mean, sextic growth, Wick/trace, heat, low endpoint, and R-063 forest.",
-        "evidence": "Proof note `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-signed-first-cartan-rational-ridge-boundary-260727-v1.0.tex.txt` and its paired PDF; primary and standard-library independent executables, hash-pinned integrated verifier, manifest, and JSON artefacts under the A13 runs tree.",
-        "partition_refinement_obstruction": "In the anisotropic production Cartan slice `S=diag(1,-1)` and `f_epsilon(theta)=(sin theta,epsilon cos theta)`, refine one source-block traverse into two oppositely oriented subvisits with shifts `a_+=Af_epsilon`, `a_-=-Af_epsilon`. The two subvisits share the same fixed target heat and the same root derivative. Their Cartan atoms obey the exact pathwise identity `T_A^-=-T_A^+`. Nevertheless, `T_A^+/(A N_j sqrt(lambda_(n_j))) -> tau_epsilon` in `L2`, and every harmonic `k>=2` has coefficient `[sin(k phi)]tau_epsilon =-2epsilon(1-rho^2)rho^(k-1) != 0`, `rho=(1-epsilon)/(1+epsilon)`. At `epsilon=1/2` the corrected coefficient is `-8/3^(k+1)`, giving `-8/27` and `-8/81` for `k=2,3`. For every fixed spatial gap, a nonzero far Littlewood--Paley block therefore gives a squared atom at least `cA^2` for each subvisit. The zero-terminal loop has `X=2kappa A^2`, terminal sextic `Y` independent of `A`, and mixed payload `1+E[X^(1/2)Y^(1/2)]=O(1+A)`. Consequently no uniform, nonnegative per-subvisit R-085/R-088 atom ledger can be stable under this refinement while using only that mixed payload. Signed grouping cancels the two atoms before squaring. The argument does not apply to distinct temporal visits with different roots or target heats, and a once-only pure-`X` payment would be critical rather than contradictory.",
-        "payment_split_posterior_theorem": "On one conditional fibre, let `C(B;R)=E_F[B:(G tensor G-Gamma)] -q_B^T(E_F B+2R)^(-1)q_B`, where `q_B=E_F(BG)`. If `B=sum_a B_a` and the actual matrix payment is split correspondingly as `R=sum_a R_a`, with `B_a>=0` and `R_a>0`, then `C(B;R)>=sum_a C(B_a;R_a)`. Indeed, for `A_a=E_F B_a+2R_a`, `q_a=E_F(B_aG)`, `A=sum_a A_a`, `q=sum_a q_a`, and `y=A^(-1)q`, the Schur difference is `sum_a q_a^T A_a^(-1)q_a-q^T A^(-1)q =sum_a |A_a^(-1/2)q_a-A_a^(1/2)y|^2>=0`. The matching payment split is load-bearing: this result neither reuses the full `R` in every row nor proves positivity of any row.",
-        "rational_ridge_and_standalone_recovery_boundary": "For the production rank-one row `B_R=b tensor b`, with `s_i=b^TG_i`, `K=E_F(bb^T)`, and `q_i=E_F(bs_i)`, the posterior row is exactly `C_i(B_R;R) =inf_h {E_F(s_i-b^Th)^2+2h^TRh-E_F(b^T Gamma_i b)}`, with minimizer `h=(K+2R)^(-1)q_i`. Restoring all owners in the R-097 terminal identity gives `E_F F_6.5 =square/2+C_post(B_R;R)/2 -sum_i int c_i^TRc_i-E_F W_0-E_F U_R`. Thus a lower form for `F_6.5` requires a suitable upper form for the five unshifted families `U_R`; their currently recorded lower form is not enough. On the exact pure-doublet production coefficient, a bounded symmetric three-atom fibre gives `q=r=0` and `C(B_R;R)=-560e/(21125P)<0`. This is a coefficient-fibre sign obstruction, not an admissible paid torus control.",
-        "result_id": "`A13-CLASSII-SIGNED-FIRST-CARTAN-RATIONAL-RIDGE-BOUNDARY`.",
-        "tier": "T4 scoped analytic/exact/executed advance and method boundary. No tier promotion."
-      },
-      "detail_title": "Signed-first Cartan partition-refinement obstruction and rational ridge-deficit boundary",
-      "family_refs": [],
-      "id": "R-098",
-      "normalized_detail": {
-        "boundary": "R-098 does not prove a production posterior lower form, standalone Cartan one-use (4.11), rational shifted-Hessian form (6.5), complete coefficient-unconditioned `H_N`, REG, arbitrary progressive/revisit assembly, `OVERLAP_src`, the `q=10/9` Nelson estimate, cutoff or floor removal, an interacting measure, Sector-A closure, or a higher tier. R-092's regular no-revisit one-shot `H_C` theorem remains intact.",
-        "proof_anchor": "",
-        "publication_target": "",
-        "reuse": "",
-        "statement": ""
-      },
-      "summary": "Scoped T4 analytic/exact/executed advance and method boundary: the terminal posterior bracket is superadditive under, and only claims a theorem for, a matching split `B=sum_a B_a`, `R=sum_a R_a`; the production rational rank-one row is exactly a conditional ridge deficit. An exact recovery identity shows that standalone R-085 (6.5) still requires the low endpoint, once-only Cameron--Martin payment, and an upper form for the five unshifted families. An exact production-coefficient fibre has negative ridge deficit but is not a torus/control counterexample. For two oppositely oriented subvisits refining one source-block traverse and sharing the same fixed target heat and root derivative, each squared Cartan far atom is order `A^2` while the mixed `X^(1/2)Y^(1/2)` payload is only order `A`; the signed atoms cancel exactly before squaring. Hence refinement-stable nonnegative per-subvisit atomization is retired, while distinct temporal roots/heats, once-only pure-`X` payment, and the regular one-shot class are untouched. Derivative-free causal resampling supplies the bare kernel `<2^(-3k)`, but the signed grouped posterior form, standalone Cartan (4.11), rational (6.5), complete `H_N`, REG, arbitrary progressive assembly, `OVERLAP_src`, Nelson, a measure, and Sector A remain open",
-      "title": "Signed-first Cartan partition-refinement obstruction and rational ridge-deficit boundary"
-    },
-    {
-      "accepted_event_ids": [
-        "20260727-a13-r-097-terminalise-the-global-gram-form-to-a"
-      ],
-      "anchor": "r-097",
-      "claim_ref_basis": {},
-      "claim_refs": [],
-      "co_recorded_negative_tags": [
-        "NG-2026-07-27-A13-AUTOMATIC-POSTERIOR-COVARIANCE-POSITIVITY",
-        "NG-2026-07-27-A13-PREDICTABILITY-ONLY-LOW-HERMITE-AGGREGATE"
-      ],
-      "detail": {
-        "boundary": "R-097 does not prove the production-weighted posterior- covariance lower form, standalone Cartan one-use (4.11), rational shifted- Hessian form (6.5), complete coefficient-unconditioned `H_N`, REG, progressive/revisit `H_A`, `OVERLAP_src`, Nelson, cutoff or floor removal, an interacting measure, Sector-A closure, or a higher tier. R-087's spatial Cartan half (4.10) remains proved; (4.11) remains open.",
-        "complete_gram_row_telescope": "For a heat-lifted covariance-normal Gram energy `W_(r,B)^(J)(H)` and every strict-past shift `H`, value--derivative independence and heat-semigroup composition give `E[W_(r,B)^(J)(H)|F_(r-1)]=W_(r-1,B)^(J)(H)`. The diagonal heat correction is conditionally centered, so the complete predictable baseline sum telescopes in expectation to one terminal endpoint difference. This is not a pathwise telescope and is legal only after complete R-077 fresh-root cancellation and Gram-row reassembly.",
-        "evidence": "Proof note `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-global-gram-terminalization-covariance-deficit-reduction-260727-v1.0.tex.txt` and its paired PDF; strengthened primary and standard-library exact independent executables plus a hash-pinned integrated verifier and JSON artefacts under the A13 runs tree.",
-        "predictable_terminalization_and_method_boundaries": "Complete predictable Wick rows satisfy `sum_k E<B_k,T_kQ_(k-1)>=E<F_J,Q_J>` with `F_J=sum_k T_k^*B_k`, followed by an exact cross-Doob decomposition. Only conditional Hermite ranks one and two pair with a fresh quadratic Wick increment. Predictability alone is insufficient: repeated use of one old `H_2` root has aggregate norm `2N^2`. A bounded Rademacher Gram has zero raw Wick but a negative optimized Schur block, and a Gaussian Gram produces all forest ranks `H_0` through `H_4` with a negative determinant. These are exact abstract method obstructions, not production torus counterexamples.",
-        "result_id": "`A13-CLASSII-GLOBAL-GRAM-TERMINALIZATION-COVARIANCE-DEFICIT-REDUCTION`.",
-        "terminal_schur_and_posterior_normal_form": "Restoring the low endpoint and allocating one matrix payment `R`, the terminal endpoint has the exact theta-zero Schur square with `A=B_1+2R` and `Theta_R(B_1)=B_1-B_1 A^(-1)B_1`. If `F` contains the complete control, `Bbar=E_F B_1`, `q=E_F(B_1G)`, `mu_B=E[G|F,sigma(B_1)]`, and `V_B=Cov(G|F,sigma(B_1))`, then the remaining signed density is exactly `C_post = J_B + E_F[B_1:(V_B-Gamma)]`, where `J_B=E_F[mu_B^T B_1 mu_B]-q^T(Bbar+2R)^(-1)q>=0`. Equivalently `C_post=D_R+|r|^2`, so the raw forest, `q`, `r`, trace, low endpoint, and matrix payment each retain one owner.",
-        "tier": "T4 scoped analytic/exact/executed reduction and method boundary. No tier promotion."
-      },
-      "detail_title": "Full-frame terminalization and posterior-covariance bracket boundary",
-      "family_refs": [],
-      "id": "R-097",
-      "normalized_detail": {
-        "boundary": "R-097 does not prove the production-weighted posterior- covariance lower form, standalone Cartan one-use (4.11), rational shifted- Hessian form (6.5), complete coefficient-unconditioned `H_N`, REG, progressive/revisit `H_A`, `OVERLAP_src`, Nelson, cutoff or floor removal, an interacting measure, Sector-A closure, or a higher tier. R-087's spatial Cartan half (4.10) remains proved; (4.11) remains open.",
-        "proof_anchor": "",
-        "publication_target": "",
-        "reuse": "",
-        "statement": ""
-      },
-      "summary": "Scoped T4 analytic/exact/executed reduction: complete heat-lifted Gram rows obey a backward-heat martingale identity, so all predictable rational baselines telescope in signed expectation after the necessary diagonal heat correction. The terminal endpoint plus one allocated matrix payment has an exact theta-zero Schur completion. Conditioning on the complete control and terminal Gram coefficient reduces its signed part to `C_post=J_B+E[B:(V_B-Gamma)]=D_R+|r|^2`, with `J_B>=0`; predictable Wick rows also terminalize into one aggregate coefficient and cross-Doob ledger without differentiating adapted selectors. Exact Rademacher, Gaussian-forest, repeated-H2, and moving-perspective fixtures refute automatic bracket positivity and predictability-only root-uniform aggregate control, but are not production torus counterexamples. The next target is one production-weighted full-frame posterior-covariance lower form retaining every owner once. Cartan one-use (4.11), rational (6.5), complete `H_N`, REG, `OVERLAP_src`, Nelson, a measure, and Sector A remain open",
-      "title": "Full-frame terminalization and posterior-covariance bracket boundary"
     }
   ],
   "kind": "reusable_results",

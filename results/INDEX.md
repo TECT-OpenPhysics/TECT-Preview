@@ -5,10 +5,14 @@
 
 Authorities: `RESULTS-LEDGER.md`.
 
-**196 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
+**200 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
 
 | ID | Result | Tier/scope |
 |---|---|---|
+| [`R-366`](../RESULTS-LEDGER.md#r-366) | Finite fractional Liouvillian square-function shell bound | T0 |
+| [`R-365`](../RESULTS-LEDGER.md#r-365) | Finite spectral-gap commutator and Duhamel shell bound | T0 |
+| [`R-364`](../RESULTS-LEDGER.md#r-364) | Finite bond-spectral pinching and commutant shell reduction | T0 |
+| [`R-363`](../RESULTS-LEDGER.md#r-363) | Finite pinching reduction and state-weighted shell commutator | T0 |
 | [`R-362`](../RESULTS-LEDGER.md#r-362) | Finite local-Q2 positive replica folding and mixture convexity | T0 |
 | [`R-195`](../RESULTS-LEDGER.md#r-195) | Spatial constant-field lift of the A6 running-mass escape | T0 |
 | [`R-194`](../RESULTS-LEDGER.md#r-194) | Sharp running-mass counterterm boundary | T0 |
@@ -30,10 +34,6 @@ Authorities: `RESULTS-LEDGER.md`.
 | [`R-178`](../RESULTS-LEDGER.md#r-178) | Complete two-root cross-owner phase differentiation | T0 |
 | [`R-177`](../RESULTS-LEDGER.md#r-177) | A1 two-root common-heat and root-incidence ledger | T0 |
 | [`R-176`](../RESULTS-LEDGER.md#r-176) | Actual A1 two-root principal Cholesky covariance witnesses | T0 |
-| [`R-175`](../RESULTS-LEDGER.md#r-175) | Canonical duplicated covariance square-root basis interface | T0 claim-nonbearing exact kernel/interface cross-check; no claim tier or lifecycle change. |
-| [`R-174`](../RESULTS-LEDGER.md#r-174) | Exact two-root production-cylinder cross-synthesis boundary | T0 |
-| [`R-173`](../RESULTS-LEDGER.md#r-173) | R-163 deterministic dyadic-forest Lean margin core | T0 claim-nonbearing exact kernel cross-check; no claim tier or lifecycle change. |
-| [`R-172`](../RESULTS-LEDGER.md#r-172) | A1 Class-II owner mismatch Lean cross-check | T0 claim-nonbearing exact owner-interface audit; no claim tier or lifecycle change. |
 
 Search without loading the full ledger:
 

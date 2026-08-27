@@ -1,0 +1,113 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001206",
+  "title": "Refine FI-2b with bond-spectral commutant pinching",
+  "task_id": "T-054",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE",
+    "PA-CP1-ST8-Q3LOCK-ALL-EXHAUSTION-MIXTURE-L2-LOCALITY-AND-BETA-INDEPENDENT-CSTAR-DYNAMICS"
+  ],
+  "related": [
+    {
+      "id": "EXP-001205",
+      "relation": "continues"
+    },
+    {
+      "id": "EXP-001204",
+      "relation": "continues"
+    }
+  ],
+  "question": "Can the remaining FI-2b commutator be reduced onto the full spectral commutant of the bond generator, including degenerate bond-energy blocks, while retaining the state-weighted bound?",
+  "method": [
+    "Diagonalize the Hermitian doubled bond generator B and group equal spectral values into projections P_lambda.",
+    "Define E_B(X)=sum_lambda P_lambda X P_lambda and the centered residual X_perp=(X-Tr(omega X)I)-E_B(X-Tr(omega X)I).",
+    "Use the exact spectral-block identity [B,X]=[B,X_perp] and two-sided Hilbert--Schmidt Cauchy to bound Tr(omega[B,X]) without assuming [omega,B]=0.",
+    "Compare spectral residuals with the coordinate-pinched residuals in unweighted Frobenius norm; retain weighted comparison only as a diagnostic, not a theorem.",
+    "Run both lanes over every prefix, split orientation, time sign, history adjoint, beta value and local site of the R-362 V=2 cutoff-3,4 fixture.",
+    "Formalize spectral block/off-block splitting, commutator reduction, scalar-centering invariance and block disjointness in Lean R364."
+  ],
+  "finding": "R-364 advances FI-2b at finite level. Spectral pinching onto the bond commutant removes all exactly B-commuting blocks and retains the exact state-weighted Cauchy bound. Primary passes 777/777 and independent 776/776 over 256 contexts; integrated 51/51 and Lean R364 pass. The maximum spectral reduction error is 1.713e-13, the maximum spectral residual commutator is 1.715e-13, the maximum bound violation is -1.069e-14, and the maximum spectral-to-coordinate weighted residual ratio is 0.999917. The spectral residual remains nonzero with minimum Frobenius norm 0.503109.",
+  "verdict": "advanced",
+  "decision_reason": "The spectral commutant is the largest canonical finite block algebra invisible to the bond generator, so this refinement removes more irrelevant shell content than coordinate pinching while preserving the exact constant-one Cauchy bound. The finite data do not establish weighted monotonicity or any asymptotic uniformity.",
+  "adversarial_review": [
+    {
+      "axis": "degenerate bond spectrum",
+      "check": "Spectral blocks retain arbitrary matrices inside equal-energy eigenspaces rather than splitting them by a numerically chosen eigenvector basis.",
+      "disposition": "DISMISSED-FINITE"
+    },
+    {
+      "axis": "reference-bond commutation",
+      "check": "The trace terms are factorized separately, so no commutation of omega and B is used.",
+      "disposition": "DISMISSED"
+    },
+    {
+      "axis": "projection optimality",
+      "check": "The unweighted residual comparison follows from Hilbert--Schmidt block projection; weighted residual monotonicity is not asserted.",
+      "disposition": "VALID-WITH-SCOPE"
+    },
+    {
+      "axis": "spectral grouping",
+      "check": "A declared finite grouping tolerance is used and the residual commutator is checked at roundoff; exact/asymptotic spectral gap control remains open.",
+      "disposition": "VALID-WITH-MITIGATION"
+    },
+    {
+      "axis": "finite-to-uniform promotion",
+      "check": "V=2 and cutoffs 3,4 do not control the spectral off-block weighted norm in larger systems or limits.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "finite-time collar",
+      "check": "The result controls an infinitesimal generator expectation, not a finite-time local influence or common-alpha likelihood.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "Lean scope",
+      "check": "Lean proves finite entrywise spectral algebra only; matrix numerics and QFT reconstruction remain outside the kernel.",
+      "disposition": "UPHELD-OPEN"
+    }
+  ],
+  "evidence_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-local-q2-spectral-commutant-manifest.json#theorem",
+    "strategy/pre-a-cp1-st8-q3lock-local-q2-spectral-commutant-certificate-260827.md#2-spectral-pinching-theorem",
+    "codes/foundations/pre_a_cp1_st8_q3lock_local_q2_spectral_commutant.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_local_q2_spectral_commutant_independent.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_local_q2_spectral_commutant_verify.py#run",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-27-primary-pre_a_cp1_st8_q3lock_local_q2_spectral_commutant/primary.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-27-independent-pre_a_cp1_st8_q3lock_local_q2_spectral_commutant/independent.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-27-integrated-pre_a_cp1_st8_q3lock_local_q2_spectral_commutant/integrated.json#lean",
+    "verification/lean/Tect/R364.lean#spectral_offdiagonal_reduction",
+    "claims/C6-SPACETIME-SIGNATURE/notes/q3lock-local-q2-spectral-commutant-boundary-260827.md#q3lock-local-q2-spectral-commutant-boundary"
+  ],
+  "formal_integration": {
+    "results": [
+      "R-364"
+    ],
+    "negatives": [],
+    "events": [],
+    "lean": "R364 PASS",
+    "no_new_result": false,
+    "no_new_negative": true,
+    "no_changelog_event": false,
+    "no_pdf": true,
+    "no_tier_change": true
+  },
+  "formal_refs": {
+    "results": [
+      "R-364"
+    ],
+    "negatives": [],
+    "events": [
+      "20260827-r-364-finite-bond-spectral-pinching-and-commuta"
+    ]
+  },
+  "next_action": "Stress the spectral off-block weighted norm at larger cutoffs and graph volumes; pursue a modular/Lieb--Robinson estimate or record its exact growth obstruction.",
+  "boundary": "T0 claim-nonbearing finite exact refinement and finite actual-Q3 diagnostic. No uniform local collar, phase-weight theorem, common core, common alpha, OS/KMS/GNS reconstruction, mass gap, continuum, C6, Sector-A or Pre-A closure follows.",
+  "no_overclaim": "Spectral pinching removes exactly commuting bond blocks and improves a finite unweighted residual, but it does not prove weighted monotonicity, finite-time locality or any limit theorem.",
+  "recorded_at": "2026-08-29T11:00:00Z",
+  "reviewed_on": "2026-08-27",
+  "recorded_by": "Codex"
+}
