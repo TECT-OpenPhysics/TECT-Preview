@@ -1,0 +1,65 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001218",
+  "title": "Hilbert-Schmidt Lipschitz bridge for the capped Liouvillian kernel",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-RESOLVENT-ALGEBRA-EXACT-POLYNOMIAL-COMMON-ALPHA-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+  ],
+  "related": [{"id": "EXP-001217", "relation": "continues"}],
+  "question": "Can the unit scalar Lipschitz bound for the capped Matsubara kernel be lifted to a gap-free Hilbert-Schmidt functional-calculus comparison of finite Liouvillians, thereby isolating eigenvector rotation from spatial locality?",
+  "method": [
+    "Build the exact cutoff-2 V=2 edge doubled-bond commutator Liouvillian and perturb it with a noncommuting onsite momentum term.",
+    "Apply the exact capped functional calculus and the 64-term positive odd-Matsubara partial functional calculus at beta=1/2 and beta=1.",
+    "Measure Frobenius differences against the Liouvillian perturbation, check positivity and Hermiticity, and link the source R-375 run with its 2816 all-prefix context count.",
+    "Reconstruct the calculation with the independent R-372 helper and compile Lean R376 for scalar absolute-value nonexpansiveness."
+  ],
+  "finding": "The primary and independent lanes pass the finite noncommuting stress. The largest full-kernel Hilbert-Schmidt ratio is 0.9787544362168733, the largest 64-layer partial ratio is 0.9755896836319287, the commutator Frobenius norm is 2.5999999999999983, and the integrated verifier passes 76/76 with Lean R376 PASS.",
+  "verdict": "advanced",
+  "decision_reason": "The finite Schatten-2 functional-calculus stress supports a gap-free eigenvector-rotation interface: the observed ratios stay below the unit scalar budget without dividing by a spectral gap. It remains a small finite test, not a proof of the general theorem or of spatial locality, so no promotion is justified.",
+  "adversarial_review": [
+    {"axis": "scalar-to-operator", "check": "A finite Frobenius ratio could be mistaken for an operator-norm locality theorem.", "disposition": "UPHELD-OPEN"},
+    {"axis": "noncommuting perturbation", "check": "The perturbation might commute with the selected bond and fail to test eigenvector rotation.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "spectral gap", "check": "The comparison might hide an inverse minimum-gap factor.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "zero cusp", "check": "The absolute-value cusp could invalidate a derivative-based argument.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "partial budget", "check": "The finite odd-frequency budget could exceed one or the partial matrix ratio could exceed it.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "small fixture", "check": "Cutoff 2 at one volume could hide cutoff or volume growth.", "disposition": "UPHELD-OPEN"},
+    {"axis": "shell identity", "check": "Functional calculus of the finite Liouvillian might not equal the full weighted Q3 shell.", "disposition": "UPHELD-OPEN"},
+    {"axis": "independence", "check": "The independent lane might import the primary implementation.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "downstream promotion", "check": "The finite interface might silently close common alpha, C6 or Pre-A.", "disposition": "DISMISSED-FIREWALL"}
+  ],
+  "evidence_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-local-q2-kubo-mori-hs-lipschitz-bridge-manifest.json#finite_fixture",
+    "strategy/pre-a-cp1-st8-q3lock-local-q2-kubo-mori-hs-lipschitz-bridge-certificate-260827.md#verification",
+    "codes/foundations/pre_a_cp1_st8_q3lock_local_q2_kubo_mori_hs_lipschitz_bridge.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_local_q2_kubo_mori_hs_lipschitz_bridge_independent.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_local_q2_kubo_mori_hs_lipschitz_bridge_verify.py#run",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-28-primary-pre_a_cp1_st8_q3lock_local_q2_kubo_mori_hs_lipschitz_bridge/primary.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-28-independent-pre_a_cp1_st8_q3lock_local_q2_kubo_mori_hs_lipschitz_bridge/independent.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-28-integrated-pre_a_cp1_st8_q3lock_local_q2_kubo_mori_hs_lipschitz_bridge/integrated.json#derived",
+    "verification/lean/Tect/R376.lean#abs_value_lipschitz",
+    "claims/C6-SPACETIME-SIGNATURE/notes/q3lock-local-q2-kubo-mori-hs-lipschitz-bridge-boundary-260827.md#boundary"
+  ],
+  "formal_integration": {
+    "results": ["R-376"],
+    "negatives": [],
+    "events": ["20260828-r-376-hilbert-schmidt-lipschitz-bridge-for-the"],
+    "lean": "R376 PASS",
+    "no_new_result": false,
+    "no_new_negative": true,
+    "no_changelog_event": false,
+    "no_pdf": true,
+    "no_tier_change": true
+  },
+  "formal_refs": {"results": ["R-376"], "negatives": [], "events": ["20260828-r-376-hilbert-schmidt-lipschitz-bridge-for-the"]},
+  "next_action": "Establish the general Schatten-2 functional-calculus lemma for the capped kernel, then combine it with an energy-constrained local commutator estimate on the common polynomial core.",
+  "boundary": "T0 claim-nonbearing finite small-edge Liouvillian Hilbert-Schmidt checkpoint only. It does not prove an operator-norm bound, spatial locality, common core, common alpha, KMS/GNS dynamics, gap, continuum, C6, Sector-A or Pre-A.",
+  "no_overclaim": "R-376 isolates a finite eigenvector-rotation interface but does not prove the general operator theorem or any QFT closure.",
+  "provenance": "contemporaneous",
+  "recorded_at": "2026-08-29T22:00:00Z",
+  "reviewed_on": "2026-08-28",
+  "recorded_by": "Codex"
+}

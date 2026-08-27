@@ -5,10 +5,11 @@
 
 Authorities: `RESULTS-LEDGER.md`.
 
-**209 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
+**210 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
 
 | ID | Result | Tier/scope |
 |---|---|---|
+| [`R-376`](../RESULTS-LEDGER.md#r-376) | Hilbert-Schmidt Lipschitz bridge for the capped Liouvillian kernel | T0 |
 | [`R-375`](../RESULTS-LEDGER.md#r-375) | Summable odd-Matsubara Lipschitz budget for transition-energy perturbations | T0 |
 | [`R-374`](../RESULTS-LEDGER.md#r-374) | Positive odd-Matsubara resolvent expansion of the capped Gibbs kernel | T0 |
 | [`R-373`](../RESULTS-LEDGER.md#r-373) | Exact hyperbolic-tangent Gibbs kernel and capped local Dirichlet bound | T0 |
@@ -33,7 +34,6 @@ Authorities: `RESULTS-LEDGER.md`.
 | [`R-188`](../RESULTS-LEDGER.md#r-188) | Signed Jensen-defect telescope Lean cross-check | T0 |
 | [`R-187`](../RESULTS-LEDGER.md#r-187) | Adapted NEAR obstruction Lean cross-check | T0 |
 | [`R-186`](../RESULTS-LEDGER.md#r-186) | Temporal packet algebra Lean cross-check | T0 |
-| [`R-185`](../RESULTS-LEDGER.md#r-185) | Finite packet Cauchy Lean cross-check | T0 |
 
 Search without loading the full ledger:
 

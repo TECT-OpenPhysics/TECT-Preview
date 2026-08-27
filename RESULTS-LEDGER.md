@@ -39,6 +39,7 @@ policy in `governance/development-history.md`.
 | [R-192](#r-192) | Bounded complete finite production-cylinder integration trial | R-192 v1.0 is a T0 claim-nonbearing T-058 integration audit under EXP-000909. Lean and both exact lanes confirm the R-183 reserve fixtures, R-184 temporal identity and R-191 telescope, then stop at the first missing production heat/root raw-current map. The audit does not close the q-ledger, either A13 gate, Sector-A or Pre-A |
 | [R-194](#r-194) | Sharp running-mass counterterm boundary | R-194 v1.0 is a T0 claim-nonbearing Lean/Fraction boundary under EXP-000932. It proves the sharp local coefficient h_min=9*(a+2*b+c), a nonnegative endpoint correction, a subsharp negative witness, and a third-component escape with no uniform coercivity. The full renormalised A6 owner, tightness, removal, Sector-A and Pre-A remain open |
 | [R-195](#r-195) | Spatial constant-field lift of the A6 running-mass escape | R-195 v1.0 is a T0 claim-nonbearing Lean/Fraction spatial lift under EXP-000933. On the declared finite torus, constant fields multiply the R-194 correction by the exact volume and the volume-cancelled ratio is bounded by 6*s*(b+c)/r, so no positive volume-uniform coercivity holds even on that subspace. Full-field concentration, partition/tightness, A7, A13, Sector-A and Pre-A remain open |
+| [R-376](#r-376) | Hilbert-Schmidt Lipschitz bridge for the capped Liouvillian kernel | R-376 v1.0 is a T0 claim-nonbearing finite operator-interface checkpoint under EXP-001218. A noncommuting cutoff-2 edge Liouvillian stress gives maximum full-kernel Frobenius ratio 0.9787544362168733 and 64-layer ratio 0.9755896836319287 with 76/76 integrated assertions; general Schatten-2 proof, operator-norm locality, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
 | [R-375](#r-375) | Summable odd-Matsubara Lipschitz budget for transition-energy perturbations | R-375 v1.0 is a T0 claim-nonbearing finite scalar spectral-sensitivity checkpoint under EXP-001217. Each positive layer has slope envelope 8/omega_n^2, the 64-layer partial budget is 0.9968337774239473, and the exact capped kernel is unit-Lipschitz on 2816 all-prefix actual-Q3 contexts; eigenvector rotation, resolvent locality, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
 | [R-374](#r-374) | Positive odd-Matsubara resolvent expansion of the capped Gibbs kernel | R-374 v1.0 is a T0 claim-nonbearing finite analytic/executable checkpoint under EXP-001216. The first 64 positive resolvent layers form a monotone partial kernel with an explicit tail envelope over 2816 all-prefix contexts; resolvent locality, source/cutoff/volume uniformity, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
 | [R-373](#r-373) | Exact hyperbolic-tangent Gibbs kernel and capped local Dirichlet bound | R-373 v1.0 is a T0 claim-nonbearing finite analytic/executable checkpoint under EXP-001215. The theta-half Gibbs difference becomes a saturating kernel bounded by min(Delta,2/beta), unifying low-gap Dirichlet and high-gap variance forms across 2816 all-prefix contexts; capped-form uniformity, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
@@ -584,7 +585,36 @@ tier/lifecycle change follows. A13 gates remain open. No R-192 PDF is issued.
 
 
 
-<a id="r-375"></a>
+
+<a id="r-376"></a>
+### R-376 -- Hilbert-Schmidt Lipschitz bridge for the capped Liouvillian kernel
+
+**Result ID.** R-376 is a T0, claim-nonbearing finite operator-interface
+checkpoint under EXP-001218.
+
+**Statement.** The capped scalar kernel
+f_beta(t)=(2/beta)tanh(beta*|t|/2) is 1-Lipschitz.  R-376 tests the
+corresponding gap-free Hilbert-Schmidt functional-calculus interface on a
+finite noncommuting Liouvillian, together with the finite odd-Matsubara
+partial budget.
+
+**Verification.** The primary lane passes 32/32 assertions and the
+non-importing independent lane passes 30/30.  The integrated verifier passes
+76/76 and Lean R376 compiles.  The cutoff-2 V=2 edge perturbation has
+commutator Frobenius norm 2.5999999999999983.  The maximum full-kernel
+Frobenius ratio is 0.9787544362168733 and the maximum 64-layer ratio is
+0.9755896836319287; the corresponding finite budget is below one.  No
+spectral-gap denominator is used.
+
+**Boundary.** This is a small finite Hilbert-Schmidt stress and an analytic
+route interface, not a proof of the general Schatten-2 theorem.  It does not
+give an operator-norm Lieb--Robinson bound, spatial resolvent locality,
+source/volume/cutoff uniformity, a common core or a common alpha.  No
+OS/KMS/GNS transfer, gap, continuum, C6, Sector-A or Pre-A closure follows.
+No new negative result, tier change, or R-376 PDF is issued.
+
+**Proven in:** manifest, certificate, Lean entrypoint, primary script,
+independent script, integrated verifier, scope note, and saved run artefacts.<a id="r-375"></a>
 ### R-375 -- Summable odd-Matsubara Lipschitz budget for transition-energy perturbations
 
 **Result ID.** R-375 is a T0, claim-nonbearing finite
