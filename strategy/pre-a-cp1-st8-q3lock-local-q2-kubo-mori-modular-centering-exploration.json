@@ -1,0 +1,69 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001214",
+  "title": "Critical theta-half modular centering and Gibbs variance reduction",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-ENERGY-WEIGHTED-COMMUTATOR-GEVREY-LR-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+  ],
+  "related": [
+    {"id": "EXP-001213", "relation": "continues"},
+    {"id": "EXP-001212", "relation": "continues"},
+    {"id": "EXP-001204", "relation": "continues"}
+  ],
+  "question": "Can the theta-half Gibbs cancellation be centered in the bond Gibbs state itself, replacing the raw local second moment by a thermal variance without changing the Kubo-Mori shell, and does the finite Q3 stress reveal whether this removes the observed cutoff growth?",
+  "method": [
+    "Use the actual-Q3 V=2 edge at d=3,4,5,6 and V=4 square at d=2 with all translated measured sites and selected bonds, both split orientations, signs, history adjoints, beta values and every prefix position.",
+    "Diagonalize each doubled-bond generator, construct its finite Gibbs logarithmic-mean weights, and subtract the bond Gibbs mean of the moved witness in that eigenbasis.",
+    "Check the exact variance identity Var_rho(X)=Tr(rho X^2)-(Tr(rho X))^2 and the fact that diagonal energy-gap-zero terms make the theta-half shell invariant under scalar centering.",
+    "Use the Gibbs pair inequality to check the finite bound N_(1/2)^2 <= (4/beta) Var_rho(X), rebuild the table in a non-importing independent lane, and compile Lean R372."
+  ],
+  "finding": "Primary and independent lanes each pass 17002/17002 assertions over 2816 all-prefix contexts; the integrated verifier passes 114/114 and Lean R372 passes. The largest primary-independent numeric difference is 2.132e-13. Bond-Gibbs centering changes the maximum sampled local quantity from raw second moment 44.58328971021096 to thermal variance 41.64826651661874, with exact shell-centering error 0 and variance identity error at most 1.421e-14. The edge maxima by cutoff are 2.733031855844076, 3.4283208579615874, 4.703343964629605 and 41.64826651661874 for d=3,4,5,6; the square d=2 values are 1 up to roundoff.",
+  "verdict": "advanced",
+  "decision_reason": "Modular centering removes the bond-Gibbs scalar mode exactly and replaces the R-371 raw second-moment premise by the sharper thermal variance premise. The finite edge stress still rises sharply at d=6, so the remaining cutoff-uniform variance gate is not discharged. The idea is therefore retained as a sharper direct-D,delta-D target and an explicit finite obstruction to treating centering alone as a uniformity proof.",
+  "adversarial_review": [
+    {"axis": "which state centers", "check": "The subtraction uses the same doubled-bond Gibbs weights that define the Kubo-Mori shell, not the unrelated full interacting Gibbs mean.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "variance algebra", "check": "The finite row identity is checked as Var=second moment-minus-mean squared and Lean proves the finite weighted-sum decomposition.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "zero-gap diagonal", "check": "Centering changes only diagonal spectral entries; the factor |lambda_i-lambda_j| is exactly zero on those entries, so the shell is unchanged.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "positivity and sign", "check": "Nonnegative Gibbs weights, pairwise |p-q|<=p+q, and nonnegative squared centered entries are checked; no sign cancellation is assumed.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "uniformity", "check": "The edge variance grows from 2.7330 at d=3 to 41.6483 at d=6; finite centering is not promoted to cutoff uniformity.", "disposition": "UPHELD-OPEN"},
+    {"axis": "proxy state", "check": "The weights are those of the finite doubled local bond proxy, not a proved global KMS state or thermodynamic limit.", "disposition": "UPHELD-OPEN"},
+    {"axis": "independence", "check": "The independent lane reconstructs the oscillator, Q3 graph, Gibbs state, witness, spectra and histories without importing the primary R372 module.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "Lean scope", "check": "Lean R372 checks finite weighted variance and pair inequalities only; matrix spectra, trace passage, common core and limits remain executable/open.", "disposition": "UPHELD"},
+    {"axis": "QFT promotion", "check": "Common core, common alpha, OS/KMS/GNS dynamics, mass gap, continuum, C6, Sector-A and Pre-A remain open.", "disposition": "UPHELD-OPEN"}
+  ],
+  "evidence_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-local-q2-kubo-mori-modular-centering-manifest.json#finite_fixture",
+    "strategy/pre-a-cp1-st8-q3lock-local-q2-kubo-mori-modular-centering-certificate-260827.md#verification",
+    "codes/foundations/pre_a_cp1_st8_q3lock_local_q2_kubo_mori_modular_centering.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_local_q2_kubo_mori_modular_centering_independent.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_local_q2_kubo_mori_modular_centering_verify.py#run",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-28-primary-pre_a_cp1_st8_q3lock_local_q2_kubo_mori_modular_centering/primary.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-28-independent-pre_a_cp1_st8_q3lock_local_q2_kubo_mori_modular_centering/independent.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-28-integrated-pre_a_cp1_st8_q3lock_local_q2_kubo_mori_modular_centering/integrated.json#derived",
+    "verification/lean/Tect/R372.lean#weighted_variance_decomposition",
+    "claims/C6-SPACETIME-SIGNATURE/notes/q3lock-local-q2-kubo-mori-modular-centering-boundary-260827.md#boundary"
+  ],
+  "formal_integration": {
+    "results": ["R-372"],
+    "negatives": [],
+    "events": ["20260828-r-372-critical-theta-half-modular-centering-and"],
+    "lean": "R372 PASS",
+    "no_new_result": false,
+    "no_new_negative": true,
+    "no_changelog_event": false,
+    "no_pdf": true,
+    "no_tier_change": true
+  },
+  "formal_refs": {"results": ["R-372"], "negatives": [], "events": ["20260828-r-372-critical-theta-half-modular-centering-and"]},
+  "next_action": "Prove or obstruct a source-, volume- and cutoff-uniform thermal-variance estimate on a Hamiltonian-derived common core; combine it with the R-370 frequency split only after that estimate is analytic.",
+  "boundary": "T0 claim-nonbearing finite modular-centering checkpoint only. The doubled local bond Gibbs state is a proxy; variance uniformity, global KMS, common core, common alpha, OS/KMS/GNS dynamics, gap, continuum, C6, Sector-A and Pre-A remain open.",
+  "no_overclaim": "R-372 removes only the bond-Gibbs scalar mode. Its finite edge variance still grows sharply, so no uniform Q3 or QFT conclusion follows.",
+  "provenance": "contemporaneous",
+  "recorded_at": "2026-08-29T18:00:00Z",
+  "reviewed_on": "2026-08-28",
+  "recorded_by": "Codex"
+}

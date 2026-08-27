@@ -39,6 +39,7 @@ policy in `governance/development-history.md`.
 | [R-192](#r-192) | Bounded complete finite production-cylinder integration trial | R-192 v1.0 is a T0 claim-nonbearing T-058 integration audit under EXP-000909. Lean and both exact lanes confirm the R-183 reserve fixtures, R-184 temporal identity and R-191 telescope, then stop at the first missing production heat/root raw-current map. The audit does not close the q-ledger, either A13 gate, Sector-A or Pre-A |
 | [R-194](#r-194) | Sharp running-mass counterterm boundary | R-194 v1.0 is a T0 claim-nonbearing Lean/Fraction boundary under EXP-000932. It proves the sharp local coefficient h_min=9*(a+2*b+c), a nonnegative endpoint correction, a subsharp negative witness, and a third-component escape with no uniform coercivity. The full renormalised A6 owner, tightness, removal, Sector-A and Pre-A remain open |
 | [R-195](#r-195) | Spatial constant-field lift of the A6 running-mass escape | R-195 v1.0 is a T0 claim-nonbearing Lean/Fraction spatial lift under EXP-000933. On the declared finite torus, constant fields multiply the R-194 correction by the exact volume and the volume-cancelled ratio is bounded by 6*s*(b+c)/r, so no positive volume-uniform coercivity holds even on that subspace. Full-field concentration, partition/tightness, A7, A13, Sector-A and Pre-A remain open |
+| [R-372](#r-372) | Critical theta-half modular centering and Gibbs variance reduction | R-372 v1.0 is a T0 claim-nonbearing finite analytic/executable checkpoint under EXP-001214. Bond-Gibbs modular centering leaves the theta-half shell unchanged and replaces the raw local second-moment premise by a thermal variance across 2816 all-prefix contexts; the edge variance still grows to 41.648267 at d=6, so uniform variance, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
 | [R-371](#r-371) | Critical theta-half Gibbs cancellation and local second-moment bound | R-371 v1.0 is a T0 claim-nonbearing finite analytic/executable checkpoint under EXP-001213. At theta=1/2, `L_ij|lambda_i-lambda_j|=|p_i-p_j|/beta` and the shell is bounded by `(4/beta)Tr(rho_bond X^2)` across 2816 all-prefix contexts; uniform second-moment control, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
 | [R-370](#r-370) | Kubo-Mori Liouvillian energy-window and tail decomposition | R-370 v1.0 is a T0 claim-nonbearing finite diagnostic under EXP-001212. The doubled-bond theta-half shell splits exactly into low/high transition-energy parts across 2816 all-prefix contexts; at edge d=6 the high-gap squared-norm fraction reaches 0.891745 for E=1, while square d=2 is low-gap at E>=2. A cutoff-independent collar, Gibbs-tail theorem, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
 | [R-369](#r-369) | Kubo-Mori translation and exhaustion-shape stress | R-369 v1.0 is a T0 claim-nonbearing finite stress under EXP-001211. All translated bond/site positions pass on the V=2 edge and V=4 square with 2816 all-prefix contexts; square values stay near 3.2e-08--3.5e-08 while edge values grow to 1.208758 at d=6, so source/shape/cutoff/volume-uniform comparison, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
@@ -579,6 +580,34 @@ tier/lifecycle change follows. A13 gates remain open. No R-192 PDF is issued.
 <a id="r-364"></a>
 
 
+<a id="r-372"></a>
+### R-372 -- Critical theta-half modular centering and Gibbs variance reduction
+
+**Result ID.** R-372 is a T0, claim-nonbearing finite analytic/executable
+checkpoint under EXP-001214.
+
+**Statement.** In the doubled-bond Gibbs eigenbasis, subtracting the bond-Gibbs
+mean `m=Tr(rho_bond X)` from a Hermitian moved witness changes only zero-gap
+diagonal entries.  The theta-half Kubo--Mori shell is therefore unchanged,
+while its row-sum control sharpens to
+`N_(1/2)^2 <= (4/beta) Var_(rho_bond)(X)`.
+
+**Verification.** Primary and non-importing independent lanes each pass
+`17002/17002` assertions over `2816` all-prefix contexts.  The integrated
+verifier passes `114/114`, Lean R372 compiles, and the largest
+primary-independent numeric difference is `2.132e-13`.  The largest raw local
+second moment is `44.58328971021096`, while the modular thermal variance is
+`41.64826651661874`; the centering identity residual is at most `1.421e-14`
+and the shell-centering residual is zero in the stored run.  Edge variance
+maxima grow from `2.733032` at `d=3` to `41.648267` at `d=6`.
+
+**Boundary.** This is a finite algebraic and proxy-state result only.  The
+bond Gibbs state is not the full interacting KMS state; source/volume/cutoff-
+uniform variance, common core, common alpha, global KMS transfer, OS/KMS/GNS
+dynamics, a mass gap, continuum, C6, Sector-A and Pre-A remain open.  No
+R-372 PDF is issued.
+
+**Proven in:** [manifest](strategy/pre-a-cp1-st8-q3lock-local-q2-kubo-mori-modular-centering-manifest.json), [certificate](strategy/pre-a-cp1-st8-q3lock-local-q2-kubo-mori-modular-centering-certificate-260827.md), [Lean entrypoint](verification/lean/Tect/R372.lean), [primary script](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_kubo_mori_modular_centering.py), [independent script](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_kubo_mori_modular_centering_independent.py), [integrated verifier](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_kubo_mori_modular_centering_verify.py), [scope note](claims/C6-SPACETIME-SIGNATURE/notes/q3lock-local-q2-kubo-mori-modular-centering-boundary-260827.md), and stored run artefacts.
 <a id="r-371"></a>
 ### R-371 -- Critical theta-half Gibbs cancellation and local second-moment bound
 

@@ -5,10 +5,11 @@
 
 Authorities: `RESULTS-LEDGER.md`.
 
-**205 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
+**206 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
 
 | ID | Result | Tier/scope |
 |---|---|---|
+| [`R-372`](../RESULTS-LEDGER.md#r-372) | Critical theta-half modular centering and Gibbs variance reduction | T0 |
 | [`R-371`](../RESULTS-LEDGER.md#r-371) | Critical theta-half Gibbs cancellation and local second-moment bound | T0 |
 | [`R-370`](../RESULTS-LEDGER.md#r-370) | Kubo-Mori Liouvillian energy-window and tail decomposition | T0 |
 | [`R-369`](../RESULTS-LEDGER.md#r-369) | Kubo-Mori translation and exhaustion-shape stress | T0 |
@@ -33,7 +34,6 @@ Authorities: `RESULTS-LEDGER.md`.
 | [`R-184`](../RESULTS-LEDGER.md#r-184) | Two-block Douglas identity Lean cross-check | T0 |
 | [`R-183`](../RESULTS-LEDGER.md#r-183) | Diagonal reserve margin for the feedback-pulled cross-Hessian | T0 |
 | [`R-182`](../RESULTS-LEDGER.md#r-182) | Feedback-pulled cross-Hessian margin Lean cross-check | T0 |
-| [`R-181`](../RESULTS-LEDGER.md#r-181) | Finite two-root feedback mixed-Gram Lean cross-check | T0 |
 
 Search without loading the full ledger:
 
