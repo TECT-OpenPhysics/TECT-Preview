@@ -1166,6 +1166,124 @@
       "task_id": "T-054",
       "title": "Local Kubo--Mori weighting of the fractional shell with arbitrary prefixes",
       "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "axis": "bond translation",
+          "check": "All four square bond terms and the edge bond are selected explicitly; no last-bond-only convention is hidden.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "source translation",
+          "check": "Every site in the edge and square fixtures is measured, while unlisted shapes remain out of scope.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "prefix coverage",
+          "check": "Every position in both forward and reverse split orders is included.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "cutoff growth",
+          "check": "The d=3..6 edge maxima grow markedly and are not promoted to divergence or uniformity.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "weight scope",
+          "check": "The Kubo--Mori probabilities come from the finite doubled local bond, not the full interacting KMS state.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "independence",
+          "check": "The independent lane rebuilds model, weights, witnesses, spectra and prefixes without importing primary R-369.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "QFT promotion",
+          "check": "Common core, common alpha, OS/KMS/GNS dynamics, gap, continuum, C6, Sector-A and Pre-A remain open.",
+          "disposition": "UPHELD-OPEN"
+        }
+      ],
+      "boundary": "T0 claim-nonbearing finite translation/shape stress only. The local doubled-bond Gibbs proxy is not a global KMS state and the cutoff, volume, source and shape uniform gates remain open, as do common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "The weighted finite shell is stable across all translated square bonds and source sites, so the R-368 suppression is not tied to one selected bond. However, the edge cutoff sequence grows substantially from d=3 to d=6. This keeps the regulator-uniform theorem open and identifies the need for an analytic cutoff-independent Dirichlet collar.",
+      "evidence_refs": [
+        "strategy/pre-a-cp1-st8-q3lock-local-q2-kubo-mori-translation-shape-manifest.json#finite_fixture",
+        "strategy/pre-a-cp1-st8-q3lock-local-q2-kubo-mori-translation-shape-certificate-260827.md#2-verification",
+        "codes/foundations/pre_a_cp1_st8_q3lock_local_q2_kubo_mori_translation_shape.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_local_q2_kubo_mori_translation_shape_independent.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_local_q2_kubo_mori_translation_shape_verify.py#run",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-27-primary-pre_a_cp1_st8_q3lock_local_q2_kubo_mori_translation_shape/primary.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-27-independent-pre_a_cp1_st8_q3lock_local_q2_kubo_mori_translation_shape/independent.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-27-integrated-pre_a_cp1_st8_q3lock_local_q2_kubo_mori_translation_shape/integrated.json#lean",
+        "verification/lean/Tect/R369.lean#weighted_half_envelope",
+        "claims/C6-SPACETIME-SIGNATURE/notes/q3lock-local-q2-kubo-mori-translation-shape-boundary-260827.md#boundary"
+      ],
+      "finding": "Primary and independent lanes each pass 8601/8601 assertions over 2816 contexts; integrated passes 104/104 and Lean R369 passes. The maximum weighted fractional norm is 1.208758407679001 with bound 0.4029194692263337 and change-to-bound ratio 0.3868613066541026. Edge per-cutoff maxima are 0.0896064105, 0.2005166806, 0.3423910272 and 1.2087584077 for d=3..6; square bond maxima range from 3.1737537048e-08 to 3.5303692708e-08. The largest primary-independent difference is 4.219e-15.",
+      "formal_integration": {
+        "events": [
+          "20260827-r-369-kubo-mori-translation-and-shape-stress-20"
+        ],
+        "lean": "R369 PASS",
+        "negatives": [],
+        "no_changelog_event": false,
+        "no_new_negative": true,
+        "no_new_result": false,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "results": [
+          "R-369"
+        ]
+      },
+      "formal_refs": {
+        "events": [
+          "20260827-r-369-kubo-mori-translation-and-shape-stress-20"
+        ],
+        "negatives": [],
+        "results": [
+          "R-369"
+        ]
+      },
+      "gate_ids": [
+        "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+        "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+        "PA-CP1-ST8-Q3LOCK-ALL-BOND-UNITARY-TROTTER-GRAPH-LIPSCHITZ-AND-COMMON-ALPHA-CLOSURE"
+      ],
+      "id": "EXP-001211",
+      "method": [
+        "Use actual-Q3 V=2 edge cutoffs 3,4,5,6 with both sites and V=4 square cutoff 2 with all four sites and all four bond terms.",
+        "For every selected bond construct the doubled-bond Gibbs probabilities and the Kubo--Mori logarithmic-mean weights at beta 1/2 and 1.",
+        "Retain every prefix position in both split orders, time signs and history adjoints and evaluate the theta=1/2 weighted phase bound.",
+        "Rebuild the complete table in a non-importing independent lane, compare global, regime and per-bond maxima, and compile Lean R369."
+      ],
+      "next_action": "Derive an analytic local Kubo--Mori/Dirichlet collar with cutoff-independent weights and then test source-complete exhaustion shapes; register any rigorous lower-growth obstruction separately.",
+      "no_overclaim": "R-369 records finite position stability together with finite cutoff growth; it neither proves a uniform theorem nor supplies a QFT closure.",
+      "provenance": "contemporaneous",
+      "question": "Does the local Kubo--Mori weighted theta=1/2 shell remain controlled when the measured source site and the selected bond are translated across edge and square shapes?",
+      "recorded_at": "2026-08-29T15:00:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001210",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001209",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001201",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-08-27",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Source-translation and exhaustion-shape stress of the weighted fractional shell",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",

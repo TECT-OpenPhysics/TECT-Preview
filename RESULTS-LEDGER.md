@@ -39,6 +39,7 @@ policy in `governance/development-history.md`.
 | [R-192](#r-192) | Bounded complete finite production-cylinder integration trial | R-192 v1.0 is a T0 claim-nonbearing T-058 integration audit under EXP-000909. Lean and both exact lanes confirm the R-183 reserve fixtures, R-184 temporal identity and R-191 telescope, then stop at the first missing production heat/root raw-current map. The audit does not close the q-ledger, either A13 gate, Sector-A or Pre-A |
 | [R-194](#r-194) | Sharp running-mass counterterm boundary | R-194 v1.0 is a T0 claim-nonbearing Lean/Fraction boundary under EXP-000932. It proves the sharp local coefficient h_min=9*(a+2*b+c), a nonnegative endpoint correction, a subsharp negative witness, and a third-component escape with no uniform coercivity. The full renormalised A6 owner, tightness, removal, Sector-A and Pre-A remain open |
 | [R-195](#r-195) | Spatial constant-field lift of the A6 running-mass escape | R-195 v1.0 is a T0 claim-nonbearing Lean/Fraction spatial lift under EXP-000933. On the declared finite torus, constant fields multiply the R-194 correction by the exact volume and the volume-cancelled ratio is bounded by 6*s*(b+c)/r, so no positive volume-uniform coercivity holds even on that subspace. Full-field concentration, partition/tightness, A7, A13, Sector-A and Pre-A remain open |
+| [R-369](#r-369) | Kubo-Mori translation and exhaustion-shape stress | R-369 v1.0 is a T0 claim-nonbearing finite stress under EXP-001211. All translated bond/site positions pass on the V=2 edge and V=4 square with 2816 all-prefix contexts; square values stay near 3.2e-08--3.5e-08 while edge values grow to 1.208758 at d=6, so source/shape/cutoff/volume-uniform comparison, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
 | [R-368](#r-368) | Local Kubo-Mori weighted fractional shell with arbitrary-prefix coverage | R-368 v1.0 is a T0 claim-nonbearing finite topology diagnostic under EXP-001210. The local Gibbs logarithmic-mean weight suppresses the R-367 unweighted d=6 maximum from 69.908699 to 1.208758 across 656 all-prefix contexts, but the weight is a doubled-bond proxy; cutoff/volume-uniform comparison, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
 | [R-367](#r-367) | Larger-cutoff and volume stress for the fractional Liouvillian shell | R-367 v1.0 is a T0 claim-nonbearing finite stress under EXP-001209. The theta=1/2 pilot passes on V=2 d=3..6 and V=4 d=2 selected prefixes, but the unweighted fractional norm reaches 69.908699 at V=2,d=6; this is a finite growth warning, not a divergence theorem. Uniform modular comparison, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
 | [R-366](#r-366) | Finite fractional Liouvillian square-function shell bound | R-366 v1.0 is a T0 claim-nonbearing finite interpolation result under EXP-001208. The exact spectral phase envelope gives a fractional `|ad_B|^theta` finite-time bound and density-trace corollary, with a primary/independent/Lean Q3 pilot. A local modular/Dirichlet comparison, source/cutoff/volume/history uniformity, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
@@ -575,6 +576,36 @@ tier/lifecycle change follows. A13 gates remain open. No R-192 PDF is issued.
 <a id="r-363"></a>
 <a id="r-364"></a>
 
+
+<a id="r-369"></a>
+### R-369 -- Kubo-Mori translation and exhaustion-shape stress
+
+**Result ID.** R-369 is a T0, claim-nonbearing finite stress under
+EXP-001211.
+
+**Statement.** The R-368 local Kubo-Mori theta-half shell is tested on the
+actual-Q3 `V=2` edge at cutoffs `d=3,4,5,6` and on the `V=4` square at
+`d=2`.  Both edge sites and all four square sites are measured, and the
+edge bond plus all four square bond terms are selected.  Every split prefix
+position, orientation, time sign, history adjoint and beta value is retained.
+
+**Verification.** Primary and non-importing independent lanes each pass
+`8601/8601` assertions over `2816` contexts.  The integrated verifier passes
+`104/104`, Lean R369 compiles, and the largest primary-independent numeric
+difference is `4.219e-15`.  The global weighted fractional norm is
+`1.208758407679001`, with bound `0.4029194692263337` and largest
+change-to-bound ratio `0.3868613066541026`.  The edge per-cutoff maxima are
+`0.0896064105`, `0.2005166806`, `0.3423910272`, and `1.2087584077`; the four
+square-bond maxima lie between `3.1737537048e-08` and `3.5303692708e-08`.
+
+**Boundary.** Translation/shape stability in this finite fixture does not
+provide a source-, shape-, cutoff- or volume-uniform comparison.  The
+Kubo-Mori weight is a doubled local bond Gibbs proxy rather than a full
+interacting KMS state, and the edge cutoff growth remains unexplained
+analytically.  Common core, common alpha, OS/KMS/GNS dynamics, a mass gap,
+continuum, C6, Sector-A and Pre-A remain open.  No R-369 PDF is issued.
+
+**Proven in:** [manifest](strategy/pre-a-cp1-st8-q3lock-local-q2-kubo-mori-translation-shape-manifest.json), [certificate](strategy/pre-a-cp1-st8-q3lock-local-q2-kubo-mori-translation-shape-certificate-260827.md), [Lean entrypoint](verification/lean/Tect/R369.lean), [primary script](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_kubo_mori_translation_shape.py), [independent script](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_kubo_mori_translation_shape_independent.py), [integrated verifier](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_kubo_mori_translation_shape_verify.py), [scope note](claims/C6-SPACETIME-SIGNATURE/notes/q3lock-local-q2-kubo-mori-translation-shape-boundary-260827.md), and stored run artefacts.
 
 <a id="r-368"></a>
 ### R-368 -- Local Kubo-Mori weighted fractional shell with arbitrary-prefix coverage

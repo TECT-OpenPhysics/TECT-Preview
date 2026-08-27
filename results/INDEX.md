@@ -5,10 +5,11 @@
 
 Authorities: `RESULTS-LEDGER.md`.
 
-**202 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
+**203 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
 
 | ID | Result | Tier/scope |
 |---|---|---|
+| [`R-369`](../RESULTS-LEDGER.md#r-369) | Kubo-Mori translation and exhaustion-shape stress | T0 |
 | [`R-368`](../RESULTS-LEDGER.md#r-368) | Local Kubo-Mori weighted fractional shell with arbitrary-prefix coverage | T0 |
 | [`R-367`](../RESULTS-LEDGER.md#r-367) | Larger-cutoff and volume stress for the fractional Liouvillian shell | T0 |
 | [`R-366`](../RESULTS-LEDGER.md#r-366) | Finite fractional Liouvillian square-function shell bound | T0 |
@@ -33,7 +34,6 @@ Authorities: `RESULTS-LEDGER.md`.
 | [`R-181`](../RESULTS-LEDGER.md#r-181) | Finite two-root feedback mixed-Gram Lean cross-check | T0 |
 | [`R-180`](../RESULTS-LEDGER.md#r-180) | Lean scalar triangular majorant cross-check | T0 |
 | [`R-179`](../RESULTS-LEDGER.md#r-179) | Future-variance and forest owner-half coefficient ledger | T0 |
-| [`R-178`](../RESULTS-LEDGER.md#r-178) | Complete two-root cross-owner phase differentiation | T0 |
 
 Search without loading the full ledger:
 

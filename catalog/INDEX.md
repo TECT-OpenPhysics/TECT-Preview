@@ -5,30 +5,30 @@ Compact generated reader surface. The complete current machine inventory is
 `../CATALOG.md` is a frozen compatibility volume at commit `4db22f4e`
 for historical verifiers and no longer grows.
 
-**6635 artefacts** · **49 live claim cards** ·
+**6647 artefacts** · **49 live claim cards** ·
 130 superseded artefacts retained
 
 ## By kind
 
 | Kind | Artefacts | Canonical bytes |
 |---|---:|---:|
-| Claim cards (registry layer) (`claim-card`) | 604 | 5,108,875 |
-| Working proof notes (on claim cards) (`proof-note`) | 934 | 107,208,291 |
+| Claim cards (registry layer) (`claim-card`) | 604 | 5,109,143 |
+| Working proof notes (on claim cards) (`proof-note`) | 935 | 107,209,486 |
 | Theory synthesis documents (Layer 2) (`synthesis`) | 345 | 7,746,932 |
 | Migrated legacy notes (immutable) (`archive-note`) | 72 | 1,509,315 |
 | Migrated legacy scripts (runnable) (`archive-script`) | 22 | 319,000 |
 | Migrated legacy run artefacts (immutable) (`archive-artefact`) | 21 | 302,036 |
 | Reviewed legacy research records (`legacy-research-record`) | 140 | 164,393 |
 | Generated legacy sector, claim, and gate views (`legacy-research-view`) | 16 | 205,000 |
-| Fresh run artefacts (TSv2 evidence) (`run-artefact`) | 1675 | 94,440,106 |
-| Domain codes (`code`) | 1359 | 22,987,792 |
-| Verification harness (`verification`) | 464 | 14,056,402 |
+| Fresh run artefacts (TSv2 evidence) (`run-artefact`) | 1678 | 94,540,425 |
+| Domain codes (`code`) | 1362 | 23,041,629 |
+| Verification harness (`verification`) | 466 | 14,075,736 |
 | Papers (publication layer) (`paper`) | 1 | 546 |
 | Website (publication layer) (`website`) | 4 | 20,775 |
-| Registries and ledgers (`registry`) | 42 | 1,560,210 |
+| Registries and ledgers (`registry`) | 42 | 1,560,970 |
 | Governance policies (`policy`) | 22 | 201,476 |
-| Root documents (`root-doc`) | 14 | 1,746,730 |
-| Other tracked files (`other`) | 900 | 18,315,086 |
+| Root documents (`root-doc`) | 14 | 1,749,469 |
+| Other tracked files (`other`) | 903 | 18,341,682 |
 
 ## Use
 
