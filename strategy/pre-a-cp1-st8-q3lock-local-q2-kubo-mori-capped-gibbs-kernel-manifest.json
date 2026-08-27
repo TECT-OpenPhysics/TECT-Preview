@@ -1,0 +1,60 @@
+{
+  "schema": "tect/pre-a-cp1-st8-q3lock-local-q2-kubo-mori-capped-gibbs-kernel/1.0",
+  "exploration_id": "EXP-001215",
+  "result_id": "R-373",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "claim_bearing": false,
+  "parent_explorations": ["EXP-001214", "EXP-001213", "EXP-001212"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-ENERGY-WEIGHTED-COMMUTATOR-GEVREY-LR-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+  ],
+  "title": "Exact hyperbolic-tangent Gibbs kernel and capped local Dirichlet bound",
+  "question": "Can the critical theta-half Gibbs difference be kept as an exact saturating transition kernel, giving a gap-free local bound that interpolates between a low-gap Dirichlet form and a high-gap variance cap?",
+  "finite_fixture": {
+    "regimes": [
+      {"shape": "edge", "volume": 2, "cutoff_values": [3, 4, 5, 6], "site_values": [0, 1], "bond_term_indices": [2]},
+      {"shape": "square", "volume": 4, "cutoff_values": [2], "site_values": [0, 1, 2, 3], "bond_term_indices": [4, 5, 6, 7]}
+    ],
+    "beta_values": ["1/2", "1"],
+    "time_sign_values": [-1, 1],
+    "history_adjoint_values": [0, 1],
+    "theta": "1/2",
+    "prefix_policy": "all_positions",
+    "time_step": "1/18",
+    "hbar": "1",
+    "parameters": {"chi": "1", "r": "-1", "g": "3/5", "c": "3/5", "lambda": "1/10"},
+    "finite_tolerance": 1e-9,
+    "agreement_tolerance": 2e-8,
+    "log_mean_gap_tolerance": 1e-12
+  },
+  "scope": {
+    "gibbs_hyperbolic_kernel_identity_finite_checked": true,
+    "capped_kernel_envelope_finite_checked": true,
+    "capped_local_dirichlet_bound_finite_checked": true,
+    "local_variance_uniformity_proved": false,
+    "capped_dirichlet_uniformity_proved": false,
+    "weighted_cutoff_uniformity_proved": false,
+    "weighted_volume_uniformity_proved": false,
+    "source_uniformity_proved": false,
+    "shape_uniformity_proved": false,
+    "local_modular_dirichlet_comparison_proved": false,
+    "common_core_closed": false,
+    "common_alpha_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "promotion_boundary": "R-373 is a finite algebraic and proxy-state checkpoint. It identifies an exact capped Gibbs transition kernel and checks its row bound on the actual-Q3 edge and square fixtures; it does not prove a uniform capped-Dirichlet estimate or global KMS transfer.",
+  "next_action": "Prove a source-, volume- and cutoff-uniform estimate for the capped local Dirichlet form on a Hamiltonian-derived common core, using the low-gap/high-gap saturation split without assuming a uniform spectral gap.",
+  "boundary": "Finite doubled-bond Gibbs proxy, all-prefix actual-Q3 edge and square rows, translated sites and selected bonds, both orientations, signs, adjoints and beta values. Capped-form uniformity, common core, common alpha, OS/KMS/GNS dynamics, gap, continuum, C6, Sector-A and Pre-A remain open.",
+  "recorded_at": "2026-08-29T19:00:00Z",
+  "recorded_by": "Codex"
+}

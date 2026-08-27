@@ -39,6 +39,7 @@ policy in `governance/development-history.md`.
 | [R-192](#r-192) | Bounded complete finite production-cylinder integration trial | R-192 v1.0 is a T0 claim-nonbearing T-058 integration audit under EXP-000909. Lean and both exact lanes confirm the R-183 reserve fixtures, R-184 temporal identity and R-191 telescope, then stop at the first missing production heat/root raw-current map. The audit does not close the q-ledger, either A13 gate, Sector-A or Pre-A |
 | [R-194](#r-194) | Sharp running-mass counterterm boundary | R-194 v1.0 is a T0 claim-nonbearing Lean/Fraction boundary under EXP-000932. It proves the sharp local coefficient h_min=9*(a+2*b+c), a nonnegative endpoint correction, a subsharp negative witness, and a third-component escape with no uniform coercivity. The full renormalised A6 owner, tightness, removal, Sector-A and Pre-A remain open |
 | [R-195](#r-195) | Spatial constant-field lift of the A6 running-mass escape | R-195 v1.0 is a T0 claim-nonbearing Lean/Fraction spatial lift under EXP-000933. On the declared finite torus, constant fields multiply the R-194 correction by the exact volume and the volume-cancelled ratio is bounded by 6*s*(b+c)/r, so no positive volume-uniform coercivity holds even on that subspace. Full-field concentration, partition/tightness, A7, A13, Sector-A and Pre-A remain open |
+| [R-373](#r-373) | Exact hyperbolic-tangent Gibbs kernel and capped local Dirichlet bound | R-373 v1.0 is a T0 claim-nonbearing finite analytic/executable checkpoint under EXP-001215. The theta-half Gibbs difference becomes a saturating kernel bounded by min(Delta,2/beta), unifying low-gap Dirichlet and high-gap variance forms across 2816 all-prefix contexts; capped-form uniformity, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
 | [R-372](#r-372) | Critical theta-half modular centering and Gibbs variance reduction | R-372 v1.0 is a T0 claim-nonbearing finite analytic/executable checkpoint under EXP-001214. Bond-Gibbs modular centering leaves the theta-half shell unchanged and replaces the raw local second-moment premise by a thermal variance across 2816 all-prefix contexts; the edge variance still grows to 41.648267 at d=6, so uniform variance, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
 | [R-371](#r-371) | Critical theta-half Gibbs cancellation and local second-moment bound | R-371 v1.0 is a T0 claim-nonbearing finite analytic/executable checkpoint under EXP-001213. At theta=1/2, `L_ij|lambda_i-lambda_j|=|p_i-p_j|/beta` and the shell is bounded by `(4/beta)Tr(rho_bond X^2)` across 2816 all-prefix contexts; uniform second-moment control, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
 | [R-370](#r-370) | Kubo-Mori Liouvillian energy-window and tail decomposition | R-370 v1.0 is a T0 claim-nonbearing finite diagnostic under EXP-001212. The doubled-bond theta-half shell splits exactly into low/high transition-energy parts across 2816 all-prefix contexts; at edge d=6 the high-gap squared-norm fraction reaches 0.891745 for E=1, while square d=2 is low-gap at E>=2. A cutoff-independent collar, Gibbs-tail theorem, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
@@ -580,6 +581,41 @@ tier/lifecycle change follows. A13 gates remain open. No R-192 PDF is issued.
 <a id="r-364"></a>
 
 
+<a id="r-373"></a>
+### R-373 -- Exact hyperbolic-tangent Gibbs kernel and capped local Dirichlet bound
+
+**Result ID.** R-373 is a T0, claim-nonbearing finite analytic/executable
+checkpoint under EXP-001215.
+
+**Statement.** For finite Gibbs weights `p_i` and energy differences
+`Delta_ij=|lambda_i-lambda_j|`, the theta-half Gibbs difference has the exact
+form
+`(2/beta)|p_i-p_j|=(p_i+p_j)kappa_beta(Delta_ij)` with
+`kappa_beta(Delta)=(2/beta)tanh(beta*Delta/2)`.  The kernel obeys
+`0 <= kappa_beta(Delta) <= min(Delta,2/beta)`, so the exact shell admits one
+finite capped local Dirichlet row form that is linear at small gaps and
+saturates at high gaps.  Bond-Gibbs centering removes the zero-gap scalar mode
+before this form is evaluated.
+
+**Verification.** Primary and non-importing independent lanes each pass
+`17001/17001` assertions over `2816` all-prefix contexts.  The integrated
+verifier passes `115/115`, and Lean R373 compiles.  The largest
+primary-independent numeric difference is `1.110e-14`; exact-kernel identity
+error is `2.776e-17`, cap-envelope positive violation is zero,
+row-symmetrization error is `2.221e-16`, and capped-bound residual is
+`4.202e-16`.  The maximum capped shell is `1.4610968881346746` and the
+capped row form is `1.5463623505129311`; edge shell maxima for d=3,4,5,6 are
+`0.008029308807322853`, `0.040206939213245196`,
+`0.1172316154764435`, and `1.4610968881346746`, while square d=2 remains
+roundoff-sized.
+
+**Boundary.** This is a finite algebraic and doubled-bond Gibbs-proxy result
+only.  Source/volume/cutoff-uniform capped-form control, a Hamiltonian-derived
+common core, common alpha, global OS/KMS/GNS transfer, a mass gap, continuum,
+C6, Sector-A, and Pre-A remain open.  No new negative result, tier change, or
+R-373 PDF is issued.
+
+**Proven in:** [manifest](strategy/pre-a-cp1-st8-q3lock-local-q2-kubo-mori-capped-gibbs-kernel-manifest.json), [certificate](strategy/pre-a-cp1-st8-q3lock-local-q2-kubo-mori-capped-gibbs-kernel-certificate-260827.md), [Lean entrypoint](verification/lean/Tect/R373.lean), [primary script](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_kubo_mori_capped_gibbs_kernel.py), [independent script](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_kubo_mori_capped_gibbs_kernel_independent.py), [integrated verifier](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_kubo_mori_capped_gibbs_kernel_verify.py), [scope note](claims/C6-SPACETIME-SIGNATURE/notes/q3lock-local-q2-kubo-mori-capped-gibbs-kernel-boundary-260827.md), and stored run artefacts.
 <a id="r-372"></a>
 ### R-372 -- Critical theta-half modular centering and Gibbs variance reduction
 

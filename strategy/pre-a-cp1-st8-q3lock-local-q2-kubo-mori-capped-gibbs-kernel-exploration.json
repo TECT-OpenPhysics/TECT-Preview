@@ -1,0 +1,70 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001215",
+  "title": "Exact hyperbolic-tangent Gibbs kernel and capped local Dirichlet bound",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-ENERGY-WEIGHTED-COMMUTATOR-GEVREY-LR-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+  ],
+  "related": [
+    {"id": "EXP-001214", "relation": "continues"},
+    {"id": "EXP-001213", "relation": "continues"},
+    {"id": "EXP-001212", "relation": "continues"}
+  ],
+  "question": "Can the critical theta-half Gibbs difference be kept as an exact saturating transition kernel, giving a gap-free local bound that interpolates between a low-gap Dirichlet form and a high-gap variance cap?",
+  "method": [
+    "Use the actual-Q3 V=2 edge at d=3,4,5,6 and V=4 square at d=2 with all translated measured sites and selected bonds, both split orientations, signs, history adjoints, beta values and every prefix position.",
+    "For each doubled-bond spectrum compute kappa_beta(Delta)=(2/beta)tanh(beta Delta/2), the exact Gibbs difference coefficient, and the cap min(Delta,2/beta).",
+    "Check the exact identity (2/beta)|p_i-p_j|=(p_i+p_j)kappa_beta(Delta), the envelope 0<=kappa<=min(Delta,2/beta), and the symmetric row form 2 sum_i p_i sum_j kappa_beta(Delta)|X_ij|^2.",
+    "Center the moved witness in the bond-Gibbs basis, rebuild the complete finite table in a non-importing independent lane, and compile Lean R373 for the scalar kernel envelope and pair bound."
+  ],
+  "finding": "Primary and independent lanes each pass 17001/17001 assertions over 2816 all-prefix contexts; the integrated verifier passes 115/115 and Lean R373 passes. The largest primary-independent numeric difference is 1.110e-14. The exact kernel identity error is 2.776e-17, the cap envelope has zero positive violation, row symmetrization error is 2.221e-16, and the capped bound violation is 4.202e-16. The maximum capped shell is 1.4610968881346746 with capped row form 1.5463623505129311; edge shell maxima by cutoff are 0.008029308807322853, 0.040206939213245196, 0.1172316154764435 and 1.4610968881346746 for d=3,4,5,6, while square d=2 rows are roundoff-sized.",
+  "verdict": "advanced",
+  "decision_reason": "The exact hyperbolic-tangent kernel preserves the Gibbs cancellation without throwing away the transition-energy dependence. Its cap gives a single gap-free form that is Dirichlet-like for small gaps and variance-like for large gaps, unifying the R-370 and R-371 branches. The finite edge shell still rises at d=6, so a source/volume/cutoff-uniform capped-form estimate remains open and no common-alpha promotion is justified.",
+  "adversarial_review": [
+    {"axis": "Gibbs ratio", "check": "The hyperbolic-tangent identity is evaluated from the same finite Gibbs probabilities and the doubled-bond energy differences; no independent temperature or spectrum is inserted.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "small-gap limit", "check": "The diagonal convention uses Delta=0 and kappa=0, while the logarithmic-mean diagonal is handled separately; no zero gap is divided.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "cap envelope", "check": "The numerical lane checks kappa<=min(Delta,2/beta), and Lean checks the corresponding min bounds for the declared cap.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "row symmetrization", "check": "The pair kernel is symmetric and the row identity is checked directly; no unproved commutation of the witness with the bond is used.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "center choice", "check": "The witness is centered with the bond-Gibbs mean before the capped form is evaluated, so the zero-gap scalar mode is not counted.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "cutoff uniformity", "check": "The edge capped shell grows from 0.0080 at d=3 to 1.4611 at d=6; finite suppression is not promoted to a uniform theorem.", "disposition": "UPHELD-OPEN"},
+    {"axis": "proxy state", "check": "The doubled local bond Gibbs weights remain a finite proxy, not the full interacting KMS state or its thermodynamic limit.", "disposition": "UPHELD-OPEN"},
+    {"axis": "independence", "check": "The independent lane uses the separately reconstructed R-372 independent model helpers and does not import the primary R-373 module.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "Lean scope", "check": "Lean R373 proves scalar cap and pair inequalities under explicit Gibbs-kernel hypotheses; spectra, traces, common cores and limits remain executable/open.", "disposition": "UPHELD"},
+    {"axis": "QFT promotion", "check": "Capped-form uniformity, common core, common alpha, OS/KMS/GNS dynamics, mass gap, continuum, C6, Sector-A and Pre-A remain open.", "disposition": "UPHELD-OPEN"}
+  ],
+  "evidence_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-local-q2-kubo-mori-capped-gibbs-kernel-manifest.json#finite_fixture",
+    "strategy/pre-a-cp1-st8-q3lock-local-q2-kubo-mori-capped-gibbs-kernel-certificate-260827.md#verification",
+    "codes/foundations/pre_a_cp1_st8_q3lock_local_q2_kubo_mori_capped_gibbs_kernel.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_local_q2_kubo_mori_capped_gibbs_kernel_independent.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_local_q2_kubo_mori_capped_gibbs_kernel_verify.py#run",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-28-primary-pre_a_cp1_st8_q3lock_local_q2_kubo_mori_capped_gibbs_kernel/primary.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-28-independent-pre_a_cp1_st8_q3lock_local_q2_kubo_mori_capped_gibbs_kernel/independent.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-28-integrated-pre_a_cp1_st8_q3lock_local_q2_kubo_mori_capped_gibbs_kernel/integrated.json#derived",
+    "verification/lean/Tect/R373.lean#capped_pair_bound",
+    "claims/C6-SPACETIME-SIGNATURE/notes/q3lock-local-q2-kubo-mori-capped-gibbs-kernel-boundary-260827.md#boundary"
+  ],
+  "formal_integration": {
+    "results": ["R-373"],
+    "negatives": [],
+    "events": ["20260828-r-373-exact-hyperbolic-tangent-gibbs-kernel-and"],
+    "lean": "R373 PASS",
+    "no_new_result": false,
+    "no_new_negative": true,
+    "no_changelog_event": false,
+    "no_pdf": true,
+    "no_tier_change": true
+  },
+  "formal_refs": {"results": ["R-373"], "negatives": [], "events": ["20260828-r-373-exact-hyperbolic-tangent-gibbs-kernel-and"]},
+  "next_action": "Prove a source-, volume- and cutoff-uniform estimate for the capped local Dirichlet form on a Hamiltonian-derived common core, without assuming a uniform spectral gap.",
+  "boundary": "T0 claim-nonbearing finite capped-Gibbs-kernel checkpoint only. The doubled local bond Gibbs state is a proxy; capped-form uniformity, common core, common alpha, OS/KMS/GNS dynamics, gap, continuum, C6, Sector-A and Pre-A remain open.",
+  "no_overclaim": "R-373 unifies the low-gap and high-gap finite bounds but does not establish their uniform analytic constants or any QFT closure.",
+  "provenance": "contemporaneous",
+  "recorded_at": "2026-08-29T19:00:00Z",
+  "reviewed_on": "2026-08-28",
+  "recorded_by": "Codex"
+}
