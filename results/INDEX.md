@@ -5,10 +5,11 @@
 
 Authorities: `RESULTS-LEDGER.md`.
 
-**200 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
+**201 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
 
 | ID | Result | Tier/scope |
 |---|---|---|
+| [`R-367`](../RESULTS-LEDGER.md#r-367) | Larger-cutoff and volume stress for the fractional Liouvillian shell | T0 |
 | [`R-366`](../RESULTS-LEDGER.md#r-366) | Finite fractional Liouvillian square-function shell bound | T0 |
 | [`R-365`](../RESULTS-LEDGER.md#r-365) | Finite spectral-gap commutator and Duhamel shell bound | T0 |
 | [`R-364`](../RESULTS-LEDGER.md#r-364) | Finite bond-spectral pinching and commutant shell reduction | T0 |
@@ -33,7 +34,6 @@ Authorities: `RESULTS-LEDGER.md`.
 | [`R-179`](../RESULTS-LEDGER.md#r-179) | Future-variance and forest owner-half coefficient ledger | T0 |
 | [`R-178`](../RESULTS-LEDGER.md#r-178) | Complete two-root cross-owner phase differentiation | T0 |
 | [`R-177`](../RESULTS-LEDGER.md#r-177) | A1 two-root common-heat and root-incidence ledger | T0 |
-| [`R-176`](../RESULTS-LEDGER.md#r-176) | Actual A1 two-root principal Cholesky covariance witnesses | T0 |
 
 Search without loading the full ledger:
 

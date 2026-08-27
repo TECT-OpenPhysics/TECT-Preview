@@ -1,0 +1,66 @@
+{
+  "schema": "tect/pre-a-cp1-st8-q3lock-local-q2-fractional-liouvillian-stress/1.0",
+  "exploration_id": "EXP-001209",
+  "result_id": "R-367",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "claim_bearing": false,
+  "parent_explorations": ["EXP-001208", "EXP-001207"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-CP1-ST8-Q3LOCK-ALL-EXHAUSTION-MIXTURE-L2-LOCALITY-AND-BETA-INDEPENDENT-CSTAR-DYNAMICS"
+  ],
+  "title": "Larger-cutoff and volume stress for the fractional Liouvillian shell",
+  "question": "Does the theta=1/2 fractional shell remain bounded when the oscillator cutoff and graph volume are enlarged beyond the R-366 V=2 d=3,4 pilot?",
+  "finite_fixture": {
+    "regimes": [
+      {"volume": 2, "cutoff_values": [3, 4, 5, 6], "site_values": [0, 1]},
+      {"volume": 4, "cutoff_values": [2], "site_values": [0]}
+    ],
+    "beta_values": ["1/2", "1"],
+    "split_order_values": ["forward", "reverse"],
+    "time_sign_values": [-1, 1],
+    "history_adjoint_values": [0, 1],
+    "theta_values": ["1/2"],
+    "prefix_selection": ["zero", "first", "full"],
+    "time_step": "1/18",
+    "hbar": "1",
+    "parameters": {"chi": "1", "r": "-1", "g": "3/5", "c": "3/5", "lambda": "1/10"},
+    "finite_tolerance": 1e-9,
+    "agreement_tolerance": 2e-8
+  },
+  "scope": {
+    "larger_cutoff_volume_stress_checked": true,
+    "fractional_liouvillian_bound_closed": true,
+    "uniform_fractional_bound_proved": false,
+    "local_modular_square_function_proved": false,
+    "local_collar_bound_proved": false,
+    "phase_weight_preservation_proved": false,
+    "common_core_closed": false,
+    "common_alpha_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "verification_contract": {
+    "primary": "codes/foundations/pre_a_cp1_st8_q3lock_local_q2_fractional_liouvillian_stress.py",
+    "independent": "codes/foundations/pre_a_cp1_st8_q3lock_local_q2_fractional_liouvillian_stress_independent.py",
+    "integrated": "codes/foundations/pre_a_cp1_st8_q3lock_local_q2_fractional_liouvillian_stress_verify.py",
+    "lean": "verification/lean/Tect/R367.lean",
+    "stored_runs": {
+      "primary": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-27-primary-pre_a_cp1_st8_q3lock_local_q2_fractional_liouvillian_stress/primary.json",
+      "independent": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-27-independent-pre_a_cp1_st8_q3lock_local_q2_fractional_liouvillian_stress/independent.json",
+      "integrated": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-27-integrated-pre_a_cp1_st8_q3lock_local_q2_fractional_liouvillian_stress/integrated.json"
+    }
+  },
+  "promotion_boundary": "R-367 is a selected finite stress only. It does not prove a regulator-uniform fractional norm, a local modular comparison, or the common-alpha gate.",
+  "next_action": "If the stress remains bounded, derive the actual local Kubo--Mori/Dirichlet comparison and then cover arbitrary prefixes. If it grows, register the growth with its regime and do not promote the fractional route.",
+  "boundary": "Finite V=2 cutoff 3..6 and V=4 cutoff 2 diagnostics with zero/first/full prefixes. Source-uniformity, all-prefix history, shape, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open.",
+  "recorded_at": "2026-08-29T13:00:00Z",
+  "recorded_by": "Codex"
+}

@@ -940,6 +940,119 @@
       "task_id": "T-054",
       "title": "Test a fractional Liouvillian square-function route for FI-2b",
       "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "axis": "cutoff growth",
+          "check": "The d=3..6 table is reported as a finite stress and the d=6 increase is not promoted to divergence.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "volume",
+          "check": "V=4,d=2 is a square-graph diagnostic only; no infinite-volume or arbitrary-shape limit is inferred.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "prefix coverage",
+          "check": "Only zero/first/full prefixes are selected for this stress; intermediate prefixes remain open.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "fractional endpoint",
+          "check": "Only theta=1/2 is stressed; no theta-independent modular theorem is asserted.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "state ordering",
+          "check": "The trace estimate uses Hilbert--Schmidt Cauchy and assumes no commutation of omega and B.",
+          "disposition": "DISMISSED"
+        },
+        {
+          "axis": "independence",
+          "check": "The independent lane rebuilds oscillator, graph, Hamiltonian, Gibbs state, PVM, witness and spectral blocks without importing the primary stress script.",
+          "disposition": "DISMISSED"
+        },
+        {
+          "axis": "QFT promotion",
+          "check": "Uniform modular comparison, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open.",
+          "disposition": "UPHELD-OPEN"
+        }
+      ],
+      "boundary": "T0 claim-nonbearing finite stress only. The observed d=6 growth does not prove divergence and no uniform local collar, common alpha, OS/KMS/GNS, mass gap, continuum, C6, Sector-A or Pre-A gate closes.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "The finite stress confirms the fractional inequality and exposes a substantial cutoff-dependent increase in the unweighted fractional norm. This rules out treating the R-366 finite constant as evidence of uniformity, but it is not an asymptotic divergence theorem because the tested prefixes, graph volumes and oscillator family remain finite. The next proof must supply a local modular/Dirichlet weight or record a rigorously derived growth obstruction.",
+      "evidence_refs": [
+        "strategy/pre-a-cp1-st8-q3lock-local-q2-fractional-liouvillian-stress-manifest.json#finite_fixture",
+        "strategy/pre-a-cp1-st8-q3lock-local-q2-fractional-liouvillian-stress-certificate-260827.md#1-stress-design",
+        "codes/foundations/pre_a_cp1_st8_q3lock_local_q2_fractional_liouvillian_stress.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_local_q2_fractional_liouvillian_stress_independent.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_local_q2_fractional_liouvillian_stress_verify.py#run",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-27-primary-pre_a_cp1_st8_q3lock_local_q2_fractional_liouvillian_stress/primary.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-27-independent-pre_a_cp1_st8_q3lock_local_q2_fractional_liouvillian_stress/independent.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-27-integrated-pre_a_cp1_st8_q3lock_local_q2_fractional_liouvillian_stress/integrated.json#lean",
+        "verification/lean/Tect/R367.lean#fractional_half_envelope_stress",
+        "claims/C6-SPACETIME-SIGNATURE/notes/q3lock-local-q2-fractional-liouvillian-stress-boundary-260827.md#q3lock-local-q2-fractional-liouvillian-stress-boundary"
+      ],
+      "finding": "R-367 passes both primary and independent lanes at 1738/1738 assertions over 432 contexts; integrated passes 56/56 and Lean R367 passes. The finite V=2 cutoff stress reaches maximum unweighted fractional norm 69.908699 at d=6 and fractional bound 23.302900, while V=4,d=2 remains 3.700566e-7. The largest primary-independent numeric difference is 1.279e-13 and the largest finite-time/bound ratio is 0.460866.",
+      "formal_integration": {
+        "events": [
+          "20260827-r-367-larger-cutoff-and-volume-fractional-liouv"
+        ],
+        "lean": "R367 PASS",
+        "negatives": [],
+        "no_changelog_event": false,
+        "no_new_negative": true,
+        "no_new_result": false,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "results": [
+          "R-367"
+        ]
+      },
+      "formal_refs": {
+        "events": [
+          "20260827-r-367-larger-cutoff-and-volume-fractional-liouv"
+        ],
+        "negatives": [],
+        "results": [
+          "R-367"
+        ]
+      },
+      "gate_ids": [
+        "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+        "PA-CP1-ST8-Q3LOCK-ALL-EXHAUSTION-MIXTURE-L2-LOCALITY-AND-BETA-INDEPENDENT-CSTAR-DYNAMICS"
+      ],
+      "id": "EXP-001209",
+      "method": [
+        "Use the exact actual-Q3 builder on V=2 with oscillator cutoffs d=3,4,5,6 and on the V=4 square graph at d=2.",
+        "Retain both split orientations, both time signs, both history adjoints, beta in {1/2,1}, local sites and the selected zero/first/full prefixes.",
+        "Center the doubled collision witness, apply R-364 spectral commutant pinching, and compute the theta=1/2 phase envelope, fractional norm, finite-time bound and density-trace bound.",
+        "Rebuild every row in a non-importing independent lane, compare per-regime values in the integrated verifier, and compile Lean R367 for the scalar envelope."
+      ],
+      "next_action": "Derive a local Kubo--Mori/Dirichlet comparison for the fractional norm and extend to arbitrary prefixes; if an analytic lower-growth theorem can be proved, register it separately rather than infer it from this finite table.",
+      "no_overclaim": "R-367 validates the finite stress computation and records a warning about unweighted cutoff growth; it does not establish or refute the Q3 common-alpha theorem.",
+      "provenance": "contemporaneous",
+      "question": "Does the theta=1/2 fractional Liouvillian shell remain bounded when the oscillator cutoff and graph volume are enlarged beyond the R-366 V=2 d=3,4 pilot?",
+      "recorded_at": "2026-08-29T13:00:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001208",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001207",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-08-27",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Stress the fractional Liouvillian route beyond the R-366 pilot",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",
