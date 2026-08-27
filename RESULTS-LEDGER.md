@@ -39,6 +39,7 @@ policy in `governance/development-history.md`.
 | [R-192](#r-192) | Bounded complete finite production-cylinder integration trial | R-192 v1.0 is a T0 claim-nonbearing T-058 integration audit under EXP-000909. Lean and both exact lanes confirm the R-183 reserve fixtures, R-184 temporal identity and R-191 telescope, then stop at the first missing production heat/root raw-current map. The audit does not close the q-ledger, either A13 gate, Sector-A or Pre-A |
 | [R-194](#r-194) | Sharp running-mass counterterm boundary | R-194 v1.0 is a T0 claim-nonbearing Lean/Fraction boundary under EXP-000932. It proves the sharp local coefficient h_min=9*(a+2*b+c), a nonnegative endpoint correction, a subsharp negative witness, and a third-component escape with no uniform coercivity. The full renormalised A6 owner, tightness, removal, Sector-A and Pre-A remain open |
 | [R-195](#r-195) | Spatial constant-field lift of the A6 running-mass escape | R-195 v1.0 is a T0 claim-nonbearing Lean/Fraction spatial lift under EXP-000933. On the declared finite torus, constant fields multiply the R-194 correction by the exact volume and the volume-cancelled ratio is bounded by 6*s*(b+c)/r, so no positive volume-uniform coercivity holds even on that subspace. Full-field concentration, partition/tightness, A7, A13, Sector-A and Pre-A remain open |
+| [R-362](#r-362) | Finite local-Q2 positive replica folding and common-weight mixture convexity | R-362 v1.0 is a T0 claim-nonbearing exact finite reduction under EXP-001204. For every faithful finite reference and local PVM, measured Q2 is the expectation of the positive collision witness `sum_j p_j^(-1) E_j tensor E_j` in two output replicas, with equality constant one; common-weight phase mixtures obey an exact nonnegative square gap and outermost coordinate-diagonal layers peel. The evolved-witness collar estimate, phase weights, all uniformities, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
 | [R-193](#r-193) | Static-owner to heat-map non-identifiability witness | R-193 v1.0 is a T0 claim-nonbearing interface result under EXP-000910. Two exact positive diagonal contractions share the same static inverse-covariance data but reverse relative decay order; A1/A7 do not supply the missing heat/root/raw-current/q-ledger fields. This sharpens, but does not close, the R-192 blocker or either A13 gate |
 | [R-182](#r-182) | Feedback-pulled cross-Hessian margin Lean cross-check | R-182 v1.0 is a T0 claim-nonbearing Lean checkpoint under EXP-000897. It combines the active R-178 cross coefficient with the R-181 feedback map and proves the exact pulled Hessian `[-2,4;4,-8]` with eigenvalues -10 and 0. The diagonal production owner, source/sextic one-use, T-050, A13, Sector-A and Pre-A remain open |
 | [R-181](#r-181) | Finite two-root feedback mixed-Gram Lean cross-check | R-181 v1.0 is a T0 claim-nonbearing Lean checkpoint under EXP-000896. It binds the R-177 beta=1/2 root-2 feedback map, exact Gram `[[5/4,1/2],[1/2,1]]`, and positive envelope defect. The production spatial mixed Gram, source/sextic one-use, T-050, A13, Sector-A and Pre-A remain open |
@@ -565,6 +566,53 @@ tier/lifecycle change follows. A13 gates remain open. No R-192 PDF is issued.
 **Proven in:** [R-192 certificate](strategy/pre-a13-t058-bounded-complete-production-cylinder-certificate-260822.md), [Lean entrypoint](verification/lean/Tect/R192.lean), [primary script](verification/scripts/lean_a13_t058_bounded_complete_production_cylinder.py), [independent script](codes/foundations/lean_a13_t058_bounded_complete_production_cylinder_independent.py), [integrated verifier](verification/scripts/lean_a13_t058_bounded_complete_production_cylinder_verify.py), [scope note](claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/a13-t058-bounded-complete-production-cylinder-260822.md), and saved run artefacts. No R-192 PDF is issued.
 
 <a id="r-193"></a>
+<a id="r-195"></a>
+<a id="r-362"></a>
+### R-362 -- Finite local-Q2 positive replica folding and mixture convexity
+
+**Result ID.** R-362 is a T0, claim-nonbearing exact finite reduction under
+EXP-001204.
+
+**Statement.** For a faithful finite-dimensional reference state `rho`, an
+output state `sigma`, and a finite local PVM `{E_j}`, let
+`p_j=Tr(E_j rho)>0`, `q_j=Tr(E_j sigma)`, and
+`K=sum_j p_j^(-1) E_j tensor E_j`. Then `K>=0` and
+
+```text
+Q2(q||p)=sum_j q_j^2/p_j=Tr[K(sigma tensor sigma)].
+```
+
+If `sigma=UW rho W*U*`, cyclicity gives the corresponding exact two-copy
+Heisenberg expectation in `rho tensor rho`. The folding constant is exactly
+one; no dimension, volume, history-length, or path-count prefactor is created.
+For common nonnegative two-phase weights, the pointwise convexity gap is the
+nonnegative square
+
+```text
+w1*w2*(p2*q1-p1*q2)^2/[p1*p2*(w1*p1+w2*p2)].
+```
+
+An outermost coordinate-diagonal unitary peels exactly. It does not follow
+that every bond inside an onsite-interspersed history disappears: the actual
+Q3 finite fixture has a strictly nonzero bond commutator with the
+onsite-conjugated doubled witness.
+
+**Verification.** The actual V=2 Q3 primary lane passes 2069/2069 assertions
+over 512 history contexts and 1024 local rows; a non-importing independent
+reconstruction passes 2067/2067; the integrated source/hash/matrix comparison
+passes 48/48 with maximum compared-field difference `1.554e-15`; Lean R362
+proves the finite-sum collision identity, reference normalization, exact
+two-phase gap, convexity, and equality-constant-one fixture.
+
+**Boundary.** R-362 closes only FI-2a, positive finite operator folding. It
+does not construct a positive Euclidean path measure, bound the evolved
+witness on a local collar, prove phase-weight preservation or influence
+contraction, remove cutoff/volume/history dependence, construct a common
+core or common alpha, identify OS/KMS/GNS dynamics or a gap, remove the
+continuum regulator, or close C6, Sector-A, or Pre-A. No R-362 PDF is issued.
+
+**Proven in:** [certificate](strategy/pre-a-cp1-st8-q3lock-local-q2-replica-folding-certificate-260827.md), [host note](claims/C6-SPACETIME-SIGNATURE/notes/q3lock-local-q2-replica-folding-boundary-260827.md), [manifest](strategy/pre-a-cp1-st8-q3lock-local-q2-replica-folding-manifest.json), [primary](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_replica_folding.py), [independent](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_replica_folding_independent.py), [integrated verifier](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_replica_folding_verify.py), [Lean R362](verification/lean/Tect/R362.lean), and the saved C6 run artefacts.
+
 <a id="r-195"></a>
 ### R-195 -- Spatial constant-field lift of the A6 running-mass escape
 

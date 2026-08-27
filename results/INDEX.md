@@ -5,10 +5,11 @@
 
 Authorities: `RESULTS-LEDGER.md`.
 
-**195 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
+**196 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
 
 | ID | Result | Tier/scope |
 |---|---|---|
+| [`R-362`](../RESULTS-LEDGER.md#r-362) | Finite local-Q2 positive replica folding and mixture convexity | T0 |
 | [`R-195`](../RESULTS-LEDGER.md#r-195) | Spatial constant-field lift of the A6 running-mass escape | T0 |
 | [`R-194`](../RESULTS-LEDGER.md#r-194) | Sharp running-mass counterterm boundary | T0 |
 | [`R-193`](../RESULTS-LEDGER.md#r-193) | Static-owner to heat-map non-identifiability witness | T0 |
@@ -33,7 +34,6 @@ Authorities: `RESULTS-LEDGER.md`.
 | [`R-174`](../RESULTS-LEDGER.md#r-174) | Exact two-root production-cylinder cross-synthesis boundary | T0 |
 | [`R-173`](../RESULTS-LEDGER.md#r-173) | R-163 deterministic dyadic-forest Lean margin core | T0 claim-nonbearing exact kernel cross-check; no claim tier or lifecycle change. |
 | [`R-172`](../RESULTS-LEDGER.md#r-172) | A1 Class-II owner mismatch Lean cross-check | T0 claim-nonbearing exact owner-interface audit; no claim tier or lifecycle change. |
-| [`R-171`](../RESULTS-LEDGER.md#r-171) | Actual A7 plane-wave endpoint secant sign witness | T4 scoped analytic/exact/executed result; no claim tier or lifecycle change. |
 
 Search without loading the full ledger:
 

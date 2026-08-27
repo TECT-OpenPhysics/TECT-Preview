@@ -1,0 +1,69 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001204",
+  "title": "Close finite positive local-Q2 replica folding and isolate the moved-witness collar",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE",
+    "PA-CP1-ST8-Q3LOCK-ALL-EXHAUSTION-MIXTURE-L2-LOCALITY-AND-BETA-INDEPENDENT-CSTAR-DYNAMICS"
+  ],
+  "related": [
+    {"id": "EXP-001203", "relation": "continues"},
+    {"id": "EXP-001202", "relation": "continues"},
+    {"id": "EXP-000806", "relation": "continues"}
+  ],
+  "question": "Does FI-2 require a positive Euclidean path measure already at the folding step, or does finite local measured Q2 admit an exact positive two-copy operator representation with no volume or path-count prefactor?",
+  "method": [
+    "For a faithful finite reference rho and local PVM E_j, define p_j=Tr(E_j rho) and the positive collision witness K=sum_j p_j^(-1) E_j tensor E_j.",
+    "Use tensor-trace factorization to prove Q2=sum_j Tr(E_j sigma)^2/p_j=Tr[K(sigma tensor sigma)] and cyclically move an actual history sigma=UW rho W*U* into the two-copy Heisenberg picture.",
+    "Derive the exact two-phase common-weight mixture gap as one nonnegative square divided by the positive mixture denominator.",
+    "Rebuild the actual V=2 Q3 Hamiltonian at cutoffs 3 and 4 and check every split prefix, both orders, signs, adjoints, source supports/signs, beta values and local sites in primary and non-importing independent lanes.",
+    "Check source and pure-bond coordinate invariance and the bare bond/PVM commutator, then test whether the same bond commutes with the onsite-conjugated doubled witness.",
+    "Formalize the finite-sum replica identity, reference normalization, exact mixture gap, convexity and equality-constant-one fixture in Lean R362."
+  ],
+  "finding": "R-362 closes FI-2a. Finite local measured Q2 is exactly the expectation of a positive two-copy collision witness, and the folding equality has constant one with no dimension, volume, prefix-length or path-count factor. Common-weight phase mixtures satisfy an exact square-gap convexity identity, and outermost coordinate-diagonal source/bond layers peel. Across 512 actual-Q3 history contexts and 1024 local rows, primary 2069/2069, independent 2067/2067 and integrated 48/48 assertions pass; Lean R362 passes; the maximum replica error is 3.3306690738754696e-15 and the maximum primary-independent compared-field difference is 1.554e-15. The bond commutes with the bare PVM to numerical precision but the minimum onsite-conjugated two-copy commutator witness is 0.04815793620932884, so FI-2b remains a genuine moved-witness collar problem.",
+  "verdict": "advanced",
+  "decision_reason": "The exact positive operator folding removes a false prerequisite: a positive Euclidean path measure is not needed to obtain positivity or avoid a path-count factor at the folding step. The nonzero interspersed commutator simultaneously blocks the overclaim that all coordinate-diagonal bonds can be discarded. The next proof target is therefore a state-weighted localization estimate for the evolved collision witness.",
+  "adversarial_review": [
+    {"axis": "real-time positivity", "check": "The positive object proved here is an operator witness, not a positive Euclidean path measure.", "disposition": "VALID-WITH-MITIGATION"},
+    {"axis": "hidden dimension factor", "check": "The replica equality has constant one, but the norm or state-weighted tails of the evolved witness may still grow with cutoff.", "disposition": "VALID-WITH-MITIGATION"},
+    {"axis": "all-bond cancellation", "check": "Only outermost coordinate-diagonal layers peel; the actual onsite-conjugated witness has a nonzero bond commutator.", "disposition": "UPHELD-OPEN"},
+    {"axis": "phase weights", "check": "Mixture convexity requires common weights; actual Q3 phase-weight preservation is not proved.", "disposition": "UPHELD-OPEN"},
+    {"axis": "finite-to-uniform promotion", "check": "V=2 and cutoffs 3,4 do not prove source/volume/cutoff/history-uniform collar control.", "disposition": "UPHELD-OPEN"},
+    {"axis": "independence", "check": "The independent lane reconstructs oscillator, Hamiltonian, Gibbs states, prefixes, partial traces, PVM and replica witness without importing the primary.", "disposition": "DISMISSED"},
+    {"axis": "Lean scope", "check": "R362 proves finite-sum algebra only; matrix and QFT limits remain executable/open analysis.", "disposition": "UPHELD-OPEN"}
+  ],
+  "evidence_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-local-q2-replica-folding-manifest.json#theorem",
+    "strategy/pre-a-cp1-st8-q3lock-local-q2-replica-folding-certificate-260827.md#2-exact-finite-theorem",
+    "codes/foundations/pre_a_cp1_st8_q3lock_local_q2_replica_folding.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_local_q2_replica_folding_independent.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_local_q2_replica_folding_verify.py#run",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-27-primary-pre_a_cp1_st8_q3lock_local_q2_replica_folding/primary.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-27-independent-pre_a_cp1_st8_q3lock_local_q2_replica_folding/independent.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-27-integrated-pre_a_cp1_st8_q3lock_local_q2_replica_folding/integrated.json#lean",
+    "verification/lean/Tect/R362.lean#collision_replica_identity",
+    "verification/lean/Tect/R362.lean#two_phase_mixture_convexity",
+    "claims/C6-SPACETIME-SIGNATURE/notes/q3lock-local-q2-replica-folding-boundary-260827.md#q3lock-local-q2-replica-folding-boundary"
+  ],
+  "formal_integration": {
+    "results": ["R-362"],
+    "negatives": [],
+    "events": [],
+    "lean": "R362 PASS",
+    "no_new_result": false,
+    "no_new_negative": true,
+    "no_changelog_event": false,
+    "no_pdf": true,
+    "no_tier_change": true
+  },
+  "formal_refs": {"results": ["R-362"], "negatives": [], "events": []},
+  "next_action": "Attack FI-2b: center the two-copy collision witness by its reference expectation, peel terminal diagonal layers, and prove a state-weighted shell commutator or conditional-expectation bound for the onsite-interspersed Heisenberg witness. The constants must be uniform in source, cutoff, volume, every prefix and allowed exhaustion shape; otherwise register the exact growth obstruction.",
+  "boundary": "T0 claim-nonbearing finite exact reduction. No positive Euclidean path measure, local collar estimate, phase-weight theorem, influence contraction, cutoff/volume/history uniformity, common core, common alpha, OS/KMS/GNS reconstruction, mass gap, continuum, C6, Sector-A or Pre-A closure follows.",
+  "no_overclaim": "R-362 removes an artificial folding prefactor and isolates the correct positive operator. It does not bound the evolved witness and therefore does not close the parent common-alpha gate.",
+  "recorded_at": "2026-08-29T10:00:00Z",
+  "reviewed_on": "2026-08-27",
+  "recorded_by": "Codex"
+}
