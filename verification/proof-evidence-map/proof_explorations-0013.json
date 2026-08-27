@@ -1053,6 +1053,119 @@
       "task_id": "T-054",
       "title": "Stress the fractional Liouvillian route beyond the R-366 pilot",
       "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "axis": "weight scope",
+          "check": "The Gibbs probabilities come from the doubled local bond generator and are explicitly not identified with the full interacting KMS state.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "diagonal limit",
+          "check": "Equal log-probability gaps use the arithmetic-limit value; both lanes check finite positivity and symmetry.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "prefix coverage",
+          "check": "Every position from zero through full is evaluated in both split orientations; no intermediate prefix is omitted.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "cutoff and volume",
+          "check": "The finite d=3..6 and V=4,d=2 table is not a regulator-uniform or infinite-volume theorem.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "phase algebra",
+          "check": "The actual matrix phase coefficients are compared directly with the doubled unitary and the scalar envelope is compiled in Lean R368.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "QFT promotion",
+          "check": "Common core, common alpha, OS/KMS/GNS dynamics, gap, continuum, C6, Sector-A and Pre-A remain open.",
+          "disposition": "UPHELD-OPEN"
+        }
+      ],
+      "boundary": "T0 claim-nonbearing finite local weighted-topology diagnostic only. The doubled bond Gibbs weight is not a global KMS state, and common core, common alpha, OS/KMS/GNS dynamics, mass gap, continuum, C6, Sector-A and Pre-A remain open.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "The local Kubo--Mori weight materially suppresses the finite high-frequency shell relative to the unweighted R-367 diagnostic and remains valid over every finite split prefix. This identifies a sharper QFT-facing topology candidate, but the weight is only a doubled local bond Gibbs proxy; no cutoff/volume/source/history/shape-uniform comparison or global KMS transfer is established.",
+      "evidence_refs": [
+        "strategy/pre-a-cp1-st8-q3lock-local-q2-kubo-mori-fractional-prefix-manifest.json#definitions",
+        "strategy/pre-a-cp1-st8-q3lock-local-q2-kubo-mori-fractional-prefix-certificate-260827.md#1-new-perspective",
+        "codes/foundations/pre_a_cp1_st8_q3lock_local_q2_kubo_mori_fractional_prefix.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_local_q2_kubo_mori_fractional_prefix_independent.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_local_q2_kubo_mori_fractional_prefix_verify.py#run",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-27-primary-pre_a_cp1_st8_q3lock_local_q2_kubo_mori_fractional_prefix/primary.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-27-independent-pre_a_cp1_st8_q3lock_local_q2_kubo_mori_fractional_prefix/independent.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-27-integrated-pre_a_cp1_st8_q3lock_local_q2_kubo_mori_fractional_prefix/integrated.json#lean",
+        "verification/lean/Tect/R368.lean#weighted_half_envelope",
+        "claims/C6-SPACETIME-SIGNATURE/notes/q3lock-local-q2-kubo-mori-fractional-prefix-boundary-260827.md#boundary"
+      ],
+      "finding": "Primary and independent lanes each pass 4636/4636 assertions over 656 contexts; integrated passes 65/65 and Lean R368 passes. The maximum Kubo--Mori weighted fractional norm is 1.208758407679001 with bound 0.4029194692263337 and change-to-bound ratio 0.3868613066541026, while the corresponding R-367 unweighted maximum is 69.90869910391245. The largest arithmetic-to-Kubo fractional ratio is 1.7169449837129835 and the primary-independent numeric difference is 1.7053025658242404e-13.",
+      "formal_integration": {
+        "events": [
+          "20260827-r-368-local-kubo-mori-weighted-fractional-prefi"
+        ],
+        "lean": "R368 PASS",
+        "negatives": [],
+        "no_changelog_event": false,
+        "no_new_negative": true,
+        "no_new_result": false,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "results": [
+          "R-368"
+        ]
+      },
+      "formal_refs": {
+        "events": [
+          "20260827-r-368-local-kubo-mori-weighted-fractional-prefi"
+        ],
+        "negatives": [],
+        "results": [
+          "R-368"
+        ]
+      },
+      "gate_ids": [
+        "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+        "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+        "PA-CP1-ST8-Q3LOCK-ALL-EXHAUSTION-MIXTURE-L2-LOCALITY-AND-BETA-INDEPENDENT-CSTAR-DYNAMICS"
+      ],
+      "id": "EXP-001210",
+      "method": [
+        "Diagonalize the doubled actual-Q3 bond generator and construct normalized local Gibbs probabilities at beta 1/2 and 1.",
+        "Evaluate the logarithmic-mean Kubo--Mori weights with the exact diagonal limit and compare them with the arithmetic mean.",
+        "Retain every prefix position in forward and reverse split orders for V=2 d=3..6 and V=4 d=2, with both signs, adjoints, sites and betas.",
+        "Check the weighted spectral phase identity and theta=1/2 finite-time bound in primary and non-importing independent lanes, then compare them in the integrated verifier and compile Lean R368."
+      ],
+      "next_action": "Derive an analytic local Kubo--Mori/Dirichlet comparison with cutoff-independent weights and test source translations and exhaustion shapes; register any rigorous lower-growth obstruction separately.",
+      "no_overclaim": "R-368 records finite weighted suppression and complete prefix coverage; it does not prove regulator uniformity or a QFT theorem.",
+      "provenance": "contemporaneous",
+      "question": "Can a local Gibbs Kubo--Mori/Dirichlet weight suppress the cutoff growth of the theta=1/2 fractional shell while every split prefix is retained?",
+      "recorded_at": "2026-08-29T14:00:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001209",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001208",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001089",
+          "relation": "alternative_to"
+        }
+      ],
+      "reviewed_on": "2026-08-27",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Local Kubo--Mori weighting of the fractional shell with arbitrary prefixes",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",
