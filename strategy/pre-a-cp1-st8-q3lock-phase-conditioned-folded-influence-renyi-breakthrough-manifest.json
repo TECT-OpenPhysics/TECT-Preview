@@ -1,0 +1,137 @@
+{
+  "schema": "tect/pre-a-cp1-st8-q3lock-phase-conditioned-folded-influence-renyi-breakthrough/1.0",
+  "exploration_id": "EXP-001203",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "claim_bearing": false,
+  "parent_explorations": ["EXP-001202", "EXP-001201", "EXP-000806", "EXP-001194", "EXP-000769"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE",
+    "PA-CP1-ST8-Q3LOCK-ALL-EXHAUSTION-MIXTURE-L2-LOCALITY-AND-BETA-INDEPENDENT-CSTAR-DYNAMICS",
+    "PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY"
+  ],
+  "title": "Phase-conditioned folded-influence route to uniform local measured Renyi control",
+  "status": "PROPOSED BREAKTHROUGH ROUTE; NO PROOF GATE CLOSED",
+  "question": "Can the actual real-time Q3 split-history local coordinate likelihood be controlled uniformly by conditioning before estimating, folding the forward/backward history into a positive two-replica Euclidean collar, and proving phase-conditioned shell influence summability?",
+  "new_perspective": {
+    "principle": "Condition first, then estimate.",
+    "contrast_with_prior_routes": [
+      "Do not bound the global quantum Renyi divergence; the disjoint-product counterexample makes that target volume-extensive.",
+      "Do not bound a raw total energy or raw configuration multiplier norm; the registered cutoff and point-norm obstructions already reject those carriers.",
+      "Do not reuse the EXP-000769 spatial spectral martingale as if it were an actual split-history theorem; it controls a comparator interaction, not the onsite-interspersed Q3 history likelihood.",
+      "First pass to the fixed local coordinate measurement, then expose only the spacetime collar capable of influencing that measurement."
+    ],
+    "why_exp_001202_matters": "The finite actual-Q3 table keeps local Q2 close to one while global targets and fixed spectral windows fail. This is consistent with a genuinely local cancellation mechanism, but is not evidence of uniformity by itself."
+  },
+  "algebraic_starting_point": {
+    "local_measured_q2": "For reference p and history output q on one local coordinate measurement, Q2(q||p)=sum_x q(x)^2/p(x)=1+||ell-1||^2_{L2(p)}, where ell=dq/dp.",
+    "localization_identity": "If a positive global comparison density L exists, the local likelihood is ell=E_reference[L | local coordinate sigma-field]. The proof must construct or dominate the relevant L for the actual folded split history; it may not assume this positivity.",
+    "phase_mixture_convexity": "For common phase weights w_s, p=sum_s w_s p_s and q=sum_s w_s q_s imply Q2(q||p)<=sum_s w_s Q2(q_s||p_s). If the history changes phase weights, an explicit finite phase-label Q2 factor is additionally required.",
+    "pure_bond_input": "Use the already accepted exact invariance of local coordinate tails under pure bond layers. Only onsite-interspersed increments enter the new influence estimate."
+  },
+  "primary_theorem_ladder": [
+    {
+      "id": "FI-1",
+      "name": "local dephasing and phase-label reduction",
+      "target": "Reduce every source/orientation/adjoint local measured Q2 to fixed-phase local likelihoods, with an explicit label term if phase weights are not preserved.",
+      "status": "OPEN AS AN ACTUAL Q3 HISTORY STATEMENT"
+    },
+    {
+      "id": "FI-2",
+      "name": "folded Keldysh-to-Euclidean domination",
+      "target": "Represent or upper-bound the squared local likelihood for each real-time partial split history by a positive two-replica Euclidean functional supported on the causal spacetime collar of the measured region.",
+      "required_features": [
+        "both split orders and both time orientations",
+        "every partial prefix and its adjoint",
+        "no volume-extensive normalization loss",
+        "cutoff-compatible passage from finite oscillator matrices to the common local core"
+      ],
+      "status": "OPEN; THIS IS THE FIRST DECISIVE LEMMA"
+    },
+    {
+      "id": "FI-3",
+      "name": "phase-conditioned shell square-function bound",
+      "target": "For collar martingale differences Delta_r under each selected phase, prove sum_r exp(2 mu r)||Delta_r||_2^2 <= C_S with C_S independent of volume, source location, cutoff, history length and allowed exhaustion shape at fixed registered beta.",
+      "mechanism_candidates": [
+        "within-phase Dobrushin influence contraction when its norm is strictly below one",
+        "polymer or contour expansion with a Peierls-type phase boundary condition when global uniqueness is false",
+        "weighted disagreement-percolation or spatial mixing estimate localized to the measured collar"
+      ],
+      "status": "OPEN; GLOBAL UNIQUENESS IS NOT ASSUMED"
+    },
+    {
+      "id": "FI-4",
+      "name": "uniform local measured-Renyi conclusion",
+      "target": "Combine FI-1 through FI-3 with pure-bond invariance to obtain one finite constant for every actual partial history, adjoint, orientation, source, cutoff, volume and allowed exhaustion at the fixed phase/beta.",
+      "status": "CONDITIONAL ON FI-1 THROUGH FI-3"
+    },
+    {
+      "id": "FI-5",
+      "name": "registered QFT transfer",
+      "target": "Invoke only after FI-4: R-167 v1.9 gives the two-orientation Gaussian history tail; then prove common-core and all-shape Cauchy closure before using the conditional EXP-001194 OS/KMS passage contract.",
+      "status": "SUCCESSOR; NO COMMON ALPHA, OS/KMS OR GAP PROMOTION NOW"
+    }
+  ],
+  "fallback_branch": {
+    "name": "local modular-cocycle square function",
+    "trigger": "Use only if FI-2 fails because the folded real-time weights cannot be dominated by a positive Euclidean replica without a volume-growing sign loss.",
+    "route": [
+      "Apply the conditional expectation onto the local coordinate algebra before forming any divergence.",
+      "Express successive onsite insertions through local reduced relative modular cocycles.",
+      "Decompose the cocycle into noncommutative martingale differences; pure-bond increments should vanish after coordinate conditioning.",
+      "Seek a phase-local modular L2 Poincare or logarithmic-Sobolev square-function estimate with cutoff-independent local constants."
+    ],
+    "open_obligations": [
+      "existence of the phase-local conditional expectation on the selected common carrier",
+      "unbounded-core control for the onsite cocycle",
+      "noncommutative square-function constants uniform in exhaustion and cutoff",
+      "two-orientation and adjoint compatibility"
+    ]
+  },
+  "subordinate_repair": {
+    "name": "renormalized spatial collar instead of a fixed global energy window",
+    "reason": "EXP-001201 found fixed low-energy windows unstable across source and volume. Any spectral truncation used inside FI-2 or FI-3 must scale with collar boundary data and local counterterms, not with total volume energy.",
+    "status": "OPTIONAL TECHNICAL DEVICE; NOT A SEPARATE PROMOTION ROUTE"
+  },
+  "ownership_and_controls": {
+    "owner": "T-054 Q3LOCK auxiliary QFT lane",
+    "inputs": [
+      "R-167 v1.9 local measured-Renyi sufficient condition and pure-bond invariance",
+      "EXP-001202 finite actual-Q3 local-Q2 stress table",
+      "EXP-000769 positive Euclidean comparator martingale, used only as a technique reference",
+      "EXP-001194 conditional thermodynamic OS/KMS passage contract"
+    ],
+    "controls": [
+      "the disjoint-bond global-Renyi volume counterexample",
+      "the EXP-001201 source/volume spectral-window instability table",
+      "raw multiplier point-norm and raw energy/commutator negative boundaries",
+      "two-site increasing-cutoff local-Q2 stress with fixed phase-label conditioning"
+    ],
+    "independence_requirement": "A load-bearing analytic inequality must receive a non-importing derivation or exact counterfixture and Lean cross-check for its finite algebraic skeleton before result promotion.",
+    "literature_requirement": "Before importing a Dobrushin, contour, replica or modular theorem, audit its exact model, dimension, boundary condition, phase, norm, beta range, regulator and uniformity hypotheses against Q3LOCK. No theorem name is evidence by itself."
+  },
+  "promotion_criteria": [
+    "Prove FI-2 without a sign, normalization or replica constant growing with volume or prefix length.",
+    "Prove FI-3 in the actual registered phase/beta regime for all allowed spatial shapes, with explicit cutoff- and source-independent constants.",
+    "Cover every prefix, both split orders, both time signs and adjoints, rather than the zero/first/full sample of EXP-001202.",
+    "Remove the coordinate cutoff on one stated common local core and prove direct exhaustion Cauchy estimates.",
+    "Run adversarial sign, convention, phase-weight, boundary, cutoff and all-shape tests and register any fired obstruction before common-alpha promotion."
+  ],
+  "stop_conditions": [
+    "If phase-conditioned two-site or fixed-collar local Q2 diverges with cutoff, retire the uniform FI route and register the scoped obstruction.",
+    "If every positive folded domination pays an exponential volume or history-length sign cost, stop FI-2 and move to the modular-cocycle fallback; do not hide the cost in a diagnostic constant.",
+    "If the within-phase influence norm is not contractive in the target beta regime and no verified contour/polymer replacement applies, restrict the theorem to the valid regime rather than promote the full gate.",
+    "If phase weights are not preserved, retain the explicit phase-label divergence and do not claim the common-weight mixture inequality closes the history bound."
+  ],
+  "qft_interface": {
+    "closed_now": "A new proof decomposition, ownership boundary, promotion ladder and falsification plan are registered.",
+    "open": "The folded positive domination, phase-conditioned influence estimate, uniform local Q2 theorem, common core, all-shape split limit, common alpha, Hamiltonian-to-OS/KMS identification, GNS gap and continuum remain open.",
+    "chain": "local dephasing -> folded two-replica collar -> phase-conditioned shell square function -> local Q2 -> R-167 history tail -> common core/exhaustion -> OS/KMS/GNS",
+    "tect_boundary": "Auxiliary C6/Q3 route only; it supplies no heat_root_incidence, canonical A1/R-192 production owner, physical empty reference, Sector-A closure or Pre-A closure."
+  },
+  "boundary": "This is a claim-nonbearing route design. It proves no new inequality for the actual Q3 history and closes no proof, QFT, mass-gap, continuum, C6, Sector-A or Pre-A gate.",
+  "no_overclaim": "The finite Q2 stability in EXP-001202 motivates localization but does not validate the folded domination or any influence contraction.",
+  "recorded_at": "2026-08-29T09:30:00Z",
+  "recorded_by": "Codex"
+}
