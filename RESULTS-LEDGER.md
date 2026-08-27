@@ -39,6 +39,7 @@ policy in `governance/development-history.md`.
 | [R-192](#r-192) | Bounded complete finite production-cylinder integration trial | R-192 v1.0 is a T0 claim-nonbearing T-058 integration audit under EXP-000909. Lean and both exact lanes confirm the R-183 reserve fixtures, R-184 temporal identity and R-191 telescope, then stop at the first missing production heat/root raw-current map. The audit does not close the q-ledger, either A13 gate, Sector-A or Pre-A |
 | [R-194](#r-194) | Sharp running-mass counterterm boundary | R-194 v1.0 is a T0 claim-nonbearing Lean/Fraction boundary under EXP-000932. It proves the sharp local coefficient h_min=9*(a+2*b+c), a nonnegative endpoint correction, a subsharp negative witness, and a third-component escape with no uniform coercivity. The full renormalised A6 owner, tightness, removal, Sector-A and Pre-A remain open |
 | [R-195](#r-195) | Spatial constant-field lift of the A6 running-mass escape | R-195 v1.0 is a T0 claim-nonbearing Lean/Fraction spatial lift under EXP-000933. On the declared finite torus, constant fields multiply the R-194 correction by the exact volume and the volume-cancelled ratio is bounded by 6*s*(b+c)/r, so no positive volume-uniform coercivity holds even on that subspace. Full-field concentration, partition/tightness, A7, A13, Sector-A and Pre-A remain open |
+| [R-371](#r-371) | Critical theta-half Gibbs cancellation and local second-moment bound | R-371 v1.0 is a T0 claim-nonbearing finite analytic/executable checkpoint under EXP-001213. At theta=1/2, `L_ij|lambda_i-lambda_j|=|p_i-p_j|/beta` and the shell is bounded by `(4/beta)Tr(rho_bond X^2)` across 2816 all-prefix contexts; uniform second-moment control, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
 | [R-370](#r-370) | Kubo-Mori Liouvillian energy-window and tail decomposition | R-370 v1.0 is a T0 claim-nonbearing finite diagnostic under EXP-001212. The doubled-bond theta-half shell splits exactly into low/high transition-energy parts across 2816 all-prefix contexts; at edge d=6 the high-gap squared-norm fraction reaches 0.891745 for E=1, while square d=2 is low-gap at E>=2. A cutoff-independent collar, Gibbs-tail theorem, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
 | [R-369](#r-369) | Kubo-Mori translation and exhaustion-shape stress | R-369 v1.0 is a T0 claim-nonbearing finite stress under EXP-001211. All translated bond/site positions pass on the V=2 edge and V=4 square with 2816 all-prefix contexts; square values stay near 3.2e-08--3.5e-08 while edge values grow to 1.208758 at d=6, so source/shape/cutoff/volume-uniform comparison, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
 | [R-368](#r-368) | Local Kubo-Mori weighted fractional shell with arbitrary-prefix coverage | R-368 v1.0 is a T0 claim-nonbearing finite topology diagnostic under EXP-001210. The local Gibbs logarithmic-mean weight suppresses the R-367 unweighted d=6 maximum from 69.908699 to 1.208758 across 656 all-prefix contexts, but the weight is a doubled-bond proxy; cutoff/volume-uniform comparison, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
@@ -577,6 +578,34 @@ tier/lifecycle change follows. A13 gates remain open. No R-192 PDF is issued.
 <a id="r-363"></a>
 <a id="r-364"></a>
 
+
+<a id="r-371"></a>
+### R-371 -- Critical theta-half Gibbs cancellation and local second-moment bound
+
+**Result ID.** R-371 is a T0, claim-nonbearing finite analytic/executable
+checkpoint under EXP-001213.
+
+**Statement.** For finite doubled-bond Gibbs weights `p_i` and logarithmic mean
+`L_ij`, the critical theta-half coefficient obeys the exact cancellation
+`L_ij|lambda_i-lambda_j|=|p_i-p_j|/beta`.  Therefore the Kubo-Mori shell
+obeys the finite local estimate
+`N_(1/2)^2 <= (4/beta) Tr(rho_bond X^2)` for a centered Hermitian witness.
+
+**Verification.** Primary and non-importing independent lanes each pass
+`14235/14235` assertions over `2816` all-prefix contexts.  The integrated
+verifier passes `129/129`, Lean R371 compiles, and the largest
+primary-independent numeric difference is `2.771e-13`.  The maximum Gibbs
+identity error is `2.689e-17`; the bound has no positive violation.  The
+largest sampled local Gibbs second moment is `42.156906839727924` at edge
+`d=6`, so the required cutoff-uniform second-moment estimate remains open.
+
+**Boundary.** This closes only the finite critical-theta algebraic reduction.
+The weights are a finite doubled local-bond Gibbs proxy, and the trace bound
+does not commute a full interacting KMS state through the witness.  Common
+core, common alpha, global KMS transfer, OS/KMS/GNS dynamics, a mass gap,
+continuum, C6, Sector-A and Pre-A remain open.  No R-371 PDF is issued.
+
+**Proven in:** [manifest](strategy/pre-a-cp1-st8-q3lock-local-q2-kubo-mori-gibbs-cancellation-manifest.json), [certificate](strategy/pre-a-cp1-st8-q3lock-local-q2-kubo-mori-gibbs-cancellation-certificate-260827.md), [Lean entrypoint](verification/lean/Tect/R371.lean), [primary script](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_kubo_mori_gibbs_cancellation.py), [independent script](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_kubo_mori_gibbs_cancellation_independent.py), [integrated verifier](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_kubo_mori_gibbs_cancellation_verify.py), [scope note](claims/C6-SPACETIME-SIGNATURE/notes/q3lock-local-q2-kubo-mori-gibbs-cancellation-boundary-260827.md), and stored run artefacts.
 
 <a id="r-370"></a>
 ### R-370 -- Kubo-Mori Liouvillian energy-window and tail decomposition

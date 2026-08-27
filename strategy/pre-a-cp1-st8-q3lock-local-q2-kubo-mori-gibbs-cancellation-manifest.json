@@ -1,0 +1,60 @@
+{
+  "schema": "tect/pre-a-cp1-st8-q3lock-local-q2-kubo-mori-gibbs-cancellation/1.0",
+  "exploration_id": "EXP-001213",
+  "result_id": "R-371",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "claim_bearing": false,
+  "parent_explorations": ["EXP-001212", "EXP-001211", "EXP-001210"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-ENERGY-WEIGHTED-COMMUTATOR-GEVREY-LR-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+  ],
+  "title": "Critical theta-half Gibbs cancellation and local second-moment bound",
+  "question": "At the critical fractional exponent theta=1/2, does the Gibbs relation exactly cancel the doubled-bond transition energy and reduce the Kubo-Mori shell to a local Gibbs second-moment bound?",
+  "finite_fixture": {
+    "regimes": [
+      {"shape": "edge", "volume": 2, "cutoff_values": [3, 4, 5, 6], "site_values": [0, 1], "bond_term_indices": [2]},
+      {"shape": "square", "volume": 4, "cutoff_values": [2], "site_values": [0, 1, 2, 3], "bond_term_indices": [4, 5, 6, 7]}
+    ],
+    "beta_values": ["1/2", "1"],
+    "time_sign_values": [-1, 1],
+    "history_adjoint_values": [0, 1],
+    "theta": "1/2",
+    "prefix_policy": "all_positions",
+    "time_step": "1/18",
+    "hbar": "1",
+    "parameters": {"chi": "1", "r": "-1", "g": "3/5", "c": "3/5", "lambda": "1/10"},
+    "finite_tolerance": 1e-9,
+    "agreement_tolerance": 2e-8,
+    "log_mean_gap_tolerance": 1e-12
+  },
+  "scope": {
+    "gibbs_theta_half_cancellation_finite_checked": true,
+    "gibbs_theta_half_identity_closed": true,
+    "local_second_moment_bound_closed": true,
+    "weighted_fractional_bound_closed": true,
+    "local_second_moment_uniformity_proved": false,
+    "weighted_cutoff_uniformity_proved": false,
+    "weighted_volume_uniformity_proved": false,
+    "source_uniformity_proved": false,
+    "shape_uniformity_proved": false,
+    "local_modular_dirichlet_comparison_proved": false,
+    "common_core_closed": false,
+    "common_alpha_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "promotion_boundary": "R-371 proves and checks the critical theta-half Gibbs cancellation and a finite local Gibbs second-moment bound for the doubled-bond proxy. It does not prove a uniform second-moment estimate, common core, common alpha, KMS/GNS gap, continuum, or any QFT closure.",
+  "next_action": "Prove a source-, volume- and cutoff-uniform local Gibbs second-moment estimate on a Hamiltonian-derived common core; then combine it with the R-371 identity and the R-370 low/high split for the direct D,delta-D corridor.",
+  "boundary": "Finite actual-Q3 edge and square rows with all prefixes, translated bond terms, translated measured sites, orientations, signs, adjoints and beta values. The Gibbs state is the finite doubled local-bond proxy. Global KMS, common core, common alpha, OS/KMS/GNS dynamics, gap, continuum, C6, Sector-A and Pre-A remain open.",
+  "recorded_at": "2026-08-29T17:00:00Z",
+  "recorded_by": "Codex"
+}
