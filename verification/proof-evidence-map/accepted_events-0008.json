@@ -529,6 +529,42 @@
         "codes/foundations/pre_a_cp1_st8_q3lock_local_q2_kubo_mori_capped_gibbs_kernel.py,codes/foundations/pre_a_cp1_st8_q3lock_local_q2_kubo_mori_capped_gibbs_kernel_independent.py,codes/foundations/pre_a_cp1_st8_q3lock_local_q2_kubo_mori_capped_gibbs_kernel_verify.py,verification/lean/Tect/R373.lean"
       ],
       "unresolved_claim_ids": []
+    },
+    {
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "claim_ref_basis": {
+        "C6-SPACETIME-SIGNATURE": "explicit_claim_ids"
+      },
+      "claim_refs": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "date": "2026-08-27",
+      "header": "[R-374 positive odd-Matsubara resolvent layers for the capped Gibbs kernel] - 2026-08-27",
+      "id": "20260827-r-374-positive-odd-matsubara-resolvent-layers-f",
+      "keywords": [],
+      "linked_result_ids": [
+        "R-373",
+        "R-374"
+      ],
+      "negative_results": [],
+      "notes": [
+        "claims/C6-SPACETIME-SIGNATURE/notes/q3lock-local-q2-kubo-mori-matsubara-resolvent-layers-boundary-260827.md"
+      ],
+      "raw": "## [R-374 positive odd-Matsubara resolvent layers for the capped Gibbs kernel] - 2026-08-27\n\n- **Odd-Matsubara interface.** R-374 rewrites the R-373 theta-half kernel as the positive partial-fraction sum `kappa_beta(Delta)=sum_(n>=0) 8*Delta/(((2*n+1)*pi)^2+beta^2*Delta^2)`. Each layer is resolvent-like in the absolute Liouvillian energy, suggesting a layer-by-layer locality proof without assuming a uniform spectral gap.\n- **Cross-check.** The first 64 layers are checked on every R-373 actual-Q3 history context: primary and independent each pass `14089/14089` over `2816` contexts; integrated passes `134/134`; Lean R374 proves symbolic layer positivity and finite partial-sum monotonicity; the largest lane difference is `1.066e-14`.\n- **Boundary.** The finite partial-sum tail envelope is `4*Delta/(pi^2*(2N-1))`; its maximum at `N=64` is `0.0812886114002766`, and the exact shell still reaches `1.46109688813467`. Resolvent locality, common core/alpha, OS/KMS/GNS transfer, gap, continuum, C6, Sector-A and Pre-A remain open. No negative result, tier change or PDF is issued.\n\n",
+      "result_ids": [
+        "R-373",
+        "R-374"
+      ],
+      "result_link_basis": {
+        "R-373": "explicit_result_id",
+        "R-374": "explicit_result_id"
+      },
+      "scripts": [
+        "codes/foundations/pre_a_cp1_st8_q3lock_local_q2_kubo_mori_matsubara_resolvent_layers.py,codes/foundations/pre_a_cp1_st8_q3lock_local_q2_kubo_mori_matsubara_resolvent_layers_independent.py,codes/foundations/pre_a_cp1_st8_q3lock_local_q2_kubo_mori_matsubara_resolvent_layers_verify.py,verification/lean/Tect/R374.lean"
+      ],
+      "unresolved_claim_ids": []
     }
   ],
   "kind": "accepted_events",

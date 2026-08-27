@@ -5,7 +5,7 @@ Compact generated reader surface. The append-only authority is
 record 568 / commit `4db22f4e` and no longer grows.
 Post-cutover full bodies live exactly once in bounded pages under `pages/`.
 
-**714 accepted events** · latest 25 shown below · machine locator: `index.json`
+**715 accepted events** · latest 25 shown below · machine locator: `index.json`
 
 Search the complete authority without loading every page:
 
@@ -17,6 +17,7 @@ python verification/scripts/changelog.py search --text <phrase>
 
 | Date | Event | Claims | Full entry |
 |---|---|---|---|
+| 2026-08-27 | `20260827-r-374-positive-odd-matsubara-resolvent-layers-f` — [R-374 positive odd-Matsubara resolvent layers for the capped Gibbs kernel] - 2026-08-27 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000669-000718.md#20260827-r-374-positive-odd-matsubara-resolvent-layers-f) |
 | 2026-08-28 | `20260828-r-373-exact-hyperbolic-tangent-gibbs-kernel-and` — [R-373 exact hyperbolic-tangent Gibbs kernel and capped local Dirichlet bound] - 2026-08-28 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000669-000718.md#20260828-r-373-exact-hyperbolic-tangent-gibbs-kernel-and) |
 | 2026-08-28 | `20260828-r-372-critical-theta-half-modular-centering-and` — [R-372 critical theta-half modular centering and Gibbs variance reduction] - 2026-08-28 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000669-000718.md#20260828-r-372-critical-theta-half-modular-centering-and) |
 | 2026-08-28 | `20260828-r-371-critical-theta-half-gibbs-cancellation-an` — [R-371 critical theta-half Gibbs cancellation and local second-moment bound] - 2026-08-28 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000669-000718.md#20260828-r-371-critical-theta-half-gibbs-cancellation-an) |
@@ -41,7 +42,6 @@ python verification/scripts/changelog.py search --text <phrase>
 | 2026-08-22 | `20260822-reconcile-b3-estimator-gate-pointer-after-r-019` — [Reconcile B3 estimator-gate pointer after R-019] - 2026-08-22 | B3-RH-TESTED-STRUCTURE-RANKING, EXP-000919, R-019 | [bounded page](pages/000669-000718.md#20260822-reconcile-b3-estimator-gate-pointer-after-r-019) |
 | 2026-08-22 | `20260822-r-193-historical-reader-append-only-growth-repa` — [R-193 historical reader append-only growth repair] - 2026-08-22 | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION, EXP-000918, R-193 | [bounded page](pages/000669-000718.md#20260822-r-193-historical-reader-append-only-growth-repa) |
 | 2026-08-22 | `20260822-t-006-code-discipline-gate-and-rho-source-conso` — [T-006 code-discipline gate and RHO source consolidation] - 2026-08-22 | — | [bounded page](pages/000669-000718.md#20260822-t-006-code-discipline-gate-and-rho-source-conso) |
-| 2026-08-22 | `20260822-r-193-static-owner-heat-map-non-identifiability` — [R-193 static-owner heat-map non-identifiability witness] - 2026-08-22 | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION, EXP-000910, R-193 | [bounded page](pages/000669-000718.md#20260822-r-193-static-owner-heat-map-non-identifiability) |
 
 ## Post-cutover pages
 
@@ -49,6 +49,6 @@ Each full event body after the cutover occurs in exactly one page.
 
 | Ordinals | Events | Page |
 |---|---:|---|
-| 669–714 | 46 | [000669-000718.md](pages/000669-000718.md) |
+| 669–715 | 47 | [000669-000718.md](pages/000669-000718.md) |
 | 619–668 | 50 | [000619-000668.md](pages/000619-000668.md) |
 | 569–618 | 50 | [000569-000618.md](pages/000569-000618.md) |

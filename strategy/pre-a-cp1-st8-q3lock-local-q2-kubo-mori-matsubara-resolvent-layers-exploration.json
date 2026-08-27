@@ -1,0 +1,65 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001216",
+  "title": "Positive odd-Matsubara resolvent expansion of the capped Gibbs kernel",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-ENERGY-WEIGHTED-COMMUTATOR-GEVREY-LR-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+  ],
+  "related": [{"id": "EXP-001215", "relation": "continues"}],
+  "question": "Can the exact theta-half hyperbolic-tangent Gibbs kernel be decomposed into positive odd-Matsubara resolvent layers so that future locality estimates can be proved layer by layer without a uniform spectral gap?",
+  "method": [
+    "Use the positive partial-fraction expansion tanh(x)=sum_n 8*x/((2*n+1)^2*pi^2+4*x^2) with x=beta*Delta/2, and define the corresponding absolute-Liouvillian resolvent layer.",
+    "Check positivity and monotone partial sums, compare the direct tanh kernel with a finite N-term sum, and apply the explicit odd-square tail envelope.",
+    "Evaluate the exact and partial-kernel shells on every R-373 actual-Q3 history context, retaining both orientations, signs, adjoints, beta values and all prefixes.",
+    "Reconstruct the same calculation independently and compile Lean R374 for symbolic odd-frequency positivity and finite-sum monotonicity."
+  ],
+  "finding": "The positive odd-Matsubara partial sums stay below the exact hyperbolic-tangent kernel within the declared numerical tolerance, and the resulting shell remainder is bounded by the computed positive tail form on every R-373 context. The decomposition supplies a resolvent-layer interface, but it does not itself prove a cutoff-, volume- or source-uniform locality bound.",
+  "verdict": "advanced",
+  "decision_reason": "R-374 changes the analytic order of attack: instead of seeking one global capped estimate, prove a positive locality estimate for each Matsubara resolvent layer and sum a controlled tail. This retains transition-energy information and avoids assuming a uniform spectral gap. The finite layer checks do not close resolvent locality or common alpha, so no promotion is justified.",
+  "adversarial_review": [
+    {"axis": "series identity", "check": "The infinite partial-fraction formula is treated as an analytic interface; executable assertions concern finite partial sums and direct tanh comparisons only.", "disposition": "UPHELD-INTERFACE"},
+    {"axis": "tail direction", "check": "Partial sums are checked not to exceed the direct kernel, while the one-sided tail envelope is checked independently.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "zero transition", "check": "Delta=0 has a zero numerator and no transition-energy division.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "positive layers", "check": "Every denominator contains a positive odd frequency square and a nonnegative beta-squared transition term.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "history coverage", "check": "All R-373 prefix positions, split orders, signs and adjoints are retained.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "cutoff uniformity", "check": "The decomposition does not erase the finite edge growth; no uniform conclusion is inferred.", "disposition": "UPHELD-OPEN"},
+    {"axis": "proxy state", "check": "The doubled-bond Gibbs weights remain a local finite proxy rather than a global interacting KMS state.", "disposition": "UPHELD-OPEN"},
+    {"axis": "Lean scope", "check": "Lean proves symbolic layer positivity and finite monotonicity, not the infinite series, spectra, traces or limits.", "disposition": "UPHELD"},
+    {"axis": "QFT promotion", "check": "Resolvent locality, common core, common alpha, OS/KMS/GNS dynamics, gap, continuum, C6, Sector-A and Pre-A remain open.", "disposition": "UPHELD-OPEN"}
+  ],
+  "evidence_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-local-q2-kubo-mori-matsubara-resolvent-layers-manifest.json#finite_fixture",
+    "strategy/pre-a-cp1-st8-q3lock-local-q2-kubo-mori-matsubara-resolvent-layers-certificate-260827.md#verification",
+    "codes/foundations/pre_a_cp1_st8_q3lock_local_q2_kubo_mori_matsubara_resolvent_layers.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_local_q2_kubo_mori_matsubara_resolvent_layers_independent.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_local_q2_kubo_mori_matsubara_resolvent_layers_verify.py#run",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-28-primary-pre_a_cp1_st8_q3lock_local_q2_kubo_mori_matsubara_resolvent_layers/primary.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-28-independent-pre_a_cp1_st8_q3lock_local_q2_kubo_mori_matsubara_resolvent_layers/independent.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-28-integrated-pre_a_cp1_st8_q3lock_local_q2_kubo_mori_matsubara_resolvent_layers/integrated.json#derived",
+    "verification/lean/Tect/R374.lean#finite_partial_monotone",
+    "claims/C6-SPACETIME-SIGNATURE/notes/q3lock-local-q2-kubo-mori-matsubara-resolvent-layers-boundary-260827.md#boundary"
+  ],
+  "formal_integration": {
+    "results": ["R-374"],
+    "negatives": [],
+    "events": ["20260827-r-374-positive-odd-matsubara-resolvent-layers-f"],
+    "lean": "R374 PASS",
+    "no_new_result": false,
+    "no_new_negative": true,
+    "no_changelog_event": false,
+    "no_pdf": true,
+    "no_tier_change": true
+  },
+  "formal_refs": {"results": ["R-374"], "negatives": [], "events": ["20260827-r-374-positive-odd-matsubara-resolvent-layers-f"]},
+  "next_action": "Prove a source-, volume- and cutoff-uniform locality estimate for each positive odd-Matsubara resolvent layer on a Hamiltonian-derived common core, then sum the layers with a controlled tail.",
+  "boundary": "T0 claim-nonbearing finite odd-Matsubara resolvent-layer checkpoint only. The proposed scalar series interface and finite partial sums do not establish resolvent locality, common core, common alpha, OS/KMS/GNS dynamics, gap, continuum, C6, Sector-A or Pre-A.",
+  "no_overclaim": "R-374 changes the analytic interface but does not prove a uniform Q3 estimate or any QFT closure.",
+  "provenance": "contemporaneous",
+  "recorded_at": "2026-08-29T20:00:00Z",
+  "reviewed_on": "2026-08-27",
+  "recorded_by": "Codex"
+}

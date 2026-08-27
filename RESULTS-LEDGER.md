@@ -39,6 +39,7 @@ policy in `governance/development-history.md`.
 | [R-192](#r-192) | Bounded complete finite production-cylinder integration trial | R-192 v1.0 is a T0 claim-nonbearing T-058 integration audit under EXP-000909. Lean and both exact lanes confirm the R-183 reserve fixtures, R-184 temporal identity and R-191 telescope, then stop at the first missing production heat/root raw-current map. The audit does not close the q-ledger, either A13 gate, Sector-A or Pre-A |
 | [R-194](#r-194) | Sharp running-mass counterterm boundary | R-194 v1.0 is a T0 claim-nonbearing Lean/Fraction boundary under EXP-000932. It proves the sharp local coefficient h_min=9*(a+2*b+c), a nonnegative endpoint correction, a subsharp negative witness, and a third-component escape with no uniform coercivity. The full renormalised A6 owner, tightness, removal, Sector-A and Pre-A remain open |
 | [R-195](#r-195) | Spatial constant-field lift of the A6 running-mass escape | R-195 v1.0 is a T0 claim-nonbearing Lean/Fraction spatial lift under EXP-000933. On the declared finite torus, constant fields multiply the R-194 correction by the exact volume and the volume-cancelled ratio is bounded by 6*s*(b+c)/r, so no positive volume-uniform coercivity holds even on that subspace. Full-field concentration, partition/tightness, A7, A13, Sector-A and Pre-A remain open |
+| [R-374](#r-374) | Positive odd-Matsubara resolvent expansion of the capped Gibbs kernel | R-374 v1.0 is a T0 claim-nonbearing finite analytic/executable checkpoint under EXP-001216. The first 64 positive resolvent layers form a monotone partial kernel with an explicit tail envelope over 2816 all-prefix contexts; resolvent locality, source/cutoff/volume uniformity, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
 | [R-373](#r-373) | Exact hyperbolic-tangent Gibbs kernel and capped local Dirichlet bound | R-373 v1.0 is a T0 claim-nonbearing finite analytic/executable checkpoint under EXP-001215. The theta-half Gibbs difference becomes a saturating kernel bounded by min(Delta,2/beta), unifying low-gap Dirichlet and high-gap variance forms across 2816 all-prefix contexts; capped-form uniformity, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
 | [R-372](#r-372) | Critical theta-half modular centering and Gibbs variance reduction | R-372 v1.0 is a T0 claim-nonbearing finite analytic/executable checkpoint under EXP-001214. Bond-Gibbs modular centering leaves the theta-half shell unchanged and replaces the raw local second-moment premise by a thermal variance across 2816 all-prefix contexts; the edge variance still grows to 41.648267 at d=6, so uniform variance, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
 | [R-371](#r-371) | Critical theta-half Gibbs cancellation and local second-moment bound | R-371 v1.0 is a T0 claim-nonbearing finite analytic/executable checkpoint under EXP-001213. At theta=1/2, `L_ij|lambda_i-lambda_j|=|p_i-p_j|/beta` and the shell is bounded by `(4/beta)Tr(rho_bond X^2)` across 2816 all-prefix contexts; uniform second-moment control, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
@@ -581,6 +582,36 @@ tier/lifecycle change follows. A13 gates remain open. No R-192 PDF is issued.
 <a id="r-364"></a>
 
 
+<a id="r-374"></a>
+### R-374 -- Positive odd-Matsubara resolvent expansion of the capped Gibbs kernel
+
+**Result ID.** R-374 is a T0, claim-nonbearing finite analytic/executable
+checkpoint under EXP-001216.
+
+**Statement.** Writing `x=beta*Delta/2`, retain the positive partial-fraction
+interface
+`tanh(x)=sum_(n>=0) 8*x/((2*n+1)^2*pi^2+4*x^2)`.  Equivalently, the R-373
+kernel is represented as positive odd-Matsubara layers
+`kappa_beta(Delta)=sum_(n>=0) 8*Delta/(((2*n+1)*pi)^2+beta^2*Delta^2)`.  The
+first 64 layers are nonnegative and monotone below the direct kernel; an
+explicit one-sided tail envelope is `4*Delta/(pi^2*(2*N-1))` for `N>=1`.
+
+**Verification.** Primary and non-importing independent lanes each pass
+`14089/14089` assertions over `2816` all-prefix actual-Q3 contexts.  The
+integrated verifier passes `134/134`, and Lean R374 compiles.  The largest
+primary-independent numeric difference is `1.066e-14`; the direct-kernel
+partial-sum error is `0.0806249536197736`, the computed tail envelope maximum
+is `0.0812886114002766`, and the shell remainder maximum is
+`0.0136350255806681`.  The one-sided shell-envelope residual is nonpositive up
+to `2.38e-20`, while the exact finite shell still reaches `1.46109688813467`.
+
+**Boundary.** The scalar infinite series is recorded as an analytic interface;
+Lean proves only odd-frequency/layer positivity and finite-sum monotonicity.
+No resolvent locality, source/volume/cutoff-uniform estimate, common core,
+common alpha, OS/KMS/GNS transfer, gap, continuum, C6, Sector-A, or Pre-A
+closure follows.  No new negative result, tier change, or R-374 PDF is issued.
+
+**Proven in:** [manifest](strategy/pre-a-cp1-st8-q3lock-local-q2-kubo-mori-matsubara-resolvent-layers-manifest.json), [certificate](strategy/pre-a-cp1-st8-q3lock-local-q2-kubo-mori-matsubara-resolvent-layers-certificate-260827.md), [Lean entrypoint](verification/lean/Tect/R374.lean), [primary script](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_kubo_mori_matsubara_resolvent_layers.py), [independent script](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_kubo_mori_matsubara_resolvent_layers_independent.py), [integrated verifier](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_kubo_mori_matsubara_resolvent_layers_verify.py), [scope note](claims/C6-SPACETIME-SIGNATURE/notes/q3lock-local-q2-kubo-mori-matsubara-resolvent-layers-boundary-260827.md), and stored run artefacts.
 <a id="r-373"></a>
 ### R-373 -- Exact hyperbolic-tangent Gibbs kernel and capped local Dirichlet bound
 

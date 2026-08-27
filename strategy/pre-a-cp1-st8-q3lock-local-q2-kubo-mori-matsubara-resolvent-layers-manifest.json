@@ -1,0 +1,60 @@
+{
+  "schema": "tect/pre-a-cp1-st8-q3lock-local-q2-kubo-mori-matsubara-resolvent-layers/1.0",
+  "exploration_id": "EXP-001216",
+  "result_id": "R-374",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "claim_bearing": false,
+  "parent_explorations": ["EXP-001215"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-ENERGY-WEIGHTED-COMMUTATOR-GEVREY-LR-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+  ],
+  "title": "Positive odd-Matsubara resolvent expansion of the capped Gibbs kernel",
+  "question": "Can the exact theta-half hyperbolic-tangent Gibbs kernel be decomposed into positive odd-Matsubara resolvent layers so that future locality estimates can be proved layer by layer without a uniform spectral gap?",
+  "finite_fixture": {
+    "regimes": [
+      {"shape": "edge", "volume": 2, "cutoff_values": [3, 4, 5, 6], "site_values": [0, 1], "bond_term_indices": [2]},
+      {"shape": "square", "volume": 4, "cutoff_values": [2], "site_values": [0, 1, 2, 3], "bond_term_indices": [4, 5, 6, 7]}
+    ],
+    "beta_values": ["1/2", "1"],
+    "time_sign_values": [-1, 1],
+    "history_adjoint_values": [0, 1],
+    "theta": "1/2",
+    "time_step": "1/18",
+    "hbar": "1",
+    "parameters": {"chi": "1", "r": "-1", "g": "3/5", "c": "3/5", "lambda": "1/10"},
+    "series_terms": 64,
+    "tolerance_multiplier": 800.0,
+    "finite_tolerance": 1e-9,
+    "log_mean_gap_tolerance": 1e-12,
+    "agreement_tolerance": 2e-8
+  },
+  "scope": {
+    "odd_matsubara_series_finite_checked": true,
+    "positive_resolvent_layer_finite_checked": true,
+    "partial_sum_monotonicity_finite_checked": true,
+    "tail_bound_finite_checked": true,
+    "resolvent_locality_proved": false,
+    "capped_dirichlet_uniformity_proved": false,
+    "weighted_cutoff_uniformity_proved": false,
+    "weighted_volume_uniformity_proved": false,
+    "source_uniformity_proved": false,
+    "shape_uniformity_proved": false,
+    "common_core_closed": false,
+    "common_alpha_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "promotion_boundary": "R-374 is a finite scalar resolvent-layer interface. It checks positivity, monotone partial sums and an explicit tail envelope for the odd-Matsubara expansion on actual-Q3 bond spectra and all history prefixes; it does not prove resolvent locality or any uniform Q3 estimate.",
+  "next_action": "Prove a source-, volume- and cutoff-uniform locality estimate for each positive odd-Matsubara resolvent layer on a Hamiltonian-derived common core, then sum the layers with a controlled tail.",
+  "boundary": "Finite doubled-bond Gibbs proxy, all-prefix actual-Q3 edge and square rows, both orientations, signs, adjoints and beta values. The scalar series identity is used as a proposed analytic interface and finite partial sums are checked; resolvent locality, common core, common alpha, OS/KMS/GNS dynamics, gap, continuum, C6, Sector-A and Pre-A remain open.",
+  "recorded_by": "Codex"
+}
