@@ -1,0 +1,77 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001226",
+  "title": "Two-scale filter-removal corridor",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-RESOLVENT-ALGEBRA-EXACT-POLYNOMIAL-COMMON-ALPHA-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-FIFTH-ENERGY-MOMENT-AND-MODULAR-CUTOFF-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+  ],
+  "related": [
+    {"id": "EXP-001225", "relation": "continues"},
+    {"id": "EXP-001224", "relation": "continues"},
+    {"id": "EXP-001212", "relation": "alternative_to"}
+  ],
+  "question": "Can a low/high transition-energy split turn the s=1 frequency filter into an explicit finite filter-removal corridor whose low-frequency and high-frequency terms can be audited separately?",
+  "method": [
+    "Reuse the R-383 actual-Q3 edge and square fixtures with both beta values, translated sites, selected bond terms, both term orders, both time signs, every prefix position and both history adjoints.",
+    "For each centered matrix entry with u=|E_i-E_j| evaluate the reference filter Y_1,ij=X_ij/(1+u), the exact M0 removal and the endpoint removal.",
+    "For transition energies E=1,2,4 split every weighted sum into u<=E and u>E and check M0 removal <= E^2 M0_low + E^(-2) M2_high.",
+    "Check the endpoint removal envelope beta(2 M2_low + E^(-1) M2_high), complementary partition residuals, filtered moments and the existing state-weighted Cauchy bridge.",
+    "Rebuild the same finite grid in a non-importing independent lane, compare aggregate and per-cutoff/window profiles, and compile Lean R384 for the scalar factors.",
+    "Keep filter removal, source/volume/cutoff/beta uniformity, common core, common alpha, KMS/GNS dynamics, gap, continuum, C6, Sector-A and Pre-A flags open."
+  ],
+  "finding": "The primary lane passes 67623/67623 assertions and the non-importing independent lane passes 47912/47912 over 2816 contexts. The integrated verifier passes 801/801 and Lean R384 compiles. Primary and independent numeric fields agree within 2.160049e-12. Across the primary corridor profiles, the maximum actual M0 removal is 0.3745334781395842 and the maximum endpoint removal is 2.060468823284187. For E=1,2,4 the maximum M0 removal envelopes are 58.957472534179225, 169.83677583776642 and 665.126775048548; the maximum endpoint envelopes are 17.762698152215687, 9.211990331976548 and 6.479291851990611. Low/high partition residuals remain at roundoff. The low-frequency M0 maximum remains 41.57042344053425 and the raw R-382 d=5-to-d=6 growth warning remains true.",
+  "verdict": "advanced",
+  "decision_reason": "R-384 advances R-383 by converting the qualitative frequency split into an explicit finite two-scale corridor. The corridor inequalities pass and expose separate low-frequency and high-frequency obligations, but the finite data do not supply a cutoff-independent modulus: the low M0 remains large and the raw cutoff growth warning persists. The result is a route-local finite diagnostic, not a uniform theorem or QFT promotion.",
+  "adversarial_review": [
+    {"axis": "filter-removal algebra", "check": "The M0 removal uses (1-(1+u)^(-2))^2 while the endpoint uses u(1-(1+u)^(-2)); both are recomputed directly in each lane.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "low/high partition", "check": "The masks u<=E and u>E are complementary up to the declared gap tolerance, and both M0 and M2 partition residuals are asserted at every context.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "envelope direction", "check": "Low modes use the E^2 and 2 M2 bounds; high modes use the E^(-2) and E^(-1) tail factors, each formalized in Lean R384.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "low-frequency hiding", "check": "The low-frequency M0 maximum remains 41.57042344053425; filtering is not treated as removal of this component.", "disposition": "UPHELD-OPEN"},
+    {"axis": "finite growth", "check": "The R-382 d=5-to-d=6 warning is retained and is not called divergence or a failed theorem.", "disposition": "UPHELD-OPEN"},
+    {"axis": "endpoint subtraction", "check": "The actual endpoint removal is recomputed and only a negative floating-point roundoff is clamped to zero.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "history and state coverage", "check": "Both beta values, sites, selected bond terms, orders, signs, all prefixes and both adjoints are included.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "independent reconstruction", "check": "The independent lane rebuilds oscillator, graph, spectrum, prefixes and corridor profiles without importing the primary audit.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "uniformity promotion", "check": "Finite envelopes do not establish source, volume, cutoff, beta or common-core uniformity; all such flags remain false.", "disposition": "DISMISSED-FIREWALL"},
+    {"axis": "QFT promotion", "check": "Lean proves scalar factors only; KMS/GNS dynamics, the gap, continuum, C6, Sector-A and Pre-A remain open.", "disposition": "DISMISSED-FIREWALL"}
+  ],
+  "evidence_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-local-q2-kubo-mori-two-scale-filter-removal-corridor-manifest.json#identity",
+    "strategy/pre-a-cp1-st8-q3lock-local-q2-kubo-mori-two-scale-filter-removal-corridor-certificate-260828.md#finite-verification",
+    "codes/foundations/pre_a_cp1_st8_q3lock_local_q2_kubo_mori_two_scale_filter_removal_corridor.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_local_q2_kubo_mori_two_scale_filter_removal_corridor_independent.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_local_q2_kubo_mori_two_scale_filter_removal_corridor_verify.py#run",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-28-primary-pre_a_cp1_st8_q3lock_local_q2_kubo_mori_two_scale_filter_removal_corridor/primary.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-28-independent-pre_a_cp1_st8_q3lock_local_q2_kubo_mori_two_scale_filter_removal_corridor/independent.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-28-integrated-pre_a_cp1_st8_q3lock_local_q2_kubo_mori_two_scale_filter_removal_corridor/integrated.json#lean",
+    "verification/lean/Tect/R384.lean#low_m0_envelope_factor",
+    "claims/C6-SPACETIME-SIGNATURE/notes/q3lock-local-q2-kubo-mori-two-scale-filter-removal-corridor-boundary-260828.md#R-384"
+  ],
+  "formal_integration": {
+    "results": ["R-384"],
+    "negatives": [],
+    "events": ["20260828-two-scale-filter-removal-corridor-2026-08-28"],
+    "lean": "R384 PASS",
+    "no_new_result": false,
+    "no_new_negative": true,
+    "no_changelog_event": false,
+    "no_pdf": true,
+    "no_tier_change": true
+  },
+  "formal_refs": {
+    "results": ["R-384"],
+    "negatives": [],
+    "events": ["20260828-two-scale-filter-removal-corridor-2026-08-28"]
+  },
+  "next_action": "Establish a Hamiltonian-derived common-core low-frequency modulus and a source-/cutoff-independent high-frequency tail estimate; then test whether Y_1 -> X can be inserted into the R-377 resolvent telescope. If either uniform premise fails, register the precise obstruction as a named gate.",
+  "boundary": "T0 claim-nonbearing finite two-scale filter-removal corridor only. It does not prove source/volume/cutoff/beta uniformity, filter removal, a common core, common alpha, KMS/GNS dynamics, a gap, continuum, C6, Sector-A or Pre-A.",
+  "no_overclaim": "R-384 separates low-frequency and high-frequency terms in finite matrices and verifies scalar envelopes. It does not turn either envelope into a uniform estimate or a filter-removal theorem.",
+  "provenance": "contemporaneous",
+  "recorded_at": "2026-08-30T03:30:00Z",
+  "reviewed_on": "2026-08-28",
+  "recorded_by": "Codex"
+}

@@ -42,6 +42,7 @@ policy in `governance/development-history.md`.
 | [R-376](#r-376) | Hilbert-Schmidt Lipschitz bridge for the capped Liouvillian kernel | R-376 v1.0 is a T0 claim-nonbearing finite operator-interface checkpoint under EXP-001218. A noncommuting cutoff-2 edge Liouvillian stress gives maximum full-kernel Frobenius ratio 0.9787544362168733 and 64-layer ratio 0.9755896836319287 with 76/76 integrated assertions; general Schatten-2 proof, operator-norm locality, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
 | [R-377](#r-377) | Gap-free odd-Matsubara resolvent telescoping budget | R-377 v1.0 is a T0 claim-nonbearing finite resolvent-interface checkpoint under EXP-001219. The exact positive-resolvent difference identity and its 64-layer budget pass 122/122 integrated assertions with Lean R377; the accumulated finite budget ratio is 0.9895313426497929 and the absolute-value square-root debt is recorded separately. Uniform locality, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
 | [R-382](#r-382) | Increasing-cutoff endpoint modular moment stress | R-382 v1.0 is a T0 claim-nonbearing finite cutoff-profile diagnostic under EXP-001224. The R-381 endpoint-energy bridge passes across 2816 all-prefix actual-Q3 contexts with Lean R382; edge max M_0 grows from 2.733031855844076 at d=3 to 41.64826651661874 at d=6 and max M_2 from 0.008378198414559081 to 17.719559304500326, with d=5 to d=6 ratios 8.855033106195243 and 36.38049903040583. This is finite growth evidence only; uniform M_0/M_2 control, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
+| [R-384](#r-384) | Two-scale filter-removal corridor | R-384 v1.0 is a T0 claim-nonbearing finite two-scale corridor under EXP-001226. For the reference filter Y_1=X/(1+u), the M0 and endpoint removal envelopes split into low-frequency and high-frequency terms and pass across 2816 actual-Q3 contexts with independent and Lean checks; finite low-frequency M0 and the raw cutoff-growth warning remain, so filter removal, common-core uniformity and all QFT/limit conclusions stay open |
 | [R-383](#r-383) | Frequency-adapted endpoint filter | R-383 v1.0 is a T0 claim-nonbearing finite spectral-filter diagnostic under EXP-001225. The filter profiles attenuate the energy-weighted endpoint shell (reference s=1: max filtered M_2=0.24919044409881133 and endpoint=0.09311499130513236) while leaving the d=6 low-frequency M_0 at 41.57042344053405. Primary/independent/integrated and Lean R383 checks pass; filter removal, common-core and all QFT/limit conclusions remain open |
 | [R-381](#r-381) | Endpoint modular moment to energy Cauchy bridge | R-381 v1.0 is a T0 claim-nonbearing finite Gibbs energy-moment interface checkpoint under EXP-001223. The R-380 endpoint modular moment equals a beta-weighted energy-difference first moment and is bounded by a state-weighted quadratic moment across 2560 all-prefix actual-Q3 contexts; the integrated verifier passes 61/61 with Lean R381, while uniform M0/M2 control remains open |
 | [R-380](#r-380) | Renyi interpolation bridge for the modular shell | R-380 v1.0 is a T0 claim-nonbearing finite Kubo--Mori/Renyi interface checkpoint under EXP-001222. The modular-frequency weighted shell is the exact integral of a symmetric interpolation across 2560 all-prefix actual-Q3 contexts; the integrated verifier passes 69/69 with Lean R380, and finite ratios show midpoint control does not replace the endpoint modular-moment bound |
@@ -622,6 +623,42 @@ No new negative result, tier change, or R-376 PDF is issued.
 
 **Proven in:** manifest, certificate, Lean entrypoint, primary script,
 independent script, integrated verifier, scope note, and saved run artefacts.
+
+<a id="r-384"></a>
+### R-384 -- Two-scale filter-removal corridor
+
+**Result ID.** R-384 is a T0, claim-nonbearing finite two-scale spectral
+corridor diagnostic under EXP-001226.
+
+**Statement.** For `u=|E_i-E_j|` and reference filter
+`Y_1,ij=X_ij/(1+u)`, the finite `M_0` removal satisfies, for every `E>0`,
+`||X-Y_1||^2_M0 <= E^2 M0_{u<=E} + E^(-2) M2_{u>E}`.  The endpoint
+removal satisfies `D_1(X)-D_1(Y_1) <= beta (2 M2_{u<=E} + E^(-1)
+M2_{u>E})`.  Lean R384 formalizes the scalar factors; the scripts check the
+identities and envelopes on the declared finite fixtures.
+
+**Verification.** The primary lane passes 67623/67623 assertions and the
+non-importing independent lane passes 47912/47912 over 2816 actual-Q3
+contexts.  The integrated verifier passes 801/801 and Lean R384 compiles;
+primary/independent numeric agreement is within 2.160049e-12.  Across
+transition energies `E=1,2,4`, the maximum actual `M_0` removal is
+0.3745334781395842 and the maximum endpoint removal is 2.060468823284187.
+The corresponding maximum `M_0` removal envelopes are
+58.957472534179225, 169.83677583776642 and 665.126775048548; endpoint
+envelopes are 17.762698152215687, 9.211990331976548 and 6.479291851990611.
+Low/high partition residuals are at roundoff.
+
+**Boundary.** The low-frequency `M_0` maximum remains 41.57042344053425 and
+the R-382 d=5-to-d=6 growth warning remains true.  The corridor is finite
+evidence, not a cutoff/source-uniform estimate, filter-removal theorem,
+common-core result or divergence statement.  Source/volume/cutoff/beta
+uniformity, common alpha, OS/KMS/GNS dynamics, a mass gap, continuum, C6,
+Sector-A and Pre-A remain open.  No new negative result, tier change or
+proof-note PDF is issued.
+
+**Proven in:** manifest, certificate, Lean entrypoint, primary script,
+independent script, integrated verifier, scope note, exploration record and
+stored run artefacts.
 
 <a id="r-383"></a>
 ### R-383 -- Frequency-adapted endpoint filter
