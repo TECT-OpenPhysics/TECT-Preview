@@ -1,0 +1,109 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-QUANTUM-MARKOV-BLANKET-BOUNDARY-TRANSFER-FINITE-v0",
+  "result_id": "R-391",
+  "title": "Quantum-Markov blanket boundary transfer",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001234",
+  "claim_bearing": false,
+  "parent_explorations": ["EXP-001233", "EXP-001232", "EXP-001201"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+  ],
+  "question": "Does a finite Gibbs state admit a measurable quantum-Markov blanket around a local core, so that boundary transfer can be parameterized by conditional mutual information and a recoverability scale before applying the local spectral window?",
+  "finite_fixture": {
+    "volume_values": [2, 3, 4, 5],
+    "admissible_pairs": [
+      {"volume": 2, "cutoff_dimensions": [3, 4, 5, 6]},
+      {"volume": 3, "cutoff_dimensions": [3, 4, 5]},
+      {"volume": 4, "cutoff_dimensions": [3, 4, 5]},
+      {"volume": 5, "cutoff_dimensions": [3, 4]}
+    ],
+    "core_widths": [1, 2],
+    "buffer_widths": [1, 2],
+    "beta_values": ["1/4", "1/2", "1", "2"],
+    "energy_windows": ["1/2", "2", "4"],
+    "chi": "1",
+    "r": "-1",
+    "g": "0.6",
+    "c": "0.6",
+    "lambda": "0.1",
+    "hbar": "1",
+    "numerical_tolerance": 1e-8,
+    "positivity_tolerance": 1e-10,
+    "hostile_threshold": 1e-7,
+    "finite_only": true
+  },
+  "model": {
+    "global_hamiltonian": "H_V=sum_j [p_j^2/(2 chi)+r q_j^2/2+g q_j^4/4] + sum_j [c(q_j-q_{j+1})^2/2 + lambda(q_j-q_{j+1})^2(q_j^2+q_{j+1}^2)/4]",
+    "tripartition": "A=local core, B=contiguous buffer collar, C=remaining environment; omitted exterior sites are traced out",
+    "conditional_mutual_information": "I(A:C|B)=S(AB)+S(BC)-S(B)-S(ABC)",
+    "recoverability_scale": "sqrt(2 I(A:C|B)) as a finite natural-log diagnostic; no recovery map or infinite-volume bound is asserted",
+    "petz_diagnostic": "trace distance between rho_ABC and the finite Petz reconstruction from rho_AB, rho_BC and rho_B",
+    "spectral_complement": "Q_{A,E} rho_A Q_{A,E} for the isolated local core Hamiltonian",
+    "analytic_target": "prove a boundary-conditioned Gibbs complement estimate by a buffer-width tail modulus, then transfer the cutoff-independent invariant form core"
+  },
+  "coverage": {
+    "all_declared_volume_cutoff_pairs": true,
+    "both_core_widths_when_admissible": true,
+    "both_buffer_widths_when_admissible": true,
+    "both_orientations": true,
+    "all_beta_values": true,
+    "all_energy_windows_for_pair_core": true,
+    "qcmI_and_recovery_rows": true,
+    "product_state_hostile": true
+  },
+  "scope": {
+    "finite_qcmI_nonnegativity_closed": true,
+    "finite_recoverability_scale_closed": true,
+    "finite_petz_diagnostic_closed": true,
+    "finite_spectral_complement_profile_closed": true,
+    "finite_buffer_width_stress_closed": true,
+    "operator_norm_uniformity_closed": false,
+    "beta_uniformity_closed": false,
+    "eta_uniformity_closed": false,
+    "phase_local_bkm_estimate_closed": false,
+    "boundary_shell_l1_closed": false,
+    "cutoff_uniformity_closed": false,
+    "source_uniformity_closed": false,
+    "volume_uniformity_closed": false,
+    "shape_uniformity_closed": false,
+    "operator_domain_embedding_closed": false,
+    "direct_D_cauchy_closed": false,
+    "delta_D_cauchy_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R391.lean",
+    "theorem_markers": ["conditional_mutual_information_split", "recoverability_scale_nonnegative", "trace_distance_range"],
+    "command": "lake env lean Tect/R391.lean",
+    "boundary": "Lean checks scalar QCMI decomposition, square-root recoverability scale and finite trace-distance range; entropy spectra, Petz maps, partial traces and QFT limits remain Python/open analysis."
+  },
+  "qft_interface": {
+    "closed": "On the finite declared grid, QCMI and a finite Petz reconstruction provide an auditable core-buffer-environment boundary diagnostic before spectral projection.",
+    "open": "A buffer-width tail modulus, Gibbs complement theorem, cutoff/source/volume/shape uniformity, beta/eta independence, common core, Cook/common-alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open.",
+    "tect_boundary": "Auxiliary finite quantum-information interface only; no physical-sector conclusion or production-owner transfer is supplied."
+  },
+  "artifacts": {
+    "primary_script": "codes/foundations/pre_a_cp1_st8_q3lock_quantum_markov_blanket_boundary_transfer.py",
+    "independent_script": "codes/foundations/pre_a_cp1_st8_q3lock_quantum_markov_blanket_boundary_transfer_independent.py",
+    "hostile_script": "codes/foundations/pre_a_cp1_st8_q3lock_quantum_markov_blanket_boundary_transfer_hostile.py",
+    "integrated_verifier": "codes/foundations/pre_a_cp1_st8_q3lock_quantum_markov_blanket_boundary_transfer_verify.py",
+    "lean": "verification/lean/Tect/R391.lean"
+  },
+  "boundary": "T0 claim-nonbearing finite quantum-Markov blanket and spectral-complement stress only. It proves no buffer-width Gibbs tail, cutoff- or volume-uniform bound, common core, beta/eta-independent topology, domain or Cook/common-alpha convergence, OS/KMS/GNS reconstruction, gap, continuum, C6, Sector-A or Pre-A result.",
+  "no_overclaim": "Small conditional mutual information would identify a candidate boundary-transfer scale, not a uniform Gibbs complement theorem; large cutoff or buffer stress remains an explicit obstruction rather than being averaged away.",
+  "recorded_by": "Codex"
+}

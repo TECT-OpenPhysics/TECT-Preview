@@ -5,10 +5,11 @@
 
 Authorities: `RESULTS-LEDGER.md`.
 
-**224 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
+**225 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
 
 | ID | Result | Tier/scope |
 |---|---|---|
+| [`R-391`](../RESULTS-LEDGER.md#r-391) | Quantum-Markov blanket boundary transfer | T0 |
 | [`R-390`](../RESULTS-LEDGER.md#r-390) | Local-marginal spectral-window transfer | T0 |
 | [`R-389`](../RESULTS-LEDGER.md#r-389) | Spectral-window kinetic corridor | T0 |
 | [`R-388`](../RESULTS-LEDGER.md#r-388) | State-weighted kinetic resolvent corridor | T0 |
@@ -33,7 +34,6 @@ Authorities: `RESULTS-LEDGER.md`.
 | [`R-369`](../RESULTS-LEDGER.md#r-369) | Kubo-Mori translation and exhaustion-shape stress | T0 |
 | [`R-368`](../RESULTS-LEDGER.md#r-368) | Local Kubo-Mori weighted fractional shell with arbitrary-prefix coverage | T0 |
 | [`R-367`](../RESULTS-LEDGER.md#r-367) | Larger-cutoff and volume stress for the fractional Liouvillian shell | T0 |
-| [`R-366`](../RESULTS-LEDGER.md#r-366) | Finite fractional Liouvillian square-function shell bound | T0 |
 
 Search without loading the full ledger:
 

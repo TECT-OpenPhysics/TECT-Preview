@@ -5,30 +5,30 @@ Compact generated reader surface. The complete current machine inventory is
 `../CATALOG.md` is a frozen compatibility volume at commit `4db22f4e`
 for historical verifiers and no longer grows.
 
-**6898 artefacts** · **49 live claim cards** ·
+**6912 artefacts** · **49 live claim cards** ·
 130 superseded artefacts retained
 
 ## By kind
 
 | Kind | Artefacts | Canonical bytes |
 |---|---:|---:|
-| Claim cards (registry layer) (`claim-card`) | 604 | 5,114,120 |
-| Working proof notes (on claim cards) (`proof-note`) | 957 | 107,242,292 |
+| Claim cards (registry layer) (`claim-card`) | 604 | 5,114,491 |
+| Working proof notes (on claim cards) (`proof-note`) | 958 | 107,243,865 |
 | Theory synthesis documents (Layer 2) (`synthesis`) | 345 | 7,746,932 |
 | Migrated legacy notes (immutable) (`archive-note`) | 72 | 1,509,315 |
 | Migrated legacy scripts (runnable) (`archive-script`) | 22 | 319,000 |
 | Migrated legacy run artefacts (immutable) (`archive-artefact`) | 21 | 302,036 |
 | Reviewed legacy research records (`legacy-research-record`) | 140 | 164,393 |
 | Generated legacy sector, claim, and gate views (`legacy-research-view`) | 16 | 205,000 |
-| Fresh run artefacts (TSv2 evidence) (`run-artefact`) | 1747 | 105,796,799 |
-| Domain codes (`code`) | 1431 | 24,141,217 |
-| Verification harness (`verification`) | 490 | 14,507,603 |
+| Fresh run artefacts (TSv2 evidence) (`run-artefact`) | 1751 | 106,278,927 |
+| Domain codes (`code`) | 1435 | 24,196,421 |
+| Verification harness (`verification`) | 492 | 14,527,378 |
 | Papers (publication layer) (`paper`) | 1 | 546 |
 | Website (publication layer) (`website`) | 4 | 20,775 |
-| Registries and ledgers (`registry`) | 42 | 1,564,156 |
+| Registries and ledgers (`registry`) | 42 | 1,564,099 |
 | Governance policies (`policy`) | 22 | 201,476 |
-| Root documents (`root-doc`) | 14 | 1,804,763 |
-| Other tracked files (`other`) | 970 | 19,067,456 |
+| Root documents (`root-doc`) | 14 | 1,807,511 |
+| Other tracked files (`other`) | 973 | 19,103,208 |
 
 ## Use
 

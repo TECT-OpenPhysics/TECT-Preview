@@ -4047,6 +4047,135 @@
       "task_id": "T-054",
       "title": "Local-marginal spectral-window transfer",
       "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "axis": "entropy normalization",
+          "check": "Every reduced state is normalized by its trace before entropy evaluation and natural logarithms are used consistently.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "QCMI sign handling",
+          "check": "Negative numerical QCMI values are counted and rejected rather than silently clipped; the run has zero below-tolerance rows.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "Petz versus optimal recovery",
+          "check": "The Petz trace distance is reported as a diagnostic and is not identified with an existential optimal recovery map or a Fawzi--Renner theorem.",
+          "disposition": "DISMISSED-FIREWALL"
+        },
+        {
+          "axis": "tripartition ordering",
+          "check": "Both left and right orientations are enumerated, with omitted exterior sites explicitly traced out and no translation invariance assumed.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "buffer-width inference",
+          "check": "The width-two suppression is a finite profile only; no exponential or cutoff-independent tail modulus is inferred.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "spectral complement",
+          "check": "The complement mass is retained separately and its maximum 0.8377841748929882 prevents a false projection closure.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "hostile mutation",
+          "check": "The product-of-one-site-marginals replacement collapses QCMI and is detected against the interacting state above the threshold.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "independence",
+          "check": "The independent lane rebuilds the chain, reductions, spectra, entropies and Petz diagnostic without importing the primary module.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "QFT promotion",
+          "check": "Cutoff/volume/source/shape uniformity, common form core, beta/eta independence, Cook/common-alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open.",
+          "disposition": "UPHELD-OPEN"
+        }
+      ],
+      "boundary": "T0 claim-nonbearing finite quantum-Markov blanket and spectral-complement stress only. It proves no buffer-width Gibbs tail, cutoff- or volume-uniform bound, common core, beta/eta-independent topology, domain or Cook/common-alpha convergence, OS/KMS/GNS reconstruction, gap, continuum, C6, Sector-A or Pre-A result.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "R-391 adds a distinct quantum-information boundary coordinate: conditional mutual information measures whether a finite buffer can screen the environment, while the Petz reconstruction records an explicit finite residual. The declared grid shows a strong buffer-width suppression of QCMI, but the spectral complement remains large and no cutoff- or volume-uniform transfer follows. The route is useful as a candidate boundary-conditioned estimate, not as a Q3LOCK or physical closure.",
+      "evidence_refs": [
+        "strategy/pre-a-cp1-st8-q3lock-quantum-markov-blanket-boundary-transfer-manifest.json#model",
+        "strategy/pre-a-cp1-st8-q3lock-quantum-markov-blanket-boundary-transfer-certificate-260830.md#Result",
+        "codes/foundations/pre_a_cp1_st8_q3lock_quantum_markov_blanket_boundary_transfer.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_quantum_markov_blanket_boundary_transfer_independent.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_quantum_markov_blanket_boundary_transfer_hostile.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_quantum_markov_blanket_boundary_transfer_verify.py#run",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-primary-pre_a_cp1_st8_q3lock_quantum_markov_blanket_boundary_transfer/primary.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-integrated-pre_a_cp1_st8_q3lock_quantum_markov_blanket_boundary_transfer/integrated.json#derived",
+        "verification/lean/Tect/R391.lean#conditional_mutual_information_split",
+        "claims/C6-SPACETIME-SIGNATURE/notes/quantum-markov-blanket-boundary-transfer-boundary-260830.md#R-391"
+      ],
+      "finding": "The primary lane passes 1186/1186 checks and the non-importing independent lane passes 6/6 aggregate checks. The integrated verifier passes 24/24 with Lean R391 compiling over 12 systems, 62 tripartitions, 248 QCMI rows and 392 profile rows. QCMI is nonnegative within tolerance, ranging from 1.5854872970066936e-11 to 0.009400499834534948. The recoverability scale reaches 0.13711673737757143 and the finite Petz trace distance reaches 0.024659341100353113. Increasing the buffer from one site to two lowers the sampled QCMI maximum from 0.009400499834534948 to 0.0003382922777386277 for a one-site core and from 0.00931987074841345 to 0.0003364013516455877 for a two-site core. The spectral complement still reaches tail mass 0.8377841748929882. A product-of-one-site-marginals hostile mutation collapses QCMI to 1.7763568394002505e-15 while the interacting representative reaches 0.009288543552039563, so the mismatch is caught above threshold.",
+      "formal_integration": {
+        "events": [
+          "20260830-quantum-markov-blanket-boundary-transfer-2026-0"
+        ],
+        "lean": "R391 PASS",
+        "negatives": [],
+        "no_changelog_event": false,
+        "no_new_negative": true,
+        "no_new_result": false,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "results": [
+          "R-391"
+        ]
+      },
+      "formal_refs": {
+        "events": [
+          "20260830-quantum-markov-blanket-boundary-transfer-2026-0"
+        ],
+        "negatives": [],
+        "results": [
+          "R-391"
+        ]
+      },
+      "gate_ids": [
+        "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+        "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+        "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+      ],
+      "id": "EXP-001234",
+      "method": [
+        "Build the exact zero-source oscillator chain on the manifest's 12 volume/cutoff systems and form normalized finite Gibbs matrices at every declared beta.",
+        "Enumerate both orientations of every admissible contiguous core--buffer--environment tripartition with core widths 1,2 and buffer widths 1,2, tracing any omitted exterior sites.",
+        "Compute von Neumann entropies and QCMI exactly from the finite reduced spectra, record the natural-log recoverability scale sqrt(2 I), and reconstruct the tripartition with the finite Petz map as a separate trace-distance diagnostic.",
+        "For two-site cores, apply the isolated local spectral projector and retain the complement mass; compare buffer profiles without treating them as uniform bounds.",
+        "Rebuild all aggregate fields in a non-importing independent lane, replace the interacting state by a product of one-site marginals as a hostile mutation, and compile the scalar QCMI/recoverability identities in Lean R391."
+      ],
+      "next_action": "Derive a boundary-conditioned Gibbs complement estimate from a buffer-width tail modulus that is uniform in oscillator cutoff and compatible with an invariant common form core. Use the QCMI/Petz scale only as a finite interface; if the complement or buffer transfer fails, record the route-specific obstruction without promoting common alpha.",
+      "no_overclaim": "Finite QCMI suppression is a candidate boundary-transfer signal, not a uniform theorem; the large spectral complement and all regulator/thermodynamic debts remain explicit.",
+      "provenance": "contemporaneous",
+      "question": "Does a finite Gibbs state admit a measurable quantum-Markov blanket around a local core, so that boundary transfer can be parameterized by conditional mutual information and a recoverability scale before applying the local spectral window?",
+      "recorded_at": "2026-08-30T07:30:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001233",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001232",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001201",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-08-29",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Quantum-Markov blanket boundary transfer",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",

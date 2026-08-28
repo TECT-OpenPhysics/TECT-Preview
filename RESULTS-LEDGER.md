@@ -42,6 +42,7 @@ policy in `governance/development-history.md`.
 | [R-376](#r-376) | Hilbert-Schmidt Lipschitz bridge for the capped Liouvillian kernel | R-376 v1.0 is a T0 claim-nonbearing finite operator-interface checkpoint under EXP-001218. A noncommuting cutoff-2 edge Liouvillian stress gives maximum full-kernel Frobenius ratio 0.9787544362168733 and 64-layer ratio 0.9755896836319287 with 76/76 integrated assertions; general Schatten-2 proof, operator-norm locality, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
 | [R-377](#r-377) | Gap-free odd-Matsubara resolvent telescoping budget | R-377 v1.0 is a T0 claim-nonbearing finite resolvent-interface checkpoint under EXP-001219. The exact positive-resolvent difference identity and its 64-layer budget pass 122/122 integrated assertions with Lean R377; the accumulated finite budget ratio is 0.9895313426497929 and the absolute-value square-root debt is recorded separately. Uniform locality, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
 | [R-382](#r-382) | Increasing-cutoff endpoint modular moment stress | R-382 v1.0 is a T0 claim-nonbearing finite cutoff-profile diagnostic under EXP-001224. The R-381 endpoint-energy bridge passes across 2816 all-prefix actual-Q3 contexts with Lean R382; edge max M_0 grows from 2.733031855844076 at d=3 to 41.64826651661874 at d=6 and max M_2 from 0.008378198414559081 to 17.719559304500326, with d=5 to d=6 ratios 8.855033106195243 and 36.38049903040583. This is finite growth evidence only; uniform M_0/M_2 control, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
+| [R-391](#r-391) | Quantum-Markov blanket boundary transfer | R-391 v1.0 is a T0 claim-nonbearing finite checkpoint under EXP-001234. Core-buffer-environment QCMI and finite Petz diagnostics show sampled buffer-width suppression, while the spectral complement remains large; primary 1186/1186, independent 6/6, integrated 24/24 and Lean R391 pass over 12 systems, 62 tripartitions, 248 QCMI rows and 392 profile rows. Boundary Gibbs tails, cutoff uniformity, common core and all Q3LOCK/QFT gates remain open |
 | [R-390](#r-390) | Local-marginal spectral-window transfer | R-390 v1.0 is a T0 claim-nonbearing finite checkpoint under EXP-001233. Reducing the finite Gibbs state to an adjacent local pair before spectral projection gives exact target/square trace duality and a finite volume corridor, while cutoff stress remains visible; primary 3249/3249, independent 1950/1950, integrated 65/65 and Lean R390 pass over 12 systems, 432 duality seeds and 1296 projected rows. Boundary-conditioned Gibbs tails, common core and all Q3LOCK/QFT gates remain open |
 | [R-389](#r-389) | Spectral-window kinetic corridor | R-389 v1.0 is a T0 claim-nonbearing finite checkpoint under EXP-001232. Fixed low-energy projections stabilize the kinetic seminorm tail for all sampled beta at eta=1, while eta=1/2 remains a growth control; primary 2704/2704, independent 2704/2704, integrated 48/48 and Lean R389 pass over 80 seed and 1280 projected rows. The spectral complement and all Q3LOCK/QFT gates remain open |
 | [R-388](#r-388) | State-weighted kinetic resolvent corridor | R-388 v1.0 is a T0 claim-nonbearing finite checkpoint under EXP-001231. The raw kinetic nested-commutator operator norm grows strongly with cutoff, while a sampled two-sided Gibbs corridor appears for beta>=1/2 and eta>=1; primary 409/409, independent 404/404, integrated 44/44 and Lean R388 pass over 80 seed and 320 weighted rows. This remains a parameter-dependent finite candidate, with BKM, shell, domain, Cook and QFT gates open |
@@ -629,6 +630,40 @@ No new negative result, tier change, or R-376 PDF is issued.
 
 **Proven in:** manifest, certificate, Lean entrypoint, primary script,
 independent script, integrated verifier, scope note, and saved run artefacts.
+
+<a id="r-391"></a>
+### R-391 -- Quantum-Markov blanket boundary transfer
+
+**Result ID.** R-391 is a T0, claim-nonbearing finite checkpoint under
+EXP-001234. It adds a quantum-information boundary coordinate to the
+R-390 local-marginal route: a finite Gibbs state is reduced to a contiguous
+core--buffer--environment tripartition, conditional mutual information is
+measured, and a finite Petz reconstruction is recorded before spectral-window
+projection.
+
+**Finite verification.** The primary lane passes 1186/1186 checks and the
+non-importing independent lane passes 6/6 aggregate checks. The integrated
+verifier passes 24/24 and Lean R391 compiles. The declared grid has 12
+volume/cutoff systems, 62 tripartitions, 248 QCMI rows and 392 profile rows.
+QCMI is nonnegative within tolerance, ranging from
+1.5854872970066936e-11 to 0.009400499834534948. The recoverability scale
+reaches 0.13711673737757143 and the finite Petz trace distance reaches
+0.024659341100353113. Increasing the buffer from one site to two lowers the
+sampled QCMI maximum from 0.009400499834534948 to 0.0003382922777386277 for a
+one-site core and from 0.00931987074841345 to 0.0003364013516455877 for a
+two-site core. The local spectral complement still reaches tail mass
+0.8377841748929882.
+
+**Adversarial boundary.** The product-of-one-site-marginals mutation collapses
+QCMI to 1.7763568394002505e-15 while the interacting representative reaches
+0.009288543552039563, so the mutation is caught. The buffer suppression is a
+finite profile, not an exponential or cutoff-independent theorem; the Petz
+distance is not identified with an optimal recovery map. No Gibbs complement
+bound, beta/eta independence, source/shape/volume uniformity, invariant common
+form core, domain/Cook/common-alpha transfer, OS/KMS/GNS reconstruction, gap,
+continuum, C6, Sector-A or Pre-A result is claimed.
+
+**Proven in:** [R-391 certificate](strategy/pre-a-cp1-st8-q3lock-quantum-markov-blanket-boundary-transfer-certificate-260830.md), [Lean entrypoint](verification/lean/Tect/R391.lean), primary/independent/hostile scripts, integrated verifier, [scope note](claims/C6-SPACETIME-SIGNATURE/notes/quantum-markov-blanket-boundary-transfer-boundary-260830.md), and saved run artefacts.
 
 <a id="r-390"></a>
 ### R-390 -- Local-marginal spectral-window transfer
