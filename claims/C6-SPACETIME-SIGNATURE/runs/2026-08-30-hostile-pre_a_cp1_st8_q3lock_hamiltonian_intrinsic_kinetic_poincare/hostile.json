@@ -1,0 +1,162 @@
+{
+  "assertion_count": 6,
+  "boundary": "T0 claim-nonbearing finite intrinsic kinetic graph stress. It proves no cutoff-independent or volume-independent gap, no common core, common alpha, OS/KMS/GNS reconstruction, mass gap, continuum, C6, Sector-A or Pre-A closure.",
+  "checks": [
+    {
+      "actual": 0.7570174175402339,
+      "expected": ">0 finite",
+      "name": "baseline genuine graph gap positive",
+      "status": "PASS"
+    },
+    {
+      "actual": 2.914431299136564,
+      "expected": ">0 finite",
+      "name": "late genuine graph gap positive",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.12190607613453425,
+      "expected": ">1e-12",
+      "name": "late genuine kinetic form positive",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.0,
+        0
+      ],
+      "expected": "zero",
+      "name": "q mutation has no edges",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.46901318207760767,
+        0.0
+      ],
+      "expected": "genuine positive, mutated zero",
+      "name": "q mutation is structurally separated",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        8.545086037015876e-08,
+        3.916643568925043e-08,
+        1.25113122383623e-07,
+        4.2856616050828115e-07,
+        9.785761501360044e-07,
+        1.586860220713868e-06,
+        1.702692343587153e-06
+      ],
+      "expected": ">1e-20",
+      "name": "finite selected rows are nonconstant",
+      "status": "PASS"
+    }
+  ],
+  "derived": {
+    "baseline": {
+      "dimension": 3,
+      "genuine_gap": 0.7570174175402339,
+      "genuine_kinetic_form": 3.0334210451716266e-07,
+      "genuine_max_edge_weight": 0.18655849231033172,
+      "mutated_edge_count": 0,
+      "mutated_max_edge_weight": 0.0,
+      "prefix_length": 1,
+      "row_variance": 8.545086037015876e-08
+    },
+    "beta": 2.0,
+    "dimension_profiles": [
+      {
+        "dimension": 3,
+        "genuine_gap": 0.7570174175402339,
+        "genuine_kinetic_form": 3.0334210451716266e-07,
+        "genuine_max_edge_weight": 0.18655849231033172,
+        "mutated_edge_count": 0,
+        "mutated_max_edge_weight": 0.0,
+        "prefix_length": 1,
+        "row_variance": 8.545086037015876e-08
+      },
+      {
+        "dimension": 4,
+        "genuine_gap": 0.7872756441265598,
+        "genuine_kinetic_form": 8.787841144281066e-08,
+        "genuine_max_edge_weight": 0.1971687836487034,
+        "mutated_edge_count": 0,
+        "mutated_max_edge_weight": 0.0,
+        "prefix_length": 1,
+        "row_variance": 3.916643568925043e-08
+      },
+      {
+        "dimension": 5,
+        "genuine_gap": 1.5534356018176712,
+        "genuine_kinetic_form": 5.087103827091798e-07,
+        "genuine_max_edge_weight": 0.296465657320577,
+        "mutated_edge_count": 0,
+        "mutated_max_edge_weight": 0.0,
+        "prefix_length": 1,
+        "row_variance": 1.25113122383623e-07
+      },
+      {
+        "dimension": 6,
+        "genuine_gap": 1.6729054446344935,
+        "genuine_kinetic_form": 8.957764668067426e-06,
+        "genuine_max_edge_weight": 0.312928914150365,
+        "mutated_edge_count": 0,
+        "mutated_max_edge_weight": 0.0,
+        "prefix_length": 1,
+        "row_variance": 4.2856616050828115e-07
+      },
+      {
+        "dimension": 8,
+        "genuine_gap": 2.229394151230008,
+        "genuine_kinetic_form": 0.0002406464601274035,
+        "genuine_max_edge_weight": 0.3853793862814391,
+        "mutated_edge_count": 0,
+        "mutated_max_edge_weight": 0.0,
+        "prefix_length": 1,
+        "row_variance": 9.785761501360044e-07
+      },
+      {
+        "dimension": 10,
+        "genuine_gap": 2.578064372916228,
+        "genuine_kinetic_form": 0.00020122620121713805,
+        "genuine_max_edge_weight": 0.4258540392583218,
+        "mutated_edge_count": 0,
+        "mutated_max_edge_weight": 0.0,
+        "prefix_length": 1,
+        "row_variance": 1.586860220713868e-06
+      },
+      {
+        "dimension": 12,
+        "genuine_gap": 2.914431299136564,
+        "genuine_kinetic_form": 0.12190607613453425,
+        "genuine_max_edge_weight": 0.46901318207760767,
+        "mutated_edge_count": 0,
+        "mutated_max_edge_weight": 0.0,
+        "prefix_length": 1,
+        "row_variance": 1.702692343587153e-06
+      }
+    ],
+    "history_adjoint": 0,
+    "history_sign": 1,
+    "late": {
+      "dimension": 12,
+      "genuine_gap": 2.914431299136564,
+      "genuine_kinetic_form": 0.12190607613453425,
+      "genuine_max_edge_weight": 0.46901318207760767,
+      "mutated_edge_count": 0,
+      "mutated_max_edge_weight": 0.0,
+      "prefix_length": 1,
+      "row_variance": 1.702692343587153e-06
+    },
+    "mutation": "replace_p_by_q",
+    "orientation": "right",
+    "source_sign": 1,
+    "volume": 2
+  },
+  "exploration_id": "EXP-001249",
+  "manifest": "strategy/pre-a-cp1-st8-q3lock-hamiltonian-intrinsic-kinetic-poincare-manifest.json",
+  "result_id": "R-404",
+  "schema": "tect/pre-a-r404-hostile/1.0",
+  "verdict": "PASS"
+}

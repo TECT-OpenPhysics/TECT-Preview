@@ -1,0 +1,100 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-HAMILTONIAN-INTRINSIC-KINETIC-POINCARE-v0",
+  "result_id": "R-404",
+  "title": "Intrinsic kinetic graph Poincare stress for Q3 likelihood rows",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001249",
+  "claim_bearing": false,
+  "parent_explorations": ["EXP-001248", "EXP-001247", "EXP-001246"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+  ],
+  "question": "Can the R-399 conditional shell use the Hamiltonian kinetic carré-du-champ directly, by replacing the unstable coordinate nearest-neighbour comparison with the intrinsic Poincare gap of its momentum-weighted graph?",
+  "new_perspective": {
+    "principle": "Use the actual kinetic form as the conditional Dirichlet form, rather than forcing it through a cutoff-sensitive coordinate spacing comparison.",
+    "route": [
+      "For each conditional law pi, build the symmetric graph conductance c_ij=(pi_i+pi_j)|p_ij|^2/(2 chi) in the q basis.",
+      "Compute the smallest positive eigenvalue of the pi-weighted graph Laplacian and test E_kin(f)>=gap*Var_pi(f) on every actual likelihood row.",
+      "Repeat all R-403 cutoff, beta, source, history, order, prefix, adjoint and orientation contexts, while reporting the intrinsic gap profile separately from the coordinate form.",
+      "Use the p-to-q mutation as a structural hostile test: q is diagonal in the q basis and therefore has zero conductance, whereas the genuine momentum graph is connected on the finite oscillator fixture."
+    ],
+    "qft_bridge": "If an analytic lower bound for this intrinsic gap can be proved on a cutoff-independent Hamiltonian core, the R-399 shell transfer may avoid the divergent E_kin/D_q upper comparison. The finite graph gap itself is not a common-core, phase, continuum or QFT theorem."
+  },
+  "finite_fixture": {
+    "admissible_pairs": [
+      {"volume": 2, "cutoff_dimensions": [3, 4, 5, 6, 8, 10, 12]}
+    ],
+    "beta_values": ["1/2", "1", "2"],
+    "source_support_values": [[0]],
+    "source_amplitude": "1/3",
+    "hbar": "1",
+    "time_step": "1/18",
+    "source_sign_values": [-1, 1],
+    "history_sign_values": [-1, 1],
+    "history_adjoint_values": [0, 1],
+    "orientations": ["right", "left"],
+    "chi": "1",
+    "r": "-1",
+    "g": "3/5",
+    "c": "3/5",
+    "lambda": "1/10",
+    "numerical_tolerance": 1e-8,
+    "probability_tolerance": 1e-30,
+    "variance_floor": 1e-20,
+    "eigen_zero_threshold": 1e-10,
+    "hostile_energy_floor": 1e-12,
+    "hostile_zero_threshold": 1e-10,
+    "crosscheck_tolerance": 5e-5
+  },
+  "scope": {
+    "finite_intrinsic_kinetic_graph_closed": true,
+    "finite_weighted_poincare_gap_closed": true,
+    "finite_likelihood_row_test_closed": true,
+    "finite_cutoff_profile_closed": true,
+    "cutoff_independent_gap_closed": false,
+    "volume_independent_gap_closed": false,
+    "phase_uniform_gap_closed": false,
+    "exhaustion_uniform_gap_closed": false,
+    "common_core_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R404.lean",
+    "theorem_markers": ["graph_gap_nonnegative", "variance_nonnegative", "finite_scope"],
+    "command": "lake env lean Tect/R404.lean",
+    "boundary": "Lean checks only scalar nonnegativity and finite scope arithmetic; the graph Laplacian eigenvalues, matrix rows and all cutoff/phase/volume limits remain in the executable/open boundary."
+  },
+  "artifacts": {
+    "primary_script": "codes/foundations/pre_a_cp1_st8_q3lock_hamiltonian_intrinsic_kinetic_poincare.py",
+    "independent_script": "codes/foundations/pre_a_cp1_st8_q3lock_hamiltonian_intrinsic_kinetic_poincare_independent.py",
+    "hostile_script": "codes/foundations/pre_a_cp1_st8_q3lock_hamiltonian_intrinsic_kinetic_poincare_hostile.py",
+    "integrated_verifier": "codes/foundations/pre_a_cp1_st8_q3lock_hamiltonian_intrinsic_kinetic_poincare_verify.py",
+    "lean": "verification/lean/Tect/R404.lean"
+  },
+  "promotion_criteria": [
+    "Prove a cutoff-independent lower bound for the momentum-weighted graph gap on a Hamiltonian common core, not just a finite eigenvalue profile.",
+    "Control source, phase, volume, orientation and exhaustion dependence and identify the intrinsic form with the required shell observable.",
+    "Only after those analytic controls may the intrinsic form replace the R-399 coordinate Dirichlet form in a regulator limit."
+  ],
+  "stop_conditions": [
+    "If the intrinsic graph gap collapses with cutoff, do not replace D_q by E_kin in the shell transfer.",
+    "If the graph is disconnected or the likelihood variance is not controlled, retain this as a finite diagnostic only.",
+    "Finite positivity of a weighted graph gap is not a common-core, phase-uniform or QFT theorem."
+  ],
+  "boundary": "T0 claim-nonbearing finite intrinsic kinetic graph stress. It proves no cutoff-independent or volume-independent gap, no common core, common alpha, OS/KMS/GNS reconstruction, mass gap, continuum, C6, Sector-A or Pre-A closure.",
+  "no_overclaim": "The intrinsic graph route removes the unstable coordinate upper-comparison step only at the finite diagnostic level; it does not supply the analytic uniform lower bound required for promotion.",
+  "recorded_by": "Codex"
+}

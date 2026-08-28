@@ -5,10 +5,11 @@
 
 Authorities: `RESULTS-LEDGER.md`.
 
-**237 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
+**238 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
 
 | ID | Result | Tier/scope |
 |---|---|---|
+| [`R-404`](../RESULTS-LEDGER.md#r-404) | Intrinsic kinetic graph Poincare stress for Q3 likelihood rows | T0 |
 | [`R-403`](../RESULTS-LEDGER.md#r-403) | Increasing-cutoff Hamiltonian carre-du-champ stress | T0 |
 | [`R-402`](../RESULTS-LEDGER.md#r-402) | Finite Hamiltonian carre-du-champ comparison | T0 |
 | [`R-401`](../RESULTS-LEDGER.md#r-401) | Physical-coordinate metric for the conditional gap | T0 |
@@ -33,7 +34,6 @@ Authorities: `RESULTS-LEDGER.md`.
 | [`R-382`](../RESULTS-LEDGER.md#r-382) | Increasing-cutoff endpoint modular moment stress | T0 |
 | [`R-381`](../RESULTS-LEDGER.md#r-381) | Endpoint modular moment to energy Cauchy bridge | T0 |
 | [`R-380`](../RESULTS-LEDGER.md#r-380) | Renyi interpolation bridge for the modular shell | T0 |
-| [`R-379`](../RESULTS-LEDGER.md#r-379) | Three-channel anticommutator bridge for half-density modular tails | T0 |
 
 Search without loading the full ledger:
 

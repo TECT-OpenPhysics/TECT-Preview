@@ -1,0 +1,73 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001249",
+  "title": "Intrinsic kinetic graph Poincare stress for Q3 likelihood rows",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+  ],
+  "related": [
+    {"id": "EXP-001248", "relation": "continues"},
+    {"id": "EXP-001247", "relation": "continues"},
+    {"id": "EXP-001246", "relation": "alternative_to"}
+  ],
+  "question": "Can the R-399 conditional shell use the Hamiltonian kinetic carre-du-champ directly, by replacing the unstable coordinate nearest-neighbour comparison with the intrinsic Poincare gap of its momentum-weighted graph?",
+  "method": [
+    "For each positive conditional law pi, build the symmetric momentum conductance c_ij=(pi_i+pi_j)|p_ij|^2/(2 chi) in the q basis.",
+    "Compute the first positive eigenvalue of the pi-weighted graph Laplacian and test the exact graph identity E_kin(f)=f^T L f together with E_kin(f)>=gap(pi) Var_pi(f) on every actual likelihood row.",
+    "Repeat the full R-403 cutoff, beta, source, history, order, prefix, adjoint and orientation grid, while recording the intrinsic gap profile separately from the coordinate form.",
+    "Use a p-to-q mutation as a hostile structural test: q is diagonal in the q basis and must produce zero graph edges, unlike the genuine momentum graph.",
+    "Rebuild the finite model in an independent lane and compile the scalar nonnegativity skeleton in Lean."
+  ],
+  "finding": "The primary lane passes 1398/1398 assertions over 7 volume-two systems, 2688 contexts and 21120 conditional rows; 15840 rows have variance above the declared floor and 5280 are constant-row diagnostics.  The independent lane passes 1388/1388, the hostile lane 6/6, the integrated verifier 37/37 and Lean R404 compiles.  The generalized momentum-weighted graph gap ranges from 0.7570174175402339 to 5.647863075935321 and remains positive at every declared cutoff; the minimum profile rises from 0.7570174175402339 at d=3 to 2.4233910464474144 at d=12.",
+  "decision_reason": "R-403 showed that the coordinate-form upper ratio cannot be treated as a cutoff-independent constant.  R-404 removes that unstable comparison at finite level and confirms an exact intrinsic graph representation of the kinetic form with a positive finite conditional Poincare gap across the same stress grid.  This advances a route-local interface, but the finite eigenvalue profile is not an analytic cutoff-independent lower bound and does not close any QFT or common-core gate.",
+  "adversarial_review": [
+    {"axis": "trace form versus graph form", "check": "The commutator trace and graph quadratic form are computed independently and compared row by row.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "generalized eigenvalue", "check": "The conditional law is used as the mass matrix, the constant mode is checked at zero and disconnected/nonfinite graphs fail.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "constant rows and tiny scales", "check": "Rows below the variance floor are counted but not used for ratios; the Poincare residual remains checked on every row.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "independent reconstruction", "check": "A non-importing lane rebuilds the oscillator model, Gibbs states, histories, conditional rows and spectrum within 5e-5.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "momentum mutation", "check": "Replacing p by diagonal q yields zero edges while the genuine graph has positive gaps on the selected baseline and late rows.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "uniform and QFT promotion", "check": "Finite positivity is not promoted to cutoff/volume/phase/exhaustion uniformity, a common core, common alpha, OS/KMS/GNS dynamics, a mass gap, continuum, C6, Sector-A or Pre-A closure.", "disposition": "UPHELD-OPEN"}
+  ],
+  "next_action": "Prove an analytic lower bound for the momentum-weighted conditional graph gap on a cutoff-independent Hamiltonian common core, with source, phase, volume and exhaustion uniformity; then transfer that intrinsic form to the R-399 shell without reintroducing the unstable coordinate upper comparison.",
+  "boundary": "T0 claim-nonbearing finite intrinsic kinetic graph Poincare stress only.  It proves no cutoff-independent or volume-independent gap, no common core, common alpha, OS/KMS/GNS reconstruction, mass gap, continuum, C6, Sector-A or Pre-A closure.",
+  "no_overclaim": "The positive finite graph gap shows that an intrinsic-form route is viable on the declared ladder, not that a uniform lower bound exists in the regulator or thermodynamic limit.",
+  "provenance": "contemporaneous",
+  "verdict": "advanced",
+  "recorded_at": "2026-08-30T18:00:00Z",
+  "reviewed_on": "2026-08-29",
+  "recorded_by": "Codex",
+  "evidence_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-hamiltonian-intrinsic-kinetic-poincare-manifest.json#new_perspective",
+    "strategy/pre-a-cp1-st8-q3lock-hamiltonian-intrinsic-kinetic-poincare-certificate-260830.md#Verification",
+    "codes/foundations/pre_a_cp1_st8_q3lock_hamiltonian_intrinsic_kinetic_poincare.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_hamiltonian_intrinsic_kinetic_poincare_independent.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_hamiltonian_intrinsic_kinetic_poincare_hostile.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_hamiltonian_intrinsic_kinetic_poincare_verify.py#main",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-primary-pre_a_cp1_st8_q3lock_hamiltonian_intrinsic_kinetic_poincare/primary.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-independent-pre_a_cp1_st8_q3lock_hamiltonian_intrinsic_kinetic_poincare/independent.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-hostile-pre_a_cp1_st8_q3lock_hamiltonian_intrinsic_kinetic_poincare/hostile.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-integrated-pre_a_cp1_st8_q3lock_hamiltonian_intrinsic_kinetic_poincare/integrated.json#derived",
+    "verification/lean/Tect/R404.lean#graph_gap_nonnegative",
+    "claims/C6-SPACETIME-SIGNATURE/notes/hamiltonian-intrinsic-kinetic-poincare-260830.md#R-404"
+  ],
+  "formal_integration": {
+    "results": ["R-404"],
+    "negatives": [],
+    "events": ["20260830-intrinsic-kinetic-graph-poincare-stress-2026-08"],
+    "lean": "R404 PASS",
+    "no_new_result": false,
+    "no_new_negative": true,
+    "no_changelog_event": false,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "formal_refs": {
+    "results": ["R-404"],
+    "negatives": [],
+    "events": ["20260830-intrinsic-kinetic-graph-poincare-stress-2026-08"]
+  }
+}

@@ -1,0 +1,698 @@
+{
+  "boundary": "T0 claim-nonbearing finite intrinsic kinetic graph stress. It proves no cutoff-independent or volume-independent gap, no common core, common alpha, OS/KMS/GNS reconstruction, mass gap, continuum, C6, Sector-A or Pre-A closure.",
+  "checks": [
+    {
+      "actual": "['R-404', 'EXP-001249', False]",
+      "expected": "R-404/EXP-001249/false",
+      "group": "identity",
+      "name": "manifest identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'cutoff_independent_gap_closed': False, 'volume_independent_gap_closed': False, 'phase_uniform_gap_closed': False, 'exhaustion_uniform_gap_closed': False, 'common_core_closed': False, 'common_alpha_closed': False, 'hamiltonian_os_identification_closed': False, 'kms_gns_gap_closed': False, 'continuum_closed': False, 'c6_closed': False, 'sector_a_closed': False, 'pre_a_closed': False}",
+      "expected": "all promoted flags false",
+      "group": "scope",
+      "name": "scope firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": "[]",
+      "expected": "all R-404 artifacts",
+      "group": "provenance",
+      "name": "artifacts present",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'codes/foundations/pre_a_cp1_st8_q3lock_hamiltonian_intrinsic_kinetic_poincare.py': '9e7b7ca837d3c4d757dbd91a40e453e1c5e2a7f8ded79439761256a6711b83b6', 'codes/foundations/pre_a_cp1_st8_q3lock_hamiltonian_intrinsic_kinetic_poincare_independent.py': 'b6e7f34155e3536dd996499c8ea4c602d1e270cba97d53aaf5f79180688d9854', 'codes/foundations/pre_a_cp1_st8_q3lock_hamiltonian_intrinsic_kinetic_poincare_hostile.py': '03dec4eef67af0bc8f2ae5ef41b19fb2ccdc6d33cb6facad805054a81ce6bac0', 'verification/lean/Tect/R404.lean': '3c88cf4eee236ba6e719863b0f6fd44177c2f03ffb6bcaca4d7124ff4d01b763'}",
+      "expected": "distinct",
+      "group": "provenance",
+      "name": "source hashes distinct",
+      "status": "PASS"
+    },
+    {
+      "actual": "['graph_gap_nonnegative', 'variance_nonnegative', 'finite_scope']",
+      "expected": "declared markers",
+      "group": "Lean",
+      "name": "Lean markers",
+      "status": "PASS"
+    },
+    {
+      "actual": "finite scalar file",
+      "expected": "no promotion text",
+      "group": "Lean",
+      "name": "Lean boundary",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-404 PRIMARY PASS 1398/1398 systems=7 contexts=2688 rows=21120 gap=[0.757017,5.64786] ratio=[1.2218,221587]",
+      "expected": "exit 0 and output",
+      "group": "executables",
+      "name": "run pre_a_cp1_st8_q3lock_hamiltonian_intrinsic_kinetic_poincare.py",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-404 INDEPENDENT PASS 1388/1388 systems=7 contexts=2688 rows=21120 gap=[0.757017,5.64786] ratio=[1.2218,221587]",
+      "expected": "exit 0 and output",
+      "group": "executables",
+      "name": "run pre_a_cp1_st8_q3lock_hamiltonian_intrinsic_kinetic_poincare_independent.py",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-404 HOSTILE PASS 6/6 baseline_gap=0.757017 late_gap=2.91443 mutated_edges=0",
+      "expected": "exit 0 and output",
+      "group": "executables",
+      "name": "run pre_a_cp1_st8_q3lock_hamiltonian_intrinsic_kinetic_poincare_hostile.py",
+      "status": "PASS"
+    },
+    {
+      "actual": "",
+      "expected": "exit 0",
+      "group": "Lean",
+      "name": "Lean compile",
+      "status": "PASS"
+    },
+    {
+      "actual": "PASS",
+      "expected": "PASS",
+      "group": "executables",
+      "name": "primary verdict",
+      "status": "PASS"
+    },
+    {
+      "actual": "PASS",
+      "expected": "PASS",
+      "group": "executables",
+      "name": "independent verdict",
+      "status": "PASS"
+    },
+    {
+      "actual": "PASS",
+      "expected": "PASS",
+      "group": "hostile",
+      "name": "hostile verdict",
+      "status": "PASS"
+    },
+    {
+      "actual": "[7, 7]",
+      "expected": "within 5e-05",
+      "group": "independence",
+      "name": "primary-independent system_count",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2688, 2688]",
+      "expected": "within 5e-05",
+      "group": "independence",
+      "name": "primary-independent context_count",
+      "status": "PASS"
+    },
+    {
+      "actual": "[21120, 21120]",
+      "expected": "within 5e-05",
+      "group": "independence",
+      "name": "primary-independent comparison_row_count",
+      "status": "PASS"
+    },
+    {
+      "actual": "[15840, 15840]",
+      "expected": "within 5e-05",
+      "group": "independence",
+      "name": "primary-independent nonzero_variance_row_count",
+      "status": "PASS"
+    },
+    {
+      "actual": "[5280, 5280]",
+      "expected": "within 5e-05",
+      "group": "independence",
+      "name": "primary-independent zero_variance_row_count",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.7570174175402339, 0.7570174175402339]",
+      "expected": "within 5e-05",
+      "group": "independence",
+      "name": "primary-independent minimum_intrinsic_gap",
+      "status": "PASS"
+    },
+    {
+      "actual": "[5.647863075935321, 5.647863075940388]",
+      "expected": "within 5e-05",
+      "group": "independence",
+      "name": "primary-independent maximum_intrinsic_gap",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.0, 0.0]",
+      "expected": "within 5e-05",
+      "group": "independence",
+      "name": "primary-independent minimum_kinetic_form",
+      "status": "PASS"
+    },
+    {
+      "actual": "[9.82853586278934, 9.828535864268767]",
+      "expected": "within 5e-05",
+      "group": "independence",
+      "name": "primary-independent maximum_kinetic_form",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.0, 9.639562883329987e-33]",
+      "expected": "within 5e-05",
+      "group": "independence",
+      "name": "primary-independent minimum_variance",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.8885926783461522, 0.8885926783459505]",
+      "expected": "within 5e-05",
+      "group": "independence",
+      "name": "primary-independent maximum_variance",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.221799965345582, 1.2217999653440568]",
+      "expected": "within 5e-05",
+      "group": "independence",
+      "name": "primary-independent minimum_kinetic_to_variance_ratio",
+      "status": "PASS"
+    },
+    {
+      "actual": "[221586.62145365847, 221586.62145376112]",
+      "expected": "within 5e-05",
+      "group": "independence",
+      "name": "primary-independent maximum_kinetic_to_variance_ratio",
+      "status": "PASS"
+    },
+    {
+      "actual": "[-8.881784197001252e-15, 0.0]",
+      "expected": "within 5e-05",
+      "group": "independence",
+      "name": "primary-independent minimum_graph_trace_residual",
+      "status": "PASS"
+    },
+    {
+      "actual": "[4.440892098500626e-15, 0.0]",
+      "expected": "within 5e-05",
+      "group": "independence",
+      "name": "primary-independent maximum_graph_trace_residual",
+      "status": "PASS"
+    },
+    {
+      "actual": "[-6.769433543404704e-32, -9.940459018803983e-32]",
+      "expected": "within 5e-05",
+      "group": "independence",
+      "name": "primary-independent minimum_poincare_residual",
+      "status": "PASS"
+    },
+    {
+      "actual": "[7.643780490403682, 7.643780491888654]",
+      "expected": "within 5e-05",
+      "group": "independence",
+      "name": "primary-independent maximum_poincare_residual",
+      "status": "PASS"
+    },
+    {
+      "actual": "[[3, 4, 5, 6, 8, 10, 12], [3, 4, 5, 6, 8, 10, 12]]",
+      "expected": "within 5e-05",
+      "group": "independence",
+      "name": "primary-independent cutoff_dimensions",
+      "status": "PASS"
+    },
+    {
+      "actual": "[{'V=2/d=10': {'context_count': 384, 'dimension': 10, 'maximum_gap': 4.55943819352713, 'maximum_kinetic_form': 0.5894571315470044, 'maximum_poincare_residual': 0.26511547387960277, 'maximum_ratio': 9185.771549905025, 'maximum_variance': 0.14200530326199545, 'minimum_gap': 2.1313269196275257, 'minimum_kinetic_form': 9.108307121542195e-31, 'minimum_poincare_residual': 7.750387351998426e-31, 'minimum_ratio': 3.0585503571183863, 'minimum_variance': 5.60710900119394e-32, 'nonzero_variance_count': 3168, 'row_count': 4224, 'zero_variance_count': 1056}, 'V=2/d=12': {'context_count': 384, 'dimension': 12, 'maximum_gap': 5.647863075935321, 'maximum_kinetic_form': 9.82853586278934, 'maximum_poincare_residual': 7.643780490403682, 'maximum_ratio': 221586.62145365847, 'maximum_variance': 0.8885926783461522, 'minimum_gap': 2.4233910464474144, 'minimum_kinetic_form': 1.6440744821939462e-30, 'minimum_poincare_residual': 1.457268070048153e-30, 'minimum_ratio': 2.9791875053936328, 'minimum_variance': 4.164258622307959e-32, 'nonzero_variance_count': 3744, 'row_count': 4992, 'zero_variance_count': 1248}, 'V=2/d=3': {'context_count': 384, 'dimension': 3, 'maximum_gap': 2.481985895256327, 'maximum_kinetic_form': 4.881656323707554e-05, 'maximum_poincare_residual': 9.650104889451045e-06, 'maximum_ratio': 3.921974061762013, 'maximum_variance': 3.4113575080040985e-05, 'minimum_gap': 0.7570174175402339, 'minimum_kinetic_form': 0.0, 'minimum_poincare_residual': -4.11805306268763e-32, 'minimum_ratio': 1.2860527108904365, 'minimum_variance': 0.0, 'nonzero_variance_count': 1152, 'row_count': 1536, 'zero_variance_count': 384}, 'V=2/d=4': {'context_count': 384, 'dimension': 4, 'maximum_gap': 2.833778687459352, 'maximum_kinetic_form': 0.0005970781944509578, 'maximum_poincare_residual': 0.0002825796776821122, 'maximum_ratio': 8.061510500883305, 'maximum_variance': 0.0002250472692813693, 'minimum_gap': 0.7872756441265598, 'minimum_kinetic_form': 0.0, 'minimum_poincare_residual': -2.1531001541998837e-32, 'minimum_ratio': 1.221799965345582, 'minimum_variance': 0.0, 'nonzero_variance_count': 1440, 'row_count': 1920, 'zero_variance_count': 480}, 'V=2/d=5': {'context_count': 384, 'dimension': 5, 'maximum_gap': 2.3636300623347872, 'maximum_kinetic_form': 0.0032455597917374394, 'maximum_poincare_residual': 0.0024320047657236167, 'maximum_ratio': 30.030495656984087, 'maximum_variance': 0.0004766189251219809, 'minimum_gap': 1.1950962017934932, 'minimum_kinetic_form': 3.531613157249981e-32, 'minimum_poincare_residual': -6.769433543404704e-32, 'minimum_ratio': 2.2222260890718415, 'minimum_variance': 1.936956178417614e-32, 'nonzero_variance_count': 1728, 'row_count': 2304, 'zero_variance_count': 576}, 'V=2/d=6': {'context_count': 384, 'dimension': 6, 'maximum_gap': 3.8750382074539487, 'maximum_kinetic_form': 0.01148348471323444, 'maximum_poincare_residual': 0.00972358981485013, 'maximum_ratio': 106.15657072192896, 'maximum_variance': 0.0008284917332113485, 'minimum_gap': 1.4721452785784677, 'minimum_kinetic_form': 6.290324538754655e-32, 'minimum_poincare_residual': -2.2843447731142512e-32, 'minimum_ratio': 2.6332740360741353, 'minimum_variance': 2.8263755995923e-32, 'nonzero_variance_count': 2016, 'row_count': 2688, 'zero_variance_count': 672}, 'V=2/d=8': {'context_count': 384, 'dimension': 8, 'maximum_gap': 3.7780559388526536, 'maximum_kinetic_form': 0.06620191667689207, 'maximum_poincare_residual': 0.05970991521974506, 'maximum_ratio': 710.0210708600363, 'maximum_variance': 0.005824111386379164, 'minimum_gap': 1.7946329937682575, 'minimum_kinetic_form': 1.1268940234171613e-31, 'minimum_poincare_residual': 6.160448416668684e-32, 'minimum_ratio': 4.883304508476004, 'minimum_variance': 5.108790924395593e-33, 'nonzero_variance_count': 2592, 'row_count': 3456, 'zero_variance_count': 864}}, {'V=2/d=10': {'context_count': 384, 'dimension': 10, 'maximum_gap': 4.559438193527271, 'maximum_kinetic_form': 0.5894571315472926, 'maximum_poincare_residual': 0.2651154738811342, 'maximum_ratio': 9185.771549900599, 'maximum_variance': 0.14200530326199914, 'minimum_gap': 2.1313269196275284, 'minimum_kinetic_form': 1.122470048551798e-30, 'minimum_poincare_residual': 8.777071192402492e-31, 'minimum_ratio': 3.0585503571188264, 'minimum_variance': 4.716926401003003e-32, 'nonzero_variance_count': 3168, 'row_count': 4224, 'zero_variance_count': 1056}, 'V=2/d=12': {'context_count': 384, 'dimension': 12, 'maximum_gap': 5.647863075940388, 'maximum_kinetic_form': 9.828535864268767, 'maximum_poincare_residual': 7.643780491888654, 'maximum_ratio': 221586.62145376112, 'maximum_variance': 0.8885926783459505, 'minimum_gap': 2.4233910464474286, 'minimum_kinetic_form': 1.4807810424830104e-30, 'minimum_poincare_residual': 9.638677320929996e-31, 'minimum_ratio': 2.9791875058792665, 'minimum_variance': 5.021257157674262e-32, 'nonzero_variance_count': 3744, 'row_count': 4992, 'zero_variance_count': 1248}, 'V=2/d=3': {'context_count': 384, 'dimension': 3, 'maximum_gap': 2.4819858952563303, 'maximum_kinetic_form': 4.881656323707382e-05, 'maximum_poincare_residual': 9.650104889451126e-06, 'maximum_ratio': 3.9219740617613374, 'maximum_variance': 3.411357508004039e-05, 'minimum_gap': 0.7570174175402339, 'minimum_kinetic_form': 0.0, 'minimum_poincare_residual': -9.940459018803983e-32, 'minimum_ratio': 1.2860527110591489, 'minimum_variance': 1.0817754973572674e-32, 'nonzero_variance_count': 1152, 'row_count': 1536, 'zero_variance_count': 384}, 'V=2/d=4': {'context_count': 384, 'dimension': 4, 'maximum_gap': 2.833778687459353, 'maximum_kinetic_form': 0.0005970781944509598, 'maximum_poincare_residual': 0.0002825796776820999, 'maximum_ratio': 8.061510500883646, 'maximum_variance': 0.00022504726928136652, 'minimum_gap': 0.7872756441265597, 'minimum_kinetic_form': 1.5582084969583504e-32, 'minimum_poincare_residual': -9.260021528695459e-33, 'minimum_ratio': 1.2217999653440568, 'minimum_variance': 1.232595164407831e-32, 'nonzero_variance_count': 1440, 'row_count': 1920, 'zero_variance_count': 480}, 'V=2/d=5': {'context_count': 384, 'dimension': 5, 'maximum_gap': 2.363630062334787, 'maximum_kinetic_form': 0.003245559791737411, 'maximum_poincare_residual': 0.0024320047657235924, 'maximum_ratio': 30.03049565698368, 'maximum_variance': 0.0004766189251219783, 'minimum_gap': 1.1950962017934934, 'minimum_kinetic_form': 6.657478386083892e-32, 'minimum_poincare_residual': -7.617712773647575e-32, 'minimum_ratio': 2.222226089072187, 'minimum_variance': 1.2529333521773039e-32, 'nonzero_variance_count': 1728, 'row_count': 2304, 'zero_variance_count': 576}, 'V=2/d=6': {'context_count': 384, 'dimension': 6, 'maximum_gap': 3.8750382074539744, 'maximum_kinetic_form': 0.011483484713234614, 'maximum_poincare_residual': 0.009723589814850298, 'maximum_ratio': 106.15657072193248, 'maximum_variance': 0.000828491733211355, 'minimum_gap': 1.4721452785784677, 'minimum_kinetic_form': 3.231874827399139e-32, 'minimum_poincare_residual': -5.7091883733344904e-33, 'minimum_ratio': 2.6332740360739333, 'minimum_variance': 9.639562883329987e-33, 'nonzero_variance_count': 2016, 'row_count': 2688, 'zero_variance_count': 672}, 'V=2/d=8': {'context_count': 384, 'dimension': 8, 'maximum_gap': 3.77805593885265, 'maximum_kinetic_form': 0.06620191667686492, 'maximum_poincare_residual': 0.059709915219716025, 'maximum_ratio': 710.0210708600107, 'maximum_variance': 0.005824111386378881, 'minimum_gap': 1.7946329937682568, 'minimum_kinetic_form': 1.9208653632758326e-31, 'minimum_poincare_residual': 8.277228990348673e-32, 'minimum_ratio': 4.88330450847559, 'minimum_variance': 5.473992124571791e-32, 'nonzero_variance_count': 2592, 'row_count': 3456, 'zero_variance_count': 864}}]",
+      "expected": "within 5e-05",
+      "group": "independence",
+      "name": "primary-independent system_profiles",
+      "status": "PASS"
+    },
+    {
+      "actual": "7",
+      "expected": "7",
+      "group": "coverage",
+      "name": "system grid reached",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2688, 21120]",
+      "expected": "positive rows beyond contexts",
+      "group": "coverage",
+      "name": "context grid reached",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.7570174175402339",
+      "expected": ">0 on finite grid",
+      "group": "comparison",
+      "name": "intrinsic gap remains positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "-6.769433543404704e-32",
+      "expected": ">=-1e-08",
+      "group": "comparison",
+      "name": "intrinsic Poincare residuals nonnegative",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'dimension': 12, 'genuine_gap': 2.914431299136564, 'genuine_kinetic_form': 0.12190607613453425, 'genuine_max_edge_weight': 0.46901318207760767, 'mutated_edge_count': 0, 'mutated_max_edge_weight': 0.0, 'prefix_length': 1, 'row_variance': 1.702692343587153e-06}",
+      "expected": "genuine gap positive and q mutation zero",
+      "group": "hostile",
+      "name": "hostile q mutation caught",
+      "status": "PASS"
+    }
+  ],
+  "derived": {
+    "command_outputs": {
+      "lean": "",
+      "pre_a_cp1_st8_q3lock_hamiltonian_intrinsic_kinetic_poincare.py": "R-404 PRIMARY PASS 1398/1398 systems=7 contexts=2688 rows=21120 gap=[0.757017,5.64786] ratio=[1.2218,221587]",
+      "pre_a_cp1_st8_q3lock_hamiltonian_intrinsic_kinetic_poincare_hostile.py": "R-404 HOSTILE PASS 6/6 baseline_gap=0.757017 late_gap=2.91443 mutated_edges=0",
+      "pre_a_cp1_st8_q3lock_hamiltonian_intrinsic_kinetic_poincare_independent.py": "R-404 INDEPENDENT PASS 1388/1388 systems=7 contexts=2688 rows=21120 gap=[0.757017,5.64786] ratio=[1.2218,221587]"
+    },
+    "hostile": {
+      "baseline": {
+        "dimension": 3,
+        "genuine_gap": 0.7570174175402339,
+        "genuine_kinetic_form": 3.0334210451716266e-07,
+        "genuine_max_edge_weight": 0.18655849231033172,
+        "mutated_edge_count": 0,
+        "mutated_max_edge_weight": 0.0,
+        "prefix_length": 1,
+        "row_variance": 8.545086037015876e-08
+      },
+      "beta": 2.0,
+      "dimension_profiles": [
+        {
+          "dimension": 3,
+          "genuine_gap": 0.7570174175402339,
+          "genuine_kinetic_form": 3.0334210451716266e-07,
+          "genuine_max_edge_weight": 0.18655849231033172,
+          "mutated_edge_count": 0,
+          "mutated_max_edge_weight": 0.0,
+          "prefix_length": 1,
+          "row_variance": 8.545086037015876e-08
+        },
+        {
+          "dimension": 4,
+          "genuine_gap": 0.7872756441265598,
+          "genuine_kinetic_form": 8.787841144281066e-08,
+          "genuine_max_edge_weight": 0.1971687836487034,
+          "mutated_edge_count": 0,
+          "mutated_max_edge_weight": 0.0,
+          "prefix_length": 1,
+          "row_variance": 3.916643568925043e-08
+        },
+        {
+          "dimension": 5,
+          "genuine_gap": 1.5534356018176712,
+          "genuine_kinetic_form": 5.087103827091798e-07,
+          "genuine_max_edge_weight": 0.296465657320577,
+          "mutated_edge_count": 0,
+          "mutated_max_edge_weight": 0.0,
+          "prefix_length": 1,
+          "row_variance": 1.25113122383623e-07
+        },
+        {
+          "dimension": 6,
+          "genuine_gap": 1.6729054446344935,
+          "genuine_kinetic_form": 8.957764668067426e-06,
+          "genuine_max_edge_weight": 0.312928914150365,
+          "mutated_edge_count": 0,
+          "mutated_max_edge_weight": 0.0,
+          "prefix_length": 1,
+          "row_variance": 4.2856616050828115e-07
+        },
+        {
+          "dimension": 8,
+          "genuine_gap": 2.229394151230008,
+          "genuine_kinetic_form": 0.0002406464601274035,
+          "genuine_max_edge_weight": 0.3853793862814391,
+          "mutated_edge_count": 0,
+          "mutated_max_edge_weight": 0.0,
+          "prefix_length": 1,
+          "row_variance": 9.785761501360044e-07
+        },
+        {
+          "dimension": 10,
+          "genuine_gap": 2.578064372916228,
+          "genuine_kinetic_form": 0.00020122620121713805,
+          "genuine_max_edge_weight": 0.4258540392583218,
+          "mutated_edge_count": 0,
+          "mutated_max_edge_weight": 0.0,
+          "prefix_length": 1,
+          "row_variance": 1.586860220713868e-06
+        },
+        {
+          "dimension": 12,
+          "genuine_gap": 2.914431299136564,
+          "genuine_kinetic_form": 0.12190607613453425,
+          "genuine_max_edge_weight": 0.46901318207760767,
+          "mutated_edge_count": 0,
+          "mutated_max_edge_weight": 0.0,
+          "prefix_length": 1,
+          "row_variance": 1.702692343587153e-06
+        }
+      ],
+      "history_adjoint": 0,
+      "history_sign": 1,
+      "late": {
+        "dimension": 12,
+        "genuine_gap": 2.914431299136564,
+        "genuine_kinetic_form": 0.12190607613453425,
+        "genuine_max_edge_weight": 0.46901318207760767,
+        "mutated_edge_count": 0,
+        "mutated_max_edge_weight": 0.0,
+        "prefix_length": 1,
+        "row_variance": 1.702692343587153e-06
+      },
+      "mutation": "replace_p_by_q",
+      "orientation": "right",
+      "source_sign": 1,
+      "volume": 2
+    },
+    "independent": {
+      "comparison_row_count": 21120,
+      "context_count": 2688,
+      "cutoff_dimensions": [
+        3,
+        4,
+        5,
+        6,
+        8,
+        10,
+        12
+      ],
+      "maximum_graph_trace_residual": 0.0,
+      "maximum_intrinsic_gap": 5.647863075940388,
+      "maximum_kinetic_form": 9.828535864268767,
+      "maximum_kinetic_to_variance_ratio": 221586.62145376112,
+      "maximum_poincare_residual": 7.643780491888654,
+      "maximum_variance": 0.8885926783459505,
+      "minimum_graph_trace_residual": 0.0,
+      "minimum_intrinsic_gap": 0.7570174175402339,
+      "minimum_kinetic_form": 0.0,
+      "minimum_kinetic_to_variance_ratio": 1.2217999653440568,
+      "minimum_poincare_residual": -9.940459018803983e-32,
+      "minimum_variance": 9.639562883329987e-33,
+      "nonzero_variance_row_count": 15840,
+      "system_count": 7,
+      "system_profiles": {
+        "V=2/d=10": {
+          "context_count": 384,
+          "dimension": 10,
+          "maximum_gap": 4.559438193527271,
+          "maximum_kinetic_form": 0.5894571315472926,
+          "maximum_poincare_residual": 0.2651154738811342,
+          "maximum_ratio": 9185.771549900599,
+          "maximum_variance": 0.14200530326199914,
+          "minimum_gap": 2.1313269196275284,
+          "minimum_kinetic_form": 1.122470048551798e-30,
+          "minimum_poincare_residual": 8.777071192402492e-31,
+          "minimum_ratio": 3.0585503571188264,
+          "minimum_variance": 4.716926401003003e-32,
+          "nonzero_variance_count": 3168,
+          "row_count": 4224,
+          "zero_variance_count": 1056
+        },
+        "V=2/d=12": {
+          "context_count": 384,
+          "dimension": 12,
+          "maximum_gap": 5.647863075940388,
+          "maximum_kinetic_form": 9.828535864268767,
+          "maximum_poincare_residual": 7.643780491888654,
+          "maximum_ratio": 221586.62145376112,
+          "maximum_variance": 0.8885926783459505,
+          "minimum_gap": 2.4233910464474286,
+          "minimum_kinetic_form": 1.4807810424830104e-30,
+          "minimum_poincare_residual": 9.638677320929996e-31,
+          "minimum_ratio": 2.9791875058792665,
+          "minimum_variance": 5.021257157674262e-32,
+          "nonzero_variance_count": 3744,
+          "row_count": 4992,
+          "zero_variance_count": 1248
+        },
+        "V=2/d=3": {
+          "context_count": 384,
+          "dimension": 3,
+          "maximum_gap": 2.4819858952563303,
+          "maximum_kinetic_form": 4.881656323707382e-05,
+          "maximum_poincare_residual": 9.650104889451126e-06,
+          "maximum_ratio": 3.9219740617613374,
+          "maximum_variance": 3.411357508004039e-05,
+          "minimum_gap": 0.7570174175402339,
+          "minimum_kinetic_form": 0.0,
+          "minimum_poincare_residual": -9.940459018803983e-32,
+          "minimum_ratio": 1.2860527110591489,
+          "minimum_variance": 1.0817754973572674e-32,
+          "nonzero_variance_count": 1152,
+          "row_count": 1536,
+          "zero_variance_count": 384
+        },
+        "V=2/d=4": {
+          "context_count": 384,
+          "dimension": 4,
+          "maximum_gap": 2.833778687459353,
+          "maximum_kinetic_form": 0.0005970781944509598,
+          "maximum_poincare_residual": 0.0002825796776820999,
+          "maximum_ratio": 8.061510500883646,
+          "maximum_variance": 0.00022504726928136652,
+          "minimum_gap": 0.7872756441265597,
+          "minimum_kinetic_form": 1.5582084969583504e-32,
+          "minimum_poincare_residual": -9.260021528695459e-33,
+          "minimum_ratio": 1.2217999653440568,
+          "minimum_variance": 1.232595164407831e-32,
+          "nonzero_variance_count": 1440,
+          "row_count": 1920,
+          "zero_variance_count": 480
+        },
+        "V=2/d=5": {
+          "context_count": 384,
+          "dimension": 5,
+          "maximum_gap": 2.363630062334787,
+          "maximum_kinetic_form": 0.003245559791737411,
+          "maximum_poincare_residual": 0.0024320047657235924,
+          "maximum_ratio": 30.03049565698368,
+          "maximum_variance": 0.0004766189251219783,
+          "minimum_gap": 1.1950962017934934,
+          "minimum_kinetic_form": 6.657478386083892e-32,
+          "minimum_poincare_residual": -7.617712773647575e-32,
+          "minimum_ratio": 2.222226089072187,
+          "minimum_variance": 1.2529333521773039e-32,
+          "nonzero_variance_count": 1728,
+          "row_count": 2304,
+          "zero_variance_count": 576
+        },
+        "V=2/d=6": {
+          "context_count": 384,
+          "dimension": 6,
+          "maximum_gap": 3.8750382074539744,
+          "maximum_kinetic_form": 0.011483484713234614,
+          "maximum_poincare_residual": 0.009723589814850298,
+          "maximum_ratio": 106.15657072193248,
+          "maximum_variance": 0.000828491733211355,
+          "minimum_gap": 1.4721452785784677,
+          "minimum_kinetic_form": 3.231874827399139e-32,
+          "minimum_poincare_residual": -5.7091883733344904e-33,
+          "minimum_ratio": 2.6332740360739333,
+          "minimum_variance": 9.639562883329987e-33,
+          "nonzero_variance_count": 2016,
+          "row_count": 2688,
+          "zero_variance_count": 672
+        },
+        "V=2/d=8": {
+          "context_count": 384,
+          "dimension": 8,
+          "maximum_gap": 3.77805593885265,
+          "maximum_kinetic_form": 0.06620191667686492,
+          "maximum_poincare_residual": 0.059709915219716025,
+          "maximum_ratio": 710.0210708600107,
+          "maximum_variance": 0.005824111386378881,
+          "minimum_gap": 1.7946329937682568,
+          "minimum_kinetic_form": 1.9208653632758326e-31,
+          "minimum_poincare_residual": 8.277228990348673e-32,
+          "minimum_ratio": 4.88330450847559,
+          "minimum_variance": 5.473992124571791e-32,
+          "nonzero_variance_count": 2592,
+          "row_count": 3456,
+          "zero_variance_count": 864
+        }
+      },
+      "zero_variance_row_count": 5280
+    },
+    "lean": "PASS",
+    "primary": {
+      "comparison_row_count": 21120,
+      "context_count": 2688,
+      "cutoff_dimensions": [
+        3,
+        4,
+        5,
+        6,
+        8,
+        10,
+        12
+      ],
+      "maximum_graph_trace_residual": 4.440892098500626e-15,
+      "maximum_intrinsic_gap": 5.647863075935321,
+      "maximum_kinetic_form": 9.82853586278934,
+      "maximum_kinetic_to_variance_ratio": 221586.62145365847,
+      "maximum_poincare_residual": 7.643780490403682,
+      "maximum_variance": 0.8885926783461522,
+      "minimum_graph_trace_residual": -8.881784197001252e-15,
+      "minimum_intrinsic_gap": 0.7570174175402339,
+      "minimum_kinetic_form": 0.0,
+      "minimum_kinetic_to_variance_ratio": 1.221799965345582,
+      "minimum_poincare_residual": -6.769433543404704e-32,
+      "minimum_variance": 0.0,
+      "nonzero_variance_row_count": 15840,
+      "system_count": 7,
+      "system_profiles": {
+        "V=2/d=10": {
+          "context_count": 384,
+          "dimension": 10,
+          "maximum_gap": 4.55943819352713,
+          "maximum_kinetic_form": 0.5894571315470044,
+          "maximum_poincare_residual": 0.26511547387960277,
+          "maximum_ratio": 9185.771549905025,
+          "maximum_variance": 0.14200530326199545,
+          "minimum_gap": 2.1313269196275257,
+          "minimum_kinetic_form": 9.108307121542195e-31,
+          "minimum_poincare_residual": 7.750387351998426e-31,
+          "minimum_ratio": 3.0585503571183863,
+          "minimum_variance": 5.60710900119394e-32,
+          "nonzero_variance_count": 3168,
+          "row_count": 4224,
+          "zero_variance_count": 1056
+        },
+        "V=2/d=12": {
+          "context_count": 384,
+          "dimension": 12,
+          "maximum_gap": 5.647863075935321,
+          "maximum_kinetic_form": 9.82853586278934,
+          "maximum_poincare_residual": 7.643780490403682,
+          "maximum_ratio": 221586.62145365847,
+          "maximum_variance": 0.8885926783461522,
+          "minimum_gap": 2.4233910464474144,
+          "minimum_kinetic_form": 1.6440744821939462e-30,
+          "minimum_poincare_residual": 1.457268070048153e-30,
+          "minimum_ratio": 2.9791875053936328,
+          "minimum_variance": 4.164258622307959e-32,
+          "nonzero_variance_count": 3744,
+          "row_count": 4992,
+          "zero_variance_count": 1248
+        },
+        "V=2/d=3": {
+          "context_count": 384,
+          "dimension": 3,
+          "maximum_gap": 2.481985895256327,
+          "maximum_kinetic_form": 4.881656323707554e-05,
+          "maximum_poincare_residual": 9.650104889451045e-06,
+          "maximum_ratio": 3.921974061762013,
+          "maximum_variance": 3.4113575080040985e-05,
+          "minimum_gap": 0.7570174175402339,
+          "minimum_kinetic_form": 0.0,
+          "minimum_poincare_residual": -4.11805306268763e-32,
+          "minimum_ratio": 1.2860527108904365,
+          "minimum_variance": 0.0,
+          "nonzero_variance_count": 1152,
+          "row_count": 1536,
+          "zero_variance_count": 384
+        },
+        "V=2/d=4": {
+          "context_count": 384,
+          "dimension": 4,
+          "maximum_gap": 2.833778687459352,
+          "maximum_kinetic_form": 0.0005970781944509578,
+          "maximum_poincare_residual": 0.0002825796776821122,
+          "maximum_ratio": 8.061510500883305,
+          "maximum_variance": 0.0002250472692813693,
+          "minimum_gap": 0.7872756441265598,
+          "minimum_kinetic_form": 0.0,
+          "minimum_poincare_residual": -2.1531001541998837e-32,
+          "minimum_ratio": 1.221799965345582,
+          "minimum_variance": 0.0,
+          "nonzero_variance_count": 1440,
+          "row_count": 1920,
+          "zero_variance_count": 480
+        },
+        "V=2/d=5": {
+          "context_count": 384,
+          "dimension": 5,
+          "maximum_gap": 2.3636300623347872,
+          "maximum_kinetic_form": 0.0032455597917374394,
+          "maximum_poincare_residual": 0.0024320047657236167,
+          "maximum_ratio": 30.030495656984087,
+          "maximum_variance": 0.0004766189251219809,
+          "minimum_gap": 1.1950962017934932,
+          "minimum_kinetic_form": 3.531613157249981e-32,
+          "minimum_poincare_residual": -6.769433543404704e-32,
+          "minimum_ratio": 2.2222260890718415,
+          "minimum_variance": 1.936956178417614e-32,
+          "nonzero_variance_count": 1728,
+          "row_count": 2304,
+          "zero_variance_count": 576
+        },
+        "V=2/d=6": {
+          "context_count": 384,
+          "dimension": 6,
+          "maximum_gap": 3.8750382074539487,
+          "maximum_kinetic_form": 0.01148348471323444,
+          "maximum_poincare_residual": 0.00972358981485013,
+          "maximum_ratio": 106.15657072192896,
+          "maximum_variance": 0.0008284917332113485,
+          "minimum_gap": 1.4721452785784677,
+          "minimum_kinetic_form": 6.290324538754655e-32,
+          "minimum_poincare_residual": -2.2843447731142512e-32,
+          "minimum_ratio": 2.6332740360741353,
+          "minimum_variance": 2.8263755995923e-32,
+          "nonzero_variance_count": 2016,
+          "row_count": 2688,
+          "zero_variance_count": 672
+        },
+        "V=2/d=8": {
+          "context_count": 384,
+          "dimension": 8,
+          "maximum_gap": 3.7780559388526536,
+          "maximum_kinetic_form": 0.06620191667689207,
+          "maximum_poincare_residual": 0.05970991521974506,
+          "maximum_ratio": 710.0210708600363,
+          "maximum_variance": 0.005824111386379164,
+          "minimum_gap": 1.7946329937682575,
+          "minimum_kinetic_form": 1.1268940234171613e-31,
+          "minimum_poincare_residual": 6.160448416668684e-32,
+          "minimum_ratio": 4.883304508476004,
+          "minimum_variance": 5.108790924395593e-33,
+          "nonzero_variance_count": 2592,
+          "row_count": 3456,
+          "zero_variance_count": 864
+        }
+      },
+      "zero_variance_row_count": 5280
+    }
+  },
+  "exploration_id": "EXP-001249",
+  "manifest": "strategy/pre-a-cp1-st8-q3lock-hamiltonian-intrinsic-kinetic-poincare-manifest.json",
+  "result_id": "R-404",
+  "schema": "tect/pre-a-r404-integrated/1.0",
+  "scope": {
+    "c6_closed": false,
+    "common_alpha_closed": false,
+    "common_core_closed": false,
+    "continuum_closed": false,
+    "cutoff_independent_gap_closed": false,
+    "exhaustion_uniform_gap_closed": false,
+    "finite_cutoff_profile_closed": true,
+    "finite_intrinsic_kinetic_graph_closed": true,
+    "finite_likelihood_row_test_closed": true,
+    "finite_weighted_poincare_gap_closed": true,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "no_new_negative_result": true,
+    "no_pdf": true,
+    "no_tier_change": true,
+    "phase_uniform_gap_closed": false,
+    "pre_a_closed": false,
+    "sector_a_closed": false,
+    "volume_independent_gap_closed": false
+  },
+  "verdict": "PASS"
+}
