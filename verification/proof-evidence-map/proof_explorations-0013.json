@@ -2304,6 +2304,139 @@
       "task_id": "T-054",
       "title": "Gap-free odd-Matsubara resolvent telescoping budget",
       "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "axis": "absolute-value sign",
+          "check": "The pair identity is evaluated with absolute probability differences and nonnegative square roots; no energy ordering is assumed.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "Cauchy direction",
+          "check": "The shell is bounded by Cauchy on two nonnegative spectral rows; the geometric mean is not treated as an equality.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "operator ordering",
+          "check": "The commutator and anticommutator are formed as actual products with the same half-density on both sides; no commutation through X is used.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "Hermiticity",
+          "check": "The moved witness is symmetrized before both legs are formed, and anti-Hermitian/Hermitian residuals are checked.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "diagonal gaps",
+          "check": "Zero transition gaps remain in the sums and no division by an energy difference occurs.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "arithmetic recovery",
+          "check": "The sum of the two half-density squares is compared with 4 Tr(rho X^2) in the bond eigenbasis rather than inferred from a commuting model.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "cutoff behavior",
+          "check": "The anticommutator cost grows on the finite edge sweep from d=3 to d=6, so uniformity is not silently claimed.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "state scope",
+          "check": "The Gibbs matrix is the finite doubled-bond proxy, not a thermodynamic KMS state or OS reconstruction.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "independence",
+          "check": "The independent lane rebuilds the oscillator, graph, Gibbs spectrum, prefixes and half-density products without importing the primary audit.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "downstream promotion",
+          "check": "The finite bridge does not prove modular tails, a common core, common alpha, KMS/GNS dynamics, a gap, continuum, C6, Sector-A or Pre-A.",
+          "disposition": "DISMISSED-FIREWALL"
+        }
+      ],
+      "boundary": "T0 claim-nonbearing finite half-density/GNS interface only. It does not prove operator-norm locality, modular tails, common core, common alpha, KMS/GNS dynamics, a gap, continuum, C6, Sector-A or Pre-A.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "The half-density factorization exposes the R-377 square-root debt as two positive, orientation-aware GNS legs. It is a genuinely different interface from the R-373 scalar cap and R-371 arithmetic second-moment reduction, and the finite data show a much smaller geometric envelope than the recovered arithmetic envelope. The finite proxy does not establish either leg uniformly, so no common-alpha or QFT promotion is made.",
+      "evidence_refs": [
+        "strategy/pre-a-cp1-st8-q3lock-local-q2-kubo-mori-half-density-bridge-manifest.json#identity",
+        "strategy/pre-a-cp1-st8-q3lock-local-q2-kubo-mori-half-density-bridge-certificate-260828.md#finite-verification",
+        "codes/foundations/pre_a_cp1_st8_q3lock_local_q2_kubo_mori_half_density_bridge.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_local_q2_kubo_mori_half_density_bridge_independent.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_local_q2_kubo_mori_half_density_bridge_verify.py#run",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-28-primary-pre_a_cp1_st8_q3lock_local_q2_kubo_mori_half_density_bridge/primary.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-28-independent-pre_a_cp1_st8_q3lock_local_q2_kubo_mori_half_density_bridge/independent.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-28-integrated-pre_a_cp1_st8_q3lock_local_q2_kubo_mori_half_density_bridge/integrated.json#lean",
+        "verification/lean/Tect/R378.lean#half_density_pair_factor",
+        "claims/C6-SPACETIME-SIGNATURE/notes/q3lock-local-q2-kubo-mori-half-density-bridge-boundary-260828.md#R-378"
+      ],
+      "finding": "The primary lane passes 25454/25454 assertions and the non-importing independent lane passes 8/8 aggregate assertions over 2816 all-prefix contexts. The integrated verifier passes 68/68 and Lean R378 compiles. The maximum shell is 1.4610968881346746, the maximum geometric half-density bound is 18.402415064535205, and the maximum recovered arithmetic bound is 166.59306606647507. The largest shell/geometric-bound ratio is 0.5380346350964185 and the largest shell/arithmetic ratio is 0.008770454393051757. Primary and independent values agree within 1.137e-12.",
+      "formal_integration": {
+        "events": [
+          "20260828-half-density-hellinger-bridge-for-the-theta-hal"
+        ],
+        "lean": "R378 PASS",
+        "negatives": [],
+        "no_changelog_event": false,
+        "no_new_negative": true,
+        "no_new_result": false,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "results": [
+          "R-378"
+        ]
+      },
+      "formal_refs": {
+        "events": [
+          "20260828-half-density-hellinger-bridge-for-the-theta-hal"
+        ],
+        "negatives": [],
+        "results": [
+          "R-378"
+        ]
+      },
+      "gate_ids": [
+        "PA-CP1-ST8-Q3LOCK-RESOLVENT-ALGEBRA-EXACT-POLYNOMIAL-COMMON-ALPHA-CLOSURE",
+        "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+        "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+      ],
+      "id": "EXP-001220",
+      "method": [
+        "Use the actual-Q3 edge and square finite fixtures from R-371/R-373 with all translated sites and bond terms, both term orders, both time signs, every prefix position and both history adjoints.",
+        "Diagonalize the doubled bond generator, construct the normalized Gibbs weights p_i and the half-density R=diag(sqrt(p_i)), and center every moved Hermitian witness.",
+        "Evaluate the theta-half shell, the Frobenius squares of [R,X] and {R,X}, the pair factorization, the geometric Cauchy envelope and the arithmetic envelope recovering 4 Tr(rho X^2).",
+        "Reconstruct the same grid without importing the primary audit and compile the scalar factorization/arithmetic envelope in Lean R378."
+      ],
+      "next_action": "Prove a source-, volume- and cutoff-uniform estimate for both half-density legs on one Hamiltonian-derived core, then insert their geometric mean into the R-377 odd-resolvent telescope for direct D and delta-D orientations.",
+      "no_overclaim": "R-378 separates the finite square-root debt into two computable positive legs; finite improvement is not a uniform theorem or a QFT closure.",
+      "provenance": "contemporaneous",
+      "question": "Can the absolute theta-half Kubo--Mori shell be factored through the commutator and anticommutator of the Gibbs half-density, yielding a two-sided GNS/Hellinger bound that makes the square-root locality debt explicit?",
+      "recorded_at": "2026-08-29T23:30:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001219",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001215",
+          "relation": "alternative_to"
+        },
+        {
+          "id": "EXP-001213",
+          "relation": "alternative_to"
+        }
+      ],
+      "reviewed_on": "2026-08-28",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Half-density Hellinger bridge for the theta-half Kubo--Mori shell",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",

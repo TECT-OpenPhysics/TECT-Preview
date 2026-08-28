@@ -41,6 +41,7 @@ policy in `governance/development-history.md`.
 | [R-195](#r-195) | Spatial constant-field lift of the A6 running-mass escape | R-195 v1.0 is a T0 claim-nonbearing Lean/Fraction spatial lift under EXP-000933. On the declared finite torus, constant fields multiply the R-194 correction by the exact volume and the volume-cancelled ratio is bounded by 6*s*(b+c)/r, so no positive volume-uniform coercivity holds even on that subspace. Full-field concentration, partition/tightness, A7, A13, Sector-A and Pre-A remain open |
 | [R-376](#r-376) | Hilbert-Schmidt Lipschitz bridge for the capped Liouvillian kernel | R-376 v1.0 is a T0 claim-nonbearing finite operator-interface checkpoint under EXP-001218. A noncommuting cutoff-2 edge Liouvillian stress gives maximum full-kernel Frobenius ratio 0.9787544362168733 and 64-layer ratio 0.9755896836319287 with 76/76 integrated assertions; general Schatten-2 proof, operator-norm locality, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
 | [R-377](#r-377) | Gap-free odd-Matsubara resolvent telescoping budget | R-377 v1.0 is a T0 claim-nonbearing finite resolvent-interface checkpoint under EXP-001219. The exact positive-resolvent difference identity and its 64-layer budget pass 122/122 integrated assertions with Lean R377; the accumulated finite budget ratio is 0.9895313426497929 and the absolute-value square-root debt is recorded separately. Uniform locality, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
+| [R-378](#r-378) | Half-density Hellinger bridge for the theta-half Kubo-Mori shell | R-378 v1.0 is a T0 claim-nonbearing finite half-density/GNS interface checkpoint under EXP-001220. The absolute shell is bounded by the geometric mean of a Gibbs half-density commutator and anticommutator across 2816 all-prefix actual-Q3 contexts; the integrated verifier passes 68/68 with Lean R378, and the geometric bound remains finite while source/volume/cutoff-uniform modular tails, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
 | [R-375](#r-375) | Summable odd-Matsubara Lipschitz budget for transition-energy perturbations | R-375 v1.0 is a T0 claim-nonbearing finite scalar spectral-sensitivity checkpoint under EXP-001217. Each positive layer has slope envelope 8/omega_n^2, the 64-layer partial budget is 0.9968337774239473, and the exact capped kernel is unit-Lipschitz on 2816 all-prefix actual-Q3 contexts; eigenvector rotation, resolvent locality, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
 | [R-374](#r-374) | Positive odd-Matsubara resolvent expansion of the capped Gibbs kernel | R-374 v1.0 is a T0 claim-nonbearing finite analytic/executable checkpoint under EXP-001216. The first 64 positive resolvent layers form a monotone partial kernel with an explicit tail envelope over 2816 all-prefix contexts; resolvent locality, source/cutoff/volume uniformity, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
 | [R-373](#r-373) | Exact hyperbolic-tangent Gibbs kernel and capped local Dirichlet bound | R-373 v1.0 is a T0 claim-nonbearing finite analytic/executable checkpoint under EXP-001215. The theta-half Gibbs difference becomes a saturating kernel bounded by min(Delta,2/beta), unifying low-gap Dirichlet and high-gap variance forms across 2816 all-prefix contexts; capped-form uniformity, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
@@ -615,7 +616,43 @@ OS/KMS/GNS transfer, gap, continuum, C6, Sector-A or Pre-A closure follows.
 No new negative result, tier change, or R-376 PDF is issued.
 
 **Proven in:** manifest, certificate, Lean entrypoint, primary script,
-independent script, integrated verifier, scope note, and saved run artefacts.<a id="r-377"></a>
+independent script, integrated verifier, scope note, and saved run artefacts.<a id="r-378"></a>
+### R-378 -- Half-density Hellinger bridge for the theta-half Kubo-Mori shell
+
+**Result ID.** R-378 is a T0, claim-nonbearing finite half-density/GNS
+interface checkpoint under EXP-001220.
+
+**Statement.** In the bond-Hamiltonian eigenbasis let `rho=diag(p_i)`,
+`R=rho^(1/2)`, and let `X` be the centered Hermitian moved witness.  Then
+`[R,X]_ij=(sqrt(p_i)-sqrt(p_j))X_ij`,
+`{R,X}_ij=(sqrt(p_i)+sqrt(p_j))X_ij`, and
+`|p_i-p_j|=|sqrt(p_i)-sqrt(p_j)|(sqrt(p_i)+sqrt(p_j))`.  Hence the
+absolute theta-half shell satisfies the finite geometric bridge
+`S_(1/2)<=(2/beta)||[R,X]||_2||{R,X}||_2`, followed by
+`S_(1/2)<=beta^(-1)(||[R,X]||_2^2+||{R,X}||_2^2)=(4/beta)Tr(rho X^2)`.
+The last equality recovers the R-371 arithmetic second-moment envelope while
+retaining two explicit one-sided half-density legs.
+
+**Verification.** The primary lane passes `25454/25454` assertions and the
+non-importing independent lane passes `8/8` aggregate assertions over `2816`
+all-prefix actual-Q3 contexts on the edge and square fixtures.  The integrated
+verifier passes `68/68` and Lean R378 compiles.  Primary and independent values
+agree within `1.137e-12`.  The maximum shell is `1.4610968881346746`, the
+maximum geometric half-density bound is `18.402415064535205`, and the maximum
+recovered arithmetic bound is `166.59306606647507`.  The maximum
+shell/geometric ratio is `0.5380346350964185`, while the maximum
+shell/arithmetic ratio is `0.008770454393051757`.
+
+**Boundary.** This finite factorization makes the R-377 square-root debt
+explicit but does not prove a source-, volume-, cutoff- or beta-uniform bound
+for either half-density leg.  It does not establish a common unbounded core,
+direct `D,delta D` Cauchy theorem, common alpha, OS/KMS/GNS dynamics, a mass
+gap, continuum, C6, Sector-A or Pre-A closure.  No new negative result, tier
+change or R-378 PDF is issued.
+
+**Proven in:** [manifest](strategy/pre-a-cp1-st8-q3lock-local-q2-kubo-mori-half-density-bridge-manifest.json), [certificate](strategy/pre-a-cp1-st8-q3lock-local-q2-kubo-mori-half-density-bridge-certificate-260828.md), [Lean entrypoint](verification/lean/Tect/R378.lean), [primary script](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_kubo_mori_half_density_bridge.py), [independent script](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_kubo_mori_half_density_bridge_independent.py), [integrated verifier](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_kubo_mori_half_density_bridge_verify.py), [scope note](claims/C6-SPACETIME-SIGNATURE/notes/q3lock-local-q2-kubo-mori-half-density-bridge-boundary-260828.md), and stored run artefacts.
+
+<a id="r-377"></a>
 ### R-377 -- Gap-free odd-Matsubara resolvent telescoping budget
 
 **Result ID.** R-377 is a T0, claim-nonbearing finite resolvent-algebra

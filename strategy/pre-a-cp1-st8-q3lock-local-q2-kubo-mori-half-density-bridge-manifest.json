@@ -1,0 +1,69 @@
+{
+  "schema": "tect/pre-a-cp1-st8-q3lock-local-q2-kubo-mori-half-density-bridge/1.0",
+  "exploration_id": "EXP-001220",
+  "result_id": "R-378",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "claim_bearing": false,
+  "parent_explorations": ["EXP-001219", "EXP-001213", "EXP-001215"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-RESOLVENT-ALGEBRA-EXACT-POLYNOMIAL-COMMON-ALPHA-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+  ],
+  "title": "Half-density Hellinger bridge for the theta-half Kubo--Mori shell",
+  "question": "Can the absolute theta-half Kubo--Mori shell be factored through the commutator and anticommutator of the Gibbs half-density, yielding a two-sided GNS/Hellinger bound that makes the square-root locality debt explicit?",
+  "identity": {
+    "rho_half": "rho^(1/2)=diag(sqrt(p_i)) in the bond-Hamiltonian eigenbasis",
+    "commutator_entries": "[rho^(1/2),X]_ij=(sqrt(p_i)-sqrt(p_j)) X_ij",
+    "anticommutator_entries": "{rho^(1/2),X}_ij=(sqrt(p_i)+sqrt(p_j)) X_ij",
+    "pair_factorization": "|p_i-p_j|=|sqrt(p_i)-sqrt(p_j)| (sqrt(p_i)+sqrt(p_j))",
+    "shell": "S_(1/2)=(2/beta) sum_ij |p_i-p_j| |X_ij|^2",
+    "hellinger_bound": "S_(1/2) <= (2/beta)||[rho^(1/2),X]||_2 ||{rho^(1/2),X}||_2",
+    "arithmetic_recovery": "S_(1/2) <= beta^(-1)(||[rho^(1/2),X]||_2^2+||{rho^(1/2),X}||_2^2) = (4/beta)Tr(rho X^2)"
+  },
+  "finite_fixture": {
+    "regimes": [
+      {"shape": "edge", "volume": 2, "cutoff_values": [3, 4, 5, 6], "site_values": [0, 1], "bond_term_indices": [2]},
+      {"shape": "square", "volume": 4, "cutoff_values": [2], "site_values": [0, 1, 2, 3], "bond_term_indices": [4, 5, 6, 7]}
+    ],
+    "beta_values": ["1/2", "1"],
+    "time_sign_values": [-1, 1],
+    "history_adjoint_values": [0, 1],
+    "theta": "1/2",
+    "prefix_policy": "all_positions",
+    "time_step": "1/18",
+    "hbar": "1",
+    "parameters": {"chi": "1", "r": "-1", "g": "3/5", "c": "3/5", "lambda": "1/10"},
+    "expected_source_contexts": 2816,
+    "finite_tolerance": 1e-9,
+    "agreement_tolerance": 2e-8,
+    "log_mean_gap_tolerance": 1e-12
+  },
+  "scope": {
+    "half_density_pair_factorization_finite_checked": true,
+    "hellinger_cauchy_bound_finite_checked": true,
+    "two_sided_gns_bridge_finite_checked": true,
+    "arithmetic_second_moment_recovery_finite_checked": true,
+    "square_root_debt_reexpressed": true,
+    "uniform_half_density_bound_proved": false,
+    "weighted_cutoff_uniformity_proved": false,
+    "weighted_volume_uniformity_proved": false,
+    "source_uniformity_proved": false,
+    "shape_uniformity_proved": false,
+    "common_core_closed": false,
+    "common_alpha_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "promotion_boundary": "R-378 is a finite exact half-density factorization and two-sided Hellinger/GNS interface. It turns the absolute Kubo--Mori shell into a geometric mean of a half-density commutator and anticommutator, but proves no uniform modular tail, common core, common alpha or QFT limit.",
+  "next_action": "Prove a source-, volume- and cutoff-uniform two-sided half-density commutator/anticommutator estimate on one Hamiltonian-derived core; then feed the geometric-mean bound into the R-377 odd-resolvent budget and test both direct D and delta-D orientations.",
+  "boundary": "Finite actual-Q3 edge and square doubled-bond Gibbs proxies with all prefixes, translations, signs and adjoints. The half-density identities, Cauchy bound and recovery of the R-371 arithmetic second-moment bound are checked numerically and in Lean; source/volume/cutoff uniformity, modular tails, common core, common alpha, OS/KMS/GNS dynamics, gap, continuum, C6, Sector-A and Pre-A remain open.",
+  "recorded_by": "Codex"
+}

@@ -5,10 +5,11 @@
 
 Authorities: `RESULTS-LEDGER.md`.
 
-**211 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
+**212 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
 
 | ID | Result | Tier/scope |
 |---|---|---|
+| [`R-378`](../RESULTS-LEDGER.md#r-378) | Half-density Hellinger bridge for the theta-half Kubo-Mori shell | T0 |
 | [`R-377`](../RESULTS-LEDGER.md#r-377) | Gap-free odd-Matsubara resolvent telescoping budget | T0 |
 | [`R-376`](../RESULTS-LEDGER.md#r-376) | Hilbert-Schmidt Lipschitz bridge for the capped Liouvillian kernel | T0 |
 | [`R-375`](../RESULTS-LEDGER.md#r-375) | Summable odd-Matsubara Lipschitz budget for transition-energy perturbations | T0 |
@@ -33,7 +34,6 @@ Authorities: `RESULTS-LEDGER.md`.
 | [`R-190`](../RESULTS-LEDGER.md#r-190) | A1 arbitrary-polarization two-mode positivity Lean cross-check | T0 |
 | [`R-189`](../RESULTS-LEDGER.md#r-189) | A1 e3 two-mode production-cylinder positivity Lean cross-check | T0 |
 | [`R-188`](../RESULTS-LEDGER.md#r-188) | Signed Jensen-defect telescope Lean cross-check | T0 |
-| [`R-187`](../RESULTS-LEDGER.md#r-187) | Adapted NEAR obstruction Lean cross-check | T0 |
 
 Search without loading the full ledger:
 
