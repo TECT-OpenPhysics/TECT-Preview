@@ -1,0 +1,91 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001227",
+  "title": "Relative-modular cocycle and resolvent Cook bridge",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-RESOLVENT-ALGEBRA-EXACT-POLYNOMIAL-COMMON-ALPHA-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-CP1-ST8-Q3LOCK-HAMILTONIAN-THERMODYNAMIC-IDENTIFICATION-IN-CANONICAL-OS-MIXTURE",
+    "PA-CP1-ST8-Q3LOCK-ALL-EXHAUSTION-MIXTURE-L2-LOCALITY-AND-BETA-INDEPENDENT-CSTAR-DYNAMICS"
+  ],
+  "question": "Can a phase-local relative modular cocycle on a resolvent core replace the all-history norm estimate by a summable boundary Cook criterion, while preserving both orientations and the Hamiltonian generator?",
+  "method": [
+    "Resum the nested-volume difference into U_prime,H(t)=exp(i t H_prime) exp(-i t H) before taking any norm, and derive the ordered cocycle equation on the common form/resolvent core.",
+    "Apply a phase-local conditional expectation to [B,R_z(A)] before the estimate so that the bulk cancels and only boundary shells remain.",
+    "Use the two-sided fixed-beta mixture GNS/BKM norm for the cocycle and its modular derivative, with the adjoint orientation checked separately.",
+    "Target a source-, cutoff-, volume- and shape-uniform l1 shell coefficient; integrate it by Cook/Duhamel to obtain direct D and delta-D Cauchy on the resolvent core.",
+    "Use the resolvent identity for product/inverse closure and only then test the common Hamiltonian generator and phasewise OS/KMS identification.",
+    "Keep the route conditional and retire it only if the actual Q3LOCK boundary coefficient is non-summable or the resolvent core is not invariant."
+  ],
+  "finding": "A distinct proof decomposition is now recorded: relative-cocycle resummation and phase-local state-weighted conditioning occur before the thermodynamic estimate. This avoids the raw point-norm Weyl carrier and the per-history absolute counting debt, but the actual Q3LOCK BKM boundary estimate and shell summability are not proved.",
+  "verdict": "advanced",
+  "decision_reason": "The route changes the load-bearing object from every split history to one relative modular cocycle and creates two precise falsifiable lemmas (phase-local BKM boundary control and l1 shell summability). It is a route advance only; no mathematical parent gate is closed until those Q3LOCK inputs and the embedding/group-law obligations are proved.",
+  "adversarial_review": [
+    {
+      "axis": "cocycle orientation",
+      "check": "The ordered product and its adjoint must be differentiated explicitly; a commuting perturbation surrogate is not allowed.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "unbounded boundary term",
+      "check": "The quartic boundary polynomial is unbounded, so a form/resolvent core and a verified perturbation domain are required before any Cook integral is legal.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "bulk cancellation",
+      "check": "Only the exact difference of identically normalized nested Hamiltonians cancels the bulk; the boundary halo and embedding convention must be enumerated.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "state topology",
+      "check": "Two-sided GNS convergence is weaker than point norm and does not automatically produce a representation-independent C-star action.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "summability",
+      "check": "Finite R-384 profiles and static tails do not imply an l1 boundary coefficient; failure in one orientation must stop this route.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "QFT promotion",
+      "check": "A successful cocycle limit would still require Hamiltonian-to-OS/KMS identification, a sector gap and the independent C6/Sector-A/Pre-A interfaces.",
+      "disposition": "UPHELD-OPEN"
+    }
+  ],
+  "evidence_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-relative-modular-cocycle-resolvent-cook-route-manifest.json#new_perspective",
+    "strategy/pre-a-cp1-st8-q3lock-relative-modular-cocycle-resolvent-cook-route-manifest.json#conditional_bridge",
+    "strategy/pre-a-cp1-st8-q3lock-relative-modular-cocycle-resolvent-cook-route-manifest.json#theorem_ladder",
+    "strategy/pre-a-cp1-st8-q3lock-relative-modular-cocycle-resolvent-cook-route-certificate-260828.md#New perspective",
+    "claims/C6-SPACETIME-SIGNATURE/notes/q3lock-relative-modular-cocycle-resolvent-cook-route-boundary-260828.md#EXP-001227",
+    "strategy/pre-a-cp1-st8-q3lock-local-q2-kubo-mori-two-scale-filter-removal-corridor-manifest.json#identity",
+    "strategy/pre-a-cp1-st8-q3lock-phase-conditioned-folded-influence-renyi-breakthrough-manifest.json#fallback_branch",
+    "verification/lean/Tect/R377.lean#resolvent_difference_identity"
+  ],
+  "formal_integration": {
+    "events": [],
+    "results": [],
+    "negatives": [],
+    "lean": "not applicable at route-design stage; R377 scalar identity is reused",
+    "no_new_event": true,
+    "no_new_result": true,
+    "no_new_negative": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "next_action": "First derive the finite ordered cocycle and resolvent-core commutator identities on the actual Q3 edge/square fixtures; then test whether the phase-local BKM shell coefficient is summable in both orientations. A finite pass must add a primary/independent/Lean package, while a non-summable coefficient is recorded as a route-specific obstruction.",
+  "related": [
+    {"id": "EXP-001226", "relation": "continues"},
+    {"id": "EXP-001203", "relation": "alternative_to"},
+    {"id": "EXP-001136", "relation": "alternative_to"}
+  ],
+  "provenance": "contemporaneous",
+  "recorded_at": "2026-08-30T03:45:00Z",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-08-28",
+  "boundary": "Claim-nonbearing route design only. It proves no Q3 boundary coefficient, cocycle summability, direct D/delta-D Cauchy theorem, common alpha, OS/KMS/GNS reconstruction, gap, continuum, C6, Sector-A or Pre-A result.",
+  "no_overclaim": "The cocycle/resolvent bridge is a falsifiable idea, not a proof closure. The hard Q3LOCK shell estimate, cutoff removal and compatible spatial embeddings remain open."
+}
