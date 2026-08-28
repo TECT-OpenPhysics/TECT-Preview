@@ -1,0 +1,66 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001219",
+  "title": "Gap-free odd-Matsubara resolvent telescoping budget",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-RESOLVENT-ALGEBRA-EXACT-POLYNOMIAL-COMMON-ALPHA-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+  ],
+  "related": [{"id": "EXP-001218", "relation": "continues"}],
+  "question": "Can the exact resolvent difference identity give a summable, gap-free budget for the resolvent part of the positive Matsubara kernel while isolating the absolute-value square-root term as a separate locality obligation?",
+  "method": [
+    "Build the local V=2 cutoff-2 bond commutator Liouvillian and perturb it with a noncommuting local momentum term.",
+    "For both beta values and all 64 odd frequencies, compute the two positive resolvents and check R_n(B)-R_n(A)=R_n(B) beta^2 (A^2-B^2) R_n(A).",
+    "Check denominator positivity, the 1/omega_n^2 operator ceiling, the Frobenius budget beta^2 ||A^2-B^2||_F/omega_n^4, and the accumulated 64-layer budget.",
+    "Decompose the positive kernel difference into the absolute-value square-root term plus the resolvent term, retain the first as explicit debt, reconstruct with a non-importing independent lane, and compile Lean R377."
+  ],
+  "finding": "The primary and independent lanes each pass 1056/1056 assertions and agree exactly at stored precision.  The integrated verifier passes 122/122 with Lean R377 PASS.  The largest identity residual is 6.11350532313155e-17, the largest accumulated budget ratio is 0.9895313426497929, and the maximum recorded square-root debt is 0.1239852906116096.",
+  "verdict": "advanced",
+  "decision_reason": "The exact resolvent algebra isolates a finite, gap-free and summable resolvent contribution and makes the remaining absolute-value/eigenvector term explicit.  It is a local finite interface only, so no uniform locality or common-alpha promotion is justified.",
+  "adversarial_review": [
+    {"axis": "identity sign/order", "check": "The matrix resolvent identity could have the wrong sign or product order.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "spectral-gap debt", "check": "The bound could hide an inverse minimum gap.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "denominator positivity", "check": "A mode denominator could lose positivity.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "summability", "check": "The finite resolvent budget might fail after summation.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "matrix transfer", "check": "A scalar identity could be mistaken for the matrix identity.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "square-root omission", "check": "The absolute-value term could be silently absorbed.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "volume-cutoff uniformity", "check": "The small fixture could hide growth.", "disposition": "UPHELD-OPEN"},
+    {"axis": "production shell", "check": "The local fixture might not equal the weighted Q3 shell.", "disposition": "UPHELD-OPEN"},
+    {"axis": "independence", "check": "The independent lane could import the primary implementation.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "downstream promotion", "check": "The finite interface could silently close Q3 or Pre-A.", "disposition": "DISMISSED-FIREWALL"}
+  ],
+  "evidence_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-local-q2-kubo-mori-resolvent-telescoping-budget-manifest.json#finite_fixture",
+    "strategy/pre-a-cp1-st8-q3lock-local-q2-kubo-mori-resolvent-telescoping-budget-certificate-260827.md#finite-verification",
+    "codes/foundations/pre_a_cp1_st8_q3lock_local_q2_kubo_mori_resolvent_telescoping_budget.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_local_q2_kubo_mori_resolvent_telescoping_budget_independent.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_local_q2_kubo_mori_resolvent_telescoping_budget_verify.py#run",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-28-primary-pre_a_cp1_st8_q3lock_local_q2_kubo_mori_resolvent_telescoping_budget/primary.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-28-independent-pre_a_cp1_st8_q3lock_local_q2_kubo_mori_resolvent_telescoping_budget/independent.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-28-integrated-pre_a_cp1_st8_q3lock_local_q2_kubo_mori_resolvent_telescoping_budget/integrated.json#derived",
+    "verification/lean/Tect/R377.lean#resolvent_difference_identity",
+    "claims/C6-SPACETIME-SIGNATURE/notes/q3lock-local-q2-kubo-mori-resolvent-telescoping-budget-boundary-260827.md#boundary"
+  ],
+  "formal_integration": {
+    "results": ["R-377"],
+    "negatives": [],
+    "events": ["20260828-gap-free-odd-matsubara-resolvent-telescoping-bu"],
+    "lean": "R377 PASS",
+    "no_new_result": false,
+    "no_new_negative": true,
+    "no_changelog_event": false,
+    "no_pdf": true,
+    "no_tier_change": true
+  },
+  "formal_refs": {"results": ["R-377"], "negatives": [], "events": ["20260828-gap-free-odd-matsubara-resolvent-telescoping-bu"]},
+  "next_action": "Prove a source-, volume- and cutoff-uniform energy-constrained estimate for the isolated square-root/local-commutator term, then sum the resolvent layers on the common polynomial core.",
+  "boundary": "T0 claim-nonbearing finite resolvent-algebra interface only.  It does not prove operator-norm locality, common core, common alpha, KMS/GNS dynamics, a gap, continuum, C6, Sector-A or Pre-A.",
+  "no_overclaim": "R-377 isolates a finite resolvent budget and a nonzero square-root debt; it does not prove the general theorem or any QFT closure.",
+  "provenance": "contemporaneous",
+  "recorded_at": "2026-08-29T23:00:00Z",
+  "reviewed_on": "2026-08-28",
+  "recorded_by": "Codex"
+}

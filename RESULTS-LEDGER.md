@@ -40,6 +40,7 @@ policy in `governance/development-history.md`.
 | [R-194](#r-194) | Sharp running-mass counterterm boundary | R-194 v1.0 is a T0 claim-nonbearing Lean/Fraction boundary under EXP-000932. It proves the sharp local coefficient h_min=9*(a+2*b+c), a nonnegative endpoint correction, a subsharp negative witness, and a third-component escape with no uniform coercivity. The full renormalised A6 owner, tightness, removal, Sector-A and Pre-A remain open |
 | [R-195](#r-195) | Spatial constant-field lift of the A6 running-mass escape | R-195 v1.0 is a T0 claim-nonbearing Lean/Fraction spatial lift under EXP-000933. On the declared finite torus, constant fields multiply the R-194 correction by the exact volume and the volume-cancelled ratio is bounded by 6*s*(b+c)/r, so no positive volume-uniform coercivity holds even on that subspace. Full-field concentration, partition/tightness, A7, A13, Sector-A and Pre-A remain open |
 | [R-376](#r-376) | Hilbert-Schmidt Lipschitz bridge for the capped Liouvillian kernel | R-376 v1.0 is a T0 claim-nonbearing finite operator-interface checkpoint under EXP-001218. A noncommuting cutoff-2 edge Liouvillian stress gives maximum full-kernel Frobenius ratio 0.9787544362168733 and 64-layer ratio 0.9755896836319287 with 76/76 integrated assertions; general Schatten-2 proof, operator-norm locality, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
+| [R-377](#r-377) | Gap-free odd-Matsubara resolvent telescoping budget | R-377 v1.0 is a T0 claim-nonbearing finite resolvent-interface checkpoint under EXP-001219. The exact positive-resolvent difference identity and its 64-layer budget pass 122/122 integrated assertions with Lean R377; the accumulated finite budget ratio is 0.9895313426497929 and the absolute-value square-root debt is recorded separately. Uniform locality, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
 | [R-375](#r-375) | Summable odd-Matsubara Lipschitz budget for transition-energy perturbations | R-375 v1.0 is a T0 claim-nonbearing finite scalar spectral-sensitivity checkpoint under EXP-001217. Each positive layer has slope envelope 8/omega_n^2, the 64-layer partial budget is 0.9968337774239473, and the exact capped kernel is unit-Lipschitz on 2816 all-prefix actual-Q3 contexts; eigenvector rotation, resolvent locality, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
 | [R-374](#r-374) | Positive odd-Matsubara resolvent expansion of the capped Gibbs kernel | R-374 v1.0 is a T0 claim-nonbearing finite analytic/executable checkpoint under EXP-001216. The first 64 positive resolvent layers form a monotone partial kernel with an explicit tail envelope over 2816 all-prefix contexts; resolvent locality, source/cutoff/volume uniformity, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
 | [R-373](#r-373) | Exact hyperbolic-tangent Gibbs kernel and capped local Dirichlet bound | R-373 v1.0 is a T0 claim-nonbearing finite analytic/executable checkpoint under EXP-001215. The theta-half Gibbs difference becomes a saturating kernel bounded by min(Delta,2/beta), unifying low-gap Dirichlet and high-gap variance forms across 2816 all-prefix contexts; capped-form uniformity, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
@@ -614,7 +615,41 @@ OS/KMS/GNS transfer, gap, continuum, C6, Sector-A or Pre-A closure follows.
 No new negative result, tier change, or R-376 PDF is issued.
 
 **Proven in:** manifest, certificate, Lean entrypoint, primary script,
-independent script, integrated verifier, scope note, and saved run artefacts.<a id="r-375"></a>
+independent script, integrated verifier, scope note, and saved run artefacts.<a id="r-377"></a>
+### R-377 -- Gap-free odd-Matsubara resolvent telescoping budget
+
+**Result ID.** R-377 is a T0, claim-nonbearing finite resolvent-algebra
+interface checkpoint under EXP-001219.
+
+**Statement.** For
+`R_n(A)=(omega_n^2 I+beta^2 A^2)^(-1)`, the exact difference identity is
+`R_n(B)-R_n(A)=R_n(B) beta^2(A^2-B^2) R_n(A)`.  Consequently the
+Frobenius difference is bounded by
+`beta^2 ||A^2-B^2||_F/omega_n^4`, and the finite odd-frequency sum is
+summable.  The positive kernel difference is split exactly into the
+absolute-value term `8(|B|-|A|)R_n(B)` and the resolvent term
+`8|A|(R_n(B)-R_n(A))`.
+
+**Verification.** The primary and non-importing independent lanes each pass
+1056/1056 assertions on the local V=2 cutoff-2 commutator fixture.  The
+integrated verifier passes 122/122 and Lean R377 compiles.  Primary and
+independent values agree exactly at stored precision: the largest identity
+residual is 6.11350532313155e-17, the largest accumulated budget ratio is
+0.9895313426497929, the smallest denominator eigenvalue is
+9.869604401089342, and the maximum recorded square-root debt is
+0.1239852906116096.
+
+**Boundary.** This is a finite, gap-free resolvent budget and an explicit
+square-root/eigenvector-rotation debt ledger.  It does not prove a general
+matrix/Schatten theorem, operator-norm or spatial locality, source/volume/
+cutoff uniformity, a common polynomial core or a common alpha.  No OS/KMS/GNS
+transfer, gap, continuum, C6, Sector-A or Pre-A closure follows.  No new
+negative result, tier change, or R-377 PDF is issued.
+
+**Proven in:** manifest, certificate, Lean entrypoint, primary script,
+independent script, integrated verifier, scope note, and saved run artefacts.
+
+<a id="r-375"></a>
 ### R-375 -- Summable odd-Matsubara Lipschitz budget for transition-energy perturbations
 
 **Result ID.** R-375 is a T0, claim-nonbearing finite
