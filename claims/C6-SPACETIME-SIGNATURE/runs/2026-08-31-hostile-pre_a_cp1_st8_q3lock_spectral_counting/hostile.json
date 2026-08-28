@@ -1,0 +1,118 @@
+{
+  "assertion_count": 6,
+  "boundary": "T0 claim-nonbearing finite spectral mode-counting and zeta-envelope checkpoint only. It proves no cutoff-, volume-, source-, phase- or exhaustion-uniform bound, common core, common alpha, OS/KMS/GNS reconstruction, mass gap, continuum, C6, Sector-A or Pre-A closure.",
+  "checks": [
+    {
+      "actual": [
+        0.7570174175402339,
+        1.6026715567191103,
+        1.6512169615087688
+      ],
+      "expected": "c2>0 and trace<=finite zeta bound",
+      "name": "baseline quadratic envelope",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.41415297890163655,
+        0.9459598191730915,
+        3.7619726848481725
+      ],
+      "expected": "c2>0 and trace<=finite zeta bound",
+      "name": "late quadratic envelope",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.3333333333333333,
+        0.1111111111111111
+      ],
+      "expected": "sorting changes the mode constant",
+      "name": "unsorted mode index rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        1.0,
+        -6.0,
+        1.8333333333333333,
+        1.8333333333333333
+      ],
+      "expected": "linear k constant cannot be inserted into a k^2 envelope",
+      "name": "linear envelope shortcut rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          1.320973569207015,
+          1.6026715567191103
+        ],
+        [
+          0.3431201141364895,
+          0.9459598191730915
+        ]
+      ],
+      "expected": "full inverse-spectrum trace",
+      "name": "Fiedler-only shortcut rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0,
+        0,
+        0.0
+      ],
+      "expected": "zero edges and positive eigenvalues",
+      "name": "q mutation deletes graph spectrum",
+      "status": "PASS"
+    }
+  ],
+  "derived": {
+    "mutation": "unsorted modes, linear or Fiedler shortcuts and a diagonal generator",
+    "q_mutation": {
+      "maximum_edge": 0.0,
+      "mutated_edge_count": 0,
+      "positive_eigenvalue_count": 0
+    },
+    "selected": [
+      {
+        "dimension": 3,
+        "identity_residual": 2.4424906541753444e-15,
+        "linear_constant": 0.7570174175402339,
+        "mode_constant": 0.7570174175402339,
+        "one_mode_inverse": 1.320973569207015,
+        "positive_normalized_eigenvalue_count": 2,
+        "resistance_average": 1.6026715567191128,
+        "trace_inverse": 1.6026715567191103,
+        "zeta_bound": 1.6512169615087688,
+        "zeta_infinite_bound": 2.1729144253947124
+      },
+      {
+        "dimension": 12,
+        "identity_residual": -8.486544800234697e-13,
+        "linear_constant": 2.0707648945081827,
+        "mode_constant": 0.41415297890163655,
+        "one_mode_inverse": 0.3431201141364895,
+        "positive_normalized_eigenvalue_count": 11,
+        "resistance_average": 0.9459598191722428,
+        "trace_inverse": 0.9459598191730915,
+        "zeta_bound": 3.7619726848481725,
+        "zeta_infinite_bound": 3.9718030550225905
+      }
+    ],
+    "toy_spectrum": {
+      "linear_bound": 1.8333333333333333,
+      "linear_constant": 1.0,
+      "quadratic_bound": 1.8333333333333333,
+      "sorted_c2": 0.3333333333333333,
+      "unsorted_c2": 0.1111111111111111,
+      "wrong_quadratic_residual": -6.0
+    }
+  },
+  "exploration_id": "EXP-001255",
+  "manifest": "strategy/pre-a-cp1-st8-q3lock-spectral-counting-manifest.json",
+  "result_id": "R-410",
+  "schema": "tect/pre-a-r410-hostile/1.0",
+  "verdict": "PASS"
+}

@@ -1,0 +1,107 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-SPECTRAL-MODE-COUNTING-v0",
+  "result_id": "R-410",
+  "title": "Quadratic eigenvalue-counting envelope for the normalized Green trace",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001255",
+  "claim_bearing": false,
+  "parent_explorations": ["EXP-001254", "EXP-001253", "EXP-001252"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY",
+    "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+  ],
+  "question": "Can the finite normalized Green trace be controlled by an ordered quadratic mode-counting envelope, making the remaining uniformity target a Weyl/Nash-type estimate rather than a single Fiedler bound?",
+  "new_perspective": {
+    "principle": "If the positive normalized eigenvalues are ordered as lambda_1 <= ... <= lambda_(d-1), define c2=min_k lambda_k/k^2. Then lambda_k >= c2*k^2 and tr(W^+)=sum_k 1/lambda_k <= H_(d-1)^(2)/c2 <= pi^2/(6*c2).",
+    "route": [
+      "For every connected intrinsic likelihood graph, form W=D_pi^(-1/2)L D_pi^(-1/2) and sort its d-1 positive eigenvalues.",
+      "Compute the finite mode constant c2=min_{1<=k<d} lambda_k/k^2 and verify each individual lambda_k >= c2*k^2, not only the first positive mode.",
+      "Compare the exact inverse-spectrum trace with the finite harmonic-square envelope H_(d-1)^(2)/c2 and the infinite zeta comparison pi^2/(6*c2).",
+      "Stress unsorted spectra, a linear k envelope, Fiedler-only truncation, omitted zero modes and disconnected diagonal-generator mutations in the hostile lane.",
+      "Use the resulting c2 lower envelope as the analytic target for a common-core heat-kernel or Nash estimate across cutoff, volume, phase and exhaustion limits."
+    ],
+    "qft_bridge": "A promoted route would require a cutoff- and volume-uniform c2 or an equivalent integrated heat-trace estimate on one Hamiltonian common core, followed by phase selection, R-399 shell transfer and the remaining reconstruction obligations. The mode envelope itself is finite and claim-nonbearing."
+  },
+  "finite_theorem": {
+    "ordered_spectrum": "0=lambda_0(W)<lambda_1(W)<=...<=lambda_(d-1)(W)",
+    "mode_constant": "c2=min_{1<=k<=d-1} lambda_k(W)/k^2",
+    "finite_envelope": "lambda_k(W)>=c2*k^2 and tr(W^+)=sum_{k=1}^{d-1}1/lambda_k(W)<=H_(d-1)^(2)/c2",
+    "zeta_comparison": "H_(d-1)^(2)=sum_{k=1}^{d-1}k^(-2)<=pi^2/6, hence tr(W^+)<=pi^2/(6*c2)",
+    "scope": "The implication is finite-dimensional; a uniform proof must bound c2 away from zero independently of cutoff, volume, phase and exhaustion."
+  },
+  "finite_fixture": {
+    "admissible_pairs": [
+      {"volume": 2, "cutoff_dimensions": [3, 4, 5, 6, 8, 10, 12]}
+    ],
+    "beta_values": ["1/2", "1", "2"],
+    "source_support_values": [[0]],
+    "source_amplitude": "1/3",
+    "hbar": "1",
+    "time_step": "1/18",
+    "source_sign_values": [-1, 1],
+    "history_sign_values": [-1, 1],
+    "history_adjoint_values": [0, 1],
+    "orientations": ["right", "left"],
+    "chi": "1",
+    "r": "-1",
+    "g": "3/5",
+    "c": "3/5",
+    "lambda": "1/10",
+    "probability_floor": 1e-30,
+    "resistance_eigen_floor": 1e-14,
+    "numerical_tolerance": 1e-8,
+    "variance_floor": 1e-20,
+    "hostile_zero_threshold": 1e-12,
+    "crosscheck_tolerance": 5e-6
+  },
+  "scope": {
+    "finite_mode_ordering_closed": true,
+    "finite_quadratic_mode_envelope_closed": true,
+    "finite_zeta_trace_upper_bound_closed": true,
+    "finite_likelihood_row_coverage_closed": true,
+    "cutoff_independent_mode_constant_closed": false,
+    "volume_independent_mode_constant_closed": false,
+    "phase_uniform_mode_constant_closed": false,
+    "exhaustion_uniform_mode_constant_closed": false,
+    "common_core_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R410.lean",
+    "theorem_markers": ["mode_envelope_nonnegative", "zeta_bound_nonnegative", "finite_scope"],
+    "command": "lake env lean Tect/R410.lean",
+    "boundary": "Lean checks only scalar positivity and a finite numerical instance; ordered matrix spectra, Gibbs rows, pseudoinverse identities and all uniform or physical limits remain in the executable/open boundary."
+  },
+  "artifacts": {
+    "primary_script": "codes/foundations/pre_a_cp1_st8_q3lock_spectral_counting.py",
+    "independent_script": "codes/foundations/pre_a_cp1_st8_q3lock_spectral_counting_independent.py",
+    "hostile_script": "codes/foundations/pre_a_cp1_st8_q3lock_spectral_counting_hostile.py",
+    "integrated_verifier": "codes/foundations/pre_a_cp1_st8_q3lock_spectral_counting_verify.py",
+    "lean": "verification/lean/Tect/R410.lean"
+  },
+  "promotion_criteria": [
+    "Prove a cutoff- and volume-independent positive lower bound for c2 or an equivalent integrated heat-trace bound on one Hamiltonian common core.",
+    "Control phase, source, orientation and exhaustion dependence while preserving the single connected zero-mode hypothesis.",
+    "Transfer the trace envelope to the R-399 conditional shell and combine it with the R-406 Schur decomposition before any common-alpha or GNS promotion."
+  ],
+  "stop_conditions": [
+    "If c2 tends to zero under a validated cutoff or volume stress, retain the finite envelope as diagnostic and register the obstruction instead of claiming a uniform trace bound.",
+    "If eigenvalue ordering, the zero mode, the k^2 scaling or the finite harmonic-square factor is mishandled, stop and record the exact failed inequality.",
+    "Finite c2 positivity and the zeta comparison are not a uniform, phase-selection, common-core, GNS, physical-gap or QFT theorem."
+  ],
+  "boundary": "T0 claim-nonbearing finite spectral mode-counting and zeta-envelope checkpoint only. It proves no cutoff-, volume-, source-, phase- or exhaustion-uniform bound, common core, common alpha, OS/KMS/GNS reconstruction, mass gap, continuum, C6, Sector-A or Pre-A closure.",
+  "no_overclaim": "The quadratic envelope reframes the open problem as a mode-counting or Nash/Weyl estimate for the full low spectrum; it does not establish that c2 survives regulator or thermodynamic limits.",
+  "recorded_by": "Codex"
+}

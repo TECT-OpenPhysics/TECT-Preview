@@ -1,0 +1,104 @@
+{
+  "adversarial_review": [
+    {
+      "axis": "eigenvalue ordering",
+      "check": "A reversed toy spectrum changes c2 from 1/3 to 1/9; mode indices are assigned only after ascending spectral sort.",
+      "disposition": "DISMISSED-FINITE"
+    },
+    {
+      "axis": "quadratic scaling",
+      "check": "A linear k constant inserted into a k^2 envelope has toy residual -6 and is rejected.",
+      "disposition": "DISMISSED-FINITE"
+    },
+    {
+      "axis": "Fiedler-only shortcut",
+      "check": "The first positive inverse eigenvalue is strictly below the full inverse-spectrum trace on both selected rows.",
+      "disposition": "DISMISSED-FINITE"
+    },
+    {
+      "axis": "zero mode and connectivity",
+      "check": "Exactly d-1 modes above the declared numerical floor are required; a diagonal generator produces no graph edges or positive modes.",
+      "disposition": "DISMISSED-FINITE"
+    },
+    {
+      "axis": "finite versus infinite zeta factor",
+      "check": "The finite harmonic-square sum is checked before the looser pi^2/6 comparison, so the infinite series is not treated as a finite equality.",
+      "disposition": "DISMISSED-FINITE"
+    },
+    {
+      "axis": "independent reconstruction",
+      "check": "A non-importing lane rebuilds the oscillator, Gibbs states, histories, conditional graph and spectral data and agrees within 5e-6.",
+      "disposition": "DISMISSED-FINITE"
+    },
+    {
+      "axis": "uniform and physical promotion",
+      "check": "Finite c2 positivity does not imply cutoff/volume/phase/exhaustion uniformity, a common core, GNS coercivity, a physical gap, continuum, C6, Sector-A or Pre-A closure.",
+      "disposition": "UPHELD-OPEN"
+    }
+  ],
+  "boundary": "T0 claim-nonbearing finite spectral mode-counting and zeta-envelope checkpoint only. It proves no cutoff-, volume-, source-, phase- or exhaustion-uniform bound, common core, common alpha, OS/KMS/GNS reconstruction, mass gap, continuum, C6, Sector-A or Pre-A closure.",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "decision_reason": "The ordered quadratic envelope converts the finite Green-trace target into an explicit low-mode counting condition. Primary, independent, hostile, integrated and Lean checks validate the finite implication, while no data establish that c2 stays positive under a regulator or thermodynamic limit.",
+  "evidence_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-spectral-counting-manifest.json#new_perspective",
+    "strategy/pre-a-cp1-st8-q3lock-spectral-counting-certificate-260831.md#Verification",
+    "codes/foundations/pre_a_cp1_st8_q3lock_spectral_counting.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_spectral_counting_independent.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_spectral_counting_hostile.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_spectral_counting_verify.py#main",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-primary-pre_a_cp1_st8_q3lock_spectral_counting/primary.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-independent-pre_a_cp1_st8_q3lock_spectral_counting/independent.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-hostile-pre_a_cp1_st8_q3lock_spectral_counting/hostile.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-integrated-pre_a_cp1_st8_q3lock_spectral_counting/integrated.json#derived",
+    "verification/lean/Tect/R410.lean#mode_envelope_nonnegative",
+    "claims/C6-SPACETIME-SIGNATURE/notes/spectral-counting-260831.md#R-410"
+  ],
+  "finding": "The primary lane passes 191473/191473 assertions over 7 systems, 2688 contexts and 21120 conditional rows; the independent lane passes 191473/191473; the hostile lane passes 6/6; the integrated verifier passes 46/46; and Lean R410 compiles. The mode constant ranges over [0.19600096779786974,1.2046269661757882], the inverse-spectrum trace over [0.44413751605172147,2.0052069566897663], and the finite harmonic-square envelope over [1.2140470537996502,7.467366756170776]. The maximum mode-envelope residual is 3.552713678800501e-15.",
+  "formal_integration": {
+    "events": ["20260831-spectral-mode-counting-zeta-envelope-2026-08-31"],
+    "lean": "R410 PASS",
+    "negatives": [],
+    "no_new_negative": true,
+    "no_pdf": true,
+    "no_tier_change": true,
+    "results": ["R-410"]
+  },
+  "formal_refs": {
+    "events": ["20260831-spectral-mode-counting-zeta-envelope-2026-08-31"],
+    "negatives": [],
+    "results": ["R-410"]
+  },
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY",
+    "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+  ],
+  "method": [
+    "For every actual conditional likelihood row, form W=D_pi^(-1/2)L D_pi^(-1/2) and sort its d-1 positive eigenvalues.",
+    "Compute c2=min_k lambda_k/k^2 and assert each ordered eigenvalue lies above c2*k^2.",
+    "Compare tr(W^+) with the finite harmonic-square envelope and the infinite pi^2/6 comparison.",
+    "Repeat the full volume-two cutoff, beta, source, history, order, prefix, adjoint and collar-orientation grid in independent code.",
+    "Use unsorted, linear-scaling, Fiedler-only and diagonal-generator mutations as hostile controls, then run the Lean scalar cross-check."
+  ],
+  "next_action": "Prove a positive c2 lower bound or an equivalent integrated heat-trace estimate uniform in cutoff, volume, phase and exhaustion on one Hamiltonian common core; transfer it to the R-399 shell and combine it with the R-406 Schur residual split.",
+  "no_overclaim": "The quadratic mode envelope is a finite spectral inequality and a concrete uniformity target; it is not an analytic regulator estimate, thermodynamic theorem, physical-sector result or QFT mass-gap proof.",
+  "provenance": "contemporaneous",
+  "qft_interface": {
+    "closed": "Finite spectral ordering, the c2 envelope, finite zeta trace upper bound, full likelihood-row coverage, hostile shortcut rejection and Lean scalar bookkeeping.",
+    "open": "Uniform c2 or heat-trace control on a Hamiltonian common core, phase selection, shell transfer, common alpha, broken-sector GNS coercivity, continuum and physical-gap obligations."
+  },
+  "question": "Can the normalized Green trace be controlled by an ordered quadratic mode-counting envelope, making the remaining uniformity target a Weyl/Nash-type estimate rather than a single Fiedler bound?",
+  "recorded_at": "2026-08-31T00:00:00Z",
+  "recorded_by": "Codex",
+  "related": [
+    {"id": "EXP-001254", "relation": "continues"},
+    {"id": "EXP-001253", "relation": "continues"},
+    {"id": "EXP-001252", "relation": "continues"}
+  ],
+  "reviewed_on": "2026-08-29",
+  "schema": "tect/proof-exploration/1.0",
+  "schema_version": "1.0",
+  "task_id": "T-054",
+  "title": "Quadratic eigenvalue-counting envelope for the normalized Green trace",
+  "verdict": "advanced"
+}
