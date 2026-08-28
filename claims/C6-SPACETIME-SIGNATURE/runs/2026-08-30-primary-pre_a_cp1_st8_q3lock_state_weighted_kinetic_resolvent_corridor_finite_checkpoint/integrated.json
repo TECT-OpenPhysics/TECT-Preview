@@ -1,0 +1,711 @@
+{
+  "assertion_count": 44,
+  "assertions": [
+    {
+      "actual": "['EXP-001231', 'R-388', False]",
+      "expected": "EXP-001231/R-388/false",
+      "name": "identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "all present",
+      "expected": "all present",
+      "name": "sources",
+      "status": "PASS"
+    },
+    {
+      "actual": "['1792e0c8ea78d7ecbd7dfd5e118808ff3e1f0582108cfcf6f84912079ba56a54', '26b08da08718cc315676dc2510248d52b964da911fc331c51fb5f5d4facbf361']",
+      "expected": "distinct",
+      "name": "independent source",
+      "status": "PASS"
+    },
+    {
+      "actual": "['jacobi_reduction', 'kinetic_coordinate_isolation', 'scope_fixture']",
+      "expected": "present",
+      "name": "Lean markers",
+      "status": "PASS"
+    },
+    {
+      "actual": "none",
+      "expected": "none",
+      "name": "Lean forbidden",
+      "status": "PASS"
+    },
+    {
+      "actual": "1",
+      "expected": "1",
+      "name": "Lean registry unique",
+      "status": "PASS"
+    },
+    {
+      "actual": "5e674c43aebbbc84ebd2de028b5c974d739c121b8749e8fc49c27f5775bdbc54",
+      "expected": "5e674c43aebbbc84ebd2de028b5c974d739c121b8749e8fc49c27f5775bdbc54",
+      "name": "Lean registry hash",
+      "status": "PASS"
+    },
+    {
+      "actual": "['jacobi_reduction', 'kinetic_coordinate_isolation', 'scope_fixture']",
+      "expected": "['jacobi_reduction', 'kinetic_coordinate_isolation', 'scope_fixture']",
+      "name": "Lean declarations",
+      "status": "PASS"
+    },
+    {
+      "actual": "PRIMARY STATE-WEIGHTED KINETIC-RESOLVENT CORRIDOR PASS 409/409 seeds=80\n",
+      "expected": "PASS",
+      "name": "primary child",
+      "status": "PASS"
+    },
+    {
+      "actual": "INDEPENDENT STATE-WEIGHTED KINETIC-RESOLVENT CORRIDOR PASS 404/404 seeds=80\n",
+      "expected": "PASS",
+      "name": "independent child",
+      "status": "PASS"
+    },
+    {
+      "actual": "HOSTILE STATE-WEIGHTED KINETIC-RESOLVENT CORRIDOR CAUGHT wrong=1.036e+00\n",
+      "expected": "CAUGHT",
+      "name": "hostile child",
+      "status": "PASS"
+    },
+    {
+      "actual": "[769.7929363619684, 769.7929363619676]",
+      "expected": "within 1e-09",
+      "name": "agreement maximum operator_norm",
+      "status": "PASS"
+    },
+    {
+      "actual": "[24.60012282810548, 24.600122828105473]",
+      "expected": "within 1e-09",
+      "name": "agreement maximum weighted_norm",
+      "status": "PASS"
+    },
+    {
+      "actual": "[616.8263791895753, 616.8263791895746]",
+      "expected": "within 1e-09",
+      "name": "agreement growth",
+      "status": "PASS"
+    },
+    {
+      "actual": "[{'beta=0.25;eta=0.5': 2.015532296066202, 'beta=0.25;eta=1.0': 1.50229981401046, 'beta=0.5;eta=0.5': 1.7712618824793418, 'beta=0.5;eta=1.0': 0.6231820763515571, 'beta=1.0;eta=0.5': 1.9987756357650635, 'beta=1.0;eta=1.0': 0.6728818039994496, 'beta=2.0;eta=0.5': 2.032651524228514, 'beta=2.0;eta=1.0': 0.8705457144035674}, {'beta=0.25;eta=0.5': 2.0155322960662017, 'beta=0.25;eta=1.0': 1.5022998140104602, 'beta=0.5;eta=0.5': 1.7712618824793396, 'beta=0.5;eta=1.0': 0.6231820763515564, 'beta=1.0;eta=0.5': 1.9987756357650523, 'beta=1.0;eta=1.0': 0.6728818039994425, 'beta=2.0;eta=0.5': 2.032651524228507, 'beta=2.0;eta=1.0': 0.8705457144035572}]",
+      "expected": "within 1e-09",
+      "name": "agreement late ratios",
+      "status": "PASS"
+    },
+    {
+      "actual": "[80, 80]",
+      "expected": "equal",
+      "name": "agreement seed_rows",
+      "status": "PASS"
+    },
+    {
+      "actual": "[320, 320]",
+      "expected": "equal",
+      "name": "agreement weighted_rows",
+      "status": "PASS"
+    },
+    {
+      "actual": "[[3, 4, 5, 6, 8, 10, 12, 16, 20, 24], [3, 4, 5, 6, 8, 10, 12, 16, 20, 24]]",
+      "expected": "equal",
+      "name": "agreement cutoff_dimensions",
+      "status": "PASS"
+    },
+    {
+      "actual": "[True, True]",
+      "expected": "true",
+      "name": "scope finite_operator_growth_stress_closed",
+      "status": "PASS"
+    },
+    {
+      "actual": "[True, True]",
+      "expected": "true",
+      "name": "scope finite_gibbs_weighted_corridor_closed",
+      "status": "PASS"
+    },
+    {
+      "actual": "[True, True]",
+      "expected": "true",
+      "name": "scope finite_beta_eta_corridor_split_closed",
+      "status": "PASS"
+    },
+    {
+      "actual": "[False, False]",
+      "expected": "false",
+      "name": "scope operator_norm_uniformity_closed",
+      "status": "PASS"
+    },
+    {
+      "actual": "[False, False]",
+      "expected": "false",
+      "name": "scope beta_uniformity_closed",
+      "status": "PASS"
+    },
+    {
+      "actual": "[False, False]",
+      "expected": "false",
+      "name": "scope eta_uniformity_closed",
+      "status": "PASS"
+    },
+    {
+      "actual": "[False, False]",
+      "expected": "false",
+      "name": "scope phase_local_bkm_estimate_closed",
+      "status": "PASS"
+    },
+    {
+      "actual": "[False, False]",
+      "expected": "false",
+      "name": "scope boundary_shell_l1_closed",
+      "status": "PASS"
+    },
+    {
+      "actual": "[False, False]",
+      "expected": "false",
+      "name": "scope cutoff_uniformity_closed",
+      "status": "PASS"
+    },
+    {
+      "actual": "[False, False]",
+      "expected": "false",
+      "name": "scope source_uniformity_closed",
+      "status": "PASS"
+    },
+    {
+      "actual": "[False, False]",
+      "expected": "false",
+      "name": "scope volume_uniformity_closed",
+      "status": "PASS"
+    },
+    {
+      "actual": "[False, False]",
+      "expected": "false",
+      "name": "scope shape_uniformity_closed",
+      "status": "PASS"
+    },
+    {
+      "actual": "[False, False]",
+      "expected": "false",
+      "name": "scope operator_domain_embedding_closed",
+      "status": "PASS"
+    },
+    {
+      "actual": "[False, False]",
+      "expected": "false",
+      "name": "scope direct_D_cauchy_closed",
+      "status": "PASS"
+    },
+    {
+      "actual": "[False, False]",
+      "expected": "false",
+      "name": "scope delta_D_cauchy_closed",
+      "status": "PASS"
+    },
+    {
+      "actual": "[False, False]",
+      "expected": "false",
+      "name": "scope common_alpha_closed",
+      "status": "PASS"
+    },
+    {
+      "actual": "[False, False]",
+      "expected": "false",
+      "name": "scope hamiltonian_os_identification_closed",
+      "status": "PASS"
+    },
+    {
+      "actual": "[False, False]",
+      "expected": "false",
+      "name": "scope kms_gns_gap_closed",
+      "status": "PASS"
+    },
+    {
+      "actual": "[False, False]",
+      "expected": "false",
+      "name": "scope continuum_closed",
+      "status": "PASS"
+    },
+    {
+      "actual": "[False, False]",
+      "expected": "false",
+      "name": "scope c6_closed",
+      "status": "PASS"
+    },
+    {
+      "actual": "[False, False]",
+      "expected": "false",
+      "name": "scope sector_a_closed",
+      "status": "PASS"
+    },
+    {
+      "actual": "[False, False]",
+      "expected": "false",
+      "name": "scope pre_a_closed",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'correct_coordinate_commutator_max': 3.785481597218718e-14, 'hostile_threshold': 1e-07, 'mutation': 'coordinate resolvent -> momentum resolvent', 'samples': 80, 'wrong_momentum_commutator_max': 278.369943941777, 'wrong_momentum_commutator_min': 1.0355377554099876, 'wrong_orientation_rejected': True}",
+      "expected": "momentum resolvent rejected",
+      "name": "hostile rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.0355377554099876",
+      "expected": ">1e-07",
+      "name": "hostile separation",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'status': 'PASS', 'command': 'lake env lean Tect/R388.lean', 'returncode': 0, 'output': ''}",
+      "expected": "PASS",
+      "name": "Lean compile",
+      "status": "PASS"
+    },
+    {
+      "actual": "[]",
+      "expected": "all open",
+      "name": "scope firewall",
+      "status": "PASS"
+    }
+  ],
+  "audit_id": "PA-CP1-ST8-Q3LOCK-STATE-WEIGHTED-KINETIC-RESOLVENT-CORRIDOR-FINITE-CHECKPOINT",
+  "boundary": "Claim-nonbearing finite cutoff stress only. It proves no cutoff-uniform operator or Gibbs estimate, no beta/eta-independent topology, no shell summability, no domain or Cook/common-alpha convergence, no OS/KMS/GNS reconstruction, no gap, continuum, C6, Sector-A or Pre-A result.",
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "derived": {
+    "hostile": {
+      "correct_coordinate_commutator_max": 3.785481597218718e-14,
+      "hostile_threshold": 1e-07,
+      "mutation": "coordinate resolvent -> momentum resolvent",
+      "samples": 80,
+      "wrong_momentum_commutator_max": 278.369943941777,
+      "wrong_momentum_commutator_min": 1.0355377554099876,
+      "wrong_orientation_rejected": true
+    },
+    "independent": {
+      "beta_uniformity_closed": false,
+      "boundary_shell_l1_closed": false,
+      "c6_closed": false,
+      "common_alpha_closed": false,
+      "continuum_closed": false,
+      "corridor_keys": [
+        "beta=0.5;eta=1.0",
+        "beta=1.0;eta=1.0",
+        "beta=2.0;eta=1.0"
+      ],
+      "cutoff_dimensions": [
+        3,
+        4,
+        5,
+        6,
+        8,
+        10,
+        12,
+        16,
+        20,
+        24
+      ],
+      "cutoff_uniformity_closed": false,
+      "delta_D_cauchy_closed": false,
+      "dimension_rows": [
+        {
+          "dimension": 3,
+          "operator_max": 1.2479896488431155,
+          "weighted_max_by_beta_eta": {
+            "beta=0.25;eta=0.5": 1.1353227818427623,
+            "beta=0.25;eta=1.0": 0.7406949878450187,
+            "beta=0.5;eta=0.5": 1.158626742209183,
+            "beta=0.5;eta=1.0": 0.7656529886463689,
+            "beta=1.0;eta=0.5": 1.2401417493162108,
+            "beta=1.0;eta=1.0": 0.8378205644545119,
+            "beta=2.0;eta=0.5": 1.392582487645714,
+            "beta=2.0;eta=1.0": 0.9607630389423795
+          }
+        },
+        {
+          "dimension": 4,
+          "operator_max": 3.1882168475532016,
+          "weighted_max_by_beta_eta": {
+            "beta=0.25;eta=0.5": 2.4139212178282037,
+            "beta=0.25;eta=1.0": 1.5909660871182312,
+            "beta=0.5;eta=0.5": 2.370429379713481,
+            "beta=0.5;eta=1.0": 1.5856955694434942,
+            "beta=1.0;eta=0.5": 2.397765781622927,
+            "beta=1.0;eta=1.0": 1.6580673406560653,
+            "beta=2.0;eta=0.5": 2.4534364410443925,
+            "beta=2.0;eta=1.0": 1.7627595567943404
+          }
+        },
+        {
+          "dimension": 5,
+          "operator_max": 6.571396950451317,
+          "weighted_max_by_beta_eta": {
+            "beta=0.25;eta=0.5": 3.7979995901076253,
+            "beta=0.25;eta=1.0": 2.4998212805719375,
+            "beta=0.5;eta=0.5": 3.493617601786174,
+            "beta=0.5;eta=1.0": 2.3142871196963473,
+            "beta=1.0;eta=0.5": 3.032525618970374,
+            "beta=1.0;eta=1.0": 1.9950847314699585,
+            "beta=2.0;eta=0.5": 2.3522205466071915,
+            "beta=2.0;eta=1.0": 1.4051767132007131
+          }
+        },
+        {
+          "dimension": 6,
+          "operator_max": 11.743254324909595,
+          "weighted_max_by_beta_eta": {
+            "beta=0.25;eta=0.5": 4.985854890522246,
+            "beta=0.25;eta=1.0": 3.363832019729084,
+            "beta=0.5;eta=0.5": 4.158385957778495,
+            "beta=0.5;eta=1.0": 2.771692484249135,
+            "beta=1.0;eta=0.5": 3.101573702168764,
+            "beta=1.0;eta=1.0": 1.9642950944517437,
+            "beta=2.0;eta=0.5": 2.2546037479031975,
+            "beta=2.0;eta=1.0": 1.3053226777653113
+          }
+        },
+        {
+          "dimension": 8,
+          "operator_max": 28.28597260313182,
+          "weighted_max_by_beta_eta": {
+            "beta=0.25;eta=0.5": 7.257003274329021,
+            "beta=0.25;eta=1.0": 4.820323922161165,
+            "beta=0.5;eta=0.5": 5.554876678556666,
+            "beta=0.5;eta=1.0": 3.478569976281772,
+            "beta=1.0;eta=0.5": 3.8341972476072055,
+            "beta=1.0;eta=1.0": 1.9912296553701923,
+            "beta=2.0;eta=0.5": 2.8998985298503395,
+            "beta=2.0;eta=1.0": 0.916978804729449
+          }
+        },
+        {
+          "dimension": 10,
+          "operator_max": 55.05700762627828,
+          "weighted_max_by_beta_eta": {
+            "beta=0.25;eta=0.5": 9.694748362967623,
+            "beta=0.25;eta=1.0": 6.2515869729110465,
+            "beta=0.5;eta=0.5": 6.893935305050401,
+            "beta=0.5;eta=1.0": 3.928241246844776,
+            "beta=1.0;eta=0.5": 4.618413424379006,
+            "beta=1.0;eta=1.0": 1.7091667140906173,
+            "beta=2.0;eta=0.5": 3.9240876881589224,
+            "beta=2.0;eta=1.0": 0.8493839688473038
+          }
+        },
+        {
+          "dimension": 12,
+          "operator_max": 96.27380870761839,
+          "weighted_max_by_beta_eta": {
+            "beta=0.25;eta=0.5": 12.20527345362739,
+            "beta=0.25;eta=1.0": 7.596588893690386,
+            "beta=0.5;eta=0.5": 8.122616024675287,
+            "beta=0.5;eta=1.0": 4.08548185858698,
+            "beta=1.0;eta=0.5": 5.580872115815696,
+            "beta=1.0;eta=1.0": 1.4380915293543477,
+            "beta=2.0;eta=0.5": 4.928940408863559,
+            "beta=2.0;eta=1.0": 0.8364079819503337
+          }
+        },
+        {
+          "dimension": 16,
+          "operator_max": 230.66974217807362,
+          "weighted_max_by_beta_eta": {
+            "beta=0.25;eta=0.5": 17.02490988624532,
+            "beta=0.25;eta=1.0": 9.747469477778035,
+            "beta=0.5;eta=0.5": 10.384956853886742,
+            "beta=0.5;eta=1.0": 3.8048792217288674,
+            "beta=1.0;eta=0.5": 7.627370914365625,
+            "beta=1.0;eta=1.0": 1.1688306849099754,
+            "beta=2.0;eta=0.5": 6.789859146291198,
+            "beta=2.0;eta=1.0": 0.8094636996836824
+          }
+        },
+        {
+          "dimension": 20,
+          "operator_max": 449.22342643508523,
+          "weighted_max_by_beta_eta": {
+            "beta=0.25;eta=0.5": 21.210798503875854,
+            "beta=0.25;eta=1.0": 11.013519100579176,
+            "beta=0.5;eta=0.5": 12.484144676635548,
+            "beta=0.5;eta=1.0": 3.1785113957275093,
+            "beta=1.0;eta=0.5": 9.514025636839962,
+            "beta=1.0;eta=1.0": 1.052651407401098,
+            "beta=2.0;eta=0.5": 8.507964182276037,
+            "beta=2.0;eta=1.0": 0.7663687978720497
+          }
+        },
+        {
+          "dimension": 24,
+          "operator_max": 769.7929363619676,
+          "weighted_max_by_beta_eta": {
+            "beta=0.25;eta=0.5": 24.600122828105473,
+            "beta=0.25;eta=1.0": 11.412354082104995,
+            "beta=0.5;eta=0.5": 14.387280150523198,
+            "beta=0.5;eta=1.0": 2.54599906753085,
+            "beta=1.0;eta=0.5": 11.154911211412971,
+            "beta=1.0;eta=1.0": 0.9676656225882707,
+            "beta=2.0;eta=0.5": 10.018818234907993,
+            "beta=2.0;eta=1.0": 0.7281313841797908
+          }
+        }
+      ],
+      "direct_D_cauchy_closed": false,
+      "eta_uniformity_closed": false,
+      "finite_beta_eta_corridor_split_closed": true,
+      "finite_gibbs_weighted_corridor_closed": true,
+      "finite_operator_growth_stress_closed": true,
+      "hamiltonian_os_identification_closed": false,
+      "kms_gns_gap_closed": false,
+      "late_ratios": {
+        "beta=0.25;eta=0.5": 2.0155322960662017,
+        "beta=0.25;eta=1.0": 1.5022998140104602,
+        "beta=0.5;eta=0.5": 1.7712618824793396,
+        "beta=0.5;eta=1.0": 0.6231820763515564,
+        "beta=1.0;eta=0.5": 1.9987756357650523,
+        "beta=1.0;eta=1.0": 0.6728818039994425,
+        "beta=2.0;eta=0.5": 2.032651524228507,
+        "beta=2.0;eta=1.0": 0.8705457144035572
+      },
+      "maximums": {
+        "operator_norm": 769.7929363619676,
+        "weighted_norm": 24.600122828105473
+      },
+      "operator_domain_embedding_closed": false,
+      "operator_growth_ratio": 616.8263791895746,
+      "operator_norm_uniformity_closed": false,
+      "outside_keys": [
+        "beta=0.25;eta=0.5",
+        "beta=0.25;eta=1.0",
+        "beta=0.5;eta=0.5",
+        "beta=1.0;eta=0.5",
+        "beta=2.0;eta=0.5"
+      ],
+      "phase_local_bkm_estimate_closed": false,
+      "pre_a_closed": false,
+      "sector_a_closed": false,
+      "seed_rows": 80,
+      "shape_uniformity_closed": false,
+      "source_uniformity_closed": false,
+      "volume_uniformity_closed": false,
+      "weighted_rows": 320
+    },
+    "max_primary_independent_numeric_difference": 7.958078640513122e-13,
+    "primary": {
+      "beta_uniformity_closed": false,
+      "boundary_shell_l1_closed": false,
+      "c6_closed": false,
+      "common_alpha_closed": false,
+      "continuum_closed": false,
+      "corridor_keys": [
+        "beta=0.5;eta=1.0",
+        "beta=1.0;eta=1.0",
+        "beta=2.0;eta=1.0"
+      ],
+      "cutoff_dimensions": [
+        3,
+        4,
+        5,
+        6,
+        8,
+        10,
+        12,
+        16,
+        20,
+        24
+      ],
+      "cutoff_uniformity_closed": false,
+      "delta_D_cauchy_closed": false,
+      "dimension_rows": [
+        {
+          "dimension": 3,
+          "operator_max": 1.2479896488431155,
+          "weighted_max_by_beta_eta": {
+            "beta=0.25;eta=0.5": 1.1353227818427618,
+            "beta=0.25;eta=1.0": 0.7406949878450185,
+            "beta=0.5;eta=0.5": 1.1586267422091827,
+            "beta=0.5;eta=1.0": 0.7656529886463685,
+            "beta=1.0;eta=0.5": 1.2401417493162101,
+            "beta=1.0;eta=1.0": 0.8378205644545116,
+            "beta=2.0;eta=0.5": 1.3925824876457131,
+            "beta=2.0;eta=1.0": 0.960763038942379
+          }
+        },
+        {
+          "dimension": 4,
+          "operator_max": 3.1882168475532016,
+          "weighted_max_by_beta_eta": {
+            "beta=0.25;eta=0.5": 2.4139212178282037,
+            "beta=0.25;eta=1.0": 1.5909660871182312,
+            "beta=0.5;eta=0.5": 2.370429379713481,
+            "beta=0.5;eta=1.0": 1.5856955694434944,
+            "beta=1.0;eta=0.5": 2.397765781622927,
+            "beta=1.0;eta=1.0": 1.6580673406560653,
+            "beta=2.0;eta=0.5": 2.4534364410443925,
+            "beta=2.0;eta=1.0": 1.7627595567943404
+          }
+        },
+        {
+          "dimension": 5,
+          "operator_max": 6.5713969504513186,
+          "weighted_max_by_beta_eta": {
+            "beta=0.25;eta=0.5": 3.7979995901076253,
+            "beta=0.25;eta=1.0": 2.499821280571937,
+            "beta=0.5;eta=0.5": 3.4936176017861738,
+            "beta=0.5;eta=1.0": 2.314287119696347,
+            "beta=1.0;eta=0.5": 3.0325256189703733,
+            "beta=1.0;eta=1.0": 1.9950847314699571,
+            "beta=2.0;eta=0.5": 2.35222054660719,
+            "beta=2.0;eta=1.0": 1.4051767132007116
+          }
+        },
+        {
+          "dimension": 6,
+          "operator_max": 11.743254324909584,
+          "weighted_max_by_beta_eta": {
+            "beta=0.25;eta=0.5": 4.985854890522246,
+            "beta=0.25;eta=1.0": 3.3638320197290836,
+            "beta=0.5;eta=0.5": 4.158385957778496,
+            "beta=0.5;eta=1.0": 2.771692484249135,
+            "beta=1.0;eta=0.5": 3.101573702168766,
+            "beta=1.0;eta=1.0": 1.9642950944517439,
+            "beta=2.0;eta=0.5": 2.2546037479031993,
+            "beta=2.0;eta=1.0": 1.305322677765312
+          }
+        },
+        {
+          "dimension": 8,
+          "operator_max": 28.285972603131817,
+          "weighted_max_by_beta_eta": {
+            "beta=0.25;eta=0.5": 7.257003274329023,
+            "beta=0.25;eta=1.0": 4.820323922161167,
+            "beta=0.5;eta=0.5": 5.554876678556668,
+            "beta=0.5;eta=1.0": 3.4785699762817734,
+            "beta=1.0;eta=0.5": 3.834197247607206,
+            "beta=1.0;eta=1.0": 1.9912296553701934,
+            "beta=2.0;eta=0.5": 2.89989852985034,
+            "beta=2.0;eta=1.0": 0.916978804729449
+          }
+        },
+        {
+          "dimension": 10,
+          "operator_max": 55.05700762627827,
+          "weighted_max_by_beta_eta": {
+            "beta=0.25;eta=0.5": 9.694748362967623,
+            "beta=0.25;eta=1.0": 6.251586972911045,
+            "beta=0.5;eta=0.5": 6.8939353050504,
+            "beta=0.5;eta=1.0": 3.9282412468447756,
+            "beta=1.0;eta=0.5": 4.618413424379007,
+            "beta=1.0;eta=1.0": 1.7091667140906188,
+            "beta=2.0;eta=0.5": 3.9240876881589215,
+            "beta=2.0;eta=1.0": 0.8493839688473049
+          }
+        },
+        {
+          "dimension": 12,
+          "operator_max": 96.27380870761839,
+          "weighted_max_by_beta_eta": {
+            "beta=0.25;eta=0.5": 12.20527345362739,
+            "beta=0.25;eta=1.0": 7.596588893690386,
+            "beta=0.5;eta=0.5": 8.122616024675288,
+            "beta=0.5;eta=1.0": 4.0854818585869825,
+            "beta=1.0;eta=0.5": 5.580872115815696,
+            "beta=1.0;eta=1.0": 1.4380915293543493,
+            "beta=2.0;eta=0.5": 4.928940408863562,
+            "beta=2.0;eta=1.0": 0.8364079819503321
+          }
+        },
+        {
+          "dimension": 16,
+          "operator_max": 230.66974217807368,
+          "weighted_max_by_beta_eta": {
+            "beta=0.25;eta=0.5": 17.024909886245325,
+            "beta=0.25;eta=1.0": 9.747469477778035,
+            "beta=0.5;eta=0.5": 10.384956853886736,
+            "beta=0.5;eta=1.0": 3.8048792217288616,
+            "beta=1.0;eta=0.5": 7.6273709143656045,
+            "beta=1.0;eta=1.0": 1.1688306849099739,
+            "beta=2.0;eta=0.5": 6.789859146291163,
+            "beta=2.0;eta=1.0": 0.8094636996836787
+          }
+        },
+        {
+          "dimension": 20,
+          "operator_max": 449.2234264350856,
+          "weighted_max_by_beta_eta": {
+            "beta=0.25;eta=0.5": 21.210798503875836,
+            "beta=0.25;eta=1.0": 11.013519100579172,
+            "beta=0.5;eta=0.5": 12.484144676635514,
+            "beta=0.5;eta=1.0": 3.178511395727507,
+            "beta=1.0;eta=0.5": 9.514025636839877,
+            "beta=1.0;eta=1.0": 1.0526514074010898,
+            "beta=2.0;eta=0.5": 8.507964182275895,
+            "beta=2.0;eta=1.0": 0.7663687978720392
+          }
+        },
+        {
+          "dimension": 24,
+          "operator_max": 769.7929363619684,
+          "weighted_max_by_beta_eta": {
+            "beta=0.25;eta=0.5": 24.60012282810548,
+            "beta=0.25;eta=1.0": 11.412354082104994,
+            "beta=0.5;eta=0.5": 14.38728015052322,
+            "beta=0.5;eta=1.0": 2.5459990675308544,
+            "beta=1.0;eta=0.5": 11.154911211413033,
+            "beta=1.0;eta=1.0": 0.9676656225882819,
+            "beta=2.0;eta=0.5": 10.018818234908036,
+            "beta=2.0;eta=1.0": 0.728131384179798
+          }
+        }
+      ],
+      "direct_D_cauchy_closed": false,
+      "eta_uniformity_closed": false,
+      "finite_beta_eta_corridor_split_closed": true,
+      "finite_gibbs_weighted_corridor_closed": true,
+      "finite_operator_growth_stress_closed": true,
+      "hamiltonian_os_identification_closed": false,
+      "kms_gns_gap_closed": false,
+      "late_ratios": {
+        "beta=0.25;eta=0.5": 2.015532296066202,
+        "beta=0.25;eta=1.0": 1.50229981401046,
+        "beta=0.5;eta=0.5": 1.7712618824793418,
+        "beta=0.5;eta=1.0": 0.6231820763515571,
+        "beta=1.0;eta=0.5": 1.9987756357650635,
+        "beta=1.0;eta=1.0": 0.6728818039994496,
+        "beta=2.0;eta=0.5": 2.032651524228514,
+        "beta=2.0;eta=1.0": 0.8705457144035674
+      },
+      "maximums": {
+        "operator_norm": 769.7929363619684,
+        "weighted_norm": 24.60012282810548
+      },
+      "operator_domain_embedding_closed": false,
+      "operator_growth_ratio": 616.8263791895753,
+      "operator_norm_uniformity_closed": false,
+      "outside_keys": [
+        "beta=0.25;eta=0.5",
+        "beta=0.25;eta=1.0",
+        "beta=0.5;eta=0.5",
+        "beta=1.0;eta=0.5",
+        "beta=2.0;eta=0.5"
+      ],
+      "phase_local_bkm_estimate_closed": false,
+      "pre_a_closed": false,
+      "sector_a_closed": false,
+      "seed_rows": 80,
+      "shape_uniformity_closed": false,
+      "source_uniformity_closed": false,
+      "volume_uniformity_closed": false,
+      "weighted_rows": 320
+    }
+  },
+  "exploration_id": "EXP-001231",
+  "lean": {
+    "command": "lake env lean Tect/R388.lean",
+    "output": "",
+    "returncode": 0,
+    "status": "PASS"
+  },
+  "recorded_at": "2026-08-28T14:38:23.164554Z",
+  "result_id": "R-388",
+  "run_kind": "integrated",
+  "schema": "tect/foundation-audit/1.0",
+  "task_id": "T-054",
+  "verdict": "PASS"
+}

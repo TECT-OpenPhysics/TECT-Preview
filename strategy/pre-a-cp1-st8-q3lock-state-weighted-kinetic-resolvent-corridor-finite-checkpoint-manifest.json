@@ -1,0 +1,132 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-STATE-WEIGHTED-KINETIC-RESOLVENT-CORRIDOR-FINITE-v0",
+  "result_id": "R-388",
+  "title": "State-weighted kinetic resolvent corridor",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001231",
+  "claim_bearing": false,
+  "parent_explorations": ["EXP-001230", "EXP-001229", "EXP-001198"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+  ],
+  "question": "Does the kinetic nested commutator isolated by R-387 have a finite Gibbs-weighted corridor that is more stable than its raw operator norm, and what beta/resolvent restrictions are exposed by cutoff stress?",
+  "finite_fixture": {
+    "volume": 2,
+    "graph_edges": [[0, 1]],
+    "cutoff_dimensions": [3, 4, 5, 6, 8, 10, 12, 16, 20, 24],
+    "oscillator_dimension_min": 3,
+    "oscillator_dimension_max": 24,
+    "site_values": [0, 1],
+    "chi": "1",
+    "r": "-1",
+    "g": "0.6",
+    "c": "0.6",
+    "lambda": "0.1",
+    "hbar": "1",
+    "beta_values": ["1/4", "1/2", "1", "2"],
+    "resolvent_imaginary_values": ["1/2", "1"],
+    "corridor_beta_floor": "1/2",
+    "corridor_eta_floor": "1",
+    "late_dimension": 12,
+    "operator_growth_threshold": 100,
+    "corridor_split_threshold": 1,
+    "hostile_threshold": 1e-7,
+    "agreement_tolerance": 1e-9,
+    "finite_only": true
+  },
+  "model": {
+    "kinetic_target": "K_{d,beta,eta}=[B,[T,(i eta I-q_s)^(-1)]]",
+    "state_weight": "N_beta(X)^2=Tr(rho_beta X^*X)+Tr(rho_beta X X^*) with rho_beta=Z^(-1)exp(-beta H)",
+    "operator_stress": "||K|| is tracked only as a finite cutoff stress control",
+    "corridor_candidate": "beta>=1/2 and eta>=1 are tested as a fixed finite corridor whose late cutoff ratio is <=1 on the manifest grid",
+    "outside_stress": "beta<1/2 or eta<1 is retained as an outside-corridor stress control",
+    "analytic_target": "Use a state-weighted kinetic graph estimate at a fixed beta/eta only after proving an invariant core and source/volume bounds; do not infer beta or eta uniformity"
+  },
+  "coverage": {
+    "all_sites": true,
+    "site_values": [0, 1],
+    "both_resolvent_imaginaries": true,
+    "both_adjoint_seeds": true,
+    "all_cutoff_dimensions": true,
+    "all_beta_values": true
+  },
+  "scope": {
+    "finite_operator_growth_stress_closed": true,
+    "finite_gibbs_weighted_corridor_closed": true,
+    "finite_beta_eta_corridor_split_closed": true,
+    "operator_norm_uniformity_closed": false,
+    "beta_uniformity_closed": false,
+    "eta_uniformity_closed": false,
+    "phase_local_bkm_estimate_closed": false,
+    "boundary_shell_l1_closed": false,
+    "cutoff_uniformity_closed": false,
+    "source_uniformity_closed": false,
+    "volume_uniformity_closed": false,
+    "shape_uniformity_closed": false,
+    "operator_domain_embedding_closed": false,
+    "direct_D_cauchy_closed": false,
+    "delta_D_cauchy_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "adversarial_review": [
+    {
+      "axis": "operator versus state-weighted topology",
+      "check": "Raw operator norms and two-sided Gibbs seminorms are reported separately; a bounded weighted row is not relabelled an operator-norm bound.",
+      "disposition": "UPHELD-FINITE"
+    },
+    {
+      "axis": "beta/eta dependence",
+      "check": "The corridor is declared only for beta>=1/2 and eta>=1 on the sampled grid; lower beta or eta values are retained as outside stress controls.",
+      "disposition": "UPHELD-FINITE"
+    },
+    {
+      "axis": "cutoff interpretation",
+      "check": "Dimensions 3 through 24 are finite oscillator truncations; the operator growth is a route stress and not an asymptotic divergence theorem.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "hostile observable class",
+      "check": "A momentum resolvent is used as a hostile seed; it breaks the coordinate commutator anchor and must exceed the mutation threshold.",
+      "disposition": "UPHELD-FINITE"
+    },
+    {
+      "axis": "QFT promotion",
+      "check": "No fixed-beta estimate is promoted to beta-independent common dynamics, shell summability, domain, Cook, OS/KMS/GNS, gap, continuum, C6, Sector-A or Pre-A.",
+      "disposition": "UPHELD-OPEN"
+    }
+  ],
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R388.lean",
+    "theorem_markers": ["jacobi_reduction", "kinetic_coordinate_isolation", "scope_fixture"],
+    "command": "lake env lean Tect/R388.lean",
+    "boundary": "Lean checks only the abstract Jacobi/commutator reduction; finite matrices, Gibbs traces and all cutoff or beta limits remain Python/open analysis."
+  },
+  "qft_interface": {
+    "closed": "The finite stress distinguishes a strongly cutoff-growing operator norm from a narrower beta/eta-dependent Gibbs-weighted corridor for the isolated kinetic target.",
+    "open": "The analytic state-weighted BKM/graph estimate, shell summability, beta/eta independence, source/volume/shape uniformity, invariant domain, Cook/common-alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open.",
+    "tect_boundary": "Auxiliary finite state-weighted interface only; no production-owner transfer or physical-sector conclusion is supplied."
+  },
+  "artifacts": {
+    "primary_script": "codes/foundations/pre_a_cp1_st8_q3lock_state_weighted_kinetic_resolvent_corridor_finite_checkpoint.py",
+    "independent_script": "codes/foundations/pre_a_cp1_st8_q3lock_state_weighted_kinetic_resolvent_corridor_finite_checkpoint_independent.py",
+    "hostile_script": "codes/foundations/pre_a_cp1_st8_q3lock_state_weighted_kinetic_resolvent_corridor_finite_checkpoint_hostile.py",
+    "integrated_verifier": "codes/foundations/pre_a_cp1_st8_q3lock_state_weighted_kinetic_resolvent_corridor_finite_checkpoint_verify.py",
+    "lean": "verification/lean/Tect/R388.lean"
+  },
+  "boundary": "Claim-nonbearing finite cutoff stress only. It proves no cutoff-uniform operator or Gibbs estimate, no beta/eta-independent topology, no shell summability, no domain or Cook/common-alpha convergence, no OS/KMS/GNS reconstruction, no gap, continuum, C6, Sector-A or Pre-A result.",
+  "no_overclaim": "The sampled corridor identifies a plausible state-weighted route and its parameter debt. It is neither a uniform estimate nor evidence that the raw operator norm can be discarded in the common algebra.",
+  "recorded_by": "Codex"
+}
