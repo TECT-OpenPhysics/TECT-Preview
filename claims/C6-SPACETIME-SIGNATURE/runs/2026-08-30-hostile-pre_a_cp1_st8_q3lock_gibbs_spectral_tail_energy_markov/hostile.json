@@ -1,0 +1,54 @@
+{
+  "checks": [
+    {
+      "actual": 0.19203834045679757,
+      "expected": ">1e-07",
+      "name": "interacting tail is visible",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "energy": 0.5,
+        "mass_bound": 0.6740932053279393,
+        "rank": 3,
+        "tail": 0.19203834045679757,
+        "weighted_bound": 0.8394781675839724,
+        "weighted_tail": 0.2548634251574287
+      },
+      "expected": "both moment bounds hold",
+      "name": "positive Markov bound survives",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.19203834045679757,
+      "expected": ">1e-07",
+      "name": "zero-moment mutation caught",
+      "status": "PASS"
+    }
+  ],
+  "derived": {
+    "first_moment": 0.33704660266396963,
+    "mismatch": 0.19203834045679757,
+    "mutated_zero_moment_bound": 0.0,
+    "representative": {
+      "beta": 2.0,
+      "core_width": 2,
+      "dimension": 4,
+      "volume": 5
+    },
+    "second_moment": 0.4197390837919862,
+    "selected": {
+      "energy": 0.5,
+      "mass_bound": 0.6740932053279393,
+      "rank": 3,
+      "tail": 0.19203834045679757,
+      "weighted_bound": 0.8394781675839724,
+      "weighted_tail": 0.2548634251574287
+    }
+  },
+  "exploration_id": "EXP-001237",
+  "manifest": "strategy/pre-a-cp1-st8-q3lock-gibbs-spectral-tail-energy-markov-manifest.json",
+  "result_id": "R-394",
+  "schema": "tect/pre-a-r394-hostile/1.0",
+  "verdict": "PASS"
+}

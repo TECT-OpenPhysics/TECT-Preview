@@ -4434,6 +4434,145 @@
       "task_id": "T-054",
       "title": "High-cutoff QCMI shell stress",
       "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "axis": "shift sign",
+          "check": "The minimum eigenvalue is computed from each local Hamiltonian and the smallest shifted eigenvalue is checked nonnegative.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "projector construction",
+          "check": "Each energy window is built from computed spectral vectors and projector idempotence and positive rank are checked.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "mass normalization",
+          "check": "Window and complement masses are both retained and their sum is checked without clipping.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "Markov direction",
+          "check": "The actual mass and weighted tails are compared with first and second moments divided by the positive threshold.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "cutoff coverage",
+          "check": "Dimensions three through ten at volume three and higher feasible volume-four/five controls are executed.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "zero-tail artifact",
+          "check": "Low-dimensional zero tails are retained as finite data and are not interpreted as uniform convergence.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "profile aggregation",
+          "check": "Per-dimension maxima and adjacent ratios are retained so cutoff growth is not hidden by averaging.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "independence",
+          "check": "The independent lane rebuilds the spectra, reductions, moments and profiles without importing the primary module.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "hostile mutation",
+          "check": "Replacing the first moment by zero produces a visible false bound and is caught.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "Lean boundary",
+          "check": "Lean checks scalar Markov inequalities only; spectral calculus, traces and limits remain Python/open analysis.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "QFT promotion",
+          "check": "Moment/cutoff uniformity, Gibbs complement, shell summability, common core, beta/eta independence, Cook/common-alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open.",
+          "disposition": "UPHELD-OPEN"
+        }
+      ],
+      "boundary": "T0 claim-nonbearing finite Gibbs spectral-tail energy audit only. It proves no cutoff-independent moment bound, shell modulus, Gibbs complement theorem, cutoff/source/volume/shape bound, common core, beta/eta-independent topology, domain or Cook/common-alpha convergence, OS/KMS/GNS reconstruction, gap, continuum, C6, Sector-A or Pre-A result.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "R-394 advances the cutoff-aware route by isolating an exact finite Markov inequality and exposing its true missing premise: a cutoff-independent bound on local energy moments. Fixed windows can contain the full low-dimensional spectrum and then acquire high-energy states as the cutoff grows, so the finite inequalities cannot be promoted. The next candidate is an analytic moment bound or a physically normalized cutoff-dependent window compatible with the common form core.",
+      "evidence_refs": [
+        "strategy/pre-a-cp1-st8-q3lock-gibbs-spectral-tail-energy-markov-manifest.json#model",
+        "strategy/pre-a-cp1-st8-q3lock-gibbs-spectral-tail-energy-markov-certificate-260830.md#Result",
+        "codes/foundations/pre_a_cp1_st8_q3lock_gibbs_spectral_tail_energy_markov.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_gibbs_spectral_tail_energy_markov_independent.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_gibbs_spectral_tail_energy_markov_hostile.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_gibbs_spectral_tail_energy_markov_verify.py#run",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-primary-pre_a_cp1_st8_q3lock_gibbs_spectral_tail_energy_markov/primary.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-integrated-pre_a_cp1_st8_q3lock_gibbs_spectral_tail_energy_markov/integrated.json#derived",
+        "verification/lean/Tect/R394.lean#energy_tail_markov",
+        "claims/C6-SPACETIME-SIGNATURE/notes/gibbs-spectral-tail-energy-markov-260830.md#R-394"
+      ],
+      "finding": "The primary lane passes 13281/13281 checks and the non-importing independent lane passes 6/6. The integrated verifier passes 22/22 with Lean R394 compiling over 13 systems, 158 core layouts, 3160 spectral-tail rows and 240 cutoff profiles. Every shifted local energy is positive within tolerance; projector splits and both Markov inequalities have zero violations. The mass-tail range is -3.150593512508445e-16 to 0.857090394095672 and the weighted-tail range is -4.896283282882488e-16 to 4.223723806110137. Maximum first and second moments are 4.247282023186985 and 29.47317200298245. Adjacent cutoff ratios reach 16.93594199558396 for mass and 10.577916988017394 for the weighted tail. A hostile zero-moment mutation at V=5,d=4,beta=2 leaves a selected tail of 0.19203834045679757 against a zero bound and is caught.",
+      "formal_integration": {
+        "events": [
+          "20260830-finite-gibbs-spectral-tail-energy-markov-audit"
+        ],
+        "lean": "R394 PASS",
+        "negatives": [],
+        "no_changelog_event": false,
+        "no_new_negative": true,
+        "no_new_result": false,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "results": [
+          "R-394"
+        ]
+      },
+      "formal_refs": {
+        "events": [
+          "20260830-finite-gibbs-spectral-tail-energy-markov-audit"
+        ],
+        "negatives": [],
+        "results": [
+          "R-394"
+        ]
+      },
+      "gate_ids": [
+        "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+        "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+        "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+      ],
+      "id": "EXP-001237",
+      "method": [
+        "Build the same zero-source oscillator Gibbs states as R-393 on dimensions 3 through 10 at volume 3 and higher feasible controls at volumes 4 and 5.",
+        "For each one- and two-site core, shift the local Hamiltonian by its computed spectral minimum and form the positive operator K and spectral projector P_E for every declared positive energy window.",
+        "Compute the complement mass Tr(rho Q_E), the K-weighted tail Tr(rho K Q_E), and the first and second moments from explicit reduced Gibbs matrices.",
+        "Check the finite inequalities tail <= Tr(rho K)/E and weighted_tail <= Tr(rho K^2)/E, retain per-cutoff profiles, projector errors and all orientation/core/beta rows.",
+        "Rebuild spectra, traces and profiles in a non-importing independent lane, apply a zero-moment hostile mutation, and compile the scalar Markov identities in Lean R394."
+      ],
+      "next_action": "Prove a cutoff-independent local first/second or exponential energy-moment bound, or explicitly normalize a cutoff-dependent window, then combine it with the high-cutoff QCMI plateau. If neither route survives, record the obstruction without promoting common alpha.",
+      "no_overclaim": "A finite positive-energy Markov inequality is an exact finite bound; its usefulness for the main proof requires a separate uniform moment estimate.",
+      "provenance": "contemporaneous",
+      "question": "Can the local Gibbs spectral complement be bounded by positive shifted-energy moments at every finite cutoff, providing the missing quantitative input for the cutoff-aware two-stage shell route?",
+      "recorded_at": "2026-08-30T10:30:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001236",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001235",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001234",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-08-29",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Finite Gibbs spectral-tail energy Markov audit",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",

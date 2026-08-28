@@ -1,0 +1,111 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-GIBBS-SPECTRAL-TAIL-ENERGY-MARKOV-FINITE-v0",
+  "result_id": "R-394",
+  "title": "Finite Gibbs spectral-tail energy Markov audit",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001237",
+  "claim_bearing": false,
+  "parent_explorations": ["EXP-001236", "EXP-001235", "EXP-001234"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+  ],
+  "question": "Can the local Gibbs spectral complement be bounded by positive shifted-energy moments at every finite cutoff, providing the missing quantitative input for the cutoff-aware two-stage shell route?",
+  "finite_fixture": {
+    "volume_values": [3, 4, 5],
+    "admissible_pairs": [
+      {"volume": 3, "cutoff_dimensions": [3, 4, 5, 6, 7, 8, 9, 10]},
+      {"volume": 4, "cutoff_dimensions": [3, 4, 5]},
+      {"volume": 5, "cutoff_dimensions": [3, 4]}
+    ],
+    "core_widths": [1, 2],
+    "energy_windows": ["1/2", "1", "2", "4", "8"],
+    "beta_values": ["1/4", "1/2", "1", "2"],
+    "chi": "1",
+    "r": "-1",
+    "g": "0.6",
+    "c": "0.6",
+    "lambda": "0.1",
+    "hbar": "1",
+    "numerical_tolerance": 1e-8,
+    "positivity_tolerance": 1e-10,
+    "hostile_threshold": 1e-7,
+    "finite_only": true
+  },
+  "model": {
+    "global_hamiltonian": "H_V=sum_j [p_j^2/(2 chi)+r q_j^2/2+g q_j^4/4] + sum_j [c(q_j-q_{j+1})^2/2 + lambda(q_j-q_{j+1})^2(q_j^2+q_{j+1}^2)/4]",
+    "local_energy": "K_W=H_W-min(spec(H_W)) I on each contiguous W-site core, so K_W is positive semidefinite",
+    "projector": "P_E=1_{[0,E]}(K_W), Q_E=I-P_E",
+    "mass_tail": "tau_E=Tr(rho_W Q_E)",
+    "markov_mass_bound": "tau_E <= Tr(rho_W K_W)/E",
+    "weighted_tail": "u_E=Tr(rho_W K_W Q_E) <= Tr(rho_W K_W^2)/E",
+    "analytic_target": "prove a cutoff-independent moment bound and combine it with the QCMI high-cutoff plateau to control the Gibbs spectral complement"
+  },
+  "coverage": {
+    "all_declared_volume_cutoff_pairs": true,
+    "both_core_widths_when_admissible": true,
+    "both_orientations": true,
+    "all_beta_values": true,
+    "all_energy_windows": true,
+    "positive_shifted_local_energy": true,
+    "mass_markov_bounds": true,
+    "weighted_markov_bounds": true,
+    "cutoff_profiles": true,
+    "hostile_moment_mutation": true
+  },
+  "scope": {
+    "finite_positive_shift_closed": true,
+    "finite_spectral_projector_closed": true,
+    "finite_mass_markov_bound_closed": true,
+    "finite_weighted_markov_bound_closed": true,
+    "finite_spectral_tail_profile_closed": true,
+    "finite_cutoff_profile_closed": true,
+    "finite_hostile_moment_mutation_closed": true,
+    "operator_norm_uniformity_closed": false,
+    "beta_uniformity_closed": false,
+    "eta_uniformity_closed": false,
+    "phase_local_bkm_estimate_closed": false,
+    "boundary_shell_l1_uniform_closed": false,
+    "cutoff_uniformity_closed": false,
+    "source_uniformity_closed": false,
+    "volume_uniformity_closed": false,
+    "shape_uniformity_closed": false,
+    "operator_domain_embedding_closed": false,
+    "direct_D_cauchy_closed": false,
+    "delta_D_cauchy_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R394.lean",
+    "theorem_markers": ["energy_tail_markov", "weighted_energy_tail_markov", "finite_scope"],
+    "command": "lake env lean Tect/R394.lean",
+    "boundary": "Lean checks scalar Markov inequalities and positivity; finite spectral projectors, Gibbs moments and cutoff limits remain Python/open analysis."
+  },
+  "qft_interface": {
+    "closed": "On the finite declared grid, positive shifted local energy moments dominate both mass and energy-weighted spectral tails at every sampled cutoff and threshold.",
+    "open": "Finite Markov inequalities do not supply cutoff-independent moment bounds. Uniform Gibbs complement control, shell summability, source/volume/shape uniformity, beta/eta independence, common core, Cook/common-alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open.",
+    "tect_boundary": "Auxiliary finite spectral-tail interface only; no physical-sector conclusion or production-owner transfer is supplied."
+  },
+  "artifacts": {
+    "primary_script": "codes/foundations/pre_a_cp1_st8_q3lock_gibbs_spectral_tail_energy_markov.py",
+    "independent_script": "codes/foundations/pre_a_cp1_st8_q3lock_gibbs_spectral_tail_energy_markov_independent.py",
+    "hostile_script": "codes/foundations/pre_a_cp1_st8_q3lock_gibbs_spectral_tail_energy_markov_hostile.py",
+    "integrated_verifier": "codes/foundations/pre_a_cp1_st8_q3lock_gibbs_spectral_tail_energy_markov_verify.py",
+    "lean": "verification/lean/Tect/R394.lean"
+  },
+  "boundary": "T0 claim-nonbearing finite Gibbs spectral-tail energy audit only. It proves no cutoff-independent moment bound, shell modulus, Gibbs complement theorem, volume/source/shape bound, common core, beta/eta-independent topology, domain or Cook/common-alpha convergence, OS/KMS/GNS reconstruction, gap, continuum, C6, Sector-A or Pre-A result.",
+  "no_overclaim": "A finite positive-energy Markov inequality is an exact accounting bound; it becomes useful for the main proof only after a separate uniform moment estimate is proved.",
+  "recorded_by": "Codex"
+}

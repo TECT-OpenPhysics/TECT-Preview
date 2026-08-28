@@ -42,6 +42,7 @@ policy in `governance/development-history.md`.
 | [R-376](#r-376) | Hilbert-Schmidt Lipschitz bridge for the capped Liouvillian kernel | R-376 v1.0 is a T0 claim-nonbearing finite operator-interface checkpoint under EXP-001218. A noncommuting cutoff-2 edge Liouvillian stress gives maximum full-kernel Frobenius ratio 0.9787544362168733 and 64-layer ratio 0.9755896836319287 with 76/76 integrated assertions; general Schatten-2 proof, operator-norm locality, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
 | [R-377](#r-377) | Gap-free odd-Matsubara resolvent telescoping budget | R-377 v1.0 is a T0 claim-nonbearing finite resolvent-interface checkpoint under EXP-001219. The exact positive-resolvent difference identity and its 64-layer budget pass 122/122 integrated assertions with Lean R377; the accumulated finite budget ratio is 0.9895313426497929 and the absolute-value square-root debt is recorded separately. Uniform locality, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
 | [R-382](#r-382) | Increasing-cutoff endpoint modular moment stress | R-382 v1.0 is a T0 claim-nonbearing finite cutoff-profile diagnostic under EXP-001224. The R-381 endpoint-energy bridge passes across 2816 all-prefix actual-Q3 contexts with Lean R382; edge max M_0 grows from 2.733031855844076 at d=3 to 41.64826651661874 at d=6 and max M_2 from 0.008378198414559081 to 17.719559304500326, with d=5 to d=6 ratios 8.855033106195243 and 36.38049903040583. This is finite growth evidence only; uniform M_0/M_2 control, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
+| [R-394](#r-394) | Finite Gibbs spectral-tail energy Markov audit | R-394 v1.0 is a T0 claim-nonbearing finite checkpoint under EXP-001237. Positive shifted local energy proves finite mass and weighted-tail Markov inequalities across 13 high-cutoff systems, 158 core layouts and 3,160 rows; primary 13,281/13,281, independent 6/6, integrated 22/22 and Lean R394 pass. The maximum mass tail is 0.857090394095672 and the maximum adjacent tail ratio is 16.93594199558396, so moment/cutoff uniformity, the two-stage plateau, Gibbs complement and all Q3LOCK/QFT gates remain open |
 | [R-393](#r-393) | High-cutoff QCMI shell stress | R-393 v1.0 is a T0 claim-nonbearing finite checkpoint under EXP-001236. The high-cutoff QCMI shell budget passes primary 921/921, independent 6/6, integrated 23/23 and Lean R393 over 13 systems, 54 base partitions, 304 shell rows and 72 cutoff profiles. Adjacent cutoff growth is exposed (maximum ratio 32.000137578349594; 62/72 profiles grow somewhere), so low-cutoff suppression cannot be extrapolated to a uniform tail; the proposed two-stage plateau plus energy-tail route and all Q3LOCK/QFT gates remain open |
 | [R-392](#r-392) | QCMI shell-telescoping boundary budget | R-392 v1.0 is a T0 claim-nonbearing finite checkpoint under EXP-001235. Successive conditional-mutual-information shell increments obey the finite chain rule and yield an auditable l1 boundary budget; primary 800/800, independent 6/6, integrated 21/21 and Lean R392 pass over 12 systems, 44 base tripartitions and 264 shell rows. Uniform shell summability, Gibbs complement control, common core and all Q3LOCK/QFT gates remain open |
 | [R-391](#r-391) | Quantum-Markov blanket boundary transfer | R-391 v1.0 is a T0 claim-nonbearing finite checkpoint under EXP-001234. Core-buffer-environment QCMI and finite Petz diagnostics show sampled buffer-width suppression, while the spectral complement remains large; primary 1186/1186, independent 6/6, integrated 24/24 and Lean R391 pass over 12 systems, 62 tripartitions, 248 QCMI rows and 392 profile rows. Boundary Gibbs tails, cutoff uniformity, common core and all Q3LOCK/QFT gates remain open |
@@ -632,6 +633,42 @@ No new negative result, tier change, or R-376 PDF is issued.
 
 **Proven in:** manifest, certificate, Lean entrypoint, primary script,
 independent script, integrated verifier, scope note, and saved run artefacts.
+
+<a id="r-394"></a>
+### R-394 -- Finite Gibbs spectral-tail energy Markov audit
+
+**Result ID.** R-394 is a T0, claim-nonbearing finite checkpoint under
+EXP-001237. It extends the R-393 cutoff stress by shifting each local core
+Hamiltonian by its finite spectral minimum, forming a positive operator K, and
+checking mass and K-weighted spectral tails against first and second energy
+moments.
+
+**Finite verification.** The primary lane passes 13,281/13,281 checks, the
+non-importing independent lane passes 6/6 aggregate checks, the integrated
+verifier passes 22/22 and Lean R394 compiles. The grid contains 13
+volume/cutoff systems, 158 core layouts, 3,160 spectral-tail rows and 240
+cutoff profiles, with both orientations, both core widths and all four beta
+values. Every shifted local energy is positive within tolerance, every
+projector split is normalized, and both Markov inequalities have zero
+violations. The mass-tail range is -3.150593512508445e-16 to
+0.857090394095672; the weighted-tail range is -4.896283282882488e-16 to
+4.223723806110137; the maximum first and second moments are
+4.247282023186985 and 29.47317200298245.
+
+**Cutoff diagnostic and adversarial boundary.** The maximum adjacent mass-tail
+ratio is 16.93594199558396 and the maximum adjacent weighted-tail ratio is
+10.577916988017394. The early zero-tail rows arise because the fixed energy
+window contains the entire low-dimensional local spectrum; new high-energy
+states appear as the cutoff grows. This is evidence that a finite Markov
+inequality does not provide a cutoff-independent moment bound. A hostile
+zero-moment mutation is caught at V=5, d=4, beta=2: the selected tail is
+0.19203834045679757 while the mutated bound is zero, and the genuine first
+and second moment bounds remain valid. No uniform Gibbs complement, shell
+modulus, source/volume/shape control, common core, beta/eta independence,
+Cook/common-alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A or Pre-A result
+is claimed.
+
+**Proven in:** [R-394 certificate](strategy/pre-a-cp1-st8-q3lock-gibbs-spectral-tail-energy-markov-certificate-260830.md), [Lean entrypoint](verification/lean/Tect/R394.lean), primary/independent/hostile scripts, integrated verifier, [scope note](claims/C6-SPACETIME-SIGNATURE/notes/gibbs-spectral-tail-energy-markov-260830.md), and saved run artefacts.
 
 <a id="r-393"></a>
 ### R-393 -- High-cutoff QCMI shell stress
