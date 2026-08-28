@@ -1,0 +1,108 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-GIBBS-GENTLE-PROJECTION-BRIDGE-FINITE-v0",
+  "result_id": "R-395",
+  "title": "Finite Gibbs gentle spectral-complement bridge",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001238",
+  "claim_bearing": false,
+  "parent_explorations": ["EXP-001237", "EXP-001236", "EXP-001235"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+  ],
+  "question": "Can the finite Gibbs spectral tail from R-394 be converted into a trace-norm disturbance budget for low-energy projection, and can the Markov tail bound be composed with that budget without hiding cutoff dependence?",
+  "finite_fixture": {
+    "volume_values": [3, 4, 5],
+    "admissible_pairs": [
+      {"volume": 3, "cutoff_dimensions": [3, 4, 5, 6, 7, 8, 9, 10]},
+      {"volume": 4, "cutoff_dimensions": [3, 4, 5]},
+      {"volume": 5, "cutoff_dimensions": [3, 4]}
+    ],
+    "core_widths": [1, 2],
+    "energy_windows": ["1/2", "1", "2", "4", "8"],
+    "beta_values": ["1/4", "1/2", "1", "2"],
+    "chi": "1",
+    "r": "-1",
+    "g": "0.6",
+    "c": "0.6",
+    "lambda": "0.1",
+    "hbar": "1",
+    "numerical_tolerance": 1e-8,
+    "positivity_tolerance": 1e-10,
+    "hostile_threshold": 1e-7,
+    "finite_only": true
+  },
+  "model": {
+    "global_hamiltonian": "H_V=sum_j [p_j^2/(2 chi)+r q_j^2/2+g q_j^4/4] + sum_j [c(q_j-q_{j+1})^2/2 + lambda(q_j-q_{j+1})^2(q_j^2+q_{j+1}^2)/4]",
+    "local_energy": "K_W=H_W-min(spec(H_W)) I >= 0",
+    "projector": "P_E=1_[0,E](K_W), Q_E=I-P_E",
+    "tail": "tau_E=Tr(rho_W Q_E)",
+    "gentle_bridge": "||rho_W-P_E rho_W P_E||_1 <= 2 sqrt(tau_E)",
+    "markov_composition": "tau_E <= Tr(rho_W K_W)/E implies disturbance <= 2 sqrt(Tr(rho_W K_W)/E)",
+    "analytic_target": "prove a cutoff-independent moment bound and a dimension-safe continuity transfer from the projected finite sector to QCMI/Petz data"
+  },
+  "coverage": {
+    "all_declared_volume_cutoff_pairs": true,
+    "both_core_widths_when_admissible": true,
+    "both_orientations": true,
+    "all_beta_values": true,
+    "all_energy_windows": true,
+    "positive_shifted_local_energy": true,
+    "mass_markov_bounds": true,
+    "gentle_trace_norm_bounds": true,
+    "gentle_markov_composition": true,
+    "cutoff_disturbance_profiles": true,
+    "hostile_factor_mutation": true
+  },
+  "scope": {
+    "finite_positive_shift_closed": true,
+    "finite_spectral_projector_closed": true,
+    "finite_mass_markov_bound_closed": true,
+    "finite_gentle_trace_norm_bridge_closed": true,
+    "finite_gentle_markov_composition_closed": true,
+    "finite_cutoff_disturbance_profile_closed": true,
+    "finite_hostile_factor_mutation_closed": true,
+    "cutoff_uniformity_closed": false,
+    "source_uniformity_closed": false,
+    "volume_uniformity_closed": false,
+    "shape_uniformity_closed": false,
+    "dimension_safe_qcmi_continuity_closed": false,
+    "qcmI_projected_transfer_closed": false,
+    "operator_domain_embedding_closed": false,
+    "direct_D_cauchy_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R395.lean",
+    "theorem_markers": ["gentle_sqrt_bound", "sqrt_monotone", "finite_scope"],
+    "command": "lake env lean Tect/R395.lean",
+    "boundary": "Lean checks the scalar square-root envelope and its monotonicity; the trace-norm gentle-measurement theorem and every uniform/QFT transfer remain numerical or open."
+  },
+  "qft_interface": {
+    "closed": "On the finite declared grid, the trace-norm disturbance from replacing a Gibbs core state by its unnormalized low-energy projection is bounded by 2 sqrt(tail), and the R-394 first-moment Markov estimate supplies a composed finite bound.",
+    "open": "The moment bound grows with cutoff in the sampled grid; no cutoff-independent tail, dimension-safe QCMI continuity, projected QCMI transfer, shell summability, common core, Cook/common-alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A or Pre-A result follows.",
+    "tect_boundary": "Auxiliary finite state-disturbance interface only; no physical-sector conclusion or production-owner transfer is supplied."
+  },
+  "artifacts": {
+    "primary_script": "codes/foundations/pre_a_cp1_st8_q3lock_gibbs_gentle_projection_bridge.py",
+    "independent_script": "codes/foundations/pre_a_cp1_st8_q3lock_gibbs_gentle_projection_bridge_independent.py",
+    "hostile_script": "codes/foundations/pre_a_cp1_st8_q3lock_gibbs_gentle_projection_bridge_hostile.py",
+    "integrated_verifier": "codes/foundations/pre_a_cp1_st8_q3lock_gibbs_gentle_projection_bridge_verify.py",
+    "lean": "verification/lean/Tect/R395.lean"
+  },
+  "boundary": "T0 claim-nonbearing finite gentle spectral-projection bridge only. It proves no cutoff-independent moment bound, dimension-safe QCMI continuity, Gibbs complement theorem, shell modulus, source/volume/shape bound, common core, beta/eta-independent topology, domain or Cook/common-alpha convergence, OS/KMS/GNS reconstruction, gap, continuum, C6, Sector-A or Pre-A result.",
+  "no_overclaim": "The finite trace-norm bridge makes the missing complement error explicit and composable; it does not make the error small uniformly, and it cannot transfer QCMI or a physical gap without a dimension-safe continuity theorem and a uniform moment estimate.",
+  "recorded_by": "Codex"
+}

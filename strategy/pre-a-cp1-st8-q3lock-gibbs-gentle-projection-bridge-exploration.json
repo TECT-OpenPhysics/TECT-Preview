@@ -1,0 +1,73 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001238",
+  "title": "Finite Gibbs gentle spectral-complement bridge",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+  ],
+  "related": [
+    {"id": "EXP-001237", "relation": "continues"},
+    {"id": "EXP-001236", "relation": "continues"},
+    {"id": "EXP-001235", "relation": "alternative_to"}
+  ],
+  "question": "Can the finite Gibbs spectral tail from R-394 be converted into a trace-norm disturbance budget for low-energy projection, and can the Markov tail bound be composed with that budget without hiding cutoff dependence?",
+  "method": [
+    "Rebuild the R-394 finite Gibbs systems on all declared volume, cutoff, core-width, orientation, beta and energy-window rows.",
+    "For each local positive shifted-energy projector P, compute the unnormalised projected state P rho P, its trace mass, the complement tail tau, and the full Hermitian trace norm ||rho-P rho P||_1.",
+    "Check the finite gentle envelope d <= 2 sqrt(tau) and compose it with the first-moment Markov bound to obtain d <= 2 sqrt(Tr(rho K)/E).",
+    "Retain adjacent-cutoff disturbance profiles so the bridge cannot hide cutoff growth; rebuild all values in a non-importing independent lane.",
+    "Run a hostile factor-one square-root mutation on a representative interacting row and compile Lean R395 for the scalar square-root envelope and monotonicity."
+  ],
+  "finding": "The primary lane passes 16440/16440 checks, the non-importing independent lane passes 6/6, and the integrated verifier passes 22/22 with Lean R395 compiling over 13 systems, 158 core layouts and 3160 rows. The tail range is 0 to 0.857090394095672 and the trace-disturbance range is 2.220446049250313e-16 to 0.8589478229401646. Direct gentle and Markov-composed envelopes have zero violations. The maximum adjacent-cutoff disturbance ratio is 4.2093805087121146, exposing the remaining uniformity debt. A factor-one hostile mutation is caught at V=5,d=4,width=2,beta=2,E=4: disturbance 0.029711359234405613 exceeds the mutated 0.023473135234173644 while remaining below the genuine 0.04694627015634729.",
+  "verdict": "advanced",
+  "decision_reason": "R-395 adds a distinct bridge between the finite Gibbs complement and the projected low-energy sector: it turns the R-394 tail into an explicit trace-norm disturbance budget and composes the two inequalities. This is the right interface for a later QCMI/Petz continuity argument, but the observed cutoff ratio and the dimension dependence of entropy continuity keep uniform transfer open.",
+  "adversarial_review": [
+    {"axis": "trace-norm convention", "check": "The full Hermitian trace norm is computed from eigenvalues of rho-P rho P, with no hidden half-distance factor.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "subnormalised projection", "check": "The projected state is intentionally unnormalised and its trace is checked against the spectral window mass.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "round-off clipping", "check": "Only negative round-off below tolerance is clipped for sqrt(tail); the raw mass split is checked first.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "Markov composition", "check": "The composed bound uses the positive first moment and positive energy threshold from the same row, with zero violation counts.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "factor mutation", "check": "A factor-one mutation is separated on the declared interacting representative row.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "cutoff profile", "check": "Adjacent-cutoff disturbance ratios are retained; the maximum reaches 4.2093805087121146.", "disposition": "UPHELD-OPEN"},
+    {"axis": "QCMI transfer", "check": "Trace norm alone is not treated as a dimension-safe QCMI/Petz continuity theorem.", "disposition": "UPHELD-OPEN"},
+    {"axis": "QFT promotion", "check": "Moment uniformity, shell summability, common core, Cook/common-alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open.", "disposition": "UPHELD-OPEN"}
+  ],
+  "evidence_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-gibbs-gentle-projection-bridge-manifest.json#model",
+    "strategy/pre-a-cp1-st8-q3lock-gibbs-gentle-projection-bridge-certificate-260830.md#Result",
+    "codes/foundations/pre_a_cp1_st8_q3lock_gibbs_gentle_projection_bridge.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_gibbs_gentle_projection_bridge_independent.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_gibbs_gentle_projection_bridge_hostile.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_gibbs_gentle_projection_bridge_verify.py#main",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-primary-pre_a_cp1_st8_q3lock_gibbs_gentle_projection_bridge/primary.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-integrated-pre_a_cp1_st8_q3lock_gibbs_gentle_projection_bridge/integrated.json#derived",
+    "verification/lean/Tect/R395.lean#gentle_sqrt_bound",
+    "claims/C6-SPACETIME-SIGNATURE/notes/gibbs-gentle-projection-bridge-260830.md#R-395"
+  ],
+  "formal_integration": {
+    "results": ["R-395"],
+    "negatives": [],
+    "events": ["20260830-finite-gibbs-gentle-spectral-complement-bridge"],
+    "lean": "R395 PASS",
+    "no_new_result": false,
+    "no_new_negative": true,
+    "no_changelog_event": false,
+    "no_pdf": true,
+    "no_tier_change": true
+  },
+  "formal_refs": {
+    "results": ["R-395"],
+    "negatives": [],
+    "events": ["20260830-finite-gibbs-gentle-spectral-complement-bridge"]
+  },
+  "next_action": "Prove or refute a dimension-safe continuity modulus that transfers the finite gentle disturbance to QCMI/Petz shell data, while separately obtaining a cutoff-independent first-moment bound. If either modulus fails on an increasing-core stress, record the precise obstruction before any common-alpha promotion.",
+  "boundary": "T0 claim-nonbearing finite gentle spectral-projection bridge only. It proves no cutoff-independent moment bound, dimension-safe QCMI continuity, Gibbs complement theorem, shell modulus, source/volume/shape bound, common core, beta/eta-independent topology, domain or Cook/common-alpha convergence, OS/KMS/GNS reconstruction, gap, continuum, C6, Sector-A or Pre-A result.",
+  "no_overclaim": "The finite trace-norm bridge makes the complement error explicit and composable; it does not make the error small uniformly and cannot transfer QCMI or a physical gap without separate continuity and moment theorems.",
+  "provenance": "contemporaneous",
+  "recorded_at": "2026-08-30T11:30:00Z",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-08-29"
+}

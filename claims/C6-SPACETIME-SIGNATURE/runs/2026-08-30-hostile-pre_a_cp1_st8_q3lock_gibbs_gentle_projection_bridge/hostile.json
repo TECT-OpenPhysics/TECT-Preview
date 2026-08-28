@@ -1,0 +1,48 @@
+{
+  "checks": [
+    {
+      "actual": 0.029711359234405613,
+      "expected": ">1e-07",
+      "name": "finite disturbance visible",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.029711359234405613,
+        0.04694627015634729
+      ],
+      "expected": "disturbance <= 2 sqrt(tail)",
+      "name": "genuine factor-two bound",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.029711359234405613,
+        0.023473135078173644,
+        0.006238224156231969
+      ],
+      "expected": "disturbance > sqrt(tail)",
+      "name": "factor-one mutation caught",
+      "status": "PASS"
+    }
+  ],
+  "derived": {
+    "genuine_bound": 0.04694627015634729,
+    "mutated_factor_one_bound": 0.023473135078173644,
+    "mutation_gap": 0.006238224156231969,
+    "representative": {
+      "beta": 2.0,
+      "core_width": 2,
+      "dimension": 4,
+      "energy_window": 4.0,
+      "volume": 5
+    },
+    "tail_mass": 0.0005509880703981861,
+    "trace_disturbance": 0.029711359234405613
+  },
+  "exploration_id": "EXP-001238",
+  "manifest": "strategy/pre-a-cp1-st8-q3lock-gibbs-gentle-projection-bridge-manifest.json",
+  "result_id": "R-395",
+  "schema": "tect/pre-a-r395-hostile/1.0",
+  "verdict": "PASS"
+}
