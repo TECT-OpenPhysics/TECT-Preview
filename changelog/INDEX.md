@@ -5,7 +5,7 @@ Compact generated reader surface. The append-only authority is
 record 568 / commit `4db22f4e` and no longer grows.
 Post-cutover full bodies live exactly once in bounded pages under `pages/`.
 
-**723 accepted events** · latest 25 shown below · machine locator: `index.json`
+**724 accepted events** · latest 25 shown below · machine locator: `index.json`
 
 Search the complete authority without loading every page:
 
@@ -17,6 +17,7 @@ python verification/scripts/changelog.py search --text <phrase>
 
 | Date | Event | Claims | Full entry |
 |---|---|---|---|
+| 2026-08-28 | `20260828-frequency-adapted-endpoint-filter-2026-08-28` — [Frequency-adapted endpoint filter] - 2026-08-28 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000719-000768.md#20260828-frequency-adapted-endpoint-filter-2026-08-28) |
 | 2026-08-28 | `20260828-increasing-cutoff-endpoint-modular-moment-stres` — [Increasing-cutoff endpoint modular moment stress] - 2026-08-28 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000719-000768.md#20260828-increasing-cutoff-endpoint-modular-moment-stres) |
 | 2026-08-28 | `20260828-endpoint-modular-moment-to-energy-cauchy-bridge` — [Endpoint modular moment to energy Cauchy bridge] - 2026-08-28 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000719-000768.md#20260828-endpoint-modular-moment-to-energy-cauchy-bridge) |
 | 2026-08-28 | `20260828-renyi-interpolation-bridge-for-the-modular-shel` — [Renyi interpolation bridge for the modular shell] - 2026-08-28 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000719-000768.md#20260828-renyi-interpolation-bridge-for-the-modular-shel) |
@@ -41,7 +42,6 @@ python verification/scripts/changelog.py search --text <phrase>
 | 2026-08-24 | `20260824-exp-001028-conditional-first-passage-poisson-bo` — [EXP-001028: conditional first-passage Poisson boundary bridge] - 2026-08-24 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000669-000718.md#20260824-exp-001028-conditional-first-passage-poisson-bo) |
 | 2026-08-24 | `20260824-exp-001027-critical-graph-seminorm-onsite-stabi` — [EXP-001027: critical graph seminorm onsite-stability obstruction] - 2026-08-24 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000669-000718.md#20260824-exp-001027-critical-graph-seminorm-onsite-stabi) |
 | 2026-08-24 | `20260824-exp-001026-conditional-weighted-recurrence-to-d` — [EXP-001026 conditional weighted recurrence to distance decay bridge] - 2026-08-24 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000669-000718.md#20260824-exp-001026-conditional-weighted-recurrence-to-d) |
-| 2026-08-24 | `20260824-exp-001025-finite-non-leibniz-energy-product-en` — [EXP-001025 finite non-Leibniz energy-product envelope and locality separation] - 2026-08-24 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000669-000718.md#20260824-exp-001025-finite-non-leibniz-energy-product-en) |
 
 ## Post-cutover pages
 
@@ -49,7 +49,7 @@ Each full event body after the cutover occurs in exactly one page.
 
 | Ordinals | Events | Page |
 |---|---:|---|
-| 719–723 | 5 | [000719-000768.md](pages/000719-000768.md) |
+| 719–724 | 6 | [000719-000768.md](pages/000719-000768.md) |
 | 669–718 | 50 | [000669-000718.md](pages/000669-000718.md) |
 | 619–668 | 50 | [000619-000668.md](pages/000619-000668.md) |
 | 569–618 | 50 | [000569-000618.md](pages/000569-000618.md) |

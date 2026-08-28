@@ -1,0 +1,131 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001225",
+  "title": "Frequency-adapted endpoint filter",
+  "task_id": "T-054",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-RESOLVENT-ALGEBRA-EXACT-POLYNOMIAL-COMMON-ALPHA-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-FIFTH-ENERGY-MOMENT-AND-MODULAR-CUTOFF-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+  ],
+  "related": [
+    {
+      "id": "EXP-001224",
+      "relation": "continues"
+    },
+    {
+      "id": "EXP-001223",
+      "relation": "alternative_to"
+    }
+  ],
+  "question": "Can a frequency-adapted filter isolate the low-frequency endpoint remainder and suppress the cutoff-sensitive high-frequency shell in a form compatible with the R-377 resolvent?",
+  "method": [
+    "Reuse the R-382 actual-Q3 edge and square fixtures with both beta values, translated sites, selected bond terms, both term orders, both time signs, every prefix position and both history adjoints.",
+    "For each energy difference u=|E_i-E_j| evaluate Y_s,ij=X_ij/(1+u)^s at exact fractional powers s=1/2, 1 and 3/2, using the squared weight in the endpoint and moment sums.",
+    "Check finite filtered endpoint, M0, M2 and Cauchy profiles; apply the endpoint scalar envelope for s>=1/2 and the M2 envelope for s>=1.",
+    "Rebuild the same filtered sweep in a non-importing independent lane and compare aggregate, per-cutoff and per-filter profiles under the declared agreement tolerance.",
+    "Compile Lean R383 for filter-weight positivity and the half/unit scalar envelope factors; keep filter-removal and every QFT/limit flag open."
+  ],
+  "finding": "The primary lane passes 59169/59169 assertions and the non-importing independent lane passes 39458/39458 over 2816 contexts. The integrated verifier passes 514/514 and Lean R383 compiles. Primary and independent numeric fields agree within 1.9184653865522705e-13. Across all profiles the maximum filtered M0 is 41.57042344053415, filtered M2 is 1.8112783791853755 and filtered endpoint is 0.34230543540394365. At the reference s=1 the maxima are M0=41.57042344053405, M2=0.24919044409881133 and endpoint=0.09311499130513236. The raw R-382 d=5 to d=6 growth warning remains true; the filter attenuates energy-weighted moments but leaves a large low-frequency M0.",
+  "verdict": "advanced",
+  "decision_reason": "R-383 supplies a new finite frequency-domain diagnostic for the R-382 endpoint debt. The filtered endpoint and M2 are materially smaller at the largest edge cutoff, while M0 is not removed, so the next analytic task is a low-frequency remainder estimate together with a uniform filter-removal bound. The finite profiles do not establish a cutoff limit, divergence, or any QFT promotion.",
+  "adversarial_review": [
+    {
+      "axis": "filter exponent convention",
+      "check": "The labels 1/2, 1 and 3/2 are parsed as exact fractions and the implementation uses the squared weight (1+u)^(-2s) in both lanes.",
+      "disposition": "DISMISSED-FINITE"
+    },
+    {
+      "axis": "low-frequency remainder",
+      "check": "The d=6 filtered M0 remains 41.57042344053405 at s=1, so the filter does not hide the low-frequency obstruction.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "endpoint envelope range",
+      "check": "The endpoint scalar envelope is asserted only for powers >=1/2; no stronger exponent range is inferred.",
+      "disposition": "DISMISSED-FINITE"
+    },
+    {
+      "axis": "M2 envelope range",
+      "check": "The M2 scalar envelope is asserted only for powers >=1, matching the pointwise factor proved in Lean R383.",
+      "disposition": "DISMISSED-FINITE"
+    },
+    {
+      "axis": "Cauchy recomputation",
+      "check": "Each filtered profile recomputes its own M0, M2, endpoint and Cauchy bound rather than scaling the raw bound.",
+      "disposition": "DISMISSED-FINITE"
+    },
+    {
+      "axis": "raw growth interpretation",
+      "check": "The R-382 d=5 to d=6 warning is retained as finite evidence and is not promoted to a divergence statement.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "history coverage",
+      "check": "Both beta values, sites, bond terms, orders, signs, all prefixes and both adjoints are included for each filter.",
+      "disposition": "DISMISSED-FINITE"
+    },
+    {
+      "axis": "independent reconstruction",
+      "check": "The independent lane reconstructs the oscillator, graph, spectrum, prefixes and filtered moments without importing the primary audit.",
+      "disposition": "DISMISSED-FINITE"
+    },
+    {
+      "axis": "resolvent interpretation",
+      "check": "The filter is only a finite spectral analogue of resolvent smoothing; compatibility with the R-377 telescope is a next gate, not a theorem here.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "Lean and QFT promotion",
+      "check": "Lean proves scalar positivity/envelopes only; filter removal, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open.",
+      "disposition": "DISMISSED-FIREWALL"
+    }
+  ],
+  "evidence_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-local-q2-kubo-mori-frequency-adapted-endpoint-filter-manifest.json#identity",
+    "strategy/pre-a-cp1-st8-q3lock-local-q2-kubo-mori-frequency-adapted-endpoint-filter-certificate-260828.md#finite-verification",
+    "codes/foundations/pre_a_cp1_st8_q3lock_local_q2_kubo_mori_frequency_adapted_endpoint_filter.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_local_q2_kubo_mori_frequency_adapted_endpoint_filter_independent.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_local_q2_kubo_mori_frequency_adapted_endpoint_filter_verify.py#run",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-28-primary-pre_a_cp1_st8_q3lock_local_q2_kubo_mori_frequency_adapted_endpoint_filter/primary.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-28-independent-pre_a_cp1_st8_q3lock_local_q2_kubo_mori_frequency_adapted_endpoint_filter/independent.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-28-integrated-pre_a_cp1_st8_q3lock_local_q2_kubo_mori_frequency_adapted_endpoint_filter/integrated.json#lean",
+    "verification/lean/Tect/R383.lean#filtered_endpoint_unit_factor",
+    "claims/C6-SPACETIME-SIGNATURE/notes/q3lock-local-q2-kubo-mori-frequency-adapted-endpoint-filter-boundary-260828.md#R-383"
+  ],
+  "formal_integration": {
+    "results": [
+      "R-383"
+    ],
+    "negatives": [],
+    "events": [
+      "20260828-frequency-adapted-endpoint-filter-2026-08-28"
+    ],
+    "lean": "R383 PASS",
+    "no_new_result": false,
+    "no_new_negative": true,
+    "no_changelog_event": false,
+    "no_pdf": true,
+    "no_tier_change": true
+  },
+  "formal_refs": {
+    "results": [
+      "R-383"
+    ],
+    "negatives": [],
+    "events": [
+      "20260828-frequency-adapted-endpoint-filter-2026-08-28"
+    ]
+  },
+  "next_action": "Prove a Hamiltonian-derived common-core low-frequency remainder estimate and a uniform Y_s -> X filter-removal bound; then connect the filtered endpoint to the R-377 resolvent telescope. If filter removal fails, register the precise obstruction as a named gate.",
+  "boundary": "T0 claim-nonbearing finite frequency-adapted endpoint-filter diagnostic only. It does not prove source/volume/cutoff/beta uniformity, filter removal, divergence, modular tails, common core, common alpha, KMS/GNS dynamics, a gap, continuum, C6, Sector-A or Pre-A.",
+  "no_overclaim": "R-383 reports finite attenuation of energy-weighted endpoint profiles. The large filtered M0 and the raw cutoff warning remain explicit; no filter-removal or continuum conclusion is claimed.",
+  "provenance": "contemporaneous",
+  "recorded_at": "2026-08-30T02:30:00Z",
+  "reviewed_on": "2026-08-28",
+  "recorded_by": "Codex"
+}

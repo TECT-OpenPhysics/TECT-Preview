@@ -2,7 +2,36 @@
   "data": [
     {
       "accepted_event_ids": [
-        "20260828-increasing-cutoff-endpoint-modular-moment-stres"
+        "20260828-frequency-adapted-endpoint-filter-2026-08-28"
+      ],
+      "anchor": "r-383",
+      "claim_ref_basis": {},
+      "claim_refs": [],
+      "co_recorded_negative_tags": [],
+      "detail": {
+        "boundary": "The filter reduces the finite energy-weighted shell but does not remove its low-frequency `M_0` component. These are finite profiles, not a filter-removal estimate, a cutoff-uniform theorem, or a divergence statement. Source/volume/cutoff/beta uniformity, a Hamiltonian-derived common core, common alpha, OS/KMS/GNS dynamics, a mass gap, continuum, C6, Sector-A and Pre-A remain open. No new negative result, tier change or R-383 proof-note PDF is issued.",
+        "proven_in": "manifest, certificate, Lean entrypoint, primary script, independent script, integrated verifier, scope note, exploration record and stored run artefacts.",
+        "result_id": "R-383 is a T0, claim-nonbearing finite spectral-filter diagnostic under EXP-001225.",
+        "statement": "For an energy difference `u=|E_i-E_j|`, define `Y_s,ij=X_ij/(1+u)^s` and recompute the endpoint, `M_0`, `M_2` and the state-weighted Cauchy envelope with the squared weight `(1+u)^(-2s)`. The fixture uses exact fractional powers `s=1/2,1,3/2`, with `s=1` as the reference. The scalar factors satisfy `u/(1+u)^(2s)<=1` for the declared endpoint range `s>=1/2` and `u^2/(1+u)^(2s)<=1` for the declared `M_2` range `s>=1`; R383 Lean formalizes the half/unit cases used by the finite checks.",
+        "verification": "The primary lane passes 59169/59169 assertions and the non-importing independent lane passes 39458/39458 over 2816 actual-Q3 contexts. The integrated verifier passes 514/514 and Lean R383 compiles. Primary and independent numeric fields agree within 1.9184653865522705e-13. Across all profiles the maxima are filtered `M_0=41.57042344053415`, filtered `M_2=1.8112783791853755` and filtered endpoint `0.34230543540394365`. At the reference `s=1` they are `41.57042344053405`, `0.24919044409881133` and `0.09311499130513236`. The raw R-382 d=5-to-d=6 growth warning remains true."
+      },
+      "detail_title": "Frequency-adapted endpoint filter",
+      "family_refs": [],
+      "id": "R-383",
+      "normalized_detail": {
+        "boundary": "The filter reduces the finite energy-weighted shell but does not remove its low-frequency `M_0` component. These are finite profiles, not a filter-removal estimate, a cutoff-uniform theorem, or a divergence statement. Source/volume/cutoff/beta uniformity, a Hamiltonian-derived common core, common alpha, OS/KMS/GNS dynamics, a mass gap, continuum, C6, Sector-A and Pre-A remain open. No new negative result, tier change or R-383 proof-note PDF is issued.",
+        "proof_anchor": "manifest, certificate, Lean entrypoint, primary script, independent script, integrated verifier, scope note, exploration record and stored run artefacts.",
+        "publication_target": "",
+        "reuse": "",
+        "statement": "For an energy difference `u=|E_i-E_j|`, define `Y_s,ij=X_ij/(1+u)^s` and recompute the endpoint, `M_0`, `M_2` and the state-weighted Cauchy envelope with the squared weight `(1+u)^(-2s)`. The fixture uses exact fractional powers `s=1/2,1,3/2`, with `s=1` as the reference. The scalar factors satisfy `u/(1+u)^(2s)<=1` for the declared endpoint range `s>=1/2` and `u^2/(1+u)^(2s)<=1` for the declared `M_2` range `s>=1`; R383 Lean formalizes the half/unit cases used by the finite checks."
+      },
+      "summary": "R-383 v1.0 is a T0 claim-nonbearing finite spectral-filter diagnostic under EXP-001225. The filter profiles attenuate the energy-weighted endpoint shell (reference s=1: max filtered M_2=0.24919044409881133 and endpoint=0.09311499130513236) while leaving the d=6 low-frequency M_0 at 41.57042344053405. Primary/independent/integrated and Lean R383 checks pass; filter removal, common-core and all QFT/limit conclusions remain open",
+      "title": "Frequency-adapted endpoint filter"
+    },
+    {
+      "accepted_event_ids": [
+        "20260828-increasing-cutoff-endpoint-modular-moment-stres",
+        "20260828-frequency-adapted-endpoint-filter-2026-08-28"
       ],
       "anchor": "r-382",
       "claim_ref_basis": {},
@@ -3723,44 +3752,6 @@
       },
       "summary": "Scoped T4 analytic/exact/executed advance and method boundary: a finite-visit selfadjoint quadratic form is fibre invariant exactly when it annihilates the endpoint-synthesis kernel, equivalently when it factors as `L* B L`; the corresponding form bound is equivalent to `-C L*L<=K<=C L*L`. The R-068 centered-form theorem extends without visit-count loss to spatially constant selfadjoint operator families satisfying `sum_r |K_r|<=K0 I`, with one global Young remainder raising both `K0` and the model norm to `3/(1-kappa)`. Exact terminal-only descent of the recombined selfadjoint form requires quotient factorisation; the termwise `K_r=L*B_rL` bridge is sufficient and is not asserted necessary. Two opposite visits disprove automatic replacement of the visit square-function sextic by the terminal sextic. Every scalar finite-dimensional Gaussian polynomial decomposes canonically into zero chaos, first chaos, and one double divergence. An exact two-visit Hermite quotient has mean `-epsilon^2` and a unique sign-changing scalar preimage, so a universal PSD random-`W` factorisation is false. R-102's nonzero curl remains an inherited isolated-current boundary. The complete adapted A1 low-chaos cancellation, trace/forest compatibility, vertical basicness, multiplier estimate, one-use ledger, `OVERLAP_src`, Nelson, removals, interacting measure, and Sector-A closure remain open",
       "title": "Revisit quotient factorisation, operator Carleson extension, and signed-score boundary"
-    },
-    {
-      "accepted_event_ids": [
-        "20260728-r-117-rational-horizon-and-uniform-dyadic-root",
-        "20260728-a13-proof-front-loop-audit-and-route-reset-afte",
-        "20260728-r-118-adversarial-scope-hardening-and-psd-no-go"
-      ],
-      "anchor": "r-117",
-      "claim_ref_basis": {
-        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION": "proof_anchor_exact"
-      },
-      "claim_refs": [
-        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
-      ],
-      "co_recorded_negative_tags": [
-        "NG-2026-07-28-A13-FIXED-SHELL-LIPSCHITZ-METRIC-REGULARITY",
-        "NG-2026-07-28-A13-UNIVERSAL-PSD-RANDOM-W-DOUBLE-DIVERGENCE"
-      ],
-      "detail": {
-        "canonical_all_direction_trace_margin": "In the homogeneous Pauli--Fierz frame, joint optimization of all four rows gives the sharp constant `kappa_*=411/(2000P)`. For the matching full-production dyadic shell, operator monotonicity, conservative six-real Parseval normalization, exact rational interval enumeration at `N=1,2,4`, and an analytic `N^-3` tail from `N=8` prove `(10/9) tau_N^rec<3/40` and `(20/9) tau_N^rec<3/20` in every standardized direction. Fixed independent heat changes only lower recession order, and a fixed orthogonal output projection contracts the bound. Positivity of the output square then proves each frozen bare-root normalizer exists directly, without an infinite-dimensional horizon-compactness assumption.",
-        "full_horizon_theorem": "For a finite-dimensional locally Lipschitz map with uniform quadratic spherical horizon, the exact quadratic tail recession is the infimum of `1-q tau_infty(v)+q||Av+z||^2` over horizon-null directions and the full normalized tangent image. Strict positivity gives Gaussian integrability; strict negativity gives divergence under a quantified polynomial annular Lipschitz bound; equality remains a critical-stratum problem. The R-082 positive-floor map has a state-uniform fixed-cutoff `O(t^-1)` horizon error. The ratio `r/rho` itself is not extended at zero; the complete current map extends continuously.",
-        "metric_method_no_go": "The exact shell-eight field `u_t=exp(6 i kappa x_1)(1+i t cos(kappa x_1))e_1`, `chi=0`, uses only modes `5,6,7`. Its distance to the active plane-wave null set is `O(|t|)`, whereas the full current is `O(t^2)`; standardized radial normalization preserves the gap. Thus local Lipschitz metric regularity fails already at fixed cutoff. This is a proof-route no-go, not a normalizer counterexample.",
-        "owner_and_publication_boundary": "The result retains R-104/R-116's exact same-root endpoint quotient and complete owner incidence. It states the measurability, predictability, pathwise owner-domination, and summable-cost hypotheses a conditional supermartingale would need, but proves none of them for the complete adapted packet. The canonical trace theorem does not cover nonorthogonal/state-dependent duplicated clusters, cumulative covariance on an old low carrier, or a raw finite-amplitude heat trace. Complete progressive/revisit normalization, cutoff-summable costs, one-use source/sextic aggregation, `OVERLAP_src`, Nelson, removals, an interacting measure, and Sector A remain open at T4.",
-        "result_id": "A13-CLASSII-RATIONAL-HORIZON-UNIFORM-ROOT-TRACE-MARGIN-BOUNDARY.",
-        "where_proved": "Claim `A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION`, note `classii-rational-horizon-uniform-root-trace-margin-boundary-260728-v1.0`, primary exact and non-importing independent certificates, and the integrated R-117 verifier. Publication target: finite-dimensional Gaussian horizon criteria plus production-specific dyadic trace estimates and metric-boundary examples."
-      },
-      "detail_title": "Rational-horizon classifier, uniform canonical dyadic-root trace margin, and fixed-shell metric boundary",
-      "family_refs": [],
-      "id": "R-117",
-      "normalized_detail": {
-        "boundary": "",
-        "proof_anchor": "Claim `A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION`, note `classii-rational-horizon-uniform-root-trace-margin-boundary-260728-v1.0`, primary exact and non-importing independent certificates, and the integrated R-117 verifier. Publication target: finite-dimensional Gaussian horizon criteria plus production-specific dyadic trace estimates and metric-boundary examples.",
-        "publication_target": "",
-        "reuse": "",
-        "statement": ""
-      },
-      "summary": "Scoped T4 analytic/exact/executed advance and method boundary: the exact full-horizon tangent classifier extends the finite-dimensional tail theorem from polynomial quadratic maps to locally Lipschitz asymptotically quadratic maps, including the rational R-082 row. The positive floor converges to the degree-two horizon at an explicit state-uniform fixed-cutoff rate. The homogeneous Pauli--Fierz frame has sharp joint constant `411/(2000P)`. Exact rational shell enumeration plus an analytic `N^-3` tail prove `(10/9) tau_N^rec<3/40` and `(20/9) tau_N^rec<3/20` for every standardized direction of the matching full-production dyadic shell, hence frozen bare-root normalizer existence at both tilts. A same-shell phase modulation has distance `O(t)` from the exact null set but current `O(t^2)`, disproving local Lipschitz metric regularity even at fixed cutoff. The result does not identify the complete adapted progressive/revisit packet, produce cutoff-summable log-normalizers, or aggregate source/sextic owners once. `OVERLAP_src`, Nelson, removals, interacting measure, and Sector-A closure remain open",
-      "title": "Rational-horizon classifier, uniform canonical dyadic-root trace margin, and fixed-shell metric boundary"
     }
   ],
   "kind": "reusable_results",
