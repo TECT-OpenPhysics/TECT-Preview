@@ -1,0 +1,208 @@
+{
+  "assertion_count": 14,
+  "assertions": [
+    {
+      "actual": "['EXP-001222', 'R-380']",
+      "expected": "EXP-001222/R-380",
+      "group": "provenance",
+      "name": "authority",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'renyi_interpolation_finite_checked': True, 'midpoint_shell_lower_bound_finite_checked': True, 'endpoint_shell_upper_bound_finite_checked': True, 'shell_integral_identity_finite_checked': True, 'source_uniformity_proved': False, 'weighted_cutoff_uniformity_proved': False, 'weighted_volume_uniformity_proved': False, 'shape_uniformity_proved': False, 'common_core_closed': False, 'common_alpha_closed': False, 'kms_gns_gap_closed': False, 'continuum_closed': False, 'c6_closed': False, 'sector_a_closed': False, 'pre_a_closed': False, 'no_new_negative_result': True, 'no_tier_change': True, 'no_pdf': True}",
+      "expected": "finite-renyi-interpolation-only",
+      "group": "scope",
+      "name": "scope",
+      "status": "PASS"
+    },
+    {
+      "actual": "['PASS', 2560]",
+      "expected": "R-379 PASS and expected contexts",
+      "group": "source linkage",
+      "name": "R-379 source",
+      "status": "PASS"
+    },
+    {
+      "actual": "2560",
+      "expected": "2560",
+      "group": "coverage",
+      "name": "coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": "4.440892098500626e-16",
+      "expected": "<= tolerance",
+      "group": "Renyi symmetry",
+      "name": "endpoint symmetry",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.1102230246251565e-16",
+      "expected": "<= tolerance",
+      "group": "Renyi symmetry",
+      "name": "sample symmetry",
+      "status": "PASS"
+    },
+    {
+      "actual": "9.860761315262648e-32",
+      "expected": "<=0",
+      "group": "convexity envelope",
+      "name": "convex chord",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.5974244787049213e-16",
+      "expected": "<=0",
+      "group": "convexity envelope",
+      "name": "midpoint lower",
+      "status": "PASS"
+    },
+    {
+      "actual": "6.376313427723079e-16",
+      "expected": "<=0",
+      "group": "convexity envelope",
+      "name": "integral upper",
+      "status": "PASS"
+    },
+    {
+      "actual": "6.661338147750939e-16",
+      "expected": "<= tolerance",
+      "group": "Kubo--Mori shell",
+      "name": "integral identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.7263968032921184e-12",
+      "expected": "<= tolerance",
+      "group": "quadrature",
+      "name": "quadrature",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.3877787807814457e-17",
+      "expected": "<= tolerance",
+      "group": "Kubo--Mori shell",
+      "name": "Kubo identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "3.6452675812342155e-14",
+      "expected": ">=-1e-12",
+      "group": "Kubo--Mori state",
+      "name": "Kubo floor",
+      "status": "PASS"
+    },
+    {
+      "actual": "2.3946605756512416e-16",
+      "expected": ">=0",
+      "group": "positivity",
+      "name": "positivity",
+      "status": "PASS"
+    }
+  ],
+  "audit_id": "PA-CP1-ST8-Q3LOCK-LOCAL-Q2-KUBO-MORI-RENYI-INTERPOLATION-BRIDGE",
+  "boundary": "Finite actual-Q3 edge and square doubled-bond Gibbs proxies with all prefixes, translated sites, signs and adjoints on the declared cutoffs. Interpolation convexity, midpoint/endpoints and shell integral are checked numerically and in Lean; source/volume/cutoff/beta uniformity, common core, common alpha, OS/KMS/GNS dynamics, gap, continuum, C6, Sector-A and Pre-A remain open.",
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "derived": {
+    "c6_closed": false,
+    "common_alpha_closed": false,
+    "common_core_closed": false,
+    "context_count": 2560,
+    "continuum_closed": false,
+    "endpoint_shell_upper_bound_finite_checked": true,
+    "expected_contexts": 2560,
+    "kms_gns_gap_closed": false,
+    "maximum_bond_unitary_factorization_error": 1.0891722777251956e-13,
+    "maximum_convex_chord_violation": 9.860761315262648e-32,
+    "maximum_endpoint_modular_moment": 2.1535838145893043,
+    "maximum_endpoint_symmetry_error": 4.440892098500626e-16,
+    "maximum_integral_to_endpoint_ratio": 0.924003597284528,
+    "maximum_integral_upper_envelope_violation": 6.376313427723079e-16,
+    "maximum_integrated_modular_shell": 0.730548444067332,
+    "maximum_kubo_modular_identity_error": 1.3877787807814457e-17,
+    "maximum_kubo_weight_asymmetry": 0.0,
+    "maximum_midpoint_lower_envelope_violation": 1.5974244787049213e-16,
+    "maximum_midpoint_modular_moment": 0.3605259861234754,
+    "maximum_midpoint_to_integral_ratio": 0.9594837421464463,
+    "maximum_quadrature_reconstruction_error": 1.7263968032921184e-12,
+    "maximum_sample_symmetry_error": 1.1102230246251565e-16,
+    "maximum_shell": 1.461096888134664,
+    "maximum_shell_integral_identity_error": 6.661338147750939e-16,
+    "midpoint_shell_lower_bound_finite_checked": true,
+    "minimum_endpoint_modular_moment": 2.4350091748643474e-16,
+    "minimum_integrated_modular_shell": 2.3946605756512416e-16,
+    "minimum_kubo_weight": 3.6452675812342155e-14,
+    "minimum_midpoint_modular_moment": 2.4350091748643474e-16,
+    "pre_a_closed": false,
+    "quadrature_nodes": 12,
+    "regimes": [
+      {
+        "bond_term_indices": [
+          2
+        ],
+        "contexts": 256,
+        "cutoffs": [
+          3,
+          6
+        ],
+        "expected_contexts": 256,
+        "maximum_endpoint": 2.1535838145893043,
+        "maximum_integral": 0.730548444067332,
+        "maximum_midpoint": 0.3605259861234754,
+        "maximum_shell": 1.461096888134664,
+        "shape": "edge",
+        "sites": [
+          0,
+          1
+        ],
+        "volume": 2
+      },
+      {
+        "bond_term_indices": [
+          4,
+          5,
+          6,
+          7
+        ],
+        "contexts": 2304,
+        "cutoffs": [
+          2
+        ],
+        "expected_contexts": 2304,
+        "maximum_endpoint": 5.410254232597811e-16,
+        "maximum_integral": 5.852618308375983e-16,
+        "maximum_midpoint": 5.41025423259781e-16,
+        "maximum_shell": 1.2305050788763061e-15,
+        "shape": "square",
+        "sites": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "volume": 4
+      }
+    ],
+    "renyi_interpolation_finite_checked": true,
+    "sample_points": [
+      0.0,
+      0.25,
+      0.5,
+      0.75,
+      1.0
+    ],
+    "sector_a_closed": false,
+    "shape_uniformity_proved": false,
+    "shell_integral_identity_finite_checked": true,
+    "source_uniformity_proved": false,
+    "theta": 0.5,
+    "weighted_cutoff_uniformity_proved": false,
+    "weighted_volume_uniformity_proved": false
+  },
+  "exploration_id": "EXP-001222",
+  "result_id": "R-380",
+  "run_kind": "independent",
+  "schema": "tect/foundation-audit/1.0",
+  "task_id": "T-054",
+  "verdict": "PASS"
+}

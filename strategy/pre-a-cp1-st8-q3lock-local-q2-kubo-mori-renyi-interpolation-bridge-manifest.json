@@ -1,0 +1,70 @@
+{
+  "schema": "tect/pre-a-cp1-st8-q3lock-local-q2-kubo-mori-renyi-interpolation-bridge/1.0",
+  "exploration_id": "EXP-001222",
+  "result_id": "R-380",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "claim_bearing": false,
+  "parent_explorations": ["EXP-001221", "EXP-001214", "EXP-001189"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-RESOLVENT-ALGEBRA-EXACT-POLYNOMIAL-COMMON-ALPHA-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-FIFTH-ENERGY-MOMENT-AND-MODULAR-CUTOFF-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+  ],
+  "title": "Renyi interpolation bridge for the modular shell",
+  "question": "Can the modular-frequency weighted Kubo--Mori shell be represented as the integral of a symmetric Renyi interpolation, with the beta/2 midpoint and endpoint modular moments separated by exact convexity envelopes?",
+  "identity": {
+    "interpolation": "G(s)=sum_ij |log(p_i)-log(p_j)| p_i^s p_j^(1-s) |X_ij|^2 for 0<=s<=1",
+    "endpoint": "G(0)=sum_ij p_j |log(p_i)-log(p_j)| |X_ij|^2 and G(1)=sum_ij p_i |log(p_i)-log(p_j)| |X_ij|^2",
+    "midpoint": "G(1/2)=sum_ij sqrt(p_i p_j) |log(p_i)-log(p_j)| |X_ij|^2",
+    "shell_integral": "integral_0^1 G(s) ds = sum_ij |p_i-p_j| |X_ij|^2",
+    "convexity_envelope": "G(1/2) <= integral_0^1 G(s) ds <= (G(0)+G(1))/2 and G(s) <= (1-s)G(0)+sG(1)",
+    "qft_role": "The full Euclidean-time interpolation identifies the missing endpoint modular moment behind the midpoint two-slice channel; it does not provide a uniform bound for that endpoint."
+  },
+  "finite_fixture": {
+    "regimes": [
+      {"shape": "edge", "volume": 2, "cutoff_values": [3, 6], "site_values": [0, 1], "bond_term_indices": [2]},
+      {"shape": "square", "volume": 4, "cutoff_values": [2], "site_values": [0, 1, 2, 3], "bond_term_indices": [4, 5, 6, 7]}
+    ],
+    "beta_values": ["1/2", "1"],
+    "time_sign_values": [-1, 1],
+    "history_adjoint_values": [0, 1],
+    "sample_points": ["0", "1/4", "1/2", "3/4", "1"],
+    "quadrature_nodes": 12,
+    "theta": "1/2",
+    "prefix_policy": "all_positions",
+    "time_step": "1/18",
+    "hbar": "1",
+    "parameters": {"chi": "1", "r": "-1", "g": "3/5", "c": "3/5", "lambda": "1/10"},
+    "expected_source_contexts": 2560,
+    "finite_tolerance": 1e-9,
+    "agreement_tolerance": 2e-8,
+    "log_mean_gap_tolerance": 1e-12,
+    "quadrature_tolerance": 2e-8
+  },
+  "scope": {
+    "renyi_interpolation_finite_checked": true,
+    "midpoint_shell_lower_bound_finite_checked": true,
+    "endpoint_shell_upper_bound_finite_checked": true,
+    "shell_integral_identity_finite_checked": true,
+    "source_uniformity_proved": false,
+    "weighted_cutoff_uniformity_proved": false,
+    "weighted_volume_uniformity_proved": false,
+    "shape_uniformity_proved": false,
+    "common_core_closed": false,
+    "common_alpha_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "promotion_boundary": "R-380 is a finite exact Renyi/Kubo--Mori interpolation identity on the declared Q3 matrices. It isolates the endpoint modular-frequency moment that an eventual uniform estimate must control; it proves no such estimate and no common alpha.",
+  "next_action": "Bound the endpoint modular-frequency moment on a Hamiltonian-derived common core, or prove a different source-local substitute, before inserting the shell interpolation into the R-377 resolvent telescope.",
+  "boundary": "Finite actual-Q3 edge and square doubled-bond Gibbs proxies with all prefixes, translated sites, signs and adjoints on the declared cutoffs. Interpolation convexity, midpoint/endpoints and shell integral are checked numerically and in Lean; source/volume/cutoff/beta uniformity, common core, common alpha, OS/KMS/GNS dynamics, gap, continuum, C6, Sector-A and Pre-A remain open.",
+  "recorded_by": "Codex"
+}

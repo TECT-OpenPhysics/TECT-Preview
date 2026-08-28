@@ -1,0 +1,638 @@
+{
+  "assertion_count": 69,
+  "assertions": [
+    {
+      "actual": "['EXP-001222', 'R-380', False]",
+      "expected": "EXP-001222/R-380/false",
+      "name": "identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "['E:\\\\Dev\\\\TECT\\\\codes\\\\foundations\\\\pre_a_cp1_st8_q3lock_local_q2_kubo_mori_renyi_interpolation_bridge.py', 'E:\\\\Dev\\\\TECT\\\\codes\\\\foundations\\\\pre_a_cp1_st8_q3lock_local_q2_kubo_mori_renyi_interpolation_bridge_independent.py', 'E:\\\\Dev\\\\TECT\\\\verification\\\\lean\\\\Tect\\\\R380.lean', 'E:\\\\Dev\\\\TECT\\\\verification\\\\lean\\\\registry.json']",
+      "expected": "all present",
+      "name": "sources",
+      "status": "PASS"
+    },
+    {
+      "actual": "['454480e2568f9286c54b15bd7d5c12ffbb35687ad599ac032465131eca4b0b52', '8fd89a7f9f06442bb6ee4c3f77f0083245a31f54fe8cdadadc0ee6ccb46b028d']",
+      "expected": "distinct",
+      "name": "independent source",
+      "status": "PASS"
+    },
+    {
+      "actual": "('midpoint_arithmetic_envelope', 'symmetric_chord_midpoint', 'symmetric_sample_chord', 'interpolation_nonnegative', 'scope_fixture')",
+      "expected": "present",
+      "name": "Lean markers",
+      "status": "PASS"
+    },
+    {
+      "actual": "none",
+      "expected": "none",
+      "name": "Lean forbidden",
+      "status": "PASS"
+    },
+    {
+      "actual": "1",
+      "expected": "1",
+      "name": "Lean registry unique",
+      "status": "PASS"
+    },
+    {
+      "actual": "08e47473f5727913795b8e1323ee5eee714d536cfb549b7f09fd6c5f39429249",
+      "expected": "08e47473f5727913795b8e1323ee5eee714d536cfb549b7f09fd6c5f39429249",
+      "name": "Lean registry hash",
+      "status": "PASS"
+    },
+    {
+      "actual": "['midpoint_arithmetic_envelope', 'symmetric_chord_midpoint', 'symmetric_sample_chord', 'interpolation_nonnegative', 'scope_fixture']",
+      "expected": "['midpoint_arithmetic_envelope', 'symmetric_chord_midpoint', 'symmetric_sample_chord', 'interpolation_nonnegative', 'scope_fixture']",
+      "name": "Lean declarations",
+      "status": "PASS"
+    },
+    {
+      "actual": "PRIMARY RENYI-INTERPOLATION-BRIDGE PASS 30733/30733 contexts=2560 midpoint_ratio=0.959483742\n",
+      "expected": "PASS",
+      "name": "primary child",
+      "status": "PASS"
+    },
+    {
+      "actual": "INDEPENDENT RENYI-INTERPOLATION-BRIDGE PASS 14/14 contexts=2560 midpoint_ratio=0.959483742\n",
+      "expected": "PASS",
+      "name": "independent child",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2560, 2560]",
+      "expected": "equal",
+      "name": "agreement context_count",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2560, 2560]",
+      "expected": "equal",
+      "name": "agreement expected_contexts",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.5, 0.5]",
+      "expected": "equal",
+      "name": "agreement theta",
+      "status": "PASS"
+    },
+    {
+      "actual": "[[0.0, 0.25, 0.5, 0.75, 1.0], [0.0, 0.25, 0.5, 0.75, 1.0]]",
+      "expected": "equal",
+      "name": "agreement sample_points",
+      "status": "PASS"
+    },
+    {
+      "actual": "[12, 12]",
+      "expected": "equal",
+      "name": "agreement quadrature_nodes",
+      "status": "PASS"
+    },
+    {
+      "actual": "[True, True]",
+      "expected": "equal",
+      "name": "agreement renyi_interpolation_finite_checked",
+      "status": "PASS"
+    },
+    {
+      "actual": "[True, True]",
+      "expected": "equal",
+      "name": "agreement midpoint_shell_lower_bound_finite_checked",
+      "status": "PASS"
+    },
+    {
+      "actual": "[True, True]",
+      "expected": "equal",
+      "name": "agreement endpoint_shell_upper_bound_finite_checked",
+      "status": "PASS"
+    },
+    {
+      "actual": "[True, True]",
+      "expected": "equal",
+      "name": "agreement shell_integral_identity_finite_checked",
+      "status": "PASS"
+    },
+    {
+      "actual": "[False, False]",
+      "expected": "equal",
+      "name": "agreement source_uniformity_proved",
+      "status": "PASS"
+    },
+    {
+      "actual": "[False, False]",
+      "expected": "equal",
+      "name": "agreement weighted_cutoff_uniformity_proved",
+      "status": "PASS"
+    },
+    {
+      "actual": "[False, False]",
+      "expected": "equal",
+      "name": "agreement weighted_volume_uniformity_proved",
+      "status": "PASS"
+    },
+    {
+      "actual": "[False, False]",
+      "expected": "equal",
+      "name": "agreement shape_uniformity_proved",
+      "status": "PASS"
+    },
+    {
+      "actual": "[False, False]",
+      "expected": "equal",
+      "name": "agreement common_core_closed",
+      "status": "PASS"
+    },
+    {
+      "actual": "[False, False]",
+      "expected": "equal",
+      "name": "agreement common_alpha_closed",
+      "status": "PASS"
+    },
+    {
+      "actual": "[False, False]",
+      "expected": "equal",
+      "name": "agreement kms_gns_gap_closed",
+      "status": "PASS"
+    },
+    {
+      "actual": "[False, False]",
+      "expected": "equal",
+      "name": "agreement continuum_closed",
+      "status": "PASS"
+    },
+    {
+      "actual": "[False, False]",
+      "expected": "equal",
+      "name": "agreement c6_closed",
+      "status": "PASS"
+    },
+    {
+      "actual": "[False, False]",
+      "expected": "equal",
+      "name": "agreement sector_a_closed",
+      "status": "PASS"
+    },
+    {
+      "actual": "[False, False]",
+      "expected": "equal",
+      "name": "agreement pre_a_closed",
+      "status": "PASS"
+    },
+    {
+      "actual": "[4.440892098500626e-16, 4.440892098500626e-16]",
+      "expected": "within 2e-08 scaled",
+      "name": "agreement maximum_endpoint_symmetry_error",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.1102230246251565e-16, 1.1102230246251565e-16]",
+      "expected": "within 2e-08 scaled",
+      "name": "agreement maximum_sample_symmetry_error",
+      "status": "PASS"
+    },
+    {
+      "actual": "[9.860761315262648e-32, 9.860761315262648e-32]",
+      "expected": "within 2e-08 scaled",
+      "name": "agreement maximum_convex_chord_violation",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.5974244787049213e-16, 1.5974244787049213e-16]",
+      "expected": "within 2e-08 scaled",
+      "name": "agreement maximum_midpoint_lower_envelope_violation",
+      "status": "PASS"
+    },
+    {
+      "actual": "[6.376313427723079e-16, 6.376313427723079e-16]",
+      "expected": "within 2e-08 scaled",
+      "name": "agreement maximum_integral_upper_envelope_violation",
+      "status": "PASS"
+    },
+    {
+      "actual": "[7.771561172376096e-16, 6.661338147750939e-16]",
+      "expected": "within 2e-08 scaled",
+      "name": "agreement maximum_shell_integral_identity_error",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.7263968032921184e-12, 1.7263968032921184e-12]",
+      "expected": "within 2e-08 scaled",
+      "name": "agreement maximum_quadrature_reconstruction_error",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.3877787807814457e-17, 1.3877787807814457e-17]",
+      "expected": "within 2e-08 scaled",
+      "name": "agreement maximum_kubo_modular_identity_error",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.4610968881346746, 1.461096888134664]",
+      "expected": "within 2e-08 scaled",
+      "name": "agreement maximum_shell",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.15358381458932, 2.1535838145893043]",
+      "expected": "within 2e-08 scaled",
+      "name": "agreement maximum_endpoint_modular_moment",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.360525986123478, 0.3605259861234754]",
+      "expected": "within 2e-08 scaled",
+      "name": "agreement maximum_midpoint_modular_moment",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.7305484440673373, 0.730548444067332]",
+      "expected": "within 2e-08 scaled",
+      "name": "agreement maximum_integrated_modular_shell",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.4350091748643474e-16, 2.4350091748643474e-16]",
+      "expected": "within 2e-08 scaled",
+      "name": "agreement minimum_endpoint_modular_moment",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.4350091748643474e-16, 2.4350091748643474e-16]",
+      "expected": "within 2e-08 scaled",
+      "name": "agreement minimum_midpoint_modular_moment",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.3946605756512416e-16, 2.3946605756512416e-16]",
+      "expected": "within 2e-08 scaled",
+      "name": "agreement minimum_integrated_modular_shell",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.9594837421464463, 0.9594837421464463]",
+      "expected": "within 2e-08 scaled",
+      "name": "agreement maximum_midpoint_to_integral_ratio",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.9240035972845281, 0.924003597284528]",
+      "expected": "within 2e-08 scaled",
+      "name": "agreement maximum_integral_to_endpoint_ratio",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.0891722777251956e-13, 1.0891722777251956e-13]",
+      "expected": "within 2e-08 scaled",
+      "name": "agreement maximum_bond_unitary_factorization_error",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.0, 0.0]",
+      "expected": "within 2e-08 scaled",
+      "name": "agreement maximum_kubo_weight_asymmetry",
+      "status": "PASS"
+    },
+    {
+      "actual": "[3.6452675812342155e-14, 3.6452675812342155e-14]",
+      "expected": "within 2e-08 scaled",
+      "name": "agreement minimum_kubo_weight",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2, 2]",
+      "expected": "equal",
+      "name": "regime count",
+      "status": "PASS"
+    },
+    {
+      "actual": "['edge', 'edge']",
+      "expected": "equal",
+      "name": "regime 0 shape",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2, 2]",
+      "expected": "equal",
+      "name": "regime 0 volume",
+      "status": "PASS"
+    },
+    {
+      "actual": "[256, 256]",
+      "expected": "equal",
+      "name": "regime 0 contexts",
+      "status": "PASS"
+    },
+    {
+      "actual": "[256, 256]",
+      "expected": "equal",
+      "name": "regime 0 expected_contexts",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.15358381458932, 2.1535838145893043]",
+      "expected": "within 2e-08 scaled",
+      "name": "regime 0 maximum_endpoint",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.360525986123478, 0.3605259861234754]",
+      "expected": "within 2e-08 scaled",
+      "name": "regime 0 maximum_midpoint",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.7305484440673373, 0.730548444067332]",
+      "expected": "within 2e-08 scaled",
+      "name": "regime 0 maximum_integral",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.4610968881346746, 1.461096888134664]",
+      "expected": "within 2e-08 scaled",
+      "name": "regime 0 maximum_shell",
+      "status": "PASS"
+    },
+    {
+      "actual": "['square', 'square']",
+      "expected": "equal",
+      "name": "regime 1 shape",
+      "status": "PASS"
+    },
+    {
+      "actual": "[4, 4]",
+      "expected": "equal",
+      "name": "regime 1 volume",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2304, 2304]",
+      "expected": "equal",
+      "name": "regime 1 contexts",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2304, 2304]",
+      "expected": "equal",
+      "name": "regime 1 expected_contexts",
+      "status": "PASS"
+    },
+    {
+      "actual": "[5.410254232597811e-16, 5.410254232597811e-16]",
+      "expected": "within 2e-08 scaled",
+      "name": "regime 1 maximum_endpoint",
+      "status": "PASS"
+    },
+    {
+      "actual": "[5.41025423259781e-16, 5.41025423259781e-16]",
+      "expected": "within 2e-08 scaled",
+      "name": "regime 1 maximum_midpoint",
+      "status": "PASS"
+    },
+    {
+      "actual": "[5.852618308375983e-16, 5.852618308375983e-16]",
+      "expected": "within 2e-08 scaled",
+      "name": "regime 1 maximum_integral",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.2305050788763061e-15, 1.2305050788763061e-15]",
+      "expected": "within 2e-08 scaled",
+      "name": "regime 1 maximum_shell",
+      "status": "PASS"
+    },
+    {
+      "actual": "open",
+      "expected": "all limiting/QFT flags false",
+      "name": "scope firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'status': 'PASS', 'command': 'lake env lean Tect/R380.lean', 'returncode': 0, 'output': ''}",
+      "expected": "PASS",
+      "name": "Lean compile",
+      "status": "PASS"
+    }
+  ],
+  "audit_id": "PA-CP1-ST8-Q3LOCK-LOCAL-Q2-KUBO-MORI-RENYI-INTERPOLATION-BRIDGE",
+  "boundary": "Finite actual-Q3 edge and square doubled-bond Gibbs proxies with all prefixes, translated sites, signs and adjoints on the declared cutoffs. Interpolation convexity, midpoint/endpoints and shell integral are checked numerically and in Lean; source/volume/cutoff/beta uniformity, common core, common alpha, OS/KMS/GNS dynamics, gap, continuum, C6, Sector-A and Pre-A remain open.",
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "derived": {
+    "independent": {
+      "c6_closed": false,
+      "common_alpha_closed": false,
+      "common_core_closed": false,
+      "context_count": 2560,
+      "continuum_closed": false,
+      "endpoint_shell_upper_bound_finite_checked": true,
+      "expected_contexts": 2560,
+      "kms_gns_gap_closed": false,
+      "maximum_bond_unitary_factorization_error": 1.0891722777251956e-13,
+      "maximum_convex_chord_violation": 9.860761315262648e-32,
+      "maximum_endpoint_modular_moment": 2.1535838145893043,
+      "maximum_endpoint_symmetry_error": 4.440892098500626e-16,
+      "maximum_integral_to_endpoint_ratio": 0.924003597284528,
+      "maximum_integral_upper_envelope_violation": 6.376313427723079e-16,
+      "maximum_integrated_modular_shell": 0.730548444067332,
+      "maximum_kubo_modular_identity_error": 1.3877787807814457e-17,
+      "maximum_kubo_weight_asymmetry": 0.0,
+      "maximum_midpoint_lower_envelope_violation": 1.5974244787049213e-16,
+      "maximum_midpoint_modular_moment": 0.3605259861234754,
+      "maximum_midpoint_to_integral_ratio": 0.9594837421464463,
+      "maximum_quadrature_reconstruction_error": 1.7263968032921184e-12,
+      "maximum_sample_symmetry_error": 1.1102230246251565e-16,
+      "maximum_shell": 1.461096888134664,
+      "maximum_shell_integral_identity_error": 6.661338147750939e-16,
+      "midpoint_shell_lower_bound_finite_checked": true,
+      "minimum_endpoint_modular_moment": 2.4350091748643474e-16,
+      "minimum_integrated_modular_shell": 2.3946605756512416e-16,
+      "minimum_kubo_weight": 3.6452675812342155e-14,
+      "minimum_midpoint_modular_moment": 2.4350091748643474e-16,
+      "pre_a_closed": false,
+      "quadrature_nodes": 12,
+      "regimes": [
+        {
+          "bond_term_indices": [
+            2
+          ],
+          "contexts": 256,
+          "cutoffs": [
+            3,
+            6
+          ],
+          "expected_contexts": 256,
+          "maximum_endpoint": 2.1535838145893043,
+          "maximum_integral": 0.730548444067332,
+          "maximum_midpoint": 0.3605259861234754,
+          "maximum_shell": 1.461096888134664,
+          "shape": "edge",
+          "sites": [
+            0,
+            1
+          ],
+          "volume": 2
+        },
+        {
+          "bond_term_indices": [
+            4,
+            5,
+            6,
+            7
+          ],
+          "contexts": 2304,
+          "cutoffs": [
+            2
+          ],
+          "expected_contexts": 2304,
+          "maximum_endpoint": 5.410254232597811e-16,
+          "maximum_integral": 5.852618308375983e-16,
+          "maximum_midpoint": 5.41025423259781e-16,
+          "maximum_shell": 1.2305050788763061e-15,
+          "shape": "square",
+          "sites": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "volume": 4
+        }
+      ],
+      "renyi_interpolation_finite_checked": true,
+      "sample_points": [
+        0.0,
+        0.25,
+        0.5,
+        0.75,
+        1.0
+      ],
+      "sector_a_closed": false,
+      "shape_uniformity_proved": false,
+      "shell_integral_identity_finite_checked": true,
+      "source_uniformity_proved": false,
+      "theta": 0.5,
+      "weighted_cutoff_uniformity_proved": false,
+      "weighted_volume_uniformity_proved": false
+    },
+    "max_primary_independent_numeric_difference": 1.554312234475219e-14,
+    "primary": {
+      "c6_closed": false,
+      "common_alpha_closed": false,
+      "common_core_closed": false,
+      "context_count": 2560,
+      "continuum_closed": false,
+      "endpoint_shell_upper_bound_finite_checked": true,
+      "expected_contexts": 2560,
+      "kms_gns_gap_closed": false,
+      "maximum_bond_gibbs_centering_error": 3.7968760080442365e-16,
+      "maximum_bond_unitary_factorization_error": 1.0891722777251956e-13,
+      "maximum_convex_chord_violation": 9.860761315262648e-32,
+      "maximum_endpoint_modular_moment": 2.15358381458932,
+      "maximum_endpoint_symmetry_error": 4.440892098500626e-16,
+      "maximum_integral_to_endpoint_ratio": 0.9240035972845281,
+      "maximum_integral_upper_envelope_violation": 6.376313427723079e-16,
+      "maximum_integrated_modular_shell": 0.7305484440673373,
+      "maximum_kubo_modular_identity_error": 1.3877787807814457e-17,
+      "maximum_kubo_weight_asymmetry": 0.0,
+      "maximum_midpoint_lower_envelope_violation": 1.5974244787049213e-16,
+      "maximum_midpoint_modular_moment": 0.360525986123478,
+      "maximum_midpoint_to_integral_ratio": 0.9594837421464463,
+      "maximum_quadrature_reconstruction_error": 1.7263968032921184e-12,
+      "maximum_sample_symmetry_error": 1.1102230246251565e-16,
+      "maximum_shell": 1.4610968881346746,
+      "maximum_shell_integral_identity_error": 7.771561172376096e-16,
+      "midpoint_shell_lower_bound_finite_checked": true,
+      "minimum_endpoint_modular_moment": 2.4350091748643474e-16,
+      "minimum_integrated_modular_shell": 2.3946605756512416e-16,
+      "minimum_kubo_weight": 3.6452675812342155e-14,
+      "minimum_midpoint_modular_moment": 2.4350091748643474e-16,
+      "pre_a_closed": false,
+      "quadrature_nodes": 12,
+      "regimes": [
+        {
+          "bond_term_indices": [
+            2
+          ],
+          "contexts": 256,
+          "cutoffs": [
+            3,
+            6
+          ],
+          "expected_contexts": 256,
+          "maximum_endpoint": 2.15358381458932,
+          "maximum_integral": 0.7305484440673373,
+          "maximum_midpoint": 0.360525986123478,
+          "maximum_shell": 1.4610968881346746,
+          "shape": "edge",
+          "sites": [
+            0,
+            1
+          ],
+          "volume": 2
+        },
+        {
+          "bond_term_indices": [
+            4,
+            5,
+            6,
+            7
+          ],
+          "contexts": 2304,
+          "cutoffs": [
+            2
+          ],
+          "expected_contexts": 2304,
+          "maximum_endpoint": 5.410254232597811e-16,
+          "maximum_integral": 5.852618308375983e-16,
+          "maximum_midpoint": 5.41025423259781e-16,
+          "maximum_shell": 1.2305050788763061e-15,
+          "shape": "square",
+          "sites": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "volume": 4
+        }
+      ],
+      "renyi_interpolation_finite_checked": true,
+      "sample_points": [
+        0.0,
+        0.25,
+        0.5,
+        0.75,
+        1.0
+      ],
+      "sector_a_closed": false,
+      "shape_uniformity_proved": false,
+      "shell_integral_identity_finite_checked": true,
+      "source_uniformity_proved": false,
+      "theta": 0.5,
+      "weighted_cutoff_uniformity_proved": false,
+      "weighted_volume_uniformity_proved": false
+    }
+  },
+  "exploration_id": "EXP-001222",
+  "lean": {
+    "command": "lake env lean Tect/R380.lean",
+    "output": "",
+    "returncode": 0,
+    "status": "PASS"
+  },
+  "provenance": {
+    "independent_sha256": "8fd89a7f9f06442bb6ee4c3f77f0083245a31f54fe8cdadadc0ee6ccb46b028d",
+    "lean_registry_sha256": "6cb1e1337e76a7a38a6997a0a0e50f856c6ff3657d286f58679127ad47ef7ad4",
+    "lean_sha256": "08e47473f5727913795b8e1323ee5eee714d536cfb549b7f09fd6c5f39429249",
+    "manifest_sha256": "c86eab8bc56f899dd0f5dc73b95ee65dd0b50e5d0913d4ffe7424a0feb1a5411",
+    "primary_sha256": "454480e2568f9286c54b15bd7d5c12ffbb35687ad599ac032465131eca4b0b52"
+  },
+  "recorded_at": "2026-08-28T10:08:53.583886Z",
+  "result_id": "R-380",
+  "run_kind": "integrated",
+  "schema": "tect/foundation-audit/1.0",
+  "task_id": "T-054",
+  "verdict": "PASS"
+}
