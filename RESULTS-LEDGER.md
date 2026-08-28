@@ -42,6 +42,7 @@ policy in `governance/development-history.md`.
 | [R-376](#r-376) | Hilbert-Schmidt Lipschitz bridge for the capped Liouvillian kernel | R-376 v1.0 is a T0 claim-nonbearing finite operator-interface checkpoint under EXP-001218. A noncommuting cutoff-2 edge Liouvillian stress gives maximum full-kernel Frobenius ratio 0.9787544362168733 and 64-layer ratio 0.9755896836319287 with 76/76 integrated assertions; general Schatten-2 proof, operator-norm locality, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
 | [R-377](#r-377) | Gap-free odd-Matsubara resolvent telescoping budget | R-377 v1.0 is a T0 claim-nonbearing finite resolvent-interface checkpoint under EXP-001219. The exact positive-resolvent difference identity and its 64-layer budget pass 122/122 integrated assertions with Lean R377; the accumulated finite budget ratio is 0.9895313426497929 and the absolute-value square-root debt is recorded separately. Uniform locality, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
 | [R-382](#r-382) | Increasing-cutoff endpoint modular moment stress | R-382 v1.0 is a T0 claim-nonbearing finite cutoff-profile diagnostic under EXP-001224. The R-381 endpoint-energy bridge passes across 2816 all-prefix actual-Q3 contexts with Lean R382; edge max M_0 grows from 2.733031855844076 at d=3 to 41.64826651661874 at d=6 and max M_2 from 0.008378198414559081 to 17.719559304500326, with d=5 to d=6 ratios 8.855033106195243 and 36.38049903040583. This is finite growth evidence only; uniform M_0/M_2 control, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
+| [R-385](#r-385) | Finite relative-modular cocycle and resolvent-core Cook checkpoint | R-385 v1.0 is a T0 claim-nonbearing finite interface checkpoint under EXP-001228. The ordered relative cocycle, finite derivative, composition law, same-q resolvent identity and two-sided Gibbs-weighted orientations pass 3664/3664 primary, 608/608 independent, 87/87 integrated assertions on 608 V=2/V=4 Q3 contexts; hostile reversed orientation is rejected and Lean R385 compiles. Phase-local BKM control, l1 shell summability, all uniformities, direct Cook convergence, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
 | [R-384](#r-384) | Two-scale filter-removal corridor | R-384 v1.0 is a T0 claim-nonbearing finite two-scale corridor under EXP-001226. For the reference filter Y_1=X/(1+u), the M0 and endpoint removal envelopes split into low-frequency and high-frequency terms and pass across 2816 actual-Q3 contexts with independent and Lean checks; finite low-frequency M0 and the raw cutoff-growth warning remain, so filter removal, common-core uniformity and all QFT/limit conclusions stay open |
 | [R-383](#r-383) | Frequency-adapted endpoint filter | R-383 v1.0 is a T0 claim-nonbearing finite spectral-filter diagnostic under EXP-001225. The filter profiles attenuate the energy-weighted endpoint shell (reference s=1: max filtered M_2=0.24919044409881133 and endpoint=0.09311499130513236) while leaving the d=6 low-frequency M_0 at 41.57042344053405. Primary/independent/integrated and Lean R383 checks pass; filter removal, common-core and all QFT/limit conclusions remain open |
 | [R-381](#r-381) | Endpoint modular moment to energy Cauchy bridge | R-381 v1.0 is a T0 claim-nonbearing finite Gibbs energy-moment interface checkpoint under EXP-001223. The R-380 endpoint modular moment equals a beta-weighted energy-difference first moment and is bounded by a state-weighted quadratic moment across 2560 all-prefix actual-Q3 contexts; the integrated verifier passes 61/61 with Lean R381, while uniform M0/M2 control remains open |
@@ -623,6 +624,40 @@ No new negative result, tier change, or R-376 PDF is issued.
 
 **Proven in:** manifest, certificate, Lean entrypoint, primary script,
 independent script, integrated verifier, scope note, and saved run artefacts.
+
+<a id="r-385"></a>
+### R-385 -- Finite relative-modular cocycle and resolvent-core Cook checkpoint
+
+**Result ID.** R-385 is a T0, claim-nonbearing finite interface checkpoint
+under EXP-001228.
+
+**Statement.** For every actual term prefix on the registered V=2 edge and
+V=4 square, with `H_prime=H+B`, the ordered relative product
+`U(t)=exp(+i t H_prime) exp(-i t H)` is checked together with its finite
+derivative, cocycle composition law and same-q resolvent identity.  Both
+`B A_z` and `A_z B`, their commutator and the adjoint seed are evaluated in
+two-sided Gibbs-weighted rows.
+
+**Verification.** The primary lane passes 3664/3664 assertions and the
+non-importing independent lane passes 608/608 aggregate assertions.  The
+integrated verifier passes 87/87 and Lean R385 compiles.  Coverage is 608
+contexts (96 at V=2 and 512 at V=4), 22 prefixes and 10 bond prefixes, with
+both orders, signs, beta values, translated sites, resolvent imaginaries,
+composition pairs and adjoints.  Maximum residuals are `2.8751206244079863e-14`
+(relative intertwining), `1.3568796804866375e-14` (cocycle),
+`2.850589646690371e-10` (derivative), `1.708982179746617e-16`
+(resolvent) and `1.0872551803121098e-14` (unitarity).  The maximum weighted
+commutator is `0.7980860666930905`.  The hostile reversed orientation has
+residual `0.12803849472459028` and is rejected above `1.0e-7`.
+
+**Boundary.** The finite rows are diagnostics, not point-norm or
+thermodynamic estimates.  No phase-local BKM estimate, boundary-shell `l1`
+summability, source/cutoff/volume/shape uniformity, invariant domain, direct
+`D`/`delta-D` Cook limit, common alpha, Hamiltonian-to-OS/KMS identification,
+gap, continuum, C6, Sector-A or Pre-A closure follows.  No new negative
+result, tier change or proof-note PDF is issued.
+
+**Proven in:** [R-385 certificate](strategy/pre-a-cp1-st8-q3lock-relative-modular-cocycle-resolvent-cook-finite-checkpoint-certificate-260830.md), [Lean entrypoint](verification/lean/Tect/R385.lean), primary/independent/hostile scripts, integrated verifier, [scope note](claims/C6-SPACETIME-SIGNATURE/notes/q3lock-relative-modular-cocycle-resolvent-cook-finite-checkpoint-boundary-260830.md), and saved run artefacts.
 
 <a id="r-384"></a>
 ### R-384 -- Two-scale filter-removal corridor

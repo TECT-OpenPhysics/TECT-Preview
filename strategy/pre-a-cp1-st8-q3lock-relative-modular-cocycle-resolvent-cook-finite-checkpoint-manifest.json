@@ -1,0 +1,150 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-RELATIVE-MODULAR-COCYCLE-RESOLVENT-COOK-FINITE-v0",
+  "result_id": "R-385",
+  "title": "Finite relative-modular cocycle and resolvent-core Cook checkpoint",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001228",
+  "claim_bearing": false,
+  "parent_explorations": ["EXP-001227", "EXP-001226", "EXP-001203"],
+  "parent_authorities": [
+    "strategy/pre-a-cp1-st8-q3lock-relative-modular-cocycle-resolvent-cook-route-manifest.json",
+    "strategy/pre-a-cp1-st8-q3lock-local-q2-kubo-mori-two-scale-filter-removal-corridor-manifest.json",
+    "strategy/pre-a-cp1-st8-q3lock-manifest.json"
+  ],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-RESOLVENT-ALGEBRA-EXACT-POLYNOMIAL-COMMON-ALPHA-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+  ],
+  "question": "On the registered finite Q3 edge and square, do the exact relative cocycle, its derivative, its cocycle composition law and resolvent-core identities survive every term prefix, order, time sign, beta value, translated seed and adjoint orientation?",
+  "finite_fixture": {
+    "volume_values": [2, 4],
+    "oscillator_dimension": 3,
+    "graph_edges_by_volume": {
+      "2": [[0, 1]],
+      "4": [[0, 1], [0, 2], [1, 3], [2, 3]]
+    },
+    "chi": "1",
+    "r": "-1",
+    "g": "0.6",
+    "c": "0.6",
+    "lambda": "0.1",
+    "beta_values": ["1/2", "1"],
+    "hbar": "1",
+    "resolvent_imaginary_values": ["1/2", "1"],
+    "time_magnitudes": ["1/6", "1/3"],
+    "composition_pairs": [["1/6", "1/6"], ["1/6", "-1/6"], ["-1/6", "-1/6"]],
+    "derivative_step": "1/100000",
+    "alpha_tolerance": 1e-9,
+    "cocycle_tolerance": 1e-9,
+    "resolvent_tolerance": 1e-9,
+    "unitarity_tolerance": 1e-9,
+    "derivative_tolerance": 1e-4,
+    "agreement_tolerance": 1e-7,
+    "commutator_floor": 1e-10,
+    "finite_only": true
+  },
+  "model": {
+    "graph": "V=2 edge and V=4 square from the canonical Q3 finite fixture",
+    "terms": "all onsite terms followed by lexicographic Q3 bond terms",
+    "relative_cocycle": "U(t)=exp(+i t H_prime/hbar) exp(-i t H/hbar), H_prime=H+B",
+    "derivative": "dU/dt=(i/hbar) alpha_prime_t(B) U",
+    "cocycle": "U(t+s)=U(t) alpha_t(U(s))",
+    "resolvent_seed": "A_z=(z I-q_j)^(-1), z=i*eta, eta>0",
+    "state_weight": "||X||_(2,rho)^2=Tr(rho X^* X)+Tr(rho X X^*) with rho Gibbs for H_prime",
+    "orientations": "B A_z and A_z B, with the commutator and both A_z and A_z^*"
+  },
+  "coverage": {
+    "orders": ["forward", "reverse"],
+    "all_term_prefixes": true,
+    "both_time_signs": true,
+    "all_translated_sites": true,
+    "both_beta_values": true,
+    "both_resolvent_imaginaries": true,
+    "both_adjoint_seeds": true,
+    "all_composition_pairs": true,
+    "bond_and_onsite_prefixes": true
+  },
+  "scope": {
+    "finite_relative_cocycle_identity_closed": true,
+    "finite_cocycle_derivative_identity_closed": true,
+    "finite_cocycle_composition_closed": true,
+    "finite_resolvent_identity_closed": true,
+    "finite_two_orientation_state_weighted_rows_closed": true,
+    "finite_all_prefix_order_sign_beta_seed_grid_closed": true,
+    "boundary_shell_l1_closed": false,
+    "phase_local_bkm_estimate_closed": false,
+    "cutoff_uniformity_closed": false,
+    "source_uniformity_closed": false,
+    "volume_uniformity_closed": false,
+    "shape_uniformity_closed": false,
+    "operator_domain_embedding_closed": false,
+    "direct_D_cauchy_closed": false,
+    "delta_D_cauchy_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "adversarial_review": [
+    {
+      "axis": "ordered cocycle",
+      "check": "The relative product uses exp(+i t H_prime) exp(-i t H) in the declared order; the reverse product is tested as a hostile mutation and is not silently accepted.",
+      "disposition": "UPHELD-FINITE"
+    },
+    {
+      "axis": "unbounded boundary",
+      "check": "The finite matrices are only a bounded truncation. No bounded-perturbation theorem or infinite-dimensional Cook theorem is inferred.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "prefix cancellation",
+      "check": "Every prefix is rebuilt and B is the next actual onsite or bond term; the bulk-difference shortcut is not substituted.",
+      "disposition": "UPHELD-FINITE"
+    },
+    {
+      "axis": "state topology",
+      "check": "The two-sided Gibbs norm is reported for both product orientations and both adjoint seeds; it is not called a point-norm or representation-independent bound.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "resolvent poles",
+      "check": "Every seed uses a nonzero imaginary spectral parameter, and the exact same-q resolvent identity is checked without commuting q with H.",
+      "disposition": "UPHELD-FINITE"
+    },
+    {
+      "axis": "QFT promotion",
+      "check": "Finite cocycle algebra does not establish shell summability, common alpha, OS/KMS/GNS dynamics, a gap, continuum, C6, Sector-A or Pre-A.",
+      "disposition": "UPHELD-OPEN"
+    }
+  ],
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R385.lean",
+    "theorem_markers": ["relative_cocycle_composition", "resolvent_difference_identity", "scope_fixture"],
+    "command": "lake env lean Tect/R385.lean",
+    "boundary": "Lean checks the abstract ordered group cocycle and scalar resolvent identity; finite matrices, state weights and all limits remain Python/open analysis."
+  },
+  "qft_interface": {
+    "closed": "The finite ordered cocycle identities and resolvent-seed algebra are now executable and independently checked on the declared edge/square prefixes.",
+    "open": "The actual Q3LOCK phase-local BKM estimate, l1 shell summability, cutoff/source/volume/shape uniformity, common core, direct D/delta-D Cauchy, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open.",
+    "tect_boundary": "Auxiliary Q3LOCK finite interface only; no production owner, physical-empty reference or Clay conclusion is supplied."
+  },
+  "artifacts": {
+    "primary_script": "codes/foundations/pre_a_cp1_st8_q3lock_relative_modular_cocycle_resolvent_cook_finite_checkpoint.py",
+    "independent_script": "codes/foundations/pre_a_cp1_st8_q3lock_relative_modular_cocycle_resolvent_cook_finite_checkpoint_independent.py",
+    "hostile_script": "codes/foundations/pre_a_cp1_st8_q3lock_relative_modular_cocycle_resolvent_cook_finite_checkpoint_hostile.py",
+    "integrated_verifier": "codes/foundations/pre_a_cp1_st8_q3lock_relative_modular_cocycle_resolvent_cook_finite_checkpoint_verify.py",
+    "lean": "verification/lean/Tect/R385.lean"
+  },
+  "boundary": "Claim-nonbearing finite checkpoint only. It proves no phase-local BKM estimate, no shell summability, no cutoff or thermodynamic limit, no operator-domain theorem, no common alpha, no OS/KMS/GNS reconstruction, no gap, no continuum, no C6, no Sector-A and no Pre-A result.",
+  "no_overclaim": "A finite pass validates the ordered algebra and the chosen weighted observable on two bounded Q3 truncations only. It is not evidence that the proposed boundary coefficient is summable or that the Q3LOCK dynamics exists in the thermodynamic limit.",
+  "recorded_by": "Codex"
+}

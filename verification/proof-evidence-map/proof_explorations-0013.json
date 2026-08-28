@@ -3346,6 +3346,127 @@
       "task_id": "T-054",
       "title": "Relative-modular cocycle and resolvent Cook bridge",
       "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "axis": "ordered cocycle",
+          "check": "The declared exp(+i t H_prime) exp(-i t H) order is used in both lanes; the reversed product is deliberately mutated and rejected.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "prefix and embedding",
+          "check": "Every prefix is rebuilt and the next actual onsite or bond term is used as B; no bulk-difference shortcut or unlisted halo is substituted.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "derivative convention",
+          "check": "The derivative is checked by a declared central finite difference and compared to the ordered alpha_prime_t(B) U expression; no commuting-B formula is used.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "resolvent pole",
+          "check": "All seeds use nonzero imaginary parameters and the same-q identity is evaluated without commuting q with H.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "state topology",
+          "check": "Both product orientations and both adjoint seeds are retained as two-sided finite Gibbs rows; they are not relabelled point-norm or representation-independent bounds.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "bounded truncation",
+          "check": "The oscillator matrices are finite and bounded. No form-domain, unbounded perturbation or infinite-dimensional Cook theorem is inferred.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "uniformity and QFT promotion",
+          "check": "The integrated scope firewall keeps shell summability, all uniformities, domain/Cook convergence, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A false.",
+          "disposition": "UPHELD-OPEN"
+        }
+      ],
+      "boundary": "T0 claim-nonbearing finite relative-modular cocycle checkpoint only. It proves no phase-local BKM estimate, shell summability, uniformity, domain embedding, direct Cook limit, common alpha, OS/KMS/GNS dynamics, gap, continuum, C6, Sector-A or Pre-A.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "R-385 advances EXP-001227 from a route design to a reproducible finite algebra/interface checkpoint. The ordered cocycle and resolvent bookkeeping survive the declared bounded grid, and the hostile lane demonstrates that product orientation is load-bearing. The nonzero weighted commutator is retained as a diagnostic rather than a smallness claim. No finite table supplies the missing phase-local BKM boundary estimate or l1 shell coefficient, so no thermodynamic, common-alpha or QFT gate closes.",
+      "evidence_refs": [
+        "strategy/pre-a-cp1-st8-q3lock-relative-modular-cocycle-resolvent-cook-finite-checkpoint-manifest.json#finite_fixture",
+        "strategy/pre-a-cp1-st8-q3lock-relative-modular-cocycle-resolvent-cook-finite-checkpoint-certificate-260830.md#Verification",
+        "codes/foundations/pre_a_cp1_st8_q3lock_relative_modular_cocycle_resolvent_cook_finite_checkpoint.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_relative_modular_cocycle_resolvent_cook_finite_checkpoint_independent.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_relative_modular_cocycle_resolvent_cook_finite_checkpoint_hostile.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_relative_modular_cocycle_resolvent_cook_finite_checkpoint_verify.py#run",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-primary-pre_a_cp1_st8_q3lock_relative_modular_cocycle_resolvent_cook_finite_checkpoint/primary.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-primary-pre_a_cp1_st8_q3lock_relative_modular_cocycle_resolvent_cook_finite_checkpoint/independent.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-primary-pre_a_cp1_st8_q3lock_relative_modular_cocycle_resolvent_cook_finite_checkpoint/hostile.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-primary-pre_a_cp1_st8_q3lock_relative_modular_cocycle_resolvent_cook_finite_checkpoint/integrated.json#lean",
+        "verification/lean/Tect/R385.lean#relative_cocycle_composition",
+        "claims/C6-SPACETIME-SIGNATURE/notes/q3lock-relative-modular-cocycle-resolvent-cook-finite-checkpoint-boundary-260830.md#R-385"
+      ],
+      "finding": "The primary lane passes 3664/3664 assertions, the non-importing independent lane passes 608/608 aggregate assertions, the integrated verifier passes 87/87, and Lean R385 compiles. The grid contains 608 contexts (96 on V=2 and 512 on V=4), 22 prefixes and 10 bond prefixes. Maximum residuals are 2.8751206244079863e-14 for relative intertwining, 1.3568796804866375e-14 for cocycle composition, 2.850589646690371e-10 for the finite-difference derivative, 1.708982179746617e-16 for the resolvent identity and 1.0872551803121098e-14 for unitarity. The maximum ordinary commutator norm is 0.6388765649999403 and the maximum weighted commutator is 0.7980860666930905. The hostile reversed orientation gives residual 0.12803849472459028 above the 1.0e-7 threshold and is rejected. Primary and independent numerical fields agree exactly in the integrated run.",
+      "formal_integration": {
+        "events": [
+          "20260830-relative-modular-cocycle-and-resolvent-core-coo"
+        ],
+        "lean": "R385 PASS",
+        "negatives": [],
+        "no_changelog_event": false,
+        "no_new_negative": true,
+        "no_new_result": false,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "results": [
+          "R-385"
+        ]
+      },
+      "formal_refs": {
+        "events": [
+          "20260830-relative-modular-cocycle-and-resolvent-core-coo"
+        ],
+        "negatives": [],
+        "results": [
+          "R-385"
+        ]
+      },
+      "gate_ids": [
+        "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+        "PA-CP1-ST8-Q3LOCK-RESOLVENT-ALGEBRA-EXACT-POLYNOMIAL-COMMON-ALPHA-CLOSURE",
+        "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+      ],
+      "id": "EXP-001228",
+      "method": [
+        "Build H_prime=H+B from every actual onsite or Q3 bond prefix and evaluate U(t)=exp(+i t H_prime) exp(-i t H) without importing the primary implementation into the independent lane.",
+        "Check the relative intertwining identity, the finite-difference derivative, all declared cocycle composition pairs, and the same-q resolvent difference identity for nonzero imaginary spectral parameters.",
+        "Evaluate both B A_z and A_z B, their commutator and the adjoint seed in the two-sided Gibbs weighted rows for beta 1/2 and 1.",
+        "Run a hostile reversed-product mutation and require a non-roundoff residual, then compile Lean R385 for the abstract ordered cocycle and scalar resolvent identity.",
+        "Keep phase-local BKM control, l1 shell summability, cutoff/source/volume/shape uniformity, the operator domain, direct D/delta-D Cauchy convergence, common alpha and every QFT promotion flag open."
+      ],
+      "next_action": "Derive the actual phase-local BKM boundary estimate for [B,R_z(A)] and its modular derivative on an explicitly invariant form/resolvent core, with constants uniform in source, cutoff, volume and exhaustion shape and with both orientations. If the resulting coefficients are l1-summable, integrate the relative cocycle by Cook to obtain direct D and delta-D Cauchy convergence; otherwise record the precise route-specific obstruction and retire only this route.",
+      "no_overclaim": "Finite ordered identities and matching weighted rows on two bounded Q3 truncations do not establish an infinite-volume dynamics or a QFT result. The nonzero commutator values are diagnostics, not convergence bounds.",
+      "provenance": "contemporaneous",
+      "question": "On the registered finite Q3 edge and square, do the exact ordered relative cocycle, its derivative, its composition law, its same-q resolvent identity and both state-weighted orientations survive every actual prefix, order, time sign, beta value, translated seed and adjoint orientation?",
+      "recorded_at": "2026-08-30T04:00:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001227",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001226",
+          "relation": "alternative_to"
+        },
+        {
+          "id": "EXP-001203",
+          "relation": "alternative_to"
+        }
+      ],
+      "reviewed_on": "2026-08-28",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Finite relative-modular cocycle and resolvent-core Cook checkpoint",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",

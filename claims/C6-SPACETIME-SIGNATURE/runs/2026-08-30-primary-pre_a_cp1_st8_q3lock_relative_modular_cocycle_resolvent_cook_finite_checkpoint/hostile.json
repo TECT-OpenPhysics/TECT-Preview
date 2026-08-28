@@ -1,0 +1,32 @@
+{
+  "assertions": [
+    {
+      "actual": 3.0743471591117474e-15,
+      "expected": "<=1e-09",
+      "name": "declared orientation",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.12803849472459028,
+      "expected": ">1.0000000000000001e-07",
+      "name": "reversed orientation caught",
+      "status": "PASS"
+    }
+  ],
+  "audit_id": "PA-CP1-ST8-Q3LOCK-RELATIVE-MODULAR-COCYCLE-RESOLVENT-COOK-FINITE-CHECKPOINT-HOSTILE",
+  "boundary": "Hostile finite mutation check only; no Q3 limit or common dynamics conclusion.",
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "derived": {
+    "correct_residual": 3.0743471591117474e-15,
+    "finite_only": true,
+    "mutation_threshold": 1.0000000000000001e-07,
+    "wrong_orientation_rejected": true,
+    "wrong_orientation_residual": 0.12803849472459028
+  },
+  "exploration_id": "EXP-001228",
+  "result_id": "R-385",
+  "run_kind": "hostile",
+  "schema": "tect/foundation-audit/1.0",
+  "task_id": "T-054",
+  "verdict": "PASS"
+}
