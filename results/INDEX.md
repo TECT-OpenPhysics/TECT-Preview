@@ -5,10 +5,11 @@
 
 Authorities: `RESULTS-LEDGER.md`.
 
-**222 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
+**223 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
 
 | ID | Result | Tier/scope |
 |---|---|---|
+| [`R-389`](../RESULTS-LEDGER.md#r-389) | Spectral-window kinetic corridor | T0 |
 | [`R-388`](../RESULTS-LEDGER.md#r-388) | State-weighted kinetic resolvent corridor | T0 |
 | [`R-387`](../RESULTS-LEDGER.md#r-387) | Anchored nested-commutator kinetic isolation | T0 |
 | [`R-386`](../RESULTS-LEDGER.md#r-386) | Coordinate-resolvent zero-time commutator anchor | T0 |
@@ -33,7 +34,6 @@ Authorities: `RESULTS-LEDGER.md`.
 | [`R-367`](../RESULTS-LEDGER.md#r-367) | Larger-cutoff and volume stress for the fractional Liouvillian shell | T0 |
 | [`R-366`](../RESULTS-LEDGER.md#r-366) | Finite fractional Liouvillian square-function shell bound | T0 |
 | [`R-365`](../RESULTS-LEDGER.md#r-365) | Finite spectral-gap commutator and Duhamel shell bound | T0 |
-| [`R-364`](../RESULTS-LEDGER.md#r-364) | Finite bond-spectral pinching and commutant shell reduction | T0 |
 
 Search without loading the full ledger:
 

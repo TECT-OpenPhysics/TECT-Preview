@@ -5,7 +5,7 @@ Compact generated reader surface. The append-only authority is
 record 568 / commit `4db22f4e` and no longer grows.
 Post-cutover full bodies live exactly once in bounded pages under `pages/`.
 
-**729 accepted events** · latest 25 shown below · machine locator: `index.json`
+**730 accepted events** · latest 25 shown below · machine locator: `index.json`
 
 Search the complete authority without loading every page:
 
@@ -17,6 +17,7 @@ python verification/scripts/changelog.py search --text <phrase>
 
 | Date | Event | Claims | Full entry |
 |---|---|---|---|
+| 2026-08-30 | `20260830-spectral-window-kinetic-corridor-2026-08-30` — [Spectral-window kinetic corridor] - 2026-08-30 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000719-000768.md#20260830-spectral-window-kinetic-corridor-2026-08-30) |
 | 2026-08-30 | `20260830-state-weighted-kinetic-resolvent-corridor-2026` — [State-weighted kinetic resolvent corridor] - 2026-08-30 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000719-000768.md#20260830-state-weighted-kinetic-resolvent-corridor-2026) |
 | 2026-08-30 | `20260830-anchored-nested-commutator-kinetic-isolation-20` — [Anchored nested-commutator kinetic isolation] - 2026-08-30 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000719-000768.md#20260830-anchored-nested-commutator-kinetic-isolation-20) |
 | 2026-08-30 | `20260830-coordinate-resolvent-zero-time-commutator-ancho` — [Coordinate-resolvent zero-time commutator anchor] - 2026-08-30 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000719-000768.md#20260830-coordinate-resolvent-zero-time-commutator-ancho) |
@@ -41,7 +42,6 @@ python verification/scripts/changelog.py search --text <phrase>
 | 2026-08-27 | `20260827-r-367-larger-cutoff-and-volume-fractional-liouv` — [R-367 larger-cutoff and volume fractional Liouvillian stress] - 2026-08-27 | C6-SPACETIME-SIGNATURE,EXP-001209,R-367 | [bounded page](pages/000669-000718.md#20260827-r-367-larger-cutoff-and-volume-fractional-liouv) |
 | 2026-08-27 | `20260827-r-366-finite-fractional-liouvillian-square-func` — [R-366 finite fractional Liouvillian square-function shell bound] - 2026-08-27 | C6-SPACETIME-SIGNATURE,EXP-001208,R-366 | [bounded page](pages/000669-000718.md#20260827-r-366-finite-fractional-liouvillian-square-func) |
 | 2026-08-27 | `20260827-r-365-finite-spectral-gap-commutator-and-duhame` — [R-365 finite spectral-gap commutator and Duhamel shell bound] - 2026-08-27 | C6-SPACETIME-SIGNATURE, EXP-001207, R-365 | [bounded page](pages/000669-000718.md#20260827-r-365-finite-spectral-gap-commutator-and-duhame) |
-| 2026-08-27 | `20260827-r-364-finite-bond-spectral-pinching-and-commuta` — [R-364 finite bond-spectral pinching and commutant shell reduction] - 2026-08-27 | C6-SPACETIME-SIGNATURE, EXP-001206, R-364 | [bounded page](pages/000669-000718.md#20260827-r-364-finite-bond-spectral-pinching-and-commuta) |
 
 ## Post-cutover pages
 
@@ -49,7 +49,7 @@ Each full event body after the cutover occurs in exactly one page.
 
 | Ordinals | Events | Page |
 |---|---:|---|
-| 719–729 | 11 | [000719-000768.md](pages/000719-000768.md) |
+| 719–730 | 12 | [000719-000768.md](pages/000719-000768.md) |
 | 669–718 | 50 | [000669-000718.md](pages/000669-000718.md) |
 | 619–668 | 50 | [000619-000668.md](pages/000619-000668.md) |
 | 569–618 | 50 | [000569-000618.md](pages/000569-000618.md) |
