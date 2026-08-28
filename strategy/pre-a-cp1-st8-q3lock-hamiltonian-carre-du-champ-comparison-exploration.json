@@ -1,0 +1,73 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001247",
+  "title": "Finite Hamiltonian carre-du-champ comparison for physical-coordinate likelihood gradients",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+  ],
+  "related": [
+    {"id": "EXP-001246", "relation": "continues"},
+    {"id": "EXP-001244", "relation": "continues"},
+    {"id": "EXP-001230", "relation": "alternative_to"}
+  ],
+  "question": "Does the physical-coordinate conditional form track the Hamiltonian-derived kinetic carre-du-champ on the actual Q3 likelihood gradients, after the coordinate-only potential terms are removed by commutation?",
+  "method": [
+    "Reconstruct the finite Q3 Gibbs state, every split-history prefix and both history adjoints from the R-399 fixture.",
+    "For every oriented collar row, form the conditional coordinate law pi and the actual likelihood multiplier f=q_prefix/p_prefix.",
+    "Compute D_q(f) with oscillator coordinate spacings and E_kin(f)=(2 chi)^(-1) Tr(diag(pi)[p,F]^*[p,F]) in the q basis.",
+    "Check a coordinate-only onsite potential and spatial Q3 bond commutator, then report the finite E_kin/D_q interval without treating it as a uniform constant.",
+    "Repeat both orientations, source/history signs, split orders, prefixes and adjoints; use a momentum-to-coordinate hostile mutation and a non-importing independent lane, then compile Lean R402."
+  ],
+  "finding": "The finite Hamiltonian-derived kinetic form is nonnegative on all 71680 conditional rows, and the coordinate-only potential commutator residual is zero on every declared system.  The primary lane passes 5410/5410, the independent lane 1815/1815, the hostile lane 4/4, the integrated verifier 33/33 and Lean R402 compiles.  Of 71680 rows, 57680 have nonzero coordinate form and their E_kin/D_q ratios range from 1.0087179063711833 to 11.074061483593928.  The q-for-p hostile mutation gives zero while a selected genuine kinetic row is positive.",
+  "decision_reason": "R-402 advances R-401 from a proposed coordinate metric to a finite interface tied to the actual Q3 kinetic generator: coordinate potentials commute with F=f(q), while the p commutator is nonzero on actual history likelihoods.  The broad finite ratio interval and finite oscillator boundary prevent an analytic comparison claim.  The route remains advanced only at T0 finite-interface level.",
+  "adversarial_review": [
+    {"axis": "form identity versus comparison", "check": "D_q and E_kin are computed as separate quadratic forms and only their finite ratio is reported.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "potential contamination", "check": "A site potential and a Q3 bond are checked to commute with F=f(q); non-coordinate observables remain outside scope.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "truncation boundary", "check": "Finite oscillator matrices are bounded and the observed ratio is not promoted to a cutoff-independent constant.", "disposition": "UPHELD-OPEN"},
+    {"axis": "orientation and history coverage", "check": "Both collars, source/history signs, split orders, prefixes and adjoints are included and rebuilt independently.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "kinetic mutation", "check": "Replacing p by q makes the commutator vanish while the genuine kinetic form is positive on a selected row.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "QFT promotion", "check": "No uniform comparison, common core, common alpha, OS/KMS/GNS dynamics, gap, continuum, C6, Sector-A or Pre-A closure follows.", "disposition": "UPHELD-OPEN"}
+  ],
+  "next_action": "Prove or refute an analytic two-sided E_kin versus D_q comparison on a cutoff-independent Hamiltonian common core, with source-, volume-, cutoff-, phase-, orientation- and shape-uniform constants; then repeat the phase-conditioned and increasing-exhaustion stress before combining with R-399.",
+  "boundary": "T0 claim-nonbearing finite Hamiltonian carre-du-champ comparison only.  It proves no cutoff-, volume-, source-, phase- or shape-uniform comparison, no invariant common core, common alpha, OS/KMS/GNS reconstruction, mass gap, continuum, C6, Sector-A or Pre-A closure.",
+  "no_overclaim": "A finite kinetic commutator form and a finite coordinate Dirichlet form are different quadratic forms.  Their observed ratio is a diagnostic, not an analytic comparison theorem or a Q3 real-time locality result.",
+  "provenance": "contemporaneous",
+  "verdict": "advanced",
+  "recorded_at": "2026-08-30T17:00:00Z",
+  "reviewed_on": "2026-08-29",
+  "recorded_by": "Codex",
+  "evidence_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-hamiltonian-carre-du-champ-comparison-manifest.json#new_perspective",
+    "strategy/pre-a-cp1-st8-q3lock-hamiltonian-carre-du-champ-comparison-certificate-260830.md#Verification",
+    "codes/foundations/pre_a_cp1_st8_q3lock_hamiltonian_carre_du_champ_comparison.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_hamiltonian_carre_du_champ_comparison_independent.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_hamiltonian_carre_du_champ_comparison_hostile.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_hamiltonian_carre_du_champ_comparison_verify.py#main",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-primary-pre_a_cp1_st8_q3lock_hamiltonian_carre_du_champ_comparison/primary.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-independent-pre_a_cp1_st8_q3lock_hamiltonian_carre_du_champ_comparison/independent.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-hostile-pre_a_cp1_st8_q3lock_hamiltonian_carre_du_champ_comparison/hostile.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-integrated-pre_a_cp1_st8_q3lock_hamiltonian_carre_du_champ_comparison/integrated.json#derived",
+    "verification/lean/Tect/R402.lean#kinetic_prefactor_positive",
+    "claims/C6-SPACETIME-SIGNATURE/notes/hamiltonian-carre-du-champ-comparison-260830.md#R-402"
+  ],
+  "formal_integration": {
+    "results": ["R-402"],
+    "negatives": [],
+    "events": ["20260830-hamiltonian-carre-du-champ-comparison-2026-08-3"],
+    "lean": "R402 PASS",
+    "no_new_result": false,
+    "no_new_negative": true,
+    "no_changelog_event": false,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "formal_refs": {
+    "results": ["R-402"],
+    "negatives": [],
+    "events": ["20260830-hamiltonian-carre-du-champ-comparison-2026-08-3"]
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-HAMILTONIAN-CARRE-DU-CHAMP-COMPARISON-v0",
+  "result_id": "R-402",
+  "title": "Finite Hamiltonian carré-du-champ comparison for physical-coordinate likelihood gradients",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001247",
+  "claim_bearing": false,
+  "parent_explorations": ["EXP-001246", "EXP-001244", "EXP-001230"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+  ],
+  "question": "Does the physical-coordinate conditional form track the Hamiltonian-derived kinetic carré-du-champ on the actual Q3 likelihood gradients, after the coordinate-only potential terms are removed by commutation?",
+  "new_perspective": {
+    "principle": "Use the kinetic part of the Q3 Hamiltonian as the local gradient generator instead of treating the coordinate Dirichlet form as an arbitrary graph metric.",
+    "motivation": [
+      "For a one-site coordinate multiplier F=f(q), every onsite and spatial potential is a function of commuting q coordinates and has zero commutator with F.",
+      "The only Hamiltonian contribution to the first carré-du-champ is therefore the kinetic operator p^2/(2 chi), represented by (2 chi)^(-1) Tr(diag(pi) [p,F]^*[p,F]) in a finite q-coordinate row.",
+      "Comparing this form with the R-401 nearest-neighbour physical-coordinate form tests whether the proposed metric is tied to the actual generator rather than only to a truncation geometry."
+    ],
+    "route": [
+      "Reconstruct the finite Q3 Gibbs state, every split-history prefix and both history adjoints from the R-399 fixture.",
+      "For every oriented collar row, form the conditional coordinate law pi and the actual likelihood multiplier f=q_prefix/p_prefix.",
+      "Compute D_q(f)=sum min(pi_k,pi_(k+1))*((f_(k+1)-f_k)/(x_(k+1)-x_k))^2 and E_kin(f)=(2 chi)^(-1) Tr(diag(pi)[p,F]^*[p,F]) in the q basis.",
+      "Verify that coordinate-only onsite and bond potentials commute with F, and report the finite ratio E_kin/D_q without treating it as a uniform constant.",
+      "Repeat both orientations, source/history signs, split orders, prefixes and adjoints, then use a momentum-to-coordinate hostile mutation to show the kinetic identification is load-bearing."
+    ],
+    "qft_bridge": "A uniform two-sided comparison E_kin approximately D_q on an invariant common core could connect R-401 to the Hamiltonian shell estimate. The finite package supplies no such analytic comparison, cutoff/volume/phase uniformity, common alpha, OS/KMS/GNS dynamics, gap, continuum, C6, Sector-A or Pre-A closure."
+  },
+  "finite_theorem": {
+    "coordinate_form": "D_q(f)=sum_k min(pi_k,pi_(k+1))*((f_(k+1)-f_k)/(x_(k+1)-x_k))^2",
+    "kinetic_form": "E_kin(f)=(2 chi)^(-1) Tr(diag(pi)[p,F]^*[p,F]), F=diag(f) in the q eigenbasis",
+    "potential_isolation": "[V(q_0,...,q_{V-1}),F_s]=0 for every finite coordinate polynomial V",
+    "comparison": "The finite ratio E_kin/D_q is reported only on nonconstant rows; no uniform lower or upper comparison is assumed."
+  },
+  "finite_fixture": {
+    "admissible_pairs": [
+      {"volume": 2, "cutoff_dimensions": [3, 4]},
+      {"volume": 3, "cutoff_dimensions": [3, 4]},
+      {"volume": 4, "cutoff_dimensions": [3]}
+    ],
+    "beta_values": ["1/2", "1"],
+    "source_support_values": [[0], [0, 1]],
+    "source_amplitude": "1/3",
+    "hbar": "1",
+    "time_step": "1/18",
+    "source_sign_values": [-1, 1],
+    "history_sign_values": [-1, 1],
+    "history_adjoint_values": [0, 1],
+    "orientations": ["right", "left"],
+    "chi": "1",
+    "r": "-1",
+    "g": "3/5",
+    "c": "3/5",
+    "lambda": "1/10",
+    "numerical_tolerance": 1e-8,
+    "probability_tolerance": 1e-10,
+    "ratio_floor": 1e-20,
+    "hostile_energy_floor": 1e-12,
+    "hostile_zero_threshold": 1e-10,
+    "crosscheck_tolerance": 1e-5
+  },
+  "scope": {
+    "finite_kinetic_carre_du_champ_closed": true,
+    "finite_coordinate_kinetic_comparison_closed": true,
+    "finite_potential_commutator_isolation_closed": true,
+    "finite_orientation_history_comparison_closed": true,
+    "uniform_form_comparison_closed": false,
+    "cutoff_independent_comparison_closed": false,
+    "volume_independent_comparison_closed": false,
+    "phase_uniform_comparison_closed": false,
+    "uniform_gradient_decay_closed": false,
+    "common_core_closed": false,
+    "common_alpha_closed": false,
+    "actual_split_limit_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R402.lean",
+    "theorem_markers": ["kinetic_prefactor_positive", "commutator_square_nonnegative", "potential_scalar_commutes", "finite_scope"],
+    "command": "lake env lean Tect/R402.lean",
+    "boundary": "Lean checks only scalar positivity and the algebraic commuting/potential isolation skeleton; finite matrices, Gibbs rows, form comparison and all regulator or QFT limits remain in the executable evidence boundary."
+  },
+  "artifacts": {
+    "primary_script": "codes/foundations/pre_a_cp1_st8_q3lock_hamiltonian_carre_du_champ_comparison.py",
+    "independent_script": "codes/foundations/pre_a_cp1_st8_q3lock_hamiltonian_carre_du_champ_comparison_independent.py",
+    "hostile_script": "codes/foundations/pre_a_cp1_st8_q3lock_hamiltonian_carre_du_champ_comparison_hostile.py",
+    "integrated_verifier": "codes/foundations/pre_a_cp1_st8_q3lock_hamiltonian_carre_du_champ_comparison_verify.py",
+    "lean": "verification/lean/Tect/R402.lean"
+  },
+  "promotion_criteria": [
+    "Prove an analytic two-sided comparison between E_kin and D_q on a cutoff-independent Hamiltonian-derived common core.",
+    "Prove the comparison uniformly in source, volume, cutoff, phase, orientation and exhaustion shape.",
+    "Only then combine the form comparison with the R-399 conditional transfer and pursue common-alpha or OS/KMS identification."
+  ],
+  "stop_conditions": [
+    "If E_kin/D_q collapses or diverges systematically with cutoff, retain R-401 only as a diagnostic and register the comparison obstruction before substitution.",
+    "If the comparison depends on beta, history or orientation, keep it as a finite parameterized interface and do not promote uniformity.",
+    "If the finite potential commutator isolation fails outside the declared coordinate-multiplier class, restrict the route and do not claim full Hamiltonian locality."
+  ],
+  "boundary": "T0 claim-nonbearing finite Hamiltonian carré-du-champ comparison only. It proves no cutoff-, volume-, source-, phase- or shape-uniform form comparison, no invariant common core, no common alpha, no OS/KMS/GNS reconstruction, no mass gap, no continuum, C6, Sector-A or Pre-A closure.",
+  "no_overclaim": "A finite kinetic commutator form and a finite coordinate Dirichlet form are two different quadratic forms. Their observed ratio is a diagnostic, not an analytic comparison theorem or a Q3 real-time locality result.",
+  "recorded_by": "Codex"
+}

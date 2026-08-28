@@ -42,6 +42,7 @@ policy in `governance/development-history.md`.
 | [R-376](#r-376) | Hilbert-Schmidt Lipschitz bridge for the capped Liouvillian kernel | R-376 v1.0 is a T0 claim-nonbearing finite operator-interface checkpoint under EXP-001218. A noncommuting cutoff-2 edge Liouvillian stress gives maximum full-kernel Frobenius ratio 0.9787544362168733 and 64-layer ratio 0.9755896836319287 with 76/76 integrated assertions; general Schatten-2 proof, operator-norm locality, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
 | [R-377](#r-377) | Gap-free odd-Matsubara resolvent telescoping budget | R-377 v1.0 is a T0 claim-nonbearing finite resolvent-interface checkpoint under EXP-001219. The exact positive-resolvent difference identity and its 64-layer budget pass 122/122 integrated assertions with Lean R377; the accumulated finite budget ratio is 0.9895313426497929 and the absolute-value square-root debt is recorded separately. Uniform locality, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
 | [R-382](#r-382) | Increasing-cutoff endpoint modular moment stress | R-382 v1.0 is a T0 claim-nonbearing finite cutoff-profile diagnostic under EXP-001224. The R-381 endpoint-energy bridge passes across 2816 all-prefix actual-Q3 contexts with Lean R382; edge max M_0 grows from 2.733031855844076 at d=3 to 41.64826651661874 at d=6 and max M_2 from 0.008378198414559081 to 17.719559304500326, with d=5 to d=6 ratios 8.855033106195243 and 36.38049903040583. This is finite growth evidence only; uniform M_0/M_2 control, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
+| [R-402](#r-402) | Finite Hamiltonian carre-du-champ comparison | R-402 v1.0 is a T0 claim-nonbearing finite Hamiltonian-interface checkpoint under EXP-001247. The Q3 kinetic form is compared with the R-401 physical-coordinate form on 3584 actual history contexts and 71680 conditional rows; primary 5410/5410, independent 1815/1815, hostile 4/4, integrated 33/33 and Lean R402 pass. The observed nonzero-row ratio E_kin/D_q is [1.0087179063711833,11.074061483593928], while potential commutators vanish on the finite q basis; uniform common-core comparison and all QFT/limit gates remain open |
 | [R-401](#r-401) | Physical-coordinate metric for the conditional gap | R-401 v1.0 is a T0 claim-nonbearing finite coordinate-metric diagnostic under EXP-001246. Replacing the truncation-level edge distance by the ordered oscillator coordinate spacing gives a worst finite conditional gap of 0.14052591590289856 versus the R-400 index value 0.03136900665147795 across 32 systems, 192 profiles and 180 ratios; primary/independent/hostile/integrated and Lean R401 pass. The metric is not pointwise larger at every low cutoff, and the Hamiltonian-form comparison, uniformity, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
 | [R-400](#r-400) | Increasing-cutoff conditional gap stress | R-400 v1.0 is a T0 claim-nonbearing finite static Q3 Gibbs diagnostic under EXP-001245. The ordered birth-death conditional gap remains positive but oscillates across 32 systems, 192 profiles and 180 adjacent ratios; primary 519/519, independent 614/614, hostile 3/3, integrated 29/29 and Lean R400 pass. The minimum finite gap is 0.03136900665147795, so no cutoff/volume-uniform bound is inferred; gradient decay, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
 | [R-399](#r-399) | Conditional Poincare-before-Duhamel shell transport | R-399 v1.0 is a T0 claim-nonbearing finite actual-Q3 checkpoint under EXP-001244. The R-398 Doob shell variance is converted to a conditional birth-death Dirichlet bound across 3,584 oriented history contexts; primary 8,975/8,975, independent aggregate agreement, hostile 5/5, integrated 31/31 and Lean R399 pass. The minimum finite conditional gap is 0.49325229280535315 and the maximum weighted Poincare shell bound is 0.00045782017814794144. Uniform conditional gaps, gradient decay, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
@@ -640,6 +641,50 @@ No new negative result, tier change, or R-376 PDF is issued.
 
 **Proven in:** manifest, certificate, Lean entrypoint, primary script,
 independent script, integrated verifier, scope note, and saved run artefacts.
+
+<a id="r-402"></a>
+### R-402 -- Finite Hamiltonian carre-du-champ comparison
+
+**Result ID.** R-402 is a T0, claim-nonbearing finite Hamiltonian-interface
+checkpoint under EXP-001247.  It follows R-401 and asks whether the proposed
+physical-coordinate form is tied to the actual Q3 generator.
+
+For a conditional coordinate law `pi` and likelihood row `f`, with
+`F=diag(f)` in the one-site q eigenbasis, the two forms are
+
+```
+D_q(f)   = sum_k min(pi_k,pi_(k+1))
+          * ((f_(k+1)-f_k)/(x_(k+1)-x_k))^2
+E_kin(f) = (2 chi)^(-1) Tr(diag(pi) [p,F]^*[p,F]).
+```
+
+The second form is induced by the kinetic term `p^2/(2 chi)`.  A coordinate
+onsite potential and a Q3 spatial bond commute with `F` on the declared finite
+coordinate tensor basis, so the finite first carré-du-champ is kinetic in this
+observable class.
+
+**Verification.** The R-399 fixture contains five systems, beta in `{1/2,1}`,
+two source supports, both source and history signs, both split orders, every
+prefix, both history adjoints and both collar orientations.  The primary lane
+passes `5410/5410` over `3584` contexts and `71680` conditional rows.  The
+non-importing independent lane passes `1815/1815`, the hostile lane `4/4`, the
+integrated verifier `33/33`, and Lean R402 compiles.  Of the rows, `57680` have
+nonzero `D_q`; their observed `E_kin/D_q` interval is
+`[1.0087179063711833,11.074061483593928]`.  The maximum potential-commutator
+residual is `0` on this finite basis.
+
+The hostile `p -> q` mutation gives a zero commutator while a selected genuine
+kinetic row is positive, confirming that the momentum identification is
+load-bearing for the finite observable class.
+
+**Boundary.** R-402 does not prove a cutoff-, volume-, source-, phase- or
+shape-uniform comparison, an invariant unbounded common core, common alpha,
+direct `D`/`delta-D` Cauchy convergence, Hamiltonian-to-OS/KMS identification,
+a GNS gap, a continuum limit, C6, Sector-A or Pre-A closure.  The finite ratio
+is a diagnostic and is not an analytic comparison constant.  No tier change,
+negative result or PDF is issued.
+
+**Proven in:** [R-402 certificate](strategy/pre-a-cp1-st8-q3lock-hamiltonian-carre-du-champ-comparison-certificate-260830.md), [Lean entrypoint](verification/lean/Tect/R402.lean), primary/independent/hostile scripts, integrated verifier, [scope note](claims/C6-SPACETIME-SIGNATURE/notes/hamiltonian-carre-du-champ-comparison-260830.md), and saved run artefacts.
 
 <a id="r-401"></a>
 ### R-401 -- Physical-coordinate metric for the conditional gap
