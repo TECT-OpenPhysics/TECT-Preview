@@ -2706,6 +2706,141 @@
       "task_id": "T-054",
       "title": "Renyi interpolation bridge for the modular shell",
       "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "axis": "Gibbs normalization",
+          "check": "Partition and energy-shift terms cancel in the logarithmic difference on every finite spectrum.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "absolute energy gap",
+          "check": "The endpoint retains |E_i-E_j| without assuming an eigenvalue ordering.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "Cauchy direction",
+          "check": "The inequality is tested one-sided as D_1<=beta sqrt(M_0 M_2); no equality is asserted.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "weight orientation",
+          "check": "Both p_i and p_j orientations are computed and compared using Hermitian entry symmetry.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "energy shift",
+          "check": "Only energy differences enter M_2, so the numerical stabilization shift cannot change the identity.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "noncommutativity",
+          "check": "The witness remains a full matrix in the bond-Hamiltonian eigenbasis; rho is never commuted through X.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "zero gaps",
+          "check": "Diagonal and degenerate entries remain in the sums and contribute zero without singular division.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "finite growth",
+          "check": "M_0, M_2 and endpoint values remain finite-grid diagnostics and are not promoted to uniform bounds.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "independence",
+          "check": "The independent lane rebuilds oscillator, graph, spectrum, prefixes and moments without importing the primary audit.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "downstream promotion",
+          "check": "No common core, common alpha, KMS/GNS dynamics, gap, continuum, C6, Sector-A or Pre-A conclusion is drawn.",
+          "disposition": "DISMISSED-FIREWALL"
+        }
+      ],
+      "boundary": "T0 claim-nonbearing finite endpoint-energy Cauchy interface only. It does not prove source/volume/cutoff/beta uniformity, modular tails, common core, common alpha, KMS/GNS dynamics, a gap, continuum, C6, Sector-A or Pre-A.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "The Gibbs log-energy identity turns the R-380 endpoint into a first energy-difference moment, and finite state-weighted Cauchy bounds it by a quadratic energy-commutator moment. The finite envelope is loose but valid, so the next obstruction is a uniform common-core estimate for M_0 and M_2 rather than the algebraic conversion itself. This is a route-local finite result, not a QFT promotion.",
+      "evidence_refs": [
+        "strategy/pre-a-cp1-st8-q3lock-local-q2-kubo-mori-endpoint-energy-cauchy-bridge-manifest.json#identity",
+        "strategy/pre-a-cp1-st8-q3lock-local-q2-kubo-mori-endpoint-energy-cauchy-bridge-certificate-260828.md#finite-verification",
+        "codes/foundations/pre_a_cp1_st8_q3lock_local_q2_kubo_mori_endpoint_energy_cauchy_bridge.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_local_q2_kubo_mori_endpoint_energy_cauchy_bridge_independent.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_local_q2_kubo_mori_endpoint_energy_cauchy_bridge_verify.py#run",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-28-primary-pre_a_cp1_st8_q3lock_local_q2_kubo_mori_endpoint_energy_cauchy_bridge/primary.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-28-independent-pre_a_cp1_st8_q3lock_local_q2_kubo_mori_endpoint_energy_cauchy_bridge/independent.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-28-integrated-pre_a_cp1_st8_q3lock_local_q2_kubo_mori_endpoint_energy_cauchy_bridge/integrated.json#lean",
+        "verification/lean/Tect/R381.lean#scalar_cauchy_envelope",
+        "claims/C6-SPACETIME-SIGNATURE/notes/q3lock-local-q2-kubo-mori-endpoint-energy-cauchy-bridge-boundary-260828.md#R-381"
+      ],
+      "finding": "The primary lane passes 17,931/17,931 assertions and the non-importing independent lane passes 11/11 aggregate assertions over 2,560 all-prefix actual-Q3 contexts. The integrated verifier passes 61/61 and Lean R381 compiles. Primary and independent numerical fields agree within 1.918465386552270e-13. The largest endpoint modular moment is 2.15358381458932, the largest state-weighted M_0 is 41.64826651661874, the largest M_2 is 17.719559304500326, and the largest Cauchy envelope is 27.165951639338186. The maximum endpoint-to-Cauchy ratio is 0.07927511037274983 and the maximum Cauchy violation is -2.290857218268337e-16.",
+      "formal_integration": {
+        "events": [
+          "20260828-endpoint-modular-moment-to-energy-cauchy-bridge"
+        ],
+        "lean": "R381 PASS",
+        "negatives": [],
+        "no_changelog_event": false,
+        "no_new_negative": true,
+        "no_new_result": false,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "results": [
+          "R-381"
+        ]
+      },
+      "formal_refs": {
+        "events": [
+          "20260828-endpoint-modular-moment-to-energy-cauchy-bridge"
+        ],
+        "negatives": [],
+        "results": [
+          "R-381"
+        ]
+      },
+      "gate_ids": [
+        "PA-CP1-ST8-Q3LOCK-RESOLVENT-ALGEBRA-EXACT-POLYNOMIAL-COMMON-ALPHA-CLOSURE",
+        "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+        "PA-CP1-ST8-Q3LOCK-FIFTH-ENERGY-MOMENT-AND-MODULAR-CUTOFF-LOCALITY",
+        "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+      ],
+      "id": "EXP-001223",
+      "method": [
+        "Use the actual-Q3 edge and square finite fixtures with all translated sites and bond terms, both term orders, both time signs, every prefix position and both history adjoints on the declared cutoffs.",
+        "Diagonalize each doubled bond generator, construct normalized Gibbs probabilities and center every moved Hermitian witness in the same bond-Gibbs state.",
+        "Compute the endpoint modular moment in both eigenvalue orientations, convert it to beta times the absolute energy-difference first moment, and compute M_0 and M_2 with the same state weight.",
+        "Check the exact Gibbs log-energy identity, left/right moment symmetry, endpoint reconstruction, positivity and the state-weighted Cauchy envelope D_1<=beta sqrt(M_0 M_2).",
+        "Rebuild the same finite grid in a non-importing independent lane and formalize the scalar square-root Cauchy envelope in Lean R381."
+      ],
+      "next_action": "Establish a source-local uniform estimate for M_0 and M_2 on the Hamiltonian-derived common core, then insert the endpoint bound into the R-380 interpolation and R-377 resolvent telescope.",
+      "no_overclaim": "R-381 identifies a quadratic energy-moment premise for the endpoint debt; it is not a uniform theorem or a QFT closure.",
+      "provenance": "contemporaneous",
+      "question": "Can the endpoint modular-frequency moment isolated by R-380 be converted exactly to a Gibbs energy-difference first moment and bounded by a quadratic state-weighted energy-commutator moment?",
+      "recorded_at": "2026-08-30T01:15:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001222",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001143",
+          "relation": "alternative_to"
+        },
+        {
+          "id": "EXP-001207",
+          "relation": "alternative_to"
+        }
+      ],
+      "reviewed_on": "2026-08-28",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Endpoint modular moment to energy Cauchy bridge",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",

@@ -41,6 +41,7 @@ policy in `governance/development-history.md`.
 | [R-195](#r-195) | Spatial constant-field lift of the A6 running-mass escape | R-195 v1.0 is a T0 claim-nonbearing Lean/Fraction spatial lift under EXP-000933. On the declared finite torus, constant fields multiply the R-194 correction by the exact volume and the volume-cancelled ratio is bounded by 6*s*(b+c)/r, so no positive volume-uniform coercivity holds even on that subspace. Full-field concentration, partition/tightness, A7, A13, Sector-A and Pre-A remain open |
 | [R-376](#r-376) | Hilbert-Schmidt Lipschitz bridge for the capped Liouvillian kernel | R-376 v1.0 is a T0 claim-nonbearing finite operator-interface checkpoint under EXP-001218. A noncommuting cutoff-2 edge Liouvillian stress gives maximum full-kernel Frobenius ratio 0.9787544362168733 and 64-layer ratio 0.9755896836319287 with 76/76 integrated assertions; general Schatten-2 proof, operator-norm locality, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
 | [R-377](#r-377) | Gap-free odd-Matsubara resolvent telescoping budget | R-377 v1.0 is a T0 claim-nonbearing finite resolvent-interface checkpoint under EXP-001219. The exact positive-resolvent difference identity and its 64-layer budget pass 122/122 integrated assertions with Lean R377; the accumulated finite budget ratio is 0.9895313426497929 and the absolute-value square-root debt is recorded separately. Uniform locality, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
+| [R-381](#r-381) | Endpoint modular moment to energy Cauchy bridge | R-381 v1.0 is a T0 claim-nonbearing finite Gibbs energy-moment interface checkpoint under EXP-001223. The R-380 endpoint modular moment equals a beta-weighted energy-difference first moment and is bounded by a state-weighted quadratic moment across 2560 all-prefix actual-Q3 contexts; the integrated verifier passes 61/61 with Lean R381, while uniform M0/M2 control remains open |
 | [R-380](#r-380) | Renyi interpolation bridge for the modular shell | R-380 v1.0 is a T0 claim-nonbearing finite Kubo--Mori/Renyi interface checkpoint under EXP-001222. The modular-frequency weighted shell is the exact integral of a symmetric interpolation across 2560 all-prefix actual-Q3 contexts; the integrated verifier passes 69/69 with Lean R380, and finite ratios show midpoint control does not replace the endpoint modular-moment bound |
 | [R-379](#r-379) | Three-channel anticommutator bridge for half-density modular tails | R-379 v1.0 is a T0 claim-nonbearing finite three-channel interface checkpoint under EXP-001221. The half-density commutator and anticommutator split into left/right GNS legs and a beta/2 two-slice term across 2560 all-prefix actual-Q3 contexts; the integrated verifier passes 69/69 with Lean R379, while the two-slice channel reaches its finite AM-GM envelope and uniformity remains open |
 | [R-378](#r-378) | Half-density Hellinger bridge for the theta-half Kubo-Mori shell | R-378 v1.0 is a T0 claim-nonbearing finite half-density/GNS interface checkpoint under EXP-001220. The absolute shell is bounded by the geometric mean of a Gibbs half-density commutator and anticommutator across 2816 all-prefix actual-Q3 contexts; the integrated verifier passes 68/68 with Lean R378, and the geometric bound remains finite while source/volume/cutoff-uniform modular tails, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
@@ -618,7 +619,42 @@ OS/KMS/GNS transfer, gap, continuum, C6, Sector-A or Pre-A closure follows.
 No new negative result, tier change, or R-376 PDF is issued.
 
 **Proven in:** manifest, certificate, Lean entrypoint, primary script,
-independent script, integrated verifier, scope note, and saved run artefacts.<a id="r-380"></a>
+independent script, integrated verifier, scope note, and saved run artefacts.<a id="r-381"></a>
+### R-381 -- Endpoint modular moment to energy Cauchy bridge
+
+**Result ID.** R-381 is a T0, claim-nonbearing finite Gibbs energy-moment
+interface checkpoint under EXP-001223.
+
+**Statement.** For finite Gibbs probabilities p_i=Z^(-1) exp(-beta E_i),
+the endpoint modular frequency obeys
+|log(p_i)-log(p_j)|=beta|E_i-E_j|.  For a centered Hermitian moved witness
+X, define D_1=sum_ij p_i |log(p_i)-log(p_j)||X_ij|^2,
+M_0=sum_ij p_i|X_ij|^2, and
+M_2=sum_ij p_i(E_i-E_j)^2|X_ij|^2.  Then
+D_1=beta sum_ij p_i|E_i-E_j||X_ij|^2 and the state-weighted Cauchy
+envelope D_1<=beta sqrt(M_0 M_2) holds.  Hermitian symmetry gives the same
+moments from the right Gibbs leg.
+
+**Verification.** The primary lane passes 17931/17931 assertions and the
+non-importing independent lane passes 11/11 aggregate assertions over 2560
+all-prefix actual-Q3 contexts on the edge and square fixtures.  The integrated
+verifier passes 61/61 and Lean R381 compiles.  Primary and independent
+numerical fields agree within 1.918465386552270e-13.  The largest endpoint
+moment is 2.15358381458932, the largest M_0 is 41.64826651661874, the largest
+M_2 is 17.719559304500326, and the largest Cauchy envelope is
+27.165951639338186.  The largest endpoint-to-Cauchy ratio is
+0.07927511037274983.
+
+**Boundary.** This finite endpoint conversion identifies a quadratic
+energy-moment premise but does not prove a source-, volume-, cutoff- or
+beta-uniform estimate, a common unbounded core, direct D,delta-D Cauchy,
+common alpha, OS/KMS/GNS dynamics, a mass gap, continuum, C6, Sector-A or
+Pre-A closure.  No new negative result, tier change or R-381 PDF is issued.
+
+**Proven in:** manifest, certificate, Lean entrypoint, primary script,
+independent script, integrated verifier, scope note, and stored run artefacts.
+
+<a id="r-380"></a>
 ### R-380 -- Renyi interpolation bridge for the modular shell
 
 **Result ID.** R-380 is a T0, claim-nonbearing finite Kubo--Mori/Renyi

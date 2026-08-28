@@ -1,0 +1,66 @@
+{
+  "schema": "tect/pre-a-cp1-st8-q3lock-local-q2-kubo-mori-endpoint-energy-cauchy-bridge/1.0",
+  "exploration_id": "EXP-001223",
+  "result_id": "R-381",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "claim_bearing": false,
+  "parent_explorations": ["EXP-001222", "EXP-001143", "EXP-001207"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-RESOLVENT-ALGEBRA-EXACT-POLYNOMIAL-COMMON-ALPHA-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-FIFTH-ENERGY-MOMENT-AND-MODULAR-CUTOFF-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+  ],
+  "title": "Endpoint modular moment to energy Cauchy bridge",
+  "question": "Can the endpoint modular-frequency moment isolated by R-380 be converted exactly to a Gibbs energy-difference first moment and bounded by a quadratic state-weighted energy-commutator moment?",
+  "identity": {
+    "gibbs_log_energy": "For p_i=Z^(-1) exp(-beta E_i), |log(p_i)-log(p_j)|=beta |E_i-E_j|.",
+    "endpoint": "D_1=sum_ij p_i |log(p_i)-log(p_j)| |X_ij|^2 = beta sum_ij p_i |E_i-E_j| |X_ij|^2.",
+    "moments": "M_0=sum_ij p_i |X_ij|^2 and M_2=sum_ij p_i (E_i-E_j)^2 |X_ij|^2.",
+    "cauchy": "D_1 <= beta sqrt(M_0 M_2) by state-weighted Cauchy--Schwarz.",
+    "qft_role": "The endpoint debt is recast as a quadratic modular-energy obligation that can be compared with an energy-constrained common-core estimate; no uniform bound is supplied here."
+  },
+  "finite_fixture": {
+    "regimes": [
+      {"shape": "edge", "volume": 2, "cutoff_values": [3, 6], "site_values": [0, 1], "bond_term_indices": [2]},
+      {"shape": "square", "volume": 4, "cutoff_values": [2], "site_values": [0, 1, 2, 3], "bond_term_indices": [4, 5, 6, 7]}
+    ],
+    "beta_values": ["1/2", "1"],
+    "time_sign_values": [-1, 1],
+    "history_adjoint_values": [0, 1],
+    "theta": "1/2",
+    "prefix_policy": "all_positions",
+    "time_step": "1/18",
+    "hbar": "1",
+    "parameters": {"chi": "1", "r": "-1", "g": "3/5", "c": "3/5", "lambda": "1/10"},
+    "expected_source_contexts": 2560,
+    "finite_tolerance": 1e-9,
+    "agreement_tolerance": 2e-8,
+    "log_mean_gap_tolerance": 1e-12
+  },
+  "scope": {
+    "gibbs_log_energy_identity_finite_checked": true,
+    "endpoint_energy_moment_finite_checked": true,
+    "quadratic_cauchy_envelope_finite_checked": true,
+    "left_right_energy_moment_symmetry_finite_checked": true,
+    "source_uniformity_proved": false,
+    "weighted_cutoff_uniformity_proved": false,
+    "weighted_volume_uniformity_proved": false,
+    "shape_uniformity_proved": false,
+    "common_core_closed": false,
+    "common_alpha_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "promotion_boundary": "R-381 is a finite exact Gibbs log-energy identity and state-weighted Cauchy envelope on the declared Q3 matrices. It identifies a quadratic energy-moment premise but proves no source/volume/cutoff/beta-uniform estimate.",
+  "next_action": "Establish a source-local uniform estimate for M_2 and M_0 on the Hamiltonian-derived common core, then insert the endpoint bound into the R-380 interpolation and R-377 resolvent telescope.",
+  "boundary": "Finite actual-Q3 edge and square doubled-bond Gibbs proxies with all prefixes, translated sites, signs and adjoints on the declared cutoffs. The log-energy identity and Cauchy envelope are checked numerically and in Lean; source/volume/cutoff/beta uniformity, common core, common alpha, OS/KMS/GNS dynamics, gap, continuum, C6, Sector-A and Pre-A remain open.",
+  "recorded_by": "Codex"
+}

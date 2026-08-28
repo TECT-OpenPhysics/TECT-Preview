@@ -5,10 +5,11 @@
 
 Authorities: `RESULTS-LEDGER.md`.
 
-**214 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
+**215 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
 
 | ID | Result | Tier/scope |
 |---|---|---|
+| [`R-381`](../RESULTS-LEDGER.md#r-381) | Endpoint modular moment to energy Cauchy bridge | T0 |
 | [`R-380`](../RESULTS-LEDGER.md#r-380) | Renyi interpolation bridge for the modular shell | T0 |
 | [`R-379`](../RESULTS-LEDGER.md#r-379) | Three-channel anticommutator bridge for half-density modular tails | T0 |
 | [`R-378`](../RESULTS-LEDGER.md#r-378) | Half-density Hellinger bridge for the theta-half Kubo-Mori shell | T0 |
@@ -33,7 +34,6 @@ Authorities: `RESULTS-LEDGER.md`.
 | [`R-193`](../RESULTS-LEDGER.md#r-193) | Static-owner to heat-map non-identifiability witness | T0 |
 | [`R-192`](../RESULTS-LEDGER.md#r-192) | Bounded complete finite production-cylinder integration trial | T0 |
 | [`R-191`](../RESULTS-LEDGER.md#r-191) | Complete finite two-root A1 scalar owner telescope | T0 |
-| [`R-190`](../RESULTS-LEDGER.md#r-190) | A1 arbitrary-polarization two-mode positivity Lean cross-check | T0 |
 
 Search without loading the full ledger:
 

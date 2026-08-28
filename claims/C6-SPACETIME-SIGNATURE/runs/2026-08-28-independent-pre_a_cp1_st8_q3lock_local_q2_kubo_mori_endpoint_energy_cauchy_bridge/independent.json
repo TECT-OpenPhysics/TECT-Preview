@@ -1,0 +1,173 @@
+{
+  "assertion_count": 11,
+  "assertions": [
+    {
+      "actual": "['EXP-001223', 'R-381']",
+      "expected": "EXP-001223/R-381",
+      "group": "provenance",
+      "name": "authority",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'gibbs_log_energy_identity_finite_checked': True, 'endpoint_energy_moment_finite_checked': True, 'quadratic_cauchy_envelope_finite_checked': True, 'left_right_energy_moment_symmetry_finite_checked': True, 'source_uniformity_proved': False, 'weighted_cutoff_uniformity_proved': False, 'weighted_volume_uniformity_proved': False, 'shape_uniformity_proved': False, 'common_core_closed': False, 'common_alpha_closed': False, 'kms_gns_gap_closed': False, 'continuum_closed': False, 'c6_closed': False, 'sector_a_closed': False, 'pre_a_closed': False, 'no_new_negative_result': True, 'no_tier_change': True, 'no_pdf': True}",
+      "expected": "finite-endpoint-energy-only",
+      "group": "scope",
+      "name": "scope",
+      "status": "PASS"
+    },
+    {
+      "actual": "['PASS', 2560]",
+      "expected": "R-380 PASS and expected contexts",
+      "group": "source linkage",
+      "name": "R-380 source",
+      "status": "PASS"
+    },
+    {
+      "actual": "2560",
+      "expected": "2560",
+      "group": "coverage",
+      "name": "coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": "7.105427357601002e-15",
+      "expected": "<= tolerance",
+      "group": "Gibbs log-energy",
+      "name": "Gibbs log-energy identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "4.440892098500626e-16",
+      "expected": "<= tolerance",
+      "group": "endpoint symmetry",
+      "name": "endpoint orientation",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.4210854715202004e-14",
+      "expected": "<= tolerance",
+      "group": "moment symmetry",
+      "name": "moment orientation",
+      "status": "PASS"
+    },
+    {
+      "actual": "8.881784197001252e-16",
+      "expected": "<= tolerance",
+      "group": "endpoint energy",
+      "name": "endpoint reconstruction",
+      "status": "PASS"
+    },
+    {
+      "actual": "-2.290857218268337e-16",
+      "expected": "<=0",
+      "group": "state-weighted Cauchy",
+      "name": "Cauchy envelope",
+      "status": "PASS"
+    },
+    {
+      "actual": "3.6452675812342155e-14",
+      "expected": ">=-1e-12",
+      "group": "Kubo--Mori state",
+      "name": "Kubo floor",
+      "status": "PASS"
+    },
+    {
+      "actual": "8.984378592327469e-31",
+      "expected": ">=0",
+      "group": "positivity",
+      "name": "moment positivity",
+      "status": "PASS"
+    }
+  ],
+  "audit_id": "PA-CP1-ST8-Q3LOCK-LOCAL-Q2-KUBO-MORI-ENDPOINT-ENERGY-CAUCHY-BRIDGE",
+  "boundary": "Finite actual-Q3 edge and square doubled-bond Gibbs proxies with all prefixes, translated sites, signs and adjoints on the declared cutoffs. The log-energy identity and Cauchy envelope are checked numerically and in Lean; source/volume/cutoff/beta uniformity, common core, common alpha, OS/KMS/GNS dynamics, gap, continuum, C6, Sector-A and Pre-A remain open.",
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "derived": {
+    "c6_closed": false,
+    "common_alpha_closed": false,
+    "common_core_closed": false,
+    "context_count": 2560,
+    "continuum_closed": false,
+    "endpoint_energy_moment_finite_checked": true,
+    "expected_contexts": 2560,
+    "gibbs_log_energy_identity_finite_checked": true,
+    "kms_gns_gap_closed": false,
+    "left_right_energy_moment_symmetry_finite_checked": true,
+    "maximum_bond_unitary_factorization_error": 1.0891722777251956e-13,
+    "maximum_cauchy_bound": 27.16595163933802,
+    "maximum_cauchy_envelope_violation": -2.290857218268337e-16,
+    "maximum_endpoint_energy_first_moment": 2.1535838145893043,
+    "maximum_endpoint_modular_moment": 2.1535838145893043,
+    "maximum_endpoint_orientation_error": 4.440892098500626e-16,
+    "maximum_endpoint_reconstruction_error": 8.881784197001252e-16,
+    "maximum_endpoint_to_cauchy_ratio": 0.07927511037274987,
+    "maximum_gibbs_log_energy_identity_error": 7.105427357601002e-15,
+    "maximum_kubo_weight_asymmetry": 0.0,
+    "maximum_moment_orientation_error": 1.4210854715202004e-14,
+    "maximum_state_weighted_m0": 41.64826651661855,
+    "maximum_state_weighted_m2": 17.71955930450021,
+    "minimum_kubo_weight": 3.6452675812342155e-14,
+    "minimum_state_weighted_m0": 0.9999999999999898,
+    "minimum_state_weighted_m2": 8.984378592327469e-31,
+    "pre_a_closed": false,
+    "quadratic_cauchy_envelope_finite_checked": true,
+    "regimes": [
+      {
+        "bond_term_indices": [
+          2
+        ],
+        "contexts": 256,
+        "cutoffs": [
+          3,
+          6
+        ],
+        "expected_contexts": 256,
+        "maximum_endpoint": 2.1535838145893043,
+        "maximum_m0": 41.64826651661855,
+        "maximum_m2": 17.71955930450021,
+        "shape": "edge",
+        "sites": [
+          0,
+          1
+        ],
+        "volume": 2
+      },
+      {
+        "bond_term_indices": [
+          4,
+          5,
+          6,
+          7
+        ],
+        "contexts": 2304,
+        "cutoffs": [
+          2
+        ],
+        "expected_contexts": 2304,
+        "maximum_endpoint": 5.975370443021548e-16,
+        "maximum_m0": 0.9999999999999996,
+        "maximum_m2": 1.725572363131804e-30,
+        "shape": "square",
+        "sites": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "volume": 4
+      }
+    ],
+    "sector_a_closed": false,
+    "shape_uniformity_proved": false,
+    "source_uniformity_proved": false,
+    "theta": 0.5,
+    "weighted_cutoff_uniformity_proved": false,
+    "weighted_volume_uniformity_proved": false
+  },
+  "exploration_id": "EXP-001223",
+  "result_id": "R-381",
+  "run_kind": "independent",
+  "schema": "tect/foundation-audit/1.0",
+  "task_id": "T-054",
+  "verdict": "PASS"
+}

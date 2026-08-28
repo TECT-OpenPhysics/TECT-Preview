@@ -1,0 +1,563 @@
+{
+  "assertion_count": 61,
+  "assertions": [
+    {
+      "actual": "['EXP-001223', 'R-381', False]",
+      "expected": "EXP-001223/R-381/false",
+      "name": "identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "['E:\\\\Dev\\\\TECT\\\\codes\\\\foundations\\\\pre_a_cp1_st8_q3lock_local_q2_kubo_mori_endpoint_energy_cauchy_bridge.py', 'E:\\\\Dev\\\\TECT\\\\codes\\\\foundations\\\\pre_a_cp1_st8_q3lock_local_q2_kubo_mori_endpoint_energy_cauchy_bridge_independent.py', 'E:\\\\Dev\\\\TECT\\\\verification\\\\lean\\\\Tect\\\\R381.lean', 'E:\\\\Dev\\\\TECT\\\\verification\\\\lean\\\\registry.json']",
+      "expected": "all present",
+      "name": "sources",
+      "status": "PASS"
+    },
+    {
+      "actual": "['ad3cf2b299b458e595ad970b9f55a51036d9340e364d1cac6e8f34349701d23b', 'fc3c036dafdb2139916b0a19e4d57c5cf5f979ef3df0238e78ed20de26f141d4']",
+      "expected": "distinct",
+      "name": "independent source",
+      "status": "PASS"
+    },
+    {
+      "actual": "('scalar_cauchy_envelope', 'beta_scaled_cauchy', 'scope_fixture')",
+      "expected": "present",
+      "name": "Lean markers",
+      "status": "PASS"
+    },
+    {
+      "actual": "none",
+      "expected": "none",
+      "name": "Lean forbidden",
+      "status": "PASS"
+    },
+    {
+      "actual": "1",
+      "expected": "1",
+      "name": "Lean registry unique",
+      "status": "PASS"
+    },
+    {
+      "actual": "e3b4f6dffe219eba07532446e90b7bacf887608da59d8cc8bca4d5c0b14a674b",
+      "expected": "e3b4f6dffe219eba07532446e90b7bacf887608da59d8cc8bca4d5c0b14a674b",
+      "name": "Lean registry hash",
+      "status": "PASS"
+    },
+    {
+      "actual": "['scalar_cauchy_envelope', 'beta_scaled_cauchy', 'scope_fixture']",
+      "expected": "['scalar_cauchy_envelope', 'beta_scaled_cauchy', 'scope_fixture']",
+      "name": "Lean declarations",
+      "status": "PASS"
+    },
+    {
+      "actual": "PRIMARY ENDPOINT-ENERGY-CAUCHY-BRIDGE PASS 17931/17931 contexts=2560 ratio=0.079275110\n",
+      "expected": "PASS",
+      "name": "primary child",
+      "status": "PASS"
+    },
+    {
+      "actual": "INDEPENDENT ENDPOINT-ENERGY-CAUCHY-BRIDGE PASS 11/11 contexts=2560 ratio=0.079275110\n",
+      "expected": "PASS",
+      "name": "independent child",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2560, 2560]",
+      "expected": "equal",
+      "name": "agreement context_count",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2560, 2560]",
+      "expected": "equal",
+      "name": "agreement expected_contexts",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.5, 0.5]",
+      "expected": "equal",
+      "name": "agreement theta",
+      "status": "PASS"
+    },
+    {
+      "actual": "[True, True]",
+      "expected": "equal",
+      "name": "agreement gibbs_log_energy_identity_finite_checked",
+      "status": "PASS"
+    },
+    {
+      "actual": "[True, True]",
+      "expected": "equal",
+      "name": "agreement endpoint_energy_moment_finite_checked",
+      "status": "PASS"
+    },
+    {
+      "actual": "[True, True]",
+      "expected": "equal",
+      "name": "agreement quadratic_cauchy_envelope_finite_checked",
+      "status": "PASS"
+    },
+    {
+      "actual": "[True, True]",
+      "expected": "equal",
+      "name": "agreement left_right_energy_moment_symmetry_finite_checked",
+      "status": "PASS"
+    },
+    {
+      "actual": "[False, False]",
+      "expected": "equal",
+      "name": "agreement source_uniformity_proved",
+      "status": "PASS"
+    },
+    {
+      "actual": "[False, False]",
+      "expected": "equal",
+      "name": "agreement weighted_cutoff_uniformity_proved",
+      "status": "PASS"
+    },
+    {
+      "actual": "[False, False]",
+      "expected": "equal",
+      "name": "agreement weighted_volume_uniformity_proved",
+      "status": "PASS"
+    },
+    {
+      "actual": "[False, False]",
+      "expected": "equal",
+      "name": "agreement shape_uniformity_proved",
+      "status": "PASS"
+    },
+    {
+      "actual": "[False, False]",
+      "expected": "equal",
+      "name": "agreement common_core_closed",
+      "status": "PASS"
+    },
+    {
+      "actual": "[False, False]",
+      "expected": "equal",
+      "name": "agreement common_alpha_closed",
+      "status": "PASS"
+    },
+    {
+      "actual": "[False, False]",
+      "expected": "equal",
+      "name": "agreement kms_gns_gap_closed",
+      "status": "PASS"
+    },
+    {
+      "actual": "[False, False]",
+      "expected": "equal",
+      "name": "agreement continuum_closed",
+      "status": "PASS"
+    },
+    {
+      "actual": "[False, False]",
+      "expected": "equal",
+      "name": "agreement c6_closed",
+      "status": "PASS"
+    },
+    {
+      "actual": "[False, False]",
+      "expected": "equal",
+      "name": "agreement sector_a_closed",
+      "status": "PASS"
+    },
+    {
+      "actual": "[False, False]",
+      "expected": "equal",
+      "name": "agreement pre_a_closed",
+      "status": "PASS"
+    },
+    {
+      "actual": "[7.105427357601002e-15, 7.105427357601002e-15]",
+      "expected": "within 2e-08 scaled",
+      "name": "agreement maximum_gibbs_log_energy_identity_error",
+      "status": "PASS"
+    },
+    {
+      "actual": "[8.881784197001252e-16, 4.440892098500626e-16]",
+      "expected": "within 2e-08 scaled",
+      "name": "agreement maximum_endpoint_orientation_error",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.0658141036401503e-14, 1.4210854715202004e-14]",
+      "expected": "within 2e-08 scaled",
+      "name": "agreement maximum_moment_orientation_error",
+      "status": "PASS"
+    },
+    {
+      "actual": "[-2.290857218268337e-16, -2.290857218268337e-16]",
+      "expected": "within 2e-08 scaled",
+      "name": "agreement maximum_cauchy_envelope_violation",
+      "status": "PASS"
+    },
+    {
+      "actual": "[8.881784197001252e-16, 8.881784197001252e-16]",
+      "expected": "within 2e-08 scaled",
+      "name": "agreement maximum_endpoint_reconstruction_error",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.15358381458932, 2.1535838145893043]",
+      "expected": "within 2e-08 scaled",
+      "name": "agreement maximum_endpoint_modular_moment",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.153583814589319, 2.1535838145893043]",
+      "expected": "within 2e-08 scaled",
+      "name": "agreement maximum_endpoint_energy_first_moment",
+      "status": "PASS"
+    },
+    {
+      "actual": "[41.64826651661874, 41.64826651661855]",
+      "expected": "within 2e-08 scaled",
+      "name": "agreement maximum_state_weighted_m0",
+      "status": "PASS"
+    },
+    {
+      "actual": "[17.719559304500326, 17.71955930450021]",
+      "expected": "within 2e-08 scaled",
+      "name": "agreement maximum_state_weighted_m2",
+      "status": "PASS"
+    },
+    {
+      "actual": "[27.165951639338186, 27.16595163933802]",
+      "expected": "within 2e-08 scaled",
+      "name": "agreement maximum_cauchy_bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.9999999999999898, 0.9999999999999898]",
+      "expected": "within 2e-08 scaled",
+      "name": "agreement minimum_state_weighted_m0",
+      "status": "PASS"
+    },
+    {
+      "actual": "[8.984378592327469e-31, 8.984378592327469e-31]",
+      "expected": "within 2e-08 scaled",
+      "name": "agreement minimum_state_weighted_m2",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.07927511037274983, 0.07927511037274987]",
+      "expected": "within 2e-08 scaled",
+      "name": "agreement maximum_endpoint_to_cauchy_ratio",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.0891722777251956e-13, 1.0891722777251956e-13]",
+      "expected": "within 2e-08 scaled",
+      "name": "agreement maximum_bond_unitary_factorization_error",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.0, 0.0]",
+      "expected": "within 2e-08 scaled",
+      "name": "agreement maximum_kubo_weight_asymmetry",
+      "status": "PASS"
+    },
+    {
+      "actual": "[3.6452675812342155e-14, 3.6452675812342155e-14]",
+      "expected": "within 2e-08 scaled",
+      "name": "agreement minimum_kubo_weight",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2, 2]",
+      "expected": "equal",
+      "name": "regime count",
+      "status": "PASS"
+    },
+    {
+      "actual": "['edge', 'edge']",
+      "expected": "equal",
+      "name": "regime 0 shape",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2, 2]",
+      "expected": "equal",
+      "name": "regime 0 volume",
+      "status": "PASS"
+    },
+    {
+      "actual": "[256, 256]",
+      "expected": "equal",
+      "name": "regime 0 contexts",
+      "status": "PASS"
+    },
+    {
+      "actual": "[256, 256]",
+      "expected": "equal",
+      "name": "regime 0 expected_contexts",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.153583814589319, 2.1535838145893043]",
+      "expected": "within 2e-08 scaled",
+      "name": "regime 0 maximum_endpoint",
+      "status": "PASS"
+    },
+    {
+      "actual": "[41.64826651661874, 41.64826651661855]",
+      "expected": "within 2e-08 scaled",
+      "name": "regime 0 maximum_m0",
+      "status": "PASS"
+    },
+    {
+      "actual": "[17.719559304500326, 17.71955930450021]",
+      "expected": "within 2e-08 scaled",
+      "name": "regime 0 maximum_m2",
+      "status": "PASS"
+    },
+    {
+      "actual": "['square', 'square']",
+      "expected": "equal",
+      "name": "regime 1 shape",
+      "status": "PASS"
+    },
+    {
+      "actual": "[4, 4]",
+      "expected": "equal",
+      "name": "regime 1 volume",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2304, 2304]",
+      "expected": "equal",
+      "name": "regime 1 contexts",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2304, 2304]",
+      "expected": "equal",
+      "name": "regime 1 expected_contexts",
+      "status": "PASS"
+    },
+    {
+      "actual": "[5.975370443021548e-16, 5.975370443021548e-16]",
+      "expected": "within 2e-08 scaled",
+      "name": "regime 1 maximum_endpoint",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.9999999999999996, 0.9999999999999996]",
+      "expected": "within 2e-08 scaled",
+      "name": "regime 1 maximum_m0",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.725572363131804e-30, 1.725572363131804e-30]",
+      "expected": "within 2e-08 scaled",
+      "name": "regime 1 maximum_m2",
+      "status": "PASS"
+    },
+    {
+      "actual": "open",
+      "expected": "all limiting/QFT flags false",
+      "name": "scope firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'status': 'PASS', 'command': 'lake env lean Tect/R381.lean', 'returncode': 0, 'output': 'Tect/R381.lean:10:35: warning: Variable name `hz` is not explicitly referenced.\\n\\nThe binding can be removed (if unused) or named `_` (if used implicitly).\\n\\nNote: This linter can be disabled with `set_option linter.unusedVariables false`'}",
+      "expected": "PASS",
+      "name": "Lean compile",
+      "status": "PASS"
+    }
+  ],
+  "audit_id": "PA-CP1-ST8-Q3LOCK-LOCAL-Q2-KUBO-MORI-ENDPOINT-ENERGY-CAUCHY-BRIDGE",
+  "boundary": "Finite actual-Q3 edge and square doubled-bond Gibbs proxies with all prefixes, translated sites, signs and adjoints on the declared cutoffs. The log-energy identity and Cauchy envelope are checked numerically and in Lean; source/volume/cutoff/beta uniformity, common core, common alpha, OS/KMS/GNS dynamics, gap, continuum, C6, Sector-A and Pre-A remain open.",
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "derived": {
+    "independent": {
+      "c6_closed": false,
+      "common_alpha_closed": false,
+      "common_core_closed": false,
+      "context_count": 2560,
+      "continuum_closed": false,
+      "endpoint_energy_moment_finite_checked": true,
+      "expected_contexts": 2560,
+      "gibbs_log_energy_identity_finite_checked": true,
+      "kms_gns_gap_closed": false,
+      "left_right_energy_moment_symmetry_finite_checked": true,
+      "maximum_bond_unitary_factorization_error": 1.0891722777251956e-13,
+      "maximum_cauchy_bound": 27.16595163933802,
+      "maximum_cauchy_envelope_violation": -2.290857218268337e-16,
+      "maximum_endpoint_energy_first_moment": 2.1535838145893043,
+      "maximum_endpoint_modular_moment": 2.1535838145893043,
+      "maximum_endpoint_orientation_error": 4.440892098500626e-16,
+      "maximum_endpoint_reconstruction_error": 8.881784197001252e-16,
+      "maximum_endpoint_to_cauchy_ratio": 0.07927511037274987,
+      "maximum_gibbs_log_energy_identity_error": 7.105427357601002e-15,
+      "maximum_kubo_weight_asymmetry": 0.0,
+      "maximum_moment_orientation_error": 1.4210854715202004e-14,
+      "maximum_state_weighted_m0": 41.64826651661855,
+      "maximum_state_weighted_m2": 17.71955930450021,
+      "minimum_kubo_weight": 3.6452675812342155e-14,
+      "minimum_state_weighted_m0": 0.9999999999999898,
+      "minimum_state_weighted_m2": 8.984378592327469e-31,
+      "pre_a_closed": false,
+      "quadratic_cauchy_envelope_finite_checked": true,
+      "regimes": [
+        {
+          "bond_term_indices": [
+            2
+          ],
+          "contexts": 256,
+          "cutoffs": [
+            3,
+            6
+          ],
+          "expected_contexts": 256,
+          "maximum_endpoint": 2.1535838145893043,
+          "maximum_m0": 41.64826651661855,
+          "maximum_m2": 17.71955930450021,
+          "shape": "edge",
+          "sites": [
+            0,
+            1
+          ],
+          "volume": 2
+        },
+        {
+          "bond_term_indices": [
+            4,
+            5,
+            6,
+            7
+          ],
+          "contexts": 2304,
+          "cutoffs": [
+            2
+          ],
+          "expected_contexts": 2304,
+          "maximum_endpoint": 5.975370443021548e-16,
+          "maximum_m0": 0.9999999999999996,
+          "maximum_m2": 1.725572363131804e-30,
+          "shape": "square",
+          "sites": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "volume": 4
+        }
+      ],
+      "sector_a_closed": false,
+      "shape_uniformity_proved": false,
+      "source_uniformity_proved": false,
+      "theta": 0.5,
+      "weighted_cutoff_uniformity_proved": false,
+      "weighted_volume_uniformity_proved": false
+    },
+    "max_primary_independent_numeric_difference": 1.9184653865522705e-13,
+    "primary": {
+      "c6_closed": false,
+      "common_alpha_closed": false,
+      "common_core_closed": false,
+      "context_count": 2560,
+      "continuum_closed": false,
+      "endpoint_energy_moment_finite_checked": true,
+      "expected_contexts": 2560,
+      "gibbs_log_energy_identity_finite_checked": true,
+      "kms_gns_gap_closed": false,
+      "left_right_energy_moment_symmetry_finite_checked": true,
+      "maximum_bond_unitary_factorization_error": 1.0891722777251956e-13,
+      "maximum_cauchy_bound": 27.165951639338186,
+      "maximum_cauchy_envelope_violation": -2.290857218268337e-16,
+      "maximum_endpoint_energy_first_moment": 2.153583814589319,
+      "maximum_endpoint_modular_moment": 2.15358381458932,
+      "maximum_endpoint_orientation_error": 8.881784197001252e-16,
+      "maximum_endpoint_reconstruction_error": 8.881784197001252e-16,
+      "maximum_endpoint_to_cauchy_ratio": 0.07927511037274983,
+      "maximum_gibbs_log_energy_identity_error": 7.105427357601002e-15,
+      "maximum_kubo_weight_asymmetry": 0.0,
+      "maximum_moment_orientation_error": 1.0658141036401503e-14,
+      "maximum_state_weighted_m0": 41.64826651661874,
+      "maximum_state_weighted_m2": 17.719559304500326,
+      "minimum_kubo_weight": 3.6452675812342155e-14,
+      "minimum_state_weighted_m0": 0.9999999999999898,
+      "minimum_state_weighted_m2": 8.984378592327469e-31,
+      "pre_a_closed": false,
+      "quadratic_cauchy_envelope_finite_checked": true,
+      "regimes": [
+        {
+          "bond_term_indices": [
+            2
+          ],
+          "contexts": 256,
+          "cutoffs": [
+            3,
+            6
+          ],
+          "expected_contexts": 256,
+          "maximum_endpoint": 2.153583814589319,
+          "maximum_endpoint_energy": 2.153583814589319,
+          "maximum_m0": 41.64826651661874,
+          "maximum_m2": 17.719559304500326,
+          "shape": "edge",
+          "sites": [
+            0,
+            1
+          ],
+          "volume": 2
+        },
+        {
+          "bond_term_indices": [
+            4,
+            5,
+            6,
+            7
+          ],
+          "contexts": 2304,
+          "cutoffs": [
+            2
+          ],
+          "expected_contexts": 2304,
+          "maximum_endpoint": 5.975370443021548e-16,
+          "maximum_endpoint_energy": 5.975370443021548e-16,
+          "maximum_m0": 0.9999999999999996,
+          "maximum_m2": 1.725572363131804e-30,
+          "shape": "square",
+          "sites": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "volume": 4
+        }
+      ],
+      "sector_a_closed": false,
+      "shape_uniformity_proved": false,
+      "source_uniformity_proved": false,
+      "theta": 0.5,
+      "weighted_cutoff_uniformity_proved": false,
+      "weighted_volume_uniformity_proved": false
+    }
+  },
+  "exploration_id": "EXP-001223",
+  "lean": {
+    "command": "lake env lean Tect/R381.lean",
+    "output": "Tect/R381.lean:10:35: warning: Variable name `hz` is not explicitly referenced.\n\nThe binding can be removed (if unused) or named `_` (if used implicitly).\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`",
+    "returncode": 0,
+    "status": "PASS"
+  },
+  "provenance": {
+    "independent_sha256": "fc3c036dafdb2139916b0a19e4d57c5cf5f979ef3df0238e78ed20de26f141d4",
+    "lean_registry_sha256": "1006f46524c83e6005652ce2e403603b0989c7cd84eb7ec3981cf710a90acdf4",
+    "lean_sha256": "e3b4f6dffe219eba07532446e90b7bacf887608da59d8cc8bca4d5c0b14a674b",
+    "manifest_sha256": "bb4aa98c2f8b0f6d85916206ccf4fd4e9cee3071ba52ba7aeba11d984e70b8d5",
+    "primary_sha256": "ad3cf2b299b458e595ad970b9f55a51036d9340e364d1cac6e8f34349701d23b"
+  },
+  "recorded_at": "2026-08-28T10:35:18.026759Z",
+  "result_id": "R-381",
+  "run_kind": "integrated",
+  "schema": "tect/foundation-audit/1.0",
+  "task_id": "T-054",
+  "verdict": "PASS"
+}
