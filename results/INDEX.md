@@ -5,10 +5,11 @@
 
 Authorities: `RESULTS-LEDGER.md`.
 
-**226 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
+**227 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
 
 | ID | Result | Tier/scope |
 |---|---|---|
+| [`R-393`](../RESULTS-LEDGER.md#r-393) | High-cutoff QCMI shell stress | T0 |
 | [`R-392`](../RESULTS-LEDGER.md#r-392) | QCMI shell-telescoping boundary budget | T0 |
 | [`R-391`](../RESULTS-LEDGER.md#r-391) | Quantum-Markov blanket boundary transfer | T0 |
 | [`R-390`](../RESULTS-LEDGER.md#r-390) | Local-marginal spectral-window transfer | T0 |
@@ -33,7 +34,6 @@ Authorities: `RESULTS-LEDGER.md`.
 | [`R-371`](../RESULTS-LEDGER.md#r-371) | Critical theta-half Gibbs cancellation and local second-moment bound | T0 |
 | [`R-370`](../RESULTS-LEDGER.md#r-370) | Kubo-Mori Liouvillian energy-window and tail decomposition | T0 |
 | [`R-369`](../RESULTS-LEDGER.md#r-369) | Kubo-Mori translation and exhaustion-shape stress | T0 |
-| [`R-368`](../RESULTS-LEDGER.md#r-368) | Local Kubo-Mori weighted fractional shell with arbitrary-prefix coverage | T0 |
 
 Search without loading the full ledger:
 

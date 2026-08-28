@@ -1,0 +1,75 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001236",
+  "title": "High-cutoff QCMI shell stress",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+  ],
+  "related": [
+    {"id": "EXP-001235", "relation": "continues"},
+    {"id": "EXP-001234", "relation": "continues"},
+    {"id": "EXP-001233", "relation": "continues"}
+  ],
+  "question": "Does the finite QCMI shell signal remain bounded or decrease when the oscillator cutoff is raised, so that a cutoff-independent Gibbs-complement tail becomes a plausible analytic target rather than an untested extrapolation?",
+  "method": [
+    "Build the same zero-source oscillator chain as R-392 from the manifest, but use dimensions 3 through 10 at volume 3 and higher feasible controls at volumes 4 and 5.",
+    "Enumerate both orientations of every admissible contiguous core--base-buffer--shell layout with both core widths and all four beta values.",
+    "Compute each conditional mutual information shell increment and cumulative value from finite reduced Gibbs spectra, retaining the chain-rule residual and l1 budget.",
+    "Group increments by volume, core width, orientation, beta and shell index; retain per-dimension maxima and adjacent-cutoff ratios so low-cutoff growth cannot be hidden by averaging.",
+    "Rebuild all aggregates in a non-importing independent lane, apply the product-of-one-site-marginals hostile mutation, and compile scalar profile identities in Lean R393."
+  ],
+  "finding": "The primary lane passes 921/921 checks and the non-importing independent lane passes 6/6. The integrated verifier passes 23/23 with Lean R393 compiling over 13 systems, 54 base partitions, 304 shell rows and 72 cutoff profiles. Every QCMI increment and cumulative value is nonnegative within tolerance; the cumulative range is 4.991889248628922e-07 to 0.009400499834535836, the maximum finite l1 budget is 0.009400499834535836, and the maximum chain-rule residual is 1.7763568394002505e-15. The volume-three cutoff ladder reaches dimension 10. The maximum adjacent-cutoff ratio is 32.000137578349594 and 62 of 72 profiles grow somewhere, with the largest ratio at V=5, core width one, beta one, shell index three, from dimension three to four. Several higher-dimension beta-one profiles settle or decrease. The interacting hostile representative reaches 0.009270624713825448 while the product mutation reaches 1.7763568394002505e-15.",
+  "verdict": "advanced",
+  "decision_reason": "R-393 advances the route by separating a finite high-cutoff diagnostic from the uniform theorem it would need to support. The large early ratios show that R-392 low-cutoff suppression cannot be extrapolated. The eventual settling of selected profiles motivates a two-stage route: prove an explicit energy bound for the spectral complement above a chosen cutoff, then seek a high-cutoff shell plateau. The analytic tail and plateau theorem are not yet established.",
+  "adversarial_review": [
+    {"axis": "cutoff selection", "check": "All dimensions are read from the manifest and the observed maximum is compared with the declared maximum dimension.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "numerical truncation", "check": "Reduced spectra are diagonalised without clipping QCMI values; negative increments and cumulative values are counted and rejected.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "chain-rule ordering", "check": "Each increment conditions on the actual preceding shell sites and is compared with the cumulative QCMI through an explicit residual.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "profile aggregation", "check": "Per-dimension maxima, ranges and adjacent ratios are retained, preventing averaging from hiding a cutoff increase.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "orientation and shape", "check": "Both left and right layouts, both core widths and all admissible shell prefixes are enumerated.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "ratio interpretation", "check": "The maximum ratio 32.000137578349594 is recorded as a finite diagnostic and is not called divergence or a theorem.", "disposition": "UPHELD-OPEN"},
+    {"axis": "independence", "check": "The independent lane rebuilds the Hamiltonian, reductions, entropy and cutoff profiles without importing the primary module.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "hostile mutation", "check": "A product of one-site marginals collapses the shell signal and is caught against the interacting representative.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "Lean boundary", "check": "Lean checks scalar nonnegativity and finite profile identities only; it does not formalise spectra, traces or limits.", "disposition": "UPHELD-OPEN"},
+    {"axis": "QFT promotion", "check": "Cutoff/source/volume/shape uniformity, Gibbs complement, common core, beta/eta independence, Cook/common-alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open.", "disposition": "UPHELD-OPEN"}
+  ],
+  "evidence_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-quantum-markov-shell-cutoff-stress-manifest.json#model",
+    "strategy/pre-a-cp1-st8-q3lock-quantum-markov-shell-cutoff-stress-certificate-260830.md#Result",
+    "codes/foundations/pre_a_cp1_st8_q3lock_quantum_markov_shell_cutoff_stress.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_quantum_markov_shell_cutoff_stress_independent.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_quantum_markov_shell_cutoff_stress_hostile.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_quantum_markov_shell_cutoff_stress_verify.py#run",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-primary-pre_a_cp1_st8_q3lock_quantum_markov_shell_cutoff_stress/primary.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-integrated-pre_a_cp1_st8_q3lock_quantum_markov_shell_cutoff_stress/integrated.json#derived",
+    "verification/lean/Tect/R393.lean#cutoff_profile_ratio_nonnegative",
+    "claims/C6-SPACETIME-SIGNATURE/notes/high-cutoff-qcmi-shell-stress-260830.md#R-393"
+  ],
+  "formal_integration": {
+    "results": ["R-393"],
+    "negatives": [],
+    "events": ["20260830-high-cutoff-qcmi-shell-stress-2026-08-30"],
+    "lean": "R393 PASS",
+    "no_new_result": false,
+    "no_new_negative": true,
+    "no_changelog_event": false,
+    "no_pdf": true,
+    "no_tier_change": true
+  },
+  "formal_refs": {
+    "results": ["R-393"],
+    "negatives": [],
+    "events": ["20260830-high-cutoff-qcmi-shell-stress-2026-08-30"]
+  },
+  "next_action": "Prove an explicit Gibbs spectral-complement energy tail above a chosen cutoff, then test whether a high-cutoff QCMI plateau has a cutoff-independent shell modulus. If the tail estimate fails, register the route-specific obstruction without promoting common alpha.",
+  "boundary": "T0 claim-nonbearing finite high-cutoff QCMI shell stress only. It proves no cutoff-independent shell modulus, Gibbs complement theorem, cutoff/source/volume/shape bound, common core, beta/eta-independent topology, domain or Cook/common-alpha convergence, OS/KMS/GNS reconstruction, gap, continuum, C6, Sector-A or Pre-A result.",
+  "no_overclaim": "A finite cutoff profile can identify a scaling direction or expose an obstruction; it cannot turn sampled ratios into a uniform theorem or remove the spectral complement.",
+  "provenance": "contemporaneous",
+  "recorded_at": "2026-08-30T09:30:00Z",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-08-29"
+}

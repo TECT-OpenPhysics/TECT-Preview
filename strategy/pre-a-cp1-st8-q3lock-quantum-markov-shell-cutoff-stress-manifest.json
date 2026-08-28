@@ -1,0 +1,107 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-QCMI-SHELL-CUTOFF-STRESS-FINITE-v0",
+  "result_id": "R-393",
+  "title": "High-cutoff QCMI shell stress",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001236",
+  "claim_bearing": false,
+  "parent_explorations": ["EXP-001235", "EXP-001234", "EXP-001233"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+  ],
+  "question": "Does the finite QCMI shell signal remain bounded or decrease when the oscillator cutoff is raised, so that a cutoff-independent Gibbs-complement tail becomes a plausible analytic target rather than an untested extrapolation?",
+  "finite_fixture": {
+    "volume_values": [3, 4, 5],
+    "admissible_pairs": [
+      {"volume": 3, "cutoff_dimensions": [3, 4, 5, 6, 7, 8, 9, 10]},
+      {"volume": 4, "cutoff_dimensions": [3, 4, 5]},
+      {"volume": 5, "cutoff_dimensions": [3, 4]}
+    ],
+    "core_widths": [1, 2],
+    "base_buffer_width": 1,
+    "beta_values": ["1/4", "1/2", "1", "2"],
+    "chi": "1",
+    "r": "-1",
+    "g": "0.6",
+    "c": "0.6",
+    "lambda": "0.1",
+    "hbar": "1",
+    "numerical_tolerance": 1e-8,
+    "hostile_threshold": 1e-7,
+    "finite_only": true
+  },
+  "model": {
+    "global_hamiltonian": "H_V=sum_j [p_j^2/(2 chi)+r q_j^2/2+g q_j^4/4] + sum_j [c(q_j-q_{j+1})^2/2 + lambda(q_j-q_{j+1})^2(q_j^2+q_{j+1}^2)/4]",
+    "shell_partition": "A=core, B=one-site base buffer, S_1,...,S_m=successive contiguous shell sites; exterior is traced out",
+    "increment": "delta_m=I(A:S_m|B S_1...S_{m-1})",
+    "cutoff_profile": "for each declared volume/core/orientation/beta/shell index, retain the finite maximum and range over the declared oscillator dimensions",
+    "chain_rule": "I(A:S_1...S_m|B)=sum_{k=1}^m delta_k",
+    "budget": "finite l1 boundary budget is sum_k delta_k; each delta is retained as a separate row",
+    "analytic_target": "prove a cutoff-independent shell tail modulus and use the budget to control the local Gibbs spectral complement and invariant common form core"
+  },
+  "coverage": {
+    "all_declared_volume_cutoff_pairs": true,
+    "both_core_widths_when_admissible": true,
+    "both_orientations": true,
+    "all_beta_values": true,
+    "all_admissible_shell_prefixes": true,
+    "chain_rule_residuals": true,
+    "cutoff_profiles": true,
+    "product_state_hostile": true
+  },
+  "scope": {
+    "finite_qcmI_shell_nonnegativity_closed": true,
+    "finite_qcmI_chain_rule_closed": true,
+    "finite_l1_boundary_budget_closed": true,
+    "finite_buffer_shell_stress_closed": true,
+    "finite_cutoff_profile_closed": true,
+    "finite_product_hostile_closed": true,
+    "operator_norm_uniformity_closed": false,
+    "beta_uniformity_closed": false,
+    "eta_uniformity_closed": false,
+    "phase_local_bkm_estimate_closed": false,
+    "boundary_shell_l1_uniform_closed": false,
+    "cutoff_uniformity_closed": false,
+    "source_uniformity_closed": false,
+    "volume_uniformity_closed": false,
+    "shape_uniformity_closed": false,
+    "operator_domain_embedding_closed": false,
+    "direct_D_cauchy_closed": false,
+    "delta_D_cauchy_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R393.lean",
+    "theorem_markers": ["cutoff_profile_nonnegative", "cutoff_profile_ratio_nonnegative", "finite_scope"],
+    "command": "lake env lean Tect/R393.lean",
+    "boundary": "Lean checks scalar nonnegativity and finite cutoff-profile identities; finite Gibbs spectra, partial traces and thermodynamic cutoff limits remain Python/open analysis."
+  },
+  "qft_interface": {
+    "closed": "On the finite declared grid, the QCMI shell signal and its adjacent-cutoff profiles are explicitly recomputed through oscillator dimension 10 at volume 3, with chain-rule and hostile checks.",
+    "open": "A bounded finite profile is not a cutoff-independent tail modulus. Uniform shell summability, Gibbs complement control, source/volume/shape uniformity, beta/eta independence, common core, Cook/common-alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open.",
+    "tect_boundary": "Auxiliary finite quantum-information interface only; no physical-sector conclusion or production-owner transfer is supplied."
+  },
+  "artifacts": {
+    "primary_script": "codes/foundations/pre_a_cp1_st8_q3lock_quantum_markov_shell_cutoff_stress.py",
+    "independent_script": "codes/foundations/pre_a_cp1_st8_q3lock_quantum_markov_shell_cutoff_stress_independent.py",
+    "hostile_script": "codes/foundations/pre_a_cp1_st8_q3lock_quantum_markov_shell_cutoff_stress_hostile.py",
+    "integrated_verifier": "codes/foundations/pre_a_cp1_st8_q3lock_quantum_markov_shell_cutoff_stress_verify.py",
+    "lean": "verification/lean/Tect/R393.lean"
+  },
+  "boundary": "T0 claim-nonbearing finite high-cutoff QCMI shell stress only. It proves no cutoff-independent shell modulus, Gibbs complement theorem, volume/source/shape bound, common core, beta/eta-independent topology, domain or Cook/common-alpha convergence, OS/KMS/GNS reconstruction, gap, continuum, C6, Sector-A or Pre-A result.",
+  "no_overclaim": "A finite cutoff profile can identify a scaling direction and expose an obstruction; it cannot turn sampled cutoff ratios into a uniform theorem or remove the spectral complement.",
+  "recorded_by": "Codex"
+}

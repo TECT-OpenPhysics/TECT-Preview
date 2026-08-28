@@ -5,7 +5,7 @@ Compact generated reader surface. The append-only authority is
 record 568 / commit `4db22f4e` and no longer grows.
 Post-cutover full bodies live exactly once in bounded pages under `pages/`.
 
-**733 accepted events** · latest 25 shown below · machine locator: `index.json`
+**734 accepted events** · latest 25 shown below · machine locator: `index.json`
 
 Search the complete authority without loading every page:
 
@@ -17,6 +17,7 @@ python verification/scripts/changelog.py search --text <phrase>
 
 | Date | Event | Claims | Full entry |
 |---|---|---|---|
+| 2026-08-30 | `20260830-high-cutoff-qcmi-shell-stress-2026-08-30` — [High-cutoff QCMI shell stress] - 2026-08-30 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000719-000768.md#20260830-high-cutoff-qcmi-shell-stress-2026-08-30) |
 | 2026-08-30 | `20260830-qcmi-shell-telescoping-boundary-budget-2026-08` — [QCMI shell-telescoping boundary budget] - 2026-08-30 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000719-000768.md#20260830-qcmi-shell-telescoping-boundary-budget-2026-08) |
 | 2026-08-30 | `20260830-quantum-markov-blanket-boundary-transfer-2026-0` — [Quantum-Markov blanket boundary transfer] - 2026-08-30 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000719-000768.md#20260830-quantum-markov-blanket-boundary-transfer-2026-0) |
 | 2026-08-30 | `20260830-local-marginal-spectral-window-transfer-2026-08` — [Local-marginal spectral-window transfer] - 2026-08-30 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000719-000768.md#20260830-local-marginal-spectral-window-transfer-2026-08) |
@@ -41,7 +42,6 @@ python verification/scripts/changelog.py search --text <phrase>
 | 2026-08-28 | `20260828-r-371-critical-theta-half-gibbs-cancellation-an` — [R-371 critical theta-half Gibbs cancellation and local second-moment bound] - 2026-08-28 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000669-000718.md#20260828-r-371-critical-theta-half-gibbs-cancellation-an) |
 | 2026-08-28 | `20260828-r-370-kubo-mori-liouvillian-energy-window-and-t` — [R-370 Kubo-Mori Liouvillian energy-window and tail decomposition] - 2026-08-28 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000669-000718.md#20260828-r-370-kubo-mori-liouvillian-energy-window-and-t) |
 | 2026-08-27 | `20260827-r-369-kubo-mori-translation-and-shape-stress-20` — [R-369 Kubo-Mori translation and shape stress] - 2026-08-27 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000669-000718.md#20260827-r-369-kubo-mori-translation-and-shape-stress-20) |
-| 2026-08-27 | `20260827-r-368-local-kubo-mori-weighted-fractional-prefi` — [R-368 local Kubo-Mori weighted fractional prefix] - 2026-08-27 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000669-000718.md#20260827-r-368-local-kubo-mori-weighted-fractional-prefi) |
 
 ## Post-cutover pages
 
@@ -49,7 +49,7 @@ Each full event body after the cutover occurs in exactly one page.
 
 | Ordinals | Events | Page |
 |---|---:|---|
-| 719–733 | 15 | [000719-000768.md](pages/000719-000768.md) |
+| 719–734 | 16 | [000719-000768.md](pages/000719-000768.md) |
 | 669–718 | 50 | [000669-000718.md](pages/000669-000718.md) |
 | 619–668 | 50 | [000619-000668.md](pages/000619-000668.md) |
 | 569–618 | 50 | [000569-000618.md](pages/000569-000618.md) |
