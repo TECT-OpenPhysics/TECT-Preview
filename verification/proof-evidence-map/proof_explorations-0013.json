@@ -6151,6 +6151,120 @@
       "task_id": "T-054",
       "title": "Harmonic-extension Schur capacity decomposition for phase-conditioned graph gaps",
       "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "axis": "unordered-pair normalization",
+          "check": "A three-node unit path rejects the doubled rho^{-1} candidate with residual -2.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "tree construction and choice",
+          "check": "The maximum-conductance tree is deterministic and connected; a separate line tree remains a positive finite certificate on d=3 and d=12 without being treated as optimal.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "generator support",
+          "check": "Replacing p by diagonal q produces zero off-diagonal conductances and is caught by the hostile lane.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "probability and conductance floors",
+          "check": "All selected-tree conductances, loads, residuals and conditional probabilities are finite and above their declared floors on the fixture.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "independent reconstruction",
+          "check": "A non-importing lane agrees on aggregate and per-cutoff fields within 5e-6.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "uniform and QFT promotion",
+          "check": "Finite rho positivity does not prove a cutoff/volume/phase/exhaustion-uniform path family, a common core, phase selection, GNS gap, continuum, C6, Sector-A or Pre-A closure.",
+          "disposition": "UPHELD-OPEN"
+        }
+      ],
+      "boundary": "T0 claim-nonbearing finite canonical-path/effective-resistance checkpoint only. It proves no cutoff-, volume-, source-, phase- or exhaustion-uniform gap, common core, common alpha, OS/KMS/GNS reconstruction, mass gap, continuum, C6, Sector-A or Pre-A closure.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "This advances a constructive finite interface: a future analytic proof can target an explicit weighted path or flow load instead of an opaque eigenvalue lower bound. The finite data do not establish that rho is bounded under cutoff, volume, phase or exhaustion limits, so no analytic gate is closed.",
+      "evidence_refs": [
+        "strategy/pre-a-cp1-st8-q3lock-canonical-path-resistance-manifest.json#new_perspective",
+        "strategy/pre-a-cp1-st8-q3lock-canonical-path-resistance-certificate-260830.md#Verification",
+        "codes/foundations/pre_a_cp1_st8_q3lock_canonical_path_resistance.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_canonical_path_resistance_independent.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_canonical_path_resistance_hostile.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_canonical_path_resistance_verify.py#main",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-primary-pre_a_cp1_st8_q3lock_canonical_path_resistance/primary.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-independent-pre_a_cp1_st8_q3lock_canonical_path_resistance/independent.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-hostile-pre_a_cp1_st8_q3lock_canonical_path_resistance/hostile.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-integrated-pre_a_cp1_st8_q3lock_canonical_path_resistance/integrated.json#derived",
+        "verification/lean/Tect/R407.lean#canonical_path_load_nonnegative",
+        "claims/C6-SPACETIME-SIGNATURE/notes/canonical-path-resistance-260830.md#R-407"
+      ],
+      "finding": "The primary lane passes 22510/22510 assertions over 7 systems, 2688 contexts and 21120 conditional rows; the independent lane passes 22509/22509, the hostile lane 6/6, the integrated verifier 35/35 and Lean R407 compiles. The exact intrinsic gap range is [0.7570174175402339,5.647863075935321], the constructive canonical bound range is [0.2613815898804392,2.508986944248343], and rho ranges from 0.3985672393762041 to 3.825824154093709. The minimum selected-tree conductance is 0.0050691567477082625, maximum path length is 9, and the minimum path residual is roundoff (-4.47e-26).",
+      "formal_integration": {
+        "events": [
+          "20260830-canonical-path-effective-resistance-lower-bound"
+        ],
+        "lean": "R407 PASS",
+        "negatives": [],
+        "no_new_negative": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "results": [
+          "R-407"
+        ]
+      },
+      "formal_refs": {
+        "events": [
+          "20260830-canonical-path-effective-resistance-lower-bound"
+        ],
+        "negatives": [],
+        "results": [
+          "R-407"
+        ]
+      },
+      "gate_ids": [
+        "PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY",
+        "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+        "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+      ],
+      "id": "EXP-001252",
+      "method": [
+        "Construct the symmetric momentum conductance c_ij=(pi_i+pi_j)|p_ij|^2/(2 chi) on every R-404 conditional row and choose a deterministic maximum-conductance Kruskal spanning tree.",
+        "Route each unordered pair x<y along the unique tree path and compute load(e)=sum pi_x*pi_y*length(path) and rho=max_e load(e)/c_e.",
+        "Check the finite inequality Var_pi(f)<=rho E(f) on every actual likelihood row, compare rho^{-1} with the exact intrinsic generalized gap, and record tree conductance, path length and conditional probability floors.",
+        "Repeat the full volume-two cutoff, beta, source, history, order, prefix, adjoint and collar-orientation grid in primary and independently reconstructed lanes.",
+        "Use a line-tree alternative, a diagonal-q generator mutation and a three-node factor-of-two toy graph as hostile controls."
+      ],
+      "next_action": "Construct a cutoff- and volume-independent path or flow family on one Hamiltonian common core with bounded weighted rho, then transfer the resulting intrinsic-form bound to the R-399 shell. Stop or redesign if rho or the weighted conductance floor collapses.",
+      "no_overclaim": "The path certificate is a constructive finite lower bound and a list of uniformity inputs; it is not an analytic regulator or thermodynamic estimate.",
+      "provenance": "contemporaneous",
+      "question": "Can a deterministic canonical-path load bound give a valid finite lower envelope for the intrinsic momentum graph, while exposing the exact conductance and probability inputs needed for a uniform proof?",
+      "recorded_at": "2026-08-30T21:00:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001251",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001249",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001250",
+          "relation": "alternative_to"
+        }
+      ],
+      "reviewed_on": "2026-08-28",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Canonical-path effective-resistance lower bound for intrinsic kinetic rows",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",

@@ -42,6 +42,7 @@ policy in `governance/development-history.md`.
 | [R-376](#r-376) | Hilbert-Schmidt Lipschitz bridge for the capped Liouvillian kernel | R-376 v1.0 is a T0 claim-nonbearing finite operator-interface checkpoint under EXP-001218. A noncommuting cutoff-2 edge Liouvillian stress gives maximum full-kernel Frobenius ratio 0.9787544362168733 and 64-layer ratio 0.9755896836319287 with 76/76 integrated assertions; general Schatten-2 proof, operator-norm locality, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
 | [R-377](#r-377) | Gap-free odd-Matsubara resolvent telescoping budget | R-377 v1.0 is a T0 claim-nonbearing finite resolvent-interface checkpoint under EXP-001219. The exact positive-resolvent difference identity and its 64-layer budget pass 122/122 integrated assertions with Lean R377; the accumulated finite budget ratio is 0.9895313426497929 and the absolute-value square-root debt is recorded separately. Uniform locality, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
 | [R-382](#r-382) | Increasing-cutoff endpoint modular moment stress | R-382 v1.0 is a T0 claim-nonbearing finite cutoff-profile diagnostic under EXP-001224. The R-381 endpoint-energy bridge passes across 2816 all-prefix actual-Q3 contexts with Lean R382; edge max M_0 grows from 2.733031855844076 at d=3 to 41.64826651661874 at d=6 and max M_2 from 0.008378198414559081 to 17.719559304500326, with d=5 to d=6 ratios 8.855033106195243 and 36.38049903040583. This is finite growth evidence only; uniform M_0/M_2 control, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
+| [R-407](#r-407) | Canonical-path effective-resistance lower bound | R-407 v1.0 is a T0 claim-nonbearing finite constructive path checkpoint under EXP-001252. The maximum-conductance tree certificate passes primary 22510/22510, independent 22509/22509, hostile 6/6, integrated 35/35 and Lean R407 over 7 systems, 2688 contexts and 21120 rows. The exact intrinsic gap is [0.7570174175402339,5.647863075935321], the canonical lower envelope is [0.2613815898804392,2.508986944248343], and rho is [0.3985672393762041,3.825824154093709]. The finite path certificate exposes the conductance/probability inputs for a future uniform proof; common-core, phase, volume, exhaustion and QFT gates remain open |
 | [R-406](#r-406) | Harmonic-extension Schur capacity decomposition | R-406 v1.0 is a T0 claim-nonbearing finite variational checkpoint under EXP-001251. It replaces the unsafe block-constant Ritz shortcut by a harmonic-extension Schur operator and a block-mean-zero residual form over 8 systems, 80 profiles and 1030 rows; primary 4267/4267, independent 2114/2114, hostile 6/6, integrated 38/38 and Lean R406 pass. The corrected factor-two envelope is positive on the finite grid, while all common-core, phase-selection and QFT gates remain open |
 | [R-405](#r-405) | Phase-conditioned intrinsic gap and inter-phase capacity split | R-405 v1.0 is a T0 claim-nonbearing finite route split under EXP-001250. It separates the R-404 momentum graph into lower/upper physical-coordinate sector gaps, cross-sector capacity and neutral central mass across 8 systems, 80 profiles and 1030 rows; primary 1178/1178, independent 1088/1088, hostile 5/5, integrated 33/33 and Lean R405 pass. The full-gap range is [0.6310329497027756,6.229495058532403], the induced sector-gap range is [1.5773625260965005,20.555978652063708] and cross capacity is [0.11650039514772156,1.222041249326006]. The finite split is not a uniform phasewise bound; common-core, phase-selection, broken-sector GNS and all QFT gates remain open |
 | [R-404](#r-404) | Intrinsic kinetic graph Poincare stress for Q3 likelihood rows | R-404 v1.0 is a T0 claim-nonbearing finite route checkpoint under EXP-001249. It replaces the unstable R-402 coordinate upper comparison with the actual momentum-weighted conditional graph; primary 1398/1398, independent 1388/1388, hostile 6/6, integrated 37/37 and Lean R404 pass over 7 systems, 2688 contexts and 21120 rows. The finite generalized graph gap is [0.7570174175402339,5.647863075935321] and stays positive across d=3,4,5,6,8,10,12, but cutoff/volume/phase uniformity, common core and all QFT gates remain open |
@@ -646,6 +647,54 @@ No new negative result, tier change, or R-376 PDF is issued.
 **Proven in:** manifest, certificate, Lean entrypoint, primary script,
 independent script, integrated verifier, scope note, and saved run artefacts.
 
+<a id="r-407"></a>
+### R-407 -- Canonical-path effective-resistance lower bound
+
+**Result ID.** R-407 is a T0, claim-nonbearing finite constructive path
+checkpoint under EXP-001252.  It continues the R-404 intrinsic momentum graph
+and replaces an eigenvalue-only diagnostic by an explicit weighted path load.
+For a conditional law `pi` and symmetric conductances `c`, a deterministic
+maximum-conductance spanning tree routes every unordered pair `x<y` along its
+unique path `gamma_xy` and defines
+
+```
+load(e) = sum_{x<y:e in gamma_xy} pi[x] * pi[y] * len(gamma_xy)
+rho = max_e load(e)/c_e
+```
+
+The finite path inequality is `Var_pi(f) <= rho E(f)`, so `rho**(-1)` is a
+valid lower bound for every finite test function.  The pair sum is unordered;
+there is no extra factor of two.
+
+**Verification.** The volume-two R-404 fixture uses dimensions `3,4,5,6,8,10,12`,
+beta in `{1/2,1,2}`, both source signs, history signs, split orders, all
+prefixes, both history adjoints and both collar orientations.  The primary
+lane passes `22510/22510` over 7 systems, 2688 contexts and 21120 rows; the
+independent lane passes `22509/22509`; the hostile lane `6/6`; the integrated
+verifier `35/35`; and Lean R407 compiles.
+
+The exact intrinsic gap range is `[0.7570174175402339,5.647863075935321]`,
+while the constructive canonical bound is `[0.2613815898804392,2.508986944248343]`.
+The corresponding `rho` range is `[0.3985672393762041,3.825824154093709]`.
+Every selected tree has `d-1` positive edges; the minimum selected-tree
+conductance is `0.0050691567477082625`, the maximum path length is `9`, and
+the minimum path residual is roundoff (`-4.47e-26`).
+
+The hostile lane also checks a line-tree alternative, a diagonal-q mutation
+with zero graph edges, and the factor audit on a three-node unit path: the
+correct bound is `3`, while the doubled candidate has residual `-2`.
+
+This finite result advances a constructive interface: a future analytic proof
+can target a weighted path/flow load rather than an opaque eigenvalue.  It does
+not establish that `rho` is bounded under cutoff, volume, phase or exhaustion
+limits.
+
+**Boundary.** R-407 proves no cutoff-, volume-, source-, phase- or
+exhaustion-uniform gap, common core, common alpha, phase selection,
+Hamiltonian-to-OS/KMS/GNS identification, physical mass gap, continuum, C6,
+Sector-A or Pre-A closure.  No tier change, negative result or PDF is issued.
+
+**Proven in:** [R-407 certificate](strategy/pre-a-cp1-st8-q3lock-canonical-path-resistance-certificate-260830.md), [Lean entrypoint](verification/lean/Tect/R407.lean), primary/independent/hostile scripts, integrated verifier, [scope note](claims/C6-SPACETIME-SIGNATURE/notes/canonical-path-resistance-260830.md), and saved run artefacts.
 <a id="r-406"></a>
 ### R-406 -- Harmonic-extension Schur capacity decomposition
 

@@ -2,6 +2,41 @@
   "data": [
     {
       "accepted_event_ids": [
+        "20260614-t-030-r-041-r-033-step-1-sidon-height-latitude",
+        "20260614-t-030-r-042-r-033-step-2-height-energy-bound-e"
+      ],
+      "anchor": "r-041",
+      "claim_ref_basis": {
+        "B5-BEYOND-LAYER-BOUND": "proof_anchor_unique_family:B5"
+      },
+      "claim_refs": [
+        "B5-BEYOND-LAYER-BOUND"
+      ],
+      "co_recorded_negative_tags": [],
+      "detail": {
+        "proven_in": "B5 / dr2-t030-sidon-decoupling v1.1",
+        "publication_target": "S^2 additive-energy paper / T-030",
+        "reuse_scope": "arbitrary-Q DR-2 (T-030); the incidence-free Sidon-height case; the precise reduction of the sphere O(N^2) conjecture to the off-diagonal four-circle incidence energy (R-033).",
+        "statement_one_line": "(PROVED) A union of L latitude circles (parallel planes, ANY radii) at heights z_i forming a SIDON set has E_+(Q) <= 6 N^2, incidence-free. Proof: the height equation z_a+z_b=z_c+z_d + Sidon => {z_a,z_b}={z_c,z_d} (plane-index multiset matches); each of the two matched arrangements (i,j,i,j) and (i,j,j,i) contributes E_+(C_i,C_j) resp. corr(C_i,C_j), both <= 3 nu_i nu_j (R-021 / Cauchy-Schwarz with E_+(C)<=3 nu^2); sum over ordered (i,j) gives <= 6 N^2. RADIUS-AGNOSTIC (the Sidon condition is on heights only; contrast R-040's (2 p_max+1)N^2 which needs distinct radii). This isolates the incidence-FREE part of the R-040 sphere O(N^2) conjecture; the NON-Sidon residual is the off-diagonal four-circle in-plane incidence energy #{c_a+c_b=c_c+c_d: c_a in C_i,...,{i,j}!={k,l}}, which does NOT reduce to a bounded 2D concentric-circle energy (that grows with L: 3.2,3.9,5.4,6.0 at L=2,4,6,8) -- a height-aware open incidence problem = the R-033 core. Verified dr2_t030_sidon_decoupling.py 7/7 (decoupling exact 0 mismatched; E_+<=6N^2 to L=8; arrangement decomposition; radius-agnostic equal-radius check; non-Sidon residual 1248 at L=5 AP).",
+        "tier": "PARTIAL ADVANCE / R-033 step 1. Sidon-height bound PROVED (T7-within-class, any radii). Sphere O(N^2) conjecture stays STRONG EVIDENCE (T4, R-040). Does NOT close T-030: arbitrary-Q N^{2+eps} OPEN (record N^{9/4}, R-033). No tier/gate/hypothesis flip; B5 stays T7-SCOPE_{admissibility-bounded} given A1. Honest corrections recorded (constant 3->6; 2D-concentric reduction refuted)."
+      },
+      "detail_title": "Sidon-height latitude unions: E_+ <= 6 N^2 incidence-free (R-033 step 1)",
+      "family_refs": [
+        "B5"
+      ],
+      "id": "R-041",
+      "normalized_detail": {
+        "boundary": "PARTIAL ADVANCE / R-033 step 1. Sidon-height bound PROVED (T7-within-class, any radii). Sphere O(N^2) conjecture stays STRONG EVIDENCE (T4, R-040). Does NOT close T-030: arbitrary-Q N^{2+eps} OPEN (record N^{9/4}, R-033). No tier/gate/hypothesis flip; B5 stays T7-SCOPE_{admissibility-bounded} given A1. Honest corrections recorded (constant 3->6; 2D-concentric reduction refuted).",
+        "proof_anchor": "B5 / dr2-t030-sidon-decoupling v1.1",
+        "publication_target": "S^2 additive-energy paper / T-030",
+        "reuse": "arbitrary-Q DR-2 (T-030); the incidence-free Sidon-height case; the precise reduction of the sphere O(N^2) conjecture to the off-diagonal four-circle incidence energy (R-033).",
+        "statement": "(PROVED) A union of L latitude circles (parallel planes, ANY radii) at heights z_i forming a SIDON set has E_+(Q) <= 6 N^2, incidence-free. Proof: the height equation z_a+z_b=z_c+z_d + Sidon => {z_a,z_b}={z_c,z_d} (plane-index multiset matches); each of the two matched arrangements (i,j,i,j) and (i,j,j,i) contributes E_+(C_i,C_j) resp. corr(C_i,C_j), both <= 3 nu_i nu_j (R-021 / Cauchy-Schwarz with E_+(C)<=3 nu^2); sum over ordered (i,j) gives <= 6 N^2. RADIUS-AGNOSTIC (the Sidon condition is on heights only; contrast R-040's (2 p_max+1)N^2 which needs distinct radii). This isolates the incidence-FREE part of the R-040 sphere O(N^2) conjecture; the NON-Sidon residual is the off-diagonal four-circle in-plane incidence energy #{c_a+c_b=c_c+c_d: c_a in C_i,...,{i,j}!={k,l}}, which does NOT reduce to a bounded 2D concentric-circle energy (that grows with L: 3.2,3.9,5.4,6.0 at L=2,4,6,8) -- a height-aware open incidence problem = the R-033 core. Verified dr2_t030_sidon_decoupling.py 7/7 (decoupling exact 0 mismatched; E_+<=6N^2 to L=8; arrangement decomposition; radius-agnostic equal-radius check; non-Sidon residual 1248 at L=5 AP)."
+      },
+      "summary": "PARTIAL ADVANCE; PROVED Sidon bound; residual = R-033 core; T-030 OPEN; dr2_t030_sidon_decoupling.py 7/7",
+      "title": "Sidon-height latitude unions (any radii) E_+<=6N^2 incidence-free (R-033 step 1); non-Sidon residual = open 4-circle incidence"
+    },
+    {
+      "accepted_event_ids": [
         "20260614-t-030-r-040-true-sphere-l-dependence-distinct-r",
         "20260614-t-030-r-041-r-033-step-1-sidon-height-latitude",
         "20260614-t-030-r-042-r-033-step-2-height-energy-bound-e"

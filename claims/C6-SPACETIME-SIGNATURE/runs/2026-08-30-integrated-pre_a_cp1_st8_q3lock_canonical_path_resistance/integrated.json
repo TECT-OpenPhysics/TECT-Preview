@@ -1,0 +1,639 @@
+{
+  "boundary": "T0 claim-nonbearing finite canonical-path/effective-resistance checkpoint only. It proves no cutoff-, volume-, source-, phase- or exhaustion-uniform gap, common core, common alpha, OS/KMS/GNS reconstruction, mass gap, continuum, C6, Sector-A or Pre-A closure.",
+  "checks": [
+    {
+      "actual": "['R-407', 'EXP-001252', False]",
+      "expected": "R-407/EXP-001252/false",
+      "group": "identity",
+      "name": "manifest identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'cutoff_independent_bound_closed': False, 'volume_independent_bound_closed': False, 'phase_uniform_bound_closed': False, 'exhaustion_uniform_bound_closed': False, 'common_core_closed': False, 'common_alpha_closed': False, 'hamiltonian_os_identification_closed': False, 'kms_gns_gap_closed': False, 'continuum_closed': False, 'c6_closed': False, 'sector_a_closed': False, 'pre_a_closed': False}",
+      "expected": "all promoted flags false",
+      "group": "scope",
+      "name": "scope firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": "[]",
+      "expected": "all R-407 artifacts",
+      "group": "provenance",
+      "name": "artifacts present",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'codes/foundations/pre_a_cp1_st8_q3lock_canonical_path_resistance.py': '31908edc64d54695619c50a9550b269e49c10aa9a15a14fc941b5389a476466f', 'codes/foundations/pre_a_cp1_st8_q3lock_canonical_path_resistance_independent.py': '8c9ec7b0e5ef8ac788b564a6d6ac12c2ca536dadc4c09e2d851926ca79d5aafb', 'codes/foundations/pre_a_cp1_st8_q3lock_canonical_path_resistance_hostile.py': '4c51ffabeab263875daa1fd33ac28cae96f0b50ead7e77adff052d2c8a128302', 'verification/lean/Tect/R407.lean': 'f408c6164acbb81fde4b6b8e572fbba1f3b7eb25fd768a0e050077b67de955b0'}",
+      "expected": "distinct",
+      "group": "provenance",
+      "name": "source hashes distinct",
+      "status": "PASS"
+    },
+    {
+      "actual": "['canonical_path_load_nonnegative', 'tree_bound_nonnegative', 'finite_scope']",
+      "expected": "declared markers",
+      "group": "Lean",
+      "name": "Lean markers",
+      "status": "PASS"
+    },
+    {
+      "actual": "finite scalar file",
+      "expected": "no promotion text",
+      "group": "Lean",
+      "name": "Lean boundary",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-407 PRIMARY PASS 22510/22510 systems=7 contexts=2688 rows=21120 bound=[0.261382,2.50899] rho=[0.398567,3.82582]",
+      "expected": "exit 0 and output",
+      "group": "executables",
+      "name": "run pre_a_cp1_st8_q3lock_canonical_path_resistance.py",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-407 INDEPENDENT PASS 22509/22509 systems=7 contexts=2688 rows=21120 bound=[0.261382,2.50899] rho=[0.398567,3.82582]",
+      "expected": "exit 0 and output",
+      "group": "executables",
+      "name": "run pre_a_cp1_st8_q3lock_canonical_path_resistance_independent.py",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-407 HOSTILE PASS 6/6 baseline_bound=0.423684 late_bound=0.659185 q_edges=0 doubled_residual=-2",
+      "expected": "exit 0 and output",
+      "group": "executables",
+      "name": "run pre_a_cp1_st8_q3lock_canonical_path_resistance_hostile.py",
+      "status": "PASS"
+    },
+    {
+      "actual": "",
+      "expected": "exit 0",
+      "group": "Lean",
+      "name": "Lean compile",
+      "status": "PASS"
+    },
+    {
+      "actual": "PASS",
+      "expected": "PASS",
+      "group": "executables",
+      "name": "primary verdict",
+      "status": "PASS"
+    },
+    {
+      "actual": "PASS",
+      "expected": "PASS",
+      "group": "executables",
+      "name": "independent verdict",
+      "status": "PASS"
+    },
+    {
+      "actual": "PASS",
+      "expected": "PASS",
+      "group": "hostile",
+      "name": "hostile verdict",
+      "status": "PASS"
+    },
+    {
+      "actual": "[7, 7]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent system_count",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2688, 2688]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent context_count",
+      "status": "PASS"
+    },
+    {
+      "actual": "[21120, 21120]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent comparison_row_count",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.2613815898804392, 0.2613815898804393]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent minimum_canonical_bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.508986944248343, 2.5089869442482855]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent maximum_canonical_bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.7570174175402339, 0.7570174175402339]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent minimum_intrinsic_gap",
+      "status": "PASS"
+    },
+    {
+      "actual": "[5.647863075935321, 5.647863075940388]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent maximum_intrinsic_gap",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.3985672393762041, 0.3985672393762132]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent minimum_rho",
+      "status": "PASS"
+    },
+    {
+      "actual": "[3.825824154093709, 3.8258241540937075]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent maximum_rho",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.0050691567477082625, 0.005069156747708253]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent minimum_tree_conductance",
+      "status": "PASS"
+    },
+    {
+      "actual": "[4.1034872011629017e-08, 4.103487200963217e-08]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent minimum_conditional_probability",
+      "status": "PASS"
+    },
+    {
+      "actual": "[-4.4700316396330353e-26, -8.384570633468713e-26]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent minimum_canonical_residual",
+      "status": "PASS"
+    },
+    {
+      "actual": "[9.46407537381143, 9.464075375291564]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent maximum_canonical_residual",
+      "status": "PASS"
+    },
+    {
+      "actual": "[[3, 4, 5, 6, 8, 10, 12], [3, 4, 5, 6, 8, 10, 12]]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent cutoff_dimensions",
+      "status": "PASS"
+    },
+    {
+      "actual": "[{'V=2/d=10': {'context_count': 384, 'dimension': 10, 'maximum_bound': 2.253158800779803, 'maximum_gap': 4.55943819352713, 'maximum_path_length': 8, 'maximum_residual': 0.5222719556454237, 'maximum_rho': 3.023136359730238, 'minimum_bound': 0.33078230056722696, 'minimum_gap': 2.1313269196275257, 'minimum_probability': 6.520472823271113e-07, 'minimum_residual': -7.934902937623282e-28, 'minimum_rho': 0.44382135855400284, 'minimum_tree_conductance': 0.006822383759173288, 'row_count': 4224}, 'V=2/d=12': {'context_count': 384, 'dimension': 12, 'maximum_bound': 2.508986944248343, 'maximum_gap': 5.647863075935321, 'maximum_path_length': 9, 'maximum_residual': 9.46407537381143, 'maximum_rho': 2.4361618611086917, 'minimum_bound': 0.4104817565549205, 'minimum_gap': 2.4233910464474144, 'minimum_probability': 4.1034872011629017e-08, 'minimum_residual': -4.4700316396330353e-26, 'minimum_rho': 0.3985672393762041, 'minimum_tree_conductance': 0.0050691567477082625, 'row_count': 4992}, 'V=2/d=3': {'context_count': 384, 'dimension': 3, 'maximum_bound': 1.4573552059072044, 'maximum_gap': 2.481985895256327, 'maximum_path_length': 2, 'maximum_residual': 2.6348412675395235e-05, 'maximum_rho': 2.3602491509019363, 'minimum_bound': 0.4236840842068999, 'minimum_gap': 0.7570174175402339, 'minimum_probability': 0.04861365215066497, 'minimum_residual': -2.191304928318489e-31, 'minimum_rho': 0.6861745139047961, 'minimum_tree_conductance': 0.07472323927402337, 'row_count': 1536}, 'V=2/d=4': {'context_count': 384, 'dimension': 4, 'maximum_bound': 1.2860445946626533, 'maximum_gap': 2.833778687459352, 'maximum_path_length': 3, 'maximum_residual': 0.000445004223645238, 'maximum_rho': 3.825824154093709, 'minimum_bound': 0.2613815898804392, 'minimum_gap': 0.7872756441265598, 'minimum_probability': 0.008874737005440902, 'minimum_residual': -5.003077987200846e-31, 'minimum_rho': 0.7775780125745276, 'minimum_tree_conductance': 0.03605057211263615, 'row_count': 1920}, 'V=2/d=5': {'context_count': 384, 'dimension': 5, 'maximum_bound': 1.3515412151819315, 'maximum_gap': 2.3636300623347872, 'maximum_path_length': 4, 'maximum_residual': 0.00290307765433436, 'maximum_rho': 2.1785809944437062, 'minimum_bound': 0.4590143779599743, 'minimum_gap': 1.1950962017934932, 'minimum_probability': 0.0015723117183174314, 'minimum_residual': -2.4636798622651546e-30, 'minimum_rho': 0.7398960451719481, 'minimum_tree_conductance': 0.02332472495081604, 'row_count': 2304}, 'V=2/d=6': {'context_count': 384, 'dimension': 6, 'maximum_bound': 2.095489703221304, 'maximum_gap': 3.8750382074539487, 'maximum_path_length': 5, 'maximum_residual': 0.01080840094742107, 'maximum_rho': 2.188438067439147, 'minimum_bound': 0.4569469042229621, 'minimum_gap': 1.4721452785784677, 'minimum_probability': 0.000284104468472009, 'minimum_residual': -6.10644190638217e-30, 'minimum_rho': 0.4772154205590913, 'minimum_tree_conductance': 0.016104911795548914, 'row_count': 2688}, 'V=2/d=8': {'context_count': 384, 'dimension': 8, 'maximum_bound': 2.0582682587881576, 'maximum_gap': 3.7780559388526536, 'maximum_path_length': 7, 'maximum_residual': 0.06255725299610396, 'maximum_rho': 2.171284218549281, 'minimum_bound': 0.460556932831271, 'minimum_gap': 1.7946329937682575, 'minimum_probability': 9.033268919704252e-06, 'minimum_residual': -1.517719220043571e-29, 'minimum_rho': 0.48584531959345667, 'minimum_tree_conductance': 0.009771385427907436, 'row_count': 3456}}, {'V=2/d=10': {'context_count': 384, 'dimension': 10, 'maximum_bound': 2.2531588007798145, 'maximum_gap': 4.559438193527271, 'maximum_path_length': 8, 'maximum_residual': 0.5222719556457085, 'maximum_rho': 3.023136359729745, 'minimum_bound': 0.3307823005672809, 'minimum_gap': 2.1313269196275284, 'minimum_probability': 6.520472823270522e-07, 'minimum_residual': -3.034769847498002e-28, 'minimum_rho': 0.44382135855400057, 'minimum_tree_conductance': 0.0068223837591733045, 'row_count': 4224}, 'V=2/d=12': {'context_count': 384, 'dimension': 12, 'maximum_bound': 2.5089869442482855, 'maximum_gap': 5.647863075940388, 'maximum_path_length': 9, 'maximum_residual': 9.464075375291564, 'maximum_rho': 2.436161861107862, 'minimum_bound': 0.41048175655506025, 'minimum_gap': 2.4233910464474286, 'minimum_probability': 4.103487200963217e-08, 'minimum_residual': -8.384570633468713e-26, 'minimum_rho': 0.3985672393762132, 'minimum_tree_conductance': 0.005069156747708253, 'row_count': 4992}, 'V=2/d=3': {'context_count': 384, 'dimension': 3, 'maximum_bound': 1.4573552059072068, 'maximum_gap': 2.4819858952563303, 'maximum_path_length': 2, 'maximum_residual': 2.6348412675406328e-05, 'maximum_rho': 2.3602491509019368, 'minimum_bound': 0.42368408420689985, 'minimum_gap': 0.7570174175402339, 'minimum_probability': 0.048613652150664904, 'minimum_residual': -2.4148744949727e-31, 'minimum_rho': 0.686174513904795, 'minimum_tree_conductance': 0.07472323927402338, 'row_count': 1536}, 'V=2/d=4': {'context_count': 384, 'dimension': 4, 'maximum_bound': 1.2860445946626535, 'maximum_gap': 2.833778687459353, 'maximum_path_length': 3, 'maximum_residual': 0.00044500422364516655, 'maximum_rho': 3.8258241540937075, 'minimum_bound': 0.2613815898804393, 'minimum_gap': 0.7872756441265597, 'minimum_probability': 0.008874737005440909, 'minimum_residual': -6.762883842532684e-31, 'minimum_rho': 0.7775780125745275, 'minimum_tree_conductance': 0.03605057211263615, 'row_count': 1920}, 'V=2/d=5': {'context_count': 384, 'dimension': 5, 'maximum_bound': 1.3515412151819315, 'maximum_gap': 2.363630062334787, 'maximum_path_length': 4, 'maximum_residual': 0.0029030776543343736, 'maximum_rho': 2.178580994443706, 'minimum_bound': 0.45901437795997435, 'minimum_gap': 1.1950962017934934, 'minimum_probability': 0.0015723117183174087, 'minimum_residual': -3.413728608749998e-30, 'minimum_rho': 0.7398960451719481, 'minimum_tree_conductance': 0.02332472495081605, 'row_count': 2304}, 'V=2/d=6': {'context_count': 384, 'dimension': 6, 'maximum_bound': 2.0954897032213022, 'maximum_gap': 3.8750382074539744, 'maximum_path_length': 5, 'maximum_residual': 0.010808400947421332, 'maximum_rho': 2.1884380674391477, 'minimum_bound': 0.45694690422296186, 'minimum_gap': 1.4721452785784677, 'minimum_probability': 0.0002841044684719998, 'minimum_residual': -2.661155985205781e-30, 'minimum_rho': 0.4772154205590917, 'minimum_tree_conductance': 0.016104911795548918, 'row_count': 2688}, 'V=2/d=8': {'context_count': 384, 'dimension': 8, 'maximum_bound': 2.058268258788166, 'maximum_gap': 3.77805593885265, 'maximum_path_length': 7, 'maximum_residual': 0.06255725299607531, 'maximum_rho': 2.1712842185492827, 'minimum_bound': 0.4605569328312707, 'minimum_gap': 1.7946329937682568, 'minimum_probability': 9.033268919704965e-06, 'minimum_residual': -2.674007793750482e-29, 'minimum_rho': 0.4858453195934547, 'minimum_tree_conductance': 0.009771385427907422, 'row_count': 3456}}]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent system_profiles",
+      "status": "PASS"
+    },
+    {
+      "actual": "7",
+      "expected": "7",
+      "group": "coverage",
+      "name": "system grid reached",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2688, 21120]",
+      "expected": "positive rows beyond contexts",
+      "group": "coverage",
+      "name": "context grid reached",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.2613815898804392",
+      "expected": ">0 on finite grid",
+      "group": "canonical path",
+      "name": "canonical bound positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "-4.4700316396330353e-26",
+      "expected": ">=-1e-08",
+      "group": "canonical path",
+      "name": "canonical residual nonnegative",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.508986944248343, 5.647863075935321]",
+      "expected": "bound <= exact gap envelope",
+      "group": "comparison",
+      "name": "bound is below exact graph gap",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'maximum_edge': 0.0, 'mutated_edge_count': 0}",
+      "expected": "zero q conductance edges",
+      "group": "hostile",
+      "name": "hostile q mutation caught",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'toy_correct_bound': 3.0, 'toy_doubled_residual': -2.0, 'toy_rho': 0.3333333333333333}",
+      "expected": "doubled residual <-1e-08",
+      "group": "hostile",
+      "name": "hostile factor mutation caught",
+      "status": "PASS"
+    }
+  ],
+  "derived": {
+    "command_outputs": {
+      "lean": "",
+      "pre_a_cp1_st8_q3lock_canonical_path_resistance.py": "R-407 PRIMARY PASS 22510/22510 systems=7 contexts=2688 rows=21120 bound=[0.261382,2.50899] rho=[0.398567,3.82582]",
+      "pre_a_cp1_st8_q3lock_canonical_path_resistance_hostile.py": "R-407 HOSTILE PASS 6/6 baseline_bound=0.423684 late_bound=0.659185 q_edges=0 doubled_residual=-2",
+      "pre_a_cp1_st8_q3lock_canonical_path_resistance_independent.py": "R-407 INDEPENDENT PASS 22509/22509 systems=7 contexts=2688 rows=21120 bound=[0.261382,2.50899] rho=[0.398567,3.82582]"
+    },
+    "hostile": {
+      "factor_audit": {
+        "toy_correct_bound": 3.0,
+        "toy_doubled_residual": -2.0,
+        "toy_rho": 0.3333333333333333
+      },
+      "mutation": "replace_p_by_q_and_double_unordered_pair_bound",
+      "q_mutation": {
+        "maximum_edge": 0.0,
+        "mutated_edge_count": 0
+      },
+      "selected": [
+        {
+          "canonical_bound": 0.4236840842068999,
+          "dimension": 3,
+          "energy": 2.392011619748649e-07,
+          "exact_gap": 0.7570174175402339,
+          "line_edge_count": 2,
+          "line_residual": 2.106522751249547e-07,
+          "line_rho": 2.3602491509019363,
+          "line_tree_bound": 0.4236840842068999,
+          "residual": 2.106522751249547e-07,
+          "rho": 2.3602491509019363,
+          "tree_edge_count": 2,
+          "variance": 6.738248594669602e-08
+        },
+        {
+          "canonical_bound": 0.6591848496654339,
+          "dimension": 12,
+          "energy": 0.004262339182117863,
+          "exact_gap": 2.914431299136564,
+          "line_edge_count": 11,
+          "line_residual": 0.004261989517448175,
+          "line_rho": 1.517241947625695,
+          "line_tree_bound": 0.6590906622143438,
+          "residual": 0.004261989467479293,
+          "rho": 1.5170251569154618,
+          "tree_edge_count": 11,
+          "variance": 5.30525904452027e-07
+        }
+      ]
+    },
+    "independent": {
+      "c6_closed": false,
+      "common_alpha_closed": false,
+      "common_core_closed": false,
+      "comparison_row_count": 21120,
+      "context_count": 2688,
+      "continuum_closed": false,
+      "cutoff_dimensions": [
+        3,
+        4,
+        5,
+        6,
+        8,
+        10,
+        12
+      ],
+      "cutoff_independent_bound_closed": false,
+      "exhaustion_uniform_bound_closed": false,
+      "finite_canonical_path_identity_closed": true,
+      "finite_cutoff_profile_closed": true,
+      "finite_likelihood_row_bound_closed": true,
+      "finite_tree_bound_closed": true,
+      "finite_tree_choice_stress_closed": true,
+      "hamiltonian_os_identification_closed": false,
+      "kms_gns_gap_closed": false,
+      "maximum_canonical_bound": 2.5089869442482855,
+      "maximum_canonical_residual": 9.464075375291564,
+      "maximum_intrinsic_gap": 5.647863075940388,
+      "maximum_rho": 3.8258241540937075,
+      "minimum_canonical_bound": 0.2613815898804393,
+      "minimum_canonical_residual": -8.384570633468713e-26,
+      "minimum_conditional_probability": 4.103487200963217e-08,
+      "minimum_intrinsic_gap": 0.7570174175402339,
+      "minimum_rho": 0.3985672393762132,
+      "minimum_tree_conductance": 0.005069156747708253,
+      "phase_uniform_bound_closed": false,
+      "pre_a_closed": false,
+      "sector_a_closed": false,
+      "system_count": 7,
+      "system_profiles": {
+        "V=2/d=10": {
+          "context_count": 384,
+          "dimension": 10,
+          "maximum_bound": 2.2531588007798145,
+          "maximum_gap": 4.559438193527271,
+          "maximum_path_length": 8,
+          "maximum_residual": 0.5222719556457085,
+          "maximum_rho": 3.023136359729745,
+          "minimum_bound": 0.3307823005672809,
+          "minimum_gap": 2.1313269196275284,
+          "minimum_probability": 6.520472823270522e-07,
+          "minimum_residual": -3.034769847498002e-28,
+          "minimum_rho": 0.44382135855400057,
+          "minimum_tree_conductance": 0.0068223837591733045,
+          "row_count": 4224
+        },
+        "V=2/d=12": {
+          "context_count": 384,
+          "dimension": 12,
+          "maximum_bound": 2.5089869442482855,
+          "maximum_gap": 5.647863075940388,
+          "maximum_path_length": 9,
+          "maximum_residual": 9.464075375291564,
+          "maximum_rho": 2.436161861107862,
+          "minimum_bound": 0.41048175655506025,
+          "minimum_gap": 2.4233910464474286,
+          "minimum_probability": 4.103487200963217e-08,
+          "minimum_residual": -8.384570633468713e-26,
+          "minimum_rho": 0.3985672393762132,
+          "minimum_tree_conductance": 0.005069156747708253,
+          "row_count": 4992
+        },
+        "V=2/d=3": {
+          "context_count": 384,
+          "dimension": 3,
+          "maximum_bound": 1.4573552059072068,
+          "maximum_gap": 2.4819858952563303,
+          "maximum_path_length": 2,
+          "maximum_residual": 2.6348412675406328e-05,
+          "maximum_rho": 2.3602491509019368,
+          "minimum_bound": 0.42368408420689985,
+          "minimum_gap": 0.7570174175402339,
+          "minimum_probability": 0.048613652150664904,
+          "minimum_residual": -2.4148744949727e-31,
+          "minimum_rho": 0.686174513904795,
+          "minimum_tree_conductance": 0.07472323927402338,
+          "row_count": 1536
+        },
+        "V=2/d=4": {
+          "context_count": 384,
+          "dimension": 4,
+          "maximum_bound": 1.2860445946626535,
+          "maximum_gap": 2.833778687459353,
+          "maximum_path_length": 3,
+          "maximum_residual": 0.00044500422364516655,
+          "maximum_rho": 3.8258241540937075,
+          "minimum_bound": 0.2613815898804393,
+          "minimum_gap": 0.7872756441265597,
+          "minimum_probability": 0.008874737005440909,
+          "minimum_residual": -6.762883842532684e-31,
+          "minimum_rho": 0.7775780125745275,
+          "minimum_tree_conductance": 0.03605057211263615,
+          "row_count": 1920
+        },
+        "V=2/d=5": {
+          "context_count": 384,
+          "dimension": 5,
+          "maximum_bound": 1.3515412151819315,
+          "maximum_gap": 2.363630062334787,
+          "maximum_path_length": 4,
+          "maximum_residual": 0.0029030776543343736,
+          "maximum_rho": 2.178580994443706,
+          "minimum_bound": 0.45901437795997435,
+          "minimum_gap": 1.1950962017934934,
+          "minimum_probability": 0.0015723117183174087,
+          "minimum_residual": -3.413728608749998e-30,
+          "minimum_rho": 0.7398960451719481,
+          "minimum_tree_conductance": 0.02332472495081605,
+          "row_count": 2304
+        },
+        "V=2/d=6": {
+          "context_count": 384,
+          "dimension": 6,
+          "maximum_bound": 2.0954897032213022,
+          "maximum_gap": 3.8750382074539744,
+          "maximum_path_length": 5,
+          "maximum_residual": 0.010808400947421332,
+          "maximum_rho": 2.1884380674391477,
+          "minimum_bound": 0.45694690422296186,
+          "minimum_gap": 1.4721452785784677,
+          "minimum_probability": 0.0002841044684719998,
+          "minimum_residual": -2.661155985205781e-30,
+          "minimum_rho": 0.4772154205590917,
+          "minimum_tree_conductance": 0.016104911795548918,
+          "row_count": 2688
+        },
+        "V=2/d=8": {
+          "context_count": 384,
+          "dimension": 8,
+          "maximum_bound": 2.058268258788166,
+          "maximum_gap": 3.77805593885265,
+          "maximum_path_length": 7,
+          "maximum_residual": 0.06255725299607531,
+          "maximum_rho": 2.1712842185492827,
+          "minimum_bound": 0.4605569328312707,
+          "minimum_gap": 1.7946329937682568,
+          "minimum_probability": 9.033268919704965e-06,
+          "minimum_residual": -2.674007793750482e-29,
+          "minimum_rho": 0.4858453195934547,
+          "minimum_tree_conductance": 0.009771385427907422,
+          "row_count": 3456
+        }
+      },
+      "volume_independent_bound_closed": false
+    },
+    "lean": "PASS",
+    "primary": {
+      "c6_closed": false,
+      "common_alpha_closed": false,
+      "common_core_closed": false,
+      "comparison_row_count": 21120,
+      "context_count": 2688,
+      "continuum_closed": false,
+      "cutoff_dimensions": [
+        3,
+        4,
+        5,
+        6,
+        8,
+        10,
+        12
+      ],
+      "cutoff_independent_bound_closed": false,
+      "exhaustion_uniform_bound_closed": false,
+      "finite_canonical_path_identity_closed": true,
+      "finite_cutoff_profile_closed": true,
+      "finite_likelihood_row_bound_closed": true,
+      "finite_tree_bound_closed": true,
+      "finite_tree_choice_stress_closed": true,
+      "hamiltonian_os_identification_closed": false,
+      "kms_gns_gap_closed": false,
+      "maximum_canonical_bound": 2.508986944248343,
+      "maximum_canonical_residual": 9.46407537381143,
+      "maximum_intrinsic_gap": 5.647863075935321,
+      "maximum_rho": 3.825824154093709,
+      "maximum_tree_conductance": 0.21900489885608537,
+      "minimum_canonical_bound": 0.2613815898804392,
+      "minimum_canonical_residual": -4.4700316396330353e-26,
+      "minimum_conditional_probability": 4.1034872011629017e-08,
+      "minimum_intrinsic_gap": 0.7570174175402339,
+      "minimum_rho": 0.3985672393762041,
+      "minimum_tree_conductance": 0.0050691567477082625,
+      "phase_uniform_bound_closed": false,
+      "pre_a_closed": false,
+      "sector_a_closed": false,
+      "system_count": 7,
+      "system_profiles": {
+        "V=2/d=10": {
+          "context_count": 384,
+          "dimension": 10,
+          "maximum_bound": 2.253158800779803,
+          "maximum_gap": 4.55943819352713,
+          "maximum_path_length": 8,
+          "maximum_residual": 0.5222719556454237,
+          "maximum_rho": 3.023136359730238,
+          "minimum_bound": 0.33078230056722696,
+          "minimum_gap": 2.1313269196275257,
+          "minimum_probability": 6.520472823271113e-07,
+          "minimum_residual": -7.934902937623282e-28,
+          "minimum_rho": 0.44382135855400284,
+          "minimum_tree_conductance": 0.006822383759173288,
+          "row_count": 4224
+        },
+        "V=2/d=12": {
+          "context_count": 384,
+          "dimension": 12,
+          "maximum_bound": 2.508986944248343,
+          "maximum_gap": 5.647863075935321,
+          "maximum_path_length": 9,
+          "maximum_residual": 9.46407537381143,
+          "maximum_rho": 2.4361618611086917,
+          "minimum_bound": 0.4104817565549205,
+          "minimum_gap": 2.4233910464474144,
+          "minimum_probability": 4.1034872011629017e-08,
+          "minimum_residual": -4.4700316396330353e-26,
+          "minimum_rho": 0.3985672393762041,
+          "minimum_tree_conductance": 0.0050691567477082625,
+          "row_count": 4992
+        },
+        "V=2/d=3": {
+          "context_count": 384,
+          "dimension": 3,
+          "maximum_bound": 1.4573552059072044,
+          "maximum_gap": 2.481985895256327,
+          "maximum_path_length": 2,
+          "maximum_residual": 2.6348412675395235e-05,
+          "maximum_rho": 2.3602491509019363,
+          "minimum_bound": 0.4236840842068999,
+          "minimum_gap": 0.7570174175402339,
+          "minimum_probability": 0.04861365215066497,
+          "minimum_residual": -2.191304928318489e-31,
+          "minimum_rho": 0.6861745139047961,
+          "minimum_tree_conductance": 0.07472323927402337,
+          "row_count": 1536
+        },
+        "V=2/d=4": {
+          "context_count": 384,
+          "dimension": 4,
+          "maximum_bound": 1.2860445946626533,
+          "maximum_gap": 2.833778687459352,
+          "maximum_path_length": 3,
+          "maximum_residual": 0.000445004223645238,
+          "maximum_rho": 3.825824154093709,
+          "minimum_bound": 0.2613815898804392,
+          "minimum_gap": 0.7872756441265598,
+          "minimum_probability": 0.008874737005440902,
+          "minimum_residual": -5.003077987200846e-31,
+          "minimum_rho": 0.7775780125745276,
+          "minimum_tree_conductance": 0.03605057211263615,
+          "row_count": 1920
+        },
+        "V=2/d=5": {
+          "context_count": 384,
+          "dimension": 5,
+          "maximum_bound": 1.3515412151819315,
+          "maximum_gap": 2.3636300623347872,
+          "maximum_path_length": 4,
+          "maximum_residual": 0.00290307765433436,
+          "maximum_rho": 2.1785809944437062,
+          "minimum_bound": 0.4590143779599743,
+          "minimum_gap": 1.1950962017934932,
+          "minimum_probability": 0.0015723117183174314,
+          "minimum_residual": -2.4636798622651546e-30,
+          "minimum_rho": 0.7398960451719481,
+          "minimum_tree_conductance": 0.02332472495081604,
+          "row_count": 2304
+        },
+        "V=2/d=6": {
+          "context_count": 384,
+          "dimension": 6,
+          "maximum_bound": 2.095489703221304,
+          "maximum_gap": 3.8750382074539487,
+          "maximum_path_length": 5,
+          "maximum_residual": 0.01080840094742107,
+          "maximum_rho": 2.188438067439147,
+          "minimum_bound": 0.4569469042229621,
+          "minimum_gap": 1.4721452785784677,
+          "minimum_probability": 0.000284104468472009,
+          "minimum_residual": -6.10644190638217e-30,
+          "minimum_rho": 0.4772154205590913,
+          "minimum_tree_conductance": 0.016104911795548914,
+          "row_count": 2688
+        },
+        "V=2/d=8": {
+          "context_count": 384,
+          "dimension": 8,
+          "maximum_bound": 2.0582682587881576,
+          "maximum_gap": 3.7780559388526536,
+          "maximum_path_length": 7,
+          "maximum_residual": 0.06255725299610396,
+          "maximum_rho": 2.171284218549281,
+          "minimum_bound": 0.460556932831271,
+          "minimum_gap": 1.7946329937682575,
+          "minimum_probability": 9.033268919704252e-06,
+          "minimum_residual": -1.517719220043571e-29,
+          "minimum_rho": 0.48584531959345667,
+          "minimum_tree_conductance": 0.009771385427907436,
+          "row_count": 3456
+        }
+      },
+      "volume_independent_bound_closed": false
+    }
+  },
+  "exploration_id": "EXP-001252",
+  "manifest": "strategy/pre-a-cp1-st8-q3lock-canonical-path-resistance-manifest.json",
+  "result_id": "R-407",
+  "schema": "tect/pre-a-r407-integrated/1.0",
+  "scope": {
+    "c6_closed": false,
+    "common_alpha_closed": false,
+    "common_core_closed": false,
+    "continuum_closed": false,
+    "cutoff_independent_bound_closed": false,
+    "exhaustion_uniform_bound_closed": false,
+    "finite_canonical_path_identity_closed": true,
+    "finite_cutoff_profile_closed": true,
+    "finite_likelihood_row_bound_closed": true,
+    "finite_tree_bound_closed": true,
+    "finite_tree_choice_stress_closed": true,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "no_new_negative_result": true,
+    "no_pdf": true,
+    "no_tier_change": true,
+    "phase_uniform_bound_closed": false,
+    "pre_a_closed": false,
+    "sector_a_closed": false,
+    "volume_independent_bound_closed": false
+  },
+  "verdict": "PASS"
+}

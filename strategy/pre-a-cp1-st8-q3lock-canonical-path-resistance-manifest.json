@@ -1,0 +1,109 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-CANONICAL-PATH-RESISTANCE-v0",
+  "result_id": "R-407",
+  "title": "Canonical-path effective-resistance lower bound for intrinsic kinetic rows",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001252",
+  "claim_bearing": false,
+  "parent_explorations": ["EXP-001251", "EXP-001249", "EXP-001250"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY",
+    "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+  ],
+  "question": "Can a deterministic canonical-path load bound give a valid finite lower envelope for the intrinsic momentum graph, while exposing the exact conductance and probability inputs needed for a uniform proof?",
+  "new_perspective": {
+    "principle": "Replace an eigenvalue-only finite stress by a constructive path certificate: a spanning tree and its effective-resistance load produce an explicit Poincare lower bound that can be audited edge by edge.",
+    "route": [
+      "For every conditional law pi, form the symmetric momentum conductance c_ij=(pi_i+pi_j)|p_ij|^2/(2 chi) and choose a deterministic maximum-conductance spanning tree.",
+      "For each unordered pair x<y, route the pair mass pi_x*pi_y along its unique tree path gamma_xy and compute load(e)=sum pi_x*pi_y*len(gamma_xy) over paths containing e.",
+      "Set rho=max_e load(e)/c_e. The finite canonical-path inequality Var_pi(f)<=rho E(f) yields the constructive lower bound rho^(-1) for every likelihood row.",
+      "Compare rho^(-1) with the exact intrinsic generalized gap, record minimum tree conductance, path length, conditional probability floor and tree-choice profiles, and repeat the full R-404 source/history/orientation grid.",
+      "Use a factor-of-two path inequality mutation, a q-for-p conductance mutation and a disconnected toy graph in the hostile lane; these make normalization, generator support and connectivity load-bearing rather than decorative."
+    ],
+    "qft_bridge": "A promoted route would require a cutoff-, volume-, phase- and exhaustion-uniform family of paths or a geometric flow decomposition with rho bounded, together with an invariant common-core identification of the momentum form. The finite certificate supplies the exact analytic debt but is not itself a QFT gap theorem."
+  },
+  "finite_theorem": {
+    "conductance": "c_ij=(pi_i+pi_j)|p_ij|^2/(2 chi), with symmetric graph energy E(f)=sum_{i<j} c_ij(f_i-f_j)^2",
+    "canonical_load": "load(e)=sum_{x<y:e in gamma_xy} pi_x*pi_y*len(gamma_xy)",
+    "path_constant": "rho=max_e load(e)/c_e",
+    "finite_bound": "Var_pi(f)<=rho E(f), hence E(f)>=rho^(-1)Var_pi(f) for every finite f",
+    "tree_choice": "Any connected spanning tree is valid; maximum-conductance Kruskal is only a deterministic finite certificate and is not assumed uniformly stable",
+    "normalization": "The pair sum is over unordered x<y, so no extra factor 2 enters the bound; a doubled bound is hostile-tested as invalid."
+  },
+  "finite_fixture": {
+    "admissible_pairs": [
+      {"volume": 2, "cutoff_dimensions": [3, 4, 5, 6, 8, 10, 12]}
+    ],
+    "beta_values": ["1/2", "1", "2"],
+    "source_support_values": [[0]],
+    "source_amplitude": "1/3",
+    "hbar": "1",
+    "time_step": "1/18",
+    "source_sign_values": [-1, 1],
+    "history_sign_values": [-1, 1],
+    "history_adjoint_values": [0, 1],
+    "orientations": ["right", "left"],
+    "chi": "1",
+    "r": "-1",
+    "g": "3/5",
+    "c": "3/5",
+    "lambda": "1/10",
+    "probability_floor": 1e-30,
+    "edge_conductance_floor": 1e-300,
+    "numerical_tolerance": 1e-8,
+    "variance_floor": 1e-20,
+    "hostile_zero_threshold": 1e-12,
+    "crosscheck_tolerance": 5e-6
+  },
+  "scope": {
+    "finite_tree_bound_closed": true,
+    "finite_canonical_path_identity_closed": true,
+    "finite_likelihood_row_bound_closed": true,
+    "finite_cutoff_profile_closed": true,
+    "finite_tree_choice_stress_closed": true,
+    "cutoff_independent_bound_closed": false,
+    "volume_independent_bound_closed": false,
+    "phase_uniform_bound_closed": false,
+    "exhaustion_uniform_bound_closed": false,
+    "common_core_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R407.lean",
+    "theorem_markers": ["canonical_path_load_nonnegative", "tree_bound_nonnegative", "finite_scope"],
+    "command": "lake env lean Tect/R407.lean",
+    "boundary": "Lean checks only scalar nonnegativity and the unordered-pair path bookkeeping skeleton; conductance matrices, tree construction, Gibbs rows, spectra and all uniform/QFT limits remain in the executable/open boundary."
+  },
+  "artifacts": {
+    "primary_script": "codes/foundations/pre_a_cp1_st8_q3lock_canonical_path_resistance.py",
+    "independent_script": "codes/foundations/pre_a_cp1_st8_q3lock_canonical_path_resistance_independent.py",
+    "hostile_script": "codes/foundations/pre_a_cp1_st8_q3lock_canonical_path_resistance_hostile.py",
+    "integrated_verifier": "codes/foundations/pre_a_cp1_st8_q3lock_canonical_path_resistance_verify.py",
+    "lean": "verification/lean/Tect/R407.lean"
+  },
+  "promotion_criteria": [
+    "Construct a cutoff-independent path or flow family on a Hamiltonian common core with rho bounded above and tree-edge conductances bounded below in the required weighted sense.",
+    "Control source, phase, volume, orientation and exhaustion dependence, including cross-phase paths and neutral-sector mass.",
+    "Identify the canonical-path lower bound with the R-399 shell and then discharge common-core/common-alpha and OS/KMS/GNS gates before any physical mass-gap language."
+  ],
+  "stop_conditions": [
+    "If rho grows without a proved compensating normalization or the bound collapses under cutoff/volume stress, retain the route as a finite diagnostic and do not substitute it into the shell proof.",
+    "If a graph loses connectivity, a probability or conductance floor fails, or the path residual becomes negative, stop the finite lane and record the exact obstruction.",
+    "If path normalization or tree choice is treated as a hidden constant, reject the route; finite positivity is not a uniform or QFT theorem."
+  ],
+  "boundary": "T0 claim-nonbearing finite canonical-path/effective-resistance checkpoint only. It proves no cutoff-, volume-, source-, phase- or exhaustion-uniform gap, common core, common alpha, OS/KMS/GNS reconstruction, mass gap, continuum, C6, Sector-A or Pre-A closure.",
+  "no_overclaim": "The path certificate is a constructive finite lower bound and a list of uniformity inputs. It does not turn the observed finite envelope into an analytic regulator or thermodynamic estimate.",
+  "recorded_by": "Codex"
+}

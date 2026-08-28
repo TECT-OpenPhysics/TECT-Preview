@@ -1,0 +1,112 @@
+{
+  "assertion_count": 6,
+  "boundary": "T0 claim-nonbearing finite canonical-path/effective-resistance checkpoint only. It proves no cutoff-, volume-, source-, phase- or exhaustion-uniform gap, common core, common alpha, OS/KMS/GNS reconstruction, mass gap, continuum, C6, Sector-A or Pre-A closure.",
+  "checks": [
+    {
+      "actual": 0.4236840842068999,
+      "expected": ">0",
+      "name": "baseline canonical bound positive",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.6591848496654339,
+      "expected": ">0",
+      "name": "late canonical bound positive",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          2.106522751249547e-07,
+          0.4236840842068999,
+          0.7570174175402339
+        ],
+        [
+          0.004261989467479293,
+          0.6591848496654339,
+          2.914431299136564
+        ]
+      ],
+      "expected": "nonnegative residual and bound <= exact gap",
+      "name": "maximum-tree bound is valid",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          0.4236840842068999,
+          2.106522751249547e-07
+        ],
+        [
+          0.6590906622143438,
+          0.004261989517448175
+        ]
+      ],
+      "expected": "positive bound and residual",
+      "name": "line-tree alternative is valid",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0,
+        0.0
+      ],
+      "expected": "zero",
+      "name": "q mutation deletes edges",
+      "status": "PASS"
+    },
+    {
+      "actual": -2.0,
+      "expected": "<-1e-08",
+      "name": "doubled bound rejected",
+      "status": "PASS"
+    }
+  ],
+  "derived": {
+    "factor_audit": {
+      "toy_correct_bound": 3.0,
+      "toy_doubled_residual": -2.0,
+      "toy_rho": 0.3333333333333333
+    },
+    "mutation": "replace_p_by_q_and_double_unordered_pair_bound",
+    "q_mutation": {
+      "maximum_edge": 0.0,
+      "mutated_edge_count": 0
+    },
+    "selected": [
+      {
+        "canonical_bound": 0.4236840842068999,
+        "dimension": 3,
+        "energy": 2.392011619748649e-07,
+        "exact_gap": 0.7570174175402339,
+        "line_edge_count": 2,
+        "line_residual": 2.106522751249547e-07,
+        "line_rho": 2.3602491509019363,
+        "line_tree_bound": 0.4236840842068999,
+        "residual": 2.106522751249547e-07,
+        "rho": 2.3602491509019363,
+        "tree_edge_count": 2,
+        "variance": 6.738248594669602e-08
+      },
+      {
+        "canonical_bound": 0.6591848496654339,
+        "dimension": 12,
+        "energy": 0.004262339182117863,
+        "exact_gap": 2.914431299136564,
+        "line_edge_count": 11,
+        "line_residual": 0.004261989517448175,
+        "line_rho": 1.517241947625695,
+        "line_tree_bound": 0.6590906622143438,
+        "residual": 0.004261989467479293,
+        "rho": 1.5170251569154618,
+        "tree_edge_count": 11,
+        "variance": 5.30525904452027e-07
+      }
+    ]
+  },
+  "exploration_id": "EXP-001252",
+  "manifest": "strategy/pre-a-cp1-st8-q3lock-canonical-path-resistance-manifest.json",
+  "result_id": "R-407",
+  "schema": "tect/pre-a-r407-hostile/1.0",
+  "verdict": "PASS"
+}
