@@ -1,0 +1,651 @@
+{
+  "boundary": "T0 claim-nonbearing finite effective-resistance checkpoint only. It proves no cutoff-, volume-, source-, phase- or exhaustion-uniform gap, common core, common alpha, OS/KMS/GNS reconstruction, mass gap, continuum, C6, Sector-A or Pre-A closure.",
+  "checks": [
+    {
+      "actual": "['R-408', 'EXP-001253', False]",
+      "expected": "R-408/EXP-001253/false",
+      "group": "identity",
+      "name": "manifest identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'cutoff_independent_green_bound_closed': False, 'volume_independent_green_bound_closed': False, 'phase_uniform_bound_closed': False, 'exhaustion_uniform_bound_closed': False, 'common_core_closed': False, 'common_alpha_closed': False, 'hamiltonian_os_identification_closed': False, 'kms_gns_gap_closed': False, 'continuum_closed': False, 'c6_closed': False, 'sector_a_closed': False, 'pre_a_closed': False}",
+      "expected": "all promoted flags false",
+      "group": "scope",
+      "name": "scope firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": "[]",
+      "expected": "all R-408 artifacts",
+      "group": "provenance",
+      "name": "artifacts present",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'codes/foundations/pre_a_cp1_st8_q3lock_effective_resistance.py': '44c7f816d6166591a611f771123850bc125b810736c07345c722f463d5138f5e', 'codes/foundations/pre_a_cp1_st8_q3lock_effective_resistance_independent.py': '7659f7d3cfd2c386a77d248407b207f8517388eb343d9a81080f67ba08e680e6', 'codes/foundations/pre_a_cp1_st8_q3lock_effective_resistance_hostile.py': 'e91335653b178f966e16b81a47269e60135f9da6e3e8613313be9518735b847f', 'verification/lean/Tect/R408.lean': '379e9ba198b1675fb7fb11eab3548514aae75a33345f9d66a1a260f96fa25428'}",
+      "expected": "distinct",
+      "group": "provenance",
+      "name": "source hashes distinct",
+      "status": "PASS"
+    },
+    {
+      "actual": "['resistance_pair_nonnegative', 'resistance_bound_nonnegative', 'finite_scope']",
+      "expected": "declared markers",
+      "group": "Lean",
+      "name": "Lean markers",
+      "status": "PASS"
+    },
+    {
+      "actual": "finite scalar file",
+      "expected": "no promotion text",
+      "group": "Lean",
+      "name": "Lean boundary",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-408 PRIMARY PASS 43630/43630 systems=7 contexts=2688 rows=21120 bound=[0.498702,2.25155] Rbar=[0.444138,2.00521]",
+      "expected": "exit 0 and output",
+      "group": "executables",
+      "name": "run pre_a_cp1_st8_q3lock_effective_resistance.py",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-408 INDEPENDENT PASS 43630/43630 systems=7 contexts=2688 rows=21120 bound=[0.498702,2.25155] Rbar=[0.444138,2.00521]",
+      "expected": "exit 0 and output",
+      "group": "executables",
+      "name": "run pre_a_cp1_st8_q3lock_effective_resistance_independent.py",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-408 HOSTILE PASS 6/6 baseline_bound=0.623958 late_bound=1.05713 q_edges=0 doubled_residual=-1",
+      "expected": "exit 0 and output",
+      "group": "executables",
+      "name": "run pre_a_cp1_st8_q3lock_effective_resistance_hostile.py",
+      "status": "PASS"
+    },
+    {
+      "actual": "",
+      "expected": "exit 0",
+      "group": "Lean",
+      "name": "Lean compile",
+      "status": "PASS"
+    },
+    {
+      "actual": "PASS",
+      "expected": "PASS",
+      "group": "executables",
+      "name": "primary verdict",
+      "status": "PASS"
+    },
+    {
+      "actual": "PASS",
+      "expected": "PASS",
+      "group": "executables",
+      "name": "independent verdict",
+      "status": "PASS"
+    },
+    {
+      "actual": "PASS",
+      "expected": "PASS",
+      "group": "hostile",
+      "name": "hostile verdict",
+      "status": "PASS"
+    },
+    {
+      "actual": "[7, 7]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent system_count",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2688, 2688]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent context_count",
+      "status": "PASS"
+    },
+    {
+      "actual": "[21120, 21120]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent comparison_row_count",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.49870164107689835, 0.49870164107689835]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent minimum_resistance_bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.251554898783544, 2.2515548987835423]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent maximum_resistance_bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.7570174175402339, 0.7570174175402339]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent minimum_intrinsic_gap",
+      "status": "PASS"
+    },
+    {
+      "actual": "[5.647863075935321, 5.647863075940388]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent maximum_intrinsic_gap",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.44413751605180657, 0.4441375160518069]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent minimum_resistance_average",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.0052069566897672, 2.0052069566897672]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent maximum_resistance_average",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.020747640155030216, 0.020747640155030257]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent minimum_positive_laplacian_eigenvalue",
+      "status": "PASS"
+    },
+    {
+      "actual": "[85.99011817086337, 85.99011817086328]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent maximum_effective_resistance",
+      "status": "PASS"
+    },
+    {
+      "actual": "[-1.0641664309263875e-25, -1.9960884676420904e-25]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent minimum_residual",
+      "status": "PASS"
+    },
+    {
+      "actual": "[8.960876192708904, 8.960876194190249]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent maximum_residual",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.2613815898804392, 0.2613815898804393]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent minimum_tree_bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.508986944248343, 2.5089869442482855]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent maximum_tree_bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[[3, 4, 5, 6, 8, 10, 12], [3, 4, 5, 6, 8, 10, 12]]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent cutoff_dimensions",
+      "status": "PASS"
+    },
+    {
+      "actual": "[{'V=2/d=10': {'context_count': 384, 'dimension': 10, 'maximum_bound': 1.9962453145723864, 'maximum_gap': 4.55943819352713, 'maximum_residual': 0.4724495967275113, 'maximum_resistance': 64.9703460921721, 'maximum_resistance_average': 1.3087691164858046, 'minimum_bound': 0.7640767094849509, 'minimum_gap': 2.1313269196275257, 'minimum_laplacian_eigenvalue': 0.026935279977803053, 'minimum_residual': -2.8151184887920243e-27, 'minimum_resistance_average': 0.5009404368792264, 'minimum_tree_bound': 0.33078230056722696, 'row_count': 4224}, 'V=2/d=12': {'context_count': 384, 'dimension': 12, 'maximum_bound': 2.251554898783544, 'maximum_gap': 5.647863075935321, 'maximum_residual': 8.960876192708904, 'maximum_resistance': 85.99011817086337, 'maximum_resistance_average': 1.2059617833728038, 'minimum_bound': 0.8292136730927119, 'minimum_gap': 2.4233910464474144, 'minimum_laplacian_eigenvalue': 0.020747640155030216, 'minimum_residual': -1.0641664309263875e-25, 'minimum_resistance_average': 0.44413751605180657, 'minimum_tree_bound': 0.4104817565549205, 'row_count': 4992}, 'V=2/d=3': {'context_count': 384, 'dimension': 3, 'maximum_bound': 1.5486766411184132, 'maximum_gap': 2.481985895256327, 'maximum_residual': 2.3197767800716525e-05, 'maximum_resistance': 8.999360609443515, 'maximum_resistance_average': 1.6026715567191128, 'minimum_bound': 0.6239581627361855, 'minimum_gap': 0.7570174175402339, 'minimum_laplacian_eigenvalue': 0.1871992227521347, 'minimum_residual': -2.328617445011953e-31, 'minimum_resistance_average': 0.6457125867655797, 'minimum_tree_bound': 0.4236840842068999, 'row_count': 1536}, 'V=2/d=4': {'context_count': 384, 'dimension': 4, 'maximum_bound': 1.5109906097192145, 'maximum_gap': 2.833778687459352, 'maximum_residual': 0.0004274012959455905, 'maximum_resistance': 15.934089308389211, 'maximum_resistance_average': 2.0052069566897672, 'minimum_bound': 0.49870164107689835, 'minimum_gap': 0.7872756441265598, 'minimum_laplacian_eigenvalue': 0.10029888633403707, 'minimum_residual': -5.8781817440291555e-31, 'minimum_resistance_average': 0.6618174815698086, 'minimum_tree_bound': 0.2613815898804392, 'row_count': 1920}, 'V=2/d=5': {'context_count': 384, 'dimension': 5, 'maximum_bound': 1.2085613258172863, 'maximum_gap': 2.3636300623347872, 'maximum_residual': 0.002862858263687394, 'maximum_resistance': 21.516330896267966, 'maximum_resistance_average': 1.8806216998052834, 'minimum_bound': 0.5317390520930065, 'minimum_gap': 1.1950962017934932, 'minimum_laplacian_eigenvalue': 0.073730845027235, 'minimum_residual': -2.32435599773982e-30, 'minimum_resistance_average': 0.827430084545981, 'minimum_tree_bound': 0.4590143779599743, 'row_count': 2304}, 'V=2/d=6': {'context_count': 384, 'dimension': 6, 'maximum_bound': 1.6478350420341625, 'maximum_gap': 3.8750382074539487, 'maximum_residual': 0.010764869104630573, 'maximum_resistance': 25.87795144722562, 'maximum_resistance_average': 1.7017657584743915, 'minimum_bound': 0.5876249389907138, 'minimum_gap': 1.4721452785784677, 'minimum_laplacian_eigenvalue': 0.061001897668678536, 'minimum_residual': -4.801936721528157e-30, 'minimum_resistance_average': 0.6068568603599754, 'minimum_tree_bound': 0.4569469042229621, 'row_count': 2688}, 'V=2/d=8': {'context_count': 384, 'dimension': 8, 'maximum_bound': 1.6534487242251399, 'maximum_gap': 3.7780559388526536, 'maximum_residual': 0.0633364067533716, 'maximum_resistance': 45.03919139151988, 'maximum_resistance_average': 1.432054118089885, 'minimum_bound': 0.6982976323086371, 'minimum_gap': 1.7946329937682575, 'minimum_laplacian_eigenvalue': 0.03704101628952688, 'minimum_residual': -1.1932622230899997e-29, 'minimum_resistance_average': 0.6047964991890709, 'minimum_tree_bound': 0.460556932831271, 'row_count': 3456}}, {'V=2/d=10': {'context_count': 384, 'dimension': 10, 'maximum_bound': 1.996245314572393, 'maximum_gap': 4.559438193527271, 'maximum_residual': 0.4724495967277956, 'maximum_resistance': 64.97034609217212, 'maximum_resistance_average': 1.3087691164858049, 'minimum_bound': 0.7640767094849508, 'minimum_gap': 2.1313269196275284, 'minimum_laplacian_eigenvalue': 0.02693527997780307, 'minimum_residual': -1.0766655589965185e-27, 'minimum_resistance_average': 0.5009404368792247, 'minimum_tree_bound': 0.3307823005672809, 'row_count': 4224}, 'V=2/d=12': {'context_count': 384, 'dimension': 12, 'maximum_bound': 2.2515548987835423, 'maximum_gap': 5.647863075940388, 'maximum_residual': 8.960876194190249, 'maximum_resistance': 85.99011817086328, 'maximum_resistance_average': 1.205961783372804, 'minimum_bound': 0.8292136730927118, 'minimum_gap': 2.4233910464474286, 'minimum_laplacian_eigenvalue': 0.020747640155030257, 'minimum_residual': -1.9960884676420904e-25, 'minimum_resistance_average': 0.4441375160518069, 'minimum_tree_bound': 0.41048175655506025, 'row_count': 4992}, 'V=2/d=3': {'context_count': 384, 'dimension': 3, 'maximum_bound': 1.5486766411184145, 'maximum_gap': 2.4819858952563303, 'maximum_residual': 2.3197767800727685e-05, 'maximum_resistance': 8.99936060944352, 'maximum_resistance_average': 1.6026715567191112, 'minimum_bound': 0.6239581627361862, 'minimum_gap': 0.7570174175402339, 'minimum_laplacian_eigenvalue': 0.18719922275213463, 'minimum_residual': -2.566196426538839e-31, 'minimum_resistance_average': 0.6457125867655792, 'minimum_tree_bound': 0.42368408420689985, 'row_count': 1536}, 'V=2/d=4': {'context_count': 384, 'dimension': 4, 'maximum_bound': 1.5109906097192134, 'maximum_gap': 2.833778687459353, 'maximum_residual': 0.000427401295945519, 'maximum_resistance': 15.934089308389224, 'maximum_resistance_average': 2.0052069566897672, 'minimum_bound': 0.49870164107689835, 'minimum_gap': 0.7872756441265597, 'minimum_laplacian_eigenvalue': 0.10029888633403705, 'minimum_residual': -7.94580065349068e-31, 'minimum_resistance_average': 0.661817481569809, 'minimum_tree_bound': 0.2613815898804393, 'row_count': 1920}, 'V=2/d=5': {'context_count': 384, 'dimension': 5, 'maximum_bound': 1.208561325817286, 'maximum_gap': 2.363630062334787, 'maximum_residual': 0.002862858263687408, 'maximum_resistance': 21.516330896267945, 'maximum_resistance_average': 1.8806216998052832, 'minimum_bound': 0.5317390520930065, 'minimum_gap': 1.1950962017934934, 'minimum_laplacian_eigenvalue': 0.07373084502723504, 'minimum_residual': -3.0525893898218515e-30, 'minimum_resistance_average': 0.8274300845459811, 'minimum_tree_bound': 0.45901437795997435, 'row_count': 2304}, 'V=2/d=6': {'context_count': 384, 'dimension': 6, 'maximum_bound': 1.647835042034165, 'maximum_gap': 3.8750382074539744, 'maximum_residual': 0.010764869104630835, 'maximum_resistance': 25.877951447225627, 'maximum_resistance_average': 1.7017657584743913, 'minimum_bound': 0.5876249389907138, 'minimum_gap': 1.4721452785784677, 'minimum_laplacian_eigenvalue': 0.06100189766867853, 'minimum_residual': -2.0926593330427526e-30, 'minimum_resistance_average': 0.6068568603599745, 'minimum_tree_bound': 0.45694690422296186, 'row_count': 2688}, 'V=2/d=8': {'context_count': 384, 'dimension': 8, 'maximum_bound': 1.6534487242251399, 'maximum_gap': 3.77805593885265, 'maximum_residual': 0.06333640675334323, 'maximum_resistance': 45.03919139151979, 'maximum_resistance_average': 1.4320541180898867, 'minimum_bound': 0.6982976323086362, 'minimum_gap': 1.7946329937682568, 'minimum_laplacian_eigenvalue': 0.03704101628952691, 'minimum_residual': -2.1023602010120514e-29, 'minimum_resistance_average': 0.6047964991890709, 'minimum_tree_bound': 0.4605569328312707, 'row_count': 3456}}]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent system_profiles",
+      "status": "PASS"
+    },
+    {
+      "actual": "7",
+      "expected": "7",
+      "group": "coverage",
+      "name": "system grid reached",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2688, 21120]",
+      "expected": "positive rows beyond contexts",
+      "group": "coverage",
+      "name": "context grid reached",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.49870164107689835",
+      "expected": ">0 on finite grid",
+      "group": "effective resistance",
+      "name": "resistance bound positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "-1.0641664309263875e-25",
+      "expected": ">=-1e-08",
+      "group": "effective resistance",
+      "name": "resistance residual nonnegative",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.251554898783544, 5.647863075935321]",
+      "expected": "bound <= exact gap envelope",
+      "group": "comparison",
+      "name": "bound is below exact graph gap",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'maximum_edge': 0.0, 'mutated_edge_count': 0, 'positive_eigenvalue_count': 0}",
+      "expected": "zero q conductance edges and spectrum",
+      "group": "hostile",
+      "name": "hostile q mutation caught",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'toy_correct_bound': 2.2500000000000013, 'toy_doubled_residual': -1.0000000000000018, 'toy_resistance_average': 0.44444444444444414}",
+      "expected": "doubled residual <-1e-08",
+      "group": "hostile",
+      "name": "hostile factor mutation caught",
+      "status": "PASS"
+    }
+  ],
+  "derived": {
+    "command_outputs": {
+      "lean": "",
+      "pre_a_cp1_st8_q3lock_effective_resistance.py": "R-408 PRIMARY PASS 43630/43630 systems=7 contexts=2688 rows=21120 bound=[0.498702,2.25155] Rbar=[0.444138,2.00521]",
+      "pre_a_cp1_st8_q3lock_effective_resistance_hostile.py": "R-408 HOSTILE PASS 6/6 baseline_bound=0.623958 late_bound=1.05713 q_edges=0 doubled_residual=-1",
+      "pre_a_cp1_st8_q3lock_effective_resistance_independent.py": "R-408 INDEPENDENT PASS 43630/43630 systems=7 contexts=2688 rows=21120 bound=[0.498702,2.25155] Rbar=[0.444138,2.00521]"
+    },
+    "hostile": {
+      "factor_audit": {
+        "toy_correct_bound": 2.2500000000000013,
+        "toy_doubled_residual": -1.0000000000000018,
+        "toy_resistance_average": 0.44444444444444414
+      },
+      "mutation": "replace_p_by_q_and_double_unordered_pair_bound",
+      "q_mutation": {
+        "maximum_edge": 0.0,
+        "mutated_edge_count": 0,
+        "positive_eigenvalue_count": 0
+      },
+      "selected": [
+        {
+          "dimension": 3,
+          "energy": 2.392011619748649e-07,
+          "exact_gap": 0.7570174175402339,
+          "maximum_effective_resistance": 6.0,
+          "positive_eigenvalue_count": 2,
+          "residual": 1.971573098429676e-07,
+          "resistance_average": 1.6026715567191128,
+          "resistance_bound": 0.6239581627361855,
+          "variance": 6.738248594669602e-08
+        },
+        {
+          "dimension": 12,
+          "energy": 0.004262339182117863,
+          "exact_gap": 2.914431299136564,
+          "maximum_effective_resistance": 47.25718740724149,
+          "positive_eigenvalue_count": 11,
+          "residual": 0.004261778348672615,
+          "resistance_average": 0.9459598191722428,
+          "resistance_bound": 1.0571273533320313,
+          "variance": 5.30525904452027e-07
+        }
+      ]
+    },
+    "independent": {
+      "c6_closed": false,
+      "common_alpha_closed": false,
+      "common_core_closed": false,
+      "comparison_row_count": 21120,
+      "context_count": 2688,
+      "continuum_closed": false,
+      "cutoff_dimensions": [
+        3,
+        4,
+        5,
+        6,
+        8,
+        10,
+        12
+      ],
+      "cutoff_independent_green_bound_closed": false,
+      "exhaustion_uniform_bound_closed": false,
+      "finite_cutoff_profile_closed": true,
+      "finite_effective_resistance_closed": true,
+      "finite_likelihood_row_bound_closed": true,
+      "finite_resistance_poincare_closed": true,
+      "finite_tree_independence_closed": true,
+      "hamiltonian_os_identification_closed": false,
+      "kms_gns_gap_closed": false,
+      "maximum_effective_resistance": 85.99011817086328,
+      "maximum_intrinsic_gap": 5.647863075940388,
+      "maximum_residual": 8.960876194190249,
+      "maximum_resistance_average": 2.0052069566897672,
+      "maximum_resistance_bound": 2.2515548987835423,
+      "maximum_tree_bound": 2.5089869442482855,
+      "minimum_intrinsic_gap": 0.7570174175402339,
+      "minimum_positive_laplacian_eigenvalue": 0.020747640155030257,
+      "minimum_residual": -1.9960884676420904e-25,
+      "minimum_resistance_average": 0.4441375160518069,
+      "minimum_resistance_bound": 0.49870164107689835,
+      "minimum_tree_bound": 0.2613815898804393,
+      "phase_uniform_bound_closed": false,
+      "pre_a_closed": false,
+      "sector_a_closed": false,
+      "system_count": 7,
+      "system_profiles": {
+        "V=2/d=10": {
+          "context_count": 384,
+          "dimension": 10,
+          "maximum_bound": 1.996245314572393,
+          "maximum_gap": 4.559438193527271,
+          "maximum_residual": 0.4724495967277956,
+          "maximum_resistance": 64.97034609217212,
+          "maximum_resistance_average": 1.3087691164858049,
+          "minimum_bound": 0.7640767094849508,
+          "minimum_gap": 2.1313269196275284,
+          "minimum_laplacian_eigenvalue": 0.02693527997780307,
+          "minimum_residual": -1.0766655589965185e-27,
+          "minimum_resistance_average": 0.5009404368792247,
+          "minimum_tree_bound": 0.3307823005672809,
+          "row_count": 4224
+        },
+        "V=2/d=12": {
+          "context_count": 384,
+          "dimension": 12,
+          "maximum_bound": 2.2515548987835423,
+          "maximum_gap": 5.647863075940388,
+          "maximum_residual": 8.960876194190249,
+          "maximum_resistance": 85.99011817086328,
+          "maximum_resistance_average": 1.205961783372804,
+          "minimum_bound": 0.8292136730927118,
+          "minimum_gap": 2.4233910464474286,
+          "minimum_laplacian_eigenvalue": 0.020747640155030257,
+          "minimum_residual": -1.9960884676420904e-25,
+          "minimum_resistance_average": 0.4441375160518069,
+          "minimum_tree_bound": 0.41048175655506025,
+          "row_count": 4992
+        },
+        "V=2/d=3": {
+          "context_count": 384,
+          "dimension": 3,
+          "maximum_bound": 1.5486766411184145,
+          "maximum_gap": 2.4819858952563303,
+          "maximum_residual": 2.3197767800727685e-05,
+          "maximum_resistance": 8.99936060944352,
+          "maximum_resistance_average": 1.6026715567191112,
+          "minimum_bound": 0.6239581627361862,
+          "minimum_gap": 0.7570174175402339,
+          "minimum_laplacian_eigenvalue": 0.18719922275213463,
+          "minimum_residual": -2.566196426538839e-31,
+          "minimum_resistance_average": 0.6457125867655792,
+          "minimum_tree_bound": 0.42368408420689985,
+          "row_count": 1536
+        },
+        "V=2/d=4": {
+          "context_count": 384,
+          "dimension": 4,
+          "maximum_bound": 1.5109906097192134,
+          "maximum_gap": 2.833778687459353,
+          "maximum_residual": 0.000427401295945519,
+          "maximum_resistance": 15.934089308389224,
+          "maximum_resistance_average": 2.0052069566897672,
+          "minimum_bound": 0.49870164107689835,
+          "minimum_gap": 0.7872756441265597,
+          "minimum_laplacian_eigenvalue": 0.10029888633403705,
+          "minimum_residual": -7.94580065349068e-31,
+          "minimum_resistance_average": 0.661817481569809,
+          "minimum_tree_bound": 0.2613815898804393,
+          "row_count": 1920
+        },
+        "V=2/d=5": {
+          "context_count": 384,
+          "dimension": 5,
+          "maximum_bound": 1.208561325817286,
+          "maximum_gap": 2.363630062334787,
+          "maximum_residual": 0.002862858263687408,
+          "maximum_resistance": 21.516330896267945,
+          "maximum_resistance_average": 1.8806216998052832,
+          "minimum_bound": 0.5317390520930065,
+          "minimum_gap": 1.1950962017934934,
+          "minimum_laplacian_eigenvalue": 0.07373084502723504,
+          "minimum_residual": -3.0525893898218515e-30,
+          "minimum_resistance_average": 0.8274300845459811,
+          "minimum_tree_bound": 0.45901437795997435,
+          "row_count": 2304
+        },
+        "V=2/d=6": {
+          "context_count": 384,
+          "dimension": 6,
+          "maximum_bound": 1.647835042034165,
+          "maximum_gap": 3.8750382074539744,
+          "maximum_residual": 0.010764869104630835,
+          "maximum_resistance": 25.877951447225627,
+          "maximum_resistance_average": 1.7017657584743913,
+          "minimum_bound": 0.5876249389907138,
+          "minimum_gap": 1.4721452785784677,
+          "minimum_laplacian_eigenvalue": 0.06100189766867853,
+          "minimum_residual": -2.0926593330427526e-30,
+          "minimum_resistance_average": 0.6068568603599745,
+          "minimum_tree_bound": 0.45694690422296186,
+          "row_count": 2688
+        },
+        "V=2/d=8": {
+          "context_count": 384,
+          "dimension": 8,
+          "maximum_bound": 1.6534487242251399,
+          "maximum_gap": 3.77805593885265,
+          "maximum_residual": 0.06333640675334323,
+          "maximum_resistance": 45.03919139151979,
+          "maximum_resistance_average": 1.4320541180898867,
+          "minimum_bound": 0.6982976323086362,
+          "minimum_gap": 1.7946329937682568,
+          "minimum_laplacian_eigenvalue": 0.03704101628952691,
+          "minimum_residual": -2.1023602010120514e-29,
+          "minimum_resistance_average": 0.6047964991890709,
+          "minimum_tree_bound": 0.4605569328312707,
+          "row_count": 3456
+        }
+      },
+      "volume_independent_green_bound_closed": false
+    },
+    "lean": "PASS",
+    "primary": {
+      "c6_closed": false,
+      "common_alpha_closed": false,
+      "common_core_closed": false,
+      "comparison_row_count": 21120,
+      "context_count": 2688,
+      "continuum_closed": false,
+      "cutoff_dimensions": [
+        3,
+        4,
+        5,
+        6,
+        8,
+        10,
+        12
+      ],
+      "cutoff_independent_green_bound_closed": false,
+      "exhaustion_uniform_bound_closed": false,
+      "finite_cutoff_profile_closed": true,
+      "finite_effective_resistance_closed": true,
+      "finite_likelihood_row_bound_closed": true,
+      "finite_resistance_poincare_closed": true,
+      "finite_tree_independence_closed": true,
+      "hamiltonian_os_identification_closed": false,
+      "kms_gns_gap_closed": false,
+      "maximum_effective_resistance": 85.99011817086337,
+      "maximum_intrinsic_gap": 5.647863075935321,
+      "maximum_residual": 8.960876192708904,
+      "maximum_resistance_average": 2.0052069566897672,
+      "maximum_resistance_bound": 2.251554898783544,
+      "maximum_tree_bound": 2.508986944248343,
+      "minimum_intrinsic_gap": 0.7570174175402339,
+      "minimum_positive_laplacian_eigenvalue": 0.020747640155030216,
+      "minimum_residual": -1.0641664309263875e-25,
+      "minimum_resistance_average": 0.44413751605180657,
+      "minimum_resistance_bound": 0.49870164107689835,
+      "minimum_tree_bound": 0.2613815898804392,
+      "phase_uniform_bound_closed": false,
+      "pre_a_closed": false,
+      "sector_a_closed": false,
+      "system_count": 7,
+      "system_profiles": {
+        "V=2/d=10": {
+          "context_count": 384,
+          "dimension": 10,
+          "maximum_bound": 1.9962453145723864,
+          "maximum_gap": 4.55943819352713,
+          "maximum_residual": 0.4724495967275113,
+          "maximum_resistance": 64.9703460921721,
+          "maximum_resistance_average": 1.3087691164858046,
+          "minimum_bound": 0.7640767094849509,
+          "minimum_gap": 2.1313269196275257,
+          "minimum_laplacian_eigenvalue": 0.026935279977803053,
+          "minimum_residual": -2.8151184887920243e-27,
+          "minimum_resistance_average": 0.5009404368792264,
+          "minimum_tree_bound": 0.33078230056722696,
+          "row_count": 4224
+        },
+        "V=2/d=12": {
+          "context_count": 384,
+          "dimension": 12,
+          "maximum_bound": 2.251554898783544,
+          "maximum_gap": 5.647863075935321,
+          "maximum_residual": 8.960876192708904,
+          "maximum_resistance": 85.99011817086337,
+          "maximum_resistance_average": 1.2059617833728038,
+          "minimum_bound": 0.8292136730927119,
+          "minimum_gap": 2.4233910464474144,
+          "minimum_laplacian_eigenvalue": 0.020747640155030216,
+          "minimum_residual": -1.0641664309263875e-25,
+          "minimum_resistance_average": 0.44413751605180657,
+          "minimum_tree_bound": 0.4104817565549205,
+          "row_count": 4992
+        },
+        "V=2/d=3": {
+          "context_count": 384,
+          "dimension": 3,
+          "maximum_bound": 1.5486766411184132,
+          "maximum_gap": 2.481985895256327,
+          "maximum_residual": 2.3197767800716525e-05,
+          "maximum_resistance": 8.999360609443515,
+          "maximum_resistance_average": 1.6026715567191128,
+          "minimum_bound": 0.6239581627361855,
+          "minimum_gap": 0.7570174175402339,
+          "minimum_laplacian_eigenvalue": 0.1871992227521347,
+          "minimum_residual": -2.328617445011953e-31,
+          "minimum_resistance_average": 0.6457125867655797,
+          "minimum_tree_bound": 0.4236840842068999,
+          "row_count": 1536
+        },
+        "V=2/d=4": {
+          "context_count": 384,
+          "dimension": 4,
+          "maximum_bound": 1.5109906097192145,
+          "maximum_gap": 2.833778687459352,
+          "maximum_residual": 0.0004274012959455905,
+          "maximum_resistance": 15.934089308389211,
+          "maximum_resistance_average": 2.0052069566897672,
+          "minimum_bound": 0.49870164107689835,
+          "minimum_gap": 0.7872756441265598,
+          "minimum_laplacian_eigenvalue": 0.10029888633403707,
+          "minimum_residual": -5.8781817440291555e-31,
+          "minimum_resistance_average": 0.6618174815698086,
+          "minimum_tree_bound": 0.2613815898804392,
+          "row_count": 1920
+        },
+        "V=2/d=5": {
+          "context_count": 384,
+          "dimension": 5,
+          "maximum_bound": 1.2085613258172863,
+          "maximum_gap": 2.3636300623347872,
+          "maximum_residual": 0.002862858263687394,
+          "maximum_resistance": 21.516330896267966,
+          "maximum_resistance_average": 1.8806216998052834,
+          "minimum_bound": 0.5317390520930065,
+          "minimum_gap": 1.1950962017934932,
+          "minimum_laplacian_eigenvalue": 0.073730845027235,
+          "minimum_residual": -2.32435599773982e-30,
+          "minimum_resistance_average": 0.827430084545981,
+          "minimum_tree_bound": 0.4590143779599743,
+          "row_count": 2304
+        },
+        "V=2/d=6": {
+          "context_count": 384,
+          "dimension": 6,
+          "maximum_bound": 1.6478350420341625,
+          "maximum_gap": 3.8750382074539487,
+          "maximum_residual": 0.010764869104630573,
+          "maximum_resistance": 25.87795144722562,
+          "maximum_resistance_average": 1.7017657584743915,
+          "minimum_bound": 0.5876249389907138,
+          "minimum_gap": 1.4721452785784677,
+          "minimum_laplacian_eigenvalue": 0.061001897668678536,
+          "minimum_residual": -4.801936721528157e-30,
+          "minimum_resistance_average": 0.6068568603599754,
+          "minimum_tree_bound": 0.4569469042229621,
+          "row_count": 2688
+        },
+        "V=2/d=8": {
+          "context_count": 384,
+          "dimension": 8,
+          "maximum_bound": 1.6534487242251399,
+          "maximum_gap": 3.7780559388526536,
+          "maximum_residual": 0.0633364067533716,
+          "maximum_resistance": 45.03919139151988,
+          "maximum_resistance_average": 1.432054118089885,
+          "minimum_bound": 0.6982976323086371,
+          "minimum_gap": 1.7946329937682575,
+          "minimum_laplacian_eigenvalue": 0.03704101628952688,
+          "minimum_residual": -1.1932622230899997e-29,
+          "minimum_resistance_average": 0.6047964991890709,
+          "minimum_tree_bound": 0.460556932831271,
+          "row_count": 3456
+        }
+      },
+      "volume_independent_green_bound_closed": false
+    }
+  },
+  "exploration_id": "EXP-001253",
+  "manifest": "strategy/pre-a-cp1-st8-q3lock-effective-resistance-manifest.json",
+  "result_id": "R-408",
+  "schema": "tect/pre-a-r408-integrated/1.0",
+  "scope": {
+    "c6_closed": false,
+    "common_alpha_closed": false,
+    "common_core_closed": false,
+    "continuum_closed": false,
+    "cutoff_independent_green_bound_closed": false,
+    "exhaustion_uniform_bound_closed": false,
+    "finite_cutoff_profile_closed": true,
+    "finite_effective_resistance_closed": true,
+    "finite_likelihood_row_bound_closed": true,
+    "finite_resistance_poincare_closed": true,
+    "finite_tree_independence_closed": true,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "no_new_negative_result": true,
+    "no_pdf": true,
+    "no_tier_change": true,
+    "phase_uniform_bound_closed": false,
+    "pre_a_closed": false,
+    "sector_a_closed": false,
+    "volume_independent_green_bound_closed": false
+  },
+  "verdict": "PASS"
+}

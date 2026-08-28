@@ -1,0 +1,108 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-EFFECTIVE-RESISTANCE-v0",
+  "result_id": "R-408",
+  "title": "Effective-resistance average bound for intrinsic kinetic rows",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001253",
+  "claim_bearing": false,
+  "parent_explorations": ["EXP-001252", "EXP-001251", "EXP-001249"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY",
+    "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+  ],
+  "question": "Can the intrinsic kinetic graph use an electrical effective-resistance average to produce a tree-independent finite Poincare lower bound and a cleaner target for cutoff/volume uniformity?",
+  "new_perspective": {
+    "principle": "Use the Green kernel of the conductance Laplacian rather than a selected path family. Pairwise effective resistance controls every potential difference by the graph energy, and the Gibbs pair average gives one explicit global variance constant.",
+    "route": [
+      "For each conditional law pi, form the symmetric momentum conductance c_ij=(pi_i+pi_j)|p_ij|^2/(2 chi) and its connected Laplacian L.",
+      "Compute the Moore--Penrose inverse L^+ on the constant-orthogonal subspace and the effective resistances R_xy=(e_x-e_y)^T L^+(e_x-e_y).",
+      "Set Rbar_pi=sum_{x<y} pi_x*pi_y*R_xy. Pairwise Cauchy--Schwarz gives Var_pi(f)<=Rbar_pi E(f), hence Rbar_pi^(-1) is a finite lower bound independent of tree choice.",
+      "Repeat the full R-404 actual-likelihood grid, compare the resistance bound with the exact intrinsic gap and the R-407 maximum-tree bound, and record the smallest positive Laplacian eigenvalue and largest resistance as conditioning inputs.",
+      "Use a diagonal-q disconnected mutation and a three-node factor-of-two toy graph in the hostile lane; a line/tree choice is no longer part of the theorem."
+    ],
+    "qft_bridge": "A promoted route would require a cutoff-, volume-, phase- and exhaustion-uniform bound on the weighted Green kernel or its pair-average, plus a common-core identification with the Hamiltonian shell. This replaces arbitrary path geometry by an electrical/heat-kernel estimate but remains a finite interface here."
+  },
+  "finite_theorem": {
+    "effective_resistance": "R_xy=(e_x-e_y)^T L^+ (e_x-e_y)",
+    "resistance_average": "Rbar_pi=sum_{x<y} pi_x*pi_y*R_xy",
+    "finite_bound": "Var_pi(f)<=Rbar_pi E(f), hence E(f)>=Rbar_pi^(-1)Var_pi(f)",
+    "tree_independence": "The finite certificate depends only on L^+; no spanning tree or path choice enters the bound",
+    "normalization": "The pair sum is over unordered x<y, so no extra factor 2 enters the bound"
+  },
+  "finite_fixture": {
+    "admissible_pairs": [
+      {"volume": 2, "cutoff_dimensions": [3, 4, 5, 6, 8, 10, 12]}
+    ],
+    "beta_values": ["1/2", "1", "2"],
+    "source_support_values": [[0]],
+    "source_amplitude": "1/3",
+    "hbar": "1",
+    "time_step": "1/18",
+    "source_sign_values": [-1, 1],
+    "history_sign_values": [-1, 1],
+    "history_adjoint_values": [0, 1],
+    "orientations": ["right", "left"],
+    "chi": "1",
+    "r": "-1",
+    "g": "3/5",
+    "c": "3/5",
+    "lambda": "1/10",
+    "probability_floor": 1e-30,
+    "resistance_eigen_floor": 1e-14,
+    "numerical_tolerance": 1e-8,
+    "variance_floor": 1e-20,
+    "hostile_zero_threshold": 1e-12,
+    "crosscheck_tolerance": 5e-6
+  },
+  "scope": {
+    "finite_effective_resistance_closed": true,
+    "finite_resistance_poincare_closed": true,
+    "finite_likelihood_row_bound_closed": true,
+    "finite_cutoff_profile_closed": true,
+    "finite_tree_independence_closed": true,
+    "cutoff_independent_green_bound_closed": false,
+    "volume_independent_green_bound_closed": false,
+    "phase_uniform_bound_closed": false,
+    "exhaustion_uniform_bound_closed": false,
+    "common_core_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R408.lean",
+    "theorem_markers": ["resistance_pair_nonnegative", "resistance_bound_nonnegative", "finite_scope"],
+    "command": "lake env lean Tect/R408.lean",
+    "boundary": "Lean checks only scalar nonnegativity and finite pair-sum bookkeeping; pseudoinverses, graph spectra, Gibbs rows and all uniform/QFT limits remain in the executable/open boundary."
+  },
+  "artifacts": {
+    "primary_script": "codes/foundations/pre_a_cp1_st8_q3lock_effective_resistance.py",
+    "independent_script": "codes/foundations/pre_a_cp1_st8_q3lock_effective_resistance_independent.py",
+    "hostile_script": "codes/foundations/pre_a_cp1_st8_q3lock_effective_resistance_hostile.py",
+    "integrated_verifier": "codes/foundations/pre_a_cp1_st8_q3lock_effective_resistance_verify.py",
+    "lean": "verification/lean/Tect/R408.lean"
+  },
+  "promotion_criteria": [
+    "Prove a cutoff-independent weighted Green-kernel or effective-resistance-average upper bound on one Hamiltonian common core.",
+    "Control source, phase, volume, orientation and exhaustion dependence and the connectedness/conditioning of the intrinsic graph.",
+    "Transfer the resistance lower bound to the R-399 shell and combine it with the R-406 Schur coarse/residual decomposition before any common-alpha or GNS promotion."
+  ],
+  "stop_conditions": [
+    "If the resistance average diverges or the positive Laplacian spectrum collapses under a validated cutoff/volume stress, retain this as a finite diagnostic and do not replace the shell proof.",
+    "If the graph is disconnected, the pseudoinverse zero mode is mishandled, or the finite path residual becomes negative, stop and record the exact obstruction.",
+    "Finite resistance positivity is not a uniform, phase-selection, common-core, GNS, physical-gap or QFT theorem."
+  ],
+  "boundary": "T0 claim-nonbearing finite effective-resistance checkpoint only. It proves no cutoff-, volume-, source-, phase- or exhaustion-uniform gap, common core, common alpha, OS/KMS/GNS reconstruction, mass gap, continuum, C6, Sector-A or Pre-A closure.",
+  "no_overclaim": "The electrical certificate removes tree choice from the finite bound and exposes a Green-kernel uniformity target; it does not establish that target in a regulator or thermodynamic limit.",
+  "recorded_by": "Codex"
+}

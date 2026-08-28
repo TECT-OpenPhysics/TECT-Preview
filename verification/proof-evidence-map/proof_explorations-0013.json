@@ -6265,6 +6265,120 @@
       "task_id": "T-054",
       "title": "Canonical-path effective-resistance lower bound for intrinsic kinetic rows",
       "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "axis": "unordered-pair normalization",
+          "check": "A three-node unit path gives Rbar=4/9 and bound=9/4; doubling the bound leaves residual -1.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "pseudoinverse zero mode",
+          "check": "The resistance routine requires exactly d-1 eigenvalues above the 1e-14 floor and rejects a disconnected Laplacian.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "generator support",
+          "check": "Replacing p by diagonal q produces zero off-diagonal conductances and zero positive spectrum; the hostile lane catches it.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "conditioning and numerical floors",
+          "check": "All probabilities, eigenvalues, pair resistances, averages and residuals are finite and residuals stay above -1e-8 on the fixture.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "independent reconstruction",
+          "check": "The second lane rebuilds the finite oscillator, Gibbs, history, conditional graph and resistance data without importing the R-408 primary module and agrees within 5e-6.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "uniform and physical promotion",
+          "check": "Finite resistance positivity does not prove a cutoff/volume/phase/exhaustion-uniform Green-kernel estimate, a common core, GNS gap, continuum, C6, Sector-A or Pre-A closure.",
+          "disposition": "UPHELD-OPEN"
+        }
+      ],
+      "boundary": "T0 claim-nonbearing finite effective-resistance checkpoint only. It proves no cutoff-, volume-, source-, phase- or exhaustion-uniform gap, common core, common alpha, OS/KMS/GNS reconstruction, mass gap, continuum, C6, Sector-A or Pre-A closure.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "This advances a tree-independent finite interface: a future analytic proof can target a weighted Green-kernel or resistance-average upper bound rather than a selected path family. The finite data do not establish that the resistance average is bounded under cutoff, volume, phase or exhaustion limits, so no analytic gate is closed.",
+      "evidence_refs": [
+        "strategy/pre-a-cp1-st8-q3lock-effective-resistance-manifest.json#new_perspective",
+        "strategy/pre-a-cp1-st8-q3lock-effective-resistance-certificate-260830.md#Verification",
+        "codes/foundations/pre_a_cp1_st8_q3lock_effective_resistance.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_effective_resistance_independent.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_effective_resistance_hostile.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_effective_resistance_verify.py#main",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-primary-pre_a_cp1_st8_q3lock_effective_resistance/primary.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-independent-pre_a_cp1_st8_q3lock_effective_resistance/independent.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-hostile-pre_a_cp1_st8_q3lock_effective_resistance/hostile.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-integrated-pre_a_cp1_st8_q3lock_effective_resistance/integrated.json#derived",
+        "verification/lean/Tect/R408.lean#resistance_pair_nonnegative",
+        "claims/C6-SPACETIME-SIGNATURE/notes/effective-resistance-260830.md#R-408"
+      ],
+      "finding": "The primary lane passes 43630/43630 assertions over 7 systems, 2688 contexts and 21120 conditional rows; the independent lane passes 43630/43630; the hostile lane passes 6/6; the integrated verifier passes 37/37; and Lean R408 compiles. The exact intrinsic gap range is [0.7570174175402339,5.647863075935321], the resistance-average range is [0.44413751605180657,2.0052069566897672], and the tree-independent lower-bound range is [0.49870164107689835,2.251554898783544]. The smallest positive Laplacian eigenvalue is 0.020747640155030216, the largest pair resistance is 85.99011817086337, and the minimum residual is roundoff (-1.0641664309263875e-25).",
+      "formal_integration": {
+        "events": [
+          "20260830-effective-resistance-average-bound-for-intrinsi"
+        ],
+        "lean": "R408 PASS",
+        "negatives": [],
+        "no_new_negative": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "results": [
+          "R-408"
+        ]
+      },
+      "formal_refs": {
+        "events": [
+          "20260830-effective-resistance-average-bound-for-intrinsi"
+        ],
+        "negatives": [],
+        "results": [
+          "R-408"
+        ]
+      },
+      "gate_ids": [
+        "PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY",
+        "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+        "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+      ],
+      "id": "EXP-001253",
+      "method": [
+        "For each conditional law pi, form the symmetric momentum conductance c_ij=(pi_i+pi_j)|p_ij|^2/(2 chi), its Laplacian L, and the Moore--Penrose inverse on the positive spectrum.",
+        "Compute every pair resistance R_xy=(e_x-e_y)^T L^+ (e_x-e_y) and the unordered Gibbs pair average Rbar_pi=sum_{x<y} pi_x*pi_y*R_xy.",
+        "Use the pairwise Cauchy--Schwarz identity to test Var_pi(f)<=Rbar_pi E(f) on every actual-likelihood row, then compare Rbar_pi^-1 with the exact intrinsic gap and the R-407 tree bound.",
+        "Repeat the complete volume-two cutoff, beta, source, history, order, prefix, adjoint and collar-orientation grid in primary and independently reconstructed lanes.",
+        "Use a diagonal-q disconnected mutation and a three-node unordered-pair factor test to stress the zero mode, normalization and factor of two."
+      ],
+      "next_action": "Construct a cutoff- and volume-independent weighted Green-kernel or resistance-average bound on one Hamiltonian common core, control source, phase and exhaustion dependence, then transfer the bound to the R-399 shell and combine it with the R-406 Schur residual split. Stop or redesign if the resistance average diverges or the positive spectrum collapses.",
+      "no_overclaim": "The electrical certificate removes tree choice from the finite bound and exposes a Green-kernel uniformity target; it is not an analytic regulator, thermodynamic, physical-sector or QFT estimate.",
+      "provenance": "contemporaneous",
+      "question": "Can the intrinsic kinetic graph use an electrical effective-resistance average to produce a tree-independent finite Poincare lower bound and a cleaner target for cutoff and volume uniformity?",
+      "recorded_at": "2026-08-30T22:00:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001252",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001251",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001249",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-08-28",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Effective-resistance average bound for intrinsic kinetic rows",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",

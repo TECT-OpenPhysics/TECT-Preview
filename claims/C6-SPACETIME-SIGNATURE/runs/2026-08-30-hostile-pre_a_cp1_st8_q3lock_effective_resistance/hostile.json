@@ -1,0 +1,105 @@
+{
+  "assertion_count": 6,
+  "boundary": "T0 claim-nonbearing finite effective-resistance checkpoint only. It proves no cutoff-, volume-, source-, phase- or exhaustion-uniform gap, common core, common alpha, OS/KMS/GNS reconstruction, mass gap, continuum, C6, Sector-A or Pre-A closure.",
+  "checks": [
+    {
+      "actual": 0.6239581627361855,
+      "expected": ">0",
+      "name": "baseline resistance bound positive",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.0571273533320313,
+      "expected": ">0",
+      "name": "late resistance bound positive",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          1.971573098429676e-07,
+          0.6239581627361855,
+          0.7570174175402339
+        ],
+        [
+          0.004261778348672615,
+          1.0571273533320313,
+          2.914431299136564
+        ]
+      ],
+      "expected": "nonnegative residual and bound <= exact gap",
+      "name": "resistance bound is valid",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0,
+        0,
+        0.0
+      ],
+      "expected": "zero edges and positive eigenvalues",
+      "name": "q mutation deletes edges and connectivity",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.44444444444444414,
+        2.2500000000000013
+      ],
+      "expected": [
+        0.4444444444444444,
+        2.25
+      ],
+      "name": "pseudoinverse pair normalization",
+      "status": "PASS"
+    },
+    {
+      "actual": -1.0000000000000018,
+      "expected": "<-1e-08",
+      "name": "doubled bound rejected",
+      "status": "PASS"
+    }
+  ],
+  "derived": {
+    "factor_audit": {
+      "toy_correct_bound": 2.2500000000000013,
+      "toy_doubled_residual": -1.0000000000000018,
+      "toy_resistance_average": 0.44444444444444414
+    },
+    "mutation": "replace_p_by_q_and_double_unordered_pair_bound",
+    "q_mutation": {
+      "maximum_edge": 0.0,
+      "mutated_edge_count": 0,
+      "positive_eigenvalue_count": 0
+    },
+    "selected": [
+      {
+        "dimension": 3,
+        "energy": 2.392011619748649e-07,
+        "exact_gap": 0.7570174175402339,
+        "maximum_effective_resistance": 6.0,
+        "positive_eigenvalue_count": 2,
+        "residual": 1.971573098429676e-07,
+        "resistance_average": 1.6026715567191128,
+        "resistance_bound": 0.6239581627361855,
+        "variance": 6.738248594669602e-08
+      },
+      {
+        "dimension": 12,
+        "energy": 0.004262339182117863,
+        "exact_gap": 2.914431299136564,
+        "maximum_effective_resistance": 47.25718740724149,
+        "positive_eigenvalue_count": 11,
+        "residual": 0.004261778348672615,
+        "resistance_average": 0.9459598191722428,
+        "resistance_bound": 1.0571273533320313,
+        "variance": 5.30525904452027e-07
+      }
+    ]
+  },
+  "exploration_id": "EXP-001253",
+  "manifest": "strategy/pre-a-cp1-st8-q3lock-effective-resistance-manifest.json",
+  "result_id": "R-408",
+  "schema": "tect/pre-a-r408-hostile/1.0",
+  "verdict": "PASS"
+}
