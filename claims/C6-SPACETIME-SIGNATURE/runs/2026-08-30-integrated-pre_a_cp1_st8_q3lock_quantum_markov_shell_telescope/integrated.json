@@ -1,0 +1,677 @@
+{
+  "checks": [
+    {
+      "actual": "['PA-CP1-ST8-Q3LOCK-QCMI-SHELL-TELESCOPE-FINITE-v0', 'R-392', 'EXP-001235', False]",
+      "expected": "R-392 finite false",
+      "group": "identity",
+      "name": "manifest identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'all_declared_volume_cutoff_pairs': True, 'both_core_widths_when_admissible': True, 'both_orientations': True, 'all_beta_values': True, 'all_admissible_shell_prefixes': True, 'chain_rule_residuals': True, 'product_state_hostile': True}",
+      "expected": "all declared shell rows",
+      "group": "coverage",
+      "name": "coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'operator_norm_uniformity_closed': False, 'beta_uniformity_closed': False, 'eta_uniformity_closed': False, 'phase_local_bkm_estimate_closed': False, 'boundary_shell_l1_uniform_closed': False, 'cutoff_uniformity_closed': False, 'source_uniformity_closed': False, 'volume_uniformity_closed': False, 'shape_uniformity_closed': False, 'operator_domain_embedding_closed': False, 'direct_D_cauchy_closed': False, 'delta_D_cauchy_closed': False, 'common_alpha_closed': False, 'hamiltonian_os_identification_closed': False, 'kms_gns_gap_closed': False, 'continuum_closed': False, 'c6_closed': False, 'sector_a_closed': False, 'pre_a_closed': False}",
+      "expected": "all promoted flags false",
+      "group": "scope",
+      "name": "scope firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": "[]",
+      "expected": "all R-392 artifacts",
+      "group": "provenance",
+      "name": "artifacts present",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'codes/foundations/pre_a_cp1_st8_q3lock_quantum_markov_shell_telescope.py': 'f169677a457fabf57f55682c7cf4d7725c8a91ff1ecf9ccdc39a8404ca74cd11', 'codes/foundations/pre_a_cp1_st8_q3lock_quantum_markov_shell_telescope_independent.py': '9d83768915584a037e82ce9dec6fc861a2b1236adfc1ae4726cb7987a64962d7', 'codes/foundations/pre_a_cp1_st8_q3lock_quantum_markov_shell_telescope_hostile.py': '2925a1038ae40d3024bd72e2d68f0ee45af6e099263965d5d147ffb256910cfa', 'codes/foundations/pre_a_cp1_st8_q3lock_quantum_markov_shell_telescope_verify.py': 'ec3ee163c60954edab5372a39ccd2389c38d08a490a6c31ef070938f1b28a827', 'verification/lean/Tect/R392.lean': '2bc5baa662e1ef0e15e4d550f4e943e0f5a732ba5a2d1a35f396ca04bb451676'}",
+      "expected": "distinct",
+      "group": "provenance",
+      "name": "source hashes distinct",
+      "status": "PASS"
+    },
+    {
+      "actual": "['qcmI_chain_rule', 'shell_budget_nonnegative', 'cumulative_budget_dominates']",
+      "expected": "declared markers",
+      "group": "Lean",
+      "name": "Lean markers",
+      "status": "PASS"
+    },
+    {
+      "actual": "finite scalar file",
+      "expected": "no promotion text",
+      "group": "Lean",
+      "name": "Lean finite boundary",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-392 PRIMARY PASS 800/800 systems=12 partitions=44 qcmI=264 rows=264 qcmI_max=0.0094005 residual=1.78e-15",
+      "expected": "exit 0 and output",
+      "group": "executables",
+      "name": "run pre_a_cp1_st8_q3lock_quantum_markov_shell_telescope.py",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-392 INDEPENDENT PASS 6/6 systems=12 partitions=44 qcmI=264 rows=264 qcmI_max=0.0094005 residual=1.78e-15",
+      "expected": "exit 0 and output",
+      "group": "executables",
+      "name": "run pre_a_cp1_st8_q3lock_quantum_markov_shell_telescope_independent.py",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-392 HOSTILE PASS 3/3 representative=V5/d4/beta2 actual_max=0.00927062 product_max=1.77636e-15 CAUGHT",
+      "expected": "exit 0 and output",
+      "group": "executables",
+      "name": "run pre_a_cp1_st8_q3lock_quantum_markov_shell_telescope_hostile.py",
+      "status": "PASS"
+    },
+    {
+      "actual": "",
+      "expected": "exit 0",
+      "group": "Lean",
+      "name": "Lean compile",
+      "status": "PASS"
+    },
+    {
+      "actual": "PASS",
+      "expected": "PASS",
+      "group": "executables",
+      "name": "primary verdict",
+      "status": "PASS"
+    },
+    {
+      "actual": "PASS",
+      "expected": "PASS",
+      "group": "executables",
+      "name": "independent verdict",
+      "status": "PASS"
+    },
+    {
+      "actual": "PASS",
+      "expected": "PASS",
+      "group": "hostile",
+      "name": "hostile verdict",
+      "status": "PASS"
+    },
+    {
+      "actual": "all derived fields",
+      "expected": "within 1e-08",
+      "group": "independence",
+      "name": "primary-independent agreement",
+      "status": "PASS"
+    },
+    {
+      "actual": "[12, 44, 264, 264]",
+      "expected": "positive and aligned",
+      "group": "coverage",
+      "name": "finite counts",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.7763568394002505e-15, 0, 0]",
+      "expected": "residual <= 1e-08, no negatives",
+      "group": "chain rule",
+      "name": "chain residual",
+      "status": "PASS"
+    },
+    {
+      "actual": "[4.992047788476839e-07, 0.009400499834535836, 0.009400499834535836]",
+      "expected": "finite nonnegative budget",
+      "group": "l1 budget",
+      "name": "l1 budget",
+      "status": "PASS"
+    },
+    {
+      "actual": "[[1, 1], [1, 2], [1, 3], [2, 1], [2, 2]]",
+      "expected": "four first/second-shell profiles",
+      "group": "buffer stress",
+      "name": "shell profiles",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'core1': [0.009400499834535836, 0.0003382922777377395], 'core2': [0.009319870748412562, 0.0003364013516424791]}",
+      "expected": "second shell maximum smaller",
+      "group": "buffer stress",
+      "name": "successive-shell suppression",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'actual_increment_max': 0.009270624713825448, 'layout_count': 10, 'mismatch': 0.009270624713823672, 'product_increment_abs_max': 1.7763568394002505e-15, 'representative': {'beta': 2.0, 'dimension': 4, 'volume': 5}}",
+      "expected": "interacting signal versus product zero",
+      "group": "hostile",
+      "name": "hostile product collapse",
+      "status": "PASS"
+    }
+  ],
+  "derived": {
+    "command_outputs": {
+      "lean": "",
+      "pre_a_cp1_st8_q3lock_quantum_markov_shell_telescope.py": "R-392 PRIMARY PASS 800/800 systems=12 partitions=44 qcmI=264 rows=264 qcmI_max=0.0094005 residual=1.78e-15",
+      "pre_a_cp1_st8_q3lock_quantum_markov_shell_telescope_hostile.py": "R-392 HOSTILE PASS 3/3 representative=V5/d4/beta2 actual_max=0.00927062 product_max=1.77636e-15 CAUGHT",
+      "pre_a_cp1_st8_q3lock_quantum_markov_shell_telescope_independent.py": "R-392 INDEPENDENT PASS 6/6 systems=12 partitions=44 qcmI=264 rows=264 qcmI_max=0.0094005 residual=1.78e-15"
+    },
+    "hostile": {
+      "actual_increment_max": 0.009270624713825448,
+      "layout_count": 10,
+      "mismatch": 0.009270624713823672,
+      "product_increment_abs_max": 1.7763568394002505e-15,
+      "representative": {
+        "beta": 2.0,
+        "dimension": 4,
+        "volume": 5
+      }
+    },
+    "independent": {
+      "admissible_pairs": [
+        {
+          "dimension": 3,
+          "volume": 2
+        },
+        {
+          "dimension": 4,
+          "volume": 2
+        },
+        {
+          "dimension": 5,
+          "volume": 2
+        },
+        {
+          "dimension": 6,
+          "volume": 2
+        },
+        {
+          "dimension": 3,
+          "volume": 3
+        },
+        {
+          "dimension": 4,
+          "volume": 3
+        },
+        {
+          "dimension": 5,
+          "volume": 3
+        },
+        {
+          "dimension": 3,
+          "volume": 4
+        },
+        {
+          "dimension": 4,
+          "volume": 4
+        },
+        {
+          "dimension": 5,
+          "volume": 4
+        },
+        {
+          "dimension": 3,
+          "volume": 5
+        },
+        {
+          "dimension": 4,
+          "volume": 5
+        }
+      ],
+      "base_partition_count": 44,
+      "beta_values": [
+        0.25,
+        0.5,
+        1.0,
+        2.0
+      ],
+      "budget_shell_profile": {
+        "maximum_range": 0.009400000645610973,
+        "profiles": [
+          {
+            "count": 120,
+            "key": [
+              1,
+              1
+            ],
+            "maximum": 0.009400499834535836,
+            "minimum": 4.991889248628922e-07,
+            "range": 0.009400000645610973
+          },
+          {
+            "count": 56,
+            "key": [
+              1,
+              2
+            ],
+            "maximum": 0.009319870748413006,
+            "minimum": 4.992047788476839e-07,
+            "range": 0.009319371543634158
+          },
+          {
+            "count": 16,
+            "key": [
+              1,
+              3
+            ],
+            "maximum": 0.009288543552040007,
+            "minimum": 5.191002738769157e-07,
+            "range": 0.00928802445176613
+          },
+          {
+            "count": 56,
+            "key": [
+              2,
+              1
+            ],
+            "maximum": 0.009319870748412562,
+            "minimum": 4.992047788476839e-07,
+            "range": 0.009319371543633714
+          },
+          {
+            "count": 16,
+            "key": [
+              2,
+              2
+            ],
+            "maximum": 0.009244876894248577,
+            "minimum": 4.992206363851892e-07,
+            "range": 0.009244377673612192
+          }
+        ]
+      },
+      "cumulative_shell_profile": {
+        "maximum_range": 0.009400000645610973,
+        "profiles": [
+          {
+            "count": 120,
+            "key": [
+              1,
+              1
+            ],
+            "maximum": 0.009400499834535836,
+            "minimum": 4.991889248628922e-07,
+            "range": 0.009400000645610973
+          },
+          {
+            "count": 56,
+            "key": [
+              1,
+              2
+            ],
+            "maximum": 0.009319870748412562,
+            "minimum": 4.992047788476839e-07,
+            "range": 0.009319371543633714
+          },
+          {
+            "count": 16,
+            "key": [
+              1,
+              3
+            ],
+            "maximum": 0.009288543552039563,
+            "minimum": 5.191002747650941e-07,
+            "range": 0.009288024451764798
+          },
+          {
+            "count": 56,
+            "key": [
+              2,
+              1
+            ],
+            "maximum": 0.009319870748412562,
+            "minimum": 4.992047788476839e-07,
+            "range": 0.009319371543633714
+          },
+          {
+            "count": 16,
+            "key": [
+              2,
+              2
+            ],
+            "maximum": 0.009244876894248133,
+            "minimum": 4.992206363851892e-07,
+            "range": 0.009244377673611748
+          }
+        ]
+      },
+      "increment_max": 0.009400499834535836,
+      "increment_min": 1.7763568394002505e-15,
+      "l1_budget_max": 0.009400499834535836,
+      "l1_budget_min": 4.991889248628922e-07,
+      "max_chain_rule_residual": 1.7763568394002505e-15,
+      "negative_cumulative_count": 0,
+      "negative_increment_count": 0,
+      "qcmI_max": 0.009400499834535836,
+      "qcmI_min": 4.991889248628922e-07,
+      "qcmI_record_count": 264,
+      "qcmI_shell_profile": {
+        "maximum_range": 0.009400000645610973,
+        "profiles": [
+          {
+            "count": 120,
+            "key": [
+              1,
+              1
+            ],
+            "maximum": 0.009400499834535836,
+            "minimum": 4.991889248628922e-07,
+            "range": 0.009400000645610973
+          },
+          {
+            "count": 56,
+            "key": [
+              1,
+              2
+            ],
+            "maximum": 0.0003382922777377395,
+            "minimum": 1.5853984791647235e-11,
+            "range": 0.0003382922618837547
+          },
+          {
+            "count": 16,
+            "key": [
+              1,
+              3
+            ],
+            "maximum": 1.7918838214114885e-05,
+            "minimum": 1.7763568394002505e-15,
+            "range": 1.7918838212338528e-05
+          },
+          {
+            "count": 56,
+            "key": [
+              2,
+              1
+            ],
+            "maximum": 0.009319870748412562,
+            "minimum": 4.992047788476839e-07,
+            "range": 0.009319371543633714
+          },
+          {
+            "count": 16,
+            "key": [
+              2,
+              2
+            ],
+            "maximum": 0.0003364013516424791,
+            "minimum": 1.5855761148486636e-11,
+            "range": 0.00033640133578671794
+          }
+        ]
+      },
+      "row_count": 264,
+      "system_count": 12
+    },
+    "lean": "PASS",
+    "primary": {
+      "admissible_pairs": [
+        {
+          "dimension": 3,
+          "volume": 2
+        },
+        {
+          "dimension": 4,
+          "volume": 2
+        },
+        {
+          "dimension": 5,
+          "volume": 2
+        },
+        {
+          "dimension": 6,
+          "volume": 2
+        },
+        {
+          "dimension": 3,
+          "volume": 3
+        },
+        {
+          "dimension": 4,
+          "volume": 3
+        },
+        {
+          "dimension": 5,
+          "volume": 3
+        },
+        {
+          "dimension": 3,
+          "volume": 4
+        },
+        {
+          "dimension": 4,
+          "volume": 4
+        },
+        {
+          "dimension": 5,
+          "volume": 4
+        },
+        {
+          "dimension": 3,
+          "volume": 5
+        },
+        {
+          "dimension": 4,
+          "volume": 5
+        }
+      ],
+      "base_partition_count": 44,
+      "beta_values": [
+        0.25,
+        0.5,
+        1.0,
+        2.0
+      ],
+      "budget_shell_profile": {
+        "maximum_range": 0.009400000645610973,
+        "profiles": [
+          {
+            "count": 120,
+            "key": [
+              1,
+              1
+            ],
+            "maximum": 0.009400499834535836,
+            "minimum": 4.991889248628922e-07,
+            "range": 0.009400000645610973
+          },
+          {
+            "count": 56,
+            "key": [
+              1,
+              2
+            ],
+            "maximum": 0.009319870748413006,
+            "minimum": 4.992047788476839e-07,
+            "range": 0.009319371543634158
+          },
+          {
+            "count": 16,
+            "key": [
+              1,
+              3
+            ],
+            "maximum": 0.009288543552040007,
+            "minimum": 5.191002738769157e-07,
+            "range": 0.00928802445176613
+          },
+          {
+            "count": 56,
+            "key": [
+              2,
+              1
+            ],
+            "maximum": 0.009319870748412562,
+            "minimum": 4.992047788476839e-07,
+            "range": 0.009319371543633714
+          },
+          {
+            "count": 16,
+            "key": [
+              2,
+              2
+            ],
+            "maximum": 0.009244876894248577,
+            "minimum": 4.992206363851892e-07,
+            "range": 0.009244377673612192
+          }
+        ]
+      },
+      "cumulative_shell_profile": {
+        "maximum_range": 0.009400000645610973,
+        "profiles": [
+          {
+            "count": 120,
+            "key": [
+              1,
+              1
+            ],
+            "maximum": 0.009400499834535836,
+            "minimum": 4.991889248628922e-07,
+            "range": 0.009400000645610973
+          },
+          {
+            "count": 56,
+            "key": [
+              1,
+              2
+            ],
+            "maximum": 0.009319870748412562,
+            "minimum": 4.992047788476839e-07,
+            "range": 0.009319371543633714
+          },
+          {
+            "count": 16,
+            "key": [
+              1,
+              3
+            ],
+            "maximum": 0.009288543552039563,
+            "minimum": 5.191002747650941e-07,
+            "range": 0.009288024451764798
+          },
+          {
+            "count": 56,
+            "key": [
+              2,
+              1
+            ],
+            "maximum": 0.009319870748412562,
+            "minimum": 4.992047788476839e-07,
+            "range": 0.009319371543633714
+          },
+          {
+            "count": 16,
+            "key": [
+              2,
+              2
+            ],
+            "maximum": 0.009244876894248133,
+            "minimum": 4.992206363851892e-07,
+            "range": 0.009244377673611748
+          }
+        ]
+      },
+      "increment_max": 0.009400499834535836,
+      "increment_min": 1.7763568394002505e-15,
+      "l1_budget_max": 0.009400499834535836,
+      "l1_budget_min": 4.992047788476839e-07,
+      "max_chain_rule_residual": 1.7763568394002505e-15,
+      "negative_cumulative_count": 0,
+      "negative_increment_count": 0,
+      "qcmI_max": 0.009400499834535836,
+      "qcmI_min": 4.991889248628922e-07,
+      "qcmI_record_count": 264,
+      "qcmI_shell_profile": {
+        "maximum_range": 0.009400000645610973,
+        "profiles": [
+          {
+            "count": 120,
+            "key": [
+              1,
+              1
+            ],
+            "maximum": 0.009400499834535836,
+            "minimum": 4.991889248628922e-07,
+            "range": 0.009400000645610973
+          },
+          {
+            "count": 56,
+            "key": [
+              1,
+              2
+            ],
+            "maximum": 0.0003382922777377395,
+            "minimum": 1.5853984791647235e-11,
+            "range": 0.0003382922618837547
+          },
+          {
+            "count": 16,
+            "key": [
+              1,
+              3
+            ],
+            "maximum": 1.7918838214114885e-05,
+            "minimum": 1.7763568394002505e-15,
+            "range": 1.7918838212338528e-05
+          },
+          {
+            "count": 56,
+            "key": [
+              2,
+              1
+            ],
+            "maximum": 0.009319870748412562,
+            "minimum": 4.992047788476839e-07,
+            "range": 0.009319371543633714
+          },
+          {
+            "count": 16,
+            "key": [
+              2,
+              2
+            ],
+            "maximum": 0.0003364013516424791,
+            "minimum": 1.5855761148486636e-11,
+            "range": 0.00033640133578671794
+          }
+        ]
+      },
+      "row_count": 264,
+      "system_count": 12
+    }
+  },
+  "exploration_id": "EXP-001235",
+  "manifest": "strategy/pre-a-cp1-st8-q3lock-quantum-markov-shell-telescope-manifest.json",
+  "result_id": "R-392",
+  "schema": "tect/pre-a-r392-integrated/1.0",
+  "scope": {
+    "beta_uniformity_closed": false,
+    "boundary_shell_l1_uniform_closed": false,
+    "c6_closed": false,
+    "common_alpha_closed": false,
+    "continuum_closed": false,
+    "cutoff_uniformity_closed": false,
+    "delta_D_cauchy_closed": false,
+    "direct_D_cauchy_closed": false,
+    "eta_uniformity_closed": false,
+    "finite_buffer_shell_stress_closed": true,
+    "finite_l1_boundary_budget_closed": true,
+    "finite_product_hostile_closed": true,
+    "finite_qcmI_chain_rule_closed": true,
+    "finite_qcmI_shell_nonnegativity_closed": true,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "no_new_negative_result": true,
+    "no_pdf": true,
+    "no_tier_change": true,
+    "operator_domain_embedding_closed": false,
+    "operator_norm_uniformity_closed": false,
+    "phase_local_bkm_estimate_closed": false,
+    "pre_a_closed": false,
+    "sector_a_closed": false,
+    "shape_uniformity_closed": false,
+    "source_uniformity_closed": false,
+    "volume_uniformity_closed": false
+  },
+  "verdict": "PASS"
+}

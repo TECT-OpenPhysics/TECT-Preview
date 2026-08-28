@@ -1,0 +1,73 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001235",
+  "title": "QCMI shell-telescoping boundary budget",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+  ],
+  "related": [
+    {"id": "EXP-001234", "relation": "continues"},
+    {"id": "EXP-001233", "relation": "continues"},
+    {"id": "EXP-001232", "relation": "continues"}
+  ],
+  "question": "Can the finite boundary information be decomposed into nonnegative QCMI shell increments whose telescoping l1 budget is auditable before seeking a uniform Gibbs complement and common-core transfer?",
+  "method": [
+    "Build the exact zero-source oscillator chain on the manifest's 12 volume/cutoff systems and form normalized finite Gibbs matrices at every declared beta.",
+    "Enumerate both orientations of every admissible contiguous core--base-buffer--shell layout with core widths 1 and 2; add the shell sites one at a time and trace omitted exterior sites.",
+    "Compute each conditional mutual information increment delta_m=I(A:S_m|B S_1...S_{m-1}) and the cumulative I(A:S_1...S_m|B) from cached finite reduced spectra.",
+    "Check the QCMI chain rule to roundoff and retain the sum of increments as a finite l1 boundary budget, with no clipping of negative values.",
+    "Rebuild all aggregate fields in a non-importing independent lane, replace the interacting state by a product of one-site marginals as a hostile mutation, and compile scalar chain/budget identities in Lean R392."
+  ],
+  "finding": "The primary lane passes 800/800 checks and the non-importing independent lane passes 6/6. The integrated verifier passes 21/21 with Lean R392 compiling over 12 systems, 44 base tripartitions and 264 shell rows. Every increment and cumulative QCMI value is nonnegative within tolerance; cumulative QCMI ranges from 4.991889248628922e-07 to 0.009400499834535836, the maximum l1 budget is 0.009400499834535836, and the maximum chain-rule residual is 1.7763568394002505e-15. The second shell maximum falls from 0.009400499834535836 to 0.0003382922777377395 for core width 1 and from 0.009319870748412562 to 0.0003364013516424791 for core width 2; a third one-site shell reaches 1.7918838214114885e-05. The product-of-one-site-marginals hostile mutation has maximum increment 1.7763568394002505e-15 while the interacting representative reaches 0.009270624713825448, so the mutation is caught.",
+  "verdict": "advanced",
+  "decision_reason": "R-392 adds a finite shell-accounting coordinate to R-391: QCMI increments are kept separately and their chain-rule sum gives an auditable boundary budget. Successive-shell suppression is visible on the declared grid, but no uniform shell modulus or Gibbs-complement control follows; the route remains an analytic target rather than a Q3LOCK or physical closure.",
+  "adversarial_review": [
+    {"axis": "chain-rule ordering", "check": "The conditioning algebra includes exactly the previously added shell sites, so no commutation or translation assumption is introduced.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "QCMI sign", "check": "Negative increments and cumulative values are counted and rejected rather than clipped; both counts are zero.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "budget construction", "check": "The l1 budget retains the signed finite increments after positivity checks and is compared with the cumulative value through the explicit residual.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "orientation", "check": "Left and right shell orderings are both enumerated and exterior sites are traced explicitly.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "finite-versus-uniform inference", "check": "The second-shell suppression is kept as a finite profile and is not called exponential, cutoff-independent, or thermodynamic.", "disposition": "UPHELD-OPEN"},
+    {"axis": "hostile mutation", "check": "A product state that makes every shell increment vanish is compared with the interacting Gibbs state and caught above threshold.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "independence", "check": "The independent lane rebuilds the Hamiltonian, reductions, entropy and shell profiles without importing the primary module.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "QFT promotion", "check": "Uniform shell summability, Gibbs complement, common core, beta/eta independence, Cook/common-alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open.", "disposition": "UPHELD-OPEN"}
+  ],
+  "evidence_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-quantum-markov-shell-telescope-manifest.json#model",
+    "strategy/pre-a-cp1-st8-q3lock-quantum-markov-shell-telescope-certificate-260830.md#Result",
+    "codes/foundations/pre_a_cp1_st8_q3lock_quantum_markov_shell_telescope.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_quantum_markov_shell_telescope_independent.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_quantum_markov_shell_telescope_hostile.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_quantum_markov_shell_telescope_verify.py#run",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-primary-pre_a_cp1_st8_q3lock_quantum_markov_shell_telescope/primary.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-integrated-pre_a_cp1_st8_q3lock_quantum_markov_shell_telescope/integrated.json#derived",
+    "verification/lean/Tect/R392.lean#qcmI_chain_rule",
+    "claims/C6-SPACETIME-SIGNATURE/notes/quantum-markov-shell-telescope-boundary-260830.md#R-392"
+  ],
+  "formal_integration": {
+    "results": ["R-392"],
+    "negatives": [],
+    "events": ["20260830-qcmi-shell-telescoping-boundary-budget-2026-08"],
+    "lean": "R392 PASS",
+    "no_new_result": false,
+    "no_new_negative": true,
+    "no_changelog_event": false,
+    "no_pdf": true,
+    "no_tier_change": true
+  },
+  "formal_refs": {
+    "results": ["R-392"],
+    "negatives": [],
+    "events": ["20260830-qcmi-shell-telescoping-boundary-budget-2026-08"]
+  },
+  "next_action": "Derive a cutoff-independent shell tail modulus for the actual Gibbs complement from the finite budget coordinate, then build the invariant common form-core transfer. If higher shells lose suppression under increasing cutoff, record the route-specific obstruction without promoting common alpha.",
+  "boundary": "T0 claim-nonbearing finite QCMI shell-telescoping and boundary-budget stress only. It proves no uniform shell modulus, Gibbs complement theorem, cutoff/volume/source/shape bound, common core, beta/eta-independent topology, domain or Cook/common-alpha convergence, OS/KMS/GNS reconstruction, gap, continuum, C6, Sector-A or Pre-A result.",
+  "no_overclaim": "Finite chain-rule closure and a finite l1 budget identify an accounting identity; they do not establish uniform summability or remove the spectral complement.",
+  "provenance": "contemporaneous",
+  "recorded_at": "2026-08-30T08:30:00Z",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-08-29"
+}
