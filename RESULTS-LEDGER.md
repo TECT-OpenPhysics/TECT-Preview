@@ -42,6 +42,7 @@ policy in `governance/development-history.md`.
 | [R-376](#r-376) | Hilbert-Schmidt Lipschitz bridge for the capped Liouvillian kernel | R-376 v1.0 is a T0 claim-nonbearing finite operator-interface checkpoint under EXP-001218. A noncommuting cutoff-2 edge Liouvillian stress gives maximum full-kernel Frobenius ratio 0.9787544362168733 and 64-layer ratio 0.9755896836319287 with 76/76 integrated assertions; general Schatten-2 proof, operator-norm locality, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
 | [R-377](#r-377) | Gap-free odd-Matsubara resolvent telescoping budget | R-377 v1.0 is a T0 claim-nonbearing finite resolvent-interface checkpoint under EXP-001219. The exact positive-resolvent difference identity and its 64-layer budget pass 122/122 integrated assertions with Lean R377; the accumulated finite budget ratio is 0.9895313426497929 and the absolute-value square-root debt is recorded separately. Uniform locality, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
 | [R-382](#r-382) | Increasing-cutoff endpoint modular moment stress | R-382 v1.0 is a T0 claim-nonbearing finite cutoff-profile diagnostic under EXP-001224. The R-381 endpoint-energy bridge passes across 2816 all-prefix actual-Q3 contexts with Lean R382; edge max M_0 grows from 2.733031855844076 at d=3 to 41.64826651661874 at d=6 and max M_2 from 0.008378198414559081 to 17.719559304500326, with d=5 to d=6 ratios 8.855033106195243 and 36.38049903040583. This is finite growth evidence only; uniform M_0/M_2 control, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
+| [R-403](#r-403) | Increasing-cutoff Hamiltonian carre-du-champ stress | R-403 v1.0 is a T0 claim-nonbearing finite stress under EXP-001248. Across volume-two cutoffs d=3,4,5,6,8,10,12 and the declared source/history/order/prefix/adjoint/orientation grid, primary 1397/1397, independent 1379/1379, hostile 7/7, integrated 37/37 and Lean R403 pass. The nonzero-row E_kin/D_q range is [1.0461038216925114,109929.13074605557], with cutoff-maximum growth 24664.408607934973; this blocks automatic uniform-upper promotion but is not a divergence theorem, and all common-core/QFT gates remain open |
 | [R-402](#r-402) | Finite Hamiltonian carre-du-champ comparison | R-402 v1.0 is a T0 claim-nonbearing finite Hamiltonian-interface checkpoint under EXP-001247. The Q3 kinetic form is compared with the R-401 physical-coordinate form on 3584 actual history contexts and 71680 conditional rows; primary 5410/5410, independent 1815/1815, hostile 4/4, integrated 33/33 and Lean R402 pass. The observed nonzero-row ratio E_kin/D_q is [1.0087179063711833,11.074061483593928], while potential commutators vanish on the finite q basis; uniform common-core comparison and all QFT/limit gates remain open |
 | [R-401](#r-401) | Physical-coordinate metric for the conditional gap | R-401 v1.0 is a T0 claim-nonbearing finite coordinate-metric diagnostic under EXP-001246. Replacing the truncation-level edge distance by the ordered oscillator coordinate spacing gives a worst finite conditional gap of 0.14052591590289856 versus the R-400 index value 0.03136900665147795 across 32 systems, 192 profiles and 180 ratios; primary/independent/hostile/integrated and Lean R401 pass. The metric is not pointwise larger at every low cutoff, and the Hamiltonian-form comparison, uniformity, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
 | [R-400](#r-400) | Increasing-cutoff conditional gap stress | R-400 v1.0 is a T0 claim-nonbearing finite static Q3 Gibbs diagnostic under EXP-001245. The ordered birth-death conditional gap remains positive but oscillates across 32 systems, 192 profiles and 180 adjacent ratios; primary 519/519, independent 614/614, hostile 3/3, integrated 29/29 and Lean R400 pass. The minimum finite gap is 0.03136900665147795, so no cutoff/volume-uniform bound is inferred; gradient decay, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
@@ -641,6 +642,49 @@ No new negative result, tier change, or R-376 PDF is issued.
 
 **Proven in:** manifest, certificate, Lean entrypoint, primary script,
 independent script, integrated verifier, scope note, and saved run artefacts.
+
+<a id="r-403"></a>
+### R-403 -- Increasing-cutoff Hamiltonian carre-du-champ stress
+
+**Result ID.** R-403 is a T0, claim-nonbearing finite stress under
+EXP-001248.  It follows R-402 and tests whether its finite Hamiltonian
+carré-du-champ ratio can be treated as a cutoff-independent comparison
+constant.
+
+For the physical-coordinate multiplier `F=f(q)`, the compared forms are
+
+```
+D_q(f)   = sum min(pi_k,pi_(k+1))*((f_(k+1)-f_k)/(x_(k+1)-x_k))^2
+E_kin(f) = (2 chi)^(-1) Tr(diag(pi)[p,F]^*[p,F]).
+```
+
+The volume-two actual Q3 chain is evaluated at oscillator dimensions
+`3,4,5,6,8,10,12`, beta in `{1/2,1,2}`, both source signs, both history
+signs, both split orders, every prefix, both history adjoints and both collar
+orientations.
+
+**Verification.** The primary lane passes `1397/1397` over `7` systems,
+`2688` contexts and `21120` conditional rows; `15840` rows have nonzero
+`D_q` and `5280` are below the declared ratio floor.  The independent lane
+passes `1379/1379`, the hostile lane `7/7`, the integrated verifier `37/37`,
+and Lean R403 compiles.  The nonzero-row ratio range is
+`[1.0461038216925114,109929.13074605557]`.  The per-cutoff maximum grows from
+`4.456994387884469` at `d=3` to `109929.13074605557` at `d=12`, a factor of
+`24664.408607934973`.
+
+This finite growth blocks automatic promotion of the R-402 interval to a
+uniform upper comparison.  It does not prove divergence of an infinite-volume
+form and does not rule out a separately proved one-sided lower estimate.  The
+hostile `p -> q` mutation is zero on its selected late row while the genuine
+kinetic form is positive.
+
+**Boundary.** R-403 proves no cutoff-, volume-, phase- or shape-uniform form
+comparison, common core, common alpha, actual split limit, Hamiltonian-to-
+OS/KMS identification, GNS gap, continuum, C6, Sector-A or Pre-A closure.
+The route is recorded as an inconclusive finite stress; no tier change,
+negative result or PDF is issued.
+
+**Proven in:** [R-403 certificate](strategy/pre-a-cp1-st8-q3lock-hamiltonian-carre-du-champ-cutoff-stress-certificate-260830.md), [Lean entrypoint](verification/lean/Tect/R403.lean), primary/independent/hostile scripts, integrated verifier, [scope note](claims/C6-SPACETIME-SIGNATURE/notes/hamiltonian-carre-du-champ-cutoff-stress-260830.md), and saved run artefacts.
 
 <a id="r-402"></a>
 ### R-402 -- Finite Hamiltonian carre-du-champ comparison

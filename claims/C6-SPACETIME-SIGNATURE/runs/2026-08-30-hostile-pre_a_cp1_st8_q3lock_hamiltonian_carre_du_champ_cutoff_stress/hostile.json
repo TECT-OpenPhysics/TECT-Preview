@@ -1,0 +1,154 @@
+{
+  "assertion_count": 7,
+  "boundary": "T0 claim-nonbearing finite cutoff stress. It proves no cutoff-independent or two-sided form comparison, no common core, common alpha, OS/KMS/GNS reconstruction, gap, continuum, C6, Sector-A or Pre-A closure.",
+  "checks": [
+    {
+      "actual": 4.444015421286648,
+      "expected": ">0 finite",
+      "name": "baseline ratio is finite and positive",
+      "status": "PASS"
+    },
+    {
+      "actual": 37605.76597610451,
+      "expected": ">0 finite",
+      "name": "late ratio is finite and positive",
+      "status": "PASS"
+    },
+    {
+      "actual": 8462.114194288,
+      "expected": ">10.0",
+      "name": "late profile growth is visible",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.12177879048475991,
+      "expected": ">1e-12",
+      "name": "genuine late kinetic row is nonzero",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.0,
+      "expected": "<=1e-10",
+      "name": "q-for-p mutation vanishes",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.12177879048475991,
+      "expected": ">1e-12",
+      "name": "mutation separates forms",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        6.618784924223902e-06,
+        2.1083749410203254e-05,
+        4.41044822015577e-05,
+        5.657624186267493e-06,
+        4.532729337785688e-06,
+        5.556550938083038e-06,
+        3.2383010244264327e-06
+      ],
+      "expected": ">1e-20",
+      "name": "finite profile has no zero-denominator claim",
+      "status": "PASS"
+    }
+  ],
+  "derived": {
+    "baseline": {
+      "coordinate_form": 6.618784924223902e-06,
+      "dimension": 3,
+      "genuine_kinetic_form": 2.9413982273430595e-05,
+      "mutated_q_form": 0.0,
+      "prefix_length": 3,
+      "radius": 1,
+      "ratio": 4.444015421286648
+    },
+    "beta": 2.0,
+    "dimension_maxima": [
+      {
+        "coordinate_form": 6.618784924223902e-06,
+        "dimension": 3,
+        "genuine_kinetic_form": 2.9413982273430595e-05,
+        "mutated_q_form": 0.0,
+        "prefix_length": 3,
+        "radius": 1,
+        "ratio": 4.444015421286648
+      },
+      {
+        "coordinate_form": 2.1083749410203254e-05,
+        "dimension": 4,
+        "genuine_kinetic_form": 0.0002547232472839103,
+        "mutated_q_form": 0.0,
+        "prefix_length": 3,
+        "radius": 1,
+        "ratio": 12.081496622258266
+      },
+      {
+        "coordinate_form": 4.41044822015577e-05,
+        "dimension": 5,
+        "genuine_kinetic_form": 0.0016514627222942416,
+        "mutated_q_form": 0.0,
+        "prefix_length": 3,
+        "radius": 1,
+        "ratio": 37.444328554795156
+      },
+      {
+        "coordinate_form": 5.657624186267493e-06,
+        "dimension": 6,
+        "genuine_kinetic_form": 0.0003577305543797443,
+        "mutated_q_form": 0.0,
+        "prefix_length": 3,
+        "radius": 1,
+        "ratio": 63.22981919655396
+      },
+      {
+        "coordinate_form": 4.532729337785688e-06,
+        "dimension": 8,
+        "genuine_kinetic_form": 0.0025803361055149743,
+        "mutated_q_form": 0.0,
+        "prefix_length": 2,
+        "radius": 1,
+        "ratio": 569.2676339627882
+      },
+      {
+        "coordinate_form": 5.556550938083038e-06,
+        "dimension": 10,
+        "genuine_kinetic_form": 0.01844396357366314,
+        "mutated_q_form": 0.0,
+        "prefix_length": 2,
+        "radius": 1,
+        "ratio": 3319.3187247242527
+      },
+      {
+        "coordinate_form": 3.2383010244264327e-06,
+        "dimension": 12,
+        "genuine_kinetic_form": 0.12177879048475991,
+        "mutated_q_form": 0.0,
+        "prefix_length": 2,
+        "radius": 0,
+        "ratio": 37605.76597610451
+      }
+    ],
+    "history_adjoint": 0,
+    "history_sign": 1,
+    "late": {
+      "coordinate_form": 3.2383010244264327e-06,
+      "dimension": 12,
+      "genuine_kinetic_form": 0.12177879048475991,
+      "mutated_q_form": 0.0,
+      "prefix_length": 2,
+      "radius": 0,
+      "ratio": 37605.76597610451
+    },
+    "late_upper_profile_growth_ratio": 8462.114194288,
+    "mutation": "replace_p_by_q",
+    "order": "forward",
+    "orientation": "right",
+    "volume": 2
+  },
+  "exploration_id": "EXP-001248",
+  "manifest": "strategy/pre-a-cp1-st8-q3lock-hamiltonian-carre-du-champ-cutoff-stress-manifest.json",
+  "result_id": "R-403",
+  "schema": "tect/pre-a-r403-hostile/1.0",
+  "verdict": "PASS"
+}

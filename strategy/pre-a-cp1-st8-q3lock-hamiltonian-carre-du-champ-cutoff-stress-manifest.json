@@ -1,0 +1,102 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-HAMILTONIAN-CARRE-DU-CHAMP-CUTOFF-STRESS-v0",
+  "result_id": "R-403",
+  "title": "Increasing-cutoff stress for the Hamiltonian carre-du-champ comparison",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001248",
+  "claim_bearing": false,
+  "parent_explorations": ["EXP-001247", "EXP-001246", "EXP-001245"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+  ],
+  "question": "Does the finite E_kin versus D_q comparison from R-402 remain two-sided when the oscillator cutoff is increased, or does the coordinate form become too small for a uniform upper comparison?",
+  "new_perspective": {
+    "principle": "Stress the Hamiltonian-derived comparison itself before treating its finite ratio as a candidate common-core constant.",
+    "route": [
+      "Use the volume-two actual Q3 chain and increase the one-site oscillator dimension through 12.",
+      "Retain both beta values, source signs, split orders, history signs, adjoints and collar orientations while caching only exact finite prefixes.",
+      "Record minimum and maximum E_kin/D_q ratios separately at every cutoff and compare the late-cutoff profile with the d=3 baseline.",
+      "Keep the lower and upper directions separate: a finite lower ratio does not imply a uniform upper bound, and finite growth is not a divergence theorem."
+    ],
+    "qft_bridge": "A bounded two-sided ratio would be a prerequisite for substituting D_q into the R-399 shell transfer. A growing upper ratio instead blocks that substitution while leaving a possible one-sided lower-form route open. No common-core or QFT conclusion follows either way."
+  },
+  "finite_fixture": {
+    "admissible_pairs": [
+      {"volume": 2, "cutoff_dimensions": [3, 4, 5, 6, 8, 10, 12]}
+    ],
+    "beta_values": ["1/2", "1", "2"],
+    "source_support_values": [[0]],
+    "source_amplitude": "1/3",
+    "hbar": "1",
+    "time_step": "1/18",
+    "source_sign_values": [-1, 1],
+    "history_sign_values": [-1, 1],
+    "history_adjoint_values": [0, 1],
+    "orientations": ["right", "left"],
+    "chi": "1",
+    "r": "-1",
+    "g": "3/5",
+    "c": "3/5",
+    "lambda": "1/10",
+    "numerical_tolerance": 1e-8,
+    "probability_tolerance": 1e-30,
+    "ratio_floor": 1e-20,
+    "late_growth_threshold": 10.0,
+    "hostile_energy_floor": 1e-12,
+    "hostile_zero_threshold": 1e-10,
+    "crosscheck_tolerance": 5e-5
+  },
+  "scope": {
+    "finite_cutoff_form_stress_closed": true,
+    "finite_ratio_profile_closed": true,
+    "finite_lower_upper_direction_split_closed": true,
+    "finite_orientation_history_stress_closed": true,
+    "uniform_form_comparison_closed": false,
+    "cutoff_independent_comparison_closed": false,
+    "volume_independent_comparison_closed": false,
+    "phase_uniform_comparison_closed": false,
+    "uniform_gradient_decay_closed": false,
+    "common_core_closed": false,
+    "common_alpha_closed": false,
+    "actual_split_limit_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R403.lean",
+    "theorem_markers": ["positive_ratio", "finite_cutoff_growth", "finite_scope"],
+    "command": "lake env lean Tect/R403.lean",
+    "boundary": "Lean checks only scalar positivity and finite diagnostic arithmetic; the cutoff profile, finite matrices, likelihood rows and all limits remain in the executable/open boundary."
+  },
+  "artifacts": {
+    "primary_script": "codes/foundations/pre_a_cp1_st8_q3lock_hamiltonian_carre_du_champ_cutoff_stress.py",
+    "independent_script": "codes/foundations/pre_a_cp1_st8_q3lock_hamiltonian_carre_du_champ_cutoff_stress_independent.py",
+    "hostile_script": "codes/foundations/pre_a_cp1_st8_q3lock_hamiltonian_carre_du_champ_cutoff_stress_hostile.py",
+    "integrated_verifier": "codes/foundations/pre_a_cp1_st8_q3lock_hamiltonian_carre_du_champ_cutoff_stress_verify.py",
+    "lean": "verification/lean/Tect/R403.lean"
+  },
+  "promotion_criteria": [
+    "Replace the finite ratio profile by an analytic comparison on a cutoff-independent Hamiltonian common core.",
+    "If a one-sided comparison is pursued, prove its direction and constant separately and stress it in both phases and orientations.",
+    "Only after a valid uniform comparison may the R-399 shell transfer use the coordinate form in a regulator limit."
+  ],
+  "stop_conditions": [
+    "If the upper ratio grows with cutoff, do not call the finite R-402 interval a two-sided comparison constant.",
+    "If the lower ratio collapses, do not substitute D_q for the kinetic form even one-sidedly without a new route.",
+    "Finite growth alone is not a divergence theorem; record it as a route-local stress and keep analytic uniformity open."
+  ],
+  "boundary": "T0 claim-nonbearing finite cutoff stress. It proves no cutoff-independent or two-sided form comparison, no common core, common alpha, OS/KMS/GNS reconstruction, gap, continuum, C6, Sector-A or Pre-A closure.",
+  "no_overclaim": "A growing finite ratio profile blocks automatic extrapolation of a bounded comparison constant, but it does not prove divergence of the infinite-volume Q3 form or disprove a separately proved one-sided estimate.",
+  "recorded_by": "Codex"
+}

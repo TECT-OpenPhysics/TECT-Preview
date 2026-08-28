@@ -5678,6 +5678,122 @@
       "task_id": "T-054",
       "title": "Finite Hamiltonian carre-du-champ comparison for physical-coordinate likelihood gradients",
       "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "axis": "upper versus lower direction",
+          "check": "Minimum and maximum ratios are tracked separately at every cutoff; the growing maximum is not converted into a theorem about the infinite form.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "denominator floor",
+          "check": "Rows at or below the declared 1e-20 coordinate-form floor are counted separately and excluded from ratios; tolerances are manifest inputs.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "independent reconstruction",
+          "check": "The independent lane rebuilds the Q3 matrices, Gibbs states, prefixes and forms without importing the primary implementation and agrees within 5e-5.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "momentum mutation",
+          "check": "Replacing p by the commuting coordinate q makes the mutated commutator zero while a genuine late kinetic row is positive.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "finite-cutoff extrapolation",
+          "check": "Seven bounded oscillator dimensions show growth but no divergence or common-core limit is inferred.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "QFT promotion",
+          "check": "No phase/volume/exhaustion uniformity, common core, common alpha, OS/KMS/GNS dynamics, gap, continuum, C6, Sector-A or Pre-A closure follows.",
+          "disposition": "UPHELD-OPEN"
+        }
+      ],
+      "boundary": "T0 claim-nonbearing finite increasing-cutoff stress only.  It proves no cutoff-independent or two-sided comparison, no divergence theorem, no common core, common alpha, OS/KMS/GNS reconstruction, mass gap, continuum, C6, Sector-A or Pre-A closure.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "The finite ladder gives an explicit route-local stress against treating the R-402 interval as a cutoff-independent two-sided constant.  The lower ratio remains positive on the retained nonzero rows, so a possible one-sided lower-form route is not eliminated; however, finite growth is not a divergence theorem and does not establish an infinite-volume failure.  The honest verdict is inconclusive finite stress, with no new negative registry entry and no tier change.",
+      "evidence_refs": [
+        "strategy/pre-a-cp1-st8-q3lock-hamiltonian-carre-du-champ-cutoff-stress-manifest.json#new_perspective",
+        "strategy/pre-a-cp1-st8-q3lock-hamiltonian-carre-du-champ-cutoff-stress-certificate-260830.md#Verification",
+        "codes/foundations/pre_a_cp1_st8_q3lock_hamiltonian_carre_du_champ_cutoff_stress.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_hamiltonian_carre_du_champ_cutoff_stress_independent.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_hamiltonian_carre_du_champ_cutoff_stress_hostile.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_hamiltonian_carre_du_champ_cutoff_stress_verify.py#main",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-primary-pre_a_cp1_st8_q3lock_hamiltonian_carre_du_champ_cutoff_stress/primary.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-independent-pre_a_cp1_st8_q3lock_hamiltonian_carre_du_champ_cutoff_stress/independent.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-hostile-pre_a_cp1_st8_q3lock_hamiltonian_carre_du_champ_cutoff_stress/hostile.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-integrated-pre_a_cp1_st8_q3lock_hamiltonian_carre_du_champ_cutoff_stress/integrated.json#derived",
+        "verification/lean/Tect/R403.lean#positive_ratio",
+        "claims/C6-SPACETIME-SIGNATURE/notes/hamiltonian-carre-du-champ-cutoff-stress-260830.md#R-403"
+      ],
+      "finding": "The primary lane passes 1397/1397 assertions over 7 systems, 2688 contexts and 21120 rows; the independent lane passes 1379/1379, the hostile lane 7/7, the integrated verifier 37/37 and Lean R403 compiles.  Of the rows, 15840 have nonzero D_q and their E_kin/D_q ratios range from 1.0461038216925114 to 109929.13074605557.  The per-cutoff maximum grows from 4.456994387884469 at d=3 to 109929.13074605557 at d=12, a factor 24664.408607934973.  The selected hostile context also grows from 4.44402... to 37605.8... while the p-to-q mutation is zero and the genuine late kinetic form is positive.",
+      "formal_integration": {
+        "events": [
+          "20260830-increasing-cutoff-hamiltonian-carre-du-champ-st"
+        ],
+        "lean": "R403 PASS",
+        "negatives": [],
+        "no_changelog_event": false,
+        "no_new_negative": true,
+        "no_new_result": false,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "results": [
+          "R-403"
+        ]
+      },
+      "formal_refs": {
+        "events": [
+          "20260830-increasing-cutoff-hamiltonian-carre-du-champ-st"
+        ],
+        "negatives": [],
+        "results": [
+          "R-403"
+        ]
+      },
+      "gate_ids": [
+        "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+        "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+        "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+      ],
+      "id": "EXP-001248",
+      "method": [
+        "Use the volume-two actual Q3 chain and increase the one-site oscillator dimension through 12.",
+        "Retain beta in {1/2,1,2}, both source signs, both history signs, both split orders, every prefix, both history adjoints and both collar orientations while caching only exact finite prefixes.",
+        "Compute the physical-coordinate form D_q and the kinetic carré-du-champ E_kin on every declared conditional likelihood row, excluding only rows at or below the manifest ratio floor.",
+        "Record minimum and maximum ratios at each cutoff and compare the late profile with the d=3 baseline, keeping lower and upper directions separate.",
+        "Run a non-importing independent reconstruction, a momentum-mutation hostile lane and Lean scalar cross-check; integrate all artifacts with the release verifier."
+      ],
+      "next_action": "Prove or refute an analytic direction-specific E_kin versus D_q estimate on a cutoff-independent Hamiltonian common core, with constants uniform in source, phase, volume and exhaustion shape; repeat the phase and exhaustion stress before any R-399 shell-transfer promotion.",
+      "no_overclaim": "The growing finite upper profile blocks automatic extrapolation of the R-402 interval but does not prove divergence of the infinite-volume ratio or disprove a separately proved one-sided estimate.",
+      "provenance": "contemporaneous",
+      "question": "Does the finite E_kin versus D_q comparison from R-402 remain two-sided when the oscillator cutoff is increased, or does the coordinate form become too small for a uniform upper comparison?",
+      "recorded_at": "2026-08-30T17:30:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001247",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001246",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001245",
+          "relation": "alternative_to"
+        }
+      ],
+      "reviewed_on": "2026-08-29",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Increasing-cutoff stress for the Hamiltonian carre-du-champ comparison",
+      "verdict": "inconclusive"
     }
   ],
   "kind": "proof_explorations",
