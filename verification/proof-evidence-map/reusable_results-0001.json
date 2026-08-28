@@ -2,6 +2,37 @@
   "data": [
     {
       "accepted_event_ids": [
+        "20260830-harmonic-schur-capacity-decomposition-2026-08-3"
+      ],
+      "anchor": "r-406",
+      "claim_ref_basis": {
+        "C6-SPACETIME-SIGNATURE": "proof_anchor_exact"
+      },
+      "claim_refs": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "co_recorded_negative_tags": [],
+      "detail": {
+        "boundary": "R-406 proves no cutoff-, volume-, source- or exhaustion-uniform bound, phase-selection theorem, common core, common alpha, Hamiltonian-to-OS/KMS/GNS identification, broken-sector GNS gap, continuum, C6, Sector-A or Pre-A closure. No tier change or negative result is issued.",
+        "proven_in": "[R-406 certificate](strategy/pre-a-cp1-st8-q3lock-harmonic-schur-capacity-certificate-260830.md), [Lean entrypoint](verification/lean/Tect/R406.lean), primary/independent/hostile scripts, integrated verifier, [scope note](claims/C6-SPACETIME-SIGNATURE/notes/harmonic-schur-capacity-260830.md), and saved run artefacts.",
+        "result_id": "R-406 is a T0, claim-nonbearing finite variational checkpoint under EXP-001251. It follows R-405 and repairs the tempting but invalid use of a block-constant Ritz eigenvalue as a lower bound for the full intrinsic momentum graph. For each conditional law `pi`, let `L` be the symmetric conductance Laplacian and set ``` A = diag(pi)^(-1/2) L diag(pi)^(-1/2). ``` The weighted block-constant subspace `U` contains the lower, neutral (when present), and upper q-coordinate sectors. With `V` its Euclidean orthogonal complement, fixed coarse coordinates have the harmonic minimizer ``` w_h = -A_VV^(-1) A_VU z, S = A_UU - A_UV A_VV^(-1) A_VU. ``` The coarse gap is the generalized first positive eigenvalue of `S` using the norm of the harmonic extension; the residual gap is the least eigenvalue of `A_VV`. Energy orthogonality is checked directly. Since the harmonic and residual vectors are not assumed variance-orthogonal, the safe finite bound is `(1/2) min(coarse gap, residual gap)` via the triangle inequality.",
+        "verification": "The finite grid contains volume-two dimensions `4,5,6,8,10,12` and volume-three dimensions `4,5`, beta in `{1/2,1,2,4,8}`, both collar orientations, every prefix conditional row and 80 profiles. The primary lane passes `4267/4267` over `1030` rows; the independent lane passes `2114/2114`, the hostile lane `6/6`, the integrated verifier `38/38`, and Lean R406 compiles. The full intrinsic gap range is `[0.6310329497027756,6.229495058532403]`; the harmonic Schur coarse range is `[0.634590321876555,18.727067154255124]`; the block-mean-zero residual range is `[2.0000155411351734,30.07649788337455]`; and the corrected finite lower envelope is `[0.3172951609382775,3.232260013170645]`. The naive block-constant Ritz gap ranges from `0.859366031221583` to `35.521614497313294` and exceeds the full gap on all `1030` rows. The hostile `(V=2,d=12,beta=8)` representative has full gap `3.38789`, corrected envelope `1.77408`, and a naive false-lower-bound margin `1.09327`. Deleting all inter-block edges exposes two zero modes, while a diagonal-q mutation has zero kinetic edges. This finite calculation identifies the correct variational interface for a phase-conditioned proof: control the Schur coarse capacity and the residual form separately. It does not establish a uniform constant."
+      },
+      "detail_title": "Harmonic-extension Schur capacity decomposition",
+      "family_refs": [],
+      "id": "R-406",
+      "normalized_detail": {
+        "boundary": "R-406 proves no cutoff-, volume-, source- or exhaustion-uniform bound, phase-selection theorem, common core, common alpha, Hamiltonian-to-OS/KMS/GNS identification, broken-sector GNS gap, continuum, C6, Sector-A or Pre-A closure. No tier change or negative result is issued.",
+        "proof_anchor": "[R-406 certificate](strategy/pre-a-cp1-st8-q3lock-harmonic-schur-capacity-certificate-260830.md), [Lean entrypoint](verification/lean/Tect/R406.lean), primary/independent/hostile scripts, integrated verifier, [scope note](claims/C6-SPACETIME-SIGNATURE/notes/harmonic-schur-capacity-260830.md), and saved run artefacts.",
+        "publication_target": "",
+        "reuse": "",
+        "statement": ""
+      },
+      "summary": "R-406 v1.0 is a T0 claim-nonbearing finite variational checkpoint under EXP-001251. It replaces the unsafe block-constant Ritz shortcut by a harmonic-extension Schur operator and a block-mean-zero residual form over 8 systems, 80 profiles and 1030 rows; primary 4267/4267, independent 2114/2114, hostile 6/6, integrated 38/38 and Lean R406 pass. The corrected factor-two envelope is positive on the finite grid, while all common-core, phase-selection and QFT gates remain open",
+      "title": "Harmonic-extension Schur capacity decomposition"
+    },
+    {
+      "accepted_event_ids": [
         "20260830-phase-conditioned-intrinsic-graph-split-2026-08"
       ],
       "anchor": "r-405",
@@ -3533,43 +3564,6 @@
       },
       "summary": "Scoped T4 analytic/exact/conditional/executed advance. The actual finite-chart action force is `g_comp=-g_T/2=g_CN-g_V/2`, so future variance is not charged again; predictable projection gives one self-adjoint Hessian whose legal reverse is already its adjoint. After exhaustive R-125 recombination, the actual common trace feature, raw current, and centered residual form the canonical signature `Z=(U,J,R)`, `S=diag(+,-,+)`, with `E<Z,SZ>=Theta-||Phi||^2=V-Forest_ad` in the complete aggregate. A conditional two-sided factorisation gives the exact signed Gram `[A+*SA-+A-*SA+]/2`; alternatively, global Doob conjugation spends source norm once while retaining cross-reveal blocks. The exact source-null quotient and low-kernel tests yield `mu_src=e-Lambda_C^2-sigma-kappa0-(a0+tau_C)^2/[4(f-sigma)]`. Positive-analysis collar shift gives diagnostic first collars `C=8` and `C=10`, but moves coherent three- and five-layer finite bands. Signed-correlation fixtures prove magnitude data cannot decide positivity. No production factorisation, uniform Loewner bound, positive graph gap, matching/anchor data, A13 gate, Nelson theorem, or Sector-A closure is proved",
       "title": "Projected force, global Doob signed Gram, adaptive collar, and quotient boundary"
-    },
-    {
-      "accepted_event_ids": [
-        "20260731-a13-r-140-predictable-triangular-mixed-gram-and"
-      ],
-      "anchor": "r-140",
-      "claim_ref_basis": {
-        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION": "proof_anchor_exact"
-      },
-      "claim_refs": [
-        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
-      ],
-      "co_recorded_negative_tags": [],
-      "detail": {
-        "absolute_envelope_audit_and_repair": "Exhaustive R-125 output coanalysis and R-067 stationary injection show that an absolute terminal Sobolev trace envelope grows at least linearly in cutoff, and a diagonal fixture grows like `2^(4J/3)` at regularity `2/3`. The route discards the stationary signed energy--injection and trace--variance--forest cancellation. Subtracting the common zero-control endpoint before signature polarization gives the exact repair `D_C<=2 sqrt(A_st A_sec)+A_ctl`, but the weighted stationary and secant production norms remain unproved. The failure is recorded as an exploration under existing negative authority rather than a duplicate negative result.",
-        "exact_triangular_sum_and_quantitative_boundary": "For the normalized block envelope with source decay `beta`, output decay `s`, reveal weight `gamma`, and collar `C`, the scalar Hilbert--Schmidt sum is an exact three- region geometric series. At `beta=7/5`, `s=2/3`, `gamma=7/12`, its strict margins are `7/60` and `1/12`, with squared majorants `H_5=56.2981540291704...` and `H_6=24.8061980695711...`. Multiplication by the registered squared-energy coefficient `3/(40P)` gives source-Hessian debts `1.0555903880...` and `0.4651162138...`; even the latter exceeds the conditional zero-low/tail headroom `0.1004343434...`. Thus exponent summability is available but the naive positive current-only constant is too large. A smaller signed owner-complete mixed Gram is indispensable.",
-        "predictable_triangular_one_use_theorem": "For future predictable source blocks `h_k`, collect `x_r=(d_r h_k)_(k>r)`. If the complete R-139 response factorizes before squaring as `d_r(J^N-J^prefix)_m=sum_(k>r) T_(r,m,k)d_r h_k` and the weighted triangular operator from `x_r` to outputs `m>=r+C` has essential norm at most `Lambda_C`, then its total weighted square is at most `Lambda_C^2 sum_k E||h_k-P_l h_k||^2`. Martingale orthogonality is used once at each terminal source block. No insertion reanchoring and no repeated source payment occurs. More generally, the same conclusion holds for an owner-complete signed quadratic trace-excess form `Q_r^C<=Lambda_C^2 I`.",
-        "result_id": "`A13-CLASSII-PREDICTABLE-TRIANGULAR-MIXED-GRAM-SOURCE-GRAPH-FESHBACH-BOUNDARY`.",
-        "source_metric_graph_feshbach_theorem": "On the production graph `u -> (u,Vu,Lambda u)`, completing the semidefinite low square gives the exact two-channel form minus its reduced-solution square, plus the low mismatch square, minus an explicit kernel cross. The kernel term vanishes only under graph-Douglas compatibility. Optimizing a tail `||T||<=tau` gives exactly `tau||u||||Vu||`. With `D>=dI`, `E>=eI`, `F>=fI`, `||K||<=k`, `||A0||<=a0`, and `sigma=k^2/d`, the sharp norm-data source gap is `e-Lambda_C^2-sigma-(a0+tau)^2/[4(f-sigma)]`. Only the source diagonal is shifted; an aligned scalar graph and rank-one tail attain the criterion. This is Hessian slack, and radial Taylor contributes only its one-half to the action.",
-        "tier_and_boundary": "T4 remains T4. No cutoff/chart/refinement-uniform production mixed-Gram envelope, production `Lambda_C`, low compatibility, positive graph margin, complete matching or absolute anchor, A13 gate, `OVERLAP_src`, Nelson theorem, removal, interacting measure, or Sector-A closure is proved.",
-        "where_proved": "`A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION`; the R-140 note, primary and non-importing independent executables, integrated verifier, manifest and JSON artefacts; and `EXP-000559--EXP-000567`.",
-        "whole_product_and_stopping_firewalls": "In the R-102 identity, the two predictable paraproducts can enter the triangular theorem, but `m(d_rH,d_rc)` and the product-covariance difference must stay with the primitive trace, future variance, forest, and mean/low endpoint in one signed form. Paying this residual separately duplicates an owner. A bounded common `F_(r-1)`-predictable multiplier commutes exactly with the R-139 endpoint telescope, including stopped indicators, but stopping creates no Carleson or BMO payment and is therefore parked."
-      },
-      "detail_title": "Predictable triangular mixed-Gram one-use theorem and source-graph Feshbach boundary",
-      "family_refs": [
-        "A13"
-      ],
-      "id": "R-140",
-      "normalized_detail": {
-        "boundary": "",
-        "proof_anchor": "`A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION`; the R-140 note, primary and non-importing independent executables, integrated verifier, manifest and JSON artefacts; and `EXP-000559--EXP-000567`.",
-        "publication_target": "",
-        "reuse": "",
-        "statement": ""
-      },
-      "summary": "Scoped T4 analytic/exact/executed advance and quantitative boundary. An owner-complete predictable triangular response with norm `Lambda_C` is paid by the Cameron--Martin source exactly once; the registered exponents `beta=7/5`, `s=2/3`, `gamma=7/12` give strict margins `7/60` and `1/12` and an exact Hilbert--Schmidt scalar sum. However the naive positive current-only diagnostic gives source-Hessian debts `1.05559...` at `C=5` and `0.465116...` at `C=6`, both above the conditional zero-low/tail headroom `0.100434...`, so signed owner-complete mixed-Gram cancellation is still necessary. Predictable stopping preserves the endpoint telescope but supplies no bad-set packing. The exact source-metric graph--Feshbach identity retains the semidefinite low-kernel cross and yields the sharp norm-data gap `e-Lambda_C^2-sigma-(a0+tau)^2/[4(f-sigma)]`. An absolute terminal Sobolev envelope is UV-infeasible at zero control; stationary-subtracted signature polarization is the viable repair. No production mixed-Gram envelope, positive graph gap, matching/anchor data, A13 gate, Nelson theorem, or Sector-A closure is proved",
-      "title": "Predictable triangular mixed-Gram one-use theorem and source-graph Feshbach boundary"
     }
   ],
   "kind": "reusable_results",

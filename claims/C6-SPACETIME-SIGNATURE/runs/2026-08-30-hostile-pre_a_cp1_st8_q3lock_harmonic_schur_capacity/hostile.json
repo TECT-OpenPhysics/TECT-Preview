@@ -1,0 +1,97 @@
+{
+  "assertion_count": 6,
+  "boundary": "T0 claim-nonbearing finite harmonic-extension/Schur-complement checkpoint only. It proves no uniform sector gap, phase selection, common core, common alpha, OS/KMS/GNS reconstruction, mass gap, continuum, C6, Sector-A or Pre-A closure.",
+  "checks": [
+    {
+      "actual": [
+        1.4653616136822886e-15,
+        1.4653616136822876e-15
+      ],
+      "expected": "raw>=-1e-8 and min>1e-30",
+      "name": "reference mass",
+      "status": "PASS"
+    },
+    {
+      "actual": 3.3878922933423126,
+      "expected": ">1e-10",
+      "name": "genuine graph connected",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        1.774083718245296,
+        3.3878922933423126
+      ],
+      "expected": "0<corrected gap<=full gap",
+      "name": "harmonic Schur lower survives",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.093266331979188,
+      "expected": ">1e-9",
+      "name": "naive Ritz is not lower bound",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        2,
+        [
+          1.4777458770542928e-14,
+          7.965795905772743e-11,
+          4.958061637628646,
+          4.958061637656107,
+          8.3746523809262,
+          8.374652381025612,
+          26.879350273500947,
+          26.879350273501544,
+          1533.2402541835681,
+          1533.240254183599,
+          1381999.7835017622,
+          1381999.7835018607
+        ]
+      ],
+      "expected": ">=2 zero modes",
+      "name": "cross-block deletion exposes zeros",
+      "status": "PASS"
+    },
+    {
+      "actual": 0,
+      "expected": 0,
+      "name": "q-for-p mutation has no edges",
+      "status": "PASS"
+    }
+  ],
+  "derived": {
+    "beta": 8.0,
+    "block_count": 2,
+    "coarse_schur_gap": 3.548167436490592,
+    "cross_deleted_spectrum": [
+      1.4777458770542928e-14,
+      7.965795905772743e-11,
+      4.958061637628646,
+      4.958061637656107,
+      8.3746523809262,
+      8.374652381025612,
+      26.879350273500947,
+      26.879350273501544,
+      1533.2402541835681,
+      1533.240254183599,
+      1381999.7835017622,
+      1381999.7835018607
+    ],
+    "cross_deleted_zero_count": 2,
+    "decomposition_gap": 1.774083718245296,
+    "dimension": 12,
+    "full_gap": 3.3878922933423126,
+    "naive_block_gap": 4.4811586253256905,
+    "naive_false_lower_bound_margin": 1.093266331979188,
+    "q_mutation_edge_count": 0,
+    "residual_gap": 6.423621828857722,
+    "volume": 2
+  },
+  "exploration_id": "EXP-001251",
+  "manifest": "strategy/pre-a-cp1-st8-q3lock-harmonic-schur-capacity-manifest.json",
+  "result_id": "R-406",
+  "schema": "tect/pre-a-r406-hostile/1.0",
+  "verdict": "PASS"
+}

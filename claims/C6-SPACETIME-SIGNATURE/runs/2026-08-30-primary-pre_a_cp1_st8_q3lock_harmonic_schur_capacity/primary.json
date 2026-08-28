@@ -1,0 +1,3012 @@
+{
+  "assertion_count": 4267,
+  "boundary": "T0 claim-nonbearing finite harmonic-extension/Schur-complement checkpoint only. It proves no uniform sector gap, phase selection, common core, common alpha, OS/KMS/GNS reconstruction, mass gap, continuum, C6, Sector-A or Pre-A closure.",
+  "checks": [
+    {
+      "actual": "['R-406', 'EXP-001251', False]",
+      "expected": "R-406/EXP-001251/false",
+      "group": "provenance",
+      "name": "identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "finite Schur split only",
+      "expected": "all promoted flags false",
+      "group": "scope",
+      "name": "scope firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": "[(2, 4), (2, 5), (2, 6), (2, 8), (2, 10), (2, 12), (3, 4), (3, 5)]",
+      "expected": "8 distinct systems",
+      "group": "fixture",
+      "name": "system grid",
+      "status": "PASS"
+    },
+    {
+      "actual": "['right', 'left']",
+      "expected": "right/left",
+      "group": "fixture",
+      "name": "orientation grid",
+      "status": "PASS"
+    },
+    {
+      "actual": "(16, 16)",
+      "expected": "(16, 16)",
+      "group": "coordinates",
+      "name": "V=2 d=4 basis",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2, 2]",
+      "expected": "complete lower/neutral/upper partition",
+      "group": "partition",
+      "name": "V=2 d=4 blocks",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.012636231061063487, 0.012636231061063498]",
+      "expected": ">1e-30 and nonnegative",
+      "group": "Gibbs",
+      "name": "V=2 d=4 beta=0.5 reference",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.0022812277674598, 1.060475463500576, 2.0000155411351734, 0.530237731750288]",
+      "expected": ">1e-10",
+      "group": "Schur graph",
+      "name": "V=2 d=4 beta=0.5 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[8.326672684688674e-17, 0.0, 0.3410734973829714]",
+      "expected": "energy/envelope residuals <= 2e-08",
+      "group": "harmonic decomposition",
+      "name": "V=2 d=4 beta=0.5 right energy split",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.530237731750288, 1.0022812277674598]",
+      "expected": "<= full gap + 2e-08",
+      "group": "variational lower bound",
+      "name": "V=2 d=4 beta=0.5 right Schur lower",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.4249257664289203, 1.0022812277674598]",
+      "expected": "Ritz restriction >= full gap - 2e-08",
+      "group": "shortcut audit",
+      "name": "V=2 d=4 beta=0.5 right Ritz warning",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.468069233603886, 1.6818478711259357, 2.229798330141187, 0.8409239355629679]",
+      "expected": ">1e-10",
+      "group": "Schur graph",
+      "name": "V=2 d=4 beta=0.5 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.220446049250313e-16, 0.0, 0.29944301430670595]",
+      "expected": "energy/envelope residuals <= 2e-08",
+      "group": "harmonic decomposition",
+      "name": "V=2 d=4 beta=0.5 right energy split",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.8409239355629679, 1.468069233603886]",
+      "expected": "<= full gap + 2e-08",
+      "group": "variational lower bound",
+      "name": "V=2 d=4 beta=0.5 right Schur lower",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.036122428925111, 1.468069233603886]",
+      "expected": "Ritz restriction >= full gap - 2e-08",
+      "group": "shortcut audit",
+      "name": "V=2 d=4 beta=0.5 right Ritz warning",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.120554338225105, 1.1978910652491153, 2.0458795011630295, 0.5989455326245576]",
+      "expected": ">1e-10",
+      "group": "Schur graph",
+      "name": "V=2 d=4 beta=0.5 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.498001805406602e-16, 0.0, 0.32881197253793515]",
+      "expected": "energy/envelope residuals <= 2e-08",
+      "group": "harmonic decomposition",
+      "name": "V=2 d=4 beta=0.5 right energy split",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.5989455326245576, 1.120554338225105]",
+      "expected": "<= full gap + 2e-08",
+      "group": "variational lower bound",
+      "name": "V=2 d=4 beta=0.5 right Schur lower",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.5411296392233806, 1.120554338225105]",
+      "expected": "Ritz restriction >= full gap - 2e-08",
+      "group": "shortcut audit",
+      "name": "V=2 d=4 beta=0.5 right Ritz warning",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.1205543382251053, 1.1978910652491161, 2.0458795011630295, 0.5989455326245581]",
+      "expected": ">1e-10",
+      "group": "Schur graph",
+      "name": "V=2 d=4 beta=0.5 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[3.608224830031759e-16, 0.0, 0.34930088042055385]",
+      "expected": "energy/envelope residuals <= 2e-08",
+      "group": "harmonic decomposition",
+      "name": "V=2 d=4 beta=0.5 right energy split",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.5989455326245581, 1.1205543382251053]",
+      "expected": "<= full gap + 2e-08",
+      "group": "variational lower bound",
+      "name": "V=2 d=4 beta=0.5 right Schur lower",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.5411296392233806, 1.1205543382251053]",
+      "expected": "Ritz restriction >= full gap - 2e-08",
+      "group": "shortcut audit",
+      "name": "V=2 d=4 beta=0.5 right Ritz warning",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.468069233603885, 1.6818478711259344, 2.2297983301411874, 0.8409239355629672]",
+      "expected": ">1e-10",
+      "group": "Schur graph",
+      "name": "V=2 d=4 beta=0.5 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.942890293094024e-16, 0.0, 0.3389181675592106]",
+      "expected": "energy/envelope residuals <= 2e-08",
+      "group": "harmonic decomposition",
+      "name": "V=2 d=4 beta=0.5 right energy split",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.8409239355629672, 1.468069233603885]",
+      "expected": "<= full gap + 2e-08",
+      "group": "variational lower bound",
+      "name": "V=2 d=4 beta=0.5 right Schur lower",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.036122428925111, 1.468069233603885]",
+      "expected": "Ritz restriction >= full gap - 2e-08",
+      "group": "shortcut audit",
+      "name": "V=2 d=4 beta=0.5 right Ritz warning",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'volume': 2, 'dimension': 4, 'beta': 0.5, 'orientation': 'right', 'row_count': 5, 'minimum_full_gap': 1.0022812277674598, 'minimum_coarse_gap': 1.060475463500576, 'minimum_residual_gap': 2.0000155411351734, 'minimum_decomposition_gap': 0.530237731750288, 'minimum_naive_gap': 1.4249257664289203, 'maximum_energy_residual': 3.608224830031759e-16, 'maximum_variance_envelope_deficit': 0.0}",
+      "expected": "positive Schur profile",
+      "group": "coverage",
+      "name": "V=2 d=4 beta=0.5 right coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.0022812277674598, 1.0604754635005758, 2.0000155411351743, 0.5302377317502879]",
+      "expected": ">1e-10",
+      "group": "Schur graph",
+      "name": "V=2 d=4 beta=0.5 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[5.551115123125783e-16, 0.0, 0.34107349738297144]",
+      "expected": "energy/envelope residuals <= 2e-08",
+      "group": "harmonic decomposition",
+      "name": "V=2 d=4 beta=0.5 left energy split",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.5302377317502879, 1.0022812277674598]",
+      "expected": "<= full gap + 2e-08",
+      "group": "variational lower bound",
+      "name": "V=2 d=4 beta=0.5 left Schur lower",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.4249257664289203, 1.0022812277674598]",
+      "expected": "Ritz restriction >= full gap - 2e-08",
+      "group": "shortcut audit",
+      "name": "V=2 d=4 beta=0.5 left Ritz warning",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.468069233603886, 1.681847871125937, 2.2297983301411866, 0.8409239355629685]",
+      "expected": ">1e-10",
+      "group": "Schur graph",
+      "name": "V=2 d=4 beta=0.5 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[5.412337245047638e-16, 0.0, 0.2994430143067057]",
+      "expected": "energy/envelope residuals <= 2e-08",
+      "group": "harmonic decomposition",
+      "name": "V=2 d=4 beta=0.5 left energy split",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.8409239355629685, 1.468069233603886]",
+      "expected": "<= full gap + 2e-08",
+      "group": "variational lower bound",
+      "name": "V=2 d=4 beta=0.5 left Schur lower",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.036122428925112, 1.468069233603886]",
+      "expected": "Ritz restriction >= full gap - 2e-08",
+      "group": "shortcut audit",
+      "name": "V=2 d=4 beta=0.5 left Ritz warning",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.1205543382251049, 1.1978910652491161, 2.045879501163029, 0.5989455326245581]",
+      "expected": ">1e-10",
+      "group": "Schur graph",
+      "name": "V=2 d=4 beta=0.5 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.942890293094024e-16, 0.0, 0.3288119725379351]",
+      "expected": "energy/envelope residuals <= 2e-08",
+      "group": "harmonic decomposition",
+      "name": "V=2 d=4 beta=0.5 left energy split",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.5989455326245581, 1.1205543382251049]",
+      "expected": "<= full gap + 2e-08",
+      "group": "variational lower bound",
+      "name": "V=2 d=4 beta=0.5 left Schur lower",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.5411296392233806, 1.1205543382251049]",
+      "expected": "Ritz restriction >= full gap - 2e-08",
+      "group": "shortcut audit",
+      "name": "V=2 d=4 beta=0.5 left Ritz warning",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.120554338225105, 1.1978910652491161, 2.0458795011630295, 0.5989455326245581]",
+      "expected": ">1e-10",
+      "group": "Schur graph",
+      "name": "V=2 d=4 beta=0.5 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.220446049250313e-16, 0.0, 0.3493008804205536]",
+      "expected": "energy/envelope residuals <= 2e-08",
+      "group": "harmonic decomposition",
+      "name": "V=2 d=4 beta=0.5 left energy split",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.5989455326245581, 1.120554338225105]",
+      "expected": "<= full gap + 2e-08",
+      "group": "variational lower bound",
+      "name": "V=2 d=4 beta=0.5 left Schur lower",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.5411296392233802, 1.120554338225105]",
+      "expected": "Ritz restriction >= full gap - 2e-08",
+      "group": "shortcut audit",
+      "name": "V=2 d=4 beta=0.5 left Ritz warning",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.468069233603885, 1.6818478711259344, 2.2297983301411874, 0.8409239355629672]",
+      "expected": ">1e-10",
+      "group": "Schur graph",
+      "name": "V=2 d=4 beta=0.5 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.1102230246251565e-16, 0.0, 0.3389181675592107]",
+      "expected": "energy/envelope residuals <= 2e-08",
+      "group": "harmonic decomposition",
+      "name": "V=2 d=4 beta=0.5 left energy split",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.8409239355629672, 1.468069233603885]",
+      "expected": "<= full gap + 2e-08",
+      "group": "variational lower bound",
+      "name": "V=2 d=4 beta=0.5 left Schur lower",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.036122428925111, 1.468069233603885]",
+      "expected": "Ritz restriction >= full gap - 2e-08",
+      "group": "shortcut audit",
+      "name": "V=2 d=4 beta=0.5 left Ritz warning",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'volume': 2, 'dimension': 4, 'beta': 0.5, 'orientation': 'left', 'row_count': 5, 'minimum_full_gap': 1.0022812277674598, 'minimum_coarse_gap': 1.0604754635005758, 'minimum_residual_gap': 2.0000155411351743, 'minimum_decomposition_gap': 0.5302377317502879, 'minimum_naive_gap': 1.4249257664289203, 'maximum_energy_residual': 5.551115123125783e-16, 'maximum_variance_envelope_deficit': 0.0}",
+      "expected": "positive Schur profile",
+      "group": "coverage",
+      "name": "V=2 d=4 beta=0.5 left coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.004286128886870806, 0.00428612888687081]",
+      "expected": ">1e-30 and nonnegative",
+      "group": "Gibbs",
+      "name": "V=2 d=4 beta=1.0 reference",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.912516639605107, 0.9554379373189177, 2.027947389532725, 0.47771896865945884]",
+      "expected": ">1e-10",
+      "group": "Schur graph",
+      "name": "V=2 d=4 beta=1.0 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[3.469446951953614e-16, 0.0, 0.34014192297340934]",
+      "expected": "energy/envelope residuals <= 2e-08",
+      "group": "harmonic decomposition",
+      "name": "V=2 d=4 beta=1.0 right energy split",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.47771896865945884, 0.912516639605107]",
+      "expected": "<= full gap + 2e-08",
+      "group": "variational lower bound",
+      "name": "V=2 d=4 beta=1.0 right Schur lower",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.32679872984232, 0.912516639605107]",
+      "expected": "Ritz restriction >= full gap - 2e-08",
+      "group": "shortcut audit",
+      "name": "V=2 d=4 beta=1.0 right Ritz warning",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.9598969409044116, 2.637227901988795, 2.4803056474138576, 1.2401528237069288]",
+      "expected": ">1e-10",
+      "group": "Schur graph",
+      "name": "V=2 d=4 beta=1.0 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.0130785099704553e-15, 0.0, 0.291069563500283]",
+      "expected": "energy/envelope residuals <= 2e-08",
+      "group": "harmonic decomposition",
+      "name": "V=2 d=4 beta=1.0 right energy split",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.2401528237069288, 1.9598969409044116]",
+      "expected": "<= full gap + 2e-08",
+      "group": "variational lower bound",
+      "name": "V=2 d=4 beta=1.0 right Schur lower",
+      "status": "PASS"
+    },
+    {
+      "actual": "[3.1906117825075317, 1.9598969409044116]",
+      "expected": "Ritz restriction >= full gap - 2e-08",
+      "group": "shortcut audit",
+      "name": "V=2 d=4 beta=1.0 right Ritz warning",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.2467548616073785, 1.3555012664948047, 2.0981873647776523, 0.6777506332474024]",
+      "expected": ">1e-10",
+      "group": "Schur graph",
+      "name": "V=2 d=4 beta=1.0 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[3.3306690738754696e-16, 0.0, 0.32705436208994165]",
+      "expected": "energy/envelope residuals <= 2e-08",
+      "group": "harmonic decomposition",
+      "name": "V=2 d=4 beta=1.0 right energy split",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.6777506332474024, 1.2467548616073785]",
+      "expected": "<= full gap + 2e-08",
+      "group": "variational lower bound",
+      "name": "V=2 d=4 beta=1.0 right Schur lower",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.6747244500510756, 1.2467548616073785]",
+      "expected": "Ritz restriction >= full gap - 2e-08",
+      "group": "shortcut audit",
+      "name": "V=2 d=4 beta=1.0 right Ritz warning",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.246754861607379, 1.3555012664948045, 2.098187364777652, 0.6777506332474023]",
+      "expected": ">1e-10",
+      "group": "Schur graph",
+      "name": "V=2 d=4 beta=1.0 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.942890293094024e-16, 0.0, 0.3452989050982168]",
+      "expected": "energy/envelope residuals <= 2e-08",
+      "group": "harmonic decomposition",
+      "name": "V=2 d=4 beta=1.0 right energy split",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.6777506332474023, 1.246754861607379]",
+      "expected": "<= full gap + 2e-08",
+      "group": "variational lower bound",
+      "name": "V=2 d=4 beta=1.0 right Schur lower",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.6747244500510758, 1.246754861607379]",
+      "expected": "Ritz restriction >= full gap - 2e-08",
+      "group": "shortcut audit",
+      "name": "V=2 d=4 beta=1.0 right Ritz warning",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.9598969409044116, 2.6372279019887914, 2.4803056474138585, 1.2401528237069293]",
+      "expected": ">1e-10",
+      "group": "Schur graph",
+      "name": "V=2 d=4 beta=1.0 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[4.440892098500626e-16, 0.0, 0.29571367277444854]",
+      "expected": "energy/envelope residuals <= 2e-08",
+      "group": "harmonic decomposition",
+      "name": "V=2 d=4 beta=1.0 right energy split",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.2401528237069293, 1.9598969409044116]",
+      "expected": "<= full gap + 2e-08",
+      "group": "variational lower bound",
+      "name": "V=2 d=4 beta=1.0 right Schur lower",
+      "status": "PASS"
+    },
+    {
+      "actual": "[3.1906117825075304, 1.9598969409044116]",
+      "expected": "Ritz restriction >= full gap - 2e-08",
+      "group": "shortcut audit",
+      "name": "V=2 d=4 beta=1.0 right Ritz warning",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'volume': 2, 'dimension': 4, 'beta': 1.0, 'orientation': 'right', 'row_count': 5, 'minimum_full_gap': 0.912516639605107, 'minimum_coarse_gap': 0.9554379373189177, 'minimum_residual_gap': 2.027947389532725, 'minimum_decomposition_gap': 0.47771896865945884, 'minimum_naive_gap': 1.32679872984232, 'maximum_energy_residual': 1.0130785099704553e-15, 'maximum_variance_envelope_deficit': 0.0}",
+      "expected": "positive Schur profile",
+      "group": "coverage",
+      "name": "V=2 d=4 beta=1.0 right coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.9125166396051074, 0.9554379373189181, 2.027947389532726, 0.47771896865945906]",
+      "expected": ">1e-10",
+      "group": "Schur graph",
+      "name": "V=2 d=4 beta=1.0 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[3.0531133177191805e-16, 0.0, 0.3401419229734092]",
+      "expected": "energy/envelope residuals <= 2e-08",
+      "group": "harmonic decomposition",
+      "name": "V=2 d=4 beta=1.0 left energy split",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.47771896865945906, 0.9125166396051074]",
+      "expected": "<= full gap + 2e-08",
+      "group": "variational lower bound",
+      "name": "V=2 d=4 beta=1.0 left Schur lower",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.32679872984232, 0.9125166396051074]",
+      "expected": "Ritz restriction >= full gap - 2e-08",
+      "group": "shortcut audit",
+      "name": "V=2 d=4 beta=1.0 left Ritz warning",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.9598969409044111, 2.637227901988793, 2.4803056474138563, 1.2401528237069281]",
+      "expected": ">1e-10",
+      "group": "Schur graph",
+      "name": "V=2 d=4 beta=1.0 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.942890293094024e-16, 0.0, 0.2910695635002834]",
+      "expected": "energy/envelope residuals <= 2e-08",
+      "group": "harmonic decomposition",
+      "name": "V=2 d=4 beta=1.0 left energy split",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.2401528237069281, 1.9598969409044111]",
+      "expected": "<= full gap + 2e-08",
+      "group": "variational lower bound",
+      "name": "V=2 d=4 beta=1.0 left Schur lower",
+      "status": "PASS"
+    },
+    {
+      "actual": "[3.1906117825075317, 1.9598969409044111]",
+      "expected": "Ritz restriction >= full gap - 2e-08",
+      "group": "shortcut audit",
+      "name": "V=2 d=4 beta=1.0 left Ritz warning",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.246754861607379, 1.3555012664948054, 2.0981873647776523, 0.6777506332474027]",
+      "expected": ">1e-10",
+      "group": "Schur graph",
+      "name": "V=2 d=4 beta=1.0 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[3.885780586188048e-16, 0.0, 0.3270543620899415]",
+      "expected": "energy/envelope residuals <= 2e-08",
+      "group": "harmonic decomposition",
+      "name": "V=2 d=4 beta=1.0 left energy split",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.6777506332474027, 1.246754861607379]",
+      "expected": "<= full gap + 2e-08",
+      "group": "variational lower bound",
+      "name": "V=2 d=4 beta=1.0 left Schur lower",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.6747244500510756, 1.246754861607379]",
+      "expected": "Ritz restriction >= full gap - 2e-08",
+      "group": "shortcut audit",
+      "name": "V=2 d=4 beta=1.0 left Ritz warning",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.2467548616073785, 1.3555012664948052, 2.098187364777653, 0.6777506332474026]",
+      "expected": ">1e-10",
+      "group": "Schur graph",
+      "name": "V=2 d=4 beta=1.0 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[4.0245584642661925e-16, 0.0, 0.3452989050982166]",
+      "expected": "energy/envelope residuals <= 2e-08",
+      "group": "harmonic decomposition",
+      "name": "V=2 d=4 beta=1.0 left energy split",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.6777506332474026, 1.2467548616073785]",
+      "expected": "<= full gap + 2e-08",
+      "group": "variational lower bound",
+      "name": "V=2 d=4 beta=1.0 left Schur lower",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.674724450051076, 1.2467548616073785]",
+      "expected": "Ritz restriction >= full gap - 2e-08",
+      "group": "shortcut audit",
+      "name": "V=2 d=4 beta=1.0 left Ritz warning",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.9598969409044116, 2.637227901988792, 2.480305647413858, 1.240152823706929]",
+      "expected": ">1e-10",
+      "group": "Schur graph",
+      "name": "V=2 d=4 beta=1.0 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.498001805406602e-16, 0.0, 0.29571367277444854]",
+      "expected": "energy/envelope residuals <= 2e-08",
+      "group": "harmonic decomposition",
+      "name": "V=2 d=4 beta=1.0 left energy split",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.240152823706929, 1.9598969409044116]",
+      "expected": "<= full gap + 2e-08",
+      "group": "variational lower bound",
+      "name": "V=2 d=4 beta=1.0 left Schur lower",
+      "status": "PASS"
+    },
+    {
+      "actual": "[3.1906117825075304, 1.9598969409044116]",
+      "expected": "Ritz restriction >= full gap - 2e-08",
+      "group": "shortcut audit",
+      "name": "V=2 d=4 beta=1.0 left Ritz warning",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'volume': 2, 'dimension': 4, 'beta': 1.0, 'orientation': 'left', 'row_count': 5, 'minimum_full_gap': 0.9125166396051074, 'minimum_coarse_gap': 0.9554379373189181, 'minimum_residual_gap': 2.027947389532726, 'minimum_decomposition_gap': 0.47771896865945906, 'minimum_naive_gap': 1.32679872984232, 'maximum_energy_residual': 4.0245584642661925e-16, 'maximum_variance_envelope_deficit': 0.0}",
+      "expected": "positive Schur profile",
+      "group": "coverage",
+      "name": "V=2 d=4 beta=1.0 left coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.002949915351576989, 0.0029499153515769928]",
+      "expected": ">1e-30 and nonnegative",
+      "group": "Gibbs",
+      "name": "V=2 d=4 beta=2.0 reference",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.7872756441265598, 0.8091197710365248, 2.243717353808715, 0.4045598855182624]",
+      "expected": ">1e-10",
+      "group": "Schur graph",
+      "name": "V=2 d=4 beta=2.0 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.220446049250313e-16, 0.0, 0.3364945185037724]",
+      "expected": "energy/envelope residuals <= 2e-08",
+      "group": "harmonic decomposition",
+      "name": "V=2 d=4 beta=2.0 right energy split",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.4045598855182624, 0.7872756441265598]",
+      "expected": "<= full gap + 2e-08",
+      "group": "variational lower bound",
+      "name": "V=2 d=4 beta=2.0 right Schur lower",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.1535498384624798, 0.7872756441265598]",
+      "expected": "Ritz restriction >= full gap - 2e-08",
+      "group": "shortcut audit",
+      "name": "V=2 d=4 beta=2.0 right Ritz warning",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.83377868745935, 4.188024326648662, 3.2509546371785314, 1.6254773185892657]",
+      "expected": ">1e-10",
+      "group": "Schur graph",
+      "name": "V=2 d=4 beta=2.0 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[9.43689570931383e-16, 0.0, 0.2710671041364135]",
+      "expected": "energy/envelope residuals <= 2e-08",
+      "group": "harmonic decomposition",
+      "name": "V=2 d=4 beta=2.0 right energy split",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.6254773185892657, 2.83377868745935]",
+      "expected": "<= full gap + 2e-08",
+      "group": "variational lower bound",
+      "name": "V=2 d=4 beta=2.0 right Schur lower",
+      "status": "PASS"
+    },
+    {
+      "actual": "[4.843075555395066, 2.83377868745935]",
+      "expected": "Ritz restriction >= full gap - 2e-08",
+      "group": "shortcut audit",
+      "name": "V=2 d=4 beta=2.0 right Ritz warning",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.3303740865161333, 1.4743219562330294, 2.1060426930822165, 0.7371609781165147]",
+      "expected": ">1e-10",
+      "group": "Schur graph",
+      "name": "V=2 d=4 beta=2.0 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[5.134781488891349e-16, 0.0, 0.32979154195390264]",
+      "expected": "energy/envelope residuals <= 2e-08",
+      "group": "harmonic decomposition",
+      "name": "V=2 d=4 beta=2.0 right energy split",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.7371609781165147, 1.3303740865161333]",
+      "expected": "<= full gap + 2e-08",
+      "group": "variational lower bound",
+      "name": "V=2 d=4 beta=2.0 right Schur lower",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.7806149050863915, 1.3303740865161333]",
+      "expected": "Ritz restriction >= full gap - 2e-08",
+      "group": "shortcut audit",
+      "name": "V=2 d=4 beta=2.0 right Ritz warning",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.3303740865161338, 1.474321956233028, 2.106042693082216, 0.737160978116514]",
+      "expected": ">1e-10",
+      "group": "Schur graph",
+      "name": "V=2 d=4 beta=2.0 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[4.440892098500626e-16, 0.0, 0.34054431162550103]",
+      "expected": "energy/envelope residuals <= 2e-08",
+      "group": "harmonic decomposition",
+      "name": "V=2 d=4 beta=2.0 right energy split",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.737160978116514, 1.3303740865161338]",
+      "expected": "<= full gap + 2e-08",
+      "group": "variational lower bound",
+      "name": "V=2 d=4 beta=2.0 right Schur lower",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.780614905086392, 1.3303740865161338]",
+      "expected": "Ritz restriction >= full gap - 2e-08",
+      "group": "shortcut audit",
+      "name": "V=2 d=4 beta=2.0 right Ritz warning",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.833778687459352, 4.188024326648662, 3.250954637178534, 1.625477318589267]",
+      "expected": ">1e-10",
+      "group": "Schur graph",
+      "name": "V=2 d=4 beta=2.0 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[8.049116928532385e-16, 0.0, 0.23872625738744258]",
+      "expected": "energy/envelope residuals <= 2e-08",
+      "group": "harmonic decomposition",
+      "name": "V=2 d=4 beta=2.0 right energy split",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.625477318589267, 2.833778687459352]",
+      "expected": "<= full gap + 2e-08",
+      "group": "variational lower bound",
+      "name": "V=2 d=4 beta=2.0 right Schur lower",
+      "status": "PASS"
+    },
+    {
+      "actual": "[4.843075555395069, 2.833778687459352]",
+      "expected": "Ritz restriction >= full gap - 2e-08",
+      "group": "shortcut audit",
+      "name": "V=2 d=4 beta=2.0 right Ritz warning",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'volume': 2, 'dimension': 4, 'beta': 2.0, 'orientation': 'right', 'row_count': 5, 'minimum_full_gap': 0.7872756441265598, 'minimum_coarse_gap': 0.8091197710365248, 'minimum_residual_gap': 2.106042693082216, 'minimum_decomposition_gap': 0.4045598855182624, 'minimum_naive_gap': 1.1535498384624798, 'maximum_energy_residual': 9.43689570931383e-16, 'maximum_variance_envelope_deficit': 0.0}",
+      "expected": "positive Schur profile",
+      "group": "coverage",
+      "name": "V=2 d=4 beta=2.0 right coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.7872756441265603, 0.809119771036524, 2.2437173538087154, 0.404559885518262]",
+      "expected": ">1e-10",
+      "group": "Schur graph",
+      "name": "V=2 d=4 beta=2.0 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.220446049250313e-16, 0.0, 0.3364945185037727]",
+      "expected": "energy/envelope residuals <= 2e-08",
+      "group": "harmonic decomposition",
+      "name": "V=2 d=4 beta=2.0 left energy split",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.404559885518262, 0.7872756441265603]",
+      "expected": "<= full gap + 2e-08",
+      "group": "variational lower bound",
+      "name": "V=2 d=4 beta=2.0 left Schur lower",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.1535498384624803, 0.7872756441265603]",
+      "expected": "Ritz restriction >= full gap - 2e-08",
+      "group": "shortcut audit",
+      "name": "V=2 d=4 beta=2.0 left Ritz warning",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.8337786874593514, 4.188024326648669, 3.2509546371785314, 1.6254773185892657]",
+      "expected": ">1e-10",
+      "group": "Schur graph",
+      "name": "V=2 d=4 beta=2.0 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[3.7470027081099033e-16, 0.0, 0.27106710413641366]",
+      "expected": "energy/envelope residuals <= 2e-08",
+      "group": "harmonic decomposition",
+      "name": "V=2 d=4 beta=2.0 left energy split",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.6254773185892657, 2.8337786874593514]",
+      "expected": "<= full gap + 2e-08",
+      "group": "variational lower bound",
+      "name": "V=2 d=4 beta=2.0 left Schur lower",
+      "status": "PASS"
+    },
+    {
+      "actual": "[4.843075555395071, 2.8337786874593514]",
+      "expected": "Ritz restriction >= full gap - 2e-08",
+      "group": "shortcut audit",
+      "name": "V=2 d=4 beta=2.0 left Ritz warning",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.3303740865161333, 1.4743219562330283, 2.106042693082216, 0.7371609781165142]",
+      "expected": ">1e-10",
+      "group": "Schur graph",
+      "name": "V=2 d=4 beta=2.0 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.1102230246251565e-16, 0.0, 0.32979154195390303]",
+      "expected": "energy/envelope residuals <= 2e-08",
+      "group": "harmonic decomposition",
+      "name": "V=2 d=4 beta=2.0 left energy split",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.7371609781165142, 1.3303740865161333]",
+      "expected": "<= full gap + 2e-08",
+      "group": "variational lower bound",
+      "name": "V=2 d=4 beta=2.0 left Schur lower",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.7806149050863915, 1.3303740865161333]",
+      "expected": "Ritz restriction >= full gap - 2e-08",
+      "group": "shortcut audit",
+      "name": "V=2 d=4 beta=2.0 left Ritz warning",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.3303740865161324, 1.474321956233028, 2.106042693082216, 0.737160978116514]",
+      "expected": ">1e-10",
+      "group": "Schur graph",
+      "name": "V=2 d=4 beta=2.0 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.1102230246251565e-16, 0.0, 0.34054431162550064]",
+      "expected": "energy/envelope residuals <= 2e-08",
+      "group": "harmonic decomposition",
+      "name": "V=2 d=4 beta=2.0 left energy split",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.737160978116514, 1.3303740865161324]",
+      "expected": "<= full gap + 2e-08",
+      "group": "variational lower bound",
+      "name": "V=2 d=4 beta=2.0 left Schur lower",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.7806149050863906, 1.3303740865161324]",
+      "expected": "Ritz restriction >= full gap - 2e-08",
+      "group": "shortcut audit",
+      "name": "V=2 d=4 beta=2.0 left Ritz warning",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.8337786874593514, 4.188024326648667, 3.2509546371785345, 1.6254773185892673]",
+      "expected": ">1e-10",
+      "group": "Schur graph",
+      "name": "V=2 d=4 beta=2.0 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.1102230246251565e-16, 0.0, 0.23872625738744258]",
+      "expected": "energy/envelope residuals <= 2e-08",
+      "group": "harmonic decomposition",
+      "name": "V=2 d=4 beta=2.0 left energy split",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.6254773185892673, 2.8337786874593514]",
+      "expected": "<= full gap + 2e-08",
+      "group": "variational lower bound",
+      "name": "V=2 d=4 beta=2.0 left Schur lower",
+      "status": "PASS"
+    },
+    {
+      "actual": "[4.843075555395069, 2.8337786874593514]",
+      "expected": "Ritz restriction >= full gap - 2e-08",
+      "group": "shortcut audit",
+      "name": "V=2 d=4 beta=2.0 left Ritz warning",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'volume': 2, 'dimension': 4, 'beta': 2.0, 'orientation': 'left', 'row_count': 5, 'minimum_full_gap': 0.7872756441265603, 'minimum_coarse_gap': 0.809119771036524, 'minimum_residual_gap': 2.106042693082216, 'minimum_decomposition_gap': 0.404559885518262, 'minimum_naive_gap': 1.1535498384624803, 'maximum_energy_residual': 3.7470027081099033e-16, 'maximum_variance_envelope_deficit': 0.0}",
+      "expected": "positive Schur profile",
+      "group": "coverage",
+      "name": "V=2 d=4 beta=2.0 left coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.002315974018082403, 0.002315974018082406]",
+      "expected": ">1e-30 and nonnegative",
+      "group": "Gibbs",
+      "name": "V=2 d=4 beta=4.0 reference",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.7084531628874778, 0.719385270111325, 2.6566483730806767, 0.3596926350556625]",
+      "expected": ">1e-10",
+      "group": "Schur graph",
+      "name": "V=2 d=4 beta=4.0 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[3.3306690738754696e-16, 0.0, 0.33202991917056]",
+      "expected": "energy/envelope residuals <= 2e-08",
+      "group": "harmonic decomposition",
+      "name": "V=2 d=4 beta=4.0 right energy split",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.3596926350556625, 0.7084531628874778]",
+      "expected": "<= full gap + 2e-08",
+      "group": "variational lower bound",
+      "name": "V=2 d=4 beta=4.0 right Schur lower",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.0167172819863468, 0.7084531628874778]",
+      "expected": "Ritz restriction >= full gap - 2e-08",
+      "group": "shortcut audit",
+      "name": "V=2 d=4 beta=4.0 right Ritz warning",
+      "status": "PASS"
+    },
+    {
+      "actual": "[3.8002975144505804, 4.8991837700414695, 4.3466771252512215, 2.1733385626256108]",
+      "expected": ">1e-10",
+      "group": "Schur graph",
+      "name": "V=2 d=4 beta=4.0 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.1796119636642288e-15, 0.0, 0.23865153724662608]",
+      "expected": "energy/envelope residuals <= 2e-08",
+      "group": "harmonic decomposition",
+      "name": "V=2 d=4 beta=4.0 right energy split",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.1733385626256108, 3.8002975144505804]",
+      "expected": "<= full gap + 2e-08",
+      "group": "variational lower bound",
+      "name": "V=2 d=4 beta=4.0 right Schur lower",
+      "status": "PASS"
+    },
+    {
+      "actual": "[5.532342563195335, 3.8002975144505804]",
+      "expected": "Ritz restriction >= full gap - 2e-08",
+      "group": "shortcut audit",
+      "name": "V=2 d=4 beta=4.0 right Ritz warning",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.265980279363572, 1.3832072977321248, 2.1033563688025625, 0.6916036488660624]",
+      "expected": ">1e-10",
+      "group": "Schur graph",
+      "name": "V=2 d=4 beta=4.0 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.498001805406602e-16, 0.0, 0.32410466875505073]",
+      "expected": "energy/envelope residuals <= 2e-08",
+      "group": "harmonic decomposition",
+      "name": "V=2 d=4 beta=4.0 right energy split",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.6916036488660624, 1.265980279363572]",
+      "expected": "<= full gap + 2e-08",
+      "group": "variational lower bound",
+      "name": "V=2 d=4 beta=4.0 right Schur lower",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.7050244289978929, 1.265980279363572]",
+      "expected": "Ritz restriction >= full gap - 2e-08",
+      "group": "shortcut audit",
+      "name": "V=2 d=4 beta=4.0 right Ritz warning",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.2659802793635717, 1.383207297732124, 2.103356368802564, 0.691603648866062]",
+      "expected": ">1e-10",
+      "group": "Schur graph",
+      "name": "V=2 d=4 beta=4.0 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[3.3306690738754696e-16, 0.0, 0.34497798541979324]",
+      "expected": "energy/envelope residuals <= 2e-08",
+      "group": "harmonic decomposition",
+      "name": "V=2 d=4 beta=4.0 right energy split",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.691603648866062, 1.2659802793635717]",
+      "expected": "<= full gap + 2e-08",
+      "group": "variational lower bound",
+      "name": "V=2 d=4 beta=4.0 right Schur lower",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.7050244289978929, 1.2659802793635717]",
+      "expected": "Ritz restriction >= full gap - 2e-08",
+      "group": "shortcut audit",
+      "name": "V=2 d=4 beta=4.0 right Ritz warning",
+      "status": "PASS"
+    },
+    {
+      "actual": "[3.800297514450586, 4.899183770041478, 4.346677125251226, 2.173338562625613]",
+      "expected": ">1e-10",
+      "group": "Schur graph",
+      "name": "V=2 d=4 beta=4.0 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.1102230246251565e-16, 0.0, 0.19838200920030202]",
+      "expected": "energy/envelope residuals <= 2e-08",
+      "group": "harmonic decomposition",
+      "name": "V=2 d=4 beta=4.0 right energy split",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.173338562625613, 3.800297514450586]",
+      "expected": "<= full gap + 2e-08",
+      "group": "variational lower bound",
+      "name": "V=2 d=4 beta=4.0 right Schur lower",
+      "status": "PASS"
+    },
+    {
+      "actual": "[5.532342563195343, 3.800297514450586]",
+      "expected": "Ritz restriction >= full gap - 2e-08",
+      "group": "shortcut audit",
+      "name": "V=2 d=4 beta=4.0 right Ritz warning",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'volume': 2, 'dimension': 4, 'beta': 4.0, 'orientation': 'right', 'row_count': 5, 'minimum_full_gap': 0.7084531628874778, 'minimum_coarse_gap': 0.719385270111325, 'minimum_residual_gap': 2.1033563688025625, 'minimum_decomposition_gap': 0.3596926350556625, 'minimum_naive_gap': 1.0167172819863468, 'maximum_energy_residual': 1.1796119636642288e-15, 'maximum_variance_envelope_deficit': 0.0}",
+      "expected": "positive Schur profile",
+      "group": "coverage",
+      "name": "V=2 d=4 beta=4.0 right coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.7084531628874774, 0.7193852701113247, 2.6566483730806767, 0.35969263505566235]",
+      "expected": ">1e-10",
+      "group": "Schur graph",
+      "name": "V=2 d=4 beta=4.0 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[3.608224830031759e-16, 0.0, 0.33202991917056024]",
+      "expected": "energy/envelope residuals <= 2e-08",
+      "group": "harmonic decomposition",
+      "name": "V=2 d=4 beta=4.0 left energy split",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.35969263505566235, 0.7084531628874774]",
+      "expected": "<= full gap + 2e-08",
+      "group": "variational lower bound",
+      "name": "V=2 d=4 beta=4.0 left Schur lower",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.016717281986347, 0.7084531628874774]",
+      "expected": "Ritz restriction >= full gap - 2e-08",
+      "group": "shortcut audit",
+      "name": "V=2 d=4 beta=4.0 left Ritz warning",
+      "status": "PASS"
+    },
+    {
+      "actual": "[3.800297514450581, 4.899183770041477, 4.346677125251218, 2.173338562625609]",
+      "expected": ">1e-10",
+      "group": "Schur graph",
+      "name": "V=2 d=4 beta=4.0 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.914335439641036e-16, 0.0, 0.23865153724662622]",
+      "expected": "energy/envelope residuals <= 2e-08",
+      "group": "harmonic decomposition",
+      "name": "V=2 d=4 beta=4.0 left energy split",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.173338562625609, 3.800297514450581]",
+      "expected": "<= full gap + 2e-08",
+      "group": "variational lower bound",
+      "name": "V=2 d=4 beta=4.0 left Schur lower",
+      "status": "PASS"
+    },
+    {
+      "actual": "[5.532342563195341, 3.800297514450581]",
+      "expected": "Ritz restriction >= full gap - 2e-08",
+      "group": "shortcut audit",
+      "name": "V=2 d=4 beta=4.0 left Ritz warning",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.265980279363572, 1.3832072977321244, 2.1033563688025634, 0.6916036488660622]",
+      "expected": ">1e-10",
+      "group": "Schur graph",
+      "name": "V=2 d=4 beta=4.0 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.1102230246251565e-16, 0.0, 0.32410466875505073]",
+      "expected": "energy/envelope residuals <= 2e-08",
+      "group": "harmonic decomposition",
+      "name": "V=2 d=4 beta=4.0 left energy split",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.6916036488660622, 1.265980279363572]",
+      "expected": "<= full gap + 2e-08",
+      "group": "variational lower bound",
+      "name": "V=2 d=4 beta=4.0 left Schur lower",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.705024428997893, 1.265980279363572]",
+      "expected": "Ritz restriction >= full gap - 2e-08",
+      "group": "shortcut audit",
+      "name": "V=2 d=4 beta=4.0 left Ritz warning",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.2659802793635708, 1.3832072977321235, 2.1033563688025634, 0.6916036488660617]",
+      "expected": ">1e-10",
+      "group": "Schur graph",
+      "name": "V=2 d=4 beta=4.0 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.7755575615628914e-16, 0.0, 0.3449779854197932]",
+      "expected": "energy/envelope residuals <= 2e-08",
+      "group": "harmonic decomposition",
+      "name": "V=2 d=4 beta=4.0 left energy split",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.6916036488660617, 1.2659802793635708]",
+      "expected": "<= full gap + 2e-08",
+      "group": "variational lower bound",
+      "name": "V=2 d=4 beta=4.0 left Schur lower",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.7050244289978922, 1.2659802793635708]",
+      "expected": "Ritz restriction >= full gap - 2e-08",
+      "group": "shortcut audit",
+      "name": "V=2 d=4 beta=4.0 left Ritz warning",
+      "status": "PASS"
+    },
+    {
+      "actual": "[3.8002975144505853, 4.89918377004147, 4.346677125251226, 2.173338562625613]",
+      "expected": ">1e-10",
+      "group": "Schur graph",
+      "name": "V=2 d=4 beta=4.0 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[3.3306690738754696e-16, 0.0, 0.19838200920030202]",
+      "expected": "energy/envelope residuals <= 2e-08",
+      "group": "harmonic decomposition",
+      "name": "V=2 d=4 beta=4.0 left energy split",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.173338562625613, 3.8002975144505853]",
+      "expected": "<= full gap + 2e-08",
+      "group": "variational lower bound",
+      "name": "V=2 d=4 beta=4.0 left Schur lower",
+      "status": "PASS"
+    },
+    {
+      "actual": "[5.532342563195342, 3.8002975144505853]",
+      "expected": "Ritz restriction >= full gap - 2e-08",
+      "group": "shortcut audit",
+      "name": "V=2 d=4 beta=4.0 left Ritz warning",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'volume': 2, 'dimension': 4, 'beta': 4.0, 'orientation': 'left', 'row_count': 5, 'minimum_full_gap': 0.7084531628874774, 'minimum_coarse_gap': 0.7193852701113247, 'minimum_residual_gap': 2.1033563688025634, 'minimum_decomposition_gap': 0.35969263505566235, 'minimum_naive_gap': 1.016717281986347, 'maximum_energy_residual': 3.608224830031759e-16, 'maximum_variance_envelope_deficit': 0.0}",
+      "expected": "positive Schur profile",
+      "group": "coverage",
+      "name": "V=2 d=4 beta=4.0 left coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.0019699063913223252, 0.001969906391322328]",
+      "expected": ">1e-30 and nonnegative",
+      "group": "Gibbs",
+      "name": "V=2 d=4 beta=8.0 reference",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.6867237745188258, 0.695201649415152, 2.8608018909248214, 0.347600824707576]",
+      "expected": ">1e-10",
+      "group": "Schur graph",
+      "name": "V=2 d=4 beta=8.0 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.1102230246251565e-16, 0.0, 0.33049131020293054]",
+      "expected": "energy/envelope residuals <= 2e-08",
+      "group": "harmonic decomposition",
+      "name": "V=2 d=4 beta=8.0 right energy split",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.347600824707576, 0.6867237745188258]",
+      "expected": "<= full gap + 2e-08",
+      "group": "variational lower bound",
+      "name": "V=2 d=4 beta=8.0 right Schur lower",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.9747693028100061, 0.6867237745188258]",
+      "expected": "Ritz restriction >= full gap - 2e-08",
+      "group": "shortcut audit",
+      "name": "V=2 d=4 beta=8.0 right Ritz warning",
+      "status": "PASS"
+    },
+    {
+      "actual": "[4.045488937828109, 5.024544131983848, 4.653599223895457, 2.3267996119477283]",
+      "expected": ">1e-10",
+      "group": "Schur graph",
+      "name": "V=2 d=4 beta=8.0 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[6.106226635438361e-16, 0.0, 0.23638165729613028]",
+      "expected": "energy/envelope residuals <= 2e-08",
+      "group": "harmonic decomposition",
+      "name": "V=2 d=4 beta=8.0 right energy split",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.3267996119477283, 4.045488937828109]",
+      "expected": "<= full gap + 2e-08",
+      "group": "variational lower bound",
+      "name": "V=2 d=4 beta=8.0 right Schur lower",
+      "status": "PASS"
+    },
+    {
+      "actual": "[5.748311981851488, 4.045488937828109]",
+      "expected": "Ritz restriction >= full gap - 2e-08",
+      "group": "shortcut audit",
+      "name": "V=2 d=4 beta=8.0 right Ritz warning",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.2062818541789868, 1.3040432247662435, 2.1078926535389595, 0.6520216123831217]",
+      "expected": ">1e-10",
+      "group": "Schur graph",
+      "name": "V=2 d=4 beta=8.0 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[4.440892098500626e-16, 0.0, 0.31761394930014736]",
+      "expected": "energy/envelope residuals <= 2e-08",
+      "group": "harmonic decomposition",
+      "name": "V=2 d=4 beta=8.0 right energy split",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.6520216123831217, 1.2062818541789868]",
+      "expected": "<= full gap + 2e-08",
+      "group": "variational lower bound",
+      "name": "V=2 d=4 beta=8.0 right Schur lower",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.6421101189026777, 1.2062818541789868]",
+      "expected": "Ritz restriction >= full gap - 2e-08",
+      "group": "shortcut audit",
+      "name": "V=2 d=4 beta=8.0 right Ritz warning",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.2062818541789868, 1.304043224766243, 2.1078926535389613, 0.6520216123831215]",
+      "expected": ">1e-10",
+      "group": "Schur graph",
+      "name": "V=2 d=4 beta=8.0 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[3.3306690738754696e-16, 0.0, 0.349846141813336]",
+      "expected": "energy/envelope residuals <= 2e-08",
+      "group": "harmonic decomposition",
+      "name": "V=2 d=4 beta=8.0 right energy split",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.6520216123831215, 1.2062818541789868]",
+      "expected": "<= full gap + 2e-08",
+      "group": "variational lower bound",
+      "name": "V=2 d=4 beta=8.0 right Schur lower",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.6421101189026763, 1.2062818541789868]",
+      "expected": "Ritz restriction >= full gap - 2e-08",
+      "group": "shortcut audit",
+      "name": "V=2 d=4 beta=8.0 right Ritz warning",
+      "status": "PASS"
+    },
+    {
+      "actual": "[4.045488937828118, 5.02454413198386, 4.653599223895466, 2.326799611947733]",
+      "expected": ">1e-10",
+      "group": "Schur graph",
+      "name": "V=2 d=4 beta=8.0 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.6653345369377348e-16, 0.0, 0.19337753948554515]",
+      "expected": "energy/envelope residuals <= 2e-08",
+      "group": "harmonic decomposition",
+      "name": "V=2 d=4 beta=8.0 right energy split",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.326799611947733, 4.045488937828118]",
+      "expected": "<= full gap + 2e-08",
+      "group": "variational lower bound",
+      "name": "V=2 d=4 beta=8.0 right Schur lower",
+      "status": "PASS"
+    },
+    {
+      "actual": "[5.748311981851498, 4.045488937828118]",
+      "expected": "Ritz restriction >= full gap - 2e-08",
+      "group": "shortcut audit",
+      "name": "V=2 d=4 beta=8.0 right Ritz warning",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'volume': 2, 'dimension': 4, 'beta': 8.0, 'orientation': 'right', 'row_count': 5, 'minimum_full_gap': 0.6867237745188258, 'minimum_coarse_gap': 0.695201649415152, 'minimum_residual_gap': 2.1078926535389595, 'minimum_decomposition_gap': 0.347600824707576, 'minimum_naive_gap': 0.9747693028100061, 'maximum_energy_residual': 6.106226635438361e-16, 'maximum_variance_envelope_deficit': 0.0}",
+      "expected": "positive Schur profile",
+      "group": "coverage",
+      "name": "V=2 d=4 beta=8.0 right coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.6867237745188258, 0.695201649415152, 2.8608018909248214, 0.347600824707576]",
+      "expected": ">1e-10",
+      "group": "Schur graph",
+      "name": "V=2 d=4 beta=8.0 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.1102230246251565e-16, 0.0, 0.33049131020293054]",
+      "expected": "energy/envelope residuals <= 2e-08",
+      "group": "harmonic decomposition",
+      "name": "V=2 d=4 beta=8.0 left energy split",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.347600824707576, 0.6867237745188258]",
+      "expected": "<= full gap + 2e-08",
+      "group": "variational lower bound",
+      "name": "V=2 d=4 beta=8.0 left Schur lower",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.9747693028100061, 0.6867237745188258]",
+      "expected": "Ritz restriction >= full gap - 2e-08",
+      "group": "shortcut audit",
+      "name": "V=2 d=4 beta=8.0 left Ritz warning",
+      "status": "PASS"
+    },
+    {
+      "actual": "[4.045488937828112, 5.024544131983858, 4.653599223895458, 2.326799611947729]",
+      "expected": ">1e-10",
+      "group": "Schur graph",
+      "name": "V=2 d=4 beta=8.0 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[5.551115123125783e-17, 0.0, 0.23638165729613017]",
+      "expected": "energy/envelope residuals <= 2e-08",
+      "group": "harmonic decomposition",
+      "name": "V=2 d=4 beta=8.0 left energy split",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.326799611947729, 4.045488937828112]",
+      "expected": "<= full gap + 2e-08",
+      "group": "variational lower bound",
+      "name": "V=2 d=4 beta=8.0 left Schur lower",
+      "status": "PASS"
+    },
+    {
+      "actual": "[5.748311981851492, 4.045488937828112]",
+      "expected": "Ritz restriction >= full gap - 2e-08",
+      "group": "shortcut audit",
+      "name": "V=2 d=4 beta=8.0 left Ritz warning",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.2062818541789877, 1.3040432247662435, 2.1078926535389604, 0.6520216123831217]",
+      "expected": ">1e-10",
+      "group": "Schur graph",
+      "name": "V=2 d=4 beta=8.0 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[5.551115123125783e-16, 0.0, 0.31761394930014747]",
+      "expected": "energy/envelope residuals <= 2e-08",
+      "group": "harmonic decomposition",
+      "name": "V=2 d=4 beta=8.0 left energy split",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.6520216123831217, 1.2062818541789877]",
+      "expected": "<= full gap + 2e-08",
+      "group": "variational lower bound",
+      "name": "V=2 d=4 beta=8.0 left Schur lower",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.6421101189026777, 1.2062818541789877]",
+      "expected": "Ritz restriction >= full gap - 2e-08",
+      "group": "shortcut audit",
+      "name": "V=2 d=4 beta=8.0 left Ritz warning",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.2062818541789864, 1.304043224766243, 2.1078926535389604, 0.6520216123831215]",
+      "expected": ">1e-10",
+      "group": "Schur graph",
+      "name": "V=2 d=4 beta=8.0 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.249000902703301e-16, 0.0, 0.3498461418133359]",
+      "expected": "energy/envelope residuals <= 2e-08",
+      "group": "harmonic decomposition",
+      "name": "V=2 d=4 beta=8.0 left energy split",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.6520216123831215, 1.2062818541789864]",
+      "expected": "<= full gap + 2e-08",
+      "group": "variational lower bound",
+      "name": "V=2 d=4 beta=8.0 left Schur lower",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.6421101189026768, 1.2062818541789864]",
+      "expected": "Ritz restriction >= full gap - 2e-08",
+      "group": "shortcut audit",
+      "name": "V=2 d=4 beta=8.0 left Ritz warning",
+      "status": "PASS"
+    },
+    {
+      "actual": "[4.045488937828116, 5.02454413198386, 4.653599223895467, 2.3267996119477337]",
+      "expected": ">1e-10",
+      "group": "Schur graph",
+      "name": "V=2 d=4 beta=8.0 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.220446049250313e-16, 0.0, 0.19337753948554515]",
+      "expected": "energy/envelope residuals <= 2e-08",
+      "group": "harmonic decomposition",
+      "name": "V=2 d=4 beta=8.0 left energy split",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.3267996119477337, 4.045488937828116]",
+      "expected": "<= full gap + 2e-08",
+      "group": "variational lower bound",
+      "name": "V=2 d=4 beta=8.0 left Schur lower",
+      "status": "PASS"
+    },
+    {
+      "actual": "[5.748311981851499, 4.045488937828116]",
+      "expected": "Ritz restriction >= full gap - 2e-08",
+      "group": "shortcut audit",
+      "name": "V=2 d=4 beta=8.0 left Ritz warning",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'volume': 2, 'dimension': 4, 'beta': 8.0, 'orientation': 'left', 'row_count': 5, 'minimum_full_gap': 0.6867237745188258, 'minimum_coarse_gap': 0.695201649415152, 'minimum_residual_gap': 2.1078926535389604, 'minimum_decomposition_gap': 0.347600824707576, 'minimum_naive_gap': 0.9747693028100061, 'maximum_energy_residual': 5.551115123125783e-16, 'maximum_variance_envelope_deficit': 0.0}",
+      "expected": "positive Schur profile",
+      "group": "coverage",
+      "name": "V=2 d=4 beta=8.0 left coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": "(25, 25)",
+      "expected": "(25, 25)",
+      "group": "coordinates",
+      "name": "V=2 d=5 basis",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2, 1, 2]",
+      "expected": "complete lower/neutral/upper partition",
+      "group": "partition",
+      "name": "V=2 d=5 blocks",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.001434877522426784, 0.0014348775224267837]",
+      "expected": ">1e-30 and nonnegative",
+      "group": "Gibbs",
+      "name": "V=2 d=5 beta=0.5 reference",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.1950962017934943, 1.224474090817826, 2.6950746516627455, 0.612237045408913]",
+      "expected": ">1e-10",
+      "group": "Schur graph",
+      "name": "V=2 d=5 beta=0.5 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[3.3306690738754696e-16, 0.0, 0.4833783488043518]",
+      "expected": "energy/envelope residuals <= 2e-08",
+      "group": "harmonic decomposition",
+      "name": "V=2 d=5 beta=0.5 right energy split",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.612237045408913, 1.1950962017934943]",
+      "expected": "<= full gap + 2e-08",
+      "group": "variational lower bound",
+      "name": "V=2 d=5 beta=0.5 right Schur lower",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.3560930255561883, 1.1950962017934943]",
+      "expected": "Ritz restriction >= full gap - 2e-08",
+      "group": "shortcut audit",
+      "name": "V=2 d=5 beta=0.5 right Ritz warning",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.7069297569449429, 2.013762204151267, 2.4378497998027546, 1.0068811020756334]",
+      "expected": ">1e-10",
+      "group": "Schur graph",
+      "name": "V=2 d=5 beta=0.5 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[6.661338147750939e-16, 0.0, 0.48881747121218344]",
+      "expected": "energy/envelope residuals <= 2e-08",
+      "group": "harmonic decomposition",
+      "name": "V=2 d=5 beta=0.5 right energy split",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.0068811020756334, 1.7069297569449429]",
+      "expected": "<= full gap + 2e-08",
+      "group": "variational lower bound",
+      "name": "V=2 d=5 beta=0.5 right Schur lower",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.411216100335742, 1.7069297569449429]",
+      "expected": "Ritz restriction >= full gap - 2e-08",
+      "group": "shortcut audit",
+      "name": "V=2 d=5 beta=0.5 right Ritz warning",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.4451081447593623, 1.5075329760434673, 2.5598390132002145, 0.7537664880217336]",
+      "expected": ">1e-10",
+      "group": "Schur graph",
+      "name": "V=2 d=5 beta=0.5 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[5.551115123125783e-16, 0.0, 0.4883693492283868]",
+      "expected": "energy/envelope residuals <= 2e-08",
+      "group": "harmonic decomposition",
+      "name": "V=2 d=5 beta=0.5 right energy split",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.7537664880217336, 1.4451081447593623]",
+      "expected": "<= full gap + 2e-08",
+      "group": "variational lower bound",
+      "name": "V=2 d=5 beta=0.5 right Schur lower",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.6353554308711644, 1.4451081447593623]",
+      "expected": "Ritz restriction >= full gap - 2e-08",
+      "group": "shortcut audit",
+      "name": "V=2 d=5 beta=0.5 right Ritz warning",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.3731476969999408, 1.396303105705762, 2.9238827667862397, 0.698151552852881]",
+      "expected": ">1e-10",
+      "group": "Schur graph",
+      "name": "V=2 d=5 beta=0.5 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[3.608224830031759e-16, 0.0, 0.4913455936899564]",
+      "expected": "energy/envelope residuals <= 2e-08",
+      "group": "harmonic decomposition",
+      "name": "V=2 d=5 beta=0.5 right energy split",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.698151552852881, 1.3731476969999408]",
+      "expected": "<= full gap + 2e-08",
+      "group": "variational lower bound",
+      "name": "V=2 d=5 beta=0.5 right Schur lower",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.4822620324497837, 1.3731476969999408]",
+      "expected": "Ritz restriction >= full gap - 2e-08",
+      "group": "shortcut audit",
+      "name": "V=2 d=5 beta=0.5 right Ritz warning",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.4451081447593626, 1.5075329760434655, 2.559839013200213, 0.7537664880217327]",
+      "expected": ">1e-10",
+      "group": "Schur graph",
+      "name": "V=2 d=5 beta=0.5 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[3.8510861166685117e-16, 0.0, 0.4924806047424446]",
+      "expected": "energy/envelope residuals <= 2e-08",
+      "group": "harmonic decomposition",
+      "name": "V=2 d=5 beta=0.5 right energy split",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.7537664880217327, 1.4451081447593626]",
+      "expected": "<= full gap + 2e-08",
+      "group": "variational lower bound",
+      "name": "V=2 d=5 beta=0.5 right Schur lower",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.6353554308711653, 1.4451081447593626]",
+      "expected": "Ritz restriction >= full gap - 2e-08",
+      "group": "shortcut audit",
+      "name": "V=2 d=5 beta=0.5 right Ritz warning",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.706929756944943, 2.0137622041512664, 2.437849799802754, 1.0068811020756332]",
+      "expected": ">1e-10",
+      "group": "Schur graph",
+      "name": "V=2 d=5 beta=0.5 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[3.191891195797325e-16, 0.0, 0.49412244299126157]",
+      "expected": "energy/envelope residuals <= 2e-08",
+      "group": "harmonic decomposition",
+      "name": "V=2 d=5 beta=0.5 right energy split",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.0068811020756332, 1.706929756944943]",
+      "expected": "<= full gap + 2e-08",
+      "group": "variational lower bound",
+      "name": "V=2 d=5 beta=0.5 right Schur lower",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.4112161003357415, 1.706929756944943]",
+      "expected": "Ritz restriction >= full gap - 2e-08",
+      "group": "shortcut audit",
+      "name": "V=2 d=5 beta=0.5 right Ritz warning",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'volume': 2, 'dimension': 5, 'beta': 0.5, 'orientation': 'right', 'row_count': 6, 'minimum_full_gap': 1.1950962017934943, 'minimum_coarse_gap': 1.224474090817826, 'minimum_residual_gap': 2.437849799802754, 'minimum_decomposition_gap': 0.612237045408913, 'minimum_naive_gap': 1.3560930255561883, 'maximum_energy_residual': 6.661338147750939e-16, 'maximum_variance_envelope_deficit': 0.0}",
+      "expected": "positive Schur profile",
+      "group": "coverage",
+      "name": "V=2 d=5 beta=0.5 right coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.1950962017934932, 1.2244740908178269, 2.6950746516627455, 0.6122370454089134]",
+      "expected": ">1e-10",
+      "group": "Schur graph",
+      "name": "V=2 d=5 beta=0.5 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[5.551115123125783e-17, 0.0, 0.4833783488043517]",
+      "expected": "energy/envelope residuals <= 2e-08",
+      "group": "harmonic decomposition",
+      "name": "V=2 d=5 beta=0.5 left energy split",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.6122370454089134, 1.1950962017934932]",
+      "expected": "<= full gap + 2e-08",
+      "group": "variational lower bound",
+      "name": "V=2 d=5 beta=0.5 left Schur lower",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.3560930255561885, 1.1950962017934932]",
+      "expected": "Ritz restriction >= full gap - 2e-08",
+      "group": "shortcut audit",
+      "name": "V=2 d=5 beta=0.5 left Ritz warning",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.7069297569449429, 2.0137622041512615, 2.437849799802756, 1.0068811020756308]",
+      "expected": ">1e-10",
+      "group": "Schur graph",
+      "name": "V=2 d=5 beta=0.5 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[7.771561172376096e-16, 0.0, 0.4888174712121844]",
+      "expected": "energy/envelope residuals <= 2e-08",
+      "group": "harmonic decomposition",
+      "name": "V=2 d=5 beta=0.5 left energy split",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.0068811020756308, 1.7069297569449429]",
+      "expected": "<= full gap + 2e-08",
+      "group": "variational lower bound",
+      "name": "V=2 d=5 beta=0.5 left Schur lower",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.41121610033574, 1.7069297569449429]",
+      "expected": "Ritz restriction >= full gap - 2e-08",
+      "group": "shortcut audit",
+      "name": "V=2 d=5 beta=0.5 left Ritz warning",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.4451081447593626, 1.5075329760434653, 2.5598390132002136, 0.7537664880217326]",
+      "expected": ">1e-10",
+      "group": "Schur graph",
+      "name": "V=2 d=5 beta=0.5 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[8.881784197001252e-16, 0.0, 0.48836934922838743]",
+      "expected": "energy/envelope residuals <= 2e-08",
+      "group": "harmonic decomposition",
+      "name": "V=2 d=5 beta=0.5 left energy split",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.7537664880217326, 1.4451081447593626]",
+      "expected": "<= full gap + 2e-08",
+      "group": "variational lower bound",
+      "name": "V=2 d=5 beta=0.5 left Schur lower",
+      "status": "PASS"
+    }
+  ],
+  "derived": {
+    "c6_closed": false,
+    "common_alpha_closed": false,
+    "common_core_closed": false,
+    "continuum_closed": false,
+    "cross_phase_capacity_control_closed": false,
+    "cutoff_independent_schur_gap_closed": false,
+    "exhaustion_uniformity_closed": false,
+    "finite_energy_variance_split_closed": true,
+    "finite_harmonic_extension_closed": true,
+    "finite_naive_block_gap_obstruction_closed": true,
+    "finite_residual_gap_closed": true,
+    "finite_schur_capacity_closed": true,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "maximum_coarse_schur_gap": 18.727067154255124,
+    "maximum_decomposition_gap": 3.232260013170645,
+    "maximum_full_gap": 6.229495058532403,
+    "maximum_naive_block_gap": 35.521614497313294,
+    "maximum_residual_gap": 30.07649788337455,
+    "minimum_coarse_schur_gap": 0.634590321876555,
+    "minimum_decomposition_gap": 0.3172951609382775,
+    "minimum_full_gap": 0.6310329497027756,
+    "minimum_naive_block_gap": 0.859366031221583,
+    "minimum_residual_gap": 2.0000155411351734,
+    "naive_obstruction_rows": 1030,
+    "phase_conditioned_uniformity_closed": false,
+    "pre_a_closed": false,
+    "profile_count": 80,
+    "profiles": [
+      {
+        "beta": 0.5,
+        "dimension": 4,
+        "maximum_energy_residual": 3.608224830031759e-16,
+        "maximum_variance_envelope_deficit": 0.0,
+        "minimum_coarse_gap": 1.060475463500576,
+        "minimum_decomposition_gap": 0.530237731750288,
+        "minimum_full_gap": 1.0022812277674598,
+        "minimum_naive_gap": 1.4249257664289203,
+        "minimum_residual_gap": 2.0000155411351734,
+        "orientation": "right",
+        "row_count": 5,
+        "volume": 2
+      },
+      {
+        "beta": 0.5,
+        "dimension": 4,
+        "maximum_energy_residual": 5.551115123125783e-16,
+        "maximum_variance_envelope_deficit": 0.0,
+        "minimum_coarse_gap": 1.0604754635005758,
+        "minimum_decomposition_gap": 0.5302377317502879,
+        "minimum_full_gap": 1.0022812277674598,
+        "minimum_naive_gap": 1.4249257664289203,
+        "minimum_residual_gap": 2.0000155411351743,
+        "orientation": "left",
+        "row_count": 5,
+        "volume": 2
+      },
+      {
+        "beta": 1.0,
+        "dimension": 4,
+        "maximum_energy_residual": 1.0130785099704553e-15,
+        "maximum_variance_envelope_deficit": 0.0,
+        "minimum_coarse_gap": 0.9554379373189177,
+        "minimum_decomposition_gap": 0.47771896865945884,
+        "minimum_full_gap": 0.912516639605107,
+        "minimum_naive_gap": 1.32679872984232,
+        "minimum_residual_gap": 2.027947389532725,
+        "orientation": "right",
+        "row_count": 5,
+        "volume": 2
+      },
+      {
+        "beta": 1.0,
+        "dimension": 4,
+        "maximum_energy_residual": 4.0245584642661925e-16,
+        "maximum_variance_envelope_deficit": 0.0,
+        "minimum_coarse_gap": 0.9554379373189181,
+        "minimum_decomposition_gap": 0.47771896865945906,
+        "minimum_full_gap": 0.9125166396051074,
+        "minimum_naive_gap": 1.32679872984232,
+        "minimum_residual_gap": 2.027947389532726,
+        "orientation": "left",
+        "row_count": 5,
+        "volume": 2
+      },
+      {
+        "beta": 2.0,
+        "dimension": 4,
+        "maximum_energy_residual": 9.43689570931383e-16,
+        "maximum_variance_envelope_deficit": 0.0,
+        "minimum_coarse_gap": 0.8091197710365248,
+        "minimum_decomposition_gap": 0.4045598855182624,
+        "minimum_full_gap": 0.7872756441265598,
+        "minimum_naive_gap": 1.1535498384624798,
+        "minimum_residual_gap": 2.106042693082216,
+        "orientation": "right",
+        "row_count": 5,
+        "volume": 2
+      },
+      {
+        "beta": 2.0,
+        "dimension": 4,
+        "maximum_energy_residual": 3.7470027081099033e-16,
+        "maximum_variance_envelope_deficit": 0.0,
+        "minimum_coarse_gap": 0.809119771036524,
+        "minimum_decomposition_gap": 0.404559885518262,
+        "minimum_full_gap": 0.7872756441265603,
+        "minimum_naive_gap": 1.1535498384624803,
+        "minimum_residual_gap": 2.106042693082216,
+        "orientation": "left",
+        "row_count": 5,
+        "volume": 2
+      },
+      {
+        "beta": 4.0,
+        "dimension": 4,
+        "maximum_energy_residual": 1.1796119636642288e-15,
+        "maximum_variance_envelope_deficit": 0.0,
+        "minimum_coarse_gap": 0.719385270111325,
+        "minimum_decomposition_gap": 0.3596926350556625,
+        "minimum_full_gap": 0.7084531628874778,
+        "minimum_naive_gap": 1.0167172819863468,
+        "minimum_residual_gap": 2.1033563688025625,
+        "orientation": "right",
+        "row_count": 5,
+        "volume": 2
+      },
+      {
+        "beta": 4.0,
+        "dimension": 4,
+        "maximum_energy_residual": 3.608224830031759e-16,
+        "maximum_variance_envelope_deficit": 0.0,
+        "minimum_coarse_gap": 0.7193852701113247,
+        "minimum_decomposition_gap": 0.35969263505566235,
+        "minimum_full_gap": 0.7084531628874774,
+        "minimum_naive_gap": 1.016717281986347,
+        "minimum_residual_gap": 2.1033563688025634,
+        "orientation": "left",
+        "row_count": 5,
+        "volume": 2
+      },
+      {
+        "beta": 8.0,
+        "dimension": 4,
+        "maximum_energy_residual": 6.106226635438361e-16,
+        "maximum_variance_envelope_deficit": 0.0,
+        "minimum_coarse_gap": 0.695201649415152,
+        "minimum_decomposition_gap": 0.347600824707576,
+        "minimum_full_gap": 0.6867237745188258,
+        "minimum_naive_gap": 0.9747693028100061,
+        "minimum_residual_gap": 2.1078926535389595,
+        "orientation": "right",
+        "row_count": 5,
+        "volume": 2
+      },
+      {
+        "beta": 8.0,
+        "dimension": 4,
+        "maximum_energy_residual": 5.551115123125783e-16,
+        "maximum_variance_envelope_deficit": 0.0,
+        "minimum_coarse_gap": 0.695201649415152,
+        "minimum_decomposition_gap": 0.347600824707576,
+        "minimum_full_gap": 0.6867237745188258,
+        "minimum_naive_gap": 0.9747693028100061,
+        "minimum_residual_gap": 2.1078926535389604,
+        "orientation": "left",
+        "row_count": 5,
+        "volume": 2
+      },
+      {
+        "beta": 0.5,
+        "dimension": 5,
+        "maximum_energy_residual": 6.661338147750939e-16,
+        "maximum_variance_envelope_deficit": 0.0,
+        "minimum_coarse_gap": 1.224474090817826,
+        "minimum_decomposition_gap": 0.612237045408913,
+        "minimum_full_gap": 1.1950962017934943,
+        "minimum_naive_gap": 1.3560930255561883,
+        "minimum_residual_gap": 2.437849799802754,
+        "orientation": "right",
+        "row_count": 6,
+        "volume": 2
+      },
+      {
+        "beta": 0.5,
+        "dimension": 5,
+        "maximum_energy_residual": 8.881784197001252e-16,
+        "maximum_variance_envelope_deficit": 0.0,
+        "minimum_coarse_gap": 1.2244740908178269,
+        "minimum_decomposition_gap": 0.6122370454089134,
+        "minimum_full_gap": 1.1950962017934932,
+        "minimum_naive_gap": 1.3560930255561885,
+        "minimum_residual_gap": 2.4378497998027546,
+        "orientation": "left",
+        "row_count": 6,
+        "volume": 2
+      },
+      {
+        "beta": 1.0,
+        "dimension": 5,
+        "maximum_energy_residual": 6.661338147750939e-16,
+        "maximum_variance_envelope_deficit": 0.0,
+        "minimum_coarse_gap": 1.3249704402731959,
+        "minimum_decomposition_gap": 0.6624852201365979,
+        "minimum_full_gap": 1.3039245866372624,
+        "minimum_naive_gap": 1.4085562715947169,
+        "minimum_residual_gap": 2.3591065734154086,
+        "orientation": "right",
+        "row_count": 6,
+        "volume": 2
+      },
+      {
+        "beta": 1.0,
+        "dimension": 5,
+        "maximum_energy_residual": 6.661338147750939e-16,
+        "maximum_variance_envelope_deficit": 0.0,
+        "minimum_coarse_gap": 1.3249704402731959,
+        "minimum_decomposition_gap": 0.6624852201365979,
+        "minimum_full_gap": 1.3039245866372626,
+        "minimum_naive_gap": 1.4085562715947153,
+        "minimum_residual_gap": 2.3591065734154073,
+        "orientation": "left",
+        "row_count": 6,
+        "volume": 2
+      },
+      {
+        "beta": 2.0,
+        "dimension": 5,
+        "maximum_energy_residual": 9.992007221626409e-16,
+        "maximum_variance_envelope_deficit": 0.0,
+        "minimum_coarse_gap": 1.5563478014886967,
+        "minimum_decomposition_gap": 0.7781739007443483,
+        "minimum_full_gap": 1.5534356018176712,
+        "minimum_naive_gap": 1.5699917740147438,
+        "minimum_residual_gap": 2.307929374017362,
+        "orientation": "right",
+        "row_count": 6,
+        "volume": 2
+      },
+      {
+        "beta": 2.0,
+        "dimension": 5,
+        "maximum_energy_residual": 9.159339953157541e-16,
+        "maximum_variance_envelope_deficit": 0.0,
+        "minimum_coarse_gap": 1.5563478014886973,
+        "minimum_decomposition_gap": 0.7781739007443487,
+        "minimum_full_gap": 1.5534356018176698,
+        "minimum_naive_gap": 1.5699917740147438,
+        "minimum_residual_gap": 2.307929374017359,
+        "orientation": "left",
+        "row_count": 6,
+        "volume": 2
+      },
+      {
+        "beta": 4.0,
+        "dimension": 5,
+        "maximum_energy_residual": 1.4432899320127035e-15,
+        "maximum_variance_envelope_deficit": 0.0,
+        "minimum_coarse_gap": 1.7777050819781655,
+        "minimum_decomposition_gap": 0.8888525409890827,
+        "minimum_full_gap": 1.7770263767221235,
+        "minimum_naive_gap": 1.7872984223982533,
+        "minimum_residual_gap": 2.5142127041671785,
+        "orientation": "right",
+        "row_count": 6,
+        "volume": 2
+      },
+      {
+        "beta": 4.0,
+        "dimension": 5,
+        "maximum_energy_residual": 1.5543122344752192e-15,
+        "maximum_variance_envelope_deficit": 0.0,
+        "minimum_coarse_gap": 1.7777050819781628,
+        "minimum_decomposition_gap": 0.8888525409890814,
+        "minimum_full_gap": 1.7770263767221242,
+        "minimum_naive_gap": 1.7872984223982524,
+        "minimum_residual_gap": 2.514212704167184,
+        "orientation": "left",
+        "row_count": 6,
+        "volume": 2
+      },
+      {
+        "beta": 8.0,
+        "dimension": 5,
+        "maximum_energy_residual": 4.551914400963142e-15,
+        "maximum_variance_envelope_deficit": 0.0,
+        "minimum_coarse_gap": 1.8684376677545176,
+        "minimum_decomposition_gap": 0.9342188338772588,
+        "minimum_full_gap": 1.8674041419089633,
+        "minimum_naive_gap": 1.8992986136993664,
+        "minimum_residual_gap": 3.050721847796467,
+        "orientation": "right",
+        "row_count": 6,
+        "volume": 2
+      },
+      {
+        "beta": 8.0,
+        "dimension": 5,
+        "maximum_energy_residual": 5.306866057708248e-14,
+        "maximum_variance_envelope_deficit": 0.0,
+        "minimum_coarse_gap": 1.868437667754517,
+        "minimum_decomposition_gap": 0.9342188338772585,
+        "minimum_full_gap": 1.8674041419089622,
+        "minimum_naive_gap": 1.8992986136993646,
+        "minimum_residual_gap": 3.0507218477962397,
+        "orientation": "left",
+        "row_count": 6,
+        "volume": 2
+      },
+      {
+        "beta": 0.5,
+        "dimension": 6,
+        "maximum_energy_residual": 7.771561172376096e-16,
+        "maximum_variance_envelope_deficit": 0.0,
+        "minimum_coarse_gap": 1.5371350374078139,
+        "minimum_decomposition_gap": 0.7685675187039069,
+        "minimum_full_gap": 1.4721452785784677,
+        "minimum_naive_gap": 2.0242229422525306,
+        "minimum_residual_gap": 2.4742945951824513,
+        "orientation": "right",
+        "row_count": 7,
+        "volume": 2
+      },
+      {
+        "beta": 0.5,
+        "dimension": 6,
+        "maximum_energy_residual": 1.3322676295501878e-15,
+        "maximum_variance_envelope_deficit": 0.0,
+        "minimum_coarse_gap": 1.5371350374078143,
+        "minimum_decomposition_gap": 0.7685675187039072,
+        "minimum_full_gap": 1.4721452785784677,
+        "minimum_naive_gap": 2.024222942252531,
+        "minimum_residual_gap": 2.474294595182451,
+        "orientation": "left",
+        "row_count": 7,
+        "volume": 2
+      },
+      {
+        "beta": 1.0,
+        "dimension": 6,
+        "maximum_energy_residual": 6.661338147750939e-16,
+        "maximum_variance_envelope_deficit": 0.0,
+        "minimum_coarse_gap": 1.6699086285303162,
+        "minimum_decomposition_gap": 0.8349543142651581,
+        "minimum_full_gap": 1.6011302309708606,
+        "minimum_naive_gap": 2.1356578175589327,
+        "minimum_residual_gap": 3.1930122530339684,
+        "orientation": "right",
+        "row_count": 7,
+        "volume": 2
+      },
+      {
+        "beta": 1.0,
+        "dimension": 6,
+        "maximum_energy_residual": 1.2212453270876722e-15,
+        "maximum_variance_envelope_deficit": 0.0,
+        "minimum_coarse_gap": 1.6699086285303164,
+        "minimum_decomposition_gap": 0.8349543142651582,
+        "minimum_full_gap": 1.6011302309708588,
+        "minimum_naive_gap": 2.135657817558932,
+        "minimum_residual_gap": 3.1930122530339684,
+        "orientation": "left",
+        "row_count": 7,
+        "volume": 2
+      },
+      {
+        "beta": 2.0,
+        "dimension": 6,
+        "maximum_energy_residual": 1.7763568394002505e-15,
+        "maximum_variance_envelope_deficit": 0.0,
+        "minimum_coarse_gap": 1.7505546524843938,
+        "minimum_decomposition_gap": 0.8752773262421969,
+        "minimum_full_gap": 1.6729054446344935,
+        "minimum_naive_gap": 2.225394639066774,
+        "minimum_residual_gap": 3.3934631241121394,
+        "orientation": "right",
+        "row_count": 7,
+        "volume": 2
+      },
+      {
+        "beta": 2.0,
+        "dimension": 6,
+        "maximum_energy_residual": 2.55351295663786e-15,
+        "maximum_variance_envelope_deficit": 0.0,
+        "minimum_coarse_gap": 1.750554652484392,
+        "minimum_decomposition_gap": 0.875277326242196,
+        "minimum_full_gap": 1.6729054446344944,
+        "minimum_naive_gap": 2.2253946390667725,
+        "minimum_residual_gap": 3.3934631241121385,
+        "orientation": "left",
+        "row_count": 7,
+        "volume": 2
+      },
+      {
+        "beta": 4.0,
+        "dimension": 6,
+        "maximum_energy_residual": 2.1094237467877974e-15,
+        "maximum_variance_envelope_deficit": 0.0,
+        "minimum_coarse_gap": 1.8729542309227358,
+        "minimum_decomposition_gap": 0.9364771154613679,
+        "minimum_full_gap": 1.7824315387470877,
+        "minimum_naive_gap": 2.3298090745912274,
+        "minimum_residual_gap": 3.4084001791138574,
+        "orientation": "right",
+        "row_count": 7,
+        "volume": 2
+      },
+      {
+        "beta": 4.0,
+        "dimension": 6,
+        "maximum_energy_residual": 1.9984014443252818e-15,
+        "maximum_variance_envelope_deficit": 0.0,
+        "minimum_coarse_gap": 1.8729542309227338,
+        "minimum_decomposition_gap": 0.9364771154613669,
+        "minimum_full_gap": 1.7824315387470864,
+        "minimum_naive_gap": 2.3298090745912257,
+        "minimum_residual_gap": 3.4084001791138627,
+        "orientation": "left",
+        "row_count": 7,
+        "volume": 2
+      },
+      {
+        "beta": 8.0,
+        "dimension": 6,
+        "maximum_energy_residual": 5.551115123125783e-16,
+        "maximum_variance_envelope_deficit": 0.0,
+        "minimum_coarse_gap": 2.0268881419290743,
+        "minimum_decomposition_gap": 1.0134440709645371,
+        "minimum_full_gap": 1.924267823375461,
+        "minimum_naive_gap": 2.4456407079982174,
+        "minimum_residual_gap": 3.4773455372897777,
+        "orientation": "right",
+        "row_count": 7,
+        "volume": 2
+      },
+      {
+        "beta": 8.0,
+        "dimension": 6,
+        "maximum_energy_residual": 1.2212453270876722e-15,
+        "maximum_variance_envelope_deficit": 0.0,
+        "minimum_coarse_gap": 2.0268881419290725,
+        "minimum_decomposition_gap": 1.0134440709645363,
+        "minimum_full_gap": 1.9242678233754602,
+        "minimum_naive_gap": 2.4456407079982156,
+        "minimum_residual_gap": 3.477345537289782,
+        "orientation": "left",
+        "row_count": 7,
+        "volume": 2
+      },
+      {
+        "beta": 0.5,
+        "dimension": 8,
+        "maximum_energy_residual": 2.220446049250313e-15,
+        "maximum_variance_envelope_deficit": 0.0,
+        "minimum_coarse_gap": 1.879122410045008,
+        "minimum_decomposition_gap": 0.939561205022504,
+        "minimum_full_gap": 1.7946329937682575,
+        "minimum_naive_gap": 2.566729761599338,
+        "minimum_residual_gap": 3.5721314759874323,
+        "orientation": "right",
+        "row_count": 9,
+        "volume": 2
+      },
+      {
+        "beta": 0.5,
+        "dimension": 8,
+        "maximum_energy_residual": 1.7763568394002505e-15,
+        "maximum_variance_envelope_deficit": 0.0,
+        "minimum_coarse_gap": 1.8791224100450084,
+        "minimum_decomposition_gap": 0.9395612050225042,
+        "minimum_full_gap": 1.7946329937682604,
+        "minimum_naive_gap": 2.5667297615993383,
+        "minimum_residual_gap": 3.5721314759874048,
+        "orientation": "left",
+        "row_count": 9,
+        "volume": 2
+      },
+      {
+        "beta": 1.0,
+        "dimension": 8,
+        "maximum_energy_residual": 2.6645352591003757e-15,
+        "maximum_variance_envelope_deficit": 0.0,
+        "minimum_coarse_gap": 2.08265203431898,
+        "minimum_decomposition_gap": 1.04132601715949,
+        "minimum_full_gap": 1.9969748574062383,
+        "minimum_naive_gap": 2.7270374073645316,
+        "minimum_residual_gap": 3.643962617436978,
+        "orientation": "right",
+        "row_count": 9,
+        "volume": 2
+      },
+      {
+        "beta": 1.0,
+        "dimension": 8,
+        "maximum_energy_residual": 1.7763568394002505e-15,
+        "maximum_variance_envelope_deficit": 0.0,
+        "minimum_coarse_gap": 2.082652034318981,
+        "minimum_decomposition_gap": 1.0413260171594905,
+        "minimum_full_gap": 1.9969748574062418,
+        "minimum_naive_gap": 2.7270374073645316,
+        "minimum_residual_gap": 3.6439626174369817,
+        "orientation": "left",
+        "row_count": 9,
+        "volume": 2
+      },
+      {
+        "beta": 2.0,
+        "dimension": 8,
+        "maximum_energy_residual": 1.1102230246251565e-14,
+        "maximum_variance_envelope_deficit": 0.0,
+        "minimum_coarse_gap": 2.3251873876628055,
+        "minimum_decomposition_gap": 1.1625936938314028,
+        "minimum_full_gap": 2.229394151230008,
+        "minimum_naive_gap": 2.9279969707807614,
+        "minimum_residual_gap": 3.8704368720642033,
+        "orientation": "right",
+        "row_count": 9,
+        "volume": 2
+      },
+      {
+        "beta": 2.0,
+        "dimension": 8,
+        "maximum_energy_residual": 6.217248937900877e-15,
+        "maximum_variance_envelope_deficit": 0.0,
+        "minimum_coarse_gap": 2.3251873876628055,
+        "minimum_decomposition_gap": 1.1625936938314028,
+        "minimum_full_gap": 2.2293941512300037,
+        "minimum_naive_gap": 2.927996970780761,
+        "minimum_residual_gap": 3.8704368720642064,
+        "orientation": "left",
+        "row_count": 9,
+        "volume": 2
+      },
+      {
+        "beta": 4.0,
+        "dimension": 8,
+        "maximum_energy_residual": 3.241851231905457e-14,
+        "maximum_variance_envelope_deficit": 0.0,
+        "minimum_coarse_gap": 2.5416091520511994,
+        "minimum_decomposition_gap": 1.2708045760255997,
+        "minimum_full_gap": 2.429704790370541,
+        "minimum_naive_gap": 3.1091949006194763,
+        "minimum_residual_gap": 4.121238014027115,
+        "orientation": "right",
+        "row_count": 9,
+        "volume": 2
+      },
+      {
+        "beta": 4.0,
+        "dimension": 8,
+        "maximum_energy_residual": 7.549516567451064e-15,
+        "maximum_variance_envelope_deficit": 0.0,
+        "minimum_coarse_gap": 2.5416091520512016,
+        "minimum_decomposition_gap": 1.2708045760256008,
+        "minimum_full_gap": 2.429704790370542,
+        "minimum_naive_gap": 3.1091949006194763,
+        "minimum_residual_gap": 4.121238014028039,
+        "orientation": "left",
+        "row_count": 9,
+        "volume": 2
+      },
+      {
+        "beta": 8.0,
+        "dimension": 8,
+        "maximum_energy_residual": 2.304822999121825e-13,
+        "maximum_variance_envelope_deficit": 0.0,
+        "minimum_coarse_gap": 2.725793864771539,
+        "minimum_decomposition_gap": 1.3628969323857696,
+        "minimum_full_gap": 2.6021395574426536,
+        "minimum_naive_gap": 3.2530523806688834,
+        "minimum_residual_gap": 4.214304872123148,
+        "orientation": "right",
+        "row_count": 9,
+        "volume": 2
+      },
+      {
+        "beta": 8.0,
+        "dimension": 8,
+        "maximum_energy_residual": 2.2160051571518125e-13,
+        "maximum_variance_envelope_deficit": 0.0,
+        "minimum_coarse_gap": 2.7257938647715365,
+        "minimum_decomposition_gap": 1.3628969323857683,
+        "minimum_full_gap": 2.6021395574426562,
+        "minimum_naive_gap": 3.2530523806688816,
+        "minimum_residual_gap": 4.214304872123363,
+        "orientation": "left",
+        "row_count": 9,
+        "volume": 2
+      },
+      {
+        "beta": 0.5,
+        "dimension": 10,
+        "maximum_energy_residual": 3.3306690738754696e-15,
+        "maximum_variance_envelope_deficit": 0.0,
+        "minimum_coarse_gap": 2.2269180178212356,
+        "minimum_decomposition_gap": 1.1134590089106178,
+        "minimum_full_gap": 2.131326919627531,
+        "minimum_naive_gap": 3.08618200564847,
+        "minimum_residual_gap": 4.252233112074605,
+        "orientation": "right",
+        "row_count": 11,
+        "volume": 2
+      },
+      {
+        "beta": 0.5,
+        "dimension": 10,
+        "maximum_energy_residual": 3.774758283725532e-15,
+        "maximum_variance_envelope_deficit": 0.0,
+        "minimum_coarse_gap": 2.2269180178212373,
+        "minimum_decomposition_gap": 1.1134590089106187,
+        "minimum_full_gap": 2.1313269196275257,
+        "minimum_naive_gap": 3.0861820056484706,
+        "minimum_residual_gap": 4.252233112074609,
+        "orientation": "left",
+        "row_count": 11,
+        "volume": 2
+      },
+      {
+        "beta": 1.0,
+        "dimension": 10,
+        "maximum_energy_residual": 1.4432899320127035e-14,
+        "maximum_variance_envelope_deficit": 0.0,
+        "minimum_coarse_gap": 2.4674462982153567,
+        "minimum_decomposition_gap": 1.2337231491076783,
+        "minimum_full_gap": 2.363427598482608,
+        "minimum_naive_gap": 3.3004771678716542,
+        "minimum_residual_gap": 4.640944448766591,
+        "orientation": "right",
+        "row_count": 11,
+        "volume": 2
+      },
+      {
+        "beta": 1.0,
+        "dimension": 10,
+        "maximum_energy_residual": 1.509903313490213e-14,
+        "maximum_variance_envelope_deficit": 0.0,
+        "minimum_coarse_gap": 2.467446298215344,
+        "minimum_decomposition_gap": 1.233723149107672,
+        "minimum_full_gap": 2.3634275984826365,
+        "minimum_naive_gap": 3.300477167871658,
+        "minimum_residual_gap": 4.6409444487665725,
+        "orientation": "left",
+        "row_count": 11,
+        "volume": 2
+      },
+      {
+        "beta": 2.0,
+        "dimension": 10,
+        "maximum_energy_residual": 9.747758156208874e-14,
+        "maximum_variance_envelope_deficit": 0.0,
+        "minimum_coarse_gap": 2.689176361199012,
+        "minimum_decomposition_gap": 1.344588180599506,
+        "minimum_full_gap": 2.578064372916228,
+        "minimum_naive_gap": 3.489961331678992,
+        "minimum_residual_gap": 4.857788975112252,
+        "orientation": "right",
+        "row_count": 11,
+        "volume": 2
+      },
+      {
+        "beta": 2.0,
+        "dimension": 10,
+        "maximum_energy_residual": 1.6964207816272392e-13,
+        "maximum_variance_envelope_deficit": 0.0,
+        "minimum_coarse_gap": 2.6891763611989834,
+        "minimum_decomposition_gap": 1.3445881805994917,
+        "minimum_full_gap": 2.578064372916078,
+        "minimum_naive_gap": 3.489961331678996,
+        "minimum_residual_gap": 4.857788975111903,
+        "orientation": "left",
+        "row_count": 11,
+        "volume": 2
+      },
+      {
+        "beta": 4.0,
+        "dimension": 10,
+        "maximum_energy_residual": 6.856737400084967e-13,
+        "maximum_variance_envelope_deficit": 0.0,
+        "minimum_coarse_gap": 2.9271696485327405,
+        "minimum_decomposition_gap": 1.4635848242663703,
+        "minimum_full_gap": 2.801158324347844,
+        "minimum_naive_gap": 3.6956159306791765,
+        "minimum_residual_gap": 4.92244645284602,
+        "orientation": "right",
+        "row_count": 11,
+        "volume": 2
+      },
+      {
+        "beta": 4.0,
+        "dimension": 10,
+        "maximum_energy_residual": 7.127631818093505e-13,
+        "maximum_variance_envelope_deficit": 0.0,
+        "minimum_coarse_gap": 2.9271696485327996,
+        "minimum_decomposition_gap": 1.4635848242663998,
+        "minimum_full_gap": 2.801158324348526,
+        "minimum_naive_gap": 3.695615930679186,
+        "minimum_residual_gap": 4.922446452842207,
+        "orientation": "left",
+        "row_count": 11,
+        "volume": 2
+      },
+      {
+        "beta": 8.0,
+        "dimension": 10,
+        "maximum_energy_residual": 2.9178881533198364e-12,
+        "maximum_variance_envelope_deficit": 0.0,
+        "minimum_coarse_gap": 3.1467979571770854,
+        "minimum_decomposition_gap": 1.5733989785885427,
+        "minimum_full_gap": 3.006244929060265,
+        "minimum_naive_gap": 3.8767944657118525,
+        "minimum_residual_gap": 4.913656811731966,
+        "orientation": "right",
+        "row_count": 11,
+        "volume": 2
+      },
+      {
+        "beta": 8.0,
+        "dimension": 10,
+        "maximum_energy_residual": 1.616484723854228e-12,
+        "maximum_variance_envelope_deficit": 0.0,
+        "minimum_coarse_gap": 3.146797957177049,
+        "minimum_decomposition_gap": 1.5733989785885245,
+        "minimum_full_gap": 3.006244929060173,
+        "minimum_naive_gap": 3.876794465711855,
+        "minimum_residual_gap": 4.913656811731895,
+        "orientation": "left",
+        "row_count": 11,
+        "volume": 2
+      },
+      {
+        "beta": 0.5,
+        "dimension": 12,
+        "maximum_energy_residual": 1.3322676295501878e-14,
+        "maximum_variance_envelope_deficit": 0.0,
+        "minimum_coarse_gap": 2.5294349843334514,
+        "minimum_decomposition_gap": 1.2647174921667257,
+        "minimum_full_gap": 2.423391046447416,
+        "minimum_naive_gap": 3.5700417809036646,
+        "minimum_residual_gap": 4.923605328498405,
+        "orientation": "right",
+        "row_count": 13,
+        "volume": 2
+      },
+      {
+        "beta": 0.5,
+        "dimension": 12,
+        "maximum_energy_residual": 1.199040866595169e-14,
+        "maximum_variance_envelope_deficit": 0.0,
+        "minimum_coarse_gap": 2.529434984333456,
+        "minimum_decomposition_gap": 1.264717492166728,
+        "minimum_full_gap": 2.4233910464474144,
+        "minimum_naive_gap": 3.5700417809036655,
+        "minimum_residual_gap": 4.92360532849844,
+        "orientation": "left",
+        "row_count": 13,
+        "volume": 2
+      },
+      {
+        "beta": 1.0,
+        "dimension": 12,
+        "maximum_energy_residual": 2.1405099914773018e-13,
+        "maximum_variance_envelope_deficit": 0.0,
+        "minimum_coarse_gap": 2.806538835242827,
+        "minimum_decomposition_gap": 1.4032694176214136,
+        "minimum_full_gap": 2.691275332898316,
+        "minimum_naive_gap": 3.8176534416707817,
+        "minimum_residual_gap": 5.475445313815633,
+        "orientation": "right",
+        "row_count": 13,
+        "volume": 2
+      },
+      {
+        "beta": 1.0,
+        "dimension": 12,
+        "maximum_energy_residual": 9.85878045867139e-14,
+        "maximum_variance_envelope_deficit": 0.0,
+        "minimum_coarse_gap": 2.8065388352428275,
+        "minimum_decomposition_gap": 1.4032694176214138,
+        "minimum_full_gap": 2.6912753328981793,
+        "minimum_naive_gap": 3.8176534416707844,
+        "minimum_residual_gap": 5.475445313818725,
+        "orientation": "left",
+        "row_count": 13,
+        "volume": 2
+      },
+      {
+        "beta": 2.0,
+        "dimension": 12,
+        "maximum_energy_residual": 2.844835478299501e-12,
+        "maximum_variance_envelope_deficit": 0.0,
+        "minimum_coarse_gap": 2.530293791897528,
+        "minimum_decomposition_gap": 1.265146895948764,
+        "minimum_full_gap": 2.4606294784245564,
+        "minimum_naive_gap": 3.456101259389401,
+        "minimum_residual_gap": 5.81820076309618,
+        "orientation": "right",
+        "row_count": 13,
+        "volume": 2
+      },
+      {
+        "beta": 2.0,
+        "dimension": 12,
+        "maximum_energy_residual": 7.581046901350419e-12,
+        "maximum_variance_envelope_deficit": 0.0,
+        "minimum_coarse_gap": 2.530293791896419,
+        "minimum_decomposition_gap": 1.2651468959482095,
+        "minimum_full_gap": 2.4606294784231446,
+        "minimum_naive_gap": 3.456101259389266,
+        "minimum_residual_gap": 5.818200763098691,
+        "orientation": "left",
+        "row_count": 13,
+        "volume": 2
+      },
+      {
+        "beta": 4.0,
+        "dimension": 12,
+        "maximum_energy_residual": 2.5499602429590595e-11,
+        "maximum_variance_envelope_deficit": 0.0,
+        "minimum_coarse_gap": 2.273892225319764,
+        "minimum_decomposition_gap": 1.136946112659882,
+        "minimum_full_gap": 2.2336090910995594,
+        "minimum_naive_gap": 3.075994211793563,
+        "minimum_residual_gap": 5.875542279642975,
+        "orientation": "right",
+        "row_count": 13,
+        "volume": 2
+      },
+      {
+        "beta": 4.0,
+        "dimension": 12,
+        "maximum_energy_residual": 1.7544632413546424e-11,
+        "maximum_variance_envelope_deficit": 0.0,
+        "minimum_coarse_gap": 2.273892225321211,
+        "minimum_decomposition_gap": 1.1369461126606055,
+        "minimum_full_gap": 2.2336090910998116,
+        "minimum_naive_gap": 3.0759942117928256,
+        "minimum_residual_gap": 5.875542279642848,
+        "orientation": "left",
+        "row_count": 13,
+        "volume": 2
+      },
+      {
+        "beta": 8.0,
+        "dimension": 12,
+        "maximum_energy_residual": 2.417532840581771e-11,
+        "maximum_variance_envelope_deficit": 0.0,
+        "minimum_coarse_gap": 2.0549534941041077,
+        "minimum_decomposition_gap": 1.0274767470520538,
+        "minimum_full_gap": 2.034580382267399,
+        "minimum_naive_gap": 2.706544941925319,
+        "minimum_residual_gap": 5.877672352074157,
+        "orientation": "right",
+        "row_count": 13,
+        "volume": 2
+      },
+      {
+        "beta": 8.0,
+        "dimension": 12,
+        "maximum_energy_residual": 3.2311486819480706e-11,
+        "maximum_variance_envelope_deficit": 0.0,
+        "minimum_coarse_gap": 2.054953494103912,
+        "minimum_decomposition_gap": 1.027476747051956,
+        "minimum_full_gap": 2.034580382266693,
+        "minimum_naive_gap": 2.7065449419247574,
+        "minimum_residual_gap": 5.8776723520805,
+        "orientation": "left",
+        "row_count": 13,
+        "volume": 2
+      },
+      {
+        "beta": 0.5,
+        "dimension": 4,
+        "maximum_energy_residual": 4.718447854656915e-16,
+        "maximum_variance_envelope_deficit": 0.0,
+        "minimum_coarse_gap": 1.0703357074202757,
+        "minimum_decomposition_gap": 0.5351678537101379,
+        "minimum_full_gap": 1.0107702515077661,
+        "minimum_naive_gap": 1.433305223277308,
+        "minimum_residual_gap": 2.0003406765795226,
+        "orientation": "right",
+        "row_count": 21,
+        "volume": 3
+      },
+      {
+        "beta": 0.5,
+        "dimension": 4,
+        "maximum_energy_residual": 5.828670879282072e-16,
+        "maximum_variance_envelope_deficit": 0.0,
+        "minimum_coarse_gap": 1.0703357074202762,
+        "minimum_decomposition_gap": 0.5351678537101381,
+        "minimum_full_gap": 1.0107702515077661,
+        "minimum_naive_gap": 1.433305223277308,
+        "minimum_residual_gap": 2.0003406765795226,
+        "orientation": "left",
+        "row_count": 21,
+        "volume": 3
+      },
+      {
+        "beta": 1.0,
+        "dimension": 4,
+        "maximum_energy_residual": 7.077671781985373e-16,
+        "maximum_variance_envelope_deficit": 0.0,
+        "minimum_coarse_gap": 0.9740987432649717,
+        "minimum_decomposition_gap": 0.48704937163248585,
+        "minimum_full_gap": 0.928409645215138,
+        "minimum_naive_gap": 1.3455472406840716,
+        "minimum_residual_gap": 2.017994845424254,
+        "orientation": "right",
+        "row_count": 21,
+        "volume": 3
+      },
+      {
+        "beta": 1.0,
+        "dimension": 4,
+        "maximum_energy_residual": 9.020562075079397e-16,
+        "maximum_variance_envelope_deficit": 0.0,
+        "minimum_coarse_gap": 0.9740987432649717,
+        "minimum_decomposition_gap": 0.48704937163248585,
+        "minimum_full_gap": 0.928409645215138,
+        "minimum_naive_gap": 1.3455472406840716,
+        "minimum_residual_gap": 2.017994845424254,
+        "orientation": "left",
+        "row_count": 21,
+        "volume": 3
+      },
+      {
+        "beta": 2.0,
+        "dimension": 4,
+        "maximum_energy_residual": 1.0130785099704553e-15,
+        "maximum_variance_envelope_deficit": 0.0,
+        "minimum_coarse_gap": 0.8007589135166179,
+        "minimum_decomposition_gap": 0.40037945675830894,
+        "minimum_full_gap": 0.7800272826659477,
+        "minimum_naive_gap": 1.141944995628299,
+        "minimum_residual_gap": 2.0433471996935677,
+        "orientation": "right",
+        "row_count": 21,
+        "volume": 3
+      },
+      {
+        "beta": 2.0,
+        "dimension": 4,
+        "maximum_energy_residual": 5.551115123125783e-16,
+        "maximum_variance_envelope_deficit": 0.0,
+        "minimum_coarse_gap": 0.8007589135166182,
+        "minimum_decomposition_gap": 0.4003794567583091,
+        "minimum_full_gap": 0.7800272826659476,
+        "minimum_naive_gap": 1.141944995628298,
+        "minimum_residual_gap": 2.043347199693568,
+        "orientation": "left",
+        "row_count": 21,
+        "volume": 3
+      },
+      {
+        "beta": 4.0,
+        "dimension": 4,
+        "maximum_energy_residual": 1.1657341758564144e-15,
+        "maximum_variance_envelope_deficit": 0.0,
+        "minimum_coarse_gap": 0.6748501227001458,
+        "minimum_decomposition_gap": 0.3374250613500729,
+        "minimum_full_gap": 0.66823386419841,
+        "minimum_naive_gap": 0.9376584261032115,
+        "minimum_residual_gap": 2.104077102863536,
+        "orientation": "right",
+        "row_count": 21,
+        "volume": 3
+      },
+      {
+        "beta": 4.0,
+        "dimension": 4,
+        "maximum_energy_residual": 6.38378239159465e-16,
+        "maximum_variance_envelope_deficit": 0.0,
+        "minimum_coarse_gap": 0.6748501227001455,
+        "minimum_decomposition_gap": 0.3374250613500728,
+        "minimum_full_gap": 0.6682338641984102,
+        "minimum_naive_gap": 0.9376584261032117,
+        "minimum_residual_gap": 2.1040771028635348,
+        "orientation": "left",
+        "row_count": 21,
+        "volume": 3
+      },
+      {
+        "beta": 8.0,
+        "dimension": 4,
+        "maximum_energy_residual": 8.881784197001252e-16,
+        "maximum_variance_envelope_deficit": 0.0,
+        "minimum_coarse_gap": 0.634590321876555,
+        "minimum_decomposition_gap": 0.3172951609382775,
+        "minimum_full_gap": 0.6310329497027757,
+        "minimum_naive_gap": 0.8593660312215831,
+        "minimum_residual_gap": 2.0746768524042976,
+        "orientation": "right",
+        "row_count": 21,
+        "volume": 3
+      },
+      {
+        "beta": 8.0,
+        "dimension": 4,
+        "maximum_energy_residual": 1.1934897514720433e-15,
+        "maximum_variance_envelope_deficit": 0.0,
+        "minimum_coarse_gap": 0.634590321876555,
+        "minimum_decomposition_gap": 0.3172951609382775,
+        "minimum_full_gap": 0.6310329497027756,
+        "minimum_naive_gap": 0.859366031221583,
+        "minimum_residual_gap": 2.074676852404299,
+        "orientation": "left",
+        "row_count": 21,
+        "volume": 3
+      },
+      {
+        "beta": 0.5,
+        "dimension": 5,
+        "maximum_energy_residual": 1.2212453270876722e-15,
+        "maximum_variance_envelope_deficit": 0.0,
+        "minimum_coarse_gap": 1.250022541555371,
+        "minimum_decomposition_gap": 0.6250112707776855,
+        "minimum_full_gap": 1.2209548098932475,
+        "minimum_naive_gap": 1.3755872181794124,
+        "minimum_residual_gap": 2.431320983647586,
+        "orientation": "right",
+        "row_count": 31,
+        "volume": 3
+      },
+      {
+        "beta": 0.5,
+        "dimension": 5,
+        "maximum_energy_residual": 1.2212453270876722e-15,
+        "maximum_variance_envelope_deficit": 0.0,
+        "minimum_coarse_gap": 1.2500225415553732,
+        "minimum_decomposition_gap": 0.6250112707776866,
+        "minimum_full_gap": 1.2209548098932472,
+        "minimum_naive_gap": 1.3755872181794124,
+        "minimum_residual_gap": 2.4313209836475864,
+        "orientation": "left",
+        "row_count": 31,
+        "volume": 3
+      },
+      {
+        "beta": 1.0,
+        "dimension": 5,
+        "maximum_energy_residual": 1.5543122344752192e-15,
+        "maximum_variance_envelope_deficit": 0.0,
+        "minimum_coarse_gap": 1.382101597583423,
+        "minimum_decomposition_gap": 0.6910507987917115,
+        "minimum_full_gap": 1.3641565064111036,
+        "minimum_naive_gap": 1.4510839118290395,
+        "minimum_residual_gap": 2.357256461380998,
+        "orientation": "right",
+        "row_count": 31,
+        "volume": 3
+      },
+      {
+        "beta": 1.0,
+        "dimension": 5,
+        "maximum_energy_residual": 1.2212453270876722e-15,
+        "maximum_variance_envelope_deficit": 0.0,
+        "minimum_coarse_gap": 1.382101597583422,
+        "minimum_decomposition_gap": 0.691050798791711,
+        "minimum_full_gap": 1.364156506411105,
+        "minimum_naive_gap": 1.451083911829039,
+        "minimum_residual_gap": 2.3572564613809988,
+        "orientation": "left",
+        "row_count": 31,
+        "volume": 3
+      },
+      {
+        "beta": 2.0,
+        "dimension": 5,
+        "maximum_energy_residual": 1.4432899320127035e-15,
+        "maximum_variance_envelope_deficit": 0.0,
+        "minimum_coarse_gap": 1.3696743479186029,
+        "minimum_decomposition_gap": 0.6848371739593014,
+        "minimum_full_gap": 1.3269257111273458,
+        "minimum_naive_gap": 1.4766984968363397,
+        "minimum_residual_gap": 2.306581144567362,
+        "orientation": "right",
+        "row_count": 31,
+        "volume": 3
+      },
+      {
+        "beta": 2.0,
+        "dimension": 5,
+        "maximum_energy_residual": 1.6653345369377348e-15,
+        "maximum_variance_envelope_deficit": 0.0,
+        "minimum_coarse_gap": 1.3696743479185987,
+        "minimum_decomposition_gap": 0.6848371739592993,
+        "minimum_full_gap": 1.3269257111273423,
+        "minimum_naive_gap": 1.4766984968363346,
+        "minimum_residual_gap": 2.3065811445673603,
+        "orientation": "left",
+        "row_count": 31,
+        "volume": 3
+      },
+      {
+        "beta": 4.0,
+        "dimension": 5,
+        "maximum_energy_residual": 3.1086244689504383e-15,
+        "maximum_variance_envelope_deficit": 0.0,
+        "minimum_coarse_gap": 1.4001485485993184,
+        "minimum_decomposition_gap": 0.7000742742996592,
+        "minimum_full_gap": 1.3735862945607102,
+        "minimum_naive_gap": 1.468038296677744,
+        "minimum_residual_gap": 2.462275698161946,
+        "orientation": "right",
+        "row_count": 31,
+        "volume": 3
+      },
+      {
+        "beta": 4.0,
+        "dimension": 5,
+        "maximum_energy_residual": 3.1086244689504383e-15,
+        "maximum_variance_envelope_deficit": 0.0,
+        "minimum_coarse_gap": 1.4001485485992051,
+        "minimum_decomposition_gap": 0.7000742742996026,
+        "minimum_full_gap": 1.3735862945605974,
+        "minimum_naive_gap": 1.4680382966776444,
+        "minimum_residual_gap": 2.4622756981619602,
+        "orientation": "left",
+        "row_count": 31,
+        "volume": 3
+      },
+      {
+        "beta": 8.0,
+        "dimension": 5,
+        "maximum_energy_residual": 6.894484982922222e-14,
+        "maximum_variance_envelope_deficit": 0.0,
+        "minimum_coarse_gap": 1.8775574544980524,
+        "minimum_decomposition_gap": 0.9387787272490262,
+        "minimum_full_gap": 1.876562049161948,
+        "minimum_naive_gap": 1.9130224549140238,
+        "minimum_residual_gap": 3.068736374114657,
+        "orientation": "right",
+        "row_count": 31,
+        "volume": 3
+      },
+      {
+        "beta": 8.0,
+        "dimension": 5,
+        "maximum_energy_residual": 2.8199664825478976e-14,
+        "maximum_variance_envelope_deficit": 0.0,
+        "minimum_coarse_gap": 1.8775574544980516,
+        "minimum_decomposition_gap": 0.9387787272490258,
+        "minimum_full_gap": 1.8765620491619477,
+        "minimum_naive_gap": 1.9130224549140231,
+        "minimum_residual_gap": 3.068736374114656,
+        "orientation": "left",
+        "row_count": 31,
+        "volume": 3
+      }
+    ],
+    "row_count": 1030,
+    "sector_a_closed": false,
+    "source_uniformity_closed": false,
+    "system_count": 8,
+    "volume_independent_schur_gap_closed": false
+  },
+  "exploration_id": "EXP-001251",
+  "manifest": "strategy/pre-a-cp1-st8-q3lock-harmonic-schur-capacity-manifest.json",
+  "result_id": "R-406",
+  "schema": "tect/pre-a-r406-primary/1.0",
+  "scope": {
+    "c6_closed": false,
+    "common_alpha_closed": false,
+    "common_core_closed": false,
+    "continuum_closed": false,
+    "cross_phase_capacity_control_closed": false,
+    "cutoff_independent_schur_gap_closed": false,
+    "exhaustion_uniformity_closed": false,
+    "finite_energy_variance_split_closed": true,
+    "finite_harmonic_extension_closed": true,
+    "finite_naive_block_gap_obstruction_closed": true,
+    "finite_residual_gap_closed": true,
+    "finite_schur_capacity_closed": true,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "no_new_negative_result": true,
+    "no_pdf": true,
+    "no_tier_change": true,
+    "phase_conditioned_uniformity_closed": false,
+    "pre_a_closed": false,
+    "sector_a_closed": false,
+    "source_uniformity_closed": false,
+    "volume_independent_schur_gap_closed": false
+  },
+  "verdict": "PASS"
+}

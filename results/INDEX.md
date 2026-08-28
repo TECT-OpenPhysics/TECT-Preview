@@ -5,10 +5,11 @@
 
 Authorities: `RESULTS-LEDGER.md`.
 
-**239 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
+**240 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
 
 | ID | Result | Tier/scope |
 |---|---|---|
+| [`R-406`](../RESULTS-LEDGER.md#r-406) | Harmonic-extension Schur capacity decomposition | T0 |
 | [`R-405`](../RESULTS-LEDGER.md#r-405) | Phase-conditioned intrinsic gap and inter-phase capacity split | T0 |
 | [`R-404`](../RESULTS-LEDGER.md#r-404) | Intrinsic kinetic graph Poincare stress for Q3 likelihood rows | T0 |
 | [`R-403`](../RESULTS-LEDGER.md#r-403) | Increasing-cutoff Hamiltonian carre-du-champ stress | T0 |
@@ -33,7 +34,6 @@ Authorities: `RESULTS-LEDGER.md`.
 | [`R-384`](../RESULTS-LEDGER.md#r-384) | Two-scale filter-removal corridor | T0 |
 | [`R-383`](../RESULTS-LEDGER.md#r-383) | Frequency-adapted endpoint filter | T0 |
 | [`R-382`](../RESULTS-LEDGER.md#r-382) | Increasing-cutoff endpoint modular moment stress | T0 |
-| [`R-381`](../RESULTS-LEDGER.md#r-381) | Endpoint modular moment to energy Cauchy bridge | T0 |
 
 Search without loading the full ledger:
 

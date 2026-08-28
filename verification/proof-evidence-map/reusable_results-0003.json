@@ -2,6 +2,42 @@
   "data": [
     {
       "accepted_event_ids": [
+        "20260614-t-030-r-040-true-sphere-l-dependence-distinct-r",
+        "20260614-t-030-r-041-r-033-step-1-sidon-height-latitude",
+        "20260614-t-030-r-042-r-033-step-2-height-energy-bound-e"
+      ],
+      "anchor": "r-040",
+      "claim_ref_basis": {
+        "B5-BEYOND-LAYER-BOUND": "proof_anchor_unique_family:B5"
+      },
+      "claim_refs": [
+        "B5-BEYOND-LAYER-BOUND"
+      ],
+      "co_recorded_negative_tags": [],
+      "detail": {
+        "proven_in": "B5 / dr2-t030-height-multiplicity v1.0",
+        "publication_target": "S^2 additive-energy paper / T-030",
+        "reuse_scope": "arbitrary-Q DR-2 (T-030); the height-multiplicity refinement of the few-circles bound; the distinct-radius (sphere) vs equal-radius (cylinder) energy dichotomy; motivation for the R-033 incidence route.",
+        "statement_one_line": "(PROVED) For L parallel circles with DISTINCT radii at heights z_i (N=|Q|), E_+(Q) <= (2 p_max + 1) N^2, p_max = max_H #{(i,j): z_i+z_j=H} (height additive multiplicity) -- replaces R-039's linear L by p_max (multi-circle Lemma A / R-025 refinement; for m!=0 grouping by plane-pair, the in-plane cross term r^{ij}(M_xy)<=2 by distinct radii, and the M_xy=0 i!=j term vanishes). (EMPIRICAL TRUTH) distinct-radius parallel circles (sphere latitudes have radii sqrt(R-z_i^2), distinct ONLY when z_i^2 pairwise distinct -- z and -z share a radius; the test family 5,10,..,5L is a distinct-radius family, not a sphere-arithmetic family) have E_+/N^2 BOUNDED (~3) EVEN at AP heights (p_max~L): tested to L=12 (Sidon E_+/N^2 2.22-2.60, AP 2.60-2.83) -- E_+ = O(N^2), L-INDEPENDENT; the p_max bound is loose because distinct radii send the colliding plane-pairs to different in-plane sums. (CONTRAST) the LINEAR regime is an EQUAL-radius (cylinder, off-sphere) artifact: same radius + AP heights gives the product C x AP, E_+ ~ 2 L N^2 (E_+/N^2 4.3->22.9, E_+/(LN^2)~1.9 const at L=2..12). Verified dr2_t030_height_multiplicity.py 6/6. CONJECTURE: sphere latitude unions have E_+ = O(N^2 polylog); the residual to a proof is the off-diagonal 4-circle in-plane energy = an incidence problem (-> R-033).",
+        "tier": "PARTIAL ADVANCE / frontier characterisation. Refined bound (2 p_max+1)N^2 PROVED (T7-within-class, distinct radii essential). O(N^2) sphere conjecture STRONG EVIDENCE (T4, scan to L=12 no growth). Does NOT close T-030: arbitrary-Q N^{2+eps} STILL OPEN (record N^{9/4}, R-033). No tier/gate/hypothesis flip; B5 stays T7-SCOPE_{admissibility-bounded} given A1. Honest prediction-correction recorded (initial AP->linear prediction refuted by the data for distinct radii)."
+      },
+      "detail_title": "True sphere L-dependence of the few-circles energy (height-multiplicity refinement)",
+      "family_refs": [
+        "B5"
+      ],
+      "id": "R-040",
+      "normalized_detail": {
+        "boundary": "PARTIAL ADVANCE / frontier characterisation. Refined bound (2 p_max+1)N^2 PROVED (T7-within-class, distinct radii essential). O(N^2) sphere conjecture STRONG EVIDENCE (T4, scan to L=12 no growth). Does NOT close T-030: arbitrary-Q N^{2+eps} STILL OPEN (record N^{9/4}, R-033). No tier/gate/hypothesis flip; B5 stays T7-SCOPE_{admissibility-bounded} given A1. Honest prediction-correction recorded (initial AP->linear prediction refuted by the data for distinct radii).",
+        "proof_anchor": "B5 / dr2-t030-height-multiplicity v1.0",
+        "publication_target": "S^2 additive-energy paper / T-030",
+        "reuse": "arbitrary-Q DR-2 (T-030); the height-multiplicity refinement of the few-circles bound; the distinct-radius (sphere) vs equal-radius (cylinder) energy dichotomy; motivation for the R-033 incidence route.",
+        "statement": "(PROVED) For L parallel circles with DISTINCT radii at heights z_i (N=|Q|), E_+(Q) <= (2 p_max + 1) N^2, p_max = max_H #{(i,j): z_i+z_j=H} (height additive multiplicity) -- replaces R-039's linear L by p_max (multi-circle Lemma A / R-025 refinement; for m!=0 grouping by plane-pair, the in-plane cross term r^{ij}(M_xy)<=2 by distinct radii, and the M_xy=0 i!=j term vanishes). (EMPIRICAL TRUTH) distinct-radius parallel circles (sphere latitudes have radii sqrt(R-z_i^2), distinct ONLY when z_i^2 pairwise distinct -- z and -z share a radius; the test family 5,10,..,5L is a distinct-radius family, not a sphere-arithmetic family) have E_+/N^2 BOUNDED (~3) EVEN at AP heights (p_max~L): tested to L=12 (Sidon E_+/N^2 2.22-2.60, AP 2.60-2.83) -- E_+ = O(N^2), L-INDEPENDENT; the p_max bound is loose because distinct radii send the colliding plane-pairs to different in-plane sums. (CONTRAST) the LINEAR regime is an EQUAL-radius (cylinder, off-sphere) artifact: same radius + AP heights gives the product C x AP, E_+ ~ 2 L N^2 (E_+/N^2 4.3->22.9, E_+/(LN^2)~1.9 const at L=2..12). Verified dr2_t030_height_multiplicity.py 6/6. CONJECTURE: sphere latitude unions have E_+ = O(N^2 polylog); the residual to a proof is the off-diagonal 4-circle in-plane energy = an incidence problem (-> R-033)."
+      },
+      "summary": "PARTIAL ADVANCE; refined bound PROVED + O(N^2) sphere conjecture (T4); residual = 4-circle incidence -> R-033; T-030 OPEN; dr2_t030_height_multiplicity.py 6/6",
+      "title": "True sphere L-dependence: distinct-radius circles E_+<=(2 p_max+1)N^2 and empirically O(N^2) even at AP heights; linear is a cylinder artifact"
+    },
+    {
+      "accepted_event_ids": [
         "20260614-t-030-r-039-few-circles-bound-is-linear-on-a-sp",
         "20260614-freeze-prep-patches-per-operator-accept-with-pa",
         "20260614-t-030-r-040-true-sphere-l-dependence-distinct-r",

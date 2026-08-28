@@ -42,6 +42,7 @@ policy in `governance/development-history.md`.
 | [R-376](#r-376) | Hilbert-Schmidt Lipschitz bridge for the capped Liouvillian kernel | R-376 v1.0 is a T0 claim-nonbearing finite operator-interface checkpoint under EXP-001218. A noncommuting cutoff-2 edge Liouvillian stress gives maximum full-kernel Frobenius ratio 0.9787544362168733 and 64-layer ratio 0.9755896836319287 with 76/76 integrated assertions; general Schatten-2 proof, operator-norm locality, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
 | [R-377](#r-377) | Gap-free odd-Matsubara resolvent telescoping budget | R-377 v1.0 is a T0 claim-nonbearing finite resolvent-interface checkpoint under EXP-001219. The exact positive-resolvent difference identity and its 64-layer budget pass 122/122 integrated assertions with Lean R377; the accumulated finite budget ratio is 0.9895313426497929 and the absolute-value square-root debt is recorded separately. Uniform locality, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
 | [R-382](#r-382) | Increasing-cutoff endpoint modular moment stress | R-382 v1.0 is a T0 claim-nonbearing finite cutoff-profile diagnostic under EXP-001224. The R-381 endpoint-energy bridge passes across 2816 all-prefix actual-Q3 contexts with Lean R382; edge max M_0 grows from 2.733031855844076 at d=3 to 41.64826651661874 at d=6 and max M_2 from 0.008378198414559081 to 17.719559304500326, with d=5 to d=6 ratios 8.855033106195243 and 36.38049903040583. This is finite growth evidence only; uniform M_0/M_2 control, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
+| [R-406](#r-406) | Harmonic-extension Schur capacity decomposition | R-406 v1.0 is a T0 claim-nonbearing finite variational checkpoint under EXP-001251. It replaces the unsafe block-constant Ritz shortcut by a harmonic-extension Schur operator and a block-mean-zero residual form over 8 systems, 80 profiles and 1030 rows; primary 4267/4267, independent 2114/2114, hostile 6/6, integrated 38/38 and Lean R406 pass. The corrected factor-two envelope is positive on the finite grid, while all common-core, phase-selection and QFT gates remain open |
 | [R-405](#r-405) | Phase-conditioned intrinsic gap and inter-phase capacity split | R-405 v1.0 is a T0 claim-nonbearing finite route split under EXP-001250. It separates the R-404 momentum graph into lower/upper physical-coordinate sector gaps, cross-sector capacity and neutral central mass across 8 systems, 80 profiles and 1030 rows; primary 1178/1178, independent 1088/1088, hostile 5/5, integrated 33/33 and Lean R405 pass. The full-gap range is [0.6310329497027756,6.229495058532403], the induced sector-gap range is [1.5773625260965005,20.555978652063708] and cross capacity is [0.11650039514772156,1.222041249326006]. The finite split is not a uniform phasewise bound; common-core, phase-selection, broken-sector GNS and all QFT gates remain open |
 | [R-404](#r-404) | Intrinsic kinetic graph Poincare stress for Q3 likelihood rows | R-404 v1.0 is a T0 claim-nonbearing finite route checkpoint under EXP-001249. It replaces the unstable R-402 coordinate upper comparison with the actual momentum-weighted conditional graph; primary 1398/1398, independent 1388/1388, hostile 6/6, integrated 37/37 and Lean R404 pass over 7 systems, 2688 contexts and 21120 rows. The finite generalized graph gap is [0.7570174175402339,5.647863075935321] and stays positive across d=3,4,5,6,8,10,12, but cutoff/volume/phase uniformity, common core and all QFT gates remain open |
 | [R-403](#r-403) | Increasing-cutoff Hamiltonian carre-du-champ stress | R-403 v1.0 is a T0 claim-nonbearing finite stress under EXP-001248. Across volume-two cutoffs d=3,4,5,6,8,10,12 and the declared source/history/order/prefix/adjoint/orientation grid, primary 1397/1397, independent 1379/1379, hostile 7/7, integrated 37/37 and Lean R403 pass. The nonzero-row E_kin/D_q range is [1.0461038216925114,109929.13074605557], with cutoff-maximum growth 24664.408607934973; this blocks automatic uniform-upper promotion but is not a divergence theorem, and all common-core/QFT gates remain open |
@@ -644,6 +645,66 @@ No new negative result, tier change, or R-376 PDF is issued.
 
 **Proven in:** manifest, certificate, Lean entrypoint, primary script,
 independent script, integrated verifier, scope note, and saved run artefacts.
+
+<a id="r-406"></a>
+### R-406 -- Harmonic-extension Schur capacity decomposition
+
+**Result ID.** R-406 is a T0, claim-nonbearing finite variational checkpoint
+under EXP-001251.  It follows R-405 and repairs the tempting but invalid use
+of a block-constant Ritz eigenvalue as a lower bound for the full intrinsic
+momentum graph.
+
+For each conditional law `pi`, let `L` be the symmetric conductance Laplacian
+and set
+
+```
+A = diag(pi)^(-1/2) L diag(pi)^(-1/2).
+```
+
+The weighted block-constant subspace `U` contains the lower, neutral (when
+present), and upper q-coordinate sectors.  With `V` its Euclidean orthogonal
+complement, fixed coarse coordinates have the harmonic minimizer
+
+```
+w_h = -A_VV^(-1) A_VU z,
+S = A_UU - A_UV A_VV^(-1) A_VU.
+```
+
+The coarse gap is the generalized first positive eigenvalue of `S` using the
+norm of the harmonic extension; the residual gap is the least eigenvalue of
+`A_VV`.  Energy orthogonality is checked directly.  Since the harmonic and
+residual vectors are not assumed variance-orthogonal, the safe finite bound is
+`(1/2) min(coarse gap, residual gap)` via the triangle inequality.
+
+**Verification.** The finite grid contains volume-two dimensions `4,5,6,8,10,12`
+and volume-three dimensions `4,5`, beta in `{1/2,1,2,4,8}`, both collar
+orientations, every prefix conditional row and 80 profiles.  The primary lane
+passes `4267/4267` over `1030` rows; the independent lane passes `2114/2114`,
+the hostile lane `6/6`, the integrated verifier `38/38`, and Lean R406 compiles.
+
+The full intrinsic gap range is
+`[0.6310329497027756,6.229495058532403]`; the harmonic Schur coarse range is
+`[0.634590321876555,18.727067154255124]`; the block-mean-zero residual range
+is `[2.0000155411351734,30.07649788337455]`; and the corrected finite lower
+envelope is `[0.3172951609382775,3.232260013170645]`.  The naive
+block-constant Ritz gap ranges from `0.859366031221583` to
+`35.521614497313294` and exceeds the full gap on all `1030` rows.
+
+The hostile `(V=2,d=12,beta=8)` representative has full gap `3.38789`,
+corrected envelope `1.77408`, and a naive false-lower-bound margin `1.09327`.
+Deleting all inter-block edges exposes two zero modes, while a diagonal-q
+mutation has zero kinetic edges.
+
+This finite calculation identifies the correct variational interface for a
+phase-conditioned proof: control the Schur coarse capacity and the residual
+form separately.  It does not establish a uniform constant.
+
+**Boundary.** R-406 proves no cutoff-, volume-, source- or exhaustion-uniform
+bound, phase-selection theorem, common core, common alpha,
+Hamiltonian-to-OS/KMS/GNS identification, broken-sector GNS gap, continuum,
+C6, Sector-A or Pre-A closure.  No tier change or negative result is issued.
+
+**Proven in:** [R-406 certificate](strategy/pre-a-cp1-st8-q3lock-harmonic-schur-capacity-certificate-260830.md), [Lean entrypoint](verification/lean/Tect/R406.lean), primary/independent/hostile scripts, integrated verifier, [scope note](claims/C6-SPACETIME-SIGNATURE/notes/harmonic-schur-capacity-260830.md), and saved run artefacts.
 
 <a id="r-405"></a>
 ### R-405 -- Phase-conditioned intrinsic gap and inter-phase capacity split

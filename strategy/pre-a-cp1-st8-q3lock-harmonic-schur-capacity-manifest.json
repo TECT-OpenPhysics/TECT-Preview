@@ -1,0 +1,104 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-HARMONIC-SCHUR-CAPACITY-v0",
+  "result_id": "R-406",
+  "title": "Harmonic-extension Schur capacity decomposition of phase-conditioned graph gaps",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001251",
+  "claim_bearing": false,
+  "parent_explorations": ["EXP-001250", "EXP-001249", "EXP-001244"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY",
+    "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+  ],
+  "question": "Can the phase-conditioned intrinsic graph be decomposed by an exact harmonic extension and Schur complement, so that within-block coercivity and the coarse inter-block capacity give a valid lower bound without the false naive block-gap shortcut?",
+  "new_perspective": {
+    "principle": "Use the Dirichlet principle rather than the Ritz restriction: fix the conditional block means, minimize the graph energy by harmonic extension, and retain the orthogonal residual as a separate coercive sector.",
+    "route": [
+      "Normalize each conditional law pi and form A=diag(pi)^(-1/2)Ldiag(pi)^(-1/2) from the intrinsic momentum conductance.",
+      "Let U be the weighted block-constant subspace for lower, neutral and upper q sectors and V its Euclidean orthogonal complement.",
+      "Eliminate V by the Schur complement S=A_UU-A_UV A_VV^(-1) A_VU; the positive spectrum of S on the global-mean-zero coarse space is the harmonic coarse capacity gap.",
+      "The residual gap is the least eigenvalue of A_VV. Orthogonality of the harmonic correction gives an exact energy and variance split, hence a finite lower bound min(coarse gap,residual gap).",
+      "Compute the uncorrected block-constant Ritz gap as a hostile comparison: it is an upper restriction value and can exceed the full gap, so it cannot be used as a lower bound."
+    ],
+    "qft_bridge": "An analytic version would supply a phase-conditioned common-core estimate by proving uniform lower bounds for the Schur coarse operator and the zero-block-mean residual form. The Schur capacity is the precise finite interface to the inter-phase selection/tunnelling debt; it is not itself a phase-selection or GNS theorem."
+  },
+  "finite_theorem": {
+    "weighted_operator": "A=diag(pi)^(-1/2)Ldiag(pi)^(-1/2), with L the symmetric intrinsic momentum graph Laplacian.",
+    "harmonic_extension": "For coarse coordinate z in the weighted block-constant subspace, w_h=-A_VV^(-1)A_VU z minimizes y^T A y over U^T y=z.",
+    "schur_operator": "S=A_UU-A_UV A_VV^(-1)A_VU; its first positive eigenvalue on the global-mean-zero coarse space is kappa_coarse.",
+    "residual_operator": "The first eigenvalue of A_VV is kappa_residual for block-mean-zero fluctuations.",
+    "finite_bound": "E(f) >= min(kappa_coarse,kappa_residual) Var_pi(f) on the centered finite graph, after the harmonic/residual orthogonal split.",
+    "shortcut_warning": "The block-constant restriction gap is a Ritz upper value for the full gap, not a lower bound; the Schur correction is required."
+  },
+  "finite_fixture": {
+    "admissible_pairs": [
+      {"volume": 2, "cutoff_dimensions": [4, 5, 6, 8, 10, 12]},
+      {"volume": 3, "cutoff_dimensions": [4, 5]}
+    ],
+    "beta_values": ["1/2", "1", "2", "4", "8"],
+    "orientations": ["right", "left"],
+    "chi": "1",
+    "r": "-1",
+    "g": "3/5",
+    "c": "3/5",
+    "lambda": "1/10",
+    "probability_floor": 1e-30,
+    "eigen_zero_threshold": 1e-9,
+    "gap_floor": 1e-10,
+    "decomposition_tolerance": 2e-8,
+    "crosscheck_tolerance": 1e-8
+  },
+  "scope": {
+    "finite_harmonic_extension_closed": true,
+    "finite_schur_capacity_closed": true,
+    "finite_residual_gap_closed": true,
+    "finite_energy_variance_split_closed": true,
+    "finite_naive_block_gap_obstruction_closed": true,
+    "cutoff_independent_schur_gap_closed": false,
+    "volume_independent_schur_gap_closed": false,
+    "phase_conditioned_uniformity_closed": false,
+    "cross_phase_capacity_control_closed": false,
+    "source_uniformity_closed": false,
+    "exhaustion_uniformity_closed": false,
+    "common_core_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R406.lean",
+    "theorem_markers": ["harmonic_residual_square_nonnegative", "schur_variance_split", "finite_scope"],
+    "command": "lake env lean Tect/R406.lean",
+    "boundary": "Lean checks scalar square/variance bookkeeping only; Schur spectra, Gibbs rows, graph limits, common domains and QFT reconstruction remain executable/open analysis."
+  },
+  "artifacts": {
+    "primary_script": "codes/foundations/pre_a_cp1_st8_q3lock_harmonic_schur_capacity.py",
+    "independent_script": "codes/foundations/pre_a_cp1_st8_q3lock_harmonic_schur_capacity_independent.py",
+    "hostile_script": "codes/foundations/pre_a_cp1_st8_q3lock_harmonic_schur_capacity_hostile.py",
+    "integrated_verifier": "codes/foundations/pre_a_cp1_st8_q3lock_harmonic_schur_capacity_verify.py",
+    "lean": "verification/lean/Tect/R406.lean"
+  },
+  "promotion_criteria": [
+    "Prove source-, cutoff-, volume- and exhaustion-uniform lower bounds for the Schur coarse operator and residual form on one Hamiltonian common core.",
+    "Identify the Schur coarse variables with a justified phase boundary condition and control neutral mass and cross-sector capacity under the limit.",
+    "Transfer the centered harmonic/residual split to the R-399 shell and then discharge the common-alpha and broken-sector GNS gates."
+  ],
+  "stop_conditions": [
+    "If the Schur coarse or residual gap collapses under a validated cutoff/volume stress, retain the decomposition only as a diagnostic and do not claim phasewise coercivity.",
+    "If the block-constant shortcut exceeds the full gap, keep the Schur correction mandatory; never use a Ritz restriction as a lower bound.",
+    "Finite Schur positivity is not a common-core, phase-selection, GNS, QFT or mass-gap theorem."
+  ],
+  "boundary": "T0 claim-nonbearing finite harmonic-extension/Schur-complement checkpoint only. It proves no uniform sector gap, phase selection, common core, common alpha, OS/KMS/GNS reconstruction, mass gap, continuum, C6, Sector-A or Pre-A closure.",
+  "no_overclaim": "The Schur decomposition is an exact finite variational interface and a correction to a false shortcut. Its constants are not promoted to regulator or thermodynamic bounds.",
+  "recorded_by": "Codex"
+}

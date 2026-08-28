@@ -1,0 +1,78 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001251",
+  "title": "Harmonic-extension Schur capacity decomposition for phase-conditioned graph gaps",
+  "recorded_at": "2026-08-30T20:00:00Z",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-08-29",
+  "provenance": "contemporaneous",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "question": "Can the phase-conditioned intrinsic graph be decomposed by an exact harmonic extension and Schur complement, so that within-block coercivity and the coarse inter-block capacity give a valid lower bound without the false naive block-gap shortcut?",
+  "method": [
+    "Use the actual finite Q3 conditional momentum conductance from the R-405 grid and form A=diag(pi)^(-1/2)Ldiag(pi)^(-1/2).",
+    "Build the weighted block-constant span for lower, neutral when present, and upper q-coordinate sectors, and an orthogonal complement V.",
+    "Eliminate V by w_h=-A_VV^(-1)A_VU z and compute the Schur operator S=A_UU-A_UV A_VV^(-1)A_VU; use the harmonic-extension mass matrix for its generalized gap.",
+    "Check energy orthogonality on deterministic centered probes, use the explicit factor-two variance envelope, and record the safe lower value one half times the minimum of the coarse and residual gaps.",
+    "Retain the uncorrected block-constant Ritz value as a hostile shortcut test and apply cross-edge deletion and diagonal-q mutations to expose disconnected or zero-edge behavior.",
+    "Run a non-importing reconstruction, hostile mutation lane, integrated verifier and Lean scalar bookkeeping cross-check."
+  ],
+  "finding": "The primary lane passes 4267/4267 assertions over 8 systems, 80 profiles and 1030 conditional rows; the independent lane passes 2114/2114, hostile 6/6, integrated 38/38 and Lean R406 compiles. Full intrinsic gaps range from 0.6310329497027756 to 6.229495058532403. The harmonic Schur coarse gap ranges from 0.634590321876555 to 18.727067154255124, the block-mean-zero residual gap from 2.0000155411351734 to 30.07649788337455, and the explicit factor-two corrected lower envelope from 0.3172951609382775 to 3.232260013170645. The naive block-constant Ritz gap ranges from 0.859366031221583 to 35.521614497313294 and exceeds the full gap on all 1030 rows. In the hostile representative (V=2,d=12,beta=8), the full gap is 3.38789, the corrected envelope is 1.77408, the naive false-lower-bound margin is 1.09327, cross-edge deletion exposes two zero modes, and the diagonal-q mutation has zero edges.",
+  "verdict": "advanced",
+  "decision_reason": "The finite Dirichlet construction repairs the tempting but invalid use of a block-constant Ritz eigenvalue as a lower bound. The Schur correction and residual restriction provide a mathematically valid finite variational interface, while the factor-two variance envelope makes the norm mismatch explicit. This advances the phase-conditioned route without asserting any regulator or thermodynamic uniformity.",
+  "boundary": "T0 claim-nonbearing finite harmonic-extension/Schur-complement checkpoint. It proves no cutoff-, volume-, source- or exhaustion-uniform sector bound, phase selection, common core, common alpha, OS/KMS/GNS reconstruction, mass gap, continuum, C6, Sector-A or Pre-A closure.",
+  "qft_interface": {
+    "closed": "Finite harmonic minimizer, Schur coarse gap, block-mean-zero residual gap, exact energy split up to checked numerical residual, and a safe factor-two finite lower envelope.",
+    "open": "Uniform Schur/residual lower bounds on a Hamiltonian common core, phase-boundary identification, neutral/cross-capacity limit control, R-399 shell transfer, common alpha and broken-sector GNS coercivity."
+  },
+  "evidence_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-harmonic-schur-capacity-manifest.json#finite_theorem",
+    "strategy/pre-a-cp1-st8-q3lock-harmonic-schur-capacity-certificate-260830.md#Finite verification",
+    "codes/foundations/pre_a_cp1_st8_q3lock_harmonic_schur_capacity.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_harmonic_schur_capacity_independent.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_harmonic_schur_capacity_hostile.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_harmonic_schur_capacity_verify.py#main",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-primary-pre_a_cp1_st8_q3lock_harmonic_schur_capacity/primary.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-independent-pre_a_cp1_st8_q3lock_harmonic_schur_capacity/independent.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-hostile-pre_a_cp1_st8_q3lock_harmonic_schur_capacity/hostile.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-integrated-pre_a_cp1_st8_q3lock_harmonic_schur_capacity/integrated.json#derived",
+    "verification/lean/Tect/R406.lean#schur_variance_split",
+    "claims/C6-SPACETIME-SIGNATURE/notes/harmonic-schur-capacity-260830.md#R-406"
+  ],
+  "formal_refs": {
+    "results": ["R-406"],
+    "events": ["20260830-harmonic-schur-capacity-decomposition-2026-08-3"],
+    "negatives": []
+  },
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY",
+    "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+  ],
+  "related": [
+    {"id": "EXP-001250", "relation": "continues"},
+    {"id": "EXP-001249", "relation": "continues"},
+    {"id": "EXP-001244", "relation": "alternative_to"}
+  ],
+  "adversarial_review": [
+    {"axis": "block normalization", "check": "Every block column is normalized by its conditional mass and the Gram matrix is checked before the complement is used.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "Schur invertibility", "check": "A nonpositive residual spectrum aborts the lane; no pseudoinverse is silently substituted for a disconnected graph.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "energy orthogonality", "check": "The harmonic correction is solved from the residual block and deterministic centered probes check E(f)=E(h)+E(g) to the declared tolerance.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "variance mismatch", "check": "Harmonic and residual vectors are not assumed variance-orthogonal; the factor-two triangle envelope is explicit and the finite lower margin is checked.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "Ritz shortcut", "check": "The uncorrected block-constant restriction is compared with the full Fiedler mode; all 1030 rows exhibit a strict false-lower-bound separation.", "disposition": "UPHELD-AS-SHORTCUT-OBSTRUCTION"},
+    {"axis": "connectivity mutation", "check": "Deleting every inter-block edge exposes one zero mode per block, and replacing p by diagonal q creates no kinetic edges.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "QFT promotion", "check": "Finite Schur positivity is not converted into cutoff/volume/source/exhaustion uniformity, common-core dynamics, phase selection, GNS coercivity, a mass gap, continuum, C6, Sector-A or Pre-A closure.", "disposition": "UPHELD-OPEN"}
+  ],
+  "next_action": "Prove an analytic source-, cutoff-, volume- and exhaustion-uniform lower bound for both the Schur coarse operator and the block-mean-zero residual form on one Hamiltonian common core; identify the coarse variables with a controlled phase boundary condition, then transfer the centered split to the R-399 shell.",
+  "no_overclaim": "The corrected envelope is a finite variational bound with an explicit factor-two loss. It is not a thermodynamic spectral constant, a phase-selection theorem or a QFT mass-gap result.",
+  "formal_integration": {
+    "results": ["R-406"],
+    "events": ["20260830-harmonic-schur-capacity-decomposition-2026-08-3"],
+    "negatives": [],
+    "lean": "R406 PASS",
+    "no_new_negative": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "schema_version": "1.0"
+}
