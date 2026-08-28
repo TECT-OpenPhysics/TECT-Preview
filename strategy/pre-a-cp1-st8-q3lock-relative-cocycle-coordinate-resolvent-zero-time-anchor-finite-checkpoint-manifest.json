@@ -1,0 +1,143 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-RELATIVE-COCYCLE-COORDINATE-RESOLVENT-ZERO-TIME-ANCHOR-FINITE-v0",
+  "result_id": "R-386",
+  "title": "Coordinate-resolvent zero-time commutator anchor",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001229",
+  "claim_bearing": false,
+  "parent_explorations": ["EXP-001228", "EXP-001227", "EXP-001136"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-RESOLVENT-ALGEBRA-EXACT-POLYNOMIAL-COMMON-ALPHA-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+  ],
+  "question": "Can a position-only boundary bond be paired with a coordinate resolvent so that the relative-cocycle difference has an exact zero first variation, exposing a quadratic-in-time Cook remainder before any unbounded force estimate?",
+  "finite_fixture": {
+    "volume_values": [2, 4],
+    "oscillator_dimension": 3,
+    "graph_edges_by_volume": {
+      "2": [[0, 1]],
+      "4": [[0, 1], [0, 2], [1, 3], [2, 3]]
+    },
+    "chi": "1",
+    "r": "-1",
+    "g": "0.6",
+    "c": "0.6",
+    "lambda": "0.1",
+    "hbar": "1",
+    "beta_values": ["1/2", "1"],
+    "resolvent_imaginary_values": ["1/2", "1"],
+    "time_values": ["1/6", "1/3"],
+    "derivative_step": "1/100000",
+    "second_derivative_step": "1/10000",
+    "alpha_tolerance": 1e-9,
+    "zero_commutator_tolerance": 1e-9,
+    "first_derivative_tolerance": 1e-6,
+    "second_derivative_tolerance": 1e-3,
+    "modular_first_derivative_tolerance": 1e-5,
+    "agreement_tolerance": 1e-6,
+    "hostile_threshold": 1e-7,
+    "hostile_momentum_amplitude": "1/4",
+    "finite_only": true
+  },
+  "model": {
+    "boundary_term": "B=c/2*(q_x-q_y)^2+lambda/4*(q_x-q_y)^2*(q_x^2+q_y^2)",
+    "boundary_character": "B is a polynomial in commuting position coordinates only",
+    "coordinate_resolvent": "A_z=(i*eta I-q_s)^(-1), eta>0",
+    "zero_time_commutator": "[B,A_z]=0 for every site s, including sites outside the bond",
+    "first_variation": "d/dt(alpha_(H+B,t)(A_z)-alpha_(H,t)(A_z)) at t=0=(i/hbar)[B,A_z]=0",
+    "second_variation": "Delta''(0)=-(1/hbar^2)[B,[H,A_z]] when [B,A_z]=0",
+    "modular_anchor": "delta_H Delta(t)=(i/hbar)[H,Delta(t)] has zero first variation at t=0",
+    "dynamic_difference": "Delta(t)=alpha_(H+B,t)(A_z)-alpha_(H,t)(A_z)"
+  },
+  "coverage": {
+    "all_bond_prefixes": true,
+    "orders": ["forward", "reverse"],
+    "both_time_signs": true,
+    "all_translated_sites": true,
+    "both_beta_values": true,
+    "both_resolvent_imaginaries": true,
+    "both_adjoint_seeds": true,
+    "second_variation": true,
+    "modular_anchor": true
+  },
+  "scope": {
+    "finite_position_boundary_commutes_with_coordinate_resolvent_closed": true,
+    "finite_zero_first_variation_closed": true,
+    "finite_second_variation_reduction_closed": true,
+    "finite_modular_zero_first_variation_closed": true,
+    "finite_quadratic_time_diagnostic_closed": true,
+    "phase_local_bkm_estimate_closed": false,
+    "boundary_shell_l1_closed": false,
+    "cutoff_uniformity_closed": false,
+    "source_uniformity_closed": false,
+    "volume_uniformity_closed": false,
+    "shape_uniformity_closed": false,
+    "operator_domain_embedding_closed": false,
+    "direct_D_cauchy_closed": false,
+    "delta_D_cauchy_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "adversarial_review": [
+    {
+      "axis": "position-only boundary",
+      "check": "The boundary term is rebuilt from the manifest Q3 bond polynomial; the zero commutator is tested for every translated coordinate seed and not assumed for momentum seeds.",
+      "disposition": "UPHELD-FINITE"
+    },
+    {
+      "axis": "zero-time derivative",
+      "check": "The first variation is evaluated by a central difference and compared with the exact commutator difference; no small-time fit is relabelled as an identity.",
+      "disposition": "UPHELD-FINITE"
+    },
+    {
+      "axis": "second-order sign",
+      "check": "The second-variation reduction is checked against the expanded nested commutator with the declared alpha convention; the reduction is used only after the zero commutator assertion.",
+      "disposition": "UPHELD-FINITE"
+    },
+    {
+      "axis": "hostile momentum mutation",
+      "check": "A manifest-sized momentum perturbation is added to B in the hostile lane; the commutator and first variation must exceed the mutation threshold.",
+      "disposition": "UPHELD-FINITE"
+    },
+    {
+      "axis": "finite truncation",
+      "check": "All matrices are bounded oscillator truncations. No unbounded form-domain, infinite-dimensional Cook remainder or uniform t^2 bound is inferred.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "modular topology",
+      "check": "The modular row is a finite commutator diagnostic in the reference H; it is not a BKM, strong-star or representation-independent estimate.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "QFT promotion",
+      "check": "Phase-local BKM control, l1 shell summability, all uniformities, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain false.",
+      "disposition": "UPHELD-OPEN"
+    }
+  ],
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R386.lean",
+    "theorem_markers": ["commute_inverse_of_commute", "commutator_difference", "anchored_first_variation", "anchored_second_variation", "scope_fixture"],
+    "command": "lake env lean Tect/R386.lean",
+    "boundary": "Lean checks abstract group inversion and noncommutative commutator bookkeeping only; finite matrix spectra, weighted rows and all limits remain Python/open analysis."
+  },
+  "qft_interface": {
+    "closed": "A finite algebraic anchor identifies a coordinate-resolvent subfamily for which the relative-cocycle first variation vanishes and the second variation reduces to one nested boundary commutator.",
+    "open": "The actual phase-local BKM estimate, shell summability, cutoff/source/volume/shape uniformity, invariant domain, direct D/delta-D Cauchy, common alpha, Hamiltonian-to-OS/KMS identification, gap, continuum, C6, Sector-A and Pre-A remain open.",
+    "tect_boundary": "Auxiliary finite coordinate-resolvent interface only; no production owner, physical-empty reference or Clay conclusion is supplied."
+  },
+  "boundary": "Claim-nonbearing finite checkpoint only. It establishes a zero-time commutator anchor for coordinate resolvents against position-only bond additions on two bounded Q3 truncations. It proves no uniform quadratic remainder, no Cook limit and no QFT closure.",
+  "no_overclaim": "The exact finite anchor is a route simplification, not a thermodynamic estimate: after time zero, the evolved boundary and observable need not commute, and unbounded domain and shell summability obligations remain.",
+  "recorded_by": "Codex"
+}

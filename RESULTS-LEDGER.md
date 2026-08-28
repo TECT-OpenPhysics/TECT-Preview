@@ -42,6 +42,7 @@ policy in `governance/development-history.md`.
 | [R-376](#r-376) | Hilbert-Schmidt Lipschitz bridge for the capped Liouvillian kernel | R-376 v1.0 is a T0 claim-nonbearing finite operator-interface checkpoint under EXP-001218. A noncommuting cutoff-2 edge Liouvillian stress gives maximum full-kernel Frobenius ratio 0.9787544362168733 and 64-layer ratio 0.9755896836319287 with 76/76 integrated assertions; general Schatten-2 proof, operator-norm locality, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
 | [R-377](#r-377) | Gap-free odd-Matsubara resolvent telescoping budget | R-377 v1.0 is a T0 claim-nonbearing finite resolvent-interface checkpoint under EXP-001219. The exact positive-resolvent difference identity and its 64-layer budget pass 122/122 integrated assertions with Lean R377; the accumulated finite budget ratio is 0.9895313426497929 and the absolute-value square-root debt is recorded separately. Uniform locality, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
 | [R-382](#r-382) | Increasing-cutoff endpoint modular moment stress | R-382 v1.0 is a T0 claim-nonbearing finite cutoff-profile diagnostic under EXP-001224. The R-381 endpoint-energy bridge passes across 2816 all-prefix actual-Q3 contexts with Lean R382; edge max M_0 grows from 2.733031855844076 at d=3 to 41.64826651661874 at d=6 and max M_2 from 0.008378198414559081 to 17.719559304500326, with d=5 to d=6 ratios 8.855033106195243 and 36.38049903040583. This is finite growth evidence only; uniform M_0/M_2 control, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
+| [R-386](#r-386) | Coordinate-resolvent zero-time commutator anchor | R-386 v1.0 is a T0 claim-nonbearing finite interface checkpoint under EXP-001229. Position-only Q3 bond additions commute with coordinate resolvents at time zero, giving a zero first relative variation and a reduced second nested commutator across 288 weighted contexts; primary 2025/2025, independent 2022/2022, integrated 51/51 and Lean R386 pass, while uniform Cook/BKM/shell/QFT gates remain open |
 | [R-385](#r-385) | Finite relative-modular cocycle and resolvent-core Cook checkpoint | R-385 v1.0 is a T0 claim-nonbearing finite interface checkpoint under EXP-001228. The ordered relative cocycle, finite derivative, composition law, same-q resolvent identity and two-sided Gibbs-weighted orientations pass 3664/3664 primary, 608/608 independent, 87/87 integrated assertions on 608 V=2/V=4 Q3 contexts; hostile reversed orientation is rejected and Lean R385 compiles. Phase-local BKM control, l1 shell summability, all uniformities, direct Cook convergence, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
 | [R-384](#r-384) | Two-scale filter-removal corridor | R-384 v1.0 is a T0 claim-nonbearing finite two-scale corridor under EXP-001226. For the reference filter Y_1=X/(1+u), the M0 and endpoint removal envelopes split into low-frequency and high-frequency terms and pass across 2816 actual-Q3 contexts with independent and Lean checks; finite low-frequency M0 and the raw cutoff-growth warning remain, so filter removal, common-core uniformity and all QFT/limit conclusions stay open |
 | [R-383](#r-383) | Frequency-adapted endpoint filter | R-383 v1.0 is a T0 claim-nonbearing finite spectral-filter diagnostic under EXP-001225. The filter profiles attenuate the energy-weighted endpoint shell (reference s=1: max filtered M_2=0.24919044409881133 and endpoint=0.09311499130513236) while leaving the d=6 low-frequency M_0 at 41.57042344053405. Primary/independent/integrated and Lean R383 checks pass; filter removal, common-core and all QFT/limit conclusions remain open |
@@ -624,6 +625,45 @@ No new negative result, tier change, or R-376 PDF is issued.
 
 **Proven in:** manifest, certificate, Lean entrypoint, primary script,
 independent script, integrated verifier, scope note, and saved run artefacts.
+
+<a id="r-386"></a>
+### R-386 -- Coordinate-resolvent zero-time commutator anchor
+
+**Result ID.** R-386 is a T0, claim-nonbearing finite interface checkpoint
+under EXP-001229.
+
+**Statement.** For each actual Q3 bond prefix, write `H_prime=H+B` with `B`
+a polynomial in commuting position coordinates and take
+`A_z=(i eta I-q_s)^(-1)` with nonzero `eta`.  The finite tensor algebra gives
+`[B,A_z]=0` for every translated site and adjoint seed.  Hence the relative
+difference `Delta(t)=alpha_(H+B,t)(A_z)-alpha_(H,t)(A_z)` has zero first
+variation at zero and its second derivative reduces to
+`-(1/hbar^2)[B,[H,A_z]]`.  The reference-H modular diagnostic has the same
+zero first variation.
+
+**Verification.** The primary lane passes 2025/2025 assertions and the
+non-importing independent lane passes 2022/2022.  The integrated verifier
+passes 51/51 and Lean R386 compiles.  Coverage is 288 beta-weighted contexts,
+144 seed rows, 10 bond prefixes and 1152 dynamic rows over the V=2 edge and
+V=4 square, both orders, signs, translated sites, beta values, resolvent
+imaginaries and adjoints.  Primary maxima are `2.317703490729531e-16` for the
+zero commutator, `1.259956570249438e-10` for the first variation,
+`6.238635588734805e-07` for the second finite-difference comparison,
+`4.232440506926493e-15` for the second-variation reduction and
+`3.6054124684301573e-10` for the modular first variation.  The largest finite
+`Delta` norm divided by `t^2` is `0.6576383064349549`.  The hostile same-site
+`+(1/4)p_s` mutation has minimum commutator residual `0.279128784747792` and
+is rejected above `1.0e-7`.
+
+**Boundary.** The cancellation is restricted to position-only finite bond
+additions and bounded oscillator matrices.  It supplies no uniform quadratic
+remainder, phase-local BKM estimate, boundary-shell `l1` summability,
+source/cutoff/volume/shape uniformity, invariant domain, direct `D`/`delta-D`
+Cook limit, common alpha, Hamiltonian-to-OS/KMS identification, gap,
+continuum, C6, Sector-A or Pre-A closure.  No new negative result, tier
+change or proof-note PDF is issued.
+
+**Proven in:** [R-386 certificate](strategy/pre-a-cp1-st8-q3lock-relative-cocycle-coordinate-resolvent-zero-time-anchor-finite-checkpoint-certificate-260830.md), [Lean entrypoint](verification/lean/Tect/R386.lean), primary/independent/hostile scripts, integrated verifier, [scope note](claims/C6-SPACETIME-SIGNATURE/notes/relative-cocycle-coordinate-resolvent-zero-time-anchor-finite-checkpoint-boundary-260830.md), and saved run artefacts.
 
 <a id="r-385"></a>
 ### R-385 -- Finite relative-modular cocycle and resolvent-core Cook checkpoint

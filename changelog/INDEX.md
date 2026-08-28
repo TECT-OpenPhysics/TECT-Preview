@@ -5,7 +5,7 @@ Compact generated reader surface. The append-only authority is
 record 568 / commit `4db22f4e` and no longer grows.
 Post-cutover full bodies live exactly once in bounded pages under `pages/`.
 
-**726 accepted events** · latest 25 shown below · machine locator: `index.json`
+**727 accepted events** · latest 25 shown below · machine locator: `index.json`
 
 Search the complete authority without loading every page:
 
@@ -17,6 +17,7 @@ python verification/scripts/changelog.py search --text <phrase>
 
 | Date | Event | Claims | Full entry |
 |---|---|---|---|
+| 2026-08-30 | `20260830-coordinate-resolvent-zero-time-commutator-ancho` — [Coordinate-resolvent zero-time commutator anchor] - 2026-08-30 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000719-000768.md#20260830-coordinate-resolvent-zero-time-commutator-ancho) |
 | 2026-08-30 | `20260830-relative-modular-cocycle-and-resolvent-core-coo` — [Relative-modular cocycle and resolvent-core Cook finite checkpoint] - 2026-08-30 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000719-000768.md#20260830-relative-modular-cocycle-and-resolvent-core-coo) |
 | 2026-08-28 | `20260828-two-scale-filter-removal-corridor-2026-08-28` — [Two-scale filter-removal corridor] - 2026-08-28 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000719-000768.md#20260828-two-scale-filter-removal-corridor-2026-08-28) |
 | 2026-08-28 | `20260828-frequency-adapted-endpoint-filter-2026-08-28` — [Frequency-adapted endpoint filter] - 2026-08-28 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000719-000768.md#20260828-frequency-adapted-endpoint-filter-2026-08-28) |
@@ -41,7 +42,6 @@ python verification/scripts/changelog.py search --text <phrase>
 | 2026-08-27 | `20260827-r-364-finite-bond-spectral-pinching-and-commuta` — [R-364 finite bond-spectral pinching and commutant shell reduction] - 2026-08-27 | C6-SPACETIME-SIGNATURE, EXP-001206, R-364 | [bounded page](pages/000669-000718.md#20260827-r-364-finite-bond-spectral-pinching-and-commuta) |
 | 2026-08-27 | `20260827-r-363-finite-pinching-and-state-weighted-shell` — [R-363 finite pinching and state-weighted shell commutator] - 2026-08-27 | C6-SPACETIME-SIGNATURE, EXP-001205, R-363 | [bounded page](pages/000669-000718.md#20260827-r-363-finite-pinching-and-state-weighted-shell) |
 | 2026-08-27 | `20260827-r-362-finite-local-q2-positive-replica-folding` — [R-362 finite local-Q2 positive replica folding] - 2026-08-27 | C6-SPACETIME-SIGNATURE, EXP-001204, R-362 | [bounded page](pages/000669-000718.md#20260827-r-362-finite-local-q2-positive-replica-folding) |
-| 2026-08-24 | `20260824-exp-001028-conditional-first-passage-poisson-bo` — [EXP-001028: conditional first-passage Poisson boundary bridge] - 2026-08-24 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000669-000718.md#20260824-exp-001028-conditional-first-passage-poisson-bo) |
 
 ## Post-cutover pages
 
@@ -49,7 +49,7 @@ Each full event body after the cutover occurs in exactly one page.
 
 | Ordinals | Events | Page |
 |---|---:|---|
-| 719–726 | 8 | [000719-000768.md](pages/000719-000768.md) |
+| 719–727 | 9 | [000719-000768.md](pages/000719-000768.md) |
 | 669–718 | 50 | [000669-000718.md](pages/000669-000718.md) |
 | 619–668 | 50 | [000619-000668.md](pages/000619-000668.md) |
 | 569–618 | 50 | [000569-000618.md](pages/000569-000618.md) |

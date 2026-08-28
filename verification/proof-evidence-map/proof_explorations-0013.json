@@ -3467,6 +3467,128 @@
       "task_id": "T-054",
       "title": "Finite relative-modular cocycle and resolvent-core Cook checkpoint",
       "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "axis": "interaction class",
+          "check": "The zero commutator is asserted only for manifest Q3 position-only bonds; onsite kinetic terms and momentum mutations are outside the commuting class.",
+          "disposition": "UPHELD-FINITE"
+        },
+        {
+          "axis": "resolvent inverse",
+          "check": "Both A_z and A_z^* are evaluated at nonzero imaginary parameters; no real-axis inverse or unproved spectral limit is used.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "derivative and sign",
+          "check": "Central differences are compared to the exact commutator formula, while the full second nested expansion is checked before the reduced formula is accepted.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "hostile mutation",
+          "check": "A same-site +(1/4)p_s perturbation is required to produce a non-roundoff commutator and first-variation signal; it does.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "finite truncation",
+          "check": "All matrices are bounded oscillator truncations, so no uniform t^2 bound, form-domain transfer or infinite-dimensional Cook integral is inferred.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "modular topology",
+          "check": "The modular row is a finite reference-H commutator diagnostic and is not relabelled a BKM, strong-star or representation-independent estimate.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "QFT promotion",
+          "check": "Phase-local BKM control, shell summability, all uniformities, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain false.",
+          "disposition": "UPHELD-OPEN"
+        }
+      ],
+      "boundary": "T0 claim-nonbearing finite coordinate-resolvent anchor only. It proves no uniform quadratic remainder, no phase-local BKM estimate, no shell summability, no domain embedding, no direct Cook limit, no common alpha, no OS/KMS/GNS dynamics, no gap, no continuum, C6, Sector-A or Pre-A.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "R-386 adds a distinct algebraic anchor to the relative-cocycle route: coordinate resolvents remove the first boundary insertion exactly for position-only bond additions, and the second variation reduces to one nested boundary commutator. The finite result is reproducible and the hostile momentum mutation confirms the hypothesis is structural. It does not give a uniform quadratic remainder, a phase-local BKM estimate, shell summability, an invariant unbounded domain or a Cook/common-alpha/QFT theorem.",
+      "evidence_refs": [
+        "strategy/pre-a-cp1-st8-q3lock-relative-cocycle-coordinate-resolvent-zero-time-anchor-finite-checkpoint-manifest.json#finite_fixture",
+        "strategy/pre-a-cp1-st8-q3lock-relative-cocycle-coordinate-resolvent-zero-time-anchor-finite-checkpoint-certificate-260830.md#Finite verification",
+        "codes/foundations/pre_a_cp1_st8_q3lock_relative_cocycle_coordinate_resolvent_zero_time_anchor_finite_checkpoint.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_relative_cocycle_coordinate_resolvent_zero_time_anchor_finite_checkpoint_independent.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_relative_cocycle_coordinate_resolvent_zero_time_anchor_finite_checkpoint_hostile.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_relative_cocycle_coordinate_resolvent_zero_time_anchor_finite_checkpoint_verify.py#run",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-primary-pre_a_cp1_st8_q3lock_relative_cocycle_coordinate_resolvent_zero_time_anchor_finite_checkpoint/primary.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-primary-pre_a_cp1_st8_q3lock_relative_cocycle_coordinate_resolvent_zero_time_anchor_finite_checkpoint/independent.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-primary-pre_a_cp1_st8_q3lock_relative_cocycle_coordinate_resolvent_zero_time_anchor_finite_checkpoint/hostile.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-primary-pre_a_cp1_st8_q3lock_relative_cocycle_coordinate_resolvent_zero_time_anchor_finite_checkpoint/integrated.json#lean",
+        "verification/lean/Tect/R386.lean#anchored_second_variation",
+        "claims/C6-SPACETIME-SIGNATURE/notes/relative-cocycle-coordinate-resolvent-zero-time-anchor-finite-checkpoint-boundary-260830.md#R-386"
+      ],
+      "finding": "The primary lane passes 2025/2025 assertions and the non-importing independent lane passes 2022/2022. The integrated verifier passes 51/51 and Lean R386 compiles. The grid contains 288 beta-weighted contexts, 144 seed rows, 10 bond prefixes and 1152 dynamic rows. Primary maxima are 2.317703490729531e-16 for the zero commutator, 1.259956570249438e-10 for the first variation, 6.238635588734805e-07 for the second finite-difference comparison, 4.232440506926493e-15 for the second-variation reduction and 3.6054124684301573e-10 for the modular first variation. The finite two-sided dynamic norm divided by t^2 reaches 0.6576383064349549. The independent maximum fields agree within 1.4676852113146837e-07. A hostile +(1/4)p_s mutation has minimum commutator residual 0.279128784747792 above the 1.0e-7 threshold and is rejected.",
+      "formal_integration": {
+        "events": [
+          "20260830-coordinate-resolvent-zero-time-commutator-ancho"
+        ],
+        "lean": "R386 PASS",
+        "negatives": [],
+        "no_changelog_event": false,
+        "no_new_negative": true,
+        "no_new_result": false,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "results": [
+          "R-386"
+        ]
+      },
+      "formal_refs": {
+        "events": [
+          "20260830-coordinate-resolvent-zero-time-commutator-ancho"
+        ],
+        "negatives": [],
+        "results": [
+          "R-386"
+        ]
+      },
+      "gate_ids": [
+        "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+        "PA-CP1-ST8-Q3LOCK-RESOLVENT-ALGEBRA-EXACT-POLYNOMIAL-COMMON-ALPHA-CLOSURE",
+        "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+      ],
+      "id": "EXP-001229",
+      "method": [
+        "Rebuild every actual bond prefix on the manifest V=2 edge and V=4 square, with both term orders and the next bond term as B.",
+        "For every translated site and both adjoint coordinate resolvents A_z=(i eta I-q_s)^(-1), check the position-only commutator [B,A_z], the central first variation of Delta(t)=alpha_(H+B,t)(A_z)-alpha_(H,t)(A_z), and the full second-variation expansion.",
+        "After the zero commutator check, compare the second derivative with -(1/hbar^2)[B,[H,A_z]] and check that the reference-H modular diagnostic has zero first variation.",
+        "Evaluate both beta values and both time signs in the two-sided Gibbs norm, reporting Delta(t)/t^2 only as a finite diagnostic.",
+        "Run an independent non-importing reconstruction, add a same-site momentum mutation as a hostile control, and compile Lean R386 for inverse commutation and noncommutative commutator bookkeeping.",
+        "Keep phase-local BKM control, shell l1 summability, all uniformities, domain/Cook convergence, common alpha and every QFT promotion flag open."
+      ],
+      "next_action": "Bound the remaining nested commutator [B,[H,A_z]] and its modular companion in a phase-local BKM norm on an explicitly invariant form/resolvent core, with source/cutoff/volume/shape-uniform constants and both orientations. If the resulting shell coefficients are summable, integrate the anchored relative cocycle by Cook; otherwise register the precise obstruction for this anchored route only.",
+      "no_overclaim": "The finite zero-time cancellation is an algebraic route simplification. After time zero the evolved boundary and observable need not commute, and all unbounded, uniformity and thermodynamic obligations remain.",
+      "provenance": "contemporaneous",
+      "question": "Can a position-only Q3 bond addition be paired with a coordinate resolvent so that the relative-cocycle difference has an exact zero first variation and a single reduced nested commutator at second order, before estimating any unbounded force?",
+      "recorded_at": "2026-08-30T04:15:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001228",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001227",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001136",
+          "relation": "alternative_to"
+        }
+      ],
+      "reviewed_on": "2026-08-28",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Coordinate-resolvent zero-time commutator anchor",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",
