@@ -1,0 +1,2991 @@
+{
+  "assertion_count": 1178,
+  "boundary": "T0 claim-nonbearing finite phase-conditioned intrinsic-graph stress only. It proves no uniform sector gap, phase selection, common core, common alpha, OS/KMS/GNS reconstruction, mass gap, continuum, C6, Sector-A or Pre-A closure.",
+  "checks": [
+    {
+      "actual": "['R-405', 'EXP-001250', False]",
+      "expected": "R-405/EXP-001250/false",
+      "group": "provenance",
+      "name": "identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "finite phase split only",
+      "expected": "all promoted flags false",
+      "group": "scope",
+      "name": "scope firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": "[(2, 4), (2, 5), (2, 6), (2, 8), (2, 10), (2, 12), (3, 4), (3, 5)]",
+      "expected": "8 distinct systems",
+      "group": "fixture",
+      "name": "system grid",
+      "status": "PASS"
+    },
+    {
+      "actual": "['right', 'left']",
+      "expected": "right/left",
+      "group": "fixture",
+      "name": "orientation grid",
+      "status": "PASS"
+    },
+    {
+      "actual": "(16, 16)",
+      "expected": "(16, 16)",
+      "group": "coordinates",
+      "name": "V=2 d=4 basis",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2, 2, 0]",
+      "expected": "complete disjoint sectors",
+      "group": "phase partition",
+      "name": "V=2 d=4 partition",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.012636231061063487, 0.012636231061063498]",
+      "expected": ">1e-30 and nonnegative",
+      "group": "Gibbs",
+      "name": "V=2 d=4 beta=0.5 reference",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.0022812277674598, 1.5773625260965005, 0.35623144160723]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=4 beta=0.5 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.468069233603886, 1.67162810961688, 0.3400169947524321]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=4 beta=0.5 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.120554338225105, 1.5775136565163024, 0.3723557421678538]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=4 beta=0.5 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.1205543382251053, 1.5775136565163028, 0.3723557421678538]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=4 beta=0.5 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.468069233603885, 1.671628109616881, 0.34001699475243197]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=4 beta=0.5 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'volume': 2, 'dimension': 4, 'beta': 0.5, 'orientation': 'right', 'row_count': 5, 'minimum_full_gap': 1.0022812277674598, 'maximum_full_gap': 1.468069233603886, 'minimum_sector_gap': 1.5773625260965005, 'maximum_sector_gap': 1.671628109616881, 'minimum_cross_capacity': 0.34001699475243197, 'maximum_cross_capacity': 0.3723557421678538, 'minimum_phase_mass': 0.21188962465123362, 'maximum_neutral_mass': 0.0}",
+      "expected": "positive finite profile",
+      "group": "coverage",
+      "name": "V=2 d=4 beta=0.5 right coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.0022812277674598, 1.5773625260965005, 0.35623144160723]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=4 beta=0.5 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.468069233603886, 1.67162810961688, 0.3400169947524321]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=4 beta=0.5 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.1205543382251049, 1.5775136565163024, 0.3723557421678538]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=4 beta=0.5 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.120554338225105, 1.5775136565163033, 0.3723557421678537]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=4 beta=0.5 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.468069233603885, 1.6716281096168808, 0.340016994752432]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=4 beta=0.5 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'volume': 2, 'dimension': 4, 'beta': 0.5, 'orientation': 'left', 'row_count': 5, 'minimum_full_gap': 1.0022812277674598, 'maximum_full_gap': 1.468069233603886, 'minimum_sector_gap': 1.5773625260965005, 'maximum_sector_gap': 1.6716281096168808, 'minimum_cross_capacity': 0.340016994752432, 'maximum_cross_capacity': 0.3723557421678538, 'minimum_phase_mass': 0.21188962465123365, 'maximum_neutral_mass': 0.0}",
+      "expected": "positive finite profile",
+      "group": "coverage",
+      "name": "V=2 d=4 beta=0.5 left coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.004286128886870806, 0.00428612888687081]",
+      "expected": ">1e-30 and nonnegative",
+      "group": "Gibbs",
+      "name": "V=2 d=4 beta=1.0 reference",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.912516639605107, 1.5993916803909214, 0.33169968246057996]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=4 beta=1.0 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.9598969409044116, 1.921943802517679, 0.2926486636124067]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=4 beta=1.0 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.2467548616073785, 1.577469607664952, 0.3811388292582212]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=4 beta=1.0 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.246754861607379, 1.5774696076649526, 0.38113882925822107]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=4 beta=1.0 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.9598969409044116, 1.9219438025176796, 0.2926486636124065]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=4 beta=1.0 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'volume': 2, 'dimension': 4, 'beta': 1.0, 'orientation': 'right', 'row_count': 5, 'minimum_full_gap': 0.912516639605107, 'maximum_full_gap': 1.9598969409044116, 'minimum_sector_gap': 1.577469607664952, 'maximum_sector_gap': 1.9219438025176796, 'minimum_cross_capacity': 0.2926486636124065, 'maximum_cross_capacity': 0.3811388292582212, 'minimum_phase_mass': 0.10215807467138102, 'maximum_neutral_mass': 0.0}",
+      "expected": "positive finite profile",
+      "group": "coverage",
+      "name": "V=2 d=4 beta=1.0 right coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.9125166396051074, 1.5993916803909214, 0.33169968246057996]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=4 beta=1.0 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.9598969409044111, 1.9219438025176785, 0.29264866361240666]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=4 beta=1.0 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.246754861607379, 1.577469607664952, 0.3811388292582211]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=4 beta=1.0 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.2467548616073785, 1.5774696076649524, 0.3811388292582212]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=4 beta=1.0 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.9598969409044116, 1.9219438025176796, 0.29264866361240655]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=4 beta=1.0 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'volume': 2, 'dimension': 4, 'beta': 1.0, 'orientation': 'left', 'row_count': 5, 'minimum_full_gap': 0.9125166396051074, 'maximum_full_gap': 1.9598969409044116, 'minimum_sector_gap': 1.577469607664952, 'maximum_sector_gap': 1.9219438025176796, 'minimum_cross_capacity': 0.29264866361240655, 'maximum_cross_capacity': 0.3811388292582212, 'minimum_phase_mass': 0.10215807467138102, 'maximum_neutral_mass': 0.0}",
+      "expected": "positive finite profile",
+      "group": "coverage",
+      "name": "V=2 d=4 beta=1.0 left coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.002949915351576989, 0.0029499153515769928]",
+      "expected": ">1e-30 and nonnegative",
+      "group": "Gibbs",
+      "name": "V=2 d=4 beta=2.0 reference",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.7872756441265598, 1.7695640860078057, 0.28838745961561996]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=4 beta=2.0 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.83377868745935, 2.6672429627473746, 0.23897327626124576]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=4 beta=2.0 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.3303740865161333, 1.5773905476780852, 0.38638561031411517]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=4 beta=2.0 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.3303740865161338, 1.5773905476780858, 0.38638561031411534]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=4 beta=2.0 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.833778687459352, 2.6672429627473764, 0.2389732762612456]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=4 beta=2.0 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'volume': 2, 'dimension': 4, 'beta': 2.0, 'orientation': 'right', 'row_count': 5, 'minimum_full_gap': 0.7872756441265598, 'maximum_full_gap': 2.833778687459352, 'minimum_sector_gap': 1.5773905476780852, 'maximum_sector_gap': 2.6672429627473764, 'minimum_cross_capacity': 0.2389732762612456, 'maximum_cross_capacity': 0.38638561031411534, 'minimum_phase_mass': 0.05205278089171822, 'maximum_neutral_mass': 0.0}",
+      "expected": "positive finite profile",
+      "group": "coverage",
+      "name": "V=2 d=4 beta=2.0 right coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.7872756441265603, 1.7695640860078052, 0.28838745961561996]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=4 beta=2.0 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.8337786874593514, 2.6672429627473737, 0.23897327626124576]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=4 beta=2.0 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.3303740865161333, 1.5773905476780852, 0.38638561031411534]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=4 beta=2.0 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.3303740865161324, 1.5773905476780858, 0.38638561031411517]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=4 beta=2.0 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.8337786874593514, 2.6672429627473764, 0.23897327626124557]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=4 beta=2.0 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'volume': 2, 'dimension': 4, 'beta': 2.0, 'orientation': 'left', 'row_count': 5, 'minimum_full_gap': 0.7872756441265603, 'maximum_full_gap': 2.8337786874593514, 'minimum_sector_gap': 1.5773905476780852, 'maximum_sector_gap': 2.6672429627473764, 'minimum_cross_capacity': 0.23897327626124557, 'maximum_cross_capacity': 0.38638561031411534, 'minimum_phase_mass': 0.052052780891718206, 'maximum_neutral_mass': 0.0}",
+      "expected": "positive finite profile",
+      "group": "coverage",
+      "name": "V=2 d=4 beta=2.0 left coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.002315974018082403, 0.002315974018082406]",
+      "expected": ">1e-30 and nonnegative",
+      "group": "Gibbs",
+      "name": "V=2 d=4 beta=4.0 reference",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.7084531628874778, 2.095232513210492, 0.25417932049658665]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=4 beta=4.0 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[3.8002975144505804, 3.0184643784906, 0.21267035394581527]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=4 beta=4.0 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.265980279363572, 1.5789748960439705, 0.3777696727435325]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=4 beta=4.0 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.2659802793635717, 1.5789748960439711, 0.37776967274353246]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=4 beta=4.0 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[3.800297514450586, 3.0184643784905876, 0.21267035394581502]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=4 beta=4.0 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'volume': 2, 'dimension': 4, 'beta': 4.0, 'orientation': 'right', 'row_count': 5, 'minimum_full_gap': 0.7084531628874778, 'maximum_full_gap': 3.800297514450586, 'minimum_sector_gap': 1.5789748960439705, 'maximum_sector_gap': 3.0184643784906, 'minimum_cross_capacity': 0.21267035394581502, 'maximum_cross_capacity': 0.3777696727435325, 'minimum_phase_mass': 0.0400448765517454, 'maximum_neutral_mass': 0.0}",
+      "expected": "positive finite profile",
+      "group": "coverage",
+      "name": "V=2 d=4 beta=4.0 right coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.7084531628874774, 2.095232513210492, 0.25417932049658676]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=4 beta=4.0 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[3.800297514450581, 3.018464378490589, 0.2126703539458153]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=4 beta=4.0 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.265980279363572, 1.5789748960439707, 0.37776967274353257]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=4 beta=4.0 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.2659802793635708, 1.5789748960439711, 0.3777696727435324]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=4 beta=4.0 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[3.8002975144505853, 3.0184643784905965, 0.21267035394581502]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=4 beta=4.0 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'volume': 2, 'dimension': 4, 'beta': 4.0, 'orientation': 'left', 'row_count': 5, 'minimum_full_gap': 0.7084531628874774, 'maximum_full_gap': 3.8002975144505853, 'minimum_sector_gap': 1.5789748960439707, 'maximum_sector_gap': 3.0184643784905965, 'minimum_cross_capacity': 0.21267035394581502, 'maximum_cross_capacity': 0.37776967274353257, 'minimum_phase_mass': 0.04004487655174542, 'maximum_neutral_mass': 0.0}",
+      "expected": "positive finite profile",
+      "group": "coverage",
+      "name": "V=2 d=4 beta=4.0 left coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.0019699063913223252, 0.001969906391322328]",
+      "expected": ">1e-30 and nonnegative",
+      "group": "Gibbs",
+      "name": "V=2 d=4 beta=8.0 reference",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.6867237745188258, 2.256243316374226, 0.2436923257025015]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=4 beta=8.0 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[4.045488937828109, 3.3735120143577415, 0.2082607918041579]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=4 beta=8.0 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.2062818541789868, 1.5919090055959648, 0.3652247558370831]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=4 beta=8.0 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.2062818541789868, 1.5919090055959653, 0.3652247558370829]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=4 beta=8.0 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[4.045488937828118, 3.3735120143577255, 0.20826079180415757]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=4 beta=8.0 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'volume': 2, 'dimension': 4, 'beta': 8.0, 'orientation': 'right', 'row_count': 5, 'minimum_full_gap': 0.6867237745188258, 'maximum_full_gap': 4.045488937828118, 'minimum_sector_gap': 1.5919090055959648, 'maximum_sector_gap': 3.3735120143577415, 'minimum_cross_capacity': 0.20826079180415757, 'maximum_cross_capacity': 0.3652247558370831, 'minimum_phase_mass': 0.03764721704511815, 'maximum_neutral_mass': 0.0}",
+      "expected": "positive finite profile",
+      "group": "coverage",
+      "name": "V=2 d=4 beta=8.0 right coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.6867237745188258, 2.256243316374226, 0.2436923257025015]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=4 beta=8.0 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[4.045488937828112, 3.3735120143577264, 0.20826079180415785]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=4 beta=8.0 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.2062818541789877, 1.5919090055959646, 0.365224755837083]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=4 beta=8.0 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.2062818541789864, 1.5919090055959653, 0.36522475583708286]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=4 beta=8.0 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[4.045488937828116, 3.3735120143577384, 0.2082607918041576]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=4 beta=8.0 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'volume': 2, 'dimension': 4, 'beta': 8.0, 'orientation': 'left', 'row_count': 5, 'minimum_full_gap': 0.6867237745188258, 'maximum_full_gap': 4.045488937828116, 'minimum_sector_gap': 1.5919090055959646, 'maximum_sector_gap': 3.3735120143577384, 'minimum_cross_capacity': 0.2082607918041576, 'maximum_cross_capacity': 0.365224755837083, 'minimum_phase_mass': 0.03764721704511816, 'maximum_neutral_mass': 0.0}",
+      "expected": "positive finite profile",
+      "group": "coverage",
+      "name": "V=2 d=4 beta=8.0 left coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": "(25, 25)",
+      "expected": "(25, 25)",
+      "group": "coordinates",
+      "name": "V=2 d=5 basis",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2, 2, 1]",
+      "expected": "complete disjoint sectors",
+      "group": "phase partition",
+      "name": "V=2 d=5 partition",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.001434877522426784, 0.0014348775224267837]",
+      "expected": ">1e-30 and nonnegative",
+      "group": "Gibbs",
+      "name": "V=2 d=5 beta=0.5 reference",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.1950962017934943, 1.8825357299610328, 0.11970828193547926]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=5 beta=0.5 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.7069297569449429, 1.7769109498472426, 0.11834266043676822]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=5 beta=0.5 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.4451081447593623, 1.8427232277491936, 0.12008920778640925]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=5 beta=0.5 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.3731476969999408, 2.073594090961186, 0.12074847727278423]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=5 beta=0.5 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.4451081447593626, 1.8427232277491934, 0.12008920778640922]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=5 beta=0.5 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.706929756944943, 1.776910949847243, 0.1183426604367682]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=5 beta=0.5 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'volume': 2, 'dimension': 5, 'beta': 0.5, 'orientation': 'right', 'row_count': 6, 'minimum_full_gap': 1.1950962017934943, 'maximum_full_gap': 1.706929756944943, 'minimum_sector_gap': 1.7769109498472426, 'maximum_sector_gap': 2.073594090961186, 'minimum_cross_capacity': 0.1183426604367682, 'maximum_cross_capacity': 0.12074847727278423, 'minimum_phase_mass': 0.08621355325808687, 'maximum_neutral_mass': 0.24389275334760807}",
+      "expected": "positive finite profile",
+      "group": "coverage",
+      "name": "V=2 d=5 beta=0.5 right coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.1950962017934932, 1.8825357299610326, 0.11970828193547928]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=5 beta=0.5 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.7069297569449429, 1.776910949847243, 0.1183426604367682]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=5 beta=0.5 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.4451081447593626, 1.8427232277491936, 0.12008920778640925]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=5 beta=0.5 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.373147696999943, 2.073594090961187, 0.12074847727278422]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=5 beta=0.5 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.4451081447593634, 1.8427232277491934, 0.12008920778640922]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=5 beta=0.5 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.706929756944943, 1.7769109498472428, 0.11834266043676821]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=5 beta=0.5 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'volume': 2, 'dimension': 5, 'beta': 0.5, 'orientation': 'left', 'row_count': 6, 'minimum_full_gap': 1.1950962017934932, 'maximum_full_gap': 1.706929756944943, 'minimum_sector_gap': 1.7769109498472428, 'maximum_sector_gap': 2.073594090961187, 'minimum_cross_capacity': 0.1183426604367682, 'maximum_cross_capacity': 0.12074847727278422, 'minimum_phase_mass': 0.0862135532580869, 'maximum_neutral_mass': 0.24389275334760818}",
+      "expected": "positive finite profile",
+      "group": "coverage",
+      "name": "V=2 d=5 beta=0.5 left coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.00039228829657403684, 0.00039228829657403673]",
+      "expected": ">1e-30 and nonnegative",
+      "group": "Gibbs",
+      "name": "V=2 d=5 beta=1.0 reference",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.3039245866372624, 2.051913222378327, 0.12513455421749914]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=5 beta=1.0 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.9479285414689318, 1.776668038554091, 0.12371065064210772]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=5 beta=1.0 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.7996840446390936, 2.0677161818766328, 0.1257108253112685]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=5 beta=1.0 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.6568450326989705, 2.955416833751661, 0.12534168847216157]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=5 beta=1.0 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.799684044639094, 2.067716181876632, 0.12571082531126843]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=5 beta=1.0 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.9479285414689322, 1.776668038554091, 0.12371065064210765]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=5 beta=1.0 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'volume': 2, 'dimension': 5, 'beta': 1.0, 'orientation': 'right', 'row_count': 6, 'minimum_full_gap': 1.3039245866372624, 'maximum_full_gap': 1.9479285414689322, 'minimum_sector_gap': 1.776668038554091, 'maximum_sector_gap': 2.955416833751661, 'minimum_cross_capacity': 0.12371065064210765, 'maximum_cross_capacity': 0.1257108253112685, 'minimum_phase_mass': 0.035147950144245446, 'maximum_neutral_mass': 0.2754753271822068}",
+      "expected": "positive finite profile",
+      "group": "coverage",
+      "name": "V=2 d=5 beta=1.0 right coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.3039245866372626, 2.051913222378327, 0.12513455421749917]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=5 beta=1.0 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.9479285414689311, 1.7766680385540907, 0.12371065064210768]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=5 beta=1.0 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.7996840446390943, 2.067716181876633, 0.1257108253112685]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=5 beta=1.0 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.6568450326989734, 2.9554168337516638, 0.12534168847216154]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=5 beta=1.0 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.799684044639095, 2.0677161818766328, 0.12571082531126843]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=5 beta=1.0 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.9479285414689325, 1.776668038554091, 0.1237106506421077]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=5 beta=1.0 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'volume': 2, 'dimension': 5, 'beta': 1.0, 'orientation': 'left', 'row_count': 6, 'minimum_full_gap': 1.3039245866372626, 'maximum_full_gap': 1.9479285414689325, 'minimum_sector_gap': 1.7766680385540907, 'maximum_sector_gap': 2.9554168337516638, 'minimum_cross_capacity': 0.12371065064210768, 'maximum_cross_capacity': 0.1257108253112685, 'minimum_phase_mass': 0.03514795014424546, 'maximum_neutral_mass': 0.275475327182207}",
+      "expected": "positive finite profile",
+      "group": "coverage",
+      "name": "V=2 d=5 beta=1.0 left coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.00011985607125603746, 0.00011985607125603738]",
+      "expected": ">1e-30 and nonnegative",
+      "group": "Gibbs",
+      "name": "V=2 d=5 beta=2.0 reference",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.5534356018176712, 2.7608270025310113, 0.1297406447533873]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=5 beta=2.0 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.012300863487666, 1.780965663308131, 0.12988873709703705]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=5 beta=2.0 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.3636300623347837, 2.9509632763307527, 0.1312980757380594]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=5 beta=2.0 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.8324975786261641, 5.529630772126517, 0.12575261119907133]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=5 beta=2.0 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.3636300623347863, 2.9509632763307527, 0.13129807573805932]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=5 beta=2.0 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.0123008634876656, 1.7809656633081312, 0.129888737097037]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=5 beta=2.0 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'volume': 2, 'dimension': 5, 'beta': 2.0, 'orientation': 'right', 'row_count': 6, 'minimum_full_gap': 1.5534356018176712, 'maximum_full_gap': 2.3636300623347863, 'minimum_sector_gap': 1.780965663308131, 'maximum_sector_gap': 5.529630772126517, 'minimum_cross_capacity': 0.12575261119907133, 'maximum_cross_capacity': 0.1312980757380594, 'minimum_phase_mass': 0.018592497536550644, 'maximum_neutral_mass': 0.31326236661988566}",
+      "expected": "positive finite profile",
+      "group": "coverage",
+      "name": "V=2 d=5 beta=2.0 right coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.5534356018176698, 2.7608270025310113, 0.12974064475338734]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=5 beta=2.0 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.0123008634876633, 1.7809656633081312, 0.12988873709703708]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=5 beta=2.0 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.3636300623347846, 2.9509632763307594, 0.13129807573805935]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=5 beta=2.0 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.832497578626167, 5.529630772126526, 0.12575261119907127]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=5 beta=2.0 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.3636300623347872, 2.950963276330756, 0.13129807573805927]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=5 beta=2.0 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.0123008634876656, 1.7809656633081312, 0.12988873709703702]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=5 beta=2.0 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'volume': 2, 'dimension': 5, 'beta': 2.0, 'orientation': 'left', 'row_count': 6, 'minimum_full_gap': 1.5534356018176698, 'maximum_full_gap': 2.3636300623347872, 'minimum_sector_gap': 1.7809656633081312, 'maximum_sector_gap': 5.529630772126526, 'minimum_cross_capacity': 0.12575261119907127, 'maximum_cross_capacity': 0.13129807573805935, 'minimum_phase_mass': 0.018592497536550616, 'maximum_neutral_mass': 0.3132623666198861}",
+      "expected": "positive finite profile",
+      "group": "coverage",
+      "name": "V=2 d=5 beta=2.0 left coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": "[8.877047094512704e-06, 8.877047094512699e-06]",
+      "expected": ">1e-30 and nonnegative",
+      "group": "Gibbs",
+      "name": "V=2 d=5 beta=4.0 reference",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.7770263767221235, 5.142690148861989, 0.1288138832900706]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=5 beta=4.0 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.291363543981899, 2.063679571926551, 0.1395632177895771]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=5 beta=4.0 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.5635112843458834, 4.876357159159196, 0.1307614840876551]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=5 beta=4.0 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.941039066238878, 10.411858372675525, 0.12210651383417628]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=5 beta=4.0 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.5635112843458905, 4.876357159159195, 0.13076148408765503]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=5 beta=4.0 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.2913635439819067, 2.063679571926551, 0.13956321778957698]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=5 beta=4.0 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'volume': 2, 'dimension': 5, 'beta': 4.0, 'orientation': 'right', 'row_count': 6, 'minimum_full_gap': 1.7770263767221235, 'maximum_full_gap': 2.5635112843458905, 'minimum_sector_gap': 2.063679571926551, 'maximum_sector_gap': 10.411858372675525, 'minimum_cross_capacity': 0.12210651383417628, 'maximum_cross_capacity': 0.1395632177895771, 'minimum_phase_mass': 0.010133814803601746, 'maximum_neutral_mass': 0.34941632701771913}",
+      "expected": "positive finite profile",
+      "group": "coverage",
+      "name": "V=2 d=5 beta=4.0 right coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.7770263767221242, 5.142690148861991, 0.12881388329007065]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=5 beta=4.0 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.2913635439819093, 2.0636795719265546, 0.13956321778957706]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=5 beta=4.0 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.563511284345887, 4.876357159159212, 0.13076148408765503]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=5 beta=4.0 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.9410390662388786, 10.411858372675539, 0.1221065138341762]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=5 beta=4.0 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.5635112843458905, 4.876357159159199, 0.13076148408765492]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=5 beta=4.0 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.2913635439819067, 2.0636795719265515, 0.139563217789577]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=5 beta=4.0 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'volume': 2, 'dimension': 5, 'beta': 4.0, 'orientation': 'left', 'row_count': 6, 'minimum_full_gap': 1.7770263767221242, 'maximum_full_gap': 2.5635112843458905, 'minimum_sector_gap': 2.0636795719265515, 'maximum_sector_gap': 10.411858372675539, 'minimum_cross_capacity': 0.1221065138341762, 'maximum_cross_capacity': 0.13956321778957706, 'minimum_phase_mass': 0.010133814803601744, 'maximum_neutral_mass': 0.3494163270177195}",
+      "expected": "positive finite profile",
+      "group": "coverage",
+      "name": "V=2 d=5 beta=4.0 left coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.396079544988863e-07, 1.396079544988862e-07]",
+      "expected": ">1e-30 and nonnegative",
+      "group": "Gibbs",
+      "name": "V=2 d=5 beta=8.0 reference",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.8674041419089633, 7.542736652018732, 0.12561745257812815]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=5 beta=8.0 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.842857239315814, 2.6173355488625845, 0.14401481395878601]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=5 beta=8.0 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.486534258847937, 6.340746460571295, 0.12768958655940907]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=5 beta=8.0 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.0006111149796264, 14.46916129753479, 0.11915107497093892]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=5 beta=8.0 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.486534258847935, 6.3407464605712915, 0.12768958655940899]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=5 beta=8.0 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.842857239315661, 2.6173355488625814, 0.14401481395878588]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=5 beta=8.0 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'volume': 2, 'dimension': 5, 'beta': 8.0, 'orientation': 'right', 'row_count': 6, 'minimum_full_gap': 1.8674041419089633, 'maximum_full_gap': 2.842857239315814, 'minimum_sector_gap': 2.6173355488625814, 'maximum_sector_gap': 14.46916129753479, 'minimum_cross_capacity': 0.11915107497093892, 'maximum_cross_capacity': 0.14401481395878601, 'minimum_phase_mass': 0.011019418509621275, 'maximum_neutral_mass': 0.3697413671765429}",
+      "expected": "positive finite profile",
+      "group": "coverage",
+      "name": "V=2 d=5 beta=8.0 right coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.8674041419089622, 7.542736652018732, 0.1256174525781282]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=5 beta=8.0 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.842857239315731, 2.6173355488625862, 0.144014813958786]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=5 beta=8.0 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.4865342588479344, 6.340746460571301, 0.12768958655940904]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=5 beta=8.0 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.000611114979628, 14.469161297534786, 0.11915107497093885]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=5 beta=8.0 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.4865342588479358, 6.340746460571295, 0.1276895865594089]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=5 beta=8.0 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.8428572393156606, 2.617335548862583, 0.14401481395878588]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=5 beta=8.0 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'volume': 2, 'dimension': 5, 'beta': 8.0, 'orientation': 'left', 'row_count': 6, 'minimum_full_gap': 1.8674041419089622, 'maximum_full_gap': 2.842857239315731, 'minimum_sector_gap': 2.617335548862583, 'maximum_sector_gap': 14.469161297534786, 'minimum_cross_capacity': 0.11915107497093885, 'maximum_cross_capacity': 0.144014813958786, 'minimum_phase_mass': 0.011019418509621359, 'maximum_neutral_mass': 0.36974136717654316}",
+      "expected": "positive finite profile",
+      "group": "coverage",
+      "name": "V=2 d=5 beta=8.0 left coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": "(36, 36)",
+      "expected": "(36, 36)",
+      "group": "coordinates",
+      "name": "V=2 d=6 basis",
+      "status": "PASS"
+    },
+    {
+      "actual": "[3, 3, 0]",
+      "expected": "complete disjoint sectors",
+      "group": "phase partition",
+      "name": "V=2 d=6 partition",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.00011381498205169702, 0.00011381498205169694]",
+      "expected": ">1e-30 and nonnegative",
+      "group": "Gibbs",
+      "name": "V=2 d=6 beta=0.5 reference",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.4721452785784677, 2.3915061069829187, 0.5060557355631325]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=6 beta=0.5 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.1242153999083566, 2.0895373043077834, 0.41280673789076683]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=6 beta=0.5 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.8439565592662834, 2.3168922349842735, 0.5035739224268057]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=6 beta=0.5 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.6508624955429743, 2.486750153408055, 0.5370133150371496]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=6 beta=0.5 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.6508624955429714, 2.486750153408053, 0.5370133150371494]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=6 beta=0.5 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.84395655926628, 2.3168922349842735, 0.5035739224268055]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=6 beta=0.5 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.124215399908356, 2.089537304307784, 0.4128067378907667]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=6 beta=0.5 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'volume': 2, 'dimension': 6, 'beta': 0.5, 'orientation': 'right', 'row_count': 7, 'minimum_full_gap': 1.4721452785784677, 'maximum_full_gap': 2.1242153999083566, 'minimum_sector_gap': 2.0895373043077834, 'maximum_sector_gap': 2.486750153408055, 'minimum_cross_capacity': 0.4128067378907667, 'maximum_cross_capacity': 0.5370133150371496, 'minimum_phase_mass': 0.11957083594169518, 'maximum_neutral_mass': 0.0}",
+      "expected": "positive finite profile",
+      "group": "coverage",
+      "name": "V=2 d=6 beta=0.5 right coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.4721452785784677, 2.391506106982919, 0.5060557355631327]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=6 beta=0.5 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.1242153999083557, 2.0895373043077834, 0.41280673789076694]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=6 beta=0.5 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.8439565592662823, 2.3168922349842735, 0.5035739224268058]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=6 beta=0.5 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.650862495542973, 2.4867501534080545, 0.5370133150371496]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=6 beta=0.5 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.6508624955429718, 2.4867501534080527, 0.5370133150371496]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=6 beta=0.5 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.8439565592662792, 2.3168922349842735, 0.5035739224268057]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=6 beta=0.5 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.1242153999083557, 2.0895373043077834, 0.41280673789076655]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=6 beta=0.5 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'volume': 2, 'dimension': 6, 'beta': 0.5, 'orientation': 'left', 'row_count': 7, 'minimum_full_gap': 1.4721452785784677, 'maximum_full_gap': 2.1242153999083557, 'minimum_sector_gap': 2.0895373043077834, 'maximum_sector_gap': 2.4867501534080545, 'minimum_cross_capacity': 0.41280673789076655, 'maximum_cross_capacity': 0.5370133150371496, 'minimum_phase_mass': 0.11957083594169521, 'maximum_neutral_mass': 0.0}",
+      "expected": "positive finite profile",
+      "group": "coverage",
+      "name": "V=2 d=6 beta=0.5 left coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.1194075142129153e-05, 2.119407514212913e-05]",
+      "expected": ">1e-30 and nonnegative",
+      "group": "Gibbs",
+      "name": "V=2 d=6 beta=1.0 reference",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.6011302309708606, 2.64237789933006, 0.5339144543897331]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=6 beta=1.0 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.998542026428145, 2.8674488620980485, 0.38752916116394964]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=6 beta=1.0 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.4863860888958467, 2.798745328622438, 0.5101511682169432]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=6 beta=1.0 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.8844768178587787, 2.6599204924188657, 0.5775273482743937]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=6 beta=1.0 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.8844768178587814, 2.6599204924188644, 0.5775273482743938]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=6 beta=1.0 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.486386088895843, 2.798745328622438, 0.5101511682169428]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=6 beta=1.0 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.998542026428144, 2.86744886209805, 0.3875291611639495]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=6 beta=1.0 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'volume': 2, 'dimension': 6, 'beta': 1.0, 'orientation': 'right', 'row_count': 7, 'minimum_full_gap': 1.6011302309708606, 'maximum_full_gap': 2.998542026428145, 'minimum_sector_gap': 2.64237789933006, 'maximum_sector_gap': 2.86744886209805, 'minimum_cross_capacity': 0.3875291611639495, 'maximum_cross_capacity': 0.5775273482743938, 'minimum_phase_mass': 0.06588961411274671, 'maximum_neutral_mass': 0.0}",
+      "expected": "positive finite profile",
+      "group": "coverage",
+      "name": "V=2 d=6 beta=1.0 right coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.6011302309708588, 2.6423778993300595, 0.533914454389733]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=6 beta=1.0 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.998542026428141, 2.867448862098048, 0.38752916116394964]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=6 beta=1.0 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.4863860888958462, 2.798745328622438, 0.5101511682169432]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=6 beta=1.0 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.8844768178587799, 2.6599204924188657, 0.5775273482743941]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=6 beta=1.0 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.8844768178587814, 2.6599204924188635, 0.5775273482743939]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=6 beta=1.0 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.486386088895843, 2.798745328622436, 0.5101511682169431]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=6 beta=1.0 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.9985420264281437, 2.867448862098048, 0.3875291611639496]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=6 beta=1.0 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'volume': 2, 'dimension': 6, 'beta': 1.0, 'orientation': 'left', 'row_count': 7, 'minimum_full_gap': 1.6011302309708588, 'maximum_full_gap': 2.9985420264281437, 'minimum_sector_gap': 2.6423778993300595, 'maximum_sector_gap': 2.867448862098048, 'minimum_cross_capacity': 0.3875291611639496, 'maximum_cross_capacity': 0.5775273482743941, 'minimum_phase_mass': 0.0658896141127468, 'maximum_neutral_mass': 0.0}",
+      "expected": "positive finite profile",
+      "group": "coverage",
+      "name": "V=2 d=6 beta=1.0 left coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.455331396053682e-06, 2.45533139605368e-06]",
+      "expected": ">1e-30 and nonnegative",
+      "group": "Gibbs",
+      "name": "V=2 d=6 beta=2.0 reference",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.6729054446344935, 2.673298073582624, 0.5563486597666933]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=6 beta=2.0 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[3.8750382074539425, 3.5496581371116234, 0.41677533667346317]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=6 beta=2.0 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.9796769931630314, 2.888310222263081, 0.5097177467269317]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=6 beta=2.0 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.145377503603708, 2.679574508357313, 0.6110437674097671]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=6 beta=2.0 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.145377503603708, 2.6795745083573106, 0.6110437674097668]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=6 beta=2.0 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.979676993163025, 2.8883102222630823, 0.5097177467269314]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=6 beta=2.0 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[3.8750382074539487, 3.549658137111628, 0.4167753366734628]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=6 beta=2.0 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'volume': 2, 'dimension': 6, 'beta': 2.0, 'orientation': 'right', 'row_count': 7, 'minimum_full_gap': 1.6729054446344935, 'maximum_full_gap': 3.8750382074539487, 'minimum_sector_gap': 2.673298073582624, 'maximum_sector_gap': 3.549658137111628, 'minimum_cross_capacity': 0.4167753366734628, 'maximum_cross_capacity': 0.6110437674097671, 'minimum_phase_mass': 0.05696491632399159, 'maximum_neutral_mass': 0.0}",
+      "expected": "positive finite profile",
+      "group": "coverage",
+      "name": "V=2 d=6 beta=2.0 right coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.6729054446344944, 2.673298073582624, 0.5563486597666929]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=6 beta=2.0 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[3.87503820745393, 3.5496581371116194, 0.41677533667346345]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=6 beta=2.0 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.979676993163029, 2.8883102222630805, 0.509717746726932]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=6 beta=2.0 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.1453775036037177, 2.6795745083573124, 0.6110437674097674]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=6 beta=2.0 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.145377503603708, 2.679574508357311, 0.6110437674097673]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=6 beta=2.0 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.9796769931630194, 2.88831022226308, 0.5097177467269317]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=6 beta=2.0 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[3.875038207453943, 3.549658137111621, 0.4167753366734633]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=6 beta=2.0 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'volume': 2, 'dimension': 6, 'beta': 2.0, 'orientation': 'left', 'row_count': 7, 'minimum_full_gap': 1.6729054446344944, 'maximum_full_gap': 3.875038207453943, 'minimum_sector_gap': 2.673298073582624, 'maximum_sector_gap': 3.549658137111621, 'minimum_cross_capacity': 0.4167753366734633, 'maximum_cross_capacity': 0.6110437674097674, 'minimum_phase_mass': 0.056964916323991754, 'maximum_neutral_mass': 0.0}",
+      "expected": "positive finite profile",
+      "group": "coverage",
+      "name": "V=2 d=6 beta=2.0 left coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.3424682483963999e-06, 1.3424682483963986e-06]",
+      "expected": ">1e-30 and nonnegative",
+      "group": "Gibbs",
+      "name": "V=2 d=6 beta=4.0 reference",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.7824315387470877, 2.6877810537639055, 0.5824522686478067]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=6 beta=4.0 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[3.5747356677701148, 3.255738628476825, 0.4476227576787228]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=6 beta=4.0 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[3.024661684861728, 2.8231115338639503, 0.5229613985040314]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=6 beta=4.0 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.320755570231527, 2.714162608646768, 0.639780374456317]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=6 beta=4.0 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.3207555702315203, 2.7141626086467685, 0.639780374456317]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=6 beta=4.0 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[3.0246616848617416, 2.823111533863951, 0.5229613985040311]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=6 beta=4.0 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[3.5747356677700948, 3.255738628476834, 0.4476227576787218]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=6 beta=4.0 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'volume': 2, 'dimension': 6, 'beta': 4.0, 'orientation': 'right', 'row_count': 7, 'minimum_full_gap': 1.7824315387470877, 'maximum_full_gap': 3.5747356677701148, 'minimum_sector_gap': 2.6877810537639055, 'maximum_sector_gap': 3.255738628476834, 'minimum_cross_capacity': 0.4476227576787218, 'maximum_cross_capacity': 0.639780374456317, 'minimum_phase_mass': 0.06308422398411048, 'maximum_neutral_mass': 0.0}",
+      "expected": "positive finite profile",
+      "group": "coverage",
+      "name": "V=2 d=6 beta=4.0 right coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.7824315387470864, 2.6877810537639046, 0.5824522686478063]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=6 beta=4.0 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[3.5747356677700863, 3.2557386284768235, 0.44762275767872306]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=6 beta=4.0 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[3.0246616848617442, 2.8231115338639485, 0.5229613985040318]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=6 beta=4.0 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.3207555702315275, 2.7141626086467685, 0.6397803744563173]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=6 beta=4.0 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.3207555702315252, 2.7141626086467694, 0.6397803744563173]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=6 beta=4.0 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[3.0246616848617447, 2.8231115338639494, 0.5229613985040317]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=6 beta=4.0 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[3.5747356677700908, 3.255738628476826, 0.44762275767872256]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=6 beta=4.0 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'volume': 2, 'dimension': 6, 'beta': 4.0, 'orientation': 'left', 'row_count': 7, 'minimum_full_gap': 1.7824315387470864, 'maximum_full_gap': 3.5747356677700908, 'minimum_sector_gap': 2.6877810537639046, 'maximum_sector_gap': 3.255738628476826, 'minimum_cross_capacity': 0.44762275767872256, 'maximum_cross_capacity': 0.6397803744563173, 'minimum_phase_mass': 0.06308422398411055, 'maximum_neutral_mass': 0.0}",
+      "expected": "positive finite profile",
+      "group": "coverage",
+      "name": "V=2 d=6 beta=4.0 left coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.5048620920810633e-06, 1.5048620920810614e-06]",
+      "expected": ">1e-30 and nonnegative",
+      "group": "Gibbs",
+      "name": "V=2 d=6 beta=8.0 reference",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.924267823375461, 2.744432310973204, 0.6114101769995541]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=6 beta=8.0 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[3.2810559587347816, 3.0377014465351344, 0.4766411638595982]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=6 beta=8.0 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.9327766682638985, 2.7564315093875593, 0.5436999542886349]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=6 beta=8.0 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.416074626580462, 2.7870863004730198, 0.665052805748392]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=6 beta=8.0 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.4160746265804596, 2.7870863004730153, 0.6650528057483919]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=6 beta=8.0 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.932776668263882, 2.7564315093875584, 0.5436999542886346]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=6 beta=8.0 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[3.2810559587347514, 3.037701446535138, 0.4766411638595975]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=6 beta=8.0 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'volume': 2, 'dimension': 6, 'beta': 8.0, 'orientation': 'right', 'row_count': 7, 'minimum_full_gap': 1.924267823375461, 'maximum_full_gap': 3.2810559587347816, 'minimum_sector_gap': 2.744432310973204, 'maximum_sector_gap': 3.037701446535138, 'minimum_cross_capacity': 0.4766411638595975, 'maximum_cross_capacity': 0.665052805748392, 'minimum_phase_mass': 0.08037513342269403, 'maximum_neutral_mass': 0.0}",
+      "expected": "positive finite profile",
+      "group": "coverage",
+      "name": "V=2 d=6 beta=8.0 right coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.9242678233754602, 2.7444323109732016, 0.611410176999554]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=6 beta=8.0 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[3.281055958734743, 3.037701446535133, 0.4766411638595986]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=6 beta=8.0 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.932776668263877, 2.756431509387559, 0.5436999542886352]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=6 beta=8.0 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.4160746265804627, 2.78708630047302, 0.665052805748392]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=6 beta=8.0 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.416074626580459, 2.787086300473015, 0.6650528057483921]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=6 beta=8.0 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.9327766682638834, 2.756431509387558, 0.5436999542886349]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=6 beta=8.0 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[3.281055958734753, 3.0377014465351353, 0.4766411638595977]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=6 beta=8.0 left row",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'volume': 2, 'dimension': 6, 'beta': 8.0, 'orientation': 'left', 'row_count': 7, 'minimum_full_gap': 1.9242678233754602, 'maximum_full_gap': 3.281055958734753, 'minimum_sector_gap': 2.7444323109732016, 'maximum_sector_gap': 3.0377014465351353, 'minimum_cross_capacity': 0.4766411638595977, 'maximum_cross_capacity': 0.6650528057483921, 'minimum_phase_mass': 0.0803751334226941, 'maximum_neutral_mass': 0.0}",
+      "expected": "positive finite profile",
+      "group": "coverage",
+      "name": "V=2 d=6 beta=8.0 left coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": "(64, 64)",
+      "expected": "(64, 64)",
+      "group": "coordinates",
+      "name": "V=2 d=8 basis",
+      "status": "PASS"
+    },
+    {
+      "actual": "[4, 4, 0]",
+      "expected": "complete disjoint sectors",
+      "group": "phase partition",
+      "name": "V=2 d=8 partition",
+      "status": "PASS"
+    },
+    {
+      "actual": "[8.917378149607246e-07, 8.917378149607248e-07]",
+      "expected": ">1e-30 and nonnegative",
+      "group": "Gibbs",
+      "name": "V=2 d=8 beta=0.5 reference",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.7946329937682575, 2.872536442691171, 0.6416824403998346]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=8 beta=0.5 right row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.995316510120757, 2.957886207821818, 0.4649210536678806]",
+      "expected": ">1e-10, >1e-10, >1e-14",
+      "group": "phase graph",
+      "name": "V=2 d=8 beta=0.5 right row",
+      "status": "PASS"
+    }
+  ],
+  "derived": {
+    "beta_profiles": {
+      "0.5": {
+        "beta": 0.5,
+        "maximum_neutral_mass": 0.2775793603820151,
+        "minimum_cross_capacity": 0.11831473848479887,
+        "minimum_full_gap": 1.0022812277674598,
+        "minimum_sector_gap": 1.5773625260965005,
+        "profile_count": 16
+      },
+      "1.0": {
+        "beta": 1.0,
+        "maximum_neutral_mass": 0.3073799998219997,
+        "minimum_cross_capacity": 0.12358937821385513,
+        "minimum_full_gap": 0.912516639605107,
+        "minimum_sector_gap": 1.5773731992017992,
+        "profile_count": 16
+      },
+      "2.0": {
+        "beta": 2.0,
+        "maximum_neutral_mass": 0.3387914340792146,
+        "minimum_cross_capacity": 0.12366764437575808,
+        "minimum_full_gap": 0.7800272826659476,
+        "minimum_sector_gap": 1.5773905476780852,
+        "profile_count": 16
+      },
+      "4.0": {
+        "beta": 4.0,
+        "maximum_neutral_mass": 0.3655403566785466,
+        "minimum_cross_capacity": 0.12018967598912142,
+        "minimum_full_gap": 0.66823386419841,
+        "minimum_sector_gap": 1.577553088994079,
+        "profile_count": 16
+      },
+      "8.0": {
+        "beta": 8.0,
+        "maximum_neutral_mass": 0.3870415227365262,
+        "minimum_cross_capacity": 0.11650039514772156,
+        "minimum_full_gap": 0.6310329497027756,
+        "minimum_sector_gap": 1.5800889283816102,
+        "profile_count": 16
+      }
+    },
+    "c6_closed": false,
+    "common_alpha_closed": false,
+    "common_core_closed": false,
+    "continuum_closed": false,
+    "cross_phase_capacity_control_closed": false,
+    "cutoff_independent_sector_gap_closed": false,
+    "exhaustion_uniformity_closed": false,
+    "finite_beta_stress_closed": true,
+    "finite_cross_phase_capacity_closed": true,
+    "finite_full_intrinsic_gap_closed": true,
+    "finite_phase_partition_closed": true,
+    "finite_within_phase_gap_closed": true,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "maximum_cross_capacity": 1.222041249326006,
+    "maximum_full_gap": 6.229495058532403,
+    "maximum_neutral_mass": 0.3870415227365262,
+    "maximum_sector_gap": 20.555978652063708,
+    "minimum_cross_capacity": 0.11650039514772156,
+    "minimum_full_gap": 0.6310329497027756,
+    "minimum_phase_mass": 0.010133814803601744,
+    "minimum_sector_gap": 1.5773625260965005,
+    "phase_conditioned_uniformity_closed": false,
+    "pre_a_closed": false,
+    "profile_count": 80,
+    "profiles": [
+      {
+        "beta": 0.5,
+        "dimension": 4,
+        "maximum_cross_capacity": 0.3723557421678538,
+        "maximum_full_gap": 1.468069233603886,
+        "maximum_neutral_mass": 0.0,
+        "maximum_sector_gap": 1.671628109616881,
+        "minimum_cross_capacity": 0.34001699475243197,
+        "minimum_full_gap": 1.0022812277674598,
+        "minimum_phase_mass": 0.21188962465123362,
+        "minimum_sector_gap": 1.5773625260965005,
+        "orientation": "right",
+        "row_count": 5,
+        "volume": 2
+      },
+      {
+        "beta": 0.5,
+        "dimension": 4,
+        "maximum_cross_capacity": 0.3723557421678538,
+        "maximum_full_gap": 1.468069233603886,
+        "maximum_neutral_mass": 0.0,
+        "maximum_sector_gap": 1.6716281096168808,
+        "minimum_cross_capacity": 0.340016994752432,
+        "minimum_full_gap": 1.0022812277674598,
+        "minimum_phase_mass": 0.21188962465123365,
+        "minimum_sector_gap": 1.5773625260965005,
+        "orientation": "left",
+        "row_count": 5,
+        "volume": 2
+      },
+      {
+        "beta": 1.0,
+        "dimension": 4,
+        "maximum_cross_capacity": 0.3811388292582212,
+        "maximum_full_gap": 1.9598969409044116,
+        "maximum_neutral_mass": 0.0,
+        "maximum_sector_gap": 1.9219438025176796,
+        "minimum_cross_capacity": 0.2926486636124065,
+        "minimum_full_gap": 0.912516639605107,
+        "minimum_phase_mass": 0.10215807467138102,
+        "minimum_sector_gap": 1.577469607664952,
+        "orientation": "right",
+        "row_count": 5,
+        "volume": 2
+      },
+      {
+        "beta": 1.0,
+        "dimension": 4,
+        "maximum_cross_capacity": 0.3811388292582212,
+        "maximum_full_gap": 1.9598969409044116,
+        "maximum_neutral_mass": 0.0,
+        "maximum_sector_gap": 1.9219438025176796,
+        "minimum_cross_capacity": 0.29264866361240655,
+        "minimum_full_gap": 0.9125166396051074,
+        "minimum_phase_mass": 0.10215807467138102,
+        "minimum_sector_gap": 1.577469607664952,
+        "orientation": "left",
+        "row_count": 5,
+        "volume": 2
+      },
+      {
+        "beta": 2.0,
+        "dimension": 4,
+        "maximum_cross_capacity": 0.38638561031411534,
+        "maximum_full_gap": 2.833778687459352,
+        "maximum_neutral_mass": 0.0,
+        "maximum_sector_gap": 2.6672429627473764,
+        "minimum_cross_capacity": 0.2389732762612456,
+        "minimum_full_gap": 0.7872756441265598,
+        "minimum_phase_mass": 0.05205278089171822,
+        "minimum_sector_gap": 1.5773905476780852,
+        "orientation": "right",
+        "row_count": 5,
+        "volume": 2
+      },
+      {
+        "beta": 2.0,
+        "dimension": 4,
+        "maximum_cross_capacity": 0.38638561031411534,
+        "maximum_full_gap": 2.8337786874593514,
+        "maximum_neutral_mass": 0.0,
+        "maximum_sector_gap": 2.6672429627473764,
+        "minimum_cross_capacity": 0.23897327626124557,
+        "minimum_full_gap": 0.7872756441265603,
+        "minimum_phase_mass": 0.052052780891718206,
+        "minimum_sector_gap": 1.5773905476780852,
+        "orientation": "left",
+        "row_count": 5,
+        "volume": 2
+      },
+      {
+        "beta": 4.0,
+        "dimension": 4,
+        "maximum_cross_capacity": 0.3777696727435325,
+        "maximum_full_gap": 3.800297514450586,
+        "maximum_neutral_mass": 0.0,
+        "maximum_sector_gap": 3.0184643784906,
+        "minimum_cross_capacity": 0.21267035394581502,
+        "minimum_full_gap": 0.7084531628874778,
+        "minimum_phase_mass": 0.0400448765517454,
+        "minimum_sector_gap": 1.5789748960439705,
+        "orientation": "right",
+        "row_count": 5,
+        "volume": 2
+      },
+      {
+        "beta": 4.0,
+        "dimension": 4,
+        "maximum_cross_capacity": 0.37776967274353257,
+        "maximum_full_gap": 3.8002975144505853,
+        "maximum_neutral_mass": 0.0,
+        "maximum_sector_gap": 3.0184643784905965,
+        "minimum_cross_capacity": 0.21267035394581502,
+        "minimum_full_gap": 0.7084531628874774,
+        "minimum_phase_mass": 0.04004487655174542,
+        "minimum_sector_gap": 1.5789748960439707,
+        "orientation": "left",
+        "row_count": 5,
+        "volume": 2
+      },
+      {
+        "beta": 8.0,
+        "dimension": 4,
+        "maximum_cross_capacity": 0.3652247558370831,
+        "maximum_full_gap": 4.045488937828118,
+        "maximum_neutral_mass": 0.0,
+        "maximum_sector_gap": 3.3735120143577415,
+        "minimum_cross_capacity": 0.20826079180415757,
+        "minimum_full_gap": 0.6867237745188258,
+        "minimum_phase_mass": 0.03764721704511815,
+        "minimum_sector_gap": 1.5919090055959648,
+        "orientation": "right",
+        "row_count": 5,
+        "volume": 2
+      },
+      {
+        "beta": 8.0,
+        "dimension": 4,
+        "maximum_cross_capacity": 0.365224755837083,
+        "maximum_full_gap": 4.045488937828116,
+        "maximum_neutral_mass": 0.0,
+        "maximum_sector_gap": 3.3735120143577384,
+        "minimum_cross_capacity": 0.2082607918041576,
+        "minimum_full_gap": 0.6867237745188258,
+        "minimum_phase_mass": 0.03764721704511816,
+        "minimum_sector_gap": 1.5919090055959646,
+        "orientation": "left",
+        "row_count": 5,
+        "volume": 2
+      },
+      {
+        "beta": 0.5,
+        "dimension": 5,
+        "maximum_cross_capacity": 0.12074847727278423,
+        "maximum_full_gap": 1.706929756944943,
+        "maximum_neutral_mass": 0.24389275334760807,
+        "maximum_sector_gap": 2.073594090961186,
+        "minimum_cross_capacity": 0.1183426604367682,
+        "minimum_full_gap": 1.1950962017934943,
+        "minimum_phase_mass": 0.08621355325808687,
+        "minimum_sector_gap": 1.7769109498472426,
+        "orientation": "right",
+        "row_count": 6,
+        "volume": 2
+      },
+      {
+        "beta": 0.5,
+        "dimension": 5,
+        "maximum_cross_capacity": 0.12074847727278422,
+        "maximum_full_gap": 1.706929756944943,
+        "maximum_neutral_mass": 0.24389275334760818,
+        "maximum_sector_gap": 2.073594090961187,
+        "minimum_cross_capacity": 0.1183426604367682,
+        "minimum_full_gap": 1.1950962017934932,
+        "minimum_phase_mass": 0.0862135532580869,
+        "minimum_sector_gap": 1.7769109498472428,
+        "orientation": "left",
+        "row_count": 6,
+        "volume": 2
+      },
+      {
+        "beta": 1.0,
+        "dimension": 5,
+        "maximum_cross_capacity": 0.1257108253112685,
+        "maximum_full_gap": 1.9479285414689322,
+        "maximum_neutral_mass": 0.2754753271822068,
+        "maximum_sector_gap": 2.955416833751661,
+        "minimum_cross_capacity": 0.12371065064210765,
+        "minimum_full_gap": 1.3039245866372624,
+        "minimum_phase_mass": 0.035147950144245446,
+        "minimum_sector_gap": 1.776668038554091,
+        "orientation": "right",
+        "row_count": 6,
+        "volume": 2
+      },
+      {
+        "beta": 1.0,
+        "dimension": 5,
+        "maximum_cross_capacity": 0.1257108253112685,
+        "maximum_full_gap": 1.9479285414689325,
+        "maximum_neutral_mass": 0.275475327182207,
+        "maximum_sector_gap": 2.9554168337516638,
+        "minimum_cross_capacity": 0.12371065064210768,
+        "minimum_full_gap": 1.3039245866372626,
+        "minimum_phase_mass": 0.03514795014424546,
+        "minimum_sector_gap": 1.7766680385540907,
+        "orientation": "left",
+        "row_count": 6,
+        "volume": 2
+      },
+      {
+        "beta": 2.0,
+        "dimension": 5,
+        "maximum_cross_capacity": 0.1312980757380594,
+        "maximum_full_gap": 2.3636300623347863,
+        "maximum_neutral_mass": 0.31326236661988566,
+        "maximum_sector_gap": 5.529630772126517,
+        "minimum_cross_capacity": 0.12575261119907133,
+        "minimum_full_gap": 1.5534356018176712,
+        "minimum_phase_mass": 0.018592497536550644,
+        "minimum_sector_gap": 1.780965663308131,
+        "orientation": "right",
+        "row_count": 6,
+        "volume": 2
+      },
+      {
+        "beta": 2.0,
+        "dimension": 5,
+        "maximum_cross_capacity": 0.13129807573805935,
+        "maximum_full_gap": 2.3636300623347872,
+        "maximum_neutral_mass": 0.3132623666198861,
+        "maximum_sector_gap": 5.529630772126526,
+        "minimum_cross_capacity": 0.12575261119907127,
+        "minimum_full_gap": 1.5534356018176698,
+        "minimum_phase_mass": 0.018592497536550616,
+        "minimum_sector_gap": 1.7809656633081312,
+        "orientation": "left",
+        "row_count": 6,
+        "volume": 2
+      },
+      {
+        "beta": 4.0,
+        "dimension": 5,
+        "maximum_cross_capacity": 0.1395632177895771,
+        "maximum_full_gap": 2.5635112843458905,
+        "maximum_neutral_mass": 0.34941632701771913,
+        "maximum_sector_gap": 10.411858372675525,
+        "minimum_cross_capacity": 0.12210651383417628,
+        "minimum_full_gap": 1.7770263767221235,
+        "minimum_phase_mass": 0.010133814803601746,
+        "minimum_sector_gap": 2.063679571926551,
+        "orientation": "right",
+        "row_count": 6,
+        "volume": 2
+      },
+      {
+        "beta": 4.0,
+        "dimension": 5,
+        "maximum_cross_capacity": 0.13956321778957706,
+        "maximum_full_gap": 2.5635112843458905,
+        "maximum_neutral_mass": 0.3494163270177195,
+        "maximum_sector_gap": 10.411858372675539,
+        "minimum_cross_capacity": 0.1221065138341762,
+        "minimum_full_gap": 1.7770263767221242,
+        "minimum_phase_mass": 0.010133814803601744,
+        "minimum_sector_gap": 2.0636795719265515,
+        "orientation": "left",
+        "row_count": 6,
+        "volume": 2
+      },
+      {
+        "beta": 8.0,
+        "dimension": 5,
+        "maximum_cross_capacity": 0.14401481395878601,
+        "maximum_full_gap": 2.842857239315814,
+        "maximum_neutral_mass": 0.3697413671765429,
+        "maximum_sector_gap": 14.46916129753479,
+        "minimum_cross_capacity": 0.11915107497093892,
+        "minimum_full_gap": 1.8674041419089633,
+        "minimum_phase_mass": 0.011019418509621275,
+        "minimum_sector_gap": 2.6173355488625814,
+        "orientation": "right",
+        "row_count": 6,
+        "volume": 2
+      },
+      {
+        "beta": 8.0,
+        "dimension": 5,
+        "maximum_cross_capacity": 0.144014813958786,
+        "maximum_full_gap": 2.842857239315731,
+        "maximum_neutral_mass": 0.36974136717654316,
+        "maximum_sector_gap": 14.469161297534786,
+        "minimum_cross_capacity": 0.11915107497093885,
+        "minimum_full_gap": 1.8674041419089622,
+        "minimum_phase_mass": 0.011019418509621359,
+        "minimum_sector_gap": 2.617335548862583,
+        "orientation": "left",
+        "row_count": 6,
+        "volume": 2
+      },
+      {
+        "beta": 0.5,
+        "dimension": 6,
+        "maximum_cross_capacity": 0.5370133150371496,
+        "maximum_full_gap": 2.1242153999083566,
+        "maximum_neutral_mass": 0.0,
+        "maximum_sector_gap": 2.486750153408055,
+        "minimum_cross_capacity": 0.4128067378907667,
+        "minimum_full_gap": 1.4721452785784677,
+        "minimum_phase_mass": 0.11957083594169518,
+        "minimum_sector_gap": 2.0895373043077834,
+        "orientation": "right",
+        "row_count": 7,
+        "volume": 2
+      },
+      {
+        "beta": 0.5,
+        "dimension": 6,
+        "maximum_cross_capacity": 0.5370133150371496,
+        "maximum_full_gap": 2.1242153999083557,
+        "maximum_neutral_mass": 0.0,
+        "maximum_sector_gap": 2.4867501534080545,
+        "minimum_cross_capacity": 0.41280673789076655,
+        "minimum_full_gap": 1.4721452785784677,
+        "minimum_phase_mass": 0.11957083594169521,
+        "minimum_sector_gap": 2.0895373043077834,
+        "orientation": "left",
+        "row_count": 7,
+        "volume": 2
+      },
+      {
+        "beta": 1.0,
+        "dimension": 6,
+        "maximum_cross_capacity": 0.5775273482743938,
+        "maximum_full_gap": 2.998542026428145,
+        "maximum_neutral_mass": 0.0,
+        "maximum_sector_gap": 2.86744886209805,
+        "minimum_cross_capacity": 0.3875291611639495,
+        "minimum_full_gap": 1.6011302309708606,
+        "minimum_phase_mass": 0.06588961411274671,
+        "minimum_sector_gap": 2.64237789933006,
+        "orientation": "right",
+        "row_count": 7,
+        "volume": 2
+      },
+      {
+        "beta": 1.0,
+        "dimension": 6,
+        "maximum_cross_capacity": 0.5775273482743941,
+        "maximum_full_gap": 2.9985420264281437,
+        "maximum_neutral_mass": 0.0,
+        "maximum_sector_gap": 2.867448862098048,
+        "minimum_cross_capacity": 0.3875291611639496,
+        "minimum_full_gap": 1.6011302309708588,
+        "minimum_phase_mass": 0.0658896141127468,
+        "minimum_sector_gap": 2.6423778993300595,
+        "orientation": "left",
+        "row_count": 7,
+        "volume": 2
+      },
+      {
+        "beta": 2.0,
+        "dimension": 6,
+        "maximum_cross_capacity": 0.6110437674097671,
+        "maximum_full_gap": 3.8750382074539487,
+        "maximum_neutral_mass": 0.0,
+        "maximum_sector_gap": 3.549658137111628,
+        "minimum_cross_capacity": 0.4167753366734628,
+        "minimum_full_gap": 1.6729054446344935,
+        "minimum_phase_mass": 0.05696491632399159,
+        "minimum_sector_gap": 2.673298073582624,
+        "orientation": "right",
+        "row_count": 7,
+        "volume": 2
+      },
+      {
+        "beta": 2.0,
+        "dimension": 6,
+        "maximum_cross_capacity": 0.6110437674097674,
+        "maximum_full_gap": 3.875038207453943,
+        "maximum_neutral_mass": 0.0,
+        "maximum_sector_gap": 3.549658137111621,
+        "minimum_cross_capacity": 0.4167753366734633,
+        "minimum_full_gap": 1.6729054446344944,
+        "minimum_phase_mass": 0.056964916323991754,
+        "minimum_sector_gap": 2.673298073582624,
+        "orientation": "left",
+        "row_count": 7,
+        "volume": 2
+      },
+      {
+        "beta": 4.0,
+        "dimension": 6,
+        "maximum_cross_capacity": 0.639780374456317,
+        "maximum_full_gap": 3.5747356677701148,
+        "maximum_neutral_mass": 0.0,
+        "maximum_sector_gap": 3.255738628476834,
+        "minimum_cross_capacity": 0.4476227576787218,
+        "minimum_full_gap": 1.7824315387470877,
+        "minimum_phase_mass": 0.06308422398411048,
+        "minimum_sector_gap": 2.6877810537639055,
+        "orientation": "right",
+        "row_count": 7,
+        "volume": 2
+      },
+      {
+        "beta": 4.0,
+        "dimension": 6,
+        "maximum_cross_capacity": 0.6397803744563173,
+        "maximum_full_gap": 3.5747356677700908,
+        "maximum_neutral_mass": 0.0,
+        "maximum_sector_gap": 3.255738628476826,
+        "minimum_cross_capacity": 0.44762275767872256,
+        "minimum_full_gap": 1.7824315387470864,
+        "minimum_phase_mass": 0.06308422398411055,
+        "minimum_sector_gap": 2.6877810537639046,
+        "orientation": "left",
+        "row_count": 7,
+        "volume": 2
+      },
+      {
+        "beta": 8.0,
+        "dimension": 6,
+        "maximum_cross_capacity": 0.665052805748392,
+        "maximum_full_gap": 3.2810559587347816,
+        "maximum_neutral_mass": 0.0,
+        "maximum_sector_gap": 3.037701446535138,
+        "minimum_cross_capacity": 0.4766411638595975,
+        "minimum_full_gap": 1.924267823375461,
+        "minimum_phase_mass": 0.08037513342269403,
+        "minimum_sector_gap": 2.744432310973204,
+        "orientation": "right",
+        "row_count": 7,
+        "volume": 2
+      },
+      {
+        "beta": 8.0,
+        "dimension": 6,
+        "maximum_cross_capacity": 0.6650528057483921,
+        "maximum_full_gap": 3.281055958734753,
+        "maximum_neutral_mass": 0.0,
+        "maximum_sector_gap": 3.0377014465351353,
+        "minimum_cross_capacity": 0.4766411638595977,
+        "minimum_full_gap": 1.9242678233754602,
+        "minimum_phase_mass": 0.0803751334226941,
+        "minimum_sector_gap": 2.7444323109732016,
+        "orientation": "left",
+        "row_count": 7,
+        "volume": 2
+      },
+      {
+        "beta": 0.5,
+        "dimension": 8,
+        "maximum_cross_capacity": 0.6797834899451984,
+        "maximum_full_gap": 2.995316510120768,
+        "maximum_neutral_mass": 0.0,
+        "maximum_sector_gap": 2.9606763427284633,
+        "minimum_cross_capacity": 0.4649210536678806,
+        "minimum_full_gap": 1.7946329937682575,
+        "minimum_phase_mass": 0.09485881588402205,
+        "minimum_sector_gap": 2.8158223914700296,
+        "orientation": "right",
+        "row_count": 9,
+        "volume": 2
+      },
+      {
+        "beta": 0.5,
+        "dimension": 8,
+        "maximum_cross_capacity": 0.6797834899451985,
+        "maximum_full_gap": 2.9953165101207624,
+        "maximum_neutral_mass": 0.0,
+        "maximum_sector_gap": 2.9606763427284664,
+        "minimum_cross_capacity": 0.4649210536678806,
+        "minimum_full_gap": 1.7946329937682604,
+        "minimum_phase_mass": 0.0948588158840223,
+        "minimum_sector_gap": 2.8158223914700318,
+        "orientation": "left",
+        "row_count": 9,
+        "volume": 2
+      },
+      {
+        "beta": 1.0,
+        "dimension": 8,
+        "maximum_cross_capacity": 0.7489224788822539,
+        "maximum_full_gap": 3.250822221550024,
+        "maximum_neutral_mass": 0.0,
+        "maximum_sector_gap": 3.3874462698948684,
+        "minimum_cross_capacity": 0.4974927037511633,
+        "minimum_full_gap": 1.9969748574062383,
+        "minimum_phase_mass": 0.08968357662438503,
+        "minimum_sector_gap": 3.0764450395673877,
+        "orientation": "right",
+        "row_count": 9,
+        "volume": 2
+      },
+      {
+        "beta": 1.0,
+        "dimension": 8,
+        "maximum_cross_capacity": 0.7489224788822537,
+        "maximum_full_gap": 3.2508222215500227,
+        "maximum_neutral_mass": 0.0,
+        "maximum_sector_gap": 3.3874462698948675,
+        "minimum_cross_capacity": 0.4974927037511637,
+        "minimum_full_gap": 1.9969748574062418,
+        "minimum_phase_mass": 0.08968357662438518,
+        "minimum_sector_gap": 3.076445039567388,
+        "orientation": "left",
+        "row_count": 9,
+        "volume": 2
+      },
+      {
+        "beta": 2.0,
+        "dimension": 8,
+        "maximum_cross_capacity": 0.8099599131557444,
+        "maximum_full_gap": 3.7780559388526096,
+        "maximum_neutral_mass": 0.0,
+        "maximum_sector_gap": 3.601788120709838,
+        "minimum_cross_capacity": 0.48826704282364897,
+        "minimum_full_gap": 2.229394151230008,
+        "minimum_phase_mass": 0.0405447611208963,
+        "minimum_sector_gap": 3.408733083659903,
+        "orientation": "right",
+        "row_count": 9,
+        "volume": 2
+      },
+      {
+        "beta": 2.0,
+        "dimension": 8,
+        "maximum_cross_capacity": 0.8099599131557442,
+        "maximum_full_gap": 3.7780559388526536,
+        "maximum_neutral_mass": 0.0,
+        "maximum_sector_gap": 3.6017881207097724,
+        "minimum_cross_capacity": 0.48826704282365163,
+        "minimum_full_gap": 2.2293941512300037,
+        "minimum_phase_mass": 0.04054476112089695,
+        "minimum_sector_gap": 3.4087330836599152,
+        "orientation": "left",
+        "row_count": 9,
+        "volume": 2
+      },
+      {
+        "beta": 4.0,
+        "dimension": 8,
+        "maximum_cross_capacity": 0.8478453869601918,
+        "maximum_full_gap": 4.021396660592536,
+        "maximum_neutral_mass": 0.0,
+        "maximum_sector_gap": 3.685041358430463,
+        "minimum_cross_capacity": 0.5090035359006169,
+        "minimum_full_gap": 2.429704790370541,
+        "minimum_phase_mass": 0.022754970050580414,
+        "minimum_sector_gap": 3.5940847713194124,
+        "orientation": "right",
+        "row_count": 9,
+        "volume": 2
+      },
+      {
+        "beta": 4.0,
+        "dimension": 8,
+        "maximum_cross_capacity": 0.8478453869601917,
+        "maximum_full_gap": 4.021396660592445,
+        "maximum_neutral_mass": 0.0,
+        "maximum_sector_gap": 3.6850413584304604,
+        "minimum_cross_capacity": 0.50900353590062,
+        "minimum_full_gap": 2.429704790370542,
+        "minimum_phase_mass": 0.022754970050581056,
+        "minimum_sector_gap": 3.594084771319412,
+        "orientation": "left",
+        "row_count": 9,
+        "volume": 2
+      },
+      {
+        "beta": 8.0,
+        "dimension": 8,
+        "maximum_cross_capacity": 0.8736348516547511,
+        "maximum_full_gap": 4.04098904941121,
+        "maximum_neutral_mass": 0.0,
+        "maximum_sector_gap": 3.7631027941603503,
+        "minimum_cross_capacity": 0.5192507807976532,
+        "minimum_full_gap": 2.6021395574426536,
+        "minimum_phase_mass": 0.02130322070182337,
+        "minimum_sector_gap": 3.5823053666303535,
+        "orientation": "right",
+        "row_count": 9,
+        "volume": 2
+      },
+      {
+        "beta": 8.0,
+        "dimension": 8,
+        "maximum_cross_capacity": 0.873634851654751,
+        "maximum_full_gap": 4.040989049409894,
+        "maximum_neutral_mass": 0.0,
+        "maximum_sector_gap": 3.763102794160349,
+        "minimum_cross_capacity": 0.5192507807976542,
+        "minimum_full_gap": 2.6021395574426562,
+        "minimum_phase_mass": 0.021303220701823368,
+        "minimum_sector_gap": 3.5823053666303535,
+        "orientation": "left",
+        "row_count": 9,
+        "volume": 2
+      },
+      {
+        "beta": 0.5,
+        "dimension": 10,
+        "maximum_cross_capacity": 0.8182889831582685,
+        "maximum_full_gap": 3.4734425636978705,
+        "maximum_neutral_mass": 0.0,
+        "maximum_sector_gap": 3.5471055904219093,
+        "minimum_cross_capacity": 0.6026056970299442,
+        "minimum_full_gap": 2.131326919627531,
+        "minimum_phase_mass": 0.10738009800882098,
+        "minimum_sector_gap": 3.308090453429166,
+        "orientation": "right",
+        "row_count": 11,
+        "volume": 2
+      },
+      {
+        "beta": 0.5,
+        "dimension": 10,
+        "maximum_cross_capacity": 0.8182889831582687,
+        "maximum_full_gap": 3.4734425636978576,
+        "maximum_neutral_mass": 0.0,
+        "maximum_sector_gap": 3.5471055904218924,
+        "minimum_cross_capacity": 0.6026056970299442,
+        "minimum_full_gap": 2.1313269196275257,
+        "minimum_phase_mass": 0.10738009800882094,
+        "minimum_sector_gap": 3.308090453429144,
+        "orientation": "left",
+        "row_count": 11,
+        "volume": 2
+      },
+      {
+        "beta": 1.0,
+        "dimension": 10,
+        "maximum_cross_capacity": 0.9050029475885969,
+        "maximum_full_gap": 4.2919078397401496,
+        "maximum_neutral_mass": 0.0,
+        "maximum_sector_gap": 4.0129254174722515,
+        "minimum_cross_capacity": 0.5759032798332647,
+        "minimum_full_gap": 2.363427598482608,
+        "minimum_phase_mass": 0.05631682511672191,
+        "minimum_sector_gap": 3.692859962566085,
+        "orientation": "right",
+        "row_count": 11,
+        "volume": 2
+      },
+      {
+        "beta": 1.0,
+        "dimension": 10,
+        "maximum_cross_capacity": 0.9050029475885965,
+        "maximum_full_gap": 4.2919078397401496,
+        "maximum_neutral_mass": 0.0,
+        "maximum_sector_gap": 4.012925417472259,
+        "minimum_cross_capacity": 0.5759032798332653,
+        "minimum_full_gap": 2.3634275984826365,
+        "minimum_phase_mass": 0.05631682511672251,
+        "minimum_sector_gap": 3.6928599625660303,
+        "orientation": "left",
+        "row_count": 11,
+        "volume": 2
+      },
+      {
+        "beta": 2.0,
+        "dimension": 10,
+        "maximum_cross_capacity": 0.9756494343477424,
+        "maximum_full_gap": 4.559438193527091,
+        "maximum_neutral_mass": 0.0,
+        "maximum_sector_gap": 4.267899307220227,
+        "minimum_cross_capacity": 0.5122835562454792,
+        "minimum_full_gap": 2.578064372916228,
+        "minimum_phase_mass": 0.03351000337584378,
+        "minimum_sector_gap": 3.905183279005427,
+        "orientation": "right",
+        "row_count": 11,
+        "volume": 2
+      },
+      {
+        "beta": 2.0,
+        "dimension": 10,
+        "maximum_cross_capacity": 0.9756494343477395,
+        "maximum_full_gap": 4.55943819352713,
+        "maximum_neutral_mass": 0.0,
+        "maximum_sector_gap": 4.2678993072202225,
+        "minimum_cross_capacity": 0.5122835562455,
+        "minimum_full_gap": 2.578064372916078,
+        "minimum_phase_mass": 0.03351000337584423,
+        "minimum_sector_gap": 3.9051832790054215,
+        "orientation": "left",
+        "row_count": 11,
+        "volume": 2
+      },
+      {
+        "beta": 4.0,
+        "dimension": 10,
+        "maximum_cross_capacity": 1.0203266769096744,
+        "maximum_full_gap": 4.618965011856172,
+        "maximum_neutral_mass": 0.0,
+        "maximum_sector_gap": 4.411847028400814,
+        "minimum_cross_capacity": 0.47143291371795154,
+        "minimum_full_gap": 2.801158324347844,
+        "minimum_phase_mass": 0.033286142856000664,
+        "minimum_sector_gap": 4.194685486436629,
+        "orientation": "right",
+        "row_count": 11,
+        "volume": 2
+      },
+      {
+        "beta": 4.0,
+        "dimension": 10,
+        "maximum_cross_capacity": 1.0203266769096722,
+        "maximum_full_gap": 4.6189650118552485,
+        "maximum_neutral_mass": 0.0,
+        "maximum_sector_gap": 4.411847028400804,
+        "minimum_cross_capacity": 0.47143291371797474,
+        "minimum_full_gap": 2.801158324348526,
+        "minimum_phase_mass": 0.03328614285600034,
+        "minimum_sector_gap": 4.194685486436627,
+        "orientation": "left",
+        "row_count": 11,
+        "volume": 2
+      },
+      {
+        "beta": 8.0,
+        "dimension": 10,
+        "maximum_cross_capacity": 1.0517143574168948,
+        "maximum_full_gap": 4.593081900884948,
+        "maximum_neutral_mass": 0.0,
+        "maximum_sector_gap": 4.512386709660126,
+        "minimum_cross_capacity": 0.469462850490894,
+        "minimum_full_gap": 3.006244929060265,
+        "minimum_phase_mass": 0.04175116249681743,
+        "minimum_sector_gap": 4.188283586782262,
+        "orientation": "right",
+        "row_count": 11,
+        "volume": 2
+      },
+      {
+        "beta": 8.0,
+        "dimension": 10,
+        "maximum_cross_capacity": 1.0517143574168941,
+        "maximum_full_gap": 4.593081900883115,
+        "maximum_neutral_mass": 0.0,
+        "maximum_sector_gap": 4.512386709651012,
+        "minimum_cross_capacity": 0.4694628504909077,
+        "minimum_full_gap": 3.006244929060173,
+        "minimum_phase_mass": 0.041751162496817526,
+        "minimum_sector_gap": 4.188283586782299,
+        "orientation": "left",
+        "row_count": 11,
+        "volume": 2
+      },
+      {
+        "beta": 0.5,
+        "dimension": 12,
+        "maximum_cross_capacity": 0.9475459540434505,
+        "maximum_full_gap": 4.1014459660666205,
+        "maximum_neutral_mass": 0.0,
+        "maximum_sector_gap": 4.061781131092253,
+        "minimum_cross_capacity": 0.6257310385550455,
+        "minimum_full_gap": 2.423391046447416,
+        "minimum_phase_mass": 0.08416204762525865,
+        "minimum_sector_gap": 3.792167193879922,
+        "orientation": "right",
+        "row_count": 13,
+        "volume": 2
+      },
+      {
+        "beta": 0.5,
+        "dimension": 12,
+        "maximum_cross_capacity": 0.9475459540434504,
+        "maximum_full_gap": 4.101445966066588,
+        "maximum_neutral_mass": 0.0,
+        "maximum_sector_gap": 4.061781131092291,
+        "minimum_cross_capacity": 0.6257310385550472,
+        "minimum_full_gap": 2.4233910464474144,
+        "minimum_phase_mass": 0.08416204762525883,
+        "minimum_sector_gap": 3.7921671938798314,
+        "orientation": "left",
+        "row_count": 13,
+        "volume": 2
+      },
+      {
+        "beta": 1.0,
+        "dimension": 12,
+        "maximum_cross_capacity": 1.0498621022812458,
+        "maximum_full_gap": 5.1530518554930165,
+        "maximum_neutral_mass": 0.0,
+        "maximum_sector_gap": 4.802247915031456,
+        "minimum_cross_capacity": 0.5997550050716698,
+        "minimum_full_gap": 2.691275332898316,
+        "minimum_phase_mass": 0.0430089614977539,
+        "minimum_sector_gap": 4.184557547890839,
+        "orientation": "right",
+        "row_count": 13,
+        "volume": 2
+      },
+      {
+        "beta": 1.0,
+        "dimension": 12,
+        "maximum_cross_capacity": 1.0498621022812455,
+        "maximum_full_gap": 5.1530518554925,
+        "maximum_neutral_mass": 0.0,
+        "maximum_sector_gap": 4.802247915031437,
+        "minimum_cross_capacity": 0.5997550050716677,
+        "minimum_full_gap": 2.6912753328981793,
+        "minimum_phase_mass": 0.04300896149775256,
+        "minimum_sector_gap": 4.1845575478909005,
+        "orientation": "left",
+        "row_count": 13,
+        "volume": 2
+      },
+      {
+        "beta": 2.0,
+        "dimension": 12,
+        "maximum_cross_capacity": 1.131750087110948,
+        "maximum_full_gap": 5.647863075935021,
+        "maximum_neutral_mass": 0.0,
+        "maximum_sector_gap": 5.180465283144306,
+        "minimum_cross_capacity": 0.5977869121308858,
+        "minimum_full_gap": 2.4606294784245564,
+        "minimum_phase_mass": 0.019498302373959876,
+        "minimum_sector_gap": 4.616305145861848,
+        "orientation": "right",
+        "row_count": 13,
+        "volume": 2
+      },
+      {
+        "beta": 2.0,
+        "dimension": 12,
+        "maximum_cross_capacity": 1.1317500871109476,
+        "maximum_full_gap": 5.647863075935321,
+        "maximum_neutral_mass": 0.0,
+        "maximum_sector_gap": 5.180465283140504,
+        "minimum_cross_capacity": 0.5977869121308858,
+        "minimum_full_gap": 2.4606294784231446,
+        "minimum_phase_mass": 0.019498302373959286,
+        "minimum_sector_gap": 4.616305145862636,
+        "orientation": "left",
+        "row_count": 13,
+        "volume": 2
+      },
+      {
+        "beta": 4.0,
+        "dimension": 12,
+        "maximum_cross_capacity": 1.184974762726164,
+        "maximum_full_gap": 5.633789927284772,
+        "maximum_neutral_mass": 0.0,
+        "maximum_sector_gap": 5.151415440294719,
+        "minimum_cross_capacity": 0.631353632853691,
+        "minimum_full_gap": 2.2336090910995594,
+        "minimum_phase_mass": 0.01810145014140383,
+        "minimum_sector_gap": 4.805072571119384,
+        "orientation": "right",
+        "row_count": 13,
+        "volume": 2
+      },
+      {
+        "beta": 4.0,
+        "dimension": 12,
+        "maximum_cross_capacity": 1.1849747627261633,
+        "maximum_full_gap": 5.633789927296832,
+        "maximum_neutral_mass": 0.0,
+        "maximum_sector_gap": 5.151415440271529,
+        "minimum_cross_capacity": 0.6313536328536918,
+        "minimum_full_gap": 2.2336090910998116,
+        "minimum_phase_mass": 0.01810145014140213,
+        "minimum_sector_gap": 4.80507257111939,
+        "orientation": "left",
+        "row_count": 13,
+        "volume": 2
+      },
+      {
+        "beta": 8.0,
+        "dimension": 12,
+        "maximum_cross_capacity": 1.222041249326006,
+        "maximum_full_gap": 5.59359261999308,
+        "maximum_neutral_mass": 0.0,
+        "maximum_sector_gap": 5.423348269870594,
+        "minimum_cross_capacity": 0.6533288197148643,
+        "minimum_full_gap": 2.034580382267399,
+        "minimum_phase_mass": 0.01881971113584053,
+        "minimum_sector_gap": 4.803602181145582,
+        "orientation": "right",
+        "row_count": 13,
+        "volume": 2
+      },
+      {
+        "beta": 8.0,
+        "dimension": 12,
+        "maximum_cross_capacity": 1.2220412493260053,
+        "maximum_full_gap": 5.593592619993752,
+        "maximum_neutral_mass": 0.0,
+        "maximum_sector_gap": 5.423348269871906,
+        "minimum_cross_capacity": 0.6533288197148627,
+        "minimum_full_gap": 2.034580382266693,
+        "minimum_phase_mass": 0.0188197111358387,
+        "minimum_sector_gap": 4.803602181145349,
+        "orientation": "left",
+        "row_count": 13,
+        "volume": 2
+      },
+      {
+        "beta": 0.5,
+        "dimension": 4,
+        "maximum_cross_capacity": 0.3987546159039894,
+        "maximum_full_gap": 1.4750841054435422,
+        "maximum_neutral_mass": 0.0,
+        "maximum_sector_gap": 1.6732073467747899,
+        "minimum_cross_capacity": 0.3396683490521961,
+        "minimum_full_gap": 1.0107702515077661,
+        "minimum_phase_mass": 0.20973729640367825,
+        "minimum_sector_gap": 1.5774665477615022,
+        "orientation": "right",
+        "row_count": 21,
+        "volume": 3
+      },
+      {
+        "beta": 0.5,
+        "dimension": 4,
+        "maximum_cross_capacity": 0.39875461590398936,
+        "maximum_full_gap": 1.4750841054435424,
+        "maximum_neutral_mass": 0.0,
+        "maximum_sector_gap": 1.6732073467747903,
+        "minimum_cross_capacity": 0.339668349052196,
+        "minimum_full_gap": 1.0107702515077661,
+        "minimum_phase_mass": 0.20973729640367822,
+        "minimum_sector_gap": 1.577466547761502,
+        "orientation": "left",
+        "row_count": 21,
+        "volume": 3
+      },
+      {
+        "beta": 1.0,
+        "dimension": 4,
+        "maximum_cross_capacity": 0.40562165707539793,
+        "maximum_full_gap": 2.0063465065146264,
+        "maximum_neutral_mass": 0.0,
+        "maximum_sector_gap": 1.941094569371571,
+        "minimum_cross_capacity": 0.28992291872988274,
+        "minimum_full_gap": 0.928409645215138,
+        "minimum_phase_mass": 0.09376652241940142,
+        "minimum_sector_gap": 1.5773731992017994,
+        "orientation": "right",
+        "row_count": 21,
+        "volume": 3
+      },
+      {
+        "beta": 1.0,
+        "dimension": 4,
+        "maximum_cross_capacity": 0.40562165707539793,
+        "maximum_full_gap": 2.0063465065146273,
+        "maximum_neutral_mass": 0.0,
+        "maximum_sector_gap": 1.9410945693715704,
+        "minimum_cross_capacity": 0.28992291872988274,
+        "minimum_full_gap": 0.928409645215138,
+        "minimum_phase_mass": 0.09376652241940132,
+        "minimum_sector_gap": 1.5773731992017992,
+        "orientation": "left",
+        "row_count": 21,
+        "volume": 3
+      },
+      {
+        "beta": 2.0,
+        "dimension": 4,
+        "maximum_cross_capacity": 0.3942946524878385,
+        "maximum_full_gap": 3.0667584439102593,
+        "maximum_neutral_mass": 0.0,
+        "maximum_sector_gap": 2.832220232443915,
+        "minimum_cross_capacity": 0.2314013098103394,
+        "minimum_full_gap": 0.7800272826659477,
+        "minimum_phase_mass": 0.03967929694383883,
+        "minimum_sector_gap": 1.5774584560482094,
+        "orientation": "right",
+        "row_count": 21,
+        "volume": 3
+      },
+      {
+        "beta": 2.0,
+        "dimension": 4,
+        "maximum_cross_capacity": 0.39429465248783874,
+        "maximum_full_gap": 3.0667584439102598,
+        "maximum_neutral_mass": 0.0,
+        "maximum_sector_gap": 2.832220232443914,
+        "minimum_cross_capacity": 0.2314013098103394,
+        "minimum_full_gap": 0.7800272826659476,
+        "minimum_phase_mass": 0.0396792969438388,
+        "minimum_sector_gap": 1.5774584560482094,
+        "orientation": "left",
+        "row_count": 21,
+        "volume": 3
+      },
+      {
+        "beta": 4.0,
+        "dimension": 4,
+        "maximum_cross_capacity": 0.4041061219085257,
+        "maximum_full_gap": 5.0640983196648905,
+        "maximum_neutral_mass": 0.0,
+        "maximum_sector_gap": 4.316509645909731,
+        "minimum_cross_capacity": 0.19548958309543746,
+        "minimum_full_gap": 0.66823386419841,
+        "minimum_phase_mass": 0.022073494997879705,
+        "minimum_sector_gap": 1.5775530889940792,
+        "orientation": "right",
+        "row_count": 21,
+        "volume": 3
+      },
+      {
+        "beta": 4.0,
+        "dimension": 4,
+        "maximum_cross_capacity": 0.4041061219085256,
+        "maximum_full_gap": 5.06409831966489,
+        "maximum_neutral_mass": 0.0,
+        "maximum_sector_gap": 4.316509645909721,
+        "minimum_cross_capacity": 0.19548958309543749,
+        "minimum_full_gap": 0.6682338641984102,
+        "minimum_phase_mass": 0.022073494997879747,
+        "minimum_sector_gap": 1.577553088994079,
+        "orientation": "left",
+        "row_count": 21,
+        "volume": 3
+      },
+      {
+        "beta": 8.0,
+        "dimension": 4,
+        "maximum_cross_capacity": 0.37156553235145545,
+        "maximum_full_gap": 6.229495058532403,
+        "maximum_neutral_mass": 0.0,
+        "maximum_sector_gap": 4.72005501511903,
+        "minimum_cross_capacity": 0.18631075368202593,
+        "minimum_full_gap": 0.6310329497027757,
+        "minimum_phase_mass": 0.01756105088212272,
+        "minimum_sector_gap": 1.5800889283816102,
+        "orientation": "right",
+        "row_count": 21,
+        "volume": 3
+      },
+      {
+        "beta": 8.0,
+        "dimension": 4,
+        "maximum_cross_capacity": 0.37156553235145573,
+        "maximum_full_gap": 6.2294950585324,
+        "maximum_neutral_mass": 0.0,
+        "maximum_sector_gap": 4.720055015119017,
+        "minimum_cross_capacity": 0.18631075368202596,
+        "minimum_full_gap": 0.6310329497027756,
+        "minimum_phase_mass": 0.017561050882122762,
+        "minimum_sector_gap": 1.5800889283816106,
+        "orientation": "left",
+        "row_count": 21,
+        "volume": 3
+      },
+      {
+        "beta": 0.5,
+        "dimension": 5,
+        "maximum_cross_capacity": 0.12075168332127004,
+        "maximum_full_gap": 1.7511893068114086,
+        "maximum_neutral_mass": 0.27757936038201503,
+        "maximum_sector_gap": 2.4186142705197957,
+        "minimum_cross_capacity": 0.11831473848479888,
+        "minimum_full_gap": 1.2209548098932475,
+        "minimum_phase_mass": 0.083080670600136,
+        "minimum_sector_gap": 1.7747207460449195,
+        "orientation": "right",
+        "row_count": 31,
+        "volume": 3
+      },
+      {
+        "beta": 0.5,
+        "dimension": 5,
+        "maximum_cross_capacity": 0.12075168332127005,
+        "maximum_full_gap": 1.751189306811408,
+        "maximum_neutral_mass": 0.2775793603820151,
+        "maximum_sector_gap": 2.4186142705197966,
+        "minimum_cross_capacity": 0.11831473848479887,
+        "minimum_full_gap": 1.2209548098932472,
+        "minimum_phase_mass": 0.083080670600136,
+        "minimum_sector_gap": 1.7747207460449195,
+        "orientation": "left",
+        "row_count": 31,
+        "volume": 3
+      },
+      {
+        "beta": 1.0,
+        "dimension": 5,
+        "maximum_cross_capacity": 0.12920523417711183,
+        "maximum_full_gap": 1.999356339284917,
+        "maximum_neutral_mass": 0.3073799998219997,
+        "maximum_sector_gap": 4.058162971664769,
+        "minimum_cross_capacity": 0.12358937821385518,
+        "minimum_full_gap": 1.3641565064111036,
+        "minimum_phase_mass": 0.027252499632008577,
+        "minimum_sector_gap": 1.7749338981017657,
+        "orientation": "right",
+        "row_count": 31,
+        "volume": 3
+      },
+      {
+        "beta": 1.0,
+        "dimension": 5,
+        "maximum_cross_capacity": 0.12920523417711177,
+        "maximum_full_gap": 1.9993563392849167,
+        "maximum_neutral_mass": 0.3073799998219997,
+        "maximum_sector_gap": 4.058162971664771,
+        "minimum_cross_capacity": 0.12358937821385513,
+        "minimum_full_gap": 1.364156506411105,
+        "minimum_phase_mass": 0.02725249963200856,
+        "minimum_sector_gap": 1.7749338981017657,
+        "orientation": "left",
+        "row_count": 31,
+        "volume": 3
+      },
+      {
+        "beta": 2.0,
+        "dimension": 5,
+        "maximum_cross_capacity": 0.14012513834832266,
+        "maximum_full_gap": 2.49364736099623,
+        "maximum_neutral_mass": 0.3387914340792146,
+        "maximum_sector_gap": 9.198576401000778,
+        "minimum_cross_capacity": 0.12366764437575808,
+        "minimum_full_gap": 1.3269257111273458,
+        "minimum_phase_mass": 0.010937778073817067,
+        "minimum_sector_gap": 1.774727284568126,
+        "orientation": "right",
+        "row_count": 31,
+        "volume": 3
+      },
+      {
+        "beta": 2.0,
+        "dimension": 5,
+        "maximum_cross_capacity": 0.14012513834832263,
+        "maximum_full_gap": 2.493647360996229,
+        "maximum_neutral_mass": 0.3387914340792144,
+        "maximum_sector_gap": 9.198576401000786,
+        "minimum_cross_capacity": 0.12366764437575813,
+        "minimum_full_gap": 1.3269257111273423,
+        "minimum_phase_mass": 0.010937778073817047,
+        "minimum_sector_gap": 1.774727284568126,
+        "orientation": "left",
+        "row_count": 31,
+        "volume": 3
+      },
+      {
+        "beta": 4.0,
+        "dimension": 5,
+        "maximum_cross_capacity": 0.15004199072238525,
+        "maximum_full_gap": 3.514271150580473,
+        "maximum_neutral_mass": 0.3655403566785466,
+        "maximum_sector_gap": 16.295399204088355,
+        "minimum_cross_capacity": 0.12018967598912142,
+        "minimum_full_gap": 1.3735862945607102,
+        "minimum_phase_mass": 0.010220827180587375,
+        "minimum_sector_gap": 1.9548336963617734,
+        "orientation": "right",
+        "row_count": 31,
+        "volume": 3
+      },
+      {
+        "beta": 4.0,
+        "dimension": 5,
+        "maximum_cross_capacity": 0.15004199072238522,
+        "maximum_full_gap": 3.514271150580501,
+        "maximum_neutral_mass": 0.36554035667854656,
+        "maximum_sector_gap": 16.29539920408837,
+        "minimum_cross_capacity": 0.12018967598912145,
+        "minimum_full_gap": 1.3735862945605974,
+        "minimum_phase_mass": 0.010220827180587401,
+        "minimum_sector_gap": 1.9548336963616464,
+        "orientation": "left",
+        "row_count": 31,
+        "volume": 3
+      },
+      {
+        "beta": 8.0,
+        "dimension": 5,
+        "maximum_cross_capacity": 0.15037711920503102,
+        "maximum_full_gap": 4.048998045611487,
+        "maximum_neutral_mass": 0.3870415227365262,
+        "maximum_sector_gap": 20.55597865206368,
+        "minimum_cross_capacity": 0.11650039514772156,
+        "minimum_full_gap": 1.876562049161948,
+        "minimum_phase_mass": 0.01175401447644769,
+        "minimum_sector_gap": 1.7879920742761888,
+        "orientation": "right",
+        "row_count": 31,
+        "volume": 3
+      },
+      {
+        "beta": 8.0,
+        "dimension": 5,
+        "maximum_cross_capacity": 0.15037711920503097,
+        "maximum_full_gap": 4.048998045611485,
+        "maximum_neutral_mass": 0.3870415227365261,
+        "maximum_sector_gap": 20.555978652063708,
+        "minimum_cross_capacity": 0.11650039514772156,
+        "minimum_full_gap": 1.8765620491619477,
+        "minimum_phase_mass": 0.011754014476447642,
+        "minimum_sector_gap": 1.7879920742763136,
+        "orientation": "left",
+        "row_count": 31,
+        "volume": 3
+      }
+    ],
+    "row_count": 1030,
+    "sector_a_closed": false,
+    "source_uniformity_closed": false,
+    "system_count": 8,
+    "volume_independent_sector_gap_closed": false
+  },
+  "exploration_id": "EXP-001250",
+  "manifest": "strategy/pre-a-cp1-st8-q3lock-phase-conditioned-intrinsic-gap-manifest.json",
+  "result_id": "R-405",
+  "schema": "tect/pre-a-r405-primary/1.0",
+  "scope": {
+    "c6_closed": false,
+    "common_alpha_closed": false,
+    "common_core_closed": false,
+    "continuum_closed": false,
+    "cross_phase_capacity_control_closed": false,
+    "cutoff_independent_sector_gap_closed": false,
+    "exhaustion_uniformity_closed": false,
+    "finite_beta_stress_closed": true,
+    "finite_cross_phase_capacity_closed": true,
+    "finite_full_intrinsic_gap_closed": true,
+    "finite_phase_partition_closed": true,
+    "finite_within_phase_gap_closed": true,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "no_new_negative_result": true,
+    "no_pdf": true,
+    "no_tier_change": true,
+    "phase_conditioned_uniformity_closed": false,
+    "pre_a_closed": false,
+    "sector_a_closed": false,
+    "source_uniformity_closed": false,
+    "volume_independent_sector_gap_closed": false
+  },
+  "verdict": "PASS"
+}

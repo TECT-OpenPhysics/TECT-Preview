@@ -1,0 +1,104 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-PHASE-CONDITIONED-INTRINSIC-GAP-v0",
+  "result_id": "R-405",
+  "title": "Phase-conditioned intrinsic gap and inter-phase capacity split",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001250",
+  "claim_bearing": false,
+  "parent_explorations": ["EXP-001249", "EXP-001245", "EXP-001244"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY",
+    "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+  ],
+  "question": "Can the intrinsic kinetic graph be decomposed into within-phase coercivity and inter-phase capacity, so a broken-sector gap is not confused with a global tunnelling mode?",
+  "new_perspective": {
+    "principle": "Separate local phase coercivity from the cross-phase bottleneck before attempting a thermodynamic Poincare transfer.",
+    "route": [
+      "Sort the one-site q spectrum and define lower and upper physical-coordinate sectors, leaving a possible central level as neutral mass rather than silently assigning it to a phase.",
+      "For each conditional law pi, compute the full momentum graph gap and the induced lower/upper sector gaps using the same conductance c_ij=(pi_i+pi_j)|p_ij|^2/(2 chi).",
+      "Record the cross-sector conductance K_cross=sum_{i in minus,j in plus} c_ij and the neutral mass as separate bottleneck data.",
+      "Stress beta and volume/cutoff rows while retaining the full-gap profile; a phasewise theorem may use the induced gaps even when a global gap is controlled by a phase-switching mode.",
+      "Use p-to-q and cross-edge deletion mutations as structural hostile tests: the diagonal q operator must have no kinetic edges, and deleting cross edges must expose disconnected phase blocks."
+    ],
+    "qft_bridge": "An analytic lower bound for the induced sector graph on a phase-conditioned Hamiltonian core could feed the broken-sector GNS coercivity gate, while the cross-sector capacity identifies the separate phase-selection debt. The finite split is not a phase theorem."
+  },
+  "finite_theorem": {
+    "conductance": "c_ij=(pi_i+pi_j)|p_ij|^2/(2 chi)",
+    "full_gap": "lambda_full is the first positive eigenvalue of diag(pi)^(-1/2)Ldiag(pi)^(-1/2)",
+    "sector_gaps": "lambda_minus and lambda_plus are the first positive eigenvalues of the induced sector graphs with pi restricted and renormalized",
+    "cross_capacity": "K_cross=sum_{i in minus,j in plus} c_ij",
+    "neutral_mass": "m_0=sum_{q-levels not assigned to either sector} pi_i",
+    "analytic_target": "Prove a phase-conditioned sector gap on a common core and separately control the cross-sector capacity or phase boundary condition before invoking a broken-sector GNS gap."
+  },
+  "finite_fixture": {
+    "admissible_pairs": [
+      {"volume": 2, "cutoff_dimensions": [4, 5, 6, 8, 10, 12]},
+      {"volume": 3, "cutoff_dimensions": [4, 5]}
+    ],
+    "beta_values": ["1/2", "1", "2", "4", "8"],
+    "orientations": ["right", "left"],
+    "chi": "1",
+    "r": "-1",
+    "g": "3/5",
+    "c": "3/5",
+    "lambda": "1/10",
+    "probability_floor": 1e-30,
+    "eigen_zero_threshold": 1e-9,
+    "gap_floor": 1e-10,
+    "capacity_floor": 1e-14,
+    "crosscheck_tolerance": 1e-8
+  },
+  "scope": {
+    "finite_phase_partition_closed": true,
+    "finite_full_intrinsic_gap_closed": true,
+    "finite_within_phase_gap_closed": true,
+    "finite_cross_phase_capacity_closed": true,
+    "finite_beta_stress_closed": true,
+    "cutoff_independent_sector_gap_closed": false,
+    "volume_independent_sector_gap_closed": false,
+    "phase_conditioned_uniformity_closed": false,
+    "cross_phase_capacity_control_closed": false,
+    "source_uniformity_closed": false,
+    "exhaustion_uniformity_closed": false,
+    "common_core_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R405.lean",
+    "theorem_markers": ["sector_mass_nonnegative", "cross_capacity_nonnegative", "finite_phase_split_scope"],
+    "command": "lake env lean Tect/R405.lean",
+    "boundary": "Lean checks scalar nonnegativity and finite phase-partition bookkeeping only; spectra, Gibbs rows, phase limits and operator domains remain executable/open analysis."
+  },
+  "artifacts": {
+    "primary_script": "codes/foundations/pre_a_cp1_st8_q3lock_phase_conditioned_intrinsic_gap.py",
+    "independent_script": "codes/foundations/pre_a_cp1_st8_q3lock_phase_conditioned_intrinsic_gap_independent.py",
+    "hostile_script": "codes/foundations/pre_a_cp1_st8_q3lock_phase_conditioned_intrinsic_gap_hostile.py",
+    "integrated_verifier": "codes/foundations/pre_a_cp1_st8_q3lock_phase_conditioned_intrinsic_gap_verify.py",
+    "lean": "verification/lean/Tect/R405.lean"
+  },
+  "promotion_criteria": [
+    "Prove a cutoff-, volume- and phase-conditioned lower bound for both induced sector gaps on one Hamiltonian common core.",
+    "Control the neutral level and cross-sector capacity under source, boundary and exhaustion limits, or impose an explicit phase boundary condition with a proved selection theorem.",
+    "Only then combine the sector coercivity with the R-399 shell and the abstract GNS transfer gate."
+  ],
+  "stop_conditions": [
+    "If an induced sector gap collapses under a validated cutoff or volume stress, retain the phase split only as a diagnostic and do not claim phasewise coercivity.",
+    "If cross-sector capacity is the smallest scale, keep the global gap separate from the within-phase gap and require a phase-selection argument.",
+    "Finite sector positivity and finite capacity are not a common-core, broken-sector, QFT or mass-gap theorem."
+  ],
+  "boundary": "T0 claim-nonbearing finite phase-conditioned intrinsic-graph stress only. It proves no uniform sector gap, phase selection, common core, common alpha, OS/KMS/GNS reconstruction, mass gap, continuum, C6, Sector-A or Pre-A closure.",
+  "no_overclaim": "The split is a bookkeeping and stress-test interface: it identifies separate within-phase and cross-phase quantities without promoting either finite profile to a thermodynamic theorem.",
+  "recorded_by": "Codex"
+}

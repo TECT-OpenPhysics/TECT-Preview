@@ -5910,6 +5910,122 @@
       "task_id": "T-054",
       "title": "Intrinsic kinetic graph Poincare stress for Q3 likelihood rows",
       "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "axis": "partition convention",
+          "check": "The lower and upper sectors are derived from the sorted physical q spectrum and any odd-cutoff central level is retained as neutral mass.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "restricted normalization",
+          "check": "Each sector law is renormalized before its generalized eigenvalue is computed; unnormalized restrictions are not accepted.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "global versus sector gap",
+          "check": "Full and induced gaps are stored as separate fields and no finite inequality between them is promoted.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "cross-phase coupling",
+          "check": "Deleting all cross edges exposes a second zero mode in the hostile representative, so the capacity cannot be omitted.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "kinetic identification",
+          "check": "The q-for-p mutation has zero edges while the genuine momentum graph is connected with positive gap.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "thermodynamic promotion",
+          "check": "Finite Gibbs reference rows do not establish phase selection, cutoff/volume/source/exhaustion uniformity, a common core, common alpha, OS/KMS/GNS gap or a physical mass gap.",
+          "disposition": "UPHELD-OPEN"
+        }
+      ],
+      "boundary": "T0 claim-nonbearing finite phase-conditioned intrinsic-graph stress only. It proves no uniform sector gap, phase selection, common core, common alpha, OS/KMS/GNS reconstruction, mass gap, continuum, C6, Sector-A or Pre-A closure.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "R-404 established a positive finite intrinsic graph gap but did not distinguish a global phase-switching mode from within-phase coercivity. R-405 makes that distinction explicit. The finite beta stress shows a softer global minimum than either induced sector minimum on this grid, so the analytic broken-sector route should target a phase-conditioned form and treat inter-phase capacity as a separate selection/tunnelling obligation. This is a route-local finite interface only.",
+      "evidence_refs": [
+        "strategy/pre-a-cp1-st8-q3lock-phase-conditioned-intrinsic-gap-manifest.json#new_perspective",
+        "strategy/pre-a-cp1-st8-q3lock-phase-conditioned-intrinsic-gap-certificate-260830.md#Finite verification",
+        "codes/foundations/pre_a_cp1_st8_q3lock_phase_conditioned_intrinsic_gap.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_phase_conditioned_intrinsic_gap_independent.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_phase_conditioned_intrinsic_gap_hostile.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_phase_conditioned_intrinsic_gap_verify.py#main",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-primary-pre_a_cp1_st8_q3lock_phase_conditioned_intrinsic_gap/primary.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-independent-pre_a_cp1_st8_q3lock_phase_conditioned_intrinsic_gap/independent.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-hostile-pre_a_cp1_st8_q3lock_phase_conditioned_intrinsic_gap/hostile.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-integrated-pre_a_cp1_st8_q3lock_phase_conditioned_intrinsic_gap/integrated.json#derived",
+        "verification/lean/Tect/R405.lean#sector_mass_nonnegative",
+        "claims/C6-SPACETIME-SIGNATURE/notes/phase-conditioned-intrinsic-gap-260830.md#R-405"
+      ],
+      "finding": "The primary lane passes 1178/1178 assertions over 8 systems, 80 profiles and 1030 conditional rows; the independent lane passes 1088/1088, hostile 5/5, integrated 33/33 and Lean R405 compiles. Full intrinsic gaps range from 0.6310329497027756 to 6.229495058532403; the smaller induced sector gap ranges from 1.5773625260965005 to 20.555978652063708; cross-sector capacity ranges from 0.11650039514772156 to 1.222041249326006; the minimum phase mass is 0.010133814803601744 and neutral mass is at most 0.3870415227365262. The minimum full gap decreases from 1.0022812277674598 at beta 1/2 to 0.6310329497027756 at beta 8, while the induced sector floor stays near 1.58.",
+      "formal_integration": {
+        "events": [
+          "20260830-phase-conditioned-intrinsic-graph-split-2026-08"
+        ],
+        "lean": "R405 PASS",
+        "negatives": [],
+        "no_changelog_event": false,
+        "no_new_negative": true,
+        "no_new_result": false,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "results": [
+          "R-405"
+        ]
+      },
+      "formal_refs": {
+        "events": [
+          "20260830-phase-conditioned-intrinsic-graph-split-2026-08"
+        ],
+        "negatives": [],
+        "results": [
+          "R-405"
+        ]
+      },
+      "gate_ids": [
+        "PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY",
+        "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+        "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+      ],
+      "id": "EXP-001250",
+      "method": [
+        "Sort the finite one-site q spectrum and define lower and upper sectors, leaving a possible central level as neutral mass.",
+        "For every reference Gibbs conditional row, compute the full momentum graph gap and the induced lower/upper sector gaps with the same conductance c_ij=(pi_i+pi_j)|p_ij|^2/(2 chi).",
+        "Record cross-sector capacity, neutral mass and phase masses separately over volume/cutoff, beta and both collar orientations.",
+        "Rebuild the finite model in an independent lane and use q-for-p plus cross-edge deletion mutations as hostile structural tests.",
+        "Compile Lean R405 for nonnegative sector masses, cross capacity and finite partition bookkeeping."
+      ],
+      "next_action": "Prove an analytic phase-conditioned sector Poincare estimate on one Hamiltonian common core, control neutral mass and cross-sector capacity under source and exhaustion limits, and only then transfer the sector form to the R-399 shell.",
+      "no_overclaim": "The finite separation is a diagnostic that distinguishes a potentially soft global mode from a within-phase scale; it is not a phasewise lower-bound theorem.",
+      "provenance": "contemporaneous",
+      "question": "Can the intrinsic kinetic graph be decomposed into within-phase coercivity and inter-phase capacity, so a broken-sector gap is not confused with a global tunnelling mode?",
+      "recorded_at": "2026-08-30T19:00:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001249",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001245",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001244",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-08-29",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Phase-conditioned intrinsic gap and inter-phase capacity split",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",

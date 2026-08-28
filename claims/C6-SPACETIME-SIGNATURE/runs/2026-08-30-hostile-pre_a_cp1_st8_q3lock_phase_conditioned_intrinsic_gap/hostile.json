@@ -1,0 +1,65 @@
+{
+  "assertion_count": 5,
+  "boundary": "T0 claim-nonbearing finite phase-conditioned intrinsic-graph stress only. It proves no uniform sector gap, phase selection, common core, common alpha, OS/KMS/GNS reconstruction, mass gap, continuum, C6, Sector-A or Pre-A closure.",
+  "checks": [
+    {
+      "actual": 3.3878922933423126,
+      "expected": ">1e-10",
+      "name": "genuine graph positive",
+      "status": "PASS"
+    },
+    {
+      "actual": 0,
+      "expected": 0,
+      "name": "q-for-p has no edges",
+      "status": "PASS"
+    },
+    {
+      "actual": 7.965795905772743e-11,
+      "expected": "<=1e-09",
+      "name": "cross-edge deletion exposes second zero mode",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.1202896563314286,
+      "expected": ">1e-14",
+      "name": "genuine cross capacity positive",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.5000000000000003,
+        0.4999999999999998
+      ],
+      "expected": ">1e-30",
+      "name": "both phase masses positive",
+      "status": "PASS"
+    }
+  ],
+  "derived": {
+    "beta": 8.0,
+    "cross_capacity": 1.1202896563314286,
+    "cross_deleted_eigenvalues": [
+      1.4777458770542928e-14,
+      7.965795905772743e-11,
+      4.958061637628646
+    ],
+    "cross_deleted_gap": 7.965795905772743e-11,
+    "dimension": 12,
+    "genuine_gap": 3.3878922933423126,
+    "genuine_zero_eigenvalue": -4.109022150383872e-13,
+    "mutation": "p_to_q_and_cross_edge_deletion",
+    "phase_masses": [
+      0.5000000000000003,
+      0.4999999999999998
+    ],
+    "q_mutation_edge_count": 0,
+    "raw_reference_minimum": 1.4653616136822886e-15,
+    "volume": 2
+  },
+  "exploration_id": "EXP-001250",
+  "manifest": "strategy/pre-a-cp1-st8-q3lock-phase-conditioned-intrinsic-gap-manifest.json",
+  "result_id": "R-405",
+  "schema": "tect/pre-a-r405-hostile/1.0",
+  "verdict": "PASS"
+}

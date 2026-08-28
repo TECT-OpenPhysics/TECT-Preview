@@ -2,6 +2,44 @@
   "data": [
     {
       "accepted_event_ids": [
+        "20260614-t-030-r-039-few-circles-bound-is-linear-on-a-sp",
+        "20260614-freeze-prep-patches-per-operator-accept-with-pa",
+        "20260614-t-030-r-040-true-sphere-l-dependence-distinct-r",
+        "20260614-t-030-r-042-r-033-step-2-height-energy-bound-e",
+        "20260619-r-043-operator-review-corrections-2026-06-19-do"
+      ],
+      "anchor": "r-039",
+      "claim_ref_basis": {
+        "B5-BEYOND-LAYER-BOUND": "proof_anchor_unique_family:B5"
+      },
+      "claim_refs": [
+        "B5-BEYOND-LAYER-BOUND"
+      ],
+      "co_recorded_negative_tags": [],
+      "detail": {
+        "proven_in": "B5 / dr2-t030-fewcircles-linear v1.0",
+        "publication_target": "S^2 additive-energy paper / T-030",
+        "reuse_scope": "arbitrary-Q DR-2 (T-030); the multi-circle Lemma-A occupancy refinement; the sharpened cover-number lower bound on additive-energy extremizers on a sphere.",
+        "statement_one_line": "For Q on an origin-centred S^2 (N=|Q|) covered by L distinct circles, E_+(Q) <= (2+2L)N^2 + 4LN + 4L^3 <= 6(L+1)N^2 -- LINEAR in L, strictly improving R-038's 3 L^2 N^2 (the exact bound for every L>=2; the simplified 6(L+1)N^2 form for L>=3). Proof: a multi-circle refinement of Lemma A (R-025) -- for m!=0, a.m=|m|^2/2 iff |a|=|b| (origin-centred sphere), so r(m) <= t_m=|Q cap C_m|, and two distinct circles meet in <=2 points gives t_m <= 2L off the <=L cover sum-circles C_{m_i}, t_{m_i} <= nu_i+2L. SPHERE-ESSENTIAL: off the sphere (|a|!=|b|) r(m)<=t_m FAILS and R-038's quadratic is the correct general-circle bound (a proof-mechanism guard #{m!=0: r(m)>2L}<=L detected an off-sphere cylinder test config and now passes on the genuine integer sphere x^2+y^2+z^2=1105^2). CONSEQUENCE: E_+ >= N^{2+delta} => cover number L >= N^delta/12 (R-038 gave N^{delta/2}/sqrt3; exponent doubled), pinning the open core from two sides with R-033 Cor.1.2 (rich sum-circle count). Verified dr2_t030_fewcircles_linear.py 6/6 (linear bound holds; A6 mechanism passes on S^2; strict improvement over R-038; estimator audit). TIGHTNESS on S^2 NOT claimed (measured E_+ ~ 3N^2, L-independent on rich-latitude unions -- far below the bound; true energy may be O(N^2 polylog) per R-033).",
+        "tier": "PARTIAL ADVANCE / frontier sharpening. Theorem T7-WITHIN-CLASS (elementary, sphere-only). Strictly improves R-038's bound (quadratic -> linear). Does NOT close T-030: arbitrary-Q N^{2+eps} STILL OPEN (record N^{9/4}, R-033). No tier/gate/hypothesis flip; B5 stays T7-SCOPE_{admissibility-bounded} given A1. Operator decides any disposition."
+      },
+      "detail_title": "Few-circles additive-energy bound is LINEAR on a sphere (sharpens R-038)",
+      "family_refs": [
+        "B5"
+      ],
+      "id": "R-039",
+      "normalized_detail": {
+        "boundary": "PARTIAL ADVANCE / frontier sharpening. Theorem T7-WITHIN-CLASS (elementary, sphere-only). Strictly improves R-038's bound (quadratic -> linear). Does NOT close T-030: arbitrary-Q N^{2+eps} STILL OPEN (record N^{9/4}, R-033). No tier/gate/hypothesis flip; B5 stays T7-SCOPE_{admissibility-bounded} given A1. Operator decides any disposition.",
+        "proof_anchor": "B5 / dr2-t030-fewcircles-linear v1.0",
+        "publication_target": "S^2 additive-energy paper / T-030",
+        "reuse": "arbitrary-Q DR-2 (T-030); the multi-circle Lemma-A occupancy refinement; the sharpened cover-number lower bound on additive-energy extremizers on a sphere.",
+        "statement": "For Q on an origin-centred S^2 (N=|Q|) covered by L distinct circles, E_+(Q) <= (2+2L)N^2 + 4LN + 4L^3 <= 6(L+1)N^2 -- LINEAR in L, strictly improving R-038's 3 L^2 N^2 (the exact bound for every L>=2; the simplified 6(L+1)N^2 form for L>=3). Proof: a multi-circle refinement of Lemma A (R-025) -- for m!=0, a.m=|m|^2/2 iff |a|=|b| (origin-centred sphere), so r(m) <= t_m=|Q cap C_m|, and two distinct circles meet in <=2 points gives t_m <= 2L off the <=L cover sum-circles C_{m_i}, t_{m_i} <= nu_i+2L. SPHERE-ESSENTIAL: off the sphere (|a|!=|b|) r(m)<=t_m FAILS and R-038's quadratic is the correct general-circle bound (a proof-mechanism guard #{m!=0: r(m)>2L}<=L detected an off-sphere cylinder test config and now passes on the genuine integer sphere x^2+y^2+z^2=1105^2). CONSEQUENCE: E_+ >= N^{2+delta} => cover number L >= N^delta/12 (R-038 gave N^{delta/2}/sqrt3; exponent doubled), pinning the open core from two sides with R-033 Cor.1.2 (rich sum-circle count). Verified dr2_t030_fewcircles_linear.py 6/6 (linear bound holds; A6 mechanism passes on S^2; strict improvement over R-038; estimator audit). TIGHTNESS on S^2 NOT claimed (measured E_+ ~ 3N^2, L-independent on rich-latitude unions -- far below the bound; true energy may be O(N^2 polylog) per R-033)."
+      },
+      "summary": "PARTIAL ADVANCE; cover-number lower bound doubled to L >= N^delta/12; sphere-essential; T-030 OPEN; dr2_t030_fewcircles_linear.py 6/6",
+      "title": "Few-circles bound is LINEAR on a sphere: E_+ <= 6(L+1)N^2 (sharpens R-038's quadratic)"
+    },
+    {
+      "accepted_event_ids": [
         "20260614-t-030-few-circles-bound-r-038-e-3-l-2-n-2-close",
         "20260614-t-030-r-039-few-circles-bound-is-linear-on-a-sp",
         "20260614-freeze-prep-patches-per-operator-accept-with-pa",

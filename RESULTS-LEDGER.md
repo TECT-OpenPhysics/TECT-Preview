@@ -42,6 +42,7 @@ policy in `governance/development-history.md`.
 | [R-376](#r-376) | Hilbert-Schmidt Lipschitz bridge for the capped Liouvillian kernel | R-376 v1.0 is a T0 claim-nonbearing finite operator-interface checkpoint under EXP-001218. A noncommuting cutoff-2 edge Liouvillian stress gives maximum full-kernel Frobenius ratio 0.9787544362168733 and 64-layer ratio 0.9755896836319287 with 76/76 integrated assertions; general Schatten-2 proof, operator-norm locality, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
 | [R-377](#r-377) | Gap-free odd-Matsubara resolvent telescoping budget | R-377 v1.0 is a T0 claim-nonbearing finite resolvent-interface checkpoint under EXP-001219. The exact positive-resolvent difference identity and its 64-layer budget pass 122/122 integrated assertions with Lean R377; the accumulated finite budget ratio is 0.9895313426497929 and the absolute-value square-root debt is recorded separately. Uniform locality, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
 | [R-382](#r-382) | Increasing-cutoff endpoint modular moment stress | R-382 v1.0 is a T0 claim-nonbearing finite cutoff-profile diagnostic under EXP-001224. The R-381 endpoint-energy bridge passes across 2816 all-prefix actual-Q3 contexts with Lean R382; edge max M_0 grows from 2.733031855844076 at d=3 to 41.64826651661874 at d=6 and max M_2 from 0.008378198414559081 to 17.719559304500326, with d=5 to d=6 ratios 8.855033106195243 and 36.38049903040583. This is finite growth evidence only; uniform M_0/M_2 control, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
+| [R-405](#r-405) | Phase-conditioned intrinsic gap and inter-phase capacity split | R-405 v1.0 is a T0 claim-nonbearing finite route split under EXP-001250. It separates the R-404 momentum graph into lower/upper physical-coordinate sector gaps, cross-sector capacity and neutral central mass across 8 systems, 80 profiles and 1030 rows; primary 1178/1178, independent 1088/1088, hostile 5/5, integrated 33/33 and Lean R405 pass. The full-gap range is [0.6310329497027756,6.229495058532403], the induced sector-gap range is [1.5773625260965005,20.555978652063708] and cross capacity is [0.11650039514772156,1.222041249326006]. The finite split is not a uniform phasewise bound; common-core, phase-selection, broken-sector GNS and all QFT gates remain open |
 | [R-404](#r-404) | Intrinsic kinetic graph Poincare stress for Q3 likelihood rows | R-404 v1.0 is a T0 claim-nonbearing finite route checkpoint under EXP-001249. It replaces the unstable R-402 coordinate upper comparison with the actual momentum-weighted conditional graph; primary 1398/1398, independent 1388/1388, hostile 6/6, integrated 37/37 and Lean R404 pass over 7 systems, 2688 contexts and 21120 rows. The finite generalized graph gap is [0.7570174175402339,5.647863075935321] and stays positive across d=3,4,5,6,8,10,12, but cutoff/volume/phase uniformity, common core and all QFT gates remain open |
 | [R-403](#r-403) | Increasing-cutoff Hamiltonian carre-du-champ stress | R-403 v1.0 is a T0 claim-nonbearing finite stress under EXP-001248. Across volume-two cutoffs d=3,4,5,6,8,10,12 and the declared source/history/order/prefix/adjoint/orientation grid, primary 1397/1397, independent 1379/1379, hostile 7/7, integrated 37/37 and Lean R403 pass. The nonzero-row E_kin/D_q range is [1.0461038216925114,109929.13074605557], with cutoff-maximum growth 24664.408607934973; this blocks automatic uniform-upper promotion but is not a divergence theorem, and all common-core/QFT gates remain open |
 | [R-402](#r-402) | Finite Hamiltonian carre-du-champ comparison | R-402 v1.0 is a T0 claim-nonbearing finite Hamiltonian-interface checkpoint under EXP-001247. The Q3 kinetic form is compared with the R-401 physical-coordinate form on 3584 actual history contexts and 71680 conditional rows; primary 5410/5410, independent 1815/1815, hostile 4/4, integrated 33/33 and Lean R402 pass. The observed nonzero-row ratio E_kin/D_q is [1.0087179063711833,11.074061483593928], while potential commutators vanish on the finite q basis; uniform common-core comparison and all QFT/limit gates remain open |
@@ -643,6 +644,54 @@ No new negative result, tier change, or R-376 PDF is issued.
 
 **Proven in:** manifest, certificate, Lean entrypoint, primary script,
 independent script, integrated verifier, scope note, and saved run artefacts.
+
+<a id="r-405"></a>
+### R-405 -- Phase-conditioned intrinsic gap and inter-phase capacity split
+
+**Result ID.** R-405 is a T0, claim-nonbearing finite checkpoint under
+EXP-001250.  It follows R-404 and separates the momentum-weighted intrinsic
+kinetic graph into within-phase coercivity, cross-phase conductance and neutral
+central mass.
+
+For each conditional q-law `pi` and q-basis momentum matrix `p`, the tested
+conductance is
+
+```
+c_ij = (pi_i + pi_j)|p_ij|^2/(2 chi).
+```
+
+The full graph uses all edges.  The lower and upper physical-coordinate
+sectors use the induced graphs with restricted and renormalized laws.  The
+cross quantity is `K_cross=sum_{i in minus,j in plus} c_ij`; any central odd
+cutoff level is retained as neutral mass.
+
+**Verification.** The finite grid contains volume-two dimensions
+`4,5,6,8,10,12` and volume-three dimensions `4,5`, beta in
+`{1/2,1,2,4,8}`, both collar orientations, every prefix conditional row and
+80 aggregate profiles.  The primary lane passes `1178/1178` over `1030`
+rows; the independent lane passes `1088/1088`, the hostile lane `5/5`, the
+integrated verifier `33/33`, and Lean R405 compiles.
+
+The full intrinsic gap range is
+`[0.6310329497027756,6.229495058532403]`.  The smaller induced sector gap
+range is `[1.5773625260965005,20.555978652063708]`; cross-sector capacity
+range is `[0.11650039514772156,1.222041249326006]`; the minimum phase mass is
+`0.010133814803601744`; and neutral mass is at most `0.3870415227365262`.
+The minimum full gap falls from `1.0022812277674598` at beta `1/2` to
+`0.6310329497027756` at beta `8`, while the minimum induced sector gap stays
+near `1.58`.
+
+This finite separation supports a phasewise route: a softer global mode can
+coexist with stronger within-phase coercivity.  It does not establish phase
+selection or a uniform sector bound.
+
+**Boundary.** R-405 proves no cutoff-, volume-, source-, phase- or
+exhaustion-uniform gap, no common core, common alpha, Hamiltonian-to-OS/KMS
+identification, broken-sector GNS gap, continuum, C6, Sector-A or Pre-A
+closure.  It is a finite reference-Gibbs phase split only; no tier change,
+negative result or PDF is issued.
+
+**Proven in:** [R-405 certificate](strategy/pre-a-cp1-st8-q3lock-phase-conditioned-intrinsic-gap-certificate-260830.md), [Lean entrypoint](verification/lean/Tect/R405.lean), primary/independent/hostile scripts, integrated verifier, [scope note](claims/C6-SPACETIME-SIGNATURE/notes/phase-conditioned-intrinsic-gap-260830.md), and saved run artefacts.
 
 <a id="r-404"></a>
 ### R-404 -- Intrinsic kinetic graph Poincare stress for Q3 likelihood rows
