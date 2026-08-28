@@ -1,0 +1,80 @@
+{
+  "checks": [
+    {
+      "actual": 0.4063588377792221,
+      "expected": ">1e-07",
+      "name": "normalization omission caught",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.3341273059636541,
+      "expected": ">1e-07",
+      "name": "one-leg exponential mutation caught",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.5895002061771643,
+      "expected": ">1e-07",
+      "name": "hard-projector substitution caught",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.006145099757872087,
+        0.701943683862607
+      ],
+      "expected": "transported <= genuine budget",
+      "name": "genuine triangle budget",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.006145099757872087,
+        0.004143142716819127,
+        0.00200195704105296
+      ],
+      "expected": "transported > projected-only budget",
+      "name": "omitted displacement terms caught",
+      "status": "PASS"
+    },
+    {
+      "actual": 5.494193648707841e-17,
+      "expected": "<=1e-08 because scalar semigroup commutes",
+      "name": "reverse-order sentinel",
+      "status": "PASS"
+    }
+  ],
+  "derived": {
+    "beta": 1.0,
+    "buffer": [
+      1
+    ],
+    "core": [
+      0
+    ],
+    "delta_ab": 0.3488926409567094,
+    "delta_abc": 0.34890790018907836,
+    "dimension": 3,
+    "environment": [
+      2
+    ],
+    "genuine_budget": 0.701943683862607,
+    "hard_projector_residual": 0.5895002061771643,
+    "mutated_budget_without_displacements": 0.004143142716819127,
+    "mutation_gap": 0.00200195704105296,
+    "normalization_trace_gap": 0.4063588377792221,
+    "one_leg_residual": 0.3341273059636541,
+    "projected_error": 0.004143142716819127,
+    "projection_mass": 0.5936411622207779,
+    "reverse_order_residual": 5.494193648707841e-17,
+    "scale": 2.0,
+    "shifted_max": 1.1017741374710148,
+    "transported_error": 0.006145099757872087,
+    "volume": 3
+  },
+  "exploration_id": "EXP-001241",
+  "manifest": "strategy/pre-a-cp1-st8-q3lock-semigroup-dressed-petz-collar-finite-discriminator-manifest.json",
+  "result_id": "R-397",
+  "schema": "tect/pre-a-r397-hostile/1.0",
+  "verdict": "PASS"
+}

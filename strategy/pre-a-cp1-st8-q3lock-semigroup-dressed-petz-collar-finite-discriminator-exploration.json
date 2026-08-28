@@ -1,0 +1,59 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001241",
+  "recorded_at": "2026-08-30T12:30:00Z",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-08-29",
+  "provenance": "contemporaneous",
+  "task_id": "T-054",
+  "title": "Finite semigroup-dressed Petz collar discriminator",
+  "question": "Does a rank-preserving heat-semigroup collar give a finite, dimension-safe normalized-filter and Petz transport interface that is more stable than a hard spectral projector?",
+  "method": [
+    "Shift every finite local core Hamiltonian by its spectral minimum and construct F_s=exp(-s K_A/2) for s in {1/8,1/4,1/2,1,2}.",
+    "Normalize the filtered state by m_s, test positivity and the exact mass inequality 1-m_s <= s Tr(rho K_A), and retain the measured local first moment rather than assuming a uniform bound.",
+    "Build one Petz map from the filtered B and BC marginals and reuse the R-396 contractivity and displacement triangle on both filtered and original inputs.",
+    "Record source, orientation, core, buffer, beta, scale and adjacent-cutoff profiles on a bounded pilot grid.",
+    "Run a non-importing independent lane, a Lean scalar cross-check, and hostile mutations for normalization, hard projection, one-leg exponent and omitted displacement terms."
+  ],
+  "finding": "The primary lane passes 473/473 assertions over 5 systems, 12 tripartitions and 120 rows; the independent lane passes 6/6, hostile 6/6, integrated 23/23 and Lean R397 compiles. The semigroup residual is 9.81218636736738e-16. The smallest filtered mass is 0.344378492577764, the maximum mass defect is 0.655621507422236, and the first-moment mass slack is at least 0.0030674280806310544. The tested normalized-filter candidate envelope sqrt(1-m_s)+(1-m_s)/2 has minimum slack 0.2037704602201066. Projected and transported Petz errors peak at 0.010367294505488315 and 0.01058510613640556; all finite violations are zero. The maximum adjacent-cutoff transport ratio is 2.192041611389991.",
+  "decision_reason": "The smooth collar survives the finite and hostile checks and lowers the observed adjacent-cutoff transport ratio relative to R-396, so the route advances as a finite interface. The mass and candidate envelope remain scale- and cutoff-dependent, and the pilot does not prove a cutoff-independent moment or a common form core. The route therefore advances only to the next moment/core gate, with no claim or tier promotion.",
+  "boundary": "T0 claim-nonbearing finite semigroup collar only. It proves no dimension-safe normalized-filter theorem, cutoff/source/volume/shape uniformity, QCMI upper bound, shell summability, common core, Cook/common-alpha convergence, OS/KMS/GNS reconstruction, Lorentzian continuation, mass gap, continuum, C6, Sector-A or Pre-A closure.",
+  "next_action": "Derive or disprove a cutoff-independent local first-moment bound on a declared common core, then prove the normalized-filter modulus there and repeat the collar transport over increasing oscillator cutoffs before any Q3LOCK promotion.",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+  ],
+  "evidence_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-semigroup-dressed-petz-collar-finite-discriminator-manifest.json#model",
+    "strategy/pre-a-cp1-st8-q3lock-semigroup-dressed-petz-collar-finite-discriminator-certificate-260830.md#Finite verification",
+    "codes/foundations/pre_a_cp1_st8_q3lock_semigroup_dressed_petz_collar.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_semigroup_dressed_petz_collar_independent.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_semigroup_dressed_petz_collar_hostile.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_semigroup_dressed_petz_collar_verify.py#main",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-primary-pre_a_cp1_st8_q3lock_semigroup_dressed_petz_collar/primary.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-independent-pre_a_cp1_st8_q3lock_semigroup_dressed_petz_collar/independent.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-hostile-pre_a_cp1_st8_q3lock_semigroup_dressed_petz_collar/hostile.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-integrated-pre_a_cp1_st8_q3lock_semigroup_dressed_petz_collar/integrated.json#derived",
+    "verification/lean/Tect/R397.lean#one_minus_exp_le_linear",
+    "claims/C6-SPACETIME-SIGNATURE/notes/semigroup-dressed-petz-collar-260830.md#R-397"
+  ],
+  "formal_refs": {"results": ["R-397"], "negatives": [], "events": ["20260830-finite-semigroup-dressed-petz-collar-discrimina"]},
+  "related": [
+    {"id": "EXP-001240", "relation": "continues"},
+    {"id": "EXP-001239", "relation": "continues"},
+    {"id": "EXP-001238", "relation": "alternative_to"}
+  ],
+  "adversarial_review": [
+    {"axis": "normalization", "check": "The hostile raw-state trace gap is 0.4063588377792221, so dropping m_s is caught; a uniform lower mass is not inferred.", "disposition": "DISMISSED-FINITE; UNIFORM OPEN"},
+    {"axis": "functional calculus", "check": "The one-leg exponential mutation has residual 0.3341273059636541 and hard-projector substitution residual 0.5895002061771643.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "transport accounting", "check": "Dropping both displacement terms is caught because 0.006145099757872087 exceeds 0.004143142716819127 while the genuine budget remains valid.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "cutoff uniformity", "check": "The maximum adjacent-cutoff transport ratio is 2.192041611389991 on the pilot, so the profile is not promoted to a uniform bound.", "disposition": "UPHELD-OPEN"},
+    {"axis": "moment and common core", "check": "The mass inequality uses the measured moment, whose cutoff-independent control and common form-core embedding remain unproved.", "disposition": "UPHELD-OPEN"},
+    {"axis": "Euclidean/Lorentzian", "check": "Semigroup composition is an Euclidean collar identity and is not a causal cone or physical-time generator.", "disposition": "UPHELD-OPEN"}
+  ],
+  "formal_integration": {"events": ["20260830-finite-semigroup-dressed-petz-collar-discrimina"], "lean": "R397 PASS", "negatives": [], "no_changelog_event": false, "no_new_negative": true, "no_new_result": false, "no_pdf": true, "no_tier_change": true, "results": ["R-397"]},
+  "formal_refs_duplicate": {"events": ["20260830-finite-semigroup-dressed-petz-collar-discrimina"], "negatives": [], "results": ["R-397"]},
+  "verdict": "advanced"
+}

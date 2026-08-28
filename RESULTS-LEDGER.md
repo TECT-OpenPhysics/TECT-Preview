@@ -42,6 +42,7 @@ policy in `governance/development-history.md`.
 | [R-376](#r-376) | Hilbert-Schmidt Lipschitz bridge for the capped Liouvillian kernel | R-376 v1.0 is a T0 claim-nonbearing finite operator-interface checkpoint under EXP-001218. A noncommuting cutoff-2 edge Liouvillian stress gives maximum full-kernel Frobenius ratio 0.9787544362168733 and 64-layer ratio 0.9755896836319287 with 76/76 integrated assertions; general Schatten-2 proof, operator-norm locality, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
 | [R-377](#r-377) | Gap-free odd-Matsubara resolvent telescoping budget | R-377 v1.0 is a T0 claim-nonbearing finite resolvent-interface checkpoint under EXP-001219. The exact positive-resolvent difference identity and its 64-layer budget pass 122/122 integrated assertions with Lean R377; the accumulated finite budget ratio is 0.9895313426497929 and the absolute-value square-root debt is recorded separately. Uniform locality, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
 | [R-382](#r-382) | Increasing-cutoff endpoint modular moment stress | R-382 v1.0 is a T0 claim-nonbearing finite cutoff-profile diagnostic under EXP-001224. The R-381 endpoint-energy bridge passes across 2816 all-prefix actual-Q3 contexts with Lean R382; edge max M_0 grows from 2.733031855844076 at d=3 to 41.64826651661874 at d=6 and max M_2 from 0.008378198414559081 to 17.719559304500326, with d=5 to d=6 ratios 8.855033106195243 and 36.38049903040583. This is finite growth evidence only; uniform M_0/M_2 control, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
+| [R-397](#r-397) | Finite semigroup-dressed Petz collar discriminator | R-397 v1.0 is a T0 claim-nonbearing finite checkpoint under EXP-001241. A rank-preserving heat-semigroup collar passes primary 473/473, independent 6/6, hostile 6/6, integrated 23/23 and Lean R397 over 5 systems, 12 tripartitions and 120 rows; semigroup residual is 9.81218636736738e-16, minimum mass 0.344378492577764, and the maximum adjacent transport ratio is 2.192041611389991. Uniform moment, normalized-filter theorem, common-alpha and all Q3LOCK/QFT gates remain open |
 | [R-396](#r-396) | Finite recoverability-first projected Petz transport | R-396 v1.0 is a T0 claim-nonbearing finite checkpoint under EXP-001239. A fixed Petz map transports the projected Gibbs recovery error back to the original local state across 12 systems, 62 tripartitions and 992 rows; primary 5,961/5,961, independent 6/6, hostile 3/3, integrated 23/23 and Lean R396 pass. The maximum transported error is 0.0260340558191261 and the maximum adjacent-cutoff ratio is 6.91143733666218, so dimension-safe QCMI, moment, common-alpha and all Q3LOCK/QFT gates remain open |
 | [R-395](#r-395) | Finite Gibbs gentle spectral-complement bridge | R-395 v1.0 is a T0 claim-nonbearing finite checkpoint under EXP-001238. The full trace-norm disturbance from the unnormalised low-energy projection is bounded by 2 sqrt(tail), and the R-394 first-moment Markov bound composes across 13 systems, 158 core layouts and 3,160 rows; primary 16,440/16,440, independent 6/6, integrated 22/22 and Lean R395 pass. The maximum disturbance is 0.8589478229401646 and the maximum adjacent disturbance ratio is 4.2093805087121146, so uniform moment, dimension-safe QCMI transfer and all Q3LOCK/QFT gates remain open |
 | [R-394](#r-394) | Finite Gibbs spectral-tail energy Markov audit | R-394 v1.0 is a T0 claim-nonbearing finite checkpoint under EXP-001237. Positive shifted local energy proves finite mass and weighted-tail Markov inequalities across 13 high-cutoff systems, 158 core layouts and 3,160 rows; primary 13,281/13,281, independent 6/6, integrated 22/22 and Lean R394 pass. The maximum mass tail is 0.857090394095672 and the maximum adjacent tail ratio is 16.93594199558396, so moment/cutoff uniformity, the two-stage plateau, Gibbs complement and all Q3LOCK/QFT gates remain open |
@@ -635,6 +636,36 @@ No new negative result, tier change, or R-376 PDF is issued.
 
 **Proven in:** manifest, certificate, Lean entrypoint, primary script,
 independent script, integrated verifier, scope note, and saved run artefacts.
+
+<a id="r-397"></a>
+### R-397 -- Finite semigroup-dressed Petz collar discriminator
+
+**Result ID.** R-397 is a T0, claim-nonbearing finite semigroup-collar
+checkpoint under EXP-001241.  It replaces the rank-changing hard spectral
+projector by `F_s=exp(-s K_A/2)` on the shifted positive local core and
+normalizes the filtered state by `m_s=Tr(rho exp(-s K_A))`.  One Petz map built
+from the filtered B and BC marginals is reused for the original AB input.
+
+**Verification.** The primary lane passes 473/473 assertions, the non-importing
+independent lane passes 6/6, the hostile lane passes 6/6, the integrated
+verifier passes 23/23, and Lean R397 compiles.  The pilot contains 5
+volume/cutoff systems, 12 tripartitions, 2 beta values, 5 collar scales and 120
+rows.  The maximum semigroup residual is `9.81218636736738e-16`; the smallest
+filtered mass is `0.344378492577764`; the largest mass defect is
+`0.655621507422236`; and the exact first-moment mass inequality has minimum
+slack `0.0030674280806310544`.  The finite candidate normalized-filter
+ envelope has minimum slack `0.2037704602201066`.  Maximum projected and
+transported errors are `0.010367294505488315` and `0.01058510613640556`; all
+finite violation counts are zero.  The largest adjacent-cutoff transport
+ratio is `2.192041611389991`.
+
+**Boundary.** The normalized-filter envelope is a finite candidate check, not
+a cutoff-independent theorem.  A uniform local moment, common form core,
+dimension-safe QCMI transfer, shell summability, Cook/common-alpha
+convergence, OS/KMS/GNS reconstruction, gap, continuum, C6, Sector-A and
+Pre-A remain open.  No tier change, negative result or PDF is issued.
+
+**Proven in:** [R-397 certificate](strategy/pre-a-cp1-st8-q3lock-semigroup-dressed-petz-collar-finite-discriminator-certificate-260830.md), [Lean entrypoint](verification/lean/Tect/R397.lean), primary/independent/hostile scripts, integrated verifier, [scope note](claims/C6-SPACETIME-SIGNATURE/notes/semigroup-dressed-petz-collar-260830.md), and saved run artefacts.
 
 <a id="r-396"></a>
 ### R-396 -- Finite recoverability-first projected Petz transport

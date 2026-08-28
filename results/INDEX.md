@@ -5,10 +5,11 @@
 
 Authorities: `RESULTS-LEDGER.md`.
 
-**230 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
+**231 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
 
 | ID | Result | Tier/scope |
 |---|---|---|
+| [`R-397`](../RESULTS-LEDGER.md#r-397) | Finite semigroup-dressed Petz collar discriminator | T0 |
 | [`R-396`](../RESULTS-LEDGER.md#r-396) | Finite recoverability-first projected Petz transport | T0 |
 | [`R-395`](../RESULTS-LEDGER.md#r-395) | Finite Gibbs gentle spectral-complement bridge | T0 |
 | [`R-394`](../RESULTS-LEDGER.md#r-394) | Finite Gibbs spectral-tail energy Markov audit | T0 |
@@ -33,7 +34,6 @@ Authorities: `RESULTS-LEDGER.md`.
 | [`R-375`](../RESULTS-LEDGER.md#r-375) | Summable odd-Matsubara Lipschitz budget for transition-energy perturbations | T0 |
 | [`R-374`](../RESULTS-LEDGER.md#r-374) | Positive odd-Matsubara resolvent expansion of the capped Gibbs kernel | T0 |
 | [`R-373`](../RESULTS-LEDGER.md#r-373) | Exact hyperbolic-tangent Gibbs kernel and capped local Dirichlet bound | T0 |
-| [`R-372`](../RESULTS-LEDGER.md#r-372) | Critical theta-half modular centering and Gibbs variance reduction | T0 |
 
 Search without loading the full ledger:
 

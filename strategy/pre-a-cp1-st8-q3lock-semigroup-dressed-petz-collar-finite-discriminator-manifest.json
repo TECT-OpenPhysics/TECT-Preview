@@ -1,0 +1,138 @@
+{
+  "schema": "tect/pre-a-cp1-st8-q3lock-semigroup-dressed-petz-collar-finite/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-SEMIGROUP-DRESSED-PETZ-COLLAR-FINITE-v0",
+  "result_id": "R-397",
+  "title": "Finite semigroup-dressed Petz collar discriminator",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001241",
+  "claim_bearing": false,
+  "parent_explorations": ["EXP-001240", "EXP-001239", "EXP-001238"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+  ],
+  "question": "Does a rank-preserving heat-semigroup collar give a finite, dimension-safe normalized-filter and Petz transport interface that is more stable than a hard spectral projector?",
+  "principle": "Smooth first, recover second.",
+  "finite_fixture": {
+    "volume_values": [2, 3, 4],
+    "admissible_pairs": [
+      {"volume": 2, "cutoff_dimensions": [3, 4]},
+      {"volume": 3, "cutoff_dimensions": [3, 4]},
+      {"volume": 4, "cutoff_dimensions": [3]}
+    ],
+    "core_widths": [1, 2],
+    "buffer_widths": [1, 2],
+    "beta_values": ["1/2", "1"],
+    "filter_scales": ["1/8", "1/4", "1/2", "1", "2"],
+    "chi": "1",
+    "r": "-1",
+    "g": "0.6",
+    "c": "0.6",
+    "lambda": "0.1",
+    "hbar": "1",
+    "numerical_tolerance": 1e-8,
+    "positivity_tolerance": 1e-10,
+    "semigroup_tolerance": 1e-8,
+    "hostile_threshold": 1e-7,
+    "finite_only": true
+  },
+  "model": {
+    "tripartition": "A=core, B=buffer, C=environment, with omitted exterior traced out",
+    "shifted_energy": "K_A=H_A-inf(sigma(H_A)) is positive on every finite local core",
+    "filter": "F_s=exp(-s K_A/2), with F_s F_t=F_(s+t)",
+    "filtered_state": "sigma_s=(F_s tensor I_BC) rho_ABC (F_s tensor I_BC) / m_s",
+    "mass": "m_s=Tr(rho_ABC exp(-s K_A))",
+    "mass_bound": "1-m_s <= s Tr(rho_ABC K_A)",
+    "candidate_disturbance": "D(rho,sigma_s) <= sqrt(1-m_s)+(1-m_s)/2 is tested as a finite candidate envelope, not assumed analytically",
+    "transport_budget": "D(rho_ABC,R_s(rho_AB)) <= D(sigma_s,R_s((sigma_s)_AB)) + D(rho_ABC,sigma_s) + D(rho_AB,(sigma_s)_AB)"
+  },
+  "coverage": {
+    "all_declared_volume_cutoff_pairs": true,
+    "both_core_widths_when_admissible": true,
+    "both_buffer_widths_when_admissible": true,
+    "both_orientations": true,
+    "all_beta_values": true,
+    "all_filter_scales": true,
+    "positive_shifted_local_energies": true,
+    "mass_moment_inequality_rows": true,
+    "normalized_filter_rows": true,
+    "semigroup_composition_rows": true,
+    "candidate_disturbance_rows": true,
+    "projected_petz_rows": true,
+    "transport_triangle_rows": true,
+    "cutoff_transport_profiles": true,
+    "hostile_mutations": true
+  },
+  "scope": {
+    "finite_shifted_filter_positivity_closed": true,
+    "finite_mass_moment_bound_closed": true,
+    "finite_semigroup_composition_closed": true,
+    "finite_normalized_filter_candidate_envelope_closed": true,
+    "finite_petz_transport_closed": true,
+    "finite_cutoff_profile_record_closed": true,
+    "finite_hostile_mutation_closed": true,
+    "cutoff_uniformity_closed": false,
+    "source_uniformity_closed": false,
+    "volume_uniformity_closed": false,
+    "shape_uniformity_closed": false,
+    "cutoff_independent_moment_closed": false,
+    "dimension_safe_normalized_filter_theorem_closed": false,
+    "qcmI_projected_transfer_closed": false,
+    "boundary_shell_l1_closed": false,
+    "operator_domain_embedding_closed": false,
+    "direct_D_cauchy_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R397.lean",
+    "theorem_markers": ["one_minus_exp_le_linear", "semigroup_filter_composition", "normalized_triangle_envelope", "finite_scope"],
+    "command": "lake env lean Tect/R397.lean",
+    "boundary": "Lean checks scalar exponential, semigroup and triangle arithmetic only; finite matrices, moment uniformity and all QFT transfers remain Python/open analysis."
+  },
+  "artifacts": {
+    "primary_script": "codes/foundations/pre_a_cp1_st8_q3lock_semigroup_dressed_petz_collar.py",
+    "independent_script": "codes/foundations/pre_a_cp1_st8_q3lock_semigroup_dressed_petz_collar_independent.py",
+    "hostile_script": "codes/foundations/pre_a_cp1_st8_q3lock_semigroup_dressed_petz_collar_hostile.py",
+    "integrated_verifier": "codes/foundations/pre_a_cp1_st8_q3lock_semigroup_dressed_petz_collar_verify.py",
+    "lean": "verification/lean/Tect/R397.lean"
+  },
+  "theorem_ladder": [
+    {"id": "SC-1", "name": "finite smooth-filter positivity and mass control", "status": "CLOSED FINITELY", "boundary": "finite declared grid only"},
+    {"id": "SC-2", "name": "dimension-free normalized-filter disturbance", "status": "CANDIDATE FINITE ENVELOPE ONLY", "boundary": "cutoff-independent moment and analytic theorem open"},
+    {"id": "SC-3", "name": "smooth Petz transport", "status": "CLOSED FINITELY", "boundary": "transport profile remains finite-grid diagnostic"},
+    {"id": "SC-4", "name": "Euclidean collar to common dynamics", "status": "OPEN", "boundary": "OS/KMS/GNS and Lorentzian continuation not tested here"}
+  ],
+  "adversarial_review": [
+    {"axis": "normalization", "check": "Every filtered state is divided by its measured mass and raw-state trace is retained.", "disposition": "PASS FINITELY; UNIFORM LOWER MASS OPEN"},
+    {"axis": "moment dependence", "check": "The exact mass defect is compared with the measured first moment; no cutoff-independent moment is inserted.", "disposition": "PASS FINITELY; UNIFORM MOMENT OPEN"},
+    {"axis": "functional calculus", "check": "F_s is built from shifted local spectral values and semigroup composition is checked before Petz recovery.", "disposition": "PASS FINITELY"},
+    {"axis": "Petz reference", "check": "One Petz map is built from the filtered BC and B marginals and reused for both filtered and original inputs.", "disposition": "PASS FINITELY"},
+    {"axis": "Euclidean versus Lorentzian", "check": "The collar parameter is not identified with physical time or a causal cone.", "disposition": "UPHELD-OPEN"}
+  ],
+  "promotion_criteria": [
+    "A cutoff-independent local first-moment estimate on a declared common core",
+    "A proved dimension-safe normalized-filter modulus with explicit hypotheses",
+    "A source/shape/volume-stable transported shell modulus",
+    "Separate OS/KMS/GNS and common-alpha continuation evidence"
+  ],
+  "stop_conditions": [
+    "If the mass collapses or the candidate disturbance grows under every admissible scale, retire the smooth route beyond its finite identities.",
+    "If the finite candidate envelope fails, retain only the mass and semigroup identities and do not promote normalized-filter transport.",
+    "If all stable moduli require a logarithmic dimension factor, keep the route finite and claim-nonbearing.",
+    "If no common Euclidean form core or real-time continuation is available, keep this as an OS-side collar only."
+  ],
+  "boundary": "T0 claim-nonbearing finite semigroup-dressed Petz collar only. It proves no QCMI upper bound, cutoff-independent moment, common core, common-alpha convergence, OS/KMS/GNS reconstruction, mass gap, continuum, C6, Sector-A or Pre-A result.",
+  "no_overclaim": "A finite smooth filter can remove rank jumps and satisfy scalar mass/semigroup identities without supplying a uniform normalized disturbance, a physical time generator or any Clay-level closure.",
+  "recorded_by": "Codex"
+}
