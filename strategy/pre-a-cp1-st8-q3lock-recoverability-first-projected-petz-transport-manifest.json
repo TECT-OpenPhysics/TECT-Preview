@@ -1,0 +1,111 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-RECOVERABILITY-FIRST-PROJECTED-PETZ-TRANSPORT-FINITE-v0",
+  "result_id": "R-396",
+  "title": "Finite recoverability-first projected Petz transport",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001239",
+  "claim_bearing": false,
+  "parent_explorations": ["EXP-001238", "EXP-001234", "EXP-001237"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+  ],
+  "question": "Can approximate Markovness of a low-energy projected Gibbs state be transported back to the original state with a dimension-free Petz triangle and contractivity budget, avoiding a dimension-growing entropy-continuity shortcut?",
+  "finite_fixture": {
+    "volume_values": [2, 3, 4, 5],
+    "admissible_pairs": [
+      {"volume": 2, "cutoff_dimensions": [3, 4, 5, 6]},
+      {"volume": 3, "cutoff_dimensions": [3, 4, 5]},
+      {"volume": 4, "cutoff_dimensions": [3, 4, 5]},
+      {"volume": 5, "cutoff_dimensions": [3, 4]}
+    ],
+    "core_widths": [1, 2],
+    "buffer_widths": [1, 2],
+    "energy_windows": ["1/2", "1", "2", "4"],
+    "beta_values": ["1/4", "1/2", "1", "2"],
+    "chi": "1",
+    "r": "-1",
+    "g": "0.6",
+    "c": "0.6",
+    "lambda": "0.1",
+    "hbar": "1",
+    "numerical_tolerance": 1e-8,
+    "positivity_tolerance": 1e-10,
+    "hostile_threshold": 1e-7,
+    "finite_only": true
+  },
+  "model": {
+    "tripartition": "A=core, B=buffer, C=environment, with omitted exterior traced out",
+    "projection": "sigma=(P_A tensor I_BC) rho_ABC (P_A tensor I_BC) / Tr(P_A rho_A)",
+    "projected_recovery": "R_sigma is the Petz map built from sigma_BC and sigma_B",
+    "projected_error": "e_sigma = D_tr(sigma_ABC, R_sigma(sigma_AB))",
+    "transported_error": "e_rho = D_tr(rho_ABC, R_sigma(rho_AB))",
+    "dimension_free_budget": "e_rho <= e_sigma + D_tr(rho_ABC,sigma_ABC) + D_tr(rho_AB,sigma_AB)",
+    "analytic_target": "replace generic entropy continuity by a dimension-safe recoverability transfer, then separately prove a uniform Gibbs moment and shell modulus"
+  },
+  "coverage": {
+    "all_declared_volume_cutoff_pairs": true,
+    "both_core_widths_when_admissible": true,
+    "both_buffer_widths_when_admissible": true,
+    "both_orientations": true,
+    "all_beta_values": true,
+    "all_energy_windows": true,
+    "projected_petz_rows": true,
+    "recovery_contractivity_rows": true,
+    "triangle_transport_rows": true,
+    "cutoff_transport_profiles": true,
+    "hostile_budget_mutation": true
+  },
+  "scope": {
+    "finite_projected_state_normalization_closed": true,
+    "finite_petz_recovery_closed": true,
+    "finite_recovery_contractivity_closed": true,
+    "finite_triangle_transport_closed": true,
+    "finite_cutoff_transport_profile_closed": true,
+    "finite_hostile_budget_mutation_closed": true,
+    "cutoff_uniformity_closed": false,
+    "source_uniformity_closed": false,
+    "volume_uniformity_closed": false,
+    "shape_uniformity_closed": false,
+    "dimension_safe_qcmi_upper_bound_closed": false,
+    "qcmI_projected_transfer_closed": false,
+    "gibbs_moment_uniformity_closed": false,
+    "boundary_shell_l1_closed": false,
+    "operator_domain_embedding_closed": false,
+    "direct_D_cauchy_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R396.lean",
+    "theorem_markers": ["triangle_budget", "contractivity_split", "finite_scope"],
+    "command": "lake env lean Tect/R396.lean",
+    "boundary": "Lean checks scalar triangle and contractivity arithmetic only; finite Petz matrices and all cutoff/QFT transfers remain Python/open analysis."
+  },
+  "qft_interface": {
+    "closed": "On the finite declared grid, a single projected Petz map transports the recovery error with a dimension-free triangle budget, and the AB input displacement is contractive within numerical tolerance.",
+    "open": "The transport budget is cutoff-sensitive; it is not a QCMI upper bound. Uniform Gibbs moments, dimension-safe QCMI continuity, projected-QCMI transfer, shell summability, common core, Cook/common-alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open.",
+    "tect_boundary": "Auxiliary finite approximate-Markov interface only; no physical-sector conclusion or production-owner transfer is supplied."
+  },
+  "artifacts": {
+    "primary_script": "codes/foundations/pre_a_cp1_st8_q3lock_recoverability_first_projected_petz_transport.py",
+    "independent_script": "codes/foundations/pre_a_cp1_st8_q3lock_recoverability_first_projected_petz_transport_independent.py",
+    "hostile_script": "codes/foundations/pre_a_cp1_st8_q3lock_recoverability_first_projected_petz_transport_hostile.py",
+    "integrated_verifier": "codes/foundations/pre_a_cp1_st8_q3lock_recoverability_first_projected_petz_transport_verify.py",
+    "lean": "verification/lean/Tect/R396.lean"
+  },
+  "boundary": "T0 claim-nonbearing finite recoverability-first projected Petz transport only. It proves no QCMI upper bound, cutoff-independent moment or recovery modulus, Gibbs complement theorem, shell modulus, source/volume/shape bound, common core, beta/eta-independent topology, domain or Cook/common-alpha convergence, OS/KMS/GNS reconstruction, gap, continuum, C6, Sector-A or Pre-A result.",
+  "no_overclaim": "A dimension-free finite recovery triangle avoids a generic log-dimension continuity factor, but it does not make the projected recovery error or the projection disturbance uniformly small and does not identify the Q3LOCK thermodynamic dynamics.",
+  "recorded_by": "Codex"
+}

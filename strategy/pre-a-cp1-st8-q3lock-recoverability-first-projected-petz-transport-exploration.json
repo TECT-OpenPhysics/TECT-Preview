@@ -1,0 +1,60 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001239",
+  "recorded_at": "2026-08-30T11:45:00Z",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-08-29",
+  "provenance": "contemporaneous",
+  "task_id": "T-054",
+  "title": "Finite recoverability-first projected Petz transport",
+  "question": "Can approximate Markovness of a low-energy projected Gibbs state be transported back to the original state with a dimension-free Petz triangle and contractivity budget, avoiding a dimension-growing entropy-continuity shortcut?",
+  "method": [
+    "Build the finite Q3LOCK Gibbs state on every declared volume and oscillator cutoff, and enumerate both orientations, core widths, buffer widths, beta values and energy windows.",
+    "Project the local A core, normalize the projected state, and build one Petz map from its BC and B marginals; apply the same map to the original AB reduction.",
+    "Check projected and transported trace distances, partial-trace contractivity, recovered-state positivity and the triangle budget with both displacement terms.",
+    "Retain per-cutoff transport profiles and adjacent ratios so finite recovery success cannot hide regulator growth.",
+    "Rebuild the full table without importing the primary module, run an omitted-displacement hostile mutation, and compile the scalar Lean triangle and contractivity skeleton."
+  ],
+  "finding": "The primary lane passes 5961/5961 assertions over 12 volume/cutoff systems, 62 tripartitions and 992 rows. The non-importing independent lane passes 6/6 aggregate checks, the hostile lane passes 3/3 and the integrated verifier passes 23/23 with Lean R396. The maximum projected recovery error is 0.0246593411003531, transported error 0.0260340558191261, triangle budget 1.67739253805716 and contractivity gap 6.68182482377048e-16. All finite violation counts are zero, but the adjacent-cutoff transport ratio reaches 6.91143733666218.",
+  "decision_reason": "R-396 supplies a distinct finite approximate-Markov transport interface: it keeps the recovery map fixed and replaces a dimension-growing entropy-continuity shortcut by contractivity plus a transparent triangle budget. The finite cutoff profile remains nonuniform, so this advances only the interface and identifies the next need for a dimension-safe continuity or moment theorem.",
+  "boundary": "T0 claim-nonbearing finite projected-state transport only. It proves no dimension-safe QCMI upper bound, cutoff/source/volume/shape uniformity, Gibbs moment theorem, shell summability, common form core, Cook/common-alpha convergence, OS/KMS/GNS reconstruction, mass gap, continuum, C6, Sector-A or Pre-A closure.",
+  "next_action": "Test a semigroup-dressed smooth spectral collar that removes hard projector rank jumps, while keeping the R-396 fixed-reference Petz and displacement accounting. Require a finite primary/independent/hostile/Lean package and retire the route if its normalized disturbance still grows under every declared collar scaling.",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+  ],
+  "evidence_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-recoverability-first-projected-petz-transport-manifest.json#model",
+    "strategy/pre-a-cp1-st8-q3lock-recoverability-first-projected-petz-transport-certificate-260830.md#Finite verification",
+    "codes/foundations/pre_a_cp1_st8_q3lock_recoverability_first_projected_petz_transport.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_recoverability_first_projected_petz_transport_independent.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_recoverability_first_projected_petz_transport_hostile.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_recoverability_first_projected_petz_transport_verify.py#main",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-primary-pre_a_cp1_st8_q3lock_recoverability_first_projected_petz_transport/primary.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-independent-pre_a_cp1_st8_q3lock_recoverability_first_projected_petz_transport/independent.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-hostile-pre_a_cp1_st8_q3lock_recoverability_first_projected_petz_transport/hostile.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-integrated-pre_a_cp1_st8_q3lock_recoverability_first_projected_petz_transport/integrated.json#derived",
+    "verification/lean/Tect/R396.lean#triangle_budget",
+    "claims/C6-SPACETIME-SIGNATURE/notes/recoverability-first-projected-petz-transport-260830.md#R-396"
+  ],
+  "formal_refs": {"results": ["R-396"], "negatives": [], "events": []},
+  "related": [
+    {"id": "EXP-001238", "relation": "continues"},
+    {"id": "EXP-001237", "relation": "continues"},
+    {"id": "EXP-001234", "relation": "alternative_to"}
+  ],
+  "adversarial_review": [
+    {"axis": "fixed reference", "check": "The projected BC and B marginals define one recovery map that is reused for both projected and original inputs.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "partial-trace contractivity", "check": "Recovered input distance is checked against AB distance and AB distance against ABC distance on every row.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "triangle accounting", "check": "Both ABC and AB displacement terms are retained and a second two-ABC envelope is checked.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "positive recovery", "check": "Recovered traces and minimum eigenvalues are checked without hiding a negative eigenvalue by clipping.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "omission mutation", "check": "Dropping both displacement terms is separated on the hostile row and is rejected.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "cutoff profile", "check": "The adjacent transport ratio reaches 6.91143733666218, so no cutoff-independent continuity is inferred.", "disposition": "UPHELD-OPEN"},
+    {"axis": "QFT promotion", "check": "Moment, shell, common-core, common-alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A obligations remain open.", "disposition": "UPHELD-OPEN"}
+  ],
+  "formal_integration": {"events": [], "lean": "R396 PASS", "negatives": [], "no_changelog_event": false, "no_new_negative": true, "no_new_result": false, "no_pdf": true, "no_tier_change": true, "results": ["R-396"]},
+  "formal_refs_duplicate": {"events": [], "negatives": [], "results": ["R-396"]},
+  "verdict": "advanced"
+}

@@ -1,0 +1,59 @@
+{
+  "checks": [
+    {
+      "actual": 0.005536628703282609,
+      "expected": ">1e-07",
+      "name": "transport visible",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.005536628703282609,
+        0.9453396720051531
+      ],
+      "expected": "transported <= genuine budget",
+      "name": "genuine triangle budget",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.005536628703282609,
+        0.00448048440142432,
+        0.0010561443018582894
+      ],
+      "expected": "transported > projected error alone",
+      "name": "omitted displacement terms caught",
+      "status": "PASS"
+    }
+  ],
+  "derived": {
+    "beta": 1.0,
+    "buffer": [
+      1
+    ],
+    "core": [
+      2,
+      3
+    ],
+    "delta_ab": 0.47042037282748944,
+    "delta_abc": 0.47043881477623933,
+    "dimension": 3,
+    "energy_window": 0.5,
+    "environment": [
+      0
+    ],
+    "genuine_budget": 0.9453396720051531,
+    "mutated_budget_without_displacements": 0.00448048440142432,
+    "mutation_gap": 0.0010561443018582894,
+    "orientation": "left",
+    "projected_error": 0.00448048440142432,
+    "projection_mass": 0.536431724435731,
+    "transported_error": 0.005536628703282609,
+    "volume": 4
+  },
+  "exploration_id": "EXP-001239",
+  "manifest": "strategy/pre-a-cp1-st8-q3lock-recoverability-first-projected-petz-transport-manifest.json",
+  "result_id": "R-396",
+  "schema": "tect/pre-a-r396-hostile/1.0",
+  "verdict": "PASS"
+}

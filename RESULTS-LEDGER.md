@@ -42,6 +42,7 @@ policy in `governance/development-history.md`.
 | [R-376](#r-376) | Hilbert-Schmidt Lipschitz bridge for the capped Liouvillian kernel | R-376 v1.0 is a T0 claim-nonbearing finite operator-interface checkpoint under EXP-001218. A noncommuting cutoff-2 edge Liouvillian stress gives maximum full-kernel Frobenius ratio 0.9787544362168733 and 64-layer ratio 0.9755896836319287 with 76/76 integrated assertions; general Schatten-2 proof, operator-norm locality, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
 | [R-377](#r-377) | Gap-free odd-Matsubara resolvent telescoping budget | R-377 v1.0 is a T0 claim-nonbearing finite resolvent-interface checkpoint under EXP-001219. The exact positive-resolvent difference identity and its 64-layer budget pass 122/122 integrated assertions with Lean R377; the accumulated finite budget ratio is 0.9895313426497929 and the absolute-value square-root debt is recorded separately. Uniform locality, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
 | [R-382](#r-382) | Increasing-cutoff endpoint modular moment stress | R-382 v1.0 is a T0 claim-nonbearing finite cutoff-profile diagnostic under EXP-001224. The R-381 endpoint-energy bridge passes across 2816 all-prefix actual-Q3 contexts with Lean R382; edge max M_0 grows from 2.733031855844076 at d=3 to 41.64826651661874 at d=6 and max M_2 from 0.008378198414559081 to 17.719559304500326, with d=5 to d=6 ratios 8.855033106195243 and 36.38049903040583. This is finite growth evidence only; uniform M_0/M_2 control, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
+| [R-396](#r-396) | Finite recoverability-first projected Petz transport | R-396 v1.0 is a T0 claim-nonbearing finite checkpoint under EXP-001239. A fixed Petz map transports the projected Gibbs recovery error back to the original local state across 12 systems, 62 tripartitions and 992 rows; primary 5,961/5,961, independent 6/6, hostile 3/3, integrated 23/23 and Lean R396 pass. The maximum transported error is 0.0260340558191261 and the maximum adjacent-cutoff ratio is 6.91143733666218, so dimension-safe QCMI, moment, common-alpha and all Q3LOCK/QFT gates remain open |
 | [R-395](#r-395) | Finite Gibbs gentle spectral-complement bridge | R-395 v1.0 is a T0 claim-nonbearing finite checkpoint under EXP-001238. The full trace-norm disturbance from the unnormalised low-energy projection is bounded by 2 sqrt(tail), and the R-394 first-moment Markov bound composes across 13 systems, 158 core layouts and 3,160 rows; primary 16,440/16,440, independent 6/6, integrated 22/22 and Lean R395 pass. The maximum disturbance is 0.8589478229401646 and the maximum adjacent disturbance ratio is 4.2093805087121146, so uniform moment, dimension-safe QCMI transfer and all Q3LOCK/QFT gates remain open |
 | [R-394](#r-394) | Finite Gibbs spectral-tail energy Markov audit | R-394 v1.0 is a T0 claim-nonbearing finite checkpoint under EXP-001237. Positive shifted local energy proves finite mass and weighted-tail Markov inequalities across 13 high-cutoff systems, 158 core layouts and 3,160 rows; primary 13,281/13,281, independent 6/6, integrated 22/22 and Lean R394 pass. The maximum mass tail is 0.857090394095672 and the maximum adjacent tail ratio is 16.93594199558396, so moment/cutoff uniformity, the two-stage plateau, Gibbs complement and all Q3LOCK/QFT gates remain open |
 | [R-393](#r-393) | High-cutoff QCMI shell stress | R-393 v1.0 is a T0 claim-nonbearing finite checkpoint under EXP-001236. The high-cutoff QCMI shell budget passes primary 921/921, independent 6/6, integrated 23/23 and Lean R393 over 13 systems, 54 base partitions, 304 shell rows and 72 cutoff profiles. Adjacent cutoff growth is exposed (maximum ratio 32.000137578349594; 62/72 profiles grow somewhere), so low-cutoff suppression cannot be extrapolated to a uniform tail; the proposed two-stage plateau plus energy-tail route and all Q3LOCK/QFT gates remain open |
@@ -635,6 +636,44 @@ No new negative result, tier change, or R-376 PDF is issued.
 **Proven in:** manifest, certificate, Lean entrypoint, primary script,
 independent script, integrated verifier, scope note, and saved run artefacts.
 
+<a id="r-396"></a>
+### R-396 -- Finite recoverability-first projected Petz transport
+
+**Result ID.** R-396 is a T0, claim-nonbearing finite projected-state
+recoverability checkpoint under EXP-001239.  On each finite `A-B-C`
+tripartition, a low-energy projected Gibbs reference `sigma` defines one Petz
+map from its `BC` and `B` marginals.  With `D` denoting trace distance, the
+same map obeys the explicit transport budget
+`D(rho_ABC,R_sigma(rho_AB)) <= D(sigma_ABC,R_sigma(sigma_AB)) +
+D(rho_ABC,sigma_ABC) + D(rho_AB,sigma_AB)`.
+
+**Verification.** The primary lane passes 5,961/5,961 assertions and the
+non-importing independent lane passes 6/6 aggregate checks.  The hostile lane
+passes 3/3, the integrated verifier passes 23/23, and Lean R396 compiles.  The
+grid contains 12 volume/cutoff systems, 62 tripartitions and 992 projected
+Petz rows with both orientations, both core widths, both buffer widths and all
+four beta values.  The maximum ABC and AB disturbances are
+`0.838460844320319` and `0.838460775452121`; the maximum projected recovery
+error is `0.0246593411003531`, the maximum transported error is
+`0.0260340558191261`, and the maximum triangle budget is `1.67739253805716`.
+All normalization, contractivity, triangle and two-delta violation counts are
+zero, with maximum contractivity gap `6.68182482377048e-16`.
+
+The maximum adjacent-cutoff transport ratio is `6.91143733666218`, so the
+finite interface remains cutoff-sensitive.  The hostile omission of both
+displacement terms is caught: transported error
+`0.00553662870328261` exceeds the mutated budget `0.00448048440142432` while
+remaining below the genuine budget `0.945339672005153`.
+
+**Boundary.** This result closes only finite projected-state normalization,
+Petz recovery, contractivity and triangle bookkeeping.  It does not prove a
+dimension-safe QCMI continuity theorem, a cutoff-independent Gibbs moment or
+complement, shell summability, a common form core, beta/eta-independent
+locality, Cook/common-alpha convergence, OS/KMS/GNS reconstruction, a mass
+gap, continuum, C6, Sector-A or Pre-A closure.  No tier change, negative
+result or PDF is issued.
+
+**Proven in:** [R-396 certificate](strategy/pre-a-cp1-st8-q3lock-recoverability-first-projected-petz-transport-certificate-260830.md), [Lean entrypoint](verification/lean/Tect/R396.lean), primary/independent/hostile scripts, integrated verifier, [scope note](claims/C6-SPACETIME-SIGNATURE/notes/recoverability-first-projected-petz-transport-260830.md), and saved run artefacts.
 <a id="r-395"></a>
 ### R-395 -- Finite Gibbs gentle spectral-complement bridge
 

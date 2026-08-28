@@ -4697,6 +4697,229 @@
       "task_id": "T-054",
       "title": "Finite Gibbs gentle spectral-complement bridge",
       "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "axis": "fixed reference",
+          "check": "The projected BC and B marginals define one recovery map that is reused for both projected and original inputs.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "partial-trace contractivity",
+          "check": "Recovered input distance is checked against AB distance and AB distance against ABC distance on every row.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "triangle accounting",
+          "check": "Both ABC and AB displacement terms are retained and a second two-ABC envelope is checked.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "positive recovery",
+          "check": "Recovered traces and minimum eigenvalues are checked without hiding a negative eigenvalue by clipping.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "omission mutation",
+          "check": "Dropping both displacement terms is separated on the hostile row and is rejected.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "cutoff profile",
+          "check": "The adjacent transport ratio reaches 6.91143733666218, so no cutoff-independent continuity is inferred.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "QFT promotion",
+          "check": "Moment, shell, common-core, common-alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A obligations remain open.",
+          "disposition": "UPHELD-OPEN"
+        }
+      ],
+      "boundary": "T0 claim-nonbearing finite projected-state transport only. It proves no dimension-safe QCMI upper bound, cutoff/source/volume/shape uniformity, Gibbs moment theorem, shell summability, common form core, Cook/common-alpha convergence, OS/KMS/GNS reconstruction, mass gap, continuum, C6, Sector-A or Pre-A closure.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "R-396 supplies a distinct finite approximate-Markov transport interface: it keeps the recovery map fixed and replaces a dimension-growing entropy-continuity shortcut by contractivity plus a transparent triangle budget. The finite cutoff profile remains nonuniform, so this advances only the interface and identifies the next need for a dimension-safe continuity or moment theorem.",
+      "evidence_refs": [
+        "strategy/pre-a-cp1-st8-q3lock-recoverability-first-projected-petz-transport-manifest.json#model",
+        "strategy/pre-a-cp1-st8-q3lock-recoverability-first-projected-petz-transport-certificate-260830.md#Finite verification",
+        "codes/foundations/pre_a_cp1_st8_q3lock_recoverability_first_projected_petz_transport.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_recoverability_first_projected_petz_transport_independent.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_recoverability_first_projected_petz_transport_hostile.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_recoverability_first_projected_petz_transport_verify.py#main",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-primary-pre_a_cp1_st8_q3lock_recoverability_first_projected_petz_transport/primary.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-independent-pre_a_cp1_st8_q3lock_recoverability_first_projected_petz_transport/independent.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-hostile-pre_a_cp1_st8_q3lock_recoverability_first_projected_petz_transport/hostile.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-integrated-pre_a_cp1_st8_q3lock_recoverability_first_projected_petz_transport/integrated.json#derived",
+        "verification/lean/Tect/R396.lean#triangle_budget",
+        "claims/C6-SPACETIME-SIGNATURE/notes/recoverability-first-projected-petz-transport-260830.md#R-396"
+      ],
+      "finding": "The primary lane passes 5961/5961 assertions over 12 volume/cutoff systems, 62 tripartitions and 992 rows. The non-importing independent lane passes 6/6 aggregate checks, the hostile lane passes 3/3 and the integrated verifier passes 23/23 with Lean R396. The maximum projected recovery error is 0.0246593411003531, transported error 0.0260340558191261, triangle budget 1.67739253805716 and contractivity gap 6.68182482377048e-16. All finite violation counts are zero, but the adjacent-cutoff transport ratio reaches 6.91143733666218.",
+      "formal_integration": {
+        "events": [],
+        "lean": "R396 PASS",
+        "negatives": [],
+        "no_changelog_event": false,
+        "no_new_negative": true,
+        "no_new_result": false,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "results": [
+          "R-396"
+        ]
+      },
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": [
+          "R-396"
+        ]
+      },
+      "formal_refs_duplicate": {
+        "events": [],
+        "negatives": [],
+        "results": [
+          "R-396"
+        ]
+      },
+      "gate_ids": [
+        "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+        "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+        "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+      ],
+      "id": "EXP-001239",
+      "method": [
+        "Build the finite Q3LOCK Gibbs state on every declared volume and oscillator cutoff, and enumerate both orientations, core widths, buffer widths, beta values and energy windows.",
+        "Project the local A core, normalize the projected state, and build one Petz map from its BC and B marginals; apply the same map to the original AB reduction.",
+        "Check projected and transported trace distances, partial-trace contractivity, recovered-state positivity and the triangle budget with both displacement terms.",
+        "Retain per-cutoff transport profiles and adjacent ratios so finite recovery success cannot hide regulator growth.",
+        "Rebuild the full table without importing the primary module, run an omitted-displacement hostile mutation, and compile the scalar Lean triangle and contractivity skeleton."
+      ],
+      "next_action": "Test a semigroup-dressed smooth spectral collar that removes hard projector rank jumps, while keeping the R-396 fixed-reference Petz and displacement accounting. Require a finite primary/independent/hostile/Lean package and retire the route if its normalized disturbance still grows under every declared collar scaling.",
+      "provenance": "contemporaneous",
+      "question": "Can approximate Markovness of a low-energy projected Gibbs state be transported back to the original state with a dimension-free Petz triangle and contractivity budget, avoiding a dimension-growing entropy-continuity shortcut?",
+      "recorded_at": "2026-08-30T11:45:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001238",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001237",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001234",
+          "relation": "alternative_to"
+        }
+      ],
+      "reviewed_on": "2026-08-29",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Finite recoverability-first projected Petz transport",
+      "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "axis": "normalization",
+          "check": "The mass m_s is retained and a lower bound is never replaced by one.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "moment dependence",
+          "check": "The scalar mass inequality is exact but a cutoff-independent local moment remains unproved.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "Petz reference",
+          "check": "The same filtered reference defines both BC and B marginals for the recovery map.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "Euclidean/Lorentzian",
+          "check": "Semigroup positivity does not imply a light cone or Lorentzian signature.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "hard-cutoff substitution",
+          "check": "A hard projector cannot justify the smooth functional-calculus derivative.",
+          "disposition": "UPHELD-OPEN"
+        }
+      ],
+      "boundary": "Claim-nonbearing route design only. It proves no cutoff-independent moment estimate, no dimension-safe QCMI continuity, no common-alpha, OS/KMS/GNS reconstruction, mass gap, continuum, C6, Sector-A or Pre-A closure.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "The proposed filter directly targets the observed hard-cutoff profile instability and gives a semigroup composition law that can be compared with OS/KMS constructions. It is worth a bounded discriminator, but it cannot be treated as a uniform Q3LOCK or QFT result until the dimension-safe disturbance and common-core limits survive adversarial tests.",
+      "evidence_refs": [
+        "strategy/pre-a-cp1-st8-q3lock-recoverability-first-projected-petz-transport-manifest.json#model",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-primary-pre_a_cp1_st8_q3lock_recoverability_first_projected_petz_transport/primary.json#derived",
+        "strategy/pre-a-cp1-st8-q3lock-gibbs-gentle-projection-bridge-manifest.json#model",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-primary-pre_a_cp1_st8_q3lock_gibbs_gentle_projection_bridge/primary.json#derived",
+        "strategy/pre-a-cp1-st8-q3lock-phase-conditioned-folded-influence-renyi-breakthrough-manifest.json#fallback_branch"
+      ],
+      "finding": "No new finite inequality has yet been executed. The route isolates a rank-continuity and Euclidean-collar mechanism that is not present in the hard-window R-394/R-395 bridge, while making the missing moment and normalized-filter lemmas explicit.",
+      "formal_integration": {
+        "events": [],
+        "lean": null,
+        "negatives": [],
+        "no_changelog_event": true,
+        "no_new_negative": true,
+        "no_new_result": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "results": []
+      },
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": []
+      },
+      "formal_refs_duplicate": {
+        "events": [],
+        "negatives": [],
+        "results": []
+      },
+      "gate_ids": [
+        "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+        "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+        "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+      ],
+      "id": "EXP-001240",
+      "method": [
+        "Replace each hard local energy projector by F_s=exp(-s K/2) on the shifted positive local Hamiltonian and normalize the filtered Gibbs state.",
+        "Use 1-exp(-s x)<=s x to expose the exact finite mass budget while keeping a separate open obligation for a normalized-filter disturbance modulus.",
+        "Build the Petz map only from the filtered BC and B marginals, then reuse the R-396 projected-plus-ABC-plus-AB transport triangle.",
+        "Test fixed-s and moment-scaled-s profiles on every R-396 volume, orientation, core, buffer, beta and source row; retain adjacent-cutoff ratios.",
+        "Apply normalization, hard-projector, one-leg exponential, displacement-omission and semigroup-order hostile mutations, and formalize only the scalar finite skeleton in Lean."
+      ],
+      "next_action": "Implement the finite smooth-filter primary, non-importing independent lane, hostile mutation lane and Lean scalar skeleton on the complete R-396 grid. Retire the route if the normalized disturbance or adjacent-cutoff profile remains unbounded under every declared s scaling.",
+      "provenance": "contemporaneous",
+      "question": "Can a heat-semigroup spectral collar replace the rank-changing hard energy projector in the recoverability-first route, giving a dimension-safe local Petz transport interface and an explicit Euclidean-to-real-time bridge?",
+      "recorded_at": "2026-08-30T12:00:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001239",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001238",
+          "relation": "alternative_to"
+        },
+        {
+          "id": "EXP-001203",
+          "relation": "alternative_to"
+        }
+      ],
+      "reviewed_on": "2026-08-29",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Semigroup-dressed Petz collar for smooth cutoff removal",
+      "verdict": "inconclusive"
     }
   ],
   "kind": "proof_explorations",

@@ -1,0 +1,128 @@
+{
+  "schema": "tect/pre-a-cp1-st8-q3lock-semigroup-dressed-petz-collar/1.0",
+  "exploration_id": "EXP-001240",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "claim_bearing": false,
+  "parent_explorations": ["EXP-001239", "EXP-001238", "EXP-001203"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+  ],
+  "title": "Semigroup-dressed Petz collar for smooth cutoff removal",
+  "status": "PROPOSED BREAKTHROUGH ROUTE; NO PROOF GATE CLOSED",
+  "question": "Can a heat-semigroup spectral collar replace the rank-changing hard energy projector in the recoverability-first route, giving a dimension-safe local Petz transport interface and an explicit Euclidean-to-real-time bridge?",
+  "new_perspective": {
+    "principle": "Smooth first, recover second.",
+    "motivation": [
+      "R-394 and R-395 make the hard-window tail and trace disturbance explicit, but their adjacent-cutoff ratios remain large.",
+      "R-396 verifies projected Petz transport, while its transported-error profile still has a finite adjacent-cutoff ratio of 6.91143733666218.",
+      "A heat-semigroup filter is analytic in the local positive energy and has no rank jumps, so cutoff changes can be differentiated before taking a limit.",
+      "The same filter is a Euclidean-time collar, allowing reflection-positive semigroup composition to be kept separate from the later Lorentzian continuation."
+    ],
+    "qft_interface": "Use the Euclidean collar parameter s as an OS/KMS-compatible smoothing coordinate; do not identify it with physical time until a common generator and analytic continuation have been proved."
+  },
+  "mathematical_contract": {
+    "shifted_energy": "K_L=H_L-inf(sigma(H_L)) is positive on each finite local core.",
+    "filter": "F_s=exp(-s K_L/2), s>0, with F_s F_t=F_(s+t).",
+    "filtered_state": "rho_s=F_s rho F_s / m_s, where m_s=Tr(rho exp(-s K_L)).",
+    "mass_identity": "1-m_s=Tr(rho(1-exp(-s K_L))) <= s Tr(rho K_L), using 1-exp(-s x)<=s x for x>=0.",
+    "local_reference": "For A-B-C, sigma_s is the filtered state and R_s is the Petz map built from (sigma_s)_BC and (sigma_s)_B.",
+    "transport_budget": "D(rho_ABC,R_s(rho_AB)) <= D(sigma_s,R_s((sigma_s)_AB)) + D(rho_ABC,sigma_s) + D(rho_AB,(sigma_s)_AB).",
+    "open_gentle_function": "The finite verifier must determine a sharp normalized-filter disturbance envelope Phi(s M1); no such envelope is assumed by this route.",
+    "derivative_target": "For s,t>0, bound the local observable action of F_s-F_t by the exact scalar functional-calculus modulus, with constants independent of oscillator cutoff and volume on the selected common core."
+  },
+  "finite_discriminator": {
+    "fixture": "Reuse every R-396 volume, orientation, core width, buffer width, beta and energy-window row, adding s in {1/8,1/4,1/2,1,2}.",
+    "primary_checks": [
+      "Compute m_s, rho_s and the exact filtered Petz map without hard spectral rank selection.",
+      "Check positivity, trace normalization, semigroup composition and the scalar mass inequality on every row.",
+      "Measure projected and transported trace distances, the normalized-filter disturbance, and adjacent-s/dimension profiles.",
+      "Compare fixed-s and moment-scaled s choices; retain source, shape and beta profiles rather than only global maxima."
+    ],
+    "independent_checks": "Rebuild the Hamiltonian, filter, reductions, square roots and Petz map without importing the primary module.",
+    "hostile_mutations": [
+      "replace F_s by a hard projector while retaining the smooth bound",
+      "omit state normalization m_s",
+      "replace exp(-s K/2) by exp(-s K) in one leg only",
+      "drop either the ABC or AB displacement term from the transport budget",
+      "reverse the semigroup parameter order"
+    ],
+    "lean_skeleton": [
+      "one_minus_exp_le_linear",
+      "semigroup_filter_composition",
+      "normalized_triangle_budget",
+      "finite_scope_only"
+    ]
+  },
+  "theorem_ladder": [
+    {
+      "id": "SC-1",
+      "name": "finite smooth-filter positivity and mass control",
+      "target": "Prove the finite scalar functional-calculus identities and certify 0<m_s<=1 with the first-moment mass envelope.",
+      "status": "OPEN"
+    },
+    {
+      "id": "SC-2",
+      "name": "dimension-free normalized-filter disturbance",
+      "target": "Derive a trace or local observable disturbance bound that depends on s and a cutoff-independent local moment, not on log(dim).",
+      "status": "OPEN; FIRST DECISIVE LEMMA"
+    },
+    {
+      "id": "SC-3",
+      "name": "smooth Petz transport",
+      "target": "Compose SC-2 with R-396 recoverability and prove a local shell budget stable under adjacent cutoff changes.",
+      "status": "CONDITIONAL ON SC-2"
+    },
+    {
+      "id": "SC-4",
+      "name": "Euclidean collar to common dynamics",
+      "target": "Use semigroup composition and reflection positivity to identify a common local form core, then separately establish KMS and real-time generator continuation.",
+      "status": "SUCCESSOR; NO CURRENT PROMOTION"
+    }
+  ],
+  "adversarial_review": [
+    {
+      "axis": "normalization",
+      "check": "A filtered state is normalized by m_s on every row and no lower bound on m_s is silently replaced by one.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "moment dependence",
+      "check": "The inequality 1-exp(-sK)<=sK is exact, but a cutoff-independent bound on Tr(rho K) is still a separate hypothesis.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "Petz reference",
+      "check": "The Petz map is built from the same filtered reference state on BC and B; replacing it by a rho-dependent map would invalidate transport comparison.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "Euclidean versus Lorentzian",
+      "check": "Semigroup positivity and OS reflection positivity do not by themselves imply a finite light cone, Lorentzian signature or physical-time generator.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "hard-cutoff substitution",
+      "check": "A hard projector cannot be used to justify a smooth functional-calculus derivative; the hostile lane must distinguish the two.",
+      "disposition": "UPHELD-OPEN"
+    }
+  ],
+  "promotion_criteria": [
+    "All finite primary, independent, hostile and Lean checks pass with exact s and normalization sentinels.",
+    "A dimension-safe normalized-filter modulus is proved on a declared common local core, with its moment and beta hypotheses explicit.",
+    "The smooth transport profile has a cutoff-independent shell modulus on the declared source and shape grid before any Q3LOCK promotion.",
+    "The Euclidean collar is linked to, but not conflated with, the OS/KMS and real-time common-alpha obligations."
+  ],
+  "stop_conditions": [
+    "If m_s approaches zero in the intended scaling or the disturbance grows with cutoff at every admissible s, retire this smooth-filter route and retain only the finite identities.",
+    "If every dimension-safe modulus requires a logarithmic dimension factor, do not relabel the finite Petz transport as uniform.",
+    "If semigroup composition produces a volume or history-length normalization loss, move back to the phase-conditioned folded-influence fallback.",
+    "If the Euclidean construction supplies no common core or real-time continuation, keep it as an OS-side finite collar only."
+  ],
+  "boundary": "Claim-nonbearing route design. It proposes a smooth spectral and Euclidean collar but proves no new inequality, no common-alpha, no OS/KMS/GNS reconstruction, no mass gap, no continuum, no C6, Sector-A or Pre-A closure.",
+  "no_overclaim": "The heat-semigroup filter is a candidate regularization and QFT interface; its finite mass identity is not a cutoff-uniform moment theorem and its positivity is not a Lorentzian causal cone.",
+  "recorded_at": "2026-08-30T12:00:00Z",
+  "recorded_by": "Codex"
+}
