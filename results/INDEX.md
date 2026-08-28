@@ -5,10 +5,11 @@
 
 Authorities: `RESULTS-LEDGER.md`.
 
-**220 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
+**221 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
 
 | ID | Result | Tier/scope |
 |---|---|---|
+| [`R-387`](../RESULTS-LEDGER.md#r-387) | Anchored nested-commutator kinetic isolation | T0 |
 | [`R-386`](../RESULTS-LEDGER.md#r-386) | Coordinate-resolvent zero-time commutator anchor | T0 |
 | [`R-385`](../RESULTS-LEDGER.md#r-385) | Finite relative-modular cocycle and resolvent-core Cook checkpoint | T0 |
 | [`R-384`](../RESULTS-LEDGER.md#r-384) | Two-scale filter-removal corridor | T0 |
@@ -33,7 +34,6 @@ Authorities: `RESULTS-LEDGER.md`.
 | [`R-365`](../RESULTS-LEDGER.md#r-365) | Finite spectral-gap commutator and Duhamel shell bound | T0 |
 | [`R-364`](../RESULTS-LEDGER.md#r-364) | Finite bond-spectral pinching and commutant shell reduction | T0 |
 | [`R-363`](../RESULTS-LEDGER.md#r-363) | Finite pinching reduction and state-weighted shell commutator | T0 |
-| [`R-362`](../RESULTS-LEDGER.md#r-362) | Finite local-Q2 positive replica folding and mixture convexity | T0 |
 
 Search without loading the full ledger:
 

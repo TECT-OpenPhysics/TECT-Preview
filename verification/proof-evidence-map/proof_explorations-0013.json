@@ -3589,6 +3589,122 @@
       "task_id": "T-054",
       "title": "Coordinate-resolvent zero-time commutator anchor",
       "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "axis": "prefix split",
+          "check": "The kinetic and coordinate parts are rebuilt for every actual bond prefix and both term orders; no full-H surrogate is used.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "commuting class",
+          "check": "All translated sites, nonzero resolvent parameters and adjoint seeds are tested; the momentum mutation is required to break the hypothesis.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "potential dependence",
+          "check": "The coefficient is tested at three potential scales, including zero and doubled potential, rather than at a single parameter point.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "finite truncation",
+          "check": "The cancellation is checked only for bounded oscillator matrices and does not establish a canonical commutation or form-domain limit.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "higher coefficients",
+          "check": "Only the anchored first nonzero nested coefficient is isolated; higher time coefficients can reintroduce V and are not bounded here.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "QFT promotion",
+          "check": "Kinetic BKM/graph-norm control, shell summability, all uniformities, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain false.",
+          "disposition": "UPHELD-OPEN"
+        }
+      ],
+      "boundary": "T0 claim-nonbearing finite kinetic-isolation checkpoint only. It proves no kinetic BKM estimate, no shell summability, no domain embedding, no direct Cook/common-alpha convergence, no OS/KMS/GNS dynamics, no gap, no continuum, C6, Sector-A or Pre-A.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "R-387 adds a distinct algebraic simplification to the anchored route: because all Q3 onsite and bond potentials are coordinate polynomials, the first nonzero coordinate-resolvent coefficient depends only on the quadratic kinetic part. The finite result is independently reproducible, potential-scale stable and hostile-tested. It does not bound the remaining kinetic commutator, its modular companion or any unbounded or thermodynamic limit.",
+      "evidence_refs": [
+        "strategy/pre-a-cp1-st8-q3lock-anchored-nested-commutator-kinetic-isolation-finite-checkpoint-manifest.json#finite_fixture",
+        "strategy/pre-a-cp1-st8-q3lock-anchored-nested-commutator-kinetic-isolation-finite-checkpoint-certificate-260830.md#Finite verification",
+        "codes/foundations/pre_a_cp1_st8_q3lock_anchored_nested_commutator_kinetic_isolation_finite_checkpoint.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_anchored_nested_commutator_kinetic_isolation_finite_checkpoint_independent.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_anchored_nested_commutator_kinetic_isolation_finite_checkpoint_hostile.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_anchored_nested_commutator_kinetic_isolation_finite_checkpoint_verify.py#run",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-primary-pre_a_cp1_st8_q3lock_anchored_nested_commutator_kinetic_isolation_finite_checkpoint/primary.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-primary-pre_a_cp1_st8_q3lock_anchored_nested_commutator_kinetic_isolation_finite_checkpoint/independent.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-primary-pre_a_cp1_st8_q3lock_anchored_nested_commutator_kinetic_isolation_finite_checkpoint/hostile.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-primary-pre_a_cp1_st8_q3lock_anchored_nested_commutator_kinetic_isolation_finite_checkpoint/integrated.json#lean",
+        "verification/lean/Tect/R387.lean#kinetic_isolation",
+        "claims/C6-SPACETIME-SIGNATURE/notes/anchored-nested-commutator-kinetic-isolation-finite-checkpoint-boundary-260830.md#R-387"
+      ],
+      "finding": "The primary lane passes 1019/1019 assertions and the non-importing independent lane passes 1012/1012. The integrated verifier passes 46/46 and Lean R387 compiles. The grid contains 288 beta-weighted contexts, 144 seed rows and 10 bond prefixes. Primary maxima are 7.415006673014076e-16 for [V,A_z], 2.317703490729531e-16 for [B,A_z], 1.0801915330073514e-15 for [H,A_z]-[T,A_z], 1.5436854843327511e-15 for the nested isolation, 1.984473368162697e-15 for potential-scale invariance and 7.402251795272793e-16 for the weighted isolation. The independent maximum-field difference is 7.95529426326475e-18. A hostile V -> V+(1/4)p_left mutation has minimum inner-isolation residual 0.279128784747792 and minimum nested residual 0.364793624984, above the 1.0e-7 threshold.",
+      "formal_integration": {
+        "events": [
+          "20260830-anchored-nested-commutator-kinetic-isolation-20"
+        ],
+        "lean": "R387 PASS",
+        "negatives": [],
+        "no_changelog_event": false,
+        "no_new_negative": true,
+        "no_new_result": false,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "results": [
+          "R-387"
+        ]
+      },
+      "formal_refs": {
+        "events": [
+          "20260830-anchored-nested-commutator-kinetic-isolation-20"
+        ],
+        "negatives": [],
+        "results": [
+          "R-387"
+        ]
+      },
+      "gate_ids": [
+        "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+        "PA-CP1-ST8-Q3LOCK-RESOLVENT-ALGEBRA-EXACT-POLYNOMIAL-COMMON-ALPHA-CLOSURE",
+        "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+      ],
+      "id": "EXP-001230",
+      "method": [
+        "Rebuild T and V term-by-term for every actual bond prefix on the V=2 edge and V=4 square, in forward and reverse order.",
+        "For every translated coordinate resolvent and adjoint, check [V,A_z]=0, [B,A_z]=0, [H,A_z]=[T,A_z], and [B,[H,A_z]]=[B,[T,A_z]].",
+        "Scale the coordinate potential by 0, 1 and 2 and check that the nested coefficient is unchanged in operator norm and two-sided Gibbs-weighted norm.",
+        "Run a non-importing independent reconstruction, inject a same-site momentum mutation into V as a hostile control, and compile Lean R387 for the abstract ring implications.",
+        "Keep the kinetic graph-norm/BKM estimate, shell summability, all uniformities, domain, Cook/common-alpha and every QFT promotion flag open."
+      ],
+      "next_action": "Derive an explicit invariant resolvent/form-core bound for [B,[T,A_z]] and its modular companion, tracking the boundary shell and source. If the kinetic coefficients are summable uniformly in cutoff, volume and shape, feed them into the anchored Cook integral; otherwise register the precise route-specific obstruction. Separately inspect higher time coefficients for the first re-entry of V.",
+      "no_overclaim": "The finite algebra removes coordinate potentials from one anchored coefficient; it is not a uniform estimate and does not imply that the full relative dynamics is kinetic-only.",
+      "provenance": "contemporaneous",
+      "question": "Can the zero-time coordinate-resolvent anchor remove every position-only potential from its first nonzero nested commutator, leaving only a kinetic target suitable for a phase-local graph-norm estimate?",
+      "recorded_at": "2026-08-30T04:45:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001229",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001228",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001227",
+          "relation": "alternative_to"
+        }
+      ],
+      "reviewed_on": "2026-08-28",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Kinetic isolation of the anchored nested commutator",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",

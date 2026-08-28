@@ -42,6 +42,7 @@ policy in `governance/development-history.md`.
 | [R-376](#r-376) | Hilbert-Schmidt Lipschitz bridge for the capped Liouvillian kernel | R-376 v1.0 is a T0 claim-nonbearing finite operator-interface checkpoint under EXP-001218. A noncommuting cutoff-2 edge Liouvillian stress gives maximum full-kernel Frobenius ratio 0.9787544362168733 and 64-layer ratio 0.9755896836319287 with 76/76 integrated assertions; general Schatten-2 proof, operator-norm locality, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
 | [R-377](#r-377) | Gap-free odd-Matsubara resolvent telescoping budget | R-377 v1.0 is a T0 claim-nonbearing finite resolvent-interface checkpoint under EXP-001219. The exact positive-resolvent difference identity and its 64-layer budget pass 122/122 integrated assertions with Lean R377; the accumulated finite budget ratio is 0.9895313426497929 and the absolute-value square-root debt is recorded separately. Uniform locality, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
 | [R-382](#r-382) | Increasing-cutoff endpoint modular moment stress | R-382 v1.0 is a T0 claim-nonbearing finite cutoff-profile diagnostic under EXP-001224. The R-381 endpoint-energy bridge passes across 2816 all-prefix actual-Q3 contexts with Lean R382; edge max M_0 grows from 2.733031855844076 at d=3 to 41.64826651661874 at d=6 and max M_2 from 0.008378198414559081 to 17.719559304500326, with d=5 to d=6 ratios 8.855033106195243 and 36.38049903040583. This is finite growth evidence only; uniform M_0/M_2 control, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
+| [R-387](#r-387) | Anchored nested-commutator kinetic isolation | R-387 v1.0 is a T0 claim-nonbearing finite kinetic-isolation checkpoint under EXP-001230. Coordinate-only potentials disappear from the first nonzero coordinate-resolvent coefficient, leaving the kinetic nested commutator; primary 1019/1019, independent 1012/1012, integrated 46/46 and Lean R387 pass over 288 weighted contexts, while kinetic BKM/Cook/QFT gates remain open |
 | [R-386](#r-386) | Coordinate-resolvent zero-time commutator anchor | R-386 v1.0 is a T0 claim-nonbearing finite interface checkpoint under EXP-001229. Position-only Q3 bond additions commute with coordinate resolvents at time zero, giving a zero first relative variation and a reduced second nested commutator across 288 weighted contexts; primary 2025/2025, independent 2022/2022, integrated 51/51 and Lean R386 pass, while uniform Cook/BKM/shell/QFT gates remain open |
 | [R-385](#r-385) | Finite relative-modular cocycle and resolvent-core Cook checkpoint | R-385 v1.0 is a T0 claim-nonbearing finite interface checkpoint under EXP-001228. The ordered relative cocycle, finite derivative, composition law, same-q resolvent identity and two-sided Gibbs-weighted orientations pass 3664/3664 primary, 608/608 independent, 87/87 integrated assertions on 608 V=2/V=4 Q3 contexts; hostile reversed orientation is rejected and Lean R385 compiles. Phase-local BKM control, l1 shell summability, all uniformities, direct Cook convergence, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
 | [R-384](#r-384) | Two-scale filter-removal corridor | R-384 v1.0 is a T0 claim-nonbearing finite two-scale corridor under EXP-001226. For the reference filter Y_1=X/(1+u), the M0 and endpoint removal envelopes split into low-frequency and high-frequency terms and pass across 2816 actual-Q3 contexts with independent and Lean checks; finite low-frequency M0 and the raw cutoff-growth warning remain, so filter removal, common-core uniformity and all QFT/limit conclusions stay open |
@@ -625,6 +626,42 @@ No new negative result, tier change, or R-376 PDF is issued.
 
 **Proven in:** manifest, certificate, Lean entrypoint, primary script,
 independent script, integrated verifier, scope note, and saved run artefacts.
+
+<a id="r-387"></a>
+### R-387 -- Anchored nested-commutator kinetic isolation
+
+**Result ID.** R-387 is a T0, claim-nonbearing finite kinetic-isolation
+checkpoint under EXP-001230.
+
+**Statement.** For every actual Q3 bond prefix, split H=T+V with T the
+included quadratic momentum part and V a polynomial in commuting positions.
+For A_z=(i eta I-q_s)^(-1) and position-only boundary B, the finite algebra
+gives [V,A_z]=[B,A_z]=0 and therefore [B,[H,A_z]]=[B,[T,A_z]].  The same
+coefficient is unchanged when V is scaled through 0,1,2.
+
+**Verification.** The primary lane passes 1019/1019 assertions and the
+non-importing independent lane passes 1012/1012.  The integrated verifier
+passes 46/46 and Lean R387 compiles.  Coverage is 288 beta-weighted contexts,
+144 seed rows and 10 bond prefixes over the V=2 edge and V=4 square, both
+term orders, translated sites, resolvent imaginaries, adjoints and beta
+values.  Primary maxima are 7.415006673014076e-16 for [V,A_z],
+2.317703490729531e-16 for [B,A_z], 1.0801915330073514e-15 for the inner
+isolation, 1.5436854843327511e-15 for the nested isolation,
+1.984473368162697e-15 for potential-scale invariance and
+7.402251795272793e-16 for the weighted isolation.  The independent
+maximum-field difference is 7.95529426326475e-18.  A hostile
+V -> V+(1/4)p_left mutation is rejected with minimum inner residual
+0.279128784747792 and minimum nested residual 0.364793624984.
+
+**Boundary.** This finite cancellation does not bound [B,[T,A_z]], its
+modular companion or higher time coefficients in an unbounded domain.  It
+supplies no phase-local BKM estimate, boundary-shell l1 summability,
+source/cutoff/volume/shape uniformity, invariant domain, direct D/delta-D
+Cook limit, common alpha, Hamiltonian-to-OS/KMS identification, gap,
+continuum, C6, Sector-A or Pre-A closure.  No new negative result, tier
+change or proof-note PDF is issued.
+
+**Proven in:** [R-387 certificate](strategy/pre-a-cp1-st8-q3lock-anchored-nested-commutator-kinetic-isolation-finite-checkpoint-certificate-260830.md), [Lean entrypoint](verification/lean/Tect/R387.lean), primary/independent/hostile scripts, integrated verifier, [scope note](claims/C6-SPACETIME-SIGNATURE/notes/anchored-nested-commutator-kinetic-isolation-finite-checkpoint-boundary-260830.md), and saved run artefacts.
 
 <a id="r-386"></a>
 ### R-386 -- Coordinate-resolvent zero-time commutator anchor
