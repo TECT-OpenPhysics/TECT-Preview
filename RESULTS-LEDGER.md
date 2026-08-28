@@ -41,6 +41,7 @@ policy in `governance/development-history.md`.
 | [R-195](#r-195) | Spatial constant-field lift of the A6 running-mass escape | R-195 v1.0 is a T0 claim-nonbearing Lean/Fraction spatial lift under EXP-000933. On the declared finite torus, constant fields multiply the R-194 correction by the exact volume and the volume-cancelled ratio is bounded by 6*s*(b+c)/r, so no positive volume-uniform coercivity holds even on that subspace. Full-field concentration, partition/tightness, A7, A13, Sector-A and Pre-A remain open |
 | [R-376](#r-376) | Hilbert-Schmidt Lipschitz bridge for the capped Liouvillian kernel | R-376 v1.0 is a T0 claim-nonbearing finite operator-interface checkpoint under EXP-001218. A noncommuting cutoff-2 edge Liouvillian stress gives maximum full-kernel Frobenius ratio 0.9787544362168733 and 64-layer ratio 0.9755896836319287 with 76/76 integrated assertions; general Schatten-2 proof, operator-norm locality, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
 | [R-377](#r-377) | Gap-free odd-Matsubara resolvent telescoping budget | R-377 v1.0 is a T0 claim-nonbearing finite resolvent-interface checkpoint under EXP-001219. The exact positive-resolvent difference identity and its 64-layer budget pass 122/122 integrated assertions with Lean R377; the accumulated finite budget ratio is 0.9895313426497929 and the absolute-value square-root debt is recorded separately. Uniform locality, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
+| [R-382](#r-382) | Increasing-cutoff endpoint modular moment stress | R-382 v1.0 is a T0 claim-nonbearing finite cutoff-profile diagnostic under EXP-001224. The R-381 endpoint-energy bridge passes across 2816 all-prefix actual-Q3 contexts with Lean R382; edge max M_0 grows from 2.733031855844076 at d=3 to 41.64826651661874 at d=6 and max M_2 from 0.008378198414559081 to 17.719559304500326, with d=5 to d=6 ratios 8.855033106195243 and 36.38049903040583. This is finite growth evidence only; uniform M_0/M_2 control, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
 | [R-381](#r-381) | Endpoint modular moment to energy Cauchy bridge | R-381 v1.0 is a T0 claim-nonbearing finite Gibbs energy-moment interface checkpoint under EXP-001223. The R-380 endpoint modular moment equals a beta-weighted energy-difference first moment and is bounded by a state-weighted quadratic moment across 2560 all-prefix actual-Q3 contexts; the integrated verifier passes 61/61 with Lean R381, while uniform M0/M2 control remains open |
 | [R-380](#r-380) | Renyi interpolation bridge for the modular shell | R-380 v1.0 is a T0 claim-nonbearing finite Kubo--Mori/Renyi interface checkpoint under EXP-001222. The modular-frequency weighted shell is the exact integral of a symmetric interpolation across 2560 all-prefix actual-Q3 contexts; the integrated verifier passes 69/69 with Lean R380, and finite ratios show midpoint control does not replace the endpoint modular-moment bound |
 | [R-379](#r-379) | Three-channel anticommutator bridge for half-density modular tails | R-379 v1.0 is a T0 claim-nonbearing finite three-channel interface checkpoint under EXP-001221. The half-density commutator and anticommutator split into left/right GNS legs and a beta/2 two-slice term across 2560 all-prefix actual-Q3 contexts; the integrated verifier passes 69/69 with Lean R379, while the two-slice channel reaches its finite AM-GM envelope and uniformity remains open |
@@ -619,7 +620,43 @@ OS/KMS/GNS transfer, gap, continuum, C6, Sector-A or Pre-A closure follows.
 No new negative result, tier change, or R-376 PDF is issued.
 
 **Proven in:** manifest, certificate, Lean entrypoint, primary script,
-independent script, integrated verifier, scope note, and saved run artefacts.<a id="r-381"></a>
+independent script, integrated verifier, scope note, and saved run artefacts.
+
+<a id="r-382"></a>
+### R-382 -- Increasing-cutoff endpoint modular moment stress
+
+**Result ID.** R-382 is a T0, claim-nonbearing finite cutoff-profile
+diagnostic under EXP-001224.
+
+**Statement.** R-381 gives the finite endpoint bound
+`D_1<=beta sqrt(M_0 M_2)`.  R-382 evaluates the same endpoint-energy
+identity on the actual-Q3 edge at d=3,4,5,6 and on a V=4 square at d=2,
+including both beta values, translated sites, bond orders, time signs, all
+prefix positions and both history adjoints.  It records the per-cutoff
+maxima of `M_0`, `M_2`, the endpoint moment and the Cauchy envelope, together
+with successive-cutoff ratios, without assuming monotonicity.
+
+**Verification.** The primary lane passes 19729/19729 assertions and the
+non-importing independent lane passes 17/17 aggregate assertions over 2816
+contexts.  The integrated verifier passes 130/130 and Lean R382 compiles.
+Primary and independent numeric fields agree within 1.918465386552270e-13.
+On the edge, max `M_0` at d=3,4,5,6 is respectively
+2.733031855844076, 3.4283208579615874, 4.703343964629605 and
+41.64826651661874; max `M_2` is respectively 0.008378198414559081,
+0.06491749177608952, 0.4870620188494611 and 17.719559304500326.  The
+d=5-to-d=6 ratios are 8.855033106195243 and 36.38049903040583.
+
+**Boundary.** The ratios are finite stress diagnostics, not a divergence
+theorem or a cutoff-uniform estimate.  Source/volume/cutoff/beta uniformity,
+common core, direct D,delta-D Cauchy, common alpha, OS/KMS/GNS dynamics, a
+mass gap, continuum, C6, Sector-A and Pre-A remain open.  No new negative
+result, tier change, or R-382 PDF is issued.
+
+**Proven in:** manifest, certificate, Lean entrypoint, primary script,
+independent script, integrated verifier, scope note, exploration record and
+stored run artefacts.
+
+<a id="r-381"></a>
 ### R-381 -- Endpoint modular moment to energy Cauchy bridge
 
 **Result ID.** R-381 is a T0, claim-nonbearing finite Gibbs energy-moment

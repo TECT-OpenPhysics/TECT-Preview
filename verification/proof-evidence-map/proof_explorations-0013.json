@@ -2841,6 +2841,137 @@
       "task_id": "T-054",
       "title": "Endpoint modular moment to energy Cauchy bridge",
       "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "axis": "monotonicity",
+          "check": "No monotonicity is assumed; profiles and ratios are reported in the declared cutoff order only.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "finite-growth interpretation",
+          "check": "The d=5 to d=6 jump is retained as a warning, but finite growth is not called divergence.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "beta coverage",
+          "check": "Both beta=1/2 and beta=1 are evaluated at every cutoff; no beta-uniform conclusion is drawn.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "history coverage",
+          "check": "Both signs, term orders, all prefixes and both adjoints are included at every cutoff.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "Gibbs energy identity",
+          "check": "The endpoint logarithmic gap equals beta times the absolute energy gap on every finite spectrum, including shifted spectra.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "degenerate gaps",
+          "check": "Zero and near-zero gaps remain in the sums, with continuous Kubo diagonal handling and no zero-moment ratio.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "state orientation",
+          "check": "Both Gibbs orientations of M0 and M2 are checked together with endpoint reconstruction and nonnegativity.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "coverage",
+          "check": "Each cutoff context count is asserted and the aggregate equals the manifest value 2816.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "independence",
+          "check": "The independent lane rebuilds the oscillator, graph, spectrum, prefixes and moments without importing the primary audit.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "Lean scope and QFT promotion",
+          "check": "Lean formalizes scalar ratio arithmetic only; common core, common alpha, KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open.",
+          "disposition": "DISMISSED-FIREWALL"
+        }
+      ],
+      "boundary": "T0 claim-nonbearing finite increasing-cutoff endpoint-energy stress only. It does not prove source/volume/cutoff/beta uniformity, divergence, modular tails, common core, common alpha, KMS/GNS dynamics, a gap, continuum, C6, Sector-A or Pre-A.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "R-382 adds a cutoff-profile stress test to the R-381 endpoint-energy bridge. The edge data show a sharp finite d=5 to d=6 increase in both moments, so a source-local uniform common-core estimate must explain or control this behavior. Because the sweep is finite and fixed-volume, it does not establish divergence or a no-go result. The result is a route-local finite diagnostic, not a QFT promotion.",
+      "evidence_refs": [
+        "strategy/pre-a-cp1-st8-q3lock-local-q2-kubo-mori-increasing-cutoff-endpoint-stress-manifest.json#identity",
+        "strategy/pre-a-cp1-st8-q3lock-local-q2-kubo-mori-increasing-cutoff-endpoint-stress-certificate-260828.md#finite-verification",
+        "codes/foundations/pre_a_cp1_st8_q3lock_local_q2_kubo_mori_increasing_cutoff_endpoint_stress.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_local_q2_kubo_mori_increasing_cutoff_endpoint_stress_independent.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_local_q2_kubo_mori_increasing_cutoff_endpoint_stress_verify.py#run",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-28-primary-pre_a_cp1_st8_q3lock_local_q2_kubo_mori_increasing_cutoff_endpoint_stress/primary.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-28-independent-pre_a_cp1_st8_q3lock_local_q2_kubo_mori_increasing_cutoff_endpoint_stress/independent.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-28-integrated-pre_a_cp1_st8_q3lock_local_q2_kubo_mori_increasing_cutoff_endpoint_stress/integrated.json#lean",
+        "verification/lean/Tect/R382.lean#profile_ratio_nonnegative",
+        "claims/C6-SPACETIME-SIGNATURE/notes/q3lock-local-q2-kubo-mori-increasing-cutoff-endpoint-stress-boundary-260828.md#R-382"
+      ],
+      "finding": "The primary lane passes 19729/19729 assertions and the non-importing independent lane passes 17/17 aggregate assertions over 2816 contexts. The integrated verifier passes 130/130 and Lean R382 compiles. Primary and independent numeric fields agree within 1.9184653865522705e-13. Edge profile: d=3: M0=2.733031855844076, M2=0.008378198414559081, endpoint=0.004114253036840313; d=4: M0=3.4283208579615874, M2=0.06491749177608952, endpoint=0.022778768600647783; d=5: M0=4.703343964629605, M2=0.4870620188494611, endpoint=0.09831198953294297; d=6: M0=41.64826651661874, M2=17.719559304500326, endpoint=2.153583814589319. Successive ratios: d=3->4: M0 ratio=1.2544020848607258, M2 ratio=7.748383192176516; d=4->5: M0 ratio=1.371908919699576, M2 ratio=7.502785543985794; d=5->6: M0 ratio=8.855033106195243, M2 ratio=36.38049903040583. The declared growth-warning threshold is 1.05 and the diagnostic flag is True; this is finite evidence, not a divergence theorem.",
+      "formal_integration": {
+        "events": [
+          "20260828-increasing-cutoff-endpoint-modular-moment-stres"
+        ],
+        "lean": "R382 PASS",
+        "negatives": [],
+        "no_changelog_event": false,
+        "no_new_negative": true,
+        "no_new_result": false,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "results": [
+          "R-382"
+        ]
+      },
+      "formal_refs": {
+        "events": [
+          "20260828-increasing-cutoff-endpoint-modular-moment-stres"
+        ],
+        "negatives": [],
+        "results": [
+          "R-382"
+        ]
+      },
+      "gate_ids": [
+        "PA-CP1-ST8-Q3LOCK-RESOLVENT-ALGEBRA-EXACT-POLYNOMIAL-COMMON-ALPHA-CLOSURE",
+        "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+        "PA-CP1-ST8-Q3LOCK-FIFTH-ENERGY-MOMENT-AND-MODULAR-CUTOFF-LOCALITY",
+        "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+      ],
+      "id": "EXP-001224",
+      "method": [
+        "Reuse the R-381 endpoint-energy identity on the actual-Q3 edge at cutoffs d=3,4,5,6 and retain the V=4 square d=2 control.",
+        "At every cutoff evaluate both beta values, translated sites, selected bond terms, both term orders, both time signs, every prefix position and both history adjoints.",
+        "Record per-cutoff maxima of the endpoint energy moment, M0, M2 and the Cauchy envelope, then form successive-cutoff ratios without assuming monotonicity.",
+        "Rebuild the same sweep in a non-importing independent lane and compare all aggregate and per-cutoff fields under the declared agreement tolerance.",
+        "Compile Lean R382 for nonnegative profile ratios, zero-denominator handling and the logical diagnostic dichotomy; keep all limit flags false."
+      ],
+      "next_action": "Prove a Hamiltonian-derived common-core estimate for M0 and M2 that controls or explains the edge profile; if a further validated sweep confirms growth, register the obstruction as a separate named gate before feeding any proved premise into R-380 and R-377.",
+      "no_overclaim": "R-382 records finite cutoff dependence of the R-381 moments; the growth-warning flag is not a divergence theorem and cannot close the Q3LOCK uniformity gate.",
+      "provenance": "contemporaneous",
+      "question": "Does the endpoint M0/M2 bridge remain bounded on an increasing actual-Q3 edge cutoff sweep, or does finite data reveal growth that blocks a uniform local premise?",
+      "recorded_at": "2026-08-30T02:00:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001223",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001214",
+          "relation": "alternative_to"
+        }
+      ],
+      "reviewed_on": "2026-08-28",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Increasing-cutoff endpoint modular moment stress",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",
