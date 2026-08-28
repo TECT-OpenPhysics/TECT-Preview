@@ -1,0 +1,103 @@
+{
+  "schema": "tect/pre-a-cp1-st8-q3lock-conditioned-collar-martingale-influence-finite/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-CONDITIONED-COLLAR-MARTINGALE-INFLUENCE-FINITE-v0",
+  "result_id": "R-398",
+  "title": "Finite conditioned-collar Doob martingale and shell-influence discriminator",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001242",
+  "claim_bearing": false,
+  "parent_explorations": ["EXP-001241", "EXP-001203", "EXP-001202"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY"
+  ],
+  "question": "Can conditioning a finite actual-Q3 history onto an increasing local coordinate collar expose an exact nonnegative Doob shell square function, separating local likelihood from remote influence without invoking a global Renyi or raw-energy norm?",
+  "new_perspective": {
+    "principle": "Condition first, then square.",
+    "route": [
+      "Measure the reference Gibbs state and the transformed split-history state in the product coordinate basis.",
+      "Form the full likelihood L=q/p, then condition L onto nested oriented collars F_r containing the measured core coordinate.",
+      "Use M_r=E_p[L|F_r] and the exact finite orthogonal martingale identity chi2_global=chi2_local+sum_r E_p[(M_r-M_(r-1))^2].",
+      "Treat the shell terms as the only quantities that need a phase-conditioned influence or contour estimate; no volume-extensive global divergence is inserted into the target theorem."
+    ],
+    "qft_bridge": "A uniform weighted shell square-function bound would feed the folded two-replica/local-Renyi route and then the existing common-core and OS/KMS interfaces. The present finite package proves only the algebraic decomposition and records its finite profile."
+  },
+  "finite_fixture": {
+    "admissible_pairs": [
+      {"volume": 2, "cutoff_dimensions": [3, 4]},
+      {"volume": 3, "cutoff_dimensions": [3, 4]},
+      {"volume": 4, "cutoff_dimensions": [3]}
+    ],
+    "beta_values": ["1/2", "1"],
+    "source_support_values": [[0], [0, 1]],
+    "source_amplitude": "1/3",
+    "hbar": "1",
+    "time_step": "1/18",
+    "shell_weight_mu": "1/8",
+    "prefix_policy": "all_positions",
+    "source_sign_values": [-1, 1],
+    "history_sign_values": [-1, 1],
+    "history_adjoint_values": [0, 1],
+    "orientations": ["right", "left"],
+    "chi": "1",
+    "r": "-1",
+    "g": "3/5",
+    "c": "3/5",
+    "lambda": "1/10",
+    "numerical_tolerance": 1e-8,
+    "probability_tolerance": 1e-10,
+    "hostile_threshold": 1e-7
+  },
+  "scope": {
+    "finite_coordinate_likelihood_closed": true,
+    "finite_local_q2_identity_closed": true,
+    "finite_doob_shell_decomposition_closed": true,
+    "finite_shell_influence_profile_closed": true,
+    "phase_conditioned_influence_closed": false,
+    "folded_positive_replica_domination_closed": false,
+    "cutoff_independent_shell_bound_closed": false,
+    "volume_independent_shell_bound_closed": false,
+    "source_independent_shell_bound_closed": false,
+    "common_core_closed": false,
+    "common_alpha_closed": false,
+    "actual_split_limit_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R398.lean",
+    "theorem_markers": ["weighted_square_nonnegative", "local_q2_identity", "doob_shell_nonnegative", "finite_scope"],
+    "command": "lake env lean Tect/R398.lean",
+    "boundary": "Lean checks scalar nonnegativity and the finite martingale bookkeeping skeleton only; coordinate matrices, Gibbs limits, phase influence, common cores and all QFT transfers remain Python/open analysis."
+  },
+  "artifacts": {
+    "primary_script": "codes/foundations/pre_a_cp1_st8_q3lock_conditioned_collar_martingale_influence.py",
+    "independent_script": "codes/foundations/pre_a_cp1_st8_q3lock_conditioned_collar_martingale_influence_independent.py",
+    "hostile_script": "codes/foundations/pre_a_cp1_st8_q3lock_conditioned_collar_martingale_influence_hostile.py",
+    "integrated_verifier": "codes/foundations/pre_a_cp1_st8_q3lock_conditioned_collar_martingale_influence_verify.py",
+    "lean": "verification/lean/Tect/R398.lean"
+  },
+  "promotion_criteria": [
+    "Prove a phase-conditioned folded two-replica domination for every actual split prefix and adjoint without volume or history-length loss.",
+    "Prove a source-, volume-, cutoff- and shape-uniform weighted shell square-function estimate on one declared Hamiltonian-derived common core.",
+    "Control phase-label changes explicitly before using any mixture convexity, then remove the coordinate cutoff and pass all allowed exhaustion shapes.",
+    "Only after those analytic inputs, feed the local likelihood bound into common-alpha, OS/KMS/GNS and gap gates."
+  ],
+  "stop_conditions": [
+    "If the conditioned shell sum grows with every cutoff-scaled weight, retain the exact decomposition but register a route-local uniformity obstruction.",
+    "If phase-conditioned influence is not contractive and no contour/polymer replacement applies, restrict the route to the finite algebraic interface.",
+    "If a folded positive representation incurs an unavoidable volume-growing sign or normalization factor, move to the registered modular-cocycle square-function fallback."
+  ],
+  "boundary": "T0 claim-nonbearing finite actual-Q3 coordinate-likelihood and oriented Doob-shell diagnostic. It proves no phase-conditioned influence theorem, uniform shell bound, folded Keldysh-to-Euclidean domination, common core, common alpha, OS/KMS/GNS reconstruction, mass gap, continuum, C6, Sector-A or Pre-A closure.",
+  "no_overclaim": "The exact finite martingale identity localizes the bookkeeping but does not bound its shell terms uniformly; finite shell profiles are calibration only.",
+  "recorded_by": "Codex"
+}

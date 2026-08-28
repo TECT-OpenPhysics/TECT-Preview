@@ -1,0 +1,57 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001243",
+  "title": "Formal-reference correction for the R-398 conditioned-collar checkpoint",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+  ],
+  "related": [
+    {"id": "EXP-001242", "relation": "corrects"}
+  ],
+  "question": "Does the append-only R-398 ledger entry expose its result and changelog event through the canonical formal_refs fields used by the proof-evidence map?",
+  "method": [
+    "Inspect the appended EXP-001242 record and the canonical result/changelog authorities after their successful finite verification.",
+    "Append only a metadata correction record, preserving all R-398 files, numerical values, verdict and scope flags unchanged.",
+    "Set formal_refs to the existing R-398 result and the exact changelog event id, then rerun exploration validation and regeneration."
+  ],
+  "finding": "The original R-398 route record retained its formal_integration narrative but the append tool defaulted formal_refs to empty. This correction exposes the already existing R-398 and changelog authorities to downstream generated consumers without changing any mathematical content or route verdict.",
+  "verdict": "advanced",
+  "decision_reason": "This is an append-only provenance repair required for canonical consumer linkage; it introduces no new mathematical claim, result, negative result or tier change.",
+  "adversarial_review": [
+    {"axis": "immutability", "check": "EXP-001242 and every R-398 artifact remain untouched; only a new correction record is appended.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "authority identity", "check": "The correction points to the existing R-398 result and exact changelog event, not a fabricated replacement id.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "mathematical scope", "check": "No numerical field, verdict, gate status or claim card is changed by this metadata repair.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "QFT promotion", "check": "Formal linkage does not promote the finite shell diagnostic to a uniform or QFT theorem.", "disposition": "UPHELD-OPEN"}
+  ],
+  "evidence_refs": [
+    "explorations/log.jsonl#EXP-001242",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-integrated-pre_a_cp1_st8_q3lock_conditioned_collar_martingale_influence/integrated.json#derived",
+    "changelog/log.jsonl#20260830-conditioned-collar-doob-martingale-and-shell-in",
+    "strategy/pre-a-cp1-st8-q3lock-conditioned-collar-martingale-influence-finite-manifest.json#result_id"
+  ],
+  "formal_refs": {
+    "results": ["R-398"],
+    "negatives": [],
+    "events": ["20260830-conditioned-collar-doob-martingale-and-shell-in"]
+  },
+  "formal_integration": {
+    "results": ["R-398"],
+    "negatives": [],
+    "events": ["20260830-conditioned-collar-doob-martingale-and-shell-in"],
+    "lean": "R398 PASS",
+    "no_new_result": true,
+    "no_new_negative": true,
+    "no_changelog_event": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "next_action": "Use the corrected formal linkage when regenerating the proof-evidence map; keep the analytic phase-conditioned shell estimate and common-core gate open.",
+  "boundary": "Append-only provenance correction. It proves no new inequality, no uniform shell estimate and no QFT or Clay-level closure.",
+  "no_overclaim": "This record repairs generated-consumer linkage only; it is not a second R-398 result.",
+  "provenance": "contemporaneous",
+  "recorded_at": "2026-08-30T13:05:00Z",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-08-29"
+}

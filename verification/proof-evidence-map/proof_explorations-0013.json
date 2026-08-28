@@ -5044,6 +5044,209 @@
       "task_id": "T-054",
       "title": "Finite semigroup-dressed Petz collar discriminator",
       "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "axis": "likelihood positivity",
+          "check": "The finite coordinate reference probabilities are checked before division and raw transformed diagonal minima are retained; positivity of an infinite-dimensional likelihood is not assumed.",
+          "disposition": "DISMISSED-FINITE; INFINITE OPEN"
+        },
+        {
+          "axis": "martingale orientation",
+          "check": "Both right and left collar orders are recomputed, so the identity is not inferred from one preferred spatial orientation.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "normalization",
+          "check": "Reference and sample coordinate distributions are independently normalized and every collar marginal mass is checked by construction.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "remote-cost omission",
+          "check": "The hostile lane drops the local term and replaces conditional parents by an unconditioned baseline; both mutations exceed the preregistered threshold.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "phase coexistence",
+          "check": "The finite Gibbs table has no phase label and therefore cannot establish within-phase contraction or mixture-weight preservation.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "folded real-time positivity",
+          "check": "A finite positive chi-square decomposition does not construct the required positive two-replica Euclidean domination of a real-time contour.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "uniformity and QFT promotion",
+          "check": "Finite shell profiles are not promoted to cutoff-, volume-, source- or shape-uniform constants; common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open.",
+          "disposition": "UPHELD-OPEN"
+        }
+      ],
+      "boundary": "T0 claim-nonbearing finite coordinate-likelihood and Doob-shell diagnostic only. No phase-conditioned influence theorem, folded Euclidean domination, uniform shell bound, common core, common alpha, OS/KMS/GNS reconstruction, mass gap, continuum, C6, Sector-A or Pre-A closure follows.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "This finite checkpoint advances the proof decomposition rather than the theorem tier. It turns the proposed folded-influence route into an exact, auditable shell square-function target and prevents a global Renyi or energy estimate from hiding remote influence. The observed finite shell profile is calibration only; phase conditioning, folded positivity and all regulator-uniform estimates remain open.",
+      "evidence_refs": [
+        "strategy/pre-a-cp1-st8-q3lock-conditioned-collar-martingale-influence-finite-manifest.json#new_perspective",
+        "strategy/pre-a-cp1-st8-q3lock-conditioned-collar-martingale-influence-finite-certificate-260830.md#Finite verification",
+        "codes/foundations/pre_a_cp1_st8_q3lock_conditioned_collar_martingale_influence.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_conditioned_collar_martingale_influence_independent.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_conditioned_collar_martingale_influence_hostile.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_conditioned_collar_martingale_influence_verify.py#main",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-primary-pre_a_cp1_st8_q3lock_conditioned_collar_martingale_influence/primary.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-independent-pre_a_cp1_st8_q3lock_conditioned_collar_martingale_influence/independent.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-hostile-pre_a_cp1_st8_q3lock_conditioned_collar_martingale_influence/hostile.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-integrated-pre_a_cp1_st8_q3lock_conditioned_collar_martingale_influence/integrated.json#derived",
+        "verification/lean/Tect/R398.lean#weighted_square_nonnegative",
+        "claims/C6-SPACETIME-SIGNATURE/notes/conditioned-collar-martingale-influence-260830.md#R-398"
+      ],
+      "finding": "The condition-before-estimate decomposition is numerically exact on all 3,584 oriented history contexts. The primary lane passes 12,559/12,559 assertions, the independent lane reproduces the aggregates, the hostile lane passes 5/5, the integrated verifier passes 31/31, and Lean R398 compiles. The maximum identity residual is 1.0570971181733668e-18; maximum local Q2 is 1.0000033752914241; maximum global chi-square is 0.0002191742093816259; maximum unweighted shell cost is 0.00021579891795778293; and maximum mu=1/8 weighted shell cost is 0.00031475936144631414. The finite table therefore exposes a positive shell ledger and a local-vs-remote separation, but supplies no uniform bound.",
+      "formal_integration": {
+        "events": [
+          "20260830-conditioned-collar-martingale-influence"
+        ],
+        "lean": "R398 PASS",
+        "negatives": [],
+        "no_changelog_event": false,
+        "no_new_negative": true,
+        "no_new_result": false,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "results": [
+          "R-398"
+        ]
+      },
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": []
+      },
+      "gate_ids": [
+        "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+        "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+        "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY"
+      ],
+      "id": "EXP-001242",
+      "method": [
+        "Build the registered finite Q3 quartic onsite plus nearest-neighbour bond Hamiltonian and its Gibbs state on five volume/cutoff systems.",
+        "Apply both source supports and signs, both split term orders and signs, every partial prefix, both history adjoints, both beta values and both oriented coordinate collars.",
+        "Measure reference and transformed states in the product coordinate basis, form L=q/p, and compute M_r=E_p[L|F_r] from exact finite collar marginals.",
+        "Check the local identity Q2=1+chi2_local and the orthogonal finite decomposition chi2_global=chi2_local+sum_r E_p[(M_r-M_(r-1))^2].",
+        "Record unweighted and exp(2 mu r)-weighted shell profiles, rebuild the calculation independently, apply mutations that drop the local term or use an unconditioned parent, and compile Lean R398 for scalar positivity/bookkeeping."
+      ],
+      "next_action": "Prove or refute a phase-conditioned folded two-replica domination and a source-, volume-, cutoff- and shape-uniform weighted shell square-function estimate on a Hamiltonian-derived common core. If the shell profile grows under a validated increasing-core stress, register that route-local obstruction before common-alpha promotion.",
+      "no_overclaim": "The exact finite martingale identity localizes the accounting but does not bound the shell terms uniformly or prove a QFT limit.",
+      "provenance": "contemporaneous",
+      "question": "Can conditioning a finite actual-Q3 history onto an increasing local coordinate collar expose an exact nonnegative Doob shell square function, separating local likelihood from remote influence without invoking a global Renyi or raw-energy norm?",
+      "recorded_at": "2026-08-30T13:00:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001241",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001203",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001202",
+          "relation": "alternative_to"
+        }
+      ],
+      "reviewed_on": "2026-08-29",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Condition-before-estimate: finite Doob shell square-function for Q3 local likelihoods",
+      "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "axis": "immutability",
+          "check": "EXP-001242 and every R-398 artifact remain untouched; only a new correction record is appended.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "authority identity",
+          "check": "The correction points to the existing R-398 result and exact changelog event, not a fabricated replacement id.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "mathematical scope",
+          "check": "No numerical field, verdict, gate status or claim card is changed by this metadata repair.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "QFT promotion",
+          "check": "Formal linkage does not promote the finite shell diagnostic to a uniform or QFT theorem.",
+          "disposition": "UPHELD-OPEN"
+        }
+      ],
+      "boundary": "Append-only provenance correction. It proves no new inequality, no uniform shell estimate and no QFT or Clay-level closure.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "This is an append-only provenance repair required for canonical consumer linkage; it introduces no new mathematical claim, result, negative result or tier change.",
+      "evidence_refs": [
+        "explorations/log.jsonl#EXP-001242",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-integrated-pre_a_cp1_st8_q3lock_conditioned_collar_martingale_influence/integrated.json#derived",
+        "changelog/log.jsonl#20260830-conditioned-collar-doob-martingale-and-shell-in",
+        "strategy/pre-a-cp1-st8-q3lock-conditioned-collar-martingale-influence-finite-manifest.json#result_id"
+      ],
+      "finding": "The original R-398 route record retained its formal_integration narrative but the append tool defaulted formal_refs to empty. This correction exposes the already existing R-398 and changelog authorities to downstream generated consumers without changing any mathematical content or route verdict.",
+      "formal_integration": {
+        "events": [
+          "20260830-conditioned-collar-doob-martingale-and-shell-in"
+        ],
+        "lean": "R398 PASS",
+        "negatives": [],
+        "no_changelog_event": true,
+        "no_new_negative": true,
+        "no_new_result": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "results": [
+          "R-398"
+        ]
+      },
+      "formal_refs": {
+        "events": [
+          "20260830-conditioned-collar-doob-martingale-and-shell-in"
+        ],
+        "negatives": [],
+        "results": [
+          "R-398"
+        ]
+      },
+      "gate_ids": [
+        "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+      ],
+      "id": "EXP-001243",
+      "method": [
+        "Inspect the appended EXP-001242 record and the canonical result/changelog authorities after their successful finite verification.",
+        "Append only a metadata correction record, preserving all R-398 files, numerical values, verdict and scope flags unchanged.",
+        "Set formal_refs to the existing R-398 result and the exact changelog event id, then rerun exploration validation and regeneration."
+      ],
+      "next_action": "Use the corrected formal linkage when regenerating the proof-evidence map; keep the analytic phase-conditioned shell estimate and common-core gate open.",
+      "no_overclaim": "This record repairs generated-consumer linkage only; it is not a second R-398 result.",
+      "provenance": "contemporaneous",
+      "question": "Does the append-only R-398 ledger entry expose its result and changelog event through the canonical formal_refs fields used by the proof-evidence map?",
+      "recorded_at": "2026-08-30T13:05:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001242",
+          "relation": "corrects"
+        }
+      ],
+      "reviewed_on": "2026-08-29",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Formal-reference correction for the R-398 conditioned-collar checkpoint",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",
