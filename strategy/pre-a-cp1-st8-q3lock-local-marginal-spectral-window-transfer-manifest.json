@@ -1,0 +1,112 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-LOCAL-MARGINAL-SPECTRAL-WINDOW-FINITE-v0",
+  "result_id": "R-390",
+  "title": "Local-marginal spectral-window transfer",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001233",
+  "claim_bearing": false,
+  "parent_explorations": ["EXP-001232", "EXP-001201", "EXP-001200"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+  ],
+  "question": "Does taking the local partial trace of a finite-volume Gibbs state before applying a fixed local spectral window produce a volume-stable kinetic corridor and an auditable boundary/complement split?",
+  "finite_fixture": {
+    "volume_values": [2, 3, 4, 5],
+    "admissible_pairs": [
+      {"volume": 2, "cutoff_dimensions": [3, 4, 5, 6]},
+      {"volume": 3, "cutoff_dimensions": [3, 4, 5]},
+      {"volume": 4, "cutoff_dimensions": [3, 4, 5]},
+      {"volume": 5, "cutoff_dimensions": [3, 4]}
+    ],
+    "local_pair_values": "all adjacent pairs (j,j+1)",
+    "chi": "1",
+    "r": "-1",
+    "g": "0.6",
+    "c": "0.6",
+    "lambda": "0.1",
+    "hbar": "1",
+    "beta_values": ["1/4", "1/2", "1", "2"],
+    "resolvent_imaginary_values": ["1"],
+    "energy_windows": ["1/2", "2", "4"],
+    "volume_stability_ratio_threshold": 1.5,
+    "cutoff_stress_ratio_threshold": 1.5,
+    "hostile_threshold": 1e-7,
+    "agreement_tolerance": 1e-8,
+    "partial_trace_tolerance": 1e-8,
+    "positivity_tolerance": 1e-10,
+    "finite_only": true
+  },
+  "model": {
+    "global_hamiltonian": "H_V=sum_j [p_j^2/(2 chi)+r q_j^2/2+g q_j^4/4] + sum_j [c(q_j-q_{j+1})^2/2 + lambda(q_j-q_{j+1})^2(q_j^2+q_{j+1}^2)/4]",
+    "local_state": "rho_{V,U}=Tr_{U^c}(exp(-beta H_V))/Tr(exp(-beta H_V))",
+    "local_window": "P_{U,E}=1_{H_U-min(spec H_U)<=E}",
+    "projected_state": "rho_{V,U,E}=P_{U,E} rho_{V,U} P_{U,E}",
+    "kinetic_target": "K=[B,[T,(i eta I-q_s)^(-1)]] on U",
+    "duality_identity": "Tr(rho_V (K_U embedded))=Tr(rho_{V,U} K_U)",
+    "route_split": "local marginal first, then spectral window; the complement is Q_{U,E} rho_{V,U} Q_{U,E}",
+    "analytic_target": "derive a boundary-conditioned local Gibbs tail and a cutoff-independent form-core transfer without global partition-ratio volume loss"
+  },
+  "coverage": {
+    "all_declared_volume_cutoff_pairs": true,
+    "all_adjacent_local_pairs": true,
+    "all_beta_values": true,
+    "all_energy_windows": true,
+    "both_local_sites": true,
+    "both_adjoint_seeds": true,
+    "partial_trace_duality": true
+  },
+  "scope": {
+    "finite_local_partial_trace_duality_closed": true,
+    "finite_local_projection_positivity_closed": true,
+    "finite_local_window_mass_rank_closed": true,
+    "finite_volume_window_stability_closed": true,
+    "finite_cutoff_stress_closed": true,
+    "operator_norm_uniformity_closed": false,
+    "beta_uniformity_closed": false,
+    "eta_uniformity_closed": false,
+    "phase_local_bkm_estimate_closed": false,
+    "boundary_shell_l1_closed": false,
+    "cutoff_uniformity_closed": false,
+    "source_uniformity_closed": false,
+    "volume_uniformity_closed": false,
+    "shape_uniformity_closed": false,
+    "operator_domain_embedding_closed": false,
+    "direct_D_cauchy_closed": false,
+    "delta_D_cauchy_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R390.lean",
+    "theorem_markers": ["gibbs_tail_term_bound", "window_mass_split", "local_duality_scope"],
+    "command": "lake env lean Tect/R390.lean",
+    "boundary": "Lean checks the scalar exponential tail term and finite split/scope identities; partial traces, spectra, matrices and QFT limits remain Python/open analysis."
+  },
+  "qft_interface": {
+    "closed": "On the finite declared grid, local reduction before projection gives an exact trace-duality check and a volume-stable fixed-window corridor for the sampled local kinetic target.",
+    "open": "The boundary-conditioned Gibbs-tail theorem, cutoff-independent common core, beta/eta independence, all source/volume/shape uniformity, Cook/common-alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open.",
+    "tect_boundary": "Auxiliary finite local-marginal interface only; no physical-sector conclusion or production-owner transfer is supplied."
+  },
+  "artifacts": {
+    "primary_script": "codes/foundations/pre_a_cp1_st8_q3lock_local_marginal_spectral_window_transfer.py",
+    "independent_script": "codes/foundations/pre_a_cp1_st8_q3lock_local_marginal_spectral_window_transfer_independent.py",
+    "hostile_script": "codes/foundations/pre_a_cp1_st8_q3lock_local_marginal_spectral_window_transfer_hostile.py",
+    "integrated_verifier": "codes/foundations/pre_a_cp1_st8_q3lock_local_marginal_spectral_window_transfer_verify.py",
+    "lean": "verification/lean/Tect/R390.lean"
+  },
+  "boundary": "T0 claim-nonbearing finite local-marginal spectral-window transfer stress only. It proves no cutoff- or volume-uniform Gibbs complement bound, no beta/eta-independent topology, no domain or Cook/common-alpha convergence, no OS/KMS/GNS reconstruction, no gap, continuum, C6, Sector-A or Pre-A result.",
+  "no_overclaim": "Local marginal stability separates the global volume trace from a local spectral complement, but it cannot replace a boundary-conditioned uniform tail theorem or the invariant common-core transfer.",
+  "recorded_by": "Codex"
+}

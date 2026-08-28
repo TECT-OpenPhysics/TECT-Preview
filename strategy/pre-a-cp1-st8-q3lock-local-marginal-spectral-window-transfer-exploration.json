@@ -1,0 +1,73 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001233",
+  "title": "Local-marginal spectral-window transfer",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+  ],
+  "related": [
+    {"id": "EXP-001232", "relation": "continues"},
+    {"id": "EXP-001201", "relation": "continues"},
+    {"id": "EXP-001200", "relation": "continues"}
+  ],
+  "question": "Does taking the local partial trace of a finite-volume Gibbs state before applying a fixed local spectral window produce a volume-stable kinetic corridor and an auditable boundary/complement split?",
+  "method": [
+    "Build the exact zero-source oscillator chain on 12 declared volume/cutoff systems with volumes 2,3,4,5 and the manifest's admissible dimensions.",
+    "For every adjacent pair, beta, local site, adjoint seed and energy window, reduce the normalized global Gibbs matrix by an einsum/trace partial trace before applying the local H_U spectral projector.",
+    "Check full-state/local-state trace duality for the kinetic target and its positive square, local positivity, window mass/rank, projected and conditional seminorms, and separate boundary from interior pair positions.",
+    "Compare volume profiles at fixed cutoff and retain the cutoff spread as a stress signal; reconstruct the table independently and reject a maximally-mixed local-state mutation.",
+    "Compile Lean R390 for the scalar Gibbs-tail term inequality, mass split, local duality residual and finite scope only."
+  ],
+  "finding": "The primary lane passes 3249/3249 assertions and the non-importing independent lane passes 1950/1950. The integrated verifier passes 65/65 and Lean R390 compiles. The grid contains 12 systems, 108 beta/pair rows, 432 duality seed rows and 1296 projected rows. The maximum target and positive-square duality residuals are 6.938893903907228e-17 and 4.440892098500626e-16. Window masses range from 0.14660173565938922 to 1.0000000000000004 with minimum rank 2. The maximum projected and conditional volume spread ratios are 1.1556230972701549 and 1.1553378882734897, below 1.5 on the declared finite grid. Cutoff spread remains 3.0050241824524666 projected and 3.3442508882643422 conditional. The maximally-mixed hostile mutation has minimum residual 0.0021074932288045467 and maximum 19.617534608077666, while the correct anchor is at most 8.881784197001252e-16.",
+  "verdict": "advanced",
+  "decision_reason": "R-390 changes the order of reduction and projection: conditional expectation to a local pair occurs first, so the finite volume profile is tested without a global partition-ratio penalty. The declared grid shows a stable finite volume corridor, but cutoff stress remains and no boundary-conditioned Gibbs-tail or common-core theorem follows.",
+  "adversarial_review": [
+    {"axis": "order of operations", "check": "The global Gibbs matrix is reduced before the local spectral projector; no projector/state commutation is assumed.", "disposition": "UPHELD-FINITE"},
+    {"axis": "boundary versus interior", "check": "Adjacent pair positions are labelled boundary or interior and are not silently promoted to translation invariance.", "disposition": "UPHELD-FINITE"},
+    {"axis": "trace duality", "check": "Both the kinetic target and its positive square are compared through full embedding and local reduction.", "disposition": "UPHELD-FINITE"},
+    {"axis": "normalization", "check": "Projected and conditional seminorms, window mass, tail mass and rank are reported separately.", "disposition": "UPHELD-FINITE"},
+    {"axis": "cutoff stress", "check": "The maximum cutoff spread above 1.5 is retained as an open finite stress rather than hidden.", "disposition": "UPHELD-OPEN"},
+    {"axis": "independent reconstruction", "check": "The independent lane uses an einsum partial trace and rebuilds the oscillator and chain without importing the primary module.", "disposition": "UPHELD-FINITE"},
+    {"axis": "hostile mutation", "check": "Replacing local marginals by I/d^2 fails the positive-probe duality test above the declared threshold.", "disposition": "UPHELD-FINITE"},
+    {"axis": "QFT promotion", "check": "Boundary Gibbs tails, cutoff/source/shape uniformity, common core, beta/eta independence, Cook/common-alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open.", "disposition": "UPHELD-OPEN"}
+  ],
+  "evidence_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-local-marginal-spectral-window-transfer-manifest.json#model",
+    "strategy/pre-a-cp1-st8-q3lock-local-marginal-spectral-window-transfer-certificate-260830.md#Result",
+    "codes/foundations/pre_a_cp1_st8_q3lock_local_marginal_spectral_window_transfer.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_local_marginal_spectral_window_transfer_independent.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_local_marginal_spectral_window_transfer_hostile.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_local_marginal_spectral_window_transfer_verify.py#run",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-primary-pre_a_cp1_st8_q3lock_local_marginal_spectral_window_transfer/primary.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-primary-pre_a_cp1_st8_q3lock_local_marginal_spectral_window_transfer/integrated.json#derived",
+    "verification/lean/Tect/R390.lean#gibbs_tail_term_bound",
+    "claims/C6-SPACETIME-SIGNATURE/notes/local-marginal-spectral-window-transfer-boundary-260830.md#R-390"
+  ],
+  "formal_integration": {
+    "results": ["R-390"],
+    "negatives": [],
+    "events": ["20260830-local-marginal-spectral-window-transfer-2026-08"],
+    "lean": "R390 PASS",
+    "no_new_result": false,
+    "no_new_negative": true,
+    "no_changelog_event": false,
+    "no_pdf": true,
+    "no_tier_change": true
+  },
+  "formal_refs": {
+    "results": ["R-390"],
+    "negatives": [],
+    "events": ["20260830-local-marginal-spectral-window-transfer-2026-08"]
+  },
+  "next_action": "Prove a boundary-conditioned local Gibbs complement estimate and an oscillator-cutoff-independent invariant form-core embedding. Then test source and shape dependence; if the local complement or cutoff transfer fails, record the route-specific obstruction without promoting common alpha.",
+  "boundary": "T0 claim-nonbearing finite local-marginal spectral-window transfer only. It proves no cutoff- or volume-uniform Gibbs complement bound, no beta/eta-independent topology, no domain or Cook/common-alpha convergence, no OS/KMS/GNS reconstruction, no gap, continuum, C6, Sector-A or Pre-A result.",
+  "no_overclaim": "Finite volume stability after local reduction identifies a candidate conditional-expected interface, not a uniform thermodynamic theorem or a replacement for the common algebra norm.",
+  "provenance": "contemporaneous",
+  "recorded_at": "2026-08-30T06:30:00Z",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-08-29"
+}

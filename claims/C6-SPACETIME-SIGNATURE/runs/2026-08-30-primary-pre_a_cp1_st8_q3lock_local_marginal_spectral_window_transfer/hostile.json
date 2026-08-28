@@ -1,0 +1,59 @@
+{
+  "assertion_count": 5,
+  "assertions": [
+    {
+      "actual": "['EXP-001233', 'R-390', False]",
+      "expected": "EXP-001233/R-390/false",
+      "group": "provenance",
+      "name": "identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'all_declared_volume_cutoff_pairs': True, 'all_adjacent_local_pairs': True, 'all_beta_values': True, 'all_energy_windows': True, 'both_local_sites': True, 'both_adjoint_seeds': True, 'partial_trace_duality': True}",
+      "expected": "declared coverage",
+      "group": "coverage",
+      "name": "coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": "8.881784197001252e-16",
+      "expected": "<=1e-08",
+      "group": "anchor",
+      "name": "correct duality anchor",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0021074932288045467",
+      "expected": ">1e-07",
+      "group": "hostile",
+      "name": "hostile maximally-mixed mutation caught",
+      "status": "PASS"
+    },
+    {
+      "actual": "432",
+      "expected": "declared pair x beta x seed count",
+      "group": "coverage",
+      "name": "hostile sample count",
+      "status": "PASS"
+    }
+  ],
+  "audit_id": "PA-CP1-ST8-Q3LOCK-LOCAL-MARGINAL-SPECTRAL-WINDOW-TRANSFER",
+  "boundary": "The maximally-mixed local-state mutation is a hostile control and is not part of the proof route.",
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "derived": {
+    "caught": true,
+    "hostile_threshold": 1e-07,
+    "maximum_correct_duality_residual": 8.881784197001252e-16,
+    "maximum_wrong_duality_residual": 19.617534608077666,
+    "minimum_wrong_duality_residual": 0.0021074932288045467,
+    "mutation": "replace each local Gibbs marginal by I/d^2 before testing Tr(rho A_U)=Tr(rho_U A)",
+    "sample_count": 432
+  },
+  "exploration_id": "EXP-001233",
+  "passed": 5,
+  "result_id": "R-390",
+  "run_kind": "hostile",
+  "schema": "tect/foundation-audit/1.0",
+  "task_id": "T-054",
+  "verdict": "CAUGHT"
+}

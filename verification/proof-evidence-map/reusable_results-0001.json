@@ -2,7 +2,39 @@
   "data": [
     {
       "accepted_event_ids": [
-        "20260830-spectral-window-kinetic-corridor-2026-08-30"
+        "20260830-local-marginal-spectral-window-transfer-2026-08"
+      ],
+      "anchor": "r-390",
+      "claim_ref_basis": {
+        "C6-SPACETIME-SIGNATURE": "proof_anchor_exact"
+      },
+      "claim_refs": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "co_recorded_negative_tags": [],
+      "detail": {
+        "finite_verification": "The primary lane passes 3249/3249 assertions and the non-importing independent lane passes 1950/1950. The integrated verifier passes 65/65 with Lean R390. The grid contains 12 admissible volume/cutoff systems, 108 beta/pair rows, 432 full/local duality seed rows and 1296 projected window rows. Maximum target and positive-square trace-duality residuals are 6.938893903907228e-17 and 4.440892098500626e-16. Window masses range from 0.14660173565938922 to 1.0000000000000004, with minimum rank 2. The maximum finite volume spread ratios are 1.1556230972701549 for the projected seminorm and 1.1553378882734897 for the conditional seminorm, below the declared 1.5 finite threshold. Cutoff spread remains 3.0050241824524666 (projected) and 3.3442508882643422 (conditional), so cutoff stability is not claimed. Replacing every local marginal by the maximally mixed state is caught by the hostile positive-probe test: the minimum wrong residual is 0.0021074932288045467, while the correct anchor is at most 8.881784197001252e-16.",
+        "proven_in": "[R-390 certificate](strategy/pre-a-cp1-st8-q3lock-local-marginal-spectral-window-transfer-certificate-260830.md), [Lean entrypoint](verification/lean/Tect/R390.lean), primary/independent/hostile scripts, integrated verifier, [scope note](claims/C6-SPACETIME-SIGNATURE/notes/local-marginal-spectral-window-transfer-boundary-260830.md), and saved run artefacts.",
+        "result_id": "R-390 is a T0, claim-nonbearing finite checkpoint under EXP-001233. It changes the order of operations from R-389: first take the partial trace of a finite-volume Gibbs state to each adjacent local pair, then apply the fixed local spectral projector. This isolates a local spectral complement from the global volume partition function.",
+        "scope_boundary": "Lean proves the scalar exponential Gibbs-tail term inequality, the mass split and the scalar duality residual identity. The finite matrix partial traces and spectral profiles remain executed evidence. No boundary-conditioned Gibbs-tail theorem, cutoff/source/shape uniformity, common invariant core, beta/eta independence, Cook/common-alpha convergence, OS/KMS/GNS reconstruction, gap, continuum, C6, Sector-A or Pre-A result is claimed."
+      },
+      "detail_title": "Local-marginal spectral-window transfer",
+      "family_refs": [],
+      "id": "R-390",
+      "normalized_detail": {
+        "boundary": "",
+        "proof_anchor": "[R-390 certificate](strategy/pre-a-cp1-st8-q3lock-local-marginal-spectral-window-transfer-certificate-260830.md), [Lean entrypoint](verification/lean/Tect/R390.lean), primary/independent/hostile scripts, integrated verifier, [scope note](claims/C6-SPACETIME-SIGNATURE/notes/local-marginal-spectral-window-transfer-boundary-260830.md), and saved run artefacts.",
+        "publication_target": "",
+        "reuse": "",
+        "statement": ""
+      },
+      "summary": "R-390 v1.0 is a T0 claim-nonbearing finite checkpoint under EXP-001233. Reducing the finite Gibbs state to an adjacent local pair before spectral projection gives exact target/square trace duality and a finite volume corridor, while cutoff stress remains visible; primary 3249/3249, independent 1950/1950, integrated 65/65 and Lean R390 pass over 12 systems, 432 duality seeds and 1296 projected rows. Boundary-conditioned Gibbs tails, common core and all Q3LOCK/QFT gates remain open",
+      "title": "Local-marginal spectral-window transfer"
+    },
+    {
+      "accepted_event_ids": [
+        "20260830-spectral-window-kinetic-corridor-2026-08-30",
+        "20260830-local-marginal-spectral-window-transfer-2026-08"
       ],
       "anchor": "r-389",
       "claim_ref_basis": {
@@ -3684,42 +3716,6 @@
       },
       "summary": "Scoped T4 analytic/exact/executed advance: at finite cutoff the covariance-normal endpoint equals the conditional stopped-current packet plus one half of the future conditional variance, so the R-124 secant is exactly `Psi=Delta V_fut-Delta F_063^ad`. The future-variance rebate is indispensable; an exact production-frame constant-translation fixture falsifies its omission. A smooth cylindrical partial-Wick identity gives the finite-cutoff adapted forest coordinate, while the production stationary quantity is exposed as `sum E V_0-sum E F_063,0^ad` and remains unsigned. A common-terminal Doob lemma makes only the low-plus-root aggregate nonpositive; root-only `C_0=0` additionally requires a nonnegative complete-low atom, and neither hypothesis is established for the actual production currents. A correlated Hilbert-operator lemma gives the sufficient far-tail threshold `K_far=8 C_* 2^(-3j_0)/sqrt(16065)` and the sharp mixed criterion `||A||<=4 sqrt(eta zeta)`, but the production factorisation, balanced band, stationary-baseline bound, `OVERLAP_src`, Nelson, removals, interacting measure, and Sector-A closure remain open",
       "title": "Conditional-variance/forest bridge, stationary-baseline residual, and the root-shell operator boundary"
-    },
-    {
-      "accepted_event_ids": [
-        "20260730-a13-r-124-stationary-polarized-trace-defect-and",
-        "20260730-a13-r-125-conditional-variance-forest-bridge-an"
-      ],
-      "anchor": "r-124",
-      "claim_ref_basis": {},
-      "claim_refs": [],
-      "co_recorded_negative_tags": [
-        "NG-2026-07-30-A13-NAIVE-PRIMITIVE-TRACE-FOREST-IDENTIFICATION",
-        "NG-2026-07-30-A13-REPLICA-VARIANCE-AUTOMATIC-TRACE-DOMINATION"
-      ],
-      "detail": {
-        "exact_stationary_polarized_theorem": "Condition on the strict past and let `Phi_u` be a square-integrable Hilbert-valued endpoint with once-owned integrable trace `Theta_u`. Put `b_u=E_0 Phi_u` and `S_u=D0_u-||b_u||^2=E_0(Theta_u-||Phi_u||^2)`. Then `S_h-S_0=E_0[DeltaTheta-Re<Phi_h+Phi_0,DeltaPhi>]` and, equivalently, `S_h-S_0=E_0[DeltaTheta-2Re<Phi_0,DeltaPhi>-||DeltaPhi||^2]`. No derivative of the control is used. Along any legal same-root chain, the moving-endpoint secants telescope pathwise to the endpoint difference. Therefore the coordinate is invariant under representation-preserving visit subdivision. Reusing the fixed stationary endpoint at every subvisit drops all pairwise increment crosses and is invalid. Production use additionally requires common reveal sigma-field, target heat and covariance, unchanged contraction-closed projection, no newly available child control, all six rows, every contraction-connected output, all visits and later-feedback crosses, the primitive trace or R-063 forest exactly once, the complete rational endpoint, and the outer expectation.",
-        "honest_tier": "T4 (analytic/exact/executed theorem and method boundary).",
-        "noncyclic_route_boundary": "Four recurring bypasses are now decisively excluded or parked. The surviving first-order Cartan form cannot reuse the R-120 `H^(-11/10)` zeroth-order class. Expected source and sextic budgets do not imply the separated `10/3` or fifth moments: a rare-event family keeps the mean fixed while those moments diverge. A Levi--Civita connection square does not repair the raw-current Hessian because its acceleration owner has the opposite larger sign. The exact OU Hessian integral is a representation of the existing negative higher-chaos debt, not its cancellation. The next route must first build a coefficient-level identity matching the R-121 rational endpoint to the R-123 primitive trace and adapted R-063 forest exactly once, and only then estimate the fully correlated signed root-shell sum before positive parts or separated moments. The owner-complete stationary baseline must also have a separate cutoff-uniform sum bound.",
-        "proof_evidence": "- claim: `A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION`; - note: `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-stationary-polarized-trace-defect-replica-root-shell-boundary-260730-v1.0.tex.txt`; - primary: `codes/foundations/a13_classii_stationary_polarized_trace_defect_replica_root_shell_boundary.py`; - independent: `codes/foundations/a13_classii_stationary_polarized_trace_defect_replica_root_shell_boundary_independent.py`; - integrated verifier: `codes/foundations/a13_classii_stationary_polarized_trace_defect_replica_root_shell_boundary_verify.py`; - manifest: `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_stationary_polarized_trace_defect_replica_root_shell_boundary_manifest.json`; - new negative boundary: `NG-2026-07-30-A13-REPLICA-VARIANCE-AUTOMATIC-TRACE-DOMINATION`; - retained boundaries: `AUDIT-2026-07-29-A13-R119-R120-CARTAN-COMPANION-INFERENCE`, `NG-2026-07-29-A13-FIRST-ORDER-HMINUS-11-10-CARTAN-REUSE`, `NG-2026-07-29-A13-BARE-JACOBIAN-HEAT-LOW-CHAOS-CANCELLATION`, `NG-2026-07-28-A13-ALL-LAW-POINTWISE-RELATIVE-BRACKET`, and `NG-2026-07-28-A13-TOTAL-A9-TIME-INTEGRATION-IDENTITY`.",
-        "publication_target": "A methods note on stationary-polarized trace secants, replica/Hermite coordinates, and correlated one-use Gaussian root-shell estimates.",
-        "replica_and_hermite_normal_form": "A conditionally independent replica gives the centered variance as half a replica square. For probabilists' Hermites, `Phi_h=sum f_n^h H_n` and `theta_h=E_0 Theta_h` give `S_h=theta_h-sum n!||f_n^h||^2`. Thus replicas expose the centered `n>=1` square; the `n=0` square is the separate conditional-mean reserve. Neither dominates the signed trace/current secant. The bounded smooth control `h=d cos(t xi)` has `Delta S=2 kappa^2 d^2 t^2 exp(-2t^2)>0`, so automatic replica domination is false.",
-        "result_id": "A13-CLASSII-STATIONARY-POLARIZED-TRACE-DEFECT-REPLICA-ROOT-SHELL-BOUNDARY.",
-        "reuse_scope": "Exact conditional Hilbert polarization, replica variance, Hermite trace coordinates, representation-preserving endpoint subdivision, finite-degree Gaussian spectral improvement, and a sharp scalar legal-row source theorem at fixed positive floor. The owner-complete cutoff-uniform production estimate, stationary-baseline sum bound, and all downstream global theorems remain open.",
-        "sharp_legal_row_theorem": "On the genuine R-123 first-linear row, `P=M_X^2+epsilon_m=4+10^-12` and `kappa^2=6/(125P)`. For every bounded square-integrable fresh-root control, `Delta S=kappa^2 E[(1-xi^2)h^2] <= kappa^2 E h^2`. The corresponding action allocation is `eta_row=kappa^2/2=3/(125P)<9/20`; no sextic payment, `Dh`, or `D^2h` is used. If `h` has Hermite degree at most `M`, the sharp coefficient improves to `kappa^2(1-mu_M)`, where `mu_M` is the smallest eigenvalue of the parity-tridiagonal multiplication-by-`xi^2` matrix. For `M=2,3`, `mu_M=3-sqrt(6)`. Gaussian bumps prove that the unrestricted coefficient `kappa^2` is sharp."
-      },
-      "detail_title": "Stationary-polarized trace defect, replica closure, and the correlated root-shell boundary",
-      "family_refs": [],
-      "id": "R-124",
-      "normalized_detail": {
-        "boundary": "",
-        "proof_anchor": "",
-        "publication_target": "A methods note on stationary-polarized trace secants, replica/Hermite coordinates, and correlated one-use Gaussian root-shell estimates.",
-        "reuse": "Exact conditional Hilbert polarization, replica variance, Hermite trace coordinates, representation-preserving endpoint subdivision, finite-degree Gaussian spectral improvement, and a sharp scalar legal-row source theorem at fixed positive floor. The owner-complete cutoff-uniform production estimate, stationary-baseline sum bound, and all downstream global theorems remain open.",
-        "statement": ""
-      },
-      "summary": "Scoped T4 analytic/exact/executed theorem and route synthesis: for `S_u=D0_u-||E_0 Phi_u||^2=E_0(Theta_u-||Phi_u||^2)`, the controlled-minus-stationary difference is the exact symmetric secant `E_0[DeltaTheta-Re<Phi_h+Phi_0,DeltaPhi>]`, equivalently the signed cross minus the favorable square. Moving-endpoint secants telescope under every representation-preserving same-root visit subdivision; fixed-baseline subvisit splitting is false. Conditional replicas and Hermite expansion give an exact square representation but no automatic sign. On the genuine first-linear row, `Delta S=kappa^2 E[(1-xi^2)h^2]<=kappa^2 E h^2`, `kappa^2=6/(125P)`, so the action allocation is `3/(125P)`, with a sharp finite-Hermite improvement and no sextic or feedback-derivative payment. Exact resonance, rare-event, covariant-Hessian, and OU audits close or retire four recurring bypasses. The owner-complete coefficient identity, cutoff-uniform correlated signed root-shell estimate, and separate stationary-baseline sum bound remain open, as do `OVERLAP_src`, Nelson, removals, the interacting measure, and Sector-A closure",
-      "title": "Stationary-polarized trace defect, replica closure, and the correlated root-shell boundary"
     }
   ],
   "kind": "reusable_results",

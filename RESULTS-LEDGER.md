@@ -42,6 +42,7 @@ policy in `governance/development-history.md`.
 | [R-376](#r-376) | Hilbert-Schmidt Lipschitz bridge for the capped Liouvillian kernel | R-376 v1.0 is a T0 claim-nonbearing finite operator-interface checkpoint under EXP-001218. A noncommuting cutoff-2 edge Liouvillian stress gives maximum full-kernel Frobenius ratio 0.9787544362168733 and 64-layer ratio 0.9755896836319287 with 76/76 integrated assertions; general Schatten-2 proof, operator-norm locality, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
 | [R-377](#r-377) | Gap-free odd-Matsubara resolvent telescoping budget | R-377 v1.0 is a T0 claim-nonbearing finite resolvent-interface checkpoint under EXP-001219. The exact positive-resolvent difference identity and its 64-layer budget pass 122/122 integrated assertions with Lean R377; the accumulated finite budget ratio is 0.9895313426497929 and the absolute-value square-root debt is recorded separately. Uniform locality, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
 | [R-382](#r-382) | Increasing-cutoff endpoint modular moment stress | R-382 v1.0 is a T0 claim-nonbearing finite cutoff-profile diagnostic under EXP-001224. The R-381 endpoint-energy bridge passes across 2816 all-prefix actual-Q3 contexts with Lean R382; edge max M_0 grows from 2.733031855844076 at d=3 to 41.64826651661874 at d=6 and max M_2 from 0.008378198414559081 to 17.719559304500326, with d=5 to d=6 ratios 8.855033106195243 and 36.38049903040583. This is finite growth evidence only; uniform M_0/M_2 control, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
+| [R-390](#r-390) | Local-marginal spectral-window transfer | R-390 v1.0 is a T0 claim-nonbearing finite checkpoint under EXP-001233. Reducing the finite Gibbs state to an adjacent local pair before spectral projection gives exact target/square trace duality and a finite volume corridor, while cutoff stress remains visible; primary 3249/3249, independent 1950/1950, integrated 65/65 and Lean R390 pass over 12 systems, 432 duality seeds and 1296 projected rows. Boundary-conditioned Gibbs tails, common core and all Q3LOCK/QFT gates remain open |
 | [R-389](#r-389) | Spectral-window kinetic corridor | R-389 v1.0 is a T0 claim-nonbearing finite checkpoint under EXP-001232. Fixed low-energy projections stabilize the kinetic seminorm tail for all sampled beta at eta=1, while eta=1/2 remains a growth control; primary 2704/2704, independent 2704/2704, integrated 48/48 and Lean R389 pass over 80 seed and 1280 projected rows. The spectral complement and all Q3LOCK/QFT gates remain open |
 | [R-388](#r-388) | State-weighted kinetic resolvent corridor | R-388 v1.0 is a T0 claim-nonbearing finite checkpoint under EXP-001231. The raw kinetic nested-commutator operator norm grows strongly with cutoff, while a sampled two-sided Gibbs corridor appears for beta>=1/2 and eta>=1; primary 409/409, independent 404/404, integrated 44/44 and Lean R388 pass over 80 seed and 320 weighted rows. This remains a parameter-dependent finite candidate, with BKM, shell, domain, Cook and QFT gates open |
 | [R-387](#r-387) | Anchored nested-commutator kinetic isolation | R-387 v1.0 is a T0 claim-nonbearing finite kinetic-isolation checkpoint under EXP-001230. Coordinate-only potentials disappear from the first nonzero coordinate-resolvent coefficient, leaving the kinetic nested commutator; primary 1019/1019, independent 1012/1012, integrated 46/46 and Lean R387 pass over 288 weighted contexts, while kinetic BKM/Cook/QFT gates remain open |
@@ -628,6 +629,42 @@ No new negative result, tier change, or R-376 PDF is issued.
 
 **Proven in:** manifest, certificate, Lean entrypoint, primary script,
 independent script, integrated verifier, scope note, and saved run artefacts.
+
+<a id="r-390"></a>
+### R-390 -- Local-marginal spectral-window transfer
+
+**Result ID.** R-390 is a T0, claim-nonbearing finite checkpoint under
+EXP-001233. It changes the order of operations from R-389: first take the
+partial trace of a finite-volume Gibbs state to each adjacent local pair, then
+apply the fixed local spectral projector. This isolates a local spectral
+complement from the global volume partition function.
+
+**Finite verification.** The primary lane passes 3249/3249 assertions and the
+non-importing independent lane passes 1950/1950. The integrated verifier passes
+65/65 with Lean R390. The grid contains 12 admissible volume/cutoff systems,
+108 beta/pair rows, 432 full/local duality seed rows and 1296 projected window
+rows. Maximum target and positive-square trace-duality residuals are
+6.938893903907228e-17 and 4.440892098500626e-16. Window masses range from
+0.14660173565938922 to 1.0000000000000004, with minimum rank 2.
+
+The maximum finite volume spread ratios are 1.1556230972701549 for the
+projected seminorm and 1.1553378882734897 for the conditional seminorm, below
+the declared 1.5 finite threshold. Cutoff spread remains 3.0050241824524666
+(projected) and 3.3442508882643422 (conditional), so cutoff stability is not
+claimed. Replacing every local marginal by the maximally mixed state is caught
+by the hostile positive-probe test: the minimum wrong residual is
+0.0021074932288045467, while the correct anchor is at most
+8.881784197001252e-16.
+
+**Scope boundary.** Lean proves the scalar exponential Gibbs-tail term
+inequality, the mass split and the scalar duality residual identity. The
+finite matrix partial traces and spectral profiles remain executed evidence.
+No boundary-conditioned Gibbs-tail theorem, cutoff/source/shape uniformity,
+common invariant core, beta/eta independence, Cook/common-alpha convergence,
+OS/KMS/GNS reconstruction, gap, continuum, C6, Sector-A or Pre-A result is
+claimed.
+
+**Proven in:** [R-390 certificate](strategy/pre-a-cp1-st8-q3lock-local-marginal-spectral-window-transfer-certificate-260830.md), [Lean entrypoint](verification/lean/Tect/R390.lean), primary/independent/hostile scripts, integrated verifier, [scope note](claims/C6-SPACETIME-SIGNATURE/notes/local-marginal-spectral-window-transfer-boundary-260830.md), and saved run artefacts.
 
 <a id="r-389"></a>
 ### R-389 -- Spectral-window kinetic corridor
