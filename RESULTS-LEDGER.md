@@ -42,6 +42,7 @@ policy in `governance/development-history.md`.
 | [R-376](#r-376) | Hilbert-Schmidt Lipschitz bridge for the capped Liouvillian kernel | R-376 v1.0 is a T0 claim-nonbearing finite operator-interface checkpoint under EXP-001218. A noncommuting cutoff-2 edge Liouvillian stress gives maximum full-kernel Frobenius ratio 0.9787544362168733 and 64-layer ratio 0.9755896836319287 with 76/76 integrated assertions; general Schatten-2 proof, operator-norm locality, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
 | [R-377](#r-377) | Gap-free odd-Matsubara resolvent telescoping budget | R-377 v1.0 is a T0 claim-nonbearing finite resolvent-interface checkpoint under EXP-001219. The exact positive-resolvent difference identity and its 64-layer budget pass 122/122 integrated assertions with Lean R377; the accumulated finite budget ratio is 0.9895313426497929 and the absolute-value square-root debt is recorded separately. Uniform locality, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
 | [R-382](#r-382) | Increasing-cutoff endpoint modular moment stress | R-382 v1.0 is a T0 claim-nonbearing finite cutoff-profile diagnostic under EXP-001224. The R-381 endpoint-energy bridge passes across 2816 all-prefix actual-Q3 contexts with Lean R382; edge max M_0 grows from 2.733031855844076 at d=3 to 41.64826651661874 at d=6 and max M_2 from 0.008378198414559081 to 17.719559304500326, with d=5 to d=6 ratios 8.855033106195243 and 36.38049903040583. This is finite growth evidence only; uniform M_0/M_2 control, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
+| [R-399](#r-399) | Conditional Poincare-before-Duhamel shell transport | R-399 v1.0 is a T0 claim-nonbearing finite actual-Q3 checkpoint under EXP-001244. The R-398 Doob shell variance is converted to a conditional birth-death Dirichlet bound across 3,584 oriented history contexts; primary 8,975/8,975, independent aggregate agreement, hostile 5/5, integrated 31/31 and Lean R399 pass. The minimum finite conditional gap is 0.49325229280535315 and the maximum weighted Poincare shell bound is 0.00045782017814794144. Uniform conditional gaps, gradient decay, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
 | [R-398](#r-398) | Conditioned-collar Doob martingale and shell-influence discriminator | R-398 v1.0 is a T0 claim-nonbearing finite actual-Q3 coordinate-likelihood checkpoint under EXP-001242. Conditioning the full likelihood on nested left/right collars gives an exact nonnegative Doob shell square function across 3,584 all-prefix contexts; primary 12,559/12,559, independent aggregate agreement, hostile 5/5, integrated 31/31 and Lean R398 pass. The maximum identity residual is 1.0570971181733668e-18 and the maximum mu=1/8 weighted shell cost is 0.00031475936144631414. Phase-conditioned influence, folded Euclidean domination, uniform shell bounds, common core, common-alpha and all Q3LOCK/QFT gates remain open |
 | [R-397](#r-397) | Finite semigroup-dressed Petz collar discriminator | R-397 v1.0 is a T0 claim-nonbearing finite checkpoint under EXP-001241. A rank-preserving heat-semigroup collar passes primary 473/473, independent 6/6, hostile 6/6, integrated 23/23 and Lean R397 over 5 systems, 12 tripartitions and 120 rows; semigroup residual is 9.81218636736738e-16, minimum mass 0.344378492577764, and the maximum adjacent transport ratio is 2.192041611389991. Uniform moment, normalized-filter theorem, common-alpha and all Q3LOCK/QFT gates remain open |
 | [R-396](#r-396) | Finite recoverability-first projected Petz transport | R-396 v1.0 is a T0 claim-nonbearing finite checkpoint under EXP-001239. A fixed Petz map transports the projected Gibbs recovery error back to the original local state across 12 systems, 62 tripartitions and 992 rows; primary 5,961/5,961, independent 6/6, hostile 3/3, integrated 23/23 and Lean R396 pass. The maximum transported error is 0.0260340558191261 and the maximum adjacent-cutoff ratio is 6.91143733666218, so dimension-safe QCMI, moment, common-alpha and all Q3LOCK/QFT gates remain open |
@@ -637,6 +638,41 @@ No new negative result, tier change, or R-376 PDF is issued.
 
 **Proven in:** manifest, certificate, Lean entrypoint, primary script,
 independent script, integrated verifier, scope note, and saved run artefacts.
+
+<a id="r-399"></a>
+### R-399 -- Conditional Poincare-before-Duhamel shell transport
+
+**Result ID.** R-399 is a T0, claim-nonbearing finite actual-Q3
+conditional-information checkpoint under EXP-001244.  Starting from the
+R-398 oriented Doob decomposition, each shell increment is treated as a
+conditional variance of the coordinate likelihood.  On the ordered finite
+coordinate levels, the reversible birth-death form with conductance
+`min(pi(k),pi(k+1))` gives a first nonzero generalized gap `lambda` and the
+finite transfer `Var_pi(f) <= D(f)/lambda`.  Summing over prefix parents turns
+the shell variance into an explicit conditional gradient budget.
+
+**Verification.** The complete R-398 grid contains five volume/cutoff
+systems, beta in `{1/2,1}`, two source supports, both source and history
+signs, both split orders, every prefix, both history adjoints and both
+left/right orientations: 3,584 contexts.  The primary lane passes
+8,975/8,975 assertions, the non-importing independent lane agrees on all
+aggregate fields, the hostile lane passes 5/5, the integrated verifier
+passes 31/31, and Lean R399 compiles.  The minimum finite conditional gap is
+`0.49325229280535315`; maximum shell variance is
+`0.00021579891795778293`; maximum `mu=1/8` weighted shell variance is
+`0.00031475936144631414`; maximum Poincare shell bound is
+`0.00031370151228040375`; and maximum weighted Poincare shell bound is
+`0.00045782017814794144`.
+
+**Boundary.** The finite gap minimum is calibration only, not a
+cutoff-, volume-, source- or phase-uniform lower bound.  The coordinate
+Dirichlet gradient is not a real-time Lieb--Robinson estimate.  A
+phase-conditioned gap theorem, uniform gradient decay, common form core,
+common alpha, OS/KMS/GNS reconstruction, a mass gap, continuum, C6,
+Sector-A or Pre-A closure remains open.  No tier change, negative result or
+PDF is issued.
+
+**Proven in:** [R-399 certificate](strategy/pre-a-cp1-st8-q3lock-conditional-poincare-shell-certificate-260830.md), [Lean entrypoint](verification/lean/Tect/R399.lean), primary/independent/hostile scripts, integrated verifier, [scope note](claims/C6-SPACETIME-SIGNATURE/notes/conditional-poincare-shell-260830.md), and saved run artefacts.
 
 <a id="r-398"></a>
 ### R-398 -- Conditioned-collar Doob martingale and shell-influence discriminator

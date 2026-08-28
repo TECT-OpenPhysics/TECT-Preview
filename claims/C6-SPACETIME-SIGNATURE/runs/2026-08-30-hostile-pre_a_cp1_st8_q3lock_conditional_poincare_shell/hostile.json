@@ -1,0 +1,66 @@
+{
+  "checks": [
+    {
+      "actual": [
+        7.800527917196823e-05,
+        0.00011414429609883284
+      ],
+      "expected": ">=-1e-08",
+      "name": "genuine Poincare transfer",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        2.7443920018295422e-05,
+        4.151065692939421e-05
+      ],
+      "expected": ">1e-07",
+      "name": "gap denominator mutation caught",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.00011217388018877421,
+      "expected": ">1e-07",
+      "name": "conditional parent mutation caught",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.5779550065843284,
+      "expected": ">0",
+      "name": "positive finite gap",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.0005362238026897779,
+      "expected": "finite",
+      "name": "coordinate probabilities finite",
+      "status": "PASS"
+    }
+  ],
+  "derived": {
+    "beta": 0.5,
+    "dimension": 4,
+    "genuine_deficit": 7.800527917196823e-05,
+    "minimum_conditional_gap": 0.5779550065843284,
+    "naive_deficit": 2.7443920018295422e-05,
+    "naive_gradient_bound": 0.00017443565247845583,
+    "naive_weighted_deficit": 4.151065692939421e-05,
+    "naive_weighted_gradient_bound": 0.0002527468408212555,
+    "orientation": "right",
+    "poincare_bound": 0.0002798848516687195,
+    "prefix_length": 4,
+    "raw_coordinate_minimum": 0.0005362238026897779,
+    "shell_energy": 0.00020187957249675125,
+    "volume": 3,
+    "weighted_deficit": 0.00011414429609883284,
+    "weighted_poincare_bound": 0.00040840179384948254,
+    "weighted_shell_energy": 0.0002942574977506497,
+    "wrong_parent_gap": 0.00011217388018877421,
+    "wrong_parent_shell": 0.00031405345268552547
+  },
+  "exploration_id": "EXP-001244",
+  "manifest": "strategy/pre-a-cp1-st8-q3lock-conditional-poincare-shell-manifest.json",
+  "result_id": "R-399",
+  "schema": "tect/pre-a-r399-hostile/1.0",
+  "verdict": "PASS"
+}

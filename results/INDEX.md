@@ -5,10 +5,11 @@
 
 Authorities: `RESULTS-LEDGER.md`.
 
-**232 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
+**233 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
 
 | ID | Result | Tier/scope |
 |---|---|---|
+| [`R-399`](../RESULTS-LEDGER.md#r-399) | Conditional Poincare-before-Duhamel shell transport | T0 |
 | [`R-398`](../RESULTS-LEDGER.md#r-398) | Conditioned-collar Doob martingale and shell-influence discriminator | T0 |
 | [`R-397`](../RESULTS-LEDGER.md#r-397) | Finite semigroup-dressed Petz collar discriminator | T0 |
 | [`R-396`](../RESULTS-LEDGER.md#r-396) | Finite recoverability-first projected Petz transport | T0 |
@@ -33,7 +34,6 @@ Authorities: `RESULTS-LEDGER.md`.
 | [`R-377`](../RESULTS-LEDGER.md#r-377) | Gap-free odd-Matsubara resolvent telescoping budget | T0 |
 | [`R-376`](../RESULTS-LEDGER.md#r-376) | Hilbert-Schmidt Lipschitz bridge for the capped Liouvillian kernel | T0 |
 | [`R-375`](../RESULTS-LEDGER.md#r-375) | Summable odd-Matsubara Lipschitz budget for transition-energy perturbations | T0 |
-| [`R-374`](../RESULTS-LEDGER.md#r-374) | Positive odd-Matsubara resolvent expansion of the capped Gibbs kernel | T0 |
 
 Search without loading the full ledger:
 
