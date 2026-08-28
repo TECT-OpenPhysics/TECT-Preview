@@ -43,6 +43,7 @@ policy in `governance/development-history.md`.
 | [R-377](#r-377) | Gap-free odd-Matsubara resolvent telescoping budget | R-377 v1.0 is a T0 claim-nonbearing finite resolvent-interface checkpoint under EXP-001219. The exact positive-resolvent difference identity and its 64-layer budget pass 122/122 integrated assertions with Lean R377; the accumulated finite budget ratio is 0.9895313426497929 and the absolute-value square-root debt is recorded separately. Uniform locality, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
 | [R-382](#r-382) | Increasing-cutoff endpoint modular moment stress | R-382 v1.0 is a T0 claim-nonbearing finite cutoff-profile diagnostic under EXP-001224. The R-381 endpoint-energy bridge passes across 2816 all-prefix actual-Q3 contexts with Lean R382; edge max M_0 grows from 2.733031855844076 at d=3 to 41.64826651661874 at d=6 and max M_2 from 0.008378198414559081 to 17.719559304500326, with d=5 to d=6 ratios 8.855033106195243 and 36.38049903040583. This is finite growth evidence only; uniform M_0/M_2 control, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
 | [R-407](#r-407) | Canonical-path effective-resistance lower bound | R-407 v1.0 is a T0 claim-nonbearing finite constructive path checkpoint under EXP-001252. The maximum-conductance tree certificate passes primary 22510/22510, independent 22509/22509, hostile 6/6, integrated 35/35 and Lean R407 over 7 systems, 2688 contexts and 21120 rows. The exact intrinsic gap is [0.7570174175402339,5.647863075935321], the canonical lower envelope is [0.2613815898804392,2.508986944248343], and rho is [0.3985672393762041,3.825824154093709]. The finite path certificate exposes the conductance/probability inputs for a future uniform proof; common-core, phase, volume, exhaustion and QFT gates remain open |
+| [R-409](#r-409) | Effective-resistance average trace identity and heat-kernel target | R-409 v1.0 is a T0 claim-nonbearing finite Green-trace checkpoint under EXP-001254. The unordered resistance average equals the normalized Laplacian pseudoinverse trace over 7 systems, 2688 contexts and 21120 rows; primary 106990/106990, independent 106990/106990, hostile 6/6, integrated 37/37 and Lean R409 pass. Both resistance average and inverse-spectrum trace range over [0.44413751605180657,2.0052069566897672], with maximum identity residual 2.537969834293108e-12. The exact identity exposes an integrated heat-trace uniformity target, while common-core, cutoff/volume/phase/exhaustion and QFT gates remain open |
 | [R-408](#r-408) | Tree-independent effective-resistance lower bound | R-408 v1.0 is a T0 claim-nonbearing finite electrical checkpoint under EXP-001253. The Green-kernel resistance average passes primary 43630/43630, independent 43630/43630, hostile 6/6, integrated 37/37 and Lean R408 over 7 systems, 2688 contexts and 21120 rows. The exact intrinsic gap is [0.7570174175402339,5.647863075935321], the resistance average is [0.44413751605180657,2.0052069566897672], and the tree-independent lower envelope is [0.49870164107689835,2.251554898783544]. The finite certificate removes tree choice but leaves cutoff/volume/phase/exhaustion uniformity, common core, GNS and QFT gates open |
 | [R-406](#r-406) | Harmonic-extension Schur capacity decomposition | R-406 v1.0 is a T0 claim-nonbearing finite variational checkpoint under EXP-001251. It replaces the unsafe block-constant Ritz shortcut by a harmonic-extension Schur operator and a block-mean-zero residual form over 8 systems, 80 profiles and 1030 rows; primary 4267/4267, independent 2114/2114, hostile 6/6, integrated 38/38 and Lean R406 pass. The corrected factor-two envelope is positive on the finite grid, while all common-core, phase-selection and QFT gates remain open |
 | [R-405](#r-405) | Phase-conditioned intrinsic gap and inter-phase capacity split | R-405 v1.0 is a T0 claim-nonbearing finite route split under EXP-001250. It separates the R-404 momentum graph into lower/upper physical-coordinate sector gaps, cross-sector capacity and neutral central mass across 8 systems, 80 profiles and 1030 rows; primary 1178/1178, independent 1088/1088, hostile 5/5, integrated 33/33 and Lean R405 pass. The full-gap range is [0.6310329497027756,6.229495058532403], the induced sector-gap range is [1.5773625260965005,20.555978652063708] and cross capacity is [0.11650039514772156,1.222041249326006]. The finite split is not a uniform phasewise bound; common-core, phase-selection, broken-sector GNS and all QFT gates remain open |
@@ -696,6 +697,61 @@ Hamiltonian-to-OS/KMS/GNS identification, physical mass gap, continuum, C6,
 Sector-A or Pre-A closure.  No tier change, negative result or PDF is issued.
 
 **Proven in:** [R-407 certificate](strategy/pre-a-cp1-st8-q3lock-canonical-path-resistance-certificate-260830.md), [Lean entrypoint](verification/lean/Tect/R407.lean), primary/independent/hostile scripts, integrated verifier, [scope note](claims/C6-SPACETIME-SIGNATURE/notes/canonical-path-resistance-260830.md), and saved run artefacts.
+<a id="r-409"></a>
+### R-409 -- Effective-resistance average trace identity and heat-kernel target
+
+**Result ID.** R-409 is a T0, claim-nonbearing finite Green-trace checkpoint
+under EXP-001254.  It sharpens R-408 by setting
+`D=diag(pi)`, `W=D^(-1/2)L D^(-1/2)`, `u=sqrt(pi)`, and
+`v_xy=D^(-1/2)(e_x-e_y)`.  The weighted unordered pair vectors obey
+
+```
+sum_(x<y) pi_x*pi_y*v_xy*v_xy^T = I-u*u^T.
+```
+
+For a connected finite graph this gives the exact identity
+
+```
+Rbar_pi = sum_(x<y) pi_x*pi_y*R_xy
+        = tr(W^+)
+        = sum_(k=1)^(d-1) 1/lambda_k(W).
+```
+
+The finite inverse-spectrum sum is also the termwise integral
+`int_0^infinity (tr(exp(-tW))-1) dt`.  The identity depends on the normalized
+Green kernel, not on a spanning tree or a single Fiedler mode.
+
+**Verification.** The volume-two R-404 fixture uses dimensions `3,4,5,6,8,10,12`,
+beta in `{1/2,1,2}`, both source signs, history signs, split orders, all
+prefixes, both history adjoints and both collar orientations.  The primary
+lane passes `106990/106990` over 7 systems, 2688 contexts and 21120 rows; the
+independent lane passes `106990/106990`; the hostile lane `6/6`; the integrated
+verifier `37/37`; and Lean R409 compiles.
+
+The resistance-average and normalized inverse-trace ranges are both
+`[0.44413751605180657,2.0052069566897672]`.  The largest pair resistance is
+`85.99011817086347`, the smallest positive normalized eigenvalue is
+`0.7570174175402339`, and the maximum direct pair-to-trace residual is
+`2.537969834293108e-12`; transformed-pair and projector residuals are at most
+`6.661338147750939e-16` and `4.440892098500626e-16` respectively.
+
+The hostile lane rejects directed-pair doubling, the unnormalized-Laplacian
+trace, a one-mode-only shortcut, and a diagonal-q mutation with zero graph
+spectrum.  The independent lane rebuilds the finite model and agrees within
+`5e-6`.
+
+This finite result advances a Green/heat-trace interface: the next analytic
+target is a cutoff-, volume-, phase- and exhaustion-uniform upper bound on
+`tr(W^+)` on one Hamiltonian common core, followed by transfer to the R-399
+shell and combination with the R-406 Schur residual split.
+
+**Boundary.** R-409 proves no cutoff-, volume-, source-, phase- or
+exhaustion-uniform gap, common core, common alpha, phase selection,
+Hamiltonian-to-OS/KMS/GNS identification, physical mass gap, continuum, C6,
+Sector-A or Pre-A closure.  No tier change, negative result or PDF is issued.
+
+**Proven in:** [R-409 certificate](strategy/pre-a-cp1-st8-q3lock-resistance-trace-certificate-260830.md), [Lean entrypoint](verification/lean/Tect/R409.lean), primary/independent/hostile scripts, integrated verifier, [scope note](claims/C6-SPACETIME-SIGNATURE/notes/resistance-trace-260830.md), and saved run artefacts.
+
 <a id="r-408"></a>
 ### R-408 -- Tree-independent effective-resistance lower bound
 

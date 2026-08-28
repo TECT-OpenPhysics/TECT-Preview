@@ -1,0 +1,108 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-RESISTANCE-TRACE-IDENTITY-v0",
+  "result_id": "R-409",
+  "title": "Effective-resistance average trace identity and heat-kernel target",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001254",
+  "claim_bearing": false,
+  "parent_explorations": ["EXP-001253", "EXP-001252", "EXP-001249"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY",
+    "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+  ],
+  "question": "Can the tree-independent Gibbs-weighted effective-resistance average be rewritten exactly as the trace of the normalized Laplacian pseudoinverse, exposing an integrated heat-kernel target for the later uniform bound?",
+  "new_perspective": {
+    "principle": "Let D=diag(pi), W=D^(-1/2)L D^(-1/2), and u=sqrt(pi). Pairwise resistance vectors lie in u-perpendicular space. Their weighted outer-product sum is I-u u^T, so the resistance average equals tr(W^+) = sum_{k>=1} lambda_k(W)^(-1).",
+    "route": [
+      "For every connected intrinsic graph, form W=D_pi^(-1/2)L D_pi^(-1/2) and its positive spectrum.",
+      "Evaluate the unordered pair resistance average directly from L^+, the transformed pair sum from W^+, and the pseudoinverse trace from the positive eigenvalues.",
+      "Check equality on every actual-likelihood row and retain the smallest positive eigenvalue, largest resistance average and identity residual as conditioning inputs.",
+      "Interpret the trace as the finite spectral integral int_0^infinity (Tr exp(-tW)-1) dt; a future uniform proof must bound this integrated heat trace on a common core, not merely one Fiedler eigenvalue.",
+      "Use directed-pair doubling, unnormalized-Laplacian trace and diagonal-q disconnected mutations as hostile controls."
+    ],
+    "qft_bridge": "A promoted route would require a cutoff-, volume-, phase- and exhaustion-uniform bound on the normalized Green trace or integrated heat trace, plus the common-core and R-399 shell transfer obligations. The identity itself is finite and claim-nonbearing."
+  },
+  "finite_theorem": {
+    "normalized_laplacian": "W=D_pi^(-1/2)L D_pi^(-1/2)",
+    "pair_projector": "sum_{x<y} pi_x*pi_y v_xy*v_xy^T = I-sqrt(pi)*sqrt(pi)^T, v_xy=D_pi^(-1/2)(e_x-e_y)",
+    "trace_identity": "Rbar_pi=sum_{x<y} pi_x*pi_y R_xy=tr(W^+)=sum_{k=1}^{d-1} 1/lambda_k(W)",
+    "heat_trace_identity": "tr(W^+)=int_0^infinity (tr(exp(-tW))-1) dt for connected finite W",
+    "normalization": "The pair sum is unordered; directed-pair summation is exactly twice the trace identity"
+  },
+  "finite_fixture": {
+    "admissible_pairs": [
+      {"volume": 2, "cutoff_dimensions": [3, 4, 5, 6, 8, 10, 12]}
+    ],
+    "beta_values": ["1/2", "1", "2"],
+    "source_support_values": [[0]],
+    "source_amplitude": "1/3",
+    "hbar": "1",
+    "time_step": "1/18",
+    "source_sign_values": [-1, 1],
+    "history_sign_values": [-1, 1],
+    "history_adjoint_values": [0, 1],
+    "orientations": ["right", "left"],
+    "chi": "1",
+    "r": "-1",
+    "g": "3/5",
+    "c": "3/5",
+    "lambda": "1/10",
+    "probability_floor": 1e-30,
+    "resistance_eigen_floor": 1e-14,
+    "numerical_tolerance": 1e-8,
+    "variance_floor": 1e-20,
+    "hostile_zero_threshold": 1e-12,
+    "crosscheck_tolerance": 5e-6
+  },
+  "scope": {
+    "finite_resistance_trace_identity_closed": true,
+    "finite_normalized_green_trace_closed": true,
+    "finite_heat_trace_representation_closed": true,
+    "finite_pair_normalization_closed": true,
+    "finite_likelihood_row_coverage_closed": true,
+    "cutoff_independent_green_trace_closed": false,
+    "volume_independent_green_trace_closed": false,
+    "phase_uniform_green_trace_closed": false,
+    "exhaustion_uniform_green_trace_closed": false,
+    "common_core_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R409.lean",
+    "theorem_markers": ["trace_projector_nonnegative", "heat_trace_inverse_nonnegative", "finite_scope"],
+    "command": "lake env lean Tect/R409.lean",
+    "boundary": "Lean checks only scalar positivity and finite inverse-spectrum bookkeeping; matrix congruence, pseudoinverse identities, Gibbs rows and all uniform or physical limits remain in the executable/open boundary."
+  },
+  "artifacts": {
+    "primary_script": "codes/foundations/pre_a_cp1_st8_q3lock_resistance_trace.py",
+    "independent_script": "codes/foundations/pre_a_cp1_st8_q3lock_resistance_trace_independent.py",
+    "hostile_script": "codes/foundations/pre_a_cp1_st8_q3lock_resistance_trace_hostile.py",
+    "integrated_verifier": "codes/foundations/pre_a_cp1_st8_q3lock_resistance_trace_verify.py",
+    "lean": "verification/lean/Tect/R409.lean"
+  },
+  "promotion_criteria": [
+    "Prove a cutoff- and volume-independent upper bound on the normalized Green trace or its integrated heat-trace representation on one Hamiltonian common core.",
+    "Control phase, source, orientation and exhaustion dependence and preserve the connected positive-spectrum hypothesis.",
+    "Transfer the trace-controlled resistance inequality to the R-399 conditional shell and combine it with the R-406 Schur decomposition before any common-alpha or GNS promotion."
+  ],
+  "stop_conditions": [
+    "If the normalized Green trace diverges or the positive spectrum collapses under a validated cutoff or volume stress, retain the identity as a finite diagnostic and register the obstruction.",
+    "If directed-pair normalization, the zero mode or the D_pi congruence is mishandled, stop and record the exact failed identity.",
+    "Finite trace positivity is not a uniform, phase-selection, common-core, GNS, physical-gap or QFT theorem."
+  ],
+  "boundary": "T0 claim-nonbearing finite effective-resistance trace and heat-kernel identity checkpoint only. It proves no cutoff-, volume-, source-, phase- or exhaustion-uniform gap, common core, common alpha, OS/KMS/GNS reconstruction, mass gap, continuum, C6, Sector-A or Pre-A closure.",
+  "no_overclaim": "The trace identity changes the uniformity target from an arbitrary tree or one eigenvalue to an integrated Green/heat-kernel quantity; it does not establish a regulator or thermodynamic bound.",
+  "recorded_by": "Codex"
+}

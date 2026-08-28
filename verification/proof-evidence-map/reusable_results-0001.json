@@ -2,6 +2,37 @@
   "data": [
     {
       "accepted_event_ids": [
+        "20260830-effective-resistance-average-trace-identity-and"
+      ],
+      "anchor": "r-409",
+      "claim_ref_basis": {
+        "C6-SPACETIME-SIGNATURE": "proof_anchor_exact"
+      },
+      "claim_refs": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "co_recorded_negative_tags": [],
+      "detail": {
+        "boundary": "R-409 proves no cutoff-, volume-, source-, phase- or exhaustion-uniform gap, common core, common alpha, phase selection, Hamiltonian-to-OS/KMS/GNS identification, physical mass gap, continuum, C6, Sector-A or Pre-A closure. No tier change, negative result or PDF is issued.",
+        "proven_in": "[R-409 certificate](strategy/pre-a-cp1-st8-q3lock-resistance-trace-certificate-260830.md), [Lean entrypoint](verification/lean/Tect/R409.lean), primary/independent/hostile scripts, integrated verifier, [scope note](claims/C6-SPACETIME-SIGNATURE/notes/resistance-trace-260830.md), and saved run artefacts.",
+        "result_id": "R-409 is a T0, claim-nonbearing finite Green-trace checkpoint under EXP-001254. It sharpens R-408 by setting `D=diag(pi)`, `W=D^(-1/2)L D^(-1/2)`, `u=sqrt(pi)`, and `v_xy=D^(-1/2)(e_x-e_y)`. The weighted unordered pair vectors obey ``` sum_(x<y) pi_x*pi_y*v_xy*v_xy^T = I-u*u^T. ``` For a connected finite graph this gives the exact identity ``` Rbar_pi = sum_(x<y) pi_x*pi_y*R_xy = tr(W^+) = sum_(k=1)^(d-1) 1/lambda_k(W). ``` The finite inverse-spectrum sum is also the termwise integral `int_0^infinity (tr(exp(-tW))-1) dt`. The identity depends on the normalized Green kernel, not on a spanning tree or a single Fiedler mode.",
+        "verification": "The volume-two R-404 fixture uses dimensions `3,4,5,6,8,10,12`, beta in `{1/2,1,2}`, both source signs, history signs, split orders, all prefixes, both history adjoints and both collar orientations. The primary lane passes `106990/106990` over 7 systems, 2688 contexts and 21120 rows; the independent lane passes `106990/106990`; the hostile lane `6/6`; the integrated verifier `37/37`; and Lean R409 compiles. The resistance-average and normalized inverse-trace ranges are both `[0.44413751605180657,2.0052069566897672]`. The largest pair resistance is `85.99011817086347`, the smallest positive normalized eigenvalue is `0.7570174175402339`, and the maximum direct pair-to-trace residual is `2.537969834293108e-12`; transformed-pair and projector residuals are at most `6.661338147750939e-16` and `4.440892098500626e-16` respectively. The hostile lane rejects directed-pair doubling, the unnormalized-Laplacian trace, a one-mode-only shortcut, and a diagonal-q mutation with zero graph spectrum. The independent lane rebuilds the finite model and agrees within `5e-6`. This finite result advances a Green/heat-trace interface: the next analytic target is a cutoff-, volume-, phase- and exhaustion-uniform upper bound on `tr(W^+)` on one Hamiltonian common core, followed by transfer to the R-399 shell and combination with the R-406 Schur residual split."
+      },
+      "detail_title": "Effective-resistance average trace identity and heat-kernel target",
+      "family_refs": [],
+      "id": "R-409",
+      "normalized_detail": {
+        "boundary": "R-409 proves no cutoff-, volume-, source-, phase- or exhaustion-uniform gap, common core, common alpha, phase selection, Hamiltonian-to-OS/KMS/GNS identification, physical mass gap, continuum, C6, Sector-A or Pre-A closure. No tier change, negative result or PDF is issued.",
+        "proof_anchor": "[R-409 certificate](strategy/pre-a-cp1-st8-q3lock-resistance-trace-certificate-260830.md), [Lean entrypoint](verification/lean/Tect/R409.lean), primary/independent/hostile scripts, integrated verifier, [scope note](claims/C6-SPACETIME-SIGNATURE/notes/resistance-trace-260830.md), and saved run artefacts.",
+        "publication_target": "",
+        "reuse": "",
+        "statement": ""
+      },
+      "summary": "R-409 v1.0 is a T0 claim-nonbearing finite Green-trace checkpoint under EXP-001254. The unordered resistance average equals the normalized Laplacian pseudoinverse trace over 7 systems, 2688 contexts and 21120 rows; primary 106990/106990, independent 106990/106990, hostile 6/6, integrated 37/37 and Lean R409 pass. Both resistance average and inverse-spectrum trace range over [0.44413751605180657,2.0052069566897672], with maximum identity residual 2.537969834293108e-12. The exact identity exposes an integrated heat-trace uniformity target, while common-core, cutoff/volume/phase/exhaustion and QFT gates remain open",
+      "title": "Effective-resistance average trace identity and heat-kernel target"
+    },
+    {
+      "accepted_event_ids": [
         "20260830-effective-resistance-average-bound-for-intrinsi"
       ],
       "anchor": "r-408",
@@ -127,7 +158,8 @@
     {
       "accepted_event_ids": [
         "20260830-intrinsic-kinetic-graph-poincare-stress-2026-08",
-        "20260830-phase-conditioned-intrinsic-graph-split-2026-08"
+        "20260830-phase-conditioned-intrinsic-graph-split-2026-08",
+        "20260830-effective-resistance-average-trace-identity-and"
       ],
       "anchor": "r-404",
       "claim_ref_basis": {
@@ -3497,43 +3529,6 @@
       },
       "summary": "Scoped T4 analytic/exact/conditional/executed/audited advance. If the complete feature action is `A=a+(||Y||^2-||U||^2)/2`, `U=CY+E`, `||C||<=rho<sigma<1`, `||E||<=M`, and `a>=-C0` uniformly, then `||U||^2<=sigma^2||Y||^2+sigma^2 M^2/(sigma^2-rho^2)` with a sharp residual constant. For the R-143 complete feature this gives strict one-use coefficients `(9/20)sigma^2` and `(3/20)sigma^2` simultaneously, so exact returned-low cancellation and complete second jets are unnecessary on this global route. Independently, a positive reduced/source-low effective Hessian gap with reduced origin-force and anchor bounds is sufficient: for chosen `p=11/10`, `9/20<1/(2p)=5/11` with margin `1/220`, while `3/20<gamma/6=27/100` with margin `3/25`. Hostile pre-registration audits corrected both the draft threshold comparison and the R-142 fibre Schur coefficient. Exact phase-cycle, returned-low, and equal-first-jet fixtures prove that the registered local q567/core data do not determine the production sign. The canonical temporal/common-output/low chart, production contraction or reduced Hessian gap, residual/force/anchor bounds, T-050, and Sector-A closure remain open",
       "title": "Uniform affine-residual Douglas one-use theorem and production-data boundary"
-    },
-    {
-      "accepted_event_ids": [
-        "20260802-a13-r-143-corrected-q567-feature-contraction-an"
-      ],
-      "anchor": "r-143",
-      "claim_ref_basis": {
-        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION": "proof_anchor_exact"
-      },
-      "claim_refs": [
-        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
-      ],
-      "co_recorded_negative_tags": [
-        "AUDIT-2026-08-02-A13-R142-Q567-PHYSICAL-OUTPUT-FACTOR-TWO"
-      ],
-      "detail": {
-        "coherence_audit_and_repair": "R-142's harmonics `(17,33,65)` and carriers `(124410,64090,32538)` do collide arithmetically, but their physical output is `2nN=4229940`, not the displayed half-product `2114970`. Sharp shell recomputation gives gaps `(6,7,8)`. This supersedes only the q567 coherence witness. The exact dyadic replacement is `(n,N)=((10,4M),(20,2M),(40,M))`, whose common physical output is `80M`, whose gaps are `(5,6,7)`, and whose three rational coefficients are negative by the registered parity formula. The audit does not alter R-142's band-sign theorem or its other independent results.",
-        "common_probe_anisotropy_and_tail": "The rational A1 family-lock mass has three exact Sturm-isolated eigenvalues in `(0.028,0.029)`, `(0.165,0.166)`, and `(0.206,0.207)`. Hence `Delta_sum<0.221` and `Delta_2<0.033805`. An exact rectangular factor uses independent scalar and anisotropic probes, each common across endpoints, so all mixed covariance is retained. Covariance positivity does not reverse the adverse trace-feature sign. Exact sup-shell population `24m^2+2`, the A1 fourth-order kinetic lower bound, and an integral zeta enclosure give a full additive derivative trace tail and a faster synchronous sensitivity tail. Against the registered illustrative R-140 headrooms, `H6` times the safe trace bound first passes at included shells `N=27` and `N=49`. These thresholds are not production margins and omit the still-unregistered owner transformations and low cross blocks.",
-        "complete_feature_douglas_theorem": "After complete owner recombination, put `Y=Phi direct-sum sqrt(9/10)h direct-sum sqrt(3/10)|Z|^2Z`. Then `2A=||Y||^2-||U||^2`, so source and sextic are spent exactly once. For every finite endpoint family, `G_U<=G_Y` is equivalent to a contraction `CY_a=U_a` and to the corresponding mixed coefficient inequality. Its sharp squared norm is the generalized Gram edge. The exact fixture `G_Y=I_2`, `G_U=(9/16)11^T` has positive diagonal energy but mixed eigenvalue `-1/8` and edge `9/8`. The contraction-residual square completion and the source-null pseudoinverse Feshbach formula identify the sole adverse residual, the range condition, the sharp finite source edge, and its lifted vector. The executable sign firewall fixes `D2 P_comp=-(D2 K)/2`: a positive raw signature edge is action-adverse.",
-        "publication_target": "constructive-field-theory methods note after the production owner map and augmented q567 matrix are registered.",
-        "result_id": "`A13-CLASSII-CORRECTED-Q567-FEATURE-CONTRACTION-COMMON-NOISE-ANISOTROPY-TAIL-BOUNDARY`.",
-        "reuse_scope": "Finite Hilbert feature families, mixed-Gram contraction tests, semidefinite source-null Feshbach reductions, exact common-endpoint covariance factors, and fourth-order lattice tails. No temporally faithful production chart, full production matrix, legal adverse action vector, uniform contraction, positive graph gap, matching, anchor, A13 gate, Nelson theorem, interacting measure, or Sector-A closure is supplied.",
-        "tier": "T4.",
-        "where_proved": "Claim `A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION`; note `classii-corrected-q567-feature-contraction-common-noise-anisotropy-tail-boundary-260802-v1.0`; primary, non-importing independent, and integrated certificates; manifest and JSON run artefacts; `EXP-000585--EXP-000592`; and `AUDIT-2026-08-02-A13-R142-Q567-PHYSICAL-OUTPUT-FACTOR-TWO`."
-      },
-      "detail_title": "Corrected q=5,6,7 feature contraction and common-noise anisotropy tail",
-      "family_refs": [],
-      "id": "R-143",
-      "normalized_detail": {
-        "boundary": "T4.",
-        "proof_anchor": "Claim `A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION`; note `classii-corrected-q567-feature-contraction-common-noise-anisotropy-tail-boundary-260802-v1.0`; primary, non-importing independent, and integrated certificates; manifest and JSON run artefacts; `EXP-000585--EXP-000592`; and `AUDIT-2026-08-02-A13-R142-Q567-PHYSICAL-OUTPUT-FACTOR-TWO`.",
-        "publication_target": "constructive-field-theory methods note after the production owner map and augmented q567 matrix are registered.",
-        "reuse": "Finite Hilbert feature families, mixed-Gram contraction tests, semidefinite source-null Feshbach reductions, exact common-endpoint covariance factors, and fourth-order lattice tails. No temporally faithful production chart, full production matrix, legal adverse action vector, uniform contraction, positive graph gap, matching, anchor, A13 gate, Nelson theorem, interacting measure, or Sector-A closure is supplied.",
-        "statement": ""
-      },
-      "summary": "Scoped T4 analytic/exact/conditional/executed/audited advance. The R-142 `(17,33,65)` collision is corrected from a half-output q567 label to a physical-output q678 witness; the exact replacement `(10,20,40)` with carriers `(4M,2M,M)` has common output `80M`, gaps `(5,6,7)`, and one rational-coefficient sign. The complete recombined core is `2A=||Y||^2-||U||^2`, with source and sextic included once, and finite-family positivity is equivalent to one Douglas mixed-Gram contraction. A positive-diagonal/mixed-negative fixture proves diagonal tests insufficient; exact residual and source-null Feshbach formulas isolate the adverse coordinate. The A1 covariance has an exact common-endpoint scalar-plus-anisotropic probe factor, and certified rational mass intervals yield explicit high-shell derivative-trace bounds with diagnostic first included shells `N=27` and `N=49`. Missing production U/Phi jets, cross reveals, low blocks, and owner intertwiners prevent a production matrix verdict, T-050, or Sector-A closure",
-      "title": "Corrected q=5,6,7 feature contraction and common-noise anisotropy tail"
     }
   ],
   "kind": "reusable_results",

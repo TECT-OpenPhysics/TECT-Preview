@@ -1,0 +1,108 @@
+{
+  "assertion_count": 6,
+  "boundary": "T0 claim-nonbearing finite effective-resistance trace and heat-kernel identity checkpoint only. It proves no cutoff-, volume-, source-, phase- or exhaustion-uniform gap, common core, common alpha, OS/KMS/GNS reconstruction, mass gap, continuum, C6, Sector-A or Pre-A closure.",
+  "checks": [
+    {
+      "actual": 2.4424906541753444e-15,
+      "expected": "abs <= 1e-08",
+      "name": "baseline pair/trace identity",
+      "status": "PASS"
+    },
+    {
+      "actual": -8.486544800234697e-13,
+      "expected": "abs <= 1e-08",
+      "name": "late pair/trace identity",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          3.2053431134382255,
+          1.6026715567191103
+        ],
+        [
+          1.8919196383444856,
+          0.9459598191730915
+        ]
+      ],
+      "expected": "directed sum differs by factor two",
+      "name": "directed-pair doubling rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          4.786749716967309,
+          1.6026715567191103
+        ],
+        [
+          76.92417852720084,
+          0.9459598191730915
+        ]
+      ],
+      "expected": "normalized trace only",
+      "name": "unnormalized-L trace rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          1.320973569207015,
+          1.6026715567191103
+        ],
+        [
+          0.3431201141364895,
+          0.9459598191730915
+        ]
+      ],
+      "expected": "full inverse-spectrum trace",
+      "name": "one-mode shortcut rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0,
+        0,
+        0.0
+      ],
+      "expected": "zero edges and positive eigenvalues",
+      "name": "q mutation deletes graph spectrum",
+      "status": "PASS"
+    }
+  ],
+  "derived": {
+    "mutation": "double_directed_pairs_use_unnormalized_laplacian_and_keep_only_fiedler_mode",
+    "q_mutation": {
+      "maximum_edge": 0.0,
+      "mutated_edge_count": 0,
+      "positive_eigenvalue_count": 0
+    },
+    "selected": [
+      {
+        "dimension": 3,
+        "directed_pair_average": 3.2053431134382255,
+        "identity_residual": 2.4424906541753444e-15,
+        "one_mode_inverse": 1.320973569207015,
+        "positive_normalized_eigenvalue_count": 2,
+        "raw_laplacian_trace": 4.786749716967309,
+        "resistance_average": 1.6026715567191128,
+        "trace_inverse": 1.6026715567191103
+      },
+      {
+        "dimension": 12,
+        "directed_pair_average": 1.8919196383444856,
+        "identity_residual": -8.486544800234697e-13,
+        "one_mode_inverse": 0.3431201141364895,
+        "positive_normalized_eigenvalue_count": 11,
+        "raw_laplacian_trace": 76.92417852720084,
+        "resistance_average": 0.9459598191722428,
+        "trace_inverse": 0.9459598191730915
+      }
+    ]
+  },
+  "exploration_id": "EXP-001254",
+  "manifest": "strategy/pre-a-cp1-st8-q3lock-resistance-trace-manifest.json",
+  "result_id": "R-409",
+  "schema": "tect/pre-a-r409-hostile/1.0",
+  "verdict": "PASS"
+}

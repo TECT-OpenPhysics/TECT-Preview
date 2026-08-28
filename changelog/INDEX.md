@@ -5,7 +5,7 @@ Compact generated reader surface. The append-only authority is
 record 568 / commit `4db22f4e` and no longer grows.
 Post-cutover full bodies live exactly once in bounded pages under `pages/`.
 
-**749 accepted events** · latest 25 shown below · machine locator: `index.json`
+**750 accepted events** · latest 25 shown below · machine locator: `index.json`
 
 Search the complete authority without loading every page:
 
@@ -17,6 +17,7 @@ python verification/scripts/changelog.py search --text <phrase>
 
 | Date | Event | Claims | Full entry |
 |---|---|---|---|
+| 2026-08-30 | `20260830-effective-resistance-average-trace-identity-and` — [Effective-resistance average trace identity and heat-kernel target] - 2026-08-30 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000719-000768.md#20260830-effective-resistance-average-trace-identity-and) |
 | 2026-08-30 | `20260830-effective-resistance-average-bound-for-intrinsi` — [Effective resistance average bound for intrinsic kinetic rows] - 2026-08-30 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000719-000768.md#20260830-effective-resistance-average-bound-for-intrinsi) |
 | 2026-08-30 | `20260830-canonical-path-effective-resistance-lower-bound` — [Canonical path effective-resistance lower bound] - 2026-08-30 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000719-000768.md#20260830-canonical-path-effective-resistance-lower-bound) |
 | 2026-08-30 | `20260830-harmonic-schur-capacity-decomposition-2026-08-3` — [Harmonic Schur capacity decomposition] - 2026-08-30 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000719-000768.md#20260830-harmonic-schur-capacity-decomposition-2026-08-3) |
@@ -41,7 +42,6 @@ python verification/scripts/changelog.py search --text <phrase>
 | 2026-08-30 | `20260830-anchored-nested-commutator-kinetic-isolation-20` — [Anchored nested-commutator kinetic isolation] - 2026-08-30 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000719-000768.md#20260830-anchored-nested-commutator-kinetic-isolation-20) |
 | 2026-08-30 | `20260830-coordinate-resolvent-zero-time-commutator-ancho` — [Coordinate-resolvent zero-time commutator anchor] - 2026-08-30 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000719-000768.md#20260830-coordinate-resolvent-zero-time-commutator-ancho) |
 | 2026-08-30 | `20260830-relative-modular-cocycle-and-resolvent-core-coo` — [Relative-modular cocycle and resolvent-core Cook finite checkpoint] - 2026-08-30 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000719-000768.md#20260830-relative-modular-cocycle-and-resolvent-core-coo) |
-| 2026-08-28 | `20260828-two-scale-filter-removal-corridor-2026-08-28` — [Two-scale filter-removal corridor] - 2026-08-28 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000719-000768.md#20260828-two-scale-filter-removal-corridor-2026-08-28) |
 
 ## Post-cutover pages
 
@@ -49,7 +49,7 @@ Each full event body after the cutover occurs in exactly one page.
 
 | Ordinals | Events | Page |
 |---|---:|---|
-| 719–749 | 31 | [000719-000768.md](pages/000719-000768.md) |
+| 719–750 | 32 | [000719-000768.md](pages/000719-000768.md) |
 | 669–718 | 50 | [000669-000718.md](pages/000669-000718.md) |
 | 619–668 | 50 | [000619-000668.md](pages/000619-000668.md) |
 | 569–618 | 50 | [000569-000618.md](pages/000569-000618.md) |

@@ -6379,6 +6379,120 @@
       "task_id": "T-054",
       "title": "Effective-resistance average bound for intrinsic kinetic rows",
       "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "axis": "unordered versus directed pairs",
+          "check": "Directed pair summation is exactly twice the unordered resistance average and is rejected against the trace identity.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "normalized versus raw Laplacian",
+          "check": "The unnormalized-L inverse trace differs materially from the normalized trace on d=3 and d=12 representatives.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "Fiedler-only shortcut",
+          "check": "Keeping only the first positive inverse eigenvalue underestimates the full trace on both representatives.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "zero mode and conditioning",
+          "check": "Exactly d-1 positive modes are required above the declared numerical zero threshold; diagonal q gives zero edges and zero positive spectrum.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "independent reconstruction",
+          "check": "The non-importing lane rebuilds the finite oscillator, Gibbs, history, conditional graph and traces and agrees within 5e-6.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "uniform and physical promotion",
+          "check": "Finite trace equality does not prove a regulator-uniform Green bound, common core, GNS gap, continuum, C6, Sector-A or Pre-A closure.",
+          "disposition": "UPHELD-OPEN"
+        }
+      ],
+      "boundary": "T0 claim-nonbearing finite resistance-trace and heat-kernel identity checkpoint only. It proves no cutoff-, volume-, source-, phase- or exhaustion-uniform gap, common core, common alpha, OS/KMS/GNS reconstruction, mass gap, continuum, C6, Sector-A or Pre-A closure.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "This advances an exact finite Green/heat-trace interface: the future uniformity proof can target the total inverse normalized spectrum, equivalently an integrated heat trace, instead of a selected tree or only the smallest eigenvalue. The finite data do not establish a cutoff-, volume-, phase- or exhaustion-uniform trace bound, so no analytic gate is closed.",
+      "evidence_refs": [
+        "strategy/pre-a-cp1-st8-q3lock-resistance-trace-manifest.json#new_perspective",
+        "strategy/pre-a-cp1-st8-q3lock-resistance-trace-certificate-260830.md#Verification",
+        "codes/foundations/pre_a_cp1_st8_q3lock_resistance_trace.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_resistance_trace_independent.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_resistance_trace_hostile.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_resistance_trace_verify.py#main",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-primary-pre_a_cp1_st8_q3lock_resistance_trace/primary.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-independent-pre_a_cp1_st8_q3lock_resistance_trace/independent.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-hostile-pre_a_cp1_st8_q3lock_resistance_trace/hostile.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-integrated-pre_a_cp1_st8_q3lock_resistance_trace/integrated.json#derived",
+        "verification/lean/Tect/R409.lean#trace_projector_nonnegative",
+        "claims/C6-SPACETIME-SIGNATURE/notes/resistance-trace-260830.md#R-409"
+      ],
+      "finding": "The primary lane passes 106990/106990 assertions over 7 systems, 2688 contexts and 21120 conditional rows; the independent lane passes 106990/106990; the hostile lane passes 6/6; the integrated verifier passes 37/37; and Lean R409 compiles. The resistance-average and normalized inverse-trace ranges are both [0.44413751605180657,2.0052069566897672]. The largest pair resistance is 85.99011817086347, the smallest positive normalized eigenvalue is 0.7570174175402339, and the maximum direct pair-to-trace residual is 2.537969834293108e-12; transformed-pair and projector residuals are at most 6.661338147750939e-16 and 4.440892098500626e-16.",
+      "formal_integration": {
+        "events": [
+          "20260830-effective-resistance-average-trace-identity-and"
+        ],
+        "lean": "R409 PASS",
+        "negatives": [],
+        "no_new_negative": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "results": [
+          "R-409"
+        ]
+      },
+      "formal_refs": {
+        "events": [
+          "20260830-effective-resistance-average-trace-identity-and"
+        ],
+        "negatives": [],
+        "results": [
+          "R-409"
+        ]
+      },
+      "gate_ids": [
+        "PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY",
+        "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+        "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+      ],
+      "id": "EXP-001254",
+      "method": [
+        "For every connected intrinsic graph, set D=diag(pi), W=D^(-1/2)L D^(-1/2), and u=sqrt(pi); enumerate the positive normalized spectrum above the declared numerical zero threshold.",
+        "Evaluate the unordered pair resistance average directly from L^+, the transformed pair sum from W^+, and the projector trace tr(W^+(I-u u^T)).",
+        "Check that all three quantities equal the positive inverse-spectrum sum sum_(k>0) lambda_k(W)^(-1) on the complete actual-likelihood grid.",
+        "Interpret the finite inverse-spectrum sum as the termwise integral int_0^infinity (Tr exp(-tW)-1) dt and retain the residual and positive-spectrum floor as conditioning inputs.",
+        "Use directed-pair doubling, unnormalized-L trace, one-mode-only and diagonal-q disconnected mutations as hostile controls."
+      ],
+      "next_action": "Prove a cutoff- and volume-independent upper bound on the normalized Green trace or integrated heat trace on one Hamiltonian common core, control phase/source/orientation/exhaustion dependence, then transfer the resulting resistance inequality to the R-399 shell and combine with the R-406 Schur residual split. Stop or redesign if the trace diverges or the positive spectrum collapses.",
+      "no_overclaim": "The trace identity changes the analytic target from a tree or a single eigenvalue to a total Green/heat-kernel quantity; it is not an analytic regulator, thermodynamic, physical-sector or QFT estimate.",
+      "provenance": "contemporaneous",
+      "question": "Can the tree-independent Gibbs-weighted effective-resistance average be rewritten exactly as the trace of the normalized Laplacian pseudoinverse, exposing an integrated heat-kernel target for the later uniform bound?",
+      "recorded_at": "2026-08-30T23:00:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001253",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001252",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001249",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-08-28",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Effective-resistance average trace identity and heat-kernel target",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",
