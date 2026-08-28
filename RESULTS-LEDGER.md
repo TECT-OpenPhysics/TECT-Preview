@@ -41,6 +41,7 @@ policy in `governance/development-history.md`.
 | [R-195](#r-195) | Spatial constant-field lift of the A6 running-mass escape | R-195 v1.0 is a T0 claim-nonbearing Lean/Fraction spatial lift under EXP-000933. On the declared finite torus, constant fields multiply the R-194 correction by the exact volume and the volume-cancelled ratio is bounded by 6*s*(b+c)/r, so no positive volume-uniform coercivity holds even on that subspace. Full-field concentration, partition/tightness, A7, A13, Sector-A and Pre-A remain open |
 | [R-376](#r-376) | Hilbert-Schmidt Lipschitz bridge for the capped Liouvillian kernel | R-376 v1.0 is a T0 claim-nonbearing finite operator-interface checkpoint under EXP-001218. A noncommuting cutoff-2 edge Liouvillian stress gives maximum full-kernel Frobenius ratio 0.9787544362168733 and 64-layer ratio 0.9755896836319287 with 76/76 integrated assertions; general Schatten-2 proof, operator-norm locality, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
 | [R-377](#r-377) | Gap-free odd-Matsubara resolvent telescoping budget | R-377 v1.0 is a T0 claim-nonbearing finite resolvent-interface checkpoint under EXP-001219. The exact positive-resolvent difference identity and its 64-layer budget pass 122/122 integrated assertions with Lean R377; the accumulated finite budget ratio is 0.9895313426497929 and the absolute-value square-root debt is recorded separately. Uniform locality, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
+| [R-379](#r-379) | Three-channel anticommutator bridge for half-density modular tails | R-379 v1.0 is a T0 claim-nonbearing finite three-channel interface checkpoint under EXP-001221. The half-density commutator and anticommutator split into left/right GNS legs and a beta/2 two-slice term across 2560 all-prefix actual-Q3 contexts; the integrated verifier passes 69/69 with Lean R379, while the two-slice channel reaches its finite AM-GM envelope and uniformity remains open |
 | [R-378](#r-378) | Half-density Hellinger bridge for the theta-half Kubo-Mori shell | R-378 v1.0 is a T0 claim-nonbearing finite half-density/GNS interface checkpoint under EXP-001220. The absolute shell is bounded by the geometric mean of a Gibbs half-density commutator and anticommutator across 2816 all-prefix actual-Q3 contexts; the integrated verifier passes 68/68 with Lean R378, and the geometric bound remains finite while source/volume/cutoff-uniform modular tails, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
 | [R-375](#r-375) | Summable odd-Matsubara Lipschitz budget for transition-energy perturbations | R-375 v1.0 is a T0 claim-nonbearing finite scalar spectral-sensitivity checkpoint under EXP-001217. Each positive layer has slope envelope 8/omega_n^2, the 64-layer partial budget is 0.9968337774239473, and the exact capped kernel is unit-Lipschitz on 2816 all-prefix actual-Q3 contexts; eigenvector rotation, resolvent locality, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
 | [R-374](#r-374) | Positive odd-Matsubara resolvent expansion of the capped Gibbs kernel | R-374 v1.0 is a T0 claim-nonbearing finite analytic/executable checkpoint under EXP-001216. The first 64 positive resolvent layers form a monotone partial kernel with an explicit tail envelope over 2816 all-prefix contexts; resolvent locality, source/cutoff/volume uniformity, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
@@ -616,7 +617,39 @@ OS/KMS/GNS transfer, gap, continuum, C6, Sector-A or Pre-A closure follows.
 No new negative result, tier change, or R-376 PDF is issued.
 
 **Proven in:** manifest, certificate, Lean entrypoint, primary script,
-independent script, integrated verifier, scope note, and saved run artefacts.<a id="r-378"></a>
+independent script, integrated verifier, scope note, and saved run artefacts.<a id="r-379"></a>
+### R-379 -- Three-channel anticommutator bridge for half-density modular tails
+
+**Result ID.** R-379 is a T0, claim-nonbearing finite three-channel
+half-density interface checkpoint under EXP-001221.
+
+**Statement.** Let `R=rho^(1/2)`, `Q=rho^(1/4)` and `X` be the centered
+Hermitian moved witness in the bond-Hamiltonian eigenbasis.  With
+`L=||R X||_2^2`, `Rr=||X R||_2^2` and `T=||Q X Q||_2^2`, direct products give
+`||{R,X}||_2^2=L+Rr+2T`, `||[R,X]||_2^2=L+Rr-2T`, and their sum is
+`2(L+Rr)`.  Entrywise AM--GM gives `0<=T<=(L+Rr)/2`.  Thus the beta/2
+Euclidean two-slice term is an explicit channel rather than a disposable
+remainder.
+
+**Verification.** The primary lane passes `23050/23050` assertions and the
+non-importing independent lane passes `8/8` aggregate assertions over `2560`
+all-prefix actual-Q3 contexts on the edge and square fixtures.  The integrated
+verifier passes `69/69` and Lean R379 compiles.  Primary and independent values
+agree within `5.684e-13`.  The largest left/right legs are `41.6482665166188`,
+the largest two-slice leg is `41.57042344053425`, the largest commutator leg is
+`0.5097575476240509`, and the largest anticommutator leg is
+`166.281693762137`.  The two-slice fraction reaches `1.0000000000000004` at
+roundoff, so it must remain in the analytic ledger.
+
+**Boundary.** This is a finite exact decomposition and channel diagnostic.  It
+does not prove any source-, volume-, cutoff- or beta-uniform modular-tail
+bound, a common unbounded core, direct `D,delta D` Cauchy, common alpha,
+OS/KMS/GNS dynamics, a mass gap, continuum, C6, Sector-A or Pre-A closure.
+No new negative result, tier change or R-379 PDF is issued.
+
+**Proven in:** [manifest](strategy/pre-a-cp1-st8-q3lock-local-q2-kubo-mori-three-channel-bridge-manifest.json), [certificate](strategy/pre-a-cp1-st8-q3lock-local-q2-kubo-mori-three-channel-bridge-certificate-260828.md), [Lean entrypoint](verification/lean/Tect/R379.lean), [primary script](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_kubo_mori_three_channel_bridge.py), [independent script](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_kubo_mori_three_channel_bridge_independent.py), [integrated verifier](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_kubo_mori_three_channel_bridge_verify.py), [scope note](claims/C6-SPACETIME-SIGNATURE/notes/q3lock-local-q2-kubo-mori-three-channel-bridge-boundary-260828.md), and stored run artefacts.
+
+<a id="r-378"></a>
 ### R-378 -- Half-density Hellinger bridge for the theta-half Kubo-Mori shell
 
 **Result ID.** R-378 is a T0, claim-nonbearing finite half-density/GNS

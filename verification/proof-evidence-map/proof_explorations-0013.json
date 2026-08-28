@@ -2437,6 +2437,140 @@
       "task_id": "T-054",
       "title": "Half-density Hellinger bridge for the theta-half Kubo--Mori shell",
       "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "axis": "cross-term sign",
+          "check": "The anticommutator uses +2T and the commutator uses -2T, both checked from direct matrix products.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "quarter-root placement",
+          "check": "The two-slice term uses rho^(1/4) on both sides of X; no one-sided surrogate is substituted.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "noncommutativity",
+          "check": "Direct products and spectral sums are compared without commuting rho, its roots or X.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "envelope direction",
+          "check": "The cross estimate is one-sided T<=(L+R)/2 and finite saturation is retained.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "positivity",
+          "check": "All Hilbert--Schmidt squares and the two-slice leg are checked nonnegative, including zero-commutator rows.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "centering",
+          "check": "Every channel uses the same bond-Gibbs centered witness; centering is not moved through the Gibbs factors.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "finite growth",
+          "check": "The edge cutoff-6 costs remain large, so no cutoff or volume uniformity is inferred.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "state scope",
+          "check": "The density is a finite doubled-bond proxy, not a thermodynamic KMS state or OS reconstruction.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "independence",
+          "check": "The independent lane rebuilds oscillator, graph, spectrum, prefixes and three products without importing the primary audit.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "downstream promotion",
+          "check": "No modular tail, common core, common alpha, KMS/GNS dynamics, gap, continuum, C6, Sector-A or Pre-A conclusion is drawn.",
+          "disposition": "DISMISSED-FIREWALL"
+        }
+      ],
+      "boundary": "T0 claim-nonbearing finite three-channel half-density interface only. It does not prove source/volume/cutoff/beta uniformity, modular tails, common core, common alpha, KMS/GNS dynamics, a gap, continuum, C6, Sector-A or Pre-A.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "The three-channel identity turns the R-378 anticommutator into two explicit GNS legs plus a beta/2 Euclidean two-slice leg. The finite data identify the two-slice channel as the dominant unresolved cost while the commutator leg remains small on the tested grid. This is a route-local decomposition, not a uniform estimate or a QFT promotion.",
+      "evidence_refs": [
+        "strategy/pre-a-cp1-st8-q3lock-local-q2-kubo-mori-three-channel-bridge-manifest.json#identity",
+        "strategy/pre-a-cp1-st8-q3lock-local-q2-kubo-mori-three-channel-bridge-certificate-260828.md#finite-verification",
+        "codes/foundations/pre_a_cp1_st8_q3lock_local_q2_kubo_mori_three_channel_bridge.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_local_q2_kubo_mori_three_channel_bridge_independent.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_local_q2_kubo_mori_three_channel_bridge_verify.py#run",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-28-primary-pre_a_cp1_st8_q3lock_local_q2_kubo_mori_three_channel_bridge/primary.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-28-independent-pre_a_cp1_st8_q3lock_local_q2_kubo_mori_three_channel_bridge/independent.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-28-integrated-pre_a_cp1_st8_q3lock_local_q2_kubo_mori_three_channel_bridge/integrated.json#lean",
+        "verification/lean/Tect/R379.lean#anticommutator_three_channel",
+        "claims/C6-SPACETIME-SIGNATURE/notes/q3lock-local-q2-kubo-mori-three-channel-bridge-boundary-260828.md#R-379"
+      ],
+      "finding": "The primary lane passes 23050/23050 assertions and the non-importing independent lane passes 8/8 aggregate assertions over 2560 all-prefix contexts. The integrated verifier passes 69/69 and Lean R379 compiles. The largest left and right legs are 41.6482665166188, the largest two-slice leg is 41.57042344053425, the largest commutator leg is 0.5097575476240509, and the largest anticommutator leg is 166.281693762137. The two-slice fraction reaches 1.0000000000000004 at roundoff, so the cross term cannot be discarded. Primary and independent values agree within 5.684e-13.",
+      "formal_integration": {
+        "events": [
+          "20260828-three-channel-anticommutator-bridge-for-half-de"
+        ],
+        "lean": "R379 PASS",
+        "negatives": [],
+        "no_changelog_event": false,
+        "no_new_negative": true,
+        "no_new_result": false,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "results": [
+          "R-379"
+        ]
+      },
+      "formal_refs": {
+        "events": [
+          "20260828-three-channel-anticommutator-bridge-for-half-de"
+        ],
+        "negatives": [],
+        "results": [
+          "R-379"
+        ]
+      },
+      "gate_ids": [
+        "PA-CP1-ST8-Q3LOCK-RESOLVENT-ALGEBRA-EXACT-POLYNOMIAL-COMMON-ALPHA-CLOSURE",
+        "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+        "PA-CP1-ST8-Q3LOCK-FIFTH-ENERGY-MOMENT-AND-MODULAR-CUTOFF-LOCALITY",
+        "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+      ],
+      "id": "EXP-001221",
+      "method": [
+        "Use the actual-Q3 edge and square finite fixtures with all translated sites and bond terms, both term orders, both time signs, every prefix position and both history adjoints on the declared cutoffs.",
+        "Diagonalize each doubled bond generator, construct rho^(1/2) and rho^(1/4), and center every moved Hermitian witness in the same bond-Gibbs state.",
+        "Compute L=||rho^(1/2)X||_2^2, R=||X rho^(1/2)||_2^2, T=||rho^(1/4)Xrho^(1/4)||_2^2, and check the commutator, anticommutator and sum decompositions together with T<=(L+R)/2.",
+        "Reconstruct the same grid without importing the primary audit and compile the scalar channel identities and arithmetic--geometric envelope in Lean R379."
+      ],
+      "next_action": "Prove a beta/2 Euclidean two-slice tail estimate on the Hamiltonian-derived core, then combine it with left/right GNS bounds and the R-378 geometric shell and R-377 resolvent telescope.",
+      "no_overclaim": "R-379 identifies the dominant finite two-slice channel; it is not a uniform theorem or a QFT closure.",
+      "provenance": "contemporaneous",
+      "question": "Can the Gibbs half-density anticommutator and commutator costs be decomposed into left/right GNS legs and a positive beta/2 two-slice cross term, so the unresolved modular tail is separated into independently controllable channels?",
+      "recorded_at": "2026-08-29T23:45:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001220",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001200",
+          "relation": "alternative_to"
+        },
+        {
+          "id": "EXP-001216",
+          "relation": "alternative_to"
+        }
+      ],
+      "reviewed_on": "2026-08-28",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Three-channel anticommutator bridge for half-density modular tails",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",

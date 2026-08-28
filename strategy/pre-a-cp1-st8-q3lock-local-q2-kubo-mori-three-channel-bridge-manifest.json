@@ -1,0 +1,70 @@
+{
+  "schema": "tect/pre-a-cp1-st8-q3lock-local-q2-kubo-mori-three-channel-bridge/1.0",
+  "exploration_id": "EXP-001221",
+  "result_id": "R-379",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "claim_bearing": false,
+  "parent_explorations": ["EXP-001220", "EXP-001200", "EXP-001216"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-RESOLVENT-ALGEBRA-EXACT-POLYNOMIAL-COMMON-ALPHA-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-FIFTH-ENERGY-MOMENT-AND-MODULAR-CUTOFF-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+  ],
+  "title": "Three-channel anticommutator bridge for half-density modular tails",
+  "question": "Can the Gibbs half-density anticommutator and commutator costs be decomposed into left/right GNS legs and a positive beta/2 two-slice cross term, so the unresolved modular tail is separated into independently controllable channels?",
+  "identity": {
+    "left_leg": "L=||rho^(1/2) X||_2^2",
+    "right_leg": "R=||X rho^(1/2)||_2^2",
+    "two_slice_leg": "T=||rho^(1/4) X rho^(1/4)||_2^2",
+    "anticommutator": "||{rho^(1/2),X}||_2^2=L+R+2T",
+    "commutator": "||[rho^(1/2),X]||_2^2=L+R-2T",
+    "sum": "||{rho^(1/2),X}||_2^2+||[rho^(1/2),X]||_2^2=2(L+R)",
+    "cross_envelope": "0<=T<=(L+R)/2"
+  },
+  "finite_fixture": {
+    "regimes": [
+      {"shape": "edge", "volume": 2, "cutoff_values": [3, 6], "site_values": [0, 1], "bond_term_indices": [2]},
+      {"shape": "square", "volume": 4, "cutoff_values": [2], "site_values": [0, 1, 2, 3], "bond_term_indices": [4, 5, 6, 7]}
+    ],
+    "beta_values": ["1/2", "1"],
+    "time_sign_values": [-1, 1],
+    "history_adjoint_values": [0, 1],
+    "theta": "1/2",
+    "prefix_policy": "all_positions",
+    "time_step": "1/18",
+    "hbar": "1",
+    "parameters": {"chi": "1", "r": "-1", "g": "3/5", "c": "3/5", "lambda": "1/10"},
+    "expected_source_contexts": 2816,
+    "finite_tolerance": 1e-9,
+    "agreement_tolerance": 2e-8,
+    "log_mean_gap_tolerance": 1e-12
+  },
+  "scope": {
+    "three_channel_anticommutator_finite_checked": true,
+    "three_channel_commutator_finite_checked": true,
+    "two_slice_cross_envelope_finite_checked": true,
+    "left_right_gns_separation_finite_checked": true,
+    "beta_half_two_slice_interface_finite_checked": true,
+    "uniform_half_density_channels_proved": false,
+    "weighted_cutoff_uniformity_proved": false,
+    "weighted_volume_uniformity_proved": false,
+    "source_uniformity_proved": false,
+    "shape_uniformity_proved": false,
+    "common_core_closed": false,
+    "common_alpha_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "promotion_boundary": "R-379 is a finite exact three-channel decomposition of the R-378 half-density costs. It exposes a beta/2 two-slice term but proves no uniform bound for any channel, no common core or common alpha, and no QFT limit.",
+  "next_action": "Establish a source-, volume- and cutoff-uniform estimate for the left and right GNS legs and the beta/2 two-slice leg on one Hamiltonian-derived core; then combine the channel bounds with R-378 and the R-377 resolvent telescope.",
+  "boundary": "Finite actual-Q3 edge and square doubled-bond Gibbs proxies with all prefixes, translated sites, signs and adjoints on the declared cutoffs. The three-channel identities and cross envelope are checked numerically and in Lean; modular tails, source/volume/cutoff uniformity, common core, common alpha, OS/KMS/GNS dynamics, gap, continuum, C6, Sector-A and Pre-A remain open.",
+  "recorded_by": "Codex"
+}

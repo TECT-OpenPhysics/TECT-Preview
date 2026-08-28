@@ -1,0 +1,160 @@
+{
+  "assertion_count": 8,
+  "assertions": [
+    {
+      "actual": "['EXP-001221', 'R-379']",
+      "expected": "EXP-001221/R-379",
+      "group": "provenance",
+      "name": "authority",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'three_channel_anticommutator_finite_checked': True, 'three_channel_commutator_finite_checked': True, 'two_slice_cross_envelope_finite_checked': True, 'left_right_gns_separation_finite_checked': True, 'beta_half_two_slice_interface_finite_checked': True, 'uniform_half_density_channels_proved': False, 'weighted_cutoff_uniformity_proved': False, 'weighted_volume_uniformity_proved': False, 'source_uniformity_proved': False, 'shape_uniformity_proved': False, 'common_core_closed': False, 'common_alpha_closed': False, 'kms_gns_gap_closed': False, 'continuum_closed': False, 'c6_closed': False, 'sector_a_closed': False, 'pre_a_closed': False, 'no_new_negative_result': True, 'no_tier_change': True, 'no_pdf': True}",
+      "expected": "finite-three-channel-only",
+      "group": "scope",
+      "name": "scope",
+      "status": "PASS"
+    },
+    {
+      "actual": "['PASS', 2816]",
+      "expected": "R-378 PASS and expected contexts",
+      "group": "source linkage",
+      "name": "R-378 source",
+      "status": "PASS"
+    },
+    {
+      "actual": "2560",
+      "expected": "2560",
+      "group": "coverage",
+      "name": "coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": "finite",
+      "expected": "finite",
+      "group": "finite arithmetic",
+      "name": "finite values",
+      "status": "PASS"
+    },
+    {
+      "actual": "within tolerance",
+      "expected": "within tolerance",
+      "group": "three-channel",
+      "name": "decomposition envelopes",
+      "status": "PASS"
+    },
+    {
+      "actual": "2.1316282072803006e-14",
+      "expected": "<= (L+R)/2",
+      "group": "three-channel",
+      "name": "two-slice envelope",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.9999999999999896",
+      "expected": ">=0",
+      "group": "three-channel",
+      "name": "two-slice positivity",
+      "status": "PASS"
+    }
+  ],
+  "audit_id": "PA-CP1-ST8-Q3LOCK-LOCAL-Q2-KUBO-MORI-THREE-CHANNEL-BRIDGE",
+  "boundary": "Finite actual-Q3 edge and square doubled-bond Gibbs proxies with all prefixes, translated sites, signs and adjoints on the declared cutoffs. The three-channel identities and cross envelope are checked numerically and in Lean; modular tails, source/volume/cutoff uniformity, common core, common alpha, OS/KMS/GNS dynamics, gap, continuum, C6, Sector-A and Pre-A remain open.",
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "derived": {
+    "beta_half_two_slice_interface_finite_checked": true,
+    "c6_closed": false,
+    "common_alpha_closed": false,
+    "common_core_closed": false,
+    "context_count": 2560,
+    "continuum_closed": false,
+    "expected_contexts": 2560,
+    "kms_gns_gap_closed": false,
+    "left_right_gns_separation_finite_checked": true,
+    "maximum_anticommutator_decomposition_residual": 5.684341886080801e-13,
+    "maximum_anticommutator_leg": 166.28169376213643,
+    "maximum_anticommutator_nonnegative_violation": -3.9999999999999583,
+    "maximum_bond_gibbs_centering_error": 3.7968760080442365e-16,
+    "maximum_bond_unitary_factorization_error": 1.0891722777251956e-13,
+    "maximum_commutator_decomposition_residual": 2.4147350785597155e-13,
+    "maximum_commutator_leg": 0.5097575476240487,
+    "maximum_commutator_nonnegative_violation": -6.296302074184364e-32,
+    "maximum_left_leg": 41.648266516618584,
+    "maximum_left_spectral_residual": 5.684341886080802e-14,
+    "maximum_right_leg": 41.64826651661845,
+    "maximum_right_spectral_residual": 1.9895196601282805e-13,
+    "maximum_sum_decomposition_residual": 3.979039320256561e-13,
+    "maximum_two_slice_envelope_violation": 2.1316282072803006e-14,
+    "maximum_two_slice_fraction": 1.0000000000000004,
+    "maximum_two_slice_leg": 41.57042344053411,
+    "maximum_two_slice_spectral_residual": 1.5631940186722204e-13,
+    "minimum_two_slice_leg": 0.9999999999999896,
+    "pre_a_closed": false,
+    "regimes": [
+      {
+        "bond_term_indices": [
+          2
+        ],
+        "contexts": 256,
+        "cutoffs": [
+          3,
+          6
+        ],
+        "expected_contexts": 256,
+        "maximum_anticommutator_leg": 166.28169376213643,
+        "maximum_commutator_leg": 0.5097575476240487,
+        "maximum_left_leg": 41.648266516618584,
+        "maximum_right_leg": 41.64826651661845,
+        "maximum_two_slice_leg": 41.57042344053411,
+        "shape": "edge",
+        "sites": [
+          0,
+          1
+        ],
+        "volume": 2
+      },
+      {
+        "bond_term_indices": [
+          4,
+          5,
+          6,
+          7
+        ],
+        "contexts": 2304,
+        "cutoffs": [
+          2
+        ],
+        "expected_contexts": 2304,
+        "maximum_anticommutator_leg": 3.999999999999999,
+        "maximum_commutator_leg": 4.044262866374616e-31,
+        "maximum_left_leg": 0.9999999999999998,
+        "maximum_right_leg": 0.9999999999999998,
+        "maximum_two_slice_leg": 0.9999999999999998,
+        "shape": "square",
+        "sites": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "volume": 4
+      }
+    ],
+    "sector_a_closed": false,
+    "shape_uniformity_proved": false,
+    "source_uniformity_proved": false,
+    "theta": 0.5,
+    "three_channel_anticommutator_finite_checked": true,
+    "three_channel_commutator_finite_checked": true,
+    "two_slice_cross_envelope_finite_checked": true,
+    "uniform_half_density_channels_proved": false,
+    "weighted_cutoff_uniformity_proved": false,
+    "weighted_volume_uniformity_proved": false
+  },
+  "exploration_id": "EXP-001221",
+  "result_id": "R-379",
+  "run_kind": "independent",
+  "schema": "tect/foundation-audit/1.0",
+  "task_id": "T-054",
+  "verdict": "PASS"
+}
