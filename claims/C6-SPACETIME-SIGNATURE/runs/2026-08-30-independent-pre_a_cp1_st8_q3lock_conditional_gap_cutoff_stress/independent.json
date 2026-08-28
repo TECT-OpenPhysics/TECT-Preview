@@ -1,0 +1,5958 @@
+{
+  "assertion_count": 614,
+  "boundary": "T0 claim-nonbearing finite static cutoff stress. It proves no uniform conditional gap, gradient decay, common form core, common alpha, OS/KMS/GNS reconstruction, mass gap, continuum, C6, Sector-A or Pre-A closure.",
+  "checks": [
+    {
+      "actual": "['EXP-001245', 'R-400', False]",
+      "expected": "EXP-001245/R-400/false",
+      "group": "provenance",
+      "name": "identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "static cutoff stress only",
+      "expected": "all promoted flags false",
+      "group": "scope",
+      "name": "scope firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": "['right', 'left']",
+      "expected": "right/left",
+      "group": "fixture",
+      "name": "orientation grid",
+      "status": "PASS"
+    },
+    {
+      "actual": "(9, 9)",
+      "expected": "(9, 9)",
+      "group": "coordinates",
+      "name": "V=2 d=3 basis",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.06159659855280908",
+      "expected": ">=-1e-08",
+      "group": "coordinates",
+      "name": "V=2 d=3 beta=0.5 raw positivity",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.061596598552809065",
+      "expected": ">1e-30",
+      "group": "Gibbs",
+      "name": "V=2 d=3 beta=0.5 reference",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0345437871648703",
+      "expected": ">=-1e-08",
+      "group": "coordinates",
+      "name": "V=2 d=3 beta=1.0 raw positivity",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.03454378716487029",
+      "expected": ">1e-30",
+      "group": "Gibbs",
+      "name": "V=2 d=3 beta=1.0 reference",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.021405783197884058",
+      "expected": ">=-1e-08",
+      "group": "coordinates",
+      "name": "V=2 d=3 beta=2.0 raw positivity",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.021405783197884058",
+      "expected": ">1e-30",
+      "group": "Gibbs",
+      "name": "V=2 d=3 beta=2.0 reference",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.8039838752304235",
+      "expected": ">0",
+      "group": "conditional gap",
+      "name": "V=2 d=3 beta=0.5 right gap",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.17612333845094047",
+      "expected": ">0",
+      "group": "conditional law",
+      "name": "V=2 d=3 beta=0.5 right atoms",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.8039838752304234",
+      "expected": ">0",
+      "group": "conditional gap",
+      "name": "V=2 d=3 beta=0.5 left gap",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.17612333845094044",
+      "expected": ">0",
+      "group": "conditional law",
+      "name": "V=2 d=3 beta=0.5 left atoms",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.7212586556787162",
+      "expected": ">0",
+      "group": "conditional gap",
+      "name": "V=2 d=3 beta=1.0 right gap",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.09047767299309406",
+      "expected": ">0",
+      "group": "conditional law",
+      "name": "V=2 d=3 beta=1.0 right atoms",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.721258655678716",
+      "expected": ">0",
+      "group": "conditional gap",
+      "name": "V=2 d=3 beta=1.0 left gap",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.09047767299309405",
+      "expected": ">0",
+      "group": "conditional law",
+      "name": "V=2 d=3 beta=1.0 left atoms",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.5884248731596748",
+      "expected": ">0",
+      "group": "conditional gap",
+      "name": "V=2 d=3 beta=2.0 right gap",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.04861365215066494",
+      "expected": ">0",
+      "group": "conditional law",
+      "name": "V=2 d=3 beta=2.0 right atoms",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.5884248731596751",
+      "expected": ">0",
+      "group": "conditional gap",
+      "name": "V=2 d=3 beta=2.0 left gap",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.048613652150664904",
+      "expected": ">0",
+      "group": "conditional law",
+      "name": "V=2 d=3 beta=2.0 left atoms",
+      "status": "PASS"
+    },
+    {
+      "actual": "(16, 16)",
+      "expected": "(16, 16)",
+      "group": "coordinates",
+      "name": "V=2 d=4 basis",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.01263623106106353",
+      "expected": ">=-1e-08",
+      "group": "coordinates",
+      "name": "V=2 d=4 beta=0.5 raw positivity",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.012636231061063525",
+      "expected": ">1e-30",
+      "group": "Gibbs",
+      "name": "V=2 d=4 beta=0.5 reference",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.004286128886870814",
+      "expected": ">=-1e-08",
+      "group": "coordinates",
+      "name": "V=2 d=4 beta=1.0 raw positivity",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.004286128886870812",
+      "expected": ">1e-30",
+      "group": "Gibbs",
+      "name": "V=2 d=4 beta=1.0 reference",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.002949915351576992",
+      "expected": ">=-1e-08",
+      "group": "coordinates",
+      "name": "V=2 d=4 beta=2.0 raw positivity",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0029499153515769906",
+      "expected": ">1e-30",
+      "group": "Gibbs",
+      "name": "V=2 d=4 beta=2.0 reference",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.5850789029586241",
+      "expected": ">0",
+      "group": "conditional gap",
+      "name": "V=2 d=4 beta=0.5 right gap",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.050686215260035264",
+      "expected": ">0",
+      "group": "conditional law",
+      "name": "V=2 d=4 beta=0.5 right atoms",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.5850789029586239",
+      "expected": ">0",
+      "group": "conditional gap",
+      "name": "V=2 d=4 beta=0.5 left gap",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.050686215260035264",
+      "expected": ">0",
+      "group": "conditional law",
+      "name": "V=2 d=4 beta=0.5 left atoms",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.6059945708115194",
+      "expected": ">0",
+      "group": "conditional gap",
+      "name": "V=2 d=4 beta=1.0 right gap",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.015343317178629176",
+      "expected": ">0",
+      "group": "conditional law",
+      "name": "V=2 d=4 beta=1.0 right atoms",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.6059945708115191",
+      "expected": ">0",
+      "group": "conditional gap",
+      "name": "V=2 d=4 beta=1.0 left gap",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.015343317178629173",
+      "expected": ">0",
+      "group": "conditional law",
+      "name": "V=2 d=4 beta=1.0 left atoms",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.5559180662307922",
+      "expected": ">0",
+      "group": "conditional gap",
+      "name": "V=2 d=4 beta=2.0 right gap",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.008874737005440914",
+      "expected": ">0",
+      "group": "conditional law",
+      "name": "V=2 d=4 beta=2.0 right atoms",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.5559180662307922",
+      "expected": ">0",
+      "group": "conditional gap",
+      "name": "V=2 d=4 beta=2.0 left gap",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.008874737005440909",
+      "expected": ">0",
+      "group": "conditional law",
+      "name": "V=2 d=4 beta=2.0 left atoms",
+      "status": "PASS"
+    },
+    {
+      "actual": "(25, 25)",
+      "expected": "(25, 25)",
+      "group": "coordinates",
+      "name": "V=2 d=5 basis",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0014348775224267785",
+      "expected": ">=-1e-08",
+      "group": "coordinates",
+      "name": "V=2 d=5 beta=0.5 raw positivity",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0014348775224267793",
+      "expected": ">1e-30",
+      "group": "Gibbs",
+      "name": "V=2 d=5 beta=0.5 reference",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.00039228829657403174",
+      "expected": ">=-1e-08",
+      "group": "coordinates",
+      "name": "V=2 d=5 beta=1.0 raw positivity",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.00039228829657403196",
+      "expected": ">1e-30",
+      "group": "Gibbs",
+      "name": "V=2 d=5 beta=1.0 reference",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.00011985607125603564",
+      "expected": ">=-1e-08",
+      "group": "coordinates",
+      "name": "V=2 d=5 beta=2.0 raw positivity",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.00011985607125603566",
+      "expected": ">1e-30",
+      "group": "Gibbs",
+      "name": "V=2 d=5 beta=2.0 reference",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.4864260214735093",
+      "expected": ">0",
+      "group": "conditional gap",
+      "name": "V=2 d=5 beta=0.5 right gap",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.00960143458351017",
+      "expected": ">0",
+      "group": "conditional law",
+      "name": "V=2 d=5 beta=0.5 right atoms",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.4864260214735094",
+      "expected": ">0",
+      "group": "conditional gap",
+      "name": "V=2 d=5 beta=0.5 left gap",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.009601434583510173",
+      "expected": ">0",
+      "group": "conditional law",
+      "name": "V=2 d=5 beta=0.5 left atoms",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.5576613596836921",
+      "expected": ">0",
+      "group": "conditional gap",
+      "name": "V=2 d=5 beta=1.0 right gap",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0031541034787580667",
+      "expected": ">0",
+      "group": "conditional law",
+      "name": "V=2 d=5 beta=1.0 right atoms",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.5576613596836925",
+      "expected": ">0",
+      "group": "conditional gap",
+      "name": "V=2 d=5 beta=1.0 left gap",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0031541034787580693",
+      "expected": ">0",
+      "group": "conditional law",
+      "name": "V=2 d=5 beta=1.0 left atoms",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.6030586170277185",
+      "expected": ">0",
+      "group": "conditional gap",
+      "name": "V=2 d=5 beta=2.0 right gap",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0015723117183174087",
+      "expected": ">0",
+      "group": "conditional law",
+      "name": "V=2 d=5 beta=2.0 right atoms",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.6030586170277187",
+      "expected": ">0",
+      "group": "conditional gap",
+      "name": "V=2 d=5 beta=2.0 left gap",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0015723117183174087",
+      "expected": ">0",
+      "group": "conditional law",
+      "name": "V=2 d=5 beta=2.0 left atoms",
+      "status": "PASS"
+    },
+    {
+      "actual": "(36, 36)",
+      "expected": "(36, 36)",
+      "group": "coordinates",
+      "name": "V=2 d=6 basis",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.00011381498205169668",
+      "expected": ">=-1e-08",
+      "group": "coordinates",
+      "name": "V=2 d=6 beta=0.5 raw positivity",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.00011381498205169679",
+      "expected": ">1e-30",
+      "group": "Gibbs",
+      "name": "V=2 d=6 beta=0.5 reference",
+      "status": "PASS"
+    },
+    {
+      "actual": "2.1194075142129316e-05",
+      "expected": ">=-1e-08",
+      "group": "coordinates",
+      "name": "V=2 d=6 beta=1.0 raw positivity",
+      "status": "PASS"
+    },
+    {
+      "actual": "2.1194075142129336e-05",
+      "expected": ">1e-30",
+      "group": "Gibbs",
+      "name": "V=2 d=6 beta=1.0 reference",
+      "status": "PASS"
+    },
+    {
+      "actual": "2.4553313960536074e-06",
+      "expected": ">=-1e-08",
+      "group": "coordinates",
+      "name": "V=2 d=6 beta=2.0 raw positivity",
+      "status": "PASS"
+    },
+    {
+      "actual": "2.4553313960536095e-06",
+      "expected": ">1e-30",
+      "group": "Gibbs",
+      "name": "V=2 d=6 beta=2.0 reference",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.43329443886282826",
+      "expected": ">0",
+      "group": "conditional gap",
+      "name": "V=2 d=6 beta=0.5 right gap",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0017883216783469897",
+      "expected": ">0",
+      "group": "conditional law",
+      "name": "V=2 d=6 beta=0.5 right atoms",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.43329443886282815",
+      "expected": ">0",
+      "group": "conditional gap",
+      "name": "V=2 d=6 beta=0.5 left gap",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0017883216783469882",
+      "expected": ">0",
+      "group": "conditional law",
+      "name": "V=2 d=6 beta=0.5 left atoms",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.4887695258837843",
+      "expected": ">0",
+      "group": "conditional gap",
+      "name": "V=2 d=6 beta=1.0 right gap",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0008124485057852843",
+      "expected": ">0",
+      "group": "conditional law",
+      "name": "V=2 d=6 beta=1.0 right atoms",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.488769525883784",
+      "expected": ">0",
+      "group": "conditional gap",
+      "name": "V=2 d=6 beta=1.0 left gap",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0008124485057852827",
+      "expected": ">0",
+      "group": "conditional law",
+      "name": "V=2 d=6 beta=1.0 left atoms",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.546015152340862",
+      "expected": ">0",
+      "group": "conditional gap",
+      "name": "V=2 d=6 beta=2.0 right gap",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0002841044684720004",
+      "expected": ">0",
+      "group": "conditional law",
+      "name": "V=2 d=6 beta=2.0 right atoms",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.5460151523408605",
+      "expected": ">0",
+      "group": "conditional gap",
+      "name": "V=2 d=6 beta=2.0 left gap",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0002841044684719998",
+      "expected": ">0",
+      "group": "conditional law",
+      "name": "V=2 d=6 beta=2.0 left atoms",
+      "status": "PASS"
+    },
+    {
+      "actual": "(49, 49)",
+      "expected": "(49, 49)",
+      "group": "coordinates",
+      "name": "V=2 d=7 basis",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.005543778891574e-05",
+      "expected": ">=-1e-08",
+      "group": "coordinates",
+      "name": "V=2 d=7 beta=0.5 raw positivity",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.0055437788915748e-05",
+      "expected": ">1e-30",
+      "group": "Gibbs",
+      "name": "V=2 d=7 beta=0.5 reference",
+      "status": "PASS"
+    },
+    {
+      "actual": "9.934014741465004e-07",
+      "expected": ">=-1e-08",
+      "group": "coordinates",
+      "name": "V=2 d=7 beta=1.0 raw positivity",
+      "status": "PASS"
+    },
+    {
+      "actual": "9.934014741465015e-07",
+      "expected": ">1e-30",
+      "group": "Gibbs",
+      "name": "V=2 d=7 beta=1.0 reference",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.5576075419725938e-07",
+      "expected": ">=-1e-08",
+      "group": "coordinates",
+      "name": "V=2 d=7 beta=2.0 raw positivity",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.5576075419725957e-07",
+      "expected": ">1e-30",
+      "group": "Gibbs",
+      "name": "V=2 d=7 beta=2.0 reference",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.38841257299915455",
+      "expected": ">0",
+      "group": "conditional gap",
+      "name": "V=2 d=7 beta=0.5 right gap",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0005398337662928874",
+      "expected": ">0",
+      "group": "conditional law",
+      "name": "V=2 d=7 beta=0.5 right atoms",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.3884125729991543",
+      "expected": ">0",
+      "group": "conditional gap",
+      "name": "V=2 d=7 beta=0.5 left gap",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.000539833766292887",
+      "expected": ">0",
+      "group": "conditional law",
+      "name": "V=2 d=7 beta=0.5 left atoms",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.4005399058626459",
+      "expected": ">0",
+      "group": "conditional gap",
+      "name": "V=2 d=7 beta=1.0 right gap",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.000248259155888711",
+      "expected": ">0",
+      "group": "conditional law",
+      "name": "V=2 d=7 beta=1.0 right atoms",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.4005399058626453",
+      "expected": ">0",
+      "group": "conditional gap",
+      "name": "V=2 d=7 beta=1.0 left gap",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0002482591558887098",
+      "expected": ">0",
+      "group": "conditional law",
+      "name": "V=2 d=7 beta=1.0 left atoms",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.45253173553295006",
+      "expected": ">0",
+      "group": "conditional gap",
+      "name": "V=2 d=7 beta=2.0 right gap",
+      "status": "PASS"
+    },
+    {
+      "actual": "7.471891333660587e-05",
+      "expected": ">0",
+      "group": "conditional law",
+      "name": "V=2 d=7 beta=2.0 right atoms",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.452531735532949",
+      "expected": ">0",
+      "group": "conditional gap",
+      "name": "V=2 d=7 beta=2.0 left gap",
+      "status": "PASS"
+    },
+    {
+      "actual": "7.471891333660409e-05",
+      "expected": ">0",
+      "group": "conditional law",
+      "name": "V=2 d=7 beta=2.0 left atoms",
+      "status": "PASS"
+    },
+    {
+      "actual": "(64, 64)",
+      "expected": "(64, 64)",
+      "group": "coordinates",
+      "name": "V=2 d=8 basis",
+      "status": "PASS"
+    },
+    {
+      "actual": "8.917378149608353e-07",
+      "expected": ">=-1e-08",
+      "group": "coordinates",
+      "name": "V=2 d=8 beta=0.5 raw positivity",
+      "status": "PASS"
+    },
+    {
+      "actual": "8.917378149608353e-07",
+      "expected": ">1e-30",
+      "group": "Gibbs",
+      "name": "V=2 d=8 beta=0.5 reference",
+      "status": "PASS"
+    },
+    {
+      "actual": "5.587984310226962e-08",
+      "expected": ">=-1e-08",
+      "group": "coordinates",
+      "name": "V=2 d=8 beta=1.0 raw positivity",
+      "status": "PASS"
+    },
+    {
+      "actual": "5.587984310226962e-08",
+      "expected": ">1e-30",
+      "group": "Gibbs",
+      "name": "V=2 d=8 beta=1.0 reference",
+      "status": "PASS"
+    },
+    {
+      "actual": "3.943645830609944e-09",
+      "expected": ">=-1e-08",
+      "group": "coordinates",
+      "name": "V=2 d=8 beta=2.0 raw positivity",
+      "status": "PASS"
+    },
+    {
+      "actual": "3.943645830609945e-09",
+      "expected": ">1e-30",
+      "group": "Gibbs",
+      "name": "V=2 d=8 beta=2.0 reference",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.33862971609709497",
+      "expected": ">0",
+      "group": "conditional gap",
+      "name": "V=2 d=8 beta=0.5 right gap",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.00022000986021070628",
+      "expected": ">0",
+      "group": "conditional law",
+      "name": "V=2 d=8 beta=0.5 right atoms",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.33862971609709414",
+      "expected": ">0",
+      "group": "conditional gap",
+      "name": "V=2 d=8 beta=0.5 left gap",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.00022000986021070626",
+      "expected": ">0",
+      "group": "conditional law",
+      "name": "V=2 d=8 beta=0.5 left atoms",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.3346754243038511",
+      "expected": ">0",
+      "group": "conditional gap",
+      "name": "V=2 d=8 beta=1.0 right gap",
+      "status": "PASS"
+    },
+    {
+      "actual": "7.283740954277482e-05",
+      "expected": ">0",
+      "group": "conditional law",
+      "name": "V=2 d=8 beta=1.0 right atoms",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.33467542430385266",
+      "expected": ">0",
+      "group": "conditional gap",
+      "name": "V=2 d=8 beta=1.0 left gap",
+      "status": "PASS"
+    },
+    {
+      "actual": "7.283740954277528e-05",
+      "expected": ">0",
+      "group": "conditional law",
+      "name": "V=2 d=8 beta=1.0 left atoms",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.4458931029582602",
+      "expected": ">0",
+      "group": "conditional gap",
+      "name": "V=2 d=8 beta=2.0 right gap",
+      "status": "PASS"
+    },
+    {
+      "actual": "9.033268919705062e-06",
+      "expected": ">0",
+      "group": "conditional law",
+      "name": "V=2 d=8 beta=2.0 right atoms",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.44589310295826406",
+      "expected": ">0",
+      "group": "conditional gap",
+      "name": "V=2 d=8 beta=2.0 left gap",
+      "status": "PASS"
+    },
+    {
+      "actual": "9.033268919704965e-06",
+      "expected": ">0",
+      "group": "conditional law",
+      "name": "V=2 d=8 beta=2.0 left atoms",
+      "status": "PASS"
+    },
+    {
+      "actual": "(81, 81)",
+      "expected": "(81, 81)",
+      "group": "coordinates",
+      "name": "V=2 d=9 basis",
+      "status": "PASS"
+    },
+    {
+      "actual": "7.498618436450365e-08",
+      "expected": ">=-1e-08",
+      "group": "coordinates",
+      "name": "V=2 d=9 beta=0.5 raw positivity",
+      "status": "PASS"
+    },
+    {
+      "actual": "7.498618436450353e-08",
+      "expected": ">1e-30",
+      "group": "Gibbs",
+      "name": "V=2 d=9 beta=0.5 reference",
+      "status": "PASS"
+    },
+    {
+      "actual": "3.3155645303348293e-09",
+      "expected": ">=-1e-08",
+      "group": "coordinates",
+      "name": "V=2 d=9 beta=1.0 raw positivity",
+      "status": "PASS"
+    },
+    {
+      "actual": "3.3155645303348247e-09",
+      "expected": ">1e-30",
+      "group": "Gibbs",
+      "name": "V=2 d=9 beta=1.0 reference",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.1122259890839843e-10",
+      "expected": ">=-1e-08",
+      "group": "coordinates",
+      "name": "V=2 d=9 beta=2.0 raw positivity",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.1122259890839821e-10",
+      "expected": ">1e-30",
+      "group": "Gibbs",
+      "name": "V=2 d=9 beta=2.0 reference",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.26653684785929044",
+      "expected": ">0",
+      "group": "conditional gap",
+      "name": "V=2 d=9 beta=0.5 right gap",
+      "status": "PASS"
+    },
+    {
+      "actual": "8.84475557594475e-05",
+      "expected": ">0",
+      "group": "conditional law",
+      "name": "V=2 d=9 beta=0.5 right atoms",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.2665368478592898",
+      "expected": ">0",
+      "group": "conditional gap",
+      "name": "V=2 d=9 beta=0.5 left gap",
+      "status": "PASS"
+    },
+    {
+      "actual": "8.844755575944601e-05",
+      "expected": ">0",
+      "group": "conditional law",
+      "name": "V=2 d=9 beta=0.5 left atoms",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.28479778871458694",
+      "expected": ">0",
+      "group": "conditional gap",
+      "name": "V=2 d=9 beta=1.0 right gap",
+      "status": "PASS"
+    },
+    {
+      "actual": "2.1497837521127057e-05",
+      "expected": ">0",
+      "group": "conditional law",
+      "name": "V=2 d=9 beta=1.0 right atoms",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.2847977887145848",
+      "expected": ">0",
+      "group": "conditional gap",
+      "name": "V=2 d=9 beta=1.0 left gap",
+      "status": "PASS"
+    },
+    {
+      "actual": "2.1497837521127955e-05",
+      "expected": ">0",
+      "group": "conditional law",
+      "name": "V=2 d=9 beta=1.0 left atoms",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.3419272861503",
+      "expected": ">0",
+      "group": "conditional gap",
+      "name": "V=2 d=9 beta=2.0 right gap",
+      "status": "PASS"
+    },
+    {
+      "actual": "2.163369982098849e-06",
+      "expected": ">0",
+      "group": "conditional law",
+      "name": "V=2 d=9 beta=2.0 right atoms",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.3419272861502992",
+      "expected": ">0",
+      "group": "conditional gap",
+      "name": "V=2 d=9 beta=2.0 left gap",
+      "status": "PASS"
+    },
+    {
+      "actual": "2.1633699820979167e-06",
+      "expected": ">0",
+      "group": "conditional law",
+      "name": "V=2 d=9 beta=2.0 left atoms",
+      "status": "PASS"
+    },
+    {
+      "actual": "(100, 100)",
+      "expected": "(100, 100)",
+      "group": "coordinates",
+      "name": "V=2 d=10 basis",
+      "status": "PASS"
+    },
+    {
+      "actual": "7.50243243494058e-09",
+      "expected": ">=-1e-08",
+      "group": "coordinates",
+      "name": "V=2 d=10 beta=0.5 raw positivity",
+      "status": "PASS"
+    },
+    {
+      "actual": "7.502432434940564e-09",
+      "expected": ">1e-30",
+      "group": "Gibbs",
+      "name": "V=2 d=10 beta=0.5 reference",
+      "status": "PASS"
+    },
+    {
+      "actual": "2.176454210364783e-10",
+      "expected": ">=-1e-08",
+      "group": "coordinates",
+      "name": "V=2 d=10 beta=1.0 raw positivity",
+      "status": "PASS"
+    },
+    {
+      "actual": "2.1764542103647792e-10",
+      "expected": ">1e-30",
+      "group": "Gibbs",
+      "name": "V=2 d=10 beta=1.0 reference",
+      "status": "PASS"
+    },
+    {
+      "actual": "6.921910472909157e-12",
+      "expected": ">=-1e-08",
+      "group": "coordinates",
+      "name": "V=2 d=10 beta=2.0 raw positivity",
+      "status": "PASS"
+    },
+    {
+      "actual": "6.921910472909143e-12",
+      "expected": ">1e-30",
+      "group": "Gibbs",
+      "name": "V=2 d=10 beta=2.0 reference",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.23252841768427238",
+      "expected": ">0",
+      "group": "conditional gap",
+      "name": "V=2 d=10 beta=0.5 right gap",
+      "status": "PASS"
+    },
+    {
+      "actual": "3.842731276142202e-05",
+      "expected": ">0",
+      "group": "conditional law",
+      "name": "V=2 d=10 beta=0.5 right atoms",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.23252841768427132",
+      "expected": ">0",
+      "group": "conditional gap",
+      "name": "V=2 d=10 beta=0.5 left gap",
+      "status": "PASS"
+    },
+    {
+      "actual": "3.8427312761423215e-05",
+      "expected": ">0",
+      "group": "conditional law",
+      "name": "V=2 d=10 beta=0.5 left atoms",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.2494783062775683",
+      "expected": ">0",
+      "group": "conditional gap",
+      "name": "V=2 d=10 beta=1.0 right gap",
+      "status": "PASS"
+    },
+    {
+      "actual": "7.238171674581906e-06",
+      "expected": ">0",
+      "group": "conditional law",
+      "name": "V=2 d=10 beta=1.0 right atoms",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.24947830627757103",
+      "expected": ">0",
+      "group": "conditional gap",
+      "name": "V=2 d=10 beta=1.0 left gap",
+      "status": "PASS"
+    },
+    {
+      "actual": "7.238171674583843e-06",
+      "expected": ">0",
+      "group": "conditional law",
+      "name": "V=2 d=10 beta=1.0 left atoms",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.17705997700856066",
+      "expected": ">0",
+      "group": "conditional gap",
+      "name": "V=2 d=10 beta=2.0 right gap",
+      "status": "PASS"
+    },
+    {
+      "actual": "6.520472823271028e-07",
+      "expected": ">0",
+      "group": "conditional law",
+      "name": "V=2 d=10 beta=2.0 right atoms",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.1770599770085871",
+      "expected": ">0",
+      "group": "conditional gap",
+      "name": "V=2 d=10 beta=2.0 left gap",
+      "status": "PASS"
+    },
+    {
+      "actual": "6.520472823270522e-07",
+      "expected": ">0",
+      "group": "conditional law",
+      "name": "V=2 d=10 beta=2.0 left atoms",
+      "status": "PASS"
+    },
+    {
+      "actual": "(121, 121)",
+      "expected": "(121, 121)",
+      "group": "coordinates",
+      "name": "V=2 d=11 basis",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.0986588761933952e-09",
+      "expected": ">=-1e-08",
+      "group": "coordinates",
+      "name": "V=2 d=11 beta=0.5 raw positivity",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.0986588761933955e-09",
+      "expected": ">1e-30",
+      "group": "Gibbs",
+      "name": "V=2 d=11 beta=0.5 reference",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.5979659268199193e-11",
+      "expected": ">=-1e-08",
+      "group": "coordinates",
+      "name": "V=2 d=11 beta=1.0 raw positivity",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.5979659268199206e-11",
+      "expected": ">1e-30",
+      "group": "Gibbs",
+      "name": "V=2 d=11 beta=1.0 reference",
+      "status": "PASS"
+    }
+  ],
+  "derived": {
+    "adjacent_ratios": [
+      {
+        "from_dimension": 3,
+        "key": "V=2/beta=0.5/right",
+        "ratio": 0.7277246733225081,
+        "to_dimension": 4
+      },
+      {
+        "from_dimension": 4,
+        "key": "V=2/beta=0.5/right",
+        "ratio": 0.8313853379668154,
+        "to_dimension": 5
+      },
+      {
+        "from_dimension": 5,
+        "key": "V=2/beta=0.5/right",
+        "ratio": 0.8907715042675312,
+        "to_dimension": 6
+      },
+      {
+        "from_dimension": 6,
+        "key": "V=2/beta=0.5/right",
+        "ratio": 0.8964171661619632,
+        "to_dimension": 7
+      },
+      {
+        "from_dimension": 7,
+        "key": "V=2/beta=0.5/right",
+        "ratio": 0.871829955148831,
+        "to_dimension": 8
+      },
+      {
+        "from_dimension": 8,
+        "key": "V=2/beta=0.5/right",
+        "ratio": 0.7871041293460098,
+        "to_dimension": 9
+      },
+      {
+        "from_dimension": 9,
+        "key": "V=2/beta=0.5/right",
+        "ratio": 0.8724062715974952,
+        "to_dimension": 10
+      },
+      {
+        "from_dimension": 10,
+        "key": "V=2/beta=0.5/right",
+        "ratio": 0.9596898904373801,
+        "to_dimension": 11
+      },
+      {
+        "from_dimension": 11,
+        "key": "V=2/beta=0.5/right",
+        "ratio": 0.9817402940083533,
+        "to_dimension": 12
+      },
+      {
+        "from_dimension": 12,
+        "key": "V=2/beta=0.5/right",
+        "ratio": 0.9561548622548061,
+        "to_dimension": 13
+      },
+      {
+        "from_dimension": 13,
+        "key": "V=2/beta=0.5/right",
+        "ratio": 0.8637445570477074,
+        "to_dimension": 14
+      },
+      {
+        "from_dimension": 14,
+        "key": "V=2/beta=0.5/right",
+        "ratio": 0.8773824741168434,
+        "to_dimension": 15
+      },
+      {
+        "from_dimension": 15,
+        "key": "V=2/beta=0.5/right",
+        "ratio": 1.006446135190543,
+        "to_dimension": 16
+      },
+      {
+        "from_dimension": 16,
+        "key": "V=2/beta=0.5/right",
+        "ratio": 1.0175002807782378,
+        "to_dimension": 17
+      },
+      {
+        "from_dimension": 17,
+        "key": "V=2/beta=0.5/right",
+        "ratio": 0.9186362892479982,
+        "to_dimension": 18
+      },
+      {
+        "from_dimension": 18,
+        "key": "V=2/beta=0.5/right",
+        "ratio": 0.8330940152122214,
+        "to_dimension": 19
+      },
+      {
+        "from_dimension": 19,
+        "key": "V=2/beta=0.5/right",
+        "ratio": 1.0175711000181002,
+        "to_dimension": 20
+      },
+      {
+        "from_dimension": 20,
+        "key": "V=2/beta=0.5/right",
+        "ratio": 1.0542005983264882,
+        "to_dimension": 21
+      },
+      {
+        "from_dimension": 21,
+        "key": "V=2/beta=0.5/right",
+        "ratio": 0.9227789649542585,
+        "to_dimension": 22
+      },
+      {
+        "from_dimension": 22,
+        "key": "V=2/beta=0.5/right",
+        "ratio": 0.8253994887591977,
+        "to_dimension": 23
+      },
+      {
+        "from_dimension": 23,
+        "key": "V=2/beta=0.5/right",
+        "ratio": 1.0463165863656598,
+        "to_dimension": 24
+      },
+      {
+        "from_dimension": 24,
+        "key": "V=2/beta=0.5/right",
+        "ratio": 1.0700492130826313,
+        "to_dimension": 25
+      },
+      {
+        "from_dimension": 25,
+        "key": "V=2/beta=0.5/right",
+        "ratio": 0.8909533239697468,
+        "to_dimension": 26
+      },
+      {
+        "from_dimension": 26,
+        "key": "V=2/beta=0.5/right",
+        "ratio": 0.8463017319041741,
+        "to_dimension": 27
+      },
+      {
+        "from_dimension": 27,
+        "key": "V=2/beta=0.5/right",
+        "ratio": 1.0826187334383093,
+        "to_dimension": 28
+      },
+      {
+        "from_dimension": 3,
+        "key": "V=2/beta=0.5/left",
+        "ratio": 0.727724673322508,
+        "to_dimension": 4
+      },
+      {
+        "from_dimension": 4,
+        "key": "V=2/beta=0.5/left",
+        "ratio": 0.8313853379668159,
+        "to_dimension": 5
+      },
+      {
+        "from_dimension": 5,
+        "key": "V=2/beta=0.5/left",
+        "ratio": 0.8907715042675307,
+        "to_dimension": 6
+      },
+      {
+        "from_dimension": 6,
+        "key": "V=2/beta=0.5/left",
+        "ratio": 0.896417166161963,
+        "to_dimension": 7
+      },
+      {
+        "from_dimension": 7,
+        "key": "V=2/beta=0.5/left",
+        "ratio": 0.8718299551488294,
+        "to_dimension": 8
+      },
+      {
+        "from_dimension": 8,
+        "key": "V=2/beta=0.5/left",
+        "ratio": 0.78710412934601,
+        "to_dimension": 9
+      },
+      {
+        "from_dimension": 9,
+        "key": "V=2/beta=0.5/left",
+        "ratio": 0.8724062715974932,
+        "to_dimension": 10
+      },
+      {
+        "from_dimension": 10,
+        "key": "V=2/beta=0.5/left",
+        "ratio": 0.9596898904373814,
+        "to_dimension": 11
+      },
+      {
+        "from_dimension": 11,
+        "key": "V=2/beta=0.5/left",
+        "ratio": 0.9817402940083468,
+        "to_dimension": 12
+      },
+      {
+        "from_dimension": 12,
+        "key": "V=2/beta=0.5/left",
+        "ratio": 0.9561548622547998,
+        "to_dimension": 13
+      },
+      {
+        "from_dimension": 13,
+        "key": "V=2/beta=0.5/left",
+        "ratio": 0.8637445570477298,
+        "to_dimension": 14
+      },
+      {
+        "from_dimension": 14,
+        "key": "V=2/beta=0.5/left",
+        "ratio": 0.8773824741168154,
+        "to_dimension": 15
+      },
+      {
+        "from_dimension": 15,
+        "key": "V=2/beta=0.5/left",
+        "ratio": 1.0064461351905072,
+        "to_dimension": 16
+      },
+      {
+        "from_dimension": 16,
+        "key": "V=2/beta=0.5/left",
+        "ratio": 1.0175002807783173,
+        "to_dimension": 17
+      },
+      {
+        "from_dimension": 17,
+        "key": "V=2/beta=0.5/left",
+        "ratio": 0.9186362892481085,
+        "to_dimension": 18
+      },
+      {
+        "from_dimension": 18,
+        "key": "V=2/beta=0.5/left",
+        "ratio": 0.8330940152121261,
+        "to_dimension": 19
+      },
+      {
+        "from_dimension": 19,
+        "key": "V=2/beta=0.5/left",
+        "ratio": 1.017571100018272,
+        "to_dimension": 20
+      },
+      {
+        "from_dimension": 20,
+        "key": "V=2/beta=0.5/left",
+        "ratio": 1.0542005983262446,
+        "to_dimension": 21
+      },
+      {
+        "from_dimension": 21,
+        "key": "V=2/beta=0.5/left",
+        "ratio": 0.9227789649544174,
+        "to_dimension": 22
+      },
+      {
+        "from_dimension": 22,
+        "key": "V=2/beta=0.5/left",
+        "ratio": 0.8253994887590285,
+        "to_dimension": 23
+      },
+      {
+        "from_dimension": 23,
+        "key": "V=2/beta=0.5/left",
+        "ratio": 1.0463165863663373,
+        "to_dimension": 24
+      },
+      {
+        "from_dimension": 24,
+        "key": "V=2/beta=0.5/left",
+        "ratio": 1.0700492130830135,
+        "to_dimension": 25
+      },
+      {
+        "from_dimension": 25,
+        "key": "V=2/beta=0.5/left",
+        "ratio": 0.8909533239672972,
+        "to_dimension": 26
+      },
+      {
+        "from_dimension": 26,
+        "key": "V=2/beta=0.5/left",
+        "ratio": 0.846301731906029,
+        "to_dimension": 27
+      },
+      {
+        "from_dimension": 27,
+        "key": "V=2/beta=0.5/left",
+        "ratio": 1.0826187334365234,
+        "to_dimension": 28
+      },
+      {
+        "from_dimension": 3,
+        "key": "V=2/beta=1.0/right",
+        "ratio": 0.8401903617243507,
+        "to_dimension": 4
+      },
+      {
+        "from_dimension": 4,
+        "key": "V=2/beta=1.0/right",
+        "ratio": 0.9202415113008328,
+        "to_dimension": 5
+      },
+      {
+        "from_dimension": 5,
+        "key": "V=2/beta=1.0/right",
+        "ratio": 0.8764629598167183,
+        "to_dimension": 6
+      },
+      {
+        "from_dimension": 6,
+        "key": "V=2/beta=1.0/right",
+        "ratio": 0.8194862499628978,
+        "to_dimension": 7
+      },
+      {
+        "from_dimension": 7,
+        "key": "V=2/beta=1.0/right",
+        "ratio": 0.8355607503902965,
+        "to_dimension": 8
+      },
+      {
+        "from_dimension": 8,
+        "key": "V=2/beta=1.0/right",
+        "ratio": 0.8509671401985573,
+        "to_dimension": 9
+      },
+      {
+        "from_dimension": 9,
+        "key": "V=2/beta=1.0/right",
+        "ratio": 0.8759840004501775,
+        "to_dimension": 10
+      },
+      {
+        "from_dimension": 10,
+        "key": "V=2/beta=1.0/right",
+        "ratio": 0.9753328427023368,
+        "to_dimension": 11
+      },
+      {
+        "from_dimension": 11,
+        "key": "V=2/beta=1.0/right",
+        "ratio": 1.0300385072101763,
+        "to_dimension": 12
+      },
+      {
+        "from_dimension": 12,
+        "key": "V=2/beta=1.0/right",
+        "ratio": 0.9337888514083617,
+        "to_dimension": 13
+      },
+      {
+        "from_dimension": 13,
+        "key": "V=2/beta=1.0/right",
+        "ratio": 0.8030660027273271,
+        "to_dimension": 14
+      },
+      {
+        "from_dimension": 14,
+        "key": "V=2/beta=1.0/right",
+        "ratio": 0.8515657089955544,
+        "to_dimension": 15
+      },
+      {
+        "from_dimension": 15,
+        "key": "V=2/beta=1.0/right",
+        "ratio": 1.1715251065183994,
+        "to_dimension": 16
+      },
+      {
+        "from_dimension": 16,
+        "key": "V=2/beta=1.0/right",
+        "ratio": 0.9481025619313512,
+        "to_dimension": 17
+      },
+      {
+        "from_dimension": 17,
+        "key": "V=2/beta=1.0/right",
+        "ratio": 0.953530815919838,
+        "to_dimension": 18
+      },
+      {
+        "from_dimension": 18,
+        "key": "V=2/beta=1.0/right",
+        "ratio": 0.7313861302370053,
+        "to_dimension": 19
+      },
+      {
+        "from_dimension": 19,
+        "key": "V=2/beta=1.0/right",
+        "ratio": 1.046165636530469,
+        "to_dimension": 20
+      },
+      {
+        "from_dimension": 20,
+        "key": "V=2/beta=1.0/right",
+        "ratio": 1.0210071942116585,
+        "to_dimension": 21
+      },
+      {
+        "from_dimension": 21,
+        "key": "V=2/beta=1.0/right",
+        "ratio": 0.9511848434054038,
+        "to_dimension": 22
+      },
+      {
+        "from_dimension": 22,
+        "key": "V=2/beta=1.0/right",
+        "ratio": 0.9932198366586852,
+        "to_dimension": 23
+      },
+      {
+        "from_dimension": 23,
+        "key": "V=2/beta=1.0/right",
+        "ratio": 0.7959449396973457,
+        "to_dimension": 24
+      },
+      {
+        "from_dimension": 24,
+        "key": "V=2/beta=1.0/right",
+        "ratio": 0.9012251613319892,
+        "to_dimension": 25
+      },
+      {
+        "from_dimension": 25,
+        "key": "V=2/beta=1.0/right",
+        "ratio": 1.137486477650389,
+        "to_dimension": 26
+      },
+      {
+        "from_dimension": 26,
+        "key": "V=2/beta=1.0/right",
+        "ratio": 0.9143635919140817,
+        "to_dimension": 27
+      },
+      {
+        "from_dimension": 27,
+        "key": "V=2/beta=1.0/right",
+        "ratio": 0.8338874933943439,
+        "to_dimension": 28
+      },
+      {
+        "from_dimension": 3,
+        "key": "V=2/beta=1.0/left",
+        "ratio": 0.8401903617243504,
+        "to_dimension": 4
+      },
+      {
+        "from_dimension": 4,
+        "key": "V=2/beta=1.0/left",
+        "ratio": 0.9202415113008338,
+        "to_dimension": 5
+      },
+      {
+        "from_dimension": 5,
+        "key": "V=2/beta=1.0/left",
+        "ratio": 0.8764629598167171,
+        "to_dimension": 6
+      },
+      {
+        "from_dimension": 6,
+        "key": "V=2/beta=1.0/left",
+        "ratio": 0.8194862499628971,
+        "to_dimension": 7
+      },
+      {
+        "from_dimension": 7,
+        "key": "V=2/beta=1.0/left",
+        "ratio": 0.8355607503903015,
+        "to_dimension": 8
+      },
+      {
+        "from_dimension": 8,
+        "key": "V=2/beta=1.0/left",
+        "ratio": 0.8509671401985469,
+        "to_dimension": 9
+      },
+      {
+        "from_dimension": 9,
+        "key": "V=2/beta=1.0/left",
+        "ratio": 0.8759840004501938,
+        "to_dimension": 10
+      },
+      {
+        "from_dimension": 10,
+        "key": "V=2/beta=1.0/left",
+        "ratio": 0.9753328427023303,
+        "to_dimension": 11
+      },
+      {
+        "from_dimension": 11,
+        "key": "V=2/beta=1.0/left",
+        "ratio": 1.03003850721015,
+        "to_dimension": 12
+      },
+      {
+        "from_dimension": 12,
+        "key": "V=2/beta=1.0/left",
+        "ratio": 0.9337888514083779,
+        "to_dimension": 13
+      },
+      {
+        "from_dimension": 13,
+        "key": "V=2/beta=1.0/left",
+        "ratio": 0.803066002727281,
+        "to_dimension": 14
+      },
+      {
+        "from_dimension": 14,
+        "key": "V=2/beta=1.0/left",
+        "ratio": 0.8515657089956861,
+        "to_dimension": 15
+      },
+      {
+        "from_dimension": 15,
+        "key": "V=2/beta=1.0/left",
+        "ratio": 1.1715251065186296,
+        "to_dimension": 16
+      },
+      {
+        "from_dimension": 16,
+        "key": "V=2/beta=1.0/left",
+        "ratio": 0.948102561931057,
+        "to_dimension": 17
+      },
+      {
+        "from_dimension": 17,
+        "key": "V=2/beta=1.0/left",
+        "ratio": 0.9535308159198392,
+        "to_dimension": 18
+      },
+      {
+        "from_dimension": 18,
+        "key": "V=2/beta=1.0/left",
+        "ratio": 0.7313861302369163,
+        "to_dimension": 19
+      },
+      {
+        "from_dimension": 19,
+        "key": "V=2/beta=1.0/left",
+        "ratio": 1.0461656365330154,
+        "to_dimension": 20
+      },
+      {
+        "from_dimension": 20,
+        "key": "V=2/beta=1.0/left",
+        "ratio": 1.02100719420059,
+        "to_dimension": 21
+      },
+      {
+        "from_dimension": 21,
+        "key": "V=2/beta=1.0/left",
+        "ratio": 0.9511848434171408,
+        "to_dimension": 22
+      },
+      {
+        "from_dimension": 22,
+        "key": "V=2/beta=1.0/left",
+        "ratio": 0.9932198366532697,
+        "to_dimension": 23
+      },
+      {
+        "from_dimension": 23,
+        "key": "V=2/beta=1.0/left",
+        "ratio": 0.7959449397151749,
+        "to_dimension": 24
+      },
+      {
+        "from_dimension": 24,
+        "key": "V=2/beta=1.0/left",
+        "ratio": 0.9012251612625991,
+        "to_dimension": 25
+      },
+      {
+        "from_dimension": 25,
+        "key": "V=2/beta=1.0/left",
+        "ratio": 1.137486477755837,
+        "to_dimension": 26
+      },
+      {
+        "from_dimension": 26,
+        "key": "V=2/beta=1.0/left",
+        "ratio": 0.9143635918701739,
+        "to_dimension": 27
+      },
+      {
+        "from_dimension": 27,
+        "key": "V=2/beta=1.0/left",
+        "ratio": 0.833887493015636,
+        "to_dimension": 28
+      },
+      {
+        "from_dimension": 3,
+        "key": "V=2/beta=2.0/right",
+        "ratio": 0.9447562324238092,
+        "to_dimension": 4
+      },
+      {
+        "from_dimension": 4,
+        "key": "V=2/beta=2.0/right",
+        "ratio": 1.0847976593323299,
+        "to_dimension": 5
+      },
+      {
+        "from_dimension": 5,
+        "key": "V=2/beta=2.0/right",
+        "ratio": 0.905409751098483,
+        "to_dimension": 6
+      },
+      {
+        "from_dimension": 6,
+        "key": "V=2/beta=2.0/right",
+        "ratio": 0.8287897022506936,
+        "to_dimension": 7
+      },
+      {
+        "from_dimension": 7,
+        "key": "V=2/beta=2.0/right",
+        "ratio": 0.9853300176464497,
+        "to_dimension": 8
+      },
+      {
+        "from_dimension": 8,
+        "key": "V=2/beta=2.0/right",
+        "ratio": 0.7668369030195733,
+        "to_dimension": 9
+      },
+      {
+        "from_dimension": 9,
+        "key": "V=2/beta=2.0/right",
+        "ratio": 0.5178293285746459,
+        "to_dimension": 10
+      },
+      {
+        "from_dimension": 10,
+        "key": "V=2/beta=2.0/right",
+        "ratio": 1.1859896179526555,
+        "to_dimension": 11
+      },
+      {
+        "from_dimension": 11,
+        "key": "V=2/beta=2.0/right",
+        "ratio": 0.9340578414765713,
+        "to_dimension": 12
+      },
+      {
+        "from_dimension": 12,
+        "key": "V=2/beta=2.0/right",
+        "ratio": 0.4709288488219562,
+        "to_dimension": 13
+      },
+      {
+        "from_dimension": 13,
+        "key": "V=2/beta=2.0/right",
+        "ratio": 2.586679609994917,
+        "to_dimension": 14
+      },
+      {
+        "from_dimension": 14,
+        "key": "V=2/beta=2.0/right",
+        "ratio": 0.3153663451860989,
+        "to_dimension": 15
+      },
+      {
+        "from_dimension": 15,
+        "key": "V=2/beta=2.0/right",
+        "ratio": 0.8781242805055737,
+        "to_dimension": 16
+      },
+      {
+        "from_dimension": 16,
+        "key": "V=2/beta=2.0/right",
+        "ratio": 2.6297602466601404,
+        "to_dimension": 17
+      },
+      {
+        "from_dimension": 17,
+        "key": "V=2/beta=2.0/right",
+        "ratio": 0.3499426205945957,
+        "to_dimension": 18
+      },
+      {
+        "from_dimension": 18,
+        "key": "V=2/beta=2.0/right",
+        "ratio": 1.4706240051975614,
+        "to_dimension": 19
+      },
+      {
+        "from_dimension": 19,
+        "key": "V=2/beta=2.0/right",
+        "ratio": 1.2744782014948843,
+        "to_dimension": 20
+      },
+      {
+        "from_dimension": 20,
+        "key": "V=2/beta=2.0/right",
+        "ratio": 0.2845843803604179,
+        "to_dimension": 21
+      },
+      {
+        "from_dimension": 21,
+        "key": "V=2/beta=2.0/right",
+        "ratio": 3.9052452911724216,
+        "to_dimension": 22
+      },
+      {
+        "from_dimension": 22,
+        "key": "V=2/beta=2.0/right",
+        "ratio": 0.4797508762182789,
+        "to_dimension": 23
+      },
+      {
+        "from_dimension": 23,
+        "key": "V=2/beta=2.0/right",
+        "ratio": 0.5155065958809748,
+        "to_dimension": 24
+      },
+      {
+        "from_dimension": 24,
+        "key": "V=2/beta=2.0/right",
+        "ratio": 1.1423741619765486,
+        "to_dimension": 25
+      },
+      {
+        "from_dimension": 25,
+        "key": "V=2/beta=2.0/right",
+        "ratio": 0.9073305385601889,
+        "to_dimension": 26
+      },
+      {
+        "from_dimension": 26,
+        "key": "V=2/beta=2.0/right",
+        "ratio": 2.065203240066666,
+        "to_dimension": 27
+      },
+      {
+        "from_dimension": 27,
+        "key": "V=2/beta=2.0/right",
+        "ratio": 0.9850411181432058,
+        "to_dimension": 28
+      },
+      {
+        "from_dimension": 3,
+        "key": "V=2/beta=2.0/left",
+        "ratio": 0.9447562324238088,
+        "to_dimension": 4
+      },
+      {
+        "from_dimension": 4,
+        "key": "V=2/beta=2.0/left",
+        "ratio": 1.08479765933233,
+        "to_dimension": 5
+      },
+      {
+        "from_dimension": 5,
+        "key": "V=2/beta=2.0/left",
+        "ratio": 0.9054097510984803,
+        "to_dimension": 6
+      },
+      {
+        "from_dimension": 6,
+        "key": "V=2/beta=2.0/left",
+        "ratio": 0.8287897022506938,
+        "to_dimension": 7
+      },
+      {
+        "from_dimension": 7,
+        "key": "V=2/beta=2.0/left",
+        "ratio": 0.9853300176464606,
+        "to_dimension": 8
+      },
+      {
+        "from_dimension": 8,
+        "key": "V=2/beta=2.0/left",
+        "ratio": 0.7668369030195649,
+        "to_dimension": 9
+      },
+      {
+        "from_dimension": 9,
+        "key": "V=2/beta=2.0/left",
+        "ratio": 0.5178293285747244,
+        "to_dimension": 10
+      },
+      {
+        "from_dimension": 10,
+        "key": "V=2/beta=2.0/left",
+        "ratio": 1.185989617952558,
+        "to_dimension": 11
+      },
+      {
+        "from_dimension": 11,
+        "key": "V=2/beta=2.0/left",
+        "ratio": 0.9340578414761809,
+        "to_dimension": 12
+      },
+      {
+        "from_dimension": 12,
+        "key": "V=2/beta=2.0/left",
+        "ratio": 0.47092884882305475,
+        "to_dimension": 13
+      },
+      {
+        "from_dimension": 13,
+        "key": "V=2/beta=2.0/left",
+        "ratio": 2.586679609987953,
+        "to_dimension": 14
+      },
+      {
+        "from_dimension": 14,
+        "key": "V=2/beta=2.0/left",
+        "ratio": 0.3153663451843035,
+        "to_dimension": 15
+      },
+      {
+        "from_dimension": 15,
+        "key": "V=2/beta=2.0/left",
+        "ratio": 0.8781242805120563,
+        "to_dimension": 16
+      },
+      {
+        "from_dimension": 16,
+        "key": "V=2/beta=2.0/left",
+        "ratio": 2.6297602466260335,
+        "to_dimension": 17
+      },
+      {
+        "from_dimension": 17,
+        "key": "V=2/beta=2.0/left",
+        "ratio": 0.349942620587624,
+        "to_dimension": 18
+      },
+      {
+        "from_dimension": 18,
+        "key": "V=2/beta=2.0/left",
+        "ratio": 1.4706240052429027,
+        "to_dimension": 19
+      },
+      {
+        "from_dimension": 19,
+        "key": "V=2/beta=2.0/left",
+        "ratio": 1.2744782014307527,
+        "to_dimension": 20
+      },
+      {
+        "from_dimension": 20,
+        "key": "V=2/beta=2.0/left",
+        "ratio": 0.28458438037258005,
+        "to_dimension": 21
+      },
+      {
+        "from_dimension": 21,
+        "key": "V=2/beta=2.0/left",
+        "ratio": 3.9052452922673986,
+        "to_dimension": 22
+      },
+      {
+        "from_dimension": 22,
+        "key": "V=2/beta=2.0/left",
+        "ratio": 0.4797508761192039,
+        "to_dimension": 23
+      },
+      {
+        "from_dimension": 23,
+        "key": "V=2/beta=2.0/left",
+        "ratio": 0.5155065959842575,
+        "to_dimension": 24
+      },
+      {
+        "from_dimension": 24,
+        "key": "V=2/beta=2.0/left",
+        "ratio": 1.1423741723945204,
+        "to_dimension": 25
+      },
+      {
+        "from_dimension": 25,
+        "key": "V=2/beta=2.0/left",
+        "ratio": 0.9073305300129738,
+        "to_dimension": 26
+      },
+      {
+        "from_dimension": 26,
+        "key": "V=2/beta=2.0/left",
+        "ratio": 2.065203240464832,
+        "to_dimension": 27
+      },
+      {
+        "from_dimension": 27,
+        "key": "V=2/beta=2.0/left",
+        "ratio": 0.9850411245974842,
+        "to_dimension": 28
+      },
+      {
+        "from_dimension": 3,
+        "key": "V=3/beta=0.5/right",
+        "ratio": 0.7190185246973109,
+        "to_dimension": 4
+      },
+      {
+        "from_dimension": 4,
+        "key": "V=3/beta=0.5/right",
+        "ratio": 0.8055828395105441,
+        "to_dimension": 5
+      },
+      {
+        "from_dimension": 5,
+        "key": "V=3/beta=0.5/right",
+        "ratio": 0.7607230371302708,
+        "to_dimension": 6
+      },
+      {
+        "from_dimension": 6,
+        "key": "V=3/beta=0.5/right",
+        "ratio": 0.8462967718798179,
+        "to_dimension": 7
+      },
+      {
+        "from_dimension": 7,
+        "key": "V=3/beta=0.5/right",
+        "ratio": 0.8662419807485,
+        "to_dimension": 8
+      },
+      {
+        "from_dimension": 3,
+        "key": "V=3/beta=0.5/left",
+        "ratio": 0.7190185246973102,
+        "to_dimension": 4
+      },
+      {
+        "from_dimension": 4,
+        "key": "V=3/beta=0.5/left",
+        "ratio": 0.805582839510546,
+        "to_dimension": 5
+      },
+      {
+        "from_dimension": 5,
+        "key": "V=3/beta=0.5/left",
+        "ratio": 0.7607230371302712,
+        "to_dimension": 6
+      },
+      {
+        "from_dimension": 6,
+        "key": "V=3/beta=0.5/left",
+        "ratio": 0.8462967718797956,
+        "to_dimension": 7
+      },
+      {
+        "from_dimension": 7,
+        "key": "V=3/beta=0.5/left",
+        "ratio": 0.8662419807487566,
+        "to_dimension": 8
+      },
+      {
+        "from_dimension": 3,
+        "key": "V=3/beta=1.0/right",
+        "ratio": 0.6945235153750222,
+        "to_dimension": 4
+      },
+      {
+        "from_dimension": 4,
+        "key": "V=3/beta=1.0/right",
+        "ratio": 0.8024605569753434,
+        "to_dimension": 5
+      },
+      {
+        "from_dimension": 5,
+        "key": "V=3/beta=1.0/right",
+        "ratio": 0.8731115646877344,
+        "to_dimension": 6
+      },
+      {
+        "from_dimension": 6,
+        "key": "V=3/beta=1.0/right",
+        "ratio": 0.8242441807449453,
+        "to_dimension": 7
+      },
+      {
+        "from_dimension": 7,
+        "key": "V=3/beta=1.0/right",
+        "ratio": 0.8668188624453314,
+        "to_dimension": 8
+      },
+      {
+        "from_dimension": 3,
+        "key": "V=3/beta=1.0/left",
+        "ratio": 0.6945235153750215,
+        "to_dimension": 4
+      },
+      {
+        "from_dimension": 4,
+        "key": "V=3/beta=1.0/left",
+        "ratio": 0.802460556975343,
+        "to_dimension": 5
+      },
+      {
+        "from_dimension": 5,
+        "key": "V=3/beta=1.0/left",
+        "ratio": 0.8731115646877579,
+        "to_dimension": 6
+      },
+      {
+        "from_dimension": 6,
+        "key": "V=3/beta=1.0/left",
+        "ratio": 0.8242441807454203,
+        "to_dimension": 7
+      },
+      {
+        "from_dimension": 7,
+        "key": "V=3/beta=1.0/left",
+        "ratio": 0.8668188624439895,
+        "to_dimension": 8
+      },
+      {
+        "from_dimension": 3,
+        "key": "V=3/beta=2.0/right",
+        "ratio": 0.6672027313824737,
+        "to_dimension": 4
+      },
+      {
+        "from_dimension": 4,
+        "key": "V=3/beta=2.0/right",
+        "ratio": 1.1728197609100857,
+        "to_dimension": 5
+      },
+      {
+        "from_dimension": 5,
+        "key": "V=3/beta=2.0/right",
+        "ratio": 1.0462522380573798,
+        "to_dimension": 6
+      },
+      {
+        "from_dimension": 6,
+        "key": "V=3/beta=2.0/right",
+        "ratio": 0.5745367928216398,
+        "to_dimension": 7
+      },
+      {
+        "from_dimension": 7,
+        "key": "V=3/beta=2.0/right",
+        "ratio": 1.0102883006904642,
+        "to_dimension": 8
+      },
+      {
+        "from_dimension": 3,
+        "key": "V=3/beta=2.0/left",
+        "ratio": 0.667202731382468,
+        "to_dimension": 4
+      },
+      {
+        "from_dimension": 4,
+        "key": "V=3/beta=2.0/left",
+        "ratio": 1.1728197609100768,
+        "to_dimension": 5
+      },
+      {
+        "from_dimension": 5,
+        "key": "V=3/beta=2.0/left",
+        "ratio": 1.0462522380573342,
+        "to_dimension": 6
+      },
+      {
+        "from_dimension": 6,
+        "key": "V=3/beta=2.0/left",
+        "ratio": 0.5745367928225631,
+        "to_dimension": 7
+      },
+      {
+        "from_dimension": 7,
+        "key": "V=3/beta=2.0/left",
+        "ratio": 1.0102883006850016,
+        "to_dimension": 8
+      }
+    ],
+    "maximum_adjacent_gap_ratio": 3.9052452922673986,
+    "maximum_conditional_gap": 0.8039838752304235,
+    "minimum_adjacent_gap_ratio": 0.2845843803604179,
+    "minimum_conditional_atom": 7.16464389708457e-15,
+    "minimum_conditional_gap": 0.031369006654066514,
+    "minimum_reference_atom": 5.518615437904464e-28,
+    "profile_count": 192,
+    "profiles": [
+      {
+        "beta": 0.5,
+        "dimension": 3,
+        "maximum_conditional_gap": 0.915576819165391,
+        "minimum_conditional_atom": 0.17612333845094047,
+        "minimum_conditional_gap": 0.8039838752304235,
+        "orientation": "right",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.915576819165391,
+            "minimum_conditional_atom": 0.17612333845094047,
+            "minimum_conditional_gap": 0.8039838752304235,
+            "parent_count": 3,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 0.5,
+        "dimension": 3,
+        "maximum_conditional_gap": 0.9155768191653914,
+        "minimum_conditional_atom": 0.17612333845094044,
+        "minimum_conditional_gap": 0.8039838752304234,
+        "orientation": "left",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.9155768191653914,
+            "minimum_conditional_atom": 0.17612333845094044,
+            "minimum_conditional_gap": 0.8039838752304234,
+            "parent_count": 3,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 1.0,
+        "dimension": 3,
+        "maximum_conditional_gap": 0.8221893541633593,
+        "minimum_conditional_atom": 0.09047767299309406,
+        "minimum_conditional_gap": 0.7212586556787162,
+        "orientation": "right",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.8221893541633593,
+            "minimum_conditional_atom": 0.09047767299309406,
+            "minimum_conditional_gap": 0.7212586556787162,
+            "parent_count": 3,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 1.0,
+        "dimension": 3,
+        "maximum_conditional_gap": 0.8221893541633597,
+        "minimum_conditional_atom": 0.09047767299309405,
+        "minimum_conditional_gap": 0.721258655678716,
+        "orientation": "left",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.8221893541633597,
+            "minimum_conditional_atom": 0.09047767299309405,
+            "minimum_conditional_gap": 0.721258655678716,
+            "parent_count": 3,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 2.0,
+        "dimension": 3,
+        "maximum_conditional_gap": 0.623396163014951,
+        "minimum_conditional_atom": 0.04861365215066494,
+        "minimum_conditional_gap": 0.5884248731596748,
+        "orientation": "right",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.623396163014951,
+            "minimum_conditional_atom": 0.04861365215066494,
+            "minimum_conditional_gap": 0.5884248731596748,
+            "parent_count": 3,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 2.0,
+        "dimension": 3,
+        "maximum_conditional_gap": 0.6233961630149516,
+        "minimum_conditional_atom": 0.048613652150664904,
+        "minimum_conditional_gap": 0.5884248731596751,
+        "orientation": "left",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.6233961630149516,
+            "minimum_conditional_atom": 0.048613652150664904,
+            "minimum_conditional_gap": 0.5884248731596751,
+            "parent_count": 3,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 0.5,
+        "dimension": 4,
+        "maximum_conditional_gap": 0.6076607075259766,
+        "minimum_conditional_atom": 0.050686215260035264,
+        "minimum_conditional_gap": 0.5850789029586241,
+        "orientation": "right",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.6076607075259766,
+            "minimum_conditional_atom": 0.050686215260035264,
+            "minimum_conditional_gap": 0.5850789029586241,
+            "parent_count": 4,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 0.5,
+        "dimension": 4,
+        "maximum_conditional_gap": 0.6076607075259763,
+        "minimum_conditional_atom": 0.050686215260035264,
+        "minimum_conditional_gap": 0.5850789029586239,
+        "orientation": "left",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.6076607075259763,
+            "minimum_conditional_atom": 0.050686215260035264,
+            "minimum_conditional_gap": 0.5850789029586239,
+            "parent_count": 4,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 1.0,
+        "dimension": 4,
+        "maximum_conditional_gap": 0.6357152759801465,
+        "minimum_conditional_atom": 0.015343317178629176,
+        "minimum_conditional_gap": 0.6059945708115194,
+        "orientation": "right",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.6357152759801465,
+            "minimum_conditional_atom": 0.015343317178629176,
+            "minimum_conditional_gap": 0.6059945708115194,
+            "parent_count": 4,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 1.0,
+        "dimension": 4,
+        "maximum_conditional_gap": 0.6357152759801461,
+        "minimum_conditional_atom": 0.015343317178629173,
+        "minimum_conditional_gap": 0.6059945708115191,
+        "orientation": "left",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.6357152759801461,
+            "minimum_conditional_atom": 0.015343317178629173,
+            "minimum_conditional_gap": 0.6059945708115191,
+            "parent_count": 4,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 2.0,
+        "dimension": 4,
+        "maximum_conditional_gap": 0.657107174436602,
+        "minimum_conditional_atom": 0.008874737005440914,
+        "minimum_conditional_gap": 0.5559180662307922,
+        "orientation": "right",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.657107174436602,
+            "minimum_conditional_atom": 0.008874737005440914,
+            "minimum_conditional_gap": 0.5559180662307922,
+            "parent_count": 4,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 2.0,
+        "dimension": 4,
+        "maximum_conditional_gap": 0.6571071744366015,
+        "minimum_conditional_atom": 0.008874737005440909,
+        "minimum_conditional_gap": 0.5559180662307922,
+        "orientation": "left",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.6571071744366015,
+            "minimum_conditional_atom": 0.008874737005440909,
+            "minimum_conditional_gap": 0.5559180662307922,
+            "parent_count": 4,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 0.5,
+        "dimension": 5,
+        "maximum_conditional_gap": 0.5158815764819643,
+        "minimum_conditional_atom": 0.00960143458351017,
+        "minimum_conditional_gap": 0.4864260214735093,
+        "orientation": "right",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.5158815764819643,
+            "minimum_conditional_atom": 0.00960143458351017,
+            "minimum_conditional_gap": 0.4864260214735093,
+            "parent_count": 5,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 0.5,
+        "dimension": 5,
+        "maximum_conditional_gap": 0.5158815764819644,
+        "minimum_conditional_atom": 0.009601434583510173,
+        "minimum_conditional_gap": 0.4864260214735094,
+        "orientation": "left",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.5158815764819644,
+            "minimum_conditional_atom": 0.009601434583510173,
+            "minimum_conditional_gap": 0.4864260214735094,
+            "parent_count": 5,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 1.0,
+        "dimension": 5,
+        "maximum_conditional_gap": 0.5973820543335148,
+        "minimum_conditional_atom": 0.0031541034787580667,
+        "minimum_conditional_gap": 0.5576613596836921,
+        "orientation": "right",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.5973820543335148,
+            "minimum_conditional_atom": 0.0031541034787580667,
+            "minimum_conditional_gap": 0.5576613596836921,
+            "parent_count": 5,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 1.0,
+        "dimension": 5,
+        "maximum_conditional_gap": 0.5973820543335149,
+        "minimum_conditional_atom": 0.0031541034787580693,
+        "minimum_conditional_gap": 0.5576613596836925,
+        "orientation": "left",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.5973820543335149,
+            "minimum_conditional_atom": 0.0031541034787580693,
+            "minimum_conditional_gap": 0.5576613596836925,
+            "parent_count": 5,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 2.0,
+        "dimension": 5,
+        "maximum_conditional_gap": 0.733933093126937,
+        "minimum_conditional_atom": 0.0015723117183174087,
+        "minimum_conditional_gap": 0.6030586170277185,
+        "orientation": "right",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.733933093126937,
+            "minimum_conditional_atom": 0.0015723117183174087,
+            "minimum_conditional_gap": 0.6030586170277185,
+            "parent_count": 5,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 2.0,
+        "dimension": 5,
+        "maximum_conditional_gap": 0.733933093126937,
+        "minimum_conditional_atom": 0.0015723117183174087,
+        "minimum_conditional_gap": 0.6030586170277187,
+        "orientation": "left",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.733933093126937,
+            "minimum_conditional_atom": 0.0015723117183174087,
+            "minimum_conditional_gap": 0.6030586170277187,
+            "parent_count": 5,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 0.5,
+        "dimension": 6,
+        "maximum_conditional_gap": 0.4549792035033225,
+        "minimum_conditional_atom": 0.0017883216783469897,
+        "minimum_conditional_gap": 0.43329443886282826,
+        "orientation": "right",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.4549792035033225,
+            "minimum_conditional_atom": 0.0017883216783469897,
+            "minimum_conditional_gap": 0.43329443886282826,
+            "parent_count": 6,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 0.5,
+        "dimension": 6,
+        "maximum_conditional_gap": 0.45497920350332255,
+        "minimum_conditional_atom": 0.0017883216783469882,
+        "minimum_conditional_gap": 0.43329443886282815,
+        "orientation": "left",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.45497920350332255,
+            "minimum_conditional_atom": 0.0017883216783469882,
+            "minimum_conditional_gap": 0.43329443886282815,
+            "parent_count": 6,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 1.0,
+        "dimension": 6,
+        "maximum_conditional_gap": 0.5363579118941753,
+        "minimum_conditional_atom": 0.0008124485057852843,
+        "minimum_conditional_gap": 0.4887695258837843,
+        "orientation": "right",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.5363579118941753,
+            "minimum_conditional_atom": 0.0008124485057852843,
+            "minimum_conditional_gap": 0.4887695258837843,
+            "parent_count": 6,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 1.0,
+        "dimension": 6,
+        "maximum_conditional_gap": 0.5363579118941756,
+        "minimum_conditional_atom": 0.0008124485057852827,
+        "minimum_conditional_gap": 0.488769525883784,
+        "orientation": "left",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.5363579118941756,
+            "minimum_conditional_atom": 0.0008124485057852827,
+            "minimum_conditional_gap": 0.488769525883784,
+            "parent_count": 6,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 2.0,
+        "dimension": 6,
+        "maximum_conditional_gap": 0.6157807629794676,
+        "minimum_conditional_atom": 0.0002841044684720004,
+        "minimum_conditional_gap": 0.546015152340862,
+        "orientation": "right",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.6157807629794676,
+            "minimum_conditional_atom": 0.0002841044684720004,
+            "minimum_conditional_gap": 0.546015152340862,
+            "parent_count": 6,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 2.0,
+        "dimension": 6,
+        "maximum_conditional_gap": 0.6157807629794687,
+        "minimum_conditional_atom": 0.0002841044684719998,
+        "minimum_conditional_gap": 0.5460151523408605,
+        "orientation": "left",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.6157807629794687,
+            "minimum_conditional_atom": 0.0002841044684719998,
+            "minimum_conditional_gap": 0.5460151523408605,
+            "parent_count": 6,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 0.5,
+        "dimension": 7,
+        "maximum_conditional_gap": 0.40653020401424944,
+        "minimum_conditional_atom": 0.0005398337662928874,
+        "minimum_conditional_gap": 0.38841257299915455,
+        "orientation": "right",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.40653020401424944,
+            "minimum_conditional_atom": 0.0005398337662928874,
+            "minimum_conditional_gap": 0.38841257299915455,
+            "parent_count": 7,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 0.5,
+        "dimension": 7,
+        "maximum_conditional_gap": 0.4065302040142498,
+        "minimum_conditional_atom": 0.000539833766292887,
+        "minimum_conditional_gap": 0.3884125729991543,
+        "orientation": "left",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.4065302040142498,
+            "minimum_conditional_atom": 0.000539833766292887,
+            "minimum_conditional_gap": 0.3884125729991543,
+            "parent_count": 7,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 1.0,
+        "dimension": 7,
+        "maximum_conditional_gap": 0.4864096237978298,
+        "minimum_conditional_atom": 0.000248259155888711,
+        "minimum_conditional_gap": 0.4005399058626459,
+        "orientation": "right",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.4864096237978298,
+            "minimum_conditional_atom": 0.000248259155888711,
+            "minimum_conditional_gap": 0.4005399058626459,
+            "parent_count": 7,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 1.0,
+        "dimension": 7,
+        "maximum_conditional_gap": 0.4864096237978297,
+        "minimum_conditional_atom": 0.0002482591558887098,
+        "minimum_conditional_gap": 0.4005399058626453,
+        "orientation": "left",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.4864096237978297,
+            "minimum_conditional_atom": 0.0002482591558887098,
+            "minimum_conditional_gap": 0.4005399058626453,
+            "parent_count": 7,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 2.0,
+        "dimension": 7,
+        "maximum_conditional_gap": 0.586801105334002,
+        "minimum_conditional_atom": 7.471891333660587e-05,
+        "minimum_conditional_gap": 0.45253173553295006,
+        "orientation": "right",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.586801105334002,
+            "minimum_conditional_atom": 7.471891333660587e-05,
+            "minimum_conditional_gap": 0.45253173553295006,
+            "parent_count": 7,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 2.0,
+        "dimension": 7,
+        "maximum_conditional_gap": 0.5868011053340015,
+        "minimum_conditional_atom": 7.471891333660409e-05,
+        "minimum_conditional_gap": 0.452531735532949,
+        "orientation": "left",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.5868011053340015,
+            "minimum_conditional_atom": 7.471891333660409e-05,
+            "minimum_conditional_gap": 0.452531735532949,
+            "parent_count": 7,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 0.5,
+        "dimension": 8,
+        "maximum_conditional_gap": 0.3683699338477693,
+        "minimum_conditional_atom": 0.00022000986021070628,
+        "minimum_conditional_gap": 0.33862971609709497,
+        "orientation": "right",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.3683699338477693,
+            "minimum_conditional_atom": 0.00022000986021070628,
+            "minimum_conditional_gap": 0.33862971609709497,
+            "parent_count": 8,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 0.5,
+        "dimension": 8,
+        "maximum_conditional_gap": 0.3683699338477697,
+        "minimum_conditional_atom": 0.00022000986021070626,
+        "minimum_conditional_gap": 0.33862971609709414,
+        "orientation": "left",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.3683699338477697,
+            "minimum_conditional_atom": 0.00022000986021070626,
+            "minimum_conditional_gap": 0.33862971609709414,
+            "parent_count": 8,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 1.0,
+        "dimension": 8,
+        "maximum_conditional_gap": 0.4594143818068227,
+        "minimum_conditional_atom": 7.283740954277482e-05,
+        "minimum_conditional_gap": 0.3346754243038511,
+        "orientation": "right",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.4594143818068227,
+            "minimum_conditional_atom": 7.283740954277482e-05,
+            "minimum_conditional_gap": 0.3346754243038511,
+            "parent_count": 8,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 1.0,
+        "dimension": 8,
+        "maximum_conditional_gap": 0.45941438180682276,
+        "minimum_conditional_atom": 7.283740954277528e-05,
+        "minimum_conditional_gap": 0.33467542430385266,
+        "orientation": "left",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.45941438180682276,
+            "minimum_conditional_atom": 7.283740954277528e-05,
+            "minimum_conditional_gap": 0.33467542430385266,
+            "parent_count": 8,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 2.0,
+        "dimension": 8,
+        "maximum_conditional_gap": 0.5695734644062432,
+        "minimum_conditional_atom": 9.033268919705062e-06,
+        "minimum_conditional_gap": 0.4458931029582602,
+        "orientation": "right",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.5695734644062432,
+            "minimum_conditional_atom": 9.033268919705062e-06,
+            "minimum_conditional_gap": 0.4458931029582602,
+            "parent_count": 8,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 2.0,
+        "dimension": 8,
+        "maximum_conditional_gap": 0.5695734644062438,
+        "minimum_conditional_atom": 9.033268919704965e-06,
+        "minimum_conditional_gap": 0.44589310295826406,
+        "orientation": "left",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.5695734644062438,
+            "minimum_conditional_atom": 9.033268919704965e-06,
+            "minimum_conditional_gap": 0.44589310295826406,
+            "parent_count": 8,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 0.5,
+        "dimension": 9,
+        "maximum_conditional_gap": 0.3450689384581398,
+        "minimum_conditional_atom": 8.84475557594475e-05,
+        "minimum_conditional_gap": 0.26653684785929044,
+        "orientation": "right",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.3450689384581398,
+            "minimum_conditional_atom": 8.84475557594475e-05,
+            "minimum_conditional_gap": 0.26653684785929044,
+            "parent_count": 9,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 0.5,
+        "dimension": 9,
+        "maximum_conditional_gap": 0.3450689384581401,
+        "minimum_conditional_atom": 8.844755575944601e-05,
+        "minimum_conditional_gap": 0.2665368478592898,
+        "orientation": "left",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.3450689384581401,
+            "minimum_conditional_atom": 8.844755575944601e-05,
+            "minimum_conditional_gap": 0.2665368478592898,
+            "parent_count": 9,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 1.0,
+        "dimension": 9,
+        "maximum_conditional_gap": 0.439858507404099,
+        "minimum_conditional_atom": 2.1497837521127057e-05,
+        "minimum_conditional_gap": 0.28479778871458694,
+        "orientation": "right",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.439858507404099,
+            "minimum_conditional_atom": 2.1497837521127057e-05,
+            "minimum_conditional_gap": 0.28479778871458694,
+            "parent_count": 9,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 1.0,
+        "dimension": 9,
+        "maximum_conditional_gap": 0.4398585074040981,
+        "minimum_conditional_atom": 2.1497837521127955e-05,
+        "minimum_conditional_gap": 0.2847977887145848,
+        "orientation": "left",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.4398585074040981,
+            "minimum_conditional_atom": 2.1497837521127955e-05,
+            "minimum_conditional_gap": 0.2847977887145848,
+            "parent_count": 9,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 2.0,
+        "dimension": 9,
+        "maximum_conditional_gap": 0.5567470474046882,
+        "minimum_conditional_atom": 2.163369982098849e-06,
+        "minimum_conditional_gap": 0.3419272861503,
+        "orientation": "right",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.5567470474046882,
+            "minimum_conditional_atom": 2.163369982098849e-06,
+            "minimum_conditional_gap": 0.3419272861503,
+            "parent_count": 9,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 2.0,
+        "dimension": 9,
+        "maximum_conditional_gap": 0.5567470474046912,
+        "minimum_conditional_atom": 2.1633699820979167e-06,
+        "minimum_conditional_gap": 0.3419272861502992,
+        "orientation": "left",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.5567470474046912,
+            "minimum_conditional_atom": 2.1633699820979167e-06,
+            "minimum_conditional_gap": 0.3419272861502992,
+            "parent_count": 9,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 0.5,
+        "dimension": 10,
+        "maximum_conditional_gap": 0.3280246280430466,
+        "minimum_conditional_atom": 3.842731276142202e-05,
+        "minimum_conditional_gap": 0.23252841768427238,
+        "orientation": "right",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.3280246280430466,
+            "minimum_conditional_atom": 3.842731276142202e-05,
+            "minimum_conditional_gap": 0.23252841768427238,
+            "parent_count": 10,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 0.5,
+        "dimension": 10,
+        "maximum_conditional_gap": 0.328024628043047,
+        "minimum_conditional_atom": 3.8427312761423215e-05,
+        "minimum_conditional_gap": 0.23252841768427132,
+        "orientation": "left",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.328024628043047,
+            "minimum_conditional_atom": 3.8427312761423215e-05,
+            "minimum_conditional_gap": 0.23252841768427132,
+            "parent_count": 10,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 1.0,
+        "dimension": 10,
+        "maximum_conditional_gap": 0.41964506366884313,
+        "minimum_conditional_atom": 7.238171674581906e-06,
+        "minimum_conditional_gap": 0.2494783062775683,
+        "orientation": "right",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.41964506366884313,
+            "minimum_conditional_atom": 7.238171674581906e-06,
+            "minimum_conditional_gap": 0.2494783062775683,
+            "parent_count": 10,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 1.0,
+        "dimension": 10,
+        "maximum_conditional_gap": 0.4196450636688438,
+        "minimum_conditional_atom": 7.238171674583843e-06,
+        "minimum_conditional_gap": 0.24947830627757103,
+        "orientation": "left",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.4196450636688438,
+            "minimum_conditional_atom": 7.238171674583843e-06,
+            "minimum_conditional_gap": 0.24947830627757103,
+            "parent_count": 10,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 2.0,
+        "dimension": 10,
+        "maximum_conditional_gap": 0.5328552073597352,
+        "minimum_conditional_atom": 6.520472823271028e-07,
+        "minimum_conditional_gap": 0.17705997700856066,
+        "orientation": "right",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.5328552073597352,
+            "minimum_conditional_atom": 6.520472823271028e-07,
+            "minimum_conditional_gap": 0.17705997700856066,
+            "parent_count": 10,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 2.0,
+        "dimension": 10,
+        "maximum_conditional_gap": 0.5328552073597302,
+        "minimum_conditional_atom": 6.520472823270522e-07,
+        "minimum_conditional_gap": 0.1770599770085871,
+        "orientation": "left",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.5328552073597302,
+            "minimum_conditional_atom": 6.520472823270522e-07,
+            "minimum_conditional_gap": 0.1770599770085871,
+            "parent_count": 10,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 0.5,
+        "dimension": 11,
+        "maximum_conditional_gap": 0.30620841258237647,
+        "minimum_conditional_atom": 1.7823108445531365e-05,
+        "minimum_conditional_gap": 0.22315517169099672,
+        "orientation": "right",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.30620841258237647,
+            "minimum_conditional_atom": 1.7823108445531365e-05,
+            "minimum_conditional_gap": 0.22315517169099672,
+            "parent_count": 11,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 0.5,
+        "dimension": 11,
+        "maximum_conditional_gap": 0.3062084125823763,
+        "minimum_conditional_atom": 1.7823108445531945e-05,
+        "minimum_conditional_gap": 0.223155171690996,
+        "orientation": "left",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.3062084125823763,
+            "minimum_conditional_atom": 1.7823108445531945e-05,
+            "minimum_conditional_gap": 0.223155171690996,
+            "parent_count": 11,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 1.0,
+        "dimension": 11,
+        "maximum_conditional_gap": 0.3876023501783617,
+        "minimum_conditional_atom": 2.492500261754937e-06,
+        "minimum_conditional_gap": 0.24332438565426492,
+        "orientation": "right",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.3876023501783617,
+            "minimum_conditional_atom": 2.492500261754937e-06,
+            "minimum_conditional_gap": 0.24332438565426492,
+            "parent_count": 11,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 1.0,
+        "dimension": 11,
+        "maximum_conditional_gap": 0.38760235017836264,
+        "minimum_conditional_atom": 2.4925002617548625e-06,
+        "minimum_conditional_gap": 0.24332438565426598,
+        "orientation": "left",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.38760235017836264,
+            "minimum_conditional_atom": 2.4925002617548625e-06,
+            "minimum_conditional_gap": 0.24332438565426598,
+            "parent_count": 11,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 2.0,
+        "dimension": 11,
+        "maximum_conditional_gap": 0.5257395095529549,
+        "minimum_conditional_atom": 9.656044235992765e-08,
+        "minimum_conditional_gap": 0.2099912944870888,
+        "orientation": "right",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.5257395095529549,
+            "minimum_conditional_atom": 9.656044235992765e-08,
+            "minimum_conditional_gap": 0.2099912944870888,
+            "parent_count": 11,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 2.0,
+        "dimension": 11,
+        "maximum_conditional_gap": 0.5257395095529497,
+        "minimum_conditional_atom": 9.656044235994138e-08,
+        "minimum_conditional_gap": 0.2099912944871029,
+        "orientation": "left",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.5257395095529497,
+            "minimum_conditional_atom": 9.656044235994138e-08,
+            "minimum_conditional_gap": 0.2099912944871029,
+            "parent_count": 11,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 0.5,
+        "dimension": 12,
+        "maximum_conditional_gap": 0.2822660849217487,
+        "minimum_conditional_atom": 8.634976585334895e-06,
+        "minimum_conditional_gap": 0.21908042386540366,
+        "orientation": "right",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.2822660849217487,
+            "minimum_conditional_atom": 8.634976585334895e-06,
+            "minimum_conditional_gap": 0.21908042386540366,
+            "parent_count": 12,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 0.5,
+        "dimension": 12,
+        "maximum_conditional_gap": 0.28226608492174843,
+        "minimum_conditional_atom": 8.63497658532988e-06,
+        "minimum_conditional_gap": 0.21908042386540152,
+        "orientation": "left",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.28226608492174843,
+            "minimum_conditional_atom": 8.63497658532988e-06,
+            "minimum_conditional_gap": 0.21908042386540152,
+            "parent_count": 12,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 1.0,
+        "dimension": 12,
+        "maximum_conditional_gap": 0.38161280916282925,
+        "minimum_conditional_atom": 7.903941332658442e-07,
+        "minimum_conditional_gap": 0.25063348696715226,
+        "orientation": "right",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.38161280916282925,
+            "minimum_conditional_atom": 7.903941332658442e-07,
+            "minimum_conditional_gap": 0.25063348696715226,
+            "parent_count": 12,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 1.0,
+        "dimension": 12,
+        "maximum_conditional_gap": 0.3816128091628293,
+        "minimum_conditional_atom": 7.903941332659112e-07,
+        "minimum_conditional_gap": 0.25063348696714693,
+        "orientation": "left",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.3816128091628293,
+            "minimum_conditional_atom": 7.903941332659112e-07,
+            "minimum_conditional_gap": 0.25063348696714693,
+            "parent_count": 12,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 2.0,
+        "dimension": 12,
+        "maximum_conditional_gap": 0.48278211068169674,
+        "minimum_conditional_atom": 4.103487201122998e-08,
+        "minimum_conditional_gap": 0.1961440152574812,
+        "orientation": "right",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.48278211068169674,
+            "minimum_conditional_atom": 4.103487201122998e-08,
+            "minimum_conditional_gap": 0.1961440152574812,
+            "parent_count": 12,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 2.0,
+        "dimension": 12,
+        "maximum_conditional_gap": 0.4827821106816974,
+        "minimum_conditional_atom": 4.103487200963217e-08,
+        "minimum_conditional_gap": 0.19614401525741237,
+        "orientation": "left",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.4827821106816974,
+            "minimum_conditional_atom": 4.103487200963217e-08,
+            "minimum_conditional_gap": 0.19614401525741237,
+            "parent_count": 12,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 0.5,
+        "dimension": 13,
+        "maximum_conditional_gap": 0.27556883183783015,
+        "minimum_conditional_atom": 4.3156136796402815e-06,
+        "minimum_conditional_gap": 0.20947481250374955,
+        "orientation": "right",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.27556883183783015,
+            "minimum_conditional_atom": 4.3156136796402815e-06,
+            "minimum_conditional_gap": 0.20947481250374955,
+            "parent_count": 13,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 0.5,
+        "dimension": 13,
+        "maximum_conditional_gap": 0.2755688318378313,
+        "minimum_conditional_atom": 4.315613679640735e-06,
+        "minimum_conditional_gap": 0.20947481250374617,
+        "orientation": "left",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.2755688318378313,
+            "minimum_conditional_atom": 4.315613679640735e-06,
+            "minimum_conditional_gap": 0.20947481250374617,
+            "parent_count": 13,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 1.0,
+        "dimension": 13,
+        "maximum_conditional_gap": 0.3745463700783688,
+        "minimum_conditional_atom": 2.877311346110589e-07,
+        "minimum_conditional_gap": 0.2340387559195297,
+        "orientation": "right",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.3745463700783688,
+            "minimum_conditional_atom": 2.877311346110589e-07,
+            "minimum_conditional_gap": 0.2340387559195297,
+            "parent_count": 13,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 1.0,
+        "dimension": 13,
+        "maximum_conditional_gap": 0.37454637007836955,
+        "minimum_conditional_atom": 2.877311346110719e-07,
+        "minimum_conditional_gap": 0.23403875591952877,
+        "orientation": "left",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.37454637007836955,
+            "minimum_conditional_atom": 2.877311346110719e-07,
+            "minimum_conditional_gap": 0.23403875591952877,
+            "parent_count": 13,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 2.0,
+        "dimension": 13,
+        "maximum_conditional_gap": 0.47121824910487525,
+        "minimum_conditional_atom": 5.723573133677334e-09,
+        "minimum_conditional_gap": 0.09236987530852184,
+        "orientation": "right",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.47121824910487525,
+            "minimum_conditional_atom": 5.723573133677334e-09,
+            "minimum_conditional_gap": 0.09236987530852184,
+            "parent_count": 13,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 2.0,
+        "dimension": 13,
+        "maximum_conditional_gap": 0.47121824910486754,
+        "minimum_conditional_atom": 5.723573133665876e-09,
+        "minimum_conditional_gap": 0.0923698753087049,
+        "orientation": "left",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.47121824910486754,
+            "minimum_conditional_atom": 5.723573133665876e-09,
+            "minimum_conditional_gap": 0.0923698753087049,
+            "parent_count": 13,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 0.5,
+        "dimension": 14,
+        "maximum_conditional_gap": 0.2657745594191586,
+        "minimum_conditional_atom": 2.2379156077754593e-06,
+        "minimum_conditional_gap": 0.1809327291387027,
+        "orientation": "right",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.2657745594191586,
+            "minimum_conditional_atom": 2.2379156077754593e-06,
+            "minimum_conditional_gap": 0.1809327291387027,
+            "parent_count": 14,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 0.5,
+        "dimension": 14,
+        "maximum_conditional_gap": 0.2657745594191586,
+        "minimum_conditional_atom": 2.2379156077535893e-06,
+        "minimum_conditional_gap": 0.18093272913870448,
+        "orientation": "left",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.2657745594191586,
+            "minimum_conditional_atom": 2.2379156077535893e-06,
+            "minimum_conditional_gap": 0.18093272913870448,
+            "parent_count": 14,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 1.0,
+        "dimension": 14,
+        "maximum_conditional_gap": 0.3671801355515964,
+        "minimum_conditional_atom": 1.058142637338483e-07,
+        "minimum_conditional_gap": 0.18794856819957326,
+        "orientation": "right",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.3671801355515964,
+            "minimum_conditional_atom": 1.058142637338483e-07,
+            "minimum_conditional_gap": 0.18794856819957326,
+            "parent_count": 14,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 1.0,
+        "dimension": 14,
+        "maximum_conditional_gap": 0.3671801355515963,
+        "minimum_conditional_atom": 1.0581426373385586e-07,
+        "minimum_conditional_gap": 0.18794856819956174,
+        "orientation": "left",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.3671801355515963,
+            "minimum_conditional_atom": 1.0581426373385586e-07,
+            "minimum_conditional_gap": 0.18794856819956174,
+            "parent_count": 14,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 2.0,
+        "dimension": 14,
+        "maximum_conditional_gap": 0.4698121439490166,
+        "minimum_conditional_atom": 2.1955386214236532e-09,
+        "minimum_conditional_gap": 0.23893127303832637,
+        "orientation": "right",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.4698121439490166,
+            "minimum_conditional_atom": 2.1955386214236532e-09,
+            "minimum_conditional_gap": 0.23893127303832637,
+            "parent_count": 14,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 2.0,
+        "dimension": 14,
+        "maximum_conditional_gap": 0.46981214394890425,
+        "minimum_conditional_atom": 2.1955386214023587e-09,
+        "minimum_conditional_gap": 0.23893127303815664,
+        "orientation": "left",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.46981214394890425,
+            "minimum_conditional_atom": 2.1955386214023587e-09,
+            "minimum_conditional_gap": 0.23893127303815664,
+            "parent_count": 14,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 0.5,
+        "dimension": 15,
+        "maximum_conditional_gap": 0.25329159607444374,
+        "minimum_conditional_atom": 1.2187045758360078e-06,
+        "minimum_conditional_gap": 0.15874720554042768,
+        "orientation": "right",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.25329159607444374,
+            "minimum_conditional_atom": 1.2187045758360078e-06,
+            "minimum_conditional_gap": 0.15874720554042768,
+            "parent_count": 15,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 0.5,
+        "dimension": 15,
+        "maximum_conditional_gap": 0.2532915960744446,
+        "minimum_conditional_atom": 1.2187045758078243e-06,
+        "minimum_conditional_gap": 0.15874720554042415,
+        "orientation": "left",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.2532915960744446,
+            "minimum_conditional_atom": 1.2187045758078243e-06,
+            "minimum_conditional_gap": 0.15874720554042415,
+            "parent_count": 15,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 1.0,
+        "dimension": 15,
+        "maximum_conditional_gap": 0.35964310802304433,
+        "minimum_conditional_atom": 3.87856851337863e-08,
+        "minimum_conditional_gap": 0.1600505557335689,
+        "orientation": "right",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.35964310802304433,
+            "minimum_conditional_atom": 3.87856851337863e-08,
+            "minimum_conditional_gap": 0.1600505557335689,
+            "parent_count": 15,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 1.0,
+        "dimension": 15,
+        "maximum_conditional_gap": 0.3596431080230566,
+        "minimum_conditional_atom": 3.8785685133792946e-08,
+        "minimum_conditional_gap": 0.16005055573358384,
+        "orientation": "left",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.3596431080230566,
+            "minimum_conditional_atom": 3.8785685133792946e-08,
+            "minimum_conditional_gap": 0.16005055573358384,
+            "parent_count": 15,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 2.0,
+        "dimension": 15,
+        "maximum_conditional_gap": 0.4492105612343629,
+        "minimum_conditional_atom": 1.0796336480618478e-09,
+        "minimum_conditional_gap": 0.07535088232875888,
+        "orientation": "right",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.4492105612343629,
+            "minimum_conditional_atom": 1.0796336480618478e-09,
+            "minimum_conditional_gap": 0.07535088232875888,
+            "parent_count": 15,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 2.0,
+        "dimension": 15,
+        "maximum_conditional_gap": 0.4492105612273872,
+        "minimum_conditional_atom": 1.079633648058257e-09,
+        "minimum_conditional_gap": 0.07535088232827637,
+        "orientation": "left",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.4492105612273872,
+            "minimum_conditional_atom": 1.079633648058257e-09,
+            "minimum_conditional_gap": 0.07535088232827637,
+            "parent_count": 15,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 0.5,
+        "dimension": 16,
+        "maximum_conditional_gap": 0.23667189330743219,
+        "minimum_conditional_atom": 6.798210593728915e-07,
+        "minimum_conditional_gap": 0.1597705114884622,
+        "orientation": "right",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.23667189330743219,
+            "minimum_conditional_atom": 6.798210593728915e-07,
+            "minimum_conditional_gap": 0.1597705114884622,
+            "parent_count": 16,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 0.5,
+        "dimension": 16,
+        "maximum_conditional_gap": 0.23667189330743307,
+        "minimum_conditional_atom": 6.798210594260923e-07,
+        "minimum_conditional_gap": 0.15977051148845295,
+        "orientation": "left",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.23667189330743307,
+            "minimum_conditional_atom": 6.798210594260923e-07,
+            "minimum_conditional_gap": 0.15977051148845295,
+            "parent_count": 16,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 1.0,
+        "dimension": 16,
+        "maximum_conditional_gap": 0.33203152860964125,
+        "minimum_conditional_atom": 1.5039470859864733e-08,
+        "minimum_conditional_gap": 0.18750324435409832,
+        "orientation": "right",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.33203152860964125,
+            "minimum_conditional_atom": 1.5039470859864733e-08,
+            "minimum_conditional_gap": 0.18750324435409832,
+            "parent_count": 16,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 1.0,
+        "dimension": 16,
+        "maximum_conditional_gap": 0.33203152860960494,
+        "minimum_conditional_atom": 1.5039470859865606e-08,
+        "minimum_conditional_gap": 0.18750324435415266,
+        "orientation": "left",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.33203152860960494,
+            "minimum_conditional_atom": 1.5039470859865606e-08,
+            "minimum_conditional_gap": 0.18750324435415266,
+            "parent_count": 16,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 2.0,
+        "dimension": 16,
+        "maximum_conditional_gap": 0.4363775590846776,
+        "minimum_conditional_atom": 1.4952212074690077e-10,
+        "minimum_conditional_gap": 0.06616743933040153,
+        "orientation": "right",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.4363775590846776,
+            "minimum_conditional_atom": 1.4952212074690077e-10,
+            "minimum_conditional_gap": 0.06616743933040153,
+            "parent_count": 16,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 2.0,
+        "dimension": 16,
+        "maximum_conditional_gap": 0.43637755904479364,
+        "minimum_conditional_atom": 1.4952212074758084e-10,
+        "minimum_conditional_gap": 0.0661674393304663,
+        "orientation": "left",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.43637755904479364,
+            "minimum_conditional_atom": 1.4952212074758084e-10,
+            "minimum_conditional_gap": 0.0661674393304663,
+            "parent_count": 16,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 0.5,
+        "dimension": 17,
+        "maximum_conditional_gap": 0.2333019329157478,
+        "minimum_conditional_atom": 3.6802286237124235e-07,
+        "minimum_conditional_gap": 0.16256654029959297,
+        "orientation": "right",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.2333019329157478,
+            "minimum_conditional_atom": 3.6802286237124235e-07,
+            "minimum_conditional_gap": 0.16256654029959297,
+            "parent_count": 17,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 0.5,
+        "dimension": 17,
+        "maximum_conditional_gap": 0.2333019329157472,
+        "minimum_conditional_atom": 3.680228623712296e-07,
+        "minimum_conditional_gap": 0.16256654029959625,
+        "orientation": "left",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.2333019329157472,
+            "minimum_conditional_atom": 3.680228623712296e-07,
+            "minimum_conditional_gap": 0.16256654029959625,
+            "parent_count": 17,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 1.0,
+        "dimension": 17,
+        "maximum_conditional_gap": 0.3283054369823765,
+        "minimum_conditional_atom": 5.713466608403694e-09,
+        "minimum_conditional_gap": 0.17777230634256078,
+        "orientation": "right",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.3283054369823765,
+            "minimum_conditional_atom": 5.713466608403694e-09,
+            "minimum_conditional_gap": 0.17777230634256078,
+            "parent_count": 17,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 1.0,
+        "dimension": 17,
+        "maximum_conditional_gap": 0.3283054369823724,
+        "minimum_conditional_atom": 5.713466608404039e-09,
+        "minimum_conditional_gap": 0.17777230634255714,
+        "orientation": "left",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.3283054369823724,
+            "minimum_conditional_atom": 5.713466608404039e-09,
+            "minimum_conditional_gap": 0.17777230634255714,
+            "parent_count": 17,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 2.0,
+        "dimension": 17,
+        "maximum_conditional_gap": 0.42781402189448003,
+        "minimum_conditional_atom": 1.0478881235138969e-10,
+        "minimum_conditional_gap": 0.17400450157438663,
+        "orientation": "right",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.42781402189448003,
+            "minimum_conditional_atom": 1.0478881235138969e-10,
+            "minimum_conditional_gap": 0.17400450157438663,
+            "parent_count": 17,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 2.0,
+        "dimension": 17,
+        "maximum_conditional_gap": 0.42781402190469914,
+        "minimum_conditional_atom": 1.0478881235186748e-10,
+        "minimum_conditional_gap": 0.17400450157230016,
+        "orientation": "left",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.42781402190469914,
+            "minimum_conditional_atom": 1.0478881235186748e-10,
+            "minimum_conditional_gap": 0.17400450157230016,
+            "parent_count": 17,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 0.5,
+        "dimension": 18,
+        "maximum_conditional_gap": 0.2297710225272179,
+        "minimum_conditional_atom": 2.0130266938062818e-07,
+        "minimum_conditional_gap": 0.14933952333670325,
+        "orientation": "right",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.2297710225272179,
+            "minimum_conditional_atom": 2.0130266938062818e-07,
+            "minimum_conditional_gap": 0.14933952333670325,
+            "parent_count": 18,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 0.5,
+        "dimension": 18,
+        "maximum_conditional_gap": 0.2297710225272187,
+        "minimum_conditional_atom": 2.0130266938062405e-07,
+        "minimum_conditional_gap": 0.14933952333672418,
+        "orientation": "left",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.2297710225272187,
+            "minimum_conditional_atom": 2.0130266938062405e-07,
+            "minimum_conditional_gap": 0.14933952333672418,
+            "parent_count": 18,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 1.0,
+        "dimension": 18,
+        "maximum_conditional_gap": 0.32865207457561163,
+        "minimum_conditional_atom": 2.178242539857135e-09,
+        "minimum_conditional_gap": 0.16951137231477337,
+        "orientation": "right",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.32865207457561163,
+            "minimum_conditional_atom": 2.178242539857135e-09,
+            "minimum_conditional_gap": 0.16951137231477337,
+            "parent_count": 18,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 1.0,
+        "dimension": 18,
+        "maximum_conditional_gap": 0.3286520745755916,
+        "minimum_conditional_atom": 2.1782425398583133e-09,
+        "minimum_conditional_gap": 0.16951137231477012,
+        "orientation": "left",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.3286520745755916,
+            "minimum_conditional_atom": 2.1782425398583133e-09,
+            "minimum_conditional_gap": 0.16951137231477012,
+            "parent_count": 18,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 2.0,
+        "dimension": 18,
+        "maximum_conditional_gap": 0.34578764317611765,
+        "minimum_conditional_atom": 3.729175575749137e-11,
+        "minimum_conditional_gap": 0.06089159127619731,
+        "orientation": "right",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.34578764317611765,
+            "minimum_conditional_atom": 3.729175575749137e-11,
+            "minimum_conditional_gap": 0.06089159127619731,
+            "parent_count": 18,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 2.0,
+        "dimension": 18,
+        "maximum_conditional_gap": 0.3457876431735368,
+        "minimum_conditional_atom": 3.729175575727877e-11,
+        "minimum_conditional_gap": 0.06089159127425406,
+        "orientation": "left",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.3457876431735368,
+            "minimum_conditional_atom": 3.729175575727877e-11,
+            "minimum_conditional_gap": 0.06089159127425406,
+            "parent_count": 18,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 0.5,
+        "dimension": 19,
+        "maximum_conditional_gap": 0.22136572543852445,
+        "minimum_conditional_atom": 1.1114546737963452e-07,
+        "minimum_conditional_gap": 0.12441386312645335,
+        "orientation": "right",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.22136572543852445,
+            "minimum_conditional_atom": 1.1114546737963452e-07,
+            "minimum_conditional_gap": 0.12441386312645335,
+            "parent_count": 19,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 0.5,
+        "dimension": 19,
+        "maximum_conditional_gap": 0.2213657254385252,
+        "minimum_conditional_atom": 1.1114546737963438e-07,
+        "minimum_conditional_gap": 0.12441386312645655,
+        "orientation": "left",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.2213657254385252,
+            "minimum_conditional_atom": 1.1114546737963438e-07,
+            "minimum_conditional_gap": 0.12441386312645655,
+            "parent_count": 19,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 1.0,
+        "dimension": 19,
+        "maximum_conditional_gap": 0.324764416666933,
+        "minimum_conditional_atom": 8.817150559395594e-10,
+        "minimum_conditional_gap": 0.12397826662846632,
+        "orientation": "right",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.324764416666933,
+            "minimum_conditional_atom": 8.817150559395594e-10,
+            "minimum_conditional_gap": 0.12397826662846632,
+            "parent_count": 19,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 1.0,
+        "dimension": 19,
+        "maximum_conditional_gap": 0.32476441666332007,
+        "minimum_conditional_atom": 8.817150559400105e-10,
+        "minimum_conditional_gap": 0.12397826662844888,
+        "orientation": "left",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.32476441666332007,
+            "minimum_conditional_atom": 8.817150559400105e-10,
+            "minimum_conditional_gap": 0.12397826662844888,
+            "parent_count": 19,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 2.0,
+        "dimension": 19,
+        "maximum_conditional_gap": 0.33930116680364664,
+        "minimum_conditional_atom": 7.844669446512808e-12,
+        "minimum_conditional_gap": 0.08954863584545418,
+        "orientation": "right",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.33930116680364664,
+            "minimum_conditional_atom": 7.844669446512808e-12,
+            "minimum_conditional_gap": 0.08954863584545418,
+            "parent_count": 19,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 2.0,
+        "dimension": 19,
+        "maximum_conditional_gap": 0.3393011668036457,
+        "minimum_conditional_atom": 7.844669446648863e-12,
+        "minimum_conditional_gap": 0.08954863584535729,
+        "orientation": "left",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.3393011668036457,
+            "minimum_conditional_atom": 7.844669446648863e-12,
+            "minimum_conditional_gap": 0.08954863584535729,
+            "parent_count": 19,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 0.5,
+        "dimension": 20,
+        "maximum_conditional_gap": 0.20801361196512402,
+        "minimum_conditional_atom": 6.18962962144091e-08,
+        "minimum_conditional_gap": 0.1265999515590865,
+        "orientation": "right",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.20801361196512402,
+            "minimum_conditional_atom": 6.18962962144091e-08,
+            "minimum_conditional_gap": 0.1265999515590865,
+            "parent_count": 20,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 0.5,
+        "dimension": 20,
+        "maximum_conditional_gap": 0.20801361196512408,
+        "minimum_conditional_atom": 6.189629621439975e-08,
+        "minimum_conditional_gap": 0.1265999515591111,
+        "orientation": "left",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.20801361196512408,
+            "minimum_conditional_atom": 6.189629621439975e-08,
+            "minimum_conditional_gap": 0.1265999515591111,
+            "parent_count": 20,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 1.0,
+        "dimension": 20,
+        "maximum_conditional_gap": 0.31523888519887233,
+        "minimum_conditional_atom": 3.4367423878208587e-10,
+        "minimum_conditional_gap": 0.12970180222331368,
+        "orientation": "right",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.31523888519887233,
+            "minimum_conditional_atom": 3.4367423878208587e-10,
+            "minimum_conditional_gap": 0.12970180222331368,
+            "parent_count": 20,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 1.0,
+        "dimension": 20,
+        "maximum_conditional_gap": 0.3152388852048903,
+        "minimum_conditional_atom": 3.4367423878202114e-10,
+        "minimum_conditional_gap": 0.12970180222361113,
+        "orientation": "left",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.3152388852048903,
+            "minimum_conditional_atom": 3.4367423878202114e-10,
+            "minimum_conditional_gap": 0.12970180222361113,
+            "parent_count": 20,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 2.0,
+        "dimension": 20,
+        "maximum_conditional_gap": 0.3121909580884416,
+        "minimum_conditional_atom": 6.683673467116381e-12,
+        "minimum_conditional_gap": 0.11412778435863478,
+        "orientation": "right",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.3121909580884416,
+            "minimum_conditional_atom": 6.683673467116381e-12,
+            "minimum_conditional_gap": 0.11412778435863478,
+            "parent_count": 20,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 2.0,
+        "dimension": 20,
+        "maximum_conditional_gap": 0.3121909596461276,
+        "minimum_conditional_atom": 6.683666091143948e-12,
+        "minimum_conditional_gap": 0.11412778435276838,
+        "orientation": "left",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.3121909596461276,
+            "minimum_conditional_atom": 6.683666091143948e-12,
+            "minimum_conditional_gap": 0.11412778435276838,
+            "parent_count": 20,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 0.5,
+        "dimension": 21,
+        "maximum_conditional_gap": 0.20736038729492393,
+        "minimum_conditional_atom": 3.4737031824600625e-08,
+        "minimum_conditional_gap": 0.1334617446816934,
+        "orientation": "right",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.20736038729492393,
+            "minimum_conditional_atom": 3.4737031824600625e-08,
+            "minimum_conditional_gap": 0.1334617446816934,
+            "parent_count": 21,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 0.5,
+        "dimension": 21,
+        "maximum_conditional_gap": 0.20736038729492284,
+        "minimum_conditional_atom": 3.473703182461137e-08,
+        "minimum_conditional_gap": 0.1334617446816885,
+        "orientation": "left",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.20736038729492284,
+            "minimum_conditional_atom": 3.473703182461137e-08,
+            "minimum_conditional_gap": 0.1334617446816885,
+            "parent_count": 21,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 1.0,
+        "dimension": 21,
+        "maximum_conditional_gap": 0.2685233261946292,
+        "minimum_conditional_atom": 1.3753739138971738e-10,
+        "minimum_conditional_gap": 0.13242647317222095,
+        "orientation": "right",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.2685233261946292,
+            "minimum_conditional_atom": 1.3753739138971738e-10,
+            "minimum_conditional_gap": 0.13242647317222095,
+            "parent_count": 21,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 1.0,
+        "dimension": 21,
+        "maximum_conditional_gap": 0.26852332619525804,
+        "minimum_conditional_atom": 1.3753739138985947e-10,
+        "minimum_conditional_gap": 0.13242647317108905,
+        "orientation": "left",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.26852332619525804,
+            "minimum_conditional_atom": 1.3753739138985947e-10,
+            "minimum_conditional_gap": 0.13242647317108905,
+            "parent_count": 21,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 2.0,
+        "dimension": 21,
+        "maximum_conditional_gap": 0.3038997388731741,
+        "minimum_conditional_atom": 9.565784170520477e-13,
+        "minimum_conditional_gap": 0.03247898479360947,
+        "orientation": "right",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.3038997388731741,
+            "minimum_conditional_atom": 9.565784170520477e-13,
+            "minimum_conditional_gap": 0.03247898479360947,
+            "parent_count": 21,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 2.0,
+        "dimension": 21,
+        "maximum_conditional_gap": 0.30389973339693915,
+        "minimum_conditional_atom": 9.565784170333662e-13,
+        "minimum_conditional_gap": 0.032478984793328024,
+        "orientation": "left",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.30389973339693915,
+            "minimum_conditional_atom": 9.565784170333662e-13,
+            "minimum_conditional_gap": 0.032478984793328024,
+            "parent_count": 21,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 0.5,
+        "dimension": 22,
+        "maximum_conditional_gap": 0.2052315599269959,
+        "minimum_conditional_atom": 1.963063495573989e-08,
+        "minimum_conditional_gap": 0.12315569061836254,
+        "orientation": "right",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.2052315599269959,
+            "minimum_conditional_atom": 1.963063495573989e-08,
+            "minimum_conditional_gap": 0.12315569061836254,
+            "parent_count": 22,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 0.5,
+        "dimension": 22,
+        "maximum_conditional_gap": 0.20523155992699224,
+        "minimum_conditional_atom": 1.9630634955747126e-08,
+        "minimum_conditional_gap": 0.12315569061837923,
+        "orientation": "left",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.20523155992699224,
+            "minimum_conditional_atom": 1.9630634955747126e-08,
+            "minimum_conditional_gap": 0.12315569061837923,
+            "parent_count": 22,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 1.0,
+        "dimension": 22,
+        "maximum_conditional_gap": 0.25573339271921536,
+        "minimum_conditional_atom": 5.84918325572679e-11,
+        "minimum_conditional_gap": 0.1259620541470489,
+        "orientation": "right",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.25573339271921536,
+            "minimum_conditional_atom": 5.84918325572679e-11,
+            "minimum_conditional_gap": 0.1259620541470489,
+            "parent_count": 22,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 1.0,
+        "dimension": 22,
+        "maximum_conditional_gap": 0.25573339271382395,
+        "minimum_conditional_atom": 5.849183255729535e-11,
+        "minimum_conditional_gap": 0.12596205414752654,
+        "orientation": "left",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.25573339271382395,
+            "minimum_conditional_atom": 5.849183255729535e-11,
+            "minimum_conditional_gap": 0.12596205414752654,
+            "parent_count": 22,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 2.0,
+        "dimension": 22,
+        "maximum_conditional_gap": 0.29799340254341655,
+        "minimum_conditional_atom": 6.60002535604831e-13,
+        "minimum_conditional_gap": 0.12683840242730407,
+        "orientation": "right",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.29799340254341655,
+            "minimum_conditional_atom": 6.60002535604831e-13,
+            "minimum_conditional_gap": 0.12683840242730407,
+            "parent_count": 22,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 2.0,
+        "dimension": 22,
+        "maximum_conditional_gap": 0.297993377466441,
+        "minimum_conditional_atom": 6.60002535529017e-13,
+        "minimum_conditional_gap": 0.1268384024617687,
+        "orientation": "left",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.297993377466441,
+            "minimum_conditional_atom": 6.60002535529017e-13,
+            "minimum_conditional_gap": 0.1268384024617687,
+            "parent_count": 22,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 0.5,
+        "dimension": 23,
+        "maximum_conditional_gap": 0.19898586603576612,
+        "minimum_conditional_atom": 1.1164569055167803e-08,
+        "minimum_conditional_gap": 0.10165264407418236,
+        "orientation": "right",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.19898586603576612,
+            "minimum_conditional_atom": 1.1164569055167803e-08,
+            "minimum_conditional_gap": 0.10165264407418236,
+            "parent_count": 23,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 0.5,
+        "dimension": 23,
+        "maximum_conditional_gap": 0.19898586603577786,
+        "minimum_conditional_atom": 1.1164569055171752e-08,
+        "minimum_conditional_gap": 0.1016526440741753,
+        "orientation": "left",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.19898586603577786,
+            "minimum_conditional_atom": 1.1164569055171752e-08,
+            "minimum_conditional_gap": 0.1016526440741753,
+            "parent_count": 23,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 1.0,
+        "dimension": 23,
+        "maximum_conditional_gap": 0.24239954291560342,
+        "minimum_conditional_atom": 2.337986526290622e-11,
+        "minimum_conditional_gap": 0.12510801084512435,
+        "orientation": "right",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.24239954291560342,
+            "minimum_conditional_atom": 2.337986526290622e-11,
+            "minimum_conditional_gap": 0.12510801084512435,
+            "parent_count": 23,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 1.0,
+        "dimension": 23,
+        "maximum_conditional_gap": 0.2423995424583632,
+        "minimum_conditional_atom": 2.3379865262853743e-11,
+        "minimum_conditional_gap": 0.12510801084491663,
+        "orientation": "left",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.2423995424583632,
+            "minimum_conditional_atom": 2.3379865262853743e-11,
+            "minimum_conditional_gap": 0.12510801084491663,
+            "parent_count": 23,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 2.0,
+        "dimension": 23,
+        "maximum_conditional_gap": 0.271198845791805,
+        "minimum_conditional_atom": 3.9858974046379235e-13,
+        "minimum_conditional_gap": 0.0608508347026258,
+        "orientation": "right",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.271198845791805,
+            "minimum_conditional_atom": 3.9858974046379235e-13,
+            "minimum_conditional_gap": 0.0608508347026258,
+            "parent_count": 23,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 2.0,
+        "dimension": 23,
+        "maximum_conditional_gap": 0.271198845779153,
+        "minimum_conditional_atom": 3.9858974053116435e-13,
+        "minimum_conditional_gap": 0.06085083470659372,
+        "orientation": "left",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.271198845779153,
+            "minimum_conditional_atom": 3.9858974053116435e-13,
+            "minimum_conditional_gap": 0.06085083470659372,
+            "parent_count": 23,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 0.5,
+        "dimension": 24,
+        "maximum_conditional_gap": 0.1884159952053852,
+        "minimum_conditional_atom": 6.38642362036763e-09,
+        "minimum_conditional_gap": 0.1063608475427419,
+        "orientation": "right",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.1884159952053852,
+            "minimum_conditional_atom": 6.38642362036763e-09,
+            "minimum_conditional_gap": 0.1063608475427419,
+            "parent_count": 24,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 0.5,
+        "dimension": 24,
+        "maximum_conditional_gap": 0.18841599520538882,
+        "minimum_conditional_atom": 6.386423620367523e-09,
+        "minimum_conditional_gap": 0.1063608475428034,
+        "orientation": "left",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.18841599520538882,
+            "minimum_conditional_atom": 6.386423620367523e-09,
+            "minimum_conditional_gap": 0.1063608475428034,
+            "parent_count": 24,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 1.0,
+        "dimension": 24,
+        "maximum_conditional_gap": 0.23660112974174866,
+        "minimum_conditional_atom": 1.0074107055406462e-11,
+        "minimum_conditional_gap": 0.09957908814777737,
+        "orientation": "right",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.23660112974174866,
+            "minimum_conditional_atom": 1.0074107055406462e-11,
+            "minimum_conditional_gap": 0.09957908814777737,
+            "parent_count": 24,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 1.0,
+        "dimension": 24,
+        "maximum_conditional_gap": 0.2366011232315241,
+        "minimum_conditional_atom": 1.0074107055435365e-11,
+        "minimum_conditional_gap": 0.0995790881498426,
+        "orientation": "left",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.2366011232315241,
+            "minimum_conditional_atom": 1.0074107055435365e-11,
+            "minimum_conditional_gap": 0.0995790881498426,
+            "parent_count": 24,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 2.0,
+        "dimension": 24,
+        "maximum_conditional_gap": 0.2563142874476214,
+        "minimum_conditional_atom": 5.977687950488616e-14,
+        "minimum_conditional_gap": 0.031369006654066514,
+        "orientation": "right",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.2563142874476214,
+            "minimum_conditional_atom": 5.977687950488616e-14,
+            "minimum_conditional_gap": 0.031369006654066514,
+            "parent_count": 24,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 2.0,
+        "dimension": 24,
+        "maximum_conditional_gap": 0.25631428744762064,
+        "minimum_conditional_atom": 5.977687950494726e-14,
+        "minimum_conditional_gap": 0.031369006662396844,
+        "orientation": "left",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.25631428744762064,
+            "minimum_conditional_atom": 5.977687950494726e-14,
+            "minimum_conditional_gap": 0.031369006662396844,
+            "parent_count": 24,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 0.5,
+        "dimension": 25,
+        "maximum_conditional_gap": 0.18919039290944198,
+        "minimum_conditional_atom": 3.672450636976104e-09,
+        "minimum_conditional_gap": 0.1138113412159127,
+        "orientation": "right",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.18919039290944198,
+            "minimum_conditional_atom": 3.672450636976104e-09,
+            "minimum_conditional_gap": 0.1138113412159127,
+            "parent_count": 25,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 0.5,
+        "dimension": 25,
+        "maximum_conditional_gap": 0.18919039290944545,
+        "minimum_conditional_atom": 3.672450636976891e-09,
+        "minimum_conditional_gap": 0.11381134121601913,
+        "orientation": "left",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.18919039290944545,
+            "minimum_conditional_atom": 3.672450636976891e-09,
+            "minimum_conditional_gap": 0.11381134121601913,
+            "parent_count": 25,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 1.0,
+        "dimension": 25,
+        "maximum_conditional_gap": 0.23030757936855842,
+        "minimum_conditional_atom": 4.5119293454277105e-12,
+        "minimum_conditional_gap": 0.08974317978127302,
+        "orientation": "right",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.23030757936855842,
+            "minimum_conditional_atom": 4.5119293454277105e-12,
+            "minimum_conditional_gap": 0.08974317978127302,
+            "parent_count": 25,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 1.0,
+        "dimension": 25,
+        "maximum_conditional_gap": 0.23030758345593638,
+        "minimum_conditional_atom": 4.51192934542255e-12,
+        "minimum_conditional_gap": 0.08974317977622448,
+        "orientation": "left",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.23030758345593638,
+            "minimum_conditional_atom": 4.51192934542255e-12,
+            "minimum_conditional_gap": 0.08974317977622448,
+            "parent_count": 25,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 2.0,
+        "dimension": 25,
+        "maximum_conditional_gap": 0.24220227284443605,
+        "minimum_conditional_atom": 7.922145705842646e-14,
+        "minimum_conditional_gap": 0.03583514268847601,
+        "orientation": "right",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.24220227284443605,
+            "minimum_conditional_atom": 7.922145705842646e-14,
+            "minimum_conditional_gap": 0.03583514268847601,
+            "parent_count": 25,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 2.0,
+        "dimension": 25,
+        "maximum_conditional_gap": 0.24220227298205246,
+        "minimum_conditional_atom": 7.92214569205453e-14,
+        "minimum_conditional_gap": 0.03583514302479379,
+        "orientation": "left",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.24220227298205246,
+            "minimum_conditional_atom": 7.92214569205453e-14,
+            "minimum_conditional_gap": 0.03583514302479379,
+            "parent_count": 25,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 0.5,
+        "dimension": 26,
+        "maximum_conditional_gap": 0.18833532035905134,
+        "minimum_conditional_atom": 2.122052086356479e-09,
+        "minimum_conditional_gap": 0.10140059276177246,
+        "orientation": "right",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.18833532035905134,
+            "minimum_conditional_atom": 2.122052086356479e-09,
+            "minimum_conditional_gap": 0.10140059276177246,
+            "parent_count": 26,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 0.5,
+        "dimension": 26,
+        "maximum_conditional_gap": 0.18833532035887843,
+        "minimum_conditional_atom": 2.1220520863583094e-09,
+        "minimum_conditional_gap": 0.1014005927615885,
+        "orientation": "left",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.18833532035887843,
+            "minimum_conditional_atom": 2.1220520863583094e-09,
+            "minimum_conditional_gap": 0.1014005927615885,
+            "parent_count": 26,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 1.0,
+        "dimension": 26,
+        "maximum_conditional_gap": 0.21223991507110282,
+        "minimum_conditional_atom": 1.872491761689643e-12,
+        "minimum_conditional_gap": 0.10208165346254587,
+        "orientation": "right",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.21223991507110282,
+            "minimum_conditional_atom": 1.872491761689643e-12,
+            "minimum_conditional_gap": 0.10208165346254587,
+            "parent_count": 26,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 1.0,
+        "dimension": 26,
+        "maximum_conditional_gap": 0.21223991506445603,
+        "minimum_conditional_atom": 1.8724917616896244e-12,
+        "minimum_conditional_gap": 0.10208165346626645,
+        "orientation": "left",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.21223991506445603,
+            "minimum_conditional_atom": 1.8724917616896244e-12,
+            "minimum_conditional_gap": 0.10208165346626645,
+            "parent_count": 26,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 2.0,
+        "dimension": 26,
+        "maximum_conditional_gap": 0.21624744705687424,
+        "minimum_conditional_atom": 2.00409999059034e-14,
+        "minimum_conditional_gap": 0.032514319314916156,
+        "orientation": "right",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.21624744705687424,
+            "minimum_conditional_atom": 2.00409999059034e-14,
+            "minimum_conditional_gap": 0.032514319314916156,
+            "parent_count": 26,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 2.0,
+        "dimension": 26,
+        "maximum_conditional_gap": 0.21625499501993706,
+        "minimum_conditional_atom": 2.00409999173991e-14,
+        "minimum_conditional_gap": 0.03251431931377687,
+        "orientation": "left",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.21625499501993706,
+            "minimum_conditional_atom": 2.00409999173991e-14,
+            "minimum_conditional_gap": 0.03251431931377687,
+            "parent_count": 26,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 0.5,
+        "dimension": 27,
+        "maximum_conditional_gap": 0.180688872342539,
+        "minimum_conditional_atom": 1.2316209871975501e-09,
+        "minimum_conditional_gap": 0.0858154972703979,
+        "orientation": "right",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.180688872342539,
+            "minimum_conditional_atom": 1.2316209871975501e-09,
+            "minimum_conditional_gap": 0.0858154972703979,
+            "parent_count": 27,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 0.5,
+        "dimension": 27,
+        "maximum_conditional_gap": 0.18068887234256195,
+        "minimum_conditional_atom": 1.2316209871982704e-09,
+        "minimum_conditional_gap": 0.0858154972704303,
+        "orientation": "left",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.18068887234256195,
+            "minimum_conditional_atom": 1.2316209871982704e-09,
+            "minimum_conditional_gap": 0.0858154972704303,
+            "parent_count": 27,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 1.0,
+        "dimension": 27,
+        "maximum_conditional_gap": 0.20074593438659277,
+        "minimum_conditional_atom": 8.970506807495291e-13,
+        "minimum_conditional_gap": 0.093339747328542,
+        "orientation": "right",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.20074593438659277,
+            "minimum_conditional_atom": 8.970506807495291e-13,
+            "minimum_conditional_gap": 0.093339747328542,
+            "parent_count": 27,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 1.0,
+        "dimension": 27,
+        "maximum_conditional_gap": 0.20074593438659213,
+        "minimum_conditional_atom": 8.970506807517669e-13,
+        "minimum_conditional_gap": 0.09333974732746178,
+        "orientation": "left",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.20074593438659213,
+            "minimum_conditional_atom": 8.970506807517669e-13,
+            "minimum_conditional_gap": 0.09333974732746178,
+            "parent_count": 27,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 2.0,
+        "dimension": 27,
+        "maximum_conditional_gap": 0.21834626911525207,
+        "minimum_conditional_atom": 7.164643897225606e-15,
+        "minimum_conditional_gap": 0.06714867759772702,
+        "orientation": "right",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.21834626911525207,
+            "minimum_conditional_atom": 7.164643897225606e-15,
+            "minimum_conditional_gap": 0.06714867759772702,
+            "parent_count": 27,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 2.0,
+        "dimension": 27,
+        "maximum_conditional_gap": 0.21834626911525132,
+        "minimum_conditional_atom": 7.16464389708457e-15,
+        "minimum_conditional_gap": 0.06714867760832027,
+        "orientation": "left",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.21834626911525132,
+            "minimum_conditional_atom": 7.16464389708457e-15,
+            "minimum_conditional_gap": 0.06714867760832027,
+            "parent_count": 27,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 0.5,
+        "dimension": 28,
+        "maximum_conditional_gap": 0.1696766501999712,
+        "minimum_conditional_atom": 7.177353840360528e-10,
+        "minimum_conditional_gap": 0.09290546496425686,
+        "orientation": "right",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.1696766501999712,
+            "minimum_conditional_atom": 7.177353840360528e-10,
+            "minimum_conditional_gap": 0.09290546496425686,
+            "parent_count": 28,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 0.5,
+        "dimension": 28,
+        "maximum_conditional_gap": 0.1696766501997207,
+        "minimum_conditional_atom": 7.177353840358479e-10,
+        "minimum_conditional_gap": 0.09290546496413866,
+        "orientation": "left",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.1696766501997207,
+            "minimum_conditional_atom": 7.177353840358479e-10,
+            "minimum_conditional_gap": 0.09290546496413866,
+            "parent_count": 28,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 1.0,
+        "dimension": 28,
+        "maximum_conditional_gap": 0.18518951920118487,
+        "minimum_conditional_atom": 4.153406016007954e-13,
+        "minimum_conditional_gap": 0.0778348479338593,
+        "orientation": "right",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.18518951920118487,
+            "minimum_conditional_atom": 4.153406016007954e-13,
+            "minimum_conditional_gap": 0.0778348479338593,
+            "parent_count": 28,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 1.0,
+        "dimension": 28,
+        "maximum_conditional_gap": 0.18518951931276084,
+        "minimum_conditional_atom": 4.153406016010615e-13,
+        "minimum_conditional_gap": 0.07783484789761001,
+        "orientation": "left",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.18518951931276084,
+            "minimum_conditional_atom": 4.153406016010615e-13,
+            "minimum_conditional_gap": 0.07783484789761001,
+            "parent_count": 28,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 2.0,
+        "dimension": 28,
+        "maximum_conditional_gap": 0.20842888940546878,
+        "minimum_conditional_atom": 7.288960600426012e-15,
+        "minimum_conditional_gap": 0.06614420846270266,
+        "orientation": "right",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.20842888940546878,
+            "minimum_conditional_atom": 7.288960600426012e-15,
+            "minimum_conditional_gap": 0.06614420846270266,
+            "parent_count": 28,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 2.0,
+        "dimension": 28,
+        "maximum_conditional_gap": 0.20842888966221498,
+        "minimum_conditional_atom": 7.288960586720348e-15,
+        "minimum_conditional_gap": 0.0661442089065337,
+        "orientation": "left",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.20842888966221498,
+            "minimum_conditional_atom": 7.288960586720348e-15,
+            "minimum_conditional_gap": 0.0661442089065337,
+            "parent_count": 28,
+            "radius": 1
+          }
+        ],
+        "volume": 2
+      },
+      {
+        "beta": 0.5,
+        "dimension": 3,
+        "maximum_conditional_gap": 0.9999999999999998,
+        "minimum_conditional_atom": 0.16587799473153608,
+        "minimum_conditional_gap": 0.8038110100537867,
+        "orientation": "right",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.9999999999999998,
+            "minimum_conditional_atom": 0.16587799473153608,
+            "minimum_conditional_gap": 0.874664454379183,
+            "parent_count": 3,
+            "radius": 1
+          },
+          {
+            "maximum_conditional_gap": 0.9155855783397556,
+            "minimum_conditional_atom": 0.17552851933816543,
+            "minimum_conditional_gap": 0.8038110100537867,
+            "parent_count": 9,
+            "radius": 2
+          }
+        ],
+        "volume": 3
+      },
+      {
+        "beta": 0.5,
+        "dimension": 3,
+        "maximum_conditional_gap": 1.0000000000000004,
+        "minimum_conditional_atom": 0.165877994731536,
+        "minimum_conditional_gap": 0.8038110100537869,
+        "orientation": "left",
+        "rows": [
+          {
+            "maximum_conditional_gap": 1.0000000000000004,
+            "minimum_conditional_atom": 0.165877994731536,
+            "minimum_conditional_gap": 0.8746644543791827,
+            "parent_count": 3,
+            "radius": 1
+          },
+          {
+            "maximum_conditional_gap": 0.9155855783397552,
+            "minimum_conditional_atom": 0.1755285193381653,
+            "minimum_conditional_gap": 0.8038110100537869,
+            "parent_count": 9,
+            "radius": 2
+          }
+        ],
+        "volume": 3
+      },
+      {
+        "beta": 1.0,
+        "dimension": 3,
+        "maximum_conditional_gap": 1.0,
+        "minimum_conditional_atom": 0.08446494903725783,
+        "minimum_conditional_gap": 0.7102024364704376,
+        "orientation": "right",
+        "rows": [
+          {
+            "maximum_conditional_gap": 1.0,
+            "minimum_conditional_atom": 0.08446494903725783,
+            "minimum_conditional_gap": 0.785812515425706,
+            "parent_count": 3,
+            "radius": 1
+          },
+          {
+            "maximum_conditional_gap": 0.8226236254508014,
+            "minimum_conditional_atom": 0.08589990189003378,
+            "minimum_conditional_gap": 0.7102024364704376,
+            "parent_count": 9,
+            "radius": 2
+          }
+        ],
+        "volume": 3
+      },
+      {
+        "beta": 1.0,
+        "dimension": 3,
+        "maximum_conditional_gap": 1.0,
+        "minimum_conditional_atom": 0.08446494903725779,
+        "minimum_conditional_gap": 0.7102024364704373,
+        "orientation": "left",
+        "rows": [
+          {
+            "maximum_conditional_gap": 1.0,
+            "minimum_conditional_atom": 0.08446494903725779,
+            "minimum_conditional_gap": 0.7858125154257055,
+            "parent_count": 3,
+            "radius": 1
+          },
+          {
+            "maximum_conditional_gap": 0.8226236254508009,
+            "minimum_conditional_atom": 0.08589990189003371,
+            "minimum_conditional_gap": 0.7102024364704373,
+            "parent_count": 9,
+            "radius": 2
+          }
+        ],
+        "volume": 3
+      },
+      {
+        "beta": 2.0,
+        "dimension": 3,
+        "maximum_conditional_gap": 0.6677210735175374,
+        "minimum_conditional_atom": 0.03291824313660732,
+        "minimum_conditional_gap": 0.4449255037591516,
+        "orientation": "right",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.6677210735175374,
+            "minimum_conditional_atom": 0.0388560731092746,
+            "minimum_conditional_gap": 0.6232871725428426,
+            "parent_count": 3,
+            "radius": 1
+          },
+          {
+            "maximum_conditional_gap": 0.6337162928485934,
+            "minimum_conditional_atom": 0.03291824313660732,
+            "minimum_conditional_gap": 0.4449255037591516,
+            "parent_count": 9,
+            "radius": 2
+          }
+        ],
+        "volume": 3
+      },
+      {
+        "beta": 2.0,
+        "dimension": 3,
+        "maximum_conditional_gap": 0.6677210735175385,
+        "minimum_conditional_atom": 0.03291824313660728,
+        "minimum_conditional_gap": 0.44492550375915224,
+        "orientation": "left",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.6677210735175385,
+            "minimum_conditional_atom": 0.03885607310927465,
+            "minimum_conditional_gap": 0.6232871725428425,
+            "parent_count": 3,
+            "radius": 1
+          },
+          {
+            "maximum_conditional_gap": 0.6337162928485928,
+            "minimum_conditional_atom": 0.03291824313660728,
+            "minimum_conditional_gap": 0.44492550375915224,
+            "parent_count": 9,
+            "radius": 2
+          }
+        ],
+        "volume": 3
+      },
+      {
+        "beta": 0.5,
+        "dimension": 4,
+        "maximum_conditional_gap": 0.6614814379547389,
+        "minimum_conditional_atom": 0.04425572859847807,
+        "minimum_conditional_gap": 0.5779550065843291,
+        "orientation": "right",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.6614814379547389,
+            "minimum_conditional_atom": 0.04425572859847807,
+            "minimum_conditional_gap": 0.6564262555741776,
+            "parent_count": 4,
+            "radius": 1
+          },
+          {
+            "maximum_conditional_gap": 0.6080855787058043,
+            "minimum_conditional_atom": 0.04947048005707933,
+            "minimum_conditional_gap": 0.5779550065843291,
+            "parent_count": 16,
+            "radius": 2
+          }
+        ],
+        "volume": 3
+      },
+      {
+        "beta": 0.5,
+        "dimension": 4,
+        "maximum_conditional_gap": 0.661481437954739,
+        "minimum_conditional_atom": 0.04425572859847806,
+        "minimum_conditional_gap": 0.5779550065843286,
+        "orientation": "left",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.661481437954739,
+            "minimum_conditional_atom": 0.04425572859847806,
+            "minimum_conditional_gap": 0.6564262555741777,
+            "parent_count": 4,
+            "radius": 1
+          },
+          {
+            "maximum_conditional_gap": 0.6080855787058046,
+            "minimum_conditional_atom": 0.049470480057079325,
+            "minimum_conditional_gap": 0.5779550065843286,
+            "parent_count": 16,
+            "radius": 2
+          }
+        ],
+        "volume": 3
+      },
+      {
+        "beta": 1.0,
+        "dimension": 4,
+        "maximum_conditional_gap": 0.6842169397212982,
+        "minimum_conditional_atom": 0.011763087033108554,
+        "minimum_conditional_gap": 0.4932522928053542,
+        "orientation": "right",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.6842169397212982,
+            "minimum_conditional_atom": 0.012578788798276294,
+            "minimum_conditional_gap": 0.6653925157827346,
+            "parent_count": 4,
+            "radius": 1
+          },
+          {
+            "maximum_conditional_gap": 0.637619597835262,
+            "minimum_conditional_atom": 0.011763087033108554,
+            "minimum_conditional_gap": 0.4932522928053542,
+            "parent_count": 16,
+            "radius": 2
+          }
+        ],
+        "volume": 3
+      },
+      {
+        "beta": 1.0,
+        "dimension": 4,
+        "maximum_conditional_gap": 0.6842169397212982,
+        "minimum_conditional_atom": 0.011763087033108525,
+        "minimum_conditional_gap": 0.4932522928053536,
+        "orientation": "left",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.6842169397212982,
+            "minimum_conditional_atom": 0.0125787887982763,
+            "minimum_conditional_gap": 0.6653925157827344,
+            "parent_count": 4,
+            "radius": 1
+          },
+          {
+            "maximum_conditional_gap": 0.6376195978352619,
+            "minimum_conditional_atom": 0.011763087033108525,
+            "minimum_conditional_gap": 0.4932522928053536,
+            "parent_count": 16,
+            "radius": 2
+          }
+        ],
+        "volume": 3
+      },
+      {
+        "beta": 2.0,
+        "dimension": 4,
+        "maximum_conditional_gap": 0.6837096087804414,
+        "minimum_conditional_atom": 0.004604678211394884,
+        "minimum_conditional_gap": 0.29685551136982896,
+        "orientation": "right",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.6740191420970122,
+            "minimum_conditional_atom": 0.006108332414015168,
+            "minimum_conditional_gap": 0.5916584157639284,
+            "parent_count": 4,
+            "radius": 1
+          },
+          {
+            "maximum_conditional_gap": 0.6837096087804414,
+            "minimum_conditional_atom": 0.004604678211394884,
+            "minimum_conditional_gap": 0.29685551136982896,
+            "parent_count": 16,
+            "radius": 2
+          }
+        ],
+        "volume": 3
+      },
+      {
+        "beta": 2.0,
+        "dimension": 4,
+        "maximum_conditional_gap": 0.6837096087804418,
+        "minimum_conditional_atom": 0.004604678211394908,
+        "minimum_conditional_gap": 0.2968555113698269,
+        "orientation": "left",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.6740191420970124,
+            "minimum_conditional_atom": 0.006108332414015134,
+            "minimum_conditional_gap": 0.5916584157639291,
+            "parent_count": 4,
+            "radius": 1
+          },
+          {
+            "maximum_conditional_gap": 0.6837096087804418,
+            "minimum_conditional_atom": 0.004604678211394908,
+            "minimum_conditional_gap": 0.2968555113698269,
+            "parent_count": 16,
+            "radius": 2
+          }
+        ],
+        "volume": 3
+      },
+      {
+        "beta": 0.5,
+        "dimension": 5,
+        "maximum_conditional_gap": 0.5724902866539632,
+        "minimum_conditional_atom": 0.00744638961565837,
+        "minimum_conditional_gap": 0.465590635313539,
+        "orientation": "right",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.5724902866539632,
+            "minimum_conditional_atom": 0.00744638961565837,
+            "minimum_conditional_gap": 0.5491256310732813,
+            "parent_count": 5,
+            "radius": 1
+          },
+          {
+            "maximum_conditional_gap": 0.5215615726053654,
+            "minimum_conditional_atom": 0.008594086786737969,
+            "minimum_conditional_gap": 0.465590635313539,
+            "parent_count": 25,
+            "radius": 2
+          }
+        ],
+        "volume": 3
+      },
+      {
+        "beta": 0.5,
+        "dimension": 5,
+        "maximum_conditional_gap": 0.5724902866539632,
+        "minimum_conditional_atom": 0.007446389615658372,
+        "minimum_conditional_gap": 0.4655906353135398,
+        "orientation": "left",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.5724902866539632,
+            "minimum_conditional_atom": 0.007446389615658372,
+            "minimum_conditional_gap": 0.5491256310732812,
+            "parent_count": 5,
+            "radius": 1
+          },
+          {
+            "maximum_conditional_gap": 0.5215615726053656,
+            "minimum_conditional_atom": 0.008594086786737969,
+            "minimum_conditional_gap": 0.4655906353135398,
+            "parent_count": 25,
+            "radius": 2
+          }
+        ],
+        "volume": 3
+      },
+      {
+        "beta": 1.0,
+        "dimension": 5,
+        "maximum_conditional_gap": 0.6868553187794431,
+        "minimum_conditional_atom": 0.0018198861407612637,
+        "minimum_conditional_gap": 0.3958155096139497,
+        "orientation": "right",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.6868553187794431,
+            "minimum_conditional_atom": 0.002046686179156967,
+            "minimum_conditional_gap": 0.6141982169082816,
+            "parent_count": 5,
+            "radius": 1
+          },
+          {
+            "maximum_conditional_gap": 0.6009247788125104,
+            "minimum_conditional_atom": 0.0018198861407612637,
+            "minimum_conditional_gap": 0.3958155096139497,
+            "parent_count": 25,
+            "radius": 2
+          }
+        ],
+        "volume": 3
+      },
+      {
+        "beta": 1.0,
+        "dimension": 5,
+        "maximum_conditional_gap": 0.6868553187794431,
+        "minimum_conditional_atom": 0.0018198861407612572,
+        "minimum_conditional_gap": 0.395815509613949,
+        "orientation": "left",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.6868553187794431,
+            "minimum_conditional_atom": 0.0020466861791569677,
+            "minimum_conditional_gap": 0.6141982169082811,
+            "parent_count": 5,
+            "radius": 1
+          },
+          {
+            "maximum_conditional_gap": 0.6009247788125102,
+            "minimum_conditional_atom": 0.0018198861407612572,
+            "minimum_conditional_gap": 0.395815509613949,
+            "parent_count": 25,
+            "radius": 2
+          }
+        ],
+        "volume": 3
+      },
+      {
+        "beta": 2.0,
+        "dimension": 5,
+        "maximum_conditional_gap": 0.7938528562852876,
+        "minimum_conditional_atom": 0.0008130150904115589,
+        "minimum_conditional_gap": 0.348158009869604,
+        "orientation": "right",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.7938528562852876,
+            "minimum_conditional_atom": 0.0008268264686322749,
+            "minimum_conditional_gap": 0.6644796321378855,
+            "parent_count": 5,
+            "radius": 1
+          },
+          {
+            "maximum_conditional_gap": 0.7455935093992682,
+            "minimum_conditional_atom": 0.0008130150904115589,
+            "minimum_conditional_gap": 0.348158009869604,
+            "parent_count": 25,
+            "radius": 2
+          }
+        ],
+        "volume": 3
+      },
+      {
+        "beta": 2.0,
+        "dimension": 5,
+        "maximum_conditional_gap": 0.7938528562852877,
+        "minimum_conditional_atom": 0.0008130150904115543,
+        "minimum_conditional_gap": 0.348158009869599,
+        "orientation": "left",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.7938528562852877,
+            "minimum_conditional_atom": 0.0008268264686322695,
+            "minimum_conditional_gap": 0.6644796321378857,
+            "parent_count": 5,
+            "radius": 1
+          },
+          {
+            "maximum_conditional_gap": 0.7455935093992684,
+            "minimum_conditional_atom": 0.0008130150904115543,
+            "minimum_conditional_gap": 0.348158009869599,
+            "parent_count": 25,
+            "radius": 2
+          }
+        ],
+        "volume": 3
+      },
+      {
+        "beta": 0.5,
+        "dimension": 6,
+        "maximum_conditional_gap": 0.5088340244399914,
+        "minimum_conditional_atom": 0.001165203838470884,
+        "minimum_conditional_gap": 0.3541855221551277,
+        "orientation": "right",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.5088340244399914,
+            "minimum_conditional_atom": 0.001165203838470884,
+            "minimum_conditional_gap": 0.497306060553171,
+            "parent_count": 6,
+            "radius": 1
+          },
+          {
+            "maximum_conditional_gap": 0.4672053612947812,
+            "minimum_conditional_atom": 0.001259384538145852,
+            "minimum_conditional_gap": 0.3541855221551277,
+            "parent_count": 36,
+            "radius": 2
+          }
+        ],
+        "volume": 3
+      },
+      {
+        "beta": 0.5,
+        "dimension": 6,
+        "maximum_conditional_gap": 0.5088340244399913,
+        "minimum_conditional_atom": 0.0011652038384708922,
+        "minimum_conditional_gap": 0.3541855221551285,
+        "orientation": "left",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.5088340244399913,
+            "minimum_conditional_atom": 0.0011652038384708922,
+            "minimum_conditional_gap": 0.49730606055317084,
+            "parent_count": 6,
+            "radius": 1
+          },
+          {
+            "maximum_conditional_gap": 0.46720536129478135,
+            "minimum_conditional_atom": 0.0012593845381458503,
+            "minimum_conditional_gap": 0.3541855221551285,
+            "parent_count": 36,
+            "radius": 2
+          }
+        ],
+        "volume": 3
+      },
+      {
+        "beta": 1.0,
+        "dimension": 6,
+        "maximum_conditional_gap": 0.6010402459298951,
+        "minimum_conditional_atom": 0.0004298879250472416,
+        "minimum_conditional_gap": 0.3455910989267086,
+        "orientation": "right",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.6010402459298951,
+            "minimum_conditional_atom": 0.000432312867527707,
+            "minimum_conditional_gap": 0.5447522827619881,
+            "parent_count": 6,
+            "radius": 1
+          },
+          {
+            "maximum_conditional_gap": 0.544255200668779,
+            "minimum_conditional_atom": 0.0004298879250472416,
+            "minimum_conditional_gap": 0.3455910989267086,
+            "parent_count": 36,
+            "radius": 2
+          }
+        ],
+        "volume": 3
+      },
+      {
+        "beta": 1.0,
+        "dimension": 6,
+        "maximum_conditional_gap": 0.6010402459298952,
+        "minimum_conditional_atom": 0.00042988792504723586,
+        "minimum_conditional_gap": 0.3455910989267173,
+        "orientation": "left",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.6010402459298952,
+            "minimum_conditional_atom": 0.00043231286752772844,
+            "minimum_conditional_gap": 0.5447522827619873,
+            "parent_count": 6,
+            "radius": 1
+          },
+          {
+            "maximum_conditional_gap": 0.5442552006687783,
+            "minimum_conditional_atom": 0.00042988792504723586,
+            "minimum_conditional_gap": 0.3455910989267173,
+            "parent_count": 36,
+            "radius": 2
+          }
+        ],
+        "volume": 3
+      },
+      {
+        "beta": 2.0,
+        "dimension": 6,
+        "maximum_conditional_gap": 0.6565974434439352,
+        "minimum_conditional_atom": 0.00015333787615569148,
+        "minimum_conditional_gap": 0.3642610970236765,
+        "orientation": "right",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.6565974434439352,
+            "minimum_conditional_atom": 0.0001682572475094589,
+            "minimum_conditional_gap": 0.5802260854766678,
+            "parent_count": 6,
+            "radius": 1
+          },
+          {
+            "maximum_conditional_gap": 0.6363850574369934,
+            "minimum_conditional_atom": 0.00015333787615569148,
+            "minimum_conditional_gap": 0.3642610970236765,
+            "parent_count": 36,
+            "radius": 2
+          }
+        ],
+        "volume": 3
+      },
+      {
+        "beta": 2.0,
+        "dimension": 6,
+        "maximum_conditional_gap": 0.6565974434439353,
+        "minimum_conditional_atom": 0.00015333787615570327,
+        "minimum_conditional_gap": 0.36426109702365544,
+        "orientation": "left",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.6565974434439353,
+            "minimum_conditional_atom": 0.00016825724750944143,
+            "minimum_conditional_gap": 0.5802260854766704,
+            "parent_count": 6,
+            "radius": 1
+          },
+          {
+            "maximum_conditional_gap": 0.6363850574369962,
+            "minimum_conditional_atom": 0.00015333787615570327,
+            "minimum_conditional_gap": 0.36426109702365544,
+            "parent_count": 36,
+            "radius": 2
+          }
+        ],
+        "volume": 3
+      },
+      {
+        "beta": 0.5,
+        "dimension": 7,
+        "maximum_conditional_gap": 0.4563077956125703,
+        "minimum_conditional_atom": 0.0003066424660968586,
+        "minimum_conditional_gap": 0.2997460640464523,
+        "orientation": "right",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.4563077956125703,
+            "minimum_conditional_atom": 0.0003090043001357718,
+            "minimum_conditional_gap": 0.44166260988465067,
+            "parent_count": 7,
+            "radius": 1
+          },
+          {
+            "maximum_conditional_gap": 0.4360867368215246,
+            "minimum_conditional_atom": 0.0003066424660968586,
+            "minimum_conditional_gap": 0.2997460640464523,
+            "parent_count": 49,
+            "radius": 2
+          }
+        ],
+        "volume": 3
+      },
+      {
+        "beta": 0.5,
+        "dimension": 7,
+        "maximum_conditional_gap": 0.45630779561257073,
+        "minimum_conditional_atom": 0.0003066424660968666,
+        "minimum_conditional_gap": 0.29974606404644505,
+        "orientation": "left",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.45630779561257073,
+            "minimum_conditional_atom": 0.0003090043001357644,
+            "minimum_conditional_gap": 0.44166260988465056,
+            "parent_count": 7,
+            "radius": 1
+          },
+          {
+            "maximum_conditional_gap": 0.43608673682152443,
+            "minimum_conditional_atom": 0.0003066424660968666,
+            "minimum_conditional_gap": 0.29974606404644505,
+            "parent_count": 49,
+            "radius": 2
+          }
+        ],
+        "volume": 3
+      },
+      {
+        "beta": 1.0,
+        "dimension": 7,
+        "maximum_conditional_gap": 0.5396288150303223,
+        "minimum_conditional_atom": 0.00012768382597798218,
+        "minimum_conditional_gap": 0.2848514522075903,
+        "orientation": "right",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.5396288150303223,
+            "minimum_conditional_atom": 0.00012768382597798218,
+            "minimum_conditional_gap": 0.44932622652432785,
+            "parent_count": 7,
+            "radius": 1
+          },
+          {
+            "maximum_conditional_gap": 0.49935363694915486,
+            "minimum_conditional_atom": 0.00013533956070453144,
+            "minimum_conditional_gap": 0.2848514522075903,
+            "parent_count": 49,
+            "radius": 2
+          }
+        ],
+        "volume": 3
+      },
+      {
+        "beta": 1.0,
+        "dimension": 7,
+        "maximum_conditional_gap": 0.5396288150303227,
+        "minimum_conditional_atom": 0.0001276838259779842,
+        "minimum_conditional_gap": 0.2848514522077616,
+        "orientation": "left",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.5396288150303227,
+            "minimum_conditional_atom": 0.0001276838259779842,
+            "minimum_conditional_gap": 0.44932622652432863,
+            "parent_count": 7,
+            "radius": 1
+          },
+          {
+            "maximum_conditional_gap": 0.49935363694919166,
+            "minimum_conditional_atom": 0.00013533956070436065,
+            "minimum_conditional_gap": 0.2848514522077616,
+            "parent_count": 49,
+            "radius": 2
+          }
+        ],
+        "volume": 3
+      },
+      {
+        "beta": 2.0,
+        "dimension": 7,
+        "maximum_conditional_gap": 0.6234322334914982,
+        "minimum_conditional_atom": 2.9606486508780874e-05,
+        "minimum_conditional_gap": 0.20928140243367527,
+        "orientation": "right",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.6234322334914982,
+            "minimum_conditional_atom": 2.9606486508780874e-05,
+            "minimum_conditional_gap": 0.49536245405482315,
+            "parent_count": 7,
+            "radius": 1
+          },
+          {
+            "maximum_conditional_gap": 0.6091268372672842,
+            "minimum_conditional_atom": 4.583586370484182e-05,
+            "minimum_conditional_gap": 0.20928140243367527,
+            "parent_count": 49,
+            "radius": 2
+          }
+        ],
+        "volume": 3
+      },
+      {
+        "beta": 2.0,
+        "dimension": 7,
+        "maximum_conditional_gap": 0.6234322334914979,
+        "minimum_conditional_atom": 2.9606486508782388e-05,
+        "minimum_conditional_gap": 0.20928140243399948,
+        "orientation": "left",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.6234322334914979,
+            "minimum_conditional_atom": 2.9606486508782388e-05,
+            "minimum_conditional_gap": 0.4953624540548244,
+            "parent_count": 7,
+            "radius": 1
+          },
+          {
+            "maximum_conditional_gap": 0.609126837267295,
+            "minimum_conditional_atom": 4.583586370482799e-05,
+            "minimum_conditional_gap": 0.20928140243399948,
+            "parent_count": 49,
+            "radius": 2
+          }
+        ],
+        "volume": 3
+      },
+      {
+        "beta": 0.5,
+        "dimension": 8,
+        "maximum_conditional_gap": 0.4124752951668422,
+        "minimum_conditional_atom": 0.00011681066689524927,
+        "minimum_conditional_gap": 0.2596526242411656,
+        "orientation": "right",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.4124752951668422,
+            "minimum_conditional_atom": 0.00011681066689524927,
+            "minimum_conditional_gap": 0.38268232172394234,
+            "parent_count": 8,
+            "radius": 1
+          },
+          {
+            "maximum_conditional_gap": 0.40270036903729317,
+            "minimum_conditional_atom": 0.0001195963013580263,
+            "minimum_conditional_gap": 0.2596526242411656,
+            "parent_count": 64,
+            "radius": 2
+          }
+        ],
+        "volume": 3
+      },
+      {
+        "beta": 0.5,
+        "dimension": 8,
+        "maximum_conditional_gap": 0.412475295166842,
+        "minimum_conditional_atom": 0.0001168106668952616,
+        "minimum_conditional_gap": 0.2596526242412362,
+        "orientation": "left",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.412475295166842,
+            "minimum_conditional_atom": 0.0001168106668952616,
+            "minimum_conditional_gap": 0.3826823217239427,
+            "parent_count": 8,
+            "radius": 1
+          },
+          {
+            "maximum_conditional_gap": 0.40270036903729645,
+            "minimum_conditional_atom": 0.00011959630135794855,
+            "minimum_conditional_gap": 0.2596526242412362,
+            "parent_count": 64,
+            "radius": 2
+          }
+        ],
+        "volume": 3
+      },
+      {
+        "beta": 1.0,
+        "dimension": 8,
+        "maximum_conditional_gap": 0.5018241418204014,
+        "minimum_conditional_atom": 3.3471323502889785e-05,
+        "minimum_conditional_gap": 0.2469146117684841,
+        "orientation": "right",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.5018241418204014,
+            "minimum_conditional_atom": 3.3471323502889785e-05,
+            "minimum_conditional_gap": 0.3811897110806777,
+            "parent_count": 8,
+            "radius": 1
+          },
+          {
+            "maximum_conditional_gap": 0.47003007465455726,
+            "minimum_conditional_atom": 4.5277911008888465e-05,
+            "minimum_conditional_gap": 0.2469146117684841,
+            "parent_count": 64,
+            "radius": 2
+          }
+        ],
+        "volume": 3
+      },
+      {
+        "beta": 1.0,
+        "dimension": 8,
+        "maximum_conditional_gap": 0.5018241418204012,
+        "minimum_conditional_atom": 3.347132350288974e-05,
+        "minimum_conditional_gap": 0.24691461176825036,
+        "orientation": "left",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.5018241418204012,
+            "minimum_conditional_atom": 3.347132350288974e-05,
+            "minimum_conditional_gap": 0.381189711080678,
+            "parent_count": 8,
+            "radius": 1
+          },
+          {
+            "maximum_conditional_gap": 0.47003007465455865,
+            "minimum_conditional_atom": 4.5277911008880035e-05,
+            "minimum_conditional_gap": 0.24691461176825036,
+            "parent_count": 64,
+            "radius": 2
+          }
+        ],
+        "volume": 3
+      },
+      {
+        "beta": 2.0,
+        "dimension": 8,
+        "maximum_conditional_gap": 0.6066742608070511,
+        "minimum_conditional_atom": 3.3710427310300486e-06,
+        "minimum_conditional_gap": 0.21143455243083498,
+        "orientation": "right",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.6001463949244564,
+            "minimum_conditional_atom": 3.3710427310300486e-06,
+            "minimum_conditional_gap": 0.4920175904582744,
+            "parent_count": 8,
+            "radius": 1
+          },
+          {
+            "maximum_conditional_gap": 0.6066742608070511,
+            "minimum_conditional_atom": 6.3018442191029034e-06,
+            "minimum_conditional_gap": 0.21143455243083498,
+            "parent_count": 64,
+            "radius": 2
+          }
+        ],
+        "volume": 3
+      },
+      {
+        "beta": 2.0,
+        "dimension": 8,
+        "maximum_conditional_gap": 0.6066742608071061,
+        "minimum_conditional_atom": 3.371042731030716e-06,
+        "minimum_conditional_gap": 0.21143455243001932,
+        "orientation": "left",
+        "rows": [
+          {
+            "maximum_conditional_gap": 0.6001463949244573,
+            "minimum_conditional_atom": 3.371042731030716e-06,
+            "minimum_conditional_gap": 0.4920175904582801,
+            "parent_count": 8,
+            "radius": 1
+          },
+          {
+            "maximum_conditional_gap": 0.6066742608071061,
+            "minimum_conditional_atom": 6.301844219090032e-06,
+            "minimum_conditional_gap": 0.21143455243001932,
+            "parent_count": 64,
+            "radius": 2
+          }
+        ],
+        "volume": 3
+      }
+    ],
+    "ratio_count": 180,
+    "system_count": 32
+  },
+  "exploration_id": "EXP-001245",
+  "manifest": "strategy/pre-a-cp1-st8-q3lock-conditional-gap-cutoff-stress-manifest.json",
+  "result_id": "R-400",
+  "schema": "tect/pre-a-r400-independent/1.0",
+  "scope": {
+    "actual_split_limit_closed": false,
+    "c6_closed": false,
+    "common_alpha_closed": false,
+    "common_core_closed": false,
+    "continuum_closed": false,
+    "cutoff_independent_conditional_gap_closed": false,
+    "finite_adjacent_ratio_audit_closed": true,
+    "finite_cutoff_profile_closed": true,
+    "finite_static_conditional_gap_closed": true,
+    "folded_positive_replica_domination_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "no_new_negative_result": true,
+    "no_pdf": true,
+    "no_tier_change": true,
+    "phase_conditioned_influence_closed": false,
+    "phase_uniform_conditional_gap_closed": false,
+    "pre_a_closed": false,
+    "sector_a_closed": false,
+    "source_independent_conditional_gap_closed": false,
+    "uniform_gradient_decay_closed": false,
+    "volume_independent_conditional_gap_closed": false
+  },
+  "verdict": "PASS"
+}

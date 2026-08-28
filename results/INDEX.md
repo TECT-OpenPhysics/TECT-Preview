@@ -5,10 +5,12 @@
 
 Authorities: `RESULTS-LEDGER.md`.
 
-**233 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
+**235 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
 
 | ID | Result | Tier/scope |
 |---|---|---|
+| [`R-401`](../RESULTS-LEDGER.md#r-401) | Physical-coordinate metric for the conditional gap | T0 |
+| [`R-400`](../RESULTS-LEDGER.md#r-400) | Increasing-cutoff conditional birth-death gap stress | T0 |
 | [`R-399`](../RESULTS-LEDGER.md#r-399) | Conditional Poincare-before-Duhamel shell transport | T0 |
 | [`R-398`](../RESULTS-LEDGER.md#r-398) | Conditioned-collar Doob martingale and shell-influence discriminator | T0 |
 | [`R-397`](../RESULTS-LEDGER.md#r-397) | Finite semigroup-dressed Petz collar discriminator | T0 |
@@ -32,8 +34,6 @@ Authorities: `RESULTS-LEDGER.md`.
 | [`R-379`](../RESULTS-LEDGER.md#r-379) | Three-channel anticommutator bridge for half-density modular tails | T0 |
 | [`R-378`](../RESULTS-LEDGER.md#r-378) | Half-density Hellinger bridge for the theta-half Kubo-Mori shell | T0 |
 | [`R-377`](../RESULTS-LEDGER.md#r-377) | Gap-free odd-Matsubara resolvent telescoping budget | T0 |
-| [`R-376`](../RESULTS-LEDGER.md#r-376) | Hilbert-Schmidt Lipschitz bridge for the capped Liouvillian kernel | T0 |
-| [`R-375`](../RESULTS-LEDGER.md#r-375) | Summable odd-Matsubara Lipschitz budget for transition-energy perturbations | T0 |
 
 Search without loading the full ledger:
 

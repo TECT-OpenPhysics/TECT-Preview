@@ -1,0 +1,93 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-CONDITIONAL-GAP-CUTOFF-STRESS-v0",
+  "result_id": "R-400",
+  "title": "Increasing-cutoff stress for the conditional birth-death gap",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001245",
+  "claim_bearing": false,
+  "parent_explorations": ["EXP-001244", "EXP-001242", "EXP-001236"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+  ],
+  "question": "Does the conditional birth-death spectral gap used by R-399 remain bounded away from zero when the Q3 oscillator cutoff is increased, or does the high-level tail create a route-local bottleneck?",
+  "new_perspective": {
+    "principle": "Stress the conditional reference geometry before spending effort on real-time gradients.",
+    "route": [
+      "Use the exact finite Q3 Gibbs coordinate law as the reference measure and compute every oriented-prefix conditional law, without a source-history sample that could mask a reference bottleneck.",
+      "For each conditional law, form the reversible ordered-level birth-death Laplacian with conductance min(pi(k),pi(k+1)) and extract the first nonzero generalized gap.",
+      "Repeat beta in {1/2,1,2}, volume two through three and cutoffs through eight where the exact dense diagonalisation remains feasible.",
+      "Retain per-cutoff minima, adjacent ratios and smallest conditional atom. A positive low-cutoff minimum is not extrapolated; a systematic collapse is a route-specific obstruction to this Dirichlet choice."
+    ],
+    "qft_bridge": "A cutoff-stable conditional gap would be one input to the R-399 shell-gradient route. This static Gibbs stress does not provide likelihood-gradient decay, common-core control, common alpha, OS/KMS/GNS reconstruction or a physical gap."
+  },
+  "finite_fixture": {
+    "admissible_pairs": [
+      {"volume": 2, "cutoff_dimensions": [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28]},
+      {"volume": 3, "cutoff_dimensions": [3, 4, 5, 6, 7, 8]}
+    ],
+    "beta_values": ["1/2", "1", "2"],
+    "orientations": ["right", "left"],
+    "chi": "1",
+    "r": "-1",
+    "g": "3/5",
+    "c": "3/5",
+    "lambda": "1/10",
+    "numerical_tolerance": 1e-8,
+    "crosscheck_tolerance": 1e-5,
+    "probability_tolerance": 1e-30,
+    "hostile_threshold": 1e-6
+  },
+  "scope": {
+    "finite_static_conditional_gap_closed": true,
+    "finite_cutoff_profile_closed": true,
+    "finite_adjacent_ratio_audit_closed": true,
+    "cutoff_independent_conditional_gap_closed": false,
+    "volume_independent_conditional_gap_closed": false,
+    "source_independent_conditional_gap_closed": false,
+    "phase_uniform_conditional_gap_closed": false,
+    "uniform_gradient_decay_closed": false,
+    "phase_conditioned_influence_closed": false,
+    "folded_positive_replica_domination_closed": false,
+    "common_core_closed": false,
+    "common_alpha_closed": false,
+    "actual_split_limit_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R400.lean",
+    "theorem_markers": ["positive_gap_ratio", "profile_min_positive", "finite_scope"],
+    "command": "lake env lean Tect/R400.lean",
+    "boundary": "Lean checks only scalar positivity of finite gap ratios and minima; it does not formalize Q3 spectra or any cutoff limit."
+  },
+  "artifacts": {
+    "primary_script": "codes/foundations/pre_a_cp1_st8_q3lock_conditional_gap_cutoff_stress.py",
+    "independent_script": "codes/foundations/pre_a_cp1_st8_q3lock_conditional_gap_cutoff_stress_independent.py",
+    "hostile_script": "codes/foundations/pre_a_cp1_st8_q3lock_conditional_gap_cutoff_stress_hostile.py",
+    "integrated_verifier": "codes/foundations/pre_a_cp1_st8_q3lock_conditional_gap_cutoff_stress_verify.py",
+    "lean": "verification/lean/Tect/R400.lean"
+  },
+  "promotion_criteria": [
+    "Extend the static gap computation to a phase-conditioned boundary family and prove a cutoff-, volume- and shape-uniform lower bound for a physically justified local form.",
+    "Only if that lower bound survives, prove uniform decay of the R-399 conditional likelihood gradients and sum the weighted shell transfer."
+  ],
+  "stop_conditions": [
+    "If the minimum conditional gap tends to zero under an increasing-cutoff stress, retain R-399 as a finite interface and mark this birth-death route locally obstructed for uniform promotion.",
+    "If the static gap remains positive but adjacent ratios oscillate without a certified modulus, do not infer a limit; move to an analytic conditional-measure estimate.",
+    "If the gap is stable only at finite beta, restrict the route to fixed-beta statements and keep the ground/phase gate open."
+  ],
+  "boundary": "T0 claim-nonbearing finite static cutoff stress. It proves no uniform conditional gap, gradient decay, common form core, common alpha, OS/KMS/GNS reconstruction, mass gap, continuum, C6, Sector-A or Pre-A closure.",
+  "no_overclaim": "A finite positive gap and a finite cutoff profile are diagnostics. Neither is a thermodynamic lower bound or a Q3 real-time locality theorem.",
+  "recorded_by": "Codex"
+}

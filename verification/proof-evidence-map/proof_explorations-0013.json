@@ -5368,6 +5368,200 @@
       "task_id": "T-054",
       "title": "Conditional Poincare-before-Duhamel shell transport",
       "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "axis": "low-cutoff extrapolation",
+          "check": "The hostile lane reuses the baseline cutoff gap and records a deficit of 0.5222806648401578 at the target cutoff.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "lost conditioning",
+          "check": "The hostile unconditional-parent mutation differs from the genuine conditional profile by 0.07359455021663167.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "numerical positivity",
+          "check": "Reference marginals and conditional atoms are checked above the declared floor, with an independent reconstruction and Lean scalar cross-check.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "uniformity and phase",
+          "check": "Oscillating finite ratios do not prove a limit or a phase-conditioned lower bound; common core, common alpha and all QFT gates remain open.",
+          "disposition": "UPHELD-OPEN"
+        }
+      ],
+      "boundary": "T0 claim-nonbearing finite static cutoff stress. It proves no cutoff-, volume-, source- or phase-uniform gap, no gradient decay, no common core, common alpha, OS/KMS/GNS reconstruction, mass gap, continuum, C6, Sector-A or Pre-A closure.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "The stress separates finite positivity from the missing uniform theorem. It does not falsify the conditional-information identity, but it prevents reusing a low-cutoff gap as an analytic constant and redirects the next check toward a physically grounded coordinate metric.",
+      "evidence_refs": [
+        "strategy/pre-a-cp1-st8-q3lock-conditional-gap-cutoff-stress-manifest.json#new_perspective",
+        "strategy/pre-a-cp1-st8-q3lock-conditional-gap-cutoff-stress-certificate-260830.md#Finite verification",
+        "codes/foundations/pre_a_cp1_st8_q3lock_conditional_gap_cutoff_stress.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_conditional_gap_cutoff_stress_independent.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_conditional_gap_cutoff_stress_hostile.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_conditional_gap_cutoff_stress_verify.py#main",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-primary-pre_a_cp1_st8_q3lock_conditional_gap_cutoff_stress/primary.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-integrated-pre_a_cp1_st8_q3lock_conditional_gap_cutoff_stress/integrated.json#derived",
+        "verification/lean/Tect/R400.lean#positive_gap_ratio",
+        "claims/C6-SPACETIME-SIGNATURE/notes/conditional-gap-cutoff-stress-260830.md#R-400"
+      ],
+      "finding": "The finite gap is positive on all 32 systems and 192 profiles, with primary 519/519, independent 614/614, hostile 3/3, integrated 29/29 and Lean R400 passing. The minimum is 0.03136900665147795, while adjacent ratios range from 0.2845843803693108 to 3.9052452930797186 and the high-cutoff profile is nonmonotone. The finite table therefore does not support a cutoff-independent extrapolation of the R-399 index metric.",
+      "formal_integration": {
+        "events": [
+          "20260830-increasing-cutoff-conditional-gap-stress-2026-0"
+        ],
+        "lean": "R400 PASS",
+        "negatives": [],
+        "no_changelog_event": false,
+        "no_new_negative": true,
+        "no_new_result": false,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "results": [
+          "R-400"
+        ]
+      },
+      "formal_refs": {
+        "events": [
+          "20260830-increasing-cutoff-conditional-gap-stress-2026-0"
+        ],
+        "negatives": [],
+        "results": [
+          "R-400"
+        ]
+      },
+      "gate_ids": [
+        "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+        "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+        "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+      ],
+      "id": "EXP-001245",
+      "method": [
+        "Build the finite Q3 Gibbs coordinate reference law without a source-history sample on volume-two cutoffs 3--28 and volume-three cutoffs 3--8.",
+        "For beta in {1/2,1,2} and both left/right orientations, enumerate every nontrivial prefix conditional law.",
+        "Compute the ordered-level birth-death gap with conductance min(pi_k,pi_(k+1)), retain every cutoff profile and adjacent ratio, and check probability floors.",
+        "Rebuild the profile in a non-importing independent lane, use hostile low-cutoff and unconditional-parent mutations, and compile the scalar positivity skeleton in Lean R400."
+      ],
+      "next_action": "Replace the truncation-level distance by the physical oscillator coordinate spacing and test a coordinate-metric conditional form in R-401; only an analytic comparison to the Q3 likelihood gradient can advance the shell theorem.",
+      "no_overclaim": "A positive finite minimum and an oscillatory finite profile are diagnostics only; they are not a thermodynamic spectral-gap theorem.",
+      "provenance": "contemporaneous",
+      "question": "Does the conditional birth-death spectral gap used by R-399 remain bounded away from zero when the Q3 oscillator cutoff is increased, or does the high-level tail create a route-local bottleneck?",
+      "recorded_at": "2026-08-30T15:00:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001244",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-08-29",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Increasing-cutoff stress for the conditional birth-death gap",
+      "verdict": "inconclusive"
+    },
+    {
+      "adversarial_review": [
+        {
+          "axis": "metric substitution",
+          "check": "The hostile lane drops the coordinate-spacing factor and detects a high-cutoff gap ratio of 5.739006215465569.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "spectral ordering",
+          "check": "Every one-site coordinate spectrum is required to be finite and strictly increasing before spacings enter the form.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "independence",
+          "check": "The independent lane reconstructs the Q3 Hamiltonian, Gibbs law, marginals and both metrics without importing the primary R-401 module.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "analytic and QFT promotion",
+          "check": "No common-core comparison, phase-conditioned uniformity, common alpha, OS/KMS/GNS transfer, mass gap, continuum, C6, Sector-A or Pre-A closure follows.",
+          "disposition": "UPHELD-OPEN"
+        }
+      ],
+      "boundary": "T0 claim-nonbearing finite coordinate-metric cutoff diagnostic. It proves no uniform conditional gap, no Hamiltonian-form comparison, no common core, common alpha, OS/KMS/GNS reconstruction, mass gap, continuum, C6, Sector-A or Pre-A closure.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "The finite stress supports a new physically motivated route: the index metric can exaggerate high-level bottlenecks because it treats changing coordinate spacings as unit distance. The route is advanced only as a finite interface; a theorem comparing D_q to the actual Q3 likelihood gradient is still required.",
+      "evidence_refs": [
+        "strategy/pre-a-cp1-st8-q3lock-coordinate-metric-gap-manifest.json#new_perspective",
+        "strategy/pre-a-cp1-st8-q3lock-coordinate-metric-gap-certificate-260830.md#Finite verification",
+        "codes/foundations/pre_a_cp1_st8_q3lock_coordinate_metric_gap.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_coordinate_metric_gap_independent.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_coordinate_metric_gap_hostile.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_coordinate_metric_gap_verify.py#main",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-primary-pre_a_cp1_st8_q3lock_coordinate_metric_gap/primary.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-integrated-pre_a_cp1_st8_q3lock_coordinate_metric_gap/integrated.json#derived",
+        "verification/lean/Tect/R401.lean#positive_metric_ratio",
+        "claims/C6-SPACETIME-SIGNATURE/notes/coordinate-metric-gap-260830.md#R-401"
+      ],
+      "finding": "The coordinate-metric form is positive on all 192 finite profiles. Primary and independent lanes pass 647/647, hostile 3/3, integrated 38/38 and Lean R401. The worst finite index gap is 0.03136900665147795, while the worst coordinate gap is 0.14052591590289856. At V=2,d=28,beta=2 the coordinate gap is 0.3796020226627595 versus 0.06614420831951735 for the index metric, a ratio of 5.739006215465569. The minimum per-profile ratio is 0.6666666666666661, so the improvement is not pointwise or uniform.",
+      "formal_integration": {
+        "events": [
+          "20260830-physical-coordinate-metric-for-the-conditional"
+        ],
+        "lean": "R401 PASS",
+        "negatives": [],
+        "no_changelog_event": false,
+        "no_new_negative": true,
+        "no_new_result": false,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "results": [
+          "R-401"
+        ]
+      },
+      "formal_refs": {
+        "events": [
+          "20260830-physical-coordinate-metric-for-the-conditional"
+        ],
+        "negatives": [],
+        "results": [
+          "R-401"
+        ]
+      },
+      "gate_ids": [
+        "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+        "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+        "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+      ],
+      "id": "EXP-001246",
+      "method": [
+        "Diagonalize the one-site oscillator coordinate q and sort its eigenvalues x_k for every declared cutoff.",
+        "For each finite conditional law pi_a, compute both the original index form and D_q(f)=sum_k min(pi_k,pi_(k+1))*((f_(k+1)-f_k)/(x_(k+1)-x_k))^2.",
+        "Extract both generalized gaps, all cutoff profiles and adjacent ratios over 32 systems, beta {1/2,1,2}, every prefix and both orientations.",
+        "Rebuild the calculation in a non-importing independent lane, remove the spacing factor in a hostile lane, and compile Lean R401 for scalar positivity."
+      ],
+      "next_action": "Prove or refute a uniform comparison between the physical-coordinate form and the actual Q3 likelihood gradient on a Hamiltonian-derived common core, then repeat the phase-conditioned and exhaustion stress before combining it with R-399 shell weights.",
+      "no_overclaim": "A larger finite coordinate-metric minimum in this table is not a thermodynamic lower bound and does not establish a Q3 real-time locality theorem.",
+      "provenance": "contemporaneous",
+      "question": "Does replacing the oscillator level-index edge metric by the physical coordinate spacing produce a more stable conditional coercivity profile, or is the R-400 tail bottleneck intrinsic?",
+      "recorded_at": "2026-08-30T16:00:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001245",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001244",
+          "relation": "alternative_to"
+        }
+      ],
+      "reviewed_on": "2026-08-29",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "Physical-coordinate metric for the conditional gap",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",

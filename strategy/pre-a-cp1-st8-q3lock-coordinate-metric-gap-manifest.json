@@ -1,0 +1,106 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-COORDINATE-METRIC-GAP-v0",
+  "result_id": "R-401",
+  "title": "Physical-coordinate metric for the conditional gap",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001246",
+  "claim_bearing": false,
+  "parent_explorations": ["EXP-001245", "EXP-001244", "EXP-001242"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-PROJECTED-DUHAMEL-MODULAR-C1-MULTIPLIER-LOCALITY",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+  ],
+  "question": "Does replacing the oscillator level-index edge metric by the physical coordinate spacing produce a more stable conditional coercivity profile, or is the R-400 tail bottleneck intrinsic?",
+  "new_perspective": {
+    "principle": "Measure likelihood variation in the physical oscillator coordinate, not in the arbitrary truncation-level label.",
+    "motivation": [
+      "The R-400 birth-death form assigns unit distance to every adjacent eigenlevel, even though the oscillator coordinate spacing changes with the cutoff.",
+      "The q-eigenvalues are the coordinates used by the finite Q3 Gibbs law; their shrinking high-level spacing can turn a coordinate-Lipschitz estimate into a stronger level-index coercivity estimate.",
+      "The metric change is kept explicit so it cannot be silently identified with the original R-399 form; an analytic comparison to the Hamiltonian-derived common core is a separate gate."
+    ],
+    "route": [
+      "Diagonalize the one-site oscillator coordinate q and sort its eigenvalues x_k.",
+      "For each conditional law pi_a, form D_q(f)=sum_k min(pi_a(k),pi_a(k+1))*((f(k+1)-f(k))/(x_(k+1)-x_k))^2.",
+      "Compute the first nonzero generalized gap for D_q and retain the original level-index gap beside it.",
+      "Stress both orientations, every prefix, all declared volumes/cutoffs and beta values, then compare adjacent cutoff ratios for the two metrics.",
+      "Require a future theorem comparing the physical-coordinate form to the actual Q3 likelihood gradient before using this route for shell summability."
+    ],
+    "qft_bridge": "A cutoff-stable physical-coordinate conditional form could feed the R-399 shell transfer if a common-core q-Lipschitz estimate is proved. This finite diagnostic supplies neither that comparison nor any OS/KMS/GNS or mass-gap conclusion."
+  },
+  "finite_theorem": {
+    "coordinate_spacing": "delta_x_k=x_(k+1)-x_k>0",
+    "coordinate_form": "D_q(f)=sum_k min(pi_k,pi_(k+1))*((f_(k+1)-f_k)/delta_x_k)^2",
+    "coordinate_gap": "lambda_q is the second eigenvalue of diag(pi)^(-1/2)L_q diag(pi)^(-1/2)",
+    "finite_transfer": "Var_pi(f)<=D_q(f)/lambda_q",
+    "comparison": "The index metric and physical-coordinate metric are reported side by side; no equality or uniform comparison is assumed."
+  },
+  "finite_fixture": {
+    "admissible_pairs": [
+      {"volume": 2, "cutoff_dimensions": [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28]},
+      {"volume": 3, "cutoff_dimensions": [3, 4, 5, 6, 7, 8]}
+    ],
+    "beta_values": ["1/2", "1", "2"],
+    "orientations": ["right", "left"],
+    "edge_spacing_power": "-2",
+    "chi": "1",
+    "r": "-1",
+    "g": "3/5",
+    "c": "3/5",
+    "lambda": "1/10",
+    "numerical_tolerance": 1e-8,
+    "crosscheck_tolerance": 1e-5,
+    "probability_tolerance": 1e-30,
+    "hostile_ratio_threshold": 1.2
+  },
+  "scope": {
+    "finite_coordinate_metric_gap_closed": true,
+    "finite_index_metric_comparison_closed": true,
+    "finite_cutoff_metric_profile_closed": true,
+    "physical_metric_form_comparison_closed": false,
+    "cutoff_independent_coordinate_gap_closed": false,
+    "volume_independent_coordinate_gap_closed": false,
+    "phase_uniform_coordinate_gap_closed": false,
+    "uniform_gradient_decay_closed": false,
+    "common_core_closed": false,
+    "common_alpha_closed": false,
+    "actual_split_limit_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R401.lean",
+    "theorem_markers": ["positive_spacing_factor", "positive_metric_ratio", "finite_scope"],
+    "command": "lake env lean Tect/R401.lean",
+    "boundary": "Lean checks only scalar positivity of coordinate spacing factors and finite metric ratios; it does not formalize Q3 spectra, coordinate-limit comparison or any continuum statement."
+  },
+  "artifacts": {
+    "primary_script": "codes/foundations/pre_a_cp1_st8_q3lock_coordinate_metric_gap.py",
+    "independent_script": "codes/foundations/pre_a_cp1_st8_q3lock_coordinate_metric_gap_independent.py",
+    "hostile_script": "codes/foundations/pre_a_cp1_st8_q3lock_coordinate_metric_gap_hostile.py",
+    "integrated_verifier": "codes/foundations/pre_a_cp1_st8_q3lock_coordinate_metric_gap_verify.py",
+    "lean": "verification/lean/Tect/R401.lean"
+  },
+  "promotion_criteria": [
+    "Prove a uniform comparison between the physical-coordinate conditional form and the actual Hamiltonian-derived likelihood gradient on a common core.",
+    "Prove cutoff-, volume-, phase- and shape-uniform lower control for the coordinate-metric conditional form, including the phase-conditioned case.",
+    "Only then combine the coordinate form with R-399 shell weights and pass the regulator limits."
+  ],
+  "stop_conditions": [
+    "If the coordinate-metric minimum collapses with the same profile as the index metric, retain R-399 and register this metric rescue as unsuccessful.",
+    "If the coordinate metric is stable only for a restricted beta or volume, keep it as a finite fixed-parameter interface and do not promote uniformity.",
+    "If no analytic comparison to the Q3 generator can be proved, do not substitute the coordinate form into the shell theorem."
+  ],
+  "boundary": "T0 claim-nonbearing finite coordinate-metric cutoff diagnostic. It proves no uniform conditional gap, no Hamiltonian-form comparison, no common core, common alpha, OS/KMS/GNS reconstruction, mass gap, continuum, C6, Sector-A or Pre-A closure.",
+  "no_overclaim": "The coordinate metric is a proposed physical reparametrization of a finite one-dimensional form. A larger finite gap than R-400 does not establish a thermodynamic lower bound or a Q3 locality theorem.",
+  "recorded_by": "Codex"
+}

@@ -42,6 +42,8 @@ policy in `governance/development-history.md`.
 | [R-376](#r-376) | Hilbert-Schmidt Lipschitz bridge for the capped Liouvillian kernel | R-376 v1.0 is a T0 claim-nonbearing finite operator-interface checkpoint under EXP-001218. A noncommuting cutoff-2 edge Liouvillian stress gives maximum full-kernel Frobenius ratio 0.9787544362168733 and 64-layer ratio 0.9755896836319287 with 76/76 integrated assertions; general Schatten-2 proof, operator-norm locality, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
 | [R-377](#r-377) | Gap-free odd-Matsubara resolvent telescoping budget | R-377 v1.0 is a T0 claim-nonbearing finite resolvent-interface checkpoint under EXP-001219. The exact positive-resolvent difference identity and its 64-layer budget pass 122/122 integrated assertions with Lean R377; the accumulated finite budget ratio is 0.9895313426497929 and the absolute-value square-root debt is recorded separately. Uniform locality, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
 | [R-382](#r-382) | Increasing-cutoff endpoint modular moment stress | R-382 v1.0 is a T0 claim-nonbearing finite cutoff-profile diagnostic under EXP-001224. The R-381 endpoint-energy bridge passes across 2816 all-prefix actual-Q3 contexts with Lean R382; edge max M_0 grows from 2.733031855844076 at d=3 to 41.64826651661874 at d=6 and max M_2 from 0.008378198414559081 to 17.719559304500326, with d=5 to d=6 ratios 8.855033106195243 and 36.38049903040583. This is finite growth evidence only; uniform M_0/M_2 control, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
+| [R-401](#r-401) | Physical-coordinate metric for the conditional gap | R-401 v1.0 is a T0 claim-nonbearing finite coordinate-metric diagnostic under EXP-001246. Replacing the truncation-level edge distance by the ordered oscillator coordinate spacing gives a worst finite conditional gap of 0.14052591590289856 versus the R-400 index value 0.03136900665147795 across 32 systems, 192 profiles and 180 ratios; primary/independent/hostile/integrated and Lean R401 pass. The metric is not pointwise larger at every low cutoff, and the Hamiltonian-form comparison, uniformity, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
+| [R-400](#r-400) | Increasing-cutoff conditional gap stress | R-400 v1.0 is a T0 claim-nonbearing finite static Q3 Gibbs diagnostic under EXP-001245. The ordered birth-death conditional gap remains positive but oscillates across 32 systems, 192 profiles and 180 adjacent ratios; primary 519/519, independent 614/614, hostile 3/3, integrated 29/29 and Lean R400 pass. The minimum finite gap is 0.03136900665147795, so no cutoff/volume-uniform bound is inferred; gradient decay, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
 | [R-399](#r-399) | Conditional Poincare-before-Duhamel shell transport | R-399 v1.0 is a T0 claim-nonbearing finite actual-Q3 checkpoint under EXP-001244. The R-398 Doob shell variance is converted to a conditional birth-death Dirichlet bound across 3,584 oriented history contexts; primary 8,975/8,975, independent aggregate agreement, hostile 5/5, integrated 31/31 and Lean R399 pass. The minimum finite conditional gap is 0.49325229280535315 and the maximum weighted Poincare shell bound is 0.00045782017814794144. Uniform conditional gaps, gradient decay, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
 | [R-398](#r-398) | Conditioned-collar Doob martingale and shell-influence discriminator | R-398 v1.0 is a T0 claim-nonbearing finite actual-Q3 coordinate-likelihood checkpoint under EXP-001242. Conditioning the full likelihood on nested left/right collars gives an exact nonnegative Doob shell square function across 3,584 all-prefix contexts; primary 12,559/12,559, independent aggregate agreement, hostile 5/5, integrated 31/31 and Lean R398 pass. The maximum identity residual is 1.0570971181733668e-18 and the maximum mu=1/8 weighted shell cost is 0.00031475936144631414. Phase-conditioned influence, folded Euclidean domination, uniform shell bounds, common core, common-alpha and all Q3LOCK/QFT gates remain open |
 | [R-397](#r-397) | Finite semigroup-dressed Petz collar discriminator | R-397 v1.0 is a T0 claim-nonbearing finite checkpoint under EXP-001241. A rank-preserving heat-semigroup collar passes primary 473/473, independent 6/6, hostile 6/6, integrated 23/23 and Lean R397 over 5 systems, 12 tripartitions and 120 rows; semigroup residual is 9.81218636736738e-16, minimum mass 0.344378492577764, and the maximum adjacent transport ratio is 2.192041611389991. Uniform moment, normalized-filter theorem, common-alpha and all Q3LOCK/QFT gates remain open |
@@ -638,6 +640,71 @@ No new negative result, tier change, or R-376 PDF is issued.
 
 **Proven in:** manifest, certificate, Lean entrypoint, primary script,
 independent script, integrated verifier, scope note, and saved run artefacts.
+
+<a id="r-401"></a>
+### R-401 -- Physical-coordinate metric for the conditional gap
+
+**Result ID.** R-401 is a T0, claim-nonbearing finite diagnostic under
+EXP-001246.  It tests a new route after the R-400 stress: the one-site
+oscillator coordinate eigenvalues, rather than the truncation-level labels,
+define the edge distance.  For a conditional law `pi` and ordered coordinate
+levels `x_k`, the finite form is
+
+```
+D_q(f) = sum_k min(pi_k,pi_(k+1))
+       * ((f_(k+1)-f_k)/(x_(k+1)-x_k))^2.
+```
+
+The coordinate-metric generalized gap is reported beside the original
+level-index gap; no equality or analytic comparison is assumed.
+
+**Verification.** The grid has volume two with dimensions 3--28 and volume
+three with dimensions 3--8, beta in `{1/2,1,2}`, both orientations, 32 systems,
+192 profiles and 180 adjacent ratios.  The primary lane passes 647/647, the
+non-importing independent lane passes 647/647, the hostile lane passes 3/3,
+the integrated verifier passes 38/38, and Lean R401 compiles.  The worst finite
+index gap is `0.03136900665147795`; the worst finite coordinate gap is
+`0.14052591590289856`.  At `V=2,d=28,beta=2`, the coordinate gap is
+`0.3796020226627595` versus the index gap `0.06614420831951735`, a ratio of
+`5.739006215465569`.  The minimum per-profile coordinate/index gain is
+`0.6666666666666661`, so the coordinate metric is not pointwise dominant at
+every low cutoff.
+
+**Boundary.** R-401 does not prove that the coordinate form controls the
+actual Q3 likelihood gradient or a Hamiltonian commutator on a common core.
+It gives no phase-conditioned or cutoff/volume/shape-uniform lower bound,
+common alpha, OS/KMS/GNS reconstruction, mass gap, continuum, C6, Sector-A or
+Pre-A closure.  No tier change, negative result or PDF is issued.
+
+**Proven in:** [R-401 certificate](strategy/pre-a-cp1-st8-q3lock-coordinate-metric-gap-certificate-260830.md), [Lean entrypoint](verification/lean/Tect/R401.lean), primary/independent/hostile scripts, integrated verifier, [scope note](claims/C6-SPACETIME-SIGNATURE/notes/coordinate-metric-gap-260830.md), and saved run artefacts.
+
+<a id="r-400"></a>
+### R-400 -- Increasing-cutoff conditional birth-death gap stress
+
+**Result ID.** R-400 is a T0, claim-nonbearing finite static diagnostic under
+EXP-001245.  It stresses only the finite Q3 Gibbs reference geometry behind
+R-399: every oriented-prefix conditional law uses the ordered-level
+birth-death Laplacian with conductance `min(pi_k,pi_(k+1))`.
+
+**Verification.** The declared ladder contains volume-two dimensions 3--28
+and volume-three dimensions 3--8, beta in `{1/2,1,2}`, both orientations, 32
+systems, 192 conditional profiles and 180 adjacent ratios.  The primary lane
+passes 519/519, the independent lane 614/614, the hostile lane 3/3, the
+integrated verifier 29/29, and Lean R400 compiles.  The minimum finite
+conditional gap is `0.03136900665147795`, the maximum is
+`0.8039838752304234`, the minimum conditional atom is
+`7.164643893391813e-15`, and the adjacent gap-ratio range is
+`[0.2845843803693108,3.9052452930797186]`.
+
+The gap remains positive on this finite grid but its cutoff profile oscillates,
+so the first finite value cannot be reused as a uniform lower bound.
+
+**Boundary.** R-400 supplies no cutoff-, volume-, source- or phase-uniform
+gap, no gradient-decay theorem, no common form core, common alpha, OS/KMS/GNS
+reconstruction, mass gap, continuum, C6, Sector-A or Pre-A closure.  No tier
+change, negative result or PDF is issued.
+
+**Proven in:** [R-400 certificate](strategy/pre-a-cp1-st8-q3lock-conditional-gap-cutoff-stress-certificate-260830.md), [Lean entrypoint](verification/lean/Tect/R400.lean), primary/independent/hostile scripts, integrated verifier, [scope note](claims/C6-SPACETIME-SIGNATURE/notes/conditional-gap-cutoff-stress-260830.md), and saved run artefacts.
 
 <a id="r-399"></a>
 ### R-399 -- Conditional Poincare-before-Duhamel shell transport

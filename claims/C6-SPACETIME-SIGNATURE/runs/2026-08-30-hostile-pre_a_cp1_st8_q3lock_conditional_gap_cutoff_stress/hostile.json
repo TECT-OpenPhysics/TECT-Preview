@@ -1,0 +1,41 @@
+{
+  "assertion_count": 3,
+  "boundary": "T0 claim-nonbearing finite static cutoff stress. It proves no uniform conditional gap, gradient decay, common form core, common alpha, OS/KMS/GNS reconstruction, mass gap, continuum, C6, Sector-A or Pre-A closure.",
+  "checks": [
+    {
+      "actual": 0.06614420831951735,
+      "expected": ">0",
+      "name": "genuine finite gap",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.5222806648401578,
+      "expected": ">1e-06",
+      "name": "fixed low-cutoff mutation detected",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.07359455021663167,
+      "expected": ">1e-06",
+      "name": "unconditional-parent mutation detected",
+      "status": "PASS"
+    }
+  ],
+  "derived": {
+    "baseline_dimension": 3,
+    "beta": 2.0,
+    "finite": true,
+    "fixed_low_cutoff_gap": 0.5884248731596752,
+    "genuine_gap_count": 28,
+    "genuine_minimum_gap": 0.06614420831951735,
+    "naive_deficit": 0.5222806648401578,
+    "target_dimension": 28,
+    "unconditional_gap": 0.13483433904976375,
+    "wrong_parent_mismatch": 0.07359455021663167
+  },
+  "exploration_id": "EXP-001245",
+  "manifest": "strategy/pre-a-cp1-st8-q3lock-conditional-gap-cutoff-stress-manifest.json",
+  "result_id": "R-400",
+  "schema": "tect/pre-a-r400-hostile/1.0",
+  "verdict": "PASS"
+}

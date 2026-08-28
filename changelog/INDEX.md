@@ -5,7 +5,7 @@ Compact generated reader surface. The append-only authority is
 record 568 / commit `4db22f4e` and no longer grows.
 Post-cutover full bodies live exactly once in bounded pages under `pages/`.
 
-**740 accepted events** · latest 25 shown below · machine locator: `index.json`
+**742 accepted events** · latest 25 shown below · machine locator: `index.json`
 
 Search the complete authority without loading every page:
 
@@ -17,6 +17,8 @@ python verification/scripts/changelog.py search --text <phrase>
 
 | Date | Event | Claims | Full entry |
 |---|---|---|---|
+| 2026-08-30 | `20260830-physical-coordinate-metric-for-the-conditional` — [Physical-coordinate metric for the conditional gap] - 2026-08-30 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000719-000768.md#20260830-physical-coordinate-metric-for-the-conditional) |
+| 2026-08-30 | `20260830-increasing-cutoff-conditional-gap-stress-2026-0` — [Increasing-cutoff conditional gap stress] - 2026-08-30 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000719-000768.md#20260830-increasing-cutoff-conditional-gap-stress-2026-0) |
 | 2026-08-30 | `20260830-conditional-poincare-before-duhamel-shell-trans` — [Conditional Poincare-before-Duhamel shell transport] - 2026-08-30 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000719-000768.md#20260830-conditional-poincare-before-duhamel-shell-trans) |
 | 2026-08-30 | `20260830-conditioned-collar-doob-martingale-and-shell-in` — [Conditioned-collar Doob martingale and shell influence] - 2026-08-30 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000719-000768.md#20260830-conditioned-collar-doob-martingale-and-shell-in) |
 | 2026-08-30 | `20260830-finite-semigroup-dressed-petz-collar-discrimina` — [Finite semigroup-dressed Petz collar discriminator] - 2026-08-30 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000719-000768.md#20260830-finite-semigroup-dressed-petz-collar-discrimina) |
@@ -40,8 +42,6 @@ python verification/scripts/changelog.py search --text <phrase>
 | 2026-08-28 | `20260828-three-channel-anticommutator-bridge-for-half-de` — [Three-channel anticommutator bridge for half-density modular tails (R-379)] - 2026-08-28 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000719-000768.md#20260828-three-channel-anticommutator-bridge-for-half-de) |
 | 2026-08-28 | `20260828-half-density-hellinger-bridge-for-the-theta-hal` — [Half-density Hellinger bridge for the theta-half Kubo-Mori shell (R-378)] - 2026-08-28 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000719-000768.md#20260828-half-density-hellinger-bridge-for-the-theta-hal) |
 | 2026-08-28 | `20260828-gap-free-odd-matsubara-resolvent-telescoping-bu` — [Gap-free odd-Matsubara resolvent telescoping budget (R-377)] - 2026-08-28 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000669-000718.md#20260828-gap-free-odd-matsubara-resolvent-telescoping-bu) |
-| 2026-08-28 | `20260828-r-376-hilbert-schmidt-lipschitz-bridge-for-the` — [R-376 Hilbert-Schmidt Lipschitz bridge for the capped Liouvillian kernel] - 2026-08-28 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000669-000718.md#20260828-r-376-hilbert-schmidt-lipschitz-bridge-for-the) |
-| 2026-08-28 | `20260828-r-375-summable-odd-matsubara-lipschitz-budget-2` — [R-375 summable odd-Matsubara Lipschitz budget] - 2026-08-28 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000669-000718.md#20260828-r-375-summable-odd-matsubara-lipschitz-budget-2) |
 
 ## Post-cutover pages
 
@@ -49,7 +49,7 @@ Each full event body after the cutover occurs in exactly one page.
 
 | Ordinals | Events | Page |
 |---|---:|---|
-| 719–740 | 22 | [000719-000768.md](pages/000719-000768.md) |
+| 719–742 | 24 | [000719-000768.md](pages/000719-000768.md) |
 | 669–718 | 50 | [000669-000718.md](pages/000669-000718.md) |
 | 619–668 | 50 | [000619-000668.md](pages/000619-000668.md) |
 | 569–618 | 50 | [000569-000618.md](pages/000569-000618.md) |
