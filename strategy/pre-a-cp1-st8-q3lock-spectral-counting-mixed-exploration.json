@@ -1,0 +1,119 @@
+{
+  "adversarial_review": [
+    {
+      "axis": "sublinear exponent domain",
+      "check": "The hostile lane supplies alpha=1 to the mixed helper and it rejects the divergent-tail case.",
+      "disposition": "DISMISSED-FINITE"
+    },
+    {
+      "axis": "eigenvalue ordering",
+      "check": "A reversed toy spectrum changes both the quadratic and optimized mixed envelopes.",
+      "disposition": "DISMISSED-FINITE"
+    },
+    {
+      "axis": "exponent power convention",
+      "check": "Multiplying by lambda^alpha instead of dividing by lambda^alpha changes the counting constant and fails.",
+      "disposition": "DISMISSED-FINITE"
+    },
+    {
+      "axis": "split membership",
+      "check": "Changing the interior split changes the finite mixed bound, so an off-by-one cannot be silent.",
+      "disposition": "DISMISSED-FINITE"
+    },
+    {
+      "axis": "quadratic versus linear scaling",
+      "check": "A linear k constant inserted into the retained quadratic envelope yields a negative toy residual.",
+      "disposition": "DISMISSED-FINITE"
+    },
+    {
+      "axis": "Fiedler-only shortcut",
+      "check": "The first positive inverse eigenvalue is strictly below the full inverse-spectrum trace on both selected rows.",
+      "disposition": "DISMISSED-FINITE"
+    },
+    {
+      "axis": "zero mode and connectivity",
+      "check": "Exactly d-1 positive modes above the declared floor are required; a diagonal generator gives no edges or positive spectrum.",
+      "disposition": "DISMISSED-FINITE"
+    },
+    {
+      "axis": "finite versus infinite tail",
+      "check": "The finite head and tail sums are checked before the UV integral remainder; the infinite value is not a finite equality.",
+      "disposition": "DISMISSED-FINITE"
+    },
+    {
+      "axis": "independent reconstruction",
+      "check": "The non-importing lane agrees on invariant aggregate fields within 5e-6; optimizer histograms are not promoted because tied minimizers can swap under roundoff.",
+      "disposition": "DISMISSED-FINITE"
+    },
+    {
+      "axis": "uniform and physical promotion",
+      "check": "A row-wise best pair and split do not imply a fixed rule or uniform constants, a common core, GNS coercivity, a physical gap, continuum, C6, Sector-A or Pre-A closure.",
+      "disposition": "UPHELD-OPEN"
+    }
+  ],
+  "boundary": "T0 claim-nonbearing finite mixed IR/UV spectral-counting and zeta-tail checkpoint only. It proves no cutoff-, volume-, source-, phase- or exhaustion-uniform bound, common core, common split rule, OS/KMS/GNS reconstruction, mass gap, continuum, C6, Sector-A or Pre-A closure.",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "decision_reason": "Splitting the ordered spectrum into an infrared head and ultraviolet tail allows separate sublinear exponents and makes the finite trace budget explicit without assuming a common alpha. Primary, independent, hostile, integrated and Lean checks validate the finite implication, while no data establish a regulator-independent split or constants.",
+  "evidence_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-spectral-counting-mixed-manifest.json#new_perspective",
+    "strategy/pre-a-cp1-st8-q3lock-spectral-counting-mixed-certificate-260831.md#Verification",
+    "codes/foundations/pre_a_cp1_st8_q3lock_spectral_counting_mixed.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_spectral_counting_mixed_independent.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_spectral_counting_mixed_hostile.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_spectral_counting_mixed_verify.py#main",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-primary-pre_a_cp1_st8_q3lock_spectral_counting_mixed/primary.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-independent-pre_a_cp1_st8_q3lock_spectral_counting_mixed/independent.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-hostile-pre_a_cp1_st8_q3lock_spectral_counting_mixed/hostile.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-integrated-pre_a_cp1_st8_q3lock_spectral_counting_mixed/integrated.json#derived",
+    "verification/lean/Tect/R412.lean#mixed_tail_nonnegative",
+    "claims/C6-SPACETIME-SIGNATURE/notes/spectral-counting-mixed-260831.md#R-412"
+  ],
+  "finding": "The primary lane passes 592762/592762 assertions over 7 systems, 2688 contexts and 21120 conditional rows; the independent lane passes 592762/592762; the hostile lane passes 9/9; the integrated verifier passes 55/55; and Lean R412 compiles. Every row enumerates all 25 declared exponent pairs and every interior split. The selected finite mixed envelope ranges over [0.5800949275086398,2.117318722273093] and the selected infinite comparison over [0.6295715327320223,3.1299469867610137].",
+  "formal_integration": {
+    "events": ["20260831-mixed-ir-uv-spectral-counting-envelope-2026-08"],
+    "lean": "R412 PASS",
+    "negatives": [],
+    "no_new_negative": true,
+    "no_pdf": true,
+    "no_tier_change": true,
+    "results": ["R-412"]
+  },
+  "formal_refs": {
+    "events": ["20260831-mixed-ir-uv-spectral-counting-envelope-2026-08"],
+    "negatives": [],
+    "results": ["R-412"]
+  },
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY",
+    "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+  ],
+  "method": [
+    "For every actual conditional likelihood row, form W=D_pi^(-1/2)L D_pi^(-1/2) and sort its d-1 positive eigenvalues.",
+    "For each declared exponent pair and every interior split, compute separate IR and UV counting constants and the finite head/tail envelope.",
+    "Compare only the UV tail with its explicit integral remainder for reciprocal exponent greater than one.",
+    "Repeat the full volume-two cutoff, beta, source, history, order, prefix, adjoint and collar-orientation grid in independent code.",
+    "Use alpha=1, unsorted, split-index, exponent-inverted, linear-scaling, Fiedler-only and diagonal-generator mutations as hostile controls, then run the Lean scalar cross-check."
+  ],
+  "next_action": "Prove a fixed or analytically controlled IR/UV split rule and positive uniform bounds for both counting constants on one Hamiltonian common core; control cutoff, volume, source, phase and exhaustion dependence; transfer to the R-399 shell and combine with the R-406 Schur residual split.",
+  "no_overclaim": "The mixed exponent family is a finite spectral inequality and a broader uniformity target; it is not an analytic regulator estimate, thermodynamic theorem, physical-sector result or QFT mass-gap proof.",
+  "provenance": "contemporaneous",
+  "qft_interface": {
+    "closed": "Finite spectral ordering, all declared mixed exponent/split envelopes, UV zeta-tail comparison, full likelihood-row coverage, hostile shortcut rejection and Lean scalar bookkeeping.",
+    "open": "Uniform split rule and constants on a common Hamiltonian core, phase selection, shell transfer, common-alpha dynamics, broken-sector GNS coercivity, continuum and physical-gap obligations."
+  },
+  "question": "Can an IR/UV mixed spectral-counting envelope control the normalized Green trace without imposing one common finite exponent, and can its split rule be made uniform on the physical route?",
+  "recorded_at": "2026-08-31T00:00:00Z",
+  "recorded_by": "Codex",
+  "related": [
+    {"id": "EXP-001256", "relation": "continues"},
+    {"id": "EXP-001255", "relation": "continues"},
+    {"id": "EXP-001254", "relation": "continues"}
+  ],
+  "reviewed_on": "2026-08-29",
+  "schema": "tect/proof-exploration/1.0",
+  "schema_version": "1.0",
+  "task_id": "T-054",
+  "title": "Two-regime IR/UV mixed spectral-counting envelope for the normalized Green trace",
+  "verdict": "advanced"
+}

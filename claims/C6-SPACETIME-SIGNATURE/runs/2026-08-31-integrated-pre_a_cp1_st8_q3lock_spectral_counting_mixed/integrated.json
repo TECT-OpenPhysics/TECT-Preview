@@ -1,0 +1,2248 @@
+{
+  "boundary": "T0 claim-nonbearing finite mixed IR/UV spectral-counting and zeta-tail checkpoint only. It proves no cutoff-, volume-, source-, phase- or exhaustion-uniform bound, common core, common split rule, OS/KMS/GNS reconstruction, mass gap, continuum, C6, Sector-A or Pre-A closure.",
+  "checks": [
+    {
+      "actual": "['R-412', 'EXP-001257', False]",
+      "expected": "R-412/EXP-001257/false",
+      "group": "identity",
+      "name": "manifest identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'cutoff_independent_mixed_constant_closed': False, 'volume_independent_mixed_constant_closed': False, 'phase_uniform_mixed_constant_closed': False, 'exhaustion_uniform_mixed_constant_closed': False, 'common_core_closed': False, 'common_split_rule_closed': False, 'hamiltonian_os_identification_closed': False, 'kms_gns_gap_closed': False, 'continuum_closed': False, 'c6_closed': False, 'sector_a_closed': False, 'pre_a_closed': False}",
+      "expected": "all promoted flags false",
+      "group": "scope",
+      "name": "scope firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": "[]",
+      "expected": "all R-412 artifacts",
+      "group": "provenance",
+      "name": "artifacts present",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'codes/foundations/pre_a_cp1_st8_q3lock_spectral_counting_mixed.py': 'dd2f338d2221843900253ac0dfea1a98ece8ac18223207fa2a40f372da9338f1', 'codes/foundations/pre_a_cp1_st8_q3lock_spectral_counting_mixed_independent.py': '8150eea456967d65c799e832e10e78fa59ebd7c30003cc4583729741e334c99e', 'codes/foundations/pre_a_cp1_st8_q3lock_spectral_counting_mixed_hostile.py': '3a993681eaa9acd9bcf3baf0f0b13622c513495f5f98cc594bcd680344b81369', 'verification/lean/Tect/R412.lean': '5506c98af6c793896453df482b45c21c645f7c52539764df0a9091ac95dcf11d'}",
+      "expected": "distinct",
+      "group": "provenance",
+      "name": "source hashes distinct",
+      "status": "PASS"
+    },
+    {
+      "actual": "['split_exponents_positive', 'mixed_tail_nonnegative', 'finite_scope']",
+      "expected": "declared markers",
+      "group": "Lean",
+      "name": "Lean markers",
+      "status": "PASS"
+    },
+    {
+      "actual": "finite scalar file",
+      "expected": "no promotion text",
+      "group": "Lean",
+      "name": "Lean boundary",
+      "status": "PASS"
+    },
+    {
+      "actual": "reused claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-primary-pre_a_cp1_st8_q3lock_spectral_counting_mixed/primary.json",
+      "expected": "existing output",
+      "group": "executables",
+      "name": "reuse pre_a_cp1_st8_q3lock_spectral_counting_mixed.py",
+      "status": "PASS"
+    },
+    {
+      "actual": "reused claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-independent-pre_a_cp1_st8_q3lock_spectral_counting_mixed/independent.json",
+      "expected": "existing output",
+      "group": "executables",
+      "name": "reuse pre_a_cp1_st8_q3lock_spectral_counting_mixed_independent.py",
+      "status": "PASS"
+    },
+    {
+      "actual": "reused claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-hostile-pre_a_cp1_st8_q3lock_spectral_counting_mixed/hostile.json",
+      "expected": "existing output",
+      "group": "executables",
+      "name": "reuse pre_a_cp1_st8_q3lock_spectral_counting_mixed_hostile.py",
+      "status": "PASS"
+    },
+    {
+      "actual": "",
+      "expected": "exit 0",
+      "group": "Lean",
+      "name": "Lean compile",
+      "status": "PASS"
+    },
+    {
+      "actual": "PASS",
+      "expected": "PASS",
+      "group": "executables",
+      "name": "primary verdict",
+      "status": "PASS"
+    },
+    {
+      "actual": "PASS",
+      "expected": "PASS",
+      "group": "executables",
+      "name": "independent verdict",
+      "status": "PASS"
+    },
+    {
+      "actual": "PASS",
+      "expected": "PASS",
+      "group": "hostile",
+      "name": "hostile verdict",
+      "status": "PASS"
+    },
+    {
+      "actual": "[7, 7]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent system_count",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2688, 2688]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent context_count",
+      "status": "PASS"
+    },
+    {
+      "actual": "[21120, 21120]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent comparison_row_count",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.44413751605180657, 0.44413751605180685]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent minimum_resistance_average",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.0052069566897672, 2.0052069566897672]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent maximum_resistance_average",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.44413751605172147, 0.44413751605155904]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent minimum_trace_inverse",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.0052069566897663, 2.005206956689766]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent maximum_trace_inverse",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.44413751605172136, 0.444137516051559]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent minimum_projector_trace",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.0052069566897663, 2.0052069566897663]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent maximum_projector_trace",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.537969834293108e-12, 1.9488854974269998e-12]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent maximum_identity_abs_residual",
+      "status": "PASS"
+    },
+    {
+      "actual": "[6.661338147750939e-16, 8.881784197001252e-16]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent maximum_transformed_identity_abs_residual",
+      "status": "PASS"
+    },
+    {
+      "actual": "[4.440892098500626e-16, 4.440892098500626e-16]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent maximum_projector_identity_abs_residual",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.7570174175402339, 0.757017417540234]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent minimum_positive_normalized_eigenvalue",
+      "status": "PASS"
+    },
+    {
+      "actual": "[85.99011817086347, 85.9901181708632]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent maximum_effective_resistance",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.19600096779786974, 0.19600096779786974]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent minimum_mode_constant",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.2046269661757882, 1.2046269661757802]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent maximum_mode_constant",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.2140470537996502, 1.21404705379965]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent minimum_zeta_bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[7.467366756170776, 7.467366756170776]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent maximum_zeta_bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.3655132360769229, 1.3655132360769318]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent minimum_zeta_infinite_bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[8.392479309309332, 8.392479309309332]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent maximum_zeta_infinite_bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[3.552713678800501e-15, 3.552713678800501e-15]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent maximum_mode_envelope_abs_residual",
+      "status": "PASS"
+    },
+    {
+      "actual": "[{'0.5': {'alpha': 0.5, 'maximum_counting_constant': 2.2587641806701084, 'maximum_envelope_abs_residual': 5.329070518200751e-15, 'maximum_finite_trace_bound': 7.467366756170777, 'maximum_infinite_zeta_bound': 8.487769880946438, 'minimum_counting_constant': 0.9111160761130037, 'minimum_finite_trace_bound': 1.2140470537996502, 'minimum_infinite_zeta_bound': 1.3704481873907701}, '0.6666666666666666': {'alpha': 0.6666666666666666, 'maximum_counting_constant': 1.7331567970356039, 'maximum_envelope_abs_residual': 7.105427357601002e-15, 'maximum_finite_trace_bound': 4.016793811651861, 'maximum_infinite_zeta_bound': 6.057600061203184, 'minimum_counting_constant': 0.5564313820164339, 'minimum_finite_trace_bound': 0.8150712925586951, 'minimum_infinite_zeta_bound': 1.0917821272758808}, '0.75': {'alpha': 0.75, 'maximum_counting_constant': 1.51817325364634, 'maximum_envelope_abs_residual': 7.105427357601002e-15, 'maximum_finite_trace_bound': 3.319468358543817, 'maximum_infinite_zeta_bound': 6.380677732870801, 'minimum_counting_constant': 0.4348410829936692, 'minimum_finite_trace_bound': 0.7197364076519063, 'minimum_infinite_zeta_bound': 1.1948686580062815}, '0.8': {'alpha': 0.8, 'maximum_counting_constant': 1.4022047203242067, 'maximum_envelope_abs_residual': 3.552713678800501e-15, 'maximum_finite_trace_bound': 3.0276871936727017, 'maximum_infinite_zeta_bound': 7.1092996927753465, 'minimum_counting_constant': 0.3919460841218269, 'minimum_finite_trace_bound': 0.7185669986495054, 'minimum_infinite_zeta_bound': 1.434763633776249}, '0.9': {'alpha': 0.9, 'maximum_counting_constant': 1.2847088482697955, 'maximum_envelope_abs_residual': 3.552713678800501e-15, 'maximum_finite_trace_bound': 2.6106765992895387, 'maximum_infinite_zeta_bound': 12.940005790829282, 'minimum_counting_constant': 0.3197060623831058, 'minimum_finite_trace_bound': 0.7259594430376384, 'minimum_infinite_zeta_bound': 2.7117742956459474}}, {'0.5': {'alpha': 0.5, 'maximum_counting_constant': 2.2587641806701084, 'maximum_envelope_abs_residual': 5.329070518200751e-15, 'maximum_finite_trace_bound': 7.467366756170777, 'maximum_infinite_zeta_bound': 8.487769880946438, 'minimum_counting_constant': 0.9111160761130068, 'minimum_finite_trace_bound': 1.21404705379965, 'minimum_infinite_zeta_bound': 1.3704481873907794}, '0.6666666666666666': {'alpha': 0.6666666666666666, 'maximum_counting_constant': 1.7331567970356039, 'maximum_envelope_abs_residual': 7.105427357601002e-15, 'maximum_finite_trace_bound': 4.016793811651861, 'maximum_infinite_zeta_bound': 6.057600061203184, 'minimum_counting_constant': 0.5564313820164363, 'minimum_finite_trace_bound': 0.8150712925587003, 'minimum_infinite_zeta_bound': 1.0917821272758876}, '0.75': {'alpha': 0.75, 'maximum_counting_constant': 1.51817325364634, 'maximum_envelope_abs_residual': 3.552713678800501e-15, 'maximum_finite_trace_bound': 3.319468358543817, 'maximum_infinite_zeta_bound': 6.380677732870801, 'minimum_counting_constant': 0.4348410829936714, 'minimum_finite_trace_bound': 0.719736407651911, 'minimum_infinite_zeta_bound': 1.1948686580062895}, '0.8': {'alpha': 0.8, 'maximum_counting_constant': 1.4022047203242067, 'maximum_envelope_abs_residual': 5.329070518200751e-15, 'maximum_finite_trace_bound': 3.0276871936727017, 'maximum_infinite_zeta_bound': 7.1092996927753465, 'minimum_counting_constant': 0.39194608412183135, 'minimum_finite_trace_bound': 0.7185669986495156, 'minimum_infinite_zeta_bound': 1.4347636337762695}, '0.9': {'alpha': 0.9, 'maximum_counting_constant': 1.2847088482697953, 'maximum_envelope_abs_residual': 5.329070518200751e-15, 'maximum_finite_trace_bound': 2.6106765992895387, 'maximum_infinite_zeta_bound': 12.94000579082928, 'minimum_counting_constant': 0.3197060623831098, 'minimum_finite_trace_bound': 0.7259594430376485, 'minimum_infinite_zeta_bound': 2.7117742956459856}}]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent alpha_profiles",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.5800949275086398, 0.5800949275076762]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent mixed_selected_min_finite_bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.117318722273093, 2.117318722273092]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent mixed_selected_max_finite_bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.6295715327320223, 0.6295715327320268]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent mixed_selected_min_infinite_bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[3.1299469867610137, 3.129946986761012]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent mixed_selected_max_infinite_bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[-6.661338147750939e-16, -8.881784197001252e-16]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent mixed_selected_min_trace_slack",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.0005947926662857039, 0.0005947926662857039]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent mixed_selected_min_tail_slack",
+      "status": "PASS"
+    },
+    {
+      "actual": "[250, 250]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent mixed_candidate_count_per_row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[[3, 6, 10, 15, 28, 45, 66], [3, 6, 10, 15, 28, 45, 66]]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent pair_count",
+      "status": "PASS"
+    },
+    {
+      "actual": "[[3, 4, 5, 6, 8, 10, 12], [3, 4, 5, 6, 8, 10, 12]]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent cutoff_dimensions",
+      "status": "PASS"
+    },
+    {
+      "actual": "7",
+      "expected": "7",
+      "group": "coverage",
+      "name": "system grid reached",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2688, 21120]",
+      "expected": "positive rows beyond contexts",
+      "group": "coverage",
+      "name": "context grid reached",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.537969834293108e-12, 6.661338147750939e-16, 4.440892098500626e-16]",
+      "expected": "<= 1e-08",
+      "group": "trace identity",
+      "name": "trace identity residual bounded",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.44413751605172147, 0.44413751605180657]",
+      "expected": ">0 on finite grid",
+      "group": "trace identity",
+      "name": "trace positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.7570174175402339",
+      "expected": "> 1e-14",
+      "group": "connectivity",
+      "name": "normalized spectrum positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.19600096779786974, 3.552713678800501e-15]",
+      "expected": "c2>0 and residual <= 1e-08",
+      "group": "mode counting",
+      "name": "quadratic mode envelope",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.0052069566897663, 7.467366756170776, 8.392479309309332]",
+      "expected": "trace <= finite <= infinite zeta envelope",
+      "group": "zeta envelope",
+      "name": "zeta trace envelope",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'0.5': {'alpha': 0.5, 'maximum_counting_constant': 2.2587641806701084, 'maximum_envelope_abs_residual': 5.329070518200751e-15, 'maximum_finite_trace_bound': 7.467366756170777, 'maximum_infinite_zeta_bound': 8.487769880946438, 'minimum_counting_constant': 0.9111160761130037, 'minimum_finite_trace_bound': 1.2140470537996502, 'minimum_infinite_zeta_bound': 1.3704481873907701}, '0.6666666666666666': {'alpha': 0.6666666666666666, 'maximum_counting_constant': 1.7331567970356039, 'maximum_envelope_abs_residual': 7.105427357601002e-15, 'maximum_finite_trace_bound': 4.016793811651861, 'maximum_infinite_zeta_bound': 6.057600061203184, 'minimum_counting_constant': 0.5564313820164339, 'minimum_finite_trace_bound': 0.8150712925586951, 'minimum_infinite_zeta_bound': 1.0917821272758808}, '0.75': {'alpha': 0.75, 'maximum_counting_constant': 1.51817325364634, 'maximum_envelope_abs_residual': 7.105427357601002e-15, 'maximum_finite_trace_bound': 3.319468358543817, 'maximum_infinite_zeta_bound': 6.380677732870801, 'minimum_counting_constant': 0.4348410829936692, 'minimum_finite_trace_bound': 0.7197364076519063, 'minimum_infinite_zeta_bound': 1.1948686580062815}, '0.8': {'alpha': 0.8, 'maximum_counting_constant': 1.4022047203242067, 'maximum_envelope_abs_residual': 3.552713678800501e-15, 'maximum_finite_trace_bound': 3.0276871936727017, 'maximum_infinite_zeta_bound': 7.1092996927753465, 'minimum_counting_constant': 0.3919460841218269, 'minimum_finite_trace_bound': 0.7185669986495054, 'minimum_infinite_zeta_bound': 1.434763633776249}, '0.9': {'alpha': 0.9, 'maximum_counting_constant': 1.2847088482697955, 'maximum_envelope_abs_residual': 3.552713678800501e-15, 'maximum_finite_trace_bound': 2.6106765992895387, 'maximum_infinite_zeta_bound': 12.940005790829282, 'minimum_counting_constant': 0.3197060623831058, 'minimum_finite_trace_bound': 0.7259594430376384, 'minimum_infinite_zeta_bound': 2.7117742956459474}}",
+      "expected": "all declared 0<alpha<1 profiles finite",
+      "group": "sublinear zeta",
+      "name": "sublinear alpha profiles",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.5800949275086398, 2.117318722273093, 0.6295715327320223, 3.1299469867610137, -6.661338147750939e-16, 0.0005947926662857039]",
+      "expected": "selected mixed finite/infinite bounds and slacks >= -5e-06",
+      "group": "mixed zeta",
+      "name": "mixed envelope bounds",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'mutation': 'alpha=1, unsorted modes, split-index, linear or exponent-inverted shortcuts, Fiedler shortcut and a diagonal generator', 'q_mutation': {'maximum_edge': 0.0, 'mutated_edge_count': 0, 'positive_eigenvalue_count': 0}, 'selected': [{'dimension': 3, 'identity_residual': 2.4424906541753444e-15, 'linear_constant': 0.7570174175402339, 'mixed_key': 'ir=0.8;uv=0.5;split=1', 'mixed_profile': {'alpha_ir': 0.8, 'alpha_uv': 0.5, 'envelope_residual': -1.1102230246251565e-16, 'finite_trace_bound': 1.6026715567191114, 'infinite_zeta_bound': 2.1660675317433045, 'ir_counting_constant': 1.2494397036372884, 'ir_finite_zeta_sum': 1.0, 'ir_trace_bound': 1.320973569207015, 'split': 1, 'uv_counting_constant': 1.0615045690190814, 'uv_finite_zeta_sum': 0.25, 'uv_integral_tail_bound': 0.5, 'uv_trace_bound': 0.28169798751209646}, 'mode_constant': 0.7570174175402339, 'one_mode_inverse': 1.320973569207015, 'positive_normalized_eigenvalue_count': 2, 'resistance_average': 1.6026715567191128, 'trace_inverse': 1.6026715567191103, 'zeta_bound': 1.6512169615087688, 'zeta_infinite_bound': 2.1729144253947124}, {'dimension': 12, 'identity_residual': -8.486544800234697e-13, 'linear_constant': 2.0707648945081827, 'mixed_key': 'ir=0.9;uv=0.5;split=7', 'mixed_profile': {'alpha_ir': 0.9, 'alpha_uv': 0.5, 'envelope_residual': -1.7763568394002505e-15, 'finite_trace_bound': 1.3849577436191354, 'infinite_zeta_bound': 1.3930352651122162, 'ir_counting_constant': 0.6100694616699573, 'ir_finite_zeta_sum': 2.391188681058177, 'ir_trace_bound': 1.3808496247492805, 'split': 7, 'uv_counting_constant': 0.29808176130701275, 'uv_finite_zeta_sum': 0.046235141822263036, 'uv_integral_tail_bound': 0.09090909090909091, 'uv_trace_bound': 0.004108118869854753}, 'mode_constant': 0.41415297890163655, 'one_mode_inverse': 0.3431201141364895, 'positive_normalized_eigenvalue_count': 11, 'resistance_average': 0.9459598191722428, 'trace_inverse': 0.9459598191730915, 'zeta_bound': 3.7619726848481725, 'zeta_infinite_bound': 3.9718030550225905}], 'toy_spectrum': {'correct_power_constant': 1.1161231740339044, 'linear_bound': 1.8333333333333333, 'linear_constant': 1.0, 'quadratic_bound': 1.8333333333333333, 'sorted_alpha_constant': 10.856374292654936, 'sorted_c2': 0.3333333333333333, 'split_bound_first': 1.8563742926549405, 'split_bound_last': 1.9133930722256394, 'split_keys': ['ir=0.9;uv=0.9;split=1', 'ir=0.9;uv=0.9;split=2'], 'unsorted_alpha_constant': 29.58005973889229, 'unsorted_c2': 0.1111111111111111, 'wrong_power_constant': 8.06362613856686, 'wrong_quadratic_residual': -6.0}}",
+      "expected": "sorting, scaling, exponent and Fiedler shortcuts rejected",
+      "group": "hostile",
+      "name": "hostile spectral shortcuts caught",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'maximum_edge': 0.0, 'mutated_edge_count': 0, 'positive_eigenvalue_count': 0}",
+      "expected": "zero q conductance edges and spectrum",
+      "group": "hostile",
+      "name": "hostile q mutation caught",
+      "status": "PASS"
+    }
+  ],
+  "derived": {
+    "command_outputs": {
+      "lean": "",
+      "pre_a_cp1_st8_q3lock_spectral_counting_mixed.py": "reused claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-primary-pre_a_cp1_st8_q3lock_spectral_counting_mixed/primary.json",
+      "pre_a_cp1_st8_q3lock_spectral_counting_mixed_hostile.py": "reused claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-hostile-pre_a_cp1_st8_q3lock_spectral_counting_mixed/hostile.json",
+      "pre_a_cp1_st8_q3lock_spectral_counting_mixed_independent.py": "reused claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-independent-pre_a_cp1_st8_q3lock_spectral_counting_mixed/independent.json"
+    },
+    "hostile": {
+      "mutation": "alpha=1, unsorted modes, split-index, linear or exponent-inverted shortcuts, Fiedler shortcut and a diagonal generator",
+      "q_mutation": {
+        "maximum_edge": 0.0,
+        "mutated_edge_count": 0,
+        "positive_eigenvalue_count": 0
+      },
+      "selected": [
+        {
+          "dimension": 3,
+          "identity_residual": 2.4424906541753444e-15,
+          "linear_constant": 0.7570174175402339,
+          "mixed_key": "ir=0.8;uv=0.5;split=1",
+          "mixed_profile": {
+            "alpha_ir": 0.8,
+            "alpha_uv": 0.5,
+            "envelope_residual": -1.1102230246251565e-16,
+            "finite_trace_bound": 1.6026715567191114,
+            "infinite_zeta_bound": 2.1660675317433045,
+            "ir_counting_constant": 1.2494397036372884,
+            "ir_finite_zeta_sum": 1.0,
+            "ir_trace_bound": 1.320973569207015,
+            "split": 1,
+            "uv_counting_constant": 1.0615045690190814,
+            "uv_finite_zeta_sum": 0.25,
+            "uv_integral_tail_bound": 0.5,
+            "uv_trace_bound": 0.28169798751209646
+          },
+          "mode_constant": 0.7570174175402339,
+          "one_mode_inverse": 1.320973569207015,
+          "positive_normalized_eigenvalue_count": 2,
+          "resistance_average": 1.6026715567191128,
+          "trace_inverse": 1.6026715567191103,
+          "zeta_bound": 1.6512169615087688,
+          "zeta_infinite_bound": 2.1729144253947124
+        },
+        {
+          "dimension": 12,
+          "identity_residual": -8.486544800234697e-13,
+          "linear_constant": 2.0707648945081827,
+          "mixed_key": "ir=0.9;uv=0.5;split=7",
+          "mixed_profile": {
+            "alpha_ir": 0.9,
+            "alpha_uv": 0.5,
+            "envelope_residual": -1.7763568394002505e-15,
+            "finite_trace_bound": 1.3849577436191354,
+            "infinite_zeta_bound": 1.3930352651122162,
+            "ir_counting_constant": 0.6100694616699573,
+            "ir_finite_zeta_sum": 2.391188681058177,
+            "ir_trace_bound": 1.3808496247492805,
+            "split": 7,
+            "uv_counting_constant": 0.29808176130701275,
+            "uv_finite_zeta_sum": 0.046235141822263036,
+            "uv_integral_tail_bound": 0.09090909090909091,
+            "uv_trace_bound": 0.004108118869854753
+          },
+          "mode_constant": 0.41415297890163655,
+          "one_mode_inverse": 0.3431201141364895,
+          "positive_normalized_eigenvalue_count": 11,
+          "resistance_average": 0.9459598191722428,
+          "trace_inverse": 0.9459598191730915,
+          "zeta_bound": 3.7619726848481725,
+          "zeta_infinite_bound": 3.9718030550225905
+        }
+      ],
+      "toy_spectrum": {
+        "correct_power_constant": 1.1161231740339044,
+        "linear_bound": 1.8333333333333333,
+        "linear_constant": 1.0,
+        "quadratic_bound": 1.8333333333333333,
+        "sorted_alpha_constant": 10.856374292654936,
+        "sorted_c2": 0.3333333333333333,
+        "split_bound_first": 1.8563742926549405,
+        "split_bound_last": 1.9133930722256394,
+        "split_keys": [
+          "ir=0.9;uv=0.9;split=1",
+          "ir=0.9;uv=0.9;split=2"
+        ],
+        "unsorted_alpha_constant": 29.58005973889229,
+        "unsorted_c2": 0.1111111111111111,
+        "wrong_power_constant": 8.06362613856686,
+        "wrong_quadratic_residual": -6.0
+      }
+    },
+    "independent": {
+      "alpha_profiles": {
+        "0.5": {
+          "alpha": 0.5,
+          "maximum_counting_constant": 2.2587641806701084,
+          "maximum_envelope_abs_residual": 5.329070518200751e-15,
+          "maximum_finite_trace_bound": 7.467366756170777,
+          "maximum_infinite_zeta_bound": 8.487769880946438,
+          "minimum_counting_constant": 0.9111160761130068,
+          "minimum_finite_trace_bound": 1.21404705379965,
+          "minimum_infinite_zeta_bound": 1.3704481873907794
+        },
+        "0.6666666666666666": {
+          "alpha": 0.6666666666666666,
+          "maximum_counting_constant": 1.7331567970356039,
+          "maximum_envelope_abs_residual": 7.105427357601002e-15,
+          "maximum_finite_trace_bound": 4.016793811651861,
+          "maximum_infinite_zeta_bound": 6.057600061203184,
+          "minimum_counting_constant": 0.5564313820164363,
+          "minimum_finite_trace_bound": 0.8150712925587003,
+          "minimum_infinite_zeta_bound": 1.0917821272758876
+        },
+        "0.75": {
+          "alpha": 0.75,
+          "maximum_counting_constant": 1.51817325364634,
+          "maximum_envelope_abs_residual": 3.552713678800501e-15,
+          "maximum_finite_trace_bound": 3.319468358543817,
+          "maximum_infinite_zeta_bound": 6.380677732870801,
+          "minimum_counting_constant": 0.4348410829936714,
+          "minimum_finite_trace_bound": 0.719736407651911,
+          "minimum_infinite_zeta_bound": 1.1948686580062895
+        },
+        "0.8": {
+          "alpha": 0.8,
+          "maximum_counting_constant": 1.4022047203242067,
+          "maximum_envelope_abs_residual": 5.329070518200751e-15,
+          "maximum_finite_trace_bound": 3.0276871936727017,
+          "maximum_infinite_zeta_bound": 7.1092996927753465,
+          "minimum_counting_constant": 0.39194608412183135,
+          "minimum_finite_trace_bound": 0.7185669986495156,
+          "minimum_infinite_zeta_bound": 1.4347636337762695
+        },
+        "0.9": {
+          "alpha": 0.9,
+          "maximum_counting_constant": 1.2847088482697953,
+          "maximum_envelope_abs_residual": 5.329070518200751e-15,
+          "maximum_finite_trace_bound": 2.6106765992895387,
+          "maximum_infinite_zeta_bound": 12.94000579082928,
+          "minimum_counting_constant": 0.3197060623831098,
+          "minimum_finite_trace_bound": 0.7259594430376485,
+          "minimum_infinite_zeta_bound": 2.7117742956459856
+        }
+      },
+      "c6_closed": false,
+      "common_core_closed": false,
+      "common_split_rule_closed": false,
+      "comparison_row_count": 21120,
+      "context_count": 2688,
+      "continuum_closed": false,
+      "cutoff_dimensions": [
+        3,
+        4,
+        5,
+        6,
+        8,
+        10,
+        12
+      ],
+      "cutoff_independent_mixed_constant_closed": false,
+      "exhaustion_uniform_mixed_constant_closed": false,
+      "finite_likelihood_row_coverage_closed": true,
+      "finite_mixed_counting_closed": true,
+      "finite_mixed_zeta_tail_bound_closed": true,
+      "finite_mode_ordering_closed": true,
+      "hamiltonian_os_identification_closed": false,
+      "kms_gns_gap_closed": false,
+      "maximum_effective_resistance": 85.9901181708632,
+      "maximum_identity_abs_residual": 1.9488854974269998e-12,
+      "maximum_mode_constant": 1.2046269661757802,
+      "maximum_mode_envelope_abs_residual": 3.552713678800501e-15,
+      "maximum_projector_identity_abs_residual": 4.440892098500626e-16,
+      "maximum_projector_trace": 2.0052069566897663,
+      "maximum_resistance_average": 2.0052069566897672,
+      "maximum_trace_inverse": 2.005206956689766,
+      "maximum_transformed_identity_abs_residual": 8.881784197001252e-16,
+      "maximum_zeta_bound": 7.467366756170776,
+      "maximum_zeta_infinite_bound": 8.392479309309332,
+      "minimum_mode_constant": 0.19600096779786974,
+      "minimum_positive_normalized_eigenvalue": 0.757017417540234,
+      "minimum_projector_trace": 0.444137516051559,
+      "minimum_resistance_average": 0.44413751605180685,
+      "minimum_trace_inverse": 0.44413751605155904,
+      "minimum_zeta_bound": 1.21404705379965,
+      "minimum_zeta_infinite_bound": 1.3655132360769318,
+      "mixed_aggregates": {
+        "ir=0.5;uv=0.5;split=1": {
+          "count": 1664,
+          "maximum_envelope_abs_residual": 3.552713678800501e-15,
+          "maximum_finite_trace_bound": 1.602671556719111,
+          "maximum_infinite_zeta_bound": 2.5043676557035957,
+          "maximum_ir_counting_constant": 1.1493361428263773,
+          "maximum_uv_counting_constant": 1.4025746541786952,
+          "minimum_finite_trace_bound": 0.6457125867655792,
+          "minimum_infinite_zeta_bound": 1.062826074607392,
+          "minimum_ir_counting_constant": 0.594041840740795,
+          "minimum_uv_counting_constant": 0.9855138979434638
+        },
+        "ir=0.6666666666666666;uv=0.5;split=1": {
+          "count": 64,
+          "maximum_envelope_abs_residual": 0.0,
+          "maximum_finite_trace_bound": 1.3315838820277357,
+          "maximum_infinite_zeta_bound": 2.2527734951464438,
+          "maximum_ir_counting_constant": 0.9120286303408074,
+          "maximum_uv_counting_constant": 1.3573427077335392,
+          "minimum_finite_trace_bound": 1.3315838820277357,
+          "minimum_infinite_zeta_bound": 2.2527734951464438,
+          "minimum_ir_counting_constant": 0.9120286303408074,
+          "minimum_uv_counting_constant": 1.3573427077335392
+        },
+        "ir=0.6666666666666666;uv=0.5;split=2": {
+          "count": 128,
+          "maximum_envelope_abs_residual": 4.440892098500626e-16,
+          "maximum_finite_trace_bound": 2.00860264977406,
+          "maximum_infinite_zeta_bound": 2.876547273748601,
+          "maximum_ir_counting_constant": 1.1728670602715596,
+          "maximum_uv_counting_constant": 1.6136399449454717,
+          "minimum_finite_trace_bound": 2.008602649774059,
+          "minimum_infinite_zeta_bound": 2.8765472737486,
+          "minimum_ir_counting_constant": 1.172867060271559,
+          "minimum_uv_counting_constant": 1.6136399449454712
+        },
+        "ir=0.75;uv=0.5;split=1": {
+          "count": 128,
+          "maximum_envelope_abs_residual": 4.440892098500626e-16,
+          "maximum_finite_trace_bound": 1.5426423581362396,
+          "maximum_infinite_zeta_bound": 2.5043676557035943,
+          "maximum_ir_counting_constant": 1.0468906693511417,
+          "maximum_uv_counting_constant": 1.4025746541786945,
+          "minimum_finite_trace_bound": 1.520759825431352,
+          "minimum_infinite_zeta_bound": 2.5019180625935986,
+          "minimum_ir_counting_constant": 1.0216392617219603,
+          "minimum_uv_counting_constant": 1.3851178321409043
+        },
+        "ir=0.75;uv=0.5;split=3": {
+          "count": 256,
+          "maximum_envelope_abs_residual": 7.105427357601002e-15,
+          "maximum_finite_trace_bound": 0.8563781130925489,
+          "maximum_infinite_zeta_bound": 0.9616511687652672,
+          "maximum_ir_counting_constant": 0.6033886262997585,
+          "maximum_uv_counting_constant": 0.6489161908065428,
+          "minimum_finite_trace_bound": 0.8563781130925476,
+          "minimum_infinite_zeta_bound": 0.9616511687652658,
+          "minimum_ir_counting_constant": 0.6033886262997579,
+          "minimum_uv_counting_constant": 0.6489161908065422
+        },
+        "ir=0.8;uv=0.5;split=1": {
+          "count": 128,
+          "maximum_envelope_abs_residual": 4.440892098500626e-16,
+          "maximum_finite_trace_bound": 1.5426423581362396,
+          "maximum_infinite_zeta_bound": 2.5019180625935986,
+          "maximum_ir_counting_constant": 1.0500937759060331,
+          "maximum_uv_counting_constant": 1.3851178321409041,
+          "minimum_finite_trace_bound": 0.7220546989001854,
+          "minimum_infinite_zeta_bound": 1.0628260746073916,
+          "minimum_ir_counting_constant": 0.43461754695181093,
+          "minimum_uv_counting_constant": 1.0110955084074003
+        },
+        "ir=0.9;uv=0.5;split=1": {
+          "count": 64,
+          "maximum_envelope_abs_residual": 2.220446049250313e-16,
+          "maximum_finite_trace_bound": 1.0073233398388564,
+          "maximum_infinite_zeta_bound": 1.7579237581832938,
+          "maximum_ir_counting_constant": 0.6616977768572107,
+          "maximum_uv_counting_constant": 1.2252350128399347,
+          "minimum_finite_trace_bound": 1.0073233398388564,
+          "minimum_infinite_zeta_bound": 1.7579237581832938,
+          "minimum_ir_counting_constant": 0.6616977768572107,
+          "minimum_uv_counting_constant": 1.2252350128399347
+        },
+        "ir=0.9;uv=0.5;split=2": {
+          "count": 2176,
+          "maximum_envelope_abs_residual": 3.552713678800501e-15,
+          "maximum_finite_trace_bound": 2.117318722273092,
+          "maximum_infinite_zeta_bound": 3.129946986761012,
+          "maximum_ir_counting_constant": 1.0858836317190912,
+          "maximum_uv_counting_constant": 2.031198544726652,
+          "minimum_finite_trace_bound": 0.5800949275076762,
+          "minimum_infinite_zeta_bound": 0.6563077331678335,
+          "minimum_ir_counting_constant": 0.2559740130982894,
+          "minimum_uv_counting_constant": 0.9156095577599148
+        },
+        "ir=0.9;uv=0.5;split=3": {
+          "count": 2176,
+          "maximum_envelope_abs_residual": 3.552713678800501e-15,
+          "maximum_finite_trace_bound": 2.0450291500343143,
+          "maximum_infinite_zeta_bound": 3.0654322748099756,
+          "maximum_ir_counting_constant": 0.9310520424753407,
+          "maximum_uv_counting_constant": 2.2587641806701084,
+          "minimum_finite_trace_bound": 0.9878923352441787,
+          "minimum_infinite_zeta_bound": 1.1748251515974564,
+          "minimum_ir_counting_constant": 0.5698849203969463,
+          "minimum_uv_counting_constant": 0.7342000649948839
+        },
+        "ir=0.9;uv=0.5;split=4": {
+          "count": 2816,
+          "maximum_envelope_abs_residual": 2.842170943040401e-14,
+          "maximum_finite_trace_bound": 1.9134042654790133,
+          "maximum_infinite_zeta_bound": 2.280794341094804,
+          "maximum_ir_counting_constant": 0.939396870456087,
+          "maximum_uv_counting_constant": 2.1516390005473918,
+          "minimum_finite_trace_bound": 0.7935817070216858,
+          "minimum_infinite_zeta_bound": 0.8200605030593572,
+          "minimum_ir_counting_constant": 0.4325402283960208,
+          "minimum_uv_counting_constant": 0.37143610026084134
+        },
+        "ir=0.9;uv=0.5;split=5": {
+          "count": 2176,
+          "maximum_envelope_abs_residual": 5.684341886080802e-14,
+          "maximum_finite_trace_bound": 1.96466987170781,
+          "maximum_infinite_zeta_bound": 2.1809899164982927,
+          "maximum_ir_counting_constant": 0.9018276430161352,
+          "maximum_uv_counting_constant": 1.2305447222809012,
+          "minimum_finite_trace_bound": 0.6135784790381235,
+          "minimum_infinite_zeta_bound": 0.6295715327320268,
+          "minimum_ir_counting_constant": 0.3197060623831098,
+          "minimum_uv_counting_constant": 0.2715005994046789
+        },
+        "ir=0.9;uv=0.5;split=6": {
+          "count": 3584,
+          "maximum_envelope_abs_residual": 4.547473508864641e-13,
+          "maximum_finite_trace_bound": 1.7873206752586979,
+          "maximum_infinite_zeta_bound": 1.8419548563716264,
+          "maximum_ir_counting_constant": 0.8013054045885334,
+          "maximum_uv_counting_constant": 0.6380446503559795,
+          "minimum_finite_trace_bound": 0.7612421095622406,
+          "minimum_infinite_zeta_bound": 0.7625760623966644,
+          "minimum_ir_counting_constant": 0.372905334476016,
+          "minimum_uv_counting_constant": 0.10956995714981112
+        },
+        "ir=0.9;uv=0.5;split=7": {
+          "count": 4224,
+          "maximum_envelope_abs_residual": 9.094947017729282e-13,
+          "maximum_finite_trace_bound": 1.9445830819310077,
+          "maximum_infinite_zeta_bound": 1.9657387046478845,
+          "maximum_ir_counting_constant": 0.828169933682856,
+          "maximum_uv_counting_constant": 0.8163124785690906,
+          "minimum_finite_trace_bound": 0.963237226799811,
+          "minimum_infinite_zeta_bound": 0.9738275879106119,
+          "minimum_ir_counting_constant": 0.438950699193181,
+          "minimum_uv_counting_constant": 0.07316511461463025
+        },
+        "ir=0.9;uv=0.5;split=8": {
+          "count": 1280,
+          "maximum_envelope_abs_residual": 9.094947017729282e-13,
+          "maximum_finite_trace_bound": 1.7326153600848286,
+          "maximum_infinite_zeta_bound": 1.760178678298757,
+          "maximum_ir_counting_constant": 0.7179434294723819,
+          "maximum_uv_counting_constant": 0.5506328180858933,
+          "minimum_finite_trace_bound": 0.8674150090381139,
+          "minimum_infinite_zeta_bound": 0.8688874319549696,
+          "minimum_ir_counting_constant": 0.3868462391447701,
+          "minimum_uv_counting_constant": 0.12726606808336305
+        },
+        "ir=0.9;uv=0.5;split=9": {
+          "count": 256,
+          "maximum_envelope_abs_residual": 2.2737367544323206e-13,
+          "maximum_finite_trace_bound": 1.9039279284993793,
+          "maximum_infinite_zeta_bound": 1.9107708133294503,
+          "maximum_ir_counting_constant": 0.7609092489813214,
+          "maximum_uv_counting_constant": 0.2743569447467721,
+          "minimum_finite_trace_bound": 1.9039279284993413,
+          "minimum_infinite_zeta_bound": 1.9107708133294123,
+          "minimum_ir_counting_constant": 0.7609092489813077,
+          "minimum_uv_counting_constant": 0.2743569447467647
+        }
+      },
+      "mixed_candidate_count_per_row": 250,
+      "mixed_selected_key_histogram": {
+        "ir=0.5;uv=0.5;split=1": 1664,
+        "ir=0.6666666666666666;uv=0.5;split=1": 64,
+        "ir=0.6666666666666666;uv=0.5;split=2": 128,
+        "ir=0.75;uv=0.5;split=1": 128,
+        "ir=0.75;uv=0.5;split=3": 256,
+        "ir=0.8;uv=0.5;split=1": 128,
+        "ir=0.9;uv=0.5;split=1": 64,
+        "ir=0.9;uv=0.5;split=2": 2176,
+        "ir=0.9;uv=0.5;split=3": 2176,
+        "ir=0.9;uv=0.5;split=4": 2816,
+        "ir=0.9;uv=0.5;split=5": 2176,
+        "ir=0.9;uv=0.5;split=6": 3584,
+        "ir=0.9;uv=0.5;split=7": 4224,
+        "ir=0.9;uv=0.5;split=8": 1280,
+        "ir=0.9;uv=0.5;split=9": 256
+      },
+      "mixed_selected_max_finite_bound": 2.117318722273092,
+      "mixed_selected_max_infinite_bound": 3.129946986761012,
+      "mixed_selected_min_finite_bound": 0.5800949275076762,
+      "mixed_selected_min_infinite_bound": 0.6295715327320268,
+      "mixed_selected_min_tail_slack": 0.0005947926662857039,
+      "mixed_selected_min_trace_slack": -8.881784197001252e-16,
+      "pair_count": [
+        3,
+        6,
+        10,
+        15,
+        28,
+        45,
+        66
+      ],
+      "phase_uniform_mixed_constant_closed": false,
+      "pre_a_closed": false,
+      "sector_a_closed": false,
+      "system_count": 7,
+      "system_profiles": {
+        "V=2/d=10": {
+          "alpha_profiles": {
+            "0.5": {
+              "maximum_counting_constant": 2.1385033739302446,
+              "maximum_envelope_abs_residual": 5.329070518200751e-15,
+              "maximum_finite_trace_bound": 7.041660676620886,
+              "maximum_infinite_zeta_bound": 7.549793641099891,
+              "minimum_counting_constant": 0.9111160761130068,
+              "minimum_finite_trace_bound": 1.2782112424850502,
+              "minimum_infinite_zeta_bound": 1.3704481873907794
+            },
+            "0.6666666666666666": {
+              "maximum_counting_constant": 1.4402810269789232,
+              "maximum_envelope_abs_residual": 7.105427357601002e-15,
+              "maximum_finite_trace_bound": 3.3942906927563845,
+              "maximum_infinite_zeta_bound": 4.546627941583925,
+              "minimum_counting_constant": 0.5564313820164363,
+              "minimum_finite_trace_bound": 0.8150712925587003,
+              "minimum_infinite_zeta_bound": 1.0917821272758876
+            },
+            "0.75": {
+              "maximum_counting_constant": 1.1819956810708958,
+              "maximum_envelope_abs_residual": 3.552713678800501e-15,
+              "maximum_finite_trace_bound": 2.7303641094224096,
+              "maximum_infinite_zeta_bound": 4.532807378658983,
+              "minimum_counting_constant": 0.4348410829936714,
+              "minimum_finite_trace_bound": 0.719736407651911,
+              "minimum_infinite_zeta_bound": 1.1948686580062895
+            },
+            "0.8": {
+              "maximum_counting_constant": 1.0498254085733578,
+              "maximum_envelope_abs_residual": 3.552713678800501e-15,
+              "maximum_finite_trace_bound": 2.462241829055655,
+              "maximum_infinite_zeta_bound": 4.916361369964512,
+              "minimum_counting_constant": 0.39194608412183135,
+              "minimum_finite_trace_bound": 0.7185669986495156,
+              "minimum_infinite_zeta_bound": 1.4347636337762695
+            },
+            "0.9": {
+              "maximum_counting_constant": 0.828169933682856,
+              "maximum_envelope_abs_residual": 3.552713678800501e-15,
+              "maximum_finite_trace_bound": 2.090310441191373,
+              "maximum_infinite_zeta_bound": 7.8082187355047825,
+              "minimum_counting_constant": 0.3197060623831098,
+              "minimum_finite_trace_bound": 0.7259594430376485,
+              "minimum_infinite_zeta_bound": 2.7117742956459856
+            }
+          },
+          "context_count": 384,
+          "dimension": 10,
+          "maximum_effective_resistance": 64.97034609217228,
+          "maximum_identity_abs_residual": 9.847678228425139e-14,
+          "maximum_mode_constant": 1.2046269661757802,
+          "maximum_mode_envelope_residual": 3.552713678800501e-15,
+          "maximum_projector_identity_abs_residual": 4.440892098500626e-16,
+          "maximum_projector_trace": 1.308769116485811,
+          "maximum_resistance_average": 1.3087691164858049,
+          "maximum_trace_inverse": 1.308769116485811,
+          "maximum_transformed_identity_abs_residual": 6.661338147750939e-16,
+          "maximum_zeta_bound": 7.041660676620887,
+          "minimum_mode_constant": 0.21866542593833646,
+          "minimum_positive_normalized_eigenvalue": 2.131326919627506,
+          "minimum_projector_trace": 0.5009404368792169,
+          "minimum_resistance_average": 0.5009404368792248,
+          "minimum_trace_inverse": 0.5009404368792169,
+          "minimum_zeta_bound": 1.2782112424850502,
+          "mixed_selected_keys": {
+            "ir=0.9;uv=0.5;split=5": 512,
+            "ir=0.9;uv=0.5;split=6": 1536,
+            "ir=0.9;uv=0.5;split=7": 2176
+          },
+          "mixed_selected_max_finite_bound": 1.9445830819310077,
+          "mixed_selected_max_infinite_bound": 1.9657387046478845,
+          "mixed_selected_min_finite_bound": 0.6135784790381235,
+          "mixed_selected_min_infinite_bound": 0.6295715327320268,
+          "pair_count": 45,
+          "row_count": 4224
+        },
+        "V=2/d=12": {
+          "alpha_profiles": {
+            "0.5": {
+              "maximum_counting_constant": 2.1516390005473918,
+              "maximum_envelope_abs_residual": 3.552713678800501e-15,
+              "maximum_finite_trace_bound": 7.212988549194335,
+              "maximum_infinite_zeta_bound": 7.63385676634675,
+              "minimum_counting_constant": 0.9156095577599148,
+              "minimum_finite_trace_bound": 1.3061620529290994,
+              "minimum_infinite_zeta_bound": 1.3823748585892182
+            },
+            "0.6666666666666666": {
+              "maximum_counting_constant": 1.4520888709024977,
+              "maximum_envelope_abs_residual": 5.329070518200751e-15,
+              "maximum_finite_trace_bound": 3.539413300558601,
+              "maximum_infinite_zeta_bound": 4.594585762643649,
+              "minimum_counting_constant": 0.6164625121465328,
+              "minimum_finite_trace_bound": 0.9790423782207653,
+              "minimum_infinite_zeta_bound": 1.2709152026094193
+            },
+            "0.75": {
+              "maximum_counting_constant": 1.1929028921845508,
+              "maximum_envelope_abs_residual": 3.552713678800501e-15,
+              "maximum_finite_trace_bound": 2.8744471211099447,
+              "maximum_infinite_zeta_bound": 4.581042171437375,
+              "minimum_counting_constant": 0.5058303095397181,
+              "minimum_finite_trace_bound": 0.9157016571878617,
+              "minimum_infinite_zeta_bound": 1.4593651339854428
+            },
+            "0.8": {
+              "maximum_counting_constant": 1.060161987295025,
+              "maximum_envelope_abs_residual": 3.552713678800501e-15,
+              "maximum_finite_trace_bound": 2.606777502310832,
+              "maximum_infinite_zeta_bound": 4.969578281523419,
+              "minimum_counting_constant": 0.44922483221729853,
+              "minimum_finite_trace_bound": 0.8911860356461806,
+              "minimum_infinite_zeta_bound": 1.6989630927910786
+            },
+            "0.9": {
+              "maximum_counting_constant": 0.8373489919588758,
+              "maximum_envelope_abs_residual": 5.329070518200751e-15,
+              "maximum_finite_trace_bound": 2.236814318544836,
+              "maximum_infinite_zeta_bound": 7.89754859193477,
+              "minimum_counting_constant": 0.35430849702401107,
+              "minimum_finite_trace_bound": 0.8602055287514783,
+              "minimum_infinite_zeta_bound": 3.037138534943426
+            }
+          },
+          "context_count": 384,
+          "dimension": 12,
+          "maximum_effective_resistance": 85.9901181708632,
+          "maximum_identity_abs_residual": 1.9488854974269998e-12,
+          "maximum_mode_constant": 1.1928322297241247,
+          "maximum_mode_envelope_residual": 1.7763568394002505e-15,
+          "maximum_projector_identity_abs_residual": 4.440892098500626e-16,
+          "maximum_projector_trace": 1.2059617833727887,
+          "maximum_resistance_average": 1.2059617833728038,
+          "maximum_trace_inverse": 1.2059617833727887,
+          "maximum_transformed_identity_abs_residual": 6.661338147750939e-16,
+          "maximum_zeta_bound": 7.212988549194335,
+          "minimum_mode_constant": 0.21600369712918577,
+          "minimum_positive_normalized_eigenvalue": 2.423391046447465,
+          "minimum_projector_trace": 0.444137516051559,
+          "minimum_resistance_average": 0.44413751605180685,
+          "minimum_trace_inverse": 0.44413751605155904,
+          "minimum_zeta_bound": 1.3061620529290996,
+          "mixed_selected_keys": {
+            "ir=0.9;uv=0.5;split=2": 256,
+            "ir=0.9;uv=0.5;split=4": 128,
+            "ir=0.9;uv=0.5;split=5": 256,
+            "ir=0.9;uv=0.5;split=6": 768,
+            "ir=0.9;uv=0.5;split=7": 2048,
+            "ir=0.9;uv=0.5;split=8": 1280,
+            "ir=0.9;uv=0.5;split=9": 256
+          },
+          "mixed_selected_max_finite_bound": 1.9039279284993793,
+          "mixed_selected_max_infinite_bound": 2.121704246262632,
+          "mixed_selected_min_finite_bound": 0.5800949275076762,
+          "mixed_selected_min_infinite_bound": 0.6563077331678335,
+          "pair_count": 66,
+          "row_count": 4992
+        },
+        "V=2/d=3": {
+          "alpha_profiles": {
+            "0.5": {
+              "maximum_counting_constant": 1.4025746541786952,
+              "maximum_envelope_abs_residual": 8.881784197001252e-16,
+              "maximum_finite_trace_bound": 2.459019575680608,
+              "maximum_infinite_zeta_bound": 3.442627405952851,
+              "minimum_counting_constant": 0.9855138979434638,
+              "minimum_finite_trace_bound": 1.21404705379965,
+              "minimum_infinite_zeta_bound": 1.69966587531951
+            },
+            "0.6666666666666666": {
+              "maximum_counting_constant": 1.246114597306306,
+              "maximum_envelope_abs_residual": 8.881784197001252e-16,
+              "maximum_finite_trace_bound": 1.882835448763501,
+              "maximum_infinite_zeta_bound": 3.850051109307987,
+              "minimum_counting_constant": 0.7784074891600994,
+              "minimum_finite_trace_bound": 0.9295781342969555,
+              "minimum_infinite_zeta_bound": 1.9008157773366756
+            },
+            "0.75": {
+              "maximum_counting_constant": 1.2321699017619214,
+              "maximum_envelope_abs_residual": 8.881784197001252e-16,
+              "maximum_finite_trace_bound": 1.8452022775523653,
+              "maximum_infinite_zeta_bound": 4.99057452762447,
+              "minimum_counting_constant": 0.6917977288996752,
+              "minimum_finite_trace_bound": 0.8546507862179431,
+              "minimum_infinite_zeta_bound": 2.3115072507775234
+            },
+            "0.8": {
+              "maximum_counting_constant": 1.2494397036372884,
+              "maximum_envelope_abs_residual": 4.440892098500626e-16,
+              "maximum_finite_trace_bound": 1.8763745387025568,
+              "maximum_infinite_zeta_bound": 6.3195822946668905,
+              "minimum_counting_constant": 0.6445289181847865,
+              "minimum_finite_trace_bound": 0.820310768490584,
+              "minimum_infinite_zeta_bound": 2.762786054570024
+            },
+            "0.9": {
+              "maximum_counting_constant": 1.2847088482697953,
+              "maximum_envelope_abs_residual": 4.440892098500626e-16,
+              "maximum_finite_trace_bound": 1.932501580871345,
+              "maximum_infinite_zeta_bound": 12.94000579082928,
+              "minimum_counting_constant": 0.5594598946165545,
+              "minimum_finite_trace_bound": 0.7673067483318594,
+              "minimum_infinite_zeta_bound": 5.1378761420105965
+            }
+          },
+          "context_count": 384,
+          "dimension": 3,
+          "maximum_effective_resistance": 8.999360609443524,
+          "maximum_identity_abs_residual": 1.5543122344752192e-15,
+          "maximum_mode_constant": 1.0296141291128929,
+          "maximum_mode_envelope_residual": 0.0,
+          "maximum_projector_identity_abs_residual": 2.220446049250313e-16,
+          "maximum_projector_trace": 1.6026715567191103,
+          "maximum_resistance_average": 1.6026715567191112,
+          "maximum_trace_inverse": 1.6026715567191103,
+          "maximum_transformed_identity_abs_residual": 2.220446049250313e-16,
+          "maximum_zeta_bound": 2.4590195756806077,
+          "minimum_mode_constant": 0.5083326754948768,
+          "minimum_positive_normalized_eigenvalue": 0.757017417540234,
+          "minimum_projector_trace": 0.6457125867655792,
+          "minimum_resistance_average": 0.6457125867655793,
+          "minimum_trace_inverse": 0.6457125867655792,
+          "minimum_zeta_bound": 1.21404705379965,
+          "mixed_selected_keys": {
+            "ir=0.5;uv=0.5;split=1": 1216,
+            "ir=0.6666666666666666;uv=0.5;split=1": 64,
+            "ir=0.75;uv=0.5;split=1": 128,
+            "ir=0.8;uv=0.5;split=1": 64,
+            "ir=0.9;uv=0.5;split=1": 64
+          },
+          "mixed_selected_max_finite_bound": 1.602671556719111,
+          "mixed_selected_max_infinite_bound": 2.5043676557035957,
+          "mixed_selected_min_finite_bound": 0.6457125867655792,
+          "mixed_selected_min_infinite_bound": 1.131331408285439,
+          "pair_count": 3,
+          "row_count": 1536
+        },
+        "V=2/d=4": {
+          "alpha_profiles": {
+            "0.5": {
+              "maximum_counting_constant": 1.7428971393249415,
+              "maximum_envelope_abs_residual": 3.552713678800501e-15,
+              "maximum_finite_trace_bound": 4.134634207641282,
+              "maximum_infinite_zeta_bound": 5.1471976870636365,
+              "minimum_counting_constant": 1.0110955084074003,
+              "minimum_finite_trace_bound": 1.3914831174710929,
+              "minimum_infinite_zeta_bound": 1.732254493178299
+            },
+            "0.6666666666666666": {
+              "maximum_counting_constant": 1.454304198367342,
+              "maximum_envelope_abs_residual": 1.7763568394002505e-15,
+              "maximum_finite_trace_bound": 2.7113985162461693,
+              "maximum_infinite_zeta_bound": 4.736525475090879,
+              "minimum_counting_constant": 0.7036377911308128,
+              "minimum_finite_trace_bound": 0.9125027924163219,
+              "minimum_infinite_zeta_bound": 1.5940455438307348
+            },
+            "0.75": {
+              "maximum_counting_constant": 1.3284554910384208,
+              "maximum_envelope_abs_residual": 8.881784197001252e-16,
+              "maximum_finite_trace_bound": 2.377438321105381,
+              "maximum_infinite_zeta_bound": 5.415128759372447,
+              "minimum_counting_constant": 0.5876592479217898,
+              "minimum_finite_trace_bound": 0.8013348199357783,
+              "minimum_infinite_zeta_bound": 1.8252129574925076
+            },
+            "0.8": {
+              "maximum_counting_constant": 1.2582358599496581,
+              "maximum_envelope_abs_residual": 1.7763568394002505e-15,
+              "maximum_finite_trace_bound": 2.2304224891527524,
+              "maximum_infinite_zeta_bound": 6.280676406842171,
+              "minimum_counting_constant": 0.5415833200519403,
+              "minimum_finite_trace_bound": 0.7776177451958254,
+              "minimum_infinite_zeta_bound": 2.189704170194432
+            },
+            "0.9": {
+              "maximum_counting_constant": 1.2401832620817859,
+              "maximum_envelope_abs_residual": 8.881784197001252e-16,
+              "maximum_finite_trace_bound": 2.2329748840608876,
+              "maximum_infinite_zeta_bound": 12.351150681917254,
+              "minimum_counting_constant": 0.459986081578902,
+              "minimum_finite_trace_bound": 0.7417926620663297,
+              "minimum_infinite_zeta_bound": 4.103043437398528
+            }
+          },
+          "context_count": 384,
+          "dimension": 4,
+          "maximum_effective_resistance": 15.934089308389213,
+          "maximum_identity_abs_residual": 2.6645352591003757e-15,
+          "maximum_mode_constant": 0.9781729250045229,
+          "maximum_mode_envelope_residual": 8.881784197001252e-16,
+          "maximum_projector_identity_abs_residual": 4.440892098500626e-16,
+          "maximum_projector_trace": 2.0052069566897663,
+          "maximum_resistance_average": 2.0052069566897672,
+          "maximum_trace_inverse": 2.005206956689766,
+          "maximum_transformed_identity_abs_residual": 4.440892098500626e-16,
+          "maximum_zeta_bound": 4.134634207641282,
+          "minimum_mode_constant": 0.3291974677217202,
+          "minimum_positive_normalized_eigenvalue": 0.7872756441265597,
+          "minimum_projector_trace": 0.6618174815698086,
+          "minimum_resistance_average": 0.661817481569809,
+          "minimum_trace_inverse": 0.6618174815698086,
+          "minimum_zeta_bound": 1.3914831174710929,
+          "mixed_selected_keys": {
+            "ir=0.5;uv=0.5;split=1": 448,
+            "ir=0.6666666666666666;uv=0.5;split=2": 128,
+            "ir=0.8;uv=0.5;split=1": 64,
+            "ir=0.9;uv=0.5;split=2": 1280
+          },
+          "mixed_selected_max_finite_bound": 2.00860264977406,
+          "mixed_selected_max_infinite_bound": 2.914388527265615,
+          "mixed_selected_min_finite_bound": 0.7220546989001854,
+          "mixed_selected_min_infinite_bound": 1.0628260746073916,
+          "pair_count": 6,
+          "row_count": 1920
+        },
+        "V=2/d=5": {
+          "alpha_profiles": {
+            "0.5": {
+              "maximum_counting_constant": 2.031198544726652,
+              "maximum_envelope_abs_residual": 1.7763568394002505e-15,
+              "maximum_finite_trace_bound": 5.873488494864113,
+              "maximum_infinite_zeta_bound": 6.90493037688903,
+              "minimum_counting_constant": 0.9572991353434763,
+              "minimum_finite_trace_bound": 1.3046280213786134,
+              "minimum_infinite_zeta_bound": 1.5337334300109553
+            },
+            "0.6666666666666666": {
+              "maximum_counting_constant": 1.6205029967796016,
+              "maximum_envelope_abs_residual": 1.7763568394002505e-15,
+              "maximum_finite_trace_bound": 3.4470859492293924,
+              "maximum_infinite_zeta_bound": 5.509969713279228,
+              "minimum_counting_constant": 0.6893233575608744,
+              "minimum_finite_trace_bound": 0.9563389550917003,
+              "minimum_infinite_zeta_bound": 1.5286531162248402
+            },
+            "0.75": {
+              "maximum_counting_constant": 1.4474333317079344,
+              "maximum_envelope_abs_residual": 1.7763568394002505e-15,
+              "maximum_finite_trace_bound": 2.92335629696419,
+              "maximum_infinite_zeta_bound": 6.0176819430389425,
+              "minimum_counting_constant": 0.6033886262997579,
+              "minimum_finite_trace_bound": 0.9103599648721136,
+              "minimum_infinite_zeta_bound": 1.8739613532450607
+            },
+            "0.8": {
+              "maximum_counting_constant": 1.3525950942456204,
+              "maximum_envelope_abs_residual": 8.881784197001252e-16,
+              "maximum_finite_trace_bound": 2.6992907255558993,
+              "maximum_infinite_zeta_bound": 6.825058253655569,
+              "minimum_counting_constant": 0.5715387348801814,
+              "minimum_finite_trace_bound": 0.9195958210742473,
+              "minimum_infinite_zeta_bound": 2.325164529047683
+            },
+            "0.9": {
+              "maximum_counting_constant": 1.1811533472104176,
+              "maximum_envelope_abs_residual": 1.7763568394002505e-15,
+              "maximum_finite_trace_bound": 2.373058196340042,
+              "maximum_infinite_zeta_bound": 11.656035134564295,
+              "minimum_counting_constant": 0.5329376196148665,
+              "minimum_finite_trace_bound": 0.9801107635875248,
+              "minimum_infinite_zeta_bound": 4.814127826178193
+            }
+          },
+          "context_count": 384,
+          "dimension": 5,
+          "maximum_effective_resistance": 21.516330896267938,
+          "maximum_identity_abs_residual": 1.7763568394002505e-15,
+          "maximum_mode_constant": 1.09120077737313,
+          "maximum_mode_envelope_residual": 8.881784197001252e-16,
+          "maximum_projector_identity_abs_residual": 2.220446049250313e-16,
+          "maximum_projector_trace": 1.880621699805282,
+          "maximum_resistance_average": 1.8806216998052834,
+          "maximum_trace_inverse": 1.880621699805282,
+          "maximum_transformed_identity_abs_residual": 8.881784197001252e-16,
+          "maximum_zeta_bound": 5.873488494864113,
+          "minimum_mode_constant": 0.24237914356279797,
+          "minimum_positive_normalized_eigenvalue": 1.1950962017934932,
+          "minimum_projector_trace": 0.8274300845459804,
+          "minimum_resistance_average": 0.827430084545981,
+          "minimum_trace_inverse": 0.8274300845459804,
+          "minimum_zeta_bound": 1.3046280213786132,
+          "mixed_selected_keys": {
+            "ir=0.75;uv=0.5;split=3": 256,
+            "ir=0.9;uv=0.5;split=2": 640,
+            "ir=0.9;uv=0.5;split=3": 1408
+          },
+          "mixed_selected_max_finite_bound": 2.117318722273092,
+          "mixed_selected_max_infinite_bound": 3.129946986761012,
+          "mixed_selected_min_finite_bound": 0.8563781130925476,
+          "mixed_selected_min_infinite_bound": 0.9616511687652658,
+          "pair_count": 10,
+          "row_count": 2304
+        },
+        "V=2/d=6": {
+          "alpha_profiles": {
+            "0.5": {
+              "maximum_counting_constant": 2.2587641806701084,
+              "maximum_envelope_abs_residual": 1.7763568394002505e-15,
+              "maximum_finite_trace_bound": 7.467366756170777,
+              "maximum_infinite_zeta_bound": 8.487769880946438,
+              "minimum_counting_constant": 1.029443587815474,
+              "minimum_finite_trace_bound": 1.5510678765291581,
+              "minimum_infinite_zeta_bound": 1.7630186966280372
+            },
+            "0.6666666666666666": {
+              "maximum_counting_constant": 1.7331567970356039,
+              "maximum_envelope_abs_residual": 1.7763568394002505e-15,
+              "maximum_finite_trace_bound": 4.016793811651861,
+              "maximum_infinite_zeta_bound": 6.057600061203184,
+              "minimum_counting_constant": 0.6548903890356395,
+              "minimum_finite_trace_bound": 0.9329871936845732,
+              "minimum_infinite_zeta_bound": 1.407008561199031
+            },
+            "0.75": {
+              "maximum_counting_constant": 1.51817325364634,
+              "maximum_envelope_abs_residual": 1.7763568394002505e-15,
+              "maximum_finite_trace_bound": 3.319468358543817,
+              "maximum_infinite_zeta_bound": 6.380677732870801,
+              "minimum_counting_constant": 0.5695881488480914,
+              "minimum_finite_trace_bound": 0.8982309418526931,
+              "minimum_infinite_zeta_bound": 1.7265783404452333
+            },
+            "0.8": {
+              "maximum_counting_constant": 1.4022047203242067,
+              "maximum_envelope_abs_residual": 1.7763568394002505e-15,
+              "maximum_finite_trace_bound": 3.0276871936727017,
+              "maximum_infinite_zeta_bound": 7.1092996927753465,
+              "minimum_counting_constant": 0.5238372057852411,
+              "minimum_finite_trace_bound": 0.8842847784136254,
+              "minimum_infinite_zeta_bound": 2.0763854062070255
+            },
+            "0.9": {
+              "maximum_counting_constant": 1.196166409072752,
+              "maximum_envelope_abs_residual": 1.7763568394002505e-15,
+              "maximum_finite_trace_bound": 2.6106765992895387,
+              "maximum_infinite_zeta_bound": 11.794304722270482,
+              "minimum_counting_constant": 0.4430646838690899,
+              "minimum_finite_trace_bound": 0.8659716362946452,
+              "minimum_infinite_zeta_bound": 3.9122169946602003
+            }
+          },
+          "context_count": 384,
+          "dimension": 6,
+          "maximum_effective_resistance": 25.87795144722566,
+          "maximum_identity_abs_residual": 2.220446049250313e-15,
+          "maximum_mode_constant": 0.9436151268803594,
+          "maximum_mode_envelope_residual": 8.881784197001252e-16,
+          "maximum_projector_identity_abs_residual": 2.220446049250313e-16,
+          "maximum_projector_trace": 1.7017657584743917,
+          "maximum_resistance_average": 1.7017657584743917,
+          "maximum_trace_inverse": 1.7017657584743917,
+          "maximum_transformed_identity_abs_residual": 6.661338147750939e-16,
+          "maximum_zeta_bound": 7.467366756170776,
+          "minimum_mode_constant": 0.19600096779786974,
+          "minimum_positive_normalized_eigenvalue": 1.472145278578468,
+          "minimum_projector_trace": 0.6068568603599751,
+          "minimum_resistance_average": 0.6068568603599745,
+          "minimum_trace_inverse": 0.6068568603599752,
+          "minimum_zeta_bound": 1.5510678765291581,
+          "mixed_selected_keys": {
+            "ir=0.9;uv=0.5;split=3": 768,
+            "ir=0.9;uv=0.5;split=4": 1920
+          },
+          "mixed_selected_max_finite_bound": 2.0450291500343143,
+          "mixed_selected_max_infinite_bound": 3.0654322748099756,
+          "mixed_selected_min_finite_bound": 0.804141688416109,
+          "mixed_selected_min_infinite_bound": 0.833463655508489,
+          "pair_count": 15,
+          "row_count": 2688
+        },
+        "V=2/d=8": {
+          "alpha_profiles": {
+            "0.5": {
+              "maximum_counting_constant": 1.9307318922214192,
+              "maximum_envelope_abs_residual": 3.552713678800501e-15,
+              "maximum_finite_trace_bound": 5.635564633248726,
+              "maximum_infinite_zeta_bound": 6.168096867483141,
+              "minimum_counting_constant": 0.9530147603329036,
+              "minimum_finite_trace_bound": 1.3730702209498147,
+              "minimum_infinite_zeta_bound": 1.5028183828658692
+            },
+            "0.6666666666666666": {
+              "maximum_counting_constant": 1.4059589016257596,
+              "maximum_envelope_abs_residual": 7.105427357601002e-15,
+              "maximum_finite_trace_bound": 3.1382669820265505,
+              "maximum_infinite_zeta_bound": 4.398468255947786,
+              "minimum_counting_constant": 0.6094621846961064,
+              "minimum_finite_trace_bound": 0.895676325540236,
+              "minimum_infinite_zeta_bound": 1.2553437639485554
+            },
+            "0.75": {
+              "maximum_counting_constant": 1.1997698760934263,
+              "maximum_envelope_abs_residual": 3.552713678800501e-15,
+              "maximum_finite_trace_bound": 2.637466462149457,
+              "maximum_infinite_zeta_bound": 4.6368027384365265,
+              "minimum_counting_constant": 0.5253350289164307,
+              "minimum_finite_trace_bound": 0.8769432471701815,
+              "minimum_infinite_zeta_bound": 1.5417116798589638
+            },
+            "0.8": {
+              "maximum_counting_constant": 1.09087038093606,
+              "maximum_envelope_abs_residual": 5.329070518200751e-15,
+              "maximum_finite_trace_bound": 2.4287775593799457,
+              "maximum_infinite_zeta_bound": 5.170363844698522,
+              "minimum_counting_constant": 0.4805406348591166,
+              "minimum_finite_trace_bound": 0.8716335760529458,
+              "minimum_infinite_zeta_bound": 1.8555271601735144
+            },
+            "0.9": {
+              "maximum_counting_constant": 0.9018276430161352,
+              "maximum_envelope_abs_residual": 3.552713678800501e-15,
+              "maximum_finite_trace_bound": 2.131822867941828,
+              "maximum_infinite_zeta_bound": 8.59550510042241,
+              "minimum_counting_constant": 0.40208477896996964,
+              "minimum_finite_trace_bound": 0.8688939472059835,
+              "minimum_infinite_zeta_bound": 3.503378478224951
+            }
+          },
+          "context_count": 384,
+          "dimension": 8,
+          "maximum_effective_resistance": 45.039191391519786,
+          "maximum_identity_abs_residual": 1.9206858326015208e-14,
+          "maximum_mode_constant": 1.1010340396927527,
+          "maximum_mode_envelope_residual": 1.7763568394002505e-15,
+          "maximum_projector_identity_abs_residual": 2.220446049250313e-16,
+          "maximum_projector_trace": 1.432054118089885,
+          "maximum_resistance_average": 1.4320541180898865,
+          "maximum_trace_inverse": 1.432054118089885,
+          "maximum_transformed_identity_abs_residual": 3.3306690738754696e-16,
+          "maximum_zeta_bound": 5.635564633248726,
+          "minimum_mode_constant": 0.26826008581906574,
+          "minimum_positive_normalized_eigenvalue": 1.7946329937682566,
+          "minimum_projector_trace": 0.6047964991890704,
+          "minimum_resistance_average": 0.604796499189071,
+          "minimum_trace_inverse": 0.6047964991890704,
+          "minimum_zeta_bound": 1.3730702209498147,
+          "mixed_selected_keys": {
+            "ir=0.9;uv=0.5;split=4": 768,
+            "ir=0.9;uv=0.5;split=5": 1408,
+            "ir=0.9;uv=0.5;split=6": 1280
+          },
+          "mixed_selected_max_finite_bound": 1.96466987170781,
+          "mixed_selected_max_infinite_bound": 2.1809899164982927,
+          "mixed_selected_min_finite_bound": 0.7935817070216858,
+          "mixed_selected_min_infinite_bound": 0.8200605030593572,
+          "pair_count": 28,
+          "row_count": 3456
+        }
+      },
+      "volume_independent_mixed_constant_closed": false
+    },
+    "lean": "PASS",
+    "primary": {
+      "alpha_profiles": {
+        "0.5": {
+          "alpha": 0.5,
+          "maximum_counting_constant": 2.2587641806701084,
+          "maximum_envelope_abs_residual": 5.329070518200751e-15,
+          "maximum_finite_trace_bound": 7.467366756170777,
+          "maximum_infinite_zeta_bound": 8.487769880946438,
+          "minimum_counting_constant": 0.9111160761130037,
+          "minimum_finite_trace_bound": 1.2140470537996502,
+          "minimum_infinite_zeta_bound": 1.3704481873907701
+        },
+        "0.6666666666666666": {
+          "alpha": 0.6666666666666666,
+          "maximum_counting_constant": 1.7331567970356039,
+          "maximum_envelope_abs_residual": 7.105427357601002e-15,
+          "maximum_finite_trace_bound": 4.016793811651861,
+          "maximum_infinite_zeta_bound": 6.057600061203184,
+          "minimum_counting_constant": 0.5564313820164339,
+          "minimum_finite_trace_bound": 0.8150712925586951,
+          "minimum_infinite_zeta_bound": 1.0917821272758808
+        },
+        "0.75": {
+          "alpha": 0.75,
+          "maximum_counting_constant": 1.51817325364634,
+          "maximum_envelope_abs_residual": 7.105427357601002e-15,
+          "maximum_finite_trace_bound": 3.319468358543817,
+          "maximum_infinite_zeta_bound": 6.380677732870801,
+          "minimum_counting_constant": 0.4348410829936692,
+          "minimum_finite_trace_bound": 0.7197364076519063,
+          "minimum_infinite_zeta_bound": 1.1948686580062815
+        },
+        "0.8": {
+          "alpha": 0.8,
+          "maximum_counting_constant": 1.4022047203242067,
+          "maximum_envelope_abs_residual": 3.552713678800501e-15,
+          "maximum_finite_trace_bound": 3.0276871936727017,
+          "maximum_infinite_zeta_bound": 7.1092996927753465,
+          "minimum_counting_constant": 0.3919460841218269,
+          "minimum_finite_trace_bound": 0.7185669986495054,
+          "minimum_infinite_zeta_bound": 1.434763633776249
+        },
+        "0.9": {
+          "alpha": 0.9,
+          "maximum_counting_constant": 1.2847088482697955,
+          "maximum_envelope_abs_residual": 3.552713678800501e-15,
+          "maximum_finite_trace_bound": 2.6106765992895387,
+          "maximum_infinite_zeta_bound": 12.940005790829282,
+          "minimum_counting_constant": 0.3197060623831058,
+          "minimum_finite_trace_bound": 0.7259594430376384,
+          "minimum_infinite_zeta_bound": 2.7117742956459474
+        }
+      },
+      "c6_closed": false,
+      "common_core_closed": false,
+      "common_split_rule_closed": false,
+      "comparison_row_count": 21120,
+      "context_count": 2688,
+      "continuum_closed": false,
+      "cutoff_dimensions": [
+        3,
+        4,
+        5,
+        6,
+        8,
+        10,
+        12
+      ],
+      "cutoff_independent_mixed_constant_closed": false,
+      "exhaustion_uniform_mixed_constant_closed": false,
+      "finite_likelihood_row_coverage_closed": true,
+      "finite_mixed_counting_closed": true,
+      "finite_mixed_zeta_tail_bound_closed": true,
+      "finite_mode_ordering_closed": true,
+      "hamiltonian_os_identification_closed": false,
+      "kms_gns_gap_closed": false,
+      "maximum_effective_resistance": 85.99011817086347,
+      "maximum_identity_abs_residual": 2.537969834293108e-12,
+      "maximum_mode_constant": 1.2046269661757882,
+      "maximum_mode_envelope_abs_residual": 3.552713678800501e-15,
+      "maximum_projector_identity_abs_residual": 4.440892098500626e-16,
+      "maximum_projector_trace": 2.0052069566897663,
+      "maximum_resistance_average": 2.0052069566897672,
+      "maximum_trace_inverse": 2.0052069566897663,
+      "maximum_transformed_identity_abs_residual": 6.661338147750939e-16,
+      "maximum_zeta_bound": 7.467366756170776,
+      "maximum_zeta_infinite_bound": 8.392479309309332,
+      "minimum_mode_constant": 0.19600096779786974,
+      "minimum_positive_normalized_eigenvalue": 0.7570174175402339,
+      "minimum_projector_trace": 0.44413751605172136,
+      "minimum_resistance_average": 0.44413751605180657,
+      "minimum_trace_inverse": 0.44413751605172147,
+      "minimum_zeta_bound": 1.2140470537996502,
+      "minimum_zeta_infinite_bound": 1.3655132360769229,
+      "mixed_aggregates": {
+        "ir=0.5;uv=0.5;split=1": {
+          "count": 960,
+          "maximum_envelope_abs_residual": 2.6645352591003757e-15,
+          "maximum_finite_trace_bound": 1.5833940730594027,
+          "maximum_infinite_zeta_bound": 2.5043676557035957,
+          "maximum_ir_counting_constant": 1.0702245048346082,
+          "maximum_uv_counting_constant": 1.4025746541786952,
+          "minimum_finite_trace_bound": 0.6457125867655803,
+          "minimum_infinite_zeta_bound": 1.0628260746073914,
+          "minimum_ir_counting_constant": 0.594041840740795,
+          "minimum_uv_counting_constant": 0.9855138979434643
+        },
+        "ir=0.6666666666666666;uv=0.5;split=1": {
+          "count": 384,
+          "maximum_envelope_abs_residual": 8.881784197001252e-16,
+          "maximum_finite_trace_bound": 1.5833940730594023,
+          "maximum_infinite_zeta_bound": 2.4609576014909478,
+          "maximum_ir_counting_constant": 1.0947119384565611,
+          "maximum_uv_counting_constant": 1.3253436095730415,
+          "minimum_finite_trace_bound": 0.6457125867655797,
+          "minimum_infinite_zeta_bound": 1.13133140828544,
+          "minimum_ir_counting_constant": 0.5455071666846023,
+          "minimum_uv_counting_constant": 0.9855138979434639
+        },
+        "ir=0.6666666666666666;uv=0.5;split=2": {
+          "count": 128,
+          "maximum_envelope_abs_residual": 4.440892098500626e-16,
+          "maximum_finite_trace_bound": 2.0086026497740597,
+          "maximum_infinite_zeta_bound": 2.876547273748601,
+          "maximum_ir_counting_constant": 1.1728670602715594,
+          "maximum_uv_counting_constant": 1.6136399449454717,
+          "minimum_finite_trace_bound": 2.008602649774059,
+          "minimum_infinite_zeta_bound": 2.8765472737486,
+          "minimum_ir_counting_constant": 1.1728670602715592,
+          "minimum_uv_counting_constant": 1.6136399449454715
+        },
+        "ir=0.75;uv=0.5;split=1": {
+          "count": 192,
+          "maximum_envelope_abs_residual": 0.0,
+          "maximum_finite_trace_bound": 1.5426423581362394,
+          "maximum_infinite_zeta_bound": 2.504367655703595,
+          "maximum_ir_counting_constant": 1.0468906693511417,
+          "maximum_uv_counting_constant": 1.4025746541786952,
+          "minimum_finite_trace_bound": 1.3315838820277364,
+          "minimum_infinite_zeta_bound": 2.2527734951464446,
+          "minimum_ir_counting_constant": 0.9015909233799049,
+          "minimum_uv_counting_constant": 1.3573427077335396
+        },
+        "ir=0.75;uv=0.5;split=3": {
+          "count": 256,
+          "maximum_envelope_abs_residual": 1.4210854715202004e-14,
+          "maximum_finite_trace_bound": 0.8563781130925503,
+          "maximum_infinite_zeta_bound": 0.96165116876527,
+          "maximum_ir_counting_constant": 0.6033886262997591,
+          "maximum_uv_counting_constant": 0.6489161908065478,
+          "minimum_finite_trace_bound": 0.8563781130925465,
+          "minimum_infinite_zeta_bound": 0.9616511687652665,
+          "minimum_ir_counting_constant": 0.6033886262997571,
+          "minimum_uv_counting_constant": 0.6489161908065468
+        },
+        "ir=0.8;uv=0.5;split=1": {
+          "count": 256,
+          "maximum_envelope_abs_residual": 4.440892098500626e-16,
+          "maximum_finite_trace_bound": 1.6026715567191114,
+          "maximum_infinite_zeta_bound": 2.501918062593599,
+          "maximum_ir_counting_constant": 1.2494397036372884,
+          "maximum_uv_counting_constant": 1.3851178321409043,
+          "minimum_finite_trace_bound": 0.7220546989001855,
+          "minimum_infinite_zeta_bound": 1.0628260746073919,
+          "minimum_ir_counting_constant": 0.4346175469518111,
+          "minimum_uv_counting_constant": 1.0110955084074003
+        },
+        "ir=0.9;uv=0.5;split=1": {
+          "count": 256,
+          "maximum_envelope_abs_residual": 8.881784197001252e-16,
+          "maximum_finite_trace_bound": 1.3315838820277357,
+          "maximum_infinite_zeta_bound": 2.2527734951464438,
+          "maximum_ir_counting_constant": 0.8831031564305222,
+          "maximum_uv_counting_constant": 1.3573427077335392,
+          "minimum_finite_trace_bound": 1.0073233398388566,
+          "minimum_infinite_zeta_bound": 1.7579237581832945,
+          "minimum_ir_counting_constant": 0.6616977768572108,
+          "minimum_uv_counting_constant": 1.2252350128399345
+        },
+        "ir=0.9;uv=0.5;split=2": {
+          "count": 2176,
+          "maximum_envelope_abs_residual": 1.7763568394002505e-15,
+          "maximum_finite_trace_bound": 2.117318722273093,
+          "maximum_infinite_zeta_bound": 3.1299469867610137,
+          "maximum_ir_counting_constant": 1.0858836317190919,
+          "maximum_uv_counting_constant": 2.0311985447266525,
+          "minimum_finite_trace_bound": 0.5800949275086398,
+          "minimum_infinite_zeta_bound": 0.65630773316878,
+          "minimum_ir_counting_constant": 0.2559740130990204,
+          "minimum_uv_counting_constant": 0.9156095577598344
+        },
+        "ir=0.9;uv=0.5;split=3": {
+          "count": 2176,
+          "maximum_envelope_abs_residual": 3.552713678800501e-15,
+          "maximum_finite_trace_bound": 2.0450291500343134,
+          "maximum_infinite_zeta_bound": 3.0654322748099743,
+          "maximum_ir_counting_constant": 0.9310520424753413,
+          "maximum_uv_counting_constant": 2.2587641806701084,
+          "minimum_finite_trace_bound": 0.9878923352441791,
+          "minimum_infinite_zeta_bound": 1.1748251515974595,
+          "minimum_ir_counting_constant": 0.5698849203969462,
+          "minimum_uv_counting_constant": 0.7342000649948839
+        },
+        "ir=0.9;uv=0.5;split=4": {
+          "count": 2816,
+          "maximum_envelope_abs_residual": 2.842170943040401e-14,
+          "maximum_finite_trace_bound": 1.913404265479015,
+          "maximum_infinite_zeta_bound": 2.2807943410948055,
+          "maximum_ir_counting_constant": 0.9393968704560878,
+          "maximum_uv_counting_constant": 2.1516390005473935,
+          "minimum_finite_trace_bound": 0.7935817070216821,
+          "minimum_infinite_zeta_bound": 0.820060503059353,
+          "minimum_ir_counting_constant": 0.432540228396019,
+          "minimum_uv_counting_constant": 0.37143610026084745
+        },
+        "ir=0.9;uv=0.5;split=5": {
+          "count": 2176,
+          "maximum_envelope_abs_residual": 1.7053025658242404e-13,
+          "maximum_finite_trace_bound": 1.96466987170781,
+          "maximum_infinite_zeta_bound": 2.180989916498292,
+          "maximum_ir_counting_constant": 0.9018276430161348,
+          "maximum_uv_counting_constant": 1.2305447222809,
+          "minimum_finite_trace_bound": 0.6135784790381166,
+          "minimum_infinite_zeta_bound": 0.6295715327320223,
+          "minimum_ir_counting_constant": 0.3197060623831058,
+          "minimum_uv_counting_constant": 0.27150059940468035
+        },
+        "ir=0.9;uv=0.5;split=6": {
+          "count": 3584,
+          "maximum_envelope_abs_residual": 4.547473508864641e-13,
+          "maximum_finite_trace_bound": 1.7873206752586985,
+          "maximum_infinite_zeta_bound": 1.8419548563716268,
+          "maximum_ir_counting_constant": 0.8013054045885335,
+          "maximum_uv_counting_constant": 0.6380446503559698,
+          "minimum_finite_trace_bound": 0.761242109562223,
+          "minimum_infinite_zeta_bound": 0.7625760623966469,
+          "minimum_ir_counting_constant": 0.37290533447600827,
+          "minimum_uv_counting_constant": 0.10956995714981514
+        },
+        "ir=0.9;uv=0.5;split=7": {
+          "count": 4224,
+          "maximum_envelope_abs_residual": 1.8189894035458565e-12,
+          "maximum_finite_trace_bound": 1.944583081931004,
+          "maximum_infinite_zeta_bound": 1.9657387046478807,
+          "maximum_ir_counting_constant": 0.8281699336828545,
+          "maximum_uv_counting_constant": 0.8163124785690906,
+          "minimum_finite_trace_bound": 0.9632372267997904,
+          "minimum_infinite_zeta_bound": 0.9738275879105914,
+          "minimum_ir_counting_constant": 0.4389506991931725,
+          "minimum_uv_counting_constant": 0.0731651146146297
+        },
+        "ir=0.9;uv=0.5;split=8": {
+          "count": 1280,
+          "maximum_envelope_abs_residual": 9.094947017729282e-13,
+          "maximum_finite_trace_bound": 1.7326153600848275,
+          "maximum_infinite_zeta_bound": 1.7601786782987552,
+          "maximum_ir_counting_constant": 0.7179434294723815,
+          "maximum_uv_counting_constant": 0.5506328180858906,
+          "minimum_finite_trace_bound": 0.8674150090380647,
+          "minimum_infinite_zeta_bound": 0.8688874319549179,
+          "minimum_ir_counting_constant": 0.3868462391447507,
+          "minimum_uv_counting_constant": 0.12726606808330757
+        },
+        "ir=0.9;uv=0.5;split=9": {
+          "count": 256,
+          "maximum_envelope_abs_residual": 2.2737367544323206e-13,
+          "maximum_finite_trace_bound": 1.9039279284994417,
+          "maximum_infinite_zeta_bound": 1.9107708133294972,
+          "maximum_ir_counting_constant": 0.760909248981345,
+          "maximum_uv_counting_constant": 0.27435694474645606,
+          "minimum_finite_trace_bound": 1.9039279284993609,
+          "minimum_infinite_zeta_bound": 1.9107708133294163,
+          "minimum_ir_counting_constant": 0.7609092489813158,
+          "minimum_uv_counting_constant": 0.27435694474640737
+        }
+      },
+      "mixed_candidate_count_per_row": 250,
+      "mixed_selected_key_histogram": {
+        "ir=0.5;uv=0.5;split=1": 960,
+        "ir=0.6666666666666666;uv=0.5;split=1": 384,
+        "ir=0.6666666666666666;uv=0.5;split=2": 128,
+        "ir=0.75;uv=0.5;split=1": 192,
+        "ir=0.75;uv=0.5;split=3": 256,
+        "ir=0.8;uv=0.5;split=1": 256,
+        "ir=0.9;uv=0.5;split=1": 256,
+        "ir=0.9;uv=0.5;split=2": 2176,
+        "ir=0.9;uv=0.5;split=3": 2176,
+        "ir=0.9;uv=0.5;split=4": 2816,
+        "ir=0.9;uv=0.5;split=5": 2176,
+        "ir=0.9;uv=0.5;split=6": 3584,
+        "ir=0.9;uv=0.5;split=7": 4224,
+        "ir=0.9;uv=0.5;split=8": 1280,
+        "ir=0.9;uv=0.5;split=9": 256
+      },
+      "mixed_selected_max_finite_bound": 2.117318722273093,
+      "mixed_selected_max_infinite_bound": 3.1299469867610137,
+      "mixed_selected_min_finite_bound": 0.5800949275086398,
+      "mixed_selected_min_infinite_bound": 0.6295715327320223,
+      "mixed_selected_min_tail_slack": 0.0005947926662857039,
+      "mixed_selected_min_trace_slack": -6.661338147750939e-16,
+      "pair_count": [
+        3,
+        6,
+        10,
+        15,
+        28,
+        45,
+        66
+      ],
+      "phase_uniform_mixed_constant_closed": false,
+      "pre_a_closed": false,
+      "sector_a_closed": false,
+      "system_count": 7,
+      "system_profiles": {
+        "V=2/d=10": {
+          "alpha_profiles": {
+            "0.5": {
+              "maximum_counting_constant": 2.138503373930243,
+              "maximum_envelope_abs_residual": 3.552713678800501e-15,
+              "maximum_finite_trace_bound": 7.041660676620873,
+              "maximum_infinite_zeta_bound": 7.549793641099877,
+              "minimum_counting_constant": 0.9111160761130037,
+              "minimum_finite_trace_bound": 1.2782112424850416,
+              "minimum_infinite_zeta_bound": 1.3704481873907701
+            },
+            "0.6666666666666666": {
+              "maximum_counting_constant": 1.4402810269789215,
+              "maximum_envelope_abs_residual": 7.105427357601002e-15,
+              "maximum_finite_trace_bound": 3.394290692756378,
+              "maximum_infinite_zeta_bound": 4.546627941583916,
+              "minimum_counting_constant": 0.5564313820164339,
+              "minimum_finite_trace_bound": 0.8150712925586951,
+              "minimum_infinite_zeta_bound": 1.0917821272758808
+            },
+            "0.75": {
+              "maximum_counting_constant": 1.1819956810708943,
+              "maximum_envelope_abs_residual": 7.105427357601002e-15,
+              "maximum_finite_trace_bound": 2.730364109422405,
+              "maximum_infinite_zeta_bound": 4.532807378658975,
+              "minimum_counting_constant": 0.4348410829936692,
+              "minimum_finite_trace_bound": 0.7197364076519063,
+              "minimum_infinite_zeta_bound": 1.1948686580062815
+            },
+            "0.8": {
+              "maximum_counting_constant": 1.0498254085733563,
+              "maximum_envelope_abs_residual": 3.552713678800501e-15,
+              "maximum_finite_trace_bound": 2.4622418290556505,
+              "maximum_infinite_zeta_bound": 4.916361369964503,
+              "minimum_counting_constant": 0.3919460841218269,
+              "minimum_finite_trace_bound": 0.7185669986495054,
+              "minimum_infinite_zeta_bound": 1.434763633776249
+            },
+            "0.9": {
+              "maximum_counting_constant": 0.8281699336828545,
+              "maximum_envelope_abs_residual": 3.552713678800501e-15,
+              "maximum_finite_trace_bound": 2.090310441191369,
+              "maximum_infinite_zeta_bound": 7.808218735504767,
+              "minimum_counting_constant": 0.3197060623831058,
+              "minimum_finite_trace_bound": 0.7259594430376384,
+              "minimum_infinite_zeta_bound": 2.7117742956459474
+            }
+          },
+          "context_count": 384,
+          "dimension": 10,
+          "maximum_effective_resistance": 64.97034609217224,
+          "maximum_identity_abs_residual": 1.5920598173124745e-13,
+          "maximum_mode_constant": 1.2046269661757882,
+          "maximum_mode_envelope_residual": 3.552713678800501e-15,
+          "maximum_projector_identity_abs_residual": 2.220446049250313e-16,
+          "maximum_projector_trace": 1.3087691164858066,
+          "maximum_resistance_average": 1.3087691164858046,
+          "maximum_trace_inverse": 1.3087691164858066,
+          "maximum_transformed_identity_abs_residual": 6.661338147750939e-16,
+          "maximum_zeta_bound": 7.041660676620874,
+          "minimum_mode_constant": 0.21866542593833685,
+          "minimum_positive_normalized_eigenvalue": 2.1313269196275146,
+          "minimum_projector_trace": 0.5009404368792271,
+          "minimum_resistance_average": 0.5009404368792263,
+          "minimum_trace_inverse": 0.5009404368792272,
+          "minimum_zeta_bound": 1.2782112424850418,
+          "mixed_selected_keys": {
+            "ir=0.9;uv=0.5;split=5": 512,
+            "ir=0.9;uv=0.5;split=6": 1536,
+            "ir=0.9;uv=0.5;split=7": 2176
+          },
+          "mixed_selected_max_finite_bound": 1.944583081931004,
+          "mixed_selected_max_infinite_bound": 1.9657387046478807,
+          "mixed_selected_min_finite_bound": 0.6135784790381166,
+          "mixed_selected_min_infinite_bound": 0.6295715327320223,
+          "pair_count": 45,
+          "row_count": 4224
+        },
+        "V=2/d=12": {
+          "alpha_profiles": {
+            "0.5": {
+              "maximum_counting_constant": 2.1516390005473935,
+              "maximum_envelope_abs_residual": 3.552713678800501e-15,
+              "maximum_finite_trace_bound": 7.212988549194347,
+              "maximum_infinite_zeta_bound": 7.633856766346764,
+              "minimum_counting_constant": 0.9156095577598344,
+              "minimum_finite_trace_bound": 1.30616205292887,
+              "minimum_infinite_zeta_bound": 1.3823748585889755
+            },
+            "0.6666666666666666": {
+              "maximum_counting_constant": 1.4520888709024993,
+              "maximum_envelope_abs_residual": 7.105427357601002e-15,
+              "maximum_finite_trace_bound": 3.5394133005586066,
+              "maximum_infinite_zeta_bound": 4.594585762643657,
+              "minimum_counting_constant": 0.6164625121464606,
+              "minimum_finite_trace_bound": 0.9790423782205935,
+              "minimum_infinite_zeta_bound": 1.270915202609196
+            },
+            "0.75": {
+              "maximum_counting_constant": 1.1929028921845524,
+              "maximum_envelope_abs_residual": 5.329070518200751e-15,
+              "maximum_finite_trace_bound": 2.8744471211099496,
+              "maximum_infinite_zeta_bound": 4.581042171437383,
+              "minimum_counting_constant": 0.5058303095396515,
+              "minimum_finite_trace_bound": 0.9157016571877009,
+              "minimum_infinite_zeta_bound": 1.4593651339851863
+            },
+            "0.8": {
+              "maximum_counting_constant": 1.0601619872950263,
+              "maximum_envelope_abs_residual": 3.552713678800501e-15,
+              "maximum_finite_trace_bound": 2.606777502310836,
+              "maximum_infinite_zeta_bound": 4.969578281523426,
+              "minimum_counting_constant": 0.44922483221723547,
+              "minimum_finite_trace_bound": 0.8911860356460243,
+              "minimum_infinite_zeta_bound": 1.6989630927907806
+            },
+            "0.9": {
+              "maximum_counting_constant": 0.837348991958877,
+              "maximum_envelope_abs_residual": 3.552713678800501e-15,
+              "maximum_finite_trace_bound": 2.2368143185448397,
+              "maximum_infinite_zeta_bound": 7.8975485919347825,
+              "minimum_counting_constant": 0.3543084970239551,
+              "minimum_finite_trace_bound": 0.8602055287513274,
+              "minimum_infinite_zeta_bound": 3.037138534942893
+            }
+          },
+          "context_count": 384,
+          "dimension": 12,
+          "maximum_effective_resistance": 85.99011817086347,
+          "maximum_identity_abs_residual": 2.537969834293108e-12,
+          "maximum_mode_constant": 1.192832229724334,
+          "maximum_mode_envelope_residual": 1.7763568394002505e-15,
+          "maximum_projector_identity_abs_residual": 2.220446049250313e-16,
+          "maximum_projector_trace": 1.205961783372819,
+          "maximum_resistance_average": 1.2059617833728038,
+          "maximum_trace_inverse": 1.205961783372819,
+          "maximum_transformed_identity_abs_residual": 6.661338147750939e-16,
+          "maximum_zeta_bound": 7.212988549194346,
+          "minimum_mode_constant": 0.2160036971291854,
+          "minimum_positive_normalized_eigenvalue": 2.42339104644733,
+          "minimum_projector_trace": 0.44413751605172136,
+          "minimum_resistance_average": 0.44413751605180657,
+          "minimum_trace_inverse": 0.44413751605172147,
+          "minimum_zeta_bound": 1.3061620529288707,
+          "mixed_selected_keys": {
+            "ir=0.9;uv=0.5;split=2": 256,
+            "ir=0.9;uv=0.5;split=4": 128,
+            "ir=0.9;uv=0.5;split=5": 256,
+            "ir=0.9;uv=0.5;split=6": 768,
+            "ir=0.9;uv=0.5;split=7": 2048,
+            "ir=0.9;uv=0.5;split=8": 1280,
+            "ir=0.9;uv=0.5;split=9": 256
+          },
+          "mixed_selected_max_finite_bound": 1.9039279284994417,
+          "mixed_selected_max_infinite_bound": 2.121704246262637,
+          "mixed_selected_min_finite_bound": 0.5800949275086398,
+          "mixed_selected_min_infinite_bound": 0.65630773316878,
+          "pair_count": 66,
+          "row_count": 4992
+        },
+        "V=2/d=3": {
+          "alpha_profiles": {
+            "0.5": {
+              "maximum_counting_constant": 1.4025746541786952,
+              "maximum_envelope_abs_residual": 8.881784197001252e-16,
+              "maximum_finite_trace_bound": 2.459019575680608,
+              "maximum_infinite_zeta_bound": 3.442627405952851,
+              "minimum_counting_constant": 0.9855138979434639,
+              "minimum_finite_trace_bound": 1.2140470537996502,
+              "minimum_infinite_zeta_bound": 1.6996658753195102
+            },
+            "0.6666666666666666": {
+              "maximum_counting_constant": 1.246114597306306,
+              "maximum_envelope_abs_residual": 8.881784197001252e-16,
+              "maximum_finite_trace_bound": 1.882835448763501,
+              "maximum_infinite_zeta_bound": 3.850051109307987,
+              "minimum_counting_constant": 0.7784074891600996,
+              "minimum_finite_trace_bound": 0.9295781342969559,
+              "minimum_infinite_zeta_bound": 1.9008157773366765
+            },
+            "0.75": {
+              "maximum_counting_constant": 1.2321699017619216,
+              "maximum_envelope_abs_residual": 8.881784197001252e-16,
+              "maximum_finite_trace_bound": 1.845202277552366,
+              "maximum_infinite_zeta_bound": 4.990574527624472,
+              "minimum_counting_constant": 0.6917977288996753,
+              "minimum_finite_trace_bound": 0.8546507862179432,
+              "minimum_infinite_zeta_bound": 2.311507250777524
+            },
+            "0.8": {
+              "maximum_counting_constant": 1.2494397036372884,
+              "maximum_envelope_abs_residual": 8.881784197001252e-16,
+              "maximum_finite_trace_bound": 1.8763745387025568,
+              "maximum_infinite_zeta_bound": 6.3195822946668905,
+              "minimum_counting_constant": 0.6445289181847866,
+              "minimum_finite_trace_bound": 0.8203107684905842,
+              "minimum_infinite_zeta_bound": 2.7627860545700242
+            },
+            "0.9": {
+              "maximum_counting_constant": 1.2847088482697955,
+              "maximum_envelope_abs_residual": 4.440892098500626e-16,
+              "maximum_finite_trace_bound": 1.9325015808713455,
+              "maximum_infinite_zeta_bound": 12.940005790829282,
+              "minimum_counting_constant": 0.5594598946165547,
+              "minimum_finite_trace_bound": 0.7673067483318595,
+              "minimum_infinite_zeta_bound": 5.137876142010598
+            }
+          },
+          "context_count": 384,
+          "dimension": 3,
+          "maximum_effective_resistance": 8.999360609443517,
+          "maximum_identity_abs_residual": 2.4424906541753444e-15,
+          "maximum_mode_constant": 1.0296141291128926,
+          "maximum_mode_envelope_residual": 0.0,
+          "maximum_projector_identity_abs_residual": 4.440892098500626e-16,
+          "maximum_projector_trace": 1.6026715567191103,
+          "maximum_resistance_average": 1.6026715567191128,
+          "maximum_trace_inverse": 1.6026715567191103,
+          "maximum_transformed_identity_abs_residual": 4.440892098500626e-16,
+          "maximum_zeta_bound": 2.459019575680608,
+          "minimum_mode_constant": 0.5083326754948767,
+          "minimum_positive_normalized_eigenvalue": 0.7570174175402339,
+          "minimum_projector_trace": 0.6457125867655797,
+          "minimum_resistance_average": 0.6457125867655797,
+          "minimum_trace_inverse": 0.6457125867655796,
+          "minimum_zeta_bound": 1.2140470537996502,
+          "mixed_selected_keys": {
+            "ir=0.5;uv=0.5;split=1": 576,
+            "ir=0.6666666666666666;uv=0.5;split=1": 320,
+            "ir=0.75;uv=0.5;split=1": 192,
+            "ir=0.8;uv=0.5;split=1": 192,
+            "ir=0.9;uv=0.5;split=1": 256
+          },
+          "mixed_selected_max_finite_bound": 1.6026715567191114,
+          "mixed_selected_max_infinite_bound": 2.5043676557035957,
+          "mixed_selected_min_finite_bound": 0.6457125867655797,
+          "mixed_selected_min_infinite_bound": 1.13133140828544,
+          "pair_count": 3,
+          "row_count": 1536
+        },
+        "V=2/d=4": {
+          "alpha_profiles": {
+            "0.5": {
+              "maximum_counting_constant": 1.7428971393249415,
+              "maximum_envelope_abs_residual": 3.552713678800501e-15,
+              "maximum_finite_trace_bound": 4.134634207641282,
+              "maximum_infinite_zeta_bound": 5.1471976870636365,
+              "minimum_counting_constant": 1.0110955084073998,
+              "minimum_finite_trace_bound": 1.3914831174710915,
+              "minimum_infinite_zeta_bound": 1.7322544931782977
+            },
+            "0.6666666666666666": {
+              "maximum_counting_constant": 1.454304198367342,
+              "maximum_envelope_abs_residual": 8.881784197001252e-16,
+              "maximum_finite_trace_bound": 2.7113985162461693,
+              "maximum_infinite_zeta_bound": 4.736525475090879,
+              "minimum_counting_constant": 0.7036377911308124,
+              "minimum_finite_trace_bound": 0.912502792416321,
+              "minimum_infinite_zeta_bound": 1.5940455438307333
+            },
+            "0.75": {
+              "maximum_counting_constant": 1.3284554910384208,
+              "maximum_envelope_abs_residual": 8.881784197001252e-16,
+              "maximum_finite_trace_bound": 2.377438321105381,
+              "maximum_infinite_zeta_bound": 5.415128759372447,
+              "minimum_counting_constant": 0.5876592479217899,
+              "minimum_finite_trace_bound": 0.8013348199357785,
+              "minimum_infinite_zeta_bound": 1.825212957492508
+            },
+            "0.8": {
+              "maximum_counting_constant": 1.2582358599496581,
+              "maximum_envelope_abs_residual": 8.881784197001252e-16,
+              "maximum_finite_trace_bound": 2.2304224891527524,
+              "maximum_infinite_zeta_bound": 6.280676406842171,
+              "minimum_counting_constant": 0.5415833200519405,
+              "minimum_finite_trace_bound": 0.7776177451958258,
+              "minimum_infinite_zeta_bound": 2.189704170194433
+            },
+            "0.9": {
+              "maximum_counting_constant": 1.2401832620817856,
+              "maximum_envelope_abs_residual": 8.881784197001252e-16,
+              "maximum_finite_trace_bound": 2.232974884060887,
+              "maximum_infinite_zeta_bound": 12.351150681917252,
+              "minimum_counting_constant": 0.4599860815789021,
+              "minimum_finite_trace_bound": 0.7417926620663299,
+              "minimum_infinite_zeta_bound": 4.103043437398529
+            }
+          },
+          "context_count": 384,
+          "dimension": 4,
+          "maximum_effective_resistance": 15.93408930838922,
+          "maximum_identity_abs_residual": 2.6645352591003757e-15,
+          "maximum_mode_constant": 0.9781729250045239,
+          "maximum_mode_envelope_residual": 0.0,
+          "maximum_projector_identity_abs_residual": 2.220446049250313e-16,
+          "maximum_projector_trace": 2.0052069566897663,
+          "maximum_resistance_average": 2.0052069566897672,
+          "maximum_trace_inverse": 2.0052069566897663,
+          "maximum_transformed_identity_abs_residual": 4.440892098500626e-16,
+          "maximum_zeta_bound": 4.134634207641283,
+          "minimum_mode_constant": 0.32919746772172015,
+          "minimum_positive_normalized_eigenvalue": 0.7872756441265598,
+          "minimum_projector_trace": 0.6618174815698084,
+          "minimum_resistance_average": 0.6618174815698086,
+          "minimum_trace_inverse": 0.6618174815698085,
+          "minimum_zeta_bound": 1.3914831174710915,
+          "mixed_selected_keys": {
+            "ir=0.5;uv=0.5;split=1": 384,
+            "ir=0.6666666666666666;uv=0.5;split=1": 64,
+            "ir=0.6666666666666666;uv=0.5;split=2": 128,
+            "ir=0.8;uv=0.5;split=1": 64,
+            "ir=0.9;uv=0.5;split=2": 1280
+          },
+          "mixed_selected_max_finite_bound": 2.0086026497740597,
+          "mixed_selected_max_infinite_bound": 2.914388527265615,
+          "mixed_selected_min_finite_bound": 0.7220546989001853,
+          "mixed_selected_min_infinite_bound": 1.0628260746073914,
+          "pair_count": 6,
+          "row_count": 1920
+        },
+        "V=2/d=5": {
+          "alpha_profiles": {
+            "0.5": {
+              "maximum_counting_constant": 2.0311985447266525,
+              "maximum_envelope_abs_residual": 1.3322676295501878e-15,
+              "maximum_finite_trace_bound": 5.873488494864116,
+              "maximum_infinite_zeta_bound": 6.904930376889033,
+              "minimum_counting_constant": 0.9572991353434751,
+              "minimum_finite_trace_bound": 1.3046280213786101,
+              "minimum_infinite_zeta_bound": 1.5337334300109513
+            },
+            "0.6666666666666666": {
+              "maximum_counting_constant": 1.6205029967796019,
+              "maximum_envelope_abs_residual": 8.881784197001252e-16,
+              "maximum_finite_trace_bound": 3.4470859492293933,
+              "maximum_infinite_zeta_bound": 5.5099697132792285,
+              "minimum_counting_constant": 0.6893233575608735,
+              "minimum_finite_trace_bound": 0.9563389550916985,
+              "minimum_infinite_zeta_bound": 1.5286531162248373
+            },
+            "0.75": {
+              "maximum_counting_constant": 1.4474333317079349,
+              "maximum_envelope_abs_residual": 1.3322676295501878e-15,
+              "maximum_finite_trace_bound": 2.9233562969641915,
+              "maximum_infinite_zeta_bound": 6.017681943038945,
+              "minimum_counting_constant": 0.6033886262997571,
+              "minimum_finite_trace_bound": 0.910359964872112,
+              "minimum_infinite_zeta_bound": 1.8739613532450576
+            },
+            "0.8": {
+              "maximum_counting_constant": 1.3525950942456206,
+              "maximum_envelope_abs_residual": 8.881784197001252e-16,
+              "maximum_finite_trace_bound": 2.6992907255558998,
+              "maximum_infinite_zeta_bound": 6.82505825365557,
+              "minimum_counting_constant": 0.5715387348801816,
+              "minimum_finite_trace_bound": 0.9195958210742479,
+              "minimum_infinite_zeta_bound": 2.3251645290476843
+            },
+            "0.9": {
+              "maximum_counting_constant": 1.1811533472104176,
+              "maximum_envelope_abs_residual": 1.7763568394002505e-15,
+              "maximum_finite_trace_bound": 2.373058196340042,
+              "maximum_infinite_zeta_bound": 11.656035134564295,
+              "minimum_counting_constant": 0.5329376196148669,
+              "minimum_finite_trace_bound": 0.9801107635875255,
+              "minimum_infinite_zeta_bound": 4.814127826178196
+            }
+          },
+          "context_count": 384,
+          "dimension": 5,
+          "maximum_effective_resistance": 21.516330896267956,
+          "maximum_identity_abs_residual": 2.886579864025407e-15,
+          "maximum_mode_constant": 1.0912007773731327,
+          "maximum_mode_envelope_residual": 1.7763568394002505e-15,
+          "maximum_projector_identity_abs_residual": 4.440892098500626e-16,
+          "maximum_projector_trace": 1.8806216998052838,
+          "maximum_resistance_average": 1.8806216998052832,
+          "maximum_trace_inverse": 1.8806216998052838,
+          "maximum_transformed_identity_abs_residual": 4.440892098500626e-16,
+          "maximum_zeta_bound": 5.873488494864114,
+          "minimum_mode_constant": 0.24237914356279794,
+          "minimum_positive_normalized_eigenvalue": 1.195096201793493,
+          "minimum_projector_trace": 0.8274300845459812,
+          "minimum_resistance_average": 0.8274300845459812,
+          "minimum_trace_inverse": 0.8274300845459812,
+          "minimum_zeta_bound": 1.30462802137861,
+          "mixed_selected_keys": {
+            "ir=0.75;uv=0.5;split=3": 256,
+            "ir=0.9;uv=0.5;split=2": 640,
+            "ir=0.9;uv=0.5;split=3": 1408
+          },
+          "mixed_selected_max_finite_bound": 2.117318722273093,
+          "mixed_selected_max_infinite_bound": 3.1299469867610137,
+          "mixed_selected_min_finite_bound": 0.8563781130925465,
+          "mixed_selected_min_infinite_bound": 0.9616511687652665,
+          "pair_count": 10,
+          "row_count": 2304
+        },
+        "V=2/d=6": {
+          "alpha_profiles": {
+            "0.5": {
+              "maximum_counting_constant": 2.2587641806701084,
+              "maximum_envelope_abs_residual": 5.329070518200751e-15,
+              "maximum_finite_trace_bound": 7.467366756170777,
+              "maximum_infinite_zeta_bound": 8.487769880946438,
+              "minimum_counting_constant": 1.029443587815473,
+              "minimum_finite_trace_bound": 1.5510678765291555,
+              "minimum_infinite_zeta_bound": 1.7630186966280341
+            },
+            "0.6666666666666666": {
+              "maximum_counting_constant": 1.7331567970356039,
+              "maximum_envelope_abs_residual": 1.7763568394002505e-15,
+              "maximum_finite_trace_bound": 4.016793811651861,
+              "maximum_infinite_zeta_bound": 6.057600061203184,
+              "minimum_counting_constant": 0.6548903890356396,
+              "minimum_finite_trace_bound": 0.9329871936845734,
+              "minimum_infinite_zeta_bound": 1.4070085611990313
+            },
+            "0.75": {
+              "maximum_counting_constant": 1.51817325364634,
+              "maximum_envelope_abs_residual": 1.7763568394002505e-15,
+              "maximum_finite_trace_bound": 3.319468358543817,
+              "maximum_infinite_zeta_bound": 6.380677732870801,
+              "minimum_counting_constant": 0.5695881488480915,
+              "minimum_finite_trace_bound": 0.8982309418526934,
+              "minimum_infinite_zeta_bound": 1.7265783404452337
+            },
+            "0.8": {
+              "maximum_counting_constant": 1.4022047203242067,
+              "maximum_envelope_abs_residual": 1.7763568394002505e-15,
+              "maximum_finite_trace_bound": 3.0276871936727017,
+              "maximum_infinite_zeta_bound": 7.1092996927753465,
+              "minimum_counting_constant": 0.5238372057852411,
+              "minimum_finite_trace_bound": 0.8842847784136254,
+              "minimum_infinite_zeta_bound": 2.0763854062070255
+            },
+            "0.9": {
+              "maximum_counting_constant": 1.196166409072752,
+              "maximum_envelope_abs_residual": 1.7763568394002505e-15,
+              "maximum_finite_trace_bound": 2.6106765992895387,
+              "maximum_infinite_zeta_bound": 11.794304722270482,
+              "minimum_counting_constant": 0.44306468386909004,
+              "minimum_finite_trace_bound": 0.8659716362946455,
+              "minimum_infinite_zeta_bound": 3.9122169946602012
+            }
+          },
+          "context_count": 384,
+          "dimension": 6,
+          "maximum_effective_resistance": 25.87795144722563,
+          "maximum_identity_abs_residual": 4.218847493575595e-15,
+          "maximum_mode_constant": 0.9436151268803612,
+          "maximum_mode_envelope_residual": 8.881784197001252e-16,
+          "maximum_projector_identity_abs_residual": 4.440892098500626e-16,
+          "maximum_projector_trace": 1.7017657584743917,
+          "maximum_resistance_average": 1.7017657584743915,
+          "maximum_trace_inverse": 1.7017657584743917,
+          "maximum_transformed_identity_abs_residual": 4.440892098500626e-16,
+          "maximum_zeta_bound": 7.467366756170776,
+          "minimum_mode_constant": 0.19600096779786974,
+          "minimum_positive_normalized_eigenvalue": 1.472145278578468,
+          "minimum_projector_trace": 0.6068568603599748,
+          "minimum_resistance_average": 0.6068568603599754,
+          "minimum_trace_inverse": 0.6068568603599748,
+          "minimum_zeta_bound": 1.5510678765291552,
+          "mixed_selected_keys": {
+            "ir=0.9;uv=0.5;split=3": 768,
+            "ir=0.9;uv=0.5;split=4": 1920
+          },
+          "mixed_selected_max_finite_bound": 2.0450291500343134,
+          "mixed_selected_max_infinite_bound": 3.0654322748099743,
+          "mixed_selected_min_finite_bound": 0.804141688416109,
+          "mixed_selected_min_infinite_bound": 0.8334636555084886,
+          "pair_count": 15,
+          "row_count": 2688
+        },
+        "V=2/d=8": {
+          "alpha_profiles": {
+            "0.5": {
+              "maximum_counting_constant": 1.9307318922214187,
+              "maximum_envelope_abs_residual": 3.552713678800501e-15,
+              "maximum_finite_trace_bound": 5.635564633248724,
+              "maximum_infinite_zeta_bound": 6.168096867483138,
+              "minimum_counting_constant": 0.9530147603329112,
+              "minimum_finite_trace_bound": 1.3730702209498369,
+              "minimum_infinite_zeta_bound": 1.5028183828658934
+            },
+            "0.6666666666666666": {
+              "maximum_counting_constant": 1.4059589016257592,
+              "maximum_envelope_abs_residual": 3.552713678800501e-15,
+              "maximum_finite_trace_bound": 3.138266982026549,
+              "maximum_infinite_zeta_bound": 4.398468255947784,
+              "minimum_counting_constant": 0.6094621846961079,
+              "minimum_finite_trace_bound": 0.8956763255402393,
+              "minimum_infinite_zeta_bound": 1.2553437639485603
+            },
+            "0.75": {
+              "maximum_counting_constant": 1.199769876093426,
+              "maximum_envelope_abs_residual": 3.552713678800501e-15,
+              "maximum_finite_trace_bound": 2.6374664621494555,
+              "maximum_infinite_zeta_bound": 4.636802738436525,
+              "minimum_counting_constant": 0.5253350289164322,
+              "minimum_finite_trace_bound": 0.8769432471701849,
+              "minimum_infinite_zeta_bound": 1.54171167985897
+            },
+            "0.8": {
+              "maximum_counting_constant": 1.0908703809360596,
+              "maximum_envelope_abs_residual": 3.552713678800501e-15,
+              "maximum_finite_trace_bound": 2.4287775593799443,
+              "maximum_infinite_zeta_bound": 5.170363844698518,
+              "minimum_counting_constant": 0.480540634859118,
+              "minimum_finite_trace_bound": 0.871633576052949,
+              "minimum_infinite_zeta_bound": 1.8555271601735213
+            },
+            "0.9": {
+              "maximum_counting_constant": 0.9018276430161348,
+              "maximum_envelope_abs_residual": 2.6645352591003757e-15,
+              "maximum_finite_trace_bound": 2.131822867941827,
+              "maximum_infinite_zeta_bound": 8.595505100422406,
+              "minimum_counting_constant": 0.40208477896997097,
+              "minimum_finite_trace_bound": 0.8688939472059867,
+              "minimum_infinite_zeta_bound": 3.5033784782249637
+            }
+          },
+          "context_count": 384,
+          "dimension": 8,
+          "maximum_effective_resistance": 45.03919139152,
+          "maximum_identity_abs_residual": 2.5424107263916085e-14,
+          "maximum_mode_constant": 1.1010340396927347,
+          "maximum_mode_envelope_residual": 1.7763568394002505e-15,
+          "maximum_projector_identity_abs_residual": 4.440892098500626e-16,
+          "maximum_projector_trace": 1.4320541180898845,
+          "maximum_resistance_average": 1.432054118089885,
+          "maximum_trace_inverse": 1.4320541180898845,
+          "maximum_transformed_identity_abs_residual": 4.440892098500626e-16,
+          "maximum_zeta_bound": 5.635564633248724,
+          "minimum_mode_constant": 0.26826008581906585,
+          "minimum_positive_normalized_eigenvalue": 1.794632993768256,
+          "minimum_projector_trace": 0.6047964991890705,
+          "minimum_resistance_average": 0.604796499189071,
+          "minimum_trace_inverse": 0.6047964991890705,
+          "minimum_zeta_bound": 1.373070220949837,
+          "mixed_selected_keys": {
+            "ir=0.9;uv=0.5;split=4": 768,
+            "ir=0.9;uv=0.5;split=5": 1408,
+            "ir=0.9;uv=0.5;split=6": 1280
+          },
+          "mixed_selected_max_finite_bound": 1.96466987170781,
+          "mixed_selected_max_infinite_bound": 2.180989916498292,
+          "mixed_selected_min_finite_bound": 0.7935817070216821,
+          "mixed_selected_min_infinite_bound": 0.820060503059353,
+          "pair_count": 28,
+          "row_count": 3456
+        }
+      },
+      "volume_independent_mixed_constant_closed": false
+    }
+  },
+  "exploration_id": "EXP-001257",
+  "manifest": "strategy/pre-a-cp1-st8-q3lock-spectral-counting-mixed-manifest.json",
+  "result_id": "R-412",
+  "schema": "tect/pre-a-r412-integrated/1.0",
+  "scope": {
+    "c6_closed": false,
+    "common_core_closed": false,
+    "common_split_rule_closed": false,
+    "continuum_closed": false,
+    "cutoff_independent_mixed_constant_closed": false,
+    "exhaustion_uniform_mixed_constant_closed": false,
+    "finite_likelihood_row_coverage_closed": true,
+    "finite_mixed_counting_closed": true,
+    "finite_mixed_zeta_tail_bound_closed": true,
+    "finite_mode_ordering_closed": true,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "no_new_negative_result": true,
+    "no_pdf": true,
+    "no_tier_change": true,
+    "phase_uniform_mixed_constant_closed": false,
+    "pre_a_closed": false,
+    "sector_a_closed": false,
+    "volume_independent_mixed_constant_closed": false
+  },
+  "verdict": "PASS"
+}

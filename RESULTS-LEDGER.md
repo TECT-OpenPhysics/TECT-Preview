@@ -43,6 +43,7 @@ policy in `governance/development-history.md`.
 | [R-377](#r-377) | Gap-free odd-Matsubara resolvent telescoping budget | R-377 v1.0 is a T0 claim-nonbearing finite resolvent-interface checkpoint under EXP-001219. The exact positive-resolvent difference identity and its 64-layer budget pass 122/122 integrated assertions with Lean R377; the accumulated finite budget ratio is 0.9895313426497929 and the absolute-value square-root debt is recorded separately. Uniform locality, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
 | [R-382](#r-382) | Increasing-cutoff endpoint modular moment stress | R-382 v1.0 is a T0 claim-nonbearing finite cutoff-profile diagnostic under EXP-001224. The R-381 endpoint-energy bridge passes across 2816 all-prefix actual-Q3 contexts with Lean R382; edge max M_0 grows from 2.733031855844076 at d=3 to 41.64826651661874 at d=6 and max M_2 from 0.008378198414559081 to 17.719559304500326, with d=5 to d=6 ratios 8.855033106195243 and 36.38049903040583. This is finite growth evidence only; uniform M_0/M_2 control, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
 | [R-407](#r-407) | Canonical-path effective-resistance lower bound | R-407 v1.0 is a T0 claim-nonbearing finite constructive path checkpoint under EXP-001252. The maximum-conductance tree certificate passes primary 22510/22510, independent 22509/22509, hostile 6/6, integrated 35/35 and Lean R407 over 7 systems, 2688 contexts and 21120 rows. The exact intrinsic gap is [0.7570174175402339,5.647863075935321], the canonical lower envelope is [0.2613815898804392,2.508986944248343], and rho is [0.3985672393762041,3.825824154093709]. The finite path certificate exposes the conductance/probability inputs for a future uniform proof; common-core, phase, volume, exhaustion and QFT gates remain open |
+| [R-412](#r-412) | Two-regime IR/UV mixed spectral-counting envelope for the normalized Green trace | R-412 v1.0 is a T0 claim-nonbearing finite spectral checkpoint under EXP-001257. For every declared exponent pair in {1/2,2/3,3/4,4/5,9/10} and every interior split, separate IR/UV constants give a finite trace envelope with an explicit UV zeta tail; primary 592762/592762, independent 592762/592762, hostile 9/9, integrated 55/55 and Lean R412 pass over 7 systems, 2688 contexts and 21120 rows. The row-wise optimizer is diagnostic only: no uniform split, common-core, phase, volume, exhaustion or QFT gate is closed |
 | [R-411](#r-411) | Sublinear spectral-counting exponent envelope for the normalized Green trace | R-411 v1.0 is a T0 claim-nonbearing finite spectral checkpoint under EXP-001256. For each ordered positive mode and declared alpha in {1/2,2/3,3/4,4/5,9/10}, C_alpha=max k/lambda_k^alpha gives a finite trace envelope with an explicit zeta tail; primary 508279/508279, independent 508279/508279, hostile 8/8, integrated 48/48 and Lean R411 pass over 7 systems, 2688 contexts and 21120 rows. Uniform exponent/constant control, common-core, phase, volume, exhaustion and QFT gates remain open |
 | [R-410](#r-410) | Quadratic eigenvalue-counting envelope for the normalized Green trace | R-410 v1.0 is a T0 claim-nonbearing finite spectral checkpoint under EXP-001255. The ordered positive spectrum gives c2=min lambda_k/k^2 and tr(W^+) <= H_(d-1)^(2)/c2 <= pi^2/(6*c2) over 7 systems, 2688 contexts and 21120 rows; primary 191473/191473, independent 191473/191473, hostile 6/6, integrated 46/46 and Lean R410 pass. The finite c2 range is [0.19600096779786974,1.2046269661757882] and the trace range is [0.44413751605172147,2.0052069566897663]. Uniform mode counting, common-core, phase, volume, exhaustion and QFT gates remain open |
 | [R-409](#r-409) | Effective-resistance average trace identity and heat-kernel target | R-409 v1.0 is a T0 claim-nonbearing finite Green-trace checkpoint under EXP-001254. The unordered resistance average equals the normalized Laplacian pseudoinverse trace over 7 systems, 2688 contexts and 21120 rows; primary 106990/106990, independent 106990/106990, hostile 6/6, integrated 37/37 and Lean R409 pass. Both resistance average and inverse-spectrum trace range over [0.44413751605180657,2.0052069566897672], with maximum identity residual 2.537969834293108e-12. The exact identity exposes an integrated heat-trace uniformity target, while common-core, cutoff/volume/phase/exhaustion and QFT gates remain open |
@@ -699,6 +700,62 @@ Hamiltonian-to-OS/KMS/GNS identification, physical mass gap, continuum, C6,
 Sector-A or Pre-A closure.  No tier change, negative result or PDF is issued.
 
 **Proven in:** [R-407 certificate](strategy/pre-a-cp1-st8-q3lock-canonical-path-resistance-certificate-260830.md), [Lean entrypoint](verification/lean/Tect/R407.lean), primary/independent/hostile scripts, integrated verifier, [scope note](claims/C6-SPACETIME-SIGNATURE/notes/canonical-path-resistance-260830.md), and saved run artefacts.
+<a id="r-412"></a>
+### R-412 -- Two-regime IR/UV mixed spectral-counting envelope for the normalized Green trace
+
+**Result ID.** R-412 is a T0, claim-nonbearing finite spectral checkpoint
+under EXP-001257.  For the ordered positive eigenvalues of
+`W=D_pi^(-1/2)L D_pi^(-1/2)`, choose `1 <= r < m=d-1` and exponents
+`0 < alpha_IR,alpha_UV < 1`.  With
+
+```
+C_IR = max_(k<=r) k/lambda_k^alpha_IR,
+C_UV = max_(k>r) k/lambda_k^alpha_UV,
+```
+
+one has
+
+```
+tr(W^+) <= C_IR^(1/alpha_IR) sum_(k<=r) k^(-1/alpha_IR)
+          + C_UV^(1/alpha_UV) sum_(k>r) k^(-1/alpha_UV).
+```
+
+The UV sum is compared with an explicit integral tail.  All exponent pairs
+and all interior splits are enumerated; the row-wise minimizing pair and split
+are retained only as finite diagnostics.
+
+**Verification.** The volume-two fixture uses dimensions `3,4,5,6,8,10,12`,
+beta in `{1/2,1,2}`, both source signs, history signs, split orders, all
+prefixes, both history adjoints and both collar orientations.  The primary
+lane passes `592762/592762` over 7 systems, 2688 contexts and 21120 rows; the
+independent lane passes `592762/592762`; the hostile lane `9/9`; the
+integrated verifier `55/55`; and Lean R412 compiles.  Each row checks all 25
+exponent pairs and every admissible interior split.
+
+The selected finite mixed envelope ranges over
+`[0.5800949275086398,2.117318722273093]`; the selected infinite comparison
+ranges over `[0.6295715327320223,3.1299469867610137]`.  The smallest selected
+trace slack is `-6.661338147750939e-16`, at floating-point roundoff, and the
+smallest selected UV-tail slack is `0.0005947926662857039`.
+
+The hostile lane rejects `alpha=1`, unsorted modes, exponent-power inversion,
+split-index errors, a linear shortcut inserted into a quadratic bound,
+Fiedler-only truncation and the disconnected diagonal-generator mutation.  The
+independent lane agrees on invariant aggregate fields within `5e-6`; optimizer
+histograms are not treated as invariant data because tied minimizers can swap
+under roundoff.
+
+This result advances an IR/UV analytic target: prove a controlled split rule
+and uniform constants on one Hamiltonian common core, then transfer the mixed
+trace estimate to the R-399 shell and combine it with the R-406 Schur split.
+
+**Boundary.** R-412 proves no cutoff-, volume-, source-, phase- or
+exhaustion-uniform estimate, common core, common split rule, phase selection,
+Hamiltonian-to-OS/KMS/GNS identification, physical mass gap, continuum, C6,
+Sector-A or Pre-A closure.  No tier change, negative result or PDF is issued.
+
+**Proven in:** [R-412 certificate](strategy/pre-a-cp1-st8-q3lock-spectral-counting-mixed-certificate-260831.md), [Lean entrypoint](verification/lean/Tect/R412.lean), primary/independent/hostile scripts, integrated verifier, [scope note](claims/C6-SPACETIME-SIGNATURE/notes/spectral-counting-mixed-260831.md), and saved run artefacts.
+
 <a id="r-411"></a>
 ### R-411 -- Sublinear spectral-counting exponent envelope for the normalized Green trace
 

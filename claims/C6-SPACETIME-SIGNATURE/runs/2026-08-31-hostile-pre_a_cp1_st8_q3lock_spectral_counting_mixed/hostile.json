@@ -1,0 +1,204 @@
+{
+  "assertion_count": 9,
+  "boundary": "T0 claim-nonbearing finite mixed IR/UV spectral-counting and zeta-tail checkpoint only. It proves no cutoff-, volume-, source-, phase- or exhaustion-uniform bound, common core, common split rule, OS/KMS/GNS reconstruction, mass gap, continuum, C6, Sector-A or Pre-A closure.",
+  "checks": [
+    {
+      "actual": [
+        [
+          1.6026715567191103,
+          "ir=0.8;uv=0.5;split=1",
+          2.1660675317433045
+        ],
+        [
+          0.9459598191730915,
+          "ir=0.9;uv=0.5;split=7",
+          1.3930352651122162
+        ]
+      ],
+      "expected": "trace<=selected mixed infinite zeta bound",
+      "name": "baseline mixed envelope",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          1.6026715567191103,
+          "ir=0.8;uv=0.5;split=1",
+          1.6026715567191114
+        ],
+        [
+          0.9459598191730915,
+          "ir=0.9;uv=0.5;split=7",
+          1.3849577436191354
+        ]
+      ],
+      "expected": "trace<=selected mixed finite envelope",
+      "name": "late mixed envelope",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "alpha=1 rejected outside (0,1)",
+      "name": "alpha one divergent tail rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.3333333333333333,
+        0.1111111111111111,
+        10.856374292654936,
+        29.58005973889229
+      ],
+      "expected": "sorting changes quadratic and mixed constants",
+      "name": "unsorted mode index rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        1.0,
+        -6.0,
+        1.8333333333333333,
+        1.8333333333333333
+      ],
+      "expected": "linear k constant cannot be inserted into a k^2 envelope",
+      "name": "linear envelope shortcut rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        1.1161231740339044,
+        8.06362613856686
+      ],
+      "expected": "C_alpha uses lambda^(-alpha), not lambda^(alpha)",
+      "name": "exponent power inversion rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          "ir=0.9;uv=0.9;split=1",
+          "ir=0.9;uv=0.9;split=2"
+        ],
+        1.8563742926549405,
+        1.9133930722256394
+      ],
+      "expected": "changing the IR/UV membership changes the mixed bound",
+      "name": "split index mutation rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          1.320973569207015,
+          1.6026715567191103
+        ],
+        [
+          0.3431201141364895,
+          0.9459598191730915
+        ]
+      ],
+      "expected": "full inverse-spectrum trace",
+      "name": "Fiedler-only shortcut rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0,
+        0,
+        0.0
+      ],
+      "expected": "zero edges and positive eigenvalues",
+      "name": "q mutation deletes graph spectrum",
+      "status": "PASS"
+    }
+  ],
+  "derived": {
+    "mutation": "alpha=1, unsorted modes, split-index, linear or exponent-inverted shortcuts, Fiedler shortcut and a diagonal generator",
+    "q_mutation": {
+      "maximum_edge": 0.0,
+      "mutated_edge_count": 0,
+      "positive_eigenvalue_count": 0
+    },
+    "selected": [
+      {
+        "dimension": 3,
+        "identity_residual": 2.4424906541753444e-15,
+        "linear_constant": 0.7570174175402339,
+        "mixed_key": "ir=0.8;uv=0.5;split=1",
+        "mixed_profile": {
+          "alpha_ir": 0.8,
+          "alpha_uv": 0.5,
+          "envelope_residual": -1.1102230246251565e-16,
+          "finite_trace_bound": 1.6026715567191114,
+          "infinite_zeta_bound": 2.1660675317433045,
+          "ir_counting_constant": 1.2494397036372884,
+          "ir_finite_zeta_sum": 1.0,
+          "ir_trace_bound": 1.320973569207015,
+          "split": 1,
+          "uv_counting_constant": 1.0615045690190814,
+          "uv_finite_zeta_sum": 0.25,
+          "uv_integral_tail_bound": 0.5,
+          "uv_trace_bound": 0.28169798751209646
+        },
+        "mode_constant": 0.7570174175402339,
+        "one_mode_inverse": 1.320973569207015,
+        "positive_normalized_eigenvalue_count": 2,
+        "resistance_average": 1.6026715567191128,
+        "trace_inverse": 1.6026715567191103,
+        "zeta_bound": 1.6512169615087688,
+        "zeta_infinite_bound": 2.1729144253947124
+      },
+      {
+        "dimension": 12,
+        "identity_residual": -8.486544800234697e-13,
+        "linear_constant": 2.0707648945081827,
+        "mixed_key": "ir=0.9;uv=0.5;split=7",
+        "mixed_profile": {
+          "alpha_ir": 0.9,
+          "alpha_uv": 0.5,
+          "envelope_residual": -1.7763568394002505e-15,
+          "finite_trace_bound": 1.3849577436191354,
+          "infinite_zeta_bound": 1.3930352651122162,
+          "ir_counting_constant": 0.6100694616699573,
+          "ir_finite_zeta_sum": 2.391188681058177,
+          "ir_trace_bound": 1.3808496247492805,
+          "split": 7,
+          "uv_counting_constant": 0.29808176130701275,
+          "uv_finite_zeta_sum": 0.046235141822263036,
+          "uv_integral_tail_bound": 0.09090909090909091,
+          "uv_trace_bound": 0.004108118869854753
+        },
+        "mode_constant": 0.41415297890163655,
+        "one_mode_inverse": 0.3431201141364895,
+        "positive_normalized_eigenvalue_count": 11,
+        "resistance_average": 0.9459598191722428,
+        "trace_inverse": 0.9459598191730915,
+        "zeta_bound": 3.7619726848481725,
+        "zeta_infinite_bound": 3.9718030550225905
+      }
+    ],
+    "toy_spectrum": {
+      "correct_power_constant": 1.1161231740339044,
+      "linear_bound": 1.8333333333333333,
+      "linear_constant": 1.0,
+      "quadratic_bound": 1.8333333333333333,
+      "sorted_alpha_constant": 10.856374292654936,
+      "sorted_c2": 0.3333333333333333,
+      "split_bound_first": 1.8563742926549405,
+      "split_bound_last": 1.9133930722256394,
+      "split_keys": [
+        "ir=0.9;uv=0.9;split=1",
+        "ir=0.9;uv=0.9;split=2"
+      ],
+      "unsorted_alpha_constant": 29.58005973889229,
+      "unsorted_c2": 0.1111111111111111,
+      "wrong_power_constant": 8.06362613856686,
+      "wrong_quadratic_residual": -6.0
+    }
+  },
+  "exploration_id": "EXP-001257",
+  "manifest": "strategy/pre-a-cp1-st8-q3lock-spectral-counting-mixed-manifest.json",
+  "result_id": "R-412",
+  "schema": "tect/pre-a-r412-hostile/1.0",
+  "verdict": "PASS"
+}
