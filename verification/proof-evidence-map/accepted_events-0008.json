@@ -2241,6 +2241,59 @@
         "EXP-001258",
         "R-413"
       ]
+    },
+    {
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE",
+        "EXP-001259",
+        "R-414"
+      ],
+      "claim_ref_basis": {
+        "C6-SPACETIME-SIGNATURE": "explicit_claim_ids"
+      },
+      "claim_refs": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "date": "2026-08-31",
+      "header": "[Two-scale semigroup criterion for normalized Green trace] - 2026-08-31",
+      "id": "20260831-two-scale-semigroup-criterion-for-normalized-gr",
+      "keywords": [
+        "EXP-001259",
+        "Green trace",
+        "QFT",
+        "R-414",
+        "heat trace",
+        "semigroup"
+      ],
+      "linked_result_ids": [
+        "R-413",
+        "R-414"
+      ],
+      "negative_results": [],
+      "notes": [
+        "strategy/pre-a-cp1-st8-q3lock-two-scale-semigroup-bridge-certificate-260831.md",
+        "claims/C6-SPACETIME-SIGNATURE/notes/two-scale-semigroup-bridge-260831.md"
+      ],
+      "raw": "## [Two-scale semigroup criterion for normalized Green trace] - 2026-08-31\n\nR-414 is a T0 claim-nonbearing finite two-scale semigroup checkpoint. The R-413 mixed heat bridge is reorganized into a short-time UV power budget and a late-time IR semigroup budget. For positive ordered modes, with tau>0, 0<alpha_UV<1, A_tau=r tau^alpha_UV+C_UV alpha_UV Gamma(alpha_UV), gamma=lambda_1, and H(t)=sum exp(-t lambda_k), the finite inequalities are H(t)<=A_tau t^(-alpha_UV) for 0<t<=tau, H(t)<=H(tau) exp(-gamma(t-tau)) for t>=tau, and tr(W^+)<=A_tau tau^(1-alpha_UV)/(1-alpha_UV)+H(tau)/gamma. Primary passes 191471/191471, independent 191470/191470, hostile 9/9, integrated 42/42 and Lean R414 compiles over 7 systems, 2688 contexts and 21120 rows. The first-positive-gap range is [0.7570174175402339,5.647863075935399], split heat range [0.0036012445961644186,0.5926882083380163], minimum Green-bound slack 2.936364851149518, and maximum Mellin residual 3.885780586188048e-16. This isolates the UV coefficient, IR gap and split heat value required by a future uniform proof, but proves no regulator/volume/source/phase/exhaustion uniformity, common core, OS/KMS/GNS reconstruction, physical gap, continuum, C6, Sector-A or Pre-A closure.\n\n",
+      "result_ids": [
+        "R-413",
+        "R-414"
+      ],
+      "result_link_basis": {
+        "R-413": "explicit_result_id",
+        "R-414": "explicit_result_id"
+      },
+      "scripts": [
+        "codes/foundations/pre_a_cp1_st8_q3lock_two_scale_semigroup_bridge.py",
+        "codes/foundations/pre_a_cp1_st8_q3lock_two_scale_semigroup_bridge_independent.py",
+        "codes/foundations/pre_a_cp1_st8_q3lock_two_scale_semigroup_bridge_hostile.py",
+        "codes/foundations/pre_a_cp1_st8_q3lock_two_scale_semigroup_bridge_verify.py",
+        "verification/lean/Tect/R414.lean"
+      ],
+      "unresolved_claim_ids": [
+        "EXP-001259",
+        "R-414"
+      ]
     }
   ],
   "kind": "accepted_events",

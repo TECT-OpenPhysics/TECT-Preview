@@ -1,0 +1,737 @@
+{
+  "boundary": "T0 claim-nonbearing finite two-scale semigroup bridge only. It proves no cutoff-, volume-, source-, phase- or exhaustion-uniform UV coefficient or IR gap, common core, common split rule, OS/KMS/GNS reconstruction, mass gap, continuum, C6, Sector-A or Pre-A closure.",
+  "checks": [
+    {
+      "actual": "['R-414', 'EXP-001259', False]",
+      "expected": "R-414/EXP-001259/false",
+      "group": "identity",
+      "name": "manifest identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'cutoff_independent_uv_coefficient_closed': False, 'volume_independent_ir_gap_closed': False, 'phase_uniform_semigroup_closed': False, 'exhaustion_uniform_semigroup_closed': False, 'common_core_closed': False, 'common_split_rule_closed': False, 'hamiltonian_os_identification_closed': False, 'kms_gns_gap_closed': False, 'continuum_closed': False, 'c6_closed': False, 'sector_a_closed': False, 'pre_a_closed': False}",
+      "expected": "all promoted flags false",
+      "group": "scope",
+      "name": "scope firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": "[]",
+      "expected": "all R-414 artifacts",
+      "group": "provenance",
+      "name": "artifacts present",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'codes/foundations/pre_a_cp1_st8_q3lock_two_scale_semigroup_bridge.py': '8eb624b14b4a056280b606bca9cbb7efcb3a6cd4c9cdb558b570b40b6bce9812', 'codes/foundations/pre_a_cp1_st8_q3lock_two_scale_semigroup_bridge_independent.py': '3451624f38f2cfa8ee961d67cdf896846d5b48a75be854fc890aab8a9e628fdd', 'codes/foundations/pre_a_cp1_st8_q3lock_two_scale_semigroup_bridge_hostile.py': '3a20dcaf09662c56cbd10890c306efde247a233c66c4fc4689cbe982e07690b0', 'verification/lean/Tect/R414.lean': '96d785ef4325fe8033a32784bb2b26981599ac4edf5ad0420481f2b3907d7f6a'}",
+      "expected": "distinct",
+      "group": "provenance",
+      "name": "source hashes distinct",
+      "status": "PASS"
+    },
+    {
+      "actual": "['late_exponential_factor_nonnegative', 'semigroup_bound_nonnegative', 'uv_power_integral_positive', 'finite_scope']",
+      "expected": "declared markers",
+      "group": "Lean",
+      "name": "Lean markers",
+      "status": "PASS"
+    },
+    {
+      "actual": "finite scalar file",
+      "expected": "no promotion text",
+      "group": "Lean",
+      "name": "Lean boundary",
+      "status": "PASS"
+    },
+    {
+      "actual": "reused claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-primary-pre_a_cp1_st8_q3lock_two_scale_semigroup_bridge/primary.json",
+      "expected": "existing output",
+      "group": "executables",
+      "name": "reuse pre_a_cp1_st8_q3lock_two_scale_semigroup_bridge.py",
+      "status": "PASS"
+    },
+    {
+      "actual": "reused claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-independent-pre_a_cp1_st8_q3lock_two_scale_semigroup_bridge/independent.json",
+      "expected": "existing output",
+      "group": "executables",
+      "name": "reuse pre_a_cp1_st8_q3lock_two_scale_semigroup_bridge_independent.py",
+      "status": "PASS"
+    },
+    {
+      "actual": "reused claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-hostile-pre_a_cp1_st8_q3lock_two_scale_semigroup_bridge/hostile.json",
+      "expected": "existing output",
+      "group": "executables",
+      "name": "reuse pre_a_cp1_st8_q3lock_two_scale_semigroup_bridge_hostile.py",
+      "status": "PASS"
+    },
+    {
+      "actual": "Tect/R414.lean:6:18: warning: Variable name `hgamma` is not explicitly referenced.\n\nThe binding can be removed (if unused) or named `_` (if used implicitly).\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\nTect/R414.lean:6:39: warning: Variable name `hdt` is not explicitly referenced.\n\nThe binding can be removed (if unused) or named `_` (if used implicitly).\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\nTect/R414.lean:16:5: warning: Variable name `ha` is not explicitly referenced.\n\nThe binding can be removed (if unused) or named `_` (if used implicitly).\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`",
+      "expected": "exit 0",
+      "group": "Lean",
+      "name": "Lean compile",
+      "status": "PASS"
+    },
+    {
+      "actual": "PASS",
+      "expected": "PASS",
+      "group": "executables",
+      "name": "primary verdict",
+      "status": "PASS"
+    },
+    {
+      "actual": "PASS",
+      "expected": "PASS",
+      "group": "executables",
+      "name": "independent verdict",
+      "status": "PASS"
+    },
+    {
+      "actual": "PASS",
+      "expected": "PASS",
+      "group": "hostile",
+      "name": "hostile verdict",
+      "status": "PASS"
+    },
+    {
+      "actual": "[7, 7]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent system_count",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2688, 2688]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent context_count",
+      "status": "PASS"
+    },
+    {
+      "actual": "[21120, 21120]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent comparison_row_count",
+      "status": "PASS"
+    },
+    {
+      "actual": "[[0.0625, 0.125, 0.25, 0.5, 1.0, 2.0, 4.0], [0.0625, 0.125, 0.25, 0.5, 1.0, 2.0, 4.0]]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent heat_time_values",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.0, 1.0]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent semigroup_split_time",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.4441375160517218, 0.4441375160515587]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent minimum_trace_inverse",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.005206956689766, 2.005206956689766]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent maximum_trace_inverse",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.7570174175402339, 0.757017417540234]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent minimum_first_positive_gap",
+      "status": "PASS"
+    },
+    {
+      "actual": "[5.647863075935399, 5.647863075935713]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent maximum_first_positive_gap",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.0036012445961644186, 0.00360124459616333]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent minimum_heat_at_split",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.5926882083380163, 0.5926882083380162]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent maximum_heat_at_split",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.117251065898148, 1.1172510658981478]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent minimum_short_power_slack",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.0, 0.0]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent minimum_late_exponential_slack",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.906509082426135, 2.906509082426134]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent minimum_short_budget_slack",
+      "status": "PASS"
+    },
+    {
+      "actual": "[5.92041439588097e-06, 5.920414395785452e-06]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent minimum_late_budget_slack",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.936364851149518, 2.936364851149518]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent minimum_green_trace_slack",
+      "status": "PASS"
+    },
+    {
+      "actual": "[3.885780586188048e-16, 2.498001805406602e-16]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent maximum_mellin_identity_abs_residual",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.5440343280600988e-10, 1.5440343280581624e-10]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent minimum_heat_value",
+      "status": "PASS"
+    },
+    {
+      "actual": "[4.564774679110289, 4.5647746791102914]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent maximum_heat_value",
+      "status": "PASS"
+    },
+    {
+      "actual": "[-1.2429200624632712e-05, -1.2429200624624924e-05]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent maximum_heat_increase",
+      "status": "PASS"
+    },
+    {
+      "actual": "[3.6173095936923008, 3.6173095936923056]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent minimum_selected_green_bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[6.21959891996888, 6.21959891996888]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent maximum_selected_green_bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[[25, 50, 75, 100, 150, 200, 250], [25, 50, 75, 100, 150, 200, 250]]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent candidate_count_per_row",
+      "status": "PASS"
+    },
+    {
+      "actual": "7",
+      "expected": "7",
+      "group": "coverage",
+      "name": "system grid reached",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2688, 21120]",
+      "expected": "positive rows beyond contexts",
+      "group": "coverage",
+      "name": "context grid reached",
+      "status": "PASS"
+    },
+    {
+      "actual": "3.885780586188048e-16",
+      "expected": "<= 1e-08",
+      "group": "Mellin",
+      "name": "Mellin identity aggregate",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.117251065898148, 0.0, 2.906509082426135, 5.92041439588097e-06, 2.936364851149518]",
+      "expected": "all finite two-scale slacks nonnegative",
+      "group": "two-scale criterion",
+      "name": "two-scale aggregate",
+      "status": "PASS"
+    },
+    {
+      "actual": "-1.2429200624632712e-05",
+      "expected": "<= 1e-08",
+      "group": "heat trace",
+      "name": "heat monotonicity",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'alpha_one_rejected': True, 'baseline': {'gap': 0.25, 'green_bound': 6.960919538746072, 'head_power': 1.0, 'heat_tau': 0.7971164219601391, 'late_actual': 3.119782042007803, 'late_budget': 3.1884656878405564, 'short_actual': 1.130217957992197, 'short_budget': 3.772453850905516, 'short_power_constant': 1.886226925452758, 'trace': 4.25, 'uv_factor': 0.8862269254527579}, 'omitted_head_short_deficit': 0.11755608825868386, 'omitted_late_green_deficit': 0.4775461490944841, 'omitted_uv_short_deficit': 0.13507226908622838, 'reverse_heat_max_increase': 0.2894603181637101, 'toy_threshold': 1e-12, 'wrong_gap_late_deficit': 2.920502936517768, 'wrong_shift_late_deficit': 2.7432509056332397, 'wrong_sign_residual': 6.239564084015606}",
+      "expected": "all declared shortcuts fail closed",
+      "group": "hostile",
+      "name": "hostile mutation suite",
+      "status": "PASS"
+    }
+  ],
+  "derived": {
+    "command_outputs": {
+      "lean": "Tect/R414.lean:6:18: warning: Variable name `hgamma` is not explicitly referenced.\n\nThe binding can be removed (if unused) or named `_` (if used implicitly).\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\nTect/R414.lean:6:39: warning: Variable name `hdt` is not explicitly referenced.\n\nThe binding can be removed (if unused) or named `_` (if used implicitly).\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\nTect/R414.lean:16:5: warning: Variable name `ha` is not explicitly referenced.\n\nThe binding can be removed (if unused) or named `_` (if used implicitly).\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`",
+      "pre_a_cp1_st8_q3lock_two_scale_semigroup_bridge.py": "reused claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-primary-pre_a_cp1_st8_q3lock_two_scale_semigroup_bridge/primary.json",
+      "pre_a_cp1_st8_q3lock_two_scale_semigroup_bridge_hostile.py": "reused claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-hostile-pre_a_cp1_st8_q3lock_two_scale_semigroup_bridge/hostile.json",
+      "pre_a_cp1_st8_q3lock_two_scale_semigroup_bridge_independent.py": "reused claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-independent-pre_a_cp1_st8_q3lock_two_scale_semigroup_bridge/independent.json"
+    },
+    "hostile": {
+      "alpha_one_rejected": true,
+      "baseline": {
+        "gap": 0.25,
+        "green_bound": 6.960919538746072,
+        "head_power": 1.0,
+        "heat_tau": 0.7971164219601391,
+        "late_actual": 3.119782042007803,
+        "late_budget": 3.1884656878405564,
+        "short_actual": 1.130217957992197,
+        "short_budget": 3.772453850905516,
+        "short_power_constant": 1.886226925452758,
+        "trace": 4.25,
+        "uv_factor": 0.8862269254527579
+      },
+      "omitted_head_short_deficit": 0.11755608825868386,
+      "omitted_late_green_deficit": 0.4775461490944841,
+      "omitted_uv_short_deficit": 0.13507226908622838,
+      "reverse_heat_max_increase": 0.2894603181637101,
+      "toy_threshold": 1e-12,
+      "wrong_gap_late_deficit": 2.920502936517768,
+      "wrong_shift_late_deficit": 2.7432509056332397,
+      "wrong_sign_residual": 6.239564084015606
+    },
+    "independent": {
+      "c6_closed": false,
+      "candidate_count_per_row": [
+        25,
+        50,
+        75,
+        100,
+        150,
+        200,
+        250
+      ],
+      "common_core_closed": false,
+      "common_split_rule_closed": false,
+      "comparison_row_count": 21120,
+      "context_count": 2688,
+      "continuum_closed": false,
+      "cutoff_independent_uv_coefficient_closed": false,
+      "exhaustion_uniform_semigroup_closed": false,
+      "finite_green_trace_criterion_closed": true,
+      "finite_late_time_semigroup_budget_closed": true,
+      "finite_likelihood_row_coverage_closed": true,
+      "finite_short_time_power_budget_closed": true,
+      "finite_two_scale_envelope_closed": true,
+      "hamiltonian_os_identification_closed": false,
+      "heat_time_values": [
+        0.0625,
+        0.125,
+        0.25,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ],
+      "kms_gns_gap_closed": false,
+      "maximum_first_positive_gap": 5.647863075935713,
+      "maximum_heat_at_split": 0.5926882083380162,
+      "maximum_heat_increase": -1.2429200624624924e-05,
+      "maximum_heat_value": 4.5647746791102914,
+      "maximum_mellin_identity_abs_residual": 2.498001805406602e-16,
+      "maximum_selected_green_bound": 6.21959891996888,
+      "maximum_trace_inverse": 2.005206956689766,
+      "minimum_first_positive_gap": 0.757017417540234,
+      "minimum_green_trace_slack": 2.936364851149518,
+      "minimum_heat_at_split": 0.00360124459616333,
+      "minimum_heat_value": 1.5440343280581624e-10,
+      "minimum_late_budget_slack": 5.920414395785452e-06,
+      "minimum_late_exponential_slack": 0.0,
+      "minimum_selected_green_bound": 3.6173095936923056,
+      "minimum_short_budget_slack": 2.906509082426134,
+      "minimum_short_power_slack": 1.1172510658981478,
+      "minimum_trace_inverse": 0.4441375160515587,
+      "phase_uniform_semigroup_closed": false,
+      "pre_a_closed": false,
+      "sector_a_closed": false,
+      "selected_key_histogram": {
+        "ir=0.5;uv=0.5;split=1": 21120
+      },
+      "semigroup_split_time": 1.0,
+      "system_count": 7,
+      "system_profiles": {
+        "V=2/d=10": {
+          "context_count": 384,
+          "dimension": 10,
+          "maximum_gap": 4.559438193527282,
+          "maximum_heat_at_split": 0.1345371733139325,
+          "maximum_heat_value": 4.5647746791102914,
+          "maximum_mellin_residual": 1.8735013540549517e-16,
+          "maximum_trace": 1.3087691164858104,
+          "minimum_gap": 2.131326919627506,
+          "minimum_green_slack": 3.116369156813086,
+          "minimum_heat_at_split": 0.010935338160930194,
+          "minimum_late_budget_slack": 4.159591627050669e-05,
+          "minimum_late_exponential_slack": 0.0,
+          "minimum_short_budget_slack": 3.1163275608968153,
+          "minimum_short_power_slack": 1.2965470288927894,
+          "minimum_trace": 0.500940436879217,
+          "row_count": 4224
+        },
+        "V=2/d=12": {
+          "context_count": 384,
+          "dimension": 12,
+          "maximum_gap": 5.647863075935713,
+          "maximum_heat_at_split": 0.09650762038203993,
+          "maximum_heat_value": 4.466671437180913,
+          "maximum_mellin_residual": 1.942890293094024e-16,
+          "maximum_trace": 1.2059617833727894,
+          "minimum_gap": 2.423391046447465,
+          "minimum_green_slack": 3.1793758001109036,
+          "minimum_heat_at_split": 0.00360124459616333,
+          "minimum_late_budget_slack": 5.920414395785452e-06,
+          "minimum_late_exponential_slack": 0.0,
+          "minimum_short_budget_slack": 3.179369879696507,
+          "minimum_short_power_slack": 1.337042115674669,
+          "minimum_trace": 0.4441375160515587,
+          "row_count": 4992
+        },
+        "V=2/d=3": {
+          "context_count": 384,
+          "dimension": 3,
+          "maximum_gap": 2.48198589525633,
+          "maximum_heat_at_split": 0.5196549533724294,
+          "maximum_heat_value": 1.8217271976643663,
+          "maximum_mellin_residual": 2.498001805406602e-16,
+          "maximum_trace": 1.602671556719111,
+          "minimum_gap": 0.757017417540234,
+          "minimum_green_slack": 2.936364851149518,
+          "minimum_heat_at_split": 0.09984669228360551,
+          "minimum_late_budget_slack": 0.0026046626345235593,
+          "minimum_late_exponential_slack": 0.0,
+          "minimum_short_budget_slack": 2.906509082426134,
+          "minimum_short_power_slack": 1.1172510658981478,
+          "minimum_trace": 0.6457125867655793,
+          "row_count": 1536
+        },
+        "V=2/d=4": {
+          "context_count": 384,
+          "dimension": 4,
+          "maximum_gap": 2.833778687459353,
+          "maximum_heat_at_split": 0.5926882083380162,
+          "maximum_heat_value": 2.650921700815413,
+          "maximum_mellin_residual": 2.220446049250313e-16,
+          "maximum_trace": 2.005206956689766,
+          "minimum_gap": 0.7872756441265597,
+          "minimum_green_slack": 3.1532123458114176,
+          "minimum_heat_at_split": 0.06492101923126736,
+          "minimum_late_budget_slack": 0.0009781418878593053,
+          "minimum_late_exponential_slack": 0.0,
+          "minimum_short_budget_slack": 3.1522342039235585,
+          "minimum_short_power_slack": 1.3522954217322338,
+          "minimum_trace": 0.6618174815698085,
+          "row_count": 1920
+        },
+        "V=2/d=5": {
+          "context_count": 384,
+          "dimension": 5,
+          "maximum_gap": 2.363630062334787,
+          "maximum_heat_at_split": 0.4832342957926422,
+          "maximum_heat_value": 3.412428121270823,
+          "maximum_mellin_residual": 2.498001805406602e-16,
+          "maximum_trace": 1.8806216998052827,
+          "minimum_gap": 1.1950962017934932,
+          "minimum_green_slack": 2.9393452434359864,
+          "minimum_heat_at_split": 0.13545368791096984,
+          "minimum_late_budget_slack": 0.0021248062462912165,
+          "minimum_late_exponential_slack": 0.0,
+          "minimum_short_budget_slack": 2.937220437189695,
+          "minimum_short_power_slack": 1.3157715204418223,
+          "minimum_trace": 0.8274300845459802,
+          "row_count": 2304
+        },
+        "V=2/d=6": {
+          "context_count": 384,
+          "dimension": 6,
+          "maximum_gap": 3.8750382074539584,
+          "maximum_heat_at_split": 0.3180476388030889,
+          "maximum_heat_value": 4.024984693164846,
+          "maximum_mellin_residual": 2.0816681711721685e-16,
+          "maximum_trace": 1.7017657584743917,
+          "minimum_gap": 1.472145278578468,
+          "minimum_green_slack": 3.155959080568222,
+          "minimum_heat_at_split": 0.021712995758322598,
+          "minimum_late_budget_slack": 0.00012236047929020666,
+          "minimum_late_exponential_slack": 0.0,
+          "minimum_short_budget_slack": 3.1552411332114225,
+          "minimum_short_power_slack": 1.3704847130525168,
+          "minimum_trace": 0.6068568603599753,
+          "row_count": 2688
+        },
+        "V=2/d=8": {
+          "context_count": 384,
+          "dimension": 8,
+          "maximum_gap": 3.778055938852625,
+          "maximum_heat_at_split": 0.20652045397116833,
+          "maximum_heat_value": 4.058861427519663,
+          "maximum_mellin_residual": 1.8041124150158794e-16,
+          "maximum_trace": 1.432054118089885,
+          "minimum_gap": 1.7946329937682566,
+          "minimum_green_slack": 3.0789160066841523,
+          "minimum_heat_at_split": 0.027094681499982058,
+          "minimum_late_budget_slack": 0.0002753339694065741,
+          "minimum_late_exponential_slack": 0.0,
+          "minimum_short_budget_slack": 3.0786406727147453,
+          "minimum_short_power_slack": 1.3585118198958,
+          "minimum_trace": 0.6047964991890706,
+          "row_count": 3456
+        }
+      },
+      "volume_independent_ir_gap_closed": false
+    },
+    "lean": "PASS",
+    "primary": {
+      "c6_closed": false,
+      "candidate_count_per_row": [
+        25,
+        50,
+        75,
+        100,
+        150,
+        200,
+        250
+      ],
+      "common_core_closed": false,
+      "common_split_rule_closed": false,
+      "comparison_row_count": 21120,
+      "context_count": 2688,
+      "continuum_closed": false,
+      "cutoff_independent_uv_coefficient_closed": false,
+      "exhaustion_uniform_semigroup_closed": false,
+      "finite_green_trace_criterion_closed": true,
+      "finite_late_time_semigroup_budget_closed": true,
+      "finite_likelihood_row_coverage_closed": true,
+      "finite_short_time_power_budget_closed": true,
+      "finite_two_scale_envelope_closed": true,
+      "hamiltonian_os_identification_closed": false,
+      "heat_time_values": [
+        0.0625,
+        0.125,
+        0.25,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ],
+      "kms_gns_gap_closed": false,
+      "maximum_first_positive_gap": 5.647863075935399,
+      "maximum_heat_at_split": 0.5926882083380163,
+      "maximum_heat_increase": -1.2429200624632712e-05,
+      "maximum_heat_value": 4.564774679110289,
+      "maximum_mellin_identity_abs_residual": 3.885780586188048e-16,
+      "maximum_selected_green_bound": 6.21959891996888,
+      "maximum_trace_inverse": 2.005206956689766,
+      "minimum_first_positive_gap": 0.7570174175402339,
+      "minimum_green_trace_slack": 2.936364851149518,
+      "minimum_heat_at_split": 0.0036012445961644186,
+      "minimum_heat_value": 1.5440343280600988e-10,
+      "minimum_late_budget_slack": 5.92041439588097e-06,
+      "minimum_late_exponential_slack": 0.0,
+      "minimum_selected_green_bound": 3.6173095936923008,
+      "minimum_short_budget_slack": 2.906509082426135,
+      "minimum_short_power_slack": 1.117251065898148,
+      "minimum_trace_inverse": 0.4441375160517218,
+      "phase_uniform_semigroup_closed": false,
+      "pre_a_closed": false,
+      "sector_a_closed": false,
+      "selected_key_histogram": {
+        "ir=0.5;uv=0.5;split=1": 21120
+      },
+      "semigroup_split_time": 1.0,
+      "system_count": 7,
+      "system_profiles": {
+        "V=2/d=10": {
+          "context_count": 384,
+          "dimension": 10,
+          "maximum_gap": 4.559438193527107,
+          "maximum_heat_at_split": 0.13453717331393134,
+          "maximum_heat_value": 4.564774679110289,
+          "maximum_mellin_residual": 2.636779683484747e-16,
+          "maximum_trace": 1.3087691164858068,
+          "minimum_gap": 2.1313269196275146,
+          "minimum_green_slack": 3.116369156813047,
+          "minimum_heat_at_split": 0.010935338160932015,
+          "minimum_late_budget_slack": 4.159591627051059e-05,
+          "minimum_late_exponential_slack": 0.0,
+          "minimum_short_budget_slack": 3.116327560896777,
+          "minimum_short_power_slack": 1.2965470288927798,
+          "minimum_trace": 0.5009404368792268,
+          "row_count": 4224
+        },
+        "V=2/d=12": {
+          "context_count": 384,
+          "dimension": 12,
+          "maximum_gap": 5.647863075935399,
+          "maximum_heat_at_split": 0.09650762038205228,
+          "maximum_heat_value": 4.466671437180934,
+          "maximum_mellin_residual": 3.5388358909926865e-16,
+          "maximum_trace": 1.2059617833728193,
+          "minimum_gap": 2.42339104644733,
+          "minimum_green_slack": 3.179375800111799,
+          "minimum_heat_at_split": 0.0036012445961644186,
+          "minimum_late_budget_slack": 5.92041439588097e-06,
+          "minimum_late_exponential_slack": 0.0,
+          "minimum_short_budget_slack": 3.179369879697403,
+          "minimum_short_power_slack": 1.3370421156746228,
+          "minimum_trace": 0.4441375160517218,
+          "row_count": 4992
+        },
+        "V=2/d=3": {
+          "context_count": 384,
+          "dimension": 3,
+          "maximum_gap": 2.4819858952563267,
+          "maximum_heat_at_split": 0.5196549533724295,
+          "maximum_heat_value": 1.8217271976643663,
+          "maximum_mellin_residual": 2.7755575615628914e-16,
+          "maximum_trace": 1.6026715567191114,
+          "minimum_gap": 0.7570174175402339,
+          "minimum_green_slack": 2.936364851149518,
+          "minimum_heat_at_split": 0.09984669228360579,
+          "minimum_late_budget_slack": 0.00260466263452358,
+          "minimum_late_exponential_slack": 0.0,
+          "minimum_short_budget_slack": 2.906509082426135,
+          "minimum_short_power_slack": 1.117251065898148,
+          "minimum_trace": 0.6457125867655797,
+          "row_count": 1536
+        },
+        "V=2/d=4": {
+          "context_count": 384,
+          "dimension": 4,
+          "maximum_gap": 2.833778687459352,
+          "maximum_heat_at_split": 0.5926882083380163,
+          "maximum_heat_value": 2.650921700815413,
+          "maximum_mellin_residual": 3.0531133177191805e-16,
+          "maximum_trace": 2.005206956689766,
+          "minimum_gap": 0.7872756441265598,
+          "minimum_green_slack": 3.1532123458114176,
+          "minimum_heat_at_split": 0.06492101923126746,
+          "minimum_late_budget_slack": 0.0009781418878593087,
+          "minimum_late_exponential_slack": 0.0,
+          "minimum_short_budget_slack": 3.1522342039235585,
+          "minimum_short_power_slack": 1.352295421732234,
+          "minimum_trace": 0.6618174815698087,
+          "row_count": 1920
+        },
+        "V=2/d=5": {
+          "context_count": 384,
+          "dimension": 5,
+          "maximum_gap": 2.3636300623347877,
+          "maximum_heat_at_split": 0.4832342957926425,
+          "maximum_heat_value": 3.4124281212708234,
+          "maximum_mellin_residual": 3.885780586188048e-16,
+          "maximum_trace": 1.8806216998052832,
+          "minimum_gap": 1.195096201793493,
+          "minimum_green_slack": 2.9393452434359837,
+          "minimum_heat_at_split": 0.13545368791096965,
+          "minimum_late_budget_slack": 0.0021248062462911887,
+          "minimum_late_exponential_slack": 0.0,
+          "minimum_short_budget_slack": 2.9372204371896924,
+          "minimum_short_power_slack": 1.3157715204418217,
+          "minimum_trace": 0.827430084545981,
+          "row_count": 2304
+        },
+        "V=2/d=6": {
+          "context_count": 384,
+          "dimension": 6,
+          "maximum_gap": 3.8750382074539536,
+          "maximum_heat_at_split": 0.3180476388030887,
+          "maximum_heat_value": 4.024984693164846,
+          "maximum_mellin_residual": 3.608224830031759e-16,
+          "maximum_trace": 1.7017657584743908,
+          "minimum_gap": 1.472145278578468,
+          "minimum_green_slack": 3.1559590805682207,
+          "minimum_heat_at_split": 0.0217129957583227,
+          "minimum_late_budget_slack": 0.00012236047929020666,
+          "minimum_late_exponential_slack": 0.0,
+          "minimum_short_budget_slack": 3.155241133211421,
+          "minimum_short_power_slack": 1.3704847130525164,
+          "minimum_trace": 0.6068568603599749,
+          "row_count": 2688
+        },
+        "V=2/d=8": {
+          "context_count": 384,
+          "dimension": 8,
+          "maximum_gap": 3.778055938852611,
+          "maximum_heat_at_split": 0.20652045397116836,
+          "maximum_heat_value": 4.058861427519662,
+          "maximum_mellin_residual": 3.5388358909926865e-16,
+          "maximum_trace": 1.4320541180898847,
+          "minimum_gap": 1.794632993768256,
+          "minimum_green_slack": 3.0789160066841834,
+          "minimum_heat_at_split": 0.027094681499982166,
+          "minimum_late_budget_slack": 0.0002753339694065507,
+          "minimum_late_exponential_slack": 0.0,
+          "minimum_short_budget_slack": 3.078640672714777,
+          "minimum_short_power_slack": 1.35851181989581,
+          "minimum_trace": 0.6047964991890706,
+          "row_count": 3456
+        }
+      },
+      "volume_independent_ir_gap_closed": false
+    }
+  },
+  "exploration_id": "EXP-001259",
+  "manifest": "strategy/pre-a-cp1-st8-q3lock-two-scale-semigroup-bridge-manifest.json",
+  "result_id": "R-414",
+  "schema": "tect/pre-a-r414-integrated/1.0",
+  "scope": {
+    "c6_closed": false,
+    "common_core_closed": false,
+    "common_split_rule_closed": false,
+    "continuum_closed": false,
+    "cutoff_independent_uv_coefficient_closed": false,
+    "exhaustion_uniform_semigroup_closed": false,
+    "finite_green_trace_criterion_closed": true,
+    "finite_late_time_semigroup_budget_closed": true,
+    "finite_likelihood_row_coverage_closed": true,
+    "finite_short_time_power_budget_closed": true,
+    "finite_two_scale_envelope_closed": true,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "no_new_negative_result": true,
+    "no_pdf": true,
+    "no_tier_change": true,
+    "phase_uniform_semigroup_closed": false,
+    "pre_a_closed": false,
+    "sector_a_closed": false,
+    "volume_independent_ir_gap_closed": false
+  },
+  "verdict": "PASS"
+}

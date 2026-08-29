@@ -5,10 +5,11 @@
 
 Authorities: `RESULTS-LEDGER.md`.
 
-**247 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
+**248 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
 
 | ID | Result | Tier/scope |
 |---|---|---|
+| [`R-414`](../RESULTS-LEDGER.md#r-414) | Two-scale semigroup criterion for the normalized Green trace | T0 |
 | [`R-413`](../RESULTS-LEDGER.md#r-413) | Mellin heat-trace bridge for mixed IR/UV spectral counting | T0 |
 | [`R-412`](../RESULTS-LEDGER.md#r-412) | Two-regime IR/UV mixed spectral-counting envelope for the normalized Green trace | T0 |
 | [`R-411`](../RESULTS-LEDGER.md#r-411) | Sublinear spectral-counting exponent envelope for the normalized Green trace | T0 |
@@ -33,7 +34,6 @@ Authorities: `RESULTS-LEDGER.md`.
 | [`R-392`](../RESULTS-LEDGER.md#r-392) | QCMI shell-telescoping boundary budget | T0 |
 | [`R-391`](../RESULTS-LEDGER.md#r-391) | Quantum-Markov blanket boundary transfer | T0 |
 | [`R-390`](../RESULTS-LEDGER.md#r-390) | Local-marginal spectral-window transfer | T0 |
-| [`R-389`](../RESULTS-LEDGER.md#r-389) | Spectral-window kinetic corridor | T0 |
 
 Search without loading the full ledger:
 

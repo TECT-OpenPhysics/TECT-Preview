@@ -43,6 +43,7 @@ policy in `governance/development-history.md`.
 | [R-377](#r-377) | Gap-free odd-Matsubara resolvent telescoping budget | R-377 v1.0 is a T0 claim-nonbearing finite resolvent-interface checkpoint under EXP-001219. The exact positive-resolvent difference identity and its 64-layer budget pass 122/122 integrated assertions with Lean R377; the accumulated finite budget ratio is 0.9895313426497929 and the absolute-value square-root debt is recorded separately. Uniform locality, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
 | [R-382](#r-382) | Increasing-cutoff endpoint modular moment stress | R-382 v1.0 is a T0 claim-nonbearing finite cutoff-profile diagnostic under EXP-001224. The R-381 endpoint-energy bridge passes across 2816 all-prefix actual-Q3 contexts with Lean R382; edge max M_0 grows from 2.733031855844076 at d=3 to 41.64826651661874 at d=6 and max M_2 from 0.008378198414559081 to 17.719559304500326, with d=5 to d=6 ratios 8.855033106195243 and 36.38049903040583. This is finite growth evidence only; uniform M_0/M_2 control, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
 | [R-407](#r-407) | Canonical-path effective-resistance lower bound | R-407 v1.0 is a T0 claim-nonbearing finite constructive path checkpoint under EXP-001252. The maximum-conductance tree certificate passes primary 22510/22510, independent 22509/22509, hostile 6/6, integrated 35/35 and Lean R407 over 7 systems, 2688 contexts and 21120 rows. The exact intrinsic gap is [0.7570174175402339,5.647863075935321], the canonical lower envelope is [0.2613815898804392,2.508986944248343], and rho is [0.3985672393762041,3.825824154093709]. The finite path certificate exposes the conductance/probability inputs for a future uniform proof; common-core, phase, volume, exhaustion and QFT gates remain open |
+| [R-414](#r-414) | Two-scale semigroup criterion for the normalized Green trace | R-414 v1.0 is a T0 claim-nonbearing finite two-scale semigroup checkpoint under EXP-001259. The R-413 mixed heat bridge separates a short-time UV power budget from a late-time IR gap budget over 7 systems, 2688 contexts and 21120 rows; primary 191471/191471, independent 191470/191470, hostile 9/9, integrated 42/42 and Lean R414 pass. The minimum first-positive gap is [0.7570174175402339,5.647863075935399], split heat is [0.0036012445961644186,0.5926882083380163], and minimum Green-bound slack is 2.936364851149518. Uniform A_tau, gap, common-core, OS/KMS/GNS, continuum, C6, Sector-A and Pre-A gates remain open |
 | [R-413](#r-413) | Mellin heat-trace bridge for mixed IR/UV spectral counting | R-413 v1.0 is a T0 claim-nonbearing finite Mellin checkpoint under EXP-001258. The R-412 mixed IR/UV envelope becomes an exact split-time heat identity, an integrable continuous UV budget and a finite late remainder over 7 systems, 2688 contexts and 21120 rows; primary 212594/212594, independent 149230/149230, hostile 8/8, integrated 44/44 and Lean R413 pass. Uniform split time/constants, common-core transfer and all physical/QFT gates remain open |
 | [R-412](#r-412) | Two-regime IR/UV mixed spectral-counting envelope for the normalized Green trace | R-412 v1.0 is a T0 claim-nonbearing finite spectral checkpoint under EXP-001257. For every declared exponent pair in {1/2,2/3,3/4,4/5,9/10} and every interior split, separate IR/UV constants give a finite trace envelope with an explicit UV zeta tail; primary 592762/592762, independent 592762/592762, hostile 9/9, integrated 55/55 and Lean R412 pass over 7 systems, 2688 contexts and 21120 rows. The row-wise optimizer is diagnostic only: no uniform split, common-core, phase, volume, exhaustion or QFT gate is closed |
 | [R-411](#r-411) | Sublinear spectral-counting exponent envelope for the normalized Green trace | R-411 v1.0 is a T0 claim-nonbearing finite spectral checkpoint under EXP-001256. For each ordered positive mode and declared alpha in {1/2,2/3,3/4,4/5,9/10}, C_alpha=max k/lambda_k^alpha gives a finite trace envelope with an explicit zeta tail; primary 508279/508279, independent 508279/508279, hostile 8/8, integrated 48/48 and Lean R411 pass over 7 systems, 2688 contexts and 21120 rows. Uniform exponent/constant control, common-core, phase, volume, exhaustion and QFT gates remain open |
@@ -701,6 +702,65 @@ Hamiltonian-to-OS/KMS/GNS identification, physical mass gap, continuum, C6,
 Sector-A or Pre-A closure.  No tier change, negative result or PDF is issued.
 
 **Proven in:** [R-407 certificate](strategy/pre-a-cp1-st8-q3lock-canonical-path-resistance-certificate-260830.md), [Lean entrypoint](verification/lean/Tect/R407.lean), primary/independent/hostile scripts, integrated verifier, [scope note](claims/C6-SPACETIME-SIGNATURE/notes/canonical-path-resistance-260830.md), and saved run artefacts.
+<a id="r-414"></a>
+### R-414 -- Two-scale semigroup criterion for the normalized Green trace
+
+**Result ID.** R-414 is a T0, claim-nonbearing finite two-scale semigroup
+checkpoint under EXP-001259.  Let `lambda_1 <= ... <= lambda_m` be the
+positive spectrum of `W=D_pi^(-1/2)L D_pi^(-1/2)`, let
+`H(t)=sum_k exp(-t lambda_k)`, and fix `tau>0`.  For an R-412 profile with
+interior head length `r` and `0<alpha<1`, set
+
+```
+A_tau = r tau^alpha + C_UV alpha Gamma(alpha),
+gamma  = lambda_1.
+```
+
+The mixed lower envelope gives `H(t)<=A_tau t^(-alpha)` for `0<t<=tau`.
+The first positive eigenvalue gives
+`H(t)<=H(tau) exp(-gamma(t-tau))` for `t>=tau`.  Therefore the finite
+proper-time budgets are
+
+```
+integral_0^tau H(t)dt <= A_tau tau^(1-alpha)/(1-alpha),
+integral_tau^infinity H(t)dt <= H(tau)/gamma,
+tr(W^+) <= A_tau tau^(1-alpha)/(1-alpha)+H(tau)/gamma.
+```
+
+The criterion isolates the three quantities a future uniform argument must
+control: the UV coefficient, the split-time heat value and the IR gap.
+
+**Verification.** The volume-two fixture uses cutoff dimensions `3,4,5,6,8,10,12`,
+beta in `{1/2,1,2}`, both source signs, history signs and orderings, all
+prefixes, both history adjoints and both collar orientations.  Every R-412
+exponent pair and interior split is checked at `{1/16,1/8,1/4,1/2,1,2,4}`
+with `tau=1`.  The primary lane passes `191471/191471`, the independent
+plain-loop lane `191470/191470`, the hostile lane `9/9`, the integrated
+verifier `42/42`, and Lean R414 compiles.  The first-positive-gap range is
+`[0.7570174175402339,5.647863075935399]`; the split heat range is
+`[0.0036012445961644186,0.5926882083380163]`; the minimum Green-bound slack
+is `2.936364851149518`; and the maximum Mellin residual is
+`3.885780586188048e-16`.
+
+The hostile lane rejects omission of the IR head or UV term, use of the
+largest rather than smallest eigenvalue, omission or wrong shifting of the
+late budget, reversed time ordering, a wrong Mellin sign, and `alpha=1`.
+These are finite shortcut tests only.
+
+**QFT-facing interpretation.** The short/late split is a finite proper-time
+interface between ultraviolet renormalization and infrared spectral decay.
+It can enter a QFT two-point-function route only after common-core and
+regulator/volume uniformity are established and the R-399 shell and R-406
+Schur residual are transferred.
+
+**Boundary.** R-414 proves no cutoff-, volume-, source-, phase- or
+exhaustion-uniform UV coefficient or IR gap, no common split rule, no common
+Hamiltonian core, no OS/KMS/GNS reconstruction, no physical mass gap, and no
+continuum, C6, Sector-A or Pre-A closure.  No tier change, negative result or
+PDF is issued.
+
+**Proven in:** [R-414 certificate](strategy/pre-a-cp1-st8-q3lock-two-scale-semigroup-bridge-certificate-260831.md), [Lean entrypoint](verification/lean/Tect/R414.lean), primary/independent/hostile scripts, integrated verifier, [scope note](claims/C6-SPACETIME-SIGNATURE/notes/two-scale-semigroup-bridge-260831.md), and saved run artefacts.
+
 <a id="r-413"></a>
 ### R-413 -- Mellin heat-trace bridge for mixed IR/UV spectral counting
 

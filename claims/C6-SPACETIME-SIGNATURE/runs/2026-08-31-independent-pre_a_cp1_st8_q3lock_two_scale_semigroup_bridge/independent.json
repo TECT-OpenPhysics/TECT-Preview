@@ -1,0 +1,2182 @@
+{
+  "assertion_count": 191470,
+  "boundary": "T0 claim-nonbearing finite two-scale semigroup bridge only. It proves no cutoff-, volume-, source-, phase- or exhaustion-uniform UV coefficient or IR gap, common core, common split rule, OS/KMS/GNS reconstruction, mass gap, continuum, C6, Sector-A or Pre-A closure.",
+  "checks": [
+    {
+      "actual": "['R-414', 'EXP-001259', False]",
+      "expected": "R-414/EXP-001259/false",
+      "group": "provenance",
+      "name": "identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'cutoff_independent_uv_coefficient_closed': False, 'volume_independent_ir_gap_closed': False, 'phase_uniform_semigroup_closed': False, 'exhaustion_uniform_semigroup_closed': False, 'common_core_closed': False, 'common_split_rule_closed': False, 'hamiltonian_os_identification_closed': False, 'kms_gns_gap_closed': False, 'continuum_closed': False, 'c6_closed': False, 'sector_a_closed': False, 'pre_a_closed': False}",
+      "expected": "all promoted flags false",
+      "group": "scope",
+      "name": "scope firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.0625, 0.125, 0.25, 0.5, 1.0, 2.0, 4.0, 1.0]",
+      "expected": "ordered positive times straddling split",
+      "group": "fixture",
+      "name": "heat grid",
+      "status": "PASS"
+    },
+    {
+      "actual": "(9, 9)",
+      "expected": "(9, 9)",
+      "group": "coordinates",
+      "name": "V=2 d=3 basis",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.061596598552809065, 0.06159659855280908]",
+      "expected": ">1e-30, >=-1e-08",
+      "group": "Gibbs",
+      "name": "V=2 d=3 beta=0.5 reference",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.06159659855280908",
+      "expected": ">=-1e-08",
+      "group": "coordinates",
+      "name": "d=3 prefix=0 sample",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.6653345369377348e-16",
+      "expected": "abs <= 1e-08",
+      "group": "Mellin",
+      "name": "Mellin decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.4661787672179816",
+      "expected": ">=-1e-08",
+      "group": "Mellin",
+      "name": "late remainder nonnegative",
+      "status": "PASS"
+    },
+    {
+      "actual": "[-0.16079121424049925, -0.2752998813017118, -0.4076234390452458, -0.4648156526432362, -0.34789501895579455, -0.1424587092601629]",
+      "expected": "max <= 1e-08",
+      "group": "heat trace",
+      "name": "heat monotone",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.4900355522598154",
+      "expected": ">=-1e-08",
+      "group": "short UV budget",
+      "name": "short-time power envelopes",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": ">=-1e-08",
+      "group": "late IR budget",
+      "name": "late-time exponential envelopes",
+      "status": "PASS"
+    },
+    {
+      "actual": "3.400568746869706",
+      "expected": ">=-1e-08",
+      "group": "short UV budget",
+      "name": "short-time power budget",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.07176027762795184",
+      "expected": ">=-1e-08",
+      "group": "late IR budget",
+      "name": "late-time semigroup budget",
+      "status": "PASS"
+    },
+    {
+      "actual": "3.472329024497658",
+      "expected": ">=-1e-08",
+      "group": "two-scale criterion",
+      "name": "Green trace criterion",
+      "status": "PASS"
+    },
+    {
+      "actual": "[5.006441410897229, 1.534112386399571, 4.468502366051295, 1.0679336191815891, 0.5379390448459335, 0.4661787672179816]",
+      "expected": "finite bounds within 1e-08",
+      "group": "two-scale criterion",
+      "name": "selected criterion",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.1102230246251565e-16",
+      "expected": "abs <= 1e-08",
+      "group": "Mellin",
+      "name": "Mellin decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.3288376296791079",
+      "expected": ">=-1e-08",
+      "group": "Mellin",
+      "name": "late remainder nonnegative",
+      "status": "PASS"
+    },
+    {
+      "actual": "[-0.17523794569949813, -0.2970065496987233, -0.4306726667244005, -0.4696650437864758, -0.3176397881302367, -0.10334734246337576]",
+      "expected": "max <= 1e-08",
+      "group": "heat trace",
+      "name": "heat monotone",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.5261006371010846",
+      "expected": ">=-1e-08",
+      "group": "short UV budget",
+      "name": "short-time power envelopes",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": ">=-1e-08",
+      "group": "late IR budget",
+      "name": "late-time exponential envelopes",
+      "status": "PASS"
+    },
+    {
+      "actual": "3.4030810569722045",
+      "expected": ">=-1e-08",
+      "group": "short UV budget",
+      "name": "short-time power budget",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.04680605854483744",
+      "expected": ">=-1e-08",
+      "group": "late IR budget",
+      "name": "late-time semigroup budget",
+      "status": "PASS"
+    },
+    {
+      "actual": "3.449887115517042",
+      "expected": ">=-1e-08",
+      "group": "two-scale criterion",
+      "name": "Green trace criterion",
+      "status": "PASS"
+    },
+    {
+      "actual": "[4.781470997544778, 1.331583882027736, 4.405827309320832, 1.002746252348628, 0.37564368822394534, 0.3288376296791079]",
+      "expected": "finite bounds within 1e-08",
+      "group": "two-scale criterion",
+      "name": "selected criterion",
+      "status": "PASS"
+    },
+    {
+      "actual": "-5.551115123125783e-17",
+      "expected": "abs <= 1e-08",
+      "group": "Mellin",
+      "name": "Mellin decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.453711855482506",
+      "expected": ">=-1e-08",
+      "group": "Mellin",
+      "name": "late remainder nonnegative",
+      "status": "PASS"
+    },
+    {
+      "actual": "[-0.16055774301294745, -0.275372648052433, -0.408872211099357, -0.4676467859784642, -0.3489726434615718, -0.1395137349181867]",
+      "expected": "max <= 1e-08",
+      "group": "heat trace",
+      "name": "heat monotone",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.5062974753682883",
+      "expected": ">=-1e-08",
+      "group": "short UV budget",
+      "name": "short-time power envelopes",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": ">=-1e-08",
+      "group": "late IR budget",
+      "name": "late-time exponential envelopes",
+      "status": "PASS"
+    },
+    {
+      "actual": "3.4189508770326533",
+      "expected": ">=-1e-08",
+      "group": "short UV budget",
+      "name": "short-time power budget",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0703125566065052",
+      "expected": ">=-1e-08",
+      "group": "late IR budget",
+      "name": "late-time semigroup budget",
+      "status": "PASS"
+    },
+    {
+      "actual": "3.489263433639159",
+      "expected": ">=-1e-08",
+      "group": "two-scale criterion",
+      "name": "Green trace criterion",
+      "status": "PASS"
+    },
+    {
+      "actual": "[5.010023259070511, 1.5207598254313521, 4.4859988469814995, 1.0670479699488462, 0.5240244120890112, 0.453711855482506]",
+      "expected": "finite bounds within 1e-08",
+      "group": "two-scale criterion",
+      "name": "selected criterion",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.1102230246251565e-16",
+      "expected": "abs <= 1e-08",
+      "group": "Mellin",
+      "name": "Mellin decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.3288376296791079",
+      "expected": ">=-1e-08",
+      "group": "Mellin",
+      "name": "late remainder nonnegative",
+      "status": "PASS"
+    },
+    {
+      "actual": "[-0.17523794569949813, -0.2970065496987233, -0.4306726667244005, -0.4696650437864758, -0.3176397881302367, -0.10334734246337576]",
+      "expected": "max <= 1e-08",
+      "group": "heat trace",
+      "name": "heat monotone",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.5261006371010846",
+      "expected": ">=-1e-08",
+      "group": "short UV budget",
+      "name": "short-time power envelopes",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": ">=-1e-08",
+      "group": "late IR budget",
+      "name": "late-time exponential envelopes",
+      "status": "PASS"
+    },
+    {
+      "actual": "3.4030810569722045",
+      "expected": ">=-1e-08",
+      "group": "short UV budget",
+      "name": "short-time power budget",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.04680605854483744",
+      "expected": ">=-1e-08",
+      "group": "late IR budget",
+      "name": "late-time semigroup budget",
+      "status": "PASS"
+    },
+    {
+      "actual": "3.449887115517042",
+      "expected": ">=-1e-08",
+      "group": "two-scale criterion",
+      "name": "Green trace criterion",
+      "status": "PASS"
+    },
+    {
+      "actual": "[4.781470997544778, 1.331583882027736, 4.405827309320832, 1.002746252348628, 0.37564368822394534, 0.3288376296791079]",
+      "expected": "finite bounds within 1e-08",
+      "group": "two-scale criterion",
+      "name": "selected criterion",
+      "status": "PASS"
+    },
+    {
+      "actual": "5.551115123125783e-17",
+      "expected": "abs <= 1e-08",
+      "group": "Mellin",
+      "name": "Mellin decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.46617876721798196",
+      "expected": ">=-1e-08",
+      "group": "Mellin",
+      "name": "late remainder nonnegative",
+      "status": "PASS"
+    },
+    {
+      "actual": "[-0.16079121424049925, -0.2752998813017118, -0.4076234390452459, -0.464815652643236, -0.34789501895579455, -0.14245870926016296]",
+      "expected": "max <= 1e-08",
+      "group": "heat trace",
+      "name": "heat monotone",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.490035552259815",
+      "expected": ">=-1e-08",
+      "group": "short UV budget",
+      "name": "short-time power envelopes",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": ">=-1e-08",
+      "group": "late IR budget",
+      "name": "late-time exponential envelopes",
+      "status": "PASS"
+    },
+    {
+      "actual": "3.400568746869704",
+      "expected": ">=-1e-08",
+      "group": "short UV budget",
+      "name": "short-time power budget",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.07176027762795184",
+      "expected": ">=-1e-08",
+      "group": "late IR budget",
+      "name": "late-time semigroup budget",
+      "status": "PASS"
+    },
+    {
+      "actual": "3.4723290244976557",
+      "expected": ">=-1e-08",
+      "group": "two-scale criterion",
+      "name": "Green trace criterion",
+      "status": "PASS"
+    },
+    {
+      "actual": "[5.006441410897227, 1.5341123863995711, 4.468502366051293, 1.0679336191815891, 0.5379390448459338, 0.46617876721798196]",
+      "expected": "finite bounds within 1e-08",
+      "group": "two-scale criterion",
+      "name": "selected criterion",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.1102230246251565e-16",
+      "expected": "abs <= 1e-08",
+      "group": "Mellin",
+      "name": "Mellin decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.3288376296791081",
+      "expected": ">=-1e-08",
+      "group": "Mellin",
+      "name": "late remainder nonnegative",
+      "status": "PASS"
+    },
+    {
+      "actual": "[-0.17523794569949835, -0.2970065496987231, -0.43067266672440063, -0.4696650437864757, -0.31763978813023674, -0.10334734246337583]",
+      "expected": "max <= 1e-08",
+      "group": "heat trace",
+      "name": "heat monotone",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.5261006371010843",
+      "expected": ">=-1e-08",
+      "group": "short UV budget",
+      "name": "short-time power envelopes",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": ">=-1e-08",
+      "group": "late IR budget",
+      "name": "late-time exponential envelopes",
+      "status": "PASS"
+    },
+    {
+      "actual": "3.403081056972204",
+      "expected": ">=-1e-08",
+      "group": "short UV budget",
+      "name": "short-time power budget",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.04680605854483749",
+      "expected": ">=-1e-08",
+      "group": "late IR budget",
+      "name": "late-time semigroup budget",
+      "status": "PASS"
+    },
+    {
+      "actual": "3.4498871155170416",
+      "expected": ">=-1e-08",
+      "group": "two-scale criterion",
+      "name": "Green trace criterion",
+      "status": "PASS"
+    },
+    {
+      "actual": "[4.781470997544778, 1.3315838820277364, 4.405827309320832, 1.0027462523486281, 0.3756436882239456, 0.3288376296791081]",
+      "expected": "finite bounds within 1e-08",
+      "group": "two-scale criterion",
+      "name": "selected criterion",
+      "status": "PASS"
+    },
+    {
+      "actual": "2.220446049250313e-16",
+      "expected": "abs <= 1e-08",
+      "group": "Mellin",
+      "name": "Mellin decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.4537118554825059",
+      "expected": ">=-1e-08",
+      "group": "Mellin",
+      "name": "late remainder nonnegative",
+      "status": "PASS"
+    },
+    {
+      "actual": "[-0.16055774301294723, -0.2753726480524328, -0.40887221109935734, -0.4676467859784642, -0.3489726434615719, -0.13951373491818672]",
+      "expected": "max <= 1e-08",
+      "group": "heat trace",
+      "name": "heat monotone",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.5062974753682887",
+      "expected": ">=-1e-08",
+      "group": "short UV budget",
+      "name": "short-time power envelopes",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": ">=-1e-08",
+      "group": "late IR budget",
+      "name": "late-time exponential envelopes",
+      "status": "PASS"
+    },
+    {
+      "actual": "3.418950877032654",
+      "expected": ">=-1e-08",
+      "group": "short UV budget",
+      "name": "short-time power budget",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.07031255660650526",
+      "expected": ">=-1e-08",
+      "group": "late IR budget",
+      "name": "late-time semigroup budget",
+      "status": "PASS"
+    },
+    {
+      "actual": "3.4892634336391586",
+      "expected": ">=-1e-08",
+      "group": "two-scale criterion",
+      "name": "Green trace criterion",
+      "status": "PASS"
+    },
+    {
+      "actual": "[5.010023259070511, 1.5207598254313524, 4.4859988469815, 1.0670479699488462, 0.5240244120890112, 0.4537118554825059]",
+      "expected": "finite bounds within 1e-08",
+      "group": "two-scale criterion",
+      "name": "selected criterion",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.6653345369377348e-16",
+      "expected": "abs <= 1e-08",
+      "group": "Mellin",
+      "name": "Mellin decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.32883762967910785",
+      "expected": ">=-1e-08",
+      "group": "Mellin",
+      "name": "late remainder nonnegative",
+      "status": "PASS"
+    },
+    {
+      "actual": "[-0.17523794569949813, -0.29700654969872353, -0.4306726667244003, -0.46966504378647583, -0.31763978813023663, -0.10334734246337576]",
+      "expected": "max <= 1e-08",
+      "group": "heat trace",
+      "name": "heat monotone",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.5261006371010843",
+      "expected": ">=-1e-08",
+      "group": "short UV budget",
+      "name": "short-time power envelopes",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": ">=-1e-08",
+      "group": "late IR budget",
+      "name": "late-time exponential envelopes",
+      "status": "PASS"
+    },
+    {
+      "actual": "3.4030810569722036",
+      "expected": ">=-1e-08",
+      "group": "short UV budget",
+      "name": "short-time power budget",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.04680605854483744",
+      "expected": ">=-1e-08",
+      "group": "late IR budget",
+      "name": "late-time semigroup budget",
+      "status": "PASS"
+    },
+    {
+      "actual": "3.449887115517041",
+      "expected": ">=-1e-08",
+      "group": "two-scale criterion",
+      "name": "Green trace criterion",
+      "status": "PASS"
+    },
+    {
+      "actual": "[4.781470997544777, 1.331583882027736, 4.4058273093208316, 1.002746252348628, 0.3756436882239453, 0.32883762967910785]",
+      "expected": "finite bounds within 1e-08",
+      "group": "two-scale criterion",
+      "name": "selected criterion",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.06159659855280908",
+      "expected": ">=-1e-08",
+      "group": "coordinates",
+      "name": "d=3 prefix=0 sample",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.6653345369377348e-16",
+      "expected": "abs <= 1e-08",
+      "group": "Mellin",
+      "name": "Mellin decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.4661787672179816",
+      "expected": ">=-1e-08",
+      "group": "Mellin",
+      "name": "late remainder nonnegative",
+      "status": "PASS"
+    },
+    {
+      "actual": "[-0.16079121424049925, -0.2752998813017118, -0.4076234390452458, -0.4648156526432362, -0.34789501895579455, -0.1424587092601629]",
+      "expected": "max <= 1e-08",
+      "group": "heat trace",
+      "name": "heat monotone",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.4900355522598154",
+      "expected": ">=-1e-08",
+      "group": "short UV budget",
+      "name": "short-time power envelopes",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": ">=-1e-08",
+      "group": "late IR budget",
+      "name": "late-time exponential envelopes",
+      "status": "PASS"
+    },
+    {
+      "actual": "3.400568746869706",
+      "expected": ">=-1e-08",
+      "group": "short UV budget",
+      "name": "short-time power budget",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.07176027762795184",
+      "expected": ">=-1e-08",
+      "group": "late IR budget",
+      "name": "late-time semigroup budget",
+      "status": "PASS"
+    },
+    {
+      "actual": "3.472329024497658",
+      "expected": ">=-1e-08",
+      "group": "two-scale criterion",
+      "name": "Green trace criterion",
+      "status": "PASS"
+    },
+    {
+      "actual": "[5.006441410897229, 1.534112386399571, 4.468502366051295, 1.0679336191815891, 0.5379390448459335, 0.4661787672179816]",
+      "expected": "finite bounds within 1e-08",
+      "group": "two-scale criterion",
+      "name": "selected criterion",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.1102230246251565e-16",
+      "expected": "abs <= 1e-08",
+      "group": "Mellin",
+      "name": "Mellin decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.3288376296791079",
+      "expected": ">=-1e-08",
+      "group": "Mellin",
+      "name": "late remainder nonnegative",
+      "status": "PASS"
+    },
+    {
+      "actual": "[-0.17523794569949813, -0.2970065496987233, -0.4306726667244005, -0.4696650437864758, -0.3176397881302367, -0.10334734246337576]",
+      "expected": "max <= 1e-08",
+      "group": "heat trace",
+      "name": "heat monotone",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.5261006371010846",
+      "expected": ">=-1e-08",
+      "group": "short UV budget",
+      "name": "short-time power envelopes",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": ">=-1e-08",
+      "group": "late IR budget",
+      "name": "late-time exponential envelopes",
+      "status": "PASS"
+    },
+    {
+      "actual": "3.4030810569722045",
+      "expected": ">=-1e-08",
+      "group": "short UV budget",
+      "name": "short-time power budget",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.04680605854483744",
+      "expected": ">=-1e-08",
+      "group": "late IR budget",
+      "name": "late-time semigroup budget",
+      "status": "PASS"
+    },
+    {
+      "actual": "3.449887115517042",
+      "expected": ">=-1e-08",
+      "group": "two-scale criterion",
+      "name": "Green trace criterion",
+      "status": "PASS"
+    },
+    {
+      "actual": "[4.781470997544778, 1.331583882027736, 4.405827309320832, 1.002746252348628, 0.37564368822394534, 0.3288376296791079]",
+      "expected": "finite bounds within 1e-08",
+      "group": "two-scale criterion",
+      "name": "selected criterion",
+      "status": "PASS"
+    },
+    {
+      "actual": "-5.551115123125783e-17",
+      "expected": "abs <= 1e-08",
+      "group": "Mellin",
+      "name": "Mellin decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.453711855482506",
+      "expected": ">=-1e-08",
+      "group": "Mellin",
+      "name": "late remainder nonnegative",
+      "status": "PASS"
+    },
+    {
+      "actual": "[-0.16055774301294745, -0.275372648052433, -0.408872211099357, -0.4676467859784642, -0.3489726434615718, -0.1395137349181867]",
+      "expected": "max <= 1e-08",
+      "group": "heat trace",
+      "name": "heat monotone",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.5062974753682883",
+      "expected": ">=-1e-08",
+      "group": "short UV budget",
+      "name": "short-time power envelopes",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": ">=-1e-08",
+      "group": "late IR budget",
+      "name": "late-time exponential envelopes",
+      "status": "PASS"
+    },
+    {
+      "actual": "3.4189508770326533",
+      "expected": ">=-1e-08",
+      "group": "short UV budget",
+      "name": "short-time power budget",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0703125566065052",
+      "expected": ">=-1e-08",
+      "group": "late IR budget",
+      "name": "late-time semigroup budget",
+      "status": "PASS"
+    },
+    {
+      "actual": "3.489263433639159",
+      "expected": ">=-1e-08",
+      "group": "two-scale criterion",
+      "name": "Green trace criterion",
+      "status": "PASS"
+    },
+    {
+      "actual": "[5.010023259070511, 1.5207598254313521, 4.4859988469814995, 1.0670479699488462, 0.5240244120890112, 0.453711855482506]",
+      "expected": "finite bounds within 1e-08",
+      "group": "two-scale criterion",
+      "name": "selected criterion",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.1102230246251565e-16",
+      "expected": "abs <= 1e-08",
+      "group": "Mellin",
+      "name": "Mellin decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.3288376296791079",
+      "expected": ">=-1e-08",
+      "group": "Mellin",
+      "name": "late remainder nonnegative",
+      "status": "PASS"
+    },
+    {
+      "actual": "[-0.17523794569949813, -0.2970065496987233, -0.4306726667244005, -0.4696650437864758, -0.3176397881302367, -0.10334734246337576]",
+      "expected": "max <= 1e-08",
+      "group": "heat trace",
+      "name": "heat monotone",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.5261006371010846",
+      "expected": ">=-1e-08",
+      "group": "short UV budget",
+      "name": "short-time power envelopes",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": ">=-1e-08",
+      "group": "late IR budget",
+      "name": "late-time exponential envelopes",
+      "status": "PASS"
+    },
+    {
+      "actual": "3.4030810569722045",
+      "expected": ">=-1e-08",
+      "group": "short UV budget",
+      "name": "short-time power budget",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.04680605854483744",
+      "expected": ">=-1e-08",
+      "group": "late IR budget",
+      "name": "late-time semigroup budget",
+      "status": "PASS"
+    },
+    {
+      "actual": "3.449887115517042",
+      "expected": ">=-1e-08",
+      "group": "two-scale criterion",
+      "name": "Green trace criterion",
+      "status": "PASS"
+    },
+    {
+      "actual": "[4.781470997544778, 1.331583882027736, 4.405827309320832, 1.002746252348628, 0.37564368822394534, 0.3288376296791079]",
+      "expected": "finite bounds within 1e-08",
+      "group": "two-scale criterion",
+      "name": "selected criterion",
+      "status": "PASS"
+    },
+    {
+      "actual": "5.551115123125783e-17",
+      "expected": "abs <= 1e-08",
+      "group": "Mellin",
+      "name": "Mellin decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.46617876721798196",
+      "expected": ">=-1e-08",
+      "group": "Mellin",
+      "name": "late remainder nonnegative",
+      "status": "PASS"
+    },
+    {
+      "actual": "[-0.16079121424049925, -0.2752998813017118, -0.4076234390452459, -0.464815652643236, -0.34789501895579455, -0.14245870926016296]",
+      "expected": "max <= 1e-08",
+      "group": "heat trace",
+      "name": "heat monotone",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.490035552259815",
+      "expected": ">=-1e-08",
+      "group": "short UV budget",
+      "name": "short-time power envelopes",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": ">=-1e-08",
+      "group": "late IR budget",
+      "name": "late-time exponential envelopes",
+      "status": "PASS"
+    },
+    {
+      "actual": "3.400568746869704",
+      "expected": ">=-1e-08",
+      "group": "short UV budget",
+      "name": "short-time power budget",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.07176027762795184",
+      "expected": ">=-1e-08",
+      "group": "late IR budget",
+      "name": "late-time semigroup budget",
+      "status": "PASS"
+    },
+    {
+      "actual": "3.4723290244976557",
+      "expected": ">=-1e-08",
+      "group": "two-scale criterion",
+      "name": "Green trace criterion",
+      "status": "PASS"
+    },
+    {
+      "actual": "[5.006441410897227, 1.5341123863995711, 4.468502366051293, 1.0679336191815891, 0.5379390448459338, 0.46617876721798196]",
+      "expected": "finite bounds within 1e-08",
+      "group": "two-scale criterion",
+      "name": "selected criterion",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.1102230246251565e-16",
+      "expected": "abs <= 1e-08",
+      "group": "Mellin",
+      "name": "Mellin decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.3288376296791081",
+      "expected": ">=-1e-08",
+      "group": "Mellin",
+      "name": "late remainder nonnegative",
+      "status": "PASS"
+    },
+    {
+      "actual": "[-0.17523794569949835, -0.2970065496987231, -0.43067266672440063, -0.4696650437864757, -0.31763978813023674, -0.10334734246337583]",
+      "expected": "max <= 1e-08",
+      "group": "heat trace",
+      "name": "heat monotone",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.5261006371010843",
+      "expected": ">=-1e-08",
+      "group": "short UV budget",
+      "name": "short-time power envelopes",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": ">=-1e-08",
+      "group": "late IR budget",
+      "name": "late-time exponential envelopes",
+      "status": "PASS"
+    },
+    {
+      "actual": "3.403081056972204",
+      "expected": ">=-1e-08",
+      "group": "short UV budget",
+      "name": "short-time power budget",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.04680605854483749",
+      "expected": ">=-1e-08",
+      "group": "late IR budget",
+      "name": "late-time semigroup budget",
+      "status": "PASS"
+    },
+    {
+      "actual": "3.4498871155170416",
+      "expected": ">=-1e-08",
+      "group": "two-scale criterion",
+      "name": "Green trace criterion",
+      "status": "PASS"
+    },
+    {
+      "actual": "[4.781470997544778, 1.3315838820277364, 4.405827309320832, 1.0027462523486281, 0.3756436882239456, 0.3288376296791081]",
+      "expected": "finite bounds within 1e-08",
+      "group": "two-scale criterion",
+      "name": "selected criterion",
+      "status": "PASS"
+    },
+    {
+      "actual": "2.220446049250313e-16",
+      "expected": "abs <= 1e-08",
+      "group": "Mellin",
+      "name": "Mellin decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.4537118554825059",
+      "expected": ">=-1e-08",
+      "group": "Mellin",
+      "name": "late remainder nonnegative",
+      "status": "PASS"
+    },
+    {
+      "actual": "[-0.16055774301294723, -0.2753726480524328, -0.40887221109935734, -0.4676467859784642, -0.3489726434615719, -0.13951373491818672]",
+      "expected": "max <= 1e-08",
+      "group": "heat trace",
+      "name": "heat monotone",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.5062974753682887",
+      "expected": ">=-1e-08",
+      "group": "short UV budget",
+      "name": "short-time power envelopes",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": ">=-1e-08",
+      "group": "late IR budget",
+      "name": "late-time exponential envelopes",
+      "status": "PASS"
+    },
+    {
+      "actual": "3.418950877032654",
+      "expected": ">=-1e-08",
+      "group": "short UV budget",
+      "name": "short-time power budget",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.07031255660650526",
+      "expected": ">=-1e-08",
+      "group": "late IR budget",
+      "name": "late-time semigroup budget",
+      "status": "PASS"
+    },
+    {
+      "actual": "3.4892634336391586",
+      "expected": ">=-1e-08",
+      "group": "two-scale criterion",
+      "name": "Green trace criterion",
+      "status": "PASS"
+    },
+    {
+      "actual": "[5.010023259070511, 1.5207598254313524, 4.4859988469815, 1.0670479699488462, 0.5240244120890112, 0.4537118554825059]",
+      "expected": "finite bounds within 1e-08",
+      "group": "two-scale criterion",
+      "name": "selected criterion",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.6653345369377348e-16",
+      "expected": "abs <= 1e-08",
+      "group": "Mellin",
+      "name": "Mellin decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.32883762967910785",
+      "expected": ">=-1e-08",
+      "group": "Mellin",
+      "name": "late remainder nonnegative",
+      "status": "PASS"
+    },
+    {
+      "actual": "[-0.17523794569949813, -0.29700654969872353, -0.4306726667244003, -0.46966504378647583, -0.31763978813023663, -0.10334734246337576]",
+      "expected": "max <= 1e-08",
+      "group": "heat trace",
+      "name": "heat monotone",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.5261006371010843",
+      "expected": ">=-1e-08",
+      "group": "short UV budget",
+      "name": "short-time power envelopes",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": ">=-1e-08",
+      "group": "late IR budget",
+      "name": "late-time exponential envelopes",
+      "status": "PASS"
+    },
+    {
+      "actual": "3.4030810569722036",
+      "expected": ">=-1e-08",
+      "group": "short UV budget",
+      "name": "short-time power budget",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.04680605854483744",
+      "expected": ">=-1e-08",
+      "group": "late IR budget",
+      "name": "late-time semigroup budget",
+      "status": "PASS"
+    },
+    {
+      "actual": "3.449887115517041",
+      "expected": ">=-1e-08",
+      "group": "two-scale criterion",
+      "name": "Green trace criterion",
+      "status": "PASS"
+    },
+    {
+      "actual": "[4.781470997544777, 1.331583882027736, 4.4058273093208316, 1.002746252348628, 0.3756436882239453, 0.32883762967910785]",
+      "expected": "finite bounds within 1e-08",
+      "group": "two-scale criterion",
+      "name": "selected criterion",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0615703790646181",
+      "expected": ">=-1e-08",
+      "group": "coordinates",
+      "name": "d=3 prefix=1 sample",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.6653345369377348e-16",
+      "expected": "abs <= 1e-08",
+      "group": "Mellin",
+      "name": "Mellin decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.4661787672179816",
+      "expected": ">=-1e-08",
+      "group": "Mellin",
+      "name": "late remainder nonnegative",
+      "status": "PASS"
+    },
+    {
+      "actual": "[-0.16079121424049925, -0.2752998813017118, -0.4076234390452458, -0.4648156526432362, -0.34789501895579455, -0.1424587092601629]",
+      "expected": "max <= 1e-08",
+      "group": "heat trace",
+      "name": "heat monotone",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.4900355522598154",
+      "expected": ">=-1e-08",
+      "group": "short UV budget",
+      "name": "short-time power envelopes",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": ">=-1e-08",
+      "group": "late IR budget",
+      "name": "late-time exponential envelopes",
+      "status": "PASS"
+    },
+    {
+      "actual": "3.400568746869706",
+      "expected": ">=-1e-08",
+      "group": "short UV budget",
+      "name": "short-time power budget",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.07176027762795184",
+      "expected": ">=-1e-08",
+      "group": "late IR budget",
+      "name": "late-time semigroup budget",
+      "status": "PASS"
+    },
+    {
+      "actual": "3.472329024497658",
+      "expected": ">=-1e-08",
+      "group": "two-scale criterion",
+      "name": "Green trace criterion",
+      "status": "PASS"
+    },
+    {
+      "actual": "[5.006441410897229, 1.534112386399571, 4.468502366051295, 1.0679336191815891, 0.5379390448459335, 0.4661787672179816]",
+      "expected": "finite bounds within 1e-08",
+      "group": "two-scale criterion",
+      "name": "selected criterion",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.1102230246251565e-16",
+      "expected": "abs <= 1e-08",
+      "group": "Mellin",
+      "name": "Mellin decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.3288376296791079",
+      "expected": ">=-1e-08",
+      "group": "Mellin",
+      "name": "late remainder nonnegative",
+      "status": "PASS"
+    },
+    {
+      "actual": "[-0.17523794569949813, -0.2970065496987233, -0.4306726667244005, -0.4696650437864758, -0.3176397881302367, -0.10334734246337576]",
+      "expected": "max <= 1e-08",
+      "group": "heat trace",
+      "name": "heat monotone",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.5261006371010846",
+      "expected": ">=-1e-08",
+      "group": "short UV budget",
+      "name": "short-time power envelopes",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": ">=-1e-08",
+      "group": "late IR budget",
+      "name": "late-time exponential envelopes",
+      "status": "PASS"
+    },
+    {
+      "actual": "3.4030810569722045",
+      "expected": ">=-1e-08",
+      "group": "short UV budget",
+      "name": "short-time power budget",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.04680605854483744",
+      "expected": ">=-1e-08",
+      "group": "late IR budget",
+      "name": "late-time semigroup budget",
+      "status": "PASS"
+    },
+    {
+      "actual": "3.449887115517042",
+      "expected": ">=-1e-08",
+      "group": "two-scale criterion",
+      "name": "Green trace criterion",
+      "status": "PASS"
+    },
+    {
+      "actual": "[4.781470997544778, 1.331583882027736, 4.405827309320832, 1.002746252348628, 0.37564368822394534, 0.3288376296791079]",
+      "expected": "finite bounds within 1e-08",
+      "group": "two-scale criterion",
+      "name": "selected criterion",
+      "status": "PASS"
+    },
+    {
+      "actual": "-5.551115123125783e-17",
+      "expected": "abs <= 1e-08",
+      "group": "Mellin",
+      "name": "Mellin decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.453711855482506",
+      "expected": ">=-1e-08",
+      "group": "Mellin",
+      "name": "late remainder nonnegative",
+      "status": "PASS"
+    },
+    {
+      "actual": "[-0.16055774301294745, -0.275372648052433, -0.408872211099357, -0.4676467859784642, -0.3489726434615718, -0.1395137349181867]",
+      "expected": "max <= 1e-08",
+      "group": "heat trace",
+      "name": "heat monotone",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.5062974753682883",
+      "expected": ">=-1e-08",
+      "group": "short UV budget",
+      "name": "short-time power envelopes",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": ">=-1e-08",
+      "group": "late IR budget",
+      "name": "late-time exponential envelopes",
+      "status": "PASS"
+    },
+    {
+      "actual": "3.4189508770326533",
+      "expected": ">=-1e-08",
+      "group": "short UV budget",
+      "name": "short-time power budget",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0703125566065052",
+      "expected": ">=-1e-08",
+      "group": "late IR budget",
+      "name": "late-time semigroup budget",
+      "status": "PASS"
+    },
+    {
+      "actual": "3.489263433639159",
+      "expected": ">=-1e-08",
+      "group": "two-scale criterion",
+      "name": "Green trace criterion",
+      "status": "PASS"
+    },
+    {
+      "actual": "[5.010023259070511, 1.5207598254313521, 4.4859988469814995, 1.0670479699488462, 0.5240244120890112, 0.453711855482506]",
+      "expected": "finite bounds within 1e-08",
+      "group": "two-scale criterion",
+      "name": "selected criterion",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.1102230246251565e-16",
+      "expected": "abs <= 1e-08",
+      "group": "Mellin",
+      "name": "Mellin decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.3288376296791079",
+      "expected": ">=-1e-08",
+      "group": "Mellin",
+      "name": "late remainder nonnegative",
+      "status": "PASS"
+    },
+    {
+      "actual": "[-0.17523794569949813, -0.2970065496987233, -0.4306726667244005, -0.4696650437864758, -0.3176397881302367, -0.10334734246337576]",
+      "expected": "max <= 1e-08",
+      "group": "heat trace",
+      "name": "heat monotone",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.5261006371010846",
+      "expected": ">=-1e-08",
+      "group": "short UV budget",
+      "name": "short-time power envelopes",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": ">=-1e-08",
+      "group": "late IR budget",
+      "name": "late-time exponential envelopes",
+      "status": "PASS"
+    },
+    {
+      "actual": "3.4030810569722045",
+      "expected": ">=-1e-08",
+      "group": "short UV budget",
+      "name": "short-time power budget",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.04680605854483744",
+      "expected": ">=-1e-08",
+      "group": "late IR budget",
+      "name": "late-time semigroup budget",
+      "status": "PASS"
+    },
+    {
+      "actual": "3.449887115517042",
+      "expected": ">=-1e-08",
+      "group": "two-scale criterion",
+      "name": "Green trace criterion",
+      "status": "PASS"
+    },
+    {
+      "actual": "[4.781470997544778, 1.331583882027736, 4.405827309320832, 1.002746252348628, 0.37564368822394534, 0.3288376296791079]",
+      "expected": "finite bounds within 1e-08",
+      "group": "two-scale criterion",
+      "name": "selected criterion",
+      "status": "PASS"
+    },
+    {
+      "actual": "5.551115123125783e-17",
+      "expected": "abs <= 1e-08",
+      "group": "Mellin",
+      "name": "Mellin decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.46617876721798196",
+      "expected": ">=-1e-08",
+      "group": "Mellin",
+      "name": "late remainder nonnegative",
+      "status": "PASS"
+    },
+    {
+      "actual": "[-0.16079121424049925, -0.2752998813017118, -0.4076234390452459, -0.464815652643236, -0.34789501895579455, -0.14245870926016296]",
+      "expected": "max <= 1e-08",
+      "group": "heat trace",
+      "name": "heat monotone",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.490035552259815",
+      "expected": ">=-1e-08",
+      "group": "short UV budget",
+      "name": "short-time power envelopes",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": ">=-1e-08",
+      "group": "late IR budget",
+      "name": "late-time exponential envelopes",
+      "status": "PASS"
+    },
+    {
+      "actual": "3.400568746869704",
+      "expected": ">=-1e-08",
+      "group": "short UV budget",
+      "name": "short-time power budget",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.07176027762795184",
+      "expected": ">=-1e-08",
+      "group": "late IR budget",
+      "name": "late-time semigroup budget",
+      "status": "PASS"
+    },
+    {
+      "actual": "3.4723290244976557",
+      "expected": ">=-1e-08",
+      "group": "two-scale criterion",
+      "name": "Green trace criterion",
+      "status": "PASS"
+    },
+    {
+      "actual": "[5.006441410897227, 1.5341123863995711, 4.468502366051293, 1.0679336191815891, 0.5379390448459338, 0.46617876721798196]",
+      "expected": "finite bounds within 1e-08",
+      "group": "two-scale criterion",
+      "name": "selected criterion",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.1102230246251565e-16",
+      "expected": "abs <= 1e-08",
+      "group": "Mellin",
+      "name": "Mellin decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.3288376296791081",
+      "expected": ">=-1e-08",
+      "group": "Mellin",
+      "name": "late remainder nonnegative",
+      "status": "PASS"
+    },
+    {
+      "actual": "[-0.17523794569949835, -0.2970065496987231, -0.43067266672440063, -0.4696650437864757, -0.31763978813023674, -0.10334734246337583]",
+      "expected": "max <= 1e-08",
+      "group": "heat trace",
+      "name": "heat monotone",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.5261006371010843",
+      "expected": ">=-1e-08",
+      "group": "short UV budget",
+      "name": "short-time power envelopes",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": ">=-1e-08",
+      "group": "late IR budget",
+      "name": "late-time exponential envelopes",
+      "status": "PASS"
+    },
+    {
+      "actual": "3.403081056972204",
+      "expected": ">=-1e-08",
+      "group": "short UV budget",
+      "name": "short-time power budget",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.04680605854483749",
+      "expected": ">=-1e-08",
+      "group": "late IR budget",
+      "name": "late-time semigroup budget",
+      "status": "PASS"
+    },
+    {
+      "actual": "3.4498871155170416",
+      "expected": ">=-1e-08",
+      "group": "two-scale criterion",
+      "name": "Green trace criterion",
+      "status": "PASS"
+    },
+    {
+      "actual": "[4.781470997544778, 1.3315838820277364, 4.405827309320832, 1.0027462523486281, 0.3756436882239456, 0.3288376296791081]",
+      "expected": "finite bounds within 1e-08",
+      "group": "two-scale criterion",
+      "name": "selected criterion",
+      "status": "PASS"
+    },
+    {
+      "actual": "2.220446049250313e-16",
+      "expected": "abs <= 1e-08",
+      "group": "Mellin",
+      "name": "Mellin decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.4537118554825059",
+      "expected": ">=-1e-08",
+      "group": "Mellin",
+      "name": "late remainder nonnegative",
+      "status": "PASS"
+    },
+    {
+      "actual": "[-0.16055774301294723, -0.2753726480524328, -0.40887221109935734, -0.4676467859784642, -0.3489726434615719, -0.13951373491818672]",
+      "expected": "max <= 1e-08",
+      "group": "heat trace",
+      "name": "heat monotone",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.5062974753682887",
+      "expected": ">=-1e-08",
+      "group": "short UV budget",
+      "name": "short-time power envelopes",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": ">=-1e-08",
+      "group": "late IR budget",
+      "name": "late-time exponential envelopes",
+      "status": "PASS"
+    },
+    {
+      "actual": "3.418950877032654",
+      "expected": ">=-1e-08",
+      "group": "short UV budget",
+      "name": "short-time power budget",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.07031255660650526",
+      "expected": ">=-1e-08",
+      "group": "late IR budget",
+      "name": "late-time semigroup budget",
+      "status": "PASS"
+    },
+    {
+      "actual": "3.4892634336391586",
+      "expected": ">=-1e-08",
+      "group": "two-scale criterion",
+      "name": "Green trace criterion",
+      "status": "PASS"
+    },
+    {
+      "actual": "[5.010023259070511, 1.5207598254313524, 4.4859988469815, 1.0670479699488462, 0.5240244120890112, 0.4537118554825059]",
+      "expected": "finite bounds within 1e-08",
+      "group": "two-scale criterion",
+      "name": "selected criterion",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.6653345369377348e-16",
+      "expected": "abs <= 1e-08",
+      "group": "Mellin",
+      "name": "Mellin decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.32883762967910785",
+      "expected": ">=-1e-08",
+      "group": "Mellin",
+      "name": "late remainder nonnegative",
+      "status": "PASS"
+    },
+    {
+      "actual": "[-0.17523794569949813, -0.29700654969872353, -0.4306726667244003, -0.46966504378647583, -0.31763978813023663, -0.10334734246337576]",
+      "expected": "max <= 1e-08",
+      "group": "heat trace",
+      "name": "heat monotone",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.5261006371010843",
+      "expected": ">=-1e-08",
+      "group": "short UV budget",
+      "name": "short-time power envelopes",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": ">=-1e-08",
+      "group": "late IR budget",
+      "name": "late-time exponential envelopes",
+      "status": "PASS"
+    },
+    {
+      "actual": "3.4030810569722036",
+      "expected": ">=-1e-08",
+      "group": "short UV budget",
+      "name": "short-time power budget",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.04680605854483744",
+      "expected": ">=-1e-08",
+      "group": "late IR budget",
+      "name": "late-time semigroup budget",
+      "status": "PASS"
+    },
+    {
+      "actual": "3.449887115517041",
+      "expected": ">=-1e-08",
+      "group": "two-scale criterion",
+      "name": "Green trace criterion",
+      "status": "PASS"
+    },
+    {
+      "actual": "[4.781470997544777, 1.331583882027736, 4.4058273093208316, 1.002746252348628, 0.3756436882239453, 0.32883762967910785]",
+      "expected": "finite bounds within 1e-08",
+      "group": "two-scale criterion",
+      "name": "selected criterion",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0615703790646181",
+      "expected": ">=-1e-08",
+      "group": "coordinates",
+      "name": "d=3 prefix=1 sample",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.6653345369377348e-16",
+      "expected": "abs <= 1e-08",
+      "group": "Mellin",
+      "name": "Mellin decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.4661787672179816",
+      "expected": ">=-1e-08",
+      "group": "Mellin",
+      "name": "late remainder nonnegative",
+      "status": "PASS"
+    },
+    {
+      "actual": "[-0.16079121424049925, -0.2752998813017118, -0.4076234390452458, -0.4648156526432362, -0.34789501895579455, -0.1424587092601629]",
+      "expected": "max <= 1e-08",
+      "group": "heat trace",
+      "name": "heat monotone",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.4900355522598154",
+      "expected": ">=-1e-08",
+      "group": "short UV budget",
+      "name": "short-time power envelopes",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": ">=-1e-08",
+      "group": "late IR budget",
+      "name": "late-time exponential envelopes",
+      "status": "PASS"
+    },
+    {
+      "actual": "3.400568746869706",
+      "expected": ">=-1e-08",
+      "group": "short UV budget",
+      "name": "short-time power budget",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.07176027762795184",
+      "expected": ">=-1e-08",
+      "group": "late IR budget",
+      "name": "late-time semigroup budget",
+      "status": "PASS"
+    },
+    {
+      "actual": "3.472329024497658",
+      "expected": ">=-1e-08",
+      "group": "two-scale criterion",
+      "name": "Green trace criterion",
+      "status": "PASS"
+    },
+    {
+      "actual": "[5.006441410897229, 1.534112386399571, 4.468502366051295, 1.0679336191815891, 0.5379390448459335, 0.4661787672179816]",
+      "expected": "finite bounds within 1e-08",
+      "group": "two-scale criterion",
+      "name": "selected criterion",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.1102230246251565e-16",
+      "expected": "abs <= 1e-08",
+      "group": "Mellin",
+      "name": "Mellin decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.3288376296791079",
+      "expected": ">=-1e-08",
+      "group": "Mellin",
+      "name": "late remainder nonnegative",
+      "status": "PASS"
+    },
+    {
+      "actual": "[-0.17523794569949813, -0.2970065496987233, -0.4306726667244005, -0.4696650437864758, -0.3176397881302367, -0.10334734246337576]",
+      "expected": "max <= 1e-08",
+      "group": "heat trace",
+      "name": "heat monotone",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.5261006371010846",
+      "expected": ">=-1e-08",
+      "group": "short UV budget",
+      "name": "short-time power envelopes",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": ">=-1e-08",
+      "group": "late IR budget",
+      "name": "late-time exponential envelopes",
+      "status": "PASS"
+    },
+    {
+      "actual": "3.4030810569722045",
+      "expected": ">=-1e-08",
+      "group": "short UV budget",
+      "name": "short-time power budget",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.04680605854483744",
+      "expected": ">=-1e-08",
+      "group": "late IR budget",
+      "name": "late-time semigroup budget",
+      "status": "PASS"
+    },
+    {
+      "actual": "3.449887115517042",
+      "expected": ">=-1e-08",
+      "group": "two-scale criterion",
+      "name": "Green trace criterion",
+      "status": "PASS"
+    },
+    {
+      "actual": "[4.781470997544778, 1.331583882027736, 4.405827309320832, 1.002746252348628, 0.37564368822394534, 0.3288376296791079]",
+      "expected": "finite bounds within 1e-08",
+      "group": "two-scale criterion",
+      "name": "selected criterion",
+      "status": "PASS"
+    },
+    {
+      "actual": "-5.551115123125783e-17",
+      "expected": "abs <= 1e-08",
+      "group": "Mellin",
+      "name": "Mellin decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.453711855482506",
+      "expected": ">=-1e-08",
+      "group": "Mellin",
+      "name": "late remainder nonnegative",
+      "status": "PASS"
+    },
+    {
+      "actual": "[-0.16055774301294745, -0.275372648052433, -0.408872211099357, -0.4676467859784642, -0.3489726434615718, -0.1395137349181867]",
+      "expected": "max <= 1e-08",
+      "group": "heat trace",
+      "name": "heat monotone",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.5062974753682883",
+      "expected": ">=-1e-08",
+      "group": "short UV budget",
+      "name": "short-time power envelopes",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": ">=-1e-08",
+      "group": "late IR budget",
+      "name": "late-time exponential envelopes",
+      "status": "PASS"
+    },
+    {
+      "actual": "3.4189508770326533",
+      "expected": ">=-1e-08",
+      "group": "short UV budget",
+      "name": "short-time power budget",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0703125566065052",
+      "expected": ">=-1e-08",
+      "group": "late IR budget",
+      "name": "late-time semigroup budget",
+      "status": "PASS"
+    },
+    {
+      "actual": "3.489263433639159",
+      "expected": ">=-1e-08",
+      "group": "two-scale criterion",
+      "name": "Green trace criterion",
+      "status": "PASS"
+    },
+    {
+      "actual": "[5.010023259070511, 1.5207598254313521, 4.4859988469814995, 1.0670479699488462, 0.5240244120890112, 0.453711855482506]",
+      "expected": "finite bounds within 1e-08",
+      "group": "two-scale criterion",
+      "name": "selected criterion",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.1102230246251565e-16",
+      "expected": "abs <= 1e-08",
+      "group": "Mellin",
+      "name": "Mellin decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.3288376296791079",
+      "expected": ">=-1e-08",
+      "group": "Mellin",
+      "name": "late remainder nonnegative",
+      "status": "PASS"
+    },
+    {
+      "actual": "[-0.17523794569949813, -0.2970065496987233, -0.4306726667244005, -0.4696650437864758, -0.3176397881302367, -0.10334734246337576]",
+      "expected": "max <= 1e-08",
+      "group": "heat trace",
+      "name": "heat monotone",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.5261006371010846",
+      "expected": ">=-1e-08",
+      "group": "short UV budget",
+      "name": "short-time power envelopes",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": ">=-1e-08",
+      "group": "late IR budget",
+      "name": "late-time exponential envelopes",
+      "status": "PASS"
+    },
+    {
+      "actual": "3.4030810569722045",
+      "expected": ">=-1e-08",
+      "group": "short UV budget",
+      "name": "short-time power budget",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.04680605854483744",
+      "expected": ">=-1e-08",
+      "group": "late IR budget",
+      "name": "late-time semigroup budget",
+      "status": "PASS"
+    },
+    {
+      "actual": "3.449887115517042",
+      "expected": ">=-1e-08",
+      "group": "two-scale criterion",
+      "name": "Green trace criterion",
+      "status": "PASS"
+    },
+    {
+      "actual": "[4.781470997544778, 1.331583882027736, 4.405827309320832, 1.002746252348628, 0.37564368822394534, 0.3288376296791079]",
+      "expected": "finite bounds within 1e-08",
+      "group": "two-scale criterion",
+      "name": "selected criterion",
+      "status": "PASS"
+    },
+    {
+      "actual": "5.551115123125783e-17",
+      "expected": "abs <= 1e-08",
+      "group": "Mellin",
+      "name": "Mellin decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.46617876721798196",
+      "expected": ">=-1e-08",
+      "group": "Mellin",
+      "name": "late remainder nonnegative",
+      "status": "PASS"
+    },
+    {
+      "actual": "[-0.16079121424049925, -0.2752998813017118, -0.4076234390452459, -0.464815652643236, -0.34789501895579455, -0.14245870926016296]",
+      "expected": "max <= 1e-08",
+      "group": "heat trace",
+      "name": "heat monotone",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.490035552259815",
+      "expected": ">=-1e-08",
+      "group": "short UV budget",
+      "name": "short-time power envelopes",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": ">=-1e-08",
+      "group": "late IR budget",
+      "name": "late-time exponential envelopes",
+      "status": "PASS"
+    },
+    {
+      "actual": "3.400568746869704",
+      "expected": ">=-1e-08",
+      "group": "short UV budget",
+      "name": "short-time power budget",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.07176027762795184",
+      "expected": ">=-1e-08",
+      "group": "late IR budget",
+      "name": "late-time semigroup budget",
+      "status": "PASS"
+    },
+    {
+      "actual": "3.4723290244976557",
+      "expected": ">=-1e-08",
+      "group": "two-scale criterion",
+      "name": "Green trace criterion",
+      "status": "PASS"
+    },
+    {
+      "actual": "[5.006441410897227, 1.5341123863995711, 4.468502366051293, 1.0679336191815891, 0.5379390448459338, 0.46617876721798196]",
+      "expected": "finite bounds within 1e-08",
+      "group": "two-scale criterion",
+      "name": "selected criterion",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.1102230246251565e-16",
+      "expected": "abs <= 1e-08",
+      "group": "Mellin",
+      "name": "Mellin decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.3288376296791081",
+      "expected": ">=-1e-08",
+      "group": "Mellin",
+      "name": "late remainder nonnegative",
+      "status": "PASS"
+    },
+    {
+      "actual": "[-0.17523794569949835, -0.2970065496987231, -0.43067266672440063, -0.4696650437864757, -0.31763978813023674, -0.10334734246337583]",
+      "expected": "max <= 1e-08",
+      "group": "heat trace",
+      "name": "heat monotone",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.5261006371010843",
+      "expected": ">=-1e-08",
+      "group": "short UV budget",
+      "name": "short-time power envelopes",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": ">=-1e-08",
+      "group": "late IR budget",
+      "name": "late-time exponential envelopes",
+      "status": "PASS"
+    },
+    {
+      "actual": "3.403081056972204",
+      "expected": ">=-1e-08",
+      "group": "short UV budget",
+      "name": "short-time power budget",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.04680605854483749",
+      "expected": ">=-1e-08",
+      "group": "late IR budget",
+      "name": "late-time semigroup budget",
+      "status": "PASS"
+    },
+    {
+      "actual": "3.4498871155170416",
+      "expected": ">=-1e-08",
+      "group": "two-scale criterion",
+      "name": "Green trace criterion",
+      "status": "PASS"
+    },
+    {
+      "actual": "[4.781470997544778, 1.3315838820277364, 4.405827309320832, 1.0027462523486281, 0.3756436882239456, 0.3288376296791081]",
+      "expected": "finite bounds within 1e-08",
+      "group": "two-scale criterion",
+      "name": "selected criterion",
+      "status": "PASS"
+    },
+    {
+      "actual": "2.220446049250313e-16",
+      "expected": "abs <= 1e-08",
+      "group": "Mellin",
+      "name": "Mellin decomposition",
+      "status": "PASS"
+    }
+  ],
+  "derived": {
+    "c6_closed": false,
+    "candidate_count_per_row": [
+      25,
+      50,
+      75,
+      100,
+      150,
+      200,
+      250
+    ],
+    "common_core_closed": false,
+    "common_split_rule_closed": false,
+    "comparison_row_count": 21120,
+    "context_count": 2688,
+    "continuum_closed": false,
+    "cutoff_independent_uv_coefficient_closed": false,
+    "exhaustion_uniform_semigroup_closed": false,
+    "finite_green_trace_criterion_closed": true,
+    "finite_late_time_semigroup_budget_closed": true,
+    "finite_likelihood_row_coverage_closed": true,
+    "finite_short_time_power_budget_closed": true,
+    "finite_two_scale_envelope_closed": true,
+    "hamiltonian_os_identification_closed": false,
+    "heat_time_values": [
+      0.0625,
+      0.125,
+      0.25,
+      0.5,
+      1.0,
+      2.0,
+      4.0
+    ],
+    "kms_gns_gap_closed": false,
+    "maximum_first_positive_gap": 5.647863075935713,
+    "maximum_heat_at_split": 0.5926882083380162,
+    "maximum_heat_increase": -1.2429200624624924e-05,
+    "maximum_heat_value": 4.5647746791102914,
+    "maximum_mellin_identity_abs_residual": 2.498001805406602e-16,
+    "maximum_selected_green_bound": 6.21959891996888,
+    "maximum_trace_inverse": 2.005206956689766,
+    "minimum_first_positive_gap": 0.757017417540234,
+    "minimum_green_trace_slack": 2.936364851149518,
+    "minimum_heat_at_split": 0.00360124459616333,
+    "minimum_heat_value": 1.5440343280581624e-10,
+    "minimum_late_budget_slack": 5.920414395785452e-06,
+    "minimum_late_exponential_slack": 0.0,
+    "minimum_selected_green_bound": 3.6173095936923056,
+    "minimum_short_budget_slack": 2.906509082426134,
+    "minimum_short_power_slack": 1.1172510658981478,
+    "minimum_trace_inverse": 0.4441375160515587,
+    "phase_uniform_semigroup_closed": false,
+    "pre_a_closed": false,
+    "sector_a_closed": false,
+    "selected_key_histogram": {
+      "ir=0.5;uv=0.5;split=1": 21120
+    },
+    "semigroup_split_time": 1.0,
+    "system_count": 7,
+    "system_profiles": {
+      "V=2/d=10": {
+        "context_count": 384,
+        "dimension": 10,
+        "maximum_gap": 4.559438193527282,
+        "maximum_heat_at_split": 0.1345371733139325,
+        "maximum_heat_value": 4.5647746791102914,
+        "maximum_mellin_residual": 1.8735013540549517e-16,
+        "maximum_trace": 1.3087691164858104,
+        "minimum_gap": 2.131326919627506,
+        "minimum_green_slack": 3.116369156813086,
+        "minimum_heat_at_split": 0.010935338160930194,
+        "minimum_late_budget_slack": 4.159591627050669e-05,
+        "minimum_late_exponential_slack": 0.0,
+        "minimum_short_budget_slack": 3.1163275608968153,
+        "minimum_short_power_slack": 1.2965470288927894,
+        "minimum_trace": 0.500940436879217,
+        "row_count": 4224
+      },
+      "V=2/d=12": {
+        "context_count": 384,
+        "dimension": 12,
+        "maximum_gap": 5.647863075935713,
+        "maximum_heat_at_split": 0.09650762038203993,
+        "maximum_heat_value": 4.466671437180913,
+        "maximum_mellin_residual": 1.942890293094024e-16,
+        "maximum_trace": 1.2059617833727894,
+        "minimum_gap": 2.423391046447465,
+        "minimum_green_slack": 3.1793758001109036,
+        "minimum_heat_at_split": 0.00360124459616333,
+        "minimum_late_budget_slack": 5.920414395785452e-06,
+        "minimum_late_exponential_slack": 0.0,
+        "minimum_short_budget_slack": 3.179369879696507,
+        "minimum_short_power_slack": 1.337042115674669,
+        "minimum_trace": 0.4441375160515587,
+        "row_count": 4992
+      },
+      "V=2/d=3": {
+        "context_count": 384,
+        "dimension": 3,
+        "maximum_gap": 2.48198589525633,
+        "maximum_heat_at_split": 0.5196549533724294,
+        "maximum_heat_value": 1.8217271976643663,
+        "maximum_mellin_residual": 2.498001805406602e-16,
+        "maximum_trace": 1.602671556719111,
+        "minimum_gap": 0.757017417540234,
+        "minimum_green_slack": 2.936364851149518,
+        "minimum_heat_at_split": 0.09984669228360551,
+        "minimum_late_budget_slack": 0.0026046626345235593,
+        "minimum_late_exponential_slack": 0.0,
+        "minimum_short_budget_slack": 2.906509082426134,
+        "minimum_short_power_slack": 1.1172510658981478,
+        "minimum_trace": 0.6457125867655793,
+        "row_count": 1536
+      },
+      "V=2/d=4": {
+        "context_count": 384,
+        "dimension": 4,
+        "maximum_gap": 2.833778687459353,
+        "maximum_heat_at_split": 0.5926882083380162,
+        "maximum_heat_value": 2.650921700815413,
+        "maximum_mellin_residual": 2.220446049250313e-16,
+        "maximum_trace": 2.005206956689766,
+        "minimum_gap": 0.7872756441265597,
+        "minimum_green_slack": 3.1532123458114176,
+        "minimum_heat_at_split": 0.06492101923126736,
+        "minimum_late_budget_slack": 0.0009781418878593053,
+        "minimum_late_exponential_slack": 0.0,
+        "minimum_short_budget_slack": 3.1522342039235585,
+        "minimum_short_power_slack": 1.3522954217322338,
+        "minimum_trace": 0.6618174815698085,
+        "row_count": 1920
+      },
+      "V=2/d=5": {
+        "context_count": 384,
+        "dimension": 5,
+        "maximum_gap": 2.363630062334787,
+        "maximum_heat_at_split": 0.4832342957926422,
+        "maximum_heat_value": 3.412428121270823,
+        "maximum_mellin_residual": 2.498001805406602e-16,
+        "maximum_trace": 1.8806216998052827,
+        "minimum_gap": 1.1950962017934932,
+        "minimum_green_slack": 2.9393452434359864,
+        "minimum_heat_at_split": 0.13545368791096984,
+        "minimum_late_budget_slack": 0.0021248062462912165,
+        "minimum_late_exponential_slack": 0.0,
+        "minimum_short_budget_slack": 2.937220437189695,
+        "minimum_short_power_slack": 1.3157715204418223,
+        "minimum_trace": 0.8274300845459802,
+        "row_count": 2304
+      },
+      "V=2/d=6": {
+        "context_count": 384,
+        "dimension": 6,
+        "maximum_gap": 3.8750382074539584,
+        "maximum_heat_at_split": 0.3180476388030889,
+        "maximum_heat_value": 4.024984693164846,
+        "maximum_mellin_residual": 2.0816681711721685e-16,
+        "maximum_trace": 1.7017657584743917,
+        "minimum_gap": 1.472145278578468,
+        "minimum_green_slack": 3.155959080568222,
+        "minimum_heat_at_split": 0.021712995758322598,
+        "minimum_late_budget_slack": 0.00012236047929020666,
+        "minimum_late_exponential_slack": 0.0,
+        "minimum_short_budget_slack": 3.1552411332114225,
+        "minimum_short_power_slack": 1.3704847130525168,
+        "minimum_trace": 0.6068568603599753,
+        "row_count": 2688
+      },
+      "V=2/d=8": {
+        "context_count": 384,
+        "dimension": 8,
+        "maximum_gap": 3.778055938852625,
+        "maximum_heat_at_split": 0.20652045397116833,
+        "maximum_heat_value": 4.058861427519663,
+        "maximum_mellin_residual": 1.8041124150158794e-16,
+        "maximum_trace": 1.432054118089885,
+        "minimum_gap": 1.7946329937682566,
+        "minimum_green_slack": 3.0789160066841523,
+        "minimum_heat_at_split": 0.027094681499982058,
+        "minimum_late_budget_slack": 0.0002753339694065741,
+        "minimum_late_exponential_slack": 0.0,
+        "minimum_short_budget_slack": 3.0786406727147453,
+        "minimum_short_power_slack": 1.3585118198958,
+        "minimum_trace": 0.6047964991890706,
+        "row_count": 3456
+      }
+    },
+    "volume_independent_ir_gap_closed": false
+  },
+  "exploration_id": "EXP-001259",
+  "manifest": "strategy/pre-a-cp1-st8-q3lock-two-scale-semigroup-bridge-manifest.json",
+  "result_id": "R-414",
+  "schema": "tect/pre-a-r414-independent/1.0",
+  "scope": {
+    "c6_closed": false,
+    "common_core_closed": false,
+    "common_split_rule_closed": false,
+    "continuum_closed": false,
+    "cutoff_independent_uv_coefficient_closed": false,
+    "exhaustion_uniform_semigroup_closed": false,
+    "finite_green_trace_criterion_closed": true,
+    "finite_late_time_semigroup_budget_closed": true,
+    "finite_likelihood_row_coverage_closed": true,
+    "finite_short_time_power_budget_closed": true,
+    "finite_two_scale_envelope_closed": true,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "no_new_negative_result": true,
+    "no_pdf": true,
+    "no_tier_change": true,
+    "phase_uniform_semigroup_closed": false,
+    "pre_a_closed": false,
+    "sector_a_closed": false,
+    "volume_independent_ir_gap_closed": false
+  },
+  "verdict": "PASS"
+}

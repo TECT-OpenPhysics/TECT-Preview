@@ -7007,6 +7007,141 @@
       "task_id": "T-054",
       "title": "Mellin heat-trace bridge for mixed IR/UV spectral counting",
       "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "axis": "IR head omission",
+          "check": "A head-heavy five-mode toy gives a short-budget deficit 0.11755608825868386 when the finite IR head is omitted.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "UV term omission",
+          "check": "A tail-heavy four-mode toy gives a short-budget deficit 0.13507226908622838 when the UV integral term is omitted.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "gap convention",
+          "check": "Using the largest eigenvalue instead of the first positive gap gives a late-budget deficit 2.920502936517768.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "late budget omission",
+          "check": "Dropping H(tau)/gamma gives a Green-trace deficit 0.4775461490944841 on the exact two-mode toy.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "late-time shift",
+          "check": "Using exp(-gamma(t+tau)) instead of exp(-gamma(t-tau)) gives a deficit 2.7432509056332397.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "time ordering",
+          "check": "Reversing the heat-time grid creates an increase 0.2894603181637101.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "Mellin sign",
+          "check": "Changing the exact split to short-minus-late leaves residual 6.239564084015606.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "divergent UV power",
+          "check": "alpha=1 is rejected before an integral budget is formed.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "uniform and physical promotion",
+          "check": "Finite positivity of A_tau, gamma and H(tau) does not imply cutoff/volume/source/phase/exhaustion uniformity, a common core, GNS coercivity, a physical gap, continuum, C6, Sector-A or Pre-A closure.",
+          "disposition": "UPHELD-OPEN"
+        }
+      ],
+      "boundary": "T0 claim-nonbearing finite two-scale semigroup bridge only. It proves no cutoff-, volume-, source-, phase- or exhaustion-uniform coefficient or gap, common core, common split rule, OS/KMS/GNS reconstruction, mass gap, continuum, C6, Sector-A or Pre-A closure.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "The short/late semigroup split turns the mixed spectral envelope into a single explicit Green-trace criterion. It separates the ultraviolet coefficient from the infrared gap and makes the missing uniformity premises auditable, while the finite rows do not establish any regulator-independent constant.",
+      "evidence_refs": [
+        "strategy/pre-a-cp1-st8-q3lock-two-scale-semigroup-bridge-manifest.json#new_perspective",
+        "strategy/pre-a-cp1-st8-q3lock-two-scale-semigroup-bridge-certificate-260831.md#Verification",
+        "codes/foundations/pre_a_cp1_st8_q3lock_two_scale_semigroup_bridge.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_two_scale_semigroup_bridge_independent.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_two_scale_semigroup_bridge_hostile.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_two_scale_semigroup_bridge_verify.py#main",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-primary-pre_a_cp1_st8_q3lock_two_scale_semigroup_bridge/primary.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-independent-pre_a_cp1_st8_q3lock_two_scale_semigroup_bridge/independent.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-hostile-pre_a_cp1_st8_q3lock_two_scale_semigroup_bridge/hostile.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-integrated-pre_a_cp1_st8_q3lock_two_scale_semigroup_bridge/integrated.json#derived",
+        "verification/lean/Tect/R414.lean#late_exponential_factor_nonnegative",
+        "claims/C6-SPACETIME-SIGNATURE/notes/two-scale-semigroup-bridge-260831.md#R-414"
+      ],
+      "finding": "The primary lane passes 191471/191471 assertions over 7 systems, 2688 contexts and 21120 conditional rows. The independent lane passes 191470/191470 on the same grid, the hostile lane passes 9/9, the integrated verifier passes 42/42, and Lean R414 compiles. The first-positive-gap range is [0.7570174175402339,5.647863075935399], the split-time heat range is [0.0036012445961644186,0.5926882083380163], the minimum Green-bound slack is 2.936364851149518, and the maximum Mellin residual is 3.885780586188048e-16.",
+      "formal_integration": {
+        "events": [
+          "20260831-two-scale-semigroup-criterion-for-normalized-gr"
+        ],
+        "lean": "R414 PASS",
+        "negatives": [],
+        "no_new_negative": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "results": [
+          "R-414"
+        ]
+      },
+      "formal_refs": {
+        "events": [
+          "20260831-two-scale-semigroup-criterion-for-normalized-gr"
+        ],
+        "negatives": [],
+        "results": [
+          "R-414"
+        ]
+      },
+      "gate_ids": [
+        "PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY",
+        "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+        "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+      ],
+      "id": "EXP-001259",
+      "method": [
+        "For every actual conditional likelihood row, form the normalized intrinsic Laplacian and sort its positive spectrum.",
+        "Enumerate all 25 declared R-412 IR/UV exponent pairs and every interior split on the complete row grid.",
+        "Use A_tau=r tau^alpha_UV+C_UV alpha_UV Gamma(alpha_UV) to bound the short-time heat trace by A_tau t^(-alpha_UV) for 0<t<=tau.",
+        "Use gamma=lambda_1 to check H(t)<=H(tau) exp(-gamma(t-tau)) for t>=tau and integrate the late budget H(tau)/gamma.",
+        "Check the exact finite Mellin decomposition and the resulting Green-trace criterion for every candidate profile.",
+        "Repeat the full grid in an independent plain-loop implementation and apply IR/UV omission, wrong-gap, wrong-shift, late-term omission, time-order, sign and alpha=1 hostile mutations."
+      ],
+      "next_action": "Prove a source/cutoff/volume/phase/exhaustion-uniform bound for A_tau, gamma and H(tau) on one Hamiltonian common core; transfer both budgets to the R-399 shell and combine them with the R-406 harmonic/Schur residual. If gamma collapses under a validated growing stress, retain only the UV half and record the route-local obstruction.",
+      "no_overclaim": "The two-scale criterion isolates the exact UV coefficient, split-time heat value and IR gap required by a future uniform proof; it does not supply those regulator-independent premises or a physical-sector conclusion.",
+      "provenance": "contemporaneous",
+      "qft_interface": {
+        "closed": "Finite short-time UV power envelope, late-time IR semigroup envelope, integrated Green-trace criterion, full row coverage, hostile shortcut rejection and Lean scalar bookkeeping.",
+        "open": "Uniform split time and UV coefficient, positive uniform intrinsic gap and split heat value on a Hamiltonian common core, R-399 shell transfer, R-406 Schur combination, OS/KMS/GNS reconstruction, continuum and physical-gap obligations."
+      },
+      "question": "Can the finite Mellin bridge be reorganized as a two-scale semigroup criterion that isolates a short-time UV power budget from a late-time IR gap budget, and thereby expose the exact uniform inputs needed for a Green-trace bound?",
+      "recorded_at": "2026-08-31T00:00:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001258",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001257",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001251",
+          "relation": "alternative_to"
+        }
+      ],
+      "reviewed_on": "2026-08-29",
+      "schema": "tect/proof-exploration/1.0",
+      "schema_version": "1.0",
+      "task_id": "T-054",
+      "title": "Two-scale semigroup criterion for the normalized Green trace",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",

@@ -1,0 +1,89 @@
+{
+  "assertion_count": 9,
+  "boundary": "T0 claim-nonbearing finite two-scale semigroup bridge only. It proves no cutoff-, volume-, source-, phase- or exhaustion-uniform UV coefficient or IR gap, common core, common split rule, OS/KMS/GNS reconstruction, mass gap, continuum, C6, Sector-A or Pre-A closure.",
+  "checks": [
+    {
+      "actual": "[6.960919538746072, 4.25]",
+      "expected": "green bound covers trace",
+      "name": "baseline criterion",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.11755608825868386",
+      "expected": ">1e-12",
+      "name": "omitted IR head rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.13507226908622838",
+      "expected": ">1e-12",
+      "name": "omitted UV term rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": "2.920502936517768",
+      "expected": ">1e-12",
+      "name": "max-eigenvalue IR shortcut rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.4775461490944841",
+      "expected": ">1e-12",
+      "name": "omitted late budget rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": "2.7432509056332397",
+      "expected": ">1e-12",
+      "name": "wrong late-time shift rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": "True",
+      "expected": "True",
+      "name": "alpha=1 rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.2894603181637101",
+      "expected": ">1e-12",
+      "name": "reversed time ordering rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": "6.239564084015606",
+      "expected": "abs>1e-12",
+      "name": "wrong Mellin sign rejected",
+      "status": "PASS"
+    }
+  ],
+  "derived": {
+    "alpha_one_rejected": true,
+    "baseline": {
+      "gap": 0.25,
+      "green_bound": 6.960919538746072,
+      "head_power": 1.0,
+      "heat_tau": 0.7971164219601391,
+      "late_actual": 3.119782042007803,
+      "late_budget": 3.1884656878405564,
+      "short_actual": 1.130217957992197,
+      "short_budget": 3.772453850905516,
+      "short_power_constant": 1.886226925452758,
+      "trace": 4.25,
+      "uv_factor": 0.8862269254527579
+    },
+    "omitted_head_short_deficit": 0.11755608825868386,
+    "omitted_late_green_deficit": 0.4775461490944841,
+    "omitted_uv_short_deficit": 0.13507226908622838,
+    "reverse_heat_max_increase": 0.2894603181637101,
+    "toy_threshold": 1e-12,
+    "wrong_gap_late_deficit": 2.920502936517768,
+    "wrong_shift_late_deficit": 2.7432509056332397,
+    "wrong_sign_residual": 6.239564084015606
+  },
+  "exploration_id": "EXP-001259",
+  "manifest": "strategy/pre-a-cp1-st8-q3lock-two-scale-semigroup-bridge-manifest.json",
+  "result_id": "R-414",
+  "schema": "tect/pre-a-r414-hostile/1.0",
+  "verdict": "PASS"
+}

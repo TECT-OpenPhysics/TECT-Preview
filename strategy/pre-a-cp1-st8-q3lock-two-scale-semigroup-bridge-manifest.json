@@ -1,0 +1,118 @@
+{
+  "schema": "tect/pre-a-cp1-st8-q3lock-two-scale-semigroup-bridge/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-TWO-SCALE-SEMIGROUP-BRIDGE-v0",
+  "result_id": "R-414",
+  "title": "Two-scale semigroup criterion for the normalized Green trace",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001259",
+  "claim_bearing": false,
+  "parent_explorations": ["EXP-001258", "EXP-001257", "EXP-001251"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY",
+    "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+  ],
+  "question": "Can the finite Mellin bridge be reorganized as a two-scale semigroup criterion that isolates a short-time UV power budget from a late-time IR gap budget, and thereby expose the exact uniform inputs needed for a Green-trace bound?",
+  "new_perspective": {
+    "principle": "Treat the positive heat trace H(t)=sum_k exp(-t lambda_k) as a Euclidean semigroup observable. On 0<t<=tau, a mixed R-412 profile gives H(t)<=A_tau t^(-alpha_UV) after replacing the finite IR head by its mode count. On t>=tau, the first positive eigenvalue gamma gives H(t)<=H(tau) exp(-gamma(t-tau)).",
+    "route": [
+      "Enumerate every R-412 exponent pair and interior split on every actual conditional likelihood row.",
+      "Build the pure short-time coefficient A_tau = r tau^alpha_UV + C_UV alpha_UV Gamma(alpha_UV), where the first term covers the finite IR head and the second covers the continuous UV tail.",
+      "Check the pointwise short-time power envelope, its integrable budget A_tau tau^(1-alpha_UV)/(1-alpha_UV), and the exact finite Mellin decomposition.",
+      "Use gamma=min(lambda_k) and H(tau) to test the late semigroup envelope and the integrated bound H(tau)/gamma.",
+      "Retain the row-wise best profile only as a finite diagnostic; promotion requires a fixed split, a uniform UV coefficient, a uniform positive gap, and a common Hamiltonian core."
+    ],
+    "qft_bridge": "The short/late split is the finite analogue of separating ultraviolet proper-time renormalization from infrared spectral decay in a Euclidean QFT two-point function. It becomes physically useful only after regulator and volume uniformity, R-399 shell transfer, R-406 Schur control, and OS/KMS/GNS reconstruction are proved."
+  },
+  "finite_theorem": {
+    "short_time_envelope": "For 0<t<=tau and 0<alpha_UV<1, H(t)<=A_tau t^(-alpha_UV), with A_tau=r tau^alpha_UV+C_UV alpha_UV Gamma(alpha_UV).",
+    "short_time_budget": "integral_0^tau H(t)dt <= A_tau tau^(1-alpha_UV)/(1-alpha_UV).",
+    "late_time_envelope": "For t>=tau and gamma=min_k lambda_k>0, H(t)<=H(tau) exp(-gamma(t-tau)).",
+    "late_time_budget": "integral_tau^infinity H(t)dt = sum_k exp(-tau lambda_k)/lambda_k <= H(tau)/gamma.",
+    "green_trace_criterion": "tr(W^+) <= A_tau tau^(1-alpha_UV)/(1-alpha_UV)+H(tau)/gamma.",
+    "scope": "Every implication is finite-dimensional and rowwise; the quantities A_tau, gamma and H(tau) are not asserted to be uniform in a regulator, volume, source, phase or exhaustion."
+  },
+  "finite_fixture": {
+    "admissible_pairs": [
+      {"volume": 2, "cutoff_dimensions": [3, 4, 5, 6, 8, 10, 12]}
+    ],
+    "counting_exponents": ["1/2", "2/3", "3/4", "4/5", "9/10"],
+    "split_policy": "all integers r with 1<=r<d-1",
+    "heat_time_values": ["1/16", "1/8", "1/4", "1/2", "1", "2", "4"],
+    "semigroup_split_time": "1",
+    "beta_values": ["1/2", "1", "2"],
+    "source_support_values": [[0]],
+    "source_amplitude": "1/3",
+    "hbar": "1",
+    "time_step": "1/18",
+    "source_sign_values": [-1, 1],
+    "history_sign_values": [-1, 1],
+    "history_adjoint_values": [0, 1],
+    "orientations": ["right", "left"],
+    "chi": "1",
+    "r": "-1",
+    "g": "3/5",
+    "c": "3/5",
+    "lambda": "1/10",
+    "probability_floor": 1e-30,
+    "resistance_eigen_floor": 1e-14,
+    "numerical_tolerance": 1e-8,
+    "crosscheck_tolerance": 5e-6,
+    "hostile_zero_threshold": 1e-12
+  },
+  "scope": {
+    "finite_two_scale_envelope_closed": true,
+    "finite_short_time_power_budget_closed": true,
+    "finite_late_time_semigroup_budget_closed": true,
+    "finite_green_trace_criterion_closed": true,
+    "finite_likelihood_row_coverage_closed": true,
+    "cutoff_independent_uv_coefficient_closed": false,
+    "volume_independent_ir_gap_closed": false,
+    "phase_uniform_semigroup_closed": false,
+    "exhaustion_uniform_semigroup_closed": false,
+    "common_core_closed": false,
+    "common_split_rule_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R414.lean",
+    "theorem_markers": [
+      "late_exponential_factor_nonnegative",
+      "semigroup_bound_nonnegative",
+      "uv_power_integral_positive",
+      "finite_scope"
+    ],
+    "command": "lake env lean Tect/R414.lean",
+    "boundary": "Lean checks only scalar positivity of the semigroup factor and UV power budget; ordered spectra, Gibbs rows, graph construction, uniform gaps, common domains and QFT reconstruction remain executable/open analysis."
+  },
+  "artifacts": {
+    "primary_script": "codes/foundations/pre_a_cp1_st8_q3lock_two_scale_semigroup_bridge.py",
+    "independent_script": "codes/foundations/pre_a_cp1_st8_q3lock_two_scale_semigroup_bridge_independent.py",
+    "hostile_script": "codes/foundations/pre_a_cp1_st8_q3lock_two_scale_semigroup_bridge_hostile.py",
+    "integrated_verifier": "codes/foundations/pre_a_cp1_st8_q3lock_two_scale_semigroup_bridge_verify.py",
+    "lean": "verification/lean/Tect/R414.lean"
+  },
+  "promotion_criteria": [
+    "Prove a fixed or analytically controlled split time and a source/cutoff/volume/phase/exhaustion-uniform UV coefficient on one Hamiltonian common core.",
+    "Prove a positive source/cutoff/volume/phase/exhaustion-uniform intrinsic gap and bound H(tau) on the same core.",
+    "Transfer both budgets to the R-399 conditional shell and combine them with the R-406 Schur residual before any common-alpha or GNS promotion."
+  ],
+  "stop_conditions": [
+    "If alpha_UV reaches 1 or above, the short-time power integral diverges and the criterion cannot be used.",
+    "If the first positive eigenvalue collapses under a validated cutoff or volume stress, retain only the UV half and do not claim an IR semigroup budget.",
+    "If the late factor uses max(lambda_k), a wrong sign, or omits H(tau), retain the failed inequality and do not promote it.",
+    "Finite two-scale checks are not a common-core, GNS, physical-gap, continuum, C6, Sector-A or Pre-A theorem."
+  ],
+  "boundary": "T0 claim-nonbearing finite two-scale semigroup bridge only. It proves no cutoff-, volume-, source-, phase- or exhaustion-uniform UV coefficient or IR gap, common core, common split rule, OS/KMS/GNS reconstruction, mass gap, continuum, C6, Sector-A or Pre-A closure.",
+  "no_overclaim": "The criterion isolates the exact UV coefficient, split-time heat trace and IR gap that a future uniform proof must control; the finite rowwise pass supplies no regulator-independent premise.",
+  "recorded_by": "Codex"
+}
