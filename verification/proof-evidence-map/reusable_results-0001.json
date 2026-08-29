@@ -2,6 +2,45 @@
   "data": [
     {
       "accepted_event_ids": [
+        "20260831-log-domain-lyapunov-core-tail-drift-corridor-20"
+      ],
+      "anchor": "r-417",
+      "claim_ref_basis": {
+        "C6-SPACETIME-SIGNATURE": "proof_anchor_exact"
+      },
+      "claim_refs": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "co_recorded_negative_tags": [],
+      "detail": {
+        "dependencies": "R-416 log-domain rows, R-406/R-415 projected and Schur interfaces, and the T-054 finite intrinsic-graph fixture.",
+        "evidence_grade": "T0 finite executable evidence; claim-nonbearing.",
+        "expected_output": "Integrated Lyapunov-core-tail PASS; primary `18480/18480`, independent `17069/17069`, hostile `10/10`, integrated `44/44`, and Lean R417 PASS.",
+        "falsification_gate": "A sign-changing tail drift, disconnected induced core, failed independent agreement, or failed hostile positivity/connection test falsifies this finite corridor.",
+        "next_required_action": "Prove uniform drift, core capacity and tail-observable control on one Hamiltonian common core, then derive the analytic Lyapunov-Poincare/Schur bridge and transfer it through R-415 before revisiting broken-sector GNS coercivity.",
+        "no_overclaim_statement": "Positive finite drift and core gap do not prove a cutoff-, volume-, source-, phase- or exhaustion-uniform inequality, a global Poincare or Schur theorem, a common Hamiltonian core, OS/KMS/GNS reconstruction, a physical mass gap, continuum, C6, Sector-A or Pre-A closure.",
+        "proven_in": "[R-417 certificate](strategy/pre-a-cp1-st8-q3lock-lyapunov-core-tail-corridor-certificate-260831.md), [Lean entrypoint](verification/lean/Tect/R417.lean), primary/independent/hostile scripts, integrated verifier, [scope note](claims/C6-SPACETIME-SIGNATURE/notes/lyapunov-core-tail-corridor-260831.md), and saved run artefacts.",
+        "reproduction_command": "`python codes/foundations/pre_a_cp1_st8_q3lock_lyapunov_core_tail_corridor_verify.py --self-test`",
+        "result_id": "R-417 is a T0, claim-nonbearing finite corridor under EXP-001262. It treats small conditional masses as a tail and combines a logarithmic Lyapunov drift with an induced core graph certificate, instead of using a pointwise conditional-mass floor.",
+        "scope": "The fixture is volume two with cutoff dimensions `[4,6,8,10,12,14,16,18,20,24,28,30,32]`, beta `{1/2,2,8}`, both orientations, alpha `{1/40,1/20,1/10}`, and thresholds `{4,8,12}`. It covers 13 systems, 78 profiles and 1410 conditional rows.",
+        "statement": "For the finite reversible conductance generator `L f(i)=pi_i^(-1) sum_j c_ij(f_j-f_i)`, the potential `V_i=exp(alpha*(log(pi_max)-log(pi_i)))` yields the directly checked tail rate `min_T(-LV/V)`. The complementary core is measured by its projected positive graph gap, core mass and core-to-tail jump rate.",
+        "tier_before_after": "T0 / T0 (no tier change)."
+      },
+      "detail_title": "Log-domain Lyapunov core-tail drift corridor",
+      "family_refs": [],
+      "id": "R-417",
+      "normalized_detail": {
+        "boundary": "",
+        "proof_anchor": "[R-417 certificate](strategy/pre-a-cp1-st8-q3lock-lyapunov-core-tail-corridor-certificate-260831.md), [Lean entrypoint](verification/lean/Tect/R417.lean), primary/independent/hostile scripts, integrated verifier, [scope note](claims/C6-SPACETIME-SIGNATURE/notes/lyapunov-core-tail-corridor-260831.md), and saved run artefacts.",
+        "publication_target": "",
+        "reuse": "",
+        "statement": "For the finite reversible conductance generator `L f(i)=pi_i^(-1) sum_j c_ij(f_j-f_i)`, the potential `V_i=exp(alpha*(log(pi_max)-log(pi_i)))` yields the directly checked tail rate `min_T(-LV/V)`. The complementary core is measured by its projected positive graph gap, core mass and core-to-tail jump rate."
+      },
+      "summary": "R-417 v1.0 is a T0 claim-nonbearing finite corridor under EXP-001262. A logarithmic Lyapunov potential gives positive finite tail drift while the induced core graph retains a positive projected gap; primary 18480/18480, independent 17069/17069, hostile 10/10, integrated 44/44 and Lean R417 pass over 13 cutoffs, 78 profiles and 1410 rows. Minimum tail drift is 0.5877888606875677, minimum core gap 0.6867237745188258, minimum core mass 0.9804617527664484, and maximum tail mass 0.01953824723355167. Uniform drift, observable-tail control, common-core, global Poincare, OS/KMS/GNS, physical gap, continuum, C6, Sector-A and Pre-A remain open",
+      "title": "Log-domain Lyapunov core-tail drift corridor"
+    },
+    {
+      "accepted_event_ids": [
         "20260831-log-domain-and-projected-schur-cutoff-stress-20"
       ],
       "anchor": "r-416",
@@ -3439,45 +3478,6 @@
       },
       "summary": "Scoped T4 analytic/exact/executed/audited theorem and method boundary. In the enlarged fixed-mean R-151 chart, arbitrary field mean with zero current mean preserves endpoint loss below `19/25` and augmented curvature above `7/50`; an almost-sure declared past-current collar `C_past<=1/25` preserves curvature above `1/10`. The exact nonlinear gate is the conditional complete-form bound `K>=-4I/5`, and the exact finite multi-root gate is `M>=mu G`. Smooth-bump and rational two-edge fixtures prove that averaged linear tests and positive pairwise gaps do not imply those gates. The collar, production `K` and global production `M` remain absent; T-050, A13, phase/PDE selection, and Sector A remain open",
       "title": "Affine-past curvature and nonlinear/multi-root globalization boundary"
-    },
-    {
-      "accepted_event_ids": [
-        "20260803-r-151-direct-two-root-endpoint-hessian-and-unif",
-        "20260803-r-151-release-audit-derived-factors-and-torus-s",
-        "20260821-r-174-two-root-production-cylinder-cross-synthe"
-      ],
-      "anchor": "r-151",
-      "claim_ref_basis": {
-        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION": "proof_anchor_exact"
-      },
-      "claim_refs": [
-        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
-      ],
-      "co_recorded_negative_tags": [
-        "NG-2026-08-03-A13-INDEPENDENT-FOREST-BALANCED-OWNER-FABRICATION"
-      ],
-      "detail": {
-        "audit_boundary": "R-151 does not cover non-lattice or unretained momenta, nonzero strict-past means, nonlinear feedback, cross-pair or full directed-union aggregation, or identify the historical complete-low object. It proves no T-050 or A13 closure, Nelson theorem, removal, interacting measure, phase preference or exclusion, PDE validation or replacement, or Sector-A closure.",
-        "exact_hessian": "Writing `B=C6*C6`, endpoint field covariance `C_t`, current covariance `Q_t`, and field-current cross covariance `K_t`, two Gaussian integrations by parts give one exact scalar endpoint identity. At `K_0=0`, its Hessian is the sum of the nonnegative `Tr(Q2 E B)` term, the mixed `Q1-C1` response, and the `K1-K1` response. The full `12x12` chart retains all sign-to-sign and six-real internal couplings; no scalar or same-sign restriction is used.",
-        "owner_coordinate_consequence": "A fixed terminal and filtration have unique Doob increments. Forest/future, balanced/Schur, trace, and low expressions are alternate expansions or estimates of the same terminal square-minus-trace owner. They may be used to audit the registered identity `2Pcomp=F063_ad-Vfuture`, but adding independently fabricated versions to the already complete endpoint double counts it.",
-        "reuse_scope": "The theorem is reusable for isolated simultaneous antipodal `p:2p` pairs at admissible dual-lattice momenta with both roots retained, arbitrary linear sign/internal feedback, zero strict past, stationary common-even backgrounds, and bounded common-even scalar multipliers. It is local in control amplitude; only its radial algebraic certificate extends to every `x>=0`.",
-        "statement": "Let the simultaneous antipodal roots `+/-p` and `+/-2p` be represented in the A6/A7 six-real convention, where `p` is a nonzero admissible dual-lattice momentum and the cutoff retains all four modes. Let `h2=t H xi1`, with arbitrary `H in R^(12x12)`, shift the second root from the first. Under zero deterministic strict past, a stationary common-even Gaussian background, and common-even scalar regulator multipliers bounded by one, the complete covariance-normal A7 endpoint satisfies `R'(0)=0` and `R''(0)[H,H]>-(4/5)||H||_F^2` for every `H != 0`.",
-        "tier_publication_target": "Scoped T4 analytic/exact/executed/audited finite-cylinder endpoint-Hessian lemma and owner-coordinate no-go; reusable after external review of A6/A7 realification, antipodal normalization, the two Gaussian-IBP factors, R-130 half-Hessian convention, dimension-six nuclear-norm factors, spatial volume, and Sturm endpoint signs.",
-        "uniform_certificate": "R-130's pointwise six-real coefficient-Hessian envelope gives the exact norm factor `156 H6 |p|^2 a^2 b^2`, and antipodal normalization plus spatial integration gives loss at most `624 H6 x/[V f(x)f(4x)]`. The production mass satisfies `M>(7/250)I`, with leading shifted minors `9/125`, `1211/250000`, and `89/31250000`. An exact rational Sturm chain has signs `(+,-,-,+,+)` at zero and `(+,+,-,-,+)` at positive infinity, both with two variations, so the radial loss is strictly below `4/5` for all `x>=0`. The `9/20` source action has Hessian `9/10`, while the sixth-power Hessian is nonnegative. Therefore the augmented local gap is strictly above `1/10 ||H||_F^2` for `H != 0`.",
-        "where_proved": "Claim `A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION`, note `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-two-root-endpoint-hessian-uniform-local-gap-boundary-260803-v1.0.tex.txt`, manifest `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_two_root_endpoint_hessian_uniform_local_gap_boundary_manifest.json`, and the primary, non-importing independent, and integrated exact certificates listed there."
-      },
-      "detail_title": "Direct two-root endpoint Hessian and uniform local source gap",
-      "family_refs": [],
-      "id": "R-151",
-      "normalized_detail": {
-        "boundary": "Scoped T4 analytic/exact/executed/audited finite-cylinder endpoint-Hessian lemma and owner-coordinate no-go; reusable after external review of A6/A7 realification, antipodal normalization, the two Gaussian-IBP factors, R-130 half-Hessian convention, dimension-six nuclear-norm factors, spatial volume, and Sturm endpoint signs.",
-        "proof_anchor": "Claim `A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION`, note `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-two-root-endpoint-hessian-uniform-local-gap-boundary-260803-v1.0.tex.txt`, manifest `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_two_root_endpoint_hessian_uniform_local_gap_boundary_manifest.json`, and the primary, non-importing independent, and integrated exact certificates listed there.",
-        "publication_target": "",
-        "reuse": "The theorem is reusable for isolated simultaneous antipodal `p:2p` pairs at admissible dual-lattice momenta with both roots retained, arbitrary linear sign/internal feedback, zero strict past, stationary common-even backgrounds, and bounded common-even scalar multipliers. It is local in control amplitude; only its radial algebraic certificate extends to every `x>=0`.",
-        "statement": "Let the simultaneous antipodal roots `+/-p` and `+/-2p` be represented in the A6/A7 six-real convention, where `p` is a nonzero admissible dual-lattice momentum and the cutoff retains all four modes. Let `h2=t H xi1`, with arbitrary `H in R^(12x12)`, shift the second root from the first. Under zero deterministic strict past, a stationary common-even Gaussian background, and common-even scalar regulator multipliers bounded by one, the complete covariance-normal A7 endpoint satisfies `R'(0)=0` and `R''(0)[H,H]>-(4/5)||H||_F^2` for every `H != 0`."
-      },
-      "summary": "Scoped T4 analytic/exact/executed/audited local theorem and owner-coordinate no-go. In the full `12x12` sign/internal linear feedback chart `h2=t H xi1` for simultaneous antipodal roots `+/-p` and `+/-2p`, with nonzero admissible dual-lattice `p` and all four modes retained, zero strict past, and a stationary common-even background, the exact complete endpoint has zero first variation and, for `H != 0`, Hessian loss strictly below `4/5 ||H||_F^2`. The radial certificate holds for every `x=|p|^2>=0`. The source Hessian is exactly `9/10 ||H||_F^2` and the sixth-power Hessian is nonnegative, yielding a strict augmented local gap above `1/10 ||H||_F^2`. Forest, balanced, future, trace, and low coordinates may audit the fixed terminal owner but cannot be added as independent reserves. Non-lattice or unretained momenta, nonzero past means, nonlinear feedback, multi-root aggregation, T-050, phase/PDE selection, and Sector A remain open",
-      "title": "Direct two-root endpoint Hessian and uniform local source gap"
     }
   ],
   "kind": "reusable_results",

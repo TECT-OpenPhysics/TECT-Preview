@@ -1,0 +1,80 @@
+{
+  "assertion_count": 10,
+  "boundary": "T0 claim-nonbearing finite log-domain Lyapunov core-tail corridor only. It proves no cutoff-, volume-, source-, phase- or exhaustion-uniform drift, no global Poincare or Schur theorem, no common Hamiltonian core, no OS/KMS/GNS reconstruction, no physical mass gap, no continuum, no C6, no Sector-A and no Pre-A closure.",
+  "checks": [
+    {
+      "actual": "5",
+      "expected": ">=1",
+      "name": "baseline tail exists",
+      "status": "PASS"
+    },
+    {
+      "actual": "2.733528007908442",
+      "expected": ">1e-06",
+      "name": "baseline drift positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.0",
+      "expected": ">0 finite",
+      "name": "baseline potential positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "3.123089533518273",
+      "expected": ">1e-10",
+      "name": "baseline core gap positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.005839877279758809",
+      "expected": "<0.03",
+      "name": "baseline tail mass bounded",
+      "status": "PASS"
+    },
+    {
+      "actual": "-116.45572323446228",
+      "expected": "<-1e-06",
+      "name": "reversed drift rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": "-200.56972097890863",
+      "expected": "<-1e-06",
+      "name": "inverse potential rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": "True",
+      "expected": "True",
+      "name": "disconnected core rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": "True",
+      "expected": "True",
+      "name": "zero mass rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": "True",
+      "expected": "True",
+      "name": "nonpositive threshold rejected",
+      "status": "PASS"
+    }
+  ],
+  "derived": {
+    "baseline_core_gap": 3.123089533518273,
+    "baseline_minimum_tail_drift": 2.733528007908442,
+    "baseline_tail_count": 5,
+    "baseline_tail_mass": 0.005839877279758809,
+    "checks_passed": 10,
+    "inverse_minimum_tail_rate": -200.56972097890863,
+    "reversed_minimum_tail_rate": -116.45572323446228
+  },
+  "exploration_id": "EXP-001262",
+  "manifest": "strategy/pre-a-cp1-st8-q3lock-lyapunov-core-tail-corridor-manifest.json",
+  "result_id": "R-417",
+  "schema": "tect/pre-a-r417-hostile/1.0",
+  "verdict": "PASS"
+}

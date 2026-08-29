@@ -5,10 +5,11 @@
 
 Authorities: `RESULTS-LEDGER.md`.
 
-**250 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
+**251 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
 
 | ID | Result | Tier/scope |
 |---|---|---|
+| [`R-417`](../RESULTS-LEDGER.md#r-417) | Log-domain Lyapunov core-tail drift corridor | T0 |
 | [`R-416`](../RESULTS-LEDGER.md#r-416) | Log-domain and projected Schur cutoff stress | T0 |
 | [`R-415`](../RESULTS-LEDGER.md#r-415) | Schur-certified two-scale semigroup budget for the intrinsic graph | T0 |
 | [`R-414`](../RESULTS-LEDGER.md#r-414) | Two-scale semigroup criterion for the normalized Green trace | T0 |
@@ -33,7 +34,6 @@ Authorities: `RESULTS-LEDGER.md`.
 | [`R-395`](../RESULTS-LEDGER.md#r-395) | Finite Gibbs gentle spectral-complement bridge | T0 |
 | [`R-394`](../RESULTS-LEDGER.md#r-394) | Finite Gibbs spectral-tail energy Markov audit | T0 |
 | [`R-393`](../RESULTS-LEDGER.md#r-393) | High-cutoff QCMI shell stress | T0 |
-| [`R-392`](../RESULTS-LEDGER.md#r-392) | QCMI shell-telescoping boundary budget | T0 |
 
 Search without loading the full ledger:
 

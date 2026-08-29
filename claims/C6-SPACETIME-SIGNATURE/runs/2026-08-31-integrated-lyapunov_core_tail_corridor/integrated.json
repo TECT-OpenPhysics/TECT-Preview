@@ -1,0 +1,590 @@
+{
+  "boundary": "T0 claim-nonbearing finite log-domain Lyapunov core-tail corridor only. It proves no cutoff-, volume-, source-, phase- or exhaustion-uniform drift, no global Poincare or Schur theorem, no common Hamiltonian core, no OS/KMS/GNS reconstruction, no physical mass gap, no continuum, no C6, no Sector-A and no Pre-A closure.",
+  "checks": [
+    {
+      "actual": "['R-417', 'EXP-001262', False]",
+      "expected": "R-417/EXP-001262/false",
+      "group": "provenance",
+      "name": "manifest identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'cutoff_uniform_lyapunov_closed': False, 'volume_uniform_lyapunov_closed': False, 'observable_tail_control_closed': False, 'global_poincare_closed': False, 'common_core_closed': False, 'common_split_rule_closed': False, 'hamiltonian_os_identification_closed': False, 'kms_gns_gap_closed': False, 'continuum_closed': False, 'c6_closed': False, 'sector_a_closed': False, 'pre_a_closed': False}",
+      "expected": "all promoted flags false",
+      "group": "scope",
+      "name": "scope firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2, [4, 6, 8, 10, 12, 14, 16, 18, 20, 24, 28, 30, 32], [0.5, 2.0, 8.0], ['right', 'left'], [0.025, 0.05, 0.1], [4.0, 8.0, 12.0]]",
+      "expected": "volume two, ordered cutoff/beta/orientation/alpha/theta grid",
+      "group": "fixture",
+      "name": "fixture grid",
+      "status": "PASS"
+    },
+    {
+      "actual": "[]",
+      "expected": "all R-417 artifacts",
+      "group": "provenance",
+      "name": "artifacts present",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'codes/foundations/pre_a_cp1_st8_q3lock_lyapunov_core_tail_corridor.py': '3322f442e3becfc51333e628d25d38097a5097f659bb875948287f10cb928046', 'codes/foundations/pre_a_cp1_st8_q3lock_lyapunov_core_tail_corridor_independent.py': '0c5c59bd341c6e88c88d0de4ac3252c7abaaa75003577b9b7f627266540bac04', 'codes/foundations/pre_a_cp1_st8_q3lock_lyapunov_core_tail_corridor_hostile.py': '1590c4c6e64ca397bd9221f745f4b0ffc74212ec3bb57d7f60f443b0f08bd733', 'verification/lean/Tect/R417.lean': 'afeb0ee77f2b3724ebb3707b0ea5f6b72c2119e1d089b31105fe5358cd1bc5b4'}",
+      "expected": "distinct",
+      "group": "provenance",
+      "name": "source hashes distinct",
+      "status": "PASS"
+    },
+    {
+      "actual": "['lyapunov_rate_positive', 'tail_mass_nonnegative', 'core_gap_positive', 'finite_scope']",
+      "expected": "declared markers",
+      "group": "Lean",
+      "name": "Lean markers",
+      "status": "PASS"
+    },
+    {
+      "actual": "finite scalar file",
+      "expected": "no promotion text",
+      "group": "Lean",
+      "name": "Lean boundary",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-417 PRIMARY PASS 18480/18480 cutoffs=13 profiles=78 rows=1410 core_gap=[0.686724,11.0242] tail_drift_min=0.587789 tail_mass_max=0.0195382",
+      "expected": "exit 0 and output",
+      "group": "executables",
+      "name": "run pre_a_cp1_st8_q3lock_lyapunov_core_tail_corridor.py",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-417 INDEPENDENT PASS 17069/17069 cutoffs=13 profiles=78 rows=1410 core_gap=[0.686724,11.0242] tail_drift_min=0.587789 tail_mass_max=0.0195382",
+      "expected": "exit 0 and output",
+      "group": "executables",
+      "name": "run pre_a_cp1_st8_q3lock_lyapunov_core_tail_corridor_independent.py",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-417 HOSTILE PASS 10/10 tail_drift=2.73353 core_gap=3.12309 inverse_drift=-200.57",
+      "expected": "exit 0 and output",
+      "group": "executables",
+      "name": "run pre_a_cp1_st8_q3lock_lyapunov_core_tail_corridor_hostile.py",
+      "status": "PASS"
+    },
+    {
+      "actual": "",
+      "expected": "exit 0",
+      "group": "Lean",
+      "name": "Lean compile",
+      "status": "PASS"
+    },
+    {
+      "actual": "PASS",
+      "expected": "PASS",
+      "group": "executables",
+      "name": "primary verdict",
+      "status": "PASS"
+    },
+    {
+      "actual": "PASS",
+      "expected": "PASS",
+      "group": "executables",
+      "name": "independent verdict",
+      "status": "PASS"
+    },
+    {
+      "actual": "PASS",
+      "expected": "PASS",
+      "group": "hostile",
+      "name": "hostile verdict",
+      "status": "PASS"
+    },
+    {
+      "actual": "[13, 13]",
+      "expected": "exact agreement",
+      "group": "independence",
+      "name": "primary-independent system_count",
+      "status": "PASS"
+    },
+    {
+      "actual": "[78, 78]",
+      "expected": "exact agreement",
+      "group": "independence",
+      "name": "primary-independent profile_count",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1410, 1410]",
+      "expected": "exact agreement",
+      "group": "independence",
+      "name": "primary-independent comparison_row_count",
+      "status": "PASS"
+    },
+    {
+      "actual": "[[4, 6, 8, 10, 12, 14, 16, 18, 20, 24, 28, 30, 32], [4, 6, 8, 10, 12, 14, 16, 18, 20, 24, 28, 30, 32]]",
+      "expected": "exact agreement",
+      "group": "independence",
+      "name": "primary-independent cutoff_dimensions",
+      "status": "PASS"
+    },
+    {
+      "actual": "[[0.5, 2.0, 8.0], [0.5, 2.0, 8.0]]",
+      "expected": "exact agreement",
+      "group": "independence",
+      "name": "primary-independent beta_values",
+      "status": "PASS"
+    },
+    {
+      "actual": "[[0.025, 0.05, 0.1], [0.025, 0.05, 0.1]]",
+      "expected": "exact agreement",
+      "group": "independence",
+      "name": "primary-independent alpha_values",
+      "status": "PASS"
+    },
+    {
+      "actual": "[[4.0, 8.0, 12.0], [4.0, 8.0, 12.0]]",
+      "expected": "exact agreement",
+      "group": "independence",
+      "name": "primary-independent tail_thresholds",
+      "status": "PASS"
+    },
+    {
+      "actual": "[{'theta=12': 1206, 'theta=4': 1372, 'theta=8': 1310}, {'theta=12': 1206, 'theta=4': 1372, 'theta=8': 1310}]",
+      "expected": "exact agreement",
+      "group": "independence",
+      "name": "primary-independent tail_row_count_by_theta",
+      "status": "PASS"
+    },
+    {
+      "actual": "[{'alpha=0.025/theta=12': 1206, 'alpha=0.025/theta=4': 1372, 'alpha=0.025/theta=8': 1310, 'alpha=0.05/theta=12': 1206, 'alpha=0.05/theta=4': 1372, 'alpha=0.05/theta=8': 1310, 'alpha=0.1/theta=12': 1206, 'alpha=0.1/theta=4': 1372, 'alpha=0.1/theta=8': 1310}, {'alpha=0.025/theta=12': 1206, 'alpha=0.025/theta=4': 1372, 'alpha=0.025/theta=8': 1310, 'alpha=0.05/theta=12': 1206, 'alpha=0.05/theta=4': 1372, 'alpha=0.05/theta=8': 1310, 'alpha=0.1/theta=12': 1206, 'alpha=0.1/theta=4': 1372, 'alpha=0.1/theta=8': 1310}]",
+      "expected": "exact agreement",
+      "group": "independence",
+      "name": "primary-independent drift_row_count_by_alpha_theta",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.6867237745188259, 0.6867237745188258]",
+      "expected": "within 5e-07",
+      "group": "independence",
+      "name": "primary-independent minimum_full_projected_gap",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.6867237745188258, 0.6867237745188258]",
+      "expected": "within 5e-07",
+      "group": "independence",
+      "name": "primary-independent minimum_core_gap",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.9804617527664484, 0.9804617527669123]",
+      "expected": "within 5e-07",
+      "group": "independence",
+      "name": "primary-independent minimum_core_mass",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.01953824723355167, 0.019538247233087863]",
+      "expected": "within 5e-07",
+      "group": "independence",
+      "name": "primary-independent maximum_tail_mass",
+      "status": "PASS"
+    },
+    {
+      "actual": "[11.524804493011532, 11.524759095360427]",
+      "expected": "within 0.01",
+      "group": "independence",
+      "name": "primary-independent maximum_full_projected_gap",
+      "status": "PASS"
+    },
+    {
+      "actual": "[11.02424311109937, 11.024243111100075]",
+      "expected": "within 0.01",
+      "group": "independence",
+      "name": "primary-independent maximum_core_gap",
+      "status": "PASS"
+    },
+    {
+      "actual": "[7.208711496205039, 7.208711496204873]",
+      "expected": "within 0.01",
+      "group": "independence",
+      "name": "primary-independent maximum_boundary_rate",
+      "status": "PASS"
+    },
+    {
+      "actual": "[3960.669500250956, 3960.669500173226]",
+      "expected": "within 0.01",
+      "group": "independence",
+      "name": "primary-independent drift alpha=0.025/theta=12",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.5877888606875677, 0.5877888576296527]",
+      "expected": "within 0.01",
+      "group": "independence",
+      "name": "primary-independent drift alpha=0.025/theta=4",
+      "status": "PASS"
+    },
+    {
+      "actual": "[92.40686645333379, 92.40686645674602]",
+      "expected": "within 0.01",
+      "group": "independence",
+      "name": "primary-independent drift alpha=0.025/theta=8",
+      "status": "PASS"
+    },
+    {
+      "actual": "[6924.268438115963, 6924.268437981404]",
+      "expected": "within 0.01",
+      "group": "independence",
+      "name": "primary-independent drift alpha=0.05/theta=12",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.9643073060880736, 0.9643072960460358]",
+      "expected": "within 0.01",
+      "group": "independence",
+      "name": "primary-independent drift alpha=0.05/theta=4",
+      "status": "PASS"
+    },
+    {
+      "actual": "[168.10936687508786, 168.10936688127052]",
+      "expected": "within 0.01",
+      "group": "independence",
+      "name": "primary-independent drift alpha=0.05/theta=8",
+      "status": "PASS"
+    },
+    {
+      "actual": "[10809.450625235637, 10809.45062502908]",
+      "expected": "within 0.01",
+      "group": "independence",
+      "name": "primary-independent drift alpha=0.1/theta=12",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.6142644830030296, 0.6142660890541559]",
+      "expected": "within 0.01",
+      "group": "independence",
+      "name": "primary-independent drift alpha=0.1/theta=4",
+      "status": "PASS"
+    },
+    {
+      "actual": "[280.8587225148632, 280.8587225252204]",
+      "expected": "within 0.01",
+      "group": "independence",
+      "name": "primary-independent drift alpha=0.1/theta=8",
+      "status": "PASS"
+    },
+    {
+      "actual": "[13, 78, 1410]",
+      "expected": "complete finite grid",
+      "group": "coverage",
+      "name": "grid coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.6867237745188258, 0.9804617527664484, 0.01953824723355167]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "core-tail envelope",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.5877888606875677, 0.5877888576296527]",
+      "expected": ">1e-06",
+      "group": "Lyapunov",
+      "name": "positive drift envelope",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'theta=12': 1206, 'theta=4': 1372, 'theta=8': 1310}",
+      "expected": "positive tail rows",
+      "group": "coverage",
+      "name": "tail thresholds covered",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'baseline_core_gap': 3.123089533518273, 'baseline_minimum_tail_drift': 2.733528007908442, 'baseline_tail_count': 5, 'baseline_tail_mass': 0.005839877279758809, 'checks_passed': 10, 'inverse_minimum_tail_rate': -200.56972097890863, 'reversed_minimum_tail_rate': -116.45572323446228}",
+      "expected": "sign/inverse/connection/positivity mutations rejected",
+      "group": "hostile",
+      "name": "hostile suite",
+      "status": "PASS"
+    }
+  ],
+  "comparison_policy": {
+    "aggregate_tolerance": 0.01,
+    "reason": "minimum drift/gap/mass values are compared tightly; maxima use an aggregate eigensolver tolerance",
+    "tight_tolerance": 5e-07
+  },
+  "derived": {
+    "command_outputs": {
+      "lean": "",
+      "pre_a_cp1_st8_q3lock_lyapunov_core_tail_corridor.py": "R-417 PRIMARY PASS 18480/18480 cutoffs=13 profiles=78 rows=1410 core_gap=[0.686724,11.0242] tail_drift_min=0.587789 tail_mass_max=0.0195382",
+      "pre_a_cp1_st8_q3lock_lyapunov_core_tail_corridor_hostile.py": "R-417 HOSTILE PASS 10/10 tail_drift=2.73353 core_gap=3.12309 inverse_drift=-200.57",
+      "pre_a_cp1_st8_q3lock_lyapunov_core_tail_corridor_independent.py": "R-417 INDEPENDENT PASS 17069/17069 cutoffs=13 profiles=78 rows=1410 core_gap=[0.686724,11.0242] tail_drift_min=0.587789 tail_mass_max=0.0195382"
+    },
+    "hostile": {
+      "baseline_core_gap": 3.123089533518273,
+      "baseline_minimum_tail_drift": 2.733528007908442,
+      "baseline_tail_count": 5,
+      "baseline_tail_mass": 0.005839877279758809,
+      "checks_passed": 10,
+      "inverse_minimum_tail_rate": -200.56972097890863,
+      "reversed_minimum_tail_rate": -116.45572323446228
+    },
+    "independent": {
+      "alpha_values": [
+        0.025,
+        0.05,
+        0.1
+      ],
+      "beta_values": [
+        0.5,
+        2.0,
+        8.0
+      ],
+      "c6_closed": false,
+      "common_core_closed": false,
+      "common_split_rule_closed": false,
+      "comparison_row_count": 1410,
+      "continuum_closed": false,
+      "cutoff_dimensions": [
+        4,
+        6,
+        8,
+        10,
+        12,
+        14,
+        16,
+        18,
+        20,
+        24,
+        28,
+        30,
+        32
+      ],
+      "cutoff_uniform_lyapunov_closed": false,
+      "drift_row_count_by_alpha_theta": {
+        "alpha=0.025/theta=12": 1206,
+        "alpha=0.025/theta=4": 1372,
+        "alpha=0.025/theta=8": 1310,
+        "alpha=0.05/theta=12": 1206,
+        "alpha=0.05/theta=4": 1372,
+        "alpha=0.05/theta=8": 1310,
+        "alpha=0.1/theta=12": 1206,
+        "alpha=0.1/theta=4": 1372,
+        "alpha=0.1/theta=8": 1310
+      },
+      "finite_alpha_theta_cutoff_stress_closed": true,
+      "finite_boundary_rate_closed": true,
+      "finite_core_gap_closed": true,
+      "finite_log_domain_rows_closed": true,
+      "finite_lyapunov_drift_closed": true,
+      "finite_tail_mass_accounting_closed": true,
+      "global_poincare_closed": false,
+      "hamiltonian_os_identification_closed": false,
+      "kms_gns_gap_closed": false,
+      "maximum_boundary_rate": 7.208711496204873,
+      "maximum_core_gap": 11.024243111100075,
+      "maximum_full_projected_gap": 11.524759095360427,
+      "maximum_tail_drift_by_alpha_theta": {
+        "alpha=0.025/theta=12": 26466780.147728093,
+        "alpha=0.025/theta=4": 354.0399215912195,
+        "alpha=0.025/theta=8": 327874.127918966,
+        "alpha=0.05/theta=12": 42845647.97119585,
+        "alpha=0.05/theta=4": 643.3842036290004,
+        "alpha=0.05/theta=8": 551621.1266793985,
+        "alpha=0.1/theta=12": 59263890.6867596,
+        "alpha=0.1/theta=4": 1073.3887312208972,
+        "alpha=0.1/theta=8": 808680.2339842145
+      },
+      "maximum_tail_mass": 0.019538247233087863,
+      "minimum_boundary_rate": 0.0,
+      "minimum_core_gap": 0.6867237745188258,
+      "minimum_core_mass": 0.9804617527669123,
+      "minimum_full_projected_gap": 0.6867237745188258,
+      "minimum_tail_drift_by_alpha_theta": {
+        "alpha=0.025/theta=12": 3960.669500173226,
+        "alpha=0.025/theta=4": 0.5877888576296527,
+        "alpha=0.025/theta=8": 92.40686645674602,
+        "alpha=0.05/theta=12": 6924.268437981404,
+        "alpha=0.05/theta=4": 0.9643072960460358,
+        "alpha=0.05/theta=8": 168.10936688127052,
+        "alpha=0.1/theta=12": 10809.45062502908,
+        "alpha=0.1/theta=4": 0.6142660890541559,
+        "alpha=0.1/theta=8": 280.8587225252204
+      },
+      "observable_tail_control_closed": false,
+      "pre_a_closed": false,
+      "profile_count": 78,
+      "sector_a_closed": false,
+      "system_count": 13,
+      "tail_mass_ranges": {
+        "theta=12": [
+          0.0,
+          3.666074568214938e-06
+        ],
+        "theta=4": [
+          0.0,
+          0.019538247233087863
+        ],
+        "theta=8": [
+          0.0,
+          0.00016638152784277262
+        ]
+      },
+      "tail_row_count_by_theta": {
+        "theta=12": 1206,
+        "theta=4": 1372,
+        "theta=8": 1310
+      },
+      "tail_thresholds": [
+        4.0,
+        8.0,
+        12.0
+      ],
+      "volume_uniform_lyapunov_closed": false
+    },
+    "lean": "PASS",
+    "primary": {
+      "alpha_values": [
+        0.025,
+        0.05,
+        0.1
+      ],
+      "beta_values": [
+        0.5,
+        2.0,
+        8.0
+      ],
+      "c6_closed": false,
+      "common_core_closed": false,
+      "common_split_rule_closed": false,
+      "comparison_row_count": 1410,
+      "continuum_closed": false,
+      "cutoff_dimensions": [
+        4,
+        6,
+        8,
+        10,
+        12,
+        14,
+        16,
+        18,
+        20,
+        24,
+        28,
+        30,
+        32
+      ],
+      "cutoff_uniform_lyapunov_closed": false,
+      "drift_row_count_by_alpha_theta": {
+        "alpha=0.025/theta=12": 1206,
+        "alpha=0.025/theta=4": 1372,
+        "alpha=0.025/theta=8": 1310,
+        "alpha=0.05/theta=12": 1206,
+        "alpha=0.05/theta=4": 1372,
+        "alpha=0.05/theta=8": 1310,
+        "alpha=0.1/theta=12": 1206,
+        "alpha=0.1/theta=4": 1372,
+        "alpha=0.1/theta=8": 1310
+      },
+      "finite_alpha_theta_cutoff_stress_closed": true,
+      "finite_boundary_rate_closed": true,
+      "finite_core_gap_closed": true,
+      "finite_log_domain_rows_closed": true,
+      "finite_lyapunov_drift_closed": true,
+      "finite_tail_mass_accounting_closed": true,
+      "global_poincare_closed": false,
+      "hamiltonian_os_identification_closed": false,
+      "kms_gns_gap_closed": false,
+      "maximum_boundary_rate": 7.208711496205039,
+      "maximum_core_gap": 11.02424311109937,
+      "maximum_full_projected_gap": 11.524804493011532,
+      "maximum_tail_drift_by_alpha_theta": {
+        "alpha=0.025/theta=12": 26466780.147659007,
+        "alpha=0.025/theta=4": 354.0399215912087,
+        "alpha=0.025/theta=8": 327874.1082550595,
+        "alpha=0.05/theta=12": 42845647.97108502,
+        "alpha=0.05/theta=4": 643.384203628981,
+        "alpha=0.05/theta=8": 551621.0939139327,
+        "alpha=0.1/theta=12": 59263890.68660836,
+        "alpha=0.1/theta=4": 1073.3887312208662,
+        "alpha=0.1/theta=8": 808680.1866791705
+      },
+      "maximum_tail_mass": 0.01953824723355167,
+      "minimum_boundary_rate": 0.0,
+      "minimum_core_gap": 0.6867237745188258,
+      "minimum_core_mass": 0.9804617527664484,
+      "minimum_full_projected_gap": 0.6867237745188259,
+      "minimum_tail_drift_by_alpha_theta": {
+        "alpha=0.025/theta=12": 3960.669500250956,
+        "alpha=0.025/theta=4": 0.5877888606875677,
+        "alpha=0.025/theta=8": 92.40686645333379,
+        "alpha=0.05/theta=12": 6924.268438115963,
+        "alpha=0.05/theta=4": 0.9643073060880736,
+        "alpha=0.05/theta=8": 168.10936687508786,
+        "alpha=0.1/theta=12": 10809.450625235637,
+        "alpha=0.1/theta=4": 0.6142644830030296,
+        "alpha=0.1/theta=8": 280.8587225148632
+      },
+      "observable_tail_control_closed": false,
+      "pre_a_closed": false,
+      "profile_count": 78,
+      "sector_a_closed": false,
+      "system_count": 13,
+      "tail_mass_ranges": {
+        "theta=12": [
+          0.0,
+          3.6660745682198377e-06
+        ],
+        "theta=4": [
+          0.0,
+          0.01953824723355167
+        ],
+        "theta=8": [
+          0.0,
+          0.00016638152816379826
+        ]
+      },
+      "tail_row_count_by_theta": {
+        "theta=12": 1206,
+        "theta=4": 1372,
+        "theta=8": 1310
+      },
+      "tail_thresholds": [
+        4.0,
+        8.0,
+        12.0
+      ],
+      "volume_uniform_lyapunov_closed": false
+    }
+  },
+  "exploration_id": "EXP-001262",
+  "manifest": "strategy/pre-a-cp1-st8-q3lock-lyapunov-core-tail-corridor-manifest.json",
+  "result_id": "R-417",
+  "schema": "tect/pre-a-r417-integrated/1.0",
+  "scope": {
+    "c6_closed": false,
+    "common_core_closed": false,
+    "common_split_rule_closed": false,
+    "continuum_closed": false,
+    "cutoff_uniform_lyapunov_closed": false,
+    "finite_alpha_theta_cutoff_stress_closed": true,
+    "finite_boundary_rate_closed": true,
+    "finite_core_gap_closed": true,
+    "finite_log_domain_rows_closed": true,
+    "finite_lyapunov_drift_closed": true,
+    "finite_tail_mass_accounting_closed": true,
+    "global_poincare_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "no_new_negative_result": true,
+    "no_pdf": true,
+    "no_tier_change": true,
+    "observable_tail_control_closed": false,
+    "pre_a_closed": false,
+    "sector_a_closed": false,
+    "volume_uniform_lyapunov_closed": false
+  },
+  "verdict": "PASS"
+}

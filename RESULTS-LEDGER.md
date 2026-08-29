@@ -43,6 +43,7 @@ policy in `governance/development-history.md`.
 | [R-377](#r-377) | Gap-free odd-Matsubara resolvent telescoping budget | R-377 v1.0 is a T0 claim-nonbearing finite resolvent-interface checkpoint under EXP-001219. The exact positive-resolvent difference identity and its 64-layer budget pass 122/122 integrated assertions with Lean R377; the accumulated finite budget ratio is 0.9895313426497929 and the absolute-value square-root debt is recorded separately. Uniform locality, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
 | [R-382](#r-382) | Increasing-cutoff endpoint modular moment stress | R-382 v1.0 is a T0 claim-nonbearing finite cutoff-profile diagnostic under EXP-001224. The R-381 endpoint-energy bridge passes across 2816 all-prefix actual-Q3 contexts with Lean R382; edge max M_0 grows from 2.733031855844076 at d=3 to 41.64826651661874 at d=6 and max M_2 from 0.008378198414559081 to 17.719559304500326, with d=5 to d=6 ratios 8.855033106195243 and 36.38049903040583. This is finite growth evidence only; uniform M_0/M_2 control, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
 | [R-407](#r-407) | Canonical-path effective-resistance lower bound | R-407 v1.0 is a T0 claim-nonbearing finite constructive path checkpoint under EXP-001252. The maximum-conductance tree certificate passes primary 22510/22510, independent 22509/22509, hostile 6/6, integrated 35/35 and Lean R407 over 7 systems, 2688 contexts and 21120 rows. The exact intrinsic gap is [0.7570174175402339,5.647863075935321], the canonical lower envelope is [0.2613815898804392,2.508986944248343], and rho is [0.3985672393762041,3.825824154093709]. The finite path certificate exposes the conductance/probability inputs for a future uniform proof; common-core, phase, volume, exhaustion and QFT gates remain open |
+| [R-417](#r-417) | Log-domain Lyapunov core-tail drift corridor | R-417 v1.0 is a T0 claim-nonbearing finite corridor under EXP-001262. A logarithmic Lyapunov potential gives positive finite tail drift while the induced core graph retains a positive projected gap; primary 18480/18480, independent 17069/17069, hostile 10/10, integrated 44/44 and Lean R417 pass over 13 cutoffs, 78 profiles and 1410 rows. Minimum tail drift is 0.5877888606875677, minimum core gap 0.6867237745188258, minimum core mass 0.9804617527664484, and maximum tail mass 0.01953824723355167. Uniform drift, observable-tail control, common-core, global Poincare, OS/KMS/GNS, physical gap, continuum, C6, Sector-A and Pre-A remain open |
 | [R-416](#r-416) | Log-domain and projected Schur cutoff stress | R-416 v1.0 is a T0 claim-nonbearing finite refinement under EXP-001261. Log-sum-exp Gibbs masses and explicit projection away from the sqrt(pi) constant mode separate raw high-cutoff zero-mode drift from a genuine projected-gap collapse; primary 4370/4370, independent 4370/4370, hostile 9/9, integrated 39/39 and Lean R416 pass over 13 cutoffs, 78 profiles and 1410 rows. Primary projected gaps are [0.6867237745188259,11.524804493011532] and Schur gaps [0.3476008247075759,5.985995817095592]. Common-core, cutoff/volume/source/phase/exhaustion uniformity, OS/KMS/GNS, physical gap, continuum, C6, Sector-A and Pre-A remain open |
 | [R-415](#r-415) | Schur-certified two-scale semigroup budget for the intrinsic graph | R-415 v1.0 is a T0 claim-nonbearing finite refinement under EXP-001260. It replaces the late black-box first-positive eigenvalue in R-414 by the conservative R-406 harmonic/Schur gap kappa_S=half min(kappa_coarse,kappa_residual), exposing coarse inter-phase capacity and block-mean-zero residual coercivity in the same Green-trace budget; primary 10440/10440, independent 10439/10439, hostile 9/9, integrated 50/50 and Lean R415 pass over 8 systems, 80 profiles and 1030 rows. The certified gap is [0.3172951609382775,3.232260013170645], minimum Green-bound slack is 2.8762895669125346 and maximum Mellin residual is 4.996003610813204e-16. Uniform Schur bounds, common-core, R-399 transfer, OS/KMS/GNS, physical gap, continuum, C6, Sector-A and Pre-A remain open |
 | [R-414](#r-414) | Two-scale semigroup criterion for the normalized Green trace | R-414 v1.0 is a T0 claim-nonbearing finite two-scale semigroup checkpoint under EXP-001259. The R-413 mixed heat bridge separates a short-time UV power budget from a late-time IR gap budget over 7 systems, 2688 contexts and 21120 rows; primary 191471/191471, independent 191470/191470, hostile 9/9, integrated 42/42 and Lean R414 pass. The minimum first-positive gap is [0.7570174175402339,5.647863075935399], split heat is [0.0036012445961644186,0.5926882083380163], and minimum Green-bound slack is 2.936364851149518. Uniform A_tau, gap, common-core, OS/KMS/GNS, continuum, C6, Sector-A and Pre-A gates remain open |
@@ -704,6 +705,54 @@ Hamiltonian-to-OS/KMS/GNS identification, physical mass gap, continuum, C6,
 Sector-A or Pre-A closure.  No tier change, negative result or PDF is issued.
 
 **Proven in:** [R-407 certificate](strategy/pre-a-cp1-st8-q3lock-canonical-path-resistance-certificate-260830.md), [Lean entrypoint](verification/lean/Tect/R407.lean), primary/independent/hostile scripts, integrated verifier, [scope note](claims/C6-SPACETIME-SIGNATURE/notes/canonical-path-resistance-260830.md), and saved run artefacts.
+<a id="r-417"></a>
+### R-417 -- Log-domain Lyapunov core-tail drift corridor
+
+**Result ID.** R-417 is a T0, claim-nonbearing finite corridor under
+EXP-001262. It treats small conditional masses as a tail and combines a
+logarithmic Lyapunov drift with an induced core graph certificate, instead of
+using a pointwise conditional-mass floor.
+
+**Statement.** For the finite reversible conductance generator
+`L f(i)=pi_i^(-1) sum_j c_ij(f_j-f_i)`, the potential
+`V_i=exp(alpha*(log(pi_max)-log(pi_i)))` yields the directly checked tail rate
+`min_T(-LV/V)`. The complementary core is measured by its projected positive
+graph gap, core mass and core-to-tail jump rate.
+
+**Scope.** The fixture is volume two with cutoff dimensions
+`[4,6,8,10,12,14,16,18,20,24,28,30,32]`, beta `{1/2,2,8}`, both
+orientations, alpha `{1/40,1/20,1/10}`, and thresholds `{4,8,12}`. It
+covers 13 systems, 78 profiles and 1410 conditional rows.
+
+**Dependencies.** R-416 log-domain rows, R-406/R-415 projected and Schur
+interfaces, and the T-054 finite intrinsic-graph fixture.
+
+**Evidence grade.** T0 finite executable evidence; claim-nonbearing.
+
+**Reproduction command.** `python codes/foundations/pre_a_cp1_st8_q3lock_lyapunov_core_tail_corridor_verify.py --self-test`
+
+**Expected output.** Integrated Lyapunov-core-tail PASS; primary `18480/18480`,
+independent `17069/17069`, hostile `10/10`, integrated `44/44`, and Lean R417
+PASS.
+
+**Falsification gate.** A sign-changing tail drift, disconnected induced core,
+failed independent agreement, or failed hostile positivity/connection test
+falsifies this finite corridor.
+
+**Tier before / after.** T0 / T0 (no tier change).
+
+**No-overclaim statement.** Positive finite drift and core gap do not prove a
+cutoff-, volume-, source-, phase- or exhaustion-uniform inequality, a global
+Poincare or Schur theorem, a common Hamiltonian core, OS/KMS/GNS reconstruction,
+a physical mass gap, continuum, C6, Sector-A or Pre-A closure.
+
+**Next required action.** Prove uniform drift, core capacity and tail-observable
+control on one Hamiltonian common core, then derive the analytic
+Lyapunov-Poincare/Schur bridge and transfer it through R-415 before revisiting
+broken-sector GNS coercivity.
+
+**Proven in:** [R-417 certificate](strategy/pre-a-cp1-st8-q3lock-lyapunov-core-tail-corridor-certificate-260831.md), [Lean entrypoint](verification/lean/Tect/R417.lean), primary/independent/hostile scripts, integrated verifier, [scope note](claims/C6-SPACETIME-SIGNATURE/notes/lyapunov-core-tail-corridor-260831.md), and saved run artefacts.
+
 <a id="r-416"></a>
 ### R-416 -- Log-domain and projected Schur cutoff stress
 

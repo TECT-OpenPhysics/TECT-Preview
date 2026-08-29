@@ -1,0 +1,111 @@
+{
+  "schema": "tect/pre-a-cp1-st8-q3lock-lyapunov-core-tail-corridor/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-LYAPUNOV-CORE-TAIL-CORRIDOR-v0",
+  "result_id": "R-417",
+  "title": "Log-domain Lyapunov core-tail drift corridor",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001262",
+  "claim_bearing": false,
+  "parent_explorations": ["EXP-001261", "EXP-001251", "EXP-001252"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY",
+    "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+  ],
+  "question": "Can a logarithmic Lyapunov drift outside a high-probability core replace a pointwise conditional-mass floor, while a core intrinsic gap and boundary rate provide a finite corridor toward a common-core estimate?",
+  "new_perspective": {
+    "principle": "Treat small conditional masses as a tail to be controlled by a Foster-Lyapunov drift, not by a uniform pointwise floor. Combine the tail drift with the induced core graph gap and the core-to-tail jump rate before asking for a global Poincare or Schur bound.",
+    "route": [
+      "Reconstruct Gibbs and conditional rows in the R-416 log domain and define phi_i=log(pi_max)-log(pi_i).",
+      "For alpha>0 set V_i=exp(alpha phi_i) and use the reversible conductance generator Lf(i)=sum_j c_ij(f_j-f_i)/pi_i; record kappa_tail=min_{phi_i>=theta}[-LV(i)/V_i].",
+      "Define the core K_theta={phi<theta}, compute its induced projected graph gap, its mass and the maximum core-to-tail jump rate, and retain tail mass as a separate error budget.",
+      "Stress alpha, theta, cutoff, beta and both collar orientations, then compare independent reconstructions without promoting any observed envelope.",
+      "Use hostile sign, inverse-potential, disconnected-core and zero-mass mutations so drift direction, core connectivity and positivity remain load-bearing."
+    ],
+    "qft_bridge": "A successful analytic route would prove uniform tail drift, core gap, boundary-rate and observable-tail estimates on one Hamiltonian common core, then derive an explicit Lyapunov-Poincare/Schur inequality and transfer it to R-399/R-415. The finite corridor only identifies the constants and the missing theorem."
+  },
+  "finite_theorem": {
+    "generator": "For positive pi and symmetric conductance c, Lf(i)=pi_i^(-1) sum_j c_ij(f_j-f_i).",
+    "lyapunov": "If V_i>0 and kappa_tail=min_{i in T_theta}[-LV(i)/V_i]>0, then LV<=-kappa_tail V on the finite tail T_theta by direct substitution.",
+    "core": "The induced core graph uses c restricted to K_theta and rescaled by the core mass; its projected first positive eigenvalue is a finite conditional gap diagnostic.",
+    "corridor": "Tail mass, tail drift, core gap and core-to-tail jump rate are recorded together. A global Poincare inequality would additionally require an analytic variance decomposition and uniform control of the tail observable term.",
+    "scope": "The calculation is finite and numerical. It does not assert a uniform Lyapunov inequality, a global Poincare constant, a common Hamiltonian core, a GNS gap or a QFT mass gap."
+  },
+  "finite_fixture": {
+    "volume": 2,
+    "cutoff_dimensions": [4, 6, 8, 10, 12, 14, 16, 18, 20, 24, 28, 30, 32],
+    "beta_values": ["1/2", "2", "8"],
+    "orientations": ["right", "left"],
+    "alpha_values": ["1/40", "1/20", "1/10"],
+    "tail_thresholds": [4, 8, 12],
+    "chi": "1",
+    "r": "-1",
+    "g": "3/5",
+    "c": "3/5",
+    "lambda": "1/10",
+    "probability_floor": 1e-300,
+    "gap_floor": 1e-10,
+    "drift_floor": 1e-6,
+    "tail_mass_cap": 0.03,
+    "core_mass_floor": 0.9,
+    "raw_zero_threshold": 1e-8,
+    "numerical_tolerance": 1e-8,
+    "crosscheck_tolerance": 5e-7,
+    "aggregate_tolerance": 1e-2
+  },
+  "scope": {
+    "finite_log_domain_rows_closed": true,
+    "finite_lyapunov_drift_closed": true,
+    "finite_core_gap_closed": true,
+    "finite_tail_mass_accounting_closed": true,
+    "finite_boundary_rate_closed": true,
+    "finite_alpha_theta_cutoff_stress_closed": true,
+    "cutoff_uniform_lyapunov_closed": false,
+    "volume_uniform_lyapunov_closed": false,
+    "observable_tail_control_closed": false,
+    "global_poincare_closed": false,
+    "common_core_closed": false,
+    "common_split_rule_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R417.lean",
+    "theorem_markers": [
+      "lyapunov_rate_positive",
+      "tail_mass_nonnegative",
+      "core_gap_positive",
+      "finite_scope"
+    ],
+    "command": "lake env lean Tect/R417.lean",
+    "boundary": "Lean checks only scalar sign, positivity and finite-scope bookkeeping; the matrix generator, log-domain Gibbs law, core spectrum, tail estimate and all uniform/QFT limits remain executable/open analysis."
+  },
+  "artifacts": {
+    "primary_script": "codes/foundations/pre_a_cp1_st8_q3lock_lyapunov_core_tail_corridor.py",
+    "independent_script": "codes/foundations/pre_a_cp1_st8_q3lock_lyapunov_core_tail_corridor_independent.py",
+    "hostile_script": "codes/foundations/pre_a_cp1_st8_q3lock_lyapunov_core_tail_corridor_hostile.py",
+    "integrated_verifier": "codes/foundations/pre_a_cp1_st8_q3lock_lyapunov_core_tail_corridor_verify.py",
+    "lean": "verification/lean/Tect/R417.lean"
+  },
+  "promotion_criteria": [
+    "Prove a cutoff-, volume-, phase- and exhaustion-uniform drift inequality for one source-independent Lyapunov potential on the Hamiltonian common core.",
+    "Prove a uniform induced-core Schur/Poincare gap and a boundary-rate estimate, including the neutral and inter-phase capacities.",
+    "Control the tail contribution for the actual R-399 likelihood observables in the same two-sided form norm and transfer the result through R-415 before revisiting GNS coercivity."
+  ],
+  "stop_conditions": [
+    "If the tail drift changes sign, the core disconnects or the tail mass is not controlled on a growing stress, retain the corridor as a diagnostic and redesign the potential or the core partition.",
+    "If independent or hostile checks disagree, stop promotion and repair the generator normalization, log convention or induced-core scaling before interpreting any gap.",
+    "A finite positive drift and core gap do not prove a global Poincare inequality, a common core, a GNS gap, a continuum, C6, Sector-A or Pre-A closure."
+  ],
+  "boundary": "T0 claim-nonbearing finite log-domain Lyapunov core-tail corridor only. It proves no cutoff-, volume-, source-, phase- or exhaustion-uniform drift, no global Poincare or Schur theorem, no common Hamiltonian core, no OS/KMS/GNS reconstruction, no physical mass gap, no continuum, no C6, no Sector-A and no Pre-A closure.",
+  "no_overclaim": "The new perspective replaces a fragile pointwise floor by an auditable tail-drift/core-gap interface. Its finite persistence is a route discriminator and a list of analytic debts, not regulator-independent coercivity.",
+  "recorded_by": "Codex"
+}

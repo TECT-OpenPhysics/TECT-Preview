@@ -2411,6 +2411,57 @@
         "EXP-001261",
         "R-416"
       ]
+    },
+    {
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE",
+        "EXP-001262",
+        "R-417"
+      ],
+      "claim_ref_basis": {
+        "C6-SPACETIME-SIGNATURE": "explicit_claim_ids"
+      },
+      "claim_refs": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "date": "2026-08-31",
+      "header": "[Log-domain Lyapunov core-tail drift corridor] - 2026-08-31",
+      "id": "20260831-log-domain-lyapunov-core-tail-drift-corridor-20",
+      "keywords": [
+        "EXP-001262",
+        "Lyapunov",
+        "QFT",
+        "Schur",
+        "core-tail",
+        "drift"
+      ],
+      "linked_result_ids": [
+        "R-417"
+      ],
+      "negative_results": [],
+      "notes": [
+        "strategy/pre-a-cp1-st8-q3lock-lyapunov-core-tail-corridor-manifest.json",
+        "strategy/pre-a-cp1-st8-q3lock-lyapunov-core-tail-corridor-certificate-260831.md",
+        "claims/C6-SPACETIME-SIGNATURE/notes/lyapunov-core-tail-corridor-260831.md"
+      ],
+      "raw": "## [Log-domain Lyapunov core-tail drift corridor] - 2026-08-31\n\nR-417 / EXP-001262 records a finite, claim-nonbearing Lyapunov core-tail corridor. The log-domain conditional rows are split by phi=log(pi_max)-log(pi_i): V=exp(alpha phi) supplies a directly checked negative generator drift on the low-mass tail, while the complementary induced graph supplies a projected core gap, core mass, and a core-to-tail jump-rate diagnostic. On cutoff dimensions [4,6,8,10,12,14,16,18,20,24,28,30,32], beta {1/2,2,8}, both orientations, alpha {1/40,1/20,1/10}, thresholds {4,8,12}, and 1410 conditional rows, primary passes 18480/18480, independent 17069/17069, hostile 10/10, integrated 44/44 and Lean R417 compiles. The minimum tail drift is 0.5877888606875677, minimum induced core gap 0.6867237745188258, minimum core mass 0.9804617527664484, maximum tail mass 0.01953824723355167, and maximum core-to-tail rate 7.208711496205039. The route only identifies a finite Lyapunov-Poincare/Schur interface; uniform drift, observable-tail control, global Poincare, common core, OS/KMS/GNS, physical gap, continuum, C6, Sector-A and Pre-A remain open. No tier change, negative result or PDF is issued.\n\n",
+      "result_ids": [
+        "R-417"
+      ],
+      "result_link_basis": {
+        "R-417": "explicit_result_id"
+      },
+      "scripts": [
+        "codes/foundations/pre_a_cp1_st8_q3lock_lyapunov_core_tail_corridor.py",
+        "codes/foundations/pre_a_cp1_st8_q3lock_lyapunov_core_tail_corridor_independent.py",
+        "codes/foundations/pre_a_cp1_st8_q3lock_lyapunov_core_tail_corridor_hostile.py",
+        "codes/foundations/pre_a_cp1_st8_q3lock_lyapunov_core_tail_corridor_verify.py",
+        "verification/lean/Tect/R417.lean"
+      ],
+      "unresolved_claim_ids": [
+        "EXP-001262",
+        "R-417"
+      ]
     }
   ],
   "kind": "accepted_events",
