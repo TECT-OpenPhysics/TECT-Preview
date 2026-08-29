@@ -45,6 +45,7 @@ policy in `governance/development-history.md`.
 | [R-407](#r-407) | Canonical-path effective-resistance lower bound | R-407 v1.0 is a T0 claim-nonbearing finite constructive path checkpoint under EXP-001252. The maximum-conductance tree certificate passes primary 22510/22510, independent 22509/22509, hostile 6/6, integrated 35/35 and Lean R407 over 7 systems, 2688 contexts and 21120 rows. The exact intrinsic gap is [0.7570174175402339,5.647863075935321], the canonical lower envelope is [0.2613815898804392,2.508986944248343], and rho is [0.3985672393762041,3.825824154093709]. The finite path certificate exposes the conductance/probability inputs for a future uniform proof; common-core, phase, volume, exhaustion and QFT gates remain open |
 | [R-417](#r-417) | Log-domain Lyapunov core-tail drift corridor | R-417 v1.0 is a T0 claim-nonbearing finite corridor under EXP-001262. A logarithmic Lyapunov potential gives positive finite tail drift while the induced core graph retains a positive projected gap; primary 18480/18480, independent 17069/17069, hostile 10/10, integrated 44/44 and Lean R417 pass over 13 cutoffs, 78 profiles and 1410 rows. Minimum tail drift is 0.5877888606875677, minimum core gap 0.6867237745188258, minimum core mass 0.9804617527664484, and maximum tail mass 0.01953824723355167. Uniform drift, observable-tail control, common-core, global Poincare, OS/KMS/GNS, physical gap, continuum, C6, Sector-A and Pre-A remain open |
 | [R-418](#r-418) | Physical-empty same-owner preregistration boundary | R-418 v1.0 is a T0 claim-nonbearing TECT-owner input-boundary audit under EXP-001263. Branch E is preregistered as an uninstantiated physical-empty/preparation slot without zero-field aliasing; the current Reading-H G_* and P1 owners do not provide one common finite-regulator functional, reference, normalization, finite parts, regulator, volume, boundary, limit order, full tangent or projector. Primary 30/30 and independent 21/21 blocker assertions pass, hostile 7/7 mutations are rejected, and integrated 16/16 passes. Sign, Reading-H stationarity and symmetry-projected transverse stability are all BLOCKED_NOT_EVALUATED; no numerical comparison or physical/Yang-Mills claim follows |
+| [R-423](#r-423) | Finite directed boundary-capacity Cauchy envelope | R-423 v1.0 is a T0 claim-nonbearing finite interface under EXP-001268. It replaces the R-422 restricted cross norm by the directed capacity envelope sqrt(rho_C*rho_T), passes 2209/2209 primary assertions over 858 rows and 114 eligible rows, and is independently/hostile/integrated/Lean checked. All 114 tested Q3 capacity reserves are nonpositive; this is a sufficient-budget boundary, not a physical gaplessness result |
 | [R-422](#r-422) | Finite residual core-tail coercivity reserve | R-422 v1.0 is a T0 claim-nonbearing finite two-block interface under EXP-001267. It combines the R-421 tail Hardy floor with a block-mean-zero core form and explicit cross norm; primary 3522/3522 over 858 rows and 114 eligible rows, independent 43/43, hostile 7/7, integrated 20/20 and Lean R422 pass. Twenty-four finite rows have positive conservative reserve and 90 nonpositive sufficient-budget diagnostics; cutoff/volume uniformity, the coarse sector, common core, GNS, continuum, C6, Sector-A and Pre-A remain open |
 | [R-421](#r-421) | Tail-supported Hardy ground-state-transform interface | R-421 v1.0 is a T0 claim-nonbearing finite algebra and selected R-419 Q3 calibration under EXP-001266. The exact reversible ground-state transform has a nonnegative weighted-square remainder; a positive tail rate therefore gives a Hardy bound for tail-supported vectors. Primary 6544/6544 over 6 systems, 858 rows and 1128 vectors, independent 63/63, hostile 7/7, integrated 19/19 and Lean R421 pass. Uniform tail constants, arbitrary-observable Poincare, common core, GNS, continuum, C6, Sector-A and Pre-A remain open |
 | [R-420](#r-420) | Reading-H physical-empty bounded test (blocked) | R-420 v1.0 is a T0 claim-nonbearing TECT-owner preregistration/input-admissibility test under EXP-001265. It freezes fifteen common-owner fields and preregisters E without zero aliasing. R-169 v1.4, R-170 and EXP-000790 still provide no common finite-regulator parent or admitted physical-empty branch; primary 27/27, independent 23/23, hostile 7/7, integrated 39/39 and Lean R420 pass. Sign, full Reading-H stationarity and symmetry-projected transverse stability are all BLOCKED_NOT_EVALUATED; no numerical comparison or physical/Yang-Mills claim follows |
@@ -710,7 +711,37 @@ Hamiltonian-to-OS/KMS/GNS identification, physical mass gap, continuum, C6,
 Sector-A or Pre-A closure.  No tier change, negative result or PDF is issued.
 
 **Proven in:** [R-407 certificate](strategy/pre-a-cp1-st8-q3lock-canonical-path-resistance-certificate-260830.md), [Lean entrypoint](verification/lean/Tect/R407.lean), primary/independent/hostile scripts, integrated verifier, [scope note](claims/C6-SPACETIME-SIGNATURE/notes/canonical-path-resistance-260830.md), and saved run artefacts.
-<a id="r-421"></a>
+<a id="r-423"></a>
+### R-423 -- Finite directed boundary-capacity Cauchy envelope
+
+**Result ID.** `PA-CP1-ST8-Q3LOCK-BOUNDARY-CAPACITY-CAUCHY-v0` (R-423).
+
+**Version and exact scope.** R-423 v1.0 is a T0, claim-nonbearing finite
+interface under EXP-001268.  It keeps the R-419 conditional Q3 law, projected
+conductance, beta grid, collar orientations, `alpha=1/40`, tail threshold `4`,
+and the R-422 block-mean-zero residual split fixed.  For disjoint core/tail
+supports it defines `rho_C=max_i sum_{j in T} c_ij/pi_i` and
+`rho_T=max_j sum_{i in C} c_ij/pi_j`; edgewise Cauchy--Schwarz gives the
+transformed cross envelope `sqrt(rho_C*rho_T)`.  The finite sufficient reserve
+is `min(a,kappa)-sqrt(rho_C*rho_T)`.
+
+**Finding.** Primary execution passes 2209/2209 assertions over 858
+conditional rows and 114 eligible rows; the exact R-422 cross norm is below
+the capacity envelope on every eligible row.  Capacities range from
+2.5432351046609147 to 3654.481957885938 and all 114 capacity reserves are
+nonpositive, ranging from -3650.2671476576393 to -1.7429838727911164.
+Independent 40/40, hostile 7/7, integrated 18/18 and Lean R423 pass.  The
+all-nonpositive result is a sufficient-budget boundary, not a gaplessness
+theorem.
+
+**Boundary.** This finite envelope does not close cutoff/volume/phase/
+exhaustion uniformity, a common Hamiltonian core, the coarse Schur sector,
+R-399 history transfer, OS/KMS/GNS identification, continuum, C6, Sector-A,
+Pre-A, Yang--Mills or mass-gap claims.
+
+**Proven in:** [R-423 certificate](strategy/pre-a-cp1-st8-q3lock-boundary-capacity-cauchy-certificate-260831.md), [machine manifest](strategy/pre-a-cp1-st8-q3lock-boundary-capacity-cauchy-manifest.json), [integrated run](claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-integrated-boundary_capacity_cauchy/integrated.json), and [Lean R423](verification/lean/Tect/R423.lean).
+
+<a id="r-422"></a>
 ### R-422 -- Finite residual core-tail coercivity reserve
 
 **Result ID.** `PA-CP1-ST8-Q3LOCK-RESIDUAL-CORE-TAIL-RESERVE-v0` (R-422).

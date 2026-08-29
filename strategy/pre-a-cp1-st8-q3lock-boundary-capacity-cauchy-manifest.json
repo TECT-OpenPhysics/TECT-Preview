@@ -1,0 +1,146 @@
+{
+  "schema": "tect/pre-a-cp1-st8-q3lock-boundary-capacity-cauchy/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-BOUNDARY-CAPACITY-CAUCHY-v0",
+  "result_id": "R-423",
+  "title": "Finite directed boundary-capacity Cauchy envelope for the residual cross block",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001268",
+  "claim_bearing": false,
+  "parent_results": ["R-422", "R-421", "R-419", "R-406", "R-415"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY",
+    "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+  ],
+  "question": "Can the R-422 residual cross norm be replaced by an explicit directed boundary-capacity Cauchy envelope, and does the resulting finite reserve remain positive on the fixed Q3 grid?",
+  "new_perspective": {
+    "principle": "For disjoint core and tail supports, factor each transformed cross edge as sqrt(c_ij/pi_i) times sqrt(c_ij/pi_j), then apply Cauchy-Schwarz before taking the two-block reserve.",
+    "route": [
+      "Reuse the R-419 conditional Gibbs law, projected momentum conductance, beta grid, orientations, alpha and tail threshold without retuning.",
+      "For every eligible row define rho_C=max_i sum_{j in T} c_ij/pi_i and rho_T=max_j sum_{i in C} c_ij/pi_j.",
+      "Prove the finite edgewise bound |x^T B y| <= sqrt(rho_C rho_T)||x||||y|| for B_ij=c_ij/sqrt(pi_i pi_j).",
+      "Use lambda_capacity=min(a,kappa)-sqrt(rho_C rho_T) as a conservative reserve and retain its positive and nonpositive rows.",
+      "Cross-check the bound against the exact restricted R-422 cross norm, independent probes, hostile input controls and a Lean scalar envelope."
+    ],
+    "qft_bridge": "This isolates the boundary-capacity quantity that an analytic common-core proof must control before the residual and coarse Schur sectors can be combined."
+  },
+  "finite_theorem": {
+    "space": "Euclidean coordinates after the sqrt(pi) transform, with disjoint core and tail supports",
+    "cross_block": "B_ij=c_ij/sqrt(pi_i*pi_j), i in C, j in T",
+    "directed_capacities": "rho_C=max_i sum_{j in T} c_ij/pi_i; rho_T=max_j sum_{i in C} c_ij/pi_j",
+    "edgewise_cauchy": "|sum_ij B_ij x_i y_j| <= sqrt(rho_C rho_T)||x||_2||y||_2",
+    "reserve": "lambda_capacity=min(a,kappa)-sqrt(rho_C rho_T)",
+    "assumptions": [
+      "pi_i>0 and c_ij=c_ji>=0",
+      "core and tail supports are disjoint and nonempty",
+      "a is a nonnegative core restricted-form floor and kappa is a nonnegative tail Hardy floor",
+      "the transformed cross block contains only the off-diagonal conductance block"
+    ],
+    "scope_boundary": "The theorem is finite and applies row-by-row after the declared split; it is not an analytic boundary-capacity estimate uniform in cutoff, volume, phase or exhaustion."
+  },
+  "upstream_authority": {
+    "r422_manifest": "strategy/pre-a-cp1-st8-q3lock-residual-core-tail-reserve-manifest.json",
+    "r422_sha256": "67e645d518dc9ebae1c1590ee045fd7147c2c9c5372097eb420155a2829b7976",
+    "r421_manifest": "strategy/pre-a-cp1-st8-q3lock-tail-hardy-ground-state-transform-manifest.json",
+    "r421_sha256": "44ed253d156681f4ccfda3f8d61845287b163cb5ee8c9a2cf6279b78c9cec406"
+  },
+  "finite_fixture": {
+    "q3_pairs": [
+      {"volume": 2, "cutoff_dimensions": [3, 6, 12]},
+      {"volume": 3, "cutoff_dimensions": [3, 4]},
+      {"volume": 4, "cutoff_dimensions": [4]}
+    ],
+    "beta_values": ["1/2", "2", "8"],
+    "orientations": ["right", "left"],
+    "alpha": "1/40",
+    "tail_threshold": "4",
+    "probability_floor": 1e-300,
+    "rate_floor": 1e-8,
+    "spectral_floor": 1e-10,
+    "numerical_tolerance": 1e-8,
+    "crosscheck_tolerance": 5e-7,
+    "reserve_tolerance": 1e-7
+  },
+  "scope": {
+    "finite_directed_capacity_closed": true,
+    "finite_cauchy_cross_bound_closed": true,
+    "finite_capacity_reserve_closed": true,
+    "finite_capacity_boundary_rows_recorded": true,
+    "cutoff_uniform_capacity_closed": false,
+    "volume_uniform_capacity_closed": false,
+    "phase_uniform_capacity_closed": false,
+    "exhaustion_uniform_capacity_closed": false,
+    "global_poincare_closed": false,
+    "common_core_closed": false,
+    "common_split_rule_closed": false,
+    "coarse_schur_sector_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R423.lean",
+    "theorem_markers": ["scalar_cauchy_capacity", "capacity_reserve_bound", "finite_scope"],
+    "command": "lake env lean Tect/R423.lean",
+    "boundary": "Lean checks the scalar Cauchy-capacity envelope and reserve algebra; it does not formalize the Q3 matrices, directed maxima, common core or any limit."
+  },
+  "artifacts": {
+    "primary_script": "codes/foundations/pre_a_cp1_st8_q3lock_boundary_capacity_cauchy.py",
+    "independent_script": "codes/foundations/pre_a_cp1_st8_q3lock_boundary_capacity_cauchy_independent.py",
+    "hostile_script": "codes/foundations/pre_a_cp1_st8_q3lock_boundary_capacity_cauchy_hostile.py",
+    "integrated_verifier": "codes/foundations/pre_a_cp1_st8_q3lock_boundary_capacity_cauchy_verify.py",
+    "lean": "verification/lean/Tect/R423.lean"
+  },
+  "assumptions": [
+    "The R-419 conditional law is positive and normalized and the projected conductance is symmetric and nonnegative.",
+    "The R-421 tail Lyapunov floor and R-422 block-mean-zero split are reused exactly on the finite Q3 rows.",
+    "The transformed cross block is the conductance block divided by sqrt(pi_i pi_j), with no diagonal contribution between disjoint supports.",
+    "Directed boundary rates are finite and computed from the same conductance normalization as R-419.",
+    "The Lean lane is a scalar algebraic cross-check, not a formalization of the finite matrix eigensolver."
+  ],
+  "missing_assumptions": [
+    "A cutoff-, volume-, phase- and exhaustion-uniform analytic bound on both directed capacities on one Hamiltonian common core.",
+    "A positive capacity reserve after combining the capacity envelope with the core and tail floors at all scales.",
+    "A controlled two-dimensional block-mean coarse Schur sector and its interaction with the residual reserve.",
+    "Two-sided form-norm control of actual R-399 histories and a common split-limit map.",
+    "Hamiltonian-to-OS/KMS/GNS identification and a sectorwise coercive estimate."
+  ],
+  "promotion_criteria": [
+    "Derive the directed capacities from a domain-controlled unbounded Q3 common core rather than finite matrices alone.",
+    "Prove a positive capacity reserve uniform in cutoff, volume, phase and exhaustion, including the coarse Schur sector.",
+    "Transfer the estimate through R-399 histories and R-415 semigroup bounds before any GNS or physical promotion."
+  ],
+  "stop_conditions": [
+    "A nonpositive capacity reserve remains a failure of this sufficient budget and is not clipped or relabeled as a gapless theorem.",
+    "A cross norm exceeding the directed capacity envelope stops the lane and indicates a normalization or support defect.",
+    "Finite capacity diagnostics cannot be promoted to global Poincare, a GNS gap, C6, Sector-A, Pre-A, Yang-Mills or mass-gap closure."
+  ],
+  "evidence_level": "T0 / exact finite edgewise Cauchy envelope plus executed Q3-row capacity diagnostic; no uniform theorem or physical conclusion",
+  "non_claims": [
+    "No cutoff-, volume-, phase- or exhaustion-uniform capacity estimate.",
+    "No global Poincare or full coarse Schur theorem.",
+    "No common Hamiltonian core or split-limit dynamics.",
+    "No OS/KMS/GNS reconstruction or sectorwise spectral gap.",
+    "No continuum, C6, Sector-A, Pre-A, Yang-Mills or mass-gap conclusion."
+  ],
+  "formal_integration": {
+    "event_ordinal": 764,
+    "event_id": "20260831-r-423-finite-directed-boundary-capacity-cauchy",
+    "event_title": "R-423 finite directed boundary-capacity Cauchy envelope",
+    "event_claim_ids": ["C6-SPACETIME-SIGNATURE", "EXP-001268", "R-423"],
+    "lean": "R423 PASS; scalar capacity envelope only",
+    "new_negative": false,
+    "tier_change": false,
+    "pdf": false
+  },
+  "boundary": "R-423 closes the finite edgewise capacity inequality and records the resulting Q3 sufficient-budget boundary. It does not close the Q3LOCK common-alpha or broken-sector coercivity parents.",
+  "next_unlock": "Prove an analytic directed-capacity estimate on a common Q3 core, then combine it with the coarse Schur sector and R-399 history transfer.",
+  "no_overclaim": "A finite capacity reserve is a conditional sufficient budget. Positive or nonpositive rows do not identify the physical vacuum, a regulator-independent gap, a Yang-Mills result or a mass gap."
+}

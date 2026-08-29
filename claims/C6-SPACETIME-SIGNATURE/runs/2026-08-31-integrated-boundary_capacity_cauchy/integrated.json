@@ -1,0 +1,271 @@
+{
+  "boundary": "R-423 closes the finite edgewise capacity inequality and records the resulting Q3 sufficient-budget boundary. It does not close the Q3LOCK common-alpha or broken-sector coercivity parents.",
+  "checks": [
+    {
+      "actual": "['R-423', 'EXP-001268', False]",
+      "expected": "R-423/EXP-001268/false",
+      "group": "provenance",
+      "name": "manifest identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'cutoff_uniform_capacity_closed': False, 'volume_uniform_capacity_closed': False, 'phase_uniform_capacity_closed': False, 'exhaustion_uniform_capacity_closed': False, 'global_poincare_closed': False, 'common_core_closed': False, 'common_split_rule_closed': False, 'coarse_schur_sector_closed': False, 'hamiltonian_os_identification_closed': False, 'kms_gns_gap_closed': False, 'continuum_closed': False, 'c6_closed': False, 'sector_a_closed': False, 'pre_a_closed': False}",
+      "expected": "all promoted flags false",
+      "group": "scope",
+      "name": "scope firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": "[]",
+      "expected": "all R-423 artifacts",
+      "group": "provenance",
+      "name": "artifacts present",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'codes/foundations/pre_a_cp1_st8_q3lock_boundary_capacity_cauchy.py': 'b78e9f59ee23351c2463956cc3815dc08cbfd4db5cd47f6bd42ad883fa873b94', 'codes/foundations/pre_a_cp1_st8_q3lock_boundary_capacity_cauchy_independent.py': 'b4deb8b9be5727b9b24cd18e4a32160d62d47902fc4143a073568f7f5ecdefb4', 'codes/foundations/pre_a_cp1_st8_q3lock_boundary_capacity_cauchy_hostile.py': 'b3798c3dbe20e3d9705e90bab06f4acd79906346f2d2164688eae79cd8be0db4', 'verification/lean/Tect/R423.lean': 'a341046b3c73e4aa20d76c4a6082143f2a56c4fd2397c41fcbc317fd1aab648e'}",
+      "expected": "distinct source hashes",
+      "group": "provenance",
+      "name": "artifact hashes distinct",
+      "status": "PASS"
+    },
+    {
+      "actual": "['scalar_cauchy_capacity', 'capacity_reserve_bound', 'finite_scope']",
+      "expected": "declared markers",
+      "group": "Lean",
+      "name": "Lean markers",
+      "status": "PASS"
+    },
+    {
+      "actual": "finite scalar file",
+      "expected": "no physical promotion text",
+      "group": "Lean",
+      "name": "Lean boundary",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-423 PRIMARY PASS 2209/2209 rows=858 eligible=114 positive=0 nonpositive=114 capacity=[2.54324,3654.48] reserve=[-3650.27,-1.74298]",
+      "expected": "exit 0 and output",
+      "group": "executables",
+      "name": "run pre_a_cp1_st8_q3lock_boundary_capacity_cauchy.py",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-423 INDEPENDENT PASS 40/40 fixtures=4 positive=3 nonpositive=1 reserve=[-0.55,0.577087]",
+      "expected": "exit 0 and output",
+      "group": "executables",
+      "name": "run pre_a_cp1_st8_q3lock_boundary_capacity_cauchy_independent.py",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-423 HOSTILE PASS 7/7 invalid mutations rejected",
+      "expected": "exit 0 and output",
+      "group": "executables",
+      "name": "run pre_a_cp1_st8_q3lock_boundary_capacity_cauchy_hostile.py",
+      "status": "PASS"
+    },
+    {
+      "actual": "Tect/R423.lean:19:4: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nTect/R423.lean:28:5: warning: Variable name `ha` is not explicitly referenced.\n\nThe binding can be removed (if unused) or named `_` (if used implicitly).\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\nTect/R423.lean:28:18: warning: Variable name `hb` is not explicitly referenced.\n\nThe binding can be removed (if unused) or named `_` (if used implicitly).\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`",
+      "expected": "exit 0",
+      "group": "Lean",
+      "name": "Lean compile",
+      "status": "PASS"
+    },
+    {
+      "actual": "PASS",
+      "expected": "PASS",
+      "group": "executables",
+      "name": "primary verdict",
+      "status": "PASS"
+    },
+    {
+      "actual": "PASS",
+      "expected": "PASS",
+      "group": "executables",
+      "name": "independent verdict",
+      "status": "PASS"
+    },
+    {
+      "actual": "PASS",
+      "expected": "PASS",
+      "group": "hostile",
+      "name": "hostile verdict",
+      "status": "PASS"
+    },
+    {
+      "actual": "[6, 858, 282, 114]",
+      "expected": "[6, 'positive', 'positive', 'positive']",
+      "group": "coverage",
+      "name": "primary coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": "[362.5494732750524, 3654.481957885938, 0.13363619581059846]",
+      "expected": "cross norm dominated by capacity",
+      "group": "capacity",
+      "name": "primary capacity domination",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, 114, 114, -3650.2671476576393]",
+      "expected": "all tested Q3 capacity reserves retained as nonpositive",
+      "group": "boundary",
+      "name": "primary capacity boundary",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'fixture_count': 4, 'maximum_capacity': 0.8, 'maximum_capacity_reserve': 0.5770871215252208, 'minimum_capacity': 0.0, 'minimum_capacity_reserve': -0.55, 'minimum_probe_margin': 0.0, 'nonpositive_capacity_reserve_fixture_count': 1, 'positive_capacity_reserve_fixture_count': 3}",
+      "expected": "independent fixtures with both reserve signs",
+      "group": "coverage",
+      "name": "independent coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'all_mutations_rejected': True, 'mutation_count': 7, 'numeric_evaluation': False, 'physical_promotion': False}",
+      "expected": "seven invalid mutations rejected",
+      "group": "hostile",
+      "name": "hostile controls",
+      "status": "PASS"
+    }
+  ],
+  "comparison_policy": {
+    "reason": "the directed capacity envelope is a finite sufficient bound; all nonpositive Q3 reserves are retained without clipping and no uniform or physical conclusion is inferred",
+    "tolerance": 5e-07
+  },
+  "derived": {
+    "command_outputs": {
+      "lean": "Tect/R423.lean:19:4: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nTect/R423.lean:28:5: warning: Variable name `ha` is not explicitly referenced.\n\nThe binding can be removed (if unused) or named `_` (if used implicitly).\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\nTect/R423.lean:28:18: warning: Variable name `hb` is not explicitly referenced.\n\nThe binding can be removed (if unused) or named `_` (if used implicitly).\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`",
+      "pre_a_cp1_st8_q3lock_boundary_capacity_cauchy.py": "R-423 PRIMARY PASS 2209/2209 rows=858 eligible=114 positive=0 nonpositive=114 capacity=[2.54324,3654.48] reserve=[-3650.27,-1.74298]",
+      "pre_a_cp1_st8_q3lock_boundary_capacity_cauchy_hostile.py": "R-423 HOSTILE PASS 7/7 invalid mutations rejected",
+      "pre_a_cp1_st8_q3lock_boundary_capacity_cauchy_independent.py": "R-423 INDEPENDENT PASS 40/40 fixtures=4 positive=3 nonpositive=1 reserve=[-0.55,0.577087]"
+    },
+    "hostile": {
+      "all_mutations_rejected": true,
+      "mutation_count": 7,
+      "numeric_evaluation": false,
+      "physical_promotion": false
+    },
+    "independent": {
+      "fixture_count": 4,
+      "maximum_capacity": 0.8,
+      "maximum_capacity_reserve": 0.5770871215252208,
+      "minimum_capacity": 0.0,
+      "minimum_capacity_reserve": -0.55,
+      "minimum_probe_margin": 0.0,
+      "nonpositive_capacity_reserve_fixture_count": 1,
+      "positive_capacity_reserve_fixture_count": 3
+    },
+    "lean": "PASS",
+    "primary": {
+      "conditional_row_count": 858,
+      "eligible_row_count": 114,
+      "maximum_capacity": 3654.481957885938,
+      "maximum_capacity_reserve": -1.7429838727911164,
+      "maximum_exact_cross_norm": 362.5494732750524,
+      "minimum_capacity": 2.5432351046609147,
+      "minimum_capacity_reserve": -3650.2671476576393,
+      "minimum_exact_cross_norm": 0.05531534607848495,
+      "minimum_probe_cauchy_margin": 0.13363619581059846,
+      "nonpositive_capacity_reserve_row_count": 114,
+      "positive_capacity_reserve_row_count": 0,
+      "system_count": 6,
+      "systems": [
+        {
+          "dimension": 3,
+          "eligible_row_count": 0,
+          "minimum_capacity": null,
+          "minimum_capacity_reserve": null,
+          "nonpositive_capacity_reserve_rows": 0,
+          "positive_capacity_reserve_rows": 0,
+          "row_count": 24,
+          "tail_row_count": 0,
+          "volume": 2
+        },
+        {
+          "dimension": 6,
+          "eligible_row_count": 16,
+          "minimum_capacity": 6.423364034425148,
+          "minimum_capacity_reserve": -11.579766354987335,
+          "nonpositive_capacity_reserve_rows": 16,
+          "positive_capacity_reserve_rows": 0,
+          "row_count": 42,
+          "tail_row_count": 28,
+          "volume": 2
+        },
+        {
+          "dimension": 12,
+          "eligible_row_count": 78,
+          "minimum_capacity": 48.1826132088832,
+          "minimum_capacity_reserve": -3650.2671476576393,
+          "nonpositive_capacity_reserve_rows": 78,
+          "positive_capacity_reserve_rows": 0,
+          "row_count": 78,
+          "tail_row_count": 78,
+          "volume": 2
+        },
+        {
+          "dimension": 3,
+          "eligible_row_count": 0,
+          "minimum_capacity": null,
+          "minimum_capacity_reserve": null,
+          "nonpositive_capacity_reserve_rows": 0,
+          "positive_capacity_reserve_rows": 0,
+          "row_count": 78,
+          "tail_row_count": 0,
+          "volume": 3
+        },
+        {
+          "dimension": 4,
+          "eligible_row_count": 4,
+          "minimum_capacity": 2.9406029336626998,
+          "minimum_capacity_reserve": -2.1394599699392405,
+          "nonpositive_capacity_reserve_rows": 4,
+          "positive_capacity_reserve_rows": 0,
+          "row_count": 126,
+          "tail_row_count": 32,
+          "volume": 3
+        },
+        {
+          "dimension": 4,
+          "eligible_row_count": 16,
+          "minimum_capacity": 2.5432351046609147,
+          "minimum_capacity_reserve": -4.384296226638191,
+          "nonpositive_capacity_reserve_rows": 16,
+          "positive_capacity_reserve_rows": 0,
+          "row_count": 510,
+          "tail_row_count": 144,
+          "volume": 4
+        }
+      ],
+      "tail_row_count": 282
+    }
+  },
+  "exploration_id": "EXP-001268",
+  "manifest": "strategy/pre-a-cp1-st8-q3lock-boundary-capacity-cauchy-manifest.json",
+  "result_id": "R-423",
+  "schema": "tect/pre-a-r423-integrated/1.0",
+  "scope": {
+    "c6_closed": false,
+    "coarse_schur_sector_closed": false,
+    "common_core_closed": false,
+    "common_split_rule_closed": false,
+    "continuum_closed": false,
+    "cutoff_uniform_capacity_closed": false,
+    "exhaustion_uniform_capacity_closed": false,
+    "finite_capacity_boundary_rows_recorded": true,
+    "finite_capacity_reserve_closed": true,
+    "finite_cauchy_cross_bound_closed": true,
+    "finite_directed_capacity_closed": true,
+    "global_poincare_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "no_new_negative_result": true,
+    "no_pdf": true,
+    "no_tier_change": true,
+    "phase_uniform_capacity_closed": false,
+    "pre_a_closed": false,
+    "sector_a_closed": false,
+    "volume_uniform_capacity_closed": false
+  },
+  "verdict": "PASS"
+}
