@@ -1,0 +1,5601 @@
+{
+  "assertion_count": 19486,
+  "boundary": "T0 claim-nonbearing finite growing-volume log-domain Lyapunov/core-tail stress. No volume-, cutoff-, phase- or exhaustion-uniform drift or gap, no common Hamiltonian core, no global Poincare theorem, no OS/KMS/GNS reconstruction, no physical mass gap, no continuum, C6, Sector-A or Pre-A closure.",
+  "checks": [
+    {
+      "actual": "['R-419', 'EXP-001264', False]",
+      "expected": "R-419/EXP-001264/false",
+      "group": "provenance",
+      "name": "identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'volume_uniform_lyapunov_closed': False, 'cutoff_uniform_lyapunov_closed': False, 'phase_uniform_lyapunov_closed': False, 'exhaustion_uniform_lyapunov_closed': False, 'observable_tail_control_closed': False, 'global_poincare_closed': False, 'common_core_closed': False, 'common_split_rule_closed': False, 'hamiltonian_os_identification_closed': False, 'kms_gns_gap_closed': False, 'continuum_closed': False, 'c6_closed': False, 'sector_a_closed': False, 'pre_a_closed': False}",
+      "expected": "all promoted flags false",
+      "group": "scope",
+      "name": "scope firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": "[(2, [3, 4, 5, 6, 8, 10, 12]), (3, [3, 4, 5, 6]), (4, [4])]",
+      "expected": "declared growing-volume grid",
+      "group": "fixture",
+      "name": "volume grid",
+      "status": "PASS"
+    },
+    {
+      "actual": "[[0.5, 2.0, 8.0], ['right', 'left']]",
+      "expected": "fixed beta and orientation grid",
+      "group": "fixture",
+      "name": "beta/orientation grid",
+      "status": "PASS"
+    },
+    {
+      "actual": "[[0.025, 0.05, 0.1], [4.0, 8.0, 12.0]]",
+      "expected": "fixed alpha and theta grid",
+      "group": "fixture",
+      "name": "alpha/theta grid",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.0",
+      "expected": ">0",
+      "group": "fixture",
+      "name": "positive chi",
+      "status": "PASS"
+    },
+    {
+      "actual": "(9, 9)",
+      "expected": "(9, 9)",
+      "group": "coordinates",
+      "name": "V=2 d=3 basis",
+      "status": "PASS"
+    },
+    {
+      "actual": "[-2.787148628265803, -1.68706430962384, 1.0]",
+      "expected": "finite normalized log law",
+      "group": "log-domain",
+      "name": "V=2 d=3 beta=0.5 log law",
+      "status": "PASS"
+    },
+    {
+      "actual": "-1.2022115799687405",
+      "expected": "finite positive conditional row",
+      "group": "log-domain",
+      "name": "V=2 d=3 right row log",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.9531009968564168, 1.0, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=3 beta=0.5 right row theta=4 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=0.5 right alpha=0.025 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=0.5 right alpha=0.05 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=0.5 right alpha=0.1 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.9531009968564168, 1.0, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=3 beta=0.5 right row theta=8 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=0.5 right alpha=0.025 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=0.5 right alpha=0.05 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=0.5 right alpha=0.1 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.9531009968564168, 1.0, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=3 beta=0.5 right row theta=12 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=0.5 right alpha=0.025 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=0.5 right alpha=0.05 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=0.5 right alpha=0.1 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "-1.7365707427272215",
+      "expected": "finite positive conditional row",
+      "group": "log-domain",
+      "name": "V=2 d=3 right row log",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.1481200260316027, 1.0000000000000002, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=3 beta=0.5 right row theta=4 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=0.5 right alpha=0.025 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=0.5 right alpha=0.05 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=0.5 right alpha=0.1 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.1481200260316027, 1.0000000000000002, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=3 beta=0.5 right row theta=8 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=0.5 right alpha=0.025 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=0.5 right alpha=0.05 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=0.5 right alpha=0.1 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.1481200260316027, 1.0000000000000002, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=3 beta=0.5 right row theta=12 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=0.5 right alpha=0.025 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=0.5 right alpha=0.05 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=0.5 right alpha=0.1 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "-1.1582686887398979",
+      "expected": "finite positive conditional row",
+      "group": "log-domain",
+      "name": "V=2 d=3 right row log",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.9718589397217973, 0.9999999999999999, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=3 beta=0.5 right row theta=4 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=0.5 right alpha=0.025 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=0.5 right alpha=0.05 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=0.5 right alpha=0.1 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.9718589397217973, 0.9999999999999999, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=3 beta=0.5 right row theta=8 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=0.5 right alpha=0.025 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=0.5 right alpha=0.05 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=0.5 right alpha=0.1 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.9718589397217973, 0.9999999999999999, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=3 beta=0.5 right row theta=12 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=0.5 right alpha=0.025 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=0.5 right alpha=0.05 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=0.5 right alpha=0.1 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "-1.7365707427272215",
+      "expected": "finite positive conditional row",
+      "group": "log-domain",
+      "name": "V=2 d=3 right row log",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.1481200260316025, 1.0, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=3 beta=0.5 right row theta=4 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=0.5 right alpha=0.025 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=0.5 right alpha=0.05 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=0.5 right alpha=0.1 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.1481200260316025, 1.0, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=3 beta=0.5 right row theta=8 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=0.5 right alpha=0.025 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=0.5 right alpha=0.05 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=0.5 right alpha=0.1 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.1481200260316025, 1.0, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=3 beta=0.5 right row theta=12 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=0.5 right alpha=0.025 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=0.5 right alpha=0.05 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=0.5 right alpha=0.1 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "4",
+      "expected": "4",
+      "group": "coverage",
+      "name": "V=2 d=3 right prefix coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": "-1.2022115799687403",
+      "expected": "finite positive conditional row",
+      "group": "log-domain",
+      "name": "V=2 d=3 left row log",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.9531009968564175, 1.0, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=3 beta=0.5 left row theta=4 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=0.5 left alpha=0.025 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=0.5 left alpha=0.05 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=0.5 left alpha=0.1 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.9531009968564175, 1.0, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=3 beta=0.5 left row theta=8 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=0.5 left alpha=0.025 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=0.5 left alpha=0.05 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=0.5 left alpha=0.1 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.9531009968564175, 1.0, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=3 beta=0.5 left row theta=12 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=0.5 left alpha=0.025 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=0.5 left alpha=0.05 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=0.5 left alpha=0.1 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "-1.736570742727221",
+      "expected": "finite positive conditional row",
+      "group": "log-domain",
+      "name": "V=2 d=3 left row log",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.148120026031602, 1.0, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=3 beta=0.5 left row theta=4 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=0.5 left alpha=0.025 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=0.5 left alpha=0.05 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=0.5 left alpha=0.1 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.148120026031602, 1.0, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=3 beta=0.5 left row theta=8 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=0.5 left alpha=0.025 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=0.5 left alpha=0.05 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=0.5 left alpha=0.1 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.148120026031602, 1.0, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=3 beta=0.5 left row theta=12 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=0.5 left alpha=0.025 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=0.5 left alpha=0.05 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=0.5 left alpha=0.1 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "-1.158268688739898",
+      "expected": "finite positive conditional row",
+      "group": "log-domain",
+      "name": "V=2 d=3 left row log",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.9718589397217974, 1.0, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=3 beta=0.5 left row theta=4 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=0.5 left alpha=0.025 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=0.5 left alpha=0.05 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=0.5 left alpha=0.1 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.9718589397217974, 1.0, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=3 beta=0.5 left row theta=8 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=0.5 left alpha=0.025 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=0.5 left alpha=0.05 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=0.5 left alpha=0.1 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.9718589397217974, 1.0, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=3 beta=0.5 left row theta=12 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=0.5 left alpha=0.025 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=0.5 left alpha=0.05 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=0.5 left alpha=0.1 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "-1.7365707427272215",
+      "expected": "finite positive conditional row",
+      "group": "log-domain",
+      "name": "V=2 d=3 left row log",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.1481200260316027, 1.0, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=3 beta=0.5 left row theta=4 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=0.5 left alpha=0.025 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=0.5 left alpha=0.05 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=0.5 left alpha=0.1 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.1481200260316027, 1.0, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=3 beta=0.5 left row theta=8 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=0.5 left alpha=0.025 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=0.5 left alpha=0.05 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=0.5 left alpha=0.1 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.1481200260316027, 1.0, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=3 beta=0.5 left row theta=12 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=0.5 left alpha=0.025 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=0.5 left alpha=0.05 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=0.5 left alpha=0.1 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "4",
+      "expected": "4",
+      "group": "coverage",
+      "name": "V=2 d=3 left prefix coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": "[-3.844094150571584, -0.985041008285613, 1.0]",
+      "expected": "finite normalized log law",
+      "group": "log-domain",
+      "name": "V=2 d=3 beta=2.0 log law",
+      "status": "PASS"
+    },
+    {
+      "actual": "-2.125686934088562",
+      "expected": "finite positive conditional row",
+      "group": "log-domain",
+      "name": "V=2 d=3 right row log",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.7570174175402336, 1.0, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=3 beta=2.0 right row theta=4 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=2.0 right alpha=0.025 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=2.0 right alpha=0.05 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=2.0 right alpha=0.1 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.7570174175402336, 1.0, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=3 beta=2.0 right row theta=8 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=2.0 right alpha=0.025 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=2.0 right alpha=0.05 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=2.0 right alpha=0.1 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.7570174175402336, 1.0, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=3 beta=2.0 right row theta=12 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=2.0 right alpha=0.025 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=2.0 right alpha=0.05 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=2.0 right alpha=0.1 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "-3.023850879073183",
+      "expected": "finite positive conditional row",
+      "group": "log-domain",
+      "name": "V=2 d=3 right row log",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.481985895256325, 1.0, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=3 beta=2.0 right row theta=4 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=2.0 right alpha=0.025 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=2.0 right alpha=0.05 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=2.0 right alpha=0.1 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.481985895256325, 1.0, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=3 beta=2.0 right row theta=8 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=2.0 right alpha=0.025 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=2.0 right alpha=0.05 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=2.0 right alpha=0.1 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.481985895256325, 1.0, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=3 beta=2.0 right row theta=12 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=2.0 right alpha=0.025 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=2.0 right alpha=0.05 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=2.0 right alpha=0.1 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "-1.4370427903983072",
+      "expected": "finite positive conditional row",
+      "group": "log-domain",
+      "name": "V=2 d=3 right row log",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.8744653876716512, 1.0, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=3 beta=2.0 right row theta=4 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=2.0 right alpha=0.025 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=2.0 right alpha=0.05 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=2.0 right alpha=0.1 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.8744653876716512, 1.0, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=3 beta=2.0 right row theta=8 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=2.0 right alpha=0.025 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=2.0 right alpha=0.05 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=2.0 right alpha=0.1 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.8744653876716512, 1.0, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=3 beta=2.0 right row theta=12 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=2.0 right alpha=0.025 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=2.0 right alpha=0.05 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=2.0 right alpha=0.1 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "-3.0238508790731835",
+      "expected": "finite positive conditional row",
+      "group": "log-domain",
+      "name": "V=2 d=3 right row log",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.4819858952563263, 1.0, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=3 beta=2.0 right row theta=4 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=2.0 right alpha=0.025 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=2.0 right alpha=0.05 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=2.0 right alpha=0.1 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.4819858952563263, 1.0, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=3 beta=2.0 right row theta=8 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=2.0 right alpha=0.025 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=2.0 right alpha=0.05 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=2.0 right alpha=0.1 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.4819858952563263, 1.0, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=3 beta=2.0 right row theta=12 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=2.0 right alpha=0.025 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=2.0 right alpha=0.05 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=2.0 right alpha=0.1 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "4",
+      "expected": "4",
+      "group": "coverage",
+      "name": "V=2 d=3 right prefix coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": "-2.125686934088562",
+      "expected": "finite positive conditional row",
+      "group": "log-domain",
+      "name": "V=2 d=3 left row log",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.7570174175402336, 1.0, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=3 beta=2.0 left row theta=4 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=2.0 left alpha=0.025 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=2.0 left alpha=0.05 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=2.0 left alpha=0.1 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.7570174175402336, 1.0, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=3 beta=2.0 left row theta=8 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=2.0 left alpha=0.025 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=2.0 left alpha=0.05 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=2.0 left alpha=0.1 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.7570174175402336, 1.0, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=3 beta=2.0 left row theta=12 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=2.0 left alpha=0.025 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=2.0 left alpha=0.05 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=2.0 left alpha=0.1 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "-3.023850879073183",
+      "expected": "finite positive conditional row",
+      "group": "log-domain",
+      "name": "V=2 d=3 left row log",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.4819858952563254, 1.0, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=3 beta=2.0 left row theta=4 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=2.0 left alpha=0.025 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=2.0 left alpha=0.05 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=2.0 left alpha=0.1 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.4819858952563254, 1.0, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=3 beta=2.0 left row theta=8 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=2.0 left alpha=0.025 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=2.0 left alpha=0.05 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=2.0 left alpha=0.1 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.4819858952563254, 1.0, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=3 beta=2.0 left row theta=12 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=2.0 left alpha=0.025 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=2.0 left alpha=0.05 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=2.0 left alpha=0.1 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "-1.4370427903983072",
+      "expected": "finite positive conditional row",
+      "group": "log-domain",
+      "name": "V=2 d=3 left row log",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.8744653876716503, 1.0, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=3 beta=2.0 left row theta=4 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=2.0 left alpha=0.025 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=2.0 left alpha=0.05 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=2.0 left alpha=0.1 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.8744653876716503, 1.0, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=3 beta=2.0 left row theta=8 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=2.0 left alpha=0.025 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=2.0 left alpha=0.05 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=2.0 left alpha=0.1 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.8744653876716503, 1.0, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=3 beta=2.0 left row theta=12 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=2.0 left alpha=0.025 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=2.0 left alpha=0.05 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=2.0 left alpha=0.1 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "-3.0238508790731835",
+      "expected": "finite positive conditional row",
+      "group": "log-domain",
+      "name": "V=2 d=3 left row log",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.4819858952563263, 1.0, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=3 beta=2.0 left row theta=4 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=2.0 left alpha=0.025 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=2.0 left alpha=0.05 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=2.0 left alpha=0.1 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.4819858952563263, 1.0, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=3 beta=2.0 left row theta=8 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=2.0 left alpha=0.025 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=2.0 left alpha=0.05 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=2.0 left alpha=0.1 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.4819858952563263, 1.0, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=3 beta=2.0 left row theta=12 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=2.0 left alpha=0.025 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=2.0 left alpha=0.05 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=2.0 left alpha=0.1 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "4",
+      "expected": "4",
+      "group": "coverage",
+      "name": "V=2 d=3 left prefix coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": "[-5.84949907143448, -0.8360296660396225, 0.9999999999999999]",
+      "expected": "finite normalized log law",
+      "group": "log-domain",
+      "name": "V=2 d=3 beta=8.0 log law",
+      "status": "PASS"
+    },
+    {
+      "actual": "-3.306599649750021",
+      "expected": "finite positive conditional row",
+      "group": "log-domain",
+      "name": "V=2 d=3 right row log",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.6920227633208035, 1.0, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=3 beta=8.0 right row theta=4 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=8.0 right alpha=0.025 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=8.0 right alpha=0.05 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=8.0 right alpha=0.1 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.6920227633208035, 1.0, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=3 beta=8.0 right row theta=8 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=8.0 right alpha=0.025 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=8.0 right alpha=0.05 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=8.0 right alpha=0.1 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.6920227633208035, 1.0, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=3 beta=8.0 right row theta=12 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=8.0 right alpha=0.025 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=8.0 right alpha=0.05 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=8.0 right alpha=0.1 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "-3.351173308980746",
+      "expected": "finite positive conditional row",
+      "group": "log-domain",
+      "name": "V=2 d=3 right row log",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.819528612234675, 1.0, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=3 beta=8.0 right row theta=4 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=8.0 right alpha=0.025 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=8.0 right alpha=0.05 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=8.0 right alpha=0.1 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.819528612234675, 1.0, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=3 beta=8.0 right row theta=8 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=8.0 right alpha=0.025 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=8.0 right alpha=0.05 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=8.0 right alpha=0.1 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.819528612234675, 1.0, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=3 beta=8.0 right row theta=12 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=8.0 right alpha=0.025 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=8.0 right alpha=0.05 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=8.0 right alpha=0.1 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "-2.542899421684459",
+      "expected": "finite positive conditional row",
+      "group": "log-domain",
+      "name": "V=2 d=3 right row log",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.7235665384405496, 1.0, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=3 beta=8.0 right row theta=4 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=8.0 right alpha=0.025 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=8.0 right alpha=0.05 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=8.0 right alpha=0.1 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.7235665384405496, 1.0, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=3 beta=8.0 right row theta=8 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=8.0 right alpha=0.025 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=8.0 right alpha=0.05 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=8.0 right alpha=0.1 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.7235665384405496, 1.0, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=3 beta=8.0 right row theta=12 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=8.0 right alpha=0.025 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=8.0 right alpha=0.05 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=8.0 right alpha=0.1 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "-3.351173308980749",
+      "expected": "finite positive conditional row",
+      "group": "log-domain",
+      "name": "V=2 d=3 right row log",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.819528612234677, 1.0, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=3 beta=8.0 right row theta=4 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=8.0 right alpha=0.025 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=8.0 right alpha=0.05 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=8.0 right alpha=0.1 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.819528612234677, 1.0, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=3 beta=8.0 right row theta=8 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=8.0 right alpha=0.025 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=8.0 right alpha=0.05 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=8.0 right alpha=0.1 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.819528612234677, 1.0, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=3 beta=8.0 right row theta=12 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=8.0 right alpha=0.025 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=8.0 right alpha=0.05 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=8.0 right alpha=0.1 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "4",
+      "expected": "4",
+      "group": "coverage",
+      "name": "V=2 d=3 right prefix coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": "-3.3065996497500216",
+      "expected": "finite positive conditional row",
+      "group": "log-domain",
+      "name": "V=2 d=3 left row log",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.6920227633208036, 1.0, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=3 beta=8.0 left row theta=4 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=8.0 left alpha=0.025 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=8.0 left alpha=0.05 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=8.0 left alpha=0.1 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.6920227633208036, 1.0, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=3 beta=8.0 left row theta=8 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=8.0 left alpha=0.025 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=8.0 left alpha=0.05 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=8.0 left alpha=0.1 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.6920227633208036, 1.0, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=3 beta=8.0 left row theta=12 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=8.0 left alpha=0.025 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=8.0 left alpha=0.05 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=8.0 left alpha=0.1 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "-3.351173308980747",
+      "expected": "finite positive conditional row",
+      "group": "log-domain",
+      "name": "V=2 d=3 left row log",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.8195286122346757, 1.0, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=3 beta=8.0 left row theta=4 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=8.0 left alpha=0.025 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=8.0 left alpha=0.05 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=8.0 left alpha=0.1 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.8195286122346757, 1.0, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=3 beta=8.0 left row theta=8 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=8.0 left alpha=0.025 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=8.0 left alpha=0.05 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=8.0 left alpha=0.1 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.8195286122346757, 1.0, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=3 beta=8.0 left row theta=12 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=8.0 left alpha=0.025 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=8.0 left alpha=0.05 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=8.0 left alpha=0.1 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "-2.5428994216844587",
+      "expected": "finite positive conditional row",
+      "group": "log-domain",
+      "name": "V=2 d=3 left row log",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.7235665384405491, 1.0, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=3 beta=8.0 left row theta=4 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=8.0 left alpha=0.025 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=8.0 left alpha=0.05 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=8.0 left alpha=0.1 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.7235665384405491, 1.0, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=3 beta=8.0 left row theta=8 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=8.0 left alpha=0.025 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=8.0 left alpha=0.05 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=8.0 left alpha=0.1 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.7235665384405491, 1.0, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=3 beta=8.0 left row theta=12 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=8.0 left alpha=0.025 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=8.0 left alpha=0.05 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=8.0 left alpha=0.1 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "-3.351173308980748",
+      "expected": "finite positive conditional row",
+      "group": "log-domain",
+      "name": "V=2 d=3 left row log",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.8195286122346759, 1.0, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=3 beta=8.0 left row theta=4 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=8.0 left alpha=0.025 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=8.0 left alpha=0.05 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=8.0 left alpha=0.1 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.8195286122346759, 1.0, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=3 beta=8.0 left row theta=8 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=8.0 left alpha=0.025 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=8.0 left alpha=0.05 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=8.0 left alpha=0.1 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.8195286122346759, 1.0, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=3 beta=8.0 left row theta=12 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=8.0 left alpha=0.025 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=8.0 left alpha=0.05 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=3 beta=8.0 left alpha=0.1 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "4",
+      "expected": "4",
+      "group": "coverage",
+      "name": "V=2 d=3 left prefix coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": "(16, 16)",
+      "expected": "(16, 16)",
+      "group": "coordinates",
+      "name": "V=2 d=4 basis",
+      "status": "PASS"
+    },
+    {
+      "actual": "[-4.371187110275368, -2.107269563588986, 1.0000000000000004]",
+      "expected": "finite normalized log law",
+      "group": "log-domain",
+      "name": "V=2 d=4 beta=0.5 log law",
+      "status": "PASS"
+    },
+    {
+      "actual": "-1.3890858165598001",
+      "expected": "finite positive conditional row",
+      "group": "log-domain",
+      "name": "V=2 d=4 right row log",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.0022812277674598, 0.9999999999999999, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=4 beta=0.5 right row theta=4 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=0.5 right alpha=0.025 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=0.5 right alpha=0.05 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=0.5 right alpha=0.1 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.0022812277674598, 0.9999999999999999, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=4 beta=0.5 right row theta=8 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=0.5 right alpha=0.025 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=0.5 right alpha=0.05 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=0.5 right alpha=0.1 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.0022812277674598, 0.9999999999999999, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=4 beta=0.5 right row theta=12 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=0.5 right alpha=0.025 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=0.5 right alpha=0.05 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=0.5 right alpha=0.1 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "-2.9821012937155684",
+      "expected": "finite positive conditional row",
+      "group": "log-domain",
+      "name": "V=2 d=4 right row log",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.4680692336038854, 1.0, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=4 beta=0.5 right row theta=4 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=0.5 right alpha=0.025 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=0.5 right alpha=0.05 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=0.5 right alpha=0.1 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.4680692336038854, 1.0, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=4 beta=0.5 right row theta=8 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=0.5 right alpha=0.025 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=0.5 right alpha=0.05 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=0.5 right alpha=0.1 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.4680692336038854, 1.0, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=4 beta=0.5 right row theta=12 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=0.5 right alpha=0.025 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=0.5 right alpha=0.05 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=0.5 right alpha=0.1 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "-1.830663439406222",
+      "expected": "finite positive conditional row",
+      "group": "log-domain",
+      "name": "V=2 d=4 right row log",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.1205543382251049, 1.0, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=4 beta=0.5 right row theta=4 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=0.5 right alpha=0.025 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=0.5 right alpha=0.05 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=0.5 right alpha=0.1 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.1205543382251049, 1.0, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=4 beta=0.5 right row theta=8 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=0.5 right alpha=0.025 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=0.5 right alpha=0.05 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=0.5 right alpha=0.1 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.1205543382251049, 1.0, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=4 beta=0.5 right row theta=12 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=0.5 right alpha=0.025 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=0.5 right alpha=0.05 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=0.5 right alpha=0.1 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "-1.830663439406222",
+      "expected": "finite positive conditional row",
+      "group": "log-domain",
+      "name": "V=2 d=4 right row log",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.120554338225105, 1.0, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=4 beta=0.5 right row theta=4 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=0.5 right alpha=0.025 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=0.5 right alpha=0.05 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=0.5 right alpha=0.1 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.120554338225105, 1.0, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=4 beta=0.5 right row theta=8 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=0.5 right alpha=0.025 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=0.5 right alpha=0.05 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=0.5 right alpha=0.1 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.120554338225105, 1.0, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=4 beta=0.5 right row theta=12 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=0.5 right alpha=0.025 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=0.5 right alpha=0.05 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=0.5 right alpha=0.1 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "-2.9821012937155684",
+      "expected": "finite positive conditional row",
+      "group": "log-domain",
+      "name": "V=2 d=4 right row log",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.4680692336038843, 1.0, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=4 beta=0.5 right row theta=4 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=0.5 right alpha=0.025 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=0.5 right alpha=0.05 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=0.5 right alpha=0.1 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.4680692336038843, 1.0, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=4 beta=0.5 right row theta=8 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=0.5 right alpha=0.025 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=0.5 right alpha=0.05 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=0.5 right alpha=0.1 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.4680692336038843, 1.0, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=4 beta=0.5 right row theta=12 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=0.5 right alpha=0.025 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=0.5 right alpha=0.05 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=0.5 right alpha=0.1 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "5",
+      "expected": "5",
+      "group": "coverage",
+      "name": "V=2 d=4 right prefix coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": "-1.3890858165598",
+      "expected": "finite positive conditional row",
+      "group": "log-domain",
+      "name": "V=2 d=4 left row log",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.0022812277674595, 0.9999999999999999, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=4 beta=0.5 left row theta=4 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=0.5 left alpha=0.025 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=0.5 left alpha=0.05 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=0.5 left alpha=0.1 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.0022812277674595, 0.9999999999999999, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=4 beta=0.5 left row theta=8 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=0.5 left alpha=0.025 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=0.5 left alpha=0.05 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=0.5 left alpha=0.1 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.0022812277674595, 0.9999999999999999, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=4 beta=0.5 left row theta=12 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=0.5 left alpha=0.025 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=0.5 left alpha=0.05 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=0.5 left alpha=0.1 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "-2.9821012937155684",
+      "expected": "finite positive conditional row",
+      "group": "log-domain",
+      "name": "V=2 d=4 left row log",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.4680692336038854, 1.0, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=4 beta=0.5 left row theta=4 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=0.5 left alpha=0.025 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=0.5 left alpha=0.05 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=0.5 left alpha=0.1 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.4680692336038854, 1.0, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=4 beta=0.5 left row theta=8 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=0.5 left alpha=0.025 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=0.5 left alpha=0.05 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=0.5 left alpha=0.1 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.4680692336038854, 1.0, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=4 beta=0.5 left row theta=12 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=0.5 left alpha=0.025 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=0.5 left alpha=0.05 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=0.5 left alpha=0.1 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "-1.830663439406222",
+      "expected": "finite positive conditional row",
+      "group": "log-domain",
+      "name": "V=2 d=4 left row log",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.1205543382251053, 1.0, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=4 beta=0.5 left row theta=4 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=0.5 left alpha=0.025 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=0.5 left alpha=0.05 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=0.5 left alpha=0.1 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.1205543382251053, 1.0, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=4 beta=0.5 left row theta=8 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=0.5 left alpha=0.025 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=0.5 left alpha=0.05 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=0.5 left alpha=0.1 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.1205543382251053, 1.0, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=4 beta=0.5 left row theta=12 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=0.5 left alpha=0.025 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=0.5 left alpha=0.05 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=0.5 left alpha=0.1 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "-1.8306634394062218",
+      "expected": "finite positive conditional row",
+      "group": "log-domain",
+      "name": "V=2 d=4 left row log",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.1205543382251053, 1.0, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=4 beta=0.5 left row theta=4 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=0.5 left alpha=0.025 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=0.5 left alpha=0.05 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=0.5 left alpha=0.1 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.1205543382251053, 1.0, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=4 beta=0.5 left row theta=8 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=0.5 left alpha=0.025 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=0.5 left alpha=0.05 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=0.5 left alpha=0.1 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.1205543382251053, 1.0, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=4 beta=0.5 left row theta=12 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=0.5 left alpha=0.025 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=0.5 left alpha=0.05 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=0.5 left alpha=0.1 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "-2.9821012937155684",
+      "expected": "finite positive conditional row",
+      "group": "log-domain",
+      "name": "V=2 d=4 left row log",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.4680692336038854, 1.0, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=4 beta=0.5 left row theta=4 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=0.5 left alpha=0.025 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=0.5 left alpha=0.05 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=0.5 left alpha=0.1 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.4680692336038854, 1.0, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=4 beta=0.5 left row theta=8 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=0.5 left alpha=0.025 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=0.5 left alpha=0.05 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=0.5 left alpha=0.1 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.4680692336038854, 1.0, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=4 beta=0.5 left row theta=12 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=0.5 left alpha=0.025 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=0.5 left alpha=0.05 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=0.5 left alpha=0.1 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "5",
+      "expected": "5",
+      "group": "coverage",
+      "name": "V=2 d=4 left prefix coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": "[-5.825978803422782, -1.3538061593706543, 1.0]",
+      "expected": "finite normalized log law",
+      "group": "log-domain",
+      "name": "V=2 d=4 beta=2.0 log law",
+      "status": "PASS"
+    },
+    {
+      "actual": "-1.7861433388205863",
+      "expected": "finite positive conditional row",
+      "group": "log-domain",
+      "name": "V=2 d=4 right row log",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.7872756441265597, 0.9999999999999999, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=4 beta=2.0 right row theta=4 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=2.0 right alpha=0.025 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=2.0 right alpha=0.05 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=2.0 right alpha=0.1 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.7872756441265597, 0.9999999999999999, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=4 beta=2.0 right row theta=8 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=2.0 right alpha=0.025 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=2.0 right alpha=0.05 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=2.0 right alpha=0.1 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.7872756441265597, 0.9999999999999999, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=4 beta=2.0 right row theta=12 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=2.0 right alpha=0.025 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=2.0 right alpha=0.05 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=2.0 right alpha=0.1 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "-4.724546577249486",
+      "expected": "finite positive conditional row",
+      "group": "log-domain",
+      "name": "V=2 d=4 right row log",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.7395593441358503, 0.991125262994559, 0.00887473700544091]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=4 beta=2.0 right row theta=4 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1, 0.6720656635762492]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=2.0 right alpha=0.025 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1, 1.2843148615941766]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=2.0 right alpha=0.05 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1, 2.351670643703875]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=2.0 right alpha=0.1 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.83377868745935, 1.0, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=4 beta=2.0 right row theta=8 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=2.0 right alpha=0.025 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=2.0 right alpha=0.05 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=2.0 right alpha=0.1 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.83377868745935, 1.0, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=4 beta=2.0 right row theta=12 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=2.0 right alpha=0.025 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=2.0 right alpha=0.05 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=2.0 right alpha=0.1 theta=12 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "-2.457712043657433",
+      "expected": "finite positive conditional row",
+      "group": "log-domain",
+      "name": "V=2 d=4 right row log",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.330374086516134, 1.0, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=4 beta=2.0 right row theta=4 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=2.0 right alpha=0.025 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=2.0 right alpha=0.05 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=2.0 right alpha=0.1 theta=4 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.330374086516134, 1.0, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=4 beta=2.0 right row theta=8 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=2.0 right alpha=0.025 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=2.0 right alpha=0.05 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=2.0 right alpha=0.1 theta=8 drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.330374086516134, 1.0, 0.0]",
+      "expected": "gap>1e-10, core mass>0.9, tail mass<0.03",
+      "group": "core-tail",
+      "name": "V=2 d=4 beta=2.0 right row theta=12 core-tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, inf]",
+      "expected": "positive drift when nonempty, floor 1e-06",
+      "group": "Lyapunov",
+      "name": "V=2 d=4 beta=2.0 right alpha=0.025 theta=12 drift",
+      "status": "PASS"
+    }
+  ],
+  "derived": {
+    "alpha_values": [
+      0.025,
+      0.05,
+      0.1
+    ],
+    "beta_values": [
+      0.5,
+      2.0,
+      8.0
+    ],
+    "c6_closed": false,
+    "common_core_closed": false,
+    "common_split_rule_closed": false,
+    "comparison_row_count": 1488,
+    "continuum_closed": false,
+    "cutoff_uniform_lyapunov_closed": false,
+    "drift_row_count_by_alpha_theta": {
+      "alpha=0.025/theta=12": 110,
+      "alpha=0.025/theta=4": 710,
+      "alpha=0.025/theta=8": 226,
+      "alpha=0.05/theta=12": 110,
+      "alpha=0.05/theta=4": 710,
+      "alpha=0.05/theta=8": 226,
+      "alpha=0.1/theta=12": 110,
+      "alpha=0.1/theta=4": 710,
+      "alpha=0.1/theta=8": 226
+    },
+    "exhaustion_uniform_lyapunov_closed": false,
+    "finite_boundary_rate_closed": true,
+    "finite_core_gap_closed": true,
+    "finite_growing_volume_stress_closed": true,
+    "finite_log_domain_rows_closed": true,
+    "finite_lyapunov_drift_closed": true,
+    "finite_tail_mass_accounting_closed": true,
+    "global_poincare_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "maximum_boundary_rate": 2.1000826422753347,
+    "maximum_core_gap": 7.676155996527456,
+    "maximum_full_projected_gap": 7.676155996527457,
+    "maximum_tail_drift_by_alpha_theta": {
+      "alpha=0.025/theta=12": 1517893.5611200286,
+      "alpha=0.025/theta=4": 5236.924154613824,
+      "alpha=0.025/theta=8": 183595.11116226195,
+      "alpha=0.05/theta=12": 2512940.8455426274,
+      "alpha=0.05/theta=4": 9179.007807080654,
+      "alpha=0.05/theta=8": 311394.6409157519,
+      "alpha=0.1/theta=12": 3593551.556823414,
+      "alpha=0.1/theta=4": 14387.433526742252,
+      "alpha=0.1/theta=8": 462358.93840156763
+    },
+    "maximum_tail_mass": 0.019404047079472624,
+    "minimum_boundary_rate": 0.0,
+    "minimum_core_gap": 0.6159675039841621,
+    "minimum_core_mass": 0.9805959529205274,
+    "minimum_full_projected_gap": 0.6159675039841621,
+    "minimum_tail_drift_by_alpha_theta": {
+      "alpha=0.025/theta=12": 3960.669500250956,
+      "alpha=0.025/theta=4": 0.4188403678721089,
+      "alpha=0.025/theta=8": 46.32014571439596,
+      "alpha=0.05/theta=12": 6924.268438115963,
+      "alpha=0.05/theta=4": 0.804945611663897,
+      "alpha=0.05/theta=8": 84.84529388740049,
+      "alpha=0.1/theta=12": 10809.450625235637,
+      "alpha=0.1/theta=4": 1.4898333202016312,
+      "alpha=0.1/theta=8": 143.60932601439316
+    },
+    "observable_tail_control_closed": false,
+    "orientations": [
+      "right",
+      "left"
+    ],
+    "phase_uniform_lyapunov_closed": false,
+    "pre_a_closed": false,
+    "profile_count": 72,
+    "profiles": [
+      {
+        "beta": 0.5,
+        "dimension": 3,
+        "maximum_boundary_rate": 0.0,
+        "maximum_tail_mass": {
+          "theta=12": 0.0,
+          "theta=4": 0.0,
+          "theta=8": 0.0
+        },
+        "minimum_core_gap": 0.9531009968564168,
+        "minimum_core_mass": 0.9999999999999999,
+        "minimum_full_gap": 0.9531009968564168,
+        "minimum_tail_drift": {
+          "alpha=0.025/theta=12": Infinity,
+          "alpha=0.025/theta=4": Infinity,
+          "alpha=0.025/theta=8": Infinity,
+          "alpha=0.05/theta=12": Infinity,
+          "alpha=0.05/theta=4": Infinity,
+          "alpha=0.05/theta=8": Infinity,
+          "alpha=0.1/theta=12": Infinity,
+          "alpha=0.1/theta=4": Infinity,
+          "alpha=0.1/theta=8": Infinity
+        },
+        "orientation": "right",
+        "row_count": 4,
+        "volume": 2
+      },
+      {
+        "beta": 0.5,
+        "dimension": 3,
+        "maximum_boundary_rate": 0.0,
+        "maximum_tail_mass": {
+          "theta=12": 0.0,
+          "theta=4": 0.0,
+          "theta=8": 0.0
+        },
+        "minimum_core_gap": 0.9531009968564175,
+        "minimum_core_mass": 1.0,
+        "minimum_full_gap": 0.9531009968564175,
+        "minimum_tail_drift": {
+          "alpha=0.025/theta=12": Infinity,
+          "alpha=0.025/theta=4": Infinity,
+          "alpha=0.025/theta=8": Infinity,
+          "alpha=0.05/theta=12": Infinity,
+          "alpha=0.05/theta=4": Infinity,
+          "alpha=0.05/theta=8": Infinity,
+          "alpha=0.1/theta=12": Infinity,
+          "alpha=0.1/theta=4": Infinity,
+          "alpha=0.1/theta=8": Infinity
+        },
+        "orientation": "left",
+        "row_count": 4,
+        "volume": 2
+      },
+      {
+        "beta": 2.0,
+        "dimension": 3,
+        "maximum_boundary_rate": 0.0,
+        "maximum_tail_mass": {
+          "theta=12": 0.0,
+          "theta=4": 0.0,
+          "theta=8": 0.0
+        },
+        "minimum_core_gap": 0.7570174175402336,
+        "minimum_core_mass": 1.0,
+        "minimum_full_gap": 0.7570174175402336,
+        "minimum_tail_drift": {
+          "alpha=0.025/theta=12": Infinity,
+          "alpha=0.025/theta=4": Infinity,
+          "alpha=0.025/theta=8": Infinity,
+          "alpha=0.05/theta=12": Infinity,
+          "alpha=0.05/theta=4": Infinity,
+          "alpha=0.05/theta=8": Infinity,
+          "alpha=0.1/theta=12": Infinity,
+          "alpha=0.1/theta=4": Infinity,
+          "alpha=0.1/theta=8": Infinity
+        },
+        "orientation": "right",
+        "row_count": 4,
+        "volume": 2
+      },
+      {
+        "beta": 2.0,
+        "dimension": 3,
+        "maximum_boundary_rate": 0.0,
+        "maximum_tail_mass": {
+          "theta=12": 0.0,
+          "theta=4": 0.0,
+          "theta=8": 0.0
+        },
+        "minimum_core_gap": 0.7570174175402336,
+        "minimum_core_mass": 1.0,
+        "minimum_full_gap": 0.7570174175402336,
+        "minimum_tail_drift": {
+          "alpha=0.025/theta=12": Infinity,
+          "alpha=0.025/theta=4": Infinity,
+          "alpha=0.025/theta=8": Infinity,
+          "alpha=0.05/theta=12": Infinity,
+          "alpha=0.05/theta=4": Infinity,
+          "alpha=0.05/theta=8": Infinity,
+          "alpha=0.1/theta=12": Infinity,
+          "alpha=0.1/theta=4": Infinity,
+          "alpha=0.1/theta=8": Infinity
+        },
+        "orientation": "left",
+        "row_count": 4,
+        "volume": 2
+      },
+      {
+        "beta": 8.0,
+        "dimension": 3,
+        "maximum_boundary_rate": 0.0,
+        "maximum_tail_mass": {
+          "theta=12": 0.0,
+          "theta=4": 0.0,
+          "theta=8": 0.0
+        },
+        "minimum_core_gap": 0.6920227633208035,
+        "minimum_core_mass": 1.0,
+        "minimum_full_gap": 0.6920227633208035,
+        "minimum_tail_drift": {
+          "alpha=0.025/theta=12": Infinity,
+          "alpha=0.025/theta=4": Infinity,
+          "alpha=0.025/theta=8": Infinity,
+          "alpha=0.05/theta=12": Infinity,
+          "alpha=0.05/theta=4": Infinity,
+          "alpha=0.05/theta=8": Infinity,
+          "alpha=0.1/theta=12": Infinity,
+          "alpha=0.1/theta=4": Infinity,
+          "alpha=0.1/theta=8": Infinity
+        },
+        "orientation": "right",
+        "row_count": 4,
+        "volume": 2
+      },
+      {
+        "beta": 8.0,
+        "dimension": 3,
+        "maximum_boundary_rate": 0.0,
+        "maximum_tail_mass": {
+          "theta=12": 0.0,
+          "theta=4": 0.0,
+          "theta=8": 0.0
+        },
+        "minimum_core_gap": 0.6920227633208036,
+        "minimum_core_mass": 1.0,
+        "minimum_full_gap": 0.6920227633208036,
+        "minimum_tail_drift": {
+          "alpha=0.025/theta=12": Infinity,
+          "alpha=0.025/theta=4": Infinity,
+          "alpha=0.025/theta=8": Infinity,
+          "alpha=0.05/theta=12": Infinity,
+          "alpha=0.05/theta=4": Infinity,
+          "alpha=0.05/theta=8": Infinity,
+          "alpha=0.1/theta=12": Infinity,
+          "alpha=0.1/theta=4": Infinity,
+          "alpha=0.1/theta=8": Infinity
+        },
+        "orientation": "left",
+        "row_count": 4,
+        "volume": 2
+      },
+      {
+        "beta": 0.5,
+        "dimension": 4,
+        "maximum_boundary_rate": 0.0,
+        "maximum_tail_mass": {
+          "theta=12": 0.0,
+          "theta=4": 0.0,
+          "theta=8": 0.0
+        },
+        "minimum_core_gap": 1.0022812277674598,
+        "minimum_core_mass": 0.9999999999999999,
+        "minimum_full_gap": 1.0022812277674602,
+        "minimum_tail_drift": {
+          "alpha=0.025/theta=12": Infinity,
+          "alpha=0.025/theta=4": Infinity,
+          "alpha=0.025/theta=8": Infinity,
+          "alpha=0.05/theta=12": Infinity,
+          "alpha=0.05/theta=4": Infinity,
+          "alpha=0.05/theta=8": Infinity,
+          "alpha=0.1/theta=12": Infinity,
+          "alpha=0.1/theta=4": Infinity,
+          "alpha=0.1/theta=8": Infinity
+        },
+        "orientation": "right",
+        "row_count": 5,
+        "volume": 2
+      },
+      {
+        "beta": 0.5,
+        "dimension": 4,
+        "maximum_boundary_rate": 0.0,
+        "maximum_tail_mass": {
+          "theta=12": 0.0,
+          "theta=4": 0.0,
+          "theta=8": 0.0
+        },
+        "minimum_core_gap": 1.0022812277674595,
+        "minimum_core_mass": 0.9999999999999999,
+        "minimum_full_gap": 1.00228122776746,
+        "minimum_tail_drift": {
+          "alpha=0.025/theta=12": Infinity,
+          "alpha=0.025/theta=4": Infinity,
+          "alpha=0.025/theta=8": Infinity,
+          "alpha=0.05/theta=12": Infinity,
+          "alpha=0.05/theta=4": Infinity,
+          "alpha=0.05/theta=8": Infinity,
+          "alpha=0.1/theta=12": Infinity,
+          "alpha=0.1/theta=4": Infinity,
+          "alpha=0.1/theta=8": Infinity
+        },
+        "orientation": "left",
+        "row_count": 5,
+        "volume": 2
+      },
+      {
+        "beta": 2.0,
+        "dimension": 4,
+        "maximum_boundary_rate": 0.47538899728685274,
+        "maximum_tail_mass": {
+          "theta=12": 0.0,
+          "theta=4": 0.008874737005440917,
+          "theta=8": 0.0
+        },
+        "minimum_core_gap": 0.7872756441265597,
+        "minimum_core_mass": 0.9911252629945589,
+        "minimum_full_gap": 0.7872756441265597,
+        "minimum_tail_drift": {
+          "alpha=0.025/theta=12": Infinity,
+          "alpha=0.025/theta=4": 0.6720656635762488,
+          "alpha=0.025/theta=8": Infinity,
+          "alpha=0.05/theta=12": Infinity,
+          "alpha=0.05/theta=4": 1.2843148615941757,
+          "alpha=0.05/theta=8": Infinity,
+          "alpha=0.1/theta=12": Infinity,
+          "alpha=0.1/theta=4": 2.351670643703872,
+          "alpha=0.1/theta=8": Infinity
+        },
+        "orientation": "right",
+        "row_count": 5,
+        "volume": 2
+      },
+      {
+        "beta": 2.0,
+        "dimension": 4,
+        "maximum_boundary_rate": 0.47538899728685297,
+        "maximum_tail_mass": {
+          "theta=12": 0.0,
+          "theta=4": 0.008874737005440928,
+          "theta=8": 0.0
+        },
+        "minimum_core_gap": 0.7872756441265596,
+        "minimum_core_mass": 0.9911252629945592,
+        "minimum_full_gap": 0.7872756441265596,
+        "minimum_tail_drift": {
+          "alpha=0.025/theta=12": Infinity,
+          "alpha=0.025/theta=4": 0.672065663576248,
+          "alpha=0.025/theta=8": Infinity,
+          "alpha=0.05/theta=12": Infinity,
+          "alpha=0.05/theta=4": 1.2843148615941753,
+          "alpha=0.05/theta=8": Infinity,
+          "alpha=0.1/theta=12": Infinity,
+          "alpha=0.1/theta=4": 2.35167064370387,
+          "alpha=0.1/theta=8": Infinity
+        },
+        "orientation": "left",
+        "row_count": 5,
+        "volume": 2
+      },
+      {
+        "beta": 8.0,
+        "dimension": 4,
+        "maximum_boundary_rate": 0.4559662985918999,
+        "maximum_tail_mass": {
+          "theta=12": 0.0,
+          "theta=4": 0.005088424803377071,
+          "theta=8": 0.0
+        },
+        "minimum_core_gap": 0.6867237745188259,
+        "minimum_core_mass": 0.9949115751966229,
+        "minimum_full_gap": 0.6867237745188259,
+        "minimum_tail_drift": {
+          "alpha=0.025/theta=12": Infinity,
+          "alpha=0.025/theta=4": 1.2352971034967406,
+          "alpha=0.025/theta=8": Infinity,
+          "alpha=0.05/theta=12": Infinity,
+          "alpha=0.05/theta=4": 2.339920364825915,
+          "alpha=0.05/theta=8": Infinity,
+          "alpha=0.1/theta=12": Infinity,
+          "alpha=0.1/theta=4": 4.2141712232116015,
+          "alpha=0.1/theta=8": Infinity
+        },
+        "orientation": "right",
+        "row_count": 5,
+        "volume": 2
+      },
+      {
+        "beta": 8.0,
+        "dimension": 4,
+        "maximum_boundary_rate": 0.4559662985919001,
+        "maximum_tail_mass": {
+          "theta=12": 0.0,
+          "theta=4": 0.005088424803377079,
+          "theta=8": 0.0
+        },
+        "minimum_core_gap": 0.6867237745188259,
+        "minimum_core_mass": 0.9949115751966229,
+        "minimum_full_gap": 0.6867237745188259,
+        "minimum_tail_drift": {
+          "alpha=0.025/theta=12": Infinity,
+          "alpha=0.025/theta=4": 1.2352971034967406,
+          "alpha=0.025/theta=8": Infinity,
+          "alpha=0.05/theta=12": Infinity,
+          "alpha=0.05/theta=4": 2.339920364825913,
+          "alpha=0.05/theta=8": Infinity,
+          "alpha=0.1/theta=12": Infinity,
+          "alpha=0.1/theta=4": 4.214171223211594,
+          "alpha=0.1/theta=8": Infinity
+        },
+        "orientation": "left",
+        "row_count": 5,
+        "volume": 2
+      },
+      {
+        "beta": 0.5,
+        "dimension": 5,
+        "maximum_boundary_rate": 0.0,
+        "maximum_tail_mass": {
+          "theta=12": 0.0,
+          "theta=4": 0.0,
+          "theta=8": 0.0
+        },
+        "minimum_core_gap": 1.195096201793494,
+        "minimum_core_mass": 0.9999999999999999,
+        "minimum_full_gap": 1.195096201793494,
+        "minimum_tail_drift": {
+          "alpha=0.025/theta=12": Infinity,
+          "alpha=0.025/theta=4": Infinity,
+          "alpha=0.025/theta=8": Infinity,
+          "alpha=0.05/theta=12": Infinity,
+          "alpha=0.05/theta=4": Infinity,
+          "alpha=0.05/theta=8": Infinity,
+          "alpha=0.1/theta=12": Infinity,
+          "alpha=0.1/theta=4": Infinity,
+          "alpha=0.1/theta=8": Infinity
+        },
+        "orientation": "right",
+        "row_count": 6,
+        "volume": 2
+      },
+      {
+        "beta": 0.5,
+        "dimension": 5,
+        "maximum_boundary_rate": 0.0,
+        "maximum_tail_mass": {
+          "theta=12": 0.0,
+          "theta=4": 0.0,
+          "theta=8": 0.0
+        },
+        "minimum_core_gap": 1.1950962017934934,
+        "minimum_core_mass": 0.9999999999999999,
+        "minimum_full_gap": 1.1950962017934934,
+        "minimum_tail_drift": {
+          "alpha=0.025/theta=12": Infinity,
+          "alpha=0.025/theta=4": Infinity,
+          "alpha=0.025/theta=8": Infinity,
+          "alpha=0.05/theta=12": Infinity,
+          "alpha=0.05/theta=4": Infinity,
+          "alpha=0.05/theta=8": Infinity,
+          "alpha=0.1/theta=12": Infinity,
+          "alpha=0.1/theta=4": Infinity,
+          "alpha=0.1/theta=8": Infinity
+        },
+        "orientation": "left",
+        "row_count": 6,
+        "volume": 2
+      },
+      {
+        "beta": 2.0,
+        "dimension": 5,
+        "maximum_boundary_rate": 0.48463313728774887,
+        "maximum_tail_mass": {
+          "theta=12": 0.0,
+          "theta=4": 0.004285924598746033,
+          "theta=8": 0.0
+        },
+        "minimum_core_gap": 1.5534356018176694,
+        "minimum_core_mass": 0.9957140754012538,
+        "minimum_full_gap": 1.5534356018176694,
+        "minimum_tail_drift": {
+          "alpha=0.025/theta=12": Infinity,
+          "alpha=0.025/theta=4": 2.419241904919408,
+          "alpha=0.025/theta=8": Infinity,
+          "alpha=0.05/theta=12": Infinity,
+          "alpha=0.05/theta=4": 4.610059774577696,
+          "alpha=0.05/theta=8": Infinity,
+          "alpha=0.1/theta=12": Infinity,
+          "alpha=0.1/theta=4": 8.392761000313524,
+          "alpha=0.1/theta=8": Infinity
+        },
+        "orientation": "right",
+        "row_count": 6,
+        "volume": 2
+      },
+      {
+        "beta": 2.0,
+        "dimension": 5,
+        "maximum_boundary_rate": 0.484633137287749,
+        "maximum_tail_mass": {
+          "theta=12": 0.0,
+          "theta=4": 0.004285924598746008,
+          "theta=8": 0.0
+        },
+        "minimum_core_gap": 1.553435601817669,
+        "minimum_core_mass": 0.995714075401254,
+        "minimum_full_gap": 1.553435601817669,
+        "minimum_tail_drift": {
+          "alpha=0.025/theta=12": Infinity,
+          "alpha=0.025/theta=4": 2.419241904919425,
+          "alpha=0.025/theta=8": Infinity,
+          "alpha=0.05/theta=12": Infinity,
+          "alpha=0.05/theta=4": 4.610059774577724,
+          "alpha=0.05/theta=8": Infinity,
+          "alpha=0.1/theta=12": Infinity,
+          "alpha=0.1/theta=4": 8.392761000313584,
+          "alpha=0.1/theta=8": Infinity
+        },
+        "orientation": "left",
+        "row_count": 6,
+        "volume": 2
+      },
+      {
+        "beta": 8.0,
+        "dimension": 5,
+        "maximum_boundary_rate": 0.706023144444261,
+        "maximum_tail_mass": {
+          "theta=12": 0.0,
+          "theta=4": 0.011019418509621372,
+          "theta=8": 6.579851842230487e-06
+        },
+        "minimum_core_gap": 1.8674041419089633,
+        "minimum_core_mass": 0.9889805814903787,
+        "minimum_full_gap": 1.8674041419089633,
+        "minimum_tail_drift": {
+          "alpha=0.025/theta=12": Infinity,
+          "alpha=0.025/theta=4": 1.2886077180925102,
+          "alpha=0.025/theta=8": 2349.9775458498416,
+          "alpha=0.05/theta=12": Infinity,
+          "alpha=0.05/theta=4": 2.4439894758866454,
+          "alpha=0.05/theta=8": 4144.738198412834,
+          "alpha=0.1/theta=12": Infinity,
+          "alpha=0.1/theta=4": 4.3780493814742565,
+          "alpha=0.1/theta=8": 6565.579980147892
+        },
+        "orientation": "right",
+        "row_count": 6,
+        "volume": 2
+      },
+      {
+        "beta": 8.0,
+        "dimension": 5,
+        "maximum_boundary_rate": 0.7060231444442612,
+        "maximum_tail_mass": {
+          "theta=12": 0.0,
+          "theta=4": 0.011019418509621385,
+          "theta=8": 6.57985184223047e-06
+        },
+        "minimum_core_gap": 1.8674041419089644,
+        "minimum_core_mass": 0.9889805814903787,
+        "minimum_full_gap": 1.8674041419089629,
+        "minimum_tail_drift": {
+          "alpha=0.025/theta=12": Infinity,
+          "alpha=0.025/theta=4": 1.2886077180925088,
+          "alpha=0.025/theta=8": 2349.977545849843,
+          "alpha=0.05/theta=12": Infinity,
+          "alpha=0.05/theta=4": 2.4439894758866467,
+          "alpha=0.05/theta=8": 4144.738198412837,
+          "alpha=0.1/theta=12": Infinity,
+          "alpha=0.1/theta=4": 4.378049381474256,
+          "alpha=0.1/theta=8": 6565.579980147894
+        },
+        "orientation": "left",
+        "row_count": 6,
+        "volume": 2
+      },
+      {
+        "beta": 0.5,
+        "dimension": 6,
+        "maximum_boundary_rate": 0.5156547021904039,
+        "maximum_tail_mass": {
+          "theta=12": 0.0,
+          "theta=4": 0.001788321678346996,
+          "theta=8": 0.0
+        },
+        "minimum_core_gap": 1.4721452785784672,
+        "minimum_core_mass": 0.9982116783216528,
+        "minimum_full_gap": 1.4721452785784672,
+        "minimum_tail_drift": {
+          "alpha=0.025/theta=12": Infinity,
+          "alpha=0.025/theta=4": 3.5441824674315874,
+          "alpha=0.025/theta=8": Infinity,
+          "alpha=0.05/theta=12": Infinity,
+          "alpha=0.05/theta=4": 6.708754117461041,
+          "alpha=0.05/theta=8": Infinity,
+          "alpha=0.1/theta=12": Infinity,
+          "alpha=0.1/theta=4": 12.063200211795486,
+          "alpha=0.1/theta=8": Infinity
+        },
+        "orientation": "right",
+        "row_count": 7,
+        "volume": 2
+      },
+      {
+        "beta": 0.5,
+        "dimension": 6,
+        "maximum_boundary_rate": 0.5156547021904039,
+        "maximum_tail_mass": {
+          "theta=12": 0.0,
+          "theta=4": 0.0017883216783469956,
+          "theta=8": 0.0
+        },
+        "minimum_core_gap": 1.4721452785784683,
+        "minimum_core_mass": 0.998211678321653,
+        "minimum_full_gap": 1.4721452785784683,
+        "minimum_tail_drift": {
+          "alpha=0.025/theta=12": Infinity,
+          "alpha=0.025/theta=4": 3.5441824674315816,
+          "alpha=0.025/theta=8": Infinity,
+          "alpha=0.05/theta=12": Infinity,
+          "alpha=0.05/theta=4": 6.708754117461042,
+          "alpha=0.05/theta=8": Infinity,
+          "alpha=0.1/theta=12": Infinity,
+          "alpha=0.1/theta=4": 12.06320021179549,
+          "alpha=0.1/theta=8": Infinity
+        },
+        "orientation": "left",
+        "row_count": 7,
+        "volume": 2
+      },
+      {
+        "beta": 2.0,
+        "dimension": 6,
+        "maximum_boundary_rate": 0.8994005466701179,
+        "maximum_tail_mass": {
+          "theta=12": 0.0,
+          "theta=4": 0.011034231268188496,
+          "theta=8": 0.0
+        },
+        "minimum_core_gap": 1.672905444634493,
+        "minimum_core_mass": 0.9889657687318115,
+        "minimum_full_gap": 1.6729054446344918,
+        "minimum_tail_drift": {
+          "alpha=0.025/theta=12": Infinity,
+          "alpha=0.025/theta=4": 0.7542512249663605,
+          "alpha=0.025/theta=8": Infinity,
+          "alpha=0.05/theta=12": Infinity,
+          "alpha=0.05/theta=4": 1.4392848239143121,
+          "alpha=0.05/theta=8": Infinity,
+          "alpha=0.1/theta=12": Infinity,
+          "alpha=0.1/theta=4": 2.621948788292991,
+          "alpha=0.1/theta=8": Infinity
+        },
+        "orientation": "right",
+        "row_count": 7,
+        "volume": 2
+      },
+      {
+        "beta": 2.0,
+        "dimension": 6,
+        "maximum_boundary_rate": 0.8994005466701158,
+        "maximum_tail_mass": {
+          "theta=12": 0.0,
+          "theta=4": 0.011034231268188397,
+          "theta=8": 0.0
+        },
+        "minimum_core_gap": 1.672905444634493,
+        "minimum_core_mass": 0.9889657687318117,
+        "minimum_full_gap": 1.672905444634493,
+        "minimum_tail_drift": {
+          "alpha=0.025/theta=12": Infinity,
+          "alpha=0.025/theta=4": 0.7542512249663699,
+          "alpha=0.025/theta=8": Infinity,
+          "alpha=0.05/theta=12": Infinity,
+          "alpha=0.05/theta=4": 1.439284823914331,
+          "alpha=0.05/theta=8": Infinity,
+          "alpha=0.1/theta=12": Infinity,
+          "alpha=0.1/theta=4": 2.6219487882930252,
+          "alpha=0.1/theta=8": Infinity
+        },
+        "orientation": "left",
+        "row_count": 7,
+        "volume": 2
+      },
+      {
+        "beta": 8.0,
+        "dimension": 6,
+        "maximum_boundary_rate": 0.8358889657078754,
+        "maximum_tail_mass": {
+          "theta=12": 0.0,
+          "theta=4": 0.009591017281064916,
+          "theta=8": 0.0
+        },
+        "minimum_core_gap": 1.9242678233754622,
+        "minimum_core_mass": 0.9904089827189351,
+        "minimum_full_gap": 1.924267823375463,
+        "minimum_tail_drift": {
+          "alpha=0.025/theta=12": Infinity,
+          "alpha=0.025/theta=4": 1.0824422844475454,
+          "alpha=0.025/theta=8": Infinity,
+          "alpha=0.05/theta=12": Infinity,
+          "alpha=0.05/theta=4": 2.069053141796593,
+          "alpha=0.05/theta=8": Infinity,
+          "alpha=0.1/theta=12": Infinity,
+          "alpha=0.1/theta=4": 3.7838065060873474,
+          "alpha=0.1/theta=8": Infinity
+        },
+        "orientation": "right",
+        "row_count": 7,
+        "volume": 2
+      },
+      {
+        "beta": 8.0,
+        "dimension": 6,
+        "maximum_boundary_rate": 0.835888965707875,
+        "maximum_tail_mass": {
+          "theta=12": 0.0,
+          "theta=4": 0.009591017281064899,
+          "theta=8": 0.0
+        },
+        "minimum_core_gap": 1.9242678233754609,
+        "minimum_core_mass": 0.990408982718935,
+        "minimum_full_gap": 1.9242678233754609,
+        "minimum_tail_drift": {
+          "alpha=0.025/theta=12": Infinity,
+          "alpha=0.025/theta=4": 1.08244228444755,
+          "alpha=0.025/theta=8": Infinity,
+          "alpha=0.05/theta=12": Infinity,
+          "alpha=0.05/theta=4": 2.0690531417966023,
+          "alpha=0.05/theta=8": Infinity,
+          "alpha=0.1/theta=12": Infinity,
+          "alpha=0.1/theta=4": 3.7838065060873647,
+          "alpha=0.1/theta=8": Infinity
+        },
+        "orientation": "left",
+        "row_count": 7,
+        "volume": 2
+      },
+      {
+        "beta": 0.5,
+        "dimension": 8,
+        "maximum_boundary_rate": 1.0859355761891856,
+        "maximum_tail_mass": {
+          "theta=12": 0.0,
+          "theta=4": 0.0070675731236539314,
+          "theta=8": 0.0
+        },
+        "minimum_core_gap": 1.794632993768256,
+        "minimum_core_mass": 0.992932426876346,
+        "minimum_full_gap": 1.794632993768256,
+        "minimum_tail_drift": {
+          "alpha=0.025/theta=12": Infinity,
+          "alpha=0.025/theta=4": 0.7316111115257175,
+          "alpha=0.025/theta=8": Infinity,
+          "alpha=0.05/theta=12": Infinity,
+          "alpha=0.05/theta=4": 1.3995594347186966,
+          "alpha=0.05/theta=8": Infinity,
+          "alpha=0.1/theta=12": Infinity,
+          "alpha=0.1/theta=4": 2.561835995821313,
+          "alpha=0.1/theta=8": Infinity
+        },
+        "orientation": "right",
+        "row_count": 9,
+        "volume": 2
+      },
+      {
+        "beta": 0.5,
+        "dimension": 8,
+        "maximum_boundary_rate": 1.0859355761891858,
+        "maximum_tail_mass": {
+          "theta=12": 0.0,
+          "theta=4": 0.007067573123653905,
+          "theta=8": 0.0
+        },
+        "minimum_core_gap": 1.7946329937682581,
+        "minimum_core_mass": 0.9929324268763461,
+        "minimum_full_gap": 1.7946329937682581,
+        "minimum_tail_drift": {
+          "alpha=0.025/theta=12": Infinity,
+          "alpha=0.025/theta=4": 0.7316111115257179,
+          "alpha=0.025/theta=8": Infinity,
+          "alpha=0.05/theta=12": Infinity,
+          "alpha=0.05/theta=4": 1.399559434718701,
+          "alpha=0.05/theta=8": Infinity,
+          "alpha=0.1/theta=12": Infinity,
+          "alpha=0.1/theta=4": 2.561835995821322,
+          "alpha=0.1/theta=8": Infinity
+        },
+        "orientation": "left",
+        "row_count": 9,
+        "volume": 2
+      },
+      {
+        "beta": 2.0,
+        "dimension": 8,
+        "maximum_boundary_rate": 1.3844689166691817,
+        "maximum_tail_mass": {
+          "theta=12": 0.0,
+          "theta=4": 0.012512825562812184,
+          "theta=8": 4.281929483437072e-05
+        },
+        "minimum_core_gap": 2.094642811745288,
+        "minimum_core_mass": 0.9874871744371878,
+        "minimum_full_gap": 2.2293941512299913,
+        "minimum_tail_drift": {
+          "alpha=0.025/theta=12": Infinity,
+          "alpha=0.025/theta=4": 1.1002237398133161,
+          "alpha=0.025/theta=8": 283.67939254826075,
+          "alpha=0.05/theta=12": Infinity,
+          "alpha=0.05/theta=4": 2.0986547596672818,
+          "alpha=0.05/theta=8": 514.4586956613848,
+          "alpha=0.1/theta=12": Infinity,
+          "alpha=0.1/theta=4": 3.818565408690098,
+          "alpha=0.1/theta=8": 855.2367407033367
+        },
+        "orientation": "right",
+        "row_count": 9,
+        "volume": 2
+      },
+      {
+        "beta": 2.0,
+        "dimension": 8,
+        "maximum_boundary_rate": 1.384468916669182,
+        "maximum_tail_mass": {
+          "theta=12": 0.0,
+          "theta=4": 0.012512825562812004,
+          "theta=8": 4.281929483437109e-05
+        },
+        "minimum_core_gap": 2.094642811745288,
+        "minimum_core_mass": 0.9874871744371879,
+        "minimum_full_gap": 2.2293941512300144,
+        "minimum_tail_drift": {
+          "alpha=0.025/theta=12": Infinity,
+          "alpha=0.025/theta=4": 1.100223739813345,
+          "alpha=0.025/theta=8": 283.67939254825836,
+          "alpha=0.05/theta=12": Infinity,
+          "alpha=0.05/theta=4": 2.0986547596673293,
+          "alpha=0.05/theta=8": 514.4586956613815,
+          "alpha=0.1/theta=12": Infinity,
+          "alpha=0.1/theta=4": 3.8185654086901817,
+          "alpha=0.1/theta=8": 855.2367407033314
+        },
+        "orientation": "left",
+        "row_count": 9,
+        "volume": 2
+      },
+      {
+        "beta": 8.0,
+        "dimension": 8,
+        "maximum_boundary_rate": 1.2400080539444995,
+        "maximum_tail_mass": {
+          "theta=12": 3.8639172445259846e-07,
+          "theta=4": 0.007949116647036847,
+          "theta=8": 0.00012800973739768846
+        },
+        "minimum_core_gap": 2.469220830355015,
+        "minimum_core_mass": 0.9920508833529632,
+        "minimum_full_gap": 2.60213955744265,
+        "minimum_tail_drift": {
+          "alpha=0.025/theta=12": 32578.349124436463,
+          "alpha=0.025/theta=4": 1.8762943712850175,
+          "alpha=0.025/theta=8": 94.05102057014707,
+          "alpha=0.05/theta=12": 55992.88286271989,
+          "alpha=0.05/theta=4": 3.55179891874695,
+          "alpha=0.05/theta=8": 171.98432611198922,
+          "alpha=0.1/theta=12": 84098.09890702555,
+          "alpha=0.1/theta=4": 6.320229255280086,
+          "alpha=0.1/theta=8": 290.13433380730083
+        },
+        "orientation": "right",
+        "row_count": 9,
+        "volume": 2
+      },
+      {
+        "beta": 8.0,
+        "dimension": 8,
+        "maximum_boundary_rate": 1.2400080539444993,
+        "maximum_tail_mass": {
+          "theta=12": 3.8639172445260233e-07,
+          "theta=4": 0.007949116647036862,
+          "theta=8": 0.00012800973739768892
+        },
+        "minimum_core_gap": 2.469220830355016,
+        "minimum_core_mass": 0.9920508833529631,
+        "minimum_full_gap": 2.602139557442609,
+        "minimum_tail_drift": {
+          "alpha=0.025/theta=12": 32578.349124436067,
+          "alpha=0.025/theta=4": 1.8762943712850215,
+          "alpha=0.025/theta=8": 94.05102057014666,
+          "alpha=0.05/theta=12": 55992.88286271922,
+          "alpha=0.05/theta=4": 3.551798918746947,
+          "alpha=0.05/theta=8": 171.98432611198817,
+          "alpha=0.1/theta=12": 84098.09890702584,
+          "alpha=0.1/theta=4": 6.320229255280065,
+          "alpha=0.1/theta=8": 290.1343338072991
+        },
+        "orientation": "left",
+        "row_count": 9,
+        "volume": 2
+      },
+      {
+        "beta": 0.5,
+        "dimension": 10,
+        "maximum_boundary_rate": 1.1298286290614559,
+        "maximum_tail_mass": {
+          "theta=12": 0.0,
+          "theta=4": 0.005969876587408297,
+          "theta=8": 7.712927707474908e-05
+        },
+        "minimum_core_gap": 2.031757655295974,
+        "minimum_core_mass": 0.9940301234125918,
+        "minimum_full_gap": 2.131326919627522,
+        "minimum_tail_drift": {
+          "alpha=0.025/theta=12": Infinity,
+          "alpha=0.025/theta=4": 1.1913169723339088,
+          "alpha=0.025/theta=8": 99.76466342085254,
+          "alpha=0.05/theta=12": Infinity,
+          "alpha=0.05/theta=4": 2.282478809276547,
+          "alpha=0.05/theta=8": 182.8120884381232,
+          "alpha=0.1/theta=12": Infinity,
+          "alpha=0.1/theta=4": 4.185487463848585,
+          "alpha=0.1/theta=8": 309.59309988715984
+        },
+        "orientation": "right",
+        "row_count": 11,
+        "volume": 2
+      },
+      {
+        "beta": 0.5,
+        "dimension": 10,
+        "maximum_boundary_rate": 1.1298286290614568,
+        "maximum_tail_mass": {
+          "theta=12": 0.0,
+          "theta=4": 0.005969876587408254,
+          "theta=8": 7.712927707474937e-05
+        },
+        "minimum_core_gap": 2.0317576552959764,
+        "minimum_core_mass": 0.9940301234125918,
+        "minimum_full_gap": 2.1313269196275373,
+        "minimum_tail_drift": {
+          "alpha=0.025/theta=12": Infinity,
+          "alpha=0.025/theta=4": 1.1913169723339099,
+          "alpha=0.025/theta=8": 99.76466342085209,
+          "alpha=0.05/theta=12": Infinity,
+          "alpha=0.05/theta=4": 2.282478809276558,
+          "alpha=0.05/theta=8": 182.8120884381223,
+          "alpha=0.1/theta=12": Infinity,
+          "alpha=0.1/theta=4": 4.185487463848594,
+          "alpha=0.1/theta=8": 309.5930998871582
+        },
+        "orientation": "left",
+        "row_count": 11,
+        "volume": 2
+      },
+      {
+        "beta": 2.0,
+        "dimension": 10,
+        "maximum_boundary_rate": 1.6312733129597738,
+        "maximum_tail_mass": {
+          "theta=12": 1.7331989291626591e-06,
+          "theta=4": 0.0072465403050645,
+          "theta=8": 8.036598042427373e-05
+        },
+        "minimum_core_gap": 2.296102387729203,
+        "minimum_core_mass": 0.9927534596949354,
+        "minimum_full_gap": 2.5780643729164767,
+        "minimum_tail_drift": {
+          "alpha=0.025/theta=12": 4299.767636995926,
+          "alpha=0.025/theta=4": 1.7278038643802456,
+          "alpha=0.025/theta=8": 147.60760628052893,
+          "alpha=0.05/theta=12": 7539.087423133559,
+          "alpha=0.05/theta=4": 3.284159192045664,
+          "alpha=0.05/theta=8": 269.44799101524814,
+          "alpha=0.1/theta=12": 11826.164477977922,
+          "alpha=0.1/theta=4": 5.9143246529861635,
+          "alpha=0.1/theta=8": 453.24707231742383
+        },
+        "orientation": "right",
+        "row_count": 11,
+        "volume": 2
+      },
+      {
+        "beta": 2.0,
+        "dimension": 10,
+        "maximum_boundary_rate": 1.631273312959777,
+        "maximum_tail_mass": {
+          "theta=12": 1.7331989291627212e-06,
+          "theta=4": 0.007246540305064437,
+          "theta=8": 8.036598042427481e-05
+        },
+        "minimum_core_gap": 2.2961023877292144,
+        "minimum_core_mass": 0.9927534596949356,
+        "minimum_full_gap": 2.5780643729163684,
+        "minimum_tail_drift": {
+          "alpha=0.025/theta=12": 4299.767636995554,
+          "alpha=0.025/theta=4": 1.7278038643802167,
+          "alpha=0.025/theta=8": 147.6076062805269,
+          "alpha=0.05/theta=12": 7539.0874231329,
+          "alpha=0.05/theta=4": 3.284159192045615,
+          "alpha=0.05/theta=8": 269.4479910152448,
+          "alpha=0.1/theta=12": 11826.164477976872,
+          "alpha=0.1/theta=4": 5.914324652986084,
+          "alpha=0.1/theta=8": 453.2470723174186
+        },
+        "orientation": "left",
+        "row_count": 11,
+        "volume": 2
+      },
+      {
+        "beta": 8.0,
+        "dimension": 10,
+        "maximum_boundary_rate": 1.6158652744661428,
+        "maximum_tail_mass": {
+          "theta=12": 2.086893974190457e-06,
+          "theta=4": 0.008266334311813917,
+          "theta=8": 6.075733141292073e-05
+        },
+        "minimum_core_gap": 2.7225906171104866,
+        "minimum_core_mass": 0.991733665688186,
+        "minimum_full_gap": 3.0062449290566677,
+        "minimum_tail_drift": {
+          "alpha=0.025/theta=12": 3960.6695002512606,
+          "alpha=0.025/theta=4": 2.865467294896824,
+          "alpha=0.025/theta=8": 254.70537304033178,
+          "alpha=0.05/theta=12": 6924.268438116489,
+          "alpha=0.05/theta=4": 5.435038501174081,
+          "alpha=0.05/theta=8": 461.98221216289045,
+          "alpha=0.1/theta=12": 10809.450625236455,
+          "alpha=0.1/theta=4": 9.774209562283344,
+          "alpha=0.1/theta=8": 768.2507168785752
+        },
+        "orientation": "right",
+        "row_count": 11,
+        "volume": 2
+      },
+      {
+        "beta": 8.0,
+        "dimension": 10,
+        "maximum_boundary_rate": 1.6158652744661433,
+        "maximum_tail_mass": {
+          "theta=12": 2.086893974190516e-06,
+          "theta=4": 0.008266334311813941,
+          "theta=8": 6.075733141292296e-05
+        },
+        "minimum_core_gap": 2.7225906171104874,
+        "minimum_core_mass": 0.991733665688186,
+        "minimum_full_gap": 3.0062449290579334,
+        "minimum_tail_drift": {
+          "alpha=0.025/theta=12": 3960.669500250956,
+          "alpha=0.025/theta=4": 2.86546729489683,
+          "alpha=0.025/theta=8": 254.70537304032987,
+          "alpha=0.05/theta=12": 6924.268438115963,
+          "alpha=0.05/theta=4": 5.435038501174089,
+          "alpha=0.05/theta=8": 461.9822121628872,
+          "alpha=0.1/theta=12": 10809.450625235637,
+          "alpha=0.1/theta=4": 9.774209562283344,
+          "alpha=0.1/theta=8": 768.25071687857
+        },
+        "orientation": "left",
+        "row_count": 11,
+        "volume": 2
+      },
+      {
+        "beta": 0.5,
+        "dimension": 12,
+        "maximum_boundary_rate": 1.6225918518043567,
+        "maximum_tail_mass": {
+          "theta=12": 0.0,
+          "theta=4": 0.004528017063581065,
+          "theta=8": 0.0001255046870028036
+        },
+        "minimum_core_gap": 2.2140926001952113,
+        "minimum_core_mass": 0.9954719829364188,
+        "minimum_full_gap": 2.423391046447414,
+        "minimum_tail_drift": {
+          "alpha=0.025/theta=12": Infinity,
+          "alpha=0.025/theta=4": 1.723571824769279,
+          "alpha=0.025/theta=8": 94.03161719286938,
+          "alpha=0.05/theta=12": Infinity,
+          "alpha=0.05/theta=4": 3.2957822499865177,
+          "alpha=0.05/theta=8": 171.62602529852123,
+          "alpha=0.1/theta=12": Infinity,
+          "alpha=0.1/theta=4": 6.022427376902988,
+          "alpha=0.1/theta=8": 288.6855816335655
+        },
+        "orientation": "right",
+        "row_count": 13,
+        "volume": 2
+      },
+      {
+        "beta": 0.5,
+        "dimension": 12,
+        "maximum_boundary_rate": 1.6225918518043558,
+        "maximum_tail_mass": {
+          "theta=12": 0.0,
+          "theta=4": 0.004528017063581072,
+          "theta=8": 0.00012550468700280325
+        },
+        "minimum_core_gap": 2.2140926001952095,
+        "minimum_core_mass": 0.9954719829364189,
+        "minimum_full_gap": 2.4233910464473927,
+        "minimum_tail_drift": {
+          "alpha=0.025/theta=12": Infinity,
+          "alpha=0.025/theta=4": 1.7235718247692755,
+          "alpha=0.025/theta=8": 94.03161719287047,
+          "alpha=0.05/theta=12": Infinity,
+          "alpha=0.05/theta=4": 3.2957822499865133,
+          "alpha=0.05/theta=8": 171.62602529852322,
+          "alpha=0.1/theta=12": Infinity,
+          "alpha=0.1/theta=4": 6.0224273769029715,
+          "alpha=0.1/theta=8": 288.6855816335689
+        },
+        "orientation": "left",
+        "row_count": 13,
+        "volume": 2
+      },
+      {
+        "beta": 2.0,
+        "dimension": 12,
+        "maximum_boundary_rate": 2.1000826422753347,
+        "maximum_tail_mass": {
+          "theta=12": 1.377590426283585e-06,
+          "theta=4": 0.008127985630362806,
+          "theta=8": 6.80363589147233e-05
+        },
+        "minimum_core_gap": 2.271321845995329,
+        "minimum_core_mass": 0.9918720143696372,
+        "minimum_full_gap": 2.4606294784181837,
+        "minimum_tail_drift": {
+          "alpha=0.025/theta=12": 9162.911721348324,
+          "alpha=0.025/theta=4": 1.8221086490535643,
+          "alpha=0.025/theta=8": 155.23253032188953,
+          "alpha=0.05/theta=12": 15999.026451875852,
+          "alpha=0.05/theta=4": 3.449286492351093,
+          "alpha=0.05/theta=8": 282.8632071613494,
+          "alpha=0.1/theta=12": 24914.300101538374,
+          "alpha=0.1/theta=4": 6.140071784637955,
+          "alpha=0.1/theta=8": 474.28657817138736
+        },
+        "orientation": "right",
+        "row_count": 13,
+        "volume": 2
+      },
+      {
+        "beta": 2.0,
+        "dimension": 12,
+        "maximum_boundary_rate": 2.100082642275332,
+        "maximum_tail_mass": {
+          "theta=12": 1.3775904262834155e-06,
+          "theta=4": 0.008127985630362941,
+          "theta=8": 6.803635891472385e-05
+        },
+        "minimum_core_gap": 2.2713218459953617,
+        "minimum_core_mass": 0.9918720143696371,
+        "minimum_full_gap": 2.460629478424297,
+        "minimum_tail_drift": {
+          "alpha=0.025/theta=12": 9162.911721349008,
+          "alpha=0.025/theta=4": 1.822108649053529,
+          "alpha=0.025/theta=8": 155.23253032188813,
+          "alpha=0.05/theta=12": 15999.026451877038,
+          "alpha=0.05/theta=4": 3.4492864923510296,
+          "alpha=0.05/theta=8": 282.86320716134645,
+          "alpha=0.1/theta=12": 24914.300101540186,
+          "alpha=0.1/theta=4": 6.140071784637831,
+          "alpha=0.1/theta=8": 474.28657817138236
+        },
+        "orientation": "left",
+        "row_count": 13,
+        "volume": 2
+      },
+      {
+        "beta": 8.0,
+        "dimension": 12,
+        "maximum_boundary_rate": 1.9294194806431553,
+        "maximum_tail_mass": {
+          "theta=12": 4.325818821810004e-07,
+          "theta=4": 0.002050144654039427,
+          "theta=8": 0.0001241897069917562
+        },
+        "minimum_core_gap": 1.859709781466009,
+        "minimum_core_mass": 0.9979498553459605,
+        "minimum_full_gap": 2.0345803822665367,
+        "minimum_tail_drift": {
+          "alpha=0.025/theta=12": 29232.273111242273,
+          "alpha=0.025/theta=4": 6.817302862586662,
+          "alpha=0.025/theta=8": 117.77814799825465,
+          "alpha=0.05/theta=12": 49991.60529738138,
+          "alpha=0.05/theta=4": 12.838676048956652,
+          "alpha=0.05/theta=8": 214.91662990455595,
+          "alpha=0.1/theta=12": 75223.4678087826,
+          "alpha=0.1/theta=4": 22.7728553047492,
+          "alpha=0.1/theta=8": 361.21441391132157
+        },
+        "orientation": "right",
+        "row_count": 13,
+        "volume": 2
+      },
+      {
+        "beta": 8.0,
+        "dimension": 12,
+        "maximum_boundary_rate": 1.9294194806431715,
+        "maximum_tail_mass": {
+          "theta=12": 4.325818821810647e-07,
+          "theta=4": 0.0020501446540394175,
+          "theta=8": 0.00012418970699180906
+        },
+        "minimum_core_gap": 1.8597097814659556,
+        "minimum_core_mass": 0.9979498553459603,
+        "minimum_full_gap": 2.0345803822672504,
+        "minimum_tail_drift": {
+          "alpha=0.025/theta=12": 29232.273111242666,
+          "alpha=0.025/theta=4": 6.817302862586692,
+          "alpha=0.025/theta=8": 117.77814799819865,
+          "alpha=0.05/theta=12": 49991.605297382055,
+          "alpha=0.05/theta=4": 12.838676048956692,
+          "alpha=0.05/theta=8": 214.91662990445465,
+          "alpha=0.1/theta=12": 75223.46780878362,
+          "alpha=0.1/theta=4": 22.77285530474926,
+          "alpha=0.1/theta=8": 361.2144139111544
+        },
+        "orientation": "left",
+        "row_count": 13,
+        "volume": 2
+      },
+      {
+        "beta": 0.5,
+        "dimension": 3,
+        "maximum_boundary_rate": 0.0,
+        "maximum_tail_mass": {
+          "theta=12": 0.0,
+          "theta=4": 0.0,
+          "theta=8": 0.0
+        },
+        "minimum_core_gap": 0.9541672203738292,
+        "minimum_core_mass": 0.9999999999999999,
+        "minimum_full_gap": 0.9541672203738292,
+        "minimum_tail_drift": {
+          "alpha=0.025/theta=12": Infinity,
+          "alpha=0.025/theta=4": Infinity,
+          "alpha=0.025/theta=8": Infinity,
+          "alpha=0.05/theta=12": Infinity,
+          "alpha=0.05/theta=4": Infinity,
+          "alpha=0.05/theta=8": Infinity,
+          "alpha=0.1/theta=12": Infinity,
+          "alpha=0.1/theta=4": Infinity,
+          "alpha=0.1/theta=8": Infinity
+        },
+        "orientation": "right",
+        "row_count": 13,
+        "volume": 3
+      },
+      {
+        "beta": 0.5,
+        "dimension": 3,
+        "maximum_boundary_rate": 0.0,
+        "maximum_tail_mass": {
+          "theta=12": 0.0,
+          "theta=4": 0.0,
+          "theta=8": 0.0
+        },
+        "minimum_core_gap": 0.9541672203738294,
+        "minimum_core_mass": 0.9999999999999999,
+        "minimum_full_gap": 0.9541672203738294,
+        "minimum_tail_drift": {
+          "alpha=0.025/theta=12": Infinity,
+          "alpha=0.025/theta=4": Infinity,
+          "alpha=0.025/theta=8": Infinity,
+          "alpha=0.05/theta=12": Infinity,
+          "alpha=0.05/theta=4": Infinity,
+          "alpha=0.05/theta=8": Infinity,
+          "alpha=0.1/theta=12": Infinity,
+          "alpha=0.1/theta=4": Infinity,
+          "alpha=0.1/theta=8": Infinity
+        },
+        "orientation": "left",
+        "row_count": 13,
+        "volume": 3
+      },
+      {
+        "beta": 2.0,
+        "dimension": 3,
+        "maximum_boundary_rate": 0.0,
+        "maximum_tail_mass": {
+          "theta=12": 0.0,
+          "theta=4": 0.0,
+          "theta=8": 0.0
+        },
+        "minimum_core_gap": 0.7534168900610527,
+        "minimum_core_mass": 1.0,
+        "minimum_full_gap": 0.7534168900610527,
+        "minimum_tail_drift": {
+          "alpha=0.025/theta=12": Infinity,
+          "alpha=0.025/theta=4": Infinity,
+          "alpha=0.025/theta=8": Infinity,
+          "alpha=0.05/theta=12": Infinity,
+          "alpha=0.05/theta=4": Infinity,
+          "alpha=0.05/theta=8": Infinity,
+          "alpha=0.1/theta=12": Infinity,
+          "alpha=0.1/theta=4": Infinity,
+          "alpha=0.1/theta=8": Infinity
+        },
+        "orientation": "right",
+        "row_count": 13,
+        "volume": 3
+      },
+      {
+        "beta": 2.0,
+        "dimension": 3,
+        "maximum_boundary_rate": 0.0,
+        "maximum_tail_mass": {
+          "theta=12": 0.0,
+          "theta=4": 0.0,
+          "theta=8": 0.0
+        },
+        "minimum_core_gap": 0.7534168900610526,
+        "minimum_core_mass": 0.9999999999999998,
+        "minimum_full_gap": 0.7534168900610526,
+        "minimum_tail_drift": {
+          "alpha=0.025/theta=12": Infinity,
+          "alpha=0.025/theta=4": Infinity,
+          "alpha=0.025/theta=8": Infinity,
+          "alpha=0.05/theta=12": Infinity,
+          "alpha=0.05/theta=4": Infinity,
+          "alpha=0.05/theta=8": Infinity,
+          "alpha=0.1/theta=12": Infinity,
+          "alpha=0.1/theta=4": Infinity,
+          "alpha=0.1/theta=8": Infinity
+        },
+        "orientation": "left",
+        "row_count": 13,
+        "volume": 3
+      },
+      {
+        "beta": 8.0,
+        "dimension": 3,
+        "maximum_boundary_rate": 0.0,
+        "maximum_tail_mass": {
+          "theta=12": 0.0,
+          "theta=4": 0.0,
+          "theta=8": 0.0
+        },
+        "minimum_core_gap": 0.6849137546820983,
+        "minimum_core_mass": 1.0,
+        "minimum_full_gap": 0.6849137546820983,
+        "minimum_tail_drift": {
+          "alpha=0.025/theta=12": Infinity,
+          "alpha=0.025/theta=4": Infinity,
+          "alpha=0.025/theta=8": Infinity,
+          "alpha=0.05/theta=12": Infinity,
+          "alpha=0.05/theta=4": Infinity,
+          "alpha=0.05/theta=8": Infinity,
+          "alpha=0.1/theta=12": Infinity,
+          "alpha=0.1/theta=4": Infinity,
+          "alpha=0.1/theta=8": Infinity
+        },
+        "orientation": "right",
+        "row_count": 13,
+        "volume": 3
+      },
+      {
+        "beta": 8.0,
+        "dimension": 3,
+        "maximum_boundary_rate": 0.0,
+        "maximum_tail_mass": {
+          "theta=12": 0.0,
+          "theta=4": 0.0,
+          "theta=8": 0.0
+        },
+        "minimum_core_gap": 0.6849137546820984,
+        "minimum_core_mass": 0.9999999999999999,
+        "minimum_full_gap": 0.6849137546820984,
+        "minimum_tail_drift": {
+          "alpha=0.025/theta=12": Infinity,
+          "alpha=0.025/theta=4": Infinity,
+          "alpha=0.025/theta=8": Infinity,
+          "alpha=0.05/theta=12": Infinity,
+          "alpha=0.05/theta=4": Infinity,
+          "alpha=0.05/theta=8": Infinity,
+          "alpha=0.1/theta=12": Infinity,
+          "alpha=0.1/theta=4": Infinity,
+          "alpha=0.1/theta=8": Infinity
+        },
+        "orientation": "left",
+        "row_count": 13,
+        "volume": 3
+      },
+      {
+        "beta": 0.5,
+        "dimension": 4,
+        "maximum_boundary_rate": 0.0,
+        "maximum_tail_mass": {
+          "theta=12": 0.0,
+          "theta=4": 0.0,
+          "theta=8": 0.0
+        },
+        "minimum_core_gap": 1.0107702515077672,
+        "minimum_core_mass": 1.0,
+        "minimum_full_gap": 1.010770251507767,
+        "minimum_tail_drift": {
+          "alpha=0.025/theta=12": Infinity,
+          "alpha=0.025/theta=4": Infinity,
+          "alpha=0.025/theta=8": Infinity,
+          "alpha=0.05/theta=12": Infinity,
+          "alpha=0.05/theta=4": Infinity,
+          "alpha=0.05/theta=8": Infinity,
+          "alpha=0.1/theta=12": Infinity,
+          "alpha=0.1/theta=4": Infinity,
+          "alpha=0.1/theta=8": Infinity
+        },
+        "orientation": "right",
+        "row_count": 21,
+        "volume": 3
+      },
+      {
+        "beta": 0.5,
+        "dimension": 4,
+        "maximum_boundary_rate": 0.0,
+        "maximum_tail_mass": {
+          "theta=12": 0.0,
+          "theta=4": 0.0,
+          "theta=8": 0.0
+        },
+        "minimum_core_gap": 1.010770251507767,
+        "minimum_core_mass": 1.0,
+        "minimum_full_gap": 1.010770251507767,
+        "minimum_tail_drift": {
+          "alpha=0.025/theta=12": Infinity,
+          "alpha=0.025/theta=4": Infinity,
+          "alpha=0.025/theta=8": Infinity,
+          "alpha=0.05/theta=12": Infinity,
+          "alpha=0.05/theta=4": Infinity,
+          "alpha=0.05/theta=8": Infinity,
+          "alpha=0.1/theta=12": Infinity,
+          "alpha=0.1/theta=4": Infinity,
+          "alpha=0.1/theta=8": Infinity
+        },
+        "orientation": "left",
+        "row_count": 21,
+        "volume": 3
+      },
+      {
+        "beta": 2.0,
+        "dimension": 4,
+        "maximum_boundary_rate": 0.4584134286899478,
+        "maximum_tail_mass": {
+          "theta=12": 0.0,
+          "theta=4": 0.006591956527259897,
+          "theta=8": 0.0
+        },
+        "minimum_core_gap": 0.7800272826659479,
+        "minimum_core_mass": 0.9934080434727401,
+        "minimum_full_gap": 0.7800272826659478,
+        "minimum_tail_drift": {
+          "alpha=0.025/theta=12": Infinity,
+          "alpha=0.025/theta=4": 0.9756358477581093,
+          "alpha=0.025/theta=8": Infinity,
+          "alpha=0.05/theta=12": Infinity,
+          "alpha=0.05/theta=4": 1.8583562908151805,
+          "alpha=0.05/theta=8": Infinity,
+          "alpha=0.1/theta=12": Infinity,
+          "alpha=0.1/theta=4": 3.3817591483206755,
+          "alpha=0.1/theta=8": Infinity
+        },
+        "orientation": "right",
+        "row_count": 21,
+        "volume": 3
+      },
+      {
+        "beta": 2.0,
+        "dimension": 4,
+        "maximum_boundary_rate": 0.4584134286899478,
+        "maximum_tail_mass": {
+          "theta=12": 0.0,
+          "theta=4": 0.0065919565272599305,
+          "theta=8": 0.0
+        },
+        "minimum_core_gap": 0.7800272826659477,
+        "minimum_core_mass": 0.9934080434727401,
+        "minimum_full_gap": 0.7800272826659477,
+        "minimum_tail_drift": {
+          "alpha=0.025/theta=12": Infinity,
+          "alpha=0.025/theta=4": 0.9756358477581043,
+          "alpha=0.025/theta=8": Infinity,
+          "alpha=0.05/theta=12": Infinity,
+          "alpha=0.05/theta=4": 1.8583562908151714,
+          "alpha=0.05/theta=8": Infinity,
+          "alpha=0.1/theta=12": Infinity,
+          "alpha=0.1/theta=4": 3.3817591483206555,
+          "alpha=0.1/theta=8": Infinity
+        },
+        "orientation": "left",
+        "row_count": 21,
+        "volume": 3
+      },
+      {
+        "beta": 8.0,
+        "dimension": 4,
+        "maximum_boundary_rate": 0.6531046037313321,
+        "maximum_tail_mass": {
+          "theta=12": 0.0,
+          "theta=4": 0.01756105088212281,
+          "theta=8": 0.0
+        },
+        "minimum_core_gap": 0.6310329497027766,
+        "minimum_core_mass": 0.9824389491178772,
+        "minimum_full_gap": 0.6310329497027761,
+        "minimum_tail_drift": {
+          "alpha=0.025/theta=12": Infinity,
+          "alpha=0.025/theta=4": 0.801142963723471,
+          "alpha=0.025/theta=8": Infinity,
+          "alpha=0.05/theta=12": Infinity,
+          "alpha=0.05/theta=4": 1.5270957334794613,
+          "alpha=0.05/theta=8": Infinity,
+          "alpha=0.1/theta=12": Infinity,
+          "alpha=0.1/theta=4": 2.7812780806998796,
+          "alpha=0.1/theta=8": Infinity
+        },
+        "orientation": "right",
+        "row_count": 21,
+        "volume": 3
+      },
+      {
+        "beta": 8.0,
+        "dimension": 4,
+        "maximum_boundary_rate": 0.6531046037313322,
+        "maximum_tail_mass": {
+          "theta=12": 0.0,
+          "theta=4": 0.017561050882122824,
+          "theta=8": 0.0
+        },
+        "minimum_core_gap": 0.6310329497027757,
+        "minimum_core_mass": 0.9824389491178772,
+        "minimum_full_gap": 0.6310329497027757,
+        "minimum_tail_drift": {
+          "alpha=0.025/theta=12": Infinity,
+          "alpha=0.025/theta=4": 0.8011429637234696,
+          "alpha=0.025/theta=8": Infinity,
+          "alpha=0.05/theta=12": Infinity,
+          "alpha=0.05/theta=4": 1.5270957334794588,
+          "alpha=0.05/theta=8": Infinity,
+          "alpha=0.1/theta=12": Infinity,
+          "alpha=0.1/theta=4": 2.7812780806998756,
+          "alpha=0.1/theta=8": Infinity
+        },
+        "orientation": "left",
+        "row_count": 21,
+        "volume": 3
+      },
+      {
+        "beta": 0.5,
+        "dimension": 5,
+        "maximum_boundary_rate": 0.0,
+        "maximum_tail_mass": {
+          "theta=12": 0.0,
+          "theta=4": 0.0,
+          "theta=8": 0.0
+        },
+        "minimum_core_gap": 1.2209548098932468,
+        "minimum_core_mass": 0.9999999999999998,
+        "minimum_full_gap": 1.2209548098932475,
+        "minimum_tail_drift": {
+          "alpha=0.025/theta=12": Infinity,
+          "alpha=0.025/theta=4": Infinity,
+          "alpha=0.025/theta=8": Infinity,
+          "alpha=0.05/theta=12": Infinity,
+          "alpha=0.05/theta=4": Infinity,
+          "alpha=0.05/theta=8": Infinity,
+          "alpha=0.1/theta=12": Infinity,
+          "alpha=0.1/theta=4": Infinity,
+          "alpha=0.1/theta=8": Infinity
+        },
+        "orientation": "right",
+        "row_count": 31,
+        "volume": 3
+      },
+      {
+        "beta": 0.5,
+        "dimension": 5,
+        "maximum_boundary_rate": 0.0,
+        "maximum_tail_mass": {
+          "theta=12": 0.0,
+          "theta=4": 0.0,
+          "theta=8": 0.0
+        },
+        "minimum_core_gap": 1.2209548098932481,
+        "minimum_core_mass": 0.9999999999999998,
+        "minimum_full_gap": 1.2209548098932481,
+        "minimum_tail_drift": {
+          "alpha=0.025/theta=12": Infinity,
+          "alpha=0.025/theta=4": Infinity,
+          "alpha=0.025/theta=8": Infinity,
+          "alpha=0.05/theta=12": Infinity,
+          "alpha=0.05/theta=4": Infinity,
+          "alpha=0.05/theta=8": Infinity,
+          "alpha=0.1/theta=12": Infinity,
+          "alpha=0.1/theta=4": Infinity,
+          "alpha=0.1/theta=8": Infinity
+        },
+        "orientation": "left",
+        "row_count": 31,
+        "volume": 3
+      },
+      {
+        "beta": 2.0,
+        "dimension": 5,
+        "maximum_boundary_rate": 0.47927404746440855,
+        "maximum_tail_mass": {
+          "theta=12": 0.0,
+          "theta=4": 0.006617658037558198,
+          "theta=8": 0.0
+        },
+        "minimum_core_gap": 1.3269257111273367,
+        "minimum_core_mass": 0.9933823419624418,
+        "minimum_full_gap": 1.3269257111273365,
+        "minimum_tail_drift": {
+          "alpha=0.025/theta=12": Infinity,
+          "alpha=0.025/theta=4": 1.622505261452166,
+          "alpha=0.025/theta=8": Infinity,
+          "alpha=0.05/theta=12": Infinity,
+          "alpha=0.05/theta=4": 3.1071758264123037,
+          "alpha=0.05/theta=8": Infinity,
+          "alpha=0.1/theta=12": Infinity,
+          "alpha=0.1/theta=4": 5.709772195340709,
+          "alpha=0.1/theta=8": Infinity
+        },
+        "orientation": "right",
+        "row_count": 31,
+        "volume": 3
+      },
+      {
+        "beta": 2.0,
+        "dimension": 5,
+        "maximum_boundary_rate": 0.4792740474644082,
+        "maximum_tail_mass": {
+          "theta=12": 0.0,
+          "theta=4": 0.006617658037558148,
+          "theta=8": 0.0
+        },
+        "minimum_core_gap": 1.3269257111273303,
+        "minimum_core_mass": 0.9933823419624419,
+        "minimum_full_gap": 1.3269257111273303,
+        "minimum_tail_drift": {
+          "alpha=0.025/theta=12": Infinity,
+          "alpha=0.025/theta=4": 1.6225052614521858,
+          "alpha=0.025/theta=8": Infinity,
+          "alpha=0.05/theta=12": Infinity,
+          "alpha=0.05/theta=4": 3.107175826412336,
+          "alpha=0.05/theta=8": Infinity,
+          "alpha=0.1/theta=12": Infinity,
+          "alpha=0.1/theta=4": 5.709772195340773,
+          "alpha=0.1/theta=8": Infinity
+        },
+        "orientation": "left",
+        "row_count": 31,
+        "volume": 3
+      },
+      {
+        "beta": 8.0,
+        "dimension": 5,
+        "maximum_boundary_rate": 0.7097842454292524,
+        "maximum_tail_mass": {
+          "theta=12": 3.3775642404311965e-06,
+          "theta=4": 0.013527719856904572,
+          "theta=8": 0.00017679512244788017
+        },
+        "minimum_core_gap": 1.7910015583058898,
+        "minimum_core_mass": 0.9864722801430955,
+        "minimum_full_gap": 1.8765620491619472,
+        "minimum_tail_drift": {
+          "alpha=0.025/theta=12": 5236.92415460969,
+          "alpha=0.025/theta=4": 1.1287424835607671,
+          "alpha=0.025/theta=8": 91.66556307819187,
+          "alpha=0.05/theta=12": 9179.007807073482,
+          "alpha=0.05/theta=4": 2.1479321267334464,
+          "alpha=0.05/theta=8": 168.12174576552408,
+          "alpha=0.1/theta=12": 14387.433526731205,
+          "alpha=0.1/theta=4": 3.8824365962712584,
+          "alpha=0.1/theta=8": 285.18993971149746
+        },
+        "orientation": "right",
+        "row_count": 31,
+        "volume": 3
+      },
+      {
+        "beta": 8.0,
+        "dimension": 5,
+        "maximum_boundary_rate": 0.7097842454292524,
+        "maximum_tail_mass": {
+          "theta=12": 3.3775642404307416e-06,
+          "theta=4": 0.013527719856904572,
+          "theta=8": 0.00017679512244788066
+        },
+        "minimum_core_gap": 1.79100155830589,
+        "minimum_core_mass": 0.9864722801430954,
+        "minimum_full_gap": 1.8765620491619437,
+        "minimum_tail_drift": {
+          "alpha=0.025/theta=12": 5236.924154610436,
+          "alpha=0.025/theta=4": 1.1287424835607653,
+          "alpha=0.025/theta=8": 91.66556307819161,
+          "alpha=0.05/theta=12": 9179.00780707477,
+          "alpha=0.05/theta=4": 2.1479321267334455,
+          "alpha=0.05/theta=8": 168.12174576552357,
+          "alpha=0.1/theta=12": 14387.433526733188,
+          "alpha=0.1/theta=4": 3.8824365962712606,
+          "alpha=0.1/theta=8": 285.1899397114966
+        },
+        "orientation": "left",
+        "row_count": 31,
+        "volume": 3
+      },
+      {
+        "beta": 0.5,
+        "dimension": 6,
+        "maximum_boundary_rate": 0.5445684566647808,
+        "maximum_tail_mass": {
+          "theta=12": 0.0,
+          "theta=4": 0.0061515862604071105,
+          "theta=8": 0.0
+        },
+        "minimum_core_gap": 1.5012261105254368,
+        "minimum_core_mass": 0.9938484137395929,
+        "minimum_full_gap": 1.5012261105254359,
+        "minimum_tail_drift": {
+          "alpha=0.025/theta=12": Infinity,
+          "alpha=0.025/theta=4": 0.9135159799074377,
+          "alpha=0.025/theta=8": Infinity,
+          "alpha=0.05/theta=12": Infinity,
+          "alpha=0.05/theta=4": 1.7563232127991708,
+          "alpha=0.05/theta=8": Infinity,
+          "alpha=0.1/theta=12": Infinity,
+          "alpha=0.1/theta=4": 3.2524374439944523,
+          "alpha=0.1/theta=8": Infinity
+        },
+        "orientation": "right",
+        "row_count": 43,
+        "volume": 3
+      },
+      {
+        "beta": 0.5,
+        "dimension": 6,
+        "maximum_boundary_rate": 0.5445684566647809,
+        "maximum_tail_mass": {
+          "theta=12": 0.0,
+          "theta=4": 0.006151586260407103,
+          "theta=8": 0.0
+        },
+        "minimum_core_gap": 1.5012261105254363,
+        "minimum_core_mass": 0.9938484137395929,
+        "minimum_full_gap": 1.5012261105254363,
+        "minimum_tail_drift": {
+          "alpha=0.025/theta=12": Infinity,
+          "alpha=0.025/theta=4": 0.9135159799074389,
+          "alpha=0.025/theta=8": Infinity,
+          "alpha=0.05/theta=12": Infinity,
+          "alpha=0.05/theta=4": 1.7563232127991733,
+          "alpha=0.05/theta=8": Infinity,
+          "alpha=0.1/theta=12": Infinity,
+          "alpha=0.1/theta=4": 3.252437443994459,
+          "alpha=0.1/theta=8": Infinity
+        },
+        "orientation": "left",
+        "row_count": 43,
+        "volume": 3
+      },
+      {
+        "beta": 2.0,
+        "dimension": 6,
+        "maximum_boundary_rate": 0.8786856554709699,
+        "maximum_tail_mass": {
+          "theta=12": 0.0,
+          "theta=4": 0.010863982623201466,
+          "theta=8": 0.0001682572475094653
+        },
+        "minimum_core_gap": 1.3785055259916903,
+        "minimum_core_mass": 0.9891360173767983,
+        "minimum_full_gap": 1.4768675576930461,
+        "minimum_tail_drift": {
+          "alpha=0.025/theta=12": Infinity,
+          "alpha=0.025/theta=4": 0.8096880329351323,
+          "alpha=0.025/theta=8": 51.93195034439205,
+          "alpha=0.05/theta=12": Infinity,
+          "alpha=0.05/theta=4": 1.5439428719120878,
+          "alpha=0.05/theta=8": 95.07877859474118,
+          "alpha=0.1/theta=12": Infinity,
+          "alpha=0.1/theta=4": 2.806964338681107,
+          "alpha=0.1/theta=8": 160.47705270479324
+        },
+        "orientation": "right",
+        "row_count": 43,
+        "volume": 3
+      },
+      {
+        "beta": 2.0,
+        "dimension": 6,
+        "maximum_boundary_rate": 0.8786856554709703,
+        "maximum_tail_mass": {
+          "theta=12": 0.0,
+          "theta=4": 0.010863982623201495,
+          "theta=8": 0.00016825724750947098
+        },
+        "minimum_core_gap": 1.3785055259917156,
+        "minimum_core_mass": 0.9891360173767985,
+        "minimum_full_gap": 1.4768675576930783,
+        "minimum_tail_drift": {
+          "alpha=0.025/theta=12": Infinity,
+          "alpha=0.025/theta=4": 0.809688032935125,
+          "alpha=0.025/theta=8": 51.931950344389996,
+          "alpha=0.05/theta=12": Infinity,
+          "alpha=0.05/theta=4": 1.5439428719120747,
+          "alpha=0.05/theta=8": 95.07877859473739,
+          "alpha=0.1/theta=12": Infinity,
+          "alpha=0.1/theta=4": 2.8069643386810865,
+          "alpha=0.1/theta=8": 160.47705270479224
+        },
+        "orientation": "left",
+        "row_count": 43,
+        "volume": 3
+      },
+      {
+        "beta": 8.0,
+        "dimension": 6,
+        "maximum_boundary_rate": 0.8449727485289182,
+        "maximum_tail_mass": {
+          "theta=12": 0.0,
+          "theta=4": 0.010039363708993772,
+          "theta=8": 0.00018807482207871677
+        },
+        "minimum_core_gap": 1.5741686129781678,
+        "minimum_core_mass": 0.9899606362910063,
+        "minimum_full_gap": 1.6820236456338882,
+        "minimum_tail_drift": {
+          "alpha=0.025/theta=12": Infinity,
+          "alpha=0.025/theta=4": 0.9921159279173813,
+          "alpha=0.025/theta=8": 46.32014571439607,
+          "alpha=0.05/theta=12": Infinity,
+          "alpha=0.05/theta=4": 1.8935922879005267,
+          "alpha=0.05/theta=8": 84.84529388740069,
+          "alpha=0.1/theta=12": Infinity,
+          "alpha=0.1/theta=4": 3.449859547710437,
+          "alpha=0.1/theta=8": 143.60932601439347
+        },
+        "orientation": "right",
+        "row_count": 43,
+        "volume": 3
+      },
+      {
+        "beta": 8.0,
+        "dimension": 6,
+        "maximum_boundary_rate": 0.8449727485289183,
+        "maximum_tail_mass": {
+          "theta=12": 0.0,
+          "theta=4": 0.010039363708993814,
+          "theta=8": 0.00018807482207871694
+        },
+        "minimum_core_gap": 1.5741686129781816,
+        "minimum_core_mass": 0.9899606362910063,
+        "minimum_full_gap": 1.6820236456338904,
+        "minimum_tail_drift": {
+          "alpha=0.025/theta=12": Infinity,
+          "alpha=0.025/theta=4": 0.9921159279173742,
+          "alpha=0.025/theta=8": 46.32014571439596,
+          "alpha=0.05/theta=12": Infinity,
+          "alpha=0.05/theta=4": 1.8935922879005158,
+          "alpha=0.05/theta=8": 84.84529388740049,
+          "alpha=0.1/theta=12": Infinity,
+          "alpha=0.1/theta=4": 3.449859547710413,
+          "alpha=0.1/theta=8": 143.60932601439316
+        },
+        "orientation": "left",
+        "row_count": 43,
+        "volume": 3
+      },
+      {
+        "beta": 0.5,
+        "dimension": 4,
+        "maximum_boundary_rate": 0.0,
+        "maximum_tail_mass": {
+          "theta=12": 0.0,
+          "theta=4": 0.0,
+          "theta=8": 0.0
+        },
+        "minimum_core_gap": 1.0114698983544088,
+        "minimum_core_mass": 0.9999999999999998,
+        "minimum_full_gap": 1.0114698983544088,
+        "minimum_tail_drift": {
+          "alpha=0.025/theta=12": Infinity,
+          "alpha=0.025/theta=4": Infinity,
+          "alpha=0.025/theta=8": Infinity,
+          "alpha=0.05/theta=12": Infinity,
+          "alpha=0.05/theta=4": Infinity,
+          "alpha=0.05/theta=8": Infinity,
+          "alpha=0.1/theta=12": Infinity,
+          "alpha=0.1/theta=4": Infinity,
+          "alpha=0.1/theta=8": Infinity
+        },
+        "orientation": "right",
+        "row_count": 85,
+        "volume": 4
+      },
+      {
+        "beta": 0.5,
+        "dimension": 4,
+        "maximum_boundary_rate": 0.0,
+        "maximum_tail_mass": {
+          "theta=12": 0.0,
+          "theta=4": 0.0,
+          "theta=8": 0.0
+        },
+        "minimum_core_gap": 1.0114698983544086,
+        "minimum_core_mass": 0.9999999999999998,
+        "minimum_full_gap": 1.0114698983544086,
+        "minimum_tail_drift": {
+          "alpha=0.025/theta=12": Infinity,
+          "alpha=0.025/theta=4": Infinity,
+          "alpha=0.025/theta=8": Infinity,
+          "alpha=0.05/theta=12": Infinity,
+          "alpha=0.05/theta=4": Infinity,
+          "alpha=0.05/theta=8": Infinity,
+          "alpha=0.1/theta=12": Infinity,
+          "alpha=0.1/theta=4": Infinity,
+          "alpha=0.1/theta=8": Infinity
+        },
+        "orientation": "left",
+        "row_count": 85,
+        "volume": 4
+      },
+      {
+        "beta": 2.0,
+        "dimension": 4,
+        "maximum_boundary_rate": 0.4951575846793402,
+        "maximum_tail_mass": {
+          "theta=12": 0.0,
+          "theta=4": 0.013332185044057102,
+          "theta=8": 0.0
+        },
+        "minimum_core_gap": 0.7765994886471993,
+        "minimum_core_mass": 0.9866678149559429,
+        "minimum_full_gap": 0.7765994886471993,
+        "minimum_tail_drift": {
+          "alpha=0.025/theta=12": Infinity,
+          "alpha=0.025/theta=4": 0.4188403678721089,
+          "alpha=0.025/theta=8": Infinity,
+          "alpha=0.05/theta=12": Infinity,
+          "alpha=0.05/theta=4": 0.804945611663897,
+          "alpha=0.05/theta=8": Infinity,
+          "alpha=0.1/theta=12": Infinity,
+          "alpha=0.1/theta=4": 1.4898333202016312,
+          "alpha=0.1/theta=8": Infinity
+        },
+        "orientation": "right",
+        "row_count": 85,
+        "volume": 4
+      },
+      {
+        "beta": 2.0,
+        "dimension": 4,
+        "maximum_boundary_rate": 0.4951575846793402,
+        "maximum_tail_mass": {
+          "theta=12": 0.0,
+          "theta=4": 0.013332185044057077,
+          "theta=8": 0.0
+        },
+        "minimum_core_gap": 0.7765994886471991,
+        "minimum_core_mass": 0.9866678149559429,
+        "minimum_full_gap": 0.7765994886471991,
+        "minimum_tail_drift": {
+          "alpha=0.025/theta=12": Infinity,
+          "alpha=0.025/theta=4": 0.4188403678721091,
+          "alpha=0.025/theta=8": Infinity,
+          "alpha=0.05/theta=12": Infinity,
+          "alpha=0.05/theta=4": 0.8049456116638977,
+          "alpha=0.05/theta=8": Infinity,
+          "alpha=0.1/theta=12": Infinity,
+          "alpha=0.1/theta=4": 1.4898333202016343,
+          "alpha=0.1/theta=8": Infinity
+        },
+        "orientation": "left",
+        "row_count": 85,
+        "volume": 4
+      },
+      {
+        "beta": 8.0,
+        "dimension": 4,
+        "maximum_boundary_rate": 0.6583896737718115,
+        "maximum_tail_mass": {
+          "theta=12": 0.0,
+          "theta=4": 0.019404047079472624,
+          "theta=8": 0.0
+        },
+        "minimum_core_gap": 0.6159675039841621,
+        "minimum_core_mass": 0.9805959529205274,
+        "minimum_full_gap": 0.6159675039841621,
+        "minimum_tail_drift": {
+          "alpha=0.025/theta=12": Infinity,
+          "alpha=0.025/theta=4": 0.4862053179122368,
+          "alpha=0.025/theta=8": Infinity,
+          "alpha=0.05/theta=12": Infinity,
+          "alpha=0.05/theta=4": 0.9290393605090976,
+          "alpha=0.05/theta=8": Infinity,
+          "alpha=0.1/theta=12": Infinity,
+          "alpha=0.1/theta=4": 1.7009328126082235,
+          "alpha=0.1/theta=8": Infinity
+        },
+        "orientation": "right",
+        "row_count": 85,
+        "volume": 4
+      },
+      {
+        "beta": 8.0,
+        "dimension": 4,
+        "maximum_boundary_rate": 0.6583896737718106,
+        "maximum_tail_mass": {
+          "theta=12": 0.0,
+          "theta=4": 0.019404047079472454,
+          "theta=8": 0.0
+        },
+        "minimum_core_gap": 0.6159675039841626,
+        "minimum_core_mass": 0.9805959529205276,
+        "minimum_full_gap": 0.6159675039841627,
+        "minimum_tail_drift": {
+          "alpha=0.025/theta=12": Infinity,
+          "alpha=0.025/theta=4": 0.48620531791224597,
+          "alpha=0.025/theta=8": Infinity,
+          "alpha=0.05/theta=12": Infinity,
+          "alpha=0.05/theta=4": 0.9290393605091146,
+          "alpha=0.05/theta=8": Infinity,
+          "alpha=0.1/theta=12": Infinity,
+          "alpha=0.1/theta=4": 1.7009328126082541,
+          "alpha=0.1/theta=8": Infinity
+        },
+        "orientation": "left",
+        "row_count": 85,
+        "volume": 4
+      }
+    ],
+    "sector_a_closed": false,
+    "system_count": 12,
+    "tail_row_count_by_theta": {
+      "theta=12": 110,
+      "theta=4": 710,
+      "theta=8": 226
+    },
+    "tail_thresholds": [
+      4.0,
+      8.0,
+      12.0
+    ],
+    "volume_cutoffs": [
+      {
+        "cutoff_dimensions": [
+          3,
+          4,
+          5,
+          6,
+          8,
+          10,
+          12
+        ],
+        "volume": 2
+      },
+      {
+        "cutoff_dimensions": [
+          3,
+          4,
+          5,
+          6
+        ],
+        "volume": 3
+      },
+      {
+        "cutoff_dimensions": [
+          4
+        ],
+        "volume": 4
+      }
+    ],
+    "volume_uniform_lyapunov_closed": false
+  },
+  "exploration_id": "EXP-001264",
+  "manifest": "strategy/pre-a-cp1-st8-q3lock-growing-volume-lyapunov-core-tail-stress-manifest.json",
+  "result_id": "R-419",
+  "schema": "tect/pre-a-r419-primary/1.0",
+  "scope": {
+    "c6_closed": false,
+    "common_core_closed": false,
+    "common_split_rule_closed": false,
+    "continuum_closed": false,
+    "cutoff_uniform_lyapunov_closed": false,
+    "exhaustion_uniform_lyapunov_closed": false,
+    "finite_boundary_rate_closed": true,
+    "finite_core_gap_closed": true,
+    "finite_growing_volume_stress_closed": true,
+    "finite_log_domain_rows_closed": true,
+    "finite_lyapunov_drift_closed": true,
+    "finite_tail_mass_accounting_closed": true,
+    "global_poincare_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "no_new_negative_result": true,
+    "no_pdf": true,
+    "no_tier_change": true,
+    "observable_tail_control_closed": false,
+    "phase_uniform_lyapunov_closed": false,
+    "pre_a_closed": false,
+    "sector_a_closed": false,
+    "volume_uniform_lyapunov_closed": false
+  },
+  "verdict": "PASS"
+}

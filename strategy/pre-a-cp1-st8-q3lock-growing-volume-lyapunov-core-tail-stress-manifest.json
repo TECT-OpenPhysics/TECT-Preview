@@ -1,0 +1,110 @@
+{
+  "schema": "tect/pre-a-cp1-st8-q3lock-growing-volume-lyapunov-core-tail-stress/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-GROWING-VOLUME-LYAPUNOV-CORE-TAIL-STRESS-v0",
+  "result_id": "R-419",
+  "title": "Growing-volume log-domain Lyapunov core-tail stress",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001264",
+  "claim_bearing": false,
+  "parent_results": ["R-399", "R-405", "R-406", "R-414", "R-415", "R-416", "R-417"],
+  "question": "Does the R-417 log-domain Lyapunov/core-tail corridor persist under a bounded growing-volume Q3 stress, without treating a finite envelope as a uniform theorem?",
+  "new_perspective": {
+    "principle": "Stress the same source-independent finite Q3 construction in volume as well as cutoff, while retaining the tail drift, induced-core gap, tail mass and boundary rate as separate quantities.",
+    "route": [
+      "Keep the R-417 Hamiltonian, coordinate basis, log-Gibbs reconstruction, momentum conductance and alpha/theta grid unchanged.",
+      "Add volumes three and four at low cutoffs so the conditional-prefix geometry grows rather than only the one-site oscillator cutoff.",
+      "Evaluate every right/left prefix row and retain minimum/maximum aggregates, including rows with no nonempty tail.",
+      "Reconstruct the same grid independently and use hostile sign, normalization, volume-omission and disconnected-core mutations.",
+      "If a drift or core envelope collapses, preserve the finite diagnostic and register a route-local obstruction; if it persists, use it only to sharpen the analytic target."
+    ],
+    "qft_bridge": "A surviving finite growing-volume envelope identifies a better stress target for a common-core estimate. It does not establish volume uniformity, phase selection, OS/KMS/GNS coercivity, a continuum limit or a physical gap."
+  },
+  "finite_theorem": {
+    "log_domain": "For each finite Q3 Hamiltonian, log-sum-exp reconstructs a normalized positive coordinate law without direct-density underflow.",
+    "lyapunov": "For positive conditional weights and symmetric momentum conductances, V_i=exp(alpha*(log(pi_max)-log(pi_i))) and -LV/V are evaluated on each declared tail.",
+    "core": "The induced core graph is renormalized by its core mass and its projected positive eigenvalue is recorded separately from the full graph gap.",
+    "stress": "The finite test covers a prescribed volume/cutoff/beta/orientation grid. It neither quantifies a supremum over missing volumes nor proves that any observed minimum is volume-independent."
+  },
+  "finite_fixture": {
+    "volume_cutoffs": [
+      {"volume": 2, "cutoff_dimensions": [3, 4, 5, 6, 8, 10, 12]},
+      {"volume": 3, "cutoff_dimensions": [3, 4, 5, 6]},
+      {"volume": 4, "cutoff_dimensions": [4]}
+    ],
+    "beta_values": ["1/2", "2", "8"],
+    "orientations": ["right", "left"],
+    "alpha_values": ["1/40", "1/20", "1/10"],
+    "tail_thresholds": [4, 8, 12],
+    "chi": "1",
+    "r": "-1",
+    "g": "3/5",
+    "c": "3/5",
+    "lambda": "1/10",
+    "probability_floor": 1e-300,
+    "gap_floor": 1e-10,
+    "drift_floor": 1e-6,
+    "tail_mass_cap": 0.03,
+    "core_mass_floor": 0.9,
+    "raw_zero_threshold": 1e-8,
+    "numerical_tolerance": 1e-8,
+    "crosscheck_tolerance": 5e-7,
+    "aggregate_tolerance": 1e-2
+  },
+  "scope": {
+    "finite_log_domain_rows_closed": true,
+    "finite_lyapunov_drift_closed": true,
+    "finite_core_gap_closed": true,
+    "finite_tail_mass_accounting_closed": true,
+    "finite_boundary_rate_closed": true,
+    "finite_growing_volume_stress_closed": true,
+    "volume_uniform_lyapunov_closed": false,
+    "cutoff_uniform_lyapunov_closed": false,
+    "phase_uniform_lyapunov_closed": false,
+    "exhaustion_uniform_lyapunov_closed": false,
+    "observable_tail_control_closed": false,
+    "global_poincare_closed": false,
+    "common_core_closed": false,
+    "common_split_rule_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R419.lean",
+    "theorem_markers": ["positive_tail_rate", "core_tail_envelope", "volume_grid", "finite_scope"],
+    "command": "lake env lean Tect/R419.lean",
+    "boundary": "Lean checks only scalar positivity, the conservative core-tail envelope and finite grid bookkeeping; it does not formalize the Q3 matrix diagonalization, conditional distributions, spectral calculations or any volume/continuum limit."
+  },
+  "artifacts": {
+    "primary_script": "codes/foundations/pre_a_cp1_st8_q3lock_growing_volume_lyapunov_core_tail_stress.py",
+    "independent_script": "codes/foundations/pre_a_cp1_st8_q3lock_growing_volume_lyapunov_core_tail_stress_independent.py",
+    "hostile_script": "codes/foundations/pre_a_cp1_st8_q3lock_growing_volume_lyapunov_core_tail_stress_hostile.py",
+    "integrated_verifier": "codes/foundations/pre_a_cp1_st8_q3lock_growing_volume_lyapunov_core_tail_stress_verify.py",
+    "lean": "verification/lean/Tect/R419.lean"
+  },
+  "promotion_criteria": [
+    "Replace this bounded stress by an analytic volume-, cutoff-, phase- and exhaustion-uniform drift estimate on one Hamiltonian common core.",
+    "Prove a matching induced-core Schur/Poincare and boundary-capacity estimate, not just a finite eigenvalue minimum.",
+    "Control the actual R-399 likelihood observables in the same two-sided form norm before transferring through R-415 or revisiting GNS coercivity."
+  ],
+  "stop_conditions": [
+    "A validated nonpositive tail drift, disconnected induced core or uncontrolled tail mass is a route-local obstruction, not a physical conclusion.",
+    "Independent disagreement stops promotion and requires repair of model construction, log normalization, conductance or core scaling.",
+    "Finite persistence remains diagnostic only and cannot close C6, Sector-A, Pre-A, a QFT mass gap or a continuum theorem."
+  ],
+  "authority": {
+    "r417_manifest": "strategy/pre-a-cp1-st8-q3lock-lyapunov-core-tail-corridor-manifest.json",
+    "r417_certificate": "strategy/pre-a-cp1-st8-q3lock-lyapunov-core-tail-corridor-certificate-260831.md",
+    "r399_manifest": "strategy/pre-a-cp1-st8-q3lock-conditional-poincare-shell-manifest.json"
+  },
+  "boundary": "T0 claim-nonbearing finite growing-volume log-domain Lyapunov/core-tail stress. No volume-, cutoff-, phase- or exhaustion-uniform drift or gap, no common Hamiltonian core, no global Poincare theorem, no OS/KMS/GNS reconstruction, no physical mass gap, no continuum, C6, Sector-A or Pre-A closure.",
+  "no_overclaim": "A bounded growing-volume stress can expose a finite collapse or strengthen the list of analytic inputs; it cannot turn finite positive envelopes into uniform coercivity or a physical theorem.",
+  "recorded_by": "Codex"
+}

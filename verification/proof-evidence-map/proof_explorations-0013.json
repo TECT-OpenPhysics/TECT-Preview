@@ -7611,6 +7611,252 @@
       "task_id": "T-055",
       "title": "T-055 same-owner physical-empty preregistration is blocked at the owner boundary",
       "verdict": "inconclusive"
+    },
+    {
+      "adversarial_review": [
+        {
+          "axis": "drift sign",
+          "check": "Reversing the drift sign gives a negative tail rate and is rejected.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "Lyapunov orientation",
+          "check": "Using the inverse potential gives a negative tail rate and is rejected.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "connectivity",
+          "check": "Deleting the graph bridge produces a zero projected gap and is rejected.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "positive conditional law",
+          "check": "A zero mass is rejected rather than regularized.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "coverage",
+          "check": "Omitting volume levels or one collar orientation fails the preregistered grid contract.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "normalization",
+          "check": "Changing conductance scaling changes the projected gap and is detected.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "uniform and physical promotion",
+          "check": "Finite persistence does not prove volume/cutoff/phase/exhaustion uniformity, common-core dynamics, OS/KMS/GNS coercivity, a continuum or a physical gap.",
+          "disposition": "UPHELD-OPEN"
+        }
+      ],
+      "boundary": "T0 claim-nonbearing finite growing-volume stress only. It proves no volume-, cutoff-, phase- or exhaustion-uniform estimate, no global Poincare theorem, no common Hamiltonian core, no OS/KMS/GNS reconstruction, no continuum, no C6, no Sector-A and no Pre-A closure.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "claim_ids_used": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "The same finite core-tail interface remains positive when spatial volume is increased on the declared bounded grid. This strengthens the finite calibration and shows that the next obstruction is analytic volume/cutoff/phase/exhaustion uniformity rather than an immediate finite collapse. The result does not establish a uniform drift, a common core, or a physical gap.",
+      "decision_scope": "Finite grid and route calibration; no tier change.",
+      "evidence_refs": [
+        "strategy/pre-a-cp1-st8-q3lock-growing-volume-lyapunov-core-tail-stress-manifest.json#new_perspective",
+        "strategy/pre-a-cp1-st8-q3lock-growing-volume-lyapunov-core-tail-stress-certificate-260831.md#Finite verification",
+        "codes/foundations/pre_a_cp1_st8_q3lock_growing_volume_lyapunov_core_tail_stress.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_growing_volume_lyapunov_core_tail_stress_independent.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_growing_volume_lyapunov_core_tail_stress_hostile.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_growing_volume_lyapunov_core_tail_stress_verify.py#main",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-primary-growing_volume_lyapunov_core_tail_stress/primary.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-independent-growing_volume_lyapunov_core_tail_stress/independent.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-hostile-growing_volume_lyapunov_core_tail_stress/hostile.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-integrated-growing_volume_lyapunov_core_tail_stress/integrated.json#derived",
+        "verification/lean/Tect/R419.lean#positive_tail_rate"
+      ],
+      "finding": "The primary lane passes 19486/19486 assertions over 12 finite systems, 72 beta/orientation profiles and 1488 conditional rows. The independent lane passes 17997/17997 with exact count agreement and numerical agreement within tolerance. The hostile lane passes 12/12 and the integrated verifier passes 47/47; Lean R419 compiles. The minimum full and induced-core gaps are 0.6159675039841621, minimum core mass is 0.9805959529205274, maximum tail mass is 0.019404047079472624, minimum tail drift is 0.4188403678721089 at alpha=1/40 and theta=4, and maximum boundary rate is 2.1000826422753347.",
+      "formal_integration": {
+        "events": [
+          "20260831-r-419-growing-volume-log-domain-lyapunov-core-t"
+        ],
+        "lean": "R419 PASS",
+        "negatives": [],
+        "no_changelog_event": false,
+        "no_new_negative": true,
+        "no_new_result": false,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "results": [
+          "R-419"
+        ]
+      },
+      "formal_refs": {
+        "events": [
+          "20260831-r-419-growing-volume-log-domain-lyapunov-core-t"
+        ],
+        "negatives": [],
+        "results": [
+          "R-419"
+        ]
+      },
+      "gate_ids": [
+        "PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY",
+        "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+        "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+      ],
+      "id": "EXP-001264",
+      "method": [
+        "Keep the R-417 Q3 Hamiltonian, coordinate spectral basis, log-Gibbs reconstruction, momentum conductance and alpha/theta grid fixed.",
+        "Evaluate all conditional prefix rows for volumes 2, 3 and 4 on the preregistered cutoff grid, in both collar orientations and at beta 1/2, 2 and 8.",
+        "For every row and tail threshold compute the induced-core projected gap, core mass, tail mass and core-to-tail boundary rate, then compute tail drift for every alpha.",
+        "Rebuild the complete grid in a non-importing implementation and run hostile sign, inverse-potential, disconnected-graph, zero-mass, volume-omission, orientation-omission and normalization mutations.",
+        "Compile the scalar positivity and finite-grid bookkeeping cross-check in Lean R419."
+      ],
+      "next_action": "Prove a volume-, cutoff-, phase- and exhaustion-uniform Lyapunov estimate and a matching induced-core Schur/Poincare plus boundary-capacity bound on one Hamiltonian common core. Control the actual R-399 likelihood tails in the same two-sided form norm before transferring through R-415 or revisiting broken-sector GNS coercivity.",
+      "no_overclaim": "The bounded growing-volume stress advances finite calibration only. It does not promote any observed minimum to a volume-independent constant and does not close a physical or QFT gate.",
+      "provenance": "contemporaneous",
+      "question": "Does the R-417 log-domain Lyapunov/core-tail corridor persist under a bounded growing-volume Q3 stress without promoting a finite envelope to a uniform theorem?",
+      "recorded_at": "2026-08-31T03:00:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001262",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001261",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001263",
+          "relation": "alternative_to"
+        }
+      ],
+      "reviewed_on": "2026-08-29",
+      "schema": "tect/proof-exploration/1.0",
+      "schema_version": "1.0",
+      "task_id": "T-054",
+      "title": "Growing-volume log-domain Lyapunov core-tail stress",
+      "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "axis": "zero-reference substitution",
+          "check": "Aliasing E to zero or the P1 zero/disordered reference is rejected without a registered full map.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "owner identity",
+          "check": "Combining Reading-H G_* with a P1 or other finite parent is rejected as a cross-owner substitution.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "normalization and finite parts",
+          "check": "An unspecified finite-part or scalar shift cannot create the missing state-dependent comparison.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "limit order",
+          "check": "Omitting the thermodynamic-then-continuum order rejects the contract before evaluation.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "stationarity scope",
+          "check": "Covariance-owner stationarity is not promoted to full-field stationarity on an absent tangent.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "transverse stability",
+          "check": "No projected Hessian is formed without a common orbit tangent, projector and error budget.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "physical promotion",
+          "check": "A blocked input audit is not promoted to a physical vacuum, Yang-Mills result or mass gap.",
+          "disposition": "UPHELD-OPEN"
+        }
+      ],
+      "boundary": "T0 claim-nonbearing preregistration and input-admissibility test only. It proves no sign, stationarity, transverse stability, physical-empty identification, thermodynamic/continuum limit, Yang-Mills result, mass gap, C6, Sector-A or Pre-A closure.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "The requested finite test cannot be evaluated honestly until the owner supplies one hash-pinned common parent and instantiates E in that parent. The correct bounded advance is a new preregistration slot plus an executable blocker, not a zero-reference substitution or a fabricated finite-part normalization.",
+      "decision_scope": "Same-owner finite contract and E preregistration; no numerical evaluation and no tier change.",
+      "evidence_refs": [
+        "strategy/pre-a-t055-reading-h-physical-empty-bounded-test-blocked-manifest.json#owner_contract",
+        "strategy/pre-a-t055-reading-h-physical-empty-bounded-test-blocked-certificate-260831.md#Three-requested-verdicts",
+        "codes/foundations/pre_a_t055_reading_h_physical_empty_bounded_test_blocked.py#run_audit",
+        "codes/foundations/pre_a_t055_reading_h_physical_empty_bounded_test_blocked_independent.py#main",
+        "codes/foundations/pre_a_t055_reading_h_physical_empty_bounded_test_blocked_hostile.py#main",
+        "codes/foundations/pre_a_t055_reading_h_physical_empty_bounded_test_blocked_verify.py#main",
+        "verification/lean/Tect/R420.lean#evaluation_requires_owner_and_empty",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-primary-pre-a-t055-reading-h-physical-empty-bounded-test-blocked/primary.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-independent-pre-a-t055-reading-h-physical-empty-bounded-test-blocked/independent.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-hostile-pre-a-t055-reading-h-physical-empty-bounded-test-blocked/hostile.json#controls",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-integrated-pre-a-t055-reading-h-physical-empty-bounded-test-blocked/integrated.json#derived"
+      ],
+      "finding": "The primary lane passes 27/27 assertions and the independent lane passes 23/23. The hostile lane rejects 7/7 invalid mutations. The integrated verifier passes 39/39 checks and Lean R420 compiles. The latest authorities agree that the Reading-H G_* covariance owner is not a common finite-volume finite-regulator F_total, and no normalized physical-empty E branch or full Reading-H-to-P1 map is admitted. The sign, full Reading-H stationarity and symmetry-projected transverse stability therefore remain BLOCKED_NOT_EVALUATED; no numerical energy or Hessian payload is emitted.",
+      "formal_integration": {
+        "events": [
+          "20260831-r-420-reading-h-physical-empty-bounded-test-blo"
+        ],
+        "lean": "R420 PASS",
+        "negatives": [],
+        "no_changelog_event": false,
+        "no_new_negative": true,
+        "no_new_result": false,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "results": [
+          "R-420"
+        ]
+      },
+      "formal_refs": {
+        "events": [
+          "20260831-r-420-reading-h-physical-empty-bounded-test-blo"
+        ],
+        "negatives": [],
+        "results": [
+          "R-420"
+        ]
+      },
+      "gate_ids": [
+        "PA-CP1-ST8-Q3LOCK-PHYSICAL-EMPTY-SPACE-REFERENCE",
+        "PA-T055-MATCHED-RENORMALIZATION-EMPTY-REFERENCE-SIGN-AND-TRANSVERSE-STABILITY-REDUCTION",
+        "PA-T055-READING-H-REALIZATION-TO-PINNED-P1-OR-DECLARED-ESCAPE"
+      ],
+      "id": "EXP-001265",
+      "method": [
+        "Freeze the comparison orientation and enumerate the fifteen mandatory common-owner fields: finite functional, reference, normalization, finite parts, regulator, volume, boundary, limit order, both representations, full tangent, symmetry orbit, projector and error budgets.",
+        "Hash-check the latest R-169 v1.4 owner boundary, the R-170 applicability audit, the EXP-000790 same-H contract and the prior R-418 blocker before admitting any numerical lane.",
+        "Preregister E as a normalized constrained/no-condensate/empty-preparation slot without identifying it with zero or the P1 zero/disordered reference.",
+        "Run primary and non-importing independent input audits, hostile alias/substitution/premature-evaluation mutations, and the Lean implication-only preregistration firewall."
+      ],
+      "next_action": "Require an owner-approved hash-pinned common finite-regulator parent, instantiate E with a normalized state/configuration, boundary preparation and local no-condensate criterion, map G_* and E into that parent, and freeze the full tangent, symmetry projector, finite parts and error budgets before rerunning the three tests.",
+      "no_overclaim": "This is a reproducible blocker at the current owner boundary, not a universal nonexistence theorem. It does not identify E with zero or a physical vacuum and does not provide a Yang-Mills or mass-gap conclusion.",
+      "provenance": "contemporaneous",
+      "question": "Can TECT evaluate F_total[G_*]-F_total[E], full Reading-H stationarity and symmetry-projected transverse stability after freezing one common finite-regulator contract and preregistering a physical-empty branch E?",
+      "recorded_at": "2026-08-31T04:00:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001263",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-000863",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-000790",
+          "relation": "alternative_to"
+        }
+      ],
+      "reviewed_on": "2026-08-29",
+      "schema": "tect/proof-exploration/1.0",
+      "schema_version": "1.0",
+      "task_id": "T-055",
+      "title": "Reading-H physical-empty bounded test is blocked at the common-owner boundary",
+      "verdict": "inconclusive"
     }
   ],
   "kind": "proof_explorations",

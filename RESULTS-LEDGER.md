@@ -45,6 +45,8 @@ policy in `governance/development-history.md`.
 | [R-407](#r-407) | Canonical-path effective-resistance lower bound | R-407 v1.0 is a T0 claim-nonbearing finite constructive path checkpoint under EXP-001252. The maximum-conductance tree certificate passes primary 22510/22510, independent 22509/22509, hostile 6/6, integrated 35/35 and Lean R407 over 7 systems, 2688 contexts and 21120 rows. The exact intrinsic gap is [0.7570174175402339,5.647863075935321], the canonical lower envelope is [0.2613815898804392,2.508986944248343], and rho is [0.3985672393762041,3.825824154093709]. The finite path certificate exposes the conductance/probability inputs for a future uniform proof; common-core, phase, volume, exhaustion and QFT gates remain open |
 | [R-417](#r-417) | Log-domain Lyapunov core-tail drift corridor | R-417 v1.0 is a T0 claim-nonbearing finite corridor under EXP-001262. A logarithmic Lyapunov potential gives positive finite tail drift while the induced core graph retains a positive projected gap; primary 18480/18480, independent 17069/17069, hostile 10/10, integrated 44/44 and Lean R417 pass over 13 cutoffs, 78 profiles and 1410 rows. Minimum tail drift is 0.5877888606875677, minimum core gap 0.6867237745188258, minimum core mass 0.9804617527664484, and maximum tail mass 0.01953824723355167. Uniform drift, observable-tail control, common-core, global Poincare, OS/KMS/GNS, physical gap, continuum, C6, Sector-A and Pre-A remain open |
 | [R-418](#r-418) | Physical-empty same-owner preregistration boundary | R-418 v1.0 is a T0 claim-nonbearing TECT-owner input-boundary audit under EXP-001263. Branch E is preregistered as an uninstantiated physical-empty/preparation slot without zero-field aliasing; the current Reading-H G_* and P1 owners do not provide one common finite-regulator functional, reference, normalization, finite parts, regulator, volume, boundary, limit order, full tangent or projector. Primary 30/30 and independent 21/21 blocker assertions pass, hostile 7/7 mutations are rejected, and integrated 16/16 passes. Sign, Reading-H stationarity and symmetry-projected transverse stability are all BLOCKED_NOT_EVALUATED; no numerical comparison or physical/Yang-Mills claim follows |
+| [R-420](#r-420) | Reading-H physical-empty bounded test (blocked) | R-420 v1.0 is a T0 claim-nonbearing TECT-owner preregistration/input-admissibility test under EXP-001265. It freezes fifteen common-owner fields and preregisters E without zero aliasing. R-169 v1.4, R-170 and EXP-000790 still provide no common finite-regulator parent or admitted physical-empty branch; primary 27/27, independent 23/23, hostile 7/7, integrated 39/39 and Lean R420 pass. Sign, full Reading-H stationarity and symmetry-projected transverse stability are all BLOCKED_NOT_EVALUATED; no numerical comparison or physical/Yang-Mills claim follows |
+| [R-419](#r-419) | Growing-volume log-domain Lyapunov core-tail stress | R-419 v1.0 is a T0 claim-nonbearing finite stress under EXP-001264. The R-417 core-tail interface remains positive on volumes 2, 3 and 4 over 12 systems, 72 profiles and 1,488 conditional rows; primary 19,486/19,486, independent 17,997/17,997, hostile 12/12, integrated 47/47 and Lean R419 pass. Minimum full/core gap is 0.6159675039841621, minimum core mass 0.9805959529205274, maximum tail mass 0.019404047079472624 and minimum tail drift 0.4188403678721089. This is finite calibration only; uniformity, common-core, GNS, continuum, C6, Sector-A and Pre-A remain open |
 | [R-416](#r-416) | Log-domain and projected Schur cutoff stress | R-416 v1.0 is a T0 claim-nonbearing finite refinement under EXP-001261. Log-sum-exp Gibbs masses and explicit projection away from the sqrt(pi) constant mode separate raw high-cutoff zero-mode drift from a genuine projected-gap collapse; primary 4370/4370, independent 4370/4370, hostile 9/9, integrated 39/39 and Lean R416 pass over 13 cutoffs, 78 profiles and 1410 rows. Primary projected gaps are [0.6867237745188259,11.524804493011532] and Schur gaps [0.3476008247075759,5.985995817095592]. Common-core, cutoff/volume/source/phase/exhaustion uniformity, OS/KMS/GNS, physical gap, continuum, C6, Sector-A and Pre-A remain open |
 | [R-415](#r-415) | Schur-certified two-scale semigroup budget for the intrinsic graph | R-415 v1.0 is a T0 claim-nonbearing finite refinement under EXP-001260. It replaces the late black-box first-positive eigenvalue in R-414 by the conservative R-406 harmonic/Schur gap kappa_S=half min(kappa_coarse,kappa_residual), exposing coarse inter-phase capacity and block-mean-zero residual coercivity in the same Green-trace budget; primary 10440/10440, independent 10439/10439, hostile 9/9, integrated 50/50 and Lean R415 pass over 8 systems, 80 profiles and 1030 rows. The certified gap is [0.3172951609382775,3.232260013170645], minimum Green-bound slack is 2.8762895669125346 and maximum Mellin residual is 4.996003610813204e-16. Uniform Schur bounds, common-core, R-399 transfer, OS/KMS/GNS, physical gap, continuum, C6, Sector-A and Pre-A remain open |
 | [R-414](#r-414) | Two-scale semigroup criterion for the normalized Green trace | R-414 v1.0 is a T0 claim-nonbearing finite two-scale semigroup checkpoint under EXP-001259. The R-413 mixed heat bridge separates a short-time UV power budget from a late-time IR gap budget over 7 systems, 2688 contexts and 21120 rows; primary 191471/191471, independent 191470/191470, hostile 9/9, integrated 42/42 and Lean R414 pass. The minimum first-positive gap is [0.7570174175402339,5.647863075935399], split heat is [0.0036012445961644186,0.5926882083380163], and minimum Green-bound slack is 2.936364851149518. Uniform A_tau, gap, common-core, OS/KMS/GNS, continuum, C6, Sector-A and Pre-A gates remain open |
@@ -706,6 +708,119 @@ Hamiltonian-to-OS/KMS/GNS identification, physical mass gap, continuum, C6,
 Sector-A or Pre-A closure.  No tier change, negative result or PDF is issued.
 
 **Proven in:** [R-407 certificate](strategy/pre-a-cp1-st8-q3lock-canonical-path-resistance-certificate-260830.md), [Lean entrypoint](verification/lean/Tect/R407.lean), primary/independent/hostile scripts, integrated verifier, [scope note](claims/C6-SPACETIME-SIGNATURE/notes/canonical-path-resistance-260830.md), and saved run artefacts.
+<a id="r-420"></a>
+### R-420 -- Reading-H physical-empty bounded test (blocked)
+
+**Result ID.** `PA-T055-READING-H-PHYSICAL-EMPTY-BOUNDED-TEST` (R-420).
+
+**Version and exact scope.** R-420 v1.0 is a T0, claim-nonbearing TECT-owner
+preregistration and input-admissibility test under EXP-001265. It freezes the
+requested comparison orientation `F_total[G_*]-F_total[E]` and fifteen mandatory
+common-owner fields: the finite-regulator functional, reference,
+normalization, finite parts, regulator, physical volume, boundary condition,
+thermodynamic-then-continuum limit order, both finite representations, full
+tangent, symmetry orbit, transverse projector, Hessian/error budget and
+stationarity residual budget.
+
+**Preregistered E.** `E` is registered as a slot for a normalized constrained,
+no-condensate or empty-preparation branch in the same parent as the native
+Reading-H Gaussian-Hartree covariance owner `G_*`. The slot is
+`BLOCKED_NOT_INSTANTIATED`; it has no supplied state, measure/algebra,
+normalization, boundary preparation or physical criterion. It is not identified
+with zero, the P1 zero/disordered reference, the Gaussian reference or an
+equilibrium phase.
+
+**Executed verdicts.** The latest R-169 v1.4 owner is explicitly not the full
+Reading-H Hartree functional and supplies no physical-empty comparison. R-170
+keeps B1 at `F_total[Q] > F_total[G_*]`, while EXP-000790 records only the
+minimum future same-H contract and does not instantiate a physical-empty
+branch. The common-owner status is therefore
+`NOT_FIXED_IN_ONE_COMMON_OWNER`, and finite evaluation is disabled:
+
+| Test | Status |
+|---|---|
+| `F_total[G_*]-F_total[E]` sign | `BLOCKED_NOT_EVALUATED` |
+| Reading-H full-tangent stationarity | `BLOCKED_NOT_EVALUATED` |
+| symmetry-projected transverse stability | `BLOCKED_NOT_EVALUATED` |
+
+No energy difference, stationarity residual or Hessian is evaluated.
+
+**Evidence and adversarial review.** Primary 27/27 and non-importing
+independent 23/23 blocker assertions pass; hostile 7/7 invalid mutations are
+rejected; the integrated verifier passes 39/39; Lean R420 compiles an
+implication-only firewall requiring both a fixed owner and admitted `E` before
+any evaluation. These are input-integrity controls, not a sign or stability
+result.
+
+**Assumptions and missing assumptions.** The audit assumes the R-169 v1.4,
+R-170 and EXP-000790 owner boundaries are current, that all three tests share
+one regulated parent, that the sign is `G_*` minus `E`, and that transverse
+means orthogonal to the exact symmetry-orbit tangent. Missing are a
+hash-pinned common `F_total`, an admitted normalized physical-empty
+state/configuration and preparation criterion, common finite parts, regulator/
+volume/boundary/limit data, deterministic maps for both entries, a full tangent
+and symmetry projector, and stationarity/Hessian error budgets.
+
+**Boundary.** This result is `T0 / EXECUTED PREREGISTRATION AND
+INPUT-ADMISSIBILITY AUDIT`. It adds no negative result, changes no claim tier,
+and issues no PDF. It does not identify physical empty space, establish a
+below-empty sign, prove Reading-H stationarity or transverse stability, or
+advance C6, Sector-A, Pre-A, Yang--Mills or mass-gap claims. The next unlock is
+an owner-approved common finite parent plus a normalized, physically justified
+`E` and complete tangent/projector/error contract.
+
+**Proven in:** [R-420 certificate](strategy/pre-a-t055-reading-h-physical-empty-bounded-test-blocked-certificate-260831.md), [machine manifest](strategy/pre-a-t055-reading-h-physical-empty-bounded-test-blocked-manifest.json), primary/independent/hostile scripts, integrated verifier, [Lean entrypoint](verification/lean/Tect/R420.lean), exploration record and saved run artefacts.
+
+**Tier:** T0 (claim-nonbearing preregistration/input boundary).
+
+**Publication target:** T-055 physical-empty same-owner gate and Pre-A evidence register.
+
+<a id="r-419"></a>
+### R-419 -- Growing-volume log-domain Lyapunov core-tail stress
+
+**Result ID.** R-419 (PA-CP1-ST8-Q3LOCK-GROWING-VOLUME-LYAPUNOV-CORE-TAIL-STRESS-v0).
+
+**Version and scope.** R-419 v1.0 is a T0, claim-nonbearing finite stress under
+EXP-001264. It keeps the R-417 Q3 Hamiltonian, log-domain Gibbs law, momentum
+conductance, conditional-prefix convention, beta values, orientations,
+Lyapunov parameters and tail thresholds fixed while adding volumes three and
+four at the declared low oscillator cutoffs. It contains 12 systems, 72
+beta/orientation profiles and 1,488 conditional rows.
+
+**Finite result.** The primary lane passes 19,486/19,486 assertions, the
+non-importing independent lane passes 17,997/17,997, the hostile lane passes
+12/12, the integrated verifier passes 47/47, and Lean R419 compiles. The
+minimum full and induced-core projected gaps are 0.6159675039841621, minimum
+core mass is 0.9805959529205274, maximum tail mass is 0.019404047079472624,
+minimum tail drift is 0.4188403678721089, and maximum core-to-tail boundary
+rate is 2.1000826422753347. All values are extrema over the preregistered
+finite grid only.
+
+**Adversarial and analytic boundary.** Reversed drift, inverse potential,
+disconnected graph, zero mass, nonpositive threshold, volume or orientation
+omission, and conductance-rescaling mutations are rejected. The positive
+finite envelope therefore survives this bounded volume stress, but no
+volume-, cutoff-, phase- or exhaustion-uniform inequality is inferred. A
+common Hamiltonian core, induced-core Schur/Poincare and boundary-capacity
+estimate, and two-sided R-399 observable-tail bound remain open.
+
+**Evidence and non-claims.** The R-419 certificate
+(strategy/pre-a-cp1-st8-q3lock-growing-volume-lyapunov-core-tail-stress-certificate-260831.md),
+machine manifest
+(strategy/pre-a-cp1-st8-q3lock-growing-volume-lyapunov-core-tail-stress-manifest.json),
+scope note
+(claims/C6-SPACETIME-SIGNATURE/notes/growing-volume-lyapunov-core-tail-stress-260831.md),
+primary/independent/hostile scripts, integrated verifier, Lean entrypoint and
+saved run artefacts are the evidence package. This result changes no claim
+tier, adds no negative result and issues no PDF. It does not claim a
+thermodynamic or continuum limit, OS/KMS/GNS reconstruction, physical vacuum,
+Yang--Mills result, mass gap, C6 closure, Sector-A closure or Pre-A closure.
+
+**Tier:** T0 (claim-nonbearing finite stress).
+
+**Publication target:** Internal Pre-A evidence register and common-core route
+calibration.
+
 <a id="r-418"></a>
 ### R-418 -- Physical-empty same-owner preregistration boundary
 

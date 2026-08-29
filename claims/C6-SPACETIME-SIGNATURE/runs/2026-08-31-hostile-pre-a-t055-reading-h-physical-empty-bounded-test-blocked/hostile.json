@@ -1,0 +1,82 @@
+{
+  "assertion_count": 7,
+  "assertions": [
+    {
+      "actual": false,
+      "expected": false,
+      "group": "hostile",
+      "name": "P1 zero alias",
+      "reason": "E cannot be admitted by aliasing another owner",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "hostile",
+      "name": "admit E without representative",
+      "reason": "admission requires supplied state, measure and preparation fields",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "hostile",
+      "name": "mark missing finite parts fixed",
+      "reason": "all field-matrix entries must be fixed",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "hostile",
+      "name": "switch candidate to P1",
+      "reason": "a different parent is not a Reading-H same-owner test",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "hostile",
+      "name": "premature numeric sign",
+      "reason": "blocked inputs cannot emit a sign",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "hostile",
+      "name": "omit limit order",
+      "reason": "limit order is mandatory in the common contract",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "hostile",
+      "name": "forge top-level PASS",
+      "reason": "top-level status cannot override missing owner and E",
+      "status": "PASS"
+    }
+  ],
+  "audit_id": "PA-T055-READING-H-PHYSICAL-EMPTY-BOUNDED-TEST",
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "controls": {
+    "all_mutations_rejected": true,
+    "numeric_evaluation": false,
+    "physical_empty_admission": "BLOCKED_NOT_INSTANTIATED"
+  },
+  "exploration_id": "EXP-001265",
+  "manifest": "strategy/pre-a-t055-reading-h-physical-empty-bounded-test-blocked-manifest.json",
+  "non_claims": [
+    "No sign for F_total[G_*] - F_total[E].",
+    "No full Reading-H stationarity theorem.",
+    "No symmetry-projected transverse stability theorem.",
+    "No identification of E with zero, the P1 disordered reference, a Gaussian state, or any equilibrium phase.",
+    "No physical-vacuum, below-empty-space, Yang-Mills, mass-gap, C6, Sector-A or Pre-A conclusion.",
+    "No thermodynamic, continuum, OS/KMS/GNS, Hamiltonian spectral or absolute-energy conclusion."
+  ],
+  "result_id": "R-420",
+  "run_kind": "hostile",
+  "schema": "tect/pre-a-t055-physical-empty-bounded-test-blocked-hostile/1.0",
+  "verdict": "PASS"
+}

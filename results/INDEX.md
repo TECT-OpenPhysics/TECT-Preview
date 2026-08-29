@@ -5,10 +5,12 @@
 
 Authorities: `RESULTS-LEDGER.md`.
 
-**252 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
+**254 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
 
 | ID | Result | Tier/scope |
 |---|---|---|
+| [`R-420`](../RESULTS-LEDGER.md#r-420) | Reading-H physical-empty bounded test (blocked) | T0 (claim-nonbearing preregistration/input boundary). |
+| [`R-419`](../RESULTS-LEDGER.md#r-419) | Growing-volume log-domain Lyapunov core-tail stress | T0 (claim-nonbearing finite stress). |
 | [`R-418`](../RESULTS-LEDGER.md#r-418) | Physical-empty same-owner preregistration boundary | T0 (claim-nonbearing input-boundary audit). |
 | [`R-417`](../RESULTS-LEDGER.md#r-417) | Log-domain Lyapunov core-tail drift corridor | T0 |
 | [`R-416`](../RESULTS-LEDGER.md#r-416) | Log-domain and projected Schur cutoff stress | T0 |
@@ -32,8 +34,6 @@ Authorities: `RESULTS-LEDGER.md`.
 | [`R-398`](../RESULTS-LEDGER.md#r-398) | Conditioned-collar Doob martingale and shell-influence discriminator | T0 |
 | [`R-397`](../RESULTS-LEDGER.md#r-397) | Finite semigroup-dressed Petz collar discriminator | T0 |
 | [`R-396`](../RESULTS-LEDGER.md#r-396) | Finite recoverability-first projected Petz transport | T0 |
-| [`R-395`](../RESULTS-LEDGER.md#r-395) | Finite Gibbs gentle spectral-complement bridge | T0 |
-| [`R-394`](../RESULTS-LEDGER.md#r-394) | Finite Gibbs spectral-tail energy Markov audit | T0 |
 
 Search without loading the full ledger:
 

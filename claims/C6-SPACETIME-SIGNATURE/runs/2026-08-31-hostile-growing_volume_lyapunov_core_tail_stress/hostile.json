@@ -1,0 +1,92 @@
+{
+  "assertion_count": 12,
+  "boundary": "T0 claim-nonbearing finite growing-volume log-domain Lyapunov/core-tail stress. No volume-, cutoff-, phase- or exhaustion-uniform drift or gap, no common Hamiltonian core, no global Poincare theorem, no OS/KMS/GNS reconstruction, no physical mass gap, no continuum, C6, Sector-A or Pre-A closure.",
+  "checks": [
+    {
+      "actual": "5",
+      "expected": ">=1",
+      "name": "baseline tail exists",
+      "status": "PASS"
+    },
+    {
+      "actual": "2.733528007908442",
+      "expected": ">1e-06",
+      "name": "baseline drift positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "3.1230895335182742",
+      "expected": ">1e-10",
+      "name": "baseline core gap positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.0",
+      "expected": ">0 finite",
+      "name": "baseline potential finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "-116.45572323446228",
+      "expected": "<-1e-06",
+      "name": "reversed drift rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": "-200.56972097890863",
+      "expected": "<-1e-06",
+      "name": "inverse potential rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": "5.250148881905347e-16",
+      "expected": "<=1e-10",
+      "name": "disconnected graph rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": "True",
+      "expected": "True",
+      "name": "zero mass rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": "True",
+      "expected": "True",
+      "name": "nonpositive threshold rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": "[(2, (3, 4, 5, 6, 8, 10, 12))]",
+      "expected": "full declared volume grid",
+      "name": "volume omission rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": "['right', 'left']",
+      "expected": "right and left",
+      "name": "orientation omission rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": "[3.2863286139146854, 9.858985841744055]",
+      "expected": "no silent conductance rescaling",
+      "name": "conductance scaling is load-bearing",
+      "status": "PASS"
+    }
+  ],
+  "derived": {
+    "baseline_core_gap": 3.1230895335182742,
+    "baseline_minimum_tail_drift": 2.733528007908442,
+    "baseline_tail_count": 5,
+    "baseline_tail_mass": 0.005839877279758809,
+    "checks_passed": 12,
+    "inverse_minimum_tail_rate": -200.56972097890863,
+    "reversed_minimum_tail_rate": -116.45572323446228
+  },
+  "exploration_id": "EXP-001264",
+  "manifest": "strategy/pre-a-cp1-st8-q3lock-growing-volume-lyapunov-core-tail-stress-manifest.json",
+  "result_id": "R-419",
+  "schema": "tect/pre-a-r419-hostile/1.0",
+  "verdict": "PASS"
+}
