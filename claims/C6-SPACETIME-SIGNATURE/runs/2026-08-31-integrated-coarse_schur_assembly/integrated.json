@@ -1,0 +1,329 @@
+{
+  "boundary": "R-424 closes only the finite two-block harmonic Schur assembly and its residual reuse on the fixed Q3 grid. It does not close the Q3LOCK common-alpha or broken-sector coercivity parent gates.",
+  "checks": [
+    {
+      "actual": "['R-424', 'EXP-001269', False]",
+      "expected": "R-424/EXP-001269/false",
+      "group": "provenance",
+      "name": "manifest identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'cutoff_uniform_coarse_schur_closed': False, 'volume_uniform_coarse_schur_closed': False, 'phase_uniform_coarse_schur_closed': False, 'exhaustion_uniform_coarse_schur_closed': False, 'global_poincare_closed': False, 'common_core_closed': False, 'common_split_rule_closed': False, 'hamiltonian_os_identification_closed': False, 'kms_gns_gap_closed': False, 'continuum_closed': False, 'c6_closed': False, 'sector_a_closed': False, 'pre_a_closed': False}",
+      "expected": "all promoted flags false",
+      "group": "scope",
+      "name": "scope firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": "[]",
+      "expected": "all R-424 artifacts",
+      "group": "provenance",
+      "name": "artifacts present",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'codes/foundations/pre_a_cp1_st8_q3lock_coarse_schur_assembly.py': '2d065c9a0bc4b0ff4106742c8dae4b1864d62bea374884b5e98825c6f48d84ee', 'codes/foundations/pre_a_cp1_st8_q3lock_coarse_schur_assembly_independent.py': '620198d7fd3a64e6d14d50fa957c47be41ed45e78b6cbbb554eacf134259de9e', 'codes/foundations/pre_a_cp1_st8_q3lock_coarse_schur_assembly_hostile.py': '65156210c5044a8fafdc258ef17fce097b36992112b211a0c513fdc5e474f786', 'verification/lean/Tect/R424.lean': 'e08588db5ed35e1230af6f96bc26063308f0817e6462d6e956794788d5401eb3'}",
+      "expected": "distinct source hashes",
+      "group": "provenance",
+      "name": "artifact hashes distinct",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-422/R-419 parent bytes",
+      "expected": "declared SHA-256 values",
+      "group": "provenance",
+      "name": "parent hashes",
+      "status": "PASS"
+    },
+    {
+      "actual": "['harmonic_energy_split', 'coarse_residual_lower_envelope', 'finite_scope']",
+      "expected": "declared markers",
+      "group": "Lean",
+      "name": "Lean markers",
+      "status": "PASS"
+    },
+    {
+      "actual": "finite scalar file",
+      "expected": "no physical promotion text",
+      "group": "Lean",
+      "name": "Lean boundary",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-424 PRIMARY PASS 1471/1471 rows=858 eligible=114 combined=114 coarse=[9.41629,900.978] residual=[2.0659,7.87461] combined=[1.03295,3.9373]",
+      "expected": "exit 0 and output",
+      "group": "executables",
+      "name": "run pre_a_cp1_st8_q3lock_coarse_schur_assembly.py",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-424 INDEPENDENT PASS 27/27 fixtures=4 coarse=[0.716732,1.31803] residual=[0.719291,1.3346] combined=[0.358366,0.659014]",
+      "expected": "exit 0 and output",
+      "group": "executables",
+      "name": "run pre_a_cp1_st8_q3lock_coarse_schur_assembly_independent.py",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-424 HOSTILE PASS 7/7 invalid mutations rejected",
+      "expected": "exit 0 and output",
+      "group": "executables",
+      "name": "run pre_a_cp1_st8_q3lock_coarse_schur_assembly_hostile.py",
+      "status": "PASS"
+    },
+    {
+      "actual": "Tect/R424.lean:15:19: warning: Variable name `ha` is not explicitly referenced.\n\nThe binding can be removed (if unused) or named `_` (if used implicitly).\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\nTect/R424.lean:15:32: warning: Variable name `hb` is not explicitly referenced.\n\nThe binding can be removed (if unused) or named `_` (if used implicitly).\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`",
+      "expected": "exit 0",
+      "group": "Lean",
+      "name": "Lean compile",
+      "status": "PASS"
+    },
+    {
+      "actual": "PASS",
+      "expected": "PASS",
+      "group": "executables",
+      "name": "primary verdict",
+      "status": "PASS"
+    },
+    {
+      "actual": "PASS",
+      "expected": "PASS",
+      "group": "executables",
+      "name": "independent verdict",
+      "status": "PASS"
+    },
+    {
+      "actual": "PASS",
+      "expected": "PASS",
+      "group": "hostile",
+      "name": "hostile verdict",
+      "status": "PASS"
+    },
+    {
+      "actual": "[6, 858, 282, 114, 114]",
+      "expected": "[6, 'positive', 'positive', 'equal positive', 'equal']",
+      "group": "coverage",
+      "name": "primary coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": "9.416287072814253",
+      "expected": ">1e-08",
+      "group": "coarse Schur",
+      "name": "primary coarse positivity",
+      "status": "PASS"
+    },
+    {
+      "actual": "2.0659023307146094",
+      "expected": ">1e-08",
+      "group": "residual",
+      "name": "primary residual positivity",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.0329511653573047, 3.937304749607484]",
+      "expected": "positive finite half-minimum envelope",
+      "group": "combined",
+      "name": "primary combined positivity",
+      "status": "PASS"
+    },
+    {
+      "actual": "9.393117395006811e-10",
+      "expected": "<=5e-07",
+      "group": "R-422 reuse",
+      "name": "primary residual reuse",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.15688515408073822",
+      "expected": ">=-1e-08",
+      "group": "harmonic split",
+      "name": "primary harmonic split",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'fixture_count': 4, 'maximum_coarse_gap': 1.3180288958289226, 'maximum_combined_gap': 0.6590144479144613, 'maximum_energy_error': 8.326672684688674e-17, 'maximum_residual_gap': 1.3346008978064923, 'minimum_coarse_gap': 0.7167320977066365, 'minimum_combined_gap': 0.35836604885331824, 'minimum_lower_margin': 0.006360933298971131, 'minimum_residual_gap': 0.7192914012232517, 'records': [{'coarse_gap': 0.8175756257608005, 'combined_gap': 0.4087878128804002, 'energy_error': 6.938893903907228e-18, 'lower_margin': 0.006360933298971131, 'residual_gap': 0.8310307200927011}, {'coarse_gap': 1.3180288958289226, 'combined_gap': 0.6590144479144613, 'energy_error': 1.3877787807814457e-17, 'lower_margin': 0.01489997717410577, 'residual_gap': 1.3346008978064923}, {'coarse_gap': 0.7167320977066365, 'combined_gap': 0.35836604885331824, 'energy_error': 8.326672684688674e-17, 'lower_margin': 0.011590623276905647, 'residual_gap': 0.7192914012232517}, {'coarse_gap': 1.1140465045252999, 'combined_gap': 0.5570232522626499, 'energy_error': 5.551115123125783e-17, 'lower_margin': 0.028251173778493954, 'residual_gap': 1.1162857460453808}]}",
+      "expected": "four positive independent fixtures",
+      "group": "coverage",
+      "name": "independent coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'all_mutations_rejected': True, 'mutation_count': 7, 'numeric_evaluation': False, 'physical_promotion': False}",
+      "expected": "seven invalid mutations rejected",
+      "group": "hostile",
+      "name": "hostile controls",
+      "status": "PASS"
+    }
+  ],
+  "comparison_policy": {
+    "reason": "the finite harmonic decomposition is checked row-by-row; no finite constant is promoted to a uniform or physical claim",
+    "tolerance": 5e-07
+  },
+  "derived": {
+    "command_outputs": {
+      "lean": "Tect/R424.lean:15:19: warning: Variable name `ha` is not explicitly referenced.\n\nThe binding can be removed (if unused) or named `_` (if used implicitly).\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\nTect/R424.lean:15:32: warning: Variable name `hb` is not explicitly referenced.\n\nThe binding can be removed (if unused) or named `_` (if used implicitly).\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`",
+      "pre_a_cp1_st8_q3lock_coarse_schur_assembly.py": "R-424 PRIMARY PASS 1471/1471 rows=858 eligible=114 combined=114 coarse=[9.41629,900.978] residual=[2.0659,7.87461] combined=[1.03295,3.9373]",
+      "pre_a_cp1_st8_q3lock_coarse_schur_assembly_hostile.py": "R-424 HOSTILE PASS 7/7 invalid mutations rejected",
+      "pre_a_cp1_st8_q3lock_coarse_schur_assembly_independent.py": "R-424 INDEPENDENT PASS 27/27 fixtures=4 coarse=[0.716732,1.31803] residual=[0.719291,1.3346] combined=[0.358366,0.659014]"
+    },
+    "hostile": {
+      "all_mutations_rejected": true,
+      "mutation_count": 7,
+      "numeric_evaluation": false,
+      "physical_promotion": false
+    },
+    "independent": {
+      "fixture_count": 4,
+      "maximum_coarse_gap": 1.3180288958289226,
+      "maximum_combined_gap": 0.6590144479144613,
+      "maximum_energy_error": 8.326672684688674e-17,
+      "maximum_residual_gap": 1.3346008978064923,
+      "minimum_coarse_gap": 0.7167320977066365,
+      "minimum_combined_gap": 0.35836604885331824,
+      "minimum_lower_margin": 0.006360933298971131,
+      "minimum_residual_gap": 0.7192914012232517,
+      "records": [
+        {
+          "coarse_gap": 0.8175756257608005,
+          "combined_gap": 0.4087878128804002,
+          "energy_error": 6.938893903907228e-18,
+          "lower_margin": 0.006360933298971131,
+          "residual_gap": 0.8310307200927011
+        },
+        {
+          "coarse_gap": 1.3180288958289226,
+          "combined_gap": 0.6590144479144613,
+          "energy_error": 1.3877787807814457e-17,
+          "lower_margin": 0.01489997717410577,
+          "residual_gap": 1.3346008978064923
+        },
+        {
+          "coarse_gap": 0.7167320977066365,
+          "combined_gap": 0.35836604885331824,
+          "energy_error": 8.326672684688674e-17,
+          "lower_margin": 0.011590623276905647,
+          "residual_gap": 0.7192914012232517
+        },
+        {
+          "coarse_gap": 1.1140465045252999,
+          "combined_gap": 0.5570232522626499,
+          "energy_error": 5.551115123125783e-17,
+          "lower_margin": 0.028251173778493954,
+          "residual_gap": 1.1162857460453808
+        }
+      ]
+    },
+    "lean": "PASS",
+    "primary": {
+      "combined_row_count": 114,
+      "conditional_row_count": 858,
+      "eligible_row_count": 114,
+      "maximum_coarse_schur_gap": 900.9775546526778,
+      "maximum_combined_lower_envelope": 3.937304749607484,
+      "maximum_residual_gap": 7.874609499214968,
+      "maximum_residual_reuse_difference": 9.393117395006811e-10,
+      "minimum_coarse_schur_gap": 9.416287072814253,
+      "minimum_combined_lower_envelope": 1.0329511653573047,
+      "minimum_harmonic_lower_margin": 0.15688515408073822,
+      "minimum_residual_gap": 2.0659023307146094,
+      "system_count": 6,
+      "systems": [
+        {
+          "combined_row_count": 0,
+          "dimension": 3,
+          "eligible_row_count": 0,
+          "minimum_coarse_schur_gap": null,
+          "minimum_combined_gap": null,
+          "minimum_residual_gap": null,
+          "row_count": 24,
+          "tail_row_count": 0,
+          "volume": 2
+        },
+        {
+          "combined_row_count": 16,
+          "dimension": 6,
+          "eligible_row_count": 16,
+          "minimum_coarse_schur_gap": 10.760241432253594,
+          "minimum_combined_gap": 1.2459268061929838,
+          "minimum_residual_gap": 2.4918536123859676,
+          "row_count": 42,
+          "tail_row_count": 28,
+          "volume": 2
+        },
+        {
+          "combined_row_count": 78,
+          "dimension": 12,
+          "eligible_row_count": 78,
+          "minimum_coarse_schur_gap": 18.00678337360621,
+          "minimum_combined_gap": 1.0329511653573047,
+          "minimum_residual_gap": 2.0659023307146094,
+          "row_count": 78,
+          "tail_row_count": 78,
+          "volume": 2
+        },
+        {
+          "combined_row_count": 0,
+          "dimension": 3,
+          "eligible_row_count": 0,
+          "minimum_coarse_schur_gap": null,
+          "minimum_combined_gap": null,
+          "minimum_residual_gap": null,
+          "row_count": 78,
+          "tail_row_count": 0,
+          "volume": 3
+        },
+        {
+          "combined_row_count": 4,
+          "dimension": 4,
+          "eligible_row_count": 4,
+          "minimum_coarse_schur_gap": 10.180495639617735,
+          "minimum_combined_gap": 3.232260013170639,
+          "minimum_residual_gap": 6.464520026341278,
+          "row_count": 126,
+          "tail_row_count": 32,
+          "volume": 3
+        },
+        {
+          "combined_row_count": 16,
+          "dimension": 4,
+          "eligible_row_count": 16,
+          "minimum_coarse_schur_gap": 9.416287072814253,
+          "minimum_combined_gap": 3.2919754690937912,
+          "minimum_residual_gap": 6.5839509381875825,
+          "row_count": 510,
+          "tail_row_count": 144,
+          "volume": 4
+        }
+      ],
+      "tail_row_count": 282
+    }
+  },
+  "exploration_id": "EXP-001269",
+  "manifest": "strategy/pre-a-cp1-st8-q3lock-coarse-schur-assembly-manifest.json",
+  "result_id": "R-424",
+  "schema": "tect/pre-a-r424-integrated/1.0",
+  "scope": {
+    "c6_closed": false,
+    "common_core_closed": false,
+    "common_split_rule_closed": false,
+    "continuum_closed": false,
+    "cutoff_uniform_coarse_schur_closed": false,
+    "exhaustion_uniform_coarse_schur_closed": false,
+    "finite_coarse_rows_recorded": true,
+    "finite_combined_lower_envelope_closed": true,
+    "finite_harmonic_coarse_schur_closed": true,
+    "finite_residual_reuse_closed": true,
+    "global_poincare_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "no_new_negative_result": true,
+    "no_pdf": true,
+    "no_tier_change": true,
+    "phase_uniform_coarse_schur_closed": false,
+    "pre_a_closed": false,
+    "sector_a_closed": false,
+    "volume_uniform_coarse_schur_closed": false
+  },
+  "verdict": "PASS"
+}

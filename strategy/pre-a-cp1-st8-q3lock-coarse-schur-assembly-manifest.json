@@ -1,0 +1,137 @@
+{
+  "schema": "tect/pre-a-cp1-st8-q3lock-coarse-schur-assembly/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-COARSE-SCHUR-ASSEMBLY-v0",
+  "result_id": "R-424",
+  "title": "Finite two-block harmonic coarse Schur assembly",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001269",
+  "claim_bearing": false,
+  "parent_results": ["R-422", "R-421", "R-419", "R-406", "R-415"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY",
+    "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+  ],
+  "question": "Does retaining the two block-constant modes and eliminating the R-422 residual by harmonic extension yield a positive finite coarse Schur and combined lower envelope on the fixed Q3 grid?",
+  "new_perspective": {
+    "principle": "Do not discard the two block-constant modes when the residual reserve is assembled. Use the exact finite harmonic Schur complement for the block-constant coordinates and reuse the independently checked residual form on its orthogonal complement.",
+    "route": [
+      "Keep the R-419 conditional Gibbs law, projected momentum conductance, beta grid, orientations, alpha=1/40 and tail threshold theta=4 unchanged.",
+      "For every eligible R-422 core/tail row, construct the weighted block-constant span and its Euclidean orthogonal block-mean-zero complement after the sqrt(pi) transform.",
+      "Use R-406 harmonic extension to compute the coarse Schur gap, residual gap and exact energy/variance decomposition.",
+      "Independently recompute the block-mean-zero residual eigenvalue using the R-422 basis and require agreement within the declared comparison tolerance.",
+      "Record the conservative finite combined lower envelope 0.5*min(coarse gap,residual gap) without clipping or promoting nonuniform constants."
+    ],
+    "qft_bridge": "The finite assembly identifies the remaining analytic target: a common-core estimate must control both the coarse Schur sector and the residual sector with constants that survive cutoff, volume, phase and exhaustion limits."
+  },
+  "finite_theorem": {
+    "space": "The centered finite weighted graph is decomposed into the two-dimensional block-constant span U and the block-mean-zero complement V after the sqrt(pi) transform.",
+    "harmonic_schur": "For z in U, the residual coordinate y=-A_VV^(-1)A_VU z minimizes the finite Dirichlet form and produces S=A_UU-A_UV A_VV^(-1)A_VU.",
+    "coarse_gap": "The first positive generalized eigenvalue of the Schur form relative to the harmonic coarse mass is the finite coarse Schur gap.",
+    "residual_gap": "The least eigenvalue of A_VV is the finite block-mean-zero residual gap.",
+    "combined_lower_envelope": "The exact harmonic/residual energy and variance split yields the conservative centered lower envelope 0.5*min(coarse_gap,residual_gap) for the declared finite probes and decomposition.",
+    "scope_boundary": "This is a row-by-row finite matrix assembly. It does not identify U or V with a physical sector, a common Hamiltonian form domain, or a regulator-independent limit."
+  },
+  "upstream_authority": {
+    "r422_manifest": "strategy/pre-a-cp1-st8-q3lock-residual-core-tail-reserve-manifest.json",
+    "r422_sha256": "67e645d518dc9ebae1c1590ee045fd7147c2c9c5372097eb420155a2829b7976",
+    "r419_manifest": "strategy/pre-a-cp1-st8-q3lock-growing-volume-lyapunov-core-tail-stress-manifest.json",
+    "r419_sha256": "d5e2139c1a8af9b11f13098a8aaafabf66560bf08f011afb18900f50ae7e2881",
+    "r406_manifest": "strategy/pre-a-cp1-st8-q3lock-harmonic-schur-capacity-manifest.json"
+  },
+  "finite_fixture": {
+    "q3_pairs": [
+      {"volume": 2, "cutoff_dimensions": [3, 6, 12]},
+      {"volume": 3, "cutoff_dimensions": [3, 4]},
+      {"volume": 4, "cutoff_dimensions": [4]}
+    ],
+    "beta_values": ["1/2", "2", "8"],
+    "orientations": ["right", "left"],
+    "alpha": "1/40",
+    "tail_threshold": "4",
+    "probability_floor": 1e-300,
+    "gap_floor": 1e-8,
+    "numerical_tolerance": 1e-8,
+    "comparison_tolerance": 5e-7
+  },
+  "scope": {
+    "finite_harmonic_coarse_schur_closed": true,
+    "finite_residual_reuse_closed": true,
+    "finite_combined_lower_envelope_closed": true,
+    "finite_coarse_rows_recorded": true,
+    "cutoff_uniform_coarse_schur_closed": false,
+    "volume_uniform_coarse_schur_closed": false,
+    "phase_uniform_coarse_schur_closed": false,
+    "exhaustion_uniform_coarse_schur_closed": false,
+    "global_poincare_closed": false,
+    "common_core_closed": false,
+    "common_split_rule_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R424.lean",
+    "theorem_markers": ["harmonic_energy_split", "coarse_residual_lower_envelope", "finite_scope"],
+    "command": "lake env lean Tect/R424.lean",
+    "boundary": "Lean checks scalar harmonic split and lower-envelope algebra only; it does not formalize the Q3 matrix eigensolver, Gibbs rows, Schur spectra, common core or any limit."
+  },
+  "artifacts": {
+    "primary_script": "codes/foundations/pre_a_cp1_st8_q3lock_coarse_schur_assembly.py",
+    "independent_script": "codes/foundations/pre_a_cp1_st8_q3lock_coarse_schur_assembly_independent.py",
+    "hostile_script": "codes/foundations/pre_a_cp1_st8_q3lock_coarse_schur_assembly_hostile.py",
+    "integrated_verifier": "codes/foundations/pre_a_cp1_st8_q3lock_coarse_schur_assembly_verify.py",
+    "lean": "verification/lean/Tect/R424.lean"
+  },
+  "assumptions": [
+    "The R-419 conditional law is positive and normalized and the projected conductance is symmetric and nonnegative.",
+    "The R-422 core/tail split is reused exactly with no row-dependent retuning of alpha or theta.",
+    "The sqrt(pi) transform preserves the finite weighted Dirichlet form and the block basis is formed from disjoint nonempty supports.",
+    "The residual block A_VV is positive on every eligible finite row, so the harmonic solve is well-defined.",
+    "The finite harmonic split is evaluated without rounding lower bounds upward, and the Lean lane is a scalar cross-check rather than a matrix formalization."
+  ],
+  "missing_assumptions": [
+    "A cutoff-, volume-, phase- and exhaustion-uniform lower bound for both the coarse Schur and residual forms on one Hamiltonian common core.",
+    "A common split-limit map controlling the block-constant variables and residual coordinates under changing regulators and volumes.",
+    "Two-sided form-norm control of actual R-399 histories and a transfer theorem through the R-415 semigroup estimates.",
+    "Hamiltonian-to-OS/KMS/GNS identification and a sectorwise coercive estimate."
+  ],
+  "promotion_criteria": [
+    "Prove an analytic Schur/residual decomposition on a domain-controlled unbounded Q3 common core.",
+    "Establish a positive lower envelope uniform in cutoff, volume, phase and exhaustion, including the coarse Schur sector.",
+    "Transfer the bound through the declared history and semigroup interfaces before revisiting any sector or physical promotion."
+  ],
+  "stop_conditions": [
+    "A singular residual block, nonpositive coarse Schur gap or disagreement with the independent residual recomputation stops the lane and is recorded as a finite construction failure.",
+    "A nonpositive finite lower envelope is retained as a sufficient-budget failure and is not clipped, relabeled or used as a gapless conclusion.",
+    "Finite harmonic Schur positivity cannot be promoted to global Poincare, OS/KMS/GNS, C6, Sector-A, Pre-A, Yang-Mills or mass-gap closure."
+  ],
+  "evidence_level": "T0 / exact finite harmonic coarse-Schur decomposition plus executed Q3-row assembly; no uniform theorem or physical conclusion",
+  "non_claims": [
+    "No cutoff-, volume-, phase- or exhaustion-uniform coarse or residual bound.",
+    "No global Poincare or arbitrary-observable Schur theorem.",
+    "No common Hamiltonian core, common split rule or history transfer.",
+    "No OS/KMS/GNS reconstruction or sectorwise spectral gap.",
+    "No continuum, C6, Sector-A, Pre-A, Yang-Mills or mass-gap conclusion."
+  ],
+  "formal_integration": {
+    "event_ordinal": 765,
+    "event_id": "20260831-r-424-finite-two-block-harmonic-coarse-schur-as",
+    "event_title": "R-424 finite two-block harmonic coarse Schur assembly",
+    "event_claim_ids": ["C6-SPACETIME-SIGNATURE", "EXP-001269", "R-424"],
+    "lean": "R424 PASS; scalar harmonic split and lower-envelope algebra only",
+    "new_negative": false,
+    "tier_change": false,
+    "pdf": false
+  },
+  "boundary": "R-424 closes only the finite two-block harmonic Schur assembly and its residual reuse on the fixed Q3 grid. It does not close the Q3LOCK common-alpha or broken-sector coercivity parent gates.",
+  "next_unlock": "Obtain a domain-controlled analytic estimate for the coarse Schur capacity and residual boundary budget that is uniform in the regulator and then transfer it through the history/OS/KMS/GNS interfaces.",
+  "no_overclaim": "A positive finite combined lower envelope is a conditional matrix-level certificate. It is not a regulator-independent phase gap, a physical-vacuum statement, a Yang-Mills result or a mass gap."
+}

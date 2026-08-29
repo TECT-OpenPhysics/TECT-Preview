@@ -5,7 +5,7 @@ Compact generated reader surface. The append-only authority is
 record 568 / commit `4db22f4e` and no longer grows.
 Post-cutover full bodies live exactly once in bounded pages under `pages/`.
 
-**764 accepted events** · latest 25 shown below · machine locator: `index.json`
+**765 accepted events** · latest 25 shown below · machine locator: `index.json`
 
 Search the complete authority without loading every page:
 
@@ -17,6 +17,7 @@ python verification/scripts/changelog.py search --text <phrase>
 
 | Date | Event | Claims | Full entry |
 |---|---|---|---|
+| 2026-08-31 | `20260831-r-424-finite-two-block-harmonic-coarse-schur-as` — [R-424 finite two-block harmonic coarse Schur assembly] - 2026-08-31 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000719-000768.md#20260831-r-424-finite-two-block-harmonic-coarse-schur-as) |
 | 2026-08-31 | `20260831-r-423-finite-directed-boundary-capacity-cauchy` — [R-423 finite directed boundary-capacity Cauchy envelope] - 2026-08-31 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000719-000768.md#20260831-r-423-finite-directed-boundary-capacity-cauchy) |
 | 2026-08-31 | `20260831-r-422-finite-residual-core-tail-reserve-2026-08` — [R-422 finite residual core-tail reserve] - 2026-08-31 | C6-SPACETIME-SIGNATURE, EXP-001267, R-422 | [bounded page](pages/000719-000768.md#20260831-r-422-finite-residual-core-tail-reserve-2026-08) |
 | 2026-08-31 | `20260831-r-421-tail-supported-hardy-ground-state-transfo` — [R-421 tail-supported Hardy ground-state-transform interface] - 2026-08-31 | C6-SPACETIME-SIGNATURE,EXP-001266,R-421 | [bounded page](pages/000719-000768.md#20260831-r-421-tail-supported-hardy-ground-state-transfo) |
@@ -41,7 +42,6 @@ python verification/scripts/changelog.py search --text <phrase>
 | 2026-08-30 | `20260830-hamiltonian-carre-du-champ-comparison-2026-08-3` — [Hamiltonian carre-du-champ comparison] - 2026-08-30 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000719-000768.md#20260830-hamiltonian-carre-du-champ-comparison-2026-08-3) |
 | 2026-08-30 | `20260830-physical-coordinate-metric-for-the-conditional` — [Physical-coordinate metric for the conditional gap] - 2026-08-30 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000719-000768.md#20260830-physical-coordinate-metric-for-the-conditional) |
 | 2026-08-30 | `20260830-increasing-cutoff-conditional-gap-stress-2026-0` — [Increasing-cutoff conditional gap stress] - 2026-08-30 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000719-000768.md#20260830-increasing-cutoff-conditional-gap-stress-2026-0) |
-| 2026-08-30 | `20260830-conditional-poincare-before-duhamel-shell-trans` — [Conditional Poincare-before-Duhamel shell transport] - 2026-08-30 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000719-000768.md#20260830-conditional-poincare-before-duhamel-shell-trans) |
 
 ## Post-cutover pages
 
@@ -49,7 +49,7 @@ Each full event body after the cutover occurs in exactly one page.
 
 | Ordinals | Events | Page |
 |---|---:|---|
-| 719–764 | 46 | [000719-000768.md](pages/000719-000768.md) |
+| 719–765 | 47 | [000719-000768.md](pages/000719-000768.md) |
 | 669–718 | 50 | [000669-000718.md](pages/000669-000718.md) |
 | 619–668 | 50 | [000619-000668.md](pages/000619-000668.md) |
 | 569–618 | 50 | [000569-000618.md](pages/000569-000618.md) |

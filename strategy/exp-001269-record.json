@@ -1,0 +1,76 @@
+{
+  "adversarial_review": [
+    {"axis": "residual invertibility", "check": "The finite Schur solve is attempted only when the residual block is positive; singular/disconnected mutations are rejected.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "weighted normalization", "check": "The block basis uses normalized pi and the same sqrt(pi) transform as the parent rows; invalid weights are rejected.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "support partition", "check": "Core and tail supports are disjoint, in range and large enough for block-mean-zero coordinates.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "Schur correction direction", "check": "The coupling correction is subtracted and a claimed combined envelope above the half-minimum is rejected.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "residual reuse", "check": "The R-422 residual gap is recomputed from an independent basis and compared within the declared tolerance.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "coarse-sector scope", "check": "The two block modes are retained in this finite assembly but no common-core or limit statement is asserted.", "disposition": "UPHELD-OPEN"},
+    {"axis": "uniform and physical promotion", "check": "Finite positive Schur values do not establish regulator uniformity, history transfer, OS/KMS/GNS reconstruction or a physical conclusion.", "disposition": "UPHELD-OPEN"}
+  ],
+  "boundary": "T0 claim-nonbearing finite two-block harmonic coarse-Schur assembly only. It does not close any uniform, common-core, sector, continuum or physical gate.",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "claim_ids_used": ["C6-SPACETIME-SIGNATURE"],
+  "decision_reason": "The exact finite harmonic Schur decomposition retains the block-constant sector and agrees with an independent residual recomputation on all eligible fixed-grid rows. The result is a finite interface and does not supply the uniform analytic estimates required by the parent Q3LOCK gates.",
+  "decision_scope": "Finite two-block harmonic coarse-Schur assembly on the fixed R-422 Q3 grid; no tier change.",
+  "evidence_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-coarse-schur-assembly-manifest.json#finite_theorem",
+    "strategy/pre-a-cp1-st8-q3lock-coarse-schur-assembly-certificate-260831.md#Executed evidence",
+    "codes/foundations/pre_a_cp1_st8_q3lock_coarse_schur_assembly.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_coarse_schur_assembly_independent.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_coarse_schur_assembly_hostile.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_coarse_schur_assembly_verify.py#main",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-primary-coarse_schur_assembly/primary.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-independent-coarse_schur_assembly/independent.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-hostile-coarse_schur_assembly/hostile.json#controls",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-integrated-coarse_schur_assembly/integrated.json#derived",
+    "verification/lean/Tect/R424.lean#coarse_residual_lower_envelope"
+  ],
+  "finding": "The primary lane passes 1471/1471 assertions over 858 conditional rows, 282 rows with a nonempty tail and 114 eligible rows; every eligible row has a positive coarse Schur gap, residual gap and combined half-minimum envelope. Coarse gaps range from 9.416287072814253 to 900.9775546526778, residual gaps from 2.0659023307146094 to 7.874609499214968, and combined envelopes from 1.0329511653573047 to 3.937304749607484. The maximum residual reuse difference is 9.393117395006811e-10. Independent 27/27, hostile 7/7, integrated 22/22 and Lean R424 pass.",
+  "formal_integration": {
+    "events": ["20260831-r-424-finite-two-block-harmonic-coarse-schur-as"],
+    "lean": "R424 PASS; scalar harmonic split and lower-envelope algebra only",
+    "negatives": [],
+    "no_changelog_event": false,
+    "no_new_negative": true,
+    "no_new_result": false,
+    "no_pdf": true,
+    "no_tier_change": true,
+    "results": ["R-424"]
+  },
+  "formal_refs": {
+    "events": ["20260831-r-424-finite-two-block-harmonic-coarse-schur-as"],
+    "negatives": [],
+    "results": ["R-424"]
+  },
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY",
+    "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+  ],
+  "id": "EXP-001269",
+  "method": [
+    "Reuse the hash-pinned R-419 conditional law, projected conductance, R-421 tail interface and R-422 residual split without retuning.",
+    "For every eligible row construct the weighted two-block span and its orthogonal residual complement after the sqrt(pi) transform.",
+    "Compute the harmonic Schur coarse gap and residual gap, then record 0.5*min(coarse,residual) as the finite combined lower envelope.",
+    "Recompute the residual gap with an independent block-mean-zero basis and compare within 5e-7.",
+    "Run independent reversible fixtures, reject seven hostile mutations, compile the scalar Lean cross-check, and preserve the finite-only boundary."
+  ],
+  "next_action": "Derive a domain-controlled analytic coarse-capacity and residual-boundary estimate on one common core, then transfer it through the R-399/R-415 history and OS/KMS/GNS interfaces.",
+  "no_overclaim": "Finite positive coarse and residual values are a matrix-level certificate on the declared grid. They do not prove a uniform sector gap, a continuum result, a Yang-Mills statement or a mass gap.",
+  "provenance": "contemporaneous",
+  "question": "Does retaining the two block-constant modes and eliminating the R-422 residual by harmonic extension yield a positive finite coarse Schur and combined lower envelope on the fixed Q3 grid?",
+  "recorded_at": "2026-08-31T06:15:00Z",
+  "recorded_by": "Codex",
+  "related": [
+    {"id": "EXP-001268", "relation": "continues"},
+    {"id": "EXP-001267", "relation": "continues"},
+    {"id": "EXP-001251", "relation": "alternative_to"}
+  ],
+  "reviewed_on": "2026-08-29",
+  "schema": "tect/proof-exploration/1.0",
+  "schema_version": "1.0",
+  "task_id": "T-054",
+  "title": "Finite two-block harmonic coarse Schur assembly",
+  "verdict": "advanced"
+}

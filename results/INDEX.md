@@ -5,10 +5,11 @@
 
 Authorities: `RESULTS-LEDGER.md`.
 
-**257 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
+**258 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
 
 | ID | Result | Tier/scope |
 |---|---|---|
+| [`R-424`](../RESULTS-LEDGER.md#r-424) | Finite two-block harmonic coarse Schur assembly | T0 |
 | [`R-423`](../RESULTS-LEDGER.md#r-423) | Finite directed boundary-capacity Cauchy envelope | T0 |
 | [`R-422`](../RESULTS-LEDGER.md#r-422) | Finite residual core-tail coercivity reserve | T0 |
 | [`R-421`](../RESULTS-LEDGER.md#r-421) | Tail-supported Hardy ground-state-transform interface | T0 (claim-nonbearing finite interface). |
@@ -33,7 +34,6 @@ Authorities: `RESULTS-LEDGER.md`.
 | [`R-402`](../RESULTS-LEDGER.md#r-402) | Finite Hamiltonian carre-du-champ comparison | T0 |
 | [`R-401`](../RESULTS-LEDGER.md#r-401) | Physical-coordinate metric for the conditional gap | T0 |
 | [`R-400`](../RESULTS-LEDGER.md#r-400) | Increasing-cutoff conditional birth-death gap stress | T0 |
-| [`R-399`](../RESULTS-LEDGER.md#r-399) | Conditional Poincare-before-Duhamel shell transport | T0 |
 
 Search without loading the full ledger:
 
