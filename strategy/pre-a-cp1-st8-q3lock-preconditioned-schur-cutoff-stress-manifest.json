@@ -1,0 +1,109 @@
+{
+  "schema": "tect/pre-a-cp1-st8-q3lock-preconditioned-schur-cutoff-stress/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-PRECONDITIONED-SCHUR-CUTOFF-STRESS-v0",
+  "result_id": "R-416",
+  "title": "Log-domain and projected Schur stress for increasing cutoff",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001261",
+  "claim_bearing": false,
+  "parent_explorations": ["EXP-001260", "EXP-001251", "EXP-001252"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY",
+    "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+  ],
+  "question": "Can log-domain Gibbs likelihoods and explicit projection off the sqrt(pi) constant mode extend the R-415 Schur stress to larger cutoffs without mistaking floating-point zero-mode drift for graph disconnection?",
+  "new_perspective": {
+    "principle": "Use scale-invariant log-domain conditional weights and compute the positive graph spectrum on the orthogonal complement of the exact sqrt(pi) constant mode. This separates a genuine coercive-gap stress from ill-conditioned normalization artifacts.",
+    "route": [
+      "Reconstruct coordinate Gibbs masses by log-sum-exp over energy eigenvectors instead of forming an underflow-prone density matrix diagonal.",
+      "Construct every ordered conditional row from log-marginals, subtracting the parent log mass before exponentiation and normalization.",
+      "Form the intrinsic momentum conductance from the rescaled positive row and project the normalized graph operator away from sqrt(pi) before taking its first positive eigenvalue.",
+      "Recompute the R-406 harmonic/Schur coarse and residual gaps and check the conservative Schur gap below the projected full gap.",
+      "Stress volume-two cutoff dimensions through 32, both collar orientations and three inverse temperatures, while recording raw zero-mode residuals, probability dynamic range and any direct-density underflow.",
+      "Repeat the computation independently and use hostile tests for raw unprojected rejection, naive underflow, weight rescaling, wrong projection and nonpositive log rows."
+    ],
+    "qft_bridge": "A stable high-cutoff stress is a prerequisite for deciding whether the Schur lower bound can be promoted to a common-core estimate. It does not create a uniform gap or replace the analytic Hamiltonian-domain argument."
+  },
+  "finite_theorem": {
+    "log_domain": "For energy eigenpairs (E_n,v_n) and coordinate basis U, log pi_i is obtained from log-sum-exp of -beta(E_n-E_0)+log|U_in|^2, followed by a common normalization.",
+    "scale_invariance": "Multiplying all positive conditional weights by a common factor leaves the normalized intrinsic operator unchanged.",
+    "constant_mode": "For positive pi, W=D_pi^(-1/2)L D_pi^(-1/2) has constant vector sqrt(pi); the first eigenvalue of W restricted to its orthogonal complement is the positive graph gap.",
+    "schur_comparison": "The R-406 harmonic/Schur certificate kappa_S=half min(kappa_coarse,kappa_residual) is checked against the projected positive graph gap.",
+    "scope": "The stress is finite and numerical. It diagnoses conditioning and extends the cutoff table; it does not assert regulator-independent Schur coercivity."
+  },
+  "finite_fixture": {
+    "volume": 2,
+    "cutoff_dimensions": [4, 6, 8, 10, 12, 14, 16, 18, 20, 24, 28, 30, 32],
+    "beta_values": ["1/2", "2", "8"],
+    "orientations": ["right", "left"],
+    "chi": "1",
+    "r": "-1",
+    "g": "3/5",
+    "c": "3/5",
+    "lambda": "1/10",
+    "probability_floor": 1e-300,
+    "gap_floor": 1e-10,
+    "raw_zero_threshold": 1e-8,
+    "numerical_tolerance": 1e-8,
+    "crosscheck_tolerance": 5e-7,
+    "aggregate_tolerance": 1e-2,
+    "weight_scale_factor": "2",
+    "hostile_zero_threshold": 1e-12
+  },
+  "scope": {
+    "finite_log_domain_gibbs_closed": true,
+    "finite_log_conditional_rows_closed": true,
+    "finite_constant_mode_projection_closed": true,
+    "finite_projected_schur_gap_stress_closed": true,
+    "finite_cutoff_stress_closed": true,
+    "finite_scale_invariance_closed": true,
+    "cutoff_independent_schur_gap_closed": false,
+    "volume_independent_schur_gap_closed": false,
+    "phase_uniform_semigroup_closed": false,
+    "exhaustion_uniform_semigroup_closed": false,
+    "common_core_closed": false,
+    "common_split_rule_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R416.lean",
+    "theorem_markers": [
+      "scaled_weight_positive",
+      "constant_mode_projection_nonnegative",
+      "schur_gap_positive",
+      "finite_scope"
+    ],
+    "command": "lake env lean Tect/R416.lean",
+    "boundary": "Lean checks only scalar positivity, scaling and projection bookkeeping; log-sum-exp, graph spectra, Schur matrices, cutoff stress and QFT limits remain executable/open analysis."
+  },
+  "artifacts": {
+    "primary_script": "codes/foundations/pre_a_cp1_st8_q3lock_preconditioned_schur_cutoff_stress.py",
+    "independent_script": "codes/foundations/pre_a_cp1_st8_q3lock_preconditioned_schur_cutoff_stress_independent.py",
+    "hostile_script": "codes/foundations/pre_a_cp1_st8_q3lock_preconditioned_schur_cutoff_stress_hostile.py",
+    "integrated_verifier": "codes/foundations/pre_a_cp1_st8_q3lock_preconditioned_schur_cutoff_stress_verify.py",
+    "lean": "verification/lean/Tect/R416.lean"
+  },
+  "promotion_criteria": [
+    "Show that projected Schur gaps and the split heat inputs admit source-, cutoff-, volume-, phase- and exhaustion-uniform lower/upper bounds on one Hamiltonian common core.",
+    "Replace numerical log-domain stabilization by an analytic positive-measure and conditional-marginal estimate compatible with the R-399 shell.",
+    "Transfer any surviving bound to the R-415 proper-time budget and only then revisit broken-sector GNS coercivity."
+  ],
+  "stop_conditions": [
+    "If the projected or Schur gap collapses under the increasing-cutoff stress, retain the finite table and record the collapse without phasewise promotion.",
+    "If log-domain rows lose positivity or the scale-invariance check fails, stop the stress and repair the numerical representation before interpreting a gap.",
+    "A positive projected finite gap is not a common-core, uniform, GNS, physical-gap, continuum, C6, Sector-A or Pre-A theorem."
+  ],
+  "boundary": "T0 claim-nonbearing finite log-domain/projected-Schur cutoff stress only. It proves no cutoff-, volume-, source-, phase- or exhaustion-uniform gap, common core, phase selection, OS/KMS/GNS reconstruction, mass gap, continuum, C6, Sector-A or Pre-A closure.",
+  "no_overclaim": "Projection and log-domain reconstruction remove a diagnosed floating-point failure mode and extend the finite stress; they do not turn finite numerical persistence into regulator-independent coercivity.",
+  "recorded_by": "Codex"
+}

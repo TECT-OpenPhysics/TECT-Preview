@@ -7273,6 +7273,120 @@
       "task_id": "T-054",
       "title": "Schur-certified two-scale semigroup budget for the intrinsic graph",
       "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "axis": "raw zero-mode drift",
+          "check": "At high cutoff the raw zero residual exceeds the declared diagnostic threshold, but the exact-constant-mode projected gap remains positive.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "wrong projection",
+          "check": "Projecting away from the wrong vector gives a negative minimum -38.090756543305964.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "naive underflow",
+          "check": "Naive exponential formation underflows in two hostile entries while log-sum-exp remains finite.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "scale and positivity",
+          "check": "Common weight scaling has residual 0.0 and a nonpositive conditional row is rejected.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "uniform and physical promotion",
+          "check": "Finite positive projected and Schur gaps do not imply common-core, regulator-independent, QFT or physical-sector closure.",
+          "disposition": "UPHELD-OPEN"
+        }
+      ],
+      "boundary": "T0 claim-nonbearing finite log-domain/projected-Schur cutoff stress only. It proves no cutoff-, volume-, source-, phase- or exhaustion-uniform gap, common core, phase selection, OS/KMS/GNS reconstruction, mass gap, continuum, C6, Sector-A or Pre-A closure.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "The log-domain and exact-constant-mode projection remove a diagnosed numerical ambiguity in the high-cutoff stress and make the R-406 Schur target auditable without treating a drifting raw zero eigenvalue as a physical or graph disconnection. The finite route advances the interface toward an analytic common-core estimate, while cutoff/volume/source/phase/exhaustion uniformity and every QFT promotion premise remain open.",
+      "evidence_refs": [
+        "strategy/pre-a-cp1-st8-q3lock-preconditioned-schur-cutoff-stress-manifest.json#new_perspective",
+        "strategy/pre-a-cp1-st8-q3lock-preconditioned-schur-cutoff-stress-certificate-260831.md#Verification",
+        "codes/foundations/pre_a_cp1_st8_q3lock_preconditioned_schur_cutoff_stress.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_preconditioned_schur_cutoff_stress_independent.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_preconditioned_schur_cutoff_stress_hostile.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_preconditioned_schur_cutoff_stress_verify.py#main",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-primary-preconditioned_schur_cutoff_stress/primary.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-independent-preconditioned_schur_cutoff_stress/independent.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-hostile-preconditioned_schur_cutoff_stress/hostile.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-integrated-preconditioned_schur_cutoff_stress/integrated.json#derived",
+        "verification/lean/Tect/R416.lean#schur_gap_positive",
+        "claims/C6-SPACETIME-SIGNATURE/notes/preconditioned-schur-cutoff-stress-260831.md#R-416"
+      ],
+      "finding": "The primary lane passes 4370/4370 assertions, the independent lane passes 4370/4370, the hostile lane passes 9/9, the integrated verifier passes 39/39, and Lean R416 compiles over 13 cutoffs, 78 profiles and 1410 conditional rows. Primary projected gaps are [0.6867237745188259,11.524804493011532] and Schur gaps are [0.3476008247075759,5.985995817095592]. Raw zero-mode residual reaches 1.0782998803365607 in the primary lane and 1.1256888563326983 independently, while projected gaps remain positive; direct underflow rows are zero and common weight scaling has residual 0.0.",
+      "formal_integration": {
+        "events": [
+          "20260831-log-domain-and-projected-schur-cutoff-stress-20"
+        ],
+        "lean": "R416 PASS",
+        "negatives": [],
+        "no_new_negative": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "results": [
+          "R-416"
+        ]
+      },
+      "formal_refs": {
+        "events": [
+          "20260831-log-domain-and-projected-schur-cutoff-stress-20"
+        ],
+        "negatives": [],
+        "results": [
+          "R-416"
+        ]
+      },
+      "gate_ids": [
+        "PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY",
+        "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+        "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+      ],
+      "id": "EXP-001261",
+      "method": [
+        "Reconstruct coordinate Gibbs masses with log-sum-exp over energy eigenvectors and form ordered conditional rows from log-marginals.",
+        "Build the normalized intrinsic momentum graph and compute its positive spectrum on the orthogonal complement of the exact sqrt(pi) constant mode.",
+        "Recompute the R-406 harmonic coarse/residual gaps and check the conservative Schur gap below the projected positive gap on 13 volume-two cutoffs, three beta values and both orientations.",
+        "Repeat the full grid in an independent plain-loop implementation and run hostile mutations for raw zero drift, wrong projection, naive underflow, weight rescaling and nonpositive rows.",
+        "Compile Lean R416 for scalar positivity, projection nonnegativity, Schur positivity and finite-scope bookkeeping."
+      ],
+      "next_action": "Prove an analytic positive-measure and conditional-marginal estimate controlling both Schur components uniformly on one Hamiltonian common core, then transfer the bound to the R-415 proper-time budget. If a validated growing stress produces a genuine projected or Schur collapse, retain the finite table and record the route-local obstruction without promotion.",
+      "no_overclaim": "Projection and log-domain reconstruction remove a diagnosed floating-point failure mode and extend the finite stress; they do not turn finite numerical persistence into regulator-independent coercivity.",
+      "provenance": "contemporaneous",
+      "qft_interface": {
+        "closed": "Finite log-domain Gibbs reconstruction, projected positive graph spectrum, Schur coarse/residual stress, increasing-cutoff table, independent and hostile checks, and Lean scalar bookkeeping.",
+        "open": "Analytic positive-measure and conditional-marginal estimates on one Hamiltonian common core; cutoff, volume, source, phase and exhaustion uniformity; R-415/R-399 transfer; OS/KMS/GNS reconstruction; continuum and physical mass-gap obligations."
+      },
+      "question": "Can log-domain Gibbs likelihoods and explicit projection off the sqrt(pi) constant mode extend the R-415 Schur stress to larger cutoffs without mistaking floating-point zero-mode drift for graph disconnection?",
+      "recorded_at": "2026-08-31T00:00:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001260",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001251",
+          "relation": "alternative_to"
+        },
+        {
+          "id": "EXP-001252",
+          "relation": "alternative_to"
+        }
+      ],
+      "reviewed_on": "2026-08-29",
+      "schema": "tect/proof-exploration/1.0",
+      "schema_version": "1.0",
+      "task_id": "T-054",
+      "title": "Log-domain and projected Schur cutoff stress",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",

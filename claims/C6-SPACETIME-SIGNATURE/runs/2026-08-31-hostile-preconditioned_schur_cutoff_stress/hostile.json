@@ -1,0 +1,74 @@
+{
+  "assertion_count": 9,
+  "boundary": "T0 claim-nonbearing finite log-domain/projected-Schur cutoff stress only. It proves no cutoff-, volume-, source-, phase- or exhaustion-uniform gap, common core, phase selection, OS/KMS/GNS reconstruction, mass gap, continuum, C6, Sector-A or Pre-A closure.",
+  "checks": [
+    {
+      "actual": "0.5907083279027048",
+      "expected": "abs > 1e-08",
+      "name": "raw zero-mode drift is observable",
+      "status": "PASS"
+    },
+    {
+      "actual": "35.534910972255524",
+      "expected": "> 1e-10",
+      "name": "projected gap survives drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "-38.090756543305964",
+      "expected": "< -1e-12",
+      "name": "wrong projection is rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": "<= 5e-07",
+      "name": "common weight scaling",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.5907083279027048, 132.0410817284334]",
+      "expected": "finite",
+      "name": "raw scale remains finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.0, 0.0, 0.0]",
+      "expected": "at least one zero",
+      "name": "naive exponential underflow diagnosed",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": "finite",
+      "name": "log-sum-exp remains finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "normalized",
+      "expected": "<= 1e-12",
+      "name": "constant vector normalization",
+      "status": "PASS"
+    },
+    {
+      "actual": "True",
+      "expected": "True",
+      "name": "nonpositive row rejected",
+      "status": "PASS"
+    }
+  ],
+  "derived": {
+    "checks_passed": 9,
+    "naive_underflow_count": 2,
+    "projected_gap": 35.534910972255524,
+    "raw_zero_mode_residual": 0.5907083279027048,
+    "scale_residual": 0.0,
+    "stable_log_normalizer": 0.0,
+    "wrong_projected_minimum": -38.090756543305964
+  },
+  "exploration_id": "EXP-001261",
+  "manifest": "strategy/pre-a-cp1-st8-q3lock-preconditioned-schur-cutoff-stress-manifest.json",
+  "result_id": "R-416",
+  "schema": "tect/pre-a-r416-hostile/1.0",
+  "verdict": "PASS"
+}
