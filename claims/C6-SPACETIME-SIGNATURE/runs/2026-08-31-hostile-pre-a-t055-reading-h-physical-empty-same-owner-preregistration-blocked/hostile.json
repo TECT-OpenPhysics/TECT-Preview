@@ -1,0 +1,81 @@
+{
+  "assertion_count": 7,
+  "assertions": [
+    {
+      "actual": true,
+      "expected": true,
+      "group": "baseline",
+      "name": "baseline contract valid",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": true,
+      "group": "hostile",
+      "name": "zero-reference alias mutation rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": true,
+      "group": "hostile",
+      "name": "finite-part/owner mutation rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": true,
+      "group": "hostile",
+      "name": "cross-owner mutation rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": true,
+      "group": "hostile",
+      "name": "premature sign mutation rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": 5,
+      "expected": "positive",
+      "group": "hostile",
+      "name": "blocker list remains nonempty",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "hostile",
+      "name": "numeric comparison remains absent",
+      "status": "PASS"
+    }
+  ],
+  "audit_id": "T055-PHYSICAL-EMPTY-SAME-OWNER-PREREGISTRATION-BLOCKED",
+  "boundary": "Hostile mutations validate the preregistration firewall only; they do not evaluate a physical energy or stability form.",
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "derived": {
+    "baseline_verdict": "BLOCKED",
+    "mutations_rejected": 5,
+    "numeric_evaluation": false,
+    "sign_status": "BLOCKED_NOT_EVALUATED",
+    "stationarity_status": "BLOCKED_NOT_EVALUATED",
+    "transverse_stability_status": "BLOCKED_NOT_EVALUATED"
+  },
+  "exploration_id": "EXP-001263",
+  "manifest": "strategy/pre-a-t055-reading-h-physical-empty-same-owner-preregistration-blocked-manifest.json",
+  "result_id": "R-418",
+  "run_kind": "hostile",
+  "schema": "tect/pre-a-t055-physical-empty-blocked-run/1.0",
+  "source_hashes": {
+    "A1-P1-FUNCTIONAL-MANIFEST": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565",
+    "B1-READING-H-CFULL-REFEREE": "3a4b2d853992d2b4495da7a4ad1619fda21170f72247f3d549a0bb051680a98f",
+    "R169-V1.1-P1-MANIFEST": "8acd086af1dc7c0900a873d02729275746975a980a923b8945f46ab6ae64e0df",
+    "R169-V1.2-INTERFACE-MANIFEST": "da01305275e510294094501b1927d6090b4e2d19541ec2bee89ee68696fb574d",
+    "R169-V1.3-CERTIFICATE": "95e6c830fea183cf440aa0173d079351b0983da028f34b31470066b1badc6594",
+    "R169-V1.3-MANIFEST": "86fd366bd3b982f0cf61eb1335f6c0fbb4246ff648e66ef7cfd142dcbb78126a",
+    "R170-APPLICABILITY-CERTIFICATE": "e5891d1b6191b978926f7894ff863ba48389f86f248688f0bf28064313e72099",
+    "R170-APPLICABILITY-MANIFEST": "364547255ad4e51d8c9ab97ad9a45937735a4a1847f2edc1cb02387d7d8dc8cb"
+  },
+  "verdict": "PASS"
+}

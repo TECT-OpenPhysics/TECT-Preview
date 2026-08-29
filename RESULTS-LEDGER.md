@@ -44,6 +44,7 @@ policy in `governance/development-history.md`.
 | [R-382](#r-382) | Increasing-cutoff endpoint modular moment stress | R-382 v1.0 is a T0 claim-nonbearing finite cutoff-profile diagnostic under EXP-001224. The R-381 endpoint-energy bridge passes across 2816 all-prefix actual-Q3 contexts with Lean R382; edge max M_0 grows from 2.733031855844076 at d=3 to 41.64826651661874 at d=6 and max M_2 from 0.008378198414559081 to 17.719559304500326, with d=5 to d=6 ratios 8.855033106195243 and 36.38049903040583. This is finite growth evidence only; uniform M_0/M_2 control, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
 | [R-407](#r-407) | Canonical-path effective-resistance lower bound | R-407 v1.0 is a T0 claim-nonbearing finite constructive path checkpoint under EXP-001252. The maximum-conductance tree certificate passes primary 22510/22510, independent 22509/22509, hostile 6/6, integrated 35/35 and Lean R407 over 7 systems, 2688 contexts and 21120 rows. The exact intrinsic gap is [0.7570174175402339,5.647863075935321], the canonical lower envelope is [0.2613815898804392,2.508986944248343], and rho is [0.3985672393762041,3.825824154093709]. The finite path certificate exposes the conductance/probability inputs for a future uniform proof; common-core, phase, volume, exhaustion and QFT gates remain open |
 | [R-417](#r-417) | Log-domain Lyapunov core-tail drift corridor | R-417 v1.0 is a T0 claim-nonbearing finite corridor under EXP-001262. A logarithmic Lyapunov potential gives positive finite tail drift while the induced core graph retains a positive projected gap; primary 18480/18480, independent 17069/17069, hostile 10/10, integrated 44/44 and Lean R417 pass over 13 cutoffs, 78 profiles and 1410 rows. Minimum tail drift is 0.5877888606875677, minimum core gap 0.6867237745188258, minimum core mass 0.9804617527664484, and maximum tail mass 0.01953824723355167. Uniform drift, observable-tail control, common-core, global Poincare, OS/KMS/GNS, physical gap, continuum, C6, Sector-A and Pre-A remain open |
+| [R-418](#r-418) | Physical-empty same-owner preregistration boundary | R-418 v1.0 is a T0 claim-nonbearing TECT-owner input-boundary audit under EXP-001263. Branch E is preregistered as an uninstantiated physical-empty/preparation slot without zero-field aliasing; the current Reading-H G_* and P1 owners do not provide one common finite-regulator functional, reference, normalization, finite parts, regulator, volume, boundary, limit order, full tangent or projector. Primary 30/30 and independent 21/21 blocker assertions pass, hostile 7/7 mutations are rejected, and integrated 16/16 passes. Sign, Reading-H stationarity and symmetry-projected transverse stability are all BLOCKED_NOT_EVALUATED; no numerical comparison or physical/Yang-Mills claim follows |
 | [R-416](#r-416) | Log-domain and projected Schur cutoff stress | R-416 v1.0 is a T0 claim-nonbearing finite refinement under EXP-001261. Log-sum-exp Gibbs masses and explicit projection away from the sqrt(pi) constant mode separate raw high-cutoff zero-mode drift from a genuine projected-gap collapse; primary 4370/4370, independent 4370/4370, hostile 9/9, integrated 39/39 and Lean R416 pass over 13 cutoffs, 78 profiles and 1410 rows. Primary projected gaps are [0.6867237745188259,11.524804493011532] and Schur gaps [0.3476008247075759,5.985995817095592]. Common-core, cutoff/volume/source/phase/exhaustion uniformity, OS/KMS/GNS, physical gap, continuum, C6, Sector-A and Pre-A remain open |
 | [R-415](#r-415) | Schur-certified two-scale semigroup budget for the intrinsic graph | R-415 v1.0 is a T0 claim-nonbearing finite refinement under EXP-001260. It replaces the late black-box first-positive eigenvalue in R-414 by the conservative R-406 harmonic/Schur gap kappa_S=half min(kappa_coarse,kappa_residual), exposing coarse inter-phase capacity and block-mean-zero residual coercivity in the same Green-trace budget; primary 10440/10440, independent 10439/10439, hostile 9/9, integrated 50/50 and Lean R415 pass over 8 systems, 80 profiles and 1030 rows. The certified gap is [0.3172951609382775,3.232260013170645], minimum Green-bound slack is 2.8762895669125346 and maximum Mellin residual is 4.996003610813204e-16. Uniform Schur bounds, common-core, R-399 transfer, OS/KMS/GNS, physical gap, continuum, C6, Sector-A and Pre-A remain open |
 | [R-414](#r-414) | Two-scale semigroup criterion for the normalized Green trace | R-414 v1.0 is a T0 claim-nonbearing finite two-scale semigroup checkpoint under EXP-001259. The R-413 mixed heat bridge separates a short-time UV power budget from a late-time IR gap budget over 7 systems, 2688 contexts and 21120 rows; primary 191471/191471, independent 191470/191470, hostile 9/9, integrated 42/42 and Lean R414 pass. The minimum first-positive gap is [0.7570174175402339,5.647863075935399], split heat is [0.0036012445961644186,0.5926882083380163], and minimum Green-bound slack is 2.936364851149518. Uniform A_tau, gap, common-core, OS/KMS/GNS, continuum, C6, Sector-A and Pre-A gates remain open |
@@ -705,6 +706,45 @@ Hamiltonian-to-OS/KMS/GNS identification, physical mass gap, continuum, C6,
 Sector-A or Pre-A closure.  No tier change, negative result or PDF is issued.
 
 **Proven in:** [R-407 certificate](strategy/pre-a-cp1-st8-q3lock-canonical-path-resistance-certificate-260830.md), [Lean entrypoint](verification/lean/Tect/R407.lean), primary/independent/hostile scripts, integrated verifier, [scope note](claims/C6-SPACETIME-SIGNATURE/notes/canonical-path-resistance-260830.md), and saved run artefacts.
+<a id="r-418"></a>
+### R-418 -- Physical-empty same-owner preregistration boundary
+
+**Result ID.** `PA-T055-READING-H-PHYSICAL-EMPTY-SAME-OWNER-PREREGISTRATION-BLOCKED`.
+
+**Version.** R-418 v1.0 is a T0, claim-nonbearing TECT-owner input-boundary
+ audit under EXP-001263. It attempts one finite-regulator comparison
+`F_total[G_*]-F_total[E]`, with the reference, normalization, finite parts,
+regulator, physical volume, boundary condition and limit order shared by both
+entries, followed by full-tangent stationarity and symmetry-projected
+transverse stability checks.
+
+**Preregistered E slot.** The symbol `E` is frozen as a slot for a
+physical-empty or empty-preparation branch in the same parent. Its admission
+status is `BLOCKED_NOT_INSTANTIATED`; it is not identified with a zero field,
+the P1 zero/disordered reference, or `G_*`.
+
+**Executed outcome.** The current R-169/R-170/B1 authorities provide only the
+finite Reading-H shell `Q`-versus-`G_*` ordering and explicitly omit a physical
+volume, UV regulator, physical-empty normalization and limit passage. The P1
+zero reference belongs to a different side-16 parent with no registered
+Reading-H `G_*` image, while A1 retains an external-source-audit failure and a
+declared-functional/implemented-residual mismatch. The primary and independent
+blocker lanes agree and the hostile lane rejects zero aliasing, cross-owner
+substitution, premature evaluation and missing finite-part acceptance.
+
+| Requested test | Verdict |
+|---|---|
+| `F_total[G_*]-F_total[E]` sign | `BLOCKED_NOT_EVALUATED` |
+| Reading-H full-tangent stationarity | `BLOCKED_NOT_EVALUATED` |
+| symmetry-projected transverse stability | `BLOCKED_NOT_EVALUATED` |
+
+**Evidence and boundary.** The exact owner contract, assumptions, missing
+assumptions, authority hashes and non-claims are in the [R-418 certificate](strategy/pre-a-t055-reading-h-physical-empty-same-owner-preregistration-blocked-certificate-260831.md), [machine manifest](strategy/pre-a-t055-reading-h-physical-empty-same-owner-preregistration-blocked-manifest.json), primary/independent/hostile scripts, and four saved run JSON artefacts. This result adds no negative, changes no claim tier or lifecycle, issues no PDF, and makes no Yang--Mills, mass-gap, physical-vacuum, C6, Sector-A, Pre-A, continuum, thermodynamic, OS/KMS/GNS or Hamiltonian spectral conclusion.
+
+**Tier:** T0 (claim-nonbearing input-boundary audit).
+
+**Publication target:** Internal verification-governance and T-055 owner contract.
+
 <a id="r-417"></a>
 ### R-417 -- Log-domain Lyapunov core-tail drift corridor
 
