@@ -1,0 +1,291 @@
+{
+  "boundary": "R-422 closes only the finite scalar reserve inequality and its bounded Q3 diagnostic. It does not close the Q3LOCK common-alpha or broken-sector coercivity parents, and negative finite reserve rows are not a theorem of physical gaplessness.",
+  "checks": [
+    {
+      "actual": "['R-422', 'EXP-001267', False]",
+      "expected": "R-422/EXP-001267/false",
+      "group": "provenance",
+      "name": "manifest identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'cutoff_uniform_reserve_closed': False, 'volume_uniform_reserve_closed': False, 'phase_uniform_reserve_closed': False, 'exhaustion_uniform_reserve_closed': False, 'global_poincare_closed': False, 'common_core_closed': False, 'common_split_rule_closed': False, 'hamiltonian_os_identification_closed': False, 'kms_gns_gap_closed': False, 'continuum_closed': False, 'c6_closed': False, 'sector_a_closed': False, 'pre_a_closed': False}",
+      "expected": "all promoted flags false",
+      "group": "scope",
+      "name": "scope firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": "[]",
+      "expected": "all R-422 artifacts",
+      "group": "provenance",
+      "name": "artifacts present",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'codes/foundations/pre_a_cp1_st8_q3lock_residual_core_tail_reserve.py': '1d9a9ffd8fb51dbbf1e5e379d4aa1283fa5dea159138ae0ac98acf1dea02a65a', 'codes/foundations/pre_a_cp1_st8_q3lock_residual_core_tail_reserve_independent.py': '7f9139b84afa20451f91ca279349e309decec6790ee9b4793eb11a2f9bae9c73', 'codes/foundations/pre_a_cp1_st8_q3lock_residual_core_tail_reserve_hostile.py': '3b0ab16b8b09a29a2f8fb9ffb05740d0b3ec9d891574acc62bec8217922edf07', 'verification/lean/Tect/R422.lean': '790c3ec3f80db2230ba30c37414869b22e14ac1418c3625cb022a1c2e90cbb15'}",
+      "expected": "distinct source hashes",
+      "group": "provenance",
+      "name": "artifact hashes distinct",
+      "status": "PASS"
+    },
+    {
+      "actual": "['two_by_two_reserve_bound', 'reserve_eigenvalue_nonnegative_condition', 'finite_scope']",
+      "expected": "declared markers",
+      "group": "Lean",
+      "name": "Lean markers",
+      "status": "PASS"
+    },
+    {
+      "actual": "finite scalar file",
+      "expected": "no physical promotion text",
+      "group": "Lean",
+      "name": "Lean boundary",
+      "status": "PASS"
+    },
+    {
+      "actual": "reused claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-primary-residual_core_tail_reserve/primary.json",
+      "expected": "existing output",
+      "group": "executables",
+      "name": "reuse pre_a_cp1_st8_q3lock_residual_core_tail_reserve.py",
+      "status": "PASS"
+    },
+    {
+      "actual": "reused claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-independent-residual_core_tail_reserve/independent.json",
+      "expected": "existing output",
+      "group": "executables",
+      "name": "reuse pre_a_cp1_st8_q3lock_residual_core_tail_reserve_independent.py",
+      "status": "PASS"
+    },
+    {
+      "actual": "reused claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-hostile-residual_core_tail_reserve/hostile.json",
+      "expected": "existing output",
+      "group": "executables",
+      "name": "reuse pre_a_cp1_st8_q3lock_residual_core_tail_reserve_hostile.py",
+      "status": "PASS"
+    },
+    {
+      "actual": "",
+      "expected": "exit 0",
+      "group": "Lean",
+      "name": "Lean compile",
+      "status": "PASS"
+    },
+    {
+      "actual": "PASS",
+      "expected": "PASS",
+      "group": "executables",
+      "name": "primary verdict",
+      "status": "PASS"
+    },
+    {
+      "actual": "PASS",
+      "expected": "PASS",
+      "group": "executables",
+      "name": "independent verdict",
+      "status": "PASS"
+    },
+    {
+      "actual": "PASS",
+      "expected": "PASS",
+      "group": "hostile",
+      "name": "hostile verdict",
+      "status": "PASS"
+    },
+    {
+      "actual": "[6, 858, 282, 114]",
+      "expected": "[6, 'positive', 'positive', 'positive']",
+      "group": "coverage",
+      "name": "primary coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": "[24, 90, -358.3346630467536, 1.5835608118417415]",
+      "expected": "positive and failure rows retained",
+      "group": "boundary",
+      "name": "primary outcome split",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.203488739285131, 11.10253600011901, 0.7542512249663605, 4.754344712763572]",
+      "expected": "finite form and reserve checks",
+      "group": "primary",
+      "name": "primary finite bounds",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'eligible_fixture_count': 3, 'fixture_count': 3, 'maximum_safe_reserve': 0.16937002714396668, 'minimum_actual_residual_gap': 0.9999999999999998, 'minimum_probe_margin': 0.20620043478539996, 'minimum_safe_reserve': 0.06027756573732857, 'minimum_sharp_diagnostic': 0.06027756573732862, 'minimum_tail_hardy_floor': 0.060277565737328585, 'nonpositive_reserve_fixture_count': 0, 'positive_reserve_fixture_count': 3}",
+      "expected": "independent fixtures with positive reserves",
+      "group": "coverage",
+      "name": "independent coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'eligible_fixture_count': 3, 'fixture_count': 3, 'maximum_safe_reserve': 0.16937002714396668, 'minimum_actual_residual_gap': 0.9999999999999998, 'minimum_probe_margin': 0.20620043478539996, 'minimum_safe_reserve': 0.06027756573732857, 'minimum_sharp_diagnostic': 0.06027756573732862, 'minimum_tail_hardy_floor': 0.060277565737328585, 'nonpositive_reserve_fixture_count': 0, 'positive_reserve_fixture_count': 3}",
+      "expected": "finite independent reserve checks",
+      "group": "independent",
+      "name": "independent finite bounds",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'all_mutations_rejected': True, 'mutation_count': 7, 'numeric_evaluation': False, 'physical_promotion': False}",
+      "expected": "seven invalid mutations rejected",
+      "group": "hostile",
+      "name": "hostile controls",
+      "status": "PASS"
+    },
+    {
+      "actual": "[-358.3346630467536, -355.851983490524]",
+      "expected": "conservative reserve does not exceed sharp diagnostic",
+      "group": "comparison",
+      "name": "reserve direction",
+      "status": "PASS"
+    }
+  ],
+  "comparison_policy": {
+    "reason": "the finite reserve theorem is checked after independent reconstruction; negative sufficient reserves are retained and no uniform or physical field is inferred",
+    "tolerance": 5e-07
+  },
+  "derived": {
+    "command_outputs": {
+      "lean": "",
+      "pre_a_cp1_st8_q3lock_residual_core_tail_reserve.py": "reused claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-primary-residual_core_tail_reserve/primary.json",
+      "pre_a_cp1_st8_q3lock_residual_core_tail_reserve_hostile.py": "reused claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-hostile-residual_core_tail_reserve/hostile.json",
+      "pre_a_cp1_st8_q3lock_residual_core_tail_reserve_independent.py": "reused claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-independent-residual_core_tail_reserve/independent.json"
+    },
+    "hostile": {
+      "all_mutations_rejected": true,
+      "mutation_count": 7,
+      "numeric_evaluation": false,
+      "physical_promotion": false
+    },
+    "independent": {
+      "eligible_fixture_count": 3,
+      "fixture_count": 3,
+      "maximum_safe_reserve": 0.16937002714396668,
+      "minimum_actual_residual_gap": 0.9999999999999998,
+      "minimum_probe_margin": 0.20620043478539996,
+      "minimum_safe_reserve": 0.06027756573732857,
+      "minimum_sharp_diagnostic": 0.06027756573732862,
+      "minimum_tail_hardy_floor": 0.060277565737328585,
+      "nonpositive_reserve_fixture_count": 0,
+      "positive_reserve_fixture_count": 3
+    },
+    "lean": "PASS",
+    "primary": {
+      "conditional_row_count": 858,
+      "eligible_row_count": 114,
+      "maximum_cross_norm": 362.5494732750524,
+      "maximum_safe_reserve": 1.5835608118417415,
+      "maximum_sharp_diagnostic": 1.6295826496542936,
+      "minimum_actual_residual_gap": 2.065902330731274,
+      "minimum_core_gap": 2.203488739285131,
+      "minimum_direct_tail_gap": 11.10253600011901,
+      "minimum_probe_margin": 4.754344712763572,
+      "minimum_safe_reserve": -358.3346630467536,
+      "minimum_sharp_diagnostic": -355.851983490524,
+      "minimum_tail_hardy_floor": 0.7542512249663605,
+      "nonpositive_reserve_row_count": 90,
+      "positive_reserve_row_count": 24,
+      "system_count": 6,
+      "systems": [
+        {
+          "dimension": 3,
+          "eligible_row_count": 0,
+          "minimum_safe_reserve": null,
+          "minimum_sharp_diagnostic": null,
+          "nonpositive_reserve_rows": 0,
+          "positive_reserve_rows": 0,
+          "row_count": 24,
+          "tail_row_count": 0,
+          "volume": 2
+        },
+        {
+          "dimension": 6,
+          "eligible_row_count": 16,
+          "minimum_safe_reserve": -0.8438116840239491,
+          "minimum_sharp_diagnostic": -0.4708474755589189,
+          "nonpositive_reserve_rows": 12,
+          "positive_reserve_rows": 4,
+          "row_count": 42,
+          "tail_row_count": 28,
+          "volume": 2
+        },
+        {
+          "dimension": 12,
+          "eligible_row_count": 78,
+          "minimum_safe_reserve": -358.3346630467536,
+          "minimum_sharp_diagnostic": -355.851983490524,
+          "nonpositive_reserve_rows": 78,
+          "positive_reserve_rows": 0,
+          "row_count": 78,
+          "tail_row_count": 78,
+          "volume": 2
+        },
+        {
+          "dimension": 3,
+          "eligible_row_count": 0,
+          "minimum_safe_reserve": null,
+          "minimum_sharp_diagnostic": null,
+          "nonpositive_reserve_rows": 0,
+          "positive_reserve_rows": 0,
+          "row_count": 78,
+          "tail_row_count": 0,
+          "volume": 3
+        },
+        {
+          "dimension": 4,
+          "eligible_row_count": 4,
+          "minimum_safe_reserve": 0.6020505684141582,
+          "minimum_sharp_diagnostic": 0.7941584344590602,
+          "nonpositive_reserve_rows": 0,
+          "positive_reserve_rows": 4,
+          "row_count": 126,
+          "tail_row_count": 32,
+          "volume": 3
+        },
+        {
+          "dimension": 4,
+          "eligible_row_count": 16,
+          "minimum_safe_reserve": 0.48692091427320355,
+          "minimum_sharp_diagnostic": 0.7833891541947202,
+          "nonpositive_reserve_rows": 0,
+          "positive_reserve_rows": 16,
+          "row_count": 510,
+          "tail_row_count": 144,
+          "volume": 4
+        }
+      ],
+      "tail_row_count": 282
+    }
+  },
+  "exploration_id": "EXP-001267",
+  "manifest": "strategy/pre-a-cp1-st8-q3lock-residual-core-tail-reserve-manifest.json",
+  "result_id": "R-422",
+  "schema": "tect/pre-a-r422-integrated/1.0",
+  "scope": {
+    "c6_closed": false,
+    "common_core_closed": false,
+    "common_split_rule_closed": false,
+    "continuum_closed": false,
+    "cutoff_uniform_reserve_closed": false,
+    "exhaustion_uniform_reserve_closed": false,
+    "finite_block_mean_zero_split_closed": true,
+    "finite_cross_block_norm_closed": true,
+    "finite_negative_reserve_rows_recorded": true,
+    "finite_positive_reserve_rows_recorded": true,
+    "finite_tail_hardy_reuse_closed": true,
+    "finite_two_by_two_reserve_closed": true,
+    "global_poincare_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "no_new_negative_result": true,
+    "no_pdf": true,
+    "no_tier_change": true,
+    "phase_uniform_reserve_closed": false,
+    "pre_a_closed": false,
+    "sector_a_closed": false,
+    "volume_uniform_reserve_closed": false
+  },
+  "verdict": "PASS"
+}

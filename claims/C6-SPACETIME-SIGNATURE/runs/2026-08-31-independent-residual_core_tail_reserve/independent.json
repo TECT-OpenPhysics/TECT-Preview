@@ -1,0 +1,350 @@
+{
+  "assertion_count": 43,
+  "assertions": [
+    {
+      "actual": "['R-422', 'EXP-001267', False]",
+      "expected": "R-422/EXP-001267/false",
+      "group": "provenance",
+      "name": "manifest identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'cutoff_uniform_reserve_closed': False, 'volume_uniform_reserve_closed': False, 'phase_uniform_reserve_closed': False, 'exhaustion_uniform_reserve_closed': False, 'global_poincare_closed': False, 'common_core_closed': False, 'common_split_rule_closed': False, 'hamiltonian_os_identification_closed': False, 'kms_gns_gap_closed': False, 'continuum_closed': False, 'c6_closed': False, 'sector_a_closed': False, 'pre_a_closed': False}",
+      "expected": "all promoted flags false",
+      "group": "scope",
+      "name": "scope firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.1, 0.9999999999999999]",
+      "expected": "positive and normalized",
+      "group": "weights",
+      "name": "fixture=0 weights",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": "symmetric within 1e-08",
+      "group": "conductance",
+      "name": "fixture=0 conductance",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.2011244339814313, 1.2722596365393921, 1.379729661461215, 1.5848931924611136]",
+      "expected": "positive finite",
+      "group": "potential",
+      "name": "fixture=0 potential",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.060277565737328585",
+      "expected": ">0",
+      "group": "tail Hardy",
+      "name": "fixture=0 tail floor",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.9999999999999998",
+      "expected": ">0",
+      "group": "core form",
+      "name": "fixture=0 core gap",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.0000000000000002, 0.060277565737328585]",
+      "expected": "direct gap >= floor-1e-07",
+      "group": "tail Hardy",
+      "name": "fixture=0 tail Hardy reuse",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.9999999999999998, 0.06027756573732857]",
+      "expected": "actual gap >= safe-1e-07",
+      "group": "two-block reserve",
+      "name": "fixture=0 residual reserve",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.06027756573732862, 0.06027756573732857]",
+      "expected": "sharp >= safe-1e-07",
+      "group": "two-block reserve",
+      "name": "fixture=0 sharp ordering",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.7465951973218395",
+      "expected": ">=-1e-07",
+      "group": "two-block reserve",
+      "name": "fixture=0 probe=0 reserve",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.0423294688690135",
+      "expected": ">=-1e-07",
+      "group": "two-block reserve",
+      "name": "fixture=0 probe=1 reserve",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.9575015167787767",
+      "expected": ">=-1e-07",
+      "group": "two-block reserve",
+      "name": "fixture=0 probe=2 reserve",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.588282245431369",
+      "expected": ">=-1e-07",
+      "group": "two-block reserve",
+      "name": "fixture=0 probe=3 reserve",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.20620043478539996",
+      "expected": ">=-1e-07",
+      "group": "two-block reserve",
+      "name": "fixture=0 probe=4 reserve",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.1, 1.0]",
+      "expected": "positive and normalized",
+      "group": "weights",
+      "name": "fixture=1 weights",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": "symmetric within 1e-08",
+      "group": "conductance",
+      "name": "fixture=1 conductance",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.148698354997035, 1.3195079107728942, 1.4614425516219254, 1.5848931924611136]",
+      "expected": "positive finite",
+      "group": "potential",
+      "name": "fixture=1 potential",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.2027033604773001",
+      "expected": ">0",
+      "group": "tail Hardy",
+      "name": "fixture=1 tail floor",
+      "status": "PASS"
+    },
+    {
+      "actual": "2.733333333333334",
+      "expected": ">0",
+      "group": "core form",
+      "name": "fixture=1 core gap",
+      "status": "PASS"
+    },
+    {
+      "actual": "[6.0, 0.2027033604773001]",
+      "expected": "direct gap >= floor-1e-07",
+      "group": "tail Hardy",
+      "name": "fixture=1 tail Hardy reuse",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.7329932326876207, 0.16937002714396668]",
+      "expected": "actual gap >= safe-1e-07",
+      "group": "two-block reserve",
+      "name": "fixture=1 residual reserve",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.20226437160425403, 0.16937002714396668]",
+      "expected": "sharp >= safe-1e-07",
+      "group": "two-block reserve",
+      "name": "fixture=1 sharp ordering",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.6783631262425256",
+      "expected": ">=-1e-07",
+      "group": "two-block reserve",
+      "name": "fixture=1 probe=0 reserve",
+      "status": "PASS"
+    },
+    {
+      "actual": "6.29563478427777",
+      "expected": ">=-1e-07",
+      "group": "two-block reserve",
+      "name": "fixture=1 probe=1 reserve",
+      "status": "PASS"
+    },
+    {
+      "actual": "8.461259945712067",
+      "expected": ">=-1e-07",
+      "group": "two-block reserve",
+      "name": "fixture=1 probe=2 reserve",
+      "status": "PASS"
+    },
+    {
+      "actual": "3.7459811374413627",
+      "expected": ">=-1e-07",
+      "group": "two-block reserve",
+      "name": "fixture=1 probe=3 reserve",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.9807433336247962",
+      "expected": ">=-1e-07",
+      "group": "two-block reserve",
+      "name": "fixture=1 probe=4 reserve",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.05, 1.0]",
+      "expected": "positive and normalized",
+      "group": "weights",
+      "name": "fixture=2 weights",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0",
+      "expected": "symmetric within 1e-08",
+      "group": "conductance",
+      "name": "fixture=2 conductance",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.148698354997035, 1.2722596365393921, 1.4614425516219254, 1.8205642030260802]",
+      "expected": "positive finite",
+      "group": "potential",
+      "name": "fixture=2 potential",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.1335467412320755",
+      "expected": ">0",
+      "group": "tail Hardy",
+      "name": "fixture=2 tail floor",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.0",
+      "expected": ">0",
+      "group": "core form",
+      "name": "fixture=2 core gap",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.0000000000000002, 0.1335467412320755]",
+      "expected": "direct gap >= floor-1e-07",
+      "group": "tail Hardy",
+      "name": "fixture=2 tail Hardy reuse",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.0, 0.1335467412320755]",
+      "expected": "actual gap >= safe-1e-07",
+      "group": "two-block reserve",
+      "name": "fixture=2 residual reserve",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.13354674123207544, 0.1335467412320755]",
+      "expected": "sharp >= safe-1e-07",
+      "group": "two-block reserve",
+      "name": "fixture=2 sharp ordering",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.7329065175358491",
+      "expected": ">=-1e-07",
+      "group": "two-block reserve",
+      "name": "fixture=2 probe=0 reserve",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.4307736753204657",
+      "expected": ">=-1e-07",
+      "group": "two-block reserve",
+      "name": "fixture=2 probe=1 reserve",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.21780340416869348",
+      "expected": ">=-1e-07",
+      "group": "two-block reserve",
+      "name": "fixture=2 probe=2 reserve",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.9130620564226533",
+      "expected": ">=-1e-07",
+      "group": "two-block reserve",
+      "name": "fixture=2 probe=3 reserve",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.5150746813425573",
+      "expected": ">=-1e-07",
+      "group": "two-block reserve",
+      "name": "fixture=2 probe=4 reserve",
+      "status": "PASS"
+    },
+    {
+      "actual": "[3, 3, 0]",
+      "expected": "three fixtures partitioned",
+      "group": "coverage",
+      "name": "fixture coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.20620043478539996",
+      "expected": ">=-1e-07",
+      "group": "aggregate",
+      "name": "probe aggregate",
+      "status": "PASS"
+    }
+  ],
+  "assumptions": [
+    "The R-419 conditional law is positive and normalized and the projected conductance is symmetric and nonnegative.",
+    "The R-421 Lyapunov vector and tail threshold are reused without retuning per row.",
+    "The sqrt(pi) transform identifies weighted L2 norm with Euclidean norm and preserves the finite Dirichlet form.",
+    "The core basis is block-mean-zero, so the two-dimensional block-constant coarse sector is excluded from the residual audit.",
+    "The spectral norm and restricted eigenvalues are computed from the declared finite matrices and never rounded upward in the reserve test.",
+    "The Lean proof is a scalar algebraic cross-check, not a formalization of the full numerical matrix lane."
+  ],
+  "boundary": "R-422 closes only the finite scalar reserve inequality and its bounded Q3 diagnostic. It does not close the Q3LOCK common-alpha or broken-sector coercivity parents, and negative finite reserve rows are not a theorem of physical gaplessness.",
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "derived": {
+    "eligible_fixture_count": 3,
+    "fixture_count": 3,
+    "maximum_safe_reserve": 0.16937002714396668,
+    "minimum_actual_residual_gap": 0.9999999999999998,
+    "minimum_probe_margin": 0.20620043478539996,
+    "minimum_safe_reserve": 0.06027756573732857,
+    "minimum_sharp_diagnostic": 0.06027756573732862,
+    "minimum_tail_hardy_floor": 0.060277565737328585,
+    "nonpositive_reserve_fixture_count": 0,
+    "positive_reserve_fixture_count": 3
+  },
+  "evidence_level": "T0 / exact finite two-block form inequality plus executed Q3-row reserve diagnostic; no uniform theorem or physical conclusion",
+  "exploration_id": "EXP-001267",
+  "manifest": "strategy/pre-a-cp1-st8-q3lock-residual-core-tail-reserve-manifest.json",
+  "missing_assumptions": [
+    "A cutoff-, volume-, phase- and exhaustion-uniform lower bound for the tail Hardy floor and core restricted form on one Hamiltonian common core.",
+    "A uniform upper bound on the core-tail cross block or an analytic boundary-capacity estimate that makes lambda_minus positive.",
+    "A compatible treatment of the two-dimensional block-mean coarse sector and its Schur complement.",
+    "Two-sided form-norm control of actual R-399 histories and a common split-limit map.",
+    "Hamiltonian-to-OS/KMS/GNS identification and a sectorwise coercive estimate."
+  ],
+  "non_claims": [
+    "No cutoff-, volume-, phase- or exhaustion-uniform reserve.",
+    "No global Poincare or full Schur theorem for arbitrary observables.",
+    "No control of the block-constant coarse sector.",
+    "No common Hamiltonian core or split-limit dynamics.",
+    "No OS/KMS/GNS reconstruction or sectorwise spectral gap.",
+    "No continuum, C6, Sector-A, Pre-A, Yang-Mills or mass-gap conclusion."
+  ],
+  "result_id": "R-422",
+  "run_kind": "independent",
+  "schema": "tect/pre-a-r422-independent/1.0",
+  "verdict": "PASS"
+}

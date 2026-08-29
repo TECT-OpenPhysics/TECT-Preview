@@ -1,0 +1,125 @@
+{
+  "adversarial_review": [
+    {
+      "axis": "cross-term omission",
+      "check": "Dropping the restricted cross block would overstate the reserve.",
+      "disposition": "DISMISSED-FINITE"
+    },
+    {
+      "axis": "reserve sign",
+      "check": "Negative sufficient reserves are retained and are never clipped to zero.",
+      "disposition": "DISMISSED-FINITE"
+    },
+    {
+      "axis": "tail-floor inflation",
+      "check": "A tail floor above the directly computed restricted tail floor is rejected.",
+      "disposition": "DISMISSED-FINITE"
+    },
+    {
+      "axis": "nonpositive inputs",
+      "check": "Negative or nonfinite core, tail, and cross inputs are rejected before evaluation.",
+      "disposition": "DISMISSED-FINITE"
+    },
+    {
+      "axis": "sharp diagnostic substitution",
+      "check": "The sharper two-by-two eigenvalue is not substituted for the conservative certified reserve.",
+      "disposition": "DISMISSED-FINITE"
+    },
+    {
+      "axis": "coarse sector",
+      "check": "The two block-mean modes are excluded and no coarse Schur gap is inferred.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "uniform and physical promotion",
+      "check": "Finite positive rows do not establish a uniform reserve, GNS coercivity, or a physical mass gap.",
+      "disposition": "UPHELD-OPEN"
+    }
+  ],
+  "boundary": "T0 claim-nonbearing finite two-block reserve and Q3 diagnostic only. The nonpositive high-cutoff rows are a sufficient-budget boundary, not a physical gaplessness theorem.",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "claim_ids_used": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "decision_reason": "The finite scalar reserve inequality is exact and the Q3 lane exposes both positive and nonpositive sufficient budgets. The cross block is the controlling unresolved boundary at the tested high cutoff, so no uniform or physical promotion is justified.",
+  "decision_scope": "Finite residual core/tail decomposition; no tier change.",
+  "evidence_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-residual-core-tail-reserve-manifest.json#finite_theorem",
+    "strategy/pre-a-cp1-st8-q3lock-residual-core-tail-reserve-certificate-260831.md#Executed evidence",
+    "codes/foundations/pre_a_cp1_st8_q3lock_residual_core_tail_reserve.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_residual_core_tail_reserve_independent.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_residual_core_tail_reserve_hostile.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_residual_core_tail_reserve_verify.py#main",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-primary-residual_core_tail_reserve/primary.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-independent-residual_core_tail_reserve/independent.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-hostile-residual_core_tail_reserve/hostile.json#controls",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-integrated-residual_core_tail_reserve/integrated.json#derived",
+    "verification/lean/Tect/R422.lean#two_by_two_reserve_bound"
+  ],
+  "finding": "The primary lane passes 3522/3522 assertions over 858 conditional rows and 114 eligible residual rows. Twenty-four rows have positive conservative reserve and 90 have nonpositive reserve. The minimum tail Hardy floor is 0.7542512249663605, the minimum core gap is 2.203488739285131, the maximum cross norm is 362.5494732750524, and the safe reserve range is [-358.3346630467536, 1.5835608118417415]. The independent non-importing lane passes 43/43 on three fixtures, hostile passes 7/7, integrated passes 20/20, and Lean R422 compiles. The finite scalar theorem is therefore closed, while uniform cross-capacity control and the coarse sector remain open.",
+  "formal_integration": {
+    "events": [
+      "20260831-r-422-finite-residual-core-tail-reserve-2026-08"
+    ],
+    "lean": "R422 PASS; scalar two-block reserve cross-check only",
+    "negatives": [],
+    "no_changelog_event": false,
+    "no_new_negative": true,
+    "no_new_result": false,
+    "no_pdf": true,
+    "no_tier_change": true,
+    "results": [
+      "R-422"
+    ]
+  },
+  "formal_refs": {
+    "events": [
+      "20260831-r-422-finite-residual-core-tail-reserve-2026-08"
+    ],
+    "negatives": [],
+    "results": [
+      "R-422"
+    ]
+  },
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY",
+    "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+  ],
+  "id": "EXP-001267",
+  "method": [
+    "Keep the hash-pinned R-419 Q3 conditional law, projected conductance, beta grid, collar orientations, alpha and tail threshold fixed.",
+    "Construct weighted block-mean-zero core and tail bases for every eligible conditional row.",
+    "Use the R-421 tail drift as the tail Hardy floor, compute the core restricted form and the restricted cross operator norm, and evaluate the conservative reserve min(a,kappa)-eta.",
+    "Check the finite reserve against the assembled residual matrix and deterministic probes; retain negative sufficient reserves as route boundaries.",
+    "Rebuild the scalar theorem on non-importing reversible graph fixtures, reject hostile mutations, and compile the Lean algebraic cross-check."
+  ],
+  "next_action": "Replace the finite cross norm by an analytic boundary-capacity estimate on a Hamiltonian-derived common core, control the two block-mean coarse Schur sector, and transfer the result through the R-399/R-415 history before revisiting GNS coercivity.",
+  "no_overclaim": "The finite theorem and selected positive rows are not cutoff-, volume-, phase- or exhaustion-uniform. The nonpositive high-cutoff reserve is not a physical gaplessness result, and no C6, Sector-A, Pre-A, Yang-Mills or mass-gap claim follows.",
+  "provenance": "contemporaneous",
+  "question": "Does the R-421 tail Hardy floor combine with a block-mean-zero core form and explicit cross norm to give a finite residual coercivity reserve, and where does that sufficient reserve fail on the Q3 grid?",
+  "recorded_at": "2026-08-31T05:00:00Z",
+  "recorded_by": "Codex",
+  "related": [
+    {
+      "id": "EXP-001266",
+      "relation": "continues"
+    },
+    {
+      "id": "EXP-001264",
+      "relation": "continues"
+    },
+    {
+      "id": "EXP-001251",
+      "relation": "alternative_to"
+    }
+  ],
+  "reviewed_on": "2026-08-29",
+  "schema": "tect/proof-exploration/1.0",
+  "schema_version": "1.0",
+  "task_id": "T-054",
+  "title": "Finite residual core-tail coercivity reserve",
+  "verdict": "advanced"
+}

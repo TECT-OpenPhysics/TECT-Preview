@@ -1,0 +1,161 @@
+{
+  "schema": "tect/pre-a-cp1-st8-q3lock-residual-core-tail-reserve/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-RESIDUAL-CORE-TAIL-RESERVE-v0",
+  "result_id": "R-422",
+  "title": "Finite residual core-tail coercivity reserve after the R-421 Hardy interface",
+  "task_id": "T-054",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "exploration_id": "EXP-001267",
+  "claim_bearing": false,
+  "parent_results": [
+    "R-421",
+    "R-419",
+    "R-406",
+    "R-415"
+  ],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY",
+    "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+  ],
+  "question": "Does the R-421 tail-supported Hardy floor combine with a block-mean-zero core form and an explicit core-tail cross norm to give a finite residual coercivity reserve, and where does that sufficient reserve fail on the declared Q3 cutoff grid?",
+  "new_perspective": {
+    "principle": "Separate the block-mean-zero residual space into core and Lyapunov-tail components. Bound the diagonal core and tail forms and retain the cross block instead of silently dropping it.",
+    "route": [
+      "Keep the R-419 conditional Gibbs law, projected momentum conductance, alpha=1/40 and theta=4 unchanged.",
+      "For each nonempty core/tail split, construct orthonormal weighted block-mean-zero bases U_C and U_T.",
+      "Use the smallest core restricted eigenvalue a and the R-421 tail Hardy floor b=kappa on U_T.",
+      "Compute the operator norm eta of the restricted cross block U_C^T A U_T.",
+      "Apply the conservative two-by-two lower envelope lambda_safe=min(a,b)-eta, obtained from 2|xy|<=x^2+y^2; retain the sharper eigenvalue envelope only as a diagnostic.",
+      "Record positive reserves and negative sufficient-bound failures without substituting the full finite spectral gap or claiming uniformity."
+    ],
+    "qft_bridge": "This is the missing finite variance-decomposition interface between a tail Hardy estimate and a future induced-core Schur/Poincare theorem. It exposes the boundary-capacity/cross-block budget that must be controlled uniformly before a GNS coercivity claim."
+  },
+  "finite_theorem": {
+    "space": "H=H_C direct_sum H_T with orthogonal Euclidean coordinates after the weighted sqrt(pi) transform",
+    "form": "q(x,y)=x^T A_CC x+2 x^T A_CT y+y^T A_TT y",
+    "assumptions": [
+      "A is symmetric positive semidefinite",
+      "x^T A_CC x >= a ||x||^2",
+      "y^T A_TT y >= b ||y||^2",
+      "||A_CT||_2 <= eta",
+      "a>0, b>0 and lambda_minus is evaluated without rounding upward"
+    ],
+    "bound": "q(x,y) >= lambda_safe (||x||^2+||y||^2), lambda_safe=min(a,b)-eta; the sharper two-by-two eigenvalue is diagnostic and is not used for promotion",
+    "tail_input": "R-421 supplies b=kappa=min_T h_i for tail-supported y; the finite audit also reports the stronger direct tail restricted eigenvalue as a diagnostic only.",
+    "scope_boundary": "The theorem applies only to the finite residual split after each declared conditional row is fixed. It does not identify the residual space with the physical GNS form domain or control the two-dimensional block-mean coarse sector."
+  },
+  "upstream_authority": {
+    "r421_manifest": "strategy/pre-a-cp1-st8-q3lock-tail-hardy-ground-state-transform-manifest.json",
+    "r421_sha256": "44ed253d156681f4ccfda3f8d61845287b163cb5ee8c9a2cf6279b78c9cec406",
+    "r419_manifest": "strategy/pre-a-cp1-st8-q3lock-growing-volume-lyapunov-core-tail-stress-manifest.json",
+    "r419_sha256": "d5e2139c1a8af9b11f13098a8aaafabf66560bf08f011afb18900f50ae7e2881"
+  },
+  "finite_fixture": {
+    "q3_pairs": [
+      {"volume": 2, "cutoff_dimensions": [3, 6, 12]},
+      {"volume": 3, "cutoff_dimensions": [3, 4]},
+      {"volume": 4, "cutoff_dimensions": [4]}
+    ],
+    "beta_values": ["1/2", "2", "8"],
+    "orientations": ["right", "left"],
+    "alpha": "1/40",
+    "tail_threshold": "4",
+    "probability_floor": 1e-300,
+    "rate_floor": 1e-8,
+    "spectral_floor": 1e-10,
+    "numerical_tolerance": 1e-8,
+    "crosscheck_tolerance": 5e-7,
+    "reserve_tolerance": 1e-7
+  },
+  "scope": {
+    "finite_block_mean_zero_split_closed": true,
+    "finite_tail_hardy_reuse_closed": true,
+    "finite_cross_block_norm_closed": true,
+    "finite_two_by_two_reserve_closed": true,
+    "finite_positive_reserve_rows_recorded": true,
+    "finite_negative_reserve_rows_recorded": true,
+    "cutoff_uniform_reserve_closed": false,
+    "volume_uniform_reserve_closed": false,
+    "phase_uniform_reserve_closed": false,
+    "exhaustion_uniform_reserve_closed": false,
+    "global_poincare_closed": false,
+    "common_core_closed": false,
+    "common_split_rule_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R422.lean",
+    "theorem_markers": [
+      "two_by_two_reserve_bound",
+      "reserve_eigenvalue_nonnegative_condition",
+      "finite_scope"
+    ],
+    "command": "lake env lean Tect/R422.lean",
+    "boundary": "Lean checks the scalar two-block reserve algebra and its finite scope marker; it does not formalize the Q3 matrix eigensolver, uniform limits, a common core or a physical sector."
+  },
+  "artifacts": {
+    "primary_script": "codes/foundations/pre_a_cp1_st8_q3lock_residual_core_tail_reserve.py",
+    "independent_script": "codes/foundations/pre_a_cp1_st8_q3lock_residual_core_tail_reserve_independent.py",
+    "hostile_script": "codes/foundations/pre_a_cp1_st8_q3lock_residual_core_tail_reserve_hostile.py",
+    "integrated_verifier": "codes/foundations/pre_a_cp1_st8_q3lock_residual_core_tail_reserve_verify.py",
+    "lean": "verification/lean/Tect/R422.lean"
+  },
+  "assumptions": [
+    "The R-419 conditional law is positive and normalized and the projected conductance is symmetric and nonnegative.",
+    "The R-421 Lyapunov vector and tail threshold are reused without retuning per row.",
+    "The sqrt(pi) transform identifies weighted L2 norm with Euclidean norm and preserves the finite Dirichlet form.",
+    "The core basis is block-mean-zero, so the two-dimensional block-constant coarse sector is excluded from the residual audit.",
+    "The spectral norm and restricted eigenvalues are computed from the declared finite matrices and never rounded upward in the reserve test.",
+    "The Lean proof is a scalar algebraic cross-check, not a formalization of the full numerical matrix lane."
+  ],
+  "missing_assumptions": [
+    "A cutoff-, volume-, phase- and exhaustion-uniform lower bound for the tail Hardy floor and core restricted form on one Hamiltonian common core.",
+    "A uniform upper bound on the core-tail cross block or an analytic boundary-capacity estimate that makes lambda_minus positive.",
+    "A compatible treatment of the two-dimensional block-mean coarse sector and its Schur complement.",
+    "Two-sided form-norm control of actual R-399 histories and a common split-limit map.",
+    "Hamiltonian-to-OS/KMS/GNS identification and a sectorwise coercive estimate."
+  ],
+  "promotion_criteria": [
+    "Prove the same residual decomposition on a domain-controlled unbounded Q3 common core.",
+    "Establish positive reserve with constants uniform in cutoff, volume, phase and exhaustion, including the coarse Schur sector.",
+    "Transfer the bound through R-399 histories and R-415 semigroup estimates before any GNS or physical promotion."
+  ],
+  "stop_conditions": [
+    "A nonpositive reserve is recorded as a failure of this sufficient budget on that finite row, not repaired by clipping to zero.",
+    "A mutated cross sign, tail floor or eigenvalue formula must be rejected by the hostile lane.",
+    "Finite residual reserves cannot be promoted to global Poincare, a mass gap, C6, Sector-A or Pre-A closure."
+  ],
+  "evidence_level": "T0 / exact finite two-block form inequality plus executed Q3-row reserve diagnostic; no uniform theorem or physical conclusion",
+  "non_claims": [
+    "No cutoff-, volume-, phase- or exhaustion-uniform reserve.",
+    "No global Poincare or full Schur theorem for arbitrary observables.",
+    "No control of the block-constant coarse sector.",
+    "No common Hamiltonian core or split-limit dynamics.",
+    "No OS/KMS/GNS reconstruction or sectorwise spectral gap.",
+    "No continuum, C6, Sector-A, Pre-A, Yang-Mills or mass-gap conclusion."
+  ],
+  "formal_integration": {
+    "event_ordinal": 763,
+    "event_id": "20260831-r-422-finite-residual-core-tail-reserve-2026-08",
+    "event_title": "R-422 finite residual core-tail reserve",
+    "event_claim_ids": ["C6-SPACETIME-SIGNATURE", "EXP-001267", "R-422"],
+    "lean": "R422 PASS; scalar two-block reserve cross-check only",
+    "new_negative": false,
+    "tier_change": false,
+    "pdf": false
+  },
+  "boundary": "R-422 closes only the finite scalar reserve inequality and its bounded Q3 diagnostic. It does not close the Q3LOCK common-alpha or broken-sector coercivity parents, and negative finite reserve rows are not a theorem of physical gaplessness.",
+  "next_unlock": "Replace the finite cross norm by an analytic boundary-capacity estimate on a common Q3 core, prove a positive uniform residual reserve and then combine it with the coarse Schur sector and R-399 history transfer.",
+  "no_overclaim": "A positive lambda_minus on selected finite rows is a conditional residual budget; a negative lambda_minus means this sufficient block estimate cannot certify that row. Neither outcome is a regulator-independent or thermodynamic Yang-Mills statement."
+}
