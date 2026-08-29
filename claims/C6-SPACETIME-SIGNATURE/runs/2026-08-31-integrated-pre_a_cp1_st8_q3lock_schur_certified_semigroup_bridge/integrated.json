@@ -1,0 +1,549 @@
+{
+  "boundary": "T0 claim-nonbearing finite Schur-certified two-scale semigroup bridge only. It proves no cutoff-, volume-, source-, phase- or exhaustion-uniform gap or UV coefficient, common core, phase selection, OS/KMS/GNS reconstruction, mass gap, continuum, C6, Sector-A or Pre-A closure.",
+  "checks": [
+    {
+      "actual": "['R-415', 'EXP-001260', False]",
+      "expected": "R-415/EXP-001260/false",
+      "group": "identity",
+      "name": "manifest identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'cutoff_independent_schur_gap_closed': False, 'volume_independent_schur_gap_closed': False, 'phase_uniform_semigroup_closed': False, 'exhaustion_uniform_semigroup_closed': False, 'common_core_closed': False, 'common_split_rule_closed': False, 'hamiltonian_os_identification_closed': False, 'kms_gns_gap_closed': False, 'continuum_closed': False, 'c6_closed': False, 'sector_a_closed': False, 'pre_a_closed': False}",
+      "expected": "all promoted flags false",
+      "group": "scope",
+      "name": "scope firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": "[]",
+      "expected": "all R-415 artifacts",
+      "group": "provenance",
+      "name": "artifacts present",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'codes/foundations/pre_a_cp1_st8_q3lock_schur_certified_semigroup_bridge.py': '57ffaa1e2d7762bb9e400bb13b4e4862a52c8fc455a7387cfa35586ec4c5e4f2', 'codes/foundations/pre_a_cp1_st8_q3lock_schur_certified_semigroup_bridge_independent.py': '9cadbde2b07256fe2d6e6b16e721590181ec854a9a26fea715933e1ecd3aa9a3', 'codes/foundations/pre_a_cp1_st8_q3lock_schur_certified_semigroup_bridge_hostile.py': 'f27c15f3ccd65e808e1da84ecba420879d2e1d2a34e85d54361e5fe5825d512a', 'verification/lean/Tect/R415.lean': 'bf033a8e97e3c993fb03096a70f3a01c49913fe8b5a308ed7b99b4d35ee60cd0'}",
+      "expected": "distinct",
+      "group": "provenance",
+      "name": "source hashes distinct",
+      "status": "PASS"
+    },
+    {
+      "actual": "['schur_gap_positive', 'late_exponential_factor_nonnegative', 'green_bound_nonnegative', 'finite_scope']",
+      "expected": "declared markers",
+      "group": "Lean",
+      "name": "Lean markers",
+      "status": "PASS"
+    },
+    {
+      "actual": "finite scalar file",
+      "expected": "no promotion text",
+      "group": "Lean",
+      "name": "Lean boundary",
+      "status": "PASS"
+    },
+    {
+      "actual": "reused claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-primary-pre_a_cp1_st8_q3lock_schur_certified_semigroup_bridge/primary.json",
+      "expected": "existing output",
+      "group": "executables",
+      "name": "reuse pre_a_cp1_st8_q3lock_schur_certified_semigroup_bridge.py",
+      "status": "PASS"
+    },
+    {
+      "actual": "reused claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-independent-pre_a_cp1_st8_q3lock_schur_certified_semigroup_bridge/independent.json",
+      "expected": "existing output",
+      "group": "executables",
+      "name": "reuse pre_a_cp1_st8_q3lock_schur_certified_semigroup_bridge_independent.py",
+      "status": "PASS"
+    },
+    {
+      "actual": "reused claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-hostile-pre_a_cp1_st8_q3lock_schur_certified_semigroup_bridge/hostile.json",
+      "expected": "existing output",
+      "group": "executables",
+      "name": "reuse pre_a_cp1_st8_q3lock_schur_certified_semigroup_bridge_hostile.py",
+      "status": "PASS"
+    },
+    {
+      "actual": "Tect/R415.lean:12:18: warning: Variable name `hgap` is not explicitly referenced.\n\nThe binding can be removed (if unused) or named `_` (if used implicitly).\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\nTect/R415.lean:12:35: warning: Variable name `hdt` is not explicitly referenced.\n\nThe binding can be removed (if unused) or named `_` (if used implicitly).\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`",
+      "expected": "exit 0",
+      "group": "Lean",
+      "name": "Lean compile",
+      "status": "PASS"
+    },
+    {
+      "actual": "PASS",
+      "expected": "PASS",
+      "group": "executables",
+      "name": "primary verdict",
+      "status": "PASS"
+    },
+    {
+      "actual": "PASS",
+      "expected": "PASS",
+      "group": "executables",
+      "name": "independent verdict",
+      "status": "PASS"
+    },
+    {
+      "actual": "PASS",
+      "expected": "PASS",
+      "group": "hostile",
+      "name": "hostile verdict",
+      "status": "PASS"
+    },
+    {
+      "actual": "[8, 8]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent system_count",
+      "status": "PASS"
+    },
+    {
+      "actual": "[80, 80]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent profile_count",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1030, 1030]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent comparison_row_count",
+      "status": "PASS"
+    },
+    {
+      "actual": "[[0.0625, 0.125, 0.25, 0.5, 1.0, 2.0, 4.0], [0.0625, 0.125, 0.25, 0.5, 1.0, 2.0, 4.0]]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent heat_time_values",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.0, 1.0]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent semigroup_split_time",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.3201899859907922, 0.3201899859907922]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent minimum_trace_inverse",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.04620554997706, 2.0462055499770613]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent maximum_trace_inverse",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.6310329497027756, 0.6310329497027761]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent minimum_first_positive_gap",
+      "status": "PASS"
+    },
+    {
+      "actual": "[6.229495058532403, 6.229495058532388]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent maximum_first_positive_gap",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.3172951609382775, 0.3172951609382778]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent minimum_certified_schur_gap",
+      "status": "PASS"
+    },
+    {
+      "actual": "[3.232260013170645, 3.2322600131706376]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent maximum_certified_schur_gap",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.634590321876555, 0.6345903218765556]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent minimum_coarse_schur_gap",
+      "status": "PASS"
+    },
+    {
+      "actual": "[18.727067154255124, 18.727067154267196]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent maximum_coarse_schur_gap",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.0000155411351734, 2.0000155411351734]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent minimum_residual_gap",
+      "status": "PASS"
+    },
+    {
+      "actual": "[30.07649788337455, 30.076497883374756]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent maximum_residual_gap",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.001995374453234255, 0.0019953744532342837]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent minimum_heat_at_split",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.5926882083380163, 0.5926882083380162]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent maximum_heat_at_split",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.057597874912107, 1.0575978749121124]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent minimum_short_power_slack",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.0, 0.0]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent minimum_late_exponential_slack",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.824085104488219, 2.8240851044882196]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent minimum_short_budget_slack",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.00029867870471992557, 0.00029867870471993055]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent minimum_late_budget_slack",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.8762895669125346, 2.8762895669125355]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent minimum_green_trace_slack",
+      "status": "PASS"
+    },
+    {
+      "actual": "[4.996003610813204e-16, 3.3306690738754696e-16]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent maximum_mellin_identity_abs_residual",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.5075047695447484e-11, 1.507504769544834e-11]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent minimum_heat_value",
+      "status": "PASS"
+    },
+    {
+      "actual": "[4.564774679110289, 4.5647746791102914]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent maximum_heat_value",
+      "status": "PASS"
+    },
+    {
+      "actual": "[-3.883254843314891e-06, -3.883254843315001e-06]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent maximum_heat_increase",
+      "status": "PASS"
+    },
+    {
+      "actual": "[3.3604643597817314, 3.3604643597817283]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent minimum_selected_green_bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[6.417374005902916, 6.417374005902916]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent maximum_selected_green_bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[[50, 75, 100, 150, 200, 250], [50, 75, 100, 150, 200, 250]]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent candidate_count_per_row",
+      "status": "PASS"
+    },
+    {
+      "actual": "8",
+      "expected": "8",
+      "group": "coverage",
+      "name": "system grid reached",
+      "status": "PASS"
+    },
+    {
+      "actual": "80",
+      "expected": "80",
+      "group": "coverage",
+      "name": "profile grid reached",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1030, 80]",
+      "expected": "positive rows beyond profiles",
+      "group": "coverage",
+      "name": "row grid reached",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.3172951609382775, 0.6310329497027756]",
+      "expected": "positive certified gap below full gap",
+      "group": "Schur",
+      "name": "Schur certified gap",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.057597874912107, 0.0, 2.824085104488219, 0.00029867870471992557, 2.8762895669125346]",
+      "expected": "all finite Schur semigroup slacks nonnegative",
+      "group": "two-scale",
+      "name": "two-scale aggregate",
+      "status": "PASS"
+    },
+    {
+      "actual": "4.996003610813204e-16",
+      "expected": "<= 1e-08",
+      "group": "Mellin",
+      "name": "Mellin identity aggregate",
+      "status": "PASS"
+    },
+    {
+      "actual": "-3.883254843314891e-06",
+      "expected": "<= 1e-08",
+      "group": "heat trace",
+      "name": "heat monotonicity",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'alpha_one_rejected': True, 'baseline': {'gap': 0.25, 'green_bound': 10.14938522658663, 'head_power': 1.0, 'heat_tau': 0.7971164219601391, 'late_actual': 3.119782042007803, 'late_budget': 6.376931375681113, 'short_actual': 1.130217957992197, 'short_budget': 3.772453850905516, 'trace': 4.25, 'uv_factor': 0.8862269254527579}, 'omitted_head_short_deficit': 0.11755608825868386, 'omitted_late_green_deficit': 0.4775461490944841, 'omitted_uv_short_deficit': 0.13507226908622838, 'reverse_heat_max_increase': 0.2894603181637101, 'toy_threshold': 1e-12, 'unverified_larger_gap_late_deficit': 2.920502936517768, 'wrong_shift_late_deficit': 2.7432509056332397, 'wrong_sign_residual': 6.239564084015606}",
+      "expected": "all declared shortcuts fail closed",
+      "group": "hostile",
+      "name": "hostile mutation suite",
+      "status": "PASS"
+    }
+  ],
+  "derived": {
+    "command_outputs": {
+      "lean": "Tect/R415.lean:12:18: warning: Variable name `hgap` is not explicitly referenced.\n\nThe binding can be removed (if unused) or named `_` (if used implicitly).\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\nTect/R415.lean:12:35: warning: Variable name `hdt` is not explicitly referenced.\n\nThe binding can be removed (if unused) or named `_` (if used implicitly).\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`",
+      "pre_a_cp1_st8_q3lock_schur_certified_semigroup_bridge.py": "reused claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-primary-pre_a_cp1_st8_q3lock_schur_certified_semigroup_bridge/primary.json",
+      "pre_a_cp1_st8_q3lock_schur_certified_semigroup_bridge_hostile.py": "reused claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-hostile-pre_a_cp1_st8_q3lock_schur_certified_semigroup_bridge/hostile.json",
+      "pre_a_cp1_st8_q3lock_schur_certified_semigroup_bridge_independent.py": "reused claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-independent-pre_a_cp1_st8_q3lock_schur_certified_semigroup_bridge/independent.json"
+    },
+    "hostile": {
+      "alpha_one_rejected": true,
+      "baseline": {
+        "gap": 0.25,
+        "green_bound": 10.14938522658663,
+        "head_power": 1.0,
+        "heat_tau": 0.7971164219601391,
+        "late_actual": 3.119782042007803,
+        "late_budget": 6.376931375681113,
+        "short_actual": 1.130217957992197,
+        "short_budget": 3.772453850905516,
+        "trace": 4.25,
+        "uv_factor": 0.8862269254527579
+      },
+      "omitted_head_short_deficit": 0.11755608825868386,
+      "omitted_late_green_deficit": 0.4775461490944841,
+      "omitted_uv_short_deficit": 0.13507226908622838,
+      "reverse_heat_max_increase": 0.2894603181637101,
+      "toy_threshold": 1e-12,
+      "unverified_larger_gap_late_deficit": 2.920502936517768,
+      "wrong_shift_late_deficit": 2.7432509056332397,
+      "wrong_sign_residual": 6.239564084015606
+    },
+    "independent": {
+      "c6_closed": false,
+      "candidate_count_per_row": [
+        50,
+        75,
+        100,
+        150,
+        200,
+        250
+      ],
+      "common_core_closed": false,
+      "common_split_rule_closed": false,
+      "comparison_row_count": 1030,
+      "continuum_closed": false,
+      "cutoff_independent_schur_gap_closed": false,
+      "exhaustion_uniform_semigroup_closed": false,
+      "finite_green_trace_criterion_closed": true,
+      "finite_harmonic_split_revalidated": true,
+      "finite_late_time_semigroup_budget_closed": true,
+      "finite_likelihood_row_coverage_closed": true,
+      "finite_schur_certified_semigroup_closed": true,
+      "finite_short_time_power_budget_closed": true,
+      "hamiltonian_os_identification_closed": false,
+      "heat_time_values": [
+        0.0625,
+        0.125,
+        0.25,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ],
+      "kms_gns_gap_closed": false,
+      "maximum_certified_schur_gap": 3.2322600131706376,
+      "maximum_coarse_schur_gap": 18.727067154267196,
+      "maximum_first_positive_gap": 6.229495058532388,
+      "maximum_heat_at_split": 0.5926882083380162,
+      "maximum_heat_increase": -3.883254843315001e-06,
+      "maximum_heat_value": 4.5647746791102914,
+      "maximum_mellin_identity_abs_residual": 3.3306690738754696e-16,
+      "maximum_residual_gap": 30.076497883374756,
+      "maximum_selected_green_bound": 6.417374005902916,
+      "maximum_trace_inverse": 2.0462055499770613,
+      "minimum_certified_schur_gap": 0.3172951609382778,
+      "minimum_coarse_schur_gap": 0.6345903218765556,
+      "minimum_first_positive_gap": 0.6310329497027761,
+      "minimum_green_trace_slack": 2.8762895669125355,
+      "minimum_heat_at_split": 0.0019953744532342837,
+      "minimum_heat_value": 1.507504769544834e-11,
+      "minimum_late_budget_slack": 0.00029867870471993055,
+      "minimum_late_exponential_slack": 0.0,
+      "minimum_residual_gap": 2.0000155411351734,
+      "minimum_selected_green_bound": 3.3604643597817283,
+      "minimum_short_budget_slack": 2.8240851044882196,
+      "minimum_short_power_slack": 1.0575978749121124,
+      "minimum_trace_inverse": 0.3201899859907922,
+      "phase_uniform_semigroup_closed": false,
+      "pre_a_closed": false,
+      "profile_count": 80,
+      "sector_a_closed": false,
+      "selected_key_histogram": {
+        "ir=0.5;uv=0.5;split=1": 1030
+      },
+      "semigroup_split_time": 1.0,
+      "system_count": 8,
+      "volume_independent_schur_gap_closed": false
+    },
+    "lean": "PASS",
+    "primary": {
+      "c6_closed": false,
+      "candidate_count_per_row": [
+        50,
+        75,
+        100,
+        150,
+        200,
+        250
+      ],
+      "common_core_closed": false,
+      "common_split_rule_closed": false,
+      "comparison_row_count": 1030,
+      "continuum_closed": false,
+      "cutoff_independent_schur_gap_closed": false,
+      "exhaustion_uniform_semigroup_closed": false,
+      "finite_green_trace_criterion_closed": true,
+      "finite_harmonic_split_revalidated": true,
+      "finite_late_time_semigroup_budget_closed": true,
+      "finite_likelihood_row_coverage_closed": true,
+      "finite_schur_certified_semigroup_closed": true,
+      "finite_short_time_power_budget_closed": true,
+      "hamiltonian_os_identification_closed": false,
+      "heat_time_values": [
+        0.0625,
+        0.125,
+        0.25,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ],
+      "kms_gns_gap_closed": false,
+      "maximum_certified_schur_gap": 3.232260013170645,
+      "maximum_coarse_schur_gap": 18.727067154255124,
+      "maximum_first_positive_gap": 6.229495058532403,
+      "maximum_heat_at_split": 0.5926882083380163,
+      "maximum_heat_increase": -3.883254843314891e-06,
+      "maximum_heat_value": 4.564774679110289,
+      "maximum_mellin_identity_abs_residual": 4.996003610813204e-16,
+      "maximum_residual_gap": 30.07649788337455,
+      "maximum_selected_green_bound": 6.417374005902916,
+      "maximum_trace_inverse": 2.04620554997706,
+      "minimum_certified_schur_gap": 0.3172951609382775,
+      "minimum_coarse_schur_gap": 0.634590321876555,
+      "minimum_first_positive_gap": 0.6310329497027756,
+      "minimum_green_trace_slack": 2.8762895669125346,
+      "minimum_heat_at_split": 0.001995374453234255,
+      "minimum_heat_value": 1.5075047695447484e-11,
+      "minimum_late_budget_slack": 0.00029867870471992557,
+      "minimum_late_exponential_slack": 0.0,
+      "minimum_residual_gap": 2.0000155411351734,
+      "minimum_selected_green_bound": 3.3604643597817314,
+      "minimum_short_budget_slack": 2.824085104488219,
+      "minimum_short_power_slack": 1.057597874912107,
+      "minimum_trace_inverse": 0.3201899859907922,
+      "phase_uniform_semigroup_closed": false,
+      "pre_a_closed": false,
+      "profile_count": 80,
+      "sector_a_closed": false,
+      "selected_key_histogram": {
+        "ir=0.5;uv=0.5;split=1": 1030
+      },
+      "semigroup_split_time": 1.0,
+      "system_count": 8,
+      "volume_independent_schur_gap_closed": false
+    }
+  },
+  "exploration_id": "EXP-001260",
+  "manifest": "strategy/pre-a-cp1-st8-q3lock-schur-certified-semigroup-bridge-manifest.json",
+  "result_id": "R-415",
+  "schema": "tect/pre-a-r415-integrated/1.0",
+  "scope": {
+    "c6_closed": false,
+    "common_core_closed": false,
+    "common_split_rule_closed": false,
+    "continuum_closed": false,
+    "cutoff_independent_schur_gap_closed": false,
+    "exhaustion_uniform_semigroup_closed": false,
+    "finite_green_trace_criterion_closed": true,
+    "finite_harmonic_split_revalidated": true,
+    "finite_late_time_semigroup_budget_closed": true,
+    "finite_likelihood_row_coverage_closed": true,
+    "finite_schur_certified_semigroup_closed": true,
+    "finite_short_time_power_budget_closed": true,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "no_new_negative_result": true,
+    "no_pdf": true,
+    "no_tier_change": true,
+    "phase_uniform_semigroup_closed": false,
+    "pre_a_closed": false,
+    "sector_a_closed": false,
+    "volume_independent_schur_gap_closed": false
+  },
+  "verdict": "PASS"
+}

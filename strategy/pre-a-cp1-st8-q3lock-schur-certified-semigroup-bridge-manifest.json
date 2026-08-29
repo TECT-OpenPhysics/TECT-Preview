@@ -1,0 +1,114 @@
+{
+  "schema": "tect/pre-a-cp1-st8-q3lock-schur-certified-semigroup-bridge/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-SCHUR-CERTIFIED-SEMIGROUP-BRIDGE-v0",
+  "result_id": "R-415",
+  "title": "Schur-certified two-scale semigroup budget for the intrinsic graph",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001260",
+  "claim_bearing": false,
+  "parent_explorations": ["EXP-001259", "EXP-001251", "EXP-001250"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY",
+    "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+  ],
+  "question": "Can the late-time IR leg of the R-414 semigroup criterion use the conservative harmonic/Schur gap from R-406, so that coarse inter-phase capacity and block-mean-zero residual coercivity are explicit inputs to the Green-trace budget?",
+  "new_perspective": {
+    "principle": "Replace the black-box first positive eigenvalue in the late heat bound by kappa_S=half min(kappa_coarse,kappa_residual), the R-406 harmonic-extension/Schur lower bound. Since kappa_S<=lambda_1, H(t)<=H(tau) exp(-kappa_S(t-tau)) and the late integral is bounded by H(tau)/kappa_S.",
+    "route": [
+      "Rebuild the R-406 conditional graph, phase block partition, harmonic extension and Schur/residual gaps on every declared finite row.",
+      "Check the R-406 variational inequality kappa_S<=lambda_1 before using the certified gap in a semigroup envelope.",
+      "Enumerate all R-412 mixed exponent profiles and use the R-414 short-time UV power budget unchanged.",
+      "Check the late exponential envelope and Green-trace criterion with kappa_S, recording the coarse and residual gaps separately.",
+      "Keep all constants finite and rowwise; promotion requires uniform Schur coarse/residual bounds, a phase interpretation and a common Hamiltonian core."
+    ],
+    "qft_bridge": "The Schur gap makes the phase-capacity and residual fluctuation channels visible in the same proper-time estimate. It is a finite interface toward broken-sector GNS coercivity, not a phase-selection or physical Yang--Mills mass-gap theorem."
+  },
+  "finite_theorem": {
+    "schur_gap": "For the R-406 harmonic split, kappa_S=half min(kappa_coarse,kappa_residual) is a finite lower bound for the first positive intrinsic graph eigenvalue.",
+    "late_time_envelope": "For t>=tau, H(t)<=H(tau) exp(-kappa_S(t-tau)).",
+    "late_time_budget": "integral_tau^infinity H(t)dt <= H(tau)/kappa_S.",
+    "short_time_budget": "For 0<t<=tau and 0<alpha_UV<1, H(t)<=A_tau t^(-alpha_UV), with A_tau=r tau^alpha_UV+C_UV alpha_UV Gamma(alpha_UV).",
+    "green_trace_criterion": "tr(W^+) <= A_tau tau^(1-alpha_UV)/(1-alpha_UV)+H(tau)/kappa_S.",
+    "scope": "Every implication is finite-dimensional and rowwise; kappa_S, A_tau and H(tau) are not asserted uniform in cutoff, volume, source, phase or exhaustion."
+  },
+  "finite_fixture": {
+    "admissible_pairs": [
+      {"volume": 2, "cutoff_dimensions": [4, 5, 6, 8, 10, 12]},
+      {"volume": 3, "cutoff_dimensions": [4, 5]}
+    ],
+    "counting_exponents": ["1/2", "2/3", "3/4", "4/5", "9/10"],
+    "heat_time_values": ["1/16", "1/8", "1/4", "1/2", "1", "2", "4"],
+    "semigroup_split_time": "1",
+    "beta_values": ["1/2", "1", "2", "4", "8"],
+    "orientations": ["right", "left"],
+    "chi": "1",
+    "r": "-1",
+    "g": "3/5",
+    "c": "3/5",
+    "lambda": "1/10",
+    "probability_floor": 1e-30,
+    "resistance_eigen_floor": 1e-14,
+    "gap_floor": 1e-10,
+    "eigen_zero_threshold": 1e-9,
+    "decomposition_tolerance": 2e-8,
+    "numerical_tolerance": 1e-8,
+    "crosscheck_tolerance": 5e-6,
+    "hostile_zero_threshold": 1e-12
+  },
+  "scope": {
+    "finite_schur_certified_semigroup_closed": true,
+    "finite_short_time_power_budget_closed": true,
+    "finite_late_time_semigroup_budget_closed": true,
+    "finite_green_trace_criterion_closed": true,
+    "finite_harmonic_split_revalidated": true,
+    "finite_likelihood_row_coverage_closed": true,
+    "cutoff_independent_schur_gap_closed": false,
+    "volume_independent_schur_gap_closed": false,
+    "phase_uniform_semigroup_closed": false,
+    "exhaustion_uniform_semigroup_closed": false,
+    "common_core_closed": false,
+    "common_split_rule_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R415.lean",
+    "theorem_markers": [
+      "schur_gap_positive",
+      "late_exponential_factor_nonnegative",
+      "green_bound_nonnegative",
+      "finite_scope"
+    ],
+    "command": "lake env lean Tect/R415.lean",
+    "boundary": "Lean checks only scalar ordering and positivity for the conservative gap budget; Schur spectra, conditional rows, heat traces, uniform limits and QFT reconstruction remain executable/open analysis."
+  },
+  "artifacts": {
+    "primary_script": "codes/foundations/pre_a_cp1_st8_q3lock_schur_certified_semigroup_bridge.py",
+    "independent_script": "codes/foundations/pre_a_cp1_st8_q3lock_schur_certified_semigroup_bridge_independent.py",
+    "hostile_script": "codes/foundations/pre_a_cp1_st8_q3lock_schur_certified_semigroup_bridge_hostile.py",
+    "integrated_verifier": "codes/foundations/pre_a_cp1_st8_q3lock_schur_certified_semigroup_bridge_verify.py",
+    "lean": "verification/lean/Tect/R415.lean"
+  },
+  "promotion_criteria": [
+    "Prove source/cutoff/volume/phase/exhaustion-uniform lower bounds for the R-406 Schur coarse and residual gaps on one Hamiltonian common core.",
+    "Identify the coarse variables with a controlled phase boundary condition and transfer the certified late heat budget to the R-399 shell.",
+    "Combine the Schur-certified semigroup budget with the common-alpha and broken-sector GNS coercivity routes only after the uniform premises are established."
+  ],
+  "stop_conditions": [
+    "If either Schur component collapses under a validated growing stress, retain the late budget only as a finite diagnostic and do not claim phasewise coercivity.",
+    "If the certified gap is replaced by a larger unverified value, retain the failed late inequality.",
+    "Finite Schur-certified heat positivity is not a common-core, phase-selection, GNS, physical-gap, continuum, C6, Sector-A or Pre-A theorem."
+  ],
+  "boundary": "T0 claim-nonbearing finite Schur-certified two-scale semigroup bridge only. It proves no cutoff-, volume-, source-, phase- or exhaustion-uniform gap or UV coefficient, common core, phase selection, OS/KMS/GNS reconstruction, mass gap, continuum, C6, Sector-A or Pre-A closure.",
+  "no_overclaim": "The R-406 harmonic/Schur lower bound supplies a conservative finite IR input for the R-414 heat budget and makes the phase-capacity route explicit; it does not supply regulator-independent coercivity or a physical-sector conclusion.",
+  "recorded_by": "Codex"
+}

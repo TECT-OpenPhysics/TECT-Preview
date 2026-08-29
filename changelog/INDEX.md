@@ -5,7 +5,7 @@ Compact generated reader surface. The append-only authority is
 record 568 / commit `4db22f4e` and no longer grows.
 Post-cutover full bodies live exactly once in bounded pages under `pages/`.
 
-**755 accepted events** · latest 25 shown below · machine locator: `index.json`
+**756 accepted events** · latest 25 shown below · machine locator: `index.json`
 
 Search the complete authority without loading every page:
 
@@ -17,6 +17,7 @@ python verification/scripts/changelog.py search --text <phrase>
 
 | Date | Event | Claims | Full entry |
 |---|---|---|---|
+| 2026-08-31 | `20260831-schur-certified-two-scale-semigroup-budget-for` — [Schur-certified two-scale semigroup budget for intrinsic graph] - 2026-08-31 | C6-SPACETIME-SIGNATURE, EXP-001260, R-415 | [bounded page](pages/000719-000768.md#20260831-schur-certified-two-scale-semigroup-budget-for) |
 | 2026-08-31 | `20260831-two-scale-semigroup-criterion-for-normalized-gr` — [Two-scale semigroup criterion for normalized Green trace] - 2026-08-31 | C6-SPACETIME-SIGNATURE, EXP-001259, R-414 | [bounded page](pages/000719-000768.md#20260831-two-scale-semigroup-criterion-for-normalized-gr) |
 | 2026-08-31 | `20260831-mellin-heat-trace-bridge-for-mixed-ir-uv-counti` — [Mellin heat-trace bridge for mixed IR/UV counting] - 2026-08-31 | C6-SPACETIME-SIGNATURE, EXP-001258, R-413 | [bounded page](pages/000719-000768.md#20260831-mellin-heat-trace-bridge-for-mixed-ir-uv-counti) |
 | 2026-08-31 | `20260831-mixed-ir-uv-spectral-counting-envelope-2026-08` — [Mixed IR/UV spectral-counting envelope] - 2026-08-31 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000719-000768.md#20260831-mixed-ir-uv-spectral-counting-envelope-2026-08) |
@@ -41,7 +42,6 @@ python verification/scripts/changelog.py search --text <phrase>
 | 2026-08-30 | `20260830-high-cutoff-qcmi-shell-stress-2026-08-30` — [High-cutoff QCMI shell stress] - 2026-08-30 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000719-000768.md#20260830-high-cutoff-qcmi-shell-stress-2026-08-30) |
 | 2026-08-30 | `20260830-qcmi-shell-telescoping-boundary-budget-2026-08` — [QCMI shell-telescoping boundary budget] - 2026-08-30 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000719-000768.md#20260830-qcmi-shell-telescoping-boundary-budget-2026-08) |
 | 2026-08-30 | `20260830-quantum-markov-blanket-boundary-transfer-2026-0` — [Quantum-Markov blanket boundary transfer] - 2026-08-30 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000719-000768.md#20260830-quantum-markov-blanket-boundary-transfer-2026-0) |
-| 2026-08-30 | `20260830-local-marginal-spectral-window-transfer-2026-08` — [Local-marginal spectral-window transfer] - 2026-08-30 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000719-000768.md#20260830-local-marginal-spectral-window-transfer-2026-08) |
 
 ## Post-cutover pages
 
@@ -49,7 +49,7 @@ Each full event body after the cutover occurs in exactly one page.
 
 | Ordinals | Events | Page |
 |---|---:|---|
-| 719–755 | 37 | [000719-000768.md](pages/000719-000768.md) |
+| 719–756 | 38 | [000719-000768.md](pages/000719-000768.md) |
 | 669–718 | 50 | [000669-000718.md](pages/000669-000718.md) |
 | 619–668 | 50 | [000619-000668.md](pages/000619-000668.md) |
 | 569–618 | 50 | [000569-000618.md](pages/000569-000618.md) |
