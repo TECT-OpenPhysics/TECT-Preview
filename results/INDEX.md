@@ -5,10 +5,11 @@
 
 Authorities: `RESULTS-LEDGER.md`.
 
-**244 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
+**245 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
 
 | ID | Result | Tier/scope |
 |---|---|---|
+| [`R-411`](../RESULTS-LEDGER.md#r-411) | Sublinear spectral-counting exponent envelope for the normalized Green trace | T0 |
 | [`R-410`](../RESULTS-LEDGER.md#r-410) | Quadratic eigenvalue-counting envelope for the normalized Green trace | T0 |
 | [`R-409`](../RESULTS-LEDGER.md#r-409) | Effective-resistance average trace identity and heat-kernel target | T0 |
 | [`R-408`](../RESULTS-LEDGER.md#r-408) | Tree-independent effective-resistance lower bound | T0 |
@@ -33,7 +34,6 @@ Authorities: `RESULTS-LEDGER.md`.
 | [`R-389`](../RESULTS-LEDGER.md#r-389) | Spectral-window kinetic corridor | T0 |
 | [`R-388`](../RESULTS-LEDGER.md#r-388) | State-weighted kinetic resolvent corridor | T0 |
 | [`R-387`](../RESULTS-LEDGER.md#r-387) | Anchored nested-commutator kinetic isolation | T0 |
-| [`R-386`](../RESULTS-LEDGER.md#r-386) | Coordinate-resolvent zero-time commutator anchor | T0 |
 
 Search without loading the full ledger:
 

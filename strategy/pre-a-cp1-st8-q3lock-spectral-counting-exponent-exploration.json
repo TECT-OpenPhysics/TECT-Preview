@@ -1,0 +1,109 @@
+{
+  "adversarial_review": [
+    {
+      "axis": "sublinear exponent domain",
+      "check": "The hostile lane calls the envelope with alpha=1 and the helper rejects it because the reciprocal exponent is not greater than one.",
+      "disposition": "DISMISSED-FINITE"
+    },
+    {
+      "axis": "eigenvalue ordering",
+      "check": "A reversed toy spectrum changes both the quadratic and alpha=9/10 counting constants.",
+      "disposition": "DISMISSED-FINITE"
+    },
+    {
+      "axis": "exponent power convention",
+      "check": "Multiplying by lambda^alpha instead of dividing by lambda^alpha changes the toy constant and is rejected.",
+      "disposition": "DISMISSED-FINITE"
+    },
+    {
+      "axis": "quadratic versus linear scaling",
+      "check": "A linear k constant inserted into the retained k^2 envelope gives a negative toy residual and is rejected.",
+      "disposition": "DISMISSED-FINITE"
+    },
+    {
+      "axis": "Fiedler-only shortcut",
+      "check": "The first positive inverse eigenvalue is strictly below the full inverse-spectrum trace on both selected rows.",
+      "disposition": "DISMISSED-FINITE"
+    },
+    {
+      "axis": "zero mode and connectivity",
+      "check": "Exactly d-1 positive modes above the declared floor are required; a diagonal generator produces no graph edges or positive modes.",
+      "disposition": "DISMISSED-FINITE"
+    },
+    {
+      "axis": "finite versus infinite tail",
+      "check": "The finite sum is checked before the integral tail comparison, so the infinite bound is not treated as a finite equality.",
+      "disposition": "DISMISSED-FINITE"
+    },
+    {
+      "axis": "uniform and physical promotion",
+      "check": "Finite positivity of several C_alpha values does not imply a common exponent or constant, a common core, GNS coercivity, a physical gap, continuum, C6, Sector-A or Pre-A closure.",
+      "disposition": "UPHELD-OPEN"
+    }
+  ],
+  "boundary": "T0 claim-nonbearing finite sublinear spectral-counting and zeta-tail checkpoint only. It proves no cutoff-, volume-, source-, phase- or exhaustion-uniform bound, common core, common alpha, OS/KMS/GNS reconstruction, mass gap, continuum, C6, Sector-A or Pre-A closure.",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "decision_reason": "Allowing any declared sublinear exponent 0<alpha<1 converts the finite normalized Green-trace target into an explicit mode-counting and zeta-tail condition. Primary, independent, hostile, integrated and Lean checks validate the finite implication, while no data establish that an exponent or counting constant remains bounded under a regulator or thermodynamic limit.",
+  "evidence_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-spectral-counting-exponent-manifest.json#new_perspective",
+    "strategy/pre-a-cp1-st8-q3lock-spectral-counting-exponent-certificate-260831.md#Verification",
+    "codes/foundations/pre_a_cp1_st8_q3lock_spectral_counting_exponent.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_spectral_counting_exponent_independent.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_spectral_counting_exponent_hostile.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_spectral_counting_exponent_verify.py#main",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-primary-pre_a_cp1_st8_q3lock_spectral_counting_exponent/primary.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-independent-pre_a_cp1_st8_q3lock_spectral_counting_exponent/independent.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-hostile-pre_a_cp1_st8_q3lock_spectral_counting_exponent/hostile.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-integrated-pre_a_cp1_st8_q3lock_spectral_counting_exponent/integrated.json#derived",
+    "verification/lean/Tect/R411.lean#alpha_positive",
+    "claims/C6-SPACETIME-SIGNATURE/notes/spectral-counting-exponent-260831.md#R-411"
+  ],
+  "finding": "The primary lane passes 508279/508279 assertions over 7 systems, 2688 contexts and 21120 conditional rows; the independent lane passes 508279/508279; the hostile lane passes 8/8; the integrated verifier passes 48/48; and Lean R411 compiles. The retained quadratic mode constant ranges over [0.19600096779786974,1.2046269661757882], the inverse-spectrum trace over [0.44413751605172147,2.0052069566897663], and the finite quadratic harmonic envelope over [1.2140470537996502,7.467366756170776]. Every declared exponent in {1/2,2/3,3/4,4/5,9/10} passes the finite and infinite comparisons on all rows.",
+  "formal_integration": {
+    "events": [],
+    "lean": "R411 PASS",
+    "negatives": [],
+    "no_new_negative": true,
+    "no_pdf": true,
+    "no_tier_change": true,
+    "results": []
+  },
+  "formal_refs": {
+    "events": [],
+    "negatives": [],
+    "results": []
+  },
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY",
+    "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+  ],
+  "method": [
+    "For every actual conditional likelihood row, form W=D_pi^(-1/2)L D_pi^(-1/2) and sort its d-1 positive eigenvalues.",
+    "For each declared alpha in (0,1), compute C_alpha=max_k k/lambda_k^alpha and assert the finite trace envelope.",
+    "Compare the finite zeta sum with the explicit integral tail for s=1/alpha>1.",
+    "Repeat the full volume-two cutoff, beta, source, history, order, prefix, adjoint and collar-orientation grid in independent code.",
+    "Use alpha=1, unsorted, exponent-inverted, linear-scaling, Fiedler-only and diagonal-generator mutations as hostile controls, then run the Lean scalar cross-check."
+  ],
+  "next_action": "Prove one alpha in (0,1) and a positive uniform bound for its counting constant on one Hamiltonian common core; control it under cutoff, volume, source, phase and exhaustion changes; transfer the trace estimate to the R-399 conditional shell and combine it with the R-406 Schur residual split.",
+  "no_overclaim": "The exponent family is a finite spectral inequality and a broader uniformity target; it is not an analytic regulator estimate, thermodynamic theorem, physical-sector result or QFT mass-gap proof.",
+  "provenance": "contemporaneous",
+  "qft_interface": {
+    "closed": "Finite spectral ordering, five declared sublinear envelopes, finite zeta-tail comparison, full likelihood-row coverage, hostile shortcut rejection and Lean scalar bookkeeping.",
+    "open": "Uniform exponent and constant on a common Hamiltonian core, phase selection, shell transfer, common-alpha dynamics, broken-sector GNS coercivity, continuum and physical-gap obligations."
+  },
+  "question": "Can the normalized Green trace be controlled by some sublinear spectral-counting exponent rather than requiring the fixed quadratic envelope, and can one such exponent be made uniform on the physical route?",
+  "recorded_at": "2026-08-31T00:00:00Z",
+  "recorded_by": "Codex",
+  "related": [
+    {"id": "EXP-001255", "relation": "continues"},
+    {"id": "EXP-001254", "relation": "continues"},
+    {"id": "EXP-001253", "relation": "continues"}
+  ],
+  "reviewed_on": "2026-08-29",
+  "schema": "tect/proof-exploration/1.0",
+  "schema_version": "1.0",
+  "task_id": "T-054",
+  "title": "Sublinear spectral-counting exponent envelope for the normalized Green trace",
+  "verdict": "advanced"
+}

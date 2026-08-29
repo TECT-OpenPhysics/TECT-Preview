@@ -1,0 +1,277 @@
+{
+  "assertion_count": 8,
+  "boundary": "T0 claim-nonbearing finite sublinear spectral-counting and zeta-tail checkpoint only. It proves no cutoff-, volume-, source-, phase- or exhaustion-uniform bound, common core, common alpha, OS/KMS/GNS reconstruction, mass gap, continuum, C6, Sector-A or Pre-A closure.",
+  "checks": [
+    {
+      "actual": [
+        [
+          1.6026715567191103,
+          {
+            "0.5": 2.3117037461122765,
+            "0.6666666666666666": 3.6561469905932094,
+            "0.75": 4.990574527624472,
+            "0.8": 6.3195822946668905,
+            "0.9": 12.940005790829282
+          }
+        ],
+        [
+          0.9459598191730915,
+          {
+            "0.5": 3.9814787503367945,
+            "0.6666666666666666": 2.8353767606319025,
+            "0.75": 2.990083905513217,
+            "0.8": 3.335922541365054,
+            "0.9": 5.55500288865794
+          }
+        ]
+      ],
+      "expected": "trace<=infinite sublinear zeta bound",
+      "name": "baseline sublinear envelope",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          1.6026715567191103,
+          {
+            "0.5": 1.651216961508769,
+            "0.6666666666666666": 1.788008253484254,
+            "0.75": 1.845202277552366,
+            "0.8": 1.8763745387025568,
+            "0.9": 1.9325015808713455
+          }
+        ],
+        [
+          0.9459598191730915,
+          {
+            "0.5": 3.7619726848481716,
+            "0.6666666666666666": 2.1842165403178835,
+            "0.75": 1.8761752789939676,
+            "0.8": 1.7498482441886896,
+            "0.9": 1.5733375814360087
+          }
+        ]
+      ],
+      "expected": "trace<=finite sublinear envelope",
+      "name": "late sublinear envelope",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "alpha=1 rejected outside (0,1)",
+      "name": "alpha one divergent tail rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.3333333333333333,
+        0.1111111111111111,
+        1.1161231740339044,
+        3.0
+      ],
+      "expected": "sorting changes quadratic and sublinear constants",
+      "name": "unsorted mode index rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        1.0,
+        -6.0,
+        1.8333333333333333,
+        1.8333333333333333
+      ],
+      "expected": "linear k constant cannot be inserted into a k^2 envelope",
+      "name": "linear envelope shortcut rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        1.1161231740339044,
+        8.06362613856686
+      ],
+      "expected": "C_alpha uses lambda^(-alpha), not lambda^(alpha)",
+      "name": "exponent power inversion rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          1.320973569207015,
+          1.6026715567191103
+        ],
+        [
+          0.3431201141364895,
+          0.9459598191730915
+        ]
+      ],
+      "expected": "full inverse-spectrum trace",
+      "name": "Fiedler-only shortcut rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0,
+        0,
+        0.0
+      ],
+      "expected": "zero edges and positive eigenvalues",
+      "name": "q mutation deletes graph spectrum",
+      "status": "PASS"
+    }
+  ],
+  "derived": {
+    "mutation": "alpha=1, unsorted modes, linear or exponent-inverted shortcuts, Fiedler shortcut and a diagonal generator",
+    "q_mutation": {
+      "maximum_edge": 0.0,
+      "mutated_edge_count": 0,
+      "positive_eigenvalue_count": 0
+    },
+    "selected": [
+      {
+        "alpha_profiles": {
+          "0.5": {
+            "alpha": 0.5,
+            "counting_constant": 1.1493361428263775,
+            "envelope_residual": 0.0,
+            "finite_trace_bound": 1.651216961508769,
+            "finite_zeta_sum": 1.25,
+            "infinite_zeta_bound": 2.3117037461122765,
+            "integral_tail_bound": 0.5,
+            "reciprocal_exponent": 2.0
+          },
+          "0.6666666666666666": {
+            "alpha": 0.6666666666666666,
+            "counting_constant": 1.2039157204132929,
+            "envelope_residual": 2.220446049250313e-16,
+            "finite_trace_bound": 1.788008253484254,
+            "finite_zeta_sum": 1.3535533905932737,
+            "infinite_zeta_bound": 3.6561469905932094,
+            "integral_tail_bound": 1.4142135623730951,
+            "reciprocal_exponent": 1.5
+          },
+          "0.75": {
+            "alpha": 0.75,
+            "counting_constant": 1.2321699017619216,
+            "envelope_residual": 0.0,
+            "finite_trace_bound": 1.845202277552366,
+            "finite_zeta_sum": 1.3968502629920498,
+            "infinite_zeta_bound": 4.990574527624472,
+            "integral_tail_bound": 2.3811015779523,
+            "reciprocal_exponent": 1.3333333333333333
+          },
+          "0.8": {
+            "alpha": 0.8,
+            "counting_constant": 1.2494397036372884,
+            "envelope_residual": -1.1102230246251565e-16,
+            "finite_trace_bound": 1.8763745387025568,
+            "finite_zeta_sum": 1.4204482076268572,
+            "infinite_zeta_bound": 6.3195822946668905,
+            "integral_tail_bound": 3.363585661014858,
+            "reciprocal_exponent": 1.25
+          },
+          "0.9": {
+            "alpha": 0.9,
+            "counting_constant": 1.2847088482697955,
+            "envelope_residual": 1.1102230246251565e-16,
+            "finite_trace_bound": 1.9325015808713455,
+            "finite_zeta_sum": 1.4629373561436452,
+            "infinite_zeta_bound": 12.940005790829282,
+            "integral_tail_bound": 8.33287241058561,
+            "reciprocal_exponent": 1.1111111111111112
+          }
+        },
+        "dimension": 3,
+        "identity_residual": 2.4424906541753444e-15,
+        "linear_constant": 0.7570174175402339,
+        "mode_constant": 0.7570174175402339,
+        "one_mode_inverse": 1.320973569207015,
+        "positive_normalized_eigenvalue_count": 2,
+        "resistance_average": 1.6026715567191128,
+        "trace_inverse": 1.6026715567191103,
+        "zeta_bound": 1.6512169615087688,
+        "zeta_infinite_bound": 2.1729144253947124
+      },
+      {
+        "alpha_profiles": {
+          "0.5": {
+            "alpha": 0.5,
+            "counting_constant": 1.5538876151044039,
+            "envelope_residual": -1.7763568394002505e-15,
+            "finite_trace_bound": 3.7619726848481716,
+            "finite_zeta_sum": 1.558032193976458,
+            "infinite_zeta_bound": 3.9814787503367945,
+            "integral_tail_bound": 0.09090909090909091,
+            "reciprocal_exponent": 2.0
+          },
+          "0.6666666666666666": {
+            "alpha": 0.6666666666666666,
+            "counting_constant": 1.0525340124916356,
+            "envelope_residual": -1.7763568394002505e-15,
+            "finite_trace_bound": 2.1842165403178835,
+            "finite_zeta_sum": 2.022746615579944,
+            "infinite_zeta_bound": 2.8353767606319025,
+            "integral_tail_bound": 0.6030226891555273,
+            "reciprocal_exponent": 1.5
+          },
+          "0.75": {
+            "alpha": 0.75,
+            "counting_constant": 0.8662523099690691,
+            "envelope_residual": 1.7763568394002505e-15,
+            "finite_trace_bound": 1.8761752789939676,
+            "finite_zeta_sum": 2.2720307330845504,
+            "infinite_zeta_bound": 2.990083905513217,
+            "integral_tail_bound": 1.3489329390678282,
+            "reciprocal_exponent": 1.3333333333333333
+          },
+          "0.8": {
+            "alpha": 0.8,
+            "counting_constant": 0.7707071105587244,
+            "envelope_residual": -1.7763568394002505e-15,
+            "finite_trace_bound": 1.7498482441886896,
+            "finite_zeta_sum": 2.4231967553572775,
+            "infinite_zeta_bound": 3.335922541365054,
+            "integral_tail_bound": 2.19640194710445,
+            "reciprocal_exponent": 1.25
+          },
+          "0.9": {
+            "alpha": 0.9,
+            "counting_constant": 0.6100694616699573,
+            "envelope_residual": -1.7763568394002505e-15,
+            "finite_trace_bound": 1.5733375814360087,
+            "finite_zeta_sum": 2.7245160868956466,
+            "infinite_zeta_bound": 5.55500288865794,
+            "integral_tail_bound": 6.894967304003008,
+            "reciprocal_exponent": 1.1111111111111112
+          }
+        },
+        "dimension": 12,
+        "identity_residual": -8.486544800234697e-13,
+        "linear_constant": 2.0707648945081827,
+        "mode_constant": 0.41415297890163655,
+        "one_mode_inverse": 0.3431201141364895,
+        "positive_normalized_eigenvalue_count": 11,
+        "resistance_average": 0.9459598191722428,
+        "trace_inverse": 0.9459598191730915,
+        "zeta_bound": 3.7619726848481725,
+        "zeta_infinite_bound": 3.9718030550225905
+      }
+    ],
+    "toy_spectrum": {
+      "correct_power_constant": 1.1161231740339044,
+      "linear_bound": 1.8333333333333333,
+      "linear_constant": 1.0,
+      "quadratic_bound": 1.8333333333333333,
+      "sorted_alpha_constant": 1.1161231740339044,
+      "sorted_c2": 0.3333333333333333,
+      "unsorted_alpha_constant": 3.0,
+      "unsorted_c2": 0.1111111111111111,
+      "wrong_power_constant": 8.06362613856686,
+      "wrong_quadratic_residual": -6.0
+    }
+  },
+  "exploration_id": "EXP-001256",
+  "manifest": "strategy/pre-a-cp1-st8-q3lock-spectral-counting-exponent-manifest.json",
+  "result_id": "R-411",
+  "schema": "tect/pre-a-r411-hostile/1.0",
+  "verdict": "PASS"
+}

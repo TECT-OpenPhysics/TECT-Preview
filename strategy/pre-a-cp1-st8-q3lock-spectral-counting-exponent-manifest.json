@@ -1,0 +1,108 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-SPECTRAL-COUNTING-EXPONENT-v0",
+  "result_id": "R-411",
+  "title": "Sublinear spectral-counting exponent envelope for the normalized Green trace",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001256",
+  "claim_bearing": false,
+  "parent_explorations": ["EXP-001255", "EXP-001254", "EXP-001253"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY",
+    "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+  ],
+  "question": "Can the normalized Green trace be controlled by some sublinear spectral-counting exponent 0<alpha<1, rather than requiring the fixed quadratic alpha=1/2 envelope?",
+  "new_perspective": {
+    "principle": "For ordered positive eigenvalues lambda_k and 0<alpha<1, define C_alpha=max_k k/lambda_k^alpha. Then lambda_k >= (k/C_alpha)^(1/alpha), so tr(W^+) <= C_alpha^(1/alpha) sum_k k^(-1/alpha).",
+    "route": [
+      "Evaluate several declared exponents alpha in (0,1) on every actual likelihood row.",
+      "Use the finite harmonic sum plus an integral tail bound for s=1/alpha>1, keeping the finite and infinite comparisons separate.",
+      "Select the smallest finite envelope only as a diagnostic; do not treat the selected alpha as a universal constant.",
+      "Reject alpha=1, unsorted spectra, exponent inversion and Fiedler-only shortcuts in the hostile lane.",
+      "Promote only if one exponent and its C_alpha remain bounded uniformly on a common Hamiltonian core across cutoff, volume, phase and exhaustion."
+    ],
+    "qft_bridge": "This widens the analytic target from quadratic Weyl growth to any sublinear counting exponent. A physical promotion still requires a uniform exponent and constant, R-399 shell transfer, common-alpha dynamics and the remaining sector reconstruction."
+  },
+  "finite_theorem": {
+    "ordered_spectrum": "0=lambda_0(W)<lambda_1(W)<=...<=lambda_m(W), m=d-1",
+    "counting_constant": "C_alpha=max_(1<=k<=m) k/lambda_k(W)^alpha, 0<alpha<1",
+    "finite_envelope": "tr(W^+)<=C_alpha^(1/alpha)*sum_(k=1)^m k^(-1/alpha)",
+    "tail_bound": "sum_(k=1)^infinity k^(-1/alpha)<=sum_(k=1)^m k^(-1/alpha)+m^(1-1/alpha)/(1/alpha-1)",
+    "scope": "The implication is finite-dimensional; neither alpha nor C_alpha is asserted uniform in cutoff, volume, phase or exhaustion."
+  },
+  "finite_fixture": {
+    "admissible_pairs": [
+      {"volume": 2, "cutoff_dimensions": [3, 4, 5, 6, 8, 10, 12]}
+    ],
+    "counting_exponents": ["1/2", "2/3", "3/4", "4/5", "9/10"],
+    "beta_values": ["1/2", "1", "2"],
+    "source_support_values": [[0]],
+    "source_amplitude": "1/3",
+    "hbar": "1",
+    "time_step": "1/18",
+    "source_sign_values": [-1, 1],
+    "history_sign_values": [-1, 1],
+    "history_adjoint_values": [0, 1],
+    "orientations": ["right", "left"],
+    "chi": "1",
+    "r": "-1",
+    "g": "3/5",
+    "c": "3/5",
+    "lambda": "1/10",
+    "probability_floor": 1e-30,
+    "resistance_eigen_floor": 1e-14,
+    "numerical_tolerance": 1e-8,
+    "variance_floor": 1e-20,
+    "hostile_zero_threshold": 1e-12,
+    "crosscheck_tolerance": 5e-6
+  },
+  "scope": {
+    "finite_mode_ordering_closed": true,
+    "finite_sublinear_counting_closed": true,
+    "finite_zeta_tail_bound_closed": true,
+    "finite_likelihood_row_coverage_closed": true,
+    "cutoff_independent_exponent_constant_closed": false,
+    "volume_independent_exponent_constant_closed": false,
+    "phase_uniform_exponent_constant_closed": false,
+    "exhaustion_uniform_exponent_constant_closed": false,
+    "common_core_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R411.lean",
+    "theorem_markers": ["alpha_positive", "sublinear_zeta_tail_nonnegative", "finite_scope"],
+    "command": "lake env lean Tect/R411.lean",
+    "boundary": "Lean checks only scalar exponent positivity, reciprocal positivity and a finite numerical instance; ordered matrix spectra, Gibbs rows and all uniform or physical limits remain in the executable/open boundary."
+  },
+  "artifacts": {
+    "primary_script": "codes/foundations/pre_a_cp1_st8_q3lock_spectral_counting_exponent.py",
+    "independent_script": "codes/foundations/pre_a_cp1_st8_q3lock_spectral_counting_exponent_independent.py",
+    "hostile_script": "codes/foundations/pre_a_cp1_st8_q3lock_spectral_counting_exponent_hostile.py",
+    "integrated_verifier": "codes/foundations/pre_a_cp1_st8_q3lock_spectral_counting_exponent_verify.py",
+    "lean": "verification/lean/Tect/R411.lean"
+  },
+  "promotion_criteria": [
+    "Prove one declared alpha in (0,1) and a positive uniform lower bound for its inverse counting constant on one Hamiltonian common core.",
+    "Control the exponent and constant under cutoff, volume, phase, source, orientation and exhaustion changes.",
+    "Transfer the resulting trace envelope to the R-399 conditional shell and combine it with the R-406 Schur residual split before any common-alpha or GNS promotion."
+  ],
+  "stop_conditions": [
+    "If every tested sublinear exponent develops an unbounded C_alpha under validated stress, retain the finite comparison and register the obstruction instead of claiming a uniform trace bound.",
+    "If alpha>=1 is used, the zeta tail is divergent and the route must stop; if ordering or exponent powers are mishandled, record the exact failed inequality.",
+    "Finite sublinear counting and tail positivity are not a uniform, phase-selection, common-core, GNS, physical-gap or QFT theorem."
+  ],
+  "boundary": "T0 claim-nonbearing finite sublinear spectral-counting and zeta-tail checkpoint only. It proves no cutoff-, volume-, source-, phase- or exhaustion-uniform bound, common core, common alpha, OS/KMS/GNS reconstruction, mass gap, continuum, C6, Sector-A or Pre-A closure.",
+  "no_overclaim": "Allowing a fitted sublinear exponent broadens the route beyond the fixed quadratic envelope; it does not establish a regulator-independent exponent or constant.",
+  "recorded_by": "Codex"
+}
