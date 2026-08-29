@@ -5,10 +5,11 @@
 
 Authorities: `RESULTS-LEDGER.md`.
 
-**258 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
+**259 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
 
 | ID | Result | Tier/scope |
 |---|---|---|
+| [`R-425`](../RESULTS-LEDGER.md#r-425) | Expanded finite Q3 harmonic coarse-Schur stress | T0 |
 | [`R-424`](../RESULTS-LEDGER.md#r-424) | Finite two-block harmonic coarse Schur assembly | T0 |
 | [`R-423`](../RESULTS-LEDGER.md#r-423) | Finite directed boundary-capacity Cauchy envelope | T0 |
 | [`R-422`](../RESULTS-LEDGER.md#r-422) | Finite residual core-tail coercivity reserve | T0 |
@@ -33,7 +34,6 @@ Authorities: `RESULTS-LEDGER.md`.
 | [`R-403`](../RESULTS-LEDGER.md#r-403) | Increasing-cutoff Hamiltonian carre-du-champ stress | T0 |
 | [`R-402`](../RESULTS-LEDGER.md#r-402) | Finite Hamiltonian carre-du-champ comparison | T0 |
 | [`R-401`](../RESULTS-LEDGER.md#r-401) | Physical-coordinate metric for the conditional gap | T0 |
-| [`R-400`](../RESULTS-LEDGER.md#r-400) | Increasing-cutoff conditional birth-death gap stress | T0 |
 
 Search without loading the full ledger:
 

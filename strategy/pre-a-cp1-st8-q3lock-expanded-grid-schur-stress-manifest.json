@@ -1,0 +1,129 @@
+{
+  "schema": "tect/pre-a-cp1-st8-q3lock-expanded-grid-schur-stress/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-EXPANDED-GRID-SCHUR-STRESS-v0",
+  "result_id": "R-425",
+  "title": "Expanded finite Q3 harmonic coarse-Schur stress",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001270",
+  "claim_bearing": false,
+  "parent_results": ["R-424", "R-419", "R-422", "R-421"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY",
+    "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+  ],
+  "question": "Does the exact two-block harmonic Schur assembly remain positive when the R-424 finite Q3 grid is enlarged to all R-419 cutoff-volume systems, with beta, orientation, alpha and tail threshold fixed?",
+  "new_perspective": {
+    "principle": "Treat the fixed-grid positivity of R-424 as a stress-test datum, not as uniformity. Re-run the same harmonic Schur and residual decomposition on the larger R-419 finite grid so any collapse or loss of eligible coverage is exposed before an analytic promotion is attempted.",
+    "route": [
+      "Reuse the hash-pinned R-419 conditional Gibbs law, projected momentum conductance, R-421 tail transform and R-422 block-mean-zero split without retuning.",
+      "Use the exact R-406 harmonic Schur solve on every row with at least two core and two tail coordinates.",
+      "Recompute the residual gap through the R-422 block-mean-zero basis and compare it with the harmonic residual block.",
+      "Retain the conservative finite envelope 0.5*min(coarse Schur gap,residual gap); rows lacking two-by-two support remain reported but are not silently admitted.",
+      "Run a non-importing reversible-fixture lane, seven hostile mutations, the integrated verifier and a scalar Lean cross-check."
+    ],
+    "qft_bridge": "The stress test only identifies whether finite positivity survives a declared enlargement. The unresolved QFT target remains a cutoff-, volume-, phase- and exhaustion-uniform common-core estimate followed by history and OS/KMS/GNS transfer."
+  },
+  "finite_theorem": {
+    "space": "For each admitted conditional row, the sqrt(pi)-transformed graph is decomposed into the two block-constant span and its Euclidean orthogonal complement.",
+    "harmonic_schur": "The residual complement is eliminated by S=A_UU-A_UV A_VV^(-1) A_VU, with the Schur spectrum measured against the harmonic coarse mass.",
+    "residual": "The least eigenvalue of A_VV is recomputed independently on the block-mean-zero core and tail basis.",
+    "combined_lower_envelope": "The finite checked lower envelope is 0.5*min(coarse_gap,residual_gap).",
+    "stress_interpretation": "A positive envelope on this larger finite sample is a stress result only; it is not a bound uniform in any regulator or limit."
+  },
+  "upstream_authority": {
+    "r424_manifest": "strategy/pre-a-cp1-st8-q3lock-coarse-schur-assembly-manifest.json",
+    "r424_sha256": "c34c2764f9bf37881e6a86b7ce1f481ac72ec73b219702d6f519d3a75088a279",
+    "r419_manifest": "strategy/pre-a-cp1-st8-q3lock-growing-volume-lyapunov-core-tail-stress-manifest.json",
+    "r419_sha256": "d5e2139c1a8af9b11f13098a8aaafabf66560bf08f011afb18900f50ae7e2881",
+    "r422_manifest": "strategy/pre-a-cp1-st8-q3lock-residual-core-tail-reserve-manifest.json",
+    "r422_sha256": "67e645d518dc9ebae1c1590ee045fd7147c2c9c5372097eb420155a2829b7976",
+    "r406_manifest": "strategy/pre-a-cp1-st8-q3lock-harmonic-schur-capacity-manifest.json",
+    "r406_sha256": "7a353000b23a30f7eadd5575495a6a4f11b85806542c1d75d4a112f03d7bb1e0"
+  },
+  "finite_fixture": {
+    "q3_pairs": [
+      {"volume": 2, "cutoff_dimensions": [3, 4, 5, 6, 8, 10, 12]},
+      {"volume": 3, "cutoff_dimensions": [3, 4, 5, 6]},
+      {"volume": 4, "cutoff_dimensions": [4]}
+    ],
+    "beta_values": ["1/2", "2", "8"],
+    "orientations": ["right", "left"],
+    "alpha": "1/40",
+    "tail_threshold": "4",
+    "probability_floor": 1e-300,
+    "gap_floor": 1e-8,
+    "numerical_tolerance": 1e-8,
+    "comparison_tolerance": 5e-7
+  },
+  "scope": {
+    "finite_expanded_grid_assembly_closed": true,
+    "finite_harmonic_coarse_schur_closed": true,
+    "finite_residual_reuse_closed": true,
+    "finite_combined_lower_envelope_closed": true,
+    "finite_coverage_boundary_recorded": true,
+    "cutoff_uniform_coarse_schur_closed": false,
+    "volume_uniform_coarse_schur_closed": false,
+    "phase_uniform_coarse_schur_closed": false,
+    "exhaustion_uniform_coarse_schur_closed": false,
+    "global_poincare_closed": false,
+    "common_core_closed": false,
+    "common_split_rule_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R425.lean",
+    "theorem_markers": ["expanded_grid_lower_envelope", "harmonic_residual_bookkeeping", "finite_scope"],
+    "command": "lake env lean Tect/R425.lean",
+    "boundary": "Lean checks only the scalar envelope and finite-parameter bookkeeping; it does not formalize Gibbs rows, matrix eigensolvers, the grid stress, common cores or limits."
+  },
+  "artifacts": {
+    "primary_script": "codes/foundations/pre_a_cp1_st8_q3lock_expanded_grid_schur_stress.py",
+    "independent_script": "codes/foundations/pre_a_cp1_st8_q3lock_expanded_grid_schur_stress_independent.py",
+    "hostile_script": "codes/foundations/pre_a_cp1_st8_q3lock_expanded_grid_schur_stress_hostile.py",
+    "integrated_verifier": "codes/foundations/pre_a_cp1_st8_q3lock_expanded_grid_schur_stress_verify.py",
+    "lean": "verification/lean/Tect/R425.lean"
+  },
+  "assumptions": [
+    "The hash-pinned R-419 conditional law is positive and normalized and its projected momentum conductance is symmetric and nonnegative.",
+    "The beta grid, two orientations, alpha=1/40, tail threshold four and probability floor are fixed across every listed finite system.",
+    "The R-422 sqrt(pi) transform and block-mean-zero basis apply to disjoint core and tail supports with at least two coordinates each.",
+    "Every admitted residual block is positive, so the finite harmonic solve is defined.",
+    "Numerical comparisons use only the declared tolerances and never round a lower bound upward."
+  ],
+  "missing_assumptions": [
+    "A cutoff-, volume-, phase- and exhaustion-uniform lower bound for the coarse Schur and residual forms on one Hamiltonian common core.",
+    "A common split-limit map and domain control as the regulator and volume vary.",
+    "Two-sided control of actual R-399 histories and transfer through the R-415 semigroup interface.",
+    "Hamiltonian-to-OS/KMS/GNS identification, physical-sector projection and a sectorwise coercive estimate."
+  ],
+  "promotion_criteria": [
+    "Prove an analytic Schur/residual estimate on a domain-controlled unbounded Q3 common core.",
+    "Establish a positive envelope uniform in cutoff, volume, phase and exhaustion rather than only on this sample.",
+    "Transfer that envelope through the history and OS/KMS/GNS interfaces before any sector or physical promotion."
+  ],
+  "stop_conditions": [
+    "A singular residual block, nonpositive Schur gap or residual disagreement stops the expanded-grid lane and is retained as a finite construction failure.",
+    "A collapse of the finite combined envelope is recorded without clipping and does not imply physical gaplessness.",
+    "Finite stress positivity cannot be promoted to a common-core, GNS, continuum, C6, Sector-A, Pre-A, Yang-Mills or mass-gap conclusion."
+  ],
+  "evidence_level": "T0 / exact finite harmonic coarse-Schur decomposition on the expanded R-419 Q3 sample; no uniform theorem or physical conclusion",
+  "non_claims": [
+    "No cutoff-, volume-, phase- or exhaustion-uniform coarse or residual bound.",
+    "No global Poincare theorem, common Hamiltonian core or common split-limit map.",
+    "No history transfer, OS/KMS/GNS reconstruction or sectorwise gap.",
+    "No continuum, C6, Sector-A, Pre-A, Yang-Mills or mass-gap conclusion."
+  ],
+  "boundary": "R-425 is a finite expanded-grid stress test of the R-424 harmonic Schur assembly. It records support-eligibility boundaries and does not close the Q3LOCK parent gates.",
+  "next_unlock": "Use the expanded-grid envelope only as a calibration target for an analytic common-core estimate; then test history transfer and OS/KMS/GNS identification.",
+  "no_overclaim": "Positive finite envelopes on the expanded sample are matrix-level stress evidence, not regulator-independent or physical spectral gaps."
+}

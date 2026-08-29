@@ -46,6 +46,7 @@ policy in `governance/development-history.md`.
 | [R-417](#r-417) | Log-domain Lyapunov core-tail drift corridor | R-417 v1.0 is a T0 claim-nonbearing finite corridor under EXP-001262. A logarithmic Lyapunov potential gives positive finite tail drift while the induced core graph retains a positive projected gap; primary 18480/18480, independent 17069/17069, hostile 10/10, integrated 44/44 and Lean R417 pass over 13 cutoffs, 78 profiles and 1410 rows. Minimum tail drift is 0.5877888606875677, minimum core gap 0.6867237745188258, minimum core mass 0.9804617527664484, and maximum tail mass 0.01953824723355167. Uniform drift, observable-tail control, common-core, global Poincare, OS/KMS/GNS, physical gap, continuum, C6, Sector-A and Pre-A remain open |
 | [R-418](#r-418) | Physical-empty same-owner preregistration boundary | R-418 v1.0 is a T0 claim-nonbearing TECT-owner input-boundary audit under EXP-001263. Branch E is preregistered as an uninstantiated physical-empty/preparation slot without zero-field aliasing; the current Reading-H G_* and P1 owners do not provide one common finite-regulator functional, reference, normalization, finite parts, regulator, volume, boundary, limit order, full tangent or projector. Primary 30/30 and independent 21/21 blocker assertions pass, hostile 7/7 mutations are rejected, and integrated 16/16 passes. Sign, Reading-H stationarity and symmetry-projected transverse stability are all BLOCKED_NOT_EVALUATED; no numerical comparison or physical/Yang-Mills claim follows |
 | [R-423](#r-423) | Finite directed boundary-capacity Cauchy envelope | R-423 v1.0 is a T0 claim-nonbearing finite interface under EXP-001268. It replaces the R-422 restricted cross norm by the directed capacity envelope sqrt(rho_C*rho_T), passes 2209/2209 primary assertions over 858 rows and 114 eligible rows, and is independently/hostile/integrated/Lean checked. All 114 tested Q3 capacity reserves are nonpositive; this is a sufficient-budget boundary, not a physical gaplessness result |
+| [R-425](#r-425) | Expanded finite Q3 harmonic coarse-Schur stress | R-425 v1.0 is a T0 claim-nonbearing finite stress under EXP-001270. It keeps the R-419/R-422 inputs fixed while expanding to 12 systems, 1,488 conditional rows and 326 eligible rows; primary 4,678/4,678, independent 27/27, hostile 7/7, integrated 15/15 and Lean R425 pass. The finite combined envelope minimum is 1.0138783541561192; uniform, common-core, history, OS/KMS/GNS, C6, Sector-A, Pre-A and physical/mass-gap claims remain open |
 | [R-424](#r-424) | Finite two-block harmonic coarse Schur assembly | R-424 v1.0 is a T0 claim-nonbearing finite interface under EXP-001269. It retains the two block-constant modes, applies the exact harmonic Schur complement and reuses the R-422 residual gap on 114 eligible rows; primary 1471/1471, independent 27/27, hostile 7/7, integrated 22/22 and Lean R424 pass. Coarse, residual and combined finite minima are 9.416287072814253, 2.0659023307146094 and 1.0329511653573047; uniform, common-core, GNS, continuum, C6, Sector-A and Pre-A remain open |
 | [R-422](#r-422) | Finite residual core-tail coercivity reserve | R-422 v1.0 is a T0 claim-nonbearing finite two-block interface under EXP-001267. It combines the R-421 tail Hardy floor with a block-mean-zero core form and explicit cross norm; primary 3522/3522 over 858 rows and 114 eligible rows, independent 43/43, hostile 7/7, integrated 20/20 and Lean R422 pass. Twenty-four finite rows have positive conservative reserve and 90 nonpositive sufficient-budget diagnostics; cutoff/volume uniformity, the coarse sector, common core, GNS, continuum, C6, Sector-A and Pre-A remain open |
 | [R-421](#r-421) | Tail-supported Hardy ground-state-transform interface | R-421 v1.0 is a T0 claim-nonbearing finite algebra and selected R-419 Q3 calibration under EXP-001266. The exact reversible ground-state transform has a nonnegative weighted-square remainder; a positive tail rate therefore gives a Hardy bound for tail-supported vectors. Primary 6544/6544 over 6 systems, 858 rows and 1128 vectors, independent 63/63, hostile 7/7, integrated 19/19 and Lean R421 pass. Uniform tail constants, arbitrary-observable Poincare, common core, GNS, continuum, C6, Sector-A and Pre-A remain open |
@@ -712,6 +713,36 @@ Hamiltonian-to-OS/KMS/GNS identification, physical mass gap, continuum, C6,
 Sector-A or Pre-A closure.  No tier change, negative result or PDF is issued.
 
 **Proven in:** [R-407 certificate](strategy/pre-a-cp1-st8-q3lock-canonical-path-resistance-certificate-260830.md), [Lean entrypoint](verification/lean/Tect/R407.lean), primary/independent/hostile scripts, integrated verifier, [scope note](claims/C6-SPACETIME-SIGNATURE/notes/canonical-path-resistance-260830.md), and saved run artefacts.
+<a id="r-425"></a>
+### R-425 -- Expanded finite Q3 harmonic coarse-Schur stress
+
+**Result ID.** `PA-CP1-ST8-Q3LOCK-EXPANDED-GRID-SCHUR-STRESS-v0` (R-425).
+
+**Version and exact scope.** R-425 v1.0 is a T0, claim-nonbearing finite
+stress under EXP-001270.  It keeps the R-419 conditional law, projected
+conductance, beta values `{1/2,2,8}`, both orientations, `alpha=1/40`, tail
+threshold `4`, and the R-422 core/tail split fixed while enlarging the finite
+sample to twelve R-419 cutoff-volume systems.  The two block-constant modes
+are retained and the residual complement is eliminated by the exact finite
+harmonic Schur solve.  Rows lacking two core and two tail coordinates remain
+in the coverage count but are not admitted to the two-block solve.
+
+**Finding.** The primary lane passes `4678/4678` assertions over `1488`
+conditional rows, `710` nonempty-tail rows and `326` eligible rows.  Coarse
+Schur gaps range from `9.416287072814253` to `900.9775546526778`, residual
+gaps from `2.0277567083122383` to `7.874609499214968`, and combined
+half-minimum envelopes from `1.0138783541561192` to `3.937304749607484`.
+Maximum residual reuse difference is `9.393117395006811e-10`; independent
+27/27, hostile 7/7, integrated 15/15 and Lean R425 pass.
+
+**Boundary.** This expanded finite stress does not prove cutoff/volume/phase/
+exhaustion uniformity, a common Hamiltonian core or split-limit map, history
+transfer, OS/KMS/GNS reconstruction, a physical sector, C6, Sector-A, Pre-A,
+Yang--Mills or a mass-gap statement.  The positive finite envelope is not a
+physical gap claim.
+
+**Proven in:** [R-425 certificate](strategy/pre-a-cp1-st8-q3lock-expanded-grid-schur-stress-certificate-260831.md), [machine manifest](strategy/pre-a-cp1-st8-q3lock-expanded-grid-schur-stress-manifest.json), [integrated run](claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-integrated-expanded_grid_schur_stress/integrated.json), and [Lean R425](verification/lean/Tect/R425.lean).
+
 <a id="r-424"></a>
 ### R-424 -- Finite two-block harmonic coarse Schur assembly
 

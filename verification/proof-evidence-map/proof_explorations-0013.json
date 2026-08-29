@@ -8351,6 +8351,131 @@
       "task_id": "T-054",
       "title": "Finite two-block harmonic coarse Schur assembly",
       "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "axis": "input normalization",
+          "check": "The independent lane rejects nonpositive or nonnormalized weights and asymmetric or negative conductances.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "support eligibility",
+          "check": "Overlapping and undersized blocks are rejected, while systems with zero eligible rows remain in the coverage report.",
+          "disposition": "DISMISSED-FINITE / BOUNDARY-RETAINED"
+        },
+        {
+          "axis": "Schur correction direction",
+          "check": "The residual coupling is subtracted and a forged envelope above the half-minimum is rejected.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "residual reuse",
+          "check": "A separately constructed block-mean-zero basis agrees with the harmonic residual block within the declared comparison tolerance.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "singular graph",
+          "check": "A disconnected mutation is rejected before a Schur value can be reported.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "expanded-grid interpretation",
+          "check": "The twelve-system sample is treated as finite stress evidence and not as a cutoff or volume uniformity theorem.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "physical promotion",
+          "check": "No physical sector, empty reference, OS/KMS/GNS state, Yang-Mills claim or mass-gap claim is inferred.",
+          "disposition": "UPHELD-OPEN"
+        }
+      ],
+      "boundary": "T0 claim-nonbearing expanded finite two-block harmonic coarse-Schur stress only. It does not close any uniform, common-core, history, sector, continuum or physical gate.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "claim_ids_used": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "The exact finite Schur assembly remains positive after enlarging the R-424 sample to all twelve R-419 cutoff-volume systems, while eligibility boundaries are retained and no limiting inference is made.",
+      "decision_scope": "Expanded finite Q3 harmonic coarse-Schur stress on the fixed R-419 grid; no tier change.",
+      "evidence_refs": [
+        "strategy/pre-a-cp1-st8-q3lock-expanded-grid-schur-stress-manifest.json#finite_theorem",
+        "strategy/pre-a-cp1-st8-q3lock-expanded-grid-schur-stress-certificate-260831.md#Executed evidence",
+        "codes/foundations/pre_a_cp1_st8_q3lock_expanded_grid_schur_stress.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_expanded_grid_schur_stress_independent.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_expanded_grid_schur_stress_hostile.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_expanded_grid_schur_stress_verify.py#main",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-primary-expanded_grid_schur_stress/primary.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-independent-expanded_grid_schur_stress/independent.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-hostile-expanded_grid_schur_stress/hostile.json#controls",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-integrated-expanded_grid_schur_stress/integrated.json#derived",
+        "verification/lean/Tect/R425.lean#expanded_grid_lower_envelope"
+      ],
+      "finding": "The primary lane passes 4678/4678 assertions over 1488 conditional rows, 710 nonempty-tail rows and 326 eligible rows across twelve systems. Coarse Schur gaps range from 9.416287072814253 to 900.9775546526778, residual gaps from 2.0277567083122383 to 7.874609499214968, and combined half-minimum envelopes from 1.0138783541561192 to 3.937304749607484. The maximum residual reuse difference is 9.393117395006811e-10. Independent 27/27, hostile 7/7, integrated 15/15 and Lean R425 pass.",
+      "formal_integration": {
+        "events": [
+          "20260831-r-425-expanded-finite-q3-harmonic-coarse-schur"
+        ],
+        "lean": "R425 PASS; scalar harmonic/residual envelope only",
+        "negatives": [],
+        "no_changelog_event": false,
+        "no_new_negative": true,
+        "no_new_result": false,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "results": [
+          "R-425"
+        ]
+      },
+      "formal_refs": {
+        "events": [
+          "20260831-r-425-expanded-finite-q3-harmonic-coarse-schur"
+        ],
+        "negatives": [],
+        "results": [
+          "R-425"
+        ]
+      },
+      "gate_ids": [
+        "PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY",
+        "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+        "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+      ],
+      "id": "EXP-001270",
+      "method": [
+        "Reuse the hash-pinned R-419 conditional law, projected conductance, R-421 tail interface and R-422 residual split without retuning.",
+        "Enlarge the finite sample to the twelve cutoff-volume systems declared in the manifest and retain every ineligible support boundary.",
+        "Compute the exact finite harmonic Schur coarse gap and residual gap, then record 0.5*min(coarse,residual) as the finite envelope.",
+        "Recompute residual values with a separately constructed block-mean-zero basis and run reversible fixtures, hostile mutations and Lean scalar checks.",
+        "Keep all uniform, common-core, history, state-identification and physical gates explicitly open."
+      ],
+      "next_action": "Use the expanded finite envelope as a calibration target for an analytic common-core estimate uniform in cutoff, volume, phase and exhaustion, then attempt history and OS/KMS/GNS transfer.",
+      "no_overclaim": "Positive finite envelopes on the expanded sample are matrix-level stress evidence. They do not prove a uniform sector gap, a continuum result, a Yang-Mills statement or a mass gap.",
+      "provenance": "contemporaneous",
+      "question": "Does the exact two-block harmonic Schur assembly remain positive when the R-424 finite Q3 grid is enlarged to all R-419 cutoff-volume systems, with beta, orientation, alpha and tail threshold fixed?",
+      "recorded_at": "2026-08-31T06:45:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001269",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001264",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001268",
+          "relation": "alternative_to"
+        }
+      ],
+      "reviewed_on": "2026-08-29",
+      "schema": "tect/proof-exploration/1.0",
+      "schema_version": "1.0",
+      "task_id": "T-054",
+      "title": "Expanded finite Q3 harmonic coarse-Schur stress",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",
