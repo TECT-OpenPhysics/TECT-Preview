@@ -1,0 +1,71 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001266",
+  "recorded_at": "2026-08-31T05:00:00Z",
+  "recorded_by": "Codex",
+  "provenance": "contemporaneous",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "title": "Tail-supported Hardy control from the R-419 Lyapunov transform",
+  "question": "Does the positive R-419 tail Lyapunov rate give an exact ground-state-transform identity and a Hardy-type Dirichlet lower bound for functions supported on the tail?",
+  "method": [
+    "Keep the hash-pinned R-419 Q3 functional, log-domain conditional weights, momentum conductance and normalization unchanged on six selected volume/cutoff systems, three beta values and both collar orientations.",
+    "For each selected conditional row define V_i=exp(alpha*(max(log(pi))-log(pi_i))) with alpha=1/40 and tail threshold theta=4, then compute h_i=-(L V)_i/V_i.",
+    "Evaluate the exact reversible identity E(f)=sum_i pi_i h_i f_i^2 + 1/2 sum_ij c_ij V_i V_j(f_i/V_i-f_j/V_j)^2 on four deterministic vectors supported on the tail.",
+    "Use the nonnegative remainder and the minimum tail rate to check E(f)>=kappa sum_tail pi_i f_i^2, then rebuild the algebra independently on three non-importing reversible graph fixtures.",
+    "Run hostile sign, symmetry, positivity, support, omitted-remainder and forged-rate mutations, and compile the two-state algebraic Lean cross-check."
+  ],
+  "finding": "The primary lane passes 6544/6544 assertions over 6 Q3 systems, 858 conditional rows and 1128 tail-supported test vectors; the independent non-importing lane passes 63/63 over 3 fixtures and 12 vectors; the hostile lane rejects 7/7 invalid mutations; the integrated verifier passes 19/19; and Lean R421 compiles. The primary minimum tail rate is 0.4188403678721089, maximum identity residual is 1.4210854715202004e-14, minimum ground-state remainder is 0.004172932635476484 and minimum Hardy slack is 0.004172932635476481. The independent maximum residual is 2.220446049250313e-16 and its minimum Hardy slack is 0.01951825515843849.",
+  "decision_reason": "The reversible ground-state transform is an exact finite algebraic interface below the R-419 corridor. Its weighted-square remainder turns a positive tail drift into a tail-supported Dirichlet lower bound, which is a concrete input for a future variance decomposition. The result does not control arbitrary observables with a core component and supplies no uniform limit.",
+  "verdict": "advanced",
+  "adversarial_review": [
+    {"axis": "generator sign", "check": "Reversing h changes the tail lower-bound direction and is rejected.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "ground-state remainder", "check": "Omitting the weighted square fails the two-state identity.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "conductance symmetry", "check": "An asymmetric conductance matrix is rejected before applying the identity.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "positivity", "check": "Nonpositive stationary weights or Lyapunov entries are rejected rather than regularized.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "support scope", "check": "A vector nonzero on the core is rejected for the tail-only Hardy consequence.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "rate floor", "check": "A forged kappa above the actual tail minimum is rejected.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "uniform and physical promotion", "check": "Finite tail-supported control is not promoted to global Poincare, common-core, GNS, continuum, C6, Sector-A, Pre-A, Yang-Mills or mass-gap closure.", "disposition": "UPHELD-OPEN"}
+  ],
+  "decision_scope": "Finite exact identity and selected R-419 calibration; no tier change.",
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY",
+    "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+  ],
+  "formal_integration": {
+    "results": ["R-421"],
+    "negatives": [],
+    "events": ["20260831-r-421-tail-supported-hardy-ground-state-transfo"],
+    "lean": "R421 PASS",
+    "no_new_negative": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "formal_refs": {
+    "results": ["R-421"],
+    "negatives": [],
+    "events": ["20260831-r-421-tail-supported-hardy-ground-state-transfo"]
+  },
+  "evidence_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-tail-hardy-ground-state-transform-manifest.json#finite_theorem",
+    "strategy/pre-a-cp1-st8-q3lock-tail-hardy-ground-state-transform-certificate-260831.md#Decision",
+    "codes/foundations/pre_a_cp1_st8_q3lock_tail_hardy_ground_state_transform.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_tail_hardy_ground_state_transform_independent.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_tail_hardy_ground_state_transform_hostile.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_tail_hardy_ground_state_transform_verify.py#main",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-primary-tail_hardy_ground_state_transform/primary.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-independent-tail_hardy_ground_state_transform/independent.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-hostile-tail_hardy_ground_state_transform/hostile.json#controls",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-integrated-tail_hardy_ground_state_transform/integrated.json#derived",
+    "verification/lean/Tect/R421.lean#two_state_ground_state_transform"
+  ],
+  "next_action": "Prove a domain-controlled version on an unbounded Q3 Hamiltonian common core, then derive the missing core-mean and boundary-capacity variance decomposition and transfer it to the R-399/R-415 history before any global Poincare or GNS promotion.",
+  "boundary": "T0 claim-nonbearing finite ground-state-transform and tail-supported Hardy interface. It proves no cutoff-, volume-, phase- or exhaustion-uniform constant, no arbitrary-observable Poincare inequality, no common core, OS/KMS/GNS reconstruction, continuum, C6, Sector-A or Pre-A closure.",
+  "no_overclaim": "The exact nonnegative remainder is a finite algebraic route advance; it is not evidence for physical tail control, a uniform coercive estimate, a Yang-Mills result or a mass gap.",
+  "related": [
+    {"id": "EXP-001264", "relation": "continues"},
+    {"id": "EXP-001262", "relation": "continues"},
+    {"id": "EXP-001253", "relation": "alternative_to"}
+  ]
+}

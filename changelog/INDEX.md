@@ -5,7 +5,7 @@ Compact generated reader surface. The append-only authority is
 record 568 / commit `4db22f4e` and no longer grows.
 Post-cutover full bodies live exactly once in bounded pages under `pages/`.
 
-**761 accepted events** · latest 25 shown below · machine locator: `index.json`
+**762 accepted events** · latest 25 shown below · machine locator: `index.json`
 
 Search the complete authority without loading every page:
 
@@ -17,6 +17,7 @@ python verification/scripts/changelog.py search --text <phrase>
 
 | Date | Event | Claims | Full entry |
 |---|---|---|---|
+| 2026-08-31 | `20260831-r-421-tail-supported-hardy-ground-state-transfo` — [R-421 tail-supported Hardy ground-state-transform interface] - 2026-08-31 | C6-SPACETIME-SIGNATURE,EXP-001266,R-421 | [bounded page](pages/000719-000768.md#20260831-r-421-tail-supported-hardy-ground-state-transfo) |
 | 2026-08-31 | `20260831-r-420-reading-h-physical-empty-bounded-test-blo` — [R-420 Reading-H physical-empty bounded test blocked] - 2026-08-31 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000719-000768.md#20260831-r-420-reading-h-physical-empty-bounded-test-blo) |
 | 2026-08-31 | `20260831-r-419-growing-volume-log-domain-lyapunov-core-t` — [R-419 growing-volume log-domain Lyapunov core-tail stress] - 2026-08-31 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000719-000768.md#20260831-r-419-growing-volume-log-domain-lyapunov-core-t) |
 | 2026-08-31 | `20260831-r-418-physical-empty-same-owner-preregistration` — [R-418 physical-empty same-owner preregistration blocked] - 2026-08-31 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000719-000768.md#20260831-r-418-physical-empty-same-owner-preregistration) |
@@ -41,7 +42,6 @@ python verification/scripts/changelog.py search --text <phrase>
 | 2026-08-30 | `20260830-conditional-poincare-before-duhamel-shell-trans` — [Conditional Poincare-before-Duhamel shell transport] - 2026-08-30 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000719-000768.md#20260830-conditional-poincare-before-duhamel-shell-trans) |
 | 2026-08-30 | `20260830-conditioned-collar-doob-martingale-and-shell-in` — [Conditioned-collar Doob martingale and shell influence] - 2026-08-30 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000719-000768.md#20260830-conditioned-collar-doob-martingale-and-shell-in) |
 | 2026-08-30 | `20260830-finite-semigroup-dressed-petz-collar-discrimina` — [Finite semigroup-dressed Petz collar discriminator] - 2026-08-30 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000719-000768.md#20260830-finite-semigroup-dressed-petz-collar-discrimina) |
-| 2026-08-30 | `20260830-finite-recoverability-first-projected-petz-tran` — [Finite recoverability-first projected Petz transport] - 2026-08-30 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000719-000768.md#20260830-finite-recoverability-first-projected-petz-tran) |
 
 ## Post-cutover pages
 
@@ -49,7 +49,7 @@ Each full event body after the cutover occurs in exactly one page.
 
 | Ordinals | Events | Page |
 |---|---:|---|
-| 719–761 | 43 | [000719-000768.md](pages/000719-000768.md) |
+| 719–762 | 44 | [000719-000768.md](pages/000719-000768.md) |
 | 669–718 | 50 | [000669-000718.md](pages/000669-000718.md) |
 | 619–668 | 50 | [000619-000668.md](pages/000619-000668.md) |
 | 569–618 | 50 | [000569-000618.md](pages/000569-000618.md) |

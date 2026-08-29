@@ -5,10 +5,11 @@
 
 Authorities: `RESULTS-LEDGER.md`.
 
-**254 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
+**255 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
 
 | ID | Result | Tier/scope |
 |---|---|---|
+| [`R-421`](../RESULTS-LEDGER.md#r-421) | Tail-supported Hardy ground-state-transform interface | T0 (claim-nonbearing finite interface). |
 | [`R-420`](../RESULTS-LEDGER.md#r-420) | Reading-H physical-empty bounded test (blocked) | T0 (claim-nonbearing preregistration/input boundary). |
 | [`R-419`](../RESULTS-LEDGER.md#r-419) | Growing-volume log-domain Lyapunov core-tail stress | T0 (claim-nonbearing finite stress). |
 | [`R-418`](../RESULTS-LEDGER.md#r-418) | Physical-empty same-owner preregistration boundary | T0 (claim-nonbearing input-boundary audit). |
@@ -33,7 +34,6 @@ Authorities: `RESULTS-LEDGER.md`.
 | [`R-399`](../RESULTS-LEDGER.md#r-399) | Conditional Poincare-before-Duhamel shell transport | T0 |
 | [`R-398`](../RESULTS-LEDGER.md#r-398) | Conditioned-collar Doob martingale and shell-influence discriminator | T0 |
 | [`R-397`](../RESULTS-LEDGER.md#r-397) | Finite semigroup-dressed Petz collar discriminator | T0 |
-| [`R-396`](../RESULTS-LEDGER.md#r-396) | Finite recoverability-first projected Petz transport | T0 |
 
 Search without loading the full ledger:
 

@@ -45,6 +45,7 @@ policy in `governance/development-history.md`.
 | [R-407](#r-407) | Canonical-path effective-resistance lower bound | R-407 v1.0 is a T0 claim-nonbearing finite constructive path checkpoint under EXP-001252. The maximum-conductance tree certificate passes primary 22510/22510, independent 22509/22509, hostile 6/6, integrated 35/35 and Lean R407 over 7 systems, 2688 contexts and 21120 rows. The exact intrinsic gap is [0.7570174175402339,5.647863075935321], the canonical lower envelope is [0.2613815898804392,2.508986944248343], and rho is [0.3985672393762041,3.825824154093709]. The finite path certificate exposes the conductance/probability inputs for a future uniform proof; common-core, phase, volume, exhaustion and QFT gates remain open |
 | [R-417](#r-417) | Log-domain Lyapunov core-tail drift corridor | R-417 v1.0 is a T0 claim-nonbearing finite corridor under EXP-001262. A logarithmic Lyapunov potential gives positive finite tail drift while the induced core graph retains a positive projected gap; primary 18480/18480, independent 17069/17069, hostile 10/10, integrated 44/44 and Lean R417 pass over 13 cutoffs, 78 profiles and 1410 rows. Minimum tail drift is 0.5877888606875677, minimum core gap 0.6867237745188258, minimum core mass 0.9804617527664484, and maximum tail mass 0.01953824723355167. Uniform drift, observable-tail control, common-core, global Poincare, OS/KMS/GNS, physical gap, continuum, C6, Sector-A and Pre-A remain open |
 | [R-418](#r-418) | Physical-empty same-owner preregistration boundary | R-418 v1.0 is a T0 claim-nonbearing TECT-owner input-boundary audit under EXP-001263. Branch E is preregistered as an uninstantiated physical-empty/preparation slot without zero-field aliasing; the current Reading-H G_* and P1 owners do not provide one common finite-regulator functional, reference, normalization, finite parts, regulator, volume, boundary, limit order, full tangent or projector. Primary 30/30 and independent 21/21 blocker assertions pass, hostile 7/7 mutations are rejected, and integrated 16/16 passes. Sign, Reading-H stationarity and symmetry-projected transverse stability are all BLOCKED_NOT_EVALUATED; no numerical comparison or physical/Yang-Mills claim follows |
+| [R-421](#r-421) | Tail-supported Hardy ground-state-transform interface | R-421 v1.0 is a T0 claim-nonbearing finite algebra and selected R-419 Q3 calibration under EXP-001266. The exact reversible ground-state transform has a nonnegative weighted-square remainder; a positive tail rate therefore gives a Hardy bound for tail-supported vectors. Primary 6544/6544 over 6 systems, 858 rows and 1128 vectors, independent 63/63, hostile 7/7, integrated 19/19 and Lean R421 pass. Uniform tail constants, arbitrary-observable Poincare, common core, GNS, continuum, C6, Sector-A and Pre-A remain open |
 | [R-420](#r-420) | Reading-H physical-empty bounded test (blocked) | R-420 v1.0 is a T0 claim-nonbearing TECT-owner preregistration/input-admissibility test under EXP-001265. It freezes fifteen common-owner fields and preregisters E without zero aliasing. R-169 v1.4, R-170 and EXP-000790 still provide no common finite-regulator parent or admitted physical-empty branch; primary 27/27, independent 23/23, hostile 7/7, integrated 39/39 and Lean R420 pass. Sign, full Reading-H stationarity and symmetry-projected transverse stability are all BLOCKED_NOT_EVALUATED; no numerical comparison or physical/Yang-Mills claim follows |
 | [R-419](#r-419) | Growing-volume log-domain Lyapunov core-tail stress | R-419 v1.0 is a T0 claim-nonbearing finite stress under EXP-001264. The R-417 core-tail interface remains positive on volumes 2, 3 and 4 over 12 systems, 72 profiles and 1,488 conditional rows; primary 19,486/19,486, independent 17,997/17,997, hostile 12/12, integrated 47/47 and Lean R419 pass. Minimum full/core gap is 0.6159675039841621, minimum core mass 0.9805959529205274, maximum tail mass 0.019404047079472624 and minimum tail drift 0.4188403678721089. This is finite calibration only; uniformity, common-core, GNS, continuum, C6, Sector-A and Pre-A remain open |
 | [R-416](#r-416) | Log-domain and projected Schur cutoff stress | R-416 v1.0 is a T0 claim-nonbearing finite refinement under EXP-001261. Log-sum-exp Gibbs masses and explicit projection away from the sqrt(pi) constant mode separate raw high-cutoff zero-mode drift from a genuine projected-gap collapse; primary 4370/4370, independent 4370/4370, hostile 9/9, integrated 39/39 and Lean R416 pass over 13 cutoffs, 78 profiles and 1410 rows. Primary projected gaps are [0.6867237745188259,11.524804493011532] and Schur gaps [0.3476008247075759,5.985995817095592]. Common-core, cutoff/volume/source/phase/exhaustion uniformity, OS/KMS/GNS, physical gap, continuum, C6, Sector-A and Pre-A remain open |
@@ -708,6 +709,48 @@ Hamiltonian-to-OS/KMS/GNS identification, physical mass gap, continuum, C6,
 Sector-A or Pre-A closure.  No tier change, negative result or PDF is issued.
 
 **Proven in:** [R-407 certificate](strategy/pre-a-cp1-st8-q3lock-canonical-path-resistance-certificate-260830.md), [Lean entrypoint](verification/lean/Tect/R407.lean), primary/independent/hostile scripts, integrated verifier, [scope note](claims/C6-SPACETIME-SIGNATURE/notes/canonical-path-resistance-260830.md), and saved run artefacts.
+<a id="r-421"></a>
+### R-421 -- Tail-supported Hardy ground-state-transform interface
+
+**Result ID.** R-421 (PA-CP1-ST8-Q3LOCK-TAIL-HARDY-GROUND-STATE-TRANSFORM-v0).
+
+**Version and exact scope.** R-421 v1.0 is a T0, claim-nonbearing finite
+interface under EXP-001266. It keeps the hash-pinned R-419 Q3 functional,
+log-domain conditional law, momentum conductance and normalization fixed on six
+selected volume/cutoff systems, three beta values and both collar orientations.
+For positive normalized `pi`, symmetric nonnegative `c` and positive `V`, with
+`h_i=-(L V)_i/V_i`, the checked identity is
+
+```text
+E(f) = sum_i pi_i h_i f_i^2
+       + 1/2 sum_ij c_ij V_i V_j (f_i/V_i-f_j/V_j)^2.
+```
+
+The weighted square is nonnegative. Thus `f` supported on a declared tail `T`
+and `inf_T h_i >= kappa > 0` obeys
+`E(f) >= kappa sum_(i in T) pi_i f_i^2`. The statement is tail-supported only;
+no core offset or boundary-capacity term is hidden in the result.
+
+**Evidence.** The primary lane passes 6544/6544 assertions over 6 Q3 systems,
+858 conditional rows and 1128 vectors. The non-importing independent lane
+passes 63/63 on 3 reversible graph fixtures and 12 vectors; the hostile lane
+rejects 7/7 invalid mutations; the integrated verifier passes 19/19; and Lean
+R421 compiles the two-state identity, nonnegative remainder and tail
+consequence.
+
+**Boundary.** This closes only the finite ground-state-transform identity and
+selected calibration. A cutoff-, volume-, phase- or exhaustion-uniform rate, a
+variance decomposition for arbitrary observables, an induced-core Schur/
+Poincare estimate, a common Hamiltonian core, OS/KMS/GNS reconstruction, a
+continuum limit, C6, Sector-A or Pre-A closure remain open. No Yang--Mills or
+mass-gap conclusion follows.
+
+**Proven in.** [R-421 certificate](strategy/pre-a-cp1-st8-q3lock-tail-hardy-ground-state-transform-certificate-260831.md), [machine manifest](strategy/pre-a-cp1-st8-q3lock-tail-hardy-ground-state-transform-manifest.json), primary/independent/hostile scripts, integrated verifier, [Lean entrypoint](verification/lean/Tect/R421.lean), exploration record and saved run artefacts.
+
+**Tier.** T0 (claim-nonbearing finite interface).
+
+**Publication target.** T-054 Q3LOCK tail-to-Poincare reduction.
+
 <a id="r-420"></a>
 ### R-420 -- Reading-H physical-empty bounded test (blocked)
 

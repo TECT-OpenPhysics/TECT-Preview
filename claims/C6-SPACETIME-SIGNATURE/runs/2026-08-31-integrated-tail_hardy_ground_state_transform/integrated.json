@@ -1,0 +1,238 @@
+{
+  "boundary": "R-421 closes an exact finite tail-supported identity and its finite Q3 calibration. It does not close the uniform Lyapunov/Poincare, common-core, dynamics, GNS, continuum, C6, Sector-A or Pre-A gates.",
+  "checks": [
+    {
+      "actual": "['R-421', 'EXP-001266', False]",
+      "expected": "R-421/EXP-001266/false",
+      "group": "provenance",
+      "name": "manifest identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'cutoff_uniform_tail_hardy_closed': False, 'volume_uniform_tail_hardy_closed': False, 'phase_uniform_tail_hardy_closed': False, 'exhaustion_uniform_tail_hardy_closed': False, 'global_poincare_closed': False, 'common_core_closed': False, 'common_split_rule_closed': False, 'hamiltonian_os_identification_closed': False, 'kms_gns_gap_closed': False, 'continuum_closed': False, 'c6_closed': False, 'sector_a_closed': False, 'pre_a_closed': False}",
+      "expected": "all promoted flags false",
+      "group": "scope",
+      "name": "scope firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": "[]",
+      "expected": "all R-421 artifacts",
+      "group": "provenance",
+      "name": "artifacts present",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'codes/foundations/pre_a_cp1_st8_q3lock_tail_hardy_ground_state_transform.py': '8eac3c123a3c90bfa7d80eed4a37c32c9d2e9093a4eacc046f15a112261e1cd3', 'codes/foundations/pre_a_cp1_st8_q3lock_tail_hardy_ground_state_transform_independent.py': 'ec03e88ac7bf73d5df6f75e53034926c9cb118aba9102bdbe06afe667ec6eb44', 'codes/foundations/pre_a_cp1_st8_q3lock_tail_hardy_ground_state_transform_hostile.py': '7be01e0889be698de0bed905441f090a1e327b2687c2e14b2885e4225384c03b', 'verification/lean/Tect/R421.lean': 'af24bbdd2b3a4872dba42bdc8299a5287c5b7803a6cb03e7fd6b5bc67ac895c9'}",
+      "expected": "distinct source hashes",
+      "group": "provenance",
+      "name": "artifact hashes distinct",
+      "status": "PASS"
+    },
+    {
+      "actual": "['two_state_ground_state_transform', 'two_state_remainder_nonnegative', 'two_state_tail_hardy', 'finite_scope']",
+      "expected": "declared markers",
+      "group": "Lean",
+      "name": "Lean markers",
+      "status": "PASS"
+    },
+    {
+      "actual": "finite algebra file",
+      "expected": "no physical promotion text",
+      "group": "Lean",
+      "name": "Lean boundary",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-421 PRIMARY PASS 6544/6544 assertions; rows=858 tail_rows=282 functions=1128; max_identity_residual=1.421e-14; min_tail_rate=0.41884",
+      "expected": "exit 0 and output",
+      "group": "executables",
+      "name": "run pre_a_cp1_st8_q3lock_tail_hardy_ground_state_transform.py",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-421 INDEPENDENT PASS 63/63 assertions; fixtures=3 tail_fixtures=3 functions=12; max_identity_residual=2.220e-16",
+      "expected": "exit 0 and output",
+      "group": "executables",
+      "name": "run pre_a_cp1_st8_q3lock_tail_hardy_ground_state_transform_independent.py",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-421 HOSTILE PASS 7/7 invalid mutations rejected",
+      "expected": "exit 0 and output",
+      "group": "executables",
+      "name": "run pre_a_cp1_st8_q3lock_tail_hardy_ground_state_transform_hostile.py",
+      "status": "PASS"
+    },
+    {
+      "actual": "",
+      "expected": "exit 0",
+      "group": "Lean",
+      "name": "Lean compile",
+      "status": "PASS"
+    },
+    {
+      "actual": "PASS",
+      "expected": "PASS",
+      "group": "executables",
+      "name": "primary verdict",
+      "status": "PASS"
+    },
+    {
+      "actual": "PASS",
+      "expected": "PASS",
+      "group": "executables",
+      "name": "independent verdict",
+      "status": "PASS"
+    },
+    {
+      "actual": "PASS",
+      "expected": "PASS",
+      "group": "hostile",
+      "name": "hostile verdict",
+      "status": "PASS"
+    },
+    {
+      "actual": "[6, 858, 282, 1128]",
+      "expected": "[6, 'positive', 'positive', 'four per tail row']",
+      "group": "coverage",
+      "name": "primary coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'fixture_count': 3, 'function_count': 12, 'maximum_identity_residual': 2.220446049250313e-16, 'minimum_hardy_slack': 0.01951825515843849, 'minimum_remainder': 0.019518255158438483, 'minimum_tail_rate': 5.039999999999998, 'tail_fixture_count': 3}",
+      "expected": "independent fixtures with four vectors",
+      "group": "coverage",
+      "name": "independent coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'alpha': 0.025, 'conditional_row_count': 858, 'function_count': 1128, 'maximum_identity_residual': 1.4210854715202004e-14, 'minimum_hardy_slack': 0.004172932635476481, 'minimum_remainder': 0.004172932635476484, 'minimum_tail_rate': 0.4188403678721089, 'system_count': 6, 'systems': [{'dimension': 3, 'row_count': 24, 'volume': 2}, {'dimension': 6, 'row_count': 42, 'volume': 2}, {'dimension': 12, 'row_count': 78, 'volume': 2}, {'dimension': 3, 'row_count': 78, 'volume': 3}, {'dimension': 4, 'row_count': 126, 'volume': 3}, {'dimension': 4, 'row_count': 510, 'volume': 4}], 'tail_row_count': 282, 'tail_threshold': 4.0}",
+      "expected": "positive rate and finite residual bounds",
+      "group": "primary",
+      "name": "primary finite bounds",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'fixture_count': 3, 'function_count': 12, 'maximum_identity_residual': 2.220446049250313e-16, 'minimum_hardy_slack': 0.01951825515843849, 'minimum_remainder': 0.019518255158438483, 'minimum_tail_rate': 5.039999999999998, 'tail_fixture_count': 3}",
+      "expected": "positive rate and finite residual bounds",
+      "group": "independent",
+      "name": "independent finite bounds",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'all_mutations_rejected': True, 'mutation_count': 7, 'numeric_evaluation': False, 'physical_promotion': False}",
+      "expected": "seven invalid mutations rejected",
+      "group": "hostile",
+      "name": "hostile controls",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.4210854715202004e-14, 2.220446049250313e-16]",
+      "expected": "within 5e-07 or both below tolerance",
+      "group": "independence",
+      "name": "independent residual agreement",
+      "status": "PASS"
+    }
+  ],
+  "comparison_policy": {
+    "reason": "finite algebra residuals are compared after independent reconstruction; no uniform or physical field is inferred",
+    "tolerance": 5e-07
+  },
+  "derived": {
+    "command_outputs": {
+      "lean": "",
+      "pre_a_cp1_st8_q3lock_tail_hardy_ground_state_transform.py": "R-421 PRIMARY PASS 6544/6544 assertions; rows=858 tail_rows=282 functions=1128; max_identity_residual=1.421e-14; min_tail_rate=0.41884",
+      "pre_a_cp1_st8_q3lock_tail_hardy_ground_state_transform_hostile.py": "R-421 HOSTILE PASS 7/7 invalid mutations rejected",
+      "pre_a_cp1_st8_q3lock_tail_hardy_ground_state_transform_independent.py": "R-421 INDEPENDENT PASS 63/63 assertions; fixtures=3 tail_fixtures=3 functions=12; max_identity_residual=2.220e-16"
+    },
+    "hostile": {
+      "all_mutations_rejected": true,
+      "mutation_count": 7,
+      "numeric_evaluation": false,
+      "physical_promotion": false
+    },
+    "independent": {
+      "fixture_count": 3,
+      "function_count": 12,
+      "maximum_identity_residual": 2.220446049250313e-16,
+      "minimum_hardy_slack": 0.01951825515843849,
+      "minimum_remainder": 0.019518255158438483,
+      "minimum_tail_rate": 5.039999999999998,
+      "tail_fixture_count": 3
+    },
+    "lean": "PASS",
+    "primary": {
+      "alpha": 0.025,
+      "conditional_row_count": 858,
+      "function_count": 1128,
+      "maximum_identity_residual": 1.4210854715202004e-14,
+      "minimum_hardy_slack": 0.004172932635476481,
+      "minimum_remainder": 0.004172932635476484,
+      "minimum_tail_rate": 0.4188403678721089,
+      "system_count": 6,
+      "systems": [
+        {
+          "dimension": 3,
+          "row_count": 24,
+          "volume": 2
+        },
+        {
+          "dimension": 6,
+          "row_count": 42,
+          "volume": 2
+        },
+        {
+          "dimension": 12,
+          "row_count": 78,
+          "volume": 2
+        },
+        {
+          "dimension": 3,
+          "row_count": 78,
+          "volume": 3
+        },
+        {
+          "dimension": 4,
+          "row_count": 126,
+          "volume": 3
+        },
+        {
+          "dimension": 4,
+          "row_count": 510,
+          "volume": 4
+        }
+      ],
+      "tail_row_count": 282,
+      "tail_threshold": 4.0
+    }
+  },
+  "exploration_id": "EXP-001266",
+  "manifest": "strategy/pre-a-cp1-st8-q3lock-tail-hardy-ground-state-transform-manifest.json",
+  "result_id": "R-421",
+  "schema": "tect/pre-a-r421-integrated/1.0",
+  "scope": {
+    "c6_closed": false,
+    "common_core_closed": false,
+    "common_split_rule_closed": false,
+    "continuum_closed": false,
+    "cutoff_uniform_tail_hardy_closed": false,
+    "exhaustion_uniform_tail_hardy_closed": false,
+    "finite_ground_state_transform_identity_closed": true,
+    "finite_hostile_mutation_rejection_closed": true,
+    "finite_independent_reconstruction_closed": true,
+    "finite_r419_selected_row_integration_closed": true,
+    "finite_tail_supported_hardy_control_closed": true,
+    "global_poincare_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "no_new_negative_result": true,
+    "no_pdf": true,
+    "no_tier_change": true,
+    "phase_uniform_tail_hardy_closed": false,
+    "pre_a_closed": false,
+    "sector_a_closed": false,
+    "volume_uniform_tail_hardy_closed": false
+  },
+  "verdict": "PASS"
+}

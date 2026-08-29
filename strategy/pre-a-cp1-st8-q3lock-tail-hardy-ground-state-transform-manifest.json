@@ -1,0 +1,144 @@
+{
+  "schema": "tect/pre-a-cp1-st8-q3lock-tail-hardy-ground-state-transform/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-TAIL-HARDY-GROUND-STATE-TRANSFORM-v0",
+  "result_id": "R-421",
+  "title": "Tail-supported Hardy control from the R-419 Lyapunov transform",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001266",
+  "claim_bearing": false,
+  "parent_results": ["R-419", "R-417", "R-416"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY",
+    "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+  ],
+  "question": "Does the positive R-419 tail Lyapunov rate give an exact ground-state-transform identity and a Hardy-type Dirichlet lower bound for functions supported on the tail?",
+  "new_perspective": {
+    "principle": "Replace the finite tail drift diagnostic by an exact reversible ground-state transform. The remainder is a manifestly nonnegative weighted square, so a positive tail rate controls tail-supported L2 mass without inventing a pointwise probability floor.",
+    "route": [
+      "Use the R-419 conditional weights pi and symmetric momentum conductance c without changing the Q3 parent, normalization or log-domain convention.",
+      "For a positive Lyapunov vector V define LV_i=pi_i^(-1) sum_j c_ij(V_j-V_i) and h_i=-(LV_i)/V_i.",
+      "Verify E(f)=sum_i pi_i h_i f_i^2 + (1/2)sum_ij c_ij V_i V_j(f_i/V_i-f_j/V_j)^2 for every finite vector f.",
+      "For f zero outside a tail T and h_i>=kappa on T, record E(f)>=kappa sum_{i in T} pi_i f_i^2.",
+      "Run the identity on selected R-419 Q3 conditional rows and independently on non-importing reversible graph fixtures; reject sign, support, symmetry and positivity mutations."
+    ],
+    "qft_bridge": "This supplies the exact tail-supported algebra needed by a future Lyapunov/Poincare decomposition. It does not control arbitrary functions with a core offset, establish a global Poincare constant, or provide a common Hamiltonian core or physical gap."
+  },
+  "finite_theorem": {
+    "stationary_law": "pi_i>0 and sum_i pi_i=1",
+    "conductance": "c_ij=c_ji>=0",
+    "generator": "(LV)_i=pi_i^(-1) sum_j c_ij(V_j-V_i)",
+    "rate": "h_i=-(LV)_i/V_i",
+    "dirichlet": "E(f)=1/2 sum_ij c_ij(f_i-f_j)^2",
+    "identity": "E(f)=sum_i pi_i h_i f_i^2 + 1/2 sum_ij c_ij V_i V_j(f_i/V_i-f_j/V_j)^2",
+    "tail_consequence": "If f vanishes off T and inf_T h_i>=kappa>0, then E(f)>=kappa sum_{i in T} pi_i f_i^2.",
+    "scope_boundary": "The tail consequence is not a global Poincare inequality because no control is asserted for a function's core mean or core-to-tail decomposition."
+  },
+  "upstream_authority": {
+    "manifest": "strategy/pre-a-cp1-st8-q3lock-growing-volume-lyapunov-core-tail-stress-manifest.json",
+    "sha256": "d5e2139c1a8af9b11f13098a8aaafabf66560bf08f011afb18900f50ae7e2881"
+  },
+  "finite_fixture": {
+    "q3_pairs": [
+      {"volume": 2, "cutoff_dimensions": [3, 6, 12]},
+      {"volume": 3, "cutoff_dimensions": [3, 4]},
+      {"volume": 4, "cutoff_dimensions": [4]}
+    ],
+    "beta_values": ["1/2", "2", "8"],
+    "orientations": ["right", "left"],
+    "alpha": "1/40",
+    "tail_threshold": "4",
+    "function_modes": ["tail_indicator", "tail_phi", "tail_sine", "tail_alternating"],
+    "probability_floor": 1e-300,
+    "rate_floor": 1e-8,
+    "numerical_tolerance": 1e-8,
+    "crosscheck_tolerance": 5e-7
+  },
+  "scope": {
+    "finite_ground_state_transform_identity_closed": true,
+    "finite_tail_supported_hardy_control_closed": true,
+    "finite_r419_selected_row_integration_closed": true,
+    "finite_independent_reconstruction_closed": true,
+    "finite_hostile_mutation_rejection_closed": true,
+    "cutoff_uniform_tail_hardy_closed": false,
+    "volume_uniform_tail_hardy_closed": false,
+    "phase_uniform_tail_hardy_closed": false,
+    "exhaustion_uniform_tail_hardy_closed": false,
+    "global_poincare_closed": false,
+    "common_core_closed": false,
+    "common_split_rule_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R421.lean",
+    "theorem_markers": [
+      "two_state_ground_state_transform",
+      "two_state_remainder_nonnegative",
+      "two_state_tail_hardy",
+      "finite_scope"
+    ],
+    "command": "lake env lean Tect/R421.lean",
+    "boundary": "Lean proves the two-state rational identity, nonnegative remainder and tail consequence; the Q3 matrix rows, arbitrary finite sums, common core and all uniform or physical limits remain executable/open analysis."
+  },
+  "artifacts": {
+    "primary_script": "codes/foundations/pre_a_cp1_st8_q3lock_tail_hardy_ground_state_transform.py",
+    "independent_script": "codes/foundations/pre_a_cp1_st8_q3lock_tail_hardy_ground_state_transform_independent.py",
+    "hostile_script": "codes/foundations/pre_a_cp1_st8_q3lock_tail_hardy_ground_state_transform_hostile.py",
+    "integrated_verifier": "codes/foundations/pre_a_cp1_st8_q3lock_tail_hardy_ground_state_transform_verify.py",
+    "lean": "verification/lean/Tect/R421.lean"
+  },
+  "assumptions": [
+    "The R-419 conditional law is positive and normalized, and its projected momentum conductance is symmetric and nonnegative.",
+    "The Lyapunov vector V is strictly positive and the tail is a declared subset on which h_i is bounded below.",
+    "The finite Dirichlet form uses the same conductance normalization as R-419.",
+    "Tail-supported means f_i=0 for every core index; no global centering is silently assumed.",
+    "The Lean cross-check is a two-state algebraic witness, not a formalization of the full Q3 matrix calculation."
+  ],
+  "missing_assumptions": [
+    "A volume-, cutoff-, phase- and exhaustion-uniform lower bound for the R-419 tail rate on one Hamiltonian common core.",
+    "A compatible bound for the core mean and core-to-tail boundary term for arbitrary observables.",
+    "A uniform induced-core Schur/Poincare estimate and boundary-capacity control.",
+    "Two-sided form-norm control of the actual R-399 likelihood histories and a common split-limit map.",
+    "Hamiltonian-to-OS/KMS/GNS identification and a sectorwise coercive estimate."
+  ],
+  "promotion_criteria": [
+    "Prove the same transform on a declared unbounded Q3 common core with domain and closure control.",
+    "Establish uniform tail-rate, core-gap and boundary-capacity bounds under cutoff, volume, phase and exhaustion changes.",
+    "Add the missing variance decomposition and transfer to the R-399/R-415 history before any GNS or physical promotion."
+  ],
+  "stop_conditions": [
+    "A negative tail rate or non-symmetric conductance invalidates the Hardy consequence for that row and requires route repair.",
+    "An identity residual beyond tolerance stops promotion and indicates a sign, conductance or normalization defect.",
+    "Finite tail-supported control cannot be promoted to global Poincare, a mass gap, C6, Sector-A or Pre-A closure."
+  ],
+  "evidence_level": "T0 / exact finite algebra plus executed Q3-row integration; no uniform theorem or physical conclusion",
+  "non_claims": [
+    "No cutoff-, volume-, phase- or exhaustion-uniform Hardy constant.",
+    "No global Poincare or Schur theorem for arbitrary functions.",
+    "No common Hamiltonian core or split-limit dynamics.",
+    "No OS/KMS/GNS reconstruction or sectorwise spectral gap.",
+    "No continuum, C6, Sector-A, Pre-A, Yang-Mills or mass-gap conclusion."
+  ],
+  "formal_integration": {
+    "event_ordinal": 762,
+    "event_id": "20260831-r-421-tail-supported-hardy-ground-state-transfo",
+    "event_title": "R-421 tail-supported Hardy ground-state-transform interface",
+    "event_claim_ids": ["C6-SPACETIME-SIGNATURE", "EXP-001266", "R-421"],
+    "lean": "R421 PASS; two-state algebraic cross-check only",
+    "new_negative": false,
+    "tier_change": false,
+    "pdf": false
+  },
+  "boundary": "R-421 closes an exact finite tail-supported identity and its finite Q3 calibration. It does not close the uniform Lyapunov/Poincare, common-core, dynamics, GNS, continuum, C6, Sector-A or Pre-A gates.",
+  "next_unlock": "Prove a domain-controlled version on one Q3 Hamiltonian common core with uniform rate, core/boundary decomposition and R-399 history transfer; only then revisit the global Poincare and broken-sector GNS gates.",
+  "no_overclaim": "The nonnegative ground-state-transform remainder is an exact algebraic interface, not evidence that the physical tail is controlled in a regulator-independent or thermodynamic limit."
+}
