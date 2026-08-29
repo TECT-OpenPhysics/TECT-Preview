@@ -43,6 +43,7 @@ policy in `governance/development-history.md`.
 | [R-377](#r-377) | Gap-free odd-Matsubara resolvent telescoping budget | R-377 v1.0 is a T0 claim-nonbearing finite resolvent-interface checkpoint under EXP-001219. The exact positive-resolvent difference identity and its 64-layer budget pass 122/122 integrated assertions with Lean R377; the accumulated finite budget ratio is 0.9895313426497929 and the absolute-value square-root debt is recorded separately. Uniform locality, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
 | [R-382](#r-382) | Increasing-cutoff endpoint modular moment stress | R-382 v1.0 is a T0 claim-nonbearing finite cutoff-profile diagnostic under EXP-001224. The R-381 endpoint-energy bridge passes across 2816 all-prefix actual-Q3 contexts with Lean R382; edge max M_0 grows from 2.733031855844076 at d=3 to 41.64826651661874 at d=6 and max M_2 from 0.008378198414559081 to 17.719559304500326, with d=5 to d=6 ratios 8.855033106195243 and 36.38049903040583. This is finite growth evidence only; uniform M_0/M_2 control, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open |
 | [R-407](#r-407) | Canonical-path effective-resistance lower bound | R-407 v1.0 is a T0 claim-nonbearing finite constructive path checkpoint under EXP-001252. The maximum-conductance tree certificate passes primary 22510/22510, independent 22509/22509, hostile 6/6, integrated 35/35 and Lean R407 over 7 systems, 2688 contexts and 21120 rows. The exact intrinsic gap is [0.7570174175402339,5.647863075935321], the canonical lower envelope is [0.2613815898804392,2.508986944248343], and rho is [0.3985672393762041,3.825824154093709]. The finite path certificate exposes the conductance/probability inputs for a future uniform proof; common-core, phase, volume, exhaustion and QFT gates remain open |
+| [R-413](#r-413) | Mellin heat-trace bridge for mixed IR/UV spectral counting | R-413 v1.0 is a T0 claim-nonbearing finite Mellin checkpoint under EXP-001258. The R-412 mixed IR/UV envelope becomes an exact split-time heat identity, an integrable continuous UV budget and a finite late remainder over 7 systems, 2688 contexts and 21120 rows; primary 212594/212594, independent 149230/149230, hostile 8/8, integrated 44/44 and Lean R413 pass. Uniform split time/constants, common-core transfer and all physical/QFT gates remain open |
 | [R-412](#r-412) | Two-regime IR/UV mixed spectral-counting envelope for the normalized Green trace | R-412 v1.0 is a T0 claim-nonbearing finite spectral checkpoint under EXP-001257. For every declared exponent pair in {1/2,2/3,3/4,4/5,9/10} and every interior split, separate IR/UV constants give a finite trace envelope with an explicit UV zeta tail; primary 592762/592762, independent 592762/592762, hostile 9/9, integrated 55/55 and Lean R412 pass over 7 systems, 2688 contexts and 21120 rows. The row-wise optimizer is diagnostic only: no uniform split, common-core, phase, volume, exhaustion or QFT gate is closed |
 | [R-411](#r-411) | Sublinear spectral-counting exponent envelope for the normalized Green trace | R-411 v1.0 is a T0 claim-nonbearing finite spectral checkpoint under EXP-001256. For each ordered positive mode and declared alpha in {1/2,2/3,3/4,4/5,9/10}, C_alpha=max k/lambda_k^alpha gives a finite trace envelope with an explicit zeta tail; primary 508279/508279, independent 508279/508279, hostile 8/8, integrated 48/48 and Lean R411 pass over 7 systems, 2688 contexts and 21120 rows. Uniform exponent/constant control, common-core, phase, volume, exhaustion and QFT gates remain open |
 | [R-410](#r-410) | Quadratic eigenvalue-counting envelope for the normalized Green trace | R-410 v1.0 is a T0 claim-nonbearing finite spectral checkpoint under EXP-001255. The ordered positive spectrum gives c2=min lambda_k/k^2 and tr(W^+) <= H_(d-1)^(2)/c2 <= pi^2/(6*c2) over 7 systems, 2688 contexts and 21120 rows; primary 191473/191473, independent 191473/191473, hostile 6/6, integrated 46/46 and Lean R410 pass. The finite c2 range is [0.19600096779786974,1.2046269661757882] and the trace range is [0.44413751605172147,2.0052069566897663]. Uniform mode counting, common-core, phase, volume, exhaustion and QFT gates remain open |
@@ -700,6 +701,55 @@ Hamiltonian-to-OS/KMS/GNS identification, physical mass gap, continuum, C6,
 Sector-A or Pre-A closure.  No tier change, negative result or PDF is issued.
 
 **Proven in:** [R-407 certificate](strategy/pre-a-cp1-st8-q3lock-canonical-path-resistance-certificate-260830.md), [Lean entrypoint](verification/lean/Tect/R407.lean), primary/independent/hostile scripts, integrated verifier, [scope note](claims/C6-SPACETIME-SIGNATURE/notes/canonical-path-resistance-260830.md), and saved run artefacts.
+<a id="r-413"></a>
+### R-413 -- Mellin heat-trace bridge for mixed IR/UV spectral counting
+
+**Result ID.** R-413 is a T0, claim-nonbearing finite checkpoint under
+EXP-001258.  Let `lambda_1 <= ... <= lambda_m` be the positive spectrum of
+`W=D_pi^(-1/2)L D_pi^(-1/2)`, and let an R-412 profile supply lower modes
+`L_k=(k/C)^(1/alpha)` on an interior IR/UV split.  With
+`H(t)=sum_k exp(-t lambda_k)`, every finite row obeys the exact Mellin split
+
+```
+tr(W^+) = integral_0^tau H(t) dt
+          + sum_k exp(-tau lambda_k)/lambda_k.
+```
+
+The remainder is nonnegative.  The mixed lower envelopes also give
+
+```
+H(t) <= sum_(k<=r) exp(-t L_k)
+       + C_UV alpha_UV Gamma(alpha_UV) t^(-alpha_UV),
+```
+
+and hence a finite short-time budget for `0<alpha_UV<1`; the late remainder
+is bounded by the finite sum `sum_k exp(-tau L_k)/L_k`.  The row-wise profile
+selection remains diagnostic only.
+
+**Verification.** The volume-two fixture uses cutoff dimensions
+`3,4,5,6,8,10,12`, beta in `{1/2,1,2}`, both source signs, history signs,
+orderings, all prefixes, both history adjoints and both collar orientations.
+All 25 exponent pairs and every interior split are checked at seven ordered
+positive heat times with `tau=1`.  The primary lane passes `212594/212594`,
+the independent plain-loop lane `149230/149230`, the hostile lane `8/8`, the
+integrated verifier `44/44`, and Lean R413 compiles.  The inverse-trace range
+is `[0.44413751605172147,2.0052069566897663]`; the minimum continuous-UV heat
+slack is `2.4381603017647795e-05`, the minimum short-budget slack is
+`0.1831599576706407`, and the maximum Mellin residual is
+`1.7763568394002505e-15`.
+
+The hostile lane rejects omission of either IR/UV term, the wrong time or
+counting power, reversed time order, a negative Mellin remainder sign and
+`alpha_UV=1`.  These checks validate only the finite formula and its recorded
+scope.
+
+**Boundary.** R-413 proves no cutoff-, volume-, source-, phase- or
+exhaustion-uniform heat budget, common core, common split rule,
+Hamiltonian-to-OS/KMS/GNS identification, physical mass gap, continuum, C6,
+Sector-A or Pre-A closure.  No tier change, negative result or PDF is issued.
+
+**Proven in:** [R-413 certificate](strategy/pre-a-cp1-st8-q3lock-heat-trace-mellin-bridge-certificate-260831.md), [Lean entrypoint](verification/lean/Tect/R413.lean), primary/independent/hostile scripts, integrated verifier, [scope note](claims/C6-SPACETIME-SIGNATURE/notes/heat-trace-mellin-bridge-260831.md), and saved run artefacts.
+
 <a id="r-412"></a>
 ### R-412 -- Two-regime IR/UV mixed spectral-counting envelope for the normalized Green trace
 

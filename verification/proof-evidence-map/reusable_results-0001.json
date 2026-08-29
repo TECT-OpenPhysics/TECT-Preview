@@ -2,7 +2,39 @@
   "data": [
     {
       "accepted_event_ids": [
-        "20260831-mixed-ir-uv-spectral-counting-envelope-2026-08"
+        "20260831-mellin-heat-trace-bridge-for-mixed-ir-uv-counti"
+      ],
+      "anchor": "r-413",
+      "claim_ref_basis": {
+        "C6-SPACETIME-SIGNATURE": "proof_anchor_exact"
+      },
+      "claim_refs": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "co_recorded_negative_tags": [],
+      "detail": {
+        "boundary": "R-413 proves no cutoff-, volume-, source-, phase- or exhaustion-uniform heat budget, common core, common split rule, Hamiltonian-to-OS/KMS/GNS identification, physical mass gap, continuum, C6, Sector-A or Pre-A closure. No tier change, negative result or PDF is issued.",
+        "proven_in": "[R-413 certificate](strategy/pre-a-cp1-st8-q3lock-heat-trace-mellin-bridge-certificate-260831.md), [Lean entrypoint](verification/lean/Tect/R413.lean), primary/independent/hostile scripts, integrated verifier, [scope note](claims/C6-SPACETIME-SIGNATURE/notes/heat-trace-mellin-bridge-260831.md), and saved run artefacts.",
+        "result_id": "R-413 is a T0, claim-nonbearing finite checkpoint under EXP-001258. Let `lambda_1 <= ... <= lambda_m` be the positive spectrum of `W=D_pi^(-1/2)L D_pi^(-1/2)`, and let an R-412 profile supply lower modes `L_k=(k/C)^(1/alpha)` on an interior IR/UV split. With `H(t)=sum_k exp(-t lambda_k)`, every finite row obeys the exact Mellin split ``` tr(W^+) = integral_0^tau H(t) dt + sum_k exp(-tau lambda_k)/lambda_k. ``` The remainder is nonnegative. The mixed lower envelopes also give ``` H(t) <= sum_(k<=r) exp(-t L_k) + C_UV alpha_UV Gamma(alpha_UV) t^(-alpha_UV), ``` and hence a finite short-time budget for `0<alpha_UV<1`; the late remainder is bounded by the finite sum `sum_k exp(-tau L_k)/L_k`. The row-wise profile selection remains diagnostic only.",
+        "verification": "The volume-two fixture uses cutoff dimensions `3,4,5,6,8,10,12`, beta in `{1/2,1,2}`, both source signs, history signs, orderings, all prefixes, both history adjoints and both collar orientations. All 25 exponent pairs and every interior split are checked at seven ordered positive heat times with `tau=1`. The primary lane passes `212594/212594`, the independent plain-loop lane `149230/149230`, the hostile lane `8/8`, the integrated verifier `44/44`, and Lean R413 compiles. The inverse-trace range is `[0.44413751605172147,2.0052069566897663]`; the minimum continuous-UV heat slack is `2.4381603017647795e-05`, the minimum short-budget slack is `0.1831599576706407`, and the maximum Mellin residual is `1.7763568394002505e-15`. The hostile lane rejects omission of either IR/UV term, the wrong time or counting power, reversed time order, a negative Mellin remainder sign and `alpha_UV=1`. These checks validate only the finite formula and its recorded scope."
+      },
+      "detail_title": "Mellin heat-trace bridge for mixed IR/UV spectral counting",
+      "family_refs": [],
+      "id": "R-413",
+      "normalized_detail": {
+        "boundary": "R-413 proves no cutoff-, volume-, source-, phase- or exhaustion-uniform heat budget, common core, common split rule, Hamiltonian-to-OS/KMS/GNS identification, physical mass gap, continuum, C6, Sector-A or Pre-A closure. No tier change, negative result or PDF is issued.",
+        "proof_anchor": "[R-413 certificate](strategy/pre-a-cp1-st8-q3lock-heat-trace-mellin-bridge-certificate-260831.md), [Lean entrypoint](verification/lean/Tect/R413.lean), primary/independent/hostile scripts, integrated verifier, [scope note](claims/C6-SPACETIME-SIGNATURE/notes/heat-trace-mellin-bridge-260831.md), and saved run artefacts.",
+        "publication_target": "",
+        "reuse": "",
+        "statement": ""
+      },
+      "summary": "R-413 v1.0 is a T0 claim-nonbearing finite Mellin checkpoint under EXP-001258. The R-412 mixed IR/UV envelope becomes an exact split-time heat identity, an integrable continuous UV budget and a finite late remainder over 7 systems, 2688 contexts and 21120 rows; primary 212594/212594, independent 149230/149230, hostile 8/8, integrated 44/44 and Lean R413 pass. Uniform split time/constants, common-core transfer and all physical/QFT gates remain open",
+      "title": "Mellin heat-trace bridge for mixed IR/UV spectral counting"
+    },
+    {
+      "accepted_event_ids": [
+        "20260831-mixed-ir-uv-spectral-counting-envelope-2026-08",
+        "20260831-mellin-heat-trace-bridge-for-mixed-ir-uv-counti"
       ],
       "anchor": "r-412",
       "claim_ref_basis": {
@@ -190,7 +222,8 @@
     {
       "accepted_event_ids": [
         "20260830-harmonic-schur-capacity-decomposition-2026-08-3",
-        "20260831-spectral-mode-counting-zeta-envelope-2026-08-31"
+        "20260831-spectral-mode-counting-zeta-envelope-2026-08-31",
+        "20260831-mellin-heat-trace-bridge-for-mixed-ir-uv-counti"
       ],
       "anchor": "r-406",
       "claim_ref_basis": {
@@ -414,7 +447,8 @@
         "20260830-conditional-poincare-before-duhamel-shell-trans",
         "20260830-increasing-cutoff-conditional-gap-stress-2026-0",
         "20260830-phase-conditioned-intrinsic-graph-split-2026-08",
-        "20260831-spectral-mode-counting-zeta-envelope-2026-08-31"
+        "20260831-spectral-mode-counting-zeta-envelope-2026-08-31",
+        "20260831-mellin-heat-trace-bridge-for-mixed-ir-uv-counti"
       ],
       "anchor": "r-399",
       "claim_ref_basis": {
@@ -3467,47 +3501,6 @@
       },
       "summary": "Scoped T4 analytic/exact/executed/audited rank/lift and parameter-derivative boundary. The registered active-spectator covariance restriction is positive definite, so every nonzero R-146 proportional canonical block has rank two and cannot equal the rank-one fresh final innovation of the exact R-147 line. This excludes only the unchanged fresh block, not a new full-rank chart or a corrected adapted past. In a separately declared last-root coefficient chart, at each fixed adverse point the exact trace-bracket mismatch is positive for sufficiently small noise. With the current prefactor held fixed, the coefficient-background parameter gradient uses `f'''` and its Hessian uses `f''''`; the small-noise curvature is positive but the gradient is nonzero. No physical control Hessian is identified. Diagonal coefficient energy does not identify the complete owner. T-050, every phase verdict, and Sector A remain open",
       "title": "Canonical fresh-prefix rank obstruction, active-spectator lift boundary, and coefficient-parameter Hessian correction"
-    },
-    {
-      "accepted_event_ids": [
-        "20260802-a13-r-147-canonical-signed-common-terminal-and",
-        "20260802-r-148-canonical-fresh-final-rank-obstruction-an"
-      ],
-      "anchor": "r-147",
-      "claim_ref_basis": {
-        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION": "proof_anchor_exact"
-      },
-      "claim_refs": [
-        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
-      ],
-      "co_recorded_negative_tags": [
-        "AUDIT-2026-08-02-A13-R147-ABSOLUTE-DEFECT-AS-RELATIVE-HESSIAN",
-        "AUDIT-2026-08-02-A13-R147-R063-FOREST-BRACKET-CONFLATION",
-        "NG-2026-08-02-A13-ACTIVE-SPECTATOR-JET-OWNER-COMPLETION",
-        "NG-2026-08-02-A13-COMMON-TERMINAL-AUTOMATIC-SCALAR-SIGN",
-        "NG-2026-08-02-A13-ENDPOINT-LAW-OWNER-TRANSFER",
-        "NG-2026-08-02-A13-PRODUCTION-PAIR-GLOBAL-CONVEXITY",
-        "NG-2026-08-02-A13-R147-EXACT-CANONICAL-ACTIVE-SPECTATOR-LIFT"
-      ],
-      "detail": {
-        "audit_boundary": "Equal terminal Gaussian law does not preserve reveal allocations. A centred common-terminal scalar fixture still has positive trace-current defect. The retained production pair is not globally convex: the active-spectator curvature is negative once `R^2/e>-1/12+5sqrt(154)/132`, with fixed-nonzero-base zero-floor limit `-99/(250P)`. This is not a counterexample to the complete action because forest, future variance, balanced cross, returned low, spatial owners, and sextic are absent. No old-owner transfer, production trace-bracket match, complete non-collinear scalar estimate, T-050, A13, `OVERLAP_src`, Nelson, removal, interacting measure, BCC or other phase selection, or Sector-A closure is proved.",
-        "reuse_scope": "The signed terminal telescope and recursion are Hilbert martingale identities at fixed cutoff. Representation-universal transfer requires a unitary intertwining the entire conditional-expectation nest; equality for one actual terminal may occur on its cyclic tower subspace but still needs direct tower, incidence, and predictable bracket verification. The trace-bracket formula assumes the registered common heat, once-owned covariance, same-root recombination, exhaustive output or retained leakage, and adapted R-063 forest identification. The production sign theorem is only the exact affine-collinear coefficient slice.",
-        "statement": "For the actual fixed-cutoff R-141/R-142 trace-current terminal feature on the declared canonical source filtration, conditional expectation gives a unique signed common-terminal Doob tower. Polarization telescopes the complete relative terminal form into the base cross plus all signed reveal brackets, and the same identity has an exact conditional remainder recursion and continuous Brownian martingale-bracket form. The R-141 three-feature signature `(U,J,R)` compresses to `(U,Phi)` terminally and incrementwise when the common projection belongs to the nested reveal grid. Under the full R-125/R-063 incidence hypotheses, with `bar_tau=E[tau|F_(o-)]`, the exact conditioned residual is `E[r_o[p,q]|F_(o-)]=bar_tau_o[p,q]-beta_o[p,q]-<b_p,b_q>`. It equals the specific defect-free predictable mean Gram exactly when `bar_tau=beta`. The A1/R-075 production coefficients reconstruct `c0=3/(250P)`, `c1=243/(8000P)`, and `alpha=5/9`. Their retained `P+L` pair has affine-collinear curvature at least `2223/(25000P)`, hence a strict favourable same-root Gaussian defect. The separate zero-background L-row sign follows from an exact monotone-covariance decomposition.",
-        "tier_publication_target": "Scoped T4 analytic/exact/executed/audited advance and method boundary; suitable as a signed martingale-coordinate, predictable trace-bracket, and rational coefficient-curvature lemma after external review, not as a complete-action or vacuum-selection theorem.",
-        "where_proved": "Claim `A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION`, note `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-canonical-signed-common-terminal-doob-bracket-defect-boundary-260802-v1.0.tex.txt`, manifest `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_canonical_signed_common_terminal_doob_bracket_defect_boundary_manifest.json`, and the primary, independent, and integrated executable certificates listed there."
-      },
-      "detail_title": "Canonical signed common terminal, predictable trace-bracket defect, and affine-collinear production boundary",
-      "family_refs": [],
-      "id": "R-147",
-      "normalized_detail": {
-        "boundary": "Scoped T4 analytic/exact/executed/audited advance and method boundary; suitable as a signed martingale-coordinate, predictable trace-bracket, and rational coefficient-curvature lemma after external review, not as a complete-action or vacuum-selection theorem.",
-        "proof_anchor": "Claim `A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION`, note `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-canonical-signed-common-terminal-doob-bracket-defect-boundary-260802-v1.0.tex.txt`, manifest `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_canonical_signed_common_terminal_doob_bracket_defect_boundary_manifest.json`, and the primary, independent, and integrated executable certificates listed there.",
-        "publication_target": "",
-        "reuse": "The signed terminal telescope and recursion are Hilbert martingale identities at fixed cutoff. Representation-universal transfer requires a unitary intertwining the entire conditional-expectation nest; equality for one actual terminal may occur on its cyclic tower subspace but still needs direct tower, incidence, and predictable bracket verification. The trace-bracket formula assumes the registered common heat, once-owned covariance, same-root recombination, exhaustive output or retained leakage, and adapted R-063 forest identification. The production sign theorem is only the exact affine-collinear coefficient slice.",
-        "statement": "For the actual fixed-cutoff R-141/R-142 trace-current terminal feature on the declared canonical source filtration, conditional expectation gives a unique signed common-terminal Doob tower. Polarization telescopes the complete relative terminal form into the base cross plus all signed reveal brackets, and the same identity has an exact conditional remainder recursion and continuous Brownian martingale-bracket form. The R-141 three-feature signature `(U,J,R)` compresses to `(U,Phi)` terminally and incrementwise when the common projection belongs to the nested reveal grid. Under the full R-125/R-063 incidence hypotheses, with `bar_tau=E[tau|F_(o-)]`, the exact conditioned residual is `E[r_o[p,q]|F_(o-)]=bar_tau_o[p,q]-beta_o[p,q]-<b_p,b_q>`. It equals the specific defect-free predictable mean Gram exactly when `bar_tau=beta`. The A1/R-075 production coefficients reconstruct `c0=3/(250P)`, `c1=243/(8000P)`, and `alpha=5/9`. Their retained `P+L` pair has affine-collinear curvature at least `2223/(25000P)`, hence a strict favourable same-root Gaussian defect. The separate zero-background L-row sign follows from an exact monotone-covariance decomposition."
-      },
-      "summary": "Scoped T4 analytic/exact/executed/audited advance and method boundary. The actual R-141/R-142 signed terminal feature has an exact fixed-cutoff canonical Doob telescope, conditional signed-remainder recursion, and continuous martingale-bracket representation. Representation-universal owner transport requires the whole projection nest; endpoint law alone does not determine reveal energies. Under the full registered R-125/R-063 incidence, the exact conditional residual is `E[r_o[p,q]|F_(o-)]=bar_tau_o[p,q]-beta_o[p,q]-<b_p,b_q>`, so equality to the specific defect-free predictable mean Gram is equivalent to `bar_tau=beta`. The A1/R-075 `P+L` coefficient pair has uniform affine-collinear curvature at least `2223/(25000P)` and a strict favourable Gaussian defect, but an active-spectator direction loses convexity above `R^2/e=-1/12+5sqrt(154)/132`. The complete non-collinear forest/future/balanced/low/sextic owner, T-050, phase selection, and Sector A remain open",
-      "title": "Canonical signed common terminal, predictable trace-bracket defect, and affine-collinear production boundary"
     }
   ],
   "kind": "reusable_results",

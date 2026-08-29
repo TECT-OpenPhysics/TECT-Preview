@@ -1,0 +1,111 @@
+{
+  "schema": "tect/pre-a-cp1-st8-q3lock-heat-trace-mellin-bridge/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-HEAT-TRACE-MELLIN-BRIDGE-v0",
+  "result_id": "R-413",
+  "title": "Mellin heat-trace bridge for a mixed IR/UV spectral envelope",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001258",
+  "claim_bearing": false,
+  "parent_explorations": ["EXP-001257", "EXP-001256", "EXP-001255"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY",
+    "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+  ],
+  "question": "Can the mixed IR/UV spectral envelope be converted into a split-time heat-trace and Mellin budget, with UV integrability controlling short times and an explicit IR head controlling the late remainder?",
+  "new_perspective": {
+    "principle": "For positive ordered modes lambda_k and a mixed R-412 profile, integrate H(t)=sum_k exp(-t lambda_k) over a finite time split tau. The Mellin identity tr(W^+)=int_0^tau H(t)dt+sum_k exp(-tau lambda_k)/lambda_k is exact in finite dimension. The lower envelopes lambda_k >= (k/C)^(1/alpha) give a head bound and a continuous UV heat bound C_UV alpha_UV Gamma(alpha_UV) t^(-alpha_UV).",
+    "route": [
+      "Enumerate every R-412 exponent pair and interior split on every actual conditional likelihood row.",
+      "Check the exact finite Mellin truncation plus nonnegative late remainder at all declared heat times and the split time tau.",
+      "Compare the actual heat trace with both the finite mixed lower-envelope sum and the continuous UV integral envelope.",
+      "Use the UV integral only in the short-time budget, where alpha_UV<1 makes int_0^tau t^(-alpha_UV)dt finite; use the finite mode lower envelope for the late remainder.",
+      "Keep row-wise selected profiles diagnostic; promote only after a fixed split, uniform constants and a common Hamiltonian core are proved."
+    ],
+    "qft_bridge": "The split-time form isolates the UV regulator contribution at short Euclidean time and the IR physical contribution in the late heat remainder. It can support the physical route only after uniform constants, a common core, R-399 shell transfer, R-406 Schur control and OS/KMS/GNS reconstruction are established."
+  },
+  "finite_theorem": {
+    "mellin_identity": "For 0<tau<infinity, tr(W^+)=int_0^tau H(t)dt+sum_k exp(-tau lambda_k)/lambda_k, with both terms nonnegative.",
+    "mixed_heat_envelope": "H(t)<=sum_(k<=r) exp(-t (k/C_IR)^(1/alpha_IR))+C_UV alpha_UV Gamma(alpha_UV)t^(-alpha_UV), t>0.",
+    "short_time_budget": "int_0^tau H(t)dt <= sum_(k<=r)(1-exp(-tau L_k))/L_k + C_UV alpha_UV Gamma(alpha_UV) tau^(1-alpha_UV)/(1-alpha_UV).",
+    "late_remainder_budget": "sum_k exp(-tau lambda_k)/lambda_k <= sum_(k<=r)exp(-tau L_k)/L_k+sum_(k>r)exp(-tau L_k)/L_k.",
+    "scope": "Every implication is finite-dimensional and rowwise; no uniform time, split, exponent, constant, core, volume, phase or exhaustion statement is asserted."
+  },
+  "finite_fixture": {
+    "admissible_pairs": [
+      {"volume": 2, "cutoff_dimensions": [3, 4, 5, 6, 8, 10, 12]}
+    ],
+    "counting_exponents": ["1/2", "2/3", "3/4", "4/5", "9/10"],
+    "split_policy": "all integers r with 1<=r<d-1",
+    "heat_time_values": ["1/16", "1/8", "1/4", "1/2", "1", "2", "4"],
+    "mellin_split_time": "1",
+    "beta_values": ["1/2", "1", "2"],
+    "source_support_values": [[0]],
+    "source_amplitude": "1/3",
+    "hbar": "1",
+    "time_step": "1/18",
+    "source_sign_values": [-1, 1],
+    "history_sign_values": [-1, 1],
+    "history_adjoint_values": [0, 1],
+    "orientations": ["right", "left"],
+    "chi": "1",
+    "r": "-1",
+    "g": "3/5",
+    "c": "3/5",
+    "lambda": "1/10",
+    "probability_floor": 1e-30,
+    "resistance_eigen_floor": 1e-14,
+    "numerical_tolerance": 1e-8,
+    "variance_floor": 1e-20,
+    "hostile_zero_threshold": 1e-12,
+    "crosscheck_tolerance": 5e-6
+  },
+  "scope": {
+    "finite_mellin_identity_closed": true,
+    "finite_mixed_heat_envelope_closed": true,
+    "finite_short_time_uv_budget_closed": true,
+    "finite_likelihood_row_coverage_closed": true,
+    "cutoff_independent_heat_budget_closed": false,
+    "volume_independent_heat_budget_closed": false,
+    "phase_uniform_heat_budget_closed": false,
+    "exhaustion_uniform_heat_budget_closed": false,
+    "common_core_closed": false,
+    "common_split_rule_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R413.lean",
+    "theorem_markers": ["mellin_remainder_nonnegative", "heat_monotone", "uv_integral_positive", "finite_scope"],
+    "command": "lake env lean Tect/R413.lean",
+    "boundary": "Lean checks only scalar positivity, monotonicity and finite Mellin bookkeeping; ordered matrix spectra, Gibbs rows, graph construction and all uniform or physical limits remain in the executable/open boundary."
+  },
+  "artifacts": {
+    "primary_script": "codes/foundations/pre_a_cp1_st8_q3lock_heat_trace_mellin_bridge.py",
+    "independent_script": "codes/foundations/pre_a_cp1_st8_q3lock_heat_trace_mellin_bridge_independent.py",
+    "hostile_script": "codes/foundations/pre_a_cp1_st8_q3lock_heat_trace_mellin_bridge_hostile.py",
+    "integrated_verifier": "codes/foundations/pre_a_cp1_st8_q3lock_heat_trace_mellin_bridge_verify.py",
+    "lean": "verification/lean/Tect/R413.lean"
+  },
+  "promotion_criteria": [
+    "Prove a fixed or analytically controlled split time and IR/UV split rule with positive uniform constants on one Hamiltonian common core.",
+    "Control the heat budget under cutoff, volume, phase, source and exhaustion changes, including the late remainder and the short-time UV integral.",
+    "Transfer the heat budget to the R-399 conditional shell and combine it with the R-406 Schur residual before any common-alpha or GNS promotion."
+  ],
+  "stop_conditions": [
+    "If the UV exponent reaches 1 or above, the short-time integral diverges and the candidate must be rejected.",
+    "If a proposed heat envelope omits the UV integral, reverses the Mellin remainder sign or uses a wrong power, retain the exact failed inequality and do not promote it.",
+    "Finite heat-trace and Mellin checks are not a uniform, common-core, GNS, physical-gap, continuum, C6, Sector-A or Pre-A theorem."
+  ],
+  "boundary": "T0 claim-nonbearing finite Mellin heat-trace bridge for the R-412 mixed spectral envelope only. It proves no cutoff-, volume-, source-, phase- or exhaustion-uniform budget, common core, common split rule, OS/KMS/GNS reconstruction, mass gap, continuum, C6, Sector-A or Pre-A closure.",
+  "no_overclaim": "The Mellin split turns the mixed counting inequality into an explicit finite-time budget and identifies a precise uniformity target, but it does not supply the required uniform constants or physical-sector reconstruction.",
+  "recorded_by": "Codex"
+}

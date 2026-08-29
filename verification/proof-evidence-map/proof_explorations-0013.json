@@ -6877,6 +6877,136 @@
       "task_id": "T-054",
       "title": "Two-regime IR/UV mixed spectral-counting envelope for the normalized Green trace",
       "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "axis": "UV omission",
+          "check": "An exact two-mode toy gives a short-time deficit 0.4323323583816936 when the UV term is omitted.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "IR omission",
+          "check": "An exact two-mode toy gives a late-remainder deficit 0.3678794411714424 when the IR head is omitted.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "time exponent",
+          "check": "Replacing t^(-alpha_UV) by t^(alpha_UV) gives a minimum toy slack -0.56916836825572.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "counting power",
+          "check": "Replacing the reciprocal mode power by a direct alpha power gives a small-spectrum slack -0.04092588658315521.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "time ordering",
+          "check": "Reversing the grid creates heat increases 0.38489600036266314 and 1.476288952842503.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "Mellin sign",
+          "check": "Subtracting the late remainder gives residuals 1.2554255560671501 and 0.03827749454306026.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "divergent tail",
+          "check": "alpha_UV=1 is rejected before an integral budget is formed.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "uniform and physical promotion",
+          "check": "The finite row-wise optimizer and heat grid do not establish uniform constants, a common core, GNS coercivity, a physical gap, continuum, C6, Sector-A or Pre-A closure.",
+          "disposition": "UPHELD-OPEN"
+        }
+      ],
+      "boundary": "T0 claim-nonbearing finite Mellin heat-trace bridge only. It proves no cutoff-, volume-, source-, phase- or exhaustion-uniform estimate, common core, common split rule, OS/KMS/GNS reconstruction, mass gap, continuum, C6, Sector-A or Pre-A closure.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "The Mellin identity separates short Euclidean time from the late inverse-spectrum remainder. A sublinear UV exponent makes the continuous heat envelope integrable at zero, while the finite IR/UV lower envelopes bound the late remainder. The result is a concrete uniformity target, not a uniform theorem.",
+      "evidence_refs": [
+        "strategy/pre-a-cp1-st8-q3lock-heat-trace-mellin-bridge-manifest.json#new_perspective",
+        "strategy/pre-a-cp1-st8-q3lock-heat-trace-mellin-bridge-certificate-260831.md#Verification",
+        "codes/foundations/pre_a_cp1_st8_q3lock_heat_trace_mellin_bridge.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_heat_trace_mellin_bridge_independent.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_heat_trace_mellin_bridge_hostile.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_heat_trace_mellin_bridge_verify.py#main",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-primary-pre_a_cp1_st8_q3lock_heat_trace_mellin_bridge/primary.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-independent-pre_a_cp1_st8_q3lock_heat_trace_mellin_bridge/independent.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-hostile-pre_a_cp1_st8_q3lock_heat_trace_mellin_bridge/hostile.json#derived",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-integrated-pre_a_cp1_st8_q3lock_heat_trace_mellin_bridge/integrated.json#derived",
+        "verification/lean/Tect/R413.lean#mellin_remainder_nonnegative",
+        "claims/C6-SPACETIME-SIGNATURE/notes/heat-trace-mellin-bridge-260831.md#R-413"
+      ],
+      "finding": "The primary lane passes 212594/212594 assertions over 7 systems, 2688 contexts and 21120 conditional rows. The independent lane passes 149230/149230 on the same grid, the hostile lane passes 8/8, the integrated verifier passes 44/44, and Lean R413 compiles. The inverse trace is [0.44413751605172147,2.0052069566897663], the minimum continuous-UV heat slack is 2.4381603017647795e-05, the minimum short-time budget slack is 0.1831599576706407, and the maximum Mellin identity residual is 1.7763568394002505e-15.",
+      "formal_integration": {
+        "events": [
+          "20260831-mellin-heat-trace-bridge-for-mixed-ir-uv-counti"
+        ],
+        "lean": "R413 PASS",
+        "negatives": [],
+        "no_new_negative": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "results": [
+          "R-413"
+        ]
+      },
+      "formal_refs": {
+        "events": [
+          "20260831-mellin-heat-trace-bridge-for-mixed-ir-uv-counti"
+        ],
+        "negatives": [],
+        "results": [
+          "R-413"
+        ]
+      },
+      "gate_ids": [
+        "PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY",
+        "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+        "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+      ],
+      "id": "EXP-001258",
+      "method": [
+        "For every actual conditional likelihood row, form the normalized intrinsic Laplacian and sort its positive spectrum.",
+        "Enumerate all 25 declared IR/UV exponent pairs and every interior split from the R-412 family.",
+        "Check the exact finite Mellin truncation identity at tau=1, nonnegative late remainder, and monotonic heat values at seven ordered positive times.",
+        "Compare the actual heat trace with the finite mixed lower-envelope sum and the continuous UV integral C_UV alpha_UV Gamma(alpha_UV)t^(-alpha_UV).",
+        "Integrate the UV term over [0,tau] and bound the late remainder by the finite lower-envelope modes.",
+        "Repeat the full grid in an independent plain-loop implementation and apply omission, sign, exponent, time-order and divergent-tail hostile mutations."
+      ],
+      "next_action": "Prove a fixed or analytically controlled split time and IR/UV split rule with positive uniform constants on one Hamiltonian common core; transfer the short/late heat budget to the R-399 shell and combine it with the R-406 Schur residual.",
+      "no_overclaim": "The Mellin split identifies a precise time-domain uniformity target and validates the finite implication; it does not supply the missing regulator-independent constants or physical-sector reconstruction.",
+      "provenance": "contemporaneous",
+      "qft_interface": {
+        "closed": "Finite Mellin identity, mixed heat envelope, short-time UV integrability, late finite remainder, full row coverage, hostile shortcut rejection and Lean scalar bookkeeping.",
+        "open": "Uniform split time and constants on a Hamiltonian common core, phase selection, R-399 shell transfer, R-406 combination, OS/KMS/GNS reconstruction, continuum and physical-gap obligations."
+      },
+      "question": "Can the mixed IR/UV spectral envelope be converted into a split-time heat-trace and Mellin budget, with UV integrability controlling short times and an explicit IR head controlling the late remainder?",
+      "recorded_at": "2026-08-31T00:00:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001257",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001256",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001255",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-08-29",
+      "schema": "tect/proof-exploration/1.0",
+      "schema_version": "1.0",
+      "task_id": "T-054",
+      "title": "Mellin heat-trace bridge for mixed IR/UV spectral counting",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",

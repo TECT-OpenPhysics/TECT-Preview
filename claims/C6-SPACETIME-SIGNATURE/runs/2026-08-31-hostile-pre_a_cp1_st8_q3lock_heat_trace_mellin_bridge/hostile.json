@@ -1,0 +1,104 @@
+{
+  "assertion_count": 8,
+  "boundary": "T0 claim-nonbearing finite Mellin heat-trace bridge for the R-412 mixed spectral envelope only. It proves no cutoff-, volume-, source-, phase- or exhaustion-uniform budget, common core, common split rule, OS/KMS/GNS reconstruction, mass gap, continuum, C6, Sector-A or Pre-A closure.",
+  "checks": [
+    {
+      "actual": [
+        0.47036628421044746,
+        0.1330569238746116
+      ],
+      "expected": "nonnegative continuous-envelope slack",
+      "name": "baseline continuous heat bound",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.4323323583816936,
+      "expected": "toy short actual exceeds head-only budget",
+      "name": "UV term omission rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.3678794411714424,
+      "expected": "toy late actual exceeds UV-tail-only budget",
+      "name": "IR head omission rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": -0.56916836825572,
+      "expected": "t^alpha is not t^-alpha",
+      "name": "wrong time power rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": -0.04092588658315521,
+      "expected": "lambda^alpha is not the reciprocal lower-envelope power",
+      "name": "wrong counting power rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.38489600036266314,
+        1.476288952842503
+      ],
+      "expected": "heat is decreasing only in increasing time",
+      "name": "reverse time ordering rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        1.2554255560671501,
+        0.03827749454306026
+      ],
+      "expected": "late remainder enters with a plus sign",
+      "name": "Mellin remainder sign rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "alpha_uv=1 outside the integrable domain",
+      "name": "alpha one divergent tail rejected",
+      "status": "PASS"
+    }
+  ],
+  "derived": {
+    "alpha_one_rejected": true,
+    "mutation": "omitted UV/head terms, wrong time power, wrong counting power, reversed time order, Mellin sign and alpha=1",
+    "selected": [
+      {
+        "alpha_uv": 0.5,
+        "dimension": 3,
+        "good_late_bound": 0.6277127780335755,
+        "good_min_heat_slack": 0.47036628421044746,
+        "good_short_bound": 2.5828211256513063,
+        "mixed_key": "ir=0.8;uv=0.5;split=1",
+        "reverse_heat_max_increase": 0.38489600036266314,
+        "split": 1,
+        "trace_inverse": 1.6026715567191103,
+        "wrong_sign_residual": 1.2554255560671501
+      },
+      {
+        "alpha_uv": 0.5,
+        "dimension": 12,
+        "good_late_bound": 0.10907447988514334,
+        "good_min_heat_slack": 0.1330569238746116,
+        "good_short_bound": 1.8001113105774507,
+        "mixed_key": "ir=0.9;uv=0.5;split=7",
+        "reverse_heat_max_increase": 1.476288952842503,
+        "split": 7,
+        "trace_inverse": 0.9459598191730915,
+        "wrong_sign_residual": 0.03827749454306026
+      }
+    ],
+    "toy": {
+      "ir_omission_late_deficit": 0.3678794411714424,
+      "uv_omission_short_deficit": 0.4323323583816936,
+      "wrong_power_slack": -0.04092588658315521,
+      "wrong_time_min_slack": -0.56916836825572
+    }
+  },
+  "exploration_id": "EXP-001258",
+  "manifest": "strategy/pre-a-cp1-st8-q3lock-heat-trace-mellin-bridge-manifest.json",
+  "result_id": "R-413",
+  "schema": "tect/pre-a-r413-hostile/1.0",
+  "verdict": "PASS"
+}

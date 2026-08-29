@@ -2179,6 +2179,68 @@
         "verification/lean/Tect/R412.lean"
       ],
       "unresolved_claim_ids": []
+    },
+    {
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE",
+        "EXP-001258",
+        "R-413"
+      ],
+      "claim_ref_basis": {
+        "C6-SPACETIME-SIGNATURE": "explicit_claim_ids"
+      },
+      "claim_refs": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "date": "2026-08-31",
+      "header": "[Mellin heat-trace bridge for mixed IR/UV counting] - 2026-08-31",
+      "id": "20260831-mellin-heat-trace-bridge-for-mixed-ir-uv-counti",
+      "keywords": [
+        "EXP-001258",
+        "IR",
+        "Mellin",
+        "Q3LOCK",
+        "R-413",
+        "UV",
+        "heat-trace",
+        "mixed"
+      ],
+      "linked_result_ids": [
+        "R-399",
+        "R-406",
+        "R-412",
+        "R-413"
+      ],
+      "negative_results": [],
+      "notes": [
+        "strategy/pre-a-cp1-st8-q3lock-heat-trace-mellin-bridge-manifest.json",
+        "strategy/pre-a-cp1-st8-q3lock-heat-trace-mellin-bridge-certificate-260831.md",
+        "claims/C6-SPACETIME-SIGNATURE/notes/heat-trace-mellin-bridge-260831.md"
+      ],
+      "raw": "## [Mellin heat-trace bridge for mixed IR/UV counting] - 2026-08-31\n\nR-413 / EXP-001258 records a finite, claim-nonbearing Mellin heat-trace bridge extending R-412.  For every ordered positive normalized-Laplacian spectrum, all 25 IR/UV exponent pairs, every interior split, seven ordered heat times and tau=1, the exact finite identity tr(W^+)=int_0^tau H(t)dt+sum exp(-tau lambda_k)/lambda_k is checked.  The mixed lower envelopes give a finite heat sum, a continuous UV envelope C_UV alpha_UV Gamma(alpha_UV)t^(-alpha_UV), an integrable short-time budget, and a finite late remainder bound.\n\nPrimary passes 212594/212594; the independent plain-loop lane passes 149230/149230 over 7 systems, 2688 contexts and 21120 rows.  Hostile checks pass 8/8 and integrated verification passes 44/44; Lean R413 compiles.  The inverse trace is [0.44413751605172147,2.0052069566897663], minimum continuous-UV heat slack is 2.4381603017647795e-05, minimum short-budget slack is 0.1831599576706407, and maximum Mellin residual is 1.7763568394002505e-15.\n\nThis remains T0 finite evidence.  Uniform split time/constants on a common Hamiltonian core, R-399 shell transfer, R-406 combination, OS/KMS/GNS reconstruction, physical gap, continuum, C6, Sector-A and Pre-A remain open.  No tier change, negative result or PDF is issued.\n\n",
+      "result_ids": [
+        "R-399",
+        "R-406",
+        "R-412",
+        "R-413"
+      ],
+      "result_link_basis": {
+        "R-399": "explicit_result_id",
+        "R-406": "explicit_result_id",
+        "R-412": "explicit_result_id",
+        "R-413": "explicit_result_id"
+      },
+      "scripts": [
+        "codes/foundations/pre_a_cp1_st8_q3lock_heat_trace_mellin_bridge.py",
+        "codes/foundations/pre_a_cp1_st8_q3lock_heat_trace_mellin_bridge_independent.py",
+        "codes/foundations/pre_a_cp1_st8_q3lock_heat_trace_mellin_bridge_hostile.py",
+        "codes/foundations/pre_a_cp1_st8_q3lock_heat_trace_mellin_bridge_verify.py",
+        "verification/lean/Tect/R413.lean"
+      ],
+      "unresolved_claim_ids": [
+        "EXP-001258",
+        "R-413"
+      ]
     }
   ],
   "kind": "accepted_events",

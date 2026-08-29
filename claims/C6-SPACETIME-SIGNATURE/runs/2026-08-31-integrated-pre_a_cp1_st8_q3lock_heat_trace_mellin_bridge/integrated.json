@@ -1,0 +1,771 @@
+{
+  "boundary": "T0 claim-nonbearing finite Mellin heat-trace bridge for the R-412 mixed spectral envelope only. It proves no cutoff-, volume-, source-, phase- or exhaustion-uniform budget, common core, common split rule, OS/KMS/GNS reconstruction, mass gap, continuum, C6, Sector-A or Pre-A closure.",
+  "checks": [
+    {
+      "actual": "['R-413', 'EXP-001258', False]",
+      "expected": "R-413/EXP-001258/false",
+      "group": "identity",
+      "name": "manifest identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'cutoff_independent_heat_budget_closed': False, 'volume_independent_heat_budget_closed': False, 'phase_uniform_heat_budget_closed': False, 'exhaustion_uniform_heat_budget_closed': False, 'common_core_closed': False, 'common_split_rule_closed': False, 'hamiltonian_os_identification_closed': False, 'kms_gns_gap_closed': False, 'continuum_closed': False, 'c6_closed': False, 'sector_a_closed': False, 'pre_a_closed': False}",
+      "expected": "all promoted flags false",
+      "group": "scope",
+      "name": "scope firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": "[]",
+      "expected": "all R-413 artifacts",
+      "group": "provenance",
+      "name": "artifacts present",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'codes/foundations/pre_a_cp1_st8_q3lock_heat_trace_mellin_bridge.py': 'cf9eef0a7bff7e26c9795321d22329da4da57283fdd53bceba526e1e165a79f4', 'codes/foundations/pre_a_cp1_st8_q3lock_heat_trace_mellin_bridge_independent.py': '46be437ef1714009b458e86f51788c6c19847c7c083bbea232eab2de215cf20a', 'codes/foundations/pre_a_cp1_st8_q3lock_heat_trace_mellin_bridge_hostile.py': '23604f9e68f90d8011a34fa14e8a098728a533746eda88674408e342b093e8ff', 'verification/lean/Tect/R413.lean': '32c50cb13143589a70ac89918ed872cd3e1c2d675b5b0c5b8e24a406ab2991bb'}",
+      "expected": "distinct",
+      "group": "provenance",
+      "name": "source hashes distinct",
+      "status": "PASS"
+    },
+    {
+      "actual": "['mellin_remainder_nonnegative', 'heat_monotone', 'uv_integral_positive', 'finite_scope']",
+      "expected": "declared markers",
+      "group": "Lean",
+      "name": "Lean markers",
+      "status": "PASS"
+    },
+    {
+      "actual": "finite scalar file",
+      "expected": "no promotion text",
+      "group": "Lean",
+      "name": "Lean boundary",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-413 PRIMARY PASS 212594/212594 systems=7 contexts=2688 rows=21120 heat_times=7 candidates=[25, 50, 75, 100, 150, 200, 250] trace=[0.444138,2.00521] slack=[2.43816e-05,0.18316]",
+      "expected": "exit 0 and output",
+      "group": "executables",
+      "name": "run pre_a_cp1_st8_q3lock_heat_trace_mellin_bridge.py",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-413 INDEPENDENT PASS 149230/149230 systems=7 contexts=2688 rows=21120 heat_times=7 candidates=[25, 50, 75, 100, 150, 200, 250] trace=[0.444138,2.00521] slack=[2.43816e-05,0.18316]",
+      "expected": "exit 0 and output",
+      "group": "executables",
+      "name": "run pre_a_cp1_st8_q3lock_heat_trace_mellin_bridge_independent.py",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-413 HOSTILE PASS 8/8 dimensions=[3, 12] toy_uv_omission=0.432332",
+      "expected": "exit 0 and output",
+      "group": "executables",
+      "name": "run pre_a_cp1_st8_q3lock_heat_trace_mellin_bridge_hostile.py",
+      "status": "PASS"
+    },
+    {
+      "actual": "Tect/R413.lean:5:78: warning: Variable name `htau` is not explicitly referenced.\n\nThe binding can be removed (if unused) or named `_` (if used implicitly).\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`",
+      "expected": "exit 0",
+      "group": "Lean",
+      "name": "Lean compile",
+      "status": "PASS"
+    },
+    {
+      "actual": "PASS",
+      "expected": "PASS",
+      "group": "executables",
+      "name": "primary verdict",
+      "status": "PASS"
+    },
+    {
+      "actual": "PASS",
+      "expected": "PASS",
+      "group": "executables",
+      "name": "independent verdict",
+      "status": "PASS"
+    },
+    {
+      "actual": "PASS",
+      "expected": "PASS",
+      "group": "hostile",
+      "name": "hostile verdict",
+      "status": "PASS"
+    },
+    {
+      "actual": "[7, 7]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent system_count",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2688, 2688]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent context_count",
+      "status": "PASS"
+    },
+    {
+      "actual": "[21120, 21120]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent comparison_row_count",
+      "status": "PASS"
+    },
+    {
+      "actual": "[[0.0625, 0.125, 0.25, 0.5, 1.0, 2.0, 4.0], [0.0625, 0.125, 0.25, 0.5, 1.0, 2.0, 4.0]]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent heat_time_values",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.0, 1.0]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent mellin_split_time",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.44413751605172147, 0.44413751605155904]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent minimum_trace_inverse",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.0052069566897663, 2.005206956689766]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent maximum_trace_inverse",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.44350580687989016, 0.443505806879724]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent minimum_short_actual",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.5559609450966212, 1.5559609450966208]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent maximum_short_actual",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.0006317091718291228, 0.0006317091718288948]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent minimum_late_actual",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.6344445888135172, 0.6344445888135172]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent maximum_late_actual",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.0006317091718291228, 0.0006317091718288948]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent minimum_mellin_remainder",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.7763568394002505e-15, 1.7208456881689926e-15]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent maximum_mellin_identity_abs_residual",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.5440343280600988e-10, 1.5440343280581624e-10]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent minimum_heat_value",
+      "status": "PASS"
+    },
+    {
+      "actual": "[4.564774679110289, 4.5647746791102914]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent maximum_heat_value",
+      "status": "PASS"
+    },
+    {
+      "actual": "[-1.2429200624632712e-05, -1.2429200624624924e-05]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent maximum_heat_increase",
+      "status": "PASS"
+    },
+    {
+      "actual": "[-4.440892098500626e-16, -4.440892098500626e-16]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent minimum_candidate_heat_slack",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.4381603017647795e-05, 2.438160301767752e-05]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent minimum_continuous_heat_slack",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.1831599576706407, 0.1831599576706623]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent minimum_short_budget_slack",
+      "status": "PASS"
+    },
+    {
+      "actual": "[-1.6653345369377348e-16, -3.3306690738754696e-16]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent minimum_late_budget_slack",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.9378562819282747, 0.9378562819282893]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent minimum_selected_short_bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[5.214677699498523, 5.214677699498524]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent maximum_selected_short_bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.002343460890427082, 0.0023434608903857936]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent minimum_selected_late_bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.6356197368883323, 0.6356197368883326]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent maximum_selected_late_bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[[25, 50, 75, 100, 150, 200, 250], [25, 50, 75, 100, 150, 200, 250]]",
+      "expected": "within 5e-06",
+      "group": "independence",
+      "name": "primary-independent candidate_count_per_row",
+      "status": "PASS"
+    },
+    {
+      "actual": "7",
+      "expected": "7",
+      "group": "coverage",
+      "name": "system grid reached",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2688, 21120]",
+      "expected": "positive rows beyond contexts",
+      "group": "coverage",
+      "name": "context grid reached",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.0006317091718291228, 1.7763568394002505e-15]",
+      "expected": "finite nonnegative remainder and exact split",
+      "group": "Mellin",
+      "name": "Mellin identity aggregate",
+      "status": "PASS"
+    },
+    {
+      "actual": "[-4.440892098500626e-16, 2.4381603017647795e-05]",
+      "expected": "all heat slacks nonnegative",
+      "group": "heat envelope",
+      "name": "heat envelope aggregate",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.1831599576706407, -1.6653345369377348e-16]",
+      "expected": "short/late budgets nonnegative",
+      "group": "split budget",
+      "name": "split budgets aggregate",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'alpha_one_rejected': True, 'mutation': 'omitted UV/head terms, wrong time power, wrong counting power, reversed time order, Mellin sign and alpha=1', 'selected': [{'alpha_uv': 0.5, 'dimension': 3, 'good_late_bound': 0.6277127780335755, 'good_min_heat_slack': 0.47036628421044746, 'good_short_bound': 2.5828211256513063, 'mixed_key': 'ir=0.8;uv=0.5;split=1', 'reverse_heat_max_increase': 0.38489600036266314, 'split': 1, 'trace_inverse': 1.6026715567191103, 'wrong_sign_residual': 1.2554255560671501}, {'alpha_uv': 0.5, 'dimension': 12, 'good_late_bound': 0.10907447988514334, 'good_min_heat_slack': 0.1330569238746116, 'good_short_bound': 1.8001113105774507, 'mixed_key': 'ir=0.9;uv=0.5;split=7', 'reverse_heat_max_increase': 1.476288952842503, 'split': 7, 'trace_inverse': 0.9459598191730915, 'wrong_sign_residual': 0.03827749454306026}], 'toy': {'ir_omission_late_deficit': 0.3678794411714424, 'uv_omission_short_deficit': 0.4323323583816936, 'wrong_power_slack': -0.04092588658315521, 'wrong_time_min_slack': -0.56916836825572}}",
+      "expected": "all declared shortcuts fail closed",
+      "group": "hostile",
+      "name": "hostile mutation suite",
+      "status": "PASS"
+    }
+  ],
+  "derived": {
+    "command_outputs": {
+      "lean": "Tect/R413.lean:5:78: warning: Variable name `htau` is not explicitly referenced.\n\nThe binding can be removed (if unused) or named `_` (if used implicitly).\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`",
+      "pre_a_cp1_st8_q3lock_heat_trace_mellin_bridge.py": "R-413 PRIMARY PASS 212594/212594 systems=7 contexts=2688 rows=21120 heat_times=7 candidates=[25, 50, 75, 100, 150, 200, 250] trace=[0.444138,2.00521] slack=[2.43816e-05,0.18316]",
+      "pre_a_cp1_st8_q3lock_heat_trace_mellin_bridge_hostile.py": "R-413 HOSTILE PASS 8/8 dimensions=[3, 12] toy_uv_omission=0.432332",
+      "pre_a_cp1_st8_q3lock_heat_trace_mellin_bridge_independent.py": "R-413 INDEPENDENT PASS 149230/149230 systems=7 contexts=2688 rows=21120 heat_times=7 candidates=[25, 50, 75, 100, 150, 200, 250] trace=[0.444138,2.00521] slack=[2.43816e-05,0.18316]"
+    },
+    "hostile": {
+      "alpha_one_rejected": true,
+      "mutation": "omitted UV/head terms, wrong time power, wrong counting power, reversed time order, Mellin sign and alpha=1",
+      "selected": [
+        {
+          "alpha_uv": 0.5,
+          "dimension": 3,
+          "good_late_bound": 0.6277127780335755,
+          "good_min_heat_slack": 0.47036628421044746,
+          "good_short_bound": 2.5828211256513063,
+          "mixed_key": "ir=0.8;uv=0.5;split=1",
+          "reverse_heat_max_increase": 0.38489600036266314,
+          "split": 1,
+          "trace_inverse": 1.6026715567191103,
+          "wrong_sign_residual": 1.2554255560671501
+        },
+        {
+          "alpha_uv": 0.5,
+          "dimension": 12,
+          "good_late_bound": 0.10907447988514334,
+          "good_min_heat_slack": 0.1330569238746116,
+          "good_short_bound": 1.8001113105774507,
+          "mixed_key": "ir=0.9;uv=0.5;split=7",
+          "reverse_heat_max_increase": 1.476288952842503,
+          "split": 7,
+          "trace_inverse": 0.9459598191730915,
+          "wrong_sign_residual": 0.03827749454306026
+        }
+      ],
+      "toy": {
+        "ir_omission_late_deficit": 0.3678794411714424,
+        "uv_omission_short_deficit": 0.4323323583816936,
+        "wrong_power_slack": -0.04092588658315521,
+        "wrong_time_min_slack": -0.56916836825572
+      }
+    },
+    "independent": {
+      "c6_closed": false,
+      "candidate_count_per_row": [
+        25,
+        50,
+        75,
+        100,
+        150,
+        200,
+        250
+      ],
+      "common_core_closed": false,
+      "common_split_rule_closed": false,
+      "comparison_row_count": 21120,
+      "context_count": 2688,
+      "continuum_closed": false,
+      "cutoff_independent_heat_budget_closed": false,
+      "exhaustion_uniform_heat_budget_closed": false,
+      "finite_likelihood_row_coverage_closed": true,
+      "finite_mellin_identity_closed": true,
+      "finite_mixed_heat_envelope_closed": true,
+      "finite_short_time_uv_budget_closed": true,
+      "hamiltonian_os_identification_closed": false,
+      "heat_time_values": [
+        0.0625,
+        0.125,
+        0.25,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ],
+      "kms_gns_gap_closed": false,
+      "maximum_heat_increase": -1.2429200624624924e-05,
+      "maximum_heat_value": 4.5647746791102914,
+      "maximum_late_actual": 0.6344445888135172,
+      "maximum_mellin_identity_abs_residual": 1.7208456881689926e-15,
+      "maximum_selected_late_bound": 0.6356197368883326,
+      "maximum_selected_short_bound": 5.214677699498524,
+      "maximum_short_actual": 1.5559609450966208,
+      "maximum_trace_inverse": 2.005206956689766,
+      "mellin_split_time": 1.0,
+      "minimum_candidate_heat_slack": -4.440892098500626e-16,
+      "minimum_continuous_heat_slack": 2.438160301767752e-05,
+      "minimum_heat_value": 1.5440343280581624e-10,
+      "minimum_late_actual": 0.0006317091718288948,
+      "minimum_late_budget_slack": -3.3306690738754696e-16,
+      "minimum_mellin_remainder": 0.0006317091718288948,
+      "minimum_selected_late_bound": 0.0023434608903857936,
+      "minimum_selected_short_bound": 0.9378562819282893,
+      "minimum_short_actual": 0.443505806879724,
+      "minimum_short_budget_slack": 0.1831599576706623,
+      "minimum_trace_inverse": 0.44413751605155904,
+      "phase_uniform_heat_budget_closed": false,
+      "pre_a_closed": false,
+      "sector_a_closed": false,
+      "selected_key_histogram": {
+        "ir=0.5;uv=0.5;split=1": 1664,
+        "ir=0.6666666666666666;uv=0.5;split=1": 64,
+        "ir=0.6666666666666666;uv=0.5;split=2": 128,
+        "ir=0.75;uv=0.5;split=1": 128,
+        "ir=0.75;uv=0.5;split=3": 256,
+        "ir=0.8;uv=0.5;split=1": 128,
+        "ir=0.9;uv=0.5;split=1": 64,
+        "ir=0.9;uv=0.5;split=2": 2176,
+        "ir=0.9;uv=0.5;split=3": 2176,
+        "ir=0.9;uv=0.5;split=4": 2816,
+        "ir=0.9;uv=0.5;split=5": 2176,
+        "ir=0.9;uv=0.5;split=6": 3584,
+        "ir=0.9;uv=0.5;split=7": 4224,
+        "ir=0.9;uv=0.5;split=8": 1280,
+        "ir=0.9;uv=0.5;split=9": 256
+      },
+      "system_count": 7,
+      "system_profiles": {
+        "V=2/d=10": {
+          "context_count": 384,
+          "dimension": 10,
+          "maximum_heat_value": 4.5647746791102914,
+          "maximum_mellin_residual": 8.187894806610529e-16,
+          "maximum_trace": 1.308769116485811,
+          "minimum_candidate_heat_slack": 3.3087224502121107e-23,
+          "minimum_continuous_heat_slack": 0.00027174060157730915,
+          "minimum_late_slack": 2.0255497543836265e-07,
+          "minimum_mellin_remainder": 0.0023568000476125728,
+          "minimum_short_slack": 0.1831599576706623,
+          "minimum_trace": 0.5009404368792169,
+          "row_count": 4224
+        },
+        "V=2/d=12": {
+          "context_count": 384,
+          "dimension": 12,
+          "maximum_heat_value": 4.466671437180913,
+          "maximum_mellin_residual": 1.1015494072452725e-15,
+          "maximum_trace": 1.2059617833727887,
+          "minimum_candidate_heat_slack": 1.3023340792587932e-12,
+          "minimum_continuous_heat_slack": 2.438160301767752e-05,
+          "minimum_late_slack": 0.0001494936640599702,
+          "minimum_mellin_remainder": 0.0006317091718288948,
+          "minimum_short_slack": 0.2826291279392569,
+          "minimum_trace": 0.44413751605155904,
+          "row_count": 4992
+        },
+        "V=2/d=3": {
+          "context_count": 384,
+          "dimension": 3,
+          "maximum_heat_value": 1.8217271976643663,
+          "maximum_mellin_residual": 1.4988010832439613e-15,
+          "maximum_trace": 1.6026715567191103,
+          "minimum_candidate_heat_slack": -4.440892098500626e-16,
+          "minimum_continuous_heat_slack": 0.15451979174619812,
+          "minimum_late_slack": -3.3306690738754696e-16,
+          "minimum_mellin_remainder": 0.03762388680019985,
+          "minimum_short_slack": 1.5079189064459189,
+          "minimum_trace": 0.6457125867655792,
+          "row_count": 1536
+        },
+        "V=2/d=4": {
+          "context_count": 384,
+          "dimension": 4,
+          "maximum_heat_value": 2.650921700815413,
+          "maximum_mellin_residual": 1.1102230246251565e-15,
+          "maximum_trace": 2.005206956689766,
+          "minimum_candidate_heat_slack": 2.8082530333269073e-17,
+          "minimum_continuous_heat_slack": 0.11705324839808282,
+          "minimum_late_slack": 2.5743700015831705e-07,
+          "minimum_mellin_remainder": 0.02193155798340087,
+          "minimum_short_slack": 1.484373661690379,
+          "minimum_trace": 0.6618174815698086,
+          "row_count": 1920
+        },
+        "V=2/d=5": {
+          "context_count": 384,
+          "dimension": 5,
+          "maximum_heat_value": 3.412428121270823,
+          "maximum_mellin_residual": 1.1379786002407855e-15,
+          "maximum_trace": 1.880621699805282,
+          "minimum_candidate_heat_slack": 1.5964876989849053e-16,
+          "minimum_continuous_heat_slack": 0.04183183160031265,
+          "minimum_late_slack": 7.08835720784895e-06,
+          "minimum_mellin_remainder": 0.0507080148937476,
+          "minimum_short_slack": 0.9557972996819308,
+          "minimum_trace": 0.8274300845459804,
+          "row_count": 2304
+        },
+        "V=2/d=6": {
+          "context_count": 384,
+          "dimension": 6,
+          "maximum_heat_value": 4.024984693164846,
+          "maximum_mellin_residual": 1.7208456881689926e-15,
+          "maximum_trace": 1.7017657584743917,
+          "minimum_candidate_heat_slack": 9.122544841928815e-18,
+          "minimum_continuous_heat_slack": 0.012933016814898626,
+          "minimum_late_slack": 3.816022563139093e-06,
+          "minimum_mellin_remainder": 0.005480938016336453,
+          "minimum_short_slack": 0.47536869123518344,
+          "minimum_trace": 0.6068568603599752,
+          "row_count": 2688
+        },
+        "V=2/d=8": {
+          "context_count": 384,
+          "dimension": 8,
+          "maximum_heat_value": 4.058861427519663,
+          "maximum_mellin_residual": 7.91033905045424e-16,
+          "maximum_trace": 1.432054118089885,
+          "minimum_candidate_heat_slack": 1.0233216794016016e-19,
+          "minimum_continuous_heat_slack": 0.0011972161528421943,
+          "minimum_late_slack": 1.000079623826762e-06,
+          "minimum_mellin_remainder": 0.0068188093235159114,
+          "minimum_short_slack": 0.24911519152001238,
+          "minimum_trace": 0.6047964991890704,
+          "row_count": 3456
+        }
+      },
+      "volume_independent_heat_budget_closed": false
+    },
+    "lean": "PASS",
+    "primary": {
+      "c6_closed": false,
+      "candidate_count_per_row": [
+        25,
+        50,
+        75,
+        100,
+        150,
+        200,
+        250
+      ],
+      "common_core_closed": false,
+      "common_split_rule_closed": false,
+      "comparison_row_count": 21120,
+      "context_count": 2688,
+      "continuum_closed": false,
+      "cutoff_independent_heat_budget_closed": false,
+      "exhaustion_uniform_heat_budget_closed": false,
+      "finite_likelihood_row_coverage_closed": true,
+      "finite_mellin_identity_closed": true,
+      "finite_mixed_heat_envelope_closed": true,
+      "finite_short_time_uv_budget_closed": true,
+      "hamiltonian_os_identification_closed": false,
+      "heat_time_values": [
+        0.0625,
+        0.125,
+        0.25,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ],
+      "kms_gns_gap_closed": false,
+      "maximum_heat_increase": -1.2429200624632712e-05,
+      "maximum_heat_value": 4.564774679110289,
+      "maximum_late_actual": 0.6344445888135172,
+      "maximum_mellin_identity_abs_residual": 1.7763568394002505e-15,
+      "maximum_selected_late_bound": 0.6356197368883323,
+      "maximum_selected_short_bound": 5.214677699498523,
+      "maximum_short_actual": 1.5559609450966212,
+      "maximum_trace_inverse": 2.0052069566897663,
+      "mellin_split_time": 1.0,
+      "minimum_candidate_heat_slack": -4.440892098500626e-16,
+      "minimum_continuous_heat_slack": 2.4381603017647795e-05,
+      "minimum_heat_value": 1.5440343280600988e-10,
+      "minimum_late_actual": 0.0006317091718291228,
+      "minimum_late_budget_slack": -1.6653345369377348e-16,
+      "minimum_mellin_remainder": 0.0006317091718291228,
+      "minimum_selected_late_bound": 0.002343460890427082,
+      "minimum_selected_short_bound": 0.9378562819282747,
+      "minimum_short_actual": 0.44350580687989016,
+      "minimum_short_budget_slack": 0.1831599576706407,
+      "minimum_trace_inverse": 0.44413751605172147,
+      "phase_uniform_heat_budget_closed": false,
+      "pre_a_closed": false,
+      "sector_a_closed": false,
+      "selected_key_histogram": {
+        "ir=0.5;uv=0.5;split=1": 960,
+        "ir=0.6666666666666666;uv=0.5;split=1": 384,
+        "ir=0.6666666666666666;uv=0.5;split=2": 128,
+        "ir=0.75;uv=0.5;split=1": 192,
+        "ir=0.75;uv=0.5;split=3": 256,
+        "ir=0.8;uv=0.5;split=1": 256,
+        "ir=0.9;uv=0.5;split=1": 256,
+        "ir=0.9;uv=0.5;split=2": 2176,
+        "ir=0.9;uv=0.5;split=3": 2176,
+        "ir=0.9;uv=0.5;split=4": 2816,
+        "ir=0.9;uv=0.5;split=5": 2176,
+        "ir=0.9;uv=0.5;split=6": 3584,
+        "ir=0.9;uv=0.5;split=7": 4224,
+        "ir=0.9;uv=0.5;split=8": 1280,
+        "ir=0.9;uv=0.5;split=9": 256
+      },
+      "system_count": 7,
+      "system_profiles": {
+        "V=2/d=10": {
+          "candidate_count": 0,
+          "context_count": 384,
+          "dimension": 10,
+          "maximum_heat_value": 4.564774679110289,
+          "maximum_late_actual": 0.059055278598223106,
+          "maximum_mellin_residual": 1.1102230246251565e-15,
+          "maximum_short_actual": 1.2497138378875836,
+          "maximum_trace": 1.3087691164858066,
+          "minimum_candidate_heat_slack": 3.3087224502121107e-23,
+          "minimum_continuous_heat_slack": 0.00027174060157723347,
+          "minimum_late_actual": 0.0023568000476130607,
+          "minimum_late_slack": 2.0255497543879633e-07,
+          "minimum_mellin_remainder": 0.0023568000476130607,
+          "minimum_short_actual": 0.4985836368316138,
+          "minimum_short_slack": 0.1831599576706407,
+          "minimum_trace": 0.5009404368792272,
+          "row_count": 4224
+        },
+        "V=2/d=12": {
+          "candidate_count": 0,
+          "context_count": 384,
+          "dimension": 12,
+          "maximum_heat_value": 4.466671437180934,
+          "maximum_late_actual": 0.038053334818561074,
+          "maximum_mellin_residual": 1.3322676295501878e-15,
+          "maximum_short_actual": 1.1679084485542583,
+          "maximum_trace": 1.205961783372819,
+          "minimum_candidate_heat_slack": 1.3023340792525118e-12,
+          "minimum_continuous_heat_slack": 2.4381603017647795e-05,
+          "minimum_late_actual": 0.0006317091718291228,
+          "minimum_late_slack": 0.00014949366405965254,
+          "minimum_mellin_remainder": 0.0006317091718291228,
+          "minimum_short_actual": 0.44350580687989016,
+          "minimum_short_slack": 0.2826291279390793,
+          "minimum_trace": 0.44413751605172147,
+          "row_count": 4992
+        },
+        "V=2/d=3": {
+          "candidate_count": 0,
+          "context_count": 384,
+          "dimension": 3,
+          "maximum_heat_value": 1.8217271976643663,
+          "maximum_late_actual": 0.6277127780335756,
+          "maximum_mellin_residual": 1.7763568394002505e-15,
+          "maximum_short_actual": 1.0680781491493463,
+          "maximum_trace": 1.6026715567191103,
+          "minimum_candidate_heat_slack": -4.440892098500626e-16,
+          "minimum_continuous_heat_slack": 0.15451979174619815,
+          "minimum_late_actual": 0.0376238868002,
+          "minimum_late_slack": -1.6653345369377348e-16,
+          "minimum_mellin_remainder": 0.0376238868002,
+          "minimum_short_actual": 0.6080886999653797,
+          "minimum_short_slack": 1.5079189064459189,
+          "minimum_trace": 0.6457125867655796,
+          "row_count": 1536
+        },
+        "V=2/d=4": {
+          "candidate_count": 0,
+          "context_count": 384,
+          "dimension": 4,
+          "maximum_heat_value": 2.650921700815413,
+          "maximum_late_actual": 0.6344445888135172,
+          "maximum_mellin_residual": 1.3322676295501878e-15,
+          "maximum_short_actual": 1.3908226426715533,
+          "maximum_trace": 2.0052069566897663,
+          "minimum_candidate_heat_slack": 2.8102859124003177e-17,
+          "minimum_continuous_heat_slack": 0.1170532483980827,
+          "minimum_late_actual": 0.02193155798340091,
+          "minimum_late_slack": 2.5743700017219484e-07,
+          "minimum_mellin_remainder": 0.02193155798340091,
+          "minimum_short_actual": 0.6398859235864078,
+          "minimum_short_slack": 1.484373661690379,
+          "minimum_trace": 0.6618174815698085,
+          "row_count": 1920
+        },
+        "V=2/d=5": {
+          "candidate_count": 0,
+          "context_count": 384,
+          "dimension": 5,
+          "maximum_heat_value": 3.4124281212708234,
+          "maximum_late_actual": 0.3246607547086621,
+          "maximum_mellin_residual": 1.7763568394002505e-15,
+          "maximum_short_actual": 1.5559609450966212,
+          "maximum_trace": 1.8806216998052838,
+          "minimum_candidate_heat_slack": 1.5975719011573908e-16,
+          "minimum_continuous_heat_slack": 0.04183183160031319,
+          "minimum_late_actual": 0.0507080148937475,
+          "minimum_late_slack": 7.088357207835072e-06,
+          "minimum_mellin_remainder": 0.0507080148937475,
+          "minimum_short_actual": 0.7595481017183702,
+          "minimum_short_slack": 0.9557972996819396,
+          "minimum_trace": 0.8274300845459812,
+          "row_count": 2304
+        },
+        "V=2/d=6": {
+          "candidate_count": 0,
+          "context_count": 384,
+          "dimension": 6,
+          "maximum_heat_value": 4.024984693164846,
+          "maximum_late_actual": 0.18111022711245248,
+          "maximum_mellin_residual": 1.1102230246251565e-15,
+          "maximum_short_actual": 1.5206555313619385,
+          "maximum_trace": 1.7017657584743917,
+          "minimum_candidate_heat_slack": 9.110686380667254e-18,
+          "minimum_continuous_heat_slack": 0.012933016814899004,
+          "minimum_late_actual": 0.005480938016336487,
+          "minimum_late_slack": 3.816022563135624e-06,
+          "minimum_mellin_remainder": 0.005480938016336487,
+          "minimum_short_actual": 0.6013759223436383,
+          "minimum_short_slack": 0.4753686912351818,
+          "minimum_trace": 0.6068568603599748,
+          "row_count": 2688
+        },
+        "V=2/d=8": {
+          "candidate_count": 0,
+          "context_count": 384,
+          "dimension": 8,
+          "maximum_heat_value": 4.058861427519662,
+          "maximum_late_actual": 0.10266997456874077,
+          "maximum_mellin_residual": 1.3322676295501878e-15,
+          "maximum_short_actual": 1.3293841435211442,
+          "maximum_trace": 1.4320541180898845,
+          "minimum_candidate_heat_slack": 1.0164395367051604e-19,
+          "minimum_continuous_heat_slack": 0.0011972161528421125,
+          "minimum_late_actual": 0.006818809323515953,
+          "minimum_late_slack": 1.0000796238215579e-06,
+          "minimum_mellin_remainder": 0.006818809323515953,
+          "minimum_short_actual": 0.5979776898655547,
+          "minimum_short_slack": 0.2491151915200216,
+          "minimum_trace": 0.6047964991890705,
+          "row_count": 3456
+        }
+      },
+      "volume_independent_heat_budget_closed": false
+    }
+  },
+  "exploration_id": "EXP-001258",
+  "manifest": "strategy/pre-a-cp1-st8-q3lock-heat-trace-mellin-bridge-manifest.json",
+  "result_id": "R-413",
+  "schema": "tect/pre-a-r413-integrated/1.0",
+  "scope": {
+    "c6_closed": false,
+    "common_core_closed": false,
+    "common_split_rule_closed": false,
+    "continuum_closed": false,
+    "cutoff_independent_heat_budget_closed": false,
+    "exhaustion_uniform_heat_budget_closed": false,
+    "finite_likelihood_row_coverage_closed": true,
+    "finite_mellin_identity_closed": true,
+    "finite_mixed_heat_envelope_closed": true,
+    "finite_short_time_uv_budget_closed": true,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "no_new_negative_result": true,
+    "no_pdf": true,
+    "no_tier_change": true,
+    "phase_uniform_heat_budget_closed": false,
+    "pre_a_closed": false,
+    "sector_a_closed": false,
+    "volume_independent_heat_budget_closed": false
+  },
+  "verdict": "PASS"
+}
