@@ -153,6 +153,11 @@
         "path": "strategy/hold-lc-001-published-timing-owner-gap-exploration.json",
         "sha256": "61996b463a07ce5c3be73725733c286afccdf8352399e14c0645e81d68f83b53",
         "role": "HOLD-LC-001 retrospective published timing anchor versus source-owner reproducibility gap (EXP-001309)"
+      },
+      {
+        "path": "strategy/hold-lc-001-joint-search-statistic-owner-exploration.json",
+        "sha256": "c0eb811023cb9397ea03fc7bd4ed5e71897dd69e2dae8c303faf4b3f590d53bb",
+        "role": "HOLD-LC-001 official finite association-statistic owner candidate (EXP-001310)"
       }
     ],
     "semantic": [
@@ -533,7 +538,7 @@
         "P6": "UNSTARTED",
         "P7": "UNSTARTED"
       },
-      "scientific_frontier": "P1 ACTIVE under the additive T-059 method; nine event-product hashes, a candidate-neutral estimator interface and a source-header metadata audit are pinned, but source statistical/calibration ownership and the prospective lock remain absent, with zero microscopic forward maps admitted; EXP-001305 adds hash-pinned event-day Fermi position/attitude and N0/B0 spectral-history owner candidates with header/schema and TT-second coverage checks, but conversion, validity, covariance, likelihood and prospective lock remain absent; EXP-001306 adds hash-pinned N0/B0 rsp2 response histories with one EBOUNDS plus eight numbered response segments per detector and TT-second trigger-window coverage, but matrix values, validity/interpolation, conversion, covariance, likelihood and prospective lock remain absent; EXP-001307 adds an official-semantics owner-request contract with explicit admission stop, but no response values, validity/interpolation, conversion, uncertainty, likelihood/covariance, nuisance law or score is admitted; EXP-001308 enumerates the official software/time option set and makes package defaults, boundary handling, Earth orientation and propagation uncertainty explicit owner fields, still without statistical admission; EXP-001309 records the primary published 0.310 +/- 0.048 s pulse-fit onset, -3.176 ms Fermi-minus-geocenter anchor, +1.74 +/- 0.05 s corrected delay and standard analysis window as retrospective provenance only, while the reproducible pulse estimator, propagation algorithm, covariance and source-owner uncertainty packet remain missing.",
+      "scientific_frontier": "P1 ACTIVE under the additive T-059 method; nine event-product hashes, a candidate-neutral estimator interface and a source-header metadata audit are pinned, but source statistical/calibration ownership and the prospective lock remain absent, with zero microscopic forward maps admitted; EXP-001305 adds hash-pinned event-day Fermi position/attitude and N0/B0 spectral-history owner candidates with header/schema and TT-second coverage checks, but conversion, validity, covariance, likelihood and prospective lock remain absent; EXP-001306 adds hash-pinned N0/B0 rsp2 response histories with one EBOUNDS plus eight numbered response segments per detector and TT-second trigger-window coverage, but matrix values, validity/interpolation, conversion, covariance, likelihood and prospective lock remain absent; EXP-001307 adds an official-semantics owner-request contract with explicit admission stop, but no response values, validity/interpolation, conversion, uncertainty, likelihood/covariance, nuisance law or score is admitted; EXP-001308 enumerates the official software/time option set and makes package defaults, boundary handling, Earth orientation and propagation uncertainty explicit owner fields, still without statistical admission; EXP-001309 records the primary published 0.310 +/- 0.048 s pulse-fit onset, -3.176 ms Fermi-minus-geocenter anchor, +1.74 +/- 0.05 s corrected delay and standard analysis window as retrospective provenance only, while the reproducible pulse estimator, propagation algorithm, covariance and source-owner uncertainty packet remain missing; EXP-001310 adds the official P1900186 Lambda signal-versus-background statistic and R association ranking with empirical O1/O2 background calibration as a finite statistical-owner candidate, but it is not a continuous Delta_t_det likelihood and does not fill propagation, response, covariance, nuisance or prospective fields.",
       "next_gate_after_p0r": "P1 observation-source, target, covariance, lineage, and holdout freeze"
     }
   },
@@ -569,21 +574,13 @@
     "authority_state": "VERIFIED_PENDING_WORKTREE_NOT_YET_DURABLE_GIT_OR_REMOTE_AUTHORITY"
   },
   "completion_checkpoint": {
-    "status": "COMPLETE",
-    "verified_parent_head": "b18838ab32edbef69116c6f19f3639f04bff4442",
+    "status": "PENDING",
+    "verified_parent_head": "d0b1244b132b86a1042f8295fef0d7ffea3e2d49",
     "verified_at_utc": "2026-08-30T10:46:15Z",
     "branch": "main",
     "remote": "tect",
     "remote_ref": "refs/heads/main",
-    "expected_authority_counts": {
-      "claims": 49,
-      "gates_and_hypotheses": 208,
-      "results": 281,
-      "negative_records": 375,
-      "explorations": 1309,
-      "changelog_events": 796,
-      "tasks": 61
-    },
+    "expected_authority_counts": null,
     "requirements": [
       "doctor PASS",
       "release_check PASS",
@@ -639,7 +636,8 @@
       "The EXP-001308 completion checkpoint records the exact authority counts and will be treated as durable only after strict baseline verifies clean queue/worktree and live remote equality.",
       "EXP-001309 records the primary published timing summary as retrospective provenance and separates it from the missing source-owned pulse, propagation, covariance and uncertainty packet; no response values, scoring or method change occurs.",
       "The release-gated EXP-001309 content commit b18838ab32edbef69116c6f19f3639f04bff4442 was pushed to tect/main; live git ls-remote returned the same SHA before this checkpoint refresh.",
-      "The EXP-001309 completion checkpoint records exact authority counts and is durable only after strict baseline verifies clean queue/worktree, live remote equality and all release gates."
+      "The EXP-001309 completion checkpoint records exact authority counts and is durable only after strict baseline verifies clean queue/worktree, live remote equality and all release gates.",
+      "EXP-001310 records the official P1900186 Lambda/R finite association statistic and empirical background calibration as a partial statistical-owner candidate; it does not replace the continuous timing, response, covariance or nuisance contract."
     ]
   },
   "stopped_loop_registry": [
@@ -717,8 +715,9 @@
       "EXP-001305 freezes and independently audits one event-day GS-006 position/attitude product plus two GS-005 spectral-history products; metadata/schema only, no conversion, validity, likelihood, covariance, nuisance law, score or method change",
       "EXP-001306 freezes and independently audits N0/B0 time-segmented rsp2 response-history candidates (16 declared segments total); header/schema only, no matrix values, validity, conversion, likelihood, covariance, nuisance law, score or method change",
       "EXP-001307 converts official Fermi GS-005/GS-006 and rsp/rsp2 role semantics plus the exact HOLD-LC-001 owner candidates into an additive response-owner request contract; it freezes required response-selection, calibration-validity, time-standard, detector-to-geocenter, uncertainty, likelihood/covariance, nuisance and holdout fields while admitting no response values or scoring.",
-      "EXP-001308 maps the official nearest, interpolation and counts-weighted rsp2 options, boundary behavior, MET/TT/GPS/UTC/UT1 conventions and quaternion/Earth-orientation semantics to explicit pre-admission freezes; software defaults remain unpinned physical-owner choices and response values/scoring remain locked."
-      ,"EXP-001309 crosswalks the primary published 0.310 +/- 0.048 s pulse-fit onset, -3.176 ms Fermi-minus-geocenter anchor, +1.74 +/- 0.05 s corrected delay and standard analysis window; these remain retrospective descriptive anchors because the inspected source scope does not fill the reproducible estimator, propagation algorithm, covariance or source-owner uncertainty fields."
+      "EXP-001308 maps the official nearest, interpolation and counts-weighted rsp2 options, boundary behavior, MET/TT/GPS/UTC/UT1 conventions and quaternion/Earth-orientation semantics to explicit pre-admission freezes; software defaults remain unpinned physical-owner choices and response values/scoring remain locked.",
+      "EXP-001309 crosswalks the primary published 0.310 +/- 0.048 s pulse-fit onset, -3.176 ms Fermi-minus-geocenter anchor, +1.74 +/- 0.05 s corrected delay and standard analysis window; these remain retrospective descriptive anchors because the inspected source scope does not fill the reproducible estimator, propagation algorithm, covariance or source-owner uncertainty fields.",
+      "EXP-001310 crosswalks the official P1900186 Lambda signal-versus-background statistic, R association ranking, 64 ms minimum offset and empirical O1/O2 background p-value construction; this partially fills a finite statistical-owner slot while continuous timing, response, propagation, covariance, nuisance and prospective fields remain unadmitted."
     ],
     "deliverables": [
       "one owner-intake card with explicit missing fields",
@@ -747,7 +746,7 @@
       "It does not prove Pre-A, C6, A13, Sector A, QFT, Yang-Mills, gravity, a physical mass gap, or a theory of everything.",
       "A dynamic discriminator at finite regulator does not prove continuum or physical identity."
     ],
-    "next_action": "T-061 remains P1-active: use EXP-001309 to seek a versioned source-owned pulse-onset estimator and detector-to-geocenter propagation packet, including spacecraft state/ephemeris interpolation, Earth-orientation convention, decomposed covariance and uncertainty. Keep the published timing numbers retrospective-only; keep response values, F_reg/F_lim/F_eff/F_obs, likelihood/covariance, intrinsic-lag scoring and prospective credit locked until the owner fields are independently reproduced. Continue unchanged T-054 owner intake in parallel."
+    "next_action": "T-061 remains P1-active: treat the P1900186 Lambda/R procedure as a finite association-statistic owner candidate only, and seek versioned event-input, response/calibration, pulse-onset, detector-to-geocenter and covariance artefacts before any continuous F_reg construction. Keep published timing summaries, response values, likelihood/covariance, intrinsic-lag scoring and prospective credit locked until the complete owner fields are independently reproduced. Continue unchanged T-054 owner intake in parallel."
   },
   "resume_algorithm": [
     "Capture UTC date and run doctor.py.",

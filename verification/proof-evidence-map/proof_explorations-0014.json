@@ -1859,6 +1859,226 @@
       "task_id": "T-061",
       "title": "HOLD-LC-001 published timing summary versus source-owner reproducibility gap",
       "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "axis": "ranking-as-continuous-likelihood",
+          "check": "Could R be inserted as the continuous Delta_t_det likelihood for the event?",
+          "disposition": "UPHELD-BLOCKED: R is a finite association ranking with a binned offset, FAR and visibility inputs, not an event-level continuous timing law."
+        },
+        {
+          "axis": "background-p-value-as-covariance",
+          "check": "Could the empirical p_i background calibration replace a source-owned covariance or component uncertainty budget?",
+          "disposition": "UPHELD-BLOCKED: the background ranking calibrates association significance and does not decompose timing, calibration or shared-source covariance."
+        },
+        {
+          "axis": "offset-as-geocenter-correction",
+          "check": "Could the absolute candidate time offset in R be treated as the detector-to-geocenter corrected pulse onset?",
+          "disposition": "UPHELD-BLOCKED: the paper's search offset is not the missing spacecraft-state propagation algorithm or its uncertainty."
+        },
+        {
+          "axis": "retrospective-background-credit",
+          "check": "Could the published O1/O2 background distributions count as a prospective holdout for a new candidate scorer?",
+          "disposition": "UPHELD-BLOCKED: the method and event are retrospective; PROS-LOCK-001 remains empty."
+        },
+        {
+          "axis": "pastro-and-pvisible-ownership",
+          "check": "Could the R inputs be treated as frozen event-owner quantities without their versioned source, uncertainty and linkage?",
+          "disposition": "UPHELD-BLOCKED: their source versions, uncertainty and event linkage must be frozen before any reuse."
+        },
+        {
+          "axis": "method-overhaul",
+          "check": "Could this official search statistic replace the established T-054 or T-059 method?",
+          "disposition": "DISMISSED: it is an additive T-061 statistical-owner candidate and preserves the existing methods, owner order and parked-loop rules."
+        }
+      ],
+      "assumptions": [
+        "The cited LIGO document and PDF represent the documented joint-search method at the recorded retrieval date.",
+        "The symbol R and its background p-value construction can be recorded as source methodology without treating the published search as a prospective holdout.",
+        "The exact local HOLD-LC-001 contracts and parent hashes remain authoritative for continuous timing, calibration and map admission.",
+        "A binned association ranking can be compared to the required timing estimator only as a crosswalk, not as an automatic substitution."
+      ],
+      "boundary": "EXP-001310 is a T0 official finite association-search crosswalk. It does not admit a HOLD-LC-001 continuous likelihood, covariance, detector-to-geocenter implementation, response value, calibration-validity rule, intrinsic-emission nuisance law, F_reg/F_lim/F_eff/F_obs map, candidate, score, prospective prediction, microscopic dynamics, physical identity, continuum result, Reading-H sign, Pre-A closure or mass-gap conclusion.",
+      "checks": [
+        {
+          "detail": "The primary PDF explicitly defines Lambda as a signal-versus-background log-likelihood ratio, R as the joint ranking statistic, the 64 ms minimum offset and the empirical background p-value construction.",
+          "finding": "PASS",
+          "id": "primary-statistic-extraction"
+        },
+        {
+          "detail": "The source supplies a finite association-search statistic and background calibration candidate, but it does not fill the continuous timing, response, covariance, propagation or nuisance fields required for HOLD-LC-001 admission.",
+          "finding": "PARTIAL-PASS-WITH-ADMISSION-STOP",
+          "id": "statistical-owner-crosswalk"
+        },
+        {
+          "detail": "The published search statistic and empirical p-values remain retrospective method provenance and receive no prospective holdout or candidate-score credit.",
+          "finding": "PASS",
+          "id": "retrospective-leakage"
+        },
+        {
+          "detail": "The established T-054 forward method, additive T-059 inverse method, owner order and parked-loop registry are unchanged.",
+          "finding": "PASS",
+          "id": "method-preservation"
+        }
+      ],
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "This is a new official joint-search methodology with explicit likelihood-ratio, ranking and background semantics. It partially fills a statistical-owner slot while making the remaining continuous timing and calibration boundary precise; it is not a repeated generic owner search and does not replace either research method.",
+      "decision_scope": "T0 official finite association-statistic provenance and partial statistical-owner crosswalk only; no event likelihood, dynamic identification, physical identity or empirical prediction.",
+      "evidence_level": "T0 primary official joint-search methodology and bounded formula extraction; no event-level model or statistical reproduction",
+      "evidence_refs": [
+        "strategy/hold-lc-001-estimator-contract-v0.1.json#statistical_contract",
+        "strategy/hold-lc-001-response-owner-request-v0.1.json#required_physical_owner_fields",
+        "strategy/hold-lc-001-published-timing-owner-gap-exploration.json#owner_crosswalk"
+      ],
+      "exact_scope": {
+        "data_role": "RETROSPECTIVE",
+        "finite_scope": "Official finite association-search statistic and background-calibration semantics only; no event-level response values, continuous timing likelihood, covariance, candidate map, score, continuum limit or prospective validation.",
+        "holdout_id": "HOLD-LC-001",
+        "lineage_group": "GW170817-GRB170817A",
+        "method_scope": "Additive T-061 P1 statistical-owner intake refinement; no change to T-054/T-059 methods, owner order or promotion firewalls.",
+        "parent_contracts": [
+          {
+            "path": "strategy/hold-lc-001-estimator-contract-v0.1.json",
+            "sha256": "f2d3be523c9e24fe8e84673dc486f0bf17799ceba9702afd638a0bf2096ddf94"
+          },
+          {
+            "path": "strategy/hold-lc-001-response-owner-request-v0.1.json",
+            "sha256": "ca67f0d274256389c22edab384b6dd386e4ad2607344107fcfdffabcfcb90dcd"
+          },
+          {
+            "path": "strategy/hold-lc-001-published-timing-owner-gap-exploration.json",
+            "sha256": "61996b463a07ce5c3be73725733c286afccdf8352399e14c0645e81d68f83b53"
+          }
+        ]
+      },
+      "extracted_statistical_method": {
+        "gbm_targeted_search": {
+          "background_role": "same search parameters and spectral-template-specific background distributions",
+          "meaning": "log-likelihood ratio for a signal with a similar spectrum versus the null hypothesis of background only",
+          "operation": "select the model spectrum with highest Lambda for each search bin after phosphorescent-bin removal and overlap merging",
+          "statistic": "Lambda"
+        },
+        "joint_association_search": {
+          "background_calibration": "random O1/O2 times selected independently with respect to GBM, with the same search parameters; p_i = N(R > R_i) / N",
+          "documented_formula": "R = pastro * pvisible / (abs(Delta_t) * FAR_GBM)",
+          "inputs": [
+            "GW astrophysical probability pastro",
+            "GBM-visible fraction pvisible",
+            "absolute GW-to-gamma candidate time offset Delta_t",
+            "GBM false-alarm rate FAR_GBM"
+          ],
+          "minimum_offset_seconds": 0.064,
+          "role": "finite retrospective association ranking and empirical background calibration",
+          "statistic": "R"
+        }
+      },
+      "finding": "The official joint-search paper supplies a genuine finite source-owned association statistic and an empirical background calibration procedure, which advances the statistical-owner inventory beyond a published central timing summary. Its R statistic ranks associations using a binned time offset, GW astrophysical probability, GBM visibility and FAR; it does not define the continuous detector-level Delta_t_det likelihood, detector-to-geocenter correction, response validity, covariance or intrinsic-lag map required for HOLD-LC-001. The branch therefore remains an owner candidate with admission stopped, while all response values and microscopic-candidate scoring remain locked.",
+      "formal_integration": {
+        "events": [],
+        "negatives": [],
+        "no_changelog_event": true,
+        "no_new_negative": true,
+        "no_new_result": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "results": []
+      },
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": []
+      },
+      "gate_ids": [
+        "PA-INVERSE-OBSERVATION-TARGET-MAP-HOLDOUT-FREEZE",
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001310",
+      "method": [
+        "Read the official LIGO document page and its linked primary PDF for the GBM Targeted Search and joint-analysis method, recording bounded locators and retrieval date.",
+        "Extract the documented GBM signal-versus-background log-likelihood ratio, the joint association ranking statistic, the minimum time-offset binning and the empirical background-to-p-value construction without importing event-level matrix values.",
+        "Crosswalk those objects against the hash-pinned HOLD-LC-001 candidate-neutral Delta_t_det and response-owner contracts, distinguishing a finite association-search owner candidate from the missing pulse-onset, detector-to-geocenter and intrinsic-lag map.",
+        "Run an adversarial ownership and leakage review; preserve T-054/T-059 methods, owner order and stopped-loop rules, and do not score microscopic candidates or populate F_reg/F_lim/F_eff/F_obs."
+      ],
+      "missing_assumptions": [
+        "A source-owned mapping from the event-level GBM pulse estimator and response products to a continuous Delta_t_det likelihood.",
+        "The detector-to-geocenter propagation algorithm, spacecraft-state interpolation, Earth orientation and uncertainty decomposition.",
+        "Event-specific response validity/interpolation, gain calibration and response-matrix uncertainty linkage.",
+        "A joint covariance or likelihood including GW merger time, GBM onset/background, calibration and shared source/selection terms.",
+        "An intrinsic-emission-lag nuisance law, sealed prospective holdout and immutable candidate-neutral scorer."
+      ],
+      "next_action": "Treat the P1900186 Lambda/R method as a partial statistical-owner candidate only. Seek its versioned event inputs, response/calibration linkage and continuous pulse-onset/geocenter uncertainty owner before any F_reg construction; keep response values, timing likelihood, covariance, intrinsic-lag scoring and prospective credit locked, and continue unchanged T-054 owner intake in parallel.",
+      "non_claims": [
+        "The official Lambda and R statistics are not a continuous event-level Delta_t_det likelihood or covariance.",
+        "The empirical background p-value procedure is not a detector-to-geocenter propagation correction or intrinsic-emission-lag law.",
+        "No response matrix value, calibration-validity rule, candidate score or prospective holdout is admitted.",
+        "No microscopic dynamics, QFT/Yang-Mills/gravity identity, Pre-A, C6, A13, Sector-A, continuum, physical-vacuum, cosmic-origin, theory-of-everything or mass-gap claim is established.",
+        "The established T-054 forward and T-059 inverse methods are unchanged; this is an additive statistical-owner crosswalk, not a replacement."
+      ],
+      "official_sources": [
+        {
+          "id": "LIGO-P1900186-DCC-PAGE",
+          "locator": "lines 16-19",
+          "owner_boundary": "Document-level scope only; the page does not itself provide the HOLD-LC-001 event likelihood or response/calibration map.",
+          "retrieved_on": "2026-08-30",
+          "semantic_finding": "The official document describes offline joint GBM/LIGO-Virgo searches and states that the analysis implements a refined statistical approach using GW astrophysical probabilities and GBM visibility of the GW sky localization.",
+          "url": "https://dcc.ligo.org/LIGO-P1900186-v16/public"
+        },
+        {
+          "id": "LIGO-P1900186-GBM-LV-PDF",
+          "locator": "pages 10-13, extracted lines 690-712, 745-757, 827-851 and 905-918",
+          "owner_boundary": "This is a source-documented finite association-search method. It is not, by itself, a detector-to-geocenter propagation algorithm, a continuous Delta_t_det likelihood, a covariance decomposition or an intrinsic-emission-lag law.",
+          "retrieved_on": "2026-08-30",
+          "semantic_finding": "The Targeted Search uses a log-likelihood ratio Lambda for a similar-spectrum signal versus background-only, selects the best Lambda spectrum per bin after filtering, and constructs the joint ranking R = pastro times pvisible divided by absolute time offset times GBM FAR, with a 64 ms minimum offset. Search significance is calibrated by applying the same search parameters to independently selected O1/O2 background times and mapping R to an empirical p-value.",
+          "url": "https://dcc.ligo.org/public/0161/P1900186/016/GBM_LV_Jan13.pdf"
+        }
+      ],
+      "owner_crosswalk": {
+        "classification": "FINITE_ASSOCIATION_STATISTIC_OWNER_CANDIDATE_NOT_CONTINUOUS_TIMING_OWNER",
+        "not_supported_for_hold_lc_001_admission": [
+          "A continuous event-level Delta_t_det likelihood for the GBM pulse onset relative to the GW merger.",
+          "The detector-to-geocenter correction, spacecraft position/attitude interpolation, Earth-orientation convention and decomposed propagation uncertainty.",
+          "The response-segment validity/interpolation, gain calibration and response-matrix uncertainty linkage for the frozen event products.",
+          "A joint covariance including GW merger time, GBM onset/background, calibration and shared source/selection terms.",
+          "An intrinsic-emission-lag nuisance law or a sealed prospective holdout and immutable candidate-neutral scorer."
+        ],
+        "partial_fields_supported": [
+          "A source-documented GBM signal-versus-background log-likelihood-ratio object for a search-bin statistic.",
+          "A source-documented finite joint-association ranking statistic and its background-based empirical p-value construction.",
+          "An explicit minimum time-offset binning rule for that search statistic and a separation of O1/O2 background populations."
+        ]
+      },
+      "provenance": "contemporaneous",
+      "question": "Does the official joint Fermi-GBM and LIGO/Virgo analysis provide a source-owned finite association statistic and background calibration that can fill any HOLD-LC-001 statistical-owner fields without being mistaken for a continuous detector-timing likelihood?",
+      "recorded_at": "2026-08-30T10:54:03Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001309",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001304",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001308",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-08-30",
+      "schema": "tect/proof-exploration/1.0",
+      "stop_or_redesign": [
+        "If the association statistic cannot be linked to a versioned event input and owner, retain it as official method provenance and do not promote it to HOLD-LC-001 admission.",
+        "If a later implementation changes the time-offset binning, FAR/background construction or p-visible inputs after target disclosure, version it anew and invalidate prospective credit.",
+        "If the continuous timing likelihood and covariance remain absent, report finite association evidence only rather than substituting R for Delta_t_det.",
+        "If no admitted dynamic observable separates a static-equivalence class, report NONIDENTIFIABLE rather than selecting a representative."
+      ],
+      "task_id": "T-061",
+      "title": "HOLD-LC-001 official joint-search statistic owner candidate",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",
