@@ -1,0 +1,225 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001311",
+  "reviewed_on": "2026-08-30",
+  "recorded_by": "Codex",
+  "provenance": "contemporaneous",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "task_id": "T-061",
+  "gate_ids": [
+    "PA-INVERSE-OBSERVATION-TARGET-MAP-HOLDOUT-FREEZE",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "title": "HOLD-LC-001 primary Stachie finite association implementation crosswalk",
+  "question": "Does the primary Stachie et al. implementation paper provide enough explicit finite statistical semantics to advance the HOLD-LC-001 owner intake without treating its finite search prior or ranking statistic as a continuous physical timing likelihood?",
+  "method": [
+    "Read arXiv:2001.01462v2 and its PDF as the primary implementation source cited by P1900186, recording the immutable version and bounded page/line locators.",
+    "Extract only source-reported implementation choices: trigger thresholds, GBM search windows, LLR selection, competing hypotheses, Lambda factorization, Q_L and Q_G distributions, time and sky overlap terms, and the time-shifted background procedure.",
+    "Compare those fields with the hash-pinned HOLD-LC-001 candidate-neutral Delta_t_det and response-owner contracts; keep finite retrospective search objects separate from pulse-onset, propagation, covariance, nuisance and prospective fields.",
+    "Run a five-axis adversarial review covering prior-versus-physics, ranking-versus-likelihood, KDE-versus-covariance, background-versus-holdout and method replacement; append this decision before reporting the route as advanced."
+  ],
+  "exact_scope": {
+    "parent_contracts": [
+      {
+        "path": "strategy/hold-lc-001-estimator-contract-v0.1.json",
+        "sha256": "f2d3be523c9e24fe8e84673dc486f0bf17799ceba9702afd638a0bf2096ddf94"
+      },
+      {
+        "path": "strategy/hold-lc-001-response-owner-request-v0.1.json",
+        "sha256": "ca67f0d274256389c22edab384b6dd386e4ad2607344107fcffabcfcb90dcd"
+      },
+      {
+        "path": "strategy/hold-lc-001-stachie-statistic-owner-candidate-v0.1.json",
+        "sha256": "9fa803c5dd52bafee107cb0f2accdc6c61b02208c8f4b9c2660ef36041229b7b"
+      }
+    ],
+    "lineage_group": "GW170817-GRB170817A",
+    "holdout_id": "HOLD-LC-001",
+    "data_role": "RETROSPECTIVE",
+    "finite_scope": "Primary-source finite association-search implementation semantics only; no event-level response values, pulse reconstruction, continuous timing likelihood, covariance, candidate map, score, limit or prospective validation.",
+    "method_scope": "Additive T-061 P1 source-owner intake refinement; T-054 forward method, T-059 inverse method, owner order and stopped-loop rules are unchanged."
+  },
+  "official_source": {
+    "id": "ARXIV-2001.01462v2",
+    "title": "Search for Advanced LIGO Single Interferometer Compact Binary Coalescence Signals in Coincidence with Gamma-Ray Events in Fermi-GBM",
+    "url": "https://arxiv.org/abs/2001.01462",
+    "pdf_url": "https://arxiv.org/pdf/2001.01462",
+    "version": "v2",
+    "retrieved_on": "2026-08-30",
+    "locators": [
+      "PDF pages 3-5, extracted lines 114-219",
+      "PDF pages 5-8, extracted lines 220-312",
+      "PDF pages 8-10, extracted lines 313-358"
+    ],
+    "source_scope": "Primary implementation description; arXiv abstract reports a general single-detector GW--GBM pairing method and no significant candidates, while the PDF supplies the finite statistic and calibration details."
+  },
+  "extracted_method": {
+    "trigger_and_selection": [
+      "The GW input is a PyCBC single-interferometer trigger with reweighted SNR rho_hat_gw >= 8.",
+      "The GBM Targeted Search examines +/-30 s around the GW time on timescales from 0.256 s to 8.192 s.",
+      "For each time window the GBM log-likelihood ratio is evaluated and only the highest-LLR window with LLR >= 5 is retained."
+    ],
+    "hypotheses": [
+      "HC: GW and GBM contain signals from a common source.",
+      "HNN, HSN, HNS and HSS: the four logical alternatives containing noise and/or unrelated signals."
+    ],
+    "joint_statistic": {
+      "source_formula": "Lambda = I_Delta_t * I_Omega / (1 + Q_L + Q_G + Q_L * Q_G)",
+      "gbm_factor": "Q_G(LLR) = P(LLR | noise) / P(LLR | signal)",
+      "gw_factor": "Q_L(rho_hat_gw) = P(rho_hat_gw | noise) / P(rho_hat_gw | signal)",
+      "time_overlap": "Delta_t = t_EM - t_GW, where t_EM is the center of the maximum-LLR GBM window and t_GW is the estimated GW merger time",
+      "sky_overlap": "I_Omega = integral P(Omega | D_L) P(Omega | D_G) / P(Omega) dOmega with uniform P(Omega) = 1/(4 pi)"
+    },
+    "finite_time_prior": {
+      "form": "triangular I_Delta_t centered at zero",
+      "support_seconds": 30,
+      "source_interpretation": "Equal GW and EM propagation speed is assumed, but the intrinsic source emission offset is not fully known; the paper calls the shape a search choice and notes other similar finite shapes would be reasonable."
+    },
+    "distribution_and_calibration": {
+      "gbm": "Real-signal and O2-background LLR histograms are KDE-fitted over source-specified ranges and use an LLR^-4 high-tail convention above the KDE range.",
+      "gw": "L1/H1 and O1/O2 rho_hat_gw distributions are histogram/KDE based with source-reported thresholds and a rho_hat_gw^-4 high-tail convention.",
+      "background": "The same GBM configuration is run on a 23-day interval, GBM triggers are shifted by nonzero integer multiples of 50 s, and the resulting Lambda distribution is normalized by total coincident live time to obtain FAR."
+    }
+  },
+  "owner_crosswalk": {
+    "partial_fields_supported": [
+      "Finite GBM signal-versus-background LLR definition and maximum-LLR selection.",
+      "Finite competing-hypothesis and joint Bayes-factor/ranking formula.",
+      "Finite time-overlap prior and sky-overlap integral.",
+      "Versioned trigger thresholds, histogram/KDE distribution roles and high-tail conventions.",
+      "A reproducible retrospective time-shifted background-to-FAR protocol."
+    ],
+    "not_supported_for_hold_lc_001_admission": [
+      "An event-level pulse-onset estimator tied to the frozen GBM response products.",
+      "A continuous Delta_t_det likelihood with detector-to-geocenter propagation and uncertainty.",
+      "Response-segment validity/interpolation, gain calibration and response-matrix uncertainty.",
+      "A joint covariance including GW merger time, GBM onset/background, calibration and shared source terms.",
+      "An intrinsic-emission-lag nuisance model or preregistered set-valued physical scorer.",
+      "A sealed prospective holdout or complete F_reg/F_lim/F_eff/F_obs map."
+    ],
+    "classification": "FINITE_SOURCE_STATISTIC_OWNER_CANDIDATE_NOT_CONTINUOUS_TIMING_OWNER"
+  },
+  "checks": [
+    {
+      "id": "primary-source-version",
+      "finding": "PASS",
+      "detail": "The arXiv v2 primary paper is the implementation cited by P1900186 and is pinned by versioned URL and PDF locators."
+    },
+    {
+      "id": "finite-statistic-semantics",
+      "finding": "PASS",
+      "detail": "The paper explicitly defines the competing hypotheses, Lambda factorization, Q_L/Q_G factors, time and sky overlap terms, trigger thresholds and background calibration procedure."
+    },
+    {
+      "id": "owner-boundary",
+      "finding": "PARTIAL-PASS-WITH-ADMISSION-STOP",
+      "detail": "The paper advances finite statistical-owner semantics but does not fill event response, propagation, covariance, intrinsic-lag or prospective fields required for HOLD-LC-001."
+    },
+    {
+      "id": "retrospective-leakage",
+      "finding": "PASS",
+      "detail": "The published search implementation and its fitted background distributions remain retrospective provenance; no candidate or holdout credit is assigned."
+    },
+    {
+      "id": "method-preservation",
+      "finding": "PASS",
+      "detail": "The established T-054 forward and T-059 inverse methods, source-owner order and stopped-loop registry are unchanged."
+    }
+  ],
+  "finding": "The primary Stachie et al. implementation materially advances the statistical-owner intake. It specifies the finite trigger selection, competing hypotheses, joint Lambda formula, source-reported Q_L/Q_G distribution construction, triangular time prior, sky-overlap integral and time-shifted FAR calibration. These fields make the finite association-search method reproducible in principle, but they do not supply the event-specific GBM response/propagation owner, continuous pulse-onset likelihood, covariance, intrinsic-lag nuisance law or prospective map. The branch is therefore advanced as a finite source-statistic candidate with admission stopped.",
+  "verdict": "advanced",
+  "decision_reason": "This is a new primary implementation source that fills previously unspecified finite statistical semantics and narrows the exact owner request. It is not a repeated generic blocker and does not alter the forward or inverse proof methods.",
+  "decision_scope": "T0 primary finite retrospective statistical crosswalk only; no event likelihood, dynamic identification, physical identity or empirical prediction.",
+  "assumptions": [
+    "arXiv:2001.01462v2 is the intended primary implementation version cited by the joint-search paper.",
+    "Source-reported thresholds, priors, KDE ranges, tail conventions and shifts are recorded as implementation choices and not independently re-derived constants.",
+    "The local HOLD-LC-001 estimator and response-owner contracts remain controlling for continuous timing and physical-owner admission.",
+    "The triangular I_Delta_t term is a finite search prior and cannot be reused as an intrinsic-emission-lag law without a separate owner."
+  ],
+  "missing_assumptions": [
+    "Versioned event-level GBM inputs and a reproducible pulse estimator linked to the selected response products.",
+    "Source-owned response validity/interpolation, gain calibration and detector-to-geocenter conversion with uncertainty.",
+    "A common timing covariance or likelihood for GW merger time, GBM onset/background, calibration and shared-source terms.",
+    "A source-owned intrinsic-emission-lag nuisance model or preregistered set-valued scorer.",
+    "A sealed prospective holdout and independently reproduced F_reg/F_lim/F_eff/F_obs map."
+  ],
+  "adversarial_review": [
+    {
+      "axis": "finite-prior-as-physical-lag",
+      "check": "Could the triangular time-overlap term be promoted to the physical source emission-lag law?",
+      "disposition": "UPHELD-BLOCKED: it is documented as a finite search choice under incomplete intrinsic-offset knowledge, not a measured physical lag distribution."
+    },
+    {
+      "axis": "ranking-as-continuous-likelihood",
+      "check": "Could Lambda be inserted as the continuous HOLD-LC-001 Delta_t_det likelihood?",
+      "disposition": "UPHELD-BLOCKED: Lambda combines finite trigger-statistic factors and overlap terms and does not define pulse, response or propagation likelihood."
+    },
+    {
+      "axis": "KDE-tail-as-covariance",
+      "check": "Could the KDE fits and power-law tails supply the missing calibration or covariance budget?",
+      "disposition": "UPHELD-BLOCKED: they model retrospective trigger-statistic distributions and do not decompose response, timing or shared-source uncertainty."
+    },
+    {
+      "axis": "background-as-prospective-holdout",
+      "check": "Could the 23-day time-shifted background be credited as a prospective holdout for a new candidate scorer?",
+      "disposition": "UPHELD-BLOCKED: it calibrates the published retrospective search statistic and is not sealed before a new scorer or candidate is frozen."
+    },
+    {
+      "axis": "method-overhaul",
+      "check": "Could the implementation paper replace the established T-054 or T-059 method?",
+      "disposition": "DISMISSED: this is an additive T-061 source-owner candidate and preserves the existing methods and owner order."
+    }
+  ],
+  "boundary": "EXP-001311 is a T0 primary finite statistical-method crosswalk. It does not admit a continuous HOLD-LC-001 likelihood, covariance, detector-to-geocenter implementation, response value, calibration-validity rule, intrinsic-lag nuisance law, F_reg/F_lim/F_eff/F_obs map, candidate, score, prospective prediction, microscopic dynamics, physical identity, continuum result, Reading-H sign, Pre-A closure or mass-gap conclusion.",
+  "evidence_level": "T0 primary implementation source with bounded formula and calibration extraction; no event-level numerical reproduction",
+  "evidence_refs": [
+    "strategy/hold-lc-001-stachie-statistic-owner-candidate-v0.1.json#source_reported_owner_fields",
+    "strategy/hold-lc-001-estimator-contract-v0.1.json#statistical_contract",
+    "strategy/hold-lc-001-response-owner-request-v0.1.json#required_physical_owner_fields"
+  ],
+  "formal_refs": {
+    "results": [],
+    "negatives": [],
+    "events": []
+  },
+  "formal_integration": {
+    "results": [],
+    "negatives": [],
+    "events": [],
+    "no_new_result": true,
+    "no_new_negative": true,
+    "no_changelog_event": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "next_action": "Use the pinned Lambda implementation and time-shift protocol as a finite statistical-owner checklist. Seek versioned event-level code/data that binds GBM pulse extraction, rsp2 selection, calibration, detector-to-geocenter conversion and uncertainty; independently reproduce the finite statistic only after those inputs are frozen, and keep continuous scoring and prospective credit locked.",
+  "stop_or_redesign": [
+    "If no versioned event inputs or implementation owner can be obtained, retain this record as finite method provenance and do not admit HOLD-LC-001.",
+    "If a later implementation changes the time prior, KDE/tail convention or background construction after target disclosure, version it anew and invalidate prospective use.",
+    "If continuous timing and covariance remain absent, report finite association evidence only rather than substituting Lambda for Delta_t_det.",
+    "If static-equivalent candidates remain indistinguishable under every admitted dynamic observable, report their equivalence class rather than selecting a representative."
+  ],
+  "related": [
+    {
+      "id": "EXP-001310",
+      "relation": "continues"
+    },
+    {
+      "id": "EXP-001309",
+      "relation": "continues"
+    },
+    {
+      "id": "EXP-001308",
+      "relation": "continues"
+    }
+  ],
+  "non_claims": [
+    "The Lambda implementation is not a continuous event-level Delta_t_det likelihood or covariance.",
+    "The triangular time prior is not an intrinsic-emission-lag law and the time-shifted background is not a prospective holdout.",
+    "No response matrix value, calibration-validity rule, detector-to-geocenter correction, candidate score or prospective map is admitted.",
+    "No microscopic dynamics, QFT/Yang--Mills/gravity identity, Pre-A, C6, A13, Sector-A, continuum, physical-vacuum, cosmic-origin, theory-of-everything or mass-gap claim is established.",
+    "The established T-054 forward and T-059 inverse methods are unchanged; this is an additive T-061 source-owner crosswalk."
+  ]
+}
