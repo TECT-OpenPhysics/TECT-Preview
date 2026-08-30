@@ -569,13 +569,21 @@
     "authority_state": "VERIFIED_PENDING_WORKTREE_NOT_YET_DURABLE_GIT_OR_REMOTE_AUTHORITY"
   },
   "completion_checkpoint": {
-    "status": "PENDING",
-    "verified_parent_head": "4a76cdf8c7e04ab7c4a58a37ae7a1a4b7f0ddcc6",
-    "verified_at_utc": "2026-08-30T10:28:20Z",
+    "status": "COMPLETE",
+    "verified_parent_head": "b18838ab32edbef69116c6f19f3639f04bff4442",
+    "verified_at_utc": "2026-08-30T10:46:15Z",
     "branch": "main",
     "remote": "tect",
     "remote_ref": "refs/heads/main",
-    "expected_authority_counts": null,
+    "expected_authority_counts": {
+      "claims": 49,
+      "gates_and_hypotheses": 208,
+      "results": 281,
+      "negative_records": 375,
+      "explorations": 1309,
+      "changelog_events": 796,
+      "tasks": 61
+    },
     "requirements": [
       "doctor PASS",
       "release_check PASS",
@@ -629,7 +637,9 @@
       "EXP-001308 maps official Fermi nearest, interpolation and counts-weighted rsp2 options, boundary behavior, MET/TT/GPS/UTC/UT1 conventions and quaternion/Earth-orientation semantics to explicit pre-admission freezes; software defaults remain unpinned physical-owner choices and response values/scoring remain locked.",
       "The release-gated T-061 EXP-001308 commit 4a76cdf8c7e04ab7c4a58a37ae7a1a4b7f0ddcc6 was created after release_check PASS and pushed to tect/main; existing T-054/T-059 methods, owner order and stopped-loop rules remain unchanged.",
       "The EXP-001308 completion checkpoint records the exact authority counts and will be treated as durable only after strict baseline verifies clean queue/worktree and live remote equality.",
-      "EXP-001309 records the primary published timing summary as retrospective provenance and separates it from the missing source-owned pulse, propagation, covariance and uncertainty packet; no response values, scoring or method change occurs."
+      "EXP-001309 records the primary published timing summary as retrospective provenance and separates it from the missing source-owned pulse, propagation, covariance and uncertainty packet; no response values, scoring or method change occurs.",
+      "The release-gated EXP-001309 content commit b18838ab32edbef69116c6f19f3639f04bff4442 was pushed to tect/main; live git ls-remote returned the same SHA before this checkpoint refresh.",
+      "The EXP-001309 completion checkpoint records exact authority counts and is durable only after strict baseline verifies clean queue/worktree, live remote equality and all release gates."
     ]
   },
   "stopped_loop_registry": [
