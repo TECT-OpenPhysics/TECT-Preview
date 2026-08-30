@@ -629,13 +629,21 @@
     "authority_state": "VERIFIED_PENDING_WORKTREE_NOT_YET_DURABLE_GIT_OR_REMOTE_AUTHORITY"
   },
   "completion_checkpoint": {
-    "status": "PENDING",
-    "verified_parent_head": "f0929e456918a5b694234799a48091030ae10bbd",
-    "verified_at_utc": "2026-08-30T13:05:06.841311Z",
+    "status": "COMPLETE",
+    "verified_parent_head": "415661d3594a1781df158dbced8b87d0f7f8ca57",
+    "verified_at_utc": "2026-08-30T13:28:06Z",
     "branch": "main",
     "remote": "tect",
     "remote_ref": "refs/heads/main",
-    "expected_authority_counts": null,
+    "expected_authority_counts": {
+      "claims": 49,
+      "gates_and_hypotheses": 208,
+      "results": 281,
+      "negative_records": 375,
+      "explorations": 1317,
+      "changelog_events": 796,
+      "tasks": 61
+    },
     "requirements": [
       "doctor PASS",
       "release_check PASS",
@@ -711,7 +719,10 @@
       "EXP-001316 records the exact astro-gdt healpy~=1.18.0 package/platform boundary: PyPI has no Windows wheel and conda-forge has no win-64 1.18.0 artifact; this remains a T0 execution prerequisite and does not change T-054/T-059 methods.",
       "The release-gated T-061 / EXP-001316 commit f0929e456918a5b694234799a48091030ae10bbd was created after release_check PASS.",
       "git push tect main advanced refs/heads/main to f0929e456918a5b694234799a48091030ae10bbd; a live git ls-remote read returned the same SHA before this checkpoint refresh.",
-      "EXP-001317 records the P1 continuation packet and preserves the existing T-054/T-059 methods, owner order, stopped-loop rules and promotion firewalls; the checkpoint is pending until the release-gated content commit and remote verification complete."
+      "EXP-001317 records the P1 continuation packet and preserves the existing T-054/T-059 methods, owner order, stopped-loop rules and promotion firewalls; the checkpoint is pending until the release-gated content commit and remote verification complete.",
+      "The release-gated EXP-001317 content commit 415661d3594a1781df158dbced8b87d0f7f8ca57 was created after doctor, release_check, exploration-time and all generated-surface checks passed.",
+      "EXP-001317 preserves the established T-054 forward and T-059 observation-first inverse methods, records their lane-specific next actions, and adds no theorem, result, negative result, tier change or PDF.",
+      "The append-only temporal correction TC-0003 marks only EXP-001317 wall-clock provenance as UNKNOWN; its scientific content and ordinal remain unchanged."
     ]
   },
   "stopped_loop_registry": [
