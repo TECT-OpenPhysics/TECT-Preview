@@ -108,6 +108,21 @@
         "path": "verification/scripts/audit_hold_lc_calibration_metadata.py",
         "sha256": "93d8aaa00de747782fd9e9e831da975334093486a4f0a7a5797b9dcd040962bd",
         "role": "Reproducible quote-aware response-header and posterior-schema audit tool"
+      },
+      {
+        "path": "strategy/hold-lc-001-owner-artifact-byte-freeze-v0.1.json",
+        "sha256": "fad7fcc7d6638508e7da6d69fd17eb2991f72965182c8ece182a60442b0e4da9",
+        "role": "HOLD-LC-001 event-day Fermi position/attitude and spectral-history owner-candidate byte freeze"
+      },
+      {
+        "path": "strategy/hold-lc-001-owner-artifact-audit-v0.1.json",
+        "sha256": "9bb32780d81a1fac2b68e1d2c0d4b0d78f595cdeaf776c7db8d89b454df68012",
+        "role": "HOLD-LC-001 event-day Fermi owner-artifact FITS schema/provenance audit"
+      },
+      {
+        "path": "verification/scripts/audit_hold_lc_owner_artifacts.py",
+        "sha256": "f8b312b34856df923390c531f07758f15ac5a29e25817226b910391ccd158f6d",
+        "role": "Reproducible zero-axis-aware owner-artifact byte and FITS-schema audit tool"
       }
     ],
     "semantic": [
@@ -488,7 +503,7 @@
         "P6": "UNSTARTED",
         "P7": "UNSTARTED"
       },
-      "scientific_frontier": "P1 ACTIVE under the additive T-059 method; nine event-product hashes, a candidate-neutral estimator interface and a source-header metadata audit are pinned, but source statistical/calibration ownership and the prospective lock remain absent, with zero microscopic forward maps admitted",
+      "scientific_frontier": "P1 ACTIVE under the additive T-059 method; nine event-product hashes, a candidate-neutral estimator interface and a source-header metadata audit are pinned, but source statistical/calibration ownership and the prospective lock remain absent, with zero microscopic forward maps admitted; EXP-001305 adds hash-pinned event-day Fermi position/attitude and N0/B0 spectral-history owner candidates with header/schema and TT-second coverage checks, but conversion, validity, covariance, likelihood and prospective lock remain absent",
       "next_gate_after_p0r": "P1 observation-source, target, covariance, lineage, and holdout freeze"
     }
   },
@@ -524,21 +539,13 @@
     "authority_state": "VERIFIED_PENDING_WORKTREE_NOT_YET_DURABLE_GIT_OR_REMOTE_AUTHORITY"
   },
   "completion_checkpoint": {
-    "status": "COMPLETE",
+    "status": "PENDING",
     "verified_parent_head": "666e5acde5c086ca43d4f61cd33d4d00213b013d",
     "verified_at_utc": "2026-08-30T09:18:45Z",
     "branch": "main",
     "remote": "tect",
     "remote_ref": "refs/heads/main",
-    "expected_authority_counts": {
-      "claims": 49,
-      "gates_and_hypotheses": 208,
-      "results": 281,
-      "negative_records": 375,
-      "explorations": 1304,
-      "changelog_events": 796,
-      "tasks": 61
-    },
+    "expected_authority_counts": null,
     "requirements": [
       "doctor PASS",
       "release_check PASS",
@@ -651,7 +658,8 @@
       "EXP-001301 hash-pins nine official event products in a gitignored cache; this is provenance-only and does not admit a timing likelihood or covariance.",
       "EXP-001302 adds a separately versioned candidate-neutral Delta_t_det estimator contract with explicit product roles, physical/proof owner split, calibration/window/covariance/nuisance obligations and F_reg/F_lim/F_eff/F_obs admission boundaries; no score or method change",
       "EXP-001303 independently rechecks all nine event bytes, extracts candidate-neutral GBM TT/MJDREF/event-table and GW sample/GPS/duration metadata, and rejects a mutated parent hash; no likelihood, covariance, nuisance law, complete map, score or method change",
-      "EXP-001304 extracts quote-aware GBM response creator/DRM/channel-energy provenance and verifies that the selected LIGO low-spin posterior has no merger-time coordinate; no likelihood, covariance, nuisance law, complete map, score or method change"
+      "EXP-001304 extracts quote-aware GBM response creator/DRM/channel-energy provenance and verifies that the selected LIGO low-spin posterior has no merger-time coordinate; no likelihood, covariance, nuisance law, complete map, score or method change",
+      "EXP-001305 freezes and independently audits one event-day GS-006 position/attitude product plus two GS-005 spectral-history products; metadata/schema only, no conversion, validity, likelihood, covariance, nuisance law, score or method change"
     ],
     "deliverables": [
       "one owner-intake card with explicit missing fields",
@@ -680,7 +688,7 @@
       "It does not prove Pre-A, C6, A13, Sector A, QFT, Yang-Mills, gravity, a physical mass gap, or a theory of everything.",
       "A dynamic discriminator at finite regulator does not prove continuum or physical identity."
     ],
-    "next_action": "T-061 is active. EXP-001303 and EXP-001304 show that the frozen products expose descriptive time, table and calibration provenance but not source-owned geocenter conversion, validity intervals, shared covariance, timing likelihood or intrinsic-lag law; the selected posterior schema has no merger-time coordinate. Request or locate those owner artefacts and independently reproduce F_reg only after they are frozen; continue unchanged T-054 owner intake in parallel and do not score candidates."
+    "next_action": "T-061 remains P1-active: EXP-001305 adds exact event-day Fermi owner-candidate bytes and FITS schemas (position/attitude plus N0/B0 spectral history) with TT-second coverage, but no detector-to-geocenter conversion, calibration validity/interpolation, shared covariance, timing likelihood or intrinsic-lag law. Request or locate those missing owner artefacts and independently reproduce F_reg only after all fields are frozen; continue unchanged T-054 owner intake in parallel and do not score candidates."
   },
   "resume_algorithm": [
     "Capture UTC date and run doctor.py.",

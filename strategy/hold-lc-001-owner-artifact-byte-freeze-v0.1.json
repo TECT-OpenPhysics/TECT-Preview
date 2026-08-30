@@ -1,0 +1,106 @@
+{
+  "schema": "tect/observation-owner-artifact-byte-freeze/0.1",
+  "id": "HOLD-LC-001-OWNER-ARTIFACTS-v0.1",
+  "version": "0.1.0",
+  "task_id": "T-061",
+  "holdout_id": "HOLD-LC-001",
+  "parent_manifests": [
+    "strategy/hold-lc-001-event-byte-freeze-v0.1.json",
+    "strategy/hold-lc-001-calibration-metadata-audit-v0.1.json"
+  ],
+  "status": "PARTIAL_OWNER_ARTIFACT_BYTES_HASH_PINNED_NO_STATISTICAL_ADMISSION",
+  "claim_bearing": false,
+  "methods_unchanged": true,
+  "purpose": "Freeze exact event-day Fermi owner-artifact candidates for position/attitude and spectral calibration provenance without copying raw bytes into tracked contents or admitting a timing likelihood.",
+  "retrieval": {
+    "retrieved_at": "2026-08-30T09:31:08Z",
+    "cache_root": "internal/source-cache/HOLD-LC-001/2026-08-30/owner",
+    "cache_policy": "Local gitignored cache; this tracked manifest preserves official locators, roles, byte lengths and SHA-256 values for reacquisition and byte checks.",
+    "source_listing_url": "https://heasarc.gsfc.nasa.gov/FTP/fermi/data/gbm/daily/2017/08/17/current/",
+    "release": "Fermi GBM daily event-day products for 2017-08-17"
+  },
+  "products": [
+    {
+      "id": "FERMI-GBM-EVENT-DAY-POSHIST-ALL",
+      "role": "position_attitude_history_owner_candidate",
+      "dataset_family": "GS-006",
+      "detector": "ALL",
+      "remote_url": "https://heasarc.gsfc.nasa.gov/FTP/fermi/data/gbm/daily/2017/08/17/current/glg_poshist_all_170817_v01.fit",
+      "release": "daily/2017/08/17/current",
+      "local_cache_key": "HOLD-LC-001/2026-08-30/owner/glg_poshist_all_170817_v01.fit",
+      "content_type": "application/fits",
+      "byte_length": 9187200,
+      "sha256": "c3b4d11794ffdfa14591f9decd690152e4ab8df2bba5d2a23b40ecc46ae43335",
+      "admission": "OWNER_PROVENANCE_ONLY_NO_GEOCENTER_CONVERSION"
+    },
+    {
+      "id": "FERMI-GBM-EVENT-DAY-SPECHIST-N0",
+      "role": "spectral_gain_resolution_history_owner_candidate",
+      "dataset_family": "GS-005",
+      "detector": "GBM NaI N0",
+      "remote_url": "https://heasarc.gsfc.nasa.gov/FTP/fermi/data/gbm/daily/2017/08/17/current/glg_spechist_n0_170817_v00.fit",
+      "release": "daily/2017/08/17/current",
+      "local_cache_key": "HOLD-LC-001/2026-08-30/owner/glg_spechist_n0_170817_v00.fit",
+      "content_type": "application/fits",
+      "byte_length": 17280,
+      "sha256": "3bb0ba35722bfe2a22255c6eaadb8fe712e884e2d0d95df89b6276db646aa37b",
+      "admission": "OWNER_PROVENANCE_ONLY_NO_VALIDITY_OR_JOINT_UNCERTAINTY"
+    },
+    {
+      "id": "FERMI-GBM-EVENT-DAY-SPECHIST-B0",
+      "role": "spectral_gain_resolution_history_owner_candidate",
+      "dataset_family": "GS-005",
+      "detector": "GBM BGO B0",
+      "remote_url": "https://heasarc.gsfc.nasa.gov/FTP/fermi/data/gbm/daily/2017/08/17/current/glg_spechist_b0_170817_v00.fit",
+      "release": "daily/2017/08/17/current",
+      "local_cache_key": "HOLD-LC-001/2026-08-30/owner/glg_spechist_b0_170817_v00.fit",
+      "content_type": "application/fits",
+      "byte_length": 14400,
+      "sha256": "6ccf697aa1f7fa9a984158343c56d5a3ba75919dc4b6eb2394ba40e23ed0a5da",
+      "admission": "OWNER_PROVENANCE_ONLY_NO_VALIDITY_OR_JOINT_UNCERTAINTY"
+    }
+  ],
+  "byte_validation": {
+    "verified_files": 3,
+    "all_local_sha256_match_recorded_values": true,
+    "all_downloads_completed": true,
+    "cache_is_gitignored": true,
+    "raw_bytes_are_not_copied_into_tracked_contents": true
+  },
+  "admission_boundary": {
+    "position_attitude_history": "AVAILABLE_AS_HASH_PINNED_OWNER_CANDIDATE",
+    "spectral_gain_resolution_history": "AVAILABLE_AS_HASH_PINNED_OWNER_CANDIDATE",
+    "detector_to_geocenter_conversion": "NOT_ADMITTED",
+    "calibration_validity_interpolation": "NOT_ADMITTED",
+    "joint_timing_likelihood": "NOT_ADMITTED",
+    "component_or_shared_covariance": "NOT_ADMITTED",
+    "intrinsic_emission_nuisance": "NOT_ADMITTED",
+    "f_reg_f_lim_f_eff_f_obs": "NOT_DEFINED",
+    "candidate_scoring": "STOPPED",
+    "prospective_lock": "EMPTY"
+  },
+  "assumptions": [
+    "The official daily directory and recorded URLs identify the products retrieved on 2026-08-30.",
+    "The gitignored cache is sufficient for local byte verification while this manifest preserves reacquisition provenance.",
+    "The position/attitude and spectral-history products are owner candidates and not a complete detector-to-geocenter or likelihood implementation.",
+    "The audit reads FITS headers and table declarations only; it does not interpret event, attitude or calibration table values.",
+    "The existing T-054 forward method, T-059 inverse method, owner order and promotion firewalls remain controlling."
+  ],
+  "missing_assumptions": [
+    "Source-owned detector-to-geocenter timing conversion and uncertainty for each instrument and time window.",
+    "Calibration release validity intervals, interpolation rules and an explicit link from spectral history to the selected response products.",
+    "Frozen detector, energy, background and temporal windows with selection semantics.",
+    "A source-owned joint timing likelihood or component/shared covariance including calibration and intrinsic-emission nuisance terms.",
+    "A complete candidate-neutral F_reg/F_lim/F_eff/F_obs map and immutable scorer.",
+    "A prospective holdout not used for source selection, calibration choice or estimator design."
+  ],
+  "evidence_level": "T0 exact public-product byte freeze and FITS schema/provenance intake; no model test",
+  "next_action": "Use the frozen owner-candidate metadata to request the matching validity, conversion and uncertainty artefacts. Keep scoring stopped; independently reproduce F_reg only after all required physical-owner and proof-owner fields are frozen.",
+  "non_claims": [
+    "This manifest does not admit any timing likelihood, covariance, calibration validity law, geocenter correction, candidate, map, score or prediction.",
+    "Position/attitude and spectral-history headers do not by themselves identify a microscopic dynamics or a causal propagation law.",
+    "No Pre-A, C6, A13, Sector-A, QFT, Yang-Mills, gravity, continuum, physical-vacuum, cosmic-origin, theory-of-everything or mass-gap claim follows.",
+    "The established T-054 forward and T-059 inverse methods are unchanged; this is additive owner-artifact intake only."
+  ],
+  "recorded_by": "Codex"
+}

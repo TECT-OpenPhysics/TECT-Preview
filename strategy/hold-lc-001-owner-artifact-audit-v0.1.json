@@ -1,0 +1,678 @@
+{
+  "schema": "tect/observation-owner-artifact-audit/0.1",
+  "id": "HOLD-LC-001-OWNER-ARTIFACT-AUDIT-v0.1",
+  "version": "0.1.0",
+  "task_id": "T-061",
+  "holdout_id": "HOLD-LC-001",
+  "claim_bearing": false,
+  "status": "OWNER_BYTES_AND_SCHEMA_PRESENT_STATISTICAL_OWNER_UNADMITTED",
+  "parent_owner_manifest": "strategy\\hold-lc-001-owner-artifact-byte-freeze-v0.1.json",
+  "parent_owner_manifest_sha256": "fad7fcc7d6638508e7da6d69fd17eb2991f72965182c8ece182a60442b0e4da9",
+  "parent_owner_manifest_byte_length": 6353,
+  "scope": {
+    "products": [
+      "FERMI-GBM-EVENT-DAY-POSHIST-ALL",
+      "FERMI-GBM-EVENT-DAY-SPECHIST-N0",
+      "FERMI-GBM-EVENT-DAY-SPECHIST-B0"
+    ],
+    "roles": {
+      "position_attitude": [
+        "FERMI-GBM-EVENT-DAY-POSHIST-ALL"
+      ],
+      "spectral_gain_resolution": [
+        "FERMI-GBM-EVENT-DAY-SPECHIST-N0",
+        "FERMI-GBM-EVENT-DAY-SPECHIST-B0"
+      ]
+    },
+    "extraction": "Exact SHA-256/byte-length verification plus FITS scalar headers and table declarations; no table rows, event values, attitude values, calibration values, timing fit or score.",
+    "data_role": "CALIBRATION",
+    "finite_scope": "Finite owner-provenance/schema intake only; no continuum, physical identity or prospective validation claim."
+  },
+  "products": [
+    {
+      "id": "FERMI-GBM-EVENT-DAY-POSHIST-ALL",
+      "role": "position_attitude_history_owner_candidate",
+      "dataset_family": "GS-006",
+      "detector": "ALL",
+      "local_cache_key": "HOLD-LC-001/2026-08-30/owner/glg_poshist_all_170817_v01.fit",
+      "recorded_sha256": "c3b4d11794ffdfa14591f9decd690152e4ab8df2bba5d2a23b40ecc46ae43335",
+      "actual_sha256": "c3b4d11794ffdfa14591f9decd690152e4ab8df2bba5d2a23b40ecc46ae43335",
+      "recorded_byte_length": 9187200,
+      "actual_byte_length": 9187200,
+      "sha256_match": true,
+      "byte_length_match": true,
+      "header_audit_performed": true,
+      "hdu_count": 2,
+      "hdus": [
+        {
+          "hdu_index": 0,
+          "header_byte_offset": 0,
+          "header_byte_length": 5760,
+          "data_byte_length": 0,
+          "fields": {
+            "BITPIX": 8,
+            "NAXIS": 0,
+            "DATE-OBS": "2017-08-16T23:59:00",
+            "DATE-END": "2017-08-18T00:00:59",
+            "MJDREFI": 51910,
+            "MJDREFF": 0.0007428703703703703,
+            "TSTART": 524620745.940069,
+            "TSTOP": 524707264.940074,
+            "TIMESYS": "TT",
+            "TIMEUNIT": "s",
+            "DETNAM": "ALL",
+            "CREATOR": "MakeDailyScpos v1.5.20 (rev: 04186289)",
+            "FILENAME": "glg_poshist_all_170817_v01.fit"
+          },
+          "table_columns": []
+        },
+        {
+          "hdu_index": 1,
+          "header_byte_offset": 5760,
+          "header_byte_length": 8640,
+          "data_byte_length": 9171120,
+          "fields": {
+            "XTENSION": "BINTABLE",
+            "EXTNAME": "GLAST POS HIST",
+            "BITPIX": 8,
+            "NAXIS": 2,
+            "NAXIS1": 106,
+            "NAXIS2": 86520,
+            "PCOUNT": 0,
+            "GCOUNT": 1,
+            "TFIELDS": 19,
+            "DATE-OBS": "2017-08-16T23:59:00",
+            "DATE-END": "2017-08-18T00:00:59",
+            "MJDREFI": 51910,
+            "MJDREFF": 0.0007428703703703703,
+            "TSTART": 524620745.940069,
+            "TSTOP": 524707264.940074,
+            "TIMESYS": "TT",
+            "TIMEUNIT": "s",
+            "DETNAM": "ALL"
+          },
+          "table_columns": [
+            {
+              "index": 1,
+              "name": "SCLK_UTC",
+              "format": "1D",
+              "unit": "s"
+            },
+            {
+              "index": 2,
+              "name": "QSJ_1",
+              "format": "1D",
+              "unit": null
+            },
+            {
+              "index": 3,
+              "name": "QSJ_2",
+              "format": "1D",
+              "unit": null
+            },
+            {
+              "index": 4,
+              "name": "QSJ_3",
+              "format": "1D",
+              "unit": null
+            },
+            {
+              "index": 5,
+              "name": "QSJ_4",
+              "format": "1D",
+              "unit": null
+            },
+            {
+              "index": 6,
+              "name": "WSJ_1",
+              "format": "1D",
+              "unit": "rad/s"
+            },
+            {
+              "index": 7,
+              "name": "WSJ_2",
+              "format": "1D",
+              "unit": "rad/s"
+            },
+            {
+              "index": 8,
+              "name": "WSJ_3",
+              "format": "1D",
+              "unit": "rad/s"
+            },
+            {
+              "index": 9,
+              "name": "POS_X",
+              "format": "1E",
+              "unit": "m"
+            },
+            {
+              "index": 10,
+              "name": "POS_Y",
+              "format": "1E",
+              "unit": "m"
+            },
+            {
+              "index": 11,
+              "name": "POS_Z",
+              "format": "1E",
+              "unit": "m"
+            },
+            {
+              "index": 12,
+              "name": "VEL_X",
+              "format": "1E",
+              "unit": "m/s"
+            },
+            {
+              "index": 13,
+              "name": "VEL_Y",
+              "format": "1E",
+              "unit": "m/s"
+            },
+            {
+              "index": 14,
+              "name": "VEL_Z",
+              "format": "1E",
+              "unit": "m/s"
+            },
+            {
+              "index": 15,
+              "name": "SC_LAT",
+              "format": "1E",
+              "unit": "deg"
+            },
+            {
+              "index": 16,
+              "name": "SC_LON",
+              "format": "1E",
+              "unit": "deg"
+            },
+            {
+              "index": 17,
+              "name": "SADA_PY",
+              "format": "1E",
+              "unit": "deg"
+            },
+            {
+              "index": 18,
+              "name": "SADA_NY",
+              "format": "1E",
+              "unit": "deg"
+            },
+            {
+              "index": 19,
+              "name": "FLAGS",
+              "format": "1I",
+              "unit": null
+            }
+          ]
+        }
+      ],
+      "schema": {
+        "expected_extension": "GLAST POS HIST",
+        "matching_table_hdu_indices": [
+          1
+        ],
+        "declared_columns": [
+          "FLAGS",
+          "POS_X",
+          "POS_Y",
+          "POS_Z",
+          "QSJ_1",
+          "QSJ_2",
+          "QSJ_3",
+          "QSJ_4",
+          "SADA_NY",
+          "SADA_PY",
+          "SCLK_UTC",
+          "SC_LAT",
+          "SC_LON",
+          "VEL_X",
+          "VEL_Y",
+          "VEL_Z",
+          "WSJ_1",
+          "WSJ_2",
+          "WSJ_3"
+        ],
+        "required_columns": [
+          "SCLK_UTC",
+          "QSJ_1",
+          "QSJ_2",
+          "QSJ_3",
+          "QSJ_4",
+          "WSJ_1",
+          "WSJ_2",
+          "WSJ_3",
+          "POS_X",
+          "POS_Y"
+        ],
+        "missing_required_columns": [],
+        "coverage": {
+          "DATE-OBS": "2017-08-16T23:59:00",
+          "DATE-END": "2017-08-18T00:00:59",
+          "TSTART": 524620745.940069,
+          "TSTOP": 524707264.940074,
+          "TIMESYS": "TT",
+          "TIMEUNIT": "s"
+        },
+        "coverage_metadata_present": true,
+        "nonempty_table_rows_declared": true,
+        "schema_match": true
+      }
+    },
+    {
+      "id": "FERMI-GBM-EVENT-DAY-SPECHIST-N0",
+      "role": "spectral_gain_resolution_history_owner_candidate",
+      "dataset_family": "GS-005",
+      "detector": "GBM NaI N0",
+      "local_cache_key": "HOLD-LC-001/2026-08-30/owner/glg_spechist_n0_170817_v00.fit",
+      "recorded_sha256": "3bb0ba35722bfe2a22255c6eaadb8fe712e884e2d0d95df89b6276db646aa37b",
+      "actual_sha256": "3bb0ba35722bfe2a22255c6eaadb8fe712e884e2d0d95df89b6276db646aa37b",
+      "recorded_byte_length": 17280,
+      "actual_byte_length": 17280,
+      "sha256_match": true,
+      "byte_length_match": true,
+      "header_audit_performed": true,
+      "hdu_count": 2,
+      "hdus": [
+        {
+          "hdu_index": 0,
+          "header_byte_offset": 0,
+          "header_byte_length": 2880,
+          "data_byte_length": 0,
+          "fields": {
+            "BITPIX": 8,
+            "NAXIS": 0,
+            "DATE-OBS": "2017-08-16T23:59:57",
+            "DATE-END": "2017-08-18T00:00:07",
+            "MJDREFI": 51910,
+            "MJDREFF": 0.0007428703703703703,
+            "TSTART": 524620797.686976,
+            "TSTOP": 524707207.758646,
+            "TIMESYS": "TT",
+            "TIMEUNIT": "s",
+            "DETNAM": "NAI_00",
+            "CREATOR": "GBM_SPECHIST_Reader v1.6",
+            "FILENAME": "glg_spechist_n0_170817_v00.fit"
+          },
+          "table_columns": []
+        },
+        {
+          "hdu_index": 1,
+          "header_byte_offset": 2880,
+          "header_byte_length": 8640,
+          "data_byte_length": 3240,
+          "fields": {
+            "XTENSION": "BINTABLE",
+            "EXTNAME": "GBM SPEC HIST",
+            "BITPIX": 8,
+            "NAXIS": 2,
+            "NAXIS1": 60,
+            "NAXIS2": 54,
+            "PCOUNT": 0,
+            "GCOUNT": 1,
+            "TFIELDS": 12,
+            "DATE-OBS": "2017-08-16T23:59:57",
+            "DATE-END": "2017-08-18T00:00:07",
+            "MJDREFI": 51910,
+            "MJDREFF": 0.0007428703703703703,
+            "TSTART": 524620797.686976,
+            "TSTOP": 524707207.758646,
+            "TIMESYS": "TT",
+            "TIMEUNIT": "s",
+            "DETNAM": "NAI_00"
+          },
+          "table_columns": [
+            {
+              "index": 1,
+              "name": "LINECENT",
+              "format": "1E",
+              "unit": null
+            },
+            {
+              "index": 2,
+              "name": "LINE_WID",
+              "format": "1E",
+              "unit": null
+            },
+            {
+              "index": 3,
+              "name": "LINE_AMP",
+              "format": "1E",
+              "unit": "count"
+            },
+            {
+              "index": 4,
+              "name": "ERR_CENT",
+              "format": "1E",
+              "unit": null
+            },
+            {
+              "index": 5,
+              "name": "ERR_WID",
+              "format": "1E",
+              "unit": null
+            },
+            {
+              "index": 6,
+              "name": "ERR_AMP",
+              "format": "1E",
+              "unit": "count"
+            },
+            {
+              "index": 7,
+              "name": "EN_RES",
+              "format": "1E",
+              "unit": null
+            },
+            {
+              "index": 8,
+              "name": "START",
+              "format": "1D",
+              "unit": "s"
+            },
+            {
+              "index": 9,
+              "name": "STOP",
+              "format": "1D",
+              "unit": "s"
+            },
+            {
+              "index": 10,
+              "name": "NUM_REC",
+              "format": "1J",
+              "unit": null
+            },
+            {
+              "index": 11,
+              "name": "CHI_SQ",
+              "format": "1E",
+              "unit": null
+            },
+            {
+              "index": 12,
+              "name": "BKGD_MDL",
+              "format": "2E",
+              "unit": null
+            }
+          ]
+        }
+      ],
+      "schema": {
+        "expected_extension": "GBM SPEC HIST",
+        "matching_table_hdu_indices": [
+          1
+        ],
+        "declared_columns": [
+          "BKGD_MDL",
+          "CHI_SQ",
+          "EN_RES",
+          "ERR_AMP",
+          "ERR_CENT",
+          "ERR_WID",
+          "LINECENT",
+          "LINE_AMP",
+          "LINE_WID",
+          "NUM_REC",
+          "START",
+          "STOP"
+        ],
+        "required_columns": [
+          "LINECENT",
+          "LINE_WID",
+          "LINE_AMP",
+          "ERR_CENT",
+          "ERR_WID",
+          "ERR_AMP",
+          "EN_RES",
+          "START",
+          "STOP",
+          "NUM_REC"
+        ],
+        "missing_required_columns": [],
+        "coverage": {
+          "DATE-OBS": "2017-08-16T23:59:57",
+          "DATE-END": "2017-08-18T00:00:07",
+          "TSTART": 524620797.686976,
+          "TSTOP": 524707207.758646,
+          "TIMESYS": "TT",
+          "TIMEUNIT": "s"
+        },
+        "coverage_metadata_present": true,
+        "nonempty_table_rows_declared": true,
+        "schema_match": true
+      }
+    },
+    {
+      "id": "FERMI-GBM-EVENT-DAY-SPECHIST-B0",
+      "role": "spectral_gain_resolution_history_owner_candidate",
+      "dataset_family": "GS-005",
+      "detector": "GBM BGO B0",
+      "local_cache_key": "HOLD-LC-001/2026-08-30/owner/glg_spechist_b0_170817_v00.fit",
+      "recorded_sha256": "6ccf697aa1f7fa9a984158343c56d5a3ba75919dc4b6eb2394ba40e23ed0a5da",
+      "actual_sha256": "6ccf697aa1f7fa9a984158343c56d5a3ba75919dc4b6eb2394ba40e23ed0a5da",
+      "recorded_byte_length": 14400,
+      "actual_byte_length": 14400,
+      "sha256_match": true,
+      "byte_length_match": true,
+      "header_audit_performed": true,
+      "hdu_count": 2,
+      "hdus": [
+        {
+          "hdu_index": 0,
+          "header_byte_offset": 0,
+          "header_byte_length": 2880,
+          "data_byte_length": 0,
+          "fields": {
+            "BITPIX": 8,
+            "NAXIS": 0,
+            "DATE-OBS": "2017-08-16T23:59:57",
+            "DATE-END": "2017-08-18T00:00:07",
+            "MJDREFI": 51910,
+            "MJDREFF": 0.0007428703703703703,
+            "TSTART": 524620797.686976,
+            "TSTOP": 524707207.758646,
+            "TIMESYS": "TT",
+            "TIMEUNIT": "s",
+            "DETNAM": "BGO_00",
+            "CREATOR": "GBM_SPECHIST_Reader v1.6",
+            "FILENAME": "glg_spechist_b0_170817_v00.fit"
+          },
+          "table_columns": []
+        },
+        {
+          "hdu_index": 1,
+          "header_byte_offset": 2880,
+          "header_byte_length": 8640,
+          "data_byte_length": 2040,
+          "fields": {
+            "XTENSION": "BINTABLE",
+            "EXTNAME": "GBM SPEC HIST",
+            "BITPIX": 8,
+            "NAXIS": 2,
+            "NAXIS1": 60,
+            "NAXIS2": 34,
+            "PCOUNT": 0,
+            "GCOUNT": 1,
+            "TFIELDS": 12,
+            "DATE-OBS": "2017-08-16T23:59:57",
+            "DATE-END": "2017-08-18T00:00:07",
+            "MJDREFI": 51910,
+            "MJDREFF": 0.0007428703703703703,
+            "TSTART": 524620797.686976,
+            "TSTOP": 524707207.758646,
+            "TIMESYS": "TT",
+            "TIMEUNIT": "s",
+            "DETNAM": "BGO_00"
+          },
+          "table_columns": [
+            {
+              "index": 1,
+              "name": "LINECENT",
+              "format": "1E",
+              "unit": null
+            },
+            {
+              "index": 2,
+              "name": "LINE_WID",
+              "format": "1E",
+              "unit": null
+            },
+            {
+              "index": 3,
+              "name": "LINE_AMP",
+              "format": "1E",
+              "unit": "count"
+            },
+            {
+              "index": 4,
+              "name": "ERR_CENT",
+              "format": "1E",
+              "unit": null
+            },
+            {
+              "index": 5,
+              "name": "ERR_WID",
+              "format": "1E",
+              "unit": null
+            },
+            {
+              "index": 6,
+              "name": "ERR_AMP",
+              "format": "1E",
+              "unit": "count"
+            },
+            {
+              "index": 7,
+              "name": "EN_RES",
+              "format": "1E",
+              "unit": null
+            },
+            {
+              "index": 8,
+              "name": "START",
+              "format": "1D",
+              "unit": "s"
+            },
+            {
+              "index": 9,
+              "name": "STOP",
+              "format": "1D",
+              "unit": "s"
+            },
+            {
+              "index": 10,
+              "name": "NUM_REC",
+              "format": "1J",
+              "unit": null
+            },
+            {
+              "index": 11,
+              "name": "CHI_SQ",
+              "format": "1E",
+              "unit": null
+            },
+            {
+              "index": 12,
+              "name": "BKGD_MDL",
+              "format": "2E",
+              "unit": null
+            }
+          ]
+        }
+      ],
+      "schema": {
+        "expected_extension": "GBM SPEC HIST",
+        "matching_table_hdu_indices": [
+          1
+        ],
+        "declared_columns": [
+          "BKGD_MDL",
+          "CHI_SQ",
+          "EN_RES",
+          "ERR_AMP",
+          "ERR_CENT",
+          "ERR_WID",
+          "LINECENT",
+          "LINE_AMP",
+          "LINE_WID",
+          "NUM_REC",
+          "START",
+          "STOP"
+        ],
+        "required_columns": [
+          "LINECENT",
+          "LINE_WID",
+          "LINE_AMP",
+          "ERR_CENT",
+          "ERR_WID",
+          "ERR_AMP",
+          "EN_RES",
+          "START",
+          "STOP",
+          "NUM_REC"
+        ],
+        "missing_required_columns": [],
+        "coverage": {
+          "DATE-OBS": "2017-08-16T23:59:57",
+          "DATE-END": "2017-08-18T00:00:07",
+          "TSTART": 524620797.686976,
+          "TSTOP": 524707207.758646,
+          "TIMESYS": "TT",
+          "TIMEUNIT": "s"
+        },
+        "coverage_metadata_present": true,
+        "nonempty_table_rows_declared": true,
+        "schema_match": true
+      }
+    }
+  ],
+  "available_metadata": {
+    "owner_product_sha256_and_byte_length": true,
+    "position_attitude_schema": true,
+    "spectral_gain_resolution_schema": true,
+    "event_day_coverage_metadata": true,
+    "time_standard_fields_present": true,
+    "detector_to_geocenter_conversion": false,
+    "calibration_validity_interpolation": false,
+    "source_owned_timing_likelihood": false,
+    "component_or_shared_covariance": false,
+    "intrinsic_emission_nuisance_law": false,
+    "complete_f_reg_f_lim_f_eff_f_obs": false
+  },
+  "interpretation": {
+    "position_attitude": "The event-day GLAST POS HIST table declares spacecraft position/attitude history columns and coverage metadata. Header presence does not itself provide the detector-to-geocenter conversion, interpolation rule or timing uncertainty.",
+    "spectral_history": "The event-day GBM SPEC HIST tables declare line, energy-resolution and interval fields for N0 and B0. Header presence does not itself establish calibration validity, response linkage or a shared uncertainty model.",
+    "admission": "These bytes refine the physical-owner request only. Candidate scoring and the four estimator-map stages remain stopped until the conversion, uncertainty, likelihood and nuisance owners are frozen."
+  },
+  "checks": {
+    "all_selected_product_hashes_match": true,
+    "all_role_schemas_match": true,
+    "header_only_no_table_rows_read": true,
+    "candidate_scoring": "STOPPED",
+    "prospective_lock": "EMPTY"
+  },
+  "assumptions": [
+    "The owner-artifact byte-freeze manifest remains authoritative for product identity, roles, hashes and locators.",
+    "FITS scalar headers and table declarations are descriptive provenance; no table value is interpreted by this audit.",
+    "The event-day position/attitude and spectral-history products are owner candidates, not a complete timing or calibration implementation.",
+    "The existing T-054 forward method, T-059 inverse method, owner order and promotion firewalls remain controlling."
+  ],
+  "missing_assumptions": [
+    "Source-owned detector-to-geocenter timing conversion and uncertainty for each instrument and time window.",
+    "Calibration release validity intervals, interpolation rules and an explicit link from spectral history to the selected response products.",
+    "Frozen detector, energy, background and temporal windows with selection semantics.",
+    "A source-owned joint timing likelihood or component/shared covariance including calibration and intrinsic-emission nuisance terms.",
+    "A complete candidate-neutral F_reg/F_lim/F_eff/F_obs map and immutable scorer.",
+    "A prospective holdout not used for source selection, calibration choice or estimator design."
+  ],
+  "evidence_level": "T0 exact public-product byte freeze and FITS header/schema intake; no model test",
+  "next_action": "Use the frozen owner-candidate metadata to request the matching validity, conversion and uncertainty artefacts. Independently reproduce F_reg only after the required physical-owner and proof-owner fields are frozen; keep scoring stopped.",
+  "non_claims": [
+    "This audit does not admit a detector-to-geocenter conversion, timing likelihood, covariance, calibration validity law, nuisance law, candidate, map, score or prediction.",
+    "Position/attitude and spectral-history headers do not by themselves identify microscopic dynamics or a causal propagation law.",
+    "No Pre-A, C6, A13, Sector-A, QFT, Yang-Mills, gravity, continuum, physical-vacuum, cosmic-origin, theory-of-everything or mass-gap claim follows.",
+    "The established T-054 forward and T-059 inverse methods are unchanged; this is additive owner-artifact intake only."
+  ]
+}
