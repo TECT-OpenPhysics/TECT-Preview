@@ -1,0 +1,178 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001314",
+  "reviewed_on": "2026-08-30",
+  "recorded_by": "Codex",
+  "provenance": "contemporaneous",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "task_id": "T-061",
+  "gate_ids": [
+    "PA-INVERSE-OBSERVATION-TARGET-MAP-HOLDOUT-FREEZE",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "title": "HOLD-LC-001 external GTS runtime and input readiness audit",
+  "question": "Are the hash-pinned event/owner inputs and the external GTS runtime ready for an event-level reproduction, without reading response values or changing the established proof methods?",
+  "method": [
+    "Load the existing event-byte, event-day owner-artifact, and trigger-response-history manifests and enumerate every declared local cache key.",
+    "Hash each local cache product and compare its byte length and SHA-256 against the parent manifest; do not parse FITS tables or read response-matrix values.",
+    "Verify the GTS source commit remains the parent candidate commit and probe the audit interpreter for NumPy, SciPy, Astropy, healpy, gdt.core and gdt.missions.fermi.gbm.",
+    "Apply the event-execution firewall: classify the inventory and runtime separately, preserve the physical-owner and prospective locks, and leave T-054 forward and T-059 inverse methods unchanged."
+  ],
+  "exact_scope": {
+    "data_role": "CALIBRATION",
+    "finite_scope": "Pre-event byte-integrity and Python-runtime readiness only; no FITS table values, response matrices, event likelihood, detector-to-geocenter conversion, covariance, candidate score, limit or prospective validation.",
+    "holdout_id": "HOLD-LC-001",
+    "lineage_group": "GW170817-GRB170817A",
+    "method_scope": "Additive T-061 P1 readiness audit; T-054/T-059 methods, owner order and stopped-loop rules are unchanged.",
+    "source_candidate": {
+      "path": "strategy/hold-lc-001-gts-code-owner-candidate-v0.1.json",
+      "sha256": "9c7c1830e6c52312fbfd65f7e4755be7c700e93ef363243d786f1cd995cef99e"
+    },
+    "source_commit": "1bc1e913f97fd7195a7e297f8d6032a5c7758894",
+    "run_artifact": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-gts-runtime-readiness/readiness.json"
+  },
+  "readiness_result": {
+    "status": "INPUTS_HASH_PINNED_RUNTIME_NOT_READY",
+    "manifest_products_checked": 14,
+    "manifest_products_matching": 14,
+    "required_import_modules": 6,
+    "available_import_modules": 1,
+    "missing_import_modules": [
+      "scipy",
+      "astropy",
+      "healpy",
+      "gdt.core",
+      "gdt.missions.fermi.gbm"
+    ],
+    "interpreter": "E:\\Dev\\TECT.venv\\Scripts\\python.exe",
+    "python_version": "3.12.9",
+    "matrix_values_read": false,
+    "event_execution": false
+  },
+  "checks": [
+    {
+      "id": "manifest-byte-inventory",
+      "finding": "PASS",
+      "detail": "All 14 products declared by the three parent manifests exist locally with matching byte length and SHA-256; no matrix values were read."
+    },
+    {
+      "id": "source-commit-pin",
+      "finding": "PASS",
+      "detail": "The GTS source commit remains 1bc1e913f97fd7195a7e297f8d6032a5c7758894."
+    },
+    {
+      "id": "runtime-dependency-probe",
+      "finding": "PARTIAL-PASS-RUNTIME-GAP",
+      "detail": "Only 1 of 6 required import modules is available in the audit interpreter; the five missing modules are recorded explicitly and prevent external execution readiness."
+    },
+    {
+      "id": "event-execution-firewall",
+      "finding": "PASS",
+      "detail": "The audit hashes bytes and probes imports only; it does not parse science values, select response segments, execute GTS or score an event."
+    },
+    {
+      "id": "method-preservation",
+      "finding": "PASS",
+      "detail": "This is an additive readiness checkpoint; the T-054 forward method, T-059 inverse lane, owner ordering and stopped-loop rules are unchanged."
+    }
+  ],
+  "finding": "The 14 hash-pinned event and owner products are present and byte-identical to their parent manifests, but the current Python 3.12.9 interpreter has only NumPy among the six required GTS import modules. The readiness route therefore advances the input freeze while retaining a precise external-runtime boundary; it does not execute GTS or admit an event statistic.",
+  "verdict": "advanced",
+  "decision_reason": "This audit converts the prior generic dependency prerequisite into a reproducible inventory: all local inputs pass exact byte checks, the source commit is stable, and the missing runtime modules are named. The remaining environment gap is a concrete next action rather than a new proof method or a physical claim.",
+  "decision_scope": "T0 pre-event byte-integrity and runtime-readiness boundary only; no event likelihood, response value, dynamic identification, physical identity, empirical prediction, or tier promotion.",
+  "assumptions": [
+    "The three existing HOLD-LC-001 byte manifests are the controlling input inventory and their local cache keys resolve under internal/source-cache.",
+    "Import availability in the recorded interpreter is a readiness diagnostic and not evidence that a package version is physically or scientifically valid.",
+    "The GTS source commit and all estimator/response-owner contracts remain controlling for any later external execution.",
+    "Hash and length agreement establishes byte provenance only; it does not establish calibration validity, response interpolation or timing ownership."
+  ],
+  "missing_assumptions": [
+    "A separately reproducible environment lock containing SciPy, Astropy, healpy, gdt.core and gdt.missions.fermi.gbm with exact versions and platform metadata.",
+    "A cloned or otherwise byte-pinned GTS working tree whose inspected source files match the recorded commit.",
+    "An event-neutral response-segment/interpolation and calibration-validity rule linked to the frozen position, attitude, spectral-history and rsp2 products.",
+    "A common TT/MET/GPS/geocenter conversion, timing likelihood or covariance, and intrinsic-emission-lag nuisance law.",
+    "A sealed prospective holdout and immutable candidate-neutral scorer before any target or candidate residual is inspected."
+  ],
+  "adversarial_review": [
+    {
+      "axis": "hash-match-as-science-validity",
+      "check": "Could matching bytes be treated as proof that calibration or response values are valid for the event?",
+      "disposition": "UPHELD-BLOCKED: the audit checks provenance and length only; validity, interpolation and calibration remain unadmitted owner fields."
+    },
+    {
+      "axis": "module-presence-as-environment-lock",
+      "check": "Could a positive import probe or the Python version be treated as a complete reproducible GTS environment?",
+      "disposition": "UPHELD-BLOCKED: module presence is only a readiness probe; exact distribution versions, source tree and platform lock remain required."
+    },
+    {
+      "axis": "missing-module-as-physical-no-go",
+      "check": "Could the five missing modules be promoted to a scientific failure of the GTS method?",
+      "disposition": "DISMISSED: they are an execution-environment gap, not a physical or mathematical no-go; the branch remains active for a properly frozen environment."
+    },
+    {
+      "axis": "matrix-values-and-event-leakage",
+      "check": "Could hashing the rsp/rsp2 and event files silently read response values or score the target?",
+      "disposition": "DISMISSED: the script hashes raw bytes only, records matrix_values_read=false and event_execution=false, and assigns no candidate or holdout credit."
+    },
+    {
+      "axis": "method-overhaul",
+      "check": "Could the readiness audit replace T-054 or T-059?",
+      "disposition": "DISMISSED: it is an additive T-061 execution prerequisite and preserves both established methods and their promotion firewalls."
+    }
+  ],
+  "boundary": "EXP-001314 is a T0 pre-event readiness audit. It does not admit a continuous HOLD-LC-001 likelihood, response value, calibration-validity rule, detector-to-geocenter implementation, covariance, intrinsic-lag nuisance law, F_reg/F_lim/F_eff/F_obs map, event candidate, prospective prediction, microscopic dynamics, physical identity, continuum result, Reading-H sign, Pre-A closure, Sector-A closure, or mass-gap conclusion.",
+  "evidence_level": "T0 reproducible hash and runtime probe with 14/14 input-byte matches and explicit 1/6 module availability; no external GTS execution or event-level science value",
+  "formal_refs": {
+    "results": [],
+    "negatives": [],
+    "events": []
+  },
+  "formal_integration": {
+    "results": [],
+    "negatives": [],
+    "events": [],
+    "no_new_result": true,
+    "no_new_negative": true,
+    "no_changelog_event": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "next_action": "Obtain or build a separately hash-pinned GTS environment with all six required import modules and exact distribution/platform versions, rerun this readiness audit, and only then execute the finite event-free response-index/likelihood primary, independent and hostile packet. Keep response selection, calibration validity, timing likelihood, covariance, nuisance, scorer and prospective credit locked, while continuing unchanged T-054 owner intake in parallel.",
+  "stop_or_redesign": [
+    "If a complete environment lock cannot be obtained, retain this as T0 input provenance and do not execute or score event data.",
+    "If any byte hash or source commit changes, issue a new versioned freeze and invalidate downstream readiness until all parents are reconciled.",
+    "If external execution requires post hoc response, window or candidate choices, stop the run and record the leakage as a new exploration.",
+    "If the environment is ready but the required physical-owner fields remain absent, report finite code evidence only and do not promote HOLD-LC-001."
+  ],
+  "related": [
+    {
+      "id": "EXP-001313",
+      "relation": "continues"
+    },
+    {
+      "id": "EXP-001312",
+      "relation": "continues"
+    },
+    {
+      "id": "EXP-001306",
+      "relation": "continues"
+    }
+  ],
+  "non_claims": [
+    "The 14 matching hashes do not validate FITS science values, response matrices, calibration, interpolation or detector-to-geocenter timing.",
+    "The missing modules are not a scientific no-go and the available NumPy module is not a complete GTS environment lock.",
+    "No external GTS event execution, GBM likelihood, Stachie joint Lambda, continuous Delta_t_det likelihood, covariance, candidate score or prospective prediction is admitted.",
+    "No microscopic dynamics, QFT/Yang--Mills/gravity identity, Pre-A, C6, A13, Sector-A, continuum, physical-vacuum, cosmic-origin, theory-of-everything or mass-gap claim follows.",
+    "The established T-054 forward and T-059 inverse methods, owner order and stopped-loop rules are unchanged."
+  ],
+  "evidence_refs": [
+    "strategy/hold-lc-001-event-byte-freeze-v0.1.json#products",
+    "strategy/hold-lc-001-owner-artifact-byte-freeze-v0.1.json#products",
+    "strategy/hold-lc-001-response-history-byte-freeze-v0.1.json#products",
+    "strategy/hold-lc-001-gts-code-owner-candidate-v0.1.json#official_code_source",
+    "verification/scripts/audit_gts_runtime_readiness.py#run",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-gts-runtime-readiness/readiness.json#checks"
+  ]
+}

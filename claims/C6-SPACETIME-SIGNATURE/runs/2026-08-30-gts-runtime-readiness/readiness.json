@@ -1,0 +1,308 @@
+{
+  "schema": "tect/gts-runtime-readiness/0.1",
+  "id": "GTS-RUNTIME-READINESS-001",
+  "recorded_on": "2026-08-30",
+  "claim_bearing": false,
+  "tier": "T0",
+  "status": "INPUTS_HASH_PINNED_RUNTIME_NOT_READY",
+  "source_repository": "https://github.com/USRA-STI/gamma-ray-targeted-search",
+  "source_commit": "1bc1e913f97fd7195a7e297f8d6032a5c7758894",
+  "interpreter": {
+    "executable": "E:\\Dev\\TECT.venv\\Scripts\\python.exe",
+    "version": "3.12.9",
+    "implementation": "CPython"
+  },
+  "required_modules": [
+    {
+      "module": "numpy",
+      "available": true,
+      "distribution_version": "2.5.1"
+    },
+    {
+      "module": "scipy",
+      "available": false,
+      "distribution_version": null
+    },
+    {
+      "module": "astropy",
+      "available": false,
+      "distribution_version": null
+    },
+    {
+      "module": "healpy",
+      "available": false,
+      "distribution_version": null
+    },
+    {
+      "module": "gdt.core",
+      "available": false,
+      "error": "ModuleNotFoundError"
+    },
+    {
+      "module": "gdt.missions.fermi.gbm",
+      "available": false,
+      "error": "ModuleNotFoundError"
+    }
+  ],
+  "manifest_sources": [
+    {
+      "path": "strategy/hold-lc-001-event-byte-freeze-v0.1.json",
+      "id": "HOLD-LC-001-EVENT-BYTES-v0.1",
+      "status": "PARTIAL_EVENT_BYTES_HASH_PINNED_NO_LIKELIHOOD"
+    },
+    {
+      "path": "strategy/hold-lc-001-owner-artifact-byte-freeze-v0.1.json",
+      "id": "HOLD-LC-001-OWNER-ARTIFACTS-v0.1",
+      "status": "PARTIAL_OWNER_ARTIFACT_BYTES_HASH_PINNED_NO_STATISTICAL_ADMISSION"
+    },
+    {
+      "path": "strategy/hold-lc-001-response-history-byte-freeze-v0.1.json",
+      "id": "HOLD-LC-001-RESPONSE-HISTORY-v0.1",
+      "status": "PARTIAL_RESPONSE_HISTORY_BYTES_HASH_PINNED_NO_MATRIX_VALUE_ADMISSION"
+    }
+  ],
+  "byte_inventory": [
+    {
+      "id": "GWOSC-H1-CLEANED-TXTGZ",
+      "role": "raw_cleaned_detector_strain",
+      "manifest_path": "strategy/hold-lc-001-event-byte-freeze-v0.1.json",
+      "local_cache_key": "HOLD-LC-001/2026-08-30/H-H1_LOSC_CLN_4_V1-1187007040-2048.txt.gz",
+      "cache_locator": "HOLD-LC-001/2026-08-30/H-H1_LOSC_CLN_4_V1-1187007040-2048.txt.gz",
+      "exists": true,
+      "recorded_byte_length": 72237552,
+      "actual_byte_length": 72237552,
+      "recorded_sha256": "a5713f20459ddc43d6704d67eae3368a94d147fcff4a625e01a1495041e1d59a",
+      "actual_sha256": "a5713f20459ddc43d6704d67eae3368a94d147fcff4a625e01a1495041e1d59a",
+      "byte_length_match": true,
+      "sha256_match": true,
+      "matrix_values_read": false
+    },
+    {
+      "id": "GWOSC-L1-CLEANED-TXTGZ",
+      "role": "raw_cleaned_detector_strain",
+      "manifest_path": "strategy/hold-lc-001-event-byte-freeze-v0.1.json",
+      "local_cache_key": "HOLD-LC-001/2026-08-30/L-L1_LOSC_CLN_4_V1-1187007040-2048.txt.gz",
+      "cache_locator": "HOLD-LC-001/2026-08-30/L-L1_LOSC_CLN_4_V1-1187007040-2048.txt.gz",
+      "exists": true,
+      "recorded_byte_length": 77118779,
+      "actual_byte_length": 77118779,
+      "recorded_sha256": "33b8aa738fc3492e24a280decec58626219ed438c3c8c2e8d8f42c538e6580d8",
+      "actual_sha256": "33b8aa738fc3492e24a280decec58626219ed438c3c8c2e8d8f42c538e6580d8",
+      "byte_length_match": true,
+      "sha256_match": true,
+      "matrix_values_read": false
+    },
+    {
+      "id": "LIGO-P1800061-README",
+      "role": "release_readme_and_product_provenance",
+      "manifest_path": "strategy/hold-lc-001-event-byte-freeze-v0.1.json",
+      "local_cache_key": "HOLD-LC-001/2026-08-30/README.md",
+      "cache_locator": "HOLD-LC-001/2026-08-30/README.md",
+      "exists": true,
+      "recorded_byte_length": 1461,
+      "actual_byte_length": 1461,
+      "recorded_sha256": "c40a8173193f388cfd319f1c2e3389acb26480491492f12e4fc7fae3dfd38e69",
+      "actual_sha256": "c40a8173193f388cfd319f1c2e3389acb26480491492f12e4fc7fae3dfd38e69",
+      "byte_length_match": true,
+      "sha256_match": true,
+      "matrix_values_read": false
+    },
+    {
+      "id": "LIGO-P1800061-LOW-SPIN-POSTERIOR",
+      "role": "public_parameter_estimation_sample_product",
+      "manifest_path": "strategy/hold-lc-001-event-byte-freeze-v0.1.json",
+      "local_cache_key": "HOLD-LC-001/2026-08-30/low_spin_PhenomPNRT_posterior_samples.dat.gz",
+      "cache_locator": "HOLD-LC-001/2026-08-30/low_spin_PhenomPNRT_posterior_samples.dat.gz",
+      "exists": true,
+      "recorded_byte_length": 433240,
+      "actual_byte_length": 433240,
+      "recorded_sha256": "c641b776bc4a65fc101d84989b8f12597d2936031219c65d69a5c824d69c464a",
+      "actual_sha256": "c641b776bc4a65fc101d84989b8f12597d2936031219c65d69a5c824d69c464a",
+      "byte_length_match": true,
+      "sha256_match": true,
+      "matrix_values_read": false
+    },
+    {
+      "id": "FERMI-GBM-N0-TTE",
+      "role": "raw_gamma_ray_time_tagged_event_product",
+      "manifest_path": "strategy/hold-lc-001-event-byte-freeze-v0.1.json",
+      "local_cache_key": "HOLD-LC-001/2026-08-30/glg_tte_n0_bn170817529_v00.fit",
+      "cache_locator": "HOLD-LC-001/2026-08-30/glg_tte_n0_bn170817529_v00.fit",
+      "exists": true,
+      "recorded_byte_length": 2756160,
+      "actual_byte_length": 2756160,
+      "recorded_sha256": "4982f0d104d4dabfc43816cf2373c8368ba334984df7c8b0644fb4892e32e58b",
+      "actual_sha256": "4982f0d104d4dabfc43816cf2373c8368ba334984df7c8b0644fb4892e32e58b",
+      "byte_length_match": true,
+      "sha256_match": true,
+      "matrix_values_read": false
+    },
+    {
+      "id": "FERMI-GBM-B0-TTE",
+      "role": "raw_gamma_ray_time_tagged_event_product",
+      "manifest_path": "strategy/hold-lc-001-event-byte-freeze-v0.1.json",
+      "local_cache_key": "HOLD-LC-001/2026-08-30/glg_tte_b0_bn170817529_v00.fit",
+      "cache_locator": "HOLD-LC-001/2026-08-30/glg_tte_b0_bn170817529_v00.fit",
+      "exists": true,
+      "recorded_byte_length": 3974400,
+      "actual_byte_length": 3974400,
+      "recorded_sha256": "5327ca93bd709d6308345a1da21d4c36c94023869dd226104a803f38f3dd486e",
+      "actual_sha256": "5327ca93bd709d6308345a1da21d4c36c94023869dd226104a803f38f3dd486e",
+      "byte_length_match": true,
+      "sha256_match": true,
+      "matrix_values_read": false
+    },
+    {
+      "id": "FERMI-GBM-N0-RESPONSE",
+      "role": "detector_response_support_product",
+      "manifest_path": "strategy/hold-lc-001-event-byte-freeze-v0.1.json",
+      "local_cache_key": "HOLD-LC-001/2026-08-30/glg_cspec_n0_bn170817529_v04.rsp",
+      "cache_locator": "HOLD-LC-001/2026-08-30/glg_cspec_n0_bn170817529_v04.rsp",
+      "exists": true,
+      "recorded_byte_length": 97920,
+      "actual_byte_length": 97920,
+      "recorded_sha256": "05c2c6cfebc935e91d902ef398d600311db32c9e23efafc3049551413dabf73c",
+      "actual_sha256": "05c2c6cfebc935e91d902ef398d600311db32c9e23efafc3049551413dabf73c",
+      "byte_length_match": true,
+      "sha256_match": true,
+      "matrix_values_read": false
+    },
+    {
+      "id": "FERMI-GBM-B0-RESPONSE",
+      "role": "detector_response_support_product",
+      "manifest_path": "strategy/hold-lc-001-event-byte-freeze-v0.1.json",
+      "local_cache_key": "HOLD-LC-001/2026-08-30/glg_cspec_b0_bn170817529_v04.rsp",
+      "cache_locator": "HOLD-LC-001/2026-08-30/glg_cspec_b0_bn170817529_v04.rsp",
+      "exists": true,
+      "recorded_byte_length": 97920,
+      "actual_byte_length": 97920,
+      "recorded_sha256": "f8d7f282693103bc0c62aa34f773ac045a30e363b71c0e055e0da9a014b57100",
+      "actual_sha256": "f8d7f282693103bc0c62aa34f773ac045a30e363b71c0e055e0da9a014b57100",
+      "byte_length_match": true,
+      "sha256_match": true,
+      "matrix_values_read": false
+    },
+    {
+      "id": "FERMI-GBM-TRIGDAT",
+      "role": "burst_trigger_and_time_context_product",
+      "manifest_path": "strategy/hold-lc-001-event-byte-freeze-v0.1.json",
+      "local_cache_key": "HOLD-LC-001/2026-08-30/glg_trigdat_all_bn170817529_v01.fit",
+      "cache_locator": "HOLD-LC-001/2026-08-30/glg_trigdat_all_bn170817529_v01.fit",
+      "exists": true,
+      "recorded_byte_length": 109440,
+      "actual_byte_length": 109440,
+      "recorded_sha256": "820352fb9757a8a8b2b95983108b7ccadbb84b6980a6e6f7bf5d4fea143e807e",
+      "actual_sha256": "820352fb9757a8a8b2b95983108b7ccadbb84b6980a6e6f7bf5d4fea143e807e",
+      "byte_length_match": true,
+      "sha256_match": true,
+      "matrix_values_read": false
+    },
+    {
+      "id": "FERMI-GBM-EVENT-DAY-POSHIST-ALL",
+      "role": "position_attitude_history_owner_candidate",
+      "manifest_path": "strategy/hold-lc-001-owner-artifact-byte-freeze-v0.1.json",
+      "local_cache_key": "HOLD-LC-001/2026-08-30/owner/glg_poshist_all_170817_v01.fit",
+      "cache_locator": "HOLD-LC-001/2026-08-30/owner/glg_poshist_all_170817_v01.fit",
+      "exists": true,
+      "recorded_byte_length": 9187200,
+      "actual_byte_length": 9187200,
+      "recorded_sha256": "c3b4d11794ffdfa14591f9decd690152e4ab8df2bba5d2a23b40ecc46ae43335",
+      "actual_sha256": "c3b4d11794ffdfa14591f9decd690152e4ab8df2bba5d2a23b40ecc46ae43335",
+      "byte_length_match": true,
+      "sha256_match": true,
+      "matrix_values_read": false
+    },
+    {
+      "id": "FERMI-GBM-EVENT-DAY-SPECHIST-N0",
+      "role": "spectral_gain_resolution_history_owner_candidate",
+      "manifest_path": "strategy/hold-lc-001-owner-artifact-byte-freeze-v0.1.json",
+      "local_cache_key": "HOLD-LC-001/2026-08-30/owner/glg_spechist_n0_170817_v00.fit",
+      "cache_locator": "HOLD-LC-001/2026-08-30/owner/glg_spechist_n0_170817_v00.fit",
+      "exists": true,
+      "recorded_byte_length": 17280,
+      "actual_byte_length": 17280,
+      "recorded_sha256": "3bb0ba35722bfe2a22255c6eaadb8fe712e884e2d0d95df89b6276db646aa37b",
+      "actual_sha256": "3bb0ba35722bfe2a22255c6eaadb8fe712e884e2d0d95df89b6276db646aa37b",
+      "byte_length_match": true,
+      "sha256_match": true,
+      "matrix_values_read": false
+    },
+    {
+      "id": "FERMI-GBM-EVENT-DAY-SPECHIST-B0",
+      "role": "spectral_gain_resolution_history_owner_candidate",
+      "manifest_path": "strategy/hold-lc-001-owner-artifact-byte-freeze-v0.1.json",
+      "local_cache_key": "HOLD-LC-001/2026-08-30/owner/glg_spechist_b0_170817_v00.fit",
+      "cache_locator": "HOLD-LC-001/2026-08-30/owner/glg_spechist_b0_170817_v00.fit",
+      "exists": true,
+      "recorded_byte_length": 14400,
+      "actual_byte_length": 14400,
+      "recorded_sha256": "6ccf697aa1f7fa9a984158343c56d5a3ba75919dc4b6eb2394ba40e23ed0a5da",
+      "actual_sha256": "6ccf697aa1f7fa9a984158343c56d5a3ba75919dc4b6eb2394ba40e23ed0a5da",
+      "byte_length_match": true,
+      "sha256_match": true,
+      "matrix_values_read": false
+    },
+    {
+      "id": "FERMI-GBM-EVENT-TRIGGER-RSP2-N0",
+      "role": "time_segmented_response_history_owner_candidate",
+      "manifest_path": "strategy/hold-lc-001-response-history-byte-freeze-v0.1.json",
+      "local_cache_key": "HOLD-LC-001/2026-08-30/owner/glg_cspec_n0_bn170817529_v04.rsp2",
+      "cache_locator": "HOLD-LC-001/2026-08-30/owner/glg_cspec_n0_bn170817529_v04.rsp2",
+      "exists": true,
+      "recorded_byte_length": 682560,
+      "actual_byte_length": 682560,
+      "recorded_sha256": "3302916c975c44cce107c39ded80c6c7f2455e574c6c230a9853e8dbb342005d",
+      "actual_sha256": "3302916c975c44cce107c39ded80c6c7f2455e574c6c230a9853e8dbb342005d",
+      "byte_length_match": true,
+      "sha256_match": true,
+      "matrix_values_read": false
+    },
+    {
+      "id": "FERMI-GBM-EVENT-TRIGGER-RSP2-B0",
+      "role": "time_segmented_response_history_owner_candidate",
+      "manifest_path": "strategy/hold-lc-001-response-history-byte-freeze-v0.1.json",
+      "local_cache_key": "HOLD-LC-001/2026-08-30/owner/glg_cspec_b0_bn170817529_v04.rsp2",
+      "cache_locator": "HOLD-LC-001/2026-08-30/owner/glg_cspec_b0_bn170817529_v04.rsp2",
+      "exists": true,
+      "recorded_byte_length": 682560,
+      "actual_byte_length": 682560,
+      "recorded_sha256": "1760b4723d2e704ccaf030147244ec2b8648c22355ea1e181509791505164d7a",
+      "actual_sha256": "1760b4723d2e704ccaf030147244ec2b8648c22355ea1e181509791505164d7a",
+      "byte_length_match": true,
+      "sha256_match": true,
+      "matrix_values_read": false
+    }
+  ],
+  "checks": [
+    {
+      "id": "manifest-byte-inventory",
+      "finding": "PASS",
+      "detail": "14/14 manifest products exist with matching byte length and SHA-256; no matrix values were read."
+    },
+    {
+      "id": "source-commit-pin",
+      "finding": "PASS",
+      "detail": "GTS source commit recorded as 1bc1e913f97fd7195a7e297f8d6032a5c7758894."
+    },
+    {
+      "id": "runtime-dependency-probe",
+      "finding": "PARTIAL-PASS-RUNTIME-GAP",
+      "detail": "1/6 required import modules are available in the audit interpreter; missing modules remain explicit."
+    },
+    {
+      "id": "event-execution-firewall",
+      "finding": "PASS",
+      "detail": "The audit hashes bytes and probes imports only; it does not parse science values, execute GTS, select response segments, or score an event."
+    }
+  ],
+  "run_command": "python verification/scripts/audit_gts_runtime_readiness.py --out claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-gts-runtime-readiness/readiness.json",
+  "interpretation": "The hash-pinned local event/owner byte inventory is ready for a later event-freeze packet, while the current interpreter is not an external GTS execution environment when required modules are missing. This is a readiness boundary, not a statistical or physical result.",
+  "next_action": "Provide a separately hash-pinned environment containing every required GTS module and exact package version, then rerun this audit before any event-level execution. Keep response values, segment selection, timing likelihood, covariance, nuisance law, scorer and prospective credit locked.",
+  "non_claims": [
+    "No FITS table or response-matrix science value was read or validated.",
+    "No external GTS repository execution, event-level GBM likelihood, response value, calibration validity or detector-to-geocenter correction is established.",
+    "The synthetic GTS audit and this runtime inventory do not provide a Stachie joint Lambda, continuous Delta_t_det likelihood, covariance, intrinsic-lag law, candidate score or prospective prediction.",
+    "No microscopic dynamics, QFT/Yang--Mills/gravity identity, Pre-A, C6, Sector-A, continuum, physical-vacuum, cosmic-origin, theory-of-everything or mass-gap claim follows.",
+    "The established T-054 forward and T-059 inverse methods, owner order and stopped-loop rules are unchanged."
+  ]
+}
