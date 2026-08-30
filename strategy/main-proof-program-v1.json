@@ -504,13 +504,21 @@
     "authority_state": "VERIFIED_PENDING_WORKTREE_NOT_YET_DURABLE_GIT_OR_REMOTE_AUTHORITY"
   },
   "completion_checkpoint": {
-    "status": "PENDING",
-    "verified_parent_head": null,
-    "verified_at_utc": null,
+    "status": "COMPLETE",
+    "verified_parent_head": "3a6d491e84f0ab629d8a6049c56bfe2ff89b2950",
+    "verified_at_utc": "2026-08-30T08:37:14Z",
     "branch": "main",
     "remote": "tect",
     "remote_ref": "refs/heads/main",
-    "expected_authority_counts": null,
+    "expected_authority_counts": {
+      "claims": 49,
+      "gates_and_hypotheses": 208,
+      "results": 281,
+      "negative_records": 375,
+      "explorations": 1302,
+      "changelog_events": 796,
+      "tasks": 61
+    },
     "requirements": [
       "doctor PASS",
       "release_check PASS",
@@ -539,7 +547,10 @@
       "EXP-001300 records the official GWOSC, LIGO P1800061 and Fermi GBM public-product discovery boundary without downloading bytes, admitting a timing likelihood, scoring candidates or changing T-054/T-059 methods.",
       "EXP-001301 freezes nine official event-product bytes with SHA-256 values in a gitignored cache; the packet remains T0 provenance-only, with no likelihood, covariance, scorer or method change.",
       "The release-gated EXP-001301 byte-freeze commit 644836357f965a3cf343cbc42c3b1b0c58f21a90 was pushed to tect/main; strict baseline refresh is required after this pointer alignment.",
-      "EXP-001302 is staged as an additive T0 estimator-interface advance; the completion checkpoint is pending until release-gated commit and remote verification complete."
+      "EXP-001302 is staged as an additive T0 estimator-interface advance; the completion checkpoint is pending until release-gated commit and remote verification complete.",
+      "The release-gated T-061 estimator-contract commit 3a6d491e84f0ab629d8a6049c56bfe2ff89b2950 was created after release_check PASS.",
+      "git push tect main advanced refs/heads/main to 3a6d491e84f0ab629d8a6049c56bfe2ff89b2950, and live git ls-remote returned the same SHA.",
+      "EXP-001302 is now durable in the append-only ledger; the candidate-neutral estimator remains design-only with scoring and prospective validation stopped."
     ]
   },
   "stopped_loop_registry": [
