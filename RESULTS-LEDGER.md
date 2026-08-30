@@ -22,6 +22,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-451](#r-451) | Conditional two-sided history recurrence to all-shape exhaustion Cauchy transfer | R-451 v1.0 is a T0 claim-nonbearing T-054 interface under EXP-001324. Assuming the existing R-450 per-edge shell contract on one common L4 domain and a consistent two-sided additive history recurrence, the exact tail ratio is at most 23/26 from R=1 and `||Y_Lambda'-Y_Lambda||_4^4 <= 16*C4_edge*T(R)^4` for shapes agreeing through radius R-1; `T(R) <= 78*(23/26)^(R-1)` vanishes analytically. Primary 341/341, independent 332/332, hostile 9/9, integrated 19/19 and Lean R451 pass. The actual Q3 history, common domain, production exhaustion map, common alpha, physical, continuum, Yang--Mills and mass-gap gates remain open; the established method and owner order are unchanged |
 | [R-450](#r-450) | Conditional two-orientation state-weighted shell-tail transfer | R-450 v1.0 is a T0 claim-nonbearing T-054 interface under EXP-001323. Composing EXP-001320's conditional per-edge state-weighted L4 fourth-power bound with R-444/R-445 gives the root-free two-orientation tail envelope `B_+(R)^4+B_-(R)^4 <= 2*C4_edge*T(R)^4` over all 343 boxes, 102900 edges and 4116 radius rows. Primary 12742/12742, independent 12731/12731, hostile 9/9, integrated 19/19 and Lean R450 pass. The per-edge hypothesis, common domain, actual Q3 history, common alpha, physical, continuum, Yang--Mills and mass-gap gates remain open; the established method and owner order are unchanged |
 | [R-449](#r-449) | Source-owner intake and physical/proof leakage audit | R-449 v1.0 is a T0 claim-nonbearing T-061 owner-intake audit under EXP-001322. The nine physical/proof owner slots remain unadmitted: R-192 first fails at heat_root_incidence, A2 is deterministic and incompatible with the stochastic/root-labelled production contract, R-448 leaves a non-identifiable unowned static class, and the T-061 F_reg/F_lim/F_eff/F_obs chain plus PROS-LOCK-001 remain incomplete. Primary 38/38, independent 21/21, hostile 8/8, integrated 35/35 and Lean R449 pass. Existing T-054/T-059 methods and owner order are unchanged; the owner branch is parked and no Pre-A, Sector-A, C6, QFT, Yang--Mills or mass-gap claim follows |
 | [R-448](#r-448) | Static-equivalence quotient and separating finite dynamic estimand | R-448 v1.0 is a T0 claim-nonbearing T-061 interface under EXP-001321. Equality of the registered static signature forms an explicit equivalence relation; two distinct positive finite representatives share that signature and are separated by the fixed one-step proxy at `(1,0)`. Primary 24/24, independent 11/11, hostile 8/8, integrated 29/29 and Lean R448 pass. Static data remain non-identifying; no source-owned dynamics, holdout prediction, physical, Pre-A, QFT, Yang--Mills or mass-gap claim follows |
@@ -770,6 +771,49 @@ exhaustion, physical-empty comparison, C6, Sector-A, Pre-A, Yang--Mills dynamics
 or a mass gap. No claim tier changes and no negative result is issued.
 
 **Proven in:** [R-444 certificate](strategy/pre-a-cp1-st8-q3lock-exponential-shell-tail-certificate-260830.md), [machine manifest](strategy/pre-a-cp1-st8-q3lock-exponential-shell-tail-manifest.json), [integrated run](claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-integrated-exponential_shell_tail/integrated.json), [exploration record](strategy/pre-a-cp1-st8-q3lock-exponential-shell-tail-exploration.json), and [Lean R444](verification/lean/Tect/R444.lean).
+<a id="r-451"></a>
+### R-451 -- Conditional two-sided history recurrence to all-shape exhaustion Cauchy transfer
+
+**Result ID.** `PA-CP1-ST8-Q3LOCK-TWO-SIDED-HISTORY-CAUCHY-TRANSFER-v0` (R-451).
+
+**Version and exact scope.** R-451 v1.0 is a T0, claim-nonbearing T-054
+interface under EXP-001324. It composes the existing R-450 two-orientation
+shell envelope with an explicit conditional contract: for nested shapes that
+agree through radius `R-1`, each orientation difference is a finite additive
+history sum in one common `L4` space or form domain, and every history term
+satisfies `||X_(sigma,e)||_L4^4 <= C4_edge*w(e)^4`. No source-owned Q3 history
+or common domain is supplied by this result.
+
+**Finding.** The exact R-444 tail
+`T(R)=3*(4R^2+8R+14)*2^(1-R)` obeys
+`T(R+1)/T(R) <= 23/26` for `R>=1`, so
+`T(R) <= 78*(23/26)^(R-1)` and the scalar envelope vanishes. The fourth-power
+sum inequality for the two declared orientations yields the root-free
+conditional bound
+`||Y_Lambda'-Y_Lambda||_L4^4 <= 16*C4_edge*T(R)^4` whenever the shapes agree
+through radius `R-1`. The primary exact lane passes `341/341` rows/assertions
+for `R=1..64`; the independent lane passes `332/332`; the hostile lane rejects
+`9/9`; the integrated verifier passes `19/19`; and Lean R451 compiles.
+
+**Assumptions and missing assumptions.** The common-domain additive history
+decomposition, triple-nested consistency, and R-450 per-edge majorant are
+explicit assumptions. Missing are the source-owned Q3 history, common
+unbounded domain, uniform constants, a production exhaustion map, common alpha,
+OS/KMS/GNS identification, sector coercivity, physical-empty comparison,
+continuum, Yang--Mills and mass-gap closure.
+
+**Method and boundary.** This is an analytic conditional consequence, not a
+new finite grid or a replacement for T-054. The established T-054 forward
+method, T-059/T-061 inverse methods, owner order and promotion firewalls are
+unchanged. No negative result, tier change or PDF is issued.
+
+**Proven in:** [R-451 manifest](strategy/pre-a-cp1-st8-q3lock-two-sided-history-cauchy-transfer-manifest.json), [certificate](strategy/pre-a-cp1-st8-q3lock-two-sided-history-cauchy-transfer-certificate-260831.md), [primary script](verification/scripts/pre_a_cp1_st8_q3lock_two_sided_history_cauchy_transfer.py), [independent script](codes/foundations/pre_a_cp1_st8_q3lock_two_sided_history_cauchy_transfer_independent.py), [hostile script](codes/foundations/pre_a_cp1_st8_q3lock_two_sided_history_cauchy_transfer_hostile.py), [integrated verifier](verification/scripts/pre_a_cp1_st8_q3lock_two_sided_history_cauchy_transfer_verify.py), [integrated run](claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-integrated-pre_a_cp1_st8_q3lock_two_sided_history_cauchy_transfer/integrated.json), [exploration](strategy/pre-a-cp1-st8-q3lock-two-sided-history-cauchy-transfer-exploration.json), and [Lean R451](verification/lean/Tect/R451.lean).
+
+**Next action.** When a source-owned Q3 history and common domain arrive,
+instantiate the R-451 hypotheses and test the actual all-shape Cauchy estimate.
+Until then, continue the existing T-054 owner-intake boundary and additive
+T-059/T-061 source locks; do not issue another finite mobility table.
+
 <a id="r-450"></a>
 ### R-450 -- Conditional two-orientation state-weighted shell-tail transfer
 

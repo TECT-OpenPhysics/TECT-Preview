@@ -5,10 +5,11 @@
 
 Authorities: `RESULTS-LEDGER.md`.
 
-**284 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
+**285 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
 
 | ID | Result | Tier/scope |
 |---|---|---|
+| [`R-451`](../RESULTS-LEDGER.md#r-451) | Conditional two-sided history recurrence to all-shape exhaustion Cauchy transfer | T0 |
 | [`R-450`](../RESULTS-LEDGER.md#r-450) | Conditional two-orientation state-weighted shell-tail transfer | T0 |
 | [`R-449`](../RESULTS-LEDGER.md#r-449) | Source-owner intake and physical/proof leakage audit | T0 |
 | [`R-448`](../RESULTS-LEDGER.md#r-448) | Static-equivalence quotient and separating finite dynamic estimand | T0 |
@@ -33,7 +34,6 @@ Authorities: `RESULTS-LEDGER.md`.
 | [`R-429`](../RESULTS-LEDGER.md#r-429) | Decimal precision uplift confirms the rounded-input residual boundary | T0 |
 | [`R-428`](../RESULTS-LEDGER.md#r-428) | High-cutoff residual-basis conditioning diagnostic (inconclusive) | T0 |
 | [`R-427`](../RESULTS-LEDGER.md#r-427) | Reading-H physical-empty bounded test revalidation (blocked) | T0 |
-| [`R-426`](../RESULTS-LEDGER.md#r-426) | High-cutoff finite harmonic coarse-Schur stress (route-local boundary) | T0 |
 
 Search without loading the full ledger:
 

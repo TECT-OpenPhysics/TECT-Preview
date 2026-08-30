@@ -1,0 +1,166 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "result_id": "R-451",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-TWO-SIDED-HISTORY-CAUCHY-TRANSFER-v0",
+  "title": "Conditional two-sided history recurrence to all-shape exhaustion Cauchy transfer",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001324",
+  "tier": "T0",
+  "claim_bearing": false,
+  "status": "CONDITIONAL_HISTORY_CAUCHY_TRANSFER_AUDITED",
+  "parent_results": ["R-450", "R-444", "R-445"],
+  "parent_explorations": ["EXP-001323", "EXP-001320", "EXP-001289", "EXP-001297"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-FIRST-PASSAGE-BACKBONE-REAL-TIME-PRODUCT-AND-ENERGY-TAIL-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "question": "If the existing two-orientation shell envelope is supplied by a common-domain, two-sided history recurrence, what exact all-shape exhaustion Cauchy bound follows, and does its scalar tail vanish without a finite-table extrapolation?",
+  "theorem": {
+    "shell_tail": "T(R)=3*(4R^2+8R+14)*2^(1-R) for R>=1",
+    "tail_ratio": "T(R+1)/T(R) <= 23/26 for every integer R>=1",
+    "history_contract": "For each orientation sigma and each nested pair of boxes agreeing through radius R-1, Delta Y_sigma is the finite sum of actual history terms X_(sigma,e) over changed edges, in one common L4 domain, with ||X_(sigma,e)||_4^4 <= C4_edge*w(e)^4.",
+    "cauchy_bound": "||Y_Lambda'-Y_Lambda||_4^4 <= 16*C4_edge*T(R)^4 when the two boxes agree through radius R-1",
+    "geometric_envelope": "T(R) <= 78*(23/26)^(R-1), hence T(R) tends to zero",
+    "conclusion": "Under the declared common-domain and two-sided recurrence assumptions, every all-shape exhaustion whose pairwise differences escape to radius infinity is L4-Cauchy."
+  },
+  "finite_fixture": {
+    "dimension": 3,
+    "radius_min": 1,
+    "radius_max": 64,
+    "orientation_count": 2,
+    "ratio_q": "23/26",
+    "base_tail": "78",
+    "shape_statement": "No new finite grid is used; shape independence is an abstract agreement-through-radius implication."
+  },
+  "scope": {
+    "parent_two_orientation_shell_envelope_reused": true,
+    "tail_ratio_closed": true,
+    "geometric_vanishing_envelope_closed": true,
+    "conditional_two_sided_recurrence_transfer_closed": true,
+    "conditional_all_shape_cauchy_implication_closed": true,
+    "actual_q3_history_closed": false,
+    "common_weighted_operator_domain_closed": false,
+    "source_uniformity_closed": false,
+    "beta_uniformity_closed": false,
+    "volume_uniformity_closed": false,
+    "cutoff_uniformity_closed": false,
+    "exhaustion_independence_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "assumptions": [
+    "The R-450 conditional two-orientation shell envelope is available on one common L4 space or form domain.",
+    "For every nested pair agreeing through radius R-1, both orientation differences have a finite additive history decomposition over changed edges.",
+    "The per-edge fourth-power majorant uses one C4_edge and the R-444 weight in both orientations, independent of shape and history depth.",
+    "The finite additive decomposition is consistent on triple-nested boxes, so pairwise differences obey the same shell contract.",
+    "The standard geometric fact that a polynomial times a ratio strictly below one vanishes at infinity is used only for the scalar tail; it is not a Q3 operator theorem."
+  ],
+  "missing_assumptions": [
+    "A source-owned Q3LOCK history and actual per-edge terms satisfying the contract.",
+    "A common unbounded operator/form domain and a proof that the actual history terms live there.",
+    "Source-, beta-, cutoff-, volume-, shape-, phase- and history-uniform C4_edge and recurrence constants.",
+    "A proved all-shape exhaustion map for the production observable and identification of the same observable across shapes.",
+    "OS/KMS/GNS identification, common alpha, sector coercivity, physical-empty comparison, continuum, Yang--Mills and mass-gap conclusions."
+  ],
+  "adversarial_review": [
+    {
+      "axis": "actual-history-boundary",
+      "check": "Does the transfer silently treat the conditional recurrence as an already supplied Q3 history?",
+      "disposition": "UPHELD-OPEN: the recurrence is an explicit assumption and actual Q3 history remains false."
+    },
+    {
+      "axis": "common-domain-boundary",
+      "check": "Does the triangle inequality compare terms living in unrelated finite spaces?",
+      "disposition": "UPHELD-OPEN: one common L4 space/form domain is a required assumption, not a conclusion."
+    },
+    {
+      "axis": "shape-independence",
+      "check": "Does agreement through radius R-1 alone prove that arbitrary production observables have a consistent edge decomposition?",
+      "disposition": "UPHELD-OPEN: decomposition consistency is assumed and the production observable is not identified."
+    },
+    {
+      "axis": "fourth-power-conversion",
+      "check": "Is the factor 16 in the total two-orientation fourth-power bound explicit?",
+      "disposition": "UPHELD: it follows from the nonnegative fourth-power sum inequality and two orientation bounds."
+    },
+    {
+      "axis": "finite-to-infinite",
+      "check": "Could the 1..64 rows be read as a continuum or exhaustion result?",
+      "disposition": "UPHELD-OPEN: rows audit the exact scalar ratio; the vanishing envelope is an analytic conditional implication."
+    },
+    {
+      "axis": "method-preservation",
+      "check": "Does this conditional transfer replace T-054, T-059 or T-061?",
+      "disposition": "DISMISSED: it is an additive T-054 interface and leaves the existing methods, owner order and inverse lane unchanged."
+    },
+    {
+      "axis": "promotion-firewall",
+      "check": "Could a conditional Cauchy implication be promoted to common alpha, OS/GNS, physical or Clay closure?",
+      "disposition": "UPHELD-REJECTED: all downstream scope flags remain false."
+    }
+  ],
+  "evidence_level": "T0 exact conditional recurrence-to-Cauchy transfer with analytic geometric-tail envelope",
+  "boundary": "R-451 proves only an abstract implication: if a source-owned, common-domain two-sided history recurrence satisfies the existing R-450 per-edge contract, then pairwise all-shape differences admit a root-free L4 fourth-power Cauchy bound controlled by T(R), and the scalar envelope vanishes. It does not supply the recurrence, the domain, the production observable, or any physical or continuum identification.",
+  "non_claims": [
+    "No actual Q3LOCK history or source-owned per-edge commutator estimate is established.",
+    "No common unbounded domain, form closure, source/volume/cutoff/beta uniformity or exhaustion map is established.",
+    "The abstract Cauchy implication is not an OS/KMS/GNS, common-alpha, physical-sector, continuum, Yang--Mills or mass-gap result.",
+    "No new finite grid or mobility table is used as an infinite-limit surrogate.",
+    "The established T-054 forward method, T-059/T-061 inverse methods, owner order and promotion firewalls remain unchanged."
+  ],
+  "next_action": "Use R-451 only when a source-owned Q3 history and common domain are supplied; instantiate its recurrence hypotheses and then test the actual all-shape Cauchy estimate. Until then, continue the existing T-054 owner-intake boundary and the additive T-059/T-061 observation-source lock without another finite table.",
+  "stop_or_redesign": [
+    "If an actual history term violates the per-edge contract, record that local failure rather than enlarging C4_edge.",
+    "If the decomposition is not consistent on triple-nested boxes, keep the conditional implication and record the shape-dependence obstruction.",
+    "If no common domain is supplied, do not convert the L4 interface into an operator or form theorem.",
+    "If a proposed use changes the established method or owner order, return to the continuity gate before proceeding."
+  ],
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R451.lean",
+    "command": "lake env lean Tect/R451.lean",
+    "declarations": [
+      "two_orientation_fourth_power",
+      "shell_tail_base",
+      "shell_tail_ratio",
+      "shell_tail_geometric_bound"
+    ],
+    "role": "Lean checks the factor-16 fourth-power conversion and exact scalar tail recurrence; Python records the conditional domain/recurrence firewall and the finite ratio rows."
+  },
+  "artifacts": {
+    "primary_script": "verification/scripts/pre_a_cp1_st8_q3lock_two_sided_history_cauchy_transfer.py",
+    "independent_script": "codes/foundations/pre_a_cp1_st8_q3lock_two_sided_history_cauchy_transfer_independent.py",
+    "hostile_script": "codes/foundations/pre_a_cp1_st8_q3lock_two_sided_history_cauchy_transfer_hostile.py",
+    "integrated_verifier": "verification/scripts/pre_a_cp1_st8_q3lock_two_sided_history_cauchy_transfer_verify.py",
+    "certificate": "strategy/pre-a-cp1-st8-q3lock-two-sided-history-cauchy-transfer-certificate-260831.md",
+    "exploration": "strategy/pre-a-cp1-st8-q3lock-two-sided-history-cauchy-transfer-exploration.json",
+    "lean": "verification/lean/Tect/R451.lean"
+  },
+  "formal_integration": {
+    "results": ["R-451"],
+    "negatives": [],
+    "event_ordinal": 800,
+    "event_title": "R-451 conditional two-sided history Cauchy transfer",
+    "no_new_negative": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "method_preservation": {
+    "existing_forward_method_unchanged": true,
+    "observation_first_inverse_lane_additive": true,
+    "owner_order_unchanged": true,
+    "no_physical_promotion": true
+  },
+  "recorded_by": "Codex",
+  "provenance": "contemporaneous"
+}

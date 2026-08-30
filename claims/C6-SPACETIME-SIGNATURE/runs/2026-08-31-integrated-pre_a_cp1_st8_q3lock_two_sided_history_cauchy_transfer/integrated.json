@@ -1,0 +1,266 @@
+{
+  "assertion_count": 19,
+  "assertions": [
+    {
+      "actual": [
+        "R-451",
+        "EXP-001324",
+        "T-054",
+        false,
+        "CONDITIONAL_HISTORY_CAUCHY_TRANSFER_AUDITED"
+      ],
+      "expected": [
+        "R-451",
+        "EXP-001324",
+        "T-054",
+        false,
+        "CONDITIONAL_HISTORY_CAUCHY_TRANSFER_AUDITED"
+      ],
+      "group": "provenance",
+      "name": "identity",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "existing_forward_method_unchanged": true,
+        "no_physical_promotion": true,
+        "observation_first_inverse_lane_additive": true,
+        "owner_order_unchanged": true
+      },
+      "expected": "all true",
+      "group": "method",
+      "name": "method firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "actual_q3_history_closed",
+        "common_weighted_operator_domain_closed",
+        "source_uniformity_closed",
+        "beta_uniformity_closed",
+        "volume_uniformity_closed",
+        "cutoff_uniformity_closed",
+        "exhaustion_independence_closed",
+        "common_alpha_closed",
+        "hamiltonian_os_identification_closed",
+        "kms_gns_gap_closed",
+        "continuum_closed",
+        "c6_closed",
+        "sector_a_closed",
+        "pre_a_closed"
+      ],
+      "expected": "actual history/common alpha remain open",
+      "group": "scope",
+      "name": "downstream scope firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": "E:\\Dev\\TECT\\verification\\lean\\Tect\\R451.lean",
+      "expected": true,
+      "group": "Lean",
+      "name": "Lean source",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "two_orientation_fourth_power",
+        "shell_tail_base",
+        "shell_tail_ratio",
+        "shell_tail_geometric_bound"
+      ],
+      "expected": "all present",
+      "group": "Lean",
+      "name": "Lean markers",
+      "status": "PASS"
+    },
+    {
+      "actual": "clean",
+      "expected": "forbidden absent",
+      "group": "Lean",
+      "name": "Lean forbidden tokens",
+      "status": "PASS"
+    },
+    {
+      "actual": "E:\\Dev\\TECT\\strategy\\pre-a-cp1-st8-q3lock-two-sided-history-cauchy-transfer-manifest.json",
+      "expected": true,
+      "group": "artifacts",
+      "name": "artifact manifest",
+      "status": "PASS"
+    },
+    {
+      "actual": "E:\\Dev\\TECT\\verification\\scripts\\pre_a_cp1_st8_q3lock_two_sided_history_cauchy_transfer.py",
+      "expected": true,
+      "group": "artifacts",
+      "name": "artifact primary",
+      "status": "PASS"
+    },
+    {
+      "actual": "E:\\Dev\\TECT\\codes\\foundations\\pre_a_cp1_st8_q3lock_two_sided_history_cauchy_transfer_independent.py",
+      "expected": true,
+      "group": "artifacts",
+      "name": "artifact independent",
+      "status": "PASS"
+    },
+    {
+      "actual": "E:\\Dev\\TECT\\codes\\foundations\\pre_a_cp1_st8_q3lock_two_sided_history_cauchy_transfer_hostile.py",
+      "expected": true,
+      "group": "artifacts",
+      "name": "artifact hostile",
+      "status": "PASS"
+    },
+    {
+      "actual": "E:\\Dev\\TECT\\verification\\scripts\\pre_a_cp1_st8_q3lock_two_sided_history_cauchy_transfer_verify.py",
+      "expected": true,
+      "group": "artifacts",
+      "name": "artifact integrated",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-451 PRIMARY CONDITIONAL_HISTORY_CAUCHY_TRANSFER_AUDITED 341/341 ratio_rows=64 q=23/26\n",
+      "expected": "CONDITIONAL_HISTORY_CAUCHY_TRANSFER_AUDITED",
+      "group": "children",
+      "name": "primary child",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-451 INDEPENDENT CONDITIONAL_HISTORY_CAUCHY_TRANSFER_AUDITED 332/332 ratio_rows=64 q=23/26\n",
+      "expected": "CONDITIONAL_HISTORY_CAUCHY_TRANSFER_AUDITED",
+      "group": "children",
+      "name": "independent child",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-451 HOSTILE HOSTILE_MUTATIONS_REJECTED 9/9\n",
+      "expected": "HOSTILE_MUTATIONS_REJECTED",
+      "group": "children",
+      "name": "hostile child",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "C4_edge": "29115196389063882279731/77341623582720",
+        "actual_q3_history_closed": false,
+        "base_tail": "78",
+        "cauchy_fourth_bound": "(2^(4-1))*orientation_count*C4_edge*T(R)^4",
+        "common_alpha_closed": false,
+        "common_weighted_operator_domain_closed": false,
+        "conditional_all_shape_cauchy_implication_closed": true,
+        "conditional_two_sided_recurrence_transfer_closed": true,
+        "fourth_power_cauchy_factor": 16,
+        "geometric_envelope": "78*(23/26)^(R-1)",
+        "maximum_ratio": "23/26",
+        "orientation_count": 2,
+        "pre_a_closed": false,
+        "ratio_q": "23/26",
+        "ratio_rows": 64,
+        "sector_a_closed": false,
+        "two_sum_factor": 8
+      },
+      "expected": "64 rows/factor 16",
+      "group": "children",
+      "name": "primary rows",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "C4_edge": "29115196389063882279731/77341623582720",
+        "actual_q3_history_closed": false,
+        "base_tail": "78",
+        "common_alpha_closed": false,
+        "common_weighted_operator_domain_closed": false,
+        "conditional_all_shape_cauchy_implication_closed": true,
+        "fourth_power_cauchy_factor": 16,
+        "maximum_ratio": "23/26",
+        "orientation_count": 2,
+        "pre_a_closed": false,
+        "ratio_q": "23/26",
+        "ratio_rows": 64,
+        "sector_a_closed": false
+      },
+      "expected": "64 rows/factor 16",
+      "group": "children",
+      "name": "independent rows",
+      "status": "PASS"
+    },
+    {
+      "actual": 9,
+      "expected": 9,
+      "group": "hostile",
+      "name": "hostile count",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "no primary import",
+      "group": "independence",
+      "name": "independence",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "command": "lake env lean Tect/R451.lean",
+        "output": "",
+        "returncode": 0,
+        "status": "PASS"
+      },
+      "expected": "PASS",
+      "group": "Lean",
+      "name": "Lean run",
+      "status": "PASS"
+    }
+  ],
+  "assumptions": [
+    "The R-450 conditional two-orientation shell envelope is available on one common L4 space or form domain.",
+    "For every nested pair agreeing through radius R-1, both orientation differences have a finite additive history decomposition over changed edges.",
+    "The per-edge fourth-power majorant uses one C4_edge and the R-444 weight in both orientations, independent of shape and history depth.",
+    "The finite additive decomposition is consistent on triple-nested boxes, so pairwise differences obey the same shell contract.",
+    "The standard geometric fact that a polynomial times a ratio strictly below one vanishes at infinity is used only for the scalar tail; it is not a Q3 operator theorem."
+  ],
+  "audit_id": "PA-CP1-ST8-Q3LOCK-TWO-SIDED-HISTORY-CAUCHY-TRANSFER-v0",
+  "boundary": "R-451 proves only an abstract implication: if a source-owned, common-domain two-sided history recurrence satisfies the existing R-450 per-edge contract, then pairwise all-shape differences admit a root-free L4 fourth-power Cauchy bound controlled by T(R), and the scalar envelope vanishes. It does not supply the recurrence, the domain, the production observable, or any physical or continuum identification.",
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "derived": {
+    "actual_q3_history_closed": false,
+    "common_alpha_closed": false,
+    "common_weighted_operator_domain_closed": false,
+    "conditional_all_shape_cauchy_implication_closed": true,
+    "conditional_two_sided_recurrence_transfer_closed": true,
+    "pre_a_closed": false,
+    "sector_a_closed": false
+  },
+  "evidence_level": "T0 exact conditional recurrence-to-Cauchy transfer with analytic geometric-tail envelope",
+  "exploration_id": "EXP-001324",
+  "lean": {
+    "command": "lake env lean Tect/R451.lean",
+    "output": "",
+    "returncode": 0,
+    "status": "PASS"
+  },
+  "missing_assumptions": [
+    "A source-owned Q3LOCK history and actual per-edge terms satisfying the contract.",
+    "A common unbounded operator/form domain and a proof that the actual history terms live there.",
+    "Source-, beta-, cutoff-, volume-, shape-, phase- and history-uniform C4_edge and recurrence constants.",
+    "A proved all-shape exhaustion map for the production observable and identification of the same observable across shapes.",
+    "OS/KMS/GNS identification, common alpha, sector coercivity, physical-empty comparison, continuum, Yang--Mills and mass-gap conclusions."
+  ],
+  "non_claims": [
+    "No actual Q3LOCK history or source-owned per-edge commutator estimate is established.",
+    "No common unbounded domain, form closure, source/volume/cutoff/beta uniformity or exhaustion map is established.",
+    "The abstract Cauchy implication is not an OS/KMS/GNS, common-alpha, physical-sector, continuum, Yang--Mills or mass-gap result.",
+    "No new finite grid or mobility table is used as an infinite-limit surrogate.",
+    "The established T-054 forward method, T-059/T-061 inverse methods, owner order and promotion firewalls remain unchanged."
+  ],
+  "result_id": "R-451",
+  "run_kind": "integrated",
+  "schema": "tect/foundation-audit/1.0",
+  "source_hashes": {
+    "hostile": "8f43f67afee59123d6765e7fe5fecb110e5fc19973a495661b4bf8544b708549",
+    "independent": "3ce9b4059b05c208d2acbd9f2719711a0f8883c9915aea7a7204827dce87c2eb",
+    "integrated": "37f77b1195d085264db41ed2e16c0a69e49f82321ae1d131956f472b8516f747",
+    "lean": "b86ab6e638dcb3f9955f8f24f5319b2e0d87e05a2b061e0b8aa11dc888fe70e2",
+    "manifest": "0045cc8343551a2d01fe42614c282d92970cae9106558fb600202e5cba901867",
+    "primary": "53b9a64d01a3facb4dd6c225e9d65926b27ecf5f3c5b1b2d9ff25666f30c2c45"
+  },
+  "task_id": "T-054",
+  "verdict": "PASS"
+}
