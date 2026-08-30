@@ -2,6 +2,38 @@
   "data": [
     {
       "accepted_event_ids": [
+        "20260822-r-183-diagonal-reserve-margin-cross-hessian-thr",
+        "20260822-r-192-t-058-bounded-complete-finite-production"
+      ],
+      "anchor": "r-183",
+      "claim_ref_basis": {
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION": "proof_anchor_exact"
+      },
+      "claim_refs": [
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
+      ],
+      "co_recorded_negative_tags": [],
+      "detail": {
+        "exact_result": "For cross magnitude `a` and diagonal reserves `d1,d2`, set `p=d1-a` and `q=d2-a`. The beta=1/2 feedback pullback is nonnegative whenever `p>0` and `q>=a^2/p`, by the exact square completion `p*(x+(a/p)y)^2+(q-a^2/p)y^2`. The witness `(-a/p,1)` evaluates to `q-a^2/p`, so the same inequality is necessary for a nonnegative original form when `p>0`. In the isotropic case the exact threshold is `d>=2a`. For the registered R-182 scale `a=8`, the threshold is `d>=16`; `d=15` has the relative-phase value `-2` and remains negative after the pullback.",
+        "proven_in": "[R-183 certificate](strategy/pre-a13-diagonal-reserve-margin-cross-hessian-certificate-260822.md), [Lean entrypoint](verification/lean/Tect/R183.lean), [primary script](verification/scripts/lean_a13_diagonal_reserve_margin_cross_hessian.py), [independent script](codes/foundations/lean_a13_diagonal_reserve_margin_cross_hessian_independent.py), [integrated verifier](codes/foundations/lean_a13_diagonal_reserve_margin_cross_hessian_verify.py), [scope note](claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/a13-diagonal-reserve-margin-cross-hessian-260822.md), and the saved run artefacts. No R-183 PDF is issued.",
+        "result_id": "`R-183` is a T0, claim-nonbearing Lean checkpoint under EXP-000898.",
+        "scope": "Lean proves the rational identities, the primary SymPy lane derives the values from R-182, and an independent stdlib Fraction lane agrees. This is a finite reserve-budget criterion only. It does not identify actual heat/forest/complement/returned-low/source/sextic terms with the abstract reserves, prove a production lower bound, close T-050/A13, or advance Sector-A, physical-empty, Nelson, measure, removal or continuum claims."
+      },
+      "detail_title": "Diagonal reserve margin for the feedback-pulled cross-Hessian",
+      "family_refs": [],
+      "id": "R-183",
+      "normalized_detail": {
+        "boundary": "",
+        "proof_anchor": "[R-183 certificate](strategy/pre-a13-diagonal-reserve-margin-cross-hessian-certificate-260822.md), [Lean entrypoint](verification/lean/Tect/R183.lean), [primary script](verification/scripts/lean_a13_diagonal_reserve_margin_cross_hessian.py), [independent script](codes/foundations/lean_a13_diagonal_reserve_margin_cross_hessian_independent.py), [integrated verifier](codes/foundations/lean_a13_diagonal_reserve_margin_cross_hessian_verify.py), [scope note](claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/a13-diagonal-reserve-margin-cross-hessian-260822.md), and the saved run artefacts. No R-183 PDF is issued.",
+        "publication_target": "",
+        "reuse": "",
+        "statement": ""
+      },
+      "summary": "R-183 v1.0 is a T0 claim-nonbearing Lean checkpoint under EXP-000898. It proves the exact reserve condition `d1-a>0` and `d2-a>=a^2/(d1-a)`, the isotropic threshold `d>=2a`, and the registered `a=8` subthreshold fixture. The actual heat/forest/low/source/sextic owner, T-050, A13, Sector-A and Pre-A remain open",
+      "title": "Diagonal reserve margin for the feedback-pulled cross-Hessian"
+    },
+    {
+      "accepted_event_ids": [
         "20260821-r-182-feedback-pulled-cross-hessian-margin-2026",
         "20260822-r-183-diagonal-reserve-margin-cross-hessian-thr"
       ],
@@ -4005,45 +4037,6 @@
       },
       "summary": "Scoped T4 analytic/exact/executed reduction: the R-083 controlled Cartan remainder diagonalises exactly over complete probability-root martingale differences with coefficient `3/(80P)`, and every root has an exact conditional Ornstein--Uhlenbeck gradient representation retaining coefficient, derivative-injection, and value-innovation channels. A cumulative-tree witness proves that root orthogonality or an unweighted Gaussian Poincare estimate alone cannot spend the control once. For regular mutually orthogonal strict-past one-shot controls, the complete three-row linear Pauli--Fierz NEAR endpoint is nevertheless arbitrarily form-absorbed by terminal sextic and Cameron--Martin budgets; all five degree families have positive Young slack and worst required moment `30/7`. The nonlinear rational row, summed production far-projected Cartan OU-gradient estimate, complete signed NEAR, progression, one-use, Nelson, and Sector A remain open; assertion count is pinned by the manifest",
       "title": "Root-diagonal Cartan OU reduction and linear Pauli--Fierz absorption"
-    },
-    {
-      "accepted_event_ids": [
-        "20260725-r-083-controlled-polynomial-cfar-and-linear-pau",
-        "20260727-r-101-audit-restore-target-heat-and-harden-exec",
-        "20260728-r-104-fixed-chart-endpoint-owner-assembly-and-d"
-      ],
-      "anchor": "r-083",
-      "claim_ref_basis": {
-        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION": "proof_anchor_exact"
-      },
-      "claim_refs": [
-        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
-      ],
-      "co_recorded_negative_tags": [
-        "NG-2026-07-25-A13-K-SMOOTHING-OUTPUT-ORTHOGONALITY",
-        "NG-2026-07-25-A13-LINEAR-PF-ADAPTED-POSITIVITY",
-        "NG-2026-07-28-A13-ANTICIPATIVE-RANDOM-HEAT-CONDITIONING"
-      ],
-      "detail": {
-        "boundary": "The three Cartan input-scale CFAR estimate, recombined linear-plus-rational heat-lifted signed NEAR lower bound, complete regular packet lower bound, overlap-stable progression and variational extension, controlled-shell one-use, `q=10/9` Nelson, the interacting measure, removal limits, and Sector-A closure remain open. Tier stays T4.",
-        "proven_in": "Claim `A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION`, note `classii-controlled-polynomial-cfar-linear-pauli-fierz-forest-reduction-260725-v1.0`, with primary 58/58, non-importing independent 43/43, integrated 103/103, and aggregate 204/204 verification.",
-        "publication_target": "Stochastic geometric/paracontrolled methods note with R-050, R-063, and R-075--R-082 after controlled Cartan CFAR, complete signed NEAR, one-use, and Nelson synthesis are resolved.",
-        "result_id": "`A13-CLASSII-CONTROLLED-POLYNOMIAL-CFAR-LINEAR-PAULI-FIERZ-FOREST-REDUCTION`.",
-        "reuse_scope": "Root-preserving controlled-current coordinates, exact stopped input telescopes, sharp support elimination, nonlinear-output orthogonality diagnostics, Pauli--Fierz heat lifts, covariance defects, and finite Wiener forests.",
-        "statement": "In the fixed root-preserving coordinate `(sqrt(c0) P_A,sqrt(c1)(P_A-2 alpha C_A))_(A=1)^3`, the three polynomial currents `P_A=Dm_A` have support at most `Q_(n+1)`. Thus for the sharp-cube relative-FAR cutoff and `C>=3`, every polynomial contribution to the complete R-082 stopped object is exactly zero. This retains the moving endpoint, the pre-`j0` low endpoint, and the predictable control-value and control-derivative drifts. With `alpha=5/9`, `c1=243/(8000P)`, the complete remaining controlled CFAR square is exactly the sum of three Cartan input-scale telescopes with coefficient `4 alpha^2 c1=3/(80P)`. The canonical `K_k` bound closes the spatial input-coordinate square function once. It does not imply global pairwise orthogonality after the nonlinear production map. An exact projection onto harmonics `p=+-3` gives a positive cross product for two successive scalar-ray output increments. The identity `F_epsilon(sqrt(epsilon)y)=sqrt(epsilon)F_1(y)` places the witness at the pinned `epsilon_rho=10^(-12)` production floor. This is a no-go only for the raw-output orthogonality premise of R-082 Lemma 6.1: the fixture has no martingale projection and does not exclude far-only or correlated martingale estimates. For NEAR, the three linear Pauli--Fierz rows split exactly from the rational row. Their Gram matrix is quadratic, target heat is additive, the coefficient secant has no higher remainder, and the complete value/derivative expansion is a nine-block forest with homogeneous counts `1,2,3,2,1`. Conditional projection carries a value--derivative cross-covariance defect. Moreover, a heat-lifted adapted fixture with the rational row and two linear rows identically zero has expectation `-8(c0+c1)lambda^2<0` in the remaining horizontal linear row. Hence neither the rational row alone nor standalone linear-row positivity captures the complete signed obstruction."
-      },
-      "detail_title": "Controlled polynomial CFAR and linear Pauli--Fierz forest reduction",
-      "family_refs": [],
-      "id": "R-083",
-      "normalized_detail": {
-        "boundary": "The three Cartan input-scale CFAR estimate, recombined linear-plus-rational heat-lifted signed NEAR lower bound, complete regular packet lower bound, overlap-stable progression and variational extension, controlled-shell one-use, `q=10/9` Nelson, the interacting measure, removal limits, and Sector-A closure remain open. Tier stays T4.",
-        "proof_anchor": "Claim `A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION`, note `classii-controlled-polynomial-cfar-linear-pauli-fierz-forest-reduction-260725-v1.0`, with primary 58/58, non-importing independent 43/43, integrated 103/103, and aggregate 204/204 verification.",
-        "publication_target": "Stochastic geometric/paracontrolled methods note with R-050, R-063, and R-075--R-082 after controlled Cartan CFAR, complete signed NEAR, one-use, and Nelson synthesis are resolved.",
-        "reuse": "Root-preserving controlled-current coordinates, exact stopped input telescopes, sharp support elimination, nonlinear-output orthogonality diagnostics, Pauli--Fierz heat lifts, covariance defects, and finite Wiener forests.",
-        "statement": "In the fixed root-preserving coordinate `(sqrt(c0) P_A,sqrt(c1)(P_A-2 alpha C_A))_(A=1)^3`, the three polynomial currents `P_A=Dm_A` have support at most `Q_(n+1)`. Thus for the sharp-cube relative-FAR cutoff and `C>=3`, every polynomial contribution to the complete R-082 stopped object is exactly zero. This retains the moving endpoint, the pre-`j0` low endpoint, and the predictable control-value and control-derivative drifts. With `alpha=5/9`, `c1=243/(8000P)`, the complete remaining controlled CFAR square is exactly the sum of three Cartan input-scale telescopes with coefficient `4 alpha^2 c1=3/(80P)`. The canonical `K_k` bound closes the spatial input-coordinate square function once. It does not imply global pairwise orthogonality after the nonlinear production map. An exact projection onto harmonics `p=+-3` gives a positive cross product for two successive scalar-ray output increments. The identity `F_epsilon(sqrt(epsilon)y)=sqrt(epsilon)F_1(y)` places the witness at the pinned `epsilon_rho=10^(-12)` production floor. This is a no-go only for the raw-output orthogonality premise of R-082 Lemma 6.1: the fixture has no martingale projection and does not exclude far-only or correlated martingale estimates. For NEAR, the three linear Pauli--Fierz rows split exactly from the rational row. Their Gram matrix is quadratic, target heat is additive, the coefficient secant has no higher remainder, and the complete value/derivative expansion is a nine-block forest with homogeneous counts `1,2,3,2,1`. Conditional projection carries a value--derivative cross-covariance defect. Moreover, a heat-lifted adapted fixture with the rational row and two linear rows identically zero has expectation `-8(c0+c1)lambda^2<0` in the remaining horizontal linear row. Hence neither the rational row alone nor standalone linear-row positivity captures the complete signed obstruction."
-      },
-      "summary": "Scoped T4 analytic/exact/executed reduction: in the fixed root-preserving six-current coordinate, every controlled polynomial `J_A=Dm_A` row vanishes in the complete stopped FAR object for `C>=3`, including both endpoints and both predictable drifts. Controlled CFAR is thereby reduced exactly to three Cartan input-scale telescopes with coefficient `3/(80P)`. The canonical `K_k` smoothing pays the input coordinate once but does not create the global raw-output pairwise orthogonality assumed by the sufficient R-082 Carleson lemma; an exact production-floor-rescaled harmonic witness records that method no-go without excluding far-only or correlated martingale estimates. The three linear Pauli--Fierz rows have exact Gram, heat, secant, covariance-defect, and nine-block forest algebra, but an adapted heat-lifted fixture with zero rational row has negative linear-row zero chaos. Controlled Cartan CFAR, recombined complete signed NEAR, progression, one-use, Nelson, and Sector A remain open; 58/58 primary, 43/43 independent, 103/103 integrated, 204/204 aggregate assertions",
-      "title": "Controlled polynomial CFAR and linear Pauli--Fierz forest reduction"
     }
   ],
   "kind": "reusable_results",

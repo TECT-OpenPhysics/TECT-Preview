@@ -22,6 +22,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-449](#r-449) | Source-owner intake and physical/proof leakage audit | R-449 v1.0 is a T0 claim-nonbearing T-061 owner-intake audit under EXP-001322. The nine physical/proof owner slots remain unadmitted: R-192 first fails at heat_root_incidence, A2 is deterministic and incompatible with the stochastic/root-labelled production contract, R-448 leaves a non-identifiable unowned static class, and the T-061 F_reg/F_lim/F_eff/F_obs chain plus PROS-LOCK-001 remain incomplete. Primary 38/38, independent 21/21, hostile 8/8, integrated 35/35 and Lean R449 pass. Existing T-054/T-059 methods and owner order are unchanged; the owner branch is parked and no Pre-A, Sector-A, C6, QFT, Yang--Mills or mass-gap claim follows |
 | [R-448](#r-448) | Static-equivalence quotient and separating finite dynamic estimand | R-448 v1.0 is a T0 claim-nonbearing T-061 interface under EXP-001321. Equality of the registered static signature forms an explicit equivalence relation; two distinct positive finite representatives share that signature and are separated by the fixed one-step proxy at `(1,0)`. Primary 24/24, independent 11/11, hostile 8/8, integrated 29/29 and Lean R448 pass. Static data remain non-identifying; no source-owned dynamics, holdout prediction, physical, Pre-A, QFT, Yang--Mills or mass-gap claim follows |
 | [R-447](#r-447) | HOLD-LC-001 set-valued delay envelope interface | R-447 v1.0 is a T0 claim-nonbearing candidate-neutral feasibility audit under EXP-001299. The hash-pinned GW170817/GRB170817A timing packet is converted by exact rational interval subtraction into unweighted simultaneous `[169/100,179/100]`, ten-second `[-831/100,-821/100]`, and broad-exotic `[-99831/100,10179/100]` propagation-delay envelopes; primary 25/25, independent 13/13, hostile 12/12 and integrated 9/9 with Lean R447 pass. No likelihood, covariance, score, speed datum, candidate map, prospective credit, physical, Pre-A, Yang--Mills or mass-gap claim follows |
 | [R-446](#r-446) | OBS-LC-CAL-001 frozen row lineage and feasibility interface | R-446 v1.0 is a T0 claim-nonbearing source-lineage audit under EXP-001298. The hash-pinned arXiv:0801.0287v19 packet and complete isotropic-photon S3 slice (d=3..9) pass primary 60/60, independent 25/25, hostile 8/8, integrated 15/15 and the existing inverse-contract self-test. Likelihood, covariance, candidate maps and scoring remain unadmitted; no physical Lorentz, Pre-A, Sector-A, QFT, Yang--Mills or mass-gap claim follows |
@@ -768,6 +769,48 @@ exhaustion, physical-empty comparison, C6, Sector-A, Pre-A, Yang--Mills dynamics
 or a mass gap. No claim tier changes and no negative result is issued.
 
 **Proven in:** [R-444 certificate](strategy/pre-a-cp1-st8-q3lock-exponential-shell-tail-certificate-260830.md), [machine manifest](strategy/pre-a-cp1-st8-q3lock-exponential-shell-tail-manifest.json), [integrated run](claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-integrated-exponential_shell_tail/integrated.json), [exploration record](strategy/pre-a-cp1-st8-q3lock-exponential-shell-tail-exploration.json), and [Lean R444](verification/lean/Tect/R444.lean).
+<a id="r-449"></a>
+### R-449 -- Source-owner intake and physical/proof leakage audit
+
+**Result ID.** `PA-DYNAMIC-OWNER-LEAKAGE-AUDIT-v0` (R-449).
+
+**Version and exact scope.** R-449 v1.0 is a T0, claim-nonbearing owner-intake
+and leakage audit for T-061 under EXP-001322. It loads the hash-pinned R-192
+production-cylinder manifest, the A2 gradient-flow/R-192 crosswalk, the T-061
+observation-first contract, the main proof programme, and R-448. It checks the
+nine mandatory physical/proof owner slots, the first R-192 failure, the
+proof-comparator boundary, the ordered `F_reg`, `F_lim`, `F_eff`, `F_obs` map,
+the empty prospective target, and the no-selection quotient.
+
+**Finding.** The four physical owner slots (generator or transfer, state,
+projection, time boundary) and the five R-192 production slots (heat-root,
+filtration, replicas, raw-current intertwiner, one-use q-ledger) are all
+unadmitted. R-192's first failure remains `heat_root_incidence`; A2 is a
+conditional deterministic real-L2 gradient flow with `stochastic_heat=false`
+and `owner_compatible=false`; R-448 remains a non-identifiable static class
+without a source owner. The inverse lane has no complete F_reg/F_lim/F_eff/F_obs
+chain, no likelihood/covariance/nuisance/scorer, and `PROS-LOCK-001` is
+`EMPTY_NOT_FROZEN`.
+
+**Verification.** Primary 38/38, non-importing independent 21/21, hostile 8/8,
+integrated 35/35, and Lean R449 all pass. The hostile lane rejects promotion
+of the deterministic flow, structural ledger, proof comparators, missing slots,
+later inverse stages, prospective lock, static representative, and claim/sector
+flags.
+
+**Method and boundary.** This is an additive firewall: the established T-054
+forward method, T-059/T-061 inverse method, exact owner order, and promotion
+firewalls are unchanged. The owner branch is parked at
+`PARK_OWNER_BRANCH_SURVIVING_STATIC_EQUIVALENCE_CLASS`; no source-owned
+production dynamics or physical candidate is admitted. No observation score,
+prospective credit, physical identity, Pre-A, Sector-A, C6, QFT, Yang--Mills,
+gravity, continuum, cosmic-origin, physical-vacuum or mass-gap conclusion
+follows. No negative result, tier change or PDF is issued.
+
+**Proven in:** [R-449 manifest](strategy/pre-a-dynamic-owner-leakage-audit-manifest.json), [certificate](strategy/pre-a-dynamic-owner-leakage-audit-certificate-260830.md), [primary script](verification/scripts/pre_a_dynamic_owner_leakage_audit.py), [independent script](codes/foundations/pre_a_dynamic_owner_leakage_audit_independent.py), [hostile script](codes/foundations/pre_a_dynamic_owner_leakage_audit_hostile.py), [integrated verifier](codes/foundations/pre_a_dynamic_owner_leakage_audit_verify.py), [integrated run](claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-integrated-dynamic_owner_leakage_audit/integrated.json), [exploration](strategy/pre-a-dynamic-owner-leakage-audit-exploration.json), and [Lean R449](verification/lean/Tect/R449.lean).
+
+**Next action.** Continue unchanged T-054 owner intake by obtaining a source-owned Q3LOCK dynamics and the R-192 production fields in exact order. Continue unchanged T-059/T-061 inverse intake by obtaining the supported GTS/GDT runtime or pinned source-build lock, then freeze all four map stages and a prospective holdout before scoring. If no owner hash arrives, keep this branch parked and do not create an equivalent finite table.
+
 <a id="r-448"></a>
 ### R-448 -- Static-equivalence quotient and separating finite dynamic estimand
 

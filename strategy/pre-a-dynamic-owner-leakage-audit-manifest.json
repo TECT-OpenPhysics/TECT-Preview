@@ -1,0 +1,255 @@
+{
+  "schema": "tect/pre-a-dynamic-owner-leakage-audit/1.0",
+  "audit_id": "PA-DYNAMIC-OWNER-LEAKAGE-AUDIT-v0",
+  "result_id": "R-449",
+  "exploration_id": "EXP-001322",
+  "task_id": "T-061",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "gate_ids": [
+    "PA-INVERSE-OBSERVATION-TARGET-MAP-HOLDOUT-FREEZE",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "tier": "T0",
+  "claim_bearing": false,
+  "status": "OWNER_INTAKE_LEAKAGE_AUDITED",
+  "title": "Source-owner intake and physical/proof leakage audit",
+  "purpose": "Audit the existing R-192 production-owner boundary, the A2 gradient-flow crosswalk, the T-061 observation contract, and R-448 static quotient without changing the established forward or inverse methods or adding another finite mobility table.",
+  "inputs": {
+    "r192_manifest": {
+      "path": "strategy/pre-a13-t058-bounded-complete-production-cylinder-manifest.json",
+      "sha256": "641074df54492654177fc72dd66ecb2cb46a791390215ab521f725d77e622d14"
+    },
+    "a2_crosswalk": {
+      "path": "strategy/pre-a2-gradient-flow-r192-owner-crosswalk-manifest.json",
+      "sha256": "386d63a28d3ab7d9564381bd51a357cbfc2d5853b2a3304e653f6d62624b1fc0"
+    },
+    "inverse_contract": {
+      "path": "strategy/pre-a-observation-first-inverse-lane-contract-manifest.json",
+      "sha256": "fd5f37d0e095062a415368749d10d65de14b799938673b4460c3e849f07b9a46"
+    },
+    "main_program": {
+      "path": "strategy/main-proof-program-v1.json",
+      "sha256": "9c7acaac9587db94980702814acbb17d0e10f5b44e1c4e5e28dfc90c3cd91516"
+    },
+    "r448_manifest": {
+      "path": "strategy/pre-a-static-dynamic-equivalence-quotient-manifest.json",
+      "sha256": "57b8bc22f47d441d75016f6b6dc9a5ff25b6d64e0809aebf42092b0a71fdefe4"
+    },
+    "lean_toolchain": {
+      "path": "verification/lean/lean-toolchain",
+      "sha256": "8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af"
+    },
+    "lakefile": {
+      "path": "verification/lean/lakefile.toml",
+      "sha256": "a67c26b5518afd984e53eae28a0ba4948c6bb01680d7c360e8b36386eb98962b"
+    },
+    "lake_manifest": {
+      "path": "verification/lean/lake-manifest.json",
+      "sha256": "4308d953726ebe0a8e8fdb7aa5da996c8bfcd45d4a58f6f1b3b40e25d2521964"
+    }
+  },
+  "owner_intake": {
+    "required_slots": [
+      "generator_or_transfer",
+      "state",
+      "physical_projection",
+      "time_boundary",
+      "heat_root_incidence",
+      "root_filtration",
+      "conditional_replicas",
+      "raw_current_spatial_intertwiner",
+      "production_one_use_q_ledger"
+    ],
+    "physical_owner_required": [
+      "generator_or_transfer",
+      "state",
+      "physical_projection",
+      "time_boundary"
+    ],
+    "proof_owner_required": [
+      "heat_root_incidence",
+      "root_filtration",
+      "conditional_replicas",
+      "raw_current_spatial_intertwiner",
+      "production_one_use_q_ledger"
+    ],
+    "forward_owner_status": {
+      "generator_or_transfer": "MISSING_SOURCE_OWNER",
+      "state": "MISSING_SOURCE_OWNER",
+      "physical_projection": "MISSING_SOURCE_OWNER",
+      "time_boundary": "MISSING_SOURCE_OWNER",
+      "heat_root_incidence": "MISSING",
+      "root_filtration": "MISSING",
+      "conditional_replicas": "MISSING",
+      "raw_current_spatial_intertwiner": "MISSING",
+      "production_one_use_q_ledger": "MISSING"
+    },
+    "proof_comparator_status": {
+      "R-192": "PROOF_COMPARATOR_ONLY",
+      "R-193/R-200": "PROOF_COMPARATOR_ONLY",
+      "R-448": "PROOF_COMPARATOR_ONLY"
+    },
+    "separation_rule": "A proof construction or finite comparator cannot fill a physical-owner slot; an owner hash and frozen law are required before admission."
+  },
+  "source_crosswalk": {
+    "r192": {
+      "first_failure_slot": "heat_root_incidence",
+      "production_map_complete": false,
+      "q_ledger_complete": false,
+      "role": "finite owner-slot ledger with first missing production map"
+    },
+    "a2": {
+      "flow": "conditional deterministic real-L2 gradient flow",
+      "stochastic_heat": false,
+      "owner_compatible": false,
+      "role": "conditional proof comparator, not stochastic production owner"
+    },
+    "r448": {
+      "static_identifiability": "NON_IDENTIFIABLE",
+      "source_owner_admitted": false,
+      "physical_identity": false,
+      "role": "finite static quotient and separating proxy"
+    },
+    "inverse": {
+      "f_reg": "PARTIAL_FINITE_CONTRACTS_ONLY",
+      "f_lim": "NOT_ADMITTED",
+      "f_eff": "NOT_ADMITTED",
+      "f_obs": "NOT_ADMITTED",
+      "prospective_lock": "EMPTY_NOT_FROZEN",
+      "candidate_selection": "NO_SELECTION_ZERO_ADMITTED_MICROSCOPIC_FORWARD_MAPS"
+    }
+  },
+  "inverse_contract_audit": {
+    "required_stages": [
+      "F_reg",
+      "F_lim",
+      "F_eff",
+      "F_obs"
+    ],
+    "stage_rule": "A missing earlier stage makes every later stage NOT_ADMITTED, not approximately inferred.",
+    "likelihood_covariance": "MISSING",
+    "nuisance": "MISSING",
+    "scorer": "MISSING",
+    "holdout_prediction": "NOT_AVAILABLE",
+    "prospective_target": "PROS-LOCK-001",
+    "prospective_status": "EMPTY_NOT_FROZEN"
+  },
+  "leakage_audit": {
+    "physical_owner_evidence": [],
+    "proof_owner_evidence": [
+      "R-192",
+      "R-193/R-200",
+      "R-448",
+      "A2 gradient-flow crosswalk"
+    ],
+    "leakage_detected_and_blocked": true,
+    "cross_lane_circular_support_forbidden": true,
+    "owner_branch_verdict": "PARK_OWNER_BRANCH_SURVIVING_STATIC_EQUIVALENCE_CLASS"
+  },
+  "scope": {
+    "owner_intake_audited": true,
+    "physical_owner_complete": false,
+    "proof_owner_separated": true,
+    "leakage_detected_and_blocked": true,
+    "inverse_map_complete": false,
+    "prospective_holdout_frozen": false,
+    "candidate_selection": false,
+    "claim_bearing": false,
+    "pre_a_closed": false,
+    "sector_a_closed": false,
+    "c6_closed": false,
+    "no_new_negative": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "assumptions": [
+    "The hash-pinned R-192, A2, T-061 inverse-contract, R-448 and programme files are the current authorities.",
+    "Owner slots are compared by exact field names and are not inferred from prose or finite numerical similarity.",
+    "R-192 structural and finite fixtures, A2 deterministic flow, and R-448 quotient remain proof comparators only.",
+    "The observation-first inverse lane treats F_reg, F_lim, F_eff and F_obs as ordered map stages and does not backfill a missing stage.",
+    "Exact Boolean/structural checks and the pinned Lean toolchain are sufficient for this T0 intake audit."
+  ],
+  "missing_assumptions": [
+    "A versioned source-owned generator or transfer operator, state, physical projection and time boundary.",
+    "The R-192 production heat-root incidence, root filtration, conditional replicas, raw-current spatial intertwiner and one-use q-ledger.",
+    "A complete F_reg/F_lim/F_eff/F_obs map, likelihood, covariance, nuisance model and immutable scorer.",
+    "A frozen prospective holdout selected by the external custodian protocol.",
+    "Uniform regulator/volume bounds, physical-sector identification, QFT/Yang--Mills/gravity correspondence and any continuum or mass-gap theorem."
+  ],
+  "evidence_level": "T0 / EXACT OWNER-INTAKE AND PHYSICAL-PROOF LEAKAGE AUDIT WITH INDEPENDENT, HOSTILE AND LEAN CROSS-CHECKS",
+  "non_claims": [
+    "No source-owned production dynamics is admitted or constructed.",
+    "No proof comparator is promoted to a physical generator, state, projection, heat semigroup or q-ledger.",
+    "No observation likelihood, covariance, nuisance law, prospective holdout or candidate score is supplied.",
+    "No Pre-A, Sector-A, C6, QFT, Yang--Mills, gravity, continuum, cosmic-origin, physical-vacuum or mass-gap conclusion follows.",
+    "The established forward and inverse methods, owner order and promotion firewalls are unchanged."
+  ],
+  "hostile_mutations": [
+    "promote the deterministic A2 gradient flow to the stochastic production owner",
+    "treat the structural R-192 ledger as a complete production map",
+    "promote R-192/R-193/R-200/R-448 proof comparators to physical-owner evidence",
+    "set every missing owner slot to complete without a source hash",
+    "admit F_lim, F_eff and F_obs despite the missing F_reg owner map",
+    "mark PROS-LOCK-001 frozen without commitment, target or scorer",
+    "select one representative from the R-448 static-equivalence class",
+    "change claim-bearing or Pre-A/Sector-A/C6 scope to true"
+  ],
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R449.lean",
+    "theorem_markers": [
+      "complete_requires_heat_root",
+      "a2_owner_incomplete",
+      "a2_heat_root_missing",
+      "inverse_not_complete",
+      "parked_owner_and_inverse"
+    ],
+    "command": "lake env lean Tect/R449.lean",
+    "role": "Lean checks the finite Boolean owner-slot and inverse-stage firewall; it does not provide a source owner or physical identification."
+  },
+  "test_oracles": {
+    "primary_minimum_assertions": 20,
+    "independent_minimum_assertions": 12,
+    "hostile_mutation_count": 8
+  },
+  "files": {
+    "lean_entrypoint": {
+      "path": "verification/lean/Tect/R449.lean",
+      "sha256": "a498546d5d412b55db4d48b5c502c4a090a29c2a2e49d2405bdf97bc4da6e366"
+    },
+    "primary": {
+      "path": "verification/scripts/pre_a_dynamic_owner_leakage_audit.py",
+      "sha256": "fd742aba2788e053816d5d99fd5090c070e88cc83a6085d78e458ae4fcfce8b5"
+    },
+    "independent": {
+      "path": "codes/foundations/pre_a_dynamic_owner_leakage_audit_independent.py",
+      "sha256": "c57c9d443b653efbe2968edc797039eb991a33b94772ebd5e5e3e678aa907f2d"
+    },
+    "hostile": {
+      "path": "codes/foundations/pre_a_dynamic_owner_leakage_audit_hostile.py",
+      "sha256": "bcf46f280731caaeded0538384364fb4220355f814d8245149e3b22f1e5ff35f"
+    },
+    "verifier": {
+      "path": "codes/foundations/pre_a_dynamic_owner_leakage_audit_verify.py",
+      "sha256": "1a235a1040311209c8486fad20dbb86ff836c39889e332a33b55453b8d286056"
+    },
+    "certificate": {
+      "path": "strategy/pre-a-dynamic-owner-leakage-audit-certificate-260830.md",
+      "sha256": "9625d103f1bd3cfbee06cd7347a1c3b8bdef7918d19342d6e2d438021fff449a"
+    },
+    "exploration": {
+      "path": "strategy/pre-a-dynamic-owner-leakage-audit-exploration.json",
+      "sha256": "0c9636f2be201a84e9ae13f3511d7590ecc15e2984a99ecca00d1f10d936537b"
+    }
+  },
+  "formal_integration": {
+    "event_id": "20260830-r-449-dynamic-owner-leakage-audit-2026-08-30",
+    "event_ordinal": 798,
+    "exploration_ordinal": 1322,
+    "no_new_negative_ids": [],
+    "no_pdf": true
+  },
+  "boundary": "R-449 is a T0 claim-nonbearing owner-intake and leakage audit. It records exact missing production and observation-map fields, separates physical-owner evidence from proof comparators, and parks the owner branch at the surviving static-equivalence class. It does not change the existing proof method, add a finite mobility table, choose a dynamics, close Pre-A or Sector-A, or establish any QFT, Yang--Mills, gravity, continuum, cosmic-origin or mass-gap result.",
+  "next_action": "Continue unchanged T-054 forward intake by obtaining a source-owned Q3LOCK generator/transfer, state, projection, time boundary and the R-192 heat-root/filtration/raw-current/q-ledger fields in exact order. Continue unchanged T-059/T-061 inverse intake by obtaining the supported GTS/GDT environment or pinned source-build lock, then freeze F_reg through F_obs and a prospective holdout before scoring. If no owner hash arrives, keep this branch parked and do not create an equivalent finite table."
+}

@@ -1,0 +1,517 @@
+{
+  "assertion_count": 38,
+  "assertions": [
+    {
+      "actual": [
+        "R-449",
+        "EXP-001322",
+        "T-061",
+        false,
+        "T0"
+      ],
+      "expected": [
+        "R-449",
+        "EXP-001322",
+        "T-061",
+        false,
+        "T0"
+      ],
+      "group": "provenance",
+      "name": "identity",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "c6_closed": false,
+        "candidate_selection": false,
+        "claim_bearing": false,
+        "inverse_map_complete": false,
+        "leakage_detected_and_blocked": true,
+        "no_new_negative": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "owner_intake_audited": true,
+        "physical_owner_complete": false,
+        "pre_a_closed": false,
+        "proof_owner_separated": true,
+        "prospective_holdout_frozen": false,
+        "sector_a_closed": false
+      },
+      "expected": "required preservation flags true",
+      "group": "method-firewall",
+      "name": "method preservation",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "generator_or_transfer",
+        "state",
+        "physical_projection",
+        "time_boundary",
+        "heat_root_incidence",
+        "root_filtration",
+        "conditional_replicas",
+        "raw_current_spatial_intertwiner",
+        "production_one_use_q_ledger"
+      ],
+      "expected": "physical plus proof slots",
+      "group": "owner-contract",
+      "name": "owner slots partition",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "conditional_replicas": "MISSING",
+        "generator_or_transfer": "MISSING_SOURCE_OWNER",
+        "heat_root_incidence": "MISSING",
+        "physical_projection": "MISSING_SOURCE_OWNER",
+        "production_one_use_q_ledger": "MISSING",
+        "raw_current_spatial_intertwiner": "MISSING",
+        "root_filtration": "MISSING",
+        "state": "MISSING_SOURCE_OWNER",
+        "time_boundary": "MISSING_SOURCE_OWNER"
+      },
+      "expected": "no slot admitted",
+      "group": "owner-contract",
+      "name": "all source-owner slots missing",
+      "status": "PASS"
+    },
+    {
+      "actual": "heat_root_incidence",
+      "expected": "heat_root_incidence",
+      "group": "lineage",
+      "name": "R-192 first failure",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "evidence": "R-177",
+        "mapped": false,
+        "reason": "R-177 binds order and feedback but explicitly does not prove the production raw-current spatial map or q-ledger.",
+        "slot": "heat_root_incidence",
+        "status": "structural-only"
+      },
+      "expected": "unmapped structural-only",
+      "group": "lineage",
+      "name": "R-192 structural heat map",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "evidence": "R-136",
+        "mapped": false,
+        "reason": "The deterministic nonnegative production q-ledger is explicitly unproved.",
+        "slot": "source",
+        "status": "missing-q-ledger"
+      },
+      "expected": "missing q-ledger",
+      "group": "lineage",
+      "name": "R-192 q-ledger missing",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "domain": "H2(T3;C3) on fixed side-16 torus",
+        "flow": "conditional deterministic real-L2 gradient flow",
+        "functional": "hash-pinned A1 P1 reference functional with eta_shell=0",
+        "hypothesis": "A2-H3-CANONICAL-PRODUCTION-FUNCTIONAL",
+        "stochastic_heat": false
+      },
+      "expected": "deterministic non-stochastic flow",
+      "group": "A2-crosswalk",
+      "name": "A2 deterministic flow",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "a2_owner": {
+          "domain": "H2(T3;C3) on fixed side-16 torus",
+          "flow": "conditional deterministic real-L2 gradient flow",
+          "functional": "hash-pinned A1 P1 reference functional with eta_shell=0",
+          "hypothesis": "A2-H3-CANONICAL-PRODUCTION-FUNCTIONAL",
+          "stochastic_heat": false
+        },
+        "expected_absence": [
+          "heat_root_incidence",
+          "root_filtration",
+          "conditional_replicas",
+          "raw_current_spatial_intertwiner",
+          "production_one_use_q_ledger"
+        ],
+        "first_failure_slot": "heat_root_incidence",
+        "owner_compatible": false,
+        "r192_required_slots": [
+          "heat_root_incidence",
+          "root_filtration",
+          "conditional_replicas",
+          "raw_current_spatial_intertwiner",
+          "production_one_use_q_ledger"
+        ]
+      },
+      "expected": "incompatible at first missing slot",
+      "group": "A2-crosswalk",
+      "name": "A2 incompatibility",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "heat_root_incidence",
+        "root_filtration",
+        "conditional_replicas",
+        "raw_current_spatial_intertwiner",
+        "production_one_use_q_ledger"
+      ],
+      "expected": [
+        "heat_root_incidence",
+        "root_filtration",
+        "conditional_replicas",
+        "raw_current_spatial_intertwiner",
+        "production_one_use_q_ledger"
+      ],
+      "group": "A2-crosswalk",
+      "name": "A2 expected absence",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "F_reg",
+        "F_lim",
+        "F_eff",
+        "F_obs"
+      ],
+      "expected": [
+        "F_reg",
+        "F_lim",
+        "F_eff",
+        "F_obs"
+      ],
+      "group": "inverse-contract",
+      "name": "inverse stage order",
+      "status": "PASS"
+    },
+    {
+      "actual": "A missing earlier stage makes every later stage NOT_ADMITTED, not approximately inferred.",
+      "expected": "A missing earlier stage makes every later stage NOT_ADMITTED, not approximately inferred.",
+      "group": "inverse-contract",
+      "name": "inverse missing-stage rule",
+      "status": "PASS"
+    },
+    {
+      "actual": "ALL_PUBLIC_TARGETS_RETROSPECTIVE_FOR_CURRENT_TECT; PROSPECTIVE_TARGET_EMPTY",
+      "expected": "prospective target empty",
+      "group": "inverse-contract",
+      "name": "prospective holdout empty",
+      "status": "PASS"
+    },
+    {
+      "actual": "NO_SELECTION_ZERO_ADMITTED_MICROSCOPIC_FORWARD_MAPS",
+      "expected": "zero admitted maps",
+      "group": "inverse-contract",
+      "name": "candidate selection empty",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "c6_closed": false,
+        "f_reg_f_lim_f_eff_f_obs_closed": false,
+        "finite_estimand_separation": true,
+        "holdout_prediction": "NOT_ASSESSED",
+        "no_new_negative_result": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "physical_identity": false,
+        "physical_observable_map_admitted": false,
+        "pre_a_closed": false,
+        "production_generator_admitted": false,
+        "sector_a_closed": false,
+        "source_owner_admitted": false,
+        "stability_under_observation_error": "NOT_ASSESSED",
+        "stability_under_regulator_change": "NOT_ASSESSED",
+        "static_fit_existence": "PASS_FOR_TWO_REGISTERED_FINITE_WITNESSES",
+        "static_identifiability": "NON_IDENTIFIABLE"
+      },
+      "expected": "non-identifiable and unowned",
+      "group": "quotient",
+      "name": "R-448 quotient boundary",
+      "status": "PASS"
+    },
+    {
+      "actual": "P1-DYNAMIC-OWNER-OBSERVATION-MAP-001",
+      "expected": "active P1 packet",
+      "group": "programme",
+      "name": "programme active packet",
+      "status": "PASS"
+    },
+    {
+      "actual": "Continue unchanged T-054 forward owner intake by deriving the actual Q3LOCK per-edge commutator/history-tail majorant on the declared common weighted domain; do not issue equivalent finite tables. Continue unchanged T-059/T-061 inverse intake by obtaining the exact supported GTS/GDT environment or fully pinned source-build lock, then rerun readiness before any event-free response-index/likelihood packet. Keep response selection, calibration validity, detector-to-geocenter, covariance, nuisance, prospective and physical-identity fields locked.",
+      "expected": "unchanged forward intake",
+      "group": "programme",
+      "name": "programme next action preserved",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "cross_lane_circular_support_forbidden": true,
+        "leakage_detected_and_blocked": true,
+        "owner_branch_verdict": "PARK_OWNER_BRANCH_SURVIVING_STATIC_EQUIVALENCE_CLASS",
+        "physical_owner_evidence": [],
+        "proof_owner_evidence": [
+          "R-192",
+          "R-193/R-200",
+          "R-448",
+          "A2 gradient-flow crosswalk"
+        ]
+      },
+      "expected": "no physical evidence and proof comparators listed",
+      "group": "leakage",
+      "name": "physical proof separation",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "cross_lane_circular_support_forbidden": true,
+        "leakage_detected_and_blocked": true,
+        "owner_branch_verdict": "PARK_OWNER_BRANCH_SURVIVING_STATIC_EQUIVALENCE_CLASS",
+        "physical_owner_evidence": [],
+        "proof_owner_evidence": [
+          "R-192",
+          "R-193/R-200",
+          "R-448",
+          "A2 gradient-flow crosswalk"
+        ]
+      },
+      "expected": "blocked",
+      "group": "leakage",
+      "name": "leakage blocked",
+      "status": "PASS"
+    },
+    {
+      "actual": "PARK_OWNER_BRANCH_SURVIVING_STATIC_EQUIVALENCE_CLASS",
+      "expected": "parked no selection",
+      "group": "verdict",
+      "name": "parked verdict",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "c6_closed": false,
+        "candidate_selection": false,
+        "claim_bearing": false,
+        "inverse_map_complete": false,
+        "leakage_detected_and_blocked": true,
+        "no_new_negative": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "owner_intake_audited": true,
+        "physical_owner_complete": false,
+        "pre_a_closed": false,
+        "proof_owner_separated": true,
+        "prospective_holdout_frozen": false,
+        "sector_a_closed": false
+      },
+      "expected": "all downstream closures false",
+      "group": "boundary",
+      "name": "downstream firewalls",
+      "status": "PASS"
+    },
+    {
+      "actual": "641074df54492654177fc72dd66ecb2cb46a791390215ab521f725d77e622d14",
+      "expected": "641074df54492654177fc72dd66ecb2cb46a791390215ab521f725d77e622d14",
+      "group": "provenance",
+      "name": "input r192_manifest hash",
+      "status": "PASS"
+    },
+    {
+      "actual": "386d63a28d3ab7d9564381bd51a357cbfc2d5853b2a3304e653f6d62624b1fc0",
+      "expected": "386d63a28d3ab7d9564381bd51a357cbfc2d5853b2a3304e653f6d62624b1fc0",
+      "group": "provenance",
+      "name": "input a2_crosswalk hash",
+      "status": "PASS"
+    },
+    {
+      "actual": "fd5f37d0e095062a415368749d10d65de14b799938673b4460c3e849f07b9a46",
+      "expected": "fd5f37d0e095062a415368749d10d65de14b799938673b4460c3e849f07b9a46",
+      "group": "provenance",
+      "name": "input inverse_contract hash",
+      "status": "PASS"
+    },
+    {
+      "actual": "9c7acaac9587db94980702814acbb17d0e10f5b44e1c4e5e28dfc90c3cd91516",
+      "expected": "9c7acaac9587db94980702814acbb17d0e10f5b44e1c4e5e28dfc90c3cd91516",
+      "group": "provenance",
+      "name": "input main_program hash",
+      "status": "PASS"
+    },
+    {
+      "actual": "57b8bc22f47d441d75016f6b6dc9a5ff25b6d64e0809aebf42092b0a71fdefe4",
+      "expected": "57b8bc22f47d441d75016f6b6dc9a5ff25b6d64e0809aebf42092b0a71fdefe4",
+      "group": "provenance",
+      "name": "input r448_manifest hash",
+      "status": "PASS"
+    },
+    {
+      "actual": "8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af",
+      "expected": "8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af",
+      "group": "provenance",
+      "name": "input lean_toolchain hash",
+      "status": "PASS"
+    },
+    {
+      "actual": "a67c26b5518afd984e53eae28a0ba4948c6bb01680d7c360e8b36386eb98962b",
+      "expected": "a67c26b5518afd984e53eae28a0ba4948c6bb01680d7c360e8b36386eb98962b",
+      "group": "provenance",
+      "name": "input lakefile hash",
+      "status": "PASS"
+    },
+    {
+      "actual": "4308d953726ebe0a8e8fdb7aa5da996c8bfcd45d4a58f6f1b3b40e25d2521964",
+      "expected": "4308d953726ebe0a8e8fdb7aa5da996c8bfcd45d4a58f6f1b3b40e25d2521964",
+      "group": "provenance",
+      "name": "input lake_manifest hash",
+      "status": "PASS"
+    },
+    {
+      "actual": "a498546d5d412b55db4d48b5c502c4a090a29c2a2e49d2405bdf97bc4da6e366",
+      "expected": "a498546d5d412b55db4d48b5c502c4a090a29c2a2e49d2405bdf97bc4da6e366",
+      "group": "provenance",
+      "name": "file lean_entrypoint hash",
+      "status": "PASS"
+    },
+    {
+      "actual": "fd742aba2788e053816d5d99fd5090c070e88cc83a6085d78e458ae4fcfce8b5",
+      "expected": "fd742aba2788e053816d5d99fd5090c070e88cc83a6085d78e458ae4fcfce8b5",
+      "group": "provenance",
+      "name": "file primary hash",
+      "status": "PASS"
+    },
+    {
+      "actual": "c57c9d443b653efbe2968edc797039eb991a33b94772ebd5e5e3e678aa907f2d",
+      "expected": "c57c9d443b653efbe2968edc797039eb991a33b94772ebd5e5e3e678aa907f2d",
+      "group": "provenance",
+      "name": "file independent hash",
+      "status": "PASS"
+    },
+    {
+      "actual": "bcf46f280731caaeded0538384364fb4220355f814d8245149e3b22f1e5ff35f",
+      "expected": "bcf46f280731caaeded0538384364fb4220355f814d8245149e3b22f1e5ff35f",
+      "group": "provenance",
+      "name": "file hostile hash",
+      "status": "PASS"
+    },
+    {
+      "actual": "1a235a1040311209c8486fad20dbb86ff836c39889e332a33b55453b8d286056",
+      "expected": "1a235a1040311209c8486fad20dbb86ff836c39889e332a33b55453b8d286056",
+      "group": "provenance",
+      "name": "file verifier hash",
+      "status": "PASS"
+    },
+    {
+      "actual": "9625d103f1bd3cfbee06cd7347a1c3b8bdef7918d19342d6e2d438021fff449a",
+      "expected": "9625d103f1bd3cfbee06cd7347a1c3b8bdef7918d19342d6e2d438021fff449a",
+      "group": "provenance",
+      "name": "file certificate hash",
+      "status": "PASS"
+    },
+    {
+      "actual": "0c9636f2be201a84e9ae13f3511d7590ecc15e2984a99ecca00d1f10d936537b",
+      "expected": "0c9636f2be201a84e9ae13f3511d7590ecc15e2984a99ecca00d1f10d936537b",
+      "group": "provenance",
+      "name": "file exploration hash",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "complete_requires_heat_root",
+        "a2_owner_incomplete",
+        "a2_heat_root_missing",
+        "inverse_not_complete",
+        "parked_owner_and_inverse"
+      ],
+      "expected": "all present",
+      "group": "Lean",
+      "name": "Lean markers",
+      "status": "PASS"
+    },
+    {
+      "actual": "forbidden tokens absent",
+      "expected": "clean",
+      "group": "Lean",
+      "name": "Lean firewall",
+      "status": "PASS"
+    }
+  ],
+  "assumptions": [
+    "The hash-pinned R-192, A2, T-061 inverse-contract, R-448 and programme files are the current authorities.",
+    "Owner slots are compared by exact field names and are not inferred from prose or finite numerical similarity.",
+    "R-192 structural and finite fixtures, A2 deterministic flow, and R-448 quotient remain proof comparators only.",
+    "The observation-first inverse lane treats F_reg, F_lim, F_eff and F_obs as ordered map stages and does not backfill a missing stage.",
+    "Exact Boolean/structural checks and the pinned Lean toolchain are sufficient for this T0 intake audit."
+  ],
+  "boundary": "R-449 is a T0 claim-nonbearing owner-intake and leakage audit. It records exact missing production and observation-map fields, separates physical-owner evidence from proof comparators, and parks the owner branch at the surviving static-equivalence class. It does not change the existing proof method, add a finite mobility table, choose a dynamics, close Pre-A or Sector-A, or establish any QFT, Yang--Mills, gravity, continuum, cosmic-origin or mass-gap result.",
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "derived": {
+    "a2_owner_compatible": false,
+    "a2_stochastic_heat": false,
+    "candidate_selection": "NO_SELECTION_ZERO_ADMITTED_MICROSCOPIC_FORWARD_MAPS",
+    "claim_bearing": false,
+    "first_failure_slot": "heat_root_incidence",
+    "inverse_stages": {
+      "candidate_selection": "NO_SELECTION_ZERO_ADMITTED_MICROSCOPIC_FORWARD_MAPS",
+      "f_eff": "NOT_ADMITTED",
+      "f_lim": "NOT_ADMITTED",
+      "f_obs": "NOT_ADMITTED",
+      "f_reg": "PARTIAL_FINITE_CONTRACTS_ONLY",
+      "prospective_lock": "EMPTY_NOT_FROZEN"
+    },
+    "leakage_blocked": true,
+    "methods_preserved": true,
+    "owner_branch_verdict": "PARK_OWNER_BRANCH_SURVIVING_STATIC_EQUIVALENCE_CLASS",
+    "owner_slots": {
+      "conditional_replicas": "MISSING",
+      "generator_or_transfer": "MISSING_SOURCE_OWNER",
+      "heat_root_incidence": "MISSING",
+      "physical_projection": "MISSING_SOURCE_OWNER",
+      "production_one_use_q_ledger": "MISSING",
+      "raw_current_spatial_intertwiner": "MISSING",
+      "root_filtration": "MISSING",
+      "state": "MISSING_SOURCE_OWNER",
+      "time_boundary": "MISSING_SOURCE_OWNER"
+    },
+    "physical_owner_evidence": [],
+    "proof_comparators": [
+      "R-192",
+      "R-193/R-200",
+      "R-448",
+      "A2 gradient-flow crosswalk"
+    ],
+    "prospective_lock": "EMPTY_NOT_FROZEN",
+    "r192_production_map_complete": false
+  },
+  "evidence_level": "T0 / EXACT OWNER-INTAKE AND PHYSICAL-PROOF LEAKAGE AUDIT WITH INDEPENDENT, HOSTILE AND LEAN CROSS-CHECKS",
+  "exploration_id": "EXP-001322",
+  "manifest": "strategy/pre-a-dynamic-owner-leakage-audit-manifest.json",
+  "missing_assumptions": [
+    "A versioned source-owned generator or transfer operator, state, physical projection and time boundary.",
+    "The R-192 production heat-root incidence, root filtration, conditional replicas, raw-current spatial intertwiner and one-use q-ledger.",
+    "A complete F_reg/F_lim/F_eff/F_obs map, likelihood, covariance, nuisance model and immutable scorer.",
+    "A frozen prospective holdout selected by the external custodian protocol.",
+    "Uniform regulator/volume bounds, physical-sector identification, QFT/Yang--Mills/gravity correspondence and any continuum or mass-gap theorem."
+  ],
+  "non_claims": [
+    "No source-owned production dynamics is admitted or constructed.",
+    "No proof comparator is promoted to a physical generator, state, projection, heat semigroup or q-ledger.",
+    "No observation likelihood, covariance, nuisance law, prospective holdout or candidate score is supplied.",
+    "No Pre-A, Sector-A, C6, QFT, Yang--Mills, gravity, continuum, cosmic-origin, physical-vacuum or mass-gap conclusion follows.",
+    "The established forward and inverse methods, owner order and promotion firewalls are unchanged."
+  ],
+  "passed": 38,
+  "result_id": "R-449",
+  "run_kind": "primary",
+  "schema": "tect/pre-a-dynamic-owner-leakage-audit-primary/1.0",
+  "source_hashes": {
+    "manifest": "e7c358aeb4d10f7c2c251d0c189f8218e838901fe958875b3e99004827c2b195",
+    "script": "fd742aba2788e053816d5d99fd5090c070e88cc83a6085d78e458ae4fcfce8b5"
+  },
+  "task_id": "T-061",
+  "verdict": "OWNER_INTAKE_LEAKAGE_AUDITED"
+}

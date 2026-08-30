@@ -1,0 +1,332 @@
+{
+  "assertion_count": 21,
+  "assertions": [
+    {
+      "actual": [
+        "R-449",
+        "EXP-001322",
+        "T-061",
+        false
+      ],
+      "expected": [
+        "R-449",
+        "EXP-001322",
+        "T-061",
+        false
+      ],
+      "group": "provenance",
+      "name": "identity",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "generator_or_transfer",
+        "state",
+        "physical_projection",
+        "time_boundary",
+        "heat_root_incidence",
+        "root_filtration",
+        "conditional_replicas",
+        "raw_current_spatial_intertwiner",
+        "production_one_use_q_ledger"
+      ],
+      "expected": [
+        "generator_or_transfer",
+        "state",
+        "physical_projection",
+        "time_boundary",
+        "heat_root_incidence",
+        "root_filtration",
+        "conditional_replicas",
+        "raw_current_spatial_intertwiner",
+        "production_one_use_q_ledger"
+      ],
+      "group": "owner-contract",
+      "name": "slot concatenation",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "conditional_replicas": "MISSING",
+        "generator_or_transfer": "MISSING_SOURCE_OWNER",
+        "heat_root_incidence": "MISSING",
+        "physical_projection": "MISSING_SOURCE_OWNER",
+        "production_one_use_q_ledger": "MISSING",
+        "raw_current_spatial_intertwiner": "MISSING",
+        "root_filtration": "MISSING",
+        "state": "MISSING_SOURCE_OWNER",
+        "time_boundary": "MISSING_SOURCE_OWNER"
+      },
+      "expected": "all missing",
+      "group": "owner-contract",
+      "name": "source owner absent",
+      "status": "PASS"
+    },
+    {
+      "actual": "heat_root_incidence",
+      "expected": "heat_root_incidence",
+      "group": "lineage",
+      "name": "R-192 first failure",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "evidence": "R-177",
+        "mapped": false,
+        "reason": "R-177 binds order and feedback but explicitly does not prove the production raw-current spatial map or q-ledger.",
+        "slot": "heat_root_incidence",
+        "status": "structural-only"
+      },
+      "expected": "structural-only",
+      "group": "lineage",
+      "name": "R-192 heat structural",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "domain": "H2(T3;C3) on fixed side-16 torus",
+        "flow": "conditional deterministic real-L2 gradient flow",
+        "functional": "hash-pinned A1 P1 reference functional with eta_shell=0",
+        "hypothesis": "A2-H3-CANONICAL-PRODUCTION-FUNCTIONAL",
+        "stochastic_heat": false
+      },
+      "expected": "stochastic_heat false",
+      "group": "A2-crosswalk",
+      "name": "A2 nonstochastic",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "a2_owner": {
+          "domain": "H2(T3;C3) on fixed side-16 torus",
+          "flow": "conditional deterministic real-L2 gradient flow",
+          "functional": "hash-pinned A1 P1 reference functional with eta_shell=0",
+          "hypothesis": "A2-H3-CANONICAL-PRODUCTION-FUNCTIONAL",
+          "stochastic_heat": false
+        },
+        "expected_absence": [
+          "heat_root_incidence",
+          "root_filtration",
+          "conditional_replicas",
+          "raw_current_spatial_intertwiner",
+          "production_one_use_q_ledger"
+        ],
+        "first_failure_slot": "heat_root_incidence",
+        "owner_compatible": false,
+        "r192_required_slots": [
+          "heat_root_incidence",
+          "root_filtration",
+          "conditional_replicas",
+          "raw_current_spatial_intertwiner",
+          "production_one_use_q_ledger"
+        ]
+      },
+      "expected": "false and all proof slots absent",
+      "group": "A2-crosswalk",
+      "name": "A2 incompatible",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "F_reg",
+        "F_lim",
+        "F_eff",
+        "F_obs"
+      ],
+      "expected": [
+        "F_reg",
+        "F_lim",
+        "F_eff",
+        "F_obs"
+      ],
+      "group": "inverse-contract",
+      "name": "inverse ordered stages",
+      "status": "PASS"
+    },
+    {
+      "actual": "ALL_PUBLIC_TARGETS_RETROSPECTIVE_FOR_CURRENT_TECT; PROSPECTIVE_TARGET_EMPTY",
+      "expected": "empty prospective target",
+      "group": "inverse-contract",
+      "name": "inverse target empty",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "c6_closed": false,
+        "f_reg_f_lim_f_eff_f_obs_closed": false,
+        "finite_estimand_separation": true,
+        "holdout_prediction": "NOT_ASSESSED",
+        "no_new_negative_result": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "physical_identity": false,
+        "physical_observable_map_admitted": false,
+        "pre_a_closed": false,
+        "production_generator_admitted": false,
+        "sector_a_closed": false,
+        "source_owner_admitted": false,
+        "stability_under_observation_error": "NOT_ASSESSED",
+        "stability_under_regulator_change": "NOT_ASSESSED",
+        "static_fit_existence": "PASS_FOR_TWO_REGISTERED_FINITE_WITNESSES",
+        "static_identifiability": "NON_IDENTIFIABLE"
+      },
+      "expected": "non-identifiable and unowned",
+      "group": "quotient",
+      "name": "static quotient unowned",
+      "status": "PASS"
+    },
+    {
+      "actual": "NO_SELECTION_ZERO_ADMITTED_MICROSCOPIC_FORWARD_MAPS",
+      "expected": "no selection",
+      "group": "inverse-contract",
+      "name": "no candidate selection",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "cross_lane_circular_support_forbidden": true,
+        "leakage_detected_and_blocked": true,
+        "owner_branch_verdict": "PARK_OWNER_BRANCH_SURVIVING_STATIC_EQUIVALENCE_CLASS",
+        "physical_owner_evidence": [],
+        "proof_owner_evidence": [
+          "R-192",
+          "R-193/R-200",
+          "R-448",
+          "A2 gradient-flow crosswalk"
+        ]
+      },
+      "expected": "blocked",
+      "group": "leakage",
+      "name": "leakage firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "c6_closed": false,
+        "candidate_selection": false,
+        "claim_bearing": false,
+        "inverse_map_complete": false,
+        "leakage_detected_and_blocked": true,
+        "no_new_negative": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "owner_intake_audited": true,
+        "physical_owner_complete": false,
+        "pre_a_closed": false,
+        "proof_owner_separated": true,
+        "prospective_holdout_frozen": false,
+        "sector_a_closed": false
+      },
+      "expected": "preserved",
+      "group": "method-firewall",
+      "name": "methods unchanged",
+      "status": "PASS"
+    },
+    {
+      "actual": "641074df54492654177fc72dd66ecb2cb46a791390215ab521f725d77e622d14",
+      "expected": "641074df54492654177fc72dd66ecb2cb46a791390215ab521f725d77e622d14",
+      "group": "provenance",
+      "name": "input r192_manifest",
+      "status": "PASS"
+    },
+    {
+      "actual": "386d63a28d3ab7d9564381bd51a357cbfc2d5853b2a3304e653f6d62624b1fc0",
+      "expected": "386d63a28d3ab7d9564381bd51a357cbfc2d5853b2a3304e653f6d62624b1fc0",
+      "group": "provenance",
+      "name": "input a2_crosswalk",
+      "status": "PASS"
+    },
+    {
+      "actual": "fd5f37d0e095062a415368749d10d65de14b799938673b4460c3e849f07b9a46",
+      "expected": "fd5f37d0e095062a415368749d10d65de14b799938673b4460c3e849f07b9a46",
+      "group": "provenance",
+      "name": "input inverse_contract",
+      "status": "PASS"
+    },
+    {
+      "actual": "9c7acaac9587db94980702814acbb17d0e10f5b44e1c4e5e28dfc90c3cd91516",
+      "expected": "9c7acaac9587db94980702814acbb17d0e10f5b44e1c4e5e28dfc90c3cd91516",
+      "group": "provenance",
+      "name": "input main_program",
+      "status": "PASS"
+    },
+    {
+      "actual": "57b8bc22f47d441d75016f6b6dc9a5ff25b6d64e0809aebf42092b0a71fdefe4",
+      "expected": "57b8bc22f47d441d75016f6b6dc9a5ff25b6d64e0809aebf42092b0a71fdefe4",
+      "group": "provenance",
+      "name": "input r448_manifest",
+      "status": "PASS"
+    },
+    {
+      "actual": "8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af",
+      "expected": "8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af",
+      "group": "provenance",
+      "name": "input lean_toolchain",
+      "status": "PASS"
+    },
+    {
+      "actual": "a67c26b5518afd984e53eae28a0ba4948c6bb01680d7c360e8b36386eb98962b",
+      "expected": "a67c26b5518afd984e53eae28a0ba4948c6bb01680d7c360e8b36386eb98962b",
+      "group": "provenance",
+      "name": "input lakefile",
+      "status": "PASS"
+    },
+    {
+      "actual": "4308d953726ebe0a8e8fdb7aa5da996c8bfcd45d4a58f6f1b3b40e25d2521964",
+      "expected": "4308d953726ebe0a8e8fdb7aa5da996c8bfcd45d4a58f6f1b3b40e25d2521964",
+      "group": "provenance",
+      "name": "input lake_manifest",
+      "status": "PASS"
+    }
+  ],
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "derived": {
+    "a2_owner_compatible": false,
+    "a2_stochastic_heat": false,
+    "candidate_selection": "NO_SELECTION_ZERO_ADMITTED_MICROSCOPIC_FORWARD_MAPS",
+    "claim_bearing": false,
+    "first_failure_slot": "heat_root_incidence",
+    "inverse_stages": {
+      "candidate_selection": "NO_SELECTION_ZERO_ADMITTED_MICROSCOPIC_FORWARD_MAPS",
+      "f_eff": "NOT_ADMITTED",
+      "f_lim": "NOT_ADMITTED",
+      "f_obs": "NOT_ADMITTED",
+      "f_reg": "PARTIAL_FINITE_CONTRACTS_ONLY",
+      "prospective_lock": "EMPTY_NOT_FROZEN"
+    },
+    "leakage_blocked": true,
+    "methods_preserved": true,
+    "owner_branch_verdict": "PARK_OWNER_BRANCH_SURVIVING_STATIC_EQUIVALENCE_CLASS",
+    "owner_slots": {
+      "conditional_replicas": "MISSING",
+      "generator_or_transfer": "MISSING_SOURCE_OWNER",
+      "heat_root_incidence": "MISSING",
+      "physical_projection": "MISSING_SOURCE_OWNER",
+      "production_one_use_q_ledger": "MISSING",
+      "raw_current_spatial_intertwiner": "MISSING",
+      "root_filtration": "MISSING",
+      "state": "MISSING_SOURCE_OWNER",
+      "time_boundary": "MISSING_SOURCE_OWNER"
+    },
+    "physical_owner_evidence": [],
+    "proof_comparators": [
+      "R-192",
+      "R-193/R-200",
+      "R-448",
+      "A2 gradient-flow crosswalk"
+    ],
+    "prospective_lock": "EMPTY_NOT_FROZEN",
+    "r192_production_map_complete": false
+  },
+  "exploration_id": "EXP-001322",
+  "manifest": "strategy/pre-a-dynamic-owner-leakage-audit-manifest.json",
+  "result_id": "R-449",
+  "run_kind": "independent",
+  "schema": "tect/pre-a-dynamic-owner-leakage-audit-independent/1.0",
+  "source_hashes": {
+    "manifest": "e7c358aeb4d10f7c2c251d0c189f8218e838901fe958875b3e99004827c2b195",
+    "script": "c57c9d443b653efbe2968edc797039eb991a33b94772ebd5e5e3e678aa907f2d"
+  },
+  "task_id": "T-061",
+  "verdict": "INDEPENDENT_OWNER_INTAKE_LEAKAGE_CONTROL"
+}

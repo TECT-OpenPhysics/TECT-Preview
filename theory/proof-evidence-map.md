@@ -58,13 +58,13 @@ flowchart LR
 |---|---:|---|
 | Status cards | 49 | 48 active; 1 refuted |
 | Reference-only interface pointers | 1 | External locators only; no claim, gate, obligation, or theorem authority |
-| Reusable result records | 282 | Curated theorems, reductions, partial advances, and no-go lemmas with proof anchors |
+| Reusable result records | 283 | Curated theorems, reductions, partial advances, and no-go lemmas with proof anchors |
 | Negative/audit records | 375 indexed + 3 legacy process lessons | No-go, falsifier, retraction, and process-audit trust assets with evidence and consequence |
-| Proof explorations | 1321 | Route decisions: advanced 918, failed 246, inconclusive 106, parked 51; non-tier-bearing |
-| Accepted chronological events | 797 | Complete history is preserved in the JSON map and `changelog/log.jsonl`; use `changelog/INDEX.md` for bounded reading |
+| Proof explorations | 1322 | Route decisions: advanced 919, failed 246, inconclusive 106, parked 51; non-tier-bearing |
+| Accepted chronological events | 798 | Complete history is preserved in the JSON map and `changelog/log.jsonl`; use `changelog/INDEX.md` for bounded reading |
 | Tasks | 61 | 12 live; 49 completed |
 | Current route gates | 18 | 15 claim-card gates plus live-task child targets, deduplicated |
-| Proof evidence inventory | 414 lineage notes / 395 sibling PDFs / 9 legacy unordered root notes / 9 paired root PDFs / 1777 run JSON files / 124 claim-level manifests / 40 bundle manifests / 45 frozen embedded manifests | Complete paths and disjoint manifest classes are stored per claim in the machine map; 19 historical/superseded lineage-note paths lack a sibling PDF and 118 grandfathered evidence notes have incomplete standard footers, all kept visible |
+| Proof evidence inventory | 414 lineage notes / 395 sibling PDFs / 9 legacy unordered root notes / 9 paired root PDFs / 1781 run JSON files / 124 claim-level manifests / 40 bundle manifests / 45 frozen embedded manifests | Complete paths and disjoint manifest classes are stored per claim in the machine map; 19 historical/superseded lineage-note paths lack a sibling PDF and 118 grandfathered evidence notes have incomplete standard footers, all kept visible |
 
 ## Coverage diagnostics
 
@@ -78,7 +78,7 @@ These are visible migration or metadata debts, not silently dropped records.
 | Claim cards listing a gate whose registered status begins `CLOSED` | 0 | Exposed as reconciliation debt; the map does not silently flip claim cards |
 | Claim-unbound reusable results / negative records | 53 / 13 | Ambiguous family references stay unbound; no claim edge is invented |
 | Completed-task references to retired gate identifiers | 5 | Preserved as `historical_gate_reference` nodes anchored to `todo/todo.json`, never mislinked to the current gate registry |
-| Changelog tokens that are not current claim-card IDs | 455 | Preserved in event metadata but never promoted to claim edges; many are historical proof-unit IDs from the legacy extractor |
+| Changelog tokens that are not current claim-card IDs | 456 | Preserved in event metadata but never promoted to claim edges; many are historical proof-unit IDs from the legacy extractor |
 | Changelog negative tags absent from the indexed registry | 3 | Preserved as historical event text, rendered without a false registry anchor, and excluded from negative graph edges |
 | Historical exploration backfill | 13 | Directly recovered from cited tracked evidence; pre-2026-07-24 chat-only deliberation is explicitly not claimed complete |
 
@@ -20170,6 +20170,21 @@ This table is a review aid, not a substitute for the live TODO order.
 - **Formal authorities:** [R-193](../RESULTS-LEDGER.md#r-193), [R-448](../RESULTS-LEDGER.md#r-448), `event:20260830-r-448-static-dynamic-equivalence-quotient-2026`
 - **Located evidence:** [`strategy/pre-a-static-dynamic-equivalence-quotient-manifest.json`](../strategy/pre-a-static-dynamic-equivalence-quotient-manifest.json) (finite_contract); [`strategy/pre-a-static-dynamic-equivalence-quotient-certificate-260830.md`](../strategy/pre-a-static-dynamic-equivalence-quotient-certificate-260830.md) (Evidence and exact scope); [`verification/lean/Tect/R448.lean`](../verification/lean/Tect/R448.lean) (static_equiv_refl); [`codes/foundations/pre_a_static_dynamic_equivalence_quotient_verify.py`](../codes/foundations/pre_a_static_dynamic_equivalence_quotient_verify.py) (integrated verifier)
 
+<a id="exp-001322"></a>
+#### EXP-001322 — Source-owner intake and physical/proof leakage audit
+
+- **Review metadata:** reviewed 2026-08-30; recorded 2026-08-30T15:54:03Z; `contemporaneous`; verdict **advanced**.
+- **Structured scope:** claim [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md); gate [PA-INVERSE-OBSERVATION-TARGET-MAP-HOLDOUT-FREEZE](../claims/GATES.md#pa-inverse-observation-target-map-holdout-freeze), [PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE](../claims/GATES.md#pa-round1-evidence-role-and-minimum-manifest-freeze); task `T-061`.
+- **Question:** Can the existing R-192 owner boundary, A2 gradient-flow crosswalk, T-061 observation contract and R-448 quotient be audited into one reusable leakage firewall without changing the established forward or inverse methods?
+- **Finite checks:** (1) Load the hash-pinned R-192, A2, T-061 inverse-contract, main-program and R-448 authorities without copying counterpart matrices. (2) Compare the nine owner slots and the first R-192 failure; keep A2 deterministic flow and R-192/R-193/R-200/R-448 as proof comparators only. (3) Audit the ordered F_reg/F_lim/F_eff/F_obs stages, the empty prospective lock and the no-selection quotient. (4) Run non-importing independent, eight-mutation hostile, integrated and Lean checks; record a parked verdict if no owner hash exists.
+- **Finding:** The exact owner intake shows no source-owned generator, state, projection, temporal boundary or R-192 production heat-root/filtration/replica/raw-current/q-ledger slot. A2 is deterministic and incompatible with the stochastic/root-labelled production contract; R-448 leaves a non-singleton static class; the inverse map has no complete F_reg/F_lim/F_eff/F_obs chain and PROS-LOCK-001 is empty. The owner branch is therefore parked at the surviving equivalence class.
+- **Decision reason:** R-448 supplied the quotient relation. The next non-duplicative P1 deliverable is the owner-intake and leakage audit that prevents proof comparators from being mistaken for physical owners while preserving T-054/T-059 methods and exact owner order. No new finite dynamics or physical-empty placeholder is introduced.
+- **Boundary:** R-449 records missing source-owner and observation-map fields and a parked equivalence-class verdict. It does not construct a dynamics, select a candidate, close Pre-A/Sector-A/C6, or establish QFT, Yang--Mills, gravity, continuum, cosmic origin, physical vacuum or mass gap.
+- **Next / revisit condition:** Continue unchanged T-054 owner intake by obtaining the source-owned Q3LOCK dynamics and R-192 production slots in exact order. Continue unchanged T-059/T-061 inverse intake by obtaining the supported GTS/GDT runtime or pinned source-build lock, then freeze F_reg through F_obs and a prospective holdout before scoring.
+- **Related explorations:** continues [EXP-001321](#exp-001321)
+- **Formal authorities:** [R-193](../RESULTS-LEDGER.md#r-193), [R-448](../RESULTS-LEDGER.md#r-448), [R-449](../RESULTS-LEDGER.md#r-449), `event:20260830-r-449-dynamic-owner-leakage-audit-2026-08-30`
+- **Located evidence:** [`strategy/pre-a-dynamic-owner-leakage-audit-manifest.json`](../strategy/pre-a-dynamic-owner-leakage-audit-manifest.json) (owner_intake); [`strategy/pre-a-dynamic-owner-leakage-audit-certificate-260830.md`](../strategy/pre-a-dynamic-owner-leakage-audit-certificate-260830.md) (Exact scope); [`verification/scripts/pre_a_dynamic_owner_leakage_audit.py`](../verification/scripts/pre_a_dynamic_owner_leakage_audit.py) (run); [`verification/lean/Tect/R449.lean`](../verification/lean/Tect/R449.lean) (parked_owner_and_inverse)
+
 
 ## Claim evidence matrix
 
@@ -20224,7 +20239,7 @@ canonical registries; a dash means no unambiguous registry link, not proof absen
 | [C3-EP](../claims/C3-EP/claim.md)<br/>Equivalence principle via Fermi-frame ODE lemma | T6 / ACTIVE | ANALYTIC | [LINEAGE](../claims/C3-EP/LINEAGE.md) (0 notes; 0 runs) | - | - | [EXP-000824](#exp-000824) | - | - | - |
 | [C4-GRAVITY-1LOOP](../claims/C4-GRAVITY-1LOOP/claim.md)<br/>Gravity sector closure at 1-loop | T5 / ACTIVE | ANALYTIC, EXECUTED | [LINEAGE](../claims/C4-GRAVITY-1LOOP/LINEAGE.md) (0 notes; 0 runs) | - | - | [EXP-000824](#exp-000824), [EXP-000859](#exp-000859), +1 | [SCHEME-2LOOP](../claims/GATES.md#scheme-2loop) | [R-170 v1.0 initial literature applicability audit] - 2026-08-14 | - |
 | [C5-NEWTON-G](../claims/C5-NEWTON-G/claim.md)<br/>Newton-constant relation (T6/T7-SPLIT management) | T6 / ACTIVE | ANALYTIC, MATCHED | [LINEAGE](../claims/C5-NEWTON-G/LINEAGE.md) (0 notes; 0 runs) | - | [R-2026-legacy-newtonG-label](../negative-results/registry.md#r-2026-legacy-newtong-label) | [EXP-000859](#exp-000859), [EXP-000863](#exp-000863) | [GAP-3](../claims/GATES.md#gap-3), [PRED-G-FREEZE](../claims/GATES.md#pred-g-freeze) | [R-170 v1.0 initial literature applicability audit] - 2026-08-14 | - |
-| [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md)<br/>Emergent 3+1 dimensionality and Lorentzian signature | T1 / ACTIVE | CONDITIONAL | [LINEAGE](../claims/C6-SPACETIME-SIGNATURE/LINEAGE.md) (18 notes; 1076 runs) | [R-448](../RESULTS-LEDGER.md#r-448), [R-447](../RESULTS-LEDGER.md#r-447), +71 | [NG-2026-08-14-PRE-A-T055-TRUNCATED-OCTAHEDRON-COMBINATORICS-AUTOMATIC-FINITE-REALIZATION-ENUMERATION](../negative-results/registry.md#ng-2026-08-14-pre-a-t055-truncated-octahedron-combinatorics-automatic-finite-realization-enumeration), [NG-2026-08-14-PRE-A-T055-READING-H-SCALAR-CONSTANTS-AUTOMATIC-PINNED-P1-ENERGY-INTERTWINER](../negative-results/registry.md#ng-2026-08-14-pre-a-t055-reading-h-scalar-constants-automatic-pinned-p1-energy-intertwiner), +121 | [EXP-000623](#exp-000623), [EXP-000624](#exp-000624), +469 | [C6-BCC-PREMISE-BLOCKED](../claims/GATES.md#c6-bcc-premise-blocked), [LEGACY-SELECTIVE-INDEX-AND-ON-DEMAND-REVALIDATION](../claims/GATES.md#legacy-selective-index-and-on-demand-revalidation) | [R-448 static-dynamic equivalence quotient] - 2026-08-30 | - |
+| [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md)<br/>Emergent 3+1 dimensionality and Lorentzian signature | T1 / ACTIVE | CONDITIONAL | [LINEAGE](../claims/C6-SPACETIME-SIGNATURE/LINEAGE.md) (18 notes; 1080 runs) | [R-449](../RESULTS-LEDGER.md#r-449), [R-448](../RESULTS-LEDGER.md#r-448), +72 | [NG-2026-08-14-PRE-A-T055-TRUNCATED-OCTAHEDRON-COMBINATORICS-AUTOMATIC-FINITE-REALIZATION-ENUMERATION](../negative-results/registry.md#ng-2026-08-14-pre-a-t055-truncated-octahedron-combinatorics-automatic-finite-realization-enumeration), [NG-2026-08-14-PRE-A-T055-READING-H-SCALAR-CONSTANTS-AUTOMATIC-PINNED-P1-ENERGY-INTERTWINER](../negative-results/registry.md#ng-2026-08-14-pre-a-t055-reading-h-scalar-constants-automatic-pinned-p1-energy-intertwiner), +121 | [EXP-000623](#exp-000623), [EXP-000624](#exp-000624), +470 | [C6-BCC-PREMISE-BLOCKED](../claims/GATES.md#c6-bcc-premise-blocked), [LEGACY-SELECTIVE-INDEX-AND-ON-DEMAND-REVALIDATION](../claims/GATES.md#legacy-selective-index-and-on-demand-revalidation) | [R-448 static-dynamic equivalence quotient] - 2026-08-30 | - |
 
 ### Sector D
 
@@ -20263,6 +20278,7 @@ entries are no-go lemmas, partial reductions, or conditional consolidations.
 
 | Result | Host claim(s) / same-event route history | Core verified content | Honest boundary |
 |---|---|---|---|
+| [R-449](../RESULTS-LEDGER.md#r-449) Source-owner intake and physical/proof leakage audit | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | R-449 v1.0 is a T0 claim-nonbearing T-061 owner-intake audit under EXP-001322. The nine physical/proof owner slots remain unadmitted: R-192 first fails at heat_root_incidence, A2 is deterministic and incompatible with the stochastic/root-labelled production contract, R-448 leaves a non-identifiable unowned static class, and the T-061 F_reg/F_lim/F_eff/F_obs chain plus PROS-LOCK-001 remain incomplete. Primary 38/38, independent 21/21, hostile 8/8, integrated 35/35 and Lean R449 pass. Existing T-054/T-059 methods and owner order are unchanged; the owner branch is parked and no Pre-A, Sector-A, C6, QFT, Yang--Mills or mass-gap claim follows | See the detailed result record. |
 | [R-448](../RESULTS-LEDGER.md#r-448) Static-equivalence quotient and separating finite dynamic estimand | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | R-448 v1.0 is a T0 claim-nonbearing T-061 interface under EXP-001321. Equality of the registered static signature forms an explicit equivalence relation; two distinct positive finite representatives share that signature and are separated by the fixed one-step proxy at `(1,0)`. Primary 24/24, independent 11/11, hostile 8/8, integrated 29/29 and Lean R448 pass. Static data remain non-identifying; no source-owned dynamics, holdout prediction, physical, Pre-A, QFT, Yang--Mills or mass-gap claim follows | See the detailed result record. |
 | [R-447](../RESULTS-LEDGER.md#r-447) HOLD-LC-001 set-valued delay envelope interface | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | R-447 v1.0 is a T0 claim-nonbearing candidate-neutral feasibility audit under EXP-001299. The hash-pinned GW170817/GRB170817A timing packet is converted by exact rational interval subtraction into unweighted simultaneous `[169/100,179/100]`, ten-second `[-831/100,-821/100]`, and broad-exotic `[-99831/100,10179/100]` propagation-delay envelopes; primary 25/25, independent 13/13, hostile 12/12 and integrated 9/9 with Lean R447 pass. No likelihood, covariance, score, speed datum, candidate map, prospective credit, physical, Pre-A, Yang--Mills or mass-gap claim follows | See the detailed result record. |
 | [R-446](../RESULTS-LEDGER.md#r-446) OBS-LC-CAL-001 frozen row lineage and feasibility interface | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | R-446 v1.0 is a T0 claim-nonbearing source-lineage audit under EXP-001298. The hash-pinned arXiv:0801.0287v19 packet and complete isotropic-photon S3 slice (d=3..9) pass primary 60/60, independent 25/25, hostile 8/8, integrated 15/15 and the existing inverse-contract self-test. Likelihood, covariance, candidate maps and scoring remain unadmitted; no physical Lorentz, Pre-A, Sector-A, QFT, Yang--Mills or mass-gap claim follows | See the detailed result record. |
@@ -20941,6 +20957,7 @@ The newest 20 entries are shown here. All accepted events, including their notes
 
 | Date | Accepted change | Claims | Negative-result links |
 |---|---|---|---|
+| 2026-08-30 | [R-449 dynamic owner leakage audit] - 2026-08-30 | - | - |
 | 2026-08-30 | [R-448 static-dynamic equivalence quotient] - 2026-08-30 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
 | 2026-08-30 | [HOLD-LC-001 set-valued delay envelope] - 2026-08-30 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
 | 2026-08-30 | [OBS-LC-CAL-001 row lineage and feasibility interface audit] - 2026-08-30 | [C1-LORENTZ-KIN](../claims/C1-LORENTZ-KIN/claim.md), [C2-LORENTZ-EMERGENT](../claims/C2-LORENTZ-EMERGENT/claim.md), [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
@@ -20960,7 +20977,6 @@ The newest 20 entries are shown here. All accepted events, including their notes
 | 2026-08-30 | [R-439 cutoff-adaptive increasing-core rule audit] - 2026-08-30 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
 | 2026-08-30 | [R-438 metadata correction (claim links)] - 2026-08-30 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
 | 2026-08-30 | [R-438 original-source interval d=19] - 2026-08-30 | - | - |
-| 2026-08-30 | [R-437 fixed-support cross-cutoff boundary] - 2026-08-30 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
 
 ## Coverage and maintenance contract
 
