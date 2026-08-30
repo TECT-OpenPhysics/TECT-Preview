@@ -1,0 +1,271 @@
+{
+  "schema": "tect/pre-a-equation-audit/1.0",
+  "audit_id": "PA-M5-ISOLATED-NODE-EQUATION-LEVEL-AUDIT-v0",
+  "result_id": "R-458",
+  "candidate_id": "PA-M5-ISOLATED-NODE-CHIRAL-HAMILTONIAN-v0",
+  "title": "Finite chiral isolated-node and conservative-flow equation-level audit",
+  "task_id": "T-054",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "exploration_id": "EXP-001331",
+  "tier": "T0",
+  "claim_bearing": false,
+  "status": "M5_EQUATION_LEVEL_AUDITED_NOT_ADMITTED",
+  "parent_manifest": {
+    "path": "strategy/pre-a-m5-isolated-node-conservative-candidate-manifest.json",
+    "sha256": "6ca9b14206922f5d005b75714c95497a482a5c5b2876917886a350bf1f8c63d0"
+  },
+  "question": "Do the displayed finite M5 Wilson-chiral equations satisfy the declared Clifford and chiral identities, have a unique zero on every declared momentum grid, and define a finite coercive conservative contract without admitting a source owner or physical model?",
+  "purpose": "Add a bounded equation-level audit to the already recorded structurally distinct M5 design. This checks only the displayed finite symbol, symmetry, node and conservative Hamiltonian contract; it does not admit or select M5 and does not modify the established T-054 forward or T-059/T-061 inverse methods.",
+  "methods_preserved": {
+    "existing_forward_T054_unchanged": true,
+    "observation_first_inverse_additive": true,
+    "owner_order_unchanged": true,
+    "no_physical_empty_substitution": true,
+    "no_candidate_selection": true,
+    "no_tier_change": true
+  },
+  "finite_scope": {
+    "lattice_sizes": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      8
+    ],
+    "lattice": "periodic cubic Lambda_L=(Z/LZ)^3 with finite L>=2 and spacing a>0",
+    "momentum_grid": "K_L=(2*pi/L)*{0,...,L-1}^3 modulo the reciprocal lattice",
+    "boundary_condition": "periodic in all spatial directions",
+    "symbol": "h(k)=sum_i sin(k_i*a)*alpha_i + r*sum_i(1-cos(k_i*a))*beta with m=0 and r>0",
+    "matrix_representation": "alpha_i=sigma_i tensor sigma_1, beta=I tensor sigma_3, Gamma=I tensor sigma_2",
+    "functional": "the finite Hamiltonian and symplectic convention copied by reference from the M5 design manifest",
+    "observable_scope": "node radius, squared dispersion, local density, chiral density and symmetry-preserved two-time definitions",
+    "limit_order": "none; finite equation contract only",
+    "quantum_status": "no Hilbert-space, measure, operator-domain, QFT or Yang--Mills statement"
+  },
+  "audited_identities": {
+    "clifford": "the three alpha matrices and beta are Hermitian involutions with pairwise anticommutation",
+    "chiral": "Gamma is a Hermitian involution and anticommutes with every alpha_i and beta",
+    "symbol": "h is Hermitian and h^2=(sum_i sin^2(k_i*a)+w(k)^2)I for w=r*sum_i(1-cos(k_i*a))",
+    "node": "the Wilson term is nonnegative and vanishes on the declared finite grid only at the origin, so the symbol zero is unique",
+    "local_dispersion": "the exact degree-two Taylor term of h^2 is |k*a|^2, hence the smallest singular value has leading ratio one near the origin",
+    "even_quadratic": "Gamma*h^2*Gamma=h^2, so Q=D^dagger D is chiral-even",
+    "observable_symmetry": "norm and chiral density are invariant under the declared global phase and chiral involution",
+    "coercivity": "positive kinetic, Q and sextic terms with lambda>=0 give a finite Hamiltonian lower bound",
+    "finite_flow": "the polynomial canonical vector field is locally Lipschitz; global finite-flow interpretation is conditional on the displayed energy-conservation premise"
+  },
+  "parameter_fixtures": {
+    "r_values": [
+      "1/2",
+      "1",
+      "2"
+    ],
+    "lambda_values": [
+      "0",
+      "1/2",
+      "1"
+    ],
+    "eta_values": [
+      "1/2",
+      "1",
+      "3/2"
+    ],
+    "symbol_coefficients": [
+      -2,
+      -1,
+      0,
+      1,
+      2
+    ],
+    "vector_fixtures": [
+      [
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        -1,
+        2,
+        0
+      ],
+      [
+        2,
+        1,
+        -1,
+        2
+      ]
+    ]
+  },
+  "scope": {
+    "clifford_relations_closed": true,
+    "symbol_hermiticity_closed": true,
+    "symbol_square_identity_closed": true,
+    "isolated_node_grid_closed": true,
+    "chiral_anticommutation_closed": true,
+    "chiral_even_quadratic_closed": true,
+    "observable_symmetry_closed": true,
+    "local_dispersion_leading_closed": true,
+    "finite_hamiltonian_coercivity_closed": true,
+    "flow_equivariance_conditional": true,
+    "finite_flow_conditional_closed": true,
+    "source_owner_admitted": false,
+    "candidate_admitted": false,
+    "f_reg_measured": false,
+    "f_lim_closed": false,
+    "f_eff_closed": false,
+    "f_obs_closed": false,
+    "continuum_closed": false,
+    "qft_identity_closed": false,
+    "yang_mills_identity_closed": false,
+    "physical_empty_closed": false,
+    "pre_a_closed": false,
+    "sector_a_closed": false,
+    "c6_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "assumptions": [
+    "The finite lattice, momentum representatives, Clifford matrices, Wilson symbol, m=0 convention, Hamiltonian and symplectic convention are exactly those in the parent M5 design manifest.",
+    "The matrix audit uses the displayed complex 4-by-4 representation and exact integer arithmetic for its entries.",
+    "The finite node argument uses 1-cos(theta)=2*sin(theta/2)^2 and the declared modular momentum representatives; no floating-point zero test is used.",
+    "The Taylor check is a formal finite-order expansion at k*a=0 and is not a continuum estimate.",
+    "The translation from Hamiltonian symmetry and Poisson self-bracket to flow preservation is conditional on the declared canonical generator premise.",
+    "The audit is equation-level and does not supply a versioned source owner, statistical state, quantum representation or observation calibration."
+  ],
+  "missing_assumptions": [
+    "A versioned authorized source owner and hash-pinned implementation of the Clifford matrices, symbol, Hamiltonian and flow.",
+    "A declared state or ensemble, quantum representation if used, covariance, uncertainty and numerical realization.",
+    "A complete candidate-neutral dynamic discriminator and comparison against M0, M1, M2, M3 and the prior M5 baseline.",
+    "Uniform regulator, interaction, volume and node-stability estimates with a declared limit order and counterterm policy.",
+    "A complete F_lim/F_eff/F_obs map, physical projection and genuinely prospective holdout.",
+    "A proof that the isolated node and chiral protection survive the eventual continuum and thermodynamic limits rather than being regulator artefacts."
+  ],
+  "adversarial_review": [
+    {
+      "axis": "method-preservation",
+      "check": "Could this finite audit replace T-054 or T-059/T-061?",
+      "disposition": "DISMISSED: the packet is additive and all established methods, owner order and promotion firewalls remain controlling."
+    },
+    {
+      "axis": "clifford-matrix-sign",
+      "check": "Could a sign or matrix-order error be hidden by the node calculation?",
+      "disposition": "UPHELD-REJECTED: primary and independent exact matrix products check every involution and anticommutator."
+    },
+    {
+      "axis": "finite-node-overclaim",
+      "check": "Could a finite Wilson zero be called a physical Weyl/Dirac particle or continuum cone?",
+      "disposition": "UPHELD-OPEN: only finite grid uniqueness and a formal leading Taylor coefficient are audited."
+    },
+    {
+      "axis": "symmetry-protection",
+      "check": "Could the word chiral imply protection under arbitrary perturbations?",
+      "disposition": "UPHELD-OPEN: only the declared symmetry-preserving class is in scope; perturbation stability and limits remain missing."
+    },
+    {
+      "axis": "finite-to-continuum",
+      "check": "Could finite-grid node uniqueness be promoted to regulator-independent survival?",
+      "disposition": "UPHELD-REJECTED: F_lim and the limit order remain false."
+    },
+    {
+      "axis": "static-to-dynamic-selection",
+      "check": "Could node existence select a dynamics without a frozen two-time estimand?",
+      "disposition": "UPHELD-REJECTED: source ownership and candidate-neutral dynamic comparison remain absent."
+    },
+    {
+      "axis": "physical-empty",
+      "check": "Could the zero reference be relabeled as Reading-H physical empty space?",
+      "disposition": "DISMISSED: the parent contract forbids that identification."
+    },
+    {
+      "axis": "Lean-promotion",
+      "check": "Could a Lean scalar cross-check be called a complete matrix or physical proof?",
+      "disposition": "DISMISSED: Lean covers declared scalar consequences and firewalls; Python covers finite matrix products, with all physical flags false."
+    }
+  ],
+  "preregistered_falsifiers": [
+    "Any failed Clifford involution or anticommutation rejects this M5 version before any node interpretation.",
+    "Any non-origin grid point with a zero Wilson term or zero symbol changes the version to a multi-node candidate and stops this audit.",
+    "A failed chiral-even quadratic identity or observable symmetry removes the corresponding finite symmetry statement.",
+    "A nonpositive inserted eta or a failed nonnegativity check removes the finite-flow conditional statement.",
+    "Any attempt to set source_owner_admitted, candidate_admitted, continuum_closed, physical_empty_closed or yang_mills_identity_closed true is rejected by the scope firewall."
+  ],
+  "evidence_level": "T0 exact finite equation-level consistency audit; not candidate admission",
+  "non_claims": [
+    "This result does not admit or select PA-M5-ISOLATED-NODE-CHIRAL-HAMILTONIAN-v0.",
+    "It does not prove a source-owned dynamics, quantum representation, physical Weyl/Dirac field, QFT, Yang--Mills, gravity or continuum limit.",
+    "It does not establish a physical node, a protected massless particle, Pre-A, Sector-A, C6, a physical-empty branch or a mass gap.",
+    "It does not fit observations, supply an uncertainty budget, define a complete four-stage map or provide prospective holdout credit.",
+    "The established T-054 forward and T-059/T-061 inverse methods, owner order and promotion firewalls are unchanged."
+  ],
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R458.lean",
+    "command": "lake env lean Tect/R458.lean",
+    "declarations": [
+      "sum_squares_zero",
+      "wilson_origin_zero",
+      "wilson_positive_off_origin_proxy",
+      "chiral_even_square",
+      "coercive_sextic",
+      "source_owner_not_admitted"
+    ],
+    "role": "Lean checks the scalar node-radius, Wilson positivity proxy, chiral-even algebraic consequence, coercive sextic and promotion-firewall identities; Python checks the exact 4-by-4 matrix and finite-grid coverage."
+  },
+  "test_oracles": {
+    "primary_minimum_assertions": 250,
+    "independent_minimum_assertions": 180,
+    "hostile_mutation_count": 12,
+    "lattice_size_count": 6,
+    "matrix_dimension": 4
+  },
+  "files": {
+    "parent_manifest": {
+      "path": "strategy/pre-a-m5-isolated-node-conservative-candidate-manifest.json",
+      "sha256": "6ca9b14206922f5d005b75714c95497a482a5c5b2876917886a350bf1f8c63d0"
+    },
+    "lean_entrypoint": {
+      "path": "verification/lean/Tect/R458.lean",
+      "sha256": "53b2d222b214a04dad31ca5e469436e065e8d306f488d24b69bb09631da5dc97"
+    },
+    "primary": {
+      "path": "verification/scripts/pre_a_m5_isolated_node_equation_audit.py",
+      "sha256": "94e9b9ff075c5f9a38a5a578debcc29bcce9b255c825c73a9673a11cae669408"
+    },
+    "independent": {
+      "path": "codes/foundations/pre_a_m5_isolated_node_equation_audit_independent.py",
+      "sha256": "5aeacba52c52eccce23e690f6bc9ee8865ce245f2b374a1e963f5c8277673fcf"
+    },
+    "hostile": {
+      "path": "codes/foundations/pre_a_m5_isolated_node_equation_audit_hostile.py",
+      "sha256": "1821c9d587d32e61ee30376b62f0716a61467d89b36a39a280c15f7c275fdbd2"
+    },
+    "verifier": {
+      "path": "verification/scripts/pre_a_m5_isolated_node_equation_audit_verify.py",
+      "sha256": "d800713111abaf27b29aab2021c858f7854290b43cd2c6865c3667db5270724f"
+    },
+    "certificate": {
+      "path": "strategy/pre-a-m5-isolated-node-equation-level-audit-certificate-260831.md",
+      "sha256": "00b6b3826fee0c9b23592066a55a941c03eaad8ef05dc67325d9be1022353b88"
+    },
+    "exploration": {
+      "path": "strategy/pre-a-m5-isolated-node-equation-level-audit-exploration.json",
+      "sha256": "a5137437446cdc8490c885bc2b0291b42508d698f3b2488c834fe0cb3c8e03af"
+    }
+  },
+  "formal_integration": {
+    "results": [
+      "R-458"
+    ],
+    "event_ordinal": 807,
+    "exploration_ordinal": 1331,
+    "no_new_negative_ids": [],
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "boundary": "R-458 is a finite equation-level audit of the displayed M5 Wilson-chiral design contract. The matrix, node, chiral-even, formal Taylor and finite coercivity checks are exact under the inserted assumptions; the flow statement is conditional on the canonical generator premise. No source owner, state, observation map, candidate admission, physical identity, continuum, QFT, Yang--Mills, Pre-A, Sector-A, C6 or mass-gap conclusion follows.",
+  "next_action": "Use R-458 only as a finite M5 design-quality gate. Do not score or select M5 until a versioned source owner, complete state/uncertainty contract, candidate-neutral dynamic observable, F_reg/F_lim/F_eff/F_obs map and prospective holdout are supplied. Continue unchanged T-054 Q3LOCK owner intake and T-059/T-061 observation-source intake; do not create a substitute finite node or mobility table."
+}

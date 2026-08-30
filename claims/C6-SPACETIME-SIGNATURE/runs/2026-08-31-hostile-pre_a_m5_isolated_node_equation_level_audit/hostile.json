@@ -1,0 +1,82 @@
+{
+  "assertion_count": 12,
+  "audit_id": "PA-M5-ISOLATED-NODE-EQUATION-LEVEL-AUDIT-v0",
+  "boundary": "R-458 is a finite equation-level audit of the displayed M5 Wilson-chiral design contract. The matrix, node, chiral-even, formal Taylor and finite coercivity checks are exact under the inserted assumptions; the flow statement is conditional on the canonical generator premise. No source owner, state, observation map, candidate admission, physical identity, continuum, QFT, Yang--Mills, Pre-A, Sector-A, C6 or mass-gap conclusion follows.",
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "derived": {
+    "candidate_admitted": false,
+    "chiral_even_quadratic_closed": true,
+    "clifford_relations_closed": true,
+    "continuum_closed": false,
+    "finite_hamiltonian_coercivity_closed": true,
+    "isolated_node_grid_closed": true,
+    "physical_identity": false,
+    "pre_a_closed": false,
+    "sector_a_closed": false,
+    "source_owner_admitted": false
+  },
+  "exploration_id": "EXP-001331",
+  "mutation_count": 12,
+  "mutations_rejected": [
+    {
+      "mutation": "clifford_sign_or_entry",
+      "status": "REJECTED"
+    },
+    {
+      "mutation": "omit_wilson_term_extra_node",
+      "status": "REJECTED"
+    },
+    {
+      "mutation": "unfixed_mass_parameter",
+      "status": "REJECTED"
+    },
+    {
+      "mutation": "chiral_mass_break",
+      "status": "REJECTED"
+    },
+    {
+      "mutation": "nonpositive_eta",
+      "status": "REJECTED"
+    },
+    {
+      "mutation": "nonpositive_wilson_r",
+      "status": "REJECTED"
+    },
+    {
+      "mutation": "broken_gamma_involution",
+      "status": "REJECTED"
+    },
+    {
+      "mutation": "finite_to_continuum_promotion",
+      "status": "REJECTED"
+    },
+    {
+      "mutation": "qft_yang_mills_promotion",
+      "status": "REJECTED"
+    },
+    {
+      "mutation": "physical_empty_relabel",
+      "status": "REJECTED"
+    },
+    {
+      "mutation": "candidate_selection_without_map",
+      "status": "REJECTED"
+    },
+    {
+      "mutation": "missing_source_owner_admission",
+      "status": "REJECTED"
+    }
+  ],
+  "non_claims": [
+    "This result does not admit or select PA-M5-ISOLATED-NODE-CHIRAL-HAMILTONIAN-v0.",
+    "It does not prove a source-owned dynamics, quantum representation, physical Weyl/Dirac field, QFT, Yang--Mills, gravity or continuum limit.",
+    "It does not establish a physical node, a protected massless particle, Pre-A, Sector-A, C6, a physical-empty branch or a mass gap.",
+    "It does not fit observations, supply an uncertainty budget, define a complete four-stage map or provide prospective holdout credit.",
+    "The established T-054 forward and T-059/T-061 inverse methods, owner order and promotion firewalls are unchanged."
+  ],
+  "result_id": "R-458",
+  "run_kind": "hostile",
+  "schema": "tect/foundation-audit/1.0",
+  "task_id": "T-054",
+  "verdict": "HOSTILE_MUTATIONS_REJECTED"
+}

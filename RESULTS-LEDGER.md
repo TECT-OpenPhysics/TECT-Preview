@@ -22,6 +22,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-458](#r-458) | Finite chiral isolated-node and conservative-flow equation-level audit | R-458 v1.0 is a T0 claim-nonbearing additive T-054 audit of the existing PA-M5 isolated-node design. Exact 4-by-4 Clifford/chiral matrix checks, Wilson/symbol node uniqueness on L=2,3,4,5,6,8, formal leading-dispersion expansion, observable symmetries and finite coercivity pass. Primary 56076/56076, independent 56074/56074, hostile 12/12, integrated 47/47 and Lean R458 pass. The candidate and source owner remain unadmitted; no continuum, physical node, QFT, Yang--Mills, Pre-A, Sector-A or mass-gap conclusion follows; T-054/T-059/T-061 methods and owner order are unchanged |
 | [R-457](#r-457) | Finite compact-U(1) equation-level invariance and Gauss-flow consistency audit | R-457 v1.0 is a T0 claim-nonbearing additive T-054 audit of the existing PA-M3 compact-U(1) design. Exact site-charge cancellation passes for every displayed plaquette, covariant norm product and listed observable on periodic L=2,3 lattices; the conditional Gauss-neutrality and `{H,H}=0` identities pass, and the finite completion-square lower bound passes 100 rational fixtures. Primary 1023/1023, independent 1020/1020, hostile 8/8, integrated 44/44 and Lean R457 pass. The candidate and source owner remain unadmitted; no state/uncertainty, dynamic discriminator, F_reg/F_lim/F_eff/F_obs, continuum, physical, QFT, Yang--Mills or mass-gap conclusion follows; T-054/T-059/T-061 methods and owner order are unchanged |
 | [R-456](#r-456) | Weighted positive transfer-operator defect-resolvent envelope | R-456 v1.0 is a T0 claim-nonbearing additive T-054 owner-packet refinement under EXP-001329. For strictly positive finite weights `w_i`, entrywise nonnegative transfer matrices with weighted row sums `sum_j K_R[i,j]w_j<=kappa_bar*w_i` are diagonally conjugate to the ordinary R-455 infinity-row-sum contract, giving `||h_R||_w<=A*S_R(kappa_bar,r)+D*S_R(kappa_bar,s)` with unequal-base and resonant branches and sufficient threshold `kappa_bar<1`, `s<1`. Primary 290560/290560, independent 231840, hostile 22/22, integrated 22/22 and Lean pass over 17 rows, 46 pairs, dimensions 1--3, five weights, seven patterns and 77280 paths. Source-owned weights/transfer/history, common weighted domain, uniformity, exhaustion, physical, continuum, Yang--Mills and mass-gap gates remain open; existing T-054/T-059/T-061 methods and owner order are unchanged |
 | [R-455](#r-455) | Nonnegative transfer-matrix defect-resolvent envelope for coupled orientation histories | R-455 v1.0 is a T0 claim-nonbearing additive T-054 interface under EXP-001328. For a componentwise nonnegative vector recurrence with entrywise nonnegative transfer matrices and one common induced infinity-row-sum bound, exact path products give `||h_R||_infinity <= A*S_R(kappa_bar,r)+D*S_R(kappa_bar,s)`, including unequal-base and resonant branches and the sufficient threshold `kappa_bar<1`, `s<1`. Primary 373915/373915, independent 250290/250290, hostile 20/20, integrated and Lean pass. Source-owned transfer/history, common domain, uniformity, exhaustion, physical, continuum, Yang--Mills and mass-gap gates remain open; existing T-054/T-059/T-061 methods and owner order are unchanged |
@@ -823,6 +824,67 @@ score M3 only after a versioned source owner, state/uncertainty contract,
 candidate-neutral two-time observable, complete map stages and prospective
 holdout exist. Continue unchanged T-054 Q3LOCK owner intake and T-059/T-061
 observation-source intake; do not manufacture another finite mobility table.
+
+<a id="r-458"></a>
+### R-458 -- Finite chiral isolated-node and conservative-flow equation-level audit
+
+**Result ID.** `PA-M5-ISOLATED-NODE-EQUATION-LEVEL-AUDIT-v0` (R-458).
+
+**Version and exact scope.** R-458 v1.0 is a T0, claim-nonbearing additive
+T-054 equation-level audit of the existing
+`PA-M5-ISOLATED-NODE-CHIRAL-HAMILTONIAN-v0` design. It preserves the existing
+T-054 forward method, the additive T-059/T-061 observation-first inverse lane,
+their owner order and every promotion firewall. It does not admit or select
+M5.
+
+The audit uses the parent periodic cubic lattice and Wilson symbol exactly as
+declared, with `m=0`, `r>0`, and the exact representation
+`alpha_i=sigma_i tensor sigma_1`, `beta=I tensor sigma_3`,
+`Gamma=I tensor sigma_2`. It enumerates every momentum on finite grids
+`L=2,3,4,5,6,8` using modular arithmetic and the identity
+`1-cos(theta)=2*sin(theta/2)^2`; no floating-point zero test is used. The
+formal dispersion check is a degree-four Taylor calculation only.
+
+**Finding and evidence.** Every displayed matrix is Hermitian and an
+involution, all required Clifford and chiral anticommutators vanish, and
+`h^2=(sum sin^2+w^2)I` with `Gamma h Gamma=-h` and
+`Gamma h^2 Gamma=h^2` for the exact coefficient fixtures. The Wilson and
+symbol zeros are unique at the grid origin; the degree-two term of `h^2` is
+`|ka|^2`. Norm and chiral-density observables are invariant under the tested
+global phases and chiral involution. Positive kinetic, quadratic, quartic and
+sextic terms give the finite lower bound; flow equivariance and global flow
+remain conditional on the canonical generator and energy-conservation
+premise.
+
+The primary lane passes `56076/56076`, the non-importing independent lane
+`56074/56074`, the hostile lane rejects `12/12`, the integrated verifier
+passes `47/47`, and Lean R458 compiles. Coverage is 952 momentum modes (946
+non-origin), 2,500 symbol checks, 6 Taylor checks, 24 observable checks and
+50,625 coercivity checks. These are finite equation checks, not an exhaustion
+or continuum surrogate.
+
+**Assumptions and missing assumptions.** The parent finite equations,
+displayed Clifford representation, modular grid and formal series are fixed;
+the flow interpretation is conditional on the canonical generator. Missing
+are a versioned source owner, state/ensemble or quantum representation,
+uncertainty/covariance, a candidate-neutral dynamic discriminator, uniform
+limits and counterterms, the complete `F_reg/F_lim/F_eff/F_obs` map, physical
+projection and a prospective holdout.
+
+**Boundary.** R-458 is not a source-owner admission, candidate selection,
+physical Weyl/Dirac or massless-particle result, continuum theorem, QFT,
+Yang--Mills, gravity, physical-empty, Pre-A, Sector-A, C6 or mass-gap result.
+No observation is fitted or predicted; no claim tier or negative result
+changes; no PDF is issued. Existing methods and owner order are unchanged.
+
+**Proven in.** [R-458 certificate](strategy/pre-a-m5-isolated-node-equation-level-audit-certificate-260831.md), [machine manifest](strategy/pre-a-m5-isolated-node-equation-level-audit-manifest.json), [primary script](verification/scripts/pre_a_m5_isolated_node_equation_audit.py), [independent script](codes/foundations/pre_a_m5_isolated_node_equation_audit_independent.py), [hostile script](codes/foundations/pre_a_m5_isolated_node_equation_audit_hostile.py), [integrated verifier](verification/scripts/pre_a_m5_isolated_node_equation_audit_verify.py), [integrated run](claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-integrated-pre_a_m5_isolated_node_equation_level_audit/integrated.json), [exploration record](strategy/pre-a-m5-isolated-node-equation-level-audit-exploration.json), and [Lean R458](verification/lean/Tect/R458.lean).
+
+**Next action.** Keep R-458 at the finite design-quality boundary. Do not
+score or select M5 until a source-owned dynamics/state/projection/boundary,
+complete uncertainty and four-stage map, candidate-neutral two-time
+observable, and prospective holdout are hash-pinned. Continue unchanged
+T-054 Q3LOCK owner intake and T-059/T-061 observation-source intake; do not
+create another finite node or mobility surrogate without a new owner hash.
 
 <a id="r-456"></a>
 ### R-456 -- Weighted positive transfer-operator defect-resolvent envelope
