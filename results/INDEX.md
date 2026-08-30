@@ -5,10 +5,11 @@
 
 Authorities: `RESULTS-LEDGER.md`.
 
-**293 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
+**294 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
 
 | ID | Result | Tier/scope |
 |---|---|---|
+| [`R-460`](../RESULTS-LEDGER.md#r-460) | Canonical Contents remaining-scope production-owner applicability audit | T0 |
 | [`R-459`](../RESULTS-LEDGER.md#r-459) | Canonical Contents alternate-terminology production-owner applicability audit | T0 |
 | [`R-458`](../RESULTS-LEDGER.md#r-458) | Finite chiral isolated-node and conservative-flow equation-level audit | T0 |
 | [`R-457`](../RESULTS-LEDGER.md#r-457) | Finite compact-U(1) equation-level invariance and Gauss-flow consistency audit | T0 |
@@ -33,7 +34,6 @@ Authorities: `RESULTS-LEDGER.md`.
 | [`R-438`](../RESULTS-LEDGER.md#r-438) | V=2, d=19 original-source interval enclosure | T0 |
 | [`R-437`](../RESULTS-LEDGER.md#r-437) | fixed threshold-four support crossing from d=17 to d=18 | T0 |
 | [`R-436`](../RESULTS-LEDGER.md#r-436) | V=2, d=18 original-source interval enclosure | T0 |
-| [`R-435`](../RESULTS-LEDGER.md#r-435) | V=2, d=17 original-source interval enclosure | T0 |
 
 Search without loading the full ledger:
 

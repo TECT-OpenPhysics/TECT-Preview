@@ -22,8 +22,9 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
-| [R-458](#r-458) | Finite chiral isolated-node and conservative-flow equation-level audit | R-458 v1.0 is a T0 claim-nonbearing additive T-054 audit of the existing PA-M5 isolated-node design. Exact 4-by-4 Clifford/chiral matrix checks, Wilson/symbol node uniqueness on L=2,3,4,5,6,8, formal leading-dispersion expansion, observable symmetries and finite coercivity pass. Primary 56076/56076, independent 56074/56074, hostile 12/12, integrated 47/47 and Lean R458 pass. The candidate and source owner remain unadmitted; no continuum, physical node, QFT, Yang--Mills, Pre-A, Sector-A or mass-gap conclusion follows; T-054/T-059/T-061 methods and owner order are unchanged |
+| [R-460](#r-460) | Canonical Contents remaining-scope production-owner applicability audit | R-460 v1.0 is a T0 claim-nonbearing additive T-054 residual source-applicability audit. The unchanged strict alias contract scans 284 paths, 273 unique content hashes and 11 duplicate paths outside R-459's explicit subtrees; it finds zero complete semantic paths, zero standalone owner candidates, zero exact R-192 owner-token paths, three partial rows and zero loose-q control rows. Primary and independent summaries agree, integrated assertions pass 17/17 and hostile mutations are rejected 8/8. No source-owned dynamics, candidate, observation, physical, continuum, QFT, Yang--Mills, Pre-A, Sector-A or mass-gap conclusion follows; T-054/T-059/T-061 methods and owner order are unchanged |
 | [R-459](#r-459) | Canonical Contents alternate-terminology production-owner applicability audit | R-459 v1.0 is a T0 claim-nonbearing additive T-054 source-applicability audit. A strict alias scan covers 1,442 paths, 741 unique content hashes and 701 duplicate paths; it finds zero complete semantic paths, zero standalone owner candidates and zero exact R-192 owner-token paths. Ten partial rows and four loose-q control rows remain discovery-only. Primary and independent summaries agree, integrated assertions pass 12/12 and hostile mutations are rejected 8/8. No source-owned dynamics, candidate, observation, physical, continuum, QFT, Yang--Mills, Pre-A, Sector-A or mass-gap conclusion follows; T-054/T-059/T-061 methods and owner order are unchanged |
+| [R-458](#r-458) | Finite chiral isolated-node and conservative-flow equation-level audit | R-458 v1.0 is a T0 claim-nonbearing additive T-054 audit of the existing PA-M5 isolated-node design. Exact 4-by-4 Clifford/chiral matrix checks, Wilson/symbol node uniqueness on L=2,3,4,5,6,8, formal leading-dispersion expansion, observable symmetries and finite coercivity pass. Primary 56076/56076, independent 56074/56074, hostile 12/12, integrated 47/47 and Lean R458 pass. The candidate and source owner remain unadmitted; no continuum, physical node, QFT, Yang--Mills, Pre-A, Sector-A or mass-gap conclusion follows; T-054/T-059/T-061 methods and owner order are unchanged |
 | [R-457](#r-457) | Finite compact-U(1) equation-level invariance and Gauss-flow consistency audit | R-457 v1.0 is a T0 claim-nonbearing additive T-054 audit of the existing PA-M3 compact-U(1) design. Exact site-charge cancellation passes for every displayed plaquette, covariant norm product and listed observable on periodic L=2,3 lattices; the conditional Gauss-neutrality and `{H,H}=0` identities pass, and the finite completion-square lower bound passes 100 rational fixtures. Primary 1023/1023, independent 1020/1020, hostile 8/8, integrated 44/44 and Lean R457 pass. The candidate and source owner remain unadmitted; no state/uncertainty, dynamic discriminator, F_reg/F_lim/F_eff/F_obs, continuum, physical, QFT, Yang--Mills or mass-gap conclusion follows; T-054/T-059/T-061 methods and owner order are unchanged |
 | [R-456](#r-456) | Weighted positive transfer-operator defect-resolvent envelope | R-456 v1.0 is a T0 claim-nonbearing additive T-054 owner-packet refinement under EXP-001329. For strictly positive finite weights `w_i`, entrywise nonnegative transfer matrices with weighted row sums `sum_j K_R[i,j]w_j<=kappa_bar*w_i` are diagonally conjugate to the ordinary R-455 infinity-row-sum contract, giving `||h_R||_w<=A*S_R(kappa_bar,r)+D*S_R(kappa_bar,s)` with unequal-base and resonant branches and sufficient threshold `kappa_bar<1`, `s<1`. Primary 290560/290560, independent 231840, hostile 22/22, integrated 22/22 and Lean pass over 17 rows, 46 pairs, dimensions 1--3, five weights, seven patterns and 77280 paths. Source-owned weights/transfer/history, common weighted domain, uniformity, exhaustion, physical, continuum, Yang--Mills and mass-gap gates remain open; existing T-054/T-059/T-061 methods and owner order are unchanged |
 | [R-455](#r-455) | Nonnegative transfer-matrix defect-resolvent envelope for coupled orientation histories | R-455 v1.0 is a T0 claim-nonbearing additive T-054 interface under EXP-001328. For a componentwise nonnegative vector recurrence with entrywise nonnegative transfer matrices and one common induced infinity-row-sum bound, exact path products give `||h_R||_infinity <= A*S_R(kappa_bar,r)+D*S_R(kappa_bar,s)`, including unequal-base and resonant branches and the sufficient threshold `kappa_bar<1`, `s<1`. Primary 373915/373915, independent 250290/250290, hostile 20/20, integrated and Lean pass. Source-owned transfer/history, common domain, uniformity, exhaustion, physical, continuum, Yang--Mills and mass-gap gates remain open; existing T-054/T-059/T-061 methods and owner order are unchanged |
@@ -825,6 +826,68 @@ score M3 only after a versioned source owner, state/uncertainty contract,
 candidate-neutral two-time observable, complete map stages and prospective
 holdout exist. Continue unchanged T-054 Q3LOCK owner intake and T-059/T-061
 observation-source intake; do not manufacture another finite mobility table.
+
+<a id="r-460"></a>
+### R-460 -- Canonical Contents remaining-scope production-owner applicability audit
+
+**Result ID.** `PA-CONTENTS-REMAINING-SCOPE-OWNER-AUDIT-v0` (R-460).
+
+**Version and exact scope.** R-460 v1.0 is a T0, claim-nonbearing additive
+T-054 source-applicability audit over the operator-configured canonical
+`Contents` root. It scans the residual areas `Backup`, `Codes`, `Runs`,
+`Website`, and the remaining `Docs`/`Github` paths, while explicitly excluding
+`Docs/math`, `Github/note`, `Docs/status` and `Github/status` already covered
+by R-459. Only `.txt`, `.md` and `.tex` text files are searched; binaries and
+unsupported extensions are excluded. Path counts and raw-content SHA-256
+unique counts are reported separately so mirrored paths are not independent
+authorities. The existing T-054 forward method, additive T-059/T-061 inverse
+lane, R-192 owner order and every promotion firewall are unchanged.
+
+**Strict applicability contract.** A complete row must contain all five
+bounded aliases for the existing owner slots: generator/transfer or Markov
+semigroup; heat-root/heat-kernel or heat-semigroup; filtration/conditional
+replica or replica; raw-current/current spatial or spatial intertwiner; and a
+strict q-ledger phrase (`q-ledger`, `q_k ledger`, `one-use q` or
+`nonnegative q ledger`). Exact R-192 tokens are checked separately. A broad
+`one uses ... q` phrase is a false-positive control only, and a merged bundle
+cannot be an owner because it has no single source edition, field boundary or
+authority identity.
+
+**Finding and evidence.** The complementary scan covers 284 paths, 273 unique
+content hashes and 11 duplicate paths. It finds zero complete semantic paths,
+zero standalone owner candidates and zero exact R-192 owner-token paths. Three
+partial rows contain at least three groups; no loose-q control row is present.
+The primary and non-importing independent summaries agree; the integrated
+verifier passes 17/17 assertions; and the hostile lane rejects 8/8 mutations.
+The bounded verdict is `PASS_BOUNDED_NO_STANDALONE_OWNER`, not a universal
+source-absence theorem.
+
+**Assumptions and missing assumptions.** The configured `Contents` root is
+treated as the maintained canonical source, the five groups are a bounded
+alias set rather than a replacement owner specification, R-459 subtrees are
+excluded for complementarity, replacement decoding is search-only, and future
+sources may use other terminology. Missing are a hash-pinned production
+generator and mobility, root-labelled filtration and conditional replicas,
+raw-current spatial intertwiner, once-owned production q-ledger, common
+state/projection/boundary/normalization, regulator/volume/limit order, an
+admitted Q3 common domain with uniform majorant, and the downstream OS/KMS/GNS
+or physical-sector bridge.
+
+**Boundary.** R-460 does not supply a generator, heat semigroup, filtration,
+current map, q-ledger, candidate, observation map, score, physical identity,
+continuum, QFT/Yang--Mills, Pre-A, Sector-A, cosmic-origin,
+theory-of-everything or mass-gap result. It does not alter the established
+research methods, owner order or promotion firewalls, and emits no negative
+result or tier change.
+
+**Proven in.** [R-460 certificate](strategy/pre-a-contents-remaining-scope-owner-audit-certificate-260831.md), [machine manifest](strategy/pre-a-contents-remaining-scope-owner-audit-manifest.json), [primary script](verification/scripts/pre_a_contents_remaining_scope_owner_audit.py), [independent script](codes/foundations/pre_a_contents_remaining_scope_owner_audit_independent.py), [hostile script](codes/foundations/pre_a_contents_remaining_scope_owner_audit_hostile.py), [integrated verifier](verification/scripts/pre_a_contents_remaining_scope_owner_audit_verify.py), [integrated run](claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-integrated-pre_a_contents_remaining_scope_owner_audit/integrated.json), and [exploration record](strategy/pre-a-contents-remaining-scope-owner-audit-exploration.json).
+
+**Next action.** Keep the forward owner branch parked under the existing R-192
+fingerprint and treat R-459 and R-460 as complementary bounded source audits.
+Reopen only if a new standalone, hash-pinned source supplies the complete owner
+fields. Continue the unchanged T-054 Q3LOCK owner intake and T-059/T-061
+observation-source lock in the active P1 packet; do not create another finite
+mobility, physical-empty or geometry table for this source boundary.
 
 <a id="r-459"></a>
 ### R-459 -- Canonical Contents alternate-terminology production-owner applicability audit
