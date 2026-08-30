@@ -1,0 +1,147 @@
+{
+  "schema": "tect/observation-response-owner-request/0.1",
+  "id": "HOLD-LC-001-RESPONSE-OWNER-REQUEST-v0.1",
+  "version": "0.1.0",
+  "recorded_on": "2026-08-30",
+  "task_id": "T-061",
+  "holdout_id": "HOLD-LC-001",
+  "claim_bearing": false,
+  "tier": "T0",
+  "status": "OWNER_REQUEST_CONTRACT_ONLY_NO_STATISTICAL_ADMISSION",
+  "purpose": "Translate the official Fermi product roles and the exact pinned event products into a candidate-neutral request for the missing response-selection, calibration-validity and timing-uncertainty owner fields.",
+  "method_preservation": {
+    "existing_forward_t054_unchanged": true,
+    "existing_inverse_t059_unchanged": true,
+    "owner_order_unchanged": true,
+    "parked_loop_rules_unchanged": true,
+    "inverse_lane_is_additive": true,
+    "static_fit_cannot_select_dynamics": true
+  },
+  "authority_pointers": [
+    {
+      "path": "strategy/hold-lc-001-event-byte-freeze-v0.1.json",
+      "sha256": "fd21c32658f19c37368625c44cac68b630bbd2a4709c213099fead9a20df9746",
+      "role": "nine-product event byte and provenance parent"
+    },
+    {
+      "path": "strategy/hold-lc-001-owner-artifact-byte-freeze-v0.1.json",
+      "sha256": "fad7fcc7d6638508e7da6d69fd17eb2991f72965182c8ece182a60442b0e4da9",
+      "role": "event-day position/attitude and spectral-history owner candidates"
+    },
+    {
+      "path": "strategy/hold-lc-001-response-history-byte-freeze-v0.1.json",
+      "sha256": "b47228b036f9e057b2c213f41b477466a76d3d4107d929b93eb5c2a87ee7a5c2",
+      "role": "N0/B0 time-segmented response-history owner candidates"
+    },
+    {
+      "path": "strategy/hold-lc-001-estimator-contract-v0.1.json",
+      "sha256": "f2d3be523c9e24fe8e84673dc486f0bf17799ceba9702afd638a0bf2096ddf94",
+      "role": "candidate-neutral Delta_t_det and four-stage map contract"
+    }
+  ],
+  "official_source_references": [
+    {
+      "id": "FERMI-GBM-DATA-ACCESS-GS005-GS006",
+      "url": "https://fermi.gsfc.nasa.gov/ssc/data/p7rep/access/gbm/",
+      "retrieved_on": "2026-08-30",
+      "role": "product-family definitions",
+      "supporting_scope": "GS-005 is the GBM gain/energy-resolution history required for calculating DRMs; GS-006 is the Fermi position/attitude history used in the response pipeline.",
+      "use_boundary": "Role and provenance crosswalk only; no source likelihood or uncertainty is inferred."
+    },
+    {
+      "id": "FERMI-GBM-RSP-RSP2-DOCUMENTATION",
+      "url": "https://fermi.gsfc.nasa.gov/ssc/data/analysis/gbm/gbm_data_tools/gdt-docs/notebooks/Responses.html",
+      "retrieved_on": "2026-08-30",
+      "role": "response and rsp2 semantics",
+      "supporting_scope": "A GBM response is detector, source-position and time specific; an rsp2 file contains multiple DRMs for changing pointing and energy-channel response.",
+      "use_boundary": "Semantic interpretation of the local rsp2 headers only; no matrix value, interpolation choice or likelihood is admitted."
+    },
+    {
+      "id": "FERMI-SCIENCE-DATA-PRODUCT-FORMAT",
+      "url": "https://fermi.gsfc.nasa.gov/ssc/library/support/Science_DP_FFD_RevA.pdf",
+      "retrieved_on": "2026-08-30",
+      "role": "FITS product-format reference",
+      "supporting_scope": "Product-format and response/leaf-file naming context for source lineage.",
+      "use_boundary": "Format reference only; no numerical response or physical inference."
+    }
+  ],
+  "exact_scope": {
+    "lineage_group": "GW170817-GRB170817A",
+    "local_owner_manifests": [
+      "strategy/hold-lc-001-owner-artifact-byte-freeze-v0.1.json",
+      "strategy/hold-lc-001-response-history-byte-freeze-v0.1.json"
+    ],
+    "local_product_ids": [
+      "FERMI-GBM-EVENT-DAY-POSHIST-ALL",
+      "FERMI-GBM-EVENT-DAY-SPECHIST-N0",
+      "FERMI-GBM-EVENT-DAY-SPECHIST-B0",
+      "FERMI-GBM-EVENT-TRIGGER-RSP2-N0",
+      "FERMI-GBM-EVENT-TRIGGER-RSP2-B0"
+    ],
+    "data_role": "CALIBRATION",
+    "finite_scope": "Finite source-role and owner-field contract only; no table-value reading, likelihood evaluation, continuum, physical identity or prospective validation.",
+    "forbidden_actions": [
+      "Do not treat rsp2 segment numbering or header coverage as a calibration-validity or interpolation law.",
+      "Do not treat GS-005/GS-006 role descriptions as a detector-to-geocenter timing correction or uncertainty.",
+      "Do not read response/EBOUNDS values or select a segment after observing a candidate residual.",
+      "Do not populate F_reg, F_lim, F_eff, F_obs, a score or a prospective lock before the required owner fields are frozen."
+    ]
+  },
+  "required_physical_owner_fields": {
+    "response_selection": [
+      "A versioned rule mapping each event detector and analysis time window to one rsp2 segment or a specified interpolation of segments.",
+      "The source-position, spacecraft-attitude and ephemeris inputs used by the mapping, with validity intervals and interpolation rules.",
+      "The response-generator and leaf/atmospheric-scattering input versions, including the response product linkage to the selected PHA/CSPEC data.",
+      "The channel-to-energy and gain-history calibration version, validity interval and uncertainty for each detector."
+    ],
+    "time_coordinate": [
+      "A common time standard and versioned TT/MET/GPS/geocenter conversion including leap-second or clock-correction data.",
+      "A detector-to-geocenter timing algorithm with uncertainty and an explicit treatment of spacecraft position/attitude interpolation.",
+      "The GW strain calibration and merger-time estimator owner, with its valid time range and uncertainty.",
+      "The GBM onset, background and detector/energy window owner, including selection and missing-data rules."
+    ],
+    "statistical_owner": [
+      "A joint timing likelihood or an explicitly source-owned covariance with component and shared calibration/source terms.",
+      "An intrinsic-emission-lag nuisance law or a preregistered set-valued scoring rule.",
+      "A numerical error budget and candidate-neutral F_reg output schema."
+    ],
+    "holdout_and_proof_split": [
+      "A prospective holdout sealed before candidate, segment, window or scorer tuning.",
+      "Separate proof-owner fields for filtration, heat-root, current intertwiner and one-use ledgers; proof choices cannot fill physical-owner fields."
+    ]
+  },
+  "admission": {
+    "current": "REQUEST_ONLY",
+    "response_history_values": "NOT_ADMITTED",
+    "calibration_validity_interpolation": "NOT_ADMITTED",
+    "detector_to_geocenter_conversion": "NOT_ADMITTED",
+    "timing_likelihood": "NOT_ADMITTED",
+    "covariance": "NOT_ADMITTED",
+    "intrinsic_emission_nuisance": "NOT_ADMITTED",
+    "f_reg_f_lim_f_eff_f_obs": "NOT_DEFINED",
+    "candidate_scoring": "STOPPED",
+    "prospective_lock": "EMPTY"
+  },
+  "acceptance_for_owner_submission": [
+    "Each required field has a source owner, version, validity interval, locator and hash or an independently reproducible implementation.",
+    "The response-segment choice or interpolation is fixed before candidate residuals are inspected and is reproducible from the frozen event window.",
+    "The timing standard, detector-to-geocenter correction and uncertainty are common to all candidate comparisons.",
+    "The likelihood/covariance and intrinsic-lag treatment are source-owned or explicitly preregistered, with no post-disclosure tuning.",
+    "A candidate-neutral F_reg artefact is independently reproduced before any F_lim/F_eff/F_obs work."
+  ],
+  "falsifiers": [
+    "No owner supplies the response-segment validity/interpolation and calibration linkage.",
+    "The geocenter conversion or uncertainty changes with candidate labels or cannot be independently reproduced.",
+    "The only available statistical object is a retrospective fitted summary without a source likelihood/covariance.",
+    "A required field can be filled only by a proof-owner convention rather than a physical owner."
+  ],
+  "evidence_level": "T0 official-source semantic crosswalk plus hash-pinned local owner candidates; no model or statistical test",
+  "next_action": "Use this request contract to locate or obtain the versioned response-segment validity/interpolation, calibration linkage, detector-to-geocenter conversion and uncertainty owner artefacts. Keep all response values and scoring locked; independently reproduce F_reg only after acceptance fields are frozen.",
+  "non_claims": [
+    "This is not a likelihood, covariance, calibration-validity law, detector timing correction, candidate map or prediction.",
+    "Official product-role documentation and local rsp2 headers do not identify microscopic dynamics or establish a QFT/Yang-Mills/gravity correspondence.",
+    "No Pre-A, C6, A13, Sector-A, continuum, physical-vacuum, cosmic-origin, theory-of-everything or mass-gap claim follows.",
+    "The established T-054 forward and T-059 inverse methods, owner order and stopped-loop rules are preserved rather than replaced."
+  ],
+  "recorded_by": "Codex"
+}

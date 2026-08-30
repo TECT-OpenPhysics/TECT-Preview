@@ -1,0 +1,174 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001307",
+  "reviewed_on": "2026-08-30",
+  "recorded_by": "Codex",
+  "provenance": "contemporaneous",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "task_id": "T-061",
+  "gate_ids": [
+    "PA-INVERSE-OBSERVATION-TARGET-MAP-HOLDOUT-FREEZE",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "title": "HOLD-LC-001 response-owner field contract from official Fermi semantics",
+  "question": "Can the official Fermi GS-005/GS-006 and rsp/rsp2 semantics be converted into a precise source-owner request for response selection, calibration validity and timing uncertainty without silently choosing an interpolation or likelihood?",
+  "method": [
+    "Read the official Fermi GBM data-access, response-documentation and science-product-format references, recording URLs and retrieval date rather than copying source text or raw data.",
+    "Crosswalk those role definitions against the exact local POSHIST, SPECHIST and N0/B0 rsp2 manifests already frozen in EXP-001305 and EXP-001306.",
+    "Write a candidate-neutral owner request contract that requires versioned segment selection/interpolation, calibration validity/linkage, time-standard and detector-to-geocenter conversion, uncertainty, statistical ownership and holdout separation.",
+    "Explicitly forbid treating segment numbering, product-role labels or a published summary as a likelihood, covariance or physical dynamics selection.",
+    "Preserve the established T-054 forward and T-059 inverse methods, owner order and parked-loop rules; do not read response values or score candidates."
+  ],
+  "exact_scope": {
+    "request_contract": "strategy/hold-lc-001-response-owner-request-v0.1.json",
+    "parent_manifests": [
+      "strategy/hold-lc-001-owner-artifact-byte-freeze-v0.1.json",
+      "strategy/hold-lc-001-response-history-byte-freeze-v0.1.json",
+      "strategy/hold-lc-001-estimator-contract-v0.1.json"
+    ],
+    "parent_hashes": {
+      "owner_artifact_manifest": "fad7fcc7d6638508e7da6d69fd17eb2991f72965182c8ece182a60442b0e4da9",
+      "response_history_manifest": "b47228b036f9e057b2c213f41b477466a76d3d4107d929b93eb5c2a87ee7a5c2",
+      "estimator_contract": "f2d3be523c9e24fe8e84673dc486f0bf17799ceba9702afd638a0bf2096ddf94"
+    },
+    "official_sources": [
+      "FERMI-GBM-DATA-ACCESS-GS005-GS006",
+      "FERMI-GBM-RSP-RSP2-DOCUMENTATION",
+      "FERMI-SCIENCE-DATA-PRODUCT-FORMAT"
+    ],
+    "data_role": "CALIBRATION",
+    "finite_scope": "Finite source-role semantic crosswalk and owner-field contract; no table-value reading, likelihood evaluation, continuum, physical identity or prospective validation.",
+    "method_scope": "Additive T-061 contract refinement; no change to T-054/T-059 methods, owner order or promotion firewalls."
+  },
+  "source_crosswalk": {
+    "official_roles": {
+      "GS-005": "GBM gain and energy-resolution history required for calculating detector response matrices.",
+      "GS-006": "Fermi position and attitude history used in the response pipeline.",
+      "rsp": "A single detector response for a source position and time interval.",
+      "rsp2": "A response file containing multiple detector response matrices for changing pointing or time segments."
+    },
+    "local_exact_products": {
+      "position_attitude": "EXP-001305 FERMI-GBM-EVENT-DAY-POSHIST-ALL; hash-pinned GLAST POS HIST headers and TT-second coverage.",
+      "spectral_history": "EXP-001305 FERMI-GBM-EVENT-DAY-SPECHIST-N0/B0; hash-pinned GBM SPEC HIST headers and TT-second coverage.",
+      "response_history": "EXP-001306 FERMI-GBM-EVENT-TRIGGER-RSP2-N0/B0; one EBOUNDS and eight numbered SPECRESP MATRIX headers per detector over the trigger window."
+    },
+    "semantic_boundary": "The official descriptions explain product roles and response segmentation, but they do not supply this project with a source-owned validity/interpolation rule, geocenter timing correction, uncertainty, joint likelihood or covariance."
+  },
+  "checks": [
+    {
+      "id": "official-primary-source-crosswalk",
+      "finding": "PASS",
+      "detail": "The three official Fermi references are primary documentation and their role statements are recorded as bounded paraphrases with direct locators."
+    },
+    {
+      "id": "local-hash-pinned-crosswalk",
+      "finding": "PASS",
+      "detail": "The crosswalk points only to the previously hash-pinned POSHIST/SPECHIST/rsp2 manifests; no raw bytes or table values were copied."
+    },
+    {
+      "id": "owner-field-contract",
+      "finding": "PASS-WITH-ADMISSION-STOP",
+      "detail": "The request contract turns the semantic gap into explicit acceptance fields for segment selection/interpolation, calibration validity/linkage, time standard, geocenter conversion, uncertainty, likelihood/covariance and holdout."
+    },
+    {
+      "id": "method-preservation",
+      "finding": "PASS",
+      "detail": "T-054/T-059 methods, R-192 owner order, stopped-loop registry and promotion firewalls are unchanged."
+    }
+  ],
+  "finding": "Official documentation confirms that GS-005/GS-006 are calibration and position/attitude inputs to the GBM response pipeline and that rsp2 carries multiple time/pointing-specific response matrices. This supports a precise owner request, not a likelihood admission: the project still lacks the versioned validity/interpolation rule, detector-to-geocenter timing conversion, uncertainty, joint statistical owner and intrinsic-emission treatment.",
+  "verdict": "advanced",
+  "decision_reason": "This is a new semantic crosswalk and durable acceptance contract tied to exact local hashes, not a repeated generic search or a model test. It makes the next owner gate executable while explicitly preventing an implicit interpolation or statistical promotion.",
+  "decision_scope": "T0 official-document semantic crosswalk and candidate-neutral owner-request contract only; no matrix-value inference, event likelihood, candidate ranking, dynamic identification, empirical prediction or physical promotion.",
+  "assumptions": [
+    "The official URLs and retrieval date identify the documentation used for role semantics.",
+    "EXP-001305 and EXP-001306 remain authoritative for local product hashes and header-only observations.",
+    "A role description is not a source-owned implementation, and an rsp2 segment list is not an interpolation law.",
+    "The existing estimator contract, T-054/T-059 methods, owner order and prospective-lock rules remain controlling."
+  ],
+  "missing_assumptions": [
+    "Source-owned response-segment validity/interpolation and calibration-to-response linkage.",
+    "Source-owned TT/MET/GPS/geocenter conversion and uncertainty for GBM and GW timing.",
+    "Frozen detector, energy, background and time windows with selection and missing-data rules.",
+    "Joint likelihood or covariance with calibration, shared-source and intrinsic-emission nuisance terms.",
+    "Complete F_reg/F_lim/F_eff/F_obs maps, immutable scorer and sealed prospective holdout."
+  ],
+  "adversarial_review": [
+    {
+      "axis": "documentation-as-likelihood",
+      "check": "Could official product-role descriptions be treated as a source-owned timing likelihood or covariance?",
+      "disposition": "UPHELD-BLOCKED: documentation is used for semantics only; statistical ownership remains missing."
+    },
+    {
+      "axis": "implicit-interpolation",
+      "check": "Could the presence of rsp2 segments justify silently choosing the nearest or center-time DRM?",
+      "disposition": "UPHELD-BLOCKED: the request contract requires a versioned, pre-registered selection/interpolation rule before any score."
+    },
+    {
+      "axis": "header-time-as-geocenter",
+      "check": "Could TT-second header coverage be treated as detector-to-geocenter timing and uncertainty?",
+      "disposition": "UPHELD-BLOCKED: conversion and uncertainty are explicit missing physical-owner fields."
+    },
+    {
+      "axis": "source-role-overclaim",
+      "check": "Could GS-005/GS-006 labels be called microscopic dynamics or QFT/Yang-Mills evidence?",
+      "disposition": "DISMISSED-FOR-SCOPE: they are calibration/position provenance roles only."
+    },
+    {
+      "axis": "method-overhaul",
+      "check": "Could the request contract replace the existing proof lanes?",
+      "disposition": "DISMISSED: it is additive T-061 intake and preserves T-054/T-059 methods and owner order."
+    }
+  ],
+  "boundary": "EXP-001307 is a T0 official-source semantic and owner-contract advance. It does not admit response values, calibration validity/interpolation, detector-to-geocenter conversion, timing likelihood, covariance, nuisance law, F_reg/F_lim/F_eff/F_obs map, candidate, score, prospective prediction, microscopic dynamics, physical identity, continuum result, Reading-H sign, Pre-A closure or mass-gap conclusion.",
+  "evidence_level": "T0 primary official-document crosswalk plus hash-pinned local owner candidates; no model or statistical test",
+  "evidence_refs": [
+    "strategy/hold-lc-001-response-owner-request-v0.1.json#official_source_references",
+    "strategy/hold-lc-001-response-owner-request-v0.1.json#required_physical_owner_fields",
+    "strategy/hold-lc-001-response-history-audit-v0.1.json#available_metadata",
+    "strategy/hold-lc-001-owner-artifact-audit-v0.1.json#available_metadata",
+    "strategy/hold-lc-001-estimator-contract-v0.1.json#statistical_contract"
+  ],
+  "formal_refs": {
+    "results": [],
+    "negatives": [],
+    "events": []
+  },
+  "formal_integration": {
+    "results": [],
+    "negatives": [],
+    "events": [],
+    "no_new_result": true,
+    "no_new_negative": true,
+    "no_changelog_event": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "next_action": "Use the request contract to locate or obtain source-owned response-segment validity/interpolation, calibration linkage, detector-to-geocenter conversion and uncertainty. Keep response values and scoring locked; independently reproduce F_reg only after the acceptance fields are frozen, while continuing unchanged T-054 owner intake.",
+  "stop_or_redesign": [
+    "If the required owner fields cannot be obtained, retain HOLD-LC-001 as provenance/design-only and do not score.",
+    "If future analysis reads response values, issue a new version with an explicit candidate-neutral uncertainty and leakage contract.",
+    "If no dynamic observable separates a static-equivalence class, report NONIDENTIFIABLE rather than selecting a representative.",
+    "If calibration, regulator or nuisance changes reverse a finite verdict, report UNSTABLE_FINITE_ONLY.",
+    "If retrospective data are used to tune after target disclosure, do not award prospective credit."
+  ],
+  "related": [
+    {
+      "id": "EXP-001306",
+      "relation": "continues"
+    },
+    {
+      "id": "EXP-001305",
+      "relation": "continues"
+    }
+  ],
+  "non_claims": [
+    "No candidate is admitted, selected, ranked, fitted or prospectively validated.",
+    "Official documentation and exact product headers do not provide a source-owned likelihood, covariance, geocenter correction, nuisance law or complete observation map.",
+    "This contract does not establish a causal law, QFT/Yang-Mills/gravity identity or microscopic dynamics.",
+    "No physical vacuum, Reading-H branch, Pre-A, Sector-A, C6, A13, continuum, cosmic-origin, theory-of-everything or mass-gap claim is established.",
+    "The existing T-054 forward and T-059 inverse methods are unchanged; the owner request is additive and not a replacement."
+  ]
+}
