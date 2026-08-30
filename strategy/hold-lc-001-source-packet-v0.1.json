@@ -1,0 +1,94 @@
+{
+  "schema": "tect/observation-holdout-packet/0.1",
+  "id": "HOLD-LC-001-SOURCE-PACKET-v0.1",
+  "holdout_id": "HOLD-LC-001",
+  "version": "0.1.0",
+  "status": "INTAKE_BLOCKED_RAW_LIKELIHOOD_AND_NUISANCE_LAW",
+  "data_role": "RETROSPECTIVE",
+  "lineage_group": "GW170817-GRB170817A",
+  "source": {
+    "title": "Gravitational Waves and Gamma-Rays from a Binary Neutron Star Merger: GW170817 and GRB 170817A",
+    "authors": "LIGO Scientific Collaboration and Virgo Collaboration, Fermi Gamma-ray Burst Monitor, and INTEGRAL",
+    "edition": "arXiv:1710.05834v2; Astrophysical Journal Letters 848:L13",
+    "url": "https://arxiv.org/pdf/1710.05834",
+    "doi": "10.3847/2041-8213/aa920c",
+    "published_at": "2017-10-16",
+    "retrieved_at": "2026-08-30T04:40:00Z",
+    "content_type": "application/pdf",
+    "byte_length": 2129594,
+    "sha256": "bf06bd2ae6a23cf7f7092307677c2b681ce02abab3b5bbe37bbce76a8960140a",
+    "license_note": "The paper states that original content may be reused under the Creative Commons Attribution 3.0 licence.",
+    "locators": [
+      "PDF p.1 abstract: reported (+/-1.74 +/-0.05) s delay and conditional speed bound",
+      "PDF p.4: geocentric correction and 68% confidence convention for derived gamma-ray results",
+      "PDF p.6: intrinsic-emission assumptions and conditional propagation-speed interval"
+    ]
+  },
+  "estimand": {
+    "id": "Delta_t_det",
+    "definition": "t_GRB_onset_geocenter - t_GW_merger_geocenter",
+    "quantity": "Detector-frame geocentric arrival/onset lag",
+    "units": "seconds",
+    "reported_value": 1.74,
+    "reported_uncertainty": 0.05,
+    "uncertainty_statement": "The paper reports 68% confidence for derived gamma-ray results; this summary is not admitted as a scoring likelihood.",
+    "component_provenance": {
+      "GW_merger_time_uncertainty_s": 0.002,
+      "GBM_onset_fit_uncertainty_s": 0.048,
+      "Fermi_to_geocenter_correction_s": 0.003176,
+      "component_covariance": "NOT_PUBLISHED_IN_THIS_PACKET"
+    },
+    "candidate_neutral": true,
+    "prospective_credit": false
+  },
+  "measurement_likelihood": {
+    "required_for_admission": true,
+    "status": "NOT_ADMITTED",
+    "available_summary": "A central value and reported 68% uncertainty are available in the paper.",
+    "raw_product": "NOT_LOCALLY_AVAILABLE",
+    "covariance": "NOT_LOCALLY_AVAILABLE",
+    "forbidden_substitute": "Do not silently replace the source timing likelihood with an independent Gaussian observation for candidate scoring.",
+    "admission_condition": "A source-owned timing likelihood or covariance product, its units, calibration and exact lineage must be hash-pinned before any map evaluation."
+  },
+  "intrinsic_emission_lag": {
+    "status": "NO_SINGLE_LAW_ADMITTED",
+    "source_scenarios": [
+      "The paper uses simultaneous emission as a conservative upper-bound scenario.",
+      "The paper also considers a 10 s intrinsic emission delay for a conservative lower-bound scenario.",
+      "The paper notes broader exotic windows reaching approximately (-100 s, 1000 s)."
+    ],
+    "nuisance_distribution": "MISSING",
+    "admission_condition": "Pre-register a defensible nuisance law or a declared set-valued likelihood without choosing it from a candidate fit."
+  },
+  "map_contract": {
+    "required_stages": ["F_reg", "F_lim", "F_eff", "F_obs"],
+    "current_status": "NO_MICROSCOPIC_MAP_ADMITTED",
+    "propagation_speed_interval": "Descriptive conditional source output only; do not Gaussianize or treat as a second observation.",
+    "scoring_allowed": false
+  },
+  "assumptions": [
+    "The downloaded bytes correspond to arXiv version 2 and the recorded SHA-256 is the source identity for this intake.",
+    "The reported 1.74 s value is the geocentric onset/merger timing estimand described by the source.",
+    "The source timing uncertainty and intrinsic emission assumptions are distinct nuisance components.",
+    "The target is retrospective and cannot earn prospective validation credit."
+  ],
+  "missing_assumptions": [
+    "A locally reproducible raw timing likelihood or covariance matrix.",
+    "A pre-registered intrinsic-emission-lag nuisance distribution or accepted set-valued uncertainty rule.",
+    "An instrument/selection/compression map for F_obs.",
+    "A complete admitted microscopic map through all four stages.",
+    "An immutable scorer and acceptance rule."
+  ],
+  "evidence_level": "T0 source-lineage and estimator-interface intake; not a model test",
+  "acceptance_condition": "Only after likelihood/covariance, nuisance law, F_obs map, and all upstream map stages are hash-pinned may this packet enter a candidate-neutral finite comparison.",
+  "falsifier": "If the source product cannot supply a reproducible likelihood/covariance and defensible nuisance law, this holdout remains intake-blocked and cannot be scored.",
+  "non_claims": [
+    "This packet does not identify a microscopic dynamics or mobility.",
+    "It does not select a candidate, physical vacuum, Reading-H branch, or causal cone.",
+    "It does not establish Pre-A, Sector-A, C6, A13, QFT, Yang-Mills, gravity, continuum, empirical predictivity, or a mass gap.",
+    "The conditional propagation-speed interval is not an independent Gaussian datum and is not used for scoring."
+  ],
+  "next_action": "Locate or obtain the source-owned timing likelihood/covariance and preregister the intrinsic-lag nuisance law; until then keep HOLD-LC-001 INTAKE_BLOCKED and do not score candidates.",
+  "recorded_at": "2026-08-30T04:41:15Z",
+  "recorded_by": "Codex"
+}

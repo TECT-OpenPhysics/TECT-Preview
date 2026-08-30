@@ -1,0 +1,148 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "schema_version": "1.0",
+  "id": "EXP-001294",
+  "title": "HOLD-LC-001 source lineage is hash-frozen but admission remains blocked",
+  "task_id": "T-061",
+  "claim_ids": [
+    "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "gate_ids": [
+    "PA-INVERSE-OBSERVATION-TARGET-MAP-HOLDOUT-FREEZE",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "related": [
+    {
+      "id": "EXP-001293",
+      "relation": "continues"
+    }
+  ],
+  "question": "Can the already selected HOLD-LC-001 retrospective timing estimand be admitted for candidate-neutral comparison with a reproducible source, likelihood/covariance, and intrinsic-emission nuisance contract?",
+  "method": [
+    "Retrieve the exact arXiv v2 PDF referenced by the T-059 holdout and compute its byte-level SHA-256 without altering any proof method.",
+    "Cross-check the reported geocentric timing definition, component timing statements, confidence convention, and intrinsic-emission scenarios against the primary source pages.",
+    "Separate source lineage and estimator metadata from the raw timing likelihood/covariance and nuisance distribution required for candidate scoring.",
+    "Apply the existing F_reg/F_lim/F_eff/F_obs admission rule and leave the prospective lock opaque.",
+    "Record an inconclusive intake verdict with the exact reopen condition rather than creating a new mobility variant or scientific claim."
+  ],
+  "exact_scope": {
+    "holdout": "HOLD-LC-001 / GW170817-GRB170817A",
+    "estimand": "Delta_t_det = t_GRB_onset_geocenter - t_GW_merger_geocenter",
+    "source_edition": "arXiv:1710.05834v2",
+    "source_sha256": "bf06bd2ae6a23cf7f7092307677c2b681ce02abab3b5bbe37bbce76a8960140a",
+    "source_bytes": 2129594,
+    "reported_value": "1.74 +/- 0.05 s, with the source's 68% confidence convention",
+    "scope_boundary": "Retrospective source-lineage and estimator-interface intake only; no candidate map evaluation."
+  },
+  "checks": [
+    {
+      "id": "source-lineage",
+      "finding": "PASS",
+      "detail": "The arXiv PDF was retrieved as an exact byte stream and recorded in HOLD-LC-001-SOURCE-PACKET-v0.1 with URL, edition, byte length and SHA-256."
+    },
+    {
+      "id": "estimator-definition",
+      "finding": "PASS_WITH_SOURCE_SUMMARY",
+      "detail": "The source describes the geocentric onset/merger timing and reports 1.74 +/- 0.05 s; the estimator is candidate-neutral and retrospective."
+    },
+    {
+      "id": "timing-likelihood",
+      "finding": "MISSING",
+      "detail": "The packet has no locally reproducible raw timing likelihood or covariance matrix; the displayed uncertainty is not promoted to a scoring likelihood."
+    },
+    {
+      "id": "intrinsic-lag-nuisance",
+      "finding": "MISSING",
+      "detail": "The source gives scenario assumptions (simultaneous, 10 s, and a broader exotic window) rather than one pre-registered nuisance law."
+    },
+    {
+      "id": "forward-map-and-scorer",
+      "finding": "NOT_ADMITTED",
+      "detail": "No candidate has an admitted F_reg/F_lim/F_eff/F_obs map, immutable scorer, or acceptance rule for this target."
+    }
+  ],
+  "finding": "The primary source lineage and candidate-neutral timing definition are now hash-frozen, but the exact raw timing likelihood/covariance, intrinsic-emission nuisance law, F_obs map, and upstream microscopic forward map remain absent. The source summary is therefore useful as a durable intake boundary but cannot support candidate scoring or prospective credit.",
+  "verdict": "inconclusive",
+  "decision_reason": "This is a bounded P1 intake advance with an explicit admission stop. It improves reproducibility by freezing the source bytes and estimator while preserving the existing T-059 method and refusing to substitute a Gaussian summary or choose dynamics from static fit.",
+  "adversarial_review": [
+    {
+      "axis": "source-version drift",
+      "check": "The edition, URL, byte length and SHA-256 are recorded; a future edition requires a new packet version.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "summary-as-likelihood",
+      "check": "The 1.74 +/- 0.05 s display is explicitly not admitted as a raw likelihood or covariance product.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "intrinsic-lag tuning",
+      "check": "The source's simultaneous, 10 s, and broader exotic scenarios remain alternatives; no candidate-selected nuisance law is inserted.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "derived-speed double counting",
+      "check": "The conditional speed interval is retained only as source context and is not introduced as a second observation.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "method overhaul",
+      "check": "Only a versioned source packet and exploration record were added; T-054, T-059, R-192 order, and the prospective lock were not changed.",
+      "disposition": "DISMISSED"
+    }
+  ],
+  "assumptions": [
+    "The retrieved PDF bytes are arXiv version 2 and the recorded hash identifies the source edition.",
+    "The source's reported timing value is a detector-frame geocentric onset/merger summary.",
+    "The target remains retrospective and public under the one-use rule.",
+    "No candidate scoring is attempted before the missing likelihood, nuisance, and map fields are admitted."
+  ],
+  "missing_assumptions": [
+    "A raw or source-equivalent timing likelihood/covariance product with units and calibration.",
+    "A pre-registered intrinsic-emission-lag nuisance law or set-valued uncertainty rule.",
+    "The instrument/selection/compression map required for F_obs.",
+    "A complete source-owned microscopic forward map through F_reg, F_lim, F_eff and F_obs.",
+    "An immutable scorer and acceptance threshold."
+  ],
+  "boundary": "T0 P1 source-lineage intake; no model, physical-identity, continuum, or empirical-validation result.",
+  "evidence_level": "T0 source-lineage plus primary-source estimator interface",
+  "evidence_refs": [
+    "strategy/hold-lc-001-source-packet-v0.1.json#source",
+    "strategy/pre-a-observation-first-inverse-lane-contract-manifest.json#holdout_manifest",
+    "strategy/pre-a-round1-boundary-evidence-register-260809-v0.1.json#PA-EV-T053-002",
+    "strategy/main-proof-program-v1.json#current_work_packet"
+  ],
+  "formal_refs": {
+    "results": [],
+    "negatives": [],
+    "events": []
+  },
+  "formal_integration": {
+    "results": [],
+    "negatives": [],
+    "events": [],
+    "no_new_result": true,
+    "no_new_negative": true,
+    "no_changelog_event": false,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "next_action": "Obtain or reconstruct the source-owned timing likelihood/covariance and preregister the intrinsic-lag nuisance law; then run the existing schema/lineage validator only. Keep candidate scoring, prospective disclosure, and all R-192 dynamics variants stopped until those inputs and a complete map exist.",
+  "stop_or_redesign": [
+    "If no reproducible likelihood/covariance can be obtained, keep HOLD-LC-001 INTAKE_BLOCKED and do not substitute a Gaussian summary.",
+    "If the nuisance uncertainty dominates any declared candidate separation, classify the target UNDERPOWERED and do not score.",
+    "If a future source edition changes the estimator or uncertainty semantics, issue a new packet version and do not mutate this record.",
+    "If no source-owned production dynamics appears, keep the static-to-dynamics equivalence class parked."
+  ],
+  "non_claims": [
+    "No candidate is admitted, selected, or ranked.",
+    "No production dynamics, physical vacuum, Reading-H sign, causal cone, or mobility is identified.",
+    "No retrospective datum is prospective evidence and no empirical prediction is made.",
+    "No Pre-A, Sector-A, C6, A13, QFT, Yang-Mills, gravity, continuum, cosmic-origin, theory-of-everything, or mass-gap statement is established."
+  ],
+  "provenance": "contemporaneous",
+  "recorded_at": "2026-08-30T04:41:15Z",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-08-30"
+}
