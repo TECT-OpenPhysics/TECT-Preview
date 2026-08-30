@@ -1,0 +1,66 @@
+{
+  "audit_id": "PA-CP1-ST8-Q3LOCK-STATE-WEIGHTED-EDGE-MAJORANT-COMPOSITION",
+  "boundary": "This package discharges only a restricted state-weighted edge-majorant interface by composing already registered finite/conditional Q3 inputs. It does not prove an actual Q3LOCK operator norm, history recurrence, common weighted domain, common core, exhaustion, common alpha, OS/KMS/GNS dynamics, physical sector, continuum, C6, Sector-A, Pre-A or mass gap.",
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "derived": {
+    "baseline_C4_edge": "29115196389063882279731/77341623582720",
+    "method_preservation": true,
+    "scope_firewall": true
+  },
+  "exploration_id": "EXP-001320",
+  "mutation_count": 8,
+  "mutations_rejected": [
+    {
+      "actual": "0",
+      "expected": "different fourth majorant",
+      "name": "zero force constant",
+      "status": "REJECTED"
+    },
+    {
+      "actual": "1197",
+      "expected": "different fourth majorant",
+      "name": "mutated moment input",
+      "status": "REJECTED"
+    },
+    {
+      "actual": "2",
+      "expected": "|a|<=w",
+      "name": "coefficient exceeds weight",
+      "status": "REJECTED"
+    },
+    {
+      "actual": "-1",
+      "expected": "w>=0",
+      "name": "negative weight",
+      "status": "REJECTED"
+    },
+    {
+      "actual": "0",
+      "expected": "positive baseline",
+      "name": "zero moment majorant",
+      "status": "REJECTED"
+    },
+    {
+      "actual": "True",
+      "expected": "firewall",
+      "name": "operator promotion",
+      "status": "REJECTED"
+    },
+    {
+      "actual": "True",
+      "expected": "firewall",
+      "name": "common-alpha promotion",
+      "status": "REJECTED"
+    },
+    {
+      "actual": "True",
+      "expected": "claim_bearing=false",
+      "name": "claim-bearing mutation",
+      "status": "REJECTED"
+    }
+  ],
+  "run_kind": "hostile",
+  "schema": "tect/foundation-audit/1.0",
+  "task_id": "T-054",
+  "verdict": "PASS"
+}

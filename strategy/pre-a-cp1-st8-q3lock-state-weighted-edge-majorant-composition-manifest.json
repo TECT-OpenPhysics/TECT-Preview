@@ -1,0 +1,160 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-STATE-WEIGHTED-EDGE-MAJORANT-COMPOSITION-v0",
+  "title": "Conditional state-weighted edge majorant from the existing Q3 moment interfaces",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001320",
+  "claim_bearing": false,
+  "tier": "T0",
+  "parent_explorations": ["EXP-001060", "EXP-001059", "EXP-001297"],
+  "parent_manifests": [
+    "strategy/pre-a-cp1-st8-q3lock-local-force-moment-bridge-manifest.json",
+    "strategy/pre-a-cp1-st8-q3lock-local-force-moment-interface-manifest.json",
+    "strategy/pre-a-cp1-st8-q3lock-scalar-operator-tail-transfer-manifest.json"
+  ],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-ENERGY-WEIGHTED-COMMUTATOR-GEVREY-LR-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-FIRST-PASSAGE-BACKBONE-REAL-TIME-PRODUCT-AND-ENERGY-TAIL-CLOSURE",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "question": "Can the already registered endpoint third-moment bridge and local-force L4 interface be composed into a state-weighted per-edge majorant for scalar history coefficients dominated by the existing shell weight, without identifying that norm with an operator-norm Q3LOCK estimate?",
+  "composition": {
+    "force_parent": "EXP-001059 finite local force interface",
+    "moment_parent": "EXP-001060 fixed-beta periodic zero-source endpoint third-moment bridge",
+    "tail_parent": "EXP-001297 conditional scalar-to-operator tail transfer",
+    "derived_inputs": {
+      "force_constant": "force_parent.finite_fixture.force_constant",
+      "g": "force_parent.finite_fixture.g",
+      "A0": "moment_parent.finite_fixture.A0_input",
+      "m5": "moment_parent.finite_fixture.m5_input"
+    },
+    "definitions": {
+      "D": "max(1,8/g)",
+      "C0": "1+2*A0",
+      "M_bridge": "3^(3-1)*(C0^3+2*m5)",
+      "C4_edge": "force_constant^4*D^3*M_bridge",
+      "C_L4_edge": "C4_edge^(1/4)",
+      "edge_bound": "If |a_e|<=w_e and w_e>=0, then ||a_e F_e||_L4 <= C_L4_edge*w_e"
+    },
+    "logic": [
+      "The force parent supplies |F_e|^4 <= force_constant^4*D^3*E_pair^3 on its declared finite force fixture.",
+      "The moment parent supplies E(E_pair^3) <= M_bridge in its fixed-beta periodic zero-source scope.",
+      "Multiplication by a scalar history coefficient and |a_e|<=w_e give the fourth-power edge bound.",
+      "The L4 corollary uses homogeneity and the nonnegative fourth root; a sum over edges still additionally requires the triangle inequality and the existing R-445 tail geometry."
+    ]
+  },
+  "finite_fixture": {
+    "coefficient_weight_pairs": [
+      {"coefficient": "1", "weight": "1"},
+      {"coefficient": "-1/2", "weight": "1/2"},
+      {"coefficient": "1/4", "weight": "1/4"},
+      {"coefficient": "-1/8", "weight": "1/8"},
+      {"coefficient": "1/3", "weight": "1/2"}
+    ],
+    "fixture_scope": "Exact arithmetic and conditional norm composition only; no new Gibbs trace or Q3 matrix calculation is introduced."
+  },
+  "scope": {
+    "endpoint_third_moment_reused": true,
+    "local_force_l4_interface_reused": true,
+    "conditional_state_weighted_edge_majorant_closed": true,
+    "scalar_history_coefficient_bound_checked": true,
+    "r445_shell_geometry_reusable": true,
+    "actual_q3_operator_norm_majorant_closed": false,
+    "actual_q3_history_identification_closed": false,
+    "common_weighted_operator_domain_closed": false,
+    "source_uniformity_beyond_parent_scope_closed": false,
+    "beta_uniformity_closed": false,
+    "volume_uniformity_beyond_parent_scope_closed": false,
+    "cutoff_uniformity_closed": false,
+    "direct_d_delta_d_cauchy_closed": false,
+    "exhaustion_independence_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "assumptions": [
+    "The force inequality and its constant are used exactly within the finite fixture and scope of EXP-001059.",
+    "The endpoint third-moment bound M_bridge is used exactly within the fixed-beta periodic zero-source scope of EXP-001060.",
+    "Each scalar history coefficient satisfies |a_e|<=w_e with w_e>=0.",
+    "The state-weighted L4 norm is homogeneous; an eventual edge sum may use the triangle inequality only after its state/domain contract is supplied.",
+    "All derived constants are recomputed from the two parent manifests rather than copied as independent inputs."
+  ],
+  "missing_assumptions": [
+    "A source-owned Q3LOCK history construction that supplies the coefficients a_e and shell weights w_e for every actual edge and both orientations.",
+    "A common unbounded-domain definition that turns the finite local-force L4 interface into the required operator or form seminorm.",
+    "Source-, beta-, cutoff-, volume-, shape-, phase- and history-uniform moment and force constants beyond the parent scopes.",
+    "A two-sided product/Volterra estimate, all-shape exhaustion Cauchy theorem and common-alpha identification.",
+    "OS/KMS/GNS identification, sector coercivity, physical-empty comparison, continuum, Yang--Mills and mass-gap conclusions."
+  ],
+  "adversarial_review": [
+    {
+      "axis": "parent-scope laundering",
+      "check": "The force and moment constants are loaded from EXP-001059/EXP-001060 and the output remains restricted to their fixed-beta finite periodic zero-source interface.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "operator-norm promotion",
+      "check": "The derived bound is explicitly an L4 state-weighted conditional bound; operator_norm_of_actual_q3_terms and actual_q3_history_identification remain false.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "coefficient and weight direction",
+      "check": "The finite pairs retain signs, test |a_e|<=w_e, and use w_e only through a fourth-power monotonicity step; no cancellation or fitted shell constant is used.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "finite-to-infinite promotion",
+      "check": "No history sum, common domain, exhaustion, common alpha, QFT, physical, continuum or mass-gap flag is enabled by this composition.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "method-overhaul",
+      "check": "The package composes existing R-241/R-242 interfaces for T-054 and does not alter the forward theorem order, candidate definitions or inverse lane.",
+      "disposition": "DISMISSED"
+    }
+  ],
+  "evidence_level": "T0 exact conditional state-weighted fourth-power composition",
+  "boundary": "This package discharges only a restricted state-weighted edge-majorant interface by composing already registered finite/conditional Q3 inputs. It does not prove an actual Q3LOCK operator norm, history recurrence, common weighted domain, common core, exhaustion, common alpha, OS/KMS/GNS dynamics, physical sector, continuum, C6, Sector-A, Pre-A or mass gap.",
+  "non_claims": [
+    "No actual Q3LOCK commutator or history term is shown to satisfy the coefficient hypothesis.",
+    "The fourth root is a symbolic L4 constant, not a new uniform numerical estimate.",
+    "The fixed-beta periodic zero-source parent scopes are not extended to compact sources, arbitrary boundaries, beta limits or thermodynamic volume.",
+    "No operator norm, common-core, Lie-Robinson, Volterra, Duhamel, exhaustion, KMS/GNS, physical-empty, Yang--Mills or mass-gap conclusion follows.",
+    "The established research method and owner order remain unchanged."
+  ],
+  "next_action": "Use this L4 interface as a named conditional input only if a later owner-level Q3LOCK history supplies |a_e|<=w_e on the same state/domain. The next actual proof obligation remains the source-owned common-domain history/commutator estimate; do not create another equivalent finite grid.",
+  "stop_or_redesign": [
+    "If a future parent changes the force or moment scope, recompute this composition from the new hashes rather than reusing C4_edge.",
+    "If an actual history coefficient fails |a_e|<=w_e, keep the failure local to that history contract and do not repair it by enlarging the constant after seeing the target.",
+    "If conversion from L4 state norm to operator/form norm is unavailable, retain this as a conditional interface and do not promote R-445.",
+    "If a future change would modify the established T-054 method or owner order, return to the P0 continuity gate first."
+  ],
+  "verification": {
+    "primary_script": "codes/foundations/pre_a_cp1_st8_q3lock_state_weighted_edge_majorant_composition.py",
+    "independent_script": "codes/foundations/pre_a_cp1_st8_q3lock_state_weighted_edge_majorant_composition_independent.py",
+    "hostile_script": "codes/foundations/pre_a_cp1_st8_q3lock_state_weighted_edge_majorant_composition_hostile.py",
+    "integrated_script": "codes/foundations/pre_a_cp1_st8_q3lock_state_weighted_edge_majorant_composition_verify.py",
+    "lean_parent_crosschecks": ["verification/lean/Tect/R242.lean", "verification/lean/Tect/R445.lean"]
+  },
+  "formal_integration": {
+    "results": [],
+    "negatives": [],
+    "events": [],
+    "no_new_result": true,
+    "no_new_negative": true,
+    "no_changelog_event": true,
+    "no_pdf": true,
+    "no_tier_change": true
+  },
+  "recorded_by": "Codex",
+  "provenance": "contemporaneous"
+}

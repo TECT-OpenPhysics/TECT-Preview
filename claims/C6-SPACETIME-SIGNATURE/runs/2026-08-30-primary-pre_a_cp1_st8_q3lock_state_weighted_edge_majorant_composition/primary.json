@@ -1,0 +1,356 @@
+{
+  "assertion_count": 36,
+  "assertions": [
+    {
+      "actual": [
+        "EXP-001320",
+        "T-054",
+        false
+      ],
+      "expected": [
+        "EXP-001320",
+        "T-054",
+        false
+      ],
+      "group": "provenance",
+      "name": "identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "EXP-001059",
+      "expected": "EXP-001059",
+      "group": "provenance",
+      "name": "force parent",
+      "status": "PASS"
+    },
+    {
+      "actual": "EXP-001060",
+      "expected": "EXP-001060",
+      "group": "provenance",
+      "name": "moment parent",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-445",
+      "expected": "R-445",
+      "group": "provenance",
+      "name": "tail parent",
+      "status": "PASS"
+    },
+    {
+      "actual": "122099/35840",
+      "expected": ">0",
+      "group": "inputs",
+      "name": "positive force constant",
+      "status": "PASS"
+    },
+    {
+      "actual": "3/5",
+      "expected": ">0",
+      "group": "inputs",
+      "name": "positive g",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "2",
+        "3"
+      ],
+      "expected": "nonnegative",
+      "group": "inputs",
+      "name": "nonnegative moment inputs",
+      "status": "PASS"
+    },
+    {
+      "actual": "9",
+      "expected": 9,
+      "group": "moment bridge",
+      "name": "cube constant",
+      "status": "PASS"
+    },
+    {
+      "actual": "40/3",
+      "expected": "max(1,8/g)",
+      "group": "composition",
+      "name": "derived D",
+      "status": "PASS"
+    },
+    {
+      "actual": "5",
+      "expected": "1+2*A0",
+      "group": "composition",
+      "name": "derived C0",
+      "status": "PASS"
+    },
+    {
+      "actual": "1179",
+      "expected": "9*(C0^3+2*m5)>0",
+      "group": "composition",
+      "name": "moment bridge positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "29115196389063882279731/77341623582720",
+      "expected": "force_constant^4*D^3*M_bridge",
+      "group": "composition",
+      "name": "fourth-power composition",
+      "status": "PASS"
+    },
+    {
+      "actual": "5",
+      "expected": "5",
+      "group": "parent agreement",
+      "name": "fixture C0",
+      "status": "PASS"
+    },
+    {
+      "actual": "1179",
+      "expected": "1179",
+      "group": "parent agreement",
+      "name": "fixture M_bridge",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "parent agreement",
+      "name": "force formula present",
+      "status": "PASS"
+    },
+    {
+      "actual": "||K_e|| <= C*w(e)",
+      "expected": "||K_e|| <= C*w(e)",
+      "group": "parent agreement",
+      "name": "tail geometry retained",
+      "status": "PASS"
+    },
+    {
+      "actual": "1",
+      "expected": ">=0",
+      "group": "coefficient contract",
+      "name": "pair 0 nonnegative weight",
+      "status": "PASS"
+    },
+    {
+      "actual": "1",
+      "expected": "<=1",
+      "group": "coefficient contract",
+      "name": "pair 0 dominated coefficient",
+      "status": "PASS"
+    },
+    {
+      "actual": "29115196389063882279731/77341623582720",
+      "expected": "29115196389063882279731/77341623582720",
+      "group": "weighted edge bound",
+      "name": "pair 0 fourth-power transfer",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/2",
+      "expected": ">=0",
+      "group": "coefficient contract",
+      "name": "pair 1 nonnegative weight",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/2",
+      "expected": "<=1/2",
+      "group": "coefficient contract",
+      "name": "pair 1 dominated coefficient",
+      "status": "PASS"
+    },
+    {
+      "actual": "29115196389063882279731/1237465977323520",
+      "expected": "29115196389063882279731/1237465977323520",
+      "group": "weighted edge bound",
+      "name": "pair 1 fourth-power transfer",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/4",
+      "expected": ">=0",
+      "group": "coefficient contract",
+      "name": "pair 2 nonnegative weight",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/4",
+      "expected": "<=1/4",
+      "group": "coefficient contract",
+      "name": "pair 2 dominated coefficient",
+      "status": "PASS"
+    },
+    {
+      "actual": "29115196389063882279731/19799455637176320",
+      "expected": "29115196389063882279731/19799455637176320",
+      "group": "weighted edge bound",
+      "name": "pair 2 fourth-power transfer",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/8",
+      "expected": ">=0",
+      "group": "coefficient contract",
+      "name": "pair 3 nonnegative weight",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/8",
+      "expected": "<=1/8",
+      "group": "coefficient contract",
+      "name": "pair 3 dominated coefficient",
+      "status": "PASS"
+    },
+    {
+      "actual": "29115196389063882279731/316791290194821120",
+      "expected": "29115196389063882279731/316791290194821120",
+      "group": "weighted edge bound",
+      "name": "pair 3 fourth-power transfer",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/2",
+      "expected": ">=0",
+      "group": "coefficient contract",
+      "name": "pair 4 nonnegative weight",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/3",
+      "expected": "<=1/2",
+      "group": "coefficient contract",
+      "name": "pair 4 dominated coefficient",
+      "status": "PASS"
+    },
+    {
+      "actual": "29115196389063882279731/6264671510200320",
+      "expected": "29115196389063882279731/1237465977323520",
+      "group": "weighted edge bound",
+      "name": "pair 4 fourth-power transfer",
+      "status": "PASS"
+    },
+    {
+      "actual": 5,
+      "expected": ">=5",
+      "group": "coverage",
+      "name": "pair coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": "1",
+      "expected": "<=1",
+      "group": "coverage",
+      "name": "max coefficient ratio",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "conditional_state_weighted_edge_majorant_closed": true,
+        "endpoint_third_moment_reused": true,
+        "local_force_l4_interface_reused": true,
+        "scalar_history_coefficient_bound_checked": true
+      },
+      "expected": "all true",
+      "group": "scope",
+      "name": "closed composition scope",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "actual_q3_history_identification_closed": false,
+        "actual_q3_operator_norm_majorant_closed": false,
+        "beta_uniformity_closed": false,
+        "c6_closed": false,
+        "common_alpha_closed": false,
+        "common_weighted_operator_domain_closed": false,
+        "continuum_closed": false,
+        "cutoff_uniformity_closed": false,
+        "direct_d_delta_d_cauchy_closed": false,
+        "exhaustion_independence_closed": false,
+        "hamiltonian_os_identification_closed": false,
+        "kms_gns_gap_closed": false,
+        "pre_a_closed": false,
+        "sector_a_closed": false,
+        "source_uniformity_beyond_parent_scope_closed": false,
+        "volume_uniformity_beyond_parent_scope_closed": false
+      },
+      "expected": "all false",
+      "group": "scope",
+      "name": "open promotion firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "events": [],
+        "negatives": [],
+        "no_changelog_event": true,
+        "no_new_negative": true,
+        "no_new_result": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "results": []
+      },
+      "expected": "no result/no tier change",
+      "group": "scope",
+      "name": "no result or tier mutation",
+      "status": "PASS"
+    }
+  ],
+  "assumptions": [
+    "The force inequality and its constant are used exactly within the finite fixture and scope of EXP-001059.",
+    "The endpoint third-moment bound M_bridge is used exactly within the fixed-beta periodic zero-source scope of EXP-001060.",
+    "Each scalar history coefficient satisfies |a_e|<=w_e with w_e>=0.",
+    "The state-weighted L4 norm is homogeneous; an eventual edge sum may use the triangle inequality only after its state/domain contract is supplied.",
+    "All derived constants are recomputed from the two parent manifests rather than copied as independent inputs."
+  ],
+  "audit_id": "PA-CP1-ST8-Q3LOCK-STATE-WEIGHTED-EDGE-MAJORANT-COMPOSITION",
+  "boundary": "This package discharges only a restricted state-weighted edge-majorant interface by composing already registered finite/conditional Q3 inputs. It does not prove an actual Q3LOCK operator norm, history recurrence, common weighted domain, common core, exhaustion, common alpha, OS/KMS/GNS dynamics, physical sector, continuum, C6, Sector-A, Pre-A or mass gap.",
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "derived": {
+    "A0": "2",
+    "C0": "5",
+    "C4_edge": "29115196389063882279731/77341623582720",
+    "C_L4_edge_formula": "(force_constant^4*D^3*M_bridge)^(1/4)",
+    "D": "40/3",
+    "M_bridge": "1179",
+    "actual_q3_history_identification_closed": false,
+    "actual_q3_operator_norm_majorant_closed": false,
+    "common_alpha_closed": false,
+    "common_weighted_operator_domain_closed": false,
+    "conditional_state_weighted_edge_majorant_closed": true,
+    "force_constant": "122099/35840",
+    "g": "3/5",
+    "m5": "3",
+    "max_abs_coefficient_over_weight": "1",
+    "pair_count": 5,
+    "pre_a_closed": false,
+    "sector_a_closed": false
+  },
+  "evidence_level": "T0 exact conditional state-weighted fourth-power composition",
+  "exploration_id": "EXP-001320",
+  "missing_assumptions": [
+    "A source-owned Q3LOCK history construction that supplies the coefficients a_e and shell weights w_e for every actual edge and both orientations.",
+    "A common unbounded-domain definition that turns the finite local-force L4 interface into the required operator or form seminorm.",
+    "Source-, beta-, cutoff-, volume-, shape-, phase- and history-uniform moment and force constants beyond the parent scopes.",
+    "A two-sided product/Volterra estimate, all-shape exhaustion Cauchy theorem and common-alpha identification.",
+    "OS/KMS/GNS identification, sector coercivity, physical-empty comparison, continuum, Yang--Mills and mass-gap conclusions."
+  ],
+  "non_claims": [
+    "No actual Q3LOCK commutator or history term is shown to satisfy the coefficient hypothesis.",
+    "The fourth root is a symbolic L4 constant, not a new uniform numerical estimate.",
+    "The fixed-beta periodic zero-source parent scopes are not extended to compact sources, arbitrary boundaries, beta limits or thermodynamic volume.",
+    "No operator norm, common-core, Lie-Robinson, Volterra, Duhamel, exhaustion, KMS/GNS, physical-empty, Yang--Mills or mass-gap conclusion follows.",
+    "The established research method and owner order remain unchanged."
+  ],
+  "run_kind": "primary",
+  "schema": "tect/foundation-audit/1.0",
+  "source_hashes": {
+    "force_parent": "22ebca9d2064e66ce030db357bcb25be7f1f3107dd4dd631d5ccf15ca98b4887",
+    "manifest": "94d650422aeb74221805e3d99626a809a3ed72ca2e7e3a5de1e5307ee3739080",
+    "moment_parent": "254d061b4fde8eafc358976b1059e98d76f59db2b807f86304c2e6d4dd0ac4bb",
+    "script": "1cd7a8c0a3bdd331f36128d89ecd0be8edf95800840c0d447fc18882fd8efb9b",
+    "tail_parent": "7d2abc5c8b10370f21474fbe633e198c064b594572bd59dbc2d83681b61bc12a"
+  },
+  "task_id": "T-054",
+  "verdict": "PASS"
+}
