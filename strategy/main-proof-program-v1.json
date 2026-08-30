@@ -604,13 +604,21 @@
     "authority_state": "VERIFIED_PENDING_WORKTREE_NOT_YET_DURABLE_GIT_OR_REMOTE_AUTHORITY"
   },
   "completion_checkpoint": {
-    "status": "PENDING",
-    "verified_parent_head": null,
-    "verified_at_utc": null,
+    "status": "COMPLETE",
+    "verified_parent_head": "852b3d1c749241ba2114ec5ecaa2ead46782fcce",
+    "verified_at_utc": "2026-08-30T12:33:35Z",
     "branch": "main",
     "remote": "tect",
     "remote_ref": "refs/heads/main",
-    "expected_authority_counts": null,
+    "expected_authority_counts": {
+      "claims": 49,
+      "gates_and_hypotheses": 208,
+      "results": 281,
+      "negative_records": 375,
+      "explorations": 1315,
+      "changelog_events": 796,
+      "tasks": 61
+    },
     "requirements": [
       "doctor PASS",
       "release_check PASS",
@@ -680,7 +688,9 @@
       "EXP-001314 is locally recorded as a T0 GTS input/runtime readiness audit: 14/14 bytes match, 1/6 required modules are available, and event execution remains firewalled; release-gated commit and strict baseline refresh are pending.",
       "The release-gated EXP-001314 content commit 2f4b85aa778ef9cb923c10d9cb20d1af8a7b6d2f was created after release_check PASS and pushed to tect/main; the checkpoint is being refreshed against that content head.",
       "EXP-001314 confirms 14/14 hash-pinned input products while only 1/6 required GTS modules are available; the runtime gap remains an execution prerequisite, not a physical or mathematical no-go.",
-      "EXP-001315 directly executes public likelihood.py with source hash 38c2059d9783d86ebbb3cd2fe3d7a6c0459db2ad0497860caae015acb0b77a1e; finite code evidence advances to T0 while the full event runtime and physical owner remain open."
+      "EXP-001315 directly executes public likelihood.py with source hash 38c2059d9783d86ebbb3cd2fe3d7a6c0459db2ad0497860caae015acb0b77a1e; finite code evidence advances to T0 while the full event runtime and physical owner remain open.",
+      "The release-gated T-061 EXP-001315 direct public-likelihood execution commit 852b3d1c7 was created after release_check PASS and pushed to tect/main.",
+      "EXP-001315 executes the hash-pinned public likelihood.py calculate path with exact source bytes, independent transcription, hostile count mutation and prethreshold checks; it remains T0 code evidence with no event or physical promotion."
     ]
   },
   "stopped_loop_registry": [
