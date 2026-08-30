@@ -1,0 +1,217 @@
+{
+  "schema": "tect/pre-a-candidate-manifest/0.3",
+  "candidate_id": "PA-M5-ISOLATED-NODE-CHIRAL-HAMILTONIAN-v0",
+  "candidate_family": "M5-SYMMETRY-PROTECTED-ISOLATED-NODE",
+  "package_version": "0.1.0",
+  "issued": "2026-08-30",
+  "authority": "T0 additive Pre-A design manifest; it is not a replacement for an existing method, a registered TECT action, a claim, a result, a tier change, or a physical-law identification.",
+  "claim_bearing": false,
+  "task_id": "T-054",
+  "status": "DESIGN_ONLY_NOT_ADMITTED",
+  "preserves_existing_methods": {
+    "forward_T054": true,
+    "inverse_T059": true,
+    "owner_order": true,
+    "finite_uniform_physical_layer_firewall": true,
+    "stopped_loop_rules": true
+  },
+  "relation_to_existing_candidates": "This is a structurally distinct additive M5 candidate beside M0, M1, M2, the previously screened PA-M5-NL3-SV-v0, and PA-M3-COMPACT-U1-HAMILTONIAN-v0. It does not repair, retune, supersede, or reinterpret any existing candidate or result.",
+  "statement": "A finite periodic three-dimensional two-component-block lattice field with a Wilson-regularized chiral Dirac symbol, positive conservative Hamiltonian dynamics, and an explicit finite observable map supplies a candidate whose zero of the one-particle symbol is isolated at the prescribed origin of the Brillouin grid. The chiral involution is intended to protect the zero against symmetry-preserving mass terms, but every protection, dynamical, limit, and observation statement remains an admission obligation.",
+  "finite_scope": {
+    "lattice": "Lambda_(L,a)=(a Z/L a Z)^3 with finite integer L>=2 and spacing a>0",
+    "momentum_grid": "K_(L,a)=(2 pi/(L a))*{0,...,L-1}^3 modulo the reciprocal lattice",
+    "boundary_condition": "periodic in all three spatial directions",
+    "volume": "(L a)^3",
+    "time_boundary": "finite Hamiltonian-time intervals [0,T] with finite-energy initial data",
+    "regulator": "finite lattice spacing a and finite site count L^3; no continuum or thermodynamic removal is included",
+    "normalization": "the displayed real symplectic form and Hamiltonian are the sole finite normalization for this candidate",
+    "finite_parts": "none beyond the displayed bare parameters; no counterterm or external normalization is silently imported",
+    "limit_order": "not admitted; a future order must state a->0, L a->infinity, interaction renormalization, and temporal limits separately"
+  },
+  "degrees_of_freedom": {
+    "field": "z_x in C^4, viewed as a four-component lattice spinor at each site",
+    "canonical_momentum": "p_x in C^4 canonically paired with z_x",
+    "configuration_space": "C^(4 L^3) x C^(4 L^3) before any ensemble or quantum representation",
+    "internal_matrices": "Hermitian alpha_1, alpha_2, alpha_3, beta, Gamma in C^(4x4) satisfying the listed Clifford relations",
+    "symmetries": "global phase z_x->exp(i theta)z_x and chiral involution z_x->Gamma z_x; no local gauge links or local gauge redundancy",
+    "quantum_status": "no quantum Hilbert-space, representation, measure, or unbounded-operator-domain claim is admitted"
+  },
+  "symbol_and_node_contract": {
+    "symbol": "h_(m,r,a)(k)=sum_i sin(k_i a) alpha_i + (m+r*sum_i(1-cos(k_i a))) beta",
+    "parameter_domain": "r>0, m=0, lambda>=0, eta>0, and a>0",
+    "chiral_relation": "Gamma^2=I and Gamma h_(0,r,a)(k) Gamma=-h_(0,r,a)(k)",
+    "clifford_relations": "{alpha_i,alpha_j}=2 delta_ij I, {alpha_i,beta}=0, and Gamma anticommutes with every alpha_i and beta",
+    "isolated_node_target": "h_(0,r,a)(k)=0 on K_(L,a) if and only if k=0 modulo the reciprocal lattice",
+    "local_dispersion_target": "the smallest singular value of h_(0,r,a)(k) is linear in |k| at k=0 to leading order and is strictly positive at every nonzero grid momentum",
+    "protection_scope": "only perturbations preserving the declared chiral relation and the pinned m=0 convention are in the protected-node test; arbitrary perturbations are not covered",
+    "finite_proof_status": "not yet independently audited; these are candidate equations and proof obligations, not a closed node theorem"
+  },
+  "functional_and_dynamics": {
+    "fourier_operator": "D_(L,a) is the translation-invariant finite operator with Fourier symbol h_(0,r,a)(k); Q_(L,a)=D_(L,a)^dagger D_(L,a)>=0",
+    "finite_hamiltonian": "H=sum_x |p_x|^2/2 + <z,Q_(L,a) z>/2 + lambda*sum_x ||z_x||^4/4 + eta*sum_x ||z_x||^6/6",
+    "parameter_domain": "r>0, lambda>=0, eta>0, with m=0 fixed before any target is inspected",
+    "symplectic_convention": "omega=2 Re sum_x dp_x^dagger wedge dz_x",
+    "generator": "L_H f={f,H} on the finite real phase space; Phi_t is the Hamiltonian flow",
+    "equations_of_motion": "dot z_x=partial_(p_x^*) H and dot p_x=-partial_(z_x^*) H under the declared real convention",
+    "conservation_contract": "H and the global phase and chiral symmetry charges are required to be preserved by Phi_t; this is a design obligation pending audit",
+    "coercivity_contract": "eta>0 supplies finite-dimensional radial coercivity, while Q_(L,a)>=0 supplies the quadratic spatial part",
+    "reference_state": "R0: z=0 and p=0 under the identical finite H, volume, normalization, and periodic boundary convention",
+    "physical_empty_status": "R0 is a mathematical reference only and is not identified with physical empty space or a Reading-H E branch"
+  },
+  "observable_map": {
+    "F_reg": {
+      "status": "DEFINED_AS_A_FINITE_CONTRACT",
+      "inputs": "(H, Phi_t, initial finite-energy ensemble or state, L, a, boundary condition, chiral sector)",
+      "outputs": [
+        "node-resolved spectral density built from the Fourier modes near k=0",
+        "dispersion estimator s_(L,a)(k)=smallest eigenvalue of h_(0,r,a)(k)^2",
+        "local density n_x(t)=||z_x(t)||^2",
+        "chiral density c_x(t)=z_x(t)^dagger Gamma z_x(t)",
+        "global phase current and translation-resolved two-time correlations C_AB(t)",
+        "finite response and relaxation estimands formed from the listed observables"
+      ],
+      "uncertainty": "must be supplied by a declared ensemble, integrator, or quantum state; none is inserted here",
+      "status_boundary": "a finite observable definition is not a finite measured result"
+    },
+    "F_lim": {
+      "status": "MISSING",
+      "required": "a common a->0 and L a->infinity construction with uniform node stability, interaction control, renormalization, and an explicit order of limits",
+      "current_nonclaim": "no continuum dispersion, thermodynamic phase, or regulator-independent node is asserted"
+    },
+    "F_eff": {
+      "status": "MISSING",
+      "required": "a candidate-neutral map from finite or limiting node correlators to an effective QFT target with errors, field normalization, and nuisance parameters",
+      "current_nonclaim": "a chiral lattice symbol is not an identification with a relativistic QFT, Yang--Mills theory, or the Standard Model"
+    },
+    "F_obs": {
+      "status": "MISSING",
+      "required": "a source-owned calibration and prospective holdout map from the node observables to laboratory, astrophysical, or cosmological data",
+      "current_nonclaim": "no observation is fitted, reproduced, or predicted"
+    },
+    "candidate_neutral_estimand": "A future comparison must freeze a two-time node or chiral observable before candidate scoring; static node existence alone cannot select the dynamics"
+  },
+  "input_prediction_accounting": {
+    "inserted_inputs": [
+      "three spatial dimensions and the periodic cubic regulator",
+      "four-component complex lattice field and canonical momentum",
+      "the Clifford matrices and chiral involution",
+      "the Wilson symbol, m=0 pinning, r, lambda, and eta",
+      "the displayed Hamiltonian, symplectic convention, and finite observable definitions"
+    ],
+    "fitted_inputs": [],
+    "derived_finite_targets_not_yet_proved": [
+      "the isolated-node iff statement on every declared momentum grid",
+      "the chiral symmetry and its persistence under the nonlinear Hamiltonian",
+      "finite-flow existence, uniqueness, and energy conservation",
+      "strict positivity away from the node and the local linear dispersion coefficient",
+      "candidate-neutral dynamic identifiability against M0, M1, M2, M3, and the screened M5 baseline"
+    ],
+    "predicted_physical_outputs": [],
+    "holdout_prediction": false,
+    "data_role": "THEORY/DESIGN ONLY"
+  },
+  "assumptions": [
+    "The finite lattice, momentum representatives, Clifford relations, and matrix ordering are exactly those displayed in this manifest.",
+    "The mass parameter m=0 is fixed before any target or holdout is viewed.",
+    "The future proof owner treats the node statement as a finite mathematical obligation, not as a physical dispersion claim.",
+    "Any statistical or quantum realization is versioned separately rather than inferred from this classical Hamiltonian contract."
+  ],
+  "missing_assumptions": [
+    "An authorized source owner and independently hash-pinned implementation of the symbol and Hamiltonian flow.",
+    "Primary, independent, hostile, and Lean audits of the Clifford algebra, node uniqueness, chiral protection, and finite-flow conservation.",
+    "A declared state or ensemble, representation if quantum, and complete uncertainty/covariance/nuisance contract.",
+    "Uniform finite-to-continuum and thermodynamic estimates, counterterms, and a declared limit order.",
+    "A complete F_lim/F_eff/F_obs map with candidate-neutral calibration and a prospective holdout.",
+    "A common discriminator comparison against M0, M1, M2, PA-M3-COMPACT-U1-HAMILTONIAN-v0, and the previously screened PA-M5-NL3-SV-v0.",
+    "A proof that the isolated node is not a finite-grid or Wilson-parameter artefact under the eventual limit contract."
+  ],
+  "preregistered_falsifiers": [
+    {
+      "id": "M5-NODE-CLIFFORD",
+      "question": "Do the declared matrices satisfy the exact anticommutation and involution relations?",
+      "failure": "Any failed relation rejects this candidate version before node or dynamical scoring."
+    },
+    {
+      "id": "M5-NODE-UNIQUENESS",
+      "question": "Does h_(0,r,a)(k)=0 occur at a momentum other than k=0 on the declared finite grid?",
+      "failure": "Any extra zero changes the candidate to a multi-node version and stops this version."
+    },
+    {
+      "id": "M5-CHIRAL-PROTECTION",
+      "question": "Does the declared nonlinear Hamiltonian preserve the chiral involution and the zero-node pinning under symmetry-preserving perturbations?",
+      "failure": "A symmetry or pinning failure rejects the protected-node interpretation."
+    },
+    {
+      "id": "M5-HAMILTONIAN-COERCIVITY",
+      "question": "Is the finite Hamiltonian bounded below and does its flow exist uniquely on the stated interval?",
+      "failure": "A failure leaves the candidate design-only and unadmitted."
+    },
+    {
+      "id": "M5-DYNAMIC-DISCRIMINATOR",
+      "question": "Can a frozen candidate-neutral two-time node or chiral observable distinguish this dynamics from static-equivalent candidates without target leakage?",
+      "failure": "If not, report the surviving mobility equivalence class rather than selecting this candidate."
+    },
+    {
+      "id": "M5-CONTINUUM-ROBUSTNESS",
+      "question": "Does isolated-node control survive the declared regulator and volume limit order with uniform errors?",
+      "failure": "A failure blocks F_lim and every physical promotion; finite evidence remains design-level only."
+    },
+    {
+      "id": "M5-OBSERVATION-HOLDOUT",
+      "question": "Does an unused holdout follow from the frozen candidate map without post-disclosure tuning?",
+      "failure": "No holdout credit and no Pre-A exit."
+    }
+  ],
+  "adversarial_review": [
+    {
+      "axis": "method-overhaul",
+      "check": "Could this candidate silently replace the established T-054 forward or T-059 inverse method?",
+      "disposition": "DISMISSED: it is additive, design-only, and explicitly preserves both methods and their owner order."
+    },
+    {
+      "axis": "isolated-node-overclaim",
+      "check": "Could a declared zero of a finite lattice symbol be called a physical Weyl/Dirac particle or a continuum cone?",
+      "disposition": "UPHELD-OPEN: the node is a finite design target and no physical or continuum identity is admitted."
+    },
+    {
+      "axis": "symmetry-protection",
+      "check": "Could the word chiral imply protection without proving the matrix algebra and perturbation class?",
+      "disposition": "UPHELD-OPEN: both the algebra and the allowed perturbations remain explicit audit obligations."
+    },
+    {
+      "axis": "finite-to-continuum",
+      "check": "Could finite-grid uniqueness be promoted to regulator-independent node survival?",
+      "disposition": "UPHELD-OPEN: F_lim is missing and the limit order is unfrozen."
+    },
+    {
+      "axis": "static-to-dynamic-selection",
+      "check": "Could node existence select a dynamics without a time-dependent estimand?",
+      "disposition": "UPHELD-OPEN: a candidate-neutral two-time map and source owner are required."
+    },
+    {
+      "axis": "parameter-fitting",
+      "check": "Could r, lambda, eta, or the mass pinning be tuned after target disclosure?",
+      "disposition": "UPHELD: all are inserted design inputs and no fit or prediction credit is available."
+    },
+    {
+      "axis": "physical-empty",
+      "check": "Could R0 be relabeled as physical empty space or Reading-H E?",
+      "disposition": "DISMISSED: the manifest forbids that identification."
+    },
+    {
+      "axis": "Lean-promotion",
+      "check": "Could the un-audited Clifford and node formulas be called formally verified?",
+      "disposition": "DISMISSED: no Lean result is claimed; a future four-lane audit is an admission prerequisite."
+    }
+  ],
+  "acceptance": "Admit only after a new versioned source owner, four-lane finite audit (primary, independent, hostile, Lean), exact node and symmetry checks, complete state and uncertainty contract, complete F_reg/F_lim/F_eff/F_obs map, common discriminator comparison, and a genuinely prospective holdout frozen before target disclosure.",
+  "candidate_verdict": "RETAIN AS AN ADDITIVE ISOLATED-NODE DESIGN CANDIDATE; NOT ADMITTED, NOT SELECTED, AND NOT A PHYSICAL MODEL",
+  "next_action": "Keep T-054/T-059 methods unchanged. If an owner accepts this version, audit the Clifford, isolated-node, chiral, and finite-conservative contracts with primary, independent, hostile, and Lean lanes; otherwise retain it as the required structurally distinct design alternative while the existing T-054 Q3LOCK owner intake and T-059/T-061 runtime/map gates proceed.",
+  "non_claims": [
+    "This manifest does not change the existing research method, candidate identities, owner order, or promotion firewalls.",
+    "It does not prove the isolated-node iff statement, chiral protection, finite-flow well-posedness, or any uniform limit.",
+    "It does not identify the lattice symbol with a relativistic QFT, Yang--Mills theory, gravity, the Standard Model, Pre-A, C6, Sector-A, or a physical vacuum.",
+    "It does not select a candidate, fit parameters, reproduce observations, or provide prospective holdout credit.",
+    "It does not evaluate Reading-H stationarity, physical-empty sign, transverse stability, a mass gap, or a theory of everything."
+  ]
+}
