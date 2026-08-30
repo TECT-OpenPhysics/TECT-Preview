@@ -208,6 +208,11 @@
         "path": "verification/scripts/audit_gts_platform_compatibility.py",
         "sha256": "ce0350b1d6016b47734bb19eb08c36caf75c545c32d769946884eab916e8a4f3",
         "role": "Reproducible GTS dependency/platform compatibility audit tool"
+      },
+      {
+        "path": "strategy/p1-continuation-method-preservation-exploration.json",
+        "sha256": "ec3133d838173f9d6d35ff6f000715e44e24a84f5773930bf60840f36e8aca14",
+        "role": "P1 continuation packet preserving the established T-054 and T-059 methods (EXP-001317)"
       }
     ],
     "semantic": [
@@ -571,7 +576,7 @@
         "P6": "UNSTARTED",
         "P7": "UNSTARTED"
       },
-      "scientific_frontier": "P1 ACTIVE under the existing T-054 method; no admitted owner-complete microscopic dynamics or map",
+      "scientific_frontier": "P1 ACTIVE under the existing T-054 method; R-445 is a reusable conditional scalar-to-operator transfer, but the actual owner-level Q3LOCK common-domain majorant and uniform history transfer remain missing; EXP-001317 records the next analytic-only step.",
       "next_gate_after_p0r": "P1 evidence-role and dynamic-owner intake freeze"
     },
     "inverse": {
@@ -588,7 +593,7 @@
         "P6": "UNSTARTED",
         "P7": "UNSTARTED"
       },
-      "scientific_frontier": "P1 ACTIVE under the additive T-059 method; nine event-product hashes, a candidate-neutral estimator interface and a source-header metadata audit are pinned, but source statistical/calibration ownership and the prospective lock remain absent, with zero microscopic forward maps admitted; EXP-001305 adds hash-pinned event-day Fermi position/attitude and N0/B0 spectral-history owner candidates with header/schema and TT-second coverage checks, but conversion, validity, covariance, likelihood and prospective lock remain absent; EXP-001306 adds hash-pinned N0/B0 rsp2 response histories with one EBOUNDS plus eight numbered response segments per detector and TT-second trigger-window coverage, but matrix values, validity/interpolation, conversion, covariance, likelihood and prospective lock remain absent; EXP-001307 adds an official-semantics owner-request contract with explicit admission stop, but no response values, validity/interpolation, conversion, uncertainty, likelihood/covariance, nuisance law or score is admitted; EXP-001308 enumerates the official software/time option set and makes package defaults, boundary handling, Earth orientation and propagation uncertainty explicit owner fields, still without statistical admission; EXP-001309 records the primary published 0.310 +/- 0.048 s pulse-fit onset, -3.176 ms Fermi-minus-geocenter anchor, +1.74 +/- 0.05 s corrected delay and standard analysis window as retrospective provenance only, while the reproducible pulse estimator, propagation algorithm, covariance and source-owner uncertainty packet remain missing; EXP-001310 adds the official P1900186 Lambda signal-versus-background statistic and R association ranking with empirical O1/O2 background calibration as a finite statistical-owner candidate, but it is not a continuous Delta_t_det likelihood and does not fill propagation, response, covariance, nuisance or prospective fields.",
+      "scientific_frontier": "P1 ACTIVE under the additive T-059 method; EXP-001316 fixes the exact healpy~=1.18.0 package/platform execution boundary, and a supported environment or pinned source-build lock plus complete observation map remain required before event-free scoring; EXP-001317 records the continuation rule.",
       "next_gate_after_p0r": "P1 observation-source, target, covariance, lineage, and holdout freeze"
     }
   },
@@ -624,21 +629,13 @@
     "authority_state": "VERIFIED_PENDING_WORKTREE_NOT_YET_DURABLE_GIT_OR_REMOTE_AUTHORITY"
   },
   "completion_checkpoint": {
-    "status": "COMPLETE",
+    "status": "PENDING",
     "verified_parent_head": "f0929e456918a5b694234799a48091030ae10bbd",
     "verified_at_utc": "2026-08-30T13:05:06.841311Z",
     "branch": "main",
     "remote": "tect",
     "remote_ref": "refs/heads/main",
-    "expected_authority_counts": {
-      "claims": 49,
-      "gates_and_hypotheses": 208,
-      "results": 281,
-      "negative_records": 375,
-      "explorations": 1316,
-      "changelog_events": 796,
-      "tasks": 61
-    },
+    "expected_authority_counts": null,
     "requirements": [
       "doctor PASS",
       "release_check PASS",
@@ -713,7 +710,8 @@
       "EXP-001315 executes the hash-pinned public likelihood.py calculate path with exact source bytes, independent transcription, hostile count mutation and prethreshold checks; it remains T0 code evidence with no event or physical promotion.",
       "EXP-001316 records the exact astro-gdt healpy~=1.18.0 package/platform boundary: PyPI has no Windows wheel and conda-forge has no win-64 1.18.0 artifact; this remains a T0 execution prerequisite and does not change T-054/T-059 methods.",
       "The release-gated T-061 / EXP-001316 commit f0929e456918a5b694234799a48091030ae10bbd was created after release_check PASS.",
-      "git push tect main advanced refs/heads/main to f0929e456918a5b694234799a48091030ae10bbd; a live git ls-remote read returned the same SHA before this checkpoint refresh."
+      "git push tect main advanced refs/heads/main to f0929e456918a5b694234799a48091030ae10bbd; a live git ls-remote read returned the same SHA before this checkpoint refresh.",
+      "EXP-001317 records the P1 continuation packet and preserves the existing T-054/T-059 methods, owner order, stopped-loop rules and promotion firewalls; the checkpoint is pending until the release-gated content commit and remote verification complete."
     ]
   },
   "stopped_loop_registry": [
@@ -799,7 +797,8 @@
       "EXP-001313 completes a synthetic primary/independent/hostile audit of the pinned GTS finite likelihood transcription: full-array and marginal deltas are 4.547e-13, a +7 count mutation changes the marginal by 45.681982, and no external event/template bytes or dependencies are substituted; event-level, continuous, physical and prospective fields remain locked.",
       "EXP-001314 verifies all 14 hash-pinned event/owner products byte-for-byte and keeps matrix values unread, while the current CPython 3.12.9 audit interpreter exposes only NumPy of six required GTS import modules; this is a T0 readiness boundary, not an event or physical result.",
       "EXP-001315 directly executes the hash-pinned public GTS likelihood.py calculate path on the synthetic fixture: source hash, AST utils isolation, finite execution, independent transcription, hostile count mutation and prethreshold branch all PASS. This is T0 code-level calibration/provenance only; full GTS/GDT runtime, event bytes, response values, timing, covariance, prospective scoring and physical fields remain unadmitted.",
-      "EXP-001316 confirms that the exact astro-gdt healpy~=1.18.0 contract has no queried Windows wheel or conda win-64 1.18.0 artifact; this is an additive T-061 execution boundary, not a scientific no-go or a method change."
+      "EXP-001316 confirms that the exact astro-gdt healpy~=1.18.0 contract has no queried Windows wheel or conda win-64 1.18.0 artifact; this is an additive T-061 execution boundary, not a scientific no-go or a method change.",
+      "EXP-001317 records the P1 continuation boundary without changing the established methods: T-054 must derive an actual owner-level Q3LOCK common-domain per-edge/history-tail majorant, while T-059/T-061 must obtain an exact supported GTS/GDT environment or pinned source-build lock before any event-free score."
     ],
     "deliverables": [
       "one owner-intake card with explicit missing fields",
@@ -828,7 +827,7 @@
       "It does not prove Pre-A, C6, A13, Sector A, QFT, Yang-Mills, gravity, a physical mass gap, or a theory of everything.",
       "A dynamic discriminator at finite regulator does not prove continuum or physical identity."
     ],
-    "next_action": "T-061 remains P1-active: obtain a separately reproducible supported-platform GTS/GDT environment lock or a fully pinned Windows source-build lock for healpy~=1.18.0, Astropy, gdt.core and gdt.missions.fermi.gbm; rerun readiness, then execute the finite event-free response-index/likelihood primary, independent and hostile packet. Keep response selection, calibration validity, detector-to-geocenter, covariance, intrinsic-lag, prospective and physical-identity fields locked, and continue unchanged T-054 owner intake and T-059 observation/holdout firewalls in parallel."
+    "next_action": "Continue unchanged T-054 forward owner intake by deriving the actual Q3LOCK per-edge commutator/history-tail majorant on the declared common weighted domain; do not issue equivalent finite tables. Continue unchanged T-059/T-061 inverse intake by obtaining the exact supported GTS/GDT environment or fully pinned source-build lock, then rerun readiness before any event-free response-index/likelihood packet. Keep response selection, calibration validity, detector-to-geocenter, covariance, nuisance, prospective and physical-identity fields locked."
   },
   "resume_algorithm": [
     "Capture UTC date and run doctor.py.",
