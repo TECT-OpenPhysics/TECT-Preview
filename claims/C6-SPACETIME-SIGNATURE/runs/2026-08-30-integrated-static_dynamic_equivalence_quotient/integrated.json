@@ -1,0 +1,449 @@
+{
+  "assertion_count": 29,
+  "assertions": [
+    {
+      "actual": [
+        "R-448",
+        "EXP-001321",
+        "T-061",
+        false,
+        "T0"
+      ],
+      "expected": "R-448/EXP-001321/T-061/false/T0",
+      "group": "provenance",
+      "name": "identity",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "existing_forward_methods_unchanged": true,
+        "inverse_lane_additive": true,
+        "no_claim_tier_change": true,
+        "no_new_q3lock_finite_table": true,
+        "no_physical_empty_substitution": true,
+        "source_owner_order_unchanged": true
+      },
+      "expected": "all true",
+      "group": "method-firewall",
+      "name": "method preservation",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "c6_closed": false,
+        "f_reg_f_lim_f_eff_f_obs_closed": false,
+        "finite_estimand_separation": true,
+        "holdout_prediction": "NOT_ASSESSED",
+        "no_new_negative_result": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "physical_identity": false,
+        "physical_observable_map_admitted": false,
+        "pre_a_closed": false,
+        "production_generator_admitted": false,
+        "sector_a_closed": false,
+        "source_owner_admitted": false,
+        "stability_under_observation_error": "NOT_ASSESSED",
+        "stability_under_regulator_change": "NOT_ASSESSED",
+        "static_fit_existence": "PASS_FOR_TWO_REGISTERED_FINITE_WITNESSES",
+        "static_identifiability": "NON_IDENTIFIABLE"
+      },
+      "expected": "non-identifiable and unowned",
+      "group": "boundary",
+      "name": "static class boundary",
+      "status": "PASS"
+    },
+    {
+      "actual": "E:\\Dev\\TECT\\verification\\lean\\Tect\\R448.lean",
+      "expected": true,
+      "group": "Lean",
+      "name": "Lean source",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "static_equiv_refl",
+        "static_equiv_symm",
+        "static_equiv_trans",
+        "static_signature_inverse",
+        "maps_static_equivalent",
+        "maps_distinct",
+        "probe_separates",
+        "static_class_non_singleton"
+      ],
+      "expected": "all present",
+      "group": "Lean",
+      "name": "Lean markers",
+      "status": "PASS"
+    },
+    {
+      "actual": "forbidden tokens absent",
+      "expected": "clean",
+      "group": "Lean",
+      "name": "Lean firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-448 PRIMARY STATIC_DYNAMIC_EQUIVALENCE_QUOTIENT_AUDITED 24/24 class=non-singleton probe=separating\n",
+      "expected": "STATIC_DYNAMIC_EQUIVALENCE_QUOTIENT_AUDITED",
+      "group": "executables",
+      "name": "primary child",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-448 INDEPENDENT INDEPENDENT_STATIC_DYNAMIC_EQUIVALENCE_QUOTIENT_CONTROL 11/11\n",
+      "expected": "independent",
+      "group": "executables",
+      "name": "independent child",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-448 HOSTILE HOSTILE_MUTATIONS_REJECTED 8/8\n",
+      "expected": "hostile",
+      "group": "executables",
+      "name": "hostile child",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "independent source",
+      "group": "independence",
+      "name": "independent does not import primary",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          [
+            "1",
+            "2"
+          ],
+          [
+            "1",
+            "1/2"
+          ]
+        ],
+        [
+          [
+            "1",
+            "2"
+          ],
+          [
+            "1",
+            "1/2"
+          ]
+        ]
+      ],
+      "expected": "equal",
+      "group": "cross-check",
+      "name": "lane agreement static_signature",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          "1/2",
+          "1/4"
+        ],
+        [
+          "1/2",
+          "1/4"
+        ]
+      ],
+      "expected": "equal",
+      "group": "cross-check",
+      "name": "lane agreement map_a_factors",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          "1/4",
+          "1/2"
+        ],
+        [
+          "1/4",
+          "1/2"
+        ]
+      ],
+      "expected": "equal",
+      "group": "cross-check",
+      "name": "lane agreement map_b_factors",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          "1",
+          "0"
+        ],
+        [
+          "1",
+          "0"
+        ]
+      ],
+      "expected": "equal",
+      "group": "cross-check",
+      "name": "lane agreement probe",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          "1/2",
+          "0"
+        ],
+        [
+          "1/2",
+          "0"
+        ]
+      ],
+      "expected": "equal",
+      "group": "cross-check",
+      "name": "lane agreement probe_a",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          "1/4",
+          "0"
+        ],
+        [
+          "1/4",
+          "0"
+        ]
+      ],
+      "expected": "equal",
+      "group": "cross-check",
+      "name": "lane agreement probe_b",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        true,
+        true
+      ],
+      "expected": "equal",
+      "group": "cross-check",
+      "name": "lane agreement static_equivalent",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        true,
+        true
+      ],
+      "expected": "equal",
+      "group": "cross-check",
+      "name": "lane agreement maps_distinct",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        true,
+        true
+      ],
+      "expected": "equal",
+      "group": "cross-check",
+      "name": "lane agreement equivalence_relation_checked",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        true,
+        true
+      ],
+      "expected": "equal",
+      "group": "cross-check",
+      "name": "lane agreement static_class_non_singleton",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        true,
+        true
+      ],
+      "expected": "equal",
+      "group": "cross-check",
+      "name": "lane agreement finite_estimand_separates",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "NON_IDENTIFIABLE",
+        "NON_IDENTIFIABLE"
+      ],
+      "expected": "equal",
+      "group": "cross-check",
+      "name": "lane agreement static_identifiability",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "NOT_ASSESSED",
+        "NOT_ASSESSED"
+      ],
+      "expected": "equal",
+      "group": "cross-check",
+      "name": "lane agreement stability_under_observation_error",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "NOT_ASSESSED",
+        "NOT_ASSESSED"
+      ],
+      "expected": "equal",
+      "group": "cross-check",
+      "name": "lane agreement stability_under_regulator_change",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "NOT_ASSESSED",
+        "NOT_ASSESSED"
+      ],
+      "expected": "equal",
+      "group": "cross-check",
+      "name": "lane agreement holdout_prediction",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        false,
+        false
+      ],
+      "expected": "equal",
+      "group": "cross-check",
+      "name": "lane agreement source_owner_admitted",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        false,
+        false
+      ],
+      "expected": "equal",
+      "group": "cross-check",
+      "name": "lane agreement physical_identity",
+      "status": "PASS"
+    },
+    {
+      "actual": 8,
+      "expected": 8,
+      "group": "hostile",
+      "name": "hostile count",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "command": "lake env lean Tect/R448.lean",
+        "output": "",
+        "returncode": 0,
+        "status": "PASS"
+      },
+      "expected": "PASS",
+      "group": "Lean",
+      "name": "Lean compile",
+      "status": "PASS"
+    }
+  ],
+  "assumptions": [
+    "The finite static signature is exactly the registered two-coordinate hessian/covariance pair.",
+    "The two diagonal factor pairs are comparison dynamics only and are not identified with a canonical production generator.",
+    "Static equivalence forgets dynamic factors by definition and therefore describes an equivalence class, not a unique model.",
+    "The probe is a finite algebraic one-step proxy; the time label is explicitly not physical time.",
+    "Exact rational arithmetic and the pinned Lean toolchain are available for the declared finite witness."
+  ],
+  "boundary": "R-448 is a finite abstract quotient interface. It proves that the registered static signature admits a non-singleton comparison class and that a declared finite one-step proxy separates two representatives. It does not choose a representative, infer Pre-A from observations, supply any missing production owner, or close T-061, T-054, C6, Sector-A, QFT, Yang--Mills, gravity, continuum or mass-gap gates.",
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "derived": {
+    "equivalence_relation_checked": true,
+    "finite_estimand_separates": true,
+    "holdout_prediction": "NOT_ASSESSED",
+    "map_a_factors": [
+      "1/2",
+      "1/4"
+    ],
+    "map_b_factors": [
+      "1/4",
+      "1/2"
+    ],
+    "maps_distinct": true,
+    "physical_identity": false,
+    "probe": [
+      "1",
+      "0"
+    ],
+    "probe_a": [
+      "1/2",
+      "0"
+    ],
+    "probe_b": [
+      "1/4",
+      "0"
+    ],
+    "source_owner_admitted": false,
+    "stability_under_observation_error": "NOT_ASSESSED",
+    "stability_under_regulator_change": "NOT_ASSESSED",
+    "static_class_non_singleton": true,
+    "static_equivalent": true,
+    "static_identifiability": "NON_IDENTIFIABLE",
+    "static_signature": [
+      [
+        "1",
+        "2"
+      ],
+      [
+        "1",
+        "1/2"
+      ]
+    ]
+  },
+  "evidence_level": "T0 / EXACT FINITE STATIC-EQUIVALENCE QUOTIENT WITH INDEPENDENT, HOSTILE AND LEAN CROSS-CHECKS",
+  "exploration_id": "EXP-001321",
+  "lean": {
+    "command": "lake env lean Tect/R448.lean",
+    "output": "",
+    "returncode": 0,
+    "status": "PASS"
+  },
+  "manifest": "strategy/pre-a-static-dynamic-equivalence-quotient-manifest.json",
+  "missing_assumptions": [
+    "A hash-pinned source-owned generator or transfer operator.",
+    "A state, physical projection, time boundary, heat-root map and filtration owned by the production source.",
+    "A raw-current spatial intertwiner and one-use production q-ledger.",
+    "A complete F_reg/F_lim/F_eff/F_obs observation map with uncertainty and nuisance model.",
+    "Regulator and volume stability, prospective holdout data, and an immutable acceptance rule.",
+    "Any identification with QFT, Yang--Mills, gravity, a physical vacuum, continuum dynamics or a mass gap."
+  ],
+  "non_claims": [
+    "No unique microscopic dynamics is selected by the static signature.",
+    "No source-owned production dynamics, heat semigroup, filtration, raw-current map or q-ledger is supplied.",
+    "No observation likelihood, covariance, holdout prediction or empirical validation is performed.",
+    "No physical candidate, Pre-A, Sector-A, C6, QFT, Yang--Mills, gravity, continuum, cosmic-origin or mass-gap conclusion follows."
+  ],
+  "recorded_at": "2026-08-30T15:28:56.079392Z",
+  "result_id": "R-448",
+  "run_kind": "integrated",
+  "schema": "tect/pre-a-static-dynamic-equivalence-quotient-integrated/1.0",
+  "scope": {
+    "claim_bearing": false,
+    "finite_estimand_separates": true,
+    "hostile_mutations_rejected": true,
+    "independent_reconstruction_agrees": true,
+    "physical_identity": false,
+    "source_owner_admitted": false,
+    "static_class_non_singleton": true
+  },
+  "source_hashes": {
+    "codes/foundations/pre_a_static_dynamic_equivalence_quotient_hostile.py": "2138b070468d8a5fc9ab6b43e9979e99e59d1b9ec9ab1078ba53bd30ceecc94a",
+    "codes/foundations/pre_a_static_dynamic_equivalence_quotient_independent.py": "019817b01a27cb26b7c51709d2436bc8bc4041827f0f48d382bce7646d164dbf",
+    "strategy/pre-a-static-dynamic-equivalence-quotient-manifest.json": "57b8bc22f47d441d75016f6b6dc9a5ff25b6d64e0809aebf42092b0a71fdefe4",
+    "verification/lean/Tect/R448.lean": "35b89da0db4f992c5cd0a5108f3f7079c4e54d9bf9b8c5047c96b87cbe2e25f8",
+    "verification/scripts/pre_a_static_dynamic_equivalence_quotient.py": "17ab84df0598666ac210c5cb4d9831814b6d609fb8fa9645d51921ceab14c169"
+  },
+  "task_id": "T-061",
+  "verdict": "INTEGRATED_STATIC_DYNAMIC_EQUIVALENCE_QUOTIENT_AUDITED"
+}

@@ -5,10 +5,11 @@
 
 Authorities: `RESULTS-LEDGER.md`.
 
-**281 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
+**282 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
 
 | ID | Result | Tier/scope |
 |---|---|---|
+| [`R-448`](../RESULTS-LEDGER.md#r-448) | Static-equivalence quotient and separating finite dynamic estimand | T0 |
 | [`R-447`](../RESULTS-LEDGER.md#r-447) | HOLD-LC-001 set-valued delay envelope interface | T0 |
 | [`R-446`](../RESULTS-LEDGER.md#r-446) | OBS-LC-CAL-001 frozen row lineage and feasibility interface | T0 |
 | [`R-445`](../RESULTS-LEDGER.md#r-445) | Conditional scalar-to-operator tail transfer under a per-edge norm majorant | T0 |
@@ -33,7 +34,6 @@ Authorities: `RESULTS-LEDGER.md`.
 | [`R-426`](../RESULTS-LEDGER.md#r-426) | High-cutoff finite harmonic coarse-Schur stress (route-local boundary) | T0 |
 | [`R-425`](../RESULTS-LEDGER.md#r-425) | Expanded finite Q3 harmonic coarse-Schur stress | T0 |
 | [`R-424`](../RESULTS-LEDGER.md#r-424) | Finite two-block harmonic coarse Schur assembly | T0 |
-| [`R-423`](../RESULTS-LEDGER.md#r-423) | Finite directed boundary-capacity Cauchy envelope | T0 |
 
 Search without loading the full ledger:
 

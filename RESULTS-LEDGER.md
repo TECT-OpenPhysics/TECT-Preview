@@ -22,6 +22,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-448](#r-448) | Static-equivalence quotient and separating finite dynamic estimand | R-448 v1.0 is a T0 claim-nonbearing T-061 interface under EXP-001321. Equality of the registered static signature forms an explicit equivalence relation; two distinct positive finite representatives share that signature and are separated by the fixed one-step proxy at `(1,0)`. Primary 24/24, independent 11/11, hostile 8/8, integrated 29/29 and Lean R448 pass. Static data remain non-identifying; no source-owned dynamics, holdout prediction, physical, Pre-A, QFT, Yang--Mills or mass-gap claim follows |
 | [R-447](#r-447) | HOLD-LC-001 set-valued delay envelope interface | R-447 v1.0 is a T0 claim-nonbearing candidate-neutral feasibility audit under EXP-001299. The hash-pinned GW170817/GRB170817A timing packet is converted by exact rational interval subtraction into unweighted simultaneous `[169/100,179/100]`, ten-second `[-831/100,-821/100]`, and broad-exotic `[-99831/100,10179/100]` propagation-delay envelopes; primary 25/25, independent 13/13, hostile 12/12 and integrated 9/9 with Lean R447 pass. No likelihood, covariance, score, speed datum, candidate map, prospective credit, physical, Pre-A, Yang--Mills or mass-gap claim follows |
 | [R-446](#r-446) | OBS-LC-CAL-001 frozen row lineage and feasibility interface | R-446 v1.0 is a T0 claim-nonbearing source-lineage audit under EXP-001298. The hash-pinned arXiv:0801.0287v19 packet and complete isotropic-photon S3 slice (d=3..9) pass primary 60/60, independent 25/25, hostile 8/8, integrated 15/15 and the existing inverse-contract self-test. Likelihood, covariance, candidate maps and scoring remain unadmitted; no physical Lorentz, Pre-A, Sector-A, QFT, Yang--Mills or mass-gap claim follows |
 | [R-445](#r-445) | Conditional scalar-to-operator tail transfer under a per-edge norm majorant | R-445 v1.0 is a T0 claim-nonbearing finite conditional Banach-norm transfer under EXP-001297. With the explicit assumption `||K_e|| <= C*w(e)`, the triangle inequality transfers the R-444 scalar bound to `C*T(R)` across 343 boxes, 102900 edges and 4116 tail rows; primary, independent, hostile and integrated lanes pass and Lean R445 passes. The actual Q3LOCK commutator/history tail, common core, exhaustion, physical, continuum, Yang--Mills and mass-gap claims remain open |
@@ -767,6 +768,50 @@ exhaustion, physical-empty comparison, C6, Sector-A, Pre-A, Yang--Mills dynamics
 or a mass gap. No claim tier changes and no negative result is issued.
 
 **Proven in:** [R-444 certificate](strategy/pre-a-cp1-st8-q3lock-exponential-shell-tail-certificate-260830.md), [machine manifest](strategy/pre-a-cp1-st8-q3lock-exponential-shell-tail-manifest.json), [integrated run](claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-integrated-exponential_shell_tail/integrated.json), [exploration record](strategy/pre-a-cp1-st8-q3lock-exponential-shell-tail-exploration.json), and [Lean R444](verification/lean/Tect/R444.lean).
+<a id="r-448"></a>
+### R-448 -- Static-equivalence quotient and separating finite dynamic estimand
+
+**Result ID.** `PA-DYNAMIC-STATIC-EQUIVALENCE-QUOTIENT-v0` (R-448).
+
+**Version and exact scope.** R-448 v1.0 is a T0, claim-nonbearing interface
+result for T-061 under EXP-001321. It preserves the existing T-054 forward
+method and the additive observation-first inverse lane. The finite fixture is
+the registered R-193/R-200 two-coordinate static signature with Hessian
+`(1,2)`, covariance `(1,1/2)`, and comparison factor pairs A `(1/2,1/4)` and
+B `(1/4,1/2)`.
+
+**Derived quotient interface.** The relation `d1 ~_static d2` is defined by
+equality of static signatures. Lean checks reflexivity, symmetry and
+transitivity, so the relation supplies a Setoid of static-equivalence classes.
+A and B are distinct positive contraction representatives in one class. The
+fixed algebraic probe `(1,0)` gives distinct one-step proxy outputs, making a
+finite separating estimand available while leaving the class non-singleton.
+The one-step label is explicitly not physical time.
+
+**Verification.** The primary exact-Fraction lane passes 24/24 assertions; the
+non-importing independent reconstruction passes 11/11; the hostile lane rejects
+8/8 mutations covering relation replacement, probe collapse, representative
+collapse, broken static normalization, uniqueness and stability promotion,
+claim-bearing promotion and unowned production admission. The integrated
+verifier passes 29/29 and Lean R448 passes the quotient-law, inverse-signature,
+distinct-representative and probe-separation propositions.
+
+**Assumptions and missing assumptions.** The static signature, factor pairs,
+probe, finite normalization and pinned Lean inputs are fixed. Missing are a
+source-owned generator or transfer operator, state/projection, time boundary,
+heat-root and filtration, raw-current intertwiner, one-use q-ledger, complete
+`F_reg/F_lim/F_eff/F_obs` map, uncertainty and nuisance model, regulator/volume
+stability and prospective holdout.
+
+**Evidence level and boundary.** This is T0 exact finite quotient-interface
+evidence. It records non-identifiability and does not select a microscopic
+candidate. It does not infer Pre-A from observations, close T-061/T-054, or
+establish a physical vacuum, Sector-A, C6, QFT, Yang--Mills, gravity,
+continuum, cosmic-origin or mass-gap result. No tier change, negative result or
+PDF is issued, and existing methods and owner order are unchanged.
+
+**Proven in:** [R-448 manifest](strategy/pre-a-static-dynamic-equivalence-quotient-manifest.json), [certificate](strategy/pre-a-static-dynamic-equivalence-quotient-certificate-260830.md), [primary script](verification/scripts/pre_a_static_dynamic_equivalence_quotient.py), [independent script](codes/foundations/pre_a_static_dynamic_equivalence_quotient_independent.py), [hostile script](codes/foundations/pre_a_static_dynamic_equivalence_quotient_hostile.py), [integrated verifier](codes/foundations/pre_a_static_dynamic_equivalence_quotient_verify.py), [integrated run](claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-integrated-static_dynamic_equivalence_quotient/integrated.json), [exploration](strategy/pre-a-static-dynamic-equivalence-quotient-exploration.json), and [Lean R448](verification/lean/Tect/R448.lean).
+
 <a id="r-446"></a>
 ### R-447 -- HOLD-LC-001 set-valued delay envelope interface
 

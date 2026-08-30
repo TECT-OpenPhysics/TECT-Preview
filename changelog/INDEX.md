@@ -5,7 +5,7 @@ Compact generated reader surface. The append-only authority is
 record 568 / commit `4db22f4e` and no longer grows.
 Post-cutover full bodies live exactly once in bounded pages under `pages/`.
 
-**796 accepted events** · latest 25 shown below · machine locator: `index.json`
+**797 accepted events** · latest 25 shown below · machine locator: `index.json`
 
 Search the complete authority without loading every page:
 
@@ -17,6 +17,7 @@ python verification/scripts/changelog.py search --text <phrase>
 
 | Date | Event | Claims | Full entry |
 |---|---|---|---|
+| 2026-08-30 | `20260830-r-448-static-dynamic-equivalence-quotient-2026` — [R-448 static-dynamic equivalence quotient] - 2026-08-30 | C6-SPACETIME-SIGNATURE, EXP-001321, R-448 | [bounded page](pages/000769-000818.md#20260830-r-448-static-dynamic-equivalence-quotient-2026) |
 | 2026-08-30 | `20260830-hold-lc-001-set-valued-delay-envelope-2026-08-3` — [HOLD-LC-001 set-valued delay envelope] - 2026-08-30 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000769-000818.md#20260830-hold-lc-001-set-valued-delay-envelope-2026-08-3) |
 | 2026-08-30 | `20260830-obs-lc-cal-001-row-lineage-and-feasibility-inte` — [OBS-LC-CAL-001 row lineage and feasibility interface audit] - 2026-08-30 | C1-LORENTZ-KIN, C2-LORENTZ-EMERGENT, C6-SPACETIME-SIGNATURE | [bounded page](pages/000769-000818.md#20260830-obs-lc-cal-001-row-lineage-and-feasibility-inte) |
 | 2026-08-30 | `20260830-r-445-conditional-scalar-to-operator-tail-trans` — [R-445 conditional scalar-to-operator tail transfer] - 2026-08-30 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000769-000818.md#20260830-r-445-conditional-scalar-to-operator-tail-trans) |
@@ -41,7 +42,6 @@ python verification/scripts/changelog.py search --text <phrase>
 | 2026-08-30 | `20260830-r-434-physical-empty-bounded-test-owner-refresh` — [R-434 physical-empty bounded test owner refresh] - 2026-08-30 | C6-SPACETIME-SIGNATURE, EXP-001279, R-434 | [bounded page](pages/000769-000818.md#20260830-r-434-physical-empty-bounded-test-owner-refresh) |
 | 2026-08-30 | `20260830-r-433-validated-original-source-interval-enclos` — [R-433 validated original-source interval enclosure] - 2026-08-30 | C6-SPACETIME-SIGNATURE, EXP-001278, R-433 | [bounded page](pages/000769-000818.md#20260830-r-433-validated-original-source-interval-enclos) |
 | 2026-08-30 | `20260830-r-432-fixed-conditional-row-ordinal-audit-2026` — [R-432 fixed conditional-row ordinal audit] - 2026-08-30 | C6-SPACETIME-SIGNATURE, EXP-001277, R-432 | [bounded page](pages/000769-000818.md#20260830-r-432-fixed-conditional-row-ordinal-audit-2026) |
-| 2026-08-30 | `20260830-r-431-directed-interval-enclosure-for-rounded-r` — [R-431 directed interval enclosure for rounded residual snapshot] - 2026-08-30 | C6-SPACETIME-SIGNATURE, EXP-001276, R-431 | [bounded page](pages/000769-000818.md#20260830-r-431-directed-interval-enclosure-for-rounded-r) |
 
 ## Post-cutover pages
 
@@ -49,7 +49,7 @@ Each full event body after the cutover occurs in exactly one page.
 
 | Ordinals | Events | Page |
 |---|---:|---|
-| 769–796 | 28 | [000769-000818.md](pages/000769-000818.md) |
+| 769–797 | 29 | [000769-000818.md](pages/000769-000818.md) |
 | 719–768 | 50 | [000719-000768.md](pages/000719-000768.md) |
 | 669–718 | 50 | [000669-000718.md](pages/000669-000718.md) |
 | 619–668 | 50 | [000619-000668.md](pages/000619-000668.md) |

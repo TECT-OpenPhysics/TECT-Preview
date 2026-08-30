@@ -2,6 +2,39 @@
   "data": [
     {
       "accepted_event_ids": [
+        "20260821-r-182-feedback-pulled-cross-hessian-margin-2026",
+        "20260822-r-183-diagonal-reserve-margin-cross-hessian-thr"
+      ],
+      "anchor": "r-182",
+      "claim_ref_basis": {
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION": "proof_anchor_exact"
+      },
+      "claim_refs": [
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
+      ],
+      "co_recorded_negative_tags": [],
+      "detail": {
+        "boundary": "This is a finite necessary-margin diagnostic, not the complete production Hessian or a global instability theorem. Heat, forest, complement, returned-low, source, sextic, R-102, R-125, T-050, A13, matching, the absolute anchor, Nelson, a measure, physical-empty, removal, continuum limits, Sector-A and Pre-A remain open. No tier change, gate closure, new negative or PDF follows.",
+        "exact_result": "At the registered active phase, the R-178 field/current coefficients and weights give the cross-Hessian coefficient `-(2+3*1*2)=-8`, hence `H=[[-8,8],[8,-8]]`. Pulling it through the actual R-181 feedback matrix `T=[[1,0],[1/2,1]]` gives `T^T H T=[[-2,4],[4,-8]]`. Lean proves the factorizations `-8*(x-y)^2` and `-2*(x-2*y)^2`; the fixture `(0,1)` is `-8` before and after pullback, and the pulled eigenvalues are `-10` and `0`.",
+        "proven_in": "[R-182 certificate](strategy/pre-a13-feedback-pulled-cross-hessian-margin-certificate-260821.md), [Lean entrypoint](verification/lean/Tect/R182.lean), [primary script](verification/scripts/lean_a13_feedback_pulled_cross_hessian_margin.py), [independent script](codes/foundations/lean_a13_feedback_pulled_cross_hessian_margin_independent.py), [integrated verifier](codes/foundations/lean_a13_feedback_pulled_cross_hessian_margin_verify.py), [scope note](claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/a13-feedback-pulled-cross-hessian-margin-260821.md), and the saved run artefacts. No R-182 PDF is issued.",
+        "result_id": "`R-182` is a T0, claim-nonbearing Lean checkpoint under `EXP-000897`.",
+        "verification": "The primary SymPy lane derives the active coefficient, matrices, quadratic forms, eigenvalues, and fixture from R-178/R-181 inputs before compiling the pinned Lean source. The independent lane uses only stdlib `Fraction` arithmetic and exact 2 by 2 matrix multiplication. The integrated lane checks hashes, theorem markers, Lean escape-token absence, independent imports, complete derived-value agreement, eight hostile mutations, and formal append-only topology/freshness."
+      },
+      "detail_title": "Feedback-pulled cross-Hessian margin Lean cross-check",
+      "family_refs": [],
+      "id": "R-182",
+      "normalized_detail": {
+        "boundary": "This is a finite necessary-margin diagnostic, not the complete production Hessian or a global instability theorem. Heat, forest, complement, returned-low, source, sextic, R-102, R-125, T-050, A13, matching, the absolute anchor, Nelson, a measure, physical-empty, removal, continuum limits, Sector-A and Pre-A remain open. No tier change, gate closure, new negative or PDF follows.",
+        "proof_anchor": "[R-182 certificate](strategy/pre-a13-feedback-pulled-cross-hessian-margin-certificate-260821.md), [Lean entrypoint](verification/lean/Tect/R182.lean), [primary script](verification/scripts/lean_a13_feedback_pulled_cross_hessian_margin.py), [independent script](codes/foundations/lean_a13_feedback_pulled_cross_hessian_margin_independent.py), [integrated verifier](codes/foundations/lean_a13_feedback_pulled_cross_hessian_margin_verify.py), [scope note](claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/a13-feedback-pulled-cross-hessian-margin-260821.md), and the saved run artefacts. No R-182 PDF is issued.",
+        "publication_target": "",
+        "reuse": "",
+        "statement": ""
+      },
+      "summary": "R-182 v1.0 is a T0 claim-nonbearing Lean checkpoint under EXP-000897. It combines the active R-178 cross coefficient with the R-181 feedback map and proves the exact pulled Hessian `[-2,4;4,-8]` with eigenvalues -10 and 0. The diagonal production owner, source/sextic one-use, T-050, A13, Sector-A and Pre-A remain open",
+      "title": "Feedback-pulled cross-Hessian margin Lean cross-check"
+    },
+    {
+      "accepted_event_ids": [
         "20260821-r-181-two-root-feedback-mixed-gram-cross-check",
         "20260821-r-182-feedback-pulled-cross-hessian-margin-2026"
       ],
@@ -4011,47 +4044,6 @@
       },
       "summary": "Scoped T4 analytic/exact/executed reduction: in the fixed root-preserving six-current coordinate, every controlled polynomial `J_A=Dm_A` row vanishes in the complete stopped FAR object for `C>=3`, including both endpoints and both predictable drifts. Controlled CFAR is thereby reduced exactly to three Cartan input-scale telescopes with coefficient `3/(80P)`. The canonical `K_k` smoothing pays the input coordinate once but does not create the global raw-output pairwise orthogonality assumed by the sufficient R-082 Carleson lemma; an exact production-floor-rescaled harmonic witness records that method no-go without excluding far-only or correlated martingale estimates. The three linear Pauli--Fierz rows have exact Gram, heat, secant, covariance-defect, and nine-block forest algebra, but an adapted heat-lifted fixture with zero rational row has negative linear-row zero chaos. Controlled Cartan CFAR, recombined complete signed NEAR, progression, one-use, Nelson, and Sector A remain open; 58/58 primary, 43/43 independent, 103/103 integrated, 204/204 aggregate assertions",
       "title": "Controlled polynomial CFAR and linear Pauli--Fierz forest reduction"
-    },
-    {
-      "accepted_event_ids": [
-        "20260725-r-082-stopped-current-far-and-complete-current",
-        "20260728-r-116-one-fresh-root-owner-quotient-and-null-co",
-        "20260728-r-117-rational-horizon-and-uniform-dyadic-root"
-      ],
-      "anchor": "r-082",
-      "claim_ref_basis": {
-        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION": "proof_anchor_exact"
-      },
-      "claim_refs": [
-        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
-      ],
-      "co_recorded_negative_tags": [
-        "AUDIT-2026-07-28-A13-GAUGE-NULL-RANKTWO-ROOT-SCOPE",
-        "NG-2026-07-28-A13-CENTERED-QUADRATIC-NULL-CONE-NORMALIZER",
-        "NG-2026-07-28-A13-FIXED-SHELL-LIPSCHITZ-METRIC-REGULARITY",
-        "NG-2026-07-28-A13-FULL-WICK-TENSOR-NORMALIZER",
-        "NG-2026-07-28-A13-SEPARATED-INTERPOLATION-CROSS-SCORE-BUDGET"
-      ],
-      "detail": {
-        "boundary": "Controlled stopped-current FAR, the complete heat-lifted signed NEAR square--trace--forest estimate, overlap-stable progressive packet lower bound and variational extension, controlled-shell one-use, `q=10/9` Nelson, the interacting measure, removal limits, and Sector-A closure remain open. Tier stays T4.",
-        "proven_in": "Claim `A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION`, note `classii-stopped-current-far-complete-current-near-coordinate-reduction-260725-v1.0`, with primary 54/54, non-importing independent 52/52, and manifest-pinned integrated verification.",
-        "publication_target": "Stochastic geometric/paracontrolled methods note with R-050, R-063, and R-075--R-081 after controlled FAR, complete signed NEAR, one-use, and Nelson synthesis are resolved.",
-        "result_id": "`A13-CLASSII-STOPPED-CURRENT-FAR-COMPLETE-CURRENT-NEAR-COORDINATE-REDUCTION`.",
-        "reuse_scope": "Changing-current martingale telescopes, stopped FAR wedges, support-refined paracomposition, half-derivative causal Carleson thresholds, Pauli--Fierz Gram coordinates, and conditional square--trace criteria.",
-        "statement": "Let `Y_j=P_j J_j`, `b_j=d_j J_j`, and `c_j=P_(j-1)(J_j-J_(j-1))` for the complete current already carrying `Q_II^(1/2)`. Then `sum_(j0<=j<=n)b_j=Y_n-Y_ell-sum_(j0<=j<=n)c_j`. Martingale orthogonality turns the full FAR wedge exactly into the deterministic stopped square at `n_C(m)=min(J,m-C)`. Both predictable control-value and control-derivative drifts are load-bearing. At each root, derivative injection is centered, while raw value innovation is centered only after the heat compensator is included; `M(x)=x^2` is the exact regression fixture. For the uncontrolled production current, the R-050 first paralinearisation remainder has regularity `2 alpha`. Above the input support, all rough high-factor terms vanish and the only surviving low--high term has regularity `3 alpha-1`. Hence, for `1/3<alpha<1/2` and every strict `beta<3 alpha-1`, the stopped uncontrolled FAR loss is `O(2^(-2 beta C))` uniformly in the ultraviolet cutoff. At `alpha=2/5`, any `beta<1/5` is available. This does not prove the controlled stopped-current estimate. If a controlled coefficient admits an orthogonal causal input-scale decomposition with shell decay `2^(-2s(m-k))`, an exact discrete Carleson lemma sums the triangular derivative weight for `s>1/2` and costs at most `C_s 2^(-2sC) sum_k 2^k q_k`. The half-derivative endpoint diverges linearly. With `q_k<=2^(-4k)||h_k||^2`, this route uses the Cameron--Martin energy once, but the balanced production decomposition of the combined moving endpoint, value/derivative drift, nonlinear innovation, and heat compensator remains open. The production `Q_II` current also has the global chart-free coordinate `Xi=(sqrt(c0)dr, sqrt(c1)(dr-(5/9)(r/d)d rho), 2sqrt(c0+c1)Re h, 2sqrt(c0+c1)Im h)`, where `h=u_1v_2-u_2v_1`. Its squared norm is the complete current energy even at `r=0`, and `B=C^T C`. The corresponding fixed six-current preserves every R-079 root block, but the four-coordinate Pauli--Fierz compression is state-dependent and redistributes individual Doob-root energies. Target heat therefore acts through the Hilbert lift `C(z+r)y`, not by squaring `P_Sigma C`. Conditional square--trace positivity is exact only when the fresh derivative has the declared conditional mean and covariance; future feedback leaves a signed covariance defect. Moving sharp-shell edge flux cancels across low/near/high and supplies no new absolute pair-high payment."
-      },
-      "detail_title": "Stopped-current FAR and complete-current NEAR coordinate reduction",
-      "family_refs": [],
-      "id": "R-082",
-      "normalized_detail": {
-        "boundary": "Controlled stopped-current FAR, the complete heat-lifted signed NEAR square--trace--forest estimate, overlap-stable progressive packet lower bound and variational extension, controlled-shell one-use, `q=10/9` Nelson, the interacting measure, removal limits, and Sector-A closure remain open. Tier stays T4.",
-        "proof_anchor": "Claim `A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION`, note `classii-stopped-current-far-complete-current-near-coordinate-reduction-260725-v1.0`, with primary 54/54, non-importing independent 52/52, and manifest-pinned integrated verification.",
-        "publication_target": "Stochastic geometric/paracontrolled methods note with R-050, R-063, and R-075--R-081 after controlled FAR, complete signed NEAR, one-use, and Nelson synthesis are resolved.",
-        "reuse": "Changing-current martingale telescopes, stopped FAR wedges, support-refined paracomposition, half-derivative causal Carleson thresholds, Pauli--Fierz Gram coordinates, and conditional square--trace criteria.",
-        "statement": "Let `Y_j=P_j J_j`, `b_j=d_j J_j`, and `c_j=P_(j-1)(J_j-J_(j-1))` for the complete current already carrying `Q_II^(1/2)`. Then `sum_(j0<=j<=n)b_j=Y_n-Y_ell-sum_(j0<=j<=n)c_j`. Martingale orthogonality turns the full FAR wedge exactly into the deterministic stopped square at `n_C(m)=min(J,m-C)`. Both predictable control-value and control-derivative drifts are load-bearing. At each root, derivative injection is centered, while raw value innovation is centered only after the heat compensator is included; `M(x)=x^2` is the exact regression fixture. For the uncontrolled production current, the R-050 first paralinearisation remainder has regularity `2 alpha`. Above the input support, all rough high-factor terms vanish and the only surviving low--high term has regularity `3 alpha-1`. Hence, for `1/3<alpha<1/2` and every strict `beta<3 alpha-1`, the stopped uncontrolled FAR loss is `O(2^(-2 beta C))` uniformly in the ultraviolet cutoff. At `alpha=2/5`, any `beta<1/5` is available. This does not prove the controlled stopped-current estimate. If a controlled coefficient admits an orthogonal causal input-scale decomposition with shell decay `2^(-2s(m-k))`, an exact discrete Carleson lemma sums the triangular derivative weight for `s>1/2` and costs at most `C_s 2^(-2sC) sum_k 2^k q_k`. The half-derivative endpoint diverges linearly. With `q_k<=2^(-4k)||h_k||^2`, this route uses the Cameron--Martin energy once, but the balanced production decomposition of the combined moving endpoint, value/derivative drift, nonlinear innovation, and heat compensator remains open. The production `Q_II` current also has the global chart-free coordinate `Xi=(sqrt(c0)dr, sqrt(c1)(dr-(5/9)(r/d)d rho), 2sqrt(c0+c1)Re h, 2sqrt(c0+c1)Im h)`, where `h=u_1v_2-u_2v_1`. Its squared norm is the complete current energy even at `r=0`, and `B=C^T C`. The corresponding fixed six-current preserves every R-079 root block, but the four-coordinate Pauli--Fierz compression is state-dependent and redistributes individual Doob-root energies. Target heat therefore acts through the Hilbert lift `C(z+r)y`, not by squaring `P_Sigma C`. Conditional square--trace positivity is exact only when the fresh derivative has the declared conditional mean and covariance; future feedback leaves a signed covariance defect. Moving sharp-shell edge flux cancels across low/near/high and supplies no new absolute pair-high payment."
-      },
-      "summary": "Scoped T4 analytic/exact/executed reduction: the entire FAR wedge is one deterministic stopped-current square retaining its moving endpoint and both predictable control drifts; raw value innovation centers only with its heat compensator. The uncontrolled production FAR contribution now closes cutoff-uniformly with decay `2^(-2 beta C)` for every `beta<3 alpha-1`, by a support-refined R-050 paracontrolled remainder. An orthogonal causal Carleson lemma has the sharp `s>1/2` threshold and would spend the Cameron--Martin input once if the missing balanced production decomposition were proved. The production current has a global four-coordinate Pauli--Fierz square and exact conditional-covariance positivity criterion; state-dependent compression is not rootwise, heat must average the Gram matrix, and future covariance defects remain signed. Controlled FAR, complete signed NEAR, overlap-stable progression, one-use, Nelson, and Sector A remain open; assertion count is pinned by the manifest",
-      "title": "Stopped-current FAR and complete-current NEAR coordinate reduction"
     }
   ],
   "kind": "reusable_results",

@@ -1,0 +1,326 @@
+{
+  "assertion_count": 24,
+  "assertions": [
+    {
+      "actual": [
+        "R-448",
+        "EXP-001321",
+        "T-061",
+        false,
+        "T0"
+      ],
+      "expected": [
+        "R-448",
+        "EXP-001321",
+        "T-061",
+        false,
+        "T0"
+      ],
+      "group": "provenance",
+      "name": "identity",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "existing_forward_methods_unchanged": true,
+        "inverse_lane_additive": true,
+        "no_claim_tier_change": true,
+        "no_new_q3lock_finite_table": true,
+        "no_physical_empty_substitution": true,
+        "source_owner_order_unchanged": true
+      },
+      "expected": "all true",
+      "group": "method-firewall",
+      "name": "methods preserved",
+      "status": "PASS"
+    },
+    {
+      "actual": "d1 ~_static d2 iff d1.static_signature = d2.static_signature",
+      "expected": "static signature equality",
+      "group": "contract",
+      "name": "quotient relation",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "reflexive",
+        "symmetric",
+        "transitive"
+      ],
+      "expected": "three laws",
+      "group": "contract",
+      "name": "equivalence laws declared",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        false,
+        true
+      ],
+      "expected": [
+        false,
+        true
+      ],
+      "group": "scope",
+      "name": "claim nonbearing",
+      "status": "PASS"
+    },
+    {
+      "actual": "ae48ade9d11e3f47955ef4837e26d6cf106d2427570fe886c2eb33b0607d6b43",
+      "expected": "ae48ade9d11e3f47955ef4837e26d6cf106d2427570fe886c2eb33b0607d6b43",
+      "group": "provenance",
+      "name": "input r193_manifest hash",
+      "status": "PASS"
+    },
+    {
+      "actual": "219e0377b0ccbb9335aa79956dd42e1de5a325ad4ba677b0ee3b58bf3c94eb93",
+      "expected": "219e0377b0ccbb9335aa79956dd42e1de5a325ad4ba677b0ee3b58bf3c94eb93",
+      "group": "provenance",
+      "name": "input r200_manifest hash",
+      "status": "PASS"
+    },
+    {
+      "actual": "8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af",
+      "expected": "8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af",
+      "group": "provenance",
+      "name": "input lean_toolchain hash",
+      "status": "PASS"
+    },
+    {
+      "actual": "a67c26b5518afd984e53eae28a0ba4948c6bb01680d7c360e8b36386eb98962b",
+      "expected": "a67c26b5518afd984e53eae28a0ba4948c6bb01680d7c360e8b36386eb98962b",
+      "group": "provenance",
+      "name": "input lakefile hash",
+      "status": "PASS"
+    },
+    {
+      "actual": "4308d953726ebe0a8e8fdb7aa5da996c8bfcd45d4a58f6f1b3b40e25d2521964",
+      "expected": "4308d953726ebe0a8e8fdb7aa5da996c8bfcd45d4a58f6f1b3b40e25d2521964",
+      "group": "provenance",
+      "name": "input lake_manifest hash",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "R-193",
+        "EXP-000992"
+      ],
+      "expected": [
+        "R-193",
+        "EXP-000992"
+      ],
+      "group": "lineage",
+      "name": "parent identities",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "1",
+        "1"
+      ],
+      "expected": [
+        "1",
+        "1"
+      ],
+      "group": "static",
+      "name": "static inverse",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "1/2",
+        "1/4"
+      ],
+      "expected": "strictly between zero and one",
+      "group": "dynamics",
+      "name": "map A positive contractions",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "1/4",
+        "1/2"
+      ],
+      "expected": "strictly between zero and one",
+      "group": "dynamics",
+      "name": "map B positive contractions",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "quotient",
+      "name": "static equivalence",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "quotient",
+      "name": "reflexivity",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "quotient",
+      "name": "symmetry",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "quotient",
+      "name": "transitivity",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "quotient",
+      "name": "maps distinct",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "1/2",
+        "0"
+      ],
+      "expected": [
+        "1/4",
+        "0"
+      ],
+      "group": "estimand",
+      "name": "finite probe separates",
+      "status": "PASS"
+    },
+    {
+      "actual": "one_step_proxy_not_physical_time",
+      "expected": "one_step_proxy_not_physical_time",
+      "group": "boundary",
+      "name": "probe is declared one-step proxy",
+      "status": "PASS"
+    },
+    {
+      "actual": "NON_IDENTIFIABLE",
+      "expected": "NON_IDENTIFIABLE",
+      "group": "boundary",
+      "name": "non-identifiability classification",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "NOT_ASSESSED",
+        "NOT_ASSESSED"
+      ],
+      "expected": "not assessed",
+      "group": "boundary",
+      "name": "unassessed stability and holdout",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "c6_closed": false,
+        "f_reg_f_lim_f_eff_f_obs_closed": false,
+        "finite_estimand_separation": true,
+        "holdout_prediction": "NOT_ASSESSED",
+        "no_new_negative_result": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "physical_identity": false,
+        "physical_observable_map_admitted": false,
+        "pre_a_closed": false,
+        "production_generator_admitted": false,
+        "sector_a_closed": false,
+        "source_owner_admitted": false,
+        "stability_under_observation_error": "NOT_ASSESSED",
+        "stability_under_regulator_change": "NOT_ASSESSED",
+        "static_fit_existence": "PASS_FOR_TWO_REGISTERED_FINITE_WITNESSES",
+        "static_identifiability": "NON_IDENTIFIABLE"
+      },
+      "expected": "all false",
+      "group": "boundary",
+      "name": "owner and physical firewalls",
+      "status": "PASS"
+    }
+  ],
+  "assumptions": [
+    "The finite static signature is exactly the registered two-coordinate hessian/covariance pair.",
+    "The two diagonal factor pairs are comparison dynamics only and are not identified with a canonical production generator.",
+    "Static equivalence forgets dynamic factors by definition and therefore describes an equivalence class, not a unique model.",
+    "The probe is a finite algebraic one-step proxy; the time label is explicitly not physical time.",
+    "Exact rational arithmetic and the pinned Lean toolchain are available for the declared finite witness."
+  ],
+  "boundary": "R-448 is a finite abstract quotient interface. It proves that the registered static signature admits a non-singleton comparison class and that a declared finite one-step proxy separates two representatives. It does not choose a representative, infer Pre-A from observations, supply any missing production owner, or close T-061, T-054, C6, Sector-A, QFT, Yang--Mills, gravity, continuum or mass-gap gates.",
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "derived": {
+    "equivalence_relation_checked": true,
+    "finite_estimand_separates": true,
+    "holdout_prediction": "NOT_ASSESSED",
+    "map_a_factors": [
+      "1/2",
+      "1/4"
+    ],
+    "map_b_factors": [
+      "1/4",
+      "1/2"
+    ],
+    "maps_distinct": true,
+    "physical_identity": false,
+    "probe": [
+      "1",
+      "0"
+    ],
+    "probe_a": [
+      "1/2",
+      "0"
+    ],
+    "probe_b": [
+      "1/4",
+      "0"
+    ],
+    "source_owner_admitted": false,
+    "stability_under_observation_error": "NOT_ASSESSED",
+    "stability_under_regulator_change": "NOT_ASSESSED",
+    "static_class_non_singleton": true,
+    "static_equivalent": true,
+    "static_identifiability": "NON_IDENTIFIABLE",
+    "static_signature": [
+      [
+        "1",
+        "2"
+      ],
+      [
+        "1",
+        "1/2"
+      ]
+    ]
+  },
+  "evidence_level": "T0 / EXACT FINITE STATIC-EQUIVALENCE QUOTIENT WITH INDEPENDENT, HOSTILE AND LEAN CROSS-CHECKS",
+  "exploration_id": "EXP-001321",
+  "manifest": "strategy/pre-a-static-dynamic-equivalence-quotient-manifest.json",
+  "missing_assumptions": [
+    "A hash-pinned source-owned generator or transfer operator.",
+    "A state, physical projection, time boundary, heat-root map and filtration owned by the production source.",
+    "A raw-current spatial intertwiner and one-use production q-ledger.",
+    "A complete F_reg/F_lim/F_eff/F_obs observation map with uncertainty and nuisance model.",
+    "Regulator and volume stability, prospective holdout data, and an immutable acceptance rule.",
+    "Any identification with QFT, Yang--Mills, gravity, a physical vacuum, continuum dynamics or a mass gap."
+  ],
+  "non_claims": [
+    "No unique microscopic dynamics is selected by the static signature.",
+    "No source-owned production dynamics, heat semigroup, filtration, raw-current map or q-ledger is supplied.",
+    "No observation likelihood, covariance, holdout prediction or empirical validation is performed.",
+    "No physical candidate, Pre-A, Sector-A, C6, QFT, Yang--Mills, gravity, continuum, cosmic-origin or mass-gap conclusion follows."
+  ],
+  "passed": 24,
+  "result_id": "R-448",
+  "run_kind": "primary",
+  "schema": "tect/pre-a-static-dynamic-equivalence-quotient-primary/1.0",
+  "source_hashes": {
+    "manifest": "57b8bc22f47d441d75016f6b6dc9a5ff25b6d64e0809aebf42092b0a71fdefe4",
+    "script": "17ab84df0598666ac210c5cb4d9831814b6d609fb8fa9645d51921ceab14c169"
+  },
+  "task_id": "T-061",
+  "verdict": "STATIC_DYNAMIC_EQUIVALENCE_QUOTIENT_AUDITED"
+}

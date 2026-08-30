@@ -1,0 +1,204 @@
+{
+  "schema": "tect/pre-a-static-dynamic-equivalence-quotient/1.0",
+  "candidate_id": "PA-DYNAMIC-STATIC-EQUIVALENCE-QUOTIENT-v0",
+  "result_id": "R-448",
+  "title": "Static-equivalence quotient and separating finite dynamic estimand",
+  "task_id": "T-061",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001321",
+  "claim_bearing": false,
+  "tier": "T0",
+  "status": "STATIC_DYNAMIC_EQUIVALENCE_QUOTIENT_AUDITED",
+  "parent_results": ["R-193", "R-200"],
+  "parent_explorations": ["EXP-000910", "EXP-000992"],
+  "gate_ids": [
+    "PA-INVERSE-OBSERVATION-TARGET-MAP-HOLDOUT-FREEZE"
+  ],
+  "question": "When two finite candidate dynamics share the same registered static signature, can a reusable equivalence relation and a candidate-neutral finite dynamic estimand expose non-identifiability without changing the existing forward or inverse methods?",
+  "purpose": "Turn the existing R-193/R-200 witness into a quotient-interface result for T-061 dynamic-owner intake. The quotient records what static data cannot identify; it does not select a physical candidate or supply the missing source-owned dynamics.",
+  "inputs": {
+    "r193_manifest": {
+      "path": "strategy/pre-a13-r193-static-owner-heat-map-nonidentifiability-manifest.json",
+      "sha256": "ae48ade9d11e3f47955ef4837e26d6cf106d2427570fe886c2eb33b0607d6b43"
+    },
+    "r200_manifest": {
+      "path": "strategy/pre-a13-r200-current-authority-revalidation-260823-manifest.json",
+      "sha256": "219e0377b0ccbb9335aa79956dd42e1de5a325ad4ba677b0ee3b58bf3c94eb93"
+    },
+    "lean_toolchain": {
+      "path": "verification/lean/lean-toolchain",
+      "sha256": "8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af"
+    },
+    "lakefile": {
+      "path": "verification/lean/lakefile.toml",
+      "sha256": "a67c26b5518afd984e53eae28a0ba4948c6bb01680d7c360e8b36386eb98962b"
+    },
+    "lake_manifest": {
+      "path": "verification/lean/lake-manifest.json",
+      "sha256": "4308d953726ebe0a8e8fdb7aa5da996c8bfcd45d4a58f6f1b3b40e25d2521964"
+    }
+  },
+  "methods_preserved": {
+    "existing_forward_methods_unchanged": true,
+    "inverse_lane_additive": true,
+    "source_owner_order_unchanged": true,
+    "no_new_q3lock_finite_table": true,
+    "no_physical_empty_substitution": true,
+    "no_claim_tier_change": true
+  },
+  "finite_contract": {
+    "state": "abstract finite two-coordinate Gaussian proxy inherited from the registered static witness",
+    "static_signature": {
+      "hessian": ["1", "2"],
+      "covariance": ["1", "1/2"],
+      "normalization": "coordinatewise inverse relation hessian_i * covariance_i = 1"
+    },
+    "dynamic_family": "positive diagonal one-step contraction factors",
+    "maps": {
+      "A": {
+        "factors": ["1/2", "1/4"]
+      },
+      "B": {
+        "factors": ["1/4", "1/2"]
+      }
+    },
+    "probe": {
+      "coordinates": ["1", "0"],
+      "observable": "D_probe(d;x) = (d.first_factor*x_1, d.second_factor*x_2)",
+      "time_label": "one_step_proxy_not_physical_time"
+    },
+    "regulator": "finite two-coordinate witness only; no cutoff limit",
+    "volume": "finite two-coordinate proxy",
+    "boundary_condition": "not applicable in the abstract witness",
+    "limit_order": "none; finite only"
+  },
+  "quotient_contract": {
+    "relation": "d1 ~_static d2 iff d1.static_signature = d2.static_signature",
+    "equivalence_proof": ["reflexive", "symmetric", "transitive"],
+    "quotient_object": "Setoid of Dynamics modulo static-equivalence classes",
+    "separating_estimator": "D_probe at the fixed finite probe (1,0)",
+    "classification": "STATIC_CLASS_NON_SINGLETON_WITH_SEPARATING_FINITE_ESTIMAND",
+    "selection": "NO_SELECTION_FROM_STATIC_DATA"
+  },
+  "scope": {
+    "static_fit_existence": "PASS_FOR_TWO_REGISTERED_FINITE_WITNESSES",
+    "static_identifiability": "NON_IDENTIFIABLE",
+    "finite_estimand_separation": true,
+    "stability_under_observation_error": "NOT_ASSESSED",
+    "stability_under_regulator_change": "NOT_ASSESSED",
+    "holdout_prediction": "NOT_ASSESSED",
+    "source_owner_admitted": false,
+    "production_generator_admitted": false,
+    "physical_observable_map_admitted": false,
+    "f_reg_f_lim_f_eff_f_obs_closed": false,
+    "physical_identity": false,
+    "pre_a_closed": false,
+    "sector_a_closed": false,
+    "c6_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "assumptions": [
+    "The finite static signature is exactly the registered two-coordinate hessian/covariance pair.",
+    "The two diagonal factor pairs are comparison dynamics only and are not identified with a canonical production generator.",
+    "Static equivalence forgets dynamic factors by definition and therefore describes an equivalence class, not a unique model.",
+    "The probe is a finite algebraic one-step proxy; the time label is explicitly not physical time.",
+    "Exact rational arithmetic and the pinned Lean toolchain are available for the declared finite witness."
+  ],
+  "missing_assumptions": [
+    "A hash-pinned source-owned generator or transfer operator.",
+    "A state, physical projection, time boundary, heat-root map and filtration owned by the production source.",
+    "A raw-current spatial intertwiner and one-use production q-ledger.",
+    "A complete F_reg/F_lim/F_eff/F_obs observation map with uncertainty and nuisance model.",
+    "Regulator and volume stability, prospective holdout data, and an immutable acceptance rule.",
+    "Any identification with QFT, Yang--Mills, gravity, a physical vacuum, continuum dynamics or a mass gap."
+  ],
+  "evidence_level": "T0 / EXACT FINITE STATIC-EQUIVALENCE QUOTIENT WITH INDEPENDENT, HOSTILE AND LEAN CROSS-CHECKS",
+  "non_claims": [
+    "No unique microscopic dynamics is selected by the static signature.",
+    "No source-owned production dynamics, heat semigroup, filtration, raw-current map or q-ledger is supplied.",
+    "No observation likelihood, covariance, holdout prediction or empirical validation is performed.",
+    "No physical candidate, Pre-A, Sector-A, C6, QFT, Yang--Mills, gravity, continuum, cosmic-origin or mass-gap conclusion follows."
+  ],
+  "hostile_mutations": [
+    "replace static equivalence by equality of the full dynamics",
+    "change the probe to a non-separating zero probe",
+    "make the two comparison factor pairs equal",
+    "change the static covariance so the inverse relation fails",
+    "promote the static equivalence class to a unique selection",
+    "mark unassessed stability as passed",
+    "promote the T0 interface to claim-bearing evidence",
+    "admit a source-owned production generator without its owner contract"
+  ],
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R448.lean",
+    "theorem_markers": [
+      "static_equiv_refl",
+      "static_equiv_symm",
+      "static_equiv_trans",
+      "static_signature_inverse",
+      "maps_static_equivalent",
+      "maps_distinct",
+      "probe_separates",
+      "static_class_non_singleton"
+    ],
+    "command": "lake env lean Tect/R448.lean",
+    "role": "Lean checks the equivalence-relation laws, inverse static signature, distinct finite representatives and separating one-step proxy; it does not provide a physical dynamics or observation map."
+  },
+  "files": {
+    "lean_entrypoint": {
+      "path": "verification/lean/Tect/R448.lean",
+      "sha256": "35b89da0db4f992c5cd0a5108f3f7079c4e54d9bf9b8c5047c96b87cbe2e25f8"
+    },
+    "primary": {
+      "path": "verification/scripts/pre_a_static_dynamic_equivalence_quotient.py",
+      "sha256": "17ab84df0598666ac210c5cb4d9831814b6d609fb8fa9645d51921ceab14c169"
+    },
+    "independent": {
+      "path": "codes/foundations/pre_a_static_dynamic_equivalence_quotient_independent.py",
+      "sha256": "019817b01a27cb26b7c51709d2436bc8bc4041827f0f48d382bce7646d164dbf"
+    },
+    "hostile": {
+      "path": "codes/foundations/pre_a_static_dynamic_equivalence_quotient_hostile.py",
+      "sha256": "2138b070468d8a5fc9ab6b43e9979e99e59d1b9ec9ab1078ba53bd30ceecc94a"
+    },
+    "verifier": {
+      "path": "codes/foundations/pre_a_static_dynamic_equivalence_quotient_verify.py",
+      "sha256": "78a17f451fd370507787f61c283f4fb9813ac55b0e802c37cbec4cb8283d29b2"
+    },
+    "certificate": {
+      "path": "strategy/pre-a-static-dynamic-equivalence-quotient-certificate-260830.md",
+      "sha256": "7a053f7932ff48de8a6c2f4ec7b340a3914c4909195b336e41a64a7d1a078eba"
+    },
+    "exploration": {
+      "path": "strategy/pre-a-static-dynamic-equivalence-quotient-exploration.json",
+      "sha256": "7abeabdb5f58fc8f4e9f334958a1730ac703a07425cb7714f046d2612345570a"
+    }
+  },
+  "formal_integration": {
+    "event_id": "20260830-r-448-static-dynamic-equivalence-quotient-2026",
+    "event_ordinal": 797,
+    "exploration_ordinal": 1321,
+    "event_claim_ids": ["C6-SPACETIME-SIGNATURE", "EXP-001321", "R-448"],
+    "event_keywords": ["EXP-001321", "Lean", "R-448", "T-061", "equivalence-class", "methods-unchanged", "non-identifiability"],
+    "event_notes": [
+      "strategy/pre-a-static-dynamic-equivalence-quotient-manifest.json",
+      "strategy/pre-a-static-dynamic-equivalence-quotient-certificate-260830.md",
+      "strategy/pre-a-static-dynamic-equivalence-quotient-exploration.json",
+      "RESULTS-LEDGER.md"
+    ],
+    "event_scripts": [
+      "verification/scripts/pre_a_static_dynamic_equivalence_quotient.py",
+      "codes/foundations/pre_a_static_dynamic_equivalence_quotient_independent.py",
+      "codes/foundations/pre_a_static_dynamic_equivalence_quotient_hostile.py",
+      "codes/foundations/pre_a_static_dynamic_equivalence_quotient_verify.py"
+    ],
+    "event_raw_tokens": ["R-448", "EXP-001321", "static-equivalence", "no selection", "methods unchanged"],
+    "no_new_negative_ids": [],
+    "reused_negative_ids": [],
+    "no_pdf": true
+  },
+  "boundary": "R-448 is a finite abstract quotient interface. It proves that the registered static signature admits a non-singleton comparison class and that a declared finite one-step proxy separates two representatives. It does not choose a representative, infer Pre-A from observations, supply any missing production owner, or close T-061, T-054, C6, Sector-A, QFT, Yang--Mills, gravity, continuum or mass-gap gates.",
+  "next_action": "Use the quotient contract as the fixed T-061 intake boundary. Admit a candidate only after its source-owned generator, state/projection, boundary, heat-root/filtration, raw-current intertwiner, q-ledger and observation map are hash-pinned; otherwise keep the surviving static-equivalence class and do not add another finite mobility table."
+}
