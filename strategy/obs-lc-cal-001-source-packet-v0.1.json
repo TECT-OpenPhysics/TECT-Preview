@@ -1,0 +1,70 @@
+{
+  "schema": "tect/observation-anchor-packet/0.1",
+  "id": "OBS-LC-CAL-001-SOURCE-PACKET-v0.1",
+  "anchor_id": "OBS-LC-CAL-001",
+  "version": "0.1.0",
+  "status": "HASH_FROZEN_FEASIBILITY_ONLY",
+  "data_role": "CALIBRATION",
+  "lineage_group": "LC-LAB-SME",
+  "source": {
+    "title": "Data Tables for Lorentz and CPT Violation",
+    "authors": "V. Alan Kostelecky and Neil Russell",
+    "edition": "arXiv:0801.0287v19; January 2026 update",
+    "url": "https://arxiv.org/pdf/0801.0287",
+    "published_at": "2026-02-05",
+    "retrieved_at": "2026-08-30T04:50:00Z",
+    "content_type": "application/pdf",
+    "byte_length": 964703,
+    "sha256": "2fde66d227d1cbc5524baf23d5925d2ca30522a371d092387901ac7566273827",
+    "locators": [
+      "PDF pp.1-2: scope, update date, and summary-table construction",
+      "PDF pp.2-3: summary limits are conservative 2-sigma sensitivities and each entry assumes one coefficient is nonzero",
+      "PDF pp.3-4: data-table columns, quoted errors, context, and source citations",
+      "PDF pp.29 onward: data tables D6-D57 and the allowlisted matter/photon sectors"
+    ]
+  },
+  "observable_scope": {
+    "frame": "Standard Sun-centered inertial reference frame",
+    "sectors": ["matter", "photon"],
+    "allowed_representation": "A finite allowlist of directly measured or bounded table rows with their coefficient combination, quoted result, context and cited source.",
+    "summary_table_semantics": "Summary values are conservative 2-sigma order-of-magnitude sensitivities and are not a joint measurement vector.",
+    "data_table_semantics": "Data-table rows preserve reported statistical/systematic errors and source context; correlated combinations remain explicitly non-independent unless a source likelihood is supplied.",
+    "candidate_neutral": true
+  },
+  "uncertainty_contract": {
+    "likelihood": "NOT_ADMITTED",
+    "covariance": "NOT_ADMITTED",
+    "allowed_rule": "Feasibility intersection only for the explicitly allowlisted rows; retain quoted uncertainty labels and do not synthesize a joint Gaussian.",
+    "forbidden_rule": "Do not multiply rows, summary sensitivities, or correlated derived combinations as independent observations.",
+    "independence": "Each experiment/source lineage remains separate; one source citation or coefficient combination does not become an independent replicate."
+  },
+  "theory_conversion": {
+    "target": "Candidate Lorentz-violation coefficients mapped to the allowlisted SME rows with sector, operator dimension, frame and direction fixed.",
+    "renormalization_scheme": "NOT_APPLICABLE_TO_THIS_FEASIBILITY_INTAKE",
+    "map_status": "NO_TECT_F_REG_OR_F_EFF_MAP_ADMITTED"
+  },
+  "assumptions": [
+    "The retrieved bytes are the January 2026 arXiv v19 edition and the SHA-256 identifies this source version.",
+    "The standard Sun-centered frame and the source's coefficient conventions are retained.",
+    "Single-coefficient summary sensitivities are descriptive constraints, not a joint likelihood.",
+    "The anchor is calibration input and does not itself select a microscopic candidate or dynamics."
+  ],
+  "missing_assumptions": [
+    "The explicit finite allowlist of rows to be used in a candidate comparison.",
+    "Measurement-level likelihood/covariance for any row that is to receive a score rather than a feasibility check.",
+    "A complete F_reg/F_lim/F_eff/F_obs map from each admitted microscopic candidate.",
+    "A fixed scorer, acceptance rule, and nuisance/error budget."
+  ],
+  "evidence_level": "T0 source-lineage and feasibility-interface intake",
+  "acceptance_condition": "This packet may support only candidate-neutral feasibility checks after the row allowlist and theory conversion are frozen; scoring requires source likelihood/covariance and a complete map.",
+  "falsifier": "If a candidate violates an applicable allowlisted bound after declared theory uncertainty, it fails that finite feasibility check; no global Lorentz or microscopic conclusion follows.",
+  "non_claims": [
+    "The tables do not prove exact Lorentz invariance or a causal cone.",
+    "They do not identify TECT dynamics, a physical vacuum, or a unique microscopic action.",
+    "They do not supply a joint Gaussian, independent observations, or a continuum constraint by themselves.",
+    "They do not establish Pre-A, Sector-A, C6, A13, QFT, Yang-Mills, gravity, empirical predictivity, or a mass gap."
+  ],
+  "next_action": "Freeze the finite row allowlist and source-lineage crosswalk, then run the existing schema/lineage validator. Keep scoring and candidate selection stopped until likelihood/covariance and F_reg/F_lim/F_eff/F_obs are admitted.",
+  "recorded_at": "2026-08-30T04:52:34Z",
+  "recorded_by": "Codex"
+}

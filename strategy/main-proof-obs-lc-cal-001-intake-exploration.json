@@ -1,0 +1,148 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "schema_version": "1.0",
+  "id": "EXP-001295",
+  "title": "OBS-LC-CAL-001 source lineage is hash-frozen for feasibility intake",
+  "task_id": "T-061",
+  "claim_ids": [
+    "C1-LORENTZ-KIN",
+    "C2-LORENTZ-EMERGENT",
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "gate_ids": [
+    "PA-INVERSE-OBSERVATION-TARGET-MAP-HOLDOUT-FREEZE",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "related": [
+    {
+      "id": "EXP-001294",
+      "relation": "continues"
+    }
+  ],
+  "question": "Can the current Lorentz/CPT data-table anchor be frozen as a candidate-neutral, feasibility-only input without treating summary sensitivities or correlated rows as a joint likelihood?",
+  "method": [
+    "Retrieve the current arXiv edition named by OBS-LC-CAL-001 and compute its exact byte-level SHA-256 without changing T-054 or T-059 methods.",
+    "Read the source's summary and data-table semantics, including its standard Sun-centered frame, 2-sigma order-of-magnitude summaries, one-coefficient assumption, quoted errors and source citations.",
+    "Separate source-lineage freeze from the still-pending finite row allowlist, likelihood/covariance, theory conversion, and complete microscopic map.",
+    "Admit only a future feasibility-intersection rule and preserve all non-independence and model-boundary warnings.",
+    "Record the next row-allowlist action and keep candidate scoring and prospective credit stopped."
+  ],
+  "exact_scope": {
+    "anchor": "OBS-LC-CAL-001",
+    "source_edition": "arXiv:0801.0287v19 / January 2026 update",
+    "source_sha256": "2fde66d227d1cbc5524baf23d5925d2ca30522a371d092387901ac7566273827",
+    "source_bytes": 964703,
+    "frame": "Standard Sun-centered inertial reference frame",
+    "sectors": ["matter", "photon"],
+    "scope_boundary": "Source-lineage and feasibility-interface intake only; no row-level candidate score."
+  },
+  "checks": [
+    {
+      "id": "source-lineage",
+      "finding": "PASS",
+      "detail": "The current arXiv PDF was retrieved as an exact byte stream and recorded with edition, byte length and SHA-256 in OBS-LC-CAL-001-SOURCE-PACKET-v0.1."
+    },
+    {
+      "id": "summary-boundary",
+      "finding": "PASS",
+      "detail": "The source explicitly describes conservative 2-sigma order-of-magnitude sensitivities and a one-coefficient-nonzero convention; these are not promoted to a joint measurement vector."
+    },
+    {
+      "id": "row-allowlist",
+      "finding": "PENDING",
+      "detail": "No finite allowlist of rows, coefficient combinations, source context, or unit conversions has yet been frozen for a TECT comparison."
+    },
+    {
+      "id": "likelihood-covariance",
+      "finding": "NOT_ADMITTED",
+      "detail": "No source likelihood/covariance is available in this packet; the permitted interim rule is feasibility intersection only."
+    },
+    {
+      "id": "candidate-map",
+      "finding": "NOT_ADMITTED",
+      "detail": "No candidate has a complete F_reg/F_lim/F_eff/F_obs map, scorer, or acceptance rule for this anchor."
+    }
+  ],
+  "finding": "OBS-LC-CAL-001 now has a byte-level source freeze and an explicit feasibility-only uncertainty boundary. The source compiles 52 data tables and summary tables, but its one-coefficient summaries and correlated literature rows cannot be used as a synthetic independent likelihood. Row selection, measurement covariance, theory conversion, and all microscopic maps remain open.",
+  "verdict": "advanced",
+  "decision_reason": "This is a bounded P1 lineage advance that opens a reproducible next row-allowlist action while preserving the existing methods, non-independence rules, and no-selection firewall. It does not score or select a candidate.",
+  "adversarial_review": [
+    {
+      "axis": "edition drift",
+      "check": "The January 2026 edition, URL, byte length and SHA-256 are pinned; a later update requires a new packet version.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "one-coefficient summary misuse",
+      "check": "Summary sensitivities remain descriptive 2-sigma order-of-magnitude values and cannot be multiplied into a joint likelihood.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "correlated-row double counting",
+      "check": "Rows sharing a source or coefficient combination remain non-independent until a source covariance is supplied.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "frame and convention leakage",
+      "check": "The Sun-centered frame and source coefficient conventions are retained; no TECT conversion is silently inserted.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "method overhaul",
+      "check": "Only a versioned anchor packet and exploration record were added; no theorem order, candidate identity, owner contract, or prospective lock was changed.",
+      "disposition": "DISMISSED"
+    }
+  ],
+  "assumptions": [
+    "The retrieved PDF bytes are arXiv version 19 and the recorded hash identifies this edition.",
+    "The source's standard Sun-centered inertial frame and SME conventions are used only as source coordinates.",
+    "Feasibility intersection is allowed for explicitly frozen rows without manufacturing a joint covariance.",
+    "The anchor remains calibration input and cannot by itself identify TECT microstructure or dynamics."
+  ],
+  "missing_assumptions": [
+    "A finite, candidate-neutral row allowlist with exact units, coefficient combinations and source lineages.",
+    "A source likelihood/covariance for any row used in scoring rather than feasibility.",
+    "A complete candidate-specific theory conversion and F_reg/F_lim/F_eff/F_obs map.",
+    "An immutable scorer, acceptance rule, nuisance budget and independent holdout role."
+  ],
+  "boundary": "T0 P1 source-lineage and feasibility-interface evidence; no theorem, physical identity, continuum or empirical result.",
+  "evidence_level": "T0 source-lineage plus effective-target interface",
+  "evidence_refs": [
+    "strategy/obs-lc-cal-001-source-packet-v0.1.json#source",
+    "strategy/pre-a-observation-first-inverse-lane-contract-manifest.json#observation_anchor_manifest",
+    "strategy/pre-a-evidence-first-model-selection-charter-260802.md#4-initial-evidence-anchor-families",
+    "strategy/main-proof-program-v1.json#current_work_packet"
+  ],
+  "formal_refs": {
+    "results": [],
+    "negatives": [],
+    "events": []
+  },
+  "formal_integration": {
+    "results": [],
+    "negatives": [],
+    "events": [],
+    "no_new_result": true,
+    "no_new_negative": true,
+    "no_changelog_event": false,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "next_action": "Freeze the finite allowlisted SME rows and their source crosswalk, then run the existing schema/lineage validator. Keep candidate scoring and physical interpretation stopped until row uncertainty, theory conversion, and all four forward-map stages are admitted.",
+  "stop_or_redesign": [
+    "If only summary sensitivities are available, retain feasibility-only status and do not synthesize a likelihood.",
+    "If row covariance or source independence cannot be established, keep the affected rows out of scoring.",
+    "If a later edition changes a row or convention, issue a new packet version and do not mutate this record.",
+    "If no complete microscopic map appears, keep this anchor as calibration-only and do not select a candidate."
+  ],
+  "non_claims": [
+    "No candidate is admitted, selected, or ranked.",
+    "No exact Lorentz invariance, causal cone, physical vacuum, or TECT dynamics is inferred.",
+    "No source-table summary is a joint likelihood or independent empirical replication.",
+    "No Pre-A, Sector-A, C6, A13, QFT, Yang-Mills, gravity, continuum, cosmic-origin, theory-of-everything, or mass-gap statement is established."
+  ],
+  "provenance": "contemporaneous",
+  "recorded_at": "2026-08-30T04:52:34Z",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-08-30"
+}
