@@ -143,6 +143,11 @@
         "path": "strategy/hold-lc-001-response-owner-request-v0.1.json",
         "sha256": "ca67f0d274256389c22edab384b6dd386e4ad2607344107fcfdffabcfcb90dcd",
         "role": "HOLD-LC-001 additive source-owner request contract for response, calibration, timing and statistical admission fields"
+      },
+      {
+        "path": "strategy/hold-lc-001-response-option-time-gap-exploration.json",
+        "sha256": "caa9250578896663da492347d593c3bbfda279700491b1383539fe23facd22e4",
+        "role": "HOLD-LC-001 official response-option and time-coordinate owner-gap refinement (EXP-001308)"
       }
     ],
     "semantic": [
@@ -523,7 +528,7 @@
         "P6": "UNSTARTED",
         "P7": "UNSTARTED"
       },
-      "scientific_frontier": "P1 ACTIVE under the additive T-059 method; nine event-product hashes, a candidate-neutral estimator interface and a source-header metadata audit are pinned, but source statistical/calibration ownership and the prospective lock remain absent, with zero microscopic forward maps admitted; EXP-001305 adds hash-pinned event-day Fermi position/attitude and N0/B0 spectral-history owner candidates with header/schema and TT-second coverage checks, but conversion, validity, covariance, likelihood and prospective lock remain absent; EXP-001306 adds hash-pinned N0/B0 rsp2 response histories with one EBOUNDS plus eight numbered response segments per detector and TT-second trigger-window coverage, but matrix values, validity/interpolation, conversion, covariance, likelihood and prospective lock remain absent; EXP-001307 adds an official-semantics owner-request contract with explicit admission stop, but no response values, validity/interpolation, conversion, uncertainty, likelihood/covariance, nuisance law or score is admitted.",
+      "scientific_frontier": "P1 ACTIVE under the additive T-059 method; nine event-product hashes, a candidate-neutral estimator interface and a source-header metadata audit are pinned, but source statistical/calibration ownership and the prospective lock remain absent, with zero microscopic forward maps admitted; EXP-001305 adds hash-pinned event-day Fermi position/attitude and N0/B0 spectral-history owner candidates with header/schema and TT-second coverage checks, but conversion, validity, covariance, likelihood and prospective lock remain absent; EXP-001306 adds hash-pinned N0/B0 rsp2 response histories with one EBOUNDS plus eight numbered response segments per detector and TT-second trigger-window coverage, but matrix values, validity/interpolation, conversion, covariance, likelihood and prospective lock remain absent; EXP-001307 adds an official-semantics owner-request contract with explicit admission stop, but no response values, validity/interpolation, conversion, uncertainty, likelihood/covariance, nuisance law or score is admitted; EXP-001308 enumerates the official software/time option set and makes package defaults, boundary handling, Earth orientation and propagation uncertainty explicit owner fields, still without statistical admission.",
       "next_gate_after_p0r": "P1 observation-source, target, covariance, lineage, and holdout freeze"
     }
   },
@@ -559,21 +564,13 @@
     "authority_state": "VERIFIED_PENDING_WORKTREE_NOT_YET_DURABLE_GIT_OR_REMOTE_AUTHORITY"
   },
   "completion_checkpoint": {
-    "status": "COMPLETE",
-    "verified_parent_head": "a9dae251f5c657a0c728d2f8bd95b87f6fcbcea9",
-    "verified_at_utc": "2026-08-30T10:16:26Z",
+    "status": "PENDING",
+    "verified_parent_head": "fdd393c66e81a782faf4446bcc642ae0e0067d48",
+    "verified_at_utc": "2026-08-30T10:25:12Z",
     "branch": "main",
     "remote": "tect",
     "remote_ref": "refs/heads/main",
-    "expected_authority_counts": {
-      "claims": 49,
-      "gates_and_hypotheses": 208,
-      "results": 281,
-      "negative_records": 375,
-      "explorations": 1307,
-      "changelog_events": 796,
-      "tasks": 61
-    },
+    "expected_authority_counts": null,
     "requirements": [
       "doctor PASS",
       "release_check PASS",
@@ -700,7 +697,8 @@
       "EXP-001304 extracts quote-aware GBM response creator/DRM/channel-energy provenance and verifies that the selected LIGO low-spin posterior has no merger-time coordinate; no likelihood, covariance, nuisance law, complete map, score or method change",
       "EXP-001305 freezes and independently audits one event-day GS-006 position/attitude product plus two GS-005 spectral-history products; metadata/schema only, no conversion, validity, likelihood, covariance, nuisance law, score or method change",
       "EXP-001306 freezes and independently audits N0/B0 time-segmented rsp2 response-history candidates (16 declared segments total); header/schema only, no matrix values, validity, conversion, likelihood, covariance, nuisance law, score or method change",
-      "EXP-001307 converts official Fermi GS-005/GS-006 and rsp/rsp2 role semantics plus the exact HOLD-LC-001 owner candidates into an additive response-owner request contract; it freezes required response-selection, calibration-validity, time-standard, detector-to-geocenter, uncertainty, likelihood/covariance, nuisance and holdout fields while admitting no response values or scoring."
+      "EXP-001307 converts official Fermi GS-005/GS-006 and rsp/rsp2 role semantics plus the exact HOLD-LC-001 owner candidates into an additive response-owner request contract; it freezes required response-selection, calibration-validity, time-standard, detector-to-geocenter, uncertainty, likelihood/covariance, nuisance and holdout fields while admitting no response values or scoring.",
+      "EXP-001308 maps the official nearest, interpolation and counts-weighted rsp2 options, boundary behavior, MET/TT/GPS/UTC/UT1 conventions and quaternion/Earth-orientation semantics to explicit pre-admission freezes; software defaults remain unpinned physical-owner choices and response values/scoring remain locked."
     ],
     "deliverables": [
       "one owner-intake card with explicit missing fields",
@@ -729,7 +727,7 @@
       "It does not prove Pre-A, C6, A13, Sector A, QFT, Yang-Mills, gravity, a physical mass gap, or a theory of everything.",
       "A dynamic discriminator at finite regulator does not prove continuum or physical identity."
     ],
-    "next_action": "T-061 remains P1-active: EXP-001307 is an additive owner-request contract tied to the official Fermi role crosswalk and exact EXP-001305/001306 hashes. Locate or obtain source-owned response-segment validity/interpolation, calibration linkage, detector-to-geocenter conversion and uncertainty, frozen windows, likelihood/covariance and intrinsic-lag treatment, plus a sealed holdout. Keep response values, F_reg/F_lim/F_eff/F_obs and candidate scoring locked; independently reproduce F_reg only after all acceptance fields are frozen; continue unchanged T-054 owner intake in parallel."
+    "next_action": "T-061 remains P1-active: EXP-001308 narrows the owner gap to a preregistered response option (nearest/interpolate/weighted), package/default and boundary policy, a common MET/TT/GPS/UTC/UT1 and Earth-orientation rule, and an independently reproducible detector-to-geocenter propagation correction with uncertainty. Seek source-owned artefacts for those fields plus frozen windows, likelihood/covariance, intrinsic-lag treatment and holdout. Keep response values, F_reg/F_lim/F_eff/F_obs and candidate scoring locked; continue unchanged T-054 owner intake in parallel."
   },
   "resume_algorithm": [
     "Capture UTC date and run doctor.py.",

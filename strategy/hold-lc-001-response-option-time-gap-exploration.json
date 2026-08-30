@@ -1,0 +1,236 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001308",
+  "reviewed_on": "2026-08-30",
+  "recorded_by": "Codex",
+  "provenance": "contemporaneous",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "task_id": "T-061",
+  "gate_ids": [
+    "PA-INVERSE-OBSERVATION-TARGET-MAP-HOLDOUT-FREEZE",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "title": "HOLD-LC-001 response-selection option set and time-coordinate owner gap",
+  "question": "What exact implementation choices must be frozen before the official rsp2 nearest/interpolate/weighted options and Fermi time-coordinate conventions can enter a candidate-neutral observation map?",
+  "method": [
+    "Read the official Fermi GBM response workflow, gbm.data.drm source documentation, time-system documentation, science-product format and coordinate utilities, recording bounded locators and retrieval date.",
+    "Crosswalk the documented nearest DRM, interpolation, boundary handling, count-weighted response and MET/TT/GPS/UTC/UT1 conventions against the hash-pinned EXP-001305 and EXP-001306 owner candidates without reading response matrix values.",
+    "Separate software option semantics from a source-owned physical validity/interpolation rule and list the version, boundary, coordinate and uncertainty fields required for admission.",
+    "Preserve T-054/T-059 methods, owner order and stopped-loop rules; do not score candidates or populate F_reg/F_lim/F_eff/F_obs."
+  ],
+  "exact_scope": {
+    "parent_contract": "strategy/hold-lc-001-response-owner-request-v0.1.json",
+    "parent_contract_sha256": "ca67f0d274256389c22edab384b6dd386e4ad2607344107fcfdffabcfcb90dcd",
+    "parent_manifests": [
+      {
+        "path": "strategy/hold-lc-001-owner-artifact-byte-freeze-v0.1.json",
+        "sha256": "fad7fcc7d6638508e7da6d69fd17eb2991f72965182c8ece182a60442b0e4da9"
+      },
+      {
+        "path": "strategy/hold-lc-001-response-history-byte-freeze-v0.1.json",
+        "sha256": "b47228b036f9e057b2c213f41b477466a76d3d4107d929b93eb5c2a87ee7a5c2"
+      },
+      {
+        "path": "strategy/hold-lc-001-estimator-contract-v0.1.json",
+        "sha256": "f2d3be523c9e24fe8e84673dc486f0bf17799ceba9702afd638a0bf2096ddf94"
+      }
+    ],
+    "lineage_group": "GW170817-GRB170817A",
+    "data_role": "CALIBRATION",
+    "finite_scope": "Official software-option and time-coordinate semantics plus owner-gap specification; no response matrix values, likelihood, candidate ranking, continuum, physical identity or prospective validation.",
+    "method_scope": "Additive T-061 P1 intake refinement; no change to T-054/T-059 methods, owner order or promotion firewalls."
+  },
+  "official_sources": [
+    {
+      "id": "FERMI-GBM-PHAEXPORT-RSP2-CHOICE",
+      "url": "https://fermi.gsfc.nasa.gov/ssc/data/analysis/gbm/gbm_data_tools/gdt-docs/notebooks/PhaExport.html",
+      "retrieved_on": "2026-08-30",
+      "locator": "lines 190-209",
+      "semantic_finding": "The official workflow says an rsp2 time sequence requires choosing a response and exposes a nearest DRM or an interpolated DRM at the center of the selected interval.",
+      "owner_boundary": "This is an option description, not a preregistered physical validity or interpolation rule."
+    },
+    {
+      "id": "FERMI-GBM-DRM-IMPLEMENTATION",
+      "url": "https://fermi.gsfc.nasa.gov/ssc/data/analysis/gbm/gbm_data_tools/gdt-docs/_modules/gbm/data/drm.html",
+      "retrieved_on": "2026-08-30",
+      "locator": "lines 342-355, 388-410, 480-516 and 567-603",
+      "semantic_finding": "The documented implementation maps atime to a nearest/covering DRM, offers scipy.interpolate.interp1d over DRM center times with first/last fill outside coverage, and exposes a counts-weighted response path requiring weights and bin centers.",
+      "owner_boundary": "Library behavior and defaults must be version-pinned and independently reproduced; they do not establish source-owned uncertainty or candidate-neutral selection."
+    },
+    {
+      "id": "FERMI-TIME-SYSTEMS",
+      "url": "https://fermi.gsfc.nasa.gov/ssc/data/p7v6/analysis/documentation/Cicerone/Cicerone_Data/Time_in_ScienceTools.html",
+      "retrieved_on": "2026-08-30",
+      "locator": "lines 39-50",
+      "semantic_finding": "Fermi documents TT, MET, GPS and UTC relations, MJDREF convention and possible spacecraft clock drift when GPS is unavailable.",
+      "owner_boundary": "A time-standard convention is not a detector-to-geocenter light-travel correction or its uncertainty."
+    },
+    {
+      "id": "FERMI-SCIENCE-DATA-TIME-POSITION",
+      "url": "https://fermi.gsfc.nasa.gov/ssc/library/support/Science_DP_FFD_RevA.pdf",
+      "retrieved_on": "2026-08-30",
+      "locator": "pages 25-26, lines 1130-1170",
+      "semantic_finding": "The product specification records GPS/MET/TT offsets, MJDREF and clock-drift handling and distinguishes GBM position/orientation systems from LAT systems.",
+      "owner_boundary": "Format and reference-frame semantics do not supply a timing likelihood or uncertainty budget."
+    },
+    {
+      "id": "FERMI-GBM-COORDINATE-UTILITIES",
+      "url": "https://fermi.gsfc.nasa.gov/ssc/data/analysis/gbm/gbm_data_tools/gdt-docs/api/api-utils.html",
+      "retrieved_on": "2026-08-30",
+      "locator": "lines 164-175 and 257-281",
+      "semantic_finding": "The utilities expose spacecraft-coordinate transforms from quaternions and note that geocentric longitude may use UTC or UT1 with IERS corrections.",
+      "owner_boundary": "Coordinate transformation choices and Earth-orientation inputs must be frozen; they are not themselves a detector timing correction."
+    }
+  ],
+  "local_crosswalk": {
+    "EXP-001305": {
+      "products": "one GS-006 position/attitude candidate and two GS-005 spectral-history candidates",
+      "available": "hash, FITS schema and TT-second coverage",
+      "missing": "attitude/ephemeris interpolation rule, validity intervals, detector-to-geocenter correction and uncertainty"
+    },
+    "EXP-001306": {
+      "products": "N0 and B0 rsp2 candidates with one EBOUNDS and eight numbered response segments per detector",
+      "available": "hash, segment numbering, header time coverage, response leaf/atmospheric linkage metadata and TT time standard",
+      "missing": "matrix values for analysis, source-owned segment validity/interpolation rule, uncertainty and statistical ownership"
+    }
+  },
+  "required_freezes_before_admission": {
+    "response_selection": [
+      "A pre-registered choice among nearest, interpolation or counts-weighted response, with the selected interval-to-atime map.",
+      "If interpolation is selected, the scipy/gdt package versions, interpolation kind, center-time definition, segment ordering and boundary/extrapolation behavior.",
+      "A source-owned response validity interval and linkage from each selected PHA/CSPEC product to its rsp2 and leaf/atmospheric inputs.",
+      "A matrix and calibration uncertainty model that is common to every candidate and not tuned after residual disclosure."
+    ],
+    "time_coordinate": [
+      "A single MET/TT/GPS/UTC/UT1 convention with MJDREF, leap-second and clock-drift data versions.",
+      "Quaternion/ephemeris interpolation, Earth-orientation (UTC versus UT1/IERS) choice and geocenter reference-frame definition.",
+      "A detector-to-geocenter propagation or light-travel correction algorithm with an independently reproducible uncertainty.",
+      "A common GW merger-time estimator and GBM onset/background/window owner."
+    ],
+    "reproducibility": [
+      "A version-pinned implementation or source-owned artefact for every choice, plus an independent reproduction before candidate scoring.",
+      "A sealed prospective holdout and candidate-neutral F_reg output before any F_lim/F_eff/F_obs or score."
+    ]
+  },
+  "checks": [
+    {
+      "id": "official-response-option-set",
+      "finding": "PASS",
+      "detail": "Primary Fermi documentation explicitly distinguishes nearest and interpolated response choices; the implementation documentation also exposes boundary handling and a counts-weighted path."
+    },
+    {
+      "id": "official-time-coordinate-set",
+      "finding": "PASS",
+      "detail": "Primary Fermi documentation fixes the semantic roles of MET, TT, GPS, UTC, MJDREF, clock drift, spacecraft attitude and optional UTC/UT1 Earth rotation."
+    },
+    {
+      "id": "local-crosswalk",
+      "finding": "PASS-WITH-ADMISSION-STOP",
+      "detail": "EXP-001305/001306 metadata are sufficient to enumerate the owner gap, but no source-owned validity, interpolation, detector-to-geocenter correction, uncertainty or statistical object is admitted."
+    },
+    {
+      "id": "method-preservation",
+      "finding": "PASS",
+      "detail": "T-054/T-059 methods, R-192 owner order, parked-loop registry and promotion firewalls are unchanged."
+    }
+  ],
+  "finding": "The official GBM tooling narrows the implementation option set but leaves the physical-owner decision open: nearest, interpolation, and weighted response paths have different time maps and boundary behavior, while Fermi time and coordinate conventions still do not provide a detector-to-geocenter correction or uncertainty. The next admission must therefore freeze these choices before any response value is read or score is computed.",
+  "verdict": "advanced",
+  "decision_reason": "This is a new, source-grounded option-set and time-coordinate boundary that makes hidden implementation choices explicit; it is not a repeated generic owner request and it does not alter either proof lane.",
+  "decision_scope": "T0 official software/time semantics and candidate-neutral owner-gap refinement only; no matrix-value inference, likelihood, candidate ranking, dynamic identification, empirical prediction or physical promotion.",
+  "assumptions": [
+    "The cited official pages and source module represent the documented GBM Data Tools behavior at the recorded retrieval date.",
+    "EXP-001305 and EXP-001306 remain authoritative for exact local hashes and header-only observations.",
+    "Software defaults are not physical owner rules unless version-pinned and independently reproduced.",
+    "A coordinate transform, time standard or boundary clamp cannot be silently promoted to a timing correction or uncertainty."
+  ],
+  "missing_assumptions": [
+    "Source-owned selection/interpolation/weighting rule and response validity intervals.",
+    "Pinned software/version/defaults and response boundary/extrapolation policy.",
+    "Common MET/TT/GPS/UTC/UT1, leap-second/clock-drift and Earth-orientation inputs.",
+    "Detector-to-geocenter propagation correction with uncertainty and GW/GBM timing-owner linkage.",
+    "Joint likelihood or covariance, intrinsic-lag treatment, complete F_reg/F_lim/F_eff/F_obs maps and sealed holdout."
+  ],
+  "adversarial_review": [
+    {
+      "axis": "nearest-versus-interpolate",
+      "check": "Could the existence of official nearest/interpolate methods justify selecting one after seeing candidate residuals?",
+      "disposition": "UPHELD-BLOCKED: the choice and atime map must be preregistered and common to all candidates."
+    },
+    {
+      "axis": "boundary-clamping",
+      "check": "Could first/last DRM fill outside coverage be treated as physical validity or zero uncertainty?",
+      "disposition": "UPHELD-BLOCKED: boundary behavior is software semantics and requires a source-owned validity/uncertainty contract."
+    },
+    {
+      "axis": "library-default-drift",
+      "check": "Could an unpinned scipy/gdt default silently change the response map?",
+      "disposition": "UPHELD-BLOCKED: package versions, interpolation kind and kwargs must be hash-pinned."
+    },
+    {
+      "axis": "time-versus-propagation",
+      "check": "Could TT/MET/GPS conversion or UTC/UT1 choice be called detector-to-geocenter timing correction?",
+      "disposition": "UPHELD-BLOCKED: propagation algorithm and uncertainty remain missing."
+    },
+    {
+      "axis": "method-overhaul",
+      "check": "Could this option-set card replace T-054/T-059?",
+      "disposition": "DISMISSED: it is additive T-061 intake and preserves existing methods, owner order and parked-loop rules."
+    }
+  ],
+  "boundary": "EXP-001308 is a T0 official-source implementation/time semantic refinement. It does not admit response values, calibration validity, interpolation, detector-to-geocenter propagation, uncertainty, likelihood, covariance, nuisance law, F_reg/F_lim/F_eff/F_obs, candidate, score, prospective prediction, microscopic dynamics, physical identity, continuum result, Reading-H sign, Pre-A closure or mass-gap conclusion.",
+  "evidence_level": "T0 primary official-document and source-module crosswalk plus hash-pinned local owner candidates; no model or statistical test",
+  "evidence_refs": [
+    "strategy/hold-lc-001-response-owner-request-v0.1.json#required_physical_owner_fields",
+    "strategy/hold-lc-001-response-history-audit-v0.1.json#available_metadata",
+    "strategy/hold-lc-001-owner-artifact-audit-v0.1.json#available_metadata",
+    "strategy/hold-lc-001-estimator-contract-v0.1.json#statistical_contract"
+  ],
+  "formal_refs": {
+    "results": [],
+    "negatives": [],
+    "events": []
+  },
+  "formal_integration": {
+    "results": [],
+    "negatives": [],
+    "events": [],
+    "no_new_result": true,
+    "no_new_negative": true,
+    "no_changelog_event": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "next_action": "Use the required-freeze list to seek a source-owned response selection/validity and time-coordinate/propagation packet. Until it is frozen, keep response values and scoring locked; continue unchanged T-054 owner intake and report any non-identifiability as an equivalence class.",
+  "stop_or_redesign": [
+    "If no source owner supplies the selection/validity and propagation/uncertainty fields, keep HOLD-LC-001 at provenance/design-only and do not score.",
+    "If an implementation default is changed after target disclosure, invalidate prospective credit and issue a new version.",
+    "If response or time choices alter a finite result outside the declared uncertainty, report UNSTABLE_FINITE_ONLY.",
+    "If no dynamic observable separates a static-equivalence class, report NONIDENTIFIABLE rather than selecting a representative."
+  ],
+  "related": [
+    {
+      "id": "EXP-001307",
+      "relation": "continues"
+    },
+    {
+      "id": "EXP-001306",
+      "relation": "continues"
+    },
+    {
+      "id": "EXP-001305",
+      "relation": "continues"
+    }
+  ],
+  "non_claims": [
+    "No response matrix value is read or admitted, and no nearest/interpolated/weighted response is selected for a candidate.",
+    "Official software semantics do not supply source-owned validity, uncertainty, likelihood, covariance or intrinsic-emission nuisance ownership.",
+    "This card does not establish a causal law, QFT/Yang-Mills/gravity identity, microscopic dynamics or empirical prediction.",
+    "No physical vacuum, Reading-H branch, Pre-A, Sector-A, C6, A13, continuum, cosmic-origin, theory-of-everything or mass-gap claim is established.",
+    "The established T-054 forward and T-059 inverse methods are unchanged; this is additive owner intake, not a replacement."
+  ]
+}
+
+
