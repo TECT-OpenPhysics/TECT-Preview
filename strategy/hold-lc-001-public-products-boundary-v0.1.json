@@ -1,0 +1,131 @@
+{
+  "schema": "tect/observation-public-products-boundary/0.1",
+  "id": "HOLD-LC-001-PUBLIC-PRODUCTS-BOUNDARY-v0.1",
+  "version": "0.1.0",
+  "task_id": "T-061",
+  "holdout_id": "HOLD-LC-001",
+  "parent_packets": [
+    "strategy/hold-lc-001-source-packet-v0.1.json",
+    "strategy/hold-lc-001-set-valued-delay-envelope-v0.1.json",
+    "strategy/pre-a-observation-first-inverse-lane-contract-manifest.json"
+  ],
+  "status": "DISCOVERY_ONLY_NO_LIKELIHOOD_ADMISSION",
+  "claim_bearing": false,
+  "methods_unchanged": true,
+  "purpose": "Record which official public products can be acquired for a future candidate-neutral timing estimator, while keeping the existing T-054 forward method and T-059 inverse contract unchanged.",
+  "source_products": [
+    {
+      "id": "GWOSC-GW170817-STRAIN",
+      "role": "public gravitational-wave strain and event metadata",
+      "source_url": "https://gwosc.org/events/GW170817/",
+      "product_description": "The event release exposes public strain data and links to the GW170817 data products.",
+      "local_bytes": "NOT_DOWNLOADED",
+      "local_sha256": "PENDING",
+      "admission": "DISCOVERY_ONLY"
+    },
+    {
+      "id": "LIGO-P1800061-POSTERIORS",
+      "role": "public parameter-estimation sample products",
+      "source_url": "https://dcc.ligo.org/LIGO-P1800061/public",
+      "product_description": "The LIGO public page lists GW170817 posterior sample files and the associated data-release material.",
+      "local_bytes": "NOT_DOWNLOADED",
+      "local_sha256": "PENDING",
+      "admission": "DISCOVERY_ONLY_NOT_A_TIMING_LIKELIHOOD"
+    },
+    {
+      "id": "FERMI-GBM-TTE-PRODUCT",
+      "role": "public gamma-ray time-tagged event product",
+      "source_url": "https://fermi.gsfc.nasa.gov/ssc/data/access/gbm/gbm_data_products.html",
+      "product_description": "The GBM product documentation identifies burst TTE files and detector response matrices; the event-specific bytes and calibration version are not locally frozen here.",
+      "local_bytes": "NOT_DOWNLOADED",
+      "local_sha256": "PENDING",
+      "admission": "DISCOVERY_ONLY_RAW_PRODUCT"
+    }
+  ],
+  "source_boundary": {
+    "confirmed_at": "2026-08-30",
+    "confirmed_scope": "Official pages establish that raw or posterior products are publicly discoverable.",
+    "not_confirmed": "No source-owned joint detector-frame timing likelihood or component covariance has been admitted into the local T-059 packet.",
+    "distinction": "A raw strain, posterior sample, TTE, or detector response file is an input product, not the joint timing likelihood required for candidate scoring."
+  },
+  "future_acquisition_contract": {
+    "source_identity": [
+      "exact release or edition",
+      "retrieval timestamp",
+      "byte length",
+      "SHA-256",
+      "license and provenance"
+    ],
+    "instrument_and_time": [
+      "detector calibration version",
+      "time standard and geocentric conversion",
+      "event and background windows",
+      "sampling or event-time resolution",
+      "selection and trigger rules"
+    ],
+    "likelihood": [
+      "source-owned or explicitly versioned candidate-neutral timing estimator",
+      "joint likelihood or covariance with component correlations",
+      "intrinsic-emission nuisance law or declared set-valued alternative",
+      "numerical error budget"
+    ],
+    "inverse_map": [
+      "F_reg",
+      "F_lim",
+      "F_eff",
+      "F_obs",
+      "immutable scorer and acceptance rule"
+    ]
+  },
+  "adversarial_review": [
+    {
+      "axis": "raw-product-versus-likelihood",
+      "check": "Public raw strain or TTE availability does not create a source-owned timing likelihood or covariance.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "posterior-double-counting",
+      "check": "Parameter-estimation samples are not inserted as an independent timing datum beside the source timing summary.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "new-estimator-boundary",
+      "check": "Any timing estimator derived from raw products must receive a new version, calibration contract, nuisance law and scorer before use.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "target-leakage",
+      "check": "HOLD-LC-001 remains retrospective and receives no prospective credit; no candidate is scored.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "method-overhaul",
+      "check": "This boundary adds only an input-availability pointer; T-054, T-059, R-192 slot order and existing estimands are unchanged.",
+      "disposition": "DISMISSED"
+    }
+  ],
+  "assumptions": [
+    "The listed official URLs remain the discovery locators for the named products on the recorded date.",
+    "Product availability does not imply that a reproducible likelihood, covariance or calibration file is supplied.",
+    "The existing HOLD-LC-001 source packet and unweighted set-valued envelope remain the controlling local estimand versions.",
+    "A future raw-data estimator, if pursued, will be candidate-neutral and separately versioned before any map evaluation."
+  ],
+  "missing_assumptions": [
+    "Locally downloaded and hash-pinned event-specific strain, posterior and TTE bytes.",
+    "A source-owned or explicitly reproducible joint timing likelihood and component covariance.",
+    "Detector calibration, background, selection and geocentric time-conversion contract.",
+    "A calibrated intrinsic-emission nuisance law or an explicitly retained set-valued rule.",
+    "A complete candidate-neutral estimator and F_reg/F_lim/F_eff/F_obs map.",
+    "An immutable scorer, acceptance threshold and prospective target."
+  ],
+  "evidence_level": "T0 public-product discovery and input-contract boundary; no model test",
+  "next_action": "If this path is pursued, download and hash-pin the exact event products, write a new candidate-neutral estimator package with fixed calibration and nuisance rules, and run only its source/lineage self-tests. Until then retain HOLD-LC-001 as feasibility-only and keep candidate scoring stopped.",
+  "non_claims": [
+    "No candidate is admitted, selected, ranked, fitted or prospectively validated.",
+    "Raw strain, posterior samples and TTE files do not by themselves establish a timing likelihood or covariance.",
+    "No microscopic dynamics, physical vacuum, Reading-H branch, causal cone, Pre-A, Sector-A, C6, A13, QFT, Yang-Mills, gravity, continuum, cosmic-origin, theory-of-everything or mass-gap statement is established.",
+    "This boundary does not alter any existing forward or inverse research method."
+  ],
+  "recorded_at": "2026-08-30T00:00:00Z",
+  "recorded_by": "Codex"
+}

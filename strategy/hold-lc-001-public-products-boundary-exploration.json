@@ -1,0 +1,113 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001300",
+  "reviewed_on": "2026-08-30",
+  "recorded_by": "Codex",
+  "provenance": "contemporaneous",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "task_id": "T-061",
+  "gate_ids": [
+    "PA-INVERSE-OBSERVATION-TARGET-MAP-HOLDOUT-FREEZE",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "title": "HOLD-LC-001 public raw-product availability boundary",
+  "question": "Do the official GWOSC, LIGO and Fermi pages establish discoverable raw or posterior products for HOLD-LC-001, and can that availability be recorded without treating it as a source-owned timing likelihood or changing the existing T-054/T-059 methods?",
+  "method": [
+    "Read the existing HOLD-LC-001 source packet and set-valued envelope as the controlling local estimand versions.",
+    "Check the official GWOSC event page, LIGO P1800061 data page and Fermi GBM product documentation as public-product locators.",
+    "Separate raw strain, posterior samples, TTE and detector-response products from the joint timing likelihood/covariance required by the inverse contract.",
+    "Register a new acquisition contract with exact bytes, calibration, time standard, nuisance, covariance and F_reg/F_lim/F_eff/F_obs requirements, without scoring candidates or changing any issued method authority.",
+    "Apply hostile checks for posterior double-counting, target leakage, raw-product substitution and method overhaul."
+  ],
+  "finding": "The official pages make public raw or derived products discoverable: GWOSC exposes GW170817 strain/event products, LIGO P1800061 exposes posterior-sample release material, and Fermi GBM documents burst TTE and detector-response products. This confirms an actionable acquisition path, but none of those discovery pages supplies a locally hash-pinned source-owned joint timing likelihood or component covariance for the current packet. The new boundary therefore advances source intake without scoring, without converting raw products into a likelihood, and without changing T-054 or T-059.",
+  "verdict": "advanced",
+  "decision_reason": "This is a bounded additive P1 input advance rather than another blocked revalidation: it distinguishes discoverable raw products from the missing statistical object and fixes the exact fields a future estimator must freeze. Existing forward and inverse methods, estimands, owner order and promotion firewalls remain controlling.",
+  "boundary": "T0 public-product discovery and estimator-acquisition contract only. It supplies no likelihood, covariance, candidate map, score, prospective validation, microscopic dynamics, physical identity, continuum, physical-empty sign or mass-gap result.",
+  "evidence_refs": [
+    "strategy/hold-lc-001-public-products-boundary-v0.1.json#source_products",
+    "strategy/hold-lc-001-public-products-boundary-v0.1.json#source_boundary",
+    "strategy/hold-lc-001-source-packet-v0.1.json#measurement_likelihood",
+    "strategy/hold-lc-001-set-valued-delay-envelope-v0.1.json#admission",
+    "strategy/pre-a-observation-first-inverse-lane-contract-manifest.json#forward_map_contract",
+    "strategy/main-proof-program-v1.json#method_preservation"
+  ],
+  "exact_scope": {
+    "holdout": "HOLD-LC-001 / GW170817-GRB170817A",
+    "products": [
+      "GWOSC public strain and event products",
+      "LIGO P1800061 posterior-sample release material",
+      "Fermi GBM burst TTE and detector-response product documentation"
+    ],
+    "local_status": "No event-specific bytes are downloaded or hash-frozen by this record.",
+    "statistical_status": "No joint timing likelihood, component covariance or intrinsic-lag probability law is admitted.",
+    "method_status": "T-054 forward method and T-059 inverse method remain unchanged."
+  },
+  "checks": [
+    {
+      "id": "public-product-locators",
+      "detail": "The three official locators are recorded with product roles and an explicit no-local-bytes status.",
+      "finding": "PASS"
+    },
+    {
+      "id": "raw-product-not-likelihood",
+      "detail": "Raw or posterior products are not substituted for the missing source-owned joint timing likelihood/covariance.",
+      "finding": "PASS_WITH_ADMISSION_STOP"
+    },
+    {
+      "id": "retrospective-firewall",
+      "detail": "HOLD-LC-001 remains retrospective and receives no prospective credit or candidate score.",
+      "finding": "PASS"
+    },
+    {
+      "id": "method-preservation",
+      "detail": "No existing method, estimator, owner order, result or gate is edited; only a new input-availability packet is added.",
+      "finding": "PASS"
+    }
+  ],
+  "adversarial_review": [
+    {
+      "axis": "raw-product-versus-likelihood",
+      "check": "Public strain/TTE availability does not create the source-owned timing likelihood or covariance required by T-059.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "posterior-double-counting",
+      "check": "Posterior samples are not used as an independent timing datum beside the existing source summary.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "target-leakage",
+      "check": "The holdout remains retrospective and no parameter, map or scorer is tuned from it.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "method-overhaul",
+      "check": "The record adds a source-intake pointer only; T-054, T-059, R-192 order and existing estimands are unchanged.",
+      "disposition": "DISMISSED"
+    }
+  ],
+  "assumptions": [
+    "The official URLs are valid discovery locators on 2026-08-30.",
+    "Public product availability is distinct from local hash freeze and statistical admission.",
+    "Any future estimator will be a new versioned candidate-neutral package and will not rewrite the current HOLD-LC-001 packet.",
+    "Existing T-054 and T-059 authorities remain controlling if a future acquisition proposal conflicts with them."
+  ],
+  "missing_assumptions": [
+    "Exact event-product bytes and hashes.",
+    "Calibration, time-standard, background and selection metadata.",
+    "Joint timing likelihood or covariance with component correlations.",
+    "Intrinsic-emission nuisance law or an explicitly retained set-valued alternative.",
+    "Complete F_reg/F_lim/F_eff/F_obs map and immutable scorer.",
+    "Opaque prospective target and commitment."
+  ],
+  "next_action": "Pursue a separately versioned raw-product estimator only after its bytes, calibration, timing windows, covariance/likelihood, nuisance law, map stages and scorer are frozen; otherwise keep HOLD-LC-001 feasibility-only and continue the unchanged T-054 owner intake.",
+  "formal_refs": {
+    "results": [],
+    "negatives": [],
+    "events": []
+  },
+  "related": [
+    {"id": "EXP-001299", "relation": "continues"},
+    {"id": "EXP-001294", "relation": "continues"}
+  ]
+}
