@@ -559,13 +559,21 @@
     "authority_state": "VERIFIED_PENDING_WORKTREE_NOT_YET_DURABLE_GIT_OR_REMOTE_AUTHORITY"
   },
   "completion_checkpoint": {
-    "status": "PENDING",
-    "verified_parent_head": "2459707fee8ef494e2efb3fd4d18f8409c84b95f",
-    "verified_at_utc": "2026-08-30T10:11:40Z",
+    "status": "COMPLETE",
+    "verified_parent_head": "a9dae251f5c657a0c728d2f8bd95b87f6fcbcea9",
+    "verified_at_utc": "2026-08-30T10:16:26Z",
     "branch": "main",
     "remote": "tect",
     "remote_ref": "refs/heads/main",
-    "expected_authority_counts": null,
+    "expected_authority_counts": {
+      "claims": 49,
+      "gates_and_hypotheses": 208,
+      "results": 281,
+      "negative_records": 375,
+      "explorations": 1307,
+      "changelog_events": 796,
+      "tasks": 61
+    },
     "requirements": [
       "doctor PASS",
       "release_check PASS",
@@ -612,7 +620,10 @@
       "EXP-001306 freezes two official event-trigger Fermi rsp2 response-history bytes (N0 and B0) with exact SHA-256 values; only a gitignored cache is used and no raw matrix bytes are copied into tracked contents.",
       "The EXP-001306 primary audit passes response-history header/schema checks for one EBOUNDS and eight numbered SPECRESP MATRIX segments per detector with TT-second trigger-window coverage; matrix values, validity/interpolation, conversion, likelihood and covariance remain unadmitted.",
       "An independent PowerShell byte/hash/header parser reproduces size, hash, hdu=10, ebounds=1, matrices=8, rsp=1..8 and coverage=10 for both products; a hostile mutation of the selected B0 hash is rejected by the primary audit.",
-      "The release-gated EXP-001306 commit fb0797b38ede0f7f6a9d0e995c9ca20c8497b82d was pushed to tect/main; the next checkpoint refresh will verify the remote head and strict baseline while preserving unchanged T-054/T-059 methods."
+      "The release-gated EXP-001306 commit fb0797b38ede0f7f6a9d0e995c9ca20c8497b82d was pushed to tect/main; the next checkpoint refresh will verify the remote head and strict baseline while preserving unchanged T-054/T-059 methods.",
+      "EXP-001307 converts official Fermi GS-005/GS-006 and rsp/rsp2 role semantics plus exact EXP-001305/001306 owner candidates into an additive response-owner request contract; response values, validity/interpolation, detector-to-geocenter conversion, uncertainty, likelihood/covariance, nuisance law, complete maps and scoring remain unadmitted.",
+      "The release-gated T-061 EXP-001307 commit a9dae251f5c657a0c728d2f8bd95b87f6fcbcea9 was created after release_check PASS and pushed to tect/main; existing T-054/T-059 methods, owner order and stopped-loop rules remain unchanged.",
+      "The completion checkpoint is refreshed after the EXP-001307 content commit; strict baseline must verify clean queue/worktree, live remote equality and the expected counts before this checkpoint is treated as durable."
     ]
   },
   "stopped_loop_registry": [
