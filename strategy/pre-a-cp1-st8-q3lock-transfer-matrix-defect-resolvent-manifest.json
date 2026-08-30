@@ -1,0 +1,163 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "result_id": "R-455",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-NONNEGATIVE-TRANSFER-MATRIX-DEFECT-RESOLVENT-v0",
+  "title": "Nonnegative transfer-matrix defect-resolvent envelope for coupled orientation histories",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001328",
+  "tier": "T0",
+  "claim_bearing": false,
+  "status": "CONDITIONAL_NONNEGATIVE_TRANSFER_MATRIX_RESOLVENT_AUDITED",
+  "parent_results": ["R-454", "R-453", "R-451", "R-450"],
+  "parent_explorations": ["EXP-001327", "EXP-001326", "EXP-001324", "EXP-001323"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-FIRST-PASSAGE-BACKBONE-REAL-TIME-PRODUCT-AND-ENERGY-TAIL-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "question": "Can the unchanged R-454 source-plus-defect envelope accept a coupled vector history when each source-owned transfer matrix K_R is entrywise nonnegative and has one common induced infinity-norm bound kappa_bar?",
+  "theorem": {
+    "matrix_recurrence": "For h_0=0 and nonnegative vectors h_R, u_R, d_R, suppose h_R <= K_R h_(R-1) + u_R + d_R componentwise, K_R has nonnegative entries, and its maximum absolute row sum is at most kappa_bar.",
+    "source_contract": "If ||u_R||_infinity <= A*r^(R-1) and ||d_R||_infinity <= D*s^(R-1), then ||h_R||_infinity <= A*S_R(kappa_bar,r)+D*S_R(kappa_bar,s).",
+    "path_product_bound": "Every product K_R...K_(j+1) has induced infinity norm at most kappa_bar^(R-j), so the coupled orientation/observable history reduces to the R-454 scalar envelope after taking the common norm.",
+    "closed_form": "S_R(kappa_bar,x)=sum_(j=0)^(R-1) kappa_bar^(R-1-j)*x^j; unequal bases use (kappa_bar^R-x^R)/(kappa_bar-x), resonance uses R*x^(R-1).",
+    "threshold": "If 0<=kappa_bar<1 and 0<=s<1, the vector source and defect envelopes vanish; no vanishing conclusion is made at or above one.",
+    "conclusion": "A source owner may submit a coupled finite transfer law and a common row-sum bound instead of scalarizing orientations by assumption; the transfer matrices, common domain, recurrence and residual remain owner obligations."
+  },
+  "matrix_contract": {
+    "entries_nonnegative": true,
+    "componentwise_recurrence": true,
+    "induced_norm": "infinity-row-sum",
+    "common_row_sum_bound": true,
+    "path_order": "K_R through K_(j+1) acts on a term born at j",
+    "source_and_defect_vectors_nonnegative": true
+  },
+  "finite_fixture": {
+    "radius_min": 0,
+    "radius_max": 64,
+    "dimensions": [1, 2, 3],
+    "kappa_bar_fixture_values": ["0", "1/4", "3/4", "24/25", "999/1000", "1", "26/25"],
+    "defect_decay_fixture_values": ["1/3", "99/100", "1", "6/5"],
+    "defect_amplitude_fixture_values": ["0", "3/2"],
+    "matrix_patterns": ["zero", "diagonal", "permutation", "averaging", "triangular", "alternating", "ramp-four"],
+    "resonant_parent_decay_case": true,
+    "resonant_defect_case_from_bound": true,
+    "no_new_finite_grid": true,
+    "fixture_role": "Exact vector recurrence, induced infinity-norm, matrix path-product domination, defect convolution, and closed-form identity rows only; no finite grid is used as an exhaustion surrogate"
+  },
+  "scope": {
+    "nonnegative_transfer_matrix_contract_closed": true,
+    "induced_infinity_norm_step_closed": true,
+    "variable_matrix_path_product_bound_closed": true,
+    "general_vector_defect_convolution_closed": true,
+    "geometric_vector_defect_envelope_closed": true,
+    "nonresonant_closed_form_closed": true,
+    "resonant_closed_form_closed": true,
+    "two_base_less_than_one_threshold_closed": true,
+    "actual_q3_history_closed": false,
+    "source_owned_transfer_closed": false,
+    "source_owned_matrix_bound_closed": false,
+    "source_owned_recurrence_closed": false,
+    "source_owned_defect_closed": false,
+    "common_weighted_operator_domain_closed": false,
+    "source_uniformity_closed": false,
+    "beta_uniformity_closed": false,
+    "volume_uniformity_closed": false,
+    "cutoff_uniformity_closed": false,
+    "exhaustion_independence_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "physical_sector_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "assumptions": [
+    "R-454 is the unchanged scalar parent interface and R-451/R-450 supply its geometric source envelope.",
+    "The coupled history error, source vectors and defect vectors are nonnegative and measured in one common infinity norm or form domain.",
+    "Every step transfer matrix is entrywise nonnegative and has a maximum absolute row sum bounded by one common kappa_bar across the intended history and nested-shape family.",
+    "The source and defect vector norms obey ||u_R||_infinity<=A*r^(R-1) and ||d_R||_infinity<=D*s^(R-1), with common nonnegative A,D,r,s.",
+    "Matrix monotonicity, induced-norm submultiplicativity and finite-sum identities are applied before any infinite-limit interpretation."
+  ],
+  "missing_assumptions": [
+    "A source-owned Q3LOCK derivation of the coupled transfer matrices, the componentwise recurrence and a common bound kappa_bar<1.",
+    "A source-owned vector source/defect sequence and uniformity of its norm bounds in shape, volume, cutoff, beta, phase and history depth.",
+    "A common unbounded operator or form domain on which the vector components and transfer law are defined.",
+    "A production all-shape exhaustion map identifying the same coupled observable across shapes and orientations.",
+    "OS/KMS/GNS identification, common alpha, sector coercivity, physical-empty comparison, continuum, Yang--Mills and mass-gap conclusions."
+  ],
+  "adversarial_review": [
+    {"axis": "entry-sign", "check": "Are all transfer entries nonnegative before matrix monotonicity is used?", "disposition": "DISMISSED: primary and independent lanes check every fixture entry."},
+    {"axis": "row-sum-bound", "check": "Is one common row-sum bound supplied before replacing each product by kappa_bar powers?", "disposition": "DISMISSED: every step is checked against the declared common bound."},
+    {"axis": "path-order", "check": "Does a term born at j receive K_R...K_(j+1), rather than a reversed product?", "disposition": "DISMISSED: exact path expansion and terminal product rows check the order."},
+    {"axis": "componentwise-versus-norm", "check": "Is a componentwise recurrence silently replaced by an unproved scalar equality?", "disposition": "UPHELD-OPEN: componentwise recurrence remains a source-owner hypothesis."},
+    {"axis": "defect-indexing", "check": "Does a defect born at step j receive kappa_bar^(R-j)?", "disposition": "DISMISSED: direct vector path expansion checks the exact index."},
+    {"axis": "resonant-denominator", "check": "Does either closed form divide by zero at kappa_bar=x?", "disposition": "DISMISSED: the resonance branch uses R*x^(R-1)."},
+    {"axis": "finite-to-infinite", "check": "Could dimensions, patterns or radius rows be read as a uniform Q3/exhaustion result?", "disposition": "UPHELD-OPEN: rows audit finite algebra only."},
+    {"axis": "method-preservation", "check": "Does the matrix lift replace T-054 or alter T-059/T-061?", "disposition": "DISMISSED: it is an additive transfer-owner refinement."},
+    {"axis": "promotion-firewall", "check": "Could a norm envelope be promoted to physical, continuum, Yang--Mills or Clay closure?", "disposition": "UPHELD-REJECTED: all downstream scope flags remain false."}
+  ],
+  "evidence_level": "T0 exact conditional nonnegative transfer-matrix defect-stable vector history-resolvent envelope",
+  "boundary": "R-455 proves an abstract finite-dimensional norm implication only: an entrywise nonnegative coupled recurrence with one common induced infinity-norm bound has the R-454 source-plus-defect envelope. It does not supply a Q3 transfer law, common bound, common domain, residual, exhaustion map or any physical or continuum identification.",
+  "non_claims": [
+    "No source-owned Q3LOCK transfer matrices, componentwise recurrence, common row-sum bound, vector residual or defect envelope are established.",
+    "No common unbounded domain, form closure, source/volume/cutoff/beta uniformity or production exhaustion map is established.",
+    "The matrix envelope is not an OS/KMS/GNS, common-alpha, physical-sector, continuum, Yang--Mills or mass-gap result.",
+    "The dimensions, patterns and radius rows are exact finite checks and are not an exhaustion surrogate.",
+    "The established T-054 forward method, T-059/T-061 inverse methods, owner order and promotion firewalls remain unchanged."
+  ],
+  "next_action": "When a source-owned Q3 history supplies coupled transfer matrices, verify entrywise nonnegativity, one common kappa_bar<1, the vector source and residual bounds, and instantiate R-455 before feeding the resulting norm envelope through R-454/R-453/R-451. Until then, continue the unchanged T-054 owner-intake boundary and additive T-059/T-061 observation-source lock without another finite mobility or geometry table.",
+  "stop_or_redesign": [
+    "If any transfer entry is negative or any row sum exceeds the submitted common bound, reject that owner packet and retain only the abstract norm identity.",
+    "If kappa_bar>=1 or s>=1, retain the exact conditional diagnostic but do not claim vanishing.",
+    "If the bound depends on shape, volume, cutoff, beta or history depth, do not call the envelope uniform.",
+    "If the common norm or domain is absent, do not convert the vector estimate into an operator or form theorem.",
+    "If a proposed use changes the established method or owner order, return to the continuity gate before proceeding."
+  ],
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R455.lean",
+    "command": "lake env lean Tect/R455.lean",
+    "declarations": [
+      "row_sum_step",
+      "matrix_inf_step",
+      "matrix_path_step",
+      "matrix_defect_envelope_step",
+      "parent_decay_ratio",
+      "two_base_contraction_bound"
+    ],
+    "role": "Lean checks the finite two-component induced infinity-norm step, path-product monotonicity, scalar kernel recurrence and strict two-base threshold; Python checks arbitrary declared dimensions, path order, vector defects and owner firewalls."
+  },
+  "artifacts": {
+    "primary_script": "verification/scripts/pre_a_cp1_st8_q3lock_transfer_matrix_defect_resolvent.py",
+    "independent_script": "codes/foundations/pre_a_cp1_st8_q3lock_transfer_matrix_defect_resolvent_independent.py",
+    "hostile_script": "codes/foundations/pre_a_cp1_st8_q3lock_transfer_matrix_defect_resolvent_hostile.py",
+    "integrated_verifier": "verification/scripts/pre_a_cp1_st8_q3lock_transfer_matrix_defect_resolvent_verify.py",
+    "certificate": "strategy/pre-a-cp1-st8-q3lock-transfer-matrix-defect-resolvent-certificate-260831.md",
+    "exploration": "strategy/pre-a-cp1-st8-q3lock-transfer-matrix-defect-resolvent-exploration.json",
+    "lean": "verification/lean/Tect/R455.lean"
+  },
+  "formal_integration": {
+    "results": ["R-455"],
+    "negatives": [],
+    "event_ordinal": 804,
+    "event_title": "R-455 nonnegative transfer-matrix defect-resolvent envelope",
+    "no_new_negative": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "method_preservation": {
+    "existing_forward_method_unchanged": true,
+    "observation_first_inverse_lane_additive": true,
+    "owner_order_unchanged": true,
+    "no_physical_promotion": true
+  },
+  "recorded_by": "Codex",
+  "provenance": "contemporaneous"
+}

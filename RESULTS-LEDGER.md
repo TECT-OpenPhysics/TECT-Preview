@@ -22,6 +22,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-455](#r-455) | Nonnegative transfer-matrix defect-resolvent envelope for coupled orientation histories | R-455 v1.0 is a T0 claim-nonbearing additive T-054 interface under EXP-001328. For a componentwise nonnegative vector recurrence with entrywise nonnegative transfer matrices and one common induced infinity-row-sum bound, exact path products give `||h_R||_infinity <= A*S_R(kappa_bar,r)+D*S_R(kappa_bar,s)`, including unequal-base and resonant branches and the sufficient threshold `kappa_bar<1`, `s<1`. Primary 373915/373915, independent 250290/250290, hostile 20/20, integrated and Lean pass. Source-owned transfer/history, common domain, uniformity, exhaustion, physical, continuum, Yang--Mills and mass-gap gates remain open; existing T-054/T-059/T-061 methods and owner order are unchanged |
 | [R-454](#r-454) | Variable-coefficient defect-stable history-resolvent envelope | R-454 v1.0 is a T0 claim-nonbearing T-054 interface under EXP-001327. For `H_R <= kappa_R*H_(R-1)+A*r^(R-1)+delta_R` with `0<=kappa_R<=kappa_bar`, exact path-product domination gives `H_R <= A*S_R(kappa_bar,r)+sum_(j=1)^R kappa_bar^(R-j)*delta_j`; `delta_R<=D*s^(R-1)` gives the second kernel, with nonresonant/resonant branches and sufficient threshold `kappa_bar<1`, `s<1`. Primary 88391/88391, independent 58939/58939, hostile 16/16, integrated 19/19 and Lean R454 pass. The source-owned recurrence, common bound, residual, domain, exhaustion, common alpha, physical, continuum, Yang--Mills and mass-gap gates remain open; existing T-054/T-059/T-061 methods and owner order are unchanged |
 | [R-453](#r-453) | Defect-stable history-resolvent recurrence envelope | R-453 v1.0 is a T0 claim-nonbearing T-054 interface under EXP-001326. If the unchanged R-452 one-step history recurrence has a nonnegative residual `delta_R`, the exact contribution is `sum_(j=1)^R kappa^(R-j)*delta_j`; under `delta_R <= D*s^(R-1)` this gives `H_R <= A*S_R(kappa,r)+D*S_R(kappa,s)`, with separate resonant branches and sufficient threshold `0<=kappa<1`, `0<=s<1`. Primary 29752/29752, independent 14827/14827, hostile 14/14, integrated 19/19 and Lean R453 pass. The source-owned recurrence, residual, common domain, exhaustion, common alpha, physical, continuum, Yang--Mills and mass-gap gates remain open; existing methods and owner order are unchanged |
 | [R-452](#r-452) | Conditional history-resolvent recurrence envelope | R-452 v1.0 is a T0 claim-nonbearing T-054 interface under EXP-001325. If a source-owned total two-orientation fourth-power history error obeys `H_R <= kappa*H_(R-1) + A*r^(R-1)` with `H_0=0`, `r=(23/26)^4` and `A=16*C4_edge*78^4` inherited from R-451/R-450, the exact resolvent `S_R=sum kappa^(R-1-j)r^j` gives `H_R <= A*S_R`; both nonresonant and resonant branches are checked, and `kappa<1` is the sufficient vanishing threshold. Primary 1614/1614, independent 1572/1572, hostile 11/11, integrated 19/19 and Lean R452 pass. The owner recurrence, `kappa`, common domain, exhaustion, common alpha, physical, continuum, Yang--Mills and mass-gap gates remain open; existing methods and owner order are unchanged |
@@ -774,6 +775,71 @@ exhaustion, physical-empty comparison, C6, Sector-A, Pre-A, Yang--Mills dynamics
 or a mass gap. No claim tier changes and no negative result is issued.
 
 **Proven in:** [R-444 certificate](strategy/pre-a-cp1-st8-q3lock-exponential-shell-tail-certificate-260830.md), [machine manifest](strategy/pre-a-cp1-st8-q3lock-exponential-shell-tail-manifest.json), [integrated run](claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-integrated-exponential_shell_tail/integrated.json), [exploration record](strategy/pre-a-cp1-st8-q3lock-exponential-shell-tail-exploration.json), and [Lean R444](verification/lean/Tect/R444.lean).
+<a id="r-455"></a>
+### R-455 -- Nonnegative transfer-matrix defect-resolvent envelope for coupled orientation histories
+
+**Result ID.** `PA-CP1-ST8-Q3LOCK-NONNEGATIVE-TRANSFER-MATRIX-DEFECT-RESOLVENT-v0` (R-455).
+
+**Version and exact scope.** R-455 v1.0 is a T0, claim-nonbearing additive
+T-054 owner-intake interface under EXP-001328. It preserves the existing
+T-054 forward recurrence-resolvent method, the additive T-059/T-061
+observation-first inverse lane, and their owner order. It does not replace or
+rewrite any of those methods.
+
+For `h_0=0` and a componentwise nonnegative vector recurrence
+
+`h_R <= K_R h_(R-1) + u_R + d_R`,
+
+assume each `K_R` is entrywise nonnegative and its maximum absolute row sum is
+at most one common `kappa_bar`. If
+`||u_R||_infinity <= A*r^(R-1)` and
+`||d_R||_infinity <= D*s^(R-1)`, then exact path order gives
+
+`||K_R ... K_(j+1)||_infinity <= kappa_bar^(R-j)`
+
+and hence
+
+`||h_R||_infinity <= A*S_R(kappa_bar,r) + D*S_R(kappa_bar,s)`.
+
+Here `S_R(kappa_bar,x)` is the finite geometric convolution; it is
+`(kappa_bar^R-x^R)/(kappa_bar-x)` off resonance and `R*x^(R-1)` at
+resonance. The sufficient decay threshold is
+`0<=kappa_bar<1` and `0<=s<1`.
+
+**Finding.** The exact-Fraction primary lane passes 373,915/373,915
+assertions over 65 radii, 46 bound/defect pairs, dimensions 1--3, seven
+matrix patterns, and 61,824 terminal path checks. The non-importing independent
+lane passes 250,290/250,290 with the same coverage. The hostile lane rejects
+20/20 mutations, including sign, norm, path-order, resonance, threshold,
+finite-to-infinite, owner-history, method-change, and promotion mutations. The
+integrated verifier passes and Lean R455 compiles under the pinned toolchain.
+
+**Assumptions and boundary.** The result assumes the unchanged R-454 scalar
+interface, nonnegative common-norm data, entrywise nonnegative transfer
+matrices, one common row-sum bound, geometric source/defect bounds, and finite
+sum identities before any limit. It supplies no source-owned Q3LOCK transfer
+law, componentwise history, common `kappa_bar<1`, vector residual, common
+unbounded domain, shape/volume/cutoff/beta/history uniformity, production
+exhaustion map, OS/KMS/GNS identification, common alpha, physical sector,
+continuum, Yang--Mills, or mass-gap result. Fixture rows are exact finite
+algebra checks, not an exhaustion surrogate.
+
+**Adversarial review.** Entry signs, row-sum domination, path order, defect
+indexing, and both closed-form branches are checked before any envelope is
+accepted. The componentwise recurrence and finite-to-infinite interpretation
+remain owner-open. The method-preservation and promotion firewalls reject any
+change to T-054/T-059/T-061 or any physical, continuum, Yang--Mills, mass-gap,
+Pre-A, Sector-A, or Clay upgrade.
+
+**Proven in:** [R-455 certificate](strategy/pre-a-cp1-st8-q3lock-transfer-matrix-defect-resolvent-certificate-260831.md), [machine manifest](strategy/pre-a-cp1-st8-q3lock-transfer-matrix-defect-resolvent-manifest.json), [primary script](verification/scripts/pre_a_cp1_st8_q3lock_transfer_matrix_defect_resolvent.py), [independent script](codes/foundations/pre_a_cp1_st8_q3lock_transfer_matrix_defect_resolvent_independent.py), [hostile script](codes/foundations/pre_a_cp1_st8_q3lock_transfer_matrix_defect_resolvent_hostile.py), [integrated verifier](verification/scripts/pre_a_cp1_st8_q3lock_transfer_matrix_defect_resolvent_verify.py), [integrated run](claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-integrated-pre_a_cp1_st8_q3lock_transfer_matrix_defect_resolvent/integrated.json), [exploration record](strategy/pre-a-cp1-st8-q3lock-transfer-matrix-defect-resolvent-exploration.json), and [Lean R455](verification/lean/Tect/R455.lean).
+
+**Next action.** When a source-owned Q3 history supplies coupled transfer
+matrices, a common `kappa_bar<1`, and vector source/defect bounds, instantiate
+R-455 and feed the envelope through R-454/R-453/R-451. Until then, continue
+the unchanged T-054 owner-intake boundary and additive T-059/T-061
+observation-source lock without another finite mobility or geometry table. No
+claim tier changes, negative result, or PDF is issued.
+
 <a id="r-454"></a>
 ### R-454 -- Variable-coefficient defect-stable history-resolvent envelope
 
