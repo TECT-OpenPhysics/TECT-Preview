@@ -22,6 +22,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-445](#r-445) | Conditional scalar-to-operator tail transfer under a per-edge norm majorant | R-445 v1.0 is a T0 claim-nonbearing finite conditional Banach-norm transfer under EXP-001297. With the explicit assumption `||K_e|| <= C*w(e)`, the triangle inequality transfers the R-444 scalar bound to `C*T(R)` across 343 boxes, 102900 edges and 4116 tail rows; primary, independent, hostile and integrated lanes pass and Lean R445 passes. The actual Q3LOCK commutator/history tail, common core, exhaustion, physical, continuum, Yang--Mills and mass-gap claims remain open |
 | [R-444](#r-444) | Exact exponential shell-tail majorant for rectangular edge weights | R-444 v1.0 is a T0 claim-nonbearing scalar geometric audit under EXP-001289. The exact Z^3 shell count N3(n)=4n^2+2 and tail T(R)=3(4R^2+8R+14)2^(1-R) pass primary 4519/4519, independent 4505/4505, hostile 8/8, integrated 27/27 and Lean R444. All [2,8]^3 finite rectangular tails are dominated; Q3LOCK commutator/history-tail, operator, physical, Yang-Mills and mass-gap claims remain open |
 | [R-443](#r-443) | Arbitrary finite rectangular axis-parity matching theorem | R-443 v1.0 is a T0 claim-nonbearing finite combinatorial theorem under EXP-001288. Lean proves the arbitrary finite local incidence implication; all 343 ordered boxes in [2,8]^3 pass exact edge-count and six-layer checks: primary 235319/235319, independent 132418/132418, hostile 8/8, integrated 34/34 and Lean R443 PASS. Weighted Q3LOCK operator, common-core, history-tail, physical, Yang-Mills and mass-gap claims remain open |
 | [R-442](#r-442) | General rectangular axis-parity matching lemma | R-442 v1.0 is a T0 claim-nonbearing finite combinatorial audit under EXP-001287. All 125 ordered boxes in [2,6]^3 pass exact edge-count and six-layer matching checks: primary 67398/67398, independent 67268/67268, hostile 8/8, integrated 26/26 and Lean R442 PASS. The local incidence lemma is reusable, but arbitrary-box operator, common-core, history-tail, physical, Yang-Mills and mass-gap claims remain open |
@@ -764,6 +765,41 @@ exhaustion, physical-empty comparison, C6, Sector-A, Pre-A, Yang--Mills dynamics
 or a mass gap. No claim tier changes and no negative result is issued.
 
 **Proven in:** [R-444 certificate](strategy/pre-a-cp1-st8-q3lock-exponential-shell-tail-certificate-260830.md), [machine manifest](strategy/pre-a-cp1-st8-q3lock-exponential-shell-tail-manifest.json), [integrated run](claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-integrated-exponential_shell_tail/integrated.json), [exploration record](strategy/pre-a-cp1-st8-q3lock-exponential-shell-tail-exploration.json), and [Lean R444](verification/lean/Tect/R444.lean).
+<a id="r-445"></a>
+### R-445 -- Conditional scalar-to-operator tail transfer under a per-edge norm majorant
+
+**Result ID.** `PA-CP1-ST8-Q3LOCK-SCALAR-OPERATOR-TAIL-TRANSFER-v0` (R-445).
+
+**Version and exact scope.** R-445 v1.0 is a T0, claim-nonbearing finite
+conditional Banach/seminorm transfer under EXP-001297. It preserves the
+existing T-054 forward method. On the finite positive-coordinate nearest-
+neighbour edge family in the three-dimensional rectangular boxes `[2,8]^3`,
+with `w(e)=2^(-||lower(e)||_1)`, assume the common per-edge majorant
+`||K_e|| <= C*w(e)`. The finite triangle inequality then gives
+`||sum_tail K_e|| <= C*T(R)` using the scalar R-444 bound.
+
+**Finding.** The primary Fraction lane passes its complete finite audit over
+343 boxes, 102900 edges and 4116 tail rows for `C` in `{1,3/2,7/3}`. The
+non-importing independent reconstruction agrees on all derived fields. The
+hostile firewall rejects 8/8 claim, operator, physical, continuum and policy
+mutations. The integrated verifier passes with Lean R445 compiling the abstract
+triangle transfer and the scaled R-444 arithmetic fixture.
+
+**Assumptions and missing assumptions.** The finite edge family, weight, boxes,
+radii, nonnegative majorant constant and scalar R-444 bound are frozen. The
+per-edge norm majorant is an explicit assumption, not a Q3LOCK derivation.
+Missing are the actual Q3LOCK commutator/history-tail estimate, a
+representation-independent weighted operator domain and common core, uniform
+source/cutoff/volume/shape/history constants, exhaustion Cauchy and common
+alpha, OS/KMS/GNS identification, sector coercivity and any physical-empty,
+continuum, Yang--Mills or mass-gap conclusion.
+
+**Boundary.** R-445 is a finite conditional reusable lemma only. It does not
+identify `K_e` with actual Q3LOCK terms, close a weighted operator or common
+core, prove exhaustion or a physical sector, or change any claim tier. No
+negative result and no PDF are issued.
+
+**Proven in:** [R-445 certificate](strategy/pre-a-cp1-st8-q3lock-scalar-operator-tail-transfer-certificate-260830.md), [machine manifest](strategy/pre-a-cp1-st8-q3lock-scalar-operator-tail-transfer-manifest.json), [integrated run](claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-integrated-scalar_operator_tail_transfer/integrated.json), [exploration record](strategy/pre-a-cp1-st8-q3lock-scalar-operator-tail-transfer-exploration.json), and [Lean R445](verification/lean/Tect/R445.lean).
 <a id="r-443"></a>
 ### R-443 -- Arbitrary finite rectangular axis-parity matching theorem
 

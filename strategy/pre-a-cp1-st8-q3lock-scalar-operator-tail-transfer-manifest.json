@@ -1,0 +1,115 @@
+{
+  "schema": "tect/pre-a-cp1-st8-q3lock-scalar-operator-tail-transfer/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-SCALAR-OPERATOR-TAIL-TRANSFER-v0",
+  "result_id": "R-445",
+  "title": "Conditional scalar-to-operator tail transfer under a per-edge norm majorant",
+  "task_id": "T-054",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "exploration_id": "EXP-001297",
+  "claim_bearing": false,
+  "status": "CONDITIONAL_WEIGHTED_NORM_TRANSFER_AUDITED",
+  "parent_results": [
+    "R-444"
+  ],
+  "parent_explorations": [
+    "EXP-001289"
+  ],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY"
+  ],
+  "question": "Given a finite edge family and an explicit per-edge Banach-norm majorant ||K_e|| <= C*w(e), does the finite tail norm inherit the R-444 scalar shell bound C*T(R)?",
+  "finite_contract": {
+    "dimension": 3,
+    "weight": "2^(-l1_norm(lower_endpoint))",
+    "edge_set": "positive-coordinate nearest-neighbour edges in rectangular boxes",
+    "box_side_min": 2,
+    "box_side_max": 8,
+    "tail_radius_min": 1,
+    "tail_radius_max": 12,
+    "majorant_constant_inputs": [
+      "1",
+      "3/2",
+      "7/3"
+    ],
+    "term_bound": "||K_e|| <= C*w(e)",
+    "transfer_chain": "||sum_tail K_e|| <= sum_tail ||K_e|| <= C*sum_tail w(e) <= C*T(R)"
+  },
+  "scope": {
+    "finite_banach_norm_transfer": true,
+    "scalar_tail_reused": true,
+    "per_edge_majorant_assumed": true,
+    "finite_box_dominance_reused": true,
+    "operator_norm_of_actual_q3_terms": false,
+    "q3lock_commutator_identification": false,
+    "history_tail_closed": false,
+    "weighted_operator_form_closed": false,
+    "common_core_closed": false,
+    "common_alpha_closed": false,
+    "exhaustion_cauchy_closed": false,
+    "kms_gns_gap_closed": false,
+    "physical_empty_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "assumptions": [
+    "The finite edge set, lower-endpoint radius and nonnegative scalar weight are exactly those of R-444.",
+    "For every retained edge e, a common nonnegative constant C satisfies the norm majorant ||K_e|| <= C*w(e).",
+    "The ambient scalar tail T(R) and finite-box dominance have already been audited by R-444.",
+    "The Banach or seminormed additive structure obeys the triangle inequality used by the Lean theorem."
+  ],
+  "missing_assumptions": [
+    "A Q3LOCK-specific proof that the actual commutator or interaction term satisfies the per-edge majorant.",
+    "A representation-independent common core and weighted product-domain estimate.",
+    "Source-, cutoff-, volume-, shape-, phase- and history-uniform constants.",
+    "An exhaustion Cauchy theorem, common alpha, OS/KMS/GNS identification and sector coercivity.",
+    "Physical-empty, continuum, Yang-Mills and mass-gap conclusions."
+  ],
+  "stop_conditions": [
+    "If any per-edge majorant is not supplied, retain this as a conditional transfer and do not call it a Q3LOCK estimate.",
+    "If finite tails exceed C*T(R), fail the transfer audit and retain R-444 only.",
+    "If a hostile mutation removes the conditional boundary or adds a physical/continuum flag, reject the package.",
+    "Do not infer exhaustion convergence or a positive GNS gap from the finite transfer alone."
+  ],
+  "evidence_level": "T0 / EXACT FINITE CONDITIONAL BANACH-NORM TRANSFER WITH SCALAR MAJORANT",
+  "non_claims": [
+    "No Q3LOCK commutator or history-tail estimate is proved.",
+    "No actual Q3 operator term is shown to satisfy the per-edge majorant.",
+    "No weighted operator domain, common core, common alpha, exhaustion, OS/KMS/GNS or sector gap follows.",
+    "No physical-empty comparison, continuum, C6, Sector-A, Pre-A, Yang-Mills dynamics or mass-gap conclusion follows."
+  ],
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R445.lean",
+    "theorem_markers": [
+      "weighted_tail_transfer",
+      "scaled_tail_r1_bound"
+    ],
+    "command": "lake env lean Tect/R445.lean",
+    "role": "Lean proves the finite triangle-inequality transfer in a seminormed additive group and checks the scaled R-444 tail arithmetic; Python checks the declared finite boxes and scalar dominance."
+  },
+  "artifacts": {
+    "primary_script": "codes/foundations/pre_a_cp1_st8_q3lock_scalar_operator_tail_transfer.py",
+    "independent_script": "codes/foundations/pre_a_cp1_st8_q3lock_scalar_operator_tail_transfer_independent.py",
+    "hostile_script": "codes/foundations/pre_a_cp1_st8_q3lock_scalar_operator_tail_transfer_hostile.py",
+    "integrated_verifier": "codes/foundations/pre_a_cp1_st8_q3lock_scalar_operator_tail_transfer_verify.py",
+    "lean": "verification/lean/Tect/R445.lean",
+    "certificate": "strategy/pre-a-cp1-st8-q3lock-scalar-operator-tail-transfer-certificate-260830.md",
+    "exploration": "strategy/pre-a-cp1-st8-q3lock-scalar-operator-tail-transfer-exploration.json"
+  },
+  "boundary": "R-445 is a finite conditional norm-transfer lemma. It inherits the scalar R-444 bound only after an explicit per-edge operator majorant is assumed; it does not identify that assumption with Q3LOCK, close a common core or exhaustion, or establish any physical, continuum, Yang-Mills or mass-gap result.",
+  "formal_integration": {
+    "event_ordinal": 794,
+    "event_title": "R-445 conditional scalar-to-operator tail transfer",
+    "event_id": "20260830-r-445-conditional-scalar-to-operator-tail-trans",
+    "new_negative": false,
+    "tier_change": false,
+    "pdf": false
+  }
+}

@@ -1,0 +1,327 @@
+{
+  "assertion_count": 53531,
+  "assertion_samples_truncated": true,
+  "assertions": [
+    {
+      "actual": [
+        "R-445",
+        "EXP-001297",
+        "T-054",
+        false,
+        "CONDITIONAL_WEIGHTED_NORM_TRANSFER_AUDITED"
+      ],
+      "expected": "R-445/EXP-001297/T-054/false/audited",
+      "group": "provenance",
+      "name": "identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-444",
+      "expected": "R-444",
+      "group": "provenance",
+      "name": "parent identity",
+      "status": "PASS"
+    },
+    {
+      "actual": 3,
+      "expected": 3,
+      "group": "contract",
+      "name": "dimension",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        2,
+        8
+      ],
+      "expected": "finite boxes with sides >=2",
+      "group": "contract",
+      "name": "box range",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        1,
+        12
+      ],
+      "expected": "positive finite radii",
+      "group": "contract",
+      "name": "radius range",
+      "status": "PASS"
+    },
+    {
+      "actual": "||K_e|| <= C*w(e)",
+      "expected": "declared per-edge bound",
+      "group": "contract",
+      "name": "term-bound contract",
+      "status": "PASS"
+    },
+    {
+      "actual": "||sum_tail K_e|| <= sum_tail ||K_e|| <= C*sum_tail w(e) <= C*T(R)",
+      "expected": "triangle transfer chain",
+      "group": "contract",
+      "name": "transfer-chain contract",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "c6_closed": false,
+        "common_alpha_closed": false,
+        "common_core_closed": false,
+        "continuum_closed": false,
+        "exhaustion_cauchy_closed": false,
+        "finite_banach_norm_transfer": true,
+        "finite_box_dominance_reused": true,
+        "history_tail_closed": false,
+        "kms_gns_gap_closed": false,
+        "no_new_negative_result": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "operator_norm_of_actual_q3_terms": false,
+        "per_edge_majorant_assumed": true,
+        "physical_empty_closed": false,
+        "pre_a_closed": false,
+        "q3lock_commutator_identification": false,
+        "scalar_tail_reused": true,
+        "sector_a_closed": false,
+        "weighted_operator_form_closed": false
+      },
+      "expected": "assumed but not identified",
+      "group": "scope",
+      "name": "conditional boundary",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "scope firewall operator_norm_of_actual_q3_terms",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "scope firewall q3lock_commutator_identification",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "scope firewall history_tail_closed",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "scope firewall weighted_operator_form_closed",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "scope firewall common_core_closed",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "scope firewall common_alpha_closed",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "scope firewall exhaustion_cauchy_closed",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "scope firewall kms_gns_gap_closed",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "scope firewall physical_empty_closed",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "scope firewall continuum_closed",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "scope firewall c6_closed",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "scope firewall sector_a_closed",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "scope firewall pre_a_closed",
+      "status": "PASS"
+    },
+    {
+      "actual": "15/4",
+      "expected": "78",
+      "group": "scalar-reuse",
+      "name": "box 1 scalar tail 1",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "termwise norm majorant",
+      "group": "operator-transfer",
+      "name": "box 1 radius 1 C=1 term majorant",
+      "status": "PASS"
+    },
+    {
+      "actual": "15/4",
+      "expected": "15/4",
+      "group": "operator-transfer",
+      "name": "box 1 radius 1 C=1 sum identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "3/4",
+      "expected": "15/4",
+      "group": "operator-transfer",
+      "name": "box 1 radius 1 C=1 triangle",
+      "status": "PASS"
+    },
+    {
+      "actual": "3/4",
+      "expected": "78",
+      "group": "operator-transfer",
+      "name": "box 1 radius 1 C=1 ambient transfer",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "termwise norm majorant",
+      "group": "operator-transfer",
+      "name": "box 1 radius 1 C=3/2 term majorant",
+      "status": "PASS"
+    },
+    {
+      "actual": "45/8",
+      "expected": "45/8",
+      "group": "operator-transfer",
+      "name": "box 1 radius 1 C=3/2 sum identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "9/8",
+      "expected": "45/8",
+      "group": "operator-transfer",
+      "name": "box 1 radius 1 C=3/2 triangle",
+      "status": "PASS"
+    },
+    {
+      "actual": "9/8",
+      "expected": "117",
+      "group": "operator-transfer",
+      "name": "box 1 radius 1 C=3/2 ambient transfer",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "termwise norm majorant",
+      "group": "operator-transfer",
+      "name": "box 1 radius 1 C=7/3 term majorant",
+      "status": "PASS"
+    },
+    {
+      "actual": "35/4",
+      "expected": "35/4",
+      "group": "operator-transfer",
+      "name": "box 1 radius 1 C=7/3 sum identity",
+      "status": "PASS"
+    }
+  ],
+  "assumptions": [
+    "The finite edge set, lower-endpoint radius and nonnegative scalar weight are exactly those of R-444.",
+    "For every retained edge e, a common nonnegative constant C satisfies the norm majorant ||K_e|| <= C*w(e).",
+    "The ambient scalar tail T(R) and finite-box dominance have already been audited by R-444.",
+    "The Banach or seminormed additive structure obeys the triangle inequality used by the Lean theorem."
+  ],
+  "boundary": "R-445 is a finite conditional norm-transfer lemma. It inherits the scalar R-444 bound only after an explicit per-edge operator majorant is assumed; it does not identify that assumption with Q3LOCK, close a common core or exhaustion, or establish any physical, continuum, Yang-Mills or mass-gap result.",
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "derived": {
+    "box_count": 343,
+    "common_alpha_closed": false,
+    "common_core_closed": false,
+    "conditional_norm_transfer": true,
+    "continuum_closed": false,
+    "dimension": 3,
+    "exhaustion_cauchy_closed": false,
+    "finite_scalar_dominance": true,
+    "history_tail_closed": false,
+    "majorant_constants": [
+      "1",
+      "3/2",
+      "7/3"
+    ],
+    "maximum_operator_ratio": "1/64",
+    "maximum_scalar_ratio": "7209599/27262976",
+    "operator_norm_of_actual_q3_terms": false,
+    "physical_empty_closed": false,
+    "pre_a_closed": false,
+    "q3lock_commutator_identification": false,
+    "sector_a_closed": false,
+    "tail_radius_range": [
+      1,
+      12
+    ],
+    "total_edges": 102900,
+    "total_tail_rows": 4116,
+    "weighted_operator_form_closed": false
+  },
+  "evidence_level": "T0 / EXACT FINITE CONDITIONAL BANACH-NORM TRANSFER WITH SCALAR MAJORANT",
+  "exploration_id": "EXP-001297",
+  "manifest": "strategy/pre-a-cp1-st8-q3lock-scalar-operator-tail-transfer-manifest.json",
+  "missing_assumptions": [
+    "A Q3LOCK-specific proof that the actual commutator or interaction term satisfies the per-edge majorant.",
+    "A representation-independent common core and weighted product-domain estimate.",
+    "Source-, cutoff-, volume-, shape-, phase- and history-uniform constants.",
+    "An exhaustion Cauchy theorem, common alpha, OS/KMS/GNS identification and sector coercivity.",
+    "Physical-empty, continuum, Yang-Mills and mass-gap conclusions."
+  ],
+  "non_claims": [
+    "No Q3LOCK commutator or history-tail estimate is proved.",
+    "No actual Q3 operator term is shown to satisfy the per-edge majorant.",
+    "No weighted operator domain, common core, common alpha, exhaustion, OS/KMS/GNS or sector gap follows.",
+    "No physical-empty comparison, continuum, C6, Sector-A, Pre-A, Yang-Mills dynamics or mass-gap conclusion follows."
+  ],
+  "passed": 53531,
+  "result_id": "R-445",
+  "run_kind": "primary",
+  "schema": "tect/pre-a-r445-primary/1.0",
+  "source_hashes": {
+    "manifest": "fe226a07cf714118fef7e5f20ce0dfbc4fc424ad39f0fc2f664f1ad12d652dc7",
+    "parent_manifest": "9b7d0d15eec8c3b8bea0ae8796a6872857c3bc00cc18ce19d18015e2b0d5cfb4",
+    "script": "75718d5d074b3b8ff6036b16db542188c46023797c85f69fb5bb45498a15af93"
+  },
+  "verdict": "CONDITIONAL_WEIGHTED_NORM_TRANSFER_AUDITED"
+}

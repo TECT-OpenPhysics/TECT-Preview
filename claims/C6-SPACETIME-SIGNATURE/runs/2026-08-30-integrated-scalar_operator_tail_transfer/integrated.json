@@ -1,0 +1,361 @@
+{
+  "assertion_count": 29,
+  "assertions": [
+    {
+      "actual": [
+        "R-445",
+        "EXP-001297",
+        "T-054",
+        false
+      ],
+      "expected": "R-445/EXP-001297/T-054/false",
+      "group": "provenance",
+      "name": "identity",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "actual_q3": false,
+        "assumed": true
+      },
+      "expected": "assumption without identification",
+      "group": "scope",
+      "name": "conditional assumption",
+      "status": "PASS"
+    },
+    {
+      "actual": "||sum_tail K_e|| <= sum_tail ||K_e|| <= C*sum_tail w(e) <= C*T(R)",
+      "expected": "triangle plus scalar majorant",
+      "group": "contract",
+      "name": "finite transfer chain",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "c6_closed": false,
+        "common_alpha_closed": false,
+        "common_core_closed": false,
+        "continuum_closed": false,
+        "exhaustion_cauchy_closed": false,
+        "finite_banach_norm_transfer": true,
+        "finite_box_dominance_reused": true,
+        "history_tail_closed": false,
+        "kms_gns_gap_closed": false,
+        "no_new_negative_result": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "operator_norm_of_actual_q3_terms": false,
+        "per_edge_majorant_assumed": true,
+        "physical_empty_closed": false,
+        "pre_a_closed": false,
+        "q3lock_commutator_identification": false,
+        "scalar_tail_reused": true,
+        "sector_a_closed": false,
+        "weighted_operator_form_closed": false
+      },
+      "expected": "all higher closures false",
+      "group": "scope",
+      "name": "scope firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": "E:\\Dev\\TECT\\verification\\lean\\Tect\\R445.lean",
+      "expected": true,
+      "group": "Lean",
+      "name": "Lean source",
+      "status": "PASS"
+    },
+    {
+      "actual": "markers present",
+      "expected": "R-445 theorem markers",
+      "group": "Lean",
+      "name": "Lean theorem markers",
+      "status": "PASS"
+    },
+    {
+      "actual": "forbidden tokens absent",
+      "expected": "clean source",
+      "group": "Lean",
+      "name": "Lean firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-445 PRIMARY CONDITIONAL_WEIGHTED_NORM_TRANSFER_AUDITED 53531/53531 boxes=343 edges=102900 tail_rows=4116\n",
+      "expected": "primary audited",
+      "group": "executables",
+      "name": "primary child",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-445 INDEPENDENT INDEPENDENT_CONDITIONAL_WEIGHTED_NORM_TRANSFER_CONTROL 41178/41178 boxes=343 edges=102900 tail_rows=4116\n",
+      "expected": "independent control",
+      "group": "executables",
+      "name": "independent child",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-445 HOSTILE HOSTILE_MUTATIONS_REJECTED 8/8\n",
+      "expected": "hostile rejected",
+      "group": "executables",
+      "name": "hostile child",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        343,
+        343
+      ],
+      "expected": "equal",
+      "group": "crosscheck",
+      "name": "independent agreement box_count",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        102900,
+        102900
+      ],
+      "expected": "equal",
+      "group": "crosscheck",
+      "name": "independent agreement total_edges",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        4116,
+        4116
+      ],
+      "expected": "equal",
+      "group": "crosscheck",
+      "name": "independent agreement total_tail_rows",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        true,
+        true
+      ],
+      "expected": "equal",
+      "group": "crosscheck",
+      "name": "independent agreement finite_scalar_dominance",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        true,
+        true
+      ],
+      "expected": "equal",
+      "group": "crosscheck",
+      "name": "independent agreement conditional_norm_transfer",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "7209599/27262976",
+        "7209599/27262976"
+      ],
+      "expected": "equal",
+      "group": "crosscheck",
+      "name": "independent agreement maximum_scalar_ratio",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "1/64",
+        "1/64"
+      ],
+      "expected": "equal",
+      "group": "crosscheck",
+      "name": "independent agreement maximum_operator_ratio",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        false,
+        false
+      ],
+      "expected": "equal",
+      "group": "crosscheck",
+      "name": "independent agreement q3lock_commutator_identification",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        false,
+        false
+      ],
+      "expected": "equal",
+      "group": "crosscheck",
+      "name": "independent agreement history_tail_closed",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        false,
+        false
+      ],
+      "expected": "equal",
+      "group": "crosscheck",
+      "name": "independent agreement weighted_operator_form_closed",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        false,
+        false
+      ],
+      "expected": "equal",
+      "group": "crosscheck",
+      "name": "independent agreement common_core_closed",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        false,
+        false
+      ],
+      "expected": "equal",
+      "group": "crosscheck",
+      "name": "independent agreement common_alpha_closed",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        false,
+        false
+      ],
+      "expected": "equal",
+      "group": "crosscheck",
+      "name": "independent agreement exhaustion_cauchy_closed",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        false,
+        false
+      ],
+      "expected": "equal",
+      "group": "crosscheck",
+      "name": "independent agreement physical_empty_closed",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        false,
+        false
+      ],
+      "expected": "equal",
+      "group": "crosscheck",
+      "name": "independent agreement continuum_closed",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        false,
+        false
+      ],
+      "expected": "equal",
+      "group": "crosscheck",
+      "name": "independent agreement pre_a_closed",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        false,
+        false
+      ],
+      "expected": "equal",
+      "group": "crosscheck",
+      "name": "independent agreement sector_a_closed",
+      "status": "PASS"
+    },
+    {
+      "actual": 8,
+      "expected": 8,
+      "group": "hostile",
+      "name": "hostile mutation count",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "command": "lake env lean Tect/R445.lean",
+        "output": "",
+        "returncode": 0,
+        "status": "PASS"
+      },
+      "expected": "PASS",
+      "group": "Lean",
+      "name": "Lean compile",
+      "status": "PASS"
+    }
+  ],
+  "assumptions": [
+    "The finite edge set, lower-endpoint radius and nonnegative scalar weight are exactly those of R-444.",
+    "For every retained edge e, a common nonnegative constant C satisfies the norm majorant ||K_e|| <= C*w(e).",
+    "The ambient scalar tail T(R) and finite-box dominance have already been audited by R-444.",
+    "The Banach or seminormed additive structure obeys the triangle inequality used by the Lean theorem."
+  ],
+  "boundary": "R-445 is a finite conditional norm-transfer lemma. It inherits the scalar R-444 bound only after an explicit per-edge operator majorant is assumed; it does not identify that assumption with Q3LOCK, close a common core or exhaustion, or establish any physical, continuum, Yang-Mills or mass-gap result.",
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "derived": {
+    "box_count": 343,
+    "common_alpha_closed": false,
+    "common_core_closed": false,
+    "conditional_norm_transfer": true,
+    "continuum_closed": false,
+    "exhaustion_cauchy_closed": false,
+    "finite_scalar_dominance": true,
+    "history_tail_closed": false,
+    "maximum_operator_ratio": "1/64",
+    "maximum_scalar_ratio": "7209599/27262976",
+    "physical_empty_closed": false,
+    "pre_a_closed": false,
+    "q3lock_commutator_identification": false,
+    "sector_a_closed": false,
+    "total_edges": 102900,
+    "total_tail_rows": 4116,
+    "weighted_operator_form_closed": false
+  },
+  "evidence_level": "T0 / EXACT FINITE CONDITIONAL BANACH-NORM TRANSFER WITH SCALAR MAJORANT",
+  "exploration_id": "EXP-001297",
+  "lean": {
+    "command": "lake env lean Tect/R445.lean",
+    "output": "",
+    "returncode": 0,
+    "status": "PASS"
+  },
+  "manifest": "strategy/pre-a-cp1-st8-q3lock-scalar-operator-tail-transfer-manifest.json",
+  "missing_assumptions": [
+    "A Q3LOCK-specific proof that the actual commutator or interaction term satisfies the per-edge majorant.",
+    "A representation-independent common core and weighted product-domain estimate.",
+    "Source-, cutoff-, volume-, shape-, phase- and history-uniform constants.",
+    "An exhaustion Cauchy theorem, common alpha, OS/KMS/GNS identification and sector coercivity.",
+    "Physical-empty, continuum, Yang-Mills and mass-gap conclusions."
+  ],
+  "non_claims": [
+    "No Q3LOCK commutator or history-tail estimate is proved.",
+    "No actual Q3 operator term is shown to satisfy the per-edge majorant.",
+    "No weighted operator domain, common core, common alpha, exhaustion, OS/KMS/GNS or sector gap follows.",
+    "No physical-empty comparison, continuum, C6, Sector-A, Pre-A, Yang-Mills dynamics or mass-gap conclusion follows."
+  ],
+  "recorded_at": "2026-08-30T05:25:47.704993Z",
+  "result_id": "R-445",
+  "run_kind": "integrated",
+  "schema": "tect/pre-a-r445-integrated/1.0",
+  "scope": {
+    "claim_bearing": false,
+    "finite_conditional_transfer": true,
+    "hostile_mutations_rejected": true,
+    "independent_reconstruction_agrees": true,
+    "operator_or_physical_promotion": false
+  },
+  "source_hashes": {
+    "codes/foundations/pre_a_cp1_st8_q3lock_scalar_operator_tail_transfer.py": "75718d5d074b3b8ff6036b16db542188c46023797c85f69fb5bb45498a15af93",
+    "codes/foundations/pre_a_cp1_st8_q3lock_scalar_operator_tail_transfer_hostile.py": "c75fd9673ab5a9ea3a2f6716f4f54d9a63738a7a2f903163805aca2811a3d014",
+    "codes/foundations/pre_a_cp1_st8_q3lock_scalar_operator_tail_transfer_independent.py": "c3a10ea4e99c600aaca5f3ddd0c458d92c4ad553feb039775ce6d3011c2a47e4",
+    "strategy/pre-a-cp1-st8-q3lock-scalar-operator-tail-transfer-manifest.json": "fe226a07cf714118fef7e5f20ce0dfbc4fc424ad39f0fc2f664f1ad12d652dc7",
+    "verification/lean/Tect/R445.lean": "eccc63539d016fd8e7aaa1dca73a3cb226ec75178fba50e3af3ac2ee8303e26b"
+  },
+  "verdict": "INTEGRATED_CONDITIONAL_WEIGHTED_NORM_TRANSFER_AUDITED"
+}
