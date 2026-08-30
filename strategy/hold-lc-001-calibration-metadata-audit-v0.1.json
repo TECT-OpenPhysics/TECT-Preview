@@ -1,0 +1,285 @@
+{
+  "schema": "tect/observation-calibration-metadata-audit/0.1",
+  "id": "HOLD-LC-001-CALIBRATION-METADATA-AUDIT-v0.1",
+  "version": "0.1.0",
+  "task_id": "T-061",
+  "holdout_id": "HOLD-LC-001",
+  "claim_bearing": false,
+  "status": "PARTIAL_CALIBRATION_METADATA_AND_POSTERIOR_TIMING_BOUNDARY",
+  "parent_event_manifest": "strategy/hold-lc-001-event-byte-freeze-v0.1.json",
+  "parent_event_manifest_sha256": "fd21c32658f19c37368625c44cac68b630bbd2a4709c213099fead9a20df9746",
+  "parent_event_manifest_byte_length": 9091,
+  "scope": {
+    "response_products": [
+      "FERMI-GBM-B0-RESPONSE",
+      "FERMI-GBM-N0-RESPONSE"
+    ],
+    "posterior_product": "LIGO-P1800061-LOW-SPIN-POSTERIOR",
+    "extraction": "All FITS scalar header cards for selected response products and the first non-empty posterior header line only; no event rows, posterior values, timing fit, or score.",
+    "data_role": "RETROSPECTIVE",
+    "finite_scope": "Finite source metadata and schema audit; no continuum, physical identity, or prospective validation claim."
+  },
+  "response_products": [
+    {
+      "id": "FERMI-GBM-B0-RESPONSE",
+      "local_cache_key": "HOLD-LC-001/2026-08-30/glg_cspec_b0_bn170817529_v04.rsp",
+      "recorded_sha256": "f8d7f282693103bc0c62aa34f773ac045a30e363b71c0e055e0da9a014b57100",
+      "actual_sha256": "f8d7f282693103bc0c62aa34f773ac045a30e363b71c0e055e0da9a014b57100",
+      "recorded_byte_length": 97920,
+      "actual_byte_length": 97920,
+      "sha256_match": true,
+      "byte_length_match": true,
+      "fits_hdu_count": 3,
+      "selected_calibration_fields": [
+        {
+          "hdu_index": 0,
+          "fields": {
+            "CREATOR": "./GBM_RSP_Gen.pl-1.12  GBMRSP V2.0",
+            "FILETYPE": "GBM DRM",
+            "FILE-VER": "1.0.0",
+            "DATE": "2017-10-16T11:32:03",
+            "FILENAME": "glg_cspec_b0_bn170817529_v04.rsp",
+            "DATE-OBS": "2017-08-17T12:38:55",
+            "DATE-END": "2017-08-17T12:43:17",
+            "OBSERVER": "Meegan",
+            "ORIGIN": "GIOC",
+            "DRM_NUM": 1,
+            "DRM_TYPE": "CSPEC",
+            "DIRDRMDB": "/data/fastcopy/GBMDRMdb002/",
+            "DIRSCTDB": "/data/fastcopy/software//inputs/"
+          }
+        },
+        {
+          "hdu_index": 1,
+          "fields": {
+            "OBSERVER": "Meegan",
+            "ORIGIN": "GIOC",
+            "FILTER": "none",
+            "CHANTYPE": "PHA",
+            "DETCHANS": 128,
+            "INFILE01": "glg_cspec_b0_bn170817529_v00.pha",
+            "GBMCKSUM": "649f",
+            "CH2E_VER": "SPLINE 2.0",
+            "GAIN_COR": 1.00244498,
+            "HDUCLASS": "OGIP",
+            "HDUVERS": "1.2.0",
+            "HDUCLAS1": "RESPONSE",
+            "HDUCLAS2": "EBOUNDS"
+          }
+        },
+        {
+          "hdu_index": 2,
+          "fields": {
+            "DATE": "2017-10-16T11:32:07",
+            "DATE-OBS": "2017-08-17T12:38:55",
+            "DATE-END": "2017-08-17T12:43:17",
+            "OBSERVER": "Meegan",
+            "ORIGIN": "GIOC",
+            "FILTER": "none",
+            "CHANTYPE": "PHA",
+            "DETCHANS": 128,
+            "INFILE01": "glg_leaf_b0_z077843_az041034_v10.rsp",
+            "HDUCLASS": "OGIP",
+            "HDUVERS": "1.3.0",
+            "HDUCLAS1": "RESPONSE",
+            "HDUCLAS2": "RSP_MATRIX"
+          }
+        }
+      ],
+      "merged_calibration_fields": {
+        "CREATOR": "./GBM_RSP_Gen.pl-1.12  GBMRSP V2.0",
+        "FILETYPE": "GBM DRM",
+        "FILE-VER": "1.0.0",
+        "DATE": "2017-10-16T11:32:03",
+        "FILENAME": "glg_cspec_b0_bn170817529_v04.rsp",
+        "DATE-OBS": "2017-08-17T12:38:55",
+        "DATE-END": "2017-08-17T12:43:17",
+        "OBSERVER": "Meegan",
+        "ORIGIN": "GIOC",
+        "DRM_NUM": 1,
+        "DRM_TYPE": "CSPEC",
+        "DIRDRMDB": "/data/fastcopy/GBMDRMdb002/",
+        "DIRSCTDB": "/data/fastcopy/software//inputs/",
+        "FILTER": "none",
+        "CHANTYPE": "PHA",
+        "DETCHANS": 128,
+        "INFILE01": "glg_cspec_b0_bn170817529_v00.pha",
+        "GBMCKSUM": "649f",
+        "CH2E_VER": "SPLINE 2.0",
+        "GAIN_COR": 1.00244498,
+        "HDUCLASS": "OGIP",
+        "HDUVERS": "1.2.0",
+        "HDUCLAS1": "RESPONSE",
+        "HDUCLAS2": "EBOUNDS"
+      },
+      "energy_conversion_metadata_present": true,
+      "response_provenance_present": true
+    },
+    {
+      "id": "FERMI-GBM-N0-RESPONSE",
+      "local_cache_key": "HOLD-LC-001/2026-08-30/glg_cspec_n0_bn170817529_v04.rsp",
+      "recorded_sha256": "05c2c6cfebc935e91d902ef398d600311db32c9e23efafc3049551413dabf73c",
+      "actual_sha256": "05c2c6cfebc935e91d902ef398d600311db32c9e23efafc3049551413dabf73c",
+      "recorded_byte_length": 97920,
+      "actual_byte_length": 97920,
+      "sha256_match": true,
+      "byte_length_match": true,
+      "fits_hdu_count": 3,
+      "selected_calibration_fields": [
+        {
+          "hdu_index": 0,
+          "fields": {
+            "CREATOR": "./GBM_RSP_Gen.pl-1.12  GBMRSP V2.0",
+            "FILETYPE": "GBM DRM",
+            "FILE-VER": "1.0.0",
+            "DATE": "2017-10-16T11:32:03",
+            "FILENAME": "glg_cspec_n0_bn170817529_v04.rsp",
+            "DATE-OBS": "2017-08-17T12:38:55",
+            "DATE-END": "2017-08-17T12:43:17",
+            "OBSERVER": "Meegan",
+            "ORIGIN": "GIOC",
+            "DRM_NUM": 1,
+            "DRM_TYPE": "CSPEC",
+            "DIRDRMDB": "/data/fastcopy/GBMDRMdb002/",
+            "DIRSCTDB": "/data/fastcopy/software//inputs/"
+          }
+        },
+        {
+          "hdu_index": 1,
+          "fields": {
+            "OBSERVER": "Meegan",
+            "ORIGIN": "GIOC",
+            "FILTER": "none",
+            "CHANTYPE": "PHA",
+            "DETCHANS": 128,
+            "INFILE01": "glg_cspec_n0_bn170817529_v00.pha",
+            "GBMCKSUM": "ea20",
+            "CH2E_VER": "SPLINE 2.0",
+            "GAIN_COR": 1.01966822,
+            "HDUCLASS": "OGIP",
+            "HDUVERS": "1.2.0",
+            "HDUCLAS1": "RESPONSE",
+            "HDUCLAS2": "EBOUNDS"
+          }
+        },
+        {
+          "hdu_index": 2,
+          "fields": {
+            "DATE": "2017-10-16T11:32:06",
+            "DATE-OBS": "2017-08-17T12:38:55",
+            "DATE-END": "2017-08-17T12:43:17",
+            "OBSERVER": "Meegan",
+            "ORIGIN": "GIOC",
+            "FILTER": "none",
+            "CHANTYPE": "PHA",
+            "DETCHANS": 128,
+            "INFILE01": "glg_leaf_n0_z077843_az041034_v10.rsp",
+            "HDUCLASS": "OGIP",
+            "HDUVERS": "1.3.0",
+            "HDUCLAS1": "RESPONSE",
+            "HDUCLAS2": "RSP_MATRIX"
+          }
+        }
+      ],
+      "merged_calibration_fields": {
+        "CREATOR": "./GBM_RSP_Gen.pl-1.12  GBMRSP V2.0",
+        "FILETYPE": "GBM DRM",
+        "FILE-VER": "1.0.0",
+        "DATE": "2017-10-16T11:32:03",
+        "FILENAME": "glg_cspec_n0_bn170817529_v04.rsp",
+        "DATE-OBS": "2017-08-17T12:38:55",
+        "DATE-END": "2017-08-17T12:43:17",
+        "OBSERVER": "Meegan",
+        "ORIGIN": "GIOC",
+        "DRM_NUM": 1,
+        "DRM_TYPE": "CSPEC",
+        "DIRDRMDB": "/data/fastcopy/GBMDRMdb002/",
+        "DIRSCTDB": "/data/fastcopy/software//inputs/",
+        "FILTER": "none",
+        "CHANTYPE": "PHA",
+        "DETCHANS": 128,
+        "INFILE01": "glg_cspec_n0_bn170817529_v00.pha",
+        "GBMCKSUM": "ea20",
+        "CH2E_VER": "SPLINE 2.0",
+        "GAIN_COR": 1.01966822,
+        "HDUCLASS": "OGIP",
+        "HDUVERS": "1.2.0",
+        "HDUCLAS1": "RESPONSE",
+        "HDUCLAS2": "EBOUNDS"
+      },
+      "energy_conversion_metadata_present": true,
+      "response_provenance_present": true
+    }
+  ],
+  "posterior_product": {
+    "id": "LIGO-P1800061-LOW-SPIN-POSTERIOR",
+    "local_cache_key": "HOLD-LC-001/2026-08-30/low_spin_PhenomPNRT_posterior_samples.dat.gz",
+    "recorded_sha256": "c641b776bc4a65fc101d84989b8f12597d2936031219c65d69a5c824d69c464a",
+    "actual_sha256": "c641b776bc4a65fc101d84989b8f12597d2936031219c65d69a5c824d69c464a",
+    "recorded_byte_length": 433240,
+    "actual_byte_length": 433240,
+    "sha256_match": true,
+    "byte_length_match": true,
+    "header_line": "costheta_jn luminosity_distance_Mpc m1_detector_frame_Msun m2_detector_frame_Msun lambda1 lambda2 spin1 spin2 costilt1 costilt2",
+    "columns": [
+      "costheta_jn",
+      "luminosity_distance_Mpc",
+      "m1_detector_frame_Msun",
+      "m2_detector_frame_Msun",
+      "lambda1",
+      "lambda2",
+      "spin1",
+      "spin2",
+      "costilt1",
+      "costilt2"
+    ],
+    "timing_coordinate_columns": [],
+    "timing_coordinate_present": false,
+    "posterior_role": "parameter-estimation-sample-product-without-timing-coordinate"
+  },
+  "available_metadata": {
+    "response_sha256_and_byte_length": true,
+    "response_creator_version_and_drm_provenance": true,
+    "response_energy_conversion_fields": true,
+    "posterior_schema_hash_and_byte_length": true,
+    "posterior_contains_merger_time_coordinate": false,
+    "source_owned_timing_likelihood": false,
+    "component_or_shared_covariance": false,
+    "intrinsic_emission_nuisance_law": false,
+    "complete_f_reg_f_lim_f_eff_f_obs": false
+  },
+  "interpretation": {
+    "response": "GBM response products expose creator/format/DRM and channel-to-energy conversion metadata, including CH2E_VER, GAIN_COR and INFILE01. These are calibration provenance/support fields, not a timing likelihood or uncertainty covariance.",
+    "posterior": "The selected LIGO low-spin posterior header lists mass, distance, tidal and spin parameters but no merger-time/geocent_time/tc coordinate; it cannot supply a source-owned timing likelihood for Delta_t_det.",
+    "admission": "Candidate scoring remains stopped; the extracted fields refine the owner request only."
+  },
+  "checks": {
+    "all_selected_product_hashes_match": true,
+    "response_header_parser_self_test": "PASS",
+    "posterior_schema_parser_self_test": "PASS",
+    "candidate_scoring": "STOPPED",
+    "prospective_lock": "EMPTY"
+  },
+  "assumptions": [
+    "The byte-freeze manifest remains authoritative for product identity, hashes and locators.",
+    "Response calibration header fields are descriptive provenance and do not encode complete timing uncertainty.",
+    "The posterior header line is a schema declaration; no posterior sample value is interpreted.",
+    "The existing T-054 forward and T-059 inverse methods and promotion firewalls remain controlling."
+  ],
+  "missing_assumptions": [
+    "A source-owned detector-to-geocenter timing conversion and uncertainty.",
+    "Frozen timing, background, detector and energy windows.",
+    "A joint timing likelihood or covariance with shared calibration/source terms.",
+    "An intrinsic-emission nuisance law or preregistered set-valued scoring rule.",
+    "Complete source-owned F_reg/F_lim/F_eff/F_obs maps and immutable scorer."
+  ],
+  "evidence_level": "T0 exact byte recheck plus targeted response-header and posterior-schema extraction; no model test",
+  "next_action": "Use the newly exposed calibration provenance fields to request the corresponding calibration release/validity and timing-uncertainty owner artifacts. Do not infer a timing likelihood from response metadata or a parameter posterior without a time coordinate; independently reproduce F_reg only after all required fields are frozen.",
+  "non_claims": [
+    "This audit does not construct a timing likelihood, covariance, nuisance law, candidate map, score or prediction.",
+    "Response calibration metadata does not establish geocenter correction, causal propagation, or microscopic dynamics.",
+    "Absence of a timing coordinate in this posterior product does not prove that no other source product could provide one; it only bounds this exact selected product.",
+    "No Pre-A, C6, A13, Sector-A, QFT, Yang-Mills, gravity, continuum, physical-vacuum, cosmic-origin, theory-of-everything or mass-gap claim follows.",
+    "The established T-054 forward method and T-059 inverse method are unchanged; this is additive source-owner intake."
+  ]
+}

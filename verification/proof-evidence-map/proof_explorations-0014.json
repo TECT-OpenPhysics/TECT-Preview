@@ -580,6 +580,210 @@
       "task_id": "T-061",
       "title": "HOLD-LC-001 source metadata audit with byte and mutation checks",
       "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "axis": "response-as-likelihood",
+          "check": "Could a response matrix and gain correction be treated as a timing likelihood or covariance?",
+          "disposition": "UPHELD-BLOCKED: the report records response provenance/support only; likelihood and covariance remain NOT_ADMITTED."
+        },
+        {
+          "axis": "posterior-as-timing",
+          "check": "Could the low-spin posterior be used as a GW merger-time distribution despite its schema?",
+          "disposition": "UPHELD-BLOCKED: the exact header has no timing/geocent_time/tc coordinate and no sample values are reinterpreted."
+        },
+        {
+          "axis": "header-completeness",
+          "check": "Could calibration version/gain fields be mistaken for calibration validity, geocenter correction or shared uncertainty?",
+          "disposition": "UPHELD-BLOCKED: validity intervals, conversion implementation and covariance remain explicit missing assumptions."
+        },
+        {
+          "axis": "partial-coverage",
+          "check": "Could the two response files and one posterior product be called a complete timing pipeline?",
+          "disposition": "DISMISSED-FOR-SCOPE: the packet labels the exact finite intake subset and keeps F_reg/F_lim/F_eff/F_obs incomplete."
+        },
+        {
+          "axis": "method-overhaul",
+          "check": "Could this targeted audit replace the established proof lanes?",
+          "disposition": "DISMISSED: T-054/T-059, owner order and parked-loop rules are unchanged and explicitly preserved."
+        }
+      ],
+      "assumptions": [
+        "The byte-freeze manifest remains the authority for product identity, hashes and remote locators.",
+        "Response header calibration fields are descriptive provenance and not a complete uncertainty model.",
+        "The posterior header line is a schema declaration; no posterior sample value is interpreted.",
+        "The selected response and posterior products are an intake subset, not a complete multi-detector timing analysis.",
+        "The existing candidate-neutral estimator contract, T-054/T-059 methods and prospective-lock rules remain controlling."
+      ],
+      "boundary": "EXP-001304 is a T0 source-provenance and schema advance. It does not admit a timing likelihood, covariance, nuisance law, F_reg/F_lim/F_eff/F_obs map, candidate, score, prospective prediction, microscopic dynamics, physical identity, continuum result, Reading-H sign, Pre-A closure or mass-gap conclusion.",
+      "checks": [
+        {
+          "detail": "Quote-aware FITS header parsing, slash-in-string preservation and posterior schema token rules passed.",
+          "finding": "PASS",
+          "id": "primary-parser-selftest"
+        },
+        {
+          "detail": "Both response products match their frozen SHA-256/byte lengths and expose creator/DRM/channel-energy provenance; the posterior hash/length matches and has no timing coordinate.",
+          "finding": "PASS-WITH-ADMISSION-STOP",
+          "id": "primary-targeted-audit"
+        },
+        {
+          "detail": "Independent PowerShell extraction found the creator, CH2E_VER, GAIN_COR and INFILE01 fields in both response products.",
+          "finding": "PASS",
+          "id": "independent-calibration-header-recheck"
+        },
+        {
+          "detail": "Independent PowerShell gzip read matched the posterior SHA-256/byte length, found all ten declared columns and found no timing coordinate.",
+          "finding": "PASS",
+          "id": "independent-posterior-schema-recheck"
+        },
+        {
+          "detail": "Changing the expected SHA-256 of FERMI-GBM-N0-RESPONSE caused the audit command to return nonzero; the selected mutation was rejected.",
+          "finding": "PASS",
+          "id": "hostile-selected-hash-mutation"
+        },
+        {
+          "detail": "No existing T-054/T-059 method authority, candidate card, result, negative, physical-empty input or Lean theorem was edited or promoted.",
+          "finding": "PASS",
+          "id": "method-preservation"
+        }
+      ],
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "This is a new exact-product schema and provenance audit, not a repeated generic search: a quote-aware parser, independent header/schema check and selected-hash hostile test delimit available calibration metadata from the missing statistical owner. The advance refines the owner request but cannot admit a likelihood, map, candidate, score or method change.",
+      "decision_scope": "Finite retrospective response-header and posterior-schema extraction only; no event-level statistical inference, candidate ranking, dynamics identification, empirical prediction or physical promotion.",
+      "evidence_level": "T0 exact byte/hash recheck, quote-aware response-header extraction, independent posterior-schema check and hostile selected-hash rejection; no model test",
+      "evidence_refs": [
+        "verification/scripts/audit_hold_lc_calibration_metadata.py#parse_all_header_cards",
+        "verification/scripts/audit_hold_lc_calibration_metadata.py#self_test",
+        "strategy/hold-lc-001-calibration-metadata-audit-v0.1.json#response_products",
+        "strategy/hold-lc-001-calibration-metadata-audit-v0.1.json#posterior_product",
+        "strategy/hold-lc-001-calibration-metadata-audit-v0.1.json#available_metadata",
+        "strategy/hold-lc-001-event-byte-freeze-v0.1.json#products",
+        "strategy/hold-lc-001-estimator-contract-v0.1.json#four_stage_map"
+      ],
+      "exact_scope": {
+        "audit_manifest": "strategy/hold-lc-001-calibration-metadata-audit-v0.1.json",
+        "audit_script": "verification/scripts/audit_hold_lc_calibration_metadata.py",
+        "data_role": "RETROSPECTIVE",
+        "extraction_scope": "Response FITS scalar headers and the posterior gzip schema header only; no response matrix values, event rows, posterior values, timing fit or score.",
+        "finite_scope": "Finite source provenance/schema intake only; no continuum, physical identity or prospective validation.",
+        "method_scope": "Additive T-061 source-owner intake; no change to T-054/T-059 methods, owner order or promotion firewalls.",
+        "parent_event_manifest": "strategy/hold-lc-001-event-byte-freeze-v0.1.json",
+        "parent_event_manifest_sha256": "fd21c32658f19c37368625c44cac68b630bbd2a4709c213099fead9a20df9746",
+        "posterior_product": "LIGO-P1800061-LOW-SPIN-POSTERIOR",
+        "response_products": [
+          "FERMI-GBM-N0-RESPONSE",
+          "FERMI-GBM-B0-RESPONSE"
+        ]
+      },
+      "finding": "The response products provide additional calibration provenance (GBM_RSP_Gen creator/version, DRM type, channel-to-energy conversion version, gain correction and source PHA input), which sharpens the request for the corresponding calibration release and validity intervals. The selected LIGO low-spin posterior product contains only distance, mass, tidal and spin columns and no merger-time coordinate. Neither observation supplies the source-owned timing likelihood, covariance or intrinsic-lag law required for candidate scoring.",
+      "formal_integration": {
+        "events": [],
+        "negatives": [],
+        "no_changelog_event": true,
+        "no_new_negative": true,
+        "no_new_result": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "results": []
+      },
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": []
+      },
+      "gate_ids": [
+        "PA-INVERSE-OBSERVATION-TARGET-MAP-HOLDOUT-FREEZE",
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001304",
+      "method": [
+        "Run the self-tested audit_hold_lc_calibration_metadata.py over exactly the two hash-frozen GBM response products and the selected low-spin LIGO posterior product.",
+        "Parse all scalar FITS header cards for the response products with quote-aware comment handling, recording creator/DRM, channel-to-energy conversion, gain correction and input-file provenance without reading response table values.",
+        "Read only the first non-empty gzip header line of the posterior product, verify its byte hash and length, and test for explicit time, geocent_time, tc, merger or coalescence coordinates without interpreting sample values.",
+        "Repeat the response calibration-field check and posterior schema/hash check with independent PowerShell code, and require a hostile mutation of a selected response hash to return nonzero.",
+        "Keep likelihood, covariance, intrinsic-lag nuisance, candidate maps, score and prospective credit stopped; preserve the existing T-054 forward and T-059 inverse methods and owner order."
+      ],
+      "missing_assumptions": [
+        "Source-owned calibration release and validity intervals linked to the response metadata.",
+        "Detector-to-geocenter timing conversion and uncertainty for both GW and GBM sides.",
+        "Frozen timing, background, detector and energy windows with selection semantics.",
+        "Joint timing likelihood or covariance including shared calibration/source terms.",
+        "Intrinsic-emission nuisance law or preregistered set-valued scoring rule.",
+        "Complete source-owned F_reg/F_lim/F_eff/F_obs maps and immutable scorer."
+      ],
+      "next_action": "Use the response provenance fields to request or locate the matching calibration release/validity and timing-uncertainty owner artifacts. Do not infer a timing likelihood from response metadata or from a posterior product without a time coordinate; independently reproduce F_reg only after all required fields are frozen, while continuing unchanged T-054 owner intake.",
+      "non_claims": [
+        "No candidate is admitted, selected, ranked, fitted or prospectively validated.",
+        "No source-owned likelihood, covariance, nuisance probability law or complete F_reg/F_lim/F_eff/F_obs map is present.",
+        "Response calibration provenance does not establish a geocenter correction, causal law, QFT/Yang-Mills/gravity identity or microscopic dynamics.",
+        "Absence of a timing column in this exact posterior product does not prove that no other source product can provide one.",
+        "No physical vacuum, Reading-H branch, Pre-A, Sector-A, C6, A13, continuum, cosmic-origin, theory-of-everything or mass-gap claim is established.",
+        "The existing T-054 forward and T-059 inverse methods are unchanged; this audit is additive and not a replacement."
+      ],
+      "observed_metadata": {
+        "gbm_response": {
+          "common_fields": [
+            "CREATOR=./GBM_RSP_Gen.pl-1.12  GBMRSP V2.0",
+            "FILE-VER=1.0.0",
+            "DRM_TYPE=CSPEC",
+            "CH2E_VER=SPLINE 2.0",
+            "HDUCLAS1=RESPONSE",
+            "DETCHANS=128"
+          ],
+          "detector_specific_fields": [
+            "INFILE01 names the corresponding v00 PHA input",
+            "GAIN_COR is present for N0 and B0",
+            "GBMCKSUM is present for N0 and B0"
+          ],
+          "interpretation": "Calibration and response provenance/support metadata is present, but no timing uncertainty, geocenter conversion, joint likelihood or covariance is encoded by this audit."
+        },
+        "ligo_posterior": {
+          "columns": [
+            "costheta_jn",
+            "luminosity_distance_Mpc",
+            "m1_detector_frame_Msun",
+            "m2_detector_frame_Msun",
+            "lambda1",
+            "lambda2",
+            "spin1",
+            "spin2",
+            "costilt1",
+            "costilt2"
+          ],
+          "interpretation": "This exact posterior product cannot supply the GW merger-time coordinate needed for a source-owned Delta_t_det timing likelihood.",
+          "timing_coordinate_present": false
+        }
+      },
+      "provenance": "contemporaneous",
+      "question": "Do the hash-frozen GBM response products expose enough calibration provenance to refine the source-owner request, and does the selected LIGO posterior product contain a merger-time coordinate that could supply a timing likelihood for Delta_t_det?",
+      "recorded_at": "2026-08-30T09:13:46Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001303",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001302",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-08-30",
+      "schema": "tect/proof-exploration/1.0",
+      "stop_or_redesign": [
+        "If no source owner supplies calibration validity, geocenter conversion and statistical objects, retain HOLD-LC-001 as provenance/design-only and do not score.",
+        "If a future parser reads response matrix or event values, issue a new version with an explicit candidate-neutral selection and error contract.",
+        "If a temporal observable is invariant over a static-equivalence class, report NONIDENTIFIABLE rather than selecting a representative.",
+        "If calibration, regulator or nuisance changes reverse a finite verdict, report UNSTABLE_FINITE_ONLY.",
+        "If the retrospective packet is used for tuning after target disclosure, do not award prospective credit."
+      ],
+      "task_id": "T-061",
+      "title": "HOLD-LC-001 targeted calibration provenance and posterior timing-coordinate audit",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",

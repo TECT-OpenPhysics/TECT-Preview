@@ -98,6 +98,16 @@
         "path": "verification/scripts/audit_hold_lc_metadata.py",
         "sha256": "bddea330fdbfc86a08983b5993457185c2e8d5eb7c4d7182d2ef532085549eb5",
         "role": "Reproducible gzip/FITS metadata and byte-integrity audit tool"
+      },
+      {
+        "path": "strategy/hold-lc-001-calibration-metadata-audit-v0.1.json",
+        "sha256": "f204e140210d8bde55d6010a0afb7ca1e5fdecfdab31a86671f087a53ded346e",
+        "role": "HOLD-LC-001 targeted GBM calibration provenance and posterior timing-schema audit"
+      },
+      {
+        "path": "verification/scripts/audit_hold_lc_calibration_metadata.py",
+        "sha256": "93d8aaa00de747782fd9e9e831da975334093486a4f0a7a5797b9dcd040962bd",
+        "role": "Reproducible quote-aware response-header and posterior-schema audit tool"
       }
     ],
     "semantic": [
@@ -514,21 +524,13 @@
     "authority_state": "VERIFIED_PENDING_WORKTREE_NOT_YET_DURABLE_GIT_OR_REMOTE_AUTHORITY"
   },
   "completion_checkpoint": {
-    "status": "COMPLETE",
+    "status": "PENDING",
     "verified_parent_head": "3caa3b4d05ff32b0f3e8a7b4449a8bedeaea1187",
     "verified_at_utc": "2026-08-30T08:53:03Z",
     "branch": "main",
     "remote": "tect",
     "remote_ref": "refs/heads/main",
-    "expected_authority_counts": {
-      "claims": 49,
-      "gates_and_hypotheses": 208,
-      "results": 281,
-      "negative_records": 375,
-      "explorations": 1303,
-      "changelog_events": 796,
-      "tasks": 61
-    },
+    "expected_authority_counts": null,
     "requirements": [
       "doctor PASS",
       "release_check PASS",
@@ -564,7 +566,8 @@
       "EXP-001303 is staged as an additive T0 source-metadata audit; the completion checkpoint is pending until release-gated commit and remote verification complete.",
       "The release-gated T-061 metadata-audit commit 3caa3b4d05ff32b0f3e8a7b4449a8bedeaea1187 was created after release_check PASS.",
       "git push tect main advanced refs/heads/main to 3caa3b4d05ff32b0f3e8a7b4449a8bedeaea1187, and live git ls-remote returned the same SHA.",
-      "EXP-001303 independently rechecks the nine event bytes, extracts descriptive source headers, and rejects a mutated expected hash; no statistical or method promotion occurred."
+      "EXP-001303 independently rechecks the nine event bytes, extracts descriptive source headers, and rejects a mutated expected hash; no statistical or method promotion occurred.",
+      "EXP-001304 is staged as an additive T0 targeted calibration-provenance and posterior-schema audit; the completion checkpoint is pending until the release-gated commit and remote verification complete."
     ]
   },
   "stopped_loop_registry": [
@@ -637,7 +640,8 @@
       "The inverse lane currently admits zero microscopic forward maps.",
       "EXP-001301 hash-pins nine official event products in a gitignored cache; this is provenance-only and does not admit a timing likelihood or covariance.",
       "EXP-001302 adds a separately versioned candidate-neutral Delta_t_det estimator contract with explicit product roles, physical/proof owner split, calibration/window/covariance/nuisance obligations and F_reg/F_lim/F_eff/F_obs admission boundaries; no score or method change",
-      "EXP-001303 independently rechecks all nine event bytes, extracts candidate-neutral GBM TT/MJDREF/event-table and GW sample/GPS/duration metadata, and rejects a mutated parent hash; no likelihood, covariance, nuisance law, complete map, score or method change"
+      "EXP-001303 independently rechecks all nine event bytes, extracts candidate-neutral GBM TT/MJDREF/event-table and GW sample/GPS/duration metadata, and rejects a mutated parent hash; no likelihood, covariance, nuisance law, complete map, score or method change",
+      "EXP-001304 extracts quote-aware GBM response creator/DRM/channel-energy provenance and verifies that the selected LIGO low-spin posterior has no merger-time coordinate; no likelihood, covariance, nuisance law, complete map, score or method change"
     ],
     "deliverables": [
       "one owner-intake card with explicit missing fields",
@@ -666,7 +670,7 @@
       "It does not prove Pre-A, C6, A13, Sector A, QFT, Yang-Mills, gravity, a physical mass gap, or a theory of everything.",
       "A dynamic discriminator at finite regulator does not prove continuum or physical identity."
     ],
-    "next_action": "T-061 is active. EXP-001303 shows that the frozen products expose descriptive time and table metadata but not source-owned geocenter conversion, shared covariance, timing likelihood or intrinsic-lag law. Request or locate those owner artefacts and independently reproduce F_reg only after they are frozen; continue unchanged T-054 owner intake in parallel and do not score candidates."
+    "next_action": "T-061 is active. EXP-001303 and EXP-001304 show that the frozen products expose descriptive time, table and calibration provenance but not source-owned geocenter conversion, validity intervals, shared covariance, timing likelihood or intrinsic-lag law; the selected posterior schema has no merger-time coordinate. Request or locate those owner artefacts and independently reproduce F_reg only after they are frozen; continue unchanged T-054 owner intake in parallel and do not score candidates."
   },
   "resume_algorithm": [
     "Capture UTC date and run doctor.py.",
