@@ -28,7 +28,7 @@ for historical verifiers and no longer grows.
 | Registries and ledgers (`registry`) | 42 | 1,573,745 |
 | Governance policies (`policy`) | 23 | 215,824 |
 | Root documents (`root-doc`) | 14 | 2,049,778 |
-| Other tracked files (`other`) | 1234 | 22,780,951 |
+| Other tracked files (`other`) | 1234 | 22,781,559 |
 
 ## Use
 
