@@ -1,0 +1,208 @@
+{
+  "schema": "tect/pre-a-candidate-manifest/0.3",
+  "candidate_id": "PA-M3-COMPACT-U1-HAMILTONIAN-v0",
+  "candidate_family": "M3-COMPACT-GAUGE-CONSERVATIVE",
+  "package_version": "0.1.0",
+  "issued": "2026-08-30",
+  "authority": "T0 additive Pre-A design manifest; it is not a replacement for an existing method, a registered TECT action, a claim, a result, a tier change, or a physical-law identification.",
+  "claim_bearing": false,
+  "task_id": "T-054",
+  "status": "DESIGN_ONLY_NOT_ADMITTED",
+  "preserves_existing_methods": {
+    "forward_T054": true,
+    "inverse_T059": true,
+    "owner_order": true,
+    "finite_uniform_physical_layer_firewall": true,
+    "stopped_loop_rules": true
+  },
+  "relation_to_existing_candidates": "This is an additive M3 design candidate beside M0, M1, M2 and M5. It does not revise, retune, supersede, or reinterpret any existing candidate or result.",
+  "statement": "A finite periodic three-dimensional compact U(1) link-and-matter system with a gauge-invariant conservative Hamiltonian supplies a concrete candidate contract containing compact configuration variables, a Gauss constraint, a generator, and gauge-invariant observables. The manifest defines the finite map and the required continuum/effective/observational map stages, but no stage beyond the finite design is admitted or proved.",
+  "finite_scope": {
+    "lattice": "Lambda_(L,a)=(a Z/L a Z)^3 with finite L>=2 and spacing a>0",
+    "boundary_condition": "periodic in all three spatial directions",
+    "volume": "(L a)^3",
+    "links": "oriented nearest-neighbour links (x,i), i in {1,2,3}",
+    "plaquettes": "elementary oriented plaquettes of the periodic cubic lattice",
+    "time_boundary": "finite Hamiltonian-time intervals [0,T] with initial data on the Gauss surface",
+    "regulator": "finite lattice spacing a and finite site count L^3; no continuum removal is included",
+    "limit_order": "not yet admitted; a future order must state a->0, L a->infinity, coupling renormalisation, and thermodynamic/temporal limits separately",
+    "normalization": "the displayed Hamiltonian and canonical symplectic convention are the sole finite normalization for this candidate",
+    "finite_parts": "none beyond the displayed bare finite-lattice parameters; no counterterm choice is silently imported"
+  },
+  "degrees_of_freedom": {
+    "link_configuration": "U_(x,i)=exp(i theta_(x,i)) in U(1), theta_(x,i) modulo 2 pi",
+    "electric_field": "E_(x,i) in R as the canonical momentum to theta_(x,i) in the classical finite contract",
+    "matter_configuration": "phi_x in C at each site",
+    "matter_momentum": "pi_x in C canonically paired with phi_x",
+    "configuration_space": "U(1)^(3 L^3) x C^(L^3) before imposing the Gauss surface",
+    "gauge_redundancy": "local U(1) transformations lambda_x modulo 2 pi",
+    "compactness": "link phases are compact; scalar modulus is noncompact",
+    "quantum_status": "no quantum Hilbert-space, representation, measure, or operator-domain claim is admitted"
+  },
+  "functional_and_dynamics": {
+    "finite_hamiltonian": "H = sum_(x,i) kappa_E E_(x,i)^2/2 + beta sum_p (1-Re U_p) + sum_x (|pi_x|^2/(2 chi) + m^2 |phi_x|^2/2 + lambda |phi_x|^4/4) + kappa_D sum_(x,i) |U_(x,i) phi_(x+a e_i)-phi_x|^2/2",
+    "plaquette_holonomy": "U_p=U_(x,1) U_(x+a e_1,2) U_(x+a e_2,1)^* U_(x,2)^* for the declared orientation, with cyclic variants for other planes",
+    "parameter_domain": "kappa_E>0, beta>0, chi>0, kappa_D>0, lambda>0, and m^2 real",
+    "symplectic_convention": "omega=sum_(x,i) dE_(x,i) wedge dtheta_(x,i) + sum_x 2 Re(dpi_x^* wedge dphi_x)",
+    "generator": "L_H f = {f,H} on the finite constrained phase space; Phi_t is the Hamiltonian flow where it exists",
+    "conservation_contract": "H and the Gauss surface are required to be preserved by Phi_t; this is a design obligation pending an independent audit",
+    "gauss_constraint": "G_x = sum_i (E_(x,i)-E_(x-a e_i,i)) - Im(pi_x^* phi_x) = 0",
+    "reference_state": "R0: U_(x,i)=1, E_(x,i)=0, phi_x=0, pi_x=0 under the identical finite H, volume, normalization, and boundary convention",
+    "physical_empty_status": "R0 is a mathematical reference only and is not identified with physical empty space or a Reading-H E branch"
+  },
+  "gauge_contract": {
+    "transformation": "U_(x,i)->exp(i lambda_x) U_(x,i) exp(-i lambda_(x+a e_i)); phi_x->exp(i lambda_x) phi_x; pi_x->exp(i lambda_x) pi_x; E_(x,i)->E_(x,i)",
+    "required_invariants": [
+      "U(1) plaquette holonomies are unchanged",
+      "|U_(x,i) phi_(x+a e_i)-phi_x|^2 is unchanged",
+      "|phi_x|^2 is unchanged",
+      "G_x=0 is mapped to G_x=0",
+      "the Poisson bracket and Hamiltonian flow descend to the gauge quotient"
+    ],
+    "finite_proof_status": "not yet independently audited; the formulas are a candidate contract, not a closed theorem"
+  },
+  "observable_map": {
+    "F_reg": {
+      "status": "DEFINED_AS_A_FINITE_CONTRACT",
+      "inputs": "(H, Phi_t, initial ensemble or state, L, a, boundary condition, gauge quotient)",
+      "outputs": [
+        "Wilson-loop correlators W_C(t)=Re product_(e in C) U_e(t)",
+        "plaquette flux observables P_p(t)=1-Re U_p(t)",
+        "matter density n_x(t)=|phi_x(t)|^2",
+        "gauge-invariant link current J_(x,i)(t)=Im(phi_x(t)^* U_(x,i)(t) phi_(x+a e_i)(t))",
+        "two-time correlation and finite spectral estimands formed from the listed observables"
+      ],
+      "uncertainty": "must be supplied by a declared ensemble, numerical integrator, or quantum state; none is inserted here",
+      "status_boundary": "a finite observable definition is not a finite measured result"
+    },
+    "F_lim": {
+      "status": "MISSING",
+      "required": "a common a->0 and L a->infinity construction with uniform stability, renormalisation, and an explicit order of limits",
+      "current_nonclaim": "no continuum, thermodynamic, or regulator-independent quantity is asserted"
+    },
+    "F_eff": {
+      "status": "MISSING",
+      "required": "a candidate-neutral map from finite/limiting gauge-invariant correlators to an effective low-energy target, including errors and nuisance parameters",
+      "current_nonclaim": "compact U(1) notation is not an identification with Yang--Mills or the Standard Model"
+    },
+    "F_obs": {
+      "status": "MISSING",
+      "required": "a source-owned calibration and prospective holdout map to laboratory, astrophysical, or cosmological observables",
+      "current_nonclaim": "no observation is fitted, reproduced, or predicted"
+    },
+    "candidate_neutral_estimand": "A future dynamic comparison must use a two-time gauge-invariant observable fixed before candidate scoring; static energy alone cannot select this dynamics."
+  },
+  "input_prediction_accounting": {
+    "inserted_inputs": [
+      "three spatial dimensions and a periodic cubic regulator",
+      "compact U(1) link variables and a complex scalar",
+      "the displayed Hamiltonian, symplectic convention, and Gauss constraint",
+      "positive finite parameters kappa_E, beta, chi, kappa_D, lambda and the chosen m^2",
+      "the finite Wilson-loop, plaquette, density, current, and two-time observable definitions"
+    ],
+    "fitted_inputs": [],
+    "derived_finite_targets_not_yet_proved": [
+      "gauge invariance of every displayed term",
+      "preservation of the Gauss surface and energy under the Hamiltonian flow",
+      "well-posedness of the finite constrained flow",
+      "existence and stability of compact winding or flux sectors"
+    ],
+    "predicted_physical_outputs": [],
+    "holdout_prediction": false,
+    "data_role": "THEORY/DESIGN ONLY"
+  },
+  "assumptions": [
+    "The finite lattice, link orientation, plaquette orientation, and canonical variables are exactly those displayed in this manifest.",
+    "Gauge transformations are local U(1) phases with the stated endpoint convention.",
+    "The future proof owner will work on the finite Gauss surface before attempting any limit.",
+    "Any quantum or statistical realization must be versioned separately rather than inferred from this classical contract."
+  ],
+  "missing_assumptions": [
+    "An authorized source owner and independently hash-pinned implementation of the candidate dynamics.",
+    "Primary, independent, hostile, and Lean audits of gauge invariance, Poisson preservation, and Gauss-law propagation.",
+    "A state or ensemble, quantum representation if needed, and a complete uncertainty/covariance contract.",
+    "Uniform finite-to-continuum and thermodynamic estimates, counterterms, and a declared limit order.",
+    "A complete F_lim/F_eff/F_obs map with candidate-neutral calibration, nuisance propagation, and a prospective holdout.",
+    "A demonstration that any compact winding or flux sector is physical rather than a regulator artifact.",
+    "A comparison against M0, M1, M2 and M5 under the same frozen discriminator matrix."
+  ],
+  "preregistered_falsifiers": [
+    {
+      "id": "M3-GAUGE-INVARIANCE",
+      "question": "Does a declared local transformation change any finite Hamiltonian term or listed gauge-invariant observable?",
+      "failure": "Any uncancelled endpoint phase rejects this candidate version before scoring."
+    },
+    {
+      "id": "M3-GAUSS-PRESERVATION",
+      "question": "Does the declared Hamiltonian vector field preserve G_x=0 for every site?",
+      "failure": "A nonzero Poisson derivative of the Gauss constraint rejects the finite conservative contract."
+    },
+    {
+      "id": "M3-DYNAMIC-WELLPOSEDNESS",
+      "question": "Does the constrained finite flow exist uniquely on the declared phase-space domain for the test interval?",
+      "failure": "Failure leaves the candidate design-only and unadmitted."
+    },
+    {
+      "id": "M3-STATIC-DYNAMIC-DISCRIMINATOR",
+      "question": "Can a fixed candidate-neutral two-time observable distinguish dynamics sharing the same static functional without target leakage?",
+      "failure": "If not, report the surviving mobility equivalence class rather than selecting a dynamics."
+    },
+    {
+      "id": "M3-CONTINUUM-ROBUSTNESS",
+      "question": "Do the required uniform bounds survive the declared regulator and volume limit order?",
+      "failure": "A failure blocks F_lim and all physical promotion; finite evidence may remain only as design or model evidence."
+    },
+    {
+      "id": "M3-OBSERVATION-HOLDOUT",
+      "question": "Does a frozen, unused observation holdout follow from the candidate map without post-disclosure parameter tuning?",
+      "failure": "No holdout credit and no Pre-A exit."
+    }
+  ],
+  "adversarial_review": [
+    {
+      "axis": "method-overhaul",
+      "check": "Could this candidate silently replace the established T-054 forward or T-059 inverse route?",
+      "disposition": "DISMISSED: it is explicitly additive and design-only; the established authorities and owner order remain controlling."
+    },
+    {
+      "axis": "gauge-name-promotion",
+      "check": "Could compact U(1) notation be reported as Yang--Mills or Standard-Model identity?",
+      "disposition": "UPHELD-OPEN: no physical identity or Yang--Mills claim is admitted."
+    },
+    {
+      "axis": "static-to-dynamic-selection",
+      "check": "Could the displayed Hamiltonian be selected merely because its static energy is plausible?",
+      "disposition": "UPHELD-OPEN: a candidate-neutral dynamic estimand and source owner are required."
+    },
+    {
+      "axis": "finite-to-continuum",
+      "check": "Could finite gauge invariance or a finite flow be called a continuum result?",
+      "disposition": "UPHELD-OPEN: F_lim is explicitly missing and limit order is unfrozen."
+    },
+    {
+      "axis": "parameter-fitting",
+      "check": "Could kappa_E, beta, chi, kappa_D, lambda, or m^2 be tuned after seeing a target?",
+      "disposition": "UPHELD: all parameters are inserted design inputs; no fit or prediction credit is available."
+    },
+    {
+      "axis": "physical-empty",
+      "check": "Could R0 be relabeled as physical empty space or Reading-H E?",
+      "disposition": "DISMISSED: the manifest forbids that identification."
+    },
+    {
+      "axis": "Lean-promotion",
+      "check": "Could the un-audited formula be called formally verified?",
+      "disposition": "DISMISSED: no Lean result is claimed; a future audit is an admission prerequisite."
+    }
+  ],
+  "acceptance": "Admit only after a new versioned source owner, four-lane finite audit (primary, independent, hostile, Lean), complete state and uncertainty contract, complete F_reg/F_lim/F_eff/F_obs map, common discriminator comparison, and a genuinely prospective holdout frozen before target disclosure.",
+  "candidate_verdict": "RETAIN AS AN ADDITIVE DESIGN CANDIDATE; NOT ADMITTED, NOT SELECTED, AND NOT A PHYSICAL MODEL",
+  "next_action": "Keep T-054/T-059 methods unchanged. First audit the finite gauge and Gauss contracts with primary, independent, hostile, and Lean lanes only if an owner accepts this candidate version; otherwise leave it parked while the existing T-054 Q3LOCK owner intake and T-059/T-061 runtime/map gates proceed.",
+  "non_claims": [
+    "This manifest does not change the existing research method, candidate identities, owner order, or promotion firewalls.",
+    "It does not prove gauge invariance, Gauss-law preservation, finite-flow well-posedness, winding stability, or any continuum limit.",
+    "It does not identify U(1) with Yang--Mills, QFT, gravity, the Standard Model, Pre-A, C6, Sector-A, or a physical vacuum.",
+    "It does not select a candidate, fit parameters, reproduce observations, or provide prospective holdout credit.",
+    "It does not evaluate Reading-H stationarity, physical-empty sign, transverse stability, a mass gap, or a theory of everything."
+  ]
+}
