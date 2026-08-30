@@ -22,6 +22,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-457](#r-457) | Finite compact-U(1) equation-level invariance and Gauss-flow consistency audit | R-457 v1.0 is a T0 claim-nonbearing additive T-054 audit of the existing PA-M3 compact-U(1) design. Exact site-charge cancellation passes for every displayed plaquette, covariant norm product and listed observable on periodic L=2,3 lattices; the conditional Gauss-neutrality and `{H,H}=0` identities pass, and the finite completion-square lower bound passes 100 rational fixtures. Primary 1023/1023, independent 1020/1020, hostile 8/8, integrated 44/44 and Lean R457 pass. The candidate and source owner remain unadmitted; no state/uncertainty, dynamic discriminator, F_reg/F_lim/F_eff/F_obs, continuum, physical, QFT, Yang--Mills or mass-gap conclusion follows; T-054/T-059/T-061 methods and owner order are unchanged |
 | [R-456](#r-456) | Weighted positive transfer-operator defect-resolvent envelope | R-456 v1.0 is a T0 claim-nonbearing additive T-054 owner-packet refinement under EXP-001329. For strictly positive finite weights `w_i`, entrywise nonnegative transfer matrices with weighted row sums `sum_j K_R[i,j]w_j<=kappa_bar*w_i` are diagonally conjugate to the ordinary R-455 infinity-row-sum contract, giving `||h_R||_w<=A*S_R(kappa_bar,r)+D*S_R(kappa_bar,s)` with unequal-base and resonant branches and sufficient threshold `kappa_bar<1`, `s<1`. Primary 290560/290560, independent 231840, hostile 22/22, integrated 22/22 and Lean pass over 17 rows, 46 pairs, dimensions 1--3, five weights, seven patterns and 77280 paths. Source-owned weights/transfer/history, common weighted domain, uniformity, exhaustion, physical, continuum, Yang--Mills and mass-gap gates remain open; existing T-054/T-059/T-061 methods and owner order are unchanged |
 | [R-455](#r-455) | Nonnegative transfer-matrix defect-resolvent envelope for coupled orientation histories | R-455 v1.0 is a T0 claim-nonbearing additive T-054 interface under EXP-001328. For a componentwise nonnegative vector recurrence with entrywise nonnegative transfer matrices and one common induced infinity-row-sum bound, exact path products give `||h_R||_infinity <= A*S_R(kappa_bar,r)+D*S_R(kappa_bar,s)`, including unequal-base and resonant branches and the sufficient threshold `kappa_bar<1`, `s<1`. Primary 373915/373915, independent 250290/250290, hostile 20/20, integrated and Lean pass. Source-owned transfer/history, common domain, uniformity, exhaustion, physical, continuum, Yang--Mills and mass-gap gates remain open; existing T-054/T-059/T-061 methods and owner order are unchanged |
 | [R-454](#r-454) | Variable-coefficient defect-stable history-resolvent envelope | R-454 v1.0 is a T0 claim-nonbearing T-054 interface under EXP-001327. For `H_R <= kappa_R*H_(R-1)+A*r^(R-1)+delta_R` with `0<=kappa_R<=kappa_bar`, exact path-product domination gives `H_R <= A*S_R(kappa_bar,r)+sum_(j=1)^R kappa_bar^(R-j)*delta_j`; `delta_R<=D*s^(R-1)` gives the second kernel, with nonresonant/resonant branches and sufficient threshold `kappa_bar<1`, `s<1`. Primary 88391/88391, independent 58939/58939, hostile 16/16, integrated 19/19 and Lean R454 pass. The source-owned recurrence, common bound, residual, domain, exhaustion, common alpha, physical, continuum, Yang--Mills and mass-gap gates remain open; existing T-054/T-059/T-061 methods and owner order are unchanged |
@@ -776,6 +777,53 @@ exhaustion, physical-empty comparison, C6, Sector-A, Pre-A, Yang--Mills dynamics
 or a mass gap. No claim tier changes and no negative result is issued.
 
 **Proven in:** [R-444 certificate](strategy/pre-a-cp1-st8-q3lock-exponential-shell-tail-certificate-260830.md), [machine manifest](strategy/pre-a-cp1-st8-q3lock-exponential-shell-tail-manifest.json), [integrated run](claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-integrated-exponential_shell_tail/integrated.json), [exploration record](strategy/pre-a-cp1-st8-q3lock-exponential-shell-tail-exploration.json), and [Lean R444](verification/lean/Tect/R444.lean).
+<a id="r-457"></a>
+### R-457 -- Finite compact-U(1) equation-level invariance and Gauss-flow consistency audit
+
+**Result ID.** `PA-M3-COMPACT-U1-EQUATION-LEVEL-AUDIT-v0` (R-457).
+
+**Version and exact scope.** R-457 v1.0 is a T0, claim-nonbearing additive
+T-054 equation-level audit of the existing `PA-M3-COMPACT-U1-HAMILTONIAN-v0`
+design. It preserves the established T-054 forward method, the additive
+T-059/T-061 observation-first inverse lane, their owner order, and every
+promotion firewall. It does not admit or select the M3 candidate.
+
+The primary and non-importing independent lanes reconstruct exact integer
+site-charge vectors for every oriented plaquette, every covariant-link term
+and its four norm products, matter density, current, Gauss-matter factor and
+quartic matter factor on periodic cubic lattices `L=2,3`. All displayed
+Hamiltonian and observable monomials are neutral, and the two covariant
+difference terms have the same unit source charge. The displayed Gauss
+constraint is therefore neutral; preservation of its surface is recorded only
+conditionally on the declared canonical-generator premise. The antisymmetric
+Poisson self-bracket identity is exact. For all declared positive `lambda`,
+real `m^2` and radial fixtures, the finite completion-square identity and its
+lower bound pass.
+
+**Evidence.** Primary `1023/1023`, independent `1020/1020`, hostile `8/8`,
+integrated `44/44`, and Lean R457 pass. The finite counts are equation
+coverage, not a volume or continuum surrogate.
+
+**Assumptions and missing assumptions.** The parent M3 finite equations and
+endpoint convention are unchanged; integer charge bookkeeping represents the
+finite U(1) phase action; and the positive parameter domain is inserted. A
+source-owned flow, state/ensemble, physical projection, uncertainty contract,
+candidate-neutral dynamic observable, complete `F_reg/F_lim/F_eff/F_obs` map,
+prospective holdout, and uniform regulator/volume/continuum control remain
+missing.
+
+**Boundary.** R-457 is not a source-owner admission, model identity, QFT,
+Yang--Mills, gravity, physical-empty, Pre-A, Sector-A, C6, continuum or
+mass-gap result. No claim tier changes, negative result, or PDF is issued.
+
+**Proven in:** [R-457 certificate](strategy/pre-a-m3-compact-u1-equation-level-audit-certificate-260831.md), [machine manifest](strategy/pre-a-m3-compact-u1-equation-level-audit-manifest.json), [primary script](verification/scripts/pre_a_m3_compact_u1_equation_audit.py), [independent script](codes/foundations/pre_a_m3_compact_u1_equation_audit_independent.py), [hostile script](codes/foundations/pre_a_m3_compact_u1_equation_audit_hostile.py), [integrated verifier](verification/scripts/pre_a_m3_compact_u1_equation_audit_verify.py), [integrated run](claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-integrated-pre_a_m3_compact_u1_equation_level_audit/integrated.json), [exploration record](strategy/pre-a-m3-compact-u1-equation-level-audit-exploration.json), and [Lean R457](verification/lean/Tect/R457.lean).
+
+**Next action.** Keep R-457 at the finite design-quality boundary. Admit or
+score M3 only after a versioned source owner, state/uncertainty contract,
+candidate-neutral two-time observable, complete map stages and prospective
+holdout exist. Continue unchanged T-054 Q3LOCK owner intake and T-059/T-061
+observation-source intake; do not manufacture another finite mobility table.
+
 <a id="r-456"></a>
 ### R-456 -- Weighted positive transfer-operator defect-resolvent envelope
 

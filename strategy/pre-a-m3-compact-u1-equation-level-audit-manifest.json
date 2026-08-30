@@ -1,0 +1,209 @@
+{
+  "schema": "tect/pre-a-equation-audit/1.0",
+  "audit_id": "PA-M3-COMPACT-U1-EQUATION-LEVEL-AUDIT-v0",
+  "result_id": "R-457",
+  "candidate_id": "PA-M3-COMPACT-U1-HAMILTONIAN-v0",
+  "title": "Finite compact-U(1) equation-level invariance and Gauss-flow consistency audit",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001330",
+  "tier": "T0",
+  "claim_bearing": false,
+  "status": "M3_EQUATION_LEVEL_AUDITED_NOT_ADMITTED",
+  "parent_manifest": {
+    "path": "strategy/pre-a-m3-compact-u1-conservative-candidate-manifest.json"
+  },
+  "question": "Do the displayed finite M3 compact-U(1) equations have the declared local gauge-charge cancellations, a neutral Gauss constraint, a finite coercivity identity, and a consistent gauge-invariant observable map, without admitting a source owner or physical model?",
+  "purpose": "Add a bounded equation-level audit to the already recorded M3 design candidate. This is a consistency check of the displayed finite contract only; it does not admit the candidate, select a dynamics, or modify the established T-054 forward or T-059/T-061 inverse methods.",
+  "methods_preserved": {
+    "existing_forward_T054_unchanged": true,
+    "observation_first_inverse_additive": true,
+    "owner_order_unchanged": true,
+    "no_physical_empty_substitution": true,
+    "no_candidate_selection": true,
+    "no_tier_change": true
+  },
+  "finite_scope": {
+    "lattice_sizes": [2, 3],
+    "lattice": "periodic cubic Lambda_L=(Z/LZ)^3 with three oriented link directions",
+    "boundary_condition": "periodic in all spatial directions",
+    "link_group": "compact U(1) with endpoint convention U_(x,i)->exp(i lambda_x) U_(x,i) exp(-i lambda_(x+e_i))",
+    "matter": "complex phi_x and pi_x with the declared local phase convention",
+    "functional": "the finite Hamiltonian and Gauss expression copied by reference from the M3 design manifest",
+    "observable_scope": "plaquette, covariant density, matter density, current, and Gauss-matter monomials",
+    "limit_order": "none; finite equation contract only",
+    "quantum_status": "no Hilbert-space, measure, operator-domain, or QFT statement"
+  },
+  "audited_identities": {
+    "plaquette_charge_cancellation": "every oriented plaquette product has zero site charge",
+    "covariant_difference": "the two terms U_(x,i)phi_(x+e_i) and phi_x have the same charge, so |D_i phi|^2 is neutral",
+    "observable_neutrality": "Wilson/plaquette, |phi|^2, current, and pi^*phi monomials have zero site charge",
+    "gauss_surface": "the displayed divergence-minus-Im(pi^*phi) constraint is gauge neutral; preservation is recorded conditionally on the declared canonical generator",
+    "energy_identity": "the canonical antisymmetric Poisson self-bracket {H,H}=0 is an algebraic identity",
+    "coercivity": "lambda*x^2/4+m^2*x/2 = lambda/4*(x+m^2/lambda)^2-(m^2)^2/(4 lambda) for lambda>0 and x=|phi|^2>=0",
+    "finite_flow": "the polynomial finite-dimensional Hamiltonian vector field has a conditional global-flow interpretation from the displayed coercive sublevel bound; this is not an owner-admitted dynamics"
+  },
+  "parameter_fixtures": {
+    "positive_parameters": {
+      "kappa_E": "1",
+      "beta": "2",
+      "chi": "3/2",
+      "kappa_D": "5/4",
+      "lambda": "3/2"
+    },
+    "lambda_values": ["1/2", "1", "3/2", "5/2"],
+    "m2_values": ["-3", "-1", "0", "2", "5"],
+    "radial_values": ["0", "1/4", "1", "2", "5"]
+  },
+  "scope": {
+    "equation_charge_audit_closed": true,
+    "gauge_invariant_hamiltonian_terms_closed": true,
+    "observable_map_neutrality_closed": true,
+    "gauss_neutrality_identity_closed": true,
+    "gauss_surface_preservation_conditional": true,
+    "poisson_energy_identity_closed": true,
+    "coercivity_completion_identity_closed": true,
+    "finite_flow_conditional_closed": true,
+    "source_owner_admitted": false,
+    "candidate_admitted": false,
+    "f_reg_measured": false,
+    "f_lim_closed": false,
+    "f_eff_closed": false,
+    "f_obs_closed": false,
+    "continuum_closed": false,
+    "qft_identity_closed": false,
+    "yang_mills_identity_closed": false,
+    "physical_empty_closed": false,
+    "pre_a_closed": false,
+    "sector_a_closed": false,
+    "c6_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "assumptions": [
+    "The finite lattice, endpoint convention, plaquette orientation, symplectic convention, Hamiltonian and Gauss expression are exactly those in the parent M3 design manifest.",
+    "The charge algebra is used only as a finite bookkeeping representation of the declared U(1) phase action.",
+    "lambda>0 and chi,kappa_E,beta,kappa_D>0 are inserted finite parameters; m^2 is real.",
+    "The canonical generator premise is conditional when translating neutrality into Gauss-surface preservation.",
+    "The audit is equation-level and does not supply a versioned source owner, statistical state, or observation calibration."
+  ],
+  "missing_assumptions": [
+    "A versioned authorized source owner and hash-pinned implementation of the candidate flow.",
+    "A complete state or ensemble, covariance and numerical/quantum realization.",
+    "An explicit physical projection and a common F_reg/F_lim/F_eff/F_obs map with prospective holdout.",
+    "Uniform cutoff, volume and continuum estimates, renormalization and a limit order.",
+    "A proof that any winding or flux sector is physical rather than a regulator artefact.",
+    "A candidate-neutral dynamic discriminator and comparison against the other Pre-A candidates."
+  ],
+  "adversarial_review": [
+    {
+      "axis": "method-preservation",
+      "check": "Could an equation audit replace T-054 or T-059/T-061?",
+      "disposition": "DISMISSED: the audit is additive and all established methods and owner order remain controlling."
+    },
+    {
+      "axis": "gauge-to-Yang-Mills",
+      "check": "Could compact U(1) charge cancellation be promoted to Yang--Mills identity?",
+      "disposition": "UPHELD-REJECTED: the Yang--Mills and QFT flags remain false."
+    },
+    {
+      "axis": "conditional-Noether",
+      "check": "Could neutrality alone be reported as an unconditional production-flow theorem?",
+      "disposition": "UPHELD-OPEN: Gauss preservation is explicitly conditional on the declared canonical-generator premise and source ownership is missing."
+    },
+    {
+      "axis": "finite-coercivity",
+      "check": "Could the finite completion square be called a continuum stability result?",
+      "disposition": "UPHELD-REJECTED: all limit and physical flags remain false."
+    },
+    {
+      "axis": "observable-boundary",
+      "check": "Could a neutral observable definition be called a measured or fitted result?",
+      "disposition": "UPHELD-REJECTED: F_reg is only a definition; no state, uncertainty, fit or holdout is supplied."
+    },
+    {
+      "axis": "physical-empty",
+      "check": "Could R0 be identified with Reading-H physical empty space?",
+      "disposition": "DISMISSED: the parent manifest explicitly forbids that identification."
+    }
+  ],
+  "preregistered_falsifiers": [
+    "Any nonzero site charge in a displayed Hamiltonian or observable term rejects this candidate version's gauge contract.",
+    "A mismatch between the two covariant-difference term charges rejects the declared covariant norm.",
+    "A failed completion-square identity or nonpositive inserted lambda blocks the finite-flow conditional statement.",
+    "Any attempt to set source_owner_admitted, candidate_admitted, continuum_closed or physical_empty_closed true is rejected by the scope firewall."
+  ],
+  "evidence_level": "T0 exact finite equation-level consistency audit; not candidate admission",
+  "non_claims": [
+    "This result does not admit or select PA-M3-COMPACT-U1-HAMILTONIAN-v0.",
+    "It does not prove a source-owned dynamics, a quantum representation, a physical gauge theory, Yang--Mills, QFT, gravity or a continuum limit.",
+    "It does not evaluate Reading-H stationarity, the physical-empty sign, transverse stability, Pre-A, Sector-A, C6 or a mass gap.",
+    "It does not fit observations, produce an uncertainty budget, or provide prospective holdout credit.",
+    "The established T-054 forward and T-059/T-061 inverse methods and owner order are unchanged."
+  ],
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R457.lean",
+    "command": "lake env lean Tect/R457.lean",
+    "declarations": [
+      "plaquette_charge_zero",
+      "covariant_density_charge_zero",
+      "current_source_charge_zero",
+      "current_target_charge_zero",
+      "gauss_matter_charge_zero",
+      "coercivity_completion",
+      "poisson_self_bracket_zero",
+      "source_owner_not_admitted"
+    ],
+    "role": "Lean checks the finite integer charge and rational completion identities; Python checks lattice coverage, all displayed term classes, parameter fixtures, flow boundary and promotion firewalls."
+  },
+  "test_oracles": {
+    "primary_minimum_assertions": 50,
+    "independent_minimum_assertions": 40,
+    "hostile_mutation_count": 8,
+    "lattice_size_count": 2
+  },
+  "files": {
+    "parent_manifest": {
+      "path": "strategy/pre-a-m3-compact-u1-conservative-candidate-manifest.json",
+      "sha256": "2ad223c1758afa08fb2afe74df2d38d386bfb972a7c5c0f04018505ccc0f3317"
+    },
+    "lean_entrypoint": {
+      "path": "verification/lean/Tect/R457.lean",
+      "sha256": "644df69001c3a7d021d054e4f3fe21afcbb2944d1f6517605895ed2a71569f02"
+    },
+    "primary": {
+      "path": "verification/scripts/pre_a_m3_compact_u1_equation_audit.py",
+      "sha256": "6dabb5c0d28771986c11ebebec592709b8d1d17e50ed37af4ae4888f5c4f5178"
+    },
+    "independent": {
+      "path": "codes/foundations/pre_a_m3_compact_u1_equation_audit_independent.py",
+      "sha256": "9791dc79db8cb8655cc435fa5d1f1e1f942635d2a06166648b105f831a891e9d"
+    },
+    "hostile": {
+      "path": "codes/foundations/pre_a_m3_compact_u1_equation_audit_hostile.py",
+      "sha256": "158bd361d513924d381f0f27d049ba5596c45d9bf59fb7145542106c53233c35"
+    },
+    "verifier": {
+      "path": "verification/scripts/pre_a_m3_compact_u1_equation_audit_verify.py",
+      "sha256": "d385ab7ee4db48cdf446db71c5f3ca6fe3496f90ef8130c6a09691ffde25113f"
+    },
+    "certificate": {
+      "path": "strategy/pre-a-m3-compact-u1-equation-level-audit-certificate-260831.md",
+      "sha256": "8fa4812ee10883861a4f70ca48f445bdefedebf0ea5a40a49a3f5b8b508d583b"
+    },
+    "exploration": {
+      "path": "strategy/pre-a-m3-compact-u1-equation-level-audit-exploration.json",
+      "sha256": "ff4c45c0b0faaa59a03dfe17d8c4121cbd5b288a6dc045a6bee7af51e7b7f259"
+    }
+  },
+  "formal_integration": {
+    "results": ["R-457"],
+    "event_ordinal": 806,
+    "no_new_negative_ids": [],
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "boundary": "R-457 is a finite equation-level consistency audit of the displayed M3 design contract. Its charge cancellations and completion-square identity are exact under the inserted finite assumptions; the Gauss-flow statement is conditional on the declared canonical generator. No source owner, state, observation map, candidate admission, physical identity, continuum, QFT, Yang--Mills, Pre-A, Sector-A, C6 or mass-gap conclusion follows.",
+  "next_action": "Use this audit only as a quality gate for the existing M3 design. Do not score or select it until a versioned source owner, complete state/uncertainty contract, dynamic two-time estimand, F_reg/F_lim/F_eff/F_obs map and prospective holdout are supplied. Continue unchanged T-054 Q3LOCK owner intake and T-059/T-061 observation-source intake; do not create a substitute finite mobility table."
+}
