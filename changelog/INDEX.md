@@ -5,7 +5,7 @@ Compact generated reader surface. The append-only authority is
 record 568 / commit `4db22f4e` and no longer grows.
 Post-cutover full bodies live exactly once in bounded pages under `pages/`.
 
-**788 accepted events** · latest 25 shown below · machine locator: `index.json`
+**789 accepted events** · latest 25 shown below · machine locator: `index.json`
 
 Search the complete authority without loading every page:
 
@@ -17,6 +17,7 @@ python verification/scripts/changelog.py search --text <phrase>
 
 | Date | Event | Claims | Full entry |
 |---|---|---|---|
+| 2026-08-30 | `20260830-p0-r-durable-process-baseline-closed-and-unchan` — [P0-R durable process baseline closed and unchanged-method P1 intake activated] - 2026-08-30 | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION, C6-SPACETIME-SIGNATURE | [bounded page](pages/000769-000818.md#20260830-p0-r-durable-process-baseline-closed-and-unchan) |
 | 2026-08-30 | `20260830-p0-r-pointer-only-research-continuity-and-dual` — [P0-R pointer-only research continuity and dual-lane resume overlay] - 2026-08-30 | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION, C6-SPACETIME-SIGNATURE | [bounded page](pages/000769-000818.md#20260830-p0-r-pointer-only-research-continuity-and-dual) |
 | 2026-08-30 | `20260830-t-059-observation-first-inverse-lane-and-tempor` — [T-059 observation-first inverse lane and temporal provenance repair] - 2026-08-30 | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION, C6-SPACETIME-SIGNATURE | [bounded page](pages/000769-000818.md#20260830-t-059-observation-first-inverse-lane-and-tempor) |
 | 2026-08-30 | `20260830-r-444-exponential-shell-tail-majorant-2026-08-3` — [R-444 exponential shell-tail majorant] - 2026-08-30 | C6-SPACETIME-SIGNATURE, EXP-001289, R-444 | [bounded page](pages/000769-000818.md#20260830-r-444-exponential-shell-tail-majorant-2026-08-3) |
@@ -41,7 +42,6 @@ python verification/scripts/changelog.py search --text <phrase>
 | 2026-08-31 | `20260831-r-426-high-cutoff-residual-reuse-boundary-2026` — [R-426 high-cutoff residual reuse boundary] - 2026-08-31 | C6-SPACETIME-SIGNATURE, EXP-001271, R-426 | [bounded page](pages/000719-000768.md#20260831-r-426-high-cutoff-residual-reuse-boundary-2026) |
 | 2026-08-31 | `20260831-r-425-expanded-finite-q3-harmonic-coarse-schur` — [R-425 expanded finite Q3 harmonic coarse-Schur stress] - 2026-08-31 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000719-000768.md#20260831-r-425-expanded-finite-q3-harmonic-coarse-schur) |
 | 2026-08-31 | `20260831-r-424-finite-two-block-harmonic-coarse-schur-as` — [R-424 finite two-block harmonic coarse Schur assembly] - 2026-08-31 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000719-000768.md#20260831-r-424-finite-two-block-harmonic-coarse-schur-as) |
-| 2026-08-31 | `20260831-r-423-finite-directed-boundary-capacity-cauchy` — [R-423 finite directed boundary-capacity Cauchy envelope] - 2026-08-31 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000719-000768.md#20260831-r-423-finite-directed-boundary-capacity-cauchy) |
 
 ## Post-cutover pages
 
@@ -49,7 +49,7 @@ Each full event body after the cutover occurs in exactly one page.
 
 | Ordinals | Events | Page |
 |---|---:|---|
-| 769–788 | 20 | [000769-000818.md](pages/000769-000818.md) |
+| 769–789 | 21 | [000769-000818.md](pages/000769-000818.md) |
 | 719–768 | 50 | [000719-000768.md](pages/000719-000768.md) |
 | 669–718 | 50 | [000669-000718.md](pages/000669-000718.md) |
 | 619–668 | 50 | [000619-000668.md](pages/000619-000668.md) |

@@ -1170,6 +1170,18 @@ def self_test(data: dict[str, Any]) -> int:
         change(candidate)
         mutations.append((name, candidate))
 
+    def force_two_active_stages(item: dict[str, Any], lane: str) -> None:
+        states = item["lanes"][lane]["stage_states"]
+        states["P0R"] = "ACTIVE"
+        states["P1"] = "ACTIVE"
+
+    def force_successor_before_predecessor(
+        item: dict[str, Any], lane: str
+    ) -> None:
+        states = item["lanes"][lane]["stage_states"]
+        states["P0R"] = "UNSTARTED"
+        states["P1"] = "COMPLETE"
+
     mutate("claim promotion", lambda item: item.__setitem__("claim_bearing", True))
     mutate(
         "method replacement",
@@ -1202,15 +1214,11 @@ def self_test(data: dict[str, Any]) -> int:
     )
     mutate(
         "two active forward stages",
-        lambda item: item["lanes"]["forward"]["stage_states"].__setitem__(
-            "P1", "ACTIVE"
-        ),
+        lambda item: force_two_active_stages(item, "forward"),
     )
     mutate(
         "successor complete before predecessor",
-        lambda item: item["lanes"]["inverse"]["stage_states"].__setitem__(
-            "P1", "COMPLETE"
-        ),
+        lambda item: force_successor_before_predecessor(item, "inverse"),
     )
     mutate(
         "finite continuum promotion",

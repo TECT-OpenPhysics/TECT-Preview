@@ -16,8 +16,7 @@ Authorities: `claims/*/status.json`, `todo/todo.json`, `ROADMAP.md`, `RESULTS-LE
 | `T-055` | in_progress | C6-SPACETIME-SIGNATURE | C6-BCC-PREMISE-BLOCKED | Geometry-first truncated-octahedron candidate triage: enumerate realizations and test empty-reference sign before structural use |
 | `T-057` | in_progress | C6-SPACETIME-SIGNATURE | LEGACY-SELECTIVE-INDEX-AND-ON-DEMAND-REVALIDATION | Selective legacy preservation, retrieval, and gate-by-gate revalidation |
 | `T-059` | in_progress | — | PA-INVERSE-OBSERVATION-TARGET-MAP-HOLDOUT-FREEZE | Pre-A observation-first inverse constraint and prediction lane |
-| `T-060` | in_progress | — | RESEARCH-CONTINUITY-P0-BASELINE-AND-RESUME | Research Phase P0-R baseline and dual-lane resume recovery |
-| `T-061` | next | — | PA-INVERSE-OBSERVATION-TARGET-MAP-HOLDOUT-FREEZE | Dynamic-owner and observation-map identifiability intake |
+| `T-061` | in_progress | — | PA-INVERSE-OBSERVATION-TARGET-MAP-HOLDOUT-FREEZE | Dynamic-owner and observation-map identifiability intake |
 | `T-032` | blocked | A1-PRODUCTION-KERNEL-MANIFEST | — | Operator-independent certification and main-proof-line decision for the canonical N-001 scalar-slice manifest before any T5 package |
 | `T-048` | blocked | A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION | A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE | A11: prove the true-increment stabilised relative log-Laplace bound |
 

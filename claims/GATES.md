@@ -22,13 +22,17 @@ closes only after doctor and release checks pass, the commit queue is empty,
 the worktree is clean, and live remote `main` equals local `HEAD` under the
 strict continuity audit.
 
-**Status:** OPEN (2026-08-30). The recovery-start audit records a verified but
-non-durable pending worktree at local `HEAD`
-`d93469b01674e357d98f3eef1551bb61e8dc57bb`: doctor and release checks pass,
-but 21 queued commit requests, 176 unstaged tracked paths, 239 untracked paths,
-and an unverified live remote remain. This is a process and provenance gate
-only. It changes no existing proof method, scientific gate, claim lifecycle,
-tier, or evidence interpretation. The controlling contract is
+**Status:** CLOSED AS A PROCESS BASELINE ONLY (2026-08-30). The recovery-start
+audit recorded a verified but non-durable pending worktree at local `HEAD`
+`d93469b01674e357d98f3eef1551bb61e8dc57bb`. EXP-001291 then registered the
+pointer-only contract, and the v1.3 watcher drained 22 queued requests into
+parent commit `bc37ef8ef035f798623f76bc1ed14d2e3ee498a9`. The queue was zero,
+the worktree was clean, doctor/release/diff checks passed, and a live remote
+read confirmed `tect/main` at the same parent SHA before the completion record
+was authored. The final completion commit must itself pass the strict baseline
+and remote-equality audit. This is a process and provenance closure only. It
+changes no existing proof method, scientific gate, claim lifecycle, tier, or
+evidence interpretation. The controlling contract is
 `governance/research-continuity.md`; the machine state is
 `strategy/main-proof-program-v1.json`.
 

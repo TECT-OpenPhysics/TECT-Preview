@@ -4,7 +4,7 @@ Generated from `todo/todo.json` by `verification/scripts/todo.py` -- **never han
 Portable: copying the TECT folder carries this ledger; a fresh cowork session reads it in the session-entry prelude (AGENTS.md §1).
 For bounded daily reading use `management/INDEX.md`; this compatibility view deliberately preserves every completed task.
 
-Counts: In progress 5 · Next up 1 · Blocked 2 · Backlog 5 · Done (compatibility history) 48
+Counts: In progress 5 · Next up 0 · Blocked 2 · Backlog 5 · Done (compatibility history) 49
 
 ## In progress
 
@@ -20,12 +20,6 @@ Counts: In progress 5 · Next up 1 · Blocked 2 · Backlog 5 · Done (compatibil
 - **T-059** Pre-A observation-first inverse constraint and prediction lane  _(owner: Codex; gate: PA-INVERSE-OBSERVATION-TARGET-MAP-HOLDOUT-FREEZE)_
   - Parallel T0 lane under T-054. Freeze observation and holdout lineage plus QFT/YM/GR targets; require a complete F_reg/F_lim/F_eff/F_obs owner contract before scoring; report nonidentifiability as an equivalence class; require a genuinely prospective unused target; no Pre-A, A13, C6, Sector-A, physical-sector, continuum, Yang-Mills, or mass-gap promotion.
   - _updated 2026-08-30_
-- **T-060** Research Phase P0-R baseline and dual-lane resume recovery  _(owner: Codex; gate: RESEARCH-CONTINUITY-P0-BASELINE-AND-RESUME)_
-  - Pointer-only recovery task. Preserve all existing forward methods unchanged; register the inverse lane additively; close only after ordinary continuity, doctor, release, clean queue/worktree, live remote equality, and an exact next action per lane pass.
-  - _updated 2026-08-30_
-
-## Next up
-
 - **T-061** Dynamic-owner and observation-map identifiability intake  _(owner: Codex; gate: PA-INVERSE-OBSERVATION-TARGET-MAP-HOLDOUT-FREEZE)_
   - First post-P0-R paired packet under T-054/T-059. Fill the R-192 owner slots and freeze one candidate-neutral dynamic estimand before scoring; use R-193/R-200 equivalence classes, park if no new owner hash exists, and do not alter the existing proof methods.
   - _updated 2026-08-30_
@@ -190,3 +184,6 @@ Counts: In progress 5 · Next up 1 · Blocked 2 · Backlog 5 · Done (compatibil
 - **T-058** A13: bounded complete finite production-cylinder integration trial  _(owner: Codex; claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION; gate: A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE)_
   - Bounded diagnostic; it does not restore T-050 as the main physical priority. Freeze one A1 side-16 two-root cylinder and map actual heat/root incidence, covariance bases, complement, historical low, forest, returned mean, source, and sextic owners exactly once into the R-183 reserve and R-184 temporal-overlap contracts. PASS requires a reproducible complete-owner identity plus a nonnegative q-ledger and headroom bound on the declared cylinder. FAIL requires a pinned counterfixture identifying the first unmet inequality or missing production map. Either outcome is T0 or negative/method evidence only until separately integrated. Stop after one complete pass/fail assessment; do not add isolated algebra checks first.
   - _updated 2026-08-22_
+- **T-060** Research Phase P0-R baseline and dual-lane resume recovery  _(owner: Codex; gate: RESEARCH-CONTINUITY-P0-BASELINE-AND-RESUME)_
+  - Pointer-only recovery task. Preserve all existing forward methods unchanged; register the inverse lane additively; close only after ordinary continuity, doctor, release, clean queue/worktree, live remote equality, and an exact next action per lane pass.
+  - _updated 2026-08-30_
