@@ -1,0 +1,264 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001312",
+  "reviewed_on": "2026-08-30",
+  "recorded_by": "Codex",
+  "provenance": "contemporaneous",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "task_id": "T-061",
+  "gate_ids": [
+    "PA-INVERSE-OBSERVATION-TARGET-MAP-HOLDOUT-FREEZE",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "title": "HOLD-LC-001 public GTS code-level response and likelihood owner candidate",
+  "question": "Does a public, commit-pinned GBM Targeted Search implementation provide a reproducible finite response/LLR code path that can advance HOLD-LC-001 owner intake without being promoted to the Stachie joint statistic or a continuous physical timing owner?",
+  "method": [
+    "Resolve the public USRA-STI/gamma-ray-targeted-search main ref to an exact commit hash and inspect its README, likelihood, response, search, configuration and prior modules plus the GW170817 example locator.",
+    "Extract code semantics for counts/background/response likelihood, source-amplitude marginalization, time-bin construction, spacecraft-frame midpoint evaluation, atmospheric response interpolation, Earth masking and sky-prior normalization.",
+    "Crosswalk the code-level objects against the existing Stachie finite Lambda candidate and the hash-pinned HOLD-LC-001 estimator/response-owner contracts, distinguishing GBM finite implementation from joint association and continuous detector timing.",
+    "Define a reproduction packet and run adversarial separation checks; preserve T-054/T-059 methods, owner order and stopped-loop rules, and do not execute an event score or prospective test."
+  ],
+  "exact_scope": {
+    "parent_contracts": [
+      {
+        "path": "strategy/hold-lc-001-stachie-statistic-owner-candidate-v0.1.json",
+        "sha256": "9fa803c5dd52bafee107cb0f2accdc6c61b02208c8f4b9c2660ef36041229b7b"
+      },
+      {
+        "path": "strategy/hold-lc-001-estimator-contract-v0.1.json",
+        "sha256": "f2d3be523c9e24fe8e84673dc486f0bf17799ceba9702afd638a0bf2096ddf94"
+      },
+      {
+        "path": "strategy/hold-lc-001-response-owner-request-v0.1.json",
+        "sha256": "ca67f0d274256389c22edab384b6dd386e4ad2607344107fcffabcfcb90dcd"
+      },
+      {
+        "path": "strategy/hold-lc-001-gts-code-owner-candidate-v0.1.json",
+        "sha256": "9c7c1830e6c52312fbfd65f7e4755be7c700e93ef363243d786f1cd995cef99e"
+      }
+    ],
+    "lineage_group": "GW170817-GRB170817A",
+    "holdout_id": "HOLD-LC-001",
+    "data_role": "CALIBRATION",
+    "finite_scope": "Public code semantics and reproduction prerequisites for a finite GBM counts/background/response likelihood only; no event execution, no joint association FAR reproduction, no continuous timing likelihood, no covariance and no prospective validation.",
+    "method_scope": "Additive T-061 P1 source-owner intake refinement; T-054 forward method, T-059 inverse method, owner order and stopped-loop rules remain unchanged."
+  },
+  "official_code_source": {
+    "repository": "USRA-STI/gamma-ray-targeted-search",
+    "url": "https://github.com/USRA-STI/gamma-ray-targeted-search",
+    "commit": "1bc1e913f97fd7195a7e297f8d6032a5c7758894",
+    "branch_ref": "refs/heads/main",
+    "retrieved_on": "2026-08-30",
+    "license": "Apache-2.0 as displayed by the repository",
+    "locators": [
+      "README.md at repository page lines 183-212",
+      "likelihood.py raw source lines 4-15",
+      "response.py raw source lines 3-9",
+      "search.py raw source lines 5-16",
+      "configuration.py raw source lines 12-14",
+      "priors.py raw source lines 4-9",
+      "GW170817 Example.ipynb repository entry"
+    ]
+  },
+  "extracted_code_semantics": {
+    "likelihood": {
+      "entrypoint": "Likelihood.calculate(counts, bkgd_counts, bkgd_var, rsp)",
+      "outputs": [
+        "marginalized finite log-likelihood ratio over spectral templates and sky locations",
+        "best-template and best-location indices",
+        "photon fluence and estimated sigma",
+        "optimal SNR and chi-square diagnostics"
+      ],
+      "choices": [
+        "power-law source-amplitude prior gamma=2.5 by default",
+        "three Newton iterations by default",
+        "pre-threshold 5.0 before numerical maximization",
+        "nonnegative background clipping and response-weighted variance",
+        "coinclr combines a supplied sky prior with the log-likelihood"
+      ]
+    },
+    "search_and_configuration": {
+      "defaults": {
+        "win_width_seconds": 60,
+        "min_loglr": 5.0,
+        "min_duration_seconds": 0.064,
+        "max_duration_seconds": 8.192,
+        "min_step_seconds": 0.064,
+        "num_steps": 8,
+        "skygrid_resolution_degrees": 5.0
+      },
+      "time_bins": "Durations are 1.024 * 2**k over the configured range; steps are max(min_step, duration/num_steps); binned data are aligned to time edges.",
+      "outputs": "Each time bin records start, duration, best sky position, fit status, optimal SNR, best template, photon flux, chi-square diagnostics and marginalized LLR."
+    },
+    "response": {
+      "inputs": [
+        "spacecraft frame history",
+        "reference time t0",
+        "direct response templates",
+        "atmospheric response templates"
+      ],
+      "time_rule": "preprocess evaluates spacecraft frames and geocentric coordinates at response-bin midpoints and caches load points.",
+      "matrix_rule": "The code assumes a constant response over a short-burst period, combines direct and atmospheric components and linearly weights nearest atmospheric azimuth templates.",
+      "visibility_rule": "Earth-occultation masks are generated from loaded geocentric coordinates."
+    },
+    "sky_prior_and_example": {
+      "sky_prior": "Uniform prior without a map; otherwise HEALPix density is mapped to the spacecraft frame and normalized.",
+      "example": "README supplies a GW170817 example requiring external GBM TTE/trigdat files, detector templates and Gamma-ray Data Tools."
+    }
+  },
+  "owner_crosswalk": {
+    "partial_fields_supported": [
+      "Finite GBM response/LLR implementation candidate with explicit code entrypoint.",
+      "Finite time-bin, midpoint-frame and short-burst constant-response semantics.",
+      "Direct plus atmospheric response and Earth-mask code path.",
+      "Uniform or HEALPix sky-prior path and finite result schema.",
+      "Version-pinned public source repository and an event reproduction recipe."
+    ],
+    "not_supported_for_hold_lc_001_admission": [
+      "Immutable event TTE/CSPEC/PHA/position-history/trigdat and response-template bytes.",
+      "Exact dependency lock, template archive hash and event-specific response validity/interpolation.",
+      "Stachie Q_L/Q_G population calibration and joint Lambda background FAR implementation.",
+      "Detector-to-geocenter conversion, Earth-orientation convention and timing uncertainty.",
+      "GW merger-time likelihood, joint covariance and intrinsic-emission-lag nuisance law.",
+      "F_reg/F_lim/F_eff/F_obs, candidate score or prospective holdout."
+    ],
+    "classification": "PUBLIC_GBM_LLR_RESPONSE_CODE_CANDIDATE_NOT_CONTINUOUS_TIMING_OWNER"
+  },
+  "checks": [
+    {
+      "id": "repository-pin",
+      "finding": "PASS",
+      "detail": "git ls-remote resolves refs/heads/main to 1bc1e913f97fd7195a7e297f8d6032a5c7758894 on 2026-08-30."
+    },
+    {
+      "id": "code-path",
+      "finding": "PASS",
+      "detail": "The inspected modules expose finite likelihood, search-bin, response-midpoint, atmospheric interpolation, Earth-mask and sky-prior paths."
+    },
+    {
+      "id": "reproducibility",
+      "finding": "PARTIAL-PASS-WITH-ADMISSION-STOP",
+      "detail": "A public code path and GW170817 recipe exist, but event/template bytes, dependency versions, joint-ranking linkage and physical timing uncertainty are not frozen."
+    },
+    {
+      "id": "method-preservation",
+      "finding": "PASS",
+      "detail": "The result is an additive T-061 source candidate; T-054/T-059 methods, owner order and stopped-loop registry are unchanged."
+    }
+  ],
+  "finding": "The public GTS repository supplies an inspectable finite GBM implementation candidate. Likelihood.calculate accepts counts, background, variance and response arrays; response.py evaluates spacecraft-frame and geocentric coordinates at time-bin midpoints, combines direct and atmospheric response templates under a short-burst constant-response assumption, and creates Earth masks; search.py and configuration.py define time bins and finite outputs; priors.py defines uniform or HEALPix sky priors; the README gives a GW170817 example and external input requirements. This materially narrows the reproduction route but does not admit HOLD-LC-001: event/template bytes, dependency lock, response validity, detector-to-geocenter conversion, covariance, the Stachie joint Lambda path and prospective lock remain absent.",
+  "verdict": "advanced",
+  "decision_reason": "This is a new commit-pinned public implementation with concrete finite estimator and response code, not another literature summary. It creates a reproducible synthetic-first intake packet while preserving the existing proof methods and all physical/prospective firewalls.",
+  "decision_scope": "T0 public finite GBM code-owner crosswalk and reproduction checklist only; no event result, continuous timing, physical identity or empirical prediction.",
+  "assumptions": [
+    "The repository commit hash recorded on 2026-08-30 is the intended public GTS edition for this intake.",
+    "The inspected file paths at that commit expose the code semantics recorded here until a new commit is pinned.",
+    "Repository defaults and short-burst assumptions are implementation choices and require separate physical-owner acceptance.",
+    "The local HOLD-LC-001 estimator and response-owner contracts remain controlling for timing, calibration and covariance admission."
+  ],
+  "missing_assumptions": [
+    "Immutable event data and response-template bytes with hashes, plus exact dependency/environment versions.",
+    "A source-owned linkage from GTS finite GBM LLR to the Stachie Q_G and joint Lambda implementation.",
+    "Event-specific response validity/interpolation, gain calibration and detector-to-geocenter conversion with uncertainty.",
+    "A common timing covariance, intrinsic-emission-lag nuisance law and sealed prospective holdout.",
+    "Independent primary/secondary/hostile reproduction on a frozen synthetic fixture before event use."
+  ],
+  "adversarial_review": [
+    {
+      "axis": "public-code-as-physical-owner",
+      "check": "Does a public code repository automatically provide the physical owner required by HOLD-LC-001?",
+      "disposition": "UPHELD-BLOCKED: public code does not freeze event inputs, calibration validity, propagation uncertainty or source ownership."
+    },
+    {
+      "axis": "finite-llr-as-joint-statistic",
+      "check": "Can the GTS GBM LLR be treated as the complete Stachie joint Lambda?",
+      "disposition": "UPHELD-BLOCKED: the code exposes the GBM likelihood path but not the full Q_L/Q_G population calibration and joint background FAR path."
+    },
+    {
+      "axis": "midpoint-response-as-propagation",
+      "check": "Can midpoint spacecraft-frame response generation be treated as detector-to-geocenter correction?",
+      "disposition": "UPHELD-BLOCKED: response evaluation and Earth masking are not a detector-to-geocenter propagation algorithm or uncertainty budget."
+    },
+    {
+      "axis": "defaults-as-frozen-data",
+      "check": "Can repository defaults be used as preregistered event calibration or candidate-score values?",
+      "disposition": "UPHELD-BLOCKED: defaults require event/template/dependency version freeze before residual inspection."
+    },
+    {
+      "axis": "method-overhaul",
+      "check": "Could GTS replace the established T-054 forward or T-059 inverse method?",
+      "disposition": "DISMISSED: it is an additive T-061 finite owner candidate and leaves both methods unchanged."
+    }
+  ],
+  "boundary": "EXP-001312 is a T0 public code-level finite GBM crosswalk. It does not admit a continuous HOLD-LC-001 likelihood, covariance, detector-to-geocenter implementation, response value, calibration-validity rule, intrinsic-lag nuisance law, F_reg/F_lim/F_eff/F_obs map, candidate, score, prospective prediction, microscopic dynamics, physical identity, continuum result, Reading-H sign, Pre-A closure or mass-gap conclusion.",
+  "evidence_level": "T0 public source-code inspection with commit pin and synthetic-first reproduction plan; no event execution or numerical reproduction",
+  "formal_refs": {
+    "results": [],
+    "negatives": [],
+    "events": []
+  },
+  "formal_integration": {
+    "results": [],
+    "negatives": [],
+    "events": [],
+    "no_new_result": true,
+    "no_new_negative": true,
+    "no_changelog_event": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "reproduction_packet": {
+    "phase": "P1_SOURCE_CODE_AND_INPUT_FREEZE",
+    "commands": [
+      "git clone https://github.com/USRA-STI/gamma-ray-targeted-search.git",
+      "git -C gamma-ray-targeted-search checkout 1bc1e913f97fd7195a7e297f8d6032a5c7758894"
+    ],
+    "freeze_before_event_use": [
+      "all source file hashes and repository commit",
+      "Gamma-ray Data Tools and numerical dependency versions",
+      "GW170817 TTE/trigdat/position-history and response-template bytes",
+      "detector/channel configuration, background fit and time-bin settings",
+      "response midpoint/atmospheric interpolation and Earth-mask choices"
+    ],
+    "test_order": [
+      "synthetic counts/background/response fixture through Likelihood.calculate",
+      "independent implementation or parser of finite LLR, response indexing and sky-prior normalization",
+      "hostile mutations of source/template/data hashes and boundary settings",
+      "only then event-level reproduction, still retrospective and non-prospective"
+    ]
+  },
+  "next_action": "Freeze the pinned GTS commit, dependency lock, response-template archive and exact GW170817 inputs; execute the synthetic primary/independent/hostile finite LLR and response-index reproduction before touching event data. Keep Stachie joint-ranking completion, detector-to-geocenter conversion, covariance, intrinsic-lag scoring and prospective credit locked, and continue unchanged T-054 owner intake in parallel.",
+  "stop_or_redesign": [
+    "If the repository commit, templates or event inputs cannot be version-pinned, retain the code as public provenance and do not admit HOLD-LC-001.",
+    "If GTS finite LLR cannot be linked to the Stachie Q_G and joint Lambda path without post hoc choices, keep the two owner candidates separate.",
+    "If response midpoint/interpolation or Earth-mask choices change with candidate labels, invalidate the reproduction and issue a new versioned packet.",
+    "If continuous timing/covariance and a prospective lock remain absent, report finite GBM code evidence only."
+  ],
+  "related": [
+    {
+      "id": "EXP-001311",
+      "relation": "continues"
+    },
+    {
+      "id": "EXP-001310",
+      "relation": "continues"
+    },
+    {
+      "id": "EXP-001303",
+      "relation": "continues"
+    }
+  ],
+  "non_claims": [
+    "The public GTS code is not an admitted continuous Delta_t_det likelihood, detector-to-geocenter correction or covariance.",
+    "The finite GBM LLR and response path are not the complete Stachie joint Lambda or a prospective scorer.",
+    "No event result, response value, candidate map, F_reg/F_lim/F_eff/F_obs, prospective prediction or microscopic forward map is admitted.",
+    "No QFT/Yang--Mills/gravity identity, Pre-A, C6, A13, Sector-A, continuum, physical-vacuum, cosmic-origin, theory-of-everything or mass-gap claim follows.",
+    "The established T-054 forward and T-059 inverse methods, owner order and stopped-loop rules are unchanged."
+  ],
+  "evidence_refs": [
+    "strategy/hold-lc-001-gts-code-owner-candidate-v0.1.json#source_reported_code_semantics",
+    "strategy/hold-lc-001-gts-code-owner-candidate-v0.1.json#reproduction_packet"
+  ]
+}
