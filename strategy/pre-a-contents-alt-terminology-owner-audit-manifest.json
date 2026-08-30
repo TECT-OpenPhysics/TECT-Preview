@@ -1,0 +1,156 @@
+{
+  "schema": "tect/pre-a-contents-owner-audit/1.0",
+  "result_id": "R-459",
+  "exploration_id": "EXP-001332",
+  "task_id": "T-054",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "tier": "T0",
+  "claim_bearing": false,
+  "title": "Canonical Contents alternate-terminology production-owner applicability audit",
+  "status": "NO_STANDALONE_OWNER_FOUND_ALTERNATE_TERMINOLOGY",
+  "question": "Does the canonical Contents source root contain a standalone file that supplies the complete Q3/A13 production-owner vocabulary under alternate terminology, rather than only merged legacy bundles or partial status prose?",
+  "decision_scope": "Read-only source-applicability audit over the configured canonical Contents subtrees. It adds no dynamics, candidate, observation score, physical identification, or theorem.",
+  "method_preservation": {
+    "existing_forward_t054_unchanged": true,
+    "inverse_lane_additive_not_replacement": true,
+    "owner_order_unchanged": true,
+    "promotion_firewalls_unchanged": true,
+    "parked_loop_rules_unchanged": true
+  },
+  "source_scope": {
+    "root_locator": "operator-configured canonical Contents root",
+    "subtrees": [
+      "Docs/math",
+      "Github/note",
+      "Docs/status",
+      "Github/status"
+    ],
+    "text_extensions": [
+      ".txt",
+      ".md",
+      ".tex"
+    ],
+    "deduplication": "Report both path count and content-SHA-256 unique count; identical Docs/Github mirrors are not independent authorities.",
+    "binary_policy": "Binary and unsupported extensions are not decoded or interpreted."
+  },
+  "semantic_groups": {
+    "generator": "generator OR transfer operator OR Markov semigroup",
+    "heat": "heat-root OR heat-kernel OR heat-semigroup",
+    "filtration": "filtration OR conditional replica OR replica",
+    "current": "raw-current OR current spatial OR spatial intertwiner",
+    "qledger": "q-ledger or q_k ledger or one-use q or nonnegative q ledger"
+  },
+  "exact_owner_tokens": [
+    "heat_root_incidence",
+    "root filtration",
+    "conditional replicas",
+    "raw-current spatial intertwiner",
+    "production_one_use_q_ledger"
+  ],
+  "expected_boundary": {
+    "complete_semantic_paths": 0,
+    "standalone_complete_paths": 0,
+    "exact_owner_token_paths": 0,
+    "all_complete_rows_are_merged": true,
+    "loose_qledger_only_complete_rows_are_merged": true
+  },
+  "interpretation_rule": {
+    "complete_semantic_match": "A file has all five semantic groups using strict field-boundary aliases, but a merged bundle is not an owner because it has no single source edition, field boundary, or authority identity.",
+    "loose_qledger_control": "The loose phrase one uses ... q is recorded only as a false-positive control; it is not accepted as a q-ledger group, even when it appears in a standalone partial note.",
+    "standalone_owner_candidate": "Only a non-merged file with all five groups and a source-level owner contract can reopen the forward owner branch.",
+    "partial_or_legacy": "Files with fewer than five groups remain discovery or reference material and cannot be imported into the current A1/R-192 owner."
+  },
+  "finding": "The strict alternate-terminology scan finds no file with all five owner groups, no standalone owner candidate, and no file containing any exact R-192 owner token. A loose phrase search produces only legacy false positives in merged historical material; individual Math/status documents are partial or narrative references. This is a terminology and false-positive boundary, not a universal source-absence theorem.",
+  "decision_reason": "The prior exact-token audit and the present alias audit answer different questions. The present audit tightens the q-ledger alias so ordinary prose such as one uses ... q cannot create a spurious complete match, and records merged bundles as false positives. Any future standalone source remains an explicit reopen condition under the unchanged owner contract.",
+  "adversarial_review": [
+    {
+      "axis": "merged-bundle-as-owner",
+      "check": "A concatenated historical file contains all vocabulary groups but lacks one source edition and field boundary.",
+      "disposition": "UPHELD-REJECTED: merged rows are recorded as false-positive discovery only."
+    },
+    {
+      "axis": "partial-status-as-owner",
+      "check": "Status pages and old notes can mention generator, heat, or filtration without supplying the complete owner contract.",
+      "disposition": "UPHELD-REJECTED: fewer than five groups remain partial/reference material."
+    },
+    {
+      "axis": "loose-q-phrase",
+      "check": "A broad one uses ... q phrase could be mistaken for a production q-ledger.",
+      "disposition": "DISMISSED: only the strict q-ledger alias is admissible; loose-only rows are control false positives."
+    },
+    {
+      "axis": "terminology-coverage",
+      "check": "The scan could miss an owner using genuinely different terminology.",
+      "disposition": "UPHELD-OPEN: this is a bounded alias audit, not a global absence claim."
+    },
+    {
+      "axis": "path-mirror-double-counting",
+      "check": "Docs and Github mirrors could be counted as independent sources.",
+      "disposition": "DISMISSED: raw SHA-256 unique counts and duplicate paths are reported separately."
+    },
+    {
+      "axis": "method-overhaul",
+      "check": "Could the source audit replace T-054, T-059, T-061, or the R-192 owner order?",
+      "disposition": "DISMISSED: the audit is additive provenance intake and leaves all existing methods unchanged."
+    },
+    {
+      "axis": "promotion-leakage",
+      "check": "Could a vocabulary co-occurrence be promoted to QFT, physical, continuum, or mass-gap evidence?",
+      "disposition": "UPHELD-REJECTED: claim_bearing remains false and all promotion flags remain closed."
+    }
+  ],
+  "assumptions": [
+    "The operator-configured Contents root is the maintained canonical source tree for this audit.",
+    "The five semantic groups are a bounded alias set for the existing R-192 owner slots, not a replacement owner specification.",
+    "Text decoding with replacement is used only for search and never turns malformed bytes into evidence.",
+    "A future standalone source may use different terminology and must be evaluated by the unchanged owner contract."
+  ],
+  "missing_assumptions": [
+    "A hash-pinned A1 production generator and mobility with heat-root incidence.",
+    "A root-labelled filtration and conditional-replica construction.",
+    "A raw-current spatial intertwiner and once-owned nonnegative production q-ledger.",
+    "A common state, physical projection, boundary, normalization, regulator, volume and limit order.",
+    "An admitted Q3 common domain, uniform majorant and downstream OS/KMS/GNS or physical-sector bridge."
+  ],
+  "evidence_level": "T0 exact read-only canonical-Contents alias scan with path/content-hash deduplication; no model execution",
+  "formal_refs": {
+    "results": [
+      "R-459"
+    ],
+    "negatives": [],
+    "events": [
+      "20260831-r-459-contents-alt-terminology-owner-audit-2026"
+    ]
+  },
+  "formal_integration": {
+    "event_ordinal": 808,
+    "no_new_negative": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "artifacts": {
+    "primary": "verification/scripts/pre_a_contents_alt_terminology_owner_audit.py",
+    "independent": "codes/foundations/pre_a_contents_alt_terminology_owner_audit_independent.py",
+    "hostile": "codes/foundations/pre_a_contents_alt_terminology_owner_audit_hostile.py",
+    "integrated": "verification/scripts/pre_a_contents_alt_terminology_owner_audit_verify.py",
+    "certificate": "strategy/pre-a-contents-alt-terminology-owner-audit-certificate-260831.md",
+    "exploration": "strategy/pre-a-contents-alt-terminology-owner-audit-exploration.json"
+  },
+  "next_action": "Keep the forward owner branch parked under the existing R-192 fingerprint. Reopen only if a new standalone, hash-pinned source supplies the complete owner fields; in parallel continue the unchanged T-059/T-061 observation-source lock and the existing P1 work packet.",
+  "stop_or_redesign": [
+    "If the configured Contents root changes, issue a new audit with the new root provenance rather than mutating this record.",
+    "If a standalone all-five file appears, stop this audit at its zero-boundary and start the unchanged R-192 owner order from that new source.",
+    "If terminology expansion is proposed, version the alias set and retain this result as the prior bounded audit.",
+    "Do not create another finite mobility, physical-empty, or geometry table in response to this source boundary."
+  ],
+  "non_claims": [
+    "No universal absence of a QFT or A13 production owner is proved.",
+    "No future or unindexed source is refuted.",
+    "No generator, heat semigroup, filtration, raw-current map, q-ledger, candidate, observation map, score, physical identity, continuum, Yang--Mills, Pre-A, Sector-A, cosmic-origin, theory-of-everything, or mass-gap statement follows.",
+    "The established T-054 forward method, T-059/T-061 inverse methods, owner order, and promotion firewalls are unchanged."
+  ],
+  "recorded_by": "Codex",
+  "provenance": "contemporaneous"
+}

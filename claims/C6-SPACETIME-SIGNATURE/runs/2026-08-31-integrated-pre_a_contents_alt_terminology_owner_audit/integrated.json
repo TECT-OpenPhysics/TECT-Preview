@@ -1,0 +1,232 @@
+{
+  "assertion_count": 12,
+  "assertions": [
+    {
+      "actual": {
+        "output": "R-459 PRIMARY PASS_BOUNDED_NO_STANDALONE_OWNER standalone=0 exact=0 merged_complete=0\n",
+        "returncode": 0
+      },
+      "expected": "returncode 0 and result file",
+      "group": "execution",
+      "name": "primary command",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "output": "R-459 INDEPENDENT PASS_BOUNDED_NO_STANDALONE_OWNER standalone=0 exact=0 complete=0\n",
+        "returncode": 0
+      },
+      "expected": "returncode 0 and result file",
+      "group": "execution",
+      "name": "independent command",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "output": "R-459 HOSTILE HOSTILE_MUTATIONS_REJECTED 8/8\n",
+        "returncode": 0
+      },
+      "expected": "returncode 0 and result file",
+      "group": "execution",
+      "name": "hostile command",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "complete_semantic_paths": [
+          0,
+          0
+        ],
+        "duplicate_path_count": [
+          701,
+          701
+        ],
+        "exact_owner_token_paths": [
+          0,
+          0
+        ],
+        "loose_qledger_only_paths": [
+          4,
+          4
+        ],
+        "partial_paths_at_least_three_groups": [
+          10,
+          10
+        ],
+        "paths_scanned": [
+          1442,
+          1442
+        ],
+        "standalone_complete_paths": [
+          0,
+          0
+        ],
+        "unique_content_hashes": [
+          741,
+          741
+        ]
+      },
+      "expected": "matching scan summaries",
+      "group": "independence",
+      "name": "primary-independent scan agreement",
+      "status": "PASS"
+    },
+    {
+      "actual": 0,
+      "expected": 0,
+      "group": "owner-applicability",
+      "name": "strict complete boundary",
+      "status": "PASS"
+    },
+    {
+      "actual": 0,
+      "expected": 0,
+      "group": "owner-applicability",
+      "name": "standalone owner boundary",
+      "status": "PASS"
+    },
+    {
+      "actual": 0,
+      "expected": 0,
+      "group": "owner-applicability",
+      "name": "exact token boundary",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "owner-applicability",
+      "name": "merged row boundary",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "owner-applicability",
+      "name": "loose phrase boundary",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        8,
+        8
+      ],
+      "expected": 8,
+      "group": "adversarial-review",
+      "name": "hostile firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "existing_forward_t054_unchanged": true,
+        "inverse_lane_additive_not_replacement": true,
+        "owner_order_unchanged": true,
+        "parked_loop_rules_unchanged": true,
+        "promotion_firewalls_unchanged": true
+      },
+      "expected": "all method-preservation flags true",
+      "group": "method-firewall",
+      "name": "methods preserved",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        false,
+        "T0",
+        true
+      ],
+      "expected": [
+        false,
+        "T0",
+        true
+      ],
+      "group": "promotion-firewall",
+      "name": "claim and tier firewall",
+      "status": "PASS"
+    }
+  ],
+  "boundary": "Read-only source-applicability audit over the configured canonical Contents subtrees. It adds no dynamics, candidate, observation score, physical identification, or theorem.",
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "command_reports": {
+    "hostile": {
+      "command": [
+        "E:\\Dev\\TECT.venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "E:\\Dev\\TECT\\codes\\foundations\\pre_a_contents_alt_terminology_owner_audit_hostile.py",
+        "--output",
+        "E:\\Dev\\TECT\\claims\\C6-SPACETIME-SIGNATURE\\runs\\2026-08-31-hostile-pre_a_contents_alt_terminology_owner_audit\\result.json"
+      ],
+      "result_path": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-hostile-pre_a_contents_alt_terminology_owner_audit/result.json",
+      "returncode": 0,
+      "stderr_tail": "",
+      "stdout_tail": "R-459 HOSTILE HOSTILE_MUTATIONS_REJECTED 8/8\n"
+    },
+    "independent": {
+      "command": [
+        "E:\\Dev\\TECT.venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "E:\\Dev\\TECT\\codes\\foundations\\pre_a_contents_alt_terminology_owner_audit_independent.py",
+        "--output",
+        "E:\\Dev\\TECT\\claims\\C6-SPACETIME-SIGNATURE\\runs\\2026-08-31-independent-pre_a_contents_alt_terminology_owner_audit\\result.json",
+        "--contents-root",
+        "E:\\Dev\\Contents"
+      ],
+      "result_path": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-independent-pre_a_contents_alt_terminology_owner_audit/result.json",
+      "returncode": 0,
+      "stderr_tail": "",
+      "stdout_tail": "R-459 INDEPENDENT PASS_BOUNDED_NO_STANDALONE_OWNER standalone=0 exact=0 complete=0\n"
+    },
+    "primary": {
+      "command": [
+        "E:\\Dev\\TECT.venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "E:\\Dev\\TECT\\verification\\scripts\\pre_a_contents_alt_terminology_owner_audit.py",
+        "--output",
+        "E:\\Dev\\TECT\\claims\\C6-SPACETIME-SIGNATURE\\runs\\2026-08-31-primary-pre_a_contents_alt_terminology_owner_audit\\result.json",
+        "--contents-root",
+        "E:\\Dev\\Contents"
+      ],
+      "result_path": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-primary-pre_a_contents_alt_terminology_owner_audit/result.json",
+      "returncode": 0,
+      "stderr_tail": "",
+      "stdout_tail": "R-459 PRIMARY PASS_BOUNDED_NO_STANDALONE_OWNER standalone=0 exact=0 merged_complete=0\n"
+    }
+  },
+  "evidence_level": "T0 exact read-only canonical-Contents alias scan with path/content-hash deduplication; no model execution",
+  "exploration_id": "EXP-001332",
+  "hostile_summary": {
+    "assertion_count": 8,
+    "mutations_rejected": 8
+  },
+  "non_claims": [
+    "No universal absence of a QFT or A13 production owner is proved.",
+    "No future or unindexed source is refuted.",
+    "No generator, heat semigroup, filtration, raw-current map, q-ledger, candidate, observation map, score, physical identity, continuum, Yang--Mills, Pre-A, Sector-A, cosmic-origin, theory-of-everything, or mass-gap statement follows.",
+    "The established T-054 forward method, T-059/T-061 inverse methods, owner order, and promotion firewalls are unchanged."
+  ],
+  "primary_summary": {
+    "complete_semantic_paths": 0,
+    "duplicate_path_count": 701,
+    "exact_owner_token_paths": 0,
+    "loose_qledger_only_paths": 4,
+    "partial_paths_at_least_three_groups": 10,
+    "paths_scanned": 1442,
+    "standalone_complete_paths": 0,
+    "unique_content_hashes": 741
+  },
+  "result_id": "R-459",
+  "run_kind": "integrated",
+  "schema": "tect/pre-a-contents-owner-audit-integrated/1.0",
+  "source_hashes": {
+    "hostile": "e577bbbc1a6af9901057512bafbe744d8d4d5a4dc763091c4cdac059878ec1c3",
+    "independent": "a6f990ca62dc1cad576ed644373a4bf1c8ae0ece9bac5e728fd83846e8a9ce4c",
+    "integrated": "c8970eeed4e9d98cb69a87caba1ce91ea59be568a5fc305ca9ad9672d7588d18",
+    "manifest": "47c2cb2fef9c14a2500beb0a3600bdb3c532b9fd41b7243d77274f036410b5f4",
+    "primary": "6cc6226fee77c683b3eb47e3cac86d7f859083a934895545b63644d2f5f69df6"
+  },
+  "task_id": "T-054",
+  "verdict": "PASS_BOUNDED_NO_STANDALONE_OWNER"
+}

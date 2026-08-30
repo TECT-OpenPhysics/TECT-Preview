@@ -5,7 +5,7 @@ Compact generated reader surface. The append-only authority is
 record 568 / commit `4db22f4e` and no longer grows.
 Post-cutover full bodies live exactly once in bounded pages under `pages/`.
 
-**807 accepted events** · latest 25 shown below · machine locator: `index.json`
+**808 accepted events** · latest 25 shown below · machine locator: `index.json`
 
 Search the complete authority without loading every page:
 
@@ -17,6 +17,7 @@ python verification/scripts/changelog.py search --text <phrase>
 
 | Date | Event | Claims | Full entry |
 |---|---|---|---|
+| 2026-08-31 | `20260831-r-459-contents-alt-terminology-owner-audit-2026` — [R-459 contents alt-terminology owner audit] - 2026-08-31 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000769-000818.md#20260831-r-459-contents-alt-terminology-owner-audit-2026) |
 | 2026-08-31 | `20260831-r-458-m5-equation-audit-2026-08-31` — [R-458 M5 equation audit] - 2026-08-31 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000769-000818.md#20260831-r-458-m5-equation-audit-2026-08-31) |
 | 2026-08-31 | `20260831-r-457-finite-m3-compact-u-1-equation-level-audi` — [R-457 finite M3 compact-U(1) equation-level audit] - 2026-08-31 | C6-SPACETIME-SIGNATURE, EXP-001330, R-457 | [bounded page](pages/000769-000818.md#20260831-r-457-finite-m3-compact-u-1-equation-level-audi) |
 | 2026-08-31 | `20260831-r-456-conditional-weighted-transfer-operator-de` — [R-456 conditional weighted transfer-operator defect-resolvent envelope] - 2026-08-31 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000769-000818.md#20260831-r-456-conditional-weighted-transfer-operator-de) |
@@ -41,7 +42,6 @@ python verification/scripts/changelog.py search --text <phrase>
 | 2026-08-30 | `20260830-r-444-exponential-shell-tail-majorant-2026-08-3` — [R-444 exponential shell-tail majorant] - 2026-08-30 | C6-SPACETIME-SIGNATURE, EXP-001289, R-444 | [bounded page](pages/000769-000818.md#20260830-r-444-exponential-shell-tail-majorant-2026-08-3) |
 | 2026-08-30 | `20260830-r-443-arbitrary-rectangular-matching-theorem-20` — [R-443 arbitrary rectangular matching theorem] - 2026-08-30 | C6-SPACETIME-SIGNATURE, EXP-001288, R-443 | [bounded page](pages/000769-000818.md#20260830-r-443-arbitrary-rectangular-matching-theorem-20) |
 | 2026-08-30 | `20260830-r-442-general-rectangular-matching-lemma-2026-0` — [R-442 general rectangular matching lemma] - 2026-08-30 | C6-SPACETIME-SIGNATURE, EXP-001287, R-442 | [bounded page](pages/000769-000818.md#20260830-r-442-general-rectangular-matching-lemma-2026-0) |
-| 2026-08-30 | `20260830-r-441-physical-empty-bounded-test-owner-executi` — [R-441 physical-empty bounded test owner execution] - 2026-08-30 | C6-SPACETIME-SIGNATURE, EXP-001286, R-441 | [bounded page](pages/000769-000818.md#20260830-r-441-physical-empty-bounded-test-owner-executi) |
 
 ## Post-cutover pages
 
@@ -49,7 +49,7 @@ Each full event body after the cutover occurs in exactly one page.
 
 | Ordinals | Events | Page |
 |---|---:|---|
-| 769–807 | 39 | [000769-000818.md](pages/000769-000818.md) |
+| 769–808 | 40 | [000769-000818.md](pages/000769-000818.md) |
 | 719–768 | 50 | [000719-000768.md](pages/000719-000768.md) |
 | 669–718 | 50 | [000669-000718.md](pages/000669-000718.md) |
 | 619–668 | 50 | [000619-000668.md](pages/000619-000668.md) |
