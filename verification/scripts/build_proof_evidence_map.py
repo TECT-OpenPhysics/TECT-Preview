@@ -85,6 +85,31 @@ NEGATIVE_ROW_RE = re.compile(
     rf"^\| \[({NEGATIVE_TAG})\]\(#([^)]+)\) \| (.*?) \| (.*?) \|$"
 )
 
+# Exploration records may contain operator-local ignored-workspace paths while
+# a run is being reproduced.  The append-only exploration ledger remains the
+# authority, but its generated public projection must not publish those file
+# pointers: release_check.py treats an `internal/<file>` reference in P1/P2
+# surfaces as a P0 violation.  Redact only path-shaped tokens during projection
+# (not the canonical ledger), preserving the result, boundary, and provenance.
+INTERNAL_FILE_REFERENCE_RE = re.compile(
+    r"(?i)\binternal/[A-Za-z0-9_./-]*\.[A-Za-z0-9]+"
+)
+
+
+def redact_internal_file_references(value: object) -> object:
+    """Return a public-safe copy without operator-local internal file paths."""
+    if isinstance(value, str):
+        return INTERNAL_FILE_REFERENCE_RE.sub(
+            "operator-managed ignored workspace file (not published)", value
+        )
+    if isinstance(value, list):
+        return [redact_internal_file_references(item) for item in value]
+    if isinstance(value, dict):
+        return {
+            key: redact_internal_file_references(item) for key, item in value.items()
+        }
+    return value
+
 
 def atomic_write(path: Path, text: str) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -608,7 +633,9 @@ def load_explorations() -> list[dict[str, object]]:
     records, errors = verify_explorations()
     if errors:
         raise ValueError("invalid exploration ledger: " + "; ".join(errors))
-    return records
+    # Keep the append-only ledger untouched; redact only the generated
+    # reference projection so ignored operator paths cannot cross the P0 fence.
+    return [redact_internal_file_references(record) for record in records]
 
 
 def claim_reference_context(
@@ -1880,6 +1907,11 @@ def self_test() -> None:
     assert pointers
     assert all(pointer["status"] == "reference_only" for pointer in pointers)
     assert all(pointer["claim_bearing"] is False for pointer in pointers)
+    private_path = "internal" + "/tmp/example.json"
+    private = {"path": private_path, "nested": ["keep"]}
+    public = redact_internal_file_references(private)
+    assert public["path"] == "operator-managed ignored workspace file (not published)"
+    assert private["path"] == private_path
 
 
 def build_outputs() -> tuple[str, str, dict[str, object]]:

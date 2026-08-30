@@ -5393,6 +5393,176 @@
       "task_id": "T-054",
       "title": "Canonical Contents remaining-scope production-owner applicability audit",
       "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "axis": "archive-integrity",
+          "check": "Could a different or truncated source archive be mistaken for the pinned package?",
+          "disposition": "DISMISSED: length and SHA-256 match the PyPI release file digest."
+        },
+        {
+          "axis": "build-failure-overclaim",
+          "check": "Could this Windows setup error be promoted to nonexistence of a source build on every platform?",
+          "disposition": "UPHELD-OPEN: the failure is host/toolchain-specific; a supported platform or pinned toolchain remains possible."
+        },
+        {
+          "axis": "version-substitution",
+          "check": "Could a later Windows healpy minor be silently accepted?",
+          "disposition": "UPHELD-REJECTED: the astro-gdt healpy~=1.18.0 contract is unchanged."
+        },
+        {
+          "axis": "science-leakage",
+          "check": "Could package building read event or response science values?",
+          "disposition": "DISMISSED: only package source metadata and build diagnostics were used."
+        },
+        {
+          "axis": "method-overhaul",
+          "check": "Could the environment attempt replace the established T-054 forward or T-059 inverse method?",
+          "disposition": "DISMISSED: it is an additive T-061 readiness check with unchanged owner order and firewalls."
+        }
+      ],
+      "assumptions": [
+        "The EXP-001316 PyPI metadata snapshot identifies healpy 1.18.0 as the exact dependency contract for astro-gdt.",
+        "The downloaded archive is the intended source distribution because its length and SHA-256 match the PyPI file digest.",
+        "A missing pkg-config/cfitsio setup dependency is an environment feasibility boundary, not evidence that healpy 1.18.0 is mathematically or scientifically impossible to build elsewhere.",
+        "The existing T-061 owner, estimator, response, covariance, nuisance and prospective contracts remain controlling."
+      ],
+      "boundary": "EXP-001334 is T0 source-archive and Windows build-feasibility provenance. It does not admit a full GTS/GDT runtime, event likelihood, response value, timing covariance, candidate score, prospective prediction, microscopic dynamics, QFT/Yang--Mills/gravity identity, Pre-A, C6, Sector-A, continuum, physical vacuum or mass gap.",
+      "checks": [
+        {
+          "detail": "The downloaded healpy-1.18.0.tar.gz is 4,812,612 bytes and hashes to the PyPI-declared SHA-256 6a12fd8f804c8a6d193dc43d1dcdf636808830e1ccc0aa7c53d83e394bb15289.",
+          "finding": "PASS",
+          "id": "source-archive-sha"
+        },
+        {
+          "detail": "The exact source archive does not build on this host: the setup path cannot obtain cfitsio/pkg-config metadata and exits with ValueError: s argument must not be None.",
+          "finding": "BLOCKED",
+          "id": "exact-source-build"
+        },
+        {
+          "detail": "No healpy 1.19/1.20 package or unpinned source build is accepted as the healpy~=1.18.0 contract.",
+          "finding": "PASS",
+          "id": "version-substitution-firewall"
+        },
+        {
+          "detail": "The attempt reads no event bytes, response values, likelihood, timing, covariance, candidate score or prospective holdout.",
+          "finding": "PASS",
+          "id": "science-data-firewall"
+        },
+        {
+          "detail": "This is an additive T-061 environment feasibility step; T-054/T-059 methods, owner order and promotion firewalls are unchanged.",
+          "finding": "PASS",
+          "id": "method-preservation"
+        }
+      ],
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "This is a new hash-pinned source-build attempt, not a repeated package search. It converts the prior generic source-build requirement into an exact reproducible failure boundary while refusing minor-version substitution and preserving the existing research methods.",
+      "decision_scope": "T0 package/source-build provenance and execution-readiness boundary only; no event likelihood, response calibration, candidate score, prospective prediction or physical identity.",
+      "environment": {
+        "build_command": "internal\\tmp\\gts-venv\\Scripts\\python.exe -m pip wheel --no-deps --wheel-dir internal\\tmp\\gts-source-lock internal\\tmp\\gts-source-lock\\healpy-1.18.0.tar.gz",
+        "build_exit_code": 1,
+        "build_failure": "pkg-config is not installed; cfitsio library check receives no package-config result and the healpy setup path raises ValueError: s argument must not be None before a wheel is produced.",
+        "download_command": "internal\\tmp\\gts-venv\\Scripts\\python.exe -m pip download --no-deps --no-binary healpy --dest internal\\tmp\\gts-source-lock healpy==1.18.0",
+        "interpreter": "CPython 3.12.9",
+        "platform": "Windows x86_64",
+        "venv": "internal/tmp/gts-venv",
+        "wheel_produced": false
+      },
+      "evidence_level": "T0 exact source-archive hash plus reproducible host-specific build failure; no event-level or physical execution",
+      "evidence_refs": [
+        "strategy/hold-lc-001-gts-code-owner-candidate-v0.1.json#environment_contract",
+        "strategy/hold-lc-001-gts-platform-compatibility-exploration.json#missing_assumptions",
+        "verification/scripts/audit_gts_platform_compatibility.py#run",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-gts-source-build-attempt/source_build.json#checks"
+      ],
+      "exact_scope": {
+        "data_role": "CALIBRATION",
+        "finite_scope": "Package source provenance and Windows source-build feasibility only; no GTS event execution or scientific estimator output.",
+        "holdout_id": "HOLD-LC-001",
+        "lineage_group": "GW170817-GRB170817A",
+        "run_artifact": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-gts-source-build-attempt/source_build.json",
+        "source_archive": {
+          "bytes": 4812612,
+          "filename": "healpy-1.18.0.tar.gz",
+          "local_path": "operator-managed ignored workspace file (not published)",
+          "pypi_url": "https://files.pythonhosted.org/packages/source/h/healpy/healpy-1.18.0.tar.gz",
+          "sha256": "6a12fd8f804c8a6d193dc43d1dcdf636808830e1ccc0aa7c53d83e394bb15289"
+        },
+        "source_candidate": {
+          "path": "strategy/hold-lc-001-gts-code-owner-candidate-v0.1.json",
+          "sha256": "26a2b56cafba521c93d345e2584bce448ba03ccc5931759ceab170ebc3e6b27e"
+        },
+        "source_commit": "1bc1e913f97fd7195a7e297f8d6032a5c7758894"
+      },
+      "finding": "The exact healpy 1.18.0 source archive is reproducibly hash-pinned, but the Windows source build is currently unavailable because the build cannot resolve cfitsio/pkg-config metadata and fails before producing a wheel. This narrows the T-061 environment route to a separately supported platform or a fully pinned toolchain/source-build repair; it does not produce event or physical evidence.",
+      "formal_integration": {
+        "events": [],
+        "negatives": [],
+        "no_changelog_event": true,
+        "no_new_negative": true,
+        "no_new_result": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "results": []
+      },
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": []
+      },
+      "gate_ids": [
+        "PA-INVERSE-OBSERVATION-TARGET-MAP-HOLDOUT-FREEZE",
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001334",
+      "method": [
+        "Download only the PyPI healpy==1.18.0 source distribution with --no-deps and --no-binary into the ignored internal/tmp source-build workspace.",
+        "Compare the downloaded archive length and SHA-256 with the PyPI release metadata already used by EXP-001316.",
+        "Run pip wheel --no-deps from that exact archive in the operator-managed CPython 3.12.9 Windows environment and retain the first build failure without substituting healpy 1.19/1.20.",
+        "Read no event bytes, response matrices, likelihood values or prospective data; keep T-054/T-059 methods, owner order and all promotion firewalls unchanged."
+      ],
+      "missing_assumptions": [
+        "A supported Linux or other platform runtime with exact Python, NumPy, SciPy, Astropy, healpy 1.18.x, gdt.core and gdt.missions.fermi.gbm versions and hashes.",
+        "Alternatively, a fully pinned Windows source-build toolchain with pkg-config, cfitsio, compiler, ABI and resulting wheel hash, independently imported and audited.",
+        "A complete no-stub event-level GTS import path and the response, timing, covariance, nuisance, F_reg/F_lim/F_eff/F_obs and prospective-owner fields."
+      ],
+      "next_action": "Obtain a separately reproducible supported-platform GTS/GDT environment lock, or supply a fully pinned Windows pkg-config/cfitsio/compiler/ABI source-build lock and rerun the unchanged readiness audit. Until that exists, keep event-free response-index/likelihood execution, candidate scoring, prospective credit and physical promotion locked while continuing the unchanged T-054 owner intake.",
+      "non_claims": [
+        "The Windows source-build failure is not a scientific no-go and does not refute a supported-platform build.",
+        "No event bytes, response matrices, likelihood, timing covariance, candidate score or prospective holdout were read.",
+        "No microscopic dynamics, QFT/Yang--Mills/gravity identity, Pre-A, C6, A13, Sector-A, continuum, physical-vacuum, cosmic-origin, theory-of-everything or mass-gap claim follows.",
+        "The established T-054 forward and T-059 observation-first inverse methods, owner order and stopped-loop rules are unchanged."
+      ],
+      "prior_exploration_id": "EXP-001316",
+      "provenance": "contemporaneous",
+      "question": "Can the exact hash-pinned healpy 1.18.0 source distribution be built on the current Windows host, without a minor-version substitution or an unpinned runtime, so the unchanged T-061 readiness gate can proceed?",
+      "recorded_at": "2026-08-30T22:43:53Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001316",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001315",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-08-31",
+      "schema": "tect/proof-exploration/1.0",
+      "schema_version": "1.0",
+      "stop_or_redesign": [
+        "Do not treat this host-specific setup error as a universal healpy or GTS impossibility.",
+        "Do not install healpy 1.19/1.20 or use an unpinned local build as a transparent repair.",
+        "If a toolchain repair is attempted, record compiler, cfitsio, pkg-config, ABI, wheel hash and independent import results in a new versioned exploration.",
+        "If no supported environment can be locked, retain T0 provenance only and do not execute or score event data."
+      ],
+      "task_id": "T-061",
+      "title": "HOLD-LC-001 exact healpy source-build attempt",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",

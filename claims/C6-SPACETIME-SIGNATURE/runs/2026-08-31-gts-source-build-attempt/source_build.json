@@ -1,0 +1,48 @@
+{
+  "schema": "tect/gts-source-build-attempt/0.1",
+  "run_kind": "environment-feasibility",
+  "exploration_id": "EXP-001334",
+  "task_id": "T-061",
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "verdict": "EXACT_SOURCE_ARCHIVE_PINNED_WINDOWS_BUILD_BLOCKED",
+  "interpreter": "CPython 3.12.9",
+  "platform": "Windows x86_64",
+  "source_archive": {
+    "filename": "healpy-1.18.0.tar.gz",
+    "bytes": 4812612,
+    "sha256": "6a12fd8f804c8a6d193dc43d1dcdf636808830e1ccc0aa7c53d83e394bb15289",
+    "pypi_digest_match": true,
+    "local_path": "operator-managed ignored source-build workspace (path withheld from public surface)"
+  },
+  "commands": {
+    "download": "internal\\tmp\\gts-venv\\Scripts\\python.exe -m pip download --no-deps --no-binary healpy --dest internal\\tmp\\gts-source-lock healpy==1.18.0",
+    "build": "internal\\tmp\\gts-venv\\Scripts\\python.exe -m pip wheel --no-deps --wheel-dir internal\\tmp\\gts-source-lock internal\\tmp\\gts-source-lock\\healpy-1.18.0.tar.gz"
+  },
+  "checks": [
+    {"id": "archive-digest", "status": "PASS", "actual": "6a12fd8f804c8a6d193dc43d1dcdf636808830e1ccc0aa7c53d83e394bb15289", "expected": "6a12fd8f804c8a6d193dc43d1dcdf636808830e1ccc0aa7c53d83e394bb15289"},
+    {"id": "archive-length", "status": "PASS", "actual": 4812612, "expected": 4812612},
+    {"id": "exact-build", "status": "BLOCKED", "actual": "exit=1; pkg-config/cfitsio metadata unavailable; ValueError: s argument must not be None", "expected": "wheel produced"},
+    {"id": "wheel-produced", "status": "FAIL-CONTROLLED", "actual": false, "expected": true},
+    {"id": "event-data-read", "status": "PASS", "actual": false, "expected": false},
+    {"id": "response-values-read", "status": "PASS", "actual": false, "expected": false},
+    {"id": "method-preservation", "status": "PASS", "actual": {"t054_forward_unchanged": true, "t059_inverse_unchanged": true, "owner_order_unchanged": true, "promotion_firewalls_unchanged": true}, "expected": "all true"}
+  ],
+  "diagnostic": {
+    "first_failure": "healpy setup.py build_clib checks cfitsio after reporting pkg-config is not installed; pykg-config receives no command result and raises ValueError: s argument must not be None.",
+    "wheel_output": [],
+    "science_execution": false
+  },
+  "assumptions": [
+    "The PyPI file digest is the source archive authority for this attempt.",
+    "A host-specific build failure does not imply cross-platform nonexistence."
+  ],
+  "missing_assumptions": [
+    "Pinned pkg-config/cfitsio/compiler/ABI toolchain or supported platform.",
+    "All remaining GTS/GDT imports and a no-stub event-level path."
+  ],
+  "non_claims": [
+    "No event-level GTS/GDT runtime or observation result.",
+    "No response calibration, timing covariance, candidate score, prospective validation or physical identity.",
+    "No Pre-A, C6, Sector-A, QFT, Yang--Mills, continuum or mass-gap conclusion."
+  ]
+}
