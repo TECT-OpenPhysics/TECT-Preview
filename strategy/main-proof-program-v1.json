@@ -564,13 +564,21 @@
     "authority_state": "VERIFIED_PENDING_WORKTREE_NOT_YET_DURABLE_GIT_OR_REMOTE_AUTHORITY"
   },
   "completion_checkpoint": {
-    "status": "PENDING",
-    "verified_parent_head": "fdd393c66e81a782faf4446bcc642ae0e0067d48",
-    "verified_at_utc": "2026-08-30T10:25:12Z",
+    "status": "COMPLETE",
+    "verified_parent_head": "4a76cdf8c7e04ab7c4a58a37ae7a1a4b7f0ddcc6",
+    "verified_at_utc": "2026-08-30T10:28:20Z",
     "branch": "main",
     "remote": "tect",
     "remote_ref": "refs/heads/main",
-    "expected_authority_counts": null,
+    "expected_authority_counts": {
+      "claims": 49,
+      "gates_and_hypotheses": 208,
+      "results": 281,
+      "negative_records": 375,
+      "explorations": 1308,
+      "changelog_events": 796,
+      "tasks": 61
+    },
     "requirements": [
       "doctor PASS",
       "release_check PASS",
@@ -620,7 +628,10 @@
       "The release-gated EXP-001306 commit fb0797b38ede0f7f6a9d0e995c9ca20c8497b82d was pushed to tect/main; the next checkpoint refresh will verify the remote head and strict baseline while preserving unchanged T-054/T-059 methods.",
       "EXP-001307 converts official Fermi GS-005/GS-006 and rsp/rsp2 role semantics plus exact EXP-001305/001306 owner candidates into an additive response-owner request contract; response values, validity/interpolation, detector-to-geocenter conversion, uncertainty, likelihood/covariance, nuisance law, complete maps and scoring remain unadmitted.",
       "The release-gated T-061 EXP-001307 commit a9dae251f5c657a0c728d2f8bd95b87f6fcbcea9 was created after release_check PASS and pushed to tect/main; existing T-054/T-059 methods, owner order and stopped-loop rules remain unchanged.",
-      "The completion checkpoint is refreshed after the EXP-001307 content commit; strict baseline must verify clean queue/worktree, live remote equality and the expected counts before this checkpoint is treated as durable."
+      "The completion checkpoint is refreshed after the EXP-001307 content commit; strict baseline must verify clean queue/worktree, live remote equality and the expected counts before this checkpoint is treated as durable.",
+      "EXP-001308 maps official Fermi nearest, interpolation and counts-weighted rsp2 options, boundary behavior, MET/TT/GPS/UTC/UT1 conventions and quaternion/Earth-orientation semantics to explicit pre-admission freezes; software defaults remain unpinned physical-owner choices and response values/scoring remain locked.",
+      "The release-gated T-061 EXP-001308 commit 4a76cdf8c7e04ab7c4a58a37ae7a1a4b7f0ddcc6 was created after release_check PASS and pushed to tect/main; existing T-054/T-059 methods, owner order and stopped-loop rules remain unchanged.",
+      "The EXP-001308 completion checkpoint records the exact authority counts and will be treated as durable only after strict baseline verifies clean queue/worktree and live remote equality."
     ]
   },
   "stopped_loop_registry": [
