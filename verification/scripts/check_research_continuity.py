@@ -991,7 +991,11 @@ def current_authority_counts() -> dict[str, int]:
     claim_count = 0
     for path in sorted((REPO / "claims").glob("*/status.json")):
         payload = load_json(path)
-        if isinstance(payload, dict) and payload.get("id"):
+        if (
+            isinstance(payload, dict)
+            and payload.get("id")
+            and payload.get("id") == path.parent.name
+        ):
             claim_count += 1
     gate_index = load_json(REPO / "claims" / "gates-index.json")
     result_index = load_json(REPO / "results" / "index.json")
