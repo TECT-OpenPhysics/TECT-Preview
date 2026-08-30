@@ -1,0 +1,168 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "result_id": "R-452",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-HISTORY-RESOLVENT-RECURRENCE-v0",
+  "title": "Conditional history-resolvent recurrence envelope",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001325",
+  "tier": "T0",
+  "claim_bearing": false,
+  "status": "CONDITIONAL_HISTORY_RESOLVENT_AUDITED",
+  "parent_results": ["R-451", "R-450", "R-444"],
+  "parent_explorations": ["EXP-001324", "EXP-001323", "EXP-001289"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-FIRST-PASSAGE-BACKBONE-REAL-TIME-PRODUCT-AND-ENERGY-TAIL-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "question": "Can the direct R-451 history-tail input be replaced by a scalar one-step state-weighted recurrence, and what exact resolvent envelope and threshold follows without a finite-table extrapolation?",
+  "theorem": {
+    "parent_decay": "R-451 supplies T(R) <= B*q^(R-1), with B=78 and q=23/26, so r=q^4=279841/456976<1",
+    "recurrence": "For H_0=0, H_R <= kappa*H_(R-1) + A*r^(R-1), where kappa is a common nonnegative history-propagation coefficient and A=16*C4_edge*B^4",
+    "resolvent_sum": "S_R(kappa,r)=sum_{j=0}^{R-1} kappa^(R-1-j)*r^j",
+    "closed_form": "If kappa != r, S_R=(kappa^R-r^R)/(kappa-r); if kappa=r, S_R=R*r^(R-1)",
+    "envelope": "H_R <= A*S_R(kappa,r)",
+    "threshold": "If 0 <= kappa < 1, then S_R tends to zero because max(kappa,r)<1; if kappa < r the parent shell rate is retained, while r < kappa < 1 gives a slower but still vanishing propagation rate",
+    "conclusion": "A source-owned one-step recurrence with a uniform kappa<1 is sufficient to instantiate the R-451 all-shape Cauchy plug-in; the recurrence and kappa remain owner obligations"
+  },
+  "finite_fixture": {
+    "radius_min": 0,
+    "radius_max": 64,
+    "kappa_fixture_values": ["0", "1/4", "3/4", "24/25", "999/1000", "1", "26/25"],
+    "resonant_kappa_from_parent_q": true,
+    "no_new_finite_grid": true,
+    "fixture_role": "Exact recurrence and closed-form identity rows only; no finite grid is used as an exhaustion surrogate"
+  },
+  "scope": {
+    "parent_r451_decay_input_reused": true,
+    "resolvent_sum_identity_closed": true,
+    "nonresonant_closed_form_closed": true,
+    "resonant_closed_form_closed": true,
+    "kappa_less_than_one_threshold_closed": true,
+    "actual_q3_history_closed": false,
+    "source_owned_kappa_closed": false,
+    "common_weighted_operator_domain_closed": false,
+    "source_uniformity_closed": false,
+    "beta_uniformity_closed": false,
+    "volume_uniformity_closed": false,
+    "cutoff_uniformity_closed": false,
+    "exhaustion_independence_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "assumptions": [
+    "R-451's exact two-orientation fourth-power shell envelope is available on one common L4 space or form domain.",
+    "The actual source-owned history can be summarized by one nonnegative coefficient kappa in a one-step recurrence for the total two-orientation fourth-power error.",
+    "The source term in that recurrence is bounded by A*r^(R-1), with A and r recomputed from the R-451/R-450 parent contracts.",
+    "The same kappa and source envelope hold for every nested shape pair and every history depth in the intended exhaustion.",
+    "The standard scalar fact that a polynomial factor times a base strictly below one vanishes is used only after the recurrence estimate; it is not an operator or Q3 theorem."
+  ],
+  "missing_assumptions": [
+    "A source-owned Q3LOCK derivation of the one-step recurrence and a value or bound kappa<1.",
+    "A common unbounded operator/form domain in which the recurrence error is defined and propagated.",
+    "Source-, beta-, cutoff-, volume-, shape-, phase- and history-uniform recurrence constants.",
+    "A proved production all-shape exhaustion map and identification of the same observable across shapes.",
+    "OS/KMS/GNS identification, common alpha, sector coercivity, physical-empty comparison, continuum, Yang--Mills and mass-gap conclusions."
+  ],
+  "adversarial_review": [
+    {
+      "axis": "recurrence-substitution",
+      "check": "Does the scalar recurrence silently replace the missing source-owned Q3 history?",
+      "disposition": "UPHELD-OPEN: kappa and the recurrence are explicit owner hypotheses, not derived inputs."
+    },
+    {
+      "axis": "resonant-denominator",
+      "check": "Does the closed form divide by kappa-r at the resonant value?",
+      "disposition": "DISMISSED: the resonant branch S_R=R*r^(R-1) is checked separately."
+    },
+    {
+      "axis": "threshold",
+      "check": "Can kappa=1 or kappa>1 be included in the vanishing conclusion?",
+      "disposition": "UPHELD-REJECTED: controls show the sufficient threshold is kappa<1; no decay is claimed at or above one."
+    },
+    {
+      "axis": "source-constant",
+      "check": "Could A be fitted independently of the R-451 parent constants?",
+      "disposition": "DISMISSED: A is recomputed as the two-orientation factor times C4_edge times the parent base-tail fourth power."
+    },
+    {
+      "axis": "finite-to-infinite",
+      "check": "Could the radius rows be read as an exhaustion theorem?",
+      "disposition": "UPHELD-OPEN: rows audit exact recurrence algebra only; the limit statement is conditional on the scalar threshold."
+    },
+    {
+      "axis": "method-preservation",
+      "check": "Does the recurrence-resolvent packet replace T-054 or the additive T-059/T-061 inverse lane?",
+      "disposition": "DISMISSED: it is an additive T-054 admission contract and leaves the existing methods and owner order unchanged."
+    },
+    {
+      "axis": "promotion-firewall",
+      "check": "Could a kappa<1 conditional envelope be promoted to common alpha, OS/GNS, physical, continuum or Clay closure?",
+      "disposition": "UPHELD-REJECTED: all downstream scope flags remain false."
+    }
+  ],
+  "evidence_level": "T0 exact conditional scalar history-resolvent recurrence envelope",
+  "boundary": "R-452 proves only an abstract implication: if an owner-supplied total two-orientation history error obeys a common one-step recurrence with kappa<1 and the R-451 geometric source envelope, then its exact resolvent bound vanishes. It does not supply kappa, the recurrence, a common domain, an exhaustion map, or any physical or continuum identification.",
+  "non_claims": [
+    "No source-owned Q3LOCK recurrence, history coefficient or commutator estimate is established.",
+    "No common unbounded domain, form closure, source/volume/cutoff/beta uniformity or production exhaustion map is established.",
+    "The conditional resolvent envelope is not an OS/KMS/GNS, common-alpha, physical-sector, continuum, Yang--Mills or mass-gap result.",
+    "The radius rows are exact recurrence algebra and are not a finite-table substitute for an infinite limit.",
+    "The established T-054 forward method, T-059/T-061 inverse methods, owner order and promotion firewalls remain unchanged."
+  ],
+  "next_action": "When a source-owned Q3 history supplies a uniform one-step recurrence, instantiate its kappa and source residual in this envelope and feed the result to R-451. Until then, continue the existing T-054 owner-intake boundary and the additive T-059/T-061 observation-source lock without another finite table.",
+  "stop_or_redesign": [
+    "If the owner recurrence has kappa>=1, retain only the exact threshold diagnostic and record the local failure; do not relax the threshold after target disclosure.",
+    "If the recurrence residual is not bounded by the parent R-451 source envelope, keep the resolvent identity but record the source-term mismatch.",
+    "If kappa or the recurrence depends on shape, volume, cutoff, beta or history depth, do not call it a uniform Q3 estimate.",
+    "If no common domain is supplied, do not convert the scalar envelope into an operator or form theorem.",
+    "If a proposed use changes the established method or owner order, return to the continuity gate before proceeding."
+  ],
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R452.lean",
+    "command": "lake env lean Tect/R452.lean",
+    "declarations": [
+      "resolvent_step",
+      "resolvent_nonresonant_step",
+      "resolvent_resonant_step",
+      "parent_decay_ratio"
+    ],
+    "role": "Lean checks the exact recurrence/resolvent algebra, the separate resonant branch and the parent fourth-power decay ratio; Python checks the conditional threshold and boundary controls."
+  },
+  "artifacts": {
+    "primary_script": "verification/scripts/pre_a_cp1_st8_q3lock_history_resolvent_recurrence.py",
+    "independent_script": "codes/foundations/pre_a_cp1_st8_q3lock_history_resolvent_recurrence_independent.py",
+    "hostile_script": "codes/foundations/pre_a_cp1_st8_q3lock_history_resolvent_recurrence_hostile.py",
+    "integrated_verifier": "verification/scripts/pre_a_cp1_st8_q3lock_history_resolvent_recurrence_verify.py",
+    "certificate": "strategy/pre-a-cp1-st8-q3lock-history-resolvent-recurrence-certificate-260831.md",
+    "exploration": "strategy/pre-a-cp1-st8-q3lock-history-resolvent-recurrence-exploration.json",
+    "lean": "verification/lean/Tect/R452.lean"
+  },
+  "formal_integration": {
+    "results": ["R-452"],
+    "negatives": [],
+    "event_ordinal": 801,
+    "event_title": "R-452 conditional history-resolvent recurrence envelope",
+    "no_new_negative": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "method_preservation": {
+    "existing_forward_method_unchanged": true,
+    "observation_first_inverse_lane_additive": true,
+    "owner_order_unchanged": true,
+    "no_physical_promotion": true
+  },
+  "recorded_by": "Codex",
+  "provenance": "contemporaneous"
+}
