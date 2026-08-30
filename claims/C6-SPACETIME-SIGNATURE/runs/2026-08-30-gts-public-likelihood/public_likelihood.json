@@ -1,0 +1,131 @@
+{
+  "schema": "tect/gts-public-likelihood-audit/0.1",
+  "id": "GTS-PUBLIC-LIKELIHOOD-001",
+  "recorded_on": "2026-08-30",
+  "claim_bearing": false,
+  "tier": "T0",
+  "status": "PASS_PINNED_PUBLIC_EXECUTION_TRANSCRIPTION_HOSTILE",
+  "source_repository": "https://github.com/USRA-STI/gamma-ray-targeted-search",
+  "source_commit": "1bc1e913f97fd7195a7e297f8d6032a5c7758894",
+  "source_file": "likelihood.py",
+  "source_file_sha256": "38c2059d9783d86ebbb3cd2fe3d7a6c0459db2ad0497860caae015acb0b77a1e",
+  "fixture_role": "Synthetic tooling test oracle; not event data and not a physical observation.",
+  "fixture_digest_sha256": "fca46cbd317f2be9c2ff5de0a9efc7d4e41cb2992b7137aa5c8f9d4a651a3f29",
+  "execution": {
+    "status": 1,
+    "marginal_llr": 2055.0880465111127,
+    "llratio_shape": [
+      2,
+      3
+    ],
+    "max_template": 0,
+    "max_location": 2
+  },
+  "independent_transcription": {
+    "summary": {
+      "status": 1,
+      "marginal_llr": 2055.0880465111127,
+      "llratio_shape": [
+        2,
+        3
+      ],
+      "max_index": [
+        0,
+        2
+      ]
+    },
+    "max_llratio_abs_delta": 0.0,
+    "marginal_llr_abs_delta": 0.0
+  },
+  "hostile_mutation": {
+    "mutation": "counts[0] += 7.0",
+    "fixture_digest_sha256": "3b505bc82909497413008c0bb6dec0537e9ac953e283f7d290628ab0dc6d7eb6",
+    "summary": {
+      "status": 1,
+      "marginal_llr": 2100.7700285971478,
+      "llratio_shape": [
+        2,
+        3
+      ],
+      "max_template": 1,
+      "max_location": 2
+    },
+    "marginal_delta_from_primary": 45.68198208603508
+  },
+  "noise_branch": {
+    "mutation": "counts := background",
+    "fixture_digest_sha256": "eecc2d6adaff6e853d533d9d0db380c08e91c9c6c51108f0b6c4eaa8e17b8c00",
+    "summary": {
+      "status": 2,
+      "marginal_llr": 0.0,
+      "llratio_shape": [
+        2,
+        3
+      ],
+      "max_template": 0,
+      "max_location": 0
+    }
+  },
+  "comparison": {
+    "compare_tolerance": 1e-09,
+    "hostile_min_delta": 1e-06
+  },
+  "dependency_scope": {
+    "executed": [
+      "numpy",
+      "scipy",
+      "matplotlib",
+      "pinned public likelihood.py"
+    ],
+    "stubbed_only": [
+      "utils import used by plotting/data helper methods"
+    ],
+    "not_available_or_read": [
+      "healpy",
+      "astropy",
+      "gdt.core",
+      "gdt.missions.fermi.gbm",
+      "event bytes",
+      "response templates"
+    ]
+  },
+  "checks": [
+    {
+      "id": "pinned-source-hash",
+      "finding": "PASS",
+      "detail": "The imported likelihood.py bytes match the declared public commit source hash."
+    },
+    {
+      "id": "calculate-utils-isolation",
+      "finding": "PASS",
+      "detail": "AST inspection found no utils reference in Likelihood.calculate; the import stub cannot alter that numerical path."
+    },
+    {
+      "id": "public-finite-path",
+      "finding": "PASS",
+      "detail": "The pinned public Likelihood.calculate path returns finite status, likelihood array, and marginalized LLR."
+    },
+    {
+      "id": "transcription-agreement",
+      "finding": "PASS",
+      "detail": "Direct public execution agrees with the independent repository transcription: max array delta=0.000e+00, marginal delta=0.000e+00."
+    },
+    {
+      "id": "hostile-count-sensitivity",
+      "finding": "PASS",
+      "detail": "A hostile +7 count mutation changes the direct public statistic by 45.681982."
+    },
+    {
+      "id": "prethreshold-noise-branch",
+      "finding": "PASS",
+      "detail": "A background-equals-counts fixture enters the public prethreshold status-2 branch (observed status=2)."
+    }
+  ],
+  "run_command": "python verification/scripts/audit_gts_public_likelihood.py --out claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-gts-public-likelihood/public_likelihood.json --source-root <pinned-public-gts-checkout>",
+  "interpretation": "Direct finite execution of the pinned public likelihood module on a synthetic fixture, with independent transcription agreement and input sensitivity. This advances the code-owner candidate only at T0 and does not admit an event-level GBM likelihood or physical timing result.",
+  "non_claims": [
+    "No event-level GBM result, response matrix value, calibration validity, detector-to-geocenter correction, covariance model, or intrinsic-lag estimate is established.",
+    "The synthetic fixture is not GW170817 data and receives no retrospective or prospective observational credit.",
+    "No F_reg/F_lim/F_eff/F_obs map, microscopic dynamics, QFT/Yang--Mills/gravity identity, Pre-A, C6, Sector-A, continuum, physical-vacuum, or mass-gap claim follows."
+  ]
+}

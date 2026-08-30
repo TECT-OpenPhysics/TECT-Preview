@@ -2915,6 +2915,208 @@
       "task_id": "T-061",
       "title": "HOLD-LC-001 external GTS runtime and input readiness audit",
       "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "axis": "source-vs-transcription",
+          "check": "Could a common transcription error survive agreement with the independent implementation?",
+          "disposition": "DISMISSED for this finite checkpoint: the actual public source bytes were executed and hash-pinned; broader source-module and event-path audits remain required."
+        },
+        {
+          "axis": "stub-contamination",
+          "check": "Could the utils stub change the numerical result indirectly?",
+          "disposition": "DISMISSED for calculate: AST inspection finds no utils name in the method body; plotting/data helpers were not called."
+        },
+        {
+          "axis": "synthetic-as-observation",
+          "check": "Could the large finite LLR be mistaken for an event or physical result?",
+          "disposition": "DISMISSED: the fixture digest, calibration role and non-claims explicitly identify a tooling oracle with no observational credit."
+        },
+        {
+          "axis": "one-hostile-mutation",
+          "check": "Does one count mutation establish implementation robustness?",
+          "disposition": "UPHELD-BLOCKED: it tests one sensitivity direction only; response-index, template, boundary, dependency and event-level hostile suites remain open."
+        },
+        {
+          "axis": "partial-runtime",
+          "check": "Could NumPy/SciPy/Matplotlib availability be treated as a complete GTS environment?",
+          "disposition": "UPHELD-BLOCKED: healpy, Astropy and GDT packages were not loaded; no event execution is admitted until the full environment is locked."
+        },
+        {
+          "axis": "finite-code-to-physical-owner",
+          "check": "Could direct likelihood execution establish detector timing, physical identity or a C6 claim?",
+          "disposition": "UPHELD-BLOCKED: response calibration, propagation, covariance, intrinsic lag, observation map and physical owner fields are absent."
+        },
+        {
+          "axis": "method-overhaul",
+          "check": "Could this code checkpoint replace the established forward or inverse research methods?",
+          "disposition": "DISMISSED: it is additive T-061 evidence and preserves T-054/T-059 contracts, owner order and stopped-loop rules."
+        }
+      ],
+      "assumptions": [
+        "The public source commit and likelihood.py hash are the code-semantic authority for this finite execution checkpoint.",
+        "The synthetic fixture imported from the existing audit is a tooling oracle and is not an observation or a substitute for GW170817 inputs.",
+        "The AST isolation check is sufficient to show that stubbing the unused utils import cannot affect Likelihood.calculate for this run.",
+        "The numerical dependency versions recorded here are exact for this local finite run but are not a complete event-level GTS environment lock.",
+        "The estimator, response-owner, Stachie-statistic, prospective-holdout and physical-identity contracts remain controlling for later event work."
+      ],
+      "boundary": "EXP-001315 is a T0 direct finite public-code execution. It does not admit a continuous HOLD-LC-001 likelihood, response value, calibration-validity rule, detector-to-geocenter implementation, covariance, intrinsic-lag nuisance law, F_reg/F_lim/F_eff/F_obs map, event candidate, prospective prediction, microscopic dynamics, physical identity, continuum result, Reading-H sign, Pre-A closure, Sector-A closure or mass-gap conclusion.",
+      "checks": [
+        {
+          "detail": "The imported likelihood.py bytes match the declared SHA-256 for public commit 1bc1e913f97fd7195a7e297f8d6032a5c7758894.",
+          "finding": "PASS",
+          "id": "pinned-source-hash"
+        },
+        {
+          "detail": "AST inspection finds no utils reference in Likelihood.calculate, so the import-only stub cannot alter the executed numerical path.",
+          "finding": "PASS",
+          "id": "calculate-utils-isolation"
+        },
+        {
+          "detail": "The direct public path returned status 1, a finite 2 by 3 LLR array, and marginalized LLR 2055.0880465111127.",
+          "finding": "PASS",
+          "id": "public-finite-path"
+        },
+        {
+          "detail": "Direct public execution matched the independent transcription with maximum array and marginal absolute deltas 0.0.",
+          "finding": "PASS",
+          "id": "transcription-agreement"
+        },
+        {
+          "detail": "The counts[0] += 7.0 mutation changed the direct public marginalized statistic by 45.68198208603508.",
+          "finding": "PASS",
+          "id": "hostile-count-sensitivity"
+        },
+        {
+          "detail": "The background-equals-counts fixture entered the public status-2 prethreshold branch with marginalized LLR 0.0.",
+          "finding": "PASS",
+          "id": "prethreshold-noise-branch"
+        },
+        {
+          "detail": "No event bytes, response templates, detector metadata, timing likelihood, physical identity, or prospective score were read or inferred.",
+          "finding": "PASS",
+          "id": "event-and-physical-firewall"
+        },
+        {
+          "detail": "This is an additive T-061 execution checkpoint; the existing T-054 forward and T-059 inverse methods are not replaced or altered.",
+          "finding": "PASS",
+          "id": "method-preservation"
+        }
+      ],
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "A direct source-hash-pinned execution was completed without importing event or response data. The result is strictly stronger than a local transcription audit but remains finite code evidence, not an event or physical observation result.",
+      "decision_scope": "T0 direct finite public-code execution only; no event likelihood, response calibration, dynamic identification, physical identity, empirical prediction or tier promotion.",
+      "evidence_level": "T0 reproducible source-hash-pinned execution plus independent transcription and hostile/threshold checks; full GTS/GDT runtime and event-level science are not executed",
+      "evidence_refs": [
+        "strategy/hold-lc-001-gts-code-owner-candidate-v0.1.json#official_code_source",
+        "strategy/hold-lc-001-gts-code-owner-candidate-v0.1.json#reproduction_packet",
+        "verification/scripts/audit_gts_public_likelihood.py#run",
+        "verification/scripts/audit_gts_synthetic_owner.py#_source_transcription",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-gts-public-likelihood/public_likelihood.json#checks"
+      ],
+      "exact_scope": {
+        "data_role": "CALIBRATION",
+        "finite_scope": "Direct finite execution of the public likelihood.py calculate path only; synthetic fixture, source hash, numerical dependency versions, import isolation and hostile/threshold checks. No event data or response values.",
+        "holdout_id": "HOLD-LC-001",
+        "lineage_group": "GW170817-GRB170817A",
+        "method_scope": "Additive T-061 P1 code-owner execution checkpoint; T-054 forward and T-059 observation-first inverse methods, owner ordering and stopped-loop rules are unchanged.",
+        "run_artifact": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-gts-public-likelihood/public_likelihood.json",
+        "run_script": "verification/scripts/audit_gts_public_likelihood.py",
+        "run_script_sha256": "c4a7c61cdaacabd79a4a057c834cc24afb3c6dba50c32ca221012af37c5619d1",
+        "source_candidate": {
+          "path": "strategy/hold-lc-001-gts-code-owner-candidate-v0.1.json",
+          "sha256": "9c7c1830e6c52312fbfd65f7e4755be7c700e93ef363243d786f1cd995cef99e"
+        },
+        "source_commit": "1bc1e913f97fd7195a7e297f8d6032a5c7758894",
+        "source_file": "likelihood.py",
+        "source_file_sha256": "38c2059d9783d86ebbb3cd2fe3d7a6c0459db2ad0497860caae015acb0b77a1e"
+      },
+      "finding": "The pinned public likelihood.py numerical path executes directly on the pre-registered synthetic fixture. Its finite LLR array and marginalized statistic agree exactly with the independent transcription, a hostile count mutation is detected, and the public prethreshold branch is exercised. This resolves a code-execution checkpoint at T0 while the full GBM/GDT runtime and all event/physical owner fields remain open.",
+      "formal_integration": {
+        "events": [],
+        "negatives": [],
+        "no_changelog_event": true,
+        "no_new_negative": true,
+        "no_new_result": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "results": []
+      },
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": []
+      },
+      "gate_ids": [
+        "PA-INVERSE-OBSERVATION-TARGET-MAP-HOLDOUT-FREEZE",
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001315",
+      "method": [
+        "Clone the public USRA-STI gamma-ray-targeted-search repository into an ignored workspace and check out commit 1bc1e913f97fd7195a7e297f8d6032a5c7758894.",
+        "Verify the likelihood.py SHA-256 and use an AST guard to establish that Likelihood.calculate has no reference to the large utils import tree.",
+        "Import the pinned module and execute Likelihood.calculate with the existing synthetic six-channel counts/background/background-variance/response fixture; only the unused utils import is stubbed, while NumPy, SciPy and Matplotlib execute directly.",
+        "Compare the complete finite LLR array and marginalized statistic against the independently coded scalar/transcription audit, mutate one count by +7.0, and exercise the public prethreshold branch with counts equal to background.",
+        "Keep event bytes, response templates, detector configuration, response calibration, detector-to-geocenter timing, covariance, intrinsic-lag nuisance, prospective scoring, physical identity and the established T-054/T-059 methods locked."
+      ],
+      "missing_assumptions": [
+        "A complete, independently reproducible GTS environment lock including healpy, Astropy, HEASARC/GDT and astro-gdt-fermi on a supported platform.",
+        "A verified event-level import path with no stubs and a source-tree hash audit for every module used by GBM response and data loading.",
+        "Immutable GW170817 TTE, trigdat, position-history, spectral-history and response-template values plus detector configuration and response-index rules.",
+        "A continuous detector timing likelihood, detector-to-geocenter conversion, joint covariance and intrinsic-emission-lag nuisance law linked to the Stachie statistic.",
+        "A candidate-neutral prospective holdout and frozen scorer before target or candidate residual inspection."
+      ],
+      "next_action": "Build a separately reproducible full GTS/GDT environment on a supported platform or record a platform-specific blocked boundary; rerun the readiness audit with exact package/source hashes, then execute the finite event-free response-index/likelihood primary, independent and hostile packet. Continue unchanged T-054 owner-level forward intake and T-059 holdout firewalls in parallel.",
+      "non_claims": [
+        "Direct public-code execution on a synthetic fixture is not an event measurement, response calibration, timing observation or physical likelihood result.",
+        "The import stub and partial dependency set do not constitute a complete external GTS environment or an event-level execution.",
+        "No Stachie joint Lambda, continuous Delta_t_det likelihood, covariance, detector-to-geocenter correction, intrinsic-lag law or prospective prediction is admitted.",
+        "No microscopic dynamics, QFT/Yang--Mills/gravity identity, Pre-A, C6, A13, Sector-A, continuum, physical-vacuum, cosmic-origin, theory-of-everything or mass-gap claim follows.",
+        "The established T-054 forward and T-059 observation-first inverse methods, owner order and stopped-loop rules are unchanged."
+      ],
+      "provenance": "contemporaneous",
+      "question": "Does the exact public GTS likelihood.py calculate path execute on the pre-registered synthetic fixture and agree with the independent transcription before any event-level work?",
+      "recorded_at": "2026-08-30T12:27:12Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001314",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001313",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-08-30",
+      "runtime": {
+        "executed_distributions": {
+          "matplotlib": "3.10.9",
+          "numpy": "2.3.5",
+          "scipy": "1.18.1"
+        },
+        "interpreter": "CPython 3.12.9 in an ignored operator-managed temporary venv",
+        "stubbed_import": "utils only; AST check confirms calculate does not reference it",
+        "unavailable_or_not_loaded": [
+          "healpy",
+          "astropy",
+          "gdt.core",
+          "gdt.missions.fermi.gbm"
+        ]
+      },
+      "schema": "tect/proof-exploration/1.0",
+      "stop_or_redesign": [
+        "If the full environment cannot be locked, retain EXP-001315 as T0 public-code evidence and do not score event data.",
+        "If a full-runtime result disagrees with this direct path, freeze both artifacts, issue a new correction exploration and suspend event scoring until the discrepancy is resolved.",
+        "If response selection, calibration, timing, covariance, nuisance or candidate choices are made after target disclosure, invalidate prospective credit and record the leakage as a new exploration.",
+        "If event execution remains unable to define a physical owner, report code-level evidence only and keep the observation lane parked below physical promotion."
+      ],
+      "task_id": "T-061",
+      "title": "HOLD-LC-001 direct execution of pinned public GTS likelihood",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",
