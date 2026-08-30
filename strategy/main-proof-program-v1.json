@@ -83,6 +83,11 @@
         "path": "theory/proof-evidence/interface-pointers.json",
         "sha256": "59d3135869897d1c77a62dcbf9a513110136dba21dd43d23ffa4abbc9307992f",
         "role": "External interface locators only"
+      },
+      {
+        "path": "strategy/hold-lc-001-estimator-contract-v0.1.json",
+        "sha256": "f2d3be523c9e24fe8e84673dc486f0bf17799ceba9702afd638a0bf2096ddf94",
+        "role": "Candidate-neutral HOLD-LC-001 estimator interface and admission firewall"
       }
     ],
     "semantic": [
@@ -463,7 +468,7 @@
         "P6": "UNSTARTED",
         "P7": "UNSTARTED"
       },
-      "scientific_frontier": "P1 ACTIVE under the additive T-059 method; nine event-product hashes pinned, statistical owner and prospective lock still absent, zero admitted microscopic forward maps",
+      "scientific_frontier": "P1 ACTIVE under the additive T-059 method; nine event-product hashes and a candidate-neutral estimator interface are pinned, source statistical owner and prospective lock remain absent, and zero microscopic forward maps are admitted",
       "next_gate_after_p0r": "P1 observation-source, target, covariance, lineage, and holdout freeze"
     }
   },
@@ -499,21 +504,13 @@
     "authority_state": "VERIFIED_PENDING_WORKTREE_NOT_YET_DURABLE_GIT_OR_REMOTE_AUTHORITY"
   },
   "completion_checkpoint": {
-    "status": "COMPLETE",
-    "verified_parent_head": "644836357f965a3cf343cbc42c3b1b0c58f21a90",
-    "verified_at_utc": "2026-08-30T08:18:04Z",
+    "status": "PENDING",
+    "verified_parent_head": null,
+    "verified_at_utc": null,
     "branch": "main",
     "remote": "tect",
     "remote_ref": "refs/heads/main",
-    "expected_authority_counts": {
-      "claims": 49,
-      "gates_and_hypotheses": 208,
-      "results": 281,
-      "negative_records": 375,
-      "explorations": 1301,
-      "changelog_events": 796,
-      "tasks": 61
-    },
+    "expected_authority_counts": null,
     "requirements": [
       "doctor PASS",
       "release_check PASS",
@@ -541,7 +538,8 @@
       "The release-gated R-447 commit 8ccb5c1c42b70a2222ae03212fe254a441ab5629 was pushed to tect/main; a live git ls-remote read returned the same parent SHA before the checkpoint refresh. The follow-up checkpoint commits 2e0b1dd415b17e0920e478498c8d7efb9e31fc7a and 4e6a78b574c6db709f97019f8e98ba01d7d8a576 were then pushed, and check_research_continuity.py --strict-baseline returned PASS with clean=true, queue=0, equal local/remote heads, and the expected authority counts.",
       "EXP-001300 records the official GWOSC, LIGO P1800061 and Fermi GBM public-product discovery boundary without downloading bytes, admitting a timing likelihood, scoring candidates or changing T-054/T-059 methods.",
       "EXP-001301 freezes nine official event-product bytes with SHA-256 values in a gitignored cache; the packet remains T0 provenance-only, with no likelihood, covariance, scorer or method change.",
-      "The release-gated EXP-001301 byte-freeze commit 644836357f965a3cf343cbc42c3b1b0c58f21a90 was pushed to tect/main; strict baseline refresh is required after this pointer alignment."
+      "The release-gated EXP-001301 byte-freeze commit 644836357f965a3cf343cbc42c3b1b0c58f21a90 was pushed to tect/main; strict baseline refresh is required after this pointer alignment.",
+      "EXP-001302 is staged as an additive T0 estimator-interface advance; the completion checkpoint is pending until release-gated commit and remote verification complete."
     ]
   },
   "stopped_loop_registry": [
@@ -612,7 +610,8 @@
       "R-193 supplies exact mobility twins with identical static inverse-covariance data and reversed decay order.",
       "R-200 preserves the owner boundary; static Gibbs data do not identify dynamics.",
       "The inverse lane currently admits zero microscopic forward maps.",
-      "EXP-001301 hash-pins nine official event products in a gitignored cache; this is provenance-only and does not admit a timing likelihood or covariance."
+      "EXP-001301 hash-pins nine official event products in a gitignored cache; this is provenance-only and does not admit a timing likelihood or covariance.",
+      "EXP-001302 adds a separately versioned candidate-neutral Delta_t_det estimator contract with explicit product roles, physical/proof owner split, calibration/window/covariance/nuisance obligations and F_reg/F_lim/F_eff/F_obs admission boundaries; no score or method change"
     ],
     "deliverables": [
       "one owner-intake card with explicit missing fields",
@@ -641,7 +640,7 @@
       "It does not prove Pre-A, C6, A13, Sector A, QFT, Yang-Mills, gravity, a physical mass gap, or a theory of everything.",
       "A dynamic discriminator at finite regulator does not prove continuum or physical identity."
     ],
-    "next_action": "T-061 is active. Nine event-product bytes are hash-pinned in a gitignored cache, but candidate scoring remains stopped until a separately versioned candidate-neutral estimator fixes calibration, timing windows, covariance or likelihood, nuisance treatment and the complete F_reg/F_lim/F_eff/F_obs map; continue unchanged T-054 owner intake in parallel."
+    "next_action": "T-061 is active. EXP-001302 freezes the candidate-neutral estimator interface but leaves source-owner calibration, time-standard, timing windows, joint likelihood or covariance, intrinsic-lag nuisance, complete F_reg/F_lim/F_eff/F_obs map, immutable scorer and prospective lock unresolved; independently reproduce only after those fields are frozen, and continue unchanged T-054 owner intake in parallel."
   },
   "resume_algorithm": [
     "Capture UTC date and run doctor.py.",

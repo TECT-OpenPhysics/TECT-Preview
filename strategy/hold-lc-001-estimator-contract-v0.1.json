@@ -1,0 +1,333 @@
+{
+  "schema": "tect/observation-estimator-contract/0.1",
+  "id": "HOLD-LC-001-ESTIMATOR-CONTRACT-v0.1",
+  "version": "0.1.0",
+  "recorded_on": "2026-08-30",
+  "task_id": "T-061",
+  "claim_bearing": false,
+  "tier": "T0",
+  "status": "DESIGN_ONLY_NO_STATISTICAL_ADMISSION",
+  "purpose": "Freeze a candidate-neutral estimator interface over the exact HOLD-LC-001 event bytes while preserving the existing T-054 forward method and T-059 inverse method.",
+  "method_preservation": {
+    "existing_forward_t054_unchanged": true,
+    "existing_inverse_t059_unchanged": true,
+    "owner_order_unchanged": true,
+    "parked_loop_rules_unchanged": true,
+    "inverse_lane_is_additive": true,
+    "static_fit_cannot_select_dynamics": true
+  },
+  "authority_pointers": [
+    {
+      "path": "strategy/hold-lc-001-event-byte-freeze-v0.1.json",
+      "sha256": "fd21c32658f19c37368625c44cac68b630bbd2a4709c213099fead9a20df9746",
+      "role": "exact_event_byte_and_provenance_parent"
+    },
+    {
+      "path": "strategy/hold-lc-001-source-packet-v0.1.json",
+      "sha256": "5d22aeaf11ffdee6614580a537e801b2e7e2dd227194ecdb35a65b601e1daa4b",
+      "role": "candidate_neutral_source_estimand_parent"
+    },
+    {
+      "path": "strategy/hold-lc-001-set-valued-delay-envelope-v0.1.json",
+      "sha256": "a4f1ffe81e1ce240bb2870189fc4a9939caa9e62614cec3206d896e1c63302f6",
+      "role": "set_valued_nuisance_boundary_parent"
+    },
+    {
+      "path": "strategy/pre-a-observation-first-inverse-lane-contract-manifest.json",
+      "sha256": "fd5f37d0e095062a415368749d10d65de14b799938673b4460c3e849f07b9a46",
+      "role": "controlling_inverse_lane_and_four_stage_map_contract"
+    },
+    {
+      "path": "strategy/pre-a-round1-prospective-holdout-freeze-protocol-manifest.json",
+      "sha256": "9e72ce764eba934dd21894b506726ff914b62806ade4a8b0c1fffbe9431c743f",
+      "role": "anti_leakage_and_prospective_lock_parent"
+    }
+  ],
+  "exact_scope": {
+    "holdout_id": "HOLD-LC-001",
+    "lineage_group": "GW170817-GRB170817A",
+    "data_role": "RETROSPECTIVE",
+    "finite_scope": "The nine products and the estimator design are finite, versioned and retrospective; no continuum or infinite-volume operation is declared.",
+    "input_manifest": "strategy/hold-lc-001-event-byte-freeze-v0.1.json",
+    "input_manifest_sha256": "fd21c32658f19c37368625c44cac68b630bbd2a4709c213099fead9a20df9746",
+    "input_product_ids": [
+      "GWOSC-H1-CLEANED-TXTGZ",
+      "GWOSC-L1-CLEANED-TXTGZ",
+      "LIGO-P1800061-README",
+      "LIGO-P1800061-LOW-SPIN-POSTERIOR",
+      "FERMI-GBM-N0-TTE",
+      "FERMI-GBM-B0-TTE",
+      "FERMI-GBM-N0-RESPONSE",
+      "FERMI-GBM-B0-RESPONSE",
+      "FERMI-GBM-TRIGDAT"
+    ],
+    "cache_policy": "Use the local gitignored HOLD-LC-001 cache only for reacquisition and byte checks; the tracked contract carries locators and parent hashes, not raw bytes.",
+    "forbidden_actions": [
+      "Do not fit or rank a microscopic candidate.",
+      "Do not replace a source likelihood with an independent Gaussian summary.",
+      "Do not use a retrospective target as prospective validation.",
+      "Do not substitute an observation anchor for the Reading-H physical-empty branch.",
+      "Do not alter the T-054 owner order or the T-059 estimand and promotion rules."
+    ]
+  },
+  "estimand_contract": {
+    "id": "Delta_t_det",
+    "definition": "t_GBM_onset_geocenter - t_GW_merger_geocenter",
+    "units": "seconds",
+    "candidate_neutral": true,
+    "retrospective_only": true,
+    "observable_role": "A candidate-neutral temporal interface for later model comparison; not yet a predictive distribution.",
+    "source_summary": {
+      "reported_value_seconds": 1.74,
+      "reported_uncertainty_seconds": 0.05,
+      "use": "descriptive provenance only",
+      "likelihood_admitted": false,
+      "covariance_admitted": false
+    },
+    "raw_input_roles": {
+      "gw_merger_time": ["GWOSC-H1-CLEANED-TXTGZ", "GWOSC-L1-CLEANED-TXTGZ"],
+      "gamma_onset_and_energy": ["FERMI-GBM-N0-TTE", "FERMI-GBM-B0-TTE"],
+      "detector_support": ["FERMI-GBM-N0-RESPONSE", "FERMI-GBM-B0-RESPONSE"],
+      "time_context": ["FERMI-GBM-TRIGDAT"],
+      "provenance_and_auxiliary_parameter_product": ["LIGO-P1800061-README", "LIGO-P1800061-LOW-SPIN-POSTERIOR"]
+    },
+    "set_valued_fallback": {
+      "parent": "strategy/hold-lc-001-set-valued-delay-envelope-v0.1.json",
+      "status": "FEASIBILITY_ONLY",
+      "probability_law": "NOT_ADMITTED",
+      "score_use": "FORBIDDEN"
+    }
+  },
+  "candidate_neutral_preprocessing": {
+    "status": "INTERFACE_FROZEN_IMPLEMENTATION_PENDING",
+    "rule": "Every preprocessing, compression and event-selection operation must be fixed before candidate maps are evaluated and may not depend on candidate labels, candidate parameters or candidate residuals.",
+    "required_fields": [
+      "time standard and leap-second or GPS conversion version",
+      "GW strain calibration version and valid time range",
+      "GBM detector and energy-channel selection",
+      "GW merger search window",
+      "GBM onset search and background windows",
+      "sample cadence, interpolation and missing-data rule",
+      "geocenter transformation and detector timing convention",
+      "compression statistic and numerical tolerance"
+    ],
+    "unresolved_fields": [
+      "time standard source and exact conversion table",
+      "calibration release and validity intervals",
+      "all timing and background windows",
+      "detector and energy selection rule",
+      "missing-data and interpolation rule",
+      "geocenter correction implementation and uncertainty"
+    ],
+    "owner": "SOURCE_OWNER_REQUIRED",
+    "admission": "NOT_ADMITTED"
+  },
+  "statistical_contract": {
+    "status": "NOT_ADMITTED",
+    "likelihood": {
+      "form": "UNSPECIFIED",
+      "source_owner": "MISSING",
+      "independent_reproduction": "MISSING",
+      "candidate_neutral": "REQUIRED",
+      "forbidden_substitute": "Do not treat 1.74 +/- 0.05 seconds as an independent Gaussian observation."
+    },
+    "covariance": {
+      "status": "NOT_ADMITTED",
+      "required_components": [
+        "GW merger-time uncertainty",
+        "GBM onset and background uncertainty",
+        "detector calibration and timing covariance",
+        "geocenter correction covariance",
+        "shared source and selection covariance"
+      ],
+      "owner": "SOURCE_OWNER_OR_INDEPENDENT_REPRODUCTION_REQUIRED"
+    },
+    "nuisance": {
+      "intrinsic_emission_lag": "NO_SINGLE_PROBABILITY_LAW_ADMITTED",
+      "allowed_interim_form": "The existing set-valued envelope may remain a feasibility boundary only.",
+      "candidate_tuning": "FORBIDDEN",
+      "owner": "SOURCE_OWNER_OR_PREREGISTERED_INDEPENDENT_RULE_REQUIRED"
+    },
+    "scorer": {
+      "status": "EMPTY",
+      "proper_score": "NOT_DEFINED",
+      "acceptance_rule": "NOT_DEFINED",
+      "prospective_lock": "PROS-LOCK-001 remains empty"
+    }
+  },
+  "four_stage_map": [
+    {
+      "id": "F_reg",
+      "status": "DESIGN_ONLY",
+      "input": "Frozen event bytes plus the candidate-neutral preprocessing interface.",
+      "output": "Finite detector-level timing features and their source-owned uncertainty object.",
+      "fixed_requirements": [
+        "regulator and finite time windows",
+        "volume and boundary convention where applicable",
+        "normalization and finite parts",
+        "time standard, calibration, detector selection and compression"
+      ],
+      "missing_owner": ["exact windows", "calibration/time-standard product", "uncertainty construction"],
+      "admission": "NOT_ADMITTED"
+    },
+    {
+      "id": "F_lim",
+      "status": "NOT_ADMITTED",
+      "input": "A finite regulated law from F_reg.",
+      "output": "A limit law only after uniform control is proved.",
+      "required_proof": [
+        "common core or common estimator domain",
+        "uniform regulator and volume bounds",
+        "declared cutoff, volume, exhaustion and limit order"
+      ],
+      "current_boundary": "HOLD-LC-001 is retrospective finite data; no continuum or infinite-limit claim is available."
+    },
+    {
+      "id": "F_eff",
+      "status": "NOT_ADMITTED",
+      "input": "A candidate limit law.",
+      "output": "An effective QFT/YM/GR parameter or correlator map.",
+      "required_owner": [
+        "scheme and scale",
+        "operator or observable basis",
+        "state and gauge/physical projection contract",
+        "Ward or Slavnov-Taylor conditions where applicable",
+        "anomaly and theory-truncation budget"
+      ],
+      "current_boundary": "The event products do not by themselves identify a microscopic dynamics or physical theory identity."
+    },
+    {
+      "id": "F_obs",
+      "status": "NOT_ADMITTED",
+      "input": "An effective prediction plus declared nuisance parameters.",
+      "output": "A raw-data predictive distribution or candidate-neutral estimand prediction.",
+      "required_owner": [
+        "instrument, selection and compression map",
+        "source-owned likelihood or covariance",
+        "intrinsic-emission nuisance law",
+        "numerical error budget",
+        "immutable scorer and acceptance rule"
+      ],
+      "current_boundary": "No score, ranking, candidate selection or prospective credit is permitted."
+    }
+  ],
+  "static_dynamic_quotient": {
+    "relation": "M_a ~_static M_b iff their declared static functional and admitted static observables agree after the declared gauge, field-redefinition and regulator equivalences.",
+    "test_rule": "Evaluate the frozen temporal estimand on the quotient only after a source-owned dynamics and all four map stages are admitted.",
+    "outcomes": [
+      "If the temporal observable separates members, retain the surviving dynamic equivalence classes.",
+      "If it is invariant over a class, report NONIDENTIFIABLE rather than selecting a representative.",
+      "If calibration, nuisance or regulator perturbations reverse the result, report UNSTABLE_FINITE_ONLY."
+    ],
+    "controlling_results": ["R-193", "R-200"],
+    "no_static_to_dynamic_inference": true
+  },
+  "ownership_split": {
+    "physical_owner_fields": [
+      "generator or transfer",
+      "state",
+      "physical projection",
+      "time boundary",
+      "physical observable algebra",
+      "regulator",
+      "volume",
+      "boundary condition",
+      "normalization and finite parts",
+      "common norm",
+      "limit order",
+      "calibration and source likelihood"
+    ],
+    "proof_owner_fields": [
+      "filtration",
+      "heat-root map",
+      "raw-current spatial intertwiner",
+      "production one-use q ledger",
+      "proof-side discretization and numerical implementation"
+    ],
+    "separation_rule": "A proof-owner choice cannot fill a missing physical-owner field. If physical predictions depend on the proof realization, version it as a separate candidate and do not merge the results."
+  },
+  "validation_plan": {
+    "level": "T0 design and lineage validation",
+    "checks_to_run": [
+      "Parent manifest hashes and product IDs match exactly.",
+      "All unresolved estimator fields remain explicit and no score field is populated.",
+      "Candidate labels and candidate parameters are absent from preprocessing inputs.",
+      "Retrospective role and empty prospective lock remain unchanged.",
+      "Existing T-054/T-059 method and owner pointers remain unchanged.",
+      "The four-stage missing-stage rule is mechanically respected."
+    ],
+    "not_claimed_as": [
+      "a likelihood validation",
+      "a covariance estimate",
+      "a candidate comparison",
+      "a dynamics identification",
+      "an empirical prediction"
+    ]
+  },
+  "acceptance_for_v0_2": [
+    "A source-owned or independently reproducible time-standard and calibration contract is hash-pinned.",
+    "All timing, background, detector and energy windows are frozen before target use.",
+    "A joint likelihood or covariance with component and shared-source terms is supplied.",
+    "An intrinsic-emission nuisance law or explicitly declared set-valued scoring rule is preregistered.",
+    "A complete candidate-neutral F_reg implementation is independently reproduced.",
+    "At least one admitted candidate fills F_lim, F_eff and F_obs with its own owner hashes.",
+    "The prospective holdout is sealed before any candidate score or map tuning."
+  ],
+  "adversarial_review": [
+    {
+      "axis": "summary-as-likelihood",
+      "objection": "The published central value and uncertainty could be silently treated as a Gaussian timing likelihood.",
+      "disposition": "UPHELD-BLOCKED: the contract marks both likelihood and covariance NOT_ADMITTED and forbids the substitute."
+    },
+    {
+      "axis": "calibration-as-completeness",
+      "objection": "Hash-pinned response, trigger and strain products might be mistaken for a complete calibration and geocenter covariance.",
+      "disposition": "UPHELD-BLOCKED: calibration, time standard, windows and shared covariance remain SOURCE_OWNER_REQUIRED."
+    },
+    {
+      "axis": "retrospective-tuning",
+      "objection": "The estimator interface could be tuned against the disclosed event and later called a prediction.",
+      "disposition": "UPHELD-BLOCKED: HOLD-LC-001 is RETROSPECTIVE, PROS-LOCK-001 remains empty, and target-dependent preprocessing is forbidden."
+    },
+    {
+      "axis": "partial-detector-coverage",
+      "objection": "The selected H1/L1 and N0/B0 subset could be presented as a complete multi-detector analysis.",
+      "disposition": "DISMISSED-FOR-SCOPE: the exact scope labels the subset as finite intake and leaves source completeness pending."
+    },
+    {
+      "axis": "static-to-dynamic-selection",
+      "objection": "A finite timing feature could be used to choose a dynamics from a static-equivalence class without an owner generator.",
+      "disposition": "UPHELD-BLOCKED: R-193/R-200 quotient rule and the physical-owner split prohibit static-to-dynamic inference."
+    },
+    {
+      "axis": "method-overhaul",
+      "objection": "Adding the estimator contract could silently replace the established T-054 or T-059 methods.",
+      "disposition": "DISMISSED: all method, owner-order and parked-loop preservation flags are explicit and true."
+    }
+  ],
+  "assumptions": [
+    "The byte-freeze manifest remains the authoritative locator and hash record for the nine event products.",
+    "A candidate-neutral temporal interface can be specified before a candidate-specific forward map is admitted.",
+    "The reported source summary is retained for provenance but is not promoted to a likelihood.",
+    "The existing T-059 anti-leakage and prospective-lock rules remain controlling.",
+    "A design-only contract is a continuity advance, not a scientific result."
+  ],
+  "missing_assumptions": [
+    "Source-owned time standard, calibration and geocenter conversion with uncertainty.",
+    "Frozen timing, background, detector and energy windows.",
+    "Joint likelihood or covariance including shared-source and calibration terms.",
+    "Intrinsic-emission nuisance law or preregistered set-valued scoring rule.",
+    "A complete owner-approved F_reg/F_lim/F_eff/F_obs map.",
+    "A sealed unused prospective holdout and immutable scorer."
+  ],
+  "evidence_level": "T0 exact-input lineage plus candidate-neutral estimator design; no statistical or physical test",
+  "next_action": "Obtain the missing source-owner calibration, time-standard, window, covariance or likelihood and nuisance specifications; independently reproduce the candidate-neutral F_reg implementation only after those fields are frozen, while continuing unchanged T-054 owner intake.",
+  "non_claims": [
+    "This contract does not admit a likelihood, covariance, nuisance probability law, candidate, score or prospective prediction.",
+    "It does not identify a microscopic dynamics or distinguish members of a static-equivalence class.",
+    "It does not prove Lorentz invariance, a causal cone, QFT, Yang-Mills, gravity, Pre-A, C6, A13, Sector-A, continuum, physical vacuum, cosmic origin, a theory of everything or a mass gap.",
+    "It does not perform the Reading-H physical-empty test and cannot replace an owner-approved common functional or empty branch.",
+    "It preserves rather than replaces the established T-054 forward and T-059 observation-first inverse methods."
+  ],
+  "recorded_by": "Codex"
+}

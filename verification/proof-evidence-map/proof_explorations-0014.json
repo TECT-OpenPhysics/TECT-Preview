@@ -182,6 +182,183 @@
       "task_id": "T-061",
       "title": "HOLD-LC-001 exact event-product byte freeze without likelihood admission",
       "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "axis": "summary-as-likelihood",
+          "check": "Could 1.74 +/- 0.05 s be silently promoted to an independent Gaussian datum?",
+          "disposition": "UPHELD-BLOCKED: likelihood and covariance are NOT_ADMITTED and the substitute is forbidden."
+        },
+        {
+          "axis": "calibration-as-completeness",
+          "check": "Could hash-pinned response and trigger products be treated as a complete calibration/covariance?",
+          "disposition": "UPHELD-BLOCKED: time standard, calibration, geocenter uncertainty and shared covariance remain SOURCE_OWNER_REQUIRED."
+        },
+        {
+          "axis": "retrospective-tuning",
+          "check": "Could this disclosed event tune the estimator and later receive predictive credit?",
+          "disposition": "UPHELD-BLOCKED: the packet is retrospective, PROS-LOCK-001 is empty, and target-dependent preprocessing is forbidden."
+        },
+        {
+          "axis": "partial-detector-coverage",
+          "check": "Could the selected H1/L1 and N0/B0 subset be called a complete detector analysis?",
+          "disposition": "DISMISSED-FOR-SCOPE: the contract labels the subset as finite intake and keeps completeness pending."
+        },
+        {
+          "axis": "static-to-dynamic-selection",
+          "check": "Could a finite timing feature choose one member of a static-equivalence class without an owner generator?",
+          "disposition": "UPHELD-BLOCKED: the R-193/R-200 quotient rule and physical-owner split forbid that inference."
+        },
+        {
+          "axis": "method-overhaul",
+          "check": "Could the new contract silently replace the established forward or inverse method?",
+          "disposition": "DISMISSED: method, owner-order and parked-loop preservation flags are explicit and true."
+        }
+      ],
+      "assumptions": [
+        "The byte-freeze manifest remains the authoritative locator and hash record for the event products.",
+        "The reported source timing summary is retained as provenance and is not a likelihood.",
+        "A candidate-neutral preprocessing interface can be specified before any candidate-specific map is admitted.",
+        "The existing T-059 anti-leakage and prospective-lock rules remain controlling.",
+        "A design-only contract is a continuity result rather than a scientific result."
+      ],
+      "boundary": "EXP-001302 advances only the T0 estimator-interface and lineage boundary. It does not admit a likelihood, covariance, nuisance law, candidate forward map, score, prospective prediction, microscopic dynamics, physical identity, continuum result, Reading-H sign, Pre-A closure or mass-gap conclusion.",
+      "checks": [
+        {
+          "detail": "The contract records the byte-freeze manifest hash and the exact nine product IDs without copying raw bytes into tracked Contents.",
+          "finding": "PASS",
+          "id": "parent-lineage"
+        },
+        {
+          "detail": "The temporal interface and preprocessing rule prohibit candidate labels, parameters and residuals from entering F_reg; exact calibration, windows and conversion inputs remain source-owner fields.",
+          "finding": "PASS-WITH-IMPLEMENTATION-PENDING",
+          "id": "candidate-neutrality"
+        },
+        {
+          "detail": "The source summary is descriptive only; likelihood, covariance, intrinsic-lag law, scorer and prospective lock remain explicitly unadmitted or empty.",
+          "finding": "PASS-WITH-ADMISSION-STOP",
+          "id": "statistical-admission"
+        },
+        {
+          "detail": "F_reg is design-only and F_lim, F_eff and F_obs are not admitted until their owners, limits, effective theory map and instrument/statistical map are supplied.",
+          "finding": "PASS-WITH-ADMISSION-STOP",
+          "id": "four-stage-boundary"
+        },
+        {
+          "detail": "No existing method authority, candidate card, result, negative, physical-empty input or Lean theorem is edited or promoted.",
+          "finding": "PASS",
+          "id": "method-preservation"
+        }
+      ],
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "This is a genuine P1 design advance because it converts the previously open estimator obligation into a versioned, auditable field contract without inventing the missing likelihood, covariance, nuisance law or map. It preserves the existing methods and prevents a retrospective static fit from selecting dynamics.",
+      "decision_scope": "Finite retrospective estimator-interface design and parent-lineage binding only; no candidate comparison, dynamics identification, empirical prediction, continuum interpretation or physical promotion.",
+      "evidence_level": "T0 exact parent-lineage and candidate-neutral design contract with explicit admission stop",
+      "evidence_refs": [
+        "strategy/hold-lc-001-estimator-contract-v0.1.json#exact_scope",
+        "strategy/hold-lc-001-estimator-contract-v0.1.json#estimand_contract",
+        "strategy/hold-lc-001-estimator-contract-v0.1.json#statistical_contract",
+        "strategy/hold-lc-001-estimator-contract-v0.1.json#four_stage_map",
+        "strategy/hold-lc-001-event-byte-freeze-v0.1.json#byte_validation",
+        "strategy/pre-a-observation-first-inverse-lane-contract-manifest.json#forward_map_contract",
+        "strategy/pre-a-round1-prospective-holdout-freeze-protocol-manifest.json#semantic_split"
+      ],
+      "exact_scope": {
+        "contract": "strategy/hold-lc-001-estimator-contract-v0.1.json",
+        "data_role": "RETROSPECTIVE",
+        "evidence_scope": "T0 design and lineage interface; finite only",
+        "input_products": [
+          "GWOSC-H1-CLEANED-TXTGZ",
+          "GWOSC-L1-CLEANED-TXTGZ",
+          "LIGO-P1800061-README",
+          "LIGO-P1800061-LOW-SPIN-POSTERIOR",
+          "FERMI-GBM-N0-TTE",
+          "FERMI-GBM-B0-TTE",
+          "FERMI-GBM-N0-RESPONSE",
+          "FERMI-GBM-B0-RESPONSE",
+          "FERMI-GBM-TRIGDAT"
+        ],
+        "method_scope": "Additive contract only; existing T-054 forward and T-059 inverse methods, owner order, estimands and parked-loop rules remain controlling.",
+        "parent_event_manifest": "strategy/hold-lc-001-event-byte-freeze-v0.1.json",
+        "parent_event_manifest_sha256": "fd21c32658f19c37368625c44cac68b630bbd2a4709c213099fead9a20df9746",
+        "statistical_scope": "No likelihood, covariance, nuisance probability law, scorer or predictive distribution is admitted."
+      },
+      "finding": "A separately versioned candidate-neutral estimator interface is now frozen over the nine hash-pinned event products. It makes the temporal estimand, product roles, physical/proof ownership split, missing calibration/statistical fields and F_reg/F_lim/F_eff/F_obs boundaries explicit, while candidate scoring and prospective validation remain stopped.",
+      "formal_integration": {
+        "events": [],
+        "negatives": [],
+        "no_changelog_event": true,
+        "no_new_negative": true,
+        "no_new_result": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "results": []
+      },
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": []
+      },
+      "gate_ids": [
+        "PA-INVERSE-OBSERVATION-TARGET-MAP-HOLDOUT-FREEZE",
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001302",
+      "method": [
+        "Use the existing HOLD-LC-001 byte-freeze manifest, source packet, set-valued envelope, inverse-lane contract and prospective-freeze protocol by hash pointer; do not copy or edit their matrices.",
+        "Freeze Delta_t_det = t_GBM_onset_geocenter - t_GW_merger_geocenter as a retrospective candidate-neutral interface and retain the published 1.74 +/- 0.05 s summary as descriptive provenance only.",
+        "Separate physical-owner fields from proof-owner fields and list exact pending requirements for time standard, calibration, timing windows, covariance, nuisance, scorer and F_reg/F_lim/F_eff/F_obs.",
+        "Declare every unfilled statistical or map object NOT_ADMITTED, preserve the empty prospective lock, and encode the static-to-dynamic quotient rule so a static fit cannot select a dynamics.",
+        "Run JSON, parent-hash, inverse-contract and release checks as design/lineage validation only; do not construct a likelihood, covariance, candidate map, score or physical inference."
+      ],
+      "missing_assumptions": [
+        "Source-owned time standard, detector calibration and geocenter conversion with uncertainty.",
+        "Frozen timing, background, detector and energy windows plus a missing-data rule.",
+        "Joint likelihood or covariance including shared-source and calibration terms.",
+        "Intrinsic-emission nuisance law or a preregistered set-valued scoring rule.",
+        "A complete owner-approved F_reg/F_lim/F_eff/F_obs map and immutable scorer.",
+        "A sealed unused prospective holdout."
+      ],
+      "next_action": "Obtain and hash-pin the source-owner time-standard, calibration, timing-window, covariance or likelihood and intrinsic-lag specifications; then independently reproduce the candidate-neutral F_reg implementation before any candidate map or score, while continuing unchanged T-054 owner intake.",
+      "non_claims": [
+        "No candidate is admitted, selected, ranked, fitted or prospectively validated.",
+        "No source-owned likelihood, covariance, nuisance probability law or complete F_reg/F_lim/F_eff/F_obs map is present.",
+        "No microscopic dynamics, physical vacuum, Reading-H branch, causal cone, Pre-A, Sector-A, C6, A13, QFT, Yang-Mills, gravity, continuum, cosmic-origin, theory-of-everything or mass-gap claim is established.",
+        "The existing T-054 forward and T-059 inverse methods are unchanged; this contract is additive and not a replacement."
+      ],
+      "provenance": "contemporaneous",
+      "question": "Can the nine hash-pinned HOLD-LC-001 event products be placed under a separately versioned candidate-neutral estimator contract that fixes the observable, ownership split, missing calibration and statistical fields, and all four map-stage boundaries without replacing T-054/T-059 or scoring a microscopic candidate?",
+      "recorded_at": "2026-08-30T08:31:25Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001301",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001299",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001294",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-08-30",
+      "schema": "tect/proof-exploration/1.0",
+      "stop_or_redesign": [
+        "If no source owner supplies the missing calibration or statistical objects, retain HOLD-LC-001 as a design-only feasibility packet and do not score.",
+        "If preprocessing must depend on a candidate target, issue a new estimator version and reset the inverse lane to P1.",
+        "If the temporal observable is invariant over a static-equivalence class, report NONIDENTIFIABLE rather than selecting a representative.",
+        "If regulator, calibration or nuisance changes reverse a finite verdict, report UNSTABLE_FINITE_ONLY.",
+        "If a future estimator changes the observation target or uses the retrospective packet for tuning, do not award prospective credit."
+      ],
+      "task_id": "T-061",
+      "title": "HOLD-LC-001 candidate-neutral estimator contract without score admission",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",
