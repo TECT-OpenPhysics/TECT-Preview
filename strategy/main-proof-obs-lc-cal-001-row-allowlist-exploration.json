@@ -1,0 +1,157 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "schema_version": "1.0",
+  "id": "EXP-001296",
+  "title": "OBS-LC-CAL-001 isotropic photon rows are pre-registered for feasibility only",
+  "task_id": "T-061",
+  "claim_ids": [
+    "C1-LORENTZ-KIN",
+    "C2-LORENTZ-EMERGENT",
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "gate_ids": [
+    "PA-INVERSE-OBSERVATION-TARGET-MAP-HOLDOUT-FREEZE",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "related": [
+    {
+      "id": "EXP-001295",
+      "relation": "continues"
+    }
+  ],
+  "question": "Can a finite, candidate-neutral row set be frozen from the hash-pinned SME source without turning summary sensitivities into a likelihood or tuning the rows to a candidate?",
+  "method": [
+    "Use the exact source packet hash for arXiv:0801.0287v19 and read Table S3's complete isotropic-photon subsection.",
+    "Include every listed isotropic row for operator dimensions d=3 through d=9, with source coefficient label, dimension, quoted sensitivity, units and page locator.",
+    "Declare the slice before admitting any microscopic candidate; defer matter, anisotropic photon, neutrino, gravity and data-table rows to separately versioned packets.",
+    "Permit only independent row-by-row feasibility checks and retain the source one-coefficient and conservative two-sigma order-of-magnitude semantics.",
+    "Keep likelihood, covariance, candidate map, scoring, prospective credit and physical interpretation stopped."
+  ],
+  "exact_scope": {
+    "anchor": "OBS-LC-CAL-001",
+    "source_edition": "arXiv:0801.0287v19 / January 2026 update",
+    "source_sha256": "2fde66d227d1cbc5524baf23d5925d2ca30522a371d092387901ac7566273827",
+    "source_bytes": 964703,
+    "frame": "Standard Sun-centered inertial reference frame",
+    "table": "S3",
+    "rows": [
+      "S3-ISO-D3-KV00",
+      "S3-ISO-D4-CI00",
+      "S3-ISO-D5-KV00",
+      "S3-ISO-D6-CI00",
+      "S3-ISO-D7-KV00",
+      "S3-ISO-D8-CI00",
+      "S3-ISO-D9-KV00"
+    ],
+    "scope_boundary": "T0 source-lineage and finite feasibility interface only; no candidate score, map admission or empirical validation."
+  },
+  "checks": [
+    {
+      "id": "row-completeness",
+      "finding": "PASS",
+      "detail": "The allowlist includes all seven rows in the Table S3 isotropic-photon subsection for d=3 through d=9; no row is selected by a candidate prediction."
+    },
+    {
+      "id": "source-crosswalk",
+      "finding": "PASS",
+      "detail": "Each row records its coefficient label, operator dimension, quoted sensitivity, units, and PDF page/section locator under the frozen source hash."
+    },
+    {
+      "id": "uncertainty-boundary",
+      "finding": "PASS",
+      "detail": "The packet permits only row-by-row feasibility checks and explicitly forbids a synthetic Gaussian, multiplication of rows, or independent-experiment interpretation."
+    },
+    {
+      "id": "candidate-map",
+      "finding": "NOT_ADMITTED",
+      "detail": "No candidate has a complete F_reg/F_lim/F_eff/F_obs map, theory-error budget, scorer or acceptance rule."
+    },
+    {
+      "id": "likelihood-covariance",
+      "finding": "NOT_ADMITTED",
+      "detail": "The source provides summary sensitivities rather than a measurement-level joint likelihood or covariance."
+    }
+  ],
+  "finding": "A seven-row isotropic photon feasibility slice is now fixed by source table, operator dimension, coefficient label, units and locator. It is a calibration interface only; no rows are combined, scored or mapped to a TECT candidate.",
+  "verdict": "advanced",
+  "decision_reason": "This is a bounded P1 intake advance that removes post-hoc row selection while preserving the existing forward proof method, inverse contract, source uncertainty boundary and no-promotion firewalls.",
+  "adversarial_review": [
+    {
+      "axis": "row cherry-picking",
+      "check": "The complete isotropic S3 subsection is included, so a later candidate cannot add or remove a row after seeing its prediction.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "summary-as-likelihood",
+      "check": "Conservative two-sigma order-of-magnitude sensitivities remain bounds and are never converted to Gaussian standard deviations.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "cross-dimension independence",
+      "check": "Different operator dimensions are checked separately and are not treated as independent experiments or multiplied into a score.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "frame-and-unit leakage",
+      "check": "The source Sun-centered frame, natural units and displayed dimensions are recorded per row; no silent TECT conversion is inserted.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "method overhaul",
+      "check": "Only an additive row allowlist and exploration record were added; no theorem order, owner contract, candidate identity or forward method was changed.",
+      "disposition": "DISMISSED"
+    }
+  ],
+  "assumptions": [
+    "The source packet hash identifies the exact arXiv v19 edition.",
+    "Table S3's isotropic subsection is complete for the declared d=3 through d=9 slice.",
+    "The source's one-coefficient and conservative two-sigma summary convention is retained.",
+    "Row-by-row feasibility is meaningful without inventing a joint covariance."
+  ],
+  "missing_assumptions": [
+    "Measurement-level likelihood/covariance for a quantitative score.",
+    "A candidate-specific coefficient convention and complete F_reg/F_lim/F_eff/F_obs map.",
+    "A fixed theory-error, nuisance and acceptance budget.",
+    "Independent holdout data for empirical validation."
+  ],
+  "boundary": "T0 P1 source-lineage and finite feasibility evidence; no theorem, physical identity, continuum or empirical result.",
+  "evidence_level": "T0 source-lineage plus pre-registered finite feasibility interface",
+  "evidence_refs": [
+    "strategy/obs-lc-cal-001-source-packet-v0.1.json#source",
+    "strategy/obs-lc-cal-001-row-allowlist-v0.1.json#rows",
+    "strategy/pre-a-observation-first-inverse-lane-contract-manifest.json#observation_anchor_manifest",
+    "strategy/main-proof-program-v1.json#current_work_packet"
+  ],
+  "formal_refs": {
+    "results": [],
+    "negatives": [],
+    "events": []
+  },
+  "formal_integration": {
+    "results": [],
+    "negatives": [],
+    "events": [],
+    "no_new_result": true,
+    "no_new_negative": true,
+    "no_changelog_event": false,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "next_action": "Run the existing schema and continuity checks against the allowlist, then keep candidate scoring stopped until a source uncertainty contract and all F_reg/F_lim/F_eff/F_obs stages are admitted.",
+  "stop_or_redesign": [
+    "If the source hash or table semantics drift, issue a new packet version rather than mutating this record.",
+    "If a row's likelihood or covariance is unavailable, retain it as feasibility-only and exclude it from scoring.",
+    "If a candidate map is incomplete, do not select or rank a candidate from these rows.",
+    "If the complete isotropic subsection cannot be reproduced from the source locator, invalidate this allowlist and reopen the source crosswalk."
+  ],
+  "non_claims": [
+    "No candidate is admitted, selected, ranked or empirically validated.",
+    "No exact Lorentz invariance, causal cone, dispersion theorem, physical vacuum or TECT dynamics is inferred.",
+    "No Pre-A, Sector-A, C6, A13, QFT, Yang-Mills, gravity, continuum, cosmic-origin, theory-of-everything or mass-gap statement is established.",
+    "The seven rows are not independent observations and do not form a joint likelihood."
+  ],
+  "provenance": "contemporaneous",
+  "recorded_at": "2026-08-30T06:25:00Z",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-08-30"
+}

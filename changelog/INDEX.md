@@ -5,7 +5,7 @@ Compact generated reader surface. The append-only authority is
 record 568 / commit `4db22f4e` and no longer grows.
 Post-cutover full bodies live exactly once in bounded pages under `pages/`.
 
-**792 accepted events** · latest 25 shown below · machine locator: `index.json`
+**793 accepted events** · latest 25 shown below · machine locator: `index.json`
 
 Search the complete authority without loading every page:
 
@@ -17,6 +17,7 @@ python verification/scripts/changelog.py search --text <phrase>
 
 | Date | Event | Claims | Full entry |
 |---|---|---|---|
+| 2026-08-30 | `20260830-obs-lc-cal-001-isotropic-photon-row-allowlist-f` — [OBS-LC-CAL-001 isotropic photon row allowlist frozen] - 2026-08-30 | C1-LORENTZ-KIN, C2-LORENTZ-EMERGENT, C6-SPACETIME-SIGNATURE | [bounded page](pages/000769-000818.md#20260830-obs-lc-cal-001-isotropic-photon-row-allowlist-f) |
 | 2026-08-30 | `20260830-obs-lc-cal-001-source-hash-freeze-and-feasibili` — [OBS-LC-CAL-001 source hash freeze and feasibility boundary] - 2026-08-30 | C1-LORENTZ-KIN, C2-LORENTZ-EMERGENT, C6-SPACETIME-SIGNATURE | [bounded page](pages/000769-000818.md#20260830-obs-lc-cal-001-source-hash-freeze-and-feasibili) |
 | 2026-08-30 | `20260830-hold-lc-001-source-hash-freeze-with-admission-s` — [HOLD-LC-001 source hash freeze with admission stop] - 2026-08-30 | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION, C6-SPACETIME-SIGNATURE | [bounded page](pages/000769-000818.md#20260830-hold-lc-001-source-hash-freeze-with-admission-s) |
 | 2026-08-30 | `20260830-p1-owner-and-observation-map-intake-audit-fixes` — [P1 owner and observation-map intake audit fixes next action] - 2026-08-30 | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION, C6-SPACETIME-SIGNATURE | [bounded page](pages/000769-000818.md#20260830-p1-owner-and-observation-map-intake-audit-fixes) |
@@ -41,7 +42,6 @@ python verification/scripts/changelog.py search --text <phrase>
 | 2026-08-30 | `20260830-r-430-original-source-point-precision-audit-202` — [R-430 original-source point-precision audit] - 2026-08-30 | C6-SPACETIME-SIGNATURE, EXP-001275, R-430 | [bounded page](pages/000769-000818.md#20260830-r-430-original-source-point-precision-audit-202) |
 | 2026-08-30 | `20260830-r-429-decimal-residual-precision-uplift-boundar` — [R-429 decimal residual precision uplift boundary] - 2026-08-30 | C6-SPACETIME-SIGNATURE, EXP-001274, R-429 | [bounded page](pages/000769-000818.md#20260830-r-429-decimal-residual-precision-uplift-boundar) |
 | 2026-08-30 | `20260830-r-428-residual-basis-conditioning-diagnostic-in` — [R-428 residual-basis conditioning diagnostic inconclusive] - 2026-08-30 | C6-SPACETIME-SIGNATURE, EXP-001273, R-428 | [bounded page](pages/000769-000818.md#20260830-r-428-residual-basis-conditioning-diagnostic-in) |
-| 2026-08-30 | `20260830-r-427-reading-h-physical-empty-bounded-test-rev` — [R-427 Reading-H physical-empty bounded test revalidation blocked] - 2026-08-30 | C6-SPACETIME-SIGNATURE, EXP-001272, R-427 | [bounded page](pages/000719-000768.md#20260830-r-427-reading-h-physical-empty-bounded-test-rev) |
 
 ## Post-cutover pages
 
@@ -49,7 +49,7 @@ Each full event body after the cutover occurs in exactly one page.
 
 | Ordinals | Events | Page |
 |---|---:|---|
-| 769–792 | 24 | [000769-000818.md](pages/000769-000818.md) |
+| 769–793 | 25 | [000769-000818.md](pages/000769-000818.md) |
 | 719–768 | 50 | [000719-000768.md](pages/000719-000768.md) |
 | 669–718 | 50 | [000669-000718.md](pages/000669-000718.md) |
 | 619–668 | 50 | [000619-000668.md](pages/000619-000668.md) |

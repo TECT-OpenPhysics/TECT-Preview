@@ -1,0 +1,139 @@
+{
+  "schema": "tect/observation-anchor-row-allowlist/0.1",
+  "id": "OBS-LC-CAL-001-ROW-ALLOWLIST-v0.1",
+  "anchor_id": "OBS-LC-CAL-001",
+  "version": "0.1.0",
+  "status": "FROZEN_FEASIBILITY_ONLY",
+  "source_packet": {
+    "path": "strategy/obs-lc-cal-001-source-packet-v0.1.json",
+    "source_sha256": "2fde66d227d1cbc5524baf23d5925d2ca30522a371d092387901ac7566273827",
+    "edition": "arXiv:0801.0287v19 / January 2026 update"
+  },
+  "selection_principle": {
+    "rule": "Include the complete isotropic-photon subsection of summary Table S3, with one row for each listed operator dimension d=3 through d=9.",
+    "reason": "This is a pre-registered propagation-symmetry slice chosen before any microscopic candidate is admitted; it is not selected by a fit or by a candidate score.",
+    "deferred_scope": "Matter, anisotropic photon, neutrino, gravity, and data-table rows are deferred to separately versioned packets and are not silently treated as absent evidence.",
+    "methods_unchanged": true
+  },
+  "scope": {
+    "frame": "Standard Sun-centered inertial reference frame",
+    "sector": "photon",
+    "observable_family": "isotropic Lorentz/CPT-violation coefficient sensitivities",
+    "table": "S3",
+    "table_semantics": "Maximal two-sided sensitivities; conservative 2-sigma order-of-magnitude summaries with one coefficient nonzero.",
+    "unit_convention": "Natural units hbar=c=epsilon_0=k_B=1; mass units in GeV.",
+    "use": "Independent feasibility checks only; no aggregate score or likelihood."
+  },
+  "rows": [
+    {
+      "row_id": "S3-ISO-D3-KV00",
+      "table": "S3",
+      "coefficient": "k(V)00^(3)",
+      "operator_dimension": 3,
+      "quoted_sensitivity": "1e-44 GeV",
+      "bound_form": "absolute_value <= 1e-44 GeV",
+      "source_locator": "PDF p.24, Table S3, Isotropic Coefficient subsection"
+    },
+    {
+      "row_id": "S3-ISO-D4-CI00",
+      "table": "S3",
+      "coefficient": "c(I)00^(4) = sqrt(4*pi)*kappa_tilde_tr",
+      "operator_dimension": 4,
+      "quoted_sensitivity": "1e-19",
+      "bound_form": "absolute_value <= 1e-19",
+      "source_locator": "PDF p.24, Table S3, Isotropic Coefficient subsection"
+    },
+    {
+      "row_id": "S3-ISO-D5-KV00",
+      "table": "S3",
+      "coefficient": "k(V)00^(5)",
+      "operator_dimension": 5,
+      "quoted_sensitivity": "1e-34 GeV^-1",
+      "bound_form": "absolute_value <= 1e-34 GeV^-1",
+      "source_locator": "PDF p.24, Table S3, Isotropic Coefficient subsection"
+    },
+    {
+      "row_id": "S3-ISO-D6-CI00",
+      "table": "S3",
+      "coefficient": "c(I)00^(6)",
+      "operator_dimension": 6,
+      "quoted_sensitivity": "1e-30 GeV^-2",
+      "bound_form": "absolute_value <= 1e-30 GeV^-2",
+      "source_locator": "PDF p.24, Table S3, Isotropic Coefficient subsection"
+    },
+    {
+      "row_id": "S3-ISO-D7-KV00",
+      "table": "S3",
+      "coefficient": "k(V)00^(7)",
+      "operator_dimension": 7,
+      "quoted_sensitivity": "1e-27 GeV^-3",
+      "bound_form": "absolute_value <= 1e-27 GeV^-3",
+      "source_locator": "PDF p.24, Table S3, Isotropic Coefficient subsection"
+    },
+    {
+      "row_id": "S3-ISO-D8-CI00",
+      "table": "S3",
+      "coefficient": "c(I)00^(8)",
+      "operator_dimension": 8,
+      "quoted_sensitivity": "1e-24 GeV^-4",
+      "bound_form": "absolute_value <= 1e-24 GeV^-4",
+      "source_locator": "PDF p.24, Table S3, Isotropic Coefficient subsection"
+    },
+    {
+      "row_id": "S3-ISO-D9-KV00",
+      "table": "S3",
+      "coefficient": "k(V)00^(9)",
+      "operator_dimension": 9,
+      "quoted_sensitivity": "1e-21 GeV^-5",
+      "bound_form": "absolute_value <= 1e-21 GeV^-5",
+      "source_locator": "PDF p.24, Table S3, Isotropic Coefficient subsection"
+    }
+  ],
+  "uncertainty_contract": {
+    "likelihood": "NOT_ADMITTED",
+    "covariance": "NOT_ADMITTED",
+    "row_rule": "Evaluate each row separately as a feasibility bound; retain the source one-coefficient convention and quoted order-of-magnitude semantics.",
+    "forbidden": [
+      "Do not multiply rows into a joint likelihood.",
+      "Do not interpret the seven operator dimensions as independent experiments.",
+      "Do not convert a summary sensitivity into a Gaussian standard deviation.",
+      "Do not add a candidate-dependent row or remove a row after seeing predictions."
+    ]
+  },
+  "theory_map_contract": {
+    "status": "NOT_ADMITTED",
+    "required_before_scoring": [
+      "candidate-specific coefficient convention and units",
+      "complete F_reg/F_lim/F_eff/F_obs map",
+      "declared regulator and theory-error budget",
+      "immutable scorer and acceptance rule"
+    ],
+    "current_use": "No microscopic candidate is admitted; this file only fixes the source rows and their feasibility semantics."
+  },
+  "acceptance": {
+    "pass": "All seven row identifiers, source locators, dimensions, quoted sensitivities, and independent-row rules remain unchanged and the source packet hash matches.",
+    "falsifier": "Any source hash drift, ambiguous row identity, silent unit/frame change, or attempt to aggregate rows without a supplied source likelihood invalidates this packet and requires a new version."
+  },
+  "evidence_level": "T0 source-lineage plus pre-registered finite feasibility interface",
+  "assumptions": [
+    "The source packet hash identifies the exact January 2026 arXiv v19 bytes.",
+    "The S3 isotropic subsection is read in the source Sun-centered frame and natural-unit convention.",
+    "The displayed sensitivities are conservative two-sigma order-of-magnitude bounds under the source one-coefficient convention.",
+    "A feasibility intersection may be represented row by row without inventing a joint distribution."
+  ],
+  "missing_assumptions": [
+    "Measurement-level likelihoods and covariance for any quantitative score.",
+    "A candidate-owned map through all four forward stages.",
+    "A fixed theory-error and nuisance budget.",
+    "Independent holdout data for empirical validation."
+  ],
+  "non_claims": [
+    "This allowlist does not prove exact Lorentz invariance, a causal cone, or a dispersion theorem.",
+    "It does not identify or select TECT microstructure, dynamics, a vacuum, or a physical sector.",
+    "It does not establish Pre-A, Sector-A, C6, A13, QFT, Yang-Mills, gravity, continuum, empirical predictivity, a mass gap, or a theory of everything.",
+    "It does not make the seven rows independent observations or a joint likelihood."
+  ],
+  "next_action": "Run the existing schema/lineage checks against this frozen row set; keep candidate scoring stopped until source uncertainty and all F_reg/F_lim/F_eff/F_obs stages are admitted.",
+  "recorded_at": "2026-08-30T06:20:00Z",
+  "recorded_by": "Codex"
+}
