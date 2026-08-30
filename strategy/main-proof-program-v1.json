@@ -604,13 +604,21 @@
     "authority_state": "VERIFIED_PENDING_WORKTREE_NOT_YET_DURABLE_GIT_OR_REMOTE_AUTHORITY"
   },
   "completion_checkpoint": {
-    "status": "PENDING",
-    "verified_parent_head": "7149d3d45b133adaf350645e53232d0da75f86b5",
-    "verified_at_utc": "2026-08-30T11:47:00Z",
+    "status": "COMPLETE",
+    "verified_parent_head": "2f4b85aa778ef9cb923c10d9cb20d1af8a7b6d2f",
+    "verified_at_utc": "2026-08-30T12:12:00Z",
     "branch": "main",
     "remote": "tect",
     "remote_ref": "refs/heads/main",
-    "expected_authority_counts": null,
+    "expected_authority_counts": {
+      "claims": 49,
+      "gates_and_hypotheses": 208,
+      "results": 281,
+      "negative_records": 375,
+      "explorations": 1314,
+      "changelog_events": 796,
+      "tasks": 61
+    },
     "requirements": [
       "doctor PASS",
       "release_check PASS",
@@ -677,7 +685,9 @@
       "EXP-001313 is locally recorded as a T0 synthetic GTS code-semantics audit with primary/independent/hostile PASS; release-gated commit and strict baseline refresh are pending, and no T-054/T-059 method or physical-owner field changes.",
       "The release-gated EXP-001313 content commit 7149d3d45b133adaf350645e53232d0da75f86b5 was created after release_check PASS and pushed to tect/main; a strict checkpoint refresh is being run against that head.",
       "The checkpoint now records the post-EXP-001313 authority counts; the synthetic GTS audit remains T0 finite code evidence and does not change the established T-054/T-059 methods or physical-owner gates.",
-      "EXP-001314 is locally recorded as a T0 GTS input/runtime readiness audit: 14/14 bytes match, 1/6 required modules are available, and event execution remains firewalled; release-gated commit and strict baseline refresh are pending."
+      "EXP-001314 is locally recorded as a T0 GTS input/runtime readiness audit: 14/14 bytes match, 1/6 required modules are available, and event execution remains firewalled; release-gated commit and strict baseline refresh are pending.",
+      "The release-gated EXP-001314 content commit 2f4b85aa778ef9cb923c10d9cb20d1af8a7b6d2f was created after release_check PASS and pushed to tect/main; the checkpoint is being refreshed against that content head.",
+      "EXP-001314 confirms 14/14 hash-pinned input products while only 1/6 required GTS modules are available; the runtime gap remains an execution prerequisite, not a physical or mathematical no-go."
     ]
   },
   "stopped_loop_registry": [
