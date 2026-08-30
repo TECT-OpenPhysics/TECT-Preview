@@ -13,7 +13,7 @@ Each entry is (label, [script, *args]) with a BARE script name; each caller
 prefixes the path it needs (doctor: SCRIPTS/<name>; release_check:
 verification/scripts/<name>).
 """
-__version__ = "1.5.0"
+__version__ = "1.8.0"
 
 # --check sync gates (generated surface == its source). Order is display-only.
 SYNC_GATES = [
@@ -26,6 +26,9 @@ SYNC_GATES = [
     ("changelog-integrity", ["changelog.py", "verify"]),
     ("dossier",   ["build_dossier.py", "--check"]),
     ("exploration-integrity", ["exploration.py", "verify"]),
+    ("exploration-time", ["check_exploration_time.py"]),
+    ("observation-inverse", ["check_obs_inverse.py"]),
+    ("research-continuity", ["check_research_continuity.py"]),
     ("legacy-research", ["legacy_research.py", "build", "--check"]),
     ("legacy-search-contract", ["legacy_search.py", "selftest"]),
     ("proof-evidence-map", ["build_proof_evidence_map.py", "--check"]),

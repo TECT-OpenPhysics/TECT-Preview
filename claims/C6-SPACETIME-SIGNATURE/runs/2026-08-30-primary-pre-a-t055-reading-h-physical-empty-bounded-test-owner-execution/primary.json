@@ -1,0 +1,221 @@
+{
+  "assertion_count": 13,
+  "assertions": [
+    {
+      "actual": [
+        "R-441",
+        "EXP-001286",
+        false,
+        "BLOCKED"
+      ],
+      "expected": [
+        "R-441",
+        "EXP-001286",
+        false,
+        "BLOCKED"
+      ],
+      "group": "provenance",
+      "name": "manifest identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "PA-T055-READING-H-PHYSICAL-EMPTY-BOUNDED-TEST-OWNER-EXECUTION",
+      "expected": "PA-T055-READING-H-PHYSICAL-EMPTY-BOUNDED-TEST-OWNER-EXECUTION",
+      "group": "provenance",
+      "name": "test card identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "F_total[G_*] - F_total[E]",
+      "expected": "F_total[G_*] - F_total[E]",
+      "group": "contract",
+      "name": "orientation fixed",
+      "status": "PASS"
+    },
+    {
+      "actual": 15,
+      "expected": 15,
+      "group": "contract",
+      "name": "fifteen fields fixed",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "NOT_FIXED_IN_ONE_COMMON_OWNER",
+        "LOCKED_TO_R427_AND_R420_VALUES_UNSUPPLIED",
+        false
+      ],
+      "expected": [
+        "NOT_FIXED_IN_ONE_COMMON_OWNER",
+        "LOCKED_TO_R427_AND_R420_VALUES_UNSUPPLIED",
+        false
+      ],
+      "group": "contract",
+      "name": "same-owner status",
+      "status": "PASS"
+    },
+    {
+      "actual": 12,
+      "expected": ">=10 missing fields",
+      "group": "contract",
+      "name": "owner values remain missing",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "E",
+        true,
+        false,
+        "BLOCKED_NOT_INSTANTIATED"
+      ],
+      "expected": [
+        "E",
+        true,
+        false,
+        "BLOCKED_NOT_INSTANTIATED"
+      ],
+      "group": "E",
+      "name": "E preregistration",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [],
+        6
+      ],
+      "expected": [
+        [],
+        6
+      ],
+      "group": "E",
+      "name": "E fields absent",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "FORBIDDEN",
+        "NOT_ACCEPTED"
+      ],
+      "expected": [
+        "FORBIDDEN",
+        "NOT_ACCEPTED"
+      ],
+      "group": "E",
+      "name": "zero alias forbidden",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "reading_h_stationarity": "BLOCKED_NOT_EVALUATED",
+        "sign": "BLOCKED_NOT_EVALUATED",
+        "symmetry_projected_transverse_stability": "BLOCKED_NOT_EVALUATED"
+      },
+      "expected": "all BLOCKED_NOT_EVALUATED",
+      "group": "verdict",
+      "name": "three verdicts blocked",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false
+      ],
+      "group": "stop",
+      "name": "no numeric evaluation",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "EXP790-MANIFEST": "07cf9be922bf16def3b88f5a4d2924a087bae1282cfc56956258293d131d30fa",
+        "R169-MANIFEST": "c6f02db72a911120b5fa7e1d259f807105d97c638f15c4b1f379d70b1c78165e",
+        "R170-MANIFEST": "364547255ad4e51d8c9ab97ad9a45937735a4a1847f2edc1cb02387d7d8dc8cb",
+        "R418-MANIFEST": "30a703de800850a40ecbcd003133b832d9bee9d49908c402b19c389ee2a312ea",
+        "R420-MANIFEST": "f70e0b8cf2fe133464cf58123ed7706e04de9042d44d9c17bef96f83cf247255",
+        "R427-MANIFEST": "5a60fecc9daac6f0a214fd6f437545a4f1f90abfdccee2401f5cd6cdf0774c0f",
+        "R434-MANIFEST": "2cdc5dfd9a52f8b8e8308c8ef9c9b344df9672b723750a7c60b590079b4bc9dc"
+      },
+      "expected": "all pinned authority hashes",
+      "group": "authority",
+      "name": "authority hashes",
+      "status": "PASS"
+    },
+    {
+      "actual": "claim-nonbearing and no promotion",
+      "expected": "no promotion",
+      "group": "scope",
+      "name": "scope firewall",
+      "status": "PASS"
+    }
+  ],
+  "assumptions": [
+    "The six hash-pinned authorities above are the active TECT-owner boundaries.",
+    "The requested orientation is G_* minus E and all three tests must share one regulated parent.",
+    "The fifteen contract fields are identity-locked; a locked field name does not invent an owner value.",
+    "A physical-empty branch requires a normalized representative, measure or algebra, boundary preparation and a local physical criterion beyond a zero label.",
+    "Input-admissibility failure is a valid bounded-test outcome and is not a numerical sign or stability theorem.",
+    "Symmetry projection requires the exact orbit tangent and a regulated Hessian error budget."
+  ],
+  "boundary": "R-441 executes the unchanged fifteen-field TECT-owner contract and preregisters E. Because the common finite parent and admitted E are still absent, all three requested quantities remain BLOCKED_NOT_EVALUATED.",
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "derived": {
+    "E_admitted": false,
+    "E_preregistered": true,
+    "authority_hashes": {
+      "EXP790-MANIFEST": "07cf9be922bf16def3b88f5a4d2924a087bae1282cfc56956258293d131d30fa",
+      "R169-MANIFEST": "c6f02db72a911120b5fa7e1d259f807105d97c638f15c4b1f379d70b1c78165e",
+      "R170-MANIFEST": "364547255ad4e51d8c9ab97ad9a45937735a4a1847f2edc1cb02387d7d8dc8cb",
+      "R418-MANIFEST": "30a703de800850a40ecbcd003133b832d9bee9d49908c402b19c389ee2a312ea",
+      "R420-MANIFEST": "f70e0b8cf2fe133464cf58123ed7706e04de9042d44d9c17bef96f83cf247255",
+      "R427-MANIFEST": "5a60fecc9daac6f0a214fd6f437545a4f1f90abfdccee2401f5cd6cdf0774c0f",
+      "R434-MANIFEST": "2cdc5dfd9a52f8b8e8308c8ef9c9b344df9672b723750a7c60b590079b4bc9dc"
+    },
+    "comparison": "F_total[G_*] - F_total[E]",
+    "missing_owner_field_count": 12,
+    "reading_h_stationarity": "BLOCKED_NOT_EVALUATED",
+    "required_field_count": 15,
+    "sign": "BLOCKED_NOT_EVALUATED",
+    "symmetry_projected_transverse_stability": "BLOCKED_NOT_EVALUATED"
+  },
+  "evidence_level": "T0 / EXECUTED APPEND-ONLY TECT-OWNER INPUT-ADMISSIBILITY AUDIT; all three physical quantities BLOCKED_NOT_EVALUATED",
+  "exploration_id": "EXP-001286",
+  "manifest": "strategy/pre-a-t055-reading-h-physical-empty-bounded-test-owner-execution-manifest.json",
+  "missing_assumptions": [
+    "A hash-pinned finite-regulator F_total with a common domain containing G_* and E.",
+    "A normalized, admitted E representative with measure/algebra, boundary preparation and a no-condensate or clustering criterion.",
+    "Common reference, normalization, finite-part counterterms and renormalization conditions.",
+    "Fixed regulator/cutoff, physical volume, boundary condition and explicit limit order.",
+    "Deterministic finite-parent maps for G_* and E, a full admissible tangent and exact symmetry orbit tangent.",
+    "A transverse projector, regulated Hessian, stationarity residual budget and numerical/limit error budgets."
+  ],
+  "non_claims": [
+    "No sign for F_total[G_*] - F_total[E].",
+    "No full Reading-H stationarity theorem.",
+    "No symmetry-projected transverse stability theorem.",
+    "No identification of E with zero, P1, a Gaussian state or an equilibrium phase.",
+    "No physical-vacuum, below-empty-space, Yang-Mills, mass-gap, C6, Sector-A or Pre-A conclusion.",
+    "No thermodynamic, continuum, OS/KMS/GNS, Hamiltonian spectral or absolute-energy conclusion."
+  ],
+  "result_id": "R-441",
+  "run_kind": "primary",
+  "schema": "tect/pre-a-r434-primary/1.0",
+  "scope": {
+    "E_admitted": false,
+    "E_preregistered": true,
+    "claim_bearing": false,
+    "mass_gap_promoted": false,
+    "numeric_sign_evaluated": false,
+    "owner_input_audit_executed": true,
+    "stationarity_evaluated": false,
+    "transverse_stability_evaluated": false,
+    "yang_mills_promoted": false
+  },
+  "source_hashes": {
+    "manifest": "7f9cab0cdd8765e7103f33eb7cd3df80fdb5c12704c0c7b296dbf2f4d9f3741c",
+    "script": "2d280fbbf1d764918bf86f2c317ec95a0ff5777f995b3ed02acd55b2f8ff5dde"
+  },
+  "verdict": "BLOCKED_NOT_EVALUATED"
+}

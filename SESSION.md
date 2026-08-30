@@ -56,7 +56,21 @@ research state lives in the cowork app; it all lives in tracked files here.
    only ID-targeted portions of the large historical authorities. Emit
    `[ENTRY-OK] <date> | claims: <n> | top priority: <gate>`.
 
-3. **Pick up the work** — the live task ledger:
+3. **Recover the main-proof continuity state** when working on Pre-A or
+   Sector A. This is a pointer-only resume layer and does not replace any
+   existing proof method:
+
+   ```bash
+   python verification/scripts/check_research_continuity.py
+   ```
+
+   Read `governance/research-continuity.md` and the machine checkpoint in
+   `strategy/main-proof-program-v1.json`. A failure returns the programme to
+   Research Phase `P0-R` before new proof work. After watcher drain and push,
+   use `--strict-baseline` to verify the clean offsite baseline; that strict
+   mode is intentionally not part of the pre-commit release gate.
+
+4. **Pick up the work** — the live task ledger:
 
    ```bash
    python verification/scripts/todo.py list --status in_progress
@@ -82,7 +96,7 @@ research state lives in the cowork app; it all lives in tracked files here.
    python verification/scripts/exploration.py search --claim <ID>
    ```
 
-4. **Operator only — start the commit daemon** (Windows PowerShell), so the
+5. **Operator only — start the commit daemon** (Windows PowerShell), so the
    AI's queued commits are recorded with the maintainer signature:
 
    ```powershell
@@ -131,6 +145,8 @@ may not end with it failing.
 | `CLAUDE.md` | compatibility pointer to `AGENTS.md` |
 | `GOVERNANCE.md` | constitution: tiers, gates, registration rules |
 | `management/INDEX.md` | bounded live task, gate, result, and reader dashboard |
+| `governance/research-continuity.md` | binding pointer-only long-running research resume contract |
+| `strategy/main-proof-program-v1.json` | machine phase, lane, stopped-loop, and next-action checkpoint |
 | `CLAIMS.md` / `catalog/INDEX.md` | current generated ledgers (root `CATALOG.md` is frozen compatibility) |
 | `ROADMAP.md` | long-form staged research narrative; use the management index for live priority |
 | `theory/proof-evidence/INDEX.md` | compact proof-evidence entry and targeted lookup commands |

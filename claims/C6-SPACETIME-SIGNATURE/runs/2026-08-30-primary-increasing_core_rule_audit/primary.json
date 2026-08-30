@@ -1,0 +1,616 @@
+{
+  "assertion_count": 31,
+  "assertions": [
+    {
+      "actual": "['R-439', 'EXP-001284', False, 'INCREASING_CORE_RULE_AUDITED']",
+      "expected": "R-439/EXP-001284/false/finite",
+      "group": "provenance",
+      "name": "manifest identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'volume': 2, 'beta': '8', 'orientation': 'right', 'row_kind': 'unconditional_one_site_marginal', 'target_emission_ordinal': 0, 'tail_threshold': '4', 'row_selection_frozen_before_classification': True, 'no_gap_based_row_selection': True}",
+      "expected": "frozen V=2 beta=8 right ordinal-zero row",
+      "group": "contract",
+      "name": "selection contract",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'name': 'directed-log-ratio-cutoff-adaptive-core', 'reference_probability': 'maximum midpoint of the directed row intervals', 'phi': 'log(p_max)-log(p_i)', 'core_criterion': 'upper(phi_interval_i) < tail_threshold', 'tail_criterion': 'lower(phi_interval_i) > tail_threshold', 'ambiguous_criterion': 'otherwise', 'support_is_recomputed_per_cutoff': True, 'support_is_not_required_to_be_nested': True, 'threshold': '4'}",
+      "expected": "directed cutoff-adaptive rule",
+      "group": "contract",
+      "name": "rule contract",
+      "status": "PASS"
+    },
+    {
+      "actual": "['R-435', 'R-435', 'ORIGINAL_SOURCE_INTERVAL_CERTIFIED']",
+      "expected": "certified parent",
+      "group": "parent",
+      "name": "d=17 parent identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "(2, '8', 'right', 'unconditional_one_site_marginal', 0, '4')",
+      "expected": "(2, '8', 'right', 'unconditional_one_site_marginal', 0, '4')",
+      "group": "contract",
+      "name": "d=17 row identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "[17, 17]",
+      "expected": "17",
+      "group": "row",
+      "name": "d=17 row length",
+      "status": "PASS"
+    },
+    {
+      "actual": "[]",
+      "expected": "[]",
+      "group": "threshold",
+      "name": "d=17 no threshold ambiguity",
+      "status": "PASS"
+    },
+    {
+      "actual": "[4, 5, 6, 7, 8, 9, 10, 11, 12]",
+      "expected": "[4, 5, 6, 7, 8, 9, 10, 11, 12]",
+      "group": "support",
+      "name": "d=17 expected core",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, 1, 2, 3, 13, 14, 15, 16]",
+      "expected": "[0, 1, 2, 3, 13, 14, 15, 16]",
+      "group": "support",
+      "name": "d=17 expected tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]",
+      "expected": "[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]",
+      "group": "support",
+      "name": "d=17 partition",
+      "status": "PASS"
+    },
+    {
+      "actual": "['0.999999999999999999999999999999998598253362331379849978', '1.000000000000000000000000000000001401746637668853635314']",
+      "expected": "interval contains one",
+      "group": "normalization",
+      "name": "d=17 mass enclosure",
+      "status": "PASS"
+    },
+    {
+      "actual": "['R-436', 'R-436', 'ORIGINAL_SOURCE_INTERVAL_CERTIFIED']",
+      "expected": "certified parent",
+      "group": "parent",
+      "name": "d=18 parent identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "(2, '8', 'right', 'unconditional_one_site_marginal', 0, '4')",
+      "expected": "(2, '8', 'right', 'unconditional_one_site_marginal', 0, '4')",
+      "group": "contract",
+      "name": "d=18 row identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "[18, 18]",
+      "expected": "18",
+      "group": "row",
+      "name": "d=18 row length",
+      "status": "PASS"
+    },
+    {
+      "actual": "[]",
+      "expected": "[]",
+      "group": "threshold",
+      "name": "d=18 no threshold ambiguity",
+      "status": "PASS"
+    },
+    {
+      "actual": "[5, 6, 7, 8, 9, 10, 11, 12]",
+      "expected": "[5, 6, 7, 8, 9, 10, 11, 12]",
+      "group": "support",
+      "name": "d=18 expected core",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, 1, 2, 3, 4, 13, 14, 15, 16, 17]",
+      "expected": "[0, 1, 2, 3, 4, 13, 14, 15, 16, 17]",
+      "group": "support",
+      "name": "d=18 expected tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]",
+      "expected": "[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]",
+      "group": "support",
+      "name": "d=18 partition",
+      "status": "PASS"
+    },
+    {
+      "actual": "['0.9999999999999999999999999999999980203878807413385880892', '1.000000000000000000000000000000001979612119258806613802']",
+      "expected": "interval contains one",
+      "group": "normalization",
+      "name": "d=18 mass enclosure",
+      "status": "PASS"
+    },
+    {
+      "actual": "['R-438', 'R-438', 'ORIGINAL_SOURCE_INTERVAL_CERTIFIED']",
+      "expected": "certified parent",
+      "group": "parent",
+      "name": "d=19 parent identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "(2, '8', 'right', 'unconditional_one_site_marginal', 0, '4')",
+      "expected": "(2, '8', 'right', 'unconditional_one_site_marginal', 0, '4')",
+      "group": "contract",
+      "name": "d=19 row identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "[19, 19]",
+      "expected": "19",
+      "group": "row",
+      "name": "d=19 row length",
+      "status": "PASS"
+    },
+    {
+      "actual": "[]",
+      "expected": "[]",
+      "group": "threshold",
+      "name": "d=19 no threshold ambiguity",
+      "status": "PASS"
+    },
+    {
+      "actual": "[5, 6, 7, 8, 9, 10, 11, 12, 13]",
+      "expected": "[5, 6, 7, 8, 9, 10, 11, 12, 13]",
+      "group": "support",
+      "name": "d=19 expected core",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, 1, 2, 3, 4, 14, 15, 16, 17, 18]",
+      "expected": "[0, 1, 2, 3, 4, 14, 15, 16, 17, 18]",
+      "group": "support",
+      "name": "d=19 expected tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]",
+      "expected": "[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]",
+      "group": "support",
+      "name": "d=19 partition",
+      "status": "PASS"
+    },
+    {
+      "actual": "['0.99999999999999999999999999999999663148868801360001425546', '1.00000000000000000000000000000000336851131198534797452236']",
+      "expected": "interval contains one",
+      "group": "normalization",
+      "name": "d=19 mass enclosure",
+      "status": "PASS"
+    },
+    {
+      "actual": "[9, 8, 9]",
+      "expected": "[9, 8, 9]",
+      "group": "support",
+      "name": "adaptive support changes are recorded",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'row_contract_identity_checked': True, 'directed_threshold_classification_certified': True, 'cutoff_adaptive_core_rule_defined': True, 'all_coordinates_unambiguous': True, 'fixed_support_reuse_closed': False, 'nested_core_certified': False, 'core_cardinality_monotonicity_certified': False, 'increasing_core_tail_modulus_closed': False, 'cutoff_uniform_coarse_schur_closed': False, 'volume_uniform_coarse_schur_closed': False, 'phase_uniform_coarse_schur_closed': False, 'exhaustion_uniform_coarse_schur_closed': False, 'common_core_closed': False, 'kms_gns_gap_closed': False, 'continuum_closed': False, 'c6_closed': False, 'sector_a_closed': False, 'pre_a_closed': False, 'no_new_negative_result': True, 'no_tier_change': True, 'no_pdf': True}",
+      "expected": "all promotion flags false",
+      "group": "scope",
+      "name": "nonpromotion scope",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'row_contract_identity_checked': True, 'directed_threshold_classification_certified': True, 'cutoff_adaptive_core_rule_defined': True, 'all_coordinates_unambiguous': True, 'fixed_support_reuse_closed': False, 'nested_core_certified': False, 'core_cardinality_monotonicity_certified': False, 'increasing_core_tail_modulus_closed': False, 'cutoff_uniform_coarse_schur_closed': False, 'volume_uniform_coarse_schur_closed': False, 'phase_uniform_coarse_schur_closed': False, 'exhaustion_uniform_coarse_schur_closed': False, 'common_core_closed': False, 'kms_gns_gap_closed': False, 'continuum_closed': False, 'c6_closed': False, 'sector_a_closed': False, 'pre_a_closed': False, 'no_new_negative_result': True, 'no_tier_change': True, 'no_pdf': True}",
+      "expected": "finite adaptive rule certified",
+      "group": "scope",
+      "name": "finite rule flags",
+      "status": "PASS"
+    },
+    {
+      "actual": "[False, False]",
+      "expected": "[False, False]",
+      "group": "scope",
+      "name": "no silent nesting claim",
+      "status": "PASS"
+    }
+  ],
+  "assumptions": [
+    "The R-435, R-436 and R-438 primary rows are directed interval authorities for the same V=2, beta=8, right-oriented unconditional ordinal-zero rule.",
+    "The maximum midpoint probability is selected only from each already fixed row and is not chosen from the resulting gap or support.",
+    "The stored row endpoints have sufficient precision for directed Decimal logarithm classification; every margin is checked against the strict threshold inequalities.",
+    "The expected supports in this manifest are test oracles copied from the parent source contracts, not derived claims about a limit.",
+    "An adaptive finite support rule may be non-nested and may have non-monotone cardinality; neither property is silently inferred from this audit."
+  ],
+  "boundary": "R-439 certifies one deterministic cutoff-adaptive threshold-four classification on the three finite V=2 rows. The supports are not asserted to be nested or uniform, and this result supplies no common-core, physical or Yang-Mills conclusion.",
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "derived": {
+    "all_coordinates_unambiguous": true,
+    "cases": [
+      {
+        "ambiguous": [],
+        "core": [
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "cutoff_dimension": 17,
+        "maximum_index": 8,
+        "parent_manifest": "strategy/pre-a-cp1-st8-q3lock-original-source-interval-d17-manifest.json",
+        "parent_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-primary-original_source_interval_d17/primary.json",
+        "phi_intervals": [
+          [
+            "21.3144847551582598845083661648434698486589447107852148591397863182148337784124593428365649",
+            "21.3144847551582598845083669624179686178505119973546565208779926426388555261848685896575552"
+          ],
+          [
+            "19.5865104749038026524819525964211876145793539123180526082794580443247065882812624120699825",
+            "19.5865104749038026524819527381054367729221689887455330922265792216573353615484554489451747"
+          ],
+          [
+            "12.6761787393892161533142869498569850546026116431904606185037320126729087963169491424979785",
+            "12.6761787393892161533142869499983079721424486008073170619426183883722374153640151750479230"
+          ],
+          [
+            "6.48398157276990606250316899632690659895641880610694983889302271652772136813642940940139964",
+            "6.48398157276990606250316899632719888909543843144032394281860218056724557815578679725067338"
+          ],
+          [
+            "2.92858213784266684232837994237478226082135696757357196097259915648276772275059259167457901",
+            "2.92858213784266684232837994237479376389959336846019873761743516706981833194669956481159000"
+          ],
+          [
+            "1.04470288692486526240378793482595287195026726795655174667648060266176246152163969999877446",
+            "1.04470288692486526240378793482595737223357858477595537783793253761470492888201067997960146"
+          ],
+          [
+            "0.23787500378248042661956193073853471693067923480986560671239036795178520011719465005415223",
+            "0.23787500378248042661956193073853852216765115030838409792441341815918090317211192986794805"
+          ],
+          [
+            "0.01758180553777533102635177864421609605079955214727668294242779460519227574146207508678475",
+            "0.01758180553777533102635177864421979053393425190664000216802675479537740091147420126754989"
+          ],
+          [
+            "-1.84332536561903398464726111741341502528429626697883567877E-33",
+            "1.84332536561903398464726111741341502528429626697883567877E-33"
+          ],
+          [
+            "0.01758180553777533102635177864421609605079955214727668294242779460519227574146207508678475",
+            "0.01758180553777533102635177864421979053393425190664000216802675479537740091147420126754989"
+          ],
+          [
+            "0.23787500378248042661956193073853471693067923480986560671239036795178520011719465005415223",
+            "0.23787500378248042661956193073853852216765115030838409792441341815918090317211192986794805"
+          ],
+          [
+            "1.04470288692486526240378793482595287195026726795655174667648060266176246152163969999877446",
+            "1.04470288692486526240378793482595737223357858477595537783793253761470492888201067997960146"
+          ],
+          [
+            "2.92858213784266684232837994237478226082135696757357196097259915648276772275059259167457901",
+            "2.92858213784266684232837994237479376389959336846019873761743516706981833194669956481159000"
+          ],
+          [
+            "6.48398157276990606250316899632690659895641880610694983889302271652772136813642940940139964",
+            "6.48398157276990606250316899632719888909543843144032394281860218056724557815578679725067338"
+          ],
+          [
+            "12.6761787393892161533142869498569850546026116431904606185037320126729087963169491424979785",
+            "12.6761787393892161533142869499983079721424486008073170619426183883722374153640151750479230"
+          ],
+          [
+            "19.5865104749038026524819525964211876145793539123180526082794580443247065882812624120699825",
+            "19.5865104749038026524819527381054367729221689887455330922265792216573353615484554489451747"
+          ],
+          [
+            "21.3144847551582598845083661648434698486589447107852148591397863182148337784124593428365649",
+            "21.3144847551582598845083669624179686178505119973546565208779926426388555261848685896575552"
+          ]
+        ],
+        "row_mass_lower": "0.999999999999999999999999999999998598253362331379849978",
+        "row_mass_upper": "1.000000000000000000000000000000001401746637668853635314",
+        "tail": [
+          0,
+          1,
+          2,
+          3,
+          13,
+          14,
+          15,
+          16
+        ],
+        "tail_mass_lower": "0.000571706913596423407154689757196932642659342399849978",
+        "tail_mass_upper": "0.000571706913596423407154689757197593089524136053635314"
+      },
+      {
+        "ambiguous": [],
+        "core": [
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "cutoff_dimension": 18,
+        "maximum_index": 8,
+        "parent_manifest": "strategy/pre-a-cp1-st8-q3lock-original-source-interval-d18-manifest.json",
+        "parent_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-primary-original_source_interval_d18/primary.json",
+        "phi_intervals": [
+          [
+            "22.5412313583118609726341509247832518003648884237935647266263217424721401025336833689832130",
+            "22.5412313583118609726341546593285745697742429880412547940399929991758443347309574390025334"
+          ],
+          [
+            "21.1933173623703002427635570769168118567169097524747606065933471753032352447626610995034506",
+            "21.1933173623703002427635580470829793306674060550680767791509526263823196664818598961567780"
+          ],
+          [
+            "15.2302616990215146328075312933937901604126517401531739218576963435034684308106694643530831",
+            "15.2302616990215146328075312958891015455995287335999259524372411313170695158424836930804348"
+          ],
+          [
+            "8.20302751153639898909035930253505915782205898492789473176984959666901456201544404497106446",
+            "8.20302751153639898909035930253727801553356405257788030929975134157834651722523620783969073"
+          ],
+          [
+            "4.01614518403890263253835654820939389960044087111124446282482327486848021286718514804964501",
+            "4.01614518403890263253835654820943210817397359087394884132358583761386103007406565424925276"
+          ],
+          [
+            "1.64177100855748937382776934838289396383179444310815348378349957059591182612550851643914303",
+            "1.64177100855748937382776934838290166062857984583131586242223406950407043231223665339665981"
+          ],
+          [
+            "0.48689670711924111571239376530439259644443995808264726726676661851534061643499815758320481",
+            "0.48689670711924111571239376530439814864070056537089075610297572825369918414101656488739557"
+          ],
+          [
+            "0.07246511637760289894315341540834884095762739802064679657392010519578200956347401848206360",
+            "0.07246511637760289894315341540835405840000998129085480647657219489977997729270530043432356"
+          ],
+          [
+            "-2.58593692974048824212313683905938755232788439205638930687E-33",
+            "2.58593692974048824212313683905938755232788439205638930687E-33"
+          ],
+          [
+            "-2.58593692974048824212313683905938755232788439205638930687E-33",
+            "2.58593692974048824212313683905938755232788439205638930687E-33"
+          ],
+          [
+            "0.07246511637760289894315341540834884095762739802064679657392010519578200956347401848206360",
+            "0.07246511637760289894315341540835405840000998129085480647657219489977997729270530043432356"
+          ],
+          [
+            "0.48689670711924111571239376530439259644443995808264726726676661851534061643499815758320481",
+            "0.48689670711924111571239376530439814864070056537089075610297572825369918414101656488739557"
+          ],
+          [
+            "1.64177100855748937382776934838289396383179444310815348378349957059591182612550851643914303",
+            "1.64177100855748937382776934838290166062857984583131586242223406950407043231223665339665981"
+          ],
+          [
+            "4.01614518403890263253835654820939389960044087111124446282482327486848021286718514804964501",
+            "4.01614518403890263253835654820943210817397359087394884132358583761386103007406565424925276"
+          ],
+          [
+            "8.20302751153639898909035930253505915782205898492789473176984959666901456201544404497106446",
+            "8.20302751153639898909035930253727801553356405257788030929975134157834651722523620783969073"
+          ],
+          [
+            "15.2302616990215146328075312933937901604126517401531739218576963435034684308106694643530831",
+            "15.2302616990215146328075312958891015455995287335999259524372411313170695158424836930804348"
+          ],
+          [
+            "21.1933173623703002427635570769168118567169097524747606065933471753032352447626610995034506",
+            "21.1933173623703002427635580470829793306674060550680767791509526263823196664818598961567780"
+          ],
+          [
+            "22.5412313583118609726341509247832518003648884237935647266263217424721401025336833689832130",
+            "22.5412313583118609726341546593285745697742429880412547940399929991758443347309574390025334"
+          ]
+        ],
+        "row_mass_lower": "0.9999999999999999999999999999999980203878807413385880892",
+        "row_mass_upper": "1.000000000000000000000000000000001979612119258806613802",
+        "tail": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          13,
+          14,
+          15,
+          16,
+          17
+        ],
+        "tail_mass_lower": "0.0066373880908657931744010094904059759782164705385880892",
+        "tail_mass_upper": "0.006637388090865793174401009490407088902181074806613802"
+      },
+      {
+        "ambiguous": [],
+        "core": [
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "cutoff_dimension": 19,
+        "maximum_index": 9,
+        "parent_manifest": "strategy/pre-a-cp1-st8-q3lock-original-source-interval-d19-manifest.json",
+        "parent_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-primary-original_source_interval_d19/primary.json",
+        "phi_intervals": [
+          [
+            "24.5078843481941583177148307822068153360680230536388485595067814353300326450332398418607116",
+            "24.5078843481941583177148748877358211122073460539666993806658219117409498572009082026460834"
+          ],
+          [
+            "23.2644057724738596943781583167039002057090341957001539545969406914445770302598380958002483",
+            "23.2644057724738596943781710358264498629826235909418335108194880896092965917769137973467229"
+          ],
+          [
+            "17.6949916066501419848651609618255305242778067152949815267024242433358717647151308249198082",
+            "17.6949916066501419848651610103199071676006362071630472551164547643715505119646659629290128"
+          ],
+          [
+            "10.1400523131417917129338890596243518021238744111152954091771725938998416780918567210692232",
+            "10.1400523131417917129338890596497472123468384293191326129530403985924677480895367502025597"
+          ],
+          [
+            "5.29173135896886920391362130096825256595615815052361091689778395138751837721098163712271858",
+            "5.29173135896886920391362130096845938320390528022813013108711245606796116720906176556125812"
+          ],
+          [
+            "2.40294733417679151142473828412695620368736122319039838828999480641303349238030069976391831",
+            "2.40294733417679151142473828412697502015582160766006506628658406857667901070759264902426150"
+          ],
+          [
+            "0.85995422894424580543560180705773256314942792570123072975699464170317462528198274021226935",
+            "0.85995422894424580543560180705774266984499662066183877455468249755438529764302655332614434"
+          ],
+          [
+            "0.19587653564386147242998081656899015542133658116486867916195592536931335046636877324402088",
+            "0.19587653564386147242998081656899911318377581445160558877452655688534019733617866576050301"
+          ],
+          [
+            "0.01514400157326441270186116995379989997842877216304545943062185440375167041733443304328464",
+            "0.01514400157326441270186116995380865622748981503917648645232348902223899588221989598892644"
+          ],
+          [
+            "-4.37047988453651887761301016352813767451602597807636078489E-33",
+            "4.37047988453651887761301016352813767451602597807636078489E-33"
+          ],
+          [
+            "0.01514400157326441270186116995379989997842877216304545943062185440375167041733443304328464",
+            "0.01514400157326441270186116995380865622748981503917648645232348902223899588221989598892644"
+          ],
+          [
+            "0.19587653564386147242998081656899015542133658116486867916195592536931335046636877324402088",
+            "0.19587653564386147242998081656899911318377581445160558877452655688534019733617866576050301"
+          ],
+          [
+            "0.85995422894424580543560180705773256314942792570123072975699464170317462528198274021226935",
+            "0.85995422894424580543560180705774266984499662066183877455468249755438529764302655332614434"
+          ],
+          [
+            "2.40294733417679151142473828412695620368736122319039838828999480641303349238030069976391831",
+            "2.40294733417679151142473828412697502015582160766006506628658406857667901070759264902426150"
+          ],
+          [
+            "5.29173135896886920391362130096825256595615815052361091689778395138751837721098163712271858",
+            "5.29173135896886920391362130096845938320390528022813013108711245606796116720906176556125812"
+          ],
+          [
+            "10.1400523131417917129338890596243518021238744111152954091771725938998416780918567210692232",
+            "10.1400523131417917129338890596497472123468384293191326129530403985924677480895367502025597"
+          ],
+          [
+            "17.6949916066501419848651609618255305242778067152949815267024242433358717647151308249198082",
+            "17.6949916066501419848651610103199071676006362071630472551164547643715505119646659629290128"
+          ],
+          [
+            "23.2644057724738596943781583167039002057090341957001539545969406914445770302598380958002483",
+            "23.2644057724738596943781710358264498629826235909418335108194880896092965917769137973467229"
+          ],
+          [
+            "24.5078843481941583177148307822068153360680230536388485595067814353300326450332398418607116",
+            "24.5078843481941583177148748877358211122073460539666993806658219117409498572009082026460834"
+          ]
+        ],
+        "row_mass_lower": "0.99999999999999999999999999999999663148868801360001425546",
+        "row_mass_upper": "1.00000000000000000000000000000000336851131198534797452236",
+        "tail": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          14,
+          15,
+          16,
+          17,
+          18
+        ],
+        "tail_mass_lower": "0.00179508329459816834273198468146310299253817340001425546",
+        "tail_mass_upper": "0.00179508329459816834273198468146488193998707574797452236"
+      }
+    ],
+    "core_cardinalities": [
+      9,
+      8,
+      9
+    ],
+    "core_cardinality_monotone": false,
+    "cutoff_adaptive_core_rule_defined": true,
+    "increasing_core_tail_modulus_closed": false,
+    "raw_index_nested": false,
+    "rule": {
+      "ambiguous_criterion": "otherwise",
+      "core_criterion": "upper(phi_interval_i) < tail_threshold",
+      "name": "directed-log-ratio-cutoff-adaptive-core",
+      "phi": "log(p_max)-log(p_i)",
+      "reference_probability": "maximum midpoint of the directed row intervals",
+      "support_is_not_required_to_be_nested": true,
+      "support_is_recomputed_per_cutoff": true,
+      "tail_criterion": "lower(phi_interval_i) > tail_threshold",
+      "threshold": "4"
+    },
+    "selection_contract": {
+      "beta": "8",
+      "no_gap_based_row_selection": true,
+      "orientation": "right",
+      "row_kind": "unconditional_one_site_marginal",
+      "row_selection_frozen_before_classification": true,
+      "tail_threshold": "4",
+      "target_emission_ordinal": 0,
+      "volume": 2
+    }
+  },
+  "evidence_level": "T0 / EXECUTED FINITE CUTOFF-ADAPTIVE SUPPORT-RULE AUDIT; NO UNIFORM OR PHYSICAL PROMOTION",
+  "exploration_id": "EXP-001284",
+  "manifest": "strategy/pre-a-cp1-st8-q3lock-increasing-core-rule-audit-manifest.json",
+  "missing_assumptions": [
+    "An analytic cutoff-, volume-, phase- and exhaustion-uniform tail modulus for the adaptive supports.",
+    "Nested or transported embeddings of the cutoff-dependent cores into one common Q3 domain.",
+    "Residual-reuse closure and a common unbounded Hamiltonian core with OS/KMS/GNS identification.",
+    "A physical-sector reference, physical-empty comparison and any C6 or Sector-A transfer."
+  ],
+  "non_claims": [
+    "No cutoff-, volume-, phase- or exhaustion-uniform tail modulus.",
+    "No nested common core, residual-reuse closure, OS/KMS/GNS reconstruction or sector gap.",
+    "No physical-empty energy sign, Reading-H stationarity or symmetry-projected transverse stability.",
+    "No C6, Sector-A, Pre-A, Yang-Mills or mass-gap conclusion."
+  ],
+  "result_id": "R-439",
+  "run_kind": "primary",
+  "schema": "tect/pre-a-r439-primary/1.0",
+  "source_hashes": {
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-primary-original_source_interval_d17/primary.json": "f65f1eaea3aa9458f9a6a9abaec2515471b902de8c8451bca59c7292f9750334",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-primary-original_source_interval_d18/primary.json": "2aff2ff627e938c90fd814f86b12aba9daa15c57a2197dfa8f41eba525c325aa",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-primary-original_source_interval_d19/primary.json": "abbcdae81d9b671842c65f807edce48c41ee244971d8db362a07e5256c74714a",
+    "manifest": "c6d2ba2a9bf2167e792c37c4715252ef97c92ffd3f9ed3e8ed8c2260a38ece25",
+    "script": "7071c7d6bad15235a2a47ade05cf3e68cb11a01457e2560933a87a753dae471c",
+    "strategy/pre-a-cp1-st8-q3lock-original-source-interval-d17-manifest.json": "18804741ebb52aaef8b56968e520383900c4ac3b2d064b57b72c738cb32f29a8",
+    "strategy/pre-a-cp1-st8-q3lock-original-source-interval-d18-manifest.json": "494af4d86713b0a0354d1e7ef11441a16a0c72b556d3c1fd922fefc1dace38fa",
+    "strategy/pre-a-cp1-st8-q3lock-original-source-interval-d19-manifest.json": "19140b5edbcc8a72810ae62bb9219a5130e8566c635ec45e36ecccb8c2cbbf08"
+  },
+  "verdict": "INCREASING_CORE_RULE_AUDITED"
+}

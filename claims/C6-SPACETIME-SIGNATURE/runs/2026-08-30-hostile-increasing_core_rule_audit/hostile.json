@@ -1,0 +1,126 @@
+{
+  "assertion_count": 9,
+  "assertions": [
+    {
+      "actual": "['R-439', False, 'INCREASING_CORE_RULE_AUDITED']",
+      "expected": "R-439 finite non-claiming baseline",
+      "group": "scope",
+      "name": "baseline finite scope",
+      "status": "PASS"
+    },
+    {
+      "actual": "rejected",
+      "expected": "tail threshold must remain four",
+      "group": "adversarial",
+      "name": "threshold substitution",
+      "status": "PASS"
+    },
+    {
+      "actual": "rejected",
+      "expected": "rule threshold must match selection",
+      "group": "adversarial",
+      "name": "rule threshold drift",
+      "status": "PASS"
+    },
+    {
+      "actual": "rejected",
+      "expected": "support must be recomputed per cutoff",
+      "group": "adversarial",
+      "name": "fixed-support substitution",
+      "status": "PASS"
+    },
+    {
+      "actual": "rejected",
+      "expected": "declared finite support oracle is immutable",
+      "group": "adversarial",
+      "name": "support oracle alteration",
+      "status": "PASS"
+    },
+    {
+      "actual": "rejected",
+      "expected": "ambiguous threshold coordinates cannot be certified",
+      "group": "adversarial",
+      "name": "ambiguity admission",
+      "status": "PASS"
+    },
+    {
+      "actual": "rejected",
+      "expected": "nesting remains open",
+      "group": "adversarial",
+      "name": "nested-core promotion",
+      "status": "PASS"
+    },
+    {
+      "actual": "rejected",
+      "expected": "uniform tail modulus remains open",
+      "group": "adversarial",
+      "name": "uniform-tail promotion",
+      "status": "PASS"
+    },
+    {
+      "actual": "rejected",
+      "expected": "result is claim-nonbearing",
+      "group": "adversarial",
+      "name": "claim promotion",
+      "status": "PASS"
+    }
+  ],
+  "boundary": "R-439 certifies one deterministic cutoff-adaptive threshold-four classification on the three finite V=2 rows. The supports are not asserted to be nested or uniform, and this result supplies no common-core, physical or Yang-Mills conclusion.",
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "evidence_level": "T0 / EXECUTED HOSTILE FINITE-SCOPE FIREWALL",
+  "exploration_id": "EXP-001284",
+  "manifest": "strategy/pre-a-cp1-st8-q3lock-increasing-core-rule-audit-manifest.json",
+  "mutations": [
+    {
+      "name": "threshold substitution",
+      "reason": "tail threshold must remain four"
+    },
+    {
+      "name": "rule threshold drift",
+      "reason": "rule threshold must match selection"
+    },
+    {
+      "name": "fixed-support substitution",
+      "reason": "support must be recomputed per cutoff"
+    },
+    {
+      "name": "support oracle alteration",
+      "reason": "declared finite support oracle is immutable"
+    },
+    {
+      "name": "ambiguity admission",
+      "reason": "ambiguous threshold coordinates cannot be certified"
+    },
+    {
+      "name": "nested-core promotion",
+      "reason": "nesting remains open"
+    },
+    {
+      "name": "uniform-tail promotion",
+      "reason": "uniform tail modulus remains open"
+    },
+    {
+      "name": "claim promotion",
+      "reason": "result is claim-nonbearing"
+    }
+  ],
+  "non_claims": [
+    "No cutoff-, volume-, phase- or exhaustion-uniform tail modulus.",
+    "No nested common core, residual-reuse closure, OS/KMS/GNS reconstruction or sector gap.",
+    "No physical-empty energy sign, Reading-H stationarity or symmetry-projected transverse stability.",
+    "No C6, Sector-A, Pre-A, Yang-Mills or mass-gap conclusion."
+  ],
+  "result_id": "R-439",
+  "run_kind": "hostile",
+  "schema": "tect/pre-a-r439-hostile/1.0",
+  "scope": {
+    "hostile_mutations_rejected": true,
+    "physical_promotion_rejected": true,
+    "uniform_promotion_rejected": true
+  },
+  "source_hashes": {
+    "manifest": "c6d2ba2a9bf2167e792c37c4715252ef97c92ffd3f9ed3e8ed8c2260a38ece25",
+    "script": "235902eee1e60650b1b363c89d40e3ee156f931ef92e69195a3754fe837989f6"
+  },
+  "verdict": "HOSTILE_MUTATIONS_REJECTED"
+}

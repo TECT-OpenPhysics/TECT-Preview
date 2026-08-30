@@ -1,0 +1,161 @@
+{
+  "assertion_count": 15,
+  "assertions": [
+    {
+      "actual": "['R-432', 'EXP-001277', False, 'ROW_INDEX_CONTRACT_CORRECTED']",
+      "expected": "R-432/EXP-001277/false/ROW_INDEX_CONTRACT_CORRECTED",
+      "group": "provenance",
+      "name": "manifest identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'generator': 'pre_a_cp1_st8_q3lock_preconditioned_schur_cutoff_stress.conditional_rows', 'orientation': 'right', 'order': ['emission ordinal 0: radius-0 unconditional law', 'emission ordinal 1: radius-1 parent coordinate 0', 'emission ordinal k+1: radius-1 parent coordinate k'], 'target_emission_ordinal': 7, 'target_parent_coordinate': 6, 'historical_subtract_one_ordinal': 6, 'comparison_tolerance': '5e-7', 'r426_direct_reference': '5.36318835004781', 'r422_reference': '5.363184967163699', 'expected_corrected_r426_mismatch': '3.382884111502449e-06'}",
+      "expected": "ordinal 7 -> parent 6; tolerance 5e-7",
+      "group": "row contract",
+      "name": "fixed emission contract",
+      "status": "PASS"
+    },
+    {
+      "actual": "[]",
+      "expected": "all R-432 artifacts",
+      "group": "provenance",
+      "name": "artifacts present",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'codes/foundations/pre_a_cp1_st8_q3lock_fixed_row_ordinal_audit.py': 'c27c215b2ca16df60955cb4e37baf12f35de0fffb41be7e14759db46dad0cbf0', 'codes/foundations/pre_a_cp1_st8_q3lock_fixed_row_ordinal_audit_independent.py': '49c664a369f8471120c4369339e014ceb6688e905999717dca4861f873e19ab6', 'codes/foundations/pre_a_cp1_st8_q3lock_fixed_row_ordinal_audit_hostile.py': '35d0d1f3fb8ee607626d950fef3ca737635abb58b3aab37771cbc67c16c85f3f', 'verification/lean/Tect/R432.lean': '588925f19dc8718187f8d5469da7fa3363a92efabc2b25055cfc6ef20085f543'}",
+      "expected": "distinct R-432 source hashes",
+      "group": "provenance",
+      "name": "artifact hashes distinct",
+      "status": "PASS"
+    },
+    {
+      "actual": "['emission_ordinal_target', 'parent_coordinate_target', 'r426_failure_margin', 'row_correction_scope']",
+      "expected": "declared theorem markers",
+      "group": "Lean",
+      "name": "Lean markers",
+      "status": "PASS"
+    },
+    {
+      "actual": "forbidden tokens absent",
+      "expected": "clean finite scalar file",
+      "group": "Lean",
+      "name": "Lean policy",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-432 PRIMARY 13/13 row-contract PASS target_gap=5.36318835004781 wrong_ordinal_gap=6.094733955638 R426_mismatch=3.38288411150245e-06\nR-432 PRIMARY SELFTEST: PASS (fixed conditional-row ordinal)",
+      "expected": "exit 0 and output",
+      "group": "executables",
+      "name": "run pre_a_cp1_st8_q3lock_fixed_row_ordinal_audit.py",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-432 INDEPENDENT 10/10 row-contract PASS target_gap=5.36318835004781 wrong_ordinal_gap=6.094733955638",
+      "expected": "exit 0 and output",
+      "group": "executables",
+      "name": "run pre_a_cp1_st8_q3lock_fixed_row_ordinal_audit_independent.py",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-432 HOSTILE PASS 7/7 invalid row/status mutations rejected",
+      "expected": "exit 0 and output",
+      "group": "executables",
+      "name": "run pre_a_cp1_st8_q3lock_fixed_row_ordinal_audit_hostile.py",
+      "status": "PASS"
+    },
+    {
+      "actual": "",
+      "expected": "exit 0 without errors",
+      "group": "Lean",
+      "name": "Lean compile",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'target_emission_ordinal': 7, 'target_parent_coordinate': 6, 'corrected_direct_residual_gap': 5.36318835004781, 'r422_mismatch': 3.382884111502449e-06, 'original_source_interval_certified': False}",
+      "expected": "correct target and preserved finite mismatch",
+      "group": "primary",
+      "name": "primary corrected row",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'historical_wrong_row_gap': 6.094733955638003, 'r430_independent_gap': 6.094733971033106}",
+      "expected": "ordinal 6 is a different row",
+      "group": "row correction",
+      "name": "primary historical lane diagnosis",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'target_emission_ordinal': 7, 'target_parent_coordinate': 6, 'target_gap': 5.36318835004781, 'r422_mismatch': 3.382884111502449e-06, 'original_source_interval_certified': False}",
+      "expected": "independent target reproduction",
+      "group": "independent",
+      "name": "independent corrected row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[5.36318835004781, 5.36318835004781]",
+      "expected": "within 5E-7",
+      "group": "independence",
+      "name": "independent and primary agreement",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'all_mutations_rejected': True, 'mutations': [{'name': 'select ordinal 6 as target', 'reason': 'target ordinal or parent mapping changed', 'status': 'REJECTED'}, {'name': 'map target to parent 5', 'reason': 'target ordinal or parent mapping changed', 'status': 'REJECTED'}, {'name': 'alias historical subtract-one with target', 'reason': 'historical subtract-one row aliases target', 'status': 'REJECTED'}, {'name': 'relax comparison tolerance', 'reason': 'comparison tolerance changed', 'status': 'REJECTED'}, {'name': 'promote claim-bearing status', 'reason': 'identity mutation accepted', 'status': 'REJECTED'}, {'name': 'promote original-source interval', 'reason': 'source or tier scope promoted', 'status': 'REJECTED'}, {'name': 'drop unconditional ordinal from order', 'reason': 'emission order contract changed', 'status': 'REJECTED'}], 'no_tier_change': True, 'original_source_interval_certified': False, 'residual_reuse_closed': False}",
+      "expected": "all ordinal/status/promotion mutations rejected",
+      "group": "hostile",
+      "name": "hostile controls",
+      "status": "PASS"
+    }
+  ],
+  "assumptions": [
+    "The R-426 failure manifest's conditional_row_index is an emission ordinal, not an array index with an additional subtract-one conversion.",
+    "The conditional_rows emission order is the declared radius-0 row followed by radius-1 rows in parent-coordinate order for the right orientation.",
+    "The R-419/R-416/R-402 finite source formulas and fixed tail split are the unchanged finite model under audit.",
+    "The direct residual gap is recomputed from the selected finite row with the unchanged 5e-7 comparison tolerance."
+  ],
+  "boundary": "R-432 repairs the finite row-ordinal interpretation and removes the R-430 independent lane's subtract-one value from the target comparison. It preserves the R-426 route-local residual-reuse failure and leaves the original-source interval, common-core, physical-sector and continuum gates open.",
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "derived": {
+    "corrected_direct_residual_gap": 5.36318835004781,
+    "historical_wrong_row_gap": 6.094733955638003,
+    "lean": "PASS",
+    "original_source_interval_certified": false,
+    "outputs": {
+      "lean": "",
+      "pre_a_cp1_st8_q3lock_fixed_row_ordinal_audit.py": "R-432 PRIMARY 13/13 row-contract PASS target_gap=5.36318835004781 wrong_ordinal_gap=6.094733955638 R426_mismatch=3.38288411150245e-06\nR-432 PRIMARY SELFTEST: PASS (fixed conditional-row ordinal)",
+      "pre_a_cp1_st8_q3lock_fixed_row_ordinal_audit_hostile.py": "R-432 HOSTILE PASS 7/7 invalid row/status mutations rejected",
+      "pre_a_cp1_st8_q3lock_fixed_row_ordinal_audit_independent.py": "R-432 INDEPENDENT 10/10 row-contract PASS target_gap=5.36318835004781 wrong_ordinal_gap=6.094733955638"
+    },
+    "r422_mismatch": 3.382884111502449e-06,
+    "r426_route_failure_preserved": true,
+    "residual_reuse_closed": false,
+    "target_emission_ordinal": 7,
+    "target_parent_coordinate": 6
+  },
+  "evidence_level": "T0 / EXECUTED FINITE ROW-CONTRACT CORRECTION AND REPRODUCTION; NO ORIGINAL-SOURCE INTERVAL CERTIFICATION",
+  "exploration_id": "EXP-001277",
+  "manifest": "strategy/pre-a-cp1-st8-q3lock-fixed-row-ordinal-audit-manifest.json",
+  "missing_assumptions": [
+    "Validated interval or ball enclosures for the original coordinate and 256-dimensional Hamiltonian eigensystems.",
+    "A propagated original-source enclosure for Gibbs normalization, row selection, conductance and residual eigenvalue.",
+    "A basis-independent analytic common-core estimate uniform in cutoff, volume, phase and exhaustion.",
+    "History transfer, OS/KMS/GNS identification, physical-sector selection and continuum control."
+  ],
+  "non_claims": [
+    "No interval or exact certification of the original Hamiltonian, coordinate eigenbasis or Gibbs weights.",
+    "No closure of R-426 residual reuse for the original unrounded source.",
+    "No cutoff-, volume-, phase- or exhaustion-uniform Schur or residual estimate.",
+    "No common core, history transfer, OS/KMS/GNS reconstruction, sector gap or continuum limit.",
+    "No C6, Sector-A, Pre-A, Yang-Mills or mass-gap conclusion."
+  ],
+  "result_id": "R-432",
+  "run_kind": "integrated",
+  "schema": "tect/pre-a-r432-integrated/1.0",
+  "source_hashes": {
+    "codes/foundations/pre_a_cp1_st8_q3lock_fixed_row_ordinal_audit.py": "c27c215b2ca16df60955cb4e37baf12f35de0fffb41be7e14759db46dad0cbf0",
+    "codes/foundations/pre_a_cp1_st8_q3lock_fixed_row_ordinal_audit_hostile.py": "35d0d1f3fb8ee607626d950fef3ca737635abb58b3aab37771cbc67c16c85f3f",
+    "codes/foundations/pre_a_cp1_st8_q3lock_fixed_row_ordinal_audit_independent.py": "49c664a369f8471120c4369339e014ceb6688e905999717dca4861f873e19ab6",
+    "verification/lean/Tect/R432.lean": "588925f19dc8718187f8d5469da7fa3363a92efabc2b25055cfc6ef20085f543"
+  },
+  "verdict": "ROW_INDEX_CONTRACT_CORRECTED"
+}

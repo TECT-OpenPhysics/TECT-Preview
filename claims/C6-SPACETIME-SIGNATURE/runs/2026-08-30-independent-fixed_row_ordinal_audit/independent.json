@@ -1,0 +1,128 @@
+{
+  "assertion_count": 10,
+  "assertions": [
+    {
+      "actual": "['R-432', 'EXP-001277', False]",
+      "expected": "R-432/EXP-001277/false",
+      "group": "provenance",
+      "name": "manifest identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "[7, 6, 17]",
+      "expected": "ordinal 7 -> parent 6",
+      "group": "row contract",
+      "name": "target ordinal",
+      "status": "PASS"
+    },
+    {
+      "actual": "[5.622948645880553e-13, 1.0]",
+      "expected": "positive normalized target row",
+      "group": "source",
+      "name": "row normalization",
+      "status": "PASS"
+    },
+    {
+      "actual": "[7, 9]",
+      "expected": "[7, 9]",
+      "group": "tail split",
+      "name": "target split",
+      "status": "PASS"
+    },
+    {
+      "actual": "5.36318835004781",
+      "expected": ">0",
+      "group": "residual",
+      "name": "target gap positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "[5.36318835004781, 5.36318835004781]",
+      "expected": "within 5e-07",
+      "group": "residual",
+      "name": "target gap matches R-426",
+      "status": "PASS"
+    },
+    {
+      "actual": "3.382884111502449e-06",
+      "expected": ">5e-07",
+      "group": "R-422 reuse",
+      "name": "R-422 mismatch",
+      "status": "PASS"
+    },
+    {
+      "actual": "[6, 6.094733955638003, 5.36318835004781]",
+      "expected": "ordinal 6 is not target 7",
+      "group": "row correction",
+      "name": "subtract-one row differs",
+      "status": "PASS"
+    },
+    {
+      "actual": "[6.094733971033106, 6.094733955638003]",
+      "expected": "within 5e-07",
+      "group": "row correction",
+      "name": "historical lane maps to wrong ordinal",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'row_ordinal_contract_corrected': True, 'corrected_target_reconstructed': True, 'historical_subtract_one_identified': True, 'r426_direct_gap_reproduced': True, 'r422_mismatch_reproduced': True, 'r430_independent_sensitivity_rejected_for_target': True, 'original_source_interval_certified': False, 'exact_original_hamiltonian_certified': False, 'residual_reuse_closed': False, 'r426_route_failure_preserved': True, 'cutoff_uniform_coarse_schur_closed': False, 'volume_uniform_coarse_schur_closed': False, 'phase_uniform_coarse_schur_closed': False, 'exhaustion_uniform_coarse_schur_closed': False, 'global_poincare_closed': False, 'common_core_closed': False, 'hamiltonian_os_identification_closed': False, 'kms_gns_gap_closed': False, 'continuum_closed': False, 'c6_closed': False, 'sector_a_closed': False, 'pre_a_closed': False, 'no_new_negative_result': True, 'no_tier_change': True, 'no_pdf': True}",
+      "expected": "no source interval or tier change",
+      "group": "scope",
+      "name": "source boundary retained",
+      "status": "PASS"
+    }
+  ],
+  "assumptions": [
+    "The R-426 failure manifest's conditional_row_index is an emission ordinal, not an array index with an additional subtract-one conversion.",
+    "The conditional_rows emission order is the declared radius-0 row followed by radius-1 rows in parent-coordinate order for the right orientation.",
+    "The R-419/R-416/R-402 finite source formulas and fixed tail split are the unchanged finite model under audit.",
+    "The direct residual gap is recomputed from the selected finite row with the unchanged 5e-7 comparison tolerance."
+  ],
+  "boundary": "R-432 repairs the finite row-ordinal interpretation and removes the R-430 independent lane's subtract-one value from the target comparison. It preserves the R-426 route-local residual-reuse failure and leaves the original-source interval, common-core, physical-sector and continuum gates open.",
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "derived": {
+    "classification": "ROW_INDEX_CONTRACT_CORRECTED",
+    "historical_r430_gap": 6.094733971033106,
+    "historical_subtract_one_ordinal": 6,
+    "historical_wrong_row_gap": 6.094733955638003,
+    "original_source_interval_certified": false,
+    "r422_mismatch": 3.382884111502449e-06,
+    "r422_reference": 5.363184967163699,
+    "r426_direct_reference": 5.36318835004781,
+    "r426_route_failure_preserved": true,
+    "residual_reuse_closed": false,
+    "target_emission_ordinal": 7,
+    "target_gap": 5.36318835004781,
+    "target_parent_coordinate": 6,
+    "target_row_max": 0.2864501401805248,
+    "target_row_min": 5.622948645880553e-13
+  },
+  "evidence_level": "T0 / EXECUTED FINITE ROW-CONTRACT CORRECTION AND REPRODUCTION; NO ORIGINAL-SOURCE INTERVAL CERTIFICATION",
+  "exploration_id": "EXP-001277",
+  "independence_scope": "Manual emission-order reconstruction and direct residual projection; the R-432 primary script and R-430 independent implementation are not imported.",
+  "manifest": "strategy/pre-a-cp1-st8-q3lock-fixed-row-ordinal-audit-manifest.json",
+  "missing_assumptions": [
+    "Validated interval or ball enclosures for the original coordinate and 256-dimensional Hamiltonian eigensystems.",
+    "A propagated original-source enclosure for Gibbs normalization, row selection, conductance and residual eigenvalue.",
+    "A basis-independent analytic common-core estimate uniform in cutoff, volume, phase and exhaustion.",
+    "History transfer, OS/KMS/GNS identification, physical-sector selection and continuum control."
+  ],
+  "non_claims": [
+    "No interval or exact certification of the original Hamiltonian, coordinate eigenbasis or Gibbs weights.",
+    "No closure of R-426 residual reuse for the original unrounded source.",
+    "No cutoff-, volume-, phase- or exhaustion-uniform Schur or residual estimate.",
+    "No common core, history transfer, OS/KMS/GNS reconstruction, sector gap or continuum limit.",
+    "No C6, Sector-A, Pre-A, Yang-Mills or mass-gap conclusion."
+  ],
+  "result_id": "R-432",
+  "run_kind": "independent",
+  "schema": "tect/pre-a-r432-independent/1.0",
+  "source_hashes": {
+    "historical_r430_independent": "5238432f391a09f7271af04837eab91c34fb9aa9462e57ba20280df9c622dbb9",
+    "independent": "49c664a369f8471120c4369339e014ceb6688e905999717dca4861f873e19ab6",
+    "manifest": "e4300301200d92334359f3dbab031497da73576b296a5e858252d5e35708357a",
+    "r419_manifest": "d5e2139c1a8af9b11f13098a8aaafabf66560bf08f011afb18900f50ae7e2881",
+    "r426_manifest": "0292aec6ec398cf7358e4e618f7623880543b9374a1501d3d3fa362db29901b0"
+  },
+  "verdict": "INDEPENDENT_ROW_INDEX_CORRECTION"
+}

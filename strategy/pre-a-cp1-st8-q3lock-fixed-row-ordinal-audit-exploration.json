@@ -1,0 +1,63 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "schema_version": "1.0",
+  "id": "EXP-001277",
+  "task_id": "T-054",
+  "title": "Fixed conditional-row ordinal audit removes a false source-sensitivity signal",
+  "question": "Does the declared R-426 failure row mean emission ordinal 7 in the actual conditional_rows order, and does a corrected independent reconstruction reproduce the R-426 direct residual gap without the R-430 independent lane's subtract-one error?",
+  "method": [
+    "Hash-pin the R-430 source manifest and independent script together with the R-426 failure manifest and R-429 row authority.",
+    "Reconstruct the finite V=2, d=16, beta=8, right-oriented source and explicitly enumerate the radius-0 unconditional row followed by radius-1 parent rows.",
+    "Select emission ordinal 7, compute the projected residual gap with the immutable tail split and compare it to the R-426 direct reference under 5e-7.",
+    "Evaluate ordinal 6 as the historical subtract-one lane and verify that it is a different row whose gap agrees with the prior independent output within the finite tolerance.",
+    "Run a non-importing independent reconstruction, hostile ordinal/status/promotion mutations, the integrated verifier and Lean scalar row-order checks."
+  ],
+  "finding": "The primary lane passes 13/13 and the independent lane passes 10/10. The canonical emission order has 17 rows: ordinal 0 is the unconditional radius-0 law and ordinal 7 is parent coordinate 6. The corrected target gap is 5.36318835004781, reproducing the R-426 direct reference; its R-422 mismatch is 3.382884111502449e-06, above 5e-7. Ordinal 6 gives a distinct gap near 6.094733955638 and matches the historical R-430 independent value within the declared tolerance. The hostile lane rejects 7/7 invalid mutations, integrated verification passes 15/15 and Lean R432 compiles.",
+  "decision_reason": "The prior R-430 independent source-sensitivity signal used target_index - 1 and therefore audited ordinal 6 rather than the declared ordinal 7. The corrected finite row reproduces the R-426 route-local mismatch, so the bookkeeping error is removed without changing the route failure or promoting any source interval claim.",
+  "decision_scope": "One finite V=2, cutoff d=16, beta=8, right-orientation target emission ordinal 7 (parent coordinate 6), core/tail 7/9; no original-source interval, uniform estimate, physical sector or tier change.",
+  "verdict": "advanced",
+  "boundary": "R-432 corrects the finite row identity and retains the R-426 residual-reuse boundary. It does not certify the unrounded Hamiltonian/Gibbs source, close a common core or limit, or imply C6, Sector-A, Pre-A, Yang-Mills or a mass gap.",
+  "next_action": "Construct a validated original-source eigensystem enclosure using emission ordinal 7 with no subtract-one conversion, then propagate it through the same residual comparison.",
+  "evidence_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-fixed-row-ordinal-audit-manifest.json#row_contract",
+    "strategy/pre-a-cp1-st8-q3lock-fixed-row-ordinal-audit-certificate-260830.md#3. Executed evidence",
+    "codes/foundations/pre_a_cp1_st8_q3lock_fixed_row_ordinal_audit.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_fixed_row_ordinal_audit_independent.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_fixed_row_ordinal_audit_hostile.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_fixed_row_ordinal_audit_verify.py#main",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-primary-fixed_row_ordinal_audit/primary.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-independent-fixed_row_ordinal_audit/independent.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-hostile-fixed_row_ordinal_audit/hostile.json#controls",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-integrated-fixed_row_ordinal_audit/integrated.json#derived",
+    "verification/lean/Tect/R432.lean#emission_ordinal_target",
+    "verification/lean/registry.json#R432"
+  ],
+  "formal_refs": {
+    "results": ["R-432"],
+    "negatives": [],
+    "events": ["20260830-r-432-fixed-conditional-row-ordinal-audit-2026"]
+  },
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY",
+    "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+  ],
+  "adversarial_review": [
+    {"axis": "ordinal semantics", "check": "The unconditional radius-0 row is retained at ordinal 0 and parent coordinate 6 is selected at ordinal 7; ordinal 6 is not silently aliased.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "reference reproduction", "check": "The corrected target gap reproduces the immutable R-426 direct reference and preserves the fixed R-422 mismatch at 5e-7.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "historical control", "check": "The prior R-430 independent value is identified as the ordinal-6 route, not used as target evidence.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "tolerance", "check": "The 5e-7 comparison tolerance is immutable and hostile relaxation is rejected.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "source interval", "check": "No original-source interval or residual-reuse closure is inferred from the corrected finite row.", "disposition": "UPHELD-OPEN"},
+    {"axis": "uniform and physical promotion", "check": "No common-core, limit, OS/KMS/GNS, C6, Sector-A, Pre-A, Yang-Mills or mass-gap conclusion is inferred.", "disposition": "UPHELD-OPEN"}
+  ],
+  "no_overclaim": "R-432 removes an off-by-one bookkeeping signal and reproduces the finite R-426 target mismatch. It is not an original-source interval theorem or a physical result.",
+  "provenance": "contemporaneous",
+  "recorded_at": "2026-08-31T09:30:00Z",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-08-30",
+  "related": [
+    {"id": "EXP-001276", "relation": "continues"},
+    {"id": "EXP-001275", "relation": "continues"}
+  ]
+}

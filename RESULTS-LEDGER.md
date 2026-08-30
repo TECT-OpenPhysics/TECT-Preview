@@ -22,6 +22,18 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-444](#r-444) | Exact exponential shell-tail majorant for rectangular edge weights | R-444 v1.0 is a T0 claim-nonbearing scalar geometric audit under EXP-001289. The exact Z^3 shell count N3(n)=4n^2+2 and tail T(R)=3(4R^2+8R+14)2^(1-R) pass primary 4519/4519, independent 4505/4505, hostile 8/8, integrated 27/27 and Lean R444. All [2,8]^3 finite rectangular tails are dominated; Q3LOCK commutator/history-tail, operator, physical, Yang-Mills and mass-gap claims remain open |
+| [R-443](#r-443) | Arbitrary finite rectangular axis-parity matching theorem | R-443 v1.0 is a T0 claim-nonbearing finite combinatorial theorem under EXP-001288. Lean proves the arbitrary finite local incidence implication; all 343 ordered boxes in [2,8]^3 pass exact edge-count and six-layer checks: primary 235319/235319, independent 132418/132418, hostile 8/8, integrated 34/34 and Lean R443 PASS. Weighted Q3LOCK operator, common-core, history-tail, physical, Yang-Mills and mass-gap claims remain open |
+| [R-442](#r-442) | General rectangular axis-parity matching lemma | R-442 v1.0 is a T0 claim-nonbearing finite combinatorial audit under EXP-001287. All 125 ordered boxes in [2,6]^3 pass exact edge-count and six-layer matching checks: primary 67398/67398, independent 67268/67268, hostile 8/8, integrated 26/26 and Lean R442 PASS. The local incidence lemma is reusable, but arbitrary-box operator, common-core, history-tail, physical, Yang-Mills and mass-gap claims remain open |
+| [R-441](#r-441) | Reading-H physical-empty bounded test owner execution (blocked) | R-441 v1.0 is a T0 claim-nonbearing TECT-owner execution under EXP-001286. It preserves the fifteen-field finite-regulator contract and F_total[G_*]-F_total[E] orientation, preregisters E without zero/P1 aliasing, and remains BLOCKED because no common finite parent or admitted E is supplied. Primary 13/13, independent 13/13, hostile 7/7, integrated 19/19 and Lean R441 pass; sign, full Reading-H stationarity and symmetry-projected transverse stability are BLOCKED_NOT_EVALUATED |
+| [R-440](#r-440) | Finite rectangular-box matching-layer split envelope | R-440 v1.0 is a T0 claim-nonbearing finite audit under EXP-001285. Five rectangular Z^3 boxes, six colour slots, four seeds, both shear signs and both layer orders pass exact primary 1152/1152, independent 652/652, hostile 10/10, integrated 37/37 and Lean R440. The derived C_match is 53/35 and the one-layer factor is 298/245; arbitrary-box uniformity, common core, common alpha, physical-empty, Yang-Mills and mass-gap claims remain open |
+| [R-439](#r-439) | Cutoff-adaptive threshold-four core rule audit | R-439 v1.0 is a T0 claim-nonbearing finite rule audit under EXP-001284. It fixes V=2,beta=8,right,unconditional emission-ordinal-0 and threshold four, classifies directed log-ratio intervals at d=17,d=18,d=19, and passes primary 31/31, independent 33/33, hostile 9/9, integrated 15/15 and Lean R439. The cutoff-adaptive cores are [4..12], [5..12] and [5..13] with cardinalities [9,8,9]; they are not nested or cardinality-monotone, so uniform tail, common-core, physical-empty, Yang-Mills and mass-gap claims remain open |
+| [R-438](#r-438) | V=2, d=19 original-source interval enclosure | R-438 v1.0 is a T0 claim-nonbearing finite original-source interval certificate under EXP-001283. The exact R-419 source at V=2,d=19,beta=8,right,unconditional emission ordinal 0 is enclosed through the normalized one-site Gibbs row and 17-dimensional residual compression; primary 59/59, independent 12/12, hostile 8/8, integrated 15/15 and Lean R438 pass. The certified residual interval is [4.51952079482277882932,4.51952079482279788666] inside fixed probes 4.5 and 4.6; residual reuse, uniformity, physical-empty tests, Yang-Mills and mass-gap claims remain open |
+| [R-437](#r-437) | Fixed threshold-four support crossing from d=17 to d=18 | R-437 v1.0 is a T0 claim-nonbearing finite boundary audit under EXP-001282. Under the same V=2,beta=8,right,unconditional emission-ordinal-0 row, index 4 is core at d=17 with directed interval below 4 and tail at d=18 with directed interval above 4; primary 14/14, independent 9/9, hostile 8/8, integrated 15/15 and Lean R437 pass. Unchanged fixed-support reuse is rejected only route-locally; increasing-core, uniform, physical-empty, Yang-Mills and mass-gap claims remain open |
+| [R-436](#r-436) | V=2, d=18 original-source interval enclosure | R-436 v1.0 is a T0 claim-nonbearing finite original-source interval certificate under EXP-001281. The exact R-419 source at V=2,d=18,beta=8,right,unconditional emission ordinal 0 is enclosed through the normalized one-site Gibbs row and 16-dimensional residual compression; primary 58/58, independent 12/12, hostile 8/8, integrated 15/15 and Lean R436 pass. The certified residual interval is [4.37258598994761155319,4.37258598994761252488] inside fixed probes 4.3 and 4.4; residual reuse, uniformity, physical-empty tests, Yang-Mills and mass-gap claims remain open |
+| [R-434](#r-434) | Reading-H physical-empty bounded test owner refresh (blocked) | R-434 v1.0 is a T0 claim-nonbearing TECT-owner input audit under EXP-001279. It keeps the fifteen-field finite-regulator contract and F_total[G_*]-F_total[E] orientation, preregisters E without zero/P1 aliasing, and remains BLOCKED because no common finite parent or admitted E is supplied. Primary 13/13, independent 13/13, hostile 7/7, integrated 19/19 and Lean R434 pass; sign, full Reading-H stationarity and symmetry-projected transverse stability are BLOCKED_NOT_EVALUATED |
+| [R-435](#r-435) | V=2, d=17 original-source interval enclosure | R-435 v1.0 is a T0 claim-nonbearing finite original-source interval certificate under EXP-001280. The exact R-419 source at V=2,d=17,beta=8,right,unconditional emission ordinal 0 is enclosed through the normalized one-site Gibbs row and 15-dimensional residual compression; primary 57/57, independent 12/12, hostile 8/8, integrated 15/15 and Lean R435 pass. The certified residual interval is [4.22153907112994631455,4.22153907112994631578] inside fixed probes 4.2 and 4.25; residual reuse, uniformity, physical-empty tests, Yang-Mills and mass-gap claims remain open |
+| [R-433](#r-433) | Validated original-source interval enclosure at corrected row 7 | R-433 v1.0 is a T0 claim-nonbearing finite original-source interval certificate under EXP-001278. The exact R-419 source at V=2,d=16,beta=8,right,emission ordinal 7 (parent 6) is enclosed through the Gibbs row and residual compression; primary 40/40, independent 12/12, hostile 7/7, integrated 13/13 and Lean R433 pass. The residual interval width is 6.985088320724423794e-10 below the explicit 1e-8 finite conditioning threshold, with certified interval [5.3631875357869327503,5.3631875357869329910]. Residual reuse, uniformity, physical-empty tests, Yang-Mills and mass-gap claims remain open |
 | [R-173](#r-173) | R-163 deterministic dyadic-forest Lean margin core | R-173 v1.0 is a scoped T0 claim-nonbearing kernel cross-check under EXP-000888. Lean, a Fraction-only independent lane, and an integrated hash/mutation lane recheck the exact rational margins 13/100>1/10, -1/110, -10/11, 3/20<27/100, the recursive guard, and the third-derivative fixture. It does not prove the analytic forest estimates or close A13, T-050, Sector-A or Pre-A |
 | [R-174](#r-174) | Exact two-root production-cylinder cross-synthesis boundary | R-174 v1.0 is a scoped T0 claim-nonbearing interface result under EXP-000889. The hash-pinned A1 `k,2k` chart has ordered cross blocks that are nonzero pointwise even though one-period sine/cosine averages vanish; Lean and a Fraction-only lane recheck the exact algebra. The complete square-root/heat/root/forest/low/returned-mean/source/sextic owner remains open, as do T-050, A13, Sector-A and Pre-A |
 | [R-177](#r-177) | A1 two-root common-heat and root-incidence ledger | R-177 v1.0 is a T0 claim-nonbearing Lean ledger under EXP-000892. It binds the actual R-176 `k,2k` covariance roots to the finite order common heat -> root 1 -> root 2 -> future residual, proves the two-replica variance and feedback identities, and rejects mean-only or independently replicated heat substitutions. The complete owner, source/sextic windows, T-050, A13, Sector-A and Pre-A remain open |
@@ -47,6 +59,14 @@ policy in `governance/development-history.md`.
 | [R-418](#r-418) | Physical-empty same-owner preregistration boundary | R-418 v1.0 is a T0 claim-nonbearing TECT-owner input-boundary audit under EXP-001263. Branch E is preregistered as an uninstantiated physical-empty/preparation slot without zero-field aliasing; the current Reading-H G_* and P1 owners do not provide one common finite-regulator functional, reference, normalization, finite parts, regulator, volume, boundary, limit order, full tangent or projector. Primary 30/30 and independent 21/21 blocker assertions pass, hostile 7/7 mutations are rejected, and integrated 16/16 passes. Sign, Reading-H stationarity and symmetry-projected transverse stability are all BLOCKED_NOT_EVALUATED; no numerical comparison or physical/Yang-Mills claim follows |
 | [R-423](#r-423) | Finite directed boundary-capacity Cauchy envelope | R-423 v1.0 is a T0 claim-nonbearing finite interface under EXP-001268. It replaces the R-422 restricted cross norm by the directed capacity envelope sqrt(rho_C*rho_T), passes 2209/2209 primary assertions over 858 rows and 114 eligible rows, and is independently/hostile/integrated/Lean checked. All 114 tested Q3 capacity reserves are nonpositive; this is a sufficient-budget boundary, not a physical gaplessness result |
 | [R-425](#r-425) | Expanded finite Q3 harmonic coarse-Schur stress | R-425 v1.0 is a T0 claim-nonbearing finite stress under EXP-001270. It keeps the R-419/R-422 inputs fixed while expanding to 12 systems, 1,488 conditional rows and 326 eligible rows; primary 4,678/4,678, independent 27/27, hostile 7/7, integrated 15/15 and Lean R425 pass. The finite combined envelope minimum is 1.0138783541561192; uniform, common-core, history, OS/KMS/GNS, C6, Sector-A, Pre-A and physical/mass-gap claims remain open |
+| [R-428](#r-428) | High-cutoff residual-basis conditioning diagnostic (inconclusive) | R-428 v1.0 is a T0 claim-nonbearing finite diagnostic under EXP-001273. At the fixed R-426 row V=2,d=16,beta=8,right,row 7 (core/tail 7/9), four residual bases and an explicit constraint projector crosswalk pass, but basis-gap spread 4.31873946382666e-06 and R-406/R-422 mismatch 3.3096042013625038e-06 exceed the unchanged 5e-7 tolerance while the two-norm conditioning budget is 0.0001117690794916405. Primary 31/31, independent 21/21, hostile 10/10, integrated 16/16 and Lean R428 pass; verdict INCONCLUSIVE_CONDITIONING, R-426 failure preserved, no repair or physical/Yang--Mills/mass-gap claim |
+| [R-429](#r-429) | Decimal precision uplift confirms rounded-input residual boundary | R-429 v1.0 is a T0 claim-nonbearing downstream precision audit under EXP-001274. On the fixed R-426 row V=2,d=16,beta=8,right,row 7 (core/tail 7/9), two 80-digit Decimal basis orderings agree within 4e-79, but the invariant gap differs from R-422 by 2.568621828611748e-06 and from the direct reference by 8.14262282388252e-07, both above 5e-7. Primary 14/14, independent 7/7, hostile 10/10, integrated 15/15 and Lean R429 pass; upstream source enclosure, residual-reuse repair, uniform, physical, Yang--Mills and mass-gap claims remain open |
+| [R-432](#r-432) | Fixed conditional-row ordinal audit for the R-430/R-426 comparison | R-432 v1.0 is a T0 claim-nonbearing finite bookkeeping correction under EXP-001277. Emission ordinal 7 is parent coordinate 6 after the ordinal-0 unconditional row; the corrected gap reproduces R-426 direct 5.36318835004781 and the 3.382884111502449e-06 R-422 mismatch, while the historical ordinal-6 value is removed as target source-sensitivity evidence. Primary 13/13 + independent 10/10, hostile 7/7, integrated 15/15 and Lean R432 pass; original-source interval, uniform, physical, Yang--Mills and mass-gap claims remain open |
+| [R-431](#r-431) | Directed interval enclosure for rounded residual snapshot | R-431 v1.0 is a T0 claim-nonbearing finite interval certificate under EXP-001276. On the fixed R-426 row V=2,d=16,beta=8,right,row 7 (core/tail 7/9), exact binary64 R-429 snapshot values are enclosed with 80-digit directed intervals. Interval Cholesky gives a lower endpoint 5.3631875357 and an interval Rayleigh upper endpoint 5.363187535785809..., a bracket below 3e-10. Both one-sided reference separations exceed the fixed 5e-7 tolerance. Primary 16/16, independent 12/12, hostile 7/7, integrated 15/15 and Lean R431 pass; original-source interval, R-426 repair, uniform, physical, Yang--Mills and mass-gap claims remain open |
+| [R-430](#r-430) | Original-source point-precision audit (no interval) | R-430 v1.0 is a T0 claim-nonbearing source-point audit under EXP-001275. Recomputing the original V=2,d=16,beta=8,right,row 7 source with 50-digit mpmath gives gap 5.363187535785526... and fixed-reference mismatches above 5e-7, but an independent NumPy source reconstruction gives 6.094733971033106, recording substantial point sensitivity. Primary 14/14, independent 9/9, hostile 10/10, integrated 13/13 and Lean R430 pass; no interval, residual-reuse repair, uniform, physical, Yang--Mills or mass-gap claim follows |
+
+| [R-427](#r-427) | Reading-H physical-empty bounded test revalidation (blocked) | R-427 v1.0 is a T0 claim-nonbearing append-only revalidation under EXP-001272. It identity-locks the same fifteen-field common-owner contract and `F_total[G_*]-F_total[E]` orientation as R-420, preregisters E without zero/P1 aliasing, and returns BLOCKED because the owner still supplies no common finite parent or admitted E. Primary 32/32, independent 30/30, hostile 8/8, integrated 43/43 and Lean R427 pass; sign, full Reading-H stationarity and symmetry-projected transverse stability remain BLOCKED_NOT_EVALUATED |
+| [R-426](#r-426) | High-cutoff finite harmonic coarse-Schur stress (route-local boundary) | R-426 v1.0 is a T0 claim-nonbearing stress under EXP-001271. With the R-419/R-416/R-422/R-425 inputs and 5e-7 residual-reuse tolerance fixed, the primary lane stops at V=2,d=16,beta=8,right,row 7: difference 3.382884111502449e-06 > 5e-7. Primary records FAIL_ROUTE_LOCAL after 1,175 checks; independent control 28/28, hostile 7/7, integrated 15/15 and Lean R426 pass. No tolerance relaxation, clipping, uniform, physical, Yang--Mills or mass-gap claim follows |
 | [R-424](#r-424) | Finite two-block harmonic coarse Schur assembly | R-424 v1.0 is a T0 claim-nonbearing finite interface under EXP-001269. It retains the two block-constant modes, applies the exact harmonic Schur complement and reuses the R-422 residual gap on 114 eligible rows; primary 1471/1471, independent 27/27, hostile 7/7, integrated 22/22 and Lean R424 pass. Coarse, residual and combined finite minima are 9.416287072814253, 2.0659023307146094 and 1.0329511653573047; uniform, common-core, GNS, continuum, C6, Sector-A and Pre-A remain open |
 | [R-422](#r-422) | Finite residual core-tail coercivity reserve | R-422 v1.0 is a T0 claim-nonbearing finite two-block interface under EXP-001267. It combines the R-421 tail Hardy floor with a block-mean-zero core form and explicit cross norm; primary 3522/3522 over 858 rows and 114 eligible rows, independent 43/43, hostile 7/7, integrated 20/20 and Lean R422 pass. Twenty-four finite rows have positive conservative reserve and 90 nonpositive sufficient-budget diagnostics; cutoff/volume uniformity, the coarse sector, common core, GNS, continuum, C6, Sector-A and Pre-A remain open |
 | [R-421](#r-421) | Tail-supported Hardy ground-state-transform interface | R-421 v1.0 is a T0 claim-nonbearing finite algebra and selected R-419 Q3 calibration under EXP-001266. The exact reversible ground-state transform has a nonnegative weighted-square remainder; a positive tail rate therefore gives a Hardy bound for tail-supported vectors. Primary 6544/6544 over 6 systems, 858 rows and 1128 vectors, independent 63/63, hostile 7/7, integrated 19/19 and Lean R421 pass. Uniform tail constants, arbitrary-observable Poincare, common core, GNS, continuum, C6, Sector-A and Pre-A remain open |
@@ -713,6 +733,746 @@ Hamiltonian-to-OS/KMS/GNS identification, physical mass gap, continuum, C6,
 Sector-A or Pre-A closure.  No tier change, negative result or PDF is issued.
 
 **Proven in:** [R-407 certificate](strategy/pre-a-cp1-st8-q3lock-canonical-path-resistance-certificate-260830.md), [Lean entrypoint](verification/lean/Tect/R407.lean), primary/independent/hostile scripts, integrated verifier, [scope note](claims/C6-SPACETIME-SIGNATURE/notes/canonical-path-resistance-260830.md), and saved run artefacts.
+<a id="r-444"></a>
+### R-444 -- Exact exponential shell-tail majorant
+
+**Result ID.** `PA-CP1-ST8-Q3LOCK-EXPONENTIAL-SHELL-TAIL-v0` (R-444).
+
+**Version and exact scope.** R-444 v1.0 is a T0, claim-nonbearing scalar
+geometric checkpoint under EXP-001289. For `w(x)=2^(-||x||_1)` on `Z^3`,
+the shell count is `N_3(0)=1` and `N_3(n)=4*n^2+2` for `n>=1`. For `R>=1`,
+the ambient positive-coordinate edge tail is exactly bounded by
+`T(R)=3*(4*R^2+8*R+14)*2^(1-R)`. Every finite positive-coordinate box is a
+subset of this ambient edge set.
+
+**Finding.** The primary exact Fraction lane passes `4519/4519` assertions and
+the independent integer-loop lane passes `4505/4505`. The formula and one-shell
+recurrence hold exactly; all 343 ordered boxes in `[2,8]^3` and 4116 radius rows
+are dominated by `T(R)`. Hostile mutations reject `8/8`, the integrated verifier
+passes `27/27`, and Lean R444 compiles the arithmetic fixtures.
+
+**Assumptions and missing assumptions.** The lattice shell count, lower-endpoint
+weight and positive-coordinate edge subset are fixed before evaluation. Missing
+are a Q3LOCK-specific commutator/history-tail transfer, representation-independent
+common cores and product domains, source/cutoff/volume/shape-uniform operator or
+state-weighted bounds, exhaustion Cauchy, common alpha, OS/KMS/GNS and sector
+coercivity.
+
+**Boundary.** R-444 is a scalar geometric majorant only. It does not close a
+Q3LOCK commutator or history tail, weighted operator, common core, common alpha,
+exhaustion, physical-empty comparison, C6, Sector-A, Pre-A, Yang--Mills dynamics
+or a mass gap. No claim tier changes and no negative result is issued.
+
+**Proven in:** [R-444 certificate](strategy/pre-a-cp1-st8-q3lock-exponential-shell-tail-certificate-260830.md), [machine manifest](strategy/pre-a-cp1-st8-q3lock-exponential-shell-tail-manifest.json), [integrated run](claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-integrated-exponential_shell_tail/integrated.json), [exploration record](strategy/pre-a-cp1-st8-q3lock-exponential-shell-tail-exploration.json), and [Lean R444](verification/lean/Tect/R444.lean).
+<a id="r-443"></a>
+### R-443 -- Arbitrary finite rectangular axis-parity matching theorem
+
+**Result ID.** `PA-CP1-ST8-Q3LOCK-RECTANGULAR-MATCHING-ARBITRARY-BOX-v0` (R-443).
+
+**Version and exact scope.** R-443 v1.0 is a T0, claim-nonbearing finite
+combinatorial theorem under EXP-001288. For any finite rectangular integer box
+with sides at least two, the Lean `arbitrary_box_layer_matching` implication
+shows that two incident lower endpoints with one axis and equal parity must be
+the same endpoint. Hence each `(axis, parity)` layer is a matching. The
+three-dimensional arithmetic gives six layers. The executable cross-check
+covers all 343 ordered side triples in `[2,8]^3` and retains empty layers.
+
+**Finding.** The primary compact aggregate passes `235319/235319` assertions and
+the non-importing mixed-radix reconstruction passes `132418/132418`. The sweep
+totals 42875 vertices and 102900 edges, reaches maximum full-graph degree six,
+and agrees with the exact rectangular edge-count formula on every box. The
+hostile firewall rejects `8/8` endpoint, parity, empty-slot, scope and physical
+promotions; the integrated verifier passes `34/34` with Lean R443 PASS.
+
+**Assumptions and missing assumptions.** The graph is finite and rectangular,
+edges are nearest-neighbour coordinate increments with unique lower endpoints,
+and the axis/lower-parity convention is frozen before enumeration. Missing are
+transfer to the weighted Q3LOCK interaction, self-adjoint layer operators,
+representation-independent common cores and product domains, source/cutoff/
+volume/shape/exhaustion-uniform boundary commutator and history-tail bounds,
+all-shape Cauchy, Lie--Trotter/common-alpha convergence, OS/KMS/GNS
+identification, sector coercivity and phase selection.
+
+**Boundary.** R-443 closes only the pure finite combinatorial colouring lemma.
+It does not close a weighted Q3LOCK form or operator, common core, history tail,
+exhaustion, common alpha, physical-empty sign, Reading-H stationarity,
+transverse stability, C6, Sector-A, Pre-A, Yang--Mills dynamics or a mass gap.
+No claim tier changes and no negative result is issued.
+
+**Proven in:** [R-443 certificate](strategy/pre-a-cp1-st8-q3lock-rectangular-matching-arbitrary-box-certificate-260830.md), [machine manifest](strategy/pre-a-cp1-st8-q3lock-rectangular-matching-arbitrary-box-manifest.json), [integrated run](claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-integrated-rectangular_matching_arbitrary_box/integrated.json), [exploration record](strategy/pre-a-cp1-st8-q3lock-rectangular-matching-arbitrary-box-exploration.json), and [Lean R443](verification/lean/Tect/R443.lean).
+<a id="r-442"></a>
+### R-442 -- General rectangular axis-parity matching lemma
+
+**Result ID.** `PA-CP1-ST8-Q3LOCK-RECTANGULAR-MATCHING-GENERAL-LEMMA-v0` (R-442).
+
+**Version and exact scope.** R-442 v1.0 is a T0, claim-nonbearing finite
+combinatorial checkpoint under EXP-001287. It fixes the three-dimensional
+nearest-neighbour graph on every ordered side triple in `[2,6]^3` (125 boxes),
+colours each edge by its axis and lower-endpoint parity, and retains all six
+colour slots including empty slots. The edge count is recomputed from
+`sum_axis ((s_axis - 1) * product_other_axes s_other)`.
+
+**Finding.** The primary all-box enumeration passes `67398/67398` assertions and
+the non-importing coordinate-index reconstruction passes `67268/67268`. The
+sweep totals 8000 vertices and 18000 edges, reaches maximum graph degree six,
+and counts 75 empty slots across the family. The hostile contract firewall
+rejects `8/8` mutations, the integrated verifier passes `26/26`, and Lean R442
+compiles the abstract local incidence lemma and six-colour arithmetic.
+
+**Assumptions and missing assumptions.** Vertices are integer coordinate
+vectors, edges are nearest-neighbour increments with a unique lower endpoint,
+and the parity colour convention is fixed. The finite box family is exhaustive
+only for the executable range `[2,6]^3`. Missing are an analytic arbitrary-box
+transfer to the weighted Q3LOCK interaction, representation-independent
+common cores and product domains, boundary commutator/history-tail estimates,
+all-shape exhaustion Cauchy, Lie--Trotter/common-alpha convergence,
+OS/KMS/GNS identification and sector coercivity.
+
+**Boundary.** R-442 removes finite rectangular matching bookkeeping only. It does
+not close a Q3LOCK operator, common core, history tail, exhaustion, common alpha,
+physical-empty sign, Reading-H stationarity, transverse stability, C6, Sector-A,
+Pre-A, Yang--Mills dynamics or a mass gap. No claim tier changes and no negative
+result is issued.
+
+**Proven in:** [R-442 certificate](strategy/pre-a-cp1-st8-q3lock-rectangular-matching-general-lemma-certificate-260830.md), [machine manifest](strategy/pre-a-cp1-st8-q3lock-rectangular-matching-general-lemma-manifest.json), [integrated run](claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-integrated-rectangular_matching_general_lemma/integrated.json), [exploration record](strategy/pre-a-cp1-st8-q3lock-rectangular-matching-general-lemma-exploration.json), and [Lean R442](verification/lean/Tect/R442.lean).
+<a id="r-441"></a>
+### R-441 -- Reading-H physical-empty bounded test owner execution (blocked)
+
+**Result ID.** `PA-T055-READING-H-PHYSICAL-EMPTY-BOUNDED-TEST-OWNER-EXECUTION`
+(R-441).
+
+**Version and exact scope.** R-441 v1.0 is a T0, claim-nonbearing
+TECT-owner execution under EXP-001286. It preserves, without alteration,
+the fifteen-field finite-regulator contract and the requested orientation
+`F_total[G_*] - F_total[E]`: finite-regulator functional, reference,
+normalization, finite-part counterterms, regulator/cutoff, physical volume,
+boundary condition, limit order, both branch representations, full
+admissible tangent, symmetry orbit tangent, transverse projector,
+Hessian/error budget and stationarity residual budget. The branch `E` is
+preregistered as a named physical-empty slot; it is not admitted and is not
+identified with zero or the P1 disordered reference.
+
+**Finding.** The common-owner input gate remains closed. No hash-pinned
+finite parent currently supplies both the Reading-H covariance owner `G_*`
+and a normalized physical-empty `E`, so no energy, derivative or Hessian is
+formed. The three requested verdicts are:
+
+```text
+F_total[G_*] - F_total[E]             BLOCKED_NOT_EVALUATED
+full Reading-H stationarity             BLOCKED_NOT_EVALUATED
+symmetry-projected transverse stability BLOCKED_NOT_EVALUATED
+```
+
+The primary audit passes `13/13`, the independent reversed-field control
+passes `13/13`, hostile mutations reject `7/7`, the integrated verifier
+passes `19/19`, and Lean R441 compiles.
+
+**Assumptions and missing assumptions.** The R-434/R-427/R-420 contract and
+hash-pinned R-418/R-170/R-169/EXP-000790 boundaries are retained. Missing
+are one common finite `F_total` domain, an admitted normalized `E` with a
+measure or algebra, boundary preparation and a local no-condensate or
+clustering criterion; common reference, normalization, finite parts,
+regulator/cutoff, volume, boundary condition and limit order; deterministic
+maps for both branches; a full tangent and exact orbit tangent; a transverse
+projector; and regulated stationarity/Hessian and numerical/limit error
+budgets.
+
+**Boundary.** R-441 is an input-admissibility blocker, not a numerical sign,
+stationarity, stability or nonexistence theorem. It does not identify `E`
+with zero or P1 and does not imply a physical vacuum, Yang--Mills dynamics,
+a mass gap, C6, Sector-A or Pre-A closure. No thermodynamic, continuum,
+OS/KMS/GNS, Hamiltonian spectral or absolute-energy conclusion follows.
+
+**Proven in:** [R-441 certificate](strategy/pre-a-t055-reading-h-physical-empty-bounded-test-owner-execution-certificate-260830.md), [machine manifest](strategy/pre-a-t055-reading-h-physical-empty-bounded-test-owner-execution-manifest.json), [integrated run](claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-integrated-pre-a-t055-reading-h-physical-empty-bounded-test-owner-execution/integrated.json), [exploration record](strategy/pre-a-t055-reading-h-physical-empty-bounded-test-owner-execution-exploration.json), and [Lean R441](verification/lean/Tect/R441.lean).
+<a id="r-440"></a>
+### R-440 -- Finite rectangular-box matching-layer split envelope
+
+**Result ID.** `PA-CP1-ST8-Q3LOCK-RECTANGULAR-MATCHING-LAYER-FAMILY-v0` (R-440).
+
+**Version and exact scope.** R-440 v1.0 is a T0, claim-nonbearing finite
+rectangular-box matching-layer checkpoint under EXP-001285. It fixes the
+three-dimensional nearest-neighbour graph, colours each edge by axis and the
+parity of its lower endpoint, retains empty parity slots explicitly, and uses
+the manifest weighted form and matching shear. The tested boxes are
+`(2,2,2)`, `(3,3,3)`, `(4,4,4)`, `(5,4,3)` and `(6,5,4)`; four rational seeds,
+both signs and both lexicographic/reverse layer orders are fixed before the
+rows run.
+
+**Finding.** Every colour slot has vertex incidence at most one, with exact
+edge counts `12, 54, 144, 133, 286`. The derived coefficient is
+`C_match=53/35`, the one-layer factor at `delta=1/7` is `298/245`, and the
+six-layer endpoint exponent is `159/35`. The primary exact Fraction lane
+passes `1152/1152`, the non-importing independent lane `652/652`, hostile
+mutations reject `10/10`, the integrated verifier passes `37/37`, and Lean
+R440 compiles. The largest observed one-layer ratio is the finite exact
+fraction `4034975/3832529`.
+
+**Assumptions and missing assumptions.** The weighted finite form, matching
+shear and tensor-local self-adjoint onsite hypothesis are inherited from
+EXP-001024 as stated in the manifest. The boxes and seeds are a finite test
+set. Missing are an arbitrary-box analytic theorem, an unbounded
+representation-independent common core and product domain, boundary
+commutator/history-tail decay, all-shape exhaustion Cauchy, Lie--Trotter
+convergence, common-alpha dynamics, OS/KMS/GNS identification, phase
+selection and sector coercivity.
+
+**Boundary.** R-440 strengthens only the finite matching-layer input. It does
+not close arbitrary-box or thermodynamic uniformity, a common core, common
+alpha, physical-empty sign, Reading-H stationarity, transverse stability, C6,
+Sector-A, Pre-A, Yang--Mills dynamics or a mass gap. No claim tier changes and
+no negative result is issued.
+
+**Proven in:** [R-440 certificate](strategy/pre-a-cp1-st8-q3lock-rectangular-matching-layer-family-certificate-260830.md), [machine manifest](strategy/pre-a-cp1-st8-q3lock-rectangular-matching-layer-family-manifest.json), [integrated run](claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-integrated-rectangular_matching_layer_family/integrated.json), [exploration record](strategy/pre-a-cp1-st8-q3lock-rectangular-matching-layer-family-exploration.json), and [Lean R440](verification/lean/Tect/R440.lean).
+<a id="r-439"></a>
+### R-439 -- Cutoff-adaptive threshold-four core rule audit
+
+**Result ID.** PA-CP1-ST8-Q3LOCK-INCREASING-CORE-RULE-AUDIT-v0 (R-439).
+
+**Version and exact scope.** R-439 v1.0 is a T0, claim-nonbearing finite cutoff-adaptive support-rule audit under EXP-001284. It fixes V=2, beta=8, right orientation, the unconditional one-site marginal, emission ordinal 0, and threshold 4 before classification. For each already certified source row at d=17, d=18 and d=19, the reference is the maximum midpoint probability and the directed rule is upper(phi)<4 for core and lower(phi)>4 for tail, with all other coordinates ambiguous.
+
+**Finding.** The primary directed interval lane passes 31/31, the independent non-importing point-log lane passes 33/33, the hostile firewall rejects 9/9 mutations, the integrated verifier passes 15/15, and Lean R439 compiles. No coordinate is ambiguous. The cores are d=17: [4..12], d=18: [5..12], and d=19: [5..13], with cardinalities [9,8,9]. The raw supports are not nested and the cardinalities are not monotone.
+
+**Assumptions and missing assumptions.** The R-435/R-436/R-438 primary and independent rows are the finite authorities; expected supports are manifest test oracles and the reference is not selected from the resulting support. Missing are cutoff-, volume-, phase- and exhaustion-uniform tail bounds, embeddings into a common Q3 core, residual-reuse closure, a common unbounded Hamiltonian domain, OS/KMS/GNS reconstruction and a physical-sector map.
+
+**Boundary.** R-439 certifies only a deterministic finite support rule. It does not certify nestedness, a uniform tail modulus, a common core, physical-empty energy sign, Reading-H stationarity, symmetry-projected transverse stability, C6, Sector-A, Pre-A, Yang-Mills dynamics or a mass gap.
+
+**Proven in:** [R-439 certificate](strategy/pre-a-cp1-st8-q3lock-increasing-core-rule-audit-certificate-260830.md), [machine manifest](strategy/pre-a-cp1-st8-q3lock-increasing-core-rule-audit-manifest.json), [integrated run](claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-integrated-increasing_core_rule_audit/integrated.json), [exploration record](strategy/pre-a-cp1-st8-q3lock-increasing-core-rule-audit-exploration.json), and [Lean R439](verification/lean/Tect/R439.lean).
+
+<a id="r-438"></a>
+### R-438 -- V=2, d=19 original-source interval enclosure
+
+**Result ID.** `PA-CP1-ST8-Q3LOCK-ORIGINAL-SOURCE-INTERVAL-D19-v0`
+(R-438).
+
+**Version and exact scope.** R-438 v1.0 is a T0, claim-nonbearing finite
+original-source interval certificate under EXP-001283. It fixes `V=2`, cutoff
+`d=19`, `beta=8`, right orientation and the unconditional one-site Gibbs row
+(emission ordinal `0`) before interval evaluation. The tail threshold is `4`,
+with core indices `5..13` and tail indices `0..4,14..18`; the exact R-419
+rational source is split into exchange/global-parity blocks `100,81,90,90`.
+
+**Finding.** Directed source residual and Gram upper bounds are
+`1.04227424917154243980964855684542951653437286e-40` and
+`8.29609617665392593267489237339381184888682063e-42`. Coordinate residual
+and Gram upper bounds are `1.51476881245442667960191853367209491931449538e-43`
+and `1.63556216629051938120264334498420803889953303e-43`. The normalized
+unconditional row is positive and its threshold split is enclosed. The 17 by
+17 residual interval has maximum entry width
+`2.6356840398489398721e-8`, below the finite `1e-6` budget. Interval
+Cholesky and Rayleigh checks certify
+`[4.51952079482277882931908765479724576244692466,
+4.51952079482279788665653301331650135134669314]`, strictly between probes
+`4.5` and `4.6`; the `4.7` probe is rejected. The independent non-importing
+control passes `12/12` with gap `4.5195205287393385`, hostile controls reject
+`8/8`, integrated verification passes `15/15`, and Lean R438 compiles.
+
+**Assumptions and missing assumptions.** The hash-pinned R-419 rational
+fixture, exchange/parity decomposition and R-433 directed polar/Gibbs
+inequalities are the finite inputs. Missing are cutoff-, volume-, phase- and
+exhaustion-uniform estimates, residual-reuse closure, a common unbounded Q3
+core, history transfer, OS/KMS/GNS reconstruction, a physical reference and a
+continuum theorem.
+
+**Boundary.** R-438 validates one finite d=19 source interval only. It does
+not establish uniformity, a physical-empty energy sign, Reading-H stationarity,
+symmetry-projected transverse stability, C6, Sector-A, Pre-A, Yang--Mills
+dynamics or a mass gap.
+
+**Proven in:** [R-438 certificate](strategy/pre-a-cp1-st8-q3lock-original-source-interval-d19-certificate-260830.md), [machine manifest](strategy/pre-a-cp1-st8-q3lock-original-source-interval-d19-manifest.json), [integrated run](claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-integrated-original_source_interval_d19/integrated.json), [exploration record](strategy/pre-a-cp1-st8-q3lock-original-source-interval-d19-exploration.json), and [Lean R438](verification/lean/Tect/R438.lean).
+
+<a id="r-437"></a>
+### R-437 -- fixed threshold-four support crossing from d=17 to d=18
+
+**Result ID.** PA-CP1-ST8-Q3LOCK-FIXED-SUPPORT-CROSS-CUTOFF-BOUNDARY-v0
+(R-437).
+
+**Version and exact scope.** R-437 v1.0 is a T0, claim-nonbearing finite
+boundary audit under EXP-001282. It compares the hash-pinned R-435 and R-436
+authorities with V=2, beta=8, right orientation, the unconditional one-site
+marginal, emission ordinal 0, and threshold 4. The fixed support is the d=17
+core 4..12; the crossing index is 4.
+
+**Finding.** The d=17 directed interval for index 4 is
+[2.928582137842666842328379942374782260821356965438242614347658772652559683976254399565,
+2.928582137842666842328379942374793763899593365995396958706748597526637672297939680216],
+strictly below four. The d=18 directed interval is
+[4.016145184038902632538356548209393899600440870692488949841237941696776136410376441,
+4.016145184038902632538356548209432108173973591163820303164228876431706984404931606871],
+strictly above four. Thus index 4 changes from core to tail. Primary verification
+passes 14/14, the non-importing independent control 9/9, hostile mutations
+8/8, integrated verification 15/15, and Lean R437 compiles.
+
+**Assumptions and missing assumptions.** The two parent manifests and runs
+share the stated row contract, and threshold status is read from directed
+endpoints without rounding. Missing are an increasing-core rule, a
+cutoff/volume/phase/exhaustion-uniform tail modulus or full-sector
+completeness, a common Q3 core with OS/KMS/GNS reconstruction, and a physical
+reference.
+
+**Boundary.** R-437 rejects only unchanged reuse of the d=17 fixed support.
+It does not reject increasing-core or full-sector routes and does not establish
+uniformity, a common core, a physical-empty sign, Reading-H stationarity,
+symmetry-projected transverse stability, C6, Sector-A, Pre-A, Yang-Mills
+dynamics or a mass gap.
+
+**Proven in:** R-437 certificate, machine manifest, integrated run,
+exploration record, and Lean R437.
+<a id="r-436"></a>
+### R-436 -- V=2, d=18 original-source interval enclosure
+
+**Result ID.** `PA-CP1-ST8-Q3LOCK-ORIGINAL-SOURCE-INTERVAL-D18-v0`
+(R-436).
+
+**Version and exact scope.** R-436 v1.0 is a T0, claim-nonbearing finite
+original-source interval certificate under EXP-001281. It fixes `V=2`, cutoff
+`d=18`, `beta=8`, right orientation and the unconditional one-site Gibbs row
+(emission ordinal `0`) before interval evaluation. The tail threshold is `4`,
+with core indices `5..12` and tail indices `0..4,13..17`; the exact R-419
+rational source is split into exchange/global-parity blocks `90,72,81,81`.
+
+**Finding.** Directed source residual and Gram upper bounds are
+`8.3258515872660438709e-41` and `7.2242770739641236691e-42`. Coordinate
+residual and Gram upper bounds are `1.3918941582845464163e-43` and
+`1.5512427195339811897e-43`. The normalized unconditional row is positive and
+its threshold split is enclosed. The 16 by 16 residual interval has maximum
+entry width `2.0697820666027019717e-10`, below the finite `1e-6` budget.
+Interval Cholesky and Rayleigh checks certify
+`[4.37258598994761155319421318538070164008480175,
+4.37258598994761252488250973347361635144049652]`, strictly between probes
+`4.3` and `4.4`; the `4.5` probe is rejected. The independent non-importing
+control passes `12/12` with gap `4.37258594841633`, hostile controls reject
+`8/8`, integrated verification passes `15/15`, and Lean R436 compiles.
+
+**Assumptions and missing assumptions.** The hash-pinned R-419 rational
+fixture, exchange/parity decomposition and R-433 directed polar/Gibbs
+inequalities are the finite inputs. Missing are cutoff-, volume-, phase- and
+exhaustion-uniform estimates, residual-reuse closure, a common unbounded Q3
+core, history transfer, OS/KMS/GNS reconstruction, a physical reference and a
+continuum theorem.
+
+**Boundary.** R-436 validates one finite d=18 source interval only. It does
+not establish uniformity, a physical-empty energy sign, Reading-H stationarity,
+symmetry-projected transverse stability, C6, Sector-A, Pre-A, Yang--Mills
+dynamics or a mass gap.
+
+**Proven in:** [R-436 certificate](strategy/pre-a-cp1-st8-q3lock-original-source-interval-d18-certificate-260830.md), [machine manifest](strategy/pre-a-cp1-st8-q3lock-original-source-interval-d18-manifest.json), [integrated run](claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-integrated-original_source_interval_d18/integrated.json), [exploration record](strategy/pre-a-cp1-st8-q3lock-original-source-interval-d18-exploration.json), and [Lean R436](verification/lean/Tect/R436.lean).
+
+<a id="r-435"></a>
+### R-435 -- V=2, d=17 original-source interval enclosure
+
+**Result ID.** `PA-CP1-ST8-Q3LOCK-ORIGINAL-SOURCE-INTERVAL-D17-v0`
+(R-435).
+
+**Version and exact scope.** R-435 v1.0 is a T0, claim-nonbearing finite
+original-source interval certificate under EXP-001280. It fixes `V=2`, cutoff
+`d=17`, `beta=8`, right orientation and the unconditional one-site Gibbs row
+(emission ordinal `0`) before interval evaluation. The tail threshold is `4`,
+with core indices `4..12` and tail indices `0..3,13..16`; the exact R-419
+rational source is split into exchange/global-parity blocks `81,64,72,72`.
+
+**Finding.** Directed source residual and Gram upper bounds are
+`6.5554215021810497917e-41` and `6.2013656081312960463e-42`. The normalized
+unconditional row is positive and its threshold split is enclosed. The 15 by
+15 residual interval has maximum entry width
+`7.0922943110070923e-13`, below the finite `1e-6` budget. Interval Cholesky
+and Rayleigh checks certify
+`[4.22153907112994631455003390284897397097200231,
+4.22153907112994631578208377835242264266111368]`, strictly between probes
+`4.2` and `4.25`; the `4.3` probe is rejected. The independent non-importing
+control passes `12/12` with gap `4.221539067848923`, hostile controls reject
+`8/8`, integrated verification passes `15/15`, and Lean R435 compiles.
+
+**Assumptions and missing assumptions.** The R-419 rational fixture, the
+exchange/parity decomposition and the R-433 directed polar/Gibbs inequalities
+are the finite inputs. Missing are cutoff-, volume-, phase- and
+exhaustion-uniform estimates, residual-reuse closure, a common unbounded Q3
+core, history transfer, OS/KMS/GNS reconstruction, a physical reference and a
+continuum theorem.
+
+**Boundary.** R-435 validates one larger-cutoff finite source interval only.
+It does not establish uniformity, a physical-empty energy sign, Reading-H
+stationarity, symmetry-projected transverse stability, C6, Sector-A, Pre-A,
+Yang--Mills dynamics or a mass gap.
+
+**Proven in:** [R-435 certificate](strategy/pre-a-cp1-st8-q3lock-original-source-interval-d17-certificate-260830.md), [machine manifest](strategy/pre-a-cp1-st8-q3lock-original-source-interval-d17-manifest.json), [integrated run](claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-integrated-original_source_interval_d17/integrated.json), [exploration record](strategy/pre-a-cp1-st8-q3lock-original-source-interval-d17-exploration.json), and [Lean R435](verification/lean/Tect/R435.lean).
+
+<a id="r-434"></a>
+### R-434 -- Reading-H physical-empty bounded test owner refresh (blocked)
+
+**Result ID.** `PA-T055-READING-H-PHYSICAL-EMPTY-BOUNDED-TEST-OWNER-REFRESH`
+(R-434).
+
+**Version and exact scope.** R-434 v1.0 is a T0, claim-nonbearing TECT-owner
+input audit under EXP-001279. It identity-locks the same fifteen fields as
+R-427/R-420 and keeps the exact orientation `F_total[G_*] - F_total[E]`:
+finite-regulator functional, reference, normalization, finite parts,
+regulator/cutoff, physical volume, boundary condition, limit order, both
+branch representations, full tangent, orbit tangent, transverse projector,
+Hessian/error budget and stationarity budget. E is preregistered as a slot but
+is not admitted; zero and P1 aliases are forbidden.
+
+**Finding.** No current owner supplies one hash-pinned finite parent containing
+both G_* and a normalized physical-empty E. The finite-evaluation gate is
+therefore false and no energy, derivative or Hessian is formed. The sign
+`F_total[G_*]-F_total[E]`, full Reading-H stationarity and
+symmetry-projected transverse stability are all `BLOCKED_NOT_EVALUATED`.
+Primary assertions pass `13/13`, the independent reversed-field control
+`13/13`, hostile mutation controls `7/7`, integrated verification `19/19`,
+and Lean R434 compiles.
+
+**Assumptions and missing assumptions.** The R-427/R-420 contract and the
+hash-pinned R-418/R-170/R-169/EXP-000790 owner boundaries are current. Missing
+are a common finite `F_total` domain, admitted normalized E, common finite
+parts and normalization, fixed regulator/volume/boundary/limit order, full
+branch/tangent/orbit maps, a transverse projector and regulated
+stationarity/Hessian error budgets.
+
+**Boundary.** R-434 is a blocked input result, not a sign, stationarity,
+stability or nonexistence theorem. It does not identify E with zero or P1 and
+does not imply a physical vacuum, Yang--Mills dynamics, a mass gap, C6,
+Sector-A or Pre-A closure.
+
+**Proven in:** [R-434 certificate](strategy/pre-a-t055-reading-h-physical-empty-bounded-test-owner-refresh-certificate-260830.md), [machine manifest](strategy/pre-a-t055-reading-h-physical-empty-bounded-test-owner-refresh-manifest.json), [integrated run](claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-integrated-pre-a-t055-reading-h-physical-empty-bounded-test-owner-refresh/integrated.json), [exploration record](strategy/pre-a-t055-reading-h-physical-empty-bounded-test-owner-refresh-exploration.json), and [Lean R434](verification/lean/Tect/R434.lean).
+
+<a id="r-433"></a>
+### R-433 -- Validated original-source interval enclosure at corrected row 7
+
+**Result ID.** `PA-CP1-ST8-Q3LOCK-ORIGINAL-SOURCE-INTERVAL-ENCLOSURE-v0`
+(R-433).
+
+**Version and exact scope.** R-433 v1.0 is a T0, claim-nonbearing finite
+original-source interval certificate under EXP-001278. It fixes `V=2`, cutoff
+`d=16`, `beta=8`, right orientation, emission ordinal `7` (parent coordinate
+`6`), core/tail `7/9`, and the unchanged comparison tolerance `5e-7`. The
+R-419 rational oscillator/Hamiltonian source is rebuilt with real algebraic
+square roots; exchange and global Fock-parity symmetry give blocks
+`72,56,64,64`.
+
+**Finding.** Directed source residual and Gram upper bounds are
+`5.0830027088533099603e-41` and `5.2743084774109142435e-42`; coordinate
+bounds are `1.1450394871514047264e-43` and `1.3067789239324602381e-43`.
+The corrected normalized row is positive. The propagated residual interval
+matrix has width `6.985088320724423794e-10`, below the explicit finite
+conditioning threshold `1e-8`. Interval Cholesky and Rayleigh checks give the
+bracket `[5.3631875357869327503,5.3631875357869329910]` (width
+`3.5786932990972513712e-8`), above R-422 by `2.532836301e-6` and below the
+R-426 direct reference by `8.1426087700902748626e-7`. The independent
+non-importing control passes `12/12` with finite value `5.36318775241371`;
+hostile controls reject `7/7`, integrated verification passes `13/13`, and
+Lean R433 compiles.
+
+**Assumptions and missing assumptions.** The R-419 fixture, R-432 ordinal
+contract, exchange/parity reduction, directed source arithmetic and finite
+polar/Gibbs bounds are the declared inputs. Missing are cutoff-, volume-,
+phase- and exhaustion-uniform estimates, a common unbounded Q3 core, history
+transfer, OS/KMS/GNS reconstruction, a physical sector and an admitted
+same-owner normalized physical-empty branch `E`.
+
+**Boundary.** R-433 validates one finite original-source interval and two
+fixed-reference separations. `residual_reuse_closed_for_original_source`
+remains false. No uniform, physical-empty, Reading-H stationarity,
+transverse-stability, C6, Sector-A, Pre-A, Yang--Mills or mass-gap conclusion
+follows.
+
+**Proven in:** [R-433 certificate](strategy/pre-a-cp1-st8-q3lock-original-source-interval-enclosure-certificate-260830.md), [machine manifest](strategy/pre-a-cp1-st8-q3lock-original-source-interval-enclosure-manifest.json), [integrated run](claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-integrated-original_source_interval_enclosure/integrated.json), [exploration record](strategy/pre-a-cp1-st8-q3lock-original-source-interval-enclosure-exploration.json), and [Lean R433](verification/lean/Tect/R433.lean).
+
+<a id="r-432"></a>
+### R-432 -- Fixed conditional-row ordinal audit for the R-430/R-426 comparison
+
+**Result ID.** `PA-CP1-ST8-Q3LOCK-FIXED-ROW-ORDINAL-AUDIT-v0` (R-432).
+
+**Version and exact scope.** R-432 v1.0 is a T0, claim-nonbearing finite
+bookkeeping correction under EXP-001277. It audits the R-426 target at
+`V=2`, cutoff `d=16`, `beta=8`, right orientation, emission ordinal `7`,
+parent coordinate `6`, core/tail `7/9`, and unchanged comparison tolerance
+`5e-7`. The `conditional_rows` order is ordinal 0 for the radius-0
+unconditional law followed by radius-1 rows by parent coordinate.
+
+**Finding.** The corrected target gap is `5.36318835004781`, reproducing the
+immutable R-426 direct reference. Its R-422 mismatch is
+`3.382884111502449e-06`, above `5e-7`. The historical R-430 independent lane
+used `target_index - 1`, which evaluates ordinal 6 and gives a distinct gap
+near `6.094733955638`; that value is not target-row source-sensitivity
+evidence. Primary assertions pass `13/13`, independent `10/10`, hostile
+controls `7/7`, integrated verification `15/15`, and Lean R432 compiles.
+
+**Assumptions and missing assumptions.** The hash-pinned R-419/R-416/R-402
+finite source formulas, emission order, tail split and fixed tolerance are
+used. Missing are validated interval or ball enclosures for the original
+coordinate and Hamiltonian eigensystems, propagated Gibbs-row and
+conductance bounds, a common-core uniform estimate, and history or
+OS/KMS/GNS transfer.
+
+**Boundary.** R-432 removes a finite ordinal bookkeeping error and preserves
+the R-426 route-local residual-reuse boundary. It does not certify the
+unrounded source, close residual reuse, establish a limit or physical sector,
+or imply C6, Sector-A, Pre-A, Yang--Mills dynamics or a mass gap.
+
+**Proven in:** [R-432 certificate](strategy/pre-a-cp1-st8-q3lock-fixed-row-ordinal-audit-certificate-260830.md), [machine manifest](strategy/pre-a-cp1-st8-q3lock-fixed-row-ordinal-audit-manifest.json), [integrated run](claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-integrated-fixed_row_ordinal_audit/integrated.json), [exploration record](strategy/pre-a-cp1-st8-q3lock-fixed-row-ordinal-audit-exploration.json), and [Lean R432](verification/lean/Tect/R432.lean).
+
+<a id="r-431"></a>
+### R-431 -- Directed interval enclosure for the fixed rounded residual snapshot
+
+**Result ID.** `PA-CP1-ST8-Q3LOCK-ROUNDED-SNAPSHOT-INTERVAL-ENCLOSURE-v0`
+(R-431).
+
+**Version and exact scope.** R-431 v1.0 is a T0, claim-nonbearing finite
+interval certificate under EXP-001276. It retains the R-426 fixed row
+`V=2`, cutoff `d=16`, `beta=8`, right orientation, conditional row `7`,
+core/tail `7/9`, and comparison tolerance `5e-7`. The input is the exact
+IEEE-754 binary64 graph snapshot reconstructed by R-429; no original
+256-dimensional Hamiltonian or Gibbs eigensystem is enclosed.
+
+**Finding.** Directed 80-digit interval arithmetic encloses the symmetric
+conductance hull, weighted residual basis and 14-dimensional compression.
+Interval Cholesky proves the lower bound `lambda_min >= 5.3631875357`, while
+an interval Rayleigh quotient gives the upper endpoint
+`5.363187535785809471961559807249909...`; the bracket width is below `3e-10`.
+The lower endpoint exceeds the R-422 reference by
+`0.000002568536301...`, and the upper endpoint lies below the R-426 direct
+reference by `0.0000008142620005...`; both one-sided margins exceed the fixed
+`5e-7` tolerance.
+
+**Evidence and adversarial boundary.** The primary lane passes `16/16`, the
+non-importing reversed-order independent lane passes `12/12`, hostile controls
+pass `7/7`, integrated verification passes `15/15`, and Lean R431 compiles.
+The fixed row, conductance symmetry, lower Cholesky positivity, independent
+Rayleigh upper bound and tolerance are all checked. Hostile mutations attempting
+row substitution, tolerance relaxation, source-level promotion, status promotion
+or residual-reuse closure are rejected.
+
+**Assumptions and missing assumptions.** The R-429 producer and its pinned
+upstream manifests define the finite snapshot; binary64 values are exact
+binary rationals; directed interval operations enclose the finite matrix
+expressions; interval Cholesky and Rayleigh inequalities apply to the same
+symmetric matrix. Missing are validated interval enclosures of the original
+coordinate and Hamiltonian eigensystems, propagated Gibbs-row uncertainty,
+and any common Q3 core, regulator/volume-uniform estimate, history transfer or
+OS/KMS/GNS/physical-sector map.
+
+**Boundary.** R-431 certifies only the rounded finite graph snapshot. It does
+not close R-426 for the unrounded source, establish a cutoff/volume/phase/
+exhaustion-uniform bound, or imply C6, Sector-A, Pre-A, Yang--Mills dynamics or
+a mass gap. No tier or negative-result change follows.
+
+**Proven in:** [R-431 certificate](strategy/pre-a-cp1-st8-q3lock-rounded-snapshot-interval-enclosure-certificate-260830.md), [machine manifest](strategy/pre-a-cp1-st8-q3lock-rounded-snapshot-interval-enclosure-manifest.json), [integrated run](claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-integrated-rounded_snapshot_interval_enclosure/integrated.json), [exploration record](strategy/pre-a-cp1-st8-q3lock-rounded-snapshot-interval-enclosure-exploration.json), and [Lean R431](verification/lean/Tect/R431.lean).
+
+<a id="r-430"></a>
+### R-430 -- Original-source point-precision audit (no interval)
+
+**Result ID.** `PA-CP1-ST8-Q3LOCK-SOURCE-POINT-PRECISION-AUDIT-v0`
+(R-430).
+
+**Version and exact scope.** R-430 v1.0 is a T0, claim-nonbearing finite
+source-point audit under EXP-001275.  It keeps the R-426 fixed row
+`V=2`, cutoff `d=16`, `beta=8`, right orientation, conditional row `7`,
+core/tail `7/9`, and comparison tolerance `5e-7`.  The original rational
+R-419/R-416/R-402 oscillator, coordinate basis, volume-two Hamiltonian,
+log-domain Gibbs masses, projected conductance and residual compression are
+recomputed at 50 decimal digits with `mpmath.eigsy`; the R-428 rounded graph
+snapshot is not used by the primary lane.
+
+**Finding.** The primary lane passes `14/14`.  Its point residual gap is
+`5.363187535785526198737197347201555...`, with mismatch
+`2.568621827198737...e-6` to the R-422 reference and
+`8.142622838012628...e-7` to the R-426 direct reference, both above the
+fixed tolerance.  The independent non-importing NumPy source lane passes
+`9/9` but obtains `6.094733971033106`, a recorded difference of
+`0.73154643524758` from the mpmath point.  This source-point sensitivity is
+why the verdict remains `SOURCE_POINT_AUDIT_NO_INTERVAL`; it is not a
+certified unrounded-source mismatch.
+
+**Evidence and adversarial boundary.** The primary graph reversibility error
+is `2.7e-51` and the residual basis is `16x14`.  Hostile controls pass `10/10`,
+rejecting precision, row, tolerance, interval, exact-input, residual-reuse
+and uniform-promotion mutations.  The integrated verifier passes `13/13` and
+Lean R430 compiles scalar rational separation and finite-scope checks.  Lean
+does not certify the eigensystem or any interval enclosure.
+
+**Assumptions and missing assumptions.** The declared finite source formulas,
+row, tail split and tolerance are correct, and 50-digit point arithmetic is
+converged for this calculation.  Missing are interval/ball enclosures for
+both eigensystems, propagated row/conductance/residual bounds, a certified
+basis-independent original-source comparison, and any common Q3 core,
+regulator/volume-uniform estimate, history transfer or OS/KMS/GNS/physical
+sector map.
+
+**Boundary.** R-430 does not repair R-426 residual reuse, close Q3LOCK or C6,
+or establish cutoff/volume/phase/exhaustion uniformity, a continuum result,
+a physical sector, Yang--Mills dynamics or a mass gap.  No tier or negative
+result changes.
+
+**Proven in:** [R-430 certificate](strategy/pre-a-cp1-st8-q3lock-source-point-precision-audit-certificate-260830.md), [machine manifest](strategy/pre-a-cp1-st8-q3lock-source-point-precision-audit-manifest.json), [integrated run](claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-integrated-source_point_precision_audit/integrated.json), [exploration record](strategy/pre-a-cp1-st8-q3lock-source-point-precision-audit-exploration.json), and [Lean R430](verification/lean/Tect/R430.lean).
+
+<a id="r-429"></a>
+### R-429 -- Decimal precision uplift confirms the rounded-input residual boundary
+
+**Result ID.** `PA-CP1-ST8-Q3LOCK-RESIDUAL-PRECISION-UPLIFT-v0` (R-429).
+
+**Version and exact scope.** R-429 v1.0 is a T0, claim-nonbearing downstream
+precision audit under EXP-001274.  It holds the R-426 row `V=2`, cutoff `d=16`,
+`beta=8`, right orientation, conditional row `7`, core/tail `7/9`, and the
+exact `5e-7` comparison tolerance fixed.  The finite graph weights and
+conductances are the R-428 double-precision snapshot converted to 80-digit
+Decimal strings; no upstream Gibbs or coordinate diagonalization is replaced.
+
+**Finding.** Two differently ordered weighted blockwise zero-mean bases are
+orthonormalized in Decimal arithmetic and their 14-dimensional residual
+compressions are solved by independent symmetric Jacobi iterations stopped at
+`1e-60`.  The first eigenvalues agree within `4e-79`.  The common invariant gap
+is `5.3631875357855276117480294524057207054685060592567614...`; its separation
+from the R-422 reference is `2.5686218286117480294524057207054685e-06`, and
+from the R-426 direct reference is `8.1426228238825197054759427929453e-07`.
+Both exceed the unchanged `5e-7` audit tolerance.  The finite verdict is
+`ROUNDED_INPUT_ALGEBRAIC_BOUNDARY`: downstream basis/roundoff ambiguity does
+not remove the mismatch on this rounded snapshot.
+
+**Evidence and boundary.** The primary lane passes `14/14` and converges in
+`388` and `391` sweeps; the non-importing independent lane passes `7/7` with
+the same gap.  Hostile mutation controls pass `10/10`, the integrated verifier
+passes `15/15`, and Lean R429 compiles its scalar lower-bound and finite-scope
+theorems.  This is not an interval enclosure of the original Hamiltonian
+Gibbs state, coordinate eigenbasis or graph weights, so R-426 residual reuse
+remains open and no repair is promoted.
+
+**Assumptions and missing assumptions.** The R-428 decimal graph snapshot is
+the fixed downstream input, its weights are positive/normalized to the finite
+threshold, and the two residual bases describe one subspace in exact
+arithmetic.  Missing are arbitrary-precision or interval reconstruction of
+the original Gibbs/coordinate inputs, propagation of their uncertainty, a
+rigorous original-source residual value, a common unbounded Q3 core and all
+history/OS/KMS/GNS/physical-sector transfers.
+
+**Boundary.** R-429 closes only the downstream rounded-input precision uplift
+and confirms a finite basis-invariant separation from R-422.  It does not close
+R-426, Q3LOCK, C6, Sector-A or Pre-A, or establish a cutoff/volume/phase/
+exhaustion-uniform bound, a continuum result, a physical sector, a Yang--Mills
+result or a mass-gap result.
+
+**Proven in:** [R-429 certificate](strategy/pre-a-cp1-st8-q3lock-residual-precision-uplift-certificate-260830.md), [machine manifest](strategy/pre-a-cp1-st8-q3lock-residual-precision-uplift-manifest.json), [integrated run](claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-integrated-residual_precision_uplift/integrated.json), [exploration record](strategy/pre-a-cp1-st8-q3lock-residual-precision-uplift-exploration.json), and [Lean R429](verification/lean/Tect/R429.lean).
+<a id="r-428"></a>
+### R-428 -- High-cutoff residual-basis conditioning diagnostic (inconclusive)
+
+**Result ID.** `PA-CP1-ST8-Q3LOCK-RESIDUAL-BASIS-CONDITIONING-DIAGNOSTIC-v0` (R-428).
+
+**Version and exact scope.** R-428 v1.0 is a T0, claim-nonbearing finite
+conditioning diagnostic under EXP-001273.  It holds the hash-pinned R-419
+conditional law, R-416 log-domain row, R-422 residual construction, R-406
+block complement, R-426 failing row and the exact `5e-7` R-426 comparison
+tolerance fixed.  The only new operation is a crosswalk among the R-406
+block-complement basis, the R-422 weighted blockwise zero-mean basis, an
+explicit normalized-constraint projector nullspace, and a complete-QR
+constraint nullspace.
+
+**Fixed row and finding.** The row is `V=2`, cutoff `d=16`, `beta=8`, right
+orientation, conditional row `7`, with core/tail sizes `7/9`.  The primary
+lane passes `31/31`; all four bases satisfy the declared `1e-12` orthogonality
+and constraint checks, and the cross-Gram/projector distances pass at near
+machine precision.  The primary values are `pi_dynamic_range =
+5.094304753972490e+11`, operator two-norm `5.7168562623339745e+10`,
+projector distance `9.775397033159746e-16`, conditioning budget
+`1.117690794916405e-04`, basis-gap spread `4.318739463826660e-06`, and
+R-406/R-422 mismatch `3.309604201362504e-06`.  The independent lane passes
+`21/21` and obtains the same `INCONCLUSIVE_CONDITIONING` classification with
+spread `1.9067128844696413e-06`, mismatch `9.865446628509744e-07` and budget
+`1.0355183044578828e-04`.  The fixed comparison tolerance is not changed.
+
+**Evidence and adversarial boundary.** The hostile lane passes `10/10`
+checks, rejecting nine mutations of graph data, basis dimensions, row
+identity, tolerance and verdict while preserving the R-426 failure.  The
+integrated verifier passes `16/16`, and Lean R428 compiles scalar bounds for
+the projector distance, conditioning-budget comparison and finite scope.
+The two-norm product is a diagnostic scale only, not an eigensolver error
+bound; double precision does not decide whether the mismatch is algebraic or
+roundoff.  The verdict is therefore `INCONCLUSIVE_CONDITIONING`, with
+`precision_certified=false` and `residual_reuse_closed=false`.
+
+**Assumptions and missing assumptions.** The declared finite parents are
+correct, the graph is positive/normalized/reversible, and the normalized
+block constraints describe one residual subspace in exact arithmetic.  The
+missing inputs for a repair are an arbitrary-precision or interval-certified
+basis-invariant eigensolve, a rigorously bounded residual-reuse value, a common
+unbounded Q3 Hamiltonian core with cutoff/volume-uniform control, and
+history/OS/KMS/GNS/physical-sector transfer.
+
+**Boundary.** R-428 closes only this finite conditioning and basis-crosswalk
+diagnostic.  It does not repair R-426, close Q3LOCK broken-sector,
+higher-moment, common-alpha, C6, Sector-A or Pre-A gates, or establish a
+cutoff/volume/phase/exhaustion-uniform bound, continuum result, physical
+sector, Yang--Mills result or mass-gap result.
+
+**Proven in:** [R-428 certificate](strategy/pre-a-cp1-st8-q3lock-residual-basis-conditioning-diagnostic-certificate-260830.md), [machine manifest](strategy/pre-a-cp1-st8-q3lock-residual-basis-conditioning-diagnostic-manifest.json), [integrated run](claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-integrated-residual_basis_conditioning_diagnostic/integrated.json), [exploration record](strategy/pre-a-cp1-st8-q3lock-residual-basis-conditioning-diagnostic-exploration.json), and [Lean R428](verification/lean/Tect/R428.lean).
+<a id="r-427"></a>
+### R-427 -- Reading-H physical-empty bounded test revalidation (blocked)
+
+**Result ID.** `PA-T055-READING-H-PHYSICAL-EMPTY-BOUNDED-TEST-REVALIDATION`
+(R-427).
+
+**Version and exact scope.** R-427 v1.0 is a T0, claim-nonbearing,
+append-only TECT-owner revalidation under EXP-001272.  It identity-locks the
+same fifteen common-owner fields and the exact comparison orientation
+`F_total[G_*]-F_total[E]` from R-420: finite-regulator functional, reference,
+normalization, finite parts, regulator/cutoff, volume, boundary, limit order,
+both representations, full tangent, symmetry orbit, transverse projector,
+Hessian/error budget and stationarity residual budget.  The field values remain
+`UNSUPPLIED_BY_CURRENT_OWNER`; no value is imported from another owner.
+
+**Preregistered E and verdict.** `E` is registered as a normalized constrained,
+no-condensate or empty-preparation slot in the same parent as the native
+Reading-H covariance owner `G_*`.  It remains
+`BLOCKED_NOT_INSTANTIATED`, with no state/configuration, measure/algebra,
+normalization, boundary preparation, physical interpretation or local
+criterion.  Zero and the P1 zero/disordered reference are not aliases.  The
+common-owner status is `NOT_FIXED_IN_ONE_COMMON_OWNER`, so all three requested
+tests are `BLOCKED_NOT_EVALUATED`: the sign of
+`F_total[G_*]-F_total[E]`, full Reading-H stationarity, and
+symmetry-projected transverse stability.  No energy, derivative or Hessian is
+computed.
+
+**Evidence and boundary.** Primary passes `32/32`, the non-importing
+independent lane `30/30`, hostile mutation controls `8/8`, the integrated lane
+`43/43`, and Lean R427 compiles the implication-only firewall.  This is a T0
+input-boundary revalidation only; it adds no negative result, changes no tier,
+and makes no physical-vacuum, Yang--Mills or mass-gap claim.  The next unlock is
+one hash-pinned common finite parent plus an admitted normalized `E`, followed
+by frozen finite parts, tangent/projector and error budgets.
+
+**Proven in:** [R-427 certificate](strategy/pre-a-t055-reading-h-physical-empty-bounded-revalidation-certificate-260830.md), [machine manifest](strategy/pre-a-t055-reading-h-physical-empty-bounded-revalidation-manifest.json), [integrated run](claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-integrated-pre-a-t055-reading-h-physical-empty-bounded-revalidation/integrated.json), and [Lean R427](verification/lean/Tect/R427.lean).
+<a id="r-426"></a>
+### R-426 -- High-cutoff finite harmonic coarse-Schur stress (route-local boundary)
+
+**Result ID.** `PA-CP1-ST8-Q3LOCK-HIGH-CUTOFF-SCHUR-STRESS-v0` (R-426).
+
+**Version and exact scope.** R-426 v1.0 is a T0, claim-nonbearing finite
+stress under EXP-001271.  The R-419 conditional law, R-416 log-domain
+reconstruction, R-422 residual basis, R-425 harmonic split, beta values
+`{1/2,2,8}`, both orientations, `alpha=1/40`, tail threshold `4`, and the
+residual-reuse tolerance `5e-7` are fixed.  The stress extends only the
+volume-two cutoff sample `d={14,16,18,20,24,28,30,32}` and retains all
+conditional and support-eligibility boundaries.
+
+**Finding.** The primary lane reaches the first declared failure after
+`1175` assertions.  At `V=2`, `d=16`, `beta=8`, right orientation, conditional
+row `7` (core/tail sizes `7/9`), the R-422 residual gap is
+`5.363184967163699` while the independently reconstructed direct residual is
+`5.363188350047810`.  Their absolute difference
+`3.382884111502449e-06` exceeds the fixed `5e-7` tolerance.  The verdict is
+`FAIL_ROUTE_LOCAL`; tolerance relaxation and clipping are explicitly false.
+
+The non-importing reversible-fixture control passes `28/28` and records the
+route-local failure as expected.  The hostile lane rejects `7/7` mutations,
+the integrated verifier passes `15/15`, and Lean R426 compiles its scalar
+bookkeeping lemmas.  The finite positive fixture values in the independent
+control are not substituted for the failed high-cutoff Q3 row.
+
+**Boundary.** This route-local mismatch is a finite construction/conditioning
+boundary, not a universal no-go theorem.  R-426 does not close cutoff,
+volume, phase or exhaustion uniformity, a common core, history transfer,
+OS/KMS/GNS reconstruction, a physical sector, C6, Sector-A, Pre-A,
+Yang--Mills or mass-gap claims.
+
+**Proven in:** [R-426 certificate](strategy/pre-a-cp1-st8-q3lock-high-cutoff-schur-stress-certificate-260830.md), [machine manifest](strategy/pre-a-cp1-st8-q3lock-high-cutoff-schur-stress-manifest.json), [integrated run](claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-integrated-high_cutoff_schur_stress/integrated.json), and [Lean R426](verification/lean/Tect/R426.lean).
+
 <a id="r-425"></a>
 ### R-425 -- Expanded finite Q3 harmonic coarse-Schur stress
 

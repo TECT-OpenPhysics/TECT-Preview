@@ -1,0 +1,193 @@
+{
+  "assertion_count": 16,
+  "assertions": [
+    {
+      "actual": "['R-431', 'EXP-001276', False]",
+      "expected": "R-431/EXP-001276/false",
+      "group": "provenance",
+      "name": "manifest identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "hash-pinned R429/R428/R426 inputs",
+      "expected": "declared SHA-256 values",
+      "group": "authority",
+      "name": "parent hashes",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'volume': 2, 'cutoff_dimension': 16, 'beta': '8', 'orientation': 'right', 'conditional_row_index': 7, 'core_size': 7, 'tail_size': 9}",
+      "expected": "V2/d16/beta8/right/row7",
+      "group": "fixture",
+      "name": "fixed row",
+      "status": "PASS"
+    },
+    {
+      "actual": "['0.00000000000056229486458805529188437126710703946905027528213594223416293971240520477294921875', '0.286450140180524781552406921036890707910060882568359375']",
+      "expected": ">0",
+      "group": "snapshot",
+      "name": "positive snapshot weights",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.00000000000000002160481328335516615926488509359204397142217857208379427902400493621826171875",
+      "expected": "<=1e-12",
+      "group": "snapshot",
+      "name": "snapshot normalization",
+      "status": "PASS"
+    },
+    {
+      "actual": "[7, 9]",
+      "expected": "[7, 9]",
+      "group": "fixture",
+      "name": "block sizes",
+      "status": "PASS"
+    },
+    {
+      "actual": "diagonal contains 1 and off-diagonal contains 0",
+      "expected": "orthonormal enclosure",
+      "group": "basis",
+      "name": "interval residual basis enclosure",
+      "status": "PASS"
+    },
+    {
+      "actual": "2.38368325700241368262490724997879317810727275049074971585923948937668598506686135961662246693279799511839038402197656611e-64",
+      "expected": "<=1e-50",
+      "group": "interval",
+      "name": "matrix interval width",
+      "status": "PASS"
+    },
+    {
+      "actual": "all pair hulls finite",
+      "expected": "finite symmetric hull",
+      "group": "graph",
+      "name": "conductance symmetry enclosure",
+      "status": "PASS"
+    },
+    {
+      "actual": "['3.01626225473090931539227526835900526851792797313238758169203025779938594361476868594473421874412951604490081330310030151', 14]",
+      "expected": "positive pivots for L=5.3631875357",
+      "group": "eigenvalue enclosure",
+      "name": "interval Cholesky lower bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[False, 14]",
+      "expected": "rejected L=5.3631875360",
+      "group": "eigenvalue enclosure",
+      "name": "upper-side Cholesky probe rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": "['5.3631875357858094719615598072499099181814069649416958361660652903170334312208662608131755071085117418442122526035486051', '5.36318753578580947196155980724990991818140696494169583616606529031703348282482144083130859277741697388457231632474329344']",
+      "expected": "<=5.3631875359",
+      "group": "eigenvalue enclosure",
+      "name": "interval Rayleigh upper bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.00000256853630100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010865",
+      "expected": ">5e-7",
+      "group": "reference separation",
+      "name": "R-422 separation",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.000000814262000528038440192750090081818593035058304163833934709682966517175178559168691407222583026115427683675256706558918773",
+      "expected": ">5e-7",
+      "group": "reference separation",
+      "name": "R-426 direct separation",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0000000000858094719615598072499099181814069649416958361660652903170334828248214408313085927774169738845723163247432934409646955944",
+      "expected": "<=3e-10",
+      "group": "eigenvalue enclosure",
+      "name": "certified bracket width",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'rounded_snapshot_interval_certified': True, 'original_source_interval_certified': False, 'exact_original_hamiltonian_certified': False, 'r422_separation_certified': True, 'r426_direct_separation_certified': True, 'r426_route_failure_preserved': True, 'residual_reuse_closed_for_original_source': False, 'cutoff_uniform_coarse_schur_closed': False, 'volume_uniform_coarse_schur_closed': False, 'phase_uniform_coarse_schur_closed': False, 'exhaustion_uniform_coarse_schur_closed': False, 'global_poincare_closed': False, 'common_core_closed': False, 'hamiltonian_os_identification_closed': False, 'kms_gns_gap_closed': False, 'continuum_closed': False, 'c6_closed': False, 'sector_a_closed': False, 'pre_a_closed': False, 'no_new_negative_result': True, 'no_tier_change': True, 'no_pdf': True}",
+      "expected": "rounded snapshot only; original source open",
+      "group": "scope",
+      "name": "scope firewall",
+      "status": "PASS"
+    }
+  ],
+  "assumptions": [
+    "The R-429 row_inputs producer and its hash-pinned upstream manifests define the exact finite rounded snapshot under audit.",
+    "A stored binary64 value is treated as its exact binary rational; no unrecorded decimal rounding is introduced.",
+    "Directed interval operations enclose the finite arithmetic expressions used for the residual matrix and basis.",
+    "Interval Cholesky positivity of A-LI proves the lower eigenvalue bound, and an interval Rayleigh quotient proves an upper bound for the same symmetric matrix.",
+    "The blockwise weighted-zero-mean basis and fixed row/tail split are unchanged from R-426/R-429."
+  ],
+  "boundary": "R-431 certifies a narrow eigenvalue bracket and fixed-reference separations for the exact rounded R-428/R-429 graph snapshot. It does not enclose the upstream Hamiltonian/Gibbs construction, so the original-source precision boundary and R-426 route status remain separate.",
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "derived": {
+    "bracket_width": "0.0000000000858094719615598072499099181814069649416958361660652903170334828248214408313085927774169738845723163247432934409646955944",
+    "cholesky_failure_probe": "5.3631875360",
+    "classification": "ROUNDED_SNAPSHOT_INTERVAL_CERTIFIED",
+    "exact_original_hamiltonian_certified": false,
+    "fixed_row": {
+      "beta": "8",
+      "conditional_row_index": 7,
+      "core_size": 7,
+      "cutoff_dimension": 16,
+      "orientation": "right",
+      "tail_size": 9,
+      "volume": 2
+    },
+    "interval_decimal_digits": 80,
+    "lower_endpoint": "5.3631875357",
+    "lower_min_pivot": "3.01626225473090931539227526835900526851792797313238758169203025779938594361476868594473421874412951604490081330310030151",
+    "lower_probe": "5.3631875357",
+    "max_matrix_interval_width": "2.38368325700241368262490724997879317810727275049074971585923948937668598506686135961662246693279799511839038402197656611e-64",
+    "original_source_interval_certified": false,
+    "r422_reference": "5.363184967163699",
+    "r422_separation_margin_lower": "0.00000256853630100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010865",
+    "r426_direct_reference": "5.36318835004781",
+    "r426_route_failure_preserved": true,
+    "r426_separation_margin_upper": "0.000000814262000528038440192750090081818593035058304163833934709682966517175178559168691407222583026115427683675256706558918773",
+    "rayleigh_interval": [
+      "5.3631875357858094719615598072499099181814069649416958361660652903170334312208662608131755071085117418442122526035486051",
+      "5.36318753578580947196155980724990991818140696494169583616606529031703348282482144083130859277741697388457231632474329344"
+    ],
+    "rayleigh_vector_norm": "0.9999999999999989",
+    "residual_reuse_closed_for_original_source": false,
+    "rounded_snapshot_interval_certified": true,
+    "snapshot_normalization_error": "0.00000000000000002160481328335516615926488509359204397142217857208379427902400493621826171875",
+    "snapshot_weight_sum_interval": [
+      "1.00000000000000002160481328335516615926488509359204397142217857208379427902400493621826171875",
+      "1.00000000000000002160481328335516615926488509359204397142217857208379427902400493621826171875"
+    ],
+    "upper_endpoint": "5.36318753578580947196155980724990991818140696494169583616606529031703348282482144083130859277741697388457231632474329344",
+    "upper_probe": "5.3631875359"
+  },
+  "evidence_level": "T0 / EXECUTED RIGOROUS FINITE INTERVAL CERTIFICATE FOR ONE EXACT BINARY64 ROUNDED GRAPH SNAPSHOT; original Hamiltonian source enclosure remains open",
+  "exploration_id": "EXP-001276",
+  "manifest": "strategy/pre-a-cp1-st8-q3lock-rounded-snapshot-interval-enclosure-manifest.json",
+  "missing_assumptions": [
+    "A validated interval eigensolve for the original 256-dimensional Hamiltonian and coordinate eigenbasis.",
+    "A propagated enclosure from the original rational source through Gibbs normalization, conditional-row selection and conductance.",
+    "A basis-independent certified residual comparison for the unrounded original source.",
+    "A cutoff-, volume-, phase- and exhaustion-uniform common Q3 core and OS/KMS/GNS/physical-sector transfer."
+  ],
+  "non_claims": [
+    "No interval certification of the original Hamiltonian, coordinate eigenbasis or Gibbs weights.",
+    "No closure of R-426 residual reuse for the original unrounded source.",
+    "No cutoff-, volume-, phase- or exhaustion-uniform Schur or residual bound.",
+    "No common core, history transfer, OS/KMS/GNS reconstruction, sector gap or continuum limit.",
+    "No C6, Sector-A, Pre-A, Yang-Mills or mass-gap conclusion."
+  ],
+  "result_id": "R-431",
+  "run_kind": "primary",
+  "schema": "tect/pre-a-r431-primary/1.0",
+  "source_hashes": {
+    "manifest": "e6b2493b553026549a02d6759b71c072150b0d91f69f78f155776b5abde600ad",
+    "r426_manifest": "0292aec6ec398cf7358e4e618f7623880543b9374a1501d3d3fa362db29901b0",
+    "r428_manifest": "cf022b25e8f1123f881bdbd7bbe5224fa6de131f0b089c6b08e337507a85c1ee",
+    "r429_manifest": "24baa0690b89f262dded8fb53118d542de58a509f610043a15edba704cc2ed79",
+    "r429_script": "6be56d757aa24c7db1303562f6cb0acfd421ca059992a3121363dcab2ea932a6"
+  },
+  "verdict": "ROUNDED_SNAPSHOT_INTERVAL_CERTIFIED"
+}

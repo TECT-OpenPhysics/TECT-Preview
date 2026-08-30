@@ -1,0 +1,83 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "schema_version": "1.0",
+  "id": "EXP-001287",
+  "title": "General rectangular axis-parity matching lemma",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "prior_exploration_id": "EXP-001285",
+  "related": [
+    {"id": "EXP-001285", "relation": "continues"},
+    {"id": "EXP-001284", "relation": "continues"}
+  ],
+  "question": "For every ordered three-dimensional rectangular box with side lengths at least two, does colouring each nearest-neighbour edge by its axis and lower-endpoint parity produce two matching layers per axis with the exact rectangular edge-count formula?",
+  "method": [
+    "Freeze the manifest with dimension three, parity modulus two, and the exhaustive ordered side family [2,6]^3.",
+    "Enumerate every vertex and nearest-neighbour edge in each of the 125 boxes and recompute the edge-count formula from the side lengths.",
+    "Retain all six (axis, parity) layer keys, including empty slots, and check per-layer vertex incidence and the direct two-candidate parity argument.",
+    "Run a non-importing coordinate-index implementation, an eight-mutation hostile contract firewall, and the integrated verifier.",
+    "Compile the abstract local incidence lemma and six-colour arithmetic in Lean R442; keep operator and limit claims outside the contract."
+  ],
+  "finding": "The primary lane passes 67398/67398 assertions over all 125 ordered boxes and the independent coordinate-index lane passes 67268/67268. The aggregate sweep contains 8000 vertices and 18000 edges, retains six colour slots, reaches maximum graph degree six, and counts 75 empty slots across the family. Every colour layer has incidence at most one at every vertex and every edge-count formula agrees. The hostile lane rejects 8/8 contract mutations; the integrated verifier passes 26/26 with Lean R442 PASS. This is finite combinatorial evidence only.",
+  "verdict": "advanced",
+  "decision_reason": "R-442 removes the finite rectangular edge-layer bookkeeping gap left by R-440 and supplies a reusable Lean local incidence lemma. The executable universal quantifier is bounded to [2,6]^3, while the analytic arbitrary-box operator theorem, common core, boundary/history tails, exhaustion, common alpha, OS/KMS/GNS and sector coercivity remain open.",
+  "decision_scope": "Finite nearest-neighbour graphs on all ordered side triples in [2,6]^3 with lower-endpoint axis-parity colouring; no weighted Hamiltonian, state, physical branch or continuum limit is evaluated.",
+  "assumptions": [
+    "Vertices are integer coordinate vectors in finite rectangular boxes with each side length at least two.",
+    "Edges are only nearest-neighbour coordinate increments with a unique lower endpoint and axis.",
+    "The layer colour is the axis and lower endpoint coordinate modulo two, with empty layer keys retained.",
+    "Lean proves the abstract incidence/parity proposition and six-colour arithmetic, not a Q3LOCK operator or state.",
+    "The 125 boxes are an exhaustive finite executable family, not an arbitrary-volume or exhaustion quantifier."
+  ],
+  "missing_assumptions": [
+    "An analytic arbitrary-box edge-colouring theorem transferring these layers to the full weighted Q3LOCK interaction.",
+    "Representation-independent common-core and weighted product-domain estimates for layer subflows.",
+    "Cutoff-, source-, phase-, volume- and exhaustion-uniform boundary commutator and history-tail bounds.",
+    "All-shape exhaustion Cauchy, Lie--Trotter convergence and common-alpha control.",
+    "Hamiltonian-to-OS/KMS/GNS identification, phase selection, sector coercivity and any physical gap theorem."
+  ],
+  "adversarial_review": [
+    {"axis": "bounded family versus arbitrary boxes", "check": "The Python sweep quantifies over exactly [2,6]^3; no universal analytic rectangle theorem is inferred.", "disposition": "UPHELD-OPEN"},
+    {"axis": "matching versus full graph", "check": "The at-most-one-incidence assertion is per colour; the full rectangular graph has degree up to six.", "disposition": "UPHELD"},
+    {"axis": "lower endpoint convention", "check": "Changing to upper-endpoint parity is rejected by the hostile contract firewall.", "disposition": "UPHELD"},
+    {"axis": "empty layer omission", "check": "Dropping empty colour slots is rejected and cannot be hidden in an aggregate count.", "disposition": "UPHELD"},
+    {"axis": "combinatorics versus operator theory", "check": "The local lemma and finite enumeration do not establish self-adjointness, domains, commutator decay, or a common generator.", "disposition": "UPHELD-OPEN"},
+    {"axis": "Lean promotion", "check": "R442 Lean contains only the abstract incidence and arithmetic lemmas; no QFT symbols or state reconstruction are encoded.", "disposition": "UPHELD"},
+    {"axis": "physical promotion", "check": "The manifest and integrated firewall keep C6, Pre-A, Sector-A, Yang--Mills and mass-gap flags false.", "disposition": "UPHELD"}
+  ],
+  "boundary": "R-442 is T0 claim-nonbearing finite combinatorial evidence. It does not close arbitrary-box uniformity, a weighted Q3LOCK operator or common core, boundary/history-tail control, exhaustion, common alpha, OS/KMS/GNS, a physical sector, C6, Pre-A, Sector-A, Yang--Mills dynamics or a mass gap.",
+  "next_action": "Use the matching lemma only as a finite structural input while deriving a source- and volume-uniform boundary commutator/history-tail modulus on a declared common core; if that route fails, append the obstruction rather than promoting R-442.",
+  "no_overclaim": "The six-layer matching and edge counts are exact for the declared finite graph family and the local incidence proposition is Lean-checked. No operator, thermodynamic, physical or Yang--Mills conclusion follows.",
+  "evidence_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-rectangular-matching-general-lemma-manifest.json#finite_contract",
+    "strategy/pre-a-cp1-st8-q3lock-rectangular-matching-general-lemma-certificate-260830.md#Exact-finite-scope",
+    "codes/foundations/pre_a_cp1_st8_q3lock_rectangular_matching_general_lemma.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_rectangular_matching_general_lemma_independent.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_rectangular_matching_general_lemma_hostile.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_rectangular_matching_general_lemma_verify.py#main",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-primary-rectangular_matching_general_lemma/primary.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-independent-rectangular_matching_general_lemma/independent.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-hostile-rectangular_matching_general_lemma/hostile.json#mutations_rejected",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-integrated-rectangular_matching_general_lemma/integrated.json#lean",
+    "verification/lean/Tect/R442.lean#same_colour_incident_unique",
+    "verification/lean/registry.json#R442"
+  ],
+  "formal_refs": {
+    "events": ["20260830-r-442-general-rectangular-matching-lemma-2026-0"],
+    "results": ["R-442"],
+    "negatives": []
+  },
+  "formal_integration": {
+    "events": ["20260830-r-442-general-rectangular-matching-lemma-2026-0"],
+    "results": ["R-442"],
+    "negatives": [],
+    "no_new_result": false,
+    "no_new_negative": true,
+    "no_pdf": true,
+    "no_tier_change": true
+  },
+  "recorded_at": "2026-08-31T14:30:00Z",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-08-30",
+  "provenance": "contemporaneous"
+}

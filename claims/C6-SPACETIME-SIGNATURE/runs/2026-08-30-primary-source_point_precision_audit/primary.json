@@ -1,0 +1,170 @@
+{
+  "assertion_count": 14,
+  "assertions": [
+    {
+      "actual": "['R-430', 'EXP-001275', False]",
+      "expected": "R-430/EXP-001275/false",
+      "group": "provenance",
+      "name": "manifest identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "[256, 256, 256, 16]",
+      "expected": "256/256/256/16",
+      "group": "source",
+      "name": "source dimensions",
+      "status": "PASS"
+    },
+    {
+      "actual": "strictly increasing",
+      "expected": "coordinate eigensystem",
+      "group": "source",
+      "name": "coordinate levels ordered",
+      "status": "PASS"
+    },
+    {
+      "actual": "['-43.474540694407761598565571728055316650096860551615', '-2.9891424862572754503381235814465125069510609453824']",
+      "expected": "finite",
+      "group": "gibbs",
+      "name": "log masses finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "['0.00000000000056229486461864869825076859662197610358758778870485', '0.28645014018052524393456726301309090812506346071655', '1.0']",
+      "expected": "positive normalized",
+      "group": "graph",
+      "name": "conditional row positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "2.672764710092195646140536467151481878815196880105e-51",
+      "expected": "<=1e-40",
+      "group": "graph",
+      "name": "graph reversible",
+      "status": "PASS"
+    },
+    {
+      "actual": "[7, 9]",
+      "expected": "[7, 9]",
+      "group": "fixture",
+      "name": "block sizes",
+      "status": "PASS"
+    },
+    {
+      "actual": "[16, 14]",
+      "expected": "16x14",
+      "group": "residual",
+      "name": "residual basis dimension",
+      "status": "PASS"
+    },
+    {
+      "actual": "4.8110832760459120378555675934092768623572916178724e-48",
+      "expected": "<=1e-40",
+      "group": "residual",
+      "name": "residual basis orthonormal",
+      "status": "PASS"
+    },
+    {
+      "actual": "5.3631875357855261987371973472015550837545107189887",
+      "expected": ">0",
+      "group": "residual",
+      "name": "source residual gap finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0000025686218271987371973472015550837545107189887238925",
+      "expected": ">0.0000005",
+      "group": "reconstruction",
+      "name": "source gap separated from R-422",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.00000081426228380126280265279844491624548928101126822425",
+      "expected": ">0.0000005",
+      "group": "reconstruction",
+      "name": "source gap separated from direct reference",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'source_point_precision_executed': True, 'source_point_residual_recomputed': True, 'source_gap_separation_observed': True, 'source_interval_certified': False, 'exact_original_input_certified': False, 'residual_reuse_closed': False, 'r426_route_failure_preserved': True, 'cutoff_uniform_coarse_schur_closed': False, 'volume_uniform_coarse_schur_closed': False, 'phase_uniform_coarse_schur_closed': False, 'exhaustion_uniform_coarse_schur_closed': False, 'global_poincare_closed': False, 'common_core_closed': False, 'common_split_rule_closed': False, 'hamiltonian_os_identification_closed': False, 'kms_gns_gap_closed': False, 'continuum_closed': False, 'c6_closed': False, 'sector_a_closed': False, 'pre_a_closed': False, 'no_new_negative_result': True, 'no_tier_change': True, 'no_pdf': True}",
+      "expected": "point audit only",
+      "group": "scope",
+      "name": "scope firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": "SOURCE_POINT_AUDIT_NO_INTERVAL",
+      "expected": "SOURCE_POINT_AUDIT_NO_INTERVAL",
+      "group": "verdict",
+      "name": "classification",
+      "status": "PASS"
+    }
+  ],
+  "assumptions": [
+    "The original R-419/R-416/R-402 finite oscillator and Hamiltonian formulas are the declared source model.",
+    "Fifty-digit mpmath eigsy and log-sum-exp arithmetic provide a converged point estimate for the finite source calculation.",
+    "The fixed conditional-row orientation, index, tail threshold and comparison tolerance are unchanged.",
+    "The residual basis spans the blockwise weighted-zero-mean subspace for the computed positive row."
+  ],
+  "boundary": "R-430 moves the precision test through the original finite source formulas but remains a point-precision audit. Only a propagated interval enclosure can decide whether the R-426 mismatch is certified for the unrounded model.",
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "derived": {
+    "classification": "SOURCE_POINT_AUDIT_NO_INTERVAL",
+    "conditional_row_max_decimal": "0.286450140180525243934567263013090908125063461",
+    "conditional_row_min_decimal": "0.000000000000562294864618648698250768596621976103587587789",
+    "direct_reference_decimal": "5.36318835004781",
+    "exact_original_input_certified": false,
+    "fixed_row": {
+      "beta": "8",
+      "conditional_row_index": 7,
+      "core_size": 7,
+      "cutoff_dimension": 16,
+      "orientation": "right",
+      "tail_size": 9,
+      "volume": 2
+    },
+    "hamiltonian_dimension": 256,
+    "minimum_log_mass_decimal": "-43.4745406944077615985655717280553166500968606",
+    "mismatch_direct_decimal": "0.000000814262283801262802652798444916245489281011268",
+    "mismatch_r422_decimal": "0.00000256862182719873719734720155508375451071898872",
+    "mpmath_decimal_digits": 50,
+    "r422_reference_decimal": "5.363184967163699",
+    "r426_route_failure_preserved": true,
+    "residual_reuse_closed": false,
+    "source_interval_certified": false,
+    "source_residual_gap_decimal": "5.36318753578552619873719734720155508375451072"
+  },
+  "evidence_level": "T0 / EXECUTED 50-DIGIT MPATH SOURCE-POINT AUDIT IF AVAILABLE; NO INTERVAL CERTIFICATION",
+  "exploration_id": "EXP-001275",
+  "manifest": "strategy/pre-a-cp1-st8-q3lock-source-point-precision-audit-manifest.json",
+  "missing_assumptions": [
+    "Interval or ball-arithmetic enclosures for the 256-dimensional Hamiltonian eigenvalues/eigenvectors and coordinate eigenbasis.",
+    "A propagated enclosure for the conditional row, conductance and residual eigenvalue.",
+    "A basis-independent exact residual-reuse comparison for the original unrounded source.",
+    "A common unbounded Q3 core, regulator/volume-uniform estimate and history/OS/KMS/GNS/physical-sector transfer."
+  ],
+  "non_claims": [
+    "No interval or exact certification of the original Hamiltonian source.",
+    "No repair or closure of R-426 residual reuse for the original model.",
+    "No cutoff-, volume-, phase- or exhaustion-uniform Schur/residual bound.",
+    "No common core, history transfer, OS/KMS/GNS reconstruction, sector gap or continuum limit.",
+    "No C6, Sector-A, Pre-A, Yang-Mills or mass-gap conclusion."
+  ],
+  "result_id": "R-430",
+  "run_kind": "primary",
+  "runtime": {
+    "decimal_digits": 50,
+    "package": "mpmath",
+    "version": "1.3.0"
+  },
+  "schema": "tect/pre-a-r430-primary/1.0",
+  "source_hashes": {
+    "manifest": "d94f4c9e871586d01eb9346586d6b699cd6732459c0f1113ccfacf42801bc15e",
+    "primary": "1eece01a76fe298a1a81d5f65da2b2b132e068417a0e48a4da35abd8bba3e6ff",
+    "r419_manifest": "d5e2139c1a8af9b11f13098a8aaafabf66560bf08f011afb18900f50ae7e2881",
+    "r426_manifest": "0292aec6ec398cf7358e4e618f7623880543b9374a1501d3d3fa362db29901b0",
+    "r428_manifest": "cf022b25e8f1123f881bdbd7bbe5224fa6de131f0b089c6b08e337507a85c1ee",
+    "r429_manifest": "24baa0690b89f262dded8fb53118d542de58a509f610043a15edba704cc2ed79"
+  },
+  "verdict": "SOURCE_POINT_AUDIT_NO_INTERVAL"
+}

@@ -1,0 +1,62 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "schema_version": "1.0",
+  "id": "EXP-001271",
+  "task_id": "T-054",
+  "title": "High-cutoff finite harmonic coarse-Schur stress reaches a residual-reuse boundary",
+  "question": "Does the exact two-block harmonic coarse-Schur assembly remain reusable at the high oscillator cutoffs of R-416 when every R-425 beta, orientation, tail and block rule is held fixed?",
+  "method": [
+    "Reuse the hash-pinned R-419 conditional law, R-416 log-domain reconstruction, R-422 residual basis and R-425 harmonic split without changing model parameters.",
+    "Evaluate volume two at cutoff dimensions 14, 16, 18, 20, 24, 28, 30 and 32 for beta 1/2, 2 and 8 and for right and left orientations, retaining every conditional and support-eligibility boundary.",
+    "Compare the R-422 residual gap with a separately reconstructed direct block-mean-zero residual gap under the fixed 5e-7 comparison tolerance; do not clip or relax a mismatch.",
+    "Run a non-importing reversible Schur control, hostile input/support/singularity mutations, the integrated verifier and Lean R426 scalar bookkeeping cross-check."
+  ],
+  "finding": "The primary lane reaches V=2, d=16, beta=8, right orientation, conditional row 7 with core/tail sizes 7/9 after 1175 assertions. The R-422 residual gap is 5.363184967163699 and the direct residual gap is 5.363188350047810, giving an absolute difference 3.382884111502449e-06, which exceeds the fixed 5e-7 tolerance. The primary verdict is FAIL_ROUTE_LOCAL. The independent control passes 28/28 abstract reversible fixtures and records FAIL_ROUTE_LOCAL_EXPECTED; the hostile lane rejects 7/7 mutations; the integrated verifier passes 15/15; Lean R426 compiles.",
+  "decision_reason": "The exact high-cutoff residual representations do not agree at the declared audit tolerance. The disagreement is retained as a route-local finite construction/conditioning boundary rather than hidden by a larger tolerance or promoted to a uniform theorem.",
+  "decision_scope": "Finite volume-two high-cutoff Schur/residual-reuse stress only; no tier change and no physical promotion.",
+  "verdict": "failed",
+  "boundary": "This is a T0 claim-nonbearing route-local numerical failure. It does not establish gaplessness, a universal no-go, regulator dependence of the theory, or any common-core, history, OS/KMS/GNS, sector, continuum, C6, Sector-A, Pre-A, Yang--Mills or mass-gap conclusion.",
+  "next_action": "Reconcile the R-422 harmonic residual and direct residual basis/precision conventions at high cutoff under an explicit contract, rerun with the unchanged 5e-7 tolerance, and only then revisit an analytic common-core estimate.",
+  "evidence_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-high-cutoff-schur-stress-manifest.json#failure_contract",
+    "strategy/pre-a-cp1-st8-q3lock-high-cutoff-schur-stress-certificate-260830.md#Executed evidence",
+    "codes/foundations/pre_a_cp1_st8_q3lock_high_cutoff_schur_stress.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_high_cutoff_schur_stress_independent.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_high_cutoff_schur_stress_hostile.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_high_cutoff_schur_stress_verify.py#main",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-primary-high_cutoff_schur_stress/primary.json#failure",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-independent-high_cutoff_schur_stress/independent.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-hostile-high_cutoff_schur_stress/hostile.json#controls",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-integrated-high_cutoff_schur_stress/integrated.json#failure",
+    "verification/lean/Tect/R426.lean#finite_scope",
+    "verification/lean/registry.json#R426"
+  ],
+  "formal_refs": {
+    "results": ["R-426"],
+    "negatives": [],
+    "events": ["20260831-r-426-high-cutoff-residual-reuse-boundary-2026"]
+  },
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY",
+    "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+  ],
+  "adversarial_review": [
+    {"axis": "tolerance", "check": "The 5e-7 comparison tolerance is not relaxed and the 3.382884111502449e-06 mismatch is not hidden.", "disposition": "UPHELD-OPEN"},
+    {"axis": "basis and precision", "check": "The direct residual is independently reconstructed; no basis, precision or conditioning repair is assumed after the disagreement.", "disposition": "UPHELD-OPEN"},
+    {"axis": "orientation and row identity", "check": "The failing row is recorded as V=2, d=16, beta=8, right, row 7 with core/tail 7/9; no left-row substitution is made.", "disposition": "UPHELD-OPEN"},
+    {"axis": "clipping and forged positivity", "check": "No clipping, upward rounding or forged Schur envelope is used.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "finite-to-uniform", "check": "The route-local mismatch is not interpreted as a cutoff-uniform no-go or a physical gap statement.", "disposition": "UPHELD-OPEN"},
+    {"axis": "QFT promotion", "check": "No Hamiltonian, OS/KMS/GNS, sector, Yang--Mills or mass-gap conclusion is inferred.", "disposition": "UPHELD-OPEN"}
+  ],
+  "no_overclaim": "The finite residual-reuse mismatch is a reproducible route-local boundary, not a universal theorem or physical no-go. It only identifies the next repair target.",
+  "provenance": "contemporaneous",
+  "recorded_at": "2026-08-31T07:15:00Z",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-08-29",
+  "related": [
+    {"id": "EXP-001270", "relation": "continues"},
+    {"id": "EXP-001269", "relation": "alternative_to"}
+  ]
+}

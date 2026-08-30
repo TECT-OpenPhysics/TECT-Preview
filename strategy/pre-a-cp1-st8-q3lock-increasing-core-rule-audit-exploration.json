@@ -1,0 +1,69 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "schema_version": "1.0",
+  "id": "EXP-001284",
+  "task_id": "T-054",
+  "title": "Cutoff-adaptive threshold-four core rule audit",
+  "question": "Do the separately certified V=2, d=17, d=18 and d=19 rows admit one predeclared cutoff-adaptive threshold-four core/tail rule with every coordinate classified by a directed log-ratio interval and no threshold ambiguity?",
+  "method": [
+    "Hash-pin the R-435, R-436 and R-438 finite row manifests and primary/independent run JSON authorities.",
+    "Freeze V=2, beta=8, right orientation, unconditional one-site marginal, emission ordinal zero and threshold four before classification.",
+    "For each cutoff, use the maximum midpoint row probability as reference and classify directed log-ratio intervals with strict core/tail inequalities.",
+    "Run an independent non-importing point-log control, hostile mutations and Lean finite cardinality cross-checks through the integrated verifier."
+  ],
+  "finding": "The primary directed rule audit passes 31/31 and the independent control passes 33/33. All coordinates are unambiguous. The cores are d=17 [4..12], d=18 [5..12] and d=19 [5..13], with cardinalities [9,8,9]. The raw supports are not nested and the cardinalities are not monotone; no uniform tail statement is made.",
+  "decision_reason": "Advance a finite rule-local audit because the adaptive classification is reproducible and independently controlled. Keep the common-core and uniform-tail gates open because the observed supports change across cutoffs.",
+  "decision_scope": "Three finite V=2 rows at d=17, d=18 and d=19, beta=8, right orientation, unconditional ordinal-zero selection and threshold four.",
+  "verdict": "advanced",
+  "evidence_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-increasing-core-rule-audit-manifest.json#rule",
+    "strategy/pre-a-cp1-st8-q3lock-increasing-core-rule-audit-certificate-260830.md#Decision",
+    "codes/foundations/pre_a_cp1_st8_q3lock_increasing_core_rule_audit.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_increasing_core_rule_audit_independent.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_increasing_core_rule_audit_hostile.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_increasing_core_rule_audit_verify.py#main",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-primary-increasing_core_rule_audit/primary.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-independent-increasing_core_rule_audit/independent.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-hostile-increasing_core_rule_audit/hostile.json#assertions",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-integrated-increasing_core_rule_audit/integrated.json#derived",
+    "verification/lean/Tect/R439.lean#finite_threshold_rule_scope"
+  ],
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY",
+    "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+  ],
+  "related": [
+    {"id": "EXP-001283", "relation": "continues"},
+    {"id": "EXP-001282", "relation": "continues"},
+    {"id": "EXP-001279", "relation": "alternative_to"}
+  ],
+  "formal_refs": {"results": ["R-439", "R-438", "R-437", "R-436", "R-435", "R-419"], "events": ["20260830-r-439-cutoff-adaptive-increasing-core-rule-audi"], "negatives": []},
+  "adversarial_review": [
+    {"axis": "selection", "check": "The row and threshold are frozen before support classification; no gap-based selection is allowed.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "directed threshold", "check": "Every coordinate is strictly below or strictly above the threshold in the primary interval audit.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "independent control", "check": "A non-importing point-log reconstruction agrees with all three finite supports.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "support transport", "check": "The d=17, d=18 and d=19 supports are not silently declared nested or monotone.", "disposition": "UPHELD-OPEN"},
+    {"axis": "uniformity", "check": "No tail modulus or common-core embedding is supplied by the finite audit.", "disposition": "UPHELD-OPEN"},
+    {"axis": "physical promotion", "check": "No physical, Yang--Mills or mass-gap conclusion is inferred.", "disposition": "UPHELD-OPEN"}
+  ],
+  "assumptions": [
+    "The R-435, R-436 and R-438 primary rows are directed interval authorities for the same finite selection contract.",
+    "The reference is the maximum midpoint probability within each already fixed row and is not chosen from the resulting support.",
+    "The stored endpoints have sufficient precision for strict Decimal logarithm classification.",
+    "The expected supports are finite manifest test oracles, not limit claims.",
+    "A cutoff-adaptive finite support may be non-nested and may have non-monotone cardinality."
+  ],
+  "missing_assumptions": [
+    "A cutoff-, volume-, phase- and exhaustion-uniform tail modulus.",
+    "Nested or transported embeddings into a common Q3 domain.",
+    "Residual-reuse closure and a common unbounded Hamiltonian core with OS/KMS/GNS identification.",
+    "A physical-sector reference and any C6 or Sector-A transfer."
+  ],
+  "boundary": "R-439 is a finite cutoff-adaptive support-rule audit only. The supports are not asserted to be nested or uniform, and no common-core, physical-sector or continuum conclusion is made.",
+  "next_action": "Obtain an owner-approved uniform tail estimate or full-sector completeness theorem and explicit embeddings before attempting a common-core or physical promotion.",
+  "no_overclaim": "R-439 is a finite cutoff-adaptive support-rule audit only. It does not establish nestedness, uniformity, a common core, a physical sector, C6, Sector-A, Pre-A, Yang--Mills dynamics or a mass gap.",
+  "recorded_at": "2026-08-31T13:00:00Z",
+  "recorded_by": "Codex"
+}

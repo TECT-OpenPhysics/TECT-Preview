@@ -1,0 +1,79 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "schema_version": "1.0",
+  "id": "EXP-001289",
+  "title": "Exact exponential shell-tail majorant",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "prior_exploration_id": "EXP-001288",
+  "related": [
+    {"id": "EXP-001288", "relation": "continues"},
+    {"id": "EXP-001287", "relation": "continues"}
+  ],
+  "question": "For w(x)=2^(-||x||_1) on Z^3, does the ambient edge tail outside l1 radius R equal 3*(4R^2+8R+14)*2^(1-R) and dominate every finite positive-coordinate rectangular-box tail?",
+  "method": [
+    "Count the integer l1 shells directly and verify N_3(0)=1 and N_3(n)=4n^2+2 for n>=1.",
+    "Derive and check the exact closed-form tail recurrence T(R)-T(R+1)=3*N_3(R)*2^(-R) and the base T(1)=78 with Fraction arithmetic.",
+    "Enumerate all 343 ordered boxes in [2,8]^3, construct every positive-coordinate nearest-neighbour edge and compare each radius 1..12 finite tail to the ambient formula.",
+    "Run an independent integer-loop reconstruction, eight hostile scalar/operator/physical mutations, and the integrated verifier.",
+    "Compile Lean R444 arithmetic fixtures while keeping the Q3LOCK commutator and history-tail transfer explicitly open."
+  ],
+  "finding": "The primary exact lane passes 4519/4519 assertions and the independent integer-loop lane passes 4505/4505. The shell formula and closed-form recurrence hold exactly; all finite tails from 343 boxes and 4116 radius rows are dominated by T(R). The hostile lane rejects 8/8 mutations and the integrated verifier passes 27/27 with Lean R444 PASS. The aggregate box family has 102900 edges. This is a scalar geometric majorant only.",
+  "verdict": "advanced",
+  "decision_reason": "R-444 supplies a reusable exact exponential shell-tail majorant for the edge-weight model and makes explicit the finite-to-ambient subset step. It does not identify this scalar weight with the actual Q3LOCK commutator/history tail or prove any operator, common-core, exhaustion or physical theorem.",
+  "decision_scope": "Scalar weights on Z^3 and positive-coordinate finite rectangular nearest-neighbour boxes, with exact radii R=1..12 in the executable [2,8]^3 sweep and arithmetic shell/tail identities.",
+  "assumptions": [
+    "The ambient l1 shell count is N_3(0)=1 and N_3(n)=4n^2+2 for n>=1.",
+    "Each lower endpoint has at most three positive-coordinate outgoing edges and finite boxes are subsets of the ambient edge set.",
+    "The lower-endpoint weight is nonnegative and equals 2^(-l1 radius).",
+    "The finite sweep is a reproducibility check, not a thermodynamic or operator limit."
+  ],
+  "missing_assumptions": [
+    "Q3LOCK commutator/history-tail transfer and a representation-independent common core.",
+    "Weighted product-domain, source/cutoff/volume/shape-uniform operator or state-weighted estimates.",
+    "Exhaustion Cauchy, common alpha, OS/KMS/GNS, sector coercivity, physical-empty and continuum inputs.",
+    "Any Yang--Mills dynamics or mass-gap theorem."
+  ],
+  "adversarial_review": [
+    {"axis": "zero shell handling", "check": "The origin shell is separate and the formula is used only for R>=1.", "disposition": "UPHELD"},
+    {"axis": "closed form versus fitted decay", "check": "Each exact one-shell decrement is checked against the closed form for all tested radii.", "disposition": "UPHELD"},
+    {"axis": "finite subset versus ambient lattice", "check": "Every declared box tail is explicitly compared with the ambient formula; no equality is asserted for finite boxes.", "disposition": "UPHELD"},
+    {"axis": "scalar versus operator", "check": "The hostile firewall rejects commutator, history-tail and weighted-operator promotions.", "disposition": "UPHELD-OPEN"},
+    {"axis": "QFT promotion", "check": "No physical-empty, continuum, Yang--Mills or mass-gap flag is enabled.", "disposition": "UPHELD"}
+  ],
+  "boundary": "R-444 is T0 claim-nonbearing scalar geometric evidence. It does not close a Q3LOCK commutator or history tail, weighted operator, common core, common alpha, exhaustion, OS/KMS/GNS, physical-empty, C6, Pre-A, Sector-A, Yang--Mills dynamics or a mass gap.",
+  "next_action": "Use T(R) only as a scalar spatial weight while deriving the missing Q3LOCK-specific commutator/history-tail transfer on a declared common core; retain any mismatch as a route-local obstruction.",
+  "no_overclaim": "Exact scalar shell arithmetic and finite rectangular dominance do not imply an operator, thermodynamic, physical or Yang--Mills conclusion.",
+  "evidence_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-exponential-shell-tail-manifest.json#finite_contract",
+    "strategy/pre-a-cp1-st8-q3lock-exponential-shell-tail-certificate-260830.md#Exact-scope",
+    "codes/foundations/pre_a_cp1_st8_q3lock_exponential_shell_tail.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_exponential_shell_tail_independent.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_exponential_shell_tail_hostile.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_exponential_shell_tail_verify.py#main",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-primary-exponential_shell_tail/primary.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-independent-exponential_shell_tail/independent.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-hostile-exponential_shell_tail/hostile.json#mutations_rejected",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-integrated-exponential_shell_tail/integrated.json#lean",
+    "verification/lean/Tect/R444.lean#tail_formula_r1",
+    "verification/lean/registry.json#R444"
+  ],
+  "formal_refs": {
+    "events": ["20260830-r-444-exponential-shell-tail-majorant-2026-08-3"],
+    "results": ["R-444"],
+    "negatives": []
+  },
+  "formal_integration": {
+    "events": ["20260830-r-444-exponential-shell-tail-majorant-2026-08-3"],
+    "results": ["R-444"],
+    "negatives": [],
+    "no_new_result": false,
+    "no_new_negative": true,
+    "no_pdf": true,
+    "no_tier_change": true
+  },
+  "recorded_at": "2026-08-31T15:30:00Z",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-08-30",
+  "provenance": "contemporaneous"
+}

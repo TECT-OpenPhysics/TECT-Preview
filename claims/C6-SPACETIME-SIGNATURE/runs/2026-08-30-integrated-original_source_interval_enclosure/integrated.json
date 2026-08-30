@@ -1,0 +1,191 @@
+{
+  "assertion_count": 13,
+  "assertions": [
+    {
+      "actual": "['R-433', 'EXP-001278', False, 'ORIGINAL_SOURCE_INTERVAL_CERTIFIED']",
+      "expected": "R-433/EXP-001278/false/ORIGINAL_SOURCE_INTERVAL_CERTIFIED",
+      "group": "provenance",
+      "name": "manifest identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'c6_closed': False, 'common_core_closed': False, 'continuum_closed': False, 'corrected_row_interval_propagated': True, 'cutoff_uniform_coarse_schur_closed': False, 'exact_original_hamiltonian_certified': True, 'exhaustion_uniform_coarse_schur_closed': False, 'gibbs_kernel_interval_propagated': True, 'global_poincare_closed': False, 'hamiltonian_os_identification_closed': False, 'kms_gns_gap_closed': False, 'no_new_negative_result': True, 'no_pdf': True, 'no_tier_change': True, 'original_source_interval_certified': True, 'phase_uniform_coarse_schur_closed': False, 'pre_a_closed': False, 'r422_separation_certified': True, 'r426_direct_separation_certified': True, 'residual_interval_certified': True, 'residual_reuse_closed_for_original_source': False, 'sector_a_closed': False, 'volume_uniform_coarse_schur_closed': False}",
+      "expected": "finite source flags true and all promotion flags false",
+      "group": "scope",
+      "name": "scope firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": "[]",
+      "expected": "all R-433 artifacts",
+      "group": "provenance",
+      "name": "artifacts present",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'codes/foundations/pre_a_cp1_st8_q3lock_original_source_interval_enclosure.py': 'b18599207fcc33467b048aa7a2501942fe9b4a524c8adc7e5707b644c6b93ee6', 'codes/foundations/pre_a_cp1_st8_q3lock_original_source_interval_enclosure_independent.py': '3575692b14233b7a5968bc8895625c3df3754fbdd172028ca80f9b2a088560b0', 'codes/foundations/pre_a_cp1_st8_q3lock_original_source_interval_enclosure_hostile.py': 'f2a24f4f5be8b889db61a3ee406c3889b58ff489f991564078902b74c0f90ea1', 'verification/lean/Tect/R433.lean': '6700ab61f5460c053a58ec2a01d406372f0d50f333c314a6bde87371d018aec5'}",
+      "expected": "distinct source hashes",
+      "group": "provenance",
+      "name": "artifact hashes distinct",
+      "status": "PASS"
+    },
+    {
+      "actual": "['source_block_dimensions', 'polar_residual_bound', 'corrected_row_interval_separation', 'finite_source_scope']",
+      "expected": "declared theorem markers",
+      "group": "Lean",
+      "name": "Lean markers",
+      "status": "PASS"
+    },
+    {
+      "actual": "forbidden tokens absent",
+      "expected": "clean finite scalar file",
+      "group": "Lean",
+      "name": "Lean policy",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-433 PRIMARY ORIGINAL_SOURCE_INTERVAL_CERTIFIED 40/40 bracket=[5.3631875,5.36318753578693299097251371244438840787107595]\nR-433 PRIMARY SELFTEST: PASS (validated original-source interval)",
+      "expected": "exit 0 and output",
+      "group": "executables",
+      "name": "run pre_a_cp1_st8_q3lock_original_source_interval_enclosure.py",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-433 INDEPENDENT INDEPENDENT_FINITE_CONTROL_PASS 12/12 gap=5.36318775241371\nR-433 INDEPENDENT SELFTEST: PASS",
+      "expected": "exit 0 and output",
+      "group": "executables",
+      "name": "run pre_a_cp1_st8_q3lock_original_source_interval_enclosure_independent.py",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-433 HOSTILE HOSTILE_MUTATIONS_REJECTED 7/7\nR-433 HOSTILE SELFTEST: PASS",
+      "expected": "exit 0 and output",
+      "group": "executables",
+      "name": "run pre_a_cp1_st8_q3lock_original_source_interval_enclosure_hostile.py",
+      "status": "PASS"
+    },
+    {
+      "actual": "",
+      "expected": "exit 0 without errors",
+      "group": "Lean",
+      "name": "Lean compile",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'hamiltonian_residual_upper': '5.08300270885330996028638439322767609253278307e-41', 'hamiltonian_gram_upper': '5.27430847741091424349141080243822595135773924e-42', 'maximum_residual_matrix_interval_width': '0.000000000698508832072442379403770707496312963291481103', 'rayleigh_interval': ['5.36318753578693275039077526024934453958608079', '5.36318753578693299097251371244438840787107595'], 'bracket_width': '0.0000000357869329909725137124443884078710759454190121', 'r422_separation_margin': '0.000002532836301', 'r426_separation_margin': '0.000000814260877009027486287555611592128924054580984'}",
+      "expected": "40/40 finite interval checks, width<1e-8, bracket<3e-7 and both reference separations",
+      "group": "primary",
+      "name": "primary interval certificate",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'residual_gap_double': 5.36318775241371, 'r422_separation_margin_double': 2.7852500110725487e-06, 'tail_split': {'core': [4, 5, 6, 7, 8, 9, 10], 'tail': [0, 1, 2, 3, 11, 12, 13, 14, 15]}}",
+      "expected": "independent source/row/residual control with R-422 sign separation",
+      "group": "independent",
+      "name": "independent finite control",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'claim_bearing': False, 'hostile_mutations_rejected': True, 'physical_promotion_rejected': True}",
+      "expected": "all seven mutations rejected",
+      "group": "hostile",
+      "name": "hostile controls",
+      "status": "PASS"
+    }
+  ],
+  "assumptions": [
+    "The R-419 finite fixture is the exact declared source for the V=2, d=16 calculation and the R-432 emission ordinal contract is unchanged.",
+    "Exchange and global Fock-parity symmetries commute with the finite source Hamiltonian, so the four displayed block reductions preserve the spectrum.",
+    "The polar correction bound used in the certificate is applied only after directed interval residual and Gram-defect bounds are below one half.",
+    "For a positive self-adjoint finite matrix, exp(-beta X) is beta-Lipschitz in operator norm on the shifted positive cone; the coordinate-vector perturbation bound uses ||K||<=1.",
+    "The interval Cholesky lower certificate and interval Rayleigh upper certificate are applied to the same symmetric compressed residual enclosure."
+  ],
+  "boundary": "Finite V=2, d=16, beta=8 original-source row only; all uniform, physical-empty, Yang-Mills and mass-gap flags remain false.",
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "derived": {
+    "bracket_width": "0.0000000357869329909725137124443884078710759454190121",
+    "fixed_row": {
+      "beta": "8",
+      "comparison_tolerance": "5e-7",
+      "core_indices": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "cutoff_dimension": 16,
+      "orientation": "right",
+      "r422_reference": "5.363184967163699",
+      "r426_direct_reference": "5.36318835004781",
+      "tail_indices": [
+        0,
+        1,
+        2,
+        3,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "tail_threshold": "4",
+      "target_emission_ordinal": 7,
+      "target_parent_coordinate": 6,
+      "volume": 2
+    },
+    "hamiltonian_gram_upper": "5.27430847741091424349141080243822595135773924e-42",
+    "hamiltonian_residual_upper": "5.08300270885330996028638439322767609253278307e-41",
+    "hostile_mutation_count": 7,
+    "independent_residual_gap_double": 5.36318775241371,
+    "lean": "PASS",
+    "maximum_residual_matrix_interval_width": "0.000000000698508832072442379403770707496312963291481103",
+    "outputs": {
+      "lean": "",
+      "pre_a_cp1_st8_q3lock_original_source_interval_enclosure.py": "R-433 PRIMARY ORIGINAL_SOURCE_INTERVAL_CERTIFIED 40/40 bracket=[5.3631875,5.36318753578693299097251371244438840787107595]\nR-433 PRIMARY SELFTEST: PASS (validated original-source interval)",
+      "pre_a_cp1_st8_q3lock_original_source_interval_enclosure_hostile.py": "R-433 HOSTILE HOSTILE_MUTATIONS_REJECTED 7/7\nR-433 HOSTILE SELFTEST: PASS",
+      "pre_a_cp1_st8_q3lock_original_source_interval_enclosure_independent.py": "R-433 INDEPENDENT INDEPENDENT_FINITE_CONTROL_PASS 12/12 gap=5.36318775241371\nR-433 INDEPENDENT SELFTEST: PASS"
+    },
+    "r422_separation_margin": "0.000002532836301",
+    "r426_separation_margin": "0.000000814260877009027486287555611592128924054580984",
+    "rayleigh_interval": [
+      "5.36318753578693275039077526024934453958608079",
+      "5.36318753578693299097251371244438840787107595"
+    ],
+    "residual_reuse_closed_for_original_source": false,
+    "source_interval_certified": true,
+    "symmetry_block_sizes": [
+      72,
+      56,
+      64,
+      64
+    ]
+  },
+  "evidence_level": "T0 / EXECUTED VALIDATED FINITE ORIGINAL-SOURCE INTERVAL ENCLOSURE; NO UNIFORM OR PHYSICAL PROMOTION",
+  "exploration_id": "EXP-001278",
+  "manifest": "strategy/pre-a-cp1-st8-q3lock-original-source-interval-enclosure-manifest.json",
+  "missing_assumptions": [
+    "A cutoff-, volume-, phase- and exhaustion-uniform version of the finite source enclosure.",
+    "A common unbounded Q3 core and a uniform residual or Schur estimate beyond this one finite source.",
+    "History transfer, OS/KMS/GNS reconstruction, physical-sector admission and continuum control.",
+    "A same-owner normalized physical-empty branch E and the full Reading-H functional required for the three physical-empty tests."
+  ],
+  "non_claims": [
+    "No physical-empty energy sign, Reading-H full stationarity or symmetry-projected transverse stability result.",
+    "No cutoff-, volume-, phase- or exhaustion-uniform Schur, Poincare or residual theorem.",
+    "No common core, history transfer, OS/KMS/GNS reconstruction, sector gap or continuum limit.",
+    "No C6, Sector-A, Pre-A, Yang-Mills or mass-gap conclusion."
+  ],
+  "result_id": "R-433",
+  "run_kind": "integrated",
+  "schema": "tect/pre-a-r433-integrated/1.0",
+  "source_hashes": {
+    "codes/foundations/pre_a_cp1_st8_q3lock_original_source_interval_enclosure.py": "b18599207fcc33467b048aa7a2501942fe9b4a524c8adc7e5707b644c6b93ee6",
+    "codes/foundations/pre_a_cp1_st8_q3lock_original_source_interval_enclosure_hostile.py": "f2a24f4f5be8b889db61a3ee406c3889b58ff489f991564078902b74c0f90ea1",
+    "codes/foundations/pre_a_cp1_st8_q3lock_original_source_interval_enclosure_independent.py": "3575692b14233b7a5968bc8895625c3df3754fbdd172028ca80f9b2a088560b0",
+    "verification/lean/Tect/R433.lean": "6700ab61f5460c053a58ec2a01d406372f0d50f333c314a6bde87371d018aec5"
+  },
+  "verdict": "ORIGINAL_SOURCE_INTERVAL_CERTIFIED"
+}

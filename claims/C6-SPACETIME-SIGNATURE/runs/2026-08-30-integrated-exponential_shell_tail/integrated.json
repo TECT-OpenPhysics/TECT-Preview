@@ -1,0 +1,338 @@
+{
+  "assertion_count": 27,
+  "assertions": [
+    {
+      "actual": [
+        "R-444",
+        "EXP-001289",
+        "T-054",
+        false
+      ],
+      "expected": "R-444/EXP-001289/T-054/false",
+      "group": "provenance",
+      "name": "identity",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "boundary_commutator_decay_closed": false,
+        "c6_closed": false,
+        "closed_form_tail_recurrence_checked": true,
+        "common_alpha_closed": false,
+        "common_core_closed": false,
+        "continuum_closed": false,
+        "exhaustion_cauchy_closed": false,
+        "finite_box_tail_dominated": true,
+        "geometric_shell_tail_closed": true,
+        "history_tail_closed": false,
+        "kms_gns_gap_closed": false,
+        "lean_arithmetic_crosscheck": true,
+        "no_new_negative_result": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "physical_empty_closed": false,
+        "pre_a_closed": false,
+        "sector_a_closed": false,
+        "shell_count_formula_checked": true,
+        "weighted_operator_form_closed": false
+      },
+      "expected": "geometric tail only",
+      "group": "scope",
+      "name": "scalar-only boundary",
+      "status": "PASS"
+    },
+    {
+      "actual": "r-444 closes only the scalar exponential shell-tail formula and finite rectangular dominance for the declared edge weight. it does not close a q3lock commutator or history tail, weighted operator domains, common core, common alpha, exhaustion, physical-empty, sector-a, pre-a, yang-mills or mass-gap claims.",
+      "expected": "explicit open QFT boundary",
+      "group": "scope",
+      "name": "QFT firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": "E:\\Dev\\TECT\\verification\\lean\\Tect\\R444.lean",
+      "expected": true,
+      "group": "Lean",
+      "name": "Lean source",
+      "status": "PASS"
+    },
+    {
+      "actual": "import Mathlib\n\nnamespace Tect.R444\n\ntheorem shell_count_n1 : 4 * (1 : Rat)^2 + 2 = 6 := by norm_num\n\ntheorem shell_count_n2 : 4 * (2 : Rat)^2 + 2 = 18 := by norm_num\n\ntheorem shell_count_n3 : 4 * (3 : Rat)^2 + 2 = 38 := by norm_num\n\ntheorem tail_formula_r1 :\n    3 * (4 * (1 : Rat)^2 + 8 * 1 + 14) * (2 : Rat)^(1 - 1) = 78 := by\n  norm_num\n\ntheorem tail_formula_r2 :\n    3 * (4 * (2 : Rat)^2 + 8 * 2 + 14) / 2 = 69 := by\n  norm_num\n\ntheorem tail_formula_r4 :\n    3 * (4 * (4 : Rat)^2 + 8 * 4 + 14) / 8 = 165 / 4 := by\n  norm_num\n\nend Tect.R444\n",
+      "expected": "markers",
+      "group": "Lean",
+      "name": "Lean markers",
+      "status": "PASS"
+    },
+    {
+      "actual": "forbidden tokens absent",
+      "expected": "clean",
+      "group": "Lean",
+      "name": "Lean firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-444 PRIMARY EXPONENTIAL_SHELL_TAIL_AUDITED 4519/4519 boxes=343 edges=102900 tail_rows=4116",
+      "expected": "audited",
+      "group": "executables",
+      "name": "primary child",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-444 INDEPENDENT INDEPENDENT_EXPONENTIAL_SHELL_TAIL_CONTROL 4505/4505 boxes=343 edges=102900 tail_rows=4116",
+      "expected": "independent",
+      "group": "executables",
+      "name": "independent child",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-444 HOSTILE HOSTILE_MUTATIONS_REJECTED 8/8",
+      "expected": "8 rejected",
+      "group": "hostile",
+      "name": "hostile child",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        343,
+        343
+      ],
+      "expected": "equal",
+      "group": "crosscheck",
+      "name": "lane agreement box_count",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        102900,
+        102900
+      ],
+      "expected": "equal",
+      "group": "crosscheck",
+      "name": "lane agreement total_edges",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        4116,
+        4116
+      ],
+      "expected": "equal",
+      "group": "crosscheck",
+      "name": "lane agreement total_tail_rows",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "78",
+        "78"
+      ],
+      "expected": "equal",
+      "group": "crosscheck",
+      "name": "lane agreement tail_at_1",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "1029/1024",
+        "1029/1024"
+      ],
+      "expected": "equal",
+      "group": "crosscheck",
+      "name": "lane agreement tail_at_12",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        true,
+        true
+      ],
+      "expected": "equal",
+      "group": "crosscheck",
+      "name": "lane agreement shell_count_formula_checked",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        true,
+        true
+      ],
+      "expected": "equal",
+      "group": "crosscheck",
+      "name": "lane agreement closed_form_tail_recurrence_checked",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        true,
+        true
+      ],
+      "expected": "equal",
+      "group": "crosscheck",
+      "name": "lane agreement finite_box_tail_dominated",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        true,
+        true
+      ],
+      "expected": "equal",
+      "group": "crosscheck",
+      "name": "lane agreement geometric_shell_tail_closed",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        false,
+        false
+      ],
+      "expected": "equal",
+      "group": "crosscheck",
+      "name": "lane agreement boundary_commutator_decay_closed",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        false,
+        false
+      ],
+      "expected": "equal",
+      "group": "crosscheck",
+      "name": "lane agreement history_tail_closed",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        false,
+        false
+      ],
+      "expected": "equal",
+      "group": "crosscheck",
+      "name": "lane agreement weighted_operator_form_closed",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        false,
+        false
+      ],
+      "expected": "equal",
+      "group": "crosscheck",
+      "name": "lane agreement common_core_closed",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        false,
+        false
+      ],
+      "expected": "equal",
+      "group": "crosscheck",
+      "name": "lane agreement common_alpha_closed",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        false,
+        false
+      ],
+      "expected": "equal",
+      "group": "crosscheck",
+      "name": "lane agreement pre_a_closed",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        false,
+        false
+      ],
+      "expected": "equal",
+      "group": "crosscheck",
+      "name": "lane agreement sector_a_closed",
+      "status": "PASS"
+    },
+    {
+      "actual": 8,
+      "expected": 8,
+      "group": "hostile",
+      "name": "hostile count",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "command": "lake env lean Tect/R444.lean",
+        "output": "",
+        "returncode": 0,
+        "status": "PASS"
+      },
+      "expected": "PASS",
+      "group": "Lean",
+      "name": "Lean compile",
+      "status": "PASS"
+    }
+  ],
+  "assumptions": [
+    "The ambient comparison lattice is Z^3 with l1 shell counts N_3(0)=1 and N_3(n)=4*n^2+2 for n>=1.",
+    "Finite rectangular boxes use only positive coordinate nearest-neighbour edges and therefore form a subset of the ambient lattice edge set after translation.",
+    "Each edge has nonnegative weight determined only by its lower endpoint l1 radius.",
+    "The executable [2,8]^3 sweep is a finite audit of the analytic shell formula and is not a volume limit.",
+    "The geometric bound is only a scalar weight majorant; it is not a commutator, operator-domain or state estimate."
+  ],
+  "boundary": "R-444 closes only the scalar exponential shell-tail formula and finite rectangular dominance for the declared edge weight. It does not close a Q3LOCK commutator or history tail, weighted operator domains, common core, common alpha, exhaustion, physical-empty, Sector-A, Pre-A, Yang-Mills or mass-gap claims.",
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "derived": {
+    "boundary_commutator_decay_closed": false,
+    "box_count": 343,
+    "common_alpha_closed": false,
+    "common_core_closed": false,
+    "geometric_shell_tail_closed": true,
+    "history_tail_closed": false,
+    "pre_a_closed": false,
+    "sector_a_closed": false,
+    "tail_at_1": "78",
+    "tail_at_12": "1029/1024",
+    "total_edges": 102900,
+    "total_tail_rows": 4116,
+    "weighted_operator_form_closed": false
+  },
+  "evidence_level": "T0 / EXACT SCALAR SHELL-COUNT AND GEOMETRIC TAIL MAJORANT WITH FINITE RECTANGULAR CROSS-CHECK",
+  "exploration_id": "EXP-001289",
+  "lean": {
+    "command": "lake env lean Tect/R444.lean",
+    "output": "",
+    "returncode": 0,
+    "status": "PASS"
+  },
+  "manifest": "strategy/pre-a-cp1-st8-q3lock-exponential-shell-tail-manifest.json",
+  "missing_assumptions": [
+    "A Q3LOCK-specific identification of the actual interaction or commutator with this scalar edge weight.",
+    "Representation-independent common-core and weighted product-domain estimates.",
+    "Source-, cutoff-, phase-, volume-, shape- and history-uniform operator norms or state-weighted commutator bounds.",
+    "All-shape exhaustion Cauchy, Lie--Trotter/common-alpha convergence, OS/KMS/GNS and sector coercivity.",
+    "Physical-empty, continuum, Yang--Mills and mass-gap conclusions."
+  ],
+  "non_claims": [
+    "No Q3LOCK commutator or history-tail estimate.",
+    "No weighted operator, common-core, common-alpha or exhaustion theorem.",
+    "No OS/KMS/GNS reconstruction, physical-empty comparison, continuum, Sector-A or Pre-A closure.",
+    "No Yang-Mills dynamics or mass-gap conclusion."
+  ],
+  "recorded_at": "2026-08-30T01:52:02.788330Z",
+  "result_id": "R-444",
+  "run_kind": "integrated",
+  "schema": "tect/pre-a-r444-integrated/1.0",
+  "scope": {
+    "claim_bearing": false,
+    "hostile_mutations_rejected": true,
+    "independent_reconstruction_agrees": true,
+    "operator_or_physical_promotion": false,
+    "scalar_geometric_tail_audited": true
+  },
+  "source_hashes": {
+    "codes/foundations/pre_a_cp1_st8_q3lock_exponential_shell_tail.py": "8d7bc1240d878d2ecd5dda214f943a68776a602f49f79c32a86e79fa73d2322b",
+    "codes/foundations/pre_a_cp1_st8_q3lock_exponential_shell_tail_hostile.py": "a9cf57516011a084f9401e11b6cb94cf4571e480a4335736827fef4dcfff229c",
+    "codes/foundations/pre_a_cp1_st8_q3lock_exponential_shell_tail_independent.py": "581e368dc9f27bfa0cecefcf1ccd4b7b2aa198c08c5ed2539a42bc3c0d2e2938",
+    "strategy/pre-a-cp1-st8-q3lock-exponential-shell-tail-manifest.json": "9b7d0d15eec8c3b8bea0ae8796a6872857c3bc00cc18ce19d18015e2b0d5cfb4",
+    "verification/lean/Tect/R444.lean": "a438cdd23e4282e807c7cca07ae1c62790f1f161495e01d99d94ad70ab60064a"
+  },
+  "verdict": "INTEGRATED_EXPONENTIAL_SHELL_TAIL_AUDITED"
+}

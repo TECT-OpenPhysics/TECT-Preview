@@ -1,0 +1,140 @@
+{
+  "schema": "tect/pre-a-cp1-st8-q3lock-rounded-snapshot-interval-enclosure/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-ROUNDED-SNAPSHOT-INTERVAL-ENCLOSURE-v0",
+  "result_id": "R-431",
+  "title": "Directed interval enclosure for the fixed rounded residual snapshot",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001276",
+  "claim_bearing": false,
+  "status": "ROUNDED_SNAPSHOT_INTERVAL_CERTIFIED",
+  "parent_results": ["R-430", "R-429", "R-426"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY",
+    "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+  ],
+  "question": "Can directed interval arithmetic certify the residual minimum eigenvalue and both fixed-reference separations for the exact IEEE-754 rounded R-428/R-429 graph snapshot at the R-426 failure row?",
+  "new_perspective": {
+    "principle": "Replace the downstream point eigensolve by a finite interval certificate: treat each stored binary64 snapshot value as an exact binary rational, propagate directed intervals through the weighted residual basis and compression, certify a lower bound by interval Cholesky, and certify an upper bound by an interval Rayleigh quotient.",
+    "route": [
+      "Reconstruct the fixed R-426 row through the existing R-429 snapshot producer without importing the R-431 primary result.",
+      "Convert every binary64 weight and conductance to its exact binary rational interval and use 80-digit directed mpmath interval arithmetic for square roots, products and divisions.",
+      "Construct the blockwise weighted-zero-mean residual basis by interval Gram-Schmidt, symmetrise by interval hull, and prove A-LI positive definite by an interval Cholesky factorization at the declared lower probe.",
+      "Use an independent floating-point Rayleigh vector with an interval quotient for the upper probe; compare the certified bracket with R-422 and R-426 under the unchanged 5e-7 tolerance.",
+      "Keep the original Hamiltonian/Gibbs source enclosure explicitly outside scope; the result is a rigorous finite certificate only for the fixed rounded snapshot."
+    ],
+    "qft_bridge": "The certificate removes downstream eigensolver ambiguity for one rounded finite graph row, but it supplies no original-source enclosure, common core, regulator limit, physical sector or Yang-Mills statement."
+  },
+  "interval_contract": {
+    "arithmetic": "mpmath.iv directed interval arithmetic",
+    "interval_decimal_digits": 80,
+    "input_mode": "exact binary64 snapshot values reconstructed as binary rationals",
+    "fixed_row": {
+      "volume": 2,
+      "cutoff_dimension": 16,
+      "beta": "8",
+      "orientation": "right",
+      "conditional_row_index": 7,
+      "core_size": 7,
+      "tail_size": 9
+    },
+    "comparison_tolerance": "5e-7",
+    "lower_probe": "5.3631875357",
+    "upper_probe": "5.3631875359",
+    "cholesky_failure_probe": "5.3631875360",
+    "maximum_matrix_interval_width": "1e-50",
+    "maximum_bracket_width": "3e-10",
+    "snapshot_normalization_tolerance": "1e-12"
+  },
+  "test_oracles": {
+    "r422_reference": "5.363184967163699",
+    "r426_direct_reference": "5.36318835004781",
+    "r422_lower_separation_threshold": "5.363185467163699",
+    "r426_upper_separation_threshold": "5.36318785004781",
+    "expected_lower_probe_pivot_positive": true,
+    "expected_cholesky_failure_probe_rejected": true
+  },
+  "upstream_authority": {
+    "r429_manifest": "strategy/pre-a-cp1-st8-q3lock-residual-precision-uplift-manifest.json",
+    "r429_sha256": "24baa0690b89f262dded8fb53118d542de58a509f610043a15edba704cc2ed79",
+    "r429_script": "codes/foundations/pre_a_cp1_st8_q3lock_residual_precision_uplift.py",
+    "r429_script_sha256": "6be56d757aa24c7db1303562f6cb0acfd421ca059992a3121363dcab2ea932a6",
+    "r426_manifest": "strategy/pre-a-cp1-st8-q3lock-high-cutoff-schur-stress-manifest.json",
+    "r426_sha256": "0292aec6ec398cf7358e4e618f7623880543b9374a1501d3d3fa362db29901b0",
+    "r428_manifest": "strategy/pre-a-cp1-st8-q3lock-residual-basis-conditioning-diagnostic-manifest.json",
+    "r428_sha256": "cf022b25e8f1123f881bdbd7bbe5224fa6de131f0b089c6b08e337507a85c1ee"
+  },
+  "scope": {
+    "rounded_snapshot_interval_certified": true,
+    "original_source_interval_certified": false,
+    "exact_original_hamiltonian_certified": false,
+    "r422_separation_certified": true,
+    "r426_direct_separation_certified": true,
+    "r426_route_failure_preserved": true,
+    "residual_reuse_closed_for_original_source": false,
+    "cutoff_uniform_coarse_schur_closed": false,
+    "volume_uniform_coarse_schur_closed": false,
+    "phase_uniform_coarse_schur_closed": false,
+    "exhaustion_uniform_coarse_schur_closed": false,
+    "global_poincare_closed": false,
+    "common_core_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "assumptions": [
+    "The R-429 row_inputs producer and its hash-pinned upstream manifests define the exact finite rounded snapshot under audit.",
+    "A stored binary64 value is treated as its exact binary rational; no unrecorded decimal rounding is introduced.",
+    "Directed interval operations enclose the finite arithmetic expressions used for the residual matrix and basis.",
+    "Interval Cholesky positivity of A-LI proves the lower eigenvalue bound, and an interval Rayleigh quotient proves an upper bound for the same symmetric matrix.",
+    "The blockwise weighted-zero-mean basis and fixed row/tail split are unchanged from R-426/R-429."
+  ],
+  "missing_assumptions": [
+    "A validated interval eigensolve for the original 256-dimensional Hamiltonian and coordinate eigenbasis.",
+    "A propagated enclosure from the original rational source through Gibbs normalization, conditional-row selection and conductance.",
+    "A basis-independent certified residual comparison for the unrounded original source.",
+    "A cutoff-, volume-, phase- and exhaustion-uniform common Q3 core and OS/KMS/GNS/physical-sector transfer."
+  ],
+  "stop_conditions": [
+    "If the interval basis loses positivity, orthogonality or finite width, report the rounded snapshot certificate as blocked and do not relax the probes.",
+    "If either reference separation fails at the fixed tolerance, retain the exact interval bracket and do not convert it into a source-level conclusion.",
+    "Never mark the original-source residual-reuse route closed from this downstream snapshot certificate."
+  ],
+  "evidence_level": "T0 / EXECUTED RIGOROUS FINITE INTERVAL CERTIFICATE FOR ONE EXACT BINARY64 ROUNDED GRAPH SNAPSHOT; original Hamiltonian source enclosure remains open",
+  "non_claims": [
+    "No interval certification of the original Hamiltonian, coordinate eigenbasis or Gibbs weights.",
+    "No closure of R-426 residual reuse for the original unrounded source.",
+    "No cutoff-, volume-, phase- or exhaustion-uniform Schur or residual bound.",
+    "No common core, history transfer, OS/KMS/GNS reconstruction, sector gap or continuum limit.",
+    "No C6, Sector-A, Pre-A, Yang-Mills or mass-gap conclusion."
+  ],
+  "boundary": "R-431 certifies a narrow eigenvalue bracket and fixed-reference separations for the exact rounded R-428/R-429 graph snapshot. It does not enclose the upstream Hamiltonian/Gibbs construction, so the original-source precision boundary and R-426 route status remain separate.",
+  "next_unlock": "Build a validated interval or ball enclosure for the original coordinate and Hamiltonian eigensystems, then propagate it through Gibbs normalization and residual compression at the same fixed row.",
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R431.lean",
+    "theorem_markers": [
+      "rounded_snapshot_r422_separation",
+      "rounded_snapshot_direct_separation",
+      "rounded_snapshot_bracket_width",
+      "finite_snapshot_scope"
+    ],
+    "command": "lake env lean Tect/R431.lean",
+    "role": "Lean checks the rational threshold arithmetic and explicit finite/no-source-promotion scope; interval matrix operations remain executable Python."
+  },
+  "artifacts": {
+    "primary_script": "codes/foundations/pre_a_cp1_st8_q3lock_rounded_snapshot_interval_enclosure.py",
+    "independent_script": "codes/foundations/pre_a_cp1_st8_q3lock_rounded_snapshot_interval_enclosure_independent.py",
+    "hostile_script": "codes/foundations/pre_a_cp1_st8_q3lock_rounded_snapshot_interval_enclosure_hostile.py",
+    "integrated_verifier": "codes/foundations/pre_a_cp1_st8_q3lock_rounded_snapshot_interval_enclosure_verify.py",
+    "lean": "verification/lean/Tect/R431.lean",
+    "certificate": "strategy/pre-a-cp1-st8-q3lock-rounded-snapshot-interval-enclosure-certificate-260830.md",
+    "exploration": "strategy/pre-a-cp1-st8-q3lock-rounded-snapshot-interval-enclosure-exploration.json"
+  }
+}

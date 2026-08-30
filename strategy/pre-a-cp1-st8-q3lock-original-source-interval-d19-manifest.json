@@ -1,0 +1,186 @@
+{
+  "schema": "tect/pre-a-cp1-st8-q3lock-original-source-interval-d19/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-ORIGINAL-SOURCE-INTERVAL-D19-v0",
+  "result_id": "R-438",
+  "title": "Validated original-source interval at V=2, d=19 unconditional row",
+  "task_id": "T-054",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "exploration_id": "EXP-001283",
+  "claim_bearing": false,
+  "status": "ORIGINAL_SOURCE_INTERVAL_CERTIFIED",
+  "parent_results": [
+    "R-436",
+    "R-437",
+    "R-435",
+    "R-419"
+  ],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY",
+    "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+  ],
+  "question": "Can the exact finite R-419 oscillator/Hamiltonian source be enclosed at the separately fixed cutoff d=19, propagated through the normalized unconditional one-site Gibbs row and a preregistered core/tail residual compression, with a positive finite interval gap?",
+  "selection_contract": {
+    "rule": "Use the first preregistered source row in the beta=8, right-orientation enumeration whose emission ordinal is zero; select before interval evaluation and never from the resulting gap.",
+    "beta_order": [
+      "8"
+    ],
+    "orientation_order": [
+      "right"
+    ],
+    "emission_ordinal": 0,
+    "row_kind": "unconditional_one_site_marginal"
+  },
+  "source_contract": {
+    "volume": 2,
+    "cutoff_dimension": 19,
+    "beta": "8",
+    "orientation": "right",
+    "row_kind": "unconditional_one_site_marginal",
+    "target_emission_ordinal": 0,
+    "target_parent_coordinate": null,
+    "tail_threshold": "4",
+    "core_indices": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "tail_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      14,
+      15,
+      16,
+      17,
+      18
+    ]
+  },
+  "expected_block_sizes": [
+    100,
+    81,
+    90,
+    90
+  ],
+  "interval_contract": {
+    "arithmetic": "Reuse the validated directed mpmath.iv source and propagation primitives with midpoint/radius bounds for the d=19 finite matrices.",
+    "point_decimal_digits": 50,
+    "source_decimal_digits_in_intervals": 45,
+    "interval_decimal_digits": 80,
+    "expected_hamiltonian_dimension": 361,
+    "shift_safety": "1e-40",
+    "hamiltonian_residual_threshold": "1e-35",
+    "hamiltonian_gram_threshold": "1e-35",
+    "coordinate_residual_threshold": "1e-35",
+    "coordinate_gram_threshold": "1e-35",
+    "diagonal_error_threshold": "1e-30",
+    "lower_probe": "4.5",
+    "upper_probe": "4.6",
+    "cholesky_failure_probe": "4.7",
+    "maximum_matrix_interval_width": "1e-6",
+    "maximum_bracket_width": "0.3",
+    "row_positive_floor": "1e-30"
+  },
+  "expected_outcomes": {
+    "source_interval_certified": true,
+    "finite_positive_gap_certified": true,
+    "residual_reuse_closed_for_original_source": false
+  },
+  "upstream_authority": {
+    "r419_manifest": "strategy/pre-a-cp1-st8-q3lock-growing-volume-lyapunov-core-tail-stress-manifest.json",
+    "r419_manifest_sha256": "d5e2139c1a8af9b11f13098a8aaafabf66560bf08f011afb18900f50ae7e2881",
+    "r433_script": "codes/foundations/pre_a_cp1_st8_q3lock_original_source_interval_enclosure.py",
+    "r433_script_sha256": "b18599207fcc33467b048aa7a2501942fe9b4a524c8adc7e5707b644c6b93ee6"
+  },
+  "scope": {
+    "original_source_interval_certified": true,
+    "exact_original_hamiltonian_certified": true,
+    "gibbs_kernel_interval_propagated": true,
+    "unconditional_row_interval_propagated": true,
+    "residual_interval_certified": true,
+    "finite_positive_gap_certified": true,
+    "residual_reuse_closed_for_original_source": false,
+    "cutoff_uniform_coarse_schur_closed": false,
+    "volume_uniform_coarse_schur_closed": false,
+    "phase_uniform_coarse_schur_closed": false,
+    "exhaustion_uniform_coarse_schur_closed": false,
+    "common_core_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "assumptions": [
+    "The hash-pinned R-419 rational oscillator fixture is unchanged and is the exact finite source at V=2,d=19.",
+    "Exchange and global Fock-parity symmetries commute with the finite source Hamiltonian, so the four declared blocks preserve its finite spectrum.",
+    "The R-433 polar-correction and Gibbs-kernel perturbation inequalities remain valid after the d=19 residual and Gram checks.",
+    "The unconditional row is the normalized one-site marginal of the finite Gibbs diagonal, and the fixed tail threshold is four.",
+    "The interval Cholesky and Rayleigh certificates use the same symmetric compressed residual enclosure.",
+    "The lower/upper/failure probes 4.5/4.6/4.7 and bracket allowance 0.3 are frozen before the formal d=19 run, following the next-step probe rule after R-436."
+  ],
+  "missing_assumptions": [
+    "A cutoff-, volume-, phase- and exhaustion-uniform interval estimate.",
+    "A common unbounded Q3 core, history transfer and OS/KMS/GNS reconstruction.",
+    "Residual-reuse closure against the R-422/R-426 route and a common limit-order theorem.",
+    "Physical-sector admission, an absolute physical-empty reference and any Yang-Mills interpretation."
+  ],
+  "stop_conditions": [
+    "If any d=19 block, source residual, Gram bound, normalized row or fixed split fails, retain the probe as inconclusive and do not promote.",
+    "If the interval crosses the tail threshold or any fixed probe, report the exact interval and do not call the row certified.",
+    "If a hostile mutation is accepted, fail the integrated verifier instead of relaxing the contract.",
+    "Never promote this finite row certificate to a common-core, physical, Yang-Mills or mass-gap theorem."
+  ],
+  "evidence_level": "T0 / EXECUTED VALIDATED FINITE ORIGINAL-SOURCE INTERVAL AT d=19; NO UNIFORM OR PHYSICAL PROMOTION",
+  "non_claims": [
+    "No cutoff/volume/phase/exhaustion-uniform Schur or Poincare theorem.",
+    "No common core, history transfer, OS/KMS/GNS reconstruction, sector gap or continuum limit.",
+    "No physical-empty energy sign, Reading-H stationarity or symmetry-projected transverse stability.",
+    "No C6, Sector-A, Pre-A, Yang-Mills or mass-gap conclusion."
+  ],
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R438.lean",
+    "theorem_markers": [
+      "d19_block_dimensions",
+      "finite_gap_probe_order",
+      "unconditional_row_split",
+      "finite_source_scope"
+    ],
+    "command": "lake env lean Tect/R438.lean",
+    "role": "Lean checks the declared d=19 block arithmetic, fixed probe ordering, row split cardinalities and finite/no-promotion scope; interval matrix operations remain executable Python."
+  },
+  "artifacts": {
+    "primary_script": "codes/foundations/pre_a_cp1_st8_q3lock_original_source_interval_d19.py",
+    "independent_script": "codes/foundations/pre_a_cp1_st8_q3lock_original_source_interval_d19_independent.py",
+    "hostile_script": "codes/foundations/pre_a_cp1_st8_q3lock_original_source_interval_d19_hostile.py",
+    "integrated_verifier": "codes/foundations/pre_a_cp1_st8_q3lock_original_source_interval_d19_verify.py",
+    "lean": "verification/lean/Tect/R438.lean",
+    "certificate": "strategy/pre-a-cp1-st8-q3lock-original-source-interval-d19-certificate-260830.md",
+    "exploration": "strategy/pre-a-cp1-st8-q3lock-original-source-interval-d19-exploration.json"
+  },
+  "boundary": "One finite V=2,d=19,beta=8 unconditional one-site marginal row. The certificate is an auxiliary source-interval datapoint; all uniform, physical-empty and Yang-Mills/mass-gap flags remain false.",
+  "formal_integration": {
+    "event_ordinal": 779,
+    "event_title": "R-438 original-source interval d=19",
+    "event_id": "20260830-r-438-original-source-interval-d-19-2026-08-30",
+    "metadata_correction_event_ordinal": 780,
+    "metadata_correction_event_id": "20260830-r-438-metadata-correction-claim-links-2026-08-3",
+    "new_negative": false,
+    "tier_change": false,
+    "pdf": false
+  }
+}

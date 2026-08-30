@@ -1,0 +1,164 @@
+{
+  "assertion_count": 15,
+  "assertions": [
+    {
+      "actual": "['R-439', 'EXP-001284', False, 'INCREASING_CORE_RULE_AUDITED']",
+      "expected": "R-439 finite non-claiming identity",
+      "group": "provenance",
+      "name": "manifest identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "[]",
+      "expected": "all R-439 artifacts",
+      "group": "provenance",
+      "name": "artifacts present",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'codes/foundations/pre_a_cp1_st8_q3lock_increasing_core_rule_audit.py': '7071c7d6bad15235a2a47ade05cf3e68cb11a01457e2560933a87a753dae471c', 'codes/foundations/pre_a_cp1_st8_q3lock_increasing_core_rule_audit_independent.py': '8cd9754e5891345246a83fdb06216f9b04664ebe55747c869692939b753a06c5', 'codes/foundations/pre_a_cp1_st8_q3lock_increasing_core_rule_audit_hostile.py': '235902eee1e60650b1b363c89d40e3ee156f931ef92e69195a3754fe837989f6', 'verification/lean/Tect/R439.lean': '26a52bab65eafd5f01afb7f81f52136f0fa06485d2dd4502c3e3e0a246583db5'}",
+      "expected": "distinct source hashes",
+      "group": "provenance",
+      "name": "artifact hashes distinct",
+      "status": "PASS"
+    },
+    {
+      "actual": "['d17_partition_cardinality', 'd18_partition_cardinality', 'd19_partition_cardinality', 'finite_threshold_rule_scope']",
+      "expected": "declared theorem markers",
+      "group": "Lean",
+      "name": "Lean markers",
+      "status": "PASS"
+    },
+    {
+      "actual": "forbidden tokens absent",
+      "expected": "clean finite scalar file",
+      "group": "Lean",
+      "name": "Lean policy",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-439 PRIMARY INCREASING_CORE_RULE_AUDITED 31/31 cutoffs=3 core_cardinalities=[9, 8, 9] nested=False\nR-439 PRIMARY SELFTEST: PASS",
+      "expected": "exit 0 and output",
+      "group": "executables",
+      "name": "run pre_a_cp1_st8_q3lock_increasing_core_rule_audit.py",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-439 INDEPENDENT INDEPENDENT_ADAPTIVE_RULE_CONTROL 33/33 core_cardinalities=[9, 8, 9]\nR-439 INDEPENDENT SELFTEST: PASS",
+      "expected": "exit 0 and output",
+      "group": "executables",
+      "name": "run pre_a_cp1_st8_q3lock_increasing_core_rule_audit_independent.py",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-439 HOSTILE HOSTILE_MUTATIONS_REJECTED 9/9\nR-439 HOSTILE SELFTEST: PASS",
+      "expected": "exit 0 and output",
+      "group": "executables",
+      "name": "run pre_a_cp1_st8_q3lock_increasing_core_rule_audit_hostile.py",
+      "status": "PASS"
+    },
+    {
+      "actual": "",
+      "expected": "exit 0 without errors",
+      "group": "Lean",
+      "name": "Lean compile",
+      "status": "PASS"
+    },
+    {
+      "actual": "['INCREASING_CORE_RULE_AUDITED', 31, True, False]",
+      "expected": "finite rule and no uniform promotion",
+      "group": "primary",
+      "name": "primary adaptive rule",
+      "status": "PASS"
+    },
+    {
+      "actual": "[{'core': [4, 5, 6, 7, 8, 9, 10, 11, 12], 'tail': [0, 1, 2, 3, 13, 14, 15, 16]}, {'core': [5, 6, 7, 8, 9, 10, 11, 12], 'tail': [0, 1, 2, 3, 4, 13, 14, 15, 16, 17]}, {'core': [5, 6, 7, 8, 9, 10, 11, 12, 13], 'tail': [0, 1, 2, 3, 4, 14, 15, 16, 17, 18]}]",
+      "expected": "[{'core': [4, 5, 6, 7, 8, 9, 10, 11, 12], 'tail': [0, 1, 2, 3, 13, 14, 15, 16]}, {'core': [5, 6, 7, 8, 9, 10, 11, 12], 'tail': [0, 1, 2, 3, 4, 13, 14, 15, 16, 17]}, {'core': [5, 6, 7, 8, 9, 10, 11, 12, 13], 'tail': [0, 1, 2, 3, 4, 14, 15, 16, 17, 18]}]",
+      "group": "primary",
+      "name": "primary supports",
+      "status": "PASS"
+    },
+    {
+      "actual": "['INDEPENDENT_ADAPTIVE_RULE_CONTROL', 33]",
+      "expected": "finite independent rule control",
+      "group": "independent",
+      "name": "independent adaptive control",
+      "status": "PASS"
+    },
+    {
+      "actual": "[{'core': [4, 5, 6, 7, 8, 9, 10, 11, 12], 'tail': [0, 1, 2, 3, 13, 14, 15, 16]}, {'core': [5, 6, 7, 8, 9, 10, 11, 12], 'tail': [0, 1, 2, 3, 4, 13, 14, 15, 16, 17]}, {'core': [5, 6, 7, 8, 9, 10, 11, 12, 13], 'tail': [0, 1, 2, 3, 4, 14, 15, 16, 17, 18]}]",
+      "expected": "[{'core': [4, 5, 6, 7, 8, 9, 10, 11, 12], 'tail': [0, 1, 2, 3, 13, 14, 15, 16]}, {'core': [5, 6, 7, 8, 9, 10, 11, 12], 'tail': [0, 1, 2, 3, 4, 13, 14, 15, 16, 17]}, {'core': [5, 6, 7, 8, 9, 10, 11, 12, 13], 'tail': [0, 1, 2, 3, 4, 14, 15, 16, 17, 18]}]",
+      "group": "independent",
+      "name": "independent supports",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'hostile_mutations_rejected': True, 'physical_promotion_rejected': True, 'uniform_promotion_rejected': True}",
+      "expected": "all hostile mutations rejected",
+      "group": "hostile",
+      "name": "hostile controls",
+      "status": "PASS"
+    },
+    {
+      "actual": "[[], True, True]",
+      "expected": "all finite flags true and promotion flags false",
+      "group": "scope",
+      "name": "scope firewall",
+      "status": "PASS"
+    }
+  ],
+  "assumptions": [
+    "The R-435, R-436 and R-438 primary rows are directed interval authorities for the same V=2, beta=8, right-oriented unconditional ordinal-zero rule.",
+    "The maximum midpoint probability is selected only from each already fixed row and is not chosen from the resulting gap or support.",
+    "The stored row endpoints have sufficient precision for directed Decimal logarithm classification; every margin is checked against the strict threshold inequalities.",
+    "The expected supports in this manifest are test oracles copied from the parent source contracts, not derived claims about a limit.",
+    "An adaptive finite support rule may be non-nested and may have non-monotone cardinality; neither property is silently inferred from this audit."
+  ],
+  "boundary": "R-439 certifies one deterministic cutoff-adaptive threshold-four classification on the three finite V=2 rows. The supports are not asserted to be nested or uniform, and this result supplies no common-core, physical or Yang-Mills conclusion.",
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "derived": {
+    "all_coordinates_unambiguous": true,
+    "core_cardinalities": [
+      9,
+      8,
+      9
+    ],
+    "core_cardinality_monotone": false,
+    "hostile_assertions": 9,
+    "independent_assertions": 33,
+    "lean": "PASS",
+    "outputs": {
+      "lean": "",
+      "pre_a_cp1_st8_q3lock_increasing_core_rule_audit.py": "R-439 PRIMARY INCREASING_CORE_RULE_AUDITED 31/31 cutoffs=3 core_cardinalities=[9, 8, 9] nested=False\nR-439 PRIMARY SELFTEST: PASS",
+      "pre_a_cp1_st8_q3lock_increasing_core_rule_audit_hostile.py": "R-439 HOSTILE HOSTILE_MUTATIONS_REJECTED 9/9\nR-439 HOSTILE SELFTEST: PASS",
+      "pre_a_cp1_st8_q3lock_increasing_core_rule_audit_independent.py": "R-439 INDEPENDENT INDEPENDENT_ADAPTIVE_RULE_CONTROL 33/33 core_cardinalities=[9, 8, 9]\nR-439 INDEPENDENT SELFTEST: PASS"
+    },
+    "primary_assertions": 31,
+    "raw_index_nested": false
+  },
+  "evidence_level": "T0 / EXECUTED FINITE CUTOFF-ADAPTIVE SUPPORT-RULE AUDIT; NO UNIFORM OR PHYSICAL PROMOTION",
+  "exploration_id": "EXP-001284",
+  "manifest": "strategy/pre-a-cp1-st8-q3lock-increasing-core-rule-audit-manifest.json",
+  "missing_assumptions": [
+    "An analytic cutoff-, volume-, phase- and exhaustion-uniform tail modulus for the adaptive supports.",
+    "Nested or transported embeddings of the cutoff-dependent cores into one common Q3 domain.",
+    "Residual-reuse closure and a common unbounded Hamiltonian core with OS/KMS/GNS identification.",
+    "A physical-sector reference, physical-empty comparison and any C6 or Sector-A transfer."
+  ],
+  "non_claims": [
+    "No cutoff-, volume-, phase- or exhaustion-uniform tail modulus.",
+    "No nested common core, residual-reuse closure, OS/KMS/GNS reconstruction or sector gap.",
+    "No physical-empty energy sign, Reading-H stationarity or symmetry-projected transverse stability.",
+    "No C6, Sector-A, Pre-A, Yang-Mills or mass-gap conclusion."
+  ],
+  "result_id": "R-439",
+  "run_kind": "integrated",
+  "schema": "tect/pre-a-r439-integrated/1.0",
+  "source_hashes": {
+    "codes/foundations/pre_a_cp1_st8_q3lock_increasing_core_rule_audit.py": "7071c7d6bad15235a2a47ade05cf3e68cb11a01457e2560933a87a753dae471c",
+    "codes/foundations/pre_a_cp1_st8_q3lock_increasing_core_rule_audit_hostile.py": "235902eee1e60650b1b363c89d40e3ee156f931ef92e69195a3754fe837989f6",
+    "codes/foundations/pre_a_cp1_st8_q3lock_increasing_core_rule_audit_independent.py": "8cd9754e5891345246a83fdb06216f9b04664ebe55747c869692939b753a06c5",
+    "verification/lean/Tect/R439.lean": "26a52bab65eafd5f01afb7f81f52136f0fa06485d2dd4502c3e3e0a246583db5"
+  },
+  "verdict": "INCREASING_CORE_RULE_AUDITED"
+}

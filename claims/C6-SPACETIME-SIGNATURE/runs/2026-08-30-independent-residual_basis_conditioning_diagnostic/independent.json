@@ -1,0 +1,221 @@
+{
+  "assertion_count": 21,
+  "assertions": [
+    {
+      "actual": "['R-428', 'EXP-001273', False]",
+      "expected": "R-428/EXP-001273/false",
+      "group": "provenance",
+      "name": "manifest identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "hash-pinned parents",
+      "expected": "declared hashes",
+      "group": "authority",
+      "name": "parent hashes",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2, 16, '8', 'right', 7]",
+      "expected": "V2/d16/beta8/right/row7",
+      "group": "fixture",
+      "name": "fixed row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[5.622948645880553e-13, 0.2864501401805248, 1.0, 0.0]",
+      "expected": "positive reversible row",
+      "group": "graph",
+      "name": "positive normalized graph",
+      "status": "PASS"
+    },
+    {
+      "actual": "[7, 9]",
+      "expected": "[7, 9]",
+      "group": "fixture",
+      "name": "block sizes",
+      "status": "PASS"
+    },
+    {
+      "actual": "-26.956559223766746",
+      "expected": "finite",
+      "group": "graph",
+      "name": "finite log row",
+      "status": "PASS"
+    },
+    {
+      "actual": "2.220446049250313e-16",
+      "expected": "<=1e-12",
+      "group": "basis",
+      "name": "r406_complement orthogonal",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.9993423491690854e-16",
+      "expected": "<=1e-12",
+      "group": "basis",
+      "name": "r406_complement constrained",
+      "status": "PASS"
+    },
+    {
+      "actual": "6.661338147750939e-16",
+      "expected": "<=1e-12",
+      "group": "basis",
+      "name": "r422_weighted_zero_mean orthogonal",
+      "status": "PASS"
+    },
+    {
+      "actual": "8.03971590597895e-17",
+      "expected": "<=1e-12",
+      "group": "basis",
+      "name": "r422_weighted_zero_mean constrained",
+      "status": "PASS"
+    },
+    {
+      "actual": "2.220446049250313e-16",
+      "expected": "<=1e-12",
+      "group": "basis",
+      "name": "householder_constraint_nullspace orthogonal",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.9993423491690854e-16",
+      "expected": "<=1e-12",
+      "group": "basis",
+      "name": "householder_constraint_nullspace constrained",
+      "status": "PASS"
+    },
+    {
+      "actual": "4.996003610813204e-16",
+      "expected": "<=1e-12",
+      "group": "basis",
+      "name": "spectral_projector_nullspace orthogonal",
+      "status": "PASS"
+    },
+    {
+      "actual": "2.1228786045507e-16",
+      "expected": "<=1e-12",
+      "group": "basis",
+      "name": "spectral_projector_nullspace constrained",
+      "status": "PASS"
+    },
+    {
+      "actual": "9.056711039601336e-16",
+      "expected": "<=1e-12",
+      "group": "crosswalk",
+      "name": "projector distance",
+      "status": "PASS"
+    },
+    {
+      "actual": "5.551115123125783e-16",
+      "expected": "<=1e-12",
+      "group": "crosswalk",
+      "name": "cross-Gram agreement",
+      "status": "PASS"
+    },
+    {
+      "actual": "509430475397.249",
+      "expected": ">100000000.0",
+      "group": "conditioning",
+      "name": "dynamic range",
+      "status": "PASS"
+    },
+    {
+      "actual": "9.865446628509744e-07",
+      "expected": ">5e-07",
+      "group": "reconstruction",
+      "name": "mismatch exceeds tolerance",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.9067128844696413e-06",
+      "expected": ">5e-07",
+      "group": "conditioning",
+      "name": "basis spread exceeds tolerance",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.00010355183044578828",
+      "expected": ">5e-07",
+      "group": "conditioning",
+      "name": "amplification budget exceeds tolerance",
+      "status": "PASS"
+    },
+    {
+      "actual": "INCONCLUSIVE_CONDITIONING",
+      "expected": "INCONCLUSIVE_CONDITIONING",
+      "group": "verdict",
+      "name": "classification",
+      "status": "PASS"
+    }
+  ],
+  "assumptions": [
+    "The hash-pinned R-419 conditional law, R-416 log-domain row and R-422/R-406 finite basis constructions are the declared inputs.",
+    "The fixed R-426 row and comparison tolerance are not changed during the diagnostic.",
+    "The normalized constraint rows represent the same blockwise weighted-zero-mean residual subspace in exact arithmetic.",
+    "A two-norm perturbation budget is recorded as a conditioning diagnostic, not promoted as a certified error bound for the underlying eigensolver.",
+    "Double-precision basis agreement cannot by itself certify the exact residual gap when the operator norm is large."
+  ],
+  "boundary": "R-428 reconstructs one R-426 high-cutoff residual row and quantifies basis conditioning. The residual subspace projectors agree to near machine precision while the operator norm creates an amplification budget larger than the fixed comparison tolerance; without precision certification the route remains INCONCLUSIVE_CONDITIONING and R-426's failure is preserved.",
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "derived": {
+    "basis_gap_spread": 1.9067128844696413e-06,
+    "classification": "INCONCLUSIVE_CONDITIONING",
+    "conditioning_amplification_budget": 0.00010355183044578828,
+    "conditioning_predicates_pass": true,
+    "cross_gram_singular_max": 1.0000000000000004,
+    "cross_gram_singular_min": 0.9999999999999994,
+    "fixed_row": {
+      "beta": "8",
+      "conditional_row_index": 7,
+      "core_size": 7,
+      "cutoff_dimension": 16,
+      "orientation": "right",
+      "tail_size": 9,
+      "volume": 2
+    },
+    "minimum_log_row": -26.956559223766746,
+    "operator_norm_two": 57168562623.339745,
+    "pi_dynamic_range": 509430475397.249,
+    "pi_max": 0.2864501401805248,
+    "pi_min": 5.622948645880553e-13,
+    "precision_certified": false,
+    "projector_distance_two": 9.056711039601336e-16,
+    "projector_tolerance_pass": true,
+    "r422_residual_gap": 5.363189287097491,
+    "r426_direct_residual_gap": 5.363188300552828,
+    "r426_route_failure_preserved": true,
+    "recomputed_mismatch": 9.865446628509744e-07,
+    "residual_reuse_closed": false
+  },
+  "evidence_level": "T0 / EXECUTED FINITE CONDITIONING AND BASIS-CROSSWALK DIAGNOSTIC; the cause of the R-426 mismatch remains inconclusive and no residual-reuse closure is claimed",
+  "exploration_id": "EXP-001273",
+  "independence_scope": "reconstructed row, graph, constraint bases and conditioning predicates without importing the R-428 primary module",
+  "manifest": "strategy/pre-a-cp1-st8-q3lock-residual-basis-conditioning-diagnostic-manifest.json",
+  "missing_assumptions": [
+    "An arbitrary-precision or interval-certified eigensolve for the failing residual subspace.",
+    "A basis-independent exact or rigorously bounded residual-reuse value at the high cutoff.",
+    "A common unbounded Q3 Hamiltonian core and a cutoff/volume-uniform perturbation estimate.",
+    "Transfer of any repaired finite residual value through history, OS/KMS/GNS and physical-sector interfaces."
+  ],
+  "non_claims": [
+    "No repair or closure of the R-426 residual-reuse failure.",
+    "No proof that the mismatch is solely floating-point roundoff or solely algebraic.",
+    "No cutoff-, volume-, phase- or exhaustion-uniform Schur/residual bound.",
+    "No common core, history transfer, OS/KMS/GNS reconstruction, sector gap or continuum limit.",
+    "No C6, Sector-A, Pre-A, Yang-Mills or mass-gap conclusion."
+  ],
+  "result_id": "R-428",
+  "run_kind": "independent",
+  "schema": "tect/pre-a-r428-independent/1.0",
+  "source_hashes": {
+    "independent": "a5f361707d01b803093eb7375b22c58a06d2db5bff9b9cb9b308165de49b920a",
+    "manifest": "cf022b25e8f1123f881bdbd7bbe5224fa6de131f0b089c6b08e337507a85c1ee",
+    "r406_manifest": "7a353000b23a30f7eadd5575495a6a4f11b85806542c1d75d4a112f03d7bb1e0",
+    "r416_manifest": "86beca8ab0c64e7173d34ddd5acecd78b95ccaa101287571f57cb50942f91db0",
+    "r419_manifest": "d5e2139c1a8af9b11f13098a8aaafabf66560bf08f011afb18900f50ae7e2881",
+    "r422_manifest": "67e645d518dc9ebae1c1590ee045fd7147c2c9c5372097eb420155a2829b7976",
+    "r426_manifest": "0292aec6ec398cf7358e4e618f7623880543b9374a1501d3d3fa362db29901b0"
+  },
+  "verdict": "PASS"
+}

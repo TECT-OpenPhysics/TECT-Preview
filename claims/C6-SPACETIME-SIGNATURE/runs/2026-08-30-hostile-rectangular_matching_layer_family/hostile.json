@@ -1,0 +1,79 @@
+{
+  "assertion_count": 10,
+  "assertions": [
+    {
+      "actual": false,
+      "expected": false,
+      "name": "claim promotion",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "rejected",
+      "name": "reject claim-bearing mutation",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        1
+      ],
+      "expected": "both signs",
+      "name": "reject one-sided shear",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "lexicographic"
+      ],
+      "expected": "both orders",
+      "name": "reject one layer order",
+      "status": "PASS"
+    },
+    {
+      "actual": 1,
+      "expected": 2,
+      "name": "reject parity mutation",
+      "status": "PASS"
+    },
+    {
+      "actual": 4,
+      "expected": 5,
+      "name": "reject incomplete box family",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": false,
+      "name": "reject arbitrary-box promotion",
+      "status": "PASS"
+    },
+    {
+      "actual": 6,
+      "expected": "at most one incidence",
+      "name": "reject full-graph-as-one-layer",
+      "status": "PASS"
+    },
+    {
+      "actual": "4/5",
+      "expected": "3/5",
+      "name": "reject coefficient-input mutation",
+      "status": "PASS"
+    },
+    {
+      "actual": "finite pass",
+      "expected": "explicit boundary",
+      "name": "reject erased QFT boundary",
+      "status": "PASS"
+    }
+  ],
+  "audit_id": "PA-CP1-ST8-Q3LOCK-RECTANGULAR-MATCHING-LAYER-FAMILY",
+  "boundary": "R-440 certifies only the declared finite rectangular boxes and phase-space fixtures. Its volume-independent coefficient is a finite conditional split-envelope observation; it does not close arbitrary-box uniformity, an unbounded common core, boundary decay, exhaustion Cauchy, common alpha, KMS/GNS, a physical sector or Yang-Mills/mass-gap claim.",
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "exploration_id": "EXP-001285",
+  "mutations_rejected": 10,
+  "passed": 10,
+  "run_kind": "hostile",
+  "schema": "tect/foundation-audit/1.0",
+  "task_id": "T-054",
+  "verdict": "PASS"
+}

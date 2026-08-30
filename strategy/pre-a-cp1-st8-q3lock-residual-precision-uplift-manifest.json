@@ -1,0 +1,136 @@
+{
+  "schema": "tect/pre-a-cp1-st8-q3lock-residual-precision-uplift/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-RESIDUAL-PRECISION-UPLIFT-v0",
+  "result_id": "R-429",
+  "title": "Arbitrary-precision residual eigensolve on the fixed rounded graph",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001274",
+  "claim_bearing": false,
+  "status": "ROUNDED_INPUT_ALGEBRAIC_BOUNDARY",
+  "parent_results": ["R-428", "R-426"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY",
+    "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+  ],
+  "question": "After the R-426 row is reconstructed from the declared double-precision graph snapshot, does an arbitrary-precision basis-invariant residual eigensolve remove the 5e-7 residual-reuse mismatch?",
+  "new_perspective": {
+    "principle": "Separate upstream source-rounding uncertainty from downstream eigensolver conditioning by converting the fixed graph and weights to Decimal arithmetic and solving every residual compression with a deterministic high-precision symmetric Jacobi routine.",
+    "route": [
+      "Reconstruct the R-426 row and retain its float graph weights and conductances as exact decimal input strings; do not change beta, orientation, cutoff, row, tail rule or comparison tolerance.",
+      "Construct two independent Decimal orthonormal bases of the same blockwise weighted-zero-mean residual subspace: anchor-elimination Gram-Schmidt and projected-standard-vector Gram-Schmidt.",
+      "Diagonalize both Decimal residual compressions with 80-digit precision and a 1e-60 Jacobi stopping threshold, then compare the resulting invariant gaps with the R-422 and R-426 fixed values.",
+      "Classify only the rounded-input finite boundary. The upstream Gibbs/coordinate diagonalization and an interval enclosure for the original real inputs remain separate missing assumptions."
+    ],
+    "qft_bridge": "A precision uplift can distinguish a finite algebraic residual mismatch from downstream floating-point sensitivity; it cannot provide a common unbounded core, a regulator limit, a physical sector or a Yang-Mills statement."
+  },
+  "precision_contract": {
+    "decimal_precision_digits": 80,
+    "jacobi_tolerance": "1e-60",
+    "jacobi_max_sweeps": 20000,
+    "input_mode": "R-428 double-precision graph values converted from canonical decimal strings",
+    "comparison_tolerance": "5e-7",
+    "reconstruction_tolerance": "1e-7"
+  },
+  "diagnostic_contract": {
+    "fixed_failure_row": {
+      "volume": 2,
+      "cutoff_dimension": 16,
+      "beta": "8",
+      "orientation": "right",
+      "conditional_row_index": 7,
+      "core_size": 7,
+      "tail_size": 9,
+      "r422_residual_gap": 5.363184967163699,
+      "r426_direct_residual_gap": 5.36318835004781,
+      "comparison_tolerance": 5e-7
+    },
+    "required_methods": [
+      "Decimal weighted blockwise zero-mean basis",
+      "Decimal projected-standard-vector nullspace basis",
+      "deterministic high-precision symmetric Jacobi eigensolve",
+      "basis-invariant residual-gap comparison"
+    ],
+    "thresholds": {
+      "comparison_tolerance": 5e-7,
+      "reconstruction_tolerance": 1e-7,
+      "basis_gap_agreement_tolerance": 1e-50,
+      "jacobi_tolerance": 1e-60
+    }
+  },
+  "upstream_authority": {
+    "r428_manifest": "strategy/pre-a-cp1-st8-q3lock-residual-basis-conditioning-diagnostic-manifest.json",
+    "r428_sha256": "cf022b25e8f1123f881bdbd7bbe5224fa6de131f0b089c6b08e337507a85c1ee",
+    "r426_manifest": "strategy/pre-a-cp1-st8-q3lock-high-cutoff-schur-stress-manifest.json",
+    "r426_sha256": "0292aec6ec398cf7358e4e618f7623880543b9374a1501d3d3fa362db29901b0"
+  },
+  "scope": {
+    "rounded_input_precision_uplift_closed": true,
+    "basis_invariant_rounded_input_closed": true,
+    "rounded_input_mismatch_reproduced": true,
+    "upstream_source_precision_certified": false,
+    "exact_original_input_certified": false,
+    "residual_reuse_closed": false,
+    "r426_route_failure_preserved": true,
+    "cutoff_uniform_coarse_schur_closed": false,
+    "volume_uniform_coarse_schur_closed": false,
+    "phase_uniform_coarse_schur_closed": false,
+    "exhaustion_uniform_coarse_schur_closed": false,
+    "global_poincare_closed": false,
+    "common_core_closed": false,
+    "common_split_rule_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "assumptions": [
+    "The R-428 reconstruction is the declared fixed finite source snapshot for this downstream precision audit.",
+    "Converting each finite float to its canonical decimal string and using Decimal arithmetic isolates downstream eigensolver error but does not recover uncomputed upstream digits.",
+    "The blockwise weighted-zero-mean constraints define one residual subspace for the fixed positive graph.",
+    "The 5e-7 R-426 comparison tolerance and fixed row are immutable.",
+    "The Decimal Jacobi residual is treated as numerically converged only at the rounded-input level; no interval enclosure is asserted."
+  ],
+  "missing_assumptions": [
+    "Arbitrary-precision or interval-certified reconstruction of the Gibbs state, coordinate eigenbasis and graph weights from the original Hamiltonian.",
+    "A rigorous enclosure that propagates upstream input uncertainty through the conditional row and residual operator.",
+    "A basis-independent exact or rigorously bounded residual-reuse value for the original unrounded model.",
+    "A common unbounded Q3 Hamiltonian core, regulator/volume-uniform estimate and history/OS/KMS/GNS/physical-sector transfer."
+  ],
+  "stop_conditions": [
+    "If the two Decimal bases disagree beyond 1e-50 after Jacobi convergence, classify the precision lane as a construction failure and retain R-428.",
+    "If the Decimal invariant gap agrees with R-422 within 5e-7, do not claim repair without an upstream source enclosure.",
+    "Never change the R-426 comparison tolerance, clip the residual, or promote a rounded-input finite result to a uniform or physical theorem."
+  ],
+  "evidence_level": "T0 / EXECUTED 80-DIGIT DECIMAL DOWNSTREAM PRECISION UPLIFT ON THE FIXED R-428 GRAPH SNAPSHOT; upstream source uncertainty remains open",
+  "non_claims": [
+    "No exact certification of the original Gibbs/coordinate inputs.",
+    "No repair or closure of the R-426 residual-reuse route for the original unrounded model.",
+    "No cutoff-, volume-, phase- or exhaustion-uniform Schur/residual bound.",
+    "No common core, history transfer, OS/KMS/GNS reconstruction, sector gap or continuum limit.",
+    "No C6, Sector-A, Pre-A, Yang-Mills or mass-gap conclusion."
+  ],
+  "boundary": "R-429 can certify a basis-invariant residual value only for the decimalized R-428 finite graph snapshot. Any mismatch with R-422 therefore identifies a rounded-input algebraic boundary, while the original source-rounding enclosure remains missing.",
+  "next_unlock": "Propagate arbitrary-precision or interval arithmetic through the original Hamiltonian Gibbs state, coordinate diagonalization and projected graph before deciding whether the R-426 mismatch survives the unrounded input uncertainty.",
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R429.lean",
+    "theorem_markers": ["decimal_gap_exceeds_tolerance", "basis_agreement_budget", "finite_scope"],
+    "command": "lake env lean Tect/R429.lean",
+    "role": "R429 Lean checks only the scalar decimal-gap separation and finite-scope inequalities; Decimal matrix arithmetic remains executable Python."
+  },
+  "artifacts": {
+    "primary_script": "codes/foundations/pre_a_cp1_st8_q3lock_residual_precision_uplift.py",
+    "independent_script": "codes/foundations/pre_a_cp1_st8_q3lock_residual_precision_uplift_independent.py",
+    "hostile_script": "codes/foundations/pre_a_cp1_st8_q3lock_residual_precision_uplift_hostile.py",
+    "integrated_verifier": "codes/foundations/pre_a_cp1_st8_q3lock_residual_precision_uplift_verify.py",
+    "lean": "verification/lean/Tect/R429.lean",
+    "certificate": "strategy/pre-a-cp1-st8-q3lock-residual-precision-uplift-certificate-260830.md",
+    "exploration": "strategy/pre-a-cp1-st8-q3lock-residual-precision-uplift-exploration.json"
+  }
+}

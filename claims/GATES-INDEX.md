@@ -5,7 +5,7 @@
 
 Authorities: `claims/GATES.md`, `claims/*/status.json`.
 
-**206 registered definitions** · **15 claim-card gate listings** · **11 live hypothesis listings**.
+**208 registered definitions** · **15 claim-card gate listings** · **11 live hypothesis listings**.
 The tables report claim-card fields exactly; they do not reinterpret registry status.
 Audit flags: 0 listed gate(s) lack an explicit Status field; 0 are still listed by cards although the registry status begins CLOSED.
 These source mismatches are preserved for follow-up rather than silently normalized.

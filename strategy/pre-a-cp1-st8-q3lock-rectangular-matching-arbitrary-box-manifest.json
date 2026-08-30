@@ -1,0 +1,114 @@
+{
+  "schema": "tect/pre-a-cp1-st8-q3lock-rectangular-matching-arbitrary-box/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-RECTANGULAR-MATCHING-ARBITRARY-BOX-v0",
+  "result_id": "R-443",
+  "title": "Arbitrary finite rectangular axis-parity matching theorem",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001288",
+  "claim_bearing": false,
+  "status": "ARBITRARY_BOX_MATCHING_THEOREM_AUDITED",
+  "parent_results": ["R-442", "R-440"],
+  "parent_explorations": ["EXP-001287", "EXP-001285"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY"
+  ],
+  "question": "For any finite rectangular integer box with all side lengths at least two, does the axis plus lower-endpoint parity colouring partition nearest-neighbour edges into two matching layers per axis, with the exact edge-count formula?",
+  "finite_contract": {
+    "dimension": 3,
+    "parity_modulus": 2,
+    "side_min": 2,
+    "side_max": 8,
+    "box_family": "all ordered side triples in [side_min, side_max]^dimension",
+    "adjacency": "one-coordinate increment by one inside the box",
+    "lower_endpoint_colour": "(axis, lower_coordinate[axis] mod parity_modulus)",
+    "expected_layer_count": "dimension * parity_modulus",
+    "edge_count_formula": "sum_axis((side_axis-1)*product_other_sides)"
+  },
+  "derived_rule": {
+    "vertex_count": "product_axis(side_axis)",
+    "edge_count": "sum_axis((side_axis-1)*product_other_sides)",
+    "layer_keys": "all (axis, parity) pairs",
+    "matching_condition": "each vertex has at most one incident edge in each layer",
+    "parity_separation": "the forward and backward candidate lower coordinates differ by one and cannot share parity mod 2"
+  },
+  "scope": {
+    "finite_box_sweep_checked": true,
+    "all_ordered_side_triples_in_declared_range_checked": true,
+    "edge_count_formula_checked": true,
+    "layer_keys_retained_including_empty": true,
+    "matching_property_checked": true,
+    "general_local_incidence_lemma_lean_checked": true,
+    "arbitrary_box_edge_colouring_closed": true,
+    "weighted_operator_form_closed": false,
+    "onsite_self_adjoint_hypothesis_closed": false,
+    "boundary_commutator_decay_closed": false,
+    "history_tail_closed": false,
+    "exhaustion_cauchy_closed": false,
+    "common_core_closed": false,
+    "common_alpha_closed": false,
+    "kms_gns_gap_closed": false,
+    "physical_empty_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "assumptions": [
+    "Vertices are integer coordinate vectors in a finite rectangular box with every side length at least two.",
+    "Edges are only nearest-neighbour coordinate increments and have a unique lower endpoint and axis.",
+    "The layer colour is the axis together with the lower endpoint coordinate modulo two; empty colour slots remain represented.",
+    "The Lean theorem quantifies over arbitrary finite dimension and side functions for the local matching implication, while the executable aggregate sweep is three-dimensional.",
+    "The finite [2,8]^3 sweep is an implementation cross-check of the general combinatorial theorem, not an operator or thermodynamic limit."
+  ],
+  "missing_assumptions": [
+    "A weighted Q3LOCK interaction/operator theorem transferring the arbitrary-box layers to a common representation and domain.",
+    "Representation-independent common cores, product-domain estimates and onsite self-adjointness for the layer subflows.",
+    "Cutoff-, source-, phase-, volume- and exhaustion-uniform boundary commutator and history-tail estimates.",
+    "All-shape exhaustion Cauchy, Lie--Trotter/common-alpha convergence and Hamiltonian-to-OS/KMS/GNS identification.",
+    "Sector coercivity, phase selection, physical-empty comparison, continuum passage and any Yang--Mills or mass-gap conclusion."
+  ],
+  "stop_conditions": [
+    "If any declared side triple has a side below two, fail the contract.",
+    "If an edge-count formula or retained layer key disagrees, fail the sweep.",
+    "If any layer has two incident edges at one vertex, fail the matching audit.",
+    "If the independent reconstruction disagrees with the primary aggregate, retain the disagreement and do not average it away.",
+    "Do not promote the arbitrary-box combinatorial theorem to a weighted operator, physical, Yang--Mills or mass-gap theorem."
+  ],
+  "evidence_level": "T0 / GENERAL FINITE-COMBINATORIAL THEOREM WITH LEAN LOCAL-INCIDENCE PROOF AND EXECUTED [2,8]^3 CROSS-CHECK",
+  "non_claims": [
+    "No Q3LOCK Hamiltonian, weighted split form, Friedrichs domain or common-core theorem.",
+    "No boundary commutator, history-tail, common-alpha or exhaustion theorem.",
+    "No OS/KMS/GNS reconstruction, sector coercivity, physical-empty comparison, continuum limit or Sector-A/Pre-A closure.",
+    "No Yang-Mills dynamics or mass-gap conclusion."
+  ],
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R443.lean",
+    "theorem_markers": ["same_colour_incident_unique", "arbitrary_box_layer_matching", "six_colour_layers"],
+    "command": "lake env lean Tect/R443.lean",
+    "role": "Lean proves the arbitrary finite local incidence implication and six-colour arithmetic; Python checks exact edge counts and matching aggregates for the declared [2,8]^3 family."
+  },
+  "artifacts": {
+    "primary_script": "codes/foundations/pre_a_cp1_st8_q3lock_rectangular_matching_arbitrary_box.py",
+    "independent_script": "codes/foundations/pre_a_cp1_st8_q3lock_rectangular_matching_arbitrary_box_independent.py",
+    "hostile_script": "codes/foundations/pre_a_cp1_st8_q3lock_rectangular_matching_arbitrary_box_hostile.py",
+    "integrated_verifier": "codes/foundations/pre_a_cp1_st8_q3lock_rectangular_matching_arbitrary_box_verify.py",
+    "lean": "verification/lean/Tect/R443.lean",
+    "certificate": "strategy/pre-a-cp1-st8-q3lock-rectangular-matching-arbitrary-box-certificate-260830.md",
+    "exploration": "strategy/pre-a-cp1-st8-q3lock-rectangular-matching-arbitrary-box-exploration.json"
+  },
+  "boundary": "R-443 closes only the abstract arbitrary finite-box axis-parity matching property and exact edge-count bookkeeping, with the local incidence implication proved in Lean. It does not close weighted Q3LOCK forms, operator domains, boundary/history tails, exhaustion, common alpha, KMS/GNS, physical-empty, Sector-A, Pre-A, Yang-Mills or mass-gap claims.",
+  "formal_integration": {
+    "event_ordinal": 785,
+    "event_title": "R-443 arbitrary rectangular matching theorem",
+    "event_id": "20260830-r-443-arbitrary-rectangular-matching-theorem-20",
+    "new_negative": false,
+    "tier_change": false,
+    "pdf": false
+  }
+}

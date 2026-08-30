@@ -1,0 +1,63 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "schema_version": "1.0",
+  "id": "EXP-001283",
+  "task_id": "T-054",
+  "title": "Validated original-source interval at d=19 unconditional row",
+  "question": "Can the exact finite R-419 oscillator/Hamiltonian source be enclosed at the separately fixed cutoff d=19 and propagated through a fixed normalized one-site Gibbs row and residual compression?",
+  "method": [
+    "Hash-pin the R-419 fixture and R-433 interval primitives, and fix V=2, d=19, beta=8, right orientation and emission ordinal zero before interval evaluation.",
+    "Assemble the exact rational finite source, split exchange/global-parity sectors into dimensions 100, 81, 90 and 90, and compute 50-digit point eigendata.",
+    "Use directed source intervals, residual/Gram bounds, polar correction and Gibbs-kernel propagation, then normalize the unconditional one-site marginal and enforce the fixed core/tail split at threshold four.",
+    "Project the coordinate momentum, build the 17-dimensional two-block residual compression, and certify a lower Cholesky probe, an upper Rayleigh probe and a rejection probe.",
+    "Run a non-importing NumPy control, hostile finite-scope mutations and Lean scalar cross-checks through the integrated verifier."
+  ],
+  "finding": "The primary lane passes 59/59. The d=19 source residual and Gram upper bounds are 1.0422742491715424398e-40 and 8.2960961766539259327e-42; coordinate residual and Gram upper bounds are 1.5147688124544266796e-43 and 1.6355621662905193812e-43. The normalized unconditional row is positive, its interval tail split is core 5..13 and tail 0..4,14..18, and the 17-dimensional residual interval has maximum entry width 2.6356840398489398721e-8. The interval Rayleigh enclosure is [4.51952079482277882931908765479724576244692466, 4.51952079482279788665653301331650135134669314], strictly between probes 4.5 and 4.6; the 4.7 Cholesky probe is rejected. The independent non-importing control passes 12/12 with gap 4.5195205287393385, the hostile lane rejects 8/8 mutations, the integrated verifier passes 15/15 and Lean R438 compiles.",
+  "decision_reason": "Advance one separately fixed larger-cutoff original-source interval datapoint at T0. The interval and independent controls are consistent, but the result remains finite and claim-nonbearing; residual reuse, all uniformities, common-core completion, physical reference and continuum gates remain open.",
+  "decision_scope": "One V=2, d=19, beta=8, right-orientation unconditional one-site marginal (emission ordinal zero) from the exact R-419 rational source, with fixed threshold-four split and 17-dimensional residual interval compression.",
+  "verdict": "advanced",
+  "boundary": "R-438 is a finite source-interval certificate only. It does not close residual reuse, a common Q3 core, history transfer, OS/KMS/GNS reconstruction, a physical sector, a continuum limit, or any physical-empty, Yang-Mills or mass-gap claim.",
+  "next_action": "Specify and independently audit an increasing-core rule together with an owner-approved cutoff-, volume-, phase- and exhaustion-uniform tail modulus; do not infer uniformity from the d=17, d=18 and d=19 datapoints.",
+  "evidence_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-original-source-interval-d19-manifest.json#interval_contract",
+    "strategy/pre-a-cp1-st8-q3lock-original-source-interval-d19-certificate-260830.md#Exact-finite-scope",
+    "codes/foundations/pre_a_cp1_st8_q3lock_original_source_interval_d19.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_original_source_interval_d19_independent.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_original_source_interval_d19_hostile.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_original_source_interval_d19_verify.py#main",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-primary-original_source_interval_d19/primary.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-independent-original_source_interval_d19/independent.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-hostile-original_source_interval_d19/hostile.json#assertions",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-integrated-original_source_interval_d19/integrated.json#derived",
+    "verification/lean/Tect/R438.lean#d19_block_dimensions",
+    "verification/lean/registry.json#R438"
+  ],
+  "formal_refs": {
+    "results": ["R-438", "R-437", "R-436", "R-435", "R-419"],
+    "negatives": [],
+    "events": ["20260830-r-438-original-source-interval-d-19-2026-08-30"]
+  },
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY",
+    "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+  ],
+  "adversarial_review": [
+    {"axis": "row selection", "check": "The manifest fixes beta 8, right orientation and ordinal zero before interval evaluation; no gap-based row optimization is allowed.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "source enclosure", "check": "Source residual, Gram, polar, normalization and threshold intervals pass with directed arithmetic and explicit budgets.", "disposition": "DISMISSED-FINITE / OPEN-UNIFORM"},
+    {"axis": "conditioning", "check": "The residual interval width and bracket are below fixed finite thresholds and the independent control is separate from the interval certificate.", "disposition": "DISMISSED-FINITE / OPEN-UNIFORM"},
+    {"axis": "hostile scope mutation", "check": "Eight mutations covering aliasing, threshold/probe relaxation, cutoff substitution and promotion are rejected.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "physical promotion", "check": "No common core, physical reference, Reading-H tangent or limit theorem is supplied.", "disposition": "UPHELD-OPEN"}
+  ],
+  "no_overclaim": "R-438 advances only one finite d=19 original-source interval certificate. It does not establish cutoff/volume uniformity, physical-empty sign, stationarity, transverse stability, C6, Sector-A, Pre-A, Yang-Mills dynamics or a mass gap.",
+  "provenance": "contemporaneous",
+  "recorded_at": "2026-08-31T12:30:00Z",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-08-30",
+  "related": [
+    {"id": "EXP-001282", "relation": "continues"},
+    {"id": "EXP-001281", "relation": "continues"},
+    {"id": "EXP-001279", "relation": "alternative_to"}
+  ]
+}

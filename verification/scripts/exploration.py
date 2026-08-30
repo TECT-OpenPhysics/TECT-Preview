@@ -17,9 +17,9 @@ Usage:
     python verification/scripts/exploration.py --self-test
 """
 
-__version__ = "1.0.1"
+__version__ = "1.1.0"
 __first_issued__ = "2026-07-24"
-__version_issued__ = "2026-08-10"
+__version_issued__ = "2026-08-30"
 
 import argparse
 import datetime as dt
@@ -31,6 +31,8 @@ import subprocess
 import sys
 import tempfile
 from pathlib import Path
+
+from check_exploration_time import load_correction_state
 
 
 REPO = Path(__file__).resolve().parents[2]
@@ -188,9 +190,14 @@ def _validate_evidence_ref(value: str, prefix: str, errors: list[str]) -> None:
 
 
 def validate_records(
-    records: list[dict], known: dict[str, set[str]] | None = None
+    records: list[dict],
+    known: dict[str, set[str]] | None = None,
+    corrected_recorded_at_ids: set[str] | None = None,
 ) -> list[str]:
     known = _known_references() if known is None else known
+    corrected_recorded_at_ids = (
+        set() if corrected_recorded_at_ids is None else corrected_recorded_at_ids
+    )
     errors: list[str] = []
     seen: set[str] = set()
     expected_number = 1
@@ -219,9 +226,12 @@ def validate_records(
                 dt.datetime.strptime(recorded_at, "%Y-%m-%dT%H:%M:%SZ")
             except ValueError:
                 errors.append(f"{prefix}: invalid recorded_at {recorded_at!r}")
-            if previous_recorded_at and recorded_at < previous_recorded_at:
-                errors.append(f"{prefix}: recorded_at must be append-order monotone")
-            previous_recorded_at = recorded_at
+            if identifier not in corrected_recorded_at_ids:
+                if previous_recorded_at and recorded_at < previous_recorded_at:
+                    errors.append(
+                        f"{prefix}: trusted recorded_at must be append-order monotone"
+                    )
+                previous_recorded_at = recorded_at
         reviewed_on = str(record.get("reviewed_on", ""))
         try:
             dt.date.fromisoformat(reviewed_on)
@@ -363,7 +373,11 @@ def append_only_error(current: bytes, committed: bytes | None) -> str | None:
 def verify(path: Path = LOG, check_git: bool = True) -> tuple[list[dict], list[str]]:
     records, errors, raw = load_records(path)
     if not errors:
-        errors.extend(validate_records(records))
+        corrected, correction_errors = load_correction_state(
+            records, check_git=check_git and path.resolve() == LOG.resolve()
+        )
+        errors.extend(correction_errors)
+        errors.extend(validate_records(records, corrected_recorded_at_ids=corrected))
     if check_git and path.resolve() == LOG.resolve():
         git = _find_git()
         if not git:
@@ -429,7 +443,10 @@ def cmd_add(path_text: str) -> int:
         print(f"EXPLORATION-ADD: REFUSED; {exc}")
         return 1
     combined = existing + new_records
-    validation = validate_records(combined)
+    corrected, correction_errors = load_correction_state(combined)
+    validation = correction_errors + validate_records(
+        combined, corrected_recorded_at_ids=corrected
+    )
     if validation:
         print("EXPLORATION-ADD: REFUSED; proposed records failed validation")
         for error in validation:
@@ -539,7 +556,7 @@ def self_test() -> int:
     assert validate_records([broken], known), "unknown reference accepted"
     print(
         "EXPLORATION-SELFTEST: PASS (schema, canonical JSON, references, "
-        "append-only mutation guard)"
+        "append-only mutation guard, corrected-time bypass)"
     )
     return 0
 

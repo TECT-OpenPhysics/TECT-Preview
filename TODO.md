@@ -4,7 +4,7 @@ Generated from `todo/todo.json` by `verification/scripts/todo.py` -- **never han
 Portable: copying the TECT folder carries this ledger; a fresh cowork session reads it in the session-entry prelude (AGENTS.md §1).
 For bounded daily reading use `management/INDEX.md`; this compatibility view deliberately preserves every completed task.
 
-Counts: In progress 3 · Next up 0 · Blocked 2 · Backlog 5 · Done (compatibility history) 48
+Counts: In progress 5 · Next up 1 · Blocked 2 · Backlog 5 · Done (compatibility history) 48
 
 ## In progress
 
@@ -17,6 +17,18 @@ Counts: In progress 3 · Next up 0 · Blocked 2 · Backlog 5 · Done (compatibil
 - **T-057** Selective legacy preservation, retrieval, and gate-by-gate revalidation  _(owner: AI+operator; claim: C6-SPACETIME-SIGNATURE; gate: LEGACY-SELECTIVE-INDEX-AND-ON-DEMAND-REVALIDATION)_
   - Policy: governance/legacy-research-knowledge-base.md. Contents remains the maintained full corpus; no wholesale copy or all-path completion target remains. TECT retains all 66 existing compatibility payloads, 49 newly selected readable reference copies, 115 selected source identities, 24 reviewed assessments, and the 50-source LEGACY-T055-GEOMETRY-EMPTY-REFERENCE-001 batch. FTS5 plus deterministic hashed-TFIDF retrieval uses hash-verified repository copies, with dense multilingual semantics explicitly unconfigured until a local model is pinned. Next: complete exact per-source extraction and dependency closure for the active batch, rerun under current conventions, independently audit, and integrate or reject only the surviving methods and results. Resolve other legacy claim pointers on demand from live gates. Selection, copies, summaries, search, or matching hashes do not change a claim tier or close a physical-vacuum, C6, Sector A, or Pre-A gate.
   - _updated 2026-08-14_
+- **T-059** Pre-A observation-first inverse constraint and prediction lane  _(owner: Codex; gate: PA-INVERSE-OBSERVATION-TARGET-MAP-HOLDOUT-FREEZE)_
+  - Parallel T0 lane under T-054. Freeze observation and holdout lineage plus QFT/YM/GR targets; require a complete F_reg/F_lim/F_eff/F_obs owner contract before scoring; report nonidentifiability as an equivalence class; require a genuinely prospective unused target; no Pre-A, A13, C6, Sector-A, physical-sector, continuum, Yang-Mills, or mass-gap promotion.
+  - _updated 2026-08-30_
+- **T-060** Research Phase P0-R baseline and dual-lane resume recovery  _(owner: Codex; gate: RESEARCH-CONTINUITY-P0-BASELINE-AND-RESUME)_
+  - Pointer-only recovery task. Preserve all existing forward methods unchanged; register the inverse lane additively; close only after ordinary continuity, doctor, release, clean queue/worktree, live remote equality, and an exact next action per lane pass.
+  - _updated 2026-08-30_
+
+## Next up
+
+- **T-061** Dynamic-owner and observation-map identifiability intake  _(owner: Codex; gate: PA-INVERSE-OBSERVATION-TARGET-MAP-HOLDOUT-FREEZE)_
+  - First post-P0-R paired packet under T-054/T-059. Fill the R-192 owner slots and freeze one candidate-neutral dynamic estimand before scoring; use R-193/R-200 equivalence classes, park if no new owner hash exists, and do not alter the existing proof methods.
+  - _updated 2026-08-30_
 
 ## Blocked
 

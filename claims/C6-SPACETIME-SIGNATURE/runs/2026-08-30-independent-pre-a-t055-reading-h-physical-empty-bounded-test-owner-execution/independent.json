@@ -1,0 +1,237 @@
+{
+  "assertion_count": 13,
+  "assertions": [
+    {
+      "actual": [
+        "R-441",
+        "EXP-001286",
+        "BLOCKED",
+        false
+      ],
+      "expected": [
+        "R-441",
+        "EXP-001286",
+        "BLOCKED",
+        false
+      ],
+      "group": "provenance",
+      "name": "identity",
+      "status": "PASS"
+    },
+    {
+      "actual": 15,
+      "expected": 15,
+      "group": "contract",
+      "name": "reversed field enumeration",
+      "status": "PASS"
+    },
+    {
+      "actual": "F_total[G_*] - F_total[E]",
+      "expected": "F_total[G_*] - F_total[E]",
+      "group": "contract",
+      "name": "orientation immutable",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "NOT_FIXED_IN_ONE_COMMON_OWNER",
+        false
+      ],
+      "expected": [
+        "NOT_FIXED_IN_ONE_COMMON_OWNER",
+        false
+      ],
+      "group": "contract",
+      "name": "owner unavailable",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        true,
+        false,
+        "BLOCKED_NOT_INSTANTIATED"
+      ],
+      "expected": [
+        true,
+        false,
+        "BLOCKED_NOT_INSTANTIATED"
+      ],
+      "group": "E",
+      "name": "E slot",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "FORBIDDEN",
+        "NOT_ACCEPTED"
+      ],
+      "expected": [
+        "FORBIDDEN",
+        "NOT_ACCEPTED"
+      ],
+      "group": "E",
+      "name": "E is not zero",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "reading_h_stationarity": "BLOCKED_NOT_EVALUATED",
+        "sign": "BLOCKED_NOT_EVALUATED",
+        "symmetry_projected_transverse_stability": "BLOCKED_NOT_EVALUATED"
+      },
+      "expected": "BLOCKED_NOT_EVALUATED",
+      "group": "verdict",
+      "name": "all three statuses",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "NO_COMMON_FINITE_REGULATOR_OWNER",
+        "E_NOT_ADMITTED",
+        "NO_ABSOLUTE_PHYSICAL_EMPTY_NORMALIZATION"
+      ],
+      "expected": "owner and E blockers",
+      "group": "verdict",
+      "name": "sign reason",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "NO_FULL_REGULATED_TANGENT",
+        "COVARIANCE_OWNER_IS_NOT_FULL_FIELD_OWNER",
+        "NO_STATIONARITY_RESIDUAL_BUDGET"
+      ],
+      "expected": "missing full tangent",
+      "group": "verdict",
+      "name": "stationarity reason",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "NO_COMMON_SYMMETRY_ORBIT_TANGENT",
+        "NO_TRANSVERSE_PROJECTOR",
+        "NO_REGULATED_HESSIAN_ERROR_BUDGET"
+      ],
+      "expected": "missing projector",
+      "group": "verdict",
+      "name": "stability reason",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        false,
+        []
+      ],
+      "expected": [
+        false,
+        []
+      ],
+      "group": "stop",
+      "name": "no numeric path",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "EXP790-MANIFEST": "07cf9be922bf16def3b88f5a4d2924a087bae1282cfc56956258293d131d30fa",
+        "R169-MANIFEST": "c6f02db72a911120b5fa7e1d259f807105d97c638f15c4b1f379d70b1c78165e",
+        "R170-MANIFEST": "364547255ad4e51d8c9ab97ad9a45937735a4a1847f2edc1cb02387d7d8dc8cb",
+        "R418-MANIFEST": "30a703de800850a40ecbcd003133b832d9bee9d49908c402b19c389ee2a312ea",
+        "R420-MANIFEST": "f70e0b8cf2fe133464cf58123ed7706e04de9042d44d9c17bef96f83cf247255",
+        "R427-MANIFEST": "5a60fecc9daac6f0a214fd6f437545a4f1f90abfdccee2401f5cd6cdf0774c0f",
+        "R434-MANIFEST": "2cdc5dfd9a52f8b8e8308c8ef9c9b344df9672b723750a7c60b590079b4bc9dc"
+      },
+      "expected": {
+        "EXP790-MANIFEST": "07cf9be922bf16def3b88f5a4d2924a087bae1282cfc56956258293d131d30fa",
+        "R169-MANIFEST": "c6f02db72a911120b5fa7e1d259f807105d97c638f15c4b1f379d70b1c78165e",
+        "R170-MANIFEST": "364547255ad4e51d8c9ab97ad9a45937735a4a1847f2edc1cb02387d7d8dc8cb",
+        "R418-MANIFEST": "30a703de800850a40ecbcd003133b832d9bee9d49908c402b19c389ee2a312ea",
+        "R420-MANIFEST": "f70e0b8cf2fe133464cf58123ed7706e04de9042d44d9c17bef96f83cf247255",
+        "R427-MANIFEST": "5a60fecc9daac6f0a214fd6f437545a4f1f90abfdccee2401f5cd6cdf0774c0f",
+        "R434-MANIFEST": "2cdc5dfd9a52f8b8e8308c8ef9c9b344df9672b723750a7c60b590079b4bc9dc"
+      },
+      "group": "authority",
+      "name": "authority hashes",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "T0",
+        false
+      ],
+      "expected": [
+        "T0",
+        false
+      ],
+      "group": "scope",
+      "name": "no promotion",
+      "status": "PASS"
+    }
+  ],
+  "assumptions": [
+    "The six hash-pinned authorities above are the active TECT-owner boundaries.",
+    "The requested orientation is G_* minus E and all three tests must share one regulated parent.",
+    "The fifteen contract fields are identity-locked; a locked field name does not invent an owner value.",
+    "A physical-empty branch requires a normalized representative, measure or algebra, boundary preparation and a local physical criterion beyond a zero label.",
+    "Input-admissibility failure is a valid bounded-test outcome and is not a numerical sign or stability theorem.",
+    "Symmetry projection requires the exact orbit tangent and a regulated Hessian error budget."
+  ],
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "derived": {
+    "E_admitted": false,
+    "E_preregistered": true,
+    "comparison": "F_total[G_*] - F_total[E]",
+    "reading_h_stationarity": "BLOCKED_NOT_EVALUATED",
+    "reversed_required_fields": [
+      "stationarity_residual_budget",
+      "Hessian_form_and_error_budget",
+      "transverse_projector",
+      "symmetry_group_and_orbit_tangent",
+      "full_admissible_tangent",
+      "empty_branch_E_representation",
+      "candidate_G_star_representation",
+      "limit_order",
+      "boundary_condition",
+      "physical_volume",
+      "regulator_and_cutoff",
+      "finite_part_counterterm_scheme",
+      "normalization",
+      "reference_definition",
+      "finite_regulator_functional"
+    ],
+    "sign": "BLOCKED_NOT_EVALUATED",
+    "symmetry_projected_transverse_stability": "BLOCKED_NOT_EVALUATED"
+  },
+  "evidence_level": "T0 / EXECUTED INDEPENDENT FIELD-ORDER CONTROL; PHYSICAL QUANTITIES BLOCKED_NOT_EVALUATED",
+  "exploration_id": "EXP-001286",
+  "manifest": "strategy/pre-a-t055-reading-h-physical-empty-bounded-test-owner-execution-manifest.json",
+  "missing_assumptions": [
+    "A hash-pinned finite-regulator F_total with a common domain containing G_* and E.",
+    "A normalized, admitted E representative with measure/algebra, boundary preparation and a no-condensate or clustering criterion.",
+    "Common reference, normalization, finite-part counterterms and renormalization conditions.",
+    "Fixed regulator/cutoff, physical volume, boundary condition and explicit limit order.",
+    "Deterministic finite-parent maps for G_* and E, a full admissible tangent and exact symmetry orbit tangent.",
+    "A transverse projector, regulated Hessian, stationarity residual budget and numerical/limit error budgets."
+  ],
+  "non_claims": [
+    "No sign for F_total[G_*] - F_total[E].",
+    "No full Reading-H stationarity theorem.",
+    "No symmetry-projected transverse stability theorem.",
+    "No identification of E with zero, P1, a Gaussian state or an equilibrium phase.",
+    "No physical-vacuum, below-empty-space, Yang-Mills, mass-gap, C6, Sector-A or Pre-A conclusion.",
+    "No thermodynamic, continuum, OS/KMS/GNS, Hamiltonian spectral or absolute-energy conclusion."
+  ],
+  "result_id": "R-441",
+  "run_kind": "independent",
+  "schema": "tect/pre-a-r434-independent/1.0",
+  "scope": {
+    "claim_bearing": false,
+    "independent_input_audit": true,
+    "numeric_evaluation": false,
+    "physical_promotion": false
+  },
+  "source_hashes": {
+    "manifest": "7f9cab0cdd8765e7103f33eb7cd3df80fdb5c12704c0c7b296dbf2f4d9f3741c",
+    "script": "3cb07283554e4407223efda4dee5c4189dbf7b74b66839cd48f3ea6564be848a"
+  },
+  "verdict": "INDEPENDENT_BLOCKED_INPUT_CONTROL"
+}

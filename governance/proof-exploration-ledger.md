@@ -97,6 +97,17 @@ after CRLF/LF transport normalization, every committed byte must remain an
 exact prefix, so only canonical lines may be appended.  A later correction is a new record with a `corrects` or
 `supersedes` edge; the erroneous record remains visible.
 
+Wall-clock provenance is corrected separately and append-only.  If a retained
+`recorded_at` value is shown to postdate the authority that first contains its
+line, add a canonical range to `explorations/temporal-corrections.jsonl`; never
+rewrite the exploration.  For a listed ID the timestamp text remains visible
+but its semantic value is `UNKNOWN`.  The immutable `EXP-NNNNNN` ordinal and
+append order remain authoritative.  `check_exploration_time.py` verifies the
+sidecar, its Git prefix, and that no uncorrected line exceeds its first-
+containing commit (or current working-tree audit time) by the allowed skew.
+This operation changes no question, finding, verdict, evidence, result,
+negative, task, gate, or claim status and does not reconstruct an event time.
+
 ## 5. Historical coverage boundary
 
 Prospective mandatory coverage begins on **2026-07-24**.  Historical backfill
@@ -130,5 +141,6 @@ path escape, or omitted map projection blocks release.
 - inferring associations from prose;
 - claiming complete historical coverage without evidence;
 - applying a current gate meaning retroactively to a retained historical ID;
+- sorting a corrected-untrusted `recorded_at` value as if it were chronology;
 - committing, rendering, or building PDFs once per exploration instead of
   batching at a proof checkpoint.

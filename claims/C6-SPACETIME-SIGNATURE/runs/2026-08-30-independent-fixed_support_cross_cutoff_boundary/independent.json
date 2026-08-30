@@ -1,0 +1,144 @@
+{
+  "assertion_count": 9,
+  "assertions": [
+    {
+      "actual": "['R-437', 'EXP-001282', False]",
+      "expected": "R-437/EXP-001282/false",
+      "group": "provenance",
+      "name": "manifest identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "['R-435', 'R-436', 'INDEPENDENT_FINITE_CONTROL_PASS', 'INDEPENDENT_FINITE_CONTROL_PASS']",
+      "expected": "two independent controls",
+      "group": "parent",
+      "name": "independent parent identities",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'volume': [2, 2], 'beta': ['8', '8'], 'orientation': ['right', 'right'], 'row_kind': ['unconditional_one_site_marginal', 'unconditional_one_site_marginal'], 'tail_threshold': ['4', '4']}",
+      "expected": "same row contract",
+      "group": "contract",
+      "name": "same independent row rule",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'core': [4, 5, 6, 7, 8, 9, 10, 11, 12], 'tail': [0, 1, 2, 3, 13, 14, 15, 16]}",
+      "expected": "crossing index in d17 core",
+      "group": "support",
+      "name": "independent d17 core",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'core': [5, 6, 7, 8, 9, 10, 11, 12], 'tail': [0, 1, 2, 3, 4, 13, 14, 15, 16, 17]}",
+      "expected": "crossing index in d18 tail",
+      "group": "support",
+      "name": "independent d18 tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[17, 18]",
+      "expected": "distinct cutoffs",
+      "group": "contract",
+      "name": "independent dimensions",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.021539067848922677, 0.07258594841633315]",
+      "expected": "positive finite lower-probe margins",
+      "group": "parent",
+      "name": "independent positive margins",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'finite_cross_cutoff_threshold_crossing_certified': True, 'same_row_rule_identity_checked': True, 'fixed_support_uniformity_closed': False, 'increasing_core_tail_modulus_closed': False, 'cutoff_uniform_coarse_schur_closed': False, 'volume_uniform_coarse_schur_closed': False, 'phase_uniform_coarse_schur_closed': False, 'exhaustion_uniform_coarse_schur_closed': False, 'common_core_closed': False, 'kms_gns_gap_closed': False, 'continuum_closed': False, 'c6_closed': False, 'sector_a_closed': False, 'pre_a_closed': False, 'no_new_negative_result': True, 'no_tier_change': True, 'no_pdf': True}",
+      "expected": "both uniform support flags false",
+      "group": "scope",
+      "name": "fixed support remains open",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'finite_cross_cutoff_threshold_crossing_certified': True, 'same_row_rule_identity_checked': True, 'fixed_support_uniformity_closed': False, 'increasing_core_tail_modulus_closed': False, 'cutoff_uniform_coarse_schur_closed': False, 'volume_uniform_coarse_schur_closed': False, 'phase_uniform_coarse_schur_closed': False, 'exhaustion_uniform_coarse_schur_closed': False, 'common_core_closed': False, 'kms_gns_gap_closed': False, 'continuum_closed': False, 'c6_closed': False, 'sector_a_closed': False, 'pre_a_closed': False, 'no_new_negative_result': True, 'no_tier_change': True, 'no_pdf': True}",
+      "expected": "all physical flags false",
+      "group": "scope",
+      "name": "physical promotion firewall",
+      "status": "PASS"
+    }
+  ],
+  "boundary": "R-437 records one certified d=17 to d=18 threshold crossing for index 4. It rejects only unchanged fixed-support reuse and requires an increasing-core tail modulus or another complete route; all uniform, common-core, physical and Yang-Mills flags remain false.",
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "derived": {
+    "crossing_index": 4,
+    "d17_split": {
+      "core": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tail": [
+        0,
+        1,
+        2,
+        3,
+        13,
+        14,
+        15,
+        16
+      ]
+    },
+    "d18_split": {
+      "core": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tail": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        13,
+        14,
+        15,
+        16,
+        17
+      ]
+    },
+    "fixed_support_uniformity_closed": false,
+    "increasing_core_tail_modulus_closed": false
+  },
+  "evidence_level": "T0 / EXECUTED INDEPENDENT FINITE SUPPORT CONTROL",
+  "exploration_id": "EXP-001282",
+  "manifest": "strategy/pre-a-cp1-st8-q3lock-fixed-support-cross-cutoff-boundary-manifest.json",
+  "non_claims": [
+    "No theorem that every core rule fails uniformly.",
+    "No increasing-core or tail-modulus theorem.",
+    "No common Q3 core, GNS gap, continuum or physical-sector conclusion.",
+    "No C6, Sector-A, Pre-A, Yang-Mills or mass-gap conclusion.",
+    "The independent control uses the parent independent rows; it does not supply a uniform modulus."
+  ],
+  "result_id": "R-437",
+  "run_kind": "independent",
+  "schema": "tect/pre-a-r437-independent/1.0",
+  "source_hashes": {
+    "manifest": "355ac4e342da2edd3e1294e3c7e88798bda698d758ab40aac237a4cd928e9350",
+    "r435_manifest": "18804741ebb52aaef8b56968e520383900c4ac3b2d064b57b72c738cb32f29a8",
+    "r435_run": "06296a9c7c4b9f359845518bb493a45575f4339941058ca61ee7f24f3c915e44",
+    "r436_manifest": "494af4d86713b0a0354d1e7ef11441a16a0c72b556d3c1fd922fefc1dace38fa",
+    "r436_run": "8c629c0aee95d2f21a7e969bb3ef7f48c7d4d6f99fa9f247eb9c7a68b8d290e3",
+    "script": "30ecb0ca9898865be957df44dfdbd289866809c43beec0b6976ee839168722c2"
+  },
+  "verdict": "INDEPENDENT_FIXED_SUPPORT_BOUNDARY_CONTROL"
+}

@@ -1,0 +1,62 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "schema_version": "1.0",
+  "id": "EXP-001273",
+  "task_id": "T-054",
+  "title": "High-cutoff residual-basis conditioning diagnostic remains inconclusive",
+  "question": "Does the R-426 residual-reuse mismatch at the fixed high-cutoff row arise from a conditioning-amplified basis representation difference, or does it persist as an algebraic disagreement after basis-invariant cross-checks?",
+  "method": [
+    "Reconstruct the fixed R-426 row from hash-pinned R-419, R-416 and R-402 inputs without importing the R-426 or R-428 primary output.",
+    "Construct the R-406 block complement, R-422 weighted blockwise zero-mean basis, explicit normalized-constraint projector nullspace and complete-QR nullspace while retaining V=2, d=16, beta=8, right orientation, row 7 and core/tail sizes 7/9.",
+    "Check positivity, normalization, reversibility, orthogonality, block constraints, cross-Gram singular values, projector distances and the first residual Rayleigh value for every basis.",
+    "Compare the unchanged 5e-7 R-426 audit tolerance with the observed basis-gap spread, direct mismatch and the two-norm conditioning budget; classify only as an inconclusive diagnostic unless a precision-certified invariant value is obtained.",
+    "Run a non-importing independent lane, hostile mutation controls, the integrated verifier and Lean R428 scalar cross-check."
+  ],
+  "finding": "The primary lane passes 31/31 assertions on the fixed row. All four residual bases satisfy the 1e-12 orthogonality and block-constraint checks; the cross-Gram singular values and explicit projector agree to near machine precision. The primary operator norm is 5.7168562623339745e+10, the projector distance is 9.775397033159746e-16, and the resulting diagnostic budget is 0.0001117690794916405. The basis residual-gap spread is 4.31873946382666e-06 and the R-406/R-422 mismatch is 3.3096042013625038e-06, both above the unchanged 5e-7 tolerance. The independent lane passes 21/21 and obtains the same INCONCLUSIVE_CONDITIONING classification with spread 1.9067128844696413e-06, mismatch 9.865446628509744e-07 and budget 0.00010355183044578828. The hostile lane passes 10/10 and the integrated verifier 16/16; Lean R428 compiles.",
+  "decision_reason": "The finite residual subspace is crosswalk-consistent, but the high operator norm and basis-dependent double-precision residual values exceed the fixed audit tolerance. This supports a conditioning-sensitive repair target without proving that conditioning is the sole cause or closing residual reuse.",
+  "decision_scope": "One finite volume-two high-cutoff residual row and its basis crosswalk only; no tolerance change, route repair, tier change or physical promotion.",
+  "verdict": "inconclusive",
+  "boundary": "This is a T0 claim-nonbearing conditioning diagnostic. It does not establish an exact residual value, a cutoff/volume/phase/exhaustion-uniform bound, a common core, history transfer, OS/KMS/GNS reconstruction, a sector gap, a continuum result, C6, Sector-A, Pre-A, Yang--Mills or mass-gap conclusion.",
+  "next_action": "Run an arbitrary-precision or interval-certified, basis-invariant residual eigensolve on the same fixed row with the unchanged 5e-7 comparison tolerance. Preserve R-426 if the certified value still disagrees; only then revisit residual reuse or a common-core estimate.",
+  "evidence_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-residual-basis-conditioning-diagnostic-manifest.json#diagnostic_contract",
+    "strategy/pre-a-cp1-st8-q3lock-residual-basis-conditioning-diagnostic-certificate-260830.md#Executed evidence",
+    "codes/foundations/pre_a_cp1_st8_q3lock_residual_basis_conditioning_diagnostic.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_residual_basis_conditioning_diagnostic_independent.py#main",
+    "codes/foundations/pre_a_cp1_st8_q3lock_residual_basis_conditioning_diagnostic_hostile.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_residual_basis_conditioning_diagnostic_verify.py#main",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-primary-residual_basis_conditioning_diagnostic/primary.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-independent-residual_basis_conditioning_diagnostic/independent.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-hostile-residual_basis_conditioning_diagnostic/hostile.json#controls",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-integrated-residual_basis_conditioning_diagnostic/integrated.json#derived",
+    "verification/lean/Tect/R428.lean#conditioning_budget_dominates_tolerance",
+    "verification/lean/registry.json#R428"
+  ],
+  "formal_refs": {
+    "results": ["R-428"],
+    "negatives": [],
+    "events": ["20260830-r-428-residual-basis-conditioning-diagnostic-in"]
+  },
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY",
+    "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+  ],
+  "adversarial_review": [
+    {"axis": "basis invariance", "check": "Near-machine-precision projector and cross-Gram agreement is not treated as an exact algebraic identity when the operator norm is large.", "disposition": "UPHELD-OPEN"},
+    {"axis": "tolerance", "check": "The R-426 comparison tolerance remains 5e-7; the separate 1e-7 reconstruction threshold only records double-precision rerun variability and does not accept the mismatch.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "row identity", "check": "The V=2, d=16, beta=8, right, row-7, 7/9 core-tail row is retained; no stable row or opposite orientation is substituted.", "disposition": "UPHELD-OPEN"},
+    {"axis": "conditioning budget", "check": "The two-norm product is labelled a diagnostic scale, not a certified eigensolver error bound or proof of sole causation.", "disposition": "UPHELD-OPEN"},
+    {"axis": "finite-to-physical", "check": "The finite diagnostic is not promoted to a uniform, common-core, OS/KMS/GNS, sector, Yang--Mills or mass-gap conclusion.", "disposition": "UPHELD-OPEN"}
+  ],
+  "no_overclaim": "R-428 identifies a conditioning-sensitive finite boundary and a precision-certification target. It neither repairs nor falsifies the R-426 residual-reuse route.",
+  "provenance": "contemporaneous",
+  "recorded_at": "2026-08-29T16:30:00Z",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-08-30",
+  "related": [
+    {"id": "EXP-001271", "relation": "continues"},
+    {"id": "EXP-001272", "relation": "parallel-boundary"}
+  ]
+}

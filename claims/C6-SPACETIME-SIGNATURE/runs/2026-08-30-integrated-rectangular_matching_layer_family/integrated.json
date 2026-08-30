@@ -1,0 +1,617 @@
+{
+  "assertion_count": 37,
+  "assertions": [
+    {
+      "actual": [
+        "EXP-001285",
+        "R-440",
+        "T-054"
+      ],
+      "expected": "EXP-001285/R-440/T-054",
+      "name": "identity",
+      "pass": true
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "claim nonbearing",
+      "pass": true
+    },
+    {
+      "actual": {
+        "event_id": "20260830-r-440-rectangular-matching-layer-split-envelope",
+        "event_ordinal": 782,
+        "event_title": "R-440 finite rectangular matching-layer split envelope",
+        "new_negative": false,
+        "pdf": false,
+        "tier_change": false
+      },
+      "expected": "event 782 without tier change",
+      "name": "formal event reserved",
+      "pass": true
+    },
+    {
+      "actual": "E:\\Dev\\TECT\\verification\\lean\\Tect\\R440.lean",
+      "expected": true,
+      "name": "Lean source exists",
+      "pass": true
+    },
+    {
+      "actual": [
+        "box_222_edge_count",
+        "box_333_edge_count",
+        "box_543_edge_count",
+        "matching_layer_count",
+        "derived_matching_coefficient"
+      ],
+      "expected": "present",
+      "name": "Lean markers",
+      "pass": true
+    },
+    {
+      "actual": [],
+      "expected": "none",
+      "name": "Lean forbidden tokens absent",
+      "pass": true
+    },
+    {
+      "actual": "r-440 certifies only the declared finite rectangular boxes and phase-space fixtures. its volume-independent coefficient is a finite conditional split-envelope observation; it does not close arbitrary-box uniformity, an unbounded common core, boundary decay, exhaustion cauchy, common alpha, kms/gns, a physical sector or yang-mills/mass-gap claim.",
+      "expected": "finite conditional boundary",
+      "name": "finite boundary",
+      "pass": true
+    },
+    {
+      "actual": "r-440 certifies only the declared finite rectangular boxes and phase-space fixtures. its volume-independent coefficient is a finite conditional split-envelope observation; it does not close arbitrary-box uniformity, an unbounded common core, boundary decay, exhaustion cauchy, common alpha, kms/gns, a physical sector or yang-mills/mass-gap claim.",
+      "expected": "open common alpha",
+      "name": "common-alpha boundary",
+      "pass": true
+    },
+    {
+      "actual": "r-440 certifies only the declared finite rectangular boxes and phase-space fixtures. its volume-independent coefficient is a finite conditional split-envelope observation; it does not close arbitrary-box uniformity, an unbounded common core, boundary decay, exhaustion cauchy, common alpha, kms/gns, a physical sector or yang-mills/mass-gap claim.",
+      "expected": "open Yang-Mills/mass-gap",
+      "name": "QFT firewall",
+      "pass": true
+    },
+    {
+      "actual": "R-440 PRIMARY RECTANGULAR_MATCHING_LAYER_AUDITED 1152/1152 boxes=5 layers=6 max_ratio=4034975/3832529\n",
+      "expected": "PASS",
+      "name": "primary child",
+      "pass": true
+    },
+    {
+      "actual": "R-440 INDEPENDENT RECTANGULAR_MATCHING_LAYER_AUDITED 652/652 boxes=5 layers=6 max_ratio=4034975/3832529\n",
+      "expected": "PASS",
+      "name": "independent child",
+      "pass": true
+    },
+    {
+      "actual": "R-440 HOSTILE MUTATIONS_REJECTED 10/10\n",
+      "expected": "PASS",
+      "name": "hostile child",
+      "pass": true
+    },
+    {
+      "actual": [
+        1152,
+        652,
+        10
+      ],
+      "expected": ">0",
+      "name": "positive assertion totals",
+      "pass": true
+    },
+    {
+      "actual": [
+        3,
+        3
+      ],
+      "expected": "equal",
+      "name": "lane agreement dimension",
+      "pass": true
+    },
+    {
+      "actual": [
+        5,
+        5
+      ],
+      "expected": "equal",
+      "name": "lane agreement box_count",
+      "pass": true
+    },
+    {
+      "actual": [
+        6,
+        6
+      ],
+      "expected": "equal",
+      "name": "lane agreement layer_count",
+      "pass": true
+    },
+    {
+      "actual": [
+        "53/35",
+        "53/35"
+      ],
+      "expected": "equal",
+      "name": "lane agreement matching_coefficient",
+      "pass": true
+    },
+    {
+      "actual": [
+        "298/245",
+        "298/245"
+      ],
+      "expected": "equal",
+      "name": "lane agreement one_layer_form_factor",
+      "pass": true
+    },
+    {
+      "actual": [
+        "159/35",
+        "159/35"
+      ],
+      "expected": "equal",
+      "name": "lane agreement endpoint_exponent",
+      "pass": true
+    },
+    {
+      "actual": [
+        "4034975/3832529",
+        "4034975/3832529"
+      ],
+      "expected": "equal",
+      "name": "lane agreement global_max_layer_energy_ratio",
+      "pass": true
+    },
+    {
+      "actual": [
+        480,
+        480
+      ],
+      "expected": "equal",
+      "name": "lane agreement total_layer_rows",
+      "pass": true
+    },
+    {
+      "actual": [
+        80,
+        80
+      ],
+      "expected": "equal",
+      "name": "lane agreement total_product_rows",
+      "pass": true
+    },
+    {
+      "actual": [
+        true,
+        true
+      ],
+      "expected": "equal",
+      "name": "lane agreement rectangular_box_family_checked",
+      "pass": true
+    },
+    {
+      "actual": [
+        true,
+        true
+      ],
+      "expected": "equal",
+      "name": "lane agreement edge_colour_partition_checked",
+      "pass": true
+    },
+    {
+      "actual": [
+        true,
+        true
+      ],
+      "expected": "equal",
+      "name": "lane agreement six_matching_layers_checked",
+      "pass": true
+    },
+    {
+      "actual": [
+        true,
+        true
+      ],
+      "expected": "equal",
+      "name": "lane agreement per_layer_weighted_finite_form_checked",
+      "pass": true
+    },
+    {
+      "actual": [
+        true,
+        true
+      ],
+      "expected": "equal",
+      "name": "lane agreement volume_independent_coefficient_observed",
+      "pass": true
+    },
+    {
+      "actual": [
+        false,
+        false
+      ],
+      "expected": "equal",
+      "name": "lane agreement arbitrary_box_theorem_closed",
+      "pass": true
+    },
+    {
+      "actual": [
+        false,
+        false
+      ],
+      "expected": "equal",
+      "name": "lane agreement operator_common_core_closed",
+      "pass": true
+    },
+    {
+      "actual": [
+        false,
+        false
+      ],
+      "expected": "equal",
+      "name": "lane agreement boundary_commutator_decay_closed",
+      "pass": true
+    },
+    {
+      "actual": [
+        false,
+        false
+      ],
+      "expected": "equal",
+      "name": "lane agreement exhaustion_cauchy_closed",
+      "pass": true
+    },
+    {
+      "actual": [
+        false,
+        false
+      ],
+      "expected": "equal",
+      "name": "lane agreement common_alpha_closed",
+      "pass": true
+    },
+    {
+      "actual": [
+        false,
+        false
+      ],
+      "expected": "equal",
+      "name": "lane agreement kms_gns_gap_closed",
+      "pass": true
+    },
+    {
+      "actual": [
+        false,
+        false
+      ],
+      "expected": "equal",
+      "name": "lane agreement pre_a_closed",
+      "pass": true
+    },
+    {
+      "actual": [
+        [
+          {
+            "edges": 12,
+            "incidence_max": {
+              "(0, 0)": 1,
+              "(0, 1)": 0,
+              "(1, 0)": 1,
+              "(1, 1)": 0,
+              "(2, 0)": 1,
+              "(2, 1)": 0
+            },
+            "layer_rows": 96,
+            "layer_sizes": [
+              0,
+              0,
+              0,
+              4,
+              4,
+              4
+            ],
+            "max_layer_energy_ratio": "4034975/3832529",
+            "product_rows": 16,
+            "sides": [
+              2,
+              2,
+              2
+            ],
+            "vertices": 8
+          },
+          {
+            "edges": 54,
+            "incidence_max": {
+              "(0, 0)": 1,
+              "(0, 1)": 1,
+              "(1, 0)": 1,
+              "(1, 1)": 1,
+              "(2, 0)": 1,
+              "(2, 1)": 1
+            },
+            "layer_rows": 96,
+            "layer_sizes": [
+              9,
+              9,
+              9,
+              9,
+              9,
+              9
+            ],
+            "max_layer_energy_ratio": "5428267/5199517",
+            "product_rows": 16,
+            "sides": [
+              3,
+              3,
+              3
+            ],
+            "vertices": 27
+          },
+          {
+            "edges": 144,
+            "incidence_max": {
+              "(0, 0)": 1,
+              "(0, 1)": 1,
+              "(1, 0)": 1,
+              "(1, 1)": 1,
+              "(2, 0)": 1,
+              "(2, 1)": 1
+            },
+            "layer_rows": 96,
+            "layer_sizes": [
+              16,
+              16,
+              16,
+              32,
+              32,
+              32
+            ],
+            "max_layer_energy_ratio": "8965475/8582426",
+            "product_rows": 16,
+            "sides": [
+              4,
+              4,
+              4
+            ],
+            "vertices": 64
+          },
+          {
+            "edges": 133,
+            "incidence_max": {
+              "(0, 0)": 1,
+              "(0, 1)": 1,
+              "(1, 0)": 1,
+              "(1, 1)": 1,
+              "(2, 0)": 1,
+              "(2, 1)": 1
+            },
+            "layer_rows": 96,
+            "layer_sizes": [
+              15,
+              20,
+              20,
+              24,
+              24,
+              30
+            ],
+            "max_layer_energy_ratio": "1252803653/1201671053",
+            "product_rows": 16,
+            "sides": [
+              5,
+              4,
+              3
+            ],
+            "vertices": 60
+          },
+          {
+            "edges": 286,
+            "incidence_max": {
+              "(0, 0)": 1,
+              "(0, 1)": 1,
+              "(1, 0)": 1,
+              "(1, 1)": 1,
+              "(2, 0)": 1,
+              "(2, 1)": 1
+            },
+            "layer_rows": 96,
+            "layer_sizes": [
+              30,
+              40,
+              48,
+              48,
+              60,
+              60
+            ],
+            "max_layer_energy_ratio": "8619200527/8268370975",
+            "product_rows": 16,
+            "sides": [
+              6,
+              5,
+              4
+            ],
+            "vertices": 120
+          }
+        ],
+        [
+          {
+            "edges": 12,
+            "incidence_max": {
+              "(0, 0)": 1,
+              "(0, 1)": 0,
+              "(1, 0)": 1,
+              "(1, 1)": 0,
+              "(2, 0)": 1,
+              "(2, 1)": 0
+            },
+            "layer_rows": 96,
+            "layer_sizes": [
+              0,
+              0,
+              0,
+              4,
+              4,
+              4
+            ],
+            "max_layer_energy_ratio": "4034975/3832529",
+            "product_rows": 16,
+            "sides": [
+              2,
+              2,
+              2
+            ],
+            "vertices": 8
+          },
+          {
+            "edges": 54,
+            "incidence_max": {
+              "(0, 0)": 1,
+              "(0, 1)": 1,
+              "(1, 0)": 1,
+              "(1, 1)": 1,
+              "(2, 0)": 1,
+              "(2, 1)": 1
+            },
+            "layer_rows": 96,
+            "layer_sizes": [
+              9,
+              9,
+              9,
+              9,
+              9,
+              9
+            ],
+            "max_layer_energy_ratio": "5428267/5199517",
+            "product_rows": 16,
+            "sides": [
+              3,
+              3,
+              3
+            ],
+            "vertices": 27
+          },
+          {
+            "edges": 144,
+            "incidence_max": {
+              "(0, 0)": 1,
+              "(0, 1)": 1,
+              "(1, 0)": 1,
+              "(1, 1)": 1,
+              "(2, 0)": 1,
+              "(2, 1)": 1
+            },
+            "layer_rows": 96,
+            "layer_sizes": [
+              16,
+              16,
+              16,
+              32,
+              32,
+              32
+            ],
+            "max_layer_energy_ratio": "8965475/8582426",
+            "product_rows": 16,
+            "sides": [
+              4,
+              4,
+              4
+            ],
+            "vertices": 64
+          },
+          {
+            "edges": 133,
+            "incidence_max": {
+              "(0, 0)": 1,
+              "(0, 1)": 1,
+              "(1, 0)": 1,
+              "(1, 1)": 1,
+              "(2, 0)": 1,
+              "(2, 1)": 1
+            },
+            "layer_rows": 96,
+            "layer_sizes": [
+              15,
+              20,
+              20,
+              24,
+              24,
+              30
+            ],
+            "max_layer_energy_ratio": "1252803653/1201671053",
+            "product_rows": 16,
+            "sides": [
+              5,
+              4,
+              3
+            ],
+            "vertices": 60
+          },
+          {
+            "edges": 286,
+            "incidence_max": {
+              "(0, 0)": 1,
+              "(0, 1)": 1,
+              "(1, 0)": 1,
+              "(1, 1)": 1,
+              "(2, 0)": 1,
+              "(2, 1)": 1
+            },
+            "layer_rows": 96,
+            "layer_sizes": [
+              30,
+              40,
+              48,
+              48,
+              60,
+              60
+            ],
+            "max_layer_energy_ratio": "8619200527/8268370975",
+            "product_rows": 16,
+            "sides": [
+              6,
+              5,
+              4
+            ],
+            "vertices": 120
+          }
+        ]
+      ],
+      "expected": "equal",
+      "name": "box summaries agree",
+      "pass": true
+    },
+    {
+      "actual": 10,
+      "expected": 10,
+      "name": "hostile mutation count",
+      "pass": true
+    },
+    {
+      "actual": {
+        "command": "lake env lean Tect/R440.lean",
+        "output": "",
+        "returncode": 0,
+        "status": "PASS"
+      },
+      "expected": "PASS",
+      "name": "Lean compile",
+      "pass": true
+    }
+  ],
+  "audit_id": "PA-CP1-ST8-Q3LOCK-RECTANGULAR-MATCHING-LAYER-FAMILY",
+  "boundary": "R-440 certifies only the declared finite rectangular boxes and phase-space fixtures. Its volume-independent coefficient is a finite conditional split-envelope observation; it does not close arbitrary-box uniformity, an unbounded common core, boundary decay, exhaustion Cauchy, common alpha, KMS/GNS, a physical sector or Yang-Mills/mass-gap claim.",
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "exploration_id": "EXP-001285",
+  "lean": {
+    "command": "lake env lean Tect/R440.lean",
+    "output": "",
+    "returncode": 0,
+    "status": "PASS"
+  },
+  "recorded_at": "2026-08-30T00:42:01.028365Z",
+  "result_id": "R-440",
+  "run_kind": "integrated",
+  "schema": "tect/foundation-audit/1.0",
+  "task_id": "T-054",
+  "verdict": "PASS"
+}

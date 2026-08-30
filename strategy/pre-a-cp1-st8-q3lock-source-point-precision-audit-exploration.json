@@ -1,0 +1,61 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "schema_version": "1.0",
+  "id": "EXP-001275",
+  "task_id": "T-054",
+  "title": "Original finite source-point precision audit for the R-426 row",
+  "question": "When the original finite oscillator Hamiltonian, coordinate basis, Gibbs state and projected graph are recomputed at 50-digit mpmath precision for the fixed R-426 row, does the residual gap remain separated from the R-422 and R-426 reuse values without using the rounded graph snapshot?",
+  "method": [
+    "Rebuild the original R-419/R-416/R-402 oscillator and volume-two Hamiltonian with rational fixture parameters at 50 decimal digits using mpmath eigsy.",
+    "Reconstruct the coordinate Gibbs log masses by log-sum-exp, select the right-orientation conditional row 7, form the projected momentum conductance and blockwise weighted-zero-mean residual operator.",
+    "Diagonalize the 14-dimensional residual compression and compare its first point eigenvalue with the immutable R-422 and R-426 references at tolerance 5e-7.",
+    "Run a separate NumPy source reconstruction, hostile mutation controls, the integrated verifier and Lean R430 scalar checks; preserve the no-interval boundary."
+  ],
+  "finding": "The mpmath primary lane passes 14/14 and gives source residual gap 5.36318753578552619873719734720155508375451072..., with mismatches 2.568621827198737...e-6 to R-422 and 8.142622838012628...e-7 to the R-426 direct reference; both exceed 5e-7. The independent NumPy source lane passes 9/9 but gives 6.094733971033106, differing from the mpmath point by 0.73154643524758. The hostile lane passes 10/10 and integrated verification passes 13/13 with Lean R430 PASS.",
+  "decision_reason": "The original-source point calculation reproduces a positive residual gap and fixed-reference separation, but the independent double reconstruction is materially different. Without interval or ball-arithmetic enclosures and conditioning bounds, the result is a source-point audit with recorded precision sensitivity, not a certified residual-reuse failure or theorem repair.",
+  "decision_scope": "One finite V=2, cutoff d=16, beta=8, right-orientation conditional row 7, core/tail 7/9; original rational source formulas; no interval enclosure, uniform limit or physical promotion.",
+  "verdict": "inconclusive",
+  "boundary": "R-430 does not certify the original unrounded source, close R-426 residual reuse, establish a common Q3 core or regulator/volume limit, or imply C6, Sector-A, Pre-A, Yang-Mills or a mass gap.",
+  "next_action": "Replace the point reconstruction with interval or ball arithmetic for the coordinate and Hamiltonian eigensystems, propagate enclosures through Gibbs normalization and residual compression, and retain the fixed row and tolerance.",
+  "evidence_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-source-point-precision-audit-manifest.json#precision_contract",
+    "strategy/pre-a-cp1-st8-q3lock-source-point-precision-audit-certificate-260830.md#Executed evidence",
+    "codes/foundations/pre_a_cp1_st8_q3lock_source_point_precision_audit.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_source_point_precision_audit_independent.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_source_point_precision_audit_hostile.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_source_point_precision_audit_verify.py#main",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-primary-source_point_precision_audit/primary.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-independent-source_point_precision_audit/independent.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-hostile-source_point_precision_audit/hostile.json#controls",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-integrated-source_point_precision_audit/integrated.json#derived",
+    "verification/lean/Tect/R430.lean#source_gap_reference_separation",
+    "verification/lean/registry.json#R430"
+  ],
+  "formal_refs": {
+    "results": ["R-430", "R-426"],
+    "negatives": [],
+    "events": ["20260830-r-430-original-source-point-precision-audit-202"]
+  },
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY",
+    "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+  ],
+  "adversarial_review": [
+    {"axis": "upstream source rounding", "check": "The independent double reconstruction differs materially from the mpmath point; no input enclosure is available.", "disposition": "UPHELD-OPEN"},
+    {"axis": "fixed-reference separation", "check": "The mpmath point exceeds both fixed-reference tolerances, but this does not certify the unrounded source.", "disposition": "DISMISSED-FINITE / OPEN-CERTIFICATION"},
+    {"axis": "precision and tolerance", "check": "Hostile controls reject precision, row and comparison-tolerance mutations.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "interval promotion", "check": "Hostile controls reject forged interval, exact-input and residual-reuse closure fields.", "disposition": "UPHELD-OPEN"},
+    {"axis": "finite-to-physical", "check": "The single finite row supplies no common core, OS/KMS/GNS, physical-sector or continuum transfer.", "disposition": "UPHELD-OPEN"}
+  ],
+  "no_overclaim": "R-430 records point calculations and their sensitivity only. It does not establish an interval theorem, a uniform bound, a physical vacuum, Yang-Mills dynamics or a mass gap.",
+  "provenance": "contemporaneous",
+  "recorded_at": "2026-08-30T03:00:00Z",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-08-30",
+  "related": [
+    {"id": "EXP-001274", "relation": "continues"},
+    {"id": "EXP-001273", "relation": "continues"}
+  ]
+}

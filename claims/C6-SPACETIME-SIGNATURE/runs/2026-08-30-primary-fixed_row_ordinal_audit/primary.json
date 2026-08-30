@@ -1,0 +1,152 @@
+{
+  "assertion_count": 13,
+  "assertions": [
+    {
+      "actual": "['R-432', 'EXP-001277', False, 'ROW_INDEX_CONTRACT_CORRECTED']",
+      "expected": "R-432/EXP-001277/false",
+      "group": "provenance",
+      "name": "manifest identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "hash-pinned R430/R426/R429 sources",
+      "expected": "declared SHA-256 values",
+      "group": "authority",
+      "name": "authority hashes",
+      "status": "PASS"
+    },
+    {
+      "actual": "[17, 2.7755575615628914e-17]",
+      "expected": "17 rows and explicit/generator agreement",
+      "group": "row contract",
+      "name": "emission order",
+      "status": "PASS"
+    },
+    {
+      "actual": "[7, 6, (16,)]",
+      "expected": "ordinal 7 -> parent 6",
+      "group": "row contract",
+      "name": "target mapping",
+      "status": "PASS"
+    },
+    {
+      "actual": "[5.622948645880553e-13, 0.2864501401805248, 1.0]",
+      "expected": "positive normalized row",
+      "group": "source",
+      "name": "target positivity",
+      "status": "PASS"
+    },
+    {
+      "actual": "[7, 9]",
+      "expected": "[7, 9]",
+      "group": "tail split",
+      "name": "target blocks",
+      "status": "PASS"
+    },
+    {
+      "actual": "5.36318835004781",
+      "expected": ">0",
+      "group": "residual",
+      "name": "corrected direct gap finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "[5.36318835004781, 5.36318835004781]",
+      "expected": "same finite direct residual gap",
+      "group": "residual",
+      "name": "R-426 direct reference reproduced",
+      "status": "PASS"
+    },
+    {
+      "actual": "3.382884111502449e-06",
+      "expected": ">5e-7",
+      "group": "R-422 reuse",
+      "name": "R-422 mismatch preserved",
+      "status": "PASS"
+    },
+    {
+      "actual": "[6, 6.094733955638003, 5.36318835004781]",
+      "expected": "subtract-one selects a different row",
+      "group": "row correction",
+      "name": "historical wrong row distinct",
+      "status": "PASS"
+    },
+    {
+      "actual": "[6.094733971033106, 6.094733955638003]",
+      "expected": "same ordinal-6 row within 5e-7",
+      "group": "row correction",
+      "name": "R-430 independent value identified",
+      "status": "PASS"
+    },
+    {
+      "actual": "[False, False]",
+      "expected": "wrong-row control is not target evidence",
+      "group": "scope",
+      "name": "R-430 sensitivity interpretation rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'row_ordinal_contract_corrected': True, 'corrected_target_reconstructed': True, 'historical_subtract_one_identified': True, 'r426_direct_gap_reproduced': True, 'r422_mismatch_reproduced': True, 'r430_independent_sensitivity_rejected_for_target': True, 'original_source_interval_certified': False, 'exact_original_hamiltonian_certified': False, 'residual_reuse_closed': False, 'r426_route_failure_preserved': True, 'cutoff_uniform_coarse_schur_closed': False, 'volume_uniform_coarse_schur_closed': False, 'phase_uniform_coarse_schur_closed': False, 'exhaustion_uniform_coarse_schur_closed': False, 'global_poincare_closed': False, 'common_core_closed': False, 'hamiltonian_os_identification_closed': False, 'kms_gns_gap_closed': False, 'continuum_closed': False, 'c6_closed': False, 'sector_a_closed': False, 'pre_a_closed': False, 'no_new_negative_result': True, 'no_tier_change': True, 'no_pdf': True}",
+      "expected": "finite row correction only",
+      "group": "scope",
+      "name": "scope firewall",
+      "status": "PASS"
+    }
+  ],
+  "assumptions": [
+    "The R-426 failure manifest's conditional_row_index is an emission ordinal, not an array index with an additional subtract-one conversion.",
+    "The conditional_rows emission order is the declared radius-0 row followed by radius-1 rows in parent-coordinate order for the right orientation.",
+    "The R-419/R-416/R-402 finite source formulas and fixed tail split are the unchanged finite model under audit.",
+    "The direct residual gap is recomputed from the selected finite row with the unchanged 5e-7 comparison tolerance."
+  ],
+  "boundary": "R-432 repairs the finite row-ordinal interpretation and removes the R-430 independent lane's subtract-one value from the target comparison. It preserves the R-426 route-local residual-reuse failure and leaves the original-source interval, common-core, physical-sector and continuum gates open.",
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "derived": {
+    "classification": "ROW_INDEX_CONTRACT_CORRECTED",
+    "corrected_direct_residual_gap": 5.36318835004781,
+    "explicit_generator_max_error": 2.7755575615628914e-17,
+    "historical_subtract_one_ordinal": 6,
+    "historical_wrong_row_gap": 6.094733955638003,
+    "original_source_interval_certified": false,
+    "r422_mismatch": 3.382884111502449e-06,
+    "r422_reference": 5.363184967163699,
+    "r426_direct_reference": 5.36318835004781,
+    "r426_route_failure_preserved": true,
+    "r430_independent_gap": 6.094733971033106,
+    "residual_reuse_closed": false,
+    "target_core_size": 7,
+    "target_emission_ordinal": 7,
+    "target_parent_coordinate": 6,
+    "target_row_max": 0.2864501401805248,
+    "target_row_min": 5.622948645880553e-13,
+    "target_row_sum": 1.0,
+    "target_tail_size": 9
+  },
+  "evidence_level": "T0 / EXECUTED FINITE ROW-CONTRACT CORRECTION AND REPRODUCTION; NO ORIGINAL-SOURCE INTERVAL CERTIFICATION",
+  "exploration_id": "EXP-001277",
+  "manifest": "strategy/pre-a-cp1-st8-q3lock-fixed-row-ordinal-audit-manifest.json",
+  "missing_assumptions": [
+    "Validated interval or ball enclosures for the original coordinate and 256-dimensional Hamiltonian eigensystems.",
+    "A propagated original-source enclosure for Gibbs normalization, row selection, conductance and residual eigenvalue.",
+    "A basis-independent analytic common-core estimate uniform in cutoff, volume, phase and exhaustion.",
+    "History transfer, OS/KMS/GNS identification, physical-sector selection and continuum control."
+  ],
+  "non_claims": [
+    "No interval or exact certification of the original Hamiltonian, coordinate eigenbasis or Gibbs weights.",
+    "No closure of R-426 residual reuse for the original unrounded source.",
+    "No cutoff-, volume-, phase- or exhaustion-uniform Schur or residual estimate.",
+    "No common core, history transfer, OS/KMS/GNS reconstruction, sector gap or continuum limit.",
+    "No C6, Sector-A, Pre-A, Yang-Mills or mass-gap conclusion."
+  ],
+  "result_id": "R-432",
+  "run_kind": "primary",
+  "schema": "tect/pre-a-r432-primary/1.0",
+  "source_hashes": {
+    "manifest": "e4300301200d92334359f3dbab031497da73576b296a5e858252d5e35708357a",
+    "r426_manifest": "0292aec6ec398cf7358e4e618f7623880543b9374a1501d3d3fa362db29901b0",
+    "r429_manifest": "24baa0690b89f262dded8fb53118d542de58a509f610043a15edba704cc2ed79",
+    "r430_independent_script": "f5fe8f29a5f84b20ddd780bc7d58620803db10a97661012388d21403f525cacd",
+    "r430_manifest": "d94f4c9e871586d01eb9346586d6b699cd6732459c0f1113ccfacf42801bc15e"
+  },
+  "verdict": "ROW_INDEX_CONTRACT_CORRECTED"
+}

@@ -1,0 +1,582 @@
+{
+  "assertion_count": 59,
+  "assertions": [
+    {
+      "actual": "['R-438', 'EXP-001283', False]",
+      "expected": "R-438/EXP-001283/false",
+      "group": "provenance",
+      "name": "manifest identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "361",
+      "expected": "361",
+      "group": "source",
+      "name": "source dimension",
+      "status": "PASS"
+    },
+    {
+      "actual": "unconditional_one_site_marginal",
+      "expected": "unconditional ordinal 0",
+      "group": "row",
+      "name": "source row kind",
+      "status": "PASS"
+    },
+    {
+      "actual": "d5e2139c1a8af9b11f13098a8aaafabf66560bf08f011afb18900f50ae7e2881",
+      "expected": "d5e2139c1a8af9b11f13098a8aaafabf66560bf08f011afb18900f50ae7e2881",
+      "group": "authority",
+      "name": "R-419 authority",
+      "status": "PASS"
+    },
+    {
+      "actual": "b18599207fcc33467b048aa7a2501942fe9b4a524c8adc7e5707b644c6b93ee6",
+      "expected": "b18599207fcc33467b048aa7a2501942fe9b4a524c8adc7e5707b644c6b93ee6",
+      "group": "authority",
+      "name": "R-433 primitive authority",
+      "status": "PASS"
+    },
+    {
+      "actual": "[100, 81, 90, 90]",
+      "expected": "[100, 81, 90, 90]",
+      "group": "symmetry",
+      "name": "exchange/parity blocks",
+      "status": "PASS"
+    },
+    {
+      "actual": "strictly increasing",
+      "expected": "strictly increasing",
+      "group": "source",
+      "name": "source eigenvalue ordering",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.0422742491715424398096485568454295165343728550802e-40",
+      "expected": "<1e-35",
+      "group": "source interval",
+      "name": "Hamiltonian residual enclosure",
+      "status": "PASS"
+    },
+    {
+      "actual": "8.2960961766539259326748923733938118488868206250885e-42",
+      "expected": "<1e-35",
+      "group": "source interval",
+      "name": "Hamiltonian Gram enclosure",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.6592192353307851865349784746787623697773641250177e-41",
+      "expected": "<0.5",
+      "group": "source interval",
+      "name": "Hamiltonian polar regime",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.5147688124544266796019185336720949193144953814505e-43",
+      "expected": "<1e-35",
+      "group": "coordinate interval",
+      "name": "coordinate residual enclosure",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.6355621662905193812026433449842080388995330254513e-43",
+      "expected": "<1e-35",
+      "group": "coordinate interval",
+      "name": "coordinate Gram enclosure",
+      "status": "PASS"
+    },
+    {
+      "actual": "[mpf('0.39766809218842384912368387895848387250760953569836985'), mpf('0.39766809218842384912368387895848387252204471700000005')]",
+      "expected": "lower shift below approximate minimum",
+      "group": "Gibbs",
+      "name": "shifted source cone",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.147159432474790887663816178825438035998042297949672738119190352105439858620933320461e-37, 1.147159432474790887663816178825438035998042297949672738119190352105439858620933320461e-37]",
+      "expected": "<1e-30",
+      "group": "Gibbs",
+      "name": "Gibbs kernel error finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "[mpf('0.0000000000040196790080387367907819810716010971664219953308224359'), mpf('0.000000000013938860048526196082197964862892511404376672427592881'), mpf('0.0000000036558898086003905362300920560574551312969284599316692'), mpf('0.0000069833135711168070409004857110224263842359562774050175'), mpf('0.00089055465987961970736962275194852707793611087646708417'), mpf('0.016004552736047621225454017234851231933708080709118368'), mpf('0.074878465037915426896161420056655886978961600445326443'), mpf('0.14546623914212104579966030265976492540727146831633153'), mpf('0.174282328243247902053327254662044450842634498303474'), mpf('0.17694174638673783970806202609190053817099854583017513'), mpf('0.17428232824324790205332725466204445084263449830347433'), mpf('0.14546623914212104579966030265976492540727146831633186'), mpf('0.07487846503791542689616142005665588697896160044532661'), mpf('0.016004552736047621225454017234851231933708080709118368'), mpf('0.00089055465987961970736962275194852707793611087646708548'), mpf('0.0000069833135711168070409004857110224263842359562774050175'), mpf('0.0000000036558898086003905362300920560574551312969284599316692'), mpf('0.000000000013938860048526196082197964862892511404376672427591383'), mpf('0.0000000000040196790080387367907819810716010971664219953308224553')]",
+      "expected": ">0",
+      "group": "Gibbs row",
+      "name": "unconditional row positivity",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.9999999999999999999999999999999966314886880147796198467638115784247512895032103042117, 1.000000000000000000000000000000003368511311985220380153236188421586595578955762087461]",
+      "expected": "contains 1",
+      "group": "Gibbs row",
+      "name": "unconditional row normalization",
+      "status": "PASS"
+    },
+    {
+      "actual": "[[5, 6, 7, 8, 9, 10, 11, 12, 13], [0, 1, 2, 3, 4, 14, 15, 16, 17, 18]]",
+      "expected": "[[5, 6, 7, 8, 9, 10, 11, 12, 13], [0, 1, 2, 3, 4, 14, 15, 16, 17, 18]]",
+      "group": "row",
+      "name": "tail split identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.402947334176791511424738284126956203687361222027952083169191154958546032862930270178, 2.402947334176791511424738284126975020155821606131186683733129915875787105342611882301]",
+      "expected": "<4",
+      "group": "row threshold",
+      "name": "core threshold 5",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.8599542289442458054356018070577325631494279246482355580382751469971590823633151054565, 0.8599542289442458054356018070577426698449966190973609572918579514712067886648067680808]",
+      "expected": "<4",
+      "group": "row threshold",
+      "name": "core threshold 6",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.1958765356438614724299808165689901554213365777851564408662288801685031044841189844038, 0.1958765356438614724299808165689991131837758113178570806043741562802978017339580340553]",
+      "expected": "<4",
+      "group": "row threshold",
+      "name": "core threshold 7",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.01514400157326441270186116995379989997842877315987709819993809995344608522437562627868, 0.01514400157326441270186116995380865622748981233875504690244392420411124942065378806249]",
+      "expected": "<4",
+      "group": "row threshold",
+      "name": "core threshold 8",
+      "status": "PASS"
+    },
+    {
+      "actual": "[-4.370479884536519512744425957416963000333622317292932786846515786395333919614628939558e-33, 4.370479884536519512744425957416963000333622317292932786846515786395333919614628939558e-33]",
+      "expected": "<4",
+      "group": "row threshold",
+      "name": "core threshold 9",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.01514400157326441270186116995379989997842877315987574067529490236039049004322903810064, 0.01514400157326441270186116995380865622748981233875368937780072661105565423950719355914]",
+      "expected": "<4",
+      "group": "row threshold",
+      "name": "core threshold 10",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.1958765356438614724299808165689901554213365777851542722754790323946453331160132375857, 0.1958765356438614724299808165689991131837758113178549120136243085064400303658522788034]",
+      "expected": "<4",
+      "group": "row threshold",
+      "name": "core threshold 11",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.85995422894424580543560180705773256314942792464823345157989316084577825242639001408, 0.8599542289442458054356018070577426698449966190973588508334759653198259587278816724874]",
+      "expected": "<4",
+      "group": "row threshold",
+      "name": "core threshold 12",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2.402947334176791511424738284126956203687361222027950081327855912270855597160423716402, 2.40294733417679151142473828412697502015582160613118468189179467318809666964010532009]",
+      "expected": "<4",
+      "group": "row threshold",
+      "name": "core threshold 13",
+      "status": "PASS"
+    },
+    {
+      "actual": "[24.50788434819415831771483078220681533606802305348778419668365589689469171822952385111, 24.50788434819415831771487488773582111220734605280295343446629534417627391738098853811]",
+      "expected": ">4",
+      "group": "row threshold",
+      "name": "tail threshold 0",
+      "status": "PASS"
+    },
+    {
+      "actual": "[23.2644057724738596943781583167039002057090341958269370863896433422034860162888005221, 23.26440577247385969437817103582644986298262358800312476045628387368425629836949771039]",
+      "expected": ">4",
+      "group": "row threshold",
+      "name": "tail threshold 1",
+      "status": "PASS"
+    },
+    {
+      "actual": "[17.69499160665014198486516096182553052427780671456843348706200883274093793282659731328, 17.69499160665014198486516101031990716760063620622259379152930698319709431486623772277]",
+      "expected": ">4",
+      "group": "row threshold",
+      "name": "tail threshold 2",
+      "status": "PASS"
+    },
+    {
+      "actual": "[10.14005231314179171293388905962435180212387441037710069496766963558355696023687119964, 10.14005231314179171293388905964974721234683842873158720526862946593530605460681438756]",
+      "expected": ">4",
+      "group": "row threshold",
+      "name": "tail threshold 3",
+      "status": "PASS"
+    },
+    {
+      "actual": "[5.291731358968869203913621300968252565956158149765117923257269802606263038514536605823, 5.291731358968869203913621300968459383203905278744499992181899369910862356698633831796]",
+      "expected": ">4",
+      "group": "row threshold",
+      "name": "tail threshold 4",
+      "status": "PASS"
+    },
+    {
+      "actual": "[5.291731358968869203913621300968252565956158149765116366604357717881236066990663246968, 5.291731358968869203913621300968459383203905278744498435528987285185835385174760464507]",
+      "expected": ">4",
+      "group": "row threshold",
+      "name": "tail threshold 14",
+      "status": "PASS"
+    },
+    {
+      "actual": "[10.14005231314179171293388905962435180212387441037709948872028073564031140162878423889, 10.14005231314179171293388905964974721234683842873158599902124056599206049599872737619]",
+      "expected": ">4",
+      "group": "row threshold",
+      "name": "tail threshold 15",
+      "status": "PASS"
+    },
+    {
+      "actual": "[17.69499160665014198486516096182553052427780671456843364778456844693996324485876484621, 17.69499160665014198486516101031990716760063620622259395225186659739611962689841304849]",
+      "expected": ">4",
+      "group": "row threshold",
+      "name": "tail threshold 16",
+      "status": "PASS"
+    },
+    {
+      "actual": "[23.26440577247385969437815831670390020570903419582704444831971083960542011467372645399, 23.26440577247385969437817103582644986298262358800323212238635137108619039811997319734]",
+      "expected": ">4",
+      "group": "row threshold",
+      "name": "tail threshold 17",
+      "status": "PASS"
+    },
+    {
+      "actual": "[24.50788434819415831771483078220681533606802305348777848665091631664573664353198956951, 24.5078843481941583177148748877358211122073460528029477244335557639273188424316102561]",
+      "expected": ">4",
+      "group": "row threshold",
+      "name": "tail threshold 18",
+      "status": "PASS"
+    },
+    {
+      "actual": "diagonal contains 1 and off-diagonal contains 0",
+      "expected": "orthonormal enclosure",
+      "group": "residual",
+      "name": "residual basis interval orthogonality",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.00000002635684039848939872138594057987231438726309827912",
+      "expected": "<1e-6",
+      "group": "residual",
+      "name": "residual matrix interval width",
+      "status": "PASS"
+    },
+    {
+      "actual": "3.4135516654362365136456672704071839146137252649936",
+      "expected": ">0 at 4.5",
+      "group": "eigenvalue",
+      "name": "interval Cholesky lower bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "[False, 13]",
+      "expected": "rejected at 4.7",
+      "group": "eigenvalue",
+      "name": "upper-side Cholesky probe rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": "[mpf('4.5195207948227788293190876547972457624469246569597005'), mpf('4.5195207948227978866565330133165013513466931366089556')]",
+      "expected": "<4.6",
+      "group": "eigenvalue",
+      "name": "interval Rayleigh upper bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.019520794822797886656533013316501351346693136608956",
+      "expected": "<0.3",
+      "group": "eigenvalue",
+      "name": "certified bracket width",
+      "status": "PASS"
+    },
+    {
+      "actual": "True",
+      "expected": "True",
+      "group": "scope",
+      "name": "scope original_source_interval_certified",
+      "status": "PASS"
+    },
+    {
+      "actual": "True",
+      "expected": "True",
+      "group": "scope",
+      "name": "scope exact_original_hamiltonian_certified",
+      "status": "PASS"
+    },
+    {
+      "actual": "True",
+      "expected": "True",
+      "group": "scope",
+      "name": "scope gibbs_kernel_interval_propagated",
+      "status": "PASS"
+    },
+    {
+      "actual": "True",
+      "expected": "True",
+      "group": "scope",
+      "name": "scope unconditional_row_interval_propagated",
+      "status": "PASS"
+    },
+    {
+      "actual": "True",
+      "expected": "True",
+      "group": "scope",
+      "name": "scope residual_interval_certified",
+      "status": "PASS"
+    },
+    {
+      "actual": "True",
+      "expected": "True",
+      "group": "scope",
+      "name": "scope finite_positive_gap_certified",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "group": "scope",
+      "name": "scope firewall residual_reuse_closed_for_original_source",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "group": "scope",
+      "name": "scope firewall cutoff_uniform_coarse_schur_closed",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "group": "scope",
+      "name": "scope firewall volume_uniform_coarse_schur_closed",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "group": "scope",
+      "name": "scope firewall phase_uniform_coarse_schur_closed",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "group": "scope",
+      "name": "scope firewall exhaustion_uniform_coarse_schur_closed",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "group": "scope",
+      "name": "scope firewall common_core_closed",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "group": "scope",
+      "name": "scope firewall kms_gns_gap_closed",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "group": "scope",
+      "name": "scope firewall continuum_closed",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "group": "scope",
+      "name": "scope firewall c6_closed",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "group": "scope",
+      "name": "scope firewall sector_a_closed",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "group": "scope",
+      "name": "scope firewall pre_a_closed",
+      "status": "PASS"
+    }
+  ],
+  "assumptions": [
+    "The hash-pinned R-419 rational oscillator fixture is unchanged and is the exact finite source at V=2,d=19.",
+    "Exchange and global Fock-parity symmetries commute with the finite source Hamiltonian, so the four declared blocks preserve its finite spectrum.",
+    "The R-433 polar-correction and Gibbs-kernel perturbation inequalities remain valid after the d=19 residual and Gram checks.",
+    "The unconditional row is the normalized one-site marginal of the finite Gibbs diagonal, and the fixed tail threshold is four.",
+    "The interval Cholesky and Rayleigh certificates use the same symmetric compressed residual enclosure.",
+    "The lower/upper/failure probes 4.5/4.6/4.7 and bracket allowance 0.3 are frozen before the formal d=19 run, following the next-step probe rule after R-436."
+  ],
+  "boundary": "One finite V=2,d=19,beta=8 unconditional one-site marginal row. The certificate is an auxiliary source-interval datapoint; all uniform, physical-empty and Yang-Mills/mass-gap flags remain false.",
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "derived": {
+    "bracket_width": "0.0195207948227978866565330133165013513466931366",
+    "conditional_row_lower": [
+      "0.00000000000401967900803873679078198107160109716642199533",
+      "0.0000000000139388600485261960821979648628925114043766724",
+      "0.00000000365588980860039053623009205605745513129692846",
+      "0.00000698331357111680704090048571102242638423595628",
+      "0.000890554659879619707369622751948527077936110876",
+      "0.0160045527360476212254540172348512319337080807",
+      "0.0748784650379154268961614200566558869789616004",
+      "0.145466239142121045799660302659764925407271468",
+      "0.174282328243247902053327254662044450842634498",
+      "0.176941746386737839708062026091900538170998546",
+      "0.174282328243247902053327254662044450842634498",
+      "0.145466239142121045799660302659764925407271468",
+      "0.0748784650379154268961614200566558869789616004",
+      "0.0160045527360476212254540172348512319337080807",
+      "0.000890554659879619707369622751948527077936110876",
+      "0.00000698331357111680704090048571102242638423595628",
+      "0.00000000365588980860039053623009205605745513129692846",
+      "0.0000000000139388600485261960821979648628925114043766724",
+      "0.00000000000401967900803873679078198107160109716642199533"
+    ],
+    "conditional_row_upper": [
+      "0.00000000000401967900803873679078215836167016256046038178",
+      "0.0000000000139388600485261960821981421529616102112885994",
+      "0.00000000365588980860039053623009223334753649805680828",
+      "0.00000698331357111680704090048571119973997665856943",
+      "0.000890554659879619707369622751948707367848608476",
+      "0.0160045527360476212254540172348514631352940672",
+      "0.0748784650379154268961614200566563164979871566",
+      "0.145466239142121045799660302659765592702012582",
+      "0.174282328243247902053327254662045215204697717",
+      "0.176941746386737839708062026091901311491341864",
+      "0.174282328243247902053327254662045215204697717",
+      "0.145466239142121045799660302659765592702012582",
+      "0.0748784650379154268961614200566563164979871566",
+      "0.0160045527360476212254540172348514631352940672",
+      "0.000890554659879619707369622751948707367848608476",
+      "0.00000698331357111680704090048571119973997665856943",
+      "0.00000000365588980860039053623009223334753649805680828",
+      "0.0000000000139388600485261960821981421529616102112885994",
+      "0.00000000000401967900803873679078215836167016256046038178"
+    ],
+    "coordinate_gram_upper": "1.63556216629051938120264334498420803889953303e-43",
+    "coordinate_residual_upper": "1.51476881245442667960191853367209491931449538e-43",
+    "finite_positive_gap_certified": true,
+    "fixed_row": {
+      "beta": "8",
+      "core_indices": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "cutoff_dimension": 19,
+      "orientation": "right",
+      "row_kind": "unconditional_one_site_marginal",
+      "tail_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "tail_threshold": "4",
+      "target_emission_ordinal": 0,
+      "target_parent_coordinate": null,
+      "volume": 2
+    },
+    "hamiltonian_dimension": 361,
+    "hamiltonian_gram_upper": "8.29609617665392593267489237339381184888682063e-42",
+    "hamiltonian_ground_energy_point": "0.397668092188423849123683878958483872522044717",
+    "hamiltonian_residual_upper": "1.04227424917154243980964855684542951653437286e-40",
+    "hamiltonian_top_energy_point": "379.738136193621695442720334023892388181698191",
+    "interval_decimal_digits": 80,
+    "kernel_error_upper": "[1.147146347977460563508766557678678162333731101680654013135404815954043311444501297025e-37, 1.147146347977460563508766557678678162333731101680654013135404815954043311444501297025e-37]",
+    "lower_probe": "4.5",
+    "maximum_residual_matrix_interval_width": "0.0000000263568403984893987213859405798723143872630983",
+    "point_decimal_digits": 50,
+    "rayleigh_interval": [
+      "4.51952079482277882931908765479724576244692466",
+      "4.51952079482279788665653301331650135134669314"
+    ],
+    "residual_reuse_closed_for_original_source": false,
+    "symmetry_block_sizes": [
+      100,
+      81,
+      90,
+      90
+    ],
+    "tail_split": {
+      "core": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "tail": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        14,
+        15,
+        16,
+        17,
+        18
+      ]
+    },
+    "total_diagonal_error_upper": "[1.147159432474790887663816178825438035998042297949672738119190352105439858620933320461e-37, 1.147159432474790887663816178825438035998042297949672738119190352105439858620933320461e-37]",
+    "upper_rayleigh_endpoint": "4.51952079482279788665653301331650135134669314"
+  },
+  "evidence_level": "T0 / EXECUTED VALIDATED FINITE ORIGINAL-SOURCE INTERVAL AT d=19; NO UNIFORM OR PHYSICAL PROMOTION",
+  "exploration_id": "EXP-001283",
+  "manifest": "strategy/pre-a-cp1-st8-q3lock-original-source-interval-d19-manifest.json",
+  "missing_assumptions": [
+    "A cutoff-, volume-, phase- and exhaustion-uniform interval estimate.",
+    "A common unbounded Q3 core, history transfer and OS/KMS/GNS reconstruction.",
+    "Residual-reuse closure against the R-422/R-426 route and a common limit-order theorem.",
+    "Physical-sector admission, an absolute physical-empty reference and any Yang-Mills interpretation."
+  ],
+  "non_claims": [
+    "No cutoff/volume/phase/exhaustion-uniform Schur or Poincare theorem.",
+    "No common core, history transfer, OS/KMS/GNS reconstruction, sector gap or continuum limit.",
+    "No physical-empty energy sign, Reading-H stationarity or symmetry-projected transverse stability.",
+    "No C6, Sector-A, Pre-A, Yang-Mills or mass-gap conclusion."
+  ],
+  "result_id": "R-438",
+  "run_kind": "primary",
+  "schema": "tect/pre-a-r438-primary/1.0",
+  "source_hashes": {
+    "manifest": "19140b5edbcc8a72810ae62bb9219a5130e8566c635ec45e36ecccb8c2cbbf08",
+    "primary": "8b5ef7d0c0796ae5603257b4be84a20e029707c118099505eb9367bd8d6a05cb",
+    "r419_manifest": "d5e2139c1a8af9b11f13098a8aaafabf66560bf08f011afb18900f50ae7e2881",
+    "r433_script": "b18599207fcc33467b048aa7a2501942fe9b4a524c8adc7e5707b644c6b93ee6"
+  },
+  "verdict": "ORIGINAL_SOURCE_INTERVAL_CERTIFIED"
+}

@@ -1,0 +1,97 @@
+{
+  "schema": "tect/pre-a-cp1-st8-q3lock-fixed-support-cross-cutoff-boundary/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-FIXED-SUPPORT-CROSS-CUTOFF-BOUNDARY-v0",
+  "result_id": "R-437",
+  "title": "Fixed threshold-four core crossing from d=17 to d=18",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001282",
+  "claim_bearing": false,
+  "status": "FIXED_SUPPORT_ROUTE_LOCAL_BOUNDARY",
+  "parent_results": ["R-435", "R-436", "R-419"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY",
+    "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+  ],
+  "question": "Does the threshold-four fixed core [4..12] used at d=17 remain the same under the separately certified d=18 unconditional row with the same V, beta, orientation and emission rule?",
+  "comparison_contract": {
+    "volume": 2,
+    "beta": "8",
+    "orientation": "right",
+    "row_kind": "unconditional_one_site_marginal",
+    "emission_ordinal": 0,
+    "tail_threshold": "4",
+    "crossing_index": 4,
+    "d17_result": "R-435",
+    "d18_result": "R-436",
+    "fixed_support_source": "R-435 core_indices",
+    "fixed_support_rule": "Reuse the d=17 threshold-four core without adding or removing indices."
+  },
+  "expected_relation": {
+    "d17_index_status": "core",
+    "d18_index_status": "tail",
+    "d17_phi_upper_below_threshold": true,
+    "d18_phi_lower_above_threshold": true,
+    "fixed_support_uniformity_closed": false
+  },
+  "scope": {
+    "finite_cross_cutoff_threshold_crossing_certified": true,
+    "same_row_rule_identity_checked": true,
+    "fixed_support_uniformity_closed": false,
+    "increasing_core_tail_modulus_closed": false,
+    "cutoff_uniform_coarse_schur_closed": false,
+    "volume_uniform_coarse_schur_closed": false,
+    "phase_uniform_coarse_schur_closed": false,
+    "exhaustion_uniform_coarse_schur_closed": false,
+    "common_core_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "assumptions": [
+    "R-435 and R-436 are the active hash-pinned interval authorities for the same V=2, beta=8, right-oriented unconditional row rule.",
+    "The threshold-four classification is read from each authority's directed interval threshold assertions, not from a rounded point estimate.",
+    "A crossing of one index falsifies only reuse of the fixed d=17 support; it does not falsify an increasing-core construction or a different uniform theorem.",
+    "The comparison is finite and claim-nonbearing, and cannot be promoted to a physical or continuum conclusion."
+  ],
+  "missing_assumptions": [
+    "An increasing-core rule specified before all cutoff evaluations.",
+    "A cutoff-, volume-, phase- and exhaustion-uniform tail modulus or full-sector completeness theorem.",
+    "A common unbounded Q3 core, history transfer and OS/KMS/GNS reconstruction.",
+    "A physical-sector reference and any Yang-Mills interpretation."
+  ],
+  "stop_conditions": [
+    "If either parent interval authority is missing or its row rule differs, classify the comparison as inconclusive rather than a crossing.",
+    "If the d=17 upper endpoint is not below four or the d=18 lower endpoint is not above four, do not report a fixed-support failure.",
+    "Never reinterpret this finite crossing as a no-go theorem for all increasing-core or full-sector routes."
+  ],
+  "evidence_level": "T0 / EXECUTED FINITE CROSS-CUTOFF SUPPORT AUDIT; FIXED-SUPPORT ROUTE-LOCAL BOUNDARY ONLY",
+  "non_claims": [
+    "No theorem that every core rule fails uniformly.",
+    "No increasing-core or tail-modulus theorem.",
+    "No common Q3 core, GNS gap, continuum or physical-sector conclusion.",
+    "No C6, Sector-A, Pre-A, Yang-Mills or mass-gap conclusion."
+  ],
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R437.lean",
+    "theorem_markers": ["threshold_four_crossing", "same_row_rule", "finite_support_scope"],
+    "command": "lake env lean Tect/R437.lean",
+    "role": "Lean checks the rational threshold ordering and finite route-local boundary markers; decimal interval extraction remains executable Python evidence."
+  },
+  "artifacts": {
+    "primary_script": "codes/foundations/pre_a_cp1_st8_q3lock_fixed_support_cross_cutoff_boundary.py",
+    "independent_script": "codes/foundations/pre_a_cp1_st8_q3lock_fixed_support_cross_cutoff_boundary_independent.py",
+    "hostile_script": "codes/foundations/pre_a_cp1_st8_q3lock_fixed_support_cross_cutoff_boundary_hostile.py",
+    "integrated_verifier": "codes/foundations/pre_a_cp1_st8_q3lock_fixed_support_cross_cutoff_boundary_verify.py",
+    "lean": "verification/lean/Tect/R437.lean",
+    "certificate": "strategy/pre-a-cp1-st8-q3lock-fixed-support-cross-cutoff-boundary-certificate-260830.md",
+    "exploration": "strategy/pre-a-cp1-st8-q3lock-fixed-support-cross-cutoff-boundary-exploration.json"
+  },
+  "boundary": "R-437 records one certified d=17 to d=18 threshold crossing for index 4. It rejects only unchanged fixed-support reuse and requires an increasing-core tail modulus or another complete route; all uniform, common-core, physical and Yang-Mills flags remain false."
+}

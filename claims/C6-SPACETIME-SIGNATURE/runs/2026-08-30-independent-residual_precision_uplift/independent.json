@@ -1,0 +1,124 @@
+{
+  "assertion_count": 7,
+  "assertions": [
+    {
+      "actual": [
+        "R-429",
+        "EXP-001274",
+        false
+      ],
+      "expected": "R-429/EXP-001274/false",
+      "name": "manifest identity",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        2,
+        16,
+        "8",
+        "right",
+        7
+      ],
+      "expected": "V2/d16/beta8/right/row7",
+      "name": "fixed row",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "5.622948645880553E-13",
+        "0.2864501401805248",
+        "1.0000000000000000336548518473"
+      ],
+      "expected": "positive normalized",
+      "name": "positive Decimal graph",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        16,
+        14
+      ],
+      "expected": "16x14",
+      "name": "reversed basis dimension",
+      "status": "PASS"
+    },
+    {
+      "actual": "3.16052663E-76",
+      "expected": "<=1e-60",
+      "name": "reversed basis orthonormal",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "6.1032631242299038232713016160056604899400417914619836952654675732386984596526376E-61",
+        391
+      ],
+      "expected": "offdiag below tolerance",
+      "name": "Jacobi converged",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0000025686218286117480294524057207054685060592567614092712405156165638803320979",
+      "expected": ">5E-7",
+      "name": "rounded-input mismatch",
+      "status": "PASS"
+    }
+  ],
+  "assumptions": [
+    "The R-428 reconstruction is the declared fixed finite source snapshot for this downstream precision audit.",
+    "Converting each finite float to its canonical decimal string and using Decimal arithmetic isolates downstream eigensolver error but does not recover uncomputed upstream digits.",
+    "The blockwise weighted-zero-mean constraints define one residual subspace for the fixed positive graph.",
+    "The 5e-7 R-426 comparison tolerance and fixed row are immutable.",
+    "The Decimal Jacobi residual is treated as numerically converged only at the rounded-input level; no interval enclosure is asserted."
+  ],
+  "boundary": "R-429 can certify a basis-invariant residual value only for the decimalized R-428 finite graph snapshot. Any mismatch with R-422 therefore identifies a rounded-input algebraic boundary, while the original source-rounding enclosure remains missing.",
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "derived": {
+    "basis_gap_agreement_not_tested": true,
+    "fixed_row": {
+      "beta": "8",
+      "conditional_row_index": 7,
+      "core_size": 7,
+      "cutoff_dimension": 16,
+      "orientation": "right",
+      "tail_size": 9,
+      "volume": 2
+    },
+    "invariant_gap_decimal": "5.3631875357855276117480294524057207054685060592567614092712405156165638803320979",
+    "jacobi_final_offdiagonal": "6.1032631242299038232713016160056604899400417914619836952654675732386984596526376E-61",
+    "jacobi_sweeps": 391,
+    "mismatch_r422_decimal": "0.0000025686218286117480294524057207054685060592567614092712405156165638803320979",
+    "r426_route_failure_preserved": true,
+    "residual_reuse_closed": false,
+    "rounded_input_mismatch_reproduced": true
+  },
+  "evidence_level": "T0 / EXECUTED 80-DIGIT DECIMAL DOWNSTREAM PRECISION UPLIFT ON THE FIXED R-428 GRAPH SNAPSHOT; upstream source uncertainty remains open",
+  "exploration_id": "EXP-001274",
+  "independence_scope": "reversed-anchor Decimal residual basis and independent Jacobi implementation without importing the R-429 primary module",
+  "manifest": "strategy/pre-a-cp1-st8-q3lock-residual-precision-uplift-manifest.json",
+  "missing_assumptions": [
+    "Arbitrary-precision or interval-certified reconstruction of the Gibbs state, coordinate eigenbasis and graph weights from the original Hamiltonian.",
+    "A rigorous enclosure that propagates upstream input uncertainty through the conditional row and residual operator.",
+    "A basis-independent exact or rigorously bounded residual-reuse value for the original unrounded model.",
+    "A common unbounded Q3 Hamiltonian core, regulator/volume-uniform estimate and history/OS/KMS/GNS/physical-sector transfer."
+  ],
+  "non_claims": [
+    "No exact certification of the original Gibbs/coordinate inputs.",
+    "No repair or closure of the R-426 residual-reuse route for the original unrounded model.",
+    "No cutoff-, volume-, phase- or exhaustion-uniform Schur/residual bound.",
+    "No common core, history transfer, OS/KMS/GNS reconstruction, sector gap or continuum limit.",
+    "No C6, Sector-A, Pre-A, Yang-Mills or mass-gap conclusion."
+  ],
+  "result_id": "R-429",
+  "run_kind": "independent",
+  "schema": "tect/pre-a-r429-independent/1.0",
+  "source_hashes": {
+    "independent": "d8ba113abb587bcb0fd2f6c81c3f34e89629fe901d550bad1c3cc3312c58994b",
+    "manifest": "24baa0690b89f262dded8fb53118d542de58a509f610043a15edba704cc2ed79",
+    "r416_manifest": "86beca8ab0c64e7173d34ddd5acecd78b95ccaa101287571f57cb50942f91db0",
+    "r419_manifest": "d5e2139c1a8af9b11f13098a8aaafabf66560bf08f011afb18900f50ae7e2881",
+    "r426_manifest": "0292aec6ec398cf7358e4e618f7623880543b9374a1501d3d3fa362db29901b0",
+    "r428_manifest": "cf022b25e8f1123f881bdbd7bbe5224fa6de131f0b089c6b08e337507a85c1ee"
+  },
+  "verdict": "PASS"
+}

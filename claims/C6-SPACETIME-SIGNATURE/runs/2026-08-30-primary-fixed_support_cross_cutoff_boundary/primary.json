@@ -1,0 +1,186 @@
+{
+  "assertion_count": 14,
+  "assertions": [
+    {
+      "actual": "['R-437', 'EXP-001282', False]",
+      "expected": "R-437/EXP-001282/false",
+      "group": "provenance",
+      "name": "manifest identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "['R-435', 'R-436', 'R-435', 'R-436']",
+      "expected": "R-435/R-436 manifests and runs",
+      "group": "provenance",
+      "name": "parent identities",
+      "status": "PASS"
+    },
+    {
+      "actual": "['ORIGINAL_SOURCE_INTERVAL_CERTIFIED', 'ORIGINAL_SOURCE_INTERVAL_CERTIFIED']",
+      "expected": "both certified",
+      "group": "parent",
+      "name": "parent interval verdicts",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'volume': [2, 2], 'beta': ['8', '8'], 'orientation': ['right', 'right'], 'row_kind': ['unconditional_one_site_marginal', 'unconditional_one_site_marginal'], 'target_emission_ordinal': [0, 0], 'tail_threshold': ['4', '4']}",
+      "expected": "common V/beta/orientation/row/ordinal/threshold",
+      "group": "contract",
+      "name": "same row rule",
+      "status": "PASS"
+    },
+    {
+      "actual": "[17, 18]",
+      "expected": "two cutoff dimensions",
+      "group": "contract",
+      "name": "distinct cutoffs",
+      "status": "PASS"
+    },
+    {
+      "actual": "[4, 5, 6, 7, 8, 9, 10, 11, 12]",
+      "expected": "R-435 core containing crossing index",
+      "group": "support",
+      "name": "fixed support source",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'volume': 2, 'cutoff_dimension': 18, 'beta': '8', 'orientation': 'right', 'row_kind': 'unconditional_one_site_marginal', 'target_emission_ordinal': 0, 'target_parent_coordinate': None, 'tail_threshold': '4', 'core_indices': [5, 6, 7, 8, 9, 10, 11, 12], 'tail_indices': [0, 1, 2, 3, 4, 13, 14, 15, 16, 17]}",
+      "expected": "crossing index in d18 tail",
+      "group": "support",
+      "name": "d18 support changes",
+      "status": "PASS"
+    },
+    {
+      "actual": "['2.928582137842666842328379942374782260821356965438242614347658772652559683976254399565', '2.928582137842666842328379942374793763899593365995396958706748597526637672297939680216']",
+      "expected": "upper < 4",
+      "group": "interval",
+      "name": "d17 interval below threshold",
+      "status": "PASS"
+    },
+    {
+      "actual": "['4.016145184038902632538356548209393899600440870692488949484841237941696776136410376441', '4.016145184038902632538356548209432108173973591163820303164228876431706984404931606871']",
+      "expected": "lower > 4",
+      "group": "interval",
+      "name": "d18 interval above threshold",
+      "status": "PASS"
+    },
+    {
+      "actual": "['2.928582137842666842328379942374793763899593365995396958706748597526637672297939680216', '4.016145184038902632538356548209393899600440870692488949484841237941696776136410376441']",
+      "expected": "d17 upper < threshold < d18 lower",
+      "group": "interval",
+      "name": "strict crossing",
+      "status": "PASS"
+    },
+    {
+      "actual": "[{'core': [4, 5, 6, 7, 8, 9, 10, 11, 12], 'tail': [0, 1, 2, 3, 13, 14, 15, 16]}, {'core': [5, 6, 7, 8, 9, 10, 11, 12], 'tail': [0, 1, 2, 3, 4, 13, 14, 15, 16, 17]}]",
+      "expected": "manifest splits",
+      "group": "support",
+      "name": "parent derived splits",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "group": "scope",
+      "name": "fixed-support verdict",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "False",
+      "group": "scope",
+      "name": "increasing-core remains open",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'finite_cross_cutoff_threshold_crossing_certified': True, 'same_row_rule_identity_checked': True, 'fixed_support_uniformity_closed': False, 'increasing_core_tail_modulus_closed': False, 'cutoff_uniform_coarse_schur_closed': False, 'volume_uniform_coarse_schur_closed': False, 'phase_uniform_coarse_schur_closed': False, 'exhaustion_uniform_coarse_schur_closed': False, 'common_core_closed': False, 'kms_gns_gap_closed': False, 'continuum_closed': False, 'c6_closed': False, 'sector_a_closed': False, 'pre_a_closed': False, 'no_new_negative_result': True, 'no_tier_change': True, 'no_pdf': True}",
+      "expected": "all promotion flags false",
+      "group": "scope",
+      "name": "promotion firewall",
+      "status": "PASS"
+    }
+  ],
+  "assumptions": [
+    "R-435 and R-436 are the active hash-pinned interval authorities for the same V=2, beta=8, right-oriented unconditional row rule.",
+    "The threshold-four classification is read from each authority's directed interval threshold assertions, not from a rounded point estimate.",
+    "A crossing of one index falsifies only reuse of the fixed d=17 support; it does not falsify an increasing-core construction or a different uniform theorem.",
+    "The comparison is finite and claim-nonbearing, and cannot be promoted to a physical or continuum conclusion."
+  ],
+  "boundary": "R-437 records one certified d=17 to d=18 threshold crossing for index 4. It rejects only unchanged fixed-support reuse and requires an increasing-core tail modulus or another complete route; all uniform, common-core, physical and Yang-Mills flags remain false.",
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "derived": {
+    "comparison": {
+      "beta": "8",
+      "crossing_index": 4,
+      "d17_result": "R-435",
+      "d18_result": "R-436",
+      "emission_ordinal": 0,
+      "fixed_support_rule": "Reuse the d=17 threshold-four core without adding or removing indices.",
+      "fixed_support_source": "R-435 core_indices",
+      "orientation": "right",
+      "row_kind": "unconditional_one_site_marginal",
+      "tail_threshold": "4",
+      "volume": 2
+    },
+    "d17_index_interval": [
+      "2.928582137842666842328379942374782260821356965438242614347658772652559683976254399565",
+      "2.928582137842666842328379942374793763899593365995396958706748597526637672297939680216"
+    ],
+    "d17_status": "core",
+    "d18_index_interval": [
+      "4.016145184038902632538356548209393899600440870692488949484841237941696776136410376441",
+      "4.016145184038902632538356548209432108173973591163820303164228876431706984404931606871"
+    ],
+    "d18_status": "tail",
+    "fixed_support_uniformity_closed": false,
+    "increasing_core_tail_modulus_closed": false,
+    "parent_run_hashes": {
+      "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-primary-original_source_interval_d17/primary.json": "f65f1eaea3aa9458f9a6a9abaec2515471b902de8c8451bca59c7292f9750334",
+      "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-primary-original_source_interval_d18/primary.json": "2aff2ff627e938c90fd814f86b12aba9daa15c57a2197dfa8f41eba525c325aa"
+    },
+    "threshold": "4",
+    "threshold_assertions": {
+      "d17": {
+        "actual": "[2.928582137842666842328379942374782260821356965438242614347658772652559683976254399565, 2.928582137842666842328379942374793763899593365995396958706748597526637672297939680216]",
+        "expected": "<4",
+        "group": "row threshold",
+        "name": "core threshold 4",
+        "status": "PASS"
+      },
+      "d18": {
+        "actual": "[4.016145184038902632538356548209393899600440870692488949484841237941696776136410376441, 4.016145184038902632538356548209432108173973591163820303164228876431706984404931606871]",
+        "expected": ">4",
+        "group": "row threshold",
+        "name": "tail threshold 4",
+        "status": "PASS"
+      }
+    }
+  },
+  "evidence_level": "T0 / EXECUTED FINITE CROSS-CUTOFF SUPPORT AUDIT; FIXED-SUPPORT ROUTE-LOCAL BOUNDARY ONLY",
+  "exploration_id": "EXP-001282",
+  "manifest": "strategy/pre-a-cp1-st8-q3lock-fixed-support-cross-cutoff-boundary-manifest.json",
+  "missing_assumptions": [
+    "An increasing-core rule specified before all cutoff evaluations.",
+    "A cutoff-, volume-, phase- and exhaustion-uniform tail modulus or full-sector completeness theorem.",
+    "A common unbounded Q3 core, history transfer and OS/KMS/GNS reconstruction.",
+    "A physical-sector reference and any Yang-Mills interpretation."
+  ],
+  "non_claims": [
+    "No theorem that every core rule fails uniformly.",
+    "No increasing-core or tail-modulus theorem.",
+    "No common Q3 core, GNS gap, continuum or physical-sector conclusion.",
+    "No C6, Sector-A, Pre-A, Yang-Mills or mass-gap conclusion."
+  ],
+  "result_id": "R-437",
+  "run_kind": "primary",
+  "schema": "tect/pre-a-r437-primary/1.0",
+  "source_hashes": {
+    "manifest": "355ac4e342da2edd3e1294e3c7e88798bda698d758ab40aac237a4cd928e9350",
+    "r435_manifest": "18804741ebb52aaef8b56968e520383900c4ac3b2d064b57b72c738cb32f29a8",
+    "r435_run": "f65f1eaea3aa9458f9a6a9abaec2515471b902de8c8451bca59c7292f9750334",
+    "r436_manifest": "494af4d86713b0a0354d1e7ef11441a16a0c72b556d3c1fd922fefc1dace38fa",
+    "r436_run": "2aff2ff627e938c90fd814f86b12aba9daa15c57a2197dfa8f41eba525c325aa",
+    "script": "a0eb678982f83d029a00a1a1b96c58c51d59b469faaca62fb77013f2a378cbf5"
+  },
+  "verdict": "FIXED_SUPPORT_ROUTE_LOCAL_BOUNDARY"
+}

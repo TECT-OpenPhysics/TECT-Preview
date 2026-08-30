@@ -1,0 +1,61 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "schema_version": "1.0",
+  "id": "EXP-001274",
+  "task_id": "T-054",
+  "title": "Decimal precision uplift confirms the rounded-input residual boundary",
+  "question": "After the R-426 row is reconstructed from the declared double-precision graph snapshot, does an arbitrary-precision basis-invariant residual eigensolve remove the 5e-7 residual-reuse mismatch?",
+  "method": [
+    "Reuse the hash-pinned R-428/R-426 fixed row V=2, d=16, beta=8, right orientation, row 7, core/tail 7/9 without changing the comparison tolerance.",
+    "Convert the R-428 graph weights and conductances to 80-digit Decimal values and construct two differently ordered weighted blockwise zero-mean residual bases by modified Gram-Schmidt.",
+    "Solve both 14-dimensional residual compressions with a deterministic symmetric Jacobi iteration stopped at 1e-60 and compare their first eigenvalues and the fixed R-422/R-426 references.",
+    "Run an independent non-importing reversed-anchor implementation, hostile mutation controls, the integrated verifier and Lean R429 scalar cross-check."
+  ],
+  "finding": "The primary Decimal lane passes 14/14 assertions and converges in 388 and 391 Jacobi sweeps. The two basis orderings agree within 4e-79 at the first residual eigenvalue. The invariant gap is 5.3631875357855276117480294524057207054685060592567614..., its separation from the R-422 reference is 2.5686218286117480294524057207054685e-06, and its separation from the R-426 direct reference is 8.1426228238825197054759427929453e-07; both exceed the unchanged 5e-7 comparison tolerance. The independent lane passes 7/7 with the same gap and mismatch, hostile 10/10, integrated 15/15 and Lean R429 compile.",
+  "decision_reason": "The residual-reuse mismatch survives a basis-invariant 80-digit downstream eigensolve on the fixed decimalized graph. This rules out the tested downstream basis/roundoff explanation for that snapshot, but upstream Gibbs/coordinate/graph rounding is not enclosed, so the original route remains a finite boundary rather than a repaired theorem.",
+  "decision_scope": "One finite volume-two high-cutoff row with decimalized R-428 graph input; no upstream source enclosure, tolerance change, tier change or physical promotion.",
+  "verdict": "inconclusive",
+  "boundary": "R-429 is a T0 claim-nonbearing downstream precision result. It does not certify the original unrounded Hamiltonian inputs, establish a uniform residual bound, close a common core or limit, or imply C6, Sector-A, Pre-A, Yang--Mills or mass-gap conclusions.",
+  "next_action": "Recompute the original Hamiltonian Gibbs state, coordinate eigenbasis and projected graph with arbitrary precision or interval arithmetic, propagate enclosures to this same residual row, and retain R-426 if the certified interval still misses the fixed tolerance.",
+  "evidence_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-residual-precision-uplift-manifest.json#precision_contract",
+    "strategy/pre-a-cp1-st8-q3lock-residual-precision-uplift-certificate-260830.md#Executed evidence",
+    "codes/foundations/pre_a_cp1_st8_q3lock_residual_precision_uplift.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_residual_precision_uplift_independent.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_residual_precision_uplift_hostile.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_residual_precision_uplift_verify.py#main",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-primary-residual_precision_uplift/primary.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-independent-residual_precision_uplift/independent.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-hostile-residual_precision_uplift/hostile.json#controls",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-integrated-residual_precision_uplift/integrated.json#derived",
+    "verification/lean/Tect/R429.lean#decimal_gap_exceeds_tolerance",
+    "verification/lean/registry.json#R429"
+  ],
+  "formal_refs": {
+    "results": ["R-429"],
+    "negatives": [],
+    "events": ["20260830-r-429-decimal-residual-precision-uplift-boundar"]
+  },
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY",
+    "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+  ],
+  "adversarial_review": [
+    {"axis": "upstream source rounding", "check": "Decimal arithmetic begins from the R-428 double graph snapshot and therefore does not enclose the original Gibbs or coordinate eigenbasis inputs.", "disposition": "UPHELD-OPEN"},
+    {"axis": "basis invariance", "check": "Reversed block anchors and independent Jacobi ordering agree within 4e-79, while the mismatch from R-422 remains above 5e-7.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "tolerance", "check": "The R-426 comparison tolerance remains exactly 5e-7; 1e-60 is only the Decimal Jacobi stopping threshold and 1e-7 only the parent reconstruction threshold.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "finite-to-uniform", "check": "The rounded-input result is not extrapolated to cutoff, volume, phase or exhaustion uniformity.", "disposition": "UPHELD-OPEN"},
+    {"axis": "physical promotion", "check": "No Hamiltonian-to-OS/KMS/GNS, physical-sector, Yang--Mills or mass-gap conclusion is inferred.", "disposition": "UPHELD-OPEN"}
+  ],
+  "no_overclaim": "R-429 separates downstream eigensolver conditioning from a persistent mismatch on one rounded finite input. It does not certify the original source or repair residual reuse.",
+  "provenance": "contemporaneous",
+  "recorded_at": "2026-08-29T16:45:00Z",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-08-30",
+  "related": [
+    {"id": "EXP-001273", "relation": "continues"},
+    {"id": "EXP-001271", "relation": "refines-boundary"}
+  ]
+}

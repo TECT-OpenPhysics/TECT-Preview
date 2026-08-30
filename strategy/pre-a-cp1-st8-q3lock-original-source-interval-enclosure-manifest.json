@@ -1,0 +1,190 @@
+{
+  "schema": "tect/pre-a-cp1-st8-q3lock-original-source-interval-enclosure/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-ORIGINAL-SOURCE-INTERVAL-ENCLOSURE-v0",
+  "result_id": "R-433",
+  "title": "Validated original-source enclosure at the corrected conditional-row ordinal",
+  "task_id": "T-054",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "exploration_id": "EXP-001278",
+  "claim_bearing": false,
+  "status": "ORIGINAL_SOURCE_INTERVAL_CERTIFIED",
+  "parent_results": [
+    "R-432",
+    "R-431",
+    "R-430",
+    "R-426"
+  ],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY",
+    "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+  ],
+  "question": "Can the original finite oscillator/Hamiltonian source be enclosed with a validated spectral residual certificate and propagated through Gibbs normalization, the corrected emission ordinal 7 row, the projected momentum graph and the blockwise residual eigenvalue?",
+  "new_perspective": {
+    "principle": "Use exact source radicals in directed interval arithmetic and exploit exchange/parity symmetry to compute high-precision block eigenvectors; bound the distance to an exact orthogonal basis from interval residual and Gram defects, then propagate the resulting Gibbs-kernel operator bound to the corrected row.",
+    "route": [
+      "Build the declared V=2, d=16 oscillator and Hamiltonian source from rational fixture parameters as sparse real algebraic expressions; enclose every radical and arithmetic operation with mpmath.iv.",
+      "Split the source into the four commuting exchange/parity sectors of dimensions 72, 56, 64 and 64, diagonalize each block at 50 decimal digits, and merge the block eigenpairs without using a full 256-dimensional high-precision eigensolve.",
+      "Use directed interval residual and orthogonality bounds plus the polar correction inequality to enclose the source Gibbs kernel exp(-beta(H-L I)); independently enclose the 16-dimensional coordinate oscillator basis and momentum matrix.",
+      "Propagate those bounds through the coordinate diagonal, the parent-6 conditional row (emission ordinal 7), the fixed core/tail split, and an interval residual compression; certify a lower probe by interval Cholesky and an upper probe by an interval Rayleigh quotient.",
+      "Repeat with a non-importing independent implementation and hostile row/index/source-promotion mutations; keep all physical and continuum promotion flags false."
+    ],
+    "qft_bridge": "This can certify one finite original-source residual interval, but it does not provide a common unbounded Q3 core, OS/KMS/GNS reconstruction, a physical sector, Yang-Mills dynamics or a mass gap."
+  },
+  "source_contract": {
+    "volume": 2,
+    "cutoff_dimension": 16,
+    "beta": "8",
+    "orientation": "right",
+    "target_emission_ordinal": 7,
+    "target_parent_coordinate": 6,
+    "tail_threshold": "4",
+    "core_indices": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "tail_indices": [
+      0,
+      1,
+      2,
+      3,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "comparison_tolerance": "5e-7",
+    "r422_reference": "5.363184967163699",
+    "r426_direct_reference": "5.36318835004781"
+  },
+  "interval_contract": {
+    "arithmetic": "mpmath.iv directed intervals for source expressions and final probes, with midpoint/radius propagation for the 256-column residual and Gibbs-kernel tables",
+    "point_decimal_digits": 50,
+    "source_decimal_digits_in_intervals": 45,
+    "interval_decimal_digits": 80,
+    "polar_delta_factor": "2",
+    "shift_safety": "1e-40",
+    "lower_probe": "5.3631875",
+    "upper_probe": "5.3631876",
+    "cholesky_failure_probe": "5.3631877",
+    "maximum_matrix_interval_width": "1e-8",
+    "maximum_bracket_width": "3e-7",
+    "row_positive_floor": "1e-30",
+    "conditioning_note": "The finite residual-basis interval dependency is bounded by the explicit 1e-8 matrix-width threshold; this is a finite conditioning bound, not a uniform estimate."
+  },
+  "expected_outcomes": {
+    "target_gap_interval_below_r426_threshold": "5.36318785004781",
+    "target_gap_interval_above_r422_threshold": "5.363185467163699",
+    "source_interval_certified": true,
+    "residual_reuse_closed_for_original_source": false
+  },
+  "upstream_authority": {
+    "r432_manifest": "strategy/pre-a-cp1-st8-q3lock-fixed-row-ordinal-audit-manifest.json",
+    "r432_manifest_sha256": "e4300301200d92334359f3dbab031497da73576b296a5e858252d5e35708357a",
+    "r430_manifest": "strategy/pre-a-cp1-st8-q3lock-source-point-precision-audit-manifest.json",
+    "r430_manifest_sha256": "d94f4c9e871586d01eb9346586d6b699cd6732459c0f1113ccfacf42801bc15e",
+    "r431_manifest": "strategy/pre-a-cp1-st8-q3lock-rounded-snapshot-interval-enclosure-manifest.json",
+    "r431_manifest_sha256": "e6b2493b553026549a02d6759b71c072150b0d91f69f78f155776b5abde600ad",
+    "r426_manifest": "strategy/pre-a-cp1-st8-q3lock-high-cutoff-schur-stress-manifest.json",
+    "r426_manifest_sha256": "0292aec6ec398cf7358e4e618f7623880543b9374a1501d3d3fa362db29901b0",
+    "r419_manifest": "strategy/pre-a-cp1-st8-q3lock-growing-volume-lyapunov-core-tail-stress-manifest.json",
+    "r419_manifest_sha256": "d5e2139c1a8af9b11f13098a8aaafabf66560bf08f011afb18900f50ae7e2881"
+  },
+  "scope": {
+    "original_source_interval_certified": true,
+    "exact_original_hamiltonian_certified": true,
+    "gibbs_kernel_interval_propagated": true,
+    "corrected_row_interval_propagated": true,
+    "residual_interval_certified": true,
+    "r422_separation_certified": true,
+    "r426_direct_separation_certified": true,
+    "residual_reuse_closed_for_original_source": false,
+    "cutoff_uniform_coarse_schur_closed": false,
+    "volume_uniform_coarse_schur_closed": false,
+    "phase_uniform_coarse_schur_closed": false,
+    "exhaustion_uniform_coarse_schur_closed": false,
+    "global_poincare_closed": false,
+    "common_core_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "assumptions": [
+    "The R-419 finite fixture is the exact declared source for the V=2, d=16 calculation and the R-432 emission ordinal contract is unchanged.",
+    "Exchange and global Fock-parity symmetries commute with the finite source Hamiltonian, so the four displayed block reductions preserve the spectrum.",
+    "The polar correction bound used in the certificate is applied only after directed interval residual and Gram-defect bounds are below one half.",
+    "For a positive self-adjoint finite matrix, exp(-beta X) is beta-Lipschitz in operator norm on the shifted positive cone; the coordinate-vector perturbation bound uses ||K||<=1.",
+    "The interval Cholesky lower certificate and interval Rayleigh upper certificate are applied to the same symmetric compressed residual enclosure."
+  ],
+  "missing_assumptions": [
+    "A cutoff-, volume-, phase- and exhaustion-uniform version of the finite source enclosure.",
+    "A common unbounded Q3 core and a uniform residual or Schur estimate beyond this one finite source.",
+    "History transfer, OS/KMS/GNS reconstruction, physical-sector admission and continuum control.",
+    "A same-owner normalized physical-empty branch E and the full Reading-H functional required for the three physical-empty tests."
+  ],
+  "stop_conditions": [
+    "If any symmetry block fails to reproduce the source residual or interval Gram bound, classify the source enclosure as inconclusive and retain R-432 without promotion.",
+    "If the propagated row interval crosses the tail threshold, a fixed probe, or either reference separation threshold, report the exact interval and do not call the source route certified.",
+    "If any hostile mutation is accepted, fail the integrated verifier rather than relaxing the row, tolerance, source or scope contract.",
+    "Never promote one finite interval certificate to a physical, Yang-Mills, mass-gap, common-core or continuum theorem."
+  ],
+  "evidence_level": "T0 / EXECUTED VALIDATED FINITE ORIGINAL-SOURCE INTERVAL ENCLOSURE; NO UNIFORM OR PHYSICAL PROMOTION",
+  "non_claims": [
+    "No physical-empty energy sign, Reading-H full stationarity or symmetry-projected transverse stability result.",
+    "No cutoff-, volume-, phase- or exhaustion-uniform Schur, Poincare or residual theorem.",
+    "No common core, history transfer, OS/KMS/GNS reconstruction, sector gap or continuum limit.",
+    "No C6, Sector-A, Pre-A, Yang-Mills or mass-gap conclusion."
+  ],
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R433.lean",
+    "theorem_markers": [
+      "source_block_dimensions",
+      "polar_residual_bound",
+      "corrected_row_interval_separation",
+      "finite_source_scope"
+    ],
+    "command": "lake env lean Tect/R433.lean",
+    "role": "Lean checks the symmetry block arithmetic, polar-bound scalar inequalities, fixed-row threshold separation and explicit finite/no-promotion scope; interval matrix operations remain executable Python."
+  },
+  "artifacts": {
+    "primary_script": "codes/foundations/pre_a_cp1_st8_q3lock_original_source_interval_enclosure.py",
+    "independent_script": "codes/foundations/pre_a_cp1_st8_q3lock_original_source_interval_enclosure_independent.py",
+    "hostile_script": "codes/foundations/pre_a_cp1_st8_q3lock_original_source_interval_enclosure_hostile.py",
+    "integrated_verifier": "codes/foundations/pre_a_cp1_st8_q3lock_original_source_interval_enclosure_verify.py",
+    "lean": "verification/lean/Tect/R433.lean",
+    "certificate": "strategy/pre-a-cp1-st8-q3lock-original-source-interval-enclosure-certificate-260830.md",
+    "exploration": "strategy/pre-a-cp1-st8-q3lock-original-source-interval-enclosure-exploration.json",
+    "primary_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-primary-original_source_interval_enclosure/primary.json",
+    "independent_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-independent-original_source_interval_enclosure/independent.json",
+    "hostile_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-hostile-original_source_interval_enclosure/hostile.json",
+    "integrated_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-integrated-original_source_interval_enclosure/integrated.json"
+  },
+  "formal_integration": {
+    "event_ordinal": 774,
+    "event_id": "20260830-r-433-validated-original-source-interval-enclos",
+    "event_title": "R-433 validated original-source interval enclosure",
+    "event_claim_ids": [
+      "C6-SPACETIME-SIGNATURE",
+      "EXP-001278",
+      "R-433"
+    ],
+    "lean": "R433 PASS; finite scalar arithmetic cross-check only",
+    "new_negative": false,
+    "tier_change": false,
+    "pdf": false
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "assertion_count": 8,
+  "assertions": [
+    {
+      "actual": "{'original_source_interval_certified': True, 'exact_original_hamiltonian_certified': True, 'gibbs_kernel_interval_propagated': True, 'unconditional_row_interval_propagated': True, 'residual_interval_certified': True, 'finite_positive_gap_certified': True, 'residual_reuse_closed_for_original_source': False, 'cutoff_uniform_coarse_schur_closed': False, 'volume_uniform_coarse_schur_closed': False, 'phase_uniform_coarse_schur_closed': False, 'exhaustion_uniform_coarse_schur_closed': False, 'common_core_closed': False, 'hamiltonian_os_identification_closed': False, 'kms_gns_gap_closed': False, 'continuum_closed': False, 'c6_closed': False, 'sector_a_closed': False, 'pre_a_closed': False, 'no_new_negative_result': True, 'no_tier_change': True, 'no_pdf': True}",
+      "expected": "claim-nonbearing finite scope",
+      "name": "baseline finite scope",
+      "status": "PASS"
+    },
+    {
+      "actual": "zero_alias",
+      "expected": "mutation rejected; baseline=unconditional_one_site_marginal",
+      "name": "zero/P1 row alias",
+      "status": "PASS"
+    },
+    {
+      "actual": "8",
+      "expected": "mutation rejected; baseline=4",
+      "name": "tail threshold substitution",
+      "status": "PASS"
+    },
+    {
+      "actual": "5",
+      "expected": "mutation rejected; baseline=4.6",
+      "name": "probe relaxation",
+      "status": "PASS"
+    },
+    {
+      "actual": "True",
+      "expected": "mutation rejected; baseline=False",
+      "name": "cutoff-uniform promotion",
+      "status": "PASS"
+    },
+    {
+      "actual": "True",
+      "expected": "mutation rejected; baseline=False",
+      "name": "C6 promotion",
+      "status": "PASS"
+    },
+    {
+      "actual": "18",
+      "expected": "mutation rejected; baseline=19",
+      "name": "cutoff substitution",
+      "status": "PASS"
+    },
+    {
+      "actual": "False",
+      "expected": "mutation rejected; baseline=True",
+      "name": "finite gap erasure",
+      "status": "PASS"
+    }
+  ],
+  "boundary": "One finite V=2,d=19,beta=8 unconditional one-site marginal row. The certificate is an auxiliary source-interval datapoint; all uniform, physical-empty and Yang-Mills/mass-gap flags remain false.",
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "evidence_level": "T0 / HOSTILE FINITE-SCOPE FIREWALL",
+  "exploration_id": "EXP-001283",
+  "manifest": "strategy/pre-a-cp1-st8-q3lock-original-source-interval-d19-manifest.json",
+  "mutations": [
+    "zero/P1 row alias",
+    "tail threshold substitution",
+    "probe relaxation",
+    "cutoff-uniform promotion",
+    "C6 promotion",
+    "cutoff substitution",
+    "finite gap erasure"
+  ],
+  "non_claims": [
+    "No cutoff/volume/phase/exhaustion-uniform Schur or Poincare theorem.",
+    "No common core, history transfer, OS/KMS/GNS reconstruction, sector gap or continuum limit.",
+    "No physical-empty energy sign, Reading-H stationarity or symmetry-projected transverse stability.",
+    "No C6, Sector-A, Pre-A, Yang-Mills or mass-gap conclusion."
+  ],
+  "result_id": "R-438",
+  "run_kind": "hostile",
+  "schema": "tect/pre-a-r438-hostile/1.0",
+  "scope": {
+    "hostile_mutations_rejected": true,
+    "physical_promotion_rejected": true,
+    "uniform_promotion_rejected": true
+  },
+  "source_hashes": {
+    "manifest": "4b93079a29cfeecf8b999f8209d301660d0d8ec848e090d9b458289e0546166b",
+    "script": "08aa9f792c11bdbbcd47d057ef7ebe442ea860ac4b879218b06388ade482f813"
+  },
+  "verdict": "HOSTILE_MUTATIONS_REJECTED"
+}

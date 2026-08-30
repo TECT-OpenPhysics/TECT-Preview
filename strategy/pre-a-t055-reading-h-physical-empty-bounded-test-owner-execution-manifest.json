@@ -1,0 +1,301 @@
+{
+  "schema": "tect/pre-a-t055-reading-h-physical-empty-bounded-test-owner-execution/1.0",
+  "slug": "pre-a-t055-reading-h-physical-empty-bounded-test-owner-execution",
+  "version": "R-441 v1.0",
+  "issued": "2026-08-30",
+  "tier": "T0",
+  "claim_bearing": false,
+  "status": "BLOCKED",
+  "task_id": "T-055",
+  "exploration_id": "EXP-001286",
+  "result_id": "R-441",
+  "card_id": "C6-SPACETIME-SIGNATURE",
+  "test_card_id": "PA-T055-READING-H-PHYSICAL-EMPTY-BOUNDED-TEST-OWNER-EXECUTION",
+  "parent_results": [
+    "R-434",
+    "R-427",
+    "R-420",
+    "R-418",
+    "R-170",
+    "R-169"
+  ],
+  "question": "Can the current TECT owner evaluate the fixed F_total[G_*]-F_total[E] sign, full Reading-H stationarity and symmetry-projected transverse stability under the unchanged common finite-regulator contract?",
+  "exact_scope": "A fresh TECT-owner execution snapshot. The same fifteen finite-regulator fields and the G_* minus E orientation are locked to the prior R-434/R-427/R-420 contract without alteration; E is preregistered as a slot but remains subject to admission. The lane evaluates no energy, derivative or Hessian when a common owner is absent.",
+  "owner_contract": {
+    "candidate": "native Reading-H Gaussian-Hartree covariance owner G_*",
+    "comparison_orientation": "F_total[G_*] - F_total[E]",
+    "required_fixed_fields": [
+      "finite_regulator_functional",
+      "reference_definition",
+      "normalization",
+      "finite_part_counterterm_scheme",
+      "regulator_and_cutoff",
+      "physical_volume",
+      "boundary_condition",
+      "limit_order",
+      "candidate_G_star_representation",
+      "empty_branch_E_representation",
+      "full_admissible_tangent",
+      "symmetry_group_and_orbit_tangent",
+      "transverse_projector",
+      "Hessian_form_and_error_budget",
+      "stationarity_residual_budget"
+    ],
+    "field_status": "NOT_FIXED_IN_ONE_COMMON_OWNER",
+    "contract_identity_status": "LOCKED_TO_R427_AND_R420_VALUES_UNSUPPLIED",
+    "finite_evaluation_allowed": false,
+    "field_matrix": {
+      "finite_regulator_functional": {
+        "status": "MISSING",
+        "owner": "no common Reading-H functional"
+      },
+      "reference_definition": {
+        "status": "PARTIAL",
+        "owner": "G_* named; E not admitted"
+      },
+      "normalization": {
+        "status": "PARTIAL",
+        "owner": "G_* convention only; E normalization absent"
+      },
+      "finite_part_counterterm_scheme": {
+        "status": "MISSING",
+        "owner": "none"
+      },
+      "regulator_and_cutoff": {
+        "status": "MISSING",
+        "owner": "none"
+      },
+      "physical_volume": {
+        "status": "MISSING",
+        "owner": "none"
+      },
+      "boundary_condition": {
+        "status": "MISSING",
+        "owner": "none"
+      },
+      "limit_order": {
+        "status": "MISSING",
+        "owner": "none"
+      },
+      "candidate_G_star_representation": {
+        "status": "PARTIAL",
+        "owner": "Reading-H covariance owner only"
+      },
+      "empty_branch_E_representation": {
+        "status": "MISSING",
+        "owner": "no normalized state, measure, algebra or preparation"
+      },
+      "full_admissible_tangent": {
+        "status": "MISSING",
+        "owner": "none"
+      },
+      "symmetry_group_and_orbit_tangent": {
+        "status": "MISSING",
+        "owner": "none"
+      },
+      "transverse_projector": {
+        "status": "MISSING",
+        "owner": "none"
+      },
+      "Hessian_form_and_error_budget": {
+        "status": "MISSING",
+        "owner": "none"
+      },
+      "stationarity_residual_budget": {
+        "status": "MISSING",
+        "owner": "none"
+      }
+    }
+  },
+  "physical_empty_branch_E": {
+    "symbol": "E",
+    "preregistered_slot": true,
+    "admitted": false,
+    "admission_status": "BLOCKED_NOT_INSTANTIATED",
+    "declared_role": "normalized constrained, no-condensate or empty-preparation branch in the same parent as G_*",
+    "zero_reference_identification": "FORBIDDEN",
+    "p1_zero_reference_alias": "NOT_ACCEPTED",
+    "required_fields": [
+      "state_or_configuration_representative",
+      "measure_or_algebra",
+      "normalization_and_finite_parts",
+      "boundary_preparation",
+      "physical_interpretation",
+      "local_no_condensate_or_clustering_criterion"
+    ],
+    "supplied_fields": [],
+    "reason": "No owner supplies a normalized E in the same finite parent as G_*; the P1 zero/disordered reference remains a separate owner and cannot be aliased."
+  },
+  "verdicts": {
+    "sign": {
+      "expression": "F_total[G_*] - F_total[E]",
+      "status": "BLOCKED_NOT_EVALUATED",
+      "reason_codes": [
+        "NO_COMMON_FINITE_REGULATOR_OWNER",
+        "E_NOT_ADMITTED",
+        "NO_ABSOLUTE_PHYSICAL_EMPTY_NORMALIZATION"
+      ]
+    },
+    "reading_h_stationarity": {
+      "expression": "D F_total[G_*] = 0 on the full admissible regulated tangent",
+      "status": "BLOCKED_NOT_EVALUATED",
+      "reason_codes": [
+        "NO_FULL_REGULATED_TANGENT",
+        "COVARIANCE_OWNER_IS_NOT_FULL_FIELD_OWNER",
+        "NO_STATIONARITY_RESIDUAL_BUDGET"
+      ]
+    },
+    "symmetry_projected_transverse_stability": {
+      "expression": "inf_{v in N_perp, ||v||=1} <v, D^2 F_total[G_*] v>",
+      "status": "BLOCKED_NOT_EVALUATED",
+      "reason_codes": [
+        "NO_COMMON_SYMMETRY_ORBIT_TANGENT",
+        "NO_TRANSVERSE_PROJECTOR",
+        "NO_REGULATED_HESSIAN_ERROR_BUDGET"
+      ]
+    }
+  },
+  "authority_inputs": [
+    {
+      "id": "R434-MANIFEST",
+      "path": "strategy/pre-a-t055-reading-h-physical-empty-bounded-test-owner-refresh-manifest.json",
+      "sha256": "2cdc5dfd9a52f8b8e8308c8ef9c9b344df9672b723750a7c60b590079b4bc9dc",
+      "role": "previous TECT-owner blocked execution baseline"
+    },
+    {
+      "id": "R427-MANIFEST",
+      "path": "strategy/pre-a-t055-reading-h-physical-empty-bounded-revalidation-manifest.json",
+      "sha256": "5a60fecc9daac6f0a214fd6f437545a4f1f90abfdccee2401f5cd6cdf0774c0f",
+      "role": "same-owner revalidation contract and blocked verdict baseline"
+    },
+    {
+      "id": "R420-MANIFEST",
+      "path": "strategy/pre-a-t055-reading-h-physical-empty-bounded-test-blocked-manifest.json",
+      "sha256": "f70e0b8cf2fe133464cf58123ed7706e04de9042d44d9c17bef96f83cf247255",
+      "role": "original fifteen-field preregistration"
+    },
+    {
+      "id": "R418-MANIFEST",
+      "path": "strategy/pre-a-t055-reading-h-physical-empty-same-owner-preregistration-blocked-manifest.json",
+      "sha256": "30a703de800850a40ecbcd003133b832d9bee9d49908c402b19c389ee2a312ea",
+      "role": "E admission and zero-alias boundary"
+    },
+    {
+      "id": "R170-MANIFEST",
+      "path": "strategy/pre-a-t056-initial-qft-gr-reading-h-literature-applicability-audit-manifest.json",
+      "sha256": "364547255ad4e51d8c9ab97ad9a45937735a4a1847f2edc1cb02387d7d8dc8cb",
+      "role": "Reading-H applicability firewall; no physical-empty sign"
+    },
+    {
+      "id": "R169-MANIFEST",
+      "path": "strategy/pre-a-t055-legacy-sma-common-bohr-moment-radial-owner-route-split-manifest.json",
+      "sha256": "c6f02db72a911120b5fa7e1d259f807105d97c638f15c4b1f379d70b1c78165e",
+      "role": "latest T-055 covariance/scalar owner boundary"
+    },
+    {
+      "id": "EXP790-MANIFEST",
+      "path": "strategy/pre-a-cp1-st8-q3lock-os-dynamics-ground-gap-counterterm-empty-route-split-manifest.json",
+      "sha256": "07cf9be922bf16def3b88f5a4d2924a087bae1282cfc56956258293d131d30fa",
+      "role": "future same-parent empty-branch contract, not an admitted state"
+    }
+  ],
+  "assumptions": [
+    "The six hash-pinned authorities above are the active TECT-owner boundaries.",
+    "The requested orientation is G_* minus E and all three tests must share one regulated parent.",
+    "The fifteen contract fields are identity-locked; a locked field name does not invent an owner value.",
+    "A physical-empty branch requires a normalized representative, measure or algebra, boundary preparation and a local physical criterion beyond a zero label.",
+    "Input-admissibility failure is a valid bounded-test outcome and is not a numerical sign or stability theorem.",
+    "Symmetry projection requires the exact orbit tangent and a regulated Hessian error budget."
+  ],
+  "missing_assumptions": [
+    "A hash-pinned finite-regulator F_total with a common domain containing G_* and E.",
+    "A normalized, admitted E representative with measure/algebra, boundary preparation and a no-condensate or clustering criterion.",
+    "Common reference, normalization, finite-part counterterms and renormalization conditions.",
+    "Fixed regulator/cutoff, physical volume, boundary condition and explicit limit order.",
+    "Deterministic finite-parent maps for G_* and E, a full admissible tangent and exact symmetry orbit tangent.",
+    "A transverse projector, regulated Hessian, stationarity residual budget and numerical/limit error budgets."
+  ],
+  "blockers": [
+    "R-169 and R-170 provide owner-specific covariance/applicability boundaries, not one common Reading-H F_total with an E comparison.",
+    "R-427 and R-420 identity-lock the fifteen fields but leave their values unsupplied and E uninstantiated.",
+    "R-418 forbids replacing E by zero or the P1 reference; EXP-000790 is a future contract only.",
+    "Therefore sign, full stationarity and symmetry-projected transverse stability are undefined for this owner and cannot be evaluated."
+  ],
+  "evidence_level": "T0 / EXECUTED APPEND-ONLY TECT-OWNER INPUT-ADMISSIBILITY AUDIT; all three physical quantities BLOCKED_NOT_EVALUATED",
+  "non_claims": [
+    "No sign for F_total[G_*] - F_total[E].",
+    "No full Reading-H stationarity theorem.",
+    "No symmetry-projected transverse stability theorem.",
+    "No identification of E with zero, P1, a Gaussian state or an equilibrium phase.",
+    "No physical-vacuum, below-empty-space, Yang-Mills, mass-gap, C6, Sector-A or Pre-A conclusion.",
+    "No thermodynamic, continuum, OS/KMS/GNS, Hamiltonian spectral or absolute-energy conclusion."
+  ],
+  "formal_integration": {
+    "event_ordinal": 783,
+    "event_id": "20260830-r-441-physical-empty-bounded-test-owner-executi",
+    "event_title": "R-441 physical-empty bounded test owner execution",
+    "event_claim_ids": [
+      "C6-SPACETIME-SIGNATURE",
+      "EXP-001286",
+      "R-441"
+    ],
+    "lean": "R441 PASS; unchanged blocked input-admissibility scope only",
+    "new_negative": false,
+    "tier_change": false,
+    "pdf": false
+  },
+  "adversarial_review": [
+    {
+      "axis": "zero reference alias",
+      "check": "Any attempt to identify E with zero or P1 is rejected because no same-owner normalized branch is supplied.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "owner substitution",
+      "check": "G_* covariance data and a separate P1 or other finite parent cannot be combined into one F_total domain.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "contract drift",
+      "check": "Dropping or changing any of the fifteen locked fields invalidates this execution.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "finite-part/scalar shift",
+      "check": "An unspecified counterterm or scalar shift cannot instantiate the missing state-dependent E comparison.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "stationarity scope",
+      "check": "Covariance-owner stationarity cannot be promoted to full-field stationarity on an absent tangent.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "transverse stability",
+      "check": "No Hessian infimum is formed without a common orbit tangent, projector and error budget.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "physical promotion",
+      "check": "A blocked owner audit is not promoted to a physical, Yang-Mills or mass-gap statement.",
+      "disposition": "UPHELD-OPEN"
+    }
+  ],
+  "boundary": "R-441 executes the unchanged fifteen-field TECT-owner contract and preregisters E. Because the common finite parent and admitted E are still absent, all three requested quantities remain BLOCKED_NOT_EVALUATED.",
+  "next_unlock": "Provide one owner-approved hash-pinned finite parent containing both G_* and a normalized admitted E, then rerun the unchanged three tests with the full tangent, orbit projector and error budgets frozen.",
+  "recorded_by": "Codex",
+  "artifacts": {
+    "primary_script": "codes/foundations/pre_a_t055_reading_h_physical_empty_bounded_test_owner_execution.py",
+    "independent_script": "codes/foundations/pre_a_t055_reading_h_physical_empty_bounded_test_owner_execution_independent.py",
+    "hostile_script": "codes/foundations/pre_a_t055_reading_h_physical_empty_bounded_test_owner_execution_hostile.py",
+    "integrated_verifier": "codes/foundations/pre_a_t055_reading_h_physical_empty_bounded_test_owner_execution_verify.py",
+    "lean": "verification/lean/Tect/R441.lean",
+    "certificate": "strategy/pre-a-t055-reading-h-physical-empty-bounded-test-owner-execution-certificate-260830.md",
+    "exploration": "strategy/pre-a-t055-reading-h-physical-empty-bounded-test-owner-execution-exploration.json",
+    "primary_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-primary-pre-a-t055-reading-h-physical-empty-bounded-test-owner-execution/primary.json",
+    "independent_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-independent-pre-a-t055-reading-h-physical-empty-bounded-test-owner-execution/independent.json",
+    "hostile_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-hostile-pre-a-t055-reading-h-physical-empty-bounded-test-owner-execution/hostile.json",
+    "integrated_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-integrated-pre-a-t055-reading-h-physical-empty-bounded-test-owner-execution/integrated.json"
+  },
+  "rerun_reason": "User-requested current TECT-owner execution with a new append-only result/card identifier; no prior contract field is changed."
+}

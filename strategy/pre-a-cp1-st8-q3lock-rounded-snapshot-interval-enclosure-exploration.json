@@ -1,0 +1,64 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "schema_version": "1.0",
+  "id": "EXP-001276",
+  "task_id": "T-054",
+  "title": "Directed interval enclosure certifies the fixed rounded residual snapshot",
+  "question": "Can directed interval arithmetic certify the residual minimum eigenvalue and both fixed-reference separations for the exact IEEE-754 rounded R-428/R-429 graph snapshot at the R-426 failure row?",
+  "method": [
+    "Reconstruct the fixed R-426 row through the hash-pinned R-429 snapshot producer without importing the R-431 primary result.",
+    "Represent every binary64 weight and conductance as its exact binary rational and propagate 80-digit directed mpmath intervals through the symmetric conductance hull, weighted residual basis and compression.",
+    "Certify the lower eigenvalue bound by interval Cholesky positivity of A-LI at L=5.3631875357, and certify the upper bound with an interval Rayleigh quotient below 5.3631875359.",
+    "Repeat the construction independently with reversed block and anchor order and reversed Cholesky pivot order; retain the unchanged 5e-7 R-426 comparison tolerance.",
+    "Run hostile source/row/tolerance/status/promotion mutations and a Lean rational-threshold cross-check while keeping the original Hamiltonian source explicitly outside scope."
+  ],
+  "finding": "The primary interval lane passes 16/16 assertions. The exact binary64 rounded snapshot has a certified residual bracket [5.3631875357, 5.3631875357858094719615598072499099181814069649417...], with matrix interval width below 1e-50. The lower endpoint exceeds the R-422 reference by 0.000002568536301..., and the upper endpoint lies below the R-426 direct reference by 0.0000008142620005..., so both one-sided separations exceed the fixed 5e-7 tolerance. The independent reversed-order lane passes 12/12 with upper endpoint 5.363187535785720770809451305696661..., the hostile lane rejects 7/7 mutations, the integrated verifier passes 15/15, and Lean R431 compiles.",
+  "decision_reason": "A finite directed interval certificate removes downstream eigensolver and basis-rounding ambiguity for the exact R-429 binary64 graph snapshot. It does not enclose the upstream 256-dimensional Hamiltonian, coordinate eigenbasis or Gibbs normalization, so the original-source precision boundary and R-426 route status remain separate.",
+  "decision_scope": "One finite V=2, cutoff d=16, beta=8, right-orientation conditional row 7, core/tail 7/9; exact binary64 rounded graph snapshot; no original-source interval, uniform limit or physical promotion.",
+  "verdict": "advanced",
+  "boundary": "This is a T0 claim-nonbearing finite interval certificate for a rounded snapshot. It does not certify the original rational Hamiltonian source, close residual reuse for the unrounded model, establish a cutoff/volume/phase/exhaustion-uniform bound, or imply C6, Sector-A, Pre-A, Yang--Mills or a mass gap.",
+  "next_action": "Construct validated interval or ball enclosures for the original coordinate and Hamiltonian eigensystems, propagate them through Gibbs normalization and residual compression, and repeat the same fixed-row comparisons.",
+  "evidence_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-rounded-snapshot-interval-enclosure-manifest.json#interval_contract",
+    "strategy/pre-a-cp1-st8-q3lock-rounded-snapshot-interval-enclosure-certificate-260830.md#3. Executed evidence",
+    "codes/foundations/pre_a_cp1_st8_q3lock_rounded_snapshot_interval_enclosure.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_rounded_snapshot_interval_enclosure_independent.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_rounded_snapshot_interval_enclosure_hostile.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_rounded_snapshot_interval_enclosure_verify.py#main",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-primary-rounded_snapshot_interval_enclosure/primary.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-independent-rounded_snapshot_interval_enclosure/independent.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-hostile-rounded_snapshot_interval_enclosure/hostile.json#controls",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-integrated-rounded_snapshot_interval_enclosure/integrated.json#derived",
+    "verification/lean/Tect/R431.lean#rounded_snapshot_r422_separation",
+    "verification/lean/registry.json#R431"
+  ],
+  "formal_refs": {
+    "results": ["R-431"],
+    "negatives": [],
+    "events": ["20260830-r-431-directed-interval-enclosure-for-rounded-r"]
+  },
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY",
+    "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+  ],
+  "adversarial_review": [
+    {"axis": "input representation", "check": "Every stored binary64 value is treated as its exact binary rational; no decimal truncation or unrecorded source substitution is used.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "matrix symmetry", "check": "Both conductance directions are enclosed by a symmetric interval hull before the residual operator is formed.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "lower eigenvalue bound", "check": "The lower probe is accepted only when every interval Cholesky pivot has a positive lower endpoint; a higher probe is rejected.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "upper eigenvalue bound", "check": "The upper endpoint comes from an interval Rayleigh quotient and is not inferred from the rejected Cholesky probe.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "comparison tolerance", "check": "The 5e-7 tolerance and fixed row are read from the manifest and hostile mutations attempting relaxation are rejected.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "source-level promotion", "check": "The interval certificate is explicitly rounded-snapshot-only; original-source certification and residual-reuse closure remain false.", "disposition": "UPHELD-OPEN"},
+    {"axis": "finite-to-physical", "check": "No cutoff/volume limit, common core, OS/KMS/GNS, C6, Sector-A, Pre-A, Yang--Mills or mass-gap statement is inferred.", "disposition": "UPHELD-OPEN"}
+  ],
+  "no_overclaim": "R-431 certifies only a finite residual eigenvalue bracket and two fixed-reference separations for the exact rounded graph snapshot. It does not certify the unrounded Hamiltonian source or any physical or continuum conclusion.",
+  "provenance": "contemporaneous",
+  "recorded_at": "2026-08-31T09:00:00Z",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-08-30",
+  "related": [
+    {"id": "EXP-001275", "relation": "continues"},
+    {"id": "EXP-001274", "relation": "continues"}
+  ]
+}

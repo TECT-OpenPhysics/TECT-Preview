@@ -1,0 +1,79 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "schema_version": "1.0",
+  "id": "EXP-001285",
+  "title": "Finite rectangular-box matching-layer split envelope",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "prior_exploration_id": "EXP-001284",
+  "related": [
+    {"id": "EXP-001024", "relation": "continues"},
+    {"id": "EXP-001284", "relation": "continues"}
+  ],
+  "question": "Does the axis-plus-lower-endpoint-parity colouring give six matching bond layers, and does the declared weighted finite split envelope survive on a separately fixed family of rectangular Z^3 boxes?",
+  "method": [
+    "Freeze the manifest before calculation: five rectangular boxes, four rational phase-space seeds, both shear signs, both layer orders and the inherited weighted-form constants.",
+    "Construct every nearest-neighbour edge and colour it by axis and the parity of its lower endpoint; retain empty parity layers explicitly in the smallest box.",
+    "Recompute vertex and edge counts, per-layer incidence, adjacent weight ratios and the rational one-layer coefficient with exact Fraction arithmetic.",
+    "Apply each matching shear sequentially in both layer orders and check the declared one-layer energy envelope and its product bound on every finite seed.",
+    "Run a non-importing Fraction control, hostile mutations and Lean counting/coefficient identities through the integrated verifier."
+  ],
+  "finding": "The primary lane passes 1152/1152 assertions and the non-importing independent lane passes 652/652. The hostile lane rejects 10/10 mutations and the integrated verifier passes 37/37 with Lean R440 PASS. The five boxes contain 8, 27, 64, 60 and 120 vertices and 12, 54, 144, 133 and 286 edges. Six colour slots have incidence at most one at every vertex (three are empty in the 2x2x2 box). The derived coefficient is C_match=53/35 and the one-layer factor for delta=1/7 is 298/245; the largest observed one-layer ratio is 4034975/3832529. These are finite conditional split-envelope checks only.",
+  "verdict": "advanced",
+  "decision_reason": "R-440 strengthens the finite matching-layer input behind the Q3LOCK common-core route on several rectangular boxes and checks both orientations/orderings without changing the coefficient. It does not supply an arbitrary-box theorem, an unbounded domain, boundary decay, exhaustion Cauchy or common-alpha dynamics, so all thermodynamic and physical gates remain open.",
+  "decision_scope": "Finite Z^3 boxes (2,2,2), (3,3,3), (4,4,4), (5,4,3), (6,5,4), with the manifest rational form, four seeds, both signs and both layer orders.",
+  "assumptions": [
+    "The weighted finite form and matching shear are exactly the manifest fixtures.",
+    "The tensor-local self-adjoint onsite factor and positive shifted-form hypotheses are inherited conditionally from EXP-001024 and are not reproved here.",
+    "The listed boxes and seeds are a finite test set, not an arbitrary-volume quantifier."
+  ],
+  "missing_assumptions": [
+    "An analytic arbitrary-box edge-colouring and unbounded Q3 common-core theorem.",
+    "A representation-independent weighted product-domain and boundary commutator estimate.",
+    "Cutoff-, source-, phase-, volume- and exhaustion-uniform history-tail control and Lie--Trotter convergence.",
+    "Common-alpha, OS/KMS/GNS identification, phase selection and sector coercivity."
+  ],
+  "adversarial_review": [
+    {"axis": "finite family versus arbitrary boxes", "check": "The manifest quantifies only over five named boxes; no universal theorem is inferred.", "disposition": "UPHELD-OPEN"},
+    {"axis": "matching versus full graph", "check": "Only one colour layer is sheared at a time; the full graph has degree up to six.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "form versus operator", "check": "The finite Fraction inequalities do not prove unbounded operator domains or Friedrichs/product-domain transfer.", "disposition": "UPHELD-OPEN"},
+    {"axis": "coefficient versus convergence", "check": "A finite product envelope does not establish boundary decay, exhaustion Cauchy or a common generator.", "disposition": "UPHELD-OPEN"},
+    {"axis": "Lean promotion", "check": "R440 checks only finite counting and rational identities; no analytic QFT theorem is encoded.", "disposition": "UPHELD"},
+    {"axis": "physical promotion", "check": "No physical-empty reference, Reading-H stability, Yang--Mills map or mass-gap statement is admitted.", "disposition": "UPHELD"}
+  ],
+  "boundary": "R-440 is T0 claim-nonbearing finite rectangular-box evidence. It does not close arbitrary-box uniformity, an unbounded common core, boundary decay, exhaustion Cauchy, common alpha, OS/KMS/GNS, a physical sector, C6, Sector-A, Pre-A, Yang--Mills dynamics or a mass gap.",
+  "next_action": "Use the finite envelope only as an input while deriving an analytic boundary-commutator or state-weighted tail modulus on a declared common core; if that estimate fails, append the route-specific obstruction rather than promoting R-440.",
+  "no_overclaim": "The volume-independent coefficient is observed on the declared finite fixtures and remains conditional on inherited operator hypotheses. No thermodynamic, physical or Yang--Mills conclusion follows.",
+  "evidence_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-rectangular-matching-layer-family-manifest.json#finite_contract",
+    "strategy/pre-a-cp1-st8-q3lock-rectangular-matching-layer-family-certificate-260830.md#Exact-finite-scope",
+    "codes/foundations/pre_a_cp1_st8_q3lock_rectangular_matching_layer_family.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_rectangular_matching_layer_family_independent.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_rectangular_matching_layer_family_hostile.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_rectangular_matching_layer_family_verify.py#main",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-primary-rectangular_matching_layer_family/primary.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-independent-rectangular_matching_layer_family/independent.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-hostile-rectangular_matching_layer_family/hostile.json#mutations_rejected",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-integrated-rectangular_matching_layer_family/integrated.json#lean",
+    "verification/lean/Tect/R440.lean#derived_matching_coefficient",
+    "verification/lean/registry.json#R440"
+  ],
+  "formal_refs": {
+    "events": ["20260830-r-440-rectangular-matching-2026-08-30"],
+    "results": ["R-440"],
+    "negatives": []
+  },
+  "formal_integration": {
+    "events": ["20260830-r-440-rectangular-matching-2026-08-30"],
+    "results": ["R-440"],
+    "negatives": [],
+    "no_new_result": false,
+    "no_new_negative": true,
+    "no_pdf": true,
+    "no_tier_change": true
+  },
+  "recorded_at": "2026-08-31T13:30:00Z",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-08-30",
+  "provenance": "contemporaneous"
+}

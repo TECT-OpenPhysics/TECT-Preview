@@ -1,0 +1,158 @@
+{
+  "assertion_count": 13,
+  "assertions": [
+    {
+      "actual": "['R-430', 'EXP-001275', False, 'SOURCE_POINT_AUDIT_NO_INTERVAL']",
+      "expected": "R-430/EXP-001275/false/SOURCE_POINT_AUDIT_NO_INTERVAL",
+      "group": "provenance",
+      "name": "manifest identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'c6_closed': False, 'common_core_closed': False, 'common_split_rule_closed': False, 'continuum_closed': False, 'cutoff_uniform_coarse_schur_closed': False, 'exact_original_input_certified': False, 'exhaustion_uniform_coarse_schur_closed': False, 'global_poincare_closed': False, 'hamiltonian_os_identification_closed': False, 'kms_gns_gap_closed': False, 'no_new_negative_result': True, 'no_pdf': True, 'no_tier_change': True, 'phase_uniform_coarse_schur_closed': False, 'pre_a_closed': False, 'r426_route_failure_preserved': True, 'residual_reuse_closed': False, 'sector_a_closed': False, 'source_gap_separation_observed': True, 'source_interval_certified': False, 'source_point_precision_executed': True, 'source_point_residual_recomputed': True, 'volume_uniform_coarse_schur_closed': False}",
+      "expected": "finite source point only",
+      "group": "scope",
+      "name": "scope firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": "[]",
+      "expected": "all R-430 artifacts",
+      "group": "provenance",
+      "name": "artifacts present",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'codes/foundations/pre_a_cp1_st8_q3lock_source_point_precision_audit.py': '1eece01a76fe298a1a81d5f65da2b2b132e068417a0e48a4da35abd8bba3e6ff', 'codes/foundations/pre_a_cp1_st8_q3lock_source_point_precision_audit_independent.py': 'f5fe8f29a5f84b20ddd780bc7d58620803db10a97661012388d21403f525cacd', 'codes/foundations/pre_a_cp1_st8_q3lock_source_point_precision_audit_hostile.py': '14b3bafb34b68e7dbde6c64c133af450cea8fd1d45d638843f8b1985d14993a3', 'verification/lean/Tect/R430.lean': 'c056b681f0591066210282ad4f5d7a6deb908c6a72905d448a0c827f8947281e'}",
+      "expected": "distinct source hashes",
+      "group": "provenance",
+      "name": "artifact hashes distinct",
+      "status": "PASS"
+    },
+    {
+      "actual": "['source_gap_reference_separation', 'source_point_not_interval', 'finite_scope']",
+      "expected": "declared theorem markers",
+      "group": "Lean",
+      "name": "Lean markers",
+      "status": "PASS"
+    },
+    {
+      "actual": "forbidden tokens absent",
+      "expected": "clean finite scalar file",
+      "group": "Lean",
+      "name": "Lean policy",
+      "status": "PASS"
+    },
+    {
+      "actual": "reused claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-primary-source_point_precision_audit/primary.json",
+      "expected": "existing output",
+      "group": "executables",
+      "name": "reuse pre_a_cp1_st8_q3lock_source_point_precision_audit.py",
+      "status": "PASS"
+    },
+    {
+      "actual": "reused claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-independent-source_point_precision_audit/independent.json",
+      "expected": "existing output",
+      "group": "executables",
+      "name": "reuse pre_a_cp1_st8_q3lock_source_point_precision_audit_independent.py",
+      "status": "PASS"
+    },
+    {
+      "actual": "reused claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-hostile-source_point_precision_audit/hostile.json",
+      "expected": "existing output",
+      "group": "executables",
+      "name": "reuse pre_a_cp1_st8_q3lock_source_point_precision_audit_hostile.py",
+      "status": "PASS"
+    },
+    {
+      "actual": "",
+      "expected": "exit 0 without errors",
+      "group": "Lean",
+      "name": "Lean compile",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'source_residual_gap_decimal': '5.36318753578552619873719734720155508375451072', 'mismatch_r422_decimal': '0.00000256862182719873719734720155508375451071898872', 'mismatch_direct_decimal': '0.000000814262283801262802652798444916245489281011268', 'source_interval_certified': False, 'exact_original_input_certified': False}",
+      "expected": "positive point gap with both fixed-reference mismatches > tolerance and no interval",
+      "group": "primary",
+      "name": "primary source audit",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'source_residual_gap_double': 6.094733971033106, 'primary_mpmath_gap': 5.363187535785526, 'source_point_gap_difference': 0.73154643524758, 'mismatch_r422': 0.7315490038694072}",
+      "expected": "independent mismatch and sensitivity recorded without promotion",
+      "group": "independent",
+      "name": "independent source sensitivity",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'all_mutations_rejected': True, 'exact_original_input_certified': False, 'mutation_count': 8, 'point_boundary_preserved': True, 'residual_reuse_closed': False, 'source_interval_certified': False}",
+      "expected": "all mutations rejected and point boundary preserved",
+      "group": "hostile",
+      "name": "hostile controls",
+      "status": "PASS"
+    }
+  ],
+  "assumptions": [
+    "The original R-419/R-416/R-402 finite oscillator and Hamiltonian formulas are the declared source model.",
+    "Fifty-digit mpmath eigsy and log-sum-exp arithmetic provide a converged point estimate for the finite source calculation.",
+    "The fixed conditional-row orientation, index, tail threshold and comparison tolerance are unchanged.",
+    "The residual basis spans the blockwise weighted-zero-mean subspace for the computed positive row."
+  ],
+  "boundary": "R-430 moves the precision test through the original finite source formulas but remains a point-precision audit. Only a propagated interval enclosure can decide whether the R-426 mismatch is certified for the unrounded model.",
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "derived": {
+    "direct_mismatch_mpmath": "0.000000814262283801262802652798444916245489281011268",
+    "exact_original_input_certified": false,
+    "fixed_row": {
+      "beta": "8",
+      "conditional_row_index": 7,
+      "core_size": 7,
+      "cutoff_dimension": 16,
+      "orientation": "right",
+      "tail_size": 9,
+      "volume": 2
+    },
+    "hostile_mutation_count": 8,
+    "independent_double_gap": 6.094733971033106,
+    "independent_source_point_difference": 0.73154643524758,
+    "lean": "PASS",
+    "mpmath_source_gap": "5.36318753578552619873719734720155508375451072",
+    "outputs": {
+      "lean": "",
+      "pre_a_cp1_st8_q3lock_source_point_precision_audit.py": "reused claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-primary-source_point_precision_audit/primary.json",
+      "pre_a_cp1_st8_q3lock_source_point_precision_audit_hostile.py": "reused claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-hostile-source_point_precision_audit/hostile.json",
+      "pre_a_cp1_st8_q3lock_source_point_precision_audit_independent.py": "reused claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-independent-source_point_precision_audit/independent.json"
+    },
+    "r422_mismatch_mpmath": "0.00000256862182719873719734720155508375451071898872",
+    "r426_route_failure_preserved": true,
+    "residual_reuse_closed": false,
+    "source_interval_certified": false
+  },
+  "evidence_level": "T0 / EXECUTED 50-DIGIT MPATH SOURCE-POINT AUDIT IF AVAILABLE; NO INTERVAL CERTIFICATION",
+  "exploration_id": "EXP-001275",
+  "manifest": "strategy/pre-a-cp1-st8-q3lock-source-point-precision-audit-manifest.json",
+  "missing_assumptions": [
+    "Interval or ball-arithmetic enclosures for the 256-dimensional Hamiltonian eigenvalues/eigenvectors and coordinate eigenbasis.",
+    "A propagated enclosure for the conditional row, conductance and residual eigenvalue.",
+    "A basis-independent exact residual-reuse comparison for the original unrounded source.",
+    "A common unbounded Q3 core, regulator/volume-uniform estimate and history/OS/KMS/GNS/physical-sector transfer."
+  ],
+  "non_claims": [
+    "No interval or exact certification of the original Hamiltonian source.",
+    "No repair or closure of R-426 residual reuse for the original model.",
+    "No cutoff-, volume-, phase- or exhaustion-uniform Schur/residual bound.",
+    "No common core, history transfer, OS/KMS/GNS reconstruction, sector gap or continuum limit.",
+    "No C6, Sector-A, Pre-A, Yang-Mills or mass-gap conclusion."
+  ],
+  "result_id": "R-430",
+  "run_kind": "integrated",
+  "schema": "tect/pre-a-r430-integrated/1.0",
+  "source_hashes": {
+    "codes/foundations/pre_a_cp1_st8_q3lock_source_point_precision_audit.py": "1eece01a76fe298a1a81d5f65da2b2b132e068417a0e48a4da35abd8bba3e6ff",
+    "codes/foundations/pre_a_cp1_st8_q3lock_source_point_precision_audit_hostile.py": "14b3bafb34b68e7dbde6c64c133af450cea8fd1d45d638843f8b1985d14993a3",
+    "codes/foundations/pre_a_cp1_st8_q3lock_source_point_precision_audit_independent.py": "f5fe8f29a5f84b20ddd780bc7d58620803db10a97661012388d21403f525cacd",
+    "verification/lean/Tect/R430.lean": "c056b681f0591066210282ad4f5d7a6deb908c6a72905d448a0c827f8947281e"
+  },
+  "verdict": "SOURCE_POINT_AUDIT_NO_INTERVAL"
+}

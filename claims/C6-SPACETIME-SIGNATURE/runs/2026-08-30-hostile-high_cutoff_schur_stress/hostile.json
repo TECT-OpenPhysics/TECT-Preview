@@ -1,0 +1,85 @@
+{
+  "assertion_count": 7,
+  "assertions": [
+    {
+      "expected": "mutation rejected",
+      "group": "inputs",
+      "name": "negative weight",
+      "status": "PASS"
+    },
+    {
+      "expected": "mutation rejected",
+      "group": "inputs",
+      "name": "nonsymmetric conductance",
+      "status": "PASS"
+    },
+    {
+      "expected": "mutation rejected",
+      "group": "inputs",
+      "name": "negative conductance",
+      "status": "PASS"
+    },
+    {
+      "expected": "mutation rejected",
+      "group": "support",
+      "name": "overlapping blocks",
+      "status": "PASS"
+    },
+    {
+      "expected": "mutation rejected",
+      "group": "support",
+      "name": "undersized block",
+      "status": "PASS"
+    },
+    {
+      "expected": "mutation rejected",
+      "group": "envelope",
+      "name": "forged combined envelope",
+      "status": "PASS"
+    },
+    {
+      "expected": "mutation rejected",
+      "group": "spectral",
+      "name": "singular residual graph",
+      "status": "PASS"
+    }
+  ],
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "controls": {
+    "all_mutations_rejected": true,
+    "failure_contract": {
+      "absolute_difference": 3.382884111502449e-06,
+      "beta": "8",
+      "clipping_applied": false,
+      "comparison_tolerance": 5e-07,
+      "conditional_row_index": 7,
+      "core_size": 7,
+      "cutoff_dimension": 16,
+      "direct_residual_gap": 5.36318835004781,
+      "orientation": "right",
+      "r422_residual_gap": 5.363184967163699,
+      "reason": "At a declared high-cutoff row the R-422 residual gap and a separately reconstructed direct residual gap disagree beyond the preregistered comparison tolerance.",
+      "status": "FAIL_ROUTE_LOCAL",
+      "tail_size": 9,
+      "tolerance_relaxed": false,
+      "volume": 2
+    },
+    "mutation_count": 7,
+    "numeric_evaluation": false,
+    "physical_promotion": false,
+    "route_local_failure_preserved": true
+  },
+  "exploration_id": "EXP-001271",
+  "manifest": "strategy/pre-a-cp1-st8-q3lock-high-cutoff-schur-stress-manifest.json",
+  "non_claims": [
+    "No accepted high-cutoff Schur or residual-reuse closure after the route-local failure.",
+    "No cutoff-, volume-, phase- or exhaustion-uniform coarse or residual bound.",
+    "No global Poincare theorem, common Hamiltonian core or common split-limit map.",
+    "No history transfer, OS/KMS/GNS reconstruction or sectorwise gap.",
+    "No continuum, C6, Sector-A, Pre-A, Yang-Mills or mass-gap conclusion."
+  ],
+  "result_id": "R-426",
+  "run_kind": "hostile",
+  "schema": "tect/pre-a-r426-hostile/1.0",
+  "verdict": "PASS"
+}

@@ -1,0 +1,97 @@
+{
+  "assertion_count": 8,
+  "assertions": [
+    {
+      "accepted": false,
+      "mutation": {
+        "shell_count": "4*n^2+1"
+      },
+      "name": "wrong shell count",
+      "status": "REJECTED"
+    },
+    {
+      "accepted": false,
+      "mutation": {
+        "tail_formula": "factor 2"
+      },
+      "name": "wrong layer factor",
+      "status": "REJECTED"
+    },
+    {
+      "accepted": false,
+      "mutation": {
+        "weight": "euclidean"
+      },
+      "name": "wrong norm",
+      "status": "REJECTED"
+    },
+    {
+      "accepted": false,
+      "mutation": {
+        "tail_radius_min": 0
+      },
+      "name": "zero-radius formula use",
+      "status": "REJECTED"
+    },
+    {
+      "accepted": false,
+      "mutation": {
+        "boundary_commutator_decay_closed": true
+      },
+      "name": "commutator promotion",
+      "status": "REJECTED"
+    },
+    {
+      "accepted": false,
+      "mutation": {
+        "history_tail_closed": true
+      },
+      "name": "history-tail promotion",
+      "status": "REJECTED"
+    },
+    {
+      "accepted": false,
+      "mutation": {
+        "weighted_operator_form_closed": true
+      },
+      "name": "operator promotion",
+      "status": "REJECTED"
+    },
+    {
+      "accepted": false,
+      "mutation": {
+        "claim_bearing": true
+      },
+      "name": "physical/QFT claim promotion",
+      "status": "REJECTED"
+    }
+  ],
+  "boundary": "R-444 closes only the scalar exponential shell-tail formula and finite rectangular dominance for the declared edge weight. It does not close a Q3LOCK commutator or history tail, weighted operator domains, common core, common alpha, exhaustion, physical-empty, Sector-A, Pre-A, Yang-Mills or mass-gap claims.",
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "evidence_level": "T0 / EXECUTED ADVERSARIAL SCALAR-TAIL FIREWALL",
+  "exploration_id": "EXP-001289",
+  "manifest": "strategy/pre-a-cp1-st8-q3lock-exponential-shell-tail-manifest.json",
+  "mutations_rejected": 8,
+  "non_claims": [
+    "No Q3LOCK commutator or history-tail estimate.",
+    "No weighted operator, common-core, common-alpha or exhaustion theorem.",
+    "No OS/KMS/GNS reconstruction, physical-empty comparison, continuum, Sector-A or Pre-A closure.",
+    "No Yang-Mills dynamics or mass-gap conclusion."
+  ],
+  "passed": 8,
+  "result_id": "R-444",
+  "run_kind": "hostile",
+  "schema": "tect/pre-a-r444-hostile/1.0",
+  "scope": {
+    "claim_bearing": false,
+    "hostile_mutations_rejected": true,
+    "operator_or_physical_promotion_rejected": true
+  },
+  "source_hashes": {
+    "independent": "6bfe8972c5271116850a81cb9a7ccfff35f345fc701cd522d703ffe179fa9424",
+    "manifest": "9b7d0d15eec8c3b8bea0ae8796a6872857c3bc00cc18ce19d18015e2b0d5cfb4",
+    "primary": "43cfc2c704d365dc7709e3eb811207eb3f9368111f408dbab88fd824578bae20",
+    "script": "a9cf57516011a084f9401e11b6cb94cf4571e480a4335736827fef4dcfff229c"
+  },
+  "verdict": "HOSTILE_MUTATIONS_REJECTED"
+}

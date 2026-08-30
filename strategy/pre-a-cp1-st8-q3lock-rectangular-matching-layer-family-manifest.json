@@ -1,0 +1,128 @@
+{
+  "schema": "tect/pre-a-cp1-st8-q3lock-rectangular-matching-layer-family/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-RECTANGULAR-MATCHING-LAYER-FAMILY-v0",
+  "result_id": "R-440",
+  "title": "Finite rectangular-box six-matching split envelope",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001285",
+  "claim_bearing": false,
+  "status": "FINITE_RECTANGULAR_MATCHING_LAYER_AUDITED",
+  "parent_results": ["R-439", "R-419"],
+  "parent_explorations": ["EXP-001024", "EXP-001284"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY"
+  ],
+  "question": "Does the axis-plus-lower-endpoint-parity colouring give six matching bond layers, and does the declared weighted finite split envelope survive on a separately fixed family of rectangular Z^3 boxes?",
+  "finite_contract": {
+    "dimension": 3,
+    "parity_modulus": 2,
+    "box_sides": [[2, 2, 2], [3, 3, 3], [4, 4, 4], [5, 4, 3], [6, 5, 4]],
+    "fixture_seeds": 4,
+    "signs": [1, -1],
+    "orders": ["lexicographic", "reverse_lexicographic"],
+    "weight_base": 2,
+    "weight_center": [1, 1, 1],
+    "momentum_offset": 1,
+    "momentum_coefficients": [2, 3, 4],
+    "momentum_denominator": 5,
+    "position_offset": 1,
+    "position_coefficients": [1, 2, -1],
+    "position_denominator": 4,
+    "delta": "1/7",
+    "coupling": "3/5",
+    "chi": "7/4",
+    "sqrt_gamma": "2/5",
+    "kappa": "2",
+    "trotter_time": "3/5",
+    "trotter_steps": [1, 2, 5, 11]
+  },
+  "derived_rule": {
+    "gamma": "sqrt_gamma^2",
+    "matching_coefficient": "1 + kappa*coupling^2/(2*chi*sqrt_gamma)",
+    "one_layer_form_factor": "1 + matching_coefficient*abs(delta)",
+    "six_layer_endpoint_factor": "one_layer_form_factor^(six_layer_count/2)",
+    "trotter_limit_envelope": "exp((six_layer_count/2)*matching_coefficient*t)",
+    "layer_colour": "axis*parity_modulus + (lower_endpoint_coordinate mod parity_modulus)"
+  },
+  "scope": {
+    "rectangular_box_family_checked": true,
+    "edge_colour_partition_checked": true,
+    "six_matching_layers_checked": true,
+    "per_layer_weighted_finite_form_checked": true,
+    "both_signs_checked": true,
+    "both_layer_orders_checked": true,
+    "volume_independent_coefficient_observed": true,
+    "arbitrary_box_theorem_closed": false,
+    "operator_common_core_closed": false,
+    "onsite_self_adjoint_hypothesis_closed": false,
+    "boundary_commutator_decay_closed": false,
+    "exhaustion_cauchy_closed": false,
+    "common_alpha_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "assumptions": [
+    "The finite weighted energy is the declared rational fixture K=sum_x w_x(1+p_x^2/(2 chi)+gamma q_x^4).",
+    "The matching shear acts on each edge in one layer and the same finite phase-space fixture is used before and after the shear.",
+    "The conditional tensor-local self-adjoint onsite factor and the positive shifted form hypotheses from EXP-001024 are not reproved by this finite audit.",
+    "The listed rectangular boxes, four phase-space seeds, signs and layer orders are the complete finite test set for this result."
+  ],
+  "missing_assumptions": [
+    "An arbitrary-box analytic edge-colouring theorem on the unbounded Q3 domain.",
+    "A representation-independent unbounded common-core and weighted product-domain theorem.",
+    "Cutoff-, source-, phase-, volume- and exhaustion-uniform boundary commutator or history-tail estimates.",
+    "Lie--Trotter convergence, common-alpha dynamics, Hamiltonian-to-OS/KMS/GNS identification and a sector coercive gap."
+  ],
+  "stop_conditions": [
+    "If any layer contains two edges incident at one vertex, fail the matching audit.",
+    "If a finite form inequality fails, retain the failure and do not alter the coefficient or fixture to recover a pass.",
+    "If the independent lane disagrees with the primary lane, fail the result rather than averaging the values.",
+    "Never promote this finite rectangular family to an arbitrary-volume, physical, Yang-Mills or mass-gap theorem."
+  ],
+  "evidence_level": "T0 / EXECUTED FINITE RECTANGULAR-BOX MATCHING-LAYER AND SPLIT-ENVELOPE AUDIT; CONDITIONAL OPERATOR INPUTS RETAINED",
+  "non_claims": [
+    "No unbounded operator or Friedrichs-domain theorem beyond the inherited finite conditional hypotheses.",
+    "No arbitrary-box or thermodynamic exhaustion theorem, common core, common alpha or OS/KMS/GNS reconstruction.",
+    "No physical-empty sign, Reading-H stationarity, transverse stability, C6, Sector-A or Pre-A closure.",
+    "No Yang-Mills dynamics, physical mass gap or Clay-level conclusion."
+  ],
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R440.lean",
+    "theorem_markers": [
+      "box_222_edge_count",
+      "box_333_edge_count",
+      "box_543_edge_count",
+      "matching_layer_count",
+      "derived_matching_coefficient"
+    ],
+    "command": "lake env lean Tect/R440.lean",
+    "role": "Lean checks the finite edge-count, six-layer count and exact rational coefficient identities; graph and phase-space rows remain executable Python evidence."
+  },
+  "artifacts": {
+    "primary_script": "codes/foundations/pre_a_cp1_st8_q3lock_rectangular_matching_layer_family.py",
+    "independent_script": "codes/foundations/pre_a_cp1_st8_q3lock_rectangular_matching_layer_family_independent.py",
+    "hostile_script": "codes/foundations/pre_a_cp1_st8_q3lock_rectangular_matching_layer_family_hostile.py",
+    "integrated_verifier": "codes/foundations/pre_a_cp1_st8_q3lock_rectangular_matching_layer_family_verify.py",
+    "lean": "verification/lean/Tect/R440.lean",
+    "certificate": "strategy/pre-a-cp1-st8-q3lock-rectangular-matching-layer-family-certificate-260830.md",
+    "exploration": "strategy/pre-a-cp1-st8-q3lock-rectangular-matching-layer-family-exploration.json"
+  },
+  "boundary": "R-440 certifies only the declared finite rectangular boxes and phase-space fixtures. Its volume-independent coefficient is a finite conditional split-envelope observation; it does not close arbitrary-box uniformity, an unbounded common core, boundary decay, exhaustion Cauchy, common alpha, KMS/GNS, a physical sector or Yang-Mills/mass-gap claim.",
+  "formal_integration": {
+    "event_ordinal": 782,
+    "event_title": "R-440 finite rectangular matching-layer split envelope",
+    "event_id": "20260830-r-440-rectangular-matching-layer-split-envelope",
+    "new_negative": false,
+    "tier_change": false,
+    "pdf": false
+  }
+}

@@ -1,0 +1,176 @@
+{
+  "schema": "tect/pre-a-cp1-st8-q3lock-high-cutoff-schur-stress/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-HIGH-CUTOFF-SCHUR-STRESS-v0",
+  "result_id": "R-426",
+  "title": "High-cutoff finite harmonic coarse-Schur stress",
+  "task_id": "T-054",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "exploration_id": "EXP-001271",
+  "claim_bearing": false,
+  "status": "FAIL_ROUTE_LOCAL",
+  "parent_results": [
+    "R-425",
+    "R-416",
+    "R-422"
+  ],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY",
+    "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+  ],
+  "question": "Does the exact two-block harmonic coarse-Schur assembly remain positive at the high oscillator cutoffs already stressed by R-416, with the R-425 beta, orientation, tail and block rules held fixed?",
+  "new_perspective": {
+    "principle": "Extend the R-425 harmonic coarse/residual split to the high-cutoff volume-two systems of R-416 while retaining log-domain Gibbs rows and the exact sqrt(pi) projection. This tests whether the finite Schur envelope itself, rather than only the projected graph gap, survives the larger cutoff range.",
+    "route": [
+      "Reuse the hash-pinned R-419 conditional construction, R-416 log-domain rows, R-422 block-mean-zero residual basis and R-425 harmonic split without retuning model parameters.",
+      "Evaluate volume two at cutoff dimensions 14, 16, 18, 20, 24, 28, 30 and 32 for beta in {1/2,2,8} and both right/left orientations.",
+      "Retain every conditional prefix and every support-eligibility boundary; do not turn a high-cutoff sample into a uniform assertion.",
+      "Reconstruct the same finite rows in a non-importing lane, reject altered cutoff/parent/scope inputs, and compile the scalar Lean bookkeeping cross-check."
+    ],
+    "qft_bridge": "Persistence of the finite harmonic envelope sharpens the analytic target; it does not prove a cutoff-uniform common-core estimate, history transfer, OS/KMS/GNS coercivity, a sector gap, or a continuum limit."
+  },
+  "finite_theorem": {
+    "space": "For each admitted conditional row, the positive sqrt(pi)-transformed graph is split into two block-constant modes and their orthogonal complement.",
+    "harmonic_schur": "The residual complement is eliminated by the exact finite Schur solve S=A_UU-A_UV A_VV^(-1) A_VU.",
+    "residual": "The residual gap is recomputed with the R-422 block-mean-zero basis and compared with the harmonic residual block.",
+    "combined_lower_envelope": "The checked finite envelope is 0.5*min(coarse Schur gap,residual gap).",
+    "stress_interpretation": "The high-cutoff stress is stopped at the first declared residual-reuse disagreement; no positive Schur envelope is promoted beyond the rows checked before that route-local failure."
+  },
+  "upstream_authority": {
+    "r419_manifest": "strategy/pre-a-cp1-st8-q3lock-growing-volume-lyapunov-core-tail-stress-manifest.json",
+    "r419_sha256": "d5e2139c1a8af9b11f13098a8aaafabf66560bf08f011afb18900f50ae7e2881",
+    "r416_manifest": "strategy/pre-a-cp1-st8-q3lock-preconditioned-schur-cutoff-stress-manifest.json",
+    "r416_sha256": "86beca8ab0c64e7173d34ddd5acecd78b95ccaa101287571f57cb50942f91db0",
+    "r422_manifest": "strategy/pre-a-cp1-st8-q3lock-residual-core-tail-reserve-manifest.json",
+    "r422_sha256": "67e645d518dc9ebae1c1590ee045fd7147c2c9c5372097eb420155a2829b7976",
+    "r425_manifest": "strategy/pre-a-cp1-st8-q3lock-expanded-grid-schur-stress-manifest.json",
+    "r425_sha256": "8529e9d7fefa7c8051a807d503e2f26aec8392251e2c316df7128e3dbf6918a1"
+  },
+  "finite_fixture": {
+    "q3_pairs": [
+      {
+        "volume": 2,
+        "cutoff_dimensions": [
+          14,
+          16,
+          18,
+          20,
+          24,
+          28,
+          30,
+          32
+        ]
+      }
+    ],
+    "beta_values": [
+      "1/2",
+      "2",
+      "8"
+    ],
+    "orientations": [
+      "right",
+      "left"
+    ],
+    "alpha": "1/40",
+    "tail_threshold": "4",
+    "probability_floor": 1e-300,
+    "gap_floor": 1e-8,
+    "numerical_tolerance": 1e-8,
+    "comparison_tolerance": 5e-7
+  },
+  "failure_contract": {
+    "status": "FAIL_ROUTE_LOCAL",
+    "reason": "At a declared high-cutoff row the R-422 residual gap and a separately reconstructed direct residual gap disagree beyond the preregistered comparison tolerance.",
+    "volume": 2,
+    "cutoff_dimension": 16,
+    "beta": "8",
+    "orientation": "right",
+    "conditional_row_index": 7,
+    "core_size": 7,
+    "tail_size": 9,
+    "r422_residual_gap": 5.363184967163699,
+    "direct_residual_gap": 5.36318835004781,
+    "absolute_difference": 3.382884111502449e-06,
+    "comparison_tolerance": 5e-7,
+    "tolerance_relaxed": false,
+    "clipping_applied": false
+  },
+  "scope": {
+    "finite_high_cutoff_schur_closed": false,
+    "finite_harmonic_coarse_schur_closed": false,
+    "finite_residual_reuse_closed": false,
+    "finite_support_boundary_recorded": true,
+    "cutoff_uniform_coarse_schur_closed": false,
+    "volume_uniform_coarse_schur_closed": false,
+    "phase_uniform_coarse_schur_closed": false,
+    "exhaustion_uniform_coarse_schur_closed": false,
+    "global_poincare_closed": false,
+    "common_core_closed": false,
+    "common_split_rule_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R426.lean",
+    "theorem_markers": [
+      "high_cutoff_grid",
+      "positive_envelope",
+      "finite_scope"
+    ],
+    "command": "lake env lean Tect/R426.lean",
+    "role": "R426 checks only scalar envelope and high-cutoff grid bookkeeping; Python carries the matrix and Gibbs-row evidence."
+  },
+  "artifacts": {
+    "primary_script": "codes/foundations/pre_a_cp1_st8_q3lock_high_cutoff_schur_stress.py",
+    "independent_script": "codes/foundations/pre_a_cp1_st8_q3lock_high_cutoff_schur_stress_independent.py",
+    "hostile_script": "codes/foundations/pre_a_cp1_st8_q3lock_high_cutoff_schur_stress_hostile.py",
+    "integrated_verifier": "codes/foundations/pre_a_cp1_st8_q3lock_high_cutoff_schur_stress_verify.py",
+    "lean": "verification/lean/Tect/R426.lean",
+    "certificate": "strategy/pre-a-cp1-st8-q3lock-high-cutoff-schur-stress-certificate-260830.md",
+    "exploration": "strategy/pre-a-cp1-st8-q3lock-high-cutoff-schur-stress-exploration.json"
+  },
+  "assumptions": [
+    "The hash-pinned R-419 conditional law is positive and normalized and its projected momentum conductance is symmetric and nonnegative.",
+    "The R-416 log-domain reconstruction and R-422 sqrt(pi) residual basis apply at every listed finite cutoff.",
+    "Beta values, orientations, alpha=1/40, tail threshold four, probability floor and gap floor are fixed across the stress.",
+    "Every admitted block has at least two core and two tail coordinates and a positive residual block before the harmonic solve.",
+    "Declared numerical tolerances are comparison thresholds only and lower bounds are never rounded upward."
+  ],
+  "missing_assumptions": [
+    "A cutoff-, volume-, phase- and exhaustion-uniform lower bound for the coarse Schur and residual forms on one Hamiltonian common core.",
+    "A common split-limit map and two-sided form control as the oscillator cutoff is removed.",
+    "Uniform control of actual R-399 histories and transfer through the R-415 semigroup interface.",
+    "Hamiltonian-to-OS/KMS/GNS identification, physical-sector projection and a sectorwise coercive estimate."
+  ],
+  "promotion_criteria": [
+    "Prove an analytic Schur/residual estimate on a domain-controlled unbounded Q3 common core.",
+    "Establish a positive envelope uniform in cutoff, volume, phase and exhaustion rather than only on this high-cutoff sample.",
+    "Transfer that envelope through the history and OS/KMS/GNS interfaces before any sector or physical promotion."
+  ],
+  "stop_conditions": [
+    "A singular residual block, nonpositive Schur gap or independent disagreement stops this high-cutoff lane and is retained as a finite construction failure.",
+    "A residual-reuse difference above the fixed comparison tolerance stops the lane; the tolerance must not be relaxed or hidden by clipping.",
+    "A collapse of the finite combined envelope is recorded without clipping and does not imply physical gaplessness.",
+    "Finite stress positivity cannot be promoted to a common-core, GNS, continuum, C6, Sector-A, Pre-A, Yang-Mills or mass-gap conclusion."
+  ],
+  "evidence_level": "T0 / executed high-cutoff finite stress with a declared route-local residual-reuse failure; no uniform theorem or physical conclusion",
+  "non_claims": [
+    "No accepted high-cutoff Schur or residual-reuse closure after the route-local failure.",
+    "No cutoff-, volume-, phase- or exhaustion-uniform coarse or residual bound.",
+    "No global Poincare theorem, common Hamiltonian core or common split-limit map.",
+    "No history transfer, OS/KMS/GNS reconstruction or sectorwise gap.",
+    "No continuum, C6, Sector-A, Pre-A, Yang-Mills or mass-gap conclusion."
+  ],
+  "boundary": "R-426 is a finite high-cutoff stress of the R-425 harmonic Schur assembly at volume two. It stops at the declared V=2, d=16, beta=8, right-orientation residual-reuse mismatch and records a route-local finite construction failure; it does not close the Q3LOCK parent gates.",
+  "next_unlock": "Reconcile the independently reconstructed residual basis with the R-422 harmonic residual at high cutoff using a declared precision/basis convention, then rerun without changing the comparison tolerance before attempting any analytic common-core estimate.",
+  "no_overclaim": "The route-local numerical mismatch is not a physical no-go theorem. It does not imply gaplessness, regulator dependence of the theory, or any Yang-Mills or mass-gap conclusion."
+}

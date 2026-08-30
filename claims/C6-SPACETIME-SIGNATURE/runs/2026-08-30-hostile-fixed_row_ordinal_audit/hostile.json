@@ -1,0 +1,74 @@
+{
+  "assertion_count": 7,
+  "assumptions": [
+    "The R-426 failure manifest's conditional_row_index is an emission ordinal, not an array index with an additional subtract-one conversion.",
+    "The conditional_rows emission order is the declared radius-0 row followed by radius-1 rows in parent-coordinate order for the right orientation.",
+    "The R-419/R-416/R-402 finite source formulas and fixed tail split are the unchanged finite model under audit.",
+    "The direct residual gap is recomputed from the selected finite row with the unchanged 5e-7 comparison tolerance."
+  ],
+  "boundary": "R-432 repairs the finite row-ordinal interpretation and removes the R-430 independent lane's subtract-one value from the target comparison. It preserves the R-426 route-local residual-reuse failure and leaves the original-source interval, common-core, physical-sector and continuum gates open.",
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "controls": {
+    "all_mutations_rejected": true,
+    "mutations": [
+      {
+        "name": "select ordinal 6 as target",
+        "reason": "target ordinal or parent mapping changed",
+        "status": "REJECTED"
+      },
+      {
+        "name": "map target to parent 5",
+        "reason": "target ordinal or parent mapping changed",
+        "status": "REJECTED"
+      },
+      {
+        "name": "alias historical subtract-one with target",
+        "reason": "historical subtract-one row aliases target",
+        "status": "REJECTED"
+      },
+      {
+        "name": "relax comparison tolerance",
+        "reason": "comparison tolerance changed",
+        "status": "REJECTED"
+      },
+      {
+        "name": "promote claim-bearing status",
+        "reason": "identity mutation accepted",
+        "status": "REJECTED"
+      },
+      {
+        "name": "promote original-source interval",
+        "reason": "source or tier scope promoted",
+        "status": "REJECTED"
+      },
+      {
+        "name": "drop unconditional ordinal from order",
+        "reason": "emission order contract changed",
+        "status": "REJECTED"
+      }
+    ],
+    "no_tier_change": true,
+    "original_source_interval_certified": false,
+    "residual_reuse_closed": false
+  },
+  "evidence_level": "T0 / EXECUTED FINITE ROW-CONTRACT CORRECTION AND REPRODUCTION; NO ORIGINAL-SOURCE INTERVAL CERTIFICATION",
+  "exploration_id": "EXP-001277",
+  "manifest": "strategy/pre-a-cp1-st8-q3lock-fixed-row-ordinal-audit-manifest.json",
+  "missing_assumptions": [
+    "Validated interval or ball enclosures for the original coordinate and 256-dimensional Hamiltonian eigensystems.",
+    "A propagated original-source enclosure for Gibbs normalization, row selection, conductance and residual eigenvalue.",
+    "A basis-independent analytic common-core estimate uniform in cutoff, volume, phase and exhaustion.",
+    "History transfer, OS/KMS/GNS identification, physical-sector selection and continuum control."
+  ],
+  "non_claims": [
+    "No interval or exact certification of the original Hamiltonian, coordinate eigenbasis or Gibbs weights.",
+    "No closure of R-426 residual reuse for the original unrounded source.",
+    "No cutoff-, volume-, phase- or exhaustion-uniform Schur or residual estimate.",
+    "No common core, history transfer, OS/KMS/GNS reconstruction, sector gap or continuum limit.",
+    "No C6, Sector-A, Pre-A, Yang-Mills or mass-gap conclusion."
+  ],
+  "result_id": "R-432",
+  "run_kind": "hostile",
+  "schema": "tect/pre-a-r432-hostile/1.0",
+  "verdict": "PASS"
+}

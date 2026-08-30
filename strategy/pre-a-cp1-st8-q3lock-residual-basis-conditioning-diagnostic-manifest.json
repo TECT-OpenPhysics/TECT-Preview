@@ -1,0 +1,158 @@
+{
+  "schema": "tect/pre-a-cp1-st8-q3lock-residual-basis-conditioning-diagnostic/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-RESIDUAL-BASIS-CONDITIONING-DIAGNOSTIC-v0",
+  "result_id": "R-428",
+  "title": "High-cutoff residual-basis conditioning diagnostic",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001273",
+  "claim_bearing": false,
+  "status": "INCONCLUSIVE_CONDITIONING",
+  "parent_results": ["R-426", "R-422", "R-406"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY",
+    "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+  ],
+  "question": "Does the R-426 residual-reuse mismatch at the fixed high-cutoff row arise from a conditioning-amplified basis representation difference, or does it persist as an algebraic disagreement after basis-invariant cross-checks?",
+  "new_perspective": {
+    "principle": "Keep the R-426 failing row and 5e-7 comparison tolerance fixed while comparing the residual subspace through independent orthonormal bases and an explicit constraint projector.",
+    "route": [
+      "Reconstruct the R-426 row from the hash-pinned R-419, R-416 and R-422 parents without importing the R-426 primary output.",
+      "Compute the R-422 blockwise weighted-zero-mean basis, the R-406 block-complement basis, a constraint-projector nullspace basis and a Householder QR nullspace basis.",
+      "Measure orthogonality, block-constraint residuals, cross-Gram singular values, projector distance, operator norm and the first residual Rayleigh value for every basis.",
+      "Compare the fixed R-426 residual-reuse difference with the conditioning amplification budget; classify only as an inconclusive diagnostic unless a precision-certified invariant value is obtained."
+    ],
+    "qft_bridge": "A conditioning diagnostic identifies a finite numerical boundary for a future analytic common-core estimate; it does not prove a cutoff-uniform gap, a physical sector or any Yang-Mills statement."
+  },
+  "diagnostic_contract": {
+    "fixed_failure_row": {
+      "volume": 2,
+      "cutoff_dimension": 16,
+      "beta": "8",
+      "orientation": "right",
+      "conditional_row_index": 7,
+      "core_size": 7,
+      "tail_size": 9,
+      "r422_residual_gap": 5.363184967163699,
+      "r426_direct_residual_gap": 5.36318835004781,
+      "r426_absolute_difference": 3.382884111502449e-06,
+      "comparison_tolerance": 5e-7
+    },
+    "required_methods": [
+      "r422 weighted blockwise zero-mean basis",
+      "r406 block-complement basis",
+      "explicit normalized constraint projector",
+      "Householder complete-QR nullspace basis"
+    ],
+    "metrics": [
+      "positive normalized weights and reversible conductance",
+      "basis orthogonality and block-constraint residual",
+      "cross-Gram singular-value deviation",
+      "residual-subspace projector distance",
+      "symmetric operator spectral norm",
+      "basis residual-gap spread",
+      "two-norm conditioning amplification budget"
+    ],
+    "thresholds": {
+      "dynamic_range_floor": 100000000.0,
+      "projector_tolerance": 1e-12,
+      "orthogonality_tolerance": 1e-12,
+      "constraint_tolerance": 1e-12,
+      "cross_gram_tolerance": 1e-12,
+      "comparison_tolerance": 5e-7,
+      "reconstruction_tolerance": 1e-7
+    }
+  },
+  "upstream_authority": {
+    "r426_manifest": "strategy/pre-a-cp1-st8-q3lock-high-cutoff-schur-stress-manifest.json",
+    "r426_sha256": "0292aec6ec398cf7358e4e618f7623880543b9374a1501d3d3fa362db29901b0",
+    "r419_manifest": "strategy/pre-a-cp1-st8-q3lock-growing-volume-lyapunov-core-tail-stress-manifest.json",
+    "r419_sha256": "d5e2139c1a8af9b11f13098a8aaafabf66560bf08f011afb18900f50ae7e2881",
+    "r416_manifest": "strategy/pre-a-cp1-st8-q3lock-preconditioned-schur-cutoff-stress-manifest.json",
+    "r416_sha256": "86beca8ab0c64e7173d34ddd5acecd78b95ccaa101287571f57cb50942f91db0",
+    "r422_manifest": "strategy/pre-a-cp1-st8-q3lock-residual-core-tail-reserve-manifest.json",
+    "r422_sha256": "67e645d518dc9ebae1c1590ee045fd7147c2c9c5372097eb420155a2829b7976",
+    "r406_manifest": "strategy/pre-a-cp1-st8-q3lock-harmonic-schur-capacity-manifest.json",
+    "r406_sha256": "7a353000b23a30f7eadd5575495a6a4f11b85806542c1d75d4a112f03d7bb1e0"
+  },
+  "finite_fixture": {
+    "volume": 2,
+    "cutoff_dimension": 16,
+    "beta": "8",
+    "orientation": "right",
+    "conditional_row_index": 7,
+    "alpha": "1/40",
+    "tail_threshold": "4",
+    "probability_floor": 1e-300,
+    "r422_residual_gap": 5.363184967163699,
+    "comparison_tolerance": 5e-7
+  },
+  "scope": {
+    "finite_conditioning_diagnostic_closed": true,
+    "fixed_row_reconstructed": true,
+    "basis_projector_crosswalk_closed": true,
+    "conditioning_explanation_proved": false,
+    "residual_reuse_closed": false,
+    "r426_route_failure_preserved": true,
+    "cutoff_uniform_coarse_schur_closed": false,
+    "volume_uniform_coarse_schur_closed": false,
+    "phase_uniform_coarse_schur_closed": false,
+    "exhaustion_uniform_coarse_schur_closed": false,
+    "global_poincare_closed": false,
+    "common_core_closed": false,
+    "common_split_rule_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "assumptions": [
+    "The hash-pinned R-419 conditional law, R-416 log-domain row and R-422/R-406 finite basis constructions are the declared inputs.",
+    "The fixed R-426 row and comparison tolerance are not changed during the diagnostic.",
+    "The normalized constraint rows represent the same blockwise weighted-zero-mean residual subspace in exact arithmetic.",
+    "A two-norm perturbation budget is recorded as a conditioning diagnostic, not promoted as a certified error bound for the underlying eigensolver.",
+    "Double-precision basis agreement cannot by itself certify the exact residual gap when the operator norm is large."
+  ],
+  "missing_assumptions": [
+    "An arbitrary-precision or interval-certified eigensolve for the failing residual subspace.",
+    "A basis-independent exact or rigorously bounded residual-reuse value at the high cutoff.",
+    "A common unbounded Q3 Hamiltonian core and a cutoff/volume-uniform perturbation estimate.",
+    "Transfer of any repaired finite residual value through history, OS/KMS/GNS and physical-sector interfaces."
+  ],
+  "stop_conditions": [
+    "If the independent bases violate the fixed projector/constraint tolerances, classify the route as a construction failure and retain R-426.",
+    "If the conditioning budget is below the fixed mismatch, do not label the mismatch conditioning-supported; retain an algebraic/inconclusive boundary.",
+    "Do not relax the R-426 comparison tolerance, clip a residual or promote a finite diagnostic to a uniform theorem."
+  ],
+  "evidence_level": "T0 / EXECUTED FINITE CONDITIONING AND BASIS-CROSSWALK DIAGNOSTIC; the cause of the R-426 mismatch remains inconclusive and no residual-reuse closure is claimed",
+  "non_claims": [
+    "No repair or closure of the R-426 residual-reuse failure.",
+    "No proof that the mismatch is solely floating-point roundoff or solely algebraic.",
+    "No cutoff-, volume-, phase- or exhaustion-uniform Schur/residual bound.",
+    "No common core, history transfer, OS/KMS/GNS reconstruction, sector gap or continuum limit.",
+    "No C6, Sector-A, Pre-A, Yang-Mills or mass-gap conclusion."
+  ],
+  "boundary": "R-428 reconstructs one R-426 high-cutoff residual row and quantifies basis conditioning. The residual subspace projectors agree to near machine precision while the operator norm creates an amplification budget larger than the fixed comparison tolerance; without precision certification the route remains INCONCLUSIVE_CONDITIONING and R-426's failure is preserved.",
+  "next_unlock": "Implement an arbitrary-precision or interval-certified basis-invariant residual eigensolve for the fixed row, compare it with the R-422 value without changing tolerance, and only then decide whether residual reuse can be repaired.",
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R428.lean",
+    "theorem_markers": ["projector_distance_bound", "conditioning_budget_dominates_tolerance", "finite_scope"],
+    "command": "lake env lean Tect/R428.lean",
+    "role": "R428 Lean checks only the finite scalar diagnostic inequalities; Python carries the matrix reconstruction."
+  },
+  "artifacts": {
+    "primary_script": "codes/foundations/pre_a_cp1_st8_q3lock_residual_basis_conditioning_diagnostic.py",
+    "independent_script": "codes/foundations/pre_a_cp1_st8_q3lock_residual_basis_conditioning_diagnostic_independent.py",
+    "hostile_script": "codes/foundations/pre_a_cp1_st8_q3lock_residual_basis_conditioning_diagnostic_hostile.py",
+    "integrated_verifier": "codes/foundations/pre_a_cp1_st8_q3lock_residual_basis_conditioning_diagnostic_verify.py",
+    "lean": "verification/lean/Tect/R428.lean",
+    "certificate": "strategy/pre-a-cp1-st8-q3lock-residual-basis-conditioning-diagnostic-certificate-260830.md",
+    "exploration": "strategy/pre-a-cp1-st8-q3lock-residual-basis-conditioning-diagnostic-exploration.json"
+  }
+}

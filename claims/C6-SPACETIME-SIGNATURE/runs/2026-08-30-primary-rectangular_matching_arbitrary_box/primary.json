@@ -1,0 +1,6478 @@
+{
+  "assertion_count": 235319,
+  "assertion_samples_truncated": true,
+  "assertions": [
+    {
+      "actual": [
+        "R-443",
+        "EXP-001288",
+        "T-054",
+        false,
+        "ARBITRARY_BOX_MATCHING_THEOREM_AUDITED"
+      ],
+      "expected": "R-443/EXP-001288/T-054/false/audited",
+      "group": "provenance",
+      "name": "identity",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        3,
+        2,
+        2,
+        8
+      ],
+      "expected": "3D, parity 2, sides 2..8",
+      "group": "contract",
+      "name": "contract",
+      "status": "PASS"
+    },
+    {
+      "actual": "(axis, lower_coordinate[axis] mod parity_modulus)",
+      "expected": "lower endpoint parity",
+      "group": "contract",
+      "name": "colour rule",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "claim nonbearing",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "scope",
+      "name": "scope firewall arbitrary_box_edge_colouring_closed",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "scope firewall weighted_operator_form_closed",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "scope firewall boundary_commutator_decay_closed",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "scope firewall history_tail_closed",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "scope firewall exhaustion_cauchy_closed",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "scope firewall common_core_closed",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "scope firewall common_alpha_closed",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "scope firewall kms_gns_gap_closed",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "scope firewall physical_empty_closed",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "scope firewall continuum_closed",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "scope firewall c6_closed",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "scope firewall sector_a_closed",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "scope firewall pre_a_closed",
+      "status": "PASS"
+    },
+    {
+      "actual": 343,
+      "expected": 343,
+      "group": "coverage",
+      "name": "complete box family",
+      "status": "PASS"
+    },
+    {
+      "actual": 6,
+      "expected": 6,
+      "group": "graph",
+      "name": "six colour keys",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        2,
+        2,
+        2
+      ],
+      "expected": "all sides >=2",
+      "group": "graph",
+      "name": "box 0 sides",
+      "status": "PASS"
+    },
+    {
+      "actual": 8,
+      "expected": 8,
+      "group": "graph",
+      "name": "box 0 vertices",
+      "status": "PASS"
+    },
+    {
+      "actual": 12,
+      "expected": 12,
+      "group": "graph",
+      "name": "box 0 edges",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "expected": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "group": "graph",
+      "name": "box 0 keys",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0,
+        0
+      ],
+      "expected": [
+        0,
+        0
+      ],
+      "group": "graph",
+      "name": "box 0 colour (0, 0)",
+      "status": "PASS"
+    }
+  ],
+  "assumptions": [
+    "Vertices are integer coordinate vectors in a finite rectangular box with every side length at least two.",
+    "Edges are only nearest-neighbour coordinate increments and have a unique lower endpoint and axis.",
+    "The layer colour is the axis together with the lower endpoint coordinate modulo two; empty colour slots remain represented.",
+    "The Lean theorem quantifies over arbitrary finite dimension and side functions for the local matching implication, while the executable aggregate sweep is three-dimensional.",
+    "The finite [2,8]^3 sweep is an implementation cross-check of the general combinatorial theorem, not an operator or thermodynamic limit."
+  ],
+  "boundary": "R-443 closes only the abstract arbitrary finite-box axis-parity matching property and exact edge-count bookkeeping, with the local incidence implication proved in Lean. It does not close weighted Q3LOCK forms, operator domains, boundary/history tails, exhaustion, common alpha, KMS/GNS, physical-empty, Sector-A, Pre-A, Yang-Mills or mass-gap claims.",
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "derived": {
+    "arbitrary_box_edge_colouring_closed": true,
+    "boundary_commutator_decay_closed": false,
+    "box_count": 343,
+    "boxes": [
+      {
+        "edges": 12,
+        "empty_layer_count": 3,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 0,
+          "(1, 0)": 1,
+          "(1, 1)": 0,
+          "(2, 0)": 1,
+          "(2, 1)": 0
+        },
+        "sides": [
+          2,
+          2,
+          2
+        ],
+        "vertices": 8
+      },
+      {
+        "edges": 20,
+        "empty_layer_count": 2,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 0,
+          "(1, 0)": 1,
+          "(1, 1)": 0,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          2,
+          2,
+          3
+        ],
+        "vertices": 12
+      },
+      {
+        "edges": 28,
+        "empty_layer_count": 2,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 0,
+          "(1, 0)": 1,
+          "(1, 1)": 0,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          2,
+          2,
+          4
+        ],
+        "vertices": 16
+      },
+      {
+        "edges": 36,
+        "empty_layer_count": 2,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 0,
+          "(1, 0)": 1,
+          "(1, 1)": 0,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          2,
+          2,
+          5
+        ],
+        "vertices": 20
+      },
+      {
+        "edges": 44,
+        "empty_layer_count": 2,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 0,
+          "(1, 0)": 1,
+          "(1, 1)": 0,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          2,
+          2,
+          6
+        ],
+        "vertices": 24
+      },
+      {
+        "edges": 52,
+        "empty_layer_count": 2,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 0,
+          "(1, 0)": 1,
+          "(1, 1)": 0,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          2,
+          2,
+          7
+        ],
+        "vertices": 28
+      },
+      {
+        "edges": 60,
+        "empty_layer_count": 2,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 0,
+          "(1, 0)": 1,
+          "(1, 1)": 0,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          2,
+          2,
+          8
+        ],
+        "vertices": 32
+      },
+      {
+        "edges": 20,
+        "empty_layer_count": 2,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 0,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 0
+        },
+        "sides": [
+          2,
+          3,
+          2
+        ],
+        "vertices": 12
+      },
+      {
+        "edges": 33,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 0,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          2,
+          3,
+          3
+        ],
+        "vertices": 18
+      },
+      {
+        "edges": 46,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 0,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          2,
+          3,
+          4
+        ],
+        "vertices": 24
+      },
+      {
+        "edges": 59,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 0,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          2,
+          3,
+          5
+        ],
+        "vertices": 30
+      },
+      {
+        "edges": 72,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 0,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          2,
+          3,
+          6
+        ],
+        "vertices": 36
+      },
+      {
+        "edges": 85,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 0,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          2,
+          3,
+          7
+        ],
+        "vertices": 42
+      },
+      {
+        "edges": 98,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 0,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          2,
+          3,
+          8
+        ],
+        "vertices": 48
+      },
+      {
+        "edges": 28,
+        "empty_layer_count": 2,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 0,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 0
+        },
+        "sides": [
+          2,
+          4,
+          2
+        ],
+        "vertices": 16
+      },
+      {
+        "edges": 46,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 0,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          2,
+          4,
+          3
+        ],
+        "vertices": 24
+      },
+      {
+        "edges": 64,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 0,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          2,
+          4,
+          4
+        ],
+        "vertices": 32
+      },
+      {
+        "edges": 82,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 0,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          2,
+          4,
+          5
+        ],
+        "vertices": 40
+      },
+      {
+        "edges": 100,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 0,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          2,
+          4,
+          6
+        ],
+        "vertices": 48
+      },
+      {
+        "edges": 118,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 0,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          2,
+          4,
+          7
+        ],
+        "vertices": 56
+      },
+      {
+        "edges": 136,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 0,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          2,
+          4,
+          8
+        ],
+        "vertices": 64
+      },
+      {
+        "edges": 36,
+        "empty_layer_count": 2,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 0,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 0
+        },
+        "sides": [
+          2,
+          5,
+          2
+        ],
+        "vertices": 20
+      },
+      {
+        "edges": 59,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 0,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          2,
+          5,
+          3
+        ],
+        "vertices": 30
+      },
+      {
+        "edges": 82,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 0,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          2,
+          5,
+          4
+        ],
+        "vertices": 40
+      },
+      {
+        "edges": 105,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 0,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          2,
+          5,
+          5
+        ],
+        "vertices": 50
+      },
+      {
+        "edges": 128,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 0,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          2,
+          5,
+          6
+        ],
+        "vertices": 60
+      },
+      {
+        "edges": 151,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 0,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          2,
+          5,
+          7
+        ],
+        "vertices": 70
+      },
+      {
+        "edges": 174,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 0,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          2,
+          5,
+          8
+        ],
+        "vertices": 80
+      },
+      {
+        "edges": 44,
+        "empty_layer_count": 2,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 0,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 0
+        },
+        "sides": [
+          2,
+          6,
+          2
+        ],
+        "vertices": 24
+      },
+      {
+        "edges": 72,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 0,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          2,
+          6,
+          3
+        ],
+        "vertices": 36
+      },
+      {
+        "edges": 100,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 0,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          2,
+          6,
+          4
+        ],
+        "vertices": 48
+      },
+      {
+        "edges": 128,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 0,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          2,
+          6,
+          5
+        ],
+        "vertices": 60
+      },
+      {
+        "edges": 156,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 0,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          2,
+          6,
+          6
+        ],
+        "vertices": 72
+      },
+      {
+        "edges": 184,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 0,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          2,
+          6,
+          7
+        ],
+        "vertices": 84
+      },
+      {
+        "edges": 212,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 0,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          2,
+          6,
+          8
+        ],
+        "vertices": 96
+      },
+      {
+        "edges": 52,
+        "empty_layer_count": 2,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 0,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 0
+        },
+        "sides": [
+          2,
+          7,
+          2
+        ],
+        "vertices": 28
+      },
+      {
+        "edges": 85,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 0,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          2,
+          7,
+          3
+        ],
+        "vertices": 42
+      },
+      {
+        "edges": 118,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 0,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          2,
+          7,
+          4
+        ],
+        "vertices": 56
+      },
+      {
+        "edges": 151,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 0,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          2,
+          7,
+          5
+        ],
+        "vertices": 70
+      },
+      {
+        "edges": 184,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 0,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          2,
+          7,
+          6
+        ],
+        "vertices": 84
+      },
+      {
+        "edges": 217,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 0,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          2,
+          7,
+          7
+        ],
+        "vertices": 98
+      },
+      {
+        "edges": 250,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 0,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          2,
+          7,
+          8
+        ],
+        "vertices": 112
+      },
+      {
+        "edges": 60,
+        "empty_layer_count": 2,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 0,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 0
+        },
+        "sides": [
+          2,
+          8,
+          2
+        ],
+        "vertices": 32
+      },
+      {
+        "edges": 98,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 0,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          2,
+          8,
+          3
+        ],
+        "vertices": 48
+      },
+      {
+        "edges": 136,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 0,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          2,
+          8,
+          4
+        ],
+        "vertices": 64
+      },
+      {
+        "edges": 174,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 0,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          2,
+          8,
+          5
+        ],
+        "vertices": 80
+      },
+      {
+        "edges": 212,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 0,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          2,
+          8,
+          6
+        ],
+        "vertices": 96
+      },
+      {
+        "edges": 250,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 0,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          2,
+          8,
+          7
+        ],
+        "vertices": 112
+      },
+      {
+        "edges": 288,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 0,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          2,
+          8,
+          8
+        ],
+        "vertices": 128
+      },
+      {
+        "edges": 20,
+        "empty_layer_count": 2,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 0,
+          "(2, 0)": 1,
+          "(2, 1)": 0
+        },
+        "sides": [
+          3,
+          2,
+          2
+        ],
+        "vertices": 12
+      },
+      {
+        "edges": 33,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 0,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          3,
+          2,
+          3
+        ],
+        "vertices": 18
+      },
+      {
+        "edges": 46,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 0,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          3,
+          2,
+          4
+        ],
+        "vertices": 24
+      },
+      {
+        "edges": 59,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 0,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          3,
+          2,
+          5
+        ],
+        "vertices": 30
+      },
+      {
+        "edges": 72,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 0,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          3,
+          2,
+          6
+        ],
+        "vertices": 36
+      },
+      {
+        "edges": 85,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 0,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          3,
+          2,
+          7
+        ],
+        "vertices": 42
+      },
+      {
+        "edges": 98,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 0,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          3,
+          2,
+          8
+        ],
+        "vertices": 48
+      },
+      {
+        "edges": 33,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 0
+        },
+        "sides": [
+          3,
+          3,
+          2
+        ],
+        "vertices": 18
+      },
+      {
+        "edges": 54,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          3,
+          3,
+          3
+        ],
+        "vertices": 27
+      },
+      {
+        "edges": 75,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          3,
+          3,
+          4
+        ],
+        "vertices": 36
+      },
+      {
+        "edges": 96,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          3,
+          3,
+          5
+        ],
+        "vertices": 45
+      },
+      {
+        "edges": 117,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          3,
+          3,
+          6
+        ],
+        "vertices": 54
+      },
+      {
+        "edges": 138,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          3,
+          3,
+          7
+        ],
+        "vertices": 63
+      },
+      {
+        "edges": 159,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          3,
+          3,
+          8
+        ],
+        "vertices": 72
+      },
+      {
+        "edges": 46,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 0
+        },
+        "sides": [
+          3,
+          4,
+          2
+        ],
+        "vertices": 24
+      },
+      {
+        "edges": 75,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          3,
+          4,
+          3
+        ],
+        "vertices": 36
+      },
+      {
+        "edges": 104,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          3,
+          4,
+          4
+        ],
+        "vertices": 48
+      },
+      {
+        "edges": 133,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          3,
+          4,
+          5
+        ],
+        "vertices": 60
+      },
+      {
+        "edges": 162,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          3,
+          4,
+          6
+        ],
+        "vertices": 72
+      },
+      {
+        "edges": 191,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          3,
+          4,
+          7
+        ],
+        "vertices": 84
+      },
+      {
+        "edges": 220,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          3,
+          4,
+          8
+        ],
+        "vertices": 96
+      },
+      {
+        "edges": 59,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 0
+        },
+        "sides": [
+          3,
+          5,
+          2
+        ],
+        "vertices": 30
+      },
+      {
+        "edges": 96,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          3,
+          5,
+          3
+        ],
+        "vertices": 45
+      },
+      {
+        "edges": 133,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          3,
+          5,
+          4
+        ],
+        "vertices": 60
+      },
+      {
+        "edges": 170,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          3,
+          5,
+          5
+        ],
+        "vertices": 75
+      },
+      {
+        "edges": 207,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          3,
+          5,
+          6
+        ],
+        "vertices": 90
+      },
+      {
+        "edges": 244,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          3,
+          5,
+          7
+        ],
+        "vertices": 105
+      },
+      {
+        "edges": 281,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          3,
+          5,
+          8
+        ],
+        "vertices": 120
+      },
+      {
+        "edges": 72,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 0
+        },
+        "sides": [
+          3,
+          6,
+          2
+        ],
+        "vertices": 36
+      },
+      {
+        "edges": 117,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          3,
+          6,
+          3
+        ],
+        "vertices": 54
+      },
+      {
+        "edges": 162,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          3,
+          6,
+          4
+        ],
+        "vertices": 72
+      },
+      {
+        "edges": 207,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          3,
+          6,
+          5
+        ],
+        "vertices": 90
+      },
+      {
+        "edges": 252,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          3,
+          6,
+          6
+        ],
+        "vertices": 108
+      },
+      {
+        "edges": 297,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          3,
+          6,
+          7
+        ],
+        "vertices": 126
+      },
+      {
+        "edges": 342,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          3,
+          6,
+          8
+        ],
+        "vertices": 144
+      },
+      {
+        "edges": 85,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 0
+        },
+        "sides": [
+          3,
+          7,
+          2
+        ],
+        "vertices": 42
+      },
+      {
+        "edges": 138,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          3,
+          7,
+          3
+        ],
+        "vertices": 63
+      },
+      {
+        "edges": 191,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          3,
+          7,
+          4
+        ],
+        "vertices": 84
+      },
+      {
+        "edges": 244,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          3,
+          7,
+          5
+        ],
+        "vertices": 105
+      },
+      {
+        "edges": 297,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          3,
+          7,
+          6
+        ],
+        "vertices": 126
+      },
+      {
+        "edges": 350,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          3,
+          7,
+          7
+        ],
+        "vertices": 147
+      },
+      {
+        "edges": 403,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          3,
+          7,
+          8
+        ],
+        "vertices": 168
+      },
+      {
+        "edges": 98,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 0
+        },
+        "sides": [
+          3,
+          8,
+          2
+        ],
+        "vertices": 48
+      },
+      {
+        "edges": 159,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          3,
+          8,
+          3
+        ],
+        "vertices": 72
+      },
+      {
+        "edges": 220,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          3,
+          8,
+          4
+        ],
+        "vertices": 96
+      },
+      {
+        "edges": 281,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          3,
+          8,
+          5
+        ],
+        "vertices": 120
+      },
+      {
+        "edges": 342,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          3,
+          8,
+          6
+        ],
+        "vertices": 144
+      },
+      {
+        "edges": 403,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          3,
+          8,
+          7
+        ],
+        "vertices": 168
+      },
+      {
+        "edges": 464,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          3,
+          8,
+          8
+        ],
+        "vertices": 192
+      },
+      {
+        "edges": 28,
+        "empty_layer_count": 2,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 0,
+          "(2, 0)": 1,
+          "(2, 1)": 0
+        },
+        "sides": [
+          4,
+          2,
+          2
+        ],
+        "vertices": 16
+      },
+      {
+        "edges": 46,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 0,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          4,
+          2,
+          3
+        ],
+        "vertices": 24
+      },
+      {
+        "edges": 64,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 0,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          4,
+          2,
+          4
+        ],
+        "vertices": 32
+      },
+      {
+        "edges": 82,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 0,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          4,
+          2,
+          5
+        ],
+        "vertices": 40
+      },
+      {
+        "edges": 100,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 0,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          4,
+          2,
+          6
+        ],
+        "vertices": 48
+      },
+      {
+        "edges": 118,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 0,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          4,
+          2,
+          7
+        ],
+        "vertices": 56
+      },
+      {
+        "edges": 136,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 0,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          4,
+          2,
+          8
+        ],
+        "vertices": 64
+      },
+      {
+        "edges": 46,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 0
+        },
+        "sides": [
+          4,
+          3,
+          2
+        ],
+        "vertices": 24
+      },
+      {
+        "edges": 75,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          4,
+          3,
+          3
+        ],
+        "vertices": 36
+      },
+      {
+        "edges": 104,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          4,
+          3,
+          4
+        ],
+        "vertices": 48
+      },
+      {
+        "edges": 133,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          4,
+          3,
+          5
+        ],
+        "vertices": 60
+      },
+      {
+        "edges": 162,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          4,
+          3,
+          6
+        ],
+        "vertices": 72
+      },
+      {
+        "edges": 191,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          4,
+          3,
+          7
+        ],
+        "vertices": 84
+      },
+      {
+        "edges": 220,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          4,
+          3,
+          8
+        ],
+        "vertices": 96
+      },
+      {
+        "edges": 64,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 0
+        },
+        "sides": [
+          4,
+          4,
+          2
+        ],
+        "vertices": 32
+      },
+      {
+        "edges": 104,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          4,
+          4,
+          3
+        ],
+        "vertices": 48
+      },
+      {
+        "edges": 144,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          4,
+          4,
+          4
+        ],
+        "vertices": 64
+      },
+      {
+        "edges": 184,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          4,
+          4,
+          5
+        ],
+        "vertices": 80
+      },
+      {
+        "edges": 224,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          4,
+          4,
+          6
+        ],
+        "vertices": 96
+      },
+      {
+        "edges": 264,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          4,
+          4,
+          7
+        ],
+        "vertices": 112
+      },
+      {
+        "edges": 304,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          4,
+          4,
+          8
+        ],
+        "vertices": 128
+      },
+      {
+        "edges": 82,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 0
+        },
+        "sides": [
+          4,
+          5,
+          2
+        ],
+        "vertices": 40
+      },
+      {
+        "edges": 133,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          4,
+          5,
+          3
+        ],
+        "vertices": 60
+      },
+      {
+        "edges": 184,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          4,
+          5,
+          4
+        ],
+        "vertices": 80
+      },
+      {
+        "edges": 235,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          4,
+          5,
+          5
+        ],
+        "vertices": 100
+      },
+      {
+        "edges": 286,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          4,
+          5,
+          6
+        ],
+        "vertices": 120
+      },
+      {
+        "edges": 337,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          4,
+          5,
+          7
+        ],
+        "vertices": 140
+      },
+      {
+        "edges": 388,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          4,
+          5,
+          8
+        ],
+        "vertices": 160
+      },
+      {
+        "edges": 100,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 0
+        },
+        "sides": [
+          4,
+          6,
+          2
+        ],
+        "vertices": 48
+      },
+      {
+        "edges": 162,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          4,
+          6,
+          3
+        ],
+        "vertices": 72
+      },
+      {
+        "edges": 224,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          4,
+          6,
+          4
+        ],
+        "vertices": 96
+      },
+      {
+        "edges": 286,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          4,
+          6,
+          5
+        ],
+        "vertices": 120
+      },
+      {
+        "edges": 348,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          4,
+          6,
+          6
+        ],
+        "vertices": 144
+      },
+      {
+        "edges": 410,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          4,
+          6,
+          7
+        ],
+        "vertices": 168
+      },
+      {
+        "edges": 472,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          4,
+          6,
+          8
+        ],
+        "vertices": 192
+      },
+      {
+        "edges": 118,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 0
+        },
+        "sides": [
+          4,
+          7,
+          2
+        ],
+        "vertices": 56
+      },
+      {
+        "edges": 191,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          4,
+          7,
+          3
+        ],
+        "vertices": 84
+      },
+      {
+        "edges": 264,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          4,
+          7,
+          4
+        ],
+        "vertices": 112
+      },
+      {
+        "edges": 337,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          4,
+          7,
+          5
+        ],
+        "vertices": 140
+      },
+      {
+        "edges": 410,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          4,
+          7,
+          6
+        ],
+        "vertices": 168
+      },
+      {
+        "edges": 483,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          4,
+          7,
+          7
+        ],
+        "vertices": 196
+      },
+      {
+        "edges": 556,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          4,
+          7,
+          8
+        ],
+        "vertices": 224
+      },
+      {
+        "edges": 136,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 0
+        },
+        "sides": [
+          4,
+          8,
+          2
+        ],
+        "vertices": 64
+      },
+      {
+        "edges": 220,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          4,
+          8,
+          3
+        ],
+        "vertices": 96
+      },
+      {
+        "edges": 304,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          4,
+          8,
+          4
+        ],
+        "vertices": 128
+      },
+      {
+        "edges": 388,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          4,
+          8,
+          5
+        ],
+        "vertices": 160
+      },
+      {
+        "edges": 472,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          4,
+          8,
+          6
+        ],
+        "vertices": 192
+      },
+      {
+        "edges": 556,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          4,
+          8,
+          7
+        ],
+        "vertices": 224
+      },
+      {
+        "edges": 640,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          4,
+          8,
+          8
+        ],
+        "vertices": 256
+      },
+      {
+        "edges": 36,
+        "empty_layer_count": 2,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 0,
+          "(2, 0)": 1,
+          "(2, 1)": 0
+        },
+        "sides": [
+          5,
+          2,
+          2
+        ],
+        "vertices": 20
+      },
+      {
+        "edges": 59,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 0,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          5,
+          2,
+          3
+        ],
+        "vertices": 30
+      },
+      {
+        "edges": 82,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 0,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          5,
+          2,
+          4
+        ],
+        "vertices": 40
+      },
+      {
+        "edges": 105,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 0,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          5,
+          2,
+          5
+        ],
+        "vertices": 50
+      },
+      {
+        "edges": 128,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 0,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          5,
+          2,
+          6
+        ],
+        "vertices": 60
+      },
+      {
+        "edges": 151,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 0,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          5,
+          2,
+          7
+        ],
+        "vertices": 70
+      },
+      {
+        "edges": 174,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 0,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          5,
+          2,
+          8
+        ],
+        "vertices": 80
+      },
+      {
+        "edges": 59,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 0
+        },
+        "sides": [
+          5,
+          3,
+          2
+        ],
+        "vertices": 30
+      },
+      {
+        "edges": 96,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          5,
+          3,
+          3
+        ],
+        "vertices": 45
+      },
+      {
+        "edges": 133,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          5,
+          3,
+          4
+        ],
+        "vertices": 60
+      },
+      {
+        "edges": 170,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          5,
+          3,
+          5
+        ],
+        "vertices": 75
+      },
+      {
+        "edges": 207,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          5,
+          3,
+          6
+        ],
+        "vertices": 90
+      },
+      {
+        "edges": 244,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          5,
+          3,
+          7
+        ],
+        "vertices": 105
+      },
+      {
+        "edges": 281,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          5,
+          3,
+          8
+        ],
+        "vertices": 120
+      },
+      {
+        "edges": 82,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 0
+        },
+        "sides": [
+          5,
+          4,
+          2
+        ],
+        "vertices": 40
+      },
+      {
+        "edges": 133,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          5,
+          4,
+          3
+        ],
+        "vertices": 60
+      },
+      {
+        "edges": 184,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          5,
+          4,
+          4
+        ],
+        "vertices": 80
+      },
+      {
+        "edges": 235,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          5,
+          4,
+          5
+        ],
+        "vertices": 100
+      },
+      {
+        "edges": 286,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          5,
+          4,
+          6
+        ],
+        "vertices": 120
+      },
+      {
+        "edges": 337,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          5,
+          4,
+          7
+        ],
+        "vertices": 140
+      },
+      {
+        "edges": 388,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          5,
+          4,
+          8
+        ],
+        "vertices": 160
+      },
+      {
+        "edges": 105,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 0
+        },
+        "sides": [
+          5,
+          5,
+          2
+        ],
+        "vertices": 50
+      },
+      {
+        "edges": 170,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          5,
+          5,
+          3
+        ],
+        "vertices": 75
+      },
+      {
+        "edges": 235,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          5,
+          5,
+          4
+        ],
+        "vertices": 100
+      },
+      {
+        "edges": 300,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          5,
+          5,
+          5
+        ],
+        "vertices": 125
+      },
+      {
+        "edges": 365,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          5,
+          5,
+          6
+        ],
+        "vertices": 150
+      },
+      {
+        "edges": 430,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          5,
+          5,
+          7
+        ],
+        "vertices": 175
+      },
+      {
+        "edges": 495,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          5,
+          5,
+          8
+        ],
+        "vertices": 200
+      },
+      {
+        "edges": 128,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 0
+        },
+        "sides": [
+          5,
+          6,
+          2
+        ],
+        "vertices": 60
+      },
+      {
+        "edges": 207,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          5,
+          6,
+          3
+        ],
+        "vertices": 90
+      },
+      {
+        "edges": 286,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          5,
+          6,
+          4
+        ],
+        "vertices": 120
+      },
+      {
+        "edges": 365,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          5,
+          6,
+          5
+        ],
+        "vertices": 150
+      },
+      {
+        "edges": 444,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          5,
+          6,
+          6
+        ],
+        "vertices": 180
+      },
+      {
+        "edges": 523,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          5,
+          6,
+          7
+        ],
+        "vertices": 210
+      },
+      {
+        "edges": 602,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          5,
+          6,
+          8
+        ],
+        "vertices": 240
+      },
+      {
+        "edges": 151,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 0
+        },
+        "sides": [
+          5,
+          7,
+          2
+        ],
+        "vertices": 70
+      },
+      {
+        "edges": 244,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          5,
+          7,
+          3
+        ],
+        "vertices": 105
+      },
+      {
+        "edges": 337,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          5,
+          7,
+          4
+        ],
+        "vertices": 140
+      },
+      {
+        "edges": 430,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          5,
+          7,
+          5
+        ],
+        "vertices": 175
+      },
+      {
+        "edges": 523,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          5,
+          7,
+          6
+        ],
+        "vertices": 210
+      },
+      {
+        "edges": 616,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          5,
+          7,
+          7
+        ],
+        "vertices": 245
+      },
+      {
+        "edges": 709,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          5,
+          7,
+          8
+        ],
+        "vertices": 280
+      },
+      {
+        "edges": 174,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 0
+        },
+        "sides": [
+          5,
+          8,
+          2
+        ],
+        "vertices": 80
+      },
+      {
+        "edges": 281,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          5,
+          8,
+          3
+        ],
+        "vertices": 120
+      },
+      {
+        "edges": 388,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          5,
+          8,
+          4
+        ],
+        "vertices": 160
+      },
+      {
+        "edges": 495,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          5,
+          8,
+          5
+        ],
+        "vertices": 200
+      },
+      {
+        "edges": 602,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          5,
+          8,
+          6
+        ],
+        "vertices": 240
+      },
+      {
+        "edges": 709,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          5,
+          8,
+          7
+        ],
+        "vertices": 280
+      },
+      {
+        "edges": 816,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          5,
+          8,
+          8
+        ],
+        "vertices": 320
+      },
+      {
+        "edges": 44,
+        "empty_layer_count": 2,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 0,
+          "(2, 0)": 1,
+          "(2, 1)": 0
+        },
+        "sides": [
+          6,
+          2,
+          2
+        ],
+        "vertices": 24
+      },
+      {
+        "edges": 72,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 0,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          6,
+          2,
+          3
+        ],
+        "vertices": 36
+      },
+      {
+        "edges": 100,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 0,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          6,
+          2,
+          4
+        ],
+        "vertices": 48
+      },
+      {
+        "edges": 128,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 0,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          6,
+          2,
+          5
+        ],
+        "vertices": 60
+      },
+      {
+        "edges": 156,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 0,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          6,
+          2,
+          6
+        ],
+        "vertices": 72
+      },
+      {
+        "edges": 184,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 0,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          6,
+          2,
+          7
+        ],
+        "vertices": 84
+      },
+      {
+        "edges": 212,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 0,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          6,
+          2,
+          8
+        ],
+        "vertices": 96
+      },
+      {
+        "edges": 72,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 0
+        },
+        "sides": [
+          6,
+          3,
+          2
+        ],
+        "vertices": 36
+      },
+      {
+        "edges": 117,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          6,
+          3,
+          3
+        ],
+        "vertices": 54
+      },
+      {
+        "edges": 162,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          6,
+          3,
+          4
+        ],
+        "vertices": 72
+      },
+      {
+        "edges": 207,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          6,
+          3,
+          5
+        ],
+        "vertices": 90
+      },
+      {
+        "edges": 252,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          6,
+          3,
+          6
+        ],
+        "vertices": 108
+      },
+      {
+        "edges": 297,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          6,
+          3,
+          7
+        ],
+        "vertices": 126
+      },
+      {
+        "edges": 342,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          6,
+          3,
+          8
+        ],
+        "vertices": 144
+      },
+      {
+        "edges": 100,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 0
+        },
+        "sides": [
+          6,
+          4,
+          2
+        ],
+        "vertices": 48
+      },
+      {
+        "edges": 162,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          6,
+          4,
+          3
+        ],
+        "vertices": 72
+      },
+      {
+        "edges": 224,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          6,
+          4,
+          4
+        ],
+        "vertices": 96
+      },
+      {
+        "edges": 286,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          6,
+          4,
+          5
+        ],
+        "vertices": 120
+      },
+      {
+        "edges": 348,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          6,
+          4,
+          6
+        ],
+        "vertices": 144
+      },
+      {
+        "edges": 410,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          6,
+          4,
+          7
+        ],
+        "vertices": 168
+      },
+      {
+        "edges": 472,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          6,
+          4,
+          8
+        ],
+        "vertices": 192
+      },
+      {
+        "edges": 128,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 0
+        },
+        "sides": [
+          6,
+          5,
+          2
+        ],
+        "vertices": 60
+      },
+      {
+        "edges": 207,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          6,
+          5,
+          3
+        ],
+        "vertices": 90
+      },
+      {
+        "edges": 286,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          6,
+          5,
+          4
+        ],
+        "vertices": 120
+      },
+      {
+        "edges": 365,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          6,
+          5,
+          5
+        ],
+        "vertices": 150
+      },
+      {
+        "edges": 444,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          6,
+          5,
+          6
+        ],
+        "vertices": 180
+      },
+      {
+        "edges": 523,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          6,
+          5,
+          7
+        ],
+        "vertices": 210
+      },
+      {
+        "edges": 602,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          6,
+          5,
+          8
+        ],
+        "vertices": 240
+      },
+      {
+        "edges": 156,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 0
+        },
+        "sides": [
+          6,
+          6,
+          2
+        ],
+        "vertices": 72
+      },
+      {
+        "edges": 252,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          6,
+          6,
+          3
+        ],
+        "vertices": 108
+      },
+      {
+        "edges": 348,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          6,
+          6,
+          4
+        ],
+        "vertices": 144
+      },
+      {
+        "edges": 444,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          6,
+          6,
+          5
+        ],
+        "vertices": 180
+      },
+      {
+        "edges": 540,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          6,
+          6,
+          6
+        ],
+        "vertices": 216
+      },
+      {
+        "edges": 636,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          6,
+          6,
+          7
+        ],
+        "vertices": 252
+      },
+      {
+        "edges": 732,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          6,
+          6,
+          8
+        ],
+        "vertices": 288
+      },
+      {
+        "edges": 184,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 0
+        },
+        "sides": [
+          6,
+          7,
+          2
+        ],
+        "vertices": 84
+      },
+      {
+        "edges": 297,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          6,
+          7,
+          3
+        ],
+        "vertices": 126
+      },
+      {
+        "edges": 410,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          6,
+          7,
+          4
+        ],
+        "vertices": 168
+      },
+      {
+        "edges": 523,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          6,
+          7,
+          5
+        ],
+        "vertices": 210
+      },
+      {
+        "edges": 636,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          6,
+          7,
+          6
+        ],
+        "vertices": 252
+      },
+      {
+        "edges": 749,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          6,
+          7,
+          7
+        ],
+        "vertices": 294
+      },
+      {
+        "edges": 862,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          6,
+          7,
+          8
+        ],
+        "vertices": 336
+      },
+      {
+        "edges": 212,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 0
+        },
+        "sides": [
+          6,
+          8,
+          2
+        ],
+        "vertices": 96
+      },
+      {
+        "edges": 342,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          6,
+          8,
+          3
+        ],
+        "vertices": 144
+      },
+      {
+        "edges": 472,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          6,
+          8,
+          4
+        ],
+        "vertices": 192
+      },
+      {
+        "edges": 602,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          6,
+          8,
+          5
+        ],
+        "vertices": 240
+      },
+      {
+        "edges": 732,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          6,
+          8,
+          6
+        ],
+        "vertices": 288
+      },
+      {
+        "edges": 862,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          6,
+          8,
+          7
+        ],
+        "vertices": 336
+      },
+      {
+        "edges": 992,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          6,
+          8,
+          8
+        ],
+        "vertices": 384
+      },
+      {
+        "edges": 52,
+        "empty_layer_count": 2,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 0,
+          "(2, 0)": 1,
+          "(2, 1)": 0
+        },
+        "sides": [
+          7,
+          2,
+          2
+        ],
+        "vertices": 28
+      },
+      {
+        "edges": 85,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 0,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          7,
+          2,
+          3
+        ],
+        "vertices": 42
+      },
+      {
+        "edges": 118,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 0,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          7,
+          2,
+          4
+        ],
+        "vertices": 56
+      },
+      {
+        "edges": 151,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 0,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          7,
+          2,
+          5
+        ],
+        "vertices": 70
+      },
+      {
+        "edges": 184,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 0,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          7,
+          2,
+          6
+        ],
+        "vertices": 84
+      },
+      {
+        "edges": 217,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 0,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          7,
+          2,
+          7
+        ],
+        "vertices": 98
+      },
+      {
+        "edges": 250,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 0,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          7,
+          2,
+          8
+        ],
+        "vertices": 112
+      },
+      {
+        "edges": 85,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 0
+        },
+        "sides": [
+          7,
+          3,
+          2
+        ],
+        "vertices": 42
+      },
+      {
+        "edges": 138,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          7,
+          3,
+          3
+        ],
+        "vertices": 63
+      },
+      {
+        "edges": 191,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          7,
+          3,
+          4
+        ],
+        "vertices": 84
+      },
+      {
+        "edges": 244,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          7,
+          3,
+          5
+        ],
+        "vertices": 105
+      },
+      {
+        "edges": 297,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          7,
+          3,
+          6
+        ],
+        "vertices": 126
+      },
+      {
+        "edges": 350,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          7,
+          3,
+          7
+        ],
+        "vertices": 147
+      },
+      {
+        "edges": 403,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          7,
+          3,
+          8
+        ],
+        "vertices": 168
+      },
+      {
+        "edges": 118,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 0
+        },
+        "sides": [
+          7,
+          4,
+          2
+        ],
+        "vertices": 56
+      },
+      {
+        "edges": 191,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          7,
+          4,
+          3
+        ],
+        "vertices": 84
+      },
+      {
+        "edges": 264,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          7,
+          4,
+          4
+        ],
+        "vertices": 112
+      },
+      {
+        "edges": 337,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          7,
+          4,
+          5
+        ],
+        "vertices": 140
+      },
+      {
+        "edges": 410,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          7,
+          4,
+          6
+        ],
+        "vertices": 168
+      },
+      {
+        "edges": 483,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          7,
+          4,
+          7
+        ],
+        "vertices": 196
+      },
+      {
+        "edges": 556,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          7,
+          4,
+          8
+        ],
+        "vertices": 224
+      },
+      {
+        "edges": 151,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 0
+        },
+        "sides": [
+          7,
+          5,
+          2
+        ],
+        "vertices": 70
+      },
+      {
+        "edges": 244,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          7,
+          5,
+          3
+        ],
+        "vertices": 105
+      },
+      {
+        "edges": 337,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          7,
+          5,
+          4
+        ],
+        "vertices": 140
+      },
+      {
+        "edges": 430,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          7,
+          5,
+          5
+        ],
+        "vertices": 175
+      },
+      {
+        "edges": 523,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          7,
+          5,
+          6
+        ],
+        "vertices": 210
+      },
+      {
+        "edges": 616,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          7,
+          5,
+          7
+        ],
+        "vertices": 245
+      },
+      {
+        "edges": 709,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          7,
+          5,
+          8
+        ],
+        "vertices": 280
+      },
+      {
+        "edges": 184,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 0
+        },
+        "sides": [
+          7,
+          6,
+          2
+        ],
+        "vertices": 84
+      },
+      {
+        "edges": 297,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          7,
+          6,
+          3
+        ],
+        "vertices": 126
+      },
+      {
+        "edges": 410,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          7,
+          6,
+          4
+        ],
+        "vertices": 168
+      },
+      {
+        "edges": 523,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          7,
+          6,
+          5
+        ],
+        "vertices": 210
+      },
+      {
+        "edges": 636,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          7,
+          6,
+          6
+        ],
+        "vertices": 252
+      },
+      {
+        "edges": 749,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          7,
+          6,
+          7
+        ],
+        "vertices": 294
+      },
+      {
+        "edges": 862,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          7,
+          6,
+          8
+        ],
+        "vertices": 336
+      },
+      {
+        "edges": 217,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 0
+        },
+        "sides": [
+          7,
+          7,
+          2
+        ],
+        "vertices": 98
+      },
+      {
+        "edges": 350,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          7,
+          7,
+          3
+        ],
+        "vertices": 147
+      },
+      {
+        "edges": 483,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          7,
+          7,
+          4
+        ],
+        "vertices": 196
+      },
+      {
+        "edges": 616,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          7,
+          7,
+          5
+        ],
+        "vertices": 245
+      },
+      {
+        "edges": 749,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          7,
+          7,
+          6
+        ],
+        "vertices": 294
+      },
+      {
+        "edges": 882,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          7,
+          7,
+          7
+        ],
+        "vertices": 343
+      },
+      {
+        "edges": 1015,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          7,
+          7,
+          8
+        ],
+        "vertices": 392
+      },
+      {
+        "edges": 250,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 0
+        },
+        "sides": [
+          7,
+          8,
+          2
+        ],
+        "vertices": 112
+      },
+      {
+        "edges": 403,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          7,
+          8,
+          3
+        ],
+        "vertices": 168
+      },
+      {
+        "edges": 556,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          7,
+          8,
+          4
+        ],
+        "vertices": 224
+      },
+      {
+        "edges": 709,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          7,
+          8,
+          5
+        ],
+        "vertices": 280
+      },
+      {
+        "edges": 862,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          7,
+          8,
+          6
+        ],
+        "vertices": 336
+      },
+      {
+        "edges": 1015,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          7,
+          8,
+          7
+        ],
+        "vertices": 392
+      },
+      {
+        "edges": 1168,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          7,
+          8,
+          8
+        ],
+        "vertices": 448
+      },
+      {
+        "edges": 60,
+        "empty_layer_count": 2,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 0,
+          "(2, 0)": 1,
+          "(2, 1)": 0
+        },
+        "sides": [
+          8,
+          2,
+          2
+        ],
+        "vertices": 32
+      },
+      {
+        "edges": 98,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 0,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          8,
+          2,
+          3
+        ],
+        "vertices": 48
+      },
+      {
+        "edges": 136,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 0,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          8,
+          2,
+          4
+        ],
+        "vertices": 64
+      },
+      {
+        "edges": 174,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 0,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          8,
+          2,
+          5
+        ],
+        "vertices": 80
+      },
+      {
+        "edges": 212,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 0,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          8,
+          2,
+          6
+        ],
+        "vertices": 96
+      },
+      {
+        "edges": 250,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 0,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          8,
+          2,
+          7
+        ],
+        "vertices": 112
+      },
+      {
+        "edges": 288,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 0,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          8,
+          2,
+          8
+        ],
+        "vertices": 128
+      },
+      {
+        "edges": 98,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 0
+        },
+        "sides": [
+          8,
+          3,
+          2
+        ],
+        "vertices": 48
+      },
+      {
+        "edges": 159,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          8,
+          3,
+          3
+        ],
+        "vertices": 72
+      },
+      {
+        "edges": 220,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          8,
+          3,
+          4
+        ],
+        "vertices": 96
+      },
+      {
+        "edges": 281,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          8,
+          3,
+          5
+        ],
+        "vertices": 120
+      },
+      {
+        "edges": 342,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          8,
+          3,
+          6
+        ],
+        "vertices": 144
+      },
+      {
+        "edges": 403,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          8,
+          3,
+          7
+        ],
+        "vertices": 168
+      },
+      {
+        "edges": 464,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          8,
+          3,
+          8
+        ],
+        "vertices": 192
+      },
+      {
+        "edges": 136,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 0
+        },
+        "sides": [
+          8,
+          4,
+          2
+        ],
+        "vertices": 64
+      },
+      {
+        "edges": 220,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          8,
+          4,
+          3
+        ],
+        "vertices": 96
+      },
+      {
+        "edges": 304,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          8,
+          4,
+          4
+        ],
+        "vertices": 128
+      },
+      {
+        "edges": 388,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          8,
+          4,
+          5
+        ],
+        "vertices": 160
+      },
+      {
+        "edges": 472,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          8,
+          4,
+          6
+        ],
+        "vertices": 192
+      },
+      {
+        "edges": 556,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          8,
+          4,
+          7
+        ],
+        "vertices": 224
+      },
+      {
+        "edges": 640,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          8,
+          4,
+          8
+        ],
+        "vertices": 256
+      },
+      {
+        "edges": 174,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 0
+        },
+        "sides": [
+          8,
+          5,
+          2
+        ],
+        "vertices": 80
+      },
+      {
+        "edges": 281,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          8,
+          5,
+          3
+        ],
+        "vertices": 120
+      },
+      {
+        "edges": 388,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          8,
+          5,
+          4
+        ],
+        "vertices": 160
+      },
+      {
+        "edges": 495,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          8,
+          5,
+          5
+        ],
+        "vertices": 200
+      },
+      {
+        "edges": 602,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          8,
+          5,
+          6
+        ],
+        "vertices": 240
+      },
+      {
+        "edges": 709,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          8,
+          5,
+          7
+        ],
+        "vertices": 280
+      },
+      {
+        "edges": 816,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          8,
+          5,
+          8
+        ],
+        "vertices": 320
+      },
+      {
+        "edges": 212,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 0
+        },
+        "sides": [
+          8,
+          6,
+          2
+        ],
+        "vertices": 96
+      },
+      {
+        "edges": 342,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          8,
+          6,
+          3
+        ],
+        "vertices": 144
+      },
+      {
+        "edges": 472,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          8,
+          6,
+          4
+        ],
+        "vertices": 192
+      },
+      {
+        "edges": 602,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          8,
+          6,
+          5
+        ],
+        "vertices": 240
+      },
+      {
+        "edges": 732,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          8,
+          6,
+          6
+        ],
+        "vertices": 288
+      },
+      {
+        "edges": 862,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          8,
+          6,
+          7
+        ],
+        "vertices": 336
+      },
+      {
+        "edges": 992,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          8,
+          6,
+          8
+        ],
+        "vertices": 384
+      },
+      {
+        "edges": 250,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 0
+        },
+        "sides": [
+          8,
+          7,
+          2
+        ],
+        "vertices": 112
+      },
+      {
+        "edges": 403,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          8,
+          7,
+          3
+        ],
+        "vertices": 168
+      },
+      {
+        "edges": 556,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          8,
+          7,
+          4
+        ],
+        "vertices": 224
+      },
+      {
+        "edges": 709,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          8,
+          7,
+          5
+        ],
+        "vertices": 280
+      },
+      {
+        "edges": 862,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          8,
+          7,
+          6
+        ],
+        "vertices": 336
+      },
+      {
+        "edges": 1015,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          8,
+          7,
+          7
+        ],
+        "vertices": 392
+      },
+      {
+        "edges": 1168,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          8,
+          7,
+          8
+        ],
+        "vertices": 448
+      },
+      {
+        "edges": 288,
+        "empty_layer_count": 1,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 0
+        },
+        "sides": [
+          8,
+          8,
+          2
+        ],
+        "vertices": 128
+      },
+      {
+        "edges": 464,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          8,
+          8,
+          3
+        ],
+        "vertices": 192
+      },
+      {
+        "edges": 640,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          8,
+          8,
+          4
+        ],
+        "vertices": 256
+      },
+      {
+        "edges": 816,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          8,
+          8,
+          5
+        ],
+        "vertices": 320
+      },
+      {
+        "edges": 992,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          8,
+          8,
+          6
+        ],
+        "vertices": 384
+      },
+      {
+        "edges": 1168,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          8,
+          8,
+          7
+        ],
+        "vertices": 448
+      },
+      {
+        "edges": 1344,
+        "empty_layer_count": 0,
+        "incidence_max": {
+          "(0, 0)": 1,
+          "(0, 1)": 1,
+          "(1, 0)": 1,
+          "(1, 1)": 1,
+          "(2, 0)": 1,
+          "(2, 1)": 1
+        },
+        "sides": [
+          8,
+          8,
+          8
+        ],
+        "vertices": 512
+      }
+    ],
+    "common_alpha_closed": false,
+    "common_core_closed": false,
+    "dimension": 3,
+    "edge_count_formula_checked": true,
+    "exhaustion_cauchy_closed": false,
+    "general_local_incidence_lemma_lean_checked": true,
+    "history_tail_closed": false,
+    "layer_count": 6,
+    "matching_property_checked": true,
+    "maximum_degree": 6,
+    "maximum_incidence": 1,
+    "parity_modulus": 2,
+    "pre_a_closed": false,
+    "sector_a_closed": false,
+    "total_edges": 102900,
+    "total_empty_layers": 147,
+    "total_vertices": 42875,
+    "weighted_operator_form_closed": false
+  },
+  "evidence_level": "T0 / GENERAL FINITE-COMBINATORIAL THEOREM WITH LEAN LOCAL-INCIDENCE PROOF AND EXECUTED [2,8]^3 CROSS-CHECK",
+  "exploration_id": "EXP-001288",
+  "manifest": "strategy/pre-a-cp1-st8-q3lock-rectangular-matching-arbitrary-box-manifest.json",
+  "missing_assumptions": [
+    "A weighted Q3LOCK interaction/operator theorem transferring the arbitrary-box layers to a common representation and domain.",
+    "Representation-independent common cores, product-domain estimates and onsite self-adjointness for the layer subflows.",
+    "Cutoff-, source-, phase-, volume- and exhaustion-uniform boundary commutator and history-tail estimates.",
+    "All-shape exhaustion Cauchy, Lie--Trotter/common-alpha convergence and Hamiltonian-to-OS/KMS/GNS identification.",
+    "Sector coercivity, phase selection, physical-empty comparison, continuum passage and any Yang--Mills or mass-gap conclusion."
+  ],
+  "non_claims": [
+    "No Q3LOCK Hamiltonian, weighted split form, Friedrichs domain or common-core theorem.",
+    "No boundary commutator, history-tail, common-alpha or exhaustion theorem.",
+    "No OS/KMS/GNS reconstruction, sector coercivity, physical-empty comparison, continuum limit or Sector-A/Pre-A closure.",
+    "No Yang-Mills dynamics or mass-gap conclusion."
+  ],
+  "passed": 235319,
+  "result_id": "R-443",
+  "run_kind": "primary",
+  "schema": "tect/pre-a-r443-primary/1.0",
+  "source_hashes": {
+    "manifest": "e9af51bf7435608c0c95e6a5a7b03d56a01ffa4916a136125cdecf789ba8f435",
+    "script": "00ba7290988ee5cd667cf467f413d115a859c1a167eb00713f9be20bfdad14c8"
+  },
+  "verdict": "ARBITRARY_BOX_MATCHING_THEOREM_AUDITED"
+}

@@ -1,0 +1,182 @@
+{
+  "assertion_count": 15,
+  "assertions": [
+    {
+      "actual": "['R-426', 'EXP-001271', False, 'FAIL_ROUTE_LOCAL']",
+      "expected": "R-426/EXP-001271/false/FAIL_ROUTE_LOCAL",
+      "group": "provenance",
+      "name": "manifest identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'finite_high_cutoff_schur_closed': False, 'finite_harmonic_coarse_schur_closed': False, 'finite_residual_reuse_closed': False, 'finite_support_boundary_recorded': True}",
+      "expected": "{'finite_high_cutoff_schur_closed': False, 'finite_harmonic_coarse_schur_closed': False, 'finite_residual_reuse_closed': False, 'finite_support_boundary_recorded': True}",
+      "group": "scope",
+      "name": "scope firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": "[]",
+      "expected": "all R-426 artifacts",
+      "group": "provenance",
+      "name": "artifacts present",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'codes/foundations/pre_a_cp1_st8_q3lock_high_cutoff_schur_stress.py': '1265ad57010a3265d09f3f0cb4f40602fdbbb3fa352556e899a8f5fd2a00433a', 'codes/foundations/pre_a_cp1_st8_q3lock_high_cutoff_schur_stress_independent.py': 'f481a52bc2658bef6137a7a822130d3fe0f1fe53b11fdf2b173ee65baceee04a', 'codes/foundations/pre_a_cp1_st8_q3lock_high_cutoff_schur_stress_hostile.py': '33a298c8c722042bbab5b8503f53224ec765b05b23fefdd51acd4a131d36aeaf', 'verification/lean/Tect/R426.lean': '6dfa4757593896babfb1d883200909b9e62e72b220511a287acdab45361778b3'}",
+      "expected": "distinct source hashes",
+      "group": "provenance",
+      "name": "artifact hashes distinct",
+      "status": "PASS"
+    },
+    {
+      "actual": "['high_cutoff_grid', 'positive_envelope', 'finite_scope']",
+      "expected": "declared theorem markers",
+      "group": "Lean",
+      "name": "Lean markers",
+      "status": "PASS"
+    },
+    {
+      "actual": "forbidden tokens absent",
+      "expected": "clean finite scalar file",
+      "group": "Lean",
+      "name": "Lean source policy",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-426 PRIMARY FAIL_ROUTE_LOCAL check=V=2 d=16 right residual reuse difference=3.3828841115e-06 tolerance=5e-07",
+      "expected": "exit 0 and output",
+      "group": "executables",
+      "name": "run pre_a_cp1_st8_q3lock_high_cutoff_schur_stress.py",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-426 INDEPENDENT CONTROL PASS 28/28 abstract_fixtures=4 route_outcome=FAIL_ROUTE_LOCAL_EXPECTED coarse=[0.716732,1.31803] residual=[0.719291,1.3346] combined=[0.358366,0.659014]",
+      "expected": "exit 0 and output",
+      "group": "executables",
+      "name": "run pre_a_cp1_st8_q3lock_high_cutoff_schur_stress_independent.py",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-426 HOSTILE PASS 7/7 invalid mutations rejected",
+      "expected": "exit 0 and output",
+      "group": "executables",
+      "name": "run pre_a_cp1_st8_q3lock_high_cutoff_schur_stress_hostile.py",
+      "status": "PASS"
+    },
+    {
+      "actual": "",
+      "expected": "exit 0 without errors",
+      "group": "Lean",
+      "name": "Lean compile",
+      "status": "PASS"
+    },
+    {
+      "actual": "['R-426', 'FAIL_ROUTE_LOCAL']",
+      "expected": "R-426/FAIL_ROUTE_LOCAL",
+      "group": "outputs",
+      "name": "primary route-local result",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'absolute_difference': 3.382884111502449e-06, 'beta': '8', 'check_name': 'V=2 d=16 right residual reuse', 'clipping_applied': False, 'comparison_tolerance': 5e-07, 'conditional_row_index': 7, 'core_size': 7, 'cutoff_dimension': 16, 'direct_residual_gap': 5.36318835004781, 'error': \"V=2 d=16 right residual reuse: actual=3.382884111502449e-06, expected='<=5e-07'\", 'observed': {'actual': 3.382884111502449e-06, 'expected': '<=5e-07', 'group': 'R-422 reuse', 'name': 'V=2 d=16 right residual reuse'}, 'orientation': 'right', 'r422_residual_gap': 5.363184967163699, 'reason': 'At a declared high-cutoff row the R-422 residual gap and a separately reconstructed direct residual gap disagree beyond the preregistered comparison tolerance.', 'status': 'FAIL_ROUTE_LOCAL', 'tail_size': 9, 'tolerance_relaxed': False, 'volume': 2}",
+      "expected": "{'status': 'FAIL_ROUTE_LOCAL', 'reason': 'At a declared high-cutoff row the R-422 residual gap and a separately reconstructed direct residual gap disagree beyond the preregistered comparison tolerance.', 'volume': 2, 'cutoff_dimension': 16, 'beta': '8', 'orientation': 'right', 'conditional_row_index': 7, 'core_size': 7, 'tail_size': 9, 'r422_residual_gap': 5.363184967163699, 'direct_residual_gap': 5.36318835004781, 'absolute_difference': 3.382884111502449e-06, 'comparison_tolerance': 5e-07, 'tolerance_relaxed': False, 'clipping_applied': False}",
+      "group": "failure",
+      "name": "primary failure exact",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'failure_mode': 'residual_reuse_above_fixed_tolerance', 'numeric_evaluation': True, 'promoted_result': False, 'rows_checked_before_failure': 1175}",
+      "expected": "route-local numerical failure without promotion",
+      "group": "scope",
+      "name": "primary stopped before false promotion",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'failure_contract': {'absolute_difference': 3.382884111502449e-06, 'beta': '8', 'clipping_applied': False, 'comparison_tolerance': 5e-07, 'conditional_row_index': 7, 'core_size': 7, 'cutoff_dimension': 16, 'direct_residual_gap': 5.36318835004781, 'orientation': 'right', 'r422_residual_gap': 5.363184967163699, 'reason': 'At a declared high-cutoff row the R-422 residual gap and a separately reconstructed direct residual gap disagree beyond the preregistered comparison tolerance.', 'status': 'FAIL_ROUTE_LOCAL', 'tail_size': 9, 'tolerance_relaxed': False, 'volume': 2}, 'fixture_count': 4, 'maximum_coarse_gap': 1.3180288958289226, 'maximum_combined_gap': 0.6590144479144613, 'maximum_energy_error': 8.326672684688674e-17, 'maximum_residual_basis_difference': 4.440892098500626e-16, 'maximum_residual_gap': 1.3346008978064923, 'minimum_coarse_gap': 0.7167320977066365, 'minimum_combined_gap': 0.35836604885331824, 'minimum_lower_margin': 0.006360933298971131, 'minimum_residual_gap': 0.7192914012232517, 'records': [{'coarse_gap': 0.8175756257608005, 'combined_gap': 0.4087878128804002, 'energy_error': 6.938893903907228e-18, 'lower_margin': 0.006360933298971131, 'residual_basis_difference': 1.1102230246251565e-16, 'residual_gap': 0.8310307200927011}, {'coarse_gap': 1.3180288958289226, 'combined_gap': 0.6590144479144613, 'energy_error': 1.3877787807814457e-17, 'lower_margin': 0.01489997717410577, 'residual_basis_difference': 4.440892098500626e-16, 'residual_gap': 1.3346008978064923}, {'coarse_gap': 0.7167320977066365, 'combined_gap': 0.35836604885331824, 'energy_error': 8.326672684688674e-17, 'lower_margin': 0.011590623276905647, 'residual_basis_difference': 2.220446049250313e-16, 'residual_gap': 0.7192914012232517}, {'coarse_gap': 1.1140465045252999, 'combined_gap': 0.5570232522626499, 'energy_error': 5.551115123125783e-17, 'lower_margin': 0.028251173778493954, 'residual_basis_difference': 4.440892098500626e-16, 'residual_gap': 1.1162857460453808}], 'route_outcome': 'FAIL_ROUTE_LOCAL_EXPECTED'}",
+      "expected": "independent control and expected route-local outcome",
+      "group": "independent",
+      "name": "independent result",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'all_mutations_rejected': True, 'failure_contract': {'absolute_difference': 3.382884111502449e-06, 'beta': '8', 'clipping_applied': False, 'comparison_tolerance': 5e-07, 'conditional_row_index': 7, 'core_size': 7, 'cutoff_dimension': 16, 'direct_residual_gap': 5.36318835004781, 'orientation': 'right', 'r422_residual_gap': 5.363184967163699, 'reason': 'At a declared high-cutoff row the R-422 residual gap and a separately reconstructed direct residual gap disagree beyond the preregistered comparison tolerance.', 'status': 'FAIL_ROUTE_LOCAL', 'tail_size': 9, 'tolerance_relaxed': False, 'volume': 2}, 'mutation_count': 7, 'numeric_evaluation': False, 'physical_promotion': False, 'route_local_failure_preserved': True}",
+      "expected": "all hostile mutations rejected and failure preserved",
+      "group": "hostile",
+      "name": "hostile result",
+      "status": "PASS"
+    }
+  ],
+  "assumptions": [
+    "The hash-pinned R-419 conditional law is positive and normalized and its projected momentum conductance is symmetric and nonnegative.",
+    "The R-416 log-domain reconstruction and R-422 sqrt(pi) residual basis apply at every listed finite cutoff.",
+    "Beta values, orientations, alpha=1/40, tail threshold four, probability floor and gap floor are fixed across the stress.",
+    "Every admitted block has at least two core and two tail coordinates and a positive residual block before the harmonic solve.",
+    "Declared numerical tolerances are comparison thresholds only and lower bounds are never rounded upward."
+  ],
+  "boundary": "R-426 is a finite high-cutoff stress of the R-425 harmonic Schur assembly at volume two. It stops at the declared V=2, d=16, beta=8, right-orientation residual-reuse mismatch and records a route-local finite construction failure; it does not close the Q3LOCK parent gates.",
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "derived": {
+    "hostile_mutation_count": 7,
+    "independent_fixture_count": 4,
+    "lean": "PASS",
+    "outputs": {
+      "lean": "",
+      "pre_a_cp1_st8_q3lock_high_cutoff_schur_stress.py": "R-426 PRIMARY FAIL_ROUTE_LOCAL check=V=2 d=16 right residual reuse difference=3.3828841115e-06 tolerance=5e-07",
+      "pre_a_cp1_st8_q3lock_high_cutoff_schur_stress_hostile.py": "R-426 HOSTILE PASS 7/7 invalid mutations rejected",
+      "pre_a_cp1_st8_q3lock_high_cutoff_schur_stress_independent.py": "R-426 INDEPENDENT CONTROL PASS 28/28 abstract_fixtures=4 route_outcome=FAIL_ROUTE_LOCAL_EXPECTED coarse=[0.716732,1.31803] residual=[0.719291,1.3346] combined=[0.358366,0.659014]"
+    },
+    "route_outcome": "FAIL_ROUTE_LOCAL"
+  },
+  "evidence_level": "T0 / executed high-cutoff finite stress with a declared route-local residual-reuse failure; no uniform theorem or physical conclusion",
+  "exploration_id": "EXP-001271",
+  "failure": {
+    "absolute_difference": 3.382884111502449e-06,
+    "beta": "8",
+    "check_name": "V=2 d=16 right residual reuse",
+    "clipping_applied": false,
+    "comparison_tolerance": 5e-07,
+    "conditional_row_index": 7,
+    "core_size": 7,
+    "cutoff_dimension": 16,
+    "direct_residual_gap": 5.36318835004781,
+    "error": "V=2 d=16 right residual reuse: actual=3.382884111502449e-06, expected='<=5e-07'",
+    "observed": {
+      "actual": 3.382884111502449e-06,
+      "expected": "<=5e-07",
+      "group": "R-422 reuse",
+      "name": "V=2 d=16 right residual reuse"
+    },
+    "orientation": "right",
+    "r422_residual_gap": 5.363184967163699,
+    "reason": "At a declared high-cutoff row the R-422 residual gap and a separately reconstructed direct residual gap disagree beyond the preregistered comparison tolerance.",
+    "status": "FAIL_ROUTE_LOCAL",
+    "tail_size": 9,
+    "tolerance_relaxed": false,
+    "volume": 2
+  },
+  "manifest": "strategy/pre-a-cp1-st8-q3lock-high-cutoff-schur-stress-manifest.json",
+  "missing_assumptions": [
+    "A cutoff-, volume-, phase- and exhaustion-uniform lower bound for the coarse Schur and residual forms on one Hamiltonian common core.",
+    "A common split-limit map and two-sided form control as the oscillator cutoff is removed.",
+    "Uniform control of actual R-399 histories and transfer through the R-415 semigroup interface.",
+    "Hamiltonian-to-OS/KMS/GNS identification, physical-sector projection and a sectorwise coercive estimate."
+  ],
+  "non_claims": [
+    "No accepted high-cutoff Schur or residual-reuse closure after the route-local failure.",
+    "No cutoff-, volume-, phase- or exhaustion-uniform coarse or residual bound.",
+    "No global Poincare theorem, common Hamiltonian core or common split-limit map.",
+    "No history transfer, OS/KMS/GNS reconstruction or sectorwise gap.",
+    "No continuum, C6, Sector-A, Pre-A, Yang-Mills or mass-gap conclusion."
+  ],
+  "result_id": "R-426",
+  "run_kind": "integrated",
+  "schema": "tect/pre-a-r426-integrated/1.0",
+  "source_hashes": {
+    "codes/foundations/pre_a_cp1_st8_q3lock_high_cutoff_schur_stress.py": "1265ad57010a3265d09f3f0cb4f40602fdbbb3fa352556e899a8f5fd2a00433a",
+    "codes/foundations/pre_a_cp1_st8_q3lock_high_cutoff_schur_stress_hostile.py": "33a298c8c722042bbab5b8503f53224ec765b05b23fefdd51acd4a131d36aeaf",
+    "codes/foundations/pre_a_cp1_st8_q3lock_high_cutoff_schur_stress_independent.py": "f481a52bc2658bef6137a7a822130d3fe0f1fe53b11fdf2b173ee65baceee04a",
+    "verification/lean/Tect/R426.lean": "6dfa4757593896babfb1d883200909b9e62e72b220511a287acdab45361778b3"
+  },
+  "verdict": "FAIL_ROUTE_LOCAL"
+}

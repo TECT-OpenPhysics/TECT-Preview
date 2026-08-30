@@ -1,0 +1,83 @@
+{
+  "assertion_count": 10,
+  "assertions": [
+    {
+      "expected": "source point with no interval/exact promotion",
+      "name": "primary point boundary",
+      "status": "PASS"
+    },
+    {
+      "expected": "mutation rejected",
+      "name": "precision downgrade",
+      "status": "PASS"
+    },
+    {
+      "expected": "mutation rejected",
+      "name": "comparison tolerance mutation",
+      "status": "PASS"
+    },
+    {
+      "expected": "mutation rejected",
+      "name": "fixed-row mutation",
+      "status": "PASS"
+    },
+    {
+      "expected": "mutation rejected",
+      "name": "source-interval promotion",
+      "status": "PASS"
+    },
+    {
+      "expected": "mutation rejected",
+      "name": "exact-input promotion",
+      "status": "PASS"
+    },
+    {
+      "expected": "mutation rejected",
+      "name": "residual-reuse promotion",
+      "status": "PASS"
+    },
+    {
+      "expected": "mutation rejected",
+      "name": "forged certified verdict",
+      "status": "PASS"
+    },
+    {
+      "expected": "mutation rejected",
+      "name": "uniform promotion",
+      "status": "PASS"
+    },
+    {
+      "actual": "d94f4c9e871586d01eb9346586d6b699cd6732459c0f1113ccfacf42801bc15e",
+      "expected": "current manifest hash",
+      "name": "manifest hash",
+      "status": "PASS"
+    }
+  ],
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "controls": {
+    "all_mutations_rejected": true,
+    "exact_original_input_certified": false,
+    "mutation_count": 8,
+    "point_boundary_preserved": true,
+    "residual_reuse_closed": false,
+    "source_interval_certified": false
+  },
+  "exploration_id": "EXP-001275",
+  "manifest": "strategy/pre-a-cp1-st8-q3lock-source-point-precision-audit-manifest.json",
+  "non_claims": [
+    "No interval or exact certification of the original Hamiltonian source.",
+    "No repair or closure of R-426 residual reuse for the original model.",
+    "No cutoff-, volume-, phase- or exhaustion-uniform Schur/residual bound.",
+    "No common core, history transfer, OS/KMS/GNS reconstruction, sector gap or continuum limit.",
+    "No C6, Sector-A, Pre-A, Yang-Mills or mass-gap conclusion."
+  ],
+  "result_id": "R-430",
+  "run_kind": "hostile",
+  "schema": "tect/pre-a-r430-hostile/1.0",
+  "source_hashes": {
+    "hostile": "14b3bafb34b68e7dbde6c64c133af450cea8fd1d45d638843f8b1985d14993a3",
+    "manifest": "d94f4c9e871586d01eb9346586d6b699cd6732459c0f1113ccfacf42801bc15e",
+    "primary_run": "9e687794607bc0711b71f81eb555a46c927bd8584ec4048d78a024a60144027a"
+  },
+  "verdict": "PASS"
+}

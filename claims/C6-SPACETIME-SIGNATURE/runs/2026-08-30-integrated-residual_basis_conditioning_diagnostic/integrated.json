@@ -1,0 +1,176 @@
+{
+  "assertion_count": 16,
+  "assertions": [
+    {
+      "actual": "['R-428', 'EXP-001273', False, 'INCONCLUSIVE_CONDITIONING']",
+      "expected": "R-428/EXP-001273/false/INCONCLUSIVE_CONDITIONING",
+      "group": "provenance",
+      "name": "manifest identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'basis_projector_crosswalk_closed': True, 'c6_closed': False, 'common_core_closed': False, 'common_split_rule_closed': False, 'conditioning_explanation_proved': False, 'continuum_closed': False, 'cutoff_uniform_coarse_schur_closed': False, 'exhaustion_uniform_coarse_schur_closed': False, 'finite_conditioning_diagnostic_closed': True, 'fixed_row_reconstructed': True, 'global_poincare_closed': False, 'hamiltonian_os_identification_closed': False, 'kms_gns_gap_closed': False, 'no_new_negative_result': True, 'no_pdf': True, 'no_tier_change': True, 'phase_uniform_coarse_schur_closed': False, 'pre_a_closed': False, 'r426_route_failure_preserved': True, 'residual_reuse_closed': False, 'sector_a_closed': False, 'volume_uniform_coarse_schur_closed': False}",
+      "expected": "finite diagnostic only; no proof promotion",
+      "group": "scope",
+      "name": "scope firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": "[]",
+      "expected": "all R-428 artifacts",
+      "group": "provenance",
+      "name": "artifacts present",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'codes/foundations/pre_a_cp1_st8_q3lock_residual_basis_conditioning_diagnostic.py': 'abc53d7a12ade149f31d9c74b551724884cd3ae97153ac273f2d188af8f98412', 'codes/foundations/pre_a_cp1_st8_q3lock_residual_basis_conditioning_diagnostic_independent.py': 'a5f361707d01b803093eb7375b22c58a06d2db5bff9b9cb9b308165de49b920a', 'codes/foundations/pre_a_cp1_st8_q3lock_residual_basis_conditioning_diagnostic_hostile.py': '7cbad4d7ac580329376bc07c49e165955c69222cf4c26cb688ca917656e898c4', 'verification/lean/Tect/R428.lean': '62909ceadf7e99c5d3370a600ba821610bac48db67104ea1804c3f7eab6cd8cf'}",
+      "expected": "distinct source hashes",
+      "group": "provenance",
+      "name": "artifact hashes distinct",
+      "status": "PASS"
+    },
+    {
+      "actual": "['projector_distance_bound', 'conditioning_budget_dominates_tolerance', 'finite_scope']",
+      "expected": "declared theorem markers",
+      "group": "Lean",
+      "name": "Lean markers",
+      "status": "PASS"
+    },
+    {
+      "actual": "forbidden tokens absent",
+      "expected": "clean finite scalar file",
+      "group": "Lean",
+      "name": "Lean source policy",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-428 PRIMARY INCONCLUSIVE_CONDITIONING 31/31 row=V2/d16/beta8/right/7 projector=9.7754e-16 A_norm=5.71686e+10 budget=0.000111769 spread=4.31874e-06 mismatch=3.3096e-06\nR-428 PRIMARY SELFTEST: PASS (fixed row crosswalk and conditioning diagnostic)",
+      "expected": "exit 0 and output",
+      "group": "executables",
+      "name": "run pre_a_cp1_st8_q3lock_residual_basis_conditioning_diagnostic.py",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-428 INDEPENDENT SELFTEST: PASS (21/21; classification=INCONCLUSIVE_CONDITIONING)",
+      "expected": "exit 0 and output",
+      "group": "executables",
+      "name": "run pre_a_cp1_st8_q3lock_residual_basis_conditioning_diagnostic_independent.py",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-428 HOSTILE PASS 10/10 invalid mutations rejected; R-426 failure preserved",
+      "expected": "exit 0 and output",
+      "group": "executables",
+      "name": "run pre_a_cp1_st8_q3lock_residual_basis_conditioning_diagnostic_hostile.py",
+      "status": "PASS"
+    },
+    {
+      "actual": "",
+      "expected": "exit 0 without errors",
+      "group": "Lean",
+      "name": "Lean compile",
+      "status": "PASS"
+    },
+    {
+      "actual": "['R-428', 'INCONCLUSIVE_CONDITIONING', {'beta': '8', 'conditional_row_index': 7, 'core_size': 7, 'cutoff_dimension': 16, 'orientation': 'right', 'tail_size': 9, 'volume': 2}]",
+      "expected": "fixed R-426 row with inconclusive conditioning verdict",
+      "group": "outputs",
+      "name": "primary inconclusive diagnostic",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'basis_gap_spread': 4.31873946382666e-06, 'basis_metrics': {'householder_constraint_nullspace': {'columns': 14.0, 'constraint_residual': 1.9993423491690854e-16, 'orthogonality_error': 2.220446049250313e-16, 'residual_gap': 5.363189287097491}, 'r406_complement': {'columns': 14.0, 'constraint_residual': 3.023196111498931e-16, 'orthogonality_error': 4.440892098500626e-16, 'residual_gap': 5.363184968358027}, 'r422_weighted_zero_mean': {'columns': 14.0, 'constraint_residual': 8.164729877725183e-17, 'orthogonality_error': 6.661338147750939e-16, 'residual_gap': 5.363188277962228}, 'spectral_projector_nullspace': {'columns': 14.0, 'constraint_residual': 2.1228786045507e-16, 'orthogonality_error': 4.996003610813204e-16, 'residual_gap': 5.363187380384606}}, 'classification': 'INCONCLUSIVE_CONDITIONING', 'conditioning_amplification_budget': 0.0001117690794916405, 'cross_gram_singular_max': 1.0000000000000002, 'cross_gram_singular_min': 0.9999999999999996, 'fixed_row': {'beta': '8', 'conditional_row_index': 7, 'core_size': 7, 'cutoff_dimension': 16, 'orientation': 'right', 'tail_size': 9, 'volume': 2}, 'minimum_log_row': -28.20675001252271, 'operator_norm_two': 57168562623.339745, 'pi_dynamic_range': 509430475397.249, 'pi_max': 0.2864501401805248, 'pi_min': 5.622948645880553e-13, 'precision_certified': False, 'projector_distance_two': 9.775397033159746e-16, 'projector_r406_constraint_distance_two': 7.060943250331913e-16, 'r422_residual_gap': 5.363184968358027, 'r426_direct_residual_gap': 5.363188277962228, 'r426_route_failure_preserved': True, 'recomputed_mismatch': 3.3096042013625038e-06, 'residual_reuse_closed': False}",
+      "expected": "all conditioning predicates exceed fixed comparison tolerance",
+      "group": "conditioning",
+      "name": "primary predicates",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'basis_gap_spread': 4.31873946382666e-06, 'basis_metrics': {'householder_constraint_nullspace': {'columns': 14.0, 'constraint_residual': 1.9993423491690854e-16, 'orthogonality_error': 2.220446049250313e-16, 'residual_gap': 5.363189287097491}, 'r406_complement': {'columns': 14.0, 'constraint_residual': 3.023196111498931e-16, 'orthogonality_error': 4.440892098500626e-16, 'residual_gap': 5.363184968358027}, 'r422_weighted_zero_mean': {'columns': 14.0, 'constraint_residual': 8.164729877725183e-17, 'orthogonality_error': 6.661338147750939e-16, 'residual_gap': 5.363188277962228}, 'spectral_projector_nullspace': {'columns': 14.0, 'constraint_residual': 2.1228786045507e-16, 'orthogonality_error': 4.996003610813204e-16, 'residual_gap': 5.363187380384606}}, 'classification': 'INCONCLUSIVE_CONDITIONING', 'conditioning_amplification_budget': 0.0001117690794916405, 'cross_gram_singular_max': 1.0000000000000002, 'cross_gram_singular_min': 0.9999999999999996, 'fixed_row': {'beta': '8', 'conditional_row_index': 7, 'core_size': 7, 'cutoff_dimension': 16, 'orientation': 'right', 'tail_size': 9, 'volume': 2}, 'minimum_log_row': -28.20675001252271, 'operator_norm_two': 57168562623.339745, 'pi_dynamic_range': 509430475397.249, 'pi_max': 0.2864501401805248, 'pi_min': 5.622948645880553e-13, 'precision_certified': False, 'projector_distance_two': 9.775397033159746e-16, 'projector_r406_constraint_distance_two': 7.060943250331913e-16, 'r422_residual_gap': 5.363184968358027, 'r426_direct_residual_gap': 5.363188277962228, 'r426_route_failure_preserved': True, 'recomputed_mismatch': 3.3096042013625038e-06, 'residual_reuse_closed': False}",
+      "expected": "finite crosswalk passes; no precision-certified repair",
+      "group": "scope",
+      "name": "crosswalk and failure boundary",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'basis_gap_spread': 1.9067128844696413e-06, 'classification': 'INCONCLUSIVE_CONDITIONING', 'conditioning_amplification_budget': 0.00010355183044578828, 'conditioning_predicates_pass': True, 'cross_gram_singular_max': 1.0000000000000004, 'cross_gram_singular_min': 0.9999999999999994, 'fixed_row': {'beta': '8', 'conditional_row_index': 7, 'core_size': 7, 'cutoff_dimension': 16, 'orientation': 'right', 'tail_size': 9, 'volume': 2}, 'minimum_log_row': -26.956559223766746, 'operator_norm_two': 57168562623.339745, 'pi_dynamic_range': 509430475397.249, 'pi_max': 0.2864501401805248, 'pi_min': 5.622948645880553e-13, 'precision_certified': False, 'projector_distance_two': 9.056711039601336e-16, 'projector_tolerance_pass': True, 'r422_residual_gap': 5.363189287097491, 'r426_direct_residual_gap': 5.363188300552828, 'r426_route_failure_preserved': True, 'recomputed_mismatch': 9.865446628509744e-07, 'residual_reuse_closed': False}",
+      "expected": "independent classification and preserved boundary",
+      "group": "independent",
+      "name": "independent control",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'all_mutations_rejected': True, 'comparison_tolerance_preserved': True, 'fixed_row_preserved': True, 'inconclusive_verdict_preserved': True, 'mutation_count': 9, 'physical_promotion': False, 'r426_route_failure_preserved': True}",
+      "expected": "all hostile mutations rejected",
+      "group": "hostile",
+      "name": "hostile control",
+      "status": "PASS"
+    },
+    {
+      "actual": "[5.363184968358027, 5.363188277962228]",
+      "expected": "within declared reconstruction tolerance",
+      "group": "reconstruction",
+      "name": "fixed parent contract",
+      "status": "PASS"
+    }
+  ],
+  "assumptions": [
+    "The hash-pinned R-419 conditional law, R-416 log-domain row and R-422/R-406 finite basis constructions are the declared inputs.",
+    "The fixed R-426 row and comparison tolerance are not changed during the diagnostic.",
+    "The normalized constraint rows represent the same blockwise weighted-zero-mean residual subspace in exact arithmetic.",
+    "A two-norm perturbation budget is recorded as a conditioning diagnostic, not promoted as a certified error bound for the underlying eigensolver.",
+    "Double-precision basis agreement cannot by itself certify the exact residual gap when the operator norm is large."
+  ],
+  "boundary": "R-428 reconstructs one R-426 high-cutoff residual row and quantifies basis conditioning. The residual subspace projectors agree to near machine precision while the operator norm creates an amplification budget larger than the fixed comparison tolerance; without precision certification the route remains INCONCLUSIVE_CONDITIONING and R-426's failure is preserved.",
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "derived": {
+    "fixed_row": {
+      "beta": "8",
+      "conditional_row_index": 7,
+      "core_size": 7,
+      "cutoff_dimension": 16,
+      "orientation": "right",
+      "tail_size": 9,
+      "volume": 2
+    },
+    "hostile_mutation_count": 9,
+    "independent_classification": "INCONCLUSIVE_CONDITIONING",
+    "lean": "PASS",
+    "outputs": {
+      "lean": "",
+      "pre_a_cp1_st8_q3lock_residual_basis_conditioning_diagnostic.py": "R-428 PRIMARY INCONCLUSIVE_CONDITIONING 31/31 row=V2/d16/beta8/right/7 projector=9.7754e-16 A_norm=5.71686e+10 budget=0.000111769 spread=4.31874e-06 mismatch=3.3096e-06\nR-428 PRIMARY SELFTEST: PASS (fixed row crosswalk and conditioning diagnostic)",
+      "pre_a_cp1_st8_q3lock_residual_basis_conditioning_diagnostic_hostile.py": "R-428 HOSTILE PASS 10/10 invalid mutations rejected; R-426 failure preserved",
+      "pre_a_cp1_st8_q3lock_residual_basis_conditioning_diagnostic_independent.py": "R-428 INDEPENDENT SELFTEST: PASS (21/21; classification=INCONCLUSIVE_CONDITIONING)"
+    },
+    "precision_certified": false,
+    "primary_classification": "INCONCLUSIVE_CONDITIONING",
+    "r426_route_failure_preserved": true,
+    "residual_reuse_closed": false
+  },
+  "evidence_level": "T0 / EXECUTED FINITE CONDITIONING AND BASIS-CROSSWALK DIAGNOSTIC; the cause of the R-426 mismatch remains inconclusive and no residual-reuse closure is claimed",
+  "exploration_id": "EXP-001273",
+  "manifest": "strategy/pre-a-cp1-st8-q3lock-residual-basis-conditioning-diagnostic-manifest.json",
+  "missing_assumptions": [
+    "An arbitrary-precision or interval-certified eigensolve for the failing residual subspace.",
+    "A basis-independent exact or rigorously bounded residual-reuse value at the high cutoff.",
+    "A common unbounded Q3 Hamiltonian core and a cutoff/volume-uniform perturbation estimate.",
+    "Transfer of any repaired finite residual value through history, OS/KMS/GNS and physical-sector interfaces."
+  ],
+  "non_claims": [
+    "No repair or closure of the R-426 residual-reuse failure.",
+    "No proof that the mismatch is solely floating-point roundoff or solely algebraic.",
+    "No cutoff-, volume-, phase- or exhaustion-uniform Schur/residual bound.",
+    "No common core, history transfer, OS/KMS/GNS reconstruction, sector gap or continuum limit.",
+    "No C6, Sector-A, Pre-A, Yang-Mills or mass-gap conclusion."
+  ],
+  "result_id": "R-428",
+  "run_kind": "integrated",
+  "schema": "tect/pre-a-r428-integrated/1.0",
+  "source_hashes": {
+    "codes/foundations/pre_a_cp1_st8_q3lock_residual_basis_conditioning_diagnostic.py": "abc53d7a12ade149f31d9c74b551724884cd3ae97153ac273f2d188af8f98412",
+    "codes/foundations/pre_a_cp1_st8_q3lock_residual_basis_conditioning_diagnostic_hostile.py": "7cbad4d7ac580329376bc07c49e165955c69222cf4c26cb688ca917656e898c4",
+    "codes/foundations/pre_a_cp1_st8_q3lock_residual_basis_conditioning_diagnostic_independent.py": "a5f361707d01b803093eb7375b22c58a06d2db5bff9b9cb9b308165de49b920a",
+    "verification/lean/Tect/R428.lean": "62909ceadf7e99c5d3370a600ba821610bac48db67104ea1804c3f7eab6cd8cf"
+  },
+  "verdict": "INCONCLUSIVE_CONDITIONING"
+}

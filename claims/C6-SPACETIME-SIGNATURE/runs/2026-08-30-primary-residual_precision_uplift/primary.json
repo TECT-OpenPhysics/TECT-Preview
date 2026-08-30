@@ -1,0 +1,173 @@
+{
+  "assertion_count": 14,
+  "assertions": [
+    {
+      "actual": "['R-429', 'EXP-001274', False]",
+      "expected": "R-429/EXP-001274/false",
+      "group": "provenance",
+      "name": "manifest identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "hash-pinned R428/R426",
+      "expected": "declared SHA-256 values",
+      "group": "authority",
+      "name": "parent hashes",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2, 16, '8', 'right', 7]",
+      "expected": "V2/d16/beta8/right/row7",
+      "group": "fixture",
+      "name": "fixed row",
+      "status": "PASS"
+    },
+    {
+      "actual": "['5.622948645880553E-13', '0.2864501401805248', '1.0000000000000000336548518473']",
+      "expected": "positive normalized Decimal snapshot",
+      "group": "graph",
+      "name": "positive normalized graph",
+      "status": "PASS"
+    },
+    {
+      "actual": "symmetric Decimal conductance",
+      "expected": "exact decimal symmetry",
+      "group": "graph",
+      "name": "reversible conductance",
+      "status": "PASS"
+    },
+    {
+      "actual": "[16, 14, 14]",
+      "expected": "16x14",
+      "group": "basis",
+      "name": "basis dimensions",
+      "status": "PASS"
+    },
+    {
+      "actual": "9.9706770600000000000000000000000000000000000000000000000000000000000000000000000E-77",
+      "expected": "<=1E-60",
+      "group": "basis",
+      "name": "anchor Decimal orthonormality",
+      "status": "PASS"
+    },
+    {
+      "actual": "3.16052663E-76",
+      "expected": "<=1E-60",
+      "group": "basis",
+      "name": "reversed Decimal orthonormality",
+      "status": "PASS"
+    },
+    {
+      "actual": "['8.9150285252920814707263374711503987743916972000120425347508787310305906188193930E-61', '6.1032631242299038232713016160056604899400417914619836952654675732386984596526376E-61', 388, 391]",
+      "expected": "offdiag<=1E-60",
+      "group": "precision",
+      "name": "Jacobi convergence",
+      "status": "PASS"
+    },
+    {
+      "actual": "4E-79",
+      "expected": "<=1e-50",
+      "group": "precision",
+      "name": "basis-invariant gap agreement",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0000025686218286117480294524057207054685060592567614092712405156165638803320983",
+      "expected": ">5E-7",
+      "group": "reconstruction",
+      "name": "rounded-input mismatch exceeds fixed tolerance",
+      "status": "PASS"
+    },
+    {
+      "actual": "8.142622823882519705475942792945314939407432385907287594843834361196679017E-7",
+      "expected": ">5E-7",
+      "group": "reconstruction",
+      "name": "direct reference remains distinct",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'rounded_input_precision_uplift_closed': True, 'basis_invariant_rounded_input_closed': True, 'rounded_input_mismatch_reproduced': True, 'upstream_source_precision_certified': False, 'exact_original_input_certified': False, 'residual_reuse_closed': False, 'r426_route_failure_preserved': True, 'cutoff_uniform_coarse_schur_closed': False, 'volume_uniform_coarse_schur_closed': False, 'phase_uniform_coarse_schur_closed': False, 'exhaustion_uniform_coarse_schur_closed': False, 'global_poincare_closed': False, 'common_core_closed': False, 'common_split_rule_closed': False, 'hamiltonian_os_identification_closed': False, 'kms_gns_gap_closed': False, 'continuum_closed': False, 'c6_closed': False, 'sector_a_closed': False, 'pre_a_closed': False, 'no_new_negative_result': True, 'no_tier_change': True, 'no_pdf': True}",
+      "expected": "failure preserved and reuse open",
+      "group": "scope",
+      "name": "R-426 failure preserved",
+      "status": "PASS"
+    },
+    {
+      "actual": "ROUNDED_INPUT_ALGEBRAIC_BOUNDARY",
+      "expected": "ROUNDED_INPUT_ALGEBRAIC_BOUNDARY",
+      "group": "verdict",
+      "name": "diagnostic classification",
+      "status": "PASS"
+    }
+  ],
+  "assumptions": [
+    "The R-428 reconstruction is the declared fixed finite source snapshot for this downstream precision audit.",
+    "Converting each finite float to its canonical decimal string and using Decimal arithmetic isolates downstream eigensolver error but does not recover uncomputed upstream digits.",
+    "The blockwise weighted-zero-mean constraints define one residual subspace for the fixed positive graph.",
+    "The 5e-7 R-426 comparison tolerance and fixed row are immutable.",
+    "The Decimal Jacobi residual is treated as numerically converged only at the rounded-input level; no interval enclosure is asserted."
+  ],
+  "boundary": "R-429 can certify a basis-invariant residual value only for the decimalized R-428 finite graph snapshot. Any mismatch with R-422 therefore identifies a rounded-input algebraic boundary, while the original source-rounding enclosure remains missing.",
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "derived": {
+    "basis_gap_agreement_decimal": "4E-79",
+    "classification": "ROUNDED_INPUT_ALGEBRAIC_BOUNDARY",
+    "decimal_precision_digits": 80,
+    "direct_reference_decimal": "5.36318835004781",
+    "exact_original_input_certified": false,
+    "fixed_row": {
+      "beta": "8",
+      "conditional_row_index": 7,
+      "core_size": 7,
+      "cutoff_dimension": 16,
+      "orientation": "right",
+      "tail_size": 9,
+      "volume": 2
+    },
+    "invariant_gap_decimal": "5.3631875357855276117480294524057207054685060592567614092712405156165638803320983",
+    "jacobi_final_offdiagonal": {
+      "anchor": "8.9150285252920814707263374711503987743916972000120425347508787310305906188193930E-61",
+      "reversed": "6.1032631242299038232713016160056604899400417914619836952654675732386984596526376E-61"
+    },
+    "jacobi_sweeps": {
+      "anchor": 388,
+      "reversed": 391
+    },
+    "jacobi_tolerance": "1E-60",
+    "mismatch_direct_decimal": "8.142622823882519705475942792945314939407432385907287594843834361196679017E-7",
+    "mismatch_r422_decimal": "0.0000025686218286117480294524057207054685060592567614092712405156165638803320983",
+    "r422_reference_decimal": "5.363184967163699",
+    "r426_route_failure_preserved": true,
+    "residual_reuse_closed": false,
+    "second_basis_gap_decimal": "5.3631875357855276117480294524057207054685060592567614092712405156165638803320979",
+    "upstream_source_precision_certified": false
+  },
+  "evidence_level": "T0 / EXECUTED 80-DIGIT DECIMAL DOWNSTREAM PRECISION UPLIFT ON THE FIXED R-428 GRAPH SNAPSHOT; upstream source uncertainty remains open",
+  "exploration_id": "EXP-001274",
+  "manifest": "strategy/pre-a-cp1-st8-q3lock-residual-precision-uplift-manifest.json",
+  "missing_assumptions": [
+    "Arbitrary-precision or interval-certified reconstruction of the Gibbs state, coordinate eigenbasis and graph weights from the original Hamiltonian.",
+    "A rigorous enclosure that propagates upstream input uncertainty through the conditional row and residual operator.",
+    "A basis-independent exact or rigorously bounded residual-reuse value for the original unrounded model.",
+    "A common unbounded Q3 Hamiltonian core, regulator/volume-uniform estimate and history/OS/KMS/GNS/physical-sector transfer."
+  ],
+  "non_claims": [
+    "No exact certification of the original Gibbs/coordinate inputs.",
+    "No repair or closure of the R-426 residual-reuse route for the original unrounded model.",
+    "No cutoff-, volume-, phase- or exhaustion-uniform Schur/residual bound.",
+    "No common core, history transfer, OS/KMS/GNS reconstruction, sector gap or continuum limit.",
+    "No C6, Sector-A, Pre-A, Yang-Mills or mass-gap conclusion."
+  ],
+  "result_id": "R-429",
+  "run_kind": "primary",
+  "schema": "tect/pre-a-r429-primary/1.0",
+  "source_hashes": {
+    "manifest": "24baa0690b89f262dded8fb53118d542de58a509f610043a15edba704cc2ed79",
+    "primary": "6be56d757aa24c7db1303562f6cb0acfd421ca059992a3121363dcab2ea932a6",
+    "r416_manifest": "86beca8ab0c64e7173d34ddd5acecd78b95ccaa101287571f57cb50942f91db0",
+    "r419_manifest": "d5e2139c1a8af9b11f13098a8aaafabf66560bf08f011afb18900f50ae7e2881",
+    "r426_manifest": "0292aec6ec398cf7358e4e618f7623880543b9374a1501d3d3fa362db29901b0",
+    "r428_manifest": "cf022b25e8f1123f881bdbd7bbe5224fa6de131f0b089c6b08e337507a85c1ee"
+  },
+  "verdict": "ROUNDED_INPUT_ALGEBRAIC_BOUNDARY"
+}

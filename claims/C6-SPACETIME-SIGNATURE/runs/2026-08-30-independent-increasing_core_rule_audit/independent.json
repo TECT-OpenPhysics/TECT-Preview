@@ -1,0 +1,458 @@
+{
+  "assertion_count": 33,
+  "assertions": [
+    {
+      "actual": "['R-439', 'EXP-001284', False]",
+      "expected": "R-439/EXP-001284/false",
+      "group": "provenance",
+      "name": "manifest identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'volume': 2, 'beta': '8', 'orientation': 'right', 'row_kind': 'unconditional_one_site_marginal', 'target_emission_ordinal': 0, 'tail_threshold': '4', 'row_selection_frozen_before_classification': True, 'no_gap_based_row_selection': True}",
+      "expected": "{'volume': 2, 'beta': '8', 'orientation': 'right', 'row_kind': 'unconditional_one_site_marginal', 'target_emission_ordinal': 0, 'tail_threshold': '4', 'row_selection_frozen_before_classification': True, 'no_gap_based_row_selection': True}",
+      "group": "contract",
+      "name": "selection contract",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'name': 'directed-log-ratio-cutoff-adaptive-core', 'reference_probability': 'maximum midpoint of the directed row intervals', 'phi': 'log(p_max)-log(p_i)', 'core_criterion': 'upper(phi_interval_i) < tail_threshold', 'tail_criterion': 'lower(phi_interval_i) > tail_threshold', 'ambiguous_criterion': 'otherwise', 'support_is_recomputed_per_cutoff': True, 'support_is_not_required_to_be_nested': True, 'threshold': '4'}",
+      "expected": "fixed adaptive rule",
+      "group": "contract",
+      "name": "rule contract",
+      "status": "PASS"
+    },
+    {
+      "actual": "['R-435', 'R-435', 'INDEPENDENT_FINITE_CONTROL_PASS']",
+      "expected": "independent certified parent",
+      "group": "parent",
+      "name": "d=17 parent identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "(2, '8', 'right', 'unconditional_one_site_marginal', 0, '4')",
+      "expected": "(2, '8', 'right', 'unconditional_one_site_marginal', 0, '4')",
+      "group": "contract",
+      "name": "d=17 row identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "17",
+      "expected": "17",
+      "group": "row",
+      "name": "d=17 row length",
+      "status": "PASS"
+    },
+    {
+      "actual": "positive finite row",
+      "expected": "positive finite row",
+      "group": "row",
+      "name": "d=17 finite values",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.99999999999999989201067506",
+      "expected": "within 1e-12 of one",
+      "group": "normalization",
+      "name": "d=17 normalization",
+      "status": "PASS"
+    },
+    {
+      "actual": "[]",
+      "expected": "[]",
+      "group": "threshold",
+      "name": "d=17 no threshold ambiguity",
+      "status": "PASS"
+    },
+    {
+      "actual": "[4, 5, 6, 7, 8, 9, 10, 11, 12]",
+      "expected": "[4, 5, 6, 7, 8, 9, 10, 11, 12]",
+      "group": "support",
+      "name": "d=17 expected core",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, 1, 2, 3, 13, 14, 15, 16]",
+      "expected": "[0, 1, 2, 3, 13, 14, 15, 16]",
+      "group": "support",
+      "name": "d=17 expected tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]",
+      "expected": "[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]",
+      "group": "support",
+      "name": "d=17 partition",
+      "status": "PASS"
+    },
+    {
+      "actual": "['R-436', 'R-436', 'INDEPENDENT_FINITE_CONTROL_PASS']",
+      "expected": "independent certified parent",
+      "group": "parent",
+      "name": "d=18 parent identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "(2, '8', 'right', 'unconditional_one_site_marginal', 0, '4')",
+      "expected": "(2, '8', 'right', 'unconditional_one_site_marginal', 0, '4')",
+      "group": "contract",
+      "name": "d=18 row identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "18",
+      "expected": "18",
+      "group": "row",
+      "name": "d=18 row length",
+      "status": "PASS"
+    },
+    {
+      "actual": "positive finite row",
+      "expected": "positive finite row",
+      "group": "row",
+      "name": "d=18 finite values",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.00000000000000017199107773",
+      "expected": "within 1e-12 of one",
+      "group": "normalization",
+      "name": "d=18 normalization",
+      "status": "PASS"
+    },
+    {
+      "actual": "[]",
+      "expected": "[]",
+      "group": "threshold",
+      "name": "d=18 no threshold ambiguity",
+      "status": "PASS"
+    },
+    {
+      "actual": "[5, 6, 7, 8, 9, 10, 11, 12]",
+      "expected": "[5, 6, 7, 8, 9, 10, 11, 12]",
+      "group": "support",
+      "name": "d=18 expected core",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, 1, 2, 3, 4, 13, 14, 15, 16, 17]",
+      "expected": "[0, 1, 2, 3, 4, 13, 14, 15, 16, 17]",
+      "group": "support",
+      "name": "d=18 expected tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]",
+      "expected": "[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]",
+      "group": "support",
+      "name": "d=18 partition",
+      "status": "PASS"
+    },
+    {
+      "actual": "['R-438', 'R-438', 'INDEPENDENT_FINITE_CONTROL_PASS']",
+      "expected": "independent certified parent",
+      "group": "parent",
+      "name": "d=19 parent identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "(2, '8', 'right', 'unconditional_one_site_marginal', 0, '4')",
+      "expected": "(2, '8', 'right', 'unconditional_one_site_marginal', 0, '4')",
+      "group": "contract",
+      "name": "d=19 row identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "19",
+      "expected": "19",
+      "group": "row",
+      "name": "d=19 row length",
+      "status": "PASS"
+    },
+    {
+      "actual": "positive finite row",
+      "expected": "positive finite row",
+      "group": "row",
+      "name": "d=19 finite values",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.999999999999999870273395889",
+      "expected": "within 1e-12 of one",
+      "group": "normalization",
+      "name": "d=19 normalization",
+      "status": "PASS"
+    },
+    {
+      "actual": "[]",
+      "expected": "[]",
+      "group": "threshold",
+      "name": "d=19 no threshold ambiguity",
+      "status": "PASS"
+    },
+    {
+      "actual": "[5, 6, 7, 8, 9, 10, 11, 12, 13]",
+      "expected": "[5, 6, 7, 8, 9, 10, 11, 12, 13]",
+      "group": "support",
+      "name": "d=19 expected core",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, 1, 2, 3, 4, 14, 15, 16, 17, 18]",
+      "expected": "[0, 1, 2, 3, 4, 14, 15, 16, 17, 18]",
+      "group": "support",
+      "name": "d=19 expected tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]",
+      "expected": "[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]",
+      "group": "support",
+      "name": "d=19 partition",
+      "status": "PASS"
+    },
+    {
+      "actual": "[9, 8, 9]",
+      "expected": "[9, 8, 9]",
+      "group": "support",
+      "name": "adaptive cardinalities",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'row_contract_identity_checked': True, 'directed_threshold_classification_certified': True, 'cutoff_adaptive_core_rule_defined': True, 'all_coordinates_unambiguous': True, 'fixed_support_reuse_closed': False, 'nested_core_certified': False, 'core_cardinality_monotonicity_certified': False, 'increasing_core_tail_modulus_closed': False, 'cutoff_uniform_coarse_schur_closed': False, 'volume_uniform_coarse_schur_closed': False, 'phase_uniform_coarse_schur_closed': False, 'exhaustion_uniform_coarse_schur_closed': False, 'common_core_closed': False, 'kms_gns_gap_closed': False, 'continuum_closed': False, 'c6_closed': False, 'sector_a_closed': False, 'pre_a_closed': False, 'no_new_negative_result': True, 'no_tier_change': True, 'no_pdf': True}",
+      "expected": "finite rule flags true",
+      "group": "scope",
+      "name": "independent finite scope",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'row_contract_identity_checked': True, 'directed_threshold_classification_certified': True, 'cutoff_adaptive_core_rule_defined': True, 'all_coordinates_unambiguous': True, 'fixed_support_reuse_closed': False, 'nested_core_certified': False, 'core_cardinality_monotonicity_certified': False, 'increasing_core_tail_modulus_closed': False, 'cutoff_uniform_coarse_schur_closed': False, 'volume_uniform_coarse_schur_closed': False, 'phase_uniform_coarse_schur_closed': False, 'exhaustion_uniform_coarse_schur_closed': False, 'common_core_closed': False, 'kms_gns_gap_closed': False, 'continuum_closed': False, 'c6_closed': False, 'sector_a_closed': False, 'pre_a_closed': False, 'no_new_negative_result': True, 'no_tier_change': True, 'no_pdf': True}",
+      "expected": "uniform/common-core/physical flags false",
+      "group": "scope",
+      "name": "no uniform promotion",
+      "status": "PASS"
+    }
+  ],
+  "assumptions": [
+    "The R-435, R-436 and R-438 primary rows are directed interval authorities for the same V=2, beta=8, right-oriented unconditional ordinal-zero rule.",
+    "The maximum midpoint probability is selected only from each already fixed row and is not chosen from the resulting gap or support.",
+    "The stored row endpoints have sufficient precision for directed Decimal logarithm classification; every margin is checked against the strict threshold inequalities.",
+    "The expected supports in this manifest are test oracles copied from the parent source contracts, not derived claims about a limit.",
+    "An adaptive finite support rule may be non-nested and may have non-monotone cardinality; neither property is silently inferred from this audit."
+  ],
+  "boundary": "R-439 certifies one deterministic cutoff-adaptive threshold-four classification on the three finite V=2 rows. The supports are not asserted to be nested or uniform, and this result supplies no common-core, physical or Yang-Mills conclusion.",
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "derived": {
+    "all_coordinates_unambiguous": true,
+    "cases": [
+      {
+        "ambiguous": [],
+        "core": [
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "cutoff_dimension": 17,
+        "maximum_index": 8,
+        "parent_manifest": "strategy/pre-a-cp1-st8-q3lock-original-source-interval-d17-manifest.json",
+        "parent_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-independent-original_source_interval_d17/independent.json",
+        "phi_values": [
+          "21.31448475515452791918497979691053486026742875224517557482003095392795",
+          "19.58651047490234306263863102338346136678269954937856374844944818593281",
+          "12.67617873938991491891762191590231932550889903534374705353244884914463",
+          "6.483981572769879627213736788606919193907689961330166711124950882163514",
+          "2.928582137842687898019318905430650696427367733226065625265209712880147",
+          "1.044702886924877489197448608183308997714181702327806107702008408818923",
+          "0.237875003782487835955586385900149025665848969202877294059365159490335",
+          "0.017581805537779700207411556008058363130525199897824581298410214017337",
+          "0E-69",
+          "0.017581805537780899281185879825490086055843993433021688184092287993692",
+          "0.237875003782488922920001868578252011204044802113399567557104534597650",
+          "1.044702886924882360512515246241741889444533863963671992987268345312276",
+          "2.928582137842690702242893502909470541232302535077620576522885177733212",
+          "6.483981572769898206149357773534381131057646290615178037708284133986568",
+          "12.67617873938997936104447571342060865953702991704676127402046318168111",
+          "19.58651047490208291083777663336496746651117431988022036604533344766268",
+          "21.31448475515668204404710145771227190273280905456529757840046524488964"
+        ],
+        "row_sum": "0.99999999999999989201067506",
+        "tail": [
+          0,
+          1,
+          2,
+          3,
+          13,
+          14,
+          15,
+          16
+        ],
+        "tail_mass": "0.00057170691359643601067506"
+      },
+      {
+        "ambiguous": [],
+        "core": [
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "cutoff_dimension": 18,
+        "maximum_index": 8,
+        "parent_manifest": "strategy/pre-a-cp1-st8-q3lock-original-source-interval-d18-manifest.json",
+        "parent_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-independent-original_source_interval_d18/independent.json",
+        "phi_values": [
+          "22.54123135830670020237627382285196076192851690043242614633221304472216",
+          "21.19331736235487754489912903921421665628365763602078549719289975207330",
+          "15.23026169902128129063283795577416665321335373778686437343333247317472",
+          "8.203027511536353500019647150912953971494135097851878624760729987188977",
+          "4.016145184038869650338162339131431693880496814870916408874177485028136",
+          "1.641771008557464130355087848409679733181252109963849334113069314847702",
+          "0.486896707119226190119945656292063560318974952374856207914382686135968",
+          "0.072465116377598014715000008690926520204774512256054452891045295999459",
+          "0E-69",
+          "9.92362274835103041486577360759002991778834717250059264E-16",
+          "0.072465116377601156271036115619835933431441808896331907617725699329769",
+          "0.486896707119229958056526354358231538902023667244086718686667793841676",
+          "1.641771008557468856618452955115475810461807696959803153931850553786974",
+          "4.016145184038869864472085025754059169059679858517896685727631988684930",
+          "8.203027511536356822108685965428127956961246523086832924664562060455442",
+          "15.23026169902105553456322756319895216951090064852429784565720262572820",
+          "21.19331736237187695148917492013121305911221493236006734720113954335302",
+          "22.54123135831457586426479381982961935466174763038394930525585612802805"
+        ],
+        "row_sum": "1.00000000000000017199107773",
+        "tail": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          13,
+          14,
+          15,
+          16,
+          17
+        ],
+        "tail_mass": "0.00663738809086597599107773"
+      },
+      {
+        "ambiguous": [],
+        "core": [
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "cutoff_dimension": 19,
+        "maximum_index": 9,
+        "parent_manifest": "strategy/pre-a-cp1-st8-q3lock-original-source-interval-d19-manifest.json",
+        "parent_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-independent-original_source_interval_d19/independent.json",
+        "phi_values": [
+          "24.50788434819125537469482945986225894708873967340823573131831069421945",
+          "23.26440577252972108154289743688954451114586758058916734799839151180938",
+          "17.69499160665140672243565842285173941309811401809073946422980490905288",
+          "10.14005231314182474126557881464807559278691204705756814835830844497169",
+          "5.291731358968888864388386573315708624721481187462405282211223001779232",
+          "2.402947334176810495574499419573398754438766670604133884804407742464916",
+          "0.859954228944261778301699792867977114320881282168842014464886473915361",
+          "0.195876535643872385143531500390867159563190580925788217653384254594365",
+          "0.015144001573268943543998348723809212328798199544544085138823742538842",
+          "0E-69",
+          "0.015144001573269746838293365254937829353452957859156700751825561756783",
+          "0.195876535643876372322985788340260097538126587707963461944893387425807",
+          "0.859954228944262446050430682081723274698883722012938234680403925822886",
+          "2.402947334176816556349929995947483209566629022651277647940541363509532",
+          "5.291731358968898858160134624352409489879770081138778931706434529960850",
+          "10.14005231314182560045655440198648052667613376273452596456358200141602",
+          "17.69499160665022085518391468756607678198377929899675310160573800733918",
+          "23.26440577253844396128945010346908636123060018974467889124489386896056",
+          "24.50788434819377945683663551771688470877841083903739271358392185565505"
+        ],
+        "row_sum": "0.999999999999999870273395889",
+        "tail": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          14,
+          15,
+          16,
+          17,
+          18
+        ],
+        "tail_mass": "0.001795083294598139273395889"
+      }
+    ],
+    "core_cardinalities": [
+      9,
+      8,
+      9
+    ],
+    "core_cardinality_monotone": false,
+    "raw_index_nested": false,
+    "rule": {
+      "ambiguous_criterion": "otherwise",
+      "core_criterion": "upper(phi_interval_i) < tail_threshold",
+      "name": "directed-log-ratio-cutoff-adaptive-core",
+      "phi": "log(p_max)-log(p_i)",
+      "reference_probability": "maximum midpoint of the directed row intervals",
+      "support_is_not_required_to_be_nested": true,
+      "support_is_recomputed_per_cutoff": true,
+      "tail_criterion": "lower(phi_interval_i) > tail_threshold",
+      "threshold": "4"
+    },
+    "selection_contract": {
+      "beta": "8",
+      "no_gap_based_row_selection": true,
+      "orientation": "right",
+      "row_kind": "unconditional_one_site_marginal",
+      "row_selection_frozen_before_classification": true,
+      "tail_threshold": "4",
+      "target_emission_ordinal": 0,
+      "volume": 2
+    }
+  },
+  "evidence_level": "T0 / EXECUTED NON-IMPORTING FINITE CONTROL; NO UNIFORM OR PHYSICAL PROMOTION",
+  "exploration_id": "EXP-001284",
+  "manifest": "strategy/pre-a-cp1-st8-q3lock-increasing-core-rule-audit-manifest.json",
+  "missing_assumptions": [
+    "An analytic cutoff-, volume-, phase- and exhaustion-uniform tail modulus for the adaptive supports.",
+    "Nested or transported embeddings of the cutoff-dependent cores into one common Q3 domain.",
+    "Residual-reuse closure and a common unbounded Hamiltonian core with OS/KMS/GNS identification.",
+    "A physical-sector reference, physical-empty comparison and any C6 or Sector-A transfer."
+  ],
+  "non_claims": [
+    "No cutoff-, volume-, phase- or exhaustion-uniform tail modulus.",
+    "No nested common core, residual-reuse closure, OS/KMS/GNS reconstruction or sector gap.",
+    "No physical-empty energy sign, Reading-H stationarity or symmetry-projected transverse stability.",
+    "No C6, Sector-A, Pre-A, Yang-Mills or mass-gap conclusion.",
+    "The independent point-log control is not a directed interval proof."
+  ],
+  "result_id": "R-439",
+  "run_kind": "independent",
+  "schema": "tect/pre-a-r439-independent/1.0",
+  "source_hashes": {
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-independent-original_source_interval_d17/independent.json": "06296a9c7c4b9f359845518bb493a45575f4339941058ca61ee7f24f3c915e44",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-independent-original_source_interval_d18/independent.json": "8c629c0aee95d2f21a7e969bb3ef7f48c7d4d6f99fa9f247eb9c7a68b8d290e3",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-independent-original_source_interval_d19/independent.json": "ef81a91196fca1a2659eb46008f647e08689c15b1871d10a4155e4cec2e50935",
+    "manifest": "c6d2ba2a9bf2167e792c37c4715252ef97c92ffd3f9ed3e8ed8c2260a38ece25",
+    "script": "8cd9754e5891345246a83fdb06216f9b04664ebe55747c869692939b753a06c5"
+  },
+  "verdict": "INDEPENDENT_ADAPTIVE_RULE_CONTROL"
+}

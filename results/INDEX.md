@@ -5,35 +5,35 @@
 
 Authorities: `RESULTS-LEDGER.md`.
 
-**259 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
+**278 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
 
 | ID | Result | Tier/scope |
 |---|---|---|
+| [`R-444`](../RESULTS-LEDGER.md#r-444) | Exact exponential shell-tail majorant | T0 |
+| [`R-443`](../RESULTS-LEDGER.md#r-443) | Arbitrary finite rectangular axis-parity matching theorem | T0 |
+| [`R-442`](../RESULTS-LEDGER.md#r-442) | General rectangular axis-parity matching lemma | T0 |
+| [`R-441`](../RESULTS-LEDGER.md#r-441) | Reading-H physical-empty bounded test owner execution (blocked) | T0 |
+| [`R-440`](../RESULTS-LEDGER.md#r-440) | Finite rectangular-box matching-layer split envelope | T0 |
+| [`R-439`](../RESULTS-LEDGER.md#r-439) | Cutoff-adaptive threshold-four core rule audit | T0 |
+| [`R-438`](../RESULTS-LEDGER.md#r-438) | V=2, d=19 original-source interval enclosure | T0 |
+| [`R-437`](../RESULTS-LEDGER.md#r-437) | fixed threshold-four support crossing from d=17 to d=18 | T0 |
+| [`R-436`](../RESULTS-LEDGER.md#r-436) | V=2, d=18 original-source interval enclosure | T0 |
+| [`R-435`](../RESULTS-LEDGER.md#r-435) | V=2, d=17 original-source interval enclosure | T0 |
+| [`R-434`](../RESULTS-LEDGER.md#r-434) | Reading-H physical-empty bounded test owner refresh (blocked) | T0 |
+| [`R-433`](../RESULTS-LEDGER.md#r-433) | Validated original-source interval enclosure at corrected row 7 | T0 |
+| [`R-432`](../RESULTS-LEDGER.md#r-432) | Fixed conditional-row ordinal audit for the R-430/R-426 comparison | T0 |
+| [`R-431`](../RESULTS-LEDGER.md#r-431) | Directed interval enclosure for the fixed rounded residual snapshot | T0 |
+| [`R-430`](../RESULTS-LEDGER.md#r-430) | Original-source point-precision audit (no interval) | T0 |
+| [`R-429`](../RESULTS-LEDGER.md#r-429) | Decimal precision uplift confirms the rounded-input residual boundary | T0 |
+| [`R-428`](../RESULTS-LEDGER.md#r-428) | High-cutoff residual-basis conditioning diagnostic (inconclusive) | T0 |
+| [`R-427`](../RESULTS-LEDGER.md#r-427) | Reading-H physical-empty bounded test revalidation (blocked) | T0 |
+| [`R-426`](../RESULTS-LEDGER.md#r-426) | High-cutoff finite harmonic coarse-Schur stress (route-local boundary) | T0 |
 | [`R-425`](../RESULTS-LEDGER.md#r-425) | Expanded finite Q3 harmonic coarse-Schur stress | T0 |
 | [`R-424`](../RESULTS-LEDGER.md#r-424) | Finite two-block harmonic coarse Schur assembly | T0 |
 | [`R-423`](../RESULTS-LEDGER.md#r-423) | Finite directed boundary-capacity Cauchy envelope | T0 |
 | [`R-422`](../RESULTS-LEDGER.md#r-422) | Finite residual core-tail coercivity reserve | T0 |
 | [`R-421`](../RESULTS-LEDGER.md#r-421) | Tail-supported Hardy ground-state-transform interface | T0 (claim-nonbearing finite interface). |
 | [`R-420`](../RESULTS-LEDGER.md#r-420) | Reading-H physical-empty bounded test (blocked) | T0 (claim-nonbearing preregistration/input boundary). |
-| [`R-419`](../RESULTS-LEDGER.md#r-419) | Growing-volume log-domain Lyapunov core-tail stress | T0 (claim-nonbearing finite stress). |
-| [`R-418`](../RESULTS-LEDGER.md#r-418) | Physical-empty same-owner preregistration boundary | T0 (claim-nonbearing input-boundary audit). |
-| [`R-417`](../RESULTS-LEDGER.md#r-417) | Log-domain Lyapunov core-tail drift corridor | T0 |
-| [`R-416`](../RESULTS-LEDGER.md#r-416) | Log-domain and projected Schur cutoff stress | T0 |
-| [`R-415`](../RESULTS-LEDGER.md#r-415) | Schur-certified two-scale semigroup budget for the intrinsic graph | T0 |
-| [`R-414`](../RESULTS-LEDGER.md#r-414) | Two-scale semigroup criterion for the normalized Green trace | T0 |
-| [`R-413`](../RESULTS-LEDGER.md#r-413) | Mellin heat-trace bridge for mixed IR/UV spectral counting | T0 |
-| [`R-412`](../RESULTS-LEDGER.md#r-412) | Two-regime IR/UV mixed spectral-counting envelope for the normalized Green trace | T0 |
-| [`R-411`](../RESULTS-LEDGER.md#r-411) | Sublinear spectral-counting exponent envelope for the normalized Green trace | T0 |
-| [`R-410`](../RESULTS-LEDGER.md#r-410) | Quadratic eigenvalue-counting envelope for the normalized Green trace | T0 |
-| [`R-409`](../RESULTS-LEDGER.md#r-409) | Effective-resistance average trace identity and heat-kernel target | T0 |
-| [`R-408`](../RESULTS-LEDGER.md#r-408) | Tree-independent effective-resistance lower bound | T0 |
-| [`R-407`](../RESULTS-LEDGER.md#r-407) | Canonical-path effective-resistance lower bound | T0 |
-| [`R-406`](../RESULTS-LEDGER.md#r-406) | Harmonic-extension Schur capacity decomposition | T0 |
-| [`R-405`](../RESULTS-LEDGER.md#r-405) | Phase-conditioned intrinsic gap and inter-phase capacity split | T0 |
-| [`R-404`](../RESULTS-LEDGER.md#r-404) | Intrinsic kinetic graph Poincare stress for Q3 likelihood rows | T0 |
-| [`R-403`](../RESULTS-LEDGER.md#r-403) | Increasing-cutoff Hamiltonian carre-du-champ stress | T0 |
-| [`R-402`](../RESULTS-LEDGER.md#r-402) | Finite Hamiltonian carre-du-champ comparison | T0 |
-| [`R-401`](../RESULTS-LEDGER.md#r-401) | Physical-coordinate metric for the conditional gap | T0 |
 
 Search without loading the full ledger:
 

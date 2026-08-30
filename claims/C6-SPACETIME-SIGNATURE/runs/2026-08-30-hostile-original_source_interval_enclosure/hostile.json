@@ -1,0 +1,91 @@
+{
+  "assertion_count": 7,
+  "assertions": [
+    {
+      "mutation": {
+        "target_parent_coordinate": 5
+      },
+      "name": "wrong parent coordinate",
+      "reason": "ordinal 7 is fixed to parent coordinate 6 by R-432",
+      "status": "REJECTED"
+    },
+    {
+      "mutation": {
+        "target_emission_ordinal": 6
+      },
+      "name": "wrong emission ordinal",
+      "reason": "the corrected source row is emission ordinal 7",
+      "status": "REJECTED"
+    },
+    {
+      "mutation": {
+        "beta": "4"
+      },
+      "name": "wrong beta fixture",
+      "reason": "the R-419 beta=8 source contract is immutable",
+      "status": "REJECTED"
+    },
+    {
+      "mutation": {
+        "symmetry_block_sizes": [
+          256
+        ]
+      },
+      "name": "symmetry reduction removed",
+      "reason": "the four exchange/parity blocks are a required source check",
+      "status": "REJECTED"
+    },
+    {
+      "mutation": {
+        "maximum_matrix_interval_width": "1"
+      },
+      "name": "interval width gate relaxed",
+      "reason": "the finite conditioning-width threshold cannot be disabled",
+      "status": "REJECTED"
+    },
+    {
+      "mutation": {
+        "lower_probe": "0"
+      },
+      "name": "lower Cholesky probe omitted",
+      "reason": "the lower probe is part of the fixed two-sided spectral certificate",
+      "status": "REJECTED"
+    },
+    {
+      "mutation": {
+        "c6_closed": true,
+        "continuum_closed": true,
+        "pre_a_closed": true,
+        "sector_a_closed": true
+      },
+      "name": "physical promotion mutation",
+      "reason": "R-433 is finite and claim-nonbearing; physical and continuum flags remain false",
+      "status": "REJECTED"
+    }
+  ],
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "evidence_level": "T0 / EXECUTED ADVERSARIAL FINITE CONTROL",
+  "exploration_id": "EXP-001278",
+  "manifest": "strategy/pre-a-cp1-st8-q3lock-original-source-interval-enclosure-manifest.json",
+  "non_claims": [
+    "No physical-empty energy sign, Reading-H full stationarity or symmetry-projected transverse stability result.",
+    "No cutoff-, volume-, phase- or exhaustion-uniform Schur, Poincare or residual theorem.",
+    "No common core, history transfer, OS/KMS/GNS reconstruction, sector gap or continuum limit.",
+    "No C6, Sector-A, Pre-A, Yang-Mills or mass-gap conclusion."
+  ],
+  "result_id": "R-433",
+  "run_kind": "hostile",
+  "schema": "tect/pre-a-r433-hostile/1.0",
+  "scope": {
+    "claim_bearing": false,
+    "hostile_mutations_rejected": true,
+    "physical_promotion_rejected": true
+  },
+  "source_hashes": {
+    "independent": "5f725ca06b5e650096ceabb376b13734ca708285d7be0e09205decfa8a36e6f3",
+    "manifest": "7fa31f533d0c87f8bfc69c97b8583d7f1de581aa88629d3a36903c4bd3b41f85",
+    "primary": "b8f9445280f06e1666b4dd4b7f79513f2ecd4b28690bc713571d7d42c29d4f4f",
+    "script": "f2a24f4f5be8b889db61a3ee406c3889b58ff489f991564078902b74c0f90ea1"
+  },
+  "verdict": "HOSTILE_MUTATIONS_REJECTED"
+}

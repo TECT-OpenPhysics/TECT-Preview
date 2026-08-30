@@ -1,0 +1,116 @@
+{
+  "schema": "tect/pre-a-cp1-st8-q3lock-rectangular-matching-general-lemma/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-RECTANGULAR-MATCHING-GENERAL-LEMMA-v0",
+  "result_id": "R-442",
+  "title": "General axis-parity matching lemma for finite rectangular boxes",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001287",
+  "claim_bearing": false,
+  "status": "GENERAL_RECTANGULAR_MATCHING_LEMMA_AUDITED",
+  "parent_results": ["R-440", "R-439"],
+  "parent_explorations": ["EXP-001285", "EXP-001284"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY"
+  ],
+  "question": "For every finite rectangular box with side lengths at least two, does colouring each nearest-neighbour edge by its axis and the parity of its lower endpoint give two matching layers per axis, with the exact rectangular edge-count formula?",
+  "finite_contract": {
+    "dimension": 3,
+    "parity_modulus": 2,
+    "side_min": 2,
+    "side_max": 6,
+    "box_family": "all ordered side triples in [side_min, side_max]^dimension",
+    "adjacency": "one-coordinate increment by one inside the box",
+    "lower_endpoint_colour": "(axis, lower_coordinate[axis] mod parity_modulus)",
+    "expected_layer_count": "dimension * parity_modulus",
+    "edge_count_formula": "sum_axis((side_axis-1)*product_other_sides)"
+  },
+  "derived_rule": {
+    "vertex_count": "product_axis(side_axis)",
+    "edge_count": "sum_axis((side_axis-1)*product_other_sides)",
+    "layer_keys": "all (axis, parity) pairs",
+    "matching_condition": "each vertex has at most one incident edge in each layer",
+    "parity_separation": "the forward and backward candidate lower coordinates differ by one and cannot share parity mod 2"
+  },
+  "scope": {
+    "finite_box_sweep_checked": true,
+    "all_ordered_side_triples_in_declared_range_checked": true,
+    "edge_count_formula_checked": true,
+    "layer_keys_retained_including_empty": true,
+    "matching_property_checked": true,
+    "general_local_incidence_lemma_lean_checked": true,
+    "arbitrary_box_edge_colouring_closed": false,
+    "weighted_operator_form_closed": false,
+    "onsite_self_adjoint_hypothesis_closed": false,
+    "boundary_commutator_decay_closed": false,
+    "history_tail_closed": false,
+    "exhaustion_cauchy_closed": false,
+    "common_core_closed": false,
+    "common_alpha_closed": false,
+    "kms_gns_gap_closed": false,
+    "physical_empty_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "assumptions": [
+    "Vertices are integer coordinate vectors in a finite rectangular box with every side length at least two.",
+    "Edges are only nearest-neighbour coordinate increments and are represented by their unique lower endpoint and axis.",
+    "The layer colour is the axis together with the lower endpoint coordinate modulo two; empty colour slots remain part of the layer family.",
+    "The Lean incidence lemma is applied to this adjacency relation and does not encode a Q3 operator or physical state.",
+    "The side range [2,6] is an exhaustive finite test set for the executable Python rows, while the local incidence proposition is quantified in Lean."
+  ],
+  "missing_assumptions": [
+    "A Q3LOCK interaction/operator theorem transferring the combinatorial layers to the full unbounded Hamiltonian.",
+    "A representation-independent common core and weighted product-domain estimate for the layer subflows.",
+    "Cutoff-, source-, phase-, volume- and exhaustion-uniform boundary commutator and history-tail estimates.",
+    "Lie--Trotter/common-alpha convergence, Hamiltonian-to-OS/KMS/GNS identification and sector coercivity.",
+    "Any physical-empty branch, Reading-H energy comparison, continuum limit or Sector-A completion."
+  ],
+  "stop_conditions": [
+    "If a declared box has an invalid side or an edge-count mismatch, fail the sweep.",
+    "If any retained layer has two edges incident at one vertex, fail the matching lemma audit.",
+    "If the independent reconstruction disagrees with the primary aggregate, retain the disagreement and do not average it away.",
+    "Do not promote local matching combinatorics to a Q3 operator, physical, Yang-Mills or mass-gap theorem."
+  ],
+  "evidence_level": "T0 / EXECUTED FINITE ALL-BOX SWEEP WITH A GENERAL LEAN LOCAL-INCIDENCE LEMMA; OPERATOR AND LIMIT INPUTS NOT CLAIMED",
+  "non_claims": [
+    "No Q3LOCK Hamiltonian, Friedrichs-domain or weighted operator theorem.",
+    "No boundary commutator, history-tail, common-core, common-alpha or exhaustion theorem.",
+    "No OS/KMS/GNS reconstruction, broken-sector coercivity, physical-empty comparison, continuum limit or Sector-A/Pre-A closure.",
+    "No Yang-Mills dynamics or mass-gap conclusion."
+  ],
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R442.lean",
+    "theorem_markers": [
+      "same_colour_incident_unique",
+      "six_colour_layers"
+    ],
+    "command": "lake env lean Tect/R442.lean",
+    "role": "Lean proves the abstract local incidence/parity separation and six-colour arithmetic; finite box enumeration and edge counts remain executable Python evidence."
+  },
+  "artifacts": {
+    "primary_script": "codes/foundations/pre_a_cp1_st8_q3lock_rectangular_matching_general_lemma.py",
+    "independent_script": "codes/foundations/pre_a_cp1_st8_q3lock_rectangular_matching_general_lemma_independent.py",
+    "hostile_script": "codes/foundations/pre_a_cp1_st8_q3lock_rectangular_matching_general_lemma_hostile.py",
+    "integrated_verifier": "codes/foundations/pre_a_cp1_st8_q3lock_rectangular_matching_general_lemma_verify.py",
+    "lean": "verification/lean/Tect/R442.lean",
+    "certificate": "strategy/pre-a-cp1-st8-q3lock-rectangular-matching-general-lemma-certificate-260830.md",
+    "exploration": "strategy/pre-a-cp1-st8-q3lock-rectangular-matching-general-lemma-exploration.json"
+  },
+  "boundary": "R-442 closes only the abstract axis-parity matching property and exact edge-count bookkeeping for the declared finite rectangular graph family, with the local incidence statement proved in Lean. It does not close the weighted Q3 split form, operator domains, boundary/history tails, exhaustion, common alpha, KMS/GNS, physical-empty branch, Sector-A, Pre-A, Yang-Mills or mass-gap claims.",
+  "formal_integration": {
+    "event_ordinal": 784,
+    "event_title": "R-442 general rectangular matching lemma",
+    "event_id": "20260830-r-442-general-rectangular-matching-lemma-2026-0",
+    "new_negative": false,
+    "tier_change": false,
+    "pdf": false
+  }
+}

@@ -1,0 +1,139 @@
+{
+  "assertion_count": 9,
+  "assertions": [
+    {
+      "actual": [
+        "R-430",
+        "EXP-001275",
+        false
+      ],
+      "expected": "R-430/EXP-001275/false",
+      "name": "manifest identity",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        2,
+        16,
+        "8",
+        "right",
+        7
+      ],
+      "expected": "V2/d16/beta8/right/row7",
+      "name": "fixed source row",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        3.2604718684593964e-11,
+        0.317599048401079,
+        1.0
+      ],
+      "expected": "positive normalized",
+      "name": "positive normalized row",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.0,
+      "expected": "<=5e-07",
+      "name": "reversible graph",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        7,
+        9
+      ],
+      "expected": [
+        7,
+        9
+      ],
+      "name": "block dimensions",
+      "status": "PASS"
+    },
+    {
+      "actual": 6.094733971033106,
+      "expected": ">0",
+      "name": "source gap positive",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.7315490038694072,
+      "expected": ">5e-07",
+      "name": "source gap separated",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "SOURCE_POINT_AUDIT_NO_INTERVAL",
+        false,
+        false
+      ],
+      "expected": "point audit without interval",
+      "name": "point-only firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.73154643524758,
+      "expected": ">5e-07 (independent double versus mpmath point)",
+      "name": "source precision sensitivity recorded",
+      "status": "PASS"
+    }
+  ],
+  "assumptions": [
+    "The original R-419/R-416/R-402 finite oscillator and Hamiltonian formulas are the declared source model.",
+    "Fifty-digit mpmath eigsy and log-sum-exp arithmetic provide a converged point estimate for the finite source calculation.",
+    "The fixed conditional-row orientation, index, tail threshold and comparison tolerance are unchanged.",
+    "The residual basis spans the blockwise weighted-zero-mean subspace for the computed positive row."
+  ],
+  "boundary": "R-430 moves the precision test through the original finite source formulas but remains a point-precision audit. Only a propagated interval enclosure can decide whether the R-426 mismatch is certified for the unrounded model.",
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "derived": {
+    "exact_original_input_certified": false,
+    "fixed_row": {
+      "beta": "8",
+      "conditional_row_index": 7,
+      "core_size": 7,
+      "cutoff_dimension": 16,
+      "orientation": "right",
+      "tail_size": 9,
+      "volume": 2
+    },
+    "mismatch_r422": 0.7315490038694072,
+    "primary_mpmath_gap": 5.363187535785526,
+    "r422_reference": 5.363184967163699,
+    "r426_route_failure_preserved": true,
+    "residual_reuse_closed": false,
+    "source_interval_certified": false,
+    "source_point_gap_difference": 0.73154643524758,
+    "source_residual_gap_double": 6.094733971033106
+  },
+  "evidence_level": "T0 / EXECUTED INDEPENDENT DOUBLE-SOURCE CONTROL; NO INTERVAL CERTIFICATION",
+  "exploration_id": "EXP-001275",
+  "independence_scope": "Separate NumPy reconstruction from R-419/R-416/R-402 with independent residual projection; the mpmath primary module is not imported.",
+  "manifest": "strategy/pre-a-cp1-st8-q3lock-source-point-precision-audit-manifest.json",
+  "missing_assumptions": [
+    "Interval or ball-arithmetic enclosures for the 256-dimensional Hamiltonian eigenvalues/eigenvectors and coordinate eigenbasis.",
+    "A propagated enclosure for the conditional row, conductance and residual eigenvalue.",
+    "A basis-independent exact residual-reuse comparison for the original unrounded source.",
+    "A common unbounded Q3 core, regulator/volume-uniform estimate and history/OS/KMS/GNS/physical-sector transfer."
+  ],
+  "non_claims": [
+    "No interval or exact certification of the original Hamiltonian source.",
+    "No repair or closure of R-426 residual reuse for the original model.",
+    "No cutoff-, volume-, phase- or exhaustion-uniform Schur/residual bound.",
+    "No common core, history transfer, OS/KMS/GNS reconstruction, sector gap or continuum limit.",
+    "No C6, Sector-A, Pre-A, Yang-Mills or mass-gap conclusion."
+  ],
+  "result_id": "R-430",
+  "run_kind": "independent",
+  "schema": "tect/pre-a-r430-independent/1.0",
+  "source_hashes": {
+    "independent": "f5fe8f29a5f84b20ddd780bc7d58620803db10a97661012388d21403f525cacd",
+    "manifest": "d94f4c9e871586d01eb9346586d6b699cd6732459c0f1113ccfacf42801bc15e",
+    "primary_run": "9e687794607bc0711b71f81eb555a46c927bd8584ec4048d78a024a60144027a",
+    "r419_manifest": "d5e2139c1a8af9b11f13098a8aaafabf66560bf08f011afb18900f50ae7e2881",
+    "r426_manifest": "0292aec6ec398cf7358e4e618f7623880543b9374a1501d3d3fa362db29901b0"
+  },
+  "verdict": "INDEPENDENT_SOURCE_SENSITIVITY_CONTROL"
+}

@@ -1,0 +1,207 @@
+{
+  "assertion_count": 12,
+  "assertions": [
+    {
+      "actual": "['R-435', 'EXP-001280', False]",
+      "expected": "R-435/EXP-001280/false",
+      "group": "provenance",
+      "name": "manifest identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "289",
+      "expected": "289",
+      "group": "source",
+      "name": "finite dimension",
+      "status": "PASS"
+    },
+    {
+      "actual": "[81, 64, 72, 72]",
+      "expected": "[81, 64, 72, 72]",
+      "group": "symmetry",
+      "name": "independent block enumeration",
+      "status": "PASS"
+    },
+    {
+      "actual": "7.105427357601002e-15",
+      "expected": "finite symmetric source",
+      "group": "source",
+      "name": "source self-adjoint",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.00014242327033286983",
+      "expected": ">0",
+      "group": "source",
+      "name": "source ordering",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.0338305077655358e-10",
+      "expected": ">0",
+      "group": "Gibbs row",
+      "name": "unconditional positivity",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.0",
+      "expected": "1",
+      "group": "Gibbs row",
+      "name": "unconditional normalization",
+      "status": "PASS"
+    },
+    {
+      "actual": "[[4, 5, 6, 7, 8, 9, 10, 11, 12], [0, 1, 2, 3, 13, 14, 15, 16]]",
+      "expected": "[[4, 5, 6, 7, 8, 9, 10, 11, 12], [0, 1, 2, 3, 13, 14, 15, 16]]",
+      "group": "row",
+      "name": "tail split",
+      "status": "PASS"
+    },
+    {
+      "actual": "[4.221539067848923, (15, 15)]",
+      "expected": "finite 15x15 compression",
+      "group": "residual",
+      "name": "residual compression",
+      "status": "PASS"
+    },
+    {
+      "actual": "4.221539067848923",
+      "expected": ">4.2",
+      "group": "eigenvalue",
+      "name": "lower probe",
+      "status": "PASS"
+    },
+    {
+      "actual": "4.221539067848923",
+      "expected": "<4.25",
+      "group": "eigenvalue",
+      "name": "upper probe",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.021539067848922677, 0.028460932151077145]",
+      "expected": "positive two-sided margin",
+      "group": "eigenvalue",
+      "name": "finite gap margin",
+      "status": "PASS"
+    }
+  ],
+  "assumptions": [
+    "The R-419 rational oscillator fixture is unchanged and is the exact finite source for V=2, d=17.",
+    "Exchange and global Fock-parity symmetries commute with the finite source Hamiltonian, so the four block dimensions [81,64,72,72] preserve the finite spectrum.",
+    "The R-433 polar-correction and Gibbs-kernel perturbation inequalities apply after the d=17 residual and Gram checks pass.",
+    "The unconditional row is the normalized one-site marginal of the finite Gibbs diagonal, and the fixed tail threshold is four.",
+    "The interval Cholesky and Rayleigh certificates use the same symmetric compressed residual enclosure."
+  ],
+  "boundary": "One finite V=2, d=17, beta=8 unconditional one-site marginal row. The certificate is an auxiliary source-interval datapoint; all uniform, physical-empty and Yang-Mills/mass-gap flags remain false.",
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "derived": {
+    "block_sizes": [
+      81,
+      64,
+      72,
+      72
+    ],
+    "conditional_row": [
+      1.0338305077677628e-10,
+      5.819679106688969e-10,
+      5.834692589415285e-07,
+      0.0002852693021883177,
+      0.009984938524033052,
+      0.06569068015977234,
+      0.14719893100543718,
+      0.1834749493408466,
+      0.18672929502622584,
+      0.18347494934084638,
+      0.14719893100543702,
+      0.06569068015977202,
+      0.009984938524033024,
+      0.0002852693021883124,
+      5.834692589414909e-07,
+      5.819679106690483e-10,
+      1.0338305077655358e-10
+    ],
+    "fixed_row": {
+      "beta": "8",
+      "core_indices": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "cutoff_dimension": 17,
+      "orientation": "right",
+      "row_kind": "unconditional_one_site_marginal",
+      "tail_indices": [
+        0,
+        1,
+        2,
+        3,
+        13,
+        14,
+        15,
+        16
+      ],
+      "tail_threshold": "4",
+      "target_emission_ordinal": 0,
+      "target_parent_coordinate": null,
+      "volume": 2
+    },
+    "lower_probe_margin": 0.021539067848922677,
+    "residual_gap_double": 4.221539067848923,
+    "tail_split": {
+      "core": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tail": [
+        0,
+        1,
+        2,
+        3,
+        13,
+        14,
+        15,
+        16
+      ]
+    },
+    "upper_probe_margin": 0.028460932151077145
+  },
+  "evidence_level": "T0 / EXECUTED INDEPENDENT FINITE FLOAT CONTROL; PRIMARY DIRECTED INTERVAL REMAINS AUTHORITATIVE",
+  "exploration_id": "EXP-001280",
+  "manifest": "strategy/pre-a-cp1-st8-q3lock-original-source-interval-d17-manifest.json",
+  "missing_assumptions": [
+    "A cutoff-, volume-, phase- and exhaustion-uniform interval estimate.",
+    "A common unbounded Q3 core, history transfer and OS/KMS/GNS reconstruction.",
+    "Residual-reuse closure against the R-422/R-426 route and a common limit-order theorem.",
+    "Physical-sector admission, an absolute physical reference and any Yang-Mills interpretation."
+  ],
+  "non_claims": [
+    "No cutoff/volume/phase/exhaustion-uniform Schur or Poincare theorem.",
+    "No common core, history transfer, OS/KMS/GNS reconstruction, sector gap or continuum limit.",
+    "No physical-empty energy sign, Reading-H stationarity or symmetry-projected transverse stability.",
+    "No C6, Sector-A, Pre-A, Yang-Mills or mass-gap conclusion.",
+    "The independent float reconstruction is not an interval or uniform proof."
+  ],
+  "result_id": "R-435",
+  "run_kind": "independent",
+  "schema": "tect/pre-a-r435-independent/1.0",
+  "source_hashes": {
+    "manifest": "18804741ebb52aaef8b56968e520383900c4ac3b2d064b57b72c738cb32f29a8",
+    "r419_manifest": "d5e2139c1a8af9b11f13098a8aaafabf66560bf08f011afb18900f50ae7e2881",
+    "script": "67e4084715b025b3fee139571fd0b1252e3c1b31bbb5308fc8fb873915c3a6ef"
+  },
+  "verdict": "INDEPENDENT_FINITE_CONTROL_PASS"
+}

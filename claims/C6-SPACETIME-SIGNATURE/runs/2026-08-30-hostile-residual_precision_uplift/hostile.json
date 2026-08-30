@@ -1,0 +1,76 @@
+{
+  "assertion_count": 10,
+  "assertions": [
+    {
+      "expected": "mutation rejected",
+      "name": "nonfinite weight",
+      "status": "PASS"
+    },
+    {
+      "expected": "mutation rejected",
+      "name": "negative weight",
+      "status": "PASS"
+    },
+    {
+      "expected": "mutation rejected",
+      "name": "unnormalized weights",
+      "status": "PASS"
+    },
+    {
+      "expected": "mutation rejected",
+      "name": "nonsymmetric conductance",
+      "status": "PASS"
+    },
+    {
+      "expected": "mutation rejected",
+      "name": "negative conductance",
+      "status": "PASS"
+    },
+    {
+      "expected": "mutation rejected",
+      "name": "precision downgrade",
+      "status": "PASS"
+    },
+    {
+      "expected": "mutation rejected",
+      "name": "Jacobi tolerance relaxation",
+      "status": "PASS"
+    },
+    {
+      "expected": "mutation rejected",
+      "name": "fixed-row mutation",
+      "status": "PASS"
+    },
+    {
+      "expected": "mutation rejected",
+      "name": "forged certified promotion",
+      "status": "PASS"
+    },
+    {
+      "expected": "R-429 rounded-input boundary; R-428 inconclusive parent",
+      "name": "status firewall",
+      "status": "PASS"
+    }
+  ],
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "controls": {
+    "all_mutations_rejected": true,
+    "mutation_count": 9,
+    "precision_promotion": false,
+    "r426_route_failure_preserved": true,
+    "rounded_input_boundary_preserved": true
+  },
+  "exploration_id": "EXP-001274",
+  "manifest": "strategy/pre-a-cp1-st8-q3lock-residual-precision-uplift-manifest.json",
+  "non_claims": [
+    "No exact certification of the original Gibbs/coordinate inputs.",
+    "No repair or closure of the R-426 residual-reuse route for the original unrounded model.",
+    "No cutoff-, volume-, phase- or exhaustion-uniform Schur/residual bound.",
+    "No common core, history transfer, OS/KMS/GNS reconstruction, sector gap or continuum limit.",
+    "No C6, Sector-A, Pre-A, Yang-Mills or mass-gap conclusion."
+  ],
+  "result_id": "R-429",
+  "run_kind": "hostile",
+  "schema": "tect/pre-a-r429-hostile/1.0",
+  "verdict": "PASS"
+}

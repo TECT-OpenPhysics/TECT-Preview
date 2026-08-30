@@ -1,0 +1,178 @@
+{
+  "assertion_count": 15,
+  "assertions": [
+    {
+      "actual": "['R-431', 'EXP-001276', False, 'ROUNDED_SNAPSHOT_INTERVAL_CERTIFIED']",
+      "expected": "R-431/EXP-001276/false/ROUNDED_SNAPSHOT_INTERVAL_CERTIFIED",
+      "group": "provenance",
+      "name": "manifest identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'volume': 2, 'cutoff_dimension': 16, 'beta': '8', 'orientation': 'right', 'conditional_row_index': 7, 'core_size': 7, 'tail_size': 9}",
+      "expected": "V2/d16/beta8/right/row7/core7/tail9",
+      "group": "fixture",
+      "name": "fixed row",
+      "status": "PASS"
+    },
+    {
+      "actual": "5e-7",
+      "expected": "5e-7",
+      "group": "scope",
+      "name": "immutable tolerance",
+      "status": "PASS"
+    },
+    {
+      "actual": "[]",
+      "expected": "all R-431 artifacts",
+      "group": "provenance",
+      "name": "artifacts present",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'codes/foundations/pre_a_cp1_st8_q3lock_rounded_snapshot_interval_enclosure.py': 'd9b5d49f72628d4dd947512f61577e06bd200b196338fd2592c7d545e662c76a', 'codes/foundations/pre_a_cp1_st8_q3lock_rounded_snapshot_interval_enclosure_independent.py': '405eb1a319e2f04776fd64086d0cc16306d9cafc175e84e3f7cb0e2262789b97', 'codes/foundations/pre_a_cp1_st8_q3lock_rounded_snapshot_interval_enclosure_hostile.py': '07aeb48ed5d845102394fe0496dcb8a9599a65f9200b7b6f838bb848c12f46bd', 'verification/lean/Tect/R431.lean': 'd3a60406ff73ee565fe8927185b2bcbb9f3887754896658f8b9c0c6aa4690886'}",
+      "expected": "distinct source hashes",
+      "group": "provenance",
+      "name": "artifact hashes distinct",
+      "status": "PASS"
+    },
+    {
+      "actual": "['rounded_snapshot_r422_separation', 'rounded_snapshot_direct_separation', 'rounded_snapshot_bracket_width', 'finite_snapshot_scope']",
+      "expected": "declared theorem markers",
+      "group": "Lean",
+      "name": "Lean markers",
+      "status": "PASS"
+    },
+    {
+      "actual": "forbidden tokens absent",
+      "expected": "clean finite scalar file",
+      "group": "Lean",
+      "name": "Lean policy",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-431 PRIMARY 16/16 interval PASS bracket=[5.3631875357,5.36318753578580947196155980724990991818140696494169583616606529031703348282482144083130859277741697388457231632474329344] R422_margin=0.00000256853630100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010865 R426_margin=0.000000814262000528038440192750090081818593035058304163833934709682966517175178559168691407222583026115427683675256706558918773",
+      "expected": "exit 0 and output",
+      "group": "executables",
+      "name": "run pre_a_cp1_st8_q3lock_rounded_snapshot_interval_enclosure.py",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-431 INDEPENDENT 12/12 interval PASS bracket=[5.3631875357,5.36318753578572077080945130569666121284387248939322081946465111683233517832588296935592611547858209995764149088274750994]",
+      "expected": "exit 0 and output",
+      "group": "executables",
+      "name": "run pre_a_cp1_st8_q3lock_rounded_snapshot_interval_enclosure_independent.py",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-431 HOSTILE PASS 7/7 invalid mutations rejected",
+      "expected": "exit 0 and output",
+      "group": "executables",
+      "name": "run pre_a_cp1_st8_q3lock_rounded_snapshot_interval_enclosure_hostile.py",
+      "status": "PASS"
+    },
+    {
+      "actual": "",
+      "expected": "exit 0 without errors",
+      "group": "Lean",
+      "name": "Lean compile",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'lower_probe': '5.3631875357', 'upper_endpoint': '5.36318753578580947196155980724990991818140696494169583616606529031703348282482144083130859277741697388457231632474329344', 'bracket_width': '0.0000000000858094719615598072499099181814069649416958361660652903170334828248214408313085927774169738845723163247432934409646955944', 'original_source_interval_certified': False}",
+      "expected": "lower/upper thresholds and source boundary",
+      "group": "primary",
+      "name": "primary interval certificate",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'lower_probe': '5.3631875357', 'upper_endpoint': '5.36318753578572077080945130569666121284387248939322081946465111683233517832588296935592611547858209995764149088274750994', 'bracket_width': '0.0000000000857207708094513056966612128438724893932208194646511168323351783258829693559261154785820999576414908827475099403754838484', 'original_source_interval_certified': False}",
+      "expected": "independent lower/upper thresholds",
+      "group": "independent",
+      "name": "independent interval certificate",
+      "status": "PASS"
+    },
+    {
+      "actual": "['5.36318753578580947196155980724990991818140696494169583616606529031703348282482144083130859277741697388457231632474329344', '5.36318753578572077080945130569666121284387248939322081946465111683233517832588296935592611547858209995764149088274750994']",
+      "expected": "<=2e-10",
+      "group": "independence",
+      "name": "independent bracket agreement",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'all_mutations_rejected': True, 'mutation_count': 7, 'original_source_interval_certified': False, 'outcomes': [{'mutation': 'claim-bearing promotion', 'reason': 'claim-bearing promotion is forbidden', 'rejected': True}, {'mutation': 'conditional-row substitution', 'reason': 'fixed row mutation is forbidden', 'rejected': True}, {'mutation': 'comparison-tolerance relaxation', 'reason': 'comparison tolerance mutation is forbidden', 'rejected': True}, {'mutation': 'collapsed interval bracket', 'reason': 'lower/upper probe ordering is invalid', 'rejected': True}, {'mutation': 'unrounded-source promotion', 'reason': 'original-source interval promotion is forbidden', 'rejected': True}, {'mutation': 'residual-reuse closure', 'reason': 'original-source residual closure is forbidden', 'rejected': True}, {'mutation': 'status promotion', 'reason': 'status mutation is forbidden', 'rejected': True}], 'residual_reuse_closed_for_original_source': False, 'rounded_snapshot_interval_certified': True}",
+      "expected": "all mutations rejected and source boundary retained",
+      "group": "hostile",
+      "name": "hostile controls",
+      "status": "PASS"
+    }
+  ],
+  "assumptions": [
+    "The R-429 row_inputs producer and its hash-pinned upstream manifests define the exact finite rounded snapshot under audit.",
+    "A stored binary64 value is treated as its exact binary rational; no unrecorded decimal rounding is introduced.",
+    "Directed interval operations enclose the finite arithmetic expressions used for the residual matrix and basis.",
+    "Interval Cholesky positivity of A-LI proves the lower eigenvalue bound, and an interval Rayleigh quotient proves an upper bound for the same symmetric matrix.",
+    "The blockwise weighted-zero-mean basis and fixed row/tail split are unchanged from R-426/R-429."
+  ],
+  "boundary": "R-431 certifies a narrow eigenvalue bracket and fixed-reference separations for the exact rounded R-428/R-429 graph snapshot. It does not enclose the upstream Hamiltonian/Gibbs construction, so the original-source precision boundary and R-426 route status remain separate.",
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "derived": {
+    "fixed_row": {
+      "beta": "8",
+      "conditional_row_index": 7,
+      "core_size": 7,
+      "cutoff_dimension": 16,
+      "orientation": "right",
+      "tail_size": 9,
+      "volume": 2
+    },
+    "independent_bracket": [
+      "5.3631875357",
+      "5.36318753578572077080945130569666121284387248939322081946465111683233517832588296935592611547858209995764149088274750994"
+    ],
+    "independent_bracket_width": "0.0000000000857207708094513056966612128438724893932208194646511168323351783258829693559261154785820999576414908827475099403754838484",
+    "lean": "PASS",
+    "original_source_interval_certified": false,
+    "outputs": {
+      "lean": "",
+      "pre_a_cp1_st8_q3lock_rounded_snapshot_interval_enclosure.py": "R-431 PRIMARY 16/16 interval PASS bracket=[5.3631875357,5.36318753578580947196155980724990991818140696494169583616606529031703348282482144083130859277741697388457231632474329344] R422_margin=0.00000256853630100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010865 R426_margin=0.000000814262000528038440192750090081818593035058304163833934709682966517175178559168691407222583026115427683675256706558918773",
+      "pre_a_cp1_st8_q3lock_rounded_snapshot_interval_enclosure_hostile.py": "R-431 HOSTILE PASS 7/7 invalid mutations rejected",
+      "pre_a_cp1_st8_q3lock_rounded_snapshot_interval_enclosure_independent.py": "R-431 INDEPENDENT 12/12 interval PASS bracket=[5.3631875357,5.36318753578572077080945130569666121284387248939322081946465111683233517832588296935592611547858209995764149088274750994]"
+    },
+    "primary_bracket": [
+      "5.3631875357",
+      "5.36318753578580947196155980724990991818140696494169583616606529031703348282482144083130859277741697388457231632474329344"
+    ],
+    "primary_bracket_width": "0.0000000000858094719615598072499099181814069649416958361660652903170334828248214408313085927774169738845723163247432934409646955944",
+    "r422_separation_margin": "0.00000256853630100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010865",
+    "r426_direct_separation_margin": "0.000000814262000528038440192750090081818593035058304163833934709682966517175178559168691407222583026115427683675256706558918773",
+    "r426_route_failure_preserved": true,
+    "residual_reuse_closed_for_original_source": false
+  },
+  "evidence_level": "T0 / EXECUTED RIGOROUS FINITE INTERVAL CERTIFICATE FOR ONE EXACT BINARY64 ROUNDED GRAPH SNAPSHOT; original Hamiltonian source enclosure remains open",
+  "exploration_id": "EXP-001276",
+  "manifest": "strategy/pre-a-cp1-st8-q3lock-rounded-snapshot-interval-enclosure-manifest.json",
+  "missing_assumptions": [
+    "A validated interval eigensolve for the original 256-dimensional Hamiltonian and coordinate eigenbasis.",
+    "A propagated enclosure from the original rational source through Gibbs normalization, conditional-row selection and conductance.",
+    "A basis-independent certified residual comparison for the unrounded original source.",
+    "A cutoff-, volume-, phase- and exhaustion-uniform common Q3 core and OS/KMS/GNS/physical-sector transfer."
+  ],
+  "non_claims": [
+    "No interval certification of the original Hamiltonian, coordinate eigenbasis or Gibbs weights.",
+    "No closure of R-426 residual reuse for the original unrounded source.",
+    "No cutoff-, volume-, phase- or exhaustion-uniform Schur or residual bound.",
+    "No common core, history transfer, OS/KMS/GNS reconstruction, sector gap or continuum limit.",
+    "No C6, Sector-A, Pre-A, Yang-Mills or mass-gap conclusion."
+  ],
+  "result_id": "R-431",
+  "run_kind": "integrated",
+  "schema": "tect/pre-a-r431-integrated/1.0",
+  "source_hashes": {
+    "codes/foundations/pre_a_cp1_st8_q3lock_rounded_snapshot_interval_enclosure.py": "d9b5d49f72628d4dd947512f61577e06bd200b196338fd2592c7d545e662c76a",
+    "codes/foundations/pre_a_cp1_st8_q3lock_rounded_snapshot_interval_enclosure_hostile.py": "07aeb48ed5d845102394fe0496dcb8a9599a65f9200b7b6f838bb848c12f46bd",
+    "codes/foundations/pre_a_cp1_st8_q3lock_rounded_snapshot_interval_enclosure_independent.py": "405eb1a319e2f04776fd64086d0cc16306d9cafc175e84e3f7cb0e2262789b97",
+    "verification/lean/Tect/R431.lean": "d3a60406ff73ee565fe8927185b2bcbb9f3887754896658f8b9c0c6aa4690886"
+  },
+  "verdict": "ROUNDED_SNAPSHOT_INTERVAL_CERTIFIED"
+}

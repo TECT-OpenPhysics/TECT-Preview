@@ -1,0 +1,55 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "schema_version": "1.0",
+  "id": "EXP-001280",
+  "task_id": "T-054",
+  "title": "Validated original-source interval at d=17 unconditional row",
+  "question": "Can the exact finite R-419 oscillator/Hamiltonian source be enclosed at the larger cutoff d=17 and propagated through a fixed normalized one-site Gibbs row and residual compression?",
+  "method": [
+    "Hash-pin the R-419 fixture and R-433 interval primitives, and fix V=2, d=17, beta=8, right orientation and emission ordinal zero before interval evaluation.",
+    "Assemble the exact rational finite source, split exchange/global-parity sectors into dimensions 81, 64, 72 and 72, and compute 50-digit point eigendata.",
+    "Use directed source intervals, residual/Gram bounds, polar correction and Gibbs-kernel propagation, then normalize the unconditional one-site marginal and enforce the fixed core/tail split at threshold four.",
+    "Project the coordinate momentum, build the 15-dimensional two-block residual compression, and certify a lower Cholesky probe, an upper Rayleigh probe and a rejection probe.",
+    "Run a non-importing NumPy control, hostile finite-scope mutations and Lean scalar cross-checks through the integrated verifier."
+  ],
+  "finding": "The primary lane passes 57/57. The d=17 source residual and Gram upper bounds are 6.5554215021810497917e-41 and 6.2013656081312960463e-42. The normalized unconditional row is positive, its interval tail split is core 4..12 and tail 0..3,13..16, and the 15-dimensional residual interval has maximum entry width 7.0922943110070923e-13. The interval Rayleigh enclosure is [4.22153907112994631455003390284897397097200231, 4.22153907112994631578208377835242264266111368], strictly between probes 4.2 and 4.25; the 4.3 Cholesky probe is rejected. The independent non-importing control passes 12/12 with gap 4.221539067848923, the hostile lane rejects 8/8 mutations, the integrated verifier passes 15/15 and Lean R435 compiles.",
+  "decision_reason": "Advance one larger-cutoff original-source interval datapoint at T0. The interval and independent controls are consistent, but the result remains finite and claim-nonbearing; residual reuse, all uniformities, common-core completion, physical reference and continuum gates remain open.",
+  "decision_scope": "One V=2, d=17, beta=8, right-orientation unconditional one-site marginal (emission ordinal zero) from the exact R-419 rational source, with fixed threshold-four split and 15-dimensional residual interval compression.",
+  "verdict": "advanced",
+  "boundary": "R-435 is a finite source-interval certificate only. It does not close residual reuse, a common Q3 core, history transfer, OS/KMS/GNS reconstruction, a physical sector, a continuum limit, or any physical-empty, Yang-Mills or mass-gap claim.",
+  "next_action": "Repeat at an independently fixed larger volume/cutoff with a predeclared row rule and owner-approved tail modulus; do not infer uniformity from the d=16 and d=17 datapoints.",
+  "evidence_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-original-source-interval-d17-manifest.json#interval_contract",
+    "strategy/pre-a-cp1-st8-q3lock-original-source-interval-d17-certificate-260830.md#Exact-finite-scope",
+    "codes/foundations/pre_a_cp1_st8_q3lock_original_source_interval_d17.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_original_source_interval_d17_independent.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_original_source_interval_d17_hostile.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_original_source_interval_d17_verify.py#main",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-primary-original_source_interval_d17/primary.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-independent-original_source_interval_d17/independent.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-hostile-original_source_interval_d17/hostile.json#assertions",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-integrated-original_source_interval_d17/integrated.json#derived",
+    "verification/lean/Tect/R435.lean#d17_block_dimensions",
+    "verification/lean/registry.json#R435"
+  ],
+  "formal_refs": {"results": ["R-435", "R-433", "R-426", "R-419"], "negatives": [], "events": ["20260830-r-435-original-source-interval-d17-2026-08-30"]},
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY",
+    "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+  ],
+  "adversarial_review": [
+    {"axis": "row selection", "check": "The manifest fixes beta 8, right orientation and ordinal zero before interval evaluation; no gap-based row optimization is allowed.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "source enclosure", "check": "Source residual, Gram, polar, normalization and threshold intervals pass with directed arithmetic and explicit budgets.", "disposition": "DISMISSED-FINITE / OPEN-UNIFORM"},
+    {"axis": "conditioning", "check": "The residual interval width and bracket are below fixed finite thresholds and the independent control is separate from the interval certificate.", "disposition": "DISMISSED-FINITE / OPEN-UNIFORM"},
+    {"axis": "hostile scope mutation", "check": "Eight mutations covering aliasing, threshold/probe relaxation, cutoff substitution and promotion are rejected.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "physical promotion", "check": "No common core, physical reference, Reading-H tangent or limit theorem is supplied.", "disposition": "UPHELD-OPEN"}
+  ],
+  "no_overclaim": "R-435 advances only one finite d=17 original-source interval certificate. It does not establish cutoff/volume uniformity, physical-empty sign, stationarity, transverse stability, C6, Sector-A, Pre-A, Yang-Mills dynamics or a mass gap.",
+  "provenance": "contemporaneous",
+  "recorded_at": "2026-08-31T11:00:00Z",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-08-30",
+  "related": [{"id": "EXP-001278", "relation": "continues"}, {"id": "EXP-001279", "relation": "alternative_to"}]
+}

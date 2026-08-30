@@ -1,0 +1,289 @@
+{
+  "assertion_count": 19,
+  "assertions": [
+    {
+      "actual": [
+        "R-434",
+        "EXP-001279",
+        "BLOCKED",
+        false
+      ],
+      "expected": [
+        "R-434",
+        "EXP-001279",
+        "BLOCKED",
+        false
+      ],
+      "group": "provenance",
+      "name": "manifest identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "F_total[G_*] - F_total[E]",
+      "expected": "F_total[G_*] - F_total[E]",
+      "group": "contract",
+      "name": "owner orientation",
+      "status": "PASS"
+    },
+    {
+      "actual": 15,
+      "expected": 15,
+      "group": "contract",
+      "name": "fifteen-field lock",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "NOT_FIXED_IN_ONE_COMMON_OWNER",
+        false
+      ],
+      "expected": [
+        "NOT_FIXED_IN_ONE_COMMON_OWNER",
+        false
+      ],
+      "group": "contract",
+      "name": "common owner absent",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        true,
+        false,
+        "BLOCKED_NOT_INSTANTIATED"
+      ],
+      "expected": [
+        true,
+        false,
+        "BLOCKED_NOT_INSTANTIATED"
+      ],
+      "group": "E",
+      "name": "E preregistered but not admitted",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "FORBIDDEN",
+        "NOT_ACCEPTED"
+      ],
+      "expected": [
+        "FORBIDDEN",
+        "NOT_ACCEPTED"
+      ],
+      "group": "E",
+      "name": "zero alias forbidden",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "reading_h_stationarity": "BLOCKED_NOT_EVALUATED",
+        "sign": "BLOCKED_NOT_EVALUATED",
+        "symmetry_projected_transverse_stability": "BLOCKED_NOT_EVALUATED"
+      },
+      "expected": "three BLOCKED_NOT_EVALUATED statuses",
+      "group": "verdict",
+      "name": "all requested verdicts blocked",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        false,
+        []
+      ],
+      "expected": [
+        false,
+        []
+      ],
+      "group": "stop",
+      "name": "no finite evaluation",
+      "status": "PASS"
+    },
+    {
+      "actual": [],
+      "expected": "all R-434 artifacts",
+      "group": "provenance",
+      "name": "artifacts present",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "codes/foundations/pre_a_t055_reading_h_physical_empty_bounded_test_owner_refresh.py": "edafcd0f079873a7df8f26e33075f87f91a3b376d0f28164bd873ea785a050e2",
+        "codes/foundations/pre_a_t055_reading_h_physical_empty_bounded_test_owner_refresh_hostile.py": "9464caf57394a3a836af3458bbbfa5748ed39e4a27c7fc5f95304e39aae391bf",
+        "codes/foundations/pre_a_t055_reading_h_physical_empty_bounded_test_owner_refresh_independent.py": "eed0703653d1d8c74966d3a2120e3d3c1b3db33ab0a3d9c1105a343b0ba9266f",
+        "verification/lean/Tect/R434.lean": "73789bdb36e7e03056b42ef51c812777215cded6b167a0b4c07fc2be47f3fc43"
+      },
+      "expected": "distinct source hashes",
+      "group": "provenance",
+      "name": "artifact hashes distinct",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "fixed_field_count",
+        "empty_branch_slot",
+        "blocked_status_scope",
+        "finite_owner_scope"
+      ],
+      "expected": "declared theorem markers",
+      "group": "Lean",
+      "name": "Lean markers",
+      "status": "PASS"
+    },
+    {
+      "actual": "forbidden tokens absent",
+      "expected": "clean finite scope file",
+      "group": "Lean",
+      "name": "Lean policy",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-434 PRIMARY BLOCKED_NOT_EVALUATED 13/13; E preregistered, not admitted\nR-434 PRIMARY SELFTEST: PASS",
+      "expected": "exit 0 and output",
+      "group": "executables",
+      "name": "run pre_a_t055_reading_h_physical_empty_bounded_test_owner_refresh.py",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-434 INDEPENDENT INDEPENDENT_BLOCKED_INPUT_CONTROL 13/13\nR-434 INDEPENDENT SELFTEST: PASS",
+      "expected": "exit 0 and output",
+      "group": "executables",
+      "name": "run pre_a_t055_reading_h_physical_empty_bounded_test_owner_refresh_independent.py",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-434 HOSTILE HOSTILE_MUTATIONS_REJECTED 7/7\nR-434 HOSTILE SELFTEST: PASS",
+      "expected": "exit 0 and output",
+      "group": "executables",
+      "name": "run pre_a_t055_reading_h_physical_empty_bounded_test_owner_refresh_hostile.py",
+      "status": "PASS"
+    },
+    {
+      "actual": "",
+      "expected": "exit 0 without errors",
+      "group": "Lean",
+      "name": "Lean compile",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "E_admitted": false,
+        "E_preregistered": true,
+        "comparison": "F_total[G_*] - F_total[E]",
+        "reading_h_stationarity": "BLOCKED_NOT_EVALUATED",
+        "sign": "BLOCKED_NOT_EVALUATED",
+        "symmetry_projected_transverse_stability": "BLOCKED_NOT_EVALUATED"
+      },
+      "expected": "three blocked verdicts and E not admitted",
+      "group": "primary",
+      "name": "primary blocked verdict",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "E_admitted": false,
+        "E_preregistered": true,
+        "comparison": "F_total[G_*] - F_total[E]",
+        "reading_h_stationarity": "BLOCKED_NOT_EVALUATED",
+        "reversed_required_fields": [
+          "stationarity_residual_budget",
+          "Hessian_form_and_error_budget",
+          "transverse_projector",
+          "symmetry_group_and_orbit_tangent",
+          "full_admissible_tangent",
+          "empty_branch_E_representation",
+          "candidate_G_star_representation",
+          "limit_order",
+          "boundary_condition",
+          "physical_volume",
+          "regulator_and_cutoff",
+          "finite_part_counterterm_scheme",
+          "normalization",
+          "reference_definition",
+          "finite_regulator_functional"
+        ],
+        "sign": "BLOCKED_NOT_EVALUATED",
+        "symmetry_projected_transverse_stability": "BLOCKED_NOT_EVALUATED"
+      },
+      "expected": "reversed-field independent blocker",
+      "group": "independent",
+      "name": "independent blocked control",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "claim_bearing": false,
+        "hostile_mutations_rejected": true,
+        "physical_promotion_rejected": true
+      },
+      "expected": "seven mutations rejected",
+      "group": "hostile",
+      "name": "hostile controls",
+      "status": "PASS"
+    }
+  ],
+  "assumptions": [
+    "The six hash-pinned authorities above are the active TECT-owner boundaries.",
+    "The requested orientation is G_* minus E and all three tests must share one regulated parent.",
+    "The fifteen contract fields are identity-locked; a locked field name does not invent an owner value.",
+    "A physical-empty branch requires a normalized representative, measure or algebra, boundary preparation and a local physical criterion beyond a zero label.",
+    "Input-admissibility failure is a valid bounded-test outcome and is not a numerical sign or stability theorem.",
+    "Symmetry projection requires the exact orbit tangent and a regulated Hessian error budget."
+  ],
+  "boundary": "R-434 preregisters E and rechecks the same fifteen-field owner contract. Since the common finite parent and admitted E are still absent, all three requested quantities remain BLOCKED_NOT_EVALUATED.",
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "derived": {
+    "E_admitted": false,
+    "E_preregistered": true,
+    "comparison": "F_total[G_*] - F_total[E]",
+    "hostile_assertions": 7,
+    "independent_assertions": 13,
+    "lean": "PASS",
+    "outputs": {
+      "lean": "",
+      "pre_a_t055_reading_h_physical_empty_bounded_test_owner_refresh.py": "R-434 PRIMARY BLOCKED_NOT_EVALUATED 13/13; E preregistered, not admitted\nR-434 PRIMARY SELFTEST: PASS",
+      "pre_a_t055_reading_h_physical_empty_bounded_test_owner_refresh_hostile.py": "R-434 HOSTILE HOSTILE_MUTATIONS_REJECTED 7/7\nR-434 HOSTILE SELFTEST: PASS",
+      "pre_a_t055_reading_h_physical_empty_bounded_test_owner_refresh_independent.py": "R-434 INDEPENDENT INDEPENDENT_BLOCKED_INPUT_CONTROL 13/13\nR-434 INDEPENDENT SELFTEST: PASS"
+    },
+    "primary_assertions": 13,
+    "reading_h_stationarity": "BLOCKED_NOT_EVALUATED",
+    "sign": "BLOCKED_NOT_EVALUATED",
+    "symmetry_projected_transverse_stability": "BLOCKED_NOT_EVALUATED"
+  },
+  "evidence_level": "T0 / EXECUTED APPEND-ONLY TECT-OWNER INPUT-ADMISSIBILITY AUDIT; all three physical quantities BLOCKED_NOT_EVALUATED",
+  "exploration_id": "EXP-001279",
+  "manifest": "strategy/pre-a-t055-reading-h-physical-empty-bounded-test-owner-refresh-manifest.json",
+  "missing_assumptions": [
+    "A hash-pinned finite-regulator F_total with a common domain containing G_* and E.",
+    "A normalized, admitted E representative with measure/algebra, boundary preparation and a no-condensate or clustering criterion.",
+    "Common reference, normalization, finite-part counterterms and renormalization conditions.",
+    "Fixed regulator/cutoff, physical volume, boundary condition and explicit limit order.",
+    "Deterministic finite-parent maps for G_* and E, a full admissible tangent and exact symmetry orbit tangent.",
+    "A transverse projector, regulated Hessian, stationarity residual budget and numerical/limit error budgets."
+  ],
+  "non_claims": [
+    "No sign for F_total[G_*] - F_total[E].",
+    "No full Reading-H stationarity theorem.",
+    "No symmetry-projected transverse stability theorem.",
+    "No identification of E with zero, P1, a Gaussian state or an equilibrium phase.",
+    "No physical-vacuum, below-empty-space, Yang-Mills, mass-gap, C6, Sector-A or Pre-A conclusion.",
+    "No thermodynamic, continuum, OS/KMS/GNS, Hamiltonian spectral or absolute-energy conclusion."
+  ],
+  "result_id": "R-434",
+  "run_kind": "integrated",
+  "schema": "tect/pre-a-r434-integrated/1.0",
+  "scope": {
+    "all_three_quantities_evaluated": false,
+    "claim_bearing": false,
+    "mass_gap_promoted": false,
+    "owner_input_audit_executed": true,
+    "physical_empty_branch_admitted": false,
+    "physical_empty_branch_preregistered": true,
+    "yang_mills_promoted": false
+  },
+  "source_hashes": {
+    "codes/foundations/pre_a_t055_reading_h_physical_empty_bounded_test_owner_refresh.py": "edafcd0f079873a7df8f26e33075f87f91a3b376d0f28164bd873ea785a050e2",
+    "codes/foundations/pre_a_t055_reading_h_physical_empty_bounded_test_owner_refresh_hostile.py": "9464caf57394a3a836af3458bbbfa5748ed39e4a27c7fc5f95304e39aae391bf",
+    "codes/foundations/pre_a_t055_reading_h_physical_empty_bounded_test_owner_refresh_independent.py": "eed0703653d1d8c74966d3a2120e3d3c1b3db33ab0a3d9c1105a343b0ba9266f",
+    "verification/lean/Tect/R434.lean": "73789bdb36e7e03056b42ef51c812777215cded6b167a0b4c07fc2be47f3fc43"
+  },
+  "verdict": "BLOCKED_NOT_EVALUATED"
+}

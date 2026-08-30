@@ -1,0 +1,173 @@
+{
+  "assertion_count": 15,
+  "assertions": [
+    {
+      "actual": "['R-429', 'EXP-001274', False, 'ROUNDED_INPUT_ALGEBRAIC_BOUNDARY']",
+      "expected": "R-429/EXP-001274/false/ROUNDED_INPUT_ALGEBRAIC_BOUNDARY",
+      "group": "provenance",
+      "name": "manifest identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'basis_invariant_rounded_input_closed': True, 'c6_closed': False, 'common_core_closed': False, 'common_split_rule_closed': False, 'continuum_closed': False, 'cutoff_uniform_coarse_schur_closed': False, 'exact_original_input_certified': False, 'exhaustion_uniform_coarse_schur_closed': False, 'global_poincare_closed': False, 'hamiltonian_os_identification_closed': False, 'kms_gns_gap_closed': False, 'no_new_negative_result': True, 'no_pdf': True, 'no_tier_change': True, 'phase_uniform_coarse_schur_closed': False, 'pre_a_closed': False, 'r426_route_failure_preserved': True, 'residual_reuse_closed': False, 'rounded_input_mismatch_reproduced': True, 'rounded_input_precision_uplift_closed': True, 'sector_a_closed': False, 'upstream_source_precision_certified': False, 'volume_uniform_coarse_schur_closed': False}",
+      "expected": "rounded-input finite diagnostic only",
+      "group": "scope",
+      "name": "scope firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": "[]",
+      "expected": "all R-429 artifacts",
+      "group": "provenance",
+      "name": "artifacts present",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'codes/foundations/pre_a_cp1_st8_q3lock_residual_precision_uplift.py': '6be56d757aa24c7db1303562f6cb0acfd421ca059992a3121363dcab2ea932a6', 'codes/foundations/pre_a_cp1_st8_q3lock_residual_precision_uplift_independent.py': 'd8ba113abb587bcb0fd2f6c81c3f34e89629fe901d550bad1c3cc3312c58994b', 'codes/foundations/pre_a_cp1_st8_q3lock_residual_precision_uplift_hostile.py': 'dd8f5b557f125342aff50ed0e152a51c7e04b506dcf8daa598fc28509844d67d', 'verification/lean/Tect/R429.lean': 'a23f5a810cb51bda0bfc9a5417ec58c5eeefd8fb9ddf8adf0d82e25ed5c5d04c'}",
+      "expected": "distinct source hashes",
+      "group": "provenance",
+      "name": "artifact hashes distinct",
+      "status": "PASS"
+    },
+    {
+      "actual": "['decimal_gap_exceeds_tolerance', 'basis_agreement_budget', 'finite_scope']",
+      "expected": "declared theorem markers",
+      "group": "Lean",
+      "name": "Lean markers",
+      "status": "PASS"
+    },
+    {
+      "actual": "forbidden tokens absent",
+      "expected": "clean finite scalar file",
+      "group": "Lean",
+      "name": "Lean source policy",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-429 PRIMARY ROUNDED_INPUT_ALGEBRAIC_BOUNDARY 14/14 gap=5.3631875357855276117480294524057207054685060592567614092712405156165638803320983 mismatch=0.0000025686218286117480294524057207054685060592567614092712405156165638803320983 basis_agreement=4E-79 sweeps=388/391\nR-429 PRIMARY SELFTEST: PASS (80-digit Decimal rounded-input invariant residual)",
+      "expected": "exit 0 and output",
+      "group": "executables",
+      "name": "run pre_a_cp1_st8_q3lock_residual_precision_uplift.py",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-429 INDEPENDENT PASS 7/7 gap=5.3631875357855276117480294524057207054685060592567614092712405156165638803320979 mismatch=0.0000025686218286117480294524057207054685060592567614092712405156165638803320979 sweeps=391",
+      "expected": "exit 0 and output",
+      "group": "executables",
+      "name": "run pre_a_cp1_st8_q3lock_residual_precision_uplift_independent.py",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-429 HOSTILE PASS 10/10 mutations rejected; rounded-input boundary preserved",
+      "expected": "exit 0 and output",
+      "group": "executables",
+      "name": "run pre_a_cp1_st8_q3lock_residual_precision_uplift_hostile.py",
+      "status": "PASS"
+    },
+    {
+      "actual": "",
+      "expected": "exit 0 without errors",
+      "group": "Lean",
+      "name": "Lean compile",
+      "status": "PASS"
+    },
+    {
+      "actual": "['R-429', 'ROUNDED_INPUT_ALGEBRAIC_BOUNDARY', {'beta': '8', 'conditional_row_index': 7, 'core_size': 7, 'cutoff_dimension': 16, 'orientation': 'right', 'tail_size': 9, 'volume': 2}]",
+      "expected": "fixed R-426 row with rounded-input boundary",
+      "group": "outputs",
+      "name": "primary rounded-input boundary",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'invariant_gap_decimal': '5.3631875357855276117480294524057207054685060592567614092712405156165638803320983', 'basis_gap_agreement_decimal': '4E-79', 'mismatch_r422_decimal': '0.0000025686218286117480294524057207054685060592567614092712405156165638803320983', 'mismatch_direct_decimal': '8.142622823882519705475942792945314939407432385907287594843834361196679017E-7'}",
+      "expected": "agreement <= 1e-50 and mismatches > 5e-7",
+      "group": "precision",
+      "name": "basis-invariant Decimal separation",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'basis_gap_agreement_not_tested': True, 'fixed_row': {'beta': '8', 'conditional_row_index': 7, 'core_size': 7, 'cutoff_dimension': 16, 'orientation': 'right', 'tail_size': 9, 'volume': 2}, 'invariant_gap_decimal': '5.3631875357855276117480294524057207054685060592567614092712405156165638803320979', 'jacobi_final_offdiagonal': '6.1032631242299038232713016160056604899400417914619836952654675732386984596526376E-61', 'jacobi_sweeps': 391, 'mismatch_r422_decimal': '0.0000025686218286117480294524057207054685060592567614092712405156165638803320979', 'r426_route_failure_preserved': True, 'residual_reuse_closed': False, 'rounded_input_mismatch_reproduced': True}",
+      "expected": "independent rounded-input mismatch and preserved boundary",
+      "group": "independent",
+      "name": "independent Decimal control",
+      "status": "PASS"
+    },
+    {
+      "actual": "['5.3631875357855276117480294524057207054685060592567614092712405156165638803320983', '5.3631875357855276117480294524057207054685060592567614092712405156165638803320979']",
+      "expected": "<=1e-50",
+      "group": "precision",
+      "name": "primary-independent gap agreement",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'all_mutations_rejected': True, 'mutation_count': 9, 'precision_promotion': False, 'r426_route_failure_preserved': True, 'rounded_input_boundary_preserved': True}",
+      "expected": "all mutations rejected and no promotion",
+      "group": "hostile",
+      "name": "hostile control",
+      "status": "PASS"
+    }
+  ],
+  "assumptions": [
+    "The R-428 reconstruction is the declared fixed finite source snapshot for this downstream precision audit.",
+    "Converting each finite float to its canonical decimal string and using Decimal arithmetic isolates downstream eigensolver error but does not recover uncomputed upstream digits.",
+    "The blockwise weighted-zero-mean constraints define one residual subspace for the fixed positive graph.",
+    "The 5e-7 R-426 comparison tolerance and fixed row are immutable.",
+    "The Decimal Jacobi residual is treated as numerically converged only at the rounded-input level; no interval enclosure is asserted."
+  ],
+  "boundary": "R-429 can certify a basis-invariant residual value only for the decimalized R-428 finite graph snapshot. Any mismatch with R-422 therefore identifies a rounded-input algebraic boundary, while the original source-rounding enclosure remains missing.",
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "derived": {
+    "basis_gap_agreement_decimal": "4E-79",
+    "fixed_row": {
+      "beta": "8",
+      "conditional_row_index": 7,
+      "core_size": 7,
+      "cutoff_dimension": 16,
+      "orientation": "right",
+      "tail_size": 9,
+      "volume": 2
+    },
+    "hostile_mutation_count": 9,
+    "independent_gap_decimal": "5.3631875357855276117480294524057207054685060592567614092712405156165638803320979",
+    "invariant_gap_decimal": "5.3631875357855276117480294524057207054685060592567614092712405156165638803320983",
+    "lean": "PASS",
+    "mismatch_direct_decimal": "8.142622823882519705475942792945314939407432385907287594843834361196679017E-7",
+    "mismatch_r422_decimal": "0.0000025686218286117480294524057207054685060592567614092712405156165638803320983",
+    "outputs": {
+      "lean": "",
+      "pre_a_cp1_st8_q3lock_residual_precision_uplift.py": "R-429 PRIMARY ROUNDED_INPUT_ALGEBRAIC_BOUNDARY 14/14 gap=5.3631875357855276117480294524057207054685060592567614092712405156165638803320983 mismatch=0.0000025686218286117480294524057207054685060592567614092712405156165638803320983 basis_agreement=4E-79 sweeps=388/391\nR-429 PRIMARY SELFTEST: PASS (80-digit Decimal rounded-input invariant residual)",
+      "pre_a_cp1_st8_q3lock_residual_precision_uplift_hostile.py": "R-429 HOSTILE PASS 10/10 mutations rejected; rounded-input boundary preserved",
+      "pre_a_cp1_st8_q3lock_residual_precision_uplift_independent.py": "R-429 INDEPENDENT PASS 7/7 gap=5.3631875357855276117480294524057207054685060592567614092712405156165638803320979 mismatch=0.0000025686218286117480294524057207054685060592567614092712405156165638803320979 sweeps=391"
+    },
+    "r426_route_failure_preserved": true,
+    "residual_reuse_closed": false,
+    "rounded_input_mismatch_reproduced": true,
+    "upstream_source_precision_certified": false
+  },
+  "evidence_level": "T0 / EXECUTED 80-DIGIT DECIMAL DOWNSTREAM PRECISION UPLIFT ON THE FIXED R-428 GRAPH SNAPSHOT; upstream source uncertainty remains open",
+  "exploration_id": "EXP-001274",
+  "manifest": "strategy/pre-a-cp1-st8-q3lock-residual-precision-uplift-manifest.json",
+  "missing_assumptions": [
+    "Arbitrary-precision or interval-certified reconstruction of the Gibbs state, coordinate eigenbasis and graph weights from the original Hamiltonian.",
+    "A rigorous enclosure that propagates upstream input uncertainty through the conditional row and residual operator.",
+    "A basis-independent exact or rigorously bounded residual-reuse value for the original unrounded model.",
+    "A common unbounded Q3 Hamiltonian core, regulator/volume-uniform estimate and history/OS/KMS/GNS/physical-sector transfer."
+  ],
+  "non_claims": [
+    "No exact certification of the original Gibbs/coordinate inputs.",
+    "No repair or closure of the R-426 residual-reuse route for the original unrounded model.",
+    "No cutoff-, volume-, phase- or exhaustion-uniform Schur/residual bound.",
+    "No common core, history transfer, OS/KMS/GNS reconstruction, sector gap or continuum limit.",
+    "No C6, Sector-A, Pre-A, Yang-Mills or mass-gap conclusion."
+  ],
+  "result_id": "R-429",
+  "run_kind": "integrated",
+  "schema": "tect/pre-a-r429-integrated/1.0",
+  "source_hashes": {
+    "codes/foundations/pre_a_cp1_st8_q3lock_residual_precision_uplift.py": "6be56d757aa24c7db1303562f6cb0acfd421ca059992a3121363dcab2ea932a6",
+    "codes/foundations/pre_a_cp1_st8_q3lock_residual_precision_uplift_hostile.py": "dd8f5b557f125342aff50ed0e152a51c7e04b506dcf8daa598fc28509844d67d",
+    "codes/foundations/pre_a_cp1_st8_q3lock_residual_precision_uplift_independent.py": "d8ba113abb587bcb0fd2f6c81c3f34e89629fe901d550bad1c3cc3312c58994b",
+    "verification/lean/Tect/R429.lean": "a23f5a810cb51bda0bfc9a5417ec58c5eeefd8fb9ddf8adf0d82e25ed5c5d04c"
+  },
+  "verdict": "ROUNDED_INPUT_ALGEBRAIC_BOUNDARY"
+}

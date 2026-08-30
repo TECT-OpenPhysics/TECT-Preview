@@ -1,0 +1,103 @@
+{
+  "schema": "tect/pre-a-cp1-st8-q3lock-exponential-shell-tail/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-EXPONENTIAL-SHELL-TAIL-v0",
+  "result_id": "R-444",
+  "title": "Exact exponential shell-tail majorant for rectangular edge weights",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001289",
+  "claim_bearing": false,
+  "status": "EXPONENTIAL_SHELL_TAIL_AUDITED",
+  "parent_results": ["R-443", "R-442"],
+  "parent_explorations": ["EXP-001288", "EXP-001287"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY"
+  ],
+  "question": "For edge weights w(x)=2^(-||x||_1) on a finite rectangular subset of Z^3, is the total weight outside l1 radius R bounded exactly by 3*(4R^2+8R+14)*2^(1-R) for every R>=1?",
+  "finite_contract": {
+    "dimension": 3,
+    "weight": "2^(-l1_norm(lower_endpoint))",
+    "shell_count": "N_3(n)=4*n^2+2 for n>=1 and N_3(0)=1",
+    "tail_radius_min": 1,
+    "box_side_min": 2,
+    "box_side_max": 8,
+    "box_family": "all ordered side triples in [box_side_min, box_side_max]^3",
+    "edge_set": "nearest-neighbour positive coordinate increments",
+    "tail_formula": "3*(4*R^2+8*R+14)*2^(1-R)"
+  },
+  "scope": {
+    "shell_count_formula_checked": true,
+    "finite_box_tail_dominated": true,
+    "closed_form_tail_recurrence_checked": true,
+    "lean_arithmetic_crosscheck": true,
+    "geometric_shell_tail_closed": true,
+    "boundary_commutator_decay_closed": false,
+    "history_tail_closed": false,
+    "weighted_operator_form_closed": false,
+    "exhaustion_cauchy_closed": false,
+    "common_core_closed": false,
+    "common_alpha_closed": false,
+    "kms_gns_gap_closed": false,
+    "physical_empty_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "assumptions": [
+    "The ambient comparison lattice is Z^3 with l1 shell counts N_3(0)=1 and N_3(n)=4*n^2+2 for n>=1.",
+    "Finite rectangular boxes use only positive coordinate nearest-neighbour edges and therefore form a subset of the ambient lattice edge set after translation.",
+    "Each edge has nonnegative weight determined only by its lower endpoint l1 radius.",
+    "The executable [2,8]^3 sweep is a finite audit of the analytic shell formula and is not a volume limit.",
+    "The geometric bound is only a scalar weight majorant; it is not a commutator, operator-domain or state estimate."
+  ],
+  "missing_assumptions": [
+    "A Q3LOCK-specific identification of the actual interaction or commutator with this scalar edge weight.",
+    "Representation-independent common-core and weighted product-domain estimates.",
+    "Source-, cutoff-, phase-, volume-, shape- and history-uniform operator norms or state-weighted commutator bounds.",
+    "All-shape exhaustion Cauchy, Lie--Trotter/common-alpha convergence, OS/KMS/GNS and sector coercivity.",
+    "Physical-empty, continuum, Yang--Mills and mass-gap conclusions."
+  ],
+  "stop_conditions": [
+    "If a shell count or tail recurrence disagrees, fail the geometric audit.",
+    "If any finite box tail exceeds the ambient formula, fail the dominance check.",
+    "If a hostile mutation promotes the scalar bound to commutator, operator or physical scope, reject it.",
+    "Do not identify the scalar tail with the Q3 history tail without a separately proved transfer theorem."
+  ],
+  "evidence_level": "T0 / EXACT SCALAR SHELL-COUNT AND GEOMETRIC TAIL MAJORANT WITH FINITE RECTANGULAR CROSS-CHECK",
+  "non_claims": [
+    "No Q3LOCK commutator or history-tail estimate.",
+    "No weighted operator, common-core, common-alpha or exhaustion theorem.",
+    "No OS/KMS/GNS reconstruction, physical-empty comparison, continuum, Sector-A or Pre-A closure.",
+    "No Yang-Mills dynamics or mass-gap conclusion."
+  ],
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R444.lean",
+    "theorem_markers": ["shell_count_n1", "shell_count_n2", "tail_formula_r1", "tail_formula_r2"],
+    "command": "lake env lean Tect/R444.lean",
+    "role": "Lean checks exact shell-count and closed-form arithmetic fixtures; Python proves the finite dominance and recurrence rows."
+  },
+  "artifacts": {
+    "primary_script": "codes/foundations/pre_a_cp1_st8_q3lock_exponential_shell_tail.py",
+    "independent_script": "codes/foundations/pre_a_cp1_st8_q3lock_exponential_shell_tail_independent.py",
+    "hostile_script": "codes/foundations/pre_a_cp1_st8_q3lock_exponential_shell_tail_hostile.py",
+    "integrated_verifier": "codes/foundations/pre_a_cp1_st8_q3lock_exponential_shell_tail_verify.py",
+    "lean": "verification/lean/Tect/R444.lean",
+    "certificate": "strategy/pre-a-cp1-st8-q3lock-exponential-shell-tail-certificate-260830.md",
+    "exploration": "strategy/pre-a-cp1-st8-q3lock-exponential-shell-tail-exploration.json"
+  },
+  "boundary": "R-444 closes only the scalar exponential shell-tail formula and finite rectangular dominance for the declared edge weight. It does not close a Q3LOCK commutator or history tail, weighted operator domains, common core, common alpha, exhaustion, physical-empty, Sector-A, Pre-A, Yang-Mills or mass-gap claims.",
+  "formal_integration": {
+    "event_ordinal": 786,
+    "event_title": "R-444 exponential shell-tail majorant",
+    "event_id": "20260830-r-444-exponential-shell-tail-majorant-2026-08-3",
+    "new_negative": false,
+    "tier_change": false,
+    "pdf": false
+  }
+}

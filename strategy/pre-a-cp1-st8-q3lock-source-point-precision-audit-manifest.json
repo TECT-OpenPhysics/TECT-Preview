@@ -1,0 +1,135 @@
+{
+  "schema": "tect/pre-a-cp1-st8-q3lock-source-point-precision-audit/1.0",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-SOURCE-POINT-PRECISION-AUDIT-v0",
+  "result_id": "R-430",
+  "title": "Original finite Hamiltonian source-point precision audit",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001275",
+  "claim_bearing": false,
+  "status": "SOURCE_POINT_AUDIT_NO_INTERVAL",
+  "parent_results": ["R-429", "R-428", "R-426"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY",
+    "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+  ],
+  "question": "When the original finite oscillator Hamiltonian, coordinate basis, Gibbs state and projected graph are recomputed at arbitrary mpmath precision for the fixed R-426 row, does the residual gap remain separated from the R-422 reuse value without relying on the double graph snapshot?",
+  "new_perspective": {
+    "principle": "Move the precision boundary upstream: recompute the 16-dimensional oscillator coordinate basis and 256-dimensional volume-two Hamiltonian Gibbs state with arbitrary mpmath precision before forming the conditional graph row and residual operator.",
+    "route": [
+      "Use the original R-419/R-416/R-402 finite formulas with exact rational fixture parameters, mpmath eigensolvers and 50 decimal digits; retain V=2, d=16, beta=8, right orientation, row 7 and tail threshold 4.",
+      "Construct the coordinate-basis momentum matrix, log-sum-exp coordinate Gibbs masses, conditional row and projected conductance directly from the high-precision source calculation.",
+      "Compute the blockwise weighted-zero-mean residual compression with a high-precision orthonormal basis and compare its first eigenvalue with the fixed R-422 and R-426 references.",
+      "Treat the result as a point-precision source audit only. Without interval arithmetic or certified eigenvalue enclosures, leave the original-source verdict unresolved even if a numerical separation is observed."
+    ],
+    "qft_bridge": "Upstream precision can test whether the rounded-input boundary survives source reconstruction, but a point calculation does not provide a common core, regulator limit, physical sector or Yang-Mills result."
+  },
+  "precision_contract": {
+    "mpmath_decimal_digits": 50,
+    "eigen_solver": "mpmath.eigsy",
+    "input_mode": "original finite oscillator/Hamiltonian formulas with rational fixture parameters",
+    "comparison_tolerance": "5e-7",
+    "residual_eigenvalue_digits_recorded": 45
+  },
+  "diagnostic_contract": {
+    "fixed_failure_row": {
+      "volume": 2,
+      "cutoff_dimension": 16,
+      "beta": "8",
+      "orientation": "right",
+      "conditional_row_index": 7,
+      "core_size": 7,
+      "tail_size": 9,
+      "r422_residual_gap": 5.363184967163699,
+      "r426_direct_residual_gap": 5.36318835004781,
+      "comparison_tolerance": 5e-7
+    },
+    "required_methods": [
+      "50-digit mpmath oscillator coordinate diagonalization",
+      "50-digit volume-two Hamiltonian eigensolve",
+      "log-sum-exp conditional row reconstruction",
+      "high-precision projected conductance and residual eigensolve"
+    ],
+    "thresholds": {
+      "comparison_tolerance": 5e-7,
+      "source_gap_separation_floor": 5e-7,
+      "row_reconstruction_tolerance": 1e-12
+    }
+  },
+  "upstream_authority": {
+    "r429_manifest": "strategy/pre-a-cp1-st8-q3lock-residual-precision-uplift-manifest.json",
+    "r429_sha256": "24baa0690b89f262dded8fb53118d542de58a509f610043a15edba704cc2ed79",
+    "r428_manifest": "strategy/pre-a-cp1-st8-q3lock-residual-basis-conditioning-diagnostic-manifest.json",
+    "r428_sha256": "cf022b25e8f1123f881bdbd7bbe5224fa6de131f0b089c6b08e337507a85c1ee",
+    "r426_manifest": "strategy/pre-a-cp1-st8-q3lock-high-cutoff-schur-stress-manifest.json",
+    "r426_sha256": "0292aec6ec398cf7358e4e618f7623880543b9374a1501d3d3fa362db29901b0"
+  },
+  "scope": {
+    "source_point_precision_executed": true,
+    "source_point_residual_recomputed": true,
+    "source_gap_separation_observed": true,
+    "source_interval_certified": false,
+    "exact_original_input_certified": false,
+    "residual_reuse_closed": false,
+    "r426_route_failure_preserved": true,
+    "cutoff_uniform_coarse_schur_closed": false,
+    "volume_uniform_coarse_schur_closed": false,
+    "phase_uniform_coarse_schur_closed": false,
+    "exhaustion_uniform_coarse_schur_closed": false,
+    "global_poincare_closed": false,
+    "common_core_closed": false,
+    "common_split_rule_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "assumptions": [
+    "The original R-419/R-416/R-402 finite oscillator and Hamiltonian formulas are the declared source model.",
+    "Fifty-digit mpmath eigsy and log-sum-exp arithmetic provide a converged point estimate for the finite source calculation.",
+    "The fixed conditional-row orientation, index, tail threshold and comparison tolerance are unchanged.",
+    "The residual basis spans the blockwise weighted-zero-mean subspace for the computed positive row."
+  ],
+  "missing_assumptions": [
+    "Interval or ball-arithmetic enclosures for the 256-dimensional Hamiltonian eigenvalues/eigenvectors and coordinate eigenbasis.",
+    "A propagated enclosure for the conditional row, conductance and residual eigenvalue.",
+    "A basis-independent exact residual-reuse comparison for the original unrounded source.",
+    "A common unbounded Q3 core, regulator/volume-uniform estimate and history/OS/KMS/GNS/physical-sector transfer."
+  ],
+  "stop_conditions": [
+    "If the high-precision source calculation cannot complete or fails positivity/normalization, classify this audit as blocked and preserve R-429.",
+    "If the source point residual is separated from R-422, do not call the original mismatch certified without an interval enclosure.",
+    "Never change the R-426 comparison tolerance or promote a point calculation to a uniform or physical theorem."
+  ],
+  "evidence_level": "T0 / EXECUTED 50-DIGIT MPATH SOURCE-POINT AUDIT IF AVAILABLE; NO INTERVAL CERTIFICATION",
+  "non_claims": [
+    "No interval or exact certification of the original Hamiltonian source.",
+    "No repair or closure of R-426 residual reuse for the original model.",
+    "No cutoff-, volume-, phase- or exhaustion-uniform Schur/residual bound.",
+    "No common core, history transfer, OS/KMS/GNS reconstruction, sector gap or continuum limit.",
+    "No C6, Sector-A, Pre-A, Yang-Mills or mass-gap conclusion."
+  ],
+  "boundary": "R-430 moves the precision test through the original finite source formulas but remains a point-precision audit. Only a propagated interval enclosure can decide whether the R-426 mismatch is certified for the unrounded model.",
+  "next_unlock": "Replace the point mpmath source calculation with interval/ball arithmetic for the coordinate and Hamiltonian eigensystems and propagate those enclosures to the residual gap at the same fixed row.",
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R430.lean",
+    "theorem_markers": ["source_gap_reference_separation", "source_point_not_interval", "finite_scope"],
+    "command": "lake env lean Tect/R430.lean",
+    "role": "R430 Lean checks scalar separation and the explicit no-interval scope; mpmath source reconstruction remains executable Python."
+  },
+  "artifacts": {
+    "primary_script": "codes/foundations/pre_a_cp1_st8_q3lock_source_point_precision_audit.py",
+    "independent_script": "codes/foundations/pre_a_cp1_st8_q3lock_source_point_precision_audit_independent.py",
+    "hostile_script": "codes/foundations/pre_a_cp1_st8_q3lock_source_point_precision_audit_hostile.py",
+    "integrated_verifier": "codes/foundations/pre_a_cp1_st8_q3lock_source_point_precision_audit_verify.py",
+    "lean": "verification/lean/Tect/R430.lean",
+    "certificate": "strategy/pre-a-cp1-st8-q3lock-source-point-precision-audit-certificate-260830.md",
+    "exploration": "strategy/pre-a-cp1-st8-q3lock-source-point-precision-audit-exploration.json"
+  }
+}

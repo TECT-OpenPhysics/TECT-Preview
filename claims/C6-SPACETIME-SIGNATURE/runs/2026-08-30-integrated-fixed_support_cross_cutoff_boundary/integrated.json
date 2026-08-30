@@ -1,0 +1,165 @@
+{
+  "assertion_count": 15,
+  "assertions": [
+    {
+      "actual": "['R-437', 'EXP-001282', False]",
+      "expected": "R-437/EXP-001282/false",
+      "group": "provenance",
+      "name": "manifest identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "[]",
+      "expected": "all R-437 artifacts",
+      "group": "provenance",
+      "name": "artifacts present",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'codes/foundations/pre_a_cp1_st8_q3lock_fixed_support_cross_cutoff_boundary.py': 'a0eb678982f83d029a00a1a1b96c58c51d59b469faaca62fb77013f2a378cbf5', 'codes/foundations/pre_a_cp1_st8_q3lock_fixed_support_cross_cutoff_boundary_independent.py': '30ecb0ca9898865be957df44dfdbd289866809c43beec0b6976ee839168722c2', 'codes/foundations/pre_a_cp1_st8_q3lock_fixed_support_cross_cutoff_boundary_hostile.py': '7feef8cb3c706dae35841dc8100613b6395dc722739adccdc5397259cd8cfa6a', 'verification/lean/Tect/R437.lean': '3f3326561c3bcd7fb88fa9d1c5b2fed98395b29ca35f2cdd2763a43166c58a51'}",
+      "expected": "distinct source hashes",
+      "group": "provenance",
+      "name": "artifact hashes distinct",
+      "status": "PASS"
+    },
+    {
+      "actual": "['threshold_four_crossing', 'same_row_rule', 'finite_support_scope']",
+      "expected": "declared theorem markers",
+      "group": "Lean",
+      "name": "Lean markers",
+      "status": "PASS"
+    },
+    {
+      "actual": "forbidden tokens absent",
+      "expected": "clean finite scalar file",
+      "group": "Lean",
+      "name": "Lean policy",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-437 PRIMARY FIXED_SUPPORT_ROUTE_LOCAL_BOUNDARY 14/14 index=4 d17=core d18=tail\nR-437 PRIMARY SELFTEST: PASS",
+      "expected": "exit 0 and output",
+      "group": "executables",
+      "name": "run pre_a_cp1_st8_q3lock_fixed_support_cross_cutoff_boundary.py",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-437 INDEPENDENT INDEPENDENT_FIXED_SUPPORT_BOUNDARY_CONTROL 9/9 index=4 d17=core d18=tail\nR-437 INDEPENDENT SELFTEST: PASS",
+      "expected": "exit 0 and output",
+      "group": "executables",
+      "name": "run pre_a_cp1_st8_q3lock_fixed_support_cross_cutoff_boundary_independent.py",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-437 HOSTILE HOSTILE_MUTATIONS_REJECTED 8/8\nR-437 HOSTILE SELFTEST: PASS",
+      "expected": "exit 0 and output",
+      "group": "executables",
+      "name": "run pre_a_cp1_st8_q3lock_fixed_support_cross_cutoff_boundary_hostile.py",
+      "status": "PASS"
+    },
+    {
+      "actual": "",
+      "expected": "exit 0 without errors",
+      "group": "Lean",
+      "name": "Lean compile",
+      "status": "PASS"
+    },
+    {
+      "actual": "['FIXED_SUPPORT_ROUTE_LOCAL_BOUNDARY', 14]",
+      "expected": "14/14 finite boundary checks",
+      "group": "primary",
+      "name": "primary certificate",
+      "status": "PASS"
+    },
+    {
+      "actual": "[['2.928582137842666842328379942374782260821356965438242614347658772652559683976254399565', '2.928582137842666842328379942374793763899593365995396958706748597526637672297939680216'], ['4.016145184038902632538356548209393899600440870692488949484841237941696776136410376441', '4.016145184038902632538356548209432108173973591163820303164228876431706984404931606871']]",
+      "expected": "d17 upper < 4 < d18 lower",
+      "group": "interval",
+      "name": "strict d17/d18 crossing",
+      "status": "PASS"
+    },
+    {
+      "actual": "['core', 'tail', 4]",
+      "expected": "core/tail at crossing index",
+      "group": "support",
+      "name": "primary support statuses",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'crossing_index': 4, 'd17_split': {'core': [4, 5, 6, 7, 8, 9, 10, 11, 12], 'tail': [0, 1, 2, 3, 13, 14, 15, 16]}, 'd18_split': {'core': [5, 6, 7, 8, 9, 10, 11, 12], 'tail': [0, 1, 2, 3, 4, 13, 14, 15, 16, 17]}, 'fixed_support_uniformity_closed': False, 'increasing_core_tail_modulus_closed': False}",
+      "expected": "9/9 independent support control",
+      "group": "independent",
+      "name": "independent control",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'hostile_mutations_rejected': True, 'physical_promotion_rejected': True, 'uniform_promotion_rejected': True}",
+      "expected": "8/8 hostile mutations rejected",
+      "group": "hostile",
+      "name": "hostile controls",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'finite_cross_cutoff_threshold_crossing_certified': True, 'same_row_rule_identity_checked': True, 'fixed_support_uniformity_closed': False, 'increasing_core_tail_modulus_closed': False, 'cutoff_uniform_coarse_schur_closed': False, 'volume_uniform_coarse_schur_closed': False, 'phase_uniform_coarse_schur_closed': False, 'exhaustion_uniform_coarse_schur_closed': False, 'common_core_closed': False, 'kms_gns_gap_closed': False, 'continuum_closed': False, 'c6_closed': False, 'sector_a_closed': False, 'pre_a_closed': False, 'no_new_negative_result': True, 'no_tier_change': True, 'no_pdf': True}",
+      "expected": "finite boundary true; all promotion flags false",
+      "group": "scope",
+      "name": "scope firewall",
+      "status": "PASS"
+    }
+  ],
+  "assumptions": [
+    "R-435 and R-436 are the active hash-pinned interval authorities for the same V=2, beta=8, right-oriented unconditional row rule.",
+    "The threshold-four classification is read from each authority's directed interval threshold assertions, not from a rounded point estimate.",
+    "A crossing of one index falsifies only reuse of the fixed d=17 support; it does not falsify an increasing-core construction or a different uniform theorem.",
+    "The comparison is finite and claim-nonbearing, and cannot be promoted to a physical or continuum conclusion."
+  ],
+  "boundary": "R-437 records one certified d=17 to d=18 threshold crossing for index 4. It rejects only unchanged fixed-support reuse and requires an increasing-core tail modulus or another complete route; all uniform, common-core, physical and Yang-Mills flags remain false.",
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "derived": {
+    "crossing_index": 4,
+    "d17_index_interval": [
+      "2.928582137842666842328379942374782260821356965438242614347658772652559683976254399565",
+      "2.928582137842666842328379942374793763899593365995396958706748597526637672297939680216"
+    ],
+    "d17_status": "core",
+    "d18_index_interval": [
+      "4.016145184038902632538356548209393899600440870692488949484841237941696776136410376441",
+      "4.016145184038902632538356548209432108173973591163820303164228876431706984404931606871"
+    ],
+    "d18_status": "tail",
+    "fixed_support_uniformity_closed": false,
+    "increasing_core_tail_modulus_closed": false,
+    "lean": "PASS",
+    "outputs": {
+      "lean": "",
+      "pre_a_cp1_st8_q3lock_fixed_support_cross_cutoff_boundary.py": "R-437 PRIMARY FIXED_SUPPORT_ROUTE_LOCAL_BOUNDARY 14/14 index=4 d17=core d18=tail\nR-437 PRIMARY SELFTEST: PASS",
+      "pre_a_cp1_st8_q3lock_fixed_support_cross_cutoff_boundary_hostile.py": "R-437 HOSTILE HOSTILE_MUTATIONS_REJECTED 8/8\nR-437 HOSTILE SELFTEST: PASS",
+      "pre_a_cp1_st8_q3lock_fixed_support_cross_cutoff_boundary_independent.py": "R-437 INDEPENDENT INDEPENDENT_FIXED_SUPPORT_BOUNDARY_CONTROL 9/9 index=4 d17=core d18=tail\nR-437 INDEPENDENT SELFTEST: PASS"
+    }
+  },
+  "evidence_level": "T0 / EXECUTED FINITE CROSS-CUTOFF SUPPORT AUDIT; FIXED-SUPPORT ROUTE-LOCAL BOUNDARY ONLY",
+  "exploration_id": "EXP-001282",
+  "manifest": "strategy/pre-a-cp1-st8-q3lock-fixed-support-cross-cutoff-boundary-manifest.json",
+  "missing_assumptions": [
+    "An increasing-core rule specified before all cutoff evaluations.",
+    "A cutoff-, volume-, phase- and exhaustion-uniform tail modulus or full-sector completeness theorem.",
+    "A common unbounded Q3 core, history transfer and OS/KMS/GNS reconstruction.",
+    "A physical-sector reference and any Yang-Mills interpretation."
+  ],
+  "non_claims": [
+    "No theorem that every core rule fails uniformly.",
+    "No increasing-core or tail-modulus theorem.",
+    "No common Q3 core, GNS gap, continuum or physical-sector conclusion.",
+    "No C6, Sector-A, Pre-A, Yang-Mills or mass-gap conclusion."
+  ],
+  "result_id": "R-437",
+  "run_kind": "integrated",
+  "schema": "tect/pre-a-r437-integrated/1.0",
+  "source_hashes": {
+    "codes/foundations/pre_a_cp1_st8_q3lock_fixed_support_cross_cutoff_boundary.py": "a0eb678982f83d029a00a1a1b96c58c51d59b469faaca62fb77013f2a378cbf5",
+    "codes/foundations/pre_a_cp1_st8_q3lock_fixed_support_cross_cutoff_boundary_hostile.py": "7feef8cb3c706dae35841dc8100613b6395dc722739adccdc5397259cd8cfa6a",
+    "codes/foundations/pre_a_cp1_st8_q3lock_fixed_support_cross_cutoff_boundary_independent.py": "30ecb0ca9898865be957df44dfdbd289866809c43beec0b6976ee839168722c2",
+    "verification/lean/Tect/R437.lean": "3f3326561c3bcd7fb88fa9d1c5b2fed98395b29ca35f2cdd2763a43166c58a51"
+  },
+  "verdict": "FIXED_SUPPORT_ROUTE_LOCAL_BOUNDARY"
+}

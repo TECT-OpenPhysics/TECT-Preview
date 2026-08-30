@@ -2794,6 +2794,1138 @@
         "codes/foundations/pre_a_cp1_st8_q3lock_expanded_grid_schur_stress_verify.py"
       ],
       "unresolved_claim_ids": []
+    },
+    {
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE",
+        "EXP-001271",
+        "R-426"
+      ],
+      "claim_ref_basis": {
+        "C6-SPACETIME-SIGNATURE": "explicit_claim_ids"
+      },
+      "claim_refs": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "date": "2026-08-31",
+      "header": "[R-426 high-cutoff residual reuse boundary] - 2026-08-31",
+      "id": "20260831-r-426-high-cutoff-residual-reuse-boundary-2026",
+      "keywords": [
+        "EXP-001271",
+        "Q3LOCK",
+        "R-426",
+        "Schur",
+        "boundary"
+      ],
+      "linked_result_ids": [
+        "R-416",
+        "R-419",
+        "R-422",
+        "R-425",
+        "R-426"
+      ],
+      "negative_results": [],
+      "notes": [
+        "strategy/pre-a-cp1-st8-q3lock-high-cutoff-schur-stress-certificate-260830.md"
+      ],
+      "raw": "## [R-426 high-cutoff residual reuse boundary] - 2026-08-31\n\nR-426 / EXP-001271 records a finite high-cutoff harmonic coarse-Schur stress with a route-local residual-reuse boundary. The R-419, R-416, R-422 and R-425 inputs, beta grid {1/2,2,8}, both orientations, alpha=1/40, tail threshold 4 and comparison tolerance 5e-7 are fixed. Primary execution reaches V=2, d=16, beta=8, right orientation, conditional row 7 (core/tail 7/9), where the R-422 residual gap 5.363184967163699 and the direct residual gap 5.363188350047810 differ by 3.382884111502449e-06, above tolerance. The primary records FAIL_ROUTE_LOCAL; the independent reversible-fixture control passes 28/28, hostile 7/7, integrated 15/15 and Lean R426 compiles. No tolerance relaxation or clipping is used. This is finite route-local evidence only and does not close any uniform, common-core, history, OS/KMS/GNS, sector, C6, Sector-A, Pre-A, Yang--Mills or mass-gap gate.\n\n",
+      "result_ids": [
+        "R-416",
+        "R-419",
+        "R-422",
+        "R-425",
+        "R-426"
+      ],
+      "result_link_basis": {
+        "R-416": "explicit_result_id",
+        "R-419": "explicit_result_id",
+        "R-422": "explicit_result_id",
+        "R-425": "explicit_result_id",
+        "R-426": "explicit_result_id"
+      },
+      "scripts": [
+        "codes/foundations/pre_a_cp1_st8_q3lock_high_cutoff_schur_stress.py",
+        "codes/foundations/pre_a_cp1_st8_q3lock_high_cutoff_schur_stress_independent.py",
+        "codes/foundations/pre_a_cp1_st8_q3lock_high_cutoff_schur_stress_hostile.py",
+        "codes/foundations/pre_a_cp1_st8_q3lock_high_cutoff_schur_stress_verify.py",
+        "verification/lean/Tect/R426.lean"
+      ],
+      "unresolved_claim_ids": [
+        "EXP-001271",
+        "R-426"
+      ]
+    },
+    {
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE",
+        "EXP-001272",
+        "R-427"
+      ],
+      "claim_ref_basis": {
+        "C6-SPACETIME-SIGNATURE": "explicit_claim_ids"
+      },
+      "claim_refs": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "date": "2026-08-30",
+      "header": "[R-427 Reading-H physical-empty bounded test revalidation blocked] - 2026-08-30",
+      "id": "20260830-r-427-reading-h-physical-empty-bounded-test-rev",
+      "keywords": [
+        "Reading-H",
+        "blocked",
+        "physical-empty",
+        "preregistration",
+        "revalidation"
+      ],
+      "linked_result_ids": [
+        "R-420",
+        "R-427"
+      ],
+      "negative_results": [],
+      "notes": [],
+      "raw": "## [R-427 Reading-H physical-empty bounded test revalidation blocked] - 2026-08-30\n\nR-427 is an append-only T0, claim-nonbearing TECT-owner revalidation under EXP-001272. It identity-locks the R-420 comparison `F_total[G_*]-F_total[E]` and the same fifteen common-owner fields: finite-regulator functional, reference, normalization, finite parts, regulator/cutoff, volume, boundary, thermodynamic-then-continuum limit order, both representations, full tangent, symmetry orbit, transverse projector, Hessian/error budget and stationarity residual budget. The field values remain unsupplied by the current owner.\n\nE is preregistered as a normalized constrained/no-condensate/empty-preparation slot in the same parent as G_*, but remains BLOCKED_NOT_INSTANTIATED with no representative, measure/algebra, normalization, boundary preparation or physical criterion. Zero and the P1 zero/disordered reference are not aliases. Therefore the sign of F_total[G_*]-F_total[E], full Reading-H stationarity and symmetry-projected transverse stability are all BLOCKED_NOT_EVALUATED; no energy, derivative or Hessian is evaluated.\n\nPrimary passes 32/32, non-importing independent 30/30, hostile 8/8, integrated 43/43 and Lean R427. This records an input-boundary revalidation only: no negative, tier change, physical-vacuum, Yang-Mills, mass-gap, C6, Sector-A or Pre-A conclusion. Unlock requires one hash-pinned common finite parent, an admitted normalized E and frozen finite parts, tangent/projector and error budgets.\n\n",
+      "result_ids": [
+        "R-420",
+        "R-427"
+      ],
+      "result_link_basis": {
+        "R-420": "explicit_result_id",
+        "R-427": "explicit_result_id"
+      },
+      "scripts": [
+        "codes/foundations/pre_a_t055_reading_h_physical_empty_bounded_revalidation.py",
+        "codes/foundations/pre_a_t055_reading_h_physical_empty_bounded_revalidation_independent.py",
+        "codes/foundations/pre_a_t055_reading_h_physical_empty_bounded_revalidation_hostile.py",
+        "codes/foundations/pre_a_t055_reading_h_physical_empty_bounded_revalidation_verify.py",
+        "verification/lean/Tect/R427.lean"
+      ],
+      "unresolved_claim_ids": [
+        "EXP-001272",
+        "R-427"
+      ]
+    },
+    {
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE",
+        "EXP-001273",
+        "R-428"
+      ],
+      "claim_ref_basis": {
+        "C6-SPACETIME-SIGNATURE": "explicit_claim_ids"
+      },
+      "claim_refs": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "date": "2026-08-30",
+      "header": "[R-428 residual-basis conditioning diagnostic inconclusive] - 2026-08-30",
+      "id": "20260830-r-428-residual-basis-conditioning-diagnostic-in",
+      "keywords": [
+        "EXP-001273",
+        "Q3LOCK",
+        "R-428",
+        "basis",
+        "conditioning",
+        "inconclusive",
+        "residual"
+      ],
+      "linked_result_ids": [
+        "R-406",
+        "R-422",
+        "R-426",
+        "R-428"
+      ],
+      "negative_results": [],
+      "notes": [
+        "strategy/pre-a-cp1-st8-q3lock-residual-basis-conditioning-diagnostic-certificate-260830.md"
+      ],
+      "raw": "## [R-428 residual-basis conditioning diagnostic inconclusive] - 2026-08-30\n\nR-428 / EXP-001273 records a finite residual-basis conditioning diagnostic at the fixed R-426 row V=2, d=16, beta=8, right, row 7, core/tail 7/9. Four orthonormal residual bases and an explicit constraint projector crosswalk pass; the primary basis-gap spread is 4.31873946382666e-06, R-406/R-422 mismatch 3.3096042013625038e-06, and conditioning budget 0.0001117690794916405, all above the unchanged 5e-7 audit tolerance. The independent lane passes 21/21 with the same INCONCLUSIVE_CONDITIONING classification, hostile 10/10 and integrated 16/16 pass, and Lean R428 compiles. This identifies a finite conditioning-sensitive repair target but does not prove its cause, repair residual reuse, close any uniform/common-core/physical gate, or make a Yang-Mills or mass-gap claim.\n\n",
+      "result_ids": [
+        "R-406",
+        "R-422",
+        "R-426",
+        "R-428"
+      ],
+      "result_link_basis": {
+        "R-406": "explicit_result_id",
+        "R-422": "explicit_result_id",
+        "R-426": "explicit_result_id",
+        "R-428": "explicit_result_id"
+      },
+      "scripts": [
+        "codes/foundations/pre_a_cp1_st8_q3lock_residual_basis_conditioning_diagnostic.py",
+        "codes/foundations/pre_a_cp1_st8_q3lock_residual_basis_conditioning_diagnostic_independent.py",
+        "codes/foundations/pre_a_cp1_st8_q3lock_residual_basis_conditioning_diagnostic_hostile.py",
+        "codes/foundations/pre_a_cp1_st8_q3lock_residual_basis_conditioning_diagnostic_verify.py",
+        "verification/lean/Tect/R428.lean"
+      ],
+      "unresolved_claim_ids": [
+        "EXP-001273",
+        "R-428"
+      ]
+    },
+    {
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE",
+        "EXP-001274",
+        "R-429"
+      ],
+      "claim_ref_basis": {
+        "C6-SPACETIME-SIGNATURE": "explicit_claim_ids"
+      },
+      "claim_refs": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "date": "2026-08-30",
+      "header": "[R-429 decimal residual precision uplift boundary] - 2026-08-30",
+      "id": "20260830-r-429-decimal-residual-precision-uplift-boundar",
+      "keywords": [
+        "Decimal",
+        "EXP-001274",
+        "Q3LOCK",
+        "R-429",
+        "boundary",
+        "precision",
+        "residual"
+      ],
+      "linked_result_ids": [
+        "R-422",
+        "R-426",
+        "R-428",
+        "R-429"
+      ],
+      "negative_results": [],
+      "notes": [
+        "strategy/pre-a-cp1-st8-q3lock-residual-precision-uplift-certificate-260830.md"
+      ],
+      "raw": "## [R-429 decimal residual precision uplift boundary] - 2026-08-30\n\nR-429 / EXP-001274 applies an 80-digit Decimal downstream precision uplift to the fixed R-426 row V=2, d=16, beta=8, right, row 7 using the R-428 graph snapshot. Two differently ordered residual bases and independent Jacobi solves agree within 4e-79 at gap 5.363187535785527611748..., while the separation from the R-422 reference is 2.568621828611748e-06 and from the R-426 direct reference 8.14262282388252e-07, both above the unchanged 5e-7 tolerance. Primary 14/14, independent 7/7, hostile 10/10, integrated 15/15 and Lean R429 pass. This is a rounded-input finite algebraic boundary; upstream source enclosure, uniform/common-core/physical gates and Yang-Mills or mass-gap claims remain open.\n\n",
+      "result_ids": [
+        "R-422",
+        "R-426",
+        "R-428",
+        "R-429"
+      ],
+      "result_link_basis": {
+        "R-422": "explicit_result_id",
+        "R-426": "explicit_result_id",
+        "R-428": "explicit_result_id",
+        "R-429": "explicit_result_id"
+      },
+      "scripts": [
+        "codes/foundations/pre_a_cp1_st8_q3lock_residual_precision_uplift.py",
+        "codes/foundations/pre_a_cp1_st8_q3lock_residual_precision_uplift_independent.py",
+        "codes/foundations/pre_a_cp1_st8_q3lock_residual_precision_uplift_hostile.py",
+        "codes/foundations/pre_a_cp1_st8_q3lock_residual_precision_uplift_verify.py",
+        "verification/lean/Tect/R429.lean"
+      ],
+      "unresolved_claim_ids": [
+        "EXP-001274",
+        "R-429"
+      ]
+    },
+    {
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE",
+        "EXP-001275",
+        "R-430"
+      ],
+      "claim_ref_basis": {
+        "C6-SPACETIME-SIGNATURE": "explicit_claim_ids"
+      },
+      "claim_refs": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "date": "2026-08-30",
+      "header": "[R-430 original-source point-precision audit] - 2026-08-30",
+      "id": "20260830-r-430-original-source-point-precision-audit-202",
+      "keywords": [
+        "EXP-001275",
+        "Q3LOCK",
+        "R-430",
+        "boundary",
+        "precision",
+        "source"
+      ],
+      "linked_result_ids": [
+        "R-422",
+        "R-426",
+        "R-430"
+      ],
+      "negative_results": [],
+      "notes": [
+        "strategy/pre-a-cp1-st8-q3lock-source-point-precision-audit-certificate-260830.md"
+      ],
+      "raw": "## [R-430 original-source point-precision audit] - 2026-08-30\n\nR-430 / EXP-001275 records an original-source point-precision audit at the fixed R-426 row V=2, d=16, beta=8, right orientation, conditional row 7, core/tail 7/9. The primary 50-digit mpmath reconstruction passes 14/14 and gives residual gap 5.363187535785526..., with mismatches 2.568621827...e-6 to R-422 and 8.142622838...e-7 to the R-426 direct reference, both above 5e-7. A separate NumPy source reconstruction passes 9/9 but gives 6.094733971033106, recording material point sensitivity. Hostile controls pass 10/10, integrated verification 13/13 and Lean R430 compile. The honest verdict is SOURCE_POINT_AUDIT_NO_INTERVAL: no interval/exact source certification, residual-reuse repair, uniform/common-core or physical/Yang-Mills/mass-gap conclusion.\n\n",
+      "result_ids": [
+        "R-422",
+        "R-426",
+        "R-430"
+      ],
+      "result_link_basis": {
+        "R-422": "explicit_result_id",
+        "R-426": "explicit_result_id",
+        "R-430": "explicit_result_id"
+      },
+      "scripts": [
+        "codes/foundations/pre_a_cp1_st8_q3lock_source_point_precision_audit.py",
+        "codes/foundations/pre_a_cp1_st8_q3lock_source_point_precision_audit_independent.py",
+        "codes/foundations/pre_a_cp1_st8_q3lock_source_point_precision_audit_hostile.py",
+        "codes/foundations/pre_a_cp1_st8_q3lock_source_point_precision_audit_verify.py",
+        "verification/lean/Tect/R430.lean"
+      ],
+      "unresolved_claim_ids": [
+        "EXP-001275",
+        "R-430"
+      ]
+    },
+    {
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE",
+        "EXP-001276",
+        "R-431"
+      ],
+      "claim_ref_basis": {
+        "C6-SPACETIME-SIGNATURE": "explicit_claim_ids"
+      },
+      "claim_refs": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "date": "2026-08-30",
+      "header": "[R-431 directed interval enclosure for rounded residual snapshot] - 2026-08-30",
+      "id": "20260830-r-431-directed-interval-enclosure-for-rounded-r",
+      "keywords": [],
+      "linked_result_ids": [
+        "R-422",
+        "R-426",
+        "R-428",
+        "R-429",
+        "R-431"
+      ],
+      "negative_results": [],
+      "notes": [
+        "strategy/pre-a-cp1-st8-q3lock-rounded-snapshot-interval-enclosure-manifest.json",
+        "strategy/pre-a-cp1-st8-q3lock-rounded-snapshot-interval-enclosure-certificate-260830.md"
+      ],
+      "raw": "## [R-431 directed interval enclosure for rounded residual snapshot] - 2026-08-30\n\nR-431 records a directed finite interval certificate for the fixed rounded R-428/R-429 graph snapshot. The contract remains V=2, cutoff d=16, beta=8, right orientation, conditional row 7, core/tail 7/9, and comparison tolerance 5e-7. Every stored binary64 weight and conductance is treated as its exact binary rational. At 80 directed interval digits, interval Cholesky proves a lower residual eigenvalue endpoint 5.3631875357 and an interval Rayleigh quotient gives an upper endpoint 5.363187535785809..., with bracket width below 3e-10. The lower endpoint is more than 5e-7 above the R-422 reference and the upper endpoint is more than 5e-7 below the R-426 direct reference. Primary 16/16, independent reversed-order 12/12, hostile 7/7, integrated 15/15 and Lean R431 pass. This is a rounded-snapshot-only certificate: the original Hamiltonian/coordinate/Gibbs source remains unenclosed, R-426 residual reuse for the unrounded model remains open, and no uniform, physical, Yang-Mills or mass-gap conclusion follows.\n\n",
+      "result_ids": [
+        "R-422",
+        "R-426",
+        "R-428",
+        "R-429",
+        "R-431"
+      ],
+      "result_link_basis": {
+        "R-422": "explicit_result_id",
+        "R-426": "explicit_result_id",
+        "R-428": "explicit_result_id",
+        "R-429": "explicit_result_id",
+        "R-431": "explicit_result_id"
+      },
+      "scripts": [
+        "codes/foundations/pre_a_cp1_st8_q3lock_rounded_snapshot_interval_enclosure.py",
+        "codes/foundations/pre_a_cp1_st8_q3lock_rounded_snapshot_interval_enclosure_independent.py",
+        "codes/foundations/pre_a_cp1_st8_q3lock_rounded_snapshot_interval_enclosure_hostile.py",
+        "codes/foundations/pre_a_cp1_st8_q3lock_rounded_snapshot_interval_enclosure_verify.py",
+        "verification/lean/Tect/R431.lean"
+      ],
+      "unresolved_claim_ids": [
+        "EXP-001276",
+        "R-431"
+      ]
+    },
+    {
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE",
+        "EXP-001277",
+        "R-432"
+      ],
+      "claim_ref_basis": {
+        "C6-SPACETIME-SIGNATURE": "explicit_claim_ids"
+      },
+      "claim_refs": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "date": "2026-08-30",
+      "header": "[R-432 fixed conditional-row ordinal audit] - 2026-08-30",
+      "id": "20260830-r-432-fixed-conditional-row-ordinal-audit-2026",
+      "keywords": [
+        "R-426",
+        "R-430",
+        "correction",
+        "finite",
+        "residual",
+        "row-ordinal"
+      ],
+      "linked_result_ids": [
+        "R-422",
+        "R-426",
+        "R-430",
+        "R-432"
+      ],
+      "negative_results": [],
+      "notes": [],
+      "raw": "## [R-432 fixed conditional-row ordinal audit] - 2026-08-30\n\nR-432 (EXP-001277) corrects the finite conditional-row emission contract used by the R-426/R-430 comparison: ordinal 7 is parent coordinate 6 after the ordinal-0 unconditional row, while the historical R-430 independent lane used ordinal 6. The corrected target reproduces direct residual gap 5.36318835004781 and R-422 mismatch 3.382884111502449e-06 at the fixed 5e-7 tolerance. R-432 is T0 claim-nonbearing; original-source interval, uniform, physical, Yang-Mills and mass-gap claims remain open.\n\n",
+      "result_ids": [
+        "R-422",
+        "R-426",
+        "R-430",
+        "R-432"
+      ],
+      "result_link_basis": {
+        "R-422": "explicit_result_id",
+        "R-426": "explicit_result_id",
+        "R-430": "explicit_result_id",
+        "R-432": "explicit_result_id"
+      },
+      "scripts": [
+        "codes/foundations/pre_a_cp1_st8_q3lock_fixed_row_ordinal_audit.py",
+        "codes/foundations/pre_a_cp1_st8_q3lock_fixed_row_ordinal_audit_independent.py",
+        "codes/foundations/pre_a_cp1_st8_q3lock_fixed_row_ordinal_audit_hostile.py",
+        "codes/foundations/pre_a_cp1_st8_q3lock_fixed_row_ordinal_audit_verify.py",
+        "verification/lean/Tect/R432.lean"
+      ],
+      "unresolved_claim_ids": [
+        "EXP-001277",
+        "R-432"
+      ]
+    },
+    {
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE",
+        "EXP-001278",
+        "R-433"
+      ],
+      "claim_ref_basis": {
+        "C6-SPACETIME-SIGNATURE": "explicit_claim_ids"
+      },
+      "claim_refs": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "date": "2026-08-30",
+      "header": "[R-433 validated original-source interval enclosure] - 2026-08-30",
+      "id": "20260830-r-433-validated-original-source-interval-enclos",
+      "keywords": [
+        "EXP-001278",
+        "Gibbs",
+        "Q3LOCK",
+        "R-433",
+        "finite",
+        "interval",
+        "residual",
+        "source"
+      ],
+      "linked_result_ids": [
+        "R-419",
+        "R-422",
+        "R-426",
+        "R-433"
+      ],
+      "negative_results": [],
+      "notes": [
+        "strategy/pre-a-cp1-st8-q3lock-original-source-interval-enclosure-certificate-260830.md",
+        "strategy/pre-a-cp1-st8-q3lock-original-source-interval-enclosure-manifest.json"
+      ],
+      "raw": "## [R-433 validated original-source interval enclosure] - 2026-08-30\n\nR-433 / EXP-001278 records a validated finite original-source interval enclosure at the corrected V=2, d=16, beta=8, right-oriented emission ordinal 7 (parent coordinate 6). The exact R-419 oscillator source is rebuilt with exchange/parity blocks 72, 56, 64, 64. Primary directed source, Gibbs-row and residual checks pass 40/40; Hamiltonian residual and Gram upper bounds are 5.0830027088533099603e-41 and 5.2743084774109142435e-42. The residual interval matrix width is 6.985088320724423794e-10 below the preregistered finite 1e-8 conditioning threshold. Interval Cholesky and Rayleigh checks certify [5.3631875357869327503, 5.3631875357869329910], separated from R-422 by 2.532836301e-6 and below R-426 direct by 8.1426087700902748626e-7. Independent non-importing control passes 12/12, hostile mutations reject 7/7, integrated verification passes 13/13 and Lean R433 compiles. This is finite source evidence only: residual reuse, uniformity, common core, physical-empty tests, Yang-Mills and mass-gap claims remain open.\n\n",
+      "result_ids": [
+        "R-419",
+        "R-422",
+        "R-426",
+        "R-433"
+      ],
+      "result_link_basis": {
+        "R-419": "explicit_result_id",
+        "R-422": "explicit_result_id",
+        "R-426": "explicit_result_id",
+        "R-433": "explicit_result_id"
+      },
+      "scripts": [
+        "codes/foundations/pre_a_cp1_st8_q3lock_original_source_interval_enclosure.py",
+        "codes/foundations/pre_a_cp1_st8_q3lock_original_source_interval_enclosure_independent.py",
+        "codes/foundations/pre_a_cp1_st8_q3lock_original_source_interval_enclosure_hostile.py",
+        "codes/foundations/pre_a_cp1_st8_q3lock_original_source_interval_enclosure_verify.py",
+        "verification/lean/Tect/R433.lean"
+      ],
+      "unresolved_claim_ids": [
+        "EXP-001278",
+        "R-433"
+      ]
+    },
+    {
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE",
+        "EXP-001279",
+        "R-434"
+      ],
+      "claim_ref_basis": {
+        "C6-SPACETIME-SIGNATURE": "explicit_claim_ids"
+      },
+      "claim_refs": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "date": "2026-08-30",
+      "header": "[R-434 physical-empty bounded test owner refresh] - 2026-08-30",
+      "id": "20260830-r-434-physical-empty-bounded-test-owner-refresh",
+      "keywords": [
+        "E",
+        "EXP-001279",
+        "R-434",
+        "Reading-H",
+        "T-055",
+        "blocked",
+        "owner",
+        "physical-empty",
+        "stability",
+        "stationarity"
+      ],
+      "linked_result_ids": [
+        "R-420",
+        "R-427",
+        "R-434"
+      ],
+      "negative_results": [],
+      "notes": [
+        "strategy/pre-a-t055-reading-h-physical-empty-bounded-test-owner-refresh-certificate-260830.md",
+        "strategy/pre-a-t055-reading-h-physical-empty-bounded-test-owner-refresh-manifest.json"
+      ],
+      "raw": "## [R-434 physical-empty bounded test owner refresh] - 2026-08-30\n\nR-434 / EXP-001279 is a fresh TECT-owner input-admissibility audit for the Reading-H physical-empty bounded test. The exact orientation F_total[G_*] - F_total[E] and the same fifteen finite-regulator fields are identity-locked to R-427/R-420: functional, reference, normalization, finite parts, regulator/cutoff, volume, boundary, limit order, branch representations, full tangent, symmetry orbit tangent, transverse projector, Hessian/error budget and stationarity budget. E is preregistered but not admitted because no same-owner normalized representative, measure/algebra, boundary preparation or local physical criterion is supplied; zero and P1 aliases are rejected. Primary 13/13, independent 13/13, hostile 7/7, integrated 19/19 and Lean R434 pass. The sign, full Reading-H stationarity and symmetry-projected transverse stability are all BLOCKED_NOT_EVALUATED; no energy, derivative or Hessian was evaluated. No physical-vacuum, Yang-Mills or mass-gap claim follows.\n\n",
+      "result_ids": [
+        "R-420",
+        "R-427",
+        "R-434"
+      ],
+      "result_link_basis": {
+        "R-420": "explicit_result_id",
+        "R-427": "explicit_result_id",
+        "R-434": "explicit_result_id"
+      },
+      "scripts": [
+        "codes/foundations/pre_a_t055_reading_h_physical_empty_bounded_test_owner_refresh.py",
+        "codes/foundations/pre_a_t055_reading_h_physical_empty_bounded_test_owner_refresh_independent.py",
+        "codes/foundations/pre_a_t055_reading_h_physical_empty_bounded_test_owner_refresh_hostile.py",
+        "codes/foundations/pre_a_t055_reading_h_physical_empty_bounded_test_owner_refresh_verify.py",
+        "verification/lean/Tect/R434.lean"
+      ],
+      "unresolved_claim_ids": [
+        "EXP-001279",
+        "R-434"
+      ]
+    },
+    {
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE",
+        "EXP-001280",
+        "R-435"
+      ],
+      "claim_ref_basis": {
+        "C6-SPACETIME-SIGNATURE": "explicit_claim_ids"
+      },
+      "claim_refs": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "date": "2026-08-30",
+      "header": "[R-435 original-source interval d17] - 2026-08-30",
+      "id": "20260830-r-435-original-source-interval-d17-2026-08-30",
+      "keywords": [
+        "EXP-001280",
+        "Q3LOCK",
+        "R-435",
+        "d17",
+        "finite",
+        "interval",
+        "source"
+      ],
+      "linked_result_ids": [
+        "R-419",
+        "R-433",
+        "R-435"
+      ],
+      "negative_results": [],
+      "notes": [
+        "strategy/pre-a-cp1-st8-q3lock-original-source-interval-d17-certificate-260830.md",
+        "strategy/pre-a-cp1-st8-q3lock-original-source-interval-d17-manifest.json"
+      ],
+      "raw": "## [R-435 original-source interval d17] - 2026-08-30\n\nR-435 / EXP-001280 is a T0 claim-nonbearing finite continuation of the R-433 original-source interval route. The exact R-419 oscillator source is evaluated at V=2, d=17, beta=8, right orientation, with the unconditional one-site Gibbs row (emission ordinal 0) fixed before interval evaluation. Exchange/global-parity blocks are [81,64,72,72], the threshold-four core/tail split is enclosed, and the directed residual Rayleigh interval is [4.22153907112994631455003390284897397097200231, 4.22153907112994631578208377835242264266111368], inside fixed probes 4.2 and 4.25. Primary 57/57, independent 12/12, hostile 8/8, integrated 15/15 and Lean R435 pass. This finite datapoint does not close residual reuse, cutoff/volume/phase/exhaustion uniformity, a common core, physical-empty sign, Reading-H stationarity, transverse stability, Yang-Mills dynamics or a mass gap.\n\n",
+      "result_ids": [
+        "R-419",
+        "R-433",
+        "R-435"
+      ],
+      "result_link_basis": {
+        "R-419": "explicit_result_id",
+        "R-433": "explicit_result_id",
+        "R-435": "explicit_result_id"
+      },
+      "scripts": [
+        "codes/foundations/pre_a_cp1_st8_q3lock_original_source_interval_d17.py",
+        "codes/foundations/pre_a_cp1_st8_q3lock_original_source_interval_d17_independent.py",
+        "codes/foundations/pre_a_cp1_st8_q3lock_original_source_interval_d17_hostile.py",
+        "codes/foundations/pre_a_cp1_st8_q3lock_original_source_interval_d17_verify.py",
+        "verification/lean/Tect/R435.lean"
+      ],
+      "unresolved_claim_ids": [
+        "EXP-001280",
+        "R-435"
+      ]
+    },
+    {
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE",
+        "EXP-001281",
+        "R-436"
+      ],
+      "claim_ref_basis": {
+        "C6-SPACETIME-SIGNATURE": "explicit_claim_ids"
+      },
+      "claim_refs": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "date": "2026-08-30",
+      "header": "[R-436 original-source interval d18] - 2026-08-30",
+      "id": "20260830-r-436-original-source-interval-d18-2026-08-30",
+      "keywords": [
+        "EXP-001281",
+        "Q3LOCK",
+        "R-436",
+        "d18",
+        "finite",
+        "interval",
+        "source"
+      ],
+      "linked_result_ids": [
+        "R-436"
+      ],
+      "negative_results": [],
+      "notes": [
+        "strategy/pre-a-cp1-st8-q3lock-original-source-interval-d18-certificate-260830.md",
+        "strategy/pre-a-cp1-st8-q3lock-original-source-interval-d18-manifest.json"
+      ],
+      "raw": "## [R-436 original-source interval d18] - 2026-08-30\n\nR-436 / EXP-001281 records a T0 claim-nonbearing finite continuation of the\noriginal-source interval route at V=2, d=18, beta=8, right orientation, with\nthe unconditional one-site Gibbs row (emission ordinal 0) fixed before interval\nevaluation. Exchange/global-parity blocks are [90,72,81,81], the threshold-four\ncore/tail split is enclosed, and the directed residual Rayleigh interval is\n[4.37258598994761155319421318538070164008480175,\n4.37258598994761252488250973347361635144049652], inside fixed probes 4.3 and\n4.4. Primary 58/58, independent 12/12, hostile 8/8, integrated 15/15 and Lean\nR436 pass. This finite datapoint does not close residual reuse, cutoff/volume/\nphase/exhaustion uniformity, a common core, physical-empty sign, Reading-H\nstationarity, transverse stability, Yang-Mills dynamics or a mass gap.\n\n",
+      "result_ids": [
+        "R-436"
+      ],
+      "result_link_basis": {
+        "R-436": "explicit_result_id"
+      },
+      "scripts": [
+        "codes/foundations/pre_a_cp1_st8_q3lock_original_source_interval_d18.py",
+        "codes/foundations/pre_a_cp1_st8_q3lock_original_source_interval_d18_independent.py",
+        "codes/foundations/pre_a_cp1_st8_q3lock_original_source_interval_d18_hostile.py",
+        "codes/foundations/pre_a_cp1_st8_q3lock_original_source_interval_d18_verify.py",
+        "verification/lean/Tect/R436.lean"
+      ],
+      "unresolved_claim_ids": [
+        "EXP-001281",
+        "R-436"
+      ]
+    },
+    {
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE",
+        "EXP-001282",
+        "R-437"
+      ],
+      "claim_ref_basis": {
+        "C6-SPACETIME-SIGNATURE": "explicit_claim_ids"
+      },
+      "claim_refs": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "date": "2026-08-30",
+      "header": "[R-437 fixed-support cross-cutoff boundary] - 2026-08-30",
+      "id": "20260830-r-437-fixed-support-cross-cutoff-boundary-2026",
+      "keywords": [
+        "EXP-001282",
+        "Q3LOCK",
+        "R-437",
+        "boundary",
+        "cutoff",
+        "fixed",
+        "support",
+        "threshold"
+      ],
+      "linked_result_ids": [
+        "R-437"
+      ],
+      "negative_results": [],
+      "notes": [
+        "strategy/pre-a-cp1-st8-q3lock-fixed-support-cross-cutoff-boundary-certificate-260830.md",
+        "strategy/pre-a-cp1-st8-q3lock-fixed-support-cross-cutoff-boundary-manifest.json"
+      ],
+      "raw": "## [R-437 fixed-support cross-cutoff boundary] - 2026-08-30\n\nR-437 / EXP-001282 records a finite threshold-four support crossing under the fixed V=2, beta=8, right-oriented unconditional one-site marginal with emission ordinal zero. Index 4 is core at d=17 but tail at d=18: the directed d=17 upper endpoint is below 4 and the d=18 lower endpoint is above 4. Primary 14/14, independent 9/9, hostile 8/8, integrated 15/15 and Lean R437 pass. This rejects only unchanged fixed-support reuse; increasing-core and full-sector routes remain open. No physical-empty, Yang-Mills or mass-gap conclusion is made.\n\n",
+      "result_ids": [
+        "R-437"
+      ],
+      "result_link_basis": {
+        "R-437": "explicit_result_id"
+      },
+      "scripts": [
+        "codes/foundations/pre_a_cp1_st8_q3lock_fixed_support_cross_cutoff_boundary.py",
+        "codes/foundations/pre_a_cp1_st8_q3lock_fixed_support_cross_cutoff_boundary_independent.py",
+        "codes/foundations/pre_a_cp1_st8_q3lock_fixed_support_cross_cutoff_boundary_hostile.py",
+        "codes/foundations/pre_a_cp1_st8_q3lock_fixed_support_cross_cutoff_boundary_verify.py",
+        "verification/lean/Tect/R437.lean"
+      ],
+      "unresolved_claim_ids": [
+        "EXP-001282",
+        "R-437"
+      ]
+    },
+    {
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE,EXP-001283,R-438"
+      ],
+      "claim_ref_basis": {},
+      "claim_refs": [],
+      "date": "2026-08-30",
+      "header": "[R-438 original-source interval d=19] - 2026-08-30",
+      "id": "20260830-r-438-original-source-interval-d-19-2026-08-30",
+      "keywords": [],
+      "linked_result_ids": [
+        "R-419",
+        "R-438"
+      ],
+      "negative_results": [],
+      "notes": [],
+      "raw": "## [R-438 original-source interval d=19] - 2026-08-30\n\nR-438 / EXP-001283 records a T0, claim-nonbearing finite continuation of the original-source interval route at V=2, d=19, beta=8, right orientation, with the unconditional one-site Gibbs row (emission ordinal 0) fixed before interval evaluation. The exact R-419 source is propagated through the normalized row and a 17-dimensional threshold-four core/tail residual compression. The directed Rayleigh interval is [4.51952079482277882931908765479724576244692466, 4.51952079482279788665653301331650135134669314], strictly between frozen probes 4.5 and 4.6; the 4.7 Cholesky probe is rejected. The primary lane passes 59/59, the non-importing independent control 12/12, hostile mutations 8/8, integrated verifier 15/15, and Lean R438 compiles. The d=19 finite datapoint does not close residual reuse, cutoff/volume/phase/exhaustion uniformity, an increasing-core tail modulus, common-core OS/KMS/GNS reconstruction, a physical reference, C6, Sector A, Pre-A, Yang-Mills dynamics or a mass gap.\n\n",
+      "result_ids": [
+        "R-419",
+        "R-438"
+      ],
+      "result_link_basis": {
+        "R-419": "explicit_result_id",
+        "R-438": "explicit_result_id"
+      },
+      "scripts": [],
+      "unresolved_claim_ids": [
+        "C6-SPACETIME-SIGNATURE,EXP-001283,R-438"
+      ]
+    },
+    {
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE",
+        "EXP-001283",
+        "R-438"
+      ],
+      "claim_ref_basis": {
+        "C6-SPACETIME-SIGNATURE": "explicit_claim_ids"
+      },
+      "claim_refs": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "date": "2026-08-30",
+      "header": "[R-438 metadata correction (claim links)] - 2026-08-30",
+      "id": "20260830-r-438-metadata-correction-claim-links-2026-08-3",
+      "keywords": [
+        "EXP-001283",
+        "R-438",
+        "claim-links",
+        "metadata-correction"
+      ],
+      "linked_result_ids": [
+        "R-438"
+      ],
+      "negative_results": [],
+      "notes": [
+        "strategy/pre-a-cp1-st8-q3lock-original-source-interval-d19-manifest.json",
+        "strategy/pre-a-cp1-st8-q3lock-original-source-interval-d19-certificate-260830.md",
+        "strategy/pre-a-cp1-st8-q3lock-original-source-interval-d19-exploration.json"
+      ],
+      "raw": "## [R-438 metadata correction (claim links)] - 2026-08-30\n\nCorrection-only append-only metadata event for R-438 / EXP-001283. The preceding event 20260830-r-438-original-source-interval-d-19-2026-08-30 encoded its comma-separated claim argument as one literal claim_ids string. This event supplies the canonical split links for C6-SPACETIME-SIGNATURE, EXP-001283 and R-438, and binds the R-438 manifest, certificate, run artefacts, scripts and Lean source. It adds no numerical result, no new claim, no tier change and no physical or Yang-Mills conclusion; the d=19 finite interval scope and all boundaries remain exactly those of R-438.\n\n",
+      "result_ids": [
+        "R-438"
+      ],
+      "result_link_basis": {
+        "R-438": "explicit_result_id"
+      },
+      "scripts": [
+        "codes/foundations/pre_a_cp1_st8_q3lock_original_source_interval_d19.py",
+        "codes/foundations/pre_a_cp1_st8_q3lock_original_source_interval_d19_independent.py",
+        "codes/foundations/pre_a_cp1_st8_q3lock_original_source_interval_d19_hostile.py",
+        "codes/foundations/pre_a_cp1_st8_q3lock_original_source_interval_d19_verify.py",
+        "verification/lean/Tect/R438.lean"
+      ],
+      "unresolved_claim_ids": [
+        "EXP-001283",
+        "R-438"
+      ]
+    },
+    {
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE",
+        "EXP-001284",
+        "R-439"
+      ],
+      "claim_ref_basis": {
+        "C6-SPACETIME-SIGNATURE": "explicit_claim_ids"
+      },
+      "claim_refs": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "date": "2026-08-30",
+      "header": "[R-439 cutoff-adaptive increasing-core rule audit] - 2026-08-30",
+      "id": "20260830-r-439-cutoff-adaptive-increasing-core-rule-audi",
+      "keywords": [
+        "EXP-001284",
+        "R-439",
+        "cutoff-adaptive",
+        "finite-support",
+        "increasing-core",
+        "uniformity"
+      ],
+      "linked_result_ids": [
+        "R-435",
+        "R-436",
+        "R-438",
+        "R-439"
+      ],
+      "negative_results": [],
+      "notes": [
+        "strategy/pre-a-cp1-st8-q3lock-increasing-core-rule-audit-manifest.json",
+        "strategy/pre-a-cp1-st8-q3lock-increasing-core-rule-audit-certificate-260830.md",
+        "strategy/pre-a-cp1-st8-q3lock-increasing-core-rule-audit-exploration.json"
+      ],
+      "raw": "## [R-439 cutoff-adaptive increasing-core rule audit] - 2026-08-30\n\nR-439 / EXP-001284 records a finite cutoff-adaptive threshold-four core and tail rule. The contract fixes V=2, beta=8, right orientation, the unconditional one-site marginal, emission ordinal zero and the threshold before classification. Directed interval endpoints from R-435, R-436 and R-438 classify every coordinate without ambiguity. The cores are d=17 [4..12], d=18 [5..12] and d=19 [5..13], with cardinalities [9,8,9]; raw supports are not nested and cardinalities are not monotone. Primary 31/31, independent 33/33, hostile 9/9, integrated 15/15 and Lean R439 pass. The result is T0 and claim-nonbearing. It does not close a uniform tail modulus, common core, residual reuse, physical sector, C6, Sector-A, Pre-A, Yang-Mills or mass-gap claim.\n\n",
+      "result_ids": [
+        "R-435",
+        "R-436",
+        "R-438",
+        "R-439"
+      ],
+      "result_link_basis": {
+        "R-435": "explicit_result_id",
+        "R-436": "explicit_result_id",
+        "R-438": "explicit_result_id",
+        "R-439": "explicit_result_id"
+      },
+      "scripts": [
+        "codes/foundations/pre_a_cp1_st8_q3lock_increasing_core_rule_audit.py",
+        "codes/foundations/pre_a_cp1_st8_q3lock_increasing_core_rule_audit_independent.py",
+        "codes/foundations/pre_a_cp1_st8_q3lock_increasing_core_rule_audit_hostile.py",
+        "codes/foundations/pre_a_cp1_st8_q3lock_increasing_core_rule_audit_verify.py",
+        "verification/lean/Tect/R439.lean"
+      ],
+      "unresolved_claim_ids": [
+        "EXP-001284",
+        "R-439"
+      ]
+    },
+    {
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE",
+        "EXP-001285",
+        "R-440"
+      ],
+      "claim_ref_basis": {
+        "C6-SPACETIME-SIGNATURE": "explicit_claim_ids"
+      },
+      "claim_refs": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "date": "2026-08-30",
+      "header": "[R-440 rectangular matching] - 2026-08-30",
+      "id": "20260830-r-440-rectangular-matching-2026-08-30",
+      "keywords": [
+        "EXP-001285",
+        "R-440",
+        "common-core",
+        "finite",
+        "matching-layer",
+        "rectangular"
+      ],
+      "linked_result_ids": [
+        "R-440"
+      ],
+      "negative_results": [],
+      "notes": [],
+      "raw": "## [R-440 rectangular matching] - 2026-08-30\n\n## [R-440 rectangular matching] - 2026-08-30\n\nR-440 / EXP-001285 records a T0 claim-nonbearing finite rectangular-box extension of the Q3LOCK matching-layer split envelope. The manifest fixes five boxes (2,2,2), (3,3,3), (4,4,4), (5,4,3) and (6,5,4), four rational seeds, both shear signs and both lexicographic/reverse layer orders. Axis-plus-lower-endpoint-parity colouring gives six explicit colour slots with incidence at most one at every vertex; empty parity slots are retained in the smallest box. Exact primary Fraction checks pass 1152/1152, the non-importing independent lane 652/652, hostile mutations 10/10, the integrated verifier 37/37 and Lean R440. The derived finite coefficient is C_match=53/35 and the one-layer factor at delta=1/7 is 298/245. The package only strengthens a finite conditional input: arbitrary-box analytic uniformity, unbounded common core, boundary decay, exhaustion Cauchy, common alpha, OS/KMS/GNS, physical-empty, Sector-A, Yang-Mills and mass-gap claims remain open.\n\n",
+      "result_ids": [
+        "R-440"
+      ],
+      "result_link_basis": {
+        "R-440": "explicit_result_id"
+      },
+      "scripts": [],
+      "unresolved_claim_ids": [
+        "EXP-001285",
+        "R-440"
+      ]
+    },
+    {
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE",
+        "EXP-001286",
+        "R-441"
+      ],
+      "claim_ref_basis": {
+        "C6-SPACETIME-SIGNATURE": "explicit_claim_ids"
+      },
+      "claim_refs": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "date": "2026-08-30",
+      "header": "[R-441 physical-empty bounded test owner execution] - 2026-08-30",
+      "id": "20260830-r-441-physical-empty-bounded-test-owner-executi",
+      "keywords": [
+        "EXP-001286",
+        "R-441",
+        "blocked",
+        "owner",
+        "physical-empty",
+        "stability",
+        "stationarity"
+      ],
+      "linked_result_ids": [
+        "R-420",
+        "R-427",
+        "R-434",
+        "R-441"
+      ],
+      "negative_results": [],
+      "notes": [],
+      "raw": "## [R-441 physical-empty bounded test owner execution] - 2026-08-30\n\nR-441 / EXP-001286 is the user-requested current TECT-owner execution of the physical-empty bounded test. The fifteen-field finite-regulator contract and exact orientation F_total[G_*]-F_total[E] are held unchanged against R-434/R-427/R-420, and E is preregistered without identifying it with zero or the P1 disordered reference. Primary 13/13, independent 13/13, hostile 7/7, integrated 19/19 and Lean R441 pass. The owner still supplies no common hash-pinned finite parent containing G_* and a normalized admitted E, so the sign, full Reading-H stationarity and symmetry-projected transverse stability are all BLOCKED_NOT_EVALUATED; no energy, derivative or Hessian is formed. This is a T0 claim-nonbearing input-admissibility execution only. No physical-vacuum, Yang-Mills, mass-gap, thermodynamic, continuum, OS/KMS/GNS, Hamiltonian or absolute-energy conclusion follows.\n\n",
+      "result_ids": [
+        "R-420",
+        "R-427",
+        "R-434",
+        "R-441"
+      ],
+      "result_link_basis": {
+        "R-420": "explicit_result_id",
+        "R-427": "explicit_result_id",
+        "R-434": "explicit_result_id",
+        "R-441": "explicit_result_id"
+      },
+      "scripts": [],
+      "unresolved_claim_ids": [
+        "EXP-001286",
+        "R-441"
+      ]
+    },
+    {
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE",
+        "EXP-001287",
+        "R-442"
+      ],
+      "claim_ref_basis": {
+        "C6-SPACETIME-SIGNATURE": "explicit_claim_ids"
+      },
+      "claim_refs": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "date": "2026-08-30",
+      "header": "[R-442 general rectangular matching lemma] - 2026-08-30",
+      "id": "20260830-r-442-general-rectangular-matching-lemma-2026-0",
+      "keywords": [
+        "EXP-001287",
+        "Lean",
+        "R-442",
+        "combinatorics",
+        "finite",
+        "matching",
+        "rectangular"
+      ],
+      "linked_result_ids": [
+        "R-442"
+      ],
+      "negative_results": [],
+      "notes": [],
+      "raw": "## [R-442 general rectangular matching lemma] - 2026-08-30\n\nR-442 records a T0 claim-nonbearing finite audit of all ordered 3D rectangular boxes with side lengths 2..6. Axis plus lower-endpoint parity gives six matching colour layers and the exact edge-count formula; an independent reconstruction and eight hostile mutations agree, and Lean proves the local incidence lemma and six-colour arithmetic. This does not close arbitrary-box operator domains, boundary/history tails, exhaustion, common alpha, OS/KMS/GNS, physical or Yang-Mills/mass-gap claims.\n\n",
+      "result_ids": [
+        "R-442"
+      ],
+      "result_link_basis": {
+        "R-442": "explicit_result_id"
+      },
+      "scripts": [
+        "codes/foundations/pre_a_cp1_st8_q3lock_rectangular_matching_general_lemma.py",
+        "codes/foundations/pre_a_cp1_st8_q3lock_rectangular_matching_general_lemma_independent.py",
+        "codes/foundations/pre_a_cp1_st8_q3lock_rectangular_matching_general_lemma_hostile.py",
+        "codes/foundations/pre_a_cp1_st8_q3lock_rectangular_matching_general_lemma_verify.py",
+        "verification/lean/Tect/R442.lean"
+      ],
+      "unresolved_claim_ids": [
+        "EXP-001287",
+        "R-442"
+      ]
+    },
+    {
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE",
+        "EXP-001288",
+        "R-443"
+      ],
+      "claim_ref_basis": {
+        "C6-SPACETIME-SIGNATURE": "explicit_claim_ids"
+      },
+      "claim_refs": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "date": "2026-08-30",
+      "header": "[R-443 arbitrary rectangular matching theorem] - 2026-08-30",
+      "id": "20260830-r-443-arbitrary-rectangular-matching-theorem-20",
+      "keywords": [
+        "EXP-001288",
+        "Lean",
+        "R-443",
+        "arbitrary-box",
+        "combinatorics",
+        "finite",
+        "matching"
+      ],
+      "linked_result_ids": [
+        "R-443"
+      ],
+      "negative_results": [],
+      "notes": [],
+      "raw": "## [R-443 arbitrary rectangular matching theorem] - 2026-08-30\n\nR-443 records a T0 claim-nonbearing arbitrary finite-box combinatorial theorem. For every finite rectangular integer box with sides at least two, lower-endpoint axis parity gives two matching layers per axis; the exact edge-count formula is checked over all ordered boxes in [2,8]^3, an independent reconstruction and eight hostile mutations agree, and Lean proves the general local incidence implication. Weighted Q3LOCK operator, common-core, history-tail, physical, Yang-Mills and mass-gap claims remain open.\n\n",
+      "result_ids": [
+        "R-443"
+      ],
+      "result_link_basis": {
+        "R-443": "explicit_result_id"
+      },
+      "scripts": [
+        "codes/foundations/pre_a_cp1_st8_q3lock_rectangular_matching_arbitrary_box.py",
+        "codes/foundations/pre_a_cp1_st8_q3lock_rectangular_matching_arbitrary_box_independent.py",
+        "codes/foundations/pre_a_cp1_st8_q3lock_rectangular_matching_arbitrary_box_hostile.py",
+        "codes/foundations/pre_a_cp1_st8_q3lock_rectangular_matching_arbitrary_box_verify.py",
+        "verification/lean/Tect/R443.lean"
+      ],
+      "unresolved_claim_ids": [
+        "EXP-001288",
+        "R-443"
+      ]
+    },
+    {
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE",
+        "EXP-001289",
+        "R-444"
+      ],
+      "claim_ref_basis": {
+        "C6-SPACETIME-SIGNATURE": "explicit_claim_ids"
+      },
+      "claim_refs": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "date": "2026-08-30",
+      "header": "[R-444 exponential shell-tail majorant] - 2026-08-30",
+      "id": "20260830-r-444-exponential-shell-tail-majorant-2026-08-3",
+      "keywords": [
+        "EXP-001289",
+        "Lean",
+        "R-444",
+        "exponential",
+        "finite",
+        "geometric",
+        "shell",
+        "tail"
+      ],
+      "linked_result_ids": [
+        "R-444"
+      ],
+      "negative_results": [],
+      "notes": [],
+      "raw": "## [R-444 exponential shell-tail majorant] - 2026-08-30\n\nR-444 records an exact T0 claim-nonbearing scalar shell-tail majorant for edge weights 2^(-||x||_1) in Z^3. The shell count N_3(n)=4n^2+2 and tail 3(4R^2+8R+14)2^(1-R) are checked by exact arithmetic; all [2,8]^3 rectangular tails are dominated, an independent lane and eight hostile mutations agree, and Lean checks the arithmetic fixtures. This is not a Q3 commutator/history-tail, operator, physical, Yang-Mills or mass-gap theorem.\n\n",
+      "result_ids": [
+        "R-444"
+      ],
+      "result_link_basis": {
+        "R-444": "explicit_result_id"
+      },
+      "scripts": [
+        "codes/foundations/pre_a_cp1_st8_q3lock_exponential_shell_tail.py",
+        "codes/foundations/pre_a_cp1_st8_q3lock_exponential_shell_tail_independent.py",
+        "codes/foundations/pre_a_cp1_st8_q3lock_exponential_shell_tail_hostile.py",
+        "codes/foundations/pre_a_cp1_st8_q3lock_exponential_shell_tail_verify.py",
+        "verification/lean/Tect/R444.lean"
+      ],
+      "unresolved_claim_ids": [
+        "EXP-001289",
+        "R-444"
+      ]
+    },
+    {
+      "claim_ids": [
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "claim_ref_basis": {
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION": "explicit_claim_ids",
+        "C6-SPACETIME-SIGNATURE": "explicit_claim_ids"
+      },
+      "claim_refs": [
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "date": "2026-08-30",
+      "header": "[T-059 observation-first inverse lane and temporal provenance repair] - 2026-08-30",
+      "id": "20260830-t-059-observation-first-inverse-lane-and-tempor",
+      "keywords": [
+        "QFT",
+        "T-059",
+        "Yang-Mills",
+        "gravity",
+        "holdout",
+        "identifiability",
+        "inverse",
+        "observation-first",
+        "provenance"
+      ],
+      "linked_result_ids": [],
+      "negative_results": [],
+      "notes": [
+        "strategy/pre-a-observation-first-inverse-lane-260830.md",
+        "strategy/pre-a-observation-first-inverse-lane-contract-manifest.json",
+        "governance/proof-exploration-ledger.md"
+      ],
+      "raw": "## [T-059 observation-first inverse lane and temporal provenance repair] - 2026-08-30\n\nRegistered a non-claim-bearing observation-first inverse lane beside the forward proof lane. The contract separates theorem, model consistency, physical identity, and empirical validation; freezes calibration versus retrospective/prospective roles; requires F_reg/F_lim/F_eff/F_obs and physical/proof owners; and currently admits zero microscopic candidates. Added an append-only temporal sidecar for 445 exploration IDs whose recorded_at values postdated their first-containing authority, retaining EXP ordinal authority and changing no scientific verdict. No claim tier, physical-empty sign, Pre-A, A13, C6, Sector-A, continuum, Yang-Mills, gravity, cosmic-origin, TOE, or mass-gap result is advanced.\n\n",
+      "result_ids": [],
+      "result_link_basis": {},
+      "scripts": [
+        "verification/scripts/check_obs_inverse.py",
+        "verification/scripts/check_exploration_time.py",
+        "verification/scripts/exploration.py"
+      ],
+      "unresolved_claim_ids": []
+    },
+    {
+      "claim_ids": [
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "claim_ref_basis": {
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION": "explicit_claim_ids",
+        "C6-SPACETIME-SIGNATURE": "explicit_claim_ids"
+      },
+      "claim_refs": [
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "date": "2026-08-30",
+      "header": "[P0-R pointer-only research continuity and dual-lane resume overlay] - 2026-08-30",
+      "id": "20260830-p0-r-pointer-only-research-continuity-and-dual",
+      "keywords": [
+        "P0-R",
+        "continuity",
+        "forward",
+        "hostile",
+        "inverse",
+        "resume"
+      ],
+      "linked_result_ids": [],
+      "negative_results": [],
+      "notes": [
+        "governance/research-continuity.md",
+        "strategy/main-proof-program-v1.json"
+      ],
+      "raw": "## [P0-R pointer-only research continuity and dual-lane resume overlay] - 2026-08-30\n\nRegistered the pointer-only research-continuity overlay and recovery-start checkpoint under EXP-001291. Existing Sector-A, Pre-A forward, QFT bridge, Lane H/F/Q and A13 methods remain unchanged and controlling; the observation-first inverse lane is additive. The ordinary validator and 23-mutation hostile self-test pass. P0-R remains open pending queue drain, clean commit, push and live-remote equality. T-061 is only the first post-P0-R owner-and-dynamic-observable intake packet. No result, negative, claim, tier or PDF is issued.\n\n",
+      "result_ids": [],
+      "result_link_basis": {},
+      "scripts": [
+        "verification/scripts/check_research_continuity.py"
+      ],
+      "unresolved_claim_ids": []
     }
   ],
   "kind": "accepted_events",

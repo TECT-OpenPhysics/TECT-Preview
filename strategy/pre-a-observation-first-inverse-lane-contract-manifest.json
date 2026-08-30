@@ -1,0 +1,660 @@
+{
+  "schema": "tect/pre-a-observation-first-inverse-lane/1.0",
+  "id": "PRE-A-OBSERVATION-FIRST-INVERSE-LANE-v1",
+  "recorded_on": "2026-08-30",
+  "task_id": "T-059",
+  "parent_task_id": "T-054",
+  "gate_id": "PA-INVERSE-OBSERVATION-TARGET-MAP-HOLDOUT-FREEZE",
+  "parent_gate_id": "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE",
+  "tier": "T0",
+  "claim_bearing": false,
+  "status": "OPEN_INPUT_CONTRACT_NO_ADMITTED_MICROSCOPIC_FORWARD_MAP",
+  "mainline_verdict": "This lane does not prove Pre-A from observations. It tests existence, quotient identifiability, stability, and predictivity of microscopic structures allowed by observations. Even a pass cannot establish cosmic origin or a theory of everything before common forward dynamics, a physical sector, uniform continuum control, and an independent prospective prediction all close.",
+  "authority_pointers": [
+    {
+      "path": "strategy/pre-a-evidence-first-model-selection-charter-260802.md",
+      "sha256": "732183c1f6376916fdcebccff788cd20e380a0871dd1e568d3e83df95a7ab754",
+      "role": "parent evidence-first charter"
+    },
+    {
+      "path": "strategy/pre-a-round1-boundary-evidence-register-260809-v0.1.json",
+      "sha256": "2e3f5f6d547b71c7b2768a679476b8163d31ca7b472ff68363d398056b4b22ce",
+      "role": "existing boundary evidence seed"
+    },
+    {
+      "path": "strategy/pre-a-round1-admission-discriminator-freeze-260810-v1.0.json",
+      "sha256": "08c6154014a3f7caaf07fcdd2d680f76fbbbbdf5b540d4d005201236e75cc5b3",
+      "role": "canonical candidate identities and hard discriminators"
+    },
+    {
+      "path": "strategy/pre-a-round1-prospective-holdout-freeze-protocol-manifest.json",
+      "sha256": "9e72ce764eba934dd21894b506726ff914b62806ade4a8b0c1fffbe9431c743f",
+      "role": "R-168 prospective freeze and anti-leakage authority"
+    },
+    {
+      "path": "strategy/pre-a-qft-round1-owner-crosswalk-260824.json",
+      "sha256": "cca40185d91227e6c2f54a940c3535e0490321f0fe012d75a0c0c3d529d6ffc5",
+      "role": "current production dynamics owner boundary"
+    },
+    {
+      "path": "strategy/pre-a-tect-ym-finite-covariant-hybrid-crosswalk-260823.json",
+      "sha256": "d0d3951d1993b161010ce118e929221f464ce3d76cd2041f9745229f9ea128d6",
+      "role": "reference-only TECT-YM snapshot"
+    },
+    {
+      "path": "theory/proof-evidence/interface-pointers.json",
+      "sha256": "59d3135869897d1c77a62dcbf9a513110136dba21dd43d23ffa4abbc9307992f",
+      "role": "external interface locators only"
+    }
+  ],
+  "layer_contract": {
+    "ordered_layers": [
+      {
+        "id": "L1_MATHEMATICAL_THEOREM",
+        "question": "Does the conclusion follow from the explicitly pinned hypotheses?",
+        "promotion_boundary": "No model identity or empirical truth follows automatically."
+      },
+      {
+        "id": "L2_MODEL_CONSISTENCY",
+        "question": "Do state, dynamics, physical projection, observables, regulator, and limits define one coherent model?",
+        "promotion_boundary": "Finite consistency is not QFT, Yang-Mills, gravity, or continuum identity."
+      },
+      {
+        "id": "L3_PHYSICAL_IDENTITY",
+        "question": "Is the model mapped to the known QFT, Yang-Mills, and gravity structures with a controlled error budget?",
+        "promotion_boundary": "A name or analogy is not an identification theorem."
+      },
+      {
+        "id": "L4_EMPIRICAL_VALIDATION",
+        "question": "Does a frozen candidate predict unused data under a preregistered scorer without retuning?",
+        "promotion_boundary": "Retrospective fit is not prospective prediction."
+      }
+    ],
+    "no_automatic_promotion": true
+  },
+  "lane_contract": {
+    "forward_lane": {
+      "id": "LANE-A-FORWARD",
+      "route": "fixed functional and candidate dynamics -> finite verification -> common core and uniform estimate -> continuum and physical sector",
+      "status": "CONTINUES_UNCHANGED"
+    },
+    "inverse_lane": {
+      "id": "LANE-B-OBSERVATION-INVERSE",
+      "route": "observation anchors -> effective QFT/YM/GR target -> allowed microscopic equivalence classes -> Pre-A boundary conditions",
+      "status": "REGISTERED_INPUT_CONTRACT_ONLY"
+    },
+    "independence_rule": "Agreement between the lanes is a compatibility test, never proof by mutual reuse. Calibration lineage and validation lineage must be disjoint at raw-source and shared-systematics level."
+  },
+  "forward_map_contract": {
+    "mathematical_form": "P_M(D | theta, eta, regulator, volume, boundary_condition, limit_order), or a rigorously declared set-valued analogue",
+    "stages": [
+      {
+        "id": "F_reg",
+        "input": "microscopic candidate M and finite owner contract",
+        "output": "finite regulated state and observable law",
+        "pass_requires": "functional/action, generator L or transfer T, state, physical projection, regulator, volume, boundary, normalization, common norm, and finite parts"
+      },
+      {
+        "id": "F_lim",
+        "input": "finite regulated law",
+        "output": "candidate limit law",
+        "pass_requires": "declared common core, uniform bounds, and ordered cutoff/volume/exhaustion/phase/beta limits"
+      },
+      {
+        "id": "F_eff",
+        "input": "candidate limit law",
+        "output": "effective QFT/YM/GR parameters and correlators",
+        "pass_requires": "scheme, scale, operator basis, state, Ward/Slavnov-Taylor or physical gauge contract, anomaly and theory-truncation budget"
+      },
+      {
+        "id": "F_obs",
+        "input": "effective prediction and nuisance parameters",
+        "output": "raw-data predictive distribution or candidate-neutral estimand prediction",
+        "pass_requires": "instrument/selection/compression map, covariance, nuisance law, numerical error, and immutable scorer"
+      }
+    ],
+    "data_chain": [
+      "raw source packet",
+      "candidate-neutral estimator",
+      "estimand with covariance or likelihood",
+      "candidate-specific predictive distribution"
+    ],
+    "missing_stage_rule": "A missing earlier stage makes every later stage NOT_ADMITTED, not approximately inferred."
+  },
+  "dynamics_owner_contract": {
+    "physical_owner_required": [
+      "generator_L_or_transfer_T",
+      "Gibbs_or_KMS_state",
+      "physical_projection",
+      "time_boundary_or_reflection",
+      "physical_observable_algebra",
+      "regulator",
+      "volume",
+      "boundary_condition",
+      "normalization_and_finite_parts",
+      "common_norm",
+      "limit_order"
+    ],
+    "proof_owner_required": [
+      "filtration",
+      "heat_root_map",
+      "raw_current_spatial_intertwiner",
+      "production_one_use_q_ledger"
+    ],
+    "proof_realization_invariance_rule": "Physical predictions must be invariant under admitted proof-owner realizations. Otherwise each realization is a separate candidate version.",
+    "current_boundary": "The finite F_ref identity-mobility Langevin process is a comparison choice, not a derivation of the canonical A1/A13 production owner. The local TECT-YM snapshot is a finite supplier and lacks the source temporal action and TECT A13 owner."
+  },
+  "observation_anchor_manifest": {
+    "status": "SOURCE_INTAKE_AND_LOCAL_HASH_FREEZE_OPEN",
+    "source_rules": [
+      "Record the source edition, publication or release date, accessed date, exact data product, and local hash before scoring.",
+      "Do not turn sensitivity summaries, posterior summaries, or correlated derived rows into independent Gaussian observations.",
+      "The SI value of c is a unit definition and calibration, not evidence for Lorentz invariance.",
+      "Gauge symmetry, Ward or Slavnov-Taylor identities, anomaly cancellation, spectral positivity, and microcausality are effective-target constraints rather than detector observations."
+    ],
+    "anchors": [
+      {
+        "anchor_id": "OBS-LC-CAL-001",
+        "role": "calibration",
+        "epistemic_type": "observation_bounds",
+        "source": {
+          "title": "Data Tables for Lorentz and CPT Violation",
+          "url": "https://arxiv.org/abs/0801.0287",
+          "release": "CURRENT_EDITION_TO_BE_HASH_PINNED_AT_INTAKE",
+          "published_at": "VERSIONED_SOURCE",
+          "accessed_at": "2026-08-30",
+          "local_sha256": "PENDING"
+        },
+        "observable": "Allowlisted matter/photon laboratory bounds in the declared Sun-centered frame; no synthetic joint Gaussian.",
+        "covariance_or_likelihood": "Use source likelihood where available; otherwise feasibility intersection only.",
+        "theory_conversion": "Candidate Lorentz-violation coefficients to the allowlisted SME rows with sector, energy, and direction fixed.",
+        "lineage_group": "LC-LAB-SME",
+        "fit_allowed": true,
+        "known_to_historical_candidates": true,
+        "status": "INTAKE_PENDING_LOCAL_HASH",
+        "falsifier": "A candidate violates any applicable allowlisted bound after its theory uncertainty is included.",
+        "non_claims": ["This anchor does not derive a causal cone or identify microscopic dynamics."]
+      },
+      {
+        "anchor_id": "OBS-QFT-CAL-001",
+        "role": "calibration",
+        "epistemic_type": "observation_and_scale_inputs",
+        "source": {
+          "title": "Particle Data Group 2024 Review of Particle Physics",
+          "url": "https://pdg.lbl.gov/2024/",
+          "release": "PDG-2024",
+          "published_at": "2024",
+          "accessed_at": "2026-08-30",
+          "local_sha256": "PENDING"
+        },
+        "observable": {
+          "alpha_inverse_zero": "137.035999084(21)",
+          "fermi_constant_GeV_minus_2": "1.1663788(6)e-5",
+          "Z_mass_GeV": "91.1880(20)"
+        },
+        "covariance_or_likelihood": "Use measurement-level PDG inputs and correlations; do not invent independence from rounded summaries.",
+        "theory_conversion": "Declared renormalization scheme/scale and electroweak matching map.",
+        "lineage_group": "PDG-2024-LOW-ENERGY",
+        "fit_allowed": true,
+        "known_to_historical_candidates": true,
+        "status": "INTAKE_PENDING_LOCAL_HASH",
+        "falsifier": "No parameter member satisfies the joint low-energy target after matched theory uncertainty.",
+        "non_claims": ["Input constants are not new microscopic predictions."]
+      },
+      {
+        "anchor_id": "OBS-GR-CAL-001",
+        "role": "calibration",
+        "epistemic_type": "observation",
+        "source": {
+          "title": "MICROSCOPE Mission: Final Results of the Test of the Equivalence Principle",
+          "url": "https://link.aps.org/doi/10.1103/PhysRevLett.129.121102",
+          "release": "FINAL",
+          "published_at": "2022-09-14",
+          "accessed_at": "2026-08-30",
+          "local_sha256": "PENDING"
+        },
+        "observable": "eta(Ti,Pt)=[-1.5 +/- 2.3(stat) +/- 1.5(syst)]e-15",
+        "covariance_or_likelihood": "Keep statistical and systematic nuisance components separate.",
+        "theory_conversion": "Candidate composition-dependent acceleration law in the MICROSCOPE environment.",
+        "lineage_group": "MICROSCOPE-FINAL",
+        "fit_allowed": true,
+        "known_to_historical_candidates": true,
+        "status": "INTAKE_PENDING_LOCAL_HASH",
+        "falsifier": "The candidate predictive distribution is incompatible with the final likelihood under the frozen rule.",
+        "non_claims": ["Agreement does not identify the gravitational microstructure."]
+      },
+      {
+        "anchor_id": "OBS-CMB-CAL-001",
+        "role": "calibration",
+        "epistemic_type": "observation_likelihood",
+        "source": {
+          "title": "Planck 2018 results. V. CMB power spectra and likelihoods",
+          "url": "https://arxiv.org/abs/1907.12875",
+          "release": "PR3-TT-TE-EE-plus-lowE",
+          "published_at": "2020-09-15-REVISION",
+          "accessed_at": "2026-08-30",
+          "local_sha256": "PENDING"
+        },
+        "observable": "Native TT, TE, EE and lowE likelihood data products with beam, foreground, and nuisance contracts.",
+        "covariance_or_likelihood": "Native likelihood; rounded LambdaCDM posterior summaries are forbidden as the raw observation vector.",
+        "theory_conversion": "Candidate primordial and late-time transfer functions to CMB spectra.",
+        "lineage_group": "PLANCK-PR3-CMB",
+        "fit_allowed": true,
+        "known_to_historical_candidates": true,
+        "status": "INTAKE_PENDING_LOCAL_HASH_AND_FORWARD_CODE",
+        "falsifier": "No admitted member passes the frozen likelihood and nuisance rule.",
+        "non_claims": ["A LambdaCDM summary cannot be applied directly to a nonstandard candidate."]
+      },
+      {
+        "anchor_id": "OBS-SCALE-CAL-001",
+        "role": "calibration",
+        "epistemic_type": "unit_and_scale_input",
+        "source": {
+          "title": "CODATA 2022 recommended values and SI Brochure",
+          "url": "https://www.nist.gov/publications/codata-internationally-recommended-2022-values-fundamental-physical-constants",
+          "release": "CODATA-2022",
+          "published_at": "2024-05-08",
+          "accessed_at": "2026-08-30",
+          "local_sha256": "PENDING"
+        },
+        "observable": {
+          "G_SI": "6.67430(15)e-11 m^3 kg^-1 s^-2",
+          "c_SI": "299792458 m s^-1 EXACT_BY_DEFINITION"
+        },
+        "covariance_or_likelihood": "G retains stated uncertainty; c is an exact unit definition.",
+        "theory_conversion": "Unit and low-energy gravitational normalization map.",
+        "lineage_group": "CODATA-SI-SCALE",
+        "fit_allowed": true,
+        "known_to_historical_candidates": true,
+        "status": "INTAKE_PENDING_LOCAL_HASH",
+        "falsifier": "The candidate cannot define a dimensionally consistent matched low-energy scale.",
+        "non_claims": ["The defined numerical value of c is not a Lorentz-invariance test."]
+      }
+    ]
+  },
+  "holdout_manifest": {
+    "status": "ALL_PUBLIC_TARGETS_RETROSPECTIVE_FOR_CURRENT_TECT; PROSPECTIVE_TARGET_EMPTY",
+    "one_use_rule": "After unsealing, every used target moves permanently to training lineage for all descendant candidate versions.",
+    "retune_rule": "Any change to candidate, map, nuisance range, covariance, theory transform, scorer, or acceptance rule after unsealing creates a new candidate ID and forfeits prospective credit on that target.",
+    "holdouts": [
+      {
+        "holdout_id": "HOLD-LC-001",
+        "role": "retrospective_validation",
+        "source": "https://arxiv.org/abs/1710.05834",
+        "published_at": "2017-10-16",
+        "data_contract": "GW170817/GRB170817A delay 1.74 +/- 0.05 s with intrinsic emission lag nuisance; derived speed interval is not Gaussianized.",
+        "lineage_group": "GW170817-GRB170817A",
+        "target_visible": true,
+        "parameter_tuning_allowed": false,
+        "status": "RETROSPECTIVE_ONLY"
+      },
+      {
+        "holdout_id": "HOLD-GR-001",
+        "role": "retrospective_validation",
+        "source": "https://www.nature.com/articles/nature01997",
+        "published_at": "2003-09-25",
+        "data_contract": "Cassini Shapiro-delay gamma=1+(2.1 +/- 2.3)e-5 with source likelihood semantics.",
+        "lineage_group": "CASSINI-SHAPIRO",
+        "target_visible": true,
+        "parameter_tuning_allowed": false,
+        "status": "RETROSPECTIVE_ONLY"
+      },
+      {
+        "holdout_id": "HOLD-QCD-001",
+        "role": "retrospective_validation",
+        "source": "https://cms-results.web.cern.ch/cms-results/public-results/publications/SMP-24-007/",
+        "published_at": "2024-12-21",
+        "data_contract": "CMS SMP-24-007 alpha_s(Q) scale bins from 100 to 1600 GeV with Table 3 and correlated systematics; dashboard alpha_s(MZ)=0.1176 +0.0014/-0.0016 is descriptive only.",
+        "lineage_group": "CMS-SMP-24-007",
+        "target_visible": true,
+        "parameter_tuning_allowed": false,
+        "status": "RETROSPECTIVE_ONLY"
+      },
+      {
+        "holdout_id": "HOLD-SPEC-001",
+        "role": "retrospective_validation",
+        "source": "https://pdg.lbl.gov/2026/",
+        "published_at": "2026",
+        "data_contract": "Measurement-level W and Higgs mass packet with tensions, scale factors, and correlations; no dashboard-value Gaussian surrogate.",
+        "lineage_group": "PDG-2026-SPECTRUM",
+        "target_visible": true,
+        "parameter_tuning_allowed": false,
+        "status": "INTAKE_PENDING_API_HASH_RETROSPECTIVE_ONLY"
+      },
+      {
+        "holdout_id": "HOLD-BBN-001",
+        "role": "retrospective_validation",
+        "source": "https://doi.org/10.3847/1538-4357/aaab53",
+        "published_at": "2018-03-12",
+        "data_contract": "Primordial 1e5(D/H)_p=2.527 +/- 0.030 transported through a hash-pinned PRIMAT and nuclear-rate covariance bridge.",
+        "lineage_group": "PRIMORDIAL-DEUTERIUM-PRIMAT",
+        "target_visible": true,
+        "parameter_tuning_allowed": false,
+        "status": "RETROSPECTIVE_ONLY_THEORY_BRIDGE_OPEN"
+      },
+      {
+        "holdout_id": "HOLD-LSS-001",
+        "role": "retrospective_validation",
+        "source": "https://arxiv.org/abs/2503.14738",
+        "published_at": "2025-03-18",
+        "data_contract": "Official DESI DR2 BAO measurement vector and covariance as released and hash-pinned at intake; posterior chains are not the observation vector.",
+        "lineage_group": "DESI-DR2-BAO",
+        "target_visible": true,
+        "parameter_tuning_allowed": false,
+        "status": "INTAKE_PENDING_RELEASE_FILE_HASH_RETROSPECTIVE_ONLY"
+      },
+      {
+        "holdout_id": "PROS-LOCK-001",
+        "role": "prospective_locked",
+        "source": "FUTURE_INDEPENDENT_OFFICIAL_RELEASE_NOT_YET_SELECTED",
+        "published_at": null,
+        "data_contract": "Opaque target selected only after candidate, map, nuisance, covariance, scorer, and acceptance hashes are committed through the R-168 external custodian protocol.",
+        "lineage_group": "UNASSIGNED",
+        "target_visible": false,
+        "parameter_tuning_allowed": false,
+        "commitment_present": false,
+        "prediction_present": false,
+        "status": "EMPTY_NOT_FROZEN"
+      }
+    ]
+  },
+  "effective_qft_ym_gr_target_contract": {
+    "status": "SCHEMA_DEFINED_NUMERICAL_AND_OWNER_INTAKE_OPEN",
+    "constraints": [
+      {
+        "id": "TARGET-LORENTZ-CAUSAL",
+        "kind": "effective_target",
+        "requires": "Declared sector-dependent dispersion, microcausal or finite-propagation statement, and a map to applicable Lorentz-violation bounds."
+      },
+      {
+        "id": "TARGET-QFT-CORRELATOR",
+        "kind": "effective_target",
+        "requires": "State, source, renormalization scheme and scale, operator basis, positivity/unitarity domain, and correlated observable law."
+      },
+      {
+        "id": "TARGET-YM-GAUGE",
+        "kind": "effective_target",
+        "requires": "Gauge redundancy, physical observable algebra or BRST/Gauss projection, Ward or Slavnov-Taylor identities, anomaly audit, and running-coupling map."
+      },
+      {
+        "id": "TARGET-GR-LOW-ENERGY",
+        "kind": "effective_target",
+        "requires": "Metric or operational gravitational variables, equivalence-principle map, weak-field limit, and stress-energy normalization."
+      },
+      {
+        "id": "TARGET-COSMOLOGY-RELIC",
+        "kind": "effective_target",
+        "requires": "Initial state, background evolution, perturbation transfer, recombination/BBN/LSS bridge, nuisance law, and shared-lineage covariance."
+      }
+    ],
+    "gauge_is_not_an_observation": true,
+    "candidate_neutrality_rule": "Raw estimators and estimands are fixed without using a candidate-specific target transformation; candidate-specific theory transforms enter only in F_eff and F_obs and carry their own uncertainty."
+  },
+  "candidate_card_schema": {
+    "required_fields": [
+      "candidate_id",
+      "role",
+      "source_pointer",
+      "layer_status",
+      "microscopic_model",
+      "dynamics_owner",
+      "forward_map",
+      "observation_partition",
+      "uncertainty",
+      "inverse_tests",
+      "parameter_accounting",
+      "evidence_level",
+      "admission_status",
+      "non_claims",
+      "falsifiers",
+      "stop_condition"
+    ],
+    "admission_values": ["PASS", "FAIL", "NOT_TESTED", "NOT_ADMITTED", "INCOMPARABLE", "BASELINE_ONLY"],
+    "identifiability_values": ["UNIQUE", "EQUIVALENCE_CLASS", "NONIDENTIFIABLE", "NOT_TESTED"],
+    "stability_values": ["CERTIFIED_UNIFORM", "FINITE_ONLY", "UNSTABLE", "NOT_TESTED"],
+    "prediction_values": ["PROSPECTIVE_PASS", "PROSPECTIVE_FAIL", "RETROSPECTIVE_FIT_ONLY", "NO_HOLDOUT"],
+    "equivalence_quotient": ["gauge", "diffeomorphism", "RG", "field_redefinition", "regulator_and_scheme_when_prediction_preserving"],
+    "uniqueness_rule": "Report a surviving equivalence class whenever global or practical identifiability is not proved; never choose an arbitrary representative."
+  },
+  "candidate_cards": [
+    {
+      "candidate_id": "PA-M0-ESTABLISHED-LOW-ENERGY-BASELINE-v0",
+      "role": "MANDATORY_EFFECTIVE_BASELINE_NOT_MICROSCOPIC_WINNER",
+      "source_pointer": "strategy/pre-a-round1-admission-discriminator-freeze-260810-v1.0.json#candidate_registry",
+      "layer_status": {"L1": "DOMAINWISE_ESTABLISHED_INPUT", "L2": "NOT_ONE_MICROSCOPIC_MODEL", "L3": "EFFECTIVE_TARGET_BASELINE", "L4": "CALIBRATION_BASELINE_ONLY"},
+      "microscopic_model": "NOT_APPLICABLE_DOMAINWISE_EFFECTIVE_BUNDLE",
+      "dynamics_owner": "DOMAIN_SPECIFIC_NOT_ONE_OWNER",
+      "forward_map": {"F_reg": "NOT_APPLICABLE", "F_lim": "NOT_APPLICABLE", "F_eff": "BASELINE_INPUT", "F_obs": "DOMAIN_SPECIFIC"},
+      "observation_partition": {"calibration": "ALLOWED", "retrospective": "BASELINE_COMPARISON", "prospective": "REQUIRED_FOR_SELECTION_BUT_EMPTY"},
+      "uncertainty": "DOMAIN_SPECIFIC_AND_NOT_YET_INGESTED",
+      "inverse_tests": {"existence": "BASELINE_ONLY", "identifiability": "NOT_TESTED", "stability": "NOT_TESTED", "predictivity": "NO_HOLDOUT"},
+      "parameter_accounting": {"free": "DOMAIN_SPECIFIC", "fitted": "DOMAIN_SPECIFIC", "inserted": "DOMAIN_SPECIFIC", "predicted": 0},
+      "evidence_level": "ESTABLISHED_EFFECTIVE_REFERENCE_ONLY",
+      "admission_status": "BASELINE_ONLY",
+      "non_claims": ["M0 is not a microscopic TECT candidate and cannot win the microscopic tournament."],
+      "falsifiers": ["A candidate is not selected if it fails to outperform the frozen M0 predictive distribution on a powered prospective target."],
+      "stop_condition": "If all candidates share M0's holdout law, report NO_SELECTION."
+    },
+    {
+      "candidate_id": "PA-M1-CURRENT-PINNED-PRODUCTION-FUNCTIONAL-v0",
+      "role": "CURRENT_TECT_BENCHMARK",
+      "source_pointer": "strategy/pre-a-round1-admission-discriminator-freeze-260810-v1.0.json#candidate_registry",
+      "layer_status": {"L1": "FINITE_AND_CONDITIONAL_RESULTS_ONLY", "L2": "PRODUCTION_DYNAMICS_OWNER_INCOMPLETE", "L3": "NOT_ESTABLISHED", "L4": "NOT_TESTED"},
+      "microscopic_model": "PINNED_STATIC_FUNCTIONAL_WITH_DECLARED_FINITE_DYNAMICAL_PARTS",
+      "dynamics_owner": "MISSING_R192_HEAT_ROOT_FILTRATION_CURRENT_INTERTWINER_AND_ONE_USE_Q_SLOTS",
+      "forward_map": {"F_reg": "PARTIAL", "F_lim": "NOT_DEFINED_FOR_FULL_PRODUCTION", "F_eff": "ABSENT", "F_obs": "ABSENT"},
+      "observation_partition": {"calibration": "NOT_EXECUTED", "retrospective": "NOT_EXECUTED", "prospective": "EMPTY"},
+      "uncertainty": "NO_COMPLETE_MAP_ERROR_BUDGET",
+      "inverse_tests": {"existence": "NOT_TESTED", "identifiability": "NONIDENTIFIABLE_STATIC_TO_DYNAMICS", "stability": "FINITE_ONLY", "predictivity": "NO_HOLDOUT"},
+      "parameter_accounting": {"free": "UNCOUNTED_UNTIL_MAP_FREEZE", "fitted": 0, "inserted": "DECLARED_MODEL_INPUTS", "predicted": 0},
+      "evidence_level": "T0_TO_CONDITIONAL_MATHEMATICS_BY_COMPONENT",
+      "admission_status": "NOT_ADMITTED",
+      "non_claims": ["Static fit cannot select mobility, heat-root incidence, a physical sector, or a continuum QFT."],
+      "falsifiers": ["Any missing owner or forward-map stage keeps the version out of scoring."],
+      "stop_condition": "Return to owner/map construction; do not add equivalent finite mobility variants."
+    },
+    {
+      "candidate_id": "PA-M2-CI8-RS-v0",
+      "role": "LOCAL_FINITE_WAVENUMBER_ALTERNATIVE",
+      "source_pointer": "strategy/pre-a-round1-admission-discriminator-freeze-260810-v1.0.json#candidate_registry",
+      "layer_status": {"L1": "SCOPED_FINITE_IDENTITIES", "L2": "INSERTED_INERTIAL_LANE_AND_MAP_GAPS", "L3": "NOT_ESTABLISHED", "L4": "RETROSPECTIVE_DIAGNOSTIC_ONLY"},
+      "microscopic_model": "CI8_STATIC_LAW_WITH_SEPARATELY_INSERTED_INERTIAL_COMPLETION",
+      "dynamics_owner": "NOT_CANONICAL_PRODUCTION_OWNER",
+      "forward_map": {"F_reg": "PARTIAL", "F_lim": "PARTIAL_SCALAR_BASELINES_ONLY", "F_eff": "ABSENT", "F_obs": "POSTHOC_CONDITIONAL_ONLY"},
+      "observation_partition": {"calibration": "TARGETS_ALREADY_VISIBLE", "retrospective": "POSTHOC_ONLY", "prospective": "EMPTY"},
+      "uncertainty": "FLUCTUATION_RG_AND_MAP_ERROR_NOT_CLOSED",
+      "inverse_tests": {"existence": "NOT_TESTED", "identifiability": "NONIDENTIFIABLE", "stability": "FINITE_ONLY", "predictivity": "RETROSPECTIVE_FIT_ONLY"},
+      "parameter_accounting": {"free": "UNCOUNTED_UNTIL_NEW_VERSION", "fitted": "VISIBLE_TARGET_EXPOSURE", "inserted": "INERTIAL_COMPLETION", "predicted": 0},
+      "evidence_level": "T0_CONDITIONAL_TEST",
+      "admission_status": "NOT_ADMITTED",
+      "non_claims": ["A fitted tree-level stiffness or cone is not a gauge/QFT/GR identification or prospective prediction."],
+      "falsifiers": ["Residual hard discriminator failures or target leakage reject the current version."],
+      "stop_condition": "Any substantive dynamics or map repair requires a new candidate version and full rerun."
+    },
+    {
+      "candidate_id": "PA-M5-NL3-SV-v0",
+      "role": "NONLOCAL_SCREENED_SHELL_ALTERNATIVE",
+      "source_pointer": "strategy/pre-a-round1-admission-discriminator-freeze-260810-v1.0.json#candidate_registry",
+      "layer_status": {"L1": "SCOPED_STATIC_RESULTS", "L2": "NO_PHYSICAL_EVOLUTION", "L3": "SCOPED_BARE_VERSION_REJECTED", "L4": "NOT_TESTED"},
+      "microscopic_model": "NONLOCAL_SCREENED_SHELL_STATIC_CANDIDATE",
+      "dynamics_owner": "ABSENT",
+      "forward_map": {"F_reg": "STATIC_ONLY", "F_lim": "ABSENT", "F_eff": "ABSENT", "F_obs": "ABSENT"},
+      "observation_partition": {"calibration": "NOT_EXECUTED", "retrospective": "NOT_EXECUTED", "prospective": "EMPTY"},
+      "uncertainty": "NO_COMPLETE_MAP_ERROR_BUDGET",
+      "inverse_tests": {"existence": "NO_FEASIBLE_MEMBER_FOR_FROZEN_BARE_JOINT_TEST", "identifiability": "NOT_TESTED", "stability": "NOT_TESTED", "predictivity": "NO_HOLDOUT"},
+      "parameter_accounting": {"free": "FROZEN_VERSION", "fitted": 0, "inserted": "STATIC_INPUTS", "predicted": 0},
+      "evidence_level": "T0_SCOPED_NEGATIVE_BOUNDARY",
+      "admission_status": "FAIL",
+      "non_claims": ["The scoped failure is not a no-go for every nonlocal candidate."],
+      "falsifiers": ["Current bare version fails its joint causal-gauge-critical survivor contract."],
+      "stop_condition": "A changed dynamics or state is a genuinely new candidate, not a map-only repair."
+    },
+    {
+      "candidate_id": "CMP-FREF-IDMOB-LANGEVIN-v0",
+      "role": "FINITE_QFT_CONNECTED_COMPARISON_NOT_CANONICAL_CANDIDATE",
+      "source_pointer": "strategy/pre-a-qft-dynamics-candidate-screen-260823.md#Conditional-finite-candidate-selection-EXP-000973",
+      "layer_status": {"L1": "FINITE_FORMAL_GIBBS_CANCELLATION", "L2": "DECLARED_COMPARISON_MODEL", "L3": "NOT_SOURCE_IDENTIFIED", "L4": "NOT_TESTED"},
+      "microscopic_model": "FINITE_GALERKIN_F_REF_IDENTITY_MOBILITY_LANGEVIN",
+      "dynamics_owner": "IDENTITY_MOBILITY_DECLARED_NOT_DERIVED",
+      "forward_map": {"F_reg": "FINITE_ONLY", "F_lim": "ABSENT", "F_eff": "ABSENT", "F_obs": "ABSENT"},
+      "observation_partition": {"calibration": "NOT_EXECUTED", "retrospective": "NOT_EXECUTED", "prospective": "EMPTY"},
+      "uncertainty": "NO_UNIFORM_OR_PHYSICAL_MAP_BUDGET",
+      "inverse_tests": {"existence": "FINITE_PROCESS_EXISTS", "identifiability": "NONIDENTIFIABLE_STATIC_TO_MOBILITY", "stability": "FINITE_ONLY", "predictivity": "NO_HOLDOUT"},
+      "parameter_accounting": {"free": "FINITE_DECLARATION", "fitted": 0, "inserted": "IDENTITY_MOBILITY", "predicted": 0},
+      "evidence_level": "T0_FINITE_COMPARISON",
+      "admission_status": "NOT_ADMITTED",
+      "non_claims": ["Finite detailed balance is not canonical production dynamics, KMS/OS, real time, continuum, or Pre-A."],
+      "falsifiers": ["R-200-type mobility twins force nonidentifiability under static-only anchors."],
+      "stop_condition": "Do not generate more finite mobility variants without a source owner or discriminating observable."
+    },
+    {
+      "candidate_id": "GEO-T055-BCC-TRUNCATED-OCTAHEDRON-v0",
+      "role": "GEOMETRY_CANDIDATE_ONLY",
+      "source_pointer": "RESULTS-LEDGER.md#R-169",
+      "layer_status": {"L1": "FINITE_GEOMETRY_AND_REDUCTION", "L2": "COMMON_PHYSICAL_FUNCTIONAL_AND_EMPTY_BRANCH_MISSING", "L3": "NOT_ESTABLISHED", "L4": "NOT_TESTED"},
+      "microscopic_model": "T055_TRUNCATED_OCTAHEDRON_BCC_GEOMETRY",
+      "dynamics_owner": "ABSENT_COMMON_PHYSICAL_ACTION",
+      "forward_map": {"F_reg": "GEOMETRY_ONLY", "F_lim": "ABSENT", "F_eff": "ABSENT", "F_obs": "ABSENT"},
+      "observation_partition": {"calibration": "FORBIDDEN_AS_EMPTY_BRANCH_SUBSTITUTE", "retrospective": "NOT_EXECUTED", "prospective": "EMPTY"},
+      "uncertainty": "COMMON_FINITE_PARTS_AND_EMPTY_REFERENCE_UNFIXED",
+      "inverse_tests": {"existence": "NOT_TESTED_PHYSICAL_MODEL", "identifiability": "NOT_TESTED", "stability": "FINITE_ONLY", "predictivity": "NO_HOLDOUT"},
+      "parameter_accounting": {"free": "UNFIXED_FINITE_PARTS", "fitted": 0, "inserted": "GEOMETRY", "predicted": 0},
+      "evidence_level": "T0_GEOMETRY_CANDIDATE",
+      "admission_status": "NOT_ADMITTED",
+      "non_claims": ["Observation anchors do not replace owner-approved physical-empty E or establish F[R_H] < F[0]."],
+      "falsifiers": ["Without one unchanged finite-regulator functional and E branch, the physical-empty sign test is blocked."],
+      "stop_condition": "Park until the common physical action and E branch are owner-approved."
+    },
+    {
+      "candidate_id": "EXT-TECT-YM-FINITE-SUPPLIER-SNAPSHOT-v0",
+      "role": "REFERENCE_ONLY_EXTERNAL_FINITE_SUPPLIER",
+      "source_pointer": "strategy/pre-a-tect-ym-finite-covariant-hybrid-crosswalk-260823.json#crosswalk",
+      "layer_status": {"L1": "FINITE_EXTERNAL_RESULTS_BY_SNAPSHOT", "L2": "ADJACENT_HYBRID_AND_SOURCE_OWNER_GAPS", "L3": "NOT_ESTABLISHED", "L4": "NOT_TESTED"},
+      "microscopic_model": "EXTERNAL_TECT_YM_FINITE_SU2_HYBRID_SUPPLIERS",
+      "dynamics_owner": "NO_SOURCE_TEMPORAL_ACTION_OR_TECT_A13_OWNER",
+      "forward_map": {"F_reg": "FINITE_EXTERNAL_BY_VERSION", "F_lim": "ABSENT", "F_eff": "PARTIAL_DESIGN_REFERENCE_ONLY", "F_obs": "ABSENT"},
+      "observation_partition": {"calibration": "NOT_EXECUTED", "retrospective": "NOT_EXECUTED", "prospective": "EMPTY"},
+      "uncertainty": "EXTERNAL_SNAPSHOT_DRIFT_AND_NO_UNIFORM_MAP",
+      "inverse_tests": {"existence": "FINITE_SUPPLIER_OBJECTS_ONLY", "identifiability": "NOT_TESTED", "stability": "FINITE_ONLY", "predictivity": "NO_HOLDOUT"},
+      "parameter_accounting": {"free": "EXTERNAL_VERSIONED", "fitted": "UNKNOWN_TO_LOCAL_SCORER", "inserted": "HYBRID_COMPONENTS", "predicted": 0},
+      "evidence_level": "REFERENCE_ONLY_T0_FINITE_SUPPLIER",
+      "admission_status": "NOT_ADMITTED",
+      "non_claims": ["Finite CP/heat/Hodge, transfer, determinant, or Gram suppliers are not a source-owned TECT dynamics, full physical Yang-Mills continuum, or mass gap."],
+      "falsifiers": ["Missing source ownership, physical projection, or uniform leakage keeps the supplier outside scoring."],
+      "stop_condition": "Require a new bilateral snapshot and source-owner contract before reuse; never copy the external matrix."
+    }
+  ],
+  "inverse_test_contract": {
+    "existence": "Find a nonempty feasible set under the joint calibration likelihood/covariance and theory-error budget; otherwise NO_FEASIBLE_MEMBER.",
+    "structural_identifiability": "Test injectivity only after quotienting gauge, diffeomorphism, RG, field-redefinition, and prediction-preserving regulator/scheme equivalences.",
+    "practical_identifiability": "Report the predictive diameter of the confidence or posterior set and search for separated global twins; a Jacobian rank test alone is insufficient.",
+    "stability": "Bound changes of the surviving set and holdout prediction under covariance, nuisance, theory-transform, regulator, boundary, volume, and limit-order perturbations.",
+    "predictivity": "Use a proper predictive score against the frozen M0 baseline on an unused prospective target; training best fit is not a final score.",
+    "uniform_limit": "Prove common-core uniform control and compare infer-then-limit with limit-then-infer before any infinite-limit interpretation.",
+    "allowed_outcomes": ["NO_FEASIBLE_MEMBER", "SURVIVING_EQUIVALENCE_CLASS", "NONIDENTIFIABLE", "UNSTABLE", "UNDERPOWERED", "FALSIFIED_VERSION", "NO_SELECTION", "FINITE_ONLY"]
+  },
+  "reference_only_crosswalk": {
+    "mode": "POINTERS_ONLY_NO_MATRIX_COPY",
+    "tect_claim_ids": [
+      "A1-PRODUCTION-FUNCTIONAL-REALISATION",
+      "A2-FULL-PRODUCTION-WELLPOSED",
+      "A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM",
+      "A3-PERTURBATIVE-CONTINUUM-CORRELATORS",
+      "A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE",
+      "A5-SECTOR-A-SYNTHESIS",
+      "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+      "B1-RH-ENUM",
+      "B2-PROPA-HLAYER",
+      "C1-LORENTZ-KIN",
+      "C2-LORENTZ-EMERGENT",
+      "C3-EP",
+      "C4-GRAVITY-1LOOP",
+      "C5-NEWTON-G",
+      "C6-SPACETIME-SIGNATURE",
+      "D2-GAUGE-FORCING",
+      "D4-QUANTUM-CONSISTENCY"
+    ],
+    "tect_result_ids": ["R-168", "R-169", "R-170", "R-192", "R-193", "R-441"],
+    "tect_route_evidence_ids": ["EXP-000962", "EXP-000965"],
+    "tect_negative_ids": [
+      "NG-2026-08-11-PRE-A-ROUND1-CURRENT-TREE-PROSPECTIVE-HOLDOUT-NONEXISTENCE",
+      "NG-2026-08-11-PRE-A-ROUND1-CURRENT-VERSION-MAP-ONLY-ADMISSION-REPAIR",
+      "NG-2026-08-11-PRE-A-M2-LANE-Q-LINEAR-SOURCE-AUTOMATIC-PHYSICAL-STIFFNESS-RESPONSE",
+      "NG-2026-08-14-PRE-A-T055-COMMON-COUNTERTERM-BASIS-UNFIXED-FINITE-PARTS-AUTOMATIC-EMPTY-REFERENCE-SIGN"
+    ],
+    "tect_ym_local_snapshot": {
+      "snapshot_id": "SNAP-TY-20260823-002",
+      "pointer": "strategy/pre-a-tect-ym-finite-covariant-hybrid-crosswalk-260823.json",
+      "status": "REFERENCE_ONLY_STALE_BY_LIVE_SOURCE_OBSERVATION"
+    },
+    "tect_ym_live_locator_observed_2026_08_30": {
+      "claims_file": "E:/Dev/TECT-YM/research_db/records/claims.jsonl",
+      "claims_sha256": "4c70fe05c3ec307fe63cc27e32eb4537a5c8b22e6355c5c9861c3a81f94a676e",
+      "last_claim_id_observed": "TY-CLM-0776",
+      "explorations_file": "E:/Dev/TECT-YM/explorations/log.jsonl",
+      "explorations_sha256": "dc3f500b45d758c03999e6c322d66c11f70a48d4d42f123fabcf5c3ee0ba3935",
+      "last_exploration_id_observed": "TY-EXP-0934",
+      "git_commit": "UNAVAILABLE_DUE_TO_SAFE_DIRECTORY_READ_ONLY_AUDIT",
+      "admission": "NONE_NEW_BILATERAL_SNAPSHOT_REQUIRED"
+    },
+    "a3_boundary": "The restricted scalar perturbative spectral-continuum results are baseline pointers only and are not full production TECT or Yang-Mills continuum results."
+  },
+  "candidate_comparison": {
+    "method": "NONCOMPENSATORY_HARD_GATES_THEN_PARETO_OR_PREREGISTERED_LEXICOGRAPHIC_COMPARISON",
+    "scalar_total_score_allowed": false,
+    "mandatory_baseline": "PA-M0-ESTABLISHED-LOW-ENERGY-BASELINE-v0",
+    "ranking_key_after_admission": [
+      "prospective_holdout_pass",
+      "robust_lower_bound_of_baseline_relative_proper_predictive_score",
+      "smaller_worst_case_instability",
+      "shorter_frozen_model_description"
+    ],
+    "rows": [
+      {"candidate_id": "PA-M0-ESTABLISHED-LOW-ENERGY-BASELINE-v0", "fit_or_admission": "BASELINE_ONLY", "identifiability": "NOT_TESTED", "stability": "NOT_TESTED", "parameter_status": "DOMAIN_SPECIFIC", "prospective_holdout": "NO_HOLDOUT", "layers": "effective baseline only"},
+      {"candidate_id": "PA-M1-CURRENT-PINNED-PRODUCTION-FUNCTIONAL-v0", "fit_or_admission": "NOT_ADMITTED", "identifiability": "NONIDENTIFIABLE", "stability": "FINITE_ONLY", "parameter_status": "UNFROZEN_MAP", "prospective_holdout": "NO_HOLDOUT", "layers": "L1 partial; L2-L4 open"},
+      {"candidate_id": "PA-M2-CI8-RS-v0", "fit_or_admission": "NOT_ADMITTED", "identifiability": "NONIDENTIFIABLE", "stability": "FINITE_ONLY", "parameter_status": "VISIBLE_TARGET_EXPOSURE", "prospective_holdout": "NO_HOLDOUT", "layers": "L1 partial; L2-L4 open"},
+      {"candidate_id": "PA-M5-NL3-SV-v0", "fit_or_admission": "FAIL", "identifiability": "NOT_TESTED", "stability": "NOT_TESTED", "parameter_status": "FROZEN_SCOPED_VERSION", "prospective_holdout": "NO_HOLDOUT", "layers": "scoped L1 only"},
+      {"candidate_id": "CMP-FREF-IDMOB-LANGEVIN-v0", "fit_or_admission": "NOT_ADMITTED", "identifiability": "NONIDENTIFIABLE", "stability": "FINITE_ONLY", "parameter_status": "IDENTITY_MOBILITY_INSERTED", "prospective_holdout": "NO_HOLDOUT", "layers": "finite L1-L2 comparison"},
+      {"candidate_id": "GEO-T055-BCC-TRUNCATED-OCTAHEDRON-v0", "fit_or_admission": "NOT_ADMITTED", "identifiability": "NOT_TESTED", "stability": "FINITE_ONLY", "parameter_status": "COMMON_ACTION_AND_E_MISSING", "prospective_holdout": "NO_HOLDOUT", "layers": "finite geometry only"},
+      {"candidate_id": "EXT-TECT-YM-FINITE-SUPPLIER-SNAPSHOT-v0", "fit_or_admission": "NOT_ADMITTED", "identifiability": "NOT_TESTED", "stability": "FINITE_ONLY", "parameter_status": "EXTERNAL_VERSIONED", "prospective_holdout": "NO_HOLDOUT", "layers": "finite external supplier only"}
+    ],
+    "current_selection": "NO_SELECTION_ZERO_ADMITTED_MICROSCOPIC_FORWARD_MAPS"
+  },
+  "hostile_test_contract": [
+    {"id": "H01-HOLDOUT-MUTATION", "mutation": "Change a holdout value after freeze.", "expected": "HASH_MISMATCH_NOT_ADMITTED"},
+    {"id": "H02-DERIVED-DUPLICATE", "mutation": "Duplicate a statistic from the same raw source.", "expected": "SHARED_LINEAGE_NOT_INDEPENDENT"},
+    {"id": "H03-LABEL-PERMUTATION", "mutation": "Permute candidate labels.", "expected": "SAME_EQUIVALENCE_CLASS_AND_SCORE"},
+    {"id": "H04-MOBILITY-TWINS", "mutation": "Use distinct mobilities with the same static Gibbs law.", "expected": "STATIC_ONLY_NONIDENTIFIABLE"},
+    {"id": "H05-CONTRACT-HASH-CHANGE", "mutation": "Change candidate, nuisance, scorer, or map hash.", "expected": "NOT_ADMITTED_NEW_VERSION_REQUIRED"},
+    {"id": "H06-REGULATOR-SURVIVAL-FLIP", "mutation": "Change regulator, boundary, or limit order and flip survival.", "expected": "UNSTABLE_FINITE_ONLY"},
+    {"id": "H07-M0-SYNTHETIC", "mutation": "Generate data from M0 and run the selection pipeline.", "expected": "FALSE_MICROSCOPIC_SELECTION_BOUND_REQUIRED"},
+    {"id": "H08-INJECTED-EQUIVALENCE", "mutation": "Inject equivalent candidate versions.", "expected": "EQUIVALENCE_CLASS_RECOVERY"},
+    {"id": "H09-POST-UNSEAL-RETUNE", "mutation": "Retune after target disclosure.", "expected": "RETROSPECTIVE_ONLY_NEW_ID_REQUIRED"},
+    {"id": "H10-PHYSICAL-EMPTY-SUBSTITUTION", "mutation": "Use an observation anchor instead of owner-approved E and common functional.", "expected": "PARKED_PHYSICAL_EMPTY_BLOCKED"},
+    {"id": "H11-NO-UNIFORM-BOUND", "mutation": "Promote several finite rows to an infinite-limit result.", "expected": "FINITE_ONLY"},
+    {"id": "H12-COMPENSATORY-SCORE", "mutation": "Let good fit compensate for a missing owner or map stage.", "expected": "NOT_ADMITTED_SCORE_FORBIDDEN"}
+  ],
+  "synthesis_policy": {
+    "current_pdf": "NONE",
+    "reason": "This is an input and route contract, not a gate-level scientific result.",
+    "single_checkpoint_trigger": "Issue one synthesis note/PDF only after the first complete microscopic forward map is admitted and the observation/target/holdout freeze changes gate state, or after a candidate is prospectively falsified or survives.",
+    "intermediate_pdf_forbidden": true
+  },
+  "stop_and_redesign": [
+    "If no candidate has a complete forward map, stop empirical scoring and return to owner/map construction.",
+    "If the inverse is nonidentifiable, report the surviving equivalence class and design a separating observable.",
+    "If theory or map uncertainty exceeds candidate separation, improve the forward theorem and error bound before adding data.",
+    "If a proof filtration or q ledger is chosen to fit observations, create a new candidate version; do not call it A13 closure.",
+    "If holdout power is insufficient or all candidates share the baseline law, report NO_SELECTION.",
+    "If a holdout fails, do not retune in the same round.",
+    "If the common physical action, source owner, or physical-empty E is absent, park that branch.",
+    "If a uniform estimate fails, retain only the finite evidence level and record the failure boundary."
+  ],
+  "non_claims": [
+    "No observation packet is yet locally hash-frozen and no candidate has been scored.",
+    "No microscopic candidate is admitted and no uniqueness, stability, or prospective prediction is established.",
+    "No Reading-H physical-empty sign, C6, Pre-A, A13, Sector-A, physical-sector, thermodynamic, continuum, Yang-Mills, gravity, cosmic-origin, theory-of-everything, or mass-gap claim is advanced.",
+    "Finite TECT and TECT-YM results remain finite, conditional, auxiliary, or reference-only at their existing evidence levels."
+  ],
+  "next_gate": "Hash-freeze the exact source/data products and candidate-neutral estimands, then admit one complete candidate forward map through F_reg/F_lim/F_eff/F_obs before any scoring."
+}

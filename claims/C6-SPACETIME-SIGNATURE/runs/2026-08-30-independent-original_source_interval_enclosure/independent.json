@@ -1,0 +1,214 @@
+{
+  "assertion_count": 12,
+  "assertions": [
+    {
+      "actual": "['R-433', 'EXP-001278', False]",
+      "expected": "R-433/EXP-001278/false",
+      "group": "provenance",
+      "name": "manifest identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "[2, 16, '8', 'right', 7, 6]",
+      "expected": "V2/d16/beta8/right/emission7/parent6",
+      "group": "fixture",
+      "name": "fixed source row",
+      "status": "PASS"
+    },
+    {
+      "actual": "[72, 56, 64, 64]",
+      "expected": "[72, 56, 64, 64]",
+      "group": "symmetry",
+      "name": "sector enumeration",
+      "status": "PASS"
+    },
+    {
+      "actual": "(256, 256)",
+      "expected": "(256, 256)",
+      "group": "source",
+      "name": "full source dimension",
+      "status": "PASS"
+    },
+    {
+      "actual": "3.552713678800501e-15",
+      "expected": "symmetric and finite",
+      "group": "source",
+      "name": "source finite self-adjoint",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0003093273951435549",
+      "expected": ">0",
+      "group": "source",
+      "name": "source ordering",
+      "status": "PASS"
+    },
+    {
+      "actual": "5.622948646625251e-13",
+      "expected": ">0",
+      "group": "Gibbs row",
+      "name": "conditional row positivity",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.0",
+      "expected": "1",
+      "group": "Gibbs row",
+      "name": "conditional row normalization",
+      "status": "PASS"
+    },
+    {
+      "actual": "[[4, 5, 6, 7, 8, 9, 10], [0, 1, 2, 3, 11, 12, 13, 14, 15]]",
+      "expected": "[[4, 5, 6, 7, 8, 9, 10], [0, 1, 2, 3, 11, 12, 13, 14, 15]]",
+      "group": "row",
+      "name": "tail split",
+      "status": "PASS"
+    },
+    {
+      "actual": "5.36318775241371",
+      "expected": "finite 14x14 compression",
+      "group": "residual",
+      "name": "residual compression finite",
+      "status": "PASS"
+    },
+    {
+      "actual": "2.7852500110725487e-06",
+      "expected": ">5e-7",
+      "group": "reference",
+      "name": "independent R-422 sign separation",
+      "status": "PASS"
+    },
+    {
+      "actual": "5.36318775241371",
+      "expected": "finite source control within 5e-6",
+      "group": "reference",
+      "name": "independent source consistency",
+      "status": "PASS"
+    }
+  ],
+  "assumptions": [
+    "The R-419 finite fixture is the exact declared source for the V=2, d=16 calculation and the R-432 emission ordinal contract is unchanged.",
+    "Exchange and global Fock-parity symmetries commute with the finite source Hamiltonian, so the four displayed block reductions preserve the spectrum.",
+    "The polar correction bound used in the certificate is applied only after directed interval residual and Gram-defect bounds are below one half.",
+    "For a positive self-adjoint finite matrix, exp(-beta X) is beta-Lipschitz in operator norm on the shifted positive cone; the coordinate-vector perturbation bound uses ||K||<=1.",
+    "The interval Cholesky lower certificate and interval Rayleigh upper certificate are applied to the same symmetric compressed residual enclosure."
+  ],
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "derived": {
+    "conditional_row": [
+      5.622948646625251e-13,
+      9.657352364287522e-10,
+      9.966316202492762e-06,
+      0.0022953895978279583,
+      0.046359514386386365,
+      0.19072766310340603,
+      0.28645014018052467,
+      0.2396399954905906,
+      0.14606105611694145,
+      0.06749296920296775,
+      0.01887851454286793,
+      0.0020390258702944054,
+      4.568571153073434e-05,
+      7.844378839098023e-08,
+      6.077325089649533e-11,
+      9.60034023533694e-12
+    ],
+    "fixed_row": {
+      "beta": "8",
+      "comparison_tolerance": "5e-7",
+      "core_indices": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "cutoff_dimension": 16,
+      "orientation": "right",
+      "r422_reference": "5.363184967163699",
+      "r426_direct_reference": "5.36318835004781",
+      "tail_indices": [
+        0,
+        1,
+        2,
+        3,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "tail_threshold": "4",
+      "target_emission_ordinal": 7,
+      "target_parent_coordinate": 6,
+      "volume": 2
+    },
+    "hamiltonian_ground_energy_double": 0.3976692365592614,
+    "hamiltonian_top_energy_double": 248.79000141952434,
+    "r422_separation_margin_double": 2.7852500110725487e-06,
+    "residual_gap_double": 5.36318775241371,
+    "role": "independent finite control only; it does not replace the primary directed interval enclosure",
+    "symmetry_block_sizes": [
+      72,
+      56,
+      64,
+      64
+    ],
+    "tail_split": {
+      "core": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "tail": [
+        0,
+        1,
+        2,
+        3,
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    }
+  },
+  "evidence_level": "T0 / EXECUTED INDEPENDENT FINITE DOUBLE-PRECISION CONTROL; PRIMARY INTERVAL CERTIFICATE REMAINS AUTHORITATIVE",
+  "exploration_id": "EXP-001278",
+  "manifest": "strategy/pre-a-cp1-st8-q3lock-original-source-interval-enclosure-manifest.json",
+  "missing_assumptions": [
+    "A cutoff-, volume-, phase- and exhaustion-uniform version of the finite source enclosure.",
+    "A common unbounded Q3 core and a uniform residual or Schur estimate beyond this one finite source.",
+    "History transfer, OS/KMS/GNS reconstruction, physical-sector admission and continuum control.",
+    "A same-owner normalized physical-empty branch E and the full Reading-H functional required for the three physical-empty tests."
+  ],
+  "non_claims": [
+    "No physical-empty energy sign, Reading-H full stationarity or symmetry-projected transverse stability result.",
+    "No cutoff-, volume-, phase- or exhaustion-uniform Schur, Poincare or residual theorem.",
+    "No common core, history transfer, OS/KMS/GNS reconstruction, sector gap or continuum limit.",
+    "No C6, Sector-A, Pre-A, Yang-Mills or mass-gap conclusion.",
+    "The independent double-precision control is not itself an interval or uniform proof."
+  ],
+  "result_id": "R-433",
+  "run_kind": "independent",
+  "schema": "tect/pre-a-r433-independent/1.0",
+  "scope": {
+    "directed_interval_certificate": false,
+    "independent_corrected_row_reconstruction": true,
+    "independent_residual_control": true,
+    "independent_source_reconstruction": true,
+    "uniform_or_physical_promotion": false
+  },
+  "source_hashes": {
+    "manifest": "7fa31f533d0c87f8bfc69c97b8583d7f1de581aa88629d3a36903c4bd3b41f85",
+    "r419_manifest": "d5e2139c1a8af9b11f13098a8aaafabf66560bf08f011afb18900f50ae7e2881",
+    "script": "3575692b14233b7a5968bc8895625c3df3754fbdd172028ca80f9b2a088560b0"
+  },
+  "verdict": "INDEPENDENT_FINITE_CONTROL_PASS"
+}

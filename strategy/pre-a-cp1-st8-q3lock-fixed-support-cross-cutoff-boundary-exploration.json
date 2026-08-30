@@ -1,0 +1,63 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "schema_version": "1.0",
+  "id": "EXP-001282",
+  "task_id": "T-054",
+  "title": "Fixed threshold-four support crossing from d=17 to d=18",
+  "question": "Does the unchanged d=17 threshold-four core remain valid at d=18 under the same V=2, beta, orientation, row kind and emission rule?",
+  "method": [
+    "Load the hash-pinned R-435 and R-436 manifests and their primary and independent run JSON authorities.",
+    "Compare the same V=2, beta=8, right-oriented unconditional one-site marginal row with emission ordinal zero and threshold four.",
+    "Read directed interval endpoints for index four and verify d=17 upper < 4 < d=18 lower without rounding.",
+    "Check the d=17 and d=18 core/tail splits independently, then run hostile mutations and Lean scalar threshold checks.",
+    "Keep the result finite, claim-nonbearing and separate from any increasing-core or full-sector route."
+  ],
+  "finding": "Index 4 is core at d=17 with interval [2.928582137842666842328379942374782260821356965438242614347658772652559683976254399565, 2.928582137842666842328379942374793763899593365995396958706748597526637672297939680216], and tail at d=18 with interval [4.016145184038902632538356548209393899600440870692488949841237941696776136410376441, 4.016145184038902632538356548209432108173973591163820303164228876431706984404931606871]. The strict crossing is certified by primary 14/14, independent 9/9, hostile 8/8, integrated 15/15 and Lean PASS.",
+  "decision_reason": "Advance a route-local finite boundary: unchanged fixed-support reuse is rejected because one declared index crosses the threshold. The observation does not reject increasing-core, cutoff-dependent or full-sector constructions.",
+  "decision_scope": "V=2, beta=8, right orientation, unconditional one-site marginal, emission ordinal zero, d=17 versus d=18, threshold-four support classification.",
+  "verdict": "advanced",
+  "boundary": "R-437 is T0 finite evidence only. It closes no uniform tail modulus, common core, OS/KMS/GNS gap, continuum, physical-empty sign, Yang-Mills claim or mass-gap statement.",
+  "next_action": "Specify an increasing-core rule before further cutoff evaluations and seek an owner-approved cutoff-, volume-, phase- and exhaustion-uniform tail modulus or full-sector completeness theorem.",
+  "evidence_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-fixed-support-cross-cutoff-boundary-manifest.json#comparison_contract",
+    "strategy/pre-a-cp1-st8-q3lock-fixed-support-cross-cutoff-boundary-certificate-260830.md#Decision",
+    "codes/foundations/pre_a_cp1_st8_q3lock_fixed_support_cross_cutoff_boundary.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_fixed_support_cross_cutoff_boundary_independent.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_fixed_support_cross_cutoff_boundary_hostile.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_fixed_support_cross_cutoff_boundary_verify.py#main",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-primary-fixed_support_cross_cutoff_boundary/primary.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-independent-fixed_support_cross_cutoff_boundary/independent.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-hostile-fixed_support_cross_cutoff_boundary/hostile.json#assertions",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-integrated-fixed_support_cross_cutoff_boundary/integrated.json#derived",
+    "verification/lean/Tect/R437.lean#threshold_four_crossing",
+    "verification/lean/registry.json#R437"
+  ],
+  "formal_refs": {
+    "results": ["R-437", "R-436", "R-435", "R-419"],
+    "negatives": [],
+    "events": ["20260830-r-437-fixed-support-cross-cutoff-boundary-2026"]
+  },
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-BROKEN-SECTOR-GNS-GAP-COERCIVITY",
+    "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA"
+  ],
+  "adversarial_review": [
+    {"axis": "parent row identity", "check": "Both manifests and runs agree on V=2, beta=8, right orientation, unconditional row, ordinal zero and threshold four.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "interval direction", "check": "Directed endpoints satisfy d17 upper < 4 < d18 lower; no rounded point estimate is used.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "support bookkeeping", "check": "Primary and independent lanes both place index four in d17 core and d18 tail.", "disposition": "DISMISSED-FINITE"},
+    {"axis": "overgeneralization", "check": "The manifest keeps increasing-core and full-sector routes open and rejects only unchanged fixed support.", "disposition": "UPHELD-OPEN"},
+    {"axis": "physical promotion", "check": "No common core, physical reference, limit order theorem or Yang-Mills map is supplied.", "disposition": "UPHELD-OPEN"}
+  ],
+  "no_overclaim": "R-437 advances only one finite fixed-support boundary audit. It does not establish cutoff/volume uniformity, a tail modulus, physical-empty stationarity or stability, C6, Sector-A, Pre-A, Yang-Mills dynamics or a mass gap.",
+  "provenance": "contemporaneous",
+  "recorded_at": "2026-08-31T12:00:00Z",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-08-30",
+  "related": [
+    {"id": "EXP-001281", "relation": "continues"},
+    {"id": "EXP-001280", "relation": "continues"},
+    {"id": "EXP-001279", "relation": "alternative_to"}
+  ]
+}

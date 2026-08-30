@@ -1,0 +1,86 @@
+{
+  "assertion_count": 8,
+  "assertions": [
+    {
+      "actual": "FIXED_SUPPORT_ROUTE_LOCAL_BOUNDARY",
+      "expected": "route-local finite boundary",
+      "name": "baseline accepted",
+      "status": "PASS"
+    },
+    {
+      "actual": "FIXED_SUPPORT_ROUTE_LOCAL_BOUNDARY",
+      "expected": "mutation rejected",
+      "name": "fixed-support promotion",
+      "status": "PASS"
+    },
+    {
+      "actual": "FIXED_SUPPORT_ROUTE_LOCAL_BOUNDARY",
+      "expected": "mutation rejected",
+      "name": "increasing-core promotion",
+      "status": "PASS"
+    },
+    {
+      "actual": "FIXED_SUPPORT_ROUTE_LOCAL_BOUNDARY",
+      "expected": "mutation rejected",
+      "name": "status swap",
+      "status": "PASS"
+    },
+    {
+      "actual": "FIXED_SUPPORT_ROUTE_LOCAL_BOUNDARY",
+      "expected": "mutation rejected",
+      "name": "crossing-index substitution",
+      "status": "PASS"
+    },
+    {
+      "actual": "FIXED_SUPPORT_ROUTE_LOCAL_BOUNDARY",
+      "expected": "mutation rejected",
+      "name": "d18 core substitution",
+      "status": "PASS"
+    },
+    {
+      "actual": "FIXED_SUPPORT_ROUTE_LOCAL_BOUNDARY",
+      "expected": "mutation rejected",
+      "name": "d17 tail substitution",
+      "status": "PASS"
+    },
+    {
+      "actual": "FIXED_SUPPORT_ROUTE_LOCAL_BOUNDARY",
+      "expected": "mutation rejected",
+      "name": "C6 promotion",
+      "status": "PASS"
+    }
+  ],
+  "boundary": "R-437 records one certified d=17 to d=18 threshold crossing for index 4. It rejects only unchanged fixed-support reuse and requires an increasing-core tail modulus or another complete route; all uniform, common-core, physical and Yang-Mills flags remain false.",
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "evidence_level": "T0 / HOSTILE FINITE-SCOPE FIREWALL",
+  "exploration_id": "EXP-001282",
+  "manifest": "strategy/pre-a-cp1-st8-q3lock-fixed-support-cross-cutoff-boundary-manifest.json",
+  "mutations": [
+    "fixed-support promotion",
+    "increasing-core promotion",
+    "status swap",
+    "crossing-index substitution",
+    "d18 core substitution",
+    "d17 tail substitution",
+    "C6 promotion"
+  ],
+  "non_claims": [
+    "No theorem that every core rule fails uniformly.",
+    "No increasing-core or tail-modulus theorem.",
+    "No common Q3 core, GNS gap, continuum or physical-sector conclusion.",
+    "No C6, Sector-A, Pre-A, Yang-Mills or mass-gap conclusion."
+  ],
+  "result_id": "R-437",
+  "run_kind": "hostile",
+  "schema": "tect/pre-a-r437-hostile/1.0",
+  "scope": {
+    "hostile_mutations_rejected": true,
+    "physical_promotion_rejected": true,
+    "uniform_promotion_rejected": true
+  },
+  "source_hashes": {
+    "manifest": "355ac4e342da2edd3e1294e3c7e88798bda698d758ab40aac237a4cd928e9350",
+    "script": "7feef8cb3c706dae35841dc8100613b6395dc722739adccdc5397259cd8cfa6a"
+  },
+  "verdict": "HOSTILE_MUTATIONS_REJECTED"
+}

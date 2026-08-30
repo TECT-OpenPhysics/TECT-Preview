@@ -6,7 +6,31 @@
 
 Gates are promotion conditions; hypotheses are named assumptions that T6 claims
 may rest on. Every `open_gates` / `hypotheses` entry in any `status.json` must
-exist here. Last updated: 2026-08-21.
+exist here. Last updated: 2026-08-30.
+
+## Research continuity process gate
+
+### **RESEARCH-CONTINUITY-P0-BASELINE-AND-RESUME**
+
+**Statement:** Before a new long-running Pre-A or Sector-A proof batch begins,
+recover a durable repository baseline and a pointer-only main-proof state. The
+baseline must preserve the existing forward proof methods unchanged, register
+the observation-first inverse lane as an additive parallel lane, identify one
+active resume checkpoint per lane, record stopped-loop fingerprints and reopen
+conditions, and supply one exact next action per lane. Research Phase `P0-R`
+closes only after doctor and release checks pass, the commit queue is empty,
+the worktree is clean, and live remote `main` equals local `HEAD` under the
+strict continuity audit.
+
+**Status:** OPEN (2026-08-30). The recovery-start audit records a verified but
+non-durable pending worktree at local `HEAD`
+`d93469b01674e357d98f3eef1551bb61e8dc57bb`: doctor and release checks pass,
+but 21 queued commit requests, 176 unstaged tracked paths, 239 untracked paths,
+and an unverified live remote remain. This is a process and provenance gate
+only. It changes no existing proof method, scientific gate, claim lifecycle,
+tier, or evidence interpretation. The controlling contract is
+`governance/research-continuity.md`; the machine state is
+`strategy/main-proof-program-v1.json`.
 
 ## Current Sector-A frontier (R-113)
 
@@ -446,6 +470,30 @@ source separation, repo-confined hashes and parsed HTTPS anchors across 28
 hostile classes. This does not prove semantic target independence inside
 arbitrary free text, verify a cryptographic signature, independently fetch a
 remote object/ref, or turn a synthetic fixture into a real freeze.
+
+### **PA-INVERSE-OBSERVATION-TARGET-MAP-HOLDOUT-FREEZE**
+
+**Statement:** Before inverse-lane scoring, freeze a candidate-neutral
+observation and holdout register plus an effective QFT/Yang--Mills/gravity
+target contract. Every microscopic candidate must define its finite regulated
+model, ordered uniform limit, effective-theory identification, and observation
+map with state, generator or transfer, physical projection, proof-owner
+realization, regulator, volume, boundary, normalization, finite parts, common
+norm, uncertainty, and limit order. Existence, quotient identifiability,
+stability, and prospective holdout predictivity are judged separately.
+Reusing fitted anchors as predictions, omitting an owner or map stage, or
+leaving physical correspondence undefined keeps a candidate `NOT_ADMITTED`.
+
+**Status:** OPEN (2026-08-30). T-059 and the observation-first inverse-lane
+contract register the four-layer/two-lane schema, five calibration packets,
+six retrospective targets, one empty prospective lock, candidate-card schema,
+reference-only crosswalk, noncompensatory comparison, and hostile fixtures.
+No observation packet is yet locally hash-frozen, the prospective target and
+commitment are empty, and zero microscopic candidates have a complete
+`F_reg/F_lim/F_eff/F_obs` map. Closing this input gate would still not close
+Round 1, C6, Pre-A, A13, Sector A, physical empty space, a physical sector,
+uniform continuum control, Yang--Mills, gravity, cosmic origin, a theory of
+everything, or a mass gap.
 
 ### **PA-ROUND1-CURRENT-CANDIDATE-MAP-ADMISSION-EMPTY-SET-AUDIT**
 

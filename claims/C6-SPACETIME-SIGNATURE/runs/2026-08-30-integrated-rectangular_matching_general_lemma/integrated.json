@@ -1,0 +1,316 @@
+{
+  "assertion_count": 26,
+  "assertions": [
+    {
+      "actual": [
+        "R-442",
+        "EXP-001287",
+        "T-054",
+        false
+      ],
+      "expected": [
+        "R-442",
+        "EXP-001287",
+        "T-054",
+        false
+      ],
+      "group": "provenance",
+      "name": "manifest identity",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "adjacency": "one-coordinate increment by one inside the box",
+        "box_family": "all ordered side triples in [side_min, side_max]^dimension",
+        "dimension": 3,
+        "edge_count_formula": "sum_axis((side_axis-1)*product_other_sides)",
+        "expected_layer_count": "dimension * parity_modulus",
+        "lower_endpoint_colour": "(axis, lower_coordinate[axis] mod parity_modulus)",
+        "parity_modulus": 2,
+        "side_max": 6,
+        "side_min": 2
+      },
+      "expected": "3D parity-2 sides 2..6",
+      "group": "contract",
+      "name": "finite contract",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "group": "scope",
+      "name": "claim nonbearing",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "event_id": "20260830-r-442-general-rectangular-matching-lemma-2026-0",
+        "event_ordinal": 784,
+        "event_title": "R-442 general rectangular matching lemma",
+        "new_negative": false,
+        "pdf": false,
+        "tier_change": false
+      },
+      "expected": "event 784 without tier change",
+      "group": "provenance",
+      "name": "formal event reserved",
+      "status": "PASS"
+    },
+    {
+      "actual": "r-442 closes only the abstract axis-parity matching property and exact edge-count bookkeeping for the declared finite rectangular graph family, with the local incidence statement proved in lean. it does not close the weighted q3 split form, operator domains, boundary/history tails, exhaustion, common alpha, kms/gns, physical-empty branch, sector-a, pre-a, yang-mills or mass-gap claims.",
+      "expected": "finite-only boundary",
+      "group": "scope",
+      "name": "finite boundary",
+      "status": "PASS"
+    },
+    {
+      "actual": "r-442 closes only the abstract axis-parity matching property and exact edge-count bookkeeping for the declared finite rectangular graph family, with the local incidence statement proved in lean. it does not close the weighted q3 split form, operator domains, boundary/history tails, exhaustion, common alpha, kms/gns, physical-empty branch, sector-a, pre-a, yang-mills or mass-gap claims.",
+      "expected": "Yang-Mills/mass-gap explicitly open",
+      "group": "scope",
+      "name": "QFT firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": "E:\\Dev\\TECT\\verification\\lean\\Tect\\R442.lean",
+      "expected": true,
+      "group": "Lean",
+      "name": "Lean source",
+      "status": "PASS"
+    },
+    {
+      "actual": "import Mathlib\n\nnamespace Tect.R442\n\ndef incident {d : Nat} (axis : Fin d) (v lower : Fin d \u2192 Nat) : Prop :=\n  (\u2200 j : Fin d, j \u2260 axis \u2192 lower j = v j) \u2227\n    (lower axis = v axis \u2228 lower axis + 1 = v axis)\n\ntheorem same_colour_incident_unique {d : Nat} (axis : Fin d)\n    (v lower\u2081 lower\u2082 : Fin d \u2192 Nat)\n    (h\u2081 : incident axis v lower\u2081)\n    (h\u2082 : incident axis v lower\u2082)\n    (hcolour : lower\u2081 axis % 2 = lower\u2082 axis % 2) :\n    lower\u2081 = lower\u2082 := by\n  have haxis : lower\u2081 axis = lower\u2082 axis := by\n    rcases h\u2081.2 with h\u2081f | h\u2081b <;> rcases h\u2082.2 with h\u2082f | h\u2082b <;> omega\n  funext j\n  by_cases h : j = axis\n  \u00b7 subst j\n    exact haxis\n  \u00b7 exact (h\u2081.1 j h).trans (h\u2082.1 j h).symm\n\ntheorem six_colour_layers {d : Nat} (hthree : d = 3) : d * 2 = 6 := by\n  omega\n\nend Tect.R442\n",
+      "expected": "markers present",
+      "group": "Lean",
+      "name": "Lean markers",
+      "status": "PASS"
+    },
+    {
+      "actual": "forbidden tokens absent",
+      "expected": "clean source",
+      "group": "Lean",
+      "name": "Lean firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-442 PRIMARY GENERAL_RECTANGULAR_MATCHING_LEMMA_AUDITED 67398/67398 boxes=125 layers=6 edges=18000",
+      "expected": "audited",
+      "group": "executables",
+      "name": "primary child",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-442 INDEPENDENT INDEPENDENT_GENERAL_RECTANGULAR_MATCHING_CONTROL 67268/67268 boxes=125 edges=18000",
+      "expected": "independent control",
+      "group": "executables",
+      "name": "independent child",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-442 HOSTILE HOSTILE_MUTATIONS_REJECTED 8/8",
+      "expected": "8 rejected",
+      "group": "hostile",
+      "name": "hostile child",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        67398,
+        67268,
+        8
+      ],
+      "expected": ">0",
+      "group": "executables",
+      "name": "positive assertion totals",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        3,
+        3
+      ],
+      "expected": "equal",
+      "group": "crosscheck",
+      "name": "lane agreement dimension",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        2,
+        2
+      ],
+      "expected": "equal",
+      "group": "crosscheck",
+      "name": "lane agreement parity_modulus",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        125,
+        125
+      ],
+      "expected": "equal",
+      "group": "crosscheck",
+      "name": "lane agreement box_count",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        8000,
+        8000
+      ],
+      "expected": "equal",
+      "group": "crosscheck",
+      "name": "lane agreement total_vertices",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        18000,
+        18000
+      ],
+      "expected": "equal",
+      "group": "crosscheck",
+      "name": "lane agreement total_edges",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        75,
+        75
+      ],
+      "expected": "equal",
+      "group": "crosscheck",
+      "name": "lane agreement total_empty_layers",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        6,
+        6
+      ],
+      "expected": "equal",
+      "group": "crosscheck",
+      "name": "lane agreement maximum_degree",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        true,
+        true
+      ],
+      "expected": "equal",
+      "group": "crosscheck",
+      "name": "lane agreement edge_count_formula_checked",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        true,
+        true
+      ],
+      "expected": "equal",
+      "group": "crosscheck",
+      "name": "lane agreement matching_property_checked",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        true,
+        true
+      ],
+      "expected": "equal",
+      "group": "crosscheck",
+      "name": "lane agreement general_local_incidence_lemma_lean_checked",
+      "status": "PASS"
+    },
+    {
+      "actual": "primary and independent box summaries",
+      "expected": "equal",
+      "group": "crosscheck",
+      "name": "box summaries agree",
+      "status": "PASS"
+    },
+    {
+      "actual": 8,
+      "expected": 8,
+      "group": "hostile",
+      "name": "hostile mutation count",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "command": "lake env lean Tect/R442.lean",
+        "output": "",
+        "returncode": 0,
+        "status": "PASS"
+      },
+      "expected": "PASS",
+      "group": "Lean",
+      "name": "Lean compile",
+      "status": "PASS"
+    }
+  ],
+  "assumptions": [
+    "Vertices are integer coordinate vectors in a finite rectangular box with every side length at least two.",
+    "Edges are only nearest-neighbour coordinate increments and are represented by their unique lower endpoint and axis.",
+    "The layer colour is the axis together with the lower endpoint coordinate modulo two; empty colour slots remain part of the layer family.",
+    "The Lean incidence lemma is applied to this adjacency relation and does not encode a Q3 operator or physical state.",
+    "The side range [2,6] is an exhaustive finite test set for the executable Python rows, while the local incidence proposition is quantified in Lean."
+  ],
+  "boundary": "R-442 closes only the abstract axis-parity matching property and exact edge-count bookkeeping for the declared finite rectangular graph family, with the local incidence statement proved in Lean. It does not close the weighted Q3 split form, operator domains, boundary/history tails, exhaustion, common alpha, KMS/GNS, physical-empty branch, Sector-A, Pre-A, Yang-Mills or mass-gap claims.",
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "derived": {
+    "box_count": 125,
+    "edge_count_formula_checked": true,
+    "exhaustion_cauchy_closed": false,
+    "general_local_incidence_lemma_lean_checked": true,
+    "history_tail_closed": false,
+    "matching_property_checked": true,
+    "operator_common_core_closed": false,
+    "pre_a_closed": false,
+    "sector_a_closed": false,
+    "total_edges": 18000,
+    "total_vertices": 8000
+  },
+  "evidence_level": "T0 / EXECUTED FINITE ALL-BOX SWEEP WITH A GENERAL LEAN LOCAL-INCIDENCE LEMMA; OPERATOR AND LIMIT INPUTS NOT CLAIMED",
+  "exploration_id": "EXP-001287",
+  "lean": {
+    "command": "lake env lean Tect/R442.lean",
+    "output": "",
+    "returncode": 0,
+    "status": "PASS"
+  },
+  "manifest": "strategy/pre-a-cp1-st8-q3lock-rectangular-matching-general-lemma-manifest.json",
+  "missing_assumptions": [
+    "A Q3LOCK interaction/operator theorem transferring the combinatorial layers to the full unbounded Hamiltonian.",
+    "A representation-independent common core and weighted product-domain estimate for the layer subflows.",
+    "Cutoff-, source-, phase-, volume- and exhaustion-uniform boundary commutator and history-tail estimates.",
+    "Lie--Trotter/common-alpha convergence, Hamiltonian-to-OS/KMS/GNS identification and sector coercivity.",
+    "Any physical-empty branch, Reading-H energy comparison, continuum limit or Sector-A completion."
+  ],
+  "non_claims": [
+    "No Q3LOCK Hamiltonian, Friedrichs-domain or weighted operator theorem.",
+    "No boundary commutator, history-tail, common-core, common-alpha or exhaustion theorem.",
+    "No OS/KMS/GNS reconstruction, broken-sector coercivity, physical-empty comparison, continuum limit or Sector-A/Pre-A closure.",
+    "No Yang-Mills dynamics or mass-gap conclusion."
+  ],
+  "recorded_at": "2026-08-30T01:24:01.442897Z",
+  "result_id": "R-442",
+  "run_kind": "integrated",
+  "schema": "tect/pre-a-r442-integrated/1.0",
+  "scope": {
+    "claim_bearing": false,
+    "finite_rectangular_family_audited": true,
+    "hostile_mutations_rejected": true,
+    "independent_reconstruction_agrees": true,
+    "operator_or_physical_promotion": false
+  },
+  "source_hashes": {
+    "codes/foundations/pre_a_cp1_st8_q3lock_rectangular_matching_general_lemma.py": "95a24319f67e5e7f2b1e28f78f07d5abb0eec0a095c5a7972947b0e2cba4cb51",
+    "codes/foundations/pre_a_cp1_st8_q3lock_rectangular_matching_general_lemma_hostile.py": "9a48349baeec7707792d12f7fc86373b595be03c97ef3246fbfbd528fc104906",
+    "codes/foundations/pre_a_cp1_st8_q3lock_rectangular_matching_general_lemma_independent.py": "ce0c484fdbb4fac993fcc250782cdd51192a6db6615e0efe8e9790f45bd233ce",
+    "strategy/pre-a-cp1-st8-q3lock-rectangular-matching-general-lemma-manifest.json": "1286dbd39bb65fc4dc08d01258e7cfccf10d45844e403b48f832c9cad2c50703",
+    "verification/lean/Tect/R442.lean": "60a5c0ea44ad307e94758eb42626e1f2b48e683072938ddec0b1646a0914598b"
+  },
+  "verdict": "INTEGRATED_GENERAL_RECTANGULAR_MATCHING_AUDITED"
+}

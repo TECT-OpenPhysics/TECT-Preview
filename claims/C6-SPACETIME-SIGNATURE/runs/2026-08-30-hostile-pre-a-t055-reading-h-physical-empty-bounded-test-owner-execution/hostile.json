@@ -1,0 +1,88 @@
+{
+  "assertion_count": 7,
+  "assertions": [
+    {
+      "mutation": {
+        "zero_reference_identification": "E=0"
+      },
+      "name": "zero alias for E",
+      "reason": "zero/P1 alias is forbidden",
+      "status": "REJECTED"
+    },
+    {
+      "mutation": {
+        "admitted": true
+      },
+      "name": "admit uninstantiated E",
+      "reason": "E has no normalized representative or preparation",
+      "status": "REJECTED"
+    },
+    {
+      "mutation": {
+        "remove": "finite_part_counterterm_scheme"
+      },
+      "name": "drop finite-parts field",
+      "reason": "all fifteen fields are identity-locked",
+      "status": "REJECTED"
+    },
+    {
+      "mutation": {
+        "comparison_orientation": "F_total[E] - F_total[G_*]"
+      },
+      "name": "change orientation",
+      "reason": "requested sign orientation is fixed",
+      "status": "REJECTED"
+    },
+    {
+      "mutation": {
+        "finite_evaluation_allowed": true
+      },
+      "name": "evaluate without common owner",
+      "reason": "missing owner values force the input audit to stop",
+      "status": "REJECTED"
+    },
+    {
+      "mutation": {
+        "reading_h_stationarity": "PASS"
+      },
+      "name": "promote stationarity",
+      "reason": "no full regulated tangent or residual budget exists",
+      "status": "REJECTED"
+    },
+    {
+      "mutation": {
+        "claim_bearing": true
+      },
+      "name": "promote physical claim",
+      "reason": "blocked input is not a physical/Yang-Mills/mass-gap result",
+      "status": "REJECTED"
+    }
+  ],
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "evidence_level": "T0 / EXECUTED ADVERSARIAL INPUT-BOUNDARY CONTROL",
+  "exploration_id": "EXP-001286",
+  "manifest": "strategy/pre-a-t055-reading-h-physical-empty-bounded-test-owner-execution-manifest.json",
+  "non_claims": [
+    "No sign for F_total[G_*] - F_total[E].",
+    "No full Reading-H stationarity theorem.",
+    "No symmetry-projected transverse stability theorem.",
+    "No identification of E with zero, P1, a Gaussian state or an equilibrium phase.",
+    "No physical-vacuum, below-empty-space, Yang-Mills, mass-gap, C6, Sector-A or Pre-A conclusion.",
+    "No thermodynamic, continuum, OS/KMS/GNS, Hamiltonian spectral or absolute-energy conclusion."
+  ],
+  "result_id": "R-441",
+  "run_kind": "hostile",
+  "schema": "tect/pre-a-r434-hostile/1.0",
+  "scope": {
+    "claim_bearing": false,
+    "hostile_mutations_rejected": true,
+    "physical_promotion_rejected": true
+  },
+  "source_hashes": {
+    "independent": "ddb2df76ed19513b3e9a0d6561e1fc906bfa5dd0a1603a7920498b8000e25102",
+    "manifest": "7f9cab0cdd8765e7103f33eb7cd3df80fdb5c12704c0c7b296dbf2f4d9f3741c",
+    "primary": "475a58af8a7939c22c4c9af12439a620cb105f7cf733c91340255a18666c7223",
+    "script": "651ee5a1d4ef06a7f0f03797dc9ef29430caa493b8d1af83ed987b00cd3e7c63"
+  },
+  "verdict": "HOSTILE_MUTATIONS_REJECTED"
+}
