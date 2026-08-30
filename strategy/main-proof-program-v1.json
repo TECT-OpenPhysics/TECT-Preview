@@ -524,13 +524,21 @@
     "authority_state": "VERIFIED_PENDING_WORKTREE_NOT_YET_DURABLE_GIT_OR_REMOTE_AUTHORITY"
   },
   "completion_checkpoint": {
-    "status": "PENDING",
-    "verified_parent_head": "3caa3b4d05ff32b0f3e8a7b4449a8bedeaea1187",
-    "verified_at_utc": "2026-08-30T08:53:03Z",
+    "status": "COMPLETE",
+    "verified_parent_head": "666e5acde5c086ca43d4f61cd33d4d00213b013d",
+    "verified_at_utc": "2026-08-30T09:18:45Z",
     "branch": "main",
     "remote": "tect",
     "remote_ref": "refs/heads/main",
-    "expected_authority_counts": null,
+    "expected_authority_counts": {
+      "claims": 49,
+      "gates_and_hypotheses": 208,
+      "results": 281,
+      "negative_records": 375,
+      "explorations": 1304,
+      "changelog_events": 796,
+      "tasks": 61
+    },
     "requirements": [
       "doctor PASS",
       "release_check PASS",
@@ -567,7 +575,9 @@
       "The release-gated T-061 metadata-audit commit 3caa3b4d05ff32b0f3e8a7b4449a8bedeaea1187 was created after release_check PASS.",
       "git push tect main advanced refs/heads/main to 3caa3b4d05ff32b0f3e8a7b4449a8bedeaea1187, and live git ls-remote returned the same SHA.",
       "EXP-001303 independently rechecks the nine event bytes, extracts descriptive source headers, and rejects a mutated expected hash; no statistical or method promotion occurred.",
-      "EXP-001304 is staged as an additive T0 targeted calibration-provenance and posterior-schema audit; the completion checkpoint is pending until the release-gated commit and remote verification complete."
+      "The release-gated T-061 calibration-metadata commit 666e5acde5c086ca43d4f61cd33d4d00213b013d was created after release_check PASS.",
+      "git push tect main advanced refs/heads/main to 666e5acde5c086ca43d4f61cd33d4d00213b013d, and live git ls-remote returned the same SHA.",
+      "EXP-001304 independently rechecks selected response calibration provenance and posterior schema, rejects a selected-product hash mutation, and preserves likelihood/covariance/scoring as unadmitted."
     ]
   },
   "stopped_loop_registry": [
