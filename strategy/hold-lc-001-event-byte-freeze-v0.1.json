@@ -1,0 +1,169 @@
+{
+  "schema": "tect/observation-source-byte-freeze/0.1",
+  "id": "HOLD-LC-001-EVENT-BYTES-v0.1",
+  "version": "0.1.0",
+  "task_id": "T-061",
+  "holdout_id": "HOLD-LC-001",
+  "parent_packets": [
+    "strategy/hold-lc-001-source-packet-v0.1.json",
+    "strategy/hold-lc-001-public-products-boundary-v0.1.json",
+    "strategy/hold-lc-001-set-valued-delay-envelope-v0.1.json"
+  ],
+  "status": "PARTIAL_EVENT_BYTES_HASH_PINNED_NO_LIKELIHOOD",
+  "claim_bearing": false,
+  "methods_unchanged": true,
+  "purpose": "Freeze a minimal exact event-product acquisition set for later candidate-neutral estimator work without copying raw data into the tracked repository or admitting a timing likelihood.",
+  "retrieval": {
+    "retrieved_at": "2026-08-30T08:09:30Z",
+    "cache_root": "internal/source-cache/HOLD-LC-001/2026-08-30",
+    "cache_policy": "Local gitignored cache; the tracked manifest stores remote locators, byte lengths and SHA-256 values so bytes can be reacquired and checked without publication duplication.",
+    "transport_check": "HTTP GET completed; local byte lengths agree with official Content-Length for all products that supplied one."
+  },
+  "products": [
+    {
+      "id": "GWOSC-H1-CLEANED-TXTGZ",
+      "role": "raw_cleaned_detector_strain",
+      "detector": "H1",
+      "remote_url": "https://dcc.ligo.org/public/0146/P1700349/001/H-H1_LOSC_CLN_4_V1-1187007040-2048.txt.gz",
+      "release": "P1700349/001",
+      "coverage": "2048 seconds centered at GPS 1187007040; 4096 Hz cleaned strain",
+      "local_cache_key": "HOLD-LC-001/2026-08-30/H-H1_LOSC_CLN_4_V1-1187007040-2048.txt.gz",
+      "content_type": "application/x-gzip",
+      "byte_length": 72237552,
+      "sha256": "a5713f20459ddc43d6704d67eae3368a94d147fcff4a625e01a1495041e1d59a",
+      "admission": "BYTE_HASH_ONLY_NO_TIMING_LIKELIHOOD"
+    },
+    {
+      "id": "GWOSC-L1-CLEANED-TXTGZ",
+      "role": "raw_cleaned_detector_strain",
+      "detector": "L1",
+      "remote_url": "https://dcc.ligo.org/public/0146/P1700349/001/L-L1_LOSC_CLN_4_V1-1187007040-2048.txt.gz",
+      "release": "P1700349/001",
+      "coverage": "2048 seconds centered at GPS 1187007040; 4096 Hz cleaned strain",
+      "local_cache_key": "HOLD-LC-001/2026-08-30/L-L1_LOSC_CLN_4_V1-1187007040-2048.txt.gz",
+      "content_type": "application/x-gzip",
+      "byte_length": 77118779,
+      "sha256": "33b8aa738fc3492e24a280decec58626219ed438c3c8c2e8d8f42c538e6580d8",
+      "admission": "BYTE_HASH_ONLY_NO_TIMING_LIKELIHOOD"
+    },
+    {
+      "id": "LIGO-P1800061-README",
+      "role": "release_readme_and_product_provenance",
+      "remote_url": "https://dcc.ligo.org/public/0150/P1800061/011/README.md",
+      "release": "LIGO-P1800061-v11",
+      "local_cache_key": "HOLD-LC-001/2026-08-30/README.md",
+      "content_type": "text/markdown",
+      "byte_length": 1461,
+      "sha256": "c40a8173193f388cfd319f1c2e3389acb26480491492f12e4fc7fae3dfd38e69",
+      "admission": "PROVENANCE_ONLY"
+    },
+    {
+      "id": "LIGO-P1800061-LOW-SPIN-POSTERIOR",
+      "role": "public_parameter_estimation_sample_product",
+      "remote_url": "https://dcc.ligo.org/public/0150/P1800061/011/low_spin_PhenomPNRT_posterior_samples.dat.gz",
+      "release": "LIGO-P1800061-v11",
+      "local_cache_key": "HOLD-LC-001/2026-08-30/low_spin_PhenomPNRT_posterior_samples.dat.gz",
+      "content_type": "application/x-gzip",
+      "byte_length": 433240,
+      "sha256": "c641b776bc4a65fc101d84989b8f12597d2936031219c65d69a5c824d69c464a",
+      "admission": "POSTERIOR_PRODUCT_ONLY_NOT_A_TIMING_LIKELIHOOD"
+    },
+    {
+      "id": "FERMI-GBM-N0-TTE",
+      "role": "raw_gamma_ray_time_tagged_event_product",
+      "detector": "GBM NaI N0",
+      "remote_url": "https://heasarc.gsfc.nasa.gov/FTP/fermi/data/gbm/triggers/2017/bn170817529/current/glg_tte_n0_bn170817529_v00.fit",
+      "release": "bn170817529/current",
+      "local_cache_key": "HOLD-LC-001/2026-08-30/glg_tte_n0_bn170817529_v00.fit",
+      "content_type": "application/fits",
+      "byte_length": 2756160,
+      "sha256": "4982f0d104d4dabfc43816cf2373c8368ba334984df7c8b0644fb4892e32e58b",
+      "admission": "BYTE_HASH_ONLY_NO_TIMING_LIKELIHOOD"
+    },
+    {
+      "id": "FERMI-GBM-B0-TTE",
+      "role": "raw_gamma_ray_time_tagged_event_product",
+      "detector": "GBM BGO B0",
+      "remote_url": "https://heasarc.gsfc.nasa.gov/FTP/fermi/data/gbm/triggers/2017/bn170817529/current/glg_tte_b0_bn170817529_v00.fit",
+      "release": "bn170817529/current",
+      "local_cache_key": "HOLD-LC-001/2026-08-30/glg_tte_b0_bn170817529_v00.fit",
+      "content_type": "application/fits",
+      "byte_length": 3974400,
+      "sha256": "5327ca93bd709d6308345a1da21d4c36c94023869dd226104a803f38f3dd486e",
+      "admission": "BYTE_HASH_ONLY_NO_TIMING_LIKELIHOOD"
+    },
+    {
+      "id": "FERMI-GBM-N0-RESPONSE",
+      "role": "detector_response_support_product",
+      "detector": "GBM NaI N0",
+      "remote_url": "https://heasarc.gsfc.nasa.gov/FTP/fermi/data/gbm/triggers/2017/bn170817529/current/glg_cspec_n0_bn170817529_v04.rsp",
+      "release": "bn170817529/current",
+      "local_cache_key": "HOLD-LC-001/2026-08-30/glg_cspec_n0_bn170817529_v04.rsp",
+      "content_type": "application/fits",
+      "byte_length": 97920,
+      "sha256": "05c2c6cfebc935e91d902ef398d600311db32c9e23efafc3049551413dabf73c",
+      "admission": "CALIBRATION_SUPPORT_ONLY"
+    },
+    {
+      "id": "FERMI-GBM-B0-RESPONSE",
+      "role": "detector_response_support_product",
+      "detector": "GBM BGO B0",
+      "remote_url": "https://heasarc.gsfc.nasa.gov/FTP/fermi/data/gbm/triggers/2017/bn170817529/current/glg_cspec_b0_bn170817529_v04.rsp",
+      "release": "bn170817529/current",
+      "local_cache_key": "HOLD-LC-001/2026-08-30/glg_cspec_b0_bn170817529_v04.rsp",
+      "content_type": "application/fits",
+      "byte_length": 97920,
+      "sha256": "f8d7f282693103bc0c62aa34f773ac045a30e363b71c0e055e0da9a014b57100",
+      "admission": "CALIBRATION_SUPPORT_ONLY"
+    },
+    {
+      "id": "FERMI-GBM-TRIGDAT",
+      "role": "burst_trigger_and_time_context_product",
+      "remote_url": "https://heasarc.gsfc.nasa.gov/FTP/fermi/data/gbm/triggers/2017/bn170817529/current/glg_trigdat_all_bn170817529_v01.fit",
+      "release": "bn170817529/current",
+      "local_cache_key": "HOLD-LC-001/2026-08-30/glg_trigdat_all_bn170817529_v01.fit",
+      "content_type": "application/fits",
+      "byte_length": 109440,
+      "sha256": "820352fb9757a8a8b2b95983108b7ccadbb84b6980a6e6f7bf5d4fea143e807e",
+      "admission": "TIME_CONTEXT_ONLY"
+    }
+  ],
+  "byte_validation": {
+    "verified_files": 9,
+    "all_local_sha256_match_recorded_values": true,
+    "all_downloads_completed": true,
+    "cache_is_gitignored": true,
+    "raw_bytes_are_not_copied_into_tracked_contents": true
+  },
+  "admission_boundary": {
+    "raw_products": "AVAILABLE_FOR_REACQUISITION_AND_HASH_CHECK",
+    "joint_timing_likelihood": "NOT_ADMITTED",
+    "component_covariance": "NOT_ADMITTED",
+    "intrinsic_emission_nuisance": "NOT_ADMITTED",
+    "f_reg_f_lim_f_eff_f_obs": "NOT_DEFINED",
+    "candidate_scoring": "STOPPED",
+    "prospective_lock": "EMPTY"
+  },
+  "assumptions": [
+    "The recorded URLs and releases identify the official products retrieved on 2026-08-30.",
+    "A gitignored cache is sufficient for local byte verification while the manifest preserves re-acquisition provenance.",
+    "H1 and L1 cleaned strain plus two GBM detectors are an intake subset, not a complete multi-detector estimator.",
+    "Posterior samples, response matrices and trigger context remain auxiliary products until a candidate-neutral timing model is explicitly authored."
+  ],
+  "missing_assumptions": [
+    "A complete multi-detector timing estimator with fixed windows, time standard, calibration and selection rules.",
+    "A source-owned or independently reproducible joint likelihood and component covariance.",
+    "A pre-registered intrinsic-emission-lag nuisance law or a declared set-valued likelihood.",
+    "A complete candidate-neutral F_reg/F_lim/F_eff/F_obs map and immutable scorer.",
+    "A prospective holdout that was not used in source selection or estimator design."
+  ],
+  "evidence_level": "T0 exact public-product byte freeze and provenance intake; no model test",
+  "next_action": "Use the frozen bytes only to author a separately versioned candidate-neutral estimator contract; first specify calibration, time windows, covariance construction, nuisance treatment and all four map stages, then run source/lineage checks before any score.",
+  "non_claims": [
+    "This packet does not admit a likelihood, covariance, candidate, map, score or prospective prediction.",
+    "Raw strain, posterior samples, TTE, response and trigger files do not by themselves identify microscopic dynamics or a physical propagation law.",
+    "No Pre-A, C6, A13, Sector-A, QFT, Yang-Mills, gravity, continuum, physical-vacuum, cosmic-origin, theory-of-everything or mass-gap claim follows.",
+    "The existing T-054 forward method, T-059 inverse method, R-192 owner order and parked-loop rules are unchanged."
+  ],
+  "recorded_by": "Codex"
+}

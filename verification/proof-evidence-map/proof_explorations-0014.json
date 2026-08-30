@@ -1,0 +1,191 @@
+{
+  "data": [
+    {
+      "adversarial_review": [
+        {
+          "axis": "hash-without-bytes",
+          "check": "A manifest hash is not treated as a claim that the ignored cache is part of the public repository; reacquisition remains required.",
+          "disposition": "DISMISSED-FOR-SCOPE / OPEN-REACQUISITION"
+        },
+        {
+          "axis": "partial-detector-subset",
+          "check": "The selected H1/L1 and N0/B0 files are labelled incomplete and cannot support a complete timing likelihood.",
+          "disposition": "DISMISSED-FOR-SCOPE / OPEN-COMPLETENESS"
+        },
+        {
+          "axis": "posterior-double-counting",
+          "check": "P1800061 posterior samples remain provenance/support products and are not combined with the source timing summary as an independent datum.",
+          "disposition": "UPHELD"
+        },
+        {
+          "axis": "calibration-as-covariance",
+          "check": "Response matrices and trigger context do not substitute for a source-owned joint timing covariance.",
+          "disposition": "UPHELD-OPEN"
+        },
+        {
+          "axis": "method-overhaul",
+          "check": "Only a new byte-freeze manifest and exploration record are added; T-054/T-059 methods and stopped-loop rules remain controlling.",
+          "disposition": "DISMISSED"
+        },
+        {
+          "axis": "physical-promotion",
+          "check": "Raw-product availability and exact hashes do not establish a microscopic map, causal law, Pre-A or mass gap.",
+          "disposition": "UPHELD-OPEN"
+        }
+      ],
+      "assumptions": [
+        "The recorded official URLs and release paths identify the products retrieved on 2026-08-30.",
+        "The gitignored cache remains available locally or the manifest locators can be used to reacquire and recheck the bytes.",
+        "The H1/L1 plus two-detector GBM subset is explicitly incomplete and is not a complete multi-detector timing analysis.",
+        "Posterior, response and trigger products are auxiliary until a candidate-neutral timing estimator defines their role."
+      ],
+      "boundary": "EXP-001301 is a T0 exact public-product byte/provenance advance. It does not admit a likelihood, covariance, nuisance law, candidate map, score, prospective prediction, microscopic dynamics, physical identity, continuum result or mass-gap conclusion.",
+      "checks": [
+        {
+          "detail": "All nine downloads completed; each local SHA-256 and byte length is recorded in the manifest and the local cache is gitignored.",
+          "finding": "PASS",
+          "id": "byte-hash"
+        },
+        {
+          "detail": "GWOSC/LIGO products are pinned to P1700349/001 and P1800061-v11 locators; GBM products are pinned to the bn170817529 current release paths.",
+          "finding": "PASS",
+          "id": "release-lineage"
+        },
+        {
+          "detail": "Raw strain, TTE, posterior, response and trigger files remain input products only; no likelihood, covariance or score is constructed.",
+          "finding": "PASS_WITH_ADMISSION_STOP",
+          "id": "raw-product-not-likelihood"
+        },
+        {
+          "detail": "The tracked manifest stores locators and hashes only; the 156826872-byte local cache remains under ignored internal/.",
+          "finding": "PASS",
+          "id": "non-duplication"
+        },
+        {
+          "detail": "No existing method authority, estimator, owner order, result or gate is edited.",
+          "finding": "PASS",
+          "id": "method-preservation"
+        }
+      ],
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "The new hash-pinned bytes are a genuinely new source input and therefore move beyond the prior discovery-only boundary. The packet remains an additive T0 provenance advance: it preserves all existing methods and explicitly stops statistical admission until the estimator contract is authored and independently checked.",
+      "decision_scope": "Finite exact byte retrieval and provenance hashing for a retrospective event-product subset; no estimator, candidate comparison, dynamics identification or layer promotion.",
+      "evidence_level": "T0 exact byte retrieval and hash verification with explicit statistical admission stop",
+      "evidence_refs": [
+        "strategy/hold-lc-001-event-byte-freeze-v0.1.json#products",
+        "strategy/hold-lc-001-event-byte-freeze-v0.1.json#byte_validation",
+        "strategy/hold-lc-001-source-packet-v0.1.json#measurement_likelihood",
+        "strategy/hold-lc-001-public-products-boundary-v0.1.json#future_acquisition_contract",
+        "strategy/hold-lc-001-set-valued-delay-envelope-v0.1.json#derived_set_valued_rule",
+        "strategy/main-proof-program-v1.json#method_preservation"
+      ],
+      "exact_scope": {
+        "holdout": "HOLD-LC-001 / GW170817-GRB170817A",
+        "local_status": "Nine products have local SHA-256 and byte-length records in a gitignored cache; raw bytes are not copied into tracked Contents.",
+        "manifest": "strategy/hold-lc-001-event-byte-freeze-v0.1.json",
+        "method_status": "Existing T-054 forward and T-059 inverse methods, owner order, estimands and promotion firewalls remain unchanged.",
+        "parent_hashes": {
+          "public_products_boundary": "b8d7c783af1c0dd56cc54504edcd890158c06c5a5813fe5814d7dd610c9c9a63",
+          "set_valued_envelope": "a4f1ffe81e1ce240bb2870189fc4a9939caa9e62614cec3206d896e1c63302f6",
+          "source_packet": "5d22aeaf11ffdee6614580a537e801b2e7e2dd227194ecdb35a65b601e1daa4b"
+        },
+        "products": {
+          "gbm_event_subset": [
+            "NaI N0 TTE",
+            "BGO B0 TTE",
+            "NaI N0 response",
+            "BGO B0 response",
+            "GBM trigger context"
+          ],
+          "gw_cleaned_strain": [
+            "H1 4096 Hz, 2048 s cleaned text gzip",
+            "L1 4096 Hz, 2048 s cleaned text gzip"
+          ],
+          "ligo_release_support": [
+            "P1800061-v11 README",
+            "low-spin PhenomPNRT posterior samples"
+          ]
+        },
+        "retrieval_date": "2026-08-30",
+        "statistical_status": "No source-owned joint timing likelihood, component covariance or intrinsic-emission probability law is admitted."
+      },
+      "finding": "A minimal nine-file event-product set is now locally reacquirable and hash-checked: H1/L1 cleaned strain, LIGO release support, and GBM N0/B0 TTE, responses and trigger context. This advances P1 source provenance, but it does not supply the source-owned joint timing likelihood, component covariance, nuisance law or four-stage inverse map needed for candidate scoring.",
+      "formal_integration": {
+        "events": [],
+        "negatives": [],
+        "no_changelog_event": true,
+        "no_new_negative": true,
+        "no_new_result": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "results": []
+      },
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": []
+      },
+      "gate_ids": [
+        "PA-INVERSE-OBSERVATION-TARGET-MAP-HOLDOUT-FREEZE",
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001301",
+      "method": [
+        "Keep the v0.1 source packet, set-valued envelope and public-product boundary as the controlling versions; do not edit their estimands or method fields.",
+        "Retrieve two cleaned GW detector strain files from the official P1700349 release, the P1800061 release README and low-spin posterior sample product, and a minimal GBM N0/B0 TTE plus response and trigger-context subset.",
+        "Compute SHA-256 and byte length for every downloaded file, retaining bytes only in the gitignored internal source cache and recording the remote locator, release, detector, coverage and admission role in a new manifest.",
+        "Treat posterior, response and trigger products as provenance or calibration support; do not synthesize a joint likelihood, covariance, intrinsic-lag law, F_obs map or score.",
+        "Run the existing inverse-contract and release checks after the additive manifest and ledger record are written; no finite mobility table, physical-empty placeholder or method replacement is introduced."
+      ],
+      "missing_assumptions": [
+        "A complete calibration, time-standard, background-window and detector-selection contract.",
+        "A source-owned or independently reproducible joint timing likelihood and component covariance.",
+        "A pre-registered intrinsic-emission nuisance law or an explicitly retained set-valued likelihood.",
+        "A complete candidate-neutral F_reg/F_lim/F_eff/F_obs map and immutable scorer.",
+        "An unused prospective holdout and pre-disclosure commitment."
+      ],
+      "next_action": "Author a separately versioned candidate-neutral estimator contract against these bytes, fixing calibration, time windows, covariance construction, nuisance handling and F_reg/F_lim/F_eff/F_obs before any score; keep the forward T-054 owner intake and all parked loops unchanged.",
+      "non_claims": [
+        "No candidate is admitted, selected, ranked, fitted or prospectively validated.",
+        "No source-owned likelihood, covariance, nuisance probability law or complete F_reg/F_lim/F_eff/F_obs map is present.",
+        "No microscopic dynamics, physical vacuum, Reading-H sign, causal cone, Pre-A, Sector-A, C6, A13, QFT, Yang-Mills, gravity, continuum, cosmic-origin, theory-of-everything or mass-gap claim is established.",
+        "The existing T-054 forward method and T-059 inverse method are unchanged."
+      ],
+      "provenance": "contemporaneous",
+      "question": "Can a minimal, non-duplicative set of official GW170817 and GRB170817A event products be downloaded, hash-checked and recorded so that future estimator work is reproducible without changing T-054/T-059 or treating raw products as a timing likelihood?",
+      "recorded_at": "2026-08-30T08:12:03Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001300",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001299",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001294",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-08-30",
+      "schema": "tect/proof-exploration/1.0",
+      "stop_or_redesign": [
+        "If any byte hash or release locator changes, issue a new manifest version rather than editing this record.",
+        "If the partial subset cannot support a complete timing estimator, retain it as provenance-only and do not infer a likelihood.",
+        "If no defensible covariance or nuisance law can be authored, keep HOLD-LC-001 feasibility-only and report the surviving non-identifiability.",
+        "If a future estimator changes the observation target or uses the retrospective packet for tuning, reset the inverse lane to P1."
+      ],
+      "task_id": "T-061",
+      "title": "HOLD-LC-001 exact event-product byte freeze without likelihood admission",
+      "verdict": "advanced"
+    }
+  ],
+  "kind": "proof_explorations",
+  "map_schema": "tect/proof-evidence-map/1.3",
+  "part": 14,
+  "schema": "tect/proof-evidence-map-shard/1.0"
+}
