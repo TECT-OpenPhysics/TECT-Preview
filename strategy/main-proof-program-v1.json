@@ -648,10 +648,10 @@
     "expected_authority_counts": {
       "claims": 49,
       "gates_and_hypotheses": 208,
-      "results": 289,
+      "results": 290,
       "negative_records": 375,
-      "explorations": 1328,
-      "changelog_events": 804,
+      "explorations": 1329,
+      "changelog_events": 805,
       "tasks": 61
     },
     "requirements": [
@@ -745,6 +745,7 @@
       "R-453 / EXP-001326 adds a defect-stable extension downstream of R-452: a nonnegative residual contributes an exact step-indexed convolution, and a geometric residual bound adds D*S_R(kappa,s). The source-owned recurrence, residual, and both strict-base obligations remain open; the established methods and owner order are unchanged.",
       "R-454 / EXP-001327 adds a variable-coefficient refinement downstream of R-453: per-step nonnegative kappa_R values are dominated by one common kappa_bar, yielding the exact path-product and defect-convolution envelope with separate resonant branches. The source-owned recurrence, common bound, residual, common domain and all downstream physical/continuum obligations remain open; the established T-054/T-059/T-061 methods and owner order are unchanged.",
       "R-455 / EXP-001328 adds a nonnegative transfer-matrix refinement downstream of R-454: a componentwise coupled vector history with entrywise nonnegative K_R and one common induced infinity-row-sum bound is dominated by the same source-plus-defect envelope, with exact path order and resonant branches. It supplies no source-owned transfer law, common bound, common domain or downstream physical/continuum result; the established T-054/T-059/T-061 methods and owner order are unchanged.",
+      "R-456 / EXP-001329 adds a weighted positive transfer-operator refinement downstream of R-455: strictly positive finite coordinate weights and weighted row sums are diagonally conjugate to the existing infinity-row-sum contract, preserving the same path-product and defect-resolvent envelope. Primary 290560/290560, independent 231840, hostile 22/22, integrated 22/22 and Lean pass; source-owned weights/transfer/history, common weighted domain, uniformity and all physical/continuum gates remain open, and the established methods and owner order are unchanged.",
       "The release-gated R-452 commit 4e95928e745f3409ea76c64d2a1aec7cb94de1cf was created after primary/independent/hostile/integrated and Lean checks plus release_check PASS.",
       "git push tect main advanced refs/heads/main to 4e95928e745f3409ea76c64d2a1aec7cb94de1cf; live git ls-remote returned the same SHA. The completion counts are refreshed to results=286, explorations=1325 and changelog_events=801; strict baseline is the next verification step."
     ]
@@ -871,7 +872,7 @@
       "It does not prove Pre-A, C6, A13, Sector A, QFT, Yang-Mills, gravity, a physical mass gap, or a theory of everything.",
       "A dynamic discriminator at finite regulator does not prove continuum or physical identity."
     ],
-    "next_action": "Use the R-455 transfer-matrix envelope (and then R-454/R-453/R-451) when a source-owned Q3 history supplies entrywise nonnegative coupled transfers, one common kappa_bar<1 row-sum bound, and vector source/defect bounds. Continue unchanged T-054 forward owner intake by deriving the actual Q3LOCK recurrence/per-edge commutator history; do not issue equivalent finite tables. Continue unchanged T-059/T-061 inverse intake by obtaining the exact supported GTS/GDT environment or fully pinned source-build lock, then rerun readiness before any event-free response-index/likelihood packet. Keep response selection, calibration validity, detector-to-geocenter, covariance, nuisance, prospective and physical-identity fields locked."
+    "next_action": "Use the additive R-456 weighted transfer contract, then R-455/R-454/R-453/R-451, when a source-owned Q3 history supplies positive weights, coupled transfers, one common weighted kappa_bar<1 bound, and weighted source/defect bounds. Continue unchanged T-054 forward owner intake by deriving the actual Q3LOCK recurrence/per-edge commutator history; do not issue equivalent finite tables. Continue unchanged T-059/T-061 inverse intake by obtaining the exact supported GTS/GDT environment or fully pinned source-build lock, then rerun readiness before any event-free response-index/likelihood packet. Keep response selection, calibration validity, detector-to-geocenter, covariance, nuisance, prospective and physical-identity fields locked."
   },
   "resume_algorithm": [
     "Capture UTC date and run doctor.py.",

@@ -5,7 +5,7 @@ Compact generated reader surface. The append-only authority is
 record 568 / commit `4db22f4e` and no longer grows.
 Post-cutover full bodies live exactly once in bounded pages under `pages/`.
 
-**804 accepted events** · latest 25 shown below · machine locator: `index.json`
+**805 accepted events** · latest 25 shown below · machine locator: `index.json`
 
 Search the complete authority without loading every page:
 
@@ -17,6 +17,7 @@ python verification/scripts/changelog.py search --text <phrase>
 
 | Date | Event | Claims | Full entry |
 |---|---|---|---|
+| 2026-08-31 | `20260831-r-456-conditional-weighted-transfer-operator-de` — [R-456 conditional weighted transfer-operator defect-resolvent envelope] - 2026-08-31 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000769-000818.md#20260831-r-456-conditional-weighted-transfer-operator-de) |
 | 2026-08-31 | `20260831-r-455-nonnegative-transfer-matrix-defect-resolv` — [R-455 nonnegative transfer-matrix defect-resolvent envelope] - 2026-08-31 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000769-000818.md#20260831-r-455-nonnegative-transfer-matrix-defect-resolv) |
 | 2026-08-31 | `20260831-r-454-variable-coefficient-defect-stable-histor` — [R-454 variable-coefficient defect-stable history-resolvent] - 2026-08-31 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000769-000818.md#20260831-r-454-variable-coefficient-defect-stable-histor) |
 | 2026-08-31 | `20260831-r-453-defect-stable-history-resolvent-2026-08-3` — [R-453 defect-stable history-resolvent] - 2026-08-31 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000769-000818.md#20260831-r-453-defect-stable-history-resolvent-2026-08-3) |
@@ -41,7 +42,6 @@ python verification/scripts/changelog.py search --text <phrase>
 | 2026-08-30 | `20260830-r-441-physical-empty-bounded-test-owner-executi` — [R-441 physical-empty bounded test owner execution] - 2026-08-30 | C6-SPACETIME-SIGNATURE, EXP-001286, R-441 | [bounded page](pages/000769-000818.md#20260830-r-441-physical-empty-bounded-test-owner-executi) |
 | 2026-08-30 | `20260830-r-440-rectangular-matching-2026-08-30` — [R-440 rectangular matching] - 2026-08-30 | C6-SPACETIME-SIGNATURE, EXP-001285, R-440 | [bounded page](pages/000769-000818.md#20260830-r-440-rectangular-matching-2026-08-30) |
 | 2026-08-30 | `20260830-r-439-cutoff-adaptive-increasing-core-rule-audi` — [R-439 cutoff-adaptive increasing-core rule audit] - 2026-08-30 | C6-SPACETIME-SIGNATURE, EXP-001284, R-439 | [bounded page](pages/000769-000818.md#20260830-r-439-cutoff-adaptive-increasing-core-rule-audi) |
-| 2026-08-30 | `20260830-r-438-metadata-correction-claim-links-2026-08-3` — [R-438 metadata correction (claim links)] - 2026-08-30 | C6-SPACETIME-SIGNATURE, EXP-001283, R-438 | [bounded page](pages/000769-000818.md#20260830-r-438-metadata-correction-claim-links-2026-08-3) |
 
 ## Post-cutover pages
 
@@ -49,7 +49,7 @@ Each full event body after the cutover occurs in exactly one page.
 
 | Ordinals | Events | Page |
 |---|---:|---|
-| 769–804 | 36 | [000769-000818.md](pages/000769-000818.md) |
+| 769–805 | 37 | [000769-000818.md](pages/000769-000818.md) |
 | 719–768 | 50 | [000719-000768.md](pages/000719-000768.md) |
 | 669–718 | 50 | [000669-000718.md](pages/000669-000718.md) |
 | 619–668 | 50 | [000619-000668.md](pages/000619-000668.md) |

@@ -5,10 +5,11 @@
 
 Authorities: `RESULTS-LEDGER.md`.
 
-**289 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
+**290 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
 
 | ID | Result | Tier/scope |
 |---|---|---|
+| [`R-456`](../RESULTS-LEDGER.md#r-456) | Weighted positive transfer-operator defect-resolvent envelope | T0 |
 | [`R-455`](../RESULTS-LEDGER.md#r-455) | Nonnegative transfer-matrix defect-resolvent envelope for coupled orientation histories | T0 |
 | [`R-454`](../RESULTS-LEDGER.md#r-454) | Variable-coefficient defect-stable history-resolvent envelope | T0 |
 | [`R-453`](../RESULTS-LEDGER.md#r-453) | Defect-stable history-resolvent recurrence envelope | T0 |
@@ -33,7 +34,6 @@ Authorities: `RESULTS-LEDGER.md`.
 | [`R-434`](../RESULTS-LEDGER.md#r-434) | Reading-H physical-empty bounded test owner refresh (blocked) | T0 |
 | [`R-433`](../RESULTS-LEDGER.md#r-433) | Validated original-source interval enclosure at corrected row 7 | T0 |
 | [`R-432`](../RESULTS-LEDGER.md#r-432) | Fixed conditional-row ordinal audit for the R-430/R-426 comparison | T0 |
-| [`R-431`](../RESULTS-LEDGER.md#r-431) | Directed interval enclosure for the fixed rounded residual snapshot | T0 |
 
 Search without loading the full ledger:
 

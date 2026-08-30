@@ -1,0 +1,952 @@
+{
+  "assertion_count": 22,
+  "assertions": [
+    {
+      "actual": [
+        "R-456",
+        "EXP-001329",
+        "T-054",
+        false,
+        "T0",
+        "CONDITIONAL_WEIGHTED_TRANSFER_OPERATOR_RESOLVENT_AUDITED"
+      ],
+      "expected": "R-456/EXP-001329/T-054/false/T0/status",
+      "group": "provenance",
+      "name": "identity",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "existing_forward_method_unchanged": true,
+        "no_physical_promotion": true,
+        "observation_first_inverse_lane_additive": true,
+        "owner_order_unchanged": true
+      },
+      "expected": "all true",
+      "group": "method",
+      "name": "method firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "common_kappa_bar": true,
+        "componentwise_recurrence": true,
+        "entries_nonnegative": true,
+        "finite_dimension_only": true,
+        "path_order": "K_R through K_(j+1) acts on a term born at j",
+        "source_and_defect_vectors_nonnegative": true,
+        "weighted_row_sum_bound": true,
+        "weights_strictly_positive": true
+      },
+      "expected": "all declared weighted conditions",
+      "group": "contract",
+      "name": "weighted contract",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "diagonal_conjugation_closed": true,
+        "nonresonant_closed_form_closed": true,
+        "positive_weight_contract_closed": true,
+        "resonant_closed_form_closed": true,
+        "two_base_less_than_one_threshold_closed": true,
+        "weighted_geometric_defect_envelope_closed": true,
+        "weighted_path_product_bound_closed": true,
+        "weighted_row_sum_step_closed": true,
+        "weighted_vector_defect_convolution_closed": true
+      },
+      "expected": "all true",
+      "group": "scope",
+      "name": "closed abstract scope",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "actual_q3_history_closed",
+        "source_owned_transfer_closed",
+        "source_owned_weight_packet_closed",
+        "source_owned_recurrence_closed",
+        "common_weighted_operator_domain_closed",
+        "source_uniformity_closed",
+        "beta_uniformity_closed",
+        "volume_uniformity_closed",
+        "cutoff_uniformity_closed",
+        "exhaustion_independence_closed",
+        "common_alpha_closed",
+        "hamiltonian_os_identification_closed",
+        "kms_gns_gap_closed",
+        "continuum_closed",
+        "c6_closed",
+        "sector_a_closed",
+        "pre_a_closed",
+        "physical_sector_closed"
+      ],
+      "expected": "owner and downstream scopes remain open",
+      "group": "scope",
+      "name": "downstream scope firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        true,
+        true,
+        true
+      ],
+      "expected": [
+        true,
+        true,
+        true
+      ],
+      "group": "scope",
+      "name": "no tier/negative/pdf mutation",
+      "status": "PASS"
+    },
+    {
+      "actual": "E:\\Dev\\TECT\\verification\\lean\\Tect\\R456.lean",
+      "expected": true,
+      "group": "Lean",
+      "name": "Lean source",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "weighted_row_identity",
+        "weighted_diagonal_entry",
+        "weighted_path_kernel",
+        "weighted_resonance",
+        "weighted_two_base_threshold"
+      ],
+      "expected": "all theorem declarations present",
+      "group": "Lean",
+      "name": "Lean markers",
+      "status": "PASS"
+    },
+    {
+      "actual": "clean",
+      "expected": "forbidden absent",
+      "group": "Lean",
+      "name": "Lean forbidden tokens",
+      "status": "PASS"
+    },
+    {
+      "actual": "E:\\Dev\\TECT\\strategy\\pre-a-cp1-st8-q3lock-weighted-transfer-operator-defect-resolvent-manifest.json",
+      "expected": true,
+      "group": "artifacts",
+      "name": "artifact manifest",
+      "status": "PASS"
+    },
+    {
+      "actual": "E:\\Dev\\TECT\\verification\\scripts\\pre_a_cp1_st8_q3lock_weighted_transfer_operator_defect_resolvent.py",
+      "expected": true,
+      "group": "artifacts",
+      "name": "artifact primary",
+      "status": "PASS"
+    },
+    {
+      "actual": "E:\\Dev\\TECT\\codes\\foundations\\pre_a_cp1_st8_q3lock_weighted_transfer_operator_defect_resolvent_independent.py",
+      "expected": true,
+      "group": "artifacts",
+      "name": "artifact independent",
+      "status": "PASS"
+    },
+    {
+      "actual": "E:\\Dev\\TECT\\codes\\foundations\\pre_a_cp1_st8_q3lock_weighted_transfer_operator_defect_resolvent_hostile.py",
+      "expected": true,
+      "group": "artifacts",
+      "name": "artifact hostile",
+      "status": "PASS"
+    },
+    {
+      "actual": "E:\\Dev\\TECT\\verification\\scripts\\pre_a_cp1_st8_q3lock_weighted_transfer_operator_defect_resolvent_verify.py",
+      "expected": true,
+      "group": "artifacts",
+      "name": "artifact integrated",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-456 PRIMARY CONDITIONAL_WEIGHTED_TRANSFER_OPERATOR_RESOLVENT_AUDITED 290560/290560 pairs=46 dims=[1, 2, 3] weights=5 patterns=7 path_checks=77280 r=279841/456976\n",
+      "expected": "CONDITIONAL_WEIGHTED_TRANSFER_OPERATOR_RESOLVENT_AUDITED",
+      "group": "children",
+      "name": "primary child",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-456 INDEPENDENT CONDITIONAL_WEIGHTED_TRANSFER_OPERATOR_RESOLVENT_AUDITED assertions=231840 pairs=46 path_checks=77280\n",
+      "expected": "CONDITIONAL_WEIGHTED_TRANSFER_OPERATOR_RESOLVENT_AUDITED",
+      "group": "children",
+      "name": "independent child",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-456 HOSTILE HOSTILE_MUTATIONS_REJECTED 22/22\n",
+      "expected": "HOSTILE_MUTATIONS_REJECTED",
+      "group": "children",
+      "name": "hostile child",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "C4_edge": "29115196389063882279731/77341623582720",
+        "actual_q3_history_closed": false,
+        "admissible_pair_count": 23,
+        "common_weighted_operator_domain_closed": false,
+        "defect_amplitude_max_D": "3/2",
+        "diagonal_conjugation_checks": 4830,
+        "diagonal_conjugation_closed": true,
+        "dimensions": [
+          1,
+          2,
+          3
+        ],
+        "fourth_power_cauchy_factor": 16,
+        "matrix_patterns": [
+          "zero",
+          "diagonal",
+          "permutation",
+          "averaging",
+          "triangular",
+          "alternating",
+          "ramp-four"
+        ],
+        "nonresonant_closed_form_closed": true,
+        "pair_count": 46,
+        "pair_rows": [
+          {
+            "defect_base_s": "1/3",
+            "dimension": 1,
+            "kappa_bar": "0",
+            "matrix_patterns": 7,
+            "weight_pattern": "unit"
+          },
+          {
+            "defect_base_s": "1/3",
+            "dimension": 1,
+            "kappa_bar": "0",
+            "matrix_patterns": 7,
+            "weight_pattern": "unit"
+          },
+          {
+            "defect_base_s": "1/3",
+            "dimension": 1,
+            "kappa_bar": "0",
+            "matrix_patterns": 7,
+            "weight_pattern": "unit"
+          },
+          {
+            "defect_base_s": "1/3",
+            "dimension": 1,
+            "kappa_bar": "0",
+            "matrix_patterns": 7,
+            "weight_pattern": "unit"
+          },
+          {
+            "defect_base_s": "1/3",
+            "dimension": 1,
+            "kappa_bar": "0",
+            "matrix_patterns": 7,
+            "weight_pattern": "unit"
+          },
+          {
+            "defect_base_s": "1/3",
+            "dimension": 1,
+            "kappa_bar": "0",
+            "matrix_patterns": 7,
+            "weight_pattern": "unit"
+          },
+          {
+            "defect_base_s": "1/3",
+            "dimension": 1,
+            "kappa_bar": "0",
+            "matrix_patterns": 7,
+            "weight_pattern": "unit"
+          },
+          {
+            "defect_base_s": "1/3",
+            "dimension": 1,
+            "kappa_bar": "0",
+            "matrix_patterns": 7,
+            "weight_pattern": "dyadic"
+          },
+          {
+            "defect_base_s": "1/3",
+            "dimension": 1,
+            "kappa_bar": "0",
+            "matrix_patterns": 7,
+            "weight_pattern": "dyadic"
+          },
+          {
+            "defect_base_s": "1/3",
+            "dimension": 1,
+            "kappa_bar": "0",
+            "matrix_patterns": 7,
+            "weight_pattern": "dyadic"
+          },
+          {
+            "defect_base_s": "1/3",
+            "dimension": 1,
+            "kappa_bar": "0",
+            "matrix_patterns": 7,
+            "weight_pattern": "dyadic"
+          },
+          {
+            "defect_base_s": "1/3",
+            "dimension": 1,
+            "kappa_bar": "0",
+            "matrix_patterns": 7,
+            "weight_pattern": "dyadic"
+          },
+          {
+            "defect_base_s": "1/3",
+            "dimension": 1,
+            "kappa_bar": "0",
+            "matrix_patterns": 7,
+            "weight_pattern": "dyadic"
+          },
+          {
+            "defect_base_s": "1/3",
+            "dimension": 1,
+            "kappa_bar": "0",
+            "matrix_patterns": 7,
+            "weight_pattern": "dyadic"
+          },
+          {
+            "defect_base_s": "1/3",
+            "dimension": 1,
+            "kappa_bar": "0",
+            "matrix_patterns": 7,
+            "weight_pattern": "affine"
+          },
+          {
+            "defect_base_s": "1/3",
+            "dimension": 1,
+            "kappa_bar": "0",
+            "matrix_patterns": 7,
+            "weight_pattern": "affine"
+          },
+          {
+            "defect_base_s": "1/3",
+            "dimension": 1,
+            "kappa_bar": "0",
+            "matrix_patterns": 7,
+            "weight_pattern": "affine"
+          },
+          {
+            "defect_base_s": "1/3",
+            "dimension": 1,
+            "kappa_bar": "0",
+            "matrix_patterns": 7,
+            "weight_pattern": "affine"
+          },
+          {
+            "defect_base_s": "1/3",
+            "dimension": 1,
+            "kappa_bar": "0",
+            "matrix_patterns": 7,
+            "weight_pattern": "affine"
+          },
+          {
+            "defect_base_s": "1/3",
+            "dimension": 1,
+            "kappa_bar": "0",
+            "matrix_patterns": 7,
+            "weight_pattern": "affine"
+          },
+          {
+            "defect_base_s": "1/3",
+            "dimension": 1,
+            "kappa_bar": "0",
+            "matrix_patterns": 7,
+            "weight_pattern": "affine"
+          },
+          {
+            "defect_base_s": "1/3",
+            "dimension": 1,
+            "kappa_bar": "0",
+            "matrix_patterns": 7,
+            "weight_pattern": "geometric"
+          },
+          {
+            "defect_base_s": "1/3",
+            "dimension": 1,
+            "kappa_bar": "0",
+            "matrix_patterns": 7,
+            "weight_pattern": "geometric"
+          },
+          {
+            "defect_base_s": "1/3",
+            "dimension": 1,
+            "kappa_bar": "0",
+            "matrix_patterns": 7,
+            "weight_pattern": "geometric"
+          },
+          {
+            "defect_base_s": "1/3",
+            "dimension": 1,
+            "kappa_bar": "0",
+            "matrix_patterns": 7,
+            "weight_pattern": "geometric"
+          },
+          {
+            "defect_base_s": "1/3",
+            "dimension": 1,
+            "kappa_bar": "0",
+            "matrix_patterns": 7,
+            "weight_pattern": "geometric"
+          },
+          {
+            "defect_base_s": "1/3",
+            "dimension": 1,
+            "kappa_bar": "0",
+            "matrix_patterns": 7,
+            "weight_pattern": "geometric"
+          },
+          {
+            "defect_base_s": "1/3",
+            "dimension": 1,
+            "kappa_bar": "0",
+            "matrix_patterns": 7,
+            "weight_pattern": "geometric"
+          },
+          {
+            "defect_base_s": "1/3",
+            "dimension": 1,
+            "kappa_bar": "0",
+            "matrix_patterns": 7,
+            "weight_pattern": "alternating"
+          },
+          {
+            "defect_base_s": "1/3",
+            "dimension": 1,
+            "kappa_bar": "0",
+            "matrix_patterns": 7,
+            "weight_pattern": "alternating"
+          },
+          {
+            "defect_base_s": "1/3",
+            "dimension": 1,
+            "kappa_bar": "0",
+            "matrix_patterns": 7,
+            "weight_pattern": "alternating"
+          },
+          {
+            "defect_base_s": "1/3",
+            "dimension": 1,
+            "kappa_bar": "0",
+            "matrix_patterns": 7,
+            "weight_pattern": "alternating"
+          },
+          {
+            "defect_base_s": "1/3",
+            "dimension": 1,
+            "kappa_bar": "0",
+            "matrix_patterns": 7,
+            "weight_pattern": "alternating"
+          },
+          {
+            "defect_base_s": "1/3",
+            "dimension": 1,
+            "kappa_bar": "0",
+            "matrix_patterns": 7,
+            "weight_pattern": "alternating"
+          },
+          {
+            "defect_base_s": "1/3",
+            "dimension": 1,
+            "kappa_bar": "0",
+            "matrix_patterns": 7,
+            "weight_pattern": "alternating"
+          },
+          {
+            "defect_base_s": "1/3",
+            "dimension": 2,
+            "kappa_bar": "0",
+            "matrix_patterns": 7,
+            "weight_pattern": "unit"
+          },
+          {
+            "defect_base_s": "1/3",
+            "dimension": 2,
+            "kappa_bar": "0",
+            "matrix_patterns": 7,
+            "weight_pattern": "unit"
+          },
+          {
+            "defect_base_s": "1/3",
+            "dimension": 2,
+            "kappa_bar": "0",
+            "matrix_patterns": 7,
+            "weight_pattern": "unit"
+          },
+          {
+            "defect_base_s": "1/3",
+            "dimension": 2,
+            "kappa_bar": "0",
+            "matrix_patterns": 7,
+            "weight_pattern": "unit"
+          },
+          {
+            "defect_base_s": "1/3",
+            "dimension": 2,
+            "kappa_bar": "0",
+            "matrix_patterns": 7,
+            "weight_pattern": "unit"
+          },
+          {
+            "defect_base_s": "1/3",
+            "dimension": 2,
+            "kappa_bar": "0",
+            "matrix_patterns": 7,
+            "weight_pattern": "unit"
+          },
+          {
+            "defect_base_s": "1/3",
+            "dimension": 2,
+            "kappa_bar": "0",
+            "matrix_patterns": 7,
+            "weight_pattern": "unit"
+          },
+          {
+            "defect_base_s": "1/3",
+            "dimension": 2,
+            "kappa_bar": "0",
+            "matrix_patterns": 7,
+            "weight_pattern": "dyadic"
+          },
+          {
+            "defect_base_s": "1/3",
+            "dimension": 2,
+            "kappa_bar": "0",
+            "matrix_patterns": 7,
+            "weight_pattern": "dyadic"
+          },
+          {
+            "defect_base_s": "1/3",
+            "dimension": 2,
+            "kappa_bar": "0",
+            "matrix_patterns": 7,
+            "weight_pattern": "dyadic"
+          },
+          {
+            "defect_base_s": "1/3",
+            "dimension": 2,
+            "kappa_bar": "0",
+            "matrix_patterns": 7,
+            "weight_pattern": "dyadic"
+          },
+          {
+            "defect_base_s": "1/3",
+            "dimension": 2,
+            "kappa_bar": "0",
+            "matrix_patterns": 7,
+            "weight_pattern": "dyadic"
+          },
+          {
+            "defect_base_s": "1/3",
+            "dimension": 2,
+            "kappa_bar": "0",
+            "matrix_patterns": 7,
+            "weight_pattern": "dyadic"
+          },
+          {
+            "defect_base_s": "1/3",
+            "dimension": 2,
+            "kappa_bar": "0",
+            "matrix_patterns": 7,
+            "weight_pattern": "dyadic"
+          },
+          {
+            "defect_base_s": "1/3",
+            "dimension": 2,
+            "kappa_bar": "0",
+            "matrix_patterns": 7,
+            "weight_pattern": "affine"
+          },
+          {
+            "defect_base_s": "1/3",
+            "dimension": 2,
+            "kappa_bar": "0",
+            "matrix_patterns": 7,
+            "weight_pattern": "affine"
+          },
+          {
+            "defect_base_s": "1/3",
+            "dimension": 2,
+            "kappa_bar": "0",
+            "matrix_patterns": 7,
+            "weight_pattern": "affine"
+          },
+          {
+            "defect_base_s": "1/3",
+            "dimension": 2,
+            "kappa_bar": "0",
+            "matrix_patterns": 7,
+            "weight_pattern": "affine"
+          },
+          {
+            "defect_base_s": "1/3",
+            "dimension": 2,
+            "kappa_bar": "0",
+            "matrix_patterns": 7,
+            "weight_pattern": "affine"
+          },
+          {
+            "defect_base_s": "1/3",
+            "dimension": 2,
+            "kappa_bar": "0",
+            "matrix_patterns": 7,
+            "weight_pattern": "affine"
+          },
+          {
+            "defect_base_s": "1/3",
+            "dimension": 2,
+            "kappa_bar": "0",
+            "matrix_patterns": 7,
+            "weight_pattern": "affine"
+          },
+          {
+            "defect_base_s": "1/3",
+            "dimension": 2,
+            "kappa_bar": "0",
+            "matrix_patterns": 7,
+            "weight_pattern": "geometric"
+          },
+          {
+            "defect_base_s": "1/3",
+            "dimension": 2,
+            "kappa_bar": "0",
+            "matrix_patterns": 7,
+            "weight_pattern": "geometric"
+          },
+          {
+            "defect_base_s": "1/3",
+            "dimension": 2,
+            "kappa_bar": "0",
+            "matrix_patterns": 7,
+            "weight_pattern": "geometric"
+          },
+          {
+            "defect_base_s": "1/3",
+            "dimension": 2,
+            "kappa_bar": "0",
+            "matrix_patterns": 7,
+            "weight_pattern": "geometric"
+          },
+          {
+            "defect_base_s": "1/3",
+            "dimension": 2,
+            "kappa_bar": "0",
+            "matrix_patterns": 7,
+            "weight_pattern": "geometric"
+          },
+          {
+            "defect_base_s": "1/3",
+            "dimension": 2,
+            "kappa_bar": "0",
+            "matrix_patterns": 7,
+            "weight_pattern": "geometric"
+          },
+          {
+            "defect_base_s": "1/3",
+            "dimension": 2,
+            "kappa_bar": "0",
+            "matrix_patterns": 7,
+            "weight_pattern": "geometric"
+          },
+          {
+            "defect_base_s": "1/3",
+            "dimension": 2,
+            "kappa_bar": "0",
+            "matrix_patterns": 7,
+            "weight_pattern": "alternating"
+          },
+          {
+            "defect_base_s": "1/3",
+            "dimension": 2,
+            "kappa_bar": "0",
+            "matrix_patterns": 7,
+            "weight_pattern": "alternating"
+          },
+          {
+            "defect_base_s": "1/3",
+            "dimension": 2,
+            "kappa_bar": "0",
+            "matrix_patterns": 7,
+            "weight_pattern": "alternating"
+          },
+          {
+            "defect_base_s": "1/3",
+            "dimension": 2,
+            "kappa_bar": "0",
+            "matrix_patterns": 7,
+            "weight_pattern": "alternating"
+          },
+          {
+            "defect_base_s": "1/3",
+            "dimension": 2,
+            "kappa_bar": "0",
+            "matrix_patterns": 7,
+            "weight_pattern": "alternating"
+          },
+          {
+            "defect_base_s": "1/3",
+            "dimension": 2,
+            "kappa_bar": "0",
+            "matrix_patterns": 7,
+            "weight_pattern": "alternating"
+          },
+          {
+            "defect_base_s": "1/3",
+            "dimension": 2,
+            "kappa_bar": "0",
+            "matrix_patterns": 7,
+            "weight_pattern": "alternating"
+          },
+          {
+            "defect_base_s": "1/3",
+            "dimension": 3,
+            "kappa_bar": "0",
+            "matrix_patterns": 7,
+            "weight_pattern": "unit"
+          },
+          {
+            "defect_base_s": "1/3",
+            "dimension": 3,
+            "kappa_bar": "0",
+            "matrix_patterns": 7,
+            "weight_pattern": "unit"
+          },
+          {
+            "defect_base_s": "1/3",
+            "dimension": 3,
+            "kappa_bar": "0",
+            "matrix_patterns": 7,
+            "weight_pattern": "unit"
+          },
+          {
+            "defect_base_s": "1/3",
+            "dimension": 3,
+            "kappa_bar": "0",
+            "matrix_patterns": 7,
+            "weight_pattern": "unit"
+          },
+          {
+            "defect_base_s": "1/3",
+            "dimension": 3,
+            "kappa_bar": "0",
+            "matrix_patterns": 7,
+            "weight_pattern": "unit"
+          },
+          {
+            "defect_base_s": "1/3",
+            "dimension": 3,
+            "kappa_bar": "0",
+            "matrix_patterns": 7,
+            "weight_pattern": "unit"
+          },
+          {
+            "defect_base_s": "1/3",
+            "dimension": 3,
+            "kappa_bar": "0",
+            "matrix_patterns": 7,
+            "weight_pattern": "unit"
+          },
+          {
+            "defect_base_s": "1/3",
+            "dimension": 3,
+            "kappa_bar": "0",
+            "matrix_patterns": 7,
+            "weight_pattern": "dyadic"
+          },
+          {
+            "defect_base_s": "1/3",
+            "dimension": 3,
+            "kappa_bar": "0",
+            "matrix_patterns": 7,
+            "weight_pattern": "dyadic"
+          },
+          {
+            "defect_base_s": "1/3",
+            "dimension": 3,
+            "kappa_bar": "0",
+            "matrix_patterns": 7,
+            "weight_pattern": "dyadic"
+          }
+        ],
+        "parent_base_tail": "78",
+        "parent_decay_r": "279841/456976",
+        "parent_ratio_q": "23/26",
+        "path_checks": 77280,
+        "positive_weight_contract_closed": true,
+        "pre_a_closed": false,
+        "radius_rows_per_pair": 17,
+        "resonant_closed_form_closed": true,
+        "sector_a_closed": false,
+        "source_constant_A": "22452096349837445628367721457/100705239040",
+        "source_owned_transfer_closed": false,
+        "source_owned_weight_packet_closed": false,
+        "two_base_less_than_one_threshold_closed": true,
+        "weight_patterns": [
+          "unit",
+          "dyadic",
+          "affine",
+          "geometric",
+          "alternating"
+        ],
+        "weighted_geometric_defect_envelope_closed": true,
+        "weighted_path_product_bound_closed": true,
+        "weighted_row_sum_step_closed": true,
+        "weighted_vector_defect_convolution_closed": true
+      },
+      "expected": "17 rows, 46 pairs, dimensions 1/2/3, 5 weights, 7 patterns, 77280 paths",
+      "group": "children",
+      "name": "primary coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "actual_q3_history_closed": false,
+        "common_weighted_operator_domain_closed": false,
+        "diagonal_conjugation_checks": 77280,
+        "diagonal_conjugation_closed": true,
+        "dimensions": [
+          1,
+          2,
+          3
+        ],
+        "history_checks": 77280,
+        "matrix_patterns": [
+          "zero",
+          "diagonal",
+          "permutation",
+          "averaging",
+          "triangular",
+          "alternating",
+          "ramp-four"
+        ],
+        "nonresonant_closed_form_closed": true,
+        "pair_count": 46,
+        "parent_decay_r": "279841/456976",
+        "parent_ratio_q": "23/26",
+        "path_checks": 77280,
+        "positive_weight_contract_closed": true,
+        "pre_a_closed": false,
+        "radius_rows_per_pair": 17,
+        "resonant_closed_form_closed": true,
+        "sector_a_closed": false,
+        "source_constant_A": "22452096349837445628367721457/100705239040",
+        "source_owned_transfer_closed": false,
+        "source_owned_weight_packet_closed": false,
+        "two_base_less_than_one_threshold_closed": true,
+        "weight_patterns": [
+          "unit",
+          "dyadic",
+          "affine",
+          "geometric",
+          "alternating"
+        ],
+        "weighted_geometric_defect_envelope_closed": true,
+        "weighted_path_product_bound_closed": true,
+        "weighted_row_sum_step_closed": true,
+        "weighted_vector_defect_convolution_closed": true
+      },
+      "expected": "17 rows, 46 pairs, dimensions 1/2/3, 5 weights, 7 patterns, 77280 paths",
+      "group": "children",
+      "name": "independent coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": 22,
+      "expected": 22,
+      "group": "hostile",
+      "name": "hostile count",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "no primary import",
+      "group": "independence",
+      "name": "independence",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "command": "lake env lean Tect/R456.lean",
+        "output": "Tect/R456.lean:26:40: warning: Variable name `hs0` is not explicitly referenced.\n\nThe binding can be removed (if unused) or named `_` (if used implicitly).\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`",
+        "returncode": 0,
+        "status": "PASS"
+      },
+      "expected": "PASS",
+      "group": "Lean",
+      "name": "Lean run",
+      "status": "PASS"
+    }
+  ],
+  "assumptions": [
+    "R-455 is the unchanged finite coupled-vector parent interface and R-454/R-451 supply its scalar source envelope.",
+    "The finite coupled history, source vectors and defect vectors are nonnegative and measured in one declared positive weighted sup norm.",
+    "Every step transfer matrix has nonnegative entries and its weighted row sums are bounded by one common kappa_bar across the intended finite history.",
+    "The source and defect weighted norms obey ||u_R||_w<=A*r^(R-1) and ||d_R||_w<=D*s^(R-1), with common nonnegative A,D,r,s.",
+    "Diagonal conjugation, matrix monotonicity, induced-norm submultiplicativity and finite-sum identities are applied before any infinite-limit interpretation."
+  ],
+  "audit_id": "PA-CP1-ST8-Q3LOCK-WEIGHTED-TRANSFER-OPERATOR-DEFECT-RESOLVENT-v0",
+  "boundary": "R-456 proves an abstract finite-dimensional coordinate-weight implication only: a positive weighted coupled recurrence with one common weighted row-sum bound has the R-455 source-plus-defect envelope. It does not supply a Q3 transfer law, owner weights, common domain, residual, exhaustion map or any physical or continuum identification.",
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "derived": {
+    "actual_q3_history_closed": false,
+    "common_alpha_closed": false,
+    "common_weighted_operator_domain_closed": false,
+    "diagonal_conjugation_checks": 4830,
+    "diagonal_conjugation_closed": true,
+    "hostile_mutations_rejected": 22,
+    "independent_assertions": 231840,
+    "nonresonant_closed_form_closed": true,
+    "path_checks": 77280,
+    "positive_weight_contract_closed": true,
+    "pre_a_closed": false,
+    "primary_assertions": 290560,
+    "resonant_closed_form_closed": true,
+    "sector_a_closed": false,
+    "source_owned_transfer_closed": false,
+    "source_owned_weight_packet_closed": false,
+    "two_base_less_than_one_threshold_closed": true,
+    "weighted_geometric_defect_envelope_closed": true,
+    "weighted_path_product_bound_closed": true,
+    "weighted_row_sum_step_closed": true,
+    "weighted_vector_defect_convolution_closed": true
+  },
+  "evidence_level": "T0 exact conditional finite positive weighted transfer-operator defect-resolvent envelope",
+  "exploration_id": "EXP-001329",
+  "lean": {
+    "command": "lake env lean Tect/R456.lean",
+    "output": "Tect/R456.lean:26:40: warning: Variable name `hs0` is not explicitly referenced.\n\nThe binding can be removed (if unused) or named `_` (if used implicitly).\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`",
+    "returncode": 0,
+    "status": "PASS"
+  },
+  "missing_assumptions": [
+    "A source-owned Q3LOCK derivation of the coupled transfer matrices, the positive weights and a common weighted bound kappa_bar<1.",
+    "A source-owned weighted vector source/defect sequence and uniformity of its norm bounds in shape, volume, cutoff, beta, phase and history depth.",
+    "A common unbounded weighted operator or form domain on which all components, weights and transfer laws are defined.",
+    "A production all-shape exhaustion map identifying the same weighted observable across shapes and orientations.",
+    "OS/KMS/GNS identification, common alpha, sector coercivity, physical-empty comparison, continuum, Yang--Mills and mass-gap conclusions."
+  ],
+  "non_claims": [
+    "No source-owned Q3LOCK transfer matrices, positive weights, componentwise recurrence, common weighted bound, vector residual or defect envelope are established.",
+    "No common unbounded weighted domain, form closure, source/volume/cutoff/beta uniformity or production exhaustion map is established.",
+    "The weighted finite envelope is not an OS/KMS/GNS, common-alpha, physical-sector, continuum, Yang--Mills or mass-gap result.",
+    "The dimensions, weight patterns and radius rows are exact finite checks and are not an exhaustion surrogate.",
+    "The established T-054 forward method, T-059/T-061 inverse methods, owner order and promotion firewalls remain unchanged."
+  ],
+  "result_id": "R-456",
+  "run_kind": "integrated",
+  "schema": "tect/foundation-audit/1.0",
+  "source_hashes": {
+    "hostile": "67ce748c059835a30a8f9c3bba782ed27c46a0f78e629e9275dc9b22f2205a99",
+    "independent": "b9cc412794ec195e4171f690906f15fb79e7ebf9a9feb1689314f66ed8fd227d",
+    "integrated": "009bb16d3259604959efba41678c5787a0f70de2676ced362dc152c045687c1b",
+    "lean": "004140e55f4b771d50441208333beb1bcefae0bf5e8689affc84667e40de8358",
+    "manifest": "3cdbd003d50c801bc743d37f40653dc82975400911faa23b0ae5e22ddfb40262",
+    "primary": "57226e0a90c09e5f8994daebcee19367b75cd8d53096db6a0f24e08a92f05e3f"
+  },
+  "task_id": "T-054",
+  "verdict": "PASS"
+}

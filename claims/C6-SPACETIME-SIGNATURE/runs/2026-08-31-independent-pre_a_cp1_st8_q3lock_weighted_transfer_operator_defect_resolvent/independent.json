@@ -1,0 +1,86 @@
+{
+  "assertion_count": 231840,
+  "assumptions": [
+    "R-455 is the unchanged finite coupled-vector parent interface and R-454/R-451 supply its scalar source envelope.",
+    "The finite coupled history, source vectors and defect vectors are nonnegative and measured in one declared positive weighted sup norm.",
+    "Every step transfer matrix has nonnegative entries and its weighted row sums are bounded by one common kappa_bar across the intended finite history.",
+    "The source and defect weighted norms obey ||u_R||_w<=A*r^(R-1) and ||d_R||_w<=D*s^(R-1), with common nonnegative A,D,r,s.",
+    "Diagonal conjugation, matrix monotonicity, induced-norm submultiplicativity and finite-sum identities are applied before any infinite-limit interpretation."
+  ],
+  "audit_id": "PA-CP1-ST8-Q3LOCK-WEIGHTED-TRANSFER-OPERATOR-DEFECT-RESOLVENT-v0",
+  "boundary": "R-456 proves an abstract finite-dimensional coordinate-weight implication only: a positive weighted coupled recurrence with one common weighted row-sum bound has the R-455 source-plus-defect envelope. It does not supply a Q3 transfer law, owner weights, common domain, residual, exhaustion map or any physical or continuum identification.",
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "derived": {
+    "actual_q3_history_closed": false,
+    "common_weighted_operator_domain_closed": false,
+    "diagonal_conjugation_checks": 77280,
+    "diagonal_conjugation_closed": true,
+    "dimensions": [
+      1,
+      2,
+      3
+    ],
+    "history_checks": 77280,
+    "matrix_patterns": [
+      "zero",
+      "diagonal",
+      "permutation",
+      "averaging",
+      "triangular",
+      "alternating",
+      "ramp-four"
+    ],
+    "nonresonant_closed_form_closed": true,
+    "pair_count": 46,
+    "parent_decay_r": "279841/456976",
+    "parent_ratio_q": "23/26",
+    "path_checks": 77280,
+    "positive_weight_contract_closed": true,
+    "pre_a_closed": false,
+    "radius_rows_per_pair": 17,
+    "resonant_closed_form_closed": true,
+    "sector_a_closed": false,
+    "source_constant_A": "22452096349837445628367721457/100705239040",
+    "source_owned_transfer_closed": false,
+    "source_owned_weight_packet_closed": false,
+    "two_base_less_than_one_threshold_closed": true,
+    "weight_patterns": [
+      "unit",
+      "dyadic",
+      "affine",
+      "geometric",
+      "alternating"
+    ],
+    "weighted_geometric_defect_envelope_closed": true,
+    "weighted_path_product_bound_closed": true,
+    "weighted_row_sum_step_closed": true,
+    "weighted_vector_defect_convolution_closed": true
+  },
+  "evidence_level": "T0 exact conditional finite positive weighted transfer-operator defect-resolvent envelope",
+  "exploration_id": "EXP-001329",
+  "missing_assumptions": [
+    "A source-owned Q3LOCK derivation of the coupled transfer matrices, the positive weights and a common weighted bound kappa_bar<1.",
+    "A source-owned weighted vector source/defect sequence and uniformity of its norm bounds in shape, volume, cutoff, beta, phase and history depth.",
+    "A common unbounded weighted operator or form domain on which all components, weights and transfer laws are defined.",
+    "A production all-shape exhaustion map identifying the same weighted observable across shapes and orientations.",
+    "OS/KMS/GNS identification, common alpha, sector coercivity, physical-empty comparison, continuum, Yang--Mills and mass-gap conclusions."
+  ],
+  "non_claims": [
+    "No source-owned Q3LOCK transfer matrices, positive weights, componentwise recurrence, common weighted bound, vector residual or defect envelope are established.",
+    "No common unbounded weighted domain, form closure, source/volume/cutoff/beta uniformity or production exhaustion map is established.",
+    "The weighted finite envelope is not an OS/KMS/GNS, common-alpha, physical-sector, continuum, Yang--Mills or mass-gap result.",
+    "The dimensions, weight patterns and radius rows are exact finite checks and are not an exhaustion surrogate.",
+    "The established T-054 forward method, T-059/T-061 inverse methods, owner order and promotion firewalls remain unchanged."
+  ],
+  "result_id": "R-456",
+  "run_kind": "independent",
+  "schema": "tect/foundation-audit/1.0",
+  "source_hashes": {
+    "manifest": "3cdbd003d50c801bc743d37f40653dc82975400911faa23b0ae5e22ddfb40262",
+    "r450_run": "169be1eea3c55e87ce6fbc771e832331aeb5500a27893dfbfee34ce0559fc07a",
+    "r451_manifest": "0045cc8343551a2d01fe42614c282d92970cae9106558fb600202e5cba901867",
+    "script": "b9cc412794ec195e4171f690906f15fb79e7ebf9a9feb1689314f66ed8fd227d"
+  },
+  "task_id": "T-054",
+  "verdict": "CONDITIONAL_WEIGHTED_TRANSFER_OPERATOR_RESOLVENT_AUDITED"
+}
