@@ -168,6 +168,16 @@
         "path": "strategy/hold-lc-001-gts-code-owner-candidate-v0.1.json",
         "sha256": "9c7c1830e6c52312fbfd65f7e4755be7c700e93ef363243d786f1cd995cef99e",
         "role": "Public GTS finite GBM LLR/response code owner candidate"
+      },
+      {
+        "path": "strategy/hold-lc-001-gts-synthetic-audit-exploration.json",
+        "sha256": "a7108a97a9da6aaa299850a6740d7049f6f6636466a7e24956165da6e7353235",
+        "role": "HOLD-LC-001 synthetic primary/independent/hostile GTS finite-code audit (EXP-001313)"
+      },
+      {
+        "path": "verification/scripts/audit_gts_synthetic_owner.py",
+        "sha256": "0ee87736c42d15b1996bf2e4543b82b3c84bd7ff4cbed9af2473ed90f00a5bf3",
+        "role": "Reproducible NumPy-only synthetic GTS source-transcription audit tool"
       }
     ],
     "semantic": [
@@ -584,21 +594,13 @@
     "authority_state": "VERIFIED_PENDING_WORKTREE_NOT_YET_DURABLE_GIT_OR_REMOTE_AUTHORITY"
   },
   "completion_checkpoint": {
-    "status": "COMPLETE",
+    "status": "PENDING",
     "verified_parent_head": "1fb0d271784ebc7cd004a6bdf19e0332afca8609",
     "verified_at_utc": "2026-08-30T12:06:00Z",
     "branch": "main",
     "remote": "tect",
     "remote_ref": "refs/heads/main",
-    "expected_authority_counts": {
-      "claims": 49,
-      "gates_and_hypotheses": 208,
-      "results": 281,
-      "negative_records": 375,
-      "explorations": 1312,
-      "changelog_events": 796,
-      "tasks": 61
-    },
+    "expected_authority_counts": null,
     "requirements": [
       "doctor PASS",
       "release_check PASS",
@@ -661,7 +663,8 @@
       "EXP-001311 pins the primary Stachie et al. finite Lambda implementation and time-shifted FAR protocol as an additive statistical-owner candidate; it does not admit continuous timing, response, propagation, covariance, nuisance or prospective fields.",
       "The release-gated EXP-001311 content commit f511a73d2c03698c457c19518d87f1aaf4ee024c was pushed to tect/main; this checkpoint refresh records its authority counts and strict remote verification target.",
       "EXP-001312 pins USRA-STI/gamma-ray-targeted-search commit 1bc1e913f97fd7195a7e297f8d6032a5c7758894 and its finite GBM LLR/response/search/prior code paths as an additive reproduction candidate; event/template bytes, dependency lock, joint-ranking linkage, detector-to-geocenter uncertainty, covariance, nuisance and prospective fields remain unadmitted.",
-      "The release-gated EXP-001312 content commit 1fb0d2717ed6f3bc2f6f96c0b66d5c4fef39fd8a was pushed to tect/main; this checkpoint refresh records the new authority counts and strict remote-equality target."
+      "The release-gated EXP-001312 content commit 1fb0d2717ed6f3bc2f6f96c0b66d5c4fef39fd8a was pushed to tect/main; this checkpoint refresh records the new authority counts and strict remote-equality target.",
+      "EXP-001313 is locally recorded as a T0 synthetic GTS code-semantics audit with primary/independent/hostile PASS; release-gated commit and strict baseline refresh are pending, and no T-054/T-059 method or physical-owner field changes."
     ]
   },
   "stopped_loop_registry": [
@@ -743,7 +746,8 @@
       "EXP-001309 crosswalks the primary published 0.310 +/- 0.048 s pulse-fit onset, -3.176 ms Fermi-minus-geocenter anchor, +1.74 +/- 0.05 s corrected delay and standard analysis window; these remain retrospective descriptive anchors because the inspected source scope does not fill the reproducible estimator, propagation algorithm, covariance or source-owner uncertainty fields.",
       "EXP-001310 crosswalks the official P1900186 Lambda signal-versus-background statistic, R association ranking, 64 ms minimum offset and empirical O1/O2 background p-value construction; this partially fills a finite statistical-owner slot while continuous timing, response, propagation, covariance, nuisance and prospective fields remain unadmitted.",
       "EXP-001311 pins the primary Stachie et al. finite Lambda implementation: competing hypotheses, Q_L/Q_G factors, triangular time-overlap prior, sky-overlap integral and time-shifted FAR calibration; it advances only a retrospective finite statistical-owner candidate while continuous timing, response, propagation, covariance, nuisance and prospective fields remain unadmitted.",
-      "EXP-001312 pins USRA-STI/gamma-ray-targeted-search commit 1bc1e913f97fd7195a7e297f8d6032a5c7758894 and its public finite GBM Likelihood/response/search/prior paths; this advances a code-level calibration candidate while event/template bytes, dependency lock, Stachie joint-ranking linkage, detector-to-geocenter uncertainty, covariance, nuisance and prospective fields remain unadmitted."
+      "EXP-001312 pins USRA-STI/gamma-ray-targeted-search commit 1bc1e913f97fd7195a7e297f8d6032a5c7758894 and its public finite GBM Likelihood/response/search/prior paths; this advances a code-level calibration candidate while event/template bytes, dependency lock, Stachie joint-ranking linkage, detector-to-geocenter uncertainty, covariance, nuisance and prospective fields remain unadmitted.",
+      "EXP-001313 completes a synthetic primary/independent/hostile audit of the pinned GTS finite likelihood transcription: full-array and marginal deltas are 4.547e-13, a +7 count mutation changes the marginal by 45.681982, and no external event/template bytes or dependencies are substituted; event-level, continuous, physical and prospective fields remain locked."
     ],
     "deliverables": [
       "one owner-intake card with explicit missing fields",
@@ -772,7 +776,7 @@
       "It does not prove Pre-A, C6, A13, Sector A, QFT, Yang-Mills, gravity, a physical mass gap, or a theory of everything.",
       "A dynamic discriminator at finite regulator does not prove continuum or physical identity."
     ],
-    "next_action": "T-061 remains P1-active: freeze the GTS commit, dependency lock, response-template archive and exact GW170817 inputs, then run the synthetic primary/independent/hostile finite LLR and response-index reproduction before event data. Keep the Stachie joint-ranking linkage, response validity, detector-to-geocenter conversion, covariance, intrinsic-lag scoring and prospective credit locked until complete owner fields are independently reproduced. Continue unchanged T-054 owner intake in parallel."
+    "next_action": "T-061 remains P1-active: freeze the external GTS dependency lock, exact response-template archive, GW170817 input bytes and event configuration before any event execution; then reproduce the finite likelihood and response-index paths in primary, independent and hostile modes. Keep Stachie joint-linkage, detector-to-geocenter, covariance, intrinsic-lag, prospective and physical-identity fields locked, and continue unchanged T-054 owner intake in parallel."
   },
   "resume_algorithm": [
     "Capture UTC date and run doctor.py.",

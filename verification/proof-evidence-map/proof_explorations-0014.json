@@ -2570,6 +2570,172 @@
       "task_id": "T-061",
       "title": "HOLD-LC-001 public GTS code-level response and likelihood owner candidate",
       "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "axis": "transcription-vs-source",
+          "check": "Could matching two local implementations hide a common transcription error relative to the public source?",
+          "disposition": "VALID-WITH-MITIGATION: the harness is explicitly a source-transcription audit, records the source commit and parent code-semantics card, and keeps direct source re-audit plus external execution as the next gate."
+        },
+        {
+          "axis": "fixture-vs-event",
+          "check": "Could the synthetic fixture be mistaken for an event-level or observational result?",
+          "disposition": "DISMISSED: the JSON and exploration mark the fixture as a tooling oracle, include no event identifiers or measurements, and assign no observational credit."
+        },
+        {
+          "axis": "hostile-mutation-coverage",
+          "check": "Does one count mutation establish full implementation robustness?",
+          "disposition": "UPHELD-BLOCKED: it demonstrates sensitivity to one hostile mutation only; boundary, dependency, response-index, template, and event-level hostile suites remain open."
+        },
+        {
+          "axis": "dependency-substitution",
+          "check": "Could the NumPy-only harness silently substitute unavailable GTS dependencies or response data?",
+          "disposition": "DISMISSED: the dependency boundary is recorded and the harness imports no GTS event/template or unavailable runtime package."
+        },
+        {
+          "axis": "finite-code-to-physical-owner",
+          "check": "Could finite LLR agreement admit HOLD-LC-001 continuous timing, calibration, or physical ownership?",
+          "disposition": "UPHELD-BLOCKED: finite code semantics do not supply event response validity, detector-to-geocenter propagation, covariance, intrinsic lag, or prospective lock."
+        },
+        {
+          "axis": "method-overhaul",
+          "check": "Could this audit replace the established T-054 forward or T-059 inverse method?",
+          "disposition": "DISMISSED: it is an additive T-061 checkpoint and leaves both methods, owner order, and stopped-loop rules unchanged."
+        }
+      ],
+      "assumptions": [
+        "The public GTS source commit recorded in the parent candidate card remains the code-semantic authority for this transcription audit.",
+        "The synthetic fixture is a tooling oracle and does not stand in for GW170817 or any observational sample.",
+        "The local estimator, response-owner, Stachie-statistic, and prospective-holdout contracts remain controlling for any later event-level work.",
+        "Agreement of two implementations of the same declared finite equations is evidence about transcription correctness, not about the physical adequacy of those equations."
+      ],
+      "boundary": "EXP-001313 is a T0 synthetic finite code-semantics audit. It does not admit a continuous HOLD-LC-001 likelihood, covariance, detector-to-geocenter implementation, response value, calibration-validity rule, intrinsic-lag nuisance law, F_reg/F_lim/F_eff/F_obs map, event candidate, prospective prediction, microscopic dynamics, physical identity, continuum result, Reading-H sign, Pre-A closure, Sector-A closure, or mass-gap conclusion.",
+      "checks": [
+        {
+          "detail": "The vectorised transcription returned status 1, a finite 2 by 3 LLR array and marginal LLR 2055.0880465111127 for the synthetic fixture.",
+          "finding": "PASS",
+          "id": "primary-finite-path"
+        },
+        {
+          "detail": "The independent scalar implementation matched the primary array and marginal statistic with maximum absolute delta 4.547473508864641e-13, below the 1.0e-9 tooling tolerance.",
+          "finding": "PASS",
+          "id": "independent-equation-reproduction"
+        },
+        {
+          "detail": "The hostile mutation counts[0] += 7.0 changed the marginal LLR by 45.68198208603508, above the 1.0e-6 rejection threshold.",
+          "finding": "PASS",
+          "id": "hostile-fixture-rejection"
+        },
+        {
+          "detail": "The audit completed without external GTS event/template inputs or unavailable dependencies, and the output records that boundary explicitly.",
+          "finding": "PASS",
+          "id": "external-dependency-boundary"
+        },
+        {
+          "detail": "This is an additive finite code audit; T-054 forward and T-059 inverse methods, owner ordering, and physical/prospective firewalls are unchanged.",
+          "finding": "PASS",
+          "id": "method-preservation"
+        }
+      ],
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "A bounded synthetic primary/independent/hostile test was completed against the commit-pinned code semantics, resolving the planned pre-event reproduction checkpoint without importing event data or changing either established research method.",
+      "decision_scope": "T0 synthetic finite source-code transcription audit only; no event likelihood, response value, dynamic identification, physical identity, empirical prediction, or tier promotion.",
+      "evidence_level": "T0 reproducible synthetic primary/independent/hostile code audit with source-commit pin; no external repository execution or event-level numerical reproduction",
+      "evidence_refs": [
+        "strategy/hold-lc-001-gts-code-owner-candidate-v0.1.json#source_reported_code_semantics",
+        "strategy/hold-lc-001-gts-code-owner-candidate-v0.1.json#reproduction_packet",
+        "verification/scripts/audit_gts_synthetic_owner.py#_source_transcription",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-gts-synthetic-code-owner/synthetic.json#checks"
+      ],
+      "exact_scope": {
+        "data_role": "CALIBRATION",
+        "finite_scope": "Synthetic finite likelihood/LLR transcription only; no event data, response calibration, detector-to-geocenter propagation, continuous timing likelihood, covariance, candidate score, limit or prospective validation.",
+        "holdout_id": "HOLD-LC-001",
+        "lineage_group": "GW170817-GRB170817A",
+        "method_scope": "Additive T-061 P1 code-semantics audit; established T-054/T-059 methods and owner order are unchanged.",
+        "run_artifact": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-gts-synthetic-code-owner/synthetic.json",
+        "source_candidate": {
+          "path": "strategy/hold-lc-001-gts-code-owner-candidate-v0.1.json",
+          "sha256": "9c7c1830e6c52312fbfd65f7e4755be7c700e93ef363243d786f1cd995cef99e"
+        },
+        "source_commit": "1bc1e913f97fd7195a7e297f8d6032a5c7758894"
+      },
+      "finding": "The synthetic harness provides a reproducible finite audit of the public GTS likelihood transcription: primary and independently coded scalar equations agree to 4.547e-13, a hostile count mutation is detected, and the external-dependency boundary is explicit. This advances code-semantics reproducibility only; it does not execute the public repository or admit any event-level, continuous timing, physical, or prospective owner.",
+      "formal_integration": {
+        "events": [],
+        "negatives": [],
+        "no_changelog_event": true,
+        "no_new_negative": true,
+        "no_new_result": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "results": []
+      },
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": []
+      },
+      "gate_ids": [
+        "PA-INVERSE-OBSERVATION-TARGET-MAP-HOLDOUT-FREEZE",
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001313",
+      "method": [
+        "Run the local NumPy and standard-library harness against a small synthetic counts/background/background-variance/response fixture using a vectorised transcription of the public GTS likelihood path.",
+        "Run an independently written scalar implementation of the same declared equations, using stable scalar expm1 evaluation and the source initial-variance convention, and compare the full finite LLR array and marginal statistic.",
+        "Mutate one synthetic count by +7.0 and require the finite marginal statistic to move beyond the tooling rejection threshold, then verify that no external event bytes or unavailable GTS dependencies are silently substituted.",
+        "Crosswalk the finite audit to the commit-pinned GTS owner candidate and preserve the T-054 forward method, additive T-059 inverse method, owner order, and all continuous/physical/prospective admission firewalls."
+      ],
+      "missing_assumptions": [
+        "A reproducible external GTS environment lock including Python, NumPy, SciPy, Astropy, HEASARC/GDT and exact package versions.",
+        "Immutable GW170817 TTE/trigdat/position-history bytes, response-template bytes, detector configuration, and their source hashes.",
+        "An event-specific response-validity, gain-calibration, spacecraft-state and detector-to-geocenter uncertainty owner.",
+        "A continuous detector timing likelihood, joint covariance and intrinsic-emission-lag nuisance law linked to the Stachie joint statistic.",
+        "A sealed candidate-neutral prospective holdout and an independently frozen score before target disclosure."
+      ],
+      "next_action": "Freeze the external GTS dependency lock, exact response-template archive, GW170817 input bytes and event configuration before any event execution; then reproduce the finite likelihood and response-index paths in primary, independent and hostile modes. Keep the Stachie joint-linkage, detector-to-geocenter, covariance, intrinsic-lag, prospective, and physical-identity fields locked, while continuing unchanged T-054 owner intake in parallel.",
+      "non_claims": [
+        "The harness does not execute the external USRA-STI GTS repository and does not establish an event-level GBM result.",
+        "The synthetic fixture is not GW170817 data, a calibration measurement, a response value, or a prospective holdout.",
+        "Finite primary/independent agreement is not a continuous Delta_t_det likelihood, detector-to-geocenter correction, covariance, intrinsic-lag law, Stachie joint Lambda, or physical owner.",
+        "No microscopic dynamics, QFT/Yang--Mills/gravity identity, Pre-A, C6, A13, Sector-A, continuum, physical-vacuum, cosmic-origin, theory-of-everything, or mass-gap claim follows.",
+        "The established T-054 forward and T-059 inverse methods, owner order, and stopped-loop rules are unchanged."
+      ],
+      "provenance": "contemporaneous",
+      "question": "Does a synthetic primary, independent scalar, and hostile-fixture audit validate the finite public GTS likelihood semantics before any event or physical promotion?",
+      "recorded_at": "2026-08-30T11:40:23Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001312",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001311",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-08-30",
+      "schema": "tect/proof-exploration/1.0",
+      "source_audit": {
+        "dependency_boundary": "NumPy plus Python standard-library math/json/hashlib only; SciPy, Astropy, HEASARC/GDT, event files and response archives are not substituted.",
+        "fixture_role": "Tooling test oracle only; the six-channel counts, backgrounds and response matrix are not event measurements.",
+        "script": "verification/scripts/audit_gts_synthetic_owner.py",
+        "script_role": "Reproducible finite synthetic source-transcription audit; not an execution of the external GTS repository."
+      },
+      "stop_or_redesign": [
+        "If the external environment, event bytes or response templates cannot be hash-pinned, retain this result as synthetic code provenance and do not admit event-level HOLD-LC-001 ownership.",
+        "If external execution disagrees with this transcription, issue a new versioned correction and do not use either path for event scoring until the discrepancy is resolved.",
+        "If response indexing, calibration, propagation, covariance or timing ownership remains absent, report finite code evidence only and keep the branch parked at T0.",
+        "If an event run requires post hoc parameter or candidate-label choices, invalidate prospective credit and record the leakage as a new exploration."
+      ],
+      "task_id": "T-061",
+      "title": "HOLD-LC-001 synthetic GTS likelihood transcription audit",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",
