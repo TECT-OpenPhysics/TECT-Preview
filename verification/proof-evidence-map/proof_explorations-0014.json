@@ -4250,6 +4250,150 @@
       "task_id": "T-054",
       "title": "Conditional history-resolvent recurrence envelope",
       "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "axis": "defect-indexing",
+          "check": "Does the residual at step j receive kappa^(R-j)?",
+          "disposition": "DISMISSED: the direct recurrence and weighted convolution are checked with the exact step index."
+        },
+        {
+          "axis": "residual-substitution",
+          "check": "Does allowing delta_R silently manufacture the missing source-owned Q3 history?",
+          "disposition": "UPHELD-OPEN: recurrence, kappa, residual and defect envelope remain explicit owner hypotheses."
+        },
+        {
+          "axis": "resonant-denominator",
+          "check": "Does either kernel divide by zero at kappa=r or kappa=s?",
+          "disposition": "DISMISSED: source and defect resonances use R*x^(R-1)."
+        },
+        {
+          "axis": "threshold",
+          "check": "Can kappa=1, s=1, or a superunit base be admitted to vanishing?",
+          "disposition": "UPHELD-REJECTED: unit and superunit controls are retained outside the sufficient threshold."
+        },
+        {
+          "axis": "source-and-defect-constants",
+          "check": "Could A or D be fitted after seeing finite rows?",
+          "disposition": "DISMISSED: A is parent-derived; D and s are declared owner-side inputs."
+        },
+        {
+          "axis": "finite-to-infinite",
+          "check": "Could radius rows be read as an exhaustion theorem?",
+          "disposition": "UPHELD-OPEN: rows audit exact scalar algebra only."
+        },
+        {
+          "axis": "method-preservation",
+          "check": "Does the defect extension replace T-054 or alter T-059/T-061?",
+          "disposition": "DISMISSED: it is an additive robustness contract downstream of R-452."
+        },
+        {
+          "axis": "promotion-firewall",
+          "check": "Could a two-base envelope be promoted to physical or Clay closure?",
+          "disposition": "UPHELD-REJECTED: all downstream scope flags remain false."
+        }
+      ],
+      "assumptions": [
+        "R-452's scalar one-step history contract is the unchanged parent interface and R-451 supplies its geometric source envelope.",
+        "The actual source-owned history error and residual are nonnegative scalar quantities in one common norm or form domain.",
+        "A common kappa>=0 propagation coefficient and source constants A,r apply at every intended history depth and nested shape pair.",
+        "The residual obeys delta_R<=D*s^(R-1) with D>=0 and a common s>=0, or is supplied directly through the general weighted convolution.",
+        "The elementary scalar fact that a finite linear combination of bases strictly below one vanishes is used only after the recurrence estimate."
+      ],
+      "boundary": "R-453 proves an abstract implication only: an owner-supplied recurrence with a bounded nonnegative residual has a source-plus-defect convolution envelope, and the geometric special case vanishes when both propagation bases are strictly below one. It does not supply the recurrence, kappa, residual, common domain, exhaustion map, or any physical or continuum identification.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "This is the next non-duplicative T-054 analytic interface after R-452. It preserves the existing recurrence-resolvent method while making the owner obligation robust to a separately bounded residual, so an approximate Q3 history can be tested without inventing a finite mobility table or changing the owner order.",
+      "decision_scope": "T0 claim-nonbearing conditional defect-stable scalar recurrence and convolution. The result is a reusable admission contract only; it introduces no actual Q3 history, source owner, common domain, finite-grid extrapolation, physical selection, continuum limit, or tier change.",
+      "evidence_level": "T0 exact conditional defect-stable scalar history-resolvent envelope",
+      "evidence_refs": [
+        "strategy/pre-a-cp1-st8-q3lock-defect-stable-history-resolvent-manifest.json#theorem",
+        "strategy/pre-a-cp1-st8-q3lock-defect-stable-history-resolvent-certificate-260831.md#Exact execution",
+        "verification/scripts/pre_a_cp1_st8_q3lock_defect_stable_history_resolvent.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_defect_stable_history_resolvent_independent.py#run",
+        "codes/foundations/pre_a_cp1_st8_q3lock_defect_stable_history_resolvent_hostile.py#run",
+        "verification/scripts/pre_a_cp1_st8_q3lock_defect_stable_history_resolvent_verify.py#run",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-integrated-pre_a_cp1_st8_q3lock_defect_stable_history_resolvent/integrated.json#derived",
+        "verification/lean/Tect/R453.lean#defect_envelope_step"
+      ],
+      "finding": "The exact residual contribution at radius R is sum_(j=1)^R kappa^(R-j)*delta_j. If delta_j<=D*s^(j-1), the envelope is H_R<=A*S_R(kappa,r)+D*S_R(kappa,s), with a separate R*x^(R-1) branch whenever kappa=x. The sufficient scalar threshold is 0<=kappa<1 and 0<=s<1. Primary 29,752/29,752, independent 14,827/14,827, hostile 14/14, integrated 19/19, and Lean R453 pass. The source-owned recurrence, residual, common domain and all downstream physical/continuum gates remain open.",
+      "formal_integration": {
+        "events": [
+          "20260831-r-453-defect-stable-history-resolvent-2026-08-3"
+        ],
+        "negatives": [],
+        "no_new_negative": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "results": [
+          "R-453"
+        ]
+      },
+      "formal_refs": {
+        "events": [
+          "20260831-r-453-defect-stable-history-resolvent-2026-08-3"
+        ],
+        "negatives": [],
+        "results": [
+          "R-453"
+        ]
+      },
+      "gate_ids": [],
+      "id": "EXP-001326",
+      "method": [
+        "Load the hash-pinned R-452/R-451/R-450 parent contracts and recompute the inherited source decay r=q^4 and A=16*C4_edge*78^4 without fitting.",
+        "Unroll H_R<=kappa H_(R-1)+A*r^(R-1)+delta_R into the exact source kernel plus the step-indexed weighted residual convolution.",
+        "Specialize delta_R<=D*s^(R-1) and check the second closed-form kernel, including source and defect resonance branches.",
+        "Run exact-Fraction primary and non-importing independent checks over the declared radius/pair fixtures, hostile mutations, the integrated verifier and Lean R453.",
+        "Keep actual Q3 history, source-owned recurrence/defect, common domain, exhaustion, common-alpha, physical and continuum fields explicitly open."
+      ],
+      "missing_assumptions": [
+        "A source-owned Q3LOCK derivation of the recurrence, kappa<1, and the residual sequence or its common geometric bound.",
+        "A common unbounded operator or form domain for H_R and delta_R.",
+        "Source-, beta-, cutoff-, volume-, shape-, phase- and history-uniform constants and residual control.",
+        "A production all-shape exhaustion map identifying the same observable across shapes.",
+        "OS/KMS/GNS identification, common alpha, sector coercivity, physical-empty comparison, continuum, Yang--Mills and mass-gap conclusions."
+      ],
+      "next_action": "When a source-owned Q3 history arrives, instantiate its residual in the general convolution or geometric defect contract, then feed the resulting envelope to R-451. Until then, continue the unchanged T-054 owner-intake boundary and additive T-059/T-061 observation-source lock without another finite mobility or geometry table.",
+      "non_claims": [
+        "R-453 is not an actual source-owned Q3LOCK recurrence, residual sequence or common-domain theorem.",
+        "It is not an OS/KMS/GNS, common-alpha, physical-sector, continuum, Yang--Mills, mass-gap, Pre-A, Sector-A or Clay result.",
+        "The 65-radius rows are exact scalar checks and are not a finite-table substitute for an infinite limit.",
+        "The established T-054 forward method, T-059/T-061 inverse methods, owner order and promotion firewalls remain unchanged."
+      ],
+      "provenance": "contemporaneous",
+      "question": "If the source-owned history recurrence is only satisfied up to a nonnegative residual defect, what exact convolution envelope and vanishing threshold can be supplied to the unchanged R-452/R-451 interface?",
+      "recorded_at": "2026-08-31T00:00:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001325",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001324",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001323",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-08-31",
+      "schema": "tect/proof-exploration/1.0",
+      "schema_version": "1.0",
+      "stop_or_redesign": [
+        "If kappa>=1 or s>=1, retain only the exact conditional diagnostic and do not claim vanishing.",
+        "If the residual is not common-norm bounded, keep only the formal convolution identity and record the source mismatch.",
+        "If constants depend on shape, volume, cutoff, beta or history depth, do not call the envelope uniform.",
+        "If no common domain is supplied, do not convert the scalar bound into an operator or form theorem.",
+        "If a proposed use changes the established method or owner order, return to the continuity gate before proceeding."
+      ],
+      "task_id": "T-054",
+      "title": "Defect-stable history-resolvent recurrence envelope",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",

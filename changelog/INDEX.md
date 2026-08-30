@@ -5,7 +5,7 @@ Compact generated reader surface. The append-only authority is
 record 568 / commit `4db22f4e` and no longer grows.
 Post-cutover full bodies live exactly once in bounded pages under `pages/`.
 
-**801 accepted events** · latest 25 shown below · machine locator: `index.json`
+**802 accepted events** · latest 25 shown below · machine locator: `index.json`
 
 Search the complete authority without loading every page:
 
@@ -17,6 +17,7 @@ python verification/scripts/changelog.py search --text <phrase>
 
 | Date | Event | Claims | Full entry |
 |---|---|---|---|
+| 2026-08-31 | `20260831-r-453-defect-stable-history-resolvent-2026-08-3` — [R-453 defect-stable history-resolvent] - 2026-08-31 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000769-000818.md#20260831-r-453-defect-stable-history-resolvent-2026-08-3) |
 | 2026-08-31 | `20260831-r-452-conditional-history-resolvent-recurrence` — [R-452 conditional history-resolvent recurrence envelope] - 2026-08-31 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000769-000818.md#20260831-r-452-conditional-history-resolvent-recurrence) |
 | 2026-08-31 | `20260831-r-451-conditional-two-sided-history-cauchy-tran` — [R-451 conditional two-sided history Cauchy transfer] - 2026-08-31 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000769-000818.md#20260831-r-451-conditional-two-sided-history-cauchy-tran) |
 | 2026-08-31 | `20260831-r-450-conditional-two-orientation-shell-transfe` — [R-450 conditional two-orientation shell transfer] - 2026-08-31 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000769-000818.md#20260831-r-450-conditional-two-orientation-shell-transfe) |
@@ -41,7 +42,6 @@ python verification/scripts/changelog.py search --text <phrase>
 | 2026-08-30 | `20260830-r-438-metadata-correction-claim-links-2026-08-3` — [R-438 metadata correction (claim links)] - 2026-08-30 | C6-SPACETIME-SIGNATURE, EXP-001283, R-438 | [bounded page](pages/000769-000818.md#20260830-r-438-metadata-correction-claim-links-2026-08-3) |
 | 2026-08-30 | `20260830-r-438-original-source-interval-d-19-2026-08-30` — [R-438 original-source interval d=19] - 2026-08-30 | C6-SPACETIME-SIGNATURE,EXP-001283,R-438 | [bounded page](pages/000769-000818.md#20260830-r-438-original-source-interval-d-19-2026-08-30) |
 | 2026-08-30 | `20260830-r-437-fixed-support-cross-cutoff-boundary-2026` — [R-437 fixed-support cross-cutoff boundary] - 2026-08-30 | C6-SPACETIME-SIGNATURE, EXP-001282, R-437 | [bounded page](pages/000769-000818.md#20260830-r-437-fixed-support-cross-cutoff-boundary-2026) |
-| 2026-08-30 | `20260830-r-436-original-source-interval-d18-2026-08-30` — [R-436 original-source interval d18] - 2026-08-30 | C6-SPACETIME-SIGNATURE, EXP-001281, R-436 | [bounded page](pages/000769-000818.md#20260830-r-436-original-source-interval-d18-2026-08-30) |
 
 ## Post-cutover pages
 
@@ -49,7 +49,7 @@ Each full event body after the cutover occurs in exactly one page.
 
 | Ordinals | Events | Page |
 |---|---:|---|
-| 769–801 | 33 | [000769-000818.md](pages/000769-000818.md) |
+| 769–802 | 34 | [000769-000818.md](pages/000769-000818.md) |
 | 719–768 | 50 | [000719-000768.md](pages/000719-000768.md) |
 | 669–718 | 50 | [000669-000718.md](pages/000669-000718.md) |
 | 619–668 | 50 | [000619-000668.md](pages/000619-000668.md) |

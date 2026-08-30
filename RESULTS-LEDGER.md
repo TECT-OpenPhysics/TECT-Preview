@@ -22,6 +22,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-453](#r-453) | Defect-stable history-resolvent recurrence envelope | R-453 v1.0 is a T0 claim-nonbearing T-054 interface under EXP-001326. If the unchanged R-452 one-step history recurrence has a nonnegative residual `delta_R`, the exact contribution is `sum_(j=1)^R kappa^(R-j)*delta_j`; under `delta_R <= D*s^(R-1)` this gives `H_R <= A*S_R(kappa,r)+D*S_R(kappa,s)`, with separate resonant branches and sufficient threshold `0<=kappa<1`, `0<=s<1`. Primary 29752/29752, independent 14827/14827, hostile 14/14, integrated 19/19 and Lean R453 pass. The source-owned recurrence, residual, common domain, exhaustion, common alpha, physical, continuum, Yang--Mills and mass-gap gates remain open; existing methods and owner order are unchanged |
 | [R-452](#r-452) | Conditional history-resolvent recurrence envelope | R-452 v1.0 is a T0 claim-nonbearing T-054 interface under EXP-001325. If a source-owned total two-orientation fourth-power history error obeys `H_R <= kappa*H_(R-1) + A*r^(R-1)` with `H_0=0`, `r=(23/26)^4` and `A=16*C4_edge*78^4` inherited from R-451/R-450, the exact resolvent `S_R=sum kappa^(R-1-j)r^j` gives `H_R <= A*S_R`; both nonresonant and resonant branches are checked, and `kappa<1` is the sufficient vanishing threshold. Primary 1614/1614, independent 1572/1572, hostile 11/11, integrated 19/19 and Lean R452 pass. The owner recurrence, `kappa`, common domain, exhaustion, common alpha, physical, continuum, Yang--Mills and mass-gap gates remain open; existing methods and owner order are unchanged |
 | [R-451](#r-451) | Conditional two-sided history recurrence to all-shape exhaustion Cauchy transfer | R-451 v1.0 is a T0 claim-nonbearing T-054 interface under EXP-001324. Assuming the existing R-450 per-edge shell contract on one common L4 domain and a consistent two-sided additive history recurrence, the exact tail ratio is at most 23/26 from R=1 and `||Y_Lambda'-Y_Lambda||_4^4 <= 16*C4_edge*T(R)^4` for shapes agreeing through radius R-1; `T(R) <= 78*(23/26)^(R-1)` vanishes analytically. Primary 341/341, independent 332/332, hostile 9/9, integrated 19/19 and Lean R451 pass. The actual Q3 history, common domain, production exhaustion map, common alpha, physical, continuum, Yang--Mills and mass-gap gates remain open; the established method and owner order are unchanged |
 | [R-450](#r-450) | Conditional two-orientation state-weighted shell-tail transfer | R-450 v1.0 is a T0 claim-nonbearing T-054 interface under EXP-001323. Composing EXP-001320's conditional per-edge state-weighted L4 fourth-power bound with R-444/R-445 gives the root-free two-orientation tail envelope `B_+(R)^4+B_-(R)^4 <= 2*C4_edge*T(R)^4` over all 343 boxes, 102900 edges and 4116 radius rows. Primary 12742/12742, independent 12731/12731, hostile 9/9, integrated 19/19 and Lean R450 pass. The per-edge hypothesis, common domain, actual Q3 history, common alpha, physical, continuum, Yang--Mills and mass-gap gates remain open; the established method and owner order are unchanged |
@@ -772,6 +773,61 @@ exhaustion, physical-empty comparison, C6, Sector-A, Pre-A, Yang--Mills dynamics
 or a mass gap. No claim tier changes and no negative result is issued.
 
 **Proven in:** [R-444 certificate](strategy/pre-a-cp1-st8-q3lock-exponential-shell-tail-certificate-260830.md), [machine manifest](strategy/pre-a-cp1-st8-q3lock-exponential-shell-tail-manifest.json), [integrated run](claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-integrated-exponential_shell_tail/integrated.json), [exploration record](strategy/pre-a-cp1-st8-q3lock-exponential-shell-tail-exploration.json), and [Lean R444](verification/lean/Tect/R444.lean).
+<a id="r-453"></a>
+### R-453 -- Defect-stable history-resolvent recurrence envelope
+
+**Result ID.** `PA-CP1-ST8-Q3LOCK-DEFECT-STABLE-HISTORY-RESOLVENT-v0` (R-453).
+
+**Version and exact scope.** R-453 v1.0 is a T0, claim-nonbearing T-054
+interface under EXP-001326. It preserves the established forward method and
+the R-452/R-451 owner order while allowing an explicit nonnegative residual in
+the one-step history recurrence. With `H_0=0`,
+
+`H_R <= kappa*H_(R-1) + A*r^(R-1) + delta_R`,
+
+the exact source-plus-residual envelope is
+
+`H_R <= A*S_R(kappa,r) + sum_(j=1)^R kappa^(R-j)*delta_j`.
+
+If `delta_R <= D*s^(R-1)`, this becomes
+
+`H_R <= A*S_R(kappa,r) + D*S_R(kappa,s)`,
+
+where `r=(23/26)^4=279841/456976` and
+`A=16*C4_edge*78^4` are recomputed from R-451/R-450. For `kappa != x`,
+`S_R(kappa,x)=(kappa^R-x^R)/(kappa-x)`; at `kappa=x`,
+`S_R=R*x^(R-1)`. The sufficient scalar threshold is
+`0<=kappa<1` and `0<=s<1`.
+
+**Finding.** The residual is weighted by exactly `kappa^(R-j)`, so an owner
+may later submit either a direct residual sequence in the general convolution
+or a common geometric defect bound. Primary 29,752/29,752, independent
+14,827/14,827, hostile 14/14, integrated 19/19 and Lean R453 pass. The
+source-owned recurrence, residual, common domain, uniformity, exhaustion,
+common alpha, physical, continuum, Yang--Mills and mass-gap obligations remain
+open. The 65-radius rows are scalar identity checks only, not an exhaustion
+surrogate.
+
+**Assumptions.** R-452 is the unchanged scalar parent interface; the actual
+history error and residual are nonnegative common-norm quantities; `kappa`,
+`A`, `r`, and (when used) `D`, `s` are common across the intended owner domain;
+and the residual satisfies the declared bound. These are owner hypotheses,
+not supplied by R-453.
+
+**Adversarial review.** Residual indexing is checked directly; source and
+defect resonances use separate polynomial branches; unit and superunit bases
+are rejected by the threshold; `A` is parent-derived while `D,s` remain
+declared inputs; finite rows are not promoted to an infinite limit; and method,
+physical-identity, continuum and Clay promotion remain rejected.
+
+**Proven in:** [R-453 certificate](strategy/pre-a-cp1-st8-q3lock-defect-stable-history-resolvent-certificate-260831.md), [machine manifest](strategy/pre-a-cp1-st8-q3lock-defect-stable-history-resolvent-manifest.json), [primary script](verification/scripts/pre_a_cp1_st8_q3lock_defect_stable_history_resolvent.py), [independent script](codes/foundations/pre_a_cp1_st8_q3lock_defect_stable_history_resolvent_independent.py), [hostile script](codes/foundations/pre_a_cp1_st8_q3lock_defect_stable_history_resolvent_hostile.py), [integrated verifier](verification/scripts/pre_a_cp1_st8_q3lock_defect_stable_history_resolvent_verify.py), [integrated run](claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-integrated-pre_a_cp1_st8_q3lock_defect_stable_history_resolvent/integrated.json), [exploration record](strategy/pre-a-cp1-st8-q3lock-defect-stable-history-resolvent-exploration.json), and [Lean R453](verification/lean/Tect/R453.lean).
+
+**Next action.** When a source-owned Q3 history arrives, instantiate its
+residual in this convolution and feed the resulting envelope to R-451. Until
+then, continue the unchanged T-054 owner-intake boundary and additive
+T-059/T-061 observation-source lock without another finite mobility or
+geometry table. No claim tier changes, negative result, or PDF is issued.
+
 <a id="r-452"></a>
 ### R-452 -- Conditional history-resolvent recurrence envelope
 

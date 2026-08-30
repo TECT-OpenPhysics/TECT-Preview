@@ -5,10 +5,11 @@
 
 Authorities: `RESULTS-LEDGER.md`.
 
-**286 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
+**287 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
 
 | ID | Result | Tier/scope |
 |---|---|---|
+| [`R-453`](../RESULTS-LEDGER.md#r-453) | Defect-stable history-resolvent recurrence envelope | T0 |
 | [`R-452`](../RESULTS-LEDGER.md#r-452) | Conditional history-resolvent recurrence envelope | T0 |
 | [`R-451`](../RESULTS-LEDGER.md#r-451) | Conditional two-sided history recurrence to all-shape exhaustion Cauchy transfer | T0 |
 | [`R-450`](../RESULTS-LEDGER.md#r-450) | Conditional two-orientation state-weighted shell-tail transfer | T0 |
@@ -33,7 +34,6 @@ Authorities: `RESULTS-LEDGER.md`.
 | [`R-431`](../RESULTS-LEDGER.md#r-431) | Directed interval enclosure for the fixed rounded residual snapshot | T0 |
 | [`R-430`](../RESULTS-LEDGER.md#r-430) | Original-source point-precision audit (no interval) | T0 |
 | [`R-429`](../RESULTS-LEDGER.md#r-429) | Decimal precision uplift confirms the rounded-input residual boundary | T0 |
-| [`R-428`](../RESULTS-LEDGER.md#r-428) | High-cutoff residual-basis conditioning diagnostic (inconclusive) | T0 |
 
 Search without loading the full ledger:
 
