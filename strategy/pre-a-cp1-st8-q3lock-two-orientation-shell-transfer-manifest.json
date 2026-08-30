@@ -1,0 +1,178 @@
+{
+  "schema": "tect/pre-a-route-split/1.0",
+  "result_id": "R-450",
+  "candidate_id": "PA-CP1-ST8-Q3LOCK-TWO-ORIENTATION-SHELL-TRANSFER-v0",
+  "title": "Conditional two-orientation state-weighted shell-tail transfer",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "exploration_id": "EXP-001323",
+  "tier": "T0",
+  "claim_bearing": false,
+  "status": "TWO_ORIENTATION_SHELL_TRANSFER_AUDITED",
+  "parent_results": ["R-444", "R-445"],
+  "parent_explorations": ["EXP-001289", "EXP-001297", "EXP-001320"],
+  "parent_manifests": [
+    "strategy/pre-a-cp1-st8-q3lock-exponential-shell-tail-manifest.json",
+    "strategy/pre-a-cp1-st8-q3lock-scalar-operator-tail-transfer-manifest.json",
+    "strategy/pre-a-cp1-st8-q3lock-state-weighted-edge-majorant-composition-manifest.json"
+  ],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-ENERGY-WEIGHTED-COMMUTATOR-GEVREY-LR-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-FIRST-PASSAGE-BACKBONE-REAL-TIME-PRODUCT-AND-ENERGY-TAIL-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "question": "Given the already registered state-weighted per-edge fourth-power majorant and the exact rectangular shell tail, what two-orientation tail envelope follows without assuming an actual Q3 history or operator domain?",
+  "theorem": {
+    "edge_weight": "w(e)=2^(-||lower(e)||_1)",
+    "shell_tail": "T(R)=3*(4*R^2+8*R+14)*2^(1-R) for R>=1",
+    "conditional_input": "For each orientation sigma in {-1,+1}, ||X_(sigma,e)||_L4^4 <= C4_edge*w(e)^4",
+    "one_orientation_envelope": "B_sigma(R)=C4_edge^(1/4)*sum_(e:radius>=R) w(e)",
+    "two_orientation_envelope": "B_+(R)+B_-(R) <= 2*C4_edge^(1/4)*T(R)",
+    "root_free_certificate": "For each orientation B_sigma(R)^4 <= C4_edge*T(R)^4 and the two orientation fourth-power envelope is <= 2*C4_edge*T(R)^4"
+  },
+  "finite_fixture": {
+    "dimension": 3,
+    "box_side_min": 2,
+    "box_side_max": 8,
+    "tail_radius_min": 1,
+    "tail_radius_max": 12,
+    "orientation_count": 2,
+    "edge_set": "positive-coordinate nearest-neighbour edges in ordered rectangular boxes",
+    "weight": "2^(-l1_norm(lower_endpoint))",
+    "coefficient_weight_pairs_from_exp001320": [
+      {"coefficient": "1", "weight": "1"},
+      {"coefficient": "-1/2", "weight": "1/2"},
+      {"coefficient": "1/4", "weight": "1/4"},
+      {"coefficient": "-1/8", "weight": "1/8"},
+      {"coefficient": "1/3", "weight": "1/2"}
+    ],
+    "fixture_scope": "Exact rational shell and conditional-envelope audit; no new Gibbs trace, matrix evolution, or Q3 owner is introduced."
+  },
+  "scope": {
+    "parent_state_weighted_edge_majorant_reused": true,
+    "parent_scalar_shell_tail_reused": true,
+    "coefficient_weight_domination_checked": true,
+    "finite_box_two_orientation_envelope_closed": true,
+    "root_free_fourth_power_certificate_closed": true,
+    "actual_q3_per_edge_majorant_closed": false,
+    "actual_q3_history_identification_closed": false,
+    "common_weighted_operator_domain_closed": false,
+    "source_uniformity_beyond_parent_scope_closed": false,
+    "beta_uniformity_closed": false,
+    "volume_uniformity_beyond_parent_scope_closed": false,
+    "cutoff_uniformity_closed": false,
+    "direct_d_delta_d_cauchy_closed": false,
+    "exhaustion_independence_closed": false,
+    "common_alpha_closed": false,
+    "hamiltonian_os_identification_closed": false,
+    "kms_gns_gap_closed": false,
+    "continuum_closed": false,
+    "c6_closed": false,
+    "sector_a_closed": false,
+    "pre_a_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "assumptions": [
+    "The local-force fourth-power constant and endpoint third-moment bridge are used only in the finite parent scope of EXP-001320.",
+    "Every actual edge term supplied later must satisfy the stated per-edge L4 fourth-power majorant in both orientations.",
+    "The rectangular edge family and nonnegative lower-endpoint shell weight are exactly the R-444 contract.",
+    "The triangle inequality may be used for an eventual sum of L4 norms only after a common state/domain contract is supplied.",
+    "All derived constants and shell envelopes are recomputed from the parent manifests; no fitted spatial constant is introduced."
+  ],
+  "missing_assumptions": [
+    "A source-owned Q3LOCK history that supplies actual coefficients and per-edge terms for every edge and both orientations.",
+    "A common unbounded domain or form topology converting the finite L4 interface into the required Q3 seminorm.",
+    "Source-, beta-, cutoff-, volume-, shape-, phase- and history-uniform parent constants beyond the registered finite scopes.",
+    "A two-sided product/Volterra or Duhamel estimate, all-shape exhaustion Cauchy theorem and common-alpha identification.",
+    "OS/KMS/GNS identification, sector coercivity, physical-empty comparison, continuum, Yang--Mills and mass-gap conclusions."
+  ],
+  "adversarial_review": [
+    {
+      "axis": "conditional-majorant boundary",
+      "check": "The shell transfer starts from an explicit per-edge L4 fourth-power hypothesis and never asserts that exact Q3 history terms satisfy it.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "two-orientation accounting",
+      "check": "Both orientations are counted explicitly; the factor two is not hidden inside a fitted constant or identified with an adjoint history identity.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "finite-to-infinite boundary",
+      "check": "The [2,8]^3 boxes and radii 1..12 are an exact finite audit of the ambient scalar bound, not a thermodynamic or exhaustion limit.",
+      "disposition": "UPHELD-OPEN"
+    },
+    {
+      "axis": "root handling",
+      "check": "The primary certificate records the symbolic fourth root, while all machine inequalities are checked in root-free fourth-power form.",
+      "disposition": "UPHELD"
+    },
+    {
+      "axis": "method preservation",
+      "check": "The package composes existing T-054 R-444/R-445/EXP-001320 interfaces and does not alter the forward theorem order, candidate definitions, or additive inverse lane.",
+      "disposition": "DISMISSED"
+    },
+    {
+      "axis": "QFT promotion",
+      "check": "No common core, actual Q3 history, common alpha, OS/KMS/GNS, physical, continuum, Yang--Mills, or mass-gap flag is enabled.",
+      "disposition": "UPHELD-OPEN"
+    }
+  ],
+  "evidence_level": "T0 exact conditional two-orientation root-free fourth-power shell-envelope transfer",
+  "boundary": "This result supplies a reusable conditional shell envelope for two orientation families after an explicit per-edge state-weighted L4 majorant is assumed. It does not prove that exact Q3LOCK history terms satisfy that hypothesis, does not construct a common weighted operator domain, and does not close any thermodynamic, physical, continuum, Yang--Mills or mass-gap gate.",
+  "non_claims": [
+    "No actual Q3LOCK commutator or history term is shown to obey the per-edge hypothesis.",
+    "The fourth root is a symbolic envelope constant; the exact machine certificate is fourth-power only.",
+    "The finite rectangular audit is not an all-shape exhaustion or volume-limit theorem.",
+    "No operator norm, common core, Duhamel/Volterra, common alpha, OS/KMS/GNS, physical-empty, Sector-A, Pre-A, Yang--Mills or mass-gap conclusion follows.",
+    "The established T-054 forward method, owner order and observation-first inverse lane remain unchanged."
+  ],
+  "next_action": "Use this envelope only after a source-owned Q3 history supplies the per-edge L4 hypothesis on one common domain; then prove the actual two-sided history recurrence and all-shape exhaustion Cauchy estimate. Do not create another finite mobility table.",
+  "stop_or_redesign": [
+    "If a future per-edge term violates the coefficient or weight contract, record that history-local failure instead of enlarging C4 after target disclosure.",
+    "If an L4-to-operator/form conversion is unavailable, retain this as a conditional interface and do not promote it.",
+    "If parent shell geometry changes, recompute all tail rows from the new parent hash.",
+    "If a proposed use would change the established T-054 method or owner order, return to the continuity gate before proceeding."
+  ],
+  "lean_crosscheck": {
+    "path": "verification/lean/Tect/R450.lean",
+    "command": "lake env lean Tect/R450.lean",
+    "declarations": [
+      "two_orientation_fourth_split",
+      "shell_tail_r1",
+      "shell_tail_r2",
+      "coefficient_weight_fixture"
+    ],
+    "role": "Lean checks the exact orientation factor, shell-tail arithmetic and one coefficient-weight inequality; it does not formalize Q3 operators, domains, histories or limits."
+  },
+  "artifacts": {
+    "primary_script": "verification/scripts/pre_a_cp1_st8_q3lock_two_orientation_shell_transfer.py",
+    "independent_script": "codes/foundations/pre_a_cp1_st8_q3lock_two_orientation_shell_transfer_independent.py",
+    "hostile_script": "codes/foundations/pre_a_cp1_st8_q3lock_two_orientation_shell_transfer_hostile.py",
+    "integrated_verifier": "verification/scripts/pre_a_cp1_st8_q3lock_two_orientation_shell_transfer_verify.py",
+    "certificate": "strategy/pre-a-cp1-st8-q3lock-two-orientation-shell-transfer-certificate-260831.md",
+    "exploration": "strategy/pre-a-cp1-st8-q3lock-two-orientation-shell-transfer-exploration.json",
+    "lean": "verification/lean/Tect/R450.lean"
+  },
+  "formal_integration": {
+    "results": ["R-450"],
+    "negatives": [],
+    "event_ordinal": 799,
+    "event_title": "R-450 conditional two-orientation shell transfer",
+    "no_new_negative": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "method_preservation": {
+    "existing_forward_method_unchanged": true,
+    "observation_first_inverse_lane_additive": true,
+    "owner_order_unchanged": true,
+    "no_physical_promotion": true
+  },
+  "recorded_by": "Codex",
+  "provenance": "contemporaneous"
+}

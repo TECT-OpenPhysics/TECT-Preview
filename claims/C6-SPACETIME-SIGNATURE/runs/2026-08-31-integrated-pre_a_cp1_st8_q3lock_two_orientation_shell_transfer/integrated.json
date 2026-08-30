@@ -1,0 +1,286 @@
+{
+  "assertion_count": 19,
+  "assertions": [
+    {
+      "actual": [
+        "R-450",
+        "EXP-001323",
+        "T-054",
+        false,
+        "TWO_ORIENTATION_SHELL_TRANSFER_AUDITED"
+      ],
+      "expected": [
+        "R-450",
+        "EXP-001323",
+        "T-054",
+        false,
+        "TWO_ORIENTATION_SHELL_TRANSFER_AUDITED"
+      ],
+      "group": "provenance",
+      "name": "identity",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "existing_forward_method_unchanged": true,
+        "no_physical_promotion": true,
+        "observation_first_inverse_lane_additive": true,
+        "owner_order_unchanged": true
+      },
+      "expected": "all true",
+      "group": "method",
+      "name": "method firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "actual_q3_history_identification_closed": false,
+        "actual_q3_per_edge_majorant_closed": false,
+        "beta_uniformity_closed": false,
+        "c6_closed": false,
+        "coefficient_weight_domination_checked": true,
+        "common_alpha_closed": false,
+        "common_weighted_operator_domain_closed": false,
+        "continuum_closed": false,
+        "cutoff_uniformity_closed": false,
+        "direct_d_delta_d_cauchy_closed": false,
+        "exhaustion_independence_closed": false,
+        "finite_box_two_orientation_envelope_closed": true,
+        "hamiltonian_os_identification_closed": false,
+        "kms_gns_gap_closed": false,
+        "no_new_negative_result": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "parent_scalar_shell_tail_reused": true,
+        "parent_state_weighted_edge_majorant_reused": true,
+        "pre_a_closed": false,
+        "root_free_fourth_power_certificate_closed": true,
+        "sector_a_closed": false,
+        "source_uniformity_beyond_parent_scope_closed": false,
+        "volume_uniformity_beyond_parent_scope_closed": false
+      },
+      "expected": "all downstream false",
+      "group": "scope",
+      "name": "scope firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": "E:\\Dev\\TECT\\verification\\lean\\Tect\\R450.lean",
+      "expected": true,
+      "group": "Lean",
+      "name": "Lean source",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "two_orientation_fourth_split",
+        "shell_tail_r1",
+        "shell_tail_r2",
+        "coefficient_weight_fixture"
+      ],
+      "expected": "all present",
+      "group": "Lean",
+      "name": "Lean markers",
+      "status": "PASS"
+    },
+    {
+      "actual": "clean",
+      "expected": "forbidden absent",
+      "group": "Lean",
+      "name": "Lean forbidden tokens",
+      "status": "PASS"
+    },
+    {
+      "actual": "E:\\Dev\\TECT\\strategy\\pre-a-cp1-st8-q3lock-two-orientation-shell-transfer-manifest.json",
+      "expected": true,
+      "group": "artifacts",
+      "name": "artifact manifest",
+      "status": "PASS"
+    },
+    {
+      "actual": "E:\\Dev\\TECT\\verification\\scripts\\pre_a_cp1_st8_q3lock_two_orientation_shell_transfer.py",
+      "expected": true,
+      "group": "artifacts",
+      "name": "artifact primary",
+      "status": "PASS"
+    },
+    {
+      "actual": "E:\\Dev\\TECT\\codes\\foundations\\pre_a_cp1_st8_q3lock_two_orientation_shell_transfer_independent.py",
+      "expected": true,
+      "group": "artifacts",
+      "name": "artifact independent",
+      "status": "PASS"
+    },
+    {
+      "actual": "E:\\Dev\\TECT\\codes\\foundations\\pre_a_cp1_st8_q3lock_two_orientation_shell_transfer_hostile.py",
+      "expected": true,
+      "group": "artifacts",
+      "name": "artifact hostile",
+      "status": "PASS"
+    },
+    {
+      "actual": "E:\\Dev\\TECT\\verification\\scripts\\pre_a_cp1_st8_q3lock_two_orientation_shell_transfer_verify.py",
+      "expected": true,
+      "group": "artifacts",
+      "name": "artifact integrated",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-450 PRIMARY TWO_ORIENTATION_SHELL_TRANSFER_AUDITED 12742/12742 boxes=343 edges=102900 tail_rows=4116\n",
+      "expected": "TWO_ORIENTATION_SHELL_TRANSFER_AUDITED",
+      "group": "children",
+      "name": "primary child",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-450 INDEPENDENT TWO_ORIENTATION_SHELL_TRANSFER_AUDITED 12731/12731 boxes=343 edges=102900 tail_rows=4116\n",
+      "expected": "TWO_ORIENTATION_SHELL_TRANSFER_AUDITED",
+      "group": "children",
+      "name": "independent child",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-450 HOSTILE HOSTILE_MUTATIONS_REJECTED 9/9\n",
+      "expected": "HOSTILE_MUTATIONS_REJECTED",
+      "group": "children",
+      "name": "hostile child",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": "no import",
+      "group": "independence",
+      "name": "independent does not import primary",
+      "status": "PASS"
+    },
+    {
+      "actual": 9,
+      "expected": 9,
+      "group": "hostile",
+      "name": "hostile mutation count",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "A0": "2",
+        "C0": "5",
+        "C4_edge": "29115196389063882279731/77341623582720",
+        "D": "40/3",
+        "M_bridge": "1179",
+        "actual_q3_history_identification_closed": false,
+        "actual_q3_per_edge_majorant_closed": false,
+        "box_count": 343,
+        "common_alpha_closed": false,
+        "common_weighted_operator_domain_closed": false,
+        "finite_box_two_orientation_envelope_closed": true,
+        "force_constant": "122099/35840",
+        "m5": "3",
+        "maximum_finite_to_bound_ratio": "7209599/27262976",
+        "maximum_two_orientation_fourth_ratio": "2701745515163667972620121601/552450085344214781740529483776",
+        "orientation_count": 2,
+        "pre_a_closed": false,
+        "root_free_two_orientation_bound": "2*C4_edge*T(R)^4",
+        "sector_a_closed": false,
+        "tail_at_1": "78",
+        "tail_at_12": "1029/1024",
+        "tail_rows": 4116,
+        "total_edges": 102900
+      },
+      "expected": "closed/4116 rows",
+      "group": "children",
+      "name": "primary envelope",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "C4_edge": "29115196389063882279731/77341623582720",
+        "actual_q3_history_identification_closed": false,
+        "actual_q3_per_edge_majorant_closed": false,
+        "box_count": 343,
+        "common_alpha_closed": false,
+        "common_weighted_operator_domain_closed": false,
+        "finite_box_two_orientation_envelope_closed": true,
+        "maximum_finite_to_bound_ratio": "7209599/27262976",
+        "maximum_two_orientation_fourth_ratio": "2701745515163667972620121601/552450085344214781740529483776",
+        "orientation_count": 2,
+        "pre_a_closed": false,
+        "root_free_two_orientation_bound": "2*C4_edge*T(R)^4",
+        "sector_a_closed": false,
+        "tail_at_1": "78",
+        "tail_at_12": "1029/1024",
+        "tail_rows": 4116,
+        "total_edges": 102900
+      },
+      "expected": "closed/4116 rows",
+      "group": "children",
+      "name": "independent envelope",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "command": "lake env lean Tect/R450.lean",
+        "output": "",
+        "returncode": 0,
+        "status": "PASS"
+      },
+      "expected": "PASS",
+      "group": "Lean",
+      "name": "Lean run",
+      "status": "PASS"
+    }
+  ],
+  "assumptions": [
+    "The local-force fourth-power constant and endpoint third-moment bridge are used only in the finite parent scope of EXP-001320.",
+    "Every actual edge term supplied later must satisfy the stated per-edge L4 fourth-power majorant in both orientations.",
+    "The rectangular edge family and nonnegative lower-endpoint shell weight are exactly the R-444 contract.",
+    "The triangle inequality may be used for an eventual sum of L4 norms only after a common state/domain contract is supplied.",
+    "All derived constants and shell envelopes are recomputed from the parent manifests; no fitted spatial constant is introduced."
+  ],
+  "audit_id": "PA-CP1-ST8-Q3LOCK-TWO-ORIENTATION-SHELL-TRANSFER-v0",
+  "boundary": "This result supplies a reusable conditional shell envelope for two orientation families after an explicit per-edge state-weighted L4 majorant is assumed. It does not prove that exact Q3LOCK history terms satisfy that hypothesis, does not construct a common weighted operator domain, and does not close any thermodynamic, physical, continuum, Yang--Mills or mass-gap gate.",
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "derived": {
+    "actual_q3_history_identification_closed": false,
+    "actual_q3_per_edge_majorant_closed": false,
+    "common_alpha_closed": false,
+    "common_weighted_operator_domain_closed": false,
+    "pre_a_closed": false,
+    "sector_a_closed": false,
+    "two_orientation_transfer_closed": true
+  },
+  "evidence_level": "T0 exact conditional two-orientation root-free fourth-power shell-envelope transfer",
+  "exploration_id": "EXP-001323",
+  "lean": {
+    "command": "lake env lean Tect/R450.lean",
+    "output": "",
+    "returncode": 0,
+    "status": "PASS"
+  },
+  "missing_assumptions": [
+    "A source-owned Q3LOCK history that supplies actual coefficients and per-edge terms for every edge and both orientations.",
+    "A common unbounded domain or form topology converting the finite L4 interface into the required Q3 seminorm.",
+    "Source-, beta-, cutoff-, volume-, shape-, phase- and history-uniform parent constants beyond the registered finite scopes.",
+    "A two-sided product/Volterra or Duhamel estimate, all-shape exhaustion Cauchy theorem and common-alpha identification.",
+    "OS/KMS/GNS identification, sector coercivity, physical-empty comparison, continuum, Yang--Mills and mass-gap conclusions."
+  ],
+  "non_claims": [
+    "No actual Q3LOCK commutator or history term is shown to obey the per-edge hypothesis.",
+    "The fourth root is a symbolic envelope constant; the exact machine certificate is fourth-power only.",
+    "The finite rectangular audit is not an all-shape exhaustion or volume-limit theorem.",
+    "No operator norm, common core, Duhamel/Volterra, common alpha, OS/KMS/GNS, physical-empty, Sector-A, Pre-A, Yang--Mills or mass-gap conclusion follows.",
+    "The established T-054 forward method, owner order and observation-first inverse lane remain unchanged."
+  ],
+  "result_id": "R-450",
+  "run_kind": "integrated",
+  "schema": "tect/foundation-audit/1.0",
+  "source_hashes": {
+    "hostile": "a00d8005af38631d5d9d2a16c11eacf7f6eeb0da643291ab3d7c72704f6c8585",
+    "independent": "e80cfbe8d91e80ec20b8c01c9c250480919b73c39fa8fd1a8cf97e8f7e99c157",
+    "integrated": "6e578e898ba1aa68af1464b3532d94072f7127d700e2a4d22af23e8dde1189eb",
+    "lean": "760864b834fa02f7c6d164dc8a7e5a0a35426d9c206f052789e749476d3b1b08",
+    "manifest": "d6cae7901d1fa1826bce6b62e996d3ae0466c54e2dfc8a60c117ac00a5af58b7",
+    "primary": "260b427f673d097422d645ae84f035a92e925412c646c31237968da9eb47d452"
+  },
+  "task_id": "T-054",
+  "verdict": "PASS"
+}

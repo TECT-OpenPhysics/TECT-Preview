@@ -22,6 +22,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-450](#r-450) | Conditional two-orientation state-weighted shell-tail transfer | R-450 v1.0 is a T0 claim-nonbearing T-054 interface under EXP-001323. Composing EXP-001320's conditional per-edge state-weighted L4 fourth-power bound with R-444/R-445 gives the root-free two-orientation tail envelope `B_+(R)^4+B_-(R)^4 <= 2*C4_edge*T(R)^4` over all 343 boxes, 102900 edges and 4116 radius rows. Primary 12742/12742, independent 12731/12731, hostile 9/9, integrated 19/19 and Lean R450 pass. The per-edge hypothesis, common domain, actual Q3 history, common alpha, physical, continuum, Yang--Mills and mass-gap gates remain open; the established method and owner order are unchanged |
 | [R-449](#r-449) | Source-owner intake and physical/proof leakage audit | R-449 v1.0 is a T0 claim-nonbearing T-061 owner-intake audit under EXP-001322. The nine physical/proof owner slots remain unadmitted: R-192 first fails at heat_root_incidence, A2 is deterministic and incompatible with the stochastic/root-labelled production contract, R-448 leaves a non-identifiable unowned static class, and the T-061 F_reg/F_lim/F_eff/F_obs chain plus PROS-LOCK-001 remain incomplete. Primary 38/38, independent 21/21, hostile 8/8, integrated 35/35 and Lean R449 pass. Existing T-054/T-059 methods and owner order are unchanged; the owner branch is parked and no Pre-A, Sector-A, C6, QFT, Yang--Mills or mass-gap claim follows |
 | [R-448](#r-448) | Static-equivalence quotient and separating finite dynamic estimand | R-448 v1.0 is a T0 claim-nonbearing T-061 interface under EXP-001321. Equality of the registered static signature forms an explicit equivalence relation; two distinct positive finite representatives share that signature and are separated by the fixed one-step proxy at `(1,0)`. Primary 24/24, independent 11/11, hostile 8/8, integrated 29/29 and Lean R448 pass. Static data remain non-identifying; no source-owned dynamics, holdout prediction, physical, Pre-A, QFT, Yang--Mills or mass-gap claim follows |
 | [R-447](#r-447) | HOLD-LC-001 set-valued delay envelope interface | R-447 v1.0 is a T0 claim-nonbearing candidate-neutral feasibility audit under EXP-001299. The hash-pinned GW170817/GRB170817A timing packet is converted by exact rational interval subtraction into unweighted simultaneous `[169/100,179/100]`, ten-second `[-831/100,-821/100]`, and broad-exotic `[-99831/100,10179/100]` propagation-delay envelopes; primary 25/25, independent 13/13, hostile 12/12 and integrated 9/9 with Lean R447 pass. No likelihood, covariance, score, speed datum, candidate map, prospective credit, physical, Pre-A, Yang--Mills or mass-gap claim follows |
@@ -769,6 +770,52 @@ exhaustion, physical-empty comparison, C6, Sector-A, Pre-A, Yang--Mills dynamics
 or a mass gap. No claim tier changes and no negative result is issued.
 
 **Proven in:** [R-444 certificate](strategy/pre-a-cp1-st8-q3lock-exponential-shell-tail-certificate-260830.md), [machine manifest](strategy/pre-a-cp1-st8-q3lock-exponential-shell-tail-manifest.json), [integrated run](claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-integrated-exponential_shell_tail/integrated.json), [exploration record](strategy/pre-a-cp1-st8-q3lock-exponential-shell-tail-exploration.json), and [Lean R444](verification/lean/Tect/R444.lean).
+<a id="r-450"></a>
+### R-450 -- Conditional two-orientation state-weighted shell-tail transfer
+
+**Result ID.** `PA-CP1-ST8-Q3LOCK-TWO-ORIENTATION-SHELL-TRANSFER-v0` (R-450).
+
+**Version and exact scope.** R-450 v1.0 is a T0, claim-nonbearing T-054
+interface under EXP-001323. It composes the EXP-001320 conditional
+state-weighted per-edge fourth-power majorant with the R-444 scalar shell tail
+and the R-445 finite triangle-transfer contract. For each orientation
+`sigma in {-1,+1}`, the only input is
+`||X_(sigma,e)||_L4^4 <= C4_edge*w(e)^4`, with
+`w(e)=2^(-||lower(e)||_1)`. The root-free conclusion is
+`B_+(R)^4+B_-(R)^4 <= 2*C4_edge*T(R)^4`, where
+`T(R)=3*(4*R^2+8*R+14)*2^(1-R)`.
+
+**Finding.** The parent inputs recompute to
+`C4_edge=29115196389063882279731/77341623582720`. The primary exact lane
+passes `12742/12742` assertions over 343 ordered boxes, 102900 edges and 4116
+radius rows; the non-importing independent lane passes `12731/12731`; the
+hostile lane rejects `9/9` mutations; the integrated verifier passes `19/19`,
+and Lean R450 compiles. The two orientations are explicit, and all machine
+inequalities use exact fourth powers rather than a floating fourth root.
+
+**Assumptions and missing assumptions.** The per-edge state-weighted L4
+majorant, the nonnegative rectangular shell weight, and the finite triangle
+inequality are assumed exactly in their parent scopes. Missing are a
+source-owned Q3LOCK history, a common unbounded domain or form topology,
+source/beta/cutoff/volume/shape/phase/history-uniform constants, an actual
+two-sided history recurrence, all-shape exhaustion Cauchy, common alpha,
+OS/KMS/GNS identification, sector coercivity, physical-empty comparison,
+continuum, Yang--Mills and mass-gap closure.
+
+**Method and boundary.** This is a composition of existing T-054 interfaces;
+the established forward theorem order, owner order, and additive
+observation-first inverse lane are unchanged. It does not show that an exact
+Q3 history satisfies the per-edge hypothesis, does not construct a common
+weighted operator domain, and does not close any physical or continuum gate.
+No negative result, tier change or PDF is issued.
+
+**Proven in:** [R-450 manifest](strategy/pre-a-cp1-st8-q3lock-two-orientation-shell-transfer-manifest.json), [certificate](strategy/pre-a-cp1-st8-q3lock-two-orientation-shell-transfer-certificate-260831.md), [primary script](verification/scripts/pre_a_cp1_st8_q3lock_two_orientation_shell_transfer.py), [independent script](codes/foundations/pre_a_cp1_st8_q3lock_two_orientation_shell_transfer_independent.py), [hostile script](codes/foundations/pre_a_cp1_st8_q3lock_two_orientation_shell_transfer_hostile.py), [integrated verifier](verification/scripts/pre_a_cp1_st8_q3lock_two_orientation_shell_transfer_verify.py), [integrated run](claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-integrated-pre_a_cp1_st8_q3lock_two_orientation_shell_transfer/integrated.json), [exploration](strategy/pre-a-cp1-st8-q3lock-two-orientation-shell-transfer-exploration.json), and [Lean R450](verification/lean/Tect/R450.lean).
+
+**Next action.** Use R-450 only after a source-owned Q3 history supplies the
+per-edge hypothesis on one common domain; then prove the actual two-sided
+history recurrence and all-shape exhaustion Cauchy estimate. Do not create
+another finite mobility table.
+
 <a id="r-449"></a>
 ### R-449 -- Source-owner intake and physical/proof leakage audit
 

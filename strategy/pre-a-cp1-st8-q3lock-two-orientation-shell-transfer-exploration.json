@@ -1,0 +1,75 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "id": "EXP-001323",
+  "recorded_at": "2026-08-31T00:30:00Z",
+  "reviewed_on": "2026-08-31",
+  "recorded_by": "Codex",
+  "provenance": "contemporaneous",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-ENERGY-WEIGHTED-COMMUTATOR-GEVREY-LR-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-FIRST-PASSAGE-BACKBONE-REAL-TIME-PRODUCT-AND-ENERGY-TAIL-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "title": "Conditional two-orientation state-weighted shell-tail transfer",
+  "question": "Given the already registered state-weighted per-edge fourth-power majorant and the exact rectangular shell tail, what two-orientation tail envelope follows without assuming an actual Q3 history or operator domain?",
+  "method": [
+    "Load the hash-pinned EXP-001320 edge-majorant, R-444 shell-tail, and R-445 transfer contracts plus their force/moment parents.",
+    "Recompute C4_edge from the force constant, endpoint bridge and D=max(1,8/g); do not copy a fitted spatial or operator constant.",
+    "Enumerate every positive-coordinate edge in all ordered boxes with side lengths 2 through 8, and check the exact R-444 tail for radii 1 through 12.",
+    "Apply the per-edge hypothesis independently to both orientations and verify the root-free fourth-power envelope 2*C4_edge*T(R)^4.",
+    "Check the coefficient/weight domination rows, a non-importing independent reconstruction, nine hostile mutations, the integrated verifier, and Lean R450 arithmetic."
+  ],
+  "finding": "The conditional two-orientation shell transfer is exact in the declared finite contract. The primary lane passes 12742/12742 assertions over 343 boxes, 102900 edges and 4116 radius rows; the independent lane passes 12731/12731; the hostile lane rejects 9/9 mutations; the integrated lane passes 19/19 and Lean R450 compiles. The derived root-free envelope is B_+(R)^4+B_-(R)^4 <= 2*C4_edge*T(R)^4, with C4_edge=29115196389063882279731/77341623582720. This remains conditional on an actual per-edge state-weighted L4 majorant and supplies no Q3 history or operator-domain theorem.",
+  "decision_reason": "This is the first additive forward checkpoint after EXP-001322 that closes a named two-orientation shell-envelope interface rather than repeating an owner audit or finite mobility table. It composes existing T-054 R-444/R-445/EXP-001320 inputs, preserves the established theorem order and owner boundary, and leaves the actual common-domain/history obligation explicit.",
+  "boundary": "T0 claim-nonbearing exact conditional two-orientation root-free fourth-power shell-envelope transfer only. No actual Q3 per-edge majorant, common weighted domain, Duhamel/Volterra convergence, exhaustion, common alpha, OS/KMS/GNS, physical sector, continuum, Yang--Mills or mass-gap conclusion follows.",
+  "evidence_level": "T0 exact conditional two-orientation root-free fourth-power shell-envelope transfer",
+  "evidence_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-two-orientation-shell-transfer-manifest.json#theorem",
+    "strategy/pre-a-cp1-st8-q3lock-two-orientation-shell-transfer-certificate-260831.md#Exact execution",
+    "verification/scripts/pre_a_cp1_st8_q3lock_two_orientation_shell_transfer.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_two_orientation_shell_transfer_independent.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_two_orientation_shell_transfer_hostile.py#run",
+    "verification/scripts/pre_a_cp1_st8_q3lock_two_orientation_shell_transfer_verify.py#run",
+    "verification/lean/Tect/R450.lean#two_orientation_fourth_split",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-integrated-pre_a_cp1_st8_q3lock_two_orientation_shell_transfer/integrated.json#derived"
+  ],
+  "formal_refs": {
+    "results": ["R-450"],
+    "negatives": [],
+    "events": ["20260831-r-450-conditional-two-orientation-shell-transfe"]
+  },
+  "related": [
+    {"id": "EXP-001322", "relation": "continues"},
+    {"id": "EXP-001320", "relation": "continues"},
+    {"id": "EXP-001289", "relation": "continues"},
+    {"id": "EXP-001297", "relation": "continues"}
+  ],
+  "adversarial_review": [
+    {"axis": "conditional-majorant boundary", "check": "The per-edge L4 fourth-power inequality remains an explicit input and is never relabelled as an exact-Q3 result.", "disposition": "UPHELD-OPEN"},
+    {"axis": "orientation accounting", "check": "Both orientations are counted explicitly and the factor two is exposed in the root-free fourth-power formula.", "disposition": "UPHELD"},
+    {"axis": "finite-to-infinite boundary", "check": "The [2,8]^3 box sweep is finite and does not supply an exhaustion or thermodynamic limit.", "disposition": "UPHELD-OPEN"},
+    {"axis": "root handling", "check": "All machine inequalities are checked with exact rational fourth powers; no floating fourth root is used as evidence.", "disposition": "UPHELD"},
+    {"axis": "method preservation", "check": "Only existing R-444/R-445/EXP-001320 contracts are composed; the T-054 theorem order and additive inverse lane are unchanged.", "disposition": "DISMISSED"},
+    {"axis": "QFT promotion", "check": "Actual Q3 history, common domain, common alpha, physical, continuum and Yang--Mills flags remain false.", "disposition": "UPHELD-OPEN"}
+  ],
+  "missing_assumptions": [
+    "A source-owned Q3LOCK history with actual per-edge terms in both orientations.",
+    "A common unbounded domain or form topology for the L4 estimate.",
+    "Source-, beta-, cutoff-, volume-, shape-, phase- and history-uniform constants.",
+    "A two-sided history recurrence, Duhamel/Volterra estimate and all-shape exhaustion theorem.",
+    "OS/KMS/GNS identification, sector coercivity, physical-empty comparison, continuum and Yang--Mills/mass-gap closure."
+  ],
+  "next_action": "Use R-450 only as a conditional input after a source-owned Q3 history supplies the per-edge hypothesis on one common domain; then prove the actual two-sided recurrence and all-shape exhaustion Cauchy estimate. Preserve the parked owner branch and do not emit another finite mobility table.",
+  "stop_or_redesign": [
+    "If a future history coefficient violates |a_e|<=w(e), record the local failure rather than enlarging C4 after target disclosure.",
+    "If L4-to-operator/form conversion is unavailable, keep this as a conditional interface.",
+    "If parent shell geometry changes, recompute all rows from the new hash.",
+    "If a proposed use changes the established method or owner order, return to the continuity gate before proceeding."
+  ],
+  "verdict": "advanced",
+  "provenance_note": "This checkpoint records a reusable interface and preserves the existing research method; it is not a claim-tier change."
+}
