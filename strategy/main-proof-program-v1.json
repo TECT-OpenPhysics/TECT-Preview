@@ -514,13 +514,21 @@
     "authority_state": "VERIFIED_PENDING_WORKTREE_NOT_YET_DURABLE_GIT_OR_REMOTE_AUTHORITY"
   },
   "completion_checkpoint": {
-    "status": "PENDING",
-    "verified_parent_head": null,
-    "verified_at_utc": null,
+    "status": "COMPLETE",
+    "verified_parent_head": "3caa3b4d05ff32b0f3e8a7b4449a8bedeaea1187",
+    "verified_at_utc": "2026-08-30T08:53:03Z",
     "branch": "main",
     "remote": "tect",
     "remote_ref": "refs/heads/main",
-    "expected_authority_counts": null,
+    "expected_authority_counts": {
+      "claims": 49,
+      "gates_and_hypotheses": 208,
+      "results": 281,
+      "negative_records": 375,
+      "explorations": 1303,
+      "changelog_events": 796,
+      "tasks": 61
+    },
     "requirements": [
       "doctor PASS",
       "release_check PASS",
@@ -553,7 +561,10 @@
       "The release-gated T-061 estimator-contract commit 3a6d491e84f0ab629d8a6049c56bfe2ff89b2950 was created after release_check PASS.",
       "git push tect main advanced refs/heads/main to 3a6d491e84f0ab629d8a6049c56bfe2ff89b2950, and live git ls-remote returned the same SHA.",
       "EXP-001302 is now durable in the append-only ledger; the candidate-neutral estimator remains design-only with scoring and prospective validation stopped.",
-      "EXP-001303 is staged as an additive T0 source-metadata audit; the completion checkpoint is pending until release-gated commit and remote verification complete."
+      "EXP-001303 is staged as an additive T0 source-metadata audit; the completion checkpoint is pending until release-gated commit and remote verification complete.",
+      "The release-gated T-061 metadata-audit commit 3caa3b4d05ff32b0f3e8a7b4449a8bedeaea1187 was created after release_check PASS.",
+      "git push tect main advanced refs/heads/main to 3caa3b4d05ff32b0f3e8a7b4449a8bedeaea1187, and live git ls-remote returned the same SHA.",
+      "EXP-001303 independently rechecks the nine event bytes, extracts descriptive source headers, and rejects a mutated expected hash; no statistical or method promotion occurred."
     ]
   },
   "stopped_loop_registry": [
