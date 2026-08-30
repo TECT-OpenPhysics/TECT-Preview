@@ -1645,6 +1645,220 @@
       "task_id": "T-061",
       "title": "HOLD-LC-001 response-selection option set and time-coordinate owner gap",
       "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "axis": "summary-as-likelihood",
+          "check": "Could 1.74 +/- 0.05 s be silently inserted as a Gaussian observation?",
+          "disposition": "UPHELD-BLOCKED: the value remains a retrospective descriptive anchor; likelihood and covariance are explicitly not admitted."
+        },
+        {
+          "axis": "position-correction-as-algorithm",
+          "check": "Could the phrase 'based on the position of the optical transient' be treated as a reproducible detector-to-geocenter propagation implementation with zero missing uncertainty?",
+          "disposition": "UPHELD-BLOCKED: the required spacecraft-state, frame, interpolation and uncertainty fields remain unfilled at the inspected source scope."
+        },
+        {
+          "axis": "pulse-fit-as-universal-estimator",
+          "check": "Could the named parameterized pulse fit be treated as a candidate-neutral onset law without its fit interval, background, detector selection and covariance?",
+          "disposition": "UPHELD-BLOCKED: the fit description is recorded, but the complete estimator owner packet is still required."
+        },
+        {
+          "axis": "window-leakage",
+          "check": "Could the published standard spectral interval be selected after seeing candidate residuals and then receive predictive credit?",
+          "disposition": "UPHELD-BLOCKED: the interval is retrospective provenance only and cannot populate the prospective lock or scorer."
+        },
+        {
+          "axis": "method-overhaul",
+          "check": "Could this publication crosswalk replace the established T-054 or T-059 method?",
+          "disposition": "DISMISSED: the card is additive T-061 source-owner intake and preserves the existing methods, owner order and parked-loop rules."
+        }
+      ],
+      "assumptions": [
+        "The cited LIGO paper and linked GBM paper are authoritative retrospective summaries for the recorded event at the retrieval date.",
+        "A reported central value and confidence interval can be retained as a descriptive anchor without being treated as a source likelihood.",
+        "The exact local HOLD-LC-001 contracts and parent hashes remain authoritative for admission fields and promotion boundaries.",
+        "The absence statement is limited to the inspected primary locators; it does not assert that no supplementary implementation exists elsewhere."
+      ],
+      "boundary": "EXP-001309 is a T0 retrospective primary-source crosswalk. It does not admit a response value, calibration-validity rule, detector-to-geocenter implementation, likelihood, covariance, intrinsic-emission nuisance law, F_reg/F_lim/F_eff/F_obs map, candidate, score, prospective prediction, microscopic dynamics, physical identity, continuum result, Reading-H sign, Pre-A closure or mass-gap conclusion.",
+      "checks": [
+        {
+          "detail": "The primary paper locator explicitly reports the pulse-fit onset, Fermi/geocenter offset, corrected delay, confidence convention and standard spectral interval.",
+          "finding": "PASS",
+          "id": "primary-summary-extraction"
+        },
+        {
+          "detail": "The reported quantities map to estimator fields, but the inspected source scope does not fill the complete algorithm, covariance, calibration or nuisance-owner contract.",
+          "finding": "PASS-WITH-ADMISSION-STOP",
+          "id": "summary-to-owner-crosswalk"
+        },
+        {
+          "detail": "The event-level numbers remain retrospective and receive no likelihood, scorer or prospective-holdout credit.",
+          "finding": "PASS",
+          "id": "retrospective-leakage"
+        },
+        {
+          "detail": "The established T-054 forward method, additive T-059 inverse method, owner order and parked-loop registry are unchanged.",
+          "finding": "PASS",
+          "id": "method-preservation"
+        }
+      ],
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "This is a new primary-source timing-summary crosswalk that separates published anchor values from the missing physical-owner algorithm and uncertainty fields; it is not a repeated generic owner search and does not replace either research method.",
+      "decision_scope": "T0 primary publication provenance and source-owner gap refinement only; no statistical test, candidate map, dynamic identification, physical identity or empirical prediction.",
+      "evidence_level": "T0 primary publication provenance plus hash-pinned local estimator/owner contracts; no model or statistical test",
+      "evidence_refs": [
+        "strategy/hold-lc-001-estimator-contract-v0.1.json#estimand_contract",
+        "strategy/hold-lc-001-response-owner-request-v0.1.json#required_physical_owner_fields",
+        "strategy/hold-lc-001-response-option-time-gap-exploration.json#official_sources"
+      ],
+      "exact_scope": {
+        "data_role": "RETROSPECTIVE",
+        "finite_scope": "Published timing-summary provenance and source-owner reproducibility audit only; no raw response matrix, likelihood, covariance, candidate map, score, continuum limit or prospective validation.",
+        "holdout_id": "HOLD-LC-001",
+        "lineage_group": "GW170817-GRB170817A",
+        "method_scope": "Additive T-061 P1 source-owner intake refinement; no change to T-054/T-059 methods, owner order or promotion firewalls.",
+        "parent_contracts": [
+          {
+            "path": "strategy/hold-lc-001-estimator-contract-v0.1.json",
+            "sha256": "f2d3be523c9e24fe8e84673dc486f0bf17799ceba9702afd638a0bf2096ddf94"
+          },
+          {
+            "path": "strategy/hold-lc-001-response-owner-request-v0.1.json",
+            "sha256": "ca67f0d274256389c22edab384b6dd386e4ad2607344107fcfdffabcfcb90dcd"
+          },
+          {
+            "path": "strategy/hold-lc-001-response-option-time-gap-exploration.json",
+            "sha256": "caa9250578896663da492347d593c3bbfda279700491b1383539fe23facd22e4"
+          }
+        ]
+      },
+      "finding": "The primary publication supplies a useful retrospective timing anchor and a named pulse-fit and position-based correction summary, but the inspected source scope does not yet constitute the source-owned, independently reproducible F_reg object required for candidate comparison. The result therefore advances provenance and makes the exact reproducibility gap explicit while keeping response values, likelihood/covariance, nuisance treatment, scoring and prospective validation locked.",
+      "formal_integration": {
+        "events": [],
+        "negatives": [],
+        "no_changelog_event": true,
+        "no_new_negative": true,
+        "no_new_result": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "results": []
+      },
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": []
+      },
+      "gate_ids": [
+        "PA-INVERSE-OBSERVATION-TARGET-MAP-HOLDOUT-FREEZE",
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001309",
+      "method": [
+        "Read the primary LIGO-P1700308 GW170817/GRB170817A paper and the Goldstein et al. GBM paper locator as retrospective source summaries, recording the retrieval date and bounded locators.",
+        "Extract only the paper's stated pulse-fit reference, Fermi-to-geocenter arrival offset, corrected GW/GBM delay, confidence convention and standard spectral interval; do not infer unreported likelihood, covariance or response values.",
+        "Crosswalk each reported quantity against the hash-pinned HOLD-LC-001 estimator and response-owner contracts, distinguishing a published descriptive anchor from a reproducible physical-owner algorithm and uncertainty budget.",
+        "Run an adversarial leakage and ownership review; preserve T-054/T-059 methods, owner order and stopped-loop rules without scoring candidates or populating F_reg/F_lim/F_eff/F_obs."
+      ],
+      "missing_assumptions": [
+        "A versioned owner packet for the pulse-fit and onset estimator, including background, detector/energy selection and covariance.",
+        "A source-owned detector-to-geocenter propagation algorithm, ephemeris/attitude interpolation and Earth-orientation convention.",
+        "A decomposed and independently reproducible timing uncertainty/covariance budget.",
+        "Complete response-validity, calibration, GW merger-time, GBM window, likelihood/covariance and intrinsic-lag ownership.",
+        "A sealed prospective holdout and immutable candidate-neutral scorer."
+      ],
+      "next_action": "Use EXP-001309 to request or locate the versioned pulse-onset, detector-to-geocenter and uncertainty owner artefacts. Until those fields are frozen and independently reproduced, keep the published timing numbers retrospective-only, keep response values and scoring locked, and continue unchanged T-054 owner intake in parallel.",
+      "non_claims": [
+        "The published 1.74 +/- 0.05 s summary is not a likelihood, covariance, candidate score or prospective prediction.",
+        "The 3.176 ms position-based statement is not by itself a reproducible detector-to-geocenter algorithm or uncertainty budget.",
+        "The parameterized pulse-fit description does not by itself define a complete candidate-neutral estimator.",
+        "No microscopic dynamics, QFT/Yang-Mills/gravity identity, Pre-A, C6, A13, Sector-A, continuum, physical-vacuum, cosmic-origin, theory-of-everything or mass-gap claim is established.",
+        "The established T-054 forward and T-059 inverse methods are unchanged; this is additive source-owner intake, not a replacement."
+      ],
+      "official_sources": [
+        {
+          "id": "LIGO-P1700308-REV8",
+          "locator": "pages 10-11, extracted lines 649-672; page 6, lines 392-395",
+          "owner_boundary": "The inspected locator is a retrospective published summary. It does not, at the cited lines, provide the complete detector-state interpolation, geocenter propagation algorithm, component/shared uncertainty decomposition, raw joint likelihood/covariance or intrinsic-emission-lag law required by HOLD-LC-001 admission.",
+          "retrieved_on": "2026-08-30",
+          "semantic_finding": "The paper reports a parameterized-fit gamma-ray onset of 0.310 +/- 0.048 s before the GBM trigger, a 3.176 ms earlier arrival at Fermi than geocenter based on the optical-transient position, and a corrected start relative to the GW trigger of (+1.74 +/- 0.05) s at 68% confidence. It also gives a standard 256 ms spectral interval from T0_GBM-0.192 s to T0_GBM+0.064 s.",
+          "url": "https://dcc.ligo.org/public/0145/P1700308/008/LIGO-P1700308.pdf"
+        },
+        {
+          "id": "GOLDSTEIN-GBM-1710.05446",
+          "locator": "abstract and linked published record",
+          "owner_boundary": "Reference linkage only; no numerical timing likelihood, covariance or source-owner implementation is imported from the abstract.",
+          "retrieved_on": "2026-08-30",
+          "semantic_finding": "The GBM paper is retained as a primary event-analysis reference for the event's prompt-emission analysis and product lineage crosswalk.",
+          "url": "https://arxiv.org/abs/1710.05446"
+        }
+      ],
+      "owner_crosswalk": {
+        "available_from_inspected_primary_scope": [
+          "A named main-pulse parameterized-fit description and its reported onset summary.",
+          "A reported Fermi-versus-geocenter arrival offset tied to the optical-transient position.",
+          "A corrected event-level GW-to-GBM start delay and stated 68% confidence convention.",
+          "A published standard spectral-analysis time interval."
+        ],
+        "classification": "RETROSPECTIVE_ANCHOR_NOT_SOURCE_OWNER",
+        "still_missing_for_source_owned_f_reg": [
+          "The exact pulse-fit functional, fit interval, background model, detector/energy selection, parameter covariance and onset decision rule in a versioned reproducible packet.",
+          "The spacecraft position/attitude and ephemeris inputs, interpolation rules, reference frame, Earth-orientation convention and detector-to-geocenter propagation algorithm that produce the 3.176 ms correction.",
+          "A decomposed uncertainty budget for the propagation correction, GW merger time, GBM onset, calibration and shared source/selection terms, with an independently reproducible covariance object.",
+          "The source-owned GW strain calibration and merger-time estimator version and the GBM background/window/response-validity owner fields.",
+          "An intrinsic-emission-lag nuisance law or preregistered set-valued scoring rule, followed by a sealed holdout and candidate-neutral F_reg artefact."
+        ]
+      },
+      "provenance": "contemporaneous",
+      "published_anchor": {
+        "arrival_offset_description": "the paper states that the signal arrives at Fermi 3.176 ms before geocenter based on the optical-transient position",
+        "arrival_offset_fermi_minus_geocenter_seconds": -0.003176,
+        "corrected_gw_to_gbm_start_delay_seconds": 1.74,
+        "corrected_gw_to_gbm_start_uncertainty_seconds": 0.05,
+        "covariance_admitted": false,
+        "likelihood_admitted": false,
+        "prospective_credit": false,
+        "pulse_fit_description": "parameterized function fit to the main GBM pulse",
+        "pulse_fit_onset_before_gbm_trigger_seconds": 0.31,
+        "pulse_fit_onset_uncertainty_seconds": 0.048,
+        "reported_confidence": 0.68,
+        "role": "RETROSPECTIVE_DESCRIPTIVE_ANCHOR_ONLY",
+        "standard_spectral_interval_seconds_relative_to_gbm_trigger": {
+          "duration": 0.256,
+          "start": -0.192,
+          "stop": 0.064
+        }
+      },
+      "question": "Can the published GW170817/GRB170817A timing summary be admitted as a source-owned candidate-neutral F_reg object, or does the inspected primary source remain a retrospective anchor requiring a separate owner packet?",
+      "recorded_at": "2026-08-30T10:39:43Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001308",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001307",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001304",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-08-30",
+      "schema": "tect/proof-exploration/1.0",
+      "stop_or_redesign": [
+        "If no new source-owned algorithm or hash-pinned implementation is found, keep HOLD-LC-001 at provenance/design-only and do not issue another equivalent timing-summary card.",
+        "If a later source packet changes the response or timing rule after target disclosure, invalidate prospective credit and version the packet anew.",
+        "If the decomposed uncertainty or covariance cannot be reproduced, report finite provenance only rather than a statistical admission.",
+        "If no admitted dynamic observable separates a static-equivalence class, report NONIDENTIFIABLE rather than selecting a representative."
+      ],
+      "task_id": "T-061",
+      "title": "HOLD-LC-001 published timing summary versus source-owner reproducibility gap",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",
