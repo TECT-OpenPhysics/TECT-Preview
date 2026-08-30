@@ -1,0 +1,144 @@
+{
+  "assertion_count": 13,
+  "assertions": [
+    {
+      "actual": "['HOLD-LC-001', 'T-061']",
+      "expected": "HOLD-LC-001/T-061",
+      "group": "provenance",
+      "name": "contract identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "SET_VALUED_FEASIBILITY_ONLY_NOT_SCORED",
+      "expected": "SET_VALUED_FEASIBILITY_ONLY_NOT_SCORED",
+      "group": "scope",
+      "name": "contract status",
+      "status": "PASS"
+    },
+    {
+      "actual": "5d22aeaf11ffdee6614580a537e801b2e7e2dd227194ecdb35a65b601e1daa4b",
+      "expected": "5d22aeaf11ffdee6614580a537e801b2e7e2dd227194ecdb35a65b601e1daa4b",
+      "group": "provenance",
+      "name": "contract hash",
+      "status": "PASS"
+    },
+    {
+      "actual": "bf06bd2ae6a23cf7f7092307677c2b681ce02abab3b5bbe37bbce76a8960140a",
+      "expected": "bf06bd2ae6a23cf7f7092307677c2b681ce02abab3b5bbe37bbce76a8960140a",
+      "group": "provenance",
+      "name": "source hash",
+      "status": "PASS"
+    },
+    {
+      "actual": "[Fraction(169, 100), Fraction(179, 100)]",
+      "expected": "169/100 <= 179/100",
+      "group": "interval",
+      "name": "display interval",
+      "status": "PASS"
+    },
+    {
+      "actual": "(Fraction(169, 100), Fraction(179, 100))",
+      "expected": "{'lower': '169/100', 'upper': '179/100'}",
+      "group": "interval",
+      "name": "scenario simultaneous",
+      "status": "PASS"
+    },
+    {
+      "actual": "(Fraction(-831, 100), Fraction(-821, 100))",
+      "expected": "{'lower': '-831/100', 'upper': '-821/100'}",
+      "group": "interval",
+      "name": "scenario ten_second",
+      "status": "PASS"
+    },
+    {
+      "actual": "(Fraction(-99831, 100), Fraction(10179, 100))",
+      "expected": "{'lower': '-99831/100', 'upper': '10179/100'}",
+      "group": "interval",
+      "name": "scenario broad_exotic",
+      "status": "PASS"
+    },
+    {
+      "actual": "(Fraction(-99831, 100), Fraction(10179, 100))",
+      "expected": "{'lower': '-99831/100', 'upper': '10179/100', 'semantics': 'unweighted union envelope for feasibility intersection only'}",
+      "group": "interval",
+      "name": "union",
+      "status": "PASS"
+    },
+    {
+      "actual": "(Fraction(-99831, 100), Fraction(10179, 100))",
+      "expected": "(Fraction(169, 100), Fraction(179, 100))",
+      "group": "containment",
+      "name": "broad contains simultaneous",
+      "status": "PASS"
+    },
+    {
+      "actual": "(Fraction(-99831, 100), Fraction(10179, 100))",
+      "expected": "(Fraction(-831, 100), Fraction(-821, 100))",
+      "group": "containment",
+      "name": "broad contains ten second",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'feasibility_intersection_allowed': True, 'likelihood_admitted': False, 'covariance_admitted': False, 'aggregate_scoring_allowed': False, 'prospective_credit': False, 'forward_map_stages': {'F_reg': 'NOT_ADMITTED', 'F_lim': 'NOT_ADMITTED', 'F_eff': 'NOT_ADMITTED', 'F_obs': 'NOT_ADMITTED'}}",
+      "expected": "all false",
+      "group": "firewall",
+      "name": "score firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'F_reg': 'NOT_ADMITTED', 'F_lim': 'NOT_ADMITTED', 'F_eff': 'NOT_ADMITTED', 'F_obs': 'NOT_ADMITTED'}",
+      "expected": "NOT_ADMITTED",
+      "group": "firewall",
+      "name": "map firewall",
+      "status": "PASS"
+    }
+  ],
+  "audit_id": "HOLD-LC-001-SET-VALUED-DELAY-ENVELOPE-INDEPENDENT",
+  "boundary": [
+    "No candidate is selected, ranked, fitted, or empirically validated.",
+    "The envelope is not a Gaussian observation, covariance matrix, confidence region, speed measurement, or independent datum.",
+    "No microscopic dynamics, physical vacuum, Reading-H branch, causal cone, Pre-A, Sector-A, C6, A13, QFT, Yang-Mills, gravity, continuum, cosmic-origin, theory-of-everything, or mass-gap statement is established."
+  ],
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "derived": {
+    "aggregate_scoring_allowed": false,
+    "covariance_admitted": false,
+    "detector_interval": {
+      "lower": "169/100",
+      "upper": "179/100"
+    },
+    "likelihood_admitted": false,
+    "prospective_credit": false,
+    "scenario_envelopes": {
+      "broad_exotic": {
+        "lower": "-99831/100",
+        "upper": "10179/100"
+      },
+      "simultaneous": {
+        "lower": "169/100",
+        "upper": "179/100"
+      },
+      "ten_second": {
+        "lower": "-831/100",
+        "upper": "-821/100"
+      }
+    },
+    "set_valued_feasibility_only": true,
+    "union_envelope": {
+      "lower": "-99831/100",
+      "upper": "10179/100"
+    }
+  },
+  "holdout_id": "HOLD-LC-001",
+  "passed": 13,
+  "provenance": {
+    "base_packet_sha256": "5d22aeaf11ffdee6614580a537e801b2e7e2dd227194ecdb35a65b601e1daa4b",
+    "contract_sha256": "a4f1ffe81e1ce240bb2870189fc4a9939caa9e62614cec3206d896e1c63302f6",
+    "source_sha256": "bf06bd2ae6a23cf7f7092307677c2b681ce02abab3b5bbe37bbce76a8960140a"
+  },
+  "recorded_at": "2026-08-30T06:59:52.803311Z",
+  "run_kind": "independent",
+  "schema": "tect/foundation-audit/1.0",
+  "task_id": "T-061",
+  "verdict": "PASS"
+}

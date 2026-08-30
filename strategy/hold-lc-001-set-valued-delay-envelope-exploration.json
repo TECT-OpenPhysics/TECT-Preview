@@ -1,0 +1,189 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "schema_version": "1.0",
+  "id": "EXP-001299",
+  "title": "HOLD-LC-001 set-valued delay envelope without likelihood admission",
+  "task_id": "T-061",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "gate_ids": [
+    "PA-INVERSE-OBSERVATION-TARGET-MAP-HOLDOUT-FREEZE",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "related": [
+    {
+      "id": "EXP-001294",
+      "relation": "continues"
+    },
+    {
+      "id": "EXP-001298",
+      "relation": "continues"
+    }
+  ],
+  "question": "Can the already hash-frozen HOLD-LC-001 timing summary and intrinsic-emission scenarios be converted into a candidate-neutral set-valued feasibility envelope without inventing a likelihood, covariance, speed datum, or candidate score?",
+  "method": [
+    "Read the immutable HOLD-LC-001 source packet and the versioned set-valued contract; no source bytes or existing T-054/T-059 method authority is modified.",
+    "Treat the reported 1.74 +/- 0.05 s display as the closed interval [1.69,1.79] s for feasibility bookkeeping only, not as a Gaussian or confidence likelihood.",
+    "Retain simultaneous, 10 s, and the approximately (-100 s,1000 s) intrinsic-emission scenarios as unweighted interval alternatives.",
+    "Apply exact rational interval subtraction delta_t_prop = delta_t_det - tau_em and verify each scenario and the union envelope.",
+    "Run primary, non-importing independent, twelve-mutation hostile, integrated, and Lean R447 checks while keeping all F_reg/F_lim/F_eff/F_obs stages unadmitted."
+  ],
+  "exact_scope": {
+    "holdout": "HOLD-LC-001 / GW170817-GRB170817A",
+    "source_packet": "strategy/hold-lc-001-source-packet-v0.1.json",
+    "source_packet_sha256": "5d22aeaf11ffdee6614580a537e801b2e7e2dd227194ecdb35a65b601e1daa4b",
+    "contract": "strategy/hold-lc-001-set-valued-delay-envelope-v0.1.json",
+    "estimand": "Delta_t_det = t_GRB_onset_geocenter - t_GW_merger_geocenter",
+    "operation": "[d_lo,d_hi] - [tau_lo,tau_hi] = [d_lo-tau_hi,d_hi-tau_lo]",
+    "detector_display_interval": [
+      "169/100",
+      "179/100"
+    ],
+    "scenario_envelopes": {
+      "simultaneous": [
+        "169/100",
+        "179/100"
+      ],
+      "ten_second": [
+        "-831/100",
+        "-821/100"
+      ],
+      "broad_exotic": [
+        "-99831/100",
+        "10179/100"
+      ]
+    },
+    "union_envelope": [
+      "-99831/100",
+      "10179/100"
+    ],
+    "scope_boundary": "T0 candidate-neutral feasibility interface only; no likelihood, covariance, score, candidate map, prospective validation, or physical interpretation."
+  },
+  "checks": [
+    {
+      "id": "primary",
+      "finding": "PASS",
+      "detail": "Exact Fraction arithmetic passes 25/25 assertions, including source hash, scenario subtraction, containment, and score firewalls."
+    },
+    {
+      "id": "independent",
+      "finding": "PASS",
+      "detail": "A non-importing Fraction reconstruction passes 13/13 assertions and agrees with the primary derived envelope."
+    },
+    {
+      "id": "hostile",
+      "finding": "PASS",
+      "detail": "Twelve mutations covering Gaussian/covariance/score/map admission, method replacement, scenario omission, interval inversion, convention reversal, speed substitution, and derived mismatch are rejected."
+    },
+    {
+      "id": "lean",
+      "finding": "PASS",
+      "detail": "Lean R447 proves interval subtraction ordering, exact scenario arithmetic, broad containment, and union endpoints."
+    }
+  ],
+  "finding": "The existing HOLD-LC-001 source summary now has a separately versioned, exact rational, unweighted set-valued feasibility envelope. The broad_exotic envelope [-99831/100,10179/100] contains the simultaneous and ten_second envelopes. This is a bookkeeping interface only: no probability law, covariance, candidate map, scorer, or prospective credit is admitted.",
+  "verdict": "advanced",
+  "decision_reason": "This is a bounded additive P1 input advance permitted by the existing T-059 set-valued analogue. It preserves the source scenarios and explicitly refuses Gaussianization, derived-speed double counting, candidate fitting, and any change to the T-054 forward method or T-059 inverse contract.",
+  "decision_scope": "Finite exact interval arithmetic on one retrospective timing packet; no candidate comparison and no layer promotion.",
+  "assumptions": [
+    "The base packet and source hashes remain unchanged.",
+    "The displayed +/- 0.05 s is used only to form a feasibility interval.",
+    "Intrinsic-emission scenarios have no weights and are not a probability distribution.",
+    "The subtraction convention is fixed before any candidate map is considered.",
+    "Exact rational arithmetic is sufficient for this interface-level calculation."
+  ],
+  "missing_assumptions": [
+    "Source-owned timing likelihood or covariance.",
+    "A calibrated probability or set-valued nuisance law narrower than the conservative source scenario envelope.",
+    "The F_obs instrument/selection/compression map.",
+    "A complete source-owned microscopic forward map through F_reg, F_lim, F_eff and F_obs.",
+    "An immutable scorer, acceptance threshold, and prospective target."
+  ],
+  "adversarial_review": [
+    {
+      "axis": "summary_as_likelihood",
+      "check": "The display interval is labelled feasibility-only and all likelihood/covariance/score flags remain false.",
+      "disposition": "DISMISSED-FINITE / OPEN-ADMISSION"
+    },
+    {
+      "axis": "nuisance_tuning",
+      "check": "All three source scenarios are retained without weights or candidate-dependent selection.",
+      "disposition": "DISMISSED-FINITE / OPEN-LAW"
+    },
+    {
+      "axis": "sign_convention",
+      "check": "The subtraction convention is hash-pinned in the contract and mutation reversal is rejected.",
+      "disposition": "DISMISSED-FINITE"
+    },
+    {
+      "axis": "derived_speed_double_counting",
+      "check": "No propagation-speed interval is generated or admitted as a second observation.",
+      "disposition": "DISMISSED"
+    },
+    {
+      "axis": "method_overhaul",
+      "check": "Only a versioned feasibility packet, scripts, run artifacts, exploration, result and event are added; T-054/T-059 methods and owner order remain unchanged.",
+      "disposition": "DISMISSED"
+    },
+    {
+      "axis": "physical_promotion",
+      "check": "No dynamics, causal cone, physical vacuum, Pre-A, QFT, Yang-Mills, continuum or mass-gap field is admitted.",
+      "disposition": "UPHELD-OPEN"
+    }
+  ],
+  "boundary": "R-447 is a T0 candidate-neutral set-valued feasibility interface. It does not supply a likelihood, covariance, nuisance probability law, F_obs map, microscopic dynamics, physical identity, continuum limit, empirical prediction, or mass-gap result.",
+  "evidence_level": "T0 exact finite interface with independent, hostile and Lean cross-checks",
+  "evidence_refs": [
+    "strategy/hold-lc-001-source-packet-v0.1.json#estimand",
+    "strategy/hold-lc-001-set-valued-delay-envelope-v0.1.json#derived_set_valued_rule",
+    "codes/foundations/hold_lc_001_set_valued_delay_envelope.py#run",
+    "codes/foundations/hold_lc_001_set_valued_delay_envelope_independent.py#run",
+    "codes/foundations/hold_lc_001_set_valued_delay_envelope_hostile.py#mutations",
+    "codes/foundations/hold_lc_001_set_valued_delay_envelope_verify.py#main",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-primary-hold_lc_001_set_valued_delay_envelope/primary.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-independent-hold_lc_001_set_valued_delay_envelope/independent.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-hostile-hold_lc_001_set_valued_delay_envelope/hostile.json#mutations",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-integrated-hold_lc_001_set_valued_delay_envelope/integrated.json#lean",
+    "verification/lean/Tect/R447.lean#interval_subtraction_lower"
+  ],
+  "formal_refs": {
+    "results": [
+      "R-447"
+    ],
+    "negatives": [],
+    "events": [
+      "20260830-hold-lc-001-set-valued-delay-envelope-2026-08-3"
+    ]
+  },
+  "formal_integration": {
+    "results": [
+      "R-447"
+    ],
+    "negatives": [],
+    "events": [
+      "20260830-hold-lc-001-set-valued-delay-envelope-2026-08-3"
+    ],
+    "no_new_result": false,
+    "no_new_negative": true,
+    "no_changelog_event": false,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "next_action": "Keep HOLD-LC-001 feasibility-only. Obtain a source-owned likelihood/covariance or calibrated nuisance law and complete F_reg/F_lim/F_eff/F_obs before any candidate scoring; continue unchanged T-054 owner intake in parallel.",
+  "stop_or_redesign": [
+    "If the source packet or scenario semantics drift, issue a new version rather than editing this contract.",
+    "If the conservative envelope is too broad for candidate separation, classify the target UNDERPOWERED instead of narrowing it by fit.",
+    "If no source-owned likelihood/covariance or nuisance law arrives, park the anchor without Gaussian substitution.",
+    "If a future map changes the subtraction convention, create a new candidate version and forfeit reuse of this envelope."
+  ],
+  "non_claims": [
+    "No candidate is admitted, selected, ranked, or fitted.",
+    "No prospective credit or independent observation is created.",
+    "No microscopic dynamics, physical vacuum, Reading-H sign, causal cone, Pre-A, Sector-A, C6, A13, QFT, Yang-Mills, gravity, continuum, cosmic-origin, theory-of-everything, or mass-gap claim is established."
+  ],
+  "provenance": "contemporaneous",
+  "recorded_at": "2026-08-30T07:00:38Z",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-08-30"
+}

@@ -21,7 +21,7 @@ Counts: In progress 5 · Next up 0 · Blocked 2 · Backlog 5 · Done (compatibil
   - Parallel T0 lane under T-054. Freeze observation and holdout lineage plus QFT/YM/GR targets; require a complete F_reg/F_lim/F_eff/F_obs owner contract before scoring; report nonidentifiability as an equivalence class; require a genuinely prospective unused target; no Pre-A, A13, C6, Sector-A, physical-sector, continuum, Yang-Mills, or mass-gap promotion.
   - _updated 2026-08-30_
 - **T-061** Dynamic-owner and observation-map identifiability intake  _(owner: Codex; gate: PA-INVERSE-OBSERVATION-TARGET-MAP-HOLDOUT-FREEZE)_
-  - First post-P0-R paired packet under T-054/T-059. Fill the R-192 owner slots and freeze one candidate-neutral dynamic estimand before scoring; use R-193/R-200 equivalence classes, park if no new owner hash exists, and do not alter the existing proof methods. R-446 / EXP-001298 now validates the frozen OBS-LC-CAL-001 S3 d=3..9 row interface with independent and hostile checks; scoring remains stopped pending source-owned uncertainty/covariance and a complete four-stage F_reg/F_lim/F_eff/F_obs map. Continue unchanged forward owner intake in parallel.
+  - First post-P0-R paired packet under T-054/T-059. R-446 / EXP-001298 validates the frozen OBS-LC-CAL-001 S3 d=3..9 row interface with independent and hostile checks. R-447 / EXP-001299 now adds an exact, unweighted HOLD-LC-001 set-valued delay envelope with primary 25/25, independent 13/13, hostile 12/12, integrated 9/9 and Lean R447 PASS. Candidate scoring remains stopped: source-owned likelihood/covariance or a calibrated nuisance law, the F_reg/F_lim/F_eff/F_obs map and an immutable scorer are still missing. Continue unchanged forward owner intake in parallel.
   - _updated 2026-08-30_
 
 ## Blocked

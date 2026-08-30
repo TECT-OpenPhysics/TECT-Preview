@@ -22,6 +22,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-447](#r-447) | HOLD-LC-001 set-valued delay envelope interface | R-447 v1.0 is a T0 claim-nonbearing candidate-neutral feasibility audit under EXP-001299. The hash-pinned GW170817/GRB170817A timing packet is converted by exact rational interval subtraction into unweighted simultaneous `[169/100,179/100]`, ten-second `[-831/100,-821/100]`, and broad-exotic `[-99831/100,10179/100]` propagation-delay envelopes; primary 25/25, independent 13/13, hostile 12/12 and integrated 9/9 with Lean R447 pass. No likelihood, covariance, score, speed datum, candidate map, prospective credit, physical, Pre-A, Yang--Mills or mass-gap claim follows |
 | [R-446](#r-446) | OBS-LC-CAL-001 frozen row lineage and feasibility interface | R-446 v1.0 is a T0 claim-nonbearing source-lineage audit under EXP-001298. The hash-pinned arXiv:0801.0287v19 packet and complete isotropic-photon S3 slice (d=3..9) pass primary 60/60, independent 25/25, hostile 8/8, integrated 15/15 and the existing inverse-contract self-test. Likelihood, covariance, candidate maps and scoring remain unadmitted; no physical Lorentz, Pre-A, Sector-A, QFT, Yang--Mills or mass-gap claim follows |
 | [R-445](#r-445) | Conditional scalar-to-operator tail transfer under a per-edge norm majorant | R-445 v1.0 is a T0 claim-nonbearing finite conditional Banach-norm transfer under EXP-001297. With the explicit assumption `||K_e|| <= C*w(e)`, the triangle inequality transfers the R-444 scalar bound to `C*T(R)` across 343 boxes, 102900 edges and 4116 tail rows; primary, independent, hostile and integrated lanes pass and Lean R445 passes. The actual Q3LOCK commutator/history tail, common core, exhaustion, physical, continuum, Yang--Mills and mass-gap claims remain open |
 | [R-444](#r-444) | Exact exponential shell-tail majorant for rectangular edge weights | R-444 v1.0 is a T0 claim-nonbearing scalar geometric audit under EXP-001289. The exact Z^3 shell count N3(n)=4n^2+2 and tail T(R)=3(4R^2+8R+14)2^(1-R) pass primary 4519/4519, independent 4505/4505, hostile 8/8, integrated 27/27 and Lean R444. All [2,8]^3 finite rectangular tails are dominated; Q3LOCK commutator/history-tail, operator, physical, Yang-Mills and mass-gap claims remain open |
@@ -767,6 +768,50 @@ or a mass gap. No claim tier changes and no negative result is issued.
 
 **Proven in:** [R-444 certificate](strategy/pre-a-cp1-st8-q3lock-exponential-shell-tail-certificate-260830.md), [machine manifest](strategy/pre-a-cp1-st8-q3lock-exponential-shell-tail-manifest.json), [integrated run](claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-integrated-exponential_shell_tail/integrated.json), [exploration record](strategy/pre-a-cp1-st8-q3lock-exponential-shell-tail-exploration.json), and [Lean R444](verification/lean/Tect/R444.lean).
 <a id="r-446"></a>
+### R-447 -- HOLD-LC-001 set-valued delay envelope interface
+
+**Result ID.** `HOLD-LC-001-SET-VALUED-DELAY-ENVELOPE-v0` (R-447).
+
+**Version and exact scope.** R-447 v1.0 is a T0, claim-nonbearing,
+candidate-neutral feasibility interface under EXP-001299. It uses the
+hash-pinned HOLD-LC-001 source packet and keeps the detector-frame estimand
+`Delta_t_det = t_GRB_onset_geocenter - t_GW_merger_geocenter` unchanged. The
+reported `1.74 +/- 0.05 s` display is represented as the closed interval
+`[169/100,179/100]` only for set intersection; it is not treated as a
+likelihood, covariance, or independent observation.
+
+**Derived finite interface.** With the preregistered convention
+`delta_t_prop = delta_t_det - tau_em`, the unweighted scenario envelopes are
+`[169/100,179/100]` for simultaneous emission,
+`[-831/100,-821/100]` for the 10-second scenario, and
+`[-99831/100,10179/100]` for the source's conservative approximately
+`[-100,1000]`-second broad scenario. The last interval contains the first two;
+no scenario weight or nuisance probability law is introduced.
+
+**Verification.** The primary exact-Fraction lane passes 25/25 assertions; a
+non-importing independent lane passes 13/13 and agrees on every derived field;
+the hostile lane rejects 12/12 mutations covering likelihood/covariance/score
+admission, map admission, method replacement, scenario omission, interval and
+sign-convention changes, speed substitution, and arithmetic drift. The
+integrated verifier passes 9/9 and Lean R447 passes the interval-order,
+scenario-arithmetic, containment, and union-endpoint propositions.
+
+**Assumptions and missing assumptions.** The source and packet hashes, display
+interval, scenario labels, subtraction convention, and exact rational
+arithmetic are fixed. A source-owned timing likelihood or covariance, a
+calibrated nuisance law, the `F_obs` instrument map, a complete
+`F_reg/F_lim/F_eff/F_obs` microscopic map, an immutable scorer, and a
+prospective target remain missing.
+
+**Boundary and non-claims.** R-447 permits only finite set-valued feasibility
+bookkeeping. It does not select or rank a candidate, create a Gaussian or speed
+datum, provide prospective credit, identify dynamics or a physical vacuum, or
+close Reading-H, Pre-A, Sector-A, C6, A13, QFT, Yang--Mills, gravity,
+continuum, cosmic-origin, theory-of-everything, or mass-gap gates. It changes
+no T-054 or T-059 method or owner order.
+
+**Proven in.** [R-447 contract](strategy/hold-lc-001-set-valued-delay-envelope-v0.1.json), [primary script](codes/foundations/hold_lc_001_set_valued_delay_envelope.py), [independent script](codes/foundations/hold_lc_001_set_valued_delay_envelope_independent.py), [hostile script](codes/foundations/hold_lc_001_set_valued_delay_envelope_hostile.py), [integrated verifier](codes/foundations/hold_lc_001_set_valued_delay_envelope_verify.py), [integrated run](claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-integrated-hold_lc_001_set_valued_delay_envelope/integrated.json), [exploration](strategy/hold-lc-001-set-valued-delay-envelope-exploration.json), and [Lean R447](verification/lean/Tect/R447.lean).
+
 ### R-446 -- OBS-LC-CAL-001 frozen row lineage and feasibility interface
 
 **Result ID.** `OBS-LC-CAL-001-ROW-LINEAGE-FEASIBILITY-INTERFACE-v0` (R-446).

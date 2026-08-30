@@ -1,0 +1,575 @@
+{
+  "assertion_count": 9,
+  "assertions": [
+    {
+      "actual": "PRIMARY HOLD-LC-001 SET-VALUED ENVELOPE PASS 25/25\n",
+      "expected": "PASS",
+      "name": "primary child",
+      "pass": true
+    },
+    {
+      "actual": "INDEPENDENT HOLD-LC-001 SET-VALUED ENVELOPE PASS 13/13\n",
+      "expected": "PASS",
+      "name": "independent child",
+      "pass": true
+    },
+    {
+      "actual": "HOSTILE HOLD-LC-001 SET-VALUED ENVELOPE PASS 12/12 mutations rejected\n",
+      "expected": "exit 0",
+      "name": "hostile child",
+      "pass": true
+    },
+    {
+      "actual": {
+        "assertion_count": 25,
+        "assertions": [
+          {
+            "actual": "['HOLD-LC-001-SET-VALUED-DELAY-ENVELOPE-v0.1', 'HOLD-LC-001', 'T-061']",
+            "expected": "HOLD-LC-001/T-061",
+            "group": "provenance",
+            "name": "identity",
+            "status": "PASS"
+          },
+          {
+            "actual": "False",
+            "expected": "False",
+            "group": "scope",
+            "name": "claim nonbearing",
+            "status": "PASS"
+          },
+          {
+            "actual": "True",
+            "expected": "True",
+            "group": "method firewall",
+            "name": "methods unchanged",
+            "status": "PASS"
+          },
+          {
+            "actual": "E:\\Dev\\TECT\\strategy\\hold-lc-001-source-packet-v0.1.json",
+            "expected": "True",
+            "group": "provenance",
+            "name": "base packet exists",
+            "status": "PASS"
+          },
+          {
+            "actual": "5d22aeaf11ffdee6614580a537e801b2e7e2dd227194ecdb35a65b601e1daa4b",
+            "expected": "5d22aeaf11ffdee6614580a537e801b2e7e2dd227194ecdb35a65b601e1daa4b",
+            "group": "provenance",
+            "name": "base packet hash",
+            "status": "PASS"
+          },
+          {
+            "actual": "bf06bd2ae6a23cf7f7092307677c2b681ce02abab3b5bbe37bbce76a8960140a",
+            "expected": "bf06bd2ae6a23cf7f7092307677c2b681ce02abab3b5bbe37bbce76a8960140a",
+            "group": "provenance",
+            "name": "source hash",
+            "status": "PASS"
+          },
+          {
+            "actual": "HOLD-LC-001",
+            "expected": "HOLD-LC-001",
+            "group": "provenance",
+            "name": "source holdout",
+            "status": "PASS"
+          },
+          {
+            "actual": "[Fraction(169, 100), Fraction(179, 100)]",
+            "expected": "[Fraction(169, 100), Fraction(179, 100)]",
+            "group": "interval",
+            "name": "display arithmetic",
+            "status": "PASS"
+          },
+          {
+            "actual": "[Fraction(169, 100), Fraction(179, 100)]",
+            "expected": "ordered",
+            "group": "interval",
+            "name": "display ordered",
+            "status": "PASS"
+          },
+          {
+            "actual": "[Fraction(0, 1), Fraction(0, 1)]",
+            "expected": "ordered",
+            "group": "nuisance",
+            "name": "nuisance ordered simultaneous",
+            "status": "PASS"
+          },
+          {
+            "actual": "[Fraction(10, 1), Fraction(10, 1)]",
+            "expected": "ordered",
+            "group": "nuisance",
+            "name": "nuisance ordered ten_second",
+            "status": "PASS"
+          },
+          {
+            "actual": "[Fraction(-100, 1), Fraction(1000, 1)]",
+            "expected": "ordered",
+            "group": "nuisance",
+            "name": "nuisance ordered broad_exotic",
+            "status": "PASS"
+          },
+          {
+            "actual": "{'lower': '169/100', 'upper': '179/100'}",
+            "expected": "{'lower': '169/100', 'upper': '179/100'}",
+            "group": "interval",
+            "name": "scenario envelope simultaneous",
+            "status": "PASS"
+          },
+          {
+            "actual": "{'lower': '-831/100', 'upper': '-821/100'}",
+            "expected": "{'lower': '-831/100', 'upper': '-821/100'}",
+            "group": "interval",
+            "name": "scenario envelope ten_second",
+            "status": "PASS"
+          },
+          {
+            "actual": "{'lower': '-99831/100', 'upper': '10179/100'}",
+            "expected": "{'lower': '-99831/100', 'upper': '10179/100'}",
+            "group": "interval",
+            "name": "scenario envelope broad_exotic",
+            "status": "PASS"
+          },
+          {
+            "actual": "[Fraction(-99831, 100), Fraction(10179, 100)]",
+            "expected": "[Fraction(-99831, 100), Fraction(10179, 100)]",
+            "group": "interval",
+            "name": "union envelope",
+            "status": "PASS"
+          },
+          {
+            "actual": "(Fraction(-99831, 100), Fraction(10179, 100))",
+            "expected": "(Fraction(169, 100), Fraction(179, 100))",
+            "group": "containment",
+            "name": "broad contains simultaneous",
+            "status": "PASS"
+          },
+          {
+            "actual": "(Fraction(-99831, 100), Fraction(10179, 100))",
+            "expected": "(Fraction(-831, 100), Fraction(-821, 100))",
+            "group": "containment",
+            "name": "broad contains ten_second",
+            "status": "PASS"
+          },
+          {
+            "actual": "(Fraction(-99831, 100), Fraction(10179, 100))",
+            "expected": "(Fraction(-99831, 100), Fraction(10179, 100))",
+            "group": "containment",
+            "name": "broad contains broad_exotic",
+            "status": "PASS"
+          },
+          {
+            "actual": "False",
+            "expected": "False",
+            "group": "firewall",
+            "name": "no likelihood",
+            "status": "PASS"
+          },
+          {
+            "actual": "False",
+            "expected": "False",
+            "group": "firewall",
+            "name": "no covariance",
+            "status": "PASS"
+          },
+          {
+            "actual": "False",
+            "expected": "False",
+            "group": "firewall",
+            "name": "no score",
+            "status": "PASS"
+          },
+          {
+            "actual": "False",
+            "expected": "False",
+            "group": "firewall",
+            "name": "no prospective",
+            "status": "PASS"
+          },
+          {
+            "actual": "{'F_reg': 'NOT_ADMITTED', 'F_lim': 'NOT_ADMITTED', 'F_eff': 'NOT_ADMITTED', 'F_obs': 'NOT_ADMITTED'}",
+            "expected": "NOT_ADMITTED",
+            "group": "firewall",
+            "name": "all map stages absent",
+            "status": "PASS"
+          },
+          {
+            "actual": "interval_subtraction",
+            "expected": "interval_subtraction",
+            "group": "scope",
+            "name": "set-valued rule",
+            "status": "PASS"
+          }
+        ],
+        "audit_id": "HOLD-LC-001-SET-VALUED-DELAY-ENVELOPE",
+        "boundary": [
+          "No candidate is selected, ranked, fitted, or empirically validated.",
+          "The envelope is not a Gaussian observation, covariance matrix, confidence region, speed measurement, or independent datum.",
+          "No microscopic dynamics, physical vacuum, Reading-H branch, causal cone, Pre-A, Sector-A, C6, A13, QFT, Yang-Mills, gravity, continuum, cosmic-origin, theory-of-everything, or mass-gap statement is established."
+        ],
+        "claim_id": "C6-SPACETIME-SIGNATURE",
+        "derived": {
+          "aggregate_scoring_allowed": false,
+          "covariance_admitted": false,
+          "detector_interval": {
+            "lower": "169/100",
+            "upper": "179/100"
+          },
+          "likelihood_admitted": false,
+          "prospective_credit": false,
+          "scenario_envelopes": {
+            "broad_exotic": {
+              "lower": "-99831/100",
+              "upper": "10179/100"
+            },
+            "simultaneous": {
+              "lower": "169/100",
+              "upper": "179/100"
+            },
+            "ten_second": {
+              "lower": "-831/100",
+              "upper": "-821/100"
+            }
+          },
+          "set_valued_feasibility_only": true,
+          "union_envelope": {
+            "lower": "-99831/100",
+            "upper": "10179/100"
+          }
+        },
+        "holdout_id": "HOLD-LC-001",
+        "passed": 25,
+        "provenance": {
+          "base_packet_sha256": "5d22aeaf11ffdee6614580a537e801b2e7e2dd227194ecdb35a65b601e1daa4b",
+          "contract_sha256": "a4f1ffe81e1ce240bb2870189fc4a9939caa9e62614cec3206d896e1c63302f6",
+          "source_sha256": "bf06bd2ae6a23cf7f7092307677c2b681ce02abab3b5bbe37bbce76a8960140a"
+        },
+        "recorded_at": "2026-08-30T07:10:12.433813Z",
+        "run_kind": "primary",
+        "schema": "tect/foundation-audit/1.0",
+        "task_id": "T-061",
+        "verdict": "PASS"
+      },
+      "expected": "all pass",
+      "name": "primary assertions",
+      "pass": true
+    },
+    {
+      "actual": {
+        "assertion_count": 13,
+        "assertions": [
+          {
+            "actual": "['HOLD-LC-001', 'T-061']",
+            "expected": "HOLD-LC-001/T-061",
+            "group": "provenance",
+            "name": "contract identity",
+            "status": "PASS"
+          },
+          {
+            "actual": "SET_VALUED_FEASIBILITY_ONLY_NOT_SCORED",
+            "expected": "SET_VALUED_FEASIBILITY_ONLY_NOT_SCORED",
+            "group": "scope",
+            "name": "contract status",
+            "status": "PASS"
+          },
+          {
+            "actual": "5d22aeaf11ffdee6614580a537e801b2e7e2dd227194ecdb35a65b601e1daa4b",
+            "expected": "5d22aeaf11ffdee6614580a537e801b2e7e2dd227194ecdb35a65b601e1daa4b",
+            "group": "provenance",
+            "name": "contract hash",
+            "status": "PASS"
+          },
+          {
+            "actual": "bf06bd2ae6a23cf7f7092307677c2b681ce02abab3b5bbe37bbce76a8960140a",
+            "expected": "bf06bd2ae6a23cf7f7092307677c2b681ce02abab3b5bbe37bbce76a8960140a",
+            "group": "provenance",
+            "name": "source hash",
+            "status": "PASS"
+          },
+          {
+            "actual": "[Fraction(169, 100), Fraction(179, 100)]",
+            "expected": "169/100 <= 179/100",
+            "group": "interval",
+            "name": "display interval",
+            "status": "PASS"
+          },
+          {
+            "actual": "(Fraction(169, 100), Fraction(179, 100))",
+            "expected": "{'lower': '169/100', 'upper': '179/100'}",
+            "group": "interval",
+            "name": "scenario simultaneous",
+            "status": "PASS"
+          },
+          {
+            "actual": "(Fraction(-831, 100), Fraction(-821, 100))",
+            "expected": "{'lower': '-831/100', 'upper': '-821/100'}",
+            "group": "interval",
+            "name": "scenario ten_second",
+            "status": "PASS"
+          },
+          {
+            "actual": "(Fraction(-99831, 100), Fraction(10179, 100))",
+            "expected": "{'lower': '-99831/100', 'upper': '10179/100'}",
+            "group": "interval",
+            "name": "scenario broad_exotic",
+            "status": "PASS"
+          },
+          {
+            "actual": "(Fraction(-99831, 100), Fraction(10179, 100))",
+            "expected": "{'lower': '-99831/100', 'upper': '10179/100', 'semantics': 'unweighted union envelope for feasibility intersection only'}",
+            "group": "interval",
+            "name": "union",
+            "status": "PASS"
+          },
+          {
+            "actual": "(Fraction(-99831, 100), Fraction(10179, 100))",
+            "expected": "(Fraction(169, 100), Fraction(179, 100))",
+            "group": "containment",
+            "name": "broad contains simultaneous",
+            "status": "PASS"
+          },
+          {
+            "actual": "(Fraction(-99831, 100), Fraction(10179, 100))",
+            "expected": "(Fraction(-831, 100), Fraction(-821, 100))",
+            "group": "containment",
+            "name": "broad contains ten second",
+            "status": "PASS"
+          },
+          {
+            "actual": "{'feasibility_intersection_allowed': True, 'likelihood_admitted': False, 'covariance_admitted': False, 'aggregate_scoring_allowed': False, 'prospective_credit': False, 'forward_map_stages': {'F_reg': 'NOT_ADMITTED', 'F_lim': 'NOT_ADMITTED', 'F_eff': 'NOT_ADMITTED', 'F_obs': 'NOT_ADMITTED'}}",
+            "expected": "all false",
+            "group": "firewall",
+            "name": "score firewall",
+            "status": "PASS"
+          },
+          {
+            "actual": "{'F_reg': 'NOT_ADMITTED', 'F_lim': 'NOT_ADMITTED', 'F_eff': 'NOT_ADMITTED', 'F_obs': 'NOT_ADMITTED'}",
+            "expected": "NOT_ADMITTED",
+            "group": "firewall",
+            "name": "map firewall",
+            "status": "PASS"
+          }
+        ],
+        "audit_id": "HOLD-LC-001-SET-VALUED-DELAY-ENVELOPE-INDEPENDENT",
+        "boundary": [
+          "No candidate is selected, ranked, fitted, or empirically validated.",
+          "The envelope is not a Gaussian observation, covariance matrix, confidence region, speed measurement, or independent datum.",
+          "No microscopic dynamics, physical vacuum, Reading-H branch, causal cone, Pre-A, Sector-A, C6, A13, QFT, Yang-Mills, gravity, continuum, cosmic-origin, theory-of-everything, or mass-gap statement is established."
+        ],
+        "claim_id": "C6-SPACETIME-SIGNATURE",
+        "derived": {
+          "aggregate_scoring_allowed": false,
+          "covariance_admitted": false,
+          "detector_interval": {
+            "lower": "169/100",
+            "upper": "179/100"
+          },
+          "likelihood_admitted": false,
+          "prospective_credit": false,
+          "scenario_envelopes": {
+            "broad_exotic": {
+              "lower": "-99831/100",
+              "upper": "10179/100"
+            },
+            "simultaneous": {
+              "lower": "169/100",
+              "upper": "179/100"
+            },
+            "ten_second": {
+              "lower": "-831/100",
+              "upper": "-821/100"
+            }
+          },
+          "set_valued_feasibility_only": true,
+          "union_envelope": {
+            "lower": "-99831/100",
+            "upper": "10179/100"
+          }
+        },
+        "holdout_id": "HOLD-LC-001",
+        "passed": 13,
+        "provenance": {
+          "base_packet_sha256": "5d22aeaf11ffdee6614580a537e801b2e7e2dd227194ecdb35a65b601e1daa4b",
+          "contract_sha256": "a4f1ffe81e1ce240bb2870189fc4a9939caa9e62614cec3206d896e1c63302f6",
+          "source_sha256": "bf06bd2ae6a23cf7f7092307677c2b681ce02abab3b5bbe37bbce76a8960140a"
+        },
+        "recorded_at": "2026-08-30T07:10:12.523870Z",
+        "run_kind": "independent",
+        "schema": "tect/foundation-audit/1.0",
+        "task_id": "T-061",
+        "verdict": "PASS"
+      },
+      "expected": "all pass",
+      "name": "independent assertions",
+      "pass": true
+    },
+    {
+      "actual": [
+        {
+          "aggregate_scoring_allowed": false,
+          "covariance_admitted": false,
+          "detector_interval": {
+            "lower": "169/100",
+            "upper": "179/100"
+          },
+          "likelihood_admitted": false,
+          "prospective_credit": false,
+          "scenario_envelopes": {
+            "broad_exotic": {
+              "lower": "-99831/100",
+              "upper": "10179/100"
+            },
+            "simultaneous": {
+              "lower": "169/100",
+              "upper": "179/100"
+            },
+            "ten_second": {
+              "lower": "-831/100",
+              "upper": "-821/100"
+            }
+          },
+          "set_valued_feasibility_only": true,
+          "union_envelope": {
+            "lower": "-99831/100",
+            "upper": "10179/100"
+          }
+        },
+        {
+          "aggregate_scoring_allowed": false,
+          "covariance_admitted": false,
+          "detector_interval": {
+            "lower": "169/100",
+            "upper": "179/100"
+          },
+          "likelihood_admitted": false,
+          "prospective_credit": false,
+          "scenario_envelopes": {
+            "broad_exotic": {
+              "lower": "-99831/100",
+              "upper": "10179/100"
+            },
+            "simultaneous": {
+              "lower": "169/100",
+              "upper": "179/100"
+            },
+            "ten_second": {
+              "lower": "-831/100",
+              "upper": "-821/100"
+            }
+          },
+          "set_valued_feasibility_only": true,
+          "union_envelope": {
+            "lower": "-99831/100",
+            "upper": "10179/100"
+          }
+        }
+      ],
+      "expected": "equal",
+      "name": "lane agreement",
+      "pass": true
+    },
+    {
+      "actual": {
+        "aggregate_scoring_allowed": false,
+        "covariance_admitted": false,
+        "detector_interval": {
+          "lower": "169/100",
+          "upper": "179/100"
+        },
+        "likelihood_admitted": false,
+        "prospective_credit": false,
+        "scenario_envelopes": {
+          "broad_exotic": {
+            "lower": "-99831/100",
+            "upper": "10179/100"
+          },
+          "simultaneous": {
+            "lower": "169/100",
+            "upper": "179/100"
+          },
+          "ten_second": {
+            "lower": "-831/100",
+            "upper": "-821/100"
+          }
+        },
+        "set_valued_feasibility_only": true,
+        "union_envelope": {
+          "lower": "-99831/100",
+          "upper": "10179/100"
+        }
+      },
+      "expected": true,
+      "name": "envelope only",
+      "pass": true
+    },
+    {
+      "actual": {
+        "aggregate_scoring_allowed": false,
+        "covariance_admitted": false,
+        "detector_interval": {
+          "lower": "169/100",
+          "upper": "179/100"
+        },
+        "likelihood_admitted": false,
+        "prospective_credit": false,
+        "scenario_envelopes": {
+          "broad_exotic": {
+            "lower": "-99831/100",
+            "upper": "10179/100"
+          },
+          "simultaneous": {
+            "lower": "169/100",
+            "upper": "179/100"
+          },
+          "ten_second": {
+            "lower": "-831/100",
+            "upper": "-821/100"
+          }
+        },
+        "set_valued_feasibility_only": true,
+        "union_envelope": {
+          "lower": "-99831/100",
+          "upper": "10179/100"
+        }
+      },
+      "expected": false,
+      "name": "no score",
+      "pass": true
+    },
+    {
+      "actual": {
+        "command": "lake env lean Tect/R447.lean",
+        "output": "",
+        "returncode": 0,
+        "status": "PASS"
+      },
+      "expected": "PASS",
+      "name": "Lean compile",
+      "pass": true
+    }
+  ],
+  "audit_id": "HOLD-LC-001-SET-VALUED-DELAY-ENVELOPE-INTEGRATED",
+  "boundary": [
+    "No candidate is selected, ranked, fitted, or empirically validated.",
+    "The envelope is not a Gaussian observation, covariance matrix, confidence region, speed measurement, or independent datum.",
+    "No microscopic dynamics, physical vacuum, Reading-H branch, causal cone, Pre-A, Sector-A, C6, A13, QFT, Yang-Mills, gravity, continuum, cosmic-origin, theory-of-everything, or mass-gap statement is established."
+  ],
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "holdout_id": "HOLD-LC-001",
+  "lean": {
+    "command": "lake env lean Tect/R447.lean",
+    "output": "",
+    "returncode": 0,
+    "status": "PASS"
+  },
+  "provenance": {
+    "contract_sha256": "a4f1ffe81e1ce240bb2870189fc4a9939caa9e62614cec3206d896e1c63302f6",
+    "hostile_sha256": "84c3849f6fc4e3f80f2a3ffc94000124625a4d5f7cc86ec1ff45f60f28b7235f",
+    "independent_sha256": "ce2bc87ad65ac9cad3a99e82a5c82c1a93ee9c470bcee95c77338855be083e84",
+    "lean_sha256": "98b3427e1b8a14c3b209e3a0dabe413824cf96959575f48b7c5323ebd4c48827",
+    "primary_sha256": "80beda669db2c1a7baf0537e6c17b8d5e3e49e1d19c0e5686c02c9f5c593d960"
+  },
+  "recorded_at": "2026-08-30T07:10:27.106192Z",
+  "run_kind": "integrated",
+  "schema": "tect/foundation-audit/1.0",
+  "task_id": "T-061",
+  "verdict": "PASS"
+}

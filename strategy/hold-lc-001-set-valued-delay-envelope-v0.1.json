@@ -1,0 +1,120 @@
+{
+  "schema": "tect/observation-set-valued-envelope/0.1",
+  "id": "HOLD-LC-001-SET-VALUED-DELAY-ENVELOPE-v0.1",
+  "holdout_id": "HOLD-LC-001",
+  "version": "0.1.0",
+  "task_id": "T-061",
+  "status": "SET_VALUED_FEASIBILITY_ONLY_NOT_SCORED",
+  "claim_bearing": false,
+  "methods_unchanged": true,
+  "base_packet": {
+    "path": "strategy/hold-lc-001-source-packet-v0.1.json",
+    "sha256": "5d22aeaf11ffdee6614580a537e801b2e7e2dd227194ecdb35a65b601e1daa4b",
+    "source_sha256": "bf06bd2ae6a23cf7f7092307677c2b681ce02abab3b5bbe37bbce76a8960140a"
+  },
+  "estimand_contract": {
+    "id": "Delta_t_det",
+    "definition": "t_GRB_onset_geocenter - t_GW_merger_geocenter",
+    "units": "seconds",
+    "reported_value": "174/100",
+    "reported_display_half_width": "5/100",
+    "display_envelope": {
+      "lower": "169/100",
+      "upper": "179/100",
+      "semantics": "descriptive reported 68% summary converted to a closed feasibility interval only; not a likelihood or covariance"
+    },
+    "source_semantics": "The packet's timing summary is retained without Gaussianization, independence, or score construction."
+  },
+  "nuisance_contract": {
+    "symbol": "tau_em",
+    "units": "seconds",
+    "difference_convention": "delta_t_prop = delta_t_det - tau_em",
+    "weights": "NONE",
+    "probability_law": "NOT_ADMITTED",
+    "scenarios": [
+      {
+        "id": "simultaneous",
+        "source_label": "simultaneous emission",
+        "lower": "0",
+        "upper": "0",
+        "semantics": "source scenario, no probability weight"
+      },
+      {
+        "id": "ten_second",
+        "source_label": "10 s intrinsic emission delay",
+        "lower": "10",
+        "upper": "10",
+        "semantics": "source scenario, no probability weight"
+      },
+      {
+        "id": "broad_exotic",
+        "source_label": "approximately (-100 s, 1000 s) intrinsic-emission window",
+        "lower": "-100",
+        "upper": "1000",
+        "semantics": "conservative arithmetic envelope of the source's approximate window; not an exact confidence interval or density"
+      }
+    ]
+  },
+  "derived_set_valued_rule": {
+    "operation": "interval_subtraction",
+    "formula": "[d_lo,d_hi] - [tau_lo,tau_hi] = [d_lo-tau_hi,d_hi-tau_lo]",
+    "scenario_envelopes": {
+      "simultaneous": {
+        "lower": "169/100",
+        "upper": "179/100"
+      },
+      "ten_second": {
+        "lower": "-831/100",
+        "upper": "-821/100"
+      },
+      "broad_exotic": {
+        "lower": "-99831/100",
+        "upper": "10179/100"
+      }
+    },
+    "union_envelope": {
+      "lower": "-99831/100",
+      "upper": "10179/100",
+      "semantics": "unweighted union envelope for feasibility intersection only"
+    },
+    "containment": "The broad_exotic interval contains the simultaneous and ten_second scenario envelopes under the declared arithmetic convention."
+  },
+  "admission": {
+    "feasibility_intersection_allowed": true,
+    "likelihood_admitted": false,
+    "covariance_admitted": false,
+    "aggregate_scoring_allowed": false,
+    "prospective_credit": false,
+    "forward_map_stages": {
+      "F_reg": "NOT_ADMITTED",
+      "F_lim": "NOT_ADMITTED",
+      "F_eff": "NOT_ADMITTED",
+      "F_obs": "NOT_ADMITTED"
+    }
+  },
+  "assumptions": [
+    "The base packet hash and source hash identify the same HOLD-LC-001 source lineage.",
+    "The reported 1.74 +/- 0.05 s display is used as a bounded feasibility interval, never as a probability model.",
+    "The source's three intrinsic-emission scenarios are retained as unweighted alternatives.",
+    "Propagation delay is defined by the declared subtraction convention and is not converted to a speed likelihood.",
+    "All arithmetic is exact rational interval arithmetic after reading the decimal display values."
+  ],
+  "missing_assumptions": [
+    "A source-owned timing likelihood or covariance product.",
+    "A probability law or calibrated set-valued rule narrower than the conservative source scenario envelope.",
+    "An instrument/selection/compression map for F_obs.",
+    "A complete source-owned microscopic map through F_reg, F_lim, F_eff and F_obs.",
+    "An immutable scorer and acceptance threshold."
+  ],
+  "evidence_level": "T0 candidate-neutral set-valued feasibility interface; no model test",
+  "acceptance_condition": "This packet may support only set intersection or feasibility bookkeeping. Scoring requires the missing source likelihood/covariance, nuisance law, complete forward map and immutable scorer.",
+  "falsifier": "Any source/hash drift, interval arithmetic mismatch, scenario omission, or mutation that admits a likelihood or candidate score invalidates this packet version.",
+  "non_claims": [
+    "No candidate is selected, ranked, fitted, or empirically validated.",
+    "The envelope is not a Gaussian observation, covariance matrix, confidence region, speed measurement, or independent datum.",
+    "No microscopic dynamics, physical vacuum, Reading-H branch, causal cone, Pre-A, Sector-A, C6, A13, QFT, Yang-Mills, gravity, continuum, cosmic-origin, theory-of-everything, or mass-gap statement is established."
+  ],
+  "next_action": "Keep HOLD-LC-001 feasibility-only and seek a source-owned likelihood/covariance or an explicitly calibrated nuisance law; do not score candidates or claim prospective validation.",
+  "recorded_at": "2026-08-30T00:00:00Z",
+  "recorded_by": "Codex"
+}
