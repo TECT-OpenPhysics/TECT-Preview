@@ -1,0 +1,91 @@
+{
+  "schema": "tect/observation-response-history-byte-freeze/0.1",
+  "id": "HOLD-LC-001-RESPONSE-HISTORY-v0.1",
+  "version": "0.1.0",
+  "task_id": "T-061",
+  "holdout_id": "HOLD-LC-001",
+  "parent_manifests": [
+    "strategy/hold-lc-001-event-byte-freeze-v0.1.json",
+    "strategy/hold-lc-001-owner-artifact-byte-freeze-v0.1.json"
+  ],
+  "status": "PARTIAL_RESPONSE_HISTORY_BYTES_HASH_PINNED_NO_MATRIX_VALUE_ADMISSION",
+  "claim_bearing": false,
+  "methods_unchanged": true,
+  "purpose": "Freeze exact N0/B0 event-trigger response-history products as physical-owner candidates for time-segmented detector response provenance without copying raw matrix bytes into tracked contents or admitting a timing likelihood.",
+  "retrieval": {
+    "retrieved_at": "2026-08-30T10:02:00Z",
+    "cache_root": "internal/source-cache/HOLD-LC-001/2026-08-30/owner",
+    "cache_policy": "Local gitignored cache; this tracked manifest preserves official locators, roles, byte lengths and SHA-256 values for reacquisition and byte checks.",
+    "source_listing_url": "https://heasarc.gsfc.nasa.gov/FTP/fermi/data/gbm/triggers/2017/bn170817529/current/",
+    "release": "bn170817529/current"
+  },
+  "products": [
+    {
+      "id": "FERMI-GBM-EVENT-TRIGGER-RSP2-N0",
+      "role": "time_segmented_response_history_owner_candidate",
+      "detector": "GBM NaI N0",
+      "remote_url": "https://heasarc.gsfc.nasa.gov/FTP/fermi/data/gbm/triggers/2017/bn170817529/current/glg_cspec_n0_bn170817529_v04.rsp2",
+      "release": "bn170817529/current",
+      "local_cache_key": "HOLD-LC-001/2026-08-30/owner/glg_cspec_n0_bn170817529_v04.rsp2",
+      "content_type": "application/fits",
+      "byte_length": 682560,
+      "sha256": "3302916c975c44cce107c39ded80c6c7f2455e574c6c230a9853e8dbb342005d",
+      "admission": "RESPONSE_HISTORY_PROVENANCE_ONLY_NO_MATRIX_VALUE_READ"
+    },
+    {
+      "id": "FERMI-GBM-EVENT-TRIGGER-RSP2-B0",
+      "role": "time_segmented_response_history_owner_candidate",
+      "detector": "GBM BGO B0",
+      "remote_url": "https://heasarc.gsfc.nasa.gov/FTP/fermi/data/gbm/triggers/2017/bn170817529/current/glg_cspec_b0_bn170817529_v04.rsp2",
+      "release": "bn170817529/current",
+      "local_cache_key": "HOLD-LC-001/2026-08-30/owner/glg_cspec_b0_bn170817529_v04.rsp2",
+      "content_type": "application/fits",
+      "byte_length": 682560,
+      "sha256": "1760b4723d2e704ccaf030147244ec2b8648c22355ea1e181509791505164d7a",
+      "admission": "RESPONSE_HISTORY_PROVENANCE_ONLY_NO_MATRIX_VALUE_READ"
+    }
+  ],
+  "byte_validation": {
+    "verified_files": 2,
+    "all_local_sha256_match_recorded_values": true,
+    "all_downloads_completed": true,
+    "cache_is_gitignored": true,
+    "raw_matrix_bytes_are_not_copied_into_tracked_contents": true
+  },
+  "admission_boundary": {
+    "time_segmented_response_history": "AVAILABLE_AS_HASH_PINNED_OWNER_CANDIDATE",
+    "response_matrix_values": "NOT_READ_AND_NOT_ADMITTED",
+    "calibration_validity_interpolation": "NOT_ADMITTED",
+    "detector_to_geocenter_conversion": "NOT_ADMITTED",
+    "joint_timing_likelihood": "NOT_ADMITTED",
+    "component_or_shared_covariance": "NOT_ADMITTED",
+    "intrinsic_emission_nuisance": "NOT_ADMITTED",
+    "f_reg_f_lim_f_eff_f_obs": "NOT_DEFINED",
+    "candidate_scoring": "STOPPED",
+    "prospective_lock": "EMPTY"
+  },
+  "assumptions": [
+    "The official trigger directory and recorded URLs identify the products retrieved on 2026-08-30.",
+    "The gitignored cache is sufficient for local byte verification while this manifest preserves reacquisition provenance.",
+    "The response-history files are physical-owner candidates and not a complete calibration, timing or likelihood implementation.",
+    "The audit reads scalar FITS headers and table declarations only; it does not read matrix, EBOUNDS or event table values.",
+    "The existing T-054 forward method, T-059 inverse method, owner order and promotion firewalls remain controlling."
+  ],
+  "missing_assumptions": [
+    "A source-owned rule linking response-history segments to the selected event and spectral-history validity intervals.",
+    "A detector-to-geocenter timing conversion and uncertainty for the GBM and GW instruments.",
+    "Frozen detector, energy, background and temporal windows with selection semantics.",
+    "A source-owned joint timing likelihood or component/shared covariance including calibration and intrinsic-emission nuisance terms.",
+    "A complete candidate-neutral F_reg/F_lim/F_eff/F_obs map and immutable scorer.",
+    "A prospective holdout not used for source selection, response selection or estimator design."
+  ],
+  "evidence_level": "T0 exact public-product byte freeze and response-history header/schema intake; no matrix-value or model test",
+  "next_action": "Use the response-history metadata to request the validity/linkage and timing-uncertainty owner rules. Keep matrix values and scoring locked; independently reproduce F_reg only after the complete physical-owner and proof-owner contracts are frozen.",
+  "non_claims": [
+    "This manifest does not admit response-matrix values, a calibration-validity interpolation, detector-to-geocenter correction, timing likelihood, covariance, nuisance law, candidate, map, score or prediction.",
+    "Time-segmented response headers do not identify microscopic dynamics, causal propagation or a physical Yang-Mills sector.",
+    "No Pre-A, C6, A13, Sector-A, QFT, Yang-Mills, gravity, continuum, physical-vacuum, cosmic-origin, theory-of-everything or mass-gap claim follows.",
+    "The established T-054 forward and T-059 inverse methods are unchanged; this is additive response-history owner intake only."
+  ],
+  "recorded_by": "Codex"
+}

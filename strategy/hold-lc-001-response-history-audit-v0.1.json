@@ -1,0 +1,1561 @@
+{
+  "schema": "tect/observation-response-history-audit/0.1",
+  "id": "HOLD-LC-001-RESPONSE-HISTORY-AUDIT-v0.1",
+  "version": "0.1.0",
+  "task_id": "T-061",
+  "holdout_id": "HOLD-LC-001",
+  "claim_bearing": false,
+  "status": "RESPONSE_HISTORY_SCHEMA_PRESENT_STATISTICAL_OWNER_UNADMITTED",
+  "parent_response_history_manifest": "strategy\\hold-lc-001-response-history-byte-freeze-v0.1.json",
+  "parent_response_history_manifest_sha256": "b47228b036f9e057b2c213f41b477466a76d3d4107d929b93eb5c2a87ee7a5c2",
+  "parent_response_history_manifest_byte_length": 5680,
+  "parser_dependency": {
+    "path": "verification/scripts/audit_hold_lc_owner_artifacts.py",
+    "sha256": "f8b312b34856df923390c531f07758f15ac5a29e25817226b910391ccd158f6d"
+  },
+  "scope": {
+    "products": [
+      "FERMI-GBM-EVENT-TRIGGER-RSP2-N0",
+      "FERMI-GBM-EVENT-TRIGGER-RSP2-B0"
+    ],
+    "extraction": "Exact SHA-256/byte-length verification plus FITS scalar headers and table declarations; no EBOUNDS values, response-matrix values, event rows, timing fit or score.",
+    "data_role": "CALIBRATION",
+    "finite_scope": "Finite response-history owner-provenance/schema intake only; no continuum, physical identity or prospective validation claim."
+  },
+  "products": [
+    {
+      "id": "FERMI-GBM-EVENT-TRIGGER-RSP2-N0",
+      "role": "time_segmented_response_history_owner_candidate",
+      "detector": "GBM NaI N0",
+      "local_cache_key": "HOLD-LC-001/2026-08-30/owner/glg_cspec_n0_bn170817529_v04.rsp2",
+      "recorded_sha256": "3302916c975c44cce107c39ded80c6c7f2455e574c6c230a9853e8dbb342005d",
+      "actual_sha256": "3302916c975c44cce107c39ded80c6c7f2455e574c6c230a9853e8dbb342005d",
+      "recorded_byte_length": 682560,
+      "actual_byte_length": 682560,
+      "sha256_match": true,
+      "byte_length_match": true,
+      "matrix_values_read": false,
+      "header_audit_performed": true,
+      "hdu_count": 10,
+      "hdus": [
+        {
+          "hdu_index": 0,
+          "header_byte_offset": 0,
+          "header_byte_length": 5760,
+          "data_byte_length": 0,
+          "fields": {
+            "BITPIX": 8,
+            "NAXIS": 0,
+            "DATE-OBS": "2017-08-17T12:39:03",
+            "DATE-END": "2017-08-17T12:43:17",
+            "MJDREFI": 51910,
+            "MJDREFF": 0.0007428703703703703,
+            "TSTART": 524666342.7046,
+            "TSTOP": 524666596.6606,
+            "TRIGTIME": 524666471.474598,
+            "TIMESYS": "TT",
+            "TIMEUNIT": "s",
+            "DETNAM": "NAI_00",
+            "CREATOR": "./GBM_RSP_Gen.pl-1.12  GBMRSP V2.0",
+            "FILENAME": "glg_cspec_n0_bn170817529_v04.rsp2",
+            "DRM_NUM": 8,
+            "DRM_TYPE": "CSPEC"
+          },
+          "table_columns": []
+        },
+        {
+          "hdu_index": 1,
+          "header_byte_offset": 5760,
+          "header_byte_length": 5760,
+          "data_byte_length": 1280,
+          "fields": {
+            "XTENSION": "BINTABLE",
+            "EXTNAME": "EBOUNDS",
+            "BITPIX": 8,
+            "NAXIS": 2,
+            "NAXIS1": 10,
+            "NAXIS2": 128,
+            "PCOUNT": 0,
+            "GCOUNT": 1,
+            "TFIELDS": 3,
+            "DATE-OBS": "2017-08-17T12:39:03",
+            "DATE-END": "2017-08-17T12:43:17",
+            "MJDREFI": 51910,
+            "MJDREFF": 0.0007428703703703703,
+            "TSTART": 524666342.7046,
+            "TSTOP": 524666596.6606,
+            "TRIGTIME": 524666471.474598,
+            "TIMESYS": "TT",
+            "TIMEUNIT": "s",
+            "DETNAM": "NAI_00",
+            "DETCHANS": 128,
+            "INFILE01": "glg_cspec_n0_bn170817529_v00.pha"
+          },
+          "table_columns": [
+            {
+              "index": 1,
+              "name": "CHANNEL",
+              "format": "1I",
+              "unit": null
+            },
+            {
+              "index": 2,
+              "name": "E_MIN",
+              "format": "1E",
+              "unit": "keV"
+            },
+            {
+              "index": 3,
+              "name": "E_MAX",
+              "format": "1E",
+              "unit": "keV"
+            }
+          ]
+        },
+        {
+          "hdu_index": 2,
+          "header_byte_offset": 14400,
+          "header_byte_length": 5760,
+          "data_byte_length": 74968,
+          "fields": {
+            "XTENSION": "BINTABLE",
+            "EXTNAME": "SPECRESP MATRIX",
+            "BITPIX": 8,
+            "NAXIS": 2,
+            "NAXIS1": 34,
+            "NAXIS2": 140,
+            "PCOUNT": 70208,
+            "GCOUNT": 1,
+            "TFIELDS": 6,
+            "DATE-OBS": "2017-08-17T12:39:03",
+            "DATE-END": "2017-08-17T12:39:44",
+            "MJDREFI": 51910,
+            "MJDREFF": 0.0007428703703703703,
+            "TSTART": 524666342.7046,
+            "TSTOP": 524666383.6652,
+            "TRIGTIME": 524666471.474598,
+            "TIMESYS": "TT",
+            "TIMEUNIT": "s",
+            "DETNAM": "NAI_00",
+            "DETCHANS": 128,
+            "RSP_NUM": 1,
+            "INFILE01": "glg_leaf_n0_z090000_az034084_v10.rsp",
+            "INFILE02": "glg_leaf_n0_z090000_az046859_v10.rsp",
+            "INFILE03": "glg_leaf_n0_z077843_az041034_v10.rsp",
+            "INFILE04": "test_atscatfile_preeinterp_db002.fits"
+          },
+          "table_columns": [
+            {
+              "index": 1,
+              "name": "ENERG_LO",
+              "format": "1E",
+              "unit": "keV"
+            },
+            {
+              "index": 2,
+              "name": "ENERG_HI",
+              "format": "1E",
+              "unit": "keV"
+            },
+            {
+              "index": 3,
+              "name": "N_GRP",
+              "format": "1I",
+              "unit": null
+            },
+            {
+              "index": 4,
+              "name": "F_CHAN",
+              "format": "PI(1)",
+              "unit": null
+            },
+            {
+              "index": 5,
+              "name": "N_CHAN",
+              "format": "PI(1)",
+              "unit": null
+            },
+            {
+              "index": 6,
+              "name": "MATRIX",
+              "format": "PE(128)",
+              "unit": "cm**2"
+            }
+          ]
+        },
+        {
+          "hdu_index": 3,
+          "header_byte_offset": 97920,
+          "header_byte_length": 5760,
+          "data_byte_length": 74968,
+          "fields": {
+            "XTENSION": "BINTABLE",
+            "EXTNAME": "SPECRESP MATRIX",
+            "BITPIX": 8,
+            "NAXIS": 2,
+            "NAXIS1": 34,
+            "NAXIS2": 140,
+            "PCOUNT": 70208,
+            "GCOUNT": 1,
+            "TFIELDS": 6,
+            "DATE-OBS": "2017-08-17T12:39:44",
+            "DATE-END": "2017-08-17T12:40:25",
+            "MJDREFI": 51910,
+            "MJDREFF": 0.0007428703703703703,
+            "TSTART": 524666383.6652,
+            "TSTOP": 524666424.6259,
+            "TRIGTIME": 524666471.474598,
+            "TIMESYS": "TT",
+            "TIMEUNIT": "s",
+            "DETNAM": "NAI_00",
+            "DETCHANS": 128,
+            "RSP_NUM": 2,
+            "INFILE01": "glg_leaf_n0_z077843_az041034_v10.rsp",
+            "INFILE02": "glg_leaf_n0_z090000_az034084_v10.rsp",
+            "INFILE03": "glg_leaf_n0_z090000_az046859_v10.rsp",
+            "INFILE04": "test_atscatfile_preeinterp_db002.fits"
+          },
+          "table_columns": [
+            {
+              "index": 1,
+              "name": "ENERG_LO",
+              "format": "1E",
+              "unit": "keV"
+            },
+            {
+              "index": 2,
+              "name": "ENERG_HI",
+              "format": "1E",
+              "unit": "keV"
+            },
+            {
+              "index": 3,
+              "name": "N_GRP",
+              "format": "1I",
+              "unit": null
+            },
+            {
+              "index": 4,
+              "name": "F_CHAN",
+              "format": "PI(1)",
+              "unit": null
+            },
+            {
+              "index": 5,
+              "name": "N_CHAN",
+              "format": "PI(1)",
+              "unit": null
+            },
+            {
+              "index": 6,
+              "name": "MATRIX",
+              "format": "PE(128)",
+              "unit": "cm**2"
+            }
+          ]
+        },
+        {
+          "hdu_index": 4,
+          "header_byte_offset": 181440,
+          "header_byte_length": 5760,
+          "data_byte_length": 74968,
+          "fields": {
+            "XTENSION": "BINTABLE",
+            "EXTNAME": "SPECRESP MATRIX",
+            "BITPIX": 8,
+            "NAXIS": 2,
+            "NAXIS1": 34,
+            "NAXIS2": 140,
+            "PCOUNT": 70208,
+            "GCOUNT": 1,
+            "TFIELDS": 6,
+            "DATE-OBS": "2017-08-17T12:40:25",
+            "DATE-END": "2017-08-17T12:41:04",
+            "MJDREFI": 51910,
+            "MJDREFF": 0.0007428703703703703,
+            "TSTART": 524666424.6259,
+            "TSTOP": 524666463.5385,
+            "TRIGTIME": 524666471.474598,
+            "TIMESYS": "TT",
+            "TIMEUNIT": "s",
+            "DETNAM": "NAI_00",
+            "DETCHANS": 128,
+            "RSP_NUM": 3,
+            "INFILE01": "glg_leaf_n0_z090000_az034084_v10.rsp",
+            "INFILE02": "glg_leaf_n0_z090000_az046859_v10.rsp",
+            "INFILE03": "glg_leaf_n0_z077843_az041034_v10.rsp",
+            "INFILE04": "test_atscatfile_preeinterp_db002.fits"
+          },
+          "table_columns": [
+            {
+              "index": 1,
+              "name": "ENERG_LO",
+              "format": "1E",
+              "unit": "keV"
+            },
+            {
+              "index": 2,
+              "name": "ENERG_HI",
+              "format": "1E",
+              "unit": "keV"
+            },
+            {
+              "index": 3,
+              "name": "N_GRP",
+              "format": "1I",
+              "unit": null
+            },
+            {
+              "index": 4,
+              "name": "F_CHAN",
+              "format": "PI(1)",
+              "unit": null
+            },
+            {
+              "index": 5,
+              "name": "N_CHAN",
+              "format": "PI(1)",
+              "unit": null
+            },
+            {
+              "index": 6,
+              "name": "MATRIX",
+              "format": "PE(128)",
+              "unit": "cm**2"
+            }
+          ]
+        },
+        {
+          "hdu_index": 5,
+          "header_byte_offset": 264960,
+          "header_byte_length": 5760,
+          "data_byte_length": 76488,
+          "fields": {
+            "XTENSION": "BINTABLE",
+            "EXTNAME": "SPECRESP MATRIX",
+            "BITPIX": 8,
+            "NAXIS": 2,
+            "NAXIS1": 34,
+            "NAXIS2": 140,
+            "PCOUNT": 71728,
+            "GCOUNT": 1,
+            "TFIELDS": 6,
+            "DATE-OBS": "2017-08-17T12:41:04",
+            "DATE-END": "2017-08-17T12:41:36",
+            "MJDREFI": 51910,
+            "MJDREFF": 0.0007428703703703703,
+            "TSTART": 524666463.5385,
+            "TSTOP": 524666496.307,
+            "TRIGTIME": 524666471.474598,
+            "TIMESYS": "TT",
+            "TIMEUNIT": "s",
+            "DETNAM": "NAI_00",
+            "DETCHANS": 128,
+            "RSP_NUM": 4,
+            "INFILE01": "glg_leaf_n0_z090000_az046859_v10.rsp",
+            "INFILE02": "glg_leaf_n0_z079143_az054710_v10.rsp",
+            "INFILE03": "glg_leaf_n0_z077843_az041034_v10.rsp",
+            "INFILE04": "test_atscatfile_preeinterp_db002.fits"
+          },
+          "table_columns": [
+            {
+              "index": 1,
+              "name": "ENERG_LO",
+              "format": "1E",
+              "unit": "keV"
+            },
+            {
+              "index": 2,
+              "name": "ENERG_HI",
+              "format": "1E",
+              "unit": "keV"
+            },
+            {
+              "index": 3,
+              "name": "N_GRP",
+              "format": "1I",
+              "unit": null
+            },
+            {
+              "index": 4,
+              "name": "F_CHAN",
+              "format": "PI(1)",
+              "unit": null
+            },
+            {
+              "index": 5,
+              "name": "N_CHAN",
+              "format": "PI(1)",
+              "unit": null
+            },
+            {
+              "index": 6,
+              "name": "MATRIX",
+              "format": "PE(128)",
+              "unit": "cm**2"
+            }
+          ]
+        },
+        {
+          "hdu_index": 6,
+          "header_byte_offset": 348480,
+          "header_byte_length": 5760,
+          "data_byte_length": 76488,
+          "fields": {
+            "XTENSION": "BINTABLE",
+            "EXTNAME": "SPECRESP MATRIX",
+            "BITPIX": 8,
+            "NAXIS": 2,
+            "NAXIS1": 34,
+            "NAXIS2": 140,
+            "PCOUNT": 71728,
+            "GCOUNT": 1,
+            "TFIELDS": 6,
+            "DATE-OBS": "2017-08-17T12:41:36",
+            "DATE-END": "2017-08-17T12:42:08",
+            "MJDREFI": 51910,
+            "MJDREFF": 0.0007428703703703703,
+            "TSTART": 524666496.307,
+            "TSTOP": 524666528.0515,
+            "TRIGTIME": 524666471.474598,
+            "TIMESYS": "TT",
+            "TIMEUNIT": "s",
+            "DETNAM": "NAI_00",
+            "DETCHANS": 128,
+            "RSP_NUM": 5,
+            "INFILE01": "glg_leaf_n0_z079143_az054710_v10.rsp",
+            "INFILE02": "glg_leaf_n0_z077843_az041034_v10.rsp",
+            "INFILE03": "glg_leaf_n0_z090000_az046859_v10.rsp",
+            "INFILE04": "test_atscatfile_preeinterp_db002.fits"
+          },
+          "table_columns": [
+            {
+              "index": 1,
+              "name": "ENERG_LO",
+              "format": "1E",
+              "unit": "keV"
+            },
+            {
+              "index": 2,
+              "name": "ENERG_HI",
+              "format": "1E",
+              "unit": "keV"
+            },
+            {
+              "index": 3,
+              "name": "N_GRP",
+              "format": "1I",
+              "unit": null
+            },
+            {
+              "index": 4,
+              "name": "F_CHAN",
+              "format": "PI(1)",
+              "unit": null
+            },
+            {
+              "index": 5,
+              "name": "N_CHAN",
+              "format": "PI(1)",
+              "unit": null
+            },
+            {
+              "index": 6,
+              "name": "MATRIX",
+              "format": "PE(128)",
+              "unit": "cm**2"
+            }
+          ]
+        },
+        {
+          "hdu_index": 7,
+          "header_byte_offset": 432000,
+          "header_byte_length": 5760,
+          "data_byte_length": 76488,
+          "fields": {
+            "XTENSION": "BINTABLE",
+            "EXTNAME": "SPECRESP MATRIX",
+            "BITPIX": 8,
+            "NAXIS": 2,
+            "NAXIS1": 34,
+            "NAXIS2": 140,
+            "PCOUNT": 71728,
+            "GCOUNT": 1,
+            "TFIELDS": 6,
+            "DATE-OBS": "2017-08-17T12:42:08",
+            "DATE-END": "2017-08-17T12:42:44",
+            "MJDREFI": 51910,
+            "MJDREFF": 0.0007428703703703703,
+            "TSTART": 524666528.0515,
+            "TSTOP": 524666563.8921,
+            "TRIGTIME": 524666471.474598,
+            "TIMESYS": "TT",
+            "TIMEUNIT": "s",
+            "DETNAM": "NAI_00",
+            "DETCHANS": 128,
+            "RSP_NUM": 6,
+            "INFILE01": "glg_leaf_n0_z077843_az041034_v10.rsp",
+            "INFILE02": "glg_leaf_n0_z090000_az046859_v10.rsp",
+            "INFILE03": "glg_leaf_n0_z079143_az054710_v10.rsp",
+            "INFILE04": "test_atscatfile_preeinterp_db002.fits"
+          },
+          "table_columns": [
+            {
+              "index": 1,
+              "name": "ENERG_LO",
+              "format": "1E",
+              "unit": "keV"
+            },
+            {
+              "index": 2,
+              "name": "ENERG_HI",
+              "format": "1E",
+              "unit": "keV"
+            },
+            {
+              "index": 3,
+              "name": "N_GRP",
+              "format": "1I",
+              "unit": null
+            },
+            {
+              "index": 4,
+              "name": "F_CHAN",
+              "format": "PI(1)",
+              "unit": null
+            },
+            {
+              "index": 5,
+              "name": "N_CHAN",
+              "format": "PI(1)",
+              "unit": null
+            },
+            {
+              "index": 6,
+              "name": "MATRIX",
+              "format": "PE(128)",
+              "unit": "cm**2"
+            }
+          ]
+        },
+        {
+          "hdu_index": 8,
+          "header_byte_offset": 515520,
+          "header_byte_length": 5760,
+          "data_byte_length": 76488,
+          "fields": {
+            "XTENSION": "BINTABLE",
+            "EXTNAME": "SPECRESP MATRIX",
+            "BITPIX": 8,
+            "NAXIS": 2,
+            "NAXIS1": 34,
+            "NAXIS2": 140,
+            "PCOUNT": 71728,
+            "GCOUNT": 1,
+            "TFIELDS": 6,
+            "DATE-OBS": "2017-08-17T12:42:44",
+            "DATE-END": "2017-08-17T12:43:17",
+            "MJDREFI": 51910,
+            "MJDREFF": 0.0007428703703703703,
+            "TSTART": 524666563.8921,
+            "TSTOP": 524666596.6606,
+            "TRIGTIME": 524666471.474598,
+            "TIMESYS": "TT",
+            "TIMEUNIT": "s",
+            "DETNAM": "NAI_00",
+            "DETCHANS": 128,
+            "RSP_NUM": 7,
+            "INFILE01": "glg_leaf_n0_z079143_az054710_v10.rsp",
+            "INFILE02": "glg_leaf_n0_z077843_az041034_v10.rsp",
+            "INFILE03": "glg_leaf_n0_z090000_az046859_v10.rsp",
+            "INFILE04": "test_atscatfile_preeinterp_db002.fits"
+          },
+          "table_columns": [
+            {
+              "index": 1,
+              "name": "ENERG_LO",
+              "format": "1E",
+              "unit": "keV"
+            },
+            {
+              "index": 2,
+              "name": "ENERG_HI",
+              "format": "1E",
+              "unit": "keV"
+            },
+            {
+              "index": 3,
+              "name": "N_GRP",
+              "format": "1I",
+              "unit": null
+            },
+            {
+              "index": 4,
+              "name": "F_CHAN",
+              "format": "PI(1)",
+              "unit": null
+            },
+            {
+              "index": 5,
+              "name": "N_CHAN",
+              "format": "PI(1)",
+              "unit": null
+            },
+            {
+              "index": 6,
+              "name": "MATRIX",
+              "format": "PE(128)",
+              "unit": "cm**2"
+            }
+          ]
+        },
+        {
+          "hdu_index": 9,
+          "header_byte_offset": 599040,
+          "header_byte_length": 5760,
+          "data_byte_length": 76488,
+          "fields": {
+            "XTENSION": "BINTABLE",
+            "EXTNAME": "SPECRESP MATRIX",
+            "BITPIX": 8,
+            "NAXIS": 2,
+            "NAXIS1": 34,
+            "NAXIS2": 140,
+            "PCOUNT": 71728,
+            "GCOUNT": 1,
+            "TFIELDS": 6,
+            "DATE-OBS": "2017-08-17T12:43:17",
+            "DATE-END": "2017-08-17T12:43:17",
+            "MJDREFI": 51910,
+            "MJDREFF": 0.0007428703703703703,
+            "TSTART": 524666596.6606,
+            "TSTOP": 524666596.6606,
+            "TRIGTIME": 524666471.474598,
+            "TIMESYS": "TT",
+            "TIMEUNIT": "s",
+            "DETNAM": "NAI_00",
+            "DETCHANS": 128,
+            "RSP_NUM": 8,
+            "INFILE01": "glg_leaf_n0_z077843_az041034_v10.rsp",
+            "INFILE02": "glg_leaf_n0_z090000_az046859_v10.rsp",
+            "INFILE03": "glg_leaf_n0_z079143_az054710_v10.rsp",
+            "INFILE04": "test_atscatfile_preeinterp_db002.fits"
+          },
+          "table_columns": [
+            {
+              "index": 1,
+              "name": "ENERG_LO",
+              "format": "1E",
+              "unit": "keV"
+            },
+            {
+              "index": 2,
+              "name": "ENERG_HI",
+              "format": "1E",
+              "unit": "keV"
+            },
+            {
+              "index": 3,
+              "name": "N_GRP",
+              "format": "1I",
+              "unit": null
+            },
+            {
+              "index": 4,
+              "name": "F_CHAN",
+              "format": "PI(1)",
+              "unit": null
+            },
+            {
+              "index": 5,
+              "name": "N_CHAN",
+              "format": "PI(1)",
+              "unit": null
+            },
+            {
+              "index": 6,
+              "name": "MATRIX",
+              "format": "PE(128)",
+              "unit": "cm**2"
+            }
+          ]
+        }
+      ],
+      "schema": {
+        "ebounds_hdu_indices": [
+          1
+        ],
+        "response_matrix_hdu_indices": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "response_segment_count": 8,
+        "response_numbers": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "ebounds_declared_columns": [
+          "CHANNEL",
+          "E_MAX",
+          "E_MIN"
+        ],
+        "response_matrix_declared_columns": [
+          "ENERG_HI",
+          "ENERG_LO",
+          "F_CHAN",
+          "MATRIX",
+          "N_CHAN",
+          "N_GRP"
+        ],
+        "required_ebounds_columns": [
+          "CHANNEL",
+          "E_MIN",
+          "E_MAX"
+        ],
+        "required_response_matrix_columns": [
+          "ENERG_LO",
+          "ENERG_HI",
+          "N_GRP",
+          "F_CHAN",
+          "N_CHAN",
+          "MATRIX"
+        ],
+        "missing_ebounds_columns": [],
+        "missing_response_matrix_columns": [],
+        "coverage": {
+          "first_segment": {
+            "DATE-OBS": "2017-08-17T12:39:03",
+            "DATE-END": "2017-08-17T12:39:44",
+            "TSTART": 524666342.7046,
+            "TSTOP": 524666383.6652,
+            "TIMESYS": "TT",
+            "TIMEUNIT": "s"
+          },
+          "last_segment": {
+            "DATE-OBS": "2017-08-17T12:43:17",
+            "DATE-END": "2017-08-17T12:43:17",
+            "TSTART": 524666596.6606,
+            "TSTOP": 524666596.6606,
+            "TIMESYS": "TT",
+            "TIMEUNIT": "s"
+          },
+          "all_declared_hdus": true
+        },
+        "time_standard_fields_present": true,
+        "response_segment_order_and_numbering": true,
+        "nonempty_response_rows_declared": true,
+        "header_owner_fields": {
+          "CREATOR": "./GBM_RSP_Gen.pl-1.12  GBMRSP V2.0",
+          "DRM_TYPE": "CSPEC",
+          "DRM_NUM": 8,
+          "TRIGTIME": 524666471.474598,
+          "DETNAM": "NAI_00"
+        },
+        "schema_match": true
+      }
+    },
+    {
+      "id": "FERMI-GBM-EVENT-TRIGGER-RSP2-B0",
+      "role": "time_segmented_response_history_owner_candidate",
+      "detector": "GBM BGO B0",
+      "local_cache_key": "HOLD-LC-001/2026-08-30/owner/glg_cspec_b0_bn170817529_v04.rsp2",
+      "recorded_sha256": "1760b4723d2e704ccaf030147244ec2b8648c22355ea1e181509791505164d7a",
+      "actual_sha256": "1760b4723d2e704ccaf030147244ec2b8648c22355ea1e181509791505164d7a",
+      "recorded_byte_length": 682560,
+      "actual_byte_length": 682560,
+      "sha256_match": true,
+      "byte_length_match": true,
+      "matrix_values_read": false,
+      "header_audit_performed": true,
+      "hdu_count": 10,
+      "hdus": [
+        {
+          "hdu_index": 0,
+          "header_byte_offset": 0,
+          "header_byte_length": 5760,
+          "data_byte_length": 0,
+          "fields": {
+            "BITPIX": 8,
+            "NAXIS": 0,
+            "DATE-OBS": "2017-08-17T12:39:03",
+            "DATE-END": "2017-08-17T12:43:17",
+            "MJDREFI": 51910,
+            "MJDREFF": 0.0007428703703703703,
+            "TSTART": 524666342.7046,
+            "TSTOP": 524666596.6606,
+            "TRIGTIME": 524666471.474598,
+            "TIMESYS": "TT",
+            "TIMEUNIT": "s",
+            "DETNAM": "BGO_00",
+            "CREATOR": "./GBM_RSP_Gen.pl-1.12  GBMRSP V2.0",
+            "FILENAME": "glg_cspec_b0_bn170817529_v04.rsp2",
+            "DRM_NUM": 8,
+            "DRM_TYPE": "CSPEC"
+          },
+          "table_columns": []
+        },
+        {
+          "hdu_index": 1,
+          "header_byte_offset": 5760,
+          "header_byte_length": 5760,
+          "data_byte_length": 1280,
+          "fields": {
+            "XTENSION": "BINTABLE",
+            "EXTNAME": "EBOUNDS",
+            "BITPIX": 8,
+            "NAXIS": 2,
+            "NAXIS1": 10,
+            "NAXIS2": 128,
+            "PCOUNT": 0,
+            "GCOUNT": 1,
+            "TFIELDS": 3,
+            "DATE-OBS": "2017-08-17T12:39:03",
+            "DATE-END": "2017-08-17T12:43:17",
+            "MJDREFI": 51910,
+            "MJDREFF": 0.0007428703703703703,
+            "TSTART": 524666342.7046,
+            "TSTOP": 524666596.6606,
+            "TRIGTIME": 524666471.474598,
+            "TIMESYS": "TT",
+            "TIMEUNIT": "s",
+            "DETNAM": "BGO_00",
+            "DETCHANS": 128,
+            "INFILE01": "glg_cspec_b0_bn170817529_v00.pha"
+          },
+          "table_columns": [
+            {
+              "index": 1,
+              "name": "CHANNEL",
+              "format": "1I",
+              "unit": null
+            },
+            {
+              "index": 2,
+              "name": "E_MIN",
+              "format": "1E",
+              "unit": "keV"
+            },
+            {
+              "index": 3,
+              "name": "E_MAX",
+              "format": "1E",
+              "unit": "keV"
+            }
+          ]
+        },
+        {
+          "hdu_index": 2,
+          "header_byte_offset": 14400,
+          "header_byte_length": 5760,
+          "data_byte_length": 76492,
+          "fields": {
+            "XTENSION": "BINTABLE",
+            "EXTNAME": "SPECRESP MATRIX",
+            "BITPIX": 8,
+            "NAXIS": 2,
+            "NAXIS1": 34,
+            "NAXIS2": 140,
+            "PCOUNT": 71732,
+            "GCOUNT": 1,
+            "TFIELDS": 6,
+            "DATE-OBS": "2017-08-17T12:39:03",
+            "DATE-END": "2017-08-17T12:39:44",
+            "MJDREFI": 51910,
+            "MJDREFF": 0.0007428703703703703,
+            "TSTART": 524666342.7046,
+            "TSTOP": 524666383.6652,
+            "TRIGTIME": 524666471.474598,
+            "TIMESYS": "TT",
+            "TIMEUNIT": "s",
+            "DETNAM": "BGO_00",
+            "DETCHANS": 128,
+            "RSP_NUM": 1,
+            "INFILE01": "glg_leaf_b0_z090000_az034084_v10.rsp",
+            "INFILE02": "glg_leaf_b0_z090000_az046859_v10.rsp",
+            "INFILE03": "glg_leaf_b0_z077843_az041034_v10.rsp",
+            "INFILE04": "test_atscatfile_preeinterp_db002.fits"
+          },
+          "table_columns": [
+            {
+              "index": 1,
+              "name": "ENERG_LO",
+              "format": "1E",
+              "unit": "keV"
+            },
+            {
+              "index": 2,
+              "name": "ENERG_HI",
+              "format": "1E",
+              "unit": "keV"
+            },
+            {
+              "index": 3,
+              "name": "N_GRP",
+              "format": "1I",
+              "unit": null
+            },
+            {
+              "index": 4,
+              "name": "F_CHAN",
+              "format": "PI(1)",
+              "unit": null
+            },
+            {
+              "index": 5,
+              "name": "N_CHAN",
+              "format": "PI(1)",
+              "unit": null
+            },
+            {
+              "index": 6,
+              "name": "MATRIX",
+              "format": "PE(128)",
+              "unit": "cm**2"
+            }
+          ]
+        },
+        {
+          "hdu_index": 3,
+          "header_byte_offset": 97920,
+          "header_byte_length": 5760,
+          "data_byte_length": 76492,
+          "fields": {
+            "XTENSION": "BINTABLE",
+            "EXTNAME": "SPECRESP MATRIX",
+            "BITPIX": 8,
+            "NAXIS": 2,
+            "NAXIS1": 34,
+            "NAXIS2": 140,
+            "PCOUNT": 71732,
+            "GCOUNT": 1,
+            "TFIELDS": 6,
+            "DATE-OBS": "2017-08-17T12:39:44",
+            "DATE-END": "2017-08-17T12:40:25",
+            "MJDREFI": 51910,
+            "MJDREFF": 0.0007428703703703703,
+            "TSTART": 524666383.6652,
+            "TSTOP": 524666424.6259,
+            "TRIGTIME": 524666471.474598,
+            "TIMESYS": "TT",
+            "TIMEUNIT": "s",
+            "DETNAM": "BGO_00",
+            "DETCHANS": 128,
+            "RSP_NUM": 2,
+            "INFILE01": "glg_leaf_b0_z077843_az041034_v10.rsp",
+            "INFILE02": "glg_leaf_b0_z090000_az034084_v10.rsp",
+            "INFILE03": "glg_leaf_b0_z090000_az046859_v10.rsp",
+            "INFILE04": "test_atscatfile_preeinterp_db002.fits"
+          },
+          "table_columns": [
+            {
+              "index": 1,
+              "name": "ENERG_LO",
+              "format": "1E",
+              "unit": "keV"
+            },
+            {
+              "index": 2,
+              "name": "ENERG_HI",
+              "format": "1E",
+              "unit": "keV"
+            },
+            {
+              "index": 3,
+              "name": "N_GRP",
+              "format": "1I",
+              "unit": null
+            },
+            {
+              "index": 4,
+              "name": "F_CHAN",
+              "format": "PI(1)",
+              "unit": null
+            },
+            {
+              "index": 5,
+              "name": "N_CHAN",
+              "format": "PI(1)",
+              "unit": null
+            },
+            {
+              "index": 6,
+              "name": "MATRIX",
+              "format": "PE(128)",
+              "unit": "cm**2"
+            }
+          ]
+        },
+        {
+          "hdu_index": 4,
+          "header_byte_offset": 181440,
+          "header_byte_length": 5760,
+          "data_byte_length": 76492,
+          "fields": {
+            "XTENSION": "BINTABLE",
+            "EXTNAME": "SPECRESP MATRIX",
+            "BITPIX": 8,
+            "NAXIS": 2,
+            "NAXIS1": 34,
+            "NAXIS2": 140,
+            "PCOUNT": 71732,
+            "GCOUNT": 1,
+            "TFIELDS": 6,
+            "DATE-OBS": "2017-08-17T12:40:25",
+            "DATE-END": "2017-08-17T12:41:04",
+            "MJDREFI": 51910,
+            "MJDREFF": 0.0007428703703703703,
+            "TSTART": 524666424.6259,
+            "TSTOP": 524666463.5385,
+            "TRIGTIME": 524666471.474598,
+            "TIMESYS": "TT",
+            "TIMEUNIT": "s",
+            "DETNAM": "BGO_00",
+            "DETCHANS": 128,
+            "RSP_NUM": 3,
+            "INFILE01": "glg_leaf_b0_z090000_az034084_v10.rsp",
+            "INFILE02": "glg_leaf_b0_z090000_az046859_v10.rsp",
+            "INFILE03": "glg_leaf_b0_z077843_az041034_v10.rsp",
+            "INFILE04": "test_atscatfile_preeinterp_db002.fits"
+          },
+          "table_columns": [
+            {
+              "index": 1,
+              "name": "ENERG_LO",
+              "format": "1E",
+              "unit": "keV"
+            },
+            {
+              "index": 2,
+              "name": "ENERG_HI",
+              "format": "1E",
+              "unit": "keV"
+            },
+            {
+              "index": 3,
+              "name": "N_GRP",
+              "format": "1I",
+              "unit": null
+            },
+            {
+              "index": 4,
+              "name": "F_CHAN",
+              "format": "PI(1)",
+              "unit": null
+            },
+            {
+              "index": 5,
+              "name": "N_CHAN",
+              "format": "PI(1)",
+              "unit": null
+            },
+            {
+              "index": 6,
+              "name": "MATRIX",
+              "format": "PE(128)",
+              "unit": "cm**2"
+            }
+          ]
+        },
+        {
+          "hdu_index": 5,
+          "header_byte_offset": 264960,
+          "header_byte_length": 5760,
+          "data_byte_length": 76492,
+          "fields": {
+            "XTENSION": "BINTABLE",
+            "EXTNAME": "SPECRESP MATRIX",
+            "BITPIX": 8,
+            "NAXIS": 2,
+            "NAXIS1": 34,
+            "NAXIS2": 140,
+            "PCOUNT": 71732,
+            "GCOUNT": 1,
+            "TFIELDS": 6,
+            "DATE-OBS": "2017-08-17T12:41:04",
+            "DATE-END": "2017-08-17T12:41:36",
+            "MJDREFI": 51910,
+            "MJDREFF": 0.0007428703703703703,
+            "TSTART": 524666463.5385,
+            "TSTOP": 524666496.307,
+            "TRIGTIME": 524666471.474598,
+            "TIMESYS": "TT",
+            "TIMEUNIT": "s",
+            "DETNAM": "BGO_00",
+            "DETCHANS": 128,
+            "RSP_NUM": 4,
+            "INFILE01": "glg_leaf_b0_z090000_az046859_v10.rsp",
+            "INFILE02": "glg_leaf_b0_z079143_az054710_v10.rsp",
+            "INFILE03": "glg_leaf_b0_z077843_az041034_v10.rsp",
+            "INFILE04": "test_atscatfile_preeinterp_db002.fits"
+          },
+          "table_columns": [
+            {
+              "index": 1,
+              "name": "ENERG_LO",
+              "format": "1E",
+              "unit": "keV"
+            },
+            {
+              "index": 2,
+              "name": "ENERG_HI",
+              "format": "1E",
+              "unit": "keV"
+            },
+            {
+              "index": 3,
+              "name": "N_GRP",
+              "format": "1I",
+              "unit": null
+            },
+            {
+              "index": 4,
+              "name": "F_CHAN",
+              "format": "PI(1)",
+              "unit": null
+            },
+            {
+              "index": 5,
+              "name": "N_CHAN",
+              "format": "PI(1)",
+              "unit": null
+            },
+            {
+              "index": 6,
+              "name": "MATRIX",
+              "format": "PE(128)",
+              "unit": "cm**2"
+            }
+          ]
+        },
+        {
+          "hdu_index": 6,
+          "header_byte_offset": 348480,
+          "header_byte_length": 5760,
+          "data_byte_length": 76492,
+          "fields": {
+            "XTENSION": "BINTABLE",
+            "EXTNAME": "SPECRESP MATRIX",
+            "BITPIX": 8,
+            "NAXIS": 2,
+            "NAXIS1": 34,
+            "NAXIS2": 140,
+            "PCOUNT": 71732,
+            "GCOUNT": 1,
+            "TFIELDS": 6,
+            "DATE-OBS": "2017-08-17T12:41:36",
+            "DATE-END": "2017-08-17T12:42:08",
+            "MJDREFI": 51910,
+            "MJDREFF": 0.0007428703703703703,
+            "TSTART": 524666496.307,
+            "TSTOP": 524666528.0515,
+            "TRIGTIME": 524666471.474598,
+            "TIMESYS": "TT",
+            "TIMEUNIT": "s",
+            "DETNAM": "BGO_00",
+            "DETCHANS": 128,
+            "RSP_NUM": 5,
+            "INFILE01": "glg_leaf_b0_z079143_az054710_v10.rsp",
+            "INFILE02": "glg_leaf_b0_z077843_az041034_v10.rsp",
+            "INFILE03": "glg_leaf_b0_z090000_az046859_v10.rsp",
+            "INFILE04": "test_atscatfile_preeinterp_db002.fits"
+          },
+          "table_columns": [
+            {
+              "index": 1,
+              "name": "ENERG_LO",
+              "format": "1E",
+              "unit": "keV"
+            },
+            {
+              "index": 2,
+              "name": "ENERG_HI",
+              "format": "1E",
+              "unit": "keV"
+            },
+            {
+              "index": 3,
+              "name": "N_GRP",
+              "format": "1I",
+              "unit": null
+            },
+            {
+              "index": 4,
+              "name": "F_CHAN",
+              "format": "PI(1)",
+              "unit": null
+            },
+            {
+              "index": 5,
+              "name": "N_CHAN",
+              "format": "PI(1)",
+              "unit": null
+            },
+            {
+              "index": 6,
+              "name": "MATRIX",
+              "format": "PE(128)",
+              "unit": "cm**2"
+            }
+          ]
+        },
+        {
+          "hdu_index": 7,
+          "header_byte_offset": 432000,
+          "header_byte_length": 5760,
+          "data_byte_length": 76492,
+          "fields": {
+            "XTENSION": "BINTABLE",
+            "EXTNAME": "SPECRESP MATRIX",
+            "BITPIX": 8,
+            "NAXIS": 2,
+            "NAXIS1": 34,
+            "NAXIS2": 140,
+            "PCOUNT": 71732,
+            "GCOUNT": 1,
+            "TFIELDS": 6,
+            "DATE-OBS": "2017-08-17T12:42:08",
+            "DATE-END": "2017-08-17T12:42:44",
+            "MJDREFI": 51910,
+            "MJDREFF": 0.0007428703703703703,
+            "TSTART": 524666528.0515,
+            "TSTOP": 524666563.8921,
+            "TRIGTIME": 524666471.474598,
+            "TIMESYS": "TT",
+            "TIMEUNIT": "s",
+            "DETNAM": "BGO_00",
+            "DETCHANS": 128,
+            "RSP_NUM": 6,
+            "INFILE01": "glg_leaf_b0_z077843_az041034_v10.rsp",
+            "INFILE02": "glg_leaf_b0_z090000_az046859_v10.rsp",
+            "INFILE03": "glg_leaf_b0_z079143_az054710_v10.rsp",
+            "INFILE04": "test_atscatfile_preeinterp_db002.fits"
+          },
+          "table_columns": [
+            {
+              "index": 1,
+              "name": "ENERG_LO",
+              "format": "1E",
+              "unit": "keV"
+            },
+            {
+              "index": 2,
+              "name": "ENERG_HI",
+              "format": "1E",
+              "unit": "keV"
+            },
+            {
+              "index": 3,
+              "name": "N_GRP",
+              "format": "1I",
+              "unit": null
+            },
+            {
+              "index": 4,
+              "name": "F_CHAN",
+              "format": "PI(1)",
+              "unit": null
+            },
+            {
+              "index": 5,
+              "name": "N_CHAN",
+              "format": "PI(1)",
+              "unit": null
+            },
+            {
+              "index": 6,
+              "name": "MATRIX",
+              "format": "PE(128)",
+              "unit": "cm**2"
+            }
+          ]
+        },
+        {
+          "hdu_index": 8,
+          "header_byte_offset": 515520,
+          "header_byte_length": 5760,
+          "data_byte_length": 76492,
+          "fields": {
+            "XTENSION": "BINTABLE",
+            "EXTNAME": "SPECRESP MATRIX",
+            "BITPIX": 8,
+            "NAXIS": 2,
+            "NAXIS1": 34,
+            "NAXIS2": 140,
+            "PCOUNT": 71732,
+            "GCOUNT": 1,
+            "TFIELDS": 6,
+            "DATE-OBS": "2017-08-17T12:42:44",
+            "DATE-END": "2017-08-17T12:43:17",
+            "MJDREFI": 51910,
+            "MJDREFF": 0.0007428703703703703,
+            "TSTART": 524666563.8921,
+            "TSTOP": 524666596.6606,
+            "TRIGTIME": 524666471.474598,
+            "TIMESYS": "TT",
+            "TIMEUNIT": "s",
+            "DETNAM": "BGO_00",
+            "DETCHANS": 128,
+            "RSP_NUM": 7,
+            "INFILE01": "glg_leaf_b0_z079143_az054710_v10.rsp",
+            "INFILE02": "glg_leaf_b0_z077843_az041034_v10.rsp",
+            "INFILE03": "glg_leaf_b0_z090000_az046859_v10.rsp",
+            "INFILE04": "test_atscatfile_preeinterp_db002.fits"
+          },
+          "table_columns": [
+            {
+              "index": 1,
+              "name": "ENERG_LO",
+              "format": "1E",
+              "unit": "keV"
+            },
+            {
+              "index": 2,
+              "name": "ENERG_HI",
+              "format": "1E",
+              "unit": "keV"
+            },
+            {
+              "index": 3,
+              "name": "N_GRP",
+              "format": "1I",
+              "unit": null
+            },
+            {
+              "index": 4,
+              "name": "F_CHAN",
+              "format": "PI(1)",
+              "unit": null
+            },
+            {
+              "index": 5,
+              "name": "N_CHAN",
+              "format": "PI(1)",
+              "unit": null
+            },
+            {
+              "index": 6,
+              "name": "MATRIX",
+              "format": "PE(128)",
+              "unit": "cm**2"
+            }
+          ]
+        },
+        {
+          "hdu_index": 9,
+          "header_byte_offset": 599040,
+          "header_byte_length": 5760,
+          "data_byte_length": 76492,
+          "fields": {
+            "XTENSION": "BINTABLE",
+            "EXTNAME": "SPECRESP MATRIX",
+            "BITPIX": 8,
+            "NAXIS": 2,
+            "NAXIS1": 34,
+            "NAXIS2": 140,
+            "PCOUNT": 71732,
+            "GCOUNT": 1,
+            "TFIELDS": 6,
+            "DATE-OBS": "2017-08-17T12:43:17",
+            "DATE-END": "2017-08-17T12:43:17",
+            "MJDREFI": 51910,
+            "MJDREFF": 0.0007428703703703703,
+            "TSTART": 524666596.6606,
+            "TSTOP": 524666596.6606,
+            "TRIGTIME": 524666471.474598,
+            "TIMESYS": "TT",
+            "TIMEUNIT": "s",
+            "DETNAM": "BGO_00",
+            "DETCHANS": 128,
+            "RSP_NUM": 8,
+            "INFILE01": "glg_leaf_b0_z077843_az041034_v10.rsp",
+            "INFILE02": "glg_leaf_b0_z090000_az046859_v10.rsp",
+            "INFILE03": "glg_leaf_b0_z079143_az054710_v10.rsp",
+            "INFILE04": "test_atscatfile_preeinterp_db002.fits"
+          },
+          "table_columns": [
+            {
+              "index": 1,
+              "name": "ENERG_LO",
+              "format": "1E",
+              "unit": "keV"
+            },
+            {
+              "index": 2,
+              "name": "ENERG_HI",
+              "format": "1E",
+              "unit": "keV"
+            },
+            {
+              "index": 3,
+              "name": "N_GRP",
+              "format": "1I",
+              "unit": null
+            },
+            {
+              "index": 4,
+              "name": "F_CHAN",
+              "format": "PI(1)",
+              "unit": null
+            },
+            {
+              "index": 5,
+              "name": "N_CHAN",
+              "format": "PI(1)",
+              "unit": null
+            },
+            {
+              "index": 6,
+              "name": "MATRIX",
+              "format": "PE(128)",
+              "unit": "cm**2"
+            }
+          ]
+        }
+      ],
+      "schema": {
+        "ebounds_hdu_indices": [
+          1
+        ],
+        "response_matrix_hdu_indices": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "response_segment_count": 8,
+        "response_numbers": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "ebounds_declared_columns": [
+          "CHANNEL",
+          "E_MAX",
+          "E_MIN"
+        ],
+        "response_matrix_declared_columns": [
+          "ENERG_HI",
+          "ENERG_LO",
+          "F_CHAN",
+          "MATRIX",
+          "N_CHAN",
+          "N_GRP"
+        ],
+        "required_ebounds_columns": [
+          "CHANNEL",
+          "E_MIN",
+          "E_MAX"
+        ],
+        "required_response_matrix_columns": [
+          "ENERG_LO",
+          "ENERG_HI",
+          "N_GRP",
+          "F_CHAN",
+          "N_CHAN",
+          "MATRIX"
+        ],
+        "missing_ebounds_columns": [],
+        "missing_response_matrix_columns": [],
+        "coverage": {
+          "first_segment": {
+            "DATE-OBS": "2017-08-17T12:39:03",
+            "DATE-END": "2017-08-17T12:39:44",
+            "TSTART": 524666342.7046,
+            "TSTOP": 524666383.6652,
+            "TIMESYS": "TT",
+            "TIMEUNIT": "s"
+          },
+          "last_segment": {
+            "DATE-OBS": "2017-08-17T12:43:17",
+            "DATE-END": "2017-08-17T12:43:17",
+            "TSTART": 524666596.6606,
+            "TSTOP": 524666596.6606,
+            "TIMESYS": "TT",
+            "TIMEUNIT": "s"
+          },
+          "all_declared_hdus": true
+        },
+        "time_standard_fields_present": true,
+        "response_segment_order_and_numbering": true,
+        "nonempty_response_rows_declared": true,
+        "header_owner_fields": {
+          "CREATOR": "./GBM_RSP_Gen.pl-1.12  GBMRSP V2.0",
+          "DRM_TYPE": "CSPEC",
+          "DRM_NUM": 8,
+          "TRIGTIME": 524666471.474598,
+          "DETNAM": "BGO_00"
+        },
+        "schema_match": true
+      }
+    }
+  ],
+  "available_metadata": {
+    "response_history_sha256_and_byte_length": true,
+    "ebounds_and_matrix_schema": true,
+    "time_segment_count_declared": 16,
+    "response_segment_order_and_numbering": true,
+    "time_standard_and_segment_coverage": true,
+    "response_matrix_values_read": false,
+    "calibration_validity_interpolation": false,
+    "detector_to_geocenter_conversion": false,
+    "source_owned_timing_likelihood": false,
+    "component_or_shared_covariance": false,
+    "intrinsic_emission_nuisance_law": false,
+    "complete_f_reg_f_lim_f_eff_f_obs": false
+  },
+  "interpretation": {
+    "response_history": "Both exact rsp2 products declare one EBOUNDS table and eight numbered SPECRESP MATRIX segments with TT-second header coverage and trigger context. This establishes a time-segmented response-history owner candidate, not the matrix values or a complete calibration law.",
+    "linkage_boundary": "The headers expose response-generation inputs and segment intervals, but this audit does not read the response values or prove validity/interpolation linkage to the spectral-history products.",
+    "admission": "The new metadata narrows the physical-owner request. Candidate scoring and all four estimator-map stages remain stopped until conversion, uncertainty, likelihood and nuisance ownership are frozen."
+  },
+  "checks": {
+    "all_selected_product_hashes_match": true,
+    "all_response_history_schemas_match": true,
+    "header_only_no_table_values_read": true,
+    "candidate_scoring": "STOPPED",
+    "prospective_lock": "EMPTY"
+  },
+  "assumptions": [
+    "The response-history byte-freeze manifest remains authoritative for product identity, roles, hashes and locators.",
+    "FITS scalar headers and table declarations are descriptive provenance; no matrix or EBOUNDS value is interpreted.",
+    "The two rsp2 files are physical-owner candidates and not a complete timing or calibration implementation.",
+    "The existing T-054 forward method, T-059 inverse method, owner order and promotion firewalls remain controlling."
+  ],
+  "missing_assumptions": [
+    "A source-owned rule linking response-history segments to selected event windows and spectral-history validity intervals.",
+    "A detector-to-geocenter timing conversion and uncertainty for the GBM and GW instruments.",
+    "Frozen detector, energy, background and temporal windows with selection semantics.",
+    "A source-owned joint timing likelihood or component/shared covariance including calibration and intrinsic-emission nuisance terms.",
+    "A complete candidate-neutral F_reg/F_lim/F_eff/F_obs map and immutable scorer.",
+    "A prospective holdout not used for source selection, response selection or estimator design."
+  ],
+  "evidence_level": "T0 exact public-product byte freeze and response-history header/schema intake; no matrix-value or model test",
+  "next_action": "Request or locate the validity/interpolation and timing-uncertainty owner rules linked to the response-history segments. Keep matrix values and scoring locked; independently reproduce F_reg only after the complete physical-owner and proof-owner contracts are frozen.",
+  "non_claims": [
+    "This audit does not admit response-matrix values, a calibration-validity interpolation, detector-to-geocenter correction, timing likelihood, covariance, nuisance law, candidate, map, score or prediction.",
+    "Time-segmented response headers do not identify microscopic dynamics, causal propagation or a physical Yang-Mills sector.",
+    "No Pre-A, C6, A13, Sector-A, QFT, Yang-Mills, gravity, continuum, physical-vacuum, cosmic-origin, theory-of-everything or mass-gap claim follows.",
+    "The established T-054 forward and T-059 inverse methods are unchanged; this is additive response-history owner intake only."
+  ]
+}

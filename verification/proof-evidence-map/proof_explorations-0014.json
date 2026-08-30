@@ -1013,6 +1013,228 @@
       "task_id": "T-061",
       "title": "HOLD-LC-001 event-day Fermi owner-artifact byte freeze and schema audit",
       "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "axis": "response-history-as-likelihood",
+          "check": "Could the rsp2 segment declarations be treated as a timing likelihood or covariance?",
+          "disposition": "UPHELD-BLOCKED: only headers and table declarations are admitted; response values, noise law and covariance remain absent."
+        },
+        {
+          "axis": "segment-order-as-continuity",
+          "check": "Could RSP_NUM=1..8 and ordered intervals prove a continuous calibrated response or interpolation law?",
+          "disposition": "UPHELD-BLOCKED: numbering/coverage is descriptive; segment interpolation, validity and calibration uncertainty are not established."
+        },
+        {
+          "axis": "response-linkage",
+          "check": "Could INFILE and detector labels be treated as a complete source-owned link to spectral history and geocenter timing?",
+          "disposition": "UPHELD-BLOCKED: explicit linkage, conversion and uncertainty owners remain missing."
+        },
+        {
+          "axis": "partial-coverage",
+          "check": "Could two detector rsp2 files be called a complete multi-detector estimator?",
+          "disposition": "DISMISSED-FOR-SCOPE: the exact two-product intake subset is recorded and all four map stages remain incomplete."
+        },
+        {
+          "axis": "method-overhaul",
+          "check": "Could this response-history intake replace the established proof lanes?",
+          "disposition": "DISMISSED: T-054/T-059, R-192 owner order and stopped-loop rules are unchanged."
+        }
+      ],
+      "assumptions": [
+        "The response-history byte-freeze manifest is authoritative for product identity, role, locator, hash and length.",
+        "FITS scalar headers and table declarations are descriptive provenance; no matrix or EBOUNDS value is interpreted.",
+        "The two rsp2 files are an N0/B0 owner-candidate subset and not a complete multi-instrument timing/calibration pipeline.",
+        "The existing candidate-neutral estimator contract, T-054/T-059 methods, owner order and prospective-lock rules remain controlling."
+      ],
+      "boundary": "EXP-001306 is a T0 response-history owner-candidate and schema advance. It does not admit response-matrix values, calibration validity/interpolation, detector-to-geocenter conversion, timing likelihood, covariance, nuisance law, F_reg/F_lim/F_eff/F_obs map, candidate, score, prospective prediction, microscopic dynamics, physical identity, continuum result, Reading-H sign, Pre-A closure or mass-gap conclusion.",
+      "checks": [
+        {
+          "detail": "Synthetic EBOUNDS/response segment schema, numbered segment ordering and coverage rules passed.",
+          "finding": "PASS",
+          "id": "primary-parser-selftest"
+        },
+        {
+          "detail": "Both rsp2 products match their frozen SHA-256/byte lengths; each declares one EBOUNDS HDU, eight numbered SPECRESP MATRIX HDUs, required columns and TT-second coverage. Matrix values were not read.",
+          "finding": "PASS-WITH-ADMISSION-STOP",
+          "id": "primary-response-history-audit"
+        },
+        {
+          "detail": "Independent PowerShell byte/hash/header parser reproduced size, hash, hdu=10, ebounds=1, matrices=8, rsp=1..8 and coverage=10 for N0 and B0.",
+          "finding": "PASS",
+          "id": "independent-powershell-recheck"
+        },
+        {
+          "detail": "Changing the expected SHA-256 of FERMI-GBM-EVENT-TRIGGER-RSP2-B0 caused the primary audit to return nonzero; the selected mutation was rejected.",
+          "finding": "PASS",
+          "id": "hostile-selected-response-history-hash-mutation"
+        },
+        {
+          "detail": "No T-054/T-059 authority, candidate card, result, negative, physical-empty input or Lean theorem was edited or promoted.",
+          "finding": "PASS",
+          "id": "method-preservation"
+        }
+      ],
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "This is a new exact trigger-product locator and byte hash with primary, independent and hostile checks. The result advances response-owner lineage only; it does not repeat the earlier static metadata audit and it leaves all statistical admission and proof methods unchanged.",
+      "decision_scope": "Finite retrospective response-history header/schema extraction only; no matrix-value inference, event-level likelihood, candidate ranking, dynamic identification, empirical prediction or physical promotion.",
+      "evidence_level": "T0 exact byte/hash freeze, response-history header/schema extraction, independent PowerShell reproduction and hostile selected-hash rejection; no matrix-value or model test",
+      "evidence_refs": [
+        "verification/scripts/audit_hold_lc_response_history.py#schema_audit",
+        "verification/scripts/audit_hold_lc_response_history.py#self_test",
+        "strategy/hold-lc-001-response-history-byte-freeze-v0.1.json#products",
+        "strategy/hold-lc-001-response-history-audit-v0.1.json#products",
+        "strategy/hold-lc-001-response-history-audit-v0.1.json#available_metadata",
+        "strategy/hold-lc-001-owner-artifact-byte-freeze-v0.1.json#products",
+        "strategy/hold-lc-001-estimator-contract-v0.1.json#four_stage_map"
+      ],
+      "exact_scope": {
+        "audit_output": "strategy/hold-lc-001-response-history-audit-v0.1.json",
+        "audit_script": "verification/scripts/audit_hold_lc_response_history.py",
+        "data_role": "CALIBRATION",
+        "extraction_scope": "FITS scalar headers and table declarations only; no EBOUNDS values, response-matrix values, event rows, timing fit or score.",
+        "finite_scope": "Finite exact response-history owner-provenance and schema intake; no continuum, physical identity or prospective validation.",
+        "method_scope": "Additive T-061 response-history intake; no change to T-054/T-059 methods, owner order or promotion firewalls.",
+        "owner_products": [
+          "FERMI-GBM-EVENT-TRIGGER-RSP2-N0",
+          "FERMI-GBM-EVENT-TRIGGER-RSP2-B0"
+        ],
+        "parent_owner_manifest": "strategy/hold-lc-001-owner-artifact-byte-freeze-v0.1.json",
+        "parent_owner_manifest_sha256": "fad7fcc7d6638508e7da6d69fd17eb2991f72965182c8ece182a60442b0e4da9",
+        "raw_cache": "internal/source-cache/HOLD-LC-001/2026-08-30/owner",
+        "response_history_manifest": "strategy/hold-lc-001-response-history-byte-freeze-v0.1.json"
+      },
+      "finding": "The exact N0/B0 rsp2 products cross the generic-owner-search boundary by supplying hash-pinned time-segmented response-history candidates with one EBOUNDS table and eight numbered response segments per detector, all declared in TT seconds over the event-trigger window. This narrows the physical-owner request, but header/schema presence does not admit response values, validity/interpolation, detector-to-geocenter conversion, a timing likelihood, covariance or intrinsic-emission nuisance law.",
+      "formal_integration": {
+        "events": [],
+        "negatives": [],
+        "no_changelog_event": true,
+        "no_new_negative": true,
+        "no_new_result": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "results": []
+      },
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": []
+      },
+      "gate_ids": [
+        "PA-INVERSE-OBSERVATION-TARGET-MAP-HOLDOUT-FREEZE",
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001306",
+      "method": [
+        "Acquire exactly the N0 and B0 event-trigger rsp2 products from the official bn170817529/current directory into the gitignored cache.",
+        "Byte-freeze both products with official locators, roles, lengths and SHA-256 values in a separate tracked manifest; leave the earlier owner-artifact manifest immutable.",
+        "Run the self-tested audit_hold_lc_response_history.py. Verify hashes and inspect only FITS scalar headers and table declarations: one EBOUNDS table, eight numbered SPECRESP MATRIX segments, required response columns, TT-second coverage and trigger context. Read no EBOUNDS or response-matrix values.",
+        "Repeat byte, HDU, segment-number, required-column and coverage checks with an independent PowerShell parser.",
+        "Mutate the expected SHA-256 of the selected B0 response-history product and require the primary audit to return nonzero.",
+        "Keep response values, calibration validity/interpolation, detector-to-geocenter conversion, likelihood, covariance, nuisance law, maps, score and prospective credit stopped; preserve the established T-054 forward and T-059 inverse methods and owner order."
+      ],
+      "missing_assumptions": [
+        "A source-owned rule linking each response segment to selected event windows and spectral-history validity intervals.",
+        "Calibration validity/interpolation semantics and the physical source of all response-generation inputs.",
+        "A detector-to-geocenter timing conversion and uncertainty for the GBM and GW instruments.",
+        "Frozen detector, energy, background and temporal windows with selection semantics.",
+        "A source-owned joint timing likelihood or component/shared covariance including calibration and intrinsic-emission nuisance terms.",
+        "A complete candidate-neutral F_reg/F_lim/F_eff/F_obs map and immutable scorer.",
+        "A prospective holdout not used for source selection, response selection or estimator design."
+      ],
+      "next_action": "Request or locate the source-owned response-segment validity/interpolation, calibration uncertainty and detector-to-geocenter timing rules. Do not read matrix values or score candidates until the statistical owner and proof-owner contracts are frozen; continue unchanged T-054 owner intake in parallel.",
+      "non_claims": [
+        "No candidate is admitted, selected, ranked, fitted or prospectively validated.",
+        "No source-owned response-segment validity/interpolation, detector-to-geocenter conversion, likelihood, covariance, nuisance probability law or complete F_reg/F_lim/F_eff/F_obs map is present.",
+        "Exact response-history owner candidates do not establish a causal law, QFT/Yang-Mills/gravity identity or microscopic dynamics.",
+        "No physical vacuum, Reading-H branch, Pre-A, Sector-A, C6, A13, continuum, cosmic-origin, theory-of-everything or mass-gap claim is established.",
+        "The existing T-054 forward and T-059 inverse methods are unchanged; this audit is additive and not a replacement."
+      ],
+      "observed_metadata": {
+        "B0": {
+          "byte_length": 682560,
+          "coverage": {
+            "DATE-END": "2017-08-17T12:43:17",
+            "DATE-OBS": "2017-08-17T12:39:03",
+            "TIMESYS": "TT",
+            "TIMEUNIT": "s",
+            "TRIGTIME": 524666471.474598,
+            "TSTART": 524666342.7046,
+            "TSTOP": 524666596.6606
+          },
+          "detector": "BGO_00",
+          "ebounds_hdus": 1,
+          "hdu_count": 10,
+          "response_matrix_hdus": 8,
+          "response_numbers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "sha256": "1760b4723d2e704ccaf030147244ec2b8648c22355ea1e181509791505164d7a"
+        },
+        "N0": {
+          "byte_length": 682560,
+          "coverage": {
+            "DATE-END": "2017-08-17T12:43:17",
+            "DATE-OBS": "2017-08-17T12:39:03",
+            "TIMESYS": "TT",
+            "TIMEUNIT": "s",
+            "TRIGTIME": 524666471.474598,
+            "TSTART": 524666342.7046,
+            "TSTOP": 524666596.6606
+          },
+          "detector": "NAI_00",
+          "ebounds_hdus": 1,
+          "hdu_count": 10,
+          "response_matrix_hdus": 8,
+          "response_numbers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "sha256": "3302916c975c44cce107c39ded80c6c7f2455e574c6c230a9853e8dbb342005d"
+        }
+      },
+      "provenance": "contemporaneous",
+      "question": "Do the exact N0/B0 rsp2 products add a time-segmented response owner candidate and event-window coverage without being mistaken for calibration validity, a timing likelihood or covariance?",
+      "recorded_at": "2026-08-30T09:55:49Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001305",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001304",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-08-30",
+      "schema": "tect/proof-exploration/1.0",
+      "stop_or_redesign": [
+        "If no owner supplies segment validity, conversion and statistical objects, retain HOLD-LC-001 as provenance/design-only and do not score.",
+        "If a future audit reads matrix or EBOUNDS values, issue a new version with an explicit candidate-neutral selection, uncertainty and leakage contract.",
+        "If a temporal observable remains invariant over the declared static-equivalence class, report NONIDENTIFIABLE rather than selecting a representative.",
+        "If calibration, regulator or nuisance changes reverse a finite verdict, report UNSTABLE_FINITE_ONLY.",
+        "If the retrospective packet is used for tuning after target disclosure, do not award prospective credit."
+      ],
+      "task_id": "T-061",
+      "title": "HOLD-LC-001 time-segmented response-history owner candidates",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",
