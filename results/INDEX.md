@@ -5,10 +5,11 @@
 
 Authorities: `RESULTS-LEDGER.md`.
 
-**287 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
+**288 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
 
 | ID | Result | Tier/scope |
 |---|---|---|
+| [`R-454`](../RESULTS-LEDGER.md#r-454) | Variable-coefficient defect-stable history-resolvent envelope | T0 |
 | [`R-453`](../RESULTS-LEDGER.md#r-453) | Defect-stable history-resolvent recurrence envelope | T0 |
 | [`R-452`](../RESULTS-LEDGER.md#r-452) | Conditional history-resolvent recurrence envelope | T0 |
 | [`R-451`](../RESULTS-LEDGER.md#r-451) | Conditional two-sided history recurrence to all-shape exhaustion Cauchy transfer | T0 |
@@ -33,7 +34,6 @@ Authorities: `RESULTS-LEDGER.md`.
 | [`R-432`](../RESULTS-LEDGER.md#r-432) | Fixed conditional-row ordinal audit for the R-430/R-426 comparison | T0 |
 | [`R-431`](../RESULTS-LEDGER.md#r-431) | Directed interval enclosure for the fixed rounded residual snapshot | T0 |
 | [`R-430`](../RESULTS-LEDGER.md#r-430) | Original-source point-precision audit (no interval) | T0 |
-| [`R-429`](../RESULTS-LEDGER.md#r-429) | Decimal precision uplift confirms the rounded-input residual boundary | T0 |
 
 Search without loading the full ledger:
 

@@ -1,0 +1,93 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "schema_version": "1.0",
+  "id": "EXP-001327",
+  "title": "Variable-coefficient defect-stable history-resolvent envelope",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "recorded_at": "2026-08-30T18:06:39Z",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-08-31",
+  "provenance": "contemporaneous",
+  "verdict": "advanced",
+  "question": "Can the unchanged R-453 source-plus-defect envelope survive a history recurrence with step-dependent nonnegative coefficients kappa_R when a single common upper bound kappa_bar is supplied?",
+  "decision_reason": "This is the next non-duplicative T-054 analytic interface after R-453. It preserves the established recurrence-resolvent method and owner order while removing an artificial equality requirement: a source owner may submit per-step coefficients together with one uniform upper bound. No finite mobility or geometry table is added and no T-059/T-061 method is changed.",
+  "decision_scope": "T0 claim-nonbearing conditional variable-coefficient path-product and defect convolution. The result is a reusable admission contract only; it introduces no actual Q3 history, source owner, common domain, finite-grid extrapolation, physical selection, continuum limit, or tier change.",
+  "method": [
+    "Load the hash-pinned R-453/R-452/R-451/R-450 parent contracts and recompute the inherited source decay r=q^4 and A=16*C4_edge*78^4 without fitting.",
+    "Unroll H_R<=kappa_R H_(R-1)+A*r^(R-1)+delta_R and bound every path product by kappa_bar^(R-j) only after checking 0<=kappa_R<=kappa_bar at every step.",
+    "Keep the exact step-indexed residual convolution, specialize delta_R<=D*s^(R-1), and check unequal-base and resonant closed forms.",
+    "Run exact-Fraction primary and non-importing independent checks over the declared radius, bound, defect and coefficient-pattern fixtures; reject hostile coefficient, indexing, threshold, fitting, finite-to-infinite, method and promotion mutations.",
+    "Compile Lean R454 and run the integrated verifier while keeping actual Q3 history, source ownership, common domain, exhaustion, common-alpha, physical and continuum fields explicitly open."
+  ],
+  "finding": "For H_0=0 with 0<=kappa_R<=kappa_bar, the exact path-product expansion is bounded by H_R<=A*S_R(kappa_bar,r)+sum_(j=1)^R kappa_bar^(R-j)*delta_j. If delta_j<=D*s^(j-1), this becomes H_R<=A*S_R(kappa_bar,r)+D*S_R(kappa_bar,s), with S_R(kappa_bar,x)=(kappa_bar^R-x^R)/(kappa_bar-x) off resonance and R*x^(R-1) at resonance. The sufficient scalar threshold is kappa_bar<1 and s<1. Primary passes 88,391/88,391, independent 58,939/58,939, hostile rejects 16/16, integrated passes 19/19, and Lean R454 compiles. The source-owned recurrence, coefficient bound, residual, common domain and downstream physical/continuum gates remain missing.",
+  "boundary": "R-454 proves an abstract scalar implication only: a nonnegative recurrence with step-dependent coefficients bounded by one common kappa_bar has the same source-plus-defect resolvent envelope as the constant upper-bound recurrence. It does not supply the coefficients, kappa_bar, residual, common domain, exhaustion map, or any physical or continuum identification.",
+  "evidence_level": "T0 exact conditional variable-coefficient defect-stable scalar history-resolvent envelope",
+  "evidence_refs": [
+    "strategy/pre-a-cp1-st8-q3lock-variable-coefficient-defect-resolvent-manifest.json#theorem",
+    "strategy/pre-a-cp1-st8-q3lock-variable-coefficient-defect-resolvent-certificate-260831.md#Exact execution",
+    "verification/scripts/pre_a_cp1_st8_q3lock_variable_coefficient_defect_resolvent.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_variable_coefficient_defect_resolvent_independent.py#run",
+    "codes/foundations/pre_a_cp1_st8_q3lock_variable_coefficient_defect_resolvent_hostile.py#run",
+    "verification/scripts/pre_a_cp1_st8_q3lock_variable_coefficient_defect_resolvent_verify.py#run",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-integrated-pre_a_cp1_st8_q3lock_variable_coefficient_defect_resolvent/integrated.json#derived",
+    "verification/lean/Tect/R454.lean#variable_step_monotone"
+  ],
+  "formal_refs": {
+    "results": ["R-454"],
+    "negatives": [],
+    "events": ["20260831-r-454-variable-coefficient-defect-stable-histor"]
+  },
+  "formal_integration": {
+    "results": ["R-454"],
+    "negatives": [],
+    "events": ["20260831-r-454-variable-coefficient-defect-stable-histor"],
+    "no_new_negative": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "assumptions": [
+    "R-453's source-plus-defect scalar contract is the unchanged parent interface and R-451 supplies its geometric source envelope.",
+    "The actual history error and residual are nonnegative scalar quantities in one common norm or form domain.",
+    "Each step coefficient kappa_R is nonnegative and is bounded by one common kappa_bar across the intended history and nested-shape family.",
+    "The residual is either supplied directly or obeys delta_R<=D*s^(R-1) with common D>=0 and s>=0.",
+    "Scalar monotonicity and finite-sum identities are applied before any infinite-limit interpretation."
+  ],
+  "missing_assumptions": [
+    "A source-owned Q3LOCK derivation of the step coefficients and a common bound kappa_bar<1.",
+    "A source-owned residual sequence or common defect envelope and its uniformity in shape, volume, cutoff, beta, phase and history depth.",
+    "A common unbounded operator or form domain for H_R, the coefficients and residual.",
+    "A production all-shape exhaustion map identifying the same observable across shapes.",
+    "OS/KMS/GNS identification, common alpha, sector coercivity, physical-empty comparison, continuum, Yang--Mills and mass-gap conclusions."
+  ],
+  "adversarial_review": [
+    {"axis": "coefficient-order", "check": "Are path products bounded by kappa_bar^(R-j) only after proving 0<=kappa_R<=kappa_bar?", "disposition": "DISMISSED: primary and independent lanes check coefficient domains and domination at every step."},
+    {"axis": "defect-indexing", "check": "Does residual step j receive kappa_bar^(R-j)?", "disposition": "DISMISSED: the exact step-indexed convolution is checked directly."},
+    {"axis": "residual-substitution", "check": "Does a variable bound silently construct source-owned Q3 dynamics?", "disposition": "UPHELD-OPEN: coefficients, recurrence, residual and common bound remain owner hypotheses."},
+    {"axis": "resonant-denominator", "check": "Does either source or defect quotient divide by zero at kappa_bar=x?", "disposition": "DISMISSED: both resonant branches use R*x^(R-1)."},
+    {"axis": "threshold", "check": "Can kappa_bar=1, s=1, or a superunit upper base be admitted to vanishing?", "disposition": "UPHELD-REJECTED: unit and superunit controls are retained outside the sufficient threshold."},
+    {"axis": "finite-to-infinite", "check": "Could pattern/radius rows be read as uniform Q3 or exhaustion evidence?", "disposition": "UPHELD-OPEN: rows audit scalar domination only."},
+    {"axis": "method-preservation", "check": "Does the variable-coefficient extension replace T-054 or alter T-059/T-061?", "disposition": "DISMISSED: it is an additive owner-bound refinement of R-453."},
+    {"axis": "promotion-firewall", "check": "Could a common upper-bound envelope be promoted to physical, continuum or Clay closure?", "disposition": "UPHELD-REJECTED: all downstream scope flags remain false."}
+  ],
+  "stop_or_redesign": [
+    "If any coefficient is negative or exceeds the submitted kappa_bar, reject that owner packet and retain only the scalar identity.",
+    "If kappa_bar>=1 or s>=1, retain the exact conditional diagnostic but do not claim vanishing.",
+    "If bounds depend on shape, volume, cutoff, beta or history depth, do not call the envelope uniform.",
+    "If no common domain is supplied, do not convert the scalar bound into an operator or form theorem.",
+    "If a proposed use changes the established method or owner order, return to the continuity gate before proceeding."
+  ],
+  "non_claims": [
+    "No source-owned Q3LOCK recurrence, coefficient sequence, common bound, residual sequence or defect envelope is established.",
+    "No common unbounded domain, form closure, source/volume/cutoff/beta uniformity or production exhaustion map is established.",
+    "The variable-coefficient envelope is not an OS/KMS/GNS, common-alpha, physical-sector, continuum, Yang--Mills or mass-gap result.",
+    "The radius and pattern rows are exact scalar checks and are not a finite-table substitute for an infinite limit.",
+    "The established T-054 forward method, T-059/T-061 inverse methods, owner order and promotion firewalls remain unchanged."
+  ],
+  "next_action": "When a source-owned Q3 history arrives, bound its per-step coefficients by one common kappa_bar and instantiate the residual in this envelope, then feed it to R-453/R-451. Until then, continue the unchanged T-054 owner-intake boundary and additive T-059/T-061 observation-source lock without another finite mobility or geometry table.",
+  "related": [
+    {"id": "EXP-001326", "relation": "continues"},
+    {"id": "EXP-001325", "relation": "continues"},
+    {"id": "EXP-001324", "relation": "continues"}
+  ]
+}
