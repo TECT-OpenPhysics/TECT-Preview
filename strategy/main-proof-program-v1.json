@@ -554,13 +554,21 @@
     "authority_state": "VERIFIED_PENDING_WORKTREE_NOT_YET_DURABLE_GIT_OR_REMOTE_AUTHORITY"
   },
   "completion_checkpoint": {
-    "status": "PENDING",
-    "verified_parent_head": "66daebc605635bca653bb2cd07fe15322a7ea5b7",
-    "verified_at_utc": "2026-08-30T09:43:17Z",
+    "status": "COMPLETE",
+    "verified_parent_head": "fb0797b38ede0f7f6a9d0e995c9ca20c8497b82d",
+    "verified_at_utc": "2026-08-30T09:58:54Z",
     "branch": "main",
     "remote": "tect",
     "remote_ref": "refs/heads/main",
-    "expected_authority_counts": null,
+    "expected_authority_counts": {
+      "claims": 49,
+      "gates_and_hypotheses": 208,
+      "results": 281,
+      "negative_records": 375,
+      "explorations": 1306,
+      "changelog_events": 796,
+      "tasks": 61
+    },
     "requirements": [
       "doctor PASS",
       "release_check PASS",
@@ -603,7 +611,11 @@
       "EXP-001305 freezes three official event-day Fermi owner-candidate bytes (one GS-006 position/attitude product and two GS-005 spectral-history products) with exact SHA-256 values; only a gitignored cache is used and no raw bytes are copied into tracked contents.",
       "The EXP-001305 primary audit passes zero-axis-aware FITS header/schema checks for all three products, including required table declarations and TT-second coverage; detector-to-geocenter conversion, calibration validity, likelihood, covariance and nuisance law remain unadmitted.",
       "An independent PowerShell byte/hash/header parser reproduces hdu=2, coverage=2 and the required schemas for all three event-day products; a hostile mutation of the selected position-history hash is rejected by the primary audit.",
-      "The release-gated EXP-001305 commit 66daebc605635bca653bb2cd07fe15322a7ea5b7 was pushed to tect/main, and a live git ls-remote read returned the same SHA before this checkpoint refresh; existing T-054/T-059 methods remain unchanged."
+      "The release-gated EXP-001305 commit 66daebc605635bca653bb2cd07fe15322a7ea5b7 was pushed to tect/main, and a live git ls-remote read returned the same SHA before this checkpoint refresh; existing T-054/T-059 methods remain unchanged.",
+      "EXP-001306 freezes two official event-trigger Fermi rsp2 response-history bytes (N0 and B0) with exact SHA-256 values; only a gitignored cache is used and no raw matrix bytes are copied into tracked contents.",
+      "The EXP-001306 primary audit passes response-history header/schema checks for one EBOUNDS and eight numbered SPECRESP MATRIX segments per detector with TT-second trigger-window coverage; matrix values, validity/interpolation, conversion, likelihood and covariance remain unadmitted.",
+      "An independent PowerShell byte/hash/header parser reproduces size, hash, hdu=10, ebounds=1, matrices=8, rsp=1..8 and coverage=10 for both products; a hostile mutation of the selected B0 hash is rejected by the primary audit.",
+      "The release-gated EXP-001306 commit fb0797b38ede0f7f6a9d0e995c9ca20c8497b82d was pushed to tect/main; the next checkpoint refresh will verify the remote head and strict baseline while preserving unchanged T-054/T-059 methods."
     ]
   },
   "stopped_loop_registry": [
