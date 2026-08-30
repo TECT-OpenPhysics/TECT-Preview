@@ -188,6 +188,26 @@
         "path": "verification/scripts/audit_gts_runtime_readiness.py",
         "sha256": "89437bf9da17e61f4584d5d146a575d846e6465a9ef5c526b89a26431678acbd",
         "role": "Reproducible event-free GTS byte inventory and dependency readiness audit tool (public-path firewall revision)"
+      },
+      {
+        "path": "strategy/hold-lc-001-gts-public-likelihood-execution-exploration.json",
+        "sha256": "430d711d089f5b1ad9cc282ec72fde5ad209b97026af24a7f088c45200e17ec5",
+        "role": "HOLD-LC-001 direct public GTS likelihood execution checkpoint (EXP-001315)"
+      },
+      {
+        "path": "verification/scripts/audit_gts_public_likelihood.py",
+        "sha256": "c4a7c61cdaacabd79a4a057c834cc24afb3c6dba50c32ca221012af37c5619d1",
+        "role": "Reproducible source-hash-pinned public GTS likelihood execution audit tool"
+      },
+      {
+        "path": "strategy/hold-lc-001-gts-platform-compatibility-exploration.json",
+        "sha256": "49b281ea5a44afe8ed7860fbec67bf5ebdb2e8102207c837c029a6b4b700ab3e",
+        "role": "HOLD-LC-001 exact GTS dependency platform boundary (EXP-001316)"
+      },
+      {
+        "path": "verification/scripts/audit_gts_platform_compatibility.py",
+        "sha256": "ce0350b1d6016b47734bb19eb08c36caf75c545c32d769946884eab916e8a4f3",
+        "role": "Reproducible GTS dependency/platform compatibility audit tool"
       }
     ],
     "semantic": [
@@ -604,21 +624,13 @@
     "authority_state": "VERIFIED_PENDING_WORKTREE_NOT_YET_DURABLE_GIT_OR_REMOTE_AUTHORITY"
   },
   "completion_checkpoint": {
-    "status": "COMPLETE",
+    "status": "PENDING",
     "verified_parent_head": "852b3d1c749241ba2114ec5ecaa2ead46782fcce",
     "verified_at_utc": "2026-08-30T12:33:35Z",
     "branch": "main",
     "remote": "tect",
     "remote_ref": "refs/heads/main",
-    "expected_authority_counts": {
-      "claims": 49,
-      "gates_and_hypotheses": 208,
-      "results": 281,
-      "negative_records": 375,
-      "explorations": 1315,
-      "changelog_events": 796,
-      "tasks": 61
-    },
+    "expected_authority_counts": null,
     "requirements": [
       "doctor PASS",
       "release_check PASS",
@@ -775,7 +787,8 @@
       "EXP-001312 pins USRA-STI/gamma-ray-targeted-search commit 1bc1e913f97fd7195a7e297f8d6032a5c7758894 and its public finite GBM Likelihood/response/search/prior paths; this advances a code-level calibration candidate while event/template bytes, dependency lock, Stachie joint-ranking linkage, detector-to-geocenter uncertainty, covariance, nuisance and prospective fields remain unadmitted.",
       "EXP-001313 completes a synthetic primary/independent/hostile audit of the pinned GTS finite likelihood transcription: full-array and marginal deltas are 4.547e-13, a +7 count mutation changes the marginal by 45.681982, and no external event/template bytes or dependencies are substituted; event-level, continuous, physical and prospective fields remain locked.",
       "EXP-001314 verifies all 14 hash-pinned event/owner products byte-for-byte and keeps matrix values unread, while the current CPython 3.12.9 audit interpreter exposes only NumPy of six required GTS import modules; this is a T0 readiness boundary, not an event or physical result.",
-      "EXP-001315 directly executes the hash-pinned public GTS likelihood.py calculate path on the synthetic fixture: source hash, AST utils isolation, finite execution, independent transcription, hostile count mutation and prethreshold branch all PASS. This is T0 code-level calibration/provenance only; full GTS/GDT runtime, event bytes, response values, timing, covariance, prospective scoring and physical fields remain unadmitted."
+      "EXP-001315 directly executes the hash-pinned public GTS likelihood.py calculate path on the synthetic fixture: source hash, AST utils isolation, finite execution, independent transcription, hostile count mutation and prethreshold branch all PASS. This is T0 code-level calibration/provenance only; full GTS/GDT runtime, event bytes, response values, timing, covariance, prospective scoring and physical fields remain unadmitted.",
+      "EXP-001316 confirms that the exact astro-gdt healpy~=1.18.0 contract has no queried Windows wheel or conda win-64 1.18.0 artifact; this is an additive T-061 execution boundary, not a scientific no-go or a method change."
     ],
     "deliverables": [
       "one owner-intake card with explicit missing fields",
@@ -804,7 +817,7 @@
       "It does not prove Pre-A, C6, A13, Sector A, QFT, Yang-Mills, gravity, a physical mass gap, or a theory of everything.",
       "A dynamic discriminator at finite regulator does not prove continuum or physical identity."
     ],
-    "next_action": "T-061 remains P1-active: obtain a complete supported-platform GTS/GDT environment lock with exact versions and hashes for healpy, Astropy, gdt.core and gdt.missions.fermi.gbm; rerun readiness, then execute the finite event-free response-index/likelihood primary, independent and hostile packet. Keep response selection, calibration validity, detector-to-geocenter, covariance, intrinsic-lag, prospective and physical-identity fields locked, and continue unchanged T-054 owner intake in parallel."
+    "next_action": "T-061 remains P1-active: obtain a separately reproducible supported-platform GTS/GDT environment lock or a fully pinned Windows source-build lock for healpy~=1.18.0, Astropy, gdt.core and gdt.missions.fermi.gbm; rerun readiness, then execute the finite event-free response-index/likelihood primary, independent and hostile packet. Keep response selection, calibration validity, detector-to-geocenter, covariance, intrinsic-lag, prospective and physical-identity fields locked, and continue unchanged T-054 owner intake and T-059 observation/holdout firewalls in parallel."
   },
   "resume_algorithm": [
     "Capture UTC date and run doctor.py.",

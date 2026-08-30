@@ -1,0 +1,93 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "schema_version": "1.0",
+  "id": "EXP-001316",
+  "title": "HOLD-LC-001 exact GTS dependency platform boundary",
+  "task_id": "T-061",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": [
+    "PA-INVERSE-OBSERVATION-TARGET-MAP-HOLDOUT-FREEZE",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "prior_exploration_id": "EXP-001315",
+  "related": [
+    {"id": "EXP-001315", "relation": "continues"},
+    {"id": "EXP-001314", "relation": "continues"}
+  ],
+  "question": "Can the pinned public GTS/GDT dependency contract be installed on the current Windows host without changing the scientific estimator or admitting an unsupported package substitution?",
+  "method": [
+    "Read the pinned public GTS source revision and its existing requirements through the source-owner manifest.",
+    "Fetch the exact current PyPI metadata for healpy 1.18.0 and astro-gdt, and the conda-forge healpy package index; hash canonical metadata payloads.",
+    "Derive the published wheel and win-64 artifact counts from those upstream payloads, including the astro-gdt healpy~=1.18.0 requirement.",
+    "Run the dedicated platform audit with no event bytes, response values, or estimator scores, and retain T-054/T-059 methods and owner order unchanged."
+  ],
+  "finding": "The current astro-gdt metadata requires healpy~=1.18.0. PyPI publishes 16 wheels for healpy 1.18.0 but none for Windows, and the queried conda-forge index has no win-64 healpy 1.18.0 artifact (only later Windows minor versions were observed). The exact dependency contract therefore cannot be admitted on this Windows host through a supported binary package path; a separately reproducible supported platform or a source-build lock is required.",
+  "verdict": "advanced",
+  "decision_reason": "This is a precise T-061 execution-environment boundary after the direct public likelihood checkpoint. It prevents silently substituting healpy 1.19/1.20 or using an unpinned source build, while preserving the existing forward and inverse research methods. It is not a scientific no-go and does not score HOLD-LC-001.",
+  "decision_scope": "Package metadata and platform availability only for the pinned public GTS/GDT dependency contract; no event-level execution, response value, likelihood, candidate map, prospective holdout or physical identity.",
+  "assumptions": [
+    "The public GTS source revision and candidate manifest are the code-owner inputs for this readiness boundary.",
+    "The current astro-gdt metadata requirement healpy~=1.18.0 is the dependency contract to be respected; using a different minor line would be a new environment version, not a transparent repair.",
+    "PyPI and conda-forge metadata are authoritative package-index snapshots for this environment decision, with canonical payload hashes recorded in the run artifact.",
+    "A source build or another supported platform may still satisfy the contract, so the boundary is not a mathematical or physical impossibility."
+  ],
+  "missing_assumptions": [
+    "A complete supported-platform environment lock containing healpy 1.18.x, Astropy, gdt.core and gdt.missions.fermi.gbm with exact versions, hashes and ABI metadata.",
+    "If a source build is used, a reproducible compiler, cfitsio and build-toolchain lock plus an independent import and source-tree audit.",
+    "A full event-level no-stub import path and the already-required response, timing, covariance, nuisance and prospective-owner fields."
+  ],
+  "adversarial_review": [
+    {
+      "axis": "version substitution",
+      "check": "Would installing a later Windows healpy minor release silently satisfy the contract?",
+      "disposition": "UPHELD-BLOCKED: astro-gdt requires healpy~=1.18.0; 1.19/1.20 are not admitted as the same environment."
+    },
+    {
+      "axis": "metadata drift",
+      "check": "Could an index update change the availability result?",
+      "disposition": "UPHELD-OPEN: canonical metadata hashes and retrieval URLs are recorded; rerun this versioned audit if the owner changes or the index changes."
+    },
+    {
+      "axis": "source-build laundering",
+      "check": "Could an unpinned local source build be treated as a supported full runtime?",
+      "disposition": "UPHELD-BLOCKED: no source-build compiler, cfitsio, ABI or wheel hash lock exists yet."
+    },
+    {
+      "axis": "scientific promotion",
+      "check": "Could package availability be reported as an event or physical result?",
+      "disposition": "DISMISSED: the artifact explicitly records event_execution=false, response_values_read=false and no estimator score."
+    },
+    {
+      "axis": "method-overhaul",
+      "check": "Could this environment audit replace the established T-054 or T-059 methods?",
+      "disposition": "DISMISSED: the method-status firewall records both methods, owner order and promotion rules as unchanged."
+    }
+  ],
+  "boundary": "EXP-001316 is T0 package/platform provenance only. It does not prove or disprove the GTS likelihood, a response calibration, a timing covariance, a candidate score, a prospective prediction, a dynamic owner, Pre-A, C6, Sector-A, QFT, Yang--Mills, continuum, physical-vacuum, mass-gap or theory-of-everything statement.",
+  "next_action": "Obtain a separately reproducible supported-platform GTS/GDT environment lock or a fully pinned Windows source-build lock; rerun EXP-001314 readiness and then the event-free response-index/likelihood primary, independent and hostile packet. Until then, keep T-061 at T0 readiness, continue unchanged T-054 owner-level forward intake and maintain the T-059 observation/holdout firewalls.",
+  "no_overclaim": "The absence of a published Windows healpy 1.18 binary is an execution boundary, not a scientific no-go; no package substitution or event scoring is authorized.",
+  "evidence_refs": [
+    "strategy/hold-lc-001-gts-code-owner-candidate-v0.1.json#official_code_source",
+    "verification/scripts/audit_gts_platform_compatibility.py#run",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-gts-platform-compatibility/platform.json#checks",
+    "strategy/hold-lc-001-gts-public-likelihood-execution-exploration.json#next_action"
+  ],
+  "formal_refs": {
+    "events": [],
+    "results": [],
+    "negatives": []
+  },
+  "formal_integration": {
+    "events": [],
+    "results": [],
+    "negatives": [],
+    "no_new_result": true,
+    "no_new_negative": true,
+    "no_pdf": true,
+    "no_tier_change": true
+  },
+  "recorded_at": "2026-08-30T13:00:00Z",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-08-30",
+  "provenance": "contemporaneous"
+}

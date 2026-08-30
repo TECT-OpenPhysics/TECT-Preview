@@ -1,0 +1,99 @@
+{
+  "checks": [
+    {
+      "actual": "1.18.0",
+      "detail": "PyPI metadata is the requested healpy 1.18.0 release.",
+      "expected": "1.18.0",
+      "id": "pypi-release",
+      "status": "PASS"
+    },
+    {
+      "actual": [],
+      "detail": "No Windows wheel is published for healpy 1.18.0.",
+      "expected": [],
+      "id": "pypi-windows-wheel",
+      "status": "PASS"
+    },
+    {
+      "actual": 16,
+      "detail": "The release has non-Windows wheels or source metadata for comparison.",
+      "expected": ">=1",
+      "id": "pypi-wheel-coverage",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "healpy~=1.18.0"
+      ],
+      "detail": "Current astro-gdt metadata requires the healpy 1.18 minor line.",
+      "expected": "healpy~=1.18.0",
+      "id": "astro-gdt-healpy-contract",
+      "status": "PASS"
+    },
+    {
+      "actual": [],
+      "detail": "Conda-forge has no win-64 healpy 1.18.0 artifact in the queried index.",
+      "expected": [],
+      "id": "conda-win-118",
+      "status": "PASS"
+    }
+  ],
+  "claim_bearing": false,
+  "derived": {
+    "conda_win_118_count": 0,
+    "conda_win_versions_observed": [
+      "1.19.0",
+      "1.20.0"
+    ],
+    "pypi_healpy_118_file_count": 17,
+    "pypi_healpy_118_source_archive_count": 1,
+    "pypi_healpy_118_wheel_count": 16,
+    "pypi_healpy_118_windows_wheel_count": 0,
+    "required_healpy_specs": [
+      "healpy~=1.18.0"
+    ]
+  },
+  "id": "GTS-PLATFORM-COMPATIBILITY-001",
+  "method_status": {
+    "existing_t054_forward_unchanged": true,
+    "existing_t059_inverse_unchanged": true,
+    "owner_order_unchanged": true,
+    "promotion_firewalls_unchanged": true
+  },
+  "non_claims": [
+    "This is a package/platform availability boundary, not a scientific no-go.",
+    "No event likelihood, response calibration, timing covariance, candidate score, prospective prediction or physical identity is admitted.",
+    "No Pre-A, C6, Sector-A, QFT, Yang--Mills, continuum, physical-vacuum, mass-gap or theory-of-everything conclusion follows.",
+    "The established T-054 forward and T-059 observation-first inverse methods are unchanged."
+  ],
+  "recorded_at": "2026-08-30T12:55:10.621947Z",
+  "runtime_admission": {
+    "event_bytes_read": false,
+    "full_gts_event_execution": false,
+    "reason": "The exact astro-gdt healpy~=1.18.0 dependency has no queried Windows wheel or conda win-64 1.18.0 artifact; a source build or different platform is required.",
+    "response_values_read": false
+  },
+  "schema": "tect/gts-platform-compatibility-audit/0.1",
+  "source_candidate": {
+    "commit": "1bc1e913f97fd7195a7e297f8d6032a5c7758894",
+    "path": "strategy/hold-lc-001-gts-code-owner-candidate-v0.1.json",
+    "sha256": "26a2b56cafba521c93d345e2584bce448ba03ccc5931759ceab170ebc3e6b27e"
+  },
+  "source_revision_observed": "1bc1e913f97fd7195a7e297f8d6032a5c7758894",
+  "sources": {
+    "conda_healpy": {
+      "canonical_sha256": "a7765596d82d49ba7c58d20a3a1e0a912ee6366f2c2638194001ef5766cbe5f9",
+      "url": "https://api.anaconda.org/package/conda-forge/healpy"
+    },
+    "pypi_astro_gdt": {
+      "canonical_sha256": "443b5a34a77c794041c2b7c540093790dc6b2ae62995f863229c2cfe2194a81b",
+      "url": "https://pypi.org/pypi/astro-gdt/json"
+    },
+    "pypi_healpy": {
+      "canonical_sha256": "46447f3e28c397d9dc5749db9e22afbaaf5894b4b335e0c275aa5f54a92fa03f",
+      "url": "https://pypi.org/pypi/healpy/1.18.0/json"
+    }
+  },
+  "status": "EXACT_HEALPY_118_WINDOWS_BUILD_UNAVAILABLE",
+  "tier": "T0"
+}
