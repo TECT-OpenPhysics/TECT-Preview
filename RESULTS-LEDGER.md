@@ -22,6 +22,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-446](#r-446) | OBS-LC-CAL-001 frozen row lineage and feasibility interface | R-446 v1.0 is a T0 claim-nonbearing source-lineage audit under EXP-001298. The hash-pinned arXiv:0801.0287v19 packet and complete isotropic-photon S3 slice (d=3..9) pass primary 60/60, independent 25/25, hostile 8/8, integrated 15/15 and the existing inverse-contract self-test. Likelihood, covariance, candidate maps and scoring remain unadmitted; no physical Lorentz, Pre-A, Sector-A, QFT, Yang--Mills or mass-gap claim follows |
 | [R-445](#r-445) | Conditional scalar-to-operator tail transfer under a per-edge norm majorant | R-445 v1.0 is a T0 claim-nonbearing finite conditional Banach-norm transfer under EXP-001297. With the explicit assumption `||K_e|| <= C*w(e)`, the triangle inequality transfers the R-444 scalar bound to `C*T(R)` across 343 boxes, 102900 edges and 4116 tail rows; primary, independent, hostile and integrated lanes pass and Lean R445 passes. The actual Q3LOCK commutator/history tail, common core, exhaustion, physical, continuum, Yang--Mills and mass-gap claims remain open |
 | [R-444](#r-444) | Exact exponential shell-tail majorant for rectangular edge weights | R-444 v1.0 is a T0 claim-nonbearing scalar geometric audit under EXP-001289. The exact Z^3 shell count N3(n)=4n^2+2 and tail T(R)=3(4R^2+8R+14)2^(1-R) pass primary 4519/4519, independent 4505/4505, hostile 8/8, integrated 27/27 and Lean R444. All [2,8]^3 finite rectangular tails are dominated; Q3LOCK commutator/history-tail, operator, physical, Yang-Mills and mass-gap claims remain open |
 | [R-443](#r-443) | Arbitrary finite rectangular axis-parity matching theorem | R-443 v1.0 is a T0 claim-nonbearing finite combinatorial theorem under EXP-001288. Lean proves the arbitrary finite local incidence implication; all 343 ordered boxes in [2,8]^3 pass exact edge-count and six-layer checks: primary 235319/235319, independent 132418/132418, hostile 8/8, integrated 34/34 and Lean R443 PASS. Weighted Q3LOCK operator, common-core, history-tail, physical, Yang-Mills and mass-gap claims remain open |
@@ -765,6 +766,43 @@ exhaustion, physical-empty comparison, C6, Sector-A, Pre-A, Yang--Mills dynamics
 or a mass gap. No claim tier changes and no negative result is issued.
 
 **Proven in:** [R-444 certificate](strategy/pre-a-cp1-st8-q3lock-exponential-shell-tail-certificate-260830.md), [machine manifest](strategy/pre-a-cp1-st8-q3lock-exponential-shell-tail-manifest.json), [integrated run](claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-integrated-exponential_shell_tail/integrated.json), [exploration record](strategy/pre-a-cp1-st8-q3lock-exponential-shell-tail-exploration.json), and [Lean R444](verification/lean/Tect/R444.lean).
+<a id="r-446"></a>
+### R-446 -- OBS-LC-CAL-001 frozen row lineage and feasibility interface
+
+**Result ID.** `OBS-LC-CAL-001-ROW-LINEAGE-FEASIBILITY-INTERFACE-v0` (R-446).
+
+**Version and exact scope.** R-446 v1.0 is a T0, claim-nonbearing source-
+lineage and finite-interface audit under EXP-001298. It checks the hash-pinned
+arXiv:0801.0287v19 source packet and the complete pre-registered isotropic-
+photon subsection of Table S3, one row for each operator dimension `d=3` through
+`d=9`, in the standard Sun-centered frame. Each row remains a separate
+feasibility bound with the source one-coefficient and conservative two-sigma
+order-of-magnitude semantics.
+
+**Finding.** The primary audit passes `60/60` assertions, the non-importing
+independent reconstruction passes `25/25`, the hostile lane rejects `8/8`
+source-hash, row-identity, table, uncertainty, map-admission and candidate-
+selection mutations, and the integrated verifier passes `15/15`. The existing
+inverse-lane contract self-test also passes. The seven rows are therefore a
+reproducible input interface, not a fitted observation vector.
+
+**Assumptions and missing assumptions.** The source packet's recorded SHA-256
+identifies the retrieved source bytes; the PDF is not duplicated here. The
+allowlist is frozen before any microscopic candidate is admitted, and rows may
+be checked only one at a time. Missing are measurement-level likelihoods and
+covariance, a complete candidate-owned `F_reg/F_lim/F_eff/F_obs` map and theory
+error budget, source-owned production dynamics, and an independent prospective
+holdout with an immutable acceptance rule.
+
+**Evidence level and boundary.** This is T0 source-lineage plus finite
+feasibility-interface evidence. It performs no candidate evaluation, scoring,
+or parameter fitting and does not alter T-054/T-059 methods. It does not prove
+Lorentz invariance, a causal cone, a physical vacuum, Reading-H stationarity,
+Pre-A, Sector-A, C6, QFT, Yang--Mills, gravity, a continuum limit, empirical
+predictivity, or a mass gap.
+
+**Proven in:** [R-446 manifest](strategy/obs-lc-cal-001-row-lineage-feasibility-manifest-v0.1.json), [primary script](codes/foundations/pre_a_obs_lc_cal_001_row_lineage_feasibility.py), [independent script](codes/foundations/pre_a_obs_lc_cal_001_row_lineage_feasibility_independent.py), [hostile script](codes/foundations/pre_a_obs_lc_cal_001_row_lineage_feasibility_hostile.py), [integrated verifier](codes/foundations/pre_a_obs_lc_cal_001_row_lineage_feasibility_verify.py), and [integrated run](claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-integrated-obs_lc_cal_001_row_lineage_feasibility/integrated.json).
+
 <a id="r-445"></a>
 ### R-445 -- Conditional scalar-to-operator tail transfer under a per-edge norm majorant
 

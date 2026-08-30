@@ -1,0 +1,76 @@
+{
+  "schema": "tect/obs-lc-cal-001-row-lineage-feasibility-manifest/1.0",
+  "result_id": "R-446",
+  "exploration_id": "EXP-001298",
+  "task_id": "T-061",
+  "claim_bearing": false,
+  "status": "FROZEN_LINEAGE_FEASIBILITY_INTERFACE_AUDITED",
+  "authority_pointers": [
+    {
+      "path": "strategy/obs-lc-cal-001-source-packet-v0.1.json",
+      "sha256": "2013f8b0a4ce12adc47fc63c92ecefa7b1178a47eb2a244715a76d196b6389c2",
+      "role": "source_packet"
+    },
+    {
+      "path": "strategy/obs-lc-cal-001-row-allowlist-v0.1.json",
+      "sha256": "186576ddb894d321e9bd7f97321c48b77f7660bf2b0e4cda631c5e3adfc5aa70",
+      "role": "row_allowlist"
+    },
+    {
+      "path": "strategy/pre-a-observation-first-inverse-lane-contract-manifest.json",
+      "sha256": "fd5f37d0e095062a415368749d10d65de14b799938673b4460c3e849f07b9a46",
+      "role": "inverse_lane_contract"
+    }
+  ],
+  "source_contract": {
+    "anchor_id": "OBS-LC-CAL-001",
+    "source_edition": "arXiv:0801.0287v19; January 2026 update",
+    "source_sha256": "2fde66d227d1cbc5524baf23d5925d2ca30522a371d092387901ac7566273827",
+    "source_role": "CALIBRATION",
+    "frame": "Standard Sun-centered inertial reference frame",
+    "table": "S3",
+    "sector": "photon",
+    "operator_dimensions": [3, 4, 5, 6, 7, 8, 9],
+    "row_count_is_derived": true,
+    "one_coefficient_rule": true,
+    "summary_semantics": "conservative 2-sigma order-of-magnitude sensitivity",
+    "likelihood_admitted": false,
+    "covariance_admitted": false,
+    "aggregate_score_admitted": false,
+    "candidate_map_admitted": false
+  },
+  "checks": {
+    "packet_schema_and_status": true,
+    "allowlist_schema_and_status": true,
+    "source_pointer_hashes": true,
+    "anchor_and_frame_consistency": true,
+    "complete_dimension_slice": true,
+    "row_identity_uniqueness": true,
+    "uncertainty_firewall": true,
+    "inverse_lane_zero_map_boundary": true,
+    "methods_unchanged": true
+  },
+  "assumptions": [
+    "The source packet records the exact source bytes and SHA-256 supplied at retrieval time; the PDF bytes are not duplicated in this repository.",
+    "The S3 isotropic-photon rows are used only as separately evaluated feasibility bounds under the source one-coefficient convention.",
+    "The inverse-lane manifest remains the governing contract for candidate admission, holdouts, and four forward-map stages.",
+    "A structural lineage audit does not infer a coefficient value for any TECT candidate."
+  ],
+  "missing_assumptions": [
+    "Measurement-level likelihoods and covariance for any aggregate score.",
+    "A complete candidate-owned F_reg/F_lim/F_eff/F_obs map and theory-error budget.",
+    "A source-owned production dynamics and physical projection.",
+    "An independent prospective holdout and immutable acceptance rule."
+  ],
+  "evidence_level": "T0 source-lineage plus pre-registered finite feasibility-interface audit",
+  "boundary": "The audit freezes and validates the row interface only; it does not evaluate a microscopic candidate, score observations, or prove a physical symmetry.",
+  "non_claims": [
+    "No candidate is admitted, selected, or ranked.",
+    "No joint likelihood, covariance, Gaussian approximation, or independent-experiment interpretation is created.",
+    "No Lorentz invariance, causal cone, QFT, Yang-Mills, gravity, Pre-A, Sector-A, C6, continuum, empirical-predictivity, or mass-gap conclusion follows.",
+    "No Reading-H physical-empty sign, stationarity, stability, or production dynamics is identified."
+  ],
+  "next_action": "Keep the row set frozen and seek source-owned uncertainty/covariance plus a complete four-stage candidate map; otherwise park this anchor without scoring and continue the existing forward owner intake.",
+  "recorded_at": "2026-08-30T00:00:00Z",
+  "recorded_by": "Codex"
+}

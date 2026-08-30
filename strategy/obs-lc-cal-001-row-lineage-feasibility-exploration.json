@@ -1,0 +1,89 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "schema_version": "1.0",
+  "id": "EXP-001298",
+  "title": "OBS-LC-CAL-001 row lineage and feasibility interface is frozen without candidate scoring",
+  "task_id": "T-061",
+  "claim_ids": ["C1-LORENTZ-KIN", "C2-LORENTZ-EMERGENT", "C6-SPACETIME-SIGNATURE"],
+  "gate_ids": [
+    "PA-INVERSE-OBSERVATION-TARGET-MAP-HOLDOUT-FREEZE",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "prior_exploration_id": "EXP-001296",
+  "related": [
+    {"id": "EXP-001296", "relation": "continues"},
+    {"id": "EXP-001295", "relation": "continues"}
+  ],
+  "question": "Can the frozen OBS-LC-CAL-001 source and its pre-registered isotropic-photon Table S3 rows be admitted as a reproducible candidate-neutral feasibility interface without manufacturing a likelihood, selecting a candidate, or changing the existing forward/inverse methods?",
+  "method": [
+    "Load the versioned source packet, row allowlist and inverse-lane contract without importing a primary result artifact.",
+    "Verify the three authority file hashes, source edition/hash declaration, anchor/frame/table/sector metadata and the complete S3 row set for operator dimensions d=3 through d=9.",
+    "Verify that every row retains its source locator and absolute-value feasibility-bound form, while likelihood, covariance, aggregate score and candidate map remain explicitly unadmitted.",
+    "Run the non-importing independent reconstruction and compare row count, dimensions, source hash and firewall fields.",
+    "Run eight hostile mutations covering source drift, row omission/alias, table substitution, likelihood/covariance injection, map admission and candidate selection; then run the existing inverse-contract self-test."
+  ],
+  "finding": "The source packet and row allowlist satisfy the hash-pinned lineage and scope contract. The complete seven-row d=3..9 slice passes the primary 60/60, independent 25/25, hostile 8/8 and integrated 15/15 checks; the inverse-lane self-test also passes. No candidate score or microscopic forward map is admitted.",
+  "verdict": "advanced",
+  "decision_reason": "This is an additive T0 input-interface advance for T-061. It converts the earlier source freeze into a machine-checked, pre-registered row boundary while preserving the existing T-054 forward method, T-059 inverse contract, holdout policy and all physical non-claims. It does not treat feasibility rows as a joint observation or as evidence for a microscopic candidate.",
+  "decision_scope": "Finite source-lineage and row-schema validation for the OBS-LC-CAL-001 S3 isotropic-photon d=3..9 slice; no coefficient prediction, likelihood, covariance, candidate fitting, regulator limit or physical identification.",
+  "assumptions": [
+    "The source packet's recorded SHA-256 identifies the exact retrieved source bytes; the PDF is not duplicated in this repository.",
+    "The S3 rows are conservative two-sigma, one-coefficient-at-a-time sensitivities and are evaluated separately.",
+    "The allowlist is fixed before any candidate comparison and remains in the source Sun-centered frame and unit convention.",
+    "The existing inverse-lane contract remains authoritative for four map stages, holdouts, candidate admission and no automatic layer promotion."
+  ],
+  "missing_assumptions": [
+    "Measurement-level likelihoods and covariance for any aggregate score.",
+    "A complete source-owned candidate map through F_reg, F_lim, F_eff and F_obs, with regulator and theory-error budget.",
+    "Source-owned production dynamics, physical projection and dynamic estimand.",
+    "An independent prospective holdout and immutable acceptance rule."
+  ],
+  "adversarial_review": [
+    {"axis": "source-version drift", "check": "All authority paths are hash-pinned; a changed source packet or allowlist would fail the pointer check and require a new version.", "disposition": "UPHELD"},
+    {"axis": "row aggregation", "check": "Both packets retain NOT_ADMITTED likelihood/covariance and forbid synthetic joint or independent-experiment treatment; mutation injection is rejected.", "disposition": "UPHELD"},
+    {"axis": "table/frame substitution", "check": "The S3 table, photon sector, Sun-centered frame, dimensions and source locators are checked before any row can pass.", "disposition": "UPHELD"},
+    {"axis": "candidate leakage", "check": "The theory map is NOT_ADMITTED, the inverse contract has zero microscopic maps and candidate selection mutation is rejected.", "disposition": "UPHELD"},
+    {"axis": "method overhaul", "check": "Only a versioned interface manifest, scripts, run artifacts and append-only records were added; T-054/T-059 methods and owner order were not edited.", "disposition": "DISMISSED"}
+  ],
+  "boundary": "R-446 is a T0 source-interface audit. It does not evaluate a microscopic candidate, prove Lorentz invariance or a causal cone, identify dynamics or a physical vacuum, close Pre-A/Sector-A/C6, establish QFT/Yang-Mills/gravity, or prove continuum, empirical predictivity or a mass gap.",
+  "next_action": "Keep the seven-row interface frozen. Seek source-owned uncertainty/covariance and a complete four-stage candidate map; if those inputs do not arrive, park this anchor without scoring and continue the unchanged forward owner intake.",
+  "stop_or_redesign": [
+    "If the source edition or row identity changes, issue a new packet version rather than editing this record.",
+    "If a future row lacks a source likelihood/covariance, retain feasibility-only status and exclude it from scoring.",
+    "If no candidate-owned four-stage map or production dynamics is supplied, report the inverse equivalence class and do not select a microscopic model."
+  ],
+  "no_overclaim": "A hash-checked row interface is not a joint observation, a candidate fit, a physical Lorentz theorem, a Pre-A derivation or a Yang-Mills mass-gap proof.",
+  "evidence_refs": [
+    "strategy/obs-lc-cal-001-row-lineage-feasibility-manifest-v0.1.json#source_contract",
+    "strategy/obs-lc-cal-001-source-packet-v0.1.json#source",
+    "strategy/obs-lc-cal-001-row-allowlist-v0.1.json#rows",
+    "strategy/pre-a-observation-first-inverse-lane-contract-manifest.json#forward_map_contract",
+    "codes/foundations/pre_a_obs_lc_cal_001_row_lineage_feasibility.py#run",
+    "codes/foundations/pre_a_obs_lc_cal_001_row_lineage_feasibility_independent.py#run",
+    "codes/foundations/pre_a_obs_lc_cal_001_row_lineage_feasibility_hostile.py#run",
+    "codes/foundations/pre_a_obs_lc_cal_001_row_lineage_feasibility_verify.py#main",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-primary-obs_lc_cal_001_row_lineage_feasibility/primary.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-independent-obs_lc_cal_001_row_lineage_feasibility/independent.json#derived",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-hostile-obs_lc_cal_001_row_lineage_feasibility/hostile.json#mutations",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-integrated-obs_lc_cal_001_row_lineage_feasibility/integrated.json#scope",
+    "verification/scripts/check_obs_inverse.py#validate"
+  ],
+  "formal_refs": {
+    "events": ["20260830-obs-lc-cal-001-row-lineage-and-feasibility-inte"],
+    "results": ["R-446"],
+    "negatives": []
+  },
+  "formal_integration": {
+    "events": ["20260830-obs-lc-cal-001-row-lineage-and-feasibility-inte"],
+    "results": ["R-446"],
+    "negatives": [],
+    "no_new_result": false,
+    "no_new_negative": true,
+    "no_pdf": true,
+    "no_tier_change": true
+  },
+  "recorded_at": "2026-08-30T06:37:00Z",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-08-30",
+  "provenance": "contemporaneous"
+}

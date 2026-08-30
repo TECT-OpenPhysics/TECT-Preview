@@ -2,6 +2,39 @@
   "data": [
     {
       "accepted_event_ids": [
+        "20260830-obs-lc-cal-001-row-lineage-and-feasibility-inte"
+      ],
+      "anchor": "r-446",
+      "claim_ref_basis": {
+        "C6-SPACETIME-SIGNATURE": "proof_anchor_exact"
+      },
+      "claim_refs": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "co_recorded_negative_tags": [],
+      "detail": {
+        "assumptions_and_missing_assumptions": "The source packet's recorded SHA-256 identifies the retrieved source bytes; the PDF is not duplicated here. The allowlist is frozen before any microscopic candidate is admitted, and rows may be checked only one at a time. Missing are measurement-level likelihoods and covariance, a complete candidate-owned `F_reg/F_lim/F_eff/F_obs` map and theory error budget, source-owned production dynamics, and an independent prospective holdout with an immutable acceptance rule.",
+        "evidence_level_and_boundary": "This is T0 source-lineage plus finite feasibility-interface evidence. It performs no candidate evaluation, scoring, or parameter fitting and does not alter T-054/T-059 methods. It does not prove Lorentz invariance, a causal cone, a physical vacuum, Reading-H stationarity, Pre-A, Sector-A, C6, QFT, Yang--Mills, gravity, a continuum limit, empirical predictivity, or a mass gap.",
+        "finding": "The primary audit passes `60/60` assertions, the non-importing independent reconstruction passes `25/25`, the hostile lane rejects `8/8` source-hash, row-identity, table, uncertainty, map-admission and candidate- selection mutations, and the integrated verifier passes `15/15`. The existing inverse-lane contract self-test also passes. The seven rows are therefore a reproducible input interface, not a fitted observation vector.",
+        "proven_in": "[R-446 manifest](strategy/obs-lc-cal-001-row-lineage-feasibility-manifest-v0.1.json), [primary script](codes/foundations/pre_a_obs_lc_cal_001_row_lineage_feasibility.py), [independent script](codes/foundations/pre_a_obs_lc_cal_001_row_lineage_feasibility_independent.py), [hostile script](codes/foundations/pre_a_obs_lc_cal_001_row_lineage_feasibility_hostile.py), [integrated verifier](codes/foundations/pre_a_obs_lc_cal_001_row_lineage_feasibility_verify.py), and [integrated run](claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-integrated-obs_lc_cal_001_row_lineage_feasibility/integrated.json).",
+        "result_id": "`OBS-LC-CAL-001-ROW-LINEAGE-FEASIBILITY-INTERFACE-v0` (R-446).",
+        "version_and_exact_scope": "R-446 v1.0 is a T0, claim-nonbearing source- lineage and finite-interface audit under EXP-001298. It checks the hash-pinned arXiv:0801.0287v19 source packet and the complete pre-registered isotropic- photon subsection of Table S3, one row for each operator dimension `d=3` through `d=9`, in the standard Sun-centered frame. Each row remains a separate feasibility bound with the source one-coefficient and conservative two-sigma order-of-magnitude semantics."
+      },
+      "detail_title": "OBS-LC-CAL-001 frozen row lineage and feasibility interface",
+      "family_refs": [],
+      "id": "R-446",
+      "normalized_detail": {
+        "boundary": "",
+        "proof_anchor": "[R-446 manifest](strategy/obs-lc-cal-001-row-lineage-feasibility-manifest-v0.1.json), [primary script](codes/foundations/pre_a_obs_lc_cal_001_row_lineage_feasibility.py), [independent script](codes/foundations/pre_a_obs_lc_cal_001_row_lineage_feasibility_independent.py), [hostile script](codes/foundations/pre_a_obs_lc_cal_001_row_lineage_feasibility_hostile.py), [integrated verifier](codes/foundations/pre_a_obs_lc_cal_001_row_lineage_feasibility_verify.py), and [integrated run](claims/C6-SPACETIME-SIGNATURE/runs/2026-08-30-integrated-obs_lc_cal_001_row_lineage_feasibility/integrated.json).",
+        "publication_target": "",
+        "reuse": "",
+        "statement": ""
+      },
+      "summary": "R-446 v1.0 is a T0 claim-nonbearing source-lineage audit under EXP-001298. The hash-pinned arXiv:0801.0287v19 packet and complete isotropic-photon S3 slice (d=3..9) pass primary 60/60, independent 25/25, hostile 8/8, integrated 15/15 and the existing inverse-contract self-test. Likelihood, covariance, candidate maps and scoring remain unadmitted; no physical Lorentz, Pre-A, Sector-A, QFT, Yang--Mills or mass-gap claim follows",
+      "title": "OBS-LC-CAL-001 frozen row lineage and feasibility interface"
+    },
+    {
+      "accepted_event_ids": [
         "20260830-r-445-conditional-scalar-to-operator-tail-trans"
       ],
       "anchor": "r-445",
@@ -3210,38 +3243,6 @@
       },
       "summary": "R-181 v1.0 is a T0 claim-nonbearing Lean checkpoint under EXP-000896. It binds the R-177 beta=1/2 root-2 feedback map, exact Gram `[[5/4,1/2],[1/2,1]]`, and positive envelope defect. The production spatial mixed Gram, source/sextic one-use, T-050, A13, Sector-A and Pre-A remain open",
       "title": "Finite two-root feedback mixed-Gram Lean cross-check"
-    },
-    {
-      "accepted_event_ids": [
-        "20260821-r-180-lean-scalar-triangular-majorant-cross-che"
-      ],
-      "anchor": "r-180",
-      "claim_ref_basis": {
-        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION": "proof_anchor_exact"
-      },
-      "claim_refs": [
-        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
-      ],
-      "co_recorded_negative_tags": [],
-      "detail": {
-        "boundary": "This cross-check makes the scalar summation step auditable but does not construct the owner-complete R-102 mixed-Gram envelope or its conditional factorisation. It does not prove the production source/sextic one-use ledger, finite-collar headroom, matching, absolute anchor, T-050, A13, Nelson, a measure, physical-empty comparison, removal, continuum limits, Sector-A or Pre-A. No tier change, gate closure, new negative or PDF follows.",
-        "exact_result": "The pinned Lean source proves the finite geometric identity `(1-r) sum_(i<n) r^i = 1-r^n`, nonnegativity and the finite geometric upper bound for `0<=r<1`, positivity of the abstract C=5 scalar majorant under `0<u<1`, `0<v<u`, `1<q`, and `0<rho<1`, and the exact rational fixture `near=8/3`, `far_high=6`, `H5=26/3`, `sum_(i<4) (1/2)^i=15/8`. It also checks the registered production margins `beta/2-gamma=7/60` and `s-gamma=1/12` for `beta=7/5`, `s=2/3`, and `gamma=7/12`.",
-        "proven_in": "[R-180 certificate](strategy/pre-a-a13-scalar-triangular-majorant-crosscheck-certificate-260821.md), [Lean entrypoint](verification/lean/Tect/R180.lean), [primary script](verification/scripts/lean_a13_scalar_triangular_majorant_crosscheck.py), [independent script](codes/foundations/lean_a13_scalar_triangular_majorant_crosscheck_independent.py), [integrated verifier](codes/foundations/lean_a13_scalar_triangular_majorant_crosscheck_verify.py), [scope note](claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/a13-scalar-triangular-majorant-crosscheck-260821.md), and the saved run artefacts. No R-180 PDF is issued.",
-        "result_id": "`R-180` is a T0, claim-nonbearing Lean checkpoint under `EXP-000895`.",
-        "verification": "The primary SymPy lane and independent stdlib Fraction lane agree on every derived rational value. The pinned Lean source has no escape token; the integrated verifier checks package/input hashes, AST/import independence, eight hostile mutations, and formal topology/freshness."
-      },
-      "detail_title": "Lean scalar triangular majorant cross-check",
-      "family_refs": [],
-      "id": "R-180",
-      "normalized_detail": {
-        "boundary": "This cross-check makes the scalar summation step auditable but does not construct the owner-complete R-102 mixed-Gram envelope or its conditional factorisation. It does not prove the production source/sextic one-use ledger, finite-collar headroom, matching, absolute anchor, T-050, A13, Nelson, a measure, physical-empty comparison, removal, continuum limits, Sector-A or Pre-A. No tier change, gate closure, new negative or PDF follows.",
-        "proof_anchor": "[R-180 certificate](strategy/pre-a-a13-scalar-triangular-majorant-crosscheck-certificate-260821.md), [Lean entrypoint](verification/lean/Tect/R180.lean), [primary script](verification/scripts/lean_a13_scalar_triangular_majorant_crosscheck.py), [independent script](codes/foundations/lean_a13_scalar_triangular_majorant_crosscheck_independent.py), [integrated verifier](codes/foundations/lean_a13_scalar_triangular_majorant_crosscheck_verify.py), [scope note](claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/a13-scalar-triangular-majorant-crosscheck-260821.md), and the saved run artefacts. No R-180 PDF is issued.",
-        "publication_target": "",
-        "reuse": "",
-        "statement": ""
-      },
-      "summary": "R-180 v1.0 is a T0 claim-nonbearing Lean checkpoint under EXP-000895. It rechecks the finite geometric majorant algebra, abstract C=5 positivity, the rational fixture, and the registered exponent margins 7/60 and 1/12. The production mixed-Gram envelope, source/sextic one-use, T-050, A13, Sector-A and Pre-A remain open",
-      "title": "Lean scalar triangular majorant cross-check"
     }
   ],
   "kind": "reusable_results",

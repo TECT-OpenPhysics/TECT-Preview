@@ -5,10 +5,11 @@
 
 Authorities: `RESULTS-LEDGER.md`.
 
-**279 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
+**280 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
 
 | ID | Result | Tier/scope |
 |---|---|---|
+| [`R-446`](../RESULTS-LEDGER.md#r-446) | OBS-LC-CAL-001 frozen row lineage and feasibility interface | T0 |
 | [`R-445`](../RESULTS-LEDGER.md#r-445) | Conditional scalar-to-operator tail transfer under a per-edge norm majorant | T0 |
 | [`R-444`](../RESULTS-LEDGER.md#r-444) | Exact exponential shell-tail majorant | T0 |
 | [`R-443`](../RESULTS-LEDGER.md#r-443) | Arbitrary finite rectangular axis-parity matching theorem | T0 |
@@ -33,7 +34,6 @@ Authorities: `RESULTS-LEDGER.md`.
 | [`R-424`](../RESULTS-LEDGER.md#r-424) | Finite two-block harmonic coarse Schur assembly | T0 |
 | [`R-423`](../RESULTS-LEDGER.md#r-423) | Finite directed boundary-capacity Cauchy envelope | T0 |
 | [`R-422`](../RESULTS-LEDGER.md#r-422) | Finite residual core-tail coercivity reserve | T0 |
-| [`R-421`](../RESULTS-LEDGER.md#r-421) | Tail-supported Hardy ground-state-transform interface | T0 (claim-nonbearing finite interface). |
 
 Search without loading the full ledger:
 

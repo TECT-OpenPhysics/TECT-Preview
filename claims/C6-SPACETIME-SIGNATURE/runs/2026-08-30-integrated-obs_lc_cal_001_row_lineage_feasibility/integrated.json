@@ -1,0 +1,186 @@
+{
+  "assertion_count": 15,
+  "assertions": [
+    {
+      "actual": [
+        "R-446",
+        "EXP-001298",
+        "T-061",
+        false
+      ],
+      "expected": "R-446/EXP-001298/T-061/false",
+      "group": "provenance",
+      "name": "manifest identity",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "scope",
+      "name": "manifest method firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-446 PRIMARY FROZEN_LINEAGE_FEASIBILITY_INTERFACE_AUDITED 60/60 rows=7 dims=3-9\n",
+      "expected": "audited",
+      "group": "executables",
+      "name": "primary executable",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-446 INDEPENDENT INDEPENDENT_FROZEN_LINEAGE_FEASIBILITY_INTERFACE_CONTROL 25/25 rows=7\n",
+      "expected": "control",
+      "group": "executables",
+      "name": "independent executable",
+      "status": "PASS"
+    },
+    {
+      "actual": "R-446 HOSTILE HOSTILE_LINEAGE_FEASIBILITY_MUTATIONS_REJECTED 8/8\n",
+      "expected": "mutations rejected",
+      "group": "executables",
+      "name": "hostile executable",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        7,
+        7
+      ],
+      "expected": "equal",
+      "group": "crosscheck",
+      "name": "primary/independent agreement row_count",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        true,
+        true
+      ],
+      "expected": "equal",
+      "group": "crosscheck",
+      "name": "primary/independent agreement source_hash_pinned",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        false,
+        false
+      ],
+      "expected": "equal",
+      "group": "crosscheck",
+      "name": "primary/independent agreement likelihood_admitted",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        false,
+        false
+      ],
+      "expected": "equal",
+      "group": "crosscheck",
+      "name": "primary/independent agreement covariance_admitted",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        false,
+        false
+      ],
+      "expected": "equal",
+      "group": "crosscheck",
+      "name": "primary/independent agreement candidate_map_admitted",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        false,
+        false
+      ],
+      "expected": "equal",
+      "group": "crosscheck",
+      "name": "primary/independent agreement candidate_scoring_performed",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        3,
+        9
+      ],
+      "expected": "3-9",
+      "group": "crosscheck",
+      "name": "dimension agreement",
+      "status": "PASS"
+    },
+    {
+      "actual": 8,
+      "expected": 8,
+      "group": "hostile",
+      "name": "hostile count",
+      "status": "PASS"
+    },
+    {
+      "actual": "OBS-INVERSE-SELFTEST: PASS (4 hostile mutations rejected)\n",
+      "expected": "OBS-INVERSE self-test PASS",
+      "group": "inverse",
+      "name": "inverse contract self-test",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "codes/foundations/pre_a_obs_lc_cal_001_row_lineage_feasibility.py": "b64e9934f5511525bbe65315636f3abd5d41b139744804145366b6a2f4b9f80e",
+        "strategy/obs-lc-cal-001-row-allowlist-v0.1.json": "186576ddb894d321e9bd7f97321c48b77f7660bf2b0e4cda631c5e3adfc5aa70",
+        "strategy/obs-lc-cal-001-row-lineage-feasibility-manifest-v0.1.json": "2e89dc327c6be0883023a64aeb49a4b1a90b125a165c11f128987d129cd87b86",
+        "strategy/obs-lc-cal-001-source-packet-v0.1.json": "2013f8b0a4ce12adc47fc63c92ecefa7b1178a47eb2a244715a76d196b6389c2",
+        "strategy/pre-a-observation-first-inverse-lane-contract-manifest.json": "fd5f37d0e095062a415368749d10d65de14b799938673b4460c3e849f07b9a46",
+        "verification/scripts/check_obs_inverse.py": "d745a696b34fcc0f7e3ca57ec3047824c7a07c8245e7f9e7dbc792985c2f6ddb"
+      },
+      "expected": "sha256 map",
+      "group": "provenance",
+      "name": "primary authority hashes",
+      "status": "PASS"
+    }
+  ],
+  "assumptions": [
+    "The source packet records the exact source bytes and SHA-256 supplied at retrieval time; the PDF bytes are not duplicated in this repository.",
+    "The S3 isotropic-photon rows are used only as separately evaluated feasibility bounds under the source one-coefficient convention.",
+    "The inverse-lane manifest remains the governing contract for candidate admission, holdouts, and four forward-map stages.",
+    "A structural lineage audit does not infer a coefficient value for any TECT candidate."
+  ],
+  "boundary": "The audit freezes and validates the row interface only; it does not evaluate a microscopic candidate, score observations, or prove a physical symmetry.",
+  "evidence_level": "T0 source-lineage plus pre-registered finite feasibility-interface integrated audit",
+  "exploration_id": "EXP-001298",
+  "missing_assumptions": [
+    "Measurement-level likelihoods and covariance for any aggregate score.",
+    "A complete candidate-owned F_reg/F_lim/F_eff/F_obs map and theory-error budget.",
+    "A source-owned production dynamics and physical projection.",
+    "An independent prospective holdout and immutable acceptance rule."
+  ],
+  "non_claims": [
+    "No candidate is admitted, selected, or ranked.",
+    "No joint likelihood, covariance, Gaussian approximation, or independent-experiment interpretation is created.",
+    "No Lorentz invariance, causal cone, QFT, Yang-Mills, gravity, Pre-A, Sector-A, C6, continuum, empirical-predictivity, or mass-gap conclusion follows.",
+    "No Reading-H physical-empty sign, stationarity, stability, or production dynamics is identified."
+  ],
+  "recorded_at": "2026-08-30T06:35:04.302170Z",
+  "result_id": "R-446",
+  "run_kind": "integrated",
+  "schema": "tect/obs-lc-cal-001-row-lineage-feasibility-integrated/1.0",
+  "scope": {
+    "candidate_scoring": false,
+    "hostile": true,
+    "independent": true,
+    "inverse_contract": true,
+    "method_overhaul": false,
+    "primary": true
+  },
+  "source_hashes": {
+    "codes/foundations/pre_a_obs_lc_cal_001_row_lineage_feasibility.py": "b64e9934f5511525bbe65315636f3abd5d41b139744804145366b6a2f4b9f80e",
+    "codes/foundations/pre_a_obs_lc_cal_001_row_lineage_feasibility_hostile.py": "81dde82d1c99f53841212ae281da043bb723591ee706c1969de81170cdd0a714",
+    "codes/foundations/pre_a_obs_lc_cal_001_row_lineage_feasibility_independent.py": "5c008f163fe85a800a0fadaecdb57664a579b5147394c889bd82d5c0495907a5",
+    "codes/foundations/pre_a_obs_lc_cal_001_row_lineage_feasibility_verify.py": "92c0a90e3aee0e78ae2ca48d453b93df2dd5ab5e1f9e677116e1af92a48bcb41",
+    "strategy/obs-lc-cal-001-row-lineage-feasibility-manifest-v0.1.json": "2e89dc327c6be0883023a64aeb49a4b1a90b125a165c11f128987d129cd87b86",
+    "verification/scripts/check_obs_inverse.py": "d745a696b34fcc0f7e3ca57ec3047824c7a07c8245e7f9e7dbc792985c2f6ddb"
+  },
+  "task_id": "T-061",
+  "verdict": "INTEGRATED_FROZEN_LINEAGE_FEASIBILITY_INTERFACE_AUDITED"
+}

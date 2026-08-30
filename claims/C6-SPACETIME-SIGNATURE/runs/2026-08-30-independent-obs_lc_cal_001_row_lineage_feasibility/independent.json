@@ -1,0 +1,270 @@
+{
+  "assertion_count": 25,
+  "assertions": [
+    {
+      "actual": "tect/observation-anchor-packet/0.1",
+      "expected": "tect/observation-anchor-packet/0.1",
+      "group": "source",
+      "name": "source packet schema",
+      "status": "PASS"
+    },
+    {
+      "actual": "HASH_FROZEN_FEASIBILITY_ONLY",
+      "expected": "HASH_FROZEN_FEASIBILITY_ONLY",
+      "group": "source",
+      "name": "source packet status",
+      "status": "PASS"
+    },
+    {
+      "actual": "OBS-LC-CAL-001",
+      "expected": "OBS-LC-CAL-001",
+      "group": "source",
+      "name": "source anchor",
+      "status": "PASS"
+    },
+    {
+      "actual": "2fde66d227d1cbc5524baf23d5925d2ca30522a371d092387901ac7566273827",
+      "expected": "2fde66d227d1cbc5524baf23d5925d2ca30522a371d092387901ac7566273827",
+      "group": "source",
+      "name": "source hash",
+      "status": "PASS"
+    },
+    {
+      "actual": "https://arxiv.org/pdf/0801.0287",
+      "expected": "https URL",
+      "group": "source",
+      "name": "source URL",
+      "status": "PASS"
+    },
+    {
+      "actual": "Standard Sun-centered inertial reference frame",
+      "expected": "Sun-centered frame",
+      "group": "source",
+      "name": "source frame",
+      "status": "PASS"
+    },
+    {
+      "actual": "NOT_ADMITTED",
+      "expected": "NOT_ADMITTED",
+      "group": "uncertainty",
+      "name": "source likelihood",
+      "status": "PASS"
+    },
+    {
+      "actual": "NOT_ADMITTED",
+      "expected": "NOT_ADMITTED",
+      "group": "uncertainty",
+      "name": "source covariance",
+      "status": "PASS"
+    },
+    {
+      "actual": "tect/observation-anchor-row-allowlist/0.1",
+      "expected": "tect/observation-anchor-row-allowlist/0.1",
+      "group": "allowlist",
+      "name": "allowlist schema",
+      "status": "PASS"
+    },
+    {
+      "actual": "FROZEN_FEASIBILITY_ONLY",
+      "expected": "FROZEN_FEASIBILITY_ONLY",
+      "group": "allowlist",
+      "name": "allowlist status",
+      "status": "PASS"
+    },
+    {
+      "actual": "OBS-LC-CAL-001",
+      "expected": "OBS-LC-CAL-001",
+      "group": "allowlist",
+      "name": "allowlist anchor",
+      "status": "PASS"
+    },
+    {
+      "actual": "2fde66d227d1cbc5524baf23d5925d2ca30522a371d092387901ac7566273827",
+      "expected": "2fde66d227d1cbc5524baf23d5925d2ca30522a371d092387901ac7566273827",
+      "group": "provenance",
+      "name": "allowlist source hash",
+      "status": "PASS"
+    },
+    {
+      "actual": "S3",
+      "expected": "S3",
+      "group": "allowlist",
+      "name": "allowlist table",
+      "status": "PASS"
+    },
+    {
+      "actual": "photon",
+      "expected": "photon",
+      "group": "allowlist",
+      "name": "allowlist sector",
+      "status": "PASS"
+    },
+    {
+      "actual": 7,
+      "expected": 7,
+      "group": "allowlist",
+      "name": "row list",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "expected": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "group": "allowlist",
+      "name": "dimensions",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "S3-ISO-D3-KV00",
+        "S3-ISO-D4-CI00",
+        "S3-ISO-D5-KV00",
+        "S3-ISO-D6-CI00",
+        "S3-ISO-D7-KV00",
+        "S3-ISO-D8-CI00",
+        "S3-ISO-D9-KV00"
+      ],
+      "expected": [
+        "S3-ISO-D3-KV00",
+        "S3-ISO-D4-CI00",
+        "S3-ISO-D5-KV00",
+        "S3-ISO-D6-CI00",
+        "S3-ISO-D7-KV00",
+        "S3-ISO-D8-CI00",
+        "S3-ISO-D9-KV00"
+      ],
+      "group": "allowlist",
+      "name": "row IDs",
+      "status": "PASS"
+    },
+    {
+      "actual": "all rows",
+      "expected": "Table S3",
+      "group": "provenance",
+      "name": "row locators",
+      "status": "PASS"
+    },
+    {
+      "actual": "all rows",
+      "expected": "absolute_value",
+      "group": "allowlist",
+      "name": "row bound forms",
+      "status": "PASS"
+    },
+    {
+      "actual": "NOT_ADMITTED",
+      "expected": "NOT_ADMITTED",
+      "group": "uncertainty",
+      "name": "row likelihood",
+      "status": "PASS"
+    },
+    {
+      "actual": "NOT_ADMITTED",
+      "expected": "NOT_ADMITTED",
+      "group": "uncertainty",
+      "name": "row covariance",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "forbidden": [
+          "Do not multiply rows into a joint likelihood.",
+          "Do not interpret the seven operator dimensions as independent experiments.",
+          "Do not convert a summary sensitivity into a Gaussian standard deviation.",
+          "Do not add a candidate-dependent row or remove a row after seeing predictions."
+        ],
+        "row_rule": "Evaluate each row separately as a feasibility bound; retain the source one-coefficient convention and quoted order-of-magnitude semantics."
+      },
+      "expected": "separate rows; independent aggregation forbidden",
+      "group": "uncertainty",
+      "name": "row independence rule",
+      "status": "PASS"
+    },
+    {
+      "actual": "NOT_ADMITTED",
+      "expected": "NOT_ADMITTED",
+      "group": "map",
+      "name": "map not admitted",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "F_reg",
+        "F_lim",
+        "F_eff",
+        "F_obs"
+      ],
+      "expected": [
+        "F_reg",
+        "F_lim",
+        "F_eff",
+        "F_obs"
+      ],
+      "group": "inverse",
+      "name": "inverse map order",
+      "status": "PASS"
+    },
+    {
+      "actual": "NO_SELECTION_ZERO_ADMITTED_MICROSCOPIC_FORWARD_MAPS",
+      "expected": "NO_SELECTION_ZERO_ADMITTED_MICROSCOPIC_FORWARD_MAPS",
+      "group": "inverse",
+      "name": "inverse no selection",
+      "status": "PASS"
+    }
+  ],
+  "derived": {
+    "candidate_map_admitted": false,
+    "candidate_scoring_performed": false,
+    "covariance_admitted": false,
+    "likelihood_admitted": false,
+    "operator_dimensions": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "row_count": 7,
+    "source_hash_pinned": true
+  },
+  "evidence_level": "T0 source-lineage plus pre-registered finite feasibility-interface control",
+  "expected_authority_hashes": {
+    "inverse_contract": "fd5f37d0e095062a415368749d10d65de14b799938673b4460c3e849f07b9a46",
+    "row_allowlist": "186576ddb894d321e9bd7f97321c48b77f7660bf2b0e4cda631c5e3adfc5aa70",
+    "source_packet": "2013f8b0a4ce12adc47fc63c92ecefa7b1178a47eb2a244715a76d196b6389c2"
+  },
+  "exploration_id": "EXP-001298",
+  "non_claims": [
+    "No candidate is admitted, selected, or ranked.",
+    "No likelihood, covariance, aggregate score, physical symmetry, Pre-A, Sector-A, C6, QFT, Yang-Mills, gravity, continuum, empirical-predictivity, or mass-gap conclusion follows."
+  ],
+  "recorded_at": "2026-08-30T06:33:15.371685Z",
+  "result_id": "R-446",
+  "run_kind": "independent",
+  "schema": "tect/obs-lc-cal-001-row-lineage-feasibility-independent/1.0",
+  "source_hashes": {
+    "inverse_contract": "fd5f37d0e095062a415368749d10d65de14b799938673b4460c3e849f07b9a46",
+    "row_allowlist": "186576ddb894d321e9bd7f97321c48b77f7660bf2b0e4cda631c5e3adfc5aa70",
+    "script": "5c008f163fe85a800a0fadaecdb57664a579b5147394c889bd82d5c0495907a5",
+    "source_packet": "2013f8b0a4ce12adc47fc63c92ecefa7b1178a47eb2a244715a76d196b6389c2"
+  },
+  "task_id": "T-061",
+  "verdict": "INDEPENDENT_FROZEN_LINEAGE_FEASIBILITY_INTERFACE_CONTROL"
+}
