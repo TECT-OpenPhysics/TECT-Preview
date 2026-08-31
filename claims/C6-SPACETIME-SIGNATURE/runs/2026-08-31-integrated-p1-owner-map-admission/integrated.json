@@ -1,0 +1,116 @@
+{
+  "assertion_count": 10,
+  "assertions": [
+    {
+      "actual": "P1 OWNER/MAP ADMISSION PRIMARY PASS 24/24; current=EMPTY_OWNER_ARTIFACT; synthetic=CONTRACT_TEST_ONLY_COMPLETE\n",
+      "expected": "PASS",
+      "name": "primary child",
+      "pass": true
+    },
+    {
+      "actual": "P1 OWNER/MAP ADMISSION INDEPENDENT PASS 18/18; current=EMPTY_OWNER_ARTIFACT; synthetic=CONTRACT_TEST_ONLY_COMPLETE\n",
+      "expected": "PASS",
+      "name": "independent child",
+      "pass": true
+    },
+    {
+      "actual": "P1 OWNER/MAP ADMISSION HOSTILE PASS 18/18; mutations=14\n",
+      "expected": "PASS",
+      "name": "hostile child",
+      "pass": true
+    },
+    {
+      "actual": [
+        "EMPTY_OWNER_ARTIFACT",
+        "EMPTY_OWNER_ARTIFACT"
+      ],
+      "expected": "EMPTY_OWNER_ARTIFACT",
+      "name": "current state agreement",
+      "pass": true
+    },
+    {
+      "actual": [
+        "CONTRACT_TEST_ONLY_COMPLETE",
+        "CONTRACT_TEST_ONLY_COMPLETE"
+      ],
+      "expected": "CONTRACT_TEST_ONLY_COMPLETE",
+      "name": "synthetic firewall agreement",
+      "pass": true
+    },
+    {
+      "actual": [
+        "NONE",
+        "NONE",
+        "NONE"
+      ],
+      "expected": "NONE",
+      "name": "production admission empty",
+      "pass": true
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "methods unchanged",
+      "pass": true
+    },
+    {
+      "actual": 14,
+      "expected": "positive mutation count",
+      "name": "hostile mutations exercised",
+      "pass": true
+    },
+    {
+      "actual": [
+        24,
+        18,
+        18
+      ],
+      "expected": "positive",
+      "name": "child assertion counts positive",
+      "pass": true
+    },
+    {
+      "actual": {
+        "command": "lake env lean Tect/R471.lean",
+        "output": "",
+        "returncode": 0,
+        "status": "PASS"
+      },
+      "expected": "PASS",
+      "name": "Lean compile",
+      "pass": true
+    }
+  ],
+  "audit_id": "P1-OWNER-MAP-ADMISSION-INTEGRATED",
+  "boundary": "R-471 is an additive T0 contract result. It makes the existing owner and inverse-map admission boundary executable and fail-closed; it does not create an owner artifact, choose a dynamics, score observations, or alter any established proof method.",
+  "candidate_scoring": false,
+  "claim_bearing": false,
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "current_state": "EMPTY_OWNER_ARTIFACT",
+  "evidence_level": "T0 / MACHINE-CHECKED MODEL-CONSISTENCY ADMISSION FIREWALL WITH PRIMARY, INDEPENDENT, HOSTILE, INTEGRATED AND LEAN TESTS",
+  "exploration_id": "EXP-001346",
+  "lean": {
+    "command": "lake env lean Tect/R471.lean",
+    "output": "",
+    "returncode": 0,
+    "status": "PASS"
+  },
+  "methods_unchanged": true,
+  "passed": 10,
+  "production_admission": "NONE",
+  "prospective_lock": "EMPTY",
+  "provenance": {
+    "hostile_sha256": "5b2997f5bb518f4939771816974c772bea7fb6e0888b0987255e5e7c472e983a",
+    "independent_sha256": "06c1f1793f601b9e195e4d69f81da9504c35661b18b6f8e9d444cf5bea13c52c",
+    "lean_sha256": "602a1d21e27c8ff5841b388ca001f9681331a4a3dabffb16e25113103dc8f46c",
+    "manifest_sha256": "d3692a9cea5aec4d2e317887dfde3559ebe86b74901bd52bb3e18df9d0f19538",
+    "primary_sha256": "76de1aef9aba74fbf15a98706b28c5da655fbe9f773305913790be23d64c0b36"
+  },
+  "recorded_at": "2026-08-31T06:56:25.933930Z",
+  "result_id": "R-471",
+  "run_kind": "integrated",
+  "schema": "tect/foundation-audit/1.0",
+  "synthetic_fixture_state": "CONTRACT_TEST_ONLY_COMPLETE",
+  "task_id": "T-061",
+  "verdict": "PASS"
+}

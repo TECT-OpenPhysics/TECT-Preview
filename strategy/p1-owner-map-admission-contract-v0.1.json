@@ -1,0 +1,219 @@
+{
+  "schema": "tect/p1-owner-map-admission/1.0",
+  "manifest_id": "P1-OWNER-MAP-ADMISSION-v1",
+  "result_id": "R-471",
+  "exploration_id": "EXP-001346",
+  "task_id": "T-061",
+  "parent_task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": [
+    "PA-INVERSE-OBSERVATION-TARGET-MAP-HOLDOUT-FREEZE",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "title": "Fail-closed P1 owner and observation-map admission contract",
+  "tier": "T0",
+  "claim_bearing": false,
+  "status": "FAIL_CLOSED_NO_OWNER_ADMITTED",
+  "objective": "Encode the existing owner order and four-stage observation map as a machine-checkable admission state machine so that future source-owned packets can be resumed without silently promoting a comparator, a static fit, or a synthetic fixture.",
+  "method_preservation": {
+    "t054_forward_method_unchanged": true,
+    "t059_t061_observation_first_method_unchanged": true,
+    "owner_order_unchanged": true,
+    "promotion_firewalls_unchanged": true,
+    "additive_contract_only": true,
+    "no_new_finite_mobility_table": true,
+    "no_physical_empty_substitution": true,
+    "no_candidate_scoring": true,
+    "no_tier_change": true
+  },
+  "layer_contract": [
+    {
+      "id": "L1_MATHEMATICAL_THEOREM",
+      "question": "Does the conclusion follow from the explicitly pinned hypotheses?",
+      "promotion_boundary": "A contract check does not establish model identity or empirical truth."
+    },
+    {
+      "id": "L2_MODEL_CONSISTENCY",
+      "question": "Do the owner, dynamics, state, projection, observable, regulator and ordered map stages define one model?",
+      "promotion_boundary": "A complete packet is still not a QFT, Yang--Mills, gravity or continuum identification."
+    },
+    {
+      "id": "L3_PHYSICAL_IDENTITY",
+      "question": "Is the model mapped to known physical structures with an explicit error budget?",
+      "promotion_boundary": "No physical identity is inferred by the admission predicate."
+    },
+    {
+      "id": "L4_EMPIRICAL_VALIDATION",
+      "question": "Does a frozen candidate predict unused data under an immutable scorer?",
+      "promotion_boundary": "No score or holdout prediction is executed by this contract."
+    }
+  ],
+  "forward_owner_slots": [
+    {"id": "generator_or_transfer", "owner_class": "physical", "required": true},
+    {"id": "state", "owner_class": "physical", "required": true},
+    {"id": "physical_projection", "owner_class": "physical", "required": true},
+    {"id": "time_boundary", "owner_class": "physical", "required": true},
+    {"id": "heat_root_incidence", "owner_class": "proof", "required": true},
+    {"id": "root_filtration", "owner_class": "proof", "required": true},
+    {"id": "conditional_replicas", "owner_class": "proof", "required": true},
+    {"id": "raw_current_spatial_intertwiner", "owner_class": "proof", "required": true},
+    {"id": "production_one_use_q_ledger", "owner_class": "proof", "required": true}
+  ],
+  "inverse_map_stages": [
+    {
+      "id": "F_reg",
+      "order": 1,
+      "requires": ["functional_or_action", "generator_or_transfer", "state", "projection", "regulator", "volume", "boundary", "normalization", "common_norm", "finite_parts"]
+    },
+    {
+      "id": "F_lim",
+      "order": 2,
+      "requires": ["common_core", "uniform_bounds", "cutoff_volume_exhaustion_phase_beta_order"]
+    },
+    {
+      "id": "F_eff",
+      "order": 3,
+      "requires": ["scheme", "scale", "operator_basis", "state", "ward_or_slavnov_taylor_contract", "anomaly_budget", "truncation_budget"]
+    },
+    {
+      "id": "F_obs",
+      "order": 4,
+      "requires": ["instrument_selection_compression_map", "covariance", "nuisance_law", "numerical_error", "immutable_scorer"]
+    }
+  ],
+  "admission_state_machine": {
+    "states": [
+      "EMPTY_OWNER_ARTIFACT",
+      "PARTIAL_OWNER_PACKET",
+      "OWNER_PACKET_HASHED",
+      "FORWARD_MAP_COMPLETE",
+      "CONTRACT_TEST_ONLY_COMPLETE",
+      "SCORING_ADMITTED",
+      "PROSPECTIVE_VALIDATED"
+    ],
+    "transitions": [
+      {"from": "EMPTY_OWNER_ARTIFACT", "to": "PARTIAL_OWNER_PACKET", "requires": "nonempty source artifact hash and at least one owner slot"},
+      {"from": "PARTIAL_OWNER_PACKET", "to": "OWNER_PACKET_HASHED", "requires": "all nine ordered owner slots and a non-synthetic source hash"},
+      {"from": "OWNER_PACKET_HASHED", "to": "FORWARD_MAP_COMPLETE", "requires": "F_reg, F_lim, F_eff and F_obs are complete in order"},
+      {"from": "FORWARD_MAP_COMPLETE", "to": "CONTRACT_TEST_ONLY_COMPLETE", "requires": "complete packet is explicitly marked synthetic; this branch is test-only"},
+      {"from": "FORWARD_MAP_COMPLETE", "to": "SCORING_ADMITTED", "requires": "candidate-neutral estimand, covariance, nuisance and immutable scorer are frozen"},
+      {"from": "SCORING_ADMITTED", "to": "PROSPECTIVE_VALIDATED", "requires": "prospective holdout is hash-frozen and scored without retuning"}
+    ],
+    "current_state": "EMPTY_OWNER_ARTIFACT",
+    "current_admitted_candidate_count": 0,
+    "synthetic_fixture_rule": "A synthetic fixture may exercise transitions but can never enter SCORING_ADMITTED or PROSPECTIVE_VALIDATED."
+  },
+  "current_snapshot": {
+    "source_artifact": {"path": "", "sha256": "", "synthetic": false},
+    "owner_slot_status": {
+      "generator_or_transfer": false,
+      "state": false,
+      "physical_projection": false,
+      "time_boundary": false,
+      "heat_root_incidence": false,
+      "root_filtration": false,
+      "conditional_replicas": false,
+      "raw_current_spatial_intertwiner": false,
+      "production_one_use_q_ledger": false
+    },
+    "inverse_stage_status": {"F_reg": false, "F_lim": false, "F_eff": false, "F_obs": false},
+    "prospective_holdout_frozen": false,
+    "candidate_neutral_estimand_frozen": false,
+    "immutable_scorer_frozen": false,
+    "methods_unchanged": true,
+    "admission_status": "EMPTY_OWNER_ARTIFACT",
+    "admitted_candidate_count": 0
+  },
+  "admission_predicate": {
+    "source_hash": "lowercase 64-hex SHA-256 and nonempty source path are required",
+    "owner_slots": "all nine ordered slots must be present and true",
+    "map_stages": "F_reg, F_lim, F_eff and F_obs must be true in order",
+    "holdout": "prospective holdout and immutable scorer must be frozen before scoring",
+    "synthetic": "synthetic or fixture packets are contract-test-only",
+    "method_firewall": "methods_unchanged must remain true",
+    "missing_stage_rule": "a missing earlier stage blocks every later stage"
+  },
+  "authorities": [
+    {
+      "path": "strategy/pre-a-dynamic-owner-leakage-audit-manifest.json",
+      "sha256": "e7c358aeb4d10f7c2c251d0c189f8218e838901fe958875b3e99004827c2b195",
+      "role": "R-449 owner/proof leakage boundary"
+    },
+    {
+      "path": "strategy/pre-a-observation-first-inverse-lane-contract-manifest.json",
+      "sha256": "fd5f37d0e095062a415368749d10d65de14b799938673b4460c3e849f07b9a46",
+      "role": "T-059 four-layer and F_reg/F_lim/F_eff/F_obs contract"
+    },
+    {
+      "path": "strategy/hold-lc-001-gdt-fermi-rsp2-parser-owner-v0.1.json",
+      "sha256": "e14630bc05c3304e360554d2bd6ec699755a3e81ce647553ddf028d2ea777c23",
+      "role": "R-470 source-provenance stopping boundary"
+    },
+    {
+      "path": "verification/lean/lean-toolchain",
+      "sha256": "8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af",
+      "role": "pinned Lean toolchain"
+    },
+    {
+      "path": "verification/lean/lakefile.toml",
+      "sha256": "a67c26b5518afd984e53eae28a0ba4948c6bb01680d7c360e8b36386eb98962b",
+      "role": "pinned Lean project"
+    }
+  ],
+  "fixture_policy": {
+    "complete_synthetic": "must reach CONTRACT_TEST_ONLY_COMPLETE and never production admission",
+    "missing_hash": "must remain EMPTY_OWNER_ARTIFACT",
+    "partial_slots": "must remain PARTIAL_OWNER_PACKET",
+    "missing_earlier_map_stage": "must block all later stages",
+    "holdout_absent": "must not reach SCORING_ADMITTED"
+  },
+  "assumptions": [
+    "The exact R-449, T-059 and R-470 authorities remain the controlling owner and method boundaries.",
+    "A source hash identifies an artifact but does not by itself establish physical identity.",
+    "The nine owner slots and four ordered map stages are the existing T-054/T-059/T-061 contract, not a new research method.",
+    "A machine-checkable fail-closed predicate is useful for resumability even when no source owner is currently available.",
+    "Lean checks only the Boolean admission firewall and does not supply a source owner or empirical evidence."
+  ],
+  "missing_assumptions": [
+    "A versioned source-owned generator or transfer, state, physical projection and time boundary.",
+    "The five R-192 production proof-owner slots: heat-root incidence, filtration, conditional replicas, raw-current intertwiner and one-use q ledger.",
+    "A complete candidate-neutral F_reg/F_lim/F_eff/F_obs map, covariance, nuisance model, scorer and prospective holdout.",
+    "Uniform regulator, volume, exhaustion, phase and beta estimates and a physical QFT/Yang--Mills/gravity correspondence."
+  ],
+  "evidence_level": "T0 / MACHINE-CHECKED MODEL-CONSISTENCY ADMISSION FIREWALL WITH PRIMARY, INDEPENDENT, HOSTILE, INTEGRATED AND LEAN TESTS",
+  "non_claims": [
+    "No source-owned dynamics or observation map is admitted by this result.",
+    "Synthetic fixtures test only the contract and cannot become candidates or scores.",
+    "No finite mobility table, physical-empty sign, Reading-H stationarity, Pre-A, Sector-A, C6, QFT, Yang--Mills, gravity, continuum, cosmic-origin or mass-gap conclusion follows.",
+    "Existing T-054 forward and T-059/T-061 inverse methods, owner order, stopped-loop rules and promotion firewalls are unchanged."
+  ],
+  "hostile_tests": [
+    "delete the source hash",
+    "swap or delete one owner slot",
+    "mark a synthetic fixture as production",
+    "set F_lim true while F_reg is false",
+    "skip F_eff and set F_obs true",
+    "freeze a holdout without an immutable scorer",
+    "flip methods_unchanged to false",
+    "inject a duplicate map stage",
+    "admit a source path with a malformed digest",
+    "promote the contract-test fixture to a prospective result"
+  ],
+  "files": {
+    "manifest": "strategy/p1-owner-map-admission-contract-v0.1.json",
+    "primary": "codes/foundations/p1_owner_map_admission_contract.py",
+    "independent": "codes/foundations/p1_owner_map_admission_contract_independent.py",
+    "hostile": "codes/foundations/p1_owner_map_admission_contract_hostile.py",
+    "integrated": "verification/scripts/p1_owner_map_admission_contract_verify.py",
+    "lean": "verification/lean/Tect/R471.lean",
+    "certificate": "strategy/p1-owner-map-admission-contract-certificate-260831.md",
+    "exploration": "strategy/p1-owner-map-admission-contract-exploration.json"
+  },
+  "formal_integration": {
+    "no_new_negative_ids": [],
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "boundary": "R-471 is an additive T0 contract result. It makes the existing owner and inverse-map admission boundary executable and fail-closed; it does not create an owner artifact, choose a dynamics, score observations, or alter any established proof method.",
+  "next_action": "Keep the current state EMPTY_OWNER_ARTIFACT. Request the versioned physical-owner validity/interpolation, common-time-standard, detector-to-geocenter and timing-uncertainty packet for T-061, while resuming the unchanged T-054 owner-level Q3LOCK queue. Admit no scoring until a real non-synthetic owner packet fills all slots and all four map stages in order."
+}

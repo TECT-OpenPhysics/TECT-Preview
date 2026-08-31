@@ -22,6 +22,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-471](#r-471) | Fail-closed P1 owner and observation-map admission contract | R-471 / EXP-001346 is a T0 claim-nonbearing additive T-061/T-054 contract result. It encodes the unchanged nine-slot owner order and ordered F_reg/F_lim/F_eff/F_obs map as a fail-closed state machine: the current packet remains EMPTY_OWNER_ARTIFACT with zero admitted candidates, and complete synthetic fixtures are contract-test-only. Primary 24/24, independent 18/18, hostile 18/18 with 14/14 mutations rejected, integrated 10/10 and Lean R471 pass. No source owner, scoring, prospective holdout, physical identity, Pre-A, Sector-A, QFT, Yang--Mills, continuum or mass-gap conclusion follows; established methods and owner order remain unchanged |
 | [R-470](#r-470) | HOLD-LC-001 official gdt-fermi GbmRsp2 parser owner boundary | R-470 v1.0 is a T0 claim-nonbearing additive T-061 mission-source provenance crosswalk. The pinned USRA-STI/gdt-fermi main commit a6ef74e7278dbeb35759aadeb8d79ec8c38e6aac and 12107-byte response.py SHA-256 are audited by independent AST/token lanes. GbmRsp2 subclasses core Rsp2, delegates opening, iterates DRM_NUM, rebuilds segment headers, accesses compressed fields, decompresses rows, constructs GbmRsp objects and aggregates them; no event product or response coefficient is opened, and no validity/interpolation/timing owner is supplied. Primary 15/15, independent 10/10, hostile 14/14, integrated 15/15 and Lean R470 pass. Production selection remains NONE_SELECTED; existing T-054/T-059/T-061 methods and owner order are unchanged |
 | [R-469](#r-469) | HOLD-LC-001 official gdt-core Rsp2 selection semantics crosswalk | R-469 v1.0 is a T0 claim-nonbearing additive T-061 source-owner provenance crosswalk. The exact USRA-STI/gdt-core main commit and response.py SHA-256 are pinned. From R-468 interval metadata, the implementation's strict-overlap drm_index, first/last empty-range fallback and first-index nearest delegation are reproduced; endpoint fallback and the docstring/implementation mismatch are exposed. Primary 12 assertions, independent 7 assertions, hostile 12/12, integrated 14/14 and Lean R469 pass. Matrix-reading interpolation/weighted paths, calibration validity, timing conversion/uncertainty, likelihood, covariance, scoring and prospective lock remain unadmitted; existing T-054/T-059/T-061 methods and owner order are unchanged |
 | [R-468](#r-468) | HOLD-LC-001 rsp2 binary-table segment index and selection ambiguity envelope | R-468 v1.0 is a T0 claim-nonbearing additive T-061 provenance interface. The two hash-pinned Fermi rsp2 products each expose one 128-row EBOUNDS table and eight ordered 140-row response segments; scalar energy intervals and P-descriptor heap bounds pass, while F_CHAN/N_CHAN arrays and MATRIX coefficients remain unread. A fixed query grid retains covering, nearest and center-bracket alternatives with NONE_SELECTED. Primary 35 assertions, independent core 4 assertions, hostile 10/10, integrated 10/10 and Lean R468 pass. No calibration validity, timing conversion, likelihood, covariance, candidate score, prospective prediction, physical, QFT, Yang--Mills or mass-gap conclusion follows; existing methods and owner order are unchanged |
@@ -836,6 +837,47 @@ score M3 only after a versioned source owner, state/uncertainty contract,
 candidate-neutral two-time observable, complete map stages and prospective
 holdout exist. Continue unchanged T-054 Q3LOCK owner intake and T-059/T-061
 observation-source intake; do not manufacture another finite mobility table.
+
+<a id="r-471"></a>
+### R-471 -- Fail-closed P1 owner and observation-map admission contract
+
+**Result ID.** `P1-OWNER-MAP-ADMISSION-v1` (R-471).
+
+**Version and exact scope.** R-471 v1.0 is a T0, claim-nonbearing additive
+T-061/T-054 contract result. It preserves the established T-054 forward
+method, T-059/T-061 observation-first inverse method, owner order, stopped-loop
+rules, and promotion firewalls. It makes the existing nine forward owner slots
+and ordered `F_reg/F_lim/F_eff/F_obs` map executable as a fail-closed admission
+state machine; it does not supply an owner artifact or alter a research method.
+
+**Admission boundary.** The current packet is `EMPTY_OWNER_ARTIFACT` with zero
+admitted candidates. A complete synthetic packet reaches only
+`CONTRACT_TEST_ONLY_COMPLETE`; it cannot enter scoring or prospective states.
+Missing source hash, any owner slot, an earlier map stage, the immutable scorer,
+or the prospective holdout blocks the corresponding transition. The owner
+slots remain ordered as generator/transfer, state, physical projection, time
+boundary, heat-root incidence, root filtration, conditional replicas,
+raw-current spatial intertwiner, and production one-use q ledger.
+
+**Verification and interpretation.** Primary 24/24, independent 18/18,
+hostile 18/18 with 14/14 mutations rejected, integrated 10/10 and Lean R471
+pass. This is a reusable model-consistency/admission firewall, not a physical
+owner, dynamics, likelihood, observation score, or holdout result. Existing
+methods and owner order remain unchanged; no claim tier or gate is promoted.
+
+**Boundary and non-claims.** No source-owned dynamics or complete observation
+map is admitted. No finite mobility table, physical-empty sign, Reading-H
+stationarity, Pre-A, Sector-A, C6, QFT, Yang--Mills, gravity, continuum,
+cosmic-origin or mass-gap conclusion follows. Uniform limits and physical
+identity remain open.
+
+**Proven in:** [R-471 certificate](strategy/p1-owner-map-admission-contract-certificate-260831.md), [machine contract](strategy/p1-owner-map-admission-contract-v0.1.json), [primary lane](codes/foundations/p1_owner_map_admission_contract.py), [independent lane](codes/foundations/p1_owner_map_admission_contract_independent.py), [hostile lane](codes/foundations/p1_owner_map_admission_contract_hostile.py), [integrated verifier](verification/scripts/p1_owner_map_admission_contract_verify.py), [integrated run](claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-integrated-p1-owner-map-admission/integrated.json), [Lean cross-check](verification/lean/Tect/R471.lean), and [exploration record](strategy/p1-owner-map-admission-contract-exploration.json).
+
+**Next action.** Keep the state `EMPTY_OWNER_ARTIFACT`. Request the versioned
+physical-owner validity/interpolation, common-time-standard,
+detector-to-geocenter and timing-uncertainty packet for T-061 while resuming
+the unchanged T-054 owner-level Q3LOCK queue. Admit no scoring until a real
+non-synthetic owner packet fills every slot and all four map stages in order.
 
 <a id="r-470"></a>
 ### R-470 -- HOLD-LC-001 official gdt-fermi GbmRsp2 parser owner boundary
