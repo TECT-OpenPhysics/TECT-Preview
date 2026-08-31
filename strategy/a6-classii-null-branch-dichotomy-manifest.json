@@ -1,0 +1,192 @@
+{
+  "schema": "tect/a6-classii-null-branch-dichotomy/1.0",
+  "audit_id": "A6-CLASSII-NULL-BRANCH-DICHOTOMY-v1",
+  "result_id": "R-461",
+  "exploration_id": "EXP-001336",
+  "task_id": "T-054",
+  "claim_ids": [
+    "A6-CLASSII-UV-POWER-COUNTING",
+    "A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE"
+  ],
+  "title": "Fixed-floor smooth Class-II null-branch dichotomy",
+  "tier": "T0",
+  "claim_bearing": false,
+  "status": "NULL_BRANCH_DICHOTOMY_AUDITED_NOT_GIBBS_CLOSURE",
+  "question": "For the fixed-floor three-component Class-II current, what is the exact smooth-field pathwise zero-energy set, and does it split into a pure-singlet branch and an active-doublet constant-density phase branch without identifying it with the conditional contraction W_eps zero set?",
+  "purpose": "Advance the open A6 full-field bare-concentration gate by classifying the pathwise null branches of the already fixed functional. This is an additive exact local/connected-domain lemma; it does not alter the A6/A7 functional, the T-054 owner order, or the T-059/T-061 inverse lane.",
+  "inputs": {
+    "a1_production_functional_manifest": {
+      "path": "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/production_functional_manifest.json",
+      "sha256": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565"
+    },
+    "a6_uv_manifest": {
+      "path": "claims/A6-CLASSII-UV-POWER-COUNTING/classii_uv_power_counting_manifest.json",
+      "sha256": "2fb1bbc997a3e832bd1c16748eb6a2b9ccb2844280fdaa9029289dc860ea0cd9"
+    },
+    "a7_composite_manifest": {
+      "path": "claims/A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE/classii_renormalised_energy_manifest.json",
+      "sha256": "4e14817d1928d54fa15e5871e506870d51c0b49baee5407c24200b2a726c5607"
+    }
+  },
+  "methods_preserved": {
+    "a6_a7_functional_unchanged": true,
+    "fixed_floor_and_common_even_scope": true,
+    "t054_forward_method_unchanged": true,
+    "observation_first_inverse_additive": true,
+    "owner_order_unchanged": true,
+    "no_conditional_mean_substitution": true,
+    "no_physical_empty_substitution": true,
+    "no_tier_change": true
+  },
+  "exact_scope": {
+    "domain": "connected C1 spatial domain; the intended application is the connected periodic three-torus",
+    "field": "Psi=(psi_1,psi_2,psi_3) in C1(Omega;C^3)",
+    "doublet": "z=(psi_1,psi_2), s=|z|^2, rho=|Psi|^2",
+    "generators": "the three embedded Pauli matrices acting on z",
+    "floor": "epsilon_rho>0, so rho+epsilon_rho is strictly positive",
+    "currents": "m_A=z^dagger sigma_A z, q_A=m_A/(rho+epsilon_rho), J_A=grad m_A, K_A=J_A-q_A grad rho",
+    "energy": "e_II=(1/2) sum_A [a|J_A|^2+2b J_A dot K_A+c|K_A|^2] with a>0 and ac-b^2>0",
+    "limit_order": "none; exact pathwise null-set classification only",
+    "quantum_status": "no Hilbert-space, Gibbs, operator-domain, continuum, or thermodynamic statement"
+  },
+  "theorem": {
+    "positive_form": "Positive definiteness of [[a,b],[b,c]] makes e_II=0 equivalent to J_A=K_A=0 for every A and spatial direction.",
+    "bloch_identity": "m_1^2+m_2^2+m_3^2=s^2.",
+    "dichotomy": "On a connected domain, a smooth pathwise null field is either z identically zero, with arbitrary singlet field psi_3, or has a nonzero constant Bloch vector, constant total rho, and a constant doublet rank-one projector; only its local U(1) phase and the singlet phase may vary.",
+    "converse": "Both the pure-singlet branch and the constant-Bloch/constant-rho phase branch give J_A=K_A=0 and hence e_II=0.",
+    "conditional_mean_firewall": "An active-doublet phase plane wave can have e_II=0 while W_eps(Psi)>0, so the conditional contraction zero set is strictly not the pathwise null set."
+  },
+  "proof_skeleton": [
+    "Use a>0 and ac-b^2>0 to complete the two-variable coefficient form as (a*j+b*k)^2/a+(ac-b^2)k^2/a.",
+    "A nonnegative continuous density with zero integral is pointwise zero; the positive form therefore gives J_A=K_A=0.",
+    "J_A=0 on a connected domain makes every m_A constant.",
+    "The Bloch identity makes a zero constant Bloch vector equivalent to z=0 everywhere.",
+    "If the constant Bloch vector is nonzero, at least one q_A is nowhere zero because of the positive floor; K_A=0 and J_A=0 then force grad rho=0.",
+    "The Pauli reconstruction z z^dagger=(s I+m dot sigma)/2 gives a constant doublet projector; converses are direct."
+  ],
+  "assumptions": [
+    "The A6/A7 Pauli current definitions and the fixed positive rho floor are the controlling functional definitions.",
+    "The coefficient matrix is positive definite; the concrete production coefficients are derived from the A1 manifest rather than inserted in the proof script.",
+    "The spatial domain is connected and the field is C1, so zero gradients imply constant scalar moments and zero integral of a continuous nonnegative density implies pointwise zero.",
+    "The Pauli Bloch reconstruction is used only for the first two complex components.",
+    "Lean checks the exact rational algebraic core; the calculus and connected-domain steps remain explicit analytic assumptions of this T0 package."
+  ],
+  "missing_assumptions": [
+    "Tube-probability and entropy estimates for every null branch under the spatially correlated finite-cutoff Gibbs law.",
+    "A cutoff-uniform partition-function/tightness argument and a classification of subsequential bare measures.",
+    "A renormalisation prescription, floor removal, infinite-volume limit, or physical branch selection.",
+    "A source-owned Q3LOCK production dynamics, common alpha, QFT correspondence, Yang--Mills identity, or mass-gap bridge."
+  ],
+  "adversarial_review": [
+    {
+      "axis": "positive-form-degeneracy",
+      "check": "Could a zero quadratic energy occur with nonzero J or K?",
+      "disposition": "REJECTED: primary, independent and Lean lanes require a>0 and ac-b^2>0 and reject a null nonzero pair."
+    },
+    {
+      "axis": "Bloch-zero-inference",
+      "check": "Could m_A=0 allow a nonzero first doublet?",
+      "disposition": "REJECTED: the exact Bloch identity and zero-sum-of-squares implication force z=0."
+    },
+    {
+      "axis": "floor-denominator",
+      "check": "Could q_A vanish in the nonzero-Bloch branch because rho is singular?",
+      "disposition": "REJECTED: epsilon_rho>0 makes the denominator strictly positive; a nonzero constant m_A gives nonzero q_A."
+    },
+    {
+      "axis": "constant-density-overreach",
+      "check": "Does constant rho alone imply a null field?",
+      "disposition": "UPHELD-REJECTED: the active branch also requires constant Bloch moments/projector; a rotating doublet is a hostile counterexample."
+    },
+    {
+      "axis": "conditional-mean-confusion",
+      "check": "Can W_eps^{-1}(0) replace the pathwise null set?",
+      "disposition": "UPHELD-REJECTED: an active-doublet common-phase plane wave has zero pathwise energy but positive W_eps."
+    },
+    {
+      "axis": "method-overhaul",
+      "check": "Does this classification replace the existing A6/A7 or T-054 methods?",
+      "disposition": "DISMISSED: it is an additive pathwise lemma under the existing fixed functional and owner order."
+    }
+  ],
+  "test_oracles": {
+    "primary_minimum_assertions": 80,
+    "independent_minimum_assertions": 60,
+    "hostile_mutation_count": 8,
+    "lean_declarations": [
+      "bloch_identity",
+      "bloch_zero_implies_doublet_zero",
+      "positive_form_decomposition",
+      "positive_form_zero",
+      "fixed_floor_denominator_positive",
+      "nonzero_bloch_coordinate_has_nonzero_q"
+    ]
+  },
+  "audit": {
+    "float_tolerance": 1e-10,
+    "strict_positive_threshold": 1e-12,
+    "grid_minimum": -2,
+    "grid_maximum": 2
+  },
+  "scope_firewall": {
+    "pathwise_null_branches_classified": true,
+    "conditional_mean_zero_set_substituted": false,
+    "gibbs_concentration_closed": false,
+    "partition_control_closed": false,
+    "tightness_closed": false,
+    "floor_removal_closed": false,
+    "continuum_closed": false,
+    "physical_branch_selected": false,
+    "source_owner_admitted": false,
+    "pre_a_closed": false,
+    "sector_a_closed": false,
+    "qft_identity_closed": false,
+    "yang_mills_identity_closed": false,
+    "mass_gap_closed": false,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "evidence_level": "T0 exact analytic null-branch dichotomy with executable algebraic and adversarial cross-checks; not a Gibbs or continuum theorem",
+  "non_claims": [
+    "This result does not prove that finite-cutoff Gibbs measures concentrate on any one branch.",
+    "It does not provide branch tube probabilities, entropy costs, partition convergence, tightness, or a nontrivial bare subsequential limit.",
+    "It does not select the pure-singlet branch or identify an active phase branch with Reading-H physical empty space.",
+    "It does not close A6 counterterm closure, A7 self-coupling/Nelson, Pre-A, Sector A, QFT, Yang--Mills, gravity, continuum, or mass gap.",
+    "The established A6/A7 functional, T-054 forward method, T-059/T-061 inverse method and owner order are unchanged."
+  ],
+  "files": {
+    "lean": {
+      "path": "verification/lean/Tect/R461.lean",
+      "sha256": "2df677fee9abac97abca2c6836b974e2aba99e1d15aa4462662b907c0b8e478c"
+    },
+    "primary": {
+      "path": "verification/scripts/a6_classii_null_branch_dichotomy.py",
+      "sha256": "8b2083beca55cf8a676d15e873d95ed1baa53b3b07f8df88b940fee2972f4f26"
+    },
+    "independent": {
+      "path": "codes/foundations/a6_classii_null_branch_dichotomy_independent.py",
+      "sha256": "f83b8158c4dedc59f0d70947ed07fb3aa5c7555e17da0f5a5284b0a4bdcea457"
+    },
+    "hostile": {
+      "path": "codes/foundations/a6_classii_null_branch_dichotomy_hostile.py",
+      "sha256": "c667882ab7f8ae6ee19db122532a8777688c2745bad03f0a8ead53c4c6285445"
+    },
+    "integrated": {
+      "path": "verification/scripts/a6_classii_null_branch_dichotomy_verify.py",
+      "sha256": "b79256c44eacb56a3c00e3e138d403b0d65231d530c357c835fe3c5f8d1f6da9"
+    },
+    "certificate": {
+      "path": "strategy/a6-classii-null-branch-dichotomy-certificate-260831.md",
+      "sha256": "ec330cdd21850e592772bf01f5ef7cf899ce29db84bfb0a472d070c456682154"
+    }
+  },
+  "formal_integration": {
+    "results": ["R-461"],
+    "event_ordinal": 810,
+    "no_new_negative_ids": [],
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "boundary": "R-461 classifies the smooth pathwise fixed-floor null branches of the displayed Class-II current. It is not a classification of the finite-cutoff Gibbs measure and supplies no entropy, partition, tightness, regulator-removal, continuum, physical-sector or QFT result.",
+  "next_action": "Use the two-branch classification as the required input partition for a future A6 branch-aware tube/entropy audit. Until a cutoff-uniform branch probability and tightness estimate is proved, do not infer pure-third concentration or close the A6/A7 gates. Continue unchanged T-054 Q3LOCK owner intake and keep T-059/T-061 observation-source locks."
+}

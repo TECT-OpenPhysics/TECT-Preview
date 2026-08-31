@@ -1,0 +1,89 @@
+{
+  "assertion_summary": {
+    "passed": 8,
+    "total": 8
+  },
+  "audit_id": "A6-CLASSII-NULL-BRANCH-DICHOTOMY-v1",
+  "evidence_level": "T0 adversarial formula/scope mutation audit",
+  "exploration_id": "EXP-001336",
+  "mutations_rejected": [
+    {
+      "expected": "m3=1",
+      "mutation": "wrong-m3-sign",
+      "pass": true,
+      "witness": "-1"
+    },
+    {
+      "expected": "2.0",
+      "mutation": "wrong-m2-sign",
+      "pass": true,
+      "witness": "-2.0"
+    },
+    {
+      "expected": "precondition rejected",
+      "mutation": "nonpositive-determinant-form",
+      "pass": true,
+      "witness": "(Fraction(0, 1), Fraction(0, 1), Fraction(-1, 1), Fraction(1, 1))"
+    },
+    {
+      "expected": "rotation non-null",
+      "mutation": "constant-rho-only",
+      "pass": true,
+      "witness": "(0.0, 0.00899999999999775)"
+    },
+    {
+      "expected": ">0",
+      "mutation": "quotient-derivative-sign",
+      "pass": true,
+      "witness": "0.7461176470582749"
+    },
+    {
+      "expected": "empty witness set",
+      "mutation": "nonzero-zero-Bloch",
+      "pass": true,
+      "witness": "[]"
+    },
+    {
+      "expected": "pathwise zero but W>0",
+      "mutation": "conditional-W-zero-substitution",
+      "pass": true,
+      "witness": "(0.0, 0.08635589053637524)"
+    },
+    {
+      "expected": "all downstream flags false",
+      "mutation": "premature-promotion",
+      "pass": true,
+      "witness": "{'pathwise_null_branches_classified': True, 'conditional_mean_zero_set_substituted': False, 'gibbs_concentration_closed': False, 'partition_control_closed': False, 'tightness_closed': False, 'floor_removal_closed': False, 'continuum_closed': False, 'physical_branch_selected': False, 'source_owner_admitted': False, 'pre_a_closed': False, 'sector_a_closed': False, 'qft_identity_closed': False, 'yang_mills_identity_closed': False, 'mass_gap_closed': False, 'no_tier_change': True, 'no_pdf': True}"
+    }
+  ],
+  "non_claims": [
+    "This result does not prove that finite-cutoff Gibbs measures concentrate on any one branch.",
+    "It does not provide branch tube probabilities, entropy costs, partition convergence, tightness, or a nontrivial bare subsequential limit.",
+    "It does not select the pure-singlet branch or identify an active phase branch with Reading-H physical empty space.",
+    "It does not close A6 counterterm closure, A7 self-coupling/Nelson, Pre-A, Sector A, QFT, Yang--Mills, gravity, continuum, or mass gap.",
+    "The established A6/A7 functional, T-054 forward method, T-059/T-061 inverse method and owner order are unchanged."
+  ],
+  "recorded_at": "2026-08-31T00:04:38.620770Z",
+  "result_id": "R-461",
+  "run_kind": "hostile",
+  "schema": "tect/a6-classii-null-branch-dichotomy-hostile-result/1.0",
+  "scope_firewall": {
+    "conditional_mean_zero_set_substituted": false,
+    "continuum_closed": false,
+    "floor_removal_closed": false,
+    "gibbs_concentration_closed": false,
+    "mass_gap_closed": false,
+    "no_pdf": true,
+    "no_tier_change": true,
+    "partition_control_closed": false,
+    "pathwise_null_branches_classified": true,
+    "physical_branch_selected": false,
+    "pre_a_closed": false,
+    "qft_identity_closed": false,
+    "sector_a_closed": false,
+    "source_owner_admitted": false,
+    "tightness_closed": false,
+    "yang_mills_identity_closed": false
+  },
+  "verdict": "HOSTILE_MUTATIONS_REJECTED"
+}

@@ -22,6 +22,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-461](#r-461) | Fixed-floor smooth Class-II null-branch dichotomy | R-461 v1.0 is a T0 claim-nonbearing additive A6/A7 pathwise lemma under the existing fixed-floor Class-II functional. Positive-form completion, the exact Bloch identity and an exhaustive `[-2,2]^4` rational grid classify smooth null fields into a pure-singlet branch or an active constant-Bloch/constant-rho phase branch; primary 1310/1310, independent 677/677, hostile 8/8, integrated 46/46 and Lean R461 pass. An active common-phase plane wave has zero pathwise Class-II energy but positive `W_epsilon`, so the conditional contraction zero set cannot replace the pathwise null set. This does not prove Gibbs concentration, entropy/tube bounds, partition convergence, tightness, floor removal, continuum, physical branch selection, QFT, Yang--Mills or mass gap; existing A6/A7, T-054, T-059 and T-061 methods and owner order are unchanged |
 | [R-460](#r-460) | Canonical Contents remaining-scope production-owner applicability audit | R-460 v1.0 is a T0 claim-nonbearing additive T-054 residual source-applicability audit. The unchanged strict alias contract scans 284 paths, 273 unique content hashes and 11 duplicate paths outside R-459's explicit subtrees; it finds zero complete semantic paths, zero standalone owner candidates, zero exact R-192 owner-token paths, three partial rows and zero loose-q control rows. Primary and independent summaries agree, integrated assertions pass 17/17 and hostile mutations are rejected 8/8. No source-owned dynamics, candidate, observation, physical, continuum, QFT, Yang--Mills, Pre-A, Sector-A or mass-gap conclusion follows; T-054/T-059/T-061 methods and owner order are unchanged |
 | [R-459](#r-459) | Canonical Contents alternate-terminology production-owner applicability audit | R-459 v1.0 is a T0 claim-nonbearing additive T-054 source-applicability audit. A strict alias scan covers 1,442 paths, 741 unique content hashes and 701 duplicate paths; it finds zero complete semantic paths, zero standalone owner candidates and zero exact R-192 owner-token paths. Ten partial rows and four loose-q control rows remain discovery-only. Primary and independent summaries agree, integrated assertions pass 12/12 and hostile mutations are rejected 8/8. No source-owned dynamics, candidate, observation, physical, continuum, QFT, Yang--Mills, Pre-A, Sector-A or mass-gap conclusion follows; T-054/T-059/T-061 methods and owner order are unchanged |
 | [R-458](#r-458) | Finite chiral isolated-node and conservative-flow equation-level audit | R-458 v1.0 is a T0 claim-nonbearing additive T-054 audit of the existing PA-M5 isolated-node design. Exact 4-by-4 Clifford/chiral matrix checks, Wilson/symbol node uniqueness on L=2,3,4,5,6,8, formal leading-dispersion expansion, observable symmetries and finite coercivity pass. Primary 56076/56076, independent 56074/56074, hostile 12/12, integrated 47/47 and Lean R458 pass. The candidate and source owner remain unadmitted; no continuum, physical node, QFT, Yang--Mills, Pre-A, Sector-A or mass-gap conclusion follows; T-054/T-059/T-061 methods and owner order are unchanged |
@@ -827,6 +828,46 @@ candidate-neutral two-time observable, complete map stages and prospective
 holdout exist. Continue unchanged T-054 Q3LOCK owner intake and T-059/T-061
 observation-source intake; do not manufacture another finite mobility table.
 
+<a id="r-461"></a>
+### R-461 -- Fixed-floor smooth Class-II null-branch dichotomy
+
+**Result ID.** `A6-CLASSII-NULL-BRANCH-DICHOTOMY-v1` (R-461).
+
+**Version and exact scope.** R-461 v1.0 is a T0, claim-nonbearing additive
+lemma for the existing A6/A7 fixed-floor Class-II functional on a connected
+C1 domain, with the intended application the fixed periodic three-torus. It
+uses the first-two-component embedded Pauli currents
+`m_A=z^dagger sigma_A z`, `q_A=m_A/(rho+epsilon_rho)`, `J_A=grad m_A`, and
+`K_A=J_A-q_A grad rho`, with the positive coefficient matrix derived from the
+hash-pinned A1 production functional manifest. The A6/A7 functional,
+T-054 forward method, T-059/T-061 inverse lane and owner order are unchanged.
+
+**Finding and proof core.** Positive-form completion gives zero density if and
+only if every `J_A` and `K_A` vanishes. The exact identity
+`m_1^2+m_2^2+m_3^2=s^2` makes a zero Bloch vector equivalent to `z=0`. On a
+connected domain, the smooth pathwise null set therefore splits into a pure
+singlet branch (`z=0`, arbitrary singlet) and an active branch with a nonzero
+constant Bloch vector, constant total `rho`, and constant rank-one doublet
+projector; only common doublet and singlet phases may vary. The primary
+1310/1310, non-importing independent 677/677, hostile 8/8, integrated 46/46
+and Lean R461 checks pass. An active common-phase plane wave has zero pathwise
+Class-II energy but positive registered `W_epsilon`, so the conditional
+contraction zero set cannot replace the pathwise null set.
+
+**Assumptions and boundary.** The zero-gradient and connected-domain steps are
+analytic assumptions; Lean checks the exact rational algebraic core. This
+result does not classify the Gibbs law, supply tube or entropy probabilities,
+prove partition convergence or tightness, remove the rho floor, select a
+physical branch, admit a source-owned dynamic, or establish continuum, QFT,
+Yang--Mills, Pre-A, Sector-A or mass-gap status. No claim tier, gate status,
+or PDF is changed.
+
+**Proven in.** [certificate](strategy/a6-classii-null-branch-dichotomy-certificate-260831.md), [machine manifest](strategy/a6-classii-null-branch-dichotomy-manifest.json), [primary script](verification/scripts/a6_classii_null_branch_dichotomy.py), [independent script](codes/foundations/a6_classii_null_branch_dichotomy_independent.py), [hostile script](codes/foundations/a6_classii_null_branch_dichotomy_hostile.py), [integrated verifier](verification/scripts/a6_classii_null_branch_dichotomy_verify.py), [integrated run](claims/A6-CLASSII-UV-POWER-COUNTING/runs/2026-08-31-integrated-a6-null-branch-dichotomy/integrated.json), [exploration record](strategy/a6-classii-null-branch-dichotomy-exploration.json), and [Lean R461](verification/lean/Tect/R461.lean).
+
+**Next action.** Use this dichotomy as the input partition for a branch-aware
+cutoff-uniform tube/entropy and tightness audit. Until that estimate exists,
+do not infer concentration or physical selection from R-461. Continue the
+unchanged T-054 source-owner intake and T-059/T-061 observation-source locks.
 <a id="r-460"></a>
 ### R-460 -- Canonical Contents remaining-scope production-owner applicability audit
 

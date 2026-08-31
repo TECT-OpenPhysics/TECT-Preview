@@ -5701,6 +5701,133 @@
       "task_id": "T-054",
       "title": "Method-preserving A5-A13 evidence revalidation baseline",
       "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "axis": "positive-form-degeneracy",
+          "check": "Could a zero Class-II quadratic form retain a nonzero current pair?",
+          "disposition": "REJECTED: positive a and positive determinant are checked exactly; the hostile semidefinite witness is rejected."
+        },
+        {
+          "axis": "Bloch-reconstruction-signs",
+          "check": "Could a Pauli sign mutation preserve the squared identity while changing the projector?",
+          "disposition": "REJECTED: direct orientation witnesses catch the m2 and m3 sign mutations."
+        },
+        {
+          "axis": "constant-density-overreach",
+          "check": "Does constant rho alone imply nullity?",
+          "disposition": "REJECTED: the rotating-doublet control has constant rho but positive Class-II energy."
+        },
+        {
+          "axis": "quotient-derivative",
+          "check": "Can q_A grad(rho) be dropped or given the wrong sign?",
+          "disposition": "REJECTED: the generic quotient fixture distinguishes the correct K derivative from the mutated expression."
+        },
+        {
+          "axis": "conditional-mean-firewall",
+          "check": "Can W_epsilon=0 stand in for pathwise Class-II nullity?",
+          "disposition": "REJECTED: the common-phase active plane wave is pathwise null with W_epsilon>0."
+        },
+        {
+          "axis": "promotion-firewall",
+          "check": "Could this local lemma be promoted to concentration, continuum or physical status?",
+          "disposition": "REJECTED: all downstream scope flags remain false and no tier changes."
+        }
+      ],
+      "assumptions": [
+        "The A6/A7 Pauli current definitions and fixed positive rho floor are the controlling definitions.",
+        "The coefficient matrix is positive definite and its concrete entries are derived from the hash-pinned A1 production manifest.",
+        "The domain is connected and the field is C1, so zero gradients give constant moments and a continuous nonnegative zero integral is pointwise zero.",
+        "The first two complex components carry the embedded Pauli representation; the third component is a singlet for these currents.",
+        "Lean checks the exact rational algebraic core only; the calculus and connected-domain implications remain analytic assumptions."
+      ],
+      "boundary": "R-461 classifies smooth pathwise null fields for the fixed-floor Class-II current on a connected domain. It does not classify the finite-cutoff Gibbs law, prove branch probabilities, establish partition convergence or tightness, remove the floor, select a physical empty branch, admit a source-owned dynamics, or close A6, A7, Pre-A, Sector A, QFT, Yang--Mills or mass gap.",
+      "claim_ids": [
+        "A6-CLASSII-UV-POWER-COUNTING",
+        "A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE"
+      ],
+      "decision_reason": "This is the next missing local lemma for the existing A6 full-field gate, not a replacement method or a new finite mobility table. It partitions the already fixed null set and exposes the exact conditional-mean firewall needed before any tube or entropy estimate.",
+      "decision_scope": "T0 exact smooth pathwise fixed-floor null-branch classification; no Gibbs measure, partition, tightness, regulator limit, physical branch, QFT or Yang--Mills inference",
+      "evidence_level": "T0 exact analytic null-branch dichotomy with executable primary/independent/hostile and Lean cross-checks",
+      "evidence_refs": [
+        "strategy/a6-classii-null-branch-dichotomy-manifest.json#theorem",
+        "strategy/a6-classii-null-branch-dichotomy-certificate-260831.md#Exact statement and scope",
+        "verification/scripts/a6_classii_null_branch_dichotomy.py#run",
+        "codes/foundations/a6_classii_null_branch_dichotomy_independent.py#run",
+        "codes/foundations/a6_classii_null_branch_dichotomy_hostile.py#run",
+        "verification/scripts/a6_classii_null_branch_dichotomy_verify.py#run",
+        "claims/A6-CLASSII-UV-POWER-COUNTING/runs/2026-08-31-primary-a6-null-branch-dichotomy/primary.json#assertion_summary",
+        "claims/A6-CLASSII-UV-POWER-COUNTING/runs/2026-08-31-independent-a6-null-branch-dichotomy/independent.json#assertion_summary",
+        "claims/A6-CLASSII-UV-POWER-COUNTING/runs/2026-08-31-hostile-a6-null-branch-dichotomy/hostile.json#assertion_summary",
+        "claims/A6-CLASSII-UV-POWER-COUNTING/runs/2026-08-31-integrated-a6-null-branch-dichotomy/integrated.json#assertion_summary",
+        "verification/lean/Tect/R461.lean#theorem"
+      ],
+      "finding": "Positive definiteness forces J_A=K_A=0 for every axis on a pathwise null field. The exact Bloch identity makes the zero-Bloch branch exactly z=0, while any active branch has a nonzero constant Bloch vector; the fixed positive floor then forces constant total rho and a constant rank-one doublet projector. Both branches are null, but an active common-phase plane wave has W_epsilon>0, so W_epsilon^{-1}(0) is not the pathwise null set. Primary, independent, hostile and Lean checks pass.",
+      "formal_integration": {
+        "events": [
+          "20260831-r-461-fixed-floor-smooth-class-ii-null-branch-d"
+        ],
+        "negatives": [],
+        "no_new_negative": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "results": [
+          "R-461"
+        ]
+      },
+      "formal_refs": {
+        "events": [
+          "20260831-r-461-fixed-floor-smooth-class-ii-null-branch-d"
+        ],
+        "negatives": [],
+        "results": [
+          "R-461"
+        ]
+      },
+      "gate_ids": [
+        "A6-CLASSII-FULL-FIELD-BARE-CONCENTRATION",
+        "A6-CLASSII-K-COMPOSITE-DEFINITION",
+        "A6-CLASSII-COUNTERTERM-CLOSURE",
+        "A7-CLASSII-NELSON-EXPONENTIAL-BOUND",
+        "A7-CLASSII-SELF-COUPLING-INTERPOLATION"
+      ],
+      "id": "EXP-001336",
+      "method": [
+        "Keep the existing A6/A7 fixed-floor current definitions, positive production coefficient matrix, T-054 forward owner order and T-059/T-061 inverse locks unchanged.",
+        "Derive the Class-II coefficients from the hash-pinned A1 production functional manifest and use exact Fraction arithmetic for the Bloch and quadratic-form identities.",
+        "Enumerate the complete integer fixture grid [-2,2]^4 for the Bloch identity and coefficient-form zero set, then test pure-singlet, common-doublet-phase, rotating-doublet, plane-wave and quotient-derivative local fixtures.",
+        "Run a non-importing independent implementation, an eight-mutation hostile lane and the pinned Lean R461 algebraic kernel check.",
+        "Record the result as T0 claim-nonbearing evidence and use it only as the input branch partition for a future cutoff-uniform audit."
+      ],
+      "missing_assumptions": [
+        "Cutoff-uniform tube probability and entropy estimates for both null branches under the correlated finite-cutoff Gibbs law.",
+        "Partition-function control, tightness and classification of subsequential bare measures.",
+        "A renormalisation prescription, rho-floor removal, infinite-volume limit and physical branch selection.",
+        "A source-owned Q3LOCK production generator/transfer/history contract and any QFT, Yang--Mills or mass-gap bridge."
+      ],
+      "next_action": "Use the two-branch partition as an input to a new branch-aware cutoff-uniform tube/entropy audit. Do not infer concentration from the classification alone. Continue unchanged T-054 source-owner intake and T-059/T-061 observation-source locks.",
+      "provenance": "contemporaneous",
+      "question": "For the already fixed A6/A7 Class-II functional, what is the exact smooth pathwise zero-energy set, and can its active and singlet branches be separated before the open full-field tube, entropy and tightness estimates?",
+      "recorded_at": "2026-08-31T00:05:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001335",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-08-31",
+      "schema": "tect/proof-exploration/1.0",
+      "schema_version": "1.0",
+      "stop_or_redesign": [
+        "If a future branch probability estimate needs a regulator or domain not in this fixed-floor scope, freeze it as a new contract rather than silently extending R-461.",
+        "If uniform tube or entropy bounds fail for either branch, record the failure at the branch-specific gate and retain R-461 only as a finite pathwise classification.",
+        "If a source-owned dynamic contract appears, resume the existing owner order; do not substitute this static lemma for a generator, filtration or q-ledger."
+      ],
+      "task_id": "T-054",
+      "title": "Fixed-floor smooth Class-II null-branch dichotomy",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",
