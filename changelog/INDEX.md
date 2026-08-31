@@ -5,7 +5,7 @@ Compact generated reader surface. The append-only authority is
 record 568 / commit `4db22f4e` and no longer grows.
 Post-cutover full bodies live exactly once in bounded pages under `pages/`.
 
-**824 accepted events** · latest 25 shown below · machine locator: `index.json`
+**825 accepted events** · latest 25 shown below · machine locator: `index.json`
 
 Search the complete authority without loading every page:
 
@@ -17,6 +17,7 @@ python verification/scripts/changelog.py search --text <phrase>
 
 | Date | Event | Claims | Full entry |
 |---|---|---|---|
+| 2026-08-31 | `20260831-additive-sector-a-frontier-audit-preserves-forw` — [Additive Sector-A frontier audit preserves forward and inverse methods] - 2026-08-31 | A5-SECTOR-A-SYNTHESIS, A6-A13 | [bounded page](pages/000819-000868.md#20260831-additive-sector-a-frontier-audit-preserves-forw) |
 | 2026-08-31 | `20260831-t-057-compact-source-extraction-ledger-preserve` — [T-057 compact source extraction ledger preserves locators while keeping closure open] - 2026-08-31 | B3-BCC-STRUCT, C6-SPACETIME-SIGNATURE | [bounded page](pages/000819-000868.md#20260831-t-057-compact-source-extraction-ledger-preserve) |
 | 2026-08-31 | `20260831-t-057-batch-closure-audit-separates-preserved-b` — [T-057 batch closure audit separates preserved bytes from missing dependency and run links] - 2026-08-31 | B3-BCC-STRUCT, C6-SPACETIME-SIGNATURE | [bounded page](pages/000819-000868.md#20260831-t-057-batch-closure-audit-separates-preserved-b) |
 | 2026-08-31 | `20260831-r-473-hold-lc-001-tte-event-row-feature-index-2` — [R-473 HOLD-LC-001 TTE event-row feature index] - 2026-08-31 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000819-000868.md#20260831-r-473-hold-lc-001-tte-event-row-feature-index-2) |
@@ -41,7 +42,6 @@ python verification/scripts/changelog.py search --text <phrase>
 | 2026-08-31 | `20260831-r-454-variable-coefficient-defect-stable-histor` — [R-454 variable-coefficient defect-stable history-resolvent] - 2026-08-31 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000769-000818.md#20260831-r-454-variable-coefficient-defect-stable-histor) |
 | 2026-08-31 | `20260831-r-453-defect-stable-history-resolvent-2026-08-3` — [R-453 defect-stable history-resolvent] - 2026-08-31 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000769-000818.md#20260831-r-453-defect-stable-history-resolvent-2026-08-3) |
 | 2026-08-31 | `20260831-r-452-conditional-history-resolvent-recurrence` — [R-452 conditional history-resolvent recurrence envelope] - 2026-08-31 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000769-000818.md#20260831-r-452-conditional-history-resolvent-recurrence) |
-| 2026-08-31 | `20260831-r-451-conditional-two-sided-history-cauchy-tran` — [R-451 conditional two-sided history Cauchy transfer] - 2026-08-31 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000769-000818.md#20260831-r-451-conditional-two-sided-history-cauchy-tran) |
 
 ## Post-cutover pages
 
@@ -49,7 +49,7 @@ Each full event body after the cutover occurs in exactly one page.
 
 | Ordinals | Events | Page |
 |---|---:|---|
-| 819–824 | 6 | [000819-000868.md](pages/000819-000868.md) |
+| 819–825 | 7 | [000819-000868.md](pages/000819-000868.md) |
 | 769–818 | 50 | [000769-000818.md](pages/000769-000818.md) |
 | 719–768 | 50 | [000719-000768.md](pages/000719-000768.md) |
 | 669–718 | 50 | [000669-000718.md](pages/000669-000718.md) |

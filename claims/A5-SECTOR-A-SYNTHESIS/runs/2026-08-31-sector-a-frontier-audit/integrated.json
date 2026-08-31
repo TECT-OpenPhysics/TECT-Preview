@@ -1,0 +1,488 @@
+{
+  "assertion_summary": {
+    "passed": 15,
+    "total": 15
+  },
+  "assertions": [
+    {
+      "actual": 0,
+      "expected": 0,
+      "name": "primary checker exits successfully",
+      "status": "PASS"
+    },
+    {
+      "actual": 0,
+      "expected": 0,
+      "name": "independent checker exits successfully",
+      "status": "PASS"
+    },
+    {
+      "actual": 0,
+      "expected": 0,
+      "name": "hostile checker exits successfully",
+      "status": "PASS"
+    },
+    {
+      "actual": "SECTOR_A_FRONTIER_AUDIT_PASS_OPEN_GATES",
+      "expected": "SECTOR_A_FRONTIER_AUDIT_PASS_OPEN_GATES",
+      "name": "primary verdict is open-gate pass",
+      "status": "PASS"
+    },
+    {
+      "actual": "SECTOR_A_FRONTIER_INDEPENDENT_PASS",
+      "expected": "SECTOR_A_FRONTIER_INDEPENDENT_PASS",
+      "name": "independent verdict passes",
+      "status": "PASS"
+    },
+    {
+      "actual": "HOSTILE_MUTATIONS_REJECTED",
+      "expected": "HOSTILE_MUTATIONS_REJECTED",
+      "name": "hostile verdict rejects every mutation",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "A1-KERNEL-CONV",
+        "A1-KERNEL-IDENTITY",
+        "A1-PRODUCTION-FUNCTIONAL-REALISATION",
+        "A1-PRODUCTION-KERNEL-MANIFEST",
+        "A1-SCALAR-ANALYTIC-BRANCH",
+        "A10-CLASSII-RELATIVE-COMMUTATOR-REDUCTION",
+        "A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION",
+        "A12-CLASSII-SOURCE-SQUARE-REDUCTION",
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "A2-FULL-PRODUCTION-WELLPOSED",
+        "A2-PDE-WELLPOSED",
+        "A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM",
+        "A3-PERTURBATIVE-CONTINUUM-CORRELATORS",
+        "A3-UV-SUPERRENORMALISABILITY",
+        "A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE",
+        "A5-SECTOR-A-SYNTHESIS",
+        "A6-CLASSII-K-COMPOSITE-DEFINITION",
+        "A6-CLASSII-UV-POWER-COUNTING",
+        "A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE",
+        "A8-CLASSII-DECOUPLED-NELSON-BOUND",
+        "A9-CLASSII-SMART-PATH-CANCELLATION",
+        "X0-TEMPLATE"
+      ],
+      "expected": [
+        "A1-KERNEL-CONV",
+        "A1-KERNEL-IDENTITY",
+        "A1-PRODUCTION-FUNCTIONAL-REALISATION",
+        "A1-PRODUCTION-KERNEL-MANIFEST",
+        "A1-SCALAR-ANALYTIC-BRANCH",
+        "A10-CLASSII-RELATIVE-COMMUTATOR-REDUCTION",
+        "A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION",
+        "A12-CLASSII-SOURCE-SQUARE-REDUCTION",
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "A2-FULL-PRODUCTION-WELLPOSED",
+        "A2-PDE-WELLPOSED",
+        "A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM",
+        "A3-PERTURBATIVE-CONTINUUM-CORRELATORS",
+        "A3-UV-SUPERRENORMALISABILITY",
+        "A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE",
+        "A5-SECTOR-A-SYNTHESIS",
+        "A6-CLASSII-K-COMPOSITE-DEFINITION",
+        "A6-CLASSII-UV-POWER-COUNTING",
+        "A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE",
+        "A8-CLASSII-DECOUPLED-NELSON-BOUND",
+        "A9-CLASSII-SMART-PATH-CANCELLATION",
+        "X0-TEMPLATE"
+      ],
+      "name": "primary and independent ids agree",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "A1-KERNEL-CONV": [],
+        "A1-KERNEL-IDENTITY": [
+          "A1-KERNEL-CONV"
+        ],
+        "A1-PRODUCTION-FUNCTIONAL-REALISATION": [
+          "A1-KERNEL-IDENTITY",
+          "A1-PRODUCTION-KERNEL-MANIFEST"
+        ],
+        "A1-PRODUCTION-KERNEL-MANIFEST": [
+          "A1-KERNEL-IDENTITY",
+          "A1-SCALAR-ANALYTIC-BRANCH"
+        ],
+        "A1-SCALAR-ANALYTIC-BRANCH": [
+          "A1-KERNEL-IDENTITY"
+        ],
+        "A10-CLASSII-RELATIVE-COMMUTATOR-REDUCTION": [
+          "A1-PRODUCTION-FUNCTIONAL-REALISATION",
+          "A5-SECTOR-A-SYNTHESIS",
+          "A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE",
+          "A8-CLASSII-DECOUPLED-NELSON-BOUND",
+          "A9-CLASSII-SMART-PATH-CANCELLATION"
+        ],
+        "A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION": [
+          "A1-PRODUCTION-FUNCTIONAL-REALISATION",
+          "A10-CLASSII-RELATIVE-COMMUTATOR-REDUCTION",
+          "A5-SECTOR-A-SYNTHESIS",
+          "A6-CLASSII-UV-POWER-COUNTING",
+          "A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE",
+          "A8-CLASSII-DECOUPLED-NELSON-BOUND",
+          "A9-CLASSII-SMART-PATH-CANCELLATION"
+        ],
+        "A12-CLASSII-SOURCE-SQUARE-REDUCTION": [
+          "A1-PRODUCTION-FUNCTIONAL-REALISATION",
+          "A10-CLASSII-RELATIVE-COMMUTATOR-REDUCTION",
+          "A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION",
+          "A5-SECTOR-A-SYNTHESIS",
+          "A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE",
+          "A8-CLASSII-DECOUPLED-NELSON-BOUND",
+          "A9-CLASSII-SMART-PATH-CANCELLATION"
+        ],
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION": [
+          "A1-PRODUCTION-FUNCTIONAL-REALISATION",
+          "A10-CLASSII-RELATIVE-COMMUTATOR-REDUCTION",
+          "A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION",
+          "A12-CLASSII-SOURCE-SQUARE-REDUCTION",
+          "A5-SECTOR-A-SYNTHESIS",
+          "A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE",
+          "A9-CLASSII-SMART-PATH-CANCELLATION"
+        ],
+        "A2-FULL-PRODUCTION-WELLPOSED": [
+          "A1-PRODUCTION-FUNCTIONAL-REALISATION",
+          "A2-PDE-WELLPOSED"
+        ],
+        "A2-PDE-WELLPOSED": [
+          "A1-KERNEL-CONV",
+          "A1-SCALAR-ANALYTIC-BRANCH"
+        ],
+        "A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM": [
+          "A1-PRODUCTION-FUNCTIONAL-REALISATION",
+          "A2-FULL-PRODUCTION-WELLPOSED"
+        ],
+        "A3-PERTURBATIVE-CONTINUUM-CORRELATORS": [
+          "A1-KERNEL-CONV",
+          "A1-SCALAR-ANALYTIC-BRANCH",
+          "A3-UV-SUPERRENORMALISABILITY"
+        ],
+        "A3-UV-SUPERRENORMALISABILITY": [
+          "A1-KERNEL-CONV",
+          "A1-SCALAR-ANALYTIC-BRANCH"
+        ],
+        "A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE": [
+          "A1-PRODUCTION-FUNCTIONAL-REALISATION",
+          "A1-PRODUCTION-KERNEL-MANIFEST",
+          "A1-SCALAR-ANALYTIC-BRANCH",
+          "A3-PERTURBATIVE-CONTINUUM-CORRELATORS"
+        ],
+        "A5-SECTOR-A-SYNTHESIS": [
+          "A1-PRODUCTION-FUNCTIONAL-REALISATION",
+          "A1-PRODUCTION-KERNEL-MANIFEST",
+          "A2-FULL-PRODUCTION-WELLPOSED",
+          "A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM",
+          "A3-PERTURBATIVE-CONTINUUM-CORRELATORS",
+          "A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE"
+        ],
+        "A6-CLASSII-K-COMPOSITE-DEFINITION": [
+          "A1-PRODUCTION-FUNCTIONAL-REALISATION",
+          "A5-SECTOR-A-SYNTHESIS",
+          "A6-CLASSII-UV-POWER-COUNTING"
+        ],
+        "A6-CLASSII-UV-POWER-COUNTING": [
+          "A1-KERNEL-IDENTITY",
+          "A1-PRODUCTION-FUNCTIONAL-REALISATION",
+          "A3-UV-SUPERRENORMALISABILITY",
+          "A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE",
+          "A5-SECTOR-A-SYNTHESIS"
+        ],
+        "A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE": [
+          "A1-PRODUCTION-FUNCTIONAL-REALISATION",
+          "A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE",
+          "A5-SECTOR-A-SYNTHESIS",
+          "A6-CLASSII-K-COMPOSITE-DEFINITION",
+          "A6-CLASSII-UV-POWER-COUNTING"
+        ],
+        "A8-CLASSII-DECOUPLED-NELSON-BOUND": [
+          "A1-PRODUCTION-FUNCTIONAL-REALISATION",
+          "A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE",
+          "A5-SECTOR-A-SYNTHESIS",
+          "A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE"
+        ],
+        "A9-CLASSII-SMART-PATH-CANCELLATION": [
+          "A1-PRODUCTION-FUNCTIONAL-REALISATION",
+          "A5-SECTOR-A-SYNTHESIS",
+          "A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE",
+          "A8-CLASSII-DECOUPLED-NELSON-BOUND"
+        ],
+        "X0-TEMPLATE": []
+      },
+      "expected": {
+        "A1-KERNEL-CONV": [],
+        "A1-KERNEL-IDENTITY": [
+          "A1-KERNEL-CONV"
+        ],
+        "A1-PRODUCTION-FUNCTIONAL-REALISATION": [
+          "A1-KERNEL-IDENTITY",
+          "A1-PRODUCTION-KERNEL-MANIFEST"
+        ],
+        "A1-PRODUCTION-KERNEL-MANIFEST": [
+          "A1-KERNEL-IDENTITY",
+          "A1-SCALAR-ANALYTIC-BRANCH"
+        ],
+        "A1-SCALAR-ANALYTIC-BRANCH": [
+          "A1-KERNEL-IDENTITY"
+        ],
+        "A10-CLASSII-RELATIVE-COMMUTATOR-REDUCTION": [
+          "A1-PRODUCTION-FUNCTIONAL-REALISATION",
+          "A5-SECTOR-A-SYNTHESIS",
+          "A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE",
+          "A8-CLASSII-DECOUPLED-NELSON-BOUND",
+          "A9-CLASSII-SMART-PATH-CANCELLATION"
+        ],
+        "A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION": [
+          "A1-PRODUCTION-FUNCTIONAL-REALISATION",
+          "A10-CLASSII-RELATIVE-COMMUTATOR-REDUCTION",
+          "A5-SECTOR-A-SYNTHESIS",
+          "A6-CLASSII-UV-POWER-COUNTING",
+          "A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE",
+          "A8-CLASSII-DECOUPLED-NELSON-BOUND",
+          "A9-CLASSII-SMART-PATH-CANCELLATION"
+        ],
+        "A12-CLASSII-SOURCE-SQUARE-REDUCTION": [
+          "A1-PRODUCTION-FUNCTIONAL-REALISATION",
+          "A10-CLASSII-RELATIVE-COMMUTATOR-REDUCTION",
+          "A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION",
+          "A5-SECTOR-A-SYNTHESIS",
+          "A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE",
+          "A8-CLASSII-DECOUPLED-NELSON-BOUND",
+          "A9-CLASSII-SMART-PATH-CANCELLATION"
+        ],
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION": [
+          "A1-PRODUCTION-FUNCTIONAL-REALISATION",
+          "A10-CLASSII-RELATIVE-COMMUTATOR-REDUCTION",
+          "A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION",
+          "A12-CLASSII-SOURCE-SQUARE-REDUCTION",
+          "A5-SECTOR-A-SYNTHESIS",
+          "A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE",
+          "A9-CLASSII-SMART-PATH-CANCELLATION"
+        ],
+        "A2-FULL-PRODUCTION-WELLPOSED": [
+          "A1-PRODUCTION-FUNCTIONAL-REALISATION",
+          "A2-PDE-WELLPOSED"
+        ],
+        "A2-PDE-WELLPOSED": [
+          "A1-KERNEL-CONV",
+          "A1-SCALAR-ANALYTIC-BRANCH"
+        ],
+        "A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM": [
+          "A1-PRODUCTION-FUNCTIONAL-REALISATION",
+          "A2-FULL-PRODUCTION-WELLPOSED"
+        ],
+        "A3-PERTURBATIVE-CONTINUUM-CORRELATORS": [
+          "A1-KERNEL-CONV",
+          "A1-SCALAR-ANALYTIC-BRANCH",
+          "A3-UV-SUPERRENORMALISABILITY"
+        ],
+        "A3-UV-SUPERRENORMALISABILITY": [
+          "A1-KERNEL-CONV",
+          "A1-SCALAR-ANALYTIC-BRANCH"
+        ],
+        "A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE": [
+          "A1-PRODUCTION-FUNCTIONAL-REALISATION",
+          "A1-PRODUCTION-KERNEL-MANIFEST",
+          "A1-SCALAR-ANALYTIC-BRANCH",
+          "A3-PERTURBATIVE-CONTINUUM-CORRELATORS"
+        ],
+        "A5-SECTOR-A-SYNTHESIS": [
+          "A1-PRODUCTION-FUNCTIONAL-REALISATION",
+          "A1-PRODUCTION-KERNEL-MANIFEST",
+          "A2-FULL-PRODUCTION-WELLPOSED",
+          "A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM",
+          "A3-PERTURBATIVE-CONTINUUM-CORRELATORS",
+          "A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE"
+        ],
+        "A6-CLASSII-K-COMPOSITE-DEFINITION": [
+          "A1-PRODUCTION-FUNCTIONAL-REALISATION",
+          "A5-SECTOR-A-SYNTHESIS",
+          "A6-CLASSII-UV-POWER-COUNTING"
+        ],
+        "A6-CLASSII-UV-POWER-COUNTING": [
+          "A1-KERNEL-IDENTITY",
+          "A1-PRODUCTION-FUNCTIONAL-REALISATION",
+          "A3-UV-SUPERRENORMALISABILITY",
+          "A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE",
+          "A5-SECTOR-A-SYNTHESIS"
+        ],
+        "A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE": [
+          "A1-PRODUCTION-FUNCTIONAL-REALISATION",
+          "A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE",
+          "A5-SECTOR-A-SYNTHESIS",
+          "A6-CLASSII-K-COMPOSITE-DEFINITION",
+          "A6-CLASSII-UV-POWER-COUNTING"
+        ],
+        "A8-CLASSII-DECOUPLED-NELSON-BOUND": [
+          "A1-PRODUCTION-FUNCTIONAL-REALISATION",
+          "A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE",
+          "A5-SECTOR-A-SYNTHESIS",
+          "A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE"
+        ],
+        "A9-CLASSII-SMART-PATH-CANCELLATION": [
+          "A1-PRODUCTION-FUNCTIONAL-REALISATION",
+          "A5-SECTOR-A-SYNTHESIS",
+          "A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE",
+          "A8-CLASSII-DECOUPLED-NELSON-BOUND"
+        ],
+        "X0-TEMPLATE": []
+      },
+      "name": "primary and independent dependencies agree",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "A10-CLASSII-STABILISED-RELATIVE-LOG-LAPLACE",
+        "A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE",
+        "A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE",
+        "A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION",
+        "A6-CLASSII-COUNTERTERM-CLOSURE",
+        "A6-CLASSII-FULL-FIELD-BARE-CONCENTRATION",
+        "A7-CLASSII-NELSON-EXPONENTIAL-BOUND",
+        "A7-CLASSII-SELF-COUPLING-INTERPOLATION"
+      ],
+      "expected": [
+        "A10-CLASSII-STABILISED-RELATIVE-LOG-LAPLACE",
+        "A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE",
+        "A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE",
+        "A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION",
+        "A6-CLASSII-COUNTERTERM-CLOSURE",
+        "A6-CLASSII-FULL-FIELD-BARE-CONCENTRATION",
+        "A7-CLASSII-NELSON-EXPONENTIAL-BOUND",
+        "A7-CLASSII-SELF-COUPLING-INTERPOLATION"
+      ],
+      "name": "primary and independent open gates agree",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "A1-PRODUCTION-FUNCTIONAL-REALISATION",
+        "A1-PRODUCTION-KERNEL-MANIFEST",
+        "A2-FULL-PRODUCTION-WELLPOSED",
+        "A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM",
+        "A3-PERTURBATIVE-CONTINUUM-CORRELATORS",
+        "A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE"
+      ],
+      "expected": [
+        "A1-PRODUCTION-FUNCTIONAL-REALISATION",
+        "A1-PRODUCTION-KERNEL-MANIFEST",
+        "A2-FULL-PRODUCTION-WELLPOSED",
+        "A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM",
+        "A3-PERTURBATIVE-CONTINUUM-CORRELATORS",
+        "A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE"
+      ],
+      "name": "primary and independent A5 dependencies agree",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "forward": {
+          "science_gate": "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE",
+          "task_id": "T-054"
+        },
+        "inverse": {
+          "science_gate": "PA-INVERSE-OBSERVATION-TARGET-MAP-HOLDOUT-FREEZE",
+          "task_id": "T-059"
+        }
+      },
+      "expected": {
+        "forward": {
+          "science_gate": "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE",
+          "task_id": "T-054"
+        },
+        "inverse": {
+          "science_gate": "PA-INVERSE-OBSERVATION-TARGET-MAP-HOLDOUT-FREEZE",
+          "task_id": "T-059"
+        }
+      },
+      "name": "independent lane contract matches programme",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "passed": 9,
+        "total": 9
+      },
+      "expected": "passed equals total",
+      "name": "all primary assertions pass",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "passed": 7,
+        "total": 7
+      },
+      "expected": "passed equals total",
+      "name": "all independent assertions pass",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "rejected": 5,
+        "total": 5
+      },
+      "expected": "rejected equals total",
+      "name": "hostile mutation summary is fully rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": "ac0f10aa07cfc7e0ac2a3edcb1197a2a693d16c9142f3fa8d917b663196c3d74",
+      "expected": "ac0f10aa07cfc7e0ac2a3edcb1197a2a693d16c9142f3fa8d917b663196c3d74",
+      "name": "independent and hostile source fingerprints agree",
+      "status": "PASS"
+    }
+  ],
+  "audit_id": "SECTOR-A-FRONTIER-AUDIT-INTEGRATED-v1",
+  "boundary": "Integration of three finite metadata checks for planning continuity; it is not proof completion.",
+  "checkers": {
+    "hostile": {
+      "returncode": 0,
+      "script": "codes/foundations/sector_a_frontier_audit_hostile.py",
+      "stderr": "",
+      "stdout": "SECTOR-A-FRONTIER-HOSTILE: PASS (rejected=5/5; fingerprint=ac0f10aa07cfc7e0ac2a3edcb1197a2a693d16c9142f3fa8d917b663196c3d74)"
+    },
+    "independent": {
+      "returncode": 0,
+      "script": "codes/foundations/sector_a_frontier_audit_independent.py",
+      "stderr": "",
+      "stdout": "SECTOR-A-FRONTIER-INDEPENDENT: PASS (cards=22; open_gates=8; assertions=7/7; fingerprint=ac0f10aa07cfc7e0ac2a3edcb1197a2a693d16c9142f3fa8d917b663196c3d74)"
+    },
+    "primary": {
+      "returncode": 0,
+      "script": "verification/scripts/sector_a_frontier_audit.py",
+      "stderr": "",
+      "stdout": "SECTOR-A-FRONTIER-AUDIT: PASS (cards=22; open_gates=8; assertions=9/9; methods_unchanged=true; claim_bearing=false)"
+    }
+  },
+  "claim_bearing": false,
+  "claim_context": [
+    "A5-SECTOR-A-SYNTHESIS"
+  ],
+  "core_fingerprint": "ac0f10aa07cfc7e0ac2a3edcb1197a2a693d16c9142f3fa8d917b663196c3d74",
+  "environment": {
+    "platform": "Windows-11-10.0.26200-SP0",
+    "python": "3.12.9"
+  },
+  "evidence_level": "T0 integrated primary/independent/hostile metadata audit",
+  "exploration_id": "EXP-001351",
+  "lean": {
+    "applicable": false,
+    "reason": "No mathematical proposition was introduced; this checkpoint audits metadata, dependencies, and fail-closed mutations only."
+  },
+  "missing_assumptions": [
+    "Source authorities and programme lane declarations remain the canonical inputs.",
+    "Analytic owner, common-core, uniform-limit, and physical-sector obligations remain open where declared."
+  ],
+  "non_claims": [
+    "No existing research method, owner order, claim tier, or gate is changed.",
+    "No A6-A13 gate is closed; no theorem, continuum, physical, QFT, Yang--Mills, or mass-gap result is claimed.",
+    "Lean is not a substitute for future mathematical formalisation when a proposition is introduced."
+  ],
+  "schema": "tect/sector-a-frontier-audit-integrated/1.0",
+  "schema_version": "1.0",
+  "task_id": "T-054",
+  "tier": "T0",
+  "verdict": "SECTOR_A_FRONTIER_INTEGRATED_PASS"
+}

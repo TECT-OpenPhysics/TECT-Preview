@@ -1,0 +1,66 @@
+{
+  "assertions": [
+    {
+      "actual": {
+        "rejected": 5,
+        "total": 5
+      },
+      "expected": "all rejected",
+      "name": "every deliberate mutation is rejected",
+      "status": "PASS"
+    }
+  ],
+  "audit_id": "SECTOR-A-FRONTIER-AUDIT-HOSTILE-v1",
+  "base_core_fingerprint": "ac0f10aa07cfc7e0ac2a3edcb1197a2a693d16c9142f3fa8d917b663196c3d74",
+  "boundary": "Finite fail-closed mutation coverage for the Sector-A metadata frontier only.",
+  "claim_bearing": false,
+  "claim_context": [
+    "A5-SECTOR-A-SYNTHESIS"
+  ],
+  "environment": {
+    "platform": "Windows-11-10.0.26200-SP0",
+    "python": "3.12.9"
+  },
+  "evidence_level": "T0 fail-closed metadata mutation audit",
+  "exploration_id": "EXP-001351",
+  "missing_assumptions": [
+    "The current source-derived contract is the expected baseline for this audit.",
+    "Mutation coverage is finite and does not replace hostile review of analytic proof steps."
+  ],
+  "mutation_summary": {
+    "rejected": 5,
+    "total": 5
+  },
+  "mutations": [
+    {
+      "mutation": "remove-one-sector-a-id",
+      "status": "REJECTED"
+    },
+    {
+      "mutation": "remove-one-open-gate",
+      "status": "REJECTED"
+    },
+    {
+      "mutation": "alter-a5-tier",
+      "status": "REJECTED"
+    },
+    {
+      "mutation": "alter-forward-task",
+      "status": "REJECTED"
+    },
+    {
+      "mutation": "inject-missing-dependency",
+      "status": "REJECTED"
+    }
+  ],
+  "non_claims": [
+    "No source authority or proof method is changed.",
+    "No physical, QFT, Yang--Mills, continuum, or mass-gap result is claimed.",
+    "Mutation rejection does not close any A6-A13 or owner-level gate."
+  ],
+  "schema": "tect/sector-a-frontier-audit-hostile/1.0",
+  "schema_version": "1.0",
+  "task_id": "T-054",
+  "tier": "T0",
+  "verdict": "HOSTILE_MUTATIONS_REJECTED"
+}

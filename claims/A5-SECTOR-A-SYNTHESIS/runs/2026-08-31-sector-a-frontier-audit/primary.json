@@ -1,0 +1,671 @@
+{
+  "assertion_summary": {
+    "passed": 9,
+    "total": 9
+  },
+  "assertions": [
+    {
+      "actual": 22,
+      "expected": "one id per row",
+      "name": "all Sector-A status ids are unique",
+      "status": "PASS"
+    },
+    {
+      "actual": {},
+      "expected": {},
+      "name": "all hard and soft dependencies resolve",
+      "status": "PASS"
+    },
+    {
+      "actual": [],
+      "expected": [],
+      "name": "A5 dependency set resolves",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "lifecycle": "ACTIVE",
+        "open_gates": [],
+        "tier": "T6"
+      },
+      "expected": {
+        "lifecycle": "ACTIVE",
+        "open_gates": [],
+        "tier": "T6"
+      },
+      "name": "A5 remains conditional capstone",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "science_gate": "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE",
+        "task_id": "T-054"
+      },
+      "expected": {
+        "science_gate": "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE",
+        "task_id": "T-054"
+      },
+      "name": "forward lane contract preserved",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "science_gate": "PA-INVERSE-OBSERVATION-TARGET-MAP-HOLDOUT-FREEZE",
+        "task_id": "T-059"
+      },
+      "expected": {
+        "science_gate": "PA-INVERSE-OBSERVATION-TARGET-MAP-HOLDOUT-FREEZE",
+        "task_id": "T-059"
+      },
+      "name": "inverse lane contract preserved",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "A10-CLASSII-STABILISED-RELATIVE-LOG-LAPLACE",
+        "A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE",
+        "A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE",
+        "A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION",
+        "A6-CLASSII-COUNTERTERM-CLOSURE",
+        "A6-CLASSII-FULL-FIELD-BARE-CONCENTRATION",
+        "A7-CLASSII-NELSON-EXPONENTIAL-BOUND",
+        "A7-CLASSII-SELF-COUPLING-INTERPOLATION"
+      ],
+      "expected": "nonempty named gate set",
+      "name": "open gate frontier is explicit",
+      "status": "PASS"
+    },
+    {
+      "actual": [],
+      "expected": [],
+      "name": "no existing claim card was edited",
+      "status": "PASS"
+    },
+    {
+      "actual": "T-054 forward and T-059/T-061 inverse methods are read-only inputs",
+      "expected": "no method or owner-order rewrite",
+      "name": "methods remain additive only",
+      "status": "PASS"
+    }
+  ],
+  "audit_id": "SECTOR-A-FRONTIER-AUDIT-v1",
+  "authority_snapshot": {
+    "dependency_unresolved": {},
+    "sector_a_card_count": 22,
+    "status_cards": [
+      {
+        "closure_depth": null,
+        "dependencies": [],
+        "id": "A1-KERNEL-CONV",
+        "lifecycle": "ACTIVE",
+        "next_action": "Wrap the two-script sequence into verify_claim.py (one-command contract) and wire into CI.",
+        "open_gates": [],
+        "proof_maturity": null,
+        "soft_dependencies": [],
+        "status_path": "claims/A1-KERNEL-CONV/status.json",
+        "status_sha256": "e5dd2b08ce58f1c3d2680b907e1469b828b2b6a3929d773f7bd84137efe36509",
+        "tier": "T5",
+        "title": "Production-kernel convention and G6 recomputation cascade"
+      },
+      {
+        "closure_depth": null,
+        "dependencies": [
+          "A1-KERNEL-CONV"
+        ],
+        "id": "A1-KERNEL-IDENTITY",
+        "lifecycle": "ACTIVE",
+        "next_action": "Preserve the approved identity and naming firewall; downstream scalar positivity uses A1-SCALAR-ANALYTIC-BRANCH and production parameters use A1-PRODUCTION-KERNEL-MANIFEST.",
+        "open_gates": [],
+        "proof_maturity": null,
+        "soft_dependencies": [],
+        "status_path": "claims/A1-KERNEL-IDENTITY/status.json",
+        "status_sha256": "dbaf6f1e80d994b94c9746cc7d342592fbc3638abb372d8e1c02841bb4e4d477",
+        "tier": "T6",
+        "title": "Kernel complete-the-square identity (zero-momentum vs shell mass)"
+      },
+      {
+        "closure_depth": null,
+        "dependencies": [
+          "A1-PRODUCTION-KERNEL-MANIFEST"
+        ],
+        "id": "A1-PRODUCTION-FUNCTIONAL-REALISATION",
+        "lifecycle": "ACTIVE",
+        "next_action": "Use only within CLOSED@DISCRETE-VARIATIONAL-MATRIX. Treat historical-solver integration, convergence, continuum behavior, and physical selection as separate claims.",
+        "open_gates": [],
+        "proof_maturity": null,
+        "soft_dependencies": [
+          "A1-KERNEL-IDENTITY"
+        ],
+        "status_path": "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/status.json",
+        "status_sha256": "202e7514bb2d6fc029e61de95386981aedca15d81e9d6f71fc1570d77049d554",
+        "tier": "T5",
+        "title": "Full production functional realisation: standalone variational backend"
+      },
+      {
+        "closure_depth": null,
+        "dependencies": [
+          "A1-KERNEL-IDENTITY",
+          "A1-SCALAR-ANALYTIC-BRANCH"
+        ],
+        "id": "A1-PRODUCTION-KERNEL-MANIFEST",
+        "lifecycle": "ACTIVE",
+        "next_action": "Use this T5 claim only within its stated scalar-slice scope. Any future T6/T7 path must add separate theorem-level evidence for the excluded operator/PDE/BCC/Hessian components.",
+        "open_gates": [],
+        "proof_maturity": null,
+        "soft_dependencies": [],
+        "status_path": "claims/A1-PRODUCTION-KERNEL-MANIFEST/status.json",
+        "status_sha256": "ab463bd3db99f89083c98ec82d12e68a69e04615132d4bf71b8082208f3b816a",
+        "tier": "T5",
+        "title": "Canonical N-001 production-kernel manifest: scalar-slice consistency gates"
+      },
+      {
+        "closure_depth": null,
+        "dependencies": [
+          "A1-KERNEL-IDENTITY"
+        ],
+        "id": "A1-SCALAR-ANALYTIC-BRANCH",
+        "lifecycle": "ACTIVE",
+        "next_action": "Preserve as the scalar A2/A3/A4 positivity input. Any parameter-identical bridge to the full-production branch remains a separate claim.",
+        "open_gates": [],
+        "proof_maturity": null,
+        "soft_dependencies": [],
+        "status_path": "claims/A1-SCALAR-ANALYTIC-BRANCH/status.json",
+        "status_sha256": "dcefd787c02c13e8c8f71f85bb7b80e73dc1fff5d4cd74a2ed7e55a461767ab2",
+        "tier": "T6",
+        "title": "Scalar analytic branch: K>=m_sh^2>0 (the A2/A3 hypothesis)"
+      },
+      {
+        "closure_depth": "C1",
+        "dependencies": [
+          "A1-PRODUCTION-FUNCTIONAL-REALISATION",
+          "A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE",
+          "A9-CLASSII-SMART-PATH-CANCELLATION"
+        ],
+        "id": "A10-CLASSII-RELATIVE-COMMUTATOR-REDUCTION",
+        "lifecycle": "ACTIVE",
+        "next_action": "Use the A11 true-increment determinant/action-telescope result as the closed action-reconstruction branch. Prove only A10-CLASSII-STABILISED-RELATIVE-LOG-LAPLACE while retaining the endpoint self-coupled square or allocating the production sextic through the closed sharp rectangular-cube filtration. This remaining gate alone does not yield A7.",
+        "open_gates": [
+          "A10-CLASSII-STABILISED-RELATIVE-LOG-LAPLACE"
+        ],
+        "proof_maturity": "S1",
+        "soft_dependencies": [
+          "A8-CLASSII-DECOUPLED-NELSON-BOUND",
+          "A5-SECTOR-A-SYNTHESIS"
+        ],
+        "status_path": "claims/A10-CLASSII-RELATIVE-COMMUTATOR-REDUCTION/status.json",
+        "status_sha256": "1a6c06dcdb98ffbc4e8cd4903ba72a2b015d957f894f5e6fe0b3b84b77dba985",
+        "tier": "T4",
+        "title": "Frozen-energy relative Class-II structural reduction"
+      },
+      {
+        "closure_depth": "C1",
+        "dependencies": [
+          "A1-PRODUCTION-FUNCTIONAL-REALISATION",
+          "A6-CLASSII-UV-POWER-COUNTING",
+          "A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE",
+          "A9-CLASSII-SMART-PATH-CANCELLATION",
+          "A10-CLASSII-RELATIVE-COMMUTATOR-REDUCTION"
+        ],
+        "id": "A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION",
+        "lifecycle": "ACTIVE",
+        "next_action": "Prove A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE for theta I_j+C_j using the exact-B output shell and determinant resolvent, or a joint source-potential/redesigned-increment estimate. Do not retry the separated coefficient-blind source-square budget refuted by R-057 or the standalone exact-B allocation refuted by R-058; first freeze the complete finite production cylinder required by T-050.",
+        "open_gates": [
+          "A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE"
+        ],
+        "proof_maturity": "S1",
+        "soft_dependencies": [
+          "A8-CLASSII-DECOUPLED-NELSON-BOUND",
+          "A5-SECTOR-A-SYNTHESIS"
+        ],
+        "status_path": "claims/A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION/status.json",
+        "status_sha256": "8475f399135afa407b3c20fa3415863377acc32daf2939ace837191d1235ad70",
+        "tier": "T4",
+        "title": "Class-II true-increment determinant reduction"
+      },
+      {
+        "closure_depth": "C1",
+        "dependencies": [
+          "A1-PRODUCTION-FUNCTIONAL-REALISATION",
+          "A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE",
+          "A8-CLASSII-DECOUPLED-NELSON-BOUND",
+          "A9-CLASSII-SMART-PATH-CANCELLATION",
+          "A10-CLASSII-RELATIVE-COMMUTATOR-REDUCTION",
+          "A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION"
+        ],
+        "id": "A12-CLASSII-SOURCE-SQUARE-REDUCTION",
+        "lifecycle": "ACTIVE",
+        "next_action": "No A12 gate remains open. Continue under A13-CLASSII-JOINT-SOURCE-POTENTIAL-LOG-LAPLACE by retaining the local potential and noncentral determinant in one estimate or redesigning the true increment. Do not retry the separated scalar route or standalone deterministic exact-B source absorption.",
+        "open_gates": [],
+        "proof_maturity": "S1",
+        "soft_dependencies": [
+          "A5-SECTOR-A-SYNTHESIS"
+        ],
+        "status_path": "claims/A12-CLASSII-SOURCE-SQUARE-REDUCTION/status.json",
+        "status_sha256": "fb3aa80bf84999c776f59e542f03c3f2769c97ada8106210ffb71260bd9b21b3",
+        "tier": "T4",
+        "title": "Class-II sharp-cube source-square reduction"
+      },
+      {
+        "closure_depth": "C1",
+        "dependencies": [
+          "A1-PRODUCTION-FUNCTIONAL-REALISATION",
+          "A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE",
+          "A9-CLASSII-SMART-PATH-CANCELLATION",
+          "A10-CLASSII-RELATIVE-COMMUTATOR-REDUCTION",
+          "A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION",
+          "A12-CLASSII-SOURCE-SQUARE-REDUCTION"
+        ],
+        "id": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "lifecycle": "ACTIVE",
+        "next_action": "Freeze one canonical finite production cylinder with the actual field/current syntheses, square-root bases, raw/past/future covariances, heat/root incidence, and complement, historical-low, forest and returned-mean placement. Differentiate that scalar once and certify the complete joint sextic and earlier-root/cross-root owner without reusing the coefficient-one R-166 harmonic lemma rootwise. Keep T-054/T-052 truth-first candidate evaluation active in parallel without privileging BCC, any morphology or a PDE.",
+        "open_gates": [
+          "A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE",
+          "A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION"
+        ],
+        "proof_maturity": "S1",
+        "soft_dependencies": [
+          "A5-SECTOR-A-SYNTHESIS"
+        ],
+        "status_path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/status.json",
+        "status_sha256": "356ea6ec060cecc06df38712b2715ea32ec52dd8493ef4177bb840170a48c8dd",
+        "tier": "T4",
+        "title": "Class-II source, translated model, balanced coefficient jets, and obstruction boundary"
+      },
+      {
+        "closure_depth": null,
+        "dependencies": [
+          "A1-PRODUCTION-FUNCTIONAL-REALISATION"
+        ],
+        "id": "A2-FULL-PRODUCTION-WELLPOSED",
+        "lifecycle": "ACTIVE",
+        "next_action": "Preserve R-157 as the pinned unconstrained M1 rejection boundary and register R-158/PA-M1-Q only as a solved conditional ensemble mechanism. Require microscopic charge or reservoir provenance and a gauge-invariant spatial observable before physical promotion. Advance T-054 with the structurally distinct PA-M5-NL3-SV screened-vector/nonlocal candidate and apply its zero-reference and causal-shell falsifiers before expensive T-053 calculations. Keep T-050/A13 separate and parked until a model pins the finite production cylinder or a scheme-independent intrinsic counterexample is proved.",
+        "open_gates": [],
+        "proof_maturity": null,
+        "soft_dependencies": [
+          "A2-PDE-WELLPOSED"
+        ],
+        "status_path": "claims/A2-FULL-PRODUCTION-WELLPOSED/status.json",
+        "status_sha256": "bdc6fdf00145eec8290d110a81cd54512a237da62418f18819c2f291bc0702fd",
+        "tier": "T6",
+        "title": "Full production well-posedness, pinned equilibrium, and conditional charge-ensemble transition"
+      },
+      {
+        "closure_depth": null,
+        "dependencies": [
+          "A1-KERNEL-CONV",
+          "A1-SCALAR-ANALYTIC-BRANCH"
+        ],
+        "id": "A2-PDE-WELLPOSED",
+        "lifecycle": "ACTIVE",
+        "next_action": "No scalar-scope sign-off is pending. Next foundation work is the separate full-production variational/PDE closure for the Class-II multi-field backend and the mu^2<0 condensate branch.",
+        "open_gates": [],
+        "proof_maturity": null,
+        "soft_dependencies": [],
+        "status_path": "claims/A2-PDE-WELLPOSED/status.json",
+        "status_sha256": "d20a1a7211f496ac08080275807b6c8e659e3e4ecd2b1ffe8143545ed234c89f",
+        "tier": "T6",
+        "title": "Well-posedness of the TECT gradient flow and minimisation problem"
+      },
+      {
+        "closure_depth": null,
+        "dependencies": [
+          "A1-PRODUCTION-FUNCTIONAL-REALISATION",
+          "A2-FULL-PRODUCTION-WELLPOSED"
+        ],
+        "id": "A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM",
+        "lifecycle": "ACTIVE",
+        "next_action": "Preserve the v2.2/replacement-bundle package as the repaired closed P3 baseline. Treat sharp practical constants, an executable finite-oversampling bridge, historical-solver certification, eta_shell nonzero, lower-regularity data, or infinite volume as separate claims; proceed to P4 only without widening this theorem.",
+        "open_gates": [],
+        "proof_maturity": null,
+        "soft_dependencies": [],
+        "status_path": "claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/status.json",
+        "status_sha256": "5f156750c2b73a40c12334973514a6d8926907d37430249bf4f63c3d2942078c",
+        "tier": "T6",
+        "title": "Full-production spectral discretization to continuum PDE"
+      },
+      {
+        "closure_depth": null,
+        "dependencies": [
+          "A1-KERNEL-CONV",
+          "A1-SCALAR-ANALYTIC-BRANCH",
+          "A3-UV-SUPERRENORMALISABILITY"
+        ],
+        "id": "A3-PERTURBATIVE-CONTINUUM-CORRELATORS",
+        "lifecycle": "ACTIVE",
+        "next_action": "Route B (Reisz lattice power counting; regularisation-independence) and A3_constructive (non-perturbative); the physical production-Hessian mainline (B3/B4/C6) now rests on a proved perturbative foundation.",
+        "open_gates": [],
+        "proof_maturity": null,
+        "soft_dependencies": [
+          "A3-UV-SUPERRENORMALISABILITY"
+        ],
+        "status_path": "claims/A3-PERTURBATIVE-CONTINUUM-CORRELATORS/status.json",
+        "status_sha256": "d5a13ff8351094eb06cc5f8483b8dc3db930bad4bc95a12b0c6c9a8282600ef0",
+        "tier": "T6",
+        "title": "Cutoff-independent continuum limit of the perturbative correlators (conditional)"
+      },
+      {
+        "closure_depth": null,
+        "dependencies": [
+          "A1-KERNEL-CONV",
+          "A1-SCALAR-ANALYTIC-BRANCH"
+        ],
+        "id": "A3-UV-SUPERRENORMALISABILITY",
+        "lifecycle": "ACTIVE",
+        "next_action": "No UV-scope sign-off is pending. Next foundation work is Route B regularisation-independence, constructive/non-perturbative control, and the separate full-production Class-II backend closure.",
+        "open_gates": [],
+        "proof_maturity": null,
+        "soft_dependencies": [],
+        "status_path": "claims/A3-UV-SUPERRENORMALISABILITY/status.json",
+        "status_sha256": "a2e8cc306d5cc775edb37f7e207a5a1ee96f56a17cf32969be6c978118665dde",
+        "tier": "T6",
+        "title": "UV super-renormalisability of the scalar Brazovskii functional"
+      },
+      {
+        "closure_depth": null,
+        "dependencies": [
+          "A1-SCALAR-ANALYTIC-BRANCH"
+        ],
+        "id": "A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE",
+        "lifecycle": "ACTIVE",
+        "next_action": "Refresh the A5 synthesis pins to the PUBLISHED A4 T6 support bundle, rerun the A5 dual audit, and prepare the exact scoped-T5 capstone entry package for bundle-last publication.",
+        "open_gates": [],
+        "proof_maturity": null,
+        "soft_dependencies": [
+          "A1-PRODUCTION-KERNEL-MANIFEST",
+          "A1-PRODUCTION-FUNCTIONAL-REALISATION",
+          "A3-PERTURBATIVE-CONTINUUM-CORRELATORS"
+        ],
+        "status_path": "claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/status.json",
+        "status_sha256": "1a1747ccb2193e3ca832dd6ecb36079ed2c8ff1b53ac5fb93e56e49281e193f2",
+        "tier": "T6",
+        "title": "Finite-volume scalar spectral constructive Gibbs measure"
+      },
+      {
+        "closure_depth": null,
+        "dependencies": [
+          "A1-PRODUCTION-KERNEL-MANIFEST",
+          "A1-PRODUCTION-FUNCTIONAL-REALISATION",
+          "A2-FULL-PRODUCTION-WELLPOSED",
+          "A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM",
+          "A3-PERTURBATIVE-CONTINUUM-CORRELATORS",
+          "A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE"
+        ],
+        "id": "A5-SECTOR-A-SYNTHESIS",
+        "lifecycle": "ACTIVE",
+        "next_action": "Continue through A6-CLASSII-UV-POWER-COUNTING. Its bare linear UV contraction is now identified at T4; require a regulator-independent K_A composite, counterterm closure, uniform stability, tightness, and any separately stated regulariser removal before a constructive-measure promotion.",
+        "open_gates": [],
+        "proof_maturity": null,
+        "soft_dependencies": [],
+        "status_path": "claims/A5-SECTOR-A-SYNTHESIS/status.json",
+        "status_sha256": "706c262e2e8f33e604f87087a828495a55f19f082bbaa17e0217073b233302a7",
+        "tier": "T6",
+        "title": "Sector A branch-aware synthesis and termination package"
+      },
+      {
+        "closure_depth": "C1",
+        "dependencies": [
+          "A1-PRODUCTION-FUNCTIONAL-REALISATION",
+          "A6-CLASSII-UV-POWER-COUNTING"
+        ],
+        "id": "A6-CLASSII-K-COMPOSITE-DEFINITION",
+        "lifecycle": "ACTIVE",
+        "next_action": "Seek a stable renormalisation prescription with running relevant coefficients and explicit renormalisation conditions; in parallel, treat full-field bare concentration as a separate partition-function/tightness problem rather than importing either local proxy.",
+        "open_gates": [
+          "A6-CLASSII-COUNTERTERM-CLOSURE",
+          "A6-CLASSII-FULL-FIELD-BARE-CONCENTRATION"
+        ],
+        "proof_maturity": "S1",
+        "soft_dependencies": [
+          "A5-SECTOR-A-SYNTHESIS"
+        ],
+        "status_path": "claims/A6-CLASSII-K-COMPOSITE-DEFINITION/status.json",
+        "status_sha256": "bfffc38c638ba27c51e8eb0f9b02e66179a4d953e94e8a9e7b0e50b84826365f",
+        "tier": "T5",
+        "title": "Fixed-floor canonical spectral definition of the Class-II K current"
+      },
+      {
+        "closure_depth": null,
+        "dependencies": [
+          "A1-KERNEL-IDENTITY",
+          "A1-PRODUCTION-FUNCTIONAL-REALISATION"
+        ],
+        "id": "A6-CLASSII-UV-POWER-COUNTING",
+        "lifecycle": "ACTIVE",
+        "next_action": "Use the closed fixed-floor K_A lift to classify the renormalised J*K and |K|^2 products, introduce running relevant coefficients with explicit renormalisation conditions, and treat full-field bare concentration as a separate partition-function/tightness problem.",
+        "open_gates": [
+          "A6-CLASSII-COUNTERTERM-CLOSURE",
+          "A6-CLASSII-FULL-FIELD-BARE-CONCENTRATION"
+        ],
+        "proof_maturity": null,
+        "soft_dependencies": [
+          "A3-UV-SUPERRENORMALISABILITY",
+          "A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE",
+          "A5-SECTOR-A-SYNTHESIS"
+        ],
+        "status_path": "claims/A6-CLASSII-UV-POWER-COUNTING/status.json",
+        "status_sha256": "2dd8ecf4ae2ac6859d7d035cc06b593045ac242f69f9d52b0e6a806d3a35238b",
+        "tier": "T4",
+        "title": "Full derivative Class-II Gaussian UV power counting and leading contraction"
+      },
+      {
+        "closure_depth": "C1",
+        "dependencies": [
+          "A1-PRODUCTION-FUNCTIONAL-REALISATION",
+          "A6-CLASSII-UV-POWER-COUNTING",
+          "A6-CLASSII-K-COMPOSITE-DEFINITION"
+        ],
+        "id": "A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE",
+        "lifecycle": "ACTIVE",
+        "next_action": "Prove A7-CLASSII-NELSON-EXPONENTIAL-BOUND for the self-coupled random coefficient B(X), using the frozen det_2 estimate only as a deterministic-background lemma; keep bare concentration and rho-floor removal separate.",
+        "open_gates": [
+          "A6-CLASSII-FULL-FIELD-BARE-CONCENTRATION",
+          "A7-CLASSII-NELSON-EXPONENTIAL-BOUND"
+        ],
+        "proof_maturity": "S1",
+        "soft_dependencies": [
+          "A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE",
+          "A5-SECTOR-A-SYNTHESIS"
+        ],
+        "status_path": "claims/A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE/status.json",
+        "status_sha256": "d6d5b341cb0ff18137618395234999b07d55bcdcf6d86c3b86f4d68fc4752288",
+        "tier": "T5",
+        "title": "Covariance-normal-ordered full three-component Class-II energy composite"
+      },
+      {
+        "closure_depth": "C1",
+        "dependencies": [
+          "A1-PRODUCTION-FUNCTIONAL-REALISATION",
+          "A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE"
+        ],
+        "id": "A8-CLASSII-DECOUPLED-NELSON-BOUND",
+        "lifecycle": "ACTIVE",
+        "next_action": "Prove A7-CLASSII-SELF-COUPLING-INTERPOLATION by dyadic frozen-background determinant estimates plus a cutoff-uniform commutator bound under every adapted Cameron-Martin drift; register any surviving local counterterm instead of assuming it away.",
+        "open_gates": [
+          "A7-CLASSII-SELF-COUPLING-INTERPOLATION"
+        ],
+        "proof_maturity": "S1",
+        "soft_dependencies": [
+          "A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE",
+          "A5-SECTOR-A-SYNTHESIS"
+        ],
+        "status_path": "claims/A8-CLASSII-DECOUPLED-NELSON-BOUND/status.json",
+        "status_sha256": "96418e61aa6b5cb590fd1a8134053c9e4ab4bb13df3849276e5acf73ea132601",
+        "tier": "T5",
+        "title": "Decoupled Class-II Nelson bound with spatial PSD backgrounds"
+      },
+      {
+        "closure_depth": "C1",
+        "dependencies": [
+          "A1-PRODUCTION-FUNCTIONAL-REALISATION",
+          "A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE",
+          "A8-CLASSII-DECOUPLED-NELSON-BOUND"
+        ],
+        "id": "A9-CLASSII-SMART-PATH-CANCELLATION",
+        "lifecycle": "ACTIVE",
+        "next_action": "Use the already closed A10-CLASSII-MULTISCALE-ACTION-DECOMPOSITION result and prove only A10-CLASSII-STABILISED-RELATIVE-LOG-LAPLACE, retaining the true-increment determinant and recomputing the production sextic budget. The exact A9 frozen trace is Gamma_j, and the remaining relative log-Laplace gate alone does not close A7.",
+        "open_gates": [
+          "A10-CLASSII-STABILISED-RELATIVE-LOG-LAPLACE"
+        ],
+        "proof_maturity": "S1",
+        "soft_dependencies": [
+          "A5-SECTOR-A-SYNTHESIS"
+        ],
+        "status_path": "claims/A9-CLASSII-SMART-PATH-CANCELLATION/status.json",
+        "status_sha256": "568abd518747fb1340f82c33d2366a8fdfddfee8b569d207bfa737103be22bdc",
+        "tier": "T5",
+        "title": "Exact Class-II smart-path cancellation and noncentral frozen-shell control"
+      },
+      {
+        "closure_depth": null,
+        "dependencies": [],
+        "id": "X0-TEMPLATE",
+        "lifecycle": "ACTIVE",
+        "next_action": "next step",
+        "open_gates": [],
+        "proof_maturity": null,
+        "soft_dependencies": [],
+        "status_path": "claims/_TEMPLATE/status.json",
+        "status_sha256": "ae04f0e1102e74d274745ecd1ed935f5bb58e923c3ae6892c0200d5461a0e96e",
+        "tier": "T0",
+        "title": "Template claim"
+      }
+    ],
+    "status_digests": {
+      "A1-KERNEL-CONV": "e5dd2b08ce58f1c3d2680b907e1469b828b2b6a3929d773f7bd84137efe36509",
+      "A1-KERNEL-IDENTITY": "dbaf6f1e80d994b94c9746cc7d342592fbc3638abb372d8e1c02841bb4e4d477",
+      "A1-PRODUCTION-FUNCTIONAL-REALISATION": "202e7514bb2d6fc029e61de95386981aedca15d81e9d6f71fc1570d77049d554",
+      "A1-PRODUCTION-KERNEL-MANIFEST": "ab463bd3db99f89083c98ec82d12e68a69e04615132d4bf71b8082208f3b816a",
+      "A1-SCALAR-ANALYTIC-BRANCH": "dcefd787c02c13e8c8f71f85bb7b80e73dc1fff5d4cd74a2ed7e55a461767ab2",
+      "A10-CLASSII-RELATIVE-COMMUTATOR-REDUCTION": "1a6c06dcdb98ffbc4e8cd4903ba72a2b015d957f894f5e6fe0b3b84b77dba985",
+      "A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION": "8475f399135afa407b3c20fa3415863377acc32daf2939ace837191d1235ad70",
+      "A12-CLASSII-SOURCE-SQUARE-REDUCTION": "fb3aa80bf84999c776f59e542f03c3f2769c97ada8106210ffb71260bd9b21b3",
+      "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION": "356ea6ec060cecc06df38712b2715ea32ec52dd8493ef4177bb840170a48c8dd",
+      "A2-FULL-PRODUCTION-WELLPOSED": "bdc6fdf00145eec8290d110a81cd54512a237da62418f18819c2f291bc0702fd",
+      "A2-PDE-WELLPOSED": "d20a1a7211f496ac08080275807b6c8e659e3e4ecd2b1ffe8143545ed234c89f",
+      "A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM": "5f156750c2b73a40c12334973514a6d8926907d37430249bf4f63c3d2942078c",
+      "A3-PERTURBATIVE-CONTINUUM-CORRELATORS": "d5a13ff8351094eb06cc5f8483b8dc3db930bad4bc95a12b0c6c9a8282600ef0",
+      "A3-UV-SUPERRENORMALISABILITY": "a2e8cc306d5cc775edb37f7e207a5a1ee96f56a17cf32969be6c978118665dde",
+      "A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE": "1a1747ccb2193e3ca832dd6ecb36079ed2c8ff1b53ac5fb93e56e49281e193f2",
+      "A5-SECTOR-A-SYNTHESIS": "706c262e2e8f33e604f87087a828495a55f19f082bbaa17e0217073b233302a7",
+      "A6-CLASSII-K-COMPOSITE-DEFINITION": "bfffc38c638ba27c51e8eb0f9b02e66179a4d953e94e8a9e7b0e50b84826365f",
+      "A6-CLASSII-UV-POWER-COUNTING": "2dd8ecf4ae2ac6859d7d035cc06b593045ac242f69f9d52b0e6a806d3a35238b",
+      "A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE": "d6d5b341cb0ff18137618395234999b07d55bcdcf6d86c3b86f4d68fc4752288",
+      "A8-CLASSII-DECOUPLED-NELSON-BOUND": "96418e61aa6b5cb590fd1a8134053c9e4ab4bb13df3849276e5acf73ea132601",
+      "A9-CLASSII-SMART-PATH-CANCELLATION": "568abd518747fb1340f82c33d2366a8fdfddfee8b569d207bfa737103be22bdc",
+      "X0-TEMPLATE": "ae04f0e1102e74d274745ecd1ed935f5bb58e923c3ae6892c0200d5461a0e96e"
+    }
+  },
+  "boundary": "This is a T0 exact reader/dependency audit. A5 remains a T6 conditional composition, while the load-bearing A6-A13 and Pre-A owner gates remain open.",
+  "claim_bearing": false,
+  "claim_context": [
+    "A5-SECTOR-A-SYNTHESIS"
+  ],
+  "environment": {
+    "platform": "Windows-11-10.0.26200-SP0",
+    "python": "3.12.9"
+  },
+  "evidence_level": "T0 exact metadata/dependency frontier audit",
+  "exploration_id": "EXP-001351",
+  "frontier": {
+    "a5_dependencies": [
+      "A1-PRODUCTION-KERNEL-MANIFEST",
+      "A1-PRODUCTION-FUNCTIONAL-REALISATION",
+      "A2-FULL-PRODUCTION-WELLPOSED",
+      "A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM",
+      "A3-PERTURBATIVE-CONTINUUM-CORRELATORS",
+      "A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE"
+    ],
+    "a5_dependency_count": 6,
+    "a5_open_gates": [],
+    "closed_capstone": "A5-SECTOR-A-SYNTHESIS",
+    "gate_priority_by_declared_consumers": [
+      {
+        "consumer_count": 3,
+        "consumers": [
+          "A6-CLASSII-K-COMPOSITE-DEFINITION",
+          "A6-CLASSII-UV-POWER-COUNTING",
+          "A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE"
+        ],
+        "gate_id": "A6-CLASSII-FULL-FIELD-BARE-CONCENTRATION"
+      },
+      {
+        "consumer_count": 2,
+        "consumers": [
+          "A10-CLASSII-RELATIVE-COMMUTATOR-REDUCTION",
+          "A9-CLASSII-SMART-PATH-CANCELLATION"
+        ],
+        "gate_id": "A10-CLASSII-STABILISED-RELATIVE-LOG-LAPLACE"
+      },
+      {
+        "consumer_count": 2,
+        "consumers": [
+          "A6-CLASSII-K-COMPOSITE-DEFINITION",
+          "A6-CLASSII-UV-POWER-COUNTING"
+        ],
+        "gate_id": "A6-CLASSII-COUNTERTERM-CLOSURE"
+      },
+      {
+        "consumer_count": 1,
+        "consumers": [
+          "A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION"
+        ],
+        "gate_id": "A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE"
+      },
+      {
+        "consumer_count": 1,
+        "consumers": [
+          "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
+        ],
+        "gate_id": "A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE"
+      },
+      {
+        "consumer_count": 1,
+        "consumers": [
+          "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
+        ],
+        "gate_id": "A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION"
+      },
+      {
+        "consumer_count": 1,
+        "consumers": [
+          "A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE"
+        ],
+        "gate_id": "A7-CLASSII-NELSON-EXPONENTIAL-BOUND"
+      },
+      {
+        "consumer_count": 1,
+        "consumers": [
+          "A8-CLASSII-DECOUPLED-NELSON-BOUND"
+        ],
+        "gate_id": "A7-CLASSII-SELF-COUPLING-INTERPOLATION"
+      }
+    ],
+    "methods_unchanged": true,
+    "next_proof_rule": "Use the highest-consumer open gate only after its source-owned inputs are present; do not infer closure from this index.",
+    "open_gate_union": [
+      "A10-CLASSII-STABILISED-RELATIVE-LOG-LAPLACE",
+      "A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE",
+      "A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE",
+      "A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION",
+      "A6-CLASSII-COUNTERTERM-CLOSURE",
+      "A6-CLASSII-FULL-FIELD-BARE-CONCENTRATION",
+      "A7-CLASSII-NELSON-EXPONENTIAL-BOUND",
+      "A7-CLASSII-SELF-COUPLING-INTERPOLATION"
+    ]
+  },
+  "missing_assumptions": [
+    "A source-owned physical Pre-A dynamics/owner packet remains absent from the current programme.",
+    "Open A6-A13 estimates still require their own analytic proof and independent/hostile audits.",
+    "The dependency frontier is a reader surface and does not prove any theorem or limit."
+  ],
+  "non_claims": [
+    "No claim tier, lifecycle, gate, functional, dynamics, owner order, or promotion rule is changed.",
+    "No BCC, Reading-H, physical-empty, Pre-A, Sector-A physical, QFT, Yang--Mills, continuum, or mass-gap conclusion.",
+    "No open gate is closed merely because its consumers or dependencies are listed."
+  ],
+  "schema": "tect/sector-a-frontier-audit/1.0",
+  "schema_version": "1.0",
+  "task_id": "T-054",
+  "tier": "T0",
+  "verdict": "SECTOR_A_FRONTIER_AUDIT_PASS_OPEN_GATES"
+}
