@@ -263,6 +263,16 @@
         "path": "strategy/a6-classii-finite-gibbs-conditioning-certificate-260831.md",
         "sha256": "dd4ba9def0a68aeadffde3337aa3eb11196591919126ac0371639aa8f1326fba",
         "role": "R-464 fixed-cutoff integrability, zero-mass branch and scope-boundary certificate"
+      },
+      {
+        "path": "strategy/a6-classii-partition-envelope-manifest.json",
+        "sha256": "fc4c2ba604439e2eed6e4db540a6bdaa9259958f0c953fe61efe30215b6744d6",
+        "role": "R-465 finite partition comparison-envelope and cutoff-scaling contract"
+      },
+      {
+        "path": "strategy/a6-classii-partition-envelope-certificate-260831.md",
+        "sha256": "c4e1ae0b41cc6fe863f54f70a8b0995888ba4646479ec18ac5ce5a4bb249e660",
+        "role": "R-465 finite comparison boundary and methods-preservation certificate"
       }
     ],
     "semantic": [
@@ -679,21 +689,13 @@
     "authority_state": "VERIFIED_PENDING_WORKTREE_NOT_YET_DURABLE_GIT_OR_REMOTE_AUTHORITY"
   },
   "completion_checkpoint": {
-    "status": "COMPLETE",
-    "verified_parent_head": "4aebcdad192d1a3a9fc161bc349a6712a83a5567",
-    "verified_at_utc": "2026-08-31T02:24:47Z",
+    "status": "PENDING",
+    "verified_parent_head": null,
+    "verified_at_utc": null,
     "branch": "main",
     "remote": "tect",
     "remote_ref": "refs/heads/main",
-    "expected_authority_counts": {
-      "claims": 49,
-      "gates_and_hypotheses": 208,
-      "results": 298,
-      "negative_records": 375,
-      "explorations": 1339,
-      "changelog_events": 813,
-      "tasks": 61
-    },
+    "expected_authority_counts": null,
     "requirements": [
       "doctor PASS",
       "release_check PASS",
@@ -928,7 +930,8 @@
       "R-461 / EXP-001336 classifies the existing fixed-floor smooth Class-II pathwise null set into pure-singlet and active constant-Bloch/constant-rho phase branches; primary 1310/1310, independent 677/677, hostile 8/8, integrated 46/46 and Lean R461 pass, while Gibbs concentration, tube/entropy, tightness, floor removal, continuum, physical selection and QFT/Yang--Mills remain open.",
       "R-462 supplies the active-branch radial/angular normal form for the next branch-aware A6 tube metric; it does not supply tube probability, entropy or tightness.",
       "R-463 / EXP-001338 derives an A1-based active radial/angular tube metric and records bounded local energy-versus-entropy proxy budgets; the flat proxy has zero energy barrier, so correlated Gibbs concentration and tightness remain open.",
-      "R-464 / EXP-001339 supplies only the fixed-cutoff finite Gibbs-integrability prerequisite and the positive-mass conditioning rule: the pure-singlet exact branch has zero Lebesgue mass, while the coercive norm coefficient is not cutoff-uniform; no branch probability or entropy result is admitted."
+      "R-464 / EXP-001339 supplies only the fixed-cutoff finite Gibbs-integrability prerequisite and the positive-mass conditioning rule: the pure-singlet exact branch has zero Lebesgue mass, while the coercive norm coefficient is not cutoff-uniform; no branch probability or entropy result is admitted.",
+      "R-465 / EXP-001340 evaluates the finite radial comparison envelope implied by R-464 over declared cutoffs and beta fixtures; exact a_N*m^3=gamma*V/12 scaling and strict coefficient decrease pass primary 146/146, independent 175/175, hostile 8/8, integrated 56/56 and Lean R465. The norm-volume pressure is comparison-only; no actual correlated partition, entropy, branch probability, uniformity, tightness, continuum, physical, QFT, Yang--Mills or mass-gap result is admitted, and all established methods and owner order remain unchanged."
     ],
     "deliverables": [
       "one owner-intake card with explicit missing fields",
@@ -957,7 +960,7 @@
       "It does not prove Pre-A, C6, A13, Sector A, QFT, Yang-Mills, gravity, a physical mass gap, or a theory of everything.",
       "A dynamic discriminator at finite regulator does not prove continuum or physical identity."
     ],
-    "next_action": "Use R-464 only as the fixed-cutoff integrability prerequisite; obtain a source-owned positive-mass branch tube and correlated-Gibbs probability estimate before applying R-463, while keeping flat-direction entropy, T-054 Q3LOCK owner intake, and T-059/T-061 observation locks in their existing parallel lanes."
+    "next_action": "Use R-465 only as a finite comparison boundary diagnostic; obtain a source-owned positive-mass branch tube and correlated-Gibbs probability/entropy estimate before applying R-463, while keeping flat-direction entropy, T-054 Q3LOCK owner intake, and T-059/T-061 observation locks in their existing parallel lanes."
   },
   "resume_algorithm": [
     "Capture UTC date and run doctor.py.",

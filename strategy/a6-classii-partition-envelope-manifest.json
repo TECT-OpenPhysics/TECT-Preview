@@ -1,0 +1,191 @@
+{
+  "schema": "tect/a6-classii-partition-envelope/1.0",
+  "audit_id": "A6-CLASSII-PARTITION-ENVELOPE-v1",
+  "result_id": "R-465",
+  "exploration_id": "EXP-001340",
+  "task_id": "T-054",
+  "claim_ids": [
+    "A6-CLASSII-UV-POWER-COUNTING",
+    "A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE"
+  ],
+  "title": "Finite-cutoff partition comparison envelope and norm-volume pressure diagnostic",
+  "tier": "T0",
+  "claim_bearing": false,
+  "status": "FINITE_COMPARISON_ENVELOPE_AUDITED_UNIFORMITY_OPEN",
+  "question": "What cutoff dependence is forced by the unchanged R-464 sextic comparison when its finite-dimensional radial integral is used as an explicit upper envelope?",
+  "purpose": "Quantify the existing comparison boundary before a source-owned correlated Gibbs/tube packet arrives. This is an additive diagnostic and does not replace A6, T-054, T-059, or T-061.",
+  "inputs": {
+    "a1_production_functional_manifest": {
+      "path": "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/production_functional_manifest.json",
+      "sha256": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565"
+    },
+    "r464_finite_gibbs_manifest": {
+      "path": "strategy/a6-classii-finite-gibbs-conditioning-manifest.json",
+      "sha256": "4dc2347104e3c7078dc0b803b1680768703f4858ba0e05888c7798c29c39064d"
+    }
+  },
+  "methods_preserved": {
+    "a1_a6_a7_functional_unchanged": true,
+    "fixed_floor_and_eta_shell_scope_unchanged": true,
+    "t054_forward_owner_order_unchanged": true,
+    "t059_t061_observation_first_lane_unchanged": true,
+    "no_conditional_mean_substitution": true,
+    "no_physical_empty_substitution": true,
+    "no_tier_change": true,
+    "additive_diagnostic_only": true
+  },
+  "exact_scope": {
+    "domain": "finite spectral Galerkin space with m=(2N+1)^3 sites and d=6m real coordinates",
+    "functional_input": "the R-464 comparison F_N(z)>=a_N||z||^6-K from the hash-pinned A1 functional",
+    "coefficient": "a_N=gamma*V/(12*m^3), with m=(2N+1)^3",
+    "radial_envelope": "Z_N(beta)<=exp(beta*K)*pi^(d/2)*Gamma(d/6)/(3*Gamma(d/2))*(beta*a_N)^(-d/6)",
+    "pressure_diagnostic": "P_N(beta)=-(d/6)log(beta*a_N), a norm-volume term of this comparison",
+    "audit_inputs": "cutoffs [1,2,3,4,5,6,8,10,12,16,20], beta [1/2,1,2]",
+    "limit_order": "none; no cutoff, volume, phase, or continuum limit is taken"
+  },
+  "theorem": {
+    "finite_comparison": "At each declared finite cutoff and beta, the R-464 lower bound yields a finite radial comparison upper envelope.",
+    "coefficient_scaling": "The comparison coefficient is positive and equals (gamma*V/12)m^-3, hence decreases strictly over the declared cutoffs.",
+    "boundary": "The envelope and its pressure term do not establish the actual correlated partition asymptotic, entropy density, tube probability, or tightness."
+  },
+  "proof_skeleton": [
+    "Read the A1 manifest as exact decimal rationals and reuse the R-464 sextic lower comparison.",
+    "Set d=6m and integrate exp(-beta*a_N*||z||^6) radially to obtain the displayed finite upper envelope.",
+    "Check the exact m^-3 coefficient identity and its strict cutoff decrease over the declared audit fixtures.",
+    "Report the positive norm-volume pressure term without relabelling it as entropy or an asymptotic theorem.",
+    "Run independent, hostile, integrated, and Lean checks while preserving the existing owner order and firewalls."
+  ],
+  "assumptions": [
+    "R-464 lower comparison F_N(z)>=a_N||z||^6-K is valid at every fixed cutoff in scope.",
+    "The finite-dimensional radial integral is a legitimate comparison upper envelope for the displayed coercive bound.",
+    "The declared cutoff and beta arrays are audit fixtures and are not fitted to the observed rows."
+  ],
+  "missing_assumptions": [
+    "The actual correlated full-field Gibbs partition function and its uniform asymptotics.",
+    "A source-owned positive-mass active-branch tube, probability, entropy, and Jacobian estimate.",
+    "A cutoff- and volume-uniform compensating norm/coercivity estimate, tightness, floor removal, and continuum limit.",
+    "Physical branch identification, QFT/Yang--Mills correspondence, and mass-gap bridge."
+  ],
+  "adversarial_review": [
+    {
+      "axis": "coefficient-power",
+      "check": "Could m^-2 or another exponent be substituted without changing the result?",
+      "disposition": "REJECTED: exact scaling identity and hostile mutation reject the wrong exponent."
+    },
+    {
+      "axis": "coordinate-dimension",
+      "check": "Could d=6m be silently replaced by m or a mode count?",
+      "disposition": "REJECTED: the radial formula records six real coordinates per site and the hostile mutation rejects the drop."
+    },
+    {
+      "axis": "beta-factor",
+      "check": "Could beta be omitted from the radial scale?",
+      "disposition": "REJECTED: beta*a_N is checked explicitly in every declared row."
+    },
+    {
+      "axis": "constant-shift",
+      "check": "Could the R-464 additive K shift be omitted?",
+      "disposition": "REJECTED: the envelope records exp(beta*K) separately and hostile mutation rejects omission."
+    },
+    {
+      "axis": "uniformity",
+      "check": "Can finite coefficient rows be called a cutoff-uniform coercive bound?",
+      "disposition": "UPHELD-OPEN: a_N scales as m^-3; no uniformity is admitted."
+    },
+    {
+      "axis": "partition-identity",
+      "check": "Can a radial comparison be relabelled as the actual correlated partition function?",
+      "disposition": "REJECTED: the manifest and hostile lane retain comparison-only language."
+    },
+    {
+      "axis": "entropy-and-limits",
+      "check": "Can pressure rows be promoted to entropy density, tightness, or continuum evidence?",
+      "disposition": "REJECTED: no asymptotic, probability, tightness, or limit is taken."
+    },
+    {
+      "axis": "method-overhaul",
+      "check": "Does this diagnostic alter the established T-054/T-059/T-061 methods or owner order?",
+      "disposition": "DISMISSED: it is an additive R-464 consequence with all methods and firewalls unchanged."
+    }
+  ],
+  "test_oracles": {
+    "primary_minimum_assertions": 100,
+    "independent_minimum_assertions": 100,
+    "hostile_mutation_count": 8,
+    "lean_declarations": [
+      "sextic_coefficient_positive",
+      "coefficient_scale_identity",
+      "coefficient_ratio_lt_one",
+      "beta_coefficient_positive"
+    ]
+  },
+  "audit": {
+    "cutoffs": [1, 2, 3, 4, 5, 6, 8, 10, 12, 16, 20],
+    "betas": ["1/2", "1", "2"],
+    "fixed_volume": "16^3",
+    "real_coordinate_convention": "six real coordinates per complex three-component site",
+    "no_numerical_gibbs_sampling": true
+  },
+  "scope_firewall": {
+    "finite_comparison_envelope_closed": true,
+    "coefficient_scaling_closed": true,
+    "coefficient_cutoff_decrease_closed": true,
+    "actual_partition_asymptotic_closed": false,
+    "entropy_density_closed": false,
+    "branch_tube_probability_closed": false,
+    "tightness_closed": false,
+    "floor_removal_closed": false,
+    "continuum_closed": false,
+    "branch_owner_admitted": false,
+    "physical_branch_selected": false,
+    "pre_a_closed": false,
+    "sector_a_closed": false,
+    "qft_identity_closed": false,
+    "yang_mills_identity_closed": false,
+    "mass_gap_closed": false,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "evidence_level": "T0 finite comparison-envelope and coefficient-scaling diagnostic; not a partition, concentration, entropy, tightness, or continuum theorem",
+  "non_claims": [
+    "The radial envelope is not the actual correlated full-field partition function.",
+    "The positive pressure term is a diagnostic of the present comparison and is not an entropy density or no-go theorem.",
+    "No branch probability, entropy control, tightness, continuum, physical, QFT, Yang--Mills or mass-gap claim follows.",
+    "No Pre-A or Sector-A promotion occurs, and existing methods, owner order, and promotion firewalls are unchanged."
+  ],
+  "files": {
+    "lean": {
+      "path": "verification/lean/Tect/R465.lean",
+      "sha256": "35c23bdd32c13e7f84f662a0729f2f03f5b02dfb88b95ee44d8291e508ccc5cd"
+    },
+    "primary": {
+      "path": "verification/scripts/a6_classii_partition_envelope.py",
+      "sha256": "39449490854b087921243c8cf3eaa21aaf69482361c25db094b4bee95de6a182"
+    },
+    "independent": {
+      "path": "codes/foundations/a6_classii_partition_envelope_independent.py",
+      "sha256": "3d279ec8f521ceefb861fdbe0757be8b396412b1a9702810f81fda3274f4a4a7"
+    },
+    "hostile": {
+      "path": "codes/foundations/a6_classii_partition_envelope_hostile.py",
+      "sha256": "47c0924c47bc4ca2afc14e2a3f07c2e7561fb43436d4d4e3a06e0d402fb3a02f"
+    },
+    "integrated": {
+      "path": "verification/scripts/a6_classii_partition_envelope_verify.py",
+      "sha256": "add687beffcf622dcc18fd32ba14bc02686f04c7bfc727e2ec8231907ba9ecda"
+    },
+    "certificate": {
+      "path": "strategy/a6-classii-partition-envelope-certificate-260831.md",
+      "sha256": "c4e1ae0b41cc6fe863f54f70a8b0995888ba4646479ec18ac5ce5a4bb249e660"
+    }
+  },
+  "formal_integration": {
+    "results": ["R-465"],
+    "event_ordinal": 814,
+    "no_new_negative_ids": [],
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "boundary": "R-465 quantifies only the finite radial comparison envelope implied by R-464. The actual correlated partition, branch tube, entropy, uniformity, tightness, limit, and physical interpretation remain open.",
+  "next_action": "Obtain the source-owned positive-mass branch tube and correlated-Gibbs probability/entropy estimate; use R-465 only as a boundary diagnostic and continue the unchanged T-054, T-059, and T-061 owner lanes."
+}

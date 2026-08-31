@@ -22,6 +22,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-465](#r-465) | Finite-cutoff partition comparison envelope and norm-volume pressure diagnostic | R-465 v1.0 is a T0 claim-nonbearing additive A6/A7 diagnostic derived from the unchanged R-464 sextic comparison. The finite radial upper envelope is evaluated for cutoffs [1,2,3,4,5,6,8,10,12,16,20] and beta [1/2,1,2]; exact `a_N*m^3=gamma*V/12` scaling and strict coefficient decrease are independently checked. Primary 146/146, independent 175/175, hostile 8/8, integrated 56/56 and Lean R465 pass. The pressure term is comparison-only: no actual partition asymptotic, entropy density, branch probability, cutoff-uniformity, tightness, continuum, physical, QFT, Yang--Mills or mass-gap conclusion follows; existing methods and owner order are unchanged |
 | [R-464](#r-464) | Finite-cutoff Gibbs integrability and positive-mass branch conditioning | R-464 v1.0 is a T0 claim-nonbearing additive A6/A7 prerequisite under the unchanged fixed-floor Class-II functional. Exact A1 coefficient arithmetic gives a degree-six coercive lower comparison and finite-dimensional Gibbs integrability at every fixed cutoff; the pure-singlet branch has codimension 4*m and zero Lebesgue mass, so only positive-mass measurable tubes may be conditioned. Primary 24/24, independent 134/134, hostile 8/8, integrated 49/49 and Lean R464 pass. No branch probability, entropy, cutoff-uniformity, tightness, continuum, physical, QFT, Yang--Mills or mass-gap conclusion follows; existing methods and owner order are unchanged |
 | [R-463](#r-463) | Fixed-floor active-branch tube metric and finite entropy stress test | R-463 v1.0 is a T0 claim-nonbearing additive A6/A7 interface under the unchanged fixed-floor Class-II functional. The exact radial sum-of-squares gap defines an active metric dominated by 2*e_II; bounded local-grid proxies are reported with primary 44/44, independent 6270/6270, hostile 8/8, integrated 48/48 and Lean R463 pass. A separate flat proxy has zero energy barrier. No correlated Gibbs, entropy density, partition, tightness, continuum, physical, QFT, Yang--Mills or mass-gap conclusion follows; existing methods and owner order are unchanged |
 | [R-462](#r-462) | Fixed-floor active-branch normal-form coercivity | R-462 v1.0 is a T0 claim-nonbearing additive A6/A7 local jet lemma under the unchanged fixed-floor Class-II functional. On an active Bloch branch `m=s*n` with `s>0` and `n dot t=0`, the exact identity `2 e_II = a*d_s^2+2b*d_s*delta+c*delta^2+(a+2b+c)*s^2|t|^2` separates radial and angular normal directions; primary 46/46, independent 209/209, hostile 8/8, integrated 44/44 and Lean R462 pass. Phase/singlet-flat directions, tube/entropy, partition, tightness, continuum, physical, QFT, Yang--Mills and mass-gap conclusions remain open; existing methods and owner order are unchanged |
@@ -830,6 +831,59 @@ score M3 only after a versioned source owner, state/uncertainty contract,
 candidate-neutral two-time observable, complete map stages and prospective
 holdout exist. Continue unchanged T-054 Q3LOCK owner intake and T-059/T-061
 observation-source intake; do not manufacture another finite mobility table.
+
+<a id="r-465"></a>
+### R-465 -- Finite-cutoff partition comparison envelope and norm-volume pressure diagnostic
+
+**Result ID.** `A6-CLASSII-PARTITION-ENVELOPE-v1` (R-465).
+
+**Version and exact scope.** R-465 v1.0 is a T0, claim-nonbearing additive
+diagnostic for the existing A6/A7 fixed-floor Class-II route. It reuses the
+hash-pinned A1 functional and the R-464 lower comparison without changing the
+T-054 forward owner order or the T-059/T-061 observation-first lane. At a
+finite spectral cutoff with `m=(2N+1)^3` sites and `d=6*m` real coordinates,
+R-464 gives `F_N(z)>=a_N||z||^6-K` with
+`a_N=gamma*V/(12*m^3)`.
+
+**Exact comparison envelope.** For each declared `beta>0`, the finite radial
+comparison is
+
+```text
+Z_N(beta) <= exp(beta*K)
+  * pi^(d/2)*Gamma(d/6)/(3*Gamma(d/2))
+  * (beta*a_N)^(-d/6).
+```
+
+The audit uses the fixed fixtures `N=[1,2,3,4,5,6,8,10,12,16,20]` and
+`beta=[1/2,1,2]`. Exact arithmetic verifies
+`a_N*m^3=gamma*V/12`, and therefore strict coefficient decrease over these
+cutoffs. The reported term
+`P_N(beta)=-(d/6)*log(beta*a_N)` is a norm-volume pressure diagnostic for
+this comparison.
+
+**Evidence.** The primary audit passes 146/146 assertions, the non-importing
+independent audit passes 175/175, eight hostile mutations are rejected, the
+integrated verifier passes 56/56, and Lean `R465.lean` compiles. The primary,
+independent and hostile sources are separate implementations; the integrated
+lane checks their identities, exact coefficient rows, finite envelope rows,
+scope firewall and Lean declarations.
+
+**Boundary and non-claims.** The radial expression is an upper envelope from
+the R-464 lower bound, not the actual correlated full-field partition
+function. Its pressure term is not an entropy density or a no-go theorem, and
+finite rows do not supply cutoff-uniformity. R-465 does not estimate a branch
+tube probability, entropy/Jacobian, tightness, floor removal, ordered limit,
+continuum, physical branch, Pre-A, Sector A, QFT, Yang--Mills, gravity, or mass
+gap. No claim tier changes, negative result, or intermediate PDF is issued;
+the existing methods and owner order are unchanged.
+
+**Proven in:** [R-465 certificate](strategy/a6-classii-partition-envelope-certificate-260831.md), [machine manifest](strategy/a6-classii-partition-envelope-manifest.json), [primary script](verification/scripts/a6_classii_partition_envelope.py), [independent script](codes/foundations/a6_classii_partition_envelope_independent.py), [hostile script](codes/foundations/a6_classii_partition_envelope_hostile.py), [integrated verifier](verification/scripts/a6_classii_partition_envelope_verify.py), [integrated run](claims/A6-CLASSII-UV-POWER-COUNTING/runs/2026-08-31-integrated-a6-partition-envelope/integrated.json), [Lean kernel](verification/lean/Tect/R465.lean), and [exploration record](strategy/a6-classii-partition-envelope-exploration.json).
+
+**Next action.** Obtain the source-owned positive-mass active-branch tube and
+its correlated-Gibbs probability/entropy estimate. Use R-465 only as a finite
+boundary diagnostic while continuing unchanged T-054 Q3LOCK and T-059/T-061
+observation locks; if no uniform compensator appears, record that obstruction
+instead of changing the research method or promoting the tier.
 
 <a id="r-464"></a>
 ### R-464 -- Finite-cutoff Gibbs integrability and positive-mass branch conditioning

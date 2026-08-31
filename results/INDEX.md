@@ -5,10 +5,11 @@
 
 Authorities: `RESULTS-LEDGER.md`.
 
-**298 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
+**299 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
 
 | ID | Result | Tier/scope |
 |---|---|---|
+| [`R-465`](../RESULTS-LEDGER.md#r-465) | Finite-cutoff partition comparison envelope and norm-volume pressure diagnostic | T0 |
 | [`R-464`](../RESULTS-LEDGER.md#r-464) | Finite-cutoff Gibbs integrability and positive-mass branch conditioning | T0 |
 | [`R-463`](../RESULTS-LEDGER.md#r-463) | Fixed-floor active-branch tube metric and finite entropy stress test | T0 |
 | [`R-462`](../RESULTS-LEDGER.md#r-462) | Fixed-floor active-branch normal-form coercivity | T0 |
@@ -33,7 +34,6 @@ Authorities: `RESULTS-LEDGER.md`.
 | [`R-443`](../RESULTS-LEDGER.md#r-443) | Arbitrary finite rectangular axis-parity matching theorem | T0 |
 | [`R-442`](../RESULTS-LEDGER.md#r-442) | General rectangular axis-parity matching lemma | T0 |
 | [`R-441`](../RESULTS-LEDGER.md#r-441) | Reading-H physical-empty bounded test owner execution (blocked) | T0 |
-| [`R-440`](../RESULTS-LEDGER.md#r-440) | Finite rectangular-box matching-layer split envelope | T0 |
 
 Search without loading the full ledger:
 
