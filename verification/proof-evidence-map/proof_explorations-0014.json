@@ -7450,6 +7450,112 @@
       "task_id": "T-057",
       "title": "T-057 batch closure audit separates preserved bytes from missing dependency and run links",
       "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "check": "Could a line or AST locator be mistaken for proof validation?",
+          "disposition": "REJECTED: locators identify review scope only; mathematical assumptions, reruns, and current-convention checks remain open."
+        },
+        {
+          "check": "Could a run filename or record link be silently promoted to an executable dependency closure?",
+          "disposition": "REJECTED: the ledger requires explicit dependency/run fields and marks their absence as NOT_READY_MISSING_CLOSURE_LINK."
+        },
+        {
+          "check": "Could source text or unnecessary matrices be copied into the maintained repository?",
+          "disposition": "REJECTED: the ledger stores only hashes, metadata, links, and bounded locators; Contents remains the live source."
+        },
+        {
+          "check": "Could this additive index replace the established T-054/T-059/T-061 methods or owner order?",
+          "disposition": "REJECTED: no functional, dynamics, observation map, gate, tier, or promotion rule is changed."
+        },
+        {
+          "check": "Could an incomplete selection be hidden by a successful partial extraction?",
+          "disposition": "REJECTED: source-set digest, source identity hashes, registry presence, record-link coverage, and locator coverage are asserted before READY_CLOSURE_OPEN is emitted."
+        }
+      ],
+      "assumptions": [
+        "The maintained Contents tree is the canonical byte source for the frozen T-055 batch.",
+        "The manifest and source-set define the selected-source boundary; registry records provide provenance context only.",
+        "AST definitions, JSON keys, and heading lines are sufficient compact review locators until a human or executable method audit supplies finer scopes."
+      ],
+      "boundary": "This is a T0 claim-nonbearing extraction and provenance index. It does not revalidate a legacy theorem, execute a current functional, select BCC or a truncated-octahedron vacuum, establish a physical-empty sign, or close Reading-H, C6, Sector-A, Pre-A, QFT, Yang--Mills, continuum, or mass-gap gates.",
+      "claim_ids": [
+        "B3-BCC-STRUCT",
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "The prior T-057 audit showed that preservation was exact but per-source dependency and run closure were absent. This compact ledger makes the next review unit explicit for every selected source without copying Contents or inferring execution from filenames, so current-convention revalidation can resume only on sources whose dependencies and outputs are later closed.",
+      "decision_scope": "T0 compact per-source extraction, locator, registry-link, and closure-readiness ledger for the frozen T-055 selection",
+      "evidence_level": "T0 exact ledger with 50/50 source identity and locator checks, 50/50 record coverage, and self-test PASS; dependency/run closure remains OPEN",
+      "evidence_refs": [
+        "verification/scripts/t057_source_extraction_ledger.py#build_ledger",
+        "archive/legacy/batches/LEGACY-T055-GEOMETRY-EMPTY-REFERENCE-001/source-extraction-ledger.json#checks",
+        "archive/legacy/batches/LEGACY-T055-GEOMETRY-EMPTY-REFERENCE-001/manifest.json#next_step",
+        "archive/legacy/batches/LEGACY-T055-GEOMETRY-EMPTY-REFERENCE-001/source-set.json#sources",
+        "archive/legacy/registry/records/LEG-T055-BCC-SELECTION-LINEAGE-001.json#status_axes",
+        "archive/legacy/registry/records/LEG-T055-TRUNCATED-OCTAHEDRON-BZ-001.json#status_axes",
+        "claims/GATES.md#legacy-selective-index-and-on-demand-revalidation"
+      ],
+      "finding": "The new ledger deterministically emits 50 per-source entries. All selected Contents hashes and registry metadata match, every selected source is linked to a registry record, and every row has bounded exact locators (AST definitions, JSON top-level keys, or heading lines). No selected row declares a dependency closure; the five run-origin rows have no explicit run/result link; and every source remains open for current-convention revalidation. The ledger therefore advances review readiness while preserving the closure boundary.",
+      "formal_integration": {
+        "events": [],
+        "methods_unchanged": true,
+        "negatives": [],
+        "no_new_negative": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "results": []
+      },
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": []
+      },
+      "gate_ids": [
+        "LEGACY-SELECTIVE-INDEX-AND-ON-DEMAND-REVALIDATION",
+        "C6-BCC-PREMISE-BLOCKED"
+      ],
+      "id": "EXP-001350",
+      "method": [
+        "Load the frozen T-055 manifest and source-set and recompute the selected-source boundary and digest.",
+        "Read each maintained Contents source and registry metadata row, verify byte count and SHA-256, and store no source text.",
+        "Extract bounded exact review locators: top-level Python definitions, JSON top-level keys, or heading/first-content lines for text notes.",
+        "Map each source ID to existing registry records and retain record role, assessment, and revalidation status separately from source closure.",
+        "Emit the compact ledger with explicit dependency/run fields and readiness states, then run its fail-closed identity and coverage self-test."
+      ],
+      "missing_assumptions": [
+        "Per-source dependency paths or source IDs and a reproducible import/input closure.",
+        "A source-to-script, input, output, and result-status mapping for each run-origin artifact.",
+        "Current functional, normalization, sign, competitor, stability, error, thermodynamic, and ordered-limit reruns with independent checks."
+      ],
+      "next_action": "Use the ledger as the review queue: for each selected source, add or verify exact dependency and execution links, mark missing artifacts explicitly, and revalidate only the surviving geometry/method rows under current conventions with primary, independent, and hostile checks. Keep BCC/Reading-H/physical promotion blocked until a common functional and reference are supplied.",
+      "non_claims": [
+        "No source is a current proof authority and no legacy numerical verdict is revalidated by this index.",
+        "No BCC/truncated-octahedron selection, Reading-H stationarity, physical-empty sign, transverse stability, Pre-A, Sector-A, C6, QFT, Yang--Mills, continuum, or mass-gap conclusion.",
+        "No full Contents corpus or unnecessary matrices are copied; the ledger is a pointer/index surface only."
+      ],
+      "provenance": "contemporaneous",
+      "question": "Can the frozen T-055 selected sources be converted into exact, compact per-source review units without copying Contents or mistaking registry links for dependency and run closure?",
+      "recorded_at": "2026-08-31T12:44:41Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001349",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-08-31",
+      "schema": "tect/proof-exploration/1.0",
+      "schema_version": "1.0",
+      "stop_or_redesign": [
+        "If source-set, registry, or Contents hashes drift, stop and repair provenance before using any locator.",
+        "If a locator cannot be reproduced or a source is missing, mark that row not-ready and do not run or cite it.",
+        "If a current revalidation changes the functional, reference, or convention, create a versioned successor rather than mutating this intake.",
+        "If dependency/run closure remains absent, keep T-057 at extraction/provenance scope and continue the unchanged T-054 and T-061 owner gates."
+      ],
+      "task_id": "T-057",
+      "title": "T-057 compact source extraction ledger preserves locators while keeping closure open",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",
