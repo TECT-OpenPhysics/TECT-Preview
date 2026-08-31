@@ -1,0 +1,159 @@
+{
+  "schema": "tect/a6-classii-branch-relative-compensator/1.0",
+  "schema_version": "1.0",
+  "audit_id": "A6-CLASSII-BRANCH-RELATIVE-COMPENSATOR-v1",
+  "result_id": "R-467",
+  "exploration_id": "EXP-001342",
+  "task_id": "T-054",
+  "claim_ids": [
+    "A6-CLASSII-UV-POWER-COUNTING",
+    "A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE"
+  ],
+  "title": "Finite branch-relative Jacobian/entropy compensator interface",
+  "tier": "T0",
+  "claim_bearing": false,
+  "status": "FINITE_CONDITIONAL_COMPENSATOR_AUDITED_SOURCE_OWNER_OPEN",
+  "question": "What exact finite branch-relative lower-bound budget follows when a later owner supplies a chart Jacobian, active/normal tube dimensions, and an energy ceiling?",
+  "purpose": "Make the entropy/Jacobian prerequisite explicit downstream of R-466 without changing the established A6, T-054, T-059, or T-061 methods.",
+  "inputs": {
+    "a1_production_functional_manifest": {
+      "path": "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/production_functional_manifest.json",
+      "sha256": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565"
+    },
+    "r466_tube_envelope_manifest": {
+      "path": "strategy/a6-classii-positive-mass-tube-envelope-manifest.json",
+      "sha256": "7bc2b5844059744e8817419f852982d6dbdbcf20cdf7debdfa2462594538e1d5"
+    },
+    "r465_partition_envelope_manifest": {
+      "path": "strategy/a6-classii-partition-envelope-manifest.json",
+      "sha256": "fc4c2ba604439e2eed6e4db540a6bdaa9259958f0c953fe61efe30215b6744d6"
+    }
+  },
+  "methods_preserved": {
+    "a1_a6_a7_functional_unchanged": true,
+    "t054_forward_owner_order_unchanged": true,
+    "t059_t061_observation_first_lane_unchanged": true,
+    "r463_metric_used_only_as_future_input": true,
+    "r466_interface_used_only_as_future_input": true,
+    "no_conditional_mean_substitution": true,
+    "no_physical_empty_substitution": true,
+    "no_tier_change": true,
+    "additive_interface_only": true
+  },
+  "exact_scope": {
+    "domain": "finite spectral Galerkin space with m=(2N+1)^3 sites and d_N=6m real coordinates",
+    "chart": "an owner-supplied injective measurable chart Phi_N from an active/normal box into the finite field space",
+    "dimensions": "k_N active coordinates, n_N normal coordinates, k_N+n_N=d_N",
+    "chart_volume": "vol(U_N)=s_a,N^k_N*s_n,N^n_N for positive side lengths",
+    "jacobian": "J_N is a positive lower bound for the chart Jacobian on the tube",
+    "energy_ceiling": "F_N(Phi_N(u))<=E_N throughout the chart tube",
+    "partition_upper": "Z_N(beta)<=Z_upper_N(beta) from the R-465 radial comparison",
+    "mass_bound": "mu_N(Phi_N(U_N))>=J_N*vol(U_N)*exp(-beta*E_N)/Z_upper_N(beta)",
+    "log_budget": "L_branch,N=log(J_N)+k_N*log(s_a,N)+n_N*log(s_n,N)-beta*E_N-log(Z_upper_N)",
+    "relative_compensator": "C_N=log(J_N*vol(U_N))-log(V_ref,N)",
+    "uniformity_test": "A nonvanishing branch mass requires a separate liminf_N L_branch,N(beta)>-infinity condition; it is not asserted",
+    "fixtures": "owner-neutral active_side=1/8, normal_side=1/4, reference_side=1/8, J_min=1/2, E_N=1, k_N=2m over N=[1,2,3,4,6,8,10], beta=[1/2,1,2]",
+    "limit_order": "none; fixed-cutoff conditional interface only"
+  },
+  "theorem": {
+    "dimension_split": "The active and normal chart dimensions sum to the ambient dimension",
+    "change_of_variables": "A positive Jacobian lower bound and chart volume lower-bound the Boltzmann numerator",
+    "compensator_decomposition": "The lower-bound logarithm separates Jacobian, chart entropy, Boltzmann ceiling, and comparison normalization",
+    "uniformity_boundary": "Finite compensated rows do not establish the required cutoff-uniform liminf"
+  },
+  "proof_skeleton": [
+    "Retain the R-464/R-465 finite energy and partition comparisons and the R-466 conditional tube interface.",
+    "Apply the measurable change-of-variables lower bound on an owner-supplied chart with positive Jacobian.",
+    "Compute the exact active/normal chart volume and relative Jacobian compensator in log form.",
+    "Audit the finite budget and its cutoff trend without promoting it to an entropy density or branch probability theorem.",
+    "Run non-importing independent, hostile, integrated, and Lean checks."
+  ],
+  "assumptions": [
+    "The R-464 sextic comparison and R-465 radial partition upper envelope hold at each fixed cutoff.",
+    "A later owner supplies an injective measurable chart, positive Jacobian lower bound, and pointwise energy ceiling.",
+    "The declared side lengths, Jacobian, ceiling, and active dimension multiplier are audit fixtures only."
+  ],
+  "missing_assumptions": [
+    "A source-owned active-branch embedding, chart domain, Jacobian estimate, and tube tied to R-461/R-463.",
+    "The actual correlated partition normalization with cutoff- and volume-uniform bounds.",
+    "A quantitative branch-relative entropy/Jacobian compensator with a uniform liminf, tightness, floor removal, and ordered continuum limit.",
+    "A source-owned Q3LOCK dynamics, physical branch, QFT/Yang--Mills identity, or mass-gap bridge."
+  ],
+  "adversarial_review": [
+    {"axis": "dimension-split", "check": "Could the normal coordinates be dropped?", "disposition": "REJECTED by exact k+n=d check and hostile mutation."},
+    {"axis": "chart-volume", "check": "Could a side or exponent be changed?", "disposition": "REJECTED by exact rational volume identity and hostile mutation."},
+    {"axis": "Jacobian", "check": "Could the positive Jacobian factor be omitted?", "disposition": "REJECTED by the log decomposition identity."},
+    {"axis": "Boltzmann-sign", "check": "Could -beta*E be replaced by +beta*E?", "disposition": "REJECTED by the numerator budget identity."},
+    {"axis": "partition-direction", "check": "Could the partition upper bound be used in the wrong direction?", "disposition": "REJECTED by the explicit upper-denominator contract."},
+    {"axis": "degenerate-chart", "check": "Could J=0 be called a positive-volume chart?", "disposition": "REJECTED by positivity requirement."},
+    {"axis": "source-ownership", "check": "Could owner-neutral fixtures be relabelled source-owned?", "disposition": "UPHELD-REJECTED; owner admission remains false."},
+    {"axis": "uniformity", "check": "Can finite rows be promoted to a uniform branch probability?", "disposition": "UPHELD-REJECTED; liminf condition remains open."}
+  ],
+  "test_oracles": {
+    "primary_minimum_assertions": 150,
+    "independent_minimum_assertions": 150,
+    "hostile_mutation_count": 8,
+    "lean_declarations": [
+      "dimension_split_identity",
+      "chart_volume_positive",
+      "jacobian_chart_volume_positive",
+      "compensated_mass_ratio_positive",
+      "log_budget_decomposition"
+    ]
+  },
+  "audit": {
+    "cutoffs": [1, 2, 3, 4, 6, 8, 10],
+    "betas": ["1/2", "1", "2"],
+    "active_side": "1/8",
+    "normal_side": "1/4",
+    "reference_side": "1/8",
+    "jacobian_min": "1/2",
+    "energy_ceiling": "1",
+    "active_coordinates_per_site": 2,
+    "coordinate_convention": "six real coordinates per complex three-component site",
+    "no_numerical_gibbs_sampling": true
+  },
+  "scope_firewall": {
+    "finite_conditional_compensator_closed": true,
+    "source_owned_chart_admitted": false,
+    "actual_correlated_partition_closed": false,
+    "branch_probability_closed": false,
+    "entropy_density_closed": false,
+    "cutoff_uniform_closed": false,
+    "tightness_closed": false,
+    "floor_removal_closed": false,
+    "continuum_closed": false,
+    "physical_branch_selected": false,
+    "pre_a_closed": false,
+    "sector_a_closed": false,
+    "qft_identity_closed": false,
+    "yang_mills_identity_closed": false,
+    "mass_gap_closed": false,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "evidence_level": "T0 exact finite conditional branch-relative Jacobian/entropy budget with owner-neutral chart fixtures",
+  "non_claims": [
+    "The chart, Jacobian, and ceiling are owner-neutral fixtures, not a source-owned active branch.",
+    "The finite budget is conditional and does not establish a cutoff-uniform branch probability or entropy density.",
+    "No tightness, floor removal, continuum, Pre-A, Sector-A, QFT, Yang--Mills, or mass-gap conclusion follows.",
+    "Existing T-054 forward, T-059/T-061 inverse methods, owner order, and promotion firewalls are unchanged."
+  ],
+  "files": {
+    "lean": {"path": "verification/lean/Tect/R467.lean", "sha256": "757d81666617f6ff419ca6ecd056fdf5b1a650101add10f2e9515ceeeaf5095e"},
+    "primary": {"path": "verification/scripts/a6_classii_branch_relative_compensator.py", "sha256": "309324ecfcb7b5fa03fffda42c15ad45fb6d06a13bbbe4a1930afbaf84e90ff0"},
+    "independent": {"path": "codes/foundations/a6_classii_branch_relative_compensator_independent.py", "sha256": "f6b0344e035074a668728cdc1e2f38c38291ed96904b760be9008b8048521707"},
+    "hostile": {"path": "codes/foundations/a6_classii_branch_relative_compensator_hostile.py", "sha256": "d3487584bebccda08b68721bd8313fc066fcffcd77db76c14a16101b646112bf"},
+    "integrated": {"path": "verification/scripts/a6_classii_branch_relative_compensator_verify.py", "sha256": "b8f1ab8b75eaf6c8128a2a08aec231ac866743c513005dd599cba121a0e8561d"},
+    "certificate": {"path": "strategy/a6-classii-branch-relative-compensator-certificate-260831.md", "sha256": "f6175fc89029be8cdb6bf0c8c2040562e801cb6d3fa08ea28264c5b1fa59fcbd"}
+  },
+  "formal_integration": {
+    "results": ["R-467"],
+    "event_ordinal": 816,
+    "no_new_negative_ids": [],
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "boundary": "R-467 supplies only a fixed-cutoff conditional change-of-variables budget. The source-owned chart, actual Jacobian, correlated partition asymptotic, uniform compensator, tightness, limits, and physical identity remain open.",
+  "next_action": "Hash-pin a source-owned active-branch chart, measurable tube, Jacobian, and energy ceiling; instantiate the R-467 budget with the R-463 metric. If no owner artefact arrives, retain this finite interface and continue the unchanged T-054 Q3LOCK and T-059/T-061 observation locks without another synthetic proxy."
+}

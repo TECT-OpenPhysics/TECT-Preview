@@ -6482,6 +6482,139 @@
       "task_id": "T-054",
       "title": "Finite positive-mass tube lower-bound interface and coarse scaling boundary",
       "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "axis": "dimension-split",
+          "check": "Could the normal coordinates be dropped?",
+          "disposition": "REJECTED by exact dimension identity and hostile mutation."
+        },
+        {
+          "axis": "chart-volume",
+          "check": "Could a side or exponent be changed?",
+          "disposition": "REJECTED by exact rational product check."
+        },
+        {
+          "axis": "Jacobian",
+          "check": "Could J_N be omitted?",
+          "disposition": "REJECTED by the logarithmic decomposition check."
+        },
+        {
+          "axis": "Boltzmann-sign",
+          "check": "Could the ceiling sign be reversed?",
+          "disposition": "REJECTED by the numerator identity."
+        },
+        {
+          "axis": "partition-direction",
+          "check": "Could Z_upper enter with the wrong direction?",
+          "disposition": "REJECTED by the upper-denominator contract."
+        },
+        {
+          "axis": "degenerate-chart",
+          "check": "Could a zero Jacobian be admitted?",
+          "disposition": "REJECTED by positivity."
+        },
+        {
+          "axis": "source-ownership",
+          "check": "Could synthetic fixtures be relabelled source-owned?",
+          "disposition": "UPHELD-REJECTED; source owner remains open."
+        },
+        {
+          "axis": "uniformity",
+          "check": "Can finite rows be called a uniform branch probability?",
+          "disposition": "UPHELD-REJECTED; liminf remains unproved."
+        }
+      ],
+      "assumptions": [
+        "The R-464 sextic comparison and R-465 radial partition upper envelope hold at each fixed cutoff.",
+        "A later source owner supplies an injective measurable chart, positive Jacobian lower bound, and pointwise energy ceiling.",
+        "The declared side lengths, Jacobian, ceiling, and dimension multiplier are audit fixtures and are not fitted or physical."
+      ],
+      "boundary": "The chart, Jacobian, sides, and ceiling are owner-neutral fixtures. No source-owned active embedding, actual correlated partition, uniform compensator, branch probability, entropy density, tightness, floor removal, ordered limit, continuum, physical branch, Pre-A, Sector A, QFT, Yang--Mills, or mass-gap result follows.",
+      "claim_ids": [
+        "A6-CLASSII-UV-POWER-COUNTING",
+        "A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE"
+      ],
+      "decision_reason": "R-467 is the next nonredundant conditional interface named by R-466. It makes the branch-relative entropy/Jacobian prerequisite testable without inventing a branch or changing the established methods.",
+      "decision_scope": "T0 finite conditional branch-relative Jacobian/entropy budget; no source-owned chart, uniform branch probability, entropy density, tightness, continuum, physical, QFT, Yang--Mills, or mass-gap inference",
+      "evidence_level": "T0 finite conditional branch-relative Jacobian/entropy budget",
+      "evidence_refs": [
+        "strategy/a6-classii-branch-relative-compensator-manifest.json#theorem",
+        "strategy/a6-classii-branch-relative-compensator-certificate-260831.md#Exact finite statement",
+        "verification/scripts/a6_classii_branch_relative_compensator.py#run",
+        "codes/foundations/a6_classii_branch_relative_compensator_independent.py#run",
+        "codes/foundations/a6_classii_branch_relative_compensator_hostile.py#run",
+        "verification/scripts/a6_classii_branch_relative_compensator_verify.py#run",
+        "claims/A6-CLASSII-UV-POWER-COUNTING/runs/2026-08-31-primary-a6-branch-relative-compensator/primary.json#assertion_summary",
+        "claims/A6-CLASSII-UV-POWER-COUNTING/runs/2026-08-31-independent-a6-branch-relative-compensator/independent.json#assertion_summary",
+        "claims/A6-CLASSII-UV-POWER-COUNTING/runs/2026-08-31-hostile-a6-branch-relative-compensator/hostile.json#assertion_summary",
+        "claims/A6-CLASSII-UV-POWER-COUNTING/runs/2026-08-31-integrated-a6-branch-relative-compensator/integrated.json#assertion_summary",
+        "verification/lean/Tect/R467.lean#compensated_mass_ratio_positive"
+      ],
+      "finding": "For every declared finite cutoff and beta, a positive chart Jacobian and active/normal box volume give mu_N(Phi_N(U_N)) >= J_N*vol(U_N)*exp(-beta*E_N)/Z_upper_N(beta). The logarithmic budget separates chart entropy, Jacobian, Boltzmann ceiling, and comparison normalization; its finite fixture rows decrease with cutoff, so a later source-owned uniform compensator remains necessary.",
+      "formal_integration": {
+        "events": [
+          "20260831-r-467-finite-branch-relative-jacobian-entropy-c"
+        ],
+        "negatives": [],
+        "no_new_negative": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "results": [
+          "R-467"
+        ]
+      },
+      "formal_refs": {
+        "events": [
+          "20260831-r-467-finite-branch-relative-jacobian-entropy-c"
+        ],
+        "negatives": [],
+        "results": [
+          "R-467"
+        ]
+      },
+      "gate_ids": [
+        "A6-CLASSII-FULL-FIELD-BARE-CONCENTRATION",
+        "A6-CLASSII-COUNTERTERM-CLOSURE",
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001342",
+      "method": [
+        "Keep the existing A1/A6/A7 fixed-floor functional, T-054 forward owner order, T-059/T-061 observation-first locks, and every promotion firewall unchanged.",
+        "Reuse the R-464 sextic comparison, R-465 radial partition upper envelope, and R-466 positive-volume tube interface as conditional inputs only.",
+        "Apply the measurable change-of-variables lower bound with active dimension k_N, normal dimension n_N, chart volume s_a,N^k_N*s_n,N^n_N, and Jacobian lower bound J_N.",
+        "Separate the logarithmic Jacobian/entropy term, Boltzmann ceiling, and comparison normalization, then define the reference-relative compensator.",
+        "Audit owner-neutral fixtures through primary, independent, hostile, integrated, and Lean lanes; issue no intermediate PDF."
+      ],
+      "missing_assumptions": [
+        "A source-owned active-branch embedding, chart domain, Jacobian estimate, and tube tied to R-461/R-463.",
+        "The actual correlated partition normalization and a cutoff/volume-uniform compensator.",
+        "Tightness, floor removal, ordered continuum limits, and a physical-sector identification.",
+        "A source-owned Q3LOCK dynamics and QFT/Yang--Mills or mass-gap bridge."
+      ],
+      "next_action": "Hash-pin a source-owned active-branch chart, measurable tube, Jacobian, and energy ceiling; instantiate the R-467 budget with the R-463 metric. If no owner artefact arrives, keep this interface as the finite boundary and continue unchanged T-054 Q3LOCK and T-059/T-061 observation locks.",
+      "provenance": "contemporaneous",
+      "question": "What exact finite branch-relative lower-bound budget follows when a later owner supplies an injective chart, positive Jacobian lower bound, active/normal side lengths, and an energy ceiling?",
+      "recorded_at": "2026-08-31T03:59:18Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001341",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-08-31",
+      "schema": "tect/proof-exploration/1.0",
+      "schema_version": "1.0",
+      "stop_or_redesign": [
+        "If no source-owned chart/Jacobian/ceiling arrives, park the branch probability route and do not repeat a synthetic finite proxy.",
+        "If the compensator lacks a cutoff-uniform liminf, record the branch-specific obstruction rather than promoting finite rows.",
+        "If an owner changes the functional, regulator, volume, boundary, or limit order, issue a new contract instead of mutating R-467."
+      ],
+      "task_id": "T-054",
+      "title": "Finite branch-relative Jacobian/entropy compensator interface",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",

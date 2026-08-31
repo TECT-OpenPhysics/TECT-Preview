@@ -22,6 +22,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-467](#r-467) | Finite branch-relative Jacobian/entropy compensator interface | R-467 v1.0 is a T0 claim-nonbearing additive A6/A7 interface downstream of R-466. For a later owner-supplied injective measurable chart with active/normal dimensions `k_N+n_N=d_N`, positive Jacobian lower bound `J_N`, chart side lengths and energy ceiling `E_N`, the exact finite lower-bound log budget is `log(J_N)+k_N log(s_a,N)+n_N log(s_n,N)-beta E_N-log(Z_upper_N)`, with relative compensator `log(J_N vol(U_N))-log(V_ref,N)`. Owner-neutral fixtures pass primary 190/190, independent 188/188, hostile 8/8, integrated 56/56 and Lean R467; no source-owned chart, uniform branch probability, entropy density, tightness, continuum, physical, QFT, Yang--Mills or mass-gap conclusion follows, and existing methods and owner order are unchanged |
 | [R-466](#r-466) | Finite positive-mass tube lower-bound interface and coarse scaling boundary | R-466 v1.0 is a T0 claim-nonbearing additive A6/A7 interface under the unchanged R-464/R-465 comparison. For a later owner-supplied measurable box tube `B_N=c_N+[-delta,delta]^d` with `delta>0` and energy ceiling `E_tube`, the exact finite Gibbs-mass lower bound is `mu_N(B_N)>=vol(B_N)exp(-beta E_tube)/Z_upper_N`; its log budget separates geometric volume, Boltzmann ceiling and comparison normalization. Owner-neutral fixtures `delta=1/16`, `E_tube=1` pass primary 124/124, independent 122/122, hostile 8/8, integrated 53/53 and Lean R466; the coarse log decreases with cutoff, so source ownership, branch-relative entropy/Jacobian control and uniformity remain open. No physical, continuum, QFT, Yang--Mills or mass-gap conclusion follows; existing methods and owner order are unchanged |
 | [R-465](#r-465) | Finite-cutoff partition comparison envelope and norm-volume pressure diagnostic | R-465 v1.0 is a T0 claim-nonbearing additive A6/A7 diagnostic derived from the unchanged R-464 sextic comparison. The finite radial upper envelope is evaluated for cutoffs [1,2,3,4,5,6,8,10,12,16,20] and beta [1/2,1,2]; exact `a_N*m^3=gamma*V/12` scaling and strict coefficient decrease are independently checked. Primary 146/146, independent 175/175, hostile 8/8, integrated 56/56 and Lean R465 pass. The pressure term is comparison-only: no actual partition asymptotic, entropy density, branch probability, cutoff-uniformity, tightness, continuum, physical, QFT, Yang--Mills or mass-gap conclusion follows; existing methods and owner order are unchanged |
 | [R-464](#r-464) | Finite-cutoff Gibbs integrability and positive-mass branch conditioning | R-464 v1.0 is a T0 claim-nonbearing additive A6/A7 prerequisite under the unchanged fixed-floor Class-II functional. Exact A1 coefficient arithmetic gives a degree-six coercive lower comparison and finite-dimensional Gibbs integrability at every fixed cutoff; the pure-singlet branch has codimension 4*m and zero Lebesgue mass, so only positive-mass measurable tubes may be conditioned. Primary 24/24, independent 134/134, hostile 8/8, integrated 49/49 and Lean R464 pass. No branch probability, entropy, cutoff-uniformity, tightness, continuum, physical, QFT, Yang--Mills or mass-gap conclusion follows; existing methods and owner order are unchanged |
@@ -832,6 +833,61 @@ score M3 only after a versioned source owner, state/uncertainty contract,
 candidate-neutral two-time observable, complete map stages and prospective
 holdout exist. Continue unchanged T-054 Q3LOCK owner intake and T-059/T-061
 observation-source intake; do not manufacture another finite mobility table.
+
+<a id="r-467"></a>
+### R-467 -- Finite branch-relative Jacobian/entropy compensator interface
+
+**Result ID.** `A6-CLASSII-BRANCH-RELATIVE-COMPENSATOR-v1` (R-467).
+
+**Version and exact scope.** R-467 v1.0 is a T0, claim-nonbearing additive
+interface downstream of R-466. It keeps the A1/A6/A7 functional, the T-054
+forward owner order, the T-059/T-061 observation-first lane, and all promotion
+firewalls unchanged. At a fixed cutoff, let an owner-supplied injective
+measurable chart have active dimension `k_N`, normal dimension `n_N`, and
+`k_N+n_N=d_N`. If its chart box has positive side lengths `s_a,N`, `s_n,N`,
+Jacobian lower bound `J_N>0`, and pointwise energy ceiling `F_N<=E_N`, then
+
+```text
+mu_N(Phi_N(U_N)) >=
+  J_N * vol(U_N) * exp(-beta*E_N) / Z_upper_N(beta),
+vol(U_N)=s_a,N^k_N*s_n,N^n_N.
+```
+
+The corresponding log budget is
+
+```text
+L_branch,N = log(J_N)+k_N*log(s_a,N)+n_N*log(s_n,N)
+              - beta*E_N - log(Z_upper_N(beta)),
+```
+
+and the explicit reference-relative compensator is
+`C_N=log(J_N*vol(U_N))-log(V_ref,N)`.
+
+**Audit and interpretation.** The owner-neutral fixtures
+`active_side=1/8`, `normal_side=1/4`, `reference_side=1/8`, `J_min=1/2`,
+`E_N=1`, and `k_N=2*(2N+1)^3` are evaluated over
+`N=[1,2,3,4,6,8,10]` and `beta=[1/2,1,2]`. The primary audit passes 190/190
+assertions, the independent non-importing audit passes 188/188, eight hostile
+mutations are rejected, the integrated verifier passes 56/56, and Lean
+`R467.lean` compiles. The compensated finite log is strictly decreasing over
+the declared cutoffs; this is a diagnostic of the present comparison, not a
+uniformity result.
+
+**Boundary and non-claims.** The chart, Jacobian, and ceiling are synthetic
+fixtures and do not admit a source-owned active branch. R-467 does not provide
+the actual correlated partition, an entropy density, a cutoff-uniform
+compensator, branch probability, tightness, floor removal, ordered limits,
+continuum, physical-sector selection, Pre-A, Sector A, QFT, Yang--Mills,
+gravity, or a mass gap. No claim tier changes and no intermediate PDF is
+issued; all existing methods and owner-order rules remain unchanged.
+
+**Proven in:** [R-467 certificate](strategy/a6-classii-branch-relative-compensator-certificate-260831.md), [machine manifest](strategy/a6-classii-branch-relative-compensator-manifest.json), [primary script](verification/scripts/a6_classii_branch_relative_compensator.py), [independent script](codes/foundations/a6_classii_branch_relative_compensator_independent.py), [hostile script](codes/foundations/a6_classii_branch_relative_compensator_hostile.py), [integrated verifier](verification/scripts/a6_classii_branch_relative_compensator_verify.py), [integrated run](claims/A6-CLASSII-UV-POWER-COUNTING/runs/2026-08-31-integrated-a6-branch-relative-compensator/integrated.json), [Lean kernel](verification/lean/Tect/R467.lean), and [exploration record](strategy/a6-classii-branch-relative-compensator-exploration.json).
+
+**Next action.** Hash-pin a source-owned active-branch chart, measurable tube,
+Jacobian, and energy ceiling, then instantiate this budget with the R-463
+metric. If no owner artefact arrives, retain R-467 as a finite interface and
+continue the unchanged T-054 Q3LOCK and T-059/T-061 observation locks without
+another synthetic proxy.
 
 <a id="r-466"></a>
 ### R-466 -- Finite positive-mass tube lower-bound interface and coarse scaling boundary
