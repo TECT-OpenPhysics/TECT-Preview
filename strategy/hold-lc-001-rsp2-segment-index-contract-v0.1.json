@@ -1,0 +1,101 @@
+{
+  "schema": "tect/observation-response-segment-index-contract/0.1",
+  "id": "HOLD-LC-001-RSP2-SEGMENT-INDEX-v0.1",
+  "version": "0.1.0",
+  "task_id": "T-061",
+  "holdout_id": "HOLD-LC-001",
+  "claim_bearing": false,
+  "methods_unchanged": true,
+  "purpose": "Add a candidate-neutral binary-table index for the hash-pinned Fermi rsp2 response histories. Read scalar energy bounds, segment intervals and variable-array descriptors to expose exact selection alternatives without reading response coefficients, selecting a response, fitting a likelihood or changing the established T-054/T-059/T-061 methods.",
+  "parent_response_history_manifest": {
+    "path": "strategy/hold-lc-001-response-history-byte-freeze-v0.1.json",
+    "sha256": "b47228b036f9e057b2c213f41b477466a76d3d4107d929b93eb5c2a87ee7a5c2"
+  },
+  "parser_dependencies": [
+    {
+      "path": "verification/scripts/audit_hold_lc_owner_artifacts.py",
+      "sha256": "f8b312b34856df923390c531f07758f15ac5a29e25817226b910391ccd158f6d",
+      "purpose": "FITS header parser and byte locator reused for provenance only"
+    },
+    {
+      "path": "verification/scripts/audit_hold_lc_response_history.py",
+      "sha256": "f4efaf22d24e3c66fd0eae3387603f35e64350ee85afde663e0f997e053101e9",
+      "purpose": "Existing response-history schema vocabulary; no matrix-value reader reused"
+    }
+  ],
+  "cache_root": "internal/source-cache/HOLD-LC-001/2026-08-30",
+  "products": [
+    "FERMI-GBM-EVENT-TRIGGER-RSP2-N0",
+    "FERMI-GBM-EVENT-TRIGGER-RSP2-B0"
+  ],
+  "expected_source_structure": {
+    "response_segments_per_product": 8,
+    "ebounds_rows": 128,
+    "matrix_rows_per_segment": 140,
+    "matrix_coefficients_read": false
+  },
+  "query_grid": {
+    "relative_offsets_s": [
+      -30,
+      -15,
+      0,
+      15,
+      30
+    ],
+    "reference": "TRIGTIME in the hash-pinned FITS header",
+    "role": "Fixed audit fixture for selection ambiguity; not fitted and not a physical timing observation"
+  },
+  "selection_contract": {
+    "covering": {
+      "rule": "Include every positive-duration segment with TSTART <= query <= TSTOP; include a zero-duration segment only when query equals its endpoint.",
+      "boundary": "closed interval"
+    },
+    "nearest": {
+      "rule": "Choose the segment minimizing absolute query-minus-center distance.",
+      "center": "(TSTART + TSTOP) / 2",
+      "tie_break": "smallest RSP_NUM"
+    },
+    "interpolation_bracket": {
+      "rule": "Choose adjacent ordered segment centers c_lower <= query <= c_upper with c_lower < c_upper.",
+      "weights": "w_lower=(c_upper-query)/(c_upper-c_lower), w_upper=(query-c_lower)/(c_upper-c_lower)",
+      "outside_domain": "NONE",
+      "selection": "No bracket is selected as a production response; both alternatives remain reported."
+    }
+  },
+  "admission": {
+    "matrix_values_read": false,
+    "calibration_validity_interpolation_admitted": false,
+    "detector_to_geocenter_conversion_admitted": false,
+    "timing_likelihood_admitted": false,
+    "covariance_admitted": false,
+    "nuisance_law_admitted": false,
+    "f_reg_f_lim_f_eff_f_obs_defined": false,
+    "candidate_scoring_allowed": false,
+    "prospective_lock": "EMPTY"
+  },
+  "assumptions": [
+    "The parent response-history manifest remains authoritative for product identity, official locators, byte lengths, SHA-256 values and local cache keys.",
+    "FITS binary-table scalar values and variable-array descriptors can be read with the declared big-endian table layout without interpreting response coefficients.",
+    "The fixed relative query offsets are a reproducibility fixture only; they are not selected from the data or used to tune a candidate.",
+    "Segment centers and interval endpoints are metadata for reporting selection alternatives, not a timing likelihood or uncertainty model.",
+    "The existing T-054 forward method, T-059 inverse method, T-061 owner order and promotion firewalls remain controlling."
+  ],
+  "missing_assumptions": [
+    "A source-owned rule linking response-history segments to event windows, spectral-history validity and calibration interpolation.",
+    "A detector-to-geocenter propagation conversion with uncertainty and a common time standard across instruments.",
+    "Frozen detector, energy, background and temporal windows with source-owned selection semantics.",
+    "A source-owned joint timing likelihood or component/shared covariance with calibration and intrinsic-emission nuisance terms.",
+    "A complete candidate-neutral F_reg/F_lim/F_eff/F_obs map and immutable scorer.",
+    "A prospective holdout not used for source selection, response selection or estimator design."
+  ],
+  "evidence_level": "T0 exact public-product byte check plus binary-table structure and selection-ambiguity index; no response coefficient or model test",
+  "non_claims": [
+    "This contract does not choose nearest, covering or interpolation as a production response and does not read or interpret response-matrix coefficients.",
+    "The descriptor and EBOUNDS checks do not establish calibration validity, detector-to-geocenter timing, a likelihood, covariance, nuisance law, candidate score or prediction.",
+    "The finite response-history index does not identify microscopic dynamics, causal propagation or a physical Yang-Mills sector.",
+    "No Pre-A, C6, A13, Sector-A, QFT, Yang-Mills, gravity, continuum, physical-vacuum, cosmic-origin, theory-of-everything or mass-gap claim follows.",
+    "The established T-054 forward and T-059/T-061 observation-first methods are unchanged; this is additive owner-intake bookkeeping only."
+  ],
+  "next_action": "Request a source-owned validity/interpolation and timing-uncertainty rule for these indexed segments. Keep all response alternatives, matrix values and scoring locked; only after the owner contract is complete may an event-free F_reg reproduction be considered.",
+  "recorded_by": "Codex"
+}

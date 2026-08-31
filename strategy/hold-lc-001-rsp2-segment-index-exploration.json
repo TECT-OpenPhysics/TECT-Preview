@@ -1,0 +1,137 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "schema_version": "1.0",
+  "id": "EXP-001343",
+  "recorded_at": "2026-08-31T05:00:00Z",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-08-31",
+  "provenance": "contemporaneous",
+  "task_id": "T-061",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "gate_ids": [
+    "PA-INVERSE-OBSERVATION-TARGET-MAP-HOLDOUT-FREEZE",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "title": "HOLD-LC-001 rsp2 binary-table segment index and selection ambiguity envelope",
+  "question": "What exact response-history segment structure and candidate-neutral selection alternatives are available before a source-owned validity/interpolation and timing-uncertainty rule is admitted?",
+  "decision_scope": "T0 finite response-history provenance and selection-index intake only; no response coefficient, calibration law, likelihood, covariance, score, candidate, prediction or physical inference",
+  "method": [
+    "Preserve the existing T-054 forward, T-059/T-061 observation-first inverse, owner order and promotion firewalls.",
+    "Reuse the hash-pinned response-history parent manifest and verify both local products byte-for-byte.",
+    "Parse the independent FITS binary-table layouts, read EBOUNDS and scalar matrix energy rows, and validate P-descriptor bounds without following any response heap coefficient.",
+    "Apply the preregistered covering, nearest and center-bracket rules to relative offsets -30, -15, 0, 15 and 30 seconds from TRIGTIME; retain every alternative and select none.",
+    "Run primary, non-importing independent, hostile, integrated and Lean checks; issue no intermediate PDF."
+  ],
+  "finding": "Both hash-pinned rsp2 products contain one 128-row EBOUNDS table and eight ordered response segments with 140 matrix rows each. All scalar energy intervals are monotone and all variable-array descriptors are nonempty and heap-bounded. The fixed query grid has explicit covering, nearest and linear center-bracket alternatives; no production response or score is selected.",
+  "verdict": "advanced",
+  "decision_reason": "The existing response-history audit stopped at FITS headers and table declarations. This additive binary-table index is the next nonredundant provenance step: it resolves segment intervals and descriptor integrity while preserving the no-matrix-value and no-scoring boundary.",
+  "boundary": "The index is finite metadata only. It does not admit response coefficients, calibration validity/interpolation, detector-to-geocenter timing, uncertainty, likelihood, covariance, nuisance, F_reg/F_lim/F_eff/F_obs, candidate scoring, prospective credit, microscopic dynamics, physical sector, Pre-A, QFT, Yang--Mills, gravity, continuum or mass gap.",
+  "evidence_level": "T0 exact public-product bytes plus binary-table structure and selection-ambiguity metadata",
+  "evidence_refs": [
+    "strategy/hold-lc-001-rsp2-segment-index-contract-v0.1.json#selection_contract",
+    "strategy/hold-lc-001-rsp2-segment-index-certificate-260831.md#Exact finite scope",
+    "codes/foundations/hold_lc_001_rsp2_segment_index.py#run",
+    "codes/foundations/hold_lc_001_rsp2_segment_index_independent.py#run",
+    "codes/foundations/hold_lc_001_rsp2_segment_index_hostile.py#run",
+    "verification/scripts/hold_lc_001_rsp2_segment_index_verify.py#run",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-primary-hold-lc-rsp2-segment-index/primary.json#assertion_summary",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-independent-hold-lc-rsp2-segment-index/independent.json#assertion_summary",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-hostile-hold-lc-rsp2-segment-index/hostile.json#assertion_summary",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-integrated-hold-lc-rsp2-segment-index/integrated.json#assertion_summary",
+    "verification/lean/Tect/R468.lean#interpolation_weight_sum"
+  ],
+  "formal_refs": {
+    "results": [
+      "R-468"
+    ],
+    "negatives": [],
+    "events": [
+      "20260831-r-468-hold-lc-001-rsp2-segment-index-2026-08-31"
+    ]
+  },
+  "formal_integration": {
+    "results": [
+      "R-468"
+    ],
+    "negatives": [],
+    "events": [
+      "20260831-r-468-hold-lc-001-rsp2-segment-index-2026-08-31"
+    ],
+    "no_new_negative": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "assumptions": [
+    "The parent response-history manifest remains authoritative for exact product identity, locators, byte lengths and SHA-256 values.",
+    "The FITS scalar/table declarations and P-descriptors can be read with the declared big-endian layout without interpreting response coefficients.",
+    "The fixed query grid exposes reproducibility alternatives only and is not fitted or used to tune a candidate.",
+    "The existing T-054 forward and T-059/T-061 inverse methods, owner order and promotion firewalls remain controlling."
+  ],
+  "missing_assumptions": [
+    "A source-owned response-validity/interpolation rule tied to event and spectral-history windows.",
+    "A detector-to-geocenter propagation conversion with uncertainty and a common time standard.",
+    "Frozen detector, energy, background and temporal windows with source-owned selection semantics.",
+    "A joint timing likelihood or shared/component covariance with calibration and intrinsic-emission nuisance terms.",
+    "A complete candidate-neutral F_reg/F_lim/F_eff/F_obs map, immutable scorer and prospective holdout."
+  ],
+  "next_action": "Request and hash-pin the owner validity/interpolation and timing-uncertainty rules. Keep the three selection alternatives, response coefficients and candidate scoring locked; do not treat the index as an event-level likelihood or physical result.",
+  "stop_or_redesign": [
+    "If the parent bytes or table layout drift, stop and refresh the versioned manifest rather than silently replacing evidence.",
+    "If the owner cannot supply validity/interpolation and uncertainty fields, retain this finite index and park event-free scoring.",
+    "If a later owner changes the response contract, issue a new versioned contract; do not mutate this record or the established methods."
+  ],
+  "adversarial_review": [
+    {
+      "axis": "byte-provenance",
+      "check": "Could an altered response product be accepted under the old manifest?",
+      "disposition": "REJECTED by exact hash and byte-length checks."
+    },
+    {
+      "axis": "segment-geometry",
+      "check": "Could numbering, interval order, energy monotonicity or descriptor bounds be corrupted?",
+      "disposition": "REJECTED by primary/independent checks and hostile mutations."
+    },
+    {
+      "axis": "heap-leakage",
+      "check": "Could matrix coefficients be silently read or interpreted?",
+      "disposition": "REJECTED by explicit matrix_coefficients_read=false and heap-not-interpreted firewall."
+    },
+    {
+      "axis": "selection-leakage",
+      "check": "Could one response alternative be promoted to a production choice?",
+      "disposition": "REJECTED by NONE_SELECTED, retained alternatives and hostile mutation."
+    },
+    {
+      "axis": "prospective-leakage",
+      "check": "Could the fixed query grid or response choice earn prospective credit?",
+      "disposition": "REJECTED; prospective lock is EMPTY."
+    },
+    {
+      "axis": "physical-overreach",
+      "check": "Could finite response metadata be promoted to microscopic dynamics or Yang--Mills evidence?",
+      "disposition": "UPHELD-REJECTED; the physical owner, map and all promotion fields remain unadmitted."
+    },
+    {
+      "axis": "method-overhaul",
+      "check": "Could this additive index replace T-054/T-059/T-061?",
+      "disposition": "REJECTED; methods and owner order are explicitly unchanged."
+    },
+    {
+      "axis": "independent-reproduction",
+      "check": "Could a single parser hide a binary-layout error?",
+      "disposition": "REJECTED; a non-importing standard-library parser agrees on the core digest."
+    }
+  ],
+  "related": [
+    {
+      "id": "EXP-001306",
+      "relation": "continues"
+    },
+    {
+      "id": "EXP-001308",
+      "relation": "continues"
+    }
+  ]
+}

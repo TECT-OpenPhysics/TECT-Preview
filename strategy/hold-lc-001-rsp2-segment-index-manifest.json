@@ -1,0 +1,228 @@
+{
+  "schema": "tect/hold-lc-001-rsp2-segment-index/1.0",
+  "schema_version": "1.0",
+  "audit_id": "HOLD-LC-001-RSP2-SEGMENT-INDEX-v1",
+  "result_id": "R-468",
+  "exploration_id": "EXP-001343",
+  "task_id": "T-061",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "title": "HOLD-LC-001 rsp2 binary-table segment index and selection ambiguity envelope",
+  "tier": "T0",
+  "claim_bearing": false,
+  "status": "FINITE_RESPONSE_HISTORY_INDEXED_SELECTION_UNSELECTED_OWNER_OPEN",
+  "question": "What exact response-history segment structure and candidate-neutral selection alternatives are available before a source-owned validity/interpolation and timing-uncertainty rule is admitted?",
+  "purpose": "Additive binary-table owner intake only; preserve T-054, T-059 and T-061 methods, owner order and promotion firewalls.",
+  "inputs": {
+    "response_history_manifest": {
+      "path": "strategy/hold-lc-001-response-history-byte-freeze-v0.1.json",
+      "sha256": "b47228b036f9e057b2c213f41b477466a76d3d4107d929b93eb5c2a87ee7a5c2"
+    },
+    "products": [
+      "FERMI-GBM-EVENT-TRIGGER-RSP2-N0",
+      "FERMI-GBM-EVENT-TRIGGER-RSP2-B0"
+    ],
+    "cache_root": "internal/source-cache/HOLD-LC-001/2026-08-30"
+  },
+  "methods_preserved": {
+    "t054_forward_method_unchanged": true,
+    "t059_t061_observation_first_method_unchanged": true,
+    "owner_order_unchanged": true,
+    "promotion_firewalls_unchanged": true,
+    "additive_owner_intake_only": true,
+    "no_response_selection": true,
+    "no_matrix_value_interpretation": true,
+    "no_candidate_scoring": true,
+    "no_tier_change": true
+  },
+  "exact_scope": {
+    "products": 2,
+    "ebounds_tables_per_product": 1,
+    "ebounds_rows_per_product": 128,
+    "response_segments_per_product": 8,
+    "matrix_rows_per_segment": 140,
+    "read_values": [
+      "EBOUNDS E_MIN/E_MAX scalars",
+      "matrix ENERG_LO/ENERG_HI/N_GRP scalars",
+      "P-descriptor counts and offsets"
+    ],
+    "not_read_values": [
+      "F_CHAN heap arrays",
+      "N_CHAN heap arrays",
+      "MATRIX response coefficients"
+    ],
+    "query_grid_relative_offsets_s": [
+      -30,
+      -15,
+      0,
+      15,
+      30
+    ],
+    "selection_alternatives": {
+      "covering": "closed TSTART/TSTOP interval, with zero-duration endpoint rule",
+      "nearest": "minimum absolute distance to (TSTART+TSTOP)/2, smallest RSP_NUM tie break",
+      "interpolation_bracket": "adjacent ordered centers and linear weights; outside domain is NONE"
+    },
+    "limit_order": "none; finite provenance/selection-index intake only"
+  },
+  "theorem_or_checks": [
+    "Exact byte and length identity against the response-history manifest.",
+    "FITS binary-table row layout and channel/energy monotonicity.",
+    "P-descriptor nonempty and heap-bound checks without following heap arrays.",
+    "Ordered nonoverlapping RSP_NUM/TSTART/TSTOP segment index.",
+    "Candidate-neutral covering, nearest and center-bracket alternatives with weights in [0,1] summing to one."
+  ],
+  "assumptions": [
+    "The parent response-history manifest remains authoritative for identity, locators, byte lengths and SHA-256 values.",
+    "FITS scalar/table declarations and P-descriptors can be read with the declared big-endian layout without interpreting response coefficients.",
+    "The fixed query grid is a reproducibility fixture and is not fitted or used to tune a candidate.",
+    "The existing T-054 forward and T-059/T-061 inverse methods, owner order and promotion firewalls remain controlling."
+  ],
+  "missing_assumptions": [
+    "Source-owned response-validity/interpolation rule tied to event and spectral-history windows.",
+    "Detector-to-geocenter propagation conversion with uncertainty and a common time standard.",
+    "Frozen detector, energy, background and temporal windows with source-owned selection semantics.",
+    "Joint timing likelihood or shared/component covariance with calibration and intrinsic-emission nuisance terms.",
+    "Complete candidate-neutral F_reg/F_lim/F_eff/F_obs map, immutable scorer and prospective holdout."
+  ],
+  "adversarial_review": [
+    {
+      "axis": "byte-provenance",
+      "check": "Altered product hash or length",
+      "disposition": "REJECTED by parent-manifest identity checks."
+    },
+    {
+      "axis": "table-geometry",
+      "check": "Wrong row width, channel order, energy monotonicity, segment numbering, overlap or heap bound",
+      "disposition": "REJECTED by primary/independent checks and hostile mutations."
+    },
+    {
+      "axis": "heap-leakage",
+      "check": "Read or interpret response coefficients",
+      "disposition": "REJECTED by explicit matrix_coefficients_read=false and no heap traversal."
+    },
+    {
+      "axis": "selection-leakage",
+      "check": "Promote one alternative to production or score it",
+      "disposition": "REJECTED by NONE_SELECTED and hostile mutations."
+    },
+    {
+      "axis": "prospective-leakage",
+      "check": "Treat the audit grid as holdout prediction",
+      "disposition": "REJECTED; prospective lock is EMPTY."
+    },
+    {
+      "axis": "physical-overreach",
+      "check": "Promote finite metadata to microscopic dynamics or Yang--Mills evidence",
+      "disposition": "UPHELD-REJECTED; physical owner and map remain unadmitted."
+    },
+    {
+      "axis": "method-overhaul",
+      "check": "Replace the established forward/inverse methods",
+      "disposition": "REJECTED; this package is additive only."
+    },
+    {
+      "axis": "independent-reproduction",
+      "check": "Hide binary-layout error in one implementation",
+      "disposition": "REJECTED; a non-importing parser agrees on the core digest."
+    }
+  ],
+  "test_oracles": {
+    "primary_assertions": 35,
+    "independent_core_assertions": 4,
+    "hostile_mutations": 10,
+    "integrated_assertions": 10,
+    "lean_declarations": [
+      "interpolation_weight_bounds",
+      "interpolation_weight_sum",
+      "covering_closed_interval",
+      "nearest_tie_break_is_ordered"
+    ]
+  },
+  "scope_firewall": {
+    "finite_index_closed": true,
+    "selection_mode": "NONE_SELECTED",
+    "matrix_values_admitted": false,
+    "calibration_validity_admitted": false,
+    "detector_to_geocenter_admitted": false,
+    "timing_likelihood_admitted": false,
+    "covariance_admitted": false,
+    "nuisance_admitted": false,
+    "f_reg_f_lim_f_eff_f_obs_defined": false,
+    "candidate_scoring_allowed": false,
+    "prospective_lock": "EMPTY",
+    "physical_sector_closed": false,
+    "pre_a_closed": false,
+    "sector_a_closed": false,
+    "qft_identity_closed": false,
+    "yang_mills_identity_closed": false,
+    "continuum_closed": false,
+    "mass_gap_closed": false,
+    "no_pdf": true
+  },
+  "evidence_level": "T0 exact public-product bytes plus finite binary-table structure and selection-ambiguity metadata",
+  "non_claims": [
+    "No response alternative is selected and no response coefficient is read or interpreted.",
+    "No calibration validity, timing conversion, uncertainty, likelihood, covariance, nuisance law, candidate score or holdout prediction is admitted.",
+    "No microscopic dynamics, causal propagation, physical sector, Pre-A, QFT, Yang--Mills, gravity, continuum or mass-gap conclusion follows.",
+    "Existing T-054, T-059 and T-061 methods, owner order and promotion firewalls are unchanged."
+  ],
+  "files": {
+    "contract": {
+      "path": "strategy/hold-lc-001-rsp2-segment-index-contract-v0.1.json",
+      "sha256": "2723b184a3d1cdeca2c7c75e95f993af6fdc0556a99bbb4c034a8b4f56f807dc"
+    },
+    "certificate": {
+      "path": "strategy/hold-lc-001-rsp2-segment-index-certificate-260831.md",
+      "sha256": "8f0f55e2104e5e209971d280c650439ee5fa0d6f82e60b5a21cf2eca75075c6e"
+    },
+    "primary": {
+      "path": "codes/foundations/hold_lc_001_rsp2_segment_index.py",
+      "sha256": "96c692ce75d6a1d175f31f0d95f7996b0fa60cad3005cd265e392bdf30911b53"
+    },
+    "independent": {
+      "path": "codes/foundations/hold_lc_001_rsp2_segment_index_independent.py",
+      "sha256": "4602c151cf8d8d8fe8efac2f07052d81bf90827c36238fd56a773976a5c9196d"
+    },
+    "hostile": {
+      "path": "codes/foundations/hold_lc_001_rsp2_segment_index_hostile.py",
+      "sha256": "e7100182e3e506c4f930af6a5ae74211271937c8116c3ed5890f14094146d1fa"
+    },
+    "integrated": {
+      "path": "verification/scripts/hold_lc_001_rsp2_segment_index_verify.py",
+      "sha256": "a04646ecb08304200f383ca5a5bcda70adaa14a28930c2f79d977244ddc01aa4"
+    },
+    "lean": {
+      "path": "verification/lean/Tect/R468.lean",
+      "sha256": "1a8eb3819995f7659228017b6af51f348c2dfd84c5f37f30359191d81840b01e"
+    },
+    "primary_run": {
+      "path": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-primary-hold-lc-rsp2-segment-index/primary.json",
+      "sha256": "fe349829412125e46a9ae89a29bed8c4a5b747ee2f5f72f10323f4085387ab1f"
+    },
+    "independent_run": {
+      "path": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-independent-hold-lc-rsp2-segment-index/independent.json",
+      "sha256": "8a78e9de191dbd5643faf7074139872637476646cefc2bc6387516770794c513"
+    },
+    "hostile_run": {
+      "path": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-hostile-hold-lc-rsp2-segment-index/hostile.json",
+      "sha256": "cc8108ea9afba4faee5d4377cf3e3ed7524ae314c4d2d828637290ee8d7b9616"
+    },
+    "integrated_run": {
+      "path": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-integrated-hold-lc-rsp2-segment-index/integrated.json",
+      "sha256": "dcd6f2433fb8e470feadebdeecc71cc4033cfb3dac4df4f677926faf2b690f7d"
+    }
+  },
+  "formal_integration": {
+    "results": [
+      "R-468"
+    ],
+    "event_ordinal": 817,
+    "no_new_negative_ids": [],
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "boundary": "Finite response-history segment metadata and unselected alternatives only; source-owned validity/interpolation, timing uncertainty, likelihood, covariance, nuisance, complete map, prospective holdout, physical identity and continuum remain open.",
+  "next_action": "Hash-pin the source-owned validity/interpolation and timing-uncertainty rules. Keep all alternatives, response coefficients and scoring locked until the owner contract is complete."
+}

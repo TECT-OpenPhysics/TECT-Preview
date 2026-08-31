@@ -1,0 +1,642 @@
+{
+  "admission": {
+    "calibration_validity_interpolation_admitted": false,
+    "candidate_scoring_allowed": false,
+    "covariance_admitted": false,
+    "detector_to_geocenter_conversion_admitted": false,
+    "f_reg_f_lim_f_eff_f_obs_defined": false,
+    "matrix_values_read": false,
+    "nuisance_law_admitted": false,
+    "prospective_lock": "EMPTY",
+    "timing_likelihood_admitted": false
+  },
+  "assertion_count": 4,
+  "assertions": [
+    {
+      "actual": "b47228b036f9e057b2c213f41b477466a76d3d4107d929b93eb5c2a87ee7a5c2",
+      "expected": "b47228b036f9e057b2c213f41b477466a76d3d4107d929b93eb5c2a87ee7a5c2",
+      "name": "parent-manifest",
+      "status": "PASS"
+    },
+    {
+      "actual": 2,
+      "expected": 2,
+      "name": "product-count",
+      "status": "PASS"
+    },
+    {
+      "actual": 16,
+      "expected": 16,
+      "name": "segment-count",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "matrix-values-locked",
+      "status": "PASS"
+    }
+  ],
+  "assumptions": [
+    "The parent response-history manifest remains authoritative for product identity, official locators, byte lengths, SHA-256 values and local cache keys.",
+    "FITS binary-table scalar values and variable-array descriptors can be read with the declared big-endian table layout without interpreting response coefficients.",
+    "The fixed relative query offsets are a reproducibility fixture only; they are not selected from the data or used to tune a candidate.",
+    "Segment centers and interval endpoints are metadata for reporting selection alternatives, not a timing likelihood or uncertainty model.",
+    "The existing T-054 forward method, T-059 inverse method, T-061 owner order and promotion firewalls remain controlling."
+  ],
+  "audit_id": "HOLD-LC-001-RSP2-SEGMENT-INDEX-INDEPENDENT",
+  "boundary": [
+    "This contract does not choose nearest, covering or interpolation as a production response and does not read or interpret response-matrix coefficients.",
+    "The descriptor and EBOUNDS checks do not establish calibration validity, detector-to-geocenter timing, a likelihood, covariance, nuisance law, candidate score or prediction.",
+    "The finite response-history index does not identify microscopic dynamics, causal propagation or a physical Yang-Mills sector.",
+    "No Pre-A, C6, A13, Sector-A, QFT, Yang-Mills, gravity, continuum, physical-vacuum, cosmic-origin, theory-of-everything or mass-gap claim follows.",
+    "The established T-054 forward and T-059/T-061 observation-first methods are unchanged; this is additive owner-intake bookkeeping only."
+  ],
+  "candidate_scoring": false,
+  "claim_bearing": false,
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "core_digest": "4aedf179dc9fc56cfbb40a7f5ee233fc7741bfa0ed9be8e1cd814a8cae7aa59a",
+  "evidence_level": "T0 exact public-product byte check plus binary-table structure and selection-ambiguity index; no response coefficient or model test",
+  "holdout_id": "HOLD-LC-001",
+  "matrix_coefficients_read": false,
+  "methods_unchanged": true,
+  "missing_assumptions": [
+    "A source-owned rule linking response-history segments to event windows, spectral-history validity and calibration interpolation.",
+    "A detector-to-geocenter propagation conversion with uncertainty and a common time standard across instruments.",
+    "Frozen detector, energy, background and temporal windows with source-owned selection semantics.",
+    "A source-owned joint timing likelihood or component/shared covariance with calibration and intrinsic-emission nuisance terms.",
+    "A complete candidate-neutral F_reg/F_lim/F_eff/F_obs map and immutable scorer.",
+    "A prospective holdout not used for source selection, response selection or estimator design."
+  ],
+  "passed": 4,
+  "products": [
+    {
+      "actual_byte_length": 682560,
+      "actual_sha256": "3302916c975c44cce107c39ded80c6c7f2455e574c6c230a9853e8dbb342005d",
+      "byte_length_match": true,
+      "detector": "GBM NaI N0",
+      "id": "FERMI-GBM-EVENT-TRIGGER-RSP2-N0",
+      "local_cache_key": "HOLD-LC-001/2026-08-30/owner/glg_cspec_n0_bn170817529_v04.rsp2",
+      "query_selection_alternatives": [
+        {
+          "covering_rsp_nums": [
+            3
+          ],
+          "interpolation_bracket": {
+            "lower_center_met": "524666404.14555001",
+            "lower_rsp_num": 2,
+            "lower_weight": "0.06529345855655054",
+            "upper_center_met": "524666444.08219999",
+            "upper_rsp_num": 3,
+            "upper_weight": "0.93470654144344945"
+          },
+          "nearest_rsp_num": 3,
+          "query_met": "524666441.47459799",
+          "relative_offset_s": -30
+        },
+        {
+          "covering_rsp_nums": [
+            3
+          ],
+          "interpolation_bracket": {
+            "lower_center_met": "524666444.08219999",
+            "lower_rsp_num": 3,
+            "lower_weight": "0.65423527267623038",
+            "upper_center_met": "524666479.92275",
+            "upper_rsp_num": 4,
+            "upper_weight": "0.34576472732376962"
+          },
+          "nearest_rsp_num": 3,
+          "query_met": "524666456.47459799",
+          "relative_offset_s": -15
+        },
+        {
+          "covering_rsp_nums": [
+            4
+          ],
+          "interpolation_bracket": {
+            "lower_center_met": "524666444.08219999",
+            "lower_rsp_num": 3,
+            "lower_weight": "0.23571490963144043",
+            "upper_center_met": "524666479.92275",
+            "upper_rsp_num": 4,
+            "upper_weight": "0.76428509036855963"
+          },
+          "nearest_rsp_num": 4,
+          "query_met": "524666471.47459799",
+          "relative_offset_s": 0
+        },
+        {
+          "covering_rsp_nums": [
+            4
+          ],
+          "interpolation_bracket": {
+            "lower_center_met": "524666479.92275",
+            "lower_rsp_num": 4,
+            "lower_weight": "0.79688286103063566",
+            "upper_center_met": "524666512.17925",
+            "upper_rsp_num": 5,
+            "upper_weight": "0.20311713896936431"
+          },
+          "nearest_rsp_num": 4,
+          "query_met": "524666486.47459799",
+          "relative_offset_s": 15
+        },
+        {
+          "covering_rsp_nums": [
+            5
+          ],
+          "interpolation_bracket": {
+            "lower_center_met": "524666479.92275",
+            "lower_rsp_num": 4,
+            "lower_weight": "0.3318603075192777",
+            "upper_center_met": "524666512.17925",
+            "upper_rsp_num": 5,
+            "upper_weight": "0.66813969248072236"
+          },
+          "nearest_rsp_num": 5,
+          "query_met": "524666501.47459799",
+          "relative_offset_s": 30
+        }
+      ],
+      "recorded_byte_length": 682560,
+      "recorded_sha256": "3302916c975c44cce107c39ded80c6c7f2455e574c6c230a9853e8dbb342005d",
+      "segments": [
+        {
+          "center_met": "524666363.18489999",
+          "descriptor_heap_bytes": 70208,
+          "descriptor_max_end": 70208,
+          "descriptor_rows_nonempty": 140,
+          "descriptor_rows_valid": 140,
+          "duration_s": "40.960600018501282",
+          "energy_range_keV": [
+            "5",
+            "50000"
+          ],
+          "hdu_index": 2,
+          "matrix_coefficients_read": false,
+          "matrix_heap_interpreted": false,
+          "row_count": 140,
+          "rsp_num": 1,
+          "tstart_met": "524666342.70459998",
+          "tstop_met": "524666383.6652"
+        },
+        {
+          "center_met": "524666404.14555001",
+          "descriptor_heap_bytes": 70208,
+          "descriptor_max_end": 70208,
+          "descriptor_rows_nonempty": 140,
+          "descriptor_rows_valid": 140,
+          "duration_s": "40.96069997549057",
+          "energy_range_keV": [
+            "5",
+            "50000"
+          ],
+          "hdu_index": 3,
+          "matrix_coefficients_read": false,
+          "matrix_heap_interpreted": false,
+          "row_count": 140,
+          "rsp_num": 2,
+          "tstart_met": "524666383.6652",
+          "tstop_met": "524666424.62589997"
+        },
+        {
+          "center_met": "524666444.08219999",
+          "descriptor_heap_bytes": 70208,
+          "descriptor_max_end": 70208,
+          "descriptor_rows_nonempty": 140,
+          "descriptor_rows_valid": 140,
+          "duration_s": "38.912600040435791",
+          "energy_range_keV": [
+            "5",
+            "50000"
+          ],
+          "hdu_index": 4,
+          "matrix_coefficients_read": false,
+          "matrix_heap_interpreted": false,
+          "row_count": 140,
+          "rsp_num": 3,
+          "tstart_met": "524666424.62589997",
+          "tstop_met": "524666463.53850001"
+        },
+        {
+          "center_met": "524666479.92275",
+          "descriptor_heap_bytes": 71728,
+          "descriptor_max_end": 71728,
+          "descriptor_rows_nonempty": 140,
+          "descriptor_rows_valid": 140,
+          "duration_s": "32.768499970436096",
+          "energy_range_keV": [
+            "5",
+            "50000"
+          ],
+          "hdu_index": 5,
+          "matrix_coefficients_read": false,
+          "matrix_heap_interpreted": false,
+          "row_count": 140,
+          "rsp_num": 4,
+          "tstart_met": "524666463.53850001",
+          "tstop_met": "524666496.30699998"
+        },
+        {
+          "center_met": "524666512.17925",
+          "descriptor_heap_bytes": 71728,
+          "descriptor_max_end": 71728,
+          "descriptor_rows_nonempty": 140,
+          "descriptor_rows_valid": 140,
+          "duration_s": "31.744500041007996",
+          "energy_range_keV": [
+            "5",
+            "50000"
+          ],
+          "hdu_index": 6,
+          "matrix_coefficients_read": false,
+          "matrix_heap_interpreted": false,
+          "row_count": 140,
+          "rsp_num": 5,
+          "tstart_met": "524666496.30699998",
+          "tstop_met": "524666528.05150002"
+        },
+        {
+          "center_met": "524666545.97179997",
+          "descriptor_heap_bytes": 71728,
+          "descriptor_max_end": 71728,
+          "descriptor_rows_nonempty": 140,
+          "descriptor_rows_valid": 140,
+          "duration_s": "35.840599954128265",
+          "energy_range_keV": [
+            "5",
+            "50000"
+          ],
+          "hdu_index": 7,
+          "matrix_coefficients_read": false,
+          "matrix_heap_interpreted": false,
+          "row_count": 140,
+          "rsp_num": 6,
+          "tstart_met": "524666528.05150002",
+          "tstop_met": "524666563.89209998"
+        },
+        {
+          "center_met": "524666580.27635002",
+          "descriptor_heap_bytes": 71728,
+          "descriptor_max_end": 71728,
+          "descriptor_rows_nonempty": 140,
+          "descriptor_rows_valid": 140,
+          "duration_s": "32.768500030040741",
+          "energy_range_keV": [
+            "5",
+            "50000"
+          ],
+          "hdu_index": 8,
+          "matrix_coefficients_read": false,
+          "matrix_heap_interpreted": false,
+          "row_count": 140,
+          "rsp_num": 7,
+          "tstart_met": "524666563.89209998",
+          "tstop_met": "524666596.66060001"
+        },
+        {
+          "center_met": "524666596.66060001",
+          "descriptor_heap_bytes": 71728,
+          "descriptor_max_end": 71728,
+          "descriptor_rows_nonempty": 140,
+          "descriptor_rows_valid": 140,
+          "duration_s": "0",
+          "energy_range_keV": [
+            "5",
+            "50000"
+          ],
+          "hdu_index": 9,
+          "matrix_coefficients_read": false,
+          "matrix_heap_interpreted": false,
+          "row_count": 140,
+          "rsp_num": 8,
+          "tstart_met": "524666596.66060001",
+          "tstop_met": "524666596.66060001"
+        }
+      ],
+      "sha256_match": true,
+      "source": {
+        "ebounds": {
+          "channel_first": 0,
+          "channel_last": 127,
+          "energy_bounds_monotone": true,
+          "energy_max_keV": "2000",
+          "energy_min_keV": "4.5840001106262207",
+          "row_count": 128,
+          "values_read": true
+        },
+        "response_numbers": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "response_segment_count": 8,
+        "segments_ordered_and_nonoverlapping": true,
+        "trigtime_met": "524666471.47459799"
+      }
+    },
+    {
+      "actual_byte_length": 682560,
+      "actual_sha256": "1760b4723d2e704ccaf030147244ec2b8648c22355ea1e181509791505164d7a",
+      "byte_length_match": true,
+      "detector": "GBM BGO B0",
+      "id": "FERMI-GBM-EVENT-TRIGGER-RSP2-B0",
+      "local_cache_key": "HOLD-LC-001/2026-08-30/owner/glg_cspec_b0_bn170817529_v04.rsp2",
+      "query_selection_alternatives": [
+        {
+          "covering_rsp_nums": [
+            3
+          ],
+          "interpolation_bracket": {
+            "lower_center_met": "524666404.14555001",
+            "lower_rsp_num": 2,
+            "lower_weight": "0.06529345855655054",
+            "upper_center_met": "524666444.08219999",
+            "upper_rsp_num": 3,
+            "upper_weight": "0.93470654144344945"
+          },
+          "nearest_rsp_num": 3,
+          "query_met": "524666441.47459799",
+          "relative_offset_s": -30
+        },
+        {
+          "covering_rsp_nums": [
+            3
+          ],
+          "interpolation_bracket": {
+            "lower_center_met": "524666444.08219999",
+            "lower_rsp_num": 3,
+            "lower_weight": "0.65423527267623038",
+            "upper_center_met": "524666479.92275",
+            "upper_rsp_num": 4,
+            "upper_weight": "0.34576472732376962"
+          },
+          "nearest_rsp_num": 3,
+          "query_met": "524666456.47459799",
+          "relative_offset_s": -15
+        },
+        {
+          "covering_rsp_nums": [
+            4
+          ],
+          "interpolation_bracket": {
+            "lower_center_met": "524666444.08219999",
+            "lower_rsp_num": 3,
+            "lower_weight": "0.23571490963144043",
+            "upper_center_met": "524666479.92275",
+            "upper_rsp_num": 4,
+            "upper_weight": "0.76428509036855963"
+          },
+          "nearest_rsp_num": 4,
+          "query_met": "524666471.47459799",
+          "relative_offset_s": 0
+        },
+        {
+          "covering_rsp_nums": [
+            4
+          ],
+          "interpolation_bracket": {
+            "lower_center_met": "524666479.92275",
+            "lower_rsp_num": 4,
+            "lower_weight": "0.79688286103063566",
+            "upper_center_met": "524666512.17925",
+            "upper_rsp_num": 5,
+            "upper_weight": "0.20311713896936431"
+          },
+          "nearest_rsp_num": 4,
+          "query_met": "524666486.47459799",
+          "relative_offset_s": 15
+        },
+        {
+          "covering_rsp_nums": [
+            5
+          ],
+          "interpolation_bracket": {
+            "lower_center_met": "524666479.92275",
+            "lower_rsp_num": 4,
+            "lower_weight": "0.3318603075192777",
+            "upper_center_met": "524666512.17925",
+            "upper_rsp_num": 5,
+            "upper_weight": "0.66813969248072236"
+          },
+          "nearest_rsp_num": 5,
+          "query_met": "524666501.47459799",
+          "relative_offset_s": 30
+        }
+      ],
+      "recorded_byte_length": 682560,
+      "recorded_sha256": "1760b4723d2e704ccaf030147244ec2b8648c22355ea1e181509791505164d7a",
+      "segments": [
+        {
+          "center_met": "524666363.18489999",
+          "descriptor_heap_bytes": 71732,
+          "descriptor_max_end": 71732,
+          "descriptor_rows_nonempty": 140,
+          "descriptor_rows_valid": 140,
+          "duration_s": "40.960600018501282",
+          "energy_range_keV": [
+            "100",
+            "200000"
+          ],
+          "hdu_index": 2,
+          "matrix_coefficients_read": false,
+          "matrix_heap_interpreted": false,
+          "row_count": 140,
+          "rsp_num": 1,
+          "tstart_met": "524666342.70459998",
+          "tstop_met": "524666383.6652"
+        },
+        {
+          "center_met": "524666404.14555001",
+          "descriptor_heap_bytes": 71732,
+          "descriptor_max_end": 71732,
+          "descriptor_rows_nonempty": 140,
+          "descriptor_rows_valid": 140,
+          "duration_s": "40.96069997549057",
+          "energy_range_keV": [
+            "100",
+            "200000"
+          ],
+          "hdu_index": 3,
+          "matrix_coefficients_read": false,
+          "matrix_heap_interpreted": false,
+          "row_count": 140,
+          "rsp_num": 2,
+          "tstart_met": "524666383.6652",
+          "tstop_met": "524666424.62589997"
+        },
+        {
+          "center_met": "524666444.08219999",
+          "descriptor_heap_bytes": 71732,
+          "descriptor_max_end": 71732,
+          "descriptor_rows_nonempty": 140,
+          "descriptor_rows_valid": 140,
+          "duration_s": "38.912600040435791",
+          "energy_range_keV": [
+            "100",
+            "200000"
+          ],
+          "hdu_index": 4,
+          "matrix_coefficients_read": false,
+          "matrix_heap_interpreted": false,
+          "row_count": 140,
+          "rsp_num": 3,
+          "tstart_met": "524666424.62589997",
+          "tstop_met": "524666463.53850001"
+        },
+        {
+          "center_met": "524666479.92275",
+          "descriptor_heap_bytes": 71732,
+          "descriptor_max_end": 71732,
+          "descriptor_rows_nonempty": 140,
+          "descriptor_rows_valid": 140,
+          "duration_s": "32.768499970436096",
+          "energy_range_keV": [
+            "100",
+            "200000"
+          ],
+          "hdu_index": 5,
+          "matrix_coefficients_read": false,
+          "matrix_heap_interpreted": false,
+          "row_count": 140,
+          "rsp_num": 4,
+          "tstart_met": "524666463.53850001",
+          "tstop_met": "524666496.30699998"
+        },
+        {
+          "center_met": "524666512.17925",
+          "descriptor_heap_bytes": 71732,
+          "descriptor_max_end": 71732,
+          "descriptor_rows_nonempty": 140,
+          "descriptor_rows_valid": 140,
+          "duration_s": "31.744500041007996",
+          "energy_range_keV": [
+            "100",
+            "200000"
+          ],
+          "hdu_index": 6,
+          "matrix_coefficients_read": false,
+          "matrix_heap_interpreted": false,
+          "row_count": 140,
+          "rsp_num": 5,
+          "tstart_met": "524666496.30699998",
+          "tstop_met": "524666528.05150002"
+        },
+        {
+          "center_met": "524666545.97179997",
+          "descriptor_heap_bytes": 71732,
+          "descriptor_max_end": 71732,
+          "descriptor_rows_nonempty": 140,
+          "descriptor_rows_valid": 140,
+          "duration_s": "35.840599954128265",
+          "energy_range_keV": [
+            "100",
+            "200000"
+          ],
+          "hdu_index": 7,
+          "matrix_coefficients_read": false,
+          "matrix_heap_interpreted": false,
+          "row_count": 140,
+          "rsp_num": 6,
+          "tstart_met": "524666528.05150002",
+          "tstop_met": "524666563.89209998"
+        },
+        {
+          "center_met": "524666580.27635002",
+          "descriptor_heap_bytes": 71732,
+          "descriptor_max_end": 71732,
+          "descriptor_rows_nonempty": 140,
+          "descriptor_rows_valid": 140,
+          "duration_s": "32.768500030040741",
+          "energy_range_keV": [
+            "100",
+            "200000"
+          ],
+          "hdu_index": 8,
+          "matrix_coefficients_read": false,
+          "matrix_heap_interpreted": false,
+          "row_count": 140,
+          "rsp_num": 7,
+          "tstart_met": "524666563.89209998",
+          "tstop_met": "524666596.66060001"
+        },
+        {
+          "center_met": "524666596.66060001",
+          "descriptor_heap_bytes": 71732,
+          "descriptor_max_end": 71732,
+          "descriptor_rows_nonempty": 140,
+          "descriptor_rows_valid": 140,
+          "duration_s": "0",
+          "energy_range_keV": [
+            "100",
+            "200000"
+          ],
+          "hdu_index": 9,
+          "matrix_coefficients_read": false,
+          "matrix_heap_interpreted": false,
+          "row_count": 140,
+          "rsp_num": 8,
+          "tstart_met": "524666596.66060001",
+          "tstop_met": "524666596.66060001"
+        }
+      ],
+      "sha256_match": true,
+      "source": {
+        "ebounds": {
+          "channel_first": 0,
+          "channel_last": 127,
+          "energy_bounds_monotone": true,
+          "energy_max_keV": "50000",
+          "energy_min_keV": "113.73100280761719",
+          "row_count": 128,
+          "values_read": true
+        },
+        "response_numbers": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "response_segment_count": 8,
+        "segments_ordered_and_nonoverlapping": true,
+        "trigtime_met": "524666471.47459799"
+      }
+    }
+  ],
+  "prospective_lock": "EMPTY",
+  "provenance": {
+    "contract_sha256": "2723b184a3d1cdeca2c7c75e95f993af6fdc0556a99bbb4c034a8b4f56f807dc",
+    "parent_response_history_manifest_sha256": "b47228b036f9e057b2c213f41b477466a76d3d4107d929b93eb5c2a87ee7a5c2"
+  },
+  "recorded_at": "2026-08-31T04:45:23.138071Z",
+  "run_kind": "independent",
+  "schema": "tect/foundation-audit/1.0",
+  "scope": {
+    "matrix_coefficients_read": false,
+    "query_grid_relative_offsets_s": [
+      -30,
+      -15,
+      0,
+      15,
+      30
+    ],
+    "selection_alternatives": [
+      "covering",
+      "nearest",
+      "interpolation_bracket"
+    ]
+  },
+  "selection_mode": "NONE_SELECTED",
+  "task_id": "T-061",
+  "verdict": "PASS"
+}

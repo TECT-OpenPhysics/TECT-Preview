@@ -1,0 +1,121 @@
+{
+  "assertion_count": 10,
+  "assertions": [
+    {
+      "actual": "HOLD-LC-RSP2-INDEX: PASS products=2 segments=16 assertions=35 matrix_values=NOT_READ selection=NONE_SELECTED score=STOPPED\n",
+      "expected": "PASS",
+      "name": "primary child",
+      "pass": true
+    },
+    {
+      "actual": "HOLD-LC-RSP2-INDEX INDEPENDENT: PASS products=2 segments=16 matrix_values=NOT_READ selection=NONE_SELECTED score=STOPPED\n",
+      "expected": "PASS",
+      "name": "independent child",
+      "pass": true
+    },
+    {
+      "actual": "HOLD-LC-RSP2-INDEX HOSTILE: PASS 10/10 mutations rejected\n",
+      "expected": "PASS",
+      "name": "hostile child",
+      "pass": true
+    },
+    {
+      "actual": [
+        "4aedf179dc9fc56cfbb40a7f5ee233fc7741bfa0ed9be8e1cd814a8cae7aa59a",
+        "4aedf179dc9fc56cfbb40a7f5ee233fc7741bfa0ed9be8e1cd814a8cae7aa59a"
+      ],
+      "expected": "equal",
+      "name": "lane core agreement",
+      "pass": true
+    },
+    {
+      "actual": 2,
+      "expected": 2,
+      "name": "two products",
+      "pass": true
+    },
+    {
+      "actual": 16,
+      "expected": 16,
+      "name": "sixteen segments",
+      "pass": true
+    },
+    {
+      "actual": [
+        5,
+        5
+      ],
+      "expected": 5,
+      "name": "query alternatives retained",
+      "pass": true
+    },
+    {
+      "actual": {
+        "calibration_validity_interpolation_admitted": false,
+        "candidate_scoring_allowed": false,
+        "covariance_admitted": false,
+        "detector_to_geocenter_conversion_admitted": false,
+        "f_reg_f_lim_f_eff_f_obs_defined": false,
+        "matrix_values_read": false,
+        "nuisance_law_admitted": false,
+        "prospective_lock": "EMPTY",
+        "timing_likelihood_admitted": false
+      },
+      "expected": false,
+      "name": "matrix values locked",
+      "pass": true
+    },
+    {
+      "actual": [
+        "NONE_SELECTED",
+        false
+      ],
+      "expected": [
+        "NONE_SELECTED",
+        false
+      ],
+      "name": "selection stopped",
+      "pass": true
+    },
+    {
+      "actual": {
+        "command": "lake env lean Tect/R468.lean",
+        "output": "",
+        "returncode": 0,
+        "status": "PASS"
+      },
+      "expected": "PASS",
+      "name": "Lean compile",
+      "pass": true
+    }
+  ],
+  "audit_id": "HOLD-LC-001-RSP2-SEGMENT-INDEX-INTEGRATED",
+  "boundary": [
+    "This contract does not choose nearest, covering or interpolation as a production response and does not read or interpret response-matrix coefficients.",
+    "The descriptor and EBOUNDS checks do not establish calibration validity, detector-to-geocenter timing, a likelihood, covariance, nuisance law, candidate score or prediction.",
+    "The finite response-history index does not identify microscopic dynamics, causal propagation or a physical Yang-Mills sector.",
+    "No Pre-A, C6, A13, Sector-A, QFT, Yang-Mills, gravity, continuum, physical-vacuum, cosmic-origin, theory-of-everything or mass-gap claim follows.",
+    "The established T-054 forward and T-059/T-061 observation-first methods are unchanged; this is additive owner-intake bookkeeping only."
+  ],
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "holdout_id": "HOLD-LC-001",
+  "lean": {
+    "command": "lake env lean Tect/R468.lean",
+    "output": "",
+    "returncode": 0,
+    "status": "PASS"
+  },
+  "passed": 10,
+  "provenance": {
+    "contract_sha256": "2723b184a3d1cdeca2c7c75e95f993af6fdc0556a99bbb4c034a8b4f56f807dc",
+    "hostile_sha256": "e7100182e3e506c4f930af6a5ae74211271937c8116c3ed5890f14094146d1fa",
+    "independent_sha256": "4602c151cf8d8d8fe8efac2f07052d81bf90827c36238fd56a773976a5c9196d",
+    "lean_sha256": "1a8eb3819995f7659228017b6af51f348c2dfd84c5f37f30359191d81840b01e",
+    "primary_sha256": "96c692ce75d6a1d175f31f0d95f7996b0fa60cad3005cd265e392bdf30911b53"
+  },
+  "recorded_at": "2026-08-31T04:45:37.636492Z",
+  "run_kind": "integrated",
+  "schema": "tect/foundation-audit/1.0",
+  "task_id": "T-061",
+  "verdict": "PASS"
+}

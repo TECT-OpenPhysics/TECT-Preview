@@ -22,6 +22,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-468](#r-468) | HOLD-LC-001 rsp2 binary-table segment index and selection ambiguity envelope | R-468 v1.0 is a T0 claim-nonbearing additive T-061 provenance interface. The two hash-pinned Fermi rsp2 products each expose one 128-row EBOUNDS table and eight ordered 140-row response segments; scalar energy intervals and P-descriptor heap bounds pass, while F_CHAN/N_CHAN arrays and MATRIX coefficients remain unread. A fixed query grid retains covering, nearest and center-bracket alternatives with NONE_SELECTED. Primary 35 assertions, independent core 4 assertions, hostile 10/10, integrated 10/10 and Lean R468 pass. No calibration validity, timing conversion, likelihood, covariance, candidate score, prospective prediction, physical, QFT, Yang--Mills or mass-gap conclusion follows; existing methods and owner order are unchanged |
 | [R-467](#r-467) | Finite branch-relative Jacobian/entropy compensator interface | R-467 v1.0 is a T0 claim-nonbearing additive A6/A7 interface downstream of R-466. For a later owner-supplied injective measurable chart with active/normal dimensions `k_N+n_N=d_N`, positive Jacobian lower bound `J_N`, chart side lengths and energy ceiling `E_N`, the exact finite lower-bound log budget is `log(J_N)+k_N log(s_a,N)+n_N log(s_n,N)-beta E_N-log(Z_upper_N)`, with relative compensator `log(J_N vol(U_N))-log(V_ref,N)`. Owner-neutral fixtures pass primary 190/190, independent 188/188, hostile 8/8, integrated 56/56 and Lean R467; no source-owned chart, uniform branch probability, entropy density, tightness, continuum, physical, QFT, Yang--Mills or mass-gap conclusion follows, and existing methods and owner order are unchanged |
 | [R-466](#r-466) | Finite positive-mass tube lower-bound interface and coarse scaling boundary | R-466 v1.0 is a T0 claim-nonbearing additive A6/A7 interface under the unchanged R-464/R-465 comparison. For a later owner-supplied measurable box tube `B_N=c_N+[-delta,delta]^d` with `delta>0` and energy ceiling `E_tube`, the exact finite Gibbs-mass lower bound is `mu_N(B_N)>=vol(B_N)exp(-beta E_tube)/Z_upper_N`; its log budget separates geometric volume, Boltzmann ceiling and comparison normalization. Owner-neutral fixtures `delta=1/16`, `E_tube=1` pass primary 124/124, independent 122/122, hostile 8/8, integrated 53/53 and Lean R466; the coarse log decreases with cutoff, so source ownership, branch-relative entropy/Jacobian control and uniformity remain open. No physical, continuum, QFT, Yang--Mills or mass-gap conclusion follows; existing methods and owner order are unchanged |
 | [R-465](#r-465) | Finite-cutoff partition comparison envelope and norm-volume pressure diagnostic | R-465 v1.0 is a T0 claim-nonbearing additive A6/A7 diagnostic derived from the unchanged R-464 sextic comparison. The finite radial upper envelope is evaluated for cutoffs [1,2,3,4,5,6,8,10,12,16,20] and beta [1/2,1,2]; exact `a_N*m^3=gamma*V/12` scaling and strict coefficient decrease are independently checked. Primary 146/146, independent 175/175, hostile 8/8, integrated 56/56 and Lean R465 pass. The pressure term is comparison-only: no actual partition asymptotic, entropy density, branch probability, cutoff-uniformity, tightness, continuum, physical, QFT, Yang--Mills or mass-gap conclusion follows; existing methods and owner order are unchanged |
@@ -833,6 +834,53 @@ score M3 only after a versioned source owner, state/uncertainty contract,
 candidate-neutral two-time observable, complete map stages and prospective
 holdout exist. Continue unchanged T-054 Q3LOCK owner intake and T-059/T-061
 observation-source intake; do not manufacture another finite mobility table.
+
+<a id="r-468"></a>
+### R-468 -- HOLD-LC-001 rsp2 binary-table segment index and selection ambiguity envelope
+
+**Result ID.** `HOLD-LC-001-RSP2-SEGMENT-INDEX-v1` (R-468).
+
+**Version and exact scope.** R-468 v1.0 is a T0, claim-nonbearing additive
+T-061 owner-intake interface. It keeps the existing T-054 forward method,
+T-059/T-061 observation-first inverse method, owner order, and promotion
+firewalls unchanged. The two hash-pinned Fermi GBM response-history products
+(NaI N0 and BGO B0) are checked byte-for-byte. Each has one 128-row EBOUNDS
+table and eight ordered SPECRESP MATRIX segments with 140 scalar energy rows.
+The audit reads EBOUNDS and scalar matrix energy fields plus P-descriptor
+counts/offsets, checking monotonicity, nonempty descriptors, and heap bounds.
+It does not follow `F_CHAN`, `N_CHAN`, or MATRIX heap arrays, so response
+coefficients remain unread and uninterpreted.
+
+**Selection ambiguity envelope.** For the fixed, non-fitted query offsets
+`[-30,-15,0,15,30]` seconds from `TRIGTIME`, the record retains (without
+choosing) three explicit alternatives: closed-interval covering, nearest
+segment-center with smallest-`RSP_NUM` tie break, and an adjacent-center
+linear interpolation bracket. The bracket weights are checked to be in
+`[0,1]` and to sum to one; `selection_mode=NONE_SELECTED`, scoring is stopped,
+and the prospective lock is empty.
+
+**Audit and interpretation.** The primary audit passes 35 assertions, the
+independent standard-library parser passes four core assertions and agrees on
+the core digest, the hostile lane rejects 10/10 mutations, the integrated
+verifier passes 10/10, and Lean `R468.lean` compiles. These are finite
+provenance and table-structure facts only. They do not supply a source-owned
+validity/interpolation law, detector-to-geocenter timing conversion,
+uncertainty, likelihood, covariance, nuisance model, complete
+`F_reg/F_lim/F_eff/F_obs` map, candidate score, or holdout prediction.
+
+**Boundary and non-claims.** R-468 does not identify microscopic dynamics,
+causal propagation, a physical sector, Pre-A, Sector-A, QFT, Yang--Mills,
+gravity, a continuum limit, or a mass gap. The parent response-history owner
+remains a candidate only, and all response alternatives and matrix values stay
+locked pending the missing owner contract. No claim tier changes and no
+intermediate PDF is issued.
+
+**Proven in:** [R-468 certificate](strategy/hold-lc-001-rsp2-segment-index-certificate-260831.md), [machine contract](strategy/hold-lc-001-rsp2-segment-index-contract-v0.1.json), [primary script](codes/foundations/hold_lc_001_rsp2_segment_index.py), [independent script](codes/foundations/hold_lc_001_rsp2_segment_index_independent.py), [hostile script](codes/foundations/hold_lc_001_rsp2_segment_index_hostile.py), [integrated verifier](verification/scripts/hold_lc_001_rsp2_segment_index_verify.py), [integrated run](claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-integrated-hold-lc-rsp2-segment-index/integrated.json), [Lean kernel](verification/lean/Tect/R468.lean), and [exploration record](strategy/hold-lc-001-rsp2-segment-index-exploration.json).
+
+**Next action.** Obtain and hash-pin the source-owned validity/interpolation
+and timing-uncertainty rules. Keep `NONE_SELECTED`, all three alternatives,
+the response coefficients, and candidate scoring locked; only a complete
+owner contract can open the next event-free `F_reg` intake.
 
 <a id="r-467"></a>
 ### R-467 -- Finite branch-relative Jacobian/entropy compensator interface
