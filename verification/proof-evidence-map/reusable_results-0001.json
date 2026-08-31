@@ -2,7 +2,42 @@
   "data": [
     {
       "accepted_event_ids": [
-        "20260831-r-468-hold-lc-001-rsp2-segment-index-2026-08-31"
+        "20260831-r-469-hold-lc-001-official-gdt-core-rsp2-select"
+      ],
+      "anchor": "r-469",
+      "claim_ref_basis": {
+        "C6-SPACETIME-SIGNATURE": "proof_anchor_exact"
+      },
+      "claim_refs": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "co_recorded_negative_tags": [],
+      "detail": {
+        "audit_and_interpretation": "The two products and sixteen indexed segments remain interior-query consistent with R-468's finite metadata alternatives. Primary 12 assertions, independent 7 assertions, hostile 12/12, integrated 14/14, and Lean `R469.lean` pass. The source's `interpolate` and `weighted` paths are documented as matrix-reading paths but are not executed. No production selection is made: `selection_mode=NONE_SELECTED`, scoring is stopped, and the prospective lock is empty.",
+        "boundary_and_non_claims": "This is a finite software-semantic provenance crosswalk, not a response-validity or calibration rule. It does not admit interpolation domain/kwargs, detector-to-geocenter timing, time-standard conversion, uncertainty, likelihood, covariance, nuisance, a complete `F_reg/F_lim/F_eff/F_obs` map, candidate scoring or a prospective holdout. It does not identify microscopic dynamics, causal propagation, a physical sector, Pre-A, Sector-A, QFT, Yang--Mills, gravity, a continuum limit, or a mass gap. No claim tier changes, and no proof-note PDF is issued. Existing methods and owner order are unchanged.",
+        "implementation_semantics": "From the pinned source and R-468 interval metadata, `Rsp2.drm_index` is reproduced exactly: it requires an increasing range, selects strict overlaps `(tstop > start) and (tstart < stop)`, returns all matches in stored order, and falls back to the first segment before the range or the last segment otherwise. `extract_drm(atime=...)` and `nearest_drm(atime)` delegate to the first index of `drm_index((atime,atime))`. Thus the `nearest_drm` docstring does not describe an absolute-distance-to-center argmin. With adjacent nonoverlapping segments, an exact endpoint can have no strict match and therefore receive the last segment fallback. A synthetic overlapping fixture makes the docstring versus implementation mismatch observable without opening matrix bytes.",
+        "next_action": "Request a versioned source-owned response-validity/ interpolation, common time-standard, detector-to-geocenter, and timing- uncertainty contract. Preserve all alternatives and keep response values, likelihood, covariance, nuisance and scoring locked until those owner fields are complete.",
+        "proven_in": "[R-469 certificate](strategy/hold-lc-001-gdt-rsp2-selection-owner-certificate-260831.md), [machine contract](strategy/hold-lc-001-gdt-rsp2-selection-owner-v0.1.json), [manifest](strategy/hold-lc-001-gdt-rsp2-selection-owner-manifest.json), [primary script](codes/foundations/hold_lc_001_gdt_rsp2_selection_owner.py), [independent script](codes/foundations/hold_lc_001_gdt_rsp2_selection_owner_independent.py), [hostile script](codes/foundations/hold_lc_001_gdt_rsp2_selection_owner_hostile.py), [integrated verifier](verification/scripts/hold_lc_001_gdt_rsp2_selection_owner_verify.py), [integrated run](claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-integrated-hold-lc-gdt-selection-owner/integrated.json), [Lean kernel](verification/lean/Tect/R469.lean), and [exploration record](strategy/hold-lc-001-gdt-rsp2-selection-owner-exploration.json).",
+        "result_id": "`HOLD-LC-001-GDT-RSP2-SELECTION-OWNER-v1` (R-469).",
+        "version_and_exact_scope": "R-469 v1.0 is a T0, claim-nonbearing additive T-061 source-owner provenance crosswalk. It preserves the established T-054 forward method, T-059/T-061 observation-first inverse method, owner order, and promotion firewalls. The public `USRA-STI/gdt-core` `main` commit `ad506a4a45016bda720ff8d722e9ada49fd32191` is pinned for `src/gdt/core/response.py`; the 25574-byte source file has SHA-256 `2a5581e8a0b68a5b0eeaa513ec479fef3e6735b04125968ba9f58f89d3e45833`. The local source copy is gitignored; the contract preserves its locator, commit, hash, byte length, and line ranges. The R-468 primary metadata report is also byte-pinned before use."
+      },
+      "detail_title": "HOLD-LC-001 official gdt-core Rsp2 selection semantics crosswalk",
+      "family_refs": [],
+      "id": "R-469",
+      "normalized_detail": {
+        "boundary": "",
+        "proof_anchor": "[R-469 certificate](strategy/hold-lc-001-gdt-rsp2-selection-owner-certificate-260831.md), [machine contract](strategy/hold-lc-001-gdt-rsp2-selection-owner-v0.1.json), [manifest](strategy/hold-lc-001-gdt-rsp2-selection-owner-manifest.json), [primary script](codes/foundations/hold_lc_001_gdt_rsp2_selection_owner.py), [independent script](codes/foundations/hold_lc_001_gdt_rsp2_selection_owner_independent.py), [hostile script](codes/foundations/hold_lc_001_gdt_rsp2_selection_owner_hostile.py), [integrated verifier](verification/scripts/hold_lc_001_gdt_rsp2_selection_owner_verify.py), [integrated run](claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-integrated-hold-lc-gdt-selection-owner/integrated.json), [Lean kernel](verification/lean/Tect/R469.lean), and [exploration record](strategy/hold-lc-001-gdt-rsp2-selection-owner-exploration.json).",
+        "publication_target": "",
+        "reuse": "",
+        "statement": ""
+      },
+      "summary": "R-469 v1.0 is a T0 claim-nonbearing additive T-061 source-owner provenance crosswalk. The exact USRA-STI/gdt-core main commit and response.py SHA-256 are pinned. From R-468 interval metadata, the implementation's strict-overlap drm_index, first/last empty-range fallback and first-index nearest delegation are reproduced; endpoint fallback and the docstring/implementation mismatch are exposed. Primary 12 assertions, independent 7 assertions, hostile 12/12, integrated 14/14 and Lean R469 pass. Matrix-reading interpolation/weighted paths, calibration validity, timing conversion/uncertainty, likelihood, covariance, scoring and prospective lock remain unadmitted; existing T-054/T-059/T-061 methods and owner order are unchanged",
+      "title": "HOLD-LC-001 official gdt-core Rsp2 selection semantics crosswalk"
+    },
+    {
+      "accepted_event_ids": [
+        "20260831-r-468-hold-lc-001-rsp2-segment-index-2026-08-31",
+        "20260831-r-469-hold-lc-001-official-gdt-core-rsp2-select"
       ],
       "anchor": "r-468",
       "claim_ref_basis": {
@@ -3266,39 +3301,6 @@
       },
       "summary": "R-370 v1.0 is a T0 claim-nonbearing finite diagnostic under EXP-001212. The doubled-bond theta-half shell splits exactly into low/high transition-energy parts across 2816 all-prefix contexts; at edge d=6 the high-gap squared-norm fraction reaches 0.891745 for E=1, while square d=2 is low-gap at E>=2. A cutoff-independent collar, Gibbs-tail theorem, common core, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open",
       "title": "Kubo-Mori Liouvillian energy-window and tail decomposition"
-    },
-    {
-      "accepted_event_ids": [
-        "20260827-r-369-kubo-mori-translation-and-shape-stress-20",
-        "20260828-r-370-kubo-mori-liouvillian-energy-window-and-t"
-      ],
-      "anchor": "r-369",
-      "claim_ref_basis": {
-        "C6-SPACETIME-SIGNATURE": "proof_anchor_exact"
-      },
-      "claim_refs": [
-        "C6-SPACETIME-SIGNATURE"
-      ],
-      "co_recorded_negative_tags": [],
-      "detail": {
-        "boundary": "Translation/shape stability in this finite fixture does not provide a source-, shape-, cutoff- or volume-uniform comparison. The Kubo-Mori weight is a doubled local bond Gibbs proxy rather than a full interacting KMS state, and the edge cutoff growth remains unexplained analytically. Common core, common alpha, OS/KMS/GNS dynamics, a mass gap, continuum, C6, Sector-A and Pre-A remain open. No R-369 PDF is issued.",
-        "proven_in": "[manifest](strategy/pre-a-cp1-st8-q3lock-local-q2-kubo-mori-translation-shape-manifest.json), [certificate](strategy/pre-a-cp1-st8-q3lock-local-q2-kubo-mori-translation-shape-certificate-260827.md), [Lean entrypoint](verification/lean/Tect/R369.lean), [primary script](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_kubo_mori_translation_shape.py), [independent script](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_kubo_mori_translation_shape_independent.py), [integrated verifier](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_kubo_mori_translation_shape_verify.py), [scope note](claims/C6-SPACETIME-SIGNATURE/notes/q3lock-local-q2-kubo-mori-translation-shape-boundary-260827.md), and stored run artefacts.",
-        "result_id": "R-369 is a T0, claim-nonbearing finite stress under EXP-001211.",
-        "statement": "The R-368 local Kubo-Mori theta-half shell is tested on the actual-Q3 `V=2` edge at cutoffs `d=3,4,5,6` and on the `V=4` square at `d=2`. Both edge sites and all four square sites are measured, and the edge bond plus all four square bond terms are selected. Every split prefix position, orientation, time sign, history adjoint and beta value is retained.",
-        "verification": "Primary and non-importing independent lanes each pass `8601/8601` assertions over `2816` contexts. The integrated verifier passes `104/104`, Lean R369 compiles, and the largest primary-independent numeric difference is `4.219e-15`. The global weighted fractional norm is `1.208758407679001`, with bound `0.4029194692263337` and largest change-to-bound ratio `0.3868613066541026`. The edge per-cutoff maxima are `0.0896064105`, `0.2005166806`, `0.3423910272`, and `1.2087584077`; the four square-bond maxima lie between `3.1737537048e-08` and `3.5303692708e-08`."
-      },
-      "detail_title": "Kubo-Mori translation and exhaustion-shape stress",
-      "family_refs": [],
-      "id": "R-369",
-      "normalized_detail": {
-        "boundary": "Translation/shape stability in this finite fixture does not provide a source-, shape-, cutoff- or volume-uniform comparison. The Kubo-Mori weight is a doubled local bond Gibbs proxy rather than a full interacting KMS state, and the edge cutoff growth remains unexplained analytically. Common core, common alpha, OS/KMS/GNS dynamics, a mass gap, continuum, C6, Sector-A and Pre-A remain open. No R-369 PDF is issued.",
-        "proof_anchor": "[manifest](strategy/pre-a-cp1-st8-q3lock-local-q2-kubo-mori-translation-shape-manifest.json), [certificate](strategy/pre-a-cp1-st8-q3lock-local-q2-kubo-mori-translation-shape-certificate-260827.md), [Lean entrypoint](verification/lean/Tect/R369.lean), [primary script](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_kubo_mori_translation_shape.py), [independent script](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_kubo_mori_translation_shape_independent.py), [integrated verifier](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_kubo_mori_translation_shape_verify.py), [scope note](claims/C6-SPACETIME-SIGNATURE/notes/q3lock-local-q2-kubo-mori-translation-shape-boundary-260827.md), and stored run artefacts.",
-        "publication_target": "",
-        "reuse": "",
-        "statement": "The R-368 local Kubo-Mori theta-half shell is tested on the actual-Q3 `V=2` edge at cutoffs `d=3,4,5,6` and on the `V=4` square at `d=2`. Both edge sites and all four square sites are measured, and the edge bond plus all four square bond terms are selected. Every split prefix position, orientation, time sign, history adjoint and beta value is retained."
-      },
-      "summary": "R-369 v1.0 is a T0 claim-nonbearing finite stress under EXP-001211. All translated bond/site positions pass on the V=2 edge and V=4 square with 2816 all-prefix contexts; square values stay near 3.2e-08--3.5e-08 while edge values grow to 1.208758 at d=6, so source/shape/cutoff/volume-uniform comparison, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open",
-      "title": "Kubo-Mori translation and exhaustion-shape stress"
     }
   ],
   "kind": "reusable_results",

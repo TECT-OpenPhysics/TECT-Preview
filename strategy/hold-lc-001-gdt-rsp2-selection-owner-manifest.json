@@ -1,0 +1,136 @@
+{
+  "schema": "tect/hold-lc-001-gdt-rsp2-selection-owner/1.0",
+  "manifest_id": "HOLD-LC-001-GDT-RSP2-SELECTION-OWNER-v1",
+  "result_id": "R-469",
+  "exploration_id": "EXP-001344",
+  "task_id": "T-061",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "title": "HOLD-LC-001 official gdt-core Rsp2 selection semantics crosswalk",
+  "tier": "T0",
+  "claim_bearing": false,
+  "status": "SOURCE_SEMANTICS_PINNED_PHYSICAL_OWNER_OPEN",
+  "methods_preserved": {
+    "t054_forward_method_unchanged": true,
+    "t059_t061_observation_first_method_unchanged": true,
+    "owner_order_unchanged": true,
+    "promotion_firewalls_unchanged": true,
+    "additive_owner_intake_only": true,
+    "no_response_selection": true,
+    "no_matrix_value_interpretation": true,
+    "no_candidate_scoring": true,
+    "no_tier_change": true
+  },
+  "source_pin": {
+    "repository": "USRA-STI/gdt-core",
+    "commit": "ad506a4a45016bda720ff8d722e9ada49fd32191",
+    "path": "src/gdt/core/response.py",
+    "sha256": "2a5581e8a0b68a5b0eeaa513ec479fef3e6735b04125968ba9f58f89d3e45833",
+    "byte_length": 25574,
+    "source_url": "https://raw.githubusercontent.com/USRA-STI/gdt-core/ad506a4a45016bda720ff8d722e9ada49fd32191/src/gdt/core/response.py",
+    "local_cache": "internal/source-cache/HOLD-LC-001/2026-08-31/gdt-core-response"
+  },
+  "parent_index": {
+    "path": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-primary-hold-lc-rsp2-segment-index/primary.json",
+    "sha256": "fe349829412125e46a9ae89a29bed8c4a5b747ee2f5f72f10323f4085387ab1f"
+  },
+  "semantic_contract": {
+    "drm_index": "strict overlap tstop > start and tstart < stop; empty result clamps first before range and last otherwise",
+    "nearest_drm": "first index of drm_index((atime,atime)); not center-distance argmin",
+    "extract_drm_atime": "same first-index delegation",
+    "interpolate": "scipy interp1d over matrices with first/last fill; locked because it reads coefficients",
+    "weighted": "nearest or interpolation matrix count-weighting; locked because it reads coefficients"
+  },
+  "checks": {
+    "source_hash_checked": true,
+    "parent_hash_checked": true,
+    "products_checked": 2,
+    "segments_checked": 16,
+    "endpoint_probes_checked": 22,
+    "synthetic_mismatch_checked": true,
+    "matrix_values_read": false,
+    "production_selection": "NONE_SELECTED",
+    "candidate_scoring_allowed": false,
+    "prospective_lock": "EMPTY"
+  },
+  "files": {
+    "contract": {
+      "path": "strategy/hold-lc-001-gdt-rsp2-selection-owner-v0.1.json",
+      "sha256": "7140bbbbe654c9ff42d9e32bb292f59ede661d9f8ba056fd0bea5ce4f77d5aa3"
+    },
+    "certificate": {
+      "path": "strategy/hold-lc-001-gdt-rsp2-selection-owner-certificate-260831.md",
+      "sha256": "992416cb25450f479c755af93c7a486c0c07dfd427d31310fa580884cdca7585"
+    },
+    "exploration": {
+      "path": "strategy/hold-lc-001-gdt-rsp2-selection-owner-exploration.json",
+      "sha256": "c6413d4f877287f8ed6e4c9ab272d93b8d22cc37c4c12b12c9a6257f4158fc77"
+    },
+    "primary": {
+      "path": "codes/foundations/hold_lc_001_gdt_rsp2_selection_owner.py",
+      "sha256": "6b17932444711a2a54287ae5e05635fea0e3ec83ff28a2e2a69b9e579dd3acb3"
+    },
+    "independent": {
+      "path": "codes/foundations/hold_lc_001_gdt_rsp2_selection_owner_independent.py",
+      "sha256": "09f46675a0d0fb8f6fd70a5bf5c4180e397470624123a2671c0e0e3401424e0b"
+    },
+    "hostile": {
+      "path": "codes/foundations/hold_lc_001_gdt_rsp2_selection_owner_hostile.py",
+      "sha256": "d2017a8ee4a4e294147c71a35398428bb5fb874a1f2da52e571a79496ebd8379"
+    },
+    "integrated": {
+      "path": "verification/scripts/hold_lc_001_gdt_rsp2_selection_owner_verify.py",
+      "sha256": "00b8987690562d4650a108f8a9e80189f15f803ba737139fcf83ffe8b452caa1"
+    },
+    "lean": {
+      "path": "verification/lean/Tect/R469.lean",
+      "sha256": "a464d4cb711230c5e9c48e3531c5dd76abed0864ebf074bc089345aaa57b85ed"
+    },
+    "lean_registry": {
+      "path": "verification/lean/registry.json",
+      "sha256": "46317c9407e4aeca6b3ed585855d92e3c3d07ecb305f9034429ff5074b94d2ac"
+    },
+    "primary_run": {
+      "path": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-primary-hold-lc-gdt-selection-owner/primary.json",
+      "sha256": "2a039fc88d28078d61ff2f396d4146f5fb06ea42ae50de17592e47e311e91482"
+    },
+    "independent_run": {
+      "path": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-independent-hold-lc-gdt-selection-owner/independent.json",
+      "sha256": "9a2c06aa5767a00280f8c0967ba4c34f2ba676782471d14db60acf88b40789b5"
+    },
+    "hostile_run": {
+      "path": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-hostile-hold-lc-gdt-selection-owner/hostile.json",
+      "sha256": "0a0acbc86b96fce532c77ee574595c088993f3dc96f1d90d3f8a0aa41f42862d"
+    },
+    "integrated_run": {
+      "path": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-integrated-hold-lc-gdt-selection-owner/integrated.json",
+      "sha256": "215b9557e242fc7e1f6ee26702da7b4cfd07d054c6216862a47e19dad71b6fbf"
+    }
+  },
+  "formal_integration": {
+    "results": ["R-469"],
+    "lean": "verification/lean/Tect/R469.lean",
+    "no_new_negative_ids": [],
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "admission": {
+    "source_owner_semantics_admitted": false,
+    "response_validity_admitted": false,
+    "calibration_interpolation_admitted": false,
+    "detector_to_geocenter_conversion_admitted": false,
+    "timing_likelihood_admitted": false,
+    "covariance_admitted": false,
+    "nuisance_admitted": false,
+    "f_reg_f_lim_f_eff_f_obs_defined": false,
+    "candidate_scoring_allowed": false,
+    "prospective_lock": "EMPTY"
+  },
+  "evidence_level": "T0 exact public source commit/file hash plus finite metadata-only semantic crosswalk",
+  "non_claims": [
+    "No production response is selected and no matrix coefficient is read.",
+    "No calibration validity, interpolation domain, timing conversion, uncertainty, likelihood, covariance, nuisance law, score or prediction is admitted.",
+    "No microscopic dynamics, physical sector, Pre-A, C6 closure, QFT, Yang--Mills, continuum or mass-gap conclusion follows.",
+    "The established forward and inverse methods are unchanged."
+  ],
+  "next_action": "Request a versioned source-owned validity/interpolation and timing-uncertainty contract; keep all alternatives and scoring locked."
+}

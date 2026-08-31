@@ -22,6 +22,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-469](#r-469) | HOLD-LC-001 official gdt-core Rsp2 selection semantics crosswalk | R-469 v1.0 is a T0 claim-nonbearing additive T-061 source-owner provenance crosswalk. The exact USRA-STI/gdt-core main commit and response.py SHA-256 are pinned. From R-468 interval metadata, the implementation's strict-overlap drm_index, first/last empty-range fallback and first-index nearest delegation are reproduced; endpoint fallback and the docstring/implementation mismatch are exposed. Primary 12 assertions, independent 7 assertions, hostile 12/12, integrated 14/14 and Lean R469 pass. Matrix-reading interpolation/weighted paths, calibration validity, timing conversion/uncertainty, likelihood, covariance, scoring and prospective lock remain unadmitted; existing T-054/T-059/T-061 methods and owner order are unchanged |
 | [R-468](#r-468) | HOLD-LC-001 rsp2 binary-table segment index and selection ambiguity envelope | R-468 v1.0 is a T0 claim-nonbearing additive T-061 provenance interface. The two hash-pinned Fermi rsp2 products each expose one 128-row EBOUNDS table and eight ordered 140-row response segments; scalar energy intervals and P-descriptor heap bounds pass, while F_CHAN/N_CHAN arrays and MATRIX coefficients remain unread. A fixed query grid retains covering, nearest and center-bracket alternatives with NONE_SELECTED. Primary 35 assertions, independent core 4 assertions, hostile 10/10, integrated 10/10 and Lean R468 pass. No calibration validity, timing conversion, likelihood, covariance, candidate score, prospective prediction, physical, QFT, Yang--Mills or mass-gap conclusion follows; existing methods and owner order are unchanged |
 | [R-467](#r-467) | Finite branch-relative Jacobian/entropy compensator interface | R-467 v1.0 is a T0 claim-nonbearing additive A6/A7 interface downstream of R-466. For a later owner-supplied injective measurable chart with active/normal dimensions `k_N+n_N=d_N`, positive Jacobian lower bound `J_N`, chart side lengths and energy ceiling `E_N`, the exact finite lower-bound log budget is `log(J_N)+k_N log(s_a,N)+n_N log(s_n,N)-beta E_N-log(Z_upper_N)`, with relative compensator `log(J_N vol(U_N))-log(V_ref,N)`. Owner-neutral fixtures pass primary 190/190, independent 188/188, hostile 8/8, integrated 56/56 and Lean R467; no source-owned chart, uniform branch probability, entropy density, tightness, continuum, physical, QFT, Yang--Mills or mass-gap conclusion follows, and existing methods and owner order are unchanged |
 | [R-466](#r-466) | Finite positive-mass tube lower-bound interface and coarse scaling boundary | R-466 v1.0 is a T0 claim-nonbearing additive A6/A7 interface under the unchanged R-464/R-465 comparison. For a later owner-supplied measurable box tube `B_N=c_N+[-delta,delta]^d` with `delta>0` and energy ceiling `E_tube`, the exact finite Gibbs-mass lower bound is `mu_N(B_N)>=vol(B_N)exp(-beta E_tube)/Z_upper_N`; its log budget separates geometric volume, Boltzmann ceiling and comparison normalization. Owner-neutral fixtures `delta=1/16`, `E_tube=1` pass primary 124/124, independent 122/122, hostile 8/8, integrated 53/53 and Lean R466; the coarse log decreases with cutoff, so source ownership, branch-relative entropy/Jacobian control and uniformity remain open. No physical, continuum, QFT, Yang--Mills or mass-gap conclusion follows; existing methods and owner order are unchanged |
@@ -834,6 +835,60 @@ score M3 only after a versioned source owner, state/uncertainty contract,
 candidate-neutral two-time observable, complete map stages and prospective
 holdout exist. Continue unchanged T-054 Q3LOCK owner intake and T-059/T-061
 observation-source intake; do not manufacture another finite mobility table.
+
+<a id="r-469"></a>
+### R-469 -- HOLD-LC-001 official gdt-core Rsp2 selection semantics crosswalk
+
+**Result ID.** `HOLD-LC-001-GDT-RSP2-SELECTION-OWNER-v1` (R-469).
+
+**Version and exact scope.** R-469 v1.0 is a T0, claim-nonbearing additive
+T-061 source-owner provenance crosswalk. It preserves the established T-054
+forward method, T-059/T-061 observation-first inverse method, owner order, and
+promotion firewalls. The public `USRA-STI/gdt-core` `main` commit
+`ad506a4a45016bda720ff8d722e9ada49fd32191` is pinned for
+`src/gdt/core/response.py`; the 25574-byte source file has SHA-256
+`2a5581e8a0b68a5b0eeaa513ec479fef3e6735b04125968ba9f58f89d3e45833`.
+The local source copy is gitignored; the contract preserves its locator,
+commit, hash, byte length, and line ranges. The R-468 primary metadata report
+is also byte-pinned before use.
+
+**Implementation semantics.** From the pinned source and R-468 interval
+metadata, `Rsp2.drm_index` is reproduced exactly: it requires an increasing
+range, selects strict overlaps `(tstop > start) and (tstart < stop)`, returns
+all matches in stored order, and falls back to the first segment before the
+range or the last segment otherwise. `extract_drm(atime=...)` and
+`nearest_drm(atime)` delegate to the first index of
+`drm_index((atime,atime))`. Thus the `nearest_drm` docstring does not describe
+an absolute-distance-to-center argmin. With adjacent nonoverlapping segments,
+an exact endpoint can have no strict match and therefore receive the last
+segment fallback. A synthetic overlapping fixture makes the docstring versus
+implementation mismatch observable without opening matrix bytes.
+
+**Audit and interpretation.** The two products and sixteen indexed segments
+remain interior-query consistent with R-468's finite metadata alternatives.
+Primary 12 assertions, independent 7 assertions, hostile 12/12, integrated
+14/14, and Lean `R469.lean` pass. The source's `interpolate` and `weighted`
+paths are documented as matrix-reading paths but are not executed. No
+production selection is made: `selection_mode=NONE_SELECTED`, scoring is
+stopped, and the prospective lock is empty.
+
+**Boundary and non-claims.** This is a finite software-semantic provenance
+crosswalk, not a response-validity or calibration rule. It does not admit
+interpolation domain/kwargs, detector-to-geocenter timing, time-standard
+conversion, uncertainty, likelihood, covariance, nuisance, a complete
+`F_reg/F_lim/F_eff/F_obs` map, candidate scoring or a prospective holdout. It
+does not identify microscopic dynamics, causal propagation, a physical sector,
+Pre-A, Sector-A, QFT, Yang--Mills, gravity, a continuum limit, or a mass gap.
+No claim tier changes, and no proof-note PDF is issued. Existing methods and
+owner order are unchanged.
+
+**Proven in:** [R-469 certificate](strategy/hold-lc-001-gdt-rsp2-selection-owner-certificate-260831.md), [machine contract](strategy/hold-lc-001-gdt-rsp2-selection-owner-v0.1.json), [manifest](strategy/hold-lc-001-gdt-rsp2-selection-owner-manifest.json), [primary script](codes/foundations/hold_lc_001_gdt_rsp2_selection_owner.py), [independent script](codes/foundations/hold_lc_001_gdt_rsp2_selection_owner_independent.py), [hostile script](codes/foundations/hold_lc_001_gdt_rsp2_selection_owner_hostile.py), [integrated verifier](verification/scripts/hold_lc_001_gdt_rsp2_selection_owner_verify.py), [integrated run](claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-integrated-hold-lc-gdt-selection-owner/integrated.json), [Lean kernel](verification/lean/Tect/R469.lean), and [exploration record](strategy/hold-lc-001-gdt-rsp2-selection-owner-exploration.json).
+
+**Next action.** Request a versioned source-owned response-validity/
+interpolation, common time-standard, detector-to-geocenter, and timing-
+uncertainty contract. Preserve all alternatives and keep response values,
+likelihood, covariance, nuisance and scoring locked until those owner fields
+are complete.
 
 <a id="r-468"></a>
 ### R-468 -- HOLD-LC-001 rsp2 binary-table segment index and selection ambiguity envelope

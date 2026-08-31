@@ -1,0 +1,666 @@
+{
+  "admission": {
+    "calibration_interpolation_admitted": false,
+    "candidate_scoring_allowed": false,
+    "covariance_admitted": false,
+    "detector_to_geocenter_conversion_admitted": false,
+    "f_reg_f_lim_f_eff_f_obs_defined": false,
+    "nuisance_law_admitted": false,
+    "production_selection": "NONE_SELECTED",
+    "prospective_lock": "EMPTY",
+    "response_validity_admitted": false,
+    "source_owner_semantics_admitted": false,
+    "timing_likelihood_admitted": false
+  },
+  "assertion_count": 12,
+  "assertions": [
+    {
+      "actual": "ad506a4a45016bda720ff8d722e9ada49fd32191",
+      "expected": "40-hex commit",
+      "name": "source-commit-pinned",
+      "status": "PASS"
+    },
+    {
+      "actual": "2a5581e8a0b68a5b0eeaa513ec479fef3e6735b04125968ba9f58f89d3e45833",
+      "expected": "2a5581e8a0b68a5b0eeaa513ec479fef3e6735b04125968ba9f58f89d3e45833",
+      "name": "source-file-sha",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "drm_index": true,
+        "first_fallback": true,
+        "first_index_delegation": true,
+        "interpolate_method": true,
+        "last_fallback": true,
+        "matrix_read_interpolate": true,
+        "matrix_read_weighted": true,
+        "nearest_method": true,
+        "strict_overlap": true,
+        "weighted_method": true
+      },
+      "expected": true,
+      "name": "source-excerpts",
+      "status": "PASS"
+    },
+    {
+      "actual": "fe349829412125e46a9ae89a29bed8c4a5b747ee2f5f72f10323f4085387ab1f",
+      "expected": "fe349829412125e46a9ae89a29bed8c4a5b747ee2f5f72f10323f4085387ab1f",
+      "name": "parent-r468-sha",
+      "status": "PASS"
+    },
+    {
+      "actual": 2,
+      "expected": 2,
+      "name": "product-count",
+      "status": "PASS"
+    },
+    {
+      "actual": 16,
+      "expected": 16,
+      "name": "segment-count",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "interior-query-agreement",
+      "status": "PASS"
+    },
+    {
+      "actual": 22,
+      "expected": 20,
+      "name": "endpoint-fallback-recorded",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "doc-implementation-mismatch",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "matrix-reading-path-locked",
+      "status": "PASS"
+    },
+    {
+      "actual": "NONE_SELECTED",
+      "expected": "NONE_SELECTED",
+      "name": "production-selection-stopped",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "methods-unchanged",
+      "status": "PASS"
+    }
+  ],
+  "assumptions": [
+    "The pinned commit and source-file SHA identify the exact public implementation audited here.",
+    "The R-468 primary report remains the authoritative finite segment metadata projection and its SHA is checked before use.",
+    "The semantic crosswalk can be evaluated from interval metadata alone; no response coefficient or heap array is required.",
+    "The official implementation's scipy dependency and kwargs are not a complete physical calibration-validity contract.",
+    "The existing T-054 forward method, T-059 inverse method, T-061 owner order and promotion firewalls remain controlling."
+  ],
+  "audit_id": "HOLD-LC-001-GDT-RSP2-SELECTION-OWNER",
+  "boundary": [
+    "This result does not select nearest, covering or interpolation as a production response.",
+    "The source implementation's matrix-reading interpolation and weighted paths are not executed or admitted.",
+    "The docstring/implementation mismatch and endpoint fallback are software semantics, not a calibration-validity or physical timing law.",
+    "No candidate score, holdout prediction, microscopic dynamics, causal propagation, physical sector, Pre-A, QFT, Yang--Mills, gravity, continuum or mass-gap conclusion follows.",
+    "The established T-054 forward and T-059/T-061 observation-first methods are unchanged; this is additive source-owner provenance only."
+  ],
+  "candidate_scoring": false,
+  "claim_bearing": false,
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "core_digest": "3b7af6a77f6ce071e721e744dda7f697da1d46f49760bf6413ca2dddc2247d8e",
+  "evidence_level": "T0 exact public source commit/file hash plus finite metadata-only semantic crosswalk",
+  "holdout_id": "HOLD-LC-001",
+  "matrix_coefficients_read": false,
+  "methods_unchanged": true,
+  "missing_assumptions": [
+    "Source-owned validity rule tying each response segment to event and spectral-history windows.",
+    "Pinned scipy version and source-owned interpolation domain/kwargs policy if interpolation is ever admitted.",
+    "Detector-to-geocenter propagation conversion, common time standard and timing uncertainty.",
+    "Frozen detector, energy, background and temporal windows with a joint likelihood/covariance/nuisance contract.",
+    "Complete candidate-neutral F_reg/F_lim/F_eff/F_obs map, immutable scorer and prospective holdout."
+  ],
+  "parent_index": {
+    "path": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-primary-hold-lc-rsp2-segment-index/primary.json",
+    "sha256": "fe349829412125e46a9ae89a29bed8c4a5b747ee2f5f72f10323f4085387ab1f"
+  },
+  "passed": 12,
+  "products": [
+    {
+      "detector": "GBM NaI N0",
+      "edge_probes": [
+        {
+          "official_rsp_nums": [
+            1
+          ],
+          "official_zero_based_indices": [
+            0
+          ],
+          "probe": "before_first",
+          "query_met": "524666341.70459998",
+          "selection_admitted": false
+        },
+        {
+          "official_rsp_nums": [
+            8
+          ],
+          "official_zero_based_indices": [
+            7
+          ],
+          "probe": "first_start",
+          "query_met": "524666342.70459998",
+          "selection_admitted": false
+        },
+        {
+          "official_rsp_nums": [
+            8
+          ],
+          "official_zero_based_indices": [
+            7
+          ],
+          "probe": "interior_boundary_1_2",
+          "query_met": "524666383.6652",
+          "selection_admitted": false
+        },
+        {
+          "official_rsp_nums": [
+            8
+          ],
+          "official_zero_based_indices": [
+            7
+          ],
+          "probe": "interior_boundary_2_3",
+          "query_met": "524666424.62589997",
+          "selection_admitted": false
+        },
+        {
+          "official_rsp_nums": [
+            8
+          ],
+          "official_zero_based_indices": [
+            7
+          ],
+          "probe": "interior_boundary_3_4",
+          "query_met": "524666463.53850001",
+          "selection_admitted": false
+        },
+        {
+          "official_rsp_nums": [
+            8
+          ],
+          "official_zero_based_indices": [
+            7
+          ],
+          "probe": "interior_boundary_4_5",
+          "query_met": "524666496.30699998",
+          "selection_admitted": false
+        },
+        {
+          "official_rsp_nums": [
+            8
+          ],
+          "official_zero_based_indices": [
+            7
+          ],
+          "probe": "interior_boundary_5_6",
+          "query_met": "524666528.05150002",
+          "selection_admitted": false
+        },
+        {
+          "official_rsp_nums": [
+            8
+          ],
+          "official_zero_based_indices": [
+            7
+          ],
+          "probe": "interior_boundary_6_7",
+          "query_met": "524666563.89209998",
+          "selection_admitted": false
+        },
+        {
+          "official_rsp_nums": [
+            8
+          ],
+          "official_zero_based_indices": [
+            7
+          ],
+          "probe": "interior_boundary_7_8",
+          "query_met": "524666596.66060001",
+          "selection_admitted": false
+        },
+        {
+          "official_rsp_nums": [
+            8
+          ],
+          "official_zero_based_indices": [
+            7
+          ],
+          "probe": "last_stop",
+          "query_met": "524666596.66060001",
+          "selection_admitted": false
+        },
+        {
+          "official_rsp_nums": [
+            8
+          ],
+          "official_zero_based_indices": [
+            7
+          ],
+          "probe": "after_last",
+          "query_met": "524666597.66060001",
+          "selection_admitted": false
+        }
+      ],
+      "id": "FERMI-GBM-EVENT-TRIGGER-RSP2-N0",
+      "matrix_coefficients_read": false,
+      "production_selection": "NONE_SELECTED",
+      "query_semantics": [
+        {
+          "interior_metadata_agrees_with_r468_nearest": true,
+          "official_rsp_nums": [
+            3
+          ],
+          "official_zero_based_indices": [
+            2
+          ],
+          "query_met": "524666441.47459799",
+          "r468_center_nearest_rsp_num": 3,
+          "r468_closed_covering_rsp_nums": [
+            3
+          ],
+          "relative_offset_s": -30,
+          "selection_admitted": false
+        },
+        {
+          "interior_metadata_agrees_with_r468_nearest": true,
+          "official_rsp_nums": [
+            3
+          ],
+          "official_zero_based_indices": [
+            2
+          ],
+          "query_met": "524666456.47459799",
+          "r468_center_nearest_rsp_num": 3,
+          "r468_closed_covering_rsp_nums": [
+            3
+          ],
+          "relative_offset_s": -15,
+          "selection_admitted": false
+        },
+        {
+          "interior_metadata_agrees_with_r468_nearest": true,
+          "official_rsp_nums": [
+            4
+          ],
+          "official_zero_based_indices": [
+            3
+          ],
+          "query_met": "524666471.47459799",
+          "r468_center_nearest_rsp_num": 4,
+          "r468_closed_covering_rsp_nums": [
+            4
+          ],
+          "relative_offset_s": 0,
+          "selection_admitted": false
+        },
+        {
+          "interior_metadata_agrees_with_r468_nearest": true,
+          "official_rsp_nums": [
+            4
+          ],
+          "official_zero_based_indices": [
+            3
+          ],
+          "query_met": "524666486.47459799",
+          "r468_center_nearest_rsp_num": 4,
+          "r468_closed_covering_rsp_nums": [
+            4
+          ],
+          "relative_offset_s": 15,
+          "selection_admitted": false
+        },
+        {
+          "interior_metadata_agrees_with_r468_nearest": true,
+          "official_rsp_nums": [
+            5
+          ],
+          "official_zero_based_indices": [
+            4
+          ],
+          "query_met": "524666501.47459799",
+          "r468_center_nearest_rsp_num": 5,
+          "r468_closed_covering_rsp_nums": [
+            5
+          ],
+          "relative_offset_s": 30,
+          "selection_admitted": false
+        }
+      ],
+      "segment_count": 8,
+      "segment_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "detector": "GBM BGO B0",
+      "edge_probes": [
+        {
+          "official_rsp_nums": [
+            1
+          ],
+          "official_zero_based_indices": [
+            0
+          ],
+          "probe": "before_first",
+          "query_met": "524666341.70459998",
+          "selection_admitted": false
+        },
+        {
+          "official_rsp_nums": [
+            8
+          ],
+          "official_zero_based_indices": [
+            7
+          ],
+          "probe": "first_start",
+          "query_met": "524666342.70459998",
+          "selection_admitted": false
+        },
+        {
+          "official_rsp_nums": [
+            8
+          ],
+          "official_zero_based_indices": [
+            7
+          ],
+          "probe": "interior_boundary_1_2",
+          "query_met": "524666383.6652",
+          "selection_admitted": false
+        },
+        {
+          "official_rsp_nums": [
+            8
+          ],
+          "official_zero_based_indices": [
+            7
+          ],
+          "probe": "interior_boundary_2_3",
+          "query_met": "524666424.62589997",
+          "selection_admitted": false
+        },
+        {
+          "official_rsp_nums": [
+            8
+          ],
+          "official_zero_based_indices": [
+            7
+          ],
+          "probe": "interior_boundary_3_4",
+          "query_met": "524666463.53850001",
+          "selection_admitted": false
+        },
+        {
+          "official_rsp_nums": [
+            8
+          ],
+          "official_zero_based_indices": [
+            7
+          ],
+          "probe": "interior_boundary_4_5",
+          "query_met": "524666496.30699998",
+          "selection_admitted": false
+        },
+        {
+          "official_rsp_nums": [
+            8
+          ],
+          "official_zero_based_indices": [
+            7
+          ],
+          "probe": "interior_boundary_5_6",
+          "query_met": "524666528.05150002",
+          "selection_admitted": false
+        },
+        {
+          "official_rsp_nums": [
+            8
+          ],
+          "official_zero_based_indices": [
+            7
+          ],
+          "probe": "interior_boundary_6_7",
+          "query_met": "524666563.89209998",
+          "selection_admitted": false
+        },
+        {
+          "official_rsp_nums": [
+            8
+          ],
+          "official_zero_based_indices": [
+            7
+          ],
+          "probe": "interior_boundary_7_8",
+          "query_met": "524666596.66060001",
+          "selection_admitted": false
+        },
+        {
+          "official_rsp_nums": [
+            8
+          ],
+          "official_zero_based_indices": [
+            7
+          ],
+          "probe": "last_stop",
+          "query_met": "524666596.66060001",
+          "selection_admitted": false
+        },
+        {
+          "official_rsp_nums": [
+            8
+          ],
+          "official_zero_based_indices": [
+            7
+          ],
+          "probe": "after_last",
+          "query_met": "524666597.66060001",
+          "selection_admitted": false
+        }
+      ],
+      "id": "FERMI-GBM-EVENT-TRIGGER-RSP2-B0",
+      "matrix_coefficients_read": false,
+      "production_selection": "NONE_SELECTED",
+      "query_semantics": [
+        {
+          "interior_metadata_agrees_with_r468_nearest": true,
+          "official_rsp_nums": [
+            3
+          ],
+          "official_zero_based_indices": [
+            2
+          ],
+          "query_met": "524666441.47459799",
+          "r468_center_nearest_rsp_num": 3,
+          "r468_closed_covering_rsp_nums": [
+            3
+          ],
+          "relative_offset_s": -30,
+          "selection_admitted": false
+        },
+        {
+          "interior_metadata_agrees_with_r468_nearest": true,
+          "official_rsp_nums": [
+            3
+          ],
+          "official_zero_based_indices": [
+            2
+          ],
+          "query_met": "524666456.47459799",
+          "r468_center_nearest_rsp_num": 3,
+          "r468_closed_covering_rsp_nums": [
+            3
+          ],
+          "relative_offset_s": -15,
+          "selection_admitted": false
+        },
+        {
+          "interior_metadata_agrees_with_r468_nearest": true,
+          "official_rsp_nums": [
+            4
+          ],
+          "official_zero_based_indices": [
+            3
+          ],
+          "query_met": "524666471.47459799",
+          "r468_center_nearest_rsp_num": 4,
+          "r468_closed_covering_rsp_nums": [
+            4
+          ],
+          "relative_offset_s": 0,
+          "selection_admitted": false
+        },
+        {
+          "interior_metadata_agrees_with_r468_nearest": true,
+          "official_rsp_nums": [
+            4
+          ],
+          "official_zero_based_indices": [
+            3
+          ],
+          "query_met": "524666486.47459799",
+          "r468_center_nearest_rsp_num": 4,
+          "r468_closed_covering_rsp_nums": [
+            4
+          ],
+          "relative_offset_s": 15,
+          "selection_admitted": false
+        },
+        {
+          "interior_metadata_agrees_with_r468_nearest": true,
+          "official_rsp_nums": [
+            5
+          ],
+          "official_zero_based_indices": [
+            4
+          ],
+          "query_met": "524666501.47459799",
+          "r468_center_nearest_rsp_num": 5,
+          "r468_closed_covering_rsp_nums": [
+            5
+          ],
+          "relative_offset_s": 30,
+          "selection_admitted": false
+        }
+      ],
+      "segment_count": 8,
+      "segment_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    }
+  ],
+  "prospective_lock": "EMPTY",
+  "provenance": {
+    "contract_sha256": "7140bbbbe654c9ff42d9e32bb292f59ede661d9f8ba056fd0bea5ce4f77d5aa3",
+    "parent_index_sha256": "fe349829412125e46a9ae89a29bed8c4a5b747ee2f5f72f10323f4085387ab1f",
+    "source_cache_checked": true,
+    "source_sha256": "2a5581e8a0b68a5b0eeaa513ec479fef3e6735b04125968ba9f58f89d3e45833"
+  },
+  "recorded_at": "2026-08-31T05:35:01.036162Z",
+  "run_kind": "primary",
+  "schema": "tect/foundation-audit/1.0",
+  "scope": {
+    "candidate_scoring": false,
+    "edge_probes": [
+      "first_start",
+      "interior_boundary",
+      "last_stop",
+      "before_first",
+      "after_last"
+    ],
+    "limit_order": "none; finite source-semantic provenance only",
+    "matrix_coefficients_read": false,
+    "products": 2,
+    "query_offsets_s": [
+      -30,
+      -15,
+      0,
+      15,
+      30
+    ],
+    "segments_per_product": 8,
+    "synthetic_doc_mismatch_fixture": "Two overlapping intervals [0,20] and [10,30] at query 19; implementation returns first covering index while center-distance argmin returns second.",
+    "timing_likelihood": false
+  },
+  "selection_mode": "NONE_SELECTED",
+  "source_checks": {
+    "implementation_doc_mismatch": true,
+    "matrix_reading_paths_observed_but_not_executed": true,
+    "required_tokens_found": {
+      "drm_index": true,
+      "first_fallback": true,
+      "first_index_delegation": true,
+      "interpolate_method": true,
+      "last_fallback": true,
+      "matrix_read_interpolate": true,
+      "matrix_read_weighted": true,
+      "nearest_method": true,
+      "strict_overlap": true,
+      "weighted_method": true
+    },
+    "source_line_count": 645
+  },
+  "source_owner_semantics_admitted": false,
+  "source_pin": {
+    "branch": "main",
+    "byte_length": 25574,
+    "commit": "ad506a4a45016bda720ff8d722e9ada49fd32191",
+    "file": "src/gdt/core/response.py",
+    "line_ranges": {
+      "assert_range": "628-631",
+      "drm_index": "373-394",
+      "extract_drm": "396-412",
+      "interpolate": "414-467",
+      "nearest_drm": "469-480",
+      "weighted": "482-522"
+    },
+    "local_cache": "internal/source-cache/HOLD-LC-001/2026-08-31/gdt-core-response",
+    "repository": "USRA-STI/gdt-core",
+    "repository_url": "https://github.com/USRA-STI/gdt-core",
+    "retrieved_at_utc": "2026-08-31T05:10:00Z",
+    "source_sha256": "2a5581e8a0b68a5b0eeaa513ec479fef3e6735b04125968ba9f58f89d3e45833",
+    "source_url": "https://raw.githubusercontent.com/USRA-STI/gdt-core/ad506a4a45016bda720ff8d722e9ada49fd32191/src/gdt/core/response.py"
+  },
+  "synthetic_probe": {
+    "center_distance_argmin_rsp_num": 2,
+    "doc_implementation_mismatch": true,
+    "fixture": "overlap_[0,20]_[10,30]_query_19",
+    "official_drm_index_zero_based": [
+      0,
+      1
+    ],
+    "official_nearest_rsp_num": 1
+  },
+  "task_id": "T-061",
+  "verdict": "PASS"
+}

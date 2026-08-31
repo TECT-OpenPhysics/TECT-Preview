@@ -1,0 +1,182 @@
+{
+  "assertion_count": 14,
+  "assertions": [
+    {
+      "actual": "HOLD-LC-GDT-RSP2-SELECTION OWNER: PASS source_sha=2a5581e8a0b6 products=2 segments=16 selection=NONE_SELECTED matrix=NOT_READ score=STOPPED\n",
+      "expected": "PASS",
+      "name": "primary child",
+      "pass": true
+    },
+    {
+      "actual": "HOLD-LC-GDT-RSP2-SELECTION OWNER INDEPENDENT: PASS products=2 segments=16 selection=NONE_SELECTED matrix=NOT_READ\n",
+      "expected": "PASS",
+      "name": "independent child",
+      "pass": true
+    },
+    {
+      "actual": "HOLD-LC-GDT-RSP2-SELECTION OWNER HOSTILE: PASS 12/12 mutations rejected\n",
+      "expected": "PASS",
+      "name": "hostile child",
+      "pass": true
+    },
+    {
+      "actual": [
+        "3b7af6a77f6ce071e721e744dda7f697da1d46f49760bf6413ca2dddc2247d8e",
+        "3b7af6a77f6ce071e721e744dda7f697da1d46f49760bf6413ca2dddc2247d8e"
+      ],
+      "expected": "equal",
+      "name": "lane core agreement",
+      "pass": true
+    },
+    {
+      "actual": {
+        "branch": "main",
+        "byte_length": 25574,
+        "commit": "ad506a4a45016bda720ff8d722e9ada49fd32191",
+        "file": "src/gdt/core/response.py",
+        "line_ranges": {
+          "assert_range": "628-631",
+          "drm_index": "373-394",
+          "extract_drm": "396-412",
+          "interpolate": "414-467",
+          "nearest_drm": "469-480",
+          "weighted": "482-522"
+        },
+        "local_cache": "internal/source-cache/HOLD-LC-001/2026-08-31/gdt-core-response",
+        "repository": "USRA-STI/gdt-core",
+        "repository_url": "https://github.com/USRA-STI/gdt-core",
+        "retrieved_at_utc": "2026-08-31T05:10:00Z",
+        "source_sha256": "2a5581e8a0b68a5b0eeaa513ec479fef3e6735b04125968ba9f58f89d3e45833",
+        "source_url": "https://raw.githubusercontent.com/USRA-STI/gdt-core/ad506a4a45016bda720ff8d722e9ada49fd32191/src/gdt/core/response.py"
+      },
+      "expected": "ad506a4a45016bda720ff8d722e9ada49fd32191",
+      "name": "source pin",
+      "pass": true
+    },
+    {
+      "actual": {
+        "path": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-primary-hold-lc-rsp2-segment-index/primary.json",
+        "sha256": "fe349829412125e46a9ae89a29bed8c4a5b747ee2f5f72f10323f4085387ab1f"
+      },
+      "expected": "fe349829412125e46a9ae89a29bed8c4a5b747ee2f5f72f10323f4085387ab1f",
+      "name": "parent index",
+      "pass": true
+    },
+    {
+      "actual": 2,
+      "expected": 2,
+      "name": "two products",
+      "pass": true
+    },
+    {
+      "actual": 16,
+      "expected": 16,
+      "name": "sixteen segments",
+      "pass": true
+    },
+    {
+      "actual": 22,
+      "expected": 22,
+      "name": "endpoint probes",
+      "pass": true
+    },
+    {
+      "actual": {
+        "center_distance_argmin_rsp_num": 2,
+        "doc_implementation_mismatch": true,
+        "fixture": "overlap_[0,20]_[10,30]_query_19",
+        "official_drm_index_zero_based": [
+          0,
+          1
+        ],
+        "official_nearest_rsp_num": 1
+      },
+      "expected": true,
+      "name": "doc mismatch recorded",
+      "pass": true
+    },
+    {
+      "actual": {
+        "calibration_interpolation_admitted": false,
+        "candidate_scoring_allowed": false,
+        "covariance_admitted": false,
+        "detector_to_geocenter_conversion_admitted": false,
+        "f_reg_f_lim_f_eff_f_obs_defined": false,
+        "nuisance_law_admitted": false,
+        "production_selection": "NONE_SELECTED",
+        "prospective_lock": "EMPTY",
+        "response_validity_admitted": false,
+        "source_owner_semantics_admitted": false,
+        "timing_likelihood_admitted": false
+      },
+      "expected": false,
+      "name": "matrix paths locked",
+      "pass": true
+    },
+    {
+      "actual": [
+        "NONE_SELECTED",
+        false
+      ],
+      "expected": [
+        "NONE_SELECTED",
+        false
+      ],
+      "name": "selection stopped",
+      "pass": true
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "methods unchanged",
+      "pass": true
+    },
+    {
+      "actual": {
+        "command": "lake env lean Tect/R469.lean",
+        "output": "",
+        "returncode": 0,
+        "status": "PASS"
+      },
+      "expected": "PASS",
+      "name": "Lean compile",
+      "pass": true
+    }
+  ],
+  "audit_id": "HOLD-LC-001-GDT-RSP2-SELECTION-OWNER-INTEGRATED",
+  "boundary": [
+    "This result does not select nearest, covering or interpolation as a production response.",
+    "The source implementation's matrix-reading interpolation and weighted paths are not executed or admitted.",
+    "The docstring/implementation mismatch and endpoint fallback are software semantics, not a calibration-validity or physical timing law.",
+    "No candidate score, holdout prediction, microscopic dynamics, causal propagation, physical sector, Pre-A, QFT, Yang--Mills, gravity, continuum or mass-gap conclusion follows.",
+    "The established T-054 forward and T-059/T-061 observation-first methods are unchanged; this is additive source-owner provenance only."
+  ],
+  "candidate_scoring": false,
+  "claim_bearing": false,
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "holdout_id": "HOLD-LC-001",
+  "lean": {
+    "command": "lake env lean Tect/R469.lean",
+    "output": "",
+    "returncode": 0,
+    "status": "PASS"
+  },
+  "matrix_coefficients_read": false,
+  "methods_unchanged": true,
+  "passed": 14,
+  "prospective_lock": "EMPTY",
+  "provenance": {
+    "contract_sha256": "7140bbbbe654c9ff42d9e32bb292f59ede661d9f8ba056fd0bea5ce4f77d5aa3",
+    "hostile_sha256": "d2017a8ee4a4e294147c71a35398428bb5fb874a1f2da52e571a79496ebd8379",
+    "independent_sha256": "09f46675a0d0fb8f6fd70a5bf5c4180e397470624123a2671c0e0e3401424e0b",
+    "lean_sha256": "a464d4cb711230c5e9c48e3531c5dd76abed0864ebf074bc089345aaa57b85ed",
+    "primary_sha256": "6b17932444711a2a54287ae5e05635fea0e3ec83ff28a2e2a69b9e579dd3acb3"
+  },
+  "recorded_at": "2026-08-31T05:35:15.422516Z",
+  "run_kind": "integrated",
+  "schema": "tect/foundation-audit/1.0",
+  "selection_mode": "NONE_SELECTED",
+  "source_owner_semantics_admitted": false,
+  "task_id": "T-061",
+  "verdict": "PASS"
+}
