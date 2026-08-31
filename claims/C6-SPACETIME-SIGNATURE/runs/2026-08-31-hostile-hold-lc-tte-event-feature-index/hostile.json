@@ -1,0 +1,155 @@
+{
+  "admission": {
+    "calibration_validity_admitted": false,
+    "candidate_scoring_allowed": false,
+    "component_covariance_admitted": false,
+    "f_eff": "NOT_ADMITTED",
+    "f_lim": "NOT_ADMITTED",
+    "f_obs": "NOT_ADMITTED",
+    "f_reg": "PARTIAL_DETECTOR_FRAME_FEATURE_ONLY",
+    "geocenter_conversion_admitted": false,
+    "intrinsic_emission_nuisance_admitted": false,
+    "prospective_lock": "EMPTY",
+    "raw_event_rows_read": true,
+    "response_matrix_values_read": false,
+    "source_owner_admitted": false,
+    "time_standard_conversion_admitted": false,
+    "timing_likelihood_admitted": false
+  },
+  "all_mutations_rejected": true,
+  "assertion_count": 12,
+  "assumptions": [
+    "The byte-freeze manifest remains authoritative for product identity, local cache keys, byte lengths and SHA-256 values.",
+    "FITS binary-table scalar layout is big-endian as declared by the standard and the selected TTE headers.",
+    "TIME is converted only with the per-table TSCAL/TZERO metadata; no detector-to-geocenter or leap-second conversion is inferred.",
+    "The one-second trigger-relative histogram rule is frozen before any candidate comparison and is not fitted to a candidate.",
+    "Reading raw TTE rows is an additive source-feature operation and does not authorize response, likelihood or physical-map admission."
+  ],
+  "audit_id": "HOLD-LC-001-TTE-EVENT-FEATURE-INDEX",
+  "boundary": "R-473 is a T0 claim-nonbearing finite raw-event feature index. It advances only the detector-frame feature portion of F_reg for two already hash-pinned TTE products. The physical owner, calibration, time-standard, geocenter, likelihood, covariance, nuisance, F_lim/F_eff/F_obs, prospective, physical-identity, continuum and mass-gap gates remain open.",
+  "claim_bearing": false,
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "evidence_level": "T0 exact hash-pinned raw-row extraction with independent parser, hostile mutations and Lean arithmetic cross-check",
+  "exploration_id": "EXP-001348",
+  "falsifiers": [
+    "Any source hash or byte-length mismatch.",
+    "A malformed EVENTS table, unsupported column format, out-of-bounds row span or non-finite decoded value.",
+    "A time outside the header interval, a decreasing event sequence or a PHA outside [0,127].",
+    "Histogram conservation, common-edge, digest or primary/independent parity failure.",
+    "Any attempt to read response coefficients, infer geocenter timing, admit a likelihood/covariance, or score a candidate from this feature index.",
+    "Any method, owner-order, prospective-lock or physical-scope promotion mutation."
+  ],
+  "holdout_id": "HOLD-LC-001",
+  "methods_unchanged": true,
+  "missing_assumptions": [
+    "A source-owned or independently reproduced calibration release and validity/interpolation rule.",
+    "A common time-standard and detector-to-geocenter transformation with uncertainty.",
+    "A fixed source-owned detector, energy, background and onset-selection rule.",
+    "A joint timing likelihood or covariance including calibration, shared-source and selection terms.",
+    "A preregistered intrinsic-emission-lag nuisance law or calibrated set-valued scoring rule.",
+    "A complete F_reg/F_lim/F_eff/F_obs microscopic map, immutable scorer and prospective holdout."
+  ],
+  "mutations": [
+    {
+      "name": "row-order-decrease",
+      "reason": "ValueError: row-order-decrease.fit: event times decrease at row 1",
+      "rejected": true
+    },
+    {
+      "name": "timestamp-outside-header",
+      "reason": "ValueError: timestamp-outside-header.fit: event row 0 lies outside TSTART/TSTOP",
+      "rejected": true
+    },
+    {
+      "name": "timestamp-nan",
+      "reason": "ValueError: timestamp-nan.fit: non-finite event value at row 0",
+      "rejected": true
+    },
+    {
+      "name": "pha-out-of-range",
+      "reason": "ValueError: pha-out-of-range.fit: PHA 32767 outside [0,127]",
+      "rejected": true
+    },
+    {
+      "name": "truncated-fits",
+      "reason": "ValueError: FITS data span exceeds file length",
+      "rejected": true
+    },
+    {
+      "name": "hash-byte-flip",
+      "reason": "ValueError: hash-byte-flip.fit: SHA-256 mismatch",
+      "rejected": true
+    },
+    {
+      "name": "time-tform-schema",
+      "reason": "ValueError: declared row width 10 differs from column width 6",
+      "rejected": true
+    },
+    {
+      "name": "manifest-byte-freeze-hash",
+      "reason": "ValueError: byte-freeze parent hash mismatch",
+      "rejected": true
+    },
+    {
+      "name": "candidate-score-promotion",
+      "reason": "ValueError: candidate scoring enabled",
+      "rejected": true
+    },
+    {
+      "name": "prospective-lock-promotion",
+      "reason": "ValueError: prospective lock changed",
+      "rejected": true
+    },
+    {
+      "name": "method-change-promotion",
+      "reason": "ValueError: method-preservation firewall changed",
+      "rejected": true
+    },
+    {
+      "name": "physical-sector-promotion",
+      "reason": "ValueError: physical scope widened",
+      "rejected": true
+    }
+  ],
+  "non_claims": [
+    "The event histogram is a detector-frame descriptive feature and is not a timing likelihood, confidence region or covariance estimate.",
+    "It does not supply a geocenter correction, calibration validity, intrinsic-emission law, microscopic dynamics, physical projection or candidate score.",
+    "It does not prove Pre-A, C6, A13, Sector-A, QFT, Yang-Mills, gravity, a continuum limit, cosmic origin, a theory of everything or a mass gap.",
+    "It does not replace the Reading-H physical-empty branch or any existing T-054 forward proof step.",
+    "The established T-054 forward method, T-059/T-061 inverse method, owner order and promotion firewalls are unchanged."
+  ],
+  "passed": 12,
+  "provenance": {
+    "byte_freeze_sha256": "fd21c32658f19c37368625c44cac68b630bbd2a4709c213099fead9a20df9746",
+    "hostile_script_sha256": "d6a4da63acb2ac63c619e8f0c1d71c2836a66ba3d88adaa3afe6154d345c4c4f",
+    "manifest_sha256": "86a06b7c4008cd7a14854710d6b26cc47b5f1a77b9becb94c96745c4beffe055",
+    "source_byte_length": 2756160,
+    "source_event_data_offset": 20160,
+    "source_first_raw_time": -136.96127992868423,
+    "source_product": "FERMI-GBM-N0-TTE",
+    "source_sha256": "4982f0d104d4dabfc43816cf2373c8368ba334984df7c8b0644fb4892e32e58b"
+  },
+  "result_id": "R-473",
+  "run_kind": "hostile",
+  "schema": "tect/foundation-audit/1.0",
+  "scope": {
+    "c6_closed": false,
+    "candidate_selection": false,
+    "complete_f_reg_f_lim_f_eff_f_obs": false,
+    "continuum_closed": false,
+    "finite_feature_index_closed": true,
+    "mass_gap_closed": false,
+    "no_pdf": true,
+    "physical_owner_closed": false,
+    "physical_sector_closed": false,
+    "pre_a_closed": false,
+    "prospective_prediction": false,
+    "qft_identity_closed": false,
+    "sector_a_closed": false,
+    "statistical_model_closed": false,
+    "yang_mills_identity_closed": false
+  },
+  "task_id": "T-061",
+  "tier": "T0",
+  "verdict": "PASS"
+}

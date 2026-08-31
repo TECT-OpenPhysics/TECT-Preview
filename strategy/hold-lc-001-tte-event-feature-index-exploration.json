@@ -1,0 +1,102 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "schema_version": "1.0",
+  "id": "EXP-001348",
+  "recorded_at": "2026-08-31T08:50:16Z",
+  "reviewed_on": "2026-08-31",
+  "recorded_by": "Codex",
+  "provenance": "contemporaneous",
+  "task_id": "T-061",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "gate_ids": [
+    "PA-INVERSE-OBSERVATION-TARGET-MAP-HOLDOUT-FREEZE"
+  ],
+  "title": "HOLD-LC-001 TTE event-row feature index",
+  "question": "Can the already hash-pinned Fermi TTE event rows be decoded into a deterministic candidate-neutral detector-frame feature index while preserving the existing forward, inverse, owner-order and promotion-firewall methods?",
+  "method": [
+    "Preserve the established T-054 forward method, T-059/T-061 observation-first inverse method, owner order, stopped-loop rules and promotion firewalls; add only a finite F_reg source-feature slot.",
+    "Read only the EVENTS TIME 1D and PHA 1I columns of the two byte-frozen Fermi GBM TTE products and derive one-second trigger-relative left-closed/right-open bins from their headers.",
+    "Run the primary standard-library parser with byte hash, FITS span, schema, finite-time, monotonicity, PHA-range, conservation and common-edge checks.",
+    "Run a non-importing independent parser and require exact equality of the canonical feature core.",
+    "Run hostile temporary-file and manifest mutations for source bytes, schema, time, PHA, method, owner, prospective and physical-scope promotion, rejecting every mutation.",
+    "Compile the finite arithmetic fixtures with the pinned Lean toolchain and integrate all lanes without issuing a PDF."
+  ],
+  "finding": "The two pinned EVENTS tables decode reproducibly: NaI N0 has 272615 rows and BGO B0 has 394501 rows, with a common 263-bin one-second trigger-relative range and conserved nonnegative counts. Primary 23/23, independent 14/14, hostile 12/12 with every mutation rejected, integrated 25/25 and Lean R473 pass. The result is only a detector-frame descriptive F_reg feature; likelihood, covariance, geocentre, calibration, dynamics, scoring and prospective admission remain blocked.",
+  "decision_reason": "T-061 needed a concrete, source-backed next slot after the owner-map and parser-provenance boundaries. Raw event-row extraction advances the observation-first intake without inventing a dynamics table, replacing the established methods, or treating a retrospective feature as a prediction.",
+  "decision_scope": "T0 finite raw-event feature extraction over two hash-pinned Fermi EVENTS tables; no statistical model, physical map, candidate comparison, prospective holdout, continuum or identity claim",
+  "decision_scope_note": "This is an additive inverse-lane source feature. It neither closes the forward T-054 Q3LOCK gate nor replaces T-059/T-061 owner and map contracts.",
+  "evidence_level": "T0 exact hash-pinned raw-row extraction with independent parser, hostile mutation rejection, integrated 25/25 audit and Lean arithmetic cross-check",
+  "evidence_refs": [
+    "strategy/hold-lc-001-tte-event-feature-index-v0.1.json#exact_scope",
+    "strategy/hold-lc-001-tte-event-feature-index-certificate-260831.md#Verification dispositions",
+    "verification/scripts/hold_lc_001_tte_event_feature_index.py#run",
+    "codes/foundations/hold_lc_001_tte_event_feature_index_independent.py#run",
+    "codes/foundations/hold_lc_001_tte_event_feature_index_hostile.py#run",
+    "verification/scripts/hold_lc_001_tte_event_feature_index_verify.py#run",
+    "verification/lean/Tect/R473.lean#pinned_histogram_length",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-primary-hold-lc-tte-event-feature-index/primary.json#assertions",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-independent-hold-lc-tte-event-feature-index/independent.json#assertions",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-hostile-hold-lc-tte-event-feature-index/hostile.json#mutations",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-integrated-hold-lc-tte-event-feature-index/integrated.json#assertions",
+    "changelog/log.jsonl#20260831-r-473-hold-lc-001-tte-event-row-feature-index-2"
+  ],
+  "formal_refs": {
+    "results": [
+      "R-473"
+    ],
+    "negatives": [],
+    "events": [
+      "20260831-r-473-hold-lc-001-tte-event-row-feature-index-2"
+    ]
+  },
+  "related": [
+    {
+      "id": "EXP-001347",
+      "relation": "continues"
+    }
+  ],
+  "formal_integration": {
+    "results": [
+      "R-473"
+    ],
+    "negatives": [],
+    "events": [
+      "20260831-r-473-hold-lc-001-tte-event-row-feature-index-2"
+    ],
+    "primary": "23/23",
+    "independent": "14/14",
+    "hostile": "12/12; 12 mutations rejected",
+    "integrated": "25/25",
+    "lean": "R473 PASS",
+    "methods_unchanged": true,
+    "no_tier_change": true,
+    "no_new_negative": true,
+    "no_pdf": true
+  },
+  "assumptions": [
+    "The byte-freeze manifest remains authoritative for product identity, local cache keys, byte lengths and SHA-256 values.",
+    "FITS binary-table scalar layout is big-endian as declared by the standard and the selected TTE headers.",
+    "TIME is converted only with per-table TSCAL/TZERO and TRIGTIME; no detector-to-geocentre or leap-second conversion is inferred.",
+    "The one-second trigger-relative histogram rule is frozen before any candidate comparison and is not fitted to a candidate.",
+    "Raw TTE reading is an additive F_reg source-feature operation and does not authorize response, likelihood, covariance or physical admission."
+  ],
+  "missing_assumptions": [
+    "A source-owned or independently reproduced calibration release and validity/interpolation rule.",
+    "A common time-standard and detector-to-geocentre transformation with uncertainty.",
+    "A fixed source-owned detector, energy, background and onset-selection rule.",
+    "A joint timing likelihood or covariance including calibration, shared-source and selection terms.",
+    "A preregistered intrinsic-emission-lag nuisance law or calibrated set-valued scoring rule.",
+    "A complete F_reg/F_lim/F_eff/F_obs microscopic map, immutable scorer and prospective holdout."
+  ],
+  "boundary": "R-473 is a T0 finite raw-event feature index only. The physical owner, calibration, time-standard, likelihood, covariance, nuisance, F_lim/F_eff/F_obs, prospective, physical-identity, continuum and mass-gap gates remain open.",
+  "next_action": "Keep the feature index frozen as a candidate-neutral input while requesting the missing owner and statistical contracts. In the forward lane continue the unchanged source-owned Q3LOCK -> common-core -> uniform-estimate order; do not score this retrospective feature or reopen a repeated physical-empty loop.",
+  "stop_or_redesign": [
+    "If either source hash, row schema, common edges, conservation or primary/independent parity drifts, stop and repair the source-feature package before citing it.",
+    "If any hostile mutation is accepted, withdraw the package and repair its admission firewall.",
+    "If a future owner packet changes the source feature or its interpretation, issue a new versioned contract rather than mutating this record.",
+    "If calibration, time-standard, geocentre, likelihood, covariance, nuisance or prospective ownership does not arrive, retain this T0 feature and return the inverse lane to its fail-closed intake while the forward lane remains on T-054."
+  ],
+  "verdict": "advanced"
+}

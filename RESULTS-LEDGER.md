@@ -22,6 +22,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-473](#r-473) | HOLD-LC-001 TTE event-row feature index | R-473 / EXP-001348 is a T0 claim-nonbearing finite raw-event feature index. The two byte-frozen Fermi EVENTS tables (NaI N0 and BGO B0) decode to 272,615 and 394,501 rows, with a common 263-bin one-second trigger-relative histogram; primary 23/23, independent 14/14, hostile 12/12 and integrated 25/25 pass, including Lean R473. Existing T-054 forward and T-059/T-061 inverse methods, owner order and promotion firewalls are unchanged; likelihood, covariance, geocentre, calibration, scoring, prospective, physical, Pre-A, Sector-A, QFT, Yang--Mills, continuum and mass-gap conclusions remain blocked |
 | [R-472](#r-472) | A2/R-157-R-158 exact-core Lean cross-check | R-472 / EXP-001347 is a T0 claim-nonbearing additive sidecar. The pinned Lean 4.32.1 kernel checks the exact rational gap, radial gap, completion, Class-II determinant, internal characteristic polynomial, affine-square, coexistence charge/drop and radial-numerator consequences already used by R-157/R-158; primary 30/30, independent 22/22, hostile 12/12 and integrated 22/22 pass with Lean. Existing T-054 forward and T-059/T-061 inverse methods, owner order and promotion firewalls are unchanged; no PDE, source-owner, physical, Pre-A, Sector-A, QFT, Yang--Mills, continuum or mass-gap conclusion follows |
 | [R-471](#r-471) | Fail-closed P1 owner and observation-map admission contract | R-471 / EXP-001346 is a T0 claim-nonbearing additive T-061/T-054 contract result. It encodes the unchanged nine-slot owner order and ordered F_reg/F_lim/F_eff/F_obs map as a fail-closed state machine: the current packet remains EMPTY_OWNER_ARTIFACT with zero admitted candidates, and complete synthetic fixtures are contract-test-only. Primary 24/24, independent 18/18, hostile 18/18 with 14/14 mutations rejected, integrated 10/10 and Lean R471 pass. No source owner, scoring, prospective holdout, physical identity, Pre-A, Sector-A, QFT, Yang--Mills, continuum or mass-gap conclusion follows; established methods and owner order remain unchanged |
 | [R-470](#r-470) | HOLD-LC-001 official gdt-fermi GbmRsp2 parser owner boundary | R-470 v1.0 is a T0 claim-nonbearing additive T-061 mission-source provenance crosswalk. The pinned USRA-STI/gdt-fermi main commit a6ef74e7278dbeb35759aadeb8d79ec8c38e6aac and 12107-byte response.py SHA-256 are audited by independent AST/token lanes. GbmRsp2 subclasses core Rsp2, delegates opening, iterates DRM_NUM, rebuilds segment headers, accesses compressed fields, decompresses rows, constructs GbmRsp objects and aggregates them; no event product or response coefficient is opened, and no validity/interpolation/timing owner is supplied. Primary 15/15, independent 10/10, hostile 14/14, integrated 15/15 and Lean R470 pass. Production selection remains NONE_SELECTED; existing T-054/T-059/T-061 methods and owner order are unchanged |
@@ -838,6 +839,53 @@ score M3 only after a versioned source owner, state/uncertainty contract,
 candidate-neutral two-time observable, complete map stages and prospective
 holdout exist. Continue unchanged T-054 Q3LOCK owner intake and T-059/T-061
 observation-source intake; do not manufacture another finite mobility table.
+
+<a id="r-473"></a>
+### R-473 -- HOLD-LC-001 TTE event-row feature index
+
+**Result ID.** `HOLD-LC-001-TTE-EVENT-FEATURE-INDEX-v0.1` (R-473).
+
+**Version and exact scope.** R-473 / EXP-001348 is a T0, claim-nonbearing
+additive T-061 P1 source-feature result. It preserves the established T-054
+forward method, T-059/T-061 observation-first inverse method, owner order,
+stopped-loop rules and promotion firewalls. It reads only the `EVENTS` tables
+of the already byte-frozen Fermi GBM NaI N0 and BGO B0 TTE products. `TIME` is
+ decoded as 1D and `PHA` as 1I in the declared big-endian row layout. For each
+event, `r=(TIME_physical-TRIGTIME)` and a deterministic one-second,
+left-closed/right-open bin `k=floor(r/1 second)` is counted. Lower and upper
+edges are derived from `floor(TSTART-TRIGTIME)` and `ceil(TSTOP-TRIGTIME)`.
+
+The N0 table has 272,615 rows and the B0 table has 394,501 rows, for 667,116
+rows total; both share a derived 263-bin trigger-relative range. All decoded
+times are finite, nondecreasing and inside the header interval, all PHA values
+are in `[0,127]`, and histogram counts conserve the decoded rows. No response
+coefficient, geocentre conversion, time-standard conversion, calibration
+validity, likelihood, covariance, nuisance law, candidate score or prospective
+lock is admitted.
+
+**Audit and interpretation.** The primary parser passes 23/23 assertions. A
+separate standard-library parser passes 14/14 and its canonical feature core
+agrees exactly with the primary. The hostile lane rejects 12/12 temporary-file
+and manifest mutations, including row-order, timestamp, PHA, truncation, hash,
+schema, parent-hash, method, prospective and physical-scope promotions. The
+integrated verifier passes 25/25 and compiles `R473.lean` with the pinned Lean
+toolchain. These are finite raw-row and arithmetic facts only.
+
+**Boundary and non-claims.** The feature is a detector-frame descriptive input,
+not a timing likelihood, uncertainty or physical discriminator. It does not
+identify microscopic dynamics, select a candidate, close `F_reg/F_lim/F_eff/F_obs`,
+prove Pre-A, C6, Sector-A, QFT, Yang--Mills, gravity, a continuum limit, cosmic
+origin, a theory of everything or a mass gap. It does not replace the Reading-H
+physical-empty branch or any T-054 proof step. `HOLD-LC-001` remains
+retrospective and `PROS-LOCK-001` remains empty.
+
+**Proven in:** [certificate](strategy/hold-lc-001-tte-event-feature-index-certificate-260831.md), [manifest](strategy/hold-lc-001-tte-event-feature-index-v0.1.json), [primary script](verification/scripts/hold_lc_001_tte_event_feature_index.py), [independent script](codes/foundations/hold_lc_001_tte_event_feature_index_independent.py), [hostile script](codes/foundations/hold_lc_001_tte_event_feature_index_hostile.py), [integrated verifier](verification/scripts/hold_lc_001_tte_event_feature_index_verify.py), [Lean kernel](verification/lean/Tect/R473.lean), [primary run](claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-primary-hold-lc-tte-event-feature-index/primary.json), [independent run](claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-independent-hold-lc-tte-event-feature-index/independent.json), [hostile run](claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-hostile-hold-lc-tte-event-feature-index/hostile.json), [integrated run](claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-integrated-hold-lc-tte-event-feature-index/integrated.json), and [exploration record](strategy/hold-lc-001-tte-event-feature-index-exploration.json).
+
+**Next action.** Keep the index frozen as a candidate-neutral `F_reg` intake while
+requesting the missing source-owner calibration, time-standard, geocentre,
+statistical, nuisance and prospective contracts. Continue the unchanged T-054
+source-owned Q3LOCK -> common-core -> uniform-estimate order in parallel; do not
+score this retrospective feature or reopen a repeated physical-empty loop.
 
 <a id="r-472"></a>
 ### R-472 -- A2/R-157-R-158 exact-core Lean cross-check

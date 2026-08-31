@@ -1,0 +1,254 @@
+{
+  "schema": "tect/hold-lc-001-tte-event-feature-index/0.1",
+  "id": "HOLD-LC-001-TTE-EVENT-FEATURE-INDEX-v0.1",
+  "version": "0.1.0",
+  "result_id": "R-473",
+  "exploration_id": "EXP-001348",
+  "task_id": "T-061",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "tier": "T0",
+  "claim_bearing": false,
+  "status": "FINITE_RAW_EVENT_FEATURE_INDEX_WITH_STATISTICAL_ADMISSION_BLOCKED",
+  "title": "HOLD-LC-001 TTE event-row feature index",
+  "purpose": "Advance the unchanged observation-first P1 intake by extracting only detector-frame TTE event rows from the already hash-pinned Fermi products into a deterministic candidate-neutral histogram. This is a source-data feature index, not a likelihood, covariance, dynamics owner, or candidate score.",
+  "methods_preserved": {
+    "t054_forward_method_unchanged": true,
+    "t059_t061_observation_first_method_unchanged": true,
+    "owner_order_unchanged": true,
+    "promotion_firewalls_unchanged": true,
+    "inverse_lane_is_additive": true,
+    "no_physical_empty_substitution": true,
+    "no_new_dynamics_table": true,
+    "no_candidate_scoring": true
+  },
+  "inputs": {
+    "byte_freeze": {
+      "path": "strategy/hold-lc-001-event-byte-freeze-v0.1.json",
+      "sha256": "fd21c32658f19c37368625c44cac68b630bbd2a4709c213099fead9a20df9746"
+    },
+    "estimator_contract": {
+      "path": "strategy/hold-lc-001-estimator-contract-v0.1.json",
+      "sha256": "f2d3be523c9e24fe8e84673dc486f0bf17799ceba9702afd638a0bf2096ddf94"
+    },
+    "inverse_lane_contract": {
+      "path": "strategy/pre-a-observation-first-inverse-lane-contract-manifest.json",
+      "sha256": "fd5f37d0e095062a415368749d10d65de14b799938673b4460c3e849f07b9a46"
+    },
+    "source_products": [
+      "FERMI-GBM-N0-TTE",
+      "FERMI-GBM-B0-TTE"
+    ],
+    "cache_root": "internal/source-cache/HOLD-LC-001/2026-08-30"
+  },
+  "exact_scope": {
+    "products": 2,
+    "table_extension": "EVENTS",
+    "columns": [
+      {
+        "name": "TIME",
+        "format": "1D",
+        "physical_rule": "raw IEEE-754 big-endian float64 multiplied by TSCAL1 (default 1) and shifted by TZERO1"
+      },
+      {
+        "name": "PHA",
+        "format": "1I",
+        "physical_rule": "signed big-endian 16-bit integer multiplied by TSCAL2 (default 1) and shifted by TZERO2 (default 0)"
+      }
+    ],
+    "histogram": {
+      "observable_id": "H_TTE_1S_ALL_PHA",
+      "definition": "For each event, r=(TIME_physical-TRIGTIME) seconds and k=floor(r/1 second). Count events in the half-open bins [k,k+1).",
+      "bin_width_seconds": 1,
+      "lower_edge_rule": "floor(TSTART-TRIGTIME)",
+      "upper_edge_rule": "ceil(TSTOP-TRIGTIME)",
+      "edge_convention": "left-closed/right-open",
+      "channel_rule": "all PHA channels admitted by the EVENTS table; require every decoded physical PHA to be an integer in [0,127]",
+      "candidate_neutral": true,
+      "retrospective_only": true
+    },
+    "checks": [
+      "FITS byte length is block aligned and every HDU data span is in bounds.",
+      "EVENTS schema is exactly TIME 1D followed by PHA 1I with row width derived from the header.",
+      "Every decoded time and PHA is finite and every event lies in the header TSTART/TSTOP interval.",
+      "Event times are nondecreasing in file order.",
+      "Histogram bin counts are nonnegative and conserve all decoded event rows.",
+      "The two products use identical trigger-relative bin edges and one-second width."
+    ],
+    "limit_order": "none; finite raw-row feature extraction only",
+    "volume": "the finite event tables and their header-declared GTI interval",
+    "boundary_condition": "not applicable to detector-frame event rows",
+    "normalization": "raw event counts; no response, exposure or likelihood normalization",
+    "finite_parts": "none"
+  },
+  "admission": {
+    "raw_event_rows_read": true,
+    "response_matrix_values_read": false,
+    "geocenter_conversion_admitted": false,
+    "time_standard_conversion_admitted": false,
+    "calibration_validity_admitted": false,
+    "timing_likelihood_admitted": false,
+    "component_covariance_admitted": false,
+    "intrinsic_emission_nuisance_admitted": false,
+    "f_reg": "PARTIAL_DETECTOR_FRAME_FEATURE_ONLY",
+    "f_lim": "NOT_ADMITTED",
+    "f_eff": "NOT_ADMITTED",
+    "f_obs": "NOT_ADMITTED",
+    "candidate_scoring_allowed": false,
+    "prospective_lock": "EMPTY",
+    "source_owner_admitted": false
+  },
+  "scope_firewall": {
+    "finite_feature_index_closed": true,
+    "statistical_model_closed": false,
+    "physical_owner_closed": false,
+    "complete_f_reg_f_lim_f_eff_f_obs": false,
+    "candidate_selection": false,
+    "prospective_prediction": false,
+    "physical_sector_closed": false,
+    "pre_a_closed": false,
+    "sector_a_closed": false,
+    "c6_closed": false,
+    "qft_identity_closed": false,
+    "yang_mills_identity_closed": false,
+    "continuum_closed": false,
+    "mass_gap_closed": false,
+    "no_pdf": true
+  },
+  "assumptions": [
+    "The byte-freeze manifest remains authoritative for product identity, local cache keys, byte lengths and SHA-256 values.",
+    "FITS binary-table scalar layout is big-endian as declared by the standard and the selected TTE headers.",
+    "TIME is converted only with the per-table TSCAL/TZERO metadata; no detector-to-geocenter or leap-second conversion is inferred.",
+    "The one-second trigger-relative histogram rule is frozen before any candidate comparison and is not fitted to a candidate.",
+    "Reading raw TTE rows is an additive source-feature operation and does not authorize response, likelihood or physical-map admission."
+  ],
+  "missing_assumptions": [
+    "A source-owned or independently reproduced calibration release and validity/interpolation rule.",
+    "A common time-standard and detector-to-geocenter transformation with uncertainty.",
+    "A fixed source-owned detector, energy, background and onset-selection rule.",
+    "A joint timing likelihood or covariance including calibration, shared-source and selection terms.",
+    "A preregistered intrinsic-emission-lag nuisance law or calibrated set-valued scoring rule.",
+    "A complete F_reg/F_lim/F_eff/F_obs microscopic map, immutable scorer and prospective holdout."
+  ],
+  "evidence_level": "T0 exact hash-pinned raw-row extraction with independent parser, hostile mutations and Lean arithmetic cross-check",
+  "non_claims": [
+    "The event histogram is a detector-frame descriptive feature and is not a timing likelihood, confidence region or covariance estimate.",
+    "It does not supply a geocenter correction, calibration validity, intrinsic-emission law, microscopic dynamics, physical projection or candidate score.",
+    "It does not prove Pre-A, C6, A13, Sector-A, QFT, Yang-Mills, gravity, a continuum limit, cosmic origin, a theory of everything or a mass gap.",
+    "It does not replace the Reading-H physical-empty branch or any existing T-054 forward proof step.",
+    "The established T-054 forward method, T-059/T-061 inverse method, owner order and promotion firewalls are unchanged."
+  ],
+  "falsifiers": [
+    "Any source hash or byte-length mismatch.",
+    "A malformed EVENTS table, unsupported column format, out-of-bounds row span or non-finite decoded value.",
+    "A time outside the header interval, a decreasing event sequence or a PHA outside [0,127].",
+    "Histogram conservation, common-edge, digest or primary/independent parity failure.",
+    "Any attempt to read response coefficients, infer geocenter timing, admit a likelihood/covariance, or score a candidate from this feature index.",
+    "Any method, owner-order, prospective-lock or physical-scope promotion mutation."
+  ],
+  "adversarial_review": [
+    {
+      "axis": "hash-provenance",
+      "objection": "A changed event file could be accepted if only its row count is checked.",
+      "disposition": "UPHELD-BLOCKED: parent SHA-256 and byte length are checked before row decoding."
+    },
+    {
+      "axis": "FITS-layout",
+      "objection": "A wrong row width or column offset could create a plausible histogram.",
+      "disposition": "UPHELD-BLOCKED: EVENTS headers must declare TIME 1D then PHA 1I and the row width is derived and checked."
+    },
+    {
+      "axis": "time-origin",
+      "objection": "Raw TIME could be mistaken for an absolute or geocentric timestamp.",
+      "disposition": "UPHELD-BLOCKED: only table TSCAL/TZERO and TRIGTIME are used; geocenter and time-standard flags remain false."
+    },
+    {
+      "axis": "boundary-binning",
+      "objection": "Changing closed/open endpoint convention after seeing the rows could alter counts.",
+      "disposition": "UPHELD-BLOCKED: one-second left-closed/right-open bins and header-derived edges are fixed in the contract and mutation-tested."
+    },
+    {
+      "axis": "channel-selection",
+      "objection": "A favorable PHA subset could be silently selected.",
+      "disposition": "UPHELD-BLOCKED: all decoded channels are required to lie in the declared [0,127] range and no subset is selected."
+    },
+    {
+      "axis": "independent-reproduction",
+      "objection": "One parser could hide a byte-order or offset bug.",
+      "disposition": "UPHELD-BLOCKED: an independently written standard-library parser must reproduce the canonical feature core digest."
+    },
+    {
+      "axis": "statistical-overreach",
+      "objection": "A histogram could be presented as the published 1.74 +/- 0.05 s timing likelihood.",
+      "disposition": "UPHELD-BLOCKED: likelihood, covariance and nuisance admission remain false and the retrospective lock is empty."
+    },
+    {
+      "axis": "method-overhaul",
+      "objection": "Raw-row extraction could silently replace the established forward or inverse proof route.",
+      "disposition": "DISMISSED: this is an additive F_reg feature slot only; T-054/T-059/T-061 authorities and owner order are unchanged."
+    },
+    {
+      "axis": "physical-identity",
+      "objection": "Detector-frame features could be called a causal, QFT or Yang-Mills discriminator.",
+      "disposition": "UPHELD-BLOCKED: the scope explicitly denies geocenter, physical-map and identity admission."
+    },
+    {
+      "axis": "prospective-leakage",
+      "objection": "The disclosed GW170817/GRB170817A rows could later be counted as a prospective holdout.",
+      "disposition": "UPHELD-BLOCKED: HOLD-LC-001 remains RETROSPECTIVE and PROS-LOCK-001 remains EMPTY."
+    }
+  ],
+  "files": {
+    "primary": {
+      "path": "verification/scripts/hold_lc_001_tte_event_feature_index.py",
+      "sha256": "b338505618227ff3577213f5b95aa21aaf80fbe57b0d8076538deec828803841"
+    },
+    "independent": {
+      "path": "codes/foundations/hold_lc_001_tte_event_feature_index_independent.py",
+      "sha256": "116ccbccd0c56ec3a8c6ac06bc4ddb59157ecc2ec8d2c46599fd8fda5cade4e2"
+    },
+    "hostile": {
+      "path": "codes/foundations/hold_lc_001_tte_event_feature_index_hostile.py",
+      "sha256": "d6a4da63acb2ac63c619e8f0c1d71c2836a66ba3d88adaa3afe6154d345c4c4f"
+    },
+    "integrated": {
+      "path": "verification/scripts/hold_lc_001_tte_event_feature_index_verify.py",
+      "sha256": "11002f3aa4777382565baf483e422d8c76d4cb7f4e983e73307aac2b1aa8483d"
+    },
+    "lean": {
+      "path": "verification/lean/Tect/R473.lean",
+      "sha256": "ed5c3a72a96edfd0a6387fc58eb052a7847ebb955683224b944fcb5d183826d5"
+    },
+    "certificate": {
+      "path": "strategy/hold-lc-001-tte-event-feature-index-certificate-260831.md",
+      "sha256": "7ac6c414ff59050b687c714cb6b65bc013fca3642f22fa343d8cc5e9002f4fe5"
+    },
+    "primary_run": {
+      "path": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-primary-hold-lc-tte-event-feature-index/primary.json"
+    },
+    "independent_run": {
+      "path": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-independent-hold-lc-tte-event-feature-index/independent.json"
+    },
+    "hostile_run": {
+      "path": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-hostile-hold-lc-tte-event-feature-index/hostile.json"
+    },
+    "integrated_run": {
+      "path": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-integrated-hold-lc-tte-event-feature-index/integrated.json"
+    }
+  },
+  "test_oracles": {
+    "primary_minimum_assertions": 20,
+    "independent_minimum_assertions": 12,
+    "hostile_mutation_minimum": 10,
+    "integrated_minimum_assertions": 16
+  },
+  "formal_integration": {
+    "event_ordinal": 822,
+    "no_new_negative_ids": [],
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "boundary": "R-473 is a T0 claim-nonbearing finite raw-event feature index. It advances only the detector-frame feature portion of F_reg for two already hash-pinned TTE products. The physical owner, calibration, time-standard, geocenter, likelihood, covariance, nuisance, F_lim/F_eff/F_obs, prospective, physical-identity, continuum and mass-gap gates remain open.",
+  "next_action": "Use the feature index only as a frozen candidate-neutral input while requesting the missing source-owner calibration/time-standard/geocenter and statistical contracts. Do not score HOLD-LC-001 or infer dynamics. In the forward lane, continue the unchanged source-owned Q3LOCK -> common-core -> uniform-estimate order."
+}
