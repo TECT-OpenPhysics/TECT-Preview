@@ -576,6 +576,61 @@
         "verification/lean/Tect/R463.lean"
       ],
       "unresolved_claim_ids": []
+    },
+    {
+      "claim_ids": [
+        "A6-CLASSII-UV-POWER-COUNTING",
+        "A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE"
+      ],
+      "claim_ref_basis": {
+        "A6-CLASSII-UV-POWER-COUNTING": "explicit_claim_ids",
+        "A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE": "explicit_claim_ids"
+      },
+      "claim_refs": [
+        "A6-CLASSII-UV-POWER-COUNTING",
+        "A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE"
+      ],
+      "date": "2026-08-31",
+      "header": "[R-464 finite Gibbs integrability and branch conditioning] - 2026-08-31",
+      "id": "20260831-r-464-finite-gibbs-integrability-and-branch-con",
+      "keywords": [
+        "EXP-001339",
+        "R-464",
+        "T-054",
+        "T-059",
+        "T-061",
+        "branch-conditioning",
+        "finite-Gibbs",
+        "methods-unchanged"
+      ],
+      "linked_result_ids": [
+        "R-463",
+        "R-464"
+      ],
+      "negative_results": [],
+      "notes": [
+        "strategy/a6-classii-finite-gibbs-conditioning-manifest.json",
+        "strategy/a6-classii-finite-gibbs-conditioning-certificate-260831.md",
+        "strategy/a6-classii-finite-gibbs-conditioning-exploration.json",
+        "RESULTS-LEDGER.md"
+      ],
+      "raw": "## [R-464 finite Gibbs integrability and branch conditioning] - 2026-08-31\n\nR-464 / EXP-001339 adds the finite-measure prerequisite named by R-463 without changing the established T-054 forward method, T-059/T-061 observation-first lane, owner order, or promotion firewalls. For the hash-pinned A1 reference functional at each fixed finite spectral cutoff, the exact A1 spectral floor mu2>0, lambda=-ell<=0, and gamma>0 give p(t)>=gamma*t^3/12-C with T=3*ell/gamma and C=ell*T^2/4. The finite-site power-mean inequality then gives a degree-six coercive norm comparison and finite-dimensional radial Gibbs integrability for every beta>0. The exact pure-singlet branch has real codimension 4*m and zero Lebesgue mass, so it cannot be conditioned by division; only a separately supplied positive-mass branch tube can be conditioned. Primary 24/24, independent 134/134, hostile 8/8, integrated 49/49, and Lean R464 pass. This is T0 claim-nonbearing fixed-cutoff evidence only: no tube probability, entropy density, cutoff-uniform partition estimate, tightness, floor removal, continuum, physical branch, QFT, Yang--Mills, or mass-gap conclusion follows.\n\n",
+      "result_ids": [
+        "R-463",
+        "R-464"
+      ],
+      "result_link_basis": {
+        "R-463": "explicit_result_id",
+        "R-464": "explicit_result_id"
+      },
+      "scripts": [
+        "verification/scripts/a6_classii_finite_gibbs_conditioning.py",
+        "verification/scripts/a6_classii_finite_gibbs_conditioning_verify.py",
+        "codes/foundations/a6_classii_finite_gibbs_conditioning_independent.py",
+        "codes/foundations/a6_classii_finite_gibbs_conditioning_hostile.py",
+        "verification/lean/Tect/R464.lean"
+      ],
+      "unresolved_claim_ids": []
     }
   ],
   "kind": "accepted_events",

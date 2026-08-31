@@ -1,0 +1,204 @@
+{
+  "schema": "tect/a6-classii-finite-gibbs-conditioning/1.0",
+  "audit_id": "A6-CLASSII-FINITE-GIBBS-CONDITIONING-v1",
+  "result_id": "R-464",
+  "exploration_id": "EXP-001339",
+  "task_id": "T-054",
+  "claim_ids": [
+    "A6-CLASSII-UV-POWER-COUNTING",
+    "A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE"
+  ],
+  "title": "Finite-cutoff Gibbs integrability and positive-mass branch conditioning",
+  "tier": "T0",
+  "claim_bearing": false,
+  "status": "FINITE_INTEGRABILITY_AUDITED_BRANCH_TUBES_REQUIRED",
+  "question": "Does the unchanged hash-pinned A1 reference functional define a finite-cutoff Gibbs law, and what conditioning rule is valid for the R-461/R-463 branch geometry?",
+  "purpose": "Supply the finite-measure prerequisite named by R-463 without replacing the established A6, T-054, T-059, or T-061 methods. Separate exact null-branch geometry from positive-mass tube conditioning.",
+  "inputs": {
+    "a1_production_functional_manifest": {
+      "path": "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/production_functional_manifest.json",
+      "sha256": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565"
+    },
+    "r463_active_tube_metric_manifest": {
+      "path": "strategy/a6-classii-active-branch-tube-metric-manifest.json",
+      "sha256": "61c9c0b92a72eb212b70b73d418da24467e66065b84654a13a414b9a75aad78f"
+    }
+  },
+  "methods_preserved": {
+    "a1_a6_a7_functional_unchanged": true,
+    "fixed_floor_and_eta_shell_scope_unchanged": true,
+    "t054_forward_owner_order_unchanged": true,
+    "t059_t061_observation_first_lane_unchanged": true,
+    "no_conditional_mean_substitution": true,
+    "no_physical_empty_substitution": true,
+    "no_tier_change": true
+  },
+  "exact_scope": {
+    "domain": "finite spectral Galerkin space with m=(2N+1)^3 sites and six real coordinates per site",
+    "functional": "hash-pinned A1 standalone reference functional with eta_shell=0, positive rho and Class-II mass regularisers",
+    "quadratic_floor": "K(k)>=mu2=r-Z^2/(4Y)>0; family, lock and Class-II quadratic terms are nonnegative",
+    "radial_polynomial": "p(t)=mu2*t/2+lambda*t^2/4+gamma*t^3/6 with lambda=-ell<=0",
+    "coercive_bound": "p(t)>=gamma*t^3/12-C for t>=0, T=3*ell/gamma and C=ell*T^2/4",
+    "norm_bridge": "sum_x rho_x^3 >= (sum_x rho_x)^3/m^2",
+    "finite_energy_bound": "F_N(z)>=gamma*V/(12*m^3)*||z||_2^6-C*V",
+    "gibbs_status": "finite-dimensional Lebesgue integral is finite for every beta>0 at fixed N",
+    "branch_rule": "mu_N(A|B)=mu_N(A intersect B)/mu_N(B) only when mu_N(B)>0",
+    "pure_singlet": "first two complex components zero at every site; real codimension 4*m and zero Lebesgue mass",
+    "active_branch": "no zero-mass assertion; a positive-mass tube remains an owner input",
+    "limit_order": "none; fixed-cutoff integrability and conditioning prerequisite only"
+  },
+  "theorem": {
+    "finite_normalizability": "The sextic comparison and finite-dimensional radial integrability imply 0<Z_N(beta)<infinity for every fixed cutoff N and beta>0.",
+    "conditioning": "Exact zero-mass branches cannot be conditioned by division; positive-mass branch tubes have the usual normalized conditional measure.",
+    "uniformity_boundary": "The coercive coefficient gamma*V/(12*m^3) depends on m and supplies no cutoff-uniform bound."
+  },
+  "proof_skeleton": [
+    "Read the A1 parameters as exact decimal rationals and derive mu2, ell, T, and C.",
+    "Use the two algebraic branches t>=T and 0<=t<=T to prove the cubic lower bound.",
+    "Apply the finite-site power-mean inequality to obtain a degree-six norm coercivity bound.",
+    "Invoke the standard finite-dimensional radial exp(-a*||z||^6) integral comparison.",
+    "Compute the pure-singlet codimension and state the positive-mass tube conditioning identity without assigning branch probability.",
+    "Run independent, hostile, integrated, and Lean checks while leaving entropy, tightness, and all limits open."
+  ],
+  "assumptions": [
+    "The hash-pinned A1 standalone reference functional is the controlling finite-cutoff static functional.",
+    "The finite spectral Galerkin space is finite-dimensional and carries Lebesgue reference measure.",
+    "Y>0, mu2>0, gamma>0, lambda<=0, nonnegative family/lock terms, and positive Class-II coefficient matrix hold in the pinned manifest.",
+    "The standard radial integrability formula for exp(-a*||z||^6) is available in finite real dimension.",
+    "Branch tubes are measurable sets whose positive mass must be supplied by a later owner packet."
+  ],
+  "missing_assumptions": [
+    "A source-owned R-461/R-463 branch map and a positive-mass tube at each cutoff.",
+    "A quantitative correlated-Gibbs tube probability and phase/singlet entropy or Jacobian estimate.",
+    "Cutoff- and volume-uniform partition estimates, tightness, subsequential bare-measure classification, and floor removal.",
+    "A source-owned Q3LOCK production dynamics, common alpha, physical-empty comparison, QFT/Yang--Mills identity, or mass-gap bridge."
+  ],
+  "adversarial_review": [
+    {
+      "axis": "quadratic-symbol-sign",
+      "check": "Could a negative quadratic symbol invalidate the radial lower bound?",
+      "disposition": "REJECTED: Y and the exact A1-computed mu2 are checked positive."
+    },
+    {
+      "axis": "quartic-sextic-balance",
+      "check": "Could the negative quartic term overwhelm the sextic term?",
+      "disposition": "REJECTED: the threshold T=3*ell/gamma and two exact branches give the displayed bound."
+    },
+    {
+      "axis": "finite-to-uniform",
+      "check": "Could the degree-six finite bound be called cutoff-uniform?",
+      "disposition": "UPHELD-REJECTED: its coefficient scales as m^-3 and uniformity remains open."
+    },
+    {
+      "axis": "exact-branch-conditioning",
+      "check": "Can a codimension-positive pure-singlet branch receive a conditional law by division?",
+      "disposition": "REJECTED: it has zero Lebesgue mass; a positive-mass tube is required."
+    },
+    {
+      "axis": "active-branch-mass",
+      "check": "Does the same zero-mass conclusion automatically hold for the active null branch?",
+      "disposition": "UPHELD-OPEN: no active-branch mass assertion is made."
+    },
+    {
+      "axis": "proxy-substitution",
+      "check": "Could this finite integral replace the correlated full-field Gibbs law or the R-463 proxy?",
+      "disposition": "UPHELD-REJECTED: it is only a fixed-cutoff prerequisite and uses no conditional-mean substitution."
+    },
+    {
+      "axis": "method-overhaul",
+      "check": "Does the finite integrability lemma replace T-054 or alter T-059/T-061?",
+      "disposition": "DISMISSED: it is an additive prerequisite with unchanged owner order and methods."
+    },
+    {
+      "axis": "physical-promotion",
+      "check": "Can finite normalisability select a physical-empty or Reading-H branch?",
+      "disposition": "REJECTED: no physical branch, stationarity, QFT, Yang--Mills, or mass-gap field is introduced."
+    }
+  ],
+  "test_oracles": {
+    "primary_minimum_assertions": 20,
+    "independent_minimum_assertions": 50,
+    "hostile_mutation_count": 8,
+    "lean_declarations": [
+      "large_branch_nonnegative",
+      "small_branch_nonnegative",
+      "cubic_lower_bound",
+      "pure_singlet_codimension_positive",
+      "positive_mass_conditional_normalization"
+    ]
+  },
+  "audit": {
+    "cutoffs": [1, 2, 3, 4, 5, 6],
+    "fixed_volume": "16^3",
+    "finite_coordinate_convention": "six real coordinates per complex three-component site",
+    "branch_tube_rule": "positive mass required; exact pure-singlet mass is zero",
+    "no_numerical_gibbs_sampling": true
+  },
+  "scope_firewall": {
+    "finite_integrability_closed": true,
+    "pure_singlet_zero_mass_closed": true,
+    "positive_mass_conditioning_identity_closed": true,
+    "branch_tube_probability_closed": false,
+    "entropy_closed": false,
+    "cutoff_uniform_closed": false,
+    "partition_asymptotic_closed": false,
+    "tightness_closed": false,
+    "floor_removal_closed": false,
+    "continuum_closed": false,
+    "branch_owner_admitted": false,
+    "physical_branch_selected": false,
+    "pre_a_closed": false,
+    "sector_a_closed": false,
+    "qft_identity_closed": false,
+    "yang_mills_identity_closed": false,
+    "mass_gap_closed": false,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "evidence_level": "T0 exact fixed-cutoff finite-dimensional Gibbs integrability and positive-mass conditioning prerequisite; not a concentration, tightness, or continuum theorem",
+  "non_claims": [
+    "This result does not compute a branch or tube probability.",
+    "It does not assign a conditional measure to an exact zero-mass null branch.",
+    "It does not provide a cutoff- or volume-uniform partition estimate, entropy density, or tightness.",
+    "It does not remove the rho floor, select Reading-H or a physical-empty branch, or close A6/A7.",
+    "It does not prove Pre-A, Sector A, QFT, Yang--Mills, gravity, continuum, or mass gap.",
+    "The established T-054, T-059, and T-061 methods, owner order, and promotion firewalls are unchanged."
+  ],
+  "files": {
+    "lean": {
+      "path": "verification/lean/Tect/R464.lean",
+      "sha256": "edcc65b5a29d0bdd867f5c6ad2b3066c02ea69116f2cd452500bc4ef1c1297a5"
+    },
+    "primary": {
+      "path": "verification/scripts/a6_classii_finite_gibbs_conditioning.py",
+      "sha256": "502a3dde888cec1bc5cff9f726929ce5c6e4db5375ae6ef0f60d4a98b53244f0"
+    },
+    "independent": {
+      "path": "codes/foundations/a6_classii_finite_gibbs_conditioning_independent.py",
+      "sha256": "da6bd39f07a8b39e543483f3f36fcd60c51109f515f1d80e3b05060d0f8c4e78"
+    },
+    "hostile": {
+      "path": "codes/foundations/a6_classii_finite_gibbs_conditioning_hostile.py",
+      "sha256": "cfe56c8f73ee566ae6391b99d53b3ff681ca28748f4127bf1a1298d855449318"
+    },
+    "integrated": {
+      "path": "verification/scripts/a6_classii_finite_gibbs_conditioning_verify.py",
+      "sha256": "316328b98a202cdab0010bce556fb500b4d86eff76c17cf2a7dc8f8f23b956e4"
+    },
+    "certificate": {
+      "path": "strategy/a6-classii-finite-gibbs-conditioning-certificate-260831.md",
+      "sha256": "dd4ba9def0a68aeadffde3337aa3eb11196591919126ac0371639aa8f1326fba"
+    }
+  },
+  "formal_integration": {
+    "results": [
+      "R-464"
+    ],
+    "event_ordinal": 813,
+    "no_new_negative_ids": [],
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "boundary": "R-464 proves only fixed-cutoff finite-dimensional integrability and the admissible conditioning rule. It does not provide a branch tube, a probability estimate, entropy control, uniformity, tightness, a limit, or physical identification.",
+  "next_action": "Obtain a source-owned positive-mass branch tube and quantitative correlated-Gibbs probability estimate; then feed R-463's metric into that estimate while keeping exact null branches unconditioned. In parallel continue the unchanged T-054 Q3LOCK owner intake and T-059/T-061 observation locks."
+}

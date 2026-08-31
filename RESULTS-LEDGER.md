@@ -22,6 +22,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-464](#r-464) | Finite-cutoff Gibbs integrability and positive-mass branch conditioning | R-464 v1.0 is a T0 claim-nonbearing additive A6/A7 prerequisite under the unchanged fixed-floor Class-II functional. Exact A1 coefficient arithmetic gives a degree-six coercive lower comparison and finite-dimensional Gibbs integrability at every fixed cutoff; the pure-singlet branch has codimension 4*m and zero Lebesgue mass, so only positive-mass measurable tubes may be conditioned. Primary 24/24, independent 134/134, hostile 8/8, integrated 49/49 and Lean R464 pass. No branch probability, entropy, cutoff-uniformity, tightness, continuum, physical, QFT, Yang--Mills or mass-gap conclusion follows; existing methods and owner order are unchanged |
 | [R-463](#r-463) | Fixed-floor active-branch tube metric and finite entropy stress test | R-463 v1.0 is a T0 claim-nonbearing additive A6/A7 interface under the unchanged fixed-floor Class-II functional. The exact radial sum-of-squares gap defines an active metric dominated by 2*e_II; bounded local-grid proxies are reported with primary 44/44, independent 6270/6270, hostile 8/8, integrated 48/48 and Lean R463 pass. A separate flat proxy has zero energy barrier. No correlated Gibbs, entropy density, partition, tightness, continuum, physical, QFT, Yang--Mills or mass-gap conclusion follows; existing methods and owner order are unchanged |
 | [R-462](#r-462) | Fixed-floor active-branch normal-form coercivity | R-462 v1.0 is a T0 claim-nonbearing additive A6/A7 local jet lemma under the unchanged fixed-floor Class-II functional. On an active Bloch branch `m=s*n` with `s>0` and `n dot t=0`, the exact identity `2 e_II = a*d_s^2+2b*d_s*delta+c*delta^2+(a+2b+c)*s^2|t|^2` separates radial and angular normal directions; primary 46/46, independent 209/209, hostile 8/8, integrated 44/44 and Lean R462 pass. Phase/singlet-flat directions, tube/entropy, partition, tightness, continuum, physical, QFT, Yang--Mills and mass-gap conclusions remain open; existing methods and owner order are unchanged |
 | [R-461](#r-461) | Fixed-floor smooth Class-II null-branch dichotomy | R-461 v1.0 is a T0 claim-nonbearing additive A6/A7 pathwise lemma under the existing fixed-floor Class-II functional. Positive-form completion, the exact Bloch identity and an exhaustive `[-2,2]^4` rational grid classify smooth null fields into a pure-singlet branch or an active constant-Bloch/constant-rho phase branch; primary 1310/1310, independent 677/677, hostile 8/8, integrated 46/46 and Lean R461 pass. An active common-phase plane wave has zero pathwise Class-II energy but positive `W_epsilon`, so the conditional contraction zero set cannot replace the pathwise null set. This does not prove Gibbs concentration, entropy/tube bounds, partition convergence, tightness, floor removal, continuum, physical branch selection, QFT, Yang--Mills or mass gap; existing A6/A7, T-054, T-059 and T-061 methods and owner order are unchanged |
@@ -829,6 +830,61 @@ score M3 only after a versioned source owner, state/uncertainty contract,
 candidate-neutral two-time observable, complete map stages and prospective
 holdout exist. Continue unchanged T-054 Q3LOCK owner intake and T-059/T-061
 observation-source intake; do not manufacture another finite mobility table.
+
+<a id="r-464"></a>
+### R-464 -- Finite-cutoff Gibbs integrability and positive-mass branch conditioning
+
+**Result ID.** `A6-CLASSII-FINITE-GIBBS-CONDITIONING-v1` (R-464).
+
+**Version and exact scope.** R-464 v1.0 is a T0, claim-nonbearing additive
+prerequisite for the existing A6/A7 fixed-floor Class-II route. It uses the
+hash-pinned A1 reference functional, the unchanged T-054 forward owner order,
+and the T-059/T-061 observation-first locks. For the finite spectral cutoff
+with `m=(2N+1)^3` sites, the real coordinate space has dimension `6*m`.
+
+**Exact fixed-cutoff result.** Parse the A1 decimals as exact rationals. With
+`mu2=26000000000947494031/100000000000000000000 > 0`,
+`ell=-lambda=43/100`, `gamma=81/50`, `T=3*ell/gamma=43/54`, and
+`C=ell*T^2/4=79507/1166400`, the scalar comparison
+
+```text
+p(t)=mu2*t/2 - ell*t^2/4 + gamma*t^3/6
+p(t) >= gamma*t^3/12 - C  (t >= 0)
+```
+
+holds by the two exact threshold branches. Since
+`sum_i rho_i^3 >= (sum_i rho_i)^3/m^2`, the full finite functional is
+bounded below by a positive multiple of `||z||^6` minus a finite constant.
+The standard finite-dimensional radial integral therefore gives a finite
+Lebesgue Gibbs normalizer for each fixed cutoff and every `beta>0`. The
+coercive norm coefficient is cutoff-dependent (it decays as `m^-3`), so this
+is not a uniform estimate.
+
+**Branch-conditioning rule.** The exact pure-singlet branch sets the first two
+complex components to zero at every site. It has real codimension `4*m` in
+`R^(6*m)` and hence zero Lebesgue Gibbs mass; conditioning by division on that
+set is undefined. A branch event must instead be a measurable tube `B` with
+`mu(B)>0`, and only then is `mu(A intersect B)/mu(B)` a valid conditional
+probability. The active-branch mass is not classified here.
+
+**Evidence.** The primary audit passes 24/24 assertions, the non-importing
+independent audit passes 134/134, eight hostile mutations are rejected, the
+integrated verifier passes 49/49, and the Lean kernel `R464.lean` compiles with
+no forbidden declarations.
+
+**Boundary and non-claims.** R-464 does not estimate a correlated-Gibbs branch
+or tube probability, entropy density, phase/singlet Jacobian, partition
+asymptotic, cutoff/volume-uniform bound, tightness, floor removal, ordered
+continuum limit, source-owned Q3LOCK dynamics, physical-empty selection,
+Pre-A, Sector A, QFT, Yang--Mills, or mass gap. It does not replace or alter
+any established forward or inverse method.
+
+**Proven in.** [R-464 certificate](strategy/a6-classii-finite-gibbs-conditioning-certificate-260831.md), [machine manifest](strategy/a6-classii-finite-gibbs-conditioning-manifest.json), [primary script](verification/scripts/a6_classii_finite_gibbs_conditioning.py), [independent script](codes/foundations/a6_classii_finite_gibbs_conditioning_independent.py), [hostile script](codes/foundations/a6_classii_finite_gibbs_conditioning_hostile.py), [integrated verifier](verification/scripts/a6_classii_finite_gibbs_conditioning_verify.py), [integrated run](claims/A6-CLASSII-UV-POWER-COUNTING/runs/2026-08-31-integrated-a6-finite-gibbs-conditioning/integrated.json), [Lean kernel](verification/lean/Tect/R464.lean), and [exploration record](strategy/a6-classii-finite-gibbs-conditioning-exploration.json).
+
+**Next action.** Obtain a source-owned positive-mass branch tube and its
+correlated-Gibbs probability estimate. Only then apply the R-463 active metric;
+keep exact zero-mass branches unconditioned and continue T-054 Q3LOCK plus
+T-059/T-061 observation locks in parallel.
 
 <a id="r-463"></a>
 ### R-463 -- Fixed-floor active-branch tube metric and finite entropy stress test

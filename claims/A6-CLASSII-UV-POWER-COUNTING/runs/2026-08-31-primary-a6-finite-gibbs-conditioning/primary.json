@@ -1,0 +1,577 @@
+{
+  "assertion_summary": {
+    "passed": 24,
+    "total": 24
+  },
+  "assertions": [
+    {
+      "actual": "E:\\Dev\\TECT\\claims\\A1-PRODUCTION-FUNCTIONAL-REALISATION\\production_functional_manifest.json",
+      "expected": true,
+      "name": "A1 manifest exists",
+      "status": "PASS"
+    },
+    {
+      "actual": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565",
+      "expected": "nonempty SHA-256",
+      "name": "A1 manifest hash is available",
+      "status": "PASS"
+    },
+    {
+      "actual": "1",
+      "expected": ">0",
+      "name": "Y positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "26000000000947494031/100000000000000000000",
+      "expected": ">0",
+      "name": "mu2 spectral lower bound positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "81/50",
+      "expected": ">0",
+      "name": "gamma positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "-43/100",
+      "expected": "<=0",
+      "name": "lambda nonpositive",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": "0",
+      "name": "eta shell fixed to zero",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "0",
+        "3/100",
+        "7/100"
+      ],
+      "expected": ">=0",
+      "name": "family masses nonnegative",
+      "status": "PASS"
+    },
+    {
+      "actual": "3/20",
+      "expected": ">=0",
+      "name": "lock coefficient nonnegative",
+      "status": "PASS"
+    },
+    {
+      "actual": "43/54",
+      "expected": ">0",
+      "name": "threshold positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "79507/1166400",
+      "expected": ">=0",
+      "name": "lower-bound constant nonnegative",
+      "status": "PASS"
+    },
+    {
+      "actual": "79507/1166400",
+      "expected": ">=0",
+      "name": "polynomial lower bound probe 1",
+      "status": "PASS"
+    },
+    {
+      "actual": "64970312501100040569991/583200000000000000000000",
+      "expected": ">=0",
+      "name": "polynomial lower bound probe 2",
+      "status": "PASS"
+    },
+    {
+      "actual": "50062750001100040569991/291600000000000000000000",
+      "expected": ">=0",
+      "name": "polynomial lower bound probe 3",
+      "status": "PASS"
+    },
+    {
+      "actual": "79877875001100040569991/145800000000000000000000",
+      "expected": ">=0",
+      "name": "polynomial lower bound probe 4",
+      "status": "PASS"
+    },
+    {
+      "actual": "6334233250069302555909433/7873200000000000000000000",
+      "expected": ">=0",
+      "name": "polynomial lower bound probe 5",
+      "status": "PASS"
+    },
+    {
+      "actual": "exact",
+      "expected": true,
+      "name": "large-branch factor at threshold",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        {
+          "fixture": 1,
+          "holds": true,
+          "left": "81",
+          "right": "27",
+          "sites": 3
+        },
+        {
+          "fixture": 2,
+          "holds": true,
+          "left": "27",
+          "right": "27",
+          "sites": 3
+        },
+        {
+          "fixture": 3,
+          "holds": true,
+          "left": "2510449/13500",
+          "right": "17373979/216000",
+          "sites": 4
+        },
+        {
+          "fixture": 4,
+          "holds": true,
+          "left": "12116943/13720",
+          "right": "89314623/343000",
+          "sites": 5
+        }
+      ],
+      "expected": "all hold",
+      "name": "power-mean norm bridge",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        {
+          "cutoff": 1,
+          "lower_constant": "5088448/18225",
+          "positive": true,
+          "real_dimension": 162,
+          "sextic_norm6_coefficient": "512/18225",
+          "sites": 27
+        },
+        {
+          "cutoff": 2,
+          "lower_constant": "5088448/18225",
+          "positive": true,
+          "real_dimension": 750,
+          "sextic_norm6_coefficient": "13824/48828125",
+          "sites": 125
+        },
+        {
+          "cutoff": 3,
+          "lower_constant": "5088448/18225",
+          "positive": true,
+          "real_dimension": 2058,
+          "sextic_norm6_coefficient": "13824/1008840175",
+          "sites": 343
+        },
+        {
+          "cutoff": 4,
+          "lower_constant": "5088448/18225",
+          "positive": true,
+          "real_dimension": 4374,
+          "sextic_norm6_coefficient": "512/358722675",
+          "sites": 729
+        },
+        {
+          "cutoff": 5,
+          "lower_constant": "5088448/18225",
+          "positive": true,
+          "real_dimension": 7986,
+          "sextic_norm6_coefficient": "13824/58948692275",
+          "sites": 1331
+        },
+        {
+          "cutoff": 6,
+          "lower_constant": "5088448/18225",
+          "positive": true,
+          "real_dimension": 13182,
+          "sextic_norm6_coefficient": "13824/265112484325",
+          "sites": 2197
+        }
+      ],
+      "expected": "all positive",
+      "name": "finite-cutoff sextic coefficients positive",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        {
+          "cutoff": 1,
+          "lower_constant": "5088448/18225",
+          "positive": true,
+          "real_dimension": 162,
+          "sextic_norm6_coefficient": "512/18225",
+          "sites": 27
+        },
+        {
+          "cutoff": 2,
+          "lower_constant": "5088448/18225",
+          "positive": true,
+          "real_dimension": 750,
+          "sextic_norm6_coefficient": "13824/48828125",
+          "sites": 125
+        },
+        {
+          "cutoff": 3,
+          "lower_constant": "5088448/18225",
+          "positive": true,
+          "real_dimension": 2058,
+          "sextic_norm6_coefficient": "13824/1008840175",
+          "sites": 343
+        },
+        {
+          "cutoff": 4,
+          "lower_constant": "5088448/18225",
+          "positive": true,
+          "real_dimension": 4374,
+          "sextic_norm6_coefficient": "512/358722675",
+          "sites": 729
+        },
+        {
+          "cutoff": 5,
+          "lower_constant": "5088448/18225",
+          "positive": true,
+          "real_dimension": 7986,
+          "sextic_norm6_coefficient": "13824/58948692275",
+          "sites": 1331
+        },
+        {
+          "cutoff": 6,
+          "lower_constant": "5088448/18225",
+          "positive": true,
+          "real_dimension": 13182,
+          "sextic_norm6_coefficient": "13824/265112484325",
+          "sites": 2197
+        }
+      ],
+      "expected": ">0",
+      "name": "finite dimensions positive",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        {
+          "ambient_real_dimension": 162,
+          "cutoff": 1,
+          "exact_conditioning": "undefined_without_positive_mass",
+          "pure_singlet_lebesgue_mass": "0",
+          "pure_singlet_real_codimension": 108,
+          "sites": 27
+        },
+        {
+          "ambient_real_dimension": 750,
+          "cutoff": 2,
+          "exact_conditioning": "undefined_without_positive_mass",
+          "pure_singlet_lebesgue_mass": "0",
+          "pure_singlet_real_codimension": 500,
+          "sites": 125
+        },
+        {
+          "ambient_real_dimension": 2058,
+          "cutoff": 3,
+          "exact_conditioning": "undefined_without_positive_mass",
+          "pure_singlet_lebesgue_mass": "0",
+          "pure_singlet_real_codimension": 1372,
+          "sites": 343
+        },
+        {
+          "ambient_real_dimension": 4374,
+          "cutoff": 4,
+          "exact_conditioning": "undefined_without_positive_mass",
+          "pure_singlet_lebesgue_mass": "0",
+          "pure_singlet_real_codimension": 2916,
+          "sites": 729
+        },
+        {
+          "ambient_real_dimension": 7986,
+          "cutoff": 5,
+          "exact_conditioning": "undefined_without_positive_mass",
+          "pure_singlet_lebesgue_mass": "0",
+          "pure_singlet_real_codimension": 5324,
+          "sites": 1331
+        },
+        {
+          "ambient_real_dimension": 13182,
+          "cutoff": 6,
+          "exact_conditioning": "undefined_without_positive_mass",
+          "pure_singlet_lebesgue_mass": "0",
+          "pure_singlet_real_codimension": 8788,
+          "sites": 2197
+        }
+      ],
+      "expected": ">0",
+      "name": "pure-singlet codimension positive",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        {
+          "ambient_real_dimension": 162,
+          "cutoff": 1,
+          "exact_conditioning": "undefined_without_positive_mass",
+          "pure_singlet_lebesgue_mass": "0",
+          "pure_singlet_real_codimension": 108,
+          "sites": 27
+        },
+        {
+          "ambient_real_dimension": 750,
+          "cutoff": 2,
+          "exact_conditioning": "undefined_without_positive_mass",
+          "pure_singlet_lebesgue_mass": "0",
+          "pure_singlet_real_codimension": 500,
+          "sites": 125
+        },
+        {
+          "ambient_real_dimension": 2058,
+          "cutoff": 3,
+          "exact_conditioning": "undefined_without_positive_mass",
+          "pure_singlet_lebesgue_mass": "0",
+          "pure_singlet_real_codimension": 1372,
+          "sites": 343
+        },
+        {
+          "ambient_real_dimension": 4374,
+          "cutoff": 4,
+          "exact_conditioning": "undefined_without_positive_mass",
+          "pure_singlet_lebesgue_mass": "0",
+          "pure_singlet_real_codimension": 2916,
+          "sites": 729
+        },
+        {
+          "ambient_real_dimension": 7986,
+          "cutoff": 5,
+          "exact_conditioning": "undefined_without_positive_mass",
+          "pure_singlet_lebesgue_mass": "0",
+          "pure_singlet_real_codimension": 5324,
+          "sites": 1331
+        },
+        {
+          "ambient_real_dimension": 13182,
+          "cutoff": 6,
+          "exact_conditioning": "undefined_without_positive_mass",
+          "pure_singlet_lebesgue_mass": "0",
+          "pure_singlet_real_codimension": 8788,
+          "sites": 2197
+        }
+      ],
+      "expected": "0",
+      "name": "pure-singlet exact branch is not assigned positive conditional mass",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/3",
+      "expected": "1/3",
+      "name": "positive-mass tube conditional identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "division is prohibited",
+      "expected": "reject",
+      "name": "zero-mass branch rejects division",
+      "status": "PASS"
+    }
+  ],
+  "assumptions": [
+    "The hash-pinned A1 reference functional and its spectral quadratic lower bound mu2 are controlling.",
+    "The finite spectral cutoff is a finite-dimensional real coordinate space with Lebesgue reference measure.",
+    "gamma>0, lambda<=0, nonnegative family/lock terms, and the Class-II quadratic form is nonnegative.",
+    "The standard finite-dimensional fact that exp(-a||x||^6) is integrable is used for the radial comparison."
+  ],
+  "derived": {
+    "branch_conditioning": {
+      "active_null_branch": "not asserted zero-mass; tube contract remains required",
+      "exact_null_branch": "requires positive mass and is not assigned one",
+      "positive_mass_tube": "conditional measure defined by mu(A intersect B)/mu(B)"
+    },
+    "finite_cutoff_rows": [
+      {
+        "cutoff": 1,
+        "lower_constant": "5088448/18225",
+        "positive": true,
+        "real_dimension": 162,
+        "sextic_norm6_coefficient": "512/18225",
+        "sites": 27
+      },
+      {
+        "cutoff": 2,
+        "lower_constant": "5088448/18225",
+        "positive": true,
+        "real_dimension": 750,
+        "sextic_norm6_coefficient": "13824/48828125",
+        "sites": 125
+      },
+      {
+        "cutoff": 3,
+        "lower_constant": "5088448/18225",
+        "positive": true,
+        "real_dimension": 2058,
+        "sextic_norm6_coefficient": "13824/1008840175",
+        "sites": 343
+      },
+      {
+        "cutoff": 4,
+        "lower_constant": "5088448/18225",
+        "positive": true,
+        "real_dimension": 4374,
+        "sextic_norm6_coefficient": "512/358722675",
+        "sites": 729
+      },
+      {
+        "cutoff": 5,
+        "lower_constant": "5088448/18225",
+        "positive": true,
+        "real_dimension": 7986,
+        "sextic_norm6_coefficient": "13824/58948692275",
+        "sites": 1331
+      },
+      {
+        "cutoff": 6,
+        "lower_constant": "5088448/18225",
+        "positive": true,
+        "real_dimension": 13182,
+        "sextic_norm6_coefficient": "13824/265112484325",
+        "sites": 2197
+      }
+    ],
+    "gamma": "81/50",
+    "lambda_abs": "43/100",
+    "lower_constant_C": "79507/1166400",
+    "mu2": "26000000000947494031/100000000000000000000",
+    "polynomial_bound": "p(t)>=gamma*t^3/12-C for t>=0",
+    "power_mean_rows": [
+      {
+        "fixture": 1,
+        "holds": true,
+        "left": "81",
+        "right": "27",
+        "sites": 3
+      },
+      {
+        "fixture": 2,
+        "holds": true,
+        "left": "27",
+        "right": "27",
+        "sites": 3
+      },
+      {
+        "fixture": 3,
+        "holds": true,
+        "left": "2510449/13500",
+        "right": "17373979/216000",
+        "sites": 4
+      },
+      {
+        "fixture": 4,
+        "holds": true,
+        "left": "12116943/13720",
+        "right": "89314623/343000",
+        "sites": 5
+      }
+    ],
+    "pure_singlet_branch_rows": [
+      {
+        "ambient_real_dimension": 162,
+        "cutoff": 1,
+        "exact_conditioning": "undefined_without_positive_mass",
+        "pure_singlet_lebesgue_mass": "0",
+        "pure_singlet_real_codimension": 108,
+        "sites": 27
+      },
+      {
+        "ambient_real_dimension": 750,
+        "cutoff": 2,
+        "exact_conditioning": "undefined_without_positive_mass",
+        "pure_singlet_lebesgue_mass": "0",
+        "pure_singlet_real_codimension": 500,
+        "sites": 125
+      },
+      {
+        "ambient_real_dimension": 2058,
+        "cutoff": 3,
+        "exact_conditioning": "undefined_without_positive_mass",
+        "pure_singlet_lebesgue_mass": "0",
+        "pure_singlet_real_codimension": 1372,
+        "sites": 343
+      },
+      {
+        "ambient_real_dimension": 4374,
+        "cutoff": 4,
+        "exact_conditioning": "undefined_without_positive_mass",
+        "pure_singlet_lebesgue_mass": "0",
+        "pure_singlet_real_codimension": 2916,
+        "sites": 729
+      },
+      {
+        "ambient_real_dimension": 7986,
+        "cutoff": 5,
+        "exact_conditioning": "undefined_without_positive_mass",
+        "pure_singlet_lebesgue_mass": "0",
+        "pure_singlet_real_codimension": 5324,
+        "sites": 1331
+      },
+      {
+        "ambient_real_dimension": 13182,
+        "cutoff": 6,
+        "exact_conditioning": "undefined_without_positive_mass",
+        "pure_singlet_lebesgue_mass": "0",
+        "pure_singlet_real_codimension": 8788,
+        "sites": 2197
+      }
+    ],
+    "radial_integral_formula": "pi^(d/2)*Gamma(d/6)/(3*Gamma(d/2))*a^(-d/6)",
+    "threshold_T": "43/54"
+  },
+  "environment": {
+    "platform": "Windows-11-10.0.26200-SP0",
+    "python": "3.12.9"
+  },
+  "evidence_level": "T0 exact finite-dimensional coercive-integrability and positive-mass tube-conditioning prerequisite",
+  "exploration_id": "EXP-001339",
+  "inputs": {
+    "a1_manifest": {
+      "path": "claims\\A1-PRODUCTION-FUNCTIONAL-REALISATION\\production_functional_manifest.json",
+      "sha256": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565"
+    },
+    "parameters": {
+      "Lx": "16",
+      "Ly": "16",
+      "Lz": "16",
+      "Y": "1",
+      "Z": "-4626377063/5000000000",
+      "eta_shell": "0",
+      "family_masses": [
+        "0",
+        "3/100",
+        "7/100"
+      ],
+      "gamma": "81/50",
+      "k_lock": "3/20",
+      "lambda": "-43/100",
+      "r": "4740336473/10000000000"
+    }
+  },
+  "missing_assumptions": [
+    "A source-owned branch map and positive-mass tube definition tied to R-461/R-463 coordinates.",
+    "A quantitative correlated-Gibbs tube probability and entropy/Jacobian estimate.",
+    "Cutoff- and volume-uniform partition bounds, tightness, floor removal, and ordered limits.",
+    "A source-owned Q3LOCK production dynamics, physical branch, QFT/Yang--Mills identity, or mass-gap bridge."
+  ],
+  "non_claims": [
+    "This result does not estimate any branch or tube probability.",
+    "It does not condition on an exact null branch of zero Lebesgue mass.",
+    "It does not prove cutoff-uniform entropy, partition convergence, tightness, continuum, or physical selection.",
+    "It does not change T-054, T-059, or T-061 methods, owner order, or promotion firewalls."
+  ],
+  "result_id": "R-464",
+  "run_kind": "primary",
+  "schema": "tect/a6-classii-finite-gibbs-conditioning-primary/1.0",
+  "script_version": "1.0.0",
+  "verdict": "R-464-PRIMARY-PASS"
+}

@@ -1,0 +1,133 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "schema_version": "1.0",
+  "id": "EXP-001339",
+  "recorded_at": "2026-08-31T02:13:25Z",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-08-31",
+  "provenance": "contemporaneous",
+  "task_id": "T-054",
+  "claim_ids": [
+    "A6-CLASSII-UV-POWER-COUNTING",
+    "A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE"
+  ],
+  "gate_ids": [
+    "A6-CLASSII-FULL-FIELD-BARE-CONCENTRATION",
+    "A6-CLASSII-COUNTERTERM-CLOSURE"
+  ],
+  "title": "Finite-cutoff Gibbs integrability and positive-mass branch conditioning",
+  "question": "Does the unchanged hash-pinned A1 reference functional define a finite-cutoff Gibbs law, and what conditioning rule is valid for the R-461/R-463 branch geometry?",
+  "method": [
+    "Keep the A1/A6/A7 fixed-floor functional, T-054 owner order, T-059/T-061 inverse locks, and all promotion firewalls unchanged.",
+    "Parse the A1 decimal parameters as exact rationals and derive the positive spectral floor mu2, the quartic/sextic threshold T, and the lower-bound constant C.",
+    "Prove the two-branch polynomial inequality and the finite-site power-mean norm bridge, then apply finite-dimensional radial integrability.",
+    "Compute pure-singlet codimension in the six-real-coordinate finite space and state conditionalization only for positive-mass measurable tubes.",
+    "Run exact primary and non-importing independent audits, eight hostile mutations, integrated checks, and Lean R464 without sampling or extrapolating a Gibbs law."
+  ],
+  "decision_scope": "T0 exact fixed-cutoff finite-dimensional integrability and positive-mass conditioning prerequisite; no branch probability, entropy density, tightness, continuum, physical branch, QFT, Yang--Mills, or mass-gap inference",
+  "finding": "For every fixed finite cutoff, the pinned A1 polynomial has a degree-six coercive lower comparison and hence a finite Lebesgue Gibbs integral under the standard finite-dimensional radial estimate. The exact pure-singlet branch has codimension 4*m and zero mass, so exact conditioning is invalid; a positive-mass branch tube is required. The active branch mass is intentionally not classified.",
+  "verdict": "advanced",
+  "decision_reason": "This is the finite-measure prerequisite named by R-463 and the A6 gate. It replaces neither the R-463 active metric nor the established forward/inverse methods; it closes only fixed-cutoff integrability and the conditioning rule, while exposing the required positive-mass tube input.",
+  "boundary": "The coercive coefficient scales as m^-3 and is not cutoff-uniform. No correlated-Gibbs branch probability, entropy/Jacobian estimate, partition asymptotic, tightness, floor removal, continuum limit, source-owned Q3LOCK dynamics, physical branch, QFT, Yang--Mills, or mass-gap result follows.",
+  "evidence_level": "T0 exact finite-dimensional integrability and positive-mass tube-conditioning prerequisite",
+  "evidence_refs": [
+    "strategy/a6-classii-finite-gibbs-conditioning-manifest.json#theorem",
+    "strategy/a6-classii-finite-gibbs-conditioning-certificate-260831.md#Exact conditional statement",
+    "verification/scripts/a6_classii_finite_gibbs_conditioning.py#run",
+    "codes/foundations/a6_classii_finite_gibbs_conditioning_independent.py#run",
+    "codes/foundations/a6_classii_finite_gibbs_conditioning_hostile.py#run",
+    "verification/scripts/a6_classii_finite_gibbs_conditioning_verify.py#run",
+    "claims/A6-CLASSII-UV-POWER-COUNTING/runs/2026-08-31-primary-a6-finite-gibbs-conditioning/primary.json#assertion_summary",
+    "claims/A6-CLASSII-UV-POWER-COUNTING/runs/2026-08-31-independent-a6-finite-gibbs-conditioning/independent.json#assertion_summary",
+    "claims/A6-CLASSII-UV-POWER-COUNTING/runs/2026-08-31-hostile-a6-finite-gibbs-conditioning/hostile.json#assertion_summary",
+    "claims/A6-CLASSII-UV-POWER-COUNTING/runs/2026-08-31-integrated-a6-finite-gibbs-conditioning/integrated.json#assertion_summary",
+    "verification/lean/Tect/R464.lean#cubic_lower_bound"
+  ],
+  "formal_refs": {
+    "results": [
+      "R-464"
+    ],
+    "negatives": [],
+    "events": [
+      "20260831-r-464-finite-gibbs-integrability-and-branch-con"
+    ]
+  },
+  "formal_integration": {
+    "results": [
+      "R-464"
+    ],
+    "negatives": [],
+    "events": [
+      "20260831-r-464-finite-gibbs-integrability-and-branch-con"
+    ],
+    "no_new_negative": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "assumptions": [
+    "The A1 standalone reference functional and its spectral quadratic lower bound are controlling at fixed cutoff.",
+    "Finite spectral Galerkin coordinates carry ordinary Lebesgue measure and the finite-dimensional radial comparison is valid.",
+    "The Class-II coefficient matrix, family term, and lock term are nonnegative in the pinned fixed-floor scope.",
+    "A later owner packet must supply measurable positive-mass branch tubes before any branch probability is evaluated."
+  ],
+  "missing_assumptions": [
+    "A source-owned R-461/R-463 branch map with positive-mass tubes at each cutoff.",
+    "A quantitative correlated-Gibbs tube probability, entropy density, and phase/singlet Jacobian estimate.",
+    "Cutoff- and volume-uniform partition estimates, tightness, floor removal, and ordered continuum limits.",
+    "A source-owned Q3LOCK dynamics and any physical, QFT, Yang--Mills, or mass-gap bridge."
+  ],
+  "adversarial_review": [
+    {
+      "axis": "quadratic-symbol-sign",
+      "check": "Could the negative part of the quadratic symbol invalidate coercivity?",
+      "disposition": "DISMISSED: the exact A1-computed mu2 is checked positive."
+    },
+    {
+      "axis": "quartic-sextic-balance",
+      "check": "Could the negative quartic term overwhelm the sextic tail?",
+      "disposition": "DISMISSED: exact large/small threshold branches establish the degree-six lower bound."
+    },
+    {
+      "axis": "finite-to-uniform",
+      "check": "Could fixed-cutoff coercivity be promoted to a uniform estimate?",
+      "disposition": "UPHELD-REJECTED: the norm coefficient decays with m and uniformity is open."
+    },
+    {
+      "axis": "exact-null-conditioning",
+      "check": "Can the pure-singlet null branch be conditioned by dividing by its mass?",
+      "disposition": "REJECTED: codimension 4*m gives zero Lebesgue mass."
+    },
+    {
+      "axis": "active-null-mass",
+      "check": "Does the pure-singlet argument automatically classify the active null branch?",
+      "disposition": "UPHELD-OPEN: active-branch mass is not asserted."
+    },
+    {
+      "axis": "proxy-substitution",
+      "check": "Could finite normalisability replace the correlated Gibbs or R-463 tube estimate?",
+      "disposition": "UPHELD-REJECTED: no sampling, entropy, or probability estimate is included."
+    },
+    {
+      "axis": "method-overhaul",
+      "check": "Does this prerequisite alter T-054, T-059, or T-061?",
+      "disposition": "DISMISSED: methods, owner order, and promotion firewalls remain unchanged."
+    },
+    {
+      "axis": "physical-promotion",
+      "check": "Can finite normalisability select Reading-H or a physical-empty branch?",
+      "disposition": "REJECTED: no physical branch or QFT/Yang--Mills identification is used."
+    }
+  ],
+  "next_action": "Obtain a source-owned positive-mass branch tube and its correlated-Gibbs probability estimate. Only then apply R-463's active metric; keep exact zero-mass branches unconditioned and continue T-054 Q3LOCK plus T-059/T-061 observation locks in parallel.",
+  "stop_or_redesign": [
+    "If no owner supplies a positive-mass tube, retain R-464 as a fixed-cutoff prerequisite and park the branch-probability route.",
+    "If the entropy/Jacobian term grows without a uniform compensator, record that branch-specific obstruction rather than repeating a bounded proxy.",
+    "If a proposed estimate changes the functional, regulator, volume, boundary, or limit order, issue a new contract instead of mutating R-464."
+  ],
+  "related": [
+    {
+      "id": "EXP-001338",
+      "relation": "continues"
+    }
+  ]
+}
