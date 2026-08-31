@@ -7344,6 +7344,112 @@
       "task_id": "T-061",
       "title": "HOLD-LC-001 TTE event-row feature index",
       "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "check": "Could a matching byte hash be mistaken for a current proof input?",
+          "disposition": "REJECTED: the result is fenced at T0 preservation and metadata scope; current-convention reruns remain missing."
+        },
+        {
+          "check": "Could record-level links be treated as per-source dependency closure?",
+          "disposition": "REJECTED: the audit separately checks per-source dependency fields and reports their absence."
+        },
+        {
+          "check": "Could archived run filenames be treated as executed current results?",
+          "disposition": "REJECTED: run-origin rows have no explicit run/result declarations and record revalidation remains not-run for part of the batch."
+        },
+        {
+          "check": "Could the audit silently alter the established forward or inverse methods?",
+          "disposition": "REJECTED: it reads only the frozen batch, registry, and canonical Contents bytes; no functional, owner order, or promotion rule changes."
+        },
+        {
+          "check": "Could the open closure be hidden by a partial source selection?",
+          "disposition": "REJECTED: source-set digest, selected identity hashes, registry presence, and record-link coverage are asserted before the open status is emitted."
+        }
+      ],
+      "assumptions": [
+        "The maintained Contents tree is the canonical byte source for the frozen T-055 batch.",
+        "The manifest and source-set are the authoritative selected-source boundary.",
+        "Registry record links provide provenance context but do not substitute for per-source dependency or execution closure."
+      ],
+      "boundary": "This is a T0 claim-nonbearing T-057 metadata and provenance audit. It does not validate any legacy mathematical statement, select BCC or a truncated-octahedron vacuum, establish a physical-empty sign, or close Reading-H, C6, Sector-A, Pre-A, QFT, Yang--Mills, continuum, or mass-gap gates.",
+      "claim_ids": [
+        "B3-BCC-STRUCT",
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "decision_reason": "The existing preservation PASS establishes byte identity and selected-source coverage, but it does not establish the manifest-required per-source dependency and run closure. A reproducible audit makes that distinction explicit and prevents a filename or record-level link from being imported as a current-convention proof input.",
+      "decision_scope": "T0 exact batch identity, registry-link, and dependency/run-closure metadata audit; no mathematical revalidation or tier action",
+      "evidence_level": "T0 exact audit with source-set digest, 50-source identity checks, registry-link coverage, and self-test PASS; closure fields remain explicitly open",
+      "evidence_refs": [
+        "verification/scripts/t057_batch_closure_audit.py#main",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-t057-batch-closure-audit/primary.json#checks",
+        "archive/legacy/batches/LEGACY-T055-GEOMETRY-EMPTY-REFERENCE-001/manifest.json#required_checks",
+        "archive/legacy/batches/LEGACY-T055-GEOMETRY-EMPTY-REFERENCE-001/source-set.json#sources",
+        "archive/legacy/registry/records/LEG-T055-BCC-SELECTION-LINEAGE-001.json#status_axes",
+        "archive/legacy/registry/records/LEG-T055-TRUNCATED-OCTAHEDRON-BZ-001.json#status_axes",
+        "claims/GATES.md#legacy-selective-index-and-on-demand-revalidation"
+      ],
+      "finding": "The current T-055 source-set and maintained Contents bytes pass the exact identity and source-set-digest checks, and all selected source IDs are covered by four registry records. The audit finds no per-source dependency declaration for the selected rows and no explicit run/result declaration for the five run-origin rows; the two active T-055 lineage records remain revalidation=not-run while two narrower records are already pass. Therefore preservation is verified but dependency/run closure and current-convention execution remain open.",
+      "formal_integration": {
+        "events": [],
+        "methods_unchanged": true,
+        "negatives": [],
+        "no_new_negative": true,
+        "no_pdf": true,
+        "no_tier_change": true,
+        "results": []
+      },
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": []
+      },
+      "gate_ids": [
+        "LEGACY-SELECTIVE-INDEX-AND-ON-DEMAND-REVALIDATION",
+        "C6-BCC-PREMISE-BLOCKED"
+      ],
+      "id": "EXP-001349",
+      "method": [
+        "Load the frozen T-055 manifest and source-set, recompute the source-set digest, and reject duplicate or mismatched source identities.",
+        "Read each selected registry source metadata row and compare its origin, byte count, and SHA-256 with the maintained Contents source.",
+        "Map every selected source ID to the registry records that reference it, and keep record-level revalidation status separate from source-level dependency/run declarations.",
+        "Count explicit dependency and run/result fields without inferring closure from path names or archived filenames.",
+        "Run the audit self-test and write a reproducible JSON artifact; retain the open closure boundary for the next per-source extraction step."
+      ],
+      "missing_assumptions": [
+        "A per-source dependency path or dependency-source-ID closure that can be rerun independently.",
+        "An explicit mapping from each run-origin source to its executable script, inputs, output, and result status.",
+        "Current-kernel normalization, sign, competitor, transverse-stability, error, thermodynamic, and ordered-limit reruns."
+      ],
+      "next_action": "Build an append-only per-source extraction ledger for the 50 selected rows, linking each source to exact sections or code entrypoints and marking every missing run/dependency item explicitly. Then rerun only surviving methods under current conventions with independent and hostile checks; do not import any source as a T-055 or C6 physical premise before that closure.",
+      "non_claims": [
+        "No BCC or truncated-octahedron selection and no below-empty-reference sign.",
+        "No Reading-H stationarity, physical vacuum, transverse stability, Pre-A, Sector-A, C6, QFT, Yang--Mills, continuum, or mass-gap result.",
+        "No claim is promoted and no legacy source is treated as a current proof authority."
+      ],
+      "provenance": "contemporaneous",
+      "question": "Does the frozen T-055 batch have enough per-source dependency and run closure to support current-convention revalidation, beyond its already verified Contents byte preservation?",
+      "recorded_at": "2026-08-31T12:27:09Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-000927",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-08-31",
+      "schema": "tect/proof-exploration/1.0",
+      "schema_version": "1.0",
+      "stop_or_redesign": [
+        "If any source-set, registry, or Contents hash drifts, stop and repair provenance before extraction.",
+        "If a dependency or run link cannot be reproduced, mark that source not-ready and do not execute or cite its legacy calculation as current evidence.",
+        "If a future source owner changes the T-055 functional, reference, or convention, create a new versioned intake rather than mutating this batch.",
+        "If no complete closure arrives, keep T-057 at preservation-only scope and continue the unchanged T-054/T-061 mainline gates."
+      ],
+      "task_id": "T-057",
+      "title": "T-057 batch closure audit separates preserved bytes from missing dependency and run links",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",
