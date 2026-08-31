@@ -12,6 +12,10 @@ Usage:
     python verification/scripts/check_direction_control.py
     python verification/scripts/check_direction_control.py --self-test
     python verification/scripts/check_direction_control.py --add --file record.json
+
+Threshold routes are ``REVIEW_REQUIRED``.  Append a ``record_type: review``
+record before any further attempt; its bounded decision is validated against
+the manifest review policy.
 """
 
 from __future__ import annotations
@@ -31,7 +35,7 @@ from pathlib import Path
 from typing import Any
 
 
-__version__ = "1.0.0"
+__version__ = "1.1.0"
 __first_issued__ = "2026-08-31"
 __version_issued__ = "2026-08-31"
 
@@ -52,12 +56,19 @@ ROUTES = {
     "CONTINUE_MAINLINE",
     "CONTINUE_PARALLEL",
     "CONTINUE_AUXILIARY",
-    "STOP_AUXILIARY_AND_RETURN_TO_MAINLINE",
+    "CONTINUE_BOUNDED",
+    "REVIEW_REQUIRED",
     "RETURN_TO_MAINLINE",
     "REQUIRE_COUNTEREXAMPLE_OR_REDESIGN",
     "PARK_OR_BLOCK",
 }
-RECORD_TYPES = {"baseline", "decision"}
+RECORD_TYPES = {"baseline", "decision", "review"}
+REVIEW_DECISIONS = {
+    "CONTINUE_BOUNDED": "CONTINUE_BOUNDED",
+    "RETURN_TO_MAINLINE": "RETURN_TO_MAINLINE",
+    "REDESIGN": "REQUIRE_COUNTEREXAMPLE_OR_REDESIGN",
+    "PARK_OR_BLOCK": "PARK_OR_BLOCK",
+}
 UTC_RE = re.compile(r"^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z$")
 ID_RE = re.compile(r"^DCTRL-(\d{6})$")
 HASH_RE = re.compile(r"^[0-9a-f]{64}$")
@@ -79,6 +90,8 @@ REQUIRED_MANIFEST_KEYS = {
     "protected_actions",
     "recorded_on",
     "required_decision_fields",
+    "required_review_fields",
+    "review_policy",
     "schema",
     "source_program_path",
     "status",
@@ -104,6 +117,15 @@ REQUIRED_DECISION_FIELDS = {
     "scientific_transition",
     "source_event",
     "task_id",
+}
+REQUIRED_REVIEW_FIELDS = {
+    "continuation_condition",
+    "new_evidence_target",
+    "revisit_condition",
+    "review_basis",
+    "review_budget",
+    "review_decision",
+    "review_question",
 }
 RECORD_METADATA_FIELDS = {
     "id",
@@ -334,6 +356,44 @@ def validate_manifest(manifest: dict[str, Any]) -> list[str]:
         ]:
             errors.append("redesign threshold must precede park threshold")
 
+    review_policy = manifest.get("review_policy")
+    review_policy_keys = {
+        "decisions",
+        "default_budget",
+        "max_budget",
+        "note",
+        "requires_new_evidence_target",
+        "requires_revisit_condition",
+        "requires_review_basis",
+        "trigger_action",
+    }
+    if not isinstance(review_policy, dict) or set(review_policy) != review_policy_keys:
+        errors.append("review policy fields drifted")
+    else:
+        if review_policy.get("trigger_action") != "REVIEW_REQUIRED":
+            errors.append("review policy trigger_action must be REVIEW_REQUIRED")
+        if review_policy.get("decisions") != list(REVIEW_DECISIONS):
+            errors.append("review policy decisions drifted")
+        for key in ("default_budget", "max_budget"):
+            value = review_policy.get(key)
+            if isinstance(value, bool) or not isinstance(value, int) or value < 1:
+                errors.append(f"review policy {key} must be a positive integer")
+        if (
+            isinstance(review_policy.get("default_budget"), int)
+            and isinstance(review_policy.get("max_budget"), int)
+            and review_policy["default_budget"] > review_policy["max_budget"]
+        ):
+            errors.append("review policy default_budget exceeds max_budget")
+        for key in (
+            "requires_new_evidence_target",
+            "requires_revisit_condition",
+            "requires_review_basis",
+        ):
+            if review_policy.get(key) is not True:
+                errors.append(f"review policy {key} must remain true")
+        if not nonempty(review_policy.get("note")):
+            errors.append("review policy note is missing")
+
     if manifest.get("promotion_order") != [
         "source-compatible",
         "uniform",
@@ -383,6 +443,10 @@ def validate_manifest(manifest: dict[str, Any]) -> list[str]:
     if not isinstance(required_fields, list) or set(required_fields) != REQUIRED_DECISION_FIELDS:
         errors.append("required decision fields drifted")
 
+    required_review_fields = manifest.get("required_review_fields")
+    if not isinstance(required_review_fields, list) or set(required_review_fields) != REQUIRED_REVIEW_FIELDS:
+        errors.append("required review fields drifted")
+
     return errors
 
 
@@ -414,25 +478,9 @@ def _validate_record_shape(
     if not nonempty(record.get("recorded_by")):
         errors.append(_record_error(index, "recorded_by is missing"))
 
-    required = REQUIRED_DECISION_FIELDS if record_type == "decision" else {
-        "active_gate",
-        "blocker_fingerprint",
-        "classification",
-        "counts_as_mainline",
-        "falsifier_fired",
-        "gate_changed",
-        "input_hash",
-        "lane",
-        "mainline_relevant",
-        "new_input_hash",
-        "next_action",
-        "research_admission",
-        "route_decision",
-        "scope_strengthened",
-        "scientific_transition",
-        "source_event",
-        "task_id",
-    }
+    required = set(REQUIRED_DECISION_FIELDS)
+    if record_type == "review":
+        required.update(REQUIRED_REVIEW_FIELDS)
     missing = sorted(field for field in required if field not in record)
     for field in missing:
         errors.append(_record_error(index, f"missing field {field}"))
@@ -445,7 +493,9 @@ def _validate_record_shape(
             errors.append(_record_error(index, "baseline classification must be BASELINE"))
         if record.get("route_decision") != "BASELINE":
             errors.append(_record_error(index, "baseline route must be BASELINE"))
-    elif classification not in CONTROL_CLASSES:
+    elif record_type == "review" and classification != "REVIEW":
+        errors.append(_record_error(index, "review classification must be REVIEW"))
+    elif record_type == "decision" and classification not in CONTROL_CLASSES:
         errors.append(_record_error(index, f"invalid classification {classification!r}"))
 
     if record.get("lane") not in LANES:
@@ -498,6 +548,47 @@ def _validate_record_shape(
                 errors.append(_record_error(index, f"baseline {field} must be false"))
         if record.get("input_hash") != "NONE":
             errors.append(_record_error(index, "baseline input_hash must be NONE"))
+        return errors
+
+    if record_type == "review":
+        for field in (
+            "counts_as_mainline",
+            "falsifier_fired",
+            "gate_changed",
+            "mainline_relevant",
+            "new_input_hash",
+            "scope_strengthened",
+            "scientific_transition",
+        ):
+            if record.get(field) is not False:
+                errors.append(_record_error(index, f"review {field} must be false"))
+        if record.get("review_decision") not in REVIEW_DECISIONS:
+            errors.append(_record_error(index, "invalid review_decision"))
+        budget = record.get("review_budget")
+        review_policy = manifest.get("review_policy", {})
+        max_budget = review_policy.get("max_budget")
+        if isinstance(budget, bool) or not isinstance(budget, int):
+            errors.append(_record_error(index, "review_budget must be an integer"))
+        elif not isinstance(max_budget, int) or not 0 <= budget <= max_budget:
+            errors.append(_record_error(index, "review_budget is outside the policy range"))
+        elif record.get("review_decision") == "CONTINUE_BOUNDED" and budget < 1:
+            errors.append(_record_error(index, "CONTINUE_BOUNDED requires a positive review_budget"))
+        elif record.get("review_decision") != "CONTINUE_BOUNDED" and budget != 0:
+            errors.append(_record_error(index, "non-continuation review must have review_budget=0"))
+        for field in (
+            "review_basis",
+            "review_question",
+            "new_evidence_target",
+            "continuation_condition",
+            "revisit_condition",
+        ):
+            if not nonempty(record.get(field)):
+                errors.append(_record_error(index, f"{field} is missing"))
+        expected_review_route = REVIEW_DECISIONS.get(
+            str(record.get("review_decision")), "REVIEW_REQUIRED"
+        )
+        if record.get("route_decision") != expected_review_route:
+            errors.append(_record_error(index, "review route does not match review_decision"))
         return errors
 
     classification = str(record.get("classification"))
@@ -574,9 +665,38 @@ def derive_state(
         "last_blocker": None,
         "last_classification": "BASELINE",
         "last_route": "BASELINE",
+        "review_active": False,
+        "review_budget_remaining": 0,
+        "last_review_decision": None,
+        "last_review_id": None,
     }
     for record in records[1:]:
-        classification = record["classification"]
+        record_type = record.get("record_type")
+        classification = record.get("classification", "")
+        if record_type == "review":
+            decision = record.get("review_decision")
+            state["last_review_decision"] = decision
+            state["last_review_id"] = record.get("id")
+            if decision == "CONTINUE_BOUNDED":
+                budget = record.get("review_budget", 0)
+                state["review_active"] = True
+                state["review_budget_remaining"] = budget if isinstance(budget, int) else 0
+            else:
+                state["review_active"] = False
+                state["review_budget_remaining"] = 0
+            # A review is a control decision, not another result attempt.  It
+            # resets the streaks that triggered it so the next attempt is
+            # judged against the newly declared evidence target.
+            state["auxiliary_streak"] = 0
+            state["no_progress_streak"] = 0
+            state["same_blocker_streak"] = 0
+            state["last_blocker"] = None
+            state["checkpoints_without_gate_change"] = 0
+            state["last_classification"] = "REVIEW"
+            state["last_route"] = record.get("route_decision", "REVIEW_REQUIRED")
+            continue
+
+        review_was_active = state["review_active"]
         if classification in {"AUXILIARY_SUPPORT", "NO_PROGRESS"}:
             state["auxiliary_streak"] += 1
         else:
@@ -585,11 +705,11 @@ def derive_state(
             state["no_progress_streak"] += 1
         else:
             state["no_progress_streak"] = 0
-        if record["gate_changed"]:
+        if record.get("gate_changed") is True:
             state["checkpoints_without_gate_change"] = 0
         else:
             state["checkpoints_without_gate_change"] += 1
-        blocker = record["blocker_fingerprint"]
+        blocker = record.get("blocker_fingerprint", "NONE")
         if blocker in {"", "NONE"}:
             state["same_blocker_streak"] = 0
             state["last_blocker"] = None
@@ -598,8 +718,17 @@ def derive_state(
         else:
             state["same_blocker_streak"] = 1
             state["last_blocker"] = blocker
+        if review_was_active and classification in {"AUXILIARY_SUPPORT", "NO_PROGRESS"}:
+            state["review_budget_remaining"] = max(
+                0, state["review_budget_remaining"] - 1
+            )
+        if classification == "MAINLINE_ADVANCE" or classification == "NEGATIVE_RESULT":
+            # New mainline evidence or a falsifier ends the current bounded
+            # review; the result's own classification still controls its lane.
+            state["review_active"] = False
+            state["review_budget_remaining"] = 0
         state["last_classification"] = classification
-        state["last_route"] = record["route_decision"]
+        state["last_route"] = record.get("route_decision", "REVIEW_REQUIRED")
     return state
 
 
@@ -608,21 +737,31 @@ def route_for_state(
 ) -> str:
     if record.get("record_type") == "baseline":
         return "BASELINE"
+    if record.get("record_type") == "review":
+        return REVIEW_DECISIONS.get(
+            str(record.get("review_decision")), "REVIEW_REQUIRED"
+        )
+    if record.get("mainline_relevant") is True:
+        return "CONTINUE_MAINLINE"
     thresholds = manifest["thresholds"]
     if state["same_blocker_streak"] >= thresholds["same_blocker_park_at"]:
-        return "PARK_OR_BLOCK"
+        return "REVIEW_REQUIRED"
     if state["same_blocker_streak"] >= thresholds["same_blocker_redesign_at"]:
-        return "REQUIRE_COUNTEREXAMPLE_OR_REDESIGN"
+        return "REVIEW_REQUIRED"
     if state["auxiliary_streak"] >= thresholds["max_auxiliary_streak"]:
-        return "STOP_AUXILIARY_AND_RETURN_TO_MAINLINE"
+        return "REVIEW_REQUIRED"
     if (
         state["checkpoints_without_gate_change"]
         >= thresholds["max_checkpoints_without_gate_change"]
     ):
-        return "RETURN_TO_MAINLINE"
-    if record["mainline_relevant"]:
-        return "CONTINUE_MAINLINE"
-    if record["lane"] == "inverse":
+        return "REVIEW_REQUIRED"
+    if state.get("review_active"):
+        if state.get("review_budget_remaining", 0) > 0:
+            if record.get("lane") == "inverse":
+                return "CONTINUE_PARALLEL"
+            return "CONTINUE_AUXILIARY"
+        return "REVIEW_REQUIRED"
+    if record.get("lane") == "inverse":
         return "CONTINUE_PARALLEL"
     return "CONTINUE_AUXILIARY"
 
@@ -677,7 +816,7 @@ def validate_ledger(
                 errors.append("first record must be a baseline")
             if record.get("source_event") != manifest["baseline"]["cutover_event"]:
                 errors.append("baseline source_event does not match the cutover event")
-        elif record.get("record_type") != "decision":
+        elif record.get("record_type") not in {"decision", "review"}:
             errors.append(_record_error(index, "only the first record may be baseline"))
 
     if records[0].get("record_type") == "baseline":
@@ -685,8 +824,13 @@ def validate_ledger(
         if state["last_route"] != "BASELINE":
             errors.append("baseline state is malformed")
     for index, record in enumerate(records[1:], start=2):
-        if record.get("record_type") != "decision":
-            continue
+        previous = records[index - 2]
+        if previous.get("route_decision") == "REVIEW_REQUIRED" and record.get(
+            "record_type"
+        ) != "review":
+            errors.append(
+                _record_error(index, "REVIEW_REQUIRED must be followed by a review record")
+            )
         state = derive_state(manifest, records[:index])
         expected_route = route_for_state(manifest, state, record)
         if record.get("route_decision") != expected_route:
@@ -696,6 +840,36 @@ def validate_ledger(
                     f"route_decision {record.get('route_decision')!r} != {expected_route!r}",
                 )
             )
+        if record.get("record_type") == "review":
+            if previous.get("route_decision") != "REVIEW_REQUIRED":
+                errors.append(
+                    _record_error(index, "review record requires a preceding REVIEW_REQUIRED route")
+                )
+        elif previous.get("record_type") == "review":
+            previous_decision = previous.get("review_decision")
+            if previous_decision == "RETURN_TO_MAINLINE":
+                if record.get("lane") != "forward" and record.get("mainline_relevant") is not True:
+                    errors.append(
+                        _record_error(
+                            index,
+                            "RETURN_TO_MAINLINE review must be followed by forward/mainline work",
+                        )
+                    )
+            elif previous_decision in {"REDESIGN", "PARK_OR_BLOCK"}:
+                same_blocker = record.get("blocker_fingerprint") == previous.get(
+                    "blocker_fingerprint"
+                )
+                if (
+                    same_blocker
+                    and record.get("new_input_hash") is not True
+                    and record.get("mainline_relevant") is not True
+                ):
+                    errors.append(
+                        _record_error(
+                            index,
+                            "redesign/park review requires a changed blocker, new input hash, or mainline evidence",
+                        )
+                    )
     if check_git:
         prefix_error = _committed_prefix_error(raw)
         if prefix_error:
@@ -739,6 +913,8 @@ def cmd_check() -> int:
         f"auxiliary_streak={state['auxiliary_streak']}; "
         f"no_progress_streak={state['no_progress_streak']}; "
         f"same_blocker_streak={state['same_blocker_streak']}; "
+        f"review_active={state['review_active']}; "
+        f"review_budget={state['review_budget_remaining']}; "
         f"route={action}; records={len(records)})"
     )
     return 0
@@ -759,7 +935,7 @@ def cmd_add(path_text: str) -> int:
         print(f"DIRECTION-CONTROL: ADD REFUSED; {exc}")
         return 1
     if not isinstance(payload, dict):
-        print("DIRECTION-CONTROL: ADD REFUSED; input must be one decision object")
+        print("DIRECTION-CONTROL: ADD REFUSED; input must be one control record object")
         return 1
     record = dict(payload)
     next_id = f"DCTRL-{len(records) + 1:06d}"
@@ -781,7 +957,10 @@ def cmd_add(path_text: str) -> int:
     record.setdefault("falsifier_fired", False)
     record.setdefault("mainline_relevant", record.get("classification") == "MAINLINE_ADVANCE")
     record.setdefault("counts_as_mainline", record.get("mainline_relevant", False))
-    record.setdefault("route_decision", "CONTINUE_AUXILIARY")
+    record.setdefault(
+        "route_decision",
+        "REVIEW_REQUIRED" if record.get("record_type") == "review" else "CONTINUE_AUXILIARY",
+    )
     candidate_records = records + [record]
     state = derive_state(manifest, candidate_records)
     record["route_decision"] = route_for_state(manifest, state, record)
@@ -836,6 +1015,49 @@ def _valid_decision(
     return record
 
 
+def _valid_review(
+    base: dict[str, Any],
+    identifier: str,
+    recorded_at: str,
+    review_decision: str,
+    budget: int,
+    blocker: str = "TEST-BLOCKER-A",
+) -> dict[str, Any]:
+    record = copy.deepcopy(base)
+    record.update(
+        {
+            "id": identifier,
+            "record_type": "review",
+            "recorded_at": recorded_at,
+            "classification": "REVIEW",
+            "lane": "auxiliary",
+            "blocker_fingerprint": blocker,
+            "source_event": "EXP-REVIEW-TEST",
+            "task_id": "T-055",
+            "active_gate": "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE",
+            "next_action": "Run only the evidence target declared by this review.",
+            "input_hash": "NONE",
+            "gate_changed": False,
+            "scope_strengthened": False,
+            "new_input_hash": False,
+            "falsifier_fired": False,
+            "mainline_relevant": False,
+            "counts_as_mainline": False,
+            "research_admission": True,
+            "scientific_transition": False,
+            "route_decision": "REVIEW_REQUIRED",
+            "review_basis": "The threshold was reached in the synthetic ledger.",
+            "review_question": "What new bounded evidence could change this route?",
+            "new_evidence_target": "A fresh hash-pinned synthetic evidence fixture.",
+            "continuation_condition": "Continue only while the declared fixture remains reproducible.",
+            "revisit_condition": "Revisit when the budget is exhausted or a threshold fires again.",
+            "review_budget": budget,
+            "review_decision": review_decision,
+        }
+    )
+    return record
+
+
 def self_test() -> int:
     manifest = load_json(MANIFEST)
     records, parse_errors, raw = parse_ledger(LEDGER)
@@ -862,7 +1084,8 @@ def self_test() -> int:
     valid["route_decision"] = route_for_state(manifest, state, valid)
     assert not validate_ledger(manifest, test_records, raw, check_git=False)
 
-    # Exercise each automatic boundary with synthetic, non-persistent records.
+    # A threshold now requests deliberative review instead of stopping the
+    # route.  The review can grant a finite continuation budget.
     second = _valid_decision(
         base,
         "DCTRL-000003",
@@ -874,8 +1097,67 @@ def self_test() -> int:
     second["route_decision"] = route_for_state(
         manifest, derive_state(manifest, two_records), second
     )
-    assert second["route_decision"] == "STOP_AUXILIARY_AND_RETURN_TO_MAINLINE"
+    assert second["route_decision"] == "REVIEW_REQUIRED"
     assert not validate_ledger(manifest, two_records, raw, check_git=False)
+
+    review = _valid_review(
+        base,
+        "DCTRL-000004",
+        "2026-08-31T00:00:03Z",
+        "CONTINUE_BOUNDED",
+        2,
+        blocker="TEST-BLOCKER-B",
+    )
+    review_records = [baseline, valid, second, review]
+    review["route_decision"] = route_for_state(
+        manifest, derive_state(manifest, review_records), review
+    )
+    assert review["route_decision"] == "CONTINUE_BOUNDED"
+    assert not validate_ledger(manifest, review_records, raw, check_git=False)
+
+    bounded_one = _valid_decision(
+        base,
+        "DCTRL-000005",
+        "2026-08-31T00:00:04Z",
+        "AUXILIARY_SUPPORT",
+        blocker="TEST-BOUNDED-C",
+    )
+    bounded_records = review_records + [bounded_one]
+    bounded_one["route_decision"] = route_for_state(
+        manifest, derive_state(manifest, bounded_records), bounded_one
+    )
+    assert bounded_one["route_decision"] == "CONTINUE_AUXILIARY"
+    assert not validate_ledger(manifest, bounded_records, raw, check_git=False)
+
+    bounded_two = _valid_decision(
+        base,
+        "DCTRL-000006",
+        "2026-08-31T00:00:05Z",
+        "AUXILIARY_SUPPORT",
+        blocker="TEST-BOUNDED-D",
+    )
+    exhausted_records = bounded_records + [bounded_two]
+    bounded_two["route_decision"] = route_for_state(
+        manifest, derive_state(manifest, exhausted_records), bounded_two
+    )
+    assert bounded_two["route_decision"] == "REVIEW_REQUIRED"
+    assert not validate_ledger(manifest, exhausted_records, raw, check_git=False)
+
+    # Every explicit review outcome has a stable machine route.
+    for offset, (decision, expected) in enumerate(REVIEW_DECISIONS.items(), start=10):
+        outcome = _valid_review(
+            base,
+            "DCTRL-000004",
+            f"2026-08-31T00:00:{offset:02d}Z",
+            decision,
+            2 if decision == "CONTINUE_BOUNDED" else 0,
+        )
+        outcome_records = [baseline, valid, second, outcome]
+        outcome["route_decision"] = route_for_state(
+            manifest, derive_state(manifest, outcome_records), outcome
+        )
+        assert outcome["route_decision"] == expected
+        assert not validate_ledger(manifest, outcome_records, raw, check_git=False)
 
     same_one = _valid_decision(
         base,
@@ -898,7 +1180,7 @@ def self_test() -> int:
     same_two["route_decision"] = route_for_state(
         manifest, derive_state(manifest, same_records), same_two
     )
-    assert same_two["route_decision"] == "REQUIRE_COUNTEREXAMPLE_OR_REDESIGN"
+    assert same_two["route_decision"] == "REVIEW_REQUIRED"
     assert not validate_ledger(manifest, same_records, raw, check_git=False)
 
     hostile_mutations: list[tuple[str, Any]] = []
@@ -916,6 +1198,10 @@ def self_test() -> int:
     add_hostile("mainline without signal", lambda item: (item.__setitem__("classification", "MAINLINE_ADVANCE"), item.__setitem__("mainline_relevant", True), item.__setitem__("counts_as_mainline", True)))
     add_hostile("bad hash", lambda item: item.__setitem__("input_hash", "1234"))
     add_hostile("route mismatch", lambda item: item.__setitem__("route_decision", "CONTINUE_MAINLINE"))
+    add_hostile(
+        "legacy direct stop route",
+        lambda item: item.__setitem__("route_decision", "STOP_AUXILIARY_AND_RETURN_TO_MAINLINE"),
+    )
     add_hostile("duplicate id", lambda item: item.__setitem__("id", "DCTRL-000001"))
     add_hostile("time reversal", lambda item: item.__setitem__("recorded_at", "2020-01-01T00:00:00Z"))
 
@@ -927,6 +1213,36 @@ def self_test() -> int:
         errors = validate_ledger(manifest, candidate_records, raw, check_git=False)
         assert errors, f"hostile mutation accepted: {name}"
         rejected += 1
+
+    review_hostile_mutations: list[tuple[str, Any]] = [
+        ("review class", lambda item: item.__setitem__("classification", "AUXILIARY_SUPPORT")),
+        ("review basis missing", lambda item: item.pop("review_basis")),
+        ("review question missing", lambda item: item.pop("review_question")),
+        ("review target missing", lambda item: item.pop("new_evidence_target")),
+        ("review revisit missing", lambda item: item.pop("revisit_condition")),
+        ("review decision invalid", lambda item: item.__setitem__("review_decision", "STOP")),
+        ("review budget zero", lambda item: item.__setitem__("review_budget", 0)),
+        ("review budget too large", lambda item: item.__setitem__("review_budget", 4)),
+        ("review route mismatch", lambda item: item.__setitem__("route_decision", "PARK_OR_BLOCK")),
+        ("review mainline flag", lambda item: item.__setitem__("mainline_relevant", True)),
+    ]
+    for name, mutate in review_hostile_mutations:
+        candidate = copy.deepcopy(review)
+        mutate(candidate)
+        candidate_records = [baseline, valid, second, candidate]
+        errors = validate_ledger(manifest, candidate_records, raw, check_git=False)
+        assert errors, f"hostile mutation accepted: {name}"
+        rejected += 1
+
+    wrong_previous = copy.deepcopy(review)
+    wrong_previous["id"] = "DCTRL-000004"
+    wrong_previous["recorded_at"] = "2026-08-31T00:00:03Z"
+    wrong_prefix = copy.deepcopy(second)
+    wrong_prefix["route_decision"] = "CONTINUE_AUXILIARY"
+    assert validate_ledger(
+        manifest, [baseline, valid, wrong_prefix, wrong_previous], raw, check_git=False
+    )
+    rejected += 1
     assert rejected >= HOSTILE_TEST_MINIMUM
     print(
         "DIRECTION-CONTROL SELFTEST: PASS "

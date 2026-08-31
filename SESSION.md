@@ -77,10 +77,14 @@ research state lives in the cowork app; it all lives in tracked files here.
    ```
 
    This derives the active mainline, auxiliary/no-progress streaks, repeated
-   blocker count, and required route decision from the append-only
-   `strategy/direction-control-log.jsonl`. It may route bounded research
-   autonomously, but it never changes a claim tier, closes a scientific gate,
-   or approves physical identity. Record a material route decision with
+   blocker count, review budget, and required route decision from the
+   append-only `strategy/direction-control-log.jsonl`. A threshold returns
+   `REVIEW_REQUIRED`; it is not an automatic scientific stop. Append a review
+   record with its evidence target, continuation/revisit conditions, and finite
+   budget before continuing. The review may authorize bounded research,
+   return to mainline, require redesign, or park/block the route. The layer
+   never changes a claim tier, closes a scientific gate, or approves physical
+   identity. Record a material route decision with
    `check_direction_control.py --add --file <record.json>`.
 
 5. **Pick up the work** — the live task ledger:

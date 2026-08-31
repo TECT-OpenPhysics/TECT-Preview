@@ -1,6 +1,6 @@
 # Mainline direction-control contract
 
-**Version:** 1.0
+**Version:** 1.1
 **Issued:** 2026-08-31
 **Scope:** long-running TECT Pre-A and Sector-A proof work
 **Machine authority:** `strategy/mainline-direction-control-v1.json`
@@ -51,25 +51,85 @@ The classification is relative to the active mainline. An inverse-lane result
 can be scientifically useful while still being `AUXILIARY_SUPPORT` for the
 forward T-054 gate.
 
-## 4. Automatic routing rules
+## 4. Threshold routing and deliberative review
 
 The validator derives the current route from the append-only control ledger.
-The policy thresholds are:
+The thresholds are deliberately conservative triggers for a review, not
+automatic scientific stop commands. A hard proof problem can therefore earn a
+bounded additional attempt when the researcher states what new evidence could
+change the diagnosis and when that attempt must be reconsidered.
 
 1. Two consecutive auxiliary or no-progress records stop auxiliary expansion
-   and route the next action back to the active mainline.
+   **only long enough to require a review**. The review may authorize a bounded
+   continuation, return to the active mainline, require a redesign, or park the
+   route.
 2. Three checkpoints without an active-gate change require an explicit
-   mainline re-entry decision, even if finite results were recorded.
-3. Two consecutive records with the same blocker fingerprint require a
-   counterexample search or a redesigned route.
-4. Three consecutive records with the same blocker fingerprint park or block
-   that route; repeating it without a new hash-pinned input is forbidden.
+   review and a mainline re-entry decision, even if finite results were
+   recorded.
+3. Two consecutive records with the same blocker fingerprint require a review
+   of the counterexample or redesigned-route evidence target.
+4. Three consecutive records with the same blocker fingerprint require a
+   review before any further attempt; repeating it without a new hash-pinned
+   input and an explicit review condition is forbidden.
 5. A positive promotion order is always
    `source-compatible -> uniform -> physical-sector -> limit`.
 
-The validator reports these actions; it does not silently mutate task, claim,
-or gate status. A new research-admission record may be added autonomously when
-its provenance, scope, evidence grade, falsifier, and next action are complete.
+The machine route at each threshold is `REVIEW_REQUIRED`. The validator does
+not silently mutate task, claim, or gate status. The next ledger record must be
+a `record_type: review` entry containing:
+
+- the exact review question and the basis for the review;
+- a hash-pinned or explicitly named new evidence target;
+- the continuation condition and the revisit condition;
+- a finite `review_budget`; and
+- one decision: `CONTINUE_BOUNDED`, `RETURN_TO_MAINLINE`, `REDESIGN`, or
+  `PARK_OR_BLOCK`.
+
+`CONTINUE_BOUNDED` authorizes only that finite number of subsequent auxiliary
+or parallel attempts. When the budget is exhausted, or another threshold is
+reached, the route is `REVIEW_REQUIRED` again and a new review record is
+needed. A mainline advance or a relevant falsifier can end the active review
+early. `RETURN_TO_MAINLINE`, `REDESIGN`, and `PARK_OR_BLOCK` are explicit
+review outcomes rather than automatic conclusions.
+
+Starting a review establishes a new bounded accounting window: the auxiliary,
+no-progress, repeated-blocker, and no-gate-change counters are reset for the
+declared target. This reset is a control-layer rebase, not evidence that the
+underlying scientific gate improved.
+
+Thus the control loop is:
+
+```text
+threshold -> REVIEW_REQUIRED -> review question/evidence/conditions
+          -> bounded continuation or explicit route change
+          -> next review point -> repeat the assessment
+```
+
+A new research-admission record may be added autonomously when its provenance,
+scope, evidence grade, falsifier, next action, and (when required) review
+fields are complete. This is permission to investigate, not a scientific
+approval.
+
+### 4.1 Adversarial review of the control layer
+
+The review mechanism itself is subject to hostile checks before release:
+
+- **Premature-stop objection:** a threshold might still silently terminate a
+  hard route. **Disposition:** the validator accepts only `REVIEW_REQUIRED`
+  at automatic thresholds; continuation requires an explicit review record.
+- **Unbounded-loop objection:** a review could become permission to repeat the
+  same finite calculation indefinitely. **Disposition:**
+  `CONTINUE_BOUNDED` has a finite budget, and budget exhaustion or a later
+  threshold requires another review.
+- **Evidence-free-renaming objection:** a route could be called a redesign
+  without changing its input or target. **Disposition:** redesign/park reviews
+  require a changed blocker, a new input hash, or mainline evidence before the
+  same blocker can be attempted again.
+- **Scientific-promotion objection:** a control decision could be mistaken for
+  a theorem or physical result. **Disposition:** all review records are
+  `claim_bearing:false` control data with `scientific_transition:false`; claim,
+  tier, gate, physical, QFT, and Yang--Mills transitions remain separately
+  authorized.
 
 ## 5. Self-resolution and approval boundary
 
@@ -108,7 +168,12 @@ After a material route decision, append one record with:
 python verification/scripts/check_direction_control.py --add --file <record.json>
 ```
 
+When the reported route is `REVIEW_REQUIRED`, the next record must use
+`record_type: review` and the required review fields in the machine manifest.
+The append-only ledger keeps the review decision beside the result that
+triggered it, so a later session can resume at the declared evidence target
+without treating an old finite attempt as a new proof premise.
+
 The ordinary doctor and release gates run the validator automatically. A
 control PASS is not a proof PASS; it means only that the routing state is
 internally consistent and the next action is mechanically determined.
-

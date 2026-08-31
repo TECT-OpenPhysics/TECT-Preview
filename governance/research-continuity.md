@@ -179,11 +179,16 @@ identical blocker without a new hash-pinned input is forbidden: the route is
 pointer-only routing overlay to this state machine. The overlay classifies each
 post-baseline decision as `MAINLINE_ADVANCE`, `AUXILIARY_SUPPORT`,
 `NEGATIVE_RESULT`, or `NO_PROGRESS`, derives auxiliary and repeated-blocker
-streaks, and routes work back to the active T-054 gate when thresholds fire.
-It may admit a bounded research action without a user reply, but it cannot
-change a claim tier, close a scientific gate, or convert an absent source-owned
-input into physical evidence. Claim, tier, and gate transitions remain subject
-to the existing operator-authorized and evidence-first rules.
+streaks, and routes threshold events to `REVIEW_REQUIRED` rather than silently
+stopping a hard proof route. A following `record_type: review` entry must state
+the question, evidence target, continuation condition, revisit condition, and
+finite budget before choosing bounded continuation, mainline return,
+redesign, or park/block. Budget exhaustion or a later threshold starts the same
+review cycle again. It may admit a bounded research action without a user
+reply, but it cannot change a claim tier, close a scientific gate, or convert
+an absent source-owned input into physical evidence. Claim, tier, and gate
+transitions remain subject to the existing operator-authorized and
+evidence-first rules.
 
 ## 8. Research Phase 0 recovery
 

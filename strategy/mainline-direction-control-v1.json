@@ -81,6 +81,21 @@
     "physical-sector",
     "limit"
   ],
+  "review_policy": {
+    "decisions": [
+      "CONTINUE_BOUNDED",
+      "RETURN_TO_MAINLINE",
+      "REDESIGN",
+      "PARK_OR_BLOCK"
+    ],
+    "default_budget": 2,
+    "max_budget": 3,
+    "note": "A threshold triggers a deliberative review, not an automatic scientific stop. The review must name the evidence target and the condition for revisiting the decision.",
+    "requires_new_evidence_target": true,
+    "requires_revisit_condition": true,
+    "requires_review_basis": true,
+    "trigger_action": "REVIEW_REQUIRED"
+  },
   "protected_actions": [
     "Claim, tier, and scientific-gate status changes remain operator-authorized.",
     "Physical identity, continuum, QFT, Yang-Mills, or empirical claims are never auto-approved.",
@@ -106,6 +121,15 @@
     "source_event",
     "task_id"
   ],
+  "required_review_fields": [
+    "continuation_condition",
+    "new_evidence_target",
+    "revisit_condition",
+    "review_basis",
+    "review_budget",
+    "review_decision",
+    "review_question"
+  ],
   "schema": "tect/mainline-direction-control/1.0",
   "source_program_path": "strategy/main-proof-program-v1.json",
   "status": "ACTIVE_POLICY_BASELINE",
@@ -116,5 +140,5 @@
     "same_blocker_park_at": 3,
     "same_blocker_redesign_at": 2
   },
-  "version": "1.0.0"
+  "version": "1.1.0"
 }
