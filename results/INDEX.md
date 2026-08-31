@@ -5,10 +5,11 @@
 
 Authorities: `RESULTS-LEDGER.md`.
 
-**303 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
+**304 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
 
 | ID | Result | Tier/scope |
 |---|---|---|
+| [`R-470`](../RESULTS-LEDGER.md#r-470) | HOLD-LC-001 official gdt-fermi GbmRsp2 parser owner boundary | T0 |
 | [`R-469`](../RESULTS-LEDGER.md#r-469) | HOLD-LC-001 official gdt-core Rsp2 selection semantics crosswalk | T0 |
 | [`R-468`](../RESULTS-LEDGER.md#r-468) | HOLD-LC-001 rsp2 binary-table segment index and selection ambiguity envelope | T0 |
 | [`R-467`](../RESULTS-LEDGER.md#r-467) | Finite branch-relative Jacobian/entropy compensator interface | T0 |
@@ -33,7 +34,6 @@ Authorities: `RESULTS-LEDGER.md`.
 | [`R-448`](../RESULTS-LEDGER.md#r-448) | Static-equivalence quotient and separating finite dynamic estimand | T0 |
 | [`R-447`](../RESULTS-LEDGER.md#r-447) | HOLD-LC-001 set-valued delay envelope interface | T0 |
 | [`R-446`](../RESULTS-LEDGER.md#r-446) | OBS-LC-CAL-001 frozen row lineage and feasibility interface | T0 |
-| [`R-445`](../RESULTS-LEDGER.md#r-445) | Conditional scalar-to-operator tail transfer under a per-edge norm majorant | T0 |
 
 Search without loading the full ledger:
 

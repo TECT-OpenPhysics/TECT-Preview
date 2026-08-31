@@ -1,0 +1,135 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "schema_version": "1.0",
+  "id": "EXP-001345",
+  "title": "HOLD-LC-001 official gdt-fermi GbmRsp2 parser owner boundary",
+  "task_id": "T-061",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": ["PA-INVERSE-OBSERVATION-TARGET-MAP-HOLDOUT-FREEZE"],
+  "verdict": "advanced",
+  "provenance": "contemporaneous",
+  "recorded_by": "Codex",
+  "recorded_at": "2026-08-31T06:20:00Z",
+  "reviewed_on": "2026-08-31",
+  "question": "What exact mission-level parser semantics connect the pinned Fermi GBM GbmRsp2 product to the R-469 core Rsp2 implementation before any response validity, timing law or likelihood is admitted?",
+  "method": [
+    "Preserve the established T-054 forward, T-059/T-061 observation-first, owner-order and promotion-firewall methods; add only a source-semantic crosswalk.",
+    "Hash-pin the official USRA-STI/gdt-fermi main commit and response.py source in a gitignored cache.",
+    "Use independent AST and token inspections of the GbmRsp2 classmethod open body; do not import the package, open a FITS product or read a matrix coefficient.",
+    "Verify delegation to core Rsp2, DRM_NUM iteration, per-segment header reconstruction, compressed-field access, decompression, response-object construction and aggregate assembly.",
+    "Run primary, independent, hostile, integrated and Lean checks; issue no intermediate PDF."
+  ],
+  "finding": "The pinned GbmRsp2 implementation subclasses core Rsp2, delegates file opening to super().open, loops over DRM_NUM, rebuilds per-segment headers, accesses MATRIX/F_CHAN/N_CHAN/N_GRP, decompresses rows, constructs ResponseMatrix and GbmRsp objects from segment metadata, appends every segment and aggregates with cls.from_rsps. The method body contains no source-owned validity, uncertainty, likelihood, interpolation, weighting, nearest-segment or detector-to-geocenter contract. This advances exact mission-parser provenance only; event bytes and response coefficients remain unopened and production_selection remains NONE_SELECTED.",
+  "decision_reason": "R-469 pinned the core selection implementation but did not establish how the Fermi mission subclass packages each response segment. This one exact mission-source pin closes that provenance link and, at the same time, establishes a stopping boundary for generic software-source searches without altering the existing methods.",
+  "decision_scope": "T0 finite mission-parser source provenance over the R-469 parent; no event product, response coefficient, calibration rule, timing conversion, likelihood, covariance, score, prediction or physical inference",
+  "evidence_level": "T0 exact public mission-source commit/file hash plus independent AST/token parser-semantic crosswalk",
+  "assumptions": [
+    "The pinned commit and source-file SHA identify the exact public mission implementation audited here.",
+    "The R-469 contract and primary report remain authoritative for core Rsp2 semantics and the no-matrix firewall.",
+    "AST and token checks on the source text describe parser control flow without executing the package or opening a FITS product.",
+    "Field-name access in source code is not itself a physical calibration or timing law.",
+    "The established T-054 forward method, T-059/T-061 observation-first method, owner order and promotion firewalls remain controlling."
+  ],
+  "missing_assumptions": [
+    "A source-owned response validity interval and calibration interpolation rule tied to the event and spectral-history products.",
+    "A pinned dependency/runtime contract for any matrix-reading interpolation or weighting path.",
+    "A common time standard, spacecraft-state interpolation and detector-to-geocenter propagation with uncertainty.",
+    "Frozen detector, energy, background and temporal windows with a source-owned likelihood, covariance and nuisance law.",
+    "A complete candidate-neutral F_reg/F_lim/F_eff/F_obs map, immutable scorer and genuinely prospective holdout."
+  ],
+  "boundary": "Finite mission-parser provenance only. The source-scope absence of owner calls is not a universal package-absence theorem; it does not admit response validity, calibration interpolation, timing, uncertainty, likelihood, covariance, nuisance, scoring, a holdout, microscopic dynamics, a physical sector, Pre-A, QFT, Yang-Mills, gravity, continuum or mass gap.",
+  "decision_scope_note": "Generic software-source intake stops here unless a new versioned owner artifact supplies one of the missing physical/statistical fields.",
+  "adversarial_review": [
+    {
+      "axis": "source-identity",
+      "check": "Could a moving main branch or stale local file be treated as the audited implementation?",
+      "disposition": "REJECTED: commit, byte length and SHA-256 are required by both lanes."
+    },
+    {
+      "axis": "class-scope",
+      "check": "Could a different GbmRsp method be mistaken for GbmRsp2.open?",
+      "disposition": "REJECTED: AST class and classmethod line ranges are asserted."
+    },
+    {
+      "axis": "delegation",
+      "check": "Could mission parsing be reported without the core-reader delegation?",
+      "disposition": "REJECTED: exact super().open token and AST call are required."
+    },
+    {
+      "axis": "segment-completeness",
+      "check": "Could DRM_NUM iteration or final aggregation be omitted?",
+      "disposition": "REJECTED: loop, append, close and cls.from_rsps tokens are required."
+    },
+    {
+      "axis": "matrix-leakage",
+      "check": "Could source field names be confused with reading or interpreting HOLD-LC-001 response values?",
+      "disposition": "UPHELD-REJECTED: only source text is inspected; event_bytes_opened and matrix_values_interpreted remain false."
+    },
+    {
+      "axis": "owner-gap",
+      "check": "Could parser construction be promoted to validity, interpolation or timing ownership?",
+      "disposition": "UPHELD-REJECTED: forbidden owner terms are absent from the audited method and all admission fields remain false."
+    },
+    {
+      "axis": "method-overhaul",
+      "check": "Could this provenance step replace T-054/T-059/T-061 or change their owner order?",
+      "disposition": "REJECTED: methods_unchanged and promotion-firewall checks are mandatory."
+    },
+    {
+      "axis": "promotion",
+      "check": "Could a parser-only PASS be promoted to a candidate, prediction, QFT or Yang-Mills result?",
+      "disposition": "UPHELD-REJECTED: T0 claim-nonbearing, NONE_SELECTED, EMPTY prospective lock and explicit non-claims are retained."
+    }
+  ],
+  "formal_integration": {
+    "results": ["R-470"],
+    "negatives": [],
+    "events": ["20260831-r-470-hold-lc-001-official-gdt-fermi-gbmrsp2-pa"],
+    "no_new_negative": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "formal_integration_notes": {
+    "primary": "15/15 assertions pass",
+    "independent": "10/10 assertions pass",
+    "hostile": "14/14 mutations rejected",
+    "integrated": "15/15 assertions pass with Lean R470",
+    "methods_unchanged": true
+  },
+  "formal_refs": {
+    "results": ["R-470"],
+    "negatives": [],
+    "events": ["20260831-r-470-hold-lc-001-official-gdt-fermi-gbmrsp2-pa"]
+  },
+  "evidence_refs": [
+    "strategy/hold-lc-001-gdt-fermi-rsp2-parser-owner-v0.1.json#source_owner",
+    "strategy/hold-lc-001-gdt-fermi-rsp2-parser-owner-manifest.json#semantic_contract",
+    "strategy/hold-lc-001-gdt-fermi-rsp2-parser-owner-certificate-260831.md#Parser semantics",
+    "codes/foundations/hold_lc_001_gdt_fermi_rsp2_parser_owner.py#run",
+    "codes/foundations/hold_lc_001_gdt_fermi_rsp2_parser_owner_independent.py#run",
+    "codes/foundations/hold_lc_001_gdt_fermi_rsp2_parser_owner_hostile.py#main",
+    "verification/scripts/hold_lc_001_gdt_fermi_rsp2_parser_owner_verify.py#main",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-primary-hold-lc-gdt-fermi-parser-owner/primary.json#assertions",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-independent-hold-lc-gdt-fermi-parser-owner/independent.json#assertions",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-hostile-hold-lc-gdt-fermi-parser-owner/hostile.json#mutations",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-integrated-hold-lc-gdt-fermi-parser-owner/integrated.json#assertions",
+    "verification/lean/Tect/R470.lean#segment_count",
+    "changelog/log.jsonl#20260831-r-470-hold-lc-001-official-gdt-fermi-gbmrsp2-pa"
+  ],
+  "related": [
+    {
+      "id": "EXP-001344",
+      "relation": "continues"
+    },
+    {
+      "id": "EXP-001343",
+      "relation": "continues"
+    }
+  ],
+  "stop_or_redesign": [
+    "If the source commit or file hash drifts, refresh the versioned contract rather than mutating this record.",
+    "If a new owner artifact supplies validity, interpolation, timing or uncertainty, issue a new versioned admission contract before reading response values.",
+    "If no such artifact exists, stop generic software-source intake and return to the unchanged T-054 forward owner queue and the locked T-059/T-061 inverse map."
+  ],
+  "next_action": "Request the versioned physical-owner validity/interpolation, common time-standard, detector-to-geocenter and timing-uncertainty contract; keep response values, scoring and prospective credit locked, and resume T-054 owner-level Q3LOCK intake in parallel."
+}

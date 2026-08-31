@@ -879,6 +879,52 @@
         "verification/lean/Tect/R469.lean"
       ],
       "unresolved_claim_ids": []
+    },
+    {
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "claim_ref_basis": {
+        "C6-SPACETIME-SIGNATURE": "explicit_claim_ids"
+      },
+      "claim_refs": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "date": "2026-08-31",
+      "header": "[R-470 HOLD-LC-001 official gdt-fermi GbmRsp2 parser owner boundary] - 2026-08-31",
+      "id": "20260831-r-470-hold-lc-001-official-gdt-fermi-gbmrsp2-pa",
+      "keywords": [
+        "EXP-001345",
+        "GbmRsp2",
+        "R-470",
+        "T-061",
+        "gdt-fermi",
+        "methods-unchanged",
+        "owner",
+        "parser",
+        "provenance"
+      ],
+      "linked_result_ids": [
+        "R-470"
+      ],
+      "negative_results": [],
+      "notes": [
+        "strategy/hold-lc-001-gdt-fermi-rsp2-parser-owner-certificate-260831.md"
+      ],
+      "raw": "## [R-470 HOLD-LC-001 official gdt-fermi GbmRsp2 parser owner boundary] - 2026-08-31\n\nR-470 is an additive T-061 mission-source provenance crosswalk and preserves the established T-054 forward method, T-059/T-061 observation-first method, owner order and promotion firewalls. The exact public USRA-STI/gdt-fermi main commit a6ef74e7278dbeb35759aadeb8d79ec8c38e6aac and 12107-byte src/gdt/missions/fermi/gbm/response.py SHA-256 d2c1534ac3fa8eb783ba0a7f13c0e32bdfb7f44c8d0a409b64c7d7cfbfb0a2ba are pinned. Independent AST/token lanes show GbmRsp2 subclassing core Rsp2, delegating file opening, iterating DRM_NUM, rebuilding per-segment headers, accessing MATRIX/F_CHAN/N_CHAN/N_GRP, decompressing rows, constructing ResponseMatrix and GbmRsp objects from metadata, and aggregating segments. The audit opens no HOLD-LC-001 event product and interprets no response coefficient; the method body contains no validity, uncertainty, likelihood, interpolation, weighting, nearest-segment or detector-to-geocenter owner contract. Primary 15/15, independent 10/10, hostile 14/14, integrated 15/15 and Lean R470 pass. Production selection remains NONE_SELECTED and no tier changes. Generic software-source intake stops at this boundary; the next useful input is a versioned physical-owner validity/interpolation, time-standard, propagation and uncertainty contract, while T-054 forward owner-level Q3LOCK intake resumes in parallel.\n\n",
+      "result_ids": [
+        "R-470"
+      ],
+      "result_link_basis": {
+        "R-470": "explicit_result_id"
+      },
+      "scripts": [
+        "codes/foundations/hold_lc_001_gdt_fermi_rsp2_parser_owner.py",
+        "codes/foundations/hold_lc_001_gdt_fermi_rsp2_parser_owner_independent.py",
+        "codes/foundations/hold_lc_001_gdt_fermi_rsp2_parser_owner_hostile.py",
+        "verification/scripts/hold_lc_001_gdt_fermi_rsp2_parser_owner_verify.py"
+      ],
+      "unresolved_claim_ids": []
     }
   ],
   "kind": "accepted_events",

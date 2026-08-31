@@ -1,0 +1,298 @@
+{
+  "admission": {
+    "calibration_interpolation_admitted": false,
+    "candidate_scoring_allowed": false,
+    "covariance_admitted": false,
+    "detector_to_geocenter_conversion_admitted": false,
+    "f_reg_f_lim_f_eff_f_obs_defined": false,
+    "nuisance_law_admitted": false,
+    "parser_semantics_admitted": false,
+    "production_selection": "NONE_SELECTED",
+    "prospective_lock": "EMPTY",
+    "response_validity_admitted": false,
+    "timing_likelihood_admitted": false,
+    "timing_uncertainty_admitted": false
+  },
+  "assertion_count": 15,
+  "assertions": [
+    {
+      "actual": "a6ef74e7278dbeb35759aadeb8d79ec8c38e6aac",
+      "expected": "40-hex commit",
+      "name": "source-commit-pinned",
+      "status": "PASS"
+    },
+    {
+      "actual": "d2c1534ac3fa8eb783ba0a7f13c0e32bdfb7f44c8d0a409b64c7d7cfbfb0a2ba",
+      "expected": "d2c1534ac3fa8eb783ba0a7f13c0e32bdfb7f44c8d0a409b64c7d7cfbfb0a2ba",
+      "name": "source-file-sha",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "GbmRsp2",
+        [
+          259,
+          309
+        ],
+        [
+          263,
+          309
+        ]
+      ],
+      "expected": [
+        "GbmRsp2",
+        [
+          259,
+          309
+        ],
+        [
+          263,
+          309
+        ]
+      ],
+      "name": "ast-class-and-method",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "core-reader-delegation",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "drm-count-loop",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "segment-header-rebuild",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "compressed-fields",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "decompression",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "response-object-reconstruction",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "segment-aggregation",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "owner-terms-absent-in-scope",
+      "status": "PASS"
+    },
+    {
+      "actual": "7140bbbbe654c9ff42d9e32bb292f59ede661d9f8ba056fd0bea5ce4f77d5aa3",
+      "expected": "7140bbbbe654c9ff42d9e32bb292f59ede661d9f8ba056fd0bea5ce4f77d5aa3",
+      "name": "parent-r469-contract",
+      "status": "PASS"
+    },
+    {
+      "actual": "2a039fc88d28078d61ff2f396d4146f5fb06ea42ae50de17592e47e311e91482",
+      "expected": "2a039fc88d28078d61ff2f396d4146f5fb06ea42ae50de17592e47e311e91482",
+      "name": "parent-r469-result",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "calibration_interpolation_admitted": false,
+        "candidate_scoring_allowed": false,
+        "covariance_admitted": false,
+        "detector_to_geocenter_conversion_admitted": false,
+        "f_reg_f_lim_f_eff_f_obs_defined": false,
+        "nuisance_law_admitted": false,
+        "parser_semantics_admitted": false,
+        "production_selection": "NONE_SELECTED",
+        "prospective_lock": "EMPTY",
+        "response_validity_admitted": false,
+        "timing_likelihood_admitted": false,
+        "timing_uncertainty_admitted": false
+      },
+      "expected": "all physical fields false",
+      "name": "admission-firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "methods-unchanged",
+      "status": "PASS"
+    }
+  ],
+  "assumptions": [
+    "The pinned commit and source-file SHA identify the exact public mission implementation audited here.",
+    "The R-469 contract and primary report remain authoritative for core Rsp2 semantics and their no-matrix firewall.",
+    "AST and token checks on the source text are sufficient to describe parser control flow without executing the package or opening a FITS product.",
+    "Field-name access in source code is not treated as a physical calibration or timing law.",
+    "The existing T-054 forward method, T-059/T-061 observation-first method, owner order and promotion firewalls remain controlling."
+  ],
+  "audit_id": "HOLD-LC-001-GDT-FERMI-RSP2-PARSER-OWNER",
+  "boundary": [
+    "This result does not open the two HOLD-LC-001 products and does not read or interpret any response coefficient.",
+    "The parser's field accesses do not establish calibration validity, interpolation, response selection, detector-to-geocenter timing, uncertainty, likelihood, covariance or nuisance ownership.",
+    "No production response, candidate score, prediction, microscopic dynamics, physical sector, Pre-A, QFT, Yang-Mills, gravity, continuum or mass-gap conclusion follows.",
+    "The absence of owner calls in this method body is a bounded source-scope observation, not a universal absence theorem about the package.",
+    "The established T-054 forward and T-059/T-061 observation-first methods, owner order and promotion firewalls are unchanged; this is additive provenance only."
+  ],
+  "candidate_scoring": false,
+  "claim_bearing": false,
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "core_digest": "97cc2b3ed84456aa9cbf2d155e7568f0e845e33a75f26296d4c0aef48cf93741",
+  "event_bytes_opened": false,
+  "evidence_level": "T0 exact public mission-source commit/file hash plus AST/token parser-semantic provenance",
+  "holdout_id": "HOLD-LC-001",
+  "matrix_values_interpreted": false,
+  "methods_unchanged": true,
+  "missing_assumptions": [
+    "A source-owned response validity interval and calibration interpolation rule tied to the event and spectral-history products.",
+    "A pinned dependency/runtime contract for any matrix-reading interpolation or weighting path.",
+    "A common time standard, spacecraft-state interpolation and detector-to-geocenter propagation with uncertainty.",
+    "Frozen detector, energy, background and temporal windows with a source-owned likelihood, covariance and nuisance law.",
+    "A complete candidate-neutral F_reg/F_lim/F_eff/F_obs map, immutable scorer and genuinely prospective holdout."
+  ],
+  "parent_result": {
+    "path": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-primary-hold-lc-gdt-selection-owner/primary.json",
+    "sha256": "2a039fc88d28078d61ff2f396d4146f5fb06ea42ae50de17592e47e311e91482"
+  },
+  "parent_semantics": {
+    "path": "strategy/hold-lc-001-gdt-rsp2-selection-owner-v0.1.json",
+    "sha256": "7140bbbbe654c9ff42d9e32bb292f59ede661d9f8ba056fd0bea5ce4f77d5aa3"
+  },
+  "passed": 15,
+  "production_selection": "NONE_SELECTED",
+  "prospective_lock": "EMPTY",
+  "provenance": {
+    "contract_sha256": "e14630bc05c3304e360554d2bd6ec699755a3e81ce647553ddf028d2ea777c23",
+    "parent_contract_sha256": "7140bbbbe654c9ff42d9e32bb292f59ede661d9f8ba056fd0bea5ce4f77d5aa3",
+    "parent_result_sha256": "2a039fc88d28078d61ff2f396d4146f5fb06ea42ae50de17592e47e311e91482",
+    "source_analysis": "AST and exact-token inspection; no package import or product open",
+    "source_cache_checked": true,
+    "source_sha256": "d2c1534ac3fa8eb783ba0a7f13c0e32bdfb7f44c8d0a409b64c7d7cfbfb0a2ba"
+  },
+  "recorded_at": "2026-08-31T05:57:27.442394Z",
+  "run_kind": "primary",
+  "schema": "tect/foundation-audit/1.0",
+  "scope": {
+    "candidate_scoring": false,
+    "event_bytes_opened": false,
+    "limit_order": "none; finite mission-parser provenance only",
+    "matrix_values_interpreted": false,
+    "production_response_selected": false,
+    "products_opened": 0,
+    "response_coefficients_read": false,
+    "source_analysis": "AST and exact-token source-text inspection only",
+    "timing_likelihood": false
+  },
+  "source_owner_semantics_admitted": false,
+  "source_pin": {
+    "branch": "main",
+    "byte_length": 12107,
+    "commit": "a6ef74e7278dbeb35759aadeb8d79ec8c38e6aac",
+    "file": "src/gdt/missions/fermi/gbm/response.py",
+    "line_ranges": {
+      "gbm_rsp2_class": "259-309",
+      "gbm_rsp2_open": "263-309"
+    },
+    "local_cache": "internal/source-cache/HOLD-LC-001/2026-08-31/gdt-fermi-response",
+    "repository": "USRA-STI/gdt-fermi",
+    "repository_url": "https://github.com/USRA-STI/gdt-fermi",
+    "retrieved_at_utc": "2026-08-31T06:10:00Z",
+    "source_line_count": 309,
+    "source_sha256": "d2c1534ac3fa8eb783ba0a7f13c0e32bdfb7f44c8d0a409b64c7d7cfbfb0a2ba",
+    "source_url": "https://raw.githubusercontent.com/USRA-STI/gdt-fermi/a6ef74e7278dbeb35759aadeb8d79ec8c38e6aac/src/gdt/missions/fermi/gbm/response.py"
+  },
+  "source_semantics": {
+    "base_names": [
+      "Rsp2"
+    ],
+    "call_names": [
+      "ResponseMatrix",
+      "_decompress_drm",
+      "append",
+      "close",
+      "column",
+      "from_data",
+      "from_full_name",
+      "from_headers",
+      "from_rsps",
+      "open",
+      "range",
+      "super"
+    ],
+    "class_line_range": [
+      259,
+      309
+    ],
+    "class_name": "GbmRsp2",
+    "classmethod_open": true,
+    "forbidden_owner_terms_absent": {
+      "detector_to_geocenter": true,
+      "drm_index": true,
+      "interpolate": true,
+      "likelihood": true,
+      "nearest_drm": true,
+      "uncertainty": true,
+      "validity": true,
+      "weighted": true
+    },
+    "open_line_range": [
+      263,
+      309
+    ],
+    "parser_semantics": {
+      "aggregates_segments": true,
+      "constructs_response_objects": true,
+      "decompresses_rows": true,
+      "delegates_reader": true,
+      "inherits_core_rsp2": true,
+      "loops_over_drm_num": true,
+      "reads_compressed_field_names": true,
+      "reads_shape_metadata": true,
+      "rebuilds_segment_headers": true
+    },
+    "required_tokens_found": {
+      "aggregate": true,
+      "append": true,
+      "close": true,
+      "decompression": true,
+      "delegate": true,
+      "drm_count": true,
+      "fchan": true,
+      "from_data": true,
+      "header_rebuild": true,
+      "headers": true,
+      "matrix": true,
+      "nchan": true,
+      "ngrp": true,
+      "num_chans": true,
+      "num_ebins": true,
+      "response_matrix": true,
+      "segment_loop": true,
+      "subclass": true
+    },
+    "source_line_count": 309,
+    "source_scope_contains_only_parser_owner_fields": true
+  },
+  "task_id": "T-061",
+  "verdict": "PASS"
+}

@@ -1,0 +1,130 @@
+{
+  "schema": "tect/hold-lc-001-gdt-fermi-rsp2-parser-owner/1.0",
+  "manifest_id": "HOLD-LC-001-GDT-FERMI-RSP2-PARSER-OWNER-v1",
+  "result_id": "R-470",
+  "exploration_id": "EXP-001345",
+  "task_id": "T-061",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "title": "HOLD-LC-001 official gdt-fermi GbmRsp2 parser owner boundary",
+  "tier": "T0",
+  "claim_bearing": false,
+  "status": "MISSION_PARSER_PINNED_PHYSICAL_OWNER_OPEN",
+  "methods_preserved": {
+    "t054_forward_method_unchanged": true,
+    "t059_t061_observation_first_method_unchanged": true,
+    "owner_order_unchanged": true,
+    "promotion_firewalls_unchanged": true,
+    "additive_owner_intake_only": true,
+    "no_event_product_opened": true,
+    "no_matrix_value_interpretation": true,
+    "no_response_selection": true,
+    "no_candidate_scoring": true,
+    "no_tier_change": true
+  },
+  "source_pin": {
+    "repository": "USRA-STI/gdt-fermi",
+    "commit": "a6ef74e7278dbeb35759aadeb8d79ec8c38e6aac",
+    "path": "src/gdt/missions/fermi/gbm/response.py",
+    "sha256": "d2c1534ac3fa8eb783ba0a7f13c0e32bdfb7f44c8d0a409b64c7d7cfbfb0a2ba",
+    "byte_length": 12107,
+    "source_url": "https://raw.githubusercontent.com/USRA-STI/gdt-fermi/a6ef74e7278dbeb35759aadeb8d79ec8c38e6aac/src/gdt/missions/fermi/gbm/response.py",
+    "local_cache": "internal/source-cache/HOLD-LC-001/2026-08-31/gdt-fermi-response"
+  },
+  "parent": {
+    "contract_path": "strategy/hold-lc-001-gdt-rsp2-selection-owner-v0.1.json",
+    "contract_sha256": "7140bbbbe654c9ff42d9e32bb292f59ede661d9f8ba056fd0bea5ce4f77d5aa3",
+    "result_path": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-primary-hold-lc-gdt-selection-owner/primary.json",
+    "result_sha256": "2a039fc88d28078d61ff2f396d4146f5fb06ea42ae50de17592e47e311e91482"
+  },
+  "semantic_contract": {
+    "class": "GbmRsp2(Rsp2)",
+    "open_delegation": "super().open(file_path, **kwargs)",
+    "segment_loop": "for i in range(hdrs[0]['DRM_NUM'])",
+    "header_rebuild": "RspHeaders.from_headers([hdrs[0], hdrs[1], hdrs[i+2]])",
+    "matrix_fields": ["MATRIX", "F_CHAN", "N_CHAN", "N_GRP"],
+    "decompression": "GbmRsp._decompress_drm",
+    "object_builders": ["ResponseMatrix", "GbmRsp.from_data"],
+    "aggregate": "cls.from_rsps(rsp_list, filename=obj.filename)",
+    "owner_calls_absent_from_open": ["validity", "uncertainty", "likelihood", "interpolate", "weighted", "nearest_drm", "drm_index", "detector_to_geocenter"]
+  },
+  "checks": {
+    "source_hash_checked": true,
+    "parent_hash_checked": true,
+    "ast_class_and_open_checked": true,
+    "delegation_checked": true,
+    "segment_loop_checked": true,
+    "field_access_checked": true,
+    "object_reconstruction_checked": true,
+    "owner_gap_scoped": true,
+    "event_bytes_opened": false,
+    "matrix_values_interpreted": false,
+    "production_selection": "NONE_SELECTED",
+    "candidate_scoring_allowed": false,
+    "prospective_lock": "EMPTY"
+  },
+  "files": {
+    "contract": {
+      "path": "strategy/hold-lc-001-gdt-fermi-rsp2-parser-owner-v0.1.json",
+      "sha256": "e14630bc05c3304e360554d2bd6ec699755a3e81ce647553ddf028d2ea777c23"
+    },
+    "certificate": {
+      "path": "strategy/hold-lc-001-gdt-fermi-rsp2-parser-owner-certificate-260831.md",
+      "sha256": "62d2a6c1fcb5a27425af3ddb8141adb9d48daa83fb8953c3d78bab8b3575787a"
+    },
+    "primary": {
+      "path": "codes/foundations/hold_lc_001_gdt_fermi_rsp2_parser_owner.py",
+      "sha256": "f47f64b2004d6ba7cbd586c2aaaaa3bdfa69e1a5355837f81737a8f3ed7a7c5b"
+    },
+    "independent": {
+      "path": "codes/foundations/hold_lc_001_gdt_fermi_rsp2_parser_owner_independent.py",
+      "sha256": "89851be28b84a0a6bd242286a50d4be66270e1fbc88019e8472965abb7ae1271"
+    },
+    "hostile": {
+      "path": "codes/foundations/hold_lc_001_gdt_fermi_rsp2_parser_owner_hostile.py",
+      "sha256": "0147009cd712df281ab513a4cf1d810d260b4153f0a788b236495066e42cffce"
+    },
+    "integrated": {
+      "path": "verification/scripts/hold_lc_001_gdt_fermi_rsp2_parser_owner_verify.py",
+      "sha256": "d940d735a68b374a7f22286de2093c848f276886e4ab834f5418060a8c498fd1"
+    },
+    "lean": {
+      "path": "verification/lean/Tect/R470.lean",
+      "sha256": "9d621248961af11d4f5c9e120202b9c31441c8e58428d4bd218a616a27f00174"
+    },
+    "lean_registry": {
+      "path": "verification/lean/registry.json",
+      "sha256": "ebbb81fb7edf531655f34bdbe50f3feca38ed780316112e01458df3eecdb2924"
+    },
+    "primary_run": {
+      "path": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-primary-hold-lc-gdt-fermi-parser-owner/primary.json",
+      "sha256": "27bd7ef37e174e175d778cdd76cbfabcf6eb4969ccb811dc9116818e6e185a83"
+    },
+    "independent_run": {
+      "path": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-independent-hold-lc-gdt-fermi-parser-owner/independent.json",
+      "sha256": "e95101868cc17ffbed651519aa4252de16bdbb271744bdcb053c87d767a4a816"
+    },
+    "hostile_run": {
+      "path": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-hostile-hold-lc-gdt-fermi-parser-owner/hostile.json",
+      "sha256": "14b66907f4be580d6fc67dc06b991c9c65c0c194d4de67104be5d1f8ba41a0a5"
+    },
+    "integrated_run": {
+      "path": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-integrated-hold-lc-gdt-fermi-parser-owner/integrated.json",
+      "sha256": "e70636f65bc0d1141fe539824ad6e045881a32af33c3b5cc5057093d141c1197"
+    }
+  },
+  "formal_integration": {
+    "results": ["R-470"],
+    "lean": "verification/lean/Tect/R470.lean",
+    "no_new_negative_ids": [],
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "evidence_level": "T0 exact public mission-source commit/file hash plus AST/token parser-semantic provenance",
+  "non_claims": [
+    "No event product is opened and no response coefficient is interpreted.",
+    "No calibration validity, interpolation domain, response choice, timing conversion, uncertainty, likelihood, covariance, nuisance law, score or prediction is admitted.",
+    "No microscopic dynamics, physical sector, Pre-A, C6 closure, QFT, Yang-Mills, continuum or mass-gap conclusion follows.",
+    "Existing forward and inverse methods are unchanged."
+  ],
+  "next_action": "Request a versioned physical-owner validity/interpolation and timing-uncertainty contract; keep all response alternatives and scoring locked."
+}

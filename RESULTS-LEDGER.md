@@ -22,6 +22,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-470](#r-470) | HOLD-LC-001 official gdt-fermi GbmRsp2 parser owner boundary | R-470 v1.0 is a T0 claim-nonbearing additive T-061 mission-source provenance crosswalk. The pinned USRA-STI/gdt-fermi main commit a6ef74e7278dbeb35759aadeb8d79ec8c38e6aac and 12107-byte response.py SHA-256 are audited by independent AST/token lanes. GbmRsp2 subclasses core Rsp2, delegates opening, iterates DRM_NUM, rebuilds segment headers, accesses compressed fields, decompresses rows, constructs GbmRsp objects and aggregates them; no event product or response coefficient is opened, and no validity/interpolation/timing owner is supplied. Primary 15/15, independent 10/10, hostile 14/14, integrated 15/15 and Lean R470 pass. Production selection remains NONE_SELECTED; existing T-054/T-059/T-061 methods and owner order are unchanged |
 | [R-469](#r-469) | HOLD-LC-001 official gdt-core Rsp2 selection semantics crosswalk | R-469 v1.0 is a T0 claim-nonbearing additive T-061 source-owner provenance crosswalk. The exact USRA-STI/gdt-core main commit and response.py SHA-256 are pinned. From R-468 interval metadata, the implementation's strict-overlap drm_index, first/last empty-range fallback and first-index nearest delegation are reproduced; endpoint fallback and the docstring/implementation mismatch are exposed. Primary 12 assertions, independent 7 assertions, hostile 12/12, integrated 14/14 and Lean R469 pass. Matrix-reading interpolation/weighted paths, calibration validity, timing conversion/uncertainty, likelihood, covariance, scoring and prospective lock remain unadmitted; existing T-054/T-059/T-061 methods and owner order are unchanged |
 | [R-468](#r-468) | HOLD-LC-001 rsp2 binary-table segment index and selection ambiguity envelope | R-468 v1.0 is a T0 claim-nonbearing additive T-061 provenance interface. The two hash-pinned Fermi rsp2 products each expose one 128-row EBOUNDS table and eight ordered 140-row response segments; scalar energy intervals and P-descriptor heap bounds pass, while F_CHAN/N_CHAN arrays and MATRIX coefficients remain unread. A fixed query grid retains covering, nearest and center-bracket alternatives with NONE_SELECTED. Primary 35 assertions, independent core 4 assertions, hostile 10/10, integrated 10/10 and Lean R468 pass. No calibration validity, timing conversion, likelihood, covariance, candidate score, prospective prediction, physical, QFT, Yang--Mills or mass-gap conclusion follows; existing methods and owner order are unchanged |
 | [R-467](#r-467) | Finite branch-relative Jacobian/entropy compensator interface | R-467 v1.0 is a T0 claim-nonbearing additive A6/A7 interface downstream of R-466. For a later owner-supplied injective measurable chart with active/normal dimensions `k_N+n_N=d_N`, positive Jacobian lower bound `J_N`, chart side lengths and energy ceiling `E_N`, the exact finite lower-bound log budget is `log(J_N)+k_N log(s_a,N)+n_N log(s_n,N)-beta E_N-log(Z_upper_N)`, with relative compensator `log(J_N vol(U_N))-log(V_ref,N)`. Owner-neutral fixtures pass primary 190/190, independent 188/188, hostile 8/8, integrated 56/56 and Lean R467; no source-owned chart, uniform branch probability, entropy density, tightness, continuum, physical, QFT, Yang--Mills or mass-gap conclusion follows, and existing methods and owner order are unchanged |
@@ -836,6 +837,59 @@ candidate-neutral two-time observable, complete map stages and prospective
 holdout exist. Continue unchanged T-054 Q3LOCK owner intake and T-059/T-061
 observation-source intake; do not manufacture another finite mobility table.
 
+<a id="r-470"></a>
+### R-470 -- HOLD-LC-001 official gdt-fermi GbmRsp2 parser owner boundary
+
+**Result ID.** `HOLD-LC-001-GDT-FERMI-RSP2-PARSER-OWNER-v1` (R-470).
+
+**Version and exact scope.** R-470 v1.0 is a T0, claim-nonbearing additive
+T-061 mission-source provenance crosswalk. It preserves the established T-054
+forward method, T-059/T-061 observation-first inverse method, owner order, and
+promotion firewalls. The public `USRA-STI/gdt-fermi` `main` commit
+`a6ef74e7278dbeb35759aadeb8d79ec8c38e6aac` is pinned for
+`src/gdt/missions/fermi/gbm/response.py`; the 12107-byte source file has
+SHA-256
+`d2c1534ac3fa8eb783ba0a7f13c0e32bdfb7f44c8d0a409b64c7d7cfbfb0a2ba`.
+The local source copy is gitignored; the contract preserves its locator,
+commit, hash, byte length and line ranges. R-469 contract and primary report
+hashes are checked before this crosswalk runs.
+
+**Parser semantics.** The audited `GbmRsp2` class subclasses the core `Rsp2`
+and its classmethod `open` delegates file opening to `super().open`. It
+snapshots the HDU headers, reads `DRM_NUM`, and loops over each segment. For
+each segment it rebuilds `RspHeaders`, reads `NUMEBINS` and `DETCHANS`,
+accesses `MATRIX`, `F_CHAN`, `N_CHAN` and `N_GRP`, calls
+`GbmRsp._decompress_drm`, constructs a `ResponseMatrix` and `GbmRsp.from_data`
+object from segment metadata, appends the result, closes the input and
+aggregates with `cls.from_rsps`.
+
+This is source-text control-flow provenance only. No HOLD-LC-001 event product
+is opened and no response coefficient is interpreted. The audited method body
+contains no validity, uncertainty, likelihood, interpolation, weighting,
+nearest-segment or detector-to-geocenter contract. This bounded absence is not
+a universal absence theorem for other package modules.
+
+**Audit and interpretation.** Primary 15/15, independent 10/10, hostile 14/14,
+integrated 15/15 and Lean `R470.lean` pass. The primary and independent
+cores agree exactly. Production selection remains `NONE_SELECTED`, candidate
+scoring is stopped, and the prospective lock is empty. No claim tier changes
+and no proof-note PDF is issued.
+
+**Boundary and non-claims.** This finite mission-parser provenance does not
+admit response validity, calibration interpolation, detector-to-geocenter
+timing, time-standard conversion, uncertainty, likelihood, covariance,
+nuisance, a complete `F_reg/F_lim/F_eff/F_obs` map, candidate scoring or a
+prospective holdout. It does not identify microscopic dynamics, causal
+propagation, a physical sector, Pre-A, Sector-A, QFT, Yang--Mills, gravity, a
+continuum limit or a mass gap. Existing methods and owner order are unchanged.
+
+**Proven in:** [R-470 certificate](strategy/hold-lc-001-gdt-fermi-rsp2-parser-owner-certificate-260831.md), [machine contract](strategy/hold-lc-001-gdt-fermi-rsp2-parser-owner-v0.1.json), [manifest](strategy/hold-lc-001-gdt-fermi-rsp2-parser-owner-manifest.json), [primary script](codes/foundations/hold_lc_001_gdt_fermi_rsp2_parser_owner.py), [independent script](codes/foundations/hold_lc_001_gdt_fermi_rsp2_parser_owner_independent.py), [hostile script](codes/foundations/hold_lc_001_gdt_fermi_rsp2_parser_owner_hostile.py), [integrated verifier](verification/scripts/hold_lc_001_gdt_fermi_rsp2_parser_owner_verify.py), [integrated run](claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-integrated-hold-lc-gdt-fermi-parser-owner/integrated.json), [Lean kernel](verification/lean/Tect/R470.lean), and [exploration record](strategy/hold-lc-001-gdt-fermi-rsp2-parser-owner-exploration.json).
+
+**Next action.** Generic software-source intake stops at this boundary. Request
+the versioned physical-owner validity/interpolation, common time-standard,
+detector-to-geocenter and timing-uncertainty contract; keep response values,
+likelihood, covariance, nuisance and scoring locked, and resume the unchanged
+T-054 owner-level Q3LOCK queue in parallel.
 <a id="r-469"></a>
 ### R-469 -- HOLD-LC-001 official gdt-core Rsp2 selection semantics crosswalk
 

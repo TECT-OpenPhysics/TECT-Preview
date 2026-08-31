@@ -1,0 +1,100 @@
+{
+  "schema": "tect/hold-lc-001-gdt-fermi-rsp2-parser-owner/0.1",
+  "id": "HOLD-LC-001-GDT-FERMI-RSP2-PARSER-OWNER-v0.1",
+  "version": "0.1.0",
+  "task_id": "T-061",
+  "holdout_id": "HOLD-LC-001",
+  "result_id": "R-470",
+  "exploration_id": "EXP-001345",
+  "claim_bearing": false,
+  "methods_unchanged": true,
+  "purpose": "Add one additive source-semantic crosswalk for the official Fermi GBM GbmRsp2 parser. The audit pins the exact mission-level implementation, checks how it delegates to the core Rsp2 reader and reconstructs per-segment objects, and stops before opening event bytes, interpreting response coefficients, choosing a response, or changing the established T-054/T-059/T-061 methods.",
+  "source_owner": {
+    "repository": "USRA-STI/gdt-fermi",
+    "repository_url": "https://github.com/USRA-STI/gdt-fermi",
+    "branch": "main",
+    "commit": "a6ef74e7278dbeb35759aadeb8d79ec8c38e6aac",
+    "file": "src/gdt/missions/fermi/gbm/response.py",
+    "source_url": "https://raw.githubusercontent.com/USRA-STI/gdt-fermi/a6ef74e7278dbeb35759aadeb8d79ec8c38e6aac/src/gdt/missions/fermi/gbm/response.py",
+    "source_sha256": "d2c1534ac3fa8eb783ba0a7f13c0e32bdfb7f44c8d0a409b64c7d7cfbfb0a2ba",
+    "byte_length": 12107,
+    "source_line_count": 309,
+    "retrieved_at_utc": "2026-08-31T06:10:00Z",
+    "local_cache": "internal/source-cache/HOLD-LC-001/2026-08-31/gdt-fermi-response",
+    "line_ranges": {
+      "gbm_rsp2_class": "259-309",
+      "gbm_rsp2_open": "263-309"
+    }
+  },
+  "parent_semantics": {
+    "path": "strategy/hold-lc-001-gdt-rsp2-selection-owner-v0.1.json",
+    "sha256": "7140bbbbe654c9ff42d9e32bb292f59ede661d9f8ba056fd0bea5ce4f77d5aa3",
+    "role": "R-469 core Rsp2 selection semantics; this result maps the mission subclass to that parent without reopening matrix values"
+  },
+  "parent_result": {
+    "path": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-primary-hold-lc-gdt-selection-owner/primary.json",
+    "sha256": "2a039fc88d28078d61ff2f396d4146f5fb06ea42ae50de17592e47e311e91482",
+    "role": "R-469 finite semantic report and no-selection firewall"
+  },
+  "source_semantics": {
+    "inheritance": "GbmRsp2 subclasses the core Rsp2 object.",
+    "reader_delegation": "GbmRsp2.open delegates file opening to super().open(file_path, **kwargs) and snapshots the HDU headers.",
+    "segment_count": "The primary header DRM_NUM controls a loop over all response segments.",
+    "per_segment_header": "Each segment rebuilds RspHeaders from the primary, EBOUNDS and segment headers.",
+    "shape_metadata": "NUMEBINS and DETCHANS are read for each segment.",
+    "compressed_fields": "MATRIX, F_CHAN, N_CHAN and N_GRP are accessed by the parser.",
+    "decompression": "GbmRsp._decompress_drm expands the compressed row representation.",
+    "response_object": "ResponseMatrix and GbmRsp.from_data are used with TSTART, TSTOP, TRIGTIME and detector metadata.",
+    "aggregation": "Each reconstructed GbmRsp is appended and the final object is cls.from_rsps(rsp_list, filename=obj.filename).",
+    "owner_gap": "The audited GbmRsp2.open body contains no validity, uncertainty, likelihood, interpolation, weighting, nearest-segment or detector-to-geocenter contract."
+  },
+  "scope": {
+    "source_analysis": "AST and exact-token source-text inspection only",
+    "products_opened": 0,
+    "response_coefficients_read": false,
+    "event_bytes_opened": false,
+    "matrix_values_interpreted": false,
+    "production_response_selected": false,
+    "candidate_scoring": false,
+    "timing_likelihood": false,
+    "limit_order": "none; finite mission-parser provenance only"
+  },
+  "admission": {
+    "parser_semantics_admitted": false,
+    "response_validity_admitted": false,
+    "calibration_interpolation_admitted": false,
+    "detector_to_geocenter_conversion_admitted": false,
+    "timing_uncertainty_admitted": false,
+    "timing_likelihood_admitted": false,
+    "covariance_admitted": false,
+    "nuisance_law_admitted": false,
+    "f_reg_f_lim_f_eff_f_obs_defined": false,
+    "production_selection": "NONE_SELECTED",
+    "candidate_scoring_allowed": false,
+    "prospective_lock": "EMPTY"
+  },
+  "assumptions": [
+    "The pinned commit and source-file SHA identify the exact public mission implementation audited here.",
+    "The R-469 contract and primary report remain authoritative for core Rsp2 semantics and their no-matrix firewall.",
+    "AST and token checks on the source text are sufficient to describe parser control flow without executing the package or opening a FITS product.",
+    "Field-name access in source code is not treated as a physical calibration or timing law.",
+    "The existing T-054 forward method, T-059/T-061 observation-first method, owner order and promotion firewalls remain controlling."
+  ],
+  "missing_assumptions": [
+    "A source-owned response validity interval and calibration interpolation rule tied to the event and spectral-history products.",
+    "A pinned dependency/runtime contract for any matrix-reading interpolation or weighting path.",
+    "A common time standard, spacecraft-state interpolation and detector-to-geocenter propagation with uncertainty.",
+    "Frozen detector, energy, background and temporal windows with a source-owned likelihood, covariance and nuisance law.",
+    "A complete candidate-neutral F_reg/F_lim/F_eff/F_obs map, immutable scorer and genuinely prospective holdout."
+  ],
+  "evidence_level": "T0 exact public mission-source commit/file hash plus AST/token parser-semantic provenance",
+  "non_claims": [
+    "This result does not open the two HOLD-LC-001 products and does not read or interpret any response coefficient.",
+    "The parser's field accesses do not establish calibration validity, interpolation, response selection, detector-to-geocenter timing, uncertainty, likelihood, covariance or nuisance ownership.",
+    "No production response, candidate score, prediction, microscopic dynamics, physical sector, Pre-A, QFT, Yang-Mills, gravity, continuum or mass-gap conclusion follows.",
+    "The absence of owner calls in this method body is a bounded source-scope observation, not a universal absence theorem about the package.",
+    "The established T-054 forward and T-059/T-061 observation-first methods, owner order and promotion firewalls are unchanged; this is additive provenance only."
+  ],
+  "next_action": "Stop generic software-source intake at this boundary and request the versioned physical-owner validity/interpolation, time-standard, propagation and uncertainty contract. Keep response values, scoring and prospective credit locked; resume the T-054 forward owner queue in parallel.",
+  "recorded_by": "Codex"
+}

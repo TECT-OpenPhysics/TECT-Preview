@@ -1,0 +1,275 @@
+{
+  "assertion_count": 15,
+  "assertions": [
+    {
+      "actual": "HOLD-LC-GDT-FERMI-RSP2-PARSER OWNER: PASS source_sha=d2c1534ac3fa class=GbmRsp2 event_bytes=NOT_OPENED matrix=NOT_INTERPRETED selection=NONE_SELECTED score=STOPPED\n",
+      "expected": "PASS",
+      "name": "primary child",
+      "pass": true
+    },
+    {
+      "actual": "HOLD-LC-GDT-FERMI-RSP2-PARSER OWNER INDEPENDENT: PASS source_sha=d2c1534ac3fa class=GbmRsp2 event_bytes=NOT_OPENED matrix=NOT_INTERPRETED selection=NONE_SELECTED score=STOPPED\n",
+      "expected": "PASS",
+      "name": "independent child",
+      "pass": true
+    },
+    {
+      "actual": "HOLD-LC-GDT-FERMI-RSP2-PARSER OWNER HOSTILE: PASS 14/14 mutations rejected\n",
+      "expected": "PASS",
+      "name": "hostile child",
+      "pass": true
+    },
+    {
+      "actual": [
+        "97cc2b3ed84456aa9cbf2d155e7568f0e845e33a75f26296d4c0aef48cf93741",
+        "97cc2b3ed84456aa9cbf2d155e7568f0e845e33a75f26296d4c0aef48cf93741"
+      ],
+      "expected": "equal",
+      "name": "lane core agreement",
+      "pass": true
+    },
+    {
+      "actual": {
+        "branch": "main",
+        "byte_length": 12107,
+        "commit": "a6ef74e7278dbeb35759aadeb8d79ec8c38e6aac",
+        "file": "src/gdt/missions/fermi/gbm/response.py",
+        "line_ranges": {
+          "gbm_rsp2_class": "259-309",
+          "gbm_rsp2_open": "263-309"
+        },
+        "local_cache": "internal/source-cache/HOLD-LC-001/2026-08-31/gdt-fermi-response",
+        "repository": "USRA-STI/gdt-fermi",
+        "repository_url": "https://github.com/USRA-STI/gdt-fermi",
+        "retrieved_at_utc": "2026-08-31T06:10:00Z",
+        "source_line_count": 309,
+        "source_sha256": "d2c1534ac3fa8eb783ba0a7f13c0e32bdfb7f44c8d0a409b64c7d7cfbfb0a2ba",
+        "source_url": "https://raw.githubusercontent.com/USRA-STI/gdt-fermi/a6ef74e7278dbeb35759aadeb8d79ec8c38e6aac/src/gdt/missions/fermi/gbm/response.py"
+      },
+      "expected": "a6ef74e7278dbeb35759aadeb8d79ec8c38e6aac",
+      "name": "source pin",
+      "pass": true
+    },
+    {
+      "actual": {
+        "path": "strategy/hold-lc-001-gdt-rsp2-selection-owner-v0.1.json",
+        "sha256": "7140bbbbe654c9ff42d9e32bb292f59ede661d9f8ba056fd0bea5ce4f77d5aa3"
+      },
+      "expected": "7140bbbbe654c9ff42d9e32bb292f59ede661d9f8ba056fd0bea5ce4f77d5aa3",
+      "name": "parent R469 hashes",
+      "pass": true
+    },
+    {
+      "actual": {
+        "base_names": [
+          "Rsp2"
+        ],
+        "call_names": [
+          "ResponseMatrix",
+          "_decompress_drm",
+          "append",
+          "close",
+          "column",
+          "from_data",
+          "from_full_name",
+          "from_headers",
+          "from_rsps",
+          "open",
+          "range",
+          "super"
+        ],
+        "class_line_range": [
+          259,
+          309
+        ],
+        "class_name": "GbmRsp2",
+        "classmethod_open": true,
+        "forbidden_owner_terms_absent": {
+          "detector_to_geocenter": true,
+          "drm_index": true,
+          "interpolate": true,
+          "likelihood": true,
+          "nearest_drm": true,
+          "uncertainty": true,
+          "validity": true,
+          "weighted": true
+        },
+        "open_line_range": [
+          263,
+          309
+        ],
+        "parser_semantics": {
+          "aggregates_segments": true,
+          "constructs_response_objects": true,
+          "decompresses_rows": true,
+          "delegates_reader": true,
+          "inherits_core_rsp2": true,
+          "loops_over_drm_num": true,
+          "reads_compressed_field_names": true,
+          "reads_shape_metadata": true,
+          "rebuilds_segment_headers": true
+        },
+        "required_tokens_found": {
+          "aggregate": true,
+          "append": true,
+          "close": true,
+          "decompression": true,
+          "delegate": true,
+          "drm_count": true,
+          "fchan": true,
+          "from_data": true,
+          "header_rebuild": true,
+          "headers": true,
+          "matrix": true,
+          "nchan": true,
+          "ngrp": true,
+          "num_chans": true,
+          "num_ebins": true,
+          "response_matrix": true,
+          "segment_loop": true,
+          "subclass": true
+        },
+        "source_line_count": 309,
+        "source_scope_contains_only_parser_owner_fields": true
+      },
+      "expected": "GbmRsp2 classmethod open",
+      "name": "class and method",
+      "pass": true
+    },
+    {
+      "actual": {
+        "aggregates_segments": true,
+        "constructs_response_objects": true,
+        "decompresses_rows": true,
+        "delegates_reader": true,
+        "inherits_core_rsp2": true,
+        "loops_over_drm_num": true,
+        "reads_compressed_field_names": true,
+        "reads_shape_metadata": true,
+        "rebuilds_segment_headers": true
+      },
+      "expected": true,
+      "name": "segment loop",
+      "pass": true
+    },
+    {
+      "actual": {
+        "aggregates_segments": true,
+        "constructs_response_objects": true,
+        "decompresses_rows": true,
+        "delegates_reader": true,
+        "inherits_core_rsp2": true,
+        "loops_over_drm_num": true,
+        "reads_compressed_field_names": true,
+        "reads_shape_metadata": true,
+        "rebuilds_segment_headers": true
+      },
+      "expected": true,
+      "name": "field and decompression",
+      "pass": true
+    },
+    {
+      "actual": {
+        "aggregates_segments": true,
+        "constructs_response_objects": true,
+        "decompresses_rows": true,
+        "delegates_reader": true,
+        "inherits_core_rsp2": true,
+        "loops_over_drm_num": true,
+        "reads_compressed_field_names": true,
+        "reads_shape_metadata": true,
+        "rebuilds_segment_headers": true
+      },
+      "expected": true,
+      "name": "object reconstruction",
+      "pass": true
+    },
+    {
+      "actual": {
+        "detector_to_geocenter": true,
+        "drm_index": true,
+        "interpolate": true,
+        "likelihood": true,
+        "nearest_drm": true,
+        "uncertainty": true,
+        "validity": true,
+        "weighted": true
+      },
+      "expected": true,
+      "name": "owner gap",
+      "pass": true
+    },
+    {
+      "actual": [
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false
+      ],
+      "name": "event/matrix locked",
+      "pass": true
+    },
+    {
+      "actual": "NONE_SELECTED",
+      "expected": "NONE_SELECTED",
+      "name": "selection stopped",
+      "pass": true
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "methods unchanged",
+      "pass": true
+    },
+    {
+      "actual": {
+        "command": "lake env lean Tect/R470.lean",
+        "output": "",
+        "returncode": 0,
+        "status": "PASS"
+      },
+      "expected": "PASS",
+      "name": "Lean compile",
+      "pass": true
+    }
+  ],
+  "audit_id": "HOLD-LC-001-GDT-FERMI-RSP2-PARSER-OWNER-INTEGRATED",
+  "boundary": [
+    "This result does not open the two HOLD-LC-001 products and does not read or interpret any response coefficient.",
+    "The parser's field accesses do not establish calibration validity, interpolation, response selection, detector-to-geocenter timing, uncertainty, likelihood, covariance or nuisance ownership.",
+    "No production response, candidate score, prediction, microscopic dynamics, physical sector, Pre-A, QFT, Yang-Mills, gravity, continuum or mass-gap conclusion follows.",
+    "The absence of owner calls in this method body is a bounded source-scope observation, not a universal absence theorem about the package.",
+    "The established T-054 forward and T-059/T-061 observation-first methods, owner order and promotion firewalls are unchanged; this is additive provenance only."
+  ],
+  "candidate_scoring": false,
+  "claim_bearing": false,
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "event_bytes_opened": false,
+  "holdout_id": "HOLD-LC-001",
+  "lean": {
+    "command": "lake env lean Tect/R470.lean",
+    "output": "",
+    "returncode": 0,
+    "status": "PASS"
+  },
+  "matrix_values_interpreted": false,
+  "methods_unchanged": true,
+  "passed": 15,
+  "production_selection": "NONE_SELECTED",
+  "prospective_lock": "EMPTY",
+  "provenance": {
+    "contract_sha256": "e14630bc05c3304e360554d2bd6ec699755a3e81ce647553ddf028d2ea777c23",
+    "hostile_sha256": "0147009cd712df281ab513a4cf1d810d260b4153f0a788b236495066e42cffce",
+    "independent_sha256": "89851be28b84a0a6bd242286a50d4be66270e1fbc88019e8472965abb7ae1271",
+    "lean_sha256": "9d621248961af11d4f5c9e120202b9c31441c8e58428d4bd218a616a27f00174",
+    "primary_sha256": "f47f64b2004d6ba7cbd586c2aaaaa3bdfa69e1a5355837f81737a8f3ed7a7c5b"
+  },
+  "recorded_at": "2026-08-31T06:11:50.988227Z",
+  "run_kind": "integrated",
+  "schema": "tect/foundation-audit/1.0",
+  "source_owner_semantics_admitted": false,
+  "task_id": "T-061",
+  "verdict": "PASS"
+}
