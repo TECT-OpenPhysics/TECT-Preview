@@ -1,0 +1,165 @@
+{
+  "assertion_summary": {
+    "passed": 16,
+    "total": 16
+  },
+  "assertions": [
+    {
+      "actual": "1/2",
+      "expected": ">0",
+      "name": "epsilon 1/2 positive",
+      "pass": true
+    },
+    {
+      "actual": "1/8",
+      "expected": "<1/4",
+      "name": "cutoff tail 1/2",
+      "pass": true
+    },
+    {
+      "actual": "1/9",
+      "expected": "<1/4",
+      "name": "volume tail 1/2",
+      "pass": true
+    },
+    {
+      "actual": "17/72",
+      "expected": "<1/2",
+      "name": "rectangle 1/2",
+      "pass": true
+    },
+    {
+      "actual": "1/4",
+      "expected": ">0",
+      "name": "epsilon 1/4 positive",
+      "pass": true
+    },
+    {
+      "actual": "1/16",
+      "expected": "<1/8",
+      "name": "cutoff tail 1/4",
+      "pass": true
+    },
+    {
+      "actual": "1/9",
+      "expected": "<1/8",
+      "name": "volume tail 1/4",
+      "pass": true
+    },
+    {
+      "actual": "25/144",
+      "expected": "<1/4",
+      "name": "rectangle 1/4",
+      "pass": true
+    },
+    {
+      "actual": "1/8",
+      "expected": ">0",
+      "name": "epsilon 1/8 positive",
+      "pass": true
+    },
+    {
+      "actual": "1/32",
+      "expected": "<1/16",
+      "name": "cutoff tail 1/8",
+      "pass": true
+    },
+    {
+      "actual": "1/27",
+      "expected": "<1/16",
+      "name": "volume tail 1/8",
+      "pass": true
+    },
+    {
+      "actual": "59/864",
+      "expected": "<1/8",
+      "name": "rectangle 1/8",
+      "pass": true
+    },
+    {
+      "actual": "1/16",
+      "expected": ">0",
+      "name": "epsilon 1/16 positive",
+      "pass": true
+    },
+    {
+      "actual": "1/64",
+      "expected": "<1/32",
+      "name": "cutoff tail 1/16",
+      "pass": true
+    },
+    {
+      "actual": "1/81",
+      "expected": "<1/32",
+      "name": "volume tail 1/16",
+      "pass": true
+    },
+    {
+      "actual": "145/5184",
+      "expected": "<1/16",
+      "name": "rectangle 1/16",
+      "pass": true
+    }
+  ],
+  "audit_id": "R474-ORDERED-LIMIT-RECTANGLE-INDEPENDENT-v1",
+  "boundary": "R-474 closes only the abstract epsilon bookkeeping needed to turn owner-supplied uniform tails into a rectangular-tail certificate. It does not supply those tails or any source-owned TECT input.",
+  "claim_bearing": false,
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "core": {
+    "canonical": {
+      "cutoff_base": 2,
+      "limit": "0",
+      "records": [
+        {
+          "cutoff_threshold": 2,
+          "epsilon": "1/2",
+          "half": "1/4",
+          "rectangle": "17/72",
+          "volume_threshold": 1
+        },
+        {
+          "cutoff_threshold": 3,
+          "epsilon": "1/4",
+          "half": "1/8",
+          "rectangle": "25/144",
+          "volume_threshold": 1
+        },
+        {
+          "cutoff_threshold": 4,
+          "epsilon": "1/8",
+          "half": "1/16",
+          "rectangle": "59/864",
+          "volume_threshold": 2
+        },
+        {
+          "cutoff_threshold": 5,
+          "epsilon": "1/16",
+          "half": "1/32",
+          "rectangle": "145/5184",
+          "volume_threshold": 3
+        }
+      ],
+      "split": 2,
+      "volume_base": 3
+    },
+    "core_fingerprint": "bc276f103195183de0ee7cc5074df290b3f50a1286d0c9e375893234b27fb346"
+  },
+  "exploration_id": "EXP-001353",
+  "non_claims": [
+    "No source-owned dynamics or production owner is supplied.",
+    "No actual Q3 common core, uniform estimate, thermodynamic limit, continuum limit or common-alpha theorem is proved.",
+    "The synthetic geometric fixture does not represent the TECT field law and cannot close Pre-A, Sector-A, QFT, Yang--Mills, gravity or mass gap.",
+    "The two orders are not inferred to agree merely because both fixture calculations pass."
+  ],
+  "recorded_at": "2026-08-31T15:16:17.088288Z",
+  "result_id": "R-474",
+  "run_kind": "independent",
+  "schema": "tect/r474-ordered-limit-rectangle-independent/1.0",
+  "source_hashes": {
+    "independent": "171756c525408a7fbdff96379cf4c08d91ce7b80c134c35b9a375d576b2422ae",
+    "manifest": "e6f5c7883756f6861e1e713e6fea6c71c8780594c28c7955df3ba4eafb949d0a"
+  },
+  "task_id": "T-054",
+  "tier": "T0",
+  "verdict": "PASS"
+}

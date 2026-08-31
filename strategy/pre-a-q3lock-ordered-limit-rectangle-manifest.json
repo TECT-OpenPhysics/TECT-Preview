@@ -1,0 +1,179 @@
+{
+  "schema": "tect/pre-a-q3lock-ordered-limit-rectangle/1.0",
+  "version": "1.0.0",
+  "result_id": "R-474",
+  "exploration_id": "EXP-001353",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": [
+    "PA-CP1-ST8-Q3LOCK-HIGHER-WEIGHTED-ENERGY-MOMENTS-AND-THERMODYNAMIC-CAUCHY-CLOSURE",
+    "PA-CP1-ST8-Q3LOCK-LOCAL-STRICT-ALL-EXHAUSTION-TWO-ORIENTATION-HISTORY-COMMON-ALPHA",
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "title": "Conditional ordered-limit rectangular-tail bridge",
+  "tier": "T0",
+  "claim_bearing": false,
+  "status": "CONDITIONAL_RECTANGLE_BRIDGE_AUDITED",
+  "parent_results": ["R-451", "R-456"],
+  "parent_explorations": ["EXP-001324", "EXP-001329"],
+  "question": "Can explicit uniform cutoff and volume tail bounds be composed in either declared order into one common rectangular-tail estimate before an owner-specific ordered limit is claimed?",
+  "theorem": {
+    "cutoff_then_volume": "If |A(n,m)-B(m)|<epsilon/2 for all n>=N and all m, and |B(m)-L|<epsilon/2 for all m>=M, then |A(n,m)-L|<epsilon for n>=N,m>=M.",
+    "volume_then_cutoff": "If |A(n,m)-C(n)|<epsilon/2 for all m>=M and all n, and |C(n)-L|<epsilon/2 for all n>=N, then |A(n,m)-L|<epsilon for n>=N,m>=M.",
+    "order_contract": "The two orders are separate owner obligations; agreement of their rectangular tails is a compatibility check, not a proof of existence of either physical limit.",
+    "norm_contract": "The absolute value is a placeholder for the common norm selected by the source owner; replacing it by an operator or field norm requires a separate domain theorem."
+  },
+  "model": {
+    "indices": "n=cutoff or lattice index, m=volume or exhaustion index",
+    "observable": "A(n,m)",
+    "forward_intermediate": "B(m)",
+    "reverse_intermediate": "C(n)",
+    "limit_symbol": "L",
+    "order_forward": ["cutoff", "volume"],
+    "order_reverse": ["volume", "cutoff"]
+  },
+  "fixture": {
+    "limit": "0",
+    "cutoff_base": 2,
+    "volume_base": 3,
+    "cutoff_error_formula": "1/(cutoff_base^(n+1))",
+    "volume_error_formula": "1/(volume_base^(m+1))",
+    "sample_indices": [0, 1, 2, 3, 4, 5, 8, 16, 32, 64],
+    "epsilon_values": ["1/2", "1/4", "1/8", "1/16"],
+    "epsilon_split_denominator": 2,
+    "max_index": 64
+  },
+  "scope": {
+    "epsilon_triangle_bridge_closed": true,
+    "cutoff_then_volume_contract_closed": true,
+    "volume_then_cutoff_contract_closed": true,
+    "rectangular_tail_order_compatibility_closed": true,
+    "source_owned_functional_closed": false,
+    "source_owned_dynamics_closed": false,
+    "common_core_closed": false,
+    "common_norm_closed": false,
+    "uniform_cutoff_bound_closed": false,
+    "uniform_volume_bound_closed": false,
+    "ordered_limit_closed": false,
+    "actual_q3_history_closed": false,
+    "physical_sector_closed": false,
+    "continuum_closed": false,
+    "pre_a_closed": false,
+    "sector_a_closed": false,
+    "qft_yang_mills_closed": false,
+    "no_new_negative_result": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "assumptions": [
+    "The triangle inequality is applied in one already declared common norm.",
+    "The cutoff and volume tails are supplied with strict epsilon/2 bounds before the rectangle is formed.",
+    "The two parameter indices and their order are fixed before any fitting or limit interpretation.",
+    "The finite fixture is an arithmetic self-test of the contract and is not an owner packet or exhaustion surrogate."
+  ],
+  "missing_assumptions": [
+    "A hash-pinned source-owned TECT functional and compatible generator or transfer.",
+    "A common invariant core and norm for all regulated observables.",
+    "Source-authorized cutoff- and volume-uniform bounds, including boundary and phase dependence.",
+    "A proof that the specified A, B and C objects are the same physical observable across regulators.",
+    "An ordered removal rule for cutoff, lattice, volume, exhaustion, phase and beta, plus existence or equivalence-class language.",
+    "Physical-sector projection and an independent holdout observation map."
+  ],
+  "non_claims": [
+    "No source-owned dynamics or production owner is supplied.",
+    "No actual Q3 common core, uniform estimate, thermodynamic limit, continuum limit or common-alpha theorem is proved.",
+    "The synthetic geometric fixture does not represent the TECT field law and cannot close Pre-A, Sector-A, QFT, Yang--Mills, gravity or mass gap.",
+    "The two orders are not inferred to agree merely because both fixture calculations pass."
+  ],
+  "adversarial_review": [
+    {
+      "axis": "epsilon split",
+      "check": "A strict epsilon/2 split is required before adding the two tails.",
+      "disposition": "UPHELD by Lean and both arithmetic lanes."
+    },
+    {
+      "axis": "order direction",
+      "check": "The forward and reverse intermediate functions are not silently swapped.",
+      "disposition": "UPHELD by explicit order labels and hostile mutation rejection."
+    },
+    {
+      "axis": "uniformity",
+      "check": "A finite sample must not be relabelled as a uniform owner bound.",
+      "disposition": "UPHELD-OPEN; fixture rows are fenced as arithmetic only."
+    },
+    {
+      "axis": "norm/domain",
+      "check": "Absolute-value bookkeeping must not be promoted to an operator-domain theorem.",
+      "disposition": "UPHELD-OPEN; common norm and domain remain missing."
+    },
+    {
+      "axis": "physical promotion",
+      "check": "A rectangular tail must not close the physical sector or QFT identity.",
+      "disposition": "UPHELD-REJECTED by scope firewalls."
+    }
+  ],
+  "files": {
+    "primary": "verification/scripts/pre_a_q3lock_ordered_limit_rectangle.py",
+    "independent": "codes/foundations/pre_a_q3lock_ordered_limit_rectangle_independent.py",
+    "hostile": "codes/foundations/pre_a_q3lock_ordered_limit_rectangle_hostile.py",
+    "integrated": "verification/scripts/pre_a_q3lock_ordered_limit_rectangle_verify.py",
+    "lean": "verification/lean/Tect/R474.lean",
+    "primary_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-primary-r474-ordered-limit-rectangle/primary.json",
+    "independent_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-independent-r474-ordered-limit-rectangle/independent.json",
+    "hostile_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-hostile-r474-ordered-limit-rectangle/hostile.json",
+    "integrated_run": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-integrated-r474-ordered-limit-rectangle/integrated.json"
+  },
+  "lean": {
+    "toolchain": "leanprover/lean4:v4.32.1",
+    "entrypoint": "verification/lean/Tect/R474.lean",
+    "declarations": [
+      "cutoff_then_volume_rectangle",
+      "volume_then_cutoff_rectangle",
+      "epsilon_split_positive",
+      "methods_are_not_changed"
+    ],
+    "role": "Lean checks only the epsilon-split triangle implications; it does not formalise TECT operators, domains, source ownership or limits."
+  },
+  "authorities": {
+    "parent_weighted_transfer_manifest": {
+      "path": "strategy/pre-a-cp1-st8-q3lock-weighted-transfer-operator-defect-resolvent-manifest.json",
+      "sha256": "3cdbd003d50c801bc743d37f40653dc82975400911faa23b0ae5e22ddfb40262"
+    },
+    "parent_history_transfer_manifest": {
+      "path": "strategy/pre-a-cp1-st8-q3lock-two-sided-history-cauchy-transfer-manifest.json",
+      "sha256": "0045cc8343551a2d01fe42614c282d92970cae9106558fb600202e5cba901867"
+    },
+    "lean_entrypoint": {
+      "path": "verification/lean/Tect/R474.lean",
+      "sha256": "34951e0757c278eea409b149517642ba081d79a77fe029c65a361ffcf62c20e7"
+    },
+    "primary": {
+      "path": "verification/scripts/pre_a_q3lock_ordered_limit_rectangle.py",
+      "sha256": "b745dc47e0a73a2efd2a6a042c76b77f13b15b4e18512791694964a695ff23bd"
+    },
+    "independent": {
+      "path": "codes/foundations/pre_a_q3lock_ordered_limit_rectangle_independent.py",
+      "sha256": "171756c525408a7fbdff96379cf4c08d91ce7b80c134c35b9a375d576b2422ae"
+    },
+    "hostile": {
+      "path": "codes/foundations/pre_a_q3lock_ordered_limit_rectangle_hostile.py",
+      "sha256": "7e55da470df723d94105c18df7a44ff43f6bfb72b6a41b71b320ffbcf03f5587"
+    },
+    "integrated": {
+      "path": "verification/scripts/pre_a_q3lock_ordered_limit_rectangle_verify.py",
+      "sha256": "497b2aaa8d39f6f24856c82739f8be4e705fa9dee92723be80e3cb0964156e8b"
+    }
+  },
+  "method_preservation": {
+    "t054_forward_method_unchanged": true,
+    "t059_observation_first_method_unchanged": true,
+    "t061_owner_order_unchanged": true,
+    "promotion_firewalls_unchanged": true,
+    "no_new_functional": true,
+    "no_new_dynamics": true,
+    "no_physical_candidate": true
+  },
+  "evidence_level": "T0 exact conditional two-order epsilon bridge with independent and hostile checks",
+  "boundary": "R-474 closes only the abstract epsilon bookkeeping needed to turn owner-supplied uniform tails into a rectangular-tail certificate. It does not supply those tails or any source-owned TECT input.",
+  "next_action": "When a non-synthetic owner packet arrives, instantiate both order contracts in the declared common norm and test source-, cutoff-, volume-, lattice-, phase- and beta-uniformity before attempting the ordered limit; until then keep T-054 at owner intake and do not repeat finite physical-empty tests."
+}

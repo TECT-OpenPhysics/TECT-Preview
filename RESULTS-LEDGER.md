@@ -22,6 +22,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-474](#r-474) | Conditional ordered-limit rectangular-tail bridge | R-474 / EXP-001353 is a T0 claim-nonbearing auxiliary interface. Strict epsilon/2 cutoff and volume tails compose by the triangle inequality in both declared orders into a rectangular tail; primary 40/40, independent 16/16, hostile 10/10 mutations rejected, integrated 13/13 and Lean R474 pass. The fixture does not supply source-owned dynamics, a common norm, uniform estimates, an ordered limit, physical identity, Pre-A, Sector-A, QFT, Yang--Mills, continuum or mass-gap result; existing methods and owner order remain unchanged |
 | [R-473](#r-473) | HOLD-LC-001 TTE event-row feature index | R-473 / EXP-001348 is a T0 claim-nonbearing finite raw-event feature index. The two byte-frozen Fermi EVENTS tables (NaI N0 and BGO B0) decode to 272,615 and 394,501 rows, with a common 263-bin one-second trigger-relative histogram; primary 23/23, independent 14/14, hostile 12/12 and integrated 25/25 pass, including Lean R473. Existing T-054 forward and T-059/T-061 inverse methods, owner order and promotion firewalls are unchanged; likelihood, covariance, geocentre, calibration, scoring, prospective, physical, Pre-A, Sector-A, QFT, Yang--Mills, continuum and mass-gap conclusions remain blocked |
 | [R-472](#r-472) | A2/R-157-R-158 exact-core Lean cross-check | R-472 / EXP-001347 is a T0 claim-nonbearing additive sidecar. The pinned Lean 4.32.1 kernel checks the exact rational gap, radial gap, completion, Class-II determinant, internal characteristic polynomial, affine-square, coexistence charge/drop and radial-numerator consequences already used by R-157/R-158; primary 30/30, independent 22/22, hostile 12/12 and integrated 22/22 pass with Lean. Existing T-054 forward and T-059/T-061 inverse methods, owner order and promotion firewalls are unchanged; no PDE, source-owner, physical, Pre-A, Sector-A, QFT, Yang--Mills, continuum or mass-gap conclusion follows |
 | [R-471](#r-471) | Fail-closed P1 owner and observation-map admission contract | R-471 / EXP-001346 is a T0 claim-nonbearing additive T-061/T-054 contract result. It encodes the unchanged nine-slot owner order and ordered F_reg/F_lim/F_eff/F_obs map as a fail-closed state machine: the current packet remains EMPTY_OWNER_ARTIFACT with zero admitted candidates, and complete synthetic fixtures are contract-test-only. Primary 24/24, independent 18/18, hostile 18/18 with 14/14 mutations rejected, integrated 10/10 and Lean R471 pass. No source owner, scoring, prospective holdout, physical identity, Pre-A, Sector-A, QFT, Yang--Mills, continuum or mass-gap conclusion follows; established methods and owner order remain unchanged |
@@ -839,6 +840,40 @@ score M3 only after a versioned source owner, state/uncertainty contract,
 candidate-neutral two-time observable, complete map stages and prospective
 holdout exist. Continue unchanged T-054 Q3LOCK owner intake and T-059/T-061
 observation-source intake; do not manufacture another finite mobility table.
+
+<a id="r-474"></a>
+### R-474 -- Conditional ordered-limit rectangular-tail bridge
+
+**Result ID.** `R-474` (`EXP-001353`).
+
+**Version and exact scope.** R-474 v1.0 is a T0, claim-nonbearing auxiliary
+interface for the T-054 ordered-limit step.  For a two-index observable
+`A(n,m)`, the cutoff-then-volume contract introduces `B(m)` and composes
+strict `epsilon/2` cutoff and volume tails by the triangle inequality.  The
+volume-then-cutoff contract introduces a separately named `C(n)` and repeats
+the argument in the reverse order.  The scalar absolute value is only a
+placeholder for a future owner-declared common norm.
+
+**Verification.** The exact geometric fixture uses derived thresholds for
+`A(n,m)=1/2^(n+1)+1/3^(m+1)` and passes 40/40 primary assertions, 16/16
+independent assertions, 10/10 hostile mutation rejections and 13/13
+integrated assertions.  The independent and hostile lanes agree on the
+canonical fixture fingerprint, and `R474.lean` compiles with Lean 4.32.1.
+
+**Boundary and non-claims.** R-474 proves only the epsilon bookkeeping once
+uniform tails are supplied.  It supplies no source-owned functional or
+microscopic dynamics, common core or norm, Q3 heat-root map, cutoff/volume or
+lattice-uniform estimate, ordered limit, physical sector, observation map,
+Pre-A, Sector-A, QFT, Yang--Mills, gravity or mass-gap conclusion.  The
+synthetic fixture is not an exhaustion surrogate, and agreement of the two
+orders is not inferred from it.
+
+**Proven in.** [certificate](strategy/pre-a-q3lock-ordered-limit-rectangle-certificate-260831.md), [manifest](strategy/pre-a-q3lock-ordered-limit-rectangle-manifest.json), [exploration record](strategy/pre-a-q3lock-ordered-limit-rectangle-exploration.json), [primary script](verification/scripts/pre_a_q3lock_ordered_limit_rectangle.py), [independent script](codes/foundations/pre_a_q3lock_ordered_limit_rectangle_independent.py), [hostile script](codes/foundations/pre_a_q3lock_ordered_limit_rectangle_hostile.py), [integrated verifier](verification/scripts/pre_a_q3lock_ordered_limit_rectangle_verify.py), [Lean kernel](verification/lean/Tect/R474.lean), and [integrated run](claims/C6-SPACETIME-SIGNATURE/runs/2026-08-31-integrated-r474-ordered-limit-rectangle/integrated.json).
+
+**Next action.** When a non-synthetic owner packet exists, instantiate both
+order contracts in its pinned common norm and prove the required
+source-, cutoff-, lattice-, volume-, phase- and beta-uniform tails.  Until
+then keep T-054 at owner intake and do not repeat physical-empty tests.
 
 <a id="r-473"></a>
 ### R-473 -- HOLD-LC-001 TTE event-row feature index

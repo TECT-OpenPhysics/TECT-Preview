@@ -5,10 +5,11 @@
 
 Authorities: `RESULTS-LEDGER.md`.
 
-**307 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
+**308 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
 
 | ID | Result | Tier/scope |
 |---|---|---|
+| [`R-474`](../RESULTS-LEDGER.md#r-474) | Conditional ordered-limit rectangular-tail bridge | T0 |
 | [`R-473`](../RESULTS-LEDGER.md#r-473) | HOLD-LC-001 TTE event-row feature index | T0 |
 | [`R-472`](../RESULTS-LEDGER.md#r-472) | A2/R-157-R-158 exact-core Lean cross-check | T0 |
 | [`R-471`](../RESULTS-LEDGER.md#r-471) | Fail-closed P1 owner and observation-map admission contract | T0 |
@@ -33,7 +34,6 @@ Authorities: `RESULTS-LEDGER.md`.
 | [`R-452`](../RESULTS-LEDGER.md#r-452) | Conditional history-resolvent recurrence envelope | T0 |
 | [`R-451`](../RESULTS-LEDGER.md#r-451) | Conditional two-sided history recurrence to all-shape exhaustion Cauchy transfer | T0 |
 | [`R-450`](../RESULTS-LEDGER.md#r-450) | Conditional two-orientation state-weighted shell-tail transfer | T0 |
-| [`R-449`](../RESULTS-LEDGER.md#r-449) | Source-owner intake and physical/proof leakage audit | T0 |
 
 Search without loading the full ledger:
 

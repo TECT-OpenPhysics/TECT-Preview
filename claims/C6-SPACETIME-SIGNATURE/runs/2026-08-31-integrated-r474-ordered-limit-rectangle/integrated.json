@@ -1,0 +1,199 @@
+{
+  "assertion_summary": {
+    "passed": 13,
+    "total": 13
+  },
+  "assertions": [
+    {
+      "actual": [
+        "R-474",
+        "EXP-001353",
+        false,
+        "T0"
+      ],
+      "expected": [
+        "R-474",
+        "EXP-001353",
+        false,
+        "T0"
+      ],
+      "name": "manifest identity",
+      "pass": true
+    },
+    {
+      "actual": 0,
+      "expected": 0,
+      "name": "primary exits",
+      "pass": true
+    },
+    {
+      "actual": 0,
+      "expected": 0,
+      "name": "independent exits",
+      "pass": true
+    },
+    {
+      "actual": 0,
+      "expected": 0,
+      "name": "hostile exits",
+      "pass": true
+    },
+    {
+      "actual": {
+        "passed": 40,
+        "total": 40
+      },
+      "expected": "passed=total",
+      "name": "primary assertions pass",
+      "pass": true
+    },
+    {
+      "actual": {
+        "passed": 16,
+        "total": 16
+      },
+      "expected": "passed=total",
+      "name": "independent assertions pass",
+      "pass": true
+    },
+    {
+      "actual": {
+        "rejected": 10,
+        "total": 10
+      },
+      "expected": "rejected=total",
+      "name": "hostile mutations rejected",
+      "pass": true
+    },
+    {
+      "actual": [
+        "bc276f103195183de0ee7cc5074df290b3f50a1286d0c9e375893234b27fb346",
+        "bc276f103195183de0ee7cc5074df290b3f50a1286d0c9e375893234b27fb346"
+      ],
+      "expected": "equal",
+      "name": "independent and hostile fixture fingerprints agree",
+      "pass": true
+    },
+    {
+      "actual": {
+        "pass": true,
+        "returncode": 0,
+        "stderr": "",
+        "stdout": ""
+      },
+      "expected": "exit 0 without errors",
+      "name": "Lean R474 compiles",
+      "pass": true
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "forward rectangle closed",
+      "pass": true
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "reverse rectangle closed",
+      "pass": true
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "ordered limit remains open",
+      "pass": true
+    },
+    {
+      "actual": {
+        "no_new_dynamics": true,
+        "no_new_functional": true,
+        "no_physical_candidate": true,
+        "promotion_firewalls_unchanged": true,
+        "t054_forward_method_unchanged": true,
+        "t059_observation_first_method_unchanged": true,
+        "t061_owner_order_unchanged": true
+      },
+      "expected": "all true",
+      "name": "methods remain unchanged",
+      "pass": true
+    }
+  ],
+  "assumptions": [
+    "The triangle inequality is applied in one already declared common norm.",
+    "The cutoff and volume tails are supplied with strict epsilon/2 bounds before the rectangle is formed.",
+    "The two parameter indices and their order are fixed before any fitting or limit interpretation.",
+    "The finite fixture is an arithmetic self-test of the contract and is not an owner packet or exhaustion surrogate."
+  ],
+  "audit_id": "R474-ORDERED-LIMIT-RECTANGLE-INTEGRATED-v1",
+  "boundary": "R-474 closes only the abstract epsilon bookkeeping needed to turn owner-supplied uniform tails into a rectangular-tail certificate. It does not supply those tails or any source-owned TECT input.",
+  "checkers": {
+    "hostile": {
+      "returncode": 0,
+      "script": "codes/foundations/pre_a_q3lock_ordered_limit_rectangle_hostile.py",
+      "stderr": "",
+      "stdout": "R-474 HOSTILE: PASS (10/10 mutations rejected; fingerprint=bc276f103195183de0ee7cc5074df290b3f50a1286d0c9e375893234b27fb346)"
+    },
+    "independent": {
+      "returncode": 0,
+      "script": "codes/foundations/pre_a_q3lock_ordered_limit_rectangle_independent.py",
+      "stderr": "",
+      "stdout": "R-474 INDEPENDENT: PASS (16/16 assertions; fingerprint=bc276f103195183de0ee7cc5074df290b3f50a1286d0c9e375893234b27fb346)"
+    },
+    "primary": {
+      "returncode": 0,
+      "script": "verification/scripts/pre_a_q3lock_ordered_limit_rectangle.py",
+      "stderr": "",
+      "stdout": "R-474 PRIMARY: PASS (40/40 assertions)"
+    }
+  },
+  "claim_bearing": false,
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "derived": {
+    "common_norm_present": false,
+    "forward_rectangle_closed": true,
+    "ordered_limit_closed": false,
+    "reverse_rectangle_closed": true,
+    "source_owner_present": false
+  },
+  "environment": {
+    "platform": "Windows-11-10.0.26200-SP0",
+    "python": "3.12.9"
+  },
+  "evidence_level": "T0 exact conditional two-order epsilon bridge with independent and hostile checks",
+  "exploration_id": "EXP-001353",
+  "lean": {
+    "pass": true,
+    "returncode": 0,
+    "stderr": "",
+    "stdout": ""
+  },
+  "missing_assumptions": [
+    "A hash-pinned source-owned TECT functional and compatible generator or transfer.",
+    "A common invariant core and norm for all regulated observables.",
+    "Source-authorized cutoff- and volume-uniform bounds, including boundary and phase dependence.",
+    "A proof that the specified A, B and C objects are the same physical observable across regulators.",
+    "An ordered removal rule for cutoff, lattice, volume, exhaustion, phase and beta, plus existence or equivalence-class language.",
+    "Physical-sector projection and an independent holdout observation map."
+  ],
+  "non_claims": [
+    "No source-owned dynamics or production owner is supplied.",
+    "No actual Q3 common core, uniform estimate, thermodynamic limit, continuum limit or common-alpha theorem is proved.",
+    "The synthetic geometric fixture does not represent the TECT field law and cannot close Pre-A, Sector-A, QFT, Yang--Mills, gravity or mass gap.",
+    "The two orders are not inferred to agree merely because both fixture calculations pass."
+  ],
+  "recorded_at": "2026-08-31T15:16:33.353977Z",
+  "result_id": "R-474",
+  "run_kind": "integrated",
+  "schema": "tect/r474-ordered-limit-rectangle-integrated/1.0",
+  "source_hashes": {
+    "hostile": "7e55da470df723d94105c18df7a44ff43f6bfb72b6a41b71b320ffbcf03f5587",
+    "independent": "171756c525408a7fbdff96379cf4c08d91ce7b80c134c35b9a375d576b2422ae",
+    "integrated": "497b2aaa8d39f6f24856c82739f8be4e705fa9dee92723be80e3cb0964156e8b",
+    "lean": "34951e0757c278eea409b149517642ba081d79a77fe029c65a361ffcf62c20e7",
+    "manifest": "e6f5c7883756f6861e1e713e6fea6c71c8780594c28c7955df3ba4eafb949d0a",
+    "primary": "b745dc47e0a73a2efd2a6a042c76b77f13b15b4e18512791694964a695ff23bd"
+  },
+  "task_id": "T-054",
+  "tier": "T0",
+  "verdict": "R474_ORDERED_LIMIT_RECTANGLE_INTEGRATED_PASS"
+}
