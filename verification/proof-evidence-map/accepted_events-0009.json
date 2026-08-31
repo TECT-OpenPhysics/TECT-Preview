@@ -481,6 +481,43 @@
       "unresolved_claim_ids": [
         "A6-CLASSII-FULL-FIELD-BARE-CONCENTRATION"
       ]
+    },
+    {
+      "claim_ids": [
+        "A6-CLASSII-UV-POWER-COUNTING",
+        "A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE"
+      ],
+      "claim_ref_basis": {
+        "A6-CLASSII-UV-POWER-COUNTING": "explicit_claim_ids",
+        "A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE": "explicit_claim_ids"
+      },
+      "claim_refs": [
+        "A6-CLASSII-UV-POWER-COUNTING",
+        "A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE"
+      ],
+      "date": "2026-08-31",
+      "header": "[R-462 active-branch normal form] - 2026-08-31",
+      "id": "20260831-r-462-active-branch-normal-form-2026-08-31",
+      "keywords": [],
+      "linked_result_ids": [
+        "R-462"
+      ],
+      "negative_results": [],
+      "notes": [],
+      "raw": "## [R-462 active-branch normal form] - 2026-08-31\n\nR-462 adds the next local input named by EXP-001336 without changing the established T-054 forward method, T-059/T-061 inverse locks, owner order, or promotion firewalls. On the active branch m=s*n with s>0, n dot n=1 and n dot grad(n)=0, the existing fixed-floor currents become J=d_s*n+s*t and K=delta*n+s*t, where delta=d_s-s*d_rho/(rho+epsilon_rho). Exact rational algebra gives 2 e_II = a*d_s^2+2*b*d_s*delta+c*delta^2+(a+2*b+c)*s^2|t|^2. Positive definiteness gives radial coercivity and a+2*b+c>0. Primary, independent, hostile and Lean R462 checks pass. This is a T0 local identity only; phase/singlet-flat directions, tube probability, entropy, partition control, tightness, floor removal, continuum, physical selection, QFT/Yang--Mills and mass-gap bridges remain open.\n\n",
+      "result_ids": [
+        "R-462"
+      ],
+      "result_link_basis": {
+        "R-462": "explicit_result_id"
+      },
+      "scripts": [
+        "verification/scripts/a6_classii_active_branch_normal_form.py",
+        "verification/scripts/a6_classii_active_branch_normal_form_verify.py",
+        "codes/foundations/a6_classii_active_branch_normal_form_independent.py",
+        "codes/foundations/a6_classii_active_branch_normal_form_hostile.py"
+      ],
+      "unresolved_claim_ids": []
     }
   ],
   "kind": "accepted_events",

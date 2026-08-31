@@ -5,7 +5,7 @@ Compact generated reader surface. The append-only authority is
 record 568 / commit `4db22f4e` and no longer grows.
 Post-cutover full bodies live exactly once in bounded pages under `pages/`.
 
-**810 accepted events** · latest 25 shown below · machine locator: `index.json`
+**811 accepted events** · latest 25 shown below · machine locator: `index.json`
 
 Search the complete authority without loading every page:
 
@@ -17,6 +17,7 @@ python verification/scripts/changelog.py search --text <phrase>
 
 | Date | Event | Claims | Full entry |
 |---|---|---|---|
+| 2026-08-31 | `20260831-r-462-active-branch-normal-form-2026-08-31` — [R-462 active-branch normal form] - 2026-08-31 | A6-CLASSII-UV-POWER-COUNTING, A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE | [bounded page](pages/000769-000818.md#20260831-r-462-active-branch-normal-form-2026-08-31) |
 | 2026-08-31 | `20260831-r-461-fixed-floor-smooth-class-ii-null-branch-d` — [R-461 fixed-floor smooth Class-II null-branch dichotomy] - 2026-08-31 | A6-CLASSII-FULL-FIELD-BARE-CONCENTRATION, A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE | [bounded page](pages/000769-000818.md#20260831-r-461-fixed-floor-smooth-class-ii-null-branch-d) |
 | 2026-08-31 | `20260831-r-460-contents-remaining-scope-owner-audit-2026` — [R-460 contents remaining-scope owner audit] - 2026-08-31 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000769-000818.md#20260831-r-460-contents-remaining-scope-owner-audit-2026) |
 | 2026-08-31 | `20260831-r-459-contents-alt-terminology-owner-audit-2026` — [R-459 contents alt-terminology owner audit] - 2026-08-31 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000769-000818.md#20260831-r-459-contents-alt-terminology-owner-audit-2026) |
@@ -41,7 +42,6 @@ python verification/scripts/changelog.py search --text <phrase>
 | 2026-08-30 | `20260830-p0-r-durable-process-baseline-closed-and-unchan` — [P0-R durable process baseline closed and unchanged-method P1 intake activated] - 2026-08-30 | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION, C6-SPACETIME-SIGNATURE | [bounded page](pages/000769-000818.md#20260830-p0-r-durable-process-baseline-closed-and-unchan) |
 | 2026-08-30 | `20260830-p0-r-pointer-only-research-continuity-and-dual` — [P0-R pointer-only research continuity and dual-lane resume overlay] - 2026-08-30 | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION, C6-SPACETIME-SIGNATURE | [bounded page](pages/000769-000818.md#20260830-p0-r-pointer-only-research-continuity-and-dual) |
 | 2026-08-30 | `20260830-t-059-observation-first-inverse-lane-and-tempor` — [T-059 observation-first inverse lane and temporal provenance repair] - 2026-08-30 | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION, C6-SPACETIME-SIGNATURE | [bounded page](pages/000769-000818.md#20260830-t-059-observation-first-inverse-lane-and-tempor) |
-| 2026-08-30 | `20260830-r-444-exponential-shell-tail-majorant-2026-08-3` — [R-444 exponential shell-tail majorant] - 2026-08-30 | C6-SPACETIME-SIGNATURE, EXP-001289, R-444 | [bounded page](pages/000769-000818.md#20260830-r-444-exponential-shell-tail-majorant-2026-08-3) |
 
 ## Post-cutover pages
 
@@ -49,7 +49,7 @@ Each full event body after the cutover occurs in exactly one page.
 
 | Ordinals | Events | Page |
 |---|---:|---|
-| 769–810 | 42 | [000769-000818.md](pages/000769-000818.md) |
+| 769–811 | 43 | [000769-000818.md](pages/000769-000818.md) |
 | 719–768 | 50 | [000719-000768.md](pages/000719-000768.md) |
 | 669–718 | 50 | [000669-000718.md](pages/000669-000718.md) |
 | 619–668 | 50 | [000619-000668.md](pages/000619-000668.md) |

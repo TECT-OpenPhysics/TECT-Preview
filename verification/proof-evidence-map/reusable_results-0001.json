@@ -2,6 +2,39 @@
   "data": [
     {
       "accepted_event_ids": [
+        "20260831-r-462-active-branch-normal-form-2026-08-31"
+      ],
+      "anchor": "r-462",
+      "claim_ref_basis": {
+        "A6-CLASSII-UV-POWER-COUNTING": "proof_anchor_exact"
+      },
+      "claim_refs": [
+        "A6-CLASSII-UV-POWER-COUNTING"
+      ],
+      "co_recorded_negative_tags": [],
+      "detail": {
+        "boundary": "This identity supplies a branch-aware normal coordinate for the next A6 tube/entropy step. It does not estimate Gibbs probabilities or entropy, control the spatially correlated partition function, prove tightness, remove the floor, take a continuum or thermodynamic limit, select a physical branch, admit a Q3LOCK source owner, or close A6, A7, Pre-A, Sector A, QFT, Yang--Mills, gravity or mass gap. The established T-054 forward method, T-059/T-061 inverse method, owner order and promotion firewalls are unchanged.",
+        "evidence": "The hash-pinned A1 coefficients are used with exact rational arithmetic. The primary audit checks six rational frames, active amplitudes, singlet densities, spatial jets, tangent coordinates, radial positivity and null/non-null controls (46 recorded assertions and 27,000 decomposition checks). A non-importing independent implementation passes 209 assertions; eight hostile mutations are rejected; the integrated verifier passes 44/44 and compiles `verification/lean/Tect/R462.lean`.",
+        "next_action": "Use the radial/angular split to define branch-specific tube metrics and test their entropy budget under the unchanged finite-cutoff Gibbs law; retain pure-singlet flat directions as a separate obligation.",
+        "proven_in": "[R-462 certificate](strategy/a6-classii-active-branch-normal-form-certificate-260831.md), [machine manifest](strategy/a6-classii-active-branch-normal-form-manifest.json), [primary script](verification/scripts/a6_classii_active_branch_normal_form.py), [independent script](codes/foundations/a6_classii_active_branch_normal_form_independent.py), [hostile script](codes/foundations/a6_classii_active_branch_normal_form_hostile.py), [integrated verifier](verification/scripts/a6_classii_active_branch_normal_form_verify.py), [integrated run](claims/A6-CLASSII-UV-POWER-COUNTING/runs/2026-08-31-integrated-a6-active-branch-normal-form/integrated.json), [Lean kernel](verification/lean/Tect/R462.lean), and [exploration record](strategy/a6-classii-active-branch-normal-form-exploration.json).",
+        "result_id": "`A6-CLASSII-ACTIVE-BRANCH-NORMAL-FORM-v1` (R-462).",
+        "version_and_exact_scope": "R-462 v1.0 is a T0, claim-nonbearing additive local lemma for the existing A6/A7 fixed-floor Class-II functional. At an active point, write the Bloch vector as `m=s*n`, with `s>0`, `n dot n=1`, and let `t=grad(n)` satisfy `n dot t=0`. For `d_s=grad(s)`, `d_rho=grad(rho)`, `D=rho+epsilon_rho`, and `delta=d_s-s*d_rho/D`, the unchanged currents are `J=d_s*n+s*t` and `K=delta*n+s*t`. Exact algebra gives ```text 2 e_II = a*d_s^2 + 2*b*d_s*delta + c*delta^2 + (a+2*b+c)*s^2*(t dot t). ``` The radial form is positive definite, and `a+2*b+c=((a+b)^2+(a*c-b^2))/a>0`. Thus a zero active local jet has `t=0`, `d_s=0`, and `d_rho=0`; common phases and singlet directions are not controlled by this current."
+      },
+      "detail_title": "Fixed-floor active-branch normal-form coercivity",
+      "family_refs": [],
+      "id": "R-462",
+      "normalized_detail": {
+        "boundary": "This identity supplies a branch-aware normal coordinate for the next A6 tube/entropy step. It does not estimate Gibbs probabilities or entropy, control the spatially correlated partition function, prove tightness, remove the floor, take a continuum or thermodynamic limit, select a physical branch, admit a Q3LOCK source owner, or close A6, A7, Pre-A, Sector A, QFT, Yang--Mills, gravity or mass gap. The established T-054 forward method, T-059/T-061 inverse method, owner order and promotion firewalls are unchanged.",
+        "proof_anchor": "[R-462 certificate](strategy/a6-classii-active-branch-normal-form-certificate-260831.md), [machine manifest](strategy/a6-classii-active-branch-normal-form-manifest.json), [primary script](verification/scripts/a6_classii_active_branch_normal_form.py), [independent script](codes/foundations/a6_classii_active_branch_normal_form_independent.py), [hostile script](codes/foundations/a6_classii_active_branch_normal_form_hostile.py), [integrated verifier](verification/scripts/a6_classii_active_branch_normal_form_verify.py), [integrated run](claims/A6-CLASSII-UV-POWER-COUNTING/runs/2026-08-31-integrated-a6-active-branch-normal-form/integrated.json), [Lean kernel](verification/lean/Tect/R462.lean), and [exploration record](strategy/a6-classii-active-branch-normal-form-exploration.json).",
+        "publication_target": "",
+        "reuse": "",
+        "statement": ""
+      },
+      "summary": "R-462 v1.0 is a T0 claim-nonbearing additive A6/A7 local jet lemma under the unchanged fixed-floor Class-II functional. On an active Bloch branch `m=s*n` with `s>0` and `n dot t=0`, the exact identity `2 e_II = a*d_s^2+2b*d_s*delta+c*delta^2+(a+2b+c)*s^2|t|^2` separates radial and angular normal directions; primary 46/46, independent 209/209, hostile 8/8, integrated 44/44 and Lean R462 pass. Phase/singlet-flat directions, tube/entropy, partition, tightness, continuum, physical, QFT, Yang--Mills and mass-gap conclusions remain open; existing methods and owner order are unchanged",
+      "title": "Fixed-floor active-branch normal-form coercivity"
+    },
+    {
+      "accepted_event_ids": [
         "20260831-r-461-fixed-floor-smooth-class-ii-null-branch-d"
       ],
       "anchor": "r-461",
@@ -3240,39 +3273,6 @@
       },
       "summary": "R-363 v1.0 is a T0 claim-nonbearing finite exact reduction under EXP-001205. Coordinate pinching removes the bond-invisible diagonal part of a centered doubled collision witness, and a two-sided state-weighted Cauchy bound controls the remaining commutator with constant one. The required source/cutoff/volume/prefix/shape-uniform collar, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open",
       "title": "Finite pinching reduction and state-weighted shell commutator"
-    },
-    {
-      "accepted_event_ids": [
-        "20260827-r-362-finite-local-q2-positive-replica-folding",
-        "20260827-r-366-finite-fractional-liouvillian-square-func"
-      ],
-      "anchor": "r-362",
-      "claim_ref_basis": {
-        "C6-SPACETIME-SIGNATURE": "proof_anchor_exact"
-      },
-      "claim_refs": [
-        "C6-SPACETIME-SIGNATURE"
-      ],
-      "co_recorded_negative_tags": [],
-      "detail": {
-        "boundary": "R-362 closes only FI-2a, positive finite operator folding. It does not construct a positive Euclidean path measure, bound the evolved witness on a local collar, prove phase-weight preservation or influence contraction, remove cutoff/volume/history dependence, construct a common core or common alpha, identify OS/KMS/GNS dynamics or a gap, remove the continuum regulator, or close C6, Sector-A, or Pre-A. No R-362 PDF is issued.",
-        "proven_in": "[certificate](strategy/pre-a-cp1-st8-q3lock-local-q2-replica-folding-certificate-260827.md), [host note](claims/C6-SPACETIME-SIGNATURE/notes/q3lock-local-q2-replica-folding-boundary-260827.md), [manifest](strategy/pre-a-cp1-st8-q3lock-local-q2-replica-folding-manifest.json), [primary](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_replica_folding.py), [independent](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_replica_folding_independent.py), [integrated verifier](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_replica_folding_verify.py), [Lean R362](verification/lean/Tect/R362.lean), and the saved C6 run artefacts.",
-        "result_id": "R-362 is a T0, claim-nonbearing exact finite reduction under EXP-001204.",
-        "statement": "For a faithful finite-dimensional reference state `rho`, an output state `sigma`, and a finite local PVM `{E_j}`, let `p_j=Tr(E_j rho)>0`, `q_j=Tr(E_j sigma)`, and `K=sum_j p_j^(-1) E_j tensor E_j`. Then `K>=0` and ```text Q2(q||p)=sum_j q_j^2/p_j=Tr[K(sigma tensor sigma)]. ``` If `sigma=UW rho W*U*`, cyclicity gives the corresponding exact two-copy Heisenberg expectation in `rho tensor rho`. The folding constant is exactly one; no dimension, volume, history-length, or path-count prefactor is created. For common nonnegative two-phase weights, the pointwise convexity gap is the nonnegative square ```text w1*w2*(p2*q1-p1*q2)^2/[p1*p2*(w1*p1+w2*p2)]. ``` An outermost coordinate-diagonal unitary peels exactly. It does not follow that every bond inside an onsite-interspersed history disappears: the actual Q3 finite fixture has a strictly nonzero bond commutator with the onsite-conjugated doubled witness.",
-        "verification": "The actual V=2 Q3 primary lane passes 2069/2069 assertions over 512 history contexts and 1024 local rows; a non-importing independent reconstruction passes 2067/2067; the integrated source/hash/matrix comparison passes 48/48 with maximum compared-field difference `1.554e-15`; Lean R362 proves the finite-sum collision identity, reference normalization, exact two-phase gap, convexity, and equality-constant-one fixture."
-      },
-      "detail_title": "Finite local-Q2 positive replica folding and mixture convexity",
-      "family_refs": [],
-      "id": "R-362",
-      "normalized_detail": {
-        "boundary": "R-362 closes only FI-2a, positive finite operator folding. It does not construct a positive Euclidean path measure, bound the evolved witness on a local collar, prove phase-weight preservation or influence contraction, remove cutoff/volume/history dependence, construct a common core or common alpha, identify OS/KMS/GNS dynamics or a gap, remove the continuum regulator, or close C6, Sector-A, or Pre-A. No R-362 PDF is issued.",
-        "proof_anchor": "[certificate](strategy/pre-a-cp1-st8-q3lock-local-q2-replica-folding-certificate-260827.md), [host note](claims/C6-SPACETIME-SIGNATURE/notes/q3lock-local-q2-replica-folding-boundary-260827.md), [manifest](strategy/pre-a-cp1-st8-q3lock-local-q2-replica-folding-manifest.json), [primary](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_replica_folding.py), [independent](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_replica_folding_independent.py), [integrated verifier](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_replica_folding_verify.py), [Lean R362](verification/lean/Tect/R362.lean), and the saved C6 run artefacts.",
-        "publication_target": "",
-        "reuse": "",
-        "statement": "For a faithful finite-dimensional reference state `rho`, an output state `sigma`, and a finite local PVM `{E_j}`, let `p_j=Tr(E_j rho)>0`, `q_j=Tr(E_j sigma)`, and `K=sum_j p_j^(-1) E_j tensor E_j`. Then `K>=0` and ```text Q2(q||p)=sum_j q_j^2/p_j=Tr[K(sigma tensor sigma)]. ``` If `sigma=UW rho W*U*`, cyclicity gives the corresponding exact two-copy Heisenberg expectation in `rho tensor rho`. The folding constant is exactly one; no dimension, volume, history-length, or path-count prefactor is created. For common nonnegative two-phase weights, the pointwise convexity gap is the nonnegative square ```text w1*w2*(p2*q1-p1*q2)^2/[p1*p2*(w1*p1+w2*p2)]. ``` An outermost coordinate-diagonal unitary peels exactly. It does not follow that every bond inside an onsite-interspersed history disappears: the actual Q3 finite fixture has a strictly nonzero bond commutator with the onsite-conjugated doubled witness."
-      },
-      "summary": "R-362 v1.0 is a T0 claim-nonbearing exact finite reduction under EXP-001204. For every faithful finite reference and local PVM, measured Q2 is the expectation of the positive collision witness `sum_j p_j^(-1) E_j tensor E_j` in two output replicas, with equality constant one; common-weight phase mixtures obey an exact nonnegative square gap and outermost coordinate-diagonal layers peel. The evolved-witness collar estimate, phase weights, all uniformities, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open",
-      "title": "Finite local-Q2 positive replica folding and common-weight mixture convexity"
     }
   ],
   "kind": "reusable_results",

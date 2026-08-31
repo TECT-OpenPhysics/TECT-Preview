@@ -2,6 +2,39 @@
   "data": [
     {
       "accepted_event_ids": [
+        "20260827-r-362-finite-local-q2-positive-replica-folding",
+        "20260827-r-366-finite-fractional-liouvillian-square-func"
+      ],
+      "anchor": "r-362",
+      "claim_ref_basis": {
+        "C6-SPACETIME-SIGNATURE": "proof_anchor_exact"
+      },
+      "claim_refs": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "co_recorded_negative_tags": [],
+      "detail": {
+        "boundary": "R-362 closes only FI-2a, positive finite operator folding. It does not construct a positive Euclidean path measure, bound the evolved witness on a local collar, prove phase-weight preservation or influence contraction, remove cutoff/volume/history dependence, construct a common core or common alpha, identify OS/KMS/GNS dynamics or a gap, remove the continuum regulator, or close C6, Sector-A, or Pre-A. No R-362 PDF is issued.",
+        "proven_in": "[certificate](strategy/pre-a-cp1-st8-q3lock-local-q2-replica-folding-certificate-260827.md), [host note](claims/C6-SPACETIME-SIGNATURE/notes/q3lock-local-q2-replica-folding-boundary-260827.md), [manifest](strategy/pre-a-cp1-st8-q3lock-local-q2-replica-folding-manifest.json), [primary](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_replica_folding.py), [independent](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_replica_folding_independent.py), [integrated verifier](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_replica_folding_verify.py), [Lean R362](verification/lean/Tect/R362.lean), and the saved C6 run artefacts.",
+        "result_id": "R-362 is a T0, claim-nonbearing exact finite reduction under EXP-001204.",
+        "statement": "For a faithful finite-dimensional reference state `rho`, an output state `sigma`, and a finite local PVM `{E_j}`, let `p_j=Tr(E_j rho)>0`, `q_j=Tr(E_j sigma)`, and `K=sum_j p_j^(-1) E_j tensor E_j`. Then `K>=0` and ```text Q2(q||p)=sum_j q_j^2/p_j=Tr[K(sigma tensor sigma)]. ``` If `sigma=UW rho W*U*`, cyclicity gives the corresponding exact two-copy Heisenberg expectation in `rho tensor rho`. The folding constant is exactly one; no dimension, volume, history-length, or path-count prefactor is created. For common nonnegative two-phase weights, the pointwise convexity gap is the nonnegative square ```text w1*w2*(p2*q1-p1*q2)^2/[p1*p2*(w1*p1+w2*p2)]. ``` An outermost coordinate-diagonal unitary peels exactly. It does not follow that every bond inside an onsite-interspersed history disappears: the actual Q3 finite fixture has a strictly nonzero bond commutator with the onsite-conjugated doubled witness.",
+        "verification": "The actual V=2 Q3 primary lane passes 2069/2069 assertions over 512 history contexts and 1024 local rows; a non-importing independent reconstruction passes 2067/2067; the integrated source/hash/matrix comparison passes 48/48 with maximum compared-field difference `1.554e-15`; Lean R362 proves the finite-sum collision identity, reference normalization, exact two-phase gap, convexity, and equality-constant-one fixture."
+      },
+      "detail_title": "Finite local-Q2 positive replica folding and mixture convexity",
+      "family_refs": [],
+      "id": "R-362",
+      "normalized_detail": {
+        "boundary": "R-362 closes only FI-2a, positive finite operator folding. It does not construct a positive Euclidean path measure, bound the evolved witness on a local collar, prove phase-weight preservation or influence contraction, remove cutoff/volume/history dependence, construct a common core or common alpha, identify OS/KMS/GNS dynamics or a gap, remove the continuum regulator, or close C6, Sector-A, or Pre-A. No R-362 PDF is issued.",
+        "proof_anchor": "[certificate](strategy/pre-a-cp1-st8-q3lock-local-q2-replica-folding-certificate-260827.md), [host note](claims/C6-SPACETIME-SIGNATURE/notes/q3lock-local-q2-replica-folding-boundary-260827.md), [manifest](strategy/pre-a-cp1-st8-q3lock-local-q2-replica-folding-manifest.json), [primary](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_replica_folding.py), [independent](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_replica_folding_independent.py), [integrated verifier](codes/foundations/pre_a_cp1_st8_q3lock_local_q2_replica_folding_verify.py), [Lean R362](verification/lean/Tect/R362.lean), and the saved C6 run artefacts.",
+        "publication_target": "",
+        "reuse": "",
+        "statement": "For a faithful finite-dimensional reference state `rho`, an output state `sigma`, and a finite local PVM `{E_j}`, let `p_j=Tr(E_j rho)>0`, `q_j=Tr(E_j sigma)`, and `K=sum_j p_j^(-1) E_j tensor E_j`. Then `K>=0` and ```text Q2(q||p)=sum_j q_j^2/p_j=Tr[K(sigma tensor sigma)]. ``` If `sigma=UW rho W*U*`, cyclicity gives the corresponding exact two-copy Heisenberg expectation in `rho tensor rho`. The folding constant is exactly one; no dimension, volume, history-length, or path-count prefactor is created. For common nonnegative two-phase weights, the pointwise convexity gap is the nonnegative square ```text w1*w2*(p2*q1-p1*q2)^2/[p1*p2*(w1*p1+w2*p2)]. ``` An outermost coordinate-diagonal unitary peels exactly. It does not follow that every bond inside an onsite-interspersed history disappears: the actual Q3 finite fixture has a strictly nonzero bond commutator with the onsite-conjugated doubled witness."
+      },
+      "summary": "R-362 v1.0 is a T0 claim-nonbearing exact finite reduction under EXP-001204. For every faithful finite reference and local PVM, measured Q2 is the expectation of the positive collision witness `sum_j p_j^(-1) E_j tensor E_j` in two output replicas, with equality constant one; common-weight phase mixtures obey an exact nonnegative square gap and outermost coordinate-diagonal layers peel. The evolved-witness collar estimate, phase weights, all uniformities, common alpha, OS/KMS/GNS, gap, continuum, C6, Sector-A and Pre-A remain open",
+      "title": "Finite local-Q2 positive replica folding and common-weight mixture convexity"
+    },
+    {
+      "accepted_event_ids": [
         "20260822-r-195-spatial-constant-field-lift-of-a6-running"
       ],
       "anchor": "r-195",
@@ -3865,41 +3898,6 @@
       },
       "summary": "Scoped T4 analytic/exact/executed reduction: complete heat-lifted Gram rows obey a backward-heat martingale identity, so all predictable rational baselines telescope in signed expectation after the necessary diagonal heat correction. The terminal endpoint plus one allocated matrix payment has an exact theta-zero Schur completion. Conditioning on the complete control and terminal Gram coefficient reduces its signed part to `C_post=J_B+E[B:(V_B-Gamma)]=D_R+|r|^2`, with `J_B>=0`; predictable Wick rows also terminalize into one aggregate coefficient and cross-Doob ledger without differentiating adapted selectors. Exact Rademacher, Gaussian-forest, repeated-H2, and moving-perspective fixtures refute automatic bracket positivity and predictability-only root-uniform aggregate control, but are not production torus counterexamples. The next target is one production-weighted full-frame posterior-covariance lower form retaining every owner once. Cartan one-use (4.11), rational (6.5), complete `H_N`, REG, `OVERLAP_src`, Nelson, a measure, and Sector A remain open",
       "title": "Full-frame terminalization and posterior-covariance bracket boundary"
-    },
-    {
-      "accepted_event_ids": [
-        "20260727-r-096-gram-first-predictable-baseline-support-c",
-        "20260728-r-103-closes-complete-regular-h-n-and-reg-by-ex"
-      ],
-      "anchor": "r-096",
-      "claim_ref_basis": {},
-      "claim_refs": [],
-      "co_recorded_negative_tags": [
-        "NG-2026-07-27-A13-LOW-HERMITE-STEIN-DERIVATIVE-CLOSURE",
-        "NG-2026-07-27-A13-PREDICTABLE-BASELINE-SUPPORT-IMPLIES-PAYABILITY"
-      ],
-      "detail": {
-        "boundary": "R-096 does not prove the adapted-prefix payable sum, a positive Hermite root/spatial gain, a Malliavin derivative estimate for adapted controls, the complete coefficient-unconditioned `H_N`, REG, progressive/revisit `H_A`, `OVERLAP_src`, Nelson, cutoff or floor removal, an interacting measure, Sector-A closure, or a higher tier.",
-        "complete_packet_ordering": "The exact R-079 rational row is the sum of the five unshifted R-085 families, R-086 payable terms, coefficient-dominant `T_Q^>+T_G^>`, and the retained endpoint coefficient square. Its Wick trace and R-063 forest are internal owners. R-077 fresh-root cancellation applies only to the complete Wick/trace/forest endpoint packet, so it must precede rational or Hermite projection. A factorwise Doob product rule is false: the exact conditional-covariance increment is indispensable, with unit error on one Rademacher root if omitted.",
-        "evidence": "Proof note `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-low-hermite-wick-predictable-baseline-reduction-260727-v1.0.tex.txt` and its paired PDF; primary and standard-library non-importing independent executables plus a hash-pinned integrated verifier and JSON artefacts under the A13 runs tree.",
-        "low_hermite_theorem": "For `G=mu+g`, conditionally Gaussian `g~N(0,Sigma)`, and arbitrary same-root symmetric coefficient `B`, the raw contraction `E[B:(G tensor G-Gamma)]` is exactly the sum of the rank-zero pairing with `mu mu^T-Gamma_-`, the rank-one pairing with `mu g^T+g mu^T`, and the rank-two pairing with `g g^T-Sigma`; every coordinate rank at least three vanishes. The identity tensorizes root by root without differentiating adapted coefficients. In the centered case raw Wick sees rank two, while the coefficient mean `q` and transformed mean `r` see rank one of different coefficients. The full endpoint square restores the `r` debt; the raw R-063 forest does not cancel either mean.",
-        "method_boundary_and_successor": "Hermite projection is unweighted and leaves a normalized spatial carrier `sqrt(2)cos(Nx)` unchanged at every frequency. Gaussian integration by parts of `C(xi,A(xi))` produces `A'`, `A''`, and mixed derivatives not controlled by the accepted Doob square. The bounded family `-tanh(L xi)` keeps an order-one negative optimized bracket while same-root derivative energy grows linearly. Thus support collapse and low-chaos compression do not prove payment. The precise successor is one cutoff-uniform global lower form for the adapted-base five-family and payable shifted terms plus retained squares and all non-rational owners, using one `X/Y` allocation.",
-        "predictable_baseline_support_theorem": "After complete cancellation, the `k`th predictable baseline has rough partners `G_k` and `G_k tensor G_k-Gamma_(k-1)` supported below shell `k+C_supp`, while its single-shell payload has largest-input label `r=k`. Resonance `|m-n|<=L_res` is therefore incompatible with coefficient dominance `m>k+L_gap` whenever `L_gap>C_supp+L_res`. Hence the genuine `T_(Q,k)^>,T_(G,k)^>` sets are empty; the historical single-width convention leaves only a fixed collar reassigned to the payable branch. The nonlinear coefficient itself need not be band limited.",
-        "result_id": "`A13-CLASSII-LOW-HERMITE-WICK-PREDICTABLE-BASELINE-REDUCTION`.",
-        "tier": "T4 scoped analytic/exact/executed reduction and method boundary. No tier promotion."
-      },
-      "detail_title": "Gram-first predictable-baseline support collapse and low-Hermite Wick boundary",
-      "family_refs": [],
-      "id": "R-096",
-      "normalized_detail": {
-        "boundary": "R-096 does not prove the adapted-prefix payable sum, a positive Hermite root/spatial gain, a Malliavin derivative estimate for adapted controls, the complete coefficient-unconditioned `H_N`, REG, progressive/revisit `H_A`, `OVERLAP_src`, Nelson, cutoff or floor removal, an interacting measure, Sector-A closure, or a higher tier.",
-        "proof_anchor": "",
-        "publication_target": "",
-        "reuse": "",
-        "statement": ""
-      },
-      "summary": "Scoped T4 analytic/exact/executed reduction: complete R-077 fresh-root cancellation must precede rational projection. On each resulting regular strict-past no-revisit predictable baseline, the R-086 rough partners are supported below `k+C_supp`, so after a fixed widened payable collar the genuine coefficient-dominant `T_Q^>,T_G^>` regions are empty. The remaining problem is the once-only global payment at the moving adapted base `X_(k-1)+A^(k-1)`, not terminal large-gap resonance. Independently, an arbitrary same-root raw quadratic Wick contraction sees only coordinate Hermite ranks zero through two; centered raw Wick, coefficient mean `q`, and transformed mean `r` occupy distinct rank-two/rank-one owners. Hermite compression creates no spatial gain, and direct Stein differentiation exposes uncontrolled adapted-selector derivatives. The next target is one global adapted-prefix payable form with all heat, low, trace, forest, and non-rational owners retained once. Complete `H_N`, REG, `OVERLAP_src`, Nelson, a measure, and Sector A remain open",
-      "title": "Gram-first predictable-baseline support collapse and low-Hermite Wick boundary"
     }
   ],
   "kind": "reusable_results",

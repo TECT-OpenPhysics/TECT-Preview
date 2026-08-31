@@ -1,0 +1,73 @@
+{
+  "assertion_summary": {
+    "passed": 8,
+    "total": 8
+  },
+  "assertions": [
+    {
+      "actual": "-999999999999/3000000000001",
+      "expected": "floor-subtracted delta",
+      "name": "wrong delta sign",
+      "pass": true
+    },
+    {
+      "actual": "42375000000/4000000000001",
+      "expected": "a+c",
+      "name": "omit radial cross coefficient",
+      "pass": true
+    },
+    {
+      "actual": "-999999999999/3000000000001",
+      "expected": "1",
+      "name": "drop q grad rho",
+      "pass": true
+    },
+    {
+      "actual": "-999999999999/3000000000001",
+      "expected": "-1/3",
+      "name": "use rho without fixed floor",
+      "pass": true
+    },
+    {
+      "actual": "42375000000/4000000000001",
+      "expected": "would be zero under mutation",
+      "name": "constant rho implies null",
+      "pass": true
+    },
+    {
+      "actual": "(Fraction(1, 1), Fraction(3892875000002900250000000550875000000, 36000000000033000000000010000000000001), Fraction(3177375000002153250000000381375000000, 36000000000033000000000010000000000001))",
+      "expected": "orthogonal frame required",
+      "name": "non-tangent frame",
+      "pass": true
+    },
+    {
+      "actual": "(Fraction(0, 1), Fraction(1, 1), Fraction(-1, 1))",
+      "expected": "positive determinant required",
+      "name": "semidefinite determinant witness",
+      "pass": true
+    },
+    {
+      "actual": "{'active_normal_form_proved': True, 'full_null_set_replaced': False, 'tube_probability_closed': False, 'entropy_closed': False, 'partition_control_closed': False, 'tightness_closed': False, 'floor_removal_closed': False, 'continuum_closed': False, 'physical_branch_selected': False, 'source_owner_admitted': False, 'pre_a_closed': False, 'sector_a_closed': False, 'qft_identity_closed': False, 'yang_mills_identity_closed': False, 'mass_gap_closed': False, 'no_tier_change': True, 'no_pdf': True}",
+      "expected": "tube_probability_closed=false and T0",
+      "name": "premature tube promotion",
+      "pass": true
+    }
+  ],
+  "audit_id": "A6-CLASSII-ACTIVE-BRANCH-NORMAL-FORM-v1",
+  "evidence_level": "Hostile route rejection for the T0 local normal-form package",
+  "exploration_id": "EXP-001337",
+  "non_claims": [
+    "This result does not give a Gibbs tube probability or entropy bound.",
+    "It does not control phase or singlet-flat directions and does not classify the full finite-cutoff measure.",
+    "It does not prove partition convergence, tightness, floor removal, continuum, or physical branch selection.",
+    "It does not close A6/A7, Pre-A, Sector A, QFT, Yang--Mills, gravity, or mass gap.",
+    "The established A6/A7 functional, T-054 forward method, T-059/T-061 inverse method, owner order, and promotion firewalls are unchanged."
+  ],
+  "recorded_at": "2026-08-31T00:58:54.031701Z",
+  "result_id": "R-462",
+  "run_kind": "hostile",
+  "schema": "tect/a6-classii-active-branch-normal-form-hostile-result/1.0",
+  "script_version": "1.0.0",
+  "source_manifest_sha256": "4582390b067687a3cab34074a9d7b8b78eb2dc3663c13190949500922ee79dde",
+  "verdict": "HOSTILE_MUTATIONS_REJECTED"
+}

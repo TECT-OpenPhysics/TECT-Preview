@@ -1,0 +1,340 @@
+{
+  "assertion_summary": {
+    "hostile": 8,
+    "independent": 209,
+    "passed": 44,
+    "primary": 46,
+    "total": 44
+  },
+  "assertions": [
+    {
+      "actual": "A6-CLASSII-ACTIVE-BRANCH-NORMAL-FORM-v1",
+      "expected": "A6-CLASSII-ACTIVE-BRANCH-NORMAL-FORM-v1",
+      "name": "manifest identity",
+      "pass": true
+    },
+    {
+      "actual": "R-462",
+      "expected": "R-462",
+      "name": "result identity",
+      "pass": true
+    },
+    {
+      "actual": "('T0', False)",
+      "expected": "('T0', False)",
+      "name": "T0 claim firewall",
+      "pass": true
+    },
+    {
+      "actual": "{'a6_a7_functional_unchanged': True, 'fixed_floor_and_common_even_scope': True, 't054_forward_method_unchanged': True, 'observation_first_inverse_additive': True, 'owner_order_unchanged': True, 'no_conditional_mean_substitution': True, 'no_physical_empty_substitution': True, 'no_tier_change': True}",
+      "expected": "True",
+      "name": "functional method preserved",
+      "pass": true
+    },
+    {
+      "actual": "{'a6_a7_functional_unchanged': True, 'fixed_floor_and_common_even_scope': True, 't054_forward_method_unchanged': True, 'observation_first_inverse_additive': True, 'owner_order_unchanged': True, 'no_conditional_mean_substitution': True, 'no_physical_empty_substitution': True, 'no_tier_change': True}",
+      "expected": "True",
+      "name": "owner order preserved",
+      "pass": true
+    },
+    {
+      "actual": "{'schema': 'tect/a6-classii-active-branch-normal-form/1.0', 'audit_id': 'A6-CLASSII-ACTIVE-BRANCH-NORMAL-FORM-v1', 'result_id': 'R-462', 'exploration_id': 'EXP-001337', 'task_id': 'T-054', 'claim_ids': ['A6-CLASSII-UV-POWER-COUNTING', 'A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE'], 'title': 'Fixed-floor active-branch normal-form coercivity', 'tier': 'T0', 'claim_bearing': False, 'status': 'ACTIVE_BRANCH_NORMAL_FORM_AUDITED_NOT_TUBE_OR_ENTROPY_CLOSURE', 'question': 'For the already fixed positive Class-II coefficient matrix, can the active constant-Bloch branch be written exactly as orthogonal angular and radial jet energies before a tube or entropy estimate?', 'purpose': 'Add the local normal-coordinate identity required by the existing A6 branch-aware concentration programme. The result preserves the A6/A7 functional, the T-054 owner order, and the T-059/T-061 inverse lane; it supplies no probability, partition, tightness, or limit theorem.', 'inputs': {'a1_production_functional_manifest': {'path': 'claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/production_functional_manifest.json', 'sha256': '88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565'}, 'a6_uv_manifest': {'path': 'claims/A6-CLASSII-UV-POWER-COUNTING/classii_uv_power_counting_manifest.json', 'sha256': '2fb1bbc997a3e832bd1c16748eb6a2b9ccb2844280fdaa9029289dc860ea0cd9'}, 'a7_composite_manifest': {'path': 'claims/A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE/classii_renormalised_energy_manifest.json', 'sha256': '4e14817d1928d54fa15e5871e506870d51c0b49baee5407c24200b2a726c5607'}}, 'methods_preserved': {'a6_a7_functional_unchanged': True, 'fixed_floor_and_common_even_scope': True, 't054_forward_method_unchanged': True, 'observation_first_inverse_additive': True, 'owner_order_unchanged': True, 'no_conditional_mean_substitution': True, 'no_physical_empty_substitution': True, 'no_tier_change': True}, 'exact_scope': {'domain': 'one spatial jet on a connected C1 domain; intended application is the active branch of the periodic three-torus', 'field': 'active first doublet z with s=|z|^2>0 and rho=|Psi|^2', 'bloch_coordinates': 'm=s n with n dot n=1; t=grad n and n dot t=0', 'jets': 'd_s=grad s, d_rho=grad rho, D=rho+epsilon_rho, delta=d_s-s*d_rho/D', 'currents': 'J=d_s n+s t and K=delta n+s t', 'energy': 'e_II=(1/2)[a|J|^2+2b J dot K+c|K|^2]', 'coefficients': 'a>0 and a*c-b^2>0, derived from the hash-pinned A1 production manifest', 'limit_order': 'none; exact local active-branch jet identity only', 'quantum_status': 'no Gibbs, partition, entropy, tightness, operator-domain, continuum, or thermodynamic statement'}, 'theorem': {'normal_form': 'e_II=(1/2){a*d_s^2+2b*d_s*delta+c*delta^2+(a+2b+c)*s^2|t|^2}', 'radial_coercivity': 'The radial form is positive definite in (d_s,delta).', 'angular_coercivity': 'a+2b+c=((a+b)^2+(a*c-b^2))/a>0, so the angular jet is coercive whenever s>0.', 'null_jet': 'At an active point, zero local Class-II density forces t=0, d_s=0, and d_rho=0; the last implication uses s>0 and D>0.', 'branch_role': 'The identity separates the active-branch normal directions from common doublet/singlet phase directions, which remain uncontrolled by this current alone.'}, 'proof_skeleton': ['Substitute m=s*n, grad(m)=d_s*n+s*t and q*grad(rho)=s*d_rho*n/(rho+epsilon) into J and K.', 'Use n dot n=1 and n dot t=0 to remove all radial-angular cross terms.', 'Complete the radial positive form and derive positivity of the angular coefficient from a>0 and a*c-b^2>0.', 'Use s>0 and rho+epsilon>0 to recover d_rho=0 from d_s=delta=0.', 'Keep phase and singlet directions outside the coercive conclusion; they are the next tube/entropy input, not a hidden closure.'], 'assumptions': ['The A6/A7 Pauli current definitions and fixed positive rho floor are controlling.', 'The coefficient matrix is positive definite and its entries are derived from the A1 manifest rather than inserted.', 'The active branch has s>0 and admits a C1 Bloch frame with n dot n=1 and n dot grad(n)=0.', 'The spatial derivative is evaluated one coordinate at a time; the three coordinates are summed only after the local identity.', 'Lean checks the exact rational algebraic identity; the frame, differentiability, and branch-geometric assumptions remain explicit.'], 'missing_assumptions': ['A cutoff-uniform tube probability for active and pure-singlet branches under the spatially correlated Gibbs law.', 'Entropy accounting for the growing phase and singlet-flat directions.', 'Partition-function control, tightness, subsequential bare-measure classification, and regulator removal.', 'A renormalisation prescription, source-owned Q3LOCK dynamics, common alpha, QFT correspondence, Yang--Mills identity, or mass-gap bridge.'], 'adversarial_review': [{'axis': 'radial-angular-cross-term', 'check': 'Could a non-tangent frame leave a hidden cross term and fake coercivity?', 'disposition': 'REJECTED: the identity is asserted only with n dot t=0; a hostile non-tangent fixture is required to fail.'}, {'axis': 'floor-sign', 'check': 'Could replacing rho+epsilon by rho change delta at the fixed floor?', 'disposition': 'REJECTED: the hostile lane uses epsilon>0 and rejects the denominator mutation.'}, {'axis': 'constant-rho-overreach', 'check': 'Does d_rho=0 alone imply a null active jet?', 'disposition': 'REJECTED: nonzero d_s and angular t controls retain positive energy.'}, {'axis': 'angular-coefficient-sign', 'check': 'Could a negative b make the angular coefficient nonpositive?', 'disposition': 'REJECTED: the exact identity with (a+b)^2+(a*c-b^2) proves positivity.'}, {'axis': 'phase-flat-directions', 'check': 'Could local normal coercivity be promoted to full-field concentration?', 'disposition': 'UPHELD-REJECTED: common phases and singlet directions are explicitly outside the conclusion.'}, {'axis': 'method-overhaul', 'check': 'Does this normal form replace the established proof lanes?', 'disposition': 'DISMISSED: it is an additive coordinate lemma under the unchanged functional and owner order.'}], 'test_oracles': {'primary_minimum_assertions': 40, 'independent_minimum_assertions': 80, 'hostile_mutation_count': 8, 'lean_declarations': ['normal_form_decomposition', 'angular_coefficient_positive', 'radial_form_zero', 'active_denominator_positive']}, 'audit': {'float_tolerance': 1e-12, 'strict_positive_threshold': 1e-18, 'positive_s_values': ['1/5', '1/2', '1', '2', '5'], 'singlet_densities': ['0', '1/3', '1', '3'], 'jet_values': [-2, -1, 0, 1, 2]}, 'scope_firewall': {'active_normal_form_proved': True, 'full_null_set_replaced': False, 'tube_probability_closed': False, 'entropy_closed': False, 'partition_control_closed': False, 'tightness_closed': False, 'floor_removal_closed': False, 'continuum_closed': False, 'physical_branch_selected': False, 'source_owner_admitted': False, 'pre_a_closed': False, 'sector_a_closed': False, 'qft_identity_closed': False, 'yang_mills_identity_closed': False, 'mass_gap_closed': False, 'no_tier_change': True, 'no_pdf': True}, 'evidence_level': 'T0 exact active-branch local jet identity with executable primary/independent/hostile and Lean cross-checks; not a probability or continuum theorem', 'non_claims': ['This result does not give a Gibbs tube probability or entropy bound.', 'It does not control phase or singlet-flat directions and does not classify the full finite-cutoff measure.', 'It does not prove partition convergence, tightness, floor removal, continuum, or physical branch selection.', 'It does not close A6/A7, Pre-A, Sector A, QFT, Yang--Mills, gravity, or mass gap.', 'The established A6/A7 functional, T-054 forward method, T-059/T-061 inverse method, owner order, and promotion firewalls are unchanged.'], 'files': {'lean': {'path': 'verification/lean/Tect/R462.lean', 'sha256': '4eb05c5c1b65de1558ebf4a5fac529e8843928af66f7a38a81647f43db030f1a'}, 'primary': {'path': 'verification/scripts/a6_classii_active_branch_normal_form.py', 'sha256': 'f03a7795a76ac214ec993c731d108ea27cc5ec09919c2ed14f94f6626fb26047'}, 'independent': {'path': 'codes/foundations/a6_classii_active_branch_normal_form_independent.py', 'sha256': 'fba9424198750dc8edfba49e3a20d70b2f7b69eded076ceee772142d8921bad6'}, 'hostile': {'path': 'codes/foundations/a6_classii_active_branch_normal_form_hostile.py', 'sha256': '0b5d599e4e4d41d377508114be706cab98854f0cd5e7206677ee95582ca8ccb5'}, 'integrated': {'path': 'verification/scripts/a6_classii_active_branch_normal_form_verify.py', 'sha256': '90c2b82e41db54487801cbb26e8e6c5137d4d1a31ff838000f250aa049a36891'}, 'certificate': {'path': 'strategy/a6-classii-active-branch-normal-form-certificate-260831.md', 'sha256': 'cfa7ab22f28110577a47aef3892cec2eac16a42e3fd094edc428fc55fb72e219'}}, 'formal_integration': {'results': ['R-462'], 'event_ordinal': 811, 'no_new_negative_ids': [], 'no_tier_change': True, 'no_pdf': True}, 'boundary': 'R-462 is an exact local normal-form identity for active Bloch jets in the existing fixed-floor Class-II functional. It is an input to, not a substitute for, the open branch-aware tube, entropy, partition, and tightness estimates.', 'next_action': 'Use the radial/angular split to formulate a branch-specific tube metric and test its entropy budget under the unchanged finite-cutoff Gibbs law; keep pure-singlet flat directions and all downstream gates separate.'}",
+      "expected": "no placeholder",
+      "name": "no placeholders",
+      "pass": true
+    },
+    {
+      "actual": "E:\\Dev\\TECT\\claims\\A1-PRODUCTION-FUNCTIONAL-REALISATION\\production_functional_manifest.json",
+      "expected": "True",
+      "name": "input a1_production_functional_manifest exists",
+      "pass": true
+    },
+    {
+      "actual": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565",
+      "expected": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565",
+      "name": "input a1_production_functional_manifest hash",
+      "pass": true
+    },
+    {
+      "actual": "E:\\Dev\\TECT\\claims\\A6-CLASSII-UV-POWER-COUNTING\\classii_uv_power_counting_manifest.json",
+      "expected": "True",
+      "name": "input a6_uv_manifest exists",
+      "pass": true
+    },
+    {
+      "actual": "2fb1bbc997a3e832bd1c16748eb6a2b9ccb2844280fdaa9029289dc860ea0cd9",
+      "expected": "2fb1bbc997a3e832bd1c16748eb6a2b9ccb2844280fdaa9029289dc860ea0cd9",
+      "name": "input a6_uv_manifest hash",
+      "pass": true
+    },
+    {
+      "actual": "E:\\Dev\\TECT\\claims\\A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE\\classii_renormalised_energy_manifest.json",
+      "expected": "True",
+      "name": "input a7_composite_manifest exists",
+      "pass": true
+    },
+    {
+      "actual": "4e14817d1928d54fa15e5871e506870d51c0b49baee5407c24200b2a726c5607",
+      "expected": "4e14817d1928d54fa15e5871e506870d51c0b49baee5407c24200b2a726c5607",
+      "name": "input a7_composite_manifest hash",
+      "pass": true
+    },
+    {
+      "actual": "E:\\Dev\\TECT\\verification\\lean\\Tect\\R462.lean",
+      "expected": "True",
+      "name": "file lean exists",
+      "pass": true
+    },
+    {
+      "actual": "4eb05c5c1b65de1558ebf4a5fac529e8843928af66f7a38a81647f43db030f1a",
+      "expected": "4eb05c5c1b65de1558ebf4a5fac529e8843928af66f7a38a81647f43db030f1a",
+      "name": "file lean hash",
+      "pass": true
+    },
+    {
+      "actual": "E:\\Dev\\TECT\\verification\\scripts\\a6_classii_active_branch_normal_form.py",
+      "expected": "True",
+      "name": "file primary exists",
+      "pass": true
+    },
+    {
+      "actual": "f03a7795a76ac214ec993c731d108ea27cc5ec09919c2ed14f94f6626fb26047",
+      "expected": "f03a7795a76ac214ec993c731d108ea27cc5ec09919c2ed14f94f6626fb26047",
+      "name": "file primary hash",
+      "pass": true
+    },
+    {
+      "actual": "E:\\Dev\\TECT\\codes\\foundations\\a6_classii_active_branch_normal_form_independent.py",
+      "expected": "True",
+      "name": "file independent exists",
+      "pass": true
+    },
+    {
+      "actual": "fba9424198750dc8edfba49e3a20d70b2f7b69eded076ceee772142d8921bad6",
+      "expected": "fba9424198750dc8edfba49e3a20d70b2f7b69eded076ceee772142d8921bad6",
+      "name": "file independent hash",
+      "pass": true
+    },
+    {
+      "actual": "E:\\Dev\\TECT\\codes\\foundations\\a6_classii_active_branch_normal_form_hostile.py",
+      "expected": "True",
+      "name": "file hostile exists",
+      "pass": true
+    },
+    {
+      "actual": "0b5d599e4e4d41d377508114be706cab98854f0cd5e7206677ee95582ca8ccb5",
+      "expected": "0b5d599e4e4d41d377508114be706cab98854f0cd5e7206677ee95582ca8ccb5",
+      "name": "file hostile hash",
+      "pass": true
+    },
+    {
+      "actual": "E:\\Dev\\TECT\\verification\\scripts\\a6_classii_active_branch_normal_form_verify.py",
+      "expected": "True",
+      "name": "file integrated exists",
+      "pass": true
+    },
+    {
+      "actual": "90c2b82e41db54487801cbb26e8e6c5137d4d1a31ff838000f250aa049a36891",
+      "expected": "90c2b82e41db54487801cbb26e8e6c5137d4d1a31ff838000f250aa049a36891",
+      "name": "file integrated hash",
+      "pass": true
+    },
+    {
+      "actual": "E:\\Dev\\TECT\\strategy\\a6-classii-active-branch-normal-form-certificate-260831.md",
+      "expected": "True",
+      "name": "file certificate exists",
+      "pass": true
+    },
+    {
+      "actual": "cfa7ab22f28110577a47aef3892cec2eac16a42e3fd094edc428fc55fb72e219",
+      "expected": "cfa7ab22f28110577a47aef3892cec2eac16a42e3fd094edc428fc55fb72e219",
+      "name": "file certificate hash",
+      "pass": true
+    },
+    {
+      "actual": "import Mathlib\n\nnamespace Tect.R462\n\n/-!\n  R-462 checks the exact algebraic normal form of the active Bloch branch.\n  Frame and connected-domain hypotheses stay outside this kernel file.\n -/\n\ndef qForm (a b c x y : Rat) : Rat :=\n  a * x ^ 2 + 2 * b * x * y + c * y ^ 2\n\n-- marker: normal_form_decomposition\ntheorem normal_form_decomposition (a b c s ds delta n\u2081 n\u2082 n\u2083 t\u2081 t\u2082 t\u2083 : Rat)\n    (hn : n\u2081 ^ 2 + n\u2082 ^ 2 + n\u2083 ^ 2 = 1)\n    (ht : n\u2081 * t\u2081 + n\u2082 * t\u2082 + n\u2083 * t\u2083 = 0) :\n    qForm a b c (ds * n\u2081 + s * t\u2081) (delta * n\u2081 + s * t\u2081) +\n        qForm a b c (ds * n\u2082 + s * t\u2082) (delta * n\u2082 + s * t\u2082) +\n        qForm a b c (ds * n\u2083 + s * t\u2083) (delta * n\u2083 + s * t\u2083) =\n      qForm a b c ds delta +\n        (a + 2 * b + c) * s ^ 2 * (t\u2081 ^ 2 + t\u2082 ^ 2 + t\u2083 ^ 2) := by\n  have hj :\n      (ds * n\u2081 + s * t\u2081) ^ 2 + (ds * n\u2082 + s * t\u2082) ^ 2 +\n          (ds * n\u2083 + s * t\u2083) ^ 2 =\n        ds ^ 2 + s ^ 2 * (t\u2081 ^ 2 + t\u2082 ^ 2 + t\u2083 ^ 2) := by\n    calc\n      _ = ds ^ 2 * (n\u2081 ^ 2 + n\u2082 ^ 2 + n\u2083 ^ 2) +\n          2 * ds * s * (n\u2081 * t\u2081 + n\u2082 * t\u2082 + n\u2083 * t\u2083) +\n          s ^ 2 * (t\u2081 ^ 2 + t\u2082 ^ 2 + t\u2083 ^ 2) := by ring\n      _ = ds ^ 2 + s ^ 2 * (t\u2081 ^ 2 + t\u2082 ^ 2 + t\u2083 ^ 2) := by rw [hn, ht]; ring\n  have hk :\n      (delta * n\u2081 + s * t\u2081) ^ 2 + (delta * n\u2082 + s * t\u2082) ^ 2 +\n          (delta * n\u2083 + s * t\u2083) ^ 2 =\n        delta ^ 2 + s ^ 2 * (t\u2081 ^ 2 + t\u2082 ^ 2 + t\u2083 ^ 2) := by\n    calc\n      _ = delta ^ 2 * (n\u2081 ^ 2 + n\u2082 ^ 2 + n\u2083 ^ 2) +\n          2 * delta * s * (n\u2081 * t\u2081 + n\u2082 * t\u2082 + n\u2083 * t\u2083) +\n          s ^ 2 * (t\u2081 ^ 2 + t\u2082 ^ 2 + t\u2083 ^ 2) := by ring\n      _ = delta ^ 2 + s ^ 2 * (t\u2081 ^ 2 + t\u2082 ^ 2 + t\u2083 ^ 2) := by rw [hn, ht]; ring\n  have hjk :\n      (ds * n\u2081 + s * t\u2081) * (delta * n\u2081 + s * t\u2081) +\n          (ds * n\u2082 + s * t\u2082) * (delta * n\u2082 + s * t\u2082) +\n          (ds * n\u2083 + s * t\u2083) * (delta * n\u2083 + s * t\u2083) =\n        ds * delta + s ^ 2 * (t\u2081 ^ 2 + t\u2082 ^ 2 + t\u2083 ^ 2) := by\n    calc\n      _ = ds * delta * (n\u2081 ^ 2 + n\u2082 ^ 2 + n\u2083 ^ 2) +\n          (ds + delta) * s * (n\u2081 * t\u2081 + n\u2082 * t\u2082 + n\u2083 * t\u2083) +\n          s ^ 2 * (t\u2081 ^ 2 + t\u2082 ^ 2 + t\u2083 ^ 2) := by ring\n      _ = ds * delta + s ^ 2 * (t\u2081 ^ 2 + t\u2082 ^ 2 + t\u2083 ^ 2) := by rw [hn, ht]; ring\n  unfold qForm\n  linear_combination a * hj + 2 * b * hjk + c * hk\n\n-- marker: angular_coefficient_positive\ntheorem angular_coefficient_positive (a b c : Rat)\n    (ha : 0 < a) (hdet : 0 < a * c - b ^ 2) :\n    0 < a + 2 * b + c := by\n  have hsum : 0 < (a + b) ^ 2 + (a * c - b ^ 2) :=\n    add_pos_of_nonneg_of_pos (sq_nonneg (a + b)) hdet\n  have hid : (a + b) ^ 2 + (a * c - b ^ 2) = a * (a + 2 * b + c) := by\n    ring\n  rw [hid] at hsum\n  nlinarith\n\n-- marker: radial_form_zero\ntheorem radial_form_zero (a b c x y : Rat)\n    (ha : 0 < a) (hdet : 0 < a * c - b ^ 2)\n    (hzero : qForm a b c x y = 0) :\n    x = 0 \u2227 y = 0 := by\n  have ha0 : a \u2260 0 := ne_of_gt ha\n  have hdecomp : qForm a b c x y =\n      (a * x + b * y) ^ 2 / a + (a * c - b ^ 2) * y ^ 2 / a := by\n    unfold qForm\n    field_simp\n    ring\n  rw [hdecomp] at hzero\n  have hfirst : 0 \u2264 (a * x + b * y) ^ 2 / a := by positivity\n  have hsecond : 0 \u2264 (a * c - b ^ 2) * y ^ 2 / a := by positivity\n  have hyterm : (a * c - b ^ 2) * y ^ 2 / a = 0 := by nlinarith\n  have hy_sq : y ^ 2 = 0 := by\n    have hcoef : 0 < (a * c - b ^ 2) / a := div_pos hdet ha\n    have hcoef_ne : (a * c - b ^ 2) / a \u2260 0 := ne_of_gt hcoef\n    have hprod : ((a * c - b ^ 2) / a) * y ^ 2 = 0 := by\n      calc\n        ((a * c - b ^ 2) / a) * y ^ 2 = (a * c - b ^ 2) * y ^ 2 / a := by ring\n        _ = 0 := hyterm\n    exact (mul_eq_zero.mp hprod).resolve_left hcoef_ne\n  have hy : y = 0 := sq_eq_zero_iff.mp hy_sq\n  have hxterm : (a * x + b * y) ^ 2 / a = 0 := by nlinarith\n  have hxlin : a * x + b * y = 0 := by\n    have hprod : (a * x + b * y) ^ 2 = 0 := by\n      field_simp [ha0] at hxterm\n      simpa using hxterm\n    exact sq_eq_zero_iff.mp hprod\n  have hax : a * x = 0 := by simpa [hy] using hxlin\n  have hx : x = 0 := (mul_eq_zero.mp hax).resolve_left (ne_of_gt ha)\n  exact \u27e8hx, hy\u27e9\n\n-- marker: active_denominator_positive\ntheorem active_denominator_positive (rho eps : Rat)\n    (hrho : 0 \u2264 rho) (heps : 0 < eps) :\n    0 < rho + eps := by\n  positivity\n\nend Tect.R462\n",
+      "expected": "none",
+      "name": "Lean source has no escape tokens",
+      "pass": true
+    },
+    {
+      "actual": "#!/usr/bin/env python3\n\"\"\"Non-importing independent audit for R-462.\n\nThis implementation repeats the active-branch jet ",
+      "expected": "no primary import",
+      "name": "independent does not import primary",
+      "pass": true
+    },
+    {
+      "actual": "0",
+      "expected": "0",
+      "name": "primary subprocess",
+      "pass": true
+    },
+    {
+      "actual": "0",
+      "expected": "0",
+      "name": "independent subprocess",
+      "pass": true
+    },
+    {
+      "actual": "0",
+      "expected": "0",
+      "name": "hostile subprocess",
+      "pass": true
+    },
+    {
+      "actual": "R-462-PRIMARY-PASS",
+      "expected": "R-462-PRIMARY-PASS",
+      "name": "primary verdict",
+      "pass": true
+    },
+    {
+      "actual": "R-462-INDEPENDENT-PASS",
+      "expected": "R-462-INDEPENDENT-PASS",
+      "name": "independent verdict",
+      "pass": true
+    },
+    {
+      "actual": "HOSTILE_MUTATIONS_REJECTED",
+      "expected": "HOSTILE_MUTATIONS_REJECTED",
+      "name": "hostile verdict",
+      "pass": true
+    },
+    {
+      "actual": "46",
+      "expected": "40",
+      "name": "primary assertion minimum",
+      "pass": true
+    },
+    {
+      "actual": "209",
+      "expected": "80",
+      "name": "independent assertion minimum",
+      "pass": true
+    },
+    {
+      "actual": "8",
+      "expected": "8",
+      "name": "hostile mutation count",
+      "pass": true
+    },
+    {
+      "actual": "({'a': '18000000000/4000000000001', 'b': '7500000000/4000000000001', 'c': '9375000000/4000000000001', 'denominator': '4000000000001/1000000000000', 'rho_floor': '1/1000000000000'}, {'a': '18000000000/4000000000001', 'b': '7500000000/4000000000001', 'c': '9375000000/4000000000001', 'denominator': '4000000000001/1000000000000', 'rho_floor': '1/1000000000000'})",
+      "expected": "exact A1-derived fractions",
+      "name": "coefficients agree exactly",
+      "pass": true
+    },
+    {
+      "actual": "('42375000000/4000000000001', '42375000000/4000000000001')",
+      "expected": "same exact fraction",
+      "name": "angular coefficient agrees",
+      "pass": true
+    },
+    {
+      "actual": "(27000, 4860)",
+      "expected": ">0",
+      "name": "decomposition counts positive",
+      "pass": true
+    },
+    {
+      "actual": "{'angular_coefficient': '42375000000/4000000000001', 'angular_positive_checks': 120, 'coefficient_determinant': '112500000000000000000/16000000000008000000000001', 'coefficients': {'a': '18000000000/4000000000001', 'b': '7500000000/4000000000001', 'c': '9375000000/4000000000001', 'denominator': '4000000000001/1000000000000', 'rho_floor': '1/1000000000000'}, 'decomposition_checks': 27000, 'denominator_checks': 120, 'frame_checks': 6, 'null_checks': 120, 'radial_grid_checks': 25, 'radial_positive_checks': 120, 'radial_zero_checks': 1, 'sample': {'angular': '13560000000/4000000000001', 'j2': '108/25', 'jk': '1600000000108/5000000000025', 'k2': '320000000003200000000108/1000000000010000000000025', 'radial': '960000000013600000000056500000000/53333333333880000000001466666666667', 'raw': '1140800000015408000000061020000000/53333333333880000000001466666666667'}, 'scope': {'active_normal_form_proved': True, 'continuum_closed': False, 'entropy_closed': False, 'floor_removal_closed': False, 'full_null_set_replaced': False, 'mass_gap_closed': False, 'no_pdf': True, 'no_tier_change': True, 'partition_control_closed': False, 'physical_branch_selected': False, 'pre_a_closed': False, 'qft_identity_closed': False, 'sector_a_closed': False, 'source_owner_admitted': False, 'tightness_closed': False, 'tube_probability_closed': False, 'yang_mills_identity_closed': False}}",
+      "expected": "positive branch-check counts",
+      "name": "null and nonnull branches checked",
+      "pass": true
+    },
+    {
+      "actual": "{'active_normal_form_proved': True, 'full_null_set_replaced': False, 'tube_probability_closed': False, 'entropy_closed': False, 'partition_control_closed': False, 'tightness_closed': False, 'floor_removal_closed': False, 'continuum_closed': False, 'physical_branch_selected': False, 'source_owner_admitted': False, 'pre_a_closed': False, 'sector_a_closed': False, 'qft_identity_closed': False, 'yang_mills_identity_closed': False, 'mass_gap_closed': False, 'no_tier_change': True, 'no_pdf': True}",
+      "expected": "false/false",
+      "name": "tube remains unclosed",
+      "pass": true
+    },
+    {
+      "actual": "['normal_form_decomposition', 'angular_coefficient_positive', 'radial_form_zero', 'active_denominator_positive']",
+      "expected": "all declarations",
+      "name": "Lean declaration markers",
+      "pass": true
+    },
+    {
+      "actual": "C:\\Users\\NaEun\\.elan\\toolchains\\leanprover--lean4---v4.32.1\\bin\\lake.exe",
+      "expected": "pinned elan lake",
+      "name": "pinned lake exists",
+      "pass": true
+    },
+    {
+      "actual": "0",
+      "expected": "0",
+      "name": "Lean compile",
+      "pass": true
+    },
+    {
+      "actual": "",
+      "expected": "no error",
+      "name": "Lean compiler clean",
+      "pass": true
+    }
+  ],
+  "assumptions": [
+    "The A6/A7 Pauli current definitions and fixed positive rho floor are controlling.",
+    "The coefficient matrix is positive definite and its entries are derived from the A1 manifest rather than inserted.",
+    "The active branch has s>0 and admits a C1 Bloch frame with n dot n=1 and n dot grad(n)=0.",
+    "The spatial derivative is evaluated one coordinate at a time; the three coordinates are summed only after the local identity.",
+    "Lean checks the exact rational algebraic identity; the frame, differentiability, and branch-geometric assumptions remain explicit."
+  ],
+  "audit_id": "A6-CLASSII-ACTIVE-BRANCH-NORMAL-FORM-v1",
+  "environment": {
+    "platform": "Windows-11-10.0.26200-SP0",
+    "python": "3.12.9",
+    "registry_entrypoints": 294
+  },
+  "evidence_level": "T0 exact active-branch local jet identity with executable primary/independent/hostile and Lean cross-checks; not a probability or continuum theorem",
+  "exploration_id": "EXP-001337",
+  "failures": [],
+  "missing_assumptions": [
+    "A cutoff-uniform tube probability for active and pure-singlet branches under the spatially correlated Gibbs law.",
+    "Entropy accounting for the growing phase and singlet-flat directions.",
+    "Partition-function control, tightness, subsequential bare-measure classification, and regulator removal.",
+    "A renormalisation prescription, source-owned Q3LOCK dynamics, common alpha, QFT correspondence, Yang--Mills identity, or mass-gap bridge."
+  ],
+  "non_claims": [
+    "This result does not give a Gibbs tube probability or entropy bound.",
+    "It does not control phase or singlet-flat directions and does not classify the full finite-cutoff measure.",
+    "It does not prove partition convergence, tightness, floor removal, continuum, or physical branch selection.",
+    "It does not close A6/A7, Pre-A, Sector A, QFT, Yang--Mills, gravity, or mass gap.",
+    "The established A6/A7 functional, T-054 forward method, T-059/T-061 inverse method, owner order, and promotion firewalls are unchanged."
+  ],
+  "result_id": "R-462",
+  "run_kind": "integrated",
+  "schema": "tect/a6-classii-active-branch-normal-form-integrated-result/1.0",
+  "script_version": "1.0.0",
+  "source_reports": {
+    "certificate": "cfa7ab22f28110577a47aef3892cec2eac16a42e3fd094edc428fc55fb72e219",
+    "hostile": "0b5d599e4e4d41d377508114be706cab98854f0cd5e7206677ee95582ca8ccb5",
+    "independent": "fba9424198750dc8edfba49e3a20d70b2f7b69eded076ceee772142d8921bad6",
+    "integrated": "90c2b82e41db54487801cbb26e8e6c5137d4d1a31ff838000f250aa049a36891",
+    "lean": "4eb05c5c1b65de1558ebf4a5fac529e8843928af66f7a38a81647f43db030f1a",
+    "manifest": "faf60fc1e2faeb91e32e320774a406d87dab3dd2d586d7050b879070dc972749",
+    "primary": "f03a7795a76ac214ec993c731d108ea27cc5ec09919c2ed14f94f6626fb26047"
+  },
+  "subprocesses": {
+    "hostile": {
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "HOSTILE MUTATIONS REJECTED 8/8\n"
+    },
+    "independent": {
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "INDEPENDENT R-462 PASS 209/209\n"
+    },
+    "lean": {
+      "returncode": 0,
+      "stderr": "",
+      "stdout": ""
+    },
+    "primary": {
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "PRIMARY R-462 PASS 46/46\n"
+    }
+  },
+  "verdict": "R-462-INTEGRATED-PASS"
+}

@@ -1,0 +1,114 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "schema_version": "1.0",
+  "id": "EXP-001337",
+  "recorded_at": "2026-08-31T00:30:00Z",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-08-31",
+  "provenance": "contemporaneous",
+  "task_id": "T-054",
+  "claim_ids": [
+    "A6-CLASSII-UV-POWER-COUNTING",
+    "A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE"
+  ],
+  "gate_ids": [
+    "A6-CLASSII-FULL-FIELD-BARE-CONCENTRATION",
+    "A6-CLASSII-COUNTERTERM-CLOSURE",
+    "A7-CLASSII-NELSON-EXPONENTIAL-BOUND",
+    "A7-CLASSII-SELF-COUPLING-INTERPOLATION"
+  ],
+  "title": "Fixed-floor active-branch normal-form coercivity",
+  "question": "Can the active constant-Bloch branch of the existing fixed-floor Class-II current be split exactly into radial and angular jet energies before constructing branch-specific tube and entropy estimates?",
+  "method": [
+    "Keep the existing A6/A7 fixed-floor current definitions, T-054 forward owner order, and T-059/T-061 inverse locks unchanged.",
+    "Write the active Bloch vector as m=s*n with s>0, n dot n=1, and use the tangent condition n dot grad(n)=0.",
+    "Substitute J=d_s*n+s*t and K=delta*n+s*t with delta=d_s-s*d_rho/(rho+epsilon_rho), then verify the exact quadratic identity with rational arithmetic.",
+    "Run independent component arithmetic, eight hostile mutations, and the pinned Lean R462 algebraic kernel check.",
+    "Keep phase and singlet-flat directions explicit as missing probabilistic inputs rather than absorbing them into a coercivity claim."
+  ],
+  "decision_scope": "T0 exact local active-branch jet normal form; no Gibbs measure, tube probability, entropy, partition, tightness, regulator limit, physical branch, QFT or Yang--Mills inference",
+  "finding": "For every tested rational active frame and fixed-floor jet, the Class-II density equals one positive radial quadratic form in (d_s,delta) plus the positive angular coefficient (a+2b+c) times s^2|t|^2. The radial zero set is exactly (0,0), the active null jet has t=d_s=d_rho=0, and the independent and hostile lanes agree with the primary lane. The common phase and singlet directions remain outside this current-level control.",
+  "verdict": "advanced",
+  "decision_reason": "This is the next local input named by EXP-001336 for the existing branch-aware full-field gate. It supplies a nonredundant normal coordinate identity without replacing the forward method or converting a pathwise statement into a Gibbs concentration result.",
+  "boundary": "R-462 does not estimate branch probabilities or entropy, control the spatially correlated partition function, prove tightness, remove the floor, select a physical branch, admit a source-owned dynamics, or close A6, A7, Pre-A, Sector A, QFT, Yang--Mills or mass gap.",
+  "evidence_level": "T0 exact active-branch local jet identity with executable primary/independent/hostile and Lean cross-checks",
+  "evidence_refs": [
+    "strategy/a6-classii-active-branch-normal-form-manifest.json#theorem",
+    "strategy/a6-classii-active-branch-normal-form-certificate-260831.md#Exact statement",
+    "verification/scripts/a6_classii_active_branch_normal_form.py#run",
+    "codes/foundations/a6_classii_active_branch_normal_form_independent.py#run",
+    "codes/foundations/a6_classii_active_branch_normal_form_hostile.py#run",
+    "verification/scripts/a6_classii_active_branch_normal_form_verify.py#run",
+    "claims/A6-CLASSII-UV-POWER-COUNTING/runs/2026-08-31-primary-a6-active-branch-normal-form/primary.json#assertion_summary",
+    "claims/A6-CLASSII-UV-POWER-COUNTING/runs/2026-08-31-independent-a6-active-branch-normal-form/independent.json#assertion_summary",
+    "claims/A6-CLASSII-UV-POWER-COUNTING/runs/2026-08-31-hostile-a6-active-branch-normal-form/hostile.json#assertion_summary",
+    "claims/A6-CLASSII-UV-POWER-COUNTING/runs/2026-08-31-integrated-a6-active-branch-normal-form/integrated.json#assertion_summary",
+    "verification/lean/Tect/R462.lean#theorem"
+  ],
+  "formal_refs": {
+    "results": ["R-462"],
+    "negatives": [],
+    "events": ["20260831-r-462-active-branch-normal-form-2026-08-31"]
+  },
+  "formal_integration": {
+    "results": ["R-462"],
+    "negatives": [],
+    "events": ["20260831-r-462-active-branch-normal-form-2026-08-31"],
+    "no_new_negative": true,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "assumptions": [
+    "The A6/A7 Pauli current definitions and fixed positive rho floor are controlling.",
+    "The coefficient matrix is positive definite and its entries are derived from the hash-pinned A1 manifest.",
+    "The active branch has s>0 and a C1 Bloch frame with n dot n=1 and n dot grad(n)=0.",
+    "The Lean kernel covers the rational algebra only; the frame and connected-domain calculus remain explicit assumptions."
+  ],
+  "missing_assumptions": [
+    "Cutoff-uniform tube probabilities for both active and pure-singlet branches under the correlated Gibbs law.",
+    "Entropy accounting for common phases and singlet-flat directions.",
+    "Partition control, tightness, subsequential bare-measure classification, renormalisation and floor removal.",
+    "A source-owned Q3LOCK generator/transfer/history contract and any QFT, Yang--Mills or mass-gap bridge."
+  ],
+  "adversarial_review": [
+    {
+      "axis": "radial-angular-cross-term",
+      "check": "Could a non-tangent frame make the displayed split invalid?",
+      "disposition": "REJECTED: n dot t=0 is an explicit premise and the non-tangent fixture fails the identity."
+    },
+    {
+      "axis": "floor-denominator",
+      "check": "Could replacing rho+epsilon by rho preserve the fixed-floor jet?",
+      "disposition": "REJECTED: the hostile denominator mutation changes delta."
+    },
+    {
+      "axis": "mixed-coefficient-sign",
+      "check": "Could b<0 make the angular coefficient nonpositive?",
+      "disposition": "REJECTED: exact determinant identity gives a+2b+c>0."
+    },
+    {
+      "axis": "constant-density-overreach",
+      "check": "Does d_rho=0 or constant rho alone imply nullity?",
+      "disposition": "REJECTED: radial and angular nonnull jets retain positive energy."
+    },
+    {
+      "axis": "flat-directions",
+      "check": "Does local normal coercivity control common phases or the singlet field?",
+      "disposition": "UPHELD-REJECTED: both directions are explicitly outside the theorem."
+    },
+    {
+      "axis": "promotion-firewall",
+      "check": "Can the local identity be promoted to a tube/entropy or continuum theorem?",
+      "disposition": "REJECTED: scope flags remain false and tier remains T0."
+    }
+  ],
+  "next_action": "Use the radial/angular split to define a branch-specific tube metric and compute its entropy budget under the unchanged finite-cutoff Gibbs law; keep pure-singlet flat directions separate and continue source-owner intake in parallel.",
+  "stop_or_redesign": [
+    "If the tube metric requires a regulator or field domain not in this contract, freeze a new branch contract rather than extending R-462 silently.",
+    "If either branch lacks a cutoff-uniform entropy bound, record that branch-specific failure and retain R-462 only as a local identity.",
+    "If a production dynamics owner appears, resume the existing owner order and do not substitute this static lemma for it."
+  ],
+  "related": [
+    {"id": "EXP-001336", "relation": "continues"}
+  ]
+}
