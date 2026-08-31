@@ -679,13 +679,21 @@
     "authority_state": "VERIFIED_PENDING_WORKTREE_NOT_YET_DURABLE_GIT_OR_REMOTE_AUTHORITY"
   },
   "completion_checkpoint": {
-    "status": "PENDING",
-    "verified_parent_head": "a7d8694e43760a915f211e167fee2b0be37c2ee6",
-    "verified_at_utc": "2026-08-31T02:30:00Z",
+    "status": "COMPLETE",
+    "verified_parent_head": "4aebcdad192d1a3a9fc161bc349a6712a83a5567",
+    "verified_at_utc": "2026-08-31T02:24:47Z",
     "branch": "main",
     "remote": "tect",
     "remote_ref": "refs/heads/main",
-    "expected_authority_counts": null,
+    "expected_authority_counts": {
+      "claims": 49,
+      "gates_and_hypotheses": 208,
+      "results": 298,
+      "negative_records": 375,
+      "explorations": 1339,
+      "changelog_events": 813,
+      "tasks": 61
+    },
     "requirements": [
       "doctor PASS",
       "release_check PASS",
@@ -812,7 +820,8 @@
       "The R-463 metric is dominated by the A1-derived active Class-II energy on the declared local proxy, while the separate flat proxy has zero energy barrier; no Gibbs concentration or tightness claim is admitted.",
       "The release-gated R-463 / EXP-001338 content commit a7d8694e43760a915f211e167fee2b0be37c2ee6 was created after primary, independent, hostile, integrated and Lean verification plus doctor and release_check PASS; existing forward and inverse methods, owner order and promotion firewalls remain unchanged.",
       "git push tect main advanced refs/heads/main to a7d8694e43760a915f211e167fee2b0be37c2ee6, and a live git ls-remote read returned the identical SHA; this checkpoint refresh records the R-463 authority counts and will be finalized by strict-baseline verification.",
-      "R-464 / EXP-001339 is recorded in the ledger and exploration log; the release-gated content commit and post-push strict baseline are pending. Existing methods, owner order and promotion firewalls remain unchanged."
+      "R-464 / EXP-001339 is recorded in the ledger and exploration log; the release-gated content commit and post-push strict baseline are pending. Existing methods, owner order and promotion firewalls remain unchanged.",
+      "The release-gated R-464 / EXP-001339 content commit 4aebcdad192d1a3a9fc161bc349a6712a83a5567 was created after primary 24/24, independent 134/134, hostile 8/8, integrated 49/49, Lean R464, doctor and release_check PASS; it was pushed to tect/main and live git ls-remote returned the identical SHA. The fixed-cutoff result remains T0 and does not change existing forward/inverse methods, owner order or promotion firewalls."
     ]
   },
   "stopped_loop_registry": [
