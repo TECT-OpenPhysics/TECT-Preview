@@ -5,10 +5,11 @@
 
 Authorities: `RESULTS-LEDGER.md`.
 
-**296 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
+**297 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
 
 | ID | Result | Tier/scope |
 |---|---|---|
+| [`R-463`](../RESULTS-LEDGER.md#r-463) | Fixed-floor active-branch tube metric and finite entropy stress test | T0 |
 | [`R-462`](../RESULTS-LEDGER.md#r-462) | Fixed-floor active-branch normal-form coercivity | T0 |
 | [`R-461`](../RESULTS-LEDGER.md#r-461) | Fixed-floor smooth Class-II null-branch dichotomy | T0 |
 | [`R-460`](../RESULTS-LEDGER.md#r-460) | Canonical Contents remaining-scope production-owner applicability audit | T0 |
@@ -33,7 +34,6 @@ Authorities: `RESULTS-LEDGER.md`.
 | [`R-441`](../RESULTS-LEDGER.md#r-441) | Reading-H physical-empty bounded test owner execution (blocked) | T0 |
 | [`R-440`](../RESULTS-LEDGER.md#r-440) | Finite rectangular-box matching-layer split envelope | T0 |
 | [`R-439`](../RESULTS-LEDGER.md#r-439) | Cutoff-adaptive threshold-four core rule audit | T0 |
-| [`R-438`](../RESULTS-LEDGER.md#r-438) | V=2, d=19 original-source interval enclosure | T0 |
 
 Search without loading the full ledger:
 

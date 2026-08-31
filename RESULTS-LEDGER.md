@@ -22,6 +22,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-463](#r-463) | Fixed-floor active-branch tube metric and finite entropy stress test | R-463 v1.0 is a T0 claim-nonbearing additive A6/A7 interface under the unchanged fixed-floor Class-II functional. The exact radial sum-of-squares gap defines an active metric dominated by 2*e_II; bounded local-grid proxies are reported with primary 44/44, independent 6270/6270, hostile 8/8, integrated 48/48 and Lean R463 pass. A separate flat proxy has zero energy barrier. No correlated Gibbs, entropy density, partition, tightness, continuum, physical, QFT, Yang--Mills or mass-gap conclusion follows; existing methods and owner order are unchanged |
 | [R-462](#r-462) | Fixed-floor active-branch normal-form coercivity | R-462 v1.0 is a T0 claim-nonbearing additive A6/A7 local jet lemma under the unchanged fixed-floor Class-II functional. On an active Bloch branch `m=s*n` with `s>0` and `n dot t=0`, the exact identity `2 e_II = a*d_s^2+2b*d_s*delta+c*delta^2+(a+2b+c)*s^2|t|^2` separates radial and angular normal directions; primary 46/46, independent 209/209, hostile 8/8, integrated 44/44 and Lean R462 pass. Phase/singlet-flat directions, tube/entropy, partition, tightness, continuum, physical, QFT, Yang--Mills and mass-gap conclusions remain open; existing methods and owner order are unchanged |
 | [R-461](#r-461) | Fixed-floor smooth Class-II null-branch dichotomy | R-461 v1.0 is a T0 claim-nonbearing additive A6/A7 pathwise lemma under the existing fixed-floor Class-II functional. Positive-form completion, the exact Bloch identity and an exhaustive `[-2,2]^4` rational grid classify smooth null fields into a pure-singlet branch or an active constant-Bloch/constant-rho phase branch; primary 1310/1310, independent 677/677, hostile 8/8, integrated 46/46 and Lean R461 pass. An active common-phase plane wave has zero pathwise Class-II energy but positive `W_epsilon`, so the conditional contraction zero set cannot replace the pathwise null set. This does not prove Gibbs concentration, entropy/tube bounds, partition convergence, tightness, floor removal, continuum, physical branch selection, QFT, Yang--Mills or mass gap; existing A6/A7, T-054, T-059 and T-061 methods and owner order are unchanged |
 | [R-460](#r-460) | Canonical Contents remaining-scope production-owner applicability audit | R-460 v1.0 is a T0 claim-nonbearing additive T-054 residual source-applicability audit. The unchanged strict alias contract scans 284 paths, 273 unique content hashes and 11 duplicate paths outside R-459's explicit subtrees; it finds zero complete semantic paths, zero standalone owner candidates, zero exact R-192 owner-token paths, three partial rows and zero loose-q control rows. Primary and independent summaries agree, integrated assertions pass 17/17 and hostile mutations are rejected 8/8. No source-owned dynamics, candidate, observation, physical, continuum, QFT, Yang--Mills, Pre-A, Sector-A or mass-gap conclusion follows; T-054/T-059/T-061 methods and owner order are unchanged |
@@ -829,6 +830,46 @@ candidate-neutral two-time observable, complete map stages and prospective
 holdout exist. Continue unchanged T-054 Q3LOCK owner intake and T-059/T-061
 observation-source intake; do not manufacture another finite mobility table.
 
+<a id="r-463"></a>
+### R-463 -- Fixed-floor active-branch tube metric and finite entropy stress test
+
+**Result ID.** `A6-CLASSII-ACTIVE-BRANCH-TUBE-METRIC-v1` (R-463).
+
+**Version and exact scope.** R-463 v1.0 is a T0, claim-nonbearing additive
+interface for the existing A6/A7 fixed-floor Class-II functional. With
+`Q=[[a,b],[b,c]]`, `Delta=a*c-b^2`, `lambda_r=Delta/(a+c)`, and
+`kappa=a+2*b+c`, the active variables are `x=d_s`, `y=delta`, and
+`u=s*grad(n)`. The active energy is `E2=2*e_II=q_Q(x,y)+kappa*|u|^2` and the
+metric is `T_active^2=lambda_r*(x^2+y^2)+kappa*|u|^2`.
+
+**Exact result.** The identity
+`(a+c)*(q_Q-lambda_r*(x^2+y^2))=(a*x+b*y)^2+(b*x+c*y)^2`
+proves `E2>=T_active^2` for the A1-derived positive coefficients. The separate
+flat proxy has `T_flat^2=|f|^2` and `E_flat=0`, so its outside-tube barrier is
+exactly zero.
+
+**Finite diagnostic and evidence.** The primary audit enumerates the declared
+`{-1,0,1}^5` active grid and the independent audit repeats the calculation on a
+denser `{-2,-1,0,1,2}^5` grid. For each declared threshold and inverse
+temperature, the exact outside count and minimum energy are converted to the
+finite proxy `N*exp(-beta*E2_min/2)` using only the unit lower bound `Z>=1`.
+Primary 44/44, independent 6270/6270, hostile 8/8, integrated 48/48, and Lean
+R463 all pass.
+
+**Boundary.** The bounded grid is not the correlated finite-cutoff field law.
+This result does not provide a branch-conditioned Gibbs probability, entropy
+density, partition bound, cutoff-uniform estimate, tightness, floor removal,
+ordered continuum limit, physical-empty selection, Q3LOCK dynamics, QFT,
+Yang--Mills, or mass-gap bridge. The flat-direction zero barrier is an explicit
+open obligation, not a failure of the active local identity. Existing A6/A7,
+T-054, T-059 and T-061 methods, owner order and promotion firewalls are
+unchanged.
+
+**Proven in.** [R-463 certificate](strategy/a6-classii-active-branch-tube-metric-certificate-260831.md), [machine manifest](strategy/a6-classii-active-branch-tube-metric-manifest.json), [primary script](verification/scripts/a6_classii_active_branch_tube_metric.py), [independent script](codes/foundations/a6_classii_active_branch_tube_metric_independent.py), [hostile script](codes/foundations/a6_classii_active_branch_tube_metric_hostile.py), [integrated verifier](verification/scripts/a6_classii_active_branch_tube_metric_verify.py), [integrated run](claims/A6-CLASSII-UV-POWER-COUNTING/runs/2026-08-31-integrated-a6-active-branch-tube-metric/integrated.json), [Lean kernel](verification/lean/Tect/R463.lean), and [exploration record](strategy/a6-classii-active-branch-tube-metric-exploration.json).
+
+**Next action.** Admit a source-owned branch-conditioned finite-cutoff estimate
+before using this metric; retain flat-direction entropy, Q3LOCK owner intake,
+and T-059/T-061 observation locks as separate parallel obligations.
 <a id="r-462"></a>
 ### R-462 -- Fixed-floor active-branch normal-form coercivity
 

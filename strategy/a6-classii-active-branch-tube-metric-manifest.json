@@ -1,0 +1,221 @@
+{
+  "schema": "tect/a6-classii-active-branch-tube-metric/1.0",
+  "audit_id": "A6-CLASSII-ACTIVE-BRANCH-TUBE-METRIC-v1",
+  "result_id": "R-463",
+  "exploration_id": "EXP-001338",
+  "task_id": "T-054",
+  "claim_ids": [
+    "A6-CLASSII-UV-POWER-COUNTING",
+    "A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE"
+  ],
+  "title": "Fixed-floor active-branch tube metric and finite entropy stress test",
+  "tier": "T0",
+  "claim_bearing": false,
+  "status": "ACTIVE_TUBE_METRIC_AUDITED_NOT_GIBBS_TIGHTNESS_CLOSURE",
+  "question": "Can the R-462 radial/angular split define a branch-specific active tube metric and expose the separate flat-direction entropy boundary without inferring Gibbs concentration or tightness?",
+  "purpose": "Add the next local interface in the existing A6 branch-aware concentration programme. The metric is derived from the unchanged fixed-floor Class-II functional; a bounded rational local-grid stress test records an energy-versus-entropy budget and an explicit flat-direction obstruction. It is not a finite-cutoff Gibbs or continuum calculation.",
+  "inputs": {
+    "a1_production_functional_manifest": {
+      "path": "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/production_functional_manifest.json",
+      "sha256": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565"
+    },
+    "r462_active_branch_normal_form_manifest": {
+      "path": "strategy/a6-classii-active-branch-normal-form-manifest.json",
+      "sha256": "faf60fc1e2faeb91e32e320774a406d87dab3dd2d586d7050b879070dc972749"
+    }
+  },
+  "methods_preserved": {
+    "a6_a7_functional_unchanged": true,
+    "fixed_floor_and_common_even_scope": true,
+    "t054_forward_method_unchanged": true,
+    "observation_first_inverse_additive": true,
+    "owner_order_unchanged": true,
+    "no_conditional_mean_substitution": true,
+    "no_physical_empty_substitution": true,
+    "no_tier_change": true
+  },
+  "exact_scope": {
+    "domain": "one active local spatial jet; intended later application is the connected periodic three-torus",
+    "active_variables": "x=d_s, y=delta, u=s*t in R^3 with s>0 and n dot t=0",
+    "coefficient_matrix": "Q=[[a,b],[b,c]] with a>0 and Delta=a*c-b^2>0 derived from the hash-pinned A1 production manifest",
+    "energy_identity": "E2=2*e_II=q_Q(x,y)+kappa*|u|^2 with kappa=a+2*b+c",
+    "radial_constant": "lambda_r=Delta/(a+c)",
+    "active_tube_metric": "T_active^2=lambda_r*(x^2+y^2)+kappa*|u|^2",
+    "flat_proxy": "f=(f_phase,f_singlet) in a separate bounded two-coordinate diagnostic with E_flat=0 and T_flat^2=|f|^2",
+    "finite_proxy": "active grid values and flat grid values are explicit rational audit inputs; the proxy has Z>=1 from the zero state",
+    "limit_order": "none; exact local identities plus a bounded finite combinatorial stress test",
+    "quantum_status": "no source-owned Gibbs law, partition theorem, entropy density, tightness, operator domain, continuum, or thermodynamic statement"
+  },
+  "theorem": {
+    "radial_gap_identity": "(a+c)*(q_Q(x,y)-lambda_r*(x^2+y^2))=(a*x+b*y)^2+(b*x+c*y)^2",
+    "radial_lower_bound": "q_Q(x,y)>=lambda_r*(x^2+y^2)",
+    "active_domination": "E2>=T_active^2 for every active jet; equality is possible only in the radial kernel and with the angular jet zero",
+    "finite_entropy_budget": "On the declared bounded active grid, N_active(tau)*exp(-beta*E2_min(tau)/2) is a finite local proxy bound using Z>=1; its value is recorded, not promoted to the field Gibbs law",
+    "flat_boundary": "The declared flat proxy has zero energy for every flat coordinate, so its outside-tube energy barrier is exactly zero and cannot be controlled by this Class-II current"
+  },
+  "proof_skeleton": [
+    "Derive a,b,c from the A1 manifest and set Delta=a*c-b^2, kappa=a+2*b+c, and lambda_r=Delta/(a+c).",
+    "Expand (a+c)q_Q-Delta(x^2+y^2) as the sum of the two exact squares (a*x+b*y)^2+(b*x+c*y)^2.",
+    "Use the nonnegative radial gap and kappa>0 to obtain E2>=T_active^2 without introducing a new functional.",
+    "Enumerate only the explicit bounded rational active grid, count outside-tube states, and compute the exact minimum E2 on each nonempty shell before the exponential proxy conversion.",
+    "Run the flat proxy separately; record its zero barrier as an open entropy/tightness boundary rather than a failure of the active metric."
+  ],
+  "assumptions": [
+    "The R-462 active-branch coordinates and the A6/A7 fixed-floor Class-II functional remain controlling.",
+    "a+c>0 and Delta>0 follow from the A1-derived positive coefficient matrix.",
+    "The bounded grid, tube thresholds, inverse temperatures, and two flat proxy coordinates are declared audit inputs, not fitted values.",
+    "The finite proxy uses the zero configuration as a unit lower bound for its toy partition function; no identification with the correlated field partition function is made.",
+    "Lean checks the algebraic identity and domination contract; the local-grid enumeration is independently recomputed in Python."
+  ],
+  "missing_assumptions": [
+    "A source-owned correlated finite-cutoff Gibbs measure and a branch-conditioned probability map.",
+    "Entropy density, phase/singlet coordinate Jacobians, volume scaling, and a cutoff-uniform tube estimate.",
+    "Partition-function bounds, tightness, subsequential bare-measure classification, floor removal, and ordered continuum limits.",
+    "A source-owned Q3LOCK production dynamics, common alpha, QFT correspondence, Yang--Mills identity, or mass-gap bridge."
+  ],
+  "adversarial_review": [
+    {
+      "axis": "radial-lower-bound-sign",
+      "check": "Could the Delta/(a+c) lower bound reverse sign or use an unproved denominator?",
+      "disposition": "REJECTED: the A1-derived a+c and Delta are checked positive and the exact sum-of-squares gap is tested and Lean-checked."
+    },
+    {
+      "axis": "energy-factor",
+      "check": "Could E2 be confused with e_II and change the Boltzmann exponent by a factor of two?",
+      "disposition": "REJECTED: the manifest defines E2=2*e_II and the proxy exponent uses beta*E2_min/2 explicitly."
+    },
+    {
+      "axis": "threshold-counting",
+      "check": "Could a shell count include an empty shell or silently change >= to >?",
+      "disposition": "REJECTED: thresholds and inclusion convention are hash-pinned inputs and every reported shell has an exact nonempty count."
+    },
+    {
+      "axis": "flat-direction-overreach",
+      "check": "Could the active metric be claimed to control phase or singlet-flat directions?",
+      "disposition": "UPHELD-REJECTED: the separate flat proxy has zero energy barrier and remains an explicit open obligation."
+    },
+    {
+      "axis": "proxy-to-Gibbs-promotion",
+      "check": "Could the bounded local-grid proxy be called a finite-cutoff Gibbs concentration result?",
+      "disposition": "UPHELD-REJECTED: correlated field measure, partition, and branch probability are missing and listed as non-claims."
+    },
+    {
+      "axis": "tightness-overreach",
+      "check": "Could a finite entropy budget be promoted to cutoff-uniform tightness?",
+      "disposition": "UPHELD-REJECTED: no cutoff family, volume scaling, or uniform estimate is present."
+    },
+    {
+      "axis": "method-overhaul",
+      "check": "Does the metric replace the established T-054 forward or T-059/T-061 inverse methods?",
+      "disposition": "DISMISSED: it is an additive coordinate and diagnostic interface under the unchanged functional and owner order."
+    },
+    {
+      "axis": "physical-promotion",
+      "check": "Could this local diagnostic select a physical-empty or Reading-H branch?",
+      "disposition": "REJECTED: no physical-empty input or owner-approved branch is used."
+    }
+  ],
+  "test_oracles": {
+    "primary_minimum_assertions": 40,
+    "independent_minimum_assertions": 50,
+    "hostile_mutation_count": 8,
+    "lean_declarations": [
+      "radial_gap_identity",
+      "radial_lower_bound",
+      "active_tube_domination",
+      "flat_zero_energy"
+    ]
+  },
+  "audit": {
+    "active_grid_values": [
+      "-1",
+      "0",
+      "1"
+    ],
+    "flat_grid_values": [
+      "-1",
+      "0",
+      "1"
+    ],
+    "tube_thresholds": [
+      "1/1000000",
+      "1/100000",
+      "1/10000",
+      "1/1000",
+      "1/100"
+    ],
+    "beta_values": [
+      "1000",
+      "10000",
+      "100000"
+    ],
+    "flat_dimensions": 2,
+    "decimal_precision": 50
+  },
+  "scope_firewall": {
+    "active_tube_metric_defined": true,
+    "finite_proxy_stress_test_recorded": true,
+    "flat_zero_energy_boundary_recorded": true,
+    "branch_tube_probability_closed": false,
+    "entropy_closed": false,
+    "partition_control_closed": false,
+    "tightness_closed": false,
+    "floor_removal_closed": false,
+    "continuum_closed": false,
+    "physical_branch_selected": false,
+    "source_owner_admitted": false,
+    "pre_a_closed": false,
+    "sector_a_closed": false,
+    "qft_identity_closed": false,
+    "yang_mills_identity_closed": false,
+    "mass_gap_closed": false,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "evidence_level": "T0 exact active-branch metric identity with bounded local combinatorial energy-versus-entropy stress diagnostics and independent/hostile/Lean cross-checks; not a Gibbs, tightness, or continuum theorem",
+  "non_claims": [
+    "This result does not compute a correlated finite-cutoff Gibbs tube probability.",
+    "It does not prove an entropy density, partition convergence, cutoff-uniform bound, or tightness.",
+    "It does not control phase or singlet-flat directions; the flat proxy records a zero energy barrier.",
+    "It does not remove the rho floor, select a physical-empty branch, or identify Reading-H with any active branch.",
+    "It does not close A6/A7, Pre-A, Sector A, QFT, Yang--Mills, gravity, continuum, or mass gap.",
+    "The established A6/A7 functional, T-054 forward method, T-059/T-061 inverse method, owner order, and promotion firewalls are unchanged."
+  ],
+  "files": {
+    "lean": {
+      "path": "verification/lean/Tect/R463.lean",
+      "sha256": "ff0d5f3295d39eb9c8de4eec90ed0f664282b6df6c13e22280bb2ae8e1267c69"
+    },
+    "primary": {
+      "path": "verification/scripts/a6_classii_active_branch_tube_metric.py",
+      "sha256": "fff9f44b0783e806c3f6351ab7d79a0d146b2c5b12e69900ba654c7400e05b2d"
+    },
+    "independent": {
+      "path": "codes/foundations/a6_classii_active_branch_tube_metric_independent.py",
+      "sha256": "881201b05ed6539f57fbd507d0db5771a30f273e11890f68bf8af429ac20c9d4"
+    },
+    "hostile": {
+      "path": "codes/foundations/a6_classii_active_branch_tube_metric_hostile.py",
+      "sha256": "fb3b4e25d083a48937e7ec0f766546112c85b98266e8243e525a368b279ae196"
+    },
+    "integrated": {
+      "path": "verification/scripts/a6_classii_active_branch_tube_metric_verify.py",
+      "sha256": "58ec8a78b6972b4a9820517314246ceb6021e371245655ccfd07a1029c0cfe0f"
+    },
+    "certificate": {
+      "path": "strategy/a6-classii-active-branch-tube-metric-certificate-260831.md",
+      "sha256": "0f8b5faf0c4cc9b964a11e3fbac538241f9ffb563105430b64be16798cd77e9c"
+    }
+  },
+  "formal_integration": {
+    "results": [
+      "R-463"
+    ],
+    "event_ordinal": 812,
+    "no_new_negative_ids": [],
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "boundary": "R-463 supplies an exact active-branch tube metric and a bounded local entropy stress diagnostic. The active metric is not a correlated Gibbs estimate, and the zero-energy flat proxy prevents any full-field concentration or tightness inference.",
+  "next_action": "Use the metric only as an input to a source-owned branch-conditioned finite-cutoff Gibbs estimate; keep the flat-direction entropy contract and T-054 Q3LOCK owner intake open, while T-059/T-061 observation locks remain parallel and additive."
+}

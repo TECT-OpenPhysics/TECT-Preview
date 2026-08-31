@@ -1,0 +1,81 @@
+{
+  "assertion_summary": {
+    "passed": 8,
+    "total": 8
+  },
+  "assertions": [
+    {
+      "mutation": "lambda_r=Delta/(-(a+c))",
+      "name": "wrong radial sign",
+      "pass": true,
+      "witness": "-300000000000/292000000000073"
+    },
+    {
+      "mutation": "kappa=a+2*b-c",
+      "name": "wrong angular coefficient",
+      "pass": true,
+      "witness": "(Fraction(23625000000, 4000000000001), Fraction(42375000000, 4000000000001))"
+    },
+    {
+      "mutation": "b=0 in q_Q",
+      "name": "omit mixed term",
+      "pass": true,
+      "witness": "(Fraction(27375000000, 4000000000001), Fraction(42375000000, 4000000000001))"
+    },
+    {
+      "mutation": "add b^2 to the exact gap",
+      "name": "radial identity mutation",
+      "pass": true,
+      "witness": "(Fraction(935015625000000000000, 16000000000008000000000001), Fraction(991265625000000000000, 16000000000008000000000001))"
+    },
+    {
+      "mutation": "> instead of >=",
+      "name": "strict shell convention",
+      "pass": true,
+      "witness": "(238, 242)"
+    },
+    {
+      "mutation": "use beta*E2_min instead of beta*E2_min/2",
+      "name": "Boltzmann factor of two",
+      "pass": true,
+      "witness": "(Fraction(21187500000000, 4000000000001), Fraction(42375000000000, 4000000000001))"
+    },
+    {
+      "mutation": "assign active kappa energy to flat proxy",
+      "name": "flat energy promotion",
+      "pass": true,
+      "witness": "42375000000/4000000000001"
+    },
+    {
+      "mutation": "set tightness_closed=true",
+      "name": "proxy-to-tightness promotion",
+      "pass": true,
+      "witness": "False"
+    }
+  ],
+  "audit_id": "A6-CLASSII-ACTIVE-BRANCH-TUBE-METRIC-v1",
+  "canonical_shell_count": 234,
+  "canonical_zero": [
+    "0",
+    "0",
+    "0",
+    "0",
+    "0"
+  ],
+  "evidence_level": "hostile firewall audit only",
+  "exploration_id": "EXP-001338",
+  "non_claims": [
+    "This result does not compute a correlated finite-cutoff Gibbs tube probability.",
+    "It does not prove an entropy density, partition convergence, cutoff-uniform bound, or tightness.",
+    "It does not control phase or singlet-flat directions; the flat proxy records a zero energy barrier.",
+    "It does not remove the rho floor, select a physical-empty branch, or identify Reading-H with any active branch.",
+    "It does not close A6/A7, Pre-A, Sector A, QFT, Yang--Mills, gravity, continuum, or mass gap.",
+    "The established A6/A7 functional, T-054 forward method, T-059/T-061 inverse method, owner order, and promotion firewalls are unchanged."
+  ],
+  "result_id": "R-463",
+  "run_kind": "hostile",
+  "schema": "tect/a6-classii-active-branch-tube-metric-hostile-result/1.0",
+  "script_version": "1.0.0",
+  "source_hash": "cb81f9cdb24fe6691970766de2a72c42e517d641a249a0d980d4d34e5a3dabc4",
+  "verdict": "HOSTILE_MUTATIONS_REJECTED"
+}
