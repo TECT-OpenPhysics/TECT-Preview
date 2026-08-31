@@ -1,0 +1,120 @@
+{
+  "schema": "tect/a6-classii-positive-mass-tube-envelope/1.0",
+  "audit_id": "A6-CLASSII-POSITIVE-MASS-TUBE-ENVELOPE-v1",
+  "result_id": "R-466",
+  "exploration_id": "EXP-001341",
+  "task_id": "T-054",
+  "claim_ids": ["A6-CLASSII-UV-POWER-COUNTING", "A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE"],
+  "title": "Finite positive-mass tube lower-bound interface and coarse scaling boundary",
+  "tier": "T0",
+  "claim_bearing": false,
+  "status": "FINITE_CONDITIONAL_TUBE_BOUND_AUDITED_SOURCE_OWNER_OPEN",
+  "question": "What exact finite Gibbs-mass lower bound follows from the existing R-464/R-465 comparison when a measurable positive-volume branch tube and an energy ceiling are supplied?",
+  "purpose": "Turn the positive-mass tube prerequisite into a quantitative, auditable interface without changing the established A6, T-054, T-059, or T-061 methods.",
+  "inputs": {
+    "a1_production_functional_manifest": {"path": "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/production_functional_manifest.json", "sha256": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565"},
+    "r464_finite_gibbs_manifest": {"path": "strategy/a6-classii-finite-gibbs-conditioning-manifest.json", "sha256": "4dc2347104e3c7078dc0b803b1680768703f4858ba0e05888c7798c29c39064d"},
+    "r465_partition_envelope_manifest": {"path": "strategy/a6-classii-partition-envelope-manifest.json", "sha256": "fc4c2ba604439e2eed6e4db540a6bdaa9259958f0c953fe61efe30215b6744d6"}
+  },
+  "methods_preserved": {
+    "a1_a6_a7_functional_unchanged": true,
+    "t054_forward_owner_order_unchanged": true,
+    "t059_t061_observation_first_lane_unchanged": true,
+    "r463_metric_used_only_as_future_input": true,
+    "no_conditional_mean_substitution": true,
+    "no_physical_empty_substitution": true,
+    "no_tier_change": true,
+    "additive_interface_only": true
+  },
+  "exact_scope": {
+    "domain": "finite spectral Galerkin space with m=(2N+1)^3 sites and d=6m real coordinates",
+    "tube": "B_N(c,delta)=c+[-delta,delta]^d with delta>0 and measurable embedding supplied by a later owner",
+    "tube_volume": "vol(B_N)=(2*delta)^d",
+    "partition_upper": "Z_N(beta)<=Z_upper_N(beta) from the R-465 radial comparison",
+    "energy_ceiling": "F_N(z)<=E_tube for every z in B_N",
+    "mass_bound": "mu_N(B_N)>=vol(B_N)*exp(-beta*E_tube)/Z_upper_N(beta)",
+    "log_budget": "L_N(beta)=d*log(2*delta)-beta*E_tube-log(Z_upper_N(beta))",
+    "uniformity_test": "A nonvanishing tube mass would require liminf_N L_N(beta)>-infinity; this is not asserted",
+    "fixtures": "owner-neutral delta=1/16 and E_tube=1 over N=[1,2,3,4,6,8,10], beta=[1/2,1,2]",
+    "limit_order": "none; fixed-cutoff conditional interface only"
+  },
+  "theorem": {
+    "positive_volume": "delta>0 implies the box tube has strictly positive Lebesgue volume",
+    "finite_lower_bound": "A tube energy ceiling and an R-465 partition upper bound imply the displayed finite Gibbs-mass lower bound",
+    "log_decomposition": "The lower-bound logarithm separates geometric volume, Boltzmann ceiling, and comparison normalization",
+    "scaling_boundary": "For the declared fixed-width owner-neutral fixtures, the coarse lower log is finite and strictly decreases with cutoff; no uniform conclusion follows"
+  },
+  "proof_skeleton": [
+    "Retain the R-464/R-465 lower-energy and upper-partition comparisons.",
+    "Use the supplied pointwise energy ceiling to lower-bound the Boltzmann integral over a measurable box tube.",
+    "Use the exact d-dimensional box volume and divide by the R-465 upper partition envelope.",
+    "Audit the resulting log budget and its cutoff trend without promoting it to a uniform probability or entropy theorem.",
+    "Run non-importing independent, hostile, integrated, and Lean checks."
+  ],
+  "assumptions": [
+    "The R-464 sextic comparison and R-465 radial partition upper envelope are valid at each fixed cutoff.",
+    "A later owner supplies a measurable branch embedding and a valid pointwise energy ceiling on its tube.",
+    "The half-width and energy ceiling in this packet are declared audit fixtures, not fitted or physical values."
+  ],
+  "missing_assumptions": [
+    "A source-owned active-branch embedding and positive-mass tube tied to R-461/R-463.",
+    "An actual correlated partition normalization with cutoff- and volume-uniform bounds.",
+    "A branch-relative entropy/Jacobian compensator, tightness, floor removal, and ordered continuum limits.",
+    "A source-owned Q3LOCK dynamics, physical branch, QFT/Yang--Mills identity, or mass-gap bridge."
+  ],
+  "adversarial_review": [
+    {"axis": "box-volume-exponent", "check": "Could the d-dimensional volume lose a coordinate?", "disposition": "REJECTED by exact volume identity and hostile mutation."},
+    {"axis": "half-width-side", "check": "Could delta replace the side 2*delta?", "disposition": "REJECTED by the declared side identity."},
+    {"axis": "boltzmann-ceiling", "check": "Could beta*E_tube be omitted?", "disposition": "REJECTED by hostile mutation."},
+    {"axis": "partition-direction", "check": "Could the upper partition comparison be used in reverse?", "disposition": "REJECTED by the ratio inequality and hostile mutation."},
+    {"axis": "source-ownership", "check": "Could synthetic fixtures be called a source-owned branch?", "disposition": "UPHELD-REJECTED; owner-neutral status is explicit."},
+    {"axis": "uniformity", "check": "Can finite decreasing rows be called a uniform mass theorem?", "disposition": "UPHELD-REJECTED; only the liminf criterion is recorded."},
+    {"axis": "null-branch", "check": "Can an exact zero-mass branch be conditioned by this box formula?", "disposition": "REJECTED; positive volume is required."},
+    {"axis": "method-overhaul", "check": "Does this interface replace an existing method or owner order?", "disposition": "DISMISSED; it is an additive R-464/R-465 consequence."}
+  ],
+  "test_oracles": {
+    "primary_minimum_assertions": 60,
+    "independent_minimum_assertions": 60,
+    "hostile_mutation_count": 8,
+    "lean_declarations": ["box_volume_positive", "box_volume_identity", "tube_mass_lower_ratio", "lower_ratio_nonnegative"]
+  },
+  "audit": {"cutoffs": [1, 2, 3, 4, 6, 8, 10], "betas": ["1/2", "1", "2"], "tube_half_width": "1/16", "tube_energy_ceiling": "1", "coordinate_convention": "six real coordinates per site", "no_numerical_gibbs_sampling": true},
+  "scope_firewall": {
+    "finite_conditional_lower_bound_closed": true,
+    "source_owned_tube_admitted": false,
+    "actual_correlated_partition_closed": false,
+    "branch_probability_closed": false,
+    "entropy_density_closed": false,
+    "cutoff_uniform_closed": false,
+    "tightness_closed": false,
+    "floor_removal_closed": false,
+    "continuum_closed": false,
+    "physical_branch_selected": false,
+    "pre_a_closed": false,
+    "sector_a_closed": false,
+    "qft_identity_closed": false,
+    "yang_mills_identity_closed": false,
+    "mass_gap_closed": false,
+    "no_tier_change": true,
+    "no_pdf": true
+  },
+  "evidence_level": "T0 exact finite conditional Gibbs-mass lower-bound interface with owner-neutral box fixtures",
+  "non_claims": [
+    "The owner-neutral box is not a source-owned active branch and does not select a physical sector.",
+    "The finite lower bound is conditional on an energy ceiling and is not cutoff-uniform.",
+    "The decreasing coarse log bound diagnoses the present full-dimensional comparison; it is not a no-go theorem for branch-relative normalization.",
+    "No entropy density, tightness, floor removal, continuum, Pre-A, Sector-A, QFT, Yang--Mills or mass-gap conclusion follows.",
+    "Existing T-054 forward, T-059/T-061 inverse methods, owner order and promotion firewalls are unchanged."
+  ],
+  "files": {
+    "lean": {"path": "verification/lean/Tect/R466.lean", "sha256": "72c1a3231fedd91735e28d9583fcea949c3dcf3b259891c7f260811ec2ecdb43"},
+    "primary": {"path": "verification/scripts/a6_classii_positive_mass_tube_envelope.py", "sha256": "fcf50c01ad2864360413d520fad1c338500b0f8c615a0906f04100e0ad666788"},
+    "independent": {"path": "codes/foundations/a6_classii_positive_mass_tube_envelope_independent.py", "sha256": "baf6c84187d6c3e4df357b679b00d9510c5e1c2e04cb13fc0b8c485f34b2026f"},
+    "hostile": {"path": "codes/foundations/a6_classii_positive_mass_tube_envelope_hostile.py", "sha256": "815c906933cc905c57d117de49023f0911c4926c766c19be9ecd3b6d3dcdeb17"},
+    "integrated": {"path": "verification/scripts/a6_classii_positive_mass_tube_envelope_verify.py", "sha256": "b116642cb9f4de2b54ffef1336ae3c5a5a214bae711f79db43aed9c9b4006a94"},
+    "certificate": {"path": "strategy/a6-classii-positive-mass-tube-envelope-certificate-260831.md", "sha256": "802a4464b5b6faf3126c705d8ec007c14432915cc10fd3a8ff5084c5e5a9ae9d"}
+  },
+  "formal_integration": {"results": ["R-466"], "event_ordinal": 815, "no_new_negative_ids": [], "no_tier_change": true, "no_pdf": true},
+  "boundary": "R-466 supplies only a fixed-cutoff conditional tube-mass lower-bound interface. The owner embedding, actual energy ceiling, correlated partition asymptotic, entropy/Jacobian compensator, uniformity, tightness, limits, and physical identity remain open.",
+  "next_action": "Hash-pin a source-owned active-branch embedding, measurable tube and energy ceiling; instantiate R-466 with R-463's metric and test a branch-relative entropy/Jacobian compensator without repeating the full-dimensional proxy."
+}

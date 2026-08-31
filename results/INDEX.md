@@ -5,10 +5,11 @@
 
 Authorities: `RESULTS-LEDGER.md`.
 
-**299 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
+**300 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
 
 | ID | Result | Tier/scope |
 |---|---|---|
+| [`R-466`](../RESULTS-LEDGER.md#r-466) | Finite positive-mass tube lower-bound interface and coarse scaling boundary | T0 |
 | [`R-465`](../RESULTS-LEDGER.md#r-465) | Finite-cutoff partition comparison envelope and norm-volume pressure diagnostic | T0 |
 | [`R-464`](../RESULTS-LEDGER.md#r-464) | Finite-cutoff Gibbs integrability and positive-mass branch conditioning | T0 |
 | [`R-463`](../RESULTS-LEDGER.md#r-463) | Fixed-floor active-branch tube metric and finite entropy stress test | T0 |
@@ -33,7 +34,6 @@ Authorities: `RESULTS-LEDGER.md`.
 | [`R-444`](../RESULTS-LEDGER.md#r-444) | Exact exponential shell-tail majorant | T0 |
 | [`R-443`](../RESULTS-LEDGER.md#r-443) | Arbitrary finite rectangular axis-parity matching theorem | T0 |
 | [`R-442`](../RESULTS-LEDGER.md#r-442) | General rectangular axis-parity matching lemma | T0 |
-| [`R-441`](../RESULTS-LEDGER.md#r-441) | Reading-H physical-empty bounded test owner execution (blocked) | T0 |
 
 Search without loading the full ledger:
 

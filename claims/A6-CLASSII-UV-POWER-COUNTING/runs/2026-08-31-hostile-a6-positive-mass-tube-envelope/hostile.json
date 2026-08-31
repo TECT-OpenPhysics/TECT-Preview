@@ -1,0 +1,67 @@
+{
+  "assertion_summary": {
+    "passed": 8,
+    "total": 8
+  },
+  "canonical_fixture": {
+    "box_volume": "1/199791907220223502808422222706762643567910281130558153654986045416023791284464999687699590596063486154228923591770023865308670443474450259602571264",
+    "coefficient": "512/18225",
+    "cutoff": 1,
+    "dimension": 162,
+    "finite": true,
+    "tube_half_width": "1/16"
+  },
+  "exploration_id": "EXP-001341",
+  "mutations": [
+    {
+      "mutation": "drop_one_real_coordinate",
+      "rejected": true,
+      "status": "PASS"
+    },
+    {
+      "mutation": "use_half_width_as_side",
+      "rejected": true,
+      "status": "PASS"
+    },
+    {
+      "mutation": "omit_beta_energy_ceiling",
+      "rejected": true,
+      "status": "PASS"
+    },
+    {
+      "mutation": "reverse_partition_comparison",
+      "rejected": true,
+      "status": "PASS"
+    },
+    {
+      "mutation": "rename_conditional_bound_as_actual_probability",
+      "rejected": true,
+      "status": "PASS"
+    },
+    {
+      "mutation": "assert_fixed_width_uniform_positive_floor",
+      "rejected": true,
+      "status": "PASS"
+    },
+    {
+      "mutation": "condition_on_zero_mass_exact_branch",
+      "rejected": true,
+      "status": "PASS"
+    },
+    {
+      "mutation": "allow_nonpositive_tube_width",
+      "rejected": true,
+      "status": "PASS"
+    }
+  ],
+  "non_claims": [
+    "Mutation rejection is not a source-owner admission.",
+    "No cutoff-uniform, entropy, tightness, continuum, physical, QFT, Yang--Mills or mass-gap claim is admitted.",
+    "Existing research methods and owner order are unchanged."
+  ],
+  "result_id": "R-466",
+  "run_kind": "hostile",
+  "schema": "tect/a6-classii-positive-mass-tube-envelope-hostile/1.0",
+  "scope": "Hostile mutation firewall only; no source-owned branch, uniform probability, entropy, or physical result is inferred.",
+  "verdict": "HOSTILE_MUTATIONS_REJECTED"
+}

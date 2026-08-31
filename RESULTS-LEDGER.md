@@ -22,6 +22,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-466](#r-466) | Finite positive-mass tube lower-bound interface and coarse scaling boundary | R-466 v1.0 is a T0 claim-nonbearing additive A6/A7 interface under the unchanged R-464/R-465 comparison. For a later owner-supplied measurable box tube `B_N=c_N+[-delta,delta]^d` with `delta>0` and energy ceiling `E_tube`, the exact finite Gibbs-mass lower bound is `mu_N(B_N)>=vol(B_N)exp(-beta E_tube)/Z_upper_N`; its log budget separates geometric volume, Boltzmann ceiling and comparison normalization. Owner-neutral fixtures `delta=1/16`, `E_tube=1` pass primary 124/124, independent 122/122, hostile 8/8, integrated 53/53 and Lean R466; the coarse log decreases with cutoff, so source ownership, branch-relative entropy/Jacobian control and uniformity remain open. No physical, continuum, QFT, Yang--Mills or mass-gap conclusion follows; existing methods and owner order are unchanged |
 | [R-465](#r-465) | Finite-cutoff partition comparison envelope and norm-volume pressure diagnostic | R-465 v1.0 is a T0 claim-nonbearing additive A6/A7 diagnostic derived from the unchanged R-464 sextic comparison. The finite radial upper envelope is evaluated for cutoffs [1,2,3,4,5,6,8,10,12,16,20] and beta [1/2,1,2]; exact `a_N*m^3=gamma*V/12` scaling and strict coefficient decrease are independently checked. Primary 146/146, independent 175/175, hostile 8/8, integrated 56/56 and Lean R465 pass. The pressure term is comparison-only: no actual partition asymptotic, entropy density, branch probability, cutoff-uniformity, tightness, continuum, physical, QFT, Yang--Mills or mass-gap conclusion follows; existing methods and owner order are unchanged |
 | [R-464](#r-464) | Finite-cutoff Gibbs integrability and positive-mass branch conditioning | R-464 v1.0 is a T0 claim-nonbearing additive A6/A7 prerequisite under the unchanged fixed-floor Class-II functional. Exact A1 coefficient arithmetic gives a degree-six coercive lower comparison and finite-dimensional Gibbs integrability at every fixed cutoff; the pure-singlet branch has codimension 4*m and zero Lebesgue mass, so only positive-mass measurable tubes may be conditioned. Primary 24/24, independent 134/134, hostile 8/8, integrated 49/49 and Lean R464 pass. No branch probability, entropy, cutoff-uniformity, tightness, continuum, physical, QFT, Yang--Mills or mass-gap conclusion follows; existing methods and owner order are unchanged |
 | [R-463](#r-463) | Fixed-floor active-branch tube metric and finite entropy stress test | R-463 v1.0 is a T0 claim-nonbearing additive A6/A7 interface under the unchanged fixed-floor Class-II functional. The exact radial sum-of-squares gap defines an active metric dominated by 2*e_II; bounded local-grid proxies are reported with primary 44/44, independent 6270/6270, hostile 8/8, integrated 48/48 and Lean R463 pass. A separate flat proxy has zero energy barrier. No correlated Gibbs, entropy density, partition, tightness, continuum, physical, QFT, Yang--Mills or mass-gap conclusion follows; existing methods and owner order are unchanged |
@@ -831,6 +832,57 @@ score M3 only after a versioned source owner, state/uncertainty contract,
 candidate-neutral two-time observable, complete map stages and prospective
 holdout exist. Continue unchanged T-054 Q3LOCK owner intake and T-059/T-061
 observation-source intake; do not manufacture another finite mobility table.
+
+<a id="r-466"></a>
+### R-466 -- Finite positive-mass tube lower-bound interface and coarse scaling boundary
+
+**Result ID.** `A6-CLASSII-POSITIVE-MASS-TUBE-ENVELOPE-v1` (R-466).
+
+**Version and exact scope.** R-466 v1.0 is a T0, claim-nonbearing additive
+interface for the existing A6/A7 fixed-floor Class-II route. It retains the
+R-464/R-465 comparisons, the T-054 forward owner order, and the T-059/T-061
+observation-first lane. At cutoff `N`, with `m=(2N+1)^3` and `d=6*m`, a later
+owner supplies a measurable box-like tube
+
+```text
+B_N(c,delta)=c+[-delta,delta]^d,   delta>0,
+```
+
+and a pointwise energy ceiling `F_N<=E_tube` on that tube. Its exact volume is
+`(2*delta)^d`. Combining the Boltzmann numerator lower bound with the R-465
+partition upper envelope gives
+
+```text
+mu_N(B_N) >= (2*delta)^d * exp(-beta*E_tube) / Z_upper_N(beta),
+```
+
+with logarithmic budget `d*log(2*delta)-beta*E_tube-log(Z_upper_N(beta))`.
+
+**Audit and interpretation.** The declared owner-neutral fixtures
+`delta=1/16`, `E_tube=1` are evaluated over `N=[1,2,3,4,6,8,10]` and
+`beta=[1/2,1,2]`. The primary audit passes 124/124 assertions, the independent
+non-importing audit passes 122/122, eight hostile mutations are rejected, the
+integrated verifier passes 53/53, and Lean `R466.lean` compiles. Every log
+lower bound is finite and strictly decreases with cutoff for these fixtures.
+This quantifies the geometric/normalization cost that a real branch-relative
+estimate must compensate.
+
+**Boundary and non-claims.** The fixtures are not a source-owned active branch,
+and no actual A1 energy ceiling or physical probability is admitted. The
+decreasing finite log rows are not a cutoff-uniform obstruction theorem; they
+only diagnose the present full-dimensional comparison. R-466 does not provide
+source ownership, entropy/Jacobian compensation, tightness, floor removal,
+ordered limits, a continuum or physical branch, Pre-A, Sector A, QFT,
+Yang--Mills, gravity, or a mass gap. No claim tier changes and no intermediate
+PDF is issued; all existing methods and owner-order rules remain unchanged.
+
+**Proven in:** [R-466 certificate](strategy/a6-classii-positive-mass-tube-envelope-certificate-260831.md), [machine manifest](strategy/a6-classii-positive-mass-tube-envelope-manifest.json), [primary script](verification/scripts/a6_classii_positive_mass_tube_envelope.py), [independent script](codes/foundations/a6_classii_positive_mass_tube_envelope_independent.py), [hostile script](codes/foundations/a6_classii_positive_mass_tube_envelope_hostile.py), [integrated verifier](verification/scripts/a6_classii_positive_mass_tube_envelope_verify.py), [integrated run](claims/A6-CLASSII-UV-POWER-COUNTING/runs/2026-08-31-integrated-a6-positive-mass-tube-envelope/integrated.json), [Lean kernel](verification/lean/Tect/R466.lean), and [exploration record](strategy/a6-classii-positive-mass-tube-envelope-exploration.json).
+
+**Next action.** Obtain and hash-pin a source-owned active-branch embedding,
+measurable tube, and valid energy ceiling. Then instantiate this inequality
+with the R-463 metric and test a branch-relative entropy/Jacobian compensator;
+do not repeat the full-dimensional finite proxy if the owner fields remain
+missing.
 
 <a id="r-465"></a>
 ### R-465 -- Finite-cutoff partition comparison envelope and norm-volume pressure diagnostic
