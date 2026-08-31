@@ -1,0 +1,267 @@
+{
+  "schema": "tect/a5-r475-lean-crosscheck-primary/1.0",
+  "claim_id": "A5-SECTOR-A-SYNTHESIS",
+  "result_id": "R-475",
+  "exploration_id": "EXP-001354",
+  "script_version": "1.0.0",
+  "verdict": "R475-A5-CONTRACT-PRIMARY-PASS",
+  "theorem_contract_sha256": "df01a1a3606d979307ac0bb8c9de14a4ab2d68fd83d228ed38f9e470eba823fc",
+  "hypotheses": [
+    "A5-H1-CANONICAL-KERNEL-MANIFEST",
+    "A1-KERNEL-CONV",
+    "A1-SHELL-POSITIVITY",
+    "A2-H2-SEXTIC-COERCIVITY",
+    "A2-H3-CANONICAL-PRODUCTION-FUNCTIONAL",
+    "A3-H1-DIM3-Q4-KERNEL",
+    "A3-H2-IR-POSITIVITY"
+  ],
+  "branches": {
+    "full_production": [
+      "A1-PRODUCTION-FUNCTIONAL-REALISATION",
+      "A2-FULL-PRODUCTION-WELLPOSED",
+      "A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM"
+    ],
+    "scalar_continuum": [
+      "A3-PERTURBATIVE-CONTINUUM-CORRELATORS",
+      "A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE"
+    ]
+  },
+  "mass_fork": {
+    "scalar_shell_mass_squared": "0.005",
+    "full_shell_mass_squared": "0.26000000000947494031",
+    "absolute_difference": "0.25500000000947494031"
+  },
+  "assertions": [
+    {
+      "name": "manifest_scope_is_operator_confirmed_t6",
+      "status": "PASS",
+      "actual": {
+        "schema": "tect/a5-t6-conditional-composition/1.1",
+        "claim_id": "A5-SECTOR-A-SYNTHESIS",
+        "candidate_tier": "T6",
+        "publication_state": "T6-PUBLISHED-OPERATOR-CONFIRMED"
+      },
+      "expected": "tect/a5-t6-conditional-composition/1.1 + T6-PUBLISHED-OPERATOR-CONFIRMED"
+    },
+    {
+      "name": "theorem_contract_digest_matches",
+      "status": "PASS",
+      "actual": "df01a1a3606d979307ac0bb8c9de14a4ab2d68fd83d228ed38f9e470eba823fc",
+      "expected": "df01a1a3606d979307ac0bb8c9de14a4ab2d68fd83d228ed38f9e470eba823fc"
+    },
+    {
+      "name": "operator_confirmation_source_and_pdf_are_hash_bound",
+      "status": "PASS",
+      "actual": {
+        "status": "CONFIRMED",
+        "source_exists": true,
+        "pdf_exists": true,
+        "source_sha256": "58d2f5ab1ed56b2d2fb390cae5323f2b7b3b52fb56006cc637739e1baa1ea944",
+        "pdf_sha256": "60a9eb9efd3c3861374ed807b5d38a7571bd484adb2737c8e7e7664a6b021883"
+      },
+      "expected": "confirmed source/PDF hashes and published_bundle_authorized=true"
+    },
+    {
+      "name": "all_declared_a5_authorities_match",
+      "status": "PASS",
+      "actual": [
+        {
+          "id": "primary_audit",
+          "path": "codes/foundations/a5_t6_conditional_primary.py",
+          "actual": "9f0cafa6e51e4f7125e7f6ee4a40c54e223b117148d1720cbe3a079acb199708",
+          "expected": "9f0cafa6e51e4f7125e7f6ee4a40c54e223b117148d1720cbe3a079acb199708"
+        },
+        {
+          "id": "independent_audit",
+          "path": "codes/foundations/a5_t6_conditional_independent.py",
+          "actual": "f50063f7018c218fe4ee90aacd0bea0b9efed66ccb7c9341941ea28f79018732",
+          "expected": "f50063f7018c218fe4ee90aacd0bea0b9efed66ccb7c9341941ea28f79018732"
+        },
+        {
+          "id": "one_command_verifier",
+          "path": "codes/foundations/a5_t6_conditional_verify.py",
+          "actual": "359ea6357fcdb694edec097707ba940da5299922479d4c7738b092ff2fea4bb7",
+          "expected": "359ea6357fcdb694edec097707ba940da5299922479d4c7738b092ff2fea4bb7"
+        },
+        {
+          "id": "referee_source",
+          "path": "claims/a5/notes/a5-t6-conditional-composition-referee-package-260719-260720-v1.1.tex.txt",
+          "actual": "b9a4494b4db87f50c34f4047cd0c825f6d414d4bed5ad4e844425151ff287252",
+          "expected": "b9a4494b4db87f50c34f4047cd0c825f6d414d4bed5ad4e844425151ff287252"
+        },
+        {
+          "id": "referee_pdf",
+          "path": "claims/a5/notes/a5-t6-conditional-composition-referee-package-260719-260720-v1.1.pdf",
+          "actual": "2dc66dfaa41715b12dd54ccc06194701e3ab0b86075e1e0797df61cf9213f20f",
+          "expected": "2dc66dfaa41715b12dd54ccc06194701e3ab0b86075e1e0797df61cf9213f20f"
+        }
+      ],
+      "expected": "every declared authority hash"
+    },
+    {
+      "name": "exact_seven_hypotheses_are_registered",
+      "status": "PASS",
+      "actual": {
+        "hypotheses": [
+          "A5-H1-CANONICAL-KERNEL-MANIFEST",
+          "A1-KERNEL-CONV",
+          "A1-SHELL-POSITIVITY",
+          "A2-H2-SEXTIC-COERCIVITY",
+          "A2-H3-CANONICAL-PRODUCTION-FUNCTIONAL",
+          "A3-H1-DIM3-Q4-KERNEL",
+          "A3-H2-IR-POSITIVITY"
+        ],
+        "registered": {
+          "A5-H1-CANONICAL-KERNEL-MANIFEST": true,
+          "A1-KERNEL-CONV": true,
+          "A1-SHELL-POSITIVITY": true,
+          "A2-H2-SEXTIC-COERCIVITY": true,
+          "A2-H3-CANONICAL-PRODUCTION-FUNCTIONAL": true,
+          "A3-H1-DIM3-Q4-KERNEL": true,
+          "A3-H2-IR-POSITIVITY": true
+        }
+      },
+      "expected": [
+        "A5-H1-CANONICAL-KERNEL-MANIFEST",
+        "A1-KERNEL-CONV",
+        "A1-SHELL-POSITIVITY",
+        "A2-H2-SEXTIC-COERCIVITY",
+        "A2-H3-CANONICAL-PRODUCTION-FUNCTIONAL",
+        "A3-H1-DIM3-Q4-KERNEL",
+        "A3-H2-IR-POSITIVITY"
+      ]
+    },
+    {
+      "name": "sub_t6_lifts_are_explicit_and_named",
+      "status": "PASS",
+      "actual": {
+        "A1-PRODUCTION-KERNEL-MANIFEST": "A5-H1-CANONICAL-KERNEL-MANIFEST",
+        "A1-PRODUCTION-FUNCTIONAL-REALISATION": "A2-H3-CANONICAL-PRODUCTION-FUNCTIONAL"
+      },
+      "expected": "two explicit lifts into the seven-hypothesis set"
+    },
+    {
+      "name": "six_premises_have_four_t6_rows_and_two_lifts",
+      "status": "PASS",
+      "actual": {
+        "premise_tiers": {
+          "A1-PRODUCTION-KERNEL-MANIFEST": "T5",
+          "A1-PRODUCTION-FUNCTIONAL-REALISATION": "T5",
+          "A2-FULL-PRODUCTION-WELLPOSED": "T6",
+          "A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM": "T6",
+          "A3-PERTURBATIVE-CONTINUUM-CORRELATORS": "T6",
+          "A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE": "T6"
+        },
+        "lifts": {
+          "A1-PRODUCTION-KERNEL-MANIFEST": "A5-H1-CANONICAL-KERNEL-MANIFEST",
+          "A1-PRODUCTION-FUNCTIONAL-REALISATION": "A2-H3-CANONICAL-PRODUCTION-FUNCTIONAL"
+        }
+      },
+      "expected": "six premises; four T6 and two lifted T5 premises"
+    },
+    {
+      "name": "full_and_scalar_branch_topology_is_disjoint",
+      "status": "PASS",
+      "actual": {
+        "full_production": [
+          "A1-PRODUCTION-FUNCTIONAL-REALISATION",
+          "A2-FULL-PRODUCTION-WELLPOSED",
+          "A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM"
+        ],
+        "scalar_continuum": [
+          "A3-PERTURBATIVE-CONTINUUM-CORRELATORS",
+          "A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE"
+        ]
+      },
+      "expected": {
+        "full_production": [
+          "A1-PRODUCTION-FUNCTIONAL-REALISATION",
+          "A2-FULL-PRODUCTION-WELLPOSED",
+          "A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM"
+        ],
+        "scalar_continuum": [
+          "A3-PERTURBATIVE-CONTINUUM-CORRELATORS",
+          "A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE"
+        ]
+      }
+    },
+    {
+      "name": "shell_mass_fork_is_derived_and_separated",
+      "status": "PASS",
+      "actual": {
+        "scalar_mass_squared": "0.005",
+        "full_mass_squared": "0.26000000000947494031",
+        "absolute_difference": "0.25500000000947494031"
+      },
+      "expected": {
+        "scalar": "0.005",
+        "full": "0.260000000009475",
+        "difference_gt": "0.2"
+      }
+    },
+    {
+      "name": "exclusion_boundary_contains_no_overclaim_tokens",
+      "status": "PASS",
+      "actual": {
+        "missing_tokens": []
+      },
+      "expected": "all required exclusion tokens present"
+    },
+    {
+      "name": "weakness_map_separates_open_classii_and_bcc",
+      "status": "PASS",
+      "actual": {
+        "count": 14,
+        "statuses": [
+          "CONTROLLED-BY-CONDITIONAL-T6",
+          "OPEN-SEPARATE-CLAIM"
+        ]
+      },
+      "expected": "unique map with controlled/open statuses and required open rows"
+    },
+    {
+      "name": "claim_card_remains_confirmed_t6_without_open_operator_gate",
+      "status": "PASS",
+      "actual": {
+        "tier": "T6",
+        "open_gates": [],
+        "hypotheses": [
+          "A5-H1-CANONICAL-KERNEL-MANIFEST",
+          "A1-KERNEL-CONV",
+          "A1-SHELL-POSITIVITY",
+          "A2-H2-SEXTIC-COERCIVITY",
+          "A2-H3-CANONICAL-PRODUCTION-FUNCTIONAL",
+          "A3-H1-DIM3-Q4-KERNEL",
+          "A3-H2-IR-POSITIVITY"
+        ]
+      },
+      "expected": "T6, operator gate absent, exact seven hypotheses"
+    },
+    {
+      "name": "enacted_a5_primary_reexecutes_in_temp_output",
+      "status": "PASS",
+      "actual": {
+        "returncode": 0,
+        "verdict": "A5-T6-CONDITIONAL-PRIMARY-PASS",
+        "summary": {
+          "passed": 22,
+          "total": 22
+        }
+      },
+      "expected": "A5-T6-CONDITIONAL-PRIMARY-PASS"
+    }
+  ],
+  "assertion_summary": {
+    "passed": 13,
+    "total": 13
+  },
+  "environment": {
+    "python": "3.12.9",
+    "platform": "Windows-11-10.0.26200-SP0"
+  },
+  "evidence_level": "T0 exact Lean/contract cross-check for the enacted A5 T6 conditional-composition boundary",
+  "non_claims": [
+    "No A5 analytic theorem is reproved by this sidecar.",
+    "No full derivative Class-II constructive measure, BCC selection, physical closure, QFT, Yang--Mills, continuum or mass-gap result follows."
+  ]
+}

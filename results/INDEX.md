@@ -5,10 +5,11 @@
 
 Authorities: `RESULTS-LEDGER.md`.
 
-**308 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
+**309 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
 
 | ID | Result | Tier/scope |
 |---|---|---|
+| [`R-475`](../RESULTS-LEDGER.md#r-475) | Lean cross-check of the A5 branch-aware conditional-composition contract | T0 claim-nonbearing auxiliary support; no gate or claim-tier change. |
 | [`R-474`](../RESULTS-LEDGER.md#r-474) | Conditional ordered-limit rectangular-tail bridge | T0 |
 | [`R-473`](../RESULTS-LEDGER.md#r-473) | HOLD-LC-001 TTE event-row feature index | T0 |
 | [`R-472`](../RESULTS-LEDGER.md#r-472) | A2/R-157-R-158 exact-core Lean cross-check | T0 |
@@ -33,7 +34,6 @@ Authorities: `RESULTS-LEDGER.md`.
 | [`R-453`](../RESULTS-LEDGER.md#r-453) | Defect-stable history-resolvent recurrence envelope | T0 |
 | [`R-452`](../RESULTS-LEDGER.md#r-452) | Conditional history-resolvent recurrence envelope | T0 |
 | [`R-451`](../RESULTS-LEDGER.md#r-451) | Conditional two-sided history recurrence to all-shape exhaustion Cauchy transfer | T0 |
-| [`R-450`](../RESULTS-LEDGER.md#r-450) | Conditional two-orientation state-weighted shell-tail transfer | T0 |
 
 Search without loading the full ledger:
 

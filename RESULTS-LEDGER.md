@@ -22,6 +22,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-475](#r-475) | Lean cross-check of the A5 branch-aware conditional-composition contract | R-475 / EXP-001354 is a T0 claim-nonbearing auxiliary sidecar for the already operator-confirmed A5 T6 contract. The exact seven-hypothesis list, disjoint full-production/scalar-continuum branches and source-derived shell-mass fork pass primary 13/13, independent 9/9, hostile 11/11 with all 10 mutations rejected, integrated 36/36 and Lean R475. The sidecar does not re-prove A1--A5 analysis or supply source-owned dynamics, a common core, uniform estimates, an ordered limit, physical/Pre-A/Sector-A closure, QFT, Yang--Mills, continuum or mass-gap result; existing methods and owner order remain unchanged |
 | [R-474](#r-474) | Conditional ordered-limit rectangular-tail bridge | R-474 / EXP-001353 is a T0 claim-nonbearing auxiliary interface. Strict epsilon/2 cutoff and volume tails compose by the triangle inequality in both declared orders into a rectangular tail; primary 40/40, independent 16/16, hostile 10/10 mutations rejected, integrated 13/13 and Lean R474 pass. The fixture does not supply source-owned dynamics, a common norm, uniform estimates, an ordered limit, physical identity, Pre-A, Sector-A, QFT, Yang--Mills, continuum or mass-gap result; existing methods and owner order remain unchanged |
 | [R-473](#r-473) | HOLD-LC-001 TTE event-row feature index | R-473 / EXP-001348 is a T0 claim-nonbearing finite raw-event feature index. The two byte-frozen Fermi EVENTS tables (NaI N0 and BGO B0) decode to 272,615 and 394,501 rows, with a common 263-bin one-second trigger-relative histogram; primary 23/23, independent 14/14, hostile 12/12 and integrated 25/25 pass, including Lean R473. Existing T-054 forward and T-059/T-061 inverse methods, owner order and promotion firewalls are unchanged; likelihood, covariance, geocentre, calibration, scoring, prospective, physical, Pre-A, Sector-A, QFT, Yang--Mills, continuum and mass-gap conclusions remain blocked |
 | [R-472](#r-472) | A2/R-157-R-158 exact-core Lean cross-check | R-472 / EXP-001347 is a T0 claim-nonbearing additive sidecar. The pinned Lean 4.32.1 kernel checks the exact rational gap, radial gap, completion, Class-II determinant, internal characteristic polynomial, affine-square, coexistence charge/drop and radial-numerator consequences already used by R-157/R-158; primary 30/30, independent 22/22, hostile 12/12 and integrated 22/22 pass with Lean. Existing T-054 forward and T-059/T-061 inverse methods, owner order and promotion firewalls are unchanged; no PDE, source-owner, physical, Pre-A, Sector-A, QFT, Yang--Mills, continuum or mass-gap conclusion follows |
@@ -840,6 +841,60 @@ score M3 only after a versioned source owner, state/uncertainty contract,
 candidate-neutral two-time observable, complete map stages and prospective
 holdout exist. Continue unchanged T-054 Q3LOCK owner intake and T-059/T-061
 observation-source intake; do not manufacture another finite mobility table.
+
+<a id="r-475"></a>
+### R-475 -- Lean cross-check of the A5 branch-aware conditional-composition contract
+
+**Result ID.** `R-475` (`EXP-001354`).
+
+**Question and exact scope.** Can the already operator-confirmed A5 T6
+branch-aware conditional-composition contract be checked independently for its
+seven named hypotheses, disjoint full-production/scalar-continuum branches and
+source-derived shell-mass firewall without changing the existing proof method
+or tier? The source contract is
+`claims/A5-SECTOR-A-SYNTHESIS/conditional_composition_manifest.json`, with
+`theorem_contract_sha256=df01a1a3606d979307ac0bb8c9de14a4ab2d68fd83d228ed38f9e470eba823fc`.
+The sidecar reads the canonical A1 kernel and production-functional manifests,
+re-derives the two shell masses, and compiles `verification/lean/Tect/R475.lean`
+with Lean `leanprover/lean4:v4.32.1`.
+
+**Proven in.** `strategy/a5-r475-lean-crosscheck-manifest.json`,
+`strategy/a5-r475-lean-crosscheck-certificate-260901.md`, and
+`claims/A5-SECTOR-A-SYNTHESIS/runs/2026-09-01-a5-r475-lean-crosscheck/integrated.json`.
+The primary exact lane passes 13/13, the non-importing independent lane 9/9,
+the fail-closed hostile lane passes 11/11 checks and rejects all 10 mutations,
+the integrated verifier passes 36/36, and the pinned Lean entrypoint compiles.
+The Lean constants are explicitly test oracles for source-derived rational
+values, not fitted physical parameters.
+
+**Assumptions and evidence level.** The operator-confirmed A5 manifest and its
+hash-pinned authorities are authoritative; the existing A1--A4 analytic
+arguments remain the theorem's premises; and the two Python lanes are audit
+reproductions rather than new premises. Evidence is T0 exact contract
+cross-check with independent, hostile, integrated and Lean verification.
+
+**Boundary and non-claims.** This sidecar does not re-prove the analytic A1--A5
+composition theorem and does not supply a source-owned TECT generator or
+transfer, a common invariant core/norm, cutoff/volume/lattice uniform bounds,
+an ordered limit, a physical-sector or observation map, Pre-A/Sector-A closure,
+QFT, Yang--Mills, gravity, continuum or mass gap. It does not identify the
+scalar and full-production parameters or measures. T-054 remains at its
+owner-intake gate; T-059/T-061 remain additive inverse lanes.
+
+**Reuse scope and review.** R-475 is reusable as a provenance and arithmetic
+firewall for the frozen A5 branch boundary. The hostile suite checks source
+placement of the weakness map, branch conflation, numeric copying, tier or
+publication escalation, authority tampering and Lean overreach. If any source
+hash changes, a child lane fails, a hostile mutation is accepted, or Lean stops
+compiling, retain the failure JSON and issue a new versioned sidecar. If a real
+source-owned production dynamics packet and common-core uniform estimates
+arrive, instantiate the ordered-limit contract in a new mainline result rather
+than revising R-475.
+
+**Tier.** T0 claim-nonbearing auxiliary support; no gate or claim-tier change.
+
+**Publication target.** Reusable verification sidecar only; no new theorem
+publication or synthesis PDF is issued by this result.
 
 <a id="r-474"></a>
 ### R-474 -- Conditional ordered-limit rectangular-tail bridge

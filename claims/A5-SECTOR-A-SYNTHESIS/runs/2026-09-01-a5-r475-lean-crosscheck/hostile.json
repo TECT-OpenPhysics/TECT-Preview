@@ -1,0 +1,96 @@
+{
+  "schema": "tect/a5-r475-lean-crosscheck-hostile/1.0",
+  "claim_id": "A5-SECTOR-A-SYNTHESIS",
+  "result_id": "R-475",
+  "exploration_id": "EXP-001354",
+  "script_version": "1.0.0",
+  "verdict": "R475-A5-CONTRACT-HOSTILE-PASS",
+  "contract_fingerprint": "df01a1a3606d979307ac0bb8c9de14a4ab2d68fd83d228ed38f9e470eba823fc",
+  "checks": [
+    {
+      "name": "unmutated_contract_accepts",
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "name": "remove_hypothesis",
+      "status": "PASS",
+      "errors": [
+        "theorem_contract_sha256",
+        "named_hypotheses"
+      ]
+    },
+    {
+      "name": "reorder_hypotheses",
+      "status": "PASS",
+      "errors": [
+        "theorem_contract_sha256",
+        "named_hypotheses"
+      ]
+    },
+    {
+      "name": "promote_tier",
+      "status": "PASS",
+      "errors": [
+        "candidate_tier"
+      ]
+    },
+    {
+      "name": "alter_publication_state",
+      "status": "PASS",
+      "errors": [
+        "publication_state"
+      ]
+    },
+    {
+      "name": "tamper_contract_digest",
+      "status": "PASS",
+      "errors": [
+        "theorem_contract_sha256"
+      ]
+    },
+    {
+      "name": "merge_branch_topology",
+      "status": "PASS",
+      "errors": [
+        "theorem_contract_sha256",
+        "branch_topology"
+      ]
+    },
+    {
+      "name": "collapse_mass_fork",
+      "status": "PASS",
+      "errors": [
+        "full_mass"
+      ]
+    },
+    {
+      "name": "remove_t7_exclusion",
+      "status": "PASS",
+      "errors": [
+        "theorem_contract_sha256",
+        "exclusion:t7"
+      ]
+    },
+    {
+      "name": "tamper_authority_hash",
+      "status": "PASS",
+      "errors": [
+        "authority:referee_source"
+      ]
+    },
+    {
+      "name": "remove_operator_confirmation",
+      "status": "PASS",
+      "errors": [
+        "operator_confirmation"
+      ]
+    }
+  ],
+  "assertion_summary": {
+    "passed": 11,
+    "total": 11,
+    "mutations_rejected": 10
+  },
+  "evidence_level": "T0 fail-closed hostile contract audit; no analytic or physical promotion"
+}

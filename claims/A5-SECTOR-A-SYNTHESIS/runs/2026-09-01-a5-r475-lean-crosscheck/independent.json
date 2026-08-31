@@ -1,0 +1,193 @@
+{
+  "schema": "tect/a5-r475-lean-crosscheck-independent/1.0",
+  "claim_id": "A5-SECTOR-A-SYNTHESIS",
+  "result_id": "R-475",
+  "exploration_id": "EXP-001354",
+  "script_version": "1.0.0",
+  "verdict": "R475-A5-CONTRACT-INDEPENDENT-PASS",
+  "theorem_contract_sha256": "df01a1a3606d979307ac0bb8c9de14a4ab2d68fd83d228ed38f9e470eba823fc",
+  "branches": {
+    "full_production": [
+      "A1-PRODUCTION-FUNCTIONAL-REALISATION",
+      "A2-FULL-PRODUCTION-WELLPOSED",
+      "A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM"
+    ],
+    "scalar_continuum": [
+      "A3-PERTURBATIVE-CONTINUUM-CORRELATORS",
+      "A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE"
+    ]
+  },
+  "mass_fork": {
+    "scalar_shell_mass_squared": "0.005",
+    "full_shell_mass_squared": "0.26000000000947494031",
+    "absolute_difference": "0.25500000000947494031"
+  },
+  "checks": [
+    {
+      "name": "manifest_identity",
+      "status": "PASS",
+      "actual": {
+        "schema": "tect/a5-t6-conditional-composition/1.1",
+        "claim_id": "A5-SECTOR-A-SYNTHESIS",
+        "candidate_tier": "T6",
+        "publication_state": "T6-PUBLISHED-OPERATOR-CONFIRMED"
+      },
+      "expected": "frozen operator-confirmed A5 T6 identity"
+    },
+    {
+      "name": "theorem_digest",
+      "status": "PASS",
+      "actual": "df01a1a3606d979307ac0bb8c9de14a4ab2d68fd83d228ed38f9e470eba823fc",
+      "expected": "df01a1a3606d979307ac0bb8c9de14a4ab2d68fd83d228ed38f9e470eba823fc"
+    },
+    {
+      "name": "authority_hashes",
+      "status": "PASS",
+      "actual": [
+        {
+          "id": "primary_audit",
+          "path": "codes/foundations/a5_t6_conditional_primary.py",
+          "actual": "9f0cafa6e51e4f7125e7f6ee4a40c54e223b117148d1720cbe3a079acb199708",
+          "expected": "9f0cafa6e51e4f7125e7f6ee4a40c54e223b117148d1720cbe3a079acb199708"
+        },
+        {
+          "id": "independent_audit",
+          "path": "codes/foundations/a5_t6_conditional_independent.py",
+          "actual": "f50063f7018c218fe4ee90aacd0bea0b9efed66ccb7c9341941ea28f79018732",
+          "expected": "f50063f7018c218fe4ee90aacd0bea0b9efed66ccb7c9341941ea28f79018732"
+        },
+        {
+          "id": "one_command_verifier",
+          "path": "codes/foundations/a5_t6_conditional_verify.py",
+          "actual": "359ea6357fcdb694edec097707ba940da5299922479d4c7738b092ff2fea4bb7",
+          "expected": "359ea6357fcdb694edec097707ba940da5299922479d4c7738b092ff2fea4bb7"
+        },
+        {
+          "id": "referee_source",
+          "path": "claims/a5/notes/a5-t6-conditional-composition-referee-package-260719-260720-v1.1.tex.txt",
+          "actual": "b9a4494b4db87f50c34f4047cd0c825f6d414d4bed5ad4e844425151ff287252",
+          "expected": "b9a4494b4db87f50c34f4047cd0c825f6d414d4bed5ad4e844425151ff287252"
+        },
+        {
+          "id": "referee_pdf",
+          "path": "claims/a5/notes/a5-t6-conditional-composition-referee-package-260719-260720-v1.1.pdf",
+          "actual": "2dc66dfaa41715b12dd54ccc06194701e3ab0b86075e1e0797df61cf9213f20f",
+          "expected": "2dc66dfaa41715b12dd54ccc06194701e3ab0b86075e1e0797df61cf9213f20f"
+        }
+      ],
+      "expected": "all source/PDF/audit hashes match"
+    },
+    {
+      "name": "hypothesis_order_and_registration",
+      "status": "PASS",
+      "actual": [
+        "A5-H1-CANONICAL-KERNEL-MANIFEST",
+        "A1-KERNEL-CONV",
+        "A1-SHELL-POSITIVITY",
+        "A2-H2-SEXTIC-COERCIVITY",
+        "A2-H3-CANONICAL-PRODUCTION-FUNCTIONAL",
+        "A3-H1-DIM3-Q4-KERNEL",
+        "A3-H2-IR-POSITIVITY"
+      ],
+      "expected": [
+        "A5-H1-CANONICAL-KERNEL-MANIFEST",
+        "A1-KERNEL-CONV",
+        "A1-SHELL-POSITIVITY",
+        "A2-H2-SEXTIC-COERCIVITY",
+        "A2-H3-CANONICAL-PRODUCTION-FUNCTIONAL",
+        "A3-H1-DIM3-Q4-KERNEL",
+        "A3-H2-IR-POSITIVITY"
+      ]
+    },
+    {
+      "name": "premise_tier_partition",
+      "status": "PASS",
+      "actual": {
+        "A1-PRODUCTION-KERNEL-MANIFEST": "T5",
+        "A1-PRODUCTION-FUNCTIONAL-REALISATION": "T5",
+        "A2-FULL-PRODUCTION-WELLPOSED": "T6",
+        "A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM": "T6",
+        "A3-PERTURBATIVE-CONTINUUM-CORRELATORS": "T6",
+        "A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE": "T6"
+      },
+      "expected": "six premises with four T6 rows and two lifted T5 rows"
+    },
+    {
+      "name": "branch_topology",
+      "status": "PASS",
+      "actual": {
+        "full": [
+          "A1-PRODUCTION-FUNCTIONAL-REALISATION",
+          "A2-FULL-PRODUCTION-WELLPOSED",
+          "A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM"
+        ],
+        "scalar": [
+          "A3-PERTURBATIVE-CONTINUUM-CORRELATORS",
+          "A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE"
+        ]
+      },
+      "expected": {
+        "full": [
+          "A1-PRODUCTION-FUNCTIONAL-REALISATION",
+          "A2-FULL-PRODUCTION-WELLPOSED",
+          "A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM"
+        ],
+        "scalar": [
+          "A3-PERTURBATIVE-CONTINUUM-CORRELATORS",
+          "A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE"
+        ]
+      }
+    },
+    {
+      "name": "mass_fork_rederived",
+      "status": "PASS",
+      "actual": {
+        "scalar": "0.005",
+        "full": "0.26000000000947494031",
+        "difference": "0.25500000000947494031"
+      },
+      "expected": "source-derived values and declared separation threshold"
+    },
+    {
+      "name": "non_claim_boundary",
+      "status": "PASS",
+      "actual": {
+        "missing": []
+      },
+      "expected": "all declared exclusion tokens"
+    },
+    {
+      "name": "weakness_map",
+      "status": "PASS",
+      "actual": {
+        "count": 14,
+        "ids": [
+          "TIER-MONOTONICITY-OF-T5-INPUTS",
+          "IMMUTABLE-T5-TIER-HISTORY",
+          "BRANCH-TOPOLOGY-AMBIGUITY",
+          "SHELL-MASS-IDENTIFICATION",
+          "SCALAR-TO-FULL-MEASURE-INFERENCE",
+          "Q0-ZERO-CONSTRUCTIVE-ENDPOINT",
+          "POSITIVE-TIME-GALERKIN-SCOPE",
+          "FULL-CLASSII-CONSTRUCTIVE-MEASURE",
+          "CANONICAL-PARAMETER-IDENTITY",
+          "REGULARISER-REMOVAL",
+          "T0-RATES-AND-HISTORICAL-GRID-ERRORS",
+          "FINITE-DIFFERENCE-ROUTE-B",
+          "INFINITE-VOLUME-AND-PHASE-TRANSITION",
+          "BCC-EXISTENCE-AND-SELECTION"
+        ]
+      },
+      "expected": "unique map with required open rows"
+    }
+  ],
+  "assertion_summary": {
+    "passed": 9,
+    "total": 9
+  },
+  "environment": {
+    "python": "3.12.9",
+    "platform": "Windows-11-10.0.26200-SP0"
+  },
+  "evidence_level": "T0 non-importing exact contract cross-check; no analytic or physical promotion"
+}
