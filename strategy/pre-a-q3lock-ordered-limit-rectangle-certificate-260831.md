@@ -35,7 +35,7 @@ placeholder.
 
 The primary exact Fraction lane derives every threshold for the fixture
 `A(n,m)=1/2^(n+1)+1/3^(m+1)`, rather than inserting thresholds.  It passes
-33/33 assertions.  A non-importing independent lane passes 16/16 and agrees
+40/40 assertions.  A non-importing independent lane passes 16/16 and agrees
 on the canonical threshold/rectangle fingerprint.  The hostile lane rejects
 10/10 mutations: identity, claim-bearing promotion, tier promotion, unsafe
 epsilon split, non-decaying bases, formula mutation, order swap, uniformity
