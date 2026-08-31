@@ -689,13 +689,21 @@
     "authority_state": "VERIFIED_PENDING_WORKTREE_NOT_YET_DURABLE_GIT_OR_REMOTE_AUTHORITY"
   },
   "completion_checkpoint": {
-    "status": "PENDING",
-    "verified_parent_head": null,
-    "verified_at_utc": null,
+    "status": "COMPLETE",
+    "verified_parent_head": "c0f2d6263a5f53a9a3bd8c3a1bd10dfb507d28bb",
+    "verified_at_utc": "2026-08-31T03:11:15Z",
     "branch": "main",
     "remote": "tect",
     "remote_ref": "refs/heads/main",
-    "expected_authority_counts": null,
+    "expected_authority_counts": {
+      "claims": 49,
+      "gates_and_hypotheses": 208,
+      "results": 299,
+      "negative_records": 375,
+      "explorations": 1340,
+      "changelog_events": 814,
+      "tasks": 61
+    },
     "requirements": [
       "doctor PASS",
       "release_check PASS",
@@ -825,7 +833,9 @@
       "R-464 / EXP-001339 is recorded in the ledger and exploration log; the release-gated content commit and post-push strict baseline are pending. Existing methods, owner order and promotion firewalls remain unchanged.",
       "The release-gated R-464 / EXP-001339 content commit 4aebcdad192d1a3a9fc161bc349a6712a83a5567 was created after primary 24/24, independent 134/134, hostile 8/8, integrated 49/49, Lean R464, doctor and release_check PASS; it was pushed to tect/main and live git ls-remote returned the identical SHA. The fixed-cutoff result remains T0 and does not change existing forward/inverse methods, owner order or promotion firewalls.",
       "R-465 / EXP-001340 passed primary 146/146, independent 175/175, hostile 8/8, integrated 56/56 and Lean R465; release_check PASS created the content commit 597b9e38a0b02637f66f562e7e25187b263b24ed, and git push tect main advanced the configured remote.",
-      "A live git ls-remote read returned tect/main=597b9e38a0b02637f66f562e7e25187b263b24ed, equal to local HEAD. The R-465 completion checkpoint records claims=49, gates_and_hypotheses=208, results=299, negative_records=375, explorations=1340, changelog_events=814 and tasks=61; existing methods, owner order and promotion firewalls remain unchanged."
+    "A live git ls-remote read returned tect/main=597b9e38a0b02637f66f562e7e25187b263b24ed, equal to local HEAD. The R-465 completion checkpoint records claims=49, gates_and_hypotheses=208, results=299, negative_records=375, explorations=1340, changelog_events=814 and tasks=61; existing methods, owner order and promotion firewalls remain unchanged.",
+    "The R-465 T-054 live task note was refreshed after the content checkpoint and keeps the established forward/inverse methods, owner order, and promotion firewalls unchanged; todo.py --check and regen_all.py passed.",
+    "The release-gated batch checkpoint commit c0f2d6263a5f53a9a3bd8c3a1bd10dfb507d28bb was pushed to tect/main, and a live git ls-remote read returned the identical SHA. The checkpoint is being finalized against this clean remote head."
     ]
   },
   "stopped_loop_registry": [
