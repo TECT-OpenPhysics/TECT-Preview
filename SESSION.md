@@ -70,7 +70,20 @@ research state lives in the cowork app; it all lives in tracked files here.
    use `--strict-baseline` to verify the clean offsite baseline; that strict
    mode is intentionally not part of the pre-commit release gate.
 
-4. **Pick up the work** — the live task ledger:
+4. **Run the direction-control layer** before selecting new work:
+
+   ```bash
+   python verification/scripts/check_direction_control.py
+   ```
+
+   This derives the active mainline, auxiliary/no-progress streaks, repeated
+   blocker count, and required route decision from the append-only
+   `strategy/direction-control-log.jsonl`. It may route bounded research
+   autonomously, but it never changes a claim tier, closes a scientific gate,
+   or approves physical identity. Record a material route decision with
+   `check_direction_control.py --add --file <record.json>`.
+
+5. **Pick up the work** — the live task ledger:
 
    ```bash
    python verification/scripts/todo.py list --status in_progress
@@ -96,7 +109,7 @@ research state lives in the cowork app; it all lives in tracked files here.
    python verification/scripts/exploration.py search --claim <ID>
    ```
 
-5. **Operator only — start the commit daemon** (Windows PowerShell), so the
+6. **Operator only — start the commit daemon** (Windows PowerShell), so the
    AI's queued commits are recorded with the maintainer signature:
 
    ```powershell

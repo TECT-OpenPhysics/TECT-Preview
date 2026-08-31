@@ -22,6 +22,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-472](#r-472) | A2/R-157-R-158 exact-core Lean cross-check | R-472 / EXP-001347 is a T0 claim-nonbearing additive sidecar. The pinned Lean 4.32.1 kernel checks the exact rational gap, radial gap, completion, Class-II determinant, internal characteristic polynomial, affine-square, coexistence charge/drop and radial-numerator consequences already used by R-157/R-158; primary 30/30, independent 22/22, hostile 12/12 and integrated 22/22 pass with Lean. Existing T-054 forward and T-059/T-061 inverse methods, owner order and promotion firewalls are unchanged; no PDE, source-owner, physical, Pre-A, Sector-A, QFT, Yang--Mills, continuum or mass-gap conclusion follows |
 | [R-471](#r-471) | Fail-closed P1 owner and observation-map admission contract | R-471 / EXP-001346 is a T0 claim-nonbearing additive T-061/T-054 contract result. It encodes the unchanged nine-slot owner order and ordered F_reg/F_lim/F_eff/F_obs map as a fail-closed state machine: the current packet remains EMPTY_OWNER_ARTIFACT with zero admitted candidates, and complete synthetic fixtures are contract-test-only. Primary 24/24, independent 18/18, hostile 18/18 with 14/14 mutations rejected, integrated 10/10 and Lean R471 pass. No source owner, scoring, prospective holdout, physical identity, Pre-A, Sector-A, QFT, Yang--Mills, continuum or mass-gap conclusion follows; established methods and owner order remain unchanged |
 | [R-470](#r-470) | HOLD-LC-001 official gdt-fermi GbmRsp2 parser owner boundary | R-470 v1.0 is a T0 claim-nonbearing additive T-061 mission-source provenance crosswalk. The pinned USRA-STI/gdt-fermi main commit a6ef74e7278dbeb35759aadeb8d79ec8c38e6aac and 12107-byte response.py SHA-256 are audited by independent AST/token lanes. GbmRsp2 subclasses core Rsp2, delegates opening, iterates DRM_NUM, rebuilds segment headers, accesses compressed fields, decompresses rows, constructs GbmRsp objects and aggregates them; no event product or response coefficient is opened, and no validity/interpolation/timing owner is supplied. Primary 15/15, independent 10/10, hostile 14/14, integrated 15/15 and Lean R470 pass. Production selection remains NONE_SELECTED; existing T-054/T-059/T-061 methods and owner order are unchanged |
 | [R-469](#r-469) | HOLD-LC-001 official gdt-core Rsp2 selection semantics crosswalk | R-469 v1.0 is a T0 claim-nonbearing additive T-061 source-owner provenance crosswalk. The exact USRA-STI/gdt-core main commit and response.py SHA-256 are pinned. From R-468 interval metadata, the implementation's strict-overlap drm_index, first/last empty-range fallback and first-index nearest delegation are reproduced; endpoint fallback and the docstring/implementation mismatch are exposed. Primary 12 assertions, independent 7 assertions, hostile 12/12, integrated 14/14 and Lean R469 pass. Matrix-reading interpolation/weighted paths, calibration validity, timing conversion/uncertainty, likelihood, covariance, scoring and prospective lock remain unadmitted; existing T-054/T-059/T-061 methods and owner order are unchanged |
@@ -837,6 +838,44 @@ score M3 only after a versioned source owner, state/uncertainty contract,
 candidate-neutral two-time observable, complete map stages and prospective
 holdout exist. Continue unchanged T-054 Q3LOCK owner intake and T-059/T-061
 observation-source intake; do not manufacture another finite mobility table.
+
+<a id="r-472"></a>
+### R-472 -- A2/R-157-R-158 exact-core Lean cross-check
+
+**Result ID.** `R-472` (`EXP-001347`).
+
+**Version and exact scope.** R-472 v1.0 is a T0, claim-nonbearing additive
+sidecar for the already accepted finite conditional R-157 and R-158 results.
+The hash-pinned A1 P1 parameters and the existing R-157/R-158 manifests are
+read as authorities. A small Lean 4.32.1 entrypoint kernel-checks only exact
+rational consequences: the R-157 total mass, strict energy and radial gaps,
+completion identity and Class-II input determinant; and the R-158 internal
+characteristic polynomial, local affine-square identity, coexistence density and
+charge, saddle/coexistence drops, stationary-density ratio, transition ordering,
+and positivity of the radial numerator on `0 <= theta <= 1`.
+
+**Verification.** The primary lane passes 30/30, the non-importing independent
+Fraction lane passes 22/22, the hostile lane passes 12/12 while rejecting ten
+sign/denominator/density/charge/tier/method/marker mutations, and the integrated
+lane passes 22/22 with Lean compilation. The exact derived core agrees between
+primary and independent lanes and the four authority hashes are checked.
+
+**Interpretation and boundary.** Lean cross-checks the encoded algebra only; it
+does not replace the R-157/R-158 analytic PDE, variational, spectral or
+continuation arguments. No source-owned dynamics, common-core compatibility,
+uniform cutoff/volume estimate, physical charge or observation map is supplied.
+No physical-empty sign, Reading-H selection, Pre-A, Sector-A, C6, QFT,
+Yang--Mills, gravity, continuum, cosmic-origin or mass-gap conclusion follows.
+The established T-054 forward and T-059/T-061 observation-first inverse methods,
+owner order, stopped-loop rules and promotion firewalls remain unchanged; no
+claim, tier or scientific gate changes.
+
+**Proven in:** [R-472 manifest](strategy/a2-r472-lean-crosscheck-manifest.json), [R-472 certificate](strategy/a2-r472-lean-crosscheck-certificate-260831.md), [Lean entrypoint](verification/lean/Tect/R472.lean), [primary lane](codes/foundations/a2_r472_lean_crosscheck.py), [independent lane](codes/foundations/a2_r472_lean_crosscheck_independent.py), [hostile lane](codes/foundations/a2_r472_lean_crosscheck_hostile.py), [integrated verifier](verification/scripts/a2_r472_lean_crosscheck_verify.py), and the four saved run artefacts under `claims/A2-FULL-PRODUCTION-WELLPOSED/runs/2026-08-31-*-r472-a2-lean-crosscheck/`.
+
+**Next action.** Keep R-472 as an arithmetic sidecar and return the mainline to
+the unchanged source-owner/common-core/uniform-estimate order. Do not repeat a
+blocked physical-empty test without a new owner-approved common functional and
+empty branch.
 
 <a id="r-471"></a>
 ### R-471 -- Fail-closed P1 owner and observation-map admission contract

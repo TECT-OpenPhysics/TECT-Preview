@@ -1,0 +1,120 @@
+{
+  "active_mainline": {
+    "gate_id": "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE",
+    "lane": "forward",
+    "last_gate_change_event": null,
+    "next_required_action": "Obtain a source-owned microscopic dynamics owner, common-core compatibility, and a cutoff-volume-lattice-uniform estimate before expanding finite variants.",
+    "required_result": [
+      "source-owned microscopic dynamics owner",
+      "common-core compatibility",
+      "cutoff-volume-lattice-uniform estimate"
+    ],
+    "task_id": "T-054"
+  },
+  "authority": "Pointer-only routing contract for preventing auxiliary finite work from displacing the active TECT proof obligation",
+  "auxiliary_scope": [
+    {
+      "name": "finite-and-legacy-sidecars",
+      "role": "auxiliary",
+      "task_ids": [
+        "T-055",
+        "T-057"
+      ]
+    },
+    {
+      "name": "reference-only-cross-project-results",
+      "role": "reference_only",
+      "task_ids": []
+    }
+  ],
+  "baseline": {
+    "auxiliary_streak": 0,
+    "checkpoints_without_gate_change": 0,
+    "cutover_date": "2026-08-31",
+    "cutover_event": "R-471",
+    "historical_records_before_cutover": "UNCLASSIFIED",
+    "no_progress_streak": 0,
+    "same_blocker_streak": 0,
+    "note": "Counters start at the cutover record and are derived from later control records; pre-cutover results are preserved but are not retroactively scored."
+  },
+  "claim_bearing": false,
+  "classification_taxonomy": {
+    "AUXILIARY_SUPPORT": {
+      "counts_as_mainline": false,
+      "description": "Reusable finite, conditional, provenance, or parallel-lane support that does not strengthen the active mainline scope.",
+      "required_signal": "No active-gate change and no declared scope strengthening."
+    },
+    "MAINLINE_ADVANCE": {
+      "counts_as_mainline": true,
+      "description": "New evidence removes a named assumption, strengthens scope, or changes the active gate.",
+      "required_signal": "At least one of gate_changed, scope_strengthened, or new_input_hash is true."
+    },
+    "NEGATIVE_RESULT": {
+      "counts_as_mainline": "record_decides",
+      "description": "A reproducible failure or falsifier; mainline relevance is explicit in the record.",
+      "required_signal": "falsifier_fired or a named route boundary is recorded."
+    },
+    "NO_PROGRESS": {
+      "counts_as_mainline": false,
+      "description": "More examples, sizes, or parameters without stronger scope, a gate change, or a new falsifier.",
+      "required_signal": "gate_changed and scope_strengthened are false."
+    }
+  },
+  "id": "TECT-MAINLINE-DIRECTION-CONTROL-v1",
+  "ledger_path": "strategy/direction-control-log.jsonl",
+  "parallel_lanes": [
+    {
+      "gate_id": "PA-INVERSE-OBSERVATION-TARGET-MAP-HOLDOUT-FREEZE",
+      "lane": "inverse",
+      "must_not_be_starved": true,
+      "role": "parallel-critical",
+      "task_ids": [
+        "T-059",
+        "T-061"
+      ]
+    }
+  ],
+  "policy_path": "governance/mainline-direction-control.md",
+  "promotion_order": [
+    "source-compatible",
+    "uniform",
+    "physical-sector",
+    "limit"
+  ],
+  "protected_actions": [
+    "Claim, tier, and scientific-gate status changes remain operator-authorized.",
+    "Physical identity, continuum, QFT, Yang-Mills, or empirical claims are never auto-approved.",
+    "Research admission may be auto-approved only with provenance, exact scope, falsifier, and next action."
+  ],
+  "recorded_on": "2026-08-31",
+  "required_decision_fields": [
+    "active_gate",
+    "blocker_fingerprint",
+    "classification",
+    "counts_as_mainline",
+    "falsifier_fired",
+    "gate_changed",
+    "input_hash",
+    "lane",
+    "mainline_relevant",
+    "new_input_hash",
+    "next_action",
+    "research_admission",
+    "route_decision",
+    "scope_strengthened",
+    "scientific_transition",
+    "source_event",
+    "task_id"
+  ],
+  "schema": "tect/mainline-direction-control/1.0",
+  "source_program_path": "strategy/main-proof-program-v1.json",
+  "status": "ACTIVE_POLICY_BASELINE",
+  "tier": "T0",
+  "thresholds": {
+    "max_auxiliary_streak": 2,
+    "max_checkpoints_without_gate_change": 3,
+    "same_blocker_park_at": 3,
+    "same_blocker_redesign_at": 2
+  },
+  "version": "1.0.0"
+}

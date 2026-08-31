@@ -1,0 +1,143 @@
+{
+  "schema": "tect/a2-r472-lean-crosscheck-manifest/1.0",
+  "version": "1.0.0",
+  "issued": "2026-08-31",
+  "audit_id": "A2-R472-LEAN-CROSSCHECK",
+  "result_id": "R-472",
+  "exploration_id": "EXP-001347",
+  "task_id": "T-054",
+  "claim_id": "A2-FULL-PRODUCTION-WELLPOSED",
+  "tier": "T0",
+  "claim_bearing": false,
+  "evidence_level": "T0 exact kernel cross-check of the already accepted finite conditional R-157/R-158 rational algebra",
+  "method_preservation": {
+    "t054_forward_method": true,
+    "t059_observation_first_inverse_method": true,
+    "t061_owner_order": true,
+    "promotion_firewalls": true,
+    "no_new_dynamics": true,
+    "no_new_physical_assumption": true,
+    "no_claim_tier_change": true
+  },
+  "scope": {
+    "r157_total_mass_gap_and_completion": true,
+    "r157_radial_gap": true,
+    "r157_classii_input_determinant": true,
+    "r158_internal_characteristic_polynomial": true,
+    "r158_local_affine_square": true,
+    "r158_charge_and_transition_constants": true,
+    "r158_radial_numerator_interval": true,
+    "pinned_r157_r158_inputs": true,
+    "pde_wellposedness": false,
+    "physical_owner": false,
+    "physical_vacuum": false,
+    "qft_yang_mills": false,
+    "continuum_or_thermodynamic_limit": false,
+    "sector_a_or_pre_a_closure": false
+  },
+  "assumptions": [
+    "The hash-pinned A1 P1 parameters and the existing R-157/R-158 manifests are authoritative inputs.",
+    "R-157 and R-158 theorem hypotheses, including A2-H3-CANONICAL-PRODUCTION-FUNCTIONAL, are unchanged.",
+    "Lean checks only the listed exact rational consequences; analytic PDE and variational arguments remain supplied by the existing authorities.",
+    "A T0 sidecar audit may improve arithmetic assurance without changing any research method or owner contract."
+  ],
+  "missing_assumptions": [
+    "A source-owned physical generator or transfer operator and its state/projection/time-boundary contract.",
+    "A common-core and uniform cutoff/volume estimate for the production dynamics.",
+    "A physical charge/reservoir map, observation correspondence, holdout data and QFT/Yang-Mills/gravity identification."
+  ],
+  "non_claims": [
+    "Lean does not prove the full R-157 or R-158 analytic theorem; it proves only the encoded rational identities and inequalities.",
+    "No new physical candidate, physical-empty sign, Reading-H selection, Pre-A, Sector-A, QFT, Yang-Mills, continuum or mass-gap conclusion is admitted.",
+    "The existing T-054 forward and T-059/T-061 inverse methods, owner order and promotion firewalls are not replaced or modified."
+  ],
+  "falsifiers": [
+    "Any pinned authority hash mismatch.",
+    "Lean compilation failure or an escape token in the entrypoint.",
+    "Primary and non-importing independent exact lanes disagree on a derived constant.",
+    "A hostile mutation of a sign, denominator, density or method-preservation flag is accepted."
+  ],
+  "exact_targets": {
+    "r157_gap": "719818750025582338837/5400000000000000000000",
+    "r157_radial_gap": "2101675000076747016511/8100000000000000000000",
+    "r158_coexistence_density": "43/216",
+    "r158_coexistence_charge": "11008/27",
+    "r158_coexistence_drop": "1849/86400",
+    "r158_saddle_node_drop": "1849/64800",
+    "r158_characteristic": "t^3-(2/5)t^2+(223/5000)t-3/3125"
+  },
+  "authorities": {
+    "a1_p1_manifest": {
+      "path": "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/production_functional_manifest.json",
+      "sha256": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565"
+    },
+    "a2_pde_manifest": {
+      "path": "claims/A2-FULL-PRODUCTION-WELLPOSED/full_pde_manifest.json",
+      "sha256": "ef0238b07da6f600159b22ba709275d27154501bdea700ff4e489c2864b17682"
+    },
+    "r157_manifest": {
+      "path": "claims/A2-FULL-PRODUCTION-WELLPOSED/pinned_functional_unique_zero_global_minimizer_manifest.json",
+      "sha256": "11fd4224309508ecda1e6be1536ae137bf2efa28ca5bfc7d8e3170dfd93679bd"
+    },
+    "r158_manifest": {
+      "path": "claims/A2-FULL-PRODUCTION-WELLPOSED/charge_ensemble_first_order_shell_transition_manifest.json",
+      "sha256": "b38ac6c89502fc082c5bc27689e6ef378b3ec1f95e516e0e3a010bcd7d3ef890"
+    }
+  },
+  "files": {
+    "lean_entrypoint": {
+      "path": "verification/lean/Tect/R472.lean",
+      "sha256": "56d3665931c8caa183af9ae2dc54e0fa79cabc1f063ae4db72e5edbdff00fb45"
+    },
+    "primary": {
+      "path": "codes/foundations/a2_r472_lean_crosscheck.py",
+      "sha256": "b3e2146ece188ec36439133197c1506a0b6dfb698956e6e138db33e511a7294d"
+    },
+    "independent": {
+      "path": "codes/foundations/a2_r472_lean_crosscheck_independent.py",
+      "sha256": "c409a0e2b8c53f82216ce451bbc263459767f99e0a5e4135c64e26c13f2f783a"
+    },
+    "hostile": {
+      "path": "codes/foundations/a2_r472_lean_crosscheck_hostile.py",
+      "sha256": "2a9073e78e093a9363f0e6e459d832351e468402742487ef52dccb553a910523"
+    },
+    "integrated": {
+      "path": "verification/scripts/a2_r472_lean_crosscheck_verify.py",
+      "sha256": "cc3c5b889f1ebbaf402b1c60b1f3b9dfae47a496de62a6efaf6a4374765bea89"
+    },
+    "certificate": {
+      "path": "strategy/a2-r472-lean-crosscheck-certificate-260831.md",
+      "sha256": "071d244683c45a0389b1cce8b71d8c644b26077b673c358f91e2cade9ceef0f6"
+    }
+  },
+  "lean": {
+    "toolchain": "leanprover/lean4:v4.32.1",
+    "entrypoint": "verification/lean/Tect/R472.lean",
+    "declarations": [
+      "r157_total_mass_exact",
+      "r157_gap_exact",
+      "r157_gap_gt_one_eighth",
+      "r157_radial_gap_exact",
+      "r157_radial_gap_gt_one_quarter",
+      "r157_completion_identity",
+      "r157_classii_input_determinant",
+      "r158_characteristic_identity",
+      "r158_local_affine_square",
+      "r158_coexistence_charge",
+      "r158_saddle_drop_ratio",
+      "r158_stationary_density_values",
+      "r158_transition_order",
+      "r157_radial_numerator_positive",
+      "methods_are_not_changed"
+    ]
+  },
+  "formal_integration": {
+    "no_new_negative_ids": [],
+    "no_tier_change": true,
+    "no_pdf": true,
+    "methods_unchanged": true,
+    "production_owner_state": "UNCHANGED_EMPTY_OWNER_ARTIFACT"
+  },
+  "boundary": "Additive T0 arithmetic sidecar only. The encoded Lean propositions cross-check exact constants already present in R-157/R-158; they do not replace their analytic authorities or supply a source-owned dynamics, common core, uniform limit, physical correspondence, or Clay/QFT/Yang-Mills result.",
+  "next_gate": "Keep the unchanged T-054 forward and T-059/T-061 inverse routes active. The next production advance requires a real source-owned dynamics/observation packet; until then, remain fail-closed and do not repeat blocked physical-empty tests."
+}

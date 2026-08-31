@@ -1,6 +1,6 @@
 # Research continuity contract
 
-**Version:** 1.0  
+**Version:** 1.1
 **Issued:** 2026-08-30  
 **Scope:** long-running Pre-A and Sector-A main-proof research  
 **Machine authority:** `strategy/main-proof-program-v1.json`  
@@ -172,6 +172,18 @@ identical blocker without a new hash-pinned input is forbidden: the route is
 - generic source searches are not repeated without a new owner artefact hash;
 - no A14 claim is created for a subproof, reduction, obstruction, or route
   comparison under an existing Sector-A host.
+
+### 7.1 Direction-control overlay
+
+`governance/mainline-direction-control.md` and its machine validator add a
+pointer-only routing overlay to this state machine. The overlay classifies each
+post-baseline decision as `MAINLINE_ADVANCE`, `AUXILIARY_SUPPORT`,
+`NEGATIVE_RESULT`, or `NO_PROGRESS`, derives auxiliary and repeated-blocker
+streaks, and routes work back to the active T-054 gate when thresholds fire.
+It may admit a bounded research action without a user reply, but it cannot
+change a claim tier, close a scientific gate, or convert an absent source-owned
+input into physical evidence. Claim, tier, and gate transitions remain subject
+to the existing operator-authorized and evidence-first rules.
 
 ## 8. Research Phase 0 recovery
 

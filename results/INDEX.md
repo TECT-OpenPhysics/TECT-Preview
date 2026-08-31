@@ -5,10 +5,11 @@
 
 Authorities: `RESULTS-LEDGER.md`.
 
-**305 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
+**306 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
 
 | ID | Result | Tier/scope |
 |---|---|---|
+| [`R-472`](../RESULTS-LEDGER.md#r-472) | A2/R-157-R-158 exact-core Lean cross-check | T0 |
 | [`R-471`](../RESULTS-LEDGER.md#r-471) | Fail-closed P1 owner and observation-map admission contract | T0 |
 | [`R-470`](../RESULTS-LEDGER.md#r-470) | HOLD-LC-001 official gdt-fermi GbmRsp2 parser owner boundary | T0 |
 | [`R-469`](../RESULTS-LEDGER.md#r-469) | HOLD-LC-001 official gdt-core Rsp2 selection semantics crosswalk | T0 |
@@ -33,7 +34,6 @@ Authorities: `RESULTS-LEDGER.md`.
 | [`R-450`](../RESULTS-LEDGER.md#r-450) | Conditional two-orientation state-weighted shell-tail transfer | T0 |
 | [`R-449`](../RESULTS-LEDGER.md#r-449) | Source-owner intake and physical/proof leakage audit | T0 |
 | [`R-448`](../RESULTS-LEDGER.md#r-448) | Static-equivalence quotient and separating finite dynamic estimand | T0 |
-| [`R-447`](../RESULTS-LEDGER.md#r-447) | HOLD-LC-001 set-valued delay envelope interface | T0 |
 
 Search without loading the full ledger:
 

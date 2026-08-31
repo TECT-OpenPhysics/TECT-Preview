@@ -1,0 +1,332 @@
+{
+  "assertion_count": 30,
+  "assertions": [
+    {
+      "actual": [
+        "R-472",
+        "EXP-001347",
+        false
+      ],
+      "expected": [
+        "R-472",
+        "EXP-001347",
+        false
+      ],
+      "name": "identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "T0",
+      "expected": "T0",
+      "name": "tier",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "no_claim_tier_change": true,
+        "no_new_dynamics": true,
+        "no_new_physical_assumption": true,
+        "promotion_firewalls": true,
+        "t054_forward_method": true,
+        "t059_observation_first_inverse_method": true,
+        "t061_owner_order": true
+      },
+      "expected": "all true",
+      "name": "method preservation",
+      "status": "PASS"
+    },
+    {
+      "actual": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565",
+      "expected": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565",
+      "name": "authority hash a1_p1_manifest",
+      "status": "PASS"
+    },
+    {
+      "actual": "ef0238b07da6f600159b22ba709275d27154501bdea700ff4e489c2864b17682",
+      "expected": "ef0238b07da6f600159b22ba709275d27154501bdea700ff4e489c2864b17682",
+      "name": "authority hash a2_pde_manifest",
+      "status": "PASS"
+    },
+    {
+      "actual": "11fd4224309508ecda1e6be1536ae137bf2efa28ca5bfc7d8e3170dfd93679bd",
+      "expected": "11fd4224309508ecda1e6be1536ae137bf2efa28ca5bfc7d8e3170dfd93679bd",
+      "name": "authority hash r157_manifest",
+      "status": "PASS"
+    },
+    {
+      "actual": "b38ac6c89502fc082c5bc27689e6ef378b3ec1f95e516e0e3a010bcd7d3ef890",
+      "expected": "b38ac6c89502fc082c5bc27689e6ef378b3ec1f95e516e0e3a010bcd7d3ef890",
+      "name": "authority hash r158_manifest",
+      "status": "PASS"
+    },
+    {
+      "actual": "56d3665931c8caa183af9ae2dc54e0fa79cabc1f063ae4db72e5edbdff00fb45",
+      "expected": "56d3665931c8caa183af9ae2dc54e0fa79cabc1f063ae4db72e5edbdff00fb45",
+      "name": "Lean source hash",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "r157_total_mass_exact",
+        "r157_gap_exact",
+        "r157_gap_gt_one_eighth",
+        "r157_radial_gap_exact",
+        "r157_radial_gap_gt_one_quarter",
+        "r157_completion_identity",
+        "r157_classii_input_determinant",
+        "r158_characteristic_identity",
+        "r158_local_affine_square",
+        "r158_coexistence_charge",
+        "r158_saddle_drop_ratio",
+        "r158_stationary_density_values",
+        "r158_transition_order",
+        "r157_radial_numerator_positive",
+        "methods_are_not_changed"
+      ],
+      "expected": "all present",
+      "name": "Lean declarations",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "sorry",
+        "admit",
+        "axiom",
+        "unsafe"
+      ],
+      "expected": "none",
+      "name": "Lean escape absence",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "command": "lake env lean Tect/R472.lean",
+        "output": "",
+        "returncode": 0,
+        "status": "PASS"
+      },
+      "expected": "PASS",
+      "name": "Lean compile",
+      "status": "PASS"
+    },
+    {
+      "actual": "26000000000947494031/100000000000000000000",
+      "expected": "26000000000947494031/100000000000000000000",
+      "name": "R-157 shell minimum",
+      "status": "PASS"
+    },
+    {
+      "actual": "28800000000947494031/100000000000000000000",
+      "expected": "28800000000947494031/100000000000000000000",
+      "name": "R-157 total mass",
+      "status": "PASS"
+    },
+    {
+      "actual": "43/216",
+      "expected": "43/216",
+      "name": "R-157 vertex",
+      "status": "PASS"
+    },
+    {
+      "actual": "719818750025582338837/5400000000000000000000",
+      "expected": "719818750025582338837/5400000000000000000000",
+      "name": "R-157 gap",
+      "status": "PASS"
+    },
+    {
+      "actual": "719818750025582338837/5400000000000000000000",
+      "expected": ">1/8",
+      "name": "R-157 gap threshold",
+      "status": "PASS"
+    },
+    {
+      "actual": "2101675000076747016511/8100000000000000000000",
+      "expected": "2101675000076747016511/8100000000000000000000",
+      "name": "R-157 radial gap",
+      "status": "PASS"
+    },
+    {
+      "actual": "2101675000076747016511/8100000000000000000000",
+      "expected": ">1/4",
+      "name": "R-157 radial threshold",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "28800000000947494031/200000000000000000000",
+        "-43/400",
+        "27/100"
+      ],
+      "expected": [
+        "28800000000947494031/200000000000000000000",
+        "-43/400",
+        "27/100"
+      ],
+      "name": "R-157 completion coefficients",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/50",
+      "expected": "1/50",
+      "name": "R-157 Class-II input determinant",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "2/5",
+        "223/5000",
+        "3/3125"
+      ],
+      "expected": [
+        "2/5",
+        "223/5000",
+        "3/3125"
+      ],
+      "name": "R-158 characteristic coefficients",
+      "status": "PASS"
+    },
+    {
+      "actual": "t^3-(2/5)t^2+(223/5000)t-3/3125",
+      "expected": "t^3-(2/5)t^2+(223/5000)t-3/3125",
+      "name": "R-158 characteristic target",
+      "status": "PASS"
+    },
+    {
+      "actual": "43/216",
+      "expected": "43/216",
+      "name": "R-158 density",
+      "status": "PASS"
+    },
+    {
+      "actual": "11008/27",
+      "expected": "11008/27",
+      "name": "R-158 charge",
+      "status": "PASS"
+    },
+    {
+      "actual": "1849/86400",
+      "expected": "1849/86400",
+      "name": "R-158 coexistence drop",
+      "status": "PASS"
+    },
+    {
+      "actual": "1849/64800",
+      "expected": "1849/64800",
+      "name": "R-158 saddle drop",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "1849/64800",
+        "1849/86400"
+      ],
+      "expected": ">0 and saddle>coexistence",
+      "name": "R-158 drop ordering",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "43/216",
+        "43/648"
+      ],
+      "expected": [
+        "43/216",
+        "43/648"
+      ],
+      "name": "R-158 stationary densities",
+      "status": "PASS"
+    },
+    {
+      "actual": "128",
+      "expected": ">0 on 0..1 grid",
+      "name": "R-157 radial numerator grid",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "methods_unchanged": true,
+        "no_new_negative_ids": [],
+        "no_pdf": true,
+        "no_tier_change": true,
+        "production_owner_state": "UNCHANGED_EMPTY_OWNER_ARTIFACT"
+      },
+      "expected": "unchanged",
+      "name": "methods unchanged",
+      "status": "PASS"
+    }
+  ],
+  "assumptions": [
+    "The hash-pinned A1 P1 parameters and the existing R-157/R-158 manifests are authoritative inputs.",
+    "R-157 and R-158 theorem hypotheses, including A2-H3-CANONICAL-PRODUCTION-FUNCTIONAL, are unchanged.",
+    "Lean checks only the listed exact rational consequences; analytic PDE and variational arguments remain supplied by the existing authorities.",
+    "A T0 sidecar audit may improve arithmetic assurance without changing any research method or owner contract."
+  ],
+  "audit_id": "A2-R472-LEAN-CROSSCHECK-PRIMARY",
+  "boundary": "Additive T0 arithmetic sidecar only. The encoded Lean propositions cross-check exact constants already present in R-157/R-158; they do not replace their analytic authorities or supply a source-owned dynamics, common core, uniform limit, physical correspondence, or Clay/QFT/Yang-Mills result.",
+  "claim_bearing": false,
+  "claim_id": "A2-FULL-PRODUCTION-WELLPOSED",
+  "derived": {
+    "charge": "11008/27",
+    "coexistence_drop": "1849/86400",
+    "gap": "719818750025582338837/5400000000000000000000",
+    "radial_gap": "2101675000076747016511/8100000000000000000000",
+    "rho_star": "43/216",
+    "saddle_drop": "1849/64800",
+    "shell_minimum": "26000000000947494031/100000000000000000000",
+    "total_mass": "28800000000947494031/100000000000000000000"
+  },
+  "evidence_level": "T0 exact kernel cross-check of the already accepted finite conditional R-157/R-158 rational algebra",
+  "exploration_id": "EXP-001347",
+  "falsifiers": [
+    "Any pinned authority hash mismatch.",
+    "Lean compilation failure or an escape token in the entrypoint.",
+    "Primary and non-importing independent exact lanes disagree on a derived constant.",
+    "A hostile mutation of a sign, denominator, density or method-preservation flag is accepted."
+  ],
+  "lean": {
+    "command": "lake env lean Tect/R472.lean",
+    "output": "",
+    "returncode": 0,
+    "status": "PASS"
+  },
+  "methods_unchanged": true,
+  "missing_assumptions": [
+    "A source-owned physical generator or transfer operator and its state/projection/time-boundary contract.",
+    "A common-core and uniform cutoff/volume estimate for the production dynamics.",
+    "A physical charge/reservoir map, observation correspondence, holdout data and QFT/Yang-Mills/gravity identification."
+  ],
+  "non_claims": [
+    "Lean does not prove the full R-157 or R-158 analytic theorem; it proves only the encoded rational identities and inequalities.",
+    "No new physical candidate, physical-empty sign, Reading-H selection, Pre-A, Sector-A, QFT, Yang-Mills, continuum or mass-gap conclusion is admitted.",
+    "The existing T-054 forward and T-059/T-061 inverse methods, owner order and promotion firewalls are not replaced or modified."
+  ],
+  "passed": 30,
+  "provenance": {
+    "a1_sha256": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565",
+    "manifest_sha256": "c0c56218179f128522e2c73efeecd1fd9a910a79dbd03ad1cd1d3d61afa578cf",
+    "r157_sha256": "11fd4224309508ecda1e6be1536ae137bf2efa28ca5bfc7d8e3170dfd93679bd",
+    "r158_sha256": "b38ac6c89502fc082c5bc27689e6ef378b3ec1f95e516e0e3a010bcd7d3ef890"
+  },
+  "recorded_at": "2026-08-31T07:26:05.299286Z",
+  "result_id": "R-472",
+  "run_kind": "primary",
+  "schema": "tect/a2-r472-lean-crosscheck-primary/1.0",
+  "scope": {
+    "continuum_or_thermodynamic_limit": false,
+    "pde_wellposedness": false,
+    "physical_owner": false,
+    "physical_vacuum": false,
+    "pinned_r157_r158_inputs": true,
+    "qft_yang_mills": false,
+    "r157_classii_input_determinant": true,
+    "r157_radial_gap": true,
+    "r157_total_mass_gap_and_completion": true,
+    "r158_charge_and_transition_constants": true,
+    "r158_internal_characteristic_polynomial": true,
+    "r158_local_affine_square": true,
+    "r158_radial_numerator_interval": true,
+    "sector_a_or_pre_a_closure": false
+  },
+  "tier": "T0",
+  "verdict": "PASS"
+}
