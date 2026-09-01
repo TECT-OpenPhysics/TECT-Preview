@@ -22,6 +22,8 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-477](#r-477) | Exact positive-lambda ST8/Q3LOCK common-alpha five-condition audit | R-477 / EXP-001358 pins the exact fixed-lattice zero-source Hamiltonian and audits the requested common infinite-volume real-time dynamics without changing the model. Conditions C1, C2, C4 and C5 are NOT_PROVED; C3 is PARTIAL_NOT_CLOSED because the exact phase-independent local polynomial derivation exists but is not exponentiated or identified with a thermodynamic C-star action. Primary 116/116, independent 62/62 and integrated 30/30 pass with common digest `3646319e3d67874d61a215b51e5c788dc252a07ca8d6fb5ab37dc2798d9217b6`; all 20 hostile promotion/model-drift mutations are rejected. Verdict `HOLD_FOR_EVIDENCE`: no exact-Q3 common-domain two-orientation uniform estimate is proved, while the registered no-gos remain route-local rather than a target-level nonexistence theorem. No gate, tier, negative registry, Hamiltonian, counterterm, carrier, projection, QFT, Pre-A, causal-cone, gravity, continuum, mass-gap, physical-empty or TOE conclusion changes; no Lean theorem or PDF is issued |
+| [R-476](#r-476) | Researcher-proposed Pre-A minimum microscopic axiom packet structural intake | R-476 / EXP-001357 registers PAH-001, the new `PA-M6-RELATIONAL-APERTURE-TRANSFER-v0` researcher hypothesis, at T0 with source SHA-256 `03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37`. It gives a finite relational gauge/aperture functional, reversible transfer, candidate projection, all nine R-471 slots, eleven candidate-only R-192 bindings, a common-core target, exact limit order, and separate spectral-collapse/trapped-transfer falsifiers. Primary 63/63, independent 52/52, hostile 39/39 with 36 mutations rejected, integrated 20/20 and Lean R476 pass. `OWNER_PACKET_HASHED` means structural hypothesis completeness only: production/physical admission, finite consistency, F_reg/F_lim/F_eff/F_obs, physical-empty, Reading-H, event-horizon, Pre-A, Sector-A, QFT, Yang--Mills, gravity, continuum and observation claims remain closed; existing methods and owner orders are unchanged |
 | [R-475](#r-475) | Lean cross-check of the A5 branch-aware conditional-composition contract | R-475 / EXP-001354 is a T0 claim-nonbearing auxiliary sidecar for the already operator-confirmed A5 T6 contract. The exact seven-hypothesis list, disjoint full-production/scalar-continuum branches and source-derived shell-mass fork pass primary 13/13, independent 9/9, hostile 11/11 with all 10 mutations rejected, integrated 36/36 and Lean R475. The sidecar does not re-prove A1--A5 analysis or supply source-owned dynamics, a common core, uniform estimates, an ordered limit, physical/Pre-A/Sector-A closure, QFT, Yang--Mills, continuum or mass-gap result; existing methods and owner order remain unchanged |
 | [R-474](#r-474) | Conditional ordered-limit rectangular-tail bridge | R-474 / EXP-001353 is a T0 claim-nonbearing auxiliary interface. Strict epsilon/2 cutoff and volume tails compose by the triangle inequality in both declared orders into a rectangular tail; primary 40/40, independent 16/16, hostile 10/10 mutations rejected, integrated 13/13 and Lean R474 pass. The fixture does not supply source-owned dynamics, a common norm, uniform estimates, an ordered limit, physical identity, Pre-A, Sector-A, QFT, Yang--Mills, continuum or mass-gap result; existing methods and owner order remain unchanged |
 | [R-473](#r-473) | HOLD-LC-001 TTE event-row feature index | R-473 / EXP-001348 is a T0 claim-nonbearing finite raw-event feature index. The two byte-frozen Fermi EVENTS tables (NaI N0 and BGO B0) decode to 272,615 and 394,501 rows, with a common 263-bin one-second trigger-relative histogram; primary 23/23, independent 14/14, hostile 12/12 and integrated 25/25 pass, including Lean R473. Existing T-054 forward and T-059/T-061 inverse methods, owner order and promotion firewalls are unchanged; likelihood, covariance, geocentre, calibration, scoring, prospective, physical, Pre-A, Sector-A, QFT, Yang--Mills, continuum and mass-gap conclusions remain blocked |
@@ -841,6 +843,136 @@ score M3 only after a versioned source owner, state/uncertainty contract,
 candidate-neutral two-time observable, complete map stages and prospective
 holdout exist. Continue unchanged T-054 Q3LOCK owner intake and T-059/T-061
 observation-source intake; do not manufacture another finite mobility table.
+
+<a id="r-477"></a>
+### R-477 -- Exact positive-lambda ST8/Q3LOCK common-alpha five-condition audit
+
+**Result ID.** `R-477` (`EXP-001358`, `T-054`, audit `Q3A-001`).
+
+**Question and exact scope.** Does the hash-pinned fixed-lattice
+positive-`lambda` ST8/Q3LOCK Hamiltonian define one source-, beta-, and
+phase-independent infinite-volume real-time automorphism group on the already
+declared spatial quasi-local algebra? The Hamiltonian authority is
+`strategy/pre-a-cp1-st8-q3lock-fixed-lattice-3d-quantum-pressure-ground-density-effective-reduction-route-split-manifest.json`,
+SHA-256
+`48889ebc8d251ee1c45a7a185a96b487bc59c8d574e8c2d61c724dce00048535`,
+at `/setup/hamiltonian`. The target is the zero-source net `H_L(0)` in three
+coarse dimensions with eight real oscillators per site, Q3 internal edges,
+fixed spacing and origin, even open rectangles or periodic cubes, and
+`hbar,chi,c,g,lambda>0`. No continuum limit is in scope. R-477 adds no
+Hamiltonian, counterterm, carrier, or physical projection.
+
+**Five-condition verdict.** Finite-volume all-exhaustion convergence on a
+common core is `NOT_PROVED`; group law, inverse, point-norm C0 continuity and
+local-algebra preservation are `NOT_PROVED`; exact-Hamiltonian generator/core
+ownership is `PARTIAL_NOT_CLOSED`; independence from source, beta and phase is
+`NOT_PROVED`; and one simultaneous quartic-onsite/bilinear-spatial uniform
+locality/energy estimate is `NOT_PROVED`. EXP-000792 supplies only the exact
+phase-independent local polynomial derivation. Conditional R-451/R-452 and
+`B_sp` completion interfaces have not had their exact-Q3 common-domain,
+two-orientation, summable-weight, or all-shape hypotheses instantiated.
+EXP-000790's phasewise systems are not one Hamiltonian-derived common action,
+and a post-hoc direct sum is forbidden.
+
+**Decision.** The exact verdict is `HOLD_FOR_EVIDENCE`. `MAINLINE_ADVANCE` is
+barred because the five conditions do not pass. `NEGATIVE_RESULT` is barred
+because the registered no-gos reject named carriers, topologies,
+factorizations, implications, or theorem imports rather than every action
+allowed by the target. The active gates and negative registry remain
+unchanged.
+
+**Verification.** Primary 116/116 and the non-importing independent lane 62/62
+derive the same five statuses and core digest
+`3646319e3d67874d61a215b51e5c788dc252a07ca8d6fb5ab37dc2798d9217b6`.
+The integrated verifier passes 30/30 and rejects all 20 hostile verdict,
+condition, source-hash, model-change, direct-sum, beta-dependence,
+finite-repeat and physical-promotion mutations. No Lean theorem is run: the
+missing evidence is an analytic unbounded-operator common-domain and uniform
+thermodynamic estimate, so a Boolean Lean restatement would not verify it.
+
+**Proven in.** [audit manifest](strategy/q3lock/Q3A-001-v1.json),
+[certificate](strategy/q3lock/R477-certificate.md),
+[primary](codes/foundations/q3a001_common_alpha_audit.py),
+[independent](codes/foundations/q3a001_common_alpha_audit_independent.py),
+[integrated/hostile verifier](verification/scripts/q3a001_common_alpha_audit_verify.py),
+and [run artefacts](claims/C6-SPACETIME-SIGNATURE/runs/2026-09-02-r477-q3-common-alpha/integrated.json).
+
+**Boundary and next action.** R-477 proves neither existence nor nonexistence
+of the common action and promotes no finite, Euclidean, Gibbs, OS/KMS, QFT,
+Pre-A, causal-cone, gravity, continuum, mass-gap, physical-empty, or TOE
+claim. The one next question is whether the existing `P_loc`/local-strict
+route admits an exact full-Q3 common-domain two-orientation recurrence
+`H_R <= kappa H_(R-1)+A r^(R-1)` with `kappa<1` and constants independent of
+source, beta, phase, cutoff, volume, and exhaustion shape, sufficient to
+instantiate R-451/R-452 without a new carrier.
+
+**Tier.** T0 claim-nonbearing exact audit; no scientific or gate transition.
+
+<a id="r-476"></a>
+### R-476 -- Researcher-proposed Pre-A minimum microscopic axiom packet structural intake
+
+**Result ID.** `R-476` (`EXP-001357`, `T-062`).
+
+**Question and exact scope.** Can the intuition that spatial distinctions
+collapse beyond a horizon-like boundary be converted into one immutable,
+falsifiable microscopic model without calling it an event horizon, Pre-A, or
+an established TECT law? PAH-001 answers only the model-definition question.
+Its exact source is `strategy/pa-hyp/PAH-001-v1.json`, SHA-256
+`03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37`.
+The finite regulator is an anchored bounded-degree relational two-cell
+complex with finite aperture, truncated charged matter and compact `Z_K` link
+variables. The source fixes one gauge-invariant functional, reversible local
+Markov generator, Gibbs state, candidate-internal gauge/relabel projection,
+stationary time boundary, common sup-norm cylinder-core target, and ordered
+cutoff/lattice/volume/selector/aperture/beta/observation-time limits.
+
+**New review model.** "Space collapse" is split into two independent
+coordinate-free tests on the same regulator sequence. First, the covariant
+stiffness `K_I=D_U^* diag(J_e) D_U`, with `J_e=2/(s_v+s_w)`, must lose every
+fixed-energy non-harmonic mode as the aperture floor vanishes. Second, a
+tagged probe with departure rate `k(v->w)=kappa_0 s_v^nu` must obey the
+preregistered finite-time outward bound while an inward lower bound remains
+positive. Aperture collapse must precede infinite observation time. The
+finite name is `TRAPPED_TRANSFER_CANDIDATE`; no general-relativistic horizon
+identity is part of the model.
+
+**Structural admission and verification.** The source declares the unchanged
+nine R-471 owner slots and eleven R-192 detail slots, but every proof binding
+is explicitly candidate-only and not A13 compatibility. The unchanged R-471
+state function derives `OWNER_PACKET_HASHED`; the canonical R-471 current
+snapshot remains `EMPTY_OWNER_ARTIFACT`. Primary 63/63 and a non-importing
+independent lane 52/52 agree on core digest
+`50e3e5900692b13cbe5f65b7c608a498ed4c1946846836fefd751baac3dcaf69`.
+The hostile lane passes 39/39 and rejects 36 provenance, owner, common-core,
+limit-order and promotion mutations; the integrated verifier passes 20/20,
+and Lean R476 compiles.
+
+**Assumptions, boundary, and non-claims.** PAH-001 is a newly constructed
+researcher hypothesis, not an external source, synthetic contract fixture,
+physical authority, or fitted model. `OWNER_PACKET_HASHED` certifies only
+versioned byte identity and field completeness. Finite gauge invariance,
+detailed balance, projection commutation, root factorization, branch
+existence, stability, common-core compatibility, uniform estimates, all
+limits and every physical map remain unproved. No physical-empty, Reading-H,
+event-horizon, black-hole-interior, Pre-A, Sector-A, C6, QFT, Yang--Mills,
+gravity, continuum, observation, cosmic-origin, mass-gap or theory-of-
+everything conclusion follows. A failed falsifier rejects PAH-001 only.
+
+**Proven in.** [source packet](strategy/pa-hyp/PAH-001-v1.json), [intake
+manifest](strategy/pa-hyp/intake-v1.json), [certificate](strategy/pa-hyp/R476-certificate.md),
+[primary](codes/foundations/pah001_intake.py), [independent](codes/foundations/pah001_intake_independent.py),
+[hostile](codes/foundations/pah001_intake_hostile.py), [integrated
+verifier](verification/scripts/pah001_intake_verify.py), [Lean
+firewall](verification/lean/Tect/R476.lean), and [integrated
+run](claims/C6-SPACETIME-SIGNATURE/runs/2026-09-02-r476-pah001/integrated.json).
+
+**Next action.** Prove or refute, under the exact source bytes, finite gauge
+invariance, detailed balance, candidate-projection commutation,
+`B^*B=-L_rho`, and compatibility of the declared cylinder embeddings. Do not
+run branch, physical-empty, continuum or observation calculations first.
+
+**Tier.** T0 claim-nonbearing mainline hypothesis intake; active scientific
+gate and every claim tier remain unchanged.
 
 <a id="r-475"></a>
 ### R-475 -- Lean cross-check of the A5 branch-aware conditional-composition contract

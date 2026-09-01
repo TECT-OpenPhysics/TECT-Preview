@@ -1,0 +1,354 @@
+{
+  "schema": "tect/pre-a-researcher-hypothesis/1.0",
+  "packet_id": "PAH-001",
+  "candidate_id": "PA-M6-RELATIONAL-APERTURE-TRANSFER-v0",
+  "version": "0.1.0",
+  "title": "Relational aperture transfer candidate for microscopic spatial-mode collapse",
+  "proposed_at": "2026-09-02",
+  "proposed_by": "TECT research programme under operator directive",
+  "supersedes": null,
+  "immutability": "This accepted source file is immutable. Any mathematical change requires PAH-001-v2 or a new packet ID.",
+  "provenance": {
+    "class": "RESEARCHER_HYPOTHESIS",
+    "definition_owner": "TECT_RESEARCH_PROGRAM",
+    "external_source": false,
+    "constructed_hypothesis": true,
+    "synthetic_fixture": false,
+    "physical_authority": false,
+    "new_unverified_hypothesis": true,
+    "epistemic_layer": "L2_MODEL_SPECIFICATION_ONLY",
+    "physical_identity": "UNESTABLISHED",
+    "empirical_validation": "NONE"
+  },
+  "method_preservation": {
+    "t054_forward_method_unchanged": true,
+    "t059_t061_inverse_method_unchanged": true,
+    "r471_owner_order_unchanged": true,
+    "r192_owner_order_unchanged": true,
+    "finite_uniform_physical_layers_separated": true,
+    "no_static_fit_selects_dynamics": true,
+    "no_existing_candidate_superseded": true
+  },
+  "interpretive_boundary": {
+    "inspiration": "The intuition that spatial distinctions may cease to be operational beyond a horizon-like boundary is translated into two testable microscopic predicates: low-energy spatial-mode quotient collapse and directional trapped transfer.",
+    "finite_name": "TRAPPED_TRANSFER_CANDIDATE",
+    "event_horizon_identity": "NOT_CLAIMED",
+    "pre_a_identity": "NOT_CLAIMED",
+    "gr_identity": "NOT_CLAIMED",
+    "lorentzian_reconstruction": "MISSING",
+    "meaning_of_space_collapse": "After gauge and symmetry zero modes are removed, all non-harmonic internal modes of a low-aperture component leave every fixed low-energy window, while a tagged local probe has vanishing outward transfer probability at fixed external time.",
+    "not_a_coordinate_singularity": true,
+    "not_a_black_hole_interior_model": true
+  },
+  "finite_regulator": {
+    "tuple": "rho=(G,O,C,K,M_s,M_psi,R_max,epsilon,a,beta,nu,theta,Q)",
+    "carrier": "G=(V,E,P) is a finite connected oriented bounded-degree two-cell complex with disjoint nonempty outer-readout anchor O and core anchor C; no embedding coordinates or Lorentzian metric are part of rho.",
+    "dimension": "finite relational two-cell complex; emergent spatial dimension is an output target and is not inserted",
+    "gauge_cutoff": "K>=2 for Z_K",
+    "aperture_cutoff": "M_s>=1 with s_v in {epsilon+j(1-epsilon)/M_s: j=0,...,M_s}",
+    "matter_cutoff": "M_psi>=1 with radial level ell_v in {0,...,M_psi} and |psi_v|=R_max ell_v/M_psi",
+    "aperture_floor": "0<epsilon<=1",
+    "edge_scale": "a>0 is a refinement label only; physical length is not identified",
+    "volume": "|V| finite; no physical volume interpretation is admitted",
+    "degree_bound": "deg_G(v)<=d_max with d_max fixed before regulator removal",
+    "spatial_boundary_condition": "the finite anchored complex and its incidence data are fixed; O and C are labels, not imposed field values",
+    "time_boundary_condition": "stationary initial-value Markov law on t>=0 with initial distribution pi_(rho,Q), right-continuous paths, and no terminal conditioning",
+    "normalization": "counting measure on the fixed-Q finite configuration space and Z_(rho,Q)=sum_x exp(-beta F_rho(x))",
+    "finite_parts": "none beyond the displayed finite functional; additive constants are fixed by the displayed formula",
+    "common_norm": "supremum norm on bounded gauge- and anchor-automorphism-invariant cylinder observables",
+    "parameter_domain": "beta>0, nu>0, R_max>0, lambda_s>0, eta_6>0, kappa_s>0, kappa_D>0, kappa_g>0, g>0; m2 and lambda_4 are real inserted parameters; every rate scale is positive and frozen before any comparison"
+  },
+  "microscopic_degrees_of_freedom": {
+    "aperture": "s_v on the finite aperture grid in [epsilon,1]",
+    "matter": "psi_v=(R_max ell_v/M_psi) zeta_K^(n_v), with n_v in Z_K and sum_v ell_v=Q",
+    "link": "U_e in Z_K on each oriented edge, with U_(bar e)=U_e^(-1)",
+    "probe": "an optional neutral tagged probe X in V used only by the preregistered transfer estimand",
+    "configuration_space": "Omega_(rho,Q) is the finite set of all displayed variables satisfying the fixed-Q and edge-reversal constraints"
+  },
+  "symmetry_and_constraint": {
+    "local_gauge_group": "Z_K^V",
+    "gauge_action": "psi_v -> zeta_K^(g_v) psi_v and U_(v,w) -> zeta_K^(g_w) U_(v,w) zeta_K^(-g_v); aperture and probe labels are neutral",
+    "relabelling_group": "the finite automorphism group Aut(G;O,C) preserving the cell incidence and both anchors",
+    "fixed_sector": "Q=sum_v ell_v is fixed within one finite comparison",
+    "candidate_internal_projection": "P_cand=P_Aut P_G, the finite group average on L2(Omega_(rho,Q),pi_(rho,Q))",
+    "projection_boundary": "P_cand is only the candidate's finite gauge and relabelling projection; it is not the TECT physical sector, a diffeomorphism quotient, or a QFT Gauss-law theorem"
+  },
+  "functional_or_action": {
+    "name": "F_rho",
+    "edge_stiffness": "J_e(s)=2/(s_v+s_w) for e=(v,w)",
+    "plaquette_stiffness": "J_p(s)=|boundary p|^(-1) sum_(e in boundary p) J_e(s)",
+    "plaquette_holonomy": "U_p is the ordered product of U_e around the oriented boundary of p",
+    "formula": "F_rho=sum_v[lambda_s(s_v-1)^2/2+m2|psi_v|^2/2+lambda_4|psi_v|^4/4+eta_6|psi_v|^6/6+g s_v^2|psi_v|^2/2]+kappa_s sum_(e=(v,w))(s_v-s_w)^2/2+kappa_D sum_(e=(v,w))J_e(s)|psi_w-U_e psi_v|^2/2+kappa_g sum_p J_p(s)(1-Re U_p)",
+    "domain": "Omega_(rho,Q)",
+    "measure_and_jacobian": "finite counting measure; no continuum Jacobian is inserted",
+    "sign_convention": "lower F_rho has larger Gibbs weight exp(-beta F_rho)",
+    "counterterms": "none at finite rho",
+    "boundedness": "Omega_(rho,Q) is finite and epsilon>0, so F_rho and Z_(rho,Q) are finite for every admitted finite regulator",
+    "gauge_invariance_status": "THEOREM_TARGET_NOT_YET_AUDITED"
+  },
+  "dynamics": {
+    "move_set": [
+      "matter phase increment or decrement at one vertex",
+      "one radial occupation quantum transferred across one edge, preserving Q",
+      "one link multiplied by zeta_K or zeta_K^(-1)",
+      "one aperture grid step at one vertex"
+    ],
+    "inverse_pair_rule": "Every move r has an explicit inverse r^(-1).",
+    "mobility_rule": {
+      "matter_phase": "m_r(x)=s_v^nu",
+      "matter_transfer_or_link": "m_r(x)=(s_v s_w)^(nu/2)",
+      "aperture": "m_r(x)=(s_v(before)s_v(after))^(nu/2)",
+      "symmetry": "m_r(x)=m_(r^(-1))(r x)"
+    },
+    "generator": "(L_rho f)(x)=sum_r m_r(x) exp[-beta(F_rho(r x)-F_rho(x))/2] [f(r x)-f(x)]",
+    "transfer": "T_rho(t)=exp(t L_rho) for t>=0",
+    "state": "pi_(rho,Q)(x)=Z_(rho,Q)^(-1) exp[-beta F_rho(x)]",
+    "detailed_balance": "pi(x)c_r(x)=pi(r x)c_(r^(-1))(r x)",
+    "time": "t is external stochastic time; local clock accumulation is d tau_v=s_v^nu dt",
+    "thermal_boundary": "beta defines the finite reversible state; no quantum KMS or proper-time identity is inferred",
+    "finite_transfer_target": "T_rho(t) is positivity preserving, fixes 1, is reversible in L2(pi), and satisfies ||T_rho(t)f||_infinity<=||f||_infinity",
+    "dynamics_selection_boundary": "nu, every move, and every rate scale are inserted dynamics data and cannot be selected from a static fit"
+  },
+  "horizon_collapse_tests": {
+    "low_aperture_region": "I_(epsilon_c) is the connected component containing C in the induced subcomplex {v:s_v<=epsilon_c}, with O disjoint from I_(epsilon_c)",
+    "covariant_incidence": "(D_U phi)_e=phi_w-U_e phi_v on oriented edges internal to I_(epsilon_c)",
+    "stiffness_operator": "K_I=D_U^* diag(J_e(s)) D_U",
+    "spectral_collapse_predicate": "For every fixed Lambda<infinity, Tr 1_[0,Lambda](K_I) -> dim ker(D_U|_I); equivalently the first eigenvalue above ker(D_U|_I) diverges after gauge and symmetry zero modes are removed.",
+    "sufficient_uniform_target": "If gamma_I is the first positive eigenvalue of D_U^*D_U, prove gamma_I/epsilon_c -> infinity along the declared sequence; then every fixed non-harmonic low-energy window empties.",
+    "topology_boundary": "Nontrivial holonomy or additional harmonic modes are counted as surviving topology and are not forced into one collective mode.",
+    "probe_rates": "For each oriented active edge v->w, k(v->w)=kappa_0 s_v^nu.",
+    "outward_predicate": "p_out(rho,T)=sup_(v in I) P_v(tau_O<=T) <= d_max kappa_0 T epsilon_c^nu, hence p_out->0 for fixed T if epsilon_c->0.",
+    "inward_predicate": "For an exterior vertex x with s_x>=s_0>0 and at least one edge into I, preregister p_in(T_0)>=c_0 where c_0=(s_0^nu/d_max)(1-exp(-kappa_0 s_0^nu T_0))>0.",
+    "joint_acceptance": "Both the spectral-collapse and trapped-transfer predicates must pass under one regulator sequence; neither implies the other.",
+    "limit_order_firewall": "epsilon_c->0 is taken before T_obs->infinity; reversing this order is a different proposition and normally removes finite-time trapping.",
+    "status": "PREREGISTERED_NOT_RUN"
+  },
+  "same_owner_branch_contract": {
+    "candidate_branch": "G_(star,Q) is a future stationary low-aperture branch selected inside the fixed-Q candidate state space.",
+    "mathematical_reference": "E_Q is a future high-aperture reference in the same Q sector and under the identical F_rho, generator, state, projection, regulator, anchors, normalization, finite parts, common norm and limit order.",
+    "physical_empty_branch": "NOT_ADMITTED",
+    "reading_h_identity": "NOT_CLAIMED",
+    "sign_orientation": "Delta F_(rho,Q)=F_rho[G_(star,Q)]-F_rho[E_Q]",
+    "required_tests": [
+      "same-owner finite sign with an error interval excluding zero",
+      "candidate stationarity on the full finite projected tangent",
+      "symmetry-projected transverse stability",
+      "dynamic stability in exterior time and aperture-rescaled interior time"
+    ],
+    "status": "BLOCKED_NOT_EVALUATED",
+    "blocker": "Neither branch, its projected tangent, nor a physical-empty identity is yet admitted. Cross-Q or cross-ensemble comparisons are forbidden."
+  },
+  "r471_owner_slots": [
+    {
+      "id": "generator_or_transfer",
+      "kind": "DEFINITION",
+      "status": "PRESENT_MODEL_INTERNAL",
+      "authority_scope": "RESEARCHER_HYPOTHESIS",
+      "domain": "bounded functions on Omega_(rho,Q)",
+      "codomain": "bounded functions on Omega_(rho,Q)",
+      "equation": "L_rho and T_rho(t)=exp(tL_rho) as displayed in dynamics",
+      "dependencies": ["functional_or_action", "finite_regulator", "move_set", "mobility_rule"],
+      "falsifier": "failure of rate positivity, inverse-pair symmetry, Markov conservation, or detailed balance",
+      "proof_status": "UNPROVED_HYPOTHESIS"
+    },
+    {
+      "id": "state",
+      "kind": "DEFINITION",
+      "status": "PRESENT_MODEL_INTERNAL",
+      "authority_scope": "RESEARCHER_HYPOTHESIS",
+      "domain": "Omega_(rho,Q)",
+      "codomain": "probability simplex",
+      "equation": "pi_(rho,Q)=Z_(rho,Q)^(-1)exp(-beta F_rho)",
+      "dependencies": ["functional_or_action", "normalization"],
+      "falsifier": "nonfinite partition function or failure of stationarity for L_rho",
+      "proof_status": "UNPROVED_HYPOTHESIS"
+    },
+    {
+      "id": "physical_projection",
+      "kind": "DEFINITION",
+      "status": "PRESENT_CANDIDATE_INTERNAL_ONLY",
+      "authority_scope": "RESEARCHER_HYPOTHESIS",
+      "domain": "L2(Omega_(rho,Q),pi_(rho,Q))",
+      "codomain": "finite gauge- and anchor-automorphism-invariant subspace",
+      "equation": "P_cand=P_Aut P_G",
+      "dependencies": ["local_gauge_group", "relabelling_group"],
+      "falsifier": "P_cand is not idempotent/self-adjoint or does not commute with L_rho",
+      "proof_status": "UNPROVED_HYPOTHESIS"
+    },
+    {
+      "id": "time_boundary",
+      "kind": "AXIOM",
+      "status": "PRESENT_MODEL_INTERNAL",
+      "authority_scope": "RESEARCHER_HYPOTHESIS",
+      "domain": "stationary Markov paths on [0,infinity)",
+      "codomain": "finite-dimensional path laws",
+      "equation": "X_0~pi_(rho,Q), no terminal conditioning, T_rho(t)=exp(tL_rho)",
+      "dependencies": ["state", "generator_or_transfer"],
+      "falsifier": "future conditioning or an undeclared time boundary changes an estimand",
+      "proof_status": "MODEL_AXIOM"
+    },
+    {
+      "id": "heat_root_incidence",
+      "kind": "DEFINITION",
+      "status": "PRESENT_PROOF_INTERFACE",
+      "authority_scope": "RESEARCHER_HYPOTHESIS",
+      "domain": "L2(pi_(rho,Q))",
+      "codomain": "the directed-move root Hilbert space",
+      "equation": "(Bf)(x,r)=sqrt(c_r(x)/2)(f(r x)-f(x)); target B^*B=-L_rho",
+      "dependencies": ["detailed_balance", "inverse_pair_rule"],
+      "falsifier": "the Dirichlet-form identity has a sign, factor, measure, or domain mismatch",
+      "proof_status": "UNPROVED_HYPOTHESIS"
+    },
+    {
+      "id": "root_filtration",
+      "kind": "DEFINITION",
+      "status": "PRESENT_PROOF_INTERFACE",
+      "authority_scope": "RESEARCHER_HYPOTHESIS",
+      "domain": "ordered local move roots (time layer, cell colour, cell, move type)",
+      "codomain": "an adapted increasing sigma-field family F_n",
+      "equation": "F_n=sigma(X_0,r_1,...,r_n)",
+      "dependencies": ["a fixed root ordering independent of future draws"],
+      "falsifier": "a root depends on a future state or the order changes between proof lanes",
+      "proof_status": "UNPROVED_HYPOTHESIS"
+    },
+    {
+      "id": "conditional_replicas",
+      "kind": "AXIOM",
+      "status": "PRESENT_PROOF_INTERFACE",
+      "authority_scope": "RESEARCHER_HYPOTHESIS",
+      "domain": "the next local transition kernel conditional on F_n",
+      "codomain": "two conditionally independent exchangeable next-layer draws",
+      "equation": "Law(R_1,R_2|F_n)=Law(R_1|F_n) tensor Law(R_2|F_n)",
+      "dependencies": ["root_filtration", "the same source-owned local kernel"],
+      "falsifier": "replicas use different kernels, share future randomness, or lose conditional exchangeability",
+      "proof_status": "MODEL_AXIOM"
+    },
+    {
+      "id": "raw_current_spatial_intertwiner",
+      "kind": "THEOREM_TARGET",
+      "status": "PRESENT_PROOF_INTERFACE",
+      "authority_scope": "RESEARCHER_HYPOTHESIS",
+      "domain": "the common finite root domain of B and B^*",
+      "codomain": "the root-current space",
+      "equation": "B exp(-tB^*B)=exp(-tBB^*)B",
+      "dependencies": ["heat_root_incidence", "finite functional calculus", "candidate projection commutation"],
+      "falsifier": "the intertwiner fails on the candidate common core or after P_cand",
+      "proof_status": "UNPROVED_HYPOTHESIS"
+    },
+    {
+      "id": "production_one_use_q_ledger",
+      "kind": "DEFINITION",
+      "status": "PRESENT_PROOF_INTERFACE",
+      "authority_scope": "RESEARCHER_HYPOTHESIS",
+      "domain": "root labels r and times t>=0",
+      "codomain": "nonnegative root weights",
+      "equation": "q_r(t)=||B_r exp(-tB^*B)f||^2, keyed exactly once by the full root label",
+      "dependencies": ["root_filtration", "raw_current_spatial_intertwiner"],
+      "falsifier": "one source/current contribution is absent, merged, or used more than once",
+      "proof_status": "UNPROVED_HYPOTHESIS"
+    }
+  ],
+  "r192_detailed_bindings": [
+    {"slot": "common_heat", "pointer": "/r471_owner_slots/4", "status": "CANDIDATE_DEFINITION_NOT_A13_COMPATIBILITY"},
+    {"slot": "root_1", "pointer": "/r471_owner_slots/5", "status": "CANDIDATE_DEFINITION_NOT_A13_COMPATIBILITY"},
+    {"slot": "root_2", "pointer": "/r471_owner_slots/6", "status": "CANDIDATE_DEFINITION_NOT_A13_COMPATIBILITY"},
+    {"slot": "future_residual", "pointer": "/r471_owner_slots/5", "status": "CANDIDATE_DEFINITION_NOT_A13_COMPATIBILITY"},
+    {"slot": "covariance_bases", "pointer": "/r471_owner_slots/4", "status": "CANDIDATE_DEFINITION_NOT_A13_COMPATIBILITY"},
+    {"slot": "complement", "pointer": "/r471_owner_slots/7", "status": "CANDIDATE_DEFINITION_NOT_A13_COMPATIBILITY"},
+    {"slot": "historical_low", "pointer": "/r471_owner_slots/5", "status": "CANDIDATE_DEFINITION_NOT_A13_COMPATIBILITY"},
+    {"slot": "forest", "pointer": "/r471_owner_slots/5", "status": "CANDIDATE_DEFINITION_NOT_A13_COMPATIBILITY"},
+    {"slot": "returned_mean", "pointer": "/r471_owner_slots/6", "status": "CANDIDATE_DEFINITION_NOT_A13_COMPATIBILITY"},
+    {"slot": "source", "pointer": "/r471_owner_slots/7", "status": "CANDIDATE_DEFINITION_NOT_A13_COMPATIBILITY"},
+    {"slot": "sextic", "pointer": "/functional_or_action/formula", "status": "CANDIDATE_DEFINITION_NOT_A13_COMPATIBILITY"}
+  ],
+  "common_core_and_uniform_contract": {
+    "common_core": "A_cyl^inv is the algebraic union of bounded gauge- and anchor-automorphism-invariant cylinder observables under declared anchor-preserving refinement embeddings.",
+    "common_norm": "||f||_infinity",
+    "finite_invariance_target": "T_rho(t) maps each finite invariant observable algebra to itself.",
+    "uniform_constant": "C_T=1 in ||T_rho(t)f||_infinity<=C_T||f||_infinity for every finite rho and t>=0",
+    "independence_set": ["K", "M_s", "M_psi", "R_max", "epsilon", "a", "beta", "|V|", "boundary shape", "exhaustion index", "phase selector"],
+    "proof_basis": "positivity and T_rho(t)1=1 for each finite Markov transfer",
+    "proof_status": "FINITE_TRANSFER_CONTRACTION_TARGET_NOT_COMMON_CORE_COMPATIBILITY",
+    "missing_compatibility": "The refinement embeddings, generator agreement on A_cyl^inv, boundary-error decay, and Cauchy convergence in one completed common space are unproved.",
+    "continuum_uniform_estimate": false
+  },
+  "ordered_limits": {
+    "interchange_claimed": false,
+    "numerical_time_step": "If a split-step implementation is used, delta_t->0 occurs first; the mathematical generator itself has no time-step regulator.",
+    "order": [
+      {"id": "LOCAL_STATE_CUTOFF", "limit": "(K,M_s,M_psi,R_max)->infinity at fixed finite complex, epsilon, a, beta and selector", "topology": "to be specified", "status": "DECLARED_NOT_PROVED"},
+      {"id": "LATTICE_REFINEMENT", "limit": "a->0 along a named anchor-preserving refinement at fixed physical-volume target", "topology": "to be specified", "status": "DECLARED_NOT_PROVED"},
+      {"id": "VOLUME_EXHAUSTION", "limit": "|V| and the nested anchored exhaustion index -> infinity after lattice refinement", "topology": "local cylinder topology to be completed", "status": "DECLARED_NOT_PROVED"},
+      {"id": "PHASE_SELECTOR", "limit": "j_phase->0 after volume/exhaustion", "topology": "weak state topology to be specified", "status": "DECLARED_NOT_PROVED"},
+      {"id": "APERTURE_COLLAPSE", "limit": "epsilon->0 with gamma_I/epsilon_c->infinity and exterior parameters fixed", "topology": "spectral-window and finite-time transfer topology", "status": "DECLARED_NOT_PROVED"},
+      {"id": "GROUND_STATE", "limit": "beta->infinity only if a ground-state statement is requested", "topology": "weak state topology to be specified", "status": "DECLARED_NOT_PROVED"},
+      {"id": "OBSERVATION_TIME", "limit": "T_obs->infinity last", "topology": "first-passage distribution", "status": "DECLARED_NOT_PROVED"}
+    ],
+    "critical_order_rule": "APERTURE_COLLAPSE precedes OBSERVATION_TIME; no reversed-order horizon claim is permitted."
+  },
+  "inverse_map_status": {
+    "F_reg": {"admitted": false, "status": "DEFINED_PENDING_FINITE_AUDIT"},
+    "F_lim": {"admitted": false, "status": "MISSING_COMMON_CORE_COMPATIBILITY_AND_UNIFORM_TAILS"},
+    "F_eff": {"admitted": false, "status": "MISSING_EFFECTIVE_QFT_YM_GR_MAP"},
+    "F_obs": {"admitted": false, "status": "MISSING_INSTRUMENT_COVARIANCE_NUISANCE_SCORER"},
+    "candidate_neutral_estimand_frozen": false,
+    "immutable_scorer_frozen": false,
+    "prospective_holdout_frozen": false
+  },
+  "input_prediction_accounting": {
+    "inserted": [
+      "the anchored bounded-degree two-cell complex family",
+      "Z_K gauge variables, truncated matter, aperture field and fixed Q",
+      "the displayed F_rho and every coupling",
+      "the move set, mobility exponent nu and rate scales",
+      "the candidate projection, state, time boundary, root order and q-ledger convention",
+      "the exact ordered-limit sequence"
+    ],
+    "fitted": [],
+    "derived_and_verified": [],
+    "predicted": [],
+    "holdout_credit": false
+  },
+  "assumptions": [
+    "Each finite regulator satisfies the displayed carrier, cutoff, orientation and fixed-Q constraints.",
+    "Every local move and its inverse are enumerated before a run, and the mobility symmetry is part of the source definition.",
+    "The aperture variable is microscopic clock/coupling data, not an already reconstructed lapse or metric component.",
+    "The two collapse predicates are logically independent and must be tested on the same regulator sequence.",
+    "Any future Reading-H comparison retains the existing same-owner scope lock and does not compare different Q sectors or ensembles."
+  ],
+  "missing_assumptions": [
+    "A primary and independent proof of finite gauge invariance, detailed balance, transfer positivity, projection commutation and finite stability.",
+    "An admitted stationary low-aperture branch and same-Q high-aperture reference under one scope fingerprint.",
+    "A proof that the declared refinement embeddings give one invariant common core and that boundary defects vanish there.",
+    "Uniform lower control of gamma_I/epsilon_c and a volume-independent exterior causal-influence envelope.",
+    "Uniform cutoff, lattice, volume, exhaustion, selector, aperture and beta estimates in the declared order.",
+    "A Lorentzian reconstruction and causal map that could distinguish an event horizon from apparent, trapping or Cauchy boundaries.",
+    "A complete F_lim, F_eff and F_obs map with uncertainty, nuisance, immutable scorer and prospective holdout.",
+    "Independent evidence that the candidate corresponds to the observed universe rather than only a mathematical model."
+  ],
+  "falsifiers": [
+    {"id": "PAH-F01", "test": "finite gauge invariance, detailed balance, transfer positivity or projection commutation", "failure": "reject this candidate version before finite admission"},
+    {"id": "PAH-F02", "test": "finite boundedness and partition normalization", "failure": "reject the finite model if F_rho or Z_(rho,Q) is not well-defined"},
+    {"id": "PAH-F03", "test": "spectral quotient collapse", "failure": "reject spatial-mode collapse if gamma_I/epsilon_c fails to diverge or unaccounted low modes survive"},
+    {"id": "PAH-F04", "test": "directional trapped transfer", "failure": "reject trapped transfer if p_out lacks a uniform epsilon power bound or p_in also vanishes"},
+    {"id": "PAH-F05", "test": "limit order", "failure": "reject the horizon-like proposition if it requires T_obs->infinity before epsilon->0 or an undeclared interchange"},
+    {"id": "PAH-F06", "test": "relabelling and refinement invariance", "failure": "reject the candidate sequence if the result depends on arbitrary labels or incompatible refinement choices"},
+    {"id": "PAH-F07", "test": "exterior causal influence", "failure": "withhold every causal or Lorentzian interpretation if no volume-independent exterior propagation envelope exists"},
+    {"id": "PAH-F08", "test": "static-dynamic identifiability", "failure": "report a surviving mobility equivalence class if static-equivalent nu or rates change the two-time estimand"},
+    {"id": "PAH-F09", "test": "branch persistence", "failure": "reject the branch if it disappears when the selector is removed after volume/exhaustion"},
+    {"id": "PAH-F10", "test": "same-owner branch sign and stationarity", "failure": "reject only this candidate branch if Delta F is nonnegative, error-overlapping, scheme-dependent, nonstationary or transversely unstable"},
+    {"id": "PAH-F11", "test": "common-core compatibility", "failure": "retain only finite evidence if generator agreement or boundary-defect decay fails on A_cyl^inv"},
+    {"id": "PAH-F12", "test": "physical reconstruction", "failure": "do not identify Pre-A, GR or an event horizon if the effective and observational maps remain undefined or fail holdout validation"}
+  ],
+  "non_claims": [
+    "This researcher-owned hypothesis is not an external source, established TECT production law, or physical authority.",
+    "Structural completeness of the packet does not prove any displayed finite theorem target.",
+    "The candidate-internal projection is not an admitted TECT physical sector.",
+    "A low-aperture trapped-transfer candidate is not a general-relativistic event horizon or black-hole interior.",
+    "No physical-empty, Reading-H, vacuum, Pre-A, Sector-A, C6, QFT, Yang--Mills, gravity, continuum, cosmic-origin, mass-gap or theory-of-everything conclusion follows.",
+    "No parameter is fitted, no observation is scored, and no prospective prediction is made.",
+    "Failure of a falsifier rejects or narrows PAH-001 only; it is not a falsification of all TECT candidates."
+  ],
+  "current_status": "RESEARCHER_HYPOTHESIS_SOURCE_DEFINED",
+  "next_single_proof_question": "Do the finite reversible generator, gauge projection and root incidence define one common-core-compatible finite transfer under the exact PAH-001 source bytes?"
+}

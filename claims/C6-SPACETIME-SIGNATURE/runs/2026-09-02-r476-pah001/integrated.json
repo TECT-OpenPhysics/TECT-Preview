@@ -1,0 +1,300 @@
+{
+  "F_eff_admitted": false,
+  "F_lim_admitted": false,
+  "F_obs_admitted": false,
+  "F_reg_admitted": false,
+  "assertion_count": 20,
+  "assertions": [
+    {
+      "actual": [
+        "R-476",
+        "EXP-001357",
+        "T-062"
+      ],
+      "expected": [
+        "R-476",
+        "EXP-001357",
+        "T-062"
+      ],
+      "name": "manifest identity",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "T0",
+        false
+      ],
+      "expected": [
+        "T0",
+        false
+      ],
+      "name": "T0 claim firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+      "expected": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+      "name": "source hash",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "declarations": [
+          "candidate_is_structurally_registered",
+          "candidate_is_not_production_admitted",
+          "missing_owner_slot_blocks_registration",
+          "fixture_blocks_registration",
+          "physical_authority_required_for_production",
+          "uniform_estimate_required_for_limit",
+          "horizon_name_does_not_identify_preA",
+          "physical_empty_requires_separate_branch",
+          "candidate_methods_remain_unchanged"
+        ],
+        "path": "verification/lean/Tect/R476.lean",
+        "sha256": "01980598539faeccbabfd6bba6b05eaf68a45de683f1fea6250f41d7f4626fbc"
+      },
+      "expected": "registered R476.lean",
+      "name": "Lean registry entry",
+      "status": "PASS"
+    },
+    {
+      "actual": "01980598539faeccbabfd6bba6b05eaf68a45de683f1fea6250f41d7f4626fbc",
+      "expected": "01980598539faeccbabfd6bba6b05eaf68a45de683f1fea6250f41d7f4626fbc",
+      "name": "Lean registry hash",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "candidate_is_structurally_registered",
+        "candidate_is_not_production_admitted",
+        "missing_owner_slot_blocks_registration",
+        "fixture_blocks_registration",
+        "physical_authority_required_for_production",
+        "uniform_estimate_required_for_limit",
+        "horizon_name_does_not_identify_preA",
+        "physical_empty_requires_separate_branch",
+        "candidate_methods_remain_unchanged"
+      ],
+      "expected": [
+        "candidate_is_structurally_registered",
+        "candidate_is_not_production_admitted",
+        "missing_owner_slot_blocks_registration",
+        "fixture_blocks_registration",
+        "physical_authority_required_for_production",
+        "uniform_estimate_required_for_limit",
+        "horizon_name_does_not_identify_preA",
+        "physical_empty_requires_separate_branch",
+        "candidate_methods_remain_unchanged"
+      ],
+      "name": "Lean declarations",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "returncode": 0,
+        "stderr": "",
+        "stdout": "PAH001 INTAKE PRIMARY PASS 63/63; state=OWNER_PACKET_HASHED; production=NONE; core=50e3e5900692b13cbe5f65b7c608a498ed4c1946846836fefd751baac3dcaf69\n"
+      },
+      "expected": 0,
+      "name": "primary child exit",
+      "status": "PASS"
+    },
+    {
+      "actual": "PASS",
+      "expected": "PASS",
+      "name": "primary verdict",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "returncode": 0,
+        "stderr": "",
+        "stdout": "PAH001 INTAKE INDEPENDENT PASS 52/52; state=OWNER_PACKET_HASHED; production=NONE; core=50e3e5900692b13cbe5f65b7c608a498ed4c1946846836fefd751baac3dcaf69\n"
+      },
+      "expected": 0,
+      "name": "independent child exit",
+      "status": "PASS"
+    },
+    {
+      "actual": "PASS",
+      "expected": "PASS",
+      "name": "independent verdict",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "returncode": 0,
+        "stderr": "",
+        "stdout": "PAH-001 HOSTILE PASS 39/39; mutations=36\n"
+      },
+      "expected": 0,
+      "name": "hostile child exit",
+      "status": "PASS"
+    },
+    {
+      "actual": "PAH001-STRUCTURAL-INTAKE-HOSTILE-PASS",
+      "expected": "PASS",
+      "name": "hostile verdict",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "OWNER_PACKET_HASHED",
+        "OWNER_PACKET_HASHED"
+      ],
+      "expected": "OWNER_PACKET_HASHED",
+      "name": "primary-independent state agreement",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "50e3e5900692b13cbe5f65b7c608a498ed4c1946846836fefd751baac3dcaf69",
+        "50e3e5900692b13cbe5f65b7c608a498ed4c1946846836fefd751baac3dcaf69"
+      ],
+      "expected": "one nonempty digest",
+      "name": "primary-independent core digest",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "NONE",
+        "NONE",
+        "NONE"
+      ],
+      "expected": "NONE",
+      "name": "production admission empty",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        false,
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false,
+        false
+      ],
+      "name": "physical owner remains false",
+      "status": "PASS"
+    },
+    {
+      "actual": 36,
+      "expected": ">=24",
+      "name": "hostile mutation floor",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        63,
+        52
+      ],
+      "expected": [
+        35,
+        20
+      ],
+      "name": "child assertion floors",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        true,
+        true,
+        true
+      ],
+      "expected": [
+        true,
+        true,
+        true
+      ],
+      "name": "methods unchanged",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "command": "lake env lean Tect/R476.lean",
+        "lake": "C:\\Users\\NaEun\\.elan\\toolchains\\leanprover--lean4---v4.32.1\\bin\\lake.exe",
+        "output": "",
+        "returncode": 0,
+        "status": "PASS"
+      },
+      "expected": "PASS",
+      "name": "Lean compile",
+      "status": "PASS"
+    }
+  ],
+  "assumptions": [
+    "The operator directive permits a researcher-created hypothesis when it is declared as new, versioned, hash-pinned and nonphysical.",
+    "R-471 OWNER_PACKET_HASHED is interpreted here only as byte and field completeness for one input packet, not physical-owner acceptance.",
+    "The exact PAH-001 source bytes, not this summary manifest, own the candidate definitions.",
+    "The R-471 and R-192 orders and the established T-054/T-059/T-061 methods remain unchanged."
+  ],
+  "audit_id": "PAH-001-STRUCTURAL-INTAKE",
+  "boundary": "R-476 is a T0 structural and provenance result. It converts one intuition into an immutable falsifiable model source while keeping every analytic, physical and empirical gate closed.",
+  "candidate_id": "PA-M6-RELATIONAL-APERTURE-TRANSFER-v0",
+  "child_summary": {
+    "hostile": {
+      "assertions": 39,
+      "mutations": 36
+    },
+    "independent": {
+      "assertions": 52,
+      "core_digest": "50e3e5900692b13cbe5f65b7c608a498ed4c1946846836fefd751baac3dcaf69"
+    },
+    "primary": {
+      "assertions": 63,
+      "core_digest": "50e3e5900692b13cbe5f65b7c608a498ed4c1946846836fefd751baac3dcaf69"
+    }
+  },
+  "claim_bearing": false,
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "classification": "mainline_advance",
+  "evidence_level": "T0 / HASH-PINNED RESEARCHER-HYPOTHESIS STRUCTURAL INTAKE WITH INDEPENDENT, HOSTILE, INTEGRATED AND LEAN FIREWALLS",
+  "exploration_id": "EXP-001357",
+  "gate_changed": false,
+  "hypothesis_packet_state": "OWNER_PACKET_HASHED",
+  "lean": {
+    "command": "lake env lean Tect/R476.lean",
+    "lake": "C:\\Users\\NaEun\\.elan\\toolchains\\leanprover--lean4---v4.32.1\\bin\\lake.exe",
+    "output": "",
+    "returncode": 0,
+    "status": "PASS"
+  },
+  "methods_unchanged": true,
+  "missing_assumptions": [
+    "Every finite theorem target listed in PAH-001 remains to be proved by primary, independent, hostile and formal checks.",
+    "No common-core compatibility, boundary-error decay or regulator-uniform convergence theorem exists yet.",
+    "No same-owner physical-empty branch, effective QFT/YM/GR map, observation map, scorer or holdout is admitted."
+  ],
+  "next_action": "Run exactly one common-core compatibility audit for the PAH-001 finite reversible transfer: prove or refute gauge invariance, detailed balance, P_cand commutation, B^*B=-L on the finite invariant core, and compatibility of the declared cylinder embeddings before any branch, physical-empty, continuum or observation calculation.",
+  "non_claims": [
+    "R-476 registers a reviewable hypothesis source; it does not admit production dynamics or a physical owner.",
+    "The word horizon is motivational only and no event-horizon, black-hole-interior, Lorentzian or gravity identity follows.",
+    "No physical-empty sign, Reading-H stationarity, Pre-A, Sector-A, QFT, Yang--Mills, continuum, observation, cosmic-origin, mass-gap or theory-of-everything claim follows.",
+    "The finite transfer contraction target is not the missing common-core or continuum-uniform estimate."
+  ],
+  "packet_id": "PAH-001",
+  "passed": 20,
+  "physical_owner_admitted": false,
+  "physical_projection_admitted": false,
+  "production_admission": "NONE",
+  "provenance": {
+    "hostile_sha256": "2291a8ce278f374e1b2ead368e07b098c86a9bfeab97a8207f1c9f10c78f2c20",
+    "independent_sha256": "10945bb2593a0d88917b5999d5a97f0116fb8240e73b8fa5fd76bb92b4807c90",
+    "lean_sha256": "01980598539faeccbabfd6bba6b05eaf68a45de683f1fea6250f41d7f4626fbc",
+    "manifest_sha256": "f01e27af5b98d22ddc9e5ca23d81a2fe2e847e24103f78528bd7e2f83fb11eb7",
+    "primary_sha256": "fa7adead208112974dc96d4c858d3a7714b34615153723aef0e3a11d9f7d8e1b",
+    "registry_sha256": "9f3fde3b2c21ce969b77edda9b1a1698749bcaa6d7d3e7a702cfd86ae018f38f",
+    "source_sha256": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37"
+  },
+  "r471_canonical_current_snapshot": "EMPTY_OWNER_ARTIFACT",
+  "recorded_at": "2026-09-01T17:33:57.711017Z",
+  "result_id": "R-476",
+  "run_kind": "integrated",
+  "schema": "tect/pah001-structural-intake-run/1.0",
+  "scientific_transition": false,
+  "task_id": "T-062",
+  "tier": "T0",
+  "verdict": "PAH001-STRUCTURAL-INTAKE-INTEGRATED-PASS"
+}

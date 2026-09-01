@@ -5,10 +5,12 @@
 
 Authorities: `RESULTS-LEDGER.md`.
 
-**309 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
+**311 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
 
 | ID | Result | Tier/scope |
 |---|---|---|
+| [`R-477`](../RESULTS-LEDGER.md#r-477) | Exact positive-lambda ST8/Q3LOCK common-alpha five-condition audit | T0 claim-nonbearing exact audit; no scientific or gate transition. |
+| [`R-476`](../RESULTS-LEDGER.md#r-476) | Researcher-proposed Pre-A minimum microscopic axiom packet structural intake | T0 claim-nonbearing mainline hypothesis intake; active scientific gate and every claim tier remain unchanged. |
 | [`R-475`](../RESULTS-LEDGER.md#r-475) | Lean cross-check of the A5 branch-aware conditional-composition contract | T0 claim-nonbearing auxiliary support; no gate or claim-tier change. |
 | [`R-474`](../RESULTS-LEDGER.md#r-474) | Conditional ordered-limit rectangular-tail bridge | T0 |
 | [`R-473`](../RESULTS-LEDGER.md#r-473) | HOLD-LC-001 TTE event-row feature index | T0 |
@@ -32,8 +34,6 @@ Authorities: `RESULTS-LEDGER.md`.
 | [`R-455`](../RESULTS-LEDGER.md#r-455) | Nonnegative transfer-matrix defect-resolvent envelope for coupled orientation histories | T0 |
 | [`R-454`](../RESULTS-LEDGER.md#r-454) | Variable-coefficient defect-stable history-resolvent envelope | T0 |
 | [`R-453`](../RESULTS-LEDGER.md#r-453) | Defect-stable history-resolvent recurrence envelope | T0 |
-| [`R-452`](../RESULTS-LEDGER.md#r-452) | Conditional history-resolvent recurrence envelope | T0 |
-| [`R-451`](../RESULTS-LEDGER.md#r-451) | Conditional two-sided history recurrence to all-shape exhaustion Cauchy transfer | T0 |
 
 Search without loading the full ledger:
 

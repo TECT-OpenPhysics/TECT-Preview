@@ -4,13 +4,13 @@ Generated from `todo/todo.json` by `verification/scripts/todo.py` -- **never han
 Portable: copying the TECT folder carries this ledger; a fresh cowork session reads it in the session-entry prelude (AGENTS.md §1).
 For bounded daily reading use `management/INDEX.md`; this compatibility view deliberately preserves every completed task.
 
-Counts: In progress 5 · Next up 0 · Blocked 2 · Backlog 5 · Done (compatibility history) 49
+Counts: In progress 5 · Next up 0 · Blocked 2 · Backlog 5 · Done (compatibility history) 50
 
 ## In progress
 
 - **T-054** Pre-A evidence register and candidate-functional tournament  _(owner: Codex; gate: PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE)_
-  - R-471 / EXP-001346 supplies additive fail-closed owner/map admission tooling for the unchanged T-054 forward and T-059/T-061 inverse lanes. No candidate is admitted and no finite mobility table is added; use the contract before any owner packet can advance. Resume source-owned chart/tube/Jacobian work only when its upstream owner input exists.
-  - _updated 2026-08-31_
+  - R-476 / EXP-001357 adds PAH-001 as a hash-pinned researcher hypothesis and derives OWNER_PACKET_HASHED under the unchanged R-471 structure; canonical production admission, physical authority and F_reg/F_lim/F_eff/F_obs remain absent. DCTRL-000005 resumes CONTINUE_MAINLINE only for one finite common-core audit: gauge invariance, detailed balance, P_cand commutation, B^*B=-L and cylinder-embedding compatibility. Do not run branch, physical-empty, BCC, Reading-H, continuum or observation calculations first.
+  - _updated 2026-09-01_
 - **T-055** Geometry-first truncated-octahedron candidate triage: enumerate realizations and test empty-reference sign before structural use  _(owner: Codex; claim: C6-SPACETIME-SIGNATURE; gate: C6-BCC-PREMISE-BLOCKED)_
   - Operator priority 2026-08-14. The object is truncated-octahedron geometry, not BCC as a premise. Use natural analogues only as calibrated diagnostics: BCC Voronoi cells for exact 14-face combinatorics, Kelvin-type foams for interface observables, the named Weaire--Phelan two-cell partition as an interface-energy negative control, and growing-bubble coarsening for rescaled cell-topology/defect attractor tests. Derive any one-, two-, three- or higher-motif candidate class from the frozen Reading-H soft spectrum, symmetry representations, conserved quantities and resonances; preregister its component cutoff and full allowed invariant basis rather than adding motifs post hoc. For every two-motif candidate, derive the complete A/B cross-coupling and resonant-phase energy, prove boundedness and compare the stable mixed branch against pure A, pure B and disordered reference under one renormalization convention; a changed charge ensemble is a distinct owner. An algorithmic Reading-H gradient-flow parameter is not physical time. First freeze center-extraction alternatives, enumerate BCC and non-BCC realizations under one renormalization convention, and test F_ren[realization]-F_ren[0] < 0. Only a surviving sign proceeds to transverse Hessian stability and thermodynamic/continuum control. Q3LOCK is auxiliary evidence.
   - _updated 2026-08-14_
@@ -187,3 +187,6 @@ Counts: In progress 5 · Next up 0 · Blocked 2 · Backlog 5 · Done (compatibil
 - **T-060** Research Phase P0-R baseline and dual-lane resume recovery  _(owner: Codex; gate: RESEARCH-CONTINUITY-P0-BASELINE-AND-RESUME)_
   - Pointer-only recovery task. Preserve all existing forward methods unchanged; register the inverse lane additively; close only after ordinary continuity, doctor, release, clean queue/worktree, live remote equality, and an exact next action per lane pass.
   - _updated 2026-08-30_
+- **T-062** Researcher-proposed Pre-A minimum microscopic axiom packet intake  _(owner: Codex; claim: C6-SPACETIME-SIGNATURE; gate: PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE)_
+  - R-476/EXP-001357 structurally registered PAH-001 at OWNER_PACKET_HASHED with production_admission=NONE; next T-054 action is the finite common-core compatibility audit named in DCTRL-000005.
+  - _updated 2026-09-01_

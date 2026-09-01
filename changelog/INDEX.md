@@ -5,7 +5,7 @@ Compact generated reader surface. The append-only authority is
 record 568 / commit `4db22f4e` and no longer grows.
 Post-cutover full bodies live exactly once in bounded pages under `pages/`.
 
-**827 accepted events** · latest 25 shown below · machine locator: `index.json`
+**829 accepted events** · latest 25 shown below · machine locator: `index.json`
 
 Search the complete authority without loading every page:
 
@@ -17,6 +17,8 @@ python verification/scripts/changelog.py search --text <phrase>
 
 | Date | Event | Claims | Full entry |
 |---|---|---|---|
+| 2026-09-02 | `20260902-r-477-exact-q3lock-common-alpha-gate-held-for-u` — [R-477 exact Q3LOCK common-alpha gate held for uniform evidence] - 2026-09-02 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000819-000868.md#20260902-r-477-exact-q3lock-common-alpha-gate-held-for-u) |
+| 2026-09-02 | `20260902-r-476-researcher-proposed-pre-a-minimum-microsc` — [R-476 researcher-proposed Pre-A minimum microscopic axiom packet structural admission] - 2026-09-02 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000819-000868.md#20260902-r-476-researcher-proposed-pre-a-minimum-microsc) |
 | 2026-09-01 | `20260901-r-475-lean-cross-check-of-a5-branch-aware-condi` — [R-475 Lean cross-check of A5 branch-aware conditional-composition contract] - 2026-09-01 | A5-SECTOR-A-SYNTHESIS | [bounded page](pages/000819-000868.md#20260901-r-475-lean-cross-check-of-a5-branch-aware-condi) |
 | 2026-08-31 | `20260831-r-474-conditional-ordered-limit-rectangle-bridg` — [R-474 conditional ordered-limit rectangle bridge] - 2026-08-31 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000819-000868.md#20260831-r-474-conditional-ordered-limit-rectangle-bridg) |
 | 2026-08-31 | `20260831-additive-sector-a-frontier-audit-preserves-forw` — [Additive Sector-A frontier audit preserves forward and inverse methods] - 2026-08-31 | A5-SECTOR-A-SYNTHESIS, A6-A13 | [bounded page](pages/000819-000868.md#20260831-additive-sector-a-frontier-audit-preserves-forw) |
@@ -40,8 +42,6 @@ python verification/scripts/changelog.py search --text <phrase>
 | 2026-08-31 | `20260831-r-458-m5-equation-audit-2026-08-31` — [R-458 M5 equation audit] - 2026-08-31 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000769-000818.md#20260831-r-458-m5-equation-audit-2026-08-31) |
 | 2026-08-31 | `20260831-r-457-finite-m3-compact-u-1-equation-level-audi` — [R-457 finite M3 compact-U(1) equation-level audit] - 2026-08-31 | C6-SPACETIME-SIGNATURE, EXP-001330, R-457 | [bounded page](pages/000769-000818.md#20260831-r-457-finite-m3-compact-u-1-equation-level-audi) |
 | 2026-08-31 | `20260831-r-456-conditional-weighted-transfer-operator-de` — [R-456 conditional weighted transfer-operator defect-resolvent envelope] - 2026-08-31 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000769-000818.md#20260831-r-456-conditional-weighted-transfer-operator-de) |
-| 2026-08-31 | `20260831-r-455-nonnegative-transfer-matrix-defect-resolv` — [R-455 nonnegative transfer-matrix defect-resolvent envelope] - 2026-08-31 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000769-000818.md#20260831-r-455-nonnegative-transfer-matrix-defect-resolv) |
-| 2026-08-31 | `20260831-r-454-variable-coefficient-defect-stable-histor` — [R-454 variable-coefficient defect-stable history-resolvent] - 2026-08-31 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000769-000818.md#20260831-r-454-variable-coefficient-defect-stable-histor) |
 
 ## Post-cutover pages
 
@@ -49,7 +49,7 @@ Each full event body after the cutover occurs in exactly one page.
 
 | Ordinals | Events | Page |
 |---|---:|---|
-| 819–827 | 9 | [000819-000868.md](pages/000819-000868.md) |
+| 819–829 | 11 | [000819-000868.md](pages/000819-000868.md) |
 | 769–818 | 50 | [000769-000818.md](pages/000769-000818.md) |
 | 719–768 | 50 | [000719-000768.md](pages/000719-000768.md) |
 | 669–718 | 50 | [000669-000718.md](pages/000669-000718.md) |

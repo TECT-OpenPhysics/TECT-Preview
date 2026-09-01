@@ -1,0 +1,215 @@
+{
+  "schema": "tect/q3lock-common-alpha-gate-audit/1.0",
+  "audit_id": "Q3A-001",
+  "result_id": "R-477",
+  "exploration_id": "EXP-001358",
+  "task_id": "T-054",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "title": "Exact positive-lambda ST8/Q3LOCK common real-time automorphism five-condition audit",
+  "question": "Does the exact fixed-lattice positive-lambda ST8/Q3LOCK Hamiltonian define one source-, phase- and beta-independent infinite-volume real-time automorphism group on the already declared spatial quasi-local algebra?",
+  "verdict": "HOLD_FOR_EVIDENCE",
+  "classification": "HOLD_FOR_EVIDENCE",
+  "tier": "T0",
+  "claim_bearing": false,
+  "gate_changed": false,
+  "scientific_transition": false,
+  "model_mutation": {
+    "new_hamiltonian": false,
+    "new_counterterm": false,
+    "new_carrier": false,
+    "new_physical_projection": false
+  },
+  "exact_model": {
+    "candidate_id": "PA-CP1-ST8-Q3LOCK-v0",
+    "candidate_source": {
+      "path": "strategy/pre-a-cp1-st8-q3lock-manifest.json",
+      "sha256": "7ff6f2dd7877fc7d01da0421939ceab8f37c9b97adeedb3c063f6e16dc2ac38c",
+      "pointer": "/definition"
+    },
+    "hamiltonian_source": {
+      "path": "strategy/pre-a-cp1-st8-q3lock-fixed-lattice-3d-quantum-pressure-ground-density-effective-reduction-route-split-manifest.json",
+      "sha256": "48889ebc8d251ee1c45a7a185a96b487bc59c8d574e8c2d61c724dce00048535",
+      "pointer": "/setup/hamiltonian"
+    },
+    "hamiltonian": "H_L(J)=sum[-hbar^2/(2chi) d^2+r psi^2/2+g psi^4/4-J_epsilon psi]+(c/2) sum spatial difference squares+(lambda/4) sum onsite Q3-edge (psi_epsilon-psi_eta)^2(psi_epsilon^2+psi_eta^2)",
+    "hilbert_space": "L2(R^(8|Lambda|)) at each finite coarse volume Lambda",
+    "dimension": 3,
+    "components_per_site": 8,
+    "species_graph": "the twelve undirected edges of Q3",
+    "parameter_scope": "hbar>0, chi>0, c>0, g>0, lambda>0, r real; the EXP-000782 phase regime additionally has r<0 and its displayed sufficient inequalities",
+    "lattice_scope": "fixed spacing, fixed block origin, unweighted ST8 on even open rectangles or even periodic cubes in Z3",
+    "source_scope": "The target dynamics is the zero-source net H_L(0). Compact sources may be used only for uniform estimates or state selection and may not label the limiting action.",
+    "beta_scope": "Beta labels equilibrium states only and may not enter the definition of the limiting C-star action.",
+    "phase_scope": "The plus and minus Euclidean phases must be states or quotient representations of the same action; a phase-labelled direct sum is excluded.",
+    "finite_dynamics": "alpha_t^Lambda(A)=exp(i t H_Lambda(0)/hbar) A exp(-i t H_Lambda(0)/hbar)",
+    "existing_core": "P_loc, the finite-support polynomial CCR star-algebra from EXP-000792",
+    "existing_spatial_carrier_candidate": "B_sp, the integrated-orbit-smear spatial subalgebra of R-167 v4.2; its construction is conditional on exact-Q3 summable integrated-toggle weights and it is not the raw oscillator local net",
+    "required_continuity": "point-norm C0 on one invariant spatial quasi-local C-star algebra; local-strict or fixed-representation strong-star convergence is only an intermediate topology",
+    "volume_limit": "all finite shapes exhausting Z3, with exhaustion independence for both time orientations",
+    "continuum_limit": "not in scope; lattice spacing remains fixed"
+  },
+  "historical_exploration_hashes": {
+    "EXP-000780": "c3eeb51e1980fbaea5e59c0eafa3a8ff47354509586aee727c3d057ebd71b120",
+    "EXP-000781": "3f2ec49335396dbe05731dfb98a631af108bd5c2e950b05236d895cc7e3cfaae",
+    "EXP-000782": "91bfac1aa57cefb344468ec7bc41d2d995374b1127425778c504e35de2f049fd",
+    "EXP-000783": "f41dae59a20b2aeadfcc219d720a9731c432ac885cce1b4cb2fb041f65201a47",
+    "EXP-000784": "c79b2c703634ea86dc16dc632daaaa76c9dc11b266d0a8a54afaf10e04805cc3",
+    "EXP-000785": "cfb707bc818327b7da727b452418b36010a41114cc9e21d3744d92a6ded12882",
+    "EXP-000786": "2078714818fa30acd0bbd5ae8f8f5ac2159d72ed161a720630caf2cc7422ce79",
+    "EXP-000787": "733fbaa5d8564e5824d53007dc35114433db1a2a07743224d648fbbce4d59634",
+    "EXP-000788": "4058db2439d9a23805ced54fd4a3a13893b70d70e4c7d93cd50527d0334e3e3d",
+    "EXP-000789": "99dca5fa33745113dacc45b0ba94176e78f50fc1d7bac02ba8d779b66a81b5a8",
+    "EXP-000790": "c55ee59daf107b751706ba49b4af930d6c14ece3e215e89aba995aab30efe37e"
+  },
+  "later_exploration_hashes": {
+    "EXP-000792": "02809771d018085920d60355f36ae030ef4110a1c8816754e4e0fcdd24580846",
+    "EXP-000799": "d9c8b838b24dc4504903977095e4517a1e38957857f7ed117658673951dd8a12",
+    "EXP-000813": "1d7738aad526965fcbcbac020070fe1ac937ca22d2ab1a43fe396b1d21947ac7",
+    "EXP-000815": "294e5240ab43bddd7c5d3254ae4b499960fddd2b60ef227dc3a797a0a107849b",
+    "EXP-000818": "140b537ff2f0767ad34fa65c1362cb501758f60fac71be6ea0a3016fe5646c69",
+    "EXP-000846": "938c0beb48b4345758a2edf7f4a398c9c33fff4b831b8195e2875535e15a192d",
+    "EXP-001033": "317e3b8af70a5df7875f2453a7207ca235745959b60b9185044532134bea3568",
+    "EXP-001034": "dba0a8ca79c5fa9bb076a452b180d7289a631f1034c3a268e726be0f3198a897",
+    "EXP-001323": "76fa7f3ffa340201ca052b9870e48681b4448837c5e833685c5f12b20f0c499f",
+    "EXP-001324": "397b0ec7b9ec12f8efce451e724552bf4f1af39779005822983ff9504b05f523",
+    "EXP-001325": "7c46337ac90543b870ebf9bcb530332aaff625b1441f8d4bea6d29201b1e4fc5",
+    "EXP-001353": "c34aa267d5718689037cb2579d0f30641b32c2489eda2bc4d0fdf883bce8cf17"
+  },
+  "pinned_authorities": [
+    {
+      "path": "strategy/pre-a-cp1-st8-q3lock-os-dynamics-ground-gap-counterterm-empty-route-split-manifest.json",
+      "sha256": "07cf9be922bf16def3b88f5a4d2924a087bae1282cfc56956258293d131d30fa",
+      "role": "EXP-000790 phasewise OS/KMS and common-alpha split"
+    },
+    {
+      "path": "strategy/pre-a-cp1-st8-q3lock-common-local-derivation-weighted-energy-route-split-manifest.json",
+      "sha256": "2a29637bcddd115042986fb3c1e1df7d43bf43c91e010cbc7349eda60c924d2f",
+      "role": "EXP-000792 exact local derivation and first weighted energy cone"
+    },
+    {
+      "path": "strategy/pre-a-cp1-st8-q3lock-common-alpha-topology-critical-graph-route-split-manifest.json",
+      "sha256": "2b732db59ebc9e611ed14ad1a27ce88d8cf973afd14f1ec3a39603c625713a9d",
+      "role": "EXP-000799 critical topology and common-alpha boundary"
+    },
+    {
+      "path": "strategy/pre-a-cp1-st8-q3lock-local-measured-renyi-semiclassical-doublet-route-split-manifest.json",
+      "sha256": "3109034cf863d9d629e553b145425e8ab71ed401c9b3696c2ff04499928b6c7b",
+      "role": "R-167 v2.2-v2.4 finite histories and conditional automorphism completion"
+    },
+    {
+      "path": "strategy/pre-a-cp1-st8-q3lock-integrated-orbit-smear-spatial-quotient-ground-transfer-route-split-manifest.json",
+      "sha256": "fa9e74f02516b10f6917d6b6b79aa19f4885b7893751a2b4e4af910a533ca3e8",
+      "role": "R-167 v4.2 conditional B_sp construction"
+    },
+    {
+      "path": "strategy/pre-a-cp1-st8-q3lock-state-weighted-edge-majorant-composition-manifest.json",
+      "sha256": "94d650422aeb74221805e3d99626a809a3ed72ca2e7e3a5de1e5307ee3739080",
+      "role": "R-450 conditional two-orientation edge-to-shell transfer"
+    },
+    {
+      "path": "strategy/pre-a-cp1-st8-q3lock-two-sided-history-cauchy-transfer-manifest.json",
+      "sha256": "0045cc8343551a2d01fe42614c282d92970cae9106558fb600202e5cba901867",
+      "role": "R-451 conditional history-to-all-shape Cauchy transfer"
+    },
+    {
+      "path": "strategy/pre-a-cp1-st8-q3lock-history-resolvent-recurrence-manifest.json",
+      "sha256": "b9a88a00b2cd402628030db17c2a29293671e5be95b206d9dbd4ed110f87bcf0",
+      "role": "R-452 conditional kappa-less-than-one recurrence envelope"
+    },
+    {
+      "path": "strategy/pre-a-q3lock-ordered-limit-rectangle-manifest.json",
+      "sha256": "e6f5c7883756f6861e1e713e6fea6c71c8780594c28c7955df3ba4eafb949d0a",
+      "role": "R-474 conditional ordered-limit bookkeeping"
+    },
+    {
+      "path": "strategy/pre-a-cp1-st8-q3lock-external-anharmonic-dynamics-assumption-audit-260825.md",
+      "sha256": "dbdfb25e057173848f9b5959245d83b97e43cf7e5add5f31c5a30257e6185a62",
+      "role": "external theorem applicability boundary"
+    }
+  ],
+  "negative_section_hashes": {
+    "ng-2026-08-09-pre-a-st8-q3lock-posthoc-direct-sum-common-dynamics": "5b9a24122b477ced752da3c920cd0c8d8448a3fb762abe3d928364b10f60952e",
+    "ng-2026-08-09-pre-a-st8-q3lock-current-common-dynamics-theorem-import-mismatch": "229a8f1efc264d09d83240609519c807612099cea8cdc937ddcf9604b78d0873",
+    "ng-2026-08-10-pre-a-st8-q3lock-symmetric-sandwich-only-thermodynamic-cauchy": "3d9184ee5c85b3652d096c5c1172ca1397d0631c74bd08628ae3f38f4743ab00",
+    "ng-2026-08-11-pre-a-st8-q3lock-forward-local-automorphism-limit-automatic-surjectivity-and-inverse-cauchy": "5886e0069b1d113d5a914d4f13a666497d6d4db49d1f1d9a2709607082bb8fd8",
+    "ng-2026-08-12-pre-a-st8-q3lock-orbit-smear-seed-support-automatic-spatial-local-net": "fb59c853b46a739eb6cf0e7f2747ae1844244a5830cd2081a52200bc88d88977",
+    "ng-2026-08-13-pre-a-st8-q3lock-raw-configuration-weyl-full-hamiltonian-point-norm-c0": "4ba1fc46b5a04079dc4283c591a56c86f9b61f60ca49e9c696271dae6b6e8f49",
+    "ng-2026-08-25-pre-a-st8-q3lock-local-quartic-tail-force-a34-operator-factorization": "7f8b46884d3a62d3a73690bfd5b939be796ee1bad787e884ed354bc7f8da37d7",
+    "ng-2026-08-26-pre-a-st8-q3lock-centered-global-energy-context-volume-obstruction": "24d867be86eeb59249ab433c6b7ec5e824ce730fb37b7483e3476b6aa9a693a1"
+  },
+  "required_conditions": [
+    {
+      "id": "Q3A-C1",
+      "requirement": "The finite-volume zero-source dynamics converges on one explicit dense local core for every volume and exhaustion shape.",
+      "status": "NOT_PROVED",
+      "established": "P_loc has a volume-independent local derivation, and conditional R-451/R-452 transfer lemmas exist.",
+      "missing": "No exact-Q3 common-domain two-sided history recurrence, summable edge weights, or all-shape exhaustion Cauchy estimate is proved."
+    },
+    {
+      "id": "Q3A-C2",
+      "requirement": "The limit has group law, inverse, point-norm C0 continuity, and preserves the declared spatial local algebra.",
+      "status": "NOT_PROVED",
+      "established": "A conditional bidirectional Cauchy-to-C0 theorem and a conditional B_sp action are available.",
+      "missing": "Their exact-Q3 hypotheses are uninstantiated; raw configuration Weyl elements have a finite-volume norm jump two, and B_sp is not proved to be a seed-indexed commuting raw-oscillator local net."
+    },
+    {
+      "id": "Q3A-C3",
+      "requirement": "The limiting generator and common core are derived from the same exact Q3LOCK Hamiltonian.",
+      "status": "PARTIAL_NOT_CLOSED",
+      "established": "EXP-000792 derives the phase-independent finite-support polynomial CCR derivation from the exact Hamiltonian.",
+      "missing": "Closability, exponentiation on the target C-star carrier, generator convergence, and identification with the finite Hamiltonian dynamics are unproved."
+    },
+    {
+      "id": "Q3A-C4",
+      "requirement": "The action is fixed before source, beta, or plus/minus phase selection and is not manufactured by a direct sum.",
+      "status": "NOT_PROVED",
+      "established": "The local polynomial derivation is phase-independent and the phasewise OS systems exist separately.",
+      "missing": "The two OS/DLR phases are not identified as states or quotient representations of one zero-source Hamiltonian action; post-hoc direct sum is an explicit no-go."
+    },
+    {
+      "id": "Q3A-C5",
+      "requirement": "One uniform locality/energy estimate simultaneously controls the unbounded quartic onsite force and unbounded bilinear spatial coupling.",
+      "status": "NOT_PROVED",
+      "established": "The first weighted local-energy cone, selected higher finite moments, and conditional shell/recurrence transfers are proved in their stated scopes.",
+      "missing": "No source-, cutoff-, volume-, shape-, phase-, beta- and history-uniform exact-Q3 two-orientation estimate exists on one common domain; the direct theorem imports and several unweighted or local-factorization routes fail."
+    }
+  ],
+  "decision_rule": {
+    "MAINLINE_ADVANCE": "All five conditions are proved for the exact model and independently verified.",
+    "NEGATIVE_RESULT": "An exact contradiction or carrier-independent no-go for the stated exact-Q3 target is proved.",
+    "HOLD_FOR_EVIDENCE": "At least one required condition remains unproved and no exact target-level contradiction is proved.",
+    "derived_condition_vector": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "derived_verdict": "HOLD_FOR_EVIDENCE"
+  },
+  "reason_not_negative": "Every registered no-go used here rejects a named carrier, topology, implication, factorization, or theorem import. The authorities explicitly retain strong, local-strict, smeared, energy-weighted, resolvent-smoothed, or other common-alpha routes. No contradiction to existence of every admissible exact-Q3 common dynamics is proved.",
+  "assumptions": [
+    "The hash-pinned strategy manifests and append-only exploration records are the current Q3LOCK authorities.",
+    "The target is fixed lattice spacing and zero source; no continuum or physical interpretation is part of this audit.",
+    "Point-norm C0 is required for the final C-star automorphism group even when local-strict or state-weighted topologies are used as proof intermediates.",
+    "The phasewise EXP-000790 OS systems remain valid only at their registered conditional equilibrium scope."
+  ],
+  "missing_assumptions": [
+    "One exact-Q3 common invariant domain or core embedded densely in the chosen spatial quasi-local C-star carrier.",
+    "A source-, cutoff-, volume-, shape-, phase-, beta- and history-uniform two-orientation locality or energy estimate for the simultaneous quartic onsite and bilinear spatial terms.",
+    "All-shape forward and inverse Cauchy convergence on that carrier.",
+    "Closability and exponentiation of the exact local derivation with local algebra preservation.",
+    "A Hamiltonian-to-OS quotient map identifying both fixed-beta phases with the same zero-source action."
+  ],
+  "single_next_question": "On the existing P_loc/local-strict route, can the exact full Q3 Hamiltonian prove a common-domain two-orientation history recurrence H_R <= kappa H_(R-1)+A r^(R-1), with kappa<1 and constants independent of source selection, beta, phase, cutoff, volume and exhaustion shape, so that R-451/R-452 instantiate an all-shape forward-and-inverse Cauchy theorem without introducing a new carrier?",
+  "revisit_condition": "Reopen for MAINLINE_ADVANCE only when the exact recurrence and common domain are proved, independently reproduced, and connected to group, inverse, point-norm C0, local preservation, exact generator, and both phase quotient maps. Reopen for NEGATIVE_RESULT only with an exact contradiction to every carrier allowed by the stated target, not another route-local counterexample.",
+  "non_claims": [
+    "No common infinite-volume real-time automorphism group is claimed.",
+    "No nonexistence theorem for exact-Q3 dynamics is claimed.",
+    "No phasewise direct sum is accepted as common dynamics.",
+    "No finite-volume, Euclidean, static Gibbs, or conditional transfer result is promoted to the thermodynamic real-time gate.",
+    "No QFT, Pre-A, common causal cone, gravity, continuum, mass-gap, physical-empty, or TOE conclusion follows."
+  ]
+}
