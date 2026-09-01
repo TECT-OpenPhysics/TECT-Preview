@@ -1,0 +1,90 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "schema_version": "1.0",
+  "id": "EXP-001356",
+  "recorded_at": "2026-09-01T11:08:00Z",
+  "reviewed_on": "2026-09-01",
+  "recorded_by": "Codex",
+  "provenance": "contemporaneous",
+  "task_id": "T-054",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE",
+    "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
+  ],
+  "gate_ids": [
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "title": "P0-safe reproduction-path correction for the T-054 re-entry hold",
+  "question": "Does the T-054 re-entry hold record need a path-only correction so its scratch-output examples remain release-safe without changing the scientific decision?",
+  "method": [
+    "Compare EXP-001355's strategy copy with the release-check P0 file-pointer rule.",
+    "Replace only the example output destination with an operator temporary path; preserve the source scope, counts, owner states, route decision, and re-entry contract.",
+    "Do not rerun any finite carrier, physical-empty, BCC, Reading-H or dynamics calculation."
+  ],
+  "decision_scope": "Path-only record correction for an already parked T-054 re-entry audit; no scientific or gate scope is changed.",
+  "finding": "The prior re-entry audit used an operator scratch path in its reproduction examples. The strategy copy now uses E:/Temp/tect-t054-reentry-20260901 for those outputs; all scientific fields and the HOLD_FOR_EVIDENCE/PARK_OR_BLOCK decision are unchanged.",
+  "decision_reason": "This append-only correction removes a release P0 file-pointer violation without mutating the immutable prior exploration line or introducing new evidence.",
+  "classification": "no_progress",
+  "verdict": "parked",
+  "reentry_status": "HOLD_FOR_EVIDENCE",
+  "route_decision": "PARK_OR_BLOCK",
+  "counts_as_mainline": false,
+  "mainline_relevant": false,
+  "research_admission": true,
+  "gate_changed": false,
+  "scope_strengthened": false,
+  "new_input_hash": false,
+  "falsifier_fired": false,
+  "scientific_transition": false,
+  "assumptions": [
+    "EXP-001355 remains the scientific re-entry audit and is not rewritten.",
+    "The operator temporary output path is not a source or evidence authority.",
+    "Release P0 treats only file pointers as prohibited; the route decision remains governed by DCTRL-000004."
+  ],
+  "missing_assumptions": [
+    "The same non-synthetic source-owned owner packet and all R-192/R-471 fields listed in EXP-001355.",
+    "A source-authorized proposition-level counterexample if the owner route is to be falsified."
+  ],
+  "evidence_level": "T0 path-integrity correction only; no new owner evidence",
+  "evidence_refs": [
+    "strategy/t054-park-reentry-owner-intake-20260901-exploration.json#reproduction",
+    "strategy/direction-control-log.jsonl#DCTRL-000004",
+    "verification/scripts/release_check.py#p0-fence"
+  ],
+  "formal_refs": {
+    "results": ["R-192", "R-471"],
+    "negatives": [],
+    "events": []
+  },
+  "reproduction": [
+    "Compare the EXP-001355 strategy record with verification/scripts/release_check.py and require no repository file pointer under the protected scratch directory pattern.",
+    "E:/Dev/TECT.venv/Scripts/python.exe -X utf8 verification/scripts/release_check.py"
+  ],
+  "adversarial_review": [
+    {
+      "check": "Could the path correction alter the owner search or re-entry verdict?",
+      "disposition": "REJECTED: only the example output destination changes; all source counts and owner states remain byte-identical in the scientific record."
+    },
+    {
+      "check": "Could the correction hide a new packet or counterexample?",
+      "disposition": "REJECTED: it adds no source path, hash, candidate, result or negative record."
+    },
+    {
+      "check": "Could this correction promote T-054 or change a gate?",
+      "disposition": "REJECTED: claim_bearing remains false, gate_changed remains false and the route remains PARK_OR_BLOCK/HOLD_FOR_EVIDENCE."
+    }
+  ],
+  "boundary": "This record repairs only a release-safe reproduction-path string. It does not admit an owner, close a gate, or establish any Pre-A, Sector-A, QFT, Yang--Mills, continuum, physical-sector or mass-gap result.",
+  "next_action": "Keep T-054 on hold until EXP-001355's exact non-synthetic owner-packet or source-authorized-counterexample condition is met.",
+  "stop_or_redesign": [
+    "Do not create another scientific audit for this path correction.",
+    "If a new owner packet arrives, rerun the unchanged R-471 admission predicate before any common-core work."
+  ],
+  "no_claims": [
+    "No new source owner or counterexample is supplied.",
+    "No claim, tier, gate, result, negative result or research method changes."
+  ],
+  "related": [
+    {"id": "EXP-001355", "relation": "corrects"}
+  ]
+}
