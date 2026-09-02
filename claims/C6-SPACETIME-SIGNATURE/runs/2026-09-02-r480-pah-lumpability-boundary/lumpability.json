@@ -1,0 +1,60 @@
+{
+  "assertions": {
+    "all_pass": true,
+    "case_digest": "c0cc6c839b57216016cfab90e1d6cd1615797a6eb0dbd90e3e281ebd79ebe662",
+    "cases": 585,
+    "factorization_pass": 585,
+    "nonzero_defects": 585
+  },
+  "assumptions": [
+    "0 < epsilon < 1 and M_s is a positive finite cutoff",
+    "the retained aperture move has a positive grid step",
+    "kappa_s > 0 and beta = 2 in the finite test inputs",
+    "the two hidden aperture values are distinct and lie in one coarse fibre",
+    "no hidden-state-dependent counterterm, weight, rate rescaling or frozen field is inserted",
+    "other fine moves do not change the retained coarse aperture destination fibre"
+  ],
+  "audit_id": "PAH-OMC-LUMP-AUDIT-001",
+  "boundary": "This rejects only the named forgetful pullback route. It is not a no-go for an owner-selected block map, conditional-expectation kernel, transported cell weights, approximate defect theorem, or a separately versioned successor functional.",
+  "derivation": {
+    "edge_increment": "kappa_s*((s+delta-z)^2-(s-z)^2)/2",
+    "fibre_difference": "-kappa_s*delta*(z_1-z_2)",
+    "rate_test": "aperture mobility is the same at z_1,z_2, while the log-rate difference is -beta/2 times the nonzero energy difference",
+    "strong_lumpability_requirement": "the total fine rate from any two states in one coarse fibre to a fixed target coarse fibre must agree"
+  },
+  "exploration_id": "EXP-001362",
+  "non_claims": [
+    "No change to PAH-001 or PAH-OMC-001 is made.",
+    "No nontrivial refinement or uniform limit is admitted.",
+    "No physical Pre-A, spacetime, gravity, QFT, Yang--Mills, continuum, mass-gap or TOE conclusion follows.",
+    "Markov time is not quantum real time, proper time or Lorentzian time."
+  ],
+  "question": "Does the already named PAH-FREE-VERTEX-RESTRICTION route satisfy the strong-lumpability necessary condition for exact generator intertwining under the unchanged PAH functional?",
+  "result_id": null,
+  "schema": "tect/pah-omc-lumpability-boundary/1.0",
+  "scope": {
+    "coarse_map": "forget the freely varying adjacent fine vertex z",
+    "functional_part": "positive unchanged edge term kappa_s*(s_v-s_z)^2/2",
+    "hidden_fibre": "two distinct fine aperture values z_1 and z_2",
+    "limits": "none",
+    "observable_embedding": "iota_p f = f composed with p",
+    "tested_move": "one admissible aperture step at the retained vertex",
+    "time": "external stochastic Markov time only"
+  },
+  "source_authorities": [
+    {
+      "path": "strategy/pa-hyp/PAH-001-v1.json",
+      "role": "immutable parent microscopic candidate",
+      "sha256": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+      "source_id": "PAH-001"
+    },
+    {
+      "path": "strategy/pa-hyp/PAH-OMC-001-v1.json",
+      "role": "separately versioned finite owner completion",
+      "sha256": "948a87092f7393e5214a375d66295237e5c8be1b018b8788d3e6785d696e774f",
+      "source_id": "PAH-OMC-001"
+    }
+  ],
+  "stage2_status": "HOLD_FOR_EVIDENCE",
+  "verdict": "ROUTE_LOCAL_STRONG_LUMPABILITY_FAIL"
+}

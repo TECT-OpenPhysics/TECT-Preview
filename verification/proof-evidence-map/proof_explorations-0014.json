@@ -9149,6 +9149,121 @@
       "task_id": "T-054",
       "title": "PAH-OMC-001 closes finite common dynamics and exposes the first refinement obstruction",
       "verdict": "advanced"
+    },
+    {
+      "assumptions": [
+        "PAH-001 SHA-256 is 03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37.",
+        "PAH-OMC-001 SHA-256 is 948a87092f7393e5214a375d66295237e5c8be1b018b8788d3e6785d696e774f.",
+        "The coarse observable is the pullback of a function of the retained aperture and the fine map forgets the hidden vertex.",
+        "The hidden vertex has two distinct values in the declared aperture grid within one coarse fibre.",
+        "kappa_s and the aperture step are positive, beta is positive, and no other fine move changes the same retained coarse destination fibre.",
+        "Exact intertwining is interpreted as strong lumpability of the fine generator on the pullback cylinder core."
+      ],
+      "boundary": "The failure is only for the named forgetful pullback with unchanged positive edge stiffness. It is not a global no-go for every refinement, block map, lumping kernel, transported cell weighting, approximate boundary-defect theorem or separately versioned successor functional.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "classification": "AUXILIARY_SUPPORT_STAGE_2_HOLD",
+      "decision_reason": "For a forgetful coarse map, exact pullback intertwining requires the total fine rate into each target coarse fibre to be constant over every hidden fibre. The only fine move changing the retained aperture destination is the retained-vertex aperture move. Its unchanged positive edge term contributes an exact fibre defect -kappa_s*delta*(z_1-z_2), while the declared aperture mobility is hidden-state independent. The defect is nonzero for every tested positive-kappa_s, positive-step, distinct-grid-value case, so strong lumpability fails for this route. This strengthens the existing route-local boundary without selecting a block map, conditional kernel, weight transport or successor functional.",
+      "decision_scope": "Route-local finite diagnostic for the composite PAH-001 plus PAH-OMC-001 model: one retained vertex, one freely varying adjacent hidden vertex, the natural forgetful coarse map, the unchanged positive kappa_s edge term, finite aperture grid and external stochastic Markov time. No limit is taken.",
+      "evidence_level": "T5 route-local exact algebra with primary and non-importing independent executable checks; integrated verifier; prior Lean R479 arithmetic cross-check",
+      "evidence_refs": [
+        "strategy/pa-hyp/PAH-OMC-001-v1.json#refinement_contract",
+        "strategy/pa-hyp/R479-certificate.md#Nontrivial-refinement-test",
+        "codes/foundations/pah_omc001_lumpability_boundary.py#run",
+        "codes/foundations/pah_omc001_lumpability_boundary_independent.py#run",
+        "verification/scripts/pah_omc001_lumpability_boundary_verify.py#run",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-02-r480-pah-lumpability-boundary/lumpability.json#assertions",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-02-r480-pah-lumpability-boundary/independent.json#assertions",
+        "verification/lean/Tect/R479.lean#free_vertex_fibre_difference_nonzero"
+      ],
+      "finding": "PAH-OMC-LUMP-AUDIT-001 passes 585/585 primary cases, 585/585 independent cases and the integrated verifier. In each case the direct and expanded derivations agree, the fibre defect is nonzero, and beta=2 gives a nonzero log-rate difference. The exact pullback route therefore cannot be strongly lumpable. Stage 2 remains HOLD_FOR_EVIDENCE because no alternative owner morphism or uniform boundary-defect contract has been selected.",
+      "formal_integration": {
+        "active_gate_changed": false,
+        "events": [],
+        "independent": "585/585 PASS",
+        "independent_digest": "b6b07d0d1604a35ad60b384193140e94749870eee00ae33b4a93f5e5d75677b4",
+        "integrated": "PASS",
+        "lean": "R479 compiled arithmetic cross-check reused; no new Lean source required",
+        "negatives": [],
+        "no_model_mutation": true,
+        "no_pdf": true,
+        "no_physical_progress": true,
+        "primary": "585/585 PASS",
+        "primary_digest": "c0cc6c839b57216016cfab90e1d6cd1615797a6eb0dbd90e3e281ebd79ebe662",
+        "results": [],
+        "stage_2_held": true
+      },
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": []
+      },
+      "gate_ids": [
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001362",
+      "method": [
+        "Pin immutable PAH-001 and separately versioned PAH-OMC-001 by their raw-byte SHA-256 values before evaluation.",
+        "Use the displayed positive edge stiffness term only; do not add a counterterm, frozen hidden field, rate rescaling or new Hamiltonian.",
+        "Derive the fibre defect by direct square expansion in the primary lane and by the expanded linear term in a non-importing independent lane.",
+        "Enumerate all finite test inputs with epsilon in {1/4,1/2,3/4}, positive aperture cutoffs 1 through 4, every admissible coarse step, every distinct hidden grid pair and positive kappa_s test input.",
+        "Run the integrated cross-check and retain the prior compiled Lean R479 polynomial nonzero lemma as the formal arithmetic cross-check."
+      ],
+      "missing_assumptions": [
+        "One owner-selected nontrivial block or conditional-expectation morphism that is not the rejected forgetful pullback.",
+        "Its parameter and cell-weight transport, move/root kernel and exact or uniformly quantified intertwining theorem."
+      ],
+      "next_action": "Wait for the owner to hash-pin one nontrivial block or conditional-expectation refinement with parameter/cell-weight transport and a compatible move/root kernel; then test exact intertwining or one preregistered regulator/volume/shape/source/phase/exhaustion-uniform boundary-defect estimate.",
+      "non_claims": [
+        "No PAH-001 or PAH-OMC-001 bytes, functional, move set, mobility exponent, projection, regulator or limit order are changed.",
+        "No nontrivial refinement, uniform limit, continuum, physical projection, F_lim, F_eff or F_obs is admitted.",
+        "No Markov time is identified with quantum real time, proper time or Lorentzian time.",
+        "No physical Pre-A, spacetime, gravity, event-horizon, QFT, Yang--Mills, mass-gap, cosmic-origin or TOE conclusion follows.",
+        "No Q3LOCK result is imported."
+      ],
+      "provenance": "contemporaneous",
+      "question": "Does the already named PAH-FREE-VERTEX-RESTRICTION satisfy the strong-lumpability necessary condition for exact generator intertwining under the unchanged PAH functional?",
+      "recorded_at": "2026-09-02T04:12:28Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001361",
+          "relation": "continues"
+        }
+      ],
+      "reproduction": [
+        "E:\\Dev\\TECT.venv\\Scripts\\python.exe -X utf8 codes/foundations/pah_omc001_lumpability_boundary.py",
+        "E:\\Dev\\TECT.venv\\Scripts\\python.exe -X utf8 codes/foundations/pah_omc001_lumpability_boundary_independent.py",
+        "E:\\Dev\\TECT.venv\\Scripts\\python.exe -X utf8 verification/scripts/pah_omc001_lumpability_boundary_verify.py"
+      ],
+      "reviewed_on": "2026-09-02",
+      "revisit_condition": "Advance Stage 2 only after the owner-supplied morphism is independently audited and passes exact or uniformly quantified intertwining. If that selected morphism fails, record a new route-local negative and do not infer a global PAH no-go.",
+      "schema": "tect/proof-exploration/1.0",
+      "schema_version": "1.0",
+      "source_authorities": [
+        {
+          "path": "strategy/pa-hyp/PAH-001-v1.json",
+          "role": "immutable parent microscopic candidate",
+          "sha256": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+          "source_id": "PAH-001"
+        },
+        {
+          "path": "strategy/pa-hyp/PAH-OMC-001-v1.json",
+          "role": "separately versioned finite owner completion and refinement boundary",
+          "sha256": "948a87092f7393e5214a375d66295237e5c8be1b018b8788d3e6785d696e774f",
+          "source_id": "PAH-OMC-001"
+        }
+      ],
+      "stop_or_redesign": [
+        "Do not rename the isomorphism sanity morphism as a refinement.",
+        "Do not alter PAH-001 or PAH-OMC-001 in place.",
+        "Do not begin a uniform-limit or observable-law calculation before a nontrivial morphism passes.",
+        "If a new weight, block variable, counterterm or dynamics is needed, create a new versioned owner successor and restart finite auditing."
+      ],
+      "task_id": "T-054",
+      "title": "PAH free-vertex strong-lumpability boundary",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",
