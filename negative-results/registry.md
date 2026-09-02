@@ -8,6 +8,7 @@ Failures are trust assets. Entries are never deleted. Format:
 result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
+| [NG-2026-09-02-PAH-OMC-FREE-VERTEX-POSITIVE-SCALAR-TRANSPORT-EXACT-INTERTWINING](#ng-2026-09-02-pah-omc-free-vertex-positive-scalar-transport-exact-intertwining) | use positive scalar beta or kappa_s transport to repair the natural free-vertex forgetful pullback | the exact rate defect is beta*kappa_s*delta*(z_1-z_2)/2, nonzero for every positive transported beta, kappa_s, step and distinct hidden values; only block, weighted, conditional or separately versioned successors remain open |
 | [NG-2026-09-02-PAH-OMC-FREE-VERTEX-RESTRICTION-EXACT-INTERTWINING](#ng-2026-09-02-pah-omc-free-vertex-restriction-exact-intertwining) | use the natural forgetful pullback after adding a freely varying adjacent fine vertex as an exact PAH generator refinement morphism | the added positive-kappa_s aperture edge makes the fine rate vary across a coarse fibre by `-kappa_s delta(z_1-z_2)`, so exact intertwining fails; retain block, lumped, weighted, approximate-defect, or separately versioned successor routes |
 | [NG-2026-08-26-PRE-A-ST8-Q3LOCK-CENTERED-GLOBAL-ENERGY-CONTEXT-VOLUME-OBSTRUCTION](#ng-2026-08-26-pre-a-st8-q3lock-centered-global-energy-context-volume-obstruction) | use centered global total-energy contexts as a volume-uniform local transfer | in an exact tensor-product Gibbs family, subtracting the full Gibbs mean removes the quadratic remote mean but leaves a positive linear remote variance for every local transition leg; retain local or modular Q3 weights |
 | [NG-2026-08-25-PRE-A-ST8-Q3LOCK-LOCAL-QUARTIC-TAIL-FORCE-A34-OPERATOR-FACTORIZATION](#ng-2026-08-25-pre-a-st8-q3lock-local-quartic-tail-force-a34-operator-factorization) | use a local quartic A^(-3/4) operator factorization for the cutoff bond-tail times force | on the exact q>=2L cutoff sector, W_L F=c^2 q^3/2+3c lambda q^5/4+lambda^2 q^7/4; translated packets leave a ratio growing as q^4 for lambda>0; retain state-weighted, product-level or direct D,delta-D routes |
@@ -10475,3 +10476,31 @@ theorem, or separately versioned weighted functional remains open. This does
 not refute PAH-001, its finite common dynamics after PAH-OMC-001 completion,
 or every possible refinement. It proves no uniform limit, continuum,
 physical Pre-A, spacetime, gravity, QFT, Yang--Mills, or TOE conclusion.
+
+<a id="ng-2026-09-02-pah-omc-free-vertex-positive-scalar-transport-exact-intertwining"></a>
+### NG-2026-09-02-PAH-OMC-FREE-VERTEX-POSITIVE-SCALAR-TRANSPORT-EXACT-INTERTWINING -- positive scalar transport cannot repair the named pullback
+
+**Failure mode.** Rescue the natural PAH-FREE-VERTEX-RESTRICTION forgetful
+pullback by transporting only the fine beta and kappa_s parameters through
+strictly positive scalar values, while retaining the same aperture move and
+hidden-state-independent mobility.
+
+**Evidence.** The immutable PAH-001 source has SHA-256
+03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37 and the
+PAH-OMC-001 completion has SHA-256
+948a87092f7393e5214a375d66295237e5c8be1b018b8788d3e6785d696e774f. The
+already verified edge increment difference is
+-kappa_s*delta*(z_1-z_2). Multiplication by any positive transported beta and
+kappa_s gives the logarithmic rate defect
+beta*kappa_s*delta*(z_1-z_2)/2, which is nonzero for a positive step and
+distinct hidden values. Primary and independent lanes each pass 1755/1755
+exact rational cases; hostile review rejects 6/6 degenerate or sign
+mutations; integrated verification passes 13/13; Lean R481 proves the
+factorization and nonzero product.
+
+**Consequence.** Retire positive scalar beta/kappa_s rescaling as a repair for
+this one forgetful pullback. This is not a global PAH no-go: an owner-selected
+block map, conditional kernel, hidden-state weight, approximate defect norm, or
+separately versioned functional remains open. Stage 2 remains
+HOLD_FOR_EVIDENCE, and no refinement, uniform limit, continuum, physical
+Pre-A, spacetime, gravity, QFT, Yang--Mills, or TOE conclusion follows.

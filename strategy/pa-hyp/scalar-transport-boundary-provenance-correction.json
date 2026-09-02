@@ -1,0 +1,125 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "schema_version": "1.0",
+  "id": "EXP-001365",
+  "title": "PAH R481 integrated-run provenance hash refresh",
+  "task_id": "T-054",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "gate_ids": [
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "recorded_at": "2026-09-02T05:03:56Z",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-09-02",
+  "provenance": "contemporaneous",
+  "verdict": "advanced",
+  "classification": "PROVENANCE_CORRECTION_NO_SCIENTIFIC_CHANGE",
+  "question": "Does the current R481 integrated run remain the same audit after a verifier rerun changes only its wall-clock field, and which hash is now authoritative for the referenced path?",
+  "decision_reason": "The integrated verifier was rerun from the same immutable PAH-001 and PAH-OMC-001 sources and regenerated the same 13 assertions, but its recorded_at field necessarily changed. The previous EXP-001364 source hash referred to the superseded bytes. This append-only correction pins the current integrated artifact hash without changing the route verdict, formulas, model, scope or claim tier.",
+  "method": [
+    "Compare the primary, independent and hostile assertion payloads before and after the rerun.",
+    "Confirm the integrated verifier still passes all 13 assertions and Lean R481 remains PASS.",
+    "Hash the current integrated JSON bytes and replace only the stale supporting-file hash in the separately versioned exploration source.",
+    "Record the hash refresh as a provenance-only append-only correction rather than editing EXP-001364 or the exploration ledger history."
+  ],
+  "finding": "The current integrated.json passes 13/13 with the same PAH-001 and PAH-OMC-001 source hashes, stage-2 hold, route-local verdict and Lean declarations; only recorded_at changed. Its current SHA-256 is 36b3c793094ff54021a1d00a8f91e8042a445132d943644e09393aaee3ea018c. EXP-001364 remains the scientific route record and is not reclassified.",
+  "decision_scope": "Provenance-only refresh for the finite R481 scalar-transport boundary artifact. No new calculation, model, morphism, parameter transport, refinement, limit or physical interpretation is introduced.",
+  "evidence_level": "T0 provenance correction backed by the R481 integrated verifier output",
+  "assumptions": [
+    "PAH-001 SHA-256 remains 03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37.",
+    "PAH-OMC-001 SHA-256 remains 948a87092f7393e5214a375d66295237e5c8be1b018b8788d3e6785d696e774f.",
+    "The verifier rerun changed no assertion payload apart from its wall-clock recorded_at field.",
+    "The current integrated path is the single artifact consumed by the R481 provenance reference."
+  ],
+  "missing_assumptions": [
+    "None for this provenance correction; the nontrivial Stage 2 owner morphism and uniform theorem remain missing exactly as recorded by EXP-001364."
+  ],
+  "boundary": "This record only repairs a stale supporting-artifact hash after a same-input verifier rerun. It does not strengthen the scalar-transport boundary and does not alter the finite or Stage 2 verdict.",
+  "non_claims": [
+    "No PAH-001 or PAH-OMC-001 bytes, functional, move set, projection, regulator or limit order are changed.",
+    "No new result, negative result or gate transition is claimed.",
+    "No nontrivial refinement or uniform limit is admitted.",
+    "No Markov time is identified with quantum real time, proper time or Lorentzian time.",
+    "No physical Pre-A, spacetime, gravity, event-horizon, QFT, Yang--Mills, continuum, mass-gap, cosmic-origin or TOE conclusion follows."
+  ],
+  "adversarial_review": [
+    {
+      "check": "Could the hash refresh conceal a changed scientific assertion?",
+      "disposition": "DISMISSED: the integrated verifier still reports the same 13 assertion names, source hashes, stage-2 hold and route-local verdict; only recorded_at differs."
+    },
+    {
+      "check": "Does this correction rewrite the append-only EXP-001364 ledger line?",
+      "disposition": "DISMISSED: EXP-001364 remains unchanged in explorations/log.jsonl; this is a new correction record."
+    },
+    {
+      "check": "Could a provenance refresh be read as Stage 2 progress?",
+      "disposition": "UPHELD AS NON-SCIENTIFIC: the correction carries no new mathematical evidence and leaves Stage 2 HOLD_FOR_EVIDENCE."
+    }
+  ],
+  "formal_integration": {
+    "results": [],
+    "negatives": [],
+    "events": [
+      "20260902-pah-r481-integrated-run-provenance-hash-refresh"
+    ],
+    "no_new_result": true,
+    "no_new_negative": true,
+    "no_gate_change": true,
+    "no_verdict_change": true,
+    "no_model_mutation": true,
+    "no_physical_progress": true,
+    "no_pdf": true
+  },
+  "source_authorities": [
+    {
+      "source_id": "PAH-001",
+      "path": "strategy/pa-hyp/PAH-001-v1.json",
+      "sha256": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+      "role": "immutable parent microscopic candidate"
+    },
+    {
+      "source_id": "PAH-OMC-001",
+      "path": "strategy/pa-hyp/PAH-OMC-001-v1.json",
+      "sha256": "948a87092f7393e5214a375d66295237e5c8be1b018b8788d3e6785d696e774f",
+      "role": "separately versioned finite owner completion"
+    },
+    {
+      "source_id": "R-481-RUN",
+      "path": "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-02-r481-pah-positive-scalar-transport-boundary/integrated.json",
+      "sha256": "36b3c793094ff54021a1d00a8f91e8042a445132d943644e09393aaee3ea018c",
+      "role": "current integrated verifier artifact"
+    }
+  ],
+  "evidence_refs": [
+    "strategy/pa-hyp/scalar-transport-boundary-exploration.json#source_authorities",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-02-r481-pah-positive-scalar-transport-boundary/integrated.json#assertions",
+    "explorations/log.jsonl#EXP-001364"
+  ],
+  "formal_refs": {
+    "results": [],
+    "negatives": [],
+    "events": [
+      "20260902-pah-r481-integrated-run-provenance-hash-refresh"
+    ]
+  },
+  "related": [
+    {
+      "id": "EXP-001364",
+      "relation": "corrects"
+    }
+  ],
+  "reproduction": [
+    "E:/Dev/TECT.venv/Scripts/python.exe -X utf8 verification/scripts/pah_omc001_scalar_transport_boundary_verify.py",
+    "E:/Dev/TECT.venv/Scripts/python.exe -X utf8 verification/scripts/exploration.py verify",
+    "E:/Dev/TECT.venv/Scripts/python.exe -X utf8 -c \"import hashlib; print(hashlib.sha256(open('claims/C6-SPACETIME-SIGNATURE/runs/2026-09-02-r481-pah-positive-scalar-transport-boundary/integrated.json','rb').read()).hexdigest())\""
+  ],
+  "next_action": "Keep Stage 2 held until the owner hash-pins a nontrivial block or conditional-expectation morphism with parameter and cell-weight transport plus exact intertwining or a normalized uniform-defect theorem.",
+  "revisit_condition": "Reopen the scientific route only after a new owner morphism contract is separately versioned and passes primary, independent, hostile and formal checks; this correction itself requires no revisit.",
+  "stop_or_redesign": [
+    "Do not infer a global PAH no-go or Stage 2 advance from a hash refresh.",
+    "Do not modify PAH-001 or PAH-OMC-001 in place.",
+    "Do not start continuum, physical-sector or observable-law calculations while the owner morphism is missing."
+  ]
+}

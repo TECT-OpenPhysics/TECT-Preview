@@ -1,6 +1,29 @@
 {
   "data": [
     {
+      "anchor": "ng-2026-07-30-a13-replica-variance-automatic-trace-domination",
+      "branch": "infer nonpositivity of the stationary trace secant from replica variance alone",
+      "claim_ref_basis": {
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION": "structured_unique_family:A13"
+      },
+      "claim_refs": [
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
+      ],
+      "detail": {
+        "claim_route": "Infer `S_h-S_0<=0` from replica symmetrisation or the favourable negative replica square alone.",
+        "consequence": "Automatic replica trace domination is false. This does not refute the sharp source-paid bound in Eq. (9.3), the full correlated owner-complete estimate, or the A1 objective.",
+        "evidence": "R-124 proof note, Section 9, Eq. (9.15); primary and non-importing independent executable audits; paired ten-page PDF and integrated verifier.",
+        "failure_mode": "For the bounded smooth legal first-linear-row control `h=d cos(t xi)`, `S_h-S_0=2 kappa^2 d^2 t^2 exp(-2t^2)>0`."
+      },
+      "detail_title": "replica variance does not automatically dominate the trace secant",
+      "family_refs": [
+        "A13"
+      ],
+      "kind": "no_go",
+      "summary": "the bounded legal row `h=d cos(t xi)` has `S_h-S_0=2 kappa^2 d^2 t^2 exp(-2t^2)>0`; replicas expose a favourable square but do not dominate the signed trace/current cross",
+      "tag": "NG-2026-07-30-A13-REPLICA-VARIANCE-AUTOMATIC-TRACE-DOMINATION"
+    },
+    {
       "anchor": "ng-2026-07-30-a13-raw-six-current-hessian-positivity",
       "branch": "assign the isolated full raw six-current/phase-pair Hessian to a nonnegative owner before trace/heat/low/forest/sextic completion",
       "claim_ref_basis": {
@@ -2205,29 +2228,6 @@
       "kind": "no_go",
       "summary": "a fixed active-shell secant has a current-root first-chaos component whose weighted contribution stays positive at every later root for every `s>0`, so the ledger grows linearly with cutoff; the witness is root-diagonal and removed by the relative FAR projector, which remains viable and open",
       "tag": "NG-2026-07-25-A13-GLOBAL-UNPROJECTED-CARTAN-COEFFICIENT-LEDGER"
-    },
-    {
-      "anchor": "ng-2026-07-25-a13-generic-weighted-doob-shortcuts",
-      "branch": "A13 generic weighted-Doob closure by Cauchy, expected-budget Carleson, or abstract spatial gain",
-      "claim_ref_basis": {
-        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION": "structured_unique_family:A13"
-      },
-      "claim_refs": [
-        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
-      ],
-      "detail": {
-        "consequence": "The three named generic shortcuts are unavailable. This is not a counterexample to the complete production packet. The R-079 exact decomposition and weighted control square function remain valid; the production near/far lower bound, controlled-shell energy one-use, Nelson, and Sector A remain open.",
-        "correction": "Use the weighted control square function only after a production-specific probability-root/spatial-shell split. Prove a far-root heat-current tail and retain the exact square--trace--forest block in the near region. Do not import an essential-sup Carleson norm from expected budgets.",
-        "evidence": "R-078 gives the payload powers `X^((1+s)/4)Y^((5-s)/12)`. Spending the control square function as `X^(1/2)` gives `a=(3+s)/4`, `b=(5-s)/12`, and `c=-(1+s)/6`; at `s=3/5` this is `X^(9/10)Y^(11/30)` with deficit `-4/15`. Independently, on an event of probability `p=N^-6`, the normalized one-carrier choice `h=p^-1/2 1_E e_N`, `a=N^-2 h` has expected CM energy and expected sextic both equal to one while its conditional future energy on `E` is `N^6`. Finally, with `epsilon` a centered Rademacher root, `H_N=epsilon cos(Nx)` and `Y_N=-epsilon N^s cos(Nx)` have bounded `L2` and homogeneous `H^-s` coordinates but bracket `-epsilon^2 N^s/2`. The primary 51/51 and non-importing independent 42/42 R-079 audits verify the rational ledger, weighted shell identity, rare branch, and multi-frequency scaling.",
-        "failure_mode": "After the exact R-079 full-current decomposition, close the future bracket either by applying Cauchy directly to the weighted control square function, by upgrading the two expected Boue--Dupuis budgets to a predictable BMO/Carleson norm, or by inferring a spatial gain from an unweighted Hilbert bracket."
-      },
-      "detail_title": "three generic weighted-Doob closures fail",
-      "family_refs": [
-        "A13"
-      ],
-      "kind": "no_go",
-      "summary": "square-function Cauchy has Young deficit `-4/15`; expected energy plus sextic budgets do not imply predictable BMO/Carleson control; and an unweighted bracket has no generic spatial gain",
-      "tag": "NG-2026-07-25-A13-GENERIC-WEIGHTED-DOOB-SHORTCUTS"
     }
   ],
   "kind": "negative_records",

@@ -1,0 +1,67 @@
+{
+  "assertions": {
+    "all_mutations_rejected": true,
+    "global_no_go_not_claimed": true,
+    "mutations_attempted": 6,
+    "mutations_rejected": 6,
+    "route_local_boundary_preserved": true,
+    "valid_case_pass": true
+  },
+  "audit_id": "PAH-OMC-SCALAR-TRANSPORT-001",
+  "exploration_id": "EXP-001364",
+  "mutations": [
+    {
+      "assumption_effect": "degenerate and outside the theorem hypotheses",
+      "defect": "0",
+      "id": "zero_beta",
+      "nonzero": false
+    },
+    {
+      "assumption_effect": "degenerate and outside the theorem hypotheses",
+      "defect": "0",
+      "id": "zero_kappa",
+      "nonzero": false
+    },
+    {
+      "assumption_effect": "degenerate and outside the theorem hypotheses",
+      "defect": "0",
+      "id": "zero_step",
+      "nonzero": false
+    },
+    {
+      "assumption_effect": "degenerate and outside the theorem hypotheses",
+      "defect": "0",
+      "id": "equal_hidden_values",
+      "nonzero": false
+    },
+    {
+      "assumption_effect": "still nonzero, but outside positive-parameter scope",
+      "defect": "1/16",
+      "id": "negative_beta",
+      "nonzero": true
+    },
+    {
+      "assumption_effect": "still nonzero, but outside positive-parameter scope",
+      "defect": "1/16",
+      "id": "negative_kappa",
+      "nonzero": true
+    }
+  ],
+  "non_claims": [
+    "No PAH-001 or PAH-OMC-001 bytes are changed.",
+    "The hostile mutations do not constitute alternative PAH models.",
+    "No global refinement no-go or physical Pre-A, spacetime, gravity, QFT, Yang--Mills, continuum, mass-gap or TOE claim follows."
+  ],
+  "schema": "tect/pah-omc-positive-scalar-transport-boundary-hostile/1.0",
+  "source_hashes": {
+    "PAH-001": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "PAH-OMC-001": "948a87092f7393e5214a375d66295237e5c8be1b018b8788d3e6785d696e774f"
+  },
+  "stage2_status": "HOLD_FOR_EVIDENCE",
+  "task_id": "T-054",
+  "valid_case": {
+    "log_rate_difference": "-15/64",
+    "nonzero": true
+  },
+  "verdict": "ROUTE_LOCAL_SCALAR_TRANSPORT_FAIL"
+}

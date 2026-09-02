@@ -1,0 +1,151 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "schema_version": "1.0",
+  "id": "EXP-001364",
+  "title": "PAH positive scalar beta and kappa_s transport cannot repair the free-vertex pullback",
+  "task_id": "T-054",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "gate_ids": [
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "recorded_at": "2026-09-02T04:51:08Z",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-09-02",
+  "provenance": "contemporaneous",
+  "verdict": "advanced",
+  "classification": "AUXILIARY_SUPPORT_STAGE_2_SCALAR_TRANSPORT_BOUNDARY",
+  "question": "Can any strictly positive scalar transport of beta and kappa_s repair exact strong lumpability for the named PAH-FREE-VERTEX-RESTRICTION forgetful pullback?",
+  "decision_reason": "The R-480 edge calculation gives DeltaF_1-DeltaF_2=-kappa_s*delta*(z_1-z_2). Under any fine beta>0 and kappa_s>0 transport, the hidden-state-independent aperture mobility cancels and the logarithmic rate defect is beta*kappa_s*delta*(z_1-z_2)/2, which is nonzero for a positive step and distinct hidden values. Therefore scalar beta or kappa_s rescaling cannot make the pullback generator fibre-constant. The result narrows the open Stage 2 choices without selecting a block map, conditional kernel, hidden weight or successor functional.",
+  "method": [
+    "Pin immutable PAH-001 and separately versioned PAH-OMC-001 by raw-byte SHA-256 values.",
+    "Keep the displayed positive edge term and the named forgetful coarse map unchanged.",
+    "Derive the edge increment difference directly in the primary lane and by expanded linear cancellation in the independent lane.",
+    "Vary positive transported beta and kappa_s inputs over the declared exact rational test set and assert the factorized logarithmic rate defect is nonzero.",
+    "Run hostile degenerate and sign mutations to verify that positivity and distinctness are explicit hypotheses, then compile the Lean factorization/nonzero lemma."
+  ],
+  "finding": "Primary and independent lanes each pass 1755/1755 exact rational transport cases, hostile review rejects 6/6 mutation checks, the integrated verifier passes 13/13, and Lean R481 compiles. The named forgetful pullback therefore remains non-intertwining for every tested positive scalar beta/kappa_s transport; the broader block, conditional-kernel, cell-weight and approximate-defect routes remain open. Stage 2 remains HOLD_FOR_EVIDENCE.",
+  "decision_scope": "Route-local finite analytic boundary for PAH-001 plus PAH-OMC-001: one retained aperture vertex, one freely varying adjacent hidden vertex, the natural forgetful pullback, the unchanged positive kappa_s edge term, arbitrary positive scalar beta/kappa_s transport in the tested rational domain, external stochastic Markov time, and no limit.",
+  "evidence_level": "T5 route-local exact algebra with primary, non-importing independent, hostile, integrated and Lean verification",
+  "assumptions": [
+    "PAH-001 SHA-256 is 03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37.",
+    "PAH-OMC-001 SHA-256 is 948a87092f7393e5214a375d66295237e5c8be1b018b8788d3e6785d696e774f.",
+    "The retained aperture has a positive finite grid step and the hidden fibre contains two distinct aperture values.",
+    "Fine beta and kappa_s are strictly positive scalar transported values.",
+    "The retained aperture mobility is independent of the hidden aperture and no hidden-state-dependent term cancels the displayed edge defect.",
+    "Exact pullback intertwining is tested through strong lumpability on the pullback cylinder core."
+  ],
+  "missing_assumptions": [
+    "A nontrivial owner-selected block or conditional-expectation morphism beyond the rejected forgetful pullback.",
+    "A complete parameter and cell-weight transport for that morphism.",
+    "A compatible move/root kernel and either exact intertwining or a preregistered uniform boundary-defect norm."
+  ],
+  "boundary": "This is a route-local no-go for positive scalar beta/kappa_s rescaling of one already named pullback. It is not a global PAH no-go and does not address a weighted kernel, block map, conditional expectation or separately versioned functional.",
+  "non_claims": [
+    "No PAH-001 or PAH-OMC-001 bytes, functional, move set, mobility exponent, projection, regulator or limit order are changed.",
+    "No nontrivial refinement or uniform limit is admitted.",
+    "No Markov time is identified with quantum real time, proper time or Lorentzian time.",
+    "No physical Pre-A, spacetime, gravity, event-horizon, QFT, Yang--Mills, continuum, mass-gap, cosmic-origin or TOE conclusion follows.",
+    "No Q3LOCK result is imported."
+  ],
+  "adversarial_review": [
+    {
+      "check": "Does the proof accidentally claim that negative or zero transported parameters are allowed?",
+      "disposition": "DISMISSED: positive beta, positive kappa_s, positive aperture step and distinct hidden values are explicit; hostile zero cases are rejected as degenerate."
+    },
+    {
+      "check": "Could a beta or kappa_s scalar rescaling cancel the fibre defect?",
+      "disposition": "DISMISSED: the factor is a product of nonzero positive scalars with the distinct hidden-value difference; Lean R481 proves it cannot vanish."
+    },
+    {
+      "check": "Does this route-local result exclude a conditional kernel or a new successor functional?",
+      "disposition": "UPHELD AS BOUNDARY ONLY: those constructions are outside the tested map and remain open under separate versioned ownership."
+    }
+  ],
+  "formal_integration": {
+    "results": [],
+    "negatives": [
+      "NG-2026-09-02-PAH-OMC-FREE-VERTEX-POSITIVE-SCALAR-TRANSPORT-EXACT-INTERTWINING"
+    ],
+    "events": [
+      "20260902-pah-positive-scalar-transport-boundary-2026-09"
+    ],
+    "primary": "1755/1755 PASS",
+    "independent": "1755/1755 PASS",
+    "hostile": "6/6 mutations rejected",
+    "integrated": "13/13 PASS",
+    "lean": "R481 PASS under leanprover/lean4:v4.32.1",
+    "stage_2_held": true,
+    "active_gate_changed": false,
+    "no_model_mutation": true,
+    "no_physical_progress": true,
+    "no_pdf": true
+  },
+  "source_authorities": [
+    {
+      "source_id": "PAH-001",
+      "path": "strategy/pa-hyp/PAH-001-v1.json",
+      "sha256": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+      "role": "immutable parent microscopic candidate"
+    },
+    {
+      "source_id": "PAH-OMC-001",
+      "path": "strategy/pa-hyp/PAH-OMC-001-v1.json",
+      "sha256": "948a87092f7393e5214a375d66295237e5c8be1b018b8788d3e6785d696e774f",
+      "role": "separately versioned finite owner completion"
+    },
+    {
+      "source_id": "R-480",
+      "path": "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-02-r480-pah-lumpability-boundary/lumpability.json",
+      "sha256": "cb5a885d7cb57572e388289326c8c3a4b16d90c2317da3aad3e4763d484879d1",
+      "role": "exact unequal hidden-fibre increment audit"
+    },
+    {
+      "source_id": "R-481-RUN",
+      "path": "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-02-r481-pah-positive-scalar-transport-boundary/integrated.json",
+      "sha256": "36b3c793094ff54021a1d00a8f91e8042a445132d943644e09393aaee3ea018c",
+      "role": "integrated scalar-transport boundary audit"
+    }
+  ],
+  "evidence_refs": [
+    "strategy/pa-hyp/PAH-OMC-001-v1.json#refinement_contract",
+    "strategy/pa-hyp/lumpability-boundary-exploration.json#finding",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-02-r481-pah-positive-scalar-transport-boundary/integrated.json#assertions",
+    "verification/lean/Tect/R481.lean#positive_scalar_transport_log_defect_nonzero"
+  ],
+  "formal_refs": {
+    "results": [],
+    "negatives": [
+      "NG-2026-09-02-PAH-OMC-FREE-VERTEX-POSITIVE-SCALAR-TRANSPORT-EXACT-INTERTWINING"
+    ],
+    "events": [
+      "20260902-pah-positive-scalar-transport-boundary-2026-09"
+    ]
+  },
+  "related": [
+    {
+      "id": "EXP-001363",
+      "relation": "continues"
+    },
+    {
+      "id": "EXP-001362",
+      "relation": "continues"
+    }
+  ],
+  "reproduction": [
+    "E:/Dev/TECT.venv/Scripts/python.exe -X utf8 codes/foundations/pah_omc001_scalar_transport_boundary.py",
+    "E:/Dev/TECT.venv/Scripts/python.exe -X utf8 codes/foundations/pah_omc001_scalar_transport_boundary_independent.py",
+    "E:/Dev/TECT.venv/Scripts/python.exe -X utf8 codes/foundations/pah_omc001_scalar_transport_boundary_hostile.py",
+    "E:/Dev/TECT.venv/Scripts/python.exe -X utf8 verification/scripts/pah_omc001_scalar_transport_boundary_verify.py",
+    "Set-Location E:/Dev/TECT/verification/lean; & 'C:/Users/NaEun/.elan/toolchains/leanprover--lean4---v4.32.1/bin/lake.exe' env lean Tect/R481.lean"
+  ],
+  "next_action": "The owner must hash-pin one nontrivial block or conditional-expectation morphism with cell/parameter transport and a compatible move/root kernel, or explicitly supply a normalized defect norm; scalar beta/kappa_s rescaling is no longer an open repair route.",
+  "revisit_condition": "Reopen Stage 2 only after a new owner morphism hash and its exact or uniform defect theorem pass primary, independent, hostile and formal checks.",
+  "stop_or_redesign": [
+    "Do not infer a global PAH no-go from this route-local scalar-transport boundary.",
+    "Do not modify PAH-001 or PAH-OMC-001 in place.",
+    "Do not start spectral-collapse, trapped-transfer, physical-empty, Reading-H, continuum or observable-law calculations while nontrivial refinement remains unadmitted.",
+    "If a weighted kernel, block variable, counterterm or new dynamics is required, create a new separately versioned successor and restart its finite audit."
+  ]
+}

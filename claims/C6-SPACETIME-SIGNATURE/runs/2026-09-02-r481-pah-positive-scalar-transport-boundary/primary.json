@@ -1,0 +1,84 @@
+{
+  "assertions": {
+    "all_pass": true,
+    "case_digest": "5407dbdb5864b245f8cc2c296eca53163720454198f48d35a94e10eeca278123",
+    "cases": 1755,
+    "factorization_pass": 1755,
+    "nonzero_defects": 1755
+  },
+  "assumptions": [
+    "0<epsilon<1, positive finite aperture step and distinct hidden values",
+    "fine beta and fine kappa_s remain strictly positive",
+    "the retained aperture mobility is hidden-state independent",
+    "no hidden-state-dependent counterterm or weight cancels the edge defect"
+  ],
+  "audit_id": "PAH-OMC-SCALAR-TRANSPORT-001",
+  "boundary": "Positive scalar beta or kappa_s transport cannot repair this forgetful pullback. A block/conditional kernel, hidden-state weight, or separately versioned functional remains outside scope.",
+  "derivation": {
+    "criterion": "exact pullback intertwining requires equal total rates into each target coarse fibre for every pair in one hidden fibre",
+    "energy_fibre_difference": "DeltaF_1-DeltaF_2=-kappa_s*delta*(z_1-z_2)",
+    "log_rate_difference": "log(c_1)-log(c_2)=beta*kappa_s*delta*(z_1-z_2)/2"
+  },
+  "exploration_id": "EXP-001364",
+  "non_claims": [
+    "No PAH-001 or PAH-OMC-001 bytes are changed.",
+    "No global PAH no-go is claimed.",
+    "No nontrivial refinement, uniform limit, continuum or observable law is admitted.",
+    "Markov time is not quantum real time, proper time or Lorentzian time.",
+    "No physical Pre-A, spacetime, gravity, QFT, Yang--Mills, mass-gap or TOE conclusion follows."
+  ],
+  "question": "Can any strictly positive scalar transport of beta and kappa_s repair exact strong lumpability for the named free-vertex forgetful pullback?",
+  "result_id": null,
+  "schema": "tect/pah-omc-positive-scalar-transport-boundary/1.0",
+  "scope": {
+    "coarse_map": "forget the freely varying adjacent hidden vertex",
+    "functional_part": "unchanged positive edge term kappa_s*(s_v-s_z)^2/2",
+    "limits": "none",
+    "observable_embedding": "iota_p f = f composed with p",
+    "other_terms": "fibre-independent in the R-480 local test scope",
+    "route": "PAH-FREE-VERTEX-RESTRICTION",
+    "time": "external stochastic Markov time only",
+    "transport": "fine beta>0 and fine kappa_s>0 are arbitrary positive scalars"
+  },
+  "source_authorities": [
+    {
+      "path": "strategy/pa-hyp/PAH-001-v1.json",
+      "role": "immutable parent microscopic candidate",
+      "sha256": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+      "source_id": "PAH-001"
+    },
+    {
+      "path": "strategy/pa-hyp/PAH-OMC-001-v1.json",
+      "role": "separately versioned finite owner completion",
+      "sha256": "948a87092f7393e5214a375d66295237e5c8be1b018b8788d3e6785d696e774f",
+      "source_id": "PAH-OMC-001"
+    }
+  ],
+  "stage2_status": "HOLD_FOR_EVIDENCE",
+  "task_id": "T-054",
+  "test_oracle": {
+    "all_inputs_positive": true,
+    "beta_transport_inputs": [
+      "1/3",
+      "1",
+      "3"
+    ],
+    "cutoff_inputs": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "epsilon_inputs": [
+      "1/4",
+      "1/2",
+      "3/4"
+    ],
+    "kappa_transport_inputs": [
+      "1/2",
+      "1",
+      "5/2"
+    ]
+  },
+  "verdict": "ROUTE_LOCAL_SCALAR_TRANSPORT_FAIL"
+}
