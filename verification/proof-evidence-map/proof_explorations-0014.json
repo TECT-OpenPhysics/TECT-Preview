@@ -8756,6 +8756,399 @@
       "task_id": "T-054",
       "title": "Exact Q3LOCK common-alpha gate remains held for one uniform estimate",
       "verdict": "inconclusive"
+    },
+    {
+      "adversarial_review": [
+        {
+          "check": "Could the prose move names alone make P_cand commute with L_rho?",
+          "disposition": "REJECTED: commutation requires an exact equivariant action on admissible partial moves and rates, which the source does not define."
+        },
+        {
+          "check": "Could B^*B=-L be read directly from the displayed sqrt(c/2) formula?",
+          "disposition": "REJECTED: the half factor is correct only after fixing the root-space measure, directed multiplicity, inverse pairing and invalid-move convention that define the adjoint."
+        },
+        {
+          "check": "Does the missing refinement map make PAH-001 inconsistent?",
+          "disposition": "REJECTED: it makes condition 5 undefined, but an explicit compatible completion can be constructed; no contradiction in the displayed finite definitions follows."
+        },
+        {
+          "check": "Can the two passed finite identities promote the candidate to physical Pre-A or spacetime dynamics?",
+          "disposition": "REJECTED: the audit is finite, conditional and Markovian, with no physical-owner, refinement, uniform-limit or physical-sector theorem."
+        }
+      ],
+      "assumptions": [
+        "PAH-001-v1 at the pinned raw-byte hash is the sole candidate authority for this audit.",
+        "The declared gauge group is finite abelian Z_K and the anchor automorphism group is finite.",
+        "The displayed mobility satisfies m_r(x)=m_(r^-1)(r x) whenever the inverse move is admissible.",
+        "Only finite full-function spaces and their finite group averages are used; no physical or continuum interpretation is added."
+      ],
+      "boundary": "This result proves two displayed finite identities and two conditional algebraic lemmas; it does not complete a source-level common-core theorem. Markov time is not quantum real time, proper time or Lorentzian time. No spectral-collapse, trapped-transfer, Reading-H, physical-empty, continuum, physical Pre-A, spacetime, gravity, event-horizon, common-causal-cone, QFT, Yang--Mills or TOE conclusion follows.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "classification": "HOLD_FOR_EVIDENCE",
+      "decision_reason": "Conditions 1 and 2 close exactly. The group averages in P_cand are orthogonal projections and commute with each other, but source-level commutation with L_rho is not determined because the prose move set supplies no exact partial move maps or gauge/anchor-automorphism equivariance law. The displayed sqrt(c/2) normalization gives B^*B=-L under an explicit directed-root counting completion, but PAH-001 does not specify the root Hilbert measure, inverse-pair multiplicity, invalid-move convention or domain needed to define B^*. The declared refinement compatibility is only a target: no refinement embedding, parameter transport, move/root embedding or intertwining equation is defined. Compatible completions exist, so the omissions are not an exact counterexample. The only admissible verdict is HOLD_FOR_EVIDENCE.",
+      "decision_scope": "Finite PAH-001 lattice systems at fixed rho=(a,L,K,Delta tau) with finite periodic three-torus volume, Z_K gauge variables, the displayed F_rho, declared local moves, mobility exponent nu, Gibbs state, candidate projection, Markov-time generator and ordered limit declaration. The audit does not alter any source field and takes no regulator, volume, time, continuum or physical limit.",
+      "evidence_level": "Exact finite conditional theorem and source-definition audit with primary, non-importing independent, hostile and Lean cross-verification",
+      "evidence_refs": [
+        "strategy/pa-hyp/finite-common-core-audit-v1.json#conditions",
+        "strategy/pa-hyp/R478-certificate.md#Five-condition-verdict",
+        "codes/foundations/pah001_finite_common_core_audit.py#run",
+        "codes/foundations/pah001_finite_common_core_audit_independent.py#run",
+        "codes/foundations/pah001_finite_common_core_audit_hostile.py#run",
+        "verification/scripts/pah001_finite_common_core_audit_verify.py#run",
+        "verification/lean/Tect/R478.lean#directed_root_half_factor",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-02-r478-pah001-common-core/integrated.json#checks",
+        "RESULTS-LEDGER.md#r-478"
+      ],
+      "finding": "For the immutable PAH-001 source, C1 gauge invariance and C2 Gibbs detailed balance are PASSED; C3 projection compatibility and C4 root factorization are PARTIAL_NOT_CLOSED; C5 refinement compatibility is NOT_DEFINED. The exact condition vector is [true,true,false,false,false]. Primary 170/170, independent 134/134, hostile 31/31 with all 30 mutations rejected, integrated 33/33 and Lean R478 pass with common digest af1eaf9dbc32ffd50e794b4373e4c3ddfe34f0f1a37780869010e25edea42703. No displayed-definition contradiction was found, and compatible completions exist, so this is HOLD_FOR_EVIDENCE rather than NEGATIVE_RESULT.",
+      "formal_integration": {
+        "core_digest": "af1eaf9dbc32ffd50e794b4373e4c3ddfe34f0f1a37780869010e25edea42703",
+        "events": [
+          "20260902-r-478-pah-001-finite-common-core-gate-held-for"
+        ],
+        "gate_changed": false,
+        "hostile": "31/31 PASS; 30/30 mutations rejected",
+        "independent": "134/134 PASS",
+        "integrated": "33/33 PASS",
+        "lean": "PASS under leanprover/lean4:v4.32.1",
+        "negatives": [],
+        "no_model_mutation": true,
+        "no_new_negative": true,
+        "no_pdf": true,
+        "no_q3lock_import": true,
+        "no_tier_change": true,
+        "primary": "170/170 PASS",
+        "results": [
+          "R-478"
+        ]
+      },
+      "formal_refs": {
+        "events": [
+          "20260902-r-478-pah-001-finite-common-core-gate-held-for"
+        ],
+        "negatives": [],
+        "results": [
+          "R-478"
+        ]
+      },
+      "gate_ids": [
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001359",
+      "method": [
+        "Pin the raw PAH-001 bytes to SHA-256 03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37 and audit only its displayed finite definitions.",
+        "Prove exact gauge covariance of every displayed term and exact midpoint detailed balance for every declared inverse move using the declared mobility symmetry.",
+        "Separate the source-level projection theorem from the conditional theorem obtained after supplying an equivariant exact move action.",
+        "Check the directed-root half factor through the bilinear Dirichlet identity and state exactly which root measure and multiplicity make the adjoint meaningful.",
+        "Search the immutable packet for a named anchor-preserving refinement map, parameter transport and cylinder-generator intertwining equation; classify their absence as an unclosed definition rather than inventing them.",
+        "Reconstruct the decision independently, challenge it with 30 promotion, sign, factor, measure, equivariance, refinement and model-drift mutations, and cross-check the finite algebraic implications in Lean."
+      ],
+      "missing_assumptions": [
+        "Exact partial move maps with admissibility, inverse and root multiplicities, plus their gauge- and anchor-automorphism-equivariance law.",
+        "The root Hilbert inner product or measure, directed-root counting convention, invalid/duplicate-move convention and domain that uniquely define B^*.",
+        "A named anchor-preserving refinement embedding iota_(rho,rho'), parameter transport, move/root embedding and exact cylinder-generator intertwining equation."
+      ],
+      "next_action": "Obtain one versioned PAH-001 owner morphism contract that fixes exact partial move maps and gauge/anchor action, directed-root Hilbert measure and multiplicity, and a named anchor-preserving refinement embedding iota_(rho,rho') satisfying [P_cand,L_rho]=0, B^*B=-L_rho and iota L_rho=L_(rho') iota on invariant cylinder observables.",
+      "non_claims": [
+        "No physical Pre-A, spacetime or gravity conclusion is claimed.",
+        "No quantum real-time, proper-time or Lorentzian-time interpretation of Markov time is claimed.",
+        "No spectral collapse, trapped transfer, Reading-H, physical-empty, continuum, event-horizon, common causal cone, QFT, Yang--Mills or TOE conclusion is claimed.",
+        "No PAH-001 functional, move set, mobility exponent, projection, regulator, limit order or term was changed.",
+        "No Q3LOCK result was imported as PAH-001 evidence."
+      ],
+      "provenance": "contemporaneous",
+      "question": "Do the finite reversible generator L_rho, candidate projection P_cand and root-incidence operator B declared by PAH-001 define compatible transfer dynamics on one gauge- and anchor-automorphism-invariant finite common core?",
+      "recorded_at": "2026-09-01T19:07:33Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001357",
+          "relation": "continues"
+        }
+      ],
+      "reproduction": [
+        "E:\\Dev\\TECT.venv\\Scripts\\python.exe -X utf8 codes/foundations/pah001_finite_common_core_audit.py",
+        "E:\\Dev\\TECT.venv\\Scripts\\python.exe -X utf8 codes/foundations/pah001_finite_common_core_audit_independent.py",
+        "E:\\Dev\\TECT.venv\\Scripts\\python.exe -X utf8 codes/foundations/pah001_finite_common_core_audit_hostile.py",
+        "E:\\Dev\\TECT.venv\\Scripts\\python.exe -X utf8 verification/scripts/pah001_finite_common_core_audit_verify.py",
+        "Set-Location E:\\Dev\\TECT\\verification\\lean; lake env lean Tect/R478.lean"
+      ],
+      "reviewed_on": "2026-09-02",
+      "revisit_condition": "Reopen for MAINLINE_ADVANCE only when that exact contract is hash-pinned and the three identities are proved by primary, independent, hostile and formal verification without changing PAH-001. Reopen for NEGATIVE_RESULT only after an explicit counterexample within the displayed PAH-001 finite definitions is proved.",
+      "schema": "tect/proof-exploration/1.0",
+      "schema_version": "1.0",
+      "source_authorities": [
+        {
+          "path": "strategy/pa-hyp/PAH-001-v1.json",
+          "role": "immutable researcher-proposed finite candidate definition",
+          "sha256": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+          "source_id": "PAH-001"
+        },
+        {
+          "path": "strategy/pa-hyp/intake-v1.json",
+          "role": "structural intake and non-promotion boundary",
+          "sha256": "f01e27af5b98d22ddc9e5ca23d81a2fe2e847e24103f78528bd7e2f83fb11eb7",
+          "source_id": "R-476-INTAKE"
+        }
+      ],
+      "stop_or_redesign": [
+        "Do not invent missing move, root-space or refinement definitions inside this audit.",
+        "Do not repeat spectral-collapse, trapped-transfer, Reading-H, physical-empty or finite-carrier calculations before the common-core contract is supplied.",
+        "Do not promote conditional root factorization or finite detailed balance to continuum, physical-sector or spacetime evidence."
+      ],
+      "task_id": "T-054",
+      "title": "PAH-001 finite common-core gate held for an owner morphism contract",
+      "verdict": "inconclusive"
+    },
+    {
+      "adversarial_review": [
+        {
+          "axis": "source fidelity",
+          "check": "The corrected scope reproduces the PAH-001 carrier, dimension, volume, boundary and normalization fields without adding a lattice geometry.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "verdict stability",
+          "check": "The erroneous geometry phrase was not used by any C1--C5 proof, executable fixture, digest or Lean theorem.",
+          "disposition": "DISMISSED-FINITE"
+        },
+        {
+          "axis": "physical promotion",
+          "check": "Relational two-cell complex is not treated as physical space, a Lorentzian manifold or gravity.",
+          "disposition": "UPHELD-OPEN"
+        }
+      ],
+      "boundary": "T0 claim-nonbearing provenance correction only. It does not close projection commutation, root-adjoint definition or refinement compatibility and supplies no physical Pre-A, spacetime, gravity, event-horizon, continuum, QFT, Yang--Mills, common-causal-cone or TOE conclusion.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "classification": "SCOPE_CORRECTION",
+      "decision_reason": "An append-only scope correction is required to keep the exact carrier statement source-faithful. It introduces no new result, gate transition, negative result, model change or physical interpretation.",
+      "evidence_refs": [
+        "strategy/pa-hyp/PAH-001-v1.json#finite_regulator",
+        "strategy/pa-hyp/R478-certificate.md#Exact-scope",
+        "explorations/log.jsonl#EXP-001359",
+        "strategy/pa-hyp/finite-common-core-audit-v1.json#scope"
+      ],
+      "finding": "The phrase finite periodic three-torus volume in the EXP-001359 decision-scope sentence was erroneous. The exact source scope is a finite connected oriented bounded-degree relational two-cell complex G=(V,E,P), with disjoint nonempty anchors O and C, finite |V|, fixed incidence data as the spatial boundary condition, fixed-Q finite configuration space and counting-measure Gibbs normalization. PAH-001 admits neither embedding coordinates nor a physical-volume interpretation. All R-478 condition statuses, HOLD_FOR_EVIDENCE verdict, exact proofs, source hash and verifier outputs remain unchanged.",
+      "formal_integration": {
+        "events": [
+          "20260902-exp-001360-pah-001-finite-carrier-scope-correct"
+        ],
+        "negatives": [],
+        "no_gate_change": true,
+        "no_model_mutation": true,
+        "no_new_negative": true,
+        "no_new_result": true,
+        "no_pdf": true,
+        "no_verdict_change": true,
+        "results": [
+          "R-478"
+        ]
+      },
+      "formal_refs": {
+        "events": [
+          "20260902-exp-001360-pah-001-finite-carrier-scope-correct"
+        ],
+        "negatives": [],
+        "results": [
+          "R-478"
+        ]
+      },
+      "gate_ids": [
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001360",
+      "method": [
+        "Compare the EXP-001359 decision-scope sentence with the immutable PAH-001 finite_regulator carrier, dimension, volume, spatial-boundary and normalization fields.",
+        "Preserve the append-only original record and append this correction without changing any mathematical verdict, verifier output or model field.",
+        "Restate the exact carrier scope and its physical-interpretation firewall from the hash-pinned source."
+      ],
+      "next_action": "Use the corrected finite relational two-cell-complex scope when evaluating the single remaining PAH-001 owner morphism-contract question recorded by EXP-001359.",
+      "non_claims": [
+        "No physical Pre-A, spacetime or gravity conclusion is claimed.",
+        "No R-478 condition status or verifier result changes.",
+        "No PAH-001 definition or Q3LOCK evidence is added."
+      ],
+      "provenance": "contemporaneous",
+      "question": "What is the exact finite carrier scope of the R-478 PAH-001 common-core audit?",
+      "recorded_at": "2026-09-01T19:13:19Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001359",
+          "relation": "corrects"
+        }
+      ],
+      "reviewed_on": "2026-09-02",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "PAH-001 finite common-core carrier scope correction",
+      "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "check": "Could PAH-OMC-001 be silently treated as content already present in PAH-001?",
+          "disposition": "REJECTED: every theorem and run pins both hashes and explicitly restricts authority to the composite model."
+        },
+        {
+          "check": "Could coincident K=2 roots or parallel edges cause a hidden factor-two mismatch?",
+          "disposition": "REJECTED: label multiplicity is retained identically in the generator and root measure, and both independent matrices and Lean verify the half factor."
+        },
+        {
+          "check": "Could an anchor-preserving isomorphism be counted as the requested refinement?",
+          "disposition": "REJECTED: PAH-ISO-MORPHISM is a relabelling sanity check only and changes neither resolution nor a."
+        },
+        {
+          "check": "Does the free-vertex obstruction refute every possible refinement?",
+          "disposition": "REJECTED: it applies only to the natural forgetful pullback with unchanged positive kappa_s; block, lumped, weighted and approximate morphisms remain open."
+        },
+        {
+          "check": "Does finite reversible transfer establish physical dynamics?",
+          "disposition": "REJECTED: no real-time, Lorentzian, physical-sector, continuum or observational identification is supplied."
+        }
+      ],
+      "assumptions": [
+        "PAH-001 and PAH-OMC-001 are used only at their pinned raw-byte hashes.",
+        "The PAH-OMC integer phase label remains a counting-measure state coordinate at zero radius.",
+        "Every retained root label, including coincident K=2 and parallel-edge channels, is counted exactly once in L_rho and K_rho.",
+        "The finite symmetry group acts by the displayed root relabelling and orientation sign.",
+        "The refinement counterexample has 0<epsilon<1, nonzero aperture step, positive kappa_s, and two distinct fine aperture values in one coarse fibre."
+      ],
+      "boundary": "The theorem is not retroactive evidence about PAH-001 alone. It admits no nontrivial refinement, uniform estimate, continuum, physical projection or observable chain. Markov time is not quantum, proper or Lorentzian time. No physical Pre-A, spacetime, gravity, event-horizon, area-law, Lorentz, QFT, Yang--Mills, mass-gap, cosmic-origin or TOE conclusion follows.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "classification": "MAINLINE_ADVANCE_STAGE_1_HOLD_FOR_EVIDENCE_STAGE_2",
+      "decision_reason": "PAH-OMC-001 supplies the exact missing move, inverse, invalid, duplicate, symmetry-action, root-measure, multiplicity and finite-domain definitions. Their exact audit proves projection-generator commutation and B^*B=-L on the composite model's finite invariant core, so Stage 1 advances. The named natural free-vertex restriction does not intertwine generators because an added positive-kappa_s edge makes the fine aperture rate vary inside one coarse fibre. That route is retired, but other owner-chosen morphisms remain open; therefore the overall programme is held at Stage 2 rather than promoted or globally refuted.",
+      "decision_scope": "T5 finite exact theorem for a hash-pinned composite T0 candidate on finite connected oriented bounded-degree relational two-cell complexes, finite Z_K, fixed Q, finite local cutoffs, unchanged F_rho, unchanged nu, counting-measure Gibbs normalization and external stochastic Markov time. No limit is taken. The refinement negative is limited to a free fine vertex, natural forgetful coarse map, unchanged positive kappa_s and exact pullback intertwining.",
+      "evidence_level": "T5 finite exact composite-model theorem with primary, non-importing independent, hostile and Lean verification; route-local exact refinement negative",
+      "evidence_refs": [
+        "strategy/pa-hyp/PAH-OMC-001-v1.json#directed_root_hilbert_space",
+        "strategy/pa-hyp/owner-morphism-audit-v1.json#conditions",
+        "strategy/pa-hyp/R479-certificate.md#Finite-common-dynamics-proof",
+        "strategy/pa-hyp/R479-certificate.md#Nontrivial-refinement-test",
+        "codes/foundations/pah_omc001_common_dynamics.py#run",
+        "codes/foundations/pah_omc001_common_dynamics_independent.py#run",
+        "codes/foundations/pah_omc001_common_dynamics_hostile.py#run",
+        "verification/scripts/pah_omc001_common_dynamics_verify.py#run",
+        "verification/lean/Tect/R479.lean#free_vertex_fibre_difference_nonzero",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-02-r479-pah-omc001/integrated.json#assertions",
+        "negative-results/registry.md#ng-2026-09-02-pah-omc-free-vertex-restriction-exact-intertwining",
+        "RESULTS-LEDGER.md#r-479"
+      ],
+      "finding": "For the composite PAH-001 plus PAH-OMC-001 model, exact inverse closure, symmetry equivariance, [P_cand,L_rho]=0 and B_rho^*B_rho=-L_rho all pass on A_rho^inv=range(P_cand). Primary 81/81, independent 191/191, hostile 42/42 with all 41 mutations rejected, integrated 46/46 and Lean R479 pass with digest c6f2e8ac2d62de0b99c35a4947003d2ede24d3b61f4f03bcee73b9a975e4a64e. Stage 1 is MAINLINE_ADVANCE. The free-vertex pullback refinement fails exact intertwining because D_z(z_1)-D_z(z_2)=-kappa_s delta(z_1-z_2) is nonzero under its preregistered assumptions. No alternative owner morphism is selected, so the programme remains HOLD_FOR_EVIDENCE_AT_STAGE_2.",
+      "formal_integration": {
+        "active_gate_changed": false,
+        "core_digest": "c6f2e8ac2d62de0b99c35a4947003d2ede24d3b61f4f03bcee73b9a975e4a64e",
+        "events": [
+          "20260902-r-479-pah-omc-001-finite-common-dynamics-and-re",
+          "20260902-pah-free-vertex-restriction-exact-intertwining"
+        ],
+        "hostile": "42/42 PASS; 41/41 mutations rejected",
+        "independent": "191/191 PASS",
+        "integrated": "46/46 PASS",
+        "lean": "R479 PASS under leanprover/lean4:v4.32.1",
+        "negatives": [
+          "NG-2026-09-02-PAH-OMC-FREE-VERTEX-RESTRICTION-EXACT-INTERTWINING"
+        ],
+        "no_claim_tier_change": true,
+        "no_pdf": true,
+        "no_physical_progress": true,
+        "no_q3lock_import": true,
+        "primary": "81/81 PASS",
+        "results": [
+          "R-479"
+        ],
+        "stage_1_advanced": true,
+        "stage_2_held": true
+      },
+      "formal_refs": {
+        "events": [
+          "20260902-r-479-pah-omc-001-finite-common-dynamics-and-re",
+          "20260902-pah-free-vertex-restriction-exact-intertwining"
+        ],
+        "negatives": [
+          "NG-2026-09-02-PAH-OMC-FREE-VERTEX-RESTRICTION-EXACT-INTERTWINING"
+        ],
+        "results": [
+          "R-479"
+        ]
+      },
+      "gate_ids": [
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001361",
+      "method": [
+        "Preserve PAH-001 byte-for-byte and create one separately versioned researcher-owned completion with an independently pinned hash.",
+        "Define PH, TR, LK and AP as inverse-closed partial coordinate maps with exact invalid, parallel-edge, K=2 duplicate and zero-radius conventions.",
+        "Define gauge and anchor-automorphism actions on state and root labels, including orientation signs, and prove move, mobility, energy and rate equivariance.",
+        "Define D_rho, the pi-weighted directed-root Hilbert space, exact multiplicity, full finite domains and the sqrt(c/2) incidence map, then prove the Dirichlet identity.",
+        "Enumerate a complete 768-state anchored fixture, reconstruct the proof independently with modular identities and conductance matrices, reject 41 hostile mutations, and compile a Lean cross-check.",
+        "Test the named free-vertex restriction refinement and factor its within-fibre aperture-rate difference exactly before considering any uniform estimate."
+      ],
+      "missing_assumptions": [
+        "One owner-selected nontrivial anchor-preserving cell-subdivision functor.",
+        "One coarse-state map or observable embedding for fluctuating fine fields.",
+        "Parameter and cell-weight transport for Q, cutoffs, a, beta, nu and theta.",
+        "A compatible move/root morphism or lumping kernel.",
+        "Either exact generator intertwining or one preregistered uniform boundary-defect estimate in regulator, volume, shape, source, phase and exhaustion."
+      ],
+      "next_action": "The owner must hash-pin one nontrivial anchor-preserving subdivision, coarse-state map, parameter and cell-weight transport, and move/root morphism, then prove exact generator intertwining or preregister one regulator/volume/shape/source/phase/exhaustion-uniform boundary-defect estimate without editing PAH-001 in place.",
+      "non_claims": [
+        "No theorem is retroactively attributed to PAH-001 alone.",
+        "No nontrivial refinement, uniform limit, continuum, physical projection, F_lim, F_eff or F_obs is admitted.",
+        "No Markov time is identified with quantum real time, proper time or Lorentzian time.",
+        "No physical Pre-A, spacetime, gravity, event horizon, area law, Lorentz symmetry, QFT, Yang--Mills, mass gap, cosmic origin or TOE conclusion follows.",
+        "The free-vertex negative result is route-local and not a global no-go.",
+        "No Q3LOCK result is imported."
+      ],
+      "provenance": "contemporaneous",
+      "question": "Can a separately versioned PAH owner morphism contract close exact finite common dynamics without editing PAH-001, and does the source-minimal free-vertex pullback provide the required nontrivial refinement intertwining?",
+      "recorded_at": "2026-09-02T01:20:47Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001359",
+          "relation": "continues"
+        }
+      ],
+      "reproduction": [
+        "E:\\Dev\\TECT.venv\\Scripts\\python.exe -X utf8 codes/foundations/pah_omc001_common_dynamics.py",
+        "E:\\Dev\\TECT.venv\\Scripts\\python.exe -X utf8 codes/foundations/pah_omc001_common_dynamics_independent.py",
+        "E:\\Dev\\TECT.venv\\Scripts\\python.exe -X utf8 codes/foundations/pah_omc001_common_dynamics_hostile.py",
+        "E:\\Dev\\TECT.venv\\Scripts\\python.exe -X utf8 verification/scripts/pah_omc001_common_dynamics_verify.py",
+        "Set-Location E:\\Dev\\TECT\\verification\\lean; lake env lean Tect/R479.lean"
+      ],
+      "reviewed_on": "2026-09-02",
+      "revisit_condition": "Advance Stage 2 only after that owner morphism and its exact or quantitatively uniform intertwining theorem pass primary, independent, hostile and formal verification. Register a new route-local negative if the selected morphism fails; do not infer a global PAH no-go without exhausting the admitted successor class.",
+      "schema": "tect/proof-exploration/1.0",
+      "schema_version": "1.0",
+      "source_authorities": [
+        {
+          "path": "strategy/pa-hyp/PAH-001-v1.json",
+          "role": "immutable parent microscopic candidate",
+          "sha256": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+          "source_id": "PAH-001"
+        },
+        {
+          "path": "strategy/pa-hyp/PAH-OMC-001-v1.json",
+          "role": "separately versioned researcher-owned finite move/root completion and refinement boundary",
+          "sha256": "948a87092f7393e5214a375d66295237e5c8be1b018b8788d3e6785d696e774f",
+          "source_id": "PAH-OMC-001"
+        }
+      ],
+      "stop_or_redesign": [
+        "Do not treat PAH-ISO-MORPHISM as nontrivial refinement.",
+        "Do not alter PAH-001 or PAH-OMC-001 in place to repair the free-vertex obstruction.",
+        "Do not begin uniform-limit or observable-law calculations until one nontrivial morphism contract passes.",
+        "If new weights, block variables, counterterms or dynamics are needed, create a new versioned owner successor and restart its finite common-dynamics audit."
+      ],
+      "task_id": "T-054",
+      "title": "PAH-OMC-001 closes finite common dynamics and exposes the first refinement obstruction",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",

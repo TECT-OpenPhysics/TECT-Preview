@@ -1,0 +1,183 @@
+{
+  "schema": "tect/pre-a-owner-morphism-contract/1.0",
+  "contract_id": "PAH-OMC-001",
+  "version": "0.1.0",
+  "title": "Finite move, root-space, and refinement-boundary contract for PAH-001",
+  "proposed_at": "2026-09-02",
+  "proposed_by": "TECT research programme under operator directive",
+  "provenance": {
+    "class": "RESEARCHER_HYPOTHESIS_SUCCESSOR_CONTRACT",
+    "definition_owner": "TECT_RESEARCH_PROGRAM",
+    "external_source": false,
+    "constructed_hypothesis": true,
+    "physical_authority": false,
+    "epistemic_layer": "L2_MODEL_SPECIFICATION_ONLY"
+  },
+  "parent": {
+    "packet_id": "PAH-001",
+    "path": "strategy/pa-hyp/PAH-001-v1.json",
+    "sha256": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "composition_rule": "This contract supplements the immutable parent. Every theorem below is about the composite PAH-001 plus PAH-OMC-001 model and is not retroactive evidence that the parent bytes already contained these definitions."
+  },
+  "immutability": "PAH-001-v1 is not edited or superseded. This contract is a separately versioned owner completion. Any change to its move channels, multiplicities, root measure, domain, or refinement boundary requires PAH-OMC-001-v2 or a new contract ID.",
+  "status": {
+    "finite_common_dynamics": "DEFINED_PENDING_EXACT_AUDIT",
+    "nontrivial_refinement": "WITHHELD_PENDING_NEW_OWNER_CHOICE",
+    "uniform_limit": "NOT_ADMITTED",
+    "observable_chain": "NOT_ADMITTED"
+  },
+  "preservation_firewall": {
+    "functional_unchanged": true,
+    "gauge_group_unchanged": true,
+    "move_families_unchanged": true,
+    "mobility_exponent_nu_unchanged": true,
+    "candidate_projection_unchanged": true,
+    "regulator_unchanged": true,
+    "limit_order_unchanged": true,
+    "no_new_hamiltonian_or_counterterm": true,
+    "no_q3lock_import": true
+  },
+  "exact_scope": {
+    "carrier": "One finite connected oriented bounded-degree relational two-cell complex G=(V,E,P) with disjoint nonempty anchors O and C.",
+    "regulator": "rho=(G,O,C,K,M_s,M_psi,R_max,epsilon,a,beta,nu,theta,Q) exactly as in PAH-001.",
+    "group": "The finite abelian gauge group Z_K^V and the finite anchor-preserving cell automorphism group Aut(G;O,C).",
+    "configuration": "The unprobed finite fixed-Q Gibbs configuration. The optional tagged probe belongs only to the separate preregistered transfer estimand and is not evolved by L_rho in this contract.",
+    "measure": "Counting measure on the integer-coordinate state tuples below, followed by the exact PAH-001 Gibbs weight pi_(rho,Q).",
+    "time": "External stochastic Markov time only.",
+    "limits": "No regulator, volume, refinement, phase, aperture, beta, or observation-time limit is taken in the finite theorem."
+  },
+  "integer_state_coordinates": {
+    "aperture": "j_v in {0,...,M_s}, with s_v=epsilon+j_v(1-epsilon)/M_s.",
+    "radial_occupation": "ell_v in {0,...,M_psi}, with sum_v ell_v=Q.",
+    "matter_phase": "n_v in Z_K at every vertex, including ell_v=0. Distinct n_v labels at zero radius remain distinct counting-measure states; no quotient is silently inserted.",
+    "link": "For every geometric one-cell q choose the orientation already carried by G and write u_q in Z_K, U_q=zeta_K^(u_q); the reverse orientation has exponent -u_q.",
+    "functional_evaluation": "Map the integer tuple to the PAH-001 variables and evaluate the unchanged displayed F_rho."
+  },
+  "universal_directed_root_labels": {
+    "phase": {
+      "label": "PH(v,sigma), v in V and sigma in {-1,+1}",
+      "admissibility": "always",
+      "map": "n_v maps to n_v+sigma modulo K; every other coordinate is fixed",
+      "inverse": "PH(v,sigma)^(-1)=PH(v,-sigma)",
+      "mobility": "m_r(x)=s_v^nu"
+    },
+    "matter_transfer": {
+      "label": "TR(q,v_to_w) for each geometric one-cell q with ordered endpoints v,w",
+      "admissibility": "ell_v>=1 and ell_w<=M_psi-1",
+      "map": "ell_v maps to ell_v-1 and ell_w maps to ell_w+1; phases, apertures, and links are fixed",
+      "inverse": "TR(q,v_to_w)^(-1)=TR(q,w_to_v)",
+      "mobility": "m_r(x)=(s_v s_w)^(nu/2)"
+    },
+    "link": {
+      "label": "LK(q,sigma), one geometric one-cell q in its carried orientation and sigma in {-1,+1}",
+      "admissibility": "always",
+      "map": "u_q maps to u_q+sigma modulo K and the reverse exponent remains -u_q; every other coordinate is fixed",
+      "inverse": "LK(q,sigma)^(-1)=LK(q,-sigma)",
+      "mobility": "m_r(x)=(s_v s_w)^(nu/2) for the endpoints of q"
+    },
+    "aperture": {
+      "label": "AP(v,sigma), v in V and sigma in {-1,+1}",
+      "admissibility": "0<=j_v+sigma<=M_s",
+      "map": "j_v maps to j_v+sigma; every other coordinate is fixed",
+      "inverse": "AP(v,sigma)^(-1)=AP(v,-sigma)",
+      "mobility": "m_r(x)=(s_v(before)s_v(after))^(nu/2)"
+    }
+  },
+  "invalid_and_duplicate_conventions": {
+    "invalid_partial_move": "An inadmissible root is absent from D_rho and contributes zero to L_rho. It is not reflected, clipped, or converted to a self-loop.",
+    "parallel_edges": "Roots carry the geometric one-cell ID. Distinct parallel cells are distinct channels even when they induce the same integer-coordinate transition.",
+    "K_equals_2": "The sigma=+1 and sigma=-1 phase or link labels are retained as two distinct channels even when their state maps coincide modulo 2. Their multiplicity is therefore two exactly as the displayed increment/decrement list prescribes.",
+    "zero_radius_phase": "PH roots remain valid at ell_v=0 because the integer phase label is part of the counting-measure state. This is a model convention, not a physical quotient.",
+    "channel_counting": "Every retained root label appears exactly once in the generator sum and exactly once in the directed-root Hilbert measure."
+  },
+  "symmetry_action_on_states_and_roots": {
+    "gauge_on_states": "g in Z_K^V sends n_v to n_v+g_v and u_q to u_q+g_w-g_v in the carried orientation q=(v,w); j and ell are fixed.",
+    "gauge_on_roots": "Gauge transformations fix every root label. Each partial root map commutes with the gauge action because Z_K is abelian.",
+    "automorphism_on_states": "h in Aut(G;O,C) relabels vertices, geometric one-cells, plaquettes, j, ell, n, and u. If h reverses the carried orientation of q, the target link exponent changes sign.",
+    "automorphism_on_roots": "h sends PH(v,sigma) to PH(hv,sigma), TR(q,v_to_w) to TR(hq,hv_to_hw), AP(v,sigma) to AP(hv,sigma), and LK(q,sigma) to LK(hq,orientation_sign(h,q)*sigma).",
+    "admissibility_equivariance": "r is admissible at x if and only if h.r is admissible at h.x for every gauge or anchor automorphism h.",
+    "move_equivariance": "h.(r.x)=(h.r).(h.x) on every admissible pair.",
+    "mobility_equivariance": "m_(h.r)(h.x)=m_r(x).",
+    "rate_equivariance": "c_(h.r)(h.x)=c_r(x) because F_rho(h.x)=F_rho(x)."
+  },
+  "generator_and_projection": {
+    "admissible_incidence_set": "D_rho={(x,r): x in Omega_(rho,Q) and r is admissible at x}.",
+    "rate": "c_r(x)=m_r(x) exp[-beta(F_rho(r.x)-F_rho(x))/2].",
+    "generator": "(L_rho f)(x)=sum_(r:(x,r) in D_rho)c_r(x)[f(r.x)-f(x)].",
+    "group_representation": "(U_h f)(x)=f(h^(-1).x) for h in Z_K^V semidirect Aut(G;O,C).",
+    "candidate_projection": "P_cand=P_Aut P_G is unchanged from PAH-001 and equals the finite average onto H_rho^inv={f:U_h f=f for every h}.",
+    "finite_common_invariant_core": "A_rho^inv=H_rho^inv, the complete finite-dimensional invariant function space. It is simultaneously the domain of L_rho restricted to invariant observables, P_cand, B_rho, and B_rho^*B_rho.",
+    "commutation_target": "U_h L_rho=L_rho U_h for every h, hence [P_cand,L_rho]=0 and L_rho A_rho^inv is contained in A_rho^inv."
+  },
+  "directed_root_hilbert_space": {
+    "space": "K_rho=C^(D_rho).",
+    "inner_product": "<Phi,Psi>_root=sum_((x,r) in D_rho) pi_(rho,Q)(x) conjugate(Phi(x,r)) Psi(x,r).",
+    "multiplicity": "Counting measure on the exact retained directed labels, including the declared K=2 and parallel-edge multiplicities.",
+    "domain_B": "dom(B_rho)=C^(Omega_(rho,Q)); all functions are bounded because Omega is finite.",
+    "definition_B": "(B_rho f)(x,r)=sqrt(c_r(x)/2)[f(r.x)-f(x)].",
+    "domain_adjoint": "dom(B_rho^*)=K_rho; B_rho^* is the unique finite-dimensional Hilbert adjoint under the displayed state and root inner products.",
+    "inverse_incidence_involution": "I(x,r)=(r.x,r^(-1)) is a fixed-point-allowed measure-preserving involution of D_rho; duplicate channels remain label-distinct under I.",
+    "factorization_target": "<B_rho f,B_rho g>_root=<f,-L_rho g>_(pi), hence B_rho^*B_rho=-L_rho on C^(Omega) and on A_rho^inv."
+  },
+  "finite_theorem_targets": [
+    "Every displayed root family is an inverse-closed system of partial bijections on the fixed-Q state space.",
+    "The move, mobility, rate, and incidence measure are gauge- and anchor-automorphism-equivariant.",
+    "P_cand is idempotent and self-adjoint and commutes with L_rho on A_rho^inv.",
+    "Detailed balance and the directed-root factor 1/2 give B_rho^*B_rho=-L_rho with no sign, measure, multiplicity, or domain ambiguity.",
+    "T_rho(t)=exp(tL_rho) is a reversible finite Markov contraction preserving A_rho^inv."
+  ],
+  "refinement_contract": {
+    "anchor_preserving_isomorphism_sanity_morphism": {
+      "id": "PAH-ISO-MORPHISM",
+      "definition": "For an anchor-preserving oriented cell isomorphism h:G->G', transport every regulator parameter identically, push state and root labels by h, and set (iota_h f)(x')=f(h^(-1).x').",
+      "intertwining": "iota_h L_rho=L_(h.rho) iota_h and the corresponding root incidence maps intertwine exactly.",
+      "boundary": "This is relabelling naturality only. It is not lattice refinement, does not change a, and supplies no limit."
+    },
+    "tested_nontrivial_candidate": {
+      "id": "PAH-FREE-VERTEX-RESTRICTION",
+      "setup": "A refinement retains a coarse vertex v, adds a freely varying adjacent vertex z, and uses the natural coarse-state projection p that forgets fine-only variables; iota_p f=f composed with p.",
+      "parameter_transport": "All unchanged PAH-001 scalar couplings are transported identically; no new cell weights, counterterms, frozen fine fields, or rate rescaling are inserted.",
+      "obstruction": "For an admitted aperture increment s_v=s to s+delta with 0<epsilon<1, the added edge contributes D_z(s_z)=kappa_s[(s+delta-s_z)^2-(s-s_z)^2]/2 to the fine energy increment. For two admissible fine values z_1!=z_2, D_z(z_1)-D_z(z_2)=-kappa_s delta(z_1-z_2)!=0. Thus the fine aperture rate, and L_(rho')iota_p f for a cylinder f detecting j_v, varies inside one p-fibre, whereas iota_p L_rho f is fibre-constant.",
+      "verdict": "EXACT_INTERTWINING_FAILS_FOR_THIS_NATURAL_REFINEMENT",
+      "scope_boundary": "The counterexample rejects the free-vertex restriction/pullback morphism with unchanged positive kappa_s. It is not a no-go for every possible block map, conditional expectation, parameter transport, or separately versioned weighted functional."
+    },
+    "missing_owner_choice": [
+      "A named nontrivial anchor-preserving cell-subdivision functor.",
+      "A coarse-state map or observable embedding that handles new fluctuating fields.",
+      "Transport laws for Q, local cutoffs, a, beta, nu, theta, and cell coupling weights.",
+      "A move/root embedding or lumping kernel compatible with the selected coarse map.",
+      "A decision between exact intertwining and an explicitly quantified approximate boundary-defect theorem."
+    ],
+    "why_not_supplied": "PAH-001 contains no owner choice among these inequivalent constructions. Selecting one would add substantive microscopic structure. The natural source-minimal restriction map already fails exact generator intertwining, so this contract records the failure rather than disguising an isomorphism as refinement or altering F_rho.",
+    "status": "HOLD_FOR_EVIDENCE"
+  },
+  "ordered_limit_firewall": {
+    "inherited_order": [
+      "LOCAL_STATE_CUTOFF",
+      "LATTICE_REFINEMENT",
+      "VOLUME_EXHAUSTION",
+      "PHASE_SELECTOR",
+      "APERTURE_COLLAPSE",
+      "GROUND_STATE_IF_REQUESTED",
+      "OBSERVATION_TIME"
+    ],
+    "interchange_claimed": false,
+    "current_admission": "No step in this order is admitted by the finite common-dynamics theorem."
+  },
+  "falsifiers": [
+    "An admissible root lacks the stated inverse or violates fixed Q.",
+    "A gauge or anchor automorphism fails move, mobility, or rate equivariance.",
+    "A duplicate-channel count differs between L_rho and K_rho.",
+    "The displayed root inner product produces any sign or factor other than B_rho^*B_rho=-L_rho.",
+    "P_cand fails to commute with L_rho on an exact enumerated finite fixture.",
+    "The free-vertex obstruction vanishes under its stated positive-kappa_s, nonzero-delta, distinct-fibre assumptions."
+  ],
+  "non_claims": [
+    "This contract does not make PAH-001 an established TECT law or physical source owner.",
+    "No nontrivial refinement, uniform limit, continuum theory, physical projection, F_lim, F_eff, or F_obs is admitted.",
+    "No Markov time is identified with quantum real time, proper time, or Lorentzian time.",
+    "No physical Pre-A, spacetime, gravity, event-horizon, area-law, Lorentz, QFT, Yang--Mills, mass-gap, cosmic-origin, or TOE conclusion follows.",
+    "The free-vertex counterexample is route-local and not a global no-go for all successor models."
+  ],
+  "single_next_action": "The owner must choose and hash-pin one nontrivial anchor-preserving subdivision/coarse-map/parameter-transport contract, then prove exact intertwining or preregister a quantitative boundary-defect estimate before any uniform-limit calculation."
+}

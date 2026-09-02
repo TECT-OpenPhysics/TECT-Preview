@@ -1,0 +1,193 @@
+{
+  "schema": "tect/pah001-finite-common-core-audit/1.0",
+  "audit_id": "PAH-FCC-001",
+  "result_id": "R-478",
+  "exploration_id": "EXP-001359",
+  "task_id": "T-054",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "title": "PAH-001 finite reversible dynamics and common-core compatibility audit",
+  "question": "Do the displayed finite generator L_rho, candidate projection P_cand, and root-incidence operator B define one compatible gauge- and anchor-automorphism-invariant finite transfer on a common cylinder core?",
+  "verdict": "HOLD_FOR_EVIDENCE",
+  "classification": "HOLD_FOR_EVIDENCE",
+  "tier": "T0",
+  "claim_bearing": false,
+  "gate_changed": false,
+  "scientific_transition": false,
+  "negative_result_registered": false,
+  "model_mutation": {
+    "source_modified": false,
+    "functional_modified": false,
+    "move_set_modified": false,
+    "mobility_exponent_modified": false,
+    "projection_modified": false,
+    "regulator_modified": false,
+    "limit_order_modified": false,
+    "new_term_added": false,
+    "new_candidate_added": false,
+    "q3lock_evidence_imported": false
+  },
+  "source": {
+    "source_id": "PAH-001",
+    "candidate_id": "PA-M6-RELATIONAL-APERTURE-TRANSFER-v0",
+    "path": "strategy/pa-hyp/PAH-001-v1.json",
+    "sha256": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "hash_policy": "RAW_UTF8_BYTES_NO_SELF_HASH",
+    "immutability": "Any mathematical change requires PAH-001-v2 or a new packet ID.",
+    "scope": "Every admitted finite connected oriented bounded-degree two-cell complex G with disjoint nonempty anchors O,C, finite Z_K gauge and local state cutoffs, fixed Q, epsilon>0, beta>0 and nu>0 under the displayed counting-measure Gibbs normalization."
+  },
+  "context_pins": [
+    {
+      "path": "strategy/pa-hyp/intake-v1.json",
+      "sha256": "f01e27af5b98d22ddc9e5ca23d81a2fe2e847e24103f78528bd7e2f83fb11eb7",
+      "role": "R-476 structural intake and nonpromotion boundary"
+    },
+    {
+      "path": "strategy/pa-hyp/R476-certificate.md",
+      "sha256": "f2c2b63b5c4387b9daffed44d0bdb5d886262ed6e8e315d17fa3d3fb1f2c969b",
+      "role": "prior exact finite-model transcription and next-question authority"
+    },
+    {
+      "path": "verification/lean/lean-toolchain",
+      "sha256": "8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af",
+      "role": "pinned Lean toolchain"
+    },
+    {
+      "path": "verification/lean/lakefile.toml",
+      "sha256": "a67c26b5518afd984e53eae28a0ba4948c6bb01680d7c360e8b36386eb98962b",
+      "role": "pinned Lean project"
+    }
+  ],
+  "exact_expressions": {
+    "functional_pointer": "/functional_or_action/formula",
+    "gauge_action_pointer": "/symmetry_and_constraint/gauge_action",
+    "projection_pointer": "/symmetry_and_constraint/candidate_internal_projection",
+    "move_set_pointer": "/dynamics/move_set",
+    "mobility_pointer": "/dynamics/mobility_rule",
+    "generator_pointer": "/dynamics/generator",
+    "state_pointer": "/dynamics/state",
+    "root_pointer": "/r471_owner_slots/4/equation",
+    "common_core_pointer": "/common_core_and_uniform_contract/common_core",
+    "refinement_gap_pointer": "/common_core_and_uniform_contract/missing_compatibility",
+    "functional": "F_rho=sum_v[lambda_s(s_v-1)^2/2+m2|psi_v|^2/2+lambda_4|psi_v|^4/4+eta_6|psi_v|^6/6+g s_v^2|psi_v|^2/2]+kappa_s sum_(e=(v,w))(s_v-s_w)^2/2+kappa_D sum_(e=(v,w))J_e(s)|psi_w-U_e psi_v|^2/2+kappa_g sum_p J_p(s)(1-Re U_p)",
+    "generator": "(L_rho f)(x)=sum_r m_r(x) exp[-beta(F_rho(r x)-F_rho(x))/2] [f(r x)-f(x)]",
+    "state": "pi_(rho,Q)(x)=Z_(rho,Q)^(-1) exp[-beta F_rho(x)]",
+    "root": "(Bf)(x,r)=sqrt(c_r(x)/2)(f(r x)-f(x)); target B^*B=-L_rho",
+    "candidate_projection": "P_cand=P_Aut P_G, the finite group average on L2(Omega_(rho,Q),pi_(rho,Q))",
+    "common_core": "A_cyl^inv is the algebraic union of bounded gauge- and anchor-automorphism-invariant cylinder observables under declared anchor-preserving refinement embeddings."
+  },
+  "conditions": [
+    {
+      "id": "PAH-FCC-C1",
+      "requirement": "The displayed F_rho is exactly gauge invariant.",
+      "status": "PASSED",
+      "proof": [
+        "Aperture and all absolute-value onsite terms are gauge neutral.",
+        "For e=(v,w), psi_w-U_e psi_v transforms to zeta_K^(g_w)(psi_w-U_e psi_v), so its squared modulus is unchanged.",
+        "The ordered closed plaquette product has telescoping vertex phases and U_p is unchanged in the abelian group Z_K; J_e and J_p depend only on neutral aperture variables."
+      ],
+      "missing": []
+    },
+    {
+      "id": "PAH-FCC-C2",
+      "requirement": "The declared rates satisfy detailed balance for pi_(rho,Q).",
+      "status": "PASSED",
+      "proof": [
+        "With y=r x and c_r(x)=m_r(x)exp[-beta(F(y)-F(x))/2], pi(x)c_r(x)=Z^(-1)m_r(x)exp[-beta(F(x)+F(y))/2].",
+        "The declared inverse-pair mobility symmetry m_r(x)=m_(r^(-1))(y) gives the identical reverse expression pi(y)c_(r^(-1))(y).",
+        "epsilon>0, nu>0 and positive frozen rate scales make every displayed mobility and rate nonnegative; L_rho 1=0 follows termwise."
+      ],
+      "missing": []
+    },
+    {
+      "id": "PAH-FCC-C3",
+      "requirement": "P_cand is idempotent and self-adjoint and commutes with L_rho.",
+      "status": "PARTIAL_NOT_CLOSED",
+      "proof": [
+        "Gauge invariance of F_rho and relabelling invariance of the displayed uniform functional make the finite group actions unitary on L2(pi). Their group averages P_G and P_Aut are orthogonal projections.",
+        "Aut(G;O,C) normalizes Z_K^V, hence P_Aut commutes with P_G and their product is an orthogonal projection."
+      ],
+      "missing": [
+        "The four move types are prose labels, not exact state maps with admissibility domains, root multiplicities and a declared action h:r->h r h^(-1).",
+        "The source states inverse-pair mobility symmetry but does not state or prove gauge/Aut equivariance m_(h r h^(-1))(h x)=m_r(x). Without that exact transition-kernel contract, [P_cand,L_rho]=0 is not a theorem of the displayed bytes."
+      ]
+    },
+    {
+      "id": "PAH-FCC-C4",
+      "requirement": "On the finite invariant core, B^*B=-L_rho with the correct sign, factor, measure and domain.",
+      "status": "PARTIAL_NOT_CLOSED",
+      "proof": [
+        "Conditionally, if the directed-root Hilbert space is L2({(x,r)}, pi(x) times counting roots), each directed move is counted once and B has the displayed sqrt(c_r/2) factor, detailed balance gives <Bf,Bg>=<f,-L_rho g> and therefore B^*B=-L_rho on the finite full function space and every invariant subspace preserved by L_rho.",
+        "The factor 1/2 exactly compensates the two directed orientations of each inverse-paired transition."
+      ],
+      "missing": [
+        "The source never defines the directed-root Hilbert-space inner product or measure.",
+        "The source does not fix whether invalid boundary moves are omitted, represented by identity roots, or assigned zero rate, nor whether duplicate moves with the same state transition are distinct roots.",
+        "Therefore B^* and the claimed operator equality are not uniquely determined by PAH-001-v1."
+      ]
+    },
+    {
+      "id": "PAH-FCC-C5",
+      "requirement": "A declared anchor-preserving refinement embedding preserves the same cylinder observable and generator structure.",
+      "status": "NOT_DEFINED",
+      "proof": [],
+      "missing": [
+        "No named refinement sequence or map between two finite complexes is defined.",
+        "No configuration map, cylinder-observable embedding, parameter transport, move/root embedding or equation iota_(rho,rho') L_rho=L_(rho') iota_(rho,rho') is displayed.",
+        "The LATTICE_REFINEMENT topology is literally 'to be specified', and the source itself records refinement embeddings and generator agreement as unproved."
+      ]
+    }
+  ],
+  "conditional_finite_theorem": {
+    "scope": "This theorem identifies the exact extra finite data that would close C3 and C4 without changing F_rho, nu or the move types.",
+    "hypotheses": [
+      "Every prose move type is expanded into a finite inverse-paired set of exact partial bijections on Omega_(rho,Q), with invalid moves omitted or assigned one fixed declared convention.",
+      "Gauge and anchor-automorphism actions carry each root to an allowed root and preserve its mobility.",
+      "The root Hilbert space is L2 of directed roots with measure pi(x) times counting multiplicity, and every inverse-directed root is counted exactly once."
+    ],
+    "conclusion": "P_cand is an orthogonal projection commuting with L_rho and B^*B=-L_rho on the finite invariant function space.",
+    "promotion_boundary": "The hypotheses are not silently inserted into PAH-001-v1 and the conditional theorem does not close C3 or C4 for the immutable source."
+  },
+  "decision_rule": {
+    "condition_vector": [
+      true,
+      true,
+      false,
+      false,
+      false
+    ],
+    "exact_counterexample_found": false,
+    "derived_verdict": "HOLD_FOR_EVIDENCE",
+    "reason_not_mainline": "Three mandatory conditions are not closed by the immutable source bytes.",
+    "reason_not_negative": "The omissions admit compatible completions and no displayed equality is contradicted on every completion; missing move, root-space and refinement data are not an exact counterexample."
+  },
+  "single_next_question": "Can the PAH-001 owner provide one versioned finite common-core morphism contract that fixes exact partial move maps and their gauge/Aut action, the directed-root Hilbert measure and multiplicity, and a named anchor-preserving refinement embedding iota_(rho,rho') satisfying both [P_cand,L_rho]=0, B_rho^*B_rho=-L_rho and iota_(rho,rho')L_rho=L_(rho')iota_(rho,rho') on invariant cylinder observables?",
+  "revisit_condition": "Reopen only when the exact owner-supplied move/root/refinement contract is hash-pinned without changing the PAH-001-v1 functional, mobility exponent, projection semantics or limit order, and primary, independent, hostile and formal checks close C3-C5.",
+  "lean": {
+    "path": "verification/lean/Tect/R478.lean",
+    "scope": "Exact gauge-covariance algebra, Gibbs midpoint equality, commuting-idempotent product, directed-root half-factor, and the non-all-pass condition vector only.",
+    "declarations": [
+      "gauge_covariant_edge",
+      "forward_gibbs_midpoint",
+      "reverse_gibbs_midpoint",
+      "detailed_balance_exponents",
+      "commuting_idempotent_product",
+      "directed_root_half_factor",
+      "condition_vector_not_all_pass"
+    ],
+    "non_claim": "Lean does not provide the missing PAH-001 move equivariance, root Hilbert measure, refinement embedding, physical identity or continuum theorem."
+  },
+  "assumptions": [
+    "All conclusions are derived only from PAH-001-v1 and elementary finite group/Markov identities.",
+    "The source file is immutable and no omitted definition is inferred as if it were present.",
+    "Markov time remains external stochastic time."
+  ],
+  "non_claims": [
+    "No physical Pre-A, spacetime, gravity, event-horizon, Lorentzian-time, proper-time or common-causal-cone conclusion follows.",
+    "No spectral-collapse, trapped-transfer, Reading-H, physical-empty, continuum or observation calculation is performed.",
+    "No QFT, Yang--Mills, mass-gap, cosmic-origin or TOE conclusion follows.",
+    "No Q3LOCK result is used as evidence for PAH-001.",
+    "The two exact finite identities do not admit PAH-001 as production or physical dynamics."
+  ]
+}

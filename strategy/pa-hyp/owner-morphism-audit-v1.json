@@ -1,0 +1,137 @@
+{
+  "schema": "tect/pah-owner-morphism-audit/1.0",
+  "audit_id": "PAH-OMC-AUDIT-001",
+  "result_id": "R-479",
+  "exploration_id": "EXP-001361",
+  "task_id": "T-054",
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "parent": {
+    "path": "strategy/pa-hyp/PAH-001-v1.json",
+    "sha256": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37"
+  },
+  "contract": {
+    "id": "PAH-OMC-001",
+    "path": "strategy/pa-hyp/PAH-OMC-001-v1.json",
+    "sha256": "948a87092f7393e5214a375d66295237e5c8be1b018b8788d3e6785d696e774f",
+    "provenance": "RESEARCHER_HYPOTHESIS_SUCCESSOR_CONTRACT"
+  },
+  "evidence_tier": "T5_FINITE_EXACT_COMPOSITE_MODEL_ONLY",
+  "claim_bearing": false,
+  "active_gate_changed": false,
+  "finite_common_dynamics_verdict": "MAINLINE_ADVANCE",
+  "uniform_refinement_verdict": "HOLD_FOR_EVIDENCE",
+  "overall_programme_state": "HOLD_FOR_EVIDENCE_AT_STAGE_2",
+  "conditions": [
+    {
+      "id": "PAH-OMC-C1",
+      "question": "Are the four PAH-001 move families exact inverse-closed partial maps with fixed-Q, invalid, duplicate, and multiplicity conventions?",
+      "status": "PASSED",
+      "proof": "PAH-OMC-001 defines PH, TR, LK, and AP root labels, their domains, maps, inverses, and exact duplicate-channel counting."
+    },
+    {
+      "id": "PAH-OMC-C2",
+      "question": "Are move admissibility, maps, mobilities, and rates gauge- and anchor-automorphism-equivariant?",
+      "status": "PASSED",
+      "proof": "Gauge acts trivially on root labels and commutes with every abelian coordinate update. Anchor automorphisms relabel vertex and cell roots, with the link sign transported by orientation_sign; the scalar mobilities and F_rho are invariant."
+    },
+    {
+      "id": "PAH-OMC-C3",
+      "question": "Does P_cand commute with L_rho on one declared finite invariant core?",
+      "status": "PASSED",
+      "proof": "Root/rate equivariance gives U_h L_rho=L_rho U_h for the finite semidirect symmetry group. Averaging yields [P_cand,L_rho]=0 on A_rho^inv=range(P_cand)."
+    },
+    {
+      "id": "PAH-OMC-C4",
+      "question": "Is B_rho^*B_rho=-L_rho exact with the declared measure, directed multiplicity, factor, and domain?",
+      "status": "PASSED",
+      "proof": "D_rho carries pi(x) times exact directed-label counting measure, I(x,r)=(r.x,r^-1) preserves the weighted incidence measure by detailed balance, and sqrt(c/2) gives the reversible Dirichlet form exactly on the full finite function space and A_rho^inv."
+    },
+    {
+      "id": "PAH-OMC-C5",
+      "question": "Does the contract honestly distinguish relabelling naturality from nontrivial refinement?",
+      "status": "PASSED_BOUNDARY",
+      "proof": "Anchor-preserving cell isomorphisms intertwine exactly but are explicitly excluded as refinement. The named free-vertex restriction refinement fails exact intertwining by a positive-kappa_s aperture-rate fibre dependence."
+    }
+  ],
+  "finite_common_core": {
+    "space": "A_rho^inv=range(P_cand) inside C^(Omega_(rho,Q))",
+    "model": "Finite relational two-cell complex, Z_K gauge group, fixed Q, finite cutoffs, unchanged PAH-001 F_rho and mobility exponent nu",
+    "normalization": "Counting-measure Gibbs state pi_(rho,Q)",
+    "domain": "All finite functions for B and L; invariant range for the common projected core",
+    "time": "External stochastic Markov time",
+    "limits": "None"
+  },
+  "refinement_failure_boundary": {
+    "candidate": "PAH-FREE-VERTEX-RESTRICTION",
+    "assumptions": [
+      "0<epsilon<1 and M_s>=1, so an aperture increment delta is nonzero",
+      "kappa_s>0 as required by PAH-001",
+      "a fine-only adjacent vertex z has at least two admissible aperture values",
+      "the coarse projection forgets z and keeps the coarse aperture at v",
+      "the unchanged scalar couplings are transported identically"
+    ],
+    "identity": "D_z(z_1)-D_z(z_2)=-kappa_s delta(z_1-z_2)",
+    "consequence": "L_(rho') iota_p f is not fibre-constant for a cylinder f detecting the admitted aperture move at v, while iota_p L_rho f is fibre-constant; exact intertwining fails.",
+    "non_global": true,
+    "not_ruled_out": [
+      "a separately owner-chosen block map",
+      "conditional-expectation or lumping dynamics",
+      "nontrivial parameter or cell-weight transport",
+      "an approximate boundary-defect theorem",
+      "a separately versioned weighted-functional successor"
+    ]
+  },
+  "decision": {
+    "stage_1": "The composite PAH-001 plus PAH-OMC-001 model has exact finite common dynamics; advance only to the refinement gate.",
+    "stage_2": "No nontrivial refinement or uniform limit is admitted. The source-minimal free-vertex pullback fails and the owner has not selected another microscopic morphism.",
+    "stage_3": "Closed by order. F_reg to F_lim to F_eff to F_obs is not evaluated."
+  },
+  "falsifiers": [
+    "Any enumerated admissible root fails inverse closure or fixed-Q preservation.",
+    "Any symmetry-related incidence has unequal exact mobility or energy increment.",
+    "The exact projected generator matrix has a nonzero commutator with P_cand.",
+    "The root Gram matrix differs from -L_rho in any sign, factor, row, or multiplicity.",
+    "The free-vertex obstruction identity vanishes under its stated nondegenerate assumptions."
+  ],
+  "non_claims": [
+    "No theorem is retroactively attributed to the immutable PAH-001 bytes alone.",
+    "No nontrivial refinement, uniform limit, continuum, physical projection, or observable law is admitted.",
+    "No Markov time is quantum real time, proper time, or Lorentzian time.",
+    "No physical Pre-A, spacetime, gravity, event horizon, area law, Lorentz symmetry, QFT, Yang--Mills, mass gap, cosmic origin, or TOE conclusion follows.",
+    "No Q3LOCK result is used."
+  ],
+  "single_next_question": "Can the owner hash-pin one nontrivial anchor-preserving subdivision, coarse-state map, parameter transport, and move/root morphism for which exact generator intertwining holds, or replace exact intertwining by one preregistered uniform boundary-defect estimate without changing PAH-001 in place?",
+  "lean": {
+    "path": "verification/lean/Tect/R479.lean",
+    "sha256_normalized": "f12a2fac6c6d9ed53f4be88c9c86485acaceea635e09a6db762114b070865f2b",
+    "scope": "Abstract inverse closure, symmetry-equivariant generator summands, projected-core preservation, directed-root half factor, and the exact free-vertex fibre obstruction only.",
+    "declarations": [
+      "inverse_closed_partial_move",
+      "equivariant_generator_summand",
+      "commuting_projection_preserves_core",
+      "directed_root_half_factor",
+      "free_vertex_fibre_difference",
+      "free_vertex_fibre_difference_nonzero",
+      "finite_pass_does_not_close_refinement"
+    ]
+  },
+  "files": {
+    "primary": "codes/foundations/pah_omc001_common_dynamics.py",
+    "independent": "codes/foundations/pah_omc001_common_dynamics_independent.py",
+    "hostile": "codes/foundations/pah_omc001_common_dynamics_hostile.py",
+    "integrated": "verification/scripts/pah_omc001_common_dynamics_verify.py",
+    "lean": "verification/lean/Tect/R479.lean"
+  },
+  "runs": {
+    "primary": "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-02-r479-pah-omc001/primary.json",
+    "independent": "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-02-r479-pah-omc001/independent.json",
+    "hostile": "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-02-r479-pah-omc001/hostile.json",
+    "integrated": "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-02-r479-pah-omc001/integrated.json"
+  },
+  "expected_verification": {
+    "primary_minimum_assertions": 80,
+    "independent_minimum_assertions": 50,
+    "hostile_minimum_mutations": 30,
+    "lean_required": true
+  }
+}

@@ -22,6 +22,8 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-479](#r-479) | PAH-OMC-001 finite common dynamics and refinement-boundary theorem | R-479 / EXP-001361 registers separate successor contract PAH-OMC-001 SHA-256 `948a87092f7393e5214a375d66295237e5c8be1b018b8788d3e6785d696e774f` against immutable PAH-001 SHA-256 `03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37`. Exact partial move maps, inverse/invalid/duplicate conventions, symmetry-equivariant rates, root Hilbert measure/multiplicity and finite domains close `[P_cand,L_rho]=0` and `B_rho^*B_rho=-L_rho` on the composite model's finite invariant core. The finite common-dynamics substage is `MAINLINE_ADVANCE`; the programme remains `HOLD_FOR_EVIDENCE_AT_STAGE_2` because the named free-vertex pullback refinement fails exact intertwining by `-kappa_s delta(z_1-z_2)!=0` and no alternative owner morphism is selected. Primary 81/81, independent 191/191, hostile 42/42 with 41/41 mutations rejected, integrated 46/46 and Lean R479 pass with digest `c6f2e8ac2d62de0b99c35a4947003d2ede24d3b61f4f03bcee73b9a975e4a64e`. No active canonical gate, physical Pre-A, spacetime, gravity, continuum, QFT, Yang--Mills or TOE conclusion changes |
+| [R-478](#r-478) | PAH-001 finite reversible dynamics and common-core compatibility audit | R-478 / EXP-001359 audits the immutable PAH-001-v1 source SHA-256 `03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37` without model changes or Q3LOCK imports. Exact gauge invariance and Gibbs detailed balance pass. The finite group-average projection is idempotent/self-adjoint, and the directed-root half factor gives `B^*B=-L` conditionally under one explicit root measure; however source-level generator commutation remains unclosed because exact move equivariance is absent, `B^*` is not determined because the root inner product/multiplicity is absent, and refinement compatibility is not defined. Primary 170/170, independent 134/134, hostile 31/31 with 30/30 mutations rejected, integrated 33/33 and Lean R478 pass with core digest `af1eaf9dbc32ffd50e794b4373e4c3ddfe34f0f1a37780869010e25edea42703`. Verdict `HOLD_FOR_EVIDENCE`; no gate, negative registry, production/physical admission, Pre-A, spacetime, gravity, event-horizon, continuum, QFT, common-causal-cone or TOE conclusion changes |
 | [R-477](#r-477) | Exact positive-lambda ST8/Q3LOCK common-alpha five-condition audit | R-477 / EXP-001358 pins the exact fixed-lattice zero-source Hamiltonian and audits the requested common infinite-volume real-time dynamics without changing the model. Conditions C1, C2, C4 and C5 are NOT_PROVED; C3 is PARTIAL_NOT_CLOSED because the exact phase-independent local polynomial derivation exists but is not exponentiated or identified with a thermodynamic C-star action. Primary 116/116, independent 62/62 and integrated 30/30 pass with common digest `3646319e3d67874d61a215b51e5c788dc252a07ca8d6fb5ab37dc2798d9217b6`; all 20 hostile promotion/model-drift mutations are rejected. Verdict `HOLD_FOR_EVIDENCE`: no exact-Q3 common-domain two-orientation uniform estimate is proved, while the registered no-gos remain route-local rather than a target-level nonexistence theorem. No gate, tier, negative registry, Hamiltonian, counterterm, carrier, projection, QFT, Pre-A, causal-cone, gravity, continuum, mass-gap, physical-empty or TOE conclusion changes; no Lean theorem or PDF is issued |
 | [R-476](#r-476) | Researcher-proposed Pre-A minimum microscopic axiom packet structural intake | R-476 / EXP-001357 registers PAH-001, the new `PA-M6-RELATIONAL-APERTURE-TRANSFER-v0` researcher hypothesis, at T0 with source SHA-256 `03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37`. It gives a finite relational gauge/aperture functional, reversible transfer, candidate projection, all nine R-471 slots, eleven candidate-only R-192 bindings, a common-core target, exact limit order, and separate spectral-collapse/trapped-transfer falsifiers. Primary 63/63, independent 52/52, hostile 39/39 with 36 mutations rejected, integrated 20/20 and Lean R476 pass. `OWNER_PACKET_HASHED` means structural hypothesis completeness only: production/physical admission, finite consistency, F_reg/F_lim/F_eff/F_obs, physical-empty, Reading-H, event-horizon, Pre-A, Sector-A, QFT, Yang--Mills, gravity, continuum and observation claims remain closed; existing methods and owner orders are unchanged |
 | [R-475](#r-475) | Lean cross-check of the A5 branch-aware conditional-composition contract | R-475 / EXP-001354 is a T0 claim-nonbearing auxiliary sidecar for the already operator-confirmed A5 T6 contract. The exact seven-hypothesis list, disjoint full-production/scalar-continuum branches and source-derived shell-mass fork pass primary 13/13, independent 9/9, hostile 11/11 with all 10 mutations rejected, integrated 36/36 and Lean R475. The sidecar does not re-prove A1--A5 analysis or supply source-owned dynamics, a common core, uniform estimates, an ordered limit, physical/Pre-A/Sector-A closure, QFT, Yang--Mills, continuum or mass-gap result; existing methods and owner order remain unchanged |
@@ -843,6 +845,141 @@ score M3 only after a versioned source owner, state/uncertainty contract,
 candidate-neutral two-time observable, complete map stages and prospective
 holdout exist. Continue unchanged T-054 Q3LOCK owner intake and T-059/T-061
 observation-source intake; do not manufacture another finite mobility table.
+
+<a id="r-479"></a>
+### R-479 -- PAH-OMC-001 finite common dynamics and refinement-boundary theorem
+
+**Result ID.** `R-479` (`EXP-001361`, `T-054`, audit
+`PAH-OMC-AUDIT-001`).
+
+**Authority and scope.** The theorem uses immutable PAH-001 SHA-256
+`03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37`
+plus separately versioned owner completion PAH-OMC-001 SHA-256
+`948a87092f7393e5214a375d66295237e5c8be1b018b8788d3e6785d696e774f`.
+It is not retroactive evidence about PAH-001 alone. The finite scope retains
+the relational two-cell complex, `Z_K`, fixed `Q`, counting-measure Gibbs
+normalization, unchanged `F_rho`, four move families, mobility exponent `nu`,
+candidate projection, regulator and limit order. No limit is taken and time is
+external stochastic Markov time.
+
+**Finite common dynamics.** PAH-OMC-001 defines exact `PH`, `TR`, `LK`, and
+`AP` partial root maps, inverses, invalid-boundary behavior, parallel-cell and
+`K=2` duplicate multiplicities, and the symmetry action on root labels. Move,
+mobility, energy and rate equivariance give `U_hL_rho=L_rho U_h`; hence
+`[P_cand,L_rho]=0` on
+`A_rho^inv=range(P_cand)`. The exact directed incidence space `D_rho` carries
+`pi(x)` times retained-root counting measure, both finite domains are complete,
+and the inverse-incidence involution plus detailed balance gives
+`B_rho^*B_rho=-L_rho` with the displayed `sqrt(c_r/2)` factor. Thus the
+finite common-dynamics substage is `MAINLINE_ADVANCE` for the composite model.
+
+**Refinement boundary.** Anchor-preserving cell isomorphisms intertwine but
+are explicitly not refinement. For named candidate
+`PAH-FREE-VERTEX-RESTRICTION`, an added freely varying neighbor `z` changes an
+old aperture-move energy increment across one coarse fibre by
+`-kappa_s delta(z_1-z_2)`, nonzero for positive `kappa_s`, nonzero aperture
+step, and distinct fine aperture values. Therefore
+`L_(rho')iota_p f` is not fibre-constant while `iota_pL_rho f` is, so exact
+intertwining fails for that natural pullback. This route-local result does not
+exclude a new block map, lumping kernel, cell-weight transport, quantified
+boundary-defect theorem, or separately versioned weighted functional.
+
+**Decision and verification.** The finite conditions C1--C4 pass and C5
+passes as an honest refinement boundary. The overall programme remains
+`HOLD_FOR_EVIDENCE_AT_STAGE_2`; no nontrivial refinement, uniform limit, or
+observable chain is admitted. Primary 81/81, independent 191/191, hostile
+42/42 with 41/41 mutations rejected, integrated 46/46, and Lean R479 pass with
+common digest
+`c6f2e8ac2d62de0b99c35a4947003d2ede24d3b61f4f03bcee73b9a975e4a64e`.
+
+**Proven in.** [owner contract](strategy/pa-hyp/PAH-OMC-001-v1.json),
+[audit manifest](strategy/pa-hyp/owner-morphism-audit-v1.json),
+[certificate](strategy/pa-hyp/R479-certificate.md),
+[primary](codes/foundations/pah_omc001_common_dynamics.py),
+[independent](codes/foundations/pah_omc001_common_dynamics_independent.py),
+[hostile](codes/foundations/pah_omc001_common_dynamics_hostile.py),
+[integrated verifier](verification/scripts/pah_omc001_common_dynamics_verify.py),
+[Lean R479](verification/lean/Tect/R479.lean), and
+[integrated run](claims/C6-SPACETIME-SIGNATURE/runs/2026-09-02-r479-pah-omc001/integrated.json).
+
+**Boundary and next action.** No theorem is attributed to PAH-001 alone. No
+nontrivial refinement, uniform limit, continuum, physical projection,
+`F_lim`, `F_eff`, `F_obs`, quantum/Lorentzian time, physical Pre-A, spacetime,
+gravity, QFT, Yang--Mills, or TOE conclusion follows. The one next question is
+whether the owner can hash-pin a nontrivial subdivision, coarse-state map,
+parameter transport, and move/root morphism with exact generator
+intertwining, or preregister one uniform boundary-defect estimate without
+editing PAH-001 in place.
+
+**Tier.** T5 finite exact theorem for a hash-pinned composite T0 candidate;
+claim-nonbearing and no active canonical gate change.
+
+<a id="r-478"></a>
+### R-478 -- PAH-001 finite reversible dynamics and common-core compatibility audit
+
+**Result ID.** `R-478` (`EXP-001359`, `T-054`, audit `PAH-FCC-001`).
+
+**Question and exact scope.** Do the exact finite `L_rho`, `P_cand`, and `B`
+definitions in immutable `strategy/pa-hyp/PAH-001-v1.json`, SHA-256
+`03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37`,
+define one compatible gauge- and anchor-automorphism-invariant transfer on a
+common cylinder core? The audit retains the displayed finite two-cell
+complex, `Z_K` gauge, fixed `Q`, aperture/matter/link variables, counting
+measure, Gibbs normalization, move types, `nu`, projection, external
+stochastic Markov time, regulator and limit order. It adds no term, move,
+carrier, projection, candidate or Q3LOCK evidence.
+
+**Exact finite results.** `F_rho` is exactly gauge invariant: the covariant
+edge difference acquires only the unit phase at its target vertex, and gauge
+factors telescope around each plaquette. The midpoint rate formula and the
+declared inverse mobility symmetry give exact Gibbs detailed balance and
+`L_rho 1=0`. Gauge and anchor-automorphism group averages are orthogonal
+projections, and normalization of `Z_K^V` by `Aut(G;O,C)` makes their product
+idempotent and self-adjoint.
+
+**Open definition boundary.** Full `[P_cand,L_rho]=0` is not proved because
+the four prose move types are not exact partial state maps with a declared
+gauge/Aut action and equivariant mobility. Under the canonical directed-root
+measure `pi(x)` times counting roots, the displayed `sqrt(c_r/2)` gives the
+exact conditional identity `B^*B=-L_rho`; PAH-001-v1 does not define that
+inner product, root multiplicity, duplicate-transition rule or invalid-move
+convention, so `B^*` is not source-determined. Finally, no named refinement
+map, observable embedding, parameter/move transport or generator
+intertwining equation is displayed, and the refinement topology remains
+`to be specified`.
+
+**Decision and verification.** The five statuses are `PASSED`, `PASSED`,
+`PARTIAL_NOT_CLOSED`, `PARTIAL_NOT_CLOSED`, and `NOT_DEFINED`. The exact
+verdict is `HOLD_FOR_EVIDENCE`, not `MAINLINE_ADVANCE` and not
+`NEGATIVE_RESULT`: missing definitions admit compatible completions, so no
+displayed equality is contradicted in every completion. Primary 170/170 and
+independent 134/134 agree on core digest
+`af1eaf9dbc32ffd50e794b4373e4c3ddfe34f0f1a37780869010e25edea42703`.
+Hostile passes 31/31 and rejects 30/30 source, model, status, physical and
+Q3LOCK mutations; integrated passes 33/33. Pinned Lean 4.32.1 checks the exact
+gauge, midpoint, projection-product and directed-root half-factor algebra.
+
+**Proven in.** [audit manifest](strategy/pa-hyp/finite-common-core-audit-v1.json),
+[certificate](strategy/pa-hyp/R478-certificate.md),
+[primary](codes/foundations/pah001_finite_common_core_audit.py),
+[independent](codes/foundations/pah001_finite_common_core_audit_independent.py),
+[hostile](codes/foundations/pah001_finite_common_core_audit_hostile.py),
+[integrated verifier](verification/scripts/pah001_finite_common_core_audit_verify.py),
+[Lean R478](verification/lean/Tect/R478.lean), and
+[integrated run](claims/C6-SPACETIME-SIGNATURE/runs/2026-09-02-r478-pah001-common-core/integrated.json).
+
+**Boundary and next action.** Markov time is not quantum, proper, or
+Lorentzian time. No spectral-collapse, trapped-transfer, Reading-H,
+physical-empty, continuum, QFT, Pre-A, spacetime, gravity, event-horizon,
+common-causal-cone or TOE conclusion follows. The single next question is
+whether the PAH-001 owner can provide one versioned finite common-core
+morphism contract fixing exact partial move maps and symmetry action, root
+measure/multiplicity, and a named refinement embedding that simultaneously
+closes `[P_cand,L_rho]=0`, `B_rho^*B_rho=-L_rho`, and generator
+intertwining on invariant cylinder observables.
+
+**Tier.** T0 claim-nonbearing exact finite/definition audit; no gate or
+scientific transition.
 
 <a id="r-477"></a>
 ### R-477 -- Exact positive-lambda ST8/Q3LOCK common-alpha five-condition audit

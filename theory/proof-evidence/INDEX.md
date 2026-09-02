@@ -8,9 +8,9 @@ Authorities: `theory/proof-evidence-map.md`, `verification/proof-evidence-map.js
 This page is the bounded starting point. The complete compatibility map remains
 available for issued verifiers and deep cross-record searches.
 
-**49 claims** · **311 results** · **375 negatives/audits** · **1358 proof explorations** · **829 accepted events**
+**49 claims** · **313 results** · **376 negatives/audits** · **1361 proof explorations** · **833 accepted events**
 
-Exploration verdicts: advanced: 951 · failed: 246 · inconclusive: 107 · parked: 54
+Exploration verdicts: advanced: 953 · failed: 246 · inconclusive: 108 · parked: 54
 
 ## Efficient lookup
 

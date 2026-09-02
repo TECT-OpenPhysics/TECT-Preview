@@ -5,12 +5,13 @@
 
 Authorities: `negative-results/registry.md`.
 
-**375 registered records** · audit: 60 · fired_falsifier: 6 · no_go: 304 · retraction: 5
+**376 registered records** · audit: 60 · fired_falsifier: 6 · no_go: 305 · retraction: 5
 
 Latest 25 records:
 
 | ID | Type | Tested route |
 |---|---|---|
+| [`NG-2026-09-02-PAH-OMC-FREE-VERTEX-RESTRICTION-EXACT-INTERTWINING`](registry.md#ng-2026-09-02-pah-omc-free-vertex-restriction-exact-intertwining) | no_go | use the natural forgetful pullback after adding a freely varying adjacent fine vertex as an exact PAH generator refinement morphism |
 | [`NG-2026-08-26-PRE-A-ST8-Q3LOCK-CENTERED-GLOBAL-ENERGY-CONTEXT-VOLUME-OBSTRUCTION`](registry.md#ng-2026-08-26-pre-a-st8-q3lock-centered-global-energy-context-volume-obstruction) | no_go | use centered global total-energy contexts as a volume-uniform local transfer |
 | [`NG-2026-08-25-PRE-A-ST8-Q3LOCK-LOCAL-QUARTIC-TAIL-FORCE-A34-OPERATOR-FACTORIZATION`](registry.md#ng-2026-08-25-pre-a-st8-q3lock-local-quartic-tail-force-a34-operator-factorization) | no_go | use a local quartic A^(-3/4) operator factorization for the cutoff bond-tail times force |
 | [`NG-2026-08-24-PRE-A-ST8-Q3LOCK-QUARTIC-WEYL-FOURIER-POSITIVE-STRIP-INVARIANCE`](registry.md#ng-2026-08-24-pre-a-st8-q3lock-quartic-weyl-fourier-positive-strip-invariance) | no_go | require a positive-strip L1 Weyl-Fourier coefficient carrier to remain invariant under the exact quartic onsite subflow |
@@ -35,7 +36,6 @@ Latest 25 records:
 | [`NG-2026-08-13-PRE-A-ST8-Q3LOCK-FIXED-POSITIVE-TIME-ENERGY-DRESSED-TRACE-CONTROL-AUTOMATIC-DFFR-CONTOUR-ENTRY`](registry.md#ng-2026-08-13-pre-a-st8-q3lock-fixed-positive-time-energy-dressed-trace-control-automatic-dffr-contour-entry) | no_go | infer DFFR contour entry from trace-class control at each fixed positive imaginary time |
 | [`NG-2026-08-13-PRE-A-ST8-Q3LOCK-FINITE-NORM-SEPARATED-PARITY-KMS-PAIRS-AUTOMATIC-DISTINCT-GROUND-LIMITS`](registry.md#ng-2026-08-13-pre-a-st8-q3lock-finite-norm-separated-parity-kms-pairs-automatic-distinct-ground-limits) | no_go | infer distinct beta-to-infinity ground limits from finite-n norm-separated parity KMS pairs without one fixed noncollapsing witness |
 | [`NG-2026-08-13-PRE-A-ST8-Q3LOCK-FINITE-GAPS-PLUS-WEAKSTAR-STATES-AUTOMATIC-TARGET-GENERATOR-AND-GNS-GAP-TRANSFER`](registry.md#ng-2026-08-13-pre-a-st8-q3lock-finite-gaps-plus-weakstar-states-automatic-target-generator-and-gns-gap-transfer) | no_go | infer a prescribed target generator and GNS gap from weak-star convergent finite ground states with uniformly positive finite gaps |
-| [`NG-2026-08-13-PRE-A-ST8-Q3LOCK-DIMENSION-NORMALIZED-SCHATTEN-SMALLNESS-AUTOMATIC-DFFR-TRANSITION-OR-CONTOUR-SMALLNESS`](registry.md#ng-2026-08-13-pre-a-st8-q3lock-dimension-normalized-schatten-smallness-automatic-dffr-transition-or-contour-smallness) | no_go | replace the raw local DFFR transition/contour norm by a dimension-normalized Schatten norm |
 
 Search without loading the full registry:
 

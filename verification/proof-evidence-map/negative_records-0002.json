@@ -1,6 +1,28 @@
 {
   "data": [
     {
+      "anchor": "ng-2026-08-04-pre-a-cp1-cl8-oa2-sampling-exact-weyl",
+      "branch": "promote the current unrestricted continuum point sampler `R_a` to an exact boundary-to-lattice Weyl generator map",
+      "claim_ref_basis": {
+        "C6-SPACETIME-SIGNATURE": "explicit_negative_event:20260804-split-the-cl8-quantum-boundary-algebra-route-an"
+      },
+      "claim_refs": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "detail": {
+        "boundary": "This refutes only the boundary-to-grid generator assignment on the unrestricted point-sampled source. It does not refute the exact three-mode spectral image proved in the same package, an opposite-direction symplectic reconstruction, a separately constrained symplectic reduction, a new finite characteristic regulator, or an explicitly approximate characteristic-functional theorem.",
+        "consequence": "Exact CCR preservation cannot be inferred from an `O(a^2)` symplectic estimate on fixed smooth families. Restrict the source to a verified finite symplectic image or redesign the finite regulator before claiming a full boundary Weyl map.",
+        "evidence": "Let `f_M(x)=sin(2*pi*M*x/L)`. It vanishes at all `M` grid nodes, but `integral f_M^2=L/2`. For one species and phases `v_1=(f_M,0)`, `v_2=(0,f_M)` in `(q,Pi)` order, the registered variational form is `Omega_var(v_1,v_2)=-L/16`; hence the CCR form `sigma=-Omega_var` is `L/16`. Scale `v_2` by `16*pi*hbar/L`. With the declared Weyl convention, the source commutator is `exp(-i*pi)=-1`. Both sampled phase vectors are zero, so both target Weyl generators are the identity and their commutator is `+1`. No generator map preserving the Weyl relations exists on this unrestricted source. The sampling kernel is not even isotropic, so the original form cannot descend directly to its quotient.",
+        "evidence_files": "`strategy/pre-a-cp1-cl8-quantum-boundary-algebra-intertwiner-route-split-certificate-260804.md`; `strategy/pre-a-cp1-cl8-quantum-boundary-algebra-intertwiner-route-split-manifest.json`; `codes/foundations/pre_a_cp1_cl8_quantum_boundary_algebra_intertwiner_route_split.py`; `codes/foundations/pre_a_cp1_cl8_quantum_boundary_algebra_intertwiner_route_split_independent.py`.",
+        "failure_mode": "Define an exact boundary-to-lattice Weyl homomorphism on the full admitted periodic continuum phase space by `W_per(v) -> W_a(R_a v)`, using the point sampler from the current classical `O(a^2)` composition theorem."
+      },
+      "detail_title": "unrestricted point sampling is not an exact Weyl map",
+      "family_refs": [],
+      "kind": "no_go",
+      "summary": "`f_M=sin(2*pi*M*x/L)` samples to zero although its continuum symplectic pairing with the corresponding momentum mode is nonzero; after exact scaling the source Weyl commutator is `-1` while both target generators are the identity. Retain the exact three-mode spectral image, an opposite-direction symplectic reconstruction, a redesigned regulator, or an explicitly approximate theorem",
+      "tag": "NG-2026-08-04-PRE-A-CP1-CL8-OA2-SAMPLING-EXACT-WEYL"
+    },
+    {
       "anchor": "ng-2026-08-04-pre-a-cp1-cl8-nonlinear-floquet-weyl-normalizer",
       "branch": "promote the exact nonlinear CL8 split-circuit automorphism on `B(H_a)` to an automorphism of the concrete unital Weyl C-star algebra",
       "claim_ref_basis": {
@@ -2215,29 +2237,6 @@
       "kind": "no_go",
       "summary": "the bounded legal row `h=d cos(t xi)` has `S_h-S_0=2 kappa^2 d^2 t^2 exp(-2t^2)>0`; replicas expose a favourable square but do not dominate the signed trace/current cross",
       "tag": "NG-2026-07-30-A13-REPLICA-VARIANCE-AUTOMATIC-TRACE-DOMINATION"
-    },
-    {
-      "anchor": "ng-2026-07-30-a13-raw-six-current-hessian-positivity",
-      "branch": "assign the isolated full raw six-current/phase-pair Hessian to a nonnegative owner before trace/heat/low/forest/sextic completion",
-      "claim_ref_basis": {
-        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION": "structured_unique_family:A13"
-      },
-      "claim_refs": [
-        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
-      ],
-      "detail": {
-        "claim_route": "Assign the complete raw six-current or phase-paired current Hessian to a nonnegative owner before adding the covariance trace, heat, low, R-063 forest, and terminal-sextic companions.",
-        "consequence": "Raw-current Hessian positivity and phase-pair positivity are false. This is not a counterexample to the complete trace/heat/low/forest/sextic action, `OVERLAP_src`, or Nelson.",
-        "evidence": "R-123 proof note, Section 9.1; two independent derivations; symbolic coefficient audit; independent torus quadrature and finite-difference audit; paired PDF and integrated verifier.",
-        "failure_mode": "On the active real doublet set `u_H(x)=H(2+cos x)e1`, `z(x)=(2-cos x)e1`, and keep the rational floor `e>0`. All off-diagonal Pauli rows vanish. For normalized Haar measure and unit phase frequency, the surviving linear/rational pair gives `D^2 E_cur(u_H)[z,z] = -117 H^2/(500P) + 3e/(100P) + O_e(H^-2) < 0` for large finite `H`. With the repository's unnormalised `T_L^3` integral and legal mode `k=2 pi n/L`, the displayed expansion is multiplied by `L^3 |k|^2`."
-      },
-      "detail_title": "the isolated raw six-current Hessian is indefinite",
-      "family_refs": [
-        "A13"
-      ],
-      "kind": "no_go",
-      "summary": "on the active real doublet, `u_H=H(2+cos x)e1` in direction `z=(2-cos x)e1` gives normalized unit-frequency Hessian `-117 H^2/(500P)+3e/(100P)+O_e(H^-2)<0`; the full action is not tested",
-      "tag": "NG-2026-07-30-A13-RAW-SIX-CURRENT-HESSIAN-POSITIVITY"
     }
   ],
   "kind": "negative_records",

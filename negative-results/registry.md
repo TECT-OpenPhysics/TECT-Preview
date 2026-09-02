@@ -8,6 +8,7 @@ Failures are trust assets. Entries are never deleted. Format:
 result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
+| [NG-2026-09-02-PAH-OMC-FREE-VERTEX-RESTRICTION-EXACT-INTERTWINING](#ng-2026-09-02-pah-omc-free-vertex-restriction-exact-intertwining) | use the natural forgetful pullback after adding a freely varying adjacent fine vertex as an exact PAH generator refinement morphism | the added positive-kappa_s aperture edge makes the fine rate vary across a coarse fibre by `-kappa_s delta(z_1-z_2)`, so exact intertwining fails; retain block, lumped, weighted, approximate-defect, or separately versioned successor routes |
 | [NG-2026-08-26-PRE-A-ST8-Q3LOCK-CENTERED-GLOBAL-ENERGY-CONTEXT-VOLUME-OBSTRUCTION](#ng-2026-08-26-pre-a-st8-q3lock-centered-global-energy-context-volume-obstruction) | use centered global total-energy contexts as a volume-uniform local transfer | in an exact tensor-product Gibbs family, subtracting the full Gibbs mean removes the quadratic remote mean but leaves a positive linear remote variance for every local transition leg; retain local or modular Q3 weights |
 | [NG-2026-08-25-PRE-A-ST8-Q3LOCK-LOCAL-QUARTIC-TAIL-FORCE-A34-OPERATOR-FACTORIZATION](#ng-2026-08-25-pre-a-st8-q3lock-local-quartic-tail-force-a34-operator-factorization) | use a local quartic A^(-3/4) operator factorization for the cutoff bond-tail times force | on the exact q>=2L cutoff sector, W_L F=c^2 q^3/2+3c lambda q^5/4+lambda^2 q^7/4; translated packets leave a ratio growing as q^4 for lambda>0; retain state-weighted, product-level or direct D,delta-D routes |
 |---|---|---|
@@ -10442,3 +10443,35 @@ contemporaneous certificate.
 **Evidence.** In the exact product Gibbs family with local and remote gap one and excited-weight ratio `1/2`, let `D_n=|0><1| tensor I_remote` and let the remote excitation count be `M~Binomial(n,1/3)`. For the four D/D* row/column legs, direct enumeration and the independent moment calculation give the exact centered contexts `4*n/27+8/27`, `2*n/27+1/27`, `2*n/27+1/27`, and `4*n/27+8/27`. The minimum slope is `2/27>0`, so every centered global-energy context is unbounded as remote volume grows. The uncentered first leg is `8/3+28*n/27+2*n^2/27`; centering removes the quadratic mean term but not the remote variance. Primary 112/112, independent 79/79, integrated 15/15, and Lean R336 all pass.
 
 **Consequence.** Centering alone is retired as a volume-uniform global-K transfer shortcut for local QFT estimates. The surviving Q3 target is a genuinely local or modular state-weighted estimate with a common core and direct `D,delta-D` control. This is a method no-go only: it does not refute interacting Q3 dynamics, cancellation-aware local bounds, common alpha, OS/KMS/GNS reconstruction, a gap, continuum, C6, Sector A or Pre-A. Evidence: EXP-001166 and R336.
+
+<a id="ng-2026-09-02-pah-omc-free-vertex-restriction-exact-intertwining"></a>
+### NG-2026-09-02-PAH-OMC-FREE-VERTEX-RESTRICTION-EXACT-INTERTWINING -- natural free-vertex pullback is not exactly generator-intertwining
+
+**Failure mode.** Use the source-minimal nontrivial refinement that retains a
+coarse vertex `v`, adds a freely varying adjacent fine vertex `z`, forgets
+fine-only variables through `p`, sets `iota_p f=f composed with p`, and
+transports every unchanged scalar PAH-001 coupling identically. Treat this
+pullback as an exact solution of
+`iota_p L_rho=L_(rho')iota_p` on coarse aperture cylinders.
+
+**Evidence.** Immutable PAH-001 SHA-256
+`03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37`
+has `kappa_s>0`. Separately versioned PAH-OMC-001 SHA-256
+`948a87092f7393e5214a375d66295237e5c8be1b018b8788d3e6785d696e774f`
+names this route `PAH-FREE-VERTEX-RESTRICTION`. For an admitted old aperture
+increment `s` to `s+delta`, the new edge contributes
+`D_z(s_z)=kappa_s[(s+delta-s_z)^2-(s-s_z)^2]/2`. Two fine states in one
+coarse fibre with `z_1!=z_2` satisfy the exact identity
+`D_z(z_1)-D_z(z_2)=-kappa_s delta(z_1-z_2)!=0`. Thus the fine transition rate
+and `L_(rho')iota_p f` vary in the fibre, while `iota_pL_rho f` is
+fibre-constant. R-479 primary 81/81, independent 191/191, hostile 42/42,
+integrated 46/46, and Lean R479 verify the factorization and nonzero boundary.
+
+**Consequence.** Retire only this natural free-vertex restriction/pullback as
+an exact refinement morphism with unchanged positive `kappa_s`. An
+owner-chosen block map, conditional-expectation/lumping kernel, nontrivial
+cell-weight or parameter transport, quantified approximate boundary-defect
+theorem, or separately versioned weighted functional remains open. This does
+not refute PAH-001, its finite common dynamics after PAH-OMC-001 completion,
+or every possible refinement. It proves no uniform limit, continuum,
+physical Pre-A, spacetime, gravity, QFT, Yang--Mills, or TOE conclusion.

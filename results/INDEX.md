@@ -5,10 +5,12 @@
 
 Authorities: `RESULTS-LEDGER.md`.
 
-**311 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
+**313 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
 
 | ID | Result | Tier/scope |
 |---|---|---|
+| [`R-479`](../RESULTS-LEDGER.md#r-479) | PAH-OMC-001 finite common dynamics and refinement-boundary theorem | T5 finite exact theorem for a hash-pinned composite T0 candidate; claim-nonbearing and no active canonical gate change. |
+| [`R-478`](../RESULTS-LEDGER.md#r-478) | PAH-001 finite reversible dynamics and common-core compatibility audit | T0 claim-nonbearing exact finite/definition audit; no gate or scientific transition. |
 | [`R-477`](../RESULTS-LEDGER.md#r-477) | Exact positive-lambda ST8/Q3LOCK common-alpha five-condition audit | T0 claim-nonbearing exact audit; no scientific or gate transition. |
 | [`R-476`](../RESULTS-LEDGER.md#r-476) | Researcher-proposed Pre-A minimum microscopic axiom packet structural intake | T0 claim-nonbearing mainline hypothesis intake; active scientific gate and every claim tier remain unchanged. |
 | [`R-475`](../RESULTS-LEDGER.md#r-475) | Lean cross-check of the A5 branch-aware conditional-composition contract | T0 claim-nonbearing auxiliary support; no gate or claim-tier change. |
@@ -32,8 +34,6 @@ Authorities: `RESULTS-LEDGER.md`.
 | [`R-457`](../RESULTS-LEDGER.md#r-457) | Finite compact-U(1) equation-level invariance and Gauss-flow consistency audit | T0 |
 | [`R-456`](../RESULTS-LEDGER.md#r-456) | Weighted positive transfer-operator defect-resolvent envelope | T0 |
 | [`R-455`](../RESULTS-LEDGER.md#r-455) | Nonnegative transfer-matrix defect-resolvent envelope for coupled orientation histories | T0 |
-| [`R-454`](../RESULTS-LEDGER.md#r-454) | Variable-coefficient defect-stable history-resolvent envelope | T0 |
-| [`R-453`](../RESULTS-LEDGER.md#r-453) | Defect-stable history-resolvent recurrence envelope | T0 |
 
 Search without loading the full ledger:
 

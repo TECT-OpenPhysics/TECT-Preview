@@ -1,6 +1,29 @@
 {
   "data": [
     {
+      "anchor": "ng-2026-07-30-a13-raw-six-current-hessian-positivity",
+      "branch": "assign the isolated full raw six-current/phase-pair Hessian to a nonnegative owner before trace/heat/low/forest/sextic completion",
+      "claim_ref_basis": {
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION": "structured_unique_family:A13"
+      },
+      "claim_refs": [
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
+      ],
+      "detail": {
+        "claim_route": "Assign the complete raw six-current or phase-paired current Hessian to a nonnegative owner before adding the covariance trace, heat, low, R-063 forest, and terminal-sextic companions.",
+        "consequence": "Raw-current Hessian positivity and phase-pair positivity are false. This is not a counterexample to the complete trace/heat/low/forest/sextic action, `OVERLAP_src`, or Nelson.",
+        "evidence": "R-123 proof note, Section 9.1; two independent derivations; symbolic coefficient audit; independent torus quadrature and finite-difference audit; paired PDF and integrated verifier.",
+        "failure_mode": "On the active real doublet set `u_H(x)=H(2+cos x)e1`, `z(x)=(2-cos x)e1`, and keep the rational floor `e>0`. All off-diagonal Pauli rows vanish. For normalized Haar measure and unit phase frequency, the surviving linear/rational pair gives `D^2 E_cur(u_H)[z,z] = -117 H^2/(500P) + 3e/(100P) + O_e(H^-2) < 0` for large finite `H`. With the repository's unnormalised `T_L^3` integral and legal mode `k=2 pi n/L`, the displayed expansion is multiplied by `L^3 |k|^2`."
+      },
+      "detail_title": "the isolated raw six-current Hessian is indefinite",
+      "family_refs": [
+        "A13"
+      ],
+      "kind": "no_go",
+      "summary": "on the active real doublet, `u_H=H(2+cos x)e1` in direction `z=(2-cos x)e1` gives normalized unit-frequency Hessian `-117 H^2/(500P)+3e/(100P)+O_e(H^-2)<0`; the full action is not tested",
+      "tag": "NG-2026-07-30-A13-RAW-SIX-CURRENT-HESSIAN-POSITIVITY"
+    },
+    {
       "anchor": "ng-2026-07-30-a13-one-sided-shell-projection-adjoint",
       "branch": "infer a legal reverse block by taking the adjoint of a one-sided projected common Hessian",
       "claim_ref_basis": {
@@ -2205,28 +2228,6 @@
       "kind": "no_go",
       "summary": "square-function Cauchy has Young deficit `-4/15`; expected energy plus sextic budgets do not imply predictable BMO/Carleson control; and an unweighted bracket has no generic spatial gain",
       "tag": "NG-2026-07-25-A13-GENERIC-WEIGHTED-DOOB-SHORTCUTS"
-    },
-    {
-      "anchor": "ng-2026-07-25-a13-full-frame-conditional-positivity",
-      "branch": "R-091 raw full linear--rational conditional endpoint made positive by one fixed derivative payment",
-      "claim_ref_basis": {
-        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION": "structured_unique_family:A13"
-      },
-      "claim_refs": [
-        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
-      ],
-      "detail": {
-        "consequence": "Fixed-`eta` raw conditional positivity is a method no-go, not a counterexample to the post-paid global form bound. The complete square--trace--heat--forest packet must remain signed, and `H_N` must control the Schur debt together with the covariance and Jensen residuals rather than discarding them termwise.",
-        "evidence": "For the raw endpoint the measurable-coefficient Schur complement reduces exactly to `S=2 eta B1(B1+2 eta I)^(-1)-B0`. The first term is positive semidefinite but bounded above by `2 eta I`, while the admissible positive matrix `B0` has no corresponding fixed upper bound. With outcome-dependent coefficients the exact conditional identity also contains the covariance mismatch, coefficient covariance residual, and quadratic Jensen residual. The matrix-fractional Jensen defect is positive semidefinite, but its Wick contraction has no universal sign. An exact local production fixture that stacks the three linear Pauli--Fierz rows with the rational row gives expected first variation `-(3708/(21125 P)) e phi(1)<0`.",
-        "failure_mode": "Choose one fixed `eta>0` and infer universal conditional positivity of the complete raw linear--rational endpoint from its exact full-frame Schur completion."
-      },
-      "detail_title": "no fixed derivative payment makes the raw endpoint positive",
-      "family_refs": [
-        "A13"
-      ],
-      "kind": "no_go",
-      "summary": "the exact Schur complement is `2 eta B1(B1+2 eta I)^(-1)-B0`, whose positive part is bounded by `2 eta I` while `B0` is not; an exact local full-frame fixture remains strictly negative",
-      "tag": "NG-2026-07-25-A13-FULL-FRAME-CONDITIONAL-POSITIVITY"
     }
   ],
   "kind": "negative_records",
