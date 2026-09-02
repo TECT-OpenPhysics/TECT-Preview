@@ -60,11 +60,11 @@ flowchart LR
 | Reference-only interface pointers | 1 | External locators only; no claim, gate, obligation, or theorem authority |
 | Reusable result records | 313 | Curated theorems, reductions, partial advances, and no-go lemmas with proof anchors |
 | Negative/audit records | 377 indexed + 3 legacy process lessons | No-go, falsifier, retraction, and process-audit trust assets with evidence and consequence |
-| Proof explorations | 1365 | Route decisions: advanced 957, failed 246, inconclusive 108, parked 54; non-tier-bearing |
-| Accepted chronological events | 837 | Complete history is preserved in the JSON map and `changelog/log.jsonl`; use `changelog/INDEX.md` for bounded reading |
+| Proof explorations | 1366 | Route decisions: advanced 958, failed 246, inconclusive 108, parked 54; non-tier-bearing |
+| Accepted chronological events | 838 | Complete history is preserved in the JSON map and `changelog/log.jsonl`; use `changelog/INDEX.md` for bounded reading |
 | Tasks | 62 | 12 live; 50 completed |
 | Current route gates | 18 | 15 claim-card gates plus live-task child targets, deduplicated |
-| Proof evidence inventory | 414 lineage notes / 395 sibling PDFs / 9 legacy unordered root notes / 9 paired root PDFs / 1907 run JSON files / 124 claim-level manifests / 40 bundle manifests / 45 frozen embedded manifests | Complete paths and disjoint manifest classes are stored per claim in the machine map; 19 historical/superseded lineage-note paths lack a sibling PDF and 118 grandfathered evidence notes have incomplete standard footers, all kept visible |
+| Proof evidence inventory | 414 lineage notes / 395 sibling PDFs / 9 legacy unordered root notes / 9 paired root PDFs / 1911 run JSON files / 124 claim-level manifests / 40 bundle manifests / 45 frozen embedded manifests | Complete paths and disjoint manifest classes are stored per claim in the machine map; 19 historical/superseded lineage-note paths lack a sibling PDF and 118 grandfathered evidence notes have incomplete standard footers, all kept visible |
 
 ## Coverage diagnostics
 
@@ -20835,6 +20835,21 @@ This table is a review aid, not a substitute for the live TODO order.
 - **Formal authorities:** `event:20260902-pah-r481-integrated-run-provenance-hash-refresh`
 - **Located evidence:** [`strategy/pa-hyp/scalar-transport-boundary-exploration.json`](../strategy/pa-hyp/scalar-transport-boundary-exploration.json) (source_authorities); [`claims/C6-SPACETIME-SIGNATURE/runs/2026-09-02-r481-pah-positive-scalar-transport-boundary/integrated.json`](../claims/C6-SPACETIME-SIGNATURE/runs/2026-09-02-r481-pah-positive-scalar-transport-boundary/integrated.json) (assertions); [`explorations/log.jsonl`](../explorations/log.jsonl) (EXP-001364)
 
+<a id="exp-001366"></a>
+#### EXP-001366 — PAH-OMC-002 conditional-kernel owner morphism contract intake
+
+- **Review metadata:** reviewed 2026-09-02; recorded 2026-09-02T05:23:11Z; `contemporaneous`; verdict **advanced**.
+- **Structured scope:** claim [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md); gate [PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE](../claims/GATES.md#pa-round1-evidence-role-and-minimum-manifest-freeze); task `T-054`.
+- **Question:** Does the separately versioned PAH-OMC-002 conditional-Gibbs block morphism contract supply an explicit coarse map, parameter transport, root transport, and conditional kernel without modifying PAH-001 or PAH-OMC-001, while keeping the strong and projected intertwining questions separate?
+- **Finite checks:** (1) Preserve the immutable PAH-001 and the finite PAH-OMC-001 completion by raw-byte SHA-256 and create a new successor contract instead of editing either parent. (2) Specify the fine and coarse relational carriers, fixed-Q state spaces, identity parameter transport, finite Gibbs fibre partition, conditional kernel, expectation, symmetry and retained-root requirements. (3) State strong pullback intertwining and conditional projected intertwining as distinct acceptance targets, with a normalized defect fallback and the inherited ordered-limit firewall. (4) Run a primary structural audit, a non-importing independent structural audit, a hostile mutation firewall, and an integrated verifier that checks inherited R479 Lean only.
+- **Finding:** PAH-OMC-002-v1 is hash-pinned at 618265f978bae4e96e1330fbec0ce7af0bf1630d6f5a17f9029fcbde48de6876 and its manifest at 06967d09c536e6d237dd0e3da2cdf9e7778f6cdf3dd6e300e2f0b1974bacf05d. The structural packet passes primary 20/20, independent 21/21, hostile 10/10 mutation rejections, and integrated 13/13 with inherited R479 Lean PASS. The contract makes the next projected-generator question explicit but proves neither projected nor strong intertwining; it remains CANDIDATE_NOT_ADMITTED and HOLD_FOR_EVIDENCE.
+- **Decision reason:** PAH-OMC-002 is a new researcher-owned successor contract, not a retroactive completion of PAH-001. It fixes an anchor-preserving finite map with a fine-only vertex, identity transport of every existing PAH parameter, a finite Gibbs conditional kernel, a conditional expectation, retained-root and hidden-root rules, symmetry requirements, the strong mainline equality, and a separate projected diagnostic equality. Structural primary, independent and hostile lanes agree. Because the conditional-kernel generator identity and any refinement-uniform estimate are still unproved, the candidate is not admitted and Stage 2 remains HOLD_FOR_EVIDENCE.
+- **Boundary:** This is an owner-contract intake and not a Stage 2 theorem. The strong natural pullback remains route-locally rejected by R-480/R-481; the conditional projected target is a separate unproved diagnostic. No global refinement no-go is inferred.
+- **Next / revisit condition:** Run one exact finite conditional-kernel audit for PAH-COND-GIBBS-BLOCK-001: decide whether E_kappa L_(rho') I_p=L_rho on the invariant cylinder core, or emit the first normalized defect witness.
+- **Related explorations:** continues [EXP-001365](#exp-001365)
+- **Formal authorities:** `event:20260902-pah-omc-002-conditional-kernel-contract-intake`
+- **Located evidence:** [`strategy/pa-hyp/PAH-OMC-002-v1.json`](../strategy/pa-hyp/PAH-OMC-002-v1.json) (coarse_map_and_kernel); [`strategy/pa-hyp/PAH-OMC-002-v1.json`](../strategy/pa-hyp/PAH-OMC-002-v1.json) (compatibility_targets); [`strategy/pa-hyp/PAH-OMC-002-manifest.json`](../strategy/pa-hyp/PAH-OMC-002-manifest.json) (contract); [`claims/C6-SPACETIME-SIGNATURE/runs/2026-09-02-pah-omc002-contract/integrated.json`](../claims/C6-SPACETIME-SIGNATURE/runs/2026-09-02-pah-omc002-contract/integrated.json) (assertions); [`strategy/pa-hyp/R479-certificate.md`](../strategy/pa-hyp/R479-certificate.md) (Nontrivial-refinement-test); [`verification/lean/Tect/R479.lean`](../verification/lean/Tect/R479.lean) (finite_pass_does_not_close_refinement)
+
 
 ## Claim evidence matrix
 
@@ -20889,7 +20904,7 @@ canonical registries; a dash means no unambiguous registry link, not proof absen
 | [C3-EP](../claims/C3-EP/claim.md)<br/>Equivalence principle via Fermi-frame ODE lemma | T6 / ACTIVE | ANALYTIC | [LINEAGE](../claims/C3-EP/LINEAGE.md) (0 notes; 0 runs) | - | - | [EXP-000824](#exp-000824) | - | - | - |
 | [C4-GRAVITY-1LOOP](../claims/C4-GRAVITY-1LOOP/claim.md)<br/>Gravity sector closure at 1-loop | T5 / ACTIVE | ANALYTIC, EXECUTED | [LINEAGE](../claims/C4-GRAVITY-1LOOP/LINEAGE.md) (0 notes; 0 runs) | - | - | [EXP-000824](#exp-000824), [EXP-000859](#exp-000859), +1 | [SCHEME-2LOOP](../claims/GATES.md#scheme-2loop) | [R-170 v1.0 initial literature applicability audit] - 2026-08-14 | - |
 | [C5-NEWTON-G](../claims/C5-NEWTON-G/claim.md)<br/>Newton-constant relation (T6/T7-SPLIT management) | T6 / ACTIVE | ANALYTIC, MATCHED | [LINEAGE](../claims/C5-NEWTON-G/LINEAGE.md) (0 notes; 0 runs) | - | [R-2026-legacy-newtonG-label](../negative-results/registry.md#r-2026-legacy-newtong-label) | [EXP-000859](#exp-000859), [EXP-000863](#exp-000863) | [GAP-3](../claims/GATES.md#gap-3), [PRED-G-FREEZE](../claims/GATES.md#pred-g-freeze) | [R-170 v1.0 initial literature applicability audit] - 2026-08-14 | - |
-| [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md)<br/>Emergent 3+1 dimensionality and Lorentzian signature | T1 / ACTIVE | CONDITIONAL | [LINEAGE](../claims/C6-SPACETIME-SIGNATURE/LINEAGE.md) (18 notes; 1166 runs) | [R-479](../RESULTS-LEDGER.md#r-479), [R-478](../RESULTS-LEDGER.md#r-478), +93 | [NG-2026-09-02-PAH-OMC-FREE-VERTEX-RESTRICTION-EXACT-INTERTWINING](../negative-results/registry.md#ng-2026-09-02-pah-omc-free-vertex-restriction-exact-intertwining), [NG-2026-09-02-PAH-OMC-FREE-VERTEX-POSITIVE-SCALAR-TRANSPORT-EXACT-INTERTWINING](../negative-results/registry.md#ng-2026-09-02-pah-omc-free-vertex-positive-scalar-transport-exact-intertwining), +123 | [EXP-000623](#exp-000623), [EXP-000624](#exp-000624), +502 | [C6-BCC-PREMISE-BLOCKED](../claims/GATES.md#c6-bcc-premise-blocked), [LEGACY-SELECTIVE-INDEX-AND-ON-DEMAND-REVALIDATION](../claims/GATES.md#legacy-selective-index-and-on-demand-revalidation) | [PAH R481 integrated-run provenance hash refresh] - 2026-09-02 | - |
+| [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md)<br/>Emergent 3+1 dimensionality and Lorentzian signature | T1 / ACTIVE | CONDITIONAL | [LINEAGE](../claims/C6-SPACETIME-SIGNATURE/LINEAGE.md) (18 notes; 1170 runs) | [R-479](../RESULTS-LEDGER.md#r-479), [R-478](../RESULTS-LEDGER.md#r-478), +93 | [NG-2026-09-02-PAH-OMC-FREE-VERTEX-RESTRICTION-EXACT-INTERTWINING](../negative-results/registry.md#ng-2026-09-02-pah-omc-free-vertex-restriction-exact-intertwining), [NG-2026-09-02-PAH-OMC-FREE-VERTEX-POSITIVE-SCALAR-TRANSPORT-EXACT-INTERTWINING](../negative-results/registry.md#ng-2026-09-02-pah-omc-free-vertex-positive-scalar-transport-exact-intertwining), +123 | [EXP-000623](#exp-000623), [EXP-000624](#exp-000624), +503 | [C6-BCC-PREMISE-BLOCKED](../claims/GATES.md#c6-bcc-premise-blocked), [LEGACY-SELECTIVE-INDEX-AND-ON-DEMAND-REVALIDATION](../claims/GATES.md#legacy-selective-index-and-on-demand-revalidation) | [PAH-OMC-002 conditional-kernel contract intake] - 2026-09-02 | - |
 
 ### Sector D
 
@@ -21639,6 +21654,7 @@ The newest 20 entries are shown here. All accepted events, including their notes
 
 | Date | Accepted change | Claims | Negative-result links |
 |---|---|---|---|
+| 2026-09-02 | [PAH-OMC-002 conditional-kernel contract intake] - 2026-09-02 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
 | 2026-09-02 | [PAH R481 integrated-run provenance hash refresh] - 2026-09-02 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
 | 2026-09-02 | [PAH positive scalar transport boundary] - 2026-09-02 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | [NG-2026-09-02-PAH-OMC-FREE-VERTEX-POSITIVE-SCALAR-TRANSPORT-EXACT-INTERTWINING](../negative-results/registry.md#ng-2026-09-02-pah-omc-free-vertex-positive-scalar-transport-exact-intertwining) |
 | 2026-09-02 | [PAH refinement rate-defect parameter-uniformity boundary] - 2026-09-02 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
@@ -21658,7 +21674,6 @@ The newest 20 entries are shown here. All accepted events, including their notes
 | 2026-08-31 | [R-472 A2 Lean exact-core cross-check] - 2026-08-31 | [A2-FULL-PRODUCTION-WELLPOSED](../claims/A2-FULL-PRODUCTION-WELLPOSED/claim.md) | - |
 | 2026-08-31 | [R-471 P1 owner-map admission contract] - 2026-08-31 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
 | 2026-08-31 | [R-470 HOLD-LC-001 official gdt-fermi GbmRsp2 parser owner boundary] - 2026-08-31 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
-| 2026-08-31 | [R-469 HOLD-LC-001 official gdt-core Rsp2 selection semantics crosswalk] - 2026-08-31 | [C6-SPACETIME-SIGNATURE](../claims/C6-SPACETIME-SIGNATURE/claim.md) | - |
 
 ## Coverage and maintenance contract
 

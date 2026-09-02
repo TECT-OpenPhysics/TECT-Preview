@@ -1,0 +1,203 @@
+{
+  "assertion_count": 21,
+  "assertions": [
+    {
+      "detail": "618265f978bae4e96e1330fbec0ce7af0bf1630d6f5a17f9029fcbde48de6876",
+      "name": "manifest-contract",
+      "passed": true
+    },
+    {
+      "detail": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+      "name": "manifest-parent",
+      "passed": true
+    },
+    {
+      "detail": "948a87092f7393e5214a375d66295237e5c8be1b018b8788d3e6785d696e774f",
+      "name": "manifest-finite",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "contract-schema",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "owner-status",
+      "passed": true
+    },
+    {
+      "detail": {
+        "class": "RESEARCHER_HYPOTHESIS_SUCCESSOR_CONTRACT",
+        "constructed_hypothesis": true,
+        "definition_owner": "TECT_RESEARCH_PROGRAM",
+        "epistemic_layer": "L2_MODEL_SPECIFICATION_ONLY",
+        "external_source": false,
+        "physical_authority": false
+      },
+      "name": "researcher-only",
+      "passed": true
+    },
+    {
+      "detail": {
+        "candidate_projection_unchanged": true,
+        "functional_unchanged": true,
+        "gauge_group_unchanged": true,
+        "limit_order_unchanged": true,
+        "mobility_exponent_nu_unchanged": true,
+        "move_families_unchanged": true,
+        "no_new_hamiltonian_or_counterterm": true,
+        "no_physical_identification": true,
+        "no_q3lock_import": true,
+        "regulator_rule_unchanged": true
+      },
+      "name": "parent-firewall",
+      "passed": true
+    },
+    {
+      "detail": {
+        "composition_rule": "This is a separately versioned successor morphism contract. It supplements, but does not edit or supersede, PAH-001 or PAH-OMC-001. Any theorem is about the explicitly composed candidate and is not retroactive evidence for either parent.",
+        "finite_completion_contract": {
+          "contract_id": "PAH-OMC-001",
+          "path": "strategy/pa-hyp/PAH-OMC-001-v1.json",
+          "sha256": "948a87092f7393e5214a375d66295237e5c8be1b018b8788d3e6785d696e774f"
+        },
+        "packet_id": "PAH-001",
+        "path": "strategy/pa-hyp/PAH-001-v1.json",
+        "sha256": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37"
+      },
+      "name": "parent-links",
+      "passed": true
+    },
+    {
+      "detail": {
+        "coarse_carrier": "A finite connected oriented bounded-degree relational two-cell complex G=(V,E,P) with disjoint nonempty anchors O and C.",
+        "configuration": "Omega_(rho,Q) and Omega_(rho',Q) are the finite fixed-Q state spaces obtained from the unchanged PAH-001 functional and the PAH-OMC-001 integer-coordinate completion.",
+        "fine_carrier": "A finite connected oriented bounded-degree relational two-cell complex G'=(V',E',P') with anchor-preserving cell map p:G'->G and at least one fine-only vertex z in V' whose coordinate is integrated out by p_Omega. No embedding coordinates, metric, or physical volume is introduced.",
+        "groups": "The finite Z_K gauge groups and anchor-preserving automorphism groups already declared by PAH-001 and PAH-OMC-001; p must be equivariant for a specified subgroup homomorphism.",
+        "limits": "No cutoff, lattice, volume, phase, aperture, beta, observation-time, continuum, or physical limit is taken in this candidate contract.",
+        "measure": "Counting measure followed by the exact finite PAH Gibbs weights pi_(rho,Q) and pi_(rho',Q).",
+        "regulator": "rho and rho' use the PAH-001 tuple rho=(G,O,C,K,M_s,M_psi,R_max,epsilon,a,beta,nu,theta,Q) with the transport table below.",
+        "time": "External stochastic Markov time only."
+      },
+      "name": "scope-model",
+      "passed": true
+    },
+    {
+      "detail": {
+        "K": "K'=K and the gauge map is the declared surjection on vertex labels.",
+        "M_psi": "M_psi'=M_psi.",
+        "M_s": "M_s'=M_s; no half-grid or interpolated aperture values are inserted.",
+        "Q": "Q'=Q; hidden matter occupation is part of the same fixed-Q sector.",
+        "R_max": "R_max'=R_max.",
+        "a": "a'=a; the refinement label is not identified with a physical length.",
+        "beta": "beta'=beta>0; no fitted or post-hoc beta rescaling is allowed.",
+        "cell_couplings": "All scalar couplings and the displayed PAH-001 edge, plaquette, onsite, and aperture terms are inherited without counterterm, zeroing, or scalar repair.",
+        "epsilon": "epsilon'=epsilon.",
+        "nu": "nu'=nu>0.",
+        "theta": "theta'=theta.",
+        "weights": "No cell-dependent weight is inserted at this version; introducing one requires PAH-OMC-003 or a later separately hashed successor."
+      },
+      "name": "transport-identity",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "morphism-id",
+      "passed": true
+    },
+    {
+      "detail": {
+        "conditional_expectation": "(E_kappa g)(x)=sum_y kappa(y|x)g(y) for g on Omega_(rho',Q).",
+        "conditional_kernel": "kappa(y|x)=1_{p_Omega(y)=x} exp[-beta F_(rho')(y)]/Z_fib(x).",
+        "configuration_map": "p_Omega:Omega_(rho',Q)->Omega_(rho,Q) forgets fine-only coordinates while preserving retained integer coordinates, carried orientations, anchors, and fixed Q.",
+        "fibre_partition": "Z_fib(x)=sum_(y:p_Omega(y)=x) exp[-beta F_(rho')(y)] for each coarse x; finite positivity makes Z_fib(x)>0.",
+        "hidden_root_rule": "Fine roots with p_Omega(r'.y)=p_Omega(y) are retained only in L_(rho'); their action is tested as hidden leakage under E_kappa and is not silently deleted from the fine generator.",
+        "morphism_id": "PAH-COND-GIBBS-BLOCK-001",
+        "normalization_targets": "E_kappa 1=1 and E_kappa I_p=id on every finite coarse function.",
+        "observable_lift": "(I_p f)(y)=f(p_Omega(y)) for y in Omega_(rho',Q). This is the cylinder lift used by the strong mainline test; the R-480/R-481 natural-pullback obstruction therefore remains relevant.",
+        "retained_root_transport": "For every coarse root r, choose a labelled fine retained-root set R'_r such that p_Omega(r'.y)=r.p_Omega(y) on every admissible pair and inverse labels are preserved.",
+        "root_measure": "Both sides use the exact PAH-OMC-001 directed-root measures, including invalid, parallel-edge, K=2, and duplicate-channel conventions; no new multiplicity convention is introduced here.",
+        "symmetry_target": "For every allowed gauge or anchor automorphism pair (h',h) with p_Omega h'=h p_Omega, require kappa(h'y|hx)=kappa(y|x) and E_kappa U_(h')=U_h E_kappa."
+      },
+      "name": "kernel-is-finite-gibbs",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "map-preserves-cylinders",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "root-transport-explicit",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "strong-vs-projected-separated",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "defect-and-uniform-rule",
+      "passed": true
+    },
+    {
+      "detail": {
+        "conditional_kernel_role": "The conditional kernel changes the coarse averaging diagnostic E_kappa but does not change the strong lift I_p. It therefore cannot erase the already known strong natural-pullback defect; projected compatibility is a separate, unproved proposition.",
+        "natural_pullback": "R-480/R-481 show that the source-minimal free-vertex forgetful lift has a nonzero hidden-fibre aperture-rate defect under positive kappa_s and positive scalar beta/kappa_s transport.",
+        "successor_boundary": "A cell-weight, counterterm, altered functional, altered move set, or non-identity parameter transport is outside PAH-OMC-002 and requires a later separately versioned successor."
+      },
+      "name": "known-r480-boundary",
+      "passed": true
+    },
+    {
+      "detail": [
+        "An exact finite audit of conditional-kernel equivariance and projected generator equality for the displayed PAH functional.",
+        "A compatible retained-root embedding for an actual subdivision family, not merely one isolated map.",
+        "A common invariant cylinder core and a normalized defect norm for every refinement level.",
+        "Uniform regulator, volume, shape, source, phase, and exhaustion estimates in the inherited ordered-limit sequence.",
+        "An independent formal proof of any accepted projected or strong intertwining identity."
+      ],
+      "name": "open-evidence-list",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "physical-firewall",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "ordered-limits-held",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "single-question",
+      "passed": true
+    }
+  ],
+  "audit_id": "PAH-OMC-002-CONTRACT-AUDIT-001",
+  "exploration_id": "EXP-001366",
+  "failed": 0,
+  "non_claims": [
+    "This independent lane checks contract structure only; it does not prove conditional or strong intertwining.",
+    "No PAH-001 or PAH-OMC-001 bytes are changed.",
+    "No physical Pre-A, spacetime, gravity, QFT, Yang--Mills, continuum, mass-gap or TOE conclusion follows."
+  ],
+  "passed": 21,
+  "physical_progress": false,
+  "run_kind": "independent",
+  "schema": "tect/pah-omc002-contract-structure-independent/1.0",
+  "source_hashes": {
+    "PAH-001": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "PAH-OMC-001": "948a87092f7393e5214a375d66295237e5c8be1b018b8788d3e6785d696e774f",
+    "PAH-OMC-002": "618265f978bae4e96e1330fbec0ce7af0bf1630d6f5a17f9029fcbde48de6876"
+  },
+  "stage2_status": "HOLD_FOR_EVIDENCE",
+  "task_id": "T-054",
+  "verdict": "CANDIDATE_NOT_ADMITTED",
+  "verification": "PASS"
+}
