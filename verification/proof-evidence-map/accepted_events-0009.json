@@ -1615,15 +1615,21 @@
         "boundary",
         "parameter-uniformity"
       ],
-      "linked_result_ids": [],
+      "linked_result_ids": [
+        "R-480"
+      ],
       "negative_results": [],
       "notes": [
         "strategy/pa-hyp/parameter-uniformity-boundary-exploration.json",
         "strategy/pa-hyp/PAH-001-v1.json"
       ],
       "raw": "## [PAH refinement rate-defect parameter-uniformity boundary] - 2026-09-02\n\nEXP-001363 records a conditional parameter-uniformity boundary for PAH's named free-vertex pullback. R-480 gives unequal hidden-fibre energy increments while the aperture mobility is common. If an admissible increment is negative and beta remains unbounded, the pair of exponential rates has no finite beta-uniform absolute defect bound. PAH-001 currently declares beta>0 and positive couplings without a compact transport domain or an approximate-defect norm. The result therefore identifies a required owner input, not a global PAH no-go: a successor must pin parameter transport and either a sign/lower-bound hypothesis or a normalized defect. No model bytes, physical claim, or gate status changes.\n\n",
-      "result_ids": [],
-      "result_link_basis": {},
+      "result_ids": [
+        "R-480"
+      ],
+      "result_link_basis": {
+        "R-480": "explicit_result_id"
+      },
       "scripts": [
         "verification/scripts/pah_omc001_lumpability_boundary_verify.py"
       ],
@@ -1735,6 +1741,35 @@
         "codes/foundations/pah_omc002_contract_structure_hostile.py",
         "verification/scripts/pah_omc002_contract_verify.py"
       ],
+      "unresolved_claim_ids": []
+    },
+    {
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "claim_ref_basis": {
+        "C6-SPACETIME-SIGNATURE": "explicit_claim_ids"
+      },
+      "claim_refs": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "date": "2026-09-02",
+      "header": "[R-480 PAH-OMC-002 conditional-Gibbs projected defect] - 2026-09-02",
+      "id": "20260902-r-480-pah-omc-002-conditional-gibbs-projected-d",
+      "keywords": [],
+      "linked_result_ids": [
+        "R-480"
+      ],
+      "negative_results": [],
+      "notes": [],
+      "raw": "## [R-480 PAH-OMC-002 conditional-Gibbs projected defect] - 2026-09-02\n\nR-480 records a route-local exact finite defect for the separately versioned PAH-OMC-002 conditional-Gibbs projected diagnostic. The immutable PAH-001 parent remains SHA-256 03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37; OMC-001 is 948a87092f7393e5214a375d66295237e5c8be1b018b8788d3e6785d696e774f; OMC-002 is 618265f978bae4e96e1330fbec0ce7af0bf1630d6f5a17f9029fcbde48de6876. On the finite coarse v,w / fine v,z,w fixture with K=2, M_s=1, Q=0, epsilon=1/2 and beta=nu=lambda_s=kappa_s=1, the invariant cylinder witness f=j_v has coarse increment 0 and hidden fine increments +1/8 and -1/8. Equal conditional Gibbs fibre weights give the exact factor (exp(-1/16)+exp(1/16))/2>1, so E_kappa L_(rho') I_p f != L_rho f. Primary 26/26, independent 20/20, hostile 12/12, integrated 17/17 and Lean R480 pass. This retires only this OMC-002 route, leaves PAH-001 and Stage 2 HOLD_FOR_EVIDENCE, and makes no physical Pre-A, spacetime, gravity, QFT, Yang--Mills, continuum or TOE claim.\n\n",
+      "result_ids": [
+        "R-480"
+      ],
+      "result_link_basis": {
+        "R-480": "explicit_result_id"
+      },
+      "scripts": [],
       "unresolved_claim_ids": []
     }
   ],

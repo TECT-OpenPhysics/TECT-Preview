@@ -41,6 +41,22 @@
       "tag": "NG-2026-09-02-PAH-OMC-FREE-VERTEX-POSITIVE-SCALAR-TRANSPORT-EXACT-INTERTWINING"
     },
     {
+      "anchor": "ng-2026-09-02-pah-omc-002-conditional-gibbs-projected-intertwining",
+      "branch": "use the exact PAH-OMC-002 Gibbs fibre average as a projected generator intertwiner on the fine-only-vertex map",
+      "claim_ref_basis": {},
+      "claim_refs": [],
+      "detail": {
+        "consequence": "Retire the exact PAH-OMC-002 Gibbs-fibre average as a projected intertwiner on this map. This is a route-local finite negative only: it is not a no-go for PAH-001, the strong target, or a different owner-authorized block/lumping kernel. Stage 2 remains `HOLD_FOR_EVIDENCE`. No refinement family, uniform estimate, continuum, physical Pre-A, spacetime, gravity, QFT, Yang--Mills, mass-gap or TOE conclusion follows.",
+        "evidence": "The immutable PAH-001 source is pinned at SHA-256 `03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37`, the finite completion at `948a87092f7393e5214a375d66295237e5c8be1b018b8788d3e6785d696e774f`, and the separately versioned PAH-OMC-002 contract at `618265f978bae4e96e1330fbec0ce7af0bf1630d6f5a17f9029fcbde48de6876`. On the two-vertex coarse / three-vertex fine fixture with `K=2`, `M_s=1`, `Q=0`, `epsilon=1/2`, `beta=nu=lambda_s=kappa_s=1`, the invariant cylinder witness `f=j_v` at `(j_v,j_w)=(0,0)` has coarse aperture increment `0`. The two hidden values `j_z=0,1` have equal fine Gibbs energy `3/8`, but their retained aperture increments are `+1/8` and `-1/8`. The common mobility has square `1/2`, so ```text E_kappa[c_fine]/c_coarse = (exp(-1/16)+exp(1/16))/2 > 1. ``` The normalized projected-generator defect is strictly positive; the primary run observes absolute defect `0.0013815175569305126`. Primary 26/26, independent 20/20, hostile 12/12, integrated 17/17 and Lean R480 all pass.",
+        "failure_mode": "Use the exact PAH-OMC-002 conditional Gibbs fibre average `E_kappa` as a projected generator intertwiner for the fine-only-vertex map `p_Omega`, while retaining the unchanged PAH-001 functional and aperture move."
+      },
+      "detail_title": "the exact conditional-Gibbs projected identity fails",
+      "family_refs": [],
+      "kind": "no_go",
+      "summary": "the invariant cylinder witness `f=j_v` has coarse increment 0 but fine hidden increments `+1/8` and `-1/8`; the conditional factor `(exp(-1/16)+exp(1/16))/2>1`, so the projected identity fails; this is route-local and does not reject other owner-authorized block kernels",
+      "tag": "NG-2026-09-02-PAH-OMC-002-CONDITIONAL-GIBBS-PROJECTED-INTERTWINING"
+    },
+    {
       "anchor": "ng-2026-08-26-pre-a-st8-q3lock-centered-global-energy-context-volume-obstruction",
       "branch": "use centered global total-energy contexts as a volume-uniform local transfer",
       "claim_ref_basis": {},
@@ -2030,27 +2046,6 @@
       "kind": "no_go",
       "summary": "the smooth pressure control `alpha+m log cosh(h)` and the cusped control `alpha+m|h|` have the same value at zero, while analytic even finite-volume controls `log cosh(nh)/n` converge locally uniformly to `|h|` with zero derivative at the origin. Retain source tangents, state compactness and correlation/order estimates",
       "tag": "NG-2026-08-04-PRE-A-CP1-CL8-PRESSURE-VALUE-ONLY-PHASE-CLASSIFICATION"
-    },
-    {
-      "anchor": "ng-2026-08-04-pre-a-cp1-cl8-pointwise-stability-gaussian-trial-uniform-energy",
-      "branch": "for fixed `g,lambda,m_R,eta_R`, use one scalar normalization both for a uniform pointwise lower bound and a uniform variational upper bound from the same Wick-reference Gaussian",
-      "claim_ref_basis": {
-        "C6-SPACETIME-SIGNATURE": "explicit_negative_event:20260804-register-exp-000758-matrix-counterterm-state-co"
-      },
-      "claim_refs": [
-        "C6-SPACETIME-SIGNATURE"
-      ],
-      "detail": {
-        "artifacts": "`strategy/pre-a-cp1-cl8-matrix-counterterm-state-compactness-route-split-certificate-260804.md`; `strategy/pre-a-cp1-cl8-matrix-counterterm-state-compactness-route-split-manifest.json`; `codes/foundations/pre_a_cp1_cl8_matrix_counterterm_state_compactness_route_split.py`; `codes/foundations/pre_a_cp1_cl8_matrix_counterterm_state_compactness_route_split_independent.py`.",
-        "consequence": "The pointwise-local-bound plus same-Wick-Gaussian and scalar-only normalization route is refuted. Sharper global operator bounds, spatial-kinetic or Nelson cancellation, non-Gaussian trials, constructive vector `P(phi)_2`, and other fully specified normalizations remain open. The scalar convention does not identify physical empty space or an absolute energy sign, and no C6, CP1, or Pre-A verdict follows.",
-        "evidence": "On the species singlet `q_e=x`, the unshifted local polynomial is ```text F_C(x)=2g x^4+[4m_R-12C(g+lambda)]x^2+6C^2(g+4lambda). ``` When the nonzero minimum branch applies, the full eight-component Gaussian mean minus this restricted minimum has leading coefficient ```text 12g+12lambda+18lambda^2/g > 0. ``` The global pointwise minimum is no larger than the singlet minimum. Therefore any scalar shift producing `inf_q(P_C+s_C)>=-B` makes the same-Gaussian mean at least this positive `C^2+O(C)-B` lower bound. Since `C_N=Theta(log N)`, it diverges at least as `Theta((log N)^2)`. The comparison is invariant under the scalar shift.",
-        "failure_mode": "For fixed `g,lambda,m_R,eta_R`, use one scalar energy shift both to make the local Wick polynomial pointwise uniformly lower bounded and to obtain a cutoff-uniform variational upper bound from the same declared Wick-reference Gaussian."
-      },
-      "detail_title": "one scalar cannot close both local stability and the same-Gaussian energy trial",
-      "family_refs": [],
-      "kind": "no_go",
-      "summary": "the full Gaussian mean minus the singlet-restricted minimum is at least `[12g+12lambda+18lambda^2/g]C^2+O(C)` and is invariant under scalar shifts, hence grows as `Theta((log N)^2)`. Retain sharper operator/Nelson bounds, non-Gaussian trials, constructive `P(phi)_2`, or another normalization",
-      "tag": "NG-2026-08-04-PRE-A-CP1-CL8-POINTWISE-STABILITY-GAUSSIAN-TRIAL-UNIFORM-ENERGY"
     }
   ],
   "kind": "negative_records",

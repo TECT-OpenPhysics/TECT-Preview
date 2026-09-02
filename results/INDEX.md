@@ -5,10 +5,11 @@
 
 Authorities: `RESULTS-LEDGER.md`.
 
-**313 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
+**314 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
 
 | ID | Result | Tier/scope |
 |---|---|---|
+| [`R-480`](../RESULTS-LEDGER.md#r-480) | PAH-OMC-002 conditional-Gibbs projected-intertwining route-local defect | See authority |
 | [`R-479`](../RESULTS-LEDGER.md#r-479) | PAH-OMC-001 finite common dynamics and refinement-boundary theorem | T5 finite exact theorem for a hash-pinned composite T0 candidate; claim-nonbearing and no active canonical gate change. |
 | [`R-478`](../RESULTS-LEDGER.md#r-478) | PAH-001 finite reversible dynamics and common-core compatibility audit | T0 claim-nonbearing exact finite/definition audit; no gate or scientific transition. |
 | [`R-477`](../RESULTS-LEDGER.md#r-477) | Exact positive-lambda ST8/Q3LOCK common-alpha five-condition audit | T0 claim-nonbearing exact audit; no scientific or gate transition. |
@@ -33,7 +34,6 @@ Authorities: `RESULTS-LEDGER.md`.
 | [`R-458`](../RESULTS-LEDGER.md#r-458) | Finite chiral isolated-node and conservative-flow equation-level audit | T0 |
 | [`R-457`](../RESULTS-LEDGER.md#r-457) | Finite compact-U(1) equation-level invariance and Gauss-flow consistency audit | T0 |
 | [`R-456`](../RESULTS-LEDGER.md#r-456) | Weighted positive transfer-operator defect-resolvent envelope | T0 |
-| [`R-455`](../RESULTS-LEDGER.md#r-455) | Nonnegative transfer-matrix defect-resolvent envelope for coupled orientation histories | T0 |
 
 Search without loading the full ledger:
 

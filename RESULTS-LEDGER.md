@@ -22,6 +22,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-480](#r-480) | PAH-OMC-002 conditional-Gibbs projected-intertwining route-local defect | R-480 / EXP-001367 audits the exact PAH-OMC-002 Gibbs fibre average on one finite fine-only-vertex map. With immutable PAH-001 SHA-256 `03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37`, OMC-001 SHA-256 `948a87092f7393e5214a375d66295237e5c8be1b018b8788d3e6785d696e774f`, and OMC-002 SHA-256 `618265f978bae4e96e1330fbec0ce7af0bf1630d6f5a17f9029fcbde48de6876`, the invariant witness `f=j_v` has coarse increment `0` and hidden fine increments `+1/8,-1/8`; the conditional factor `(exp(-1/16)+exp(1/16))/2>1`. Primary 26/26, independent 20/20, hostile 12/12, integrated 17/17 and Lean R480 pass. This retires only the OMC-002 conditional diagnostic on this map; Stage 2 remains `HOLD_FOR_EVIDENCE`, with no PAH-001, uniform-limit, physical, QFT, Yang--Mills or TOE conclusion. |
 | [R-479](#r-479) | PAH-OMC-001 finite common dynamics and refinement-boundary theorem | R-479 / EXP-001361 registers separate successor contract PAH-OMC-001 SHA-256 `948a87092f7393e5214a375d66295237e5c8be1b018b8788d3e6785d696e774f` against immutable PAH-001 SHA-256 `03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37`. Exact partial move maps, inverse/invalid/duplicate conventions, symmetry-equivariant rates, root Hilbert measure/multiplicity and finite domains close `[P_cand,L_rho]=0` and `B_rho^*B_rho=-L_rho` on the composite model's finite invariant core. The finite common-dynamics substage is `MAINLINE_ADVANCE`; the programme remains `HOLD_FOR_EVIDENCE_AT_STAGE_2` because the named free-vertex pullback refinement fails exact intertwining by `-kappa_s delta(z_1-z_2)!=0` and no alternative owner morphism is selected. Primary 81/81, independent 191/191, hostile 42/42 with 41/41 mutations rejected, integrated 46/46 and Lean R479 pass with digest `c6f2e8ac2d62de0b99c35a4947003d2ede24d3b61f4f03bcee73b9a975e4a64e`. No active canonical gate, physical Pre-A, spacetime, gravity, continuum, QFT, Yang--Mills or TOE conclusion changes |
 | [R-478](#r-478) | PAH-001 finite reversible dynamics and common-core compatibility audit | R-478 / EXP-001359 audits the immutable PAH-001-v1 source SHA-256 `03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37` without model changes or Q3LOCK imports. Exact gauge invariance and Gibbs detailed balance pass. The finite group-average projection is idempotent/self-adjoint, and the directed-root half factor gives `B^*B=-L` conditionally under one explicit root measure; however source-level generator commutation remains unclosed because exact move equivariance is absent, `B^*` is not determined because the root inner product/multiplicity is absent, and refinement compatibility is not defined. Primary 170/170, independent 134/134, hostile 31/31 with 30/30 mutations rejected, integrated 33/33 and Lean R478 pass with core digest `af1eaf9dbc32ffd50e794b4373e4c3ddfe34f0f1a37780869010e25edea42703`. Verdict `HOLD_FOR_EVIDENCE`; no gate, negative registry, production/physical admission, Pre-A, spacetime, gravity, event-horizon, continuum, QFT, common-causal-cone or TOE conclusion changes |
 | [R-477](#r-477) | Exact positive-lambda ST8/Q3LOCK common-alpha five-condition audit | R-477 / EXP-001358 pins the exact fixed-lattice zero-source Hamiltonian and audits the requested common infinite-volume real-time dynamics without changing the model. Conditions C1, C2, C4 and C5 are NOT_PROVED; C3 is PARTIAL_NOT_CLOSED because the exact phase-independent local polynomial derivation exists but is not exponentiated or identified with a thermodynamic C-star action. Primary 116/116, independent 62/62 and integrated 30/30 pass with common digest `3646319e3d67874d61a215b51e5c788dc252a07ca8d6fb5ab37dc2798d9217b6`; all 20 hostile promotion/model-drift mutations are rejected. Verdict `HOLD_FOR_EVIDENCE`: no exact-Q3 common-domain two-orientation uniform estimate is proved, while the registered no-gos remain route-local rather than a target-level nonexistence theorem. No gate, tier, negative registry, Hamiltonian, counterterm, carrier, projection, QFT, Pre-A, causal-cone, gravity, continuum, mass-gap, physical-empty or TOE conclusion changes; no Lean theorem or PDF is issued |
@@ -845,6 +846,57 @@ score M3 only after a versioned source owner, state/uncertainty contract,
 candidate-neutral two-time observable, complete map stages and prospective
 holdout exist. Continue unchanged T-054 Q3LOCK owner intake and T-059/T-061
 observation-source intake; do not manufacture another finite mobility table.
+
+<a id="r-480"></a>
+### R-480 -- PAH-OMC-002 conditional-Gibbs projected-intertwining route-local defect
+
+**Result ID.** `R-480` (`EXP-001367`, `T-054`, audit
+`PAH-COND-GIBBS-BLOCK-001`).
+
+**Authority and scope.** This is a T0 claim-nonbearing finite audit of the
+separately versioned PAH-OMC-002 conditional-Gibbs morphism. It pins immutable
+PAH-001 SHA-256
+`03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37`,
+PAH-OMC-001 SHA-256
+`948a87092f7393e5214a375d66295237e5c8be1b018b8788d3e6785d696e774f`, and
+PAH-OMC-002 SHA-256
+`618265f978bae4e96e1330fbec0ce7af0bf1630d6f5a17f9029fcbde48de6876`.
+The coarse carrier is `v,w` with retained edge `e` and anchors `C=v,O=w`;
+the fine carrier adds `z` and edge `d=(v,z)`.  The fixture uses the unchanged
+PAH functional at `K=2`, `M_s=M_psi=1`, `Q=0`, `epsilon=1/2`, `beta=nu=1`,
+`lambda_s=kappa_s=1`, finite counting-measure Gibbs weights, external
+stochastic Markov time, and no limit.  Matter and plaquette terms vanish
+exactly in this fixture; no Hamiltonian or counterterm is added.
+
+**Exact route-local defect.** For the gauge- and anchor-invariant cylinder
+`f=j_v` at coarse state `(j_v,j_w,n_v,n_w,u_e)=(0,0,0,0,0)`, the eight-state
+fine fibre has equal energy `3/8` for hidden `j_z=0,1`.  The coarse retained
+aperture increment is `0`, while the fine increments are `+1/8` and `-1/8`.
+The common aperture mobility has square `1/2`, hence
+
+```text
+E_kappa[c_fine]/c_coarse = (exp(-1/16)+exp(1/16))/2 > 1.
+```
+
+The normalized defect is
+`(exp(-1/16)+exp(1/16))/2-1>0`; the absolute rate defect is
+`0.0013815175569305126` in the recorded interval `(0.00138,0.00139)`.
+Thus `E_kappa L_(rho') I_p f != L_rho f` on this exact finite witness.
+Kernel normalization, gauge equivariance and retained-root inverse transport
+pass in the fixture, but they do not repair the failed projected identity.
+
+**Verification.** Primary `26/26`, non-importing independent `20/20`, hostile
+`12/12` with `12/12` mutations rejected, integrated `17/17`, and Lean R480
+all pass.  Full details are in `strategy/pa-hyp/R480-certificate.md` and the
+four run artefacts under
+`claims/C6-SPACETIME-SIGNATURE/runs/2026-09-02-pah-omc002-conditional-kernel/`.
+
+**Consequence and boundary.** Retire only the exact OMC-002 Gibbs-fibre
+average as a projected intertwiner on this map.  This does not refute PAH-001,
+the strong target, or every alternative owner-authorized block/lumping kernel;
+Stage 2 remains `HOLD_FOR_EVIDENCE`.  No refinement family, uniform estimate,
+ordered limit, physical sector, Pre-A, spacetime, gravity, QFT, Yang--Mills,
+continuum, mass-gap or TOE conclusion follows.
 
 <a id="r-479"></a>
 ### R-479 -- PAH-OMC-001 finite common dynamics and refinement-boundary theorem

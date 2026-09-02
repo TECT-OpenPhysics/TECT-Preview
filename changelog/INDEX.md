@@ -5,7 +5,7 @@ Compact generated reader surface. The append-only authority is
 record 568 / commit `4db22f4e` and no longer grows.
 Post-cutover full bodies live exactly once in bounded pages under `pages/`.
 
-**838 accepted events** · latest 25 shown below · machine locator: `index.json`
+**839 accepted events** · latest 25 shown below · machine locator: `index.json`
 
 Search the complete authority without loading every page:
 
@@ -17,6 +17,7 @@ python verification/scripts/changelog.py search --text <phrase>
 
 | Date | Event | Claims | Full entry |
 |---|---|---|---|
+| 2026-09-02 | `20260902-r-480-pah-omc-002-conditional-gibbs-projected-d` — [R-480 PAH-OMC-002 conditional-Gibbs projected defect] - 2026-09-02 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000819-000868.md#20260902-r-480-pah-omc-002-conditional-gibbs-projected-d) |
 | 2026-09-02 | `20260902-pah-omc-002-conditional-kernel-contract-intake` — [PAH-OMC-002 conditional-kernel contract intake] - 2026-09-02 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000819-000868.md#20260902-pah-omc-002-conditional-kernel-contract-intake) |
 | 2026-09-02 | `20260902-pah-r481-integrated-run-provenance-hash-refresh` — [PAH R481 integrated-run provenance hash refresh] - 2026-09-02 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000819-000868.md#20260902-pah-r481-integrated-run-provenance-hash-refresh) |
 | 2026-09-02 | `20260902-pah-positive-scalar-transport-boundary-2026-09` — [PAH positive scalar transport boundary] - 2026-09-02 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000819-000868.md#20260902-pah-positive-scalar-transport-boundary-2026-09) |
@@ -41,7 +42,6 @@ python verification/scripts/changelog.py search --text <phrase>
 | 2026-08-31 | `20260831-r-468-hold-lc-001-rsp2-segment-index-2026-08-31` — [R-468 HOLD-LC-001 rsp2 segment index] - 2026-08-31 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000769-000818.md#20260831-r-468-hold-lc-001-rsp2-segment-index-2026-08-31) |
 | 2026-08-31 | `20260831-r-467-finite-branch-relative-jacobian-entropy-c` — [R-467 finite branch-relative Jacobian entropy compensator] - 2026-08-31 | A6-CLASSII-UV-POWER-COUNTING, A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE | [bounded page](pages/000769-000818.md#20260831-r-467-finite-branch-relative-jacobian-entropy-c) |
 | 2026-08-31 | `20260831-r-466-finite-positive-mass-tube-lower-bound-int` — [R-466 finite positive-mass tube lower-bound interface] - 2026-08-31 | A6-CLASSII-UV-POWER-COUNTING, A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE | [bounded page](pages/000769-000818.md#20260831-r-466-finite-positive-mass-tube-lower-bound-int) |
-| 2026-08-31 | `20260831-r-465-finite-partition-comparison-envelope-2026` — [R-465 finite partition comparison envelope] - 2026-08-31 | A6-CLASSII-UV-POWER-COUNTING, A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE | [bounded page](pages/000769-000818.md#20260831-r-465-finite-partition-comparison-envelope-2026) |
 
 ## Post-cutover pages
 
@@ -49,7 +49,7 @@ Each full event body after the cutover occurs in exactly one page.
 
 | Ordinals | Events | Page |
 |---|---:|---|
-| 819–838 | 20 | [000819-000868.md](pages/000819-000868.md) |
+| 819–839 | 21 | [000819-000868.md](pages/000819-000868.md) |
 | 769–818 | 50 | [000769-000818.md](pages/000769-000818.md) |
 | 719–768 | 50 | [000719-000768.md](pages/000719-000768.md) |
 | 669–718 | 50 | [000669-000718.md](pages/000669-000718.md) |

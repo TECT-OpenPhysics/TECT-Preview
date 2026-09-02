@@ -1,0 +1,162 @@
+{
+  "all_mutations_rejected": true,
+  "assertion_count": 12,
+  "audit_id": "PAH-COND-GIBBS-BLOCK-001",
+  "claim_bearing": false,
+  "exploration_id": "EXP-001367",
+  "failed": 0,
+  "global_no_go_not_claimed": true,
+  "mutations": [
+    {
+      "detail": {
+        "PAH-001": "0000000000000000000000000000000000000000000000000000000000000000",
+        "PAH-OMC-001": "948a87092f7393e5214a375d66295237e5c8be1b018b8788d3e6785d696e774f",
+        "PAH-OMC-002": "618265f978bae4e96e1330fbec0ce7af0bf1630d6f5a17f9029fcbde48de6876",
+        "PAH-OMC-002-MANIFEST": "06967d09c536e6d237dd0e3da2cdf9e7778f6cdf3dd6e300e2f0b1974bacf05d"
+      },
+      "mutation": "replace parent hash",
+      "name": "source-hash-drift",
+      "rejected": true
+    },
+    {
+      "detail": {
+        "conditional_projected_intertwining": "PENDING_EXACT_AUDIT",
+        "contract": "ADMITTED",
+        "finite_common_dynamics": "INHERITED_FROM_PAH-OMC-001_COMPOSITE_ONLY",
+        "observable_chain": "NOT_ADMITTED",
+        "strong_generator_intertwining": "ROUTE_LOCAL_FAIL_FOR_NATURAL_PULLBACK",
+        "uniform_limit": "NOT_ADMITTED"
+      },
+      "mutation": "set contract to ADMITTED",
+      "name": "status-promotion",
+      "rejected": true
+    },
+    {
+      "detail": "0",
+      "mutation": "set kappa_s=0",
+      "name": "zero-coupling",
+      "rejected": true
+    },
+    {
+      "detail": "0",
+      "mutation": "set beta=0",
+      "name": "zero-beta",
+      "rejected": true
+    },
+    {
+      "detail": [
+        0,
+        0
+      ],
+      "mutation": "make hidden aperture values equal",
+      "name": "collapse-hidden-fibre",
+      "rejected": true
+    },
+    {
+      "detail": [
+        [
+          "e",
+          "v",
+          "w"
+        ]
+      ],
+      "mutation": "delete the inherited positive aperture edge",
+      "name": "drop-hidden-edge",
+      "rejected": true
+    },
+    {
+      "detail": 1.0,
+      "mutation": "force conditional factor to one",
+      "name": "erase-defect",
+      "rejected": true
+    },
+    {
+      "detail": {
+        "conditional_projected": "E_kappa L_(rho') I_p = L_rho on A_rho^inv. This is a weaker diagnostic target and cannot by itself promote the mainline to a uniform limit.",
+        "defect": "If either equality fails, define d_(rho,rho')(f)=L_(rho')I_p f-I_p L_rho f and report a preregistered normalized norm before any parameter fitting.",
+        "strong_mainline": "E_kappa L_(rho') I_p = L_rho on A_rho^inv. This is a weaker diagnostic target and cannot by itself promote the mainline to a uniform limit.",
+        "uniform_target": "For a future named refinement family, require one common cylinder core and sup_(rho,rho') ||d_(rho,rho')||_infinity -> 0 in the declared order, uniformly over regulator, volume, shape, source, phase, and exhaustion."
+      },
+      "mutation": "replace strong target by projected target",
+      "name": "strong-projected-substitution",
+      "rejected": true
+    },
+    {
+      "detail": {
+        "conditional_projected_intertwining": "PENDING_EXACT_AUDIT",
+        "contract": "CANDIDATE_NOT_ADMITTED",
+        "finite_common_dynamics": "INHERITED_FROM_PAH-OMC-001_COMPOSITE_ONLY",
+        "observable_chain": "NOT_ADMITTED",
+        "strong_generator_intertwining": "ROUTE_LOCAL_FAIL_FOR_NATURAL_PULLBACK",
+        "uniform_limit": "ADMITTED"
+      },
+      "mutation": "admit uniform limit",
+      "name": "uniform-promotion",
+      "rejected": true
+    },
+    {
+      "detail": {
+        "candidate_projection_unchanged": true,
+        "functional_unchanged": true,
+        "gauge_group_unchanged": true,
+        "limit_order_unchanged": true,
+        "mobility_exponent_nu_unchanged": true,
+        "move_families_unchanged": true,
+        "no_new_hamiltonian_or_counterterm": true,
+        "no_physical_identification": true,
+        "no_q3lock_import": false,
+        "regulator_rule_unchanged": true
+      },
+      "mutation": "allow Q3LOCK evidence",
+      "name": "q3lock-import",
+      "rejected": true
+    },
+    {
+      "detail": {
+        "candidate_projection_unchanged": true,
+        "functional_unchanged": false,
+        "gauge_group_unchanged": true,
+        "limit_order_unchanged": true,
+        "mobility_exponent_nu_unchanged": true,
+        "move_families_unchanged": true,
+        "no_new_hamiltonian_or_counterterm": true,
+        "no_physical_identification": true,
+        "no_q3lock_import": true,
+        "regulator_rule_unchanged": true
+      },
+      "mutation": "change inherited functional",
+      "name": "functional-mutation",
+      "rejected": true
+    },
+    {
+      "detail": [
+        "physical Pre-A is proved"
+      ],
+      "mutation": "erase physical non-claims",
+      "name": "physical-promotion",
+      "rejected": true
+    }
+  ],
+  "mutations_attempted": 12,
+  "mutations_rejected": 12,
+  "non_claims": [
+    "Hostile mutations are firewall tests, not additional physical evidence.",
+    "No PAH-001 bytes, functional, dynamics or limit order are mutated.",
+    "No uniform, continuum, Pre-A, spacetime, gravity, QFT, Yang--Mills, mass-gap or TOE conclusion follows."
+  ],
+  "passed": 12,
+  "physical_progress": false,
+  "result_id": "R-480",
+  "run_kind": "hostile",
+  "schema": "tect/pah-omc002-conditional-kernel-hostile/1.0",
+  "source_hashes": {
+    "PAH-001": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "PAH-OMC-001": "948a87092f7393e5214a375d66295237e5c8be1b018b8788d3e6785d696e774f",
+    "PAH-OMC-002": "618265f978bae4e96e1330fbec0ce7af0bf1630d6f5a17f9029fcbde48de6876",
+    "PAH-OMC-002-MANIFEST": "06967d09c536e6d237dd0e3da2cdf9e7778f6cdf3dd6e300e2f0b1974bacf05d"
+  },
+  "stage2_status": "HOLD_FOR_EVIDENCE",
+  "task_id": "T-054",
+  "verdict": "ROUTE_LOCAL_CONDITIONAL_PROJECTED_INTERTWINING_FAIL",
+  "verification": "PASS"
+}
