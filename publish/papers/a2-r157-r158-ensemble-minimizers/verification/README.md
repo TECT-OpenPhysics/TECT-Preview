@@ -47,9 +47,13 @@ recorded as `EXP-001372`, correcting the earlier replay boundary `EXP-001370`.
 
 A fresh replay now passes R-157 integrated verification `144/144` (including
 legacy A2 `61/61`) and R-158 integrated verification `155/155` (including the
-R-157/A2 regression).  This closes the repository synchronization gate only;
-it does not replace the analytic proof, specialist literature review, external
-proof audit, operator confirmation, capstone bundle, or release check.
+R-157/A2 regression).  Manuscript v0.1.4 additionally states the direct-method
+coercivity/weak-lower-semicontinuity route for the `mu>mu_t` minimizer, names
+the full lower-order map `N=N_loc+N_II`, and records the Gelfand-triple
+chain-rule hypotheses; these are proof-text clarifications, not a new claim or
+tier change.  This closes the repository synchronization gate
+only; it does not replace the analytic proof, specialist literature review,
+external proof audit, operator confirmation, capstone bundle, or release check.
 
 ## Canonical evidence paths
 

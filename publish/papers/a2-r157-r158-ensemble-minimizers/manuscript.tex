@@ -34,7 +34,7 @@
        Ensemble-Induced Shell Coexistence in a Regularized
        Multicomponent Brazovskii Functional}
 \author{Jusang Lee}
-\date{Draft v0.1.1 -- 2026-09-03}
+\date{Draft v0.1.4 -- 2026-09-04}
 
 \begin{document}
 \maketitle
@@ -176,7 +176,7 @@ $\Psi_0\in H^2(\T^3_{16};\C^3)$, the real-$L^2$ gradient flow
 \end{equation}
 has a unique global solution with
 \begin{equation}
- \Psi\in C([0,\infty);H^2)\cap L^2_{\rm loc}((0,\infty);H^4),qquad
+ \Psi\in C([0,\infty);H^2)\cap L^2_{\rm loc}((0,\infty);H^4),\qquad
  \partial_t\Psi\in L^2_{\rm loc}((0,\infty);L^2).
  \label{eq:solution-class}
 \end{equation}
@@ -193,13 +193,13 @@ For every $t>0$ it is smooth in space and time.
 \begin{theorem}[neutral minimizer and exponential decay]
 For the pinned coefficients, there are exact rational constants
 \begin{equation}
- g=\frac{719818750025582338837}{5400000000000000000000}>\frac18,qquad
+ g=\frac{719818750025582338837}{5400000000000000000000}>\frac18,\qquad
  \kappa=\frac{2101675000076747016511}{8100000000000000000000}>\frac14
  \label{eq:g-kappa}
 \end{equation}
 such that every $\Psi\in H^2$ obeys
 \begin{equation}
- \cF(\Psi)\ge g\norm{\Psi}_2^2,qquad
+ \cF(\Psi)\ge g\norm{\Psi}_2^2,\qquad
  \ip{D\cF(\Psi)}{\Psi}_{\R}\ge\kappa\norm{\Psi}_2^2.
  \label{eq:neutral-bounds}
 \end{equation}
@@ -254,7 +254,7 @@ neutral-vacuum selection.
 The scalar symbol of \eqref{eq:L} is $p(x)=r+Zx+Yx^2$ with $x=|k|^2$.
 Completing the square gives
 \begin{equation}
- p(x)=Y\left(x+\frac{Z}{2Y}\right)^2+r-\frac{Z^2}{4Y},qquad
+ p(x)=Y\left(x+\frac{Z}{2Y}\right)^2+r-\frac{Z^2}{4Y},\qquad
  \inf_{x\ge0}p(x)=0.260000000009475>0.
  \label{eq:symbol-positive}
 \end{equation}
@@ -268,14 +268,14 @@ self-adjoint on $H^4$ and its form domain is $H^2$, with equivalent graph and
 Sobolev norms.  The pinned Class-II matrix is positive definite; its recorded
 determinant and least eigenvalue are respectively
 \begin{equation}
- \det Q_{\rm II}=7.031249999996483\times10^{-6},qquad
+ \det Q_{\rm II}=7.031249999996483\times10^{-6},\qquad
  \lambda_{\min}(Q_{\rm II})=0.001259011500926061.
  \label{eq:QII-numbers}
 \end{equation}
 
 Since $\lambda<0$ and $\gamma>0$, Young's inequality gives
 \begin{equation}
- \frac{|\lambda|}{4}\rho^2\le \frac\gamma{12}\rho^3+C_Y,qquad
+ \frac{|\lambda|}{4}\rho^2\le \frac\gamma{12}\rho^3+C_Y,\qquad
  C_Y=0.010098435197886498.
  \label{eq:young}
 \end{equation}
@@ -292,7 +292,7 @@ Combining \eqref{eq:H2-coercivity}, \eqref{eq:QII-numbers}, and
 Realify $\Psi$ as $u\in\R^6$.  Let $A_A$ be the real symmetric realification
 of $T_A$, and define
 \begin{equation}
- p_A(u)=2A_Au,qquad q_A(u)=\frac{u^TA_Au}{u^Tu+\eps_\rho},qquad
+ p_A(u)=2A_Au,\qquad q_A(u)=\frac{u^TA_Au}{u^Tu+\eps_\rho},\qquad
  s_A(u)=2(A_A-q_A(u)\Id)u.
  \label{eq:realified-coeff}
 \end{equation}
@@ -309,8 +309,17 @@ Euler--Lagrange differentiation therefore has the form
  N_{\rm II}(u)=B(u)\nabla^2u+C(u)[\nabla u,\nabla u],
  \label{eq:N-map}
 \end{equation}
-where $C$ is smooth and no derivative above order two occurs.  On the fixed
-three-torus,
+where $C$ is smooth and no derivative above order two occurs.  To fix the
+notation used in the evolution equation, let the real gradient of the local
+polynomial be
+\begin{equation}
+ N_{\rm loc}(u)=\lambda (u^Tu)u+\gamma (u^Tu)^2u,
+ \qquad N(u)=N_{\rm loc}(u)+N_{\rm II}(u).
+ \label{eq:full-nonlinear-map}
+\end{equation}
+The local term is order zero and is locally Lipschitz from $H^2$ to $L^2$;
+therefore the estimate below is for the full lower-order map $N$, not only its
+Class-II part.  On the fixed three-torus,
 $H^2\hookrightarrow L^\infty\cap W^{1,6}$ and $L^3\hookrightarrow L^2$.
 Product estimates and the algebra property of $H^2$ thus give, on every
 bounded $H^2$ ball,
@@ -351,15 +360,19 @@ $L^2(0,T;H^2)$, and \eqref{eq:local-lipschitz} gives strong convergence of
 the nonlinear term in $L^2(0,T;L^2)$.
 
 For the nonlinear part $\Phi$, the derivative identity
-$D\Phi(u)[h]=\ip{N(u)}{h}_{\R}$ and the local Lipschitz estimate give the chain
-rule
+$D\Phi(u)[h]=\ip{N(u)}{h}_{\R}$ and the local Lipschitz estimate are understood
+in the Gelfand triple $H^2\hookrightarrow L^2\hookrightarrow H^{-2}$.  In
+particular, $D\Phi:H^2\to L^2\subset H^{-2}$ is locally Lipschitz, while the
+solution belongs to $L^2(s,t;H^2)\cap H^1(s,t;H^{-2})$ on every finite interval.
+The Bochner chain rule therefore gives
 \begin{equation}
-\Phi(u(t))-\Phi(u(s))=\int_s^t\ip{N(u(\tau))}{\partial_\tau u(\tau)}_{\R}\dd\tau.
+ \Phi(u(t))-\Phi(u(s))=\int_s^t\ip{N(u(\tau))}{\partial_\tau u(\tau)}_{\R}\dd\tau.
  \label{eq:nonlinear-chain}
 \end{equation}
-The corresponding spectral quadratic-form chain rule combined with
-\eqref{eq:nonlinear-chain} proves the equality \eqref{eq:energy-id}, not just
-an energy inequality.  The lower bound \eqref{eq:energy-coercivity} prevents
+The quadratic part is $\frac12\norm{L^{1/2}u}_2^2$ and obeys the corresponding
+Hilbert-space chain rule under the same time regularity.  Combining the two
+identities proves \eqref{eq:energy-id}, not just an energy inequality.  The
+lower bound \eqref{eq:energy-coercivity} prevents
 the $H^2$ norm from diverging at a finite maximal time, so the solution is
 global.
 
@@ -386,7 +399,7 @@ $L^2$, and the endpoint cancellation
 has an integrable last term.  It follows that $u(t)\in D(L)=H^4$ for every
 $t>0$.  Periodic Moser estimates give
 \begin{equation}
- N:H^m\longrightarrow H^{m-2}\quad\text{locally Lipschitz},qquad m\ge2,
+ N:H^m\longrightarrow H^{m-2}\quad\text{locally Lipschitz},\qquad m\ge2,
  \label{eq:moser}
 \end{equation}
 and iteration of \eqref{eq:endpoint-cancellation} proves the claimed
@@ -420,7 +433,7 @@ The three leading Sylvester minors of $M-(7/250)\Id$ are
 \end{equation}
 so $M>(7/250)\Id$.  Parseval therefore gives
 \begin{equation}
- \cF_{\rm quad}(\Psi)\ge\frac\nu2\norm{\Psi}_2^2,qquad
+ \cF_{\rm quad}(\Psi)\ge\frac\nu2\norm{\Psi}_2^2,\qquad
  \nu=\mu_{\rm sh}+\frac7{250}.
  \label{eq:nu}
 \end{equation}
@@ -450,7 +463,7 @@ The energy lower bound alone does not rule out nonzero saddles.  We therefore
 scale $\Psi\mapsto t\Psi$ and put $y=t^2$.  At a fixed field, let $j$ denote
 the unscaled current and let $\ell(y)=j-q(y)\nabla\rho$ with
 \begin{equation}
- q(y)=\frac{y m}{y\rho+\eps_\rho},qquad
+ q(y)=\frac{y m}{y\rho+\eps_\rho},\qquad
  \theta=\frac{\eps_\rho}{y\rho+\eps_\rho}\in[0,1].
  \label{eq:theta}
 \end{equation}
@@ -458,7 +471,7 @@ Direct differentiation gives
 \begin{equation}
  \frac{\dd E_{\rm II}}{\dd y}
  =y\begin{pmatrix}j&\ell\end{pmatrix}
- R_\theta\begin{pmatrix}j\\\ell\end{pmatrix},qquad
+ R_\theta\begin{pmatrix}j\\\ell\end{pmatrix},\qquad
  R_\theta=\begin{pmatrix}
  a-\theta b&b+\theta(b-c)/2\\
  b+\theta(b-c)/2&c(1+\theta)
@@ -467,7 +480,7 @@ Direct differentiation gives
 \end{equation}
 For the pinned coefficients,
 \begin{equation}
- a-\theta b\ge\frac{21}{2000P}>0,qquad
+ a-\theta b\ge\frac{21}{2000P}>0,\qquad
  \det R_\theta=\frac{9(-81\theta^2+128\theta+128)}{10240000P^2}>0
  \quad(0\le\theta\le1).
  \label{eq:Rtheta-positive}
@@ -534,7 +547,7 @@ Because $|n|^2$ is integral and $3=1^2+1^2+1^2$, the radial minimum is the
 shell $|n|^2=3$, containing the eight body-diagonal indices
 $n=(\pm1,\pm1,\pm1)$.  Thus
 \begin{equation}
- \lambda_0=D(3\pi^2/64)+m_*,qquad
+ \lambda_0=D(3\pi^2/64)+m_*,\qquad
  0.28811617234458494031<\lambda_0<0.28811617234459494032.
  \label{eq:lambda0}
 \end{equation}
@@ -594,8 +607,36 @@ Subtracting $\mu Q$ from \eqref{eq:ensemble-decomp} gives
 \end{equation}
 For $\mu<\mu_t$, every nonzero field has positive grand potential.  At
 $\mu=\mu_t$, zero and the saturated states coexist.  For $\mu>\mu_t$, the
-plane wave has negative grand potential and sextic coercivity supplies a
-global minimizer, which is necessarily nonzero.
+plane wave has negative grand potential.  We now make the existence step in
+this last assertion explicit.  Write $\delta=\mu-\mu_t>0$.  Since the
+nonnegative Fourier symbol of $L-\lambda_0$ grows quadratically in
+$|k|^2$, there are constants $c>0$ and $C_\delta<\infty$ such that
+\begin{equation}
+ \frac12\ip{\Psi}{(L-\lambda_0)\Psi}_{\R}
+ \ge c\norm{\Psi}_{H^2}^2-C_\delta\norm{\Psi}_2^2.
+ \label{eq:ensemble-high-frequency}
+\end{equation}
+The scalar polynomial also obeys, for $\rho\ge0$,
+\begin{equation}
+ \frac\gamma6\rho(\rho-\rho_*)^2-
+ \frac\delta2\rho\ge \frac\gamma{12}\rho^3-C_\delta,
+ \label{eq:ensemble-polynomial-coercivity}
+\end{equation}
+by Young's inequality.  On the finite torus, the $L^2$ term in
+\eqref{eq:ensemble-high-frequency} is absorbed by the $L^6$ term in
+\eqref{eq:ensemble-polynomial-coercivity} up to a constant.  Thus
+$\cO_\mu$ is bounded below and coercive in $H^2$.  If a minimizing sequence
+$\Psi_n$ converges weakly in $H^2$, Rellich compactness gives strong
+convergence in $H^1$ and uniformly in space (after a subsequence).  Hence the
+local potential is continuous, while the spectral quadratic form is weakly
+lower semicontinuous.  Writing $u_n$ and $u$ for the realifications of
+$\Psi_n$ and $\Psi$, the coefficients $B(u_n)$ in \eqref{eq:B-map}
+converge uniformly to $B(u)$ and $\nabla u_n\rightharpoonup\nabla u$
+in $L^2$.  The positive quadratic Class-II integral is therefore weakly lower
+semicontinuous as well (equivalently, use the uniformly convergent positive
+square roots $B(u_n)^{1/2}$).  The direct method therefore supplies a global
+minimizer; its value is negative because of the plane wave, so it is
+necessarily nonzero.
 
 The zero-field Hessian loses positivity at $\mu_{\rm lin}=\lambda_0$.  Along
 the ground-plane-wave amplitude family, stationary densities solve

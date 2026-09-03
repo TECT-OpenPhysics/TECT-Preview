@@ -1,0 +1,84 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "schema_version": "1.0",
+  "id": "EXP-001374",
+  "title": "PAH-OMC-005 nonzero-Q anchor generator compatibility",
+  "question": "Does the actual unchanged PAH-001 midpoint generator remain compatible with a genuine PAH-OMC-004 geometric strip refinement on a nonzero-Q common anchor cylinder?",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": ["PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"],
+  "method": [
+    "Create the separately hashed researcher contract PAH-OMC-005 without modifying PAH-001 or PAH-OMC-004.",
+    "Fix the genuine square-to-two-triangle diagonal strip and the anchor interaction closure at post-boundary levels n>=1.",
+    "Define the geometric inclusion by retaining old coordinates and adding neutral zero-charge coordinates; use the pointwise anchor-aperture cylinder as the common observable lift.",
+    "Evaluate the full displayed PAH-001 functional, including onsite matter polynomial, aperture stiffness, covariant matter edges and Wilson faces, on every Q=1 patch state.",
+    "Compare the exact midpoint generator tuple between G_1 and the neutral inclusion in G_2, then independently rebuild the same rows without importing the primary implementation.",
+    "Run hostile mutations for Q=0 substitution, colour-only topology, omitted matter/face terms, fitted rates, wrong mobility, frontier leakage, charge-changing inclusion and physical promotion; cross-check the finite arithmetic in Lean."
+  ],
+  "finding": "The anchor interaction closure is identical at G_1 and G_2. With K=2, M_s=M_psi=1 and Q=1, all 32768 finite patch states have identical exact rows (Delta F, mobility^2, observable increments and midpoint exponent). The primary lane passes 21/21, independent 16/16, hostile 9/9 mutations rejected, integrated 17/17 and Lean R485 compiles.",
+  "classification": "MAINLINE_ADVANCE_NONZERO_Q_LOCAL_GENERATOR",
+  "verdict": "advanced",
+  "decision_reason": "R-484 established the local row mechanism only on a Q=0 diagnostic. This result supplies a genuinely nonzero-charge finite state correspondence and replays the same unchanged PAH functional and rate, so it advances the geometric candidate without treating the new map as pre-existing PAH-001 structure.",
+  "evidence_level": "T0 finite exact nonzero-Q generator-row replay with primary, non-importing independent, hostile, integrated and Lean verification",
+  "source_authorities": [
+    {"source_id": "PAH-001", "path": "strategy/pa-hyp/PAH-001-v1.json", "sha256": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37", "role": "immutable functional, regulator, move and rate source"},
+    {"source_id": "PAH-OMC-004", "path": "strategy/pa-hyp/PAH-OMC-004-v1.json", "sha256": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c", "role": "geometric strip predecessor"},
+    {"source_id": "PAH-OMC-005", "path": "strategy/pa-hyp/PAH-OMC-005-nonzero-q-generator-v1.json", "sha256": "c779edafc99604047767864f14a2ea0840a7d96f8d5a2f7266bcbdfd2aea6ae5", "role": "researcher-owned nonzero-Q contract"},
+    {"source_id": "PAH-OMC-005-GEN-MANIFEST-001", "path": "strategy/pa-hyp/PAH-OMC-005-nonzero-q-generator-manifest.json", "sha256": "c22b336cf17939ace8076fce9e97553f61e0db1b3e7a2737cc1aff37012003b3", "role": "contract and parent hash manifest"}
+  ],
+  "formal_refs": {"results": ["R-485"], "events": ["20260904-r-485-pah-omc-005-nonzero-q-anchor-generator-co"], "negatives": []},
+  "evidence_refs": [
+    "strategy/pa-hyp/PAH-OMC-005-nonzero-q-generator-v1.json#compatibility_proposition",
+    "strategy/pa-hyp/PAH-OMC-005-nonzero-q-generator-manifest.json#contract",
+    "strategy/pa-hyp/R485-certificate.md#Exact-proposition-and-scope",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-04-pah-omc005-nonzero-q-generator/primary.json#generator_rows",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-04-pah-omc005-nonzero-q-generator/independent.json#generator_rows",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-04-pah-omc005-nonzero-q-generator/hostile.json#mutations",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-04-pah-omc005-nonzero-q-generator/integrated.json#verification_summary",
+    "verification/lean/Tect/R485.lean#generator_row_level_identity"
+  ],
+  "assumptions": [
+    "PAH-001 and PAH-OMC-004 remain byte-identical at their pinned hashes.",
+    "The Q=1 fixture is a finite researcher proposal and uses the unchanged displayed couplings and midpoint rate.",
+    "The neutral inclusion adds only zero-charge remote coordinates and preserves the four-vertex anchor closure.",
+    "The common observable is the bounded anchor-aperture cylinder, so all non-aperture roots have zero observable increment.",
+    "K=2 link inverses use the exact self-inverse sign in the displayed oriented Wilson words."
+  ],
+  "missing_assumptions": [
+    "A total gauge-equivariant refinement map for arbitrary fine matter/link cylinders.",
+    "A common invariant algebra and root multiplicity theorem beyond the anchor aperture.",
+    "A regulator-, volume- and source-uniform interaction estimate and convergence theorem in the inherited limit order."
+  ],
+  "boundary": "Finite local compatibility only. The result does not close T-054, does not change any canonical gate or claim tier, and does not establish an infinite-volume generator, uniform limit, physical sector, Pre-A, spacetime, gravity, QFT, Yang--Mills, continuum, mass gap or TOE conclusion.",
+  "next_action": "Construct a new hash-pinned contract for a nontrivial matter or link cylinder and prove its boundary-root transport or record an exact obstruction; do not infer it from the anchor-aperture result.",
+  "revisit_condition": "Reopen the uniform lane only when the full nonzero-Q state transport, boundary root map and common-core norm are explicitly supplied.",
+  "non_claims": [
+    "No physical Pre-A, spacetime, gravity, QFT, Yang--Mills, continuum, mass-gap or TOE conclusion.",
+    "No retroactive modification or completion of PAH-001, PAH-OMC-001, PAH-OMC-003 or PAH-OMC-004.",
+    "No global uniform estimate, ordered limit or physical interpretation follows from the 32768 finite rows."
+  ],
+  "provenance": "contemporaneous",
+  "recorded_by": "Codex",
+  "recorded_at": "2026-09-03T15:45:00Z",
+  "reviewed_on": "2026-09-04",
+  "related": [{"id": "EXP-001371", "relation": "continues"}],
+  "reproduction": [
+    "python codes/foundations/pah_omc005_nonzero_q_generator.py",
+    "python codes/foundations/pah_omc005_nonzero_q_generator_independent.py",
+    "python codes/foundations/pah_omc005_nonzero_q_generator_hostile.py",
+    "python verification/scripts/pah_omc005_nonzero_q_generator_verify.py",
+    "python verification/scripts/lean_toolchain_check.py --metadata",
+    "Set-Location verification/lean; & \"$env:USERPROFILE/.elan/toolchains/leanprover--lean4---v4.32.1/bin/lake.exe\" env lean Tect/R485.lean"
+  ],
+  "adversarial_review": [
+    {"check": "Could Q=1 be vacuous?", "disposition": "DISMISSED: every enumerated state has one radial quantum and both lanes assert the charge sum."},
+    {"check": "Could the diagonal be a colour-only substitution?", "disposition": "DISMISSED: d0 is an independent edge in two oriented triangle faces and hostile mutation rejects its removal."},
+    {"check": "Could the row equality be fitted after projection?", "disposition": "DISMISSED: the midpoint exponent is recomputed from the full exact Delta F and hostile mutation rejects altered rates."},
+    {"check": "Does this finite result prove a global uniform refinement?", "disposition": "UPHELD AND BLOCKED: only the anchor-aperture cylinder and one finite Q=1 fixture are covered."}
+  ],
+  "stop_or_redesign": [
+    "Retain this result at T0 and keep Stage 2 HOLD_FOR_EVIDENCE.",
+    "If the next full cylinder cannot obtain a gauge-equivariant boundary map, record the exact obstruction rather than fitting a projection.",
+    "Do not use this result for physical-empty, Reading-H, continuum or Yang--Mills claims."
+  ]
+}

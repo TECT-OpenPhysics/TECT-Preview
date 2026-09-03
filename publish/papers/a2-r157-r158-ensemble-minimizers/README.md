@@ -1,6 +1,6 @@
 # A2/R-157/R-158 ensemble-minimizers paper
 
-Lifecycle: `draft` (version `0.1.1`, 2026-09-03).
+Lifecycle: `draft` (version `0.1.4`, 2026-09-04).
 
 This folder is the self-contained draft lane for the paper
 “Global Well-Posedness, Neutral-State Rejection, and Ensemble-Induced Shell
@@ -18,6 +18,8 @@ manual P2 manuscript, not a submission or a publication record.
   commands.
 * `STATUS.md` — completion gates and lifecycle history.
 * `proof-audit.md` — internal adversarial checklist and external-review questions.
+
+Version 0.1.4 makes the `\mu>\mu_t` direct-method existence and weak-lower-semicontinuity step explicit, defines the full lower-order map `N=N_loc+N_II`, and states the Gelfand-triple chain-rule hypotheses used by the flow proof; all remain subject to external proof audit.
 
 ## Build
 

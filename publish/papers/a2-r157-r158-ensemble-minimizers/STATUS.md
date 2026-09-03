@@ -1,8 +1,8 @@
 # STATUS — A2/R-157/R-158 ensemble-minimizers
 
 Lifecycle: `draft`
-Version: `0.1.1`
-Date: `2026-09-03`
+Version: `0.1.4`
+Date: `2026-09-04`
 Owner: TECT publication lane
 
 ## Current state
@@ -29,6 +29,8 @@ a failure of the A2/R-157/R-158 theorem checks.
 - [x] Existing primary and independent executable audits are identified.
 - [x] R-157/R-158 integrated authority, artifact, PDF, legacy, and regression checks pass.
 - [x] Internal adversarial proof-audit checklist and external-review questions recorded.
+- [x] The `\mu>\mu_t` global-minimizer direct-method/coercivity step is explicit in the manuscript (external audit still required).
+- [x] The A2 energy identity now states the Gelfand-triple and Hilbert-space chain-rule hypotheses (external audit still required).
 - [x] LaTeX compile and zero-overfull visual review (Tectonic exit 0; final
   ten-page A4 PDF rendered and inspected page by page on 2026-09-03).
 - [ ] Full proof audit by an independent mathematician.
@@ -49,5 +51,8 @@ remain authoritative.
 
 - `0.1.0` (2026-09-03): initial integrated manuscript and audit package draft.
 - `0.1.1` (2026-09-03): repaired the structured T-054 synchronization predicate, refreshed pinned verifier/child hashes, reproduced both integrated PASS lanes, and added the internal proof-audit checklist.
+- `0.1.2` (2026-09-04): added the explicit direct-method coercivity and weak-lower-semicontinuity argument for the `\mu>\mu_t` minimizer claim; external audit remains open.
+- `0.1.3` (2026-09-04): defined the full lower-order map `N=N_{\rm loc}+N_{\rm II}` used by the flow proof and repaired all missing `\qquad` controls found during PDF QA.
+- `0.1.4` (2026-09-04): stated the Gelfand-triple/Hilbert-space chain-rule hypotheses for the exact energy identity; external audit remains open.
 - QA checkpoint for `0.1.0` (2026-09-03): fixed the chain-rule integral notation, compiled the
   ten-page PDF, and completed the rendered-page visual review.

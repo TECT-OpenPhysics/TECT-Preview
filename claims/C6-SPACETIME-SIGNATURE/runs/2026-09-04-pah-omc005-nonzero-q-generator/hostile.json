@@ -1,0 +1,116 @@
+{
+  "all_mutations_rejected": true,
+  "assertion_count": 4,
+  "assertions": [
+    {
+      "detail": "",
+      "name": "baseline-runs-pass",
+      "passed": true
+    },
+    {
+      "detail": {
+        "PAH-001": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+        "PAH-OMC-004": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c",
+        "PAH-OMC-005": "c779edafc99604047767864f14a2ea0840a7d96f8d5a2f7266bcbdfd2aea6ae5",
+        "PAH-OMC-005-GEN-MANIFEST": "c22b336cf17939ace8076fce9e97553f61e0db1b3e7a2737cc1aff37012003b3"
+      },
+      "name": "hash-pins-baseline",
+      "passed": true
+    },
+    {
+      "detail": {
+        "expected": 32768,
+        "rows": 32768
+      },
+      "name": "baseline-row-agreement",
+      "passed": true
+    },
+    {
+      "detail": {
+        "attempted": 9,
+        "rejected": 9
+      },
+      "name": "all-mutations-rejected",
+      "passed": true
+    }
+  ],
+  "audit_id": "PAH-NONZERO-Q-GENERATOR-001",
+  "claim_bearing": false,
+  "exploration_id": "EXP-001374",
+  "failed": 0,
+  "mutations": [
+    {
+      "name": "replace-Q=1-with-Q=0",
+      "reason": "contract pins Q=1",
+      "rejected": true
+    },
+    {
+      "name": "drop-independent-diagonal",
+      "reason": "d0 is required as a geometric edge",
+      "rejected": true
+    },
+    {
+      "name": "omit-split-face-terms",
+      "reason": "both triangle incidences are required",
+      "rejected": true
+    },
+    {
+      "name": "fit-midpoint-rate",
+      "reason": "changing one exponent breaks the exact row tuple",
+      "rejected": true
+    },
+    {
+      "name": "replace-mobility",
+      "reason": "PAH mobility square is pinned to the product of endpoint apertures",
+      "rejected": true
+    },
+    {
+      "name": "frontier-face-leakage",
+      "reason": "frontier face is remote from a for n>=1",
+      "rejected": true
+    },
+    {
+      "name": "charge-changing-inclusion",
+      "reason": "new vertices are required to have zero radial occupation",
+      "rejected": true
+    },
+    {
+      "name": "conditional-gibbs-average",
+      "reason": "the lift is a pointwise coordinate cylinder, not a fibre average",
+      "rejected": true
+    },
+    {
+      "name": "physical-promotion",
+      "reason": "non-claims retain the physical firewall",
+      "rejected": true
+    }
+  ],
+  "mutations_attempted": 9,
+  "mutations_rejected": 9,
+  "next_question": "Can a separately justified common-core class containing nontrivial matter or link cylinders be added while retaining the same geometric inclusion and a regulator-uniform interaction bound, rather than only the anchor-aperture cylinder?",
+  "non_claims": [
+    "This contract is a researcher proposal, not an external source or physical authority.",
+    "The finite Q=1 result is not retroactive evidence that PAH-001 already contained this refinement map.",
+    "No global uniform, continuum, infinite-volume, physical-sector, Pre-A, spacetime, gravity, QFT, Yang--Mills, mass-gap or TOE conclusion follows.",
+    "No static fit selects the dynamics, and Markov time is not quantum real time, proper time or Lorentzian time."
+  ],
+  "passed": 4,
+  "physical_progress": false,
+  "reproduction": {
+    "command": "python codes/foundations/pah_omc005_nonzero_q_generator_hostile.py --output claims/C6-SPACETIME-SIGNATURE/runs/2026-09-04-pah-omc005-nonzero-q-generator/hostile.json"
+  },
+  "result_id": "R-485",
+  "run_kind": "hostile",
+  "schema": "tect/pah-omc005-nonzero-q-generator-hostile/1.0",
+  "scientific_transition": false,
+  "source_hashes": {
+    "PAH-001": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "PAH-OMC-004": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c",
+    "PAH-OMC-005": "c779edafc99604047767864f14a2ea0840a7d96f8d5a2f7266bcbdfd2aea6ae5",
+    "PAH-OMC-005-GEN-MANIFEST": "c22b336cf17939ace8076fce9e97553f61e0db1b3e7a2737cc1aff37012003b3"
+  },
+  "stage2_status": "HOLD_FOR_EVIDENCE",
+  "task_id": "T-054",
+  "verdict": "EXACT_NONZERO_Q_ANCHOR_GENERATOR_COMPATIBILITY",
+  "verification": "PASS"
+}

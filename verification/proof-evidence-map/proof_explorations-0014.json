@@ -10626,6 +10626,257 @@
       "task_id": "T-054",
       "title": "A2/R-157/R-158 integrated verifier synchronization repair",
       "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "check": "Does the direct-method paragraph silently promote a finite-torus statement to an infinite-volume theorem?",
+          "disposition": "DISMISSED: the paragraph and boundary retain the fixed side-16 torus and explicitly exclude thermodynamic limits."
+        },
+        {
+          "check": "Does defining N=N_loc+N_II alter the registered functional or its gradient convention?",
+          "disposition": "DISMISSED: N_loc is the real gradient of the already declared local polynomial, and N_II is unchanged; verifier regressions pass."
+        },
+        {
+          "check": "Could the rendered PDF still contain literal missing control names or unresolved references after the repair?",
+          "disposition": "DISMISSED: source control scan and pdfplumber checks report zero unescaped qquad, zero literal qquad, zero undefined markers, zero placeholders, and all references resolve."
+        },
+        {
+          "check": "Does this repository-local repair substitute for an external mathematician?",
+          "disposition": "UPHELD AS LIMITATION: external proof audit, specialist literature review, operator confirmation, and capstone remain open."
+        }
+      ],
+      "assumptions": [
+        "The pinned Class-II coefficient matrix is positive semidefinite pointwise through the B(u) representation already audited by A2.",
+        "The fixed periodic side-16 torus has the stated Rellich compact embeddings for bounded H^2 sequences.",
+        "The nonnegative spectral remainder L-lambda_0 has fourth-order high-frequency growth and only finitely many zero modes at the ground shell.",
+        "The newly stated direct-method paragraph is an analytic proof obligation for external review, not a computational certification."
+      ],
+      "boundary": "Finite side-16 classical variational ensemble and A2 gradient-flow manuscript only. No infinite-volume, continuum, quantum, KMS, physical-charge, vacuum, BCC, cosmological, or Sector-A closure claim.",
+      "claim_ids": [
+        "A2-FULL-PRODUCTION-WELLPOSED"
+      ],
+      "classification": "PUBLICATION_PROOF_TEXT_AUDIT_REPAIR",
+      "decision_reason": "The manuscript was strengthened with a direct-method argument: a high-frequency coercivity split for L-lambda_0, polynomial absorption of the negative chemical-potential term, Rellich compactness, and weak lower semicontinuity of the spectral and positive Class-II terms. The previously implicit notation N is now defined as N_loc+N_II. PDF QA also found and repaired fourteen missing LaTeX \\qquad controls. These are proof-text and presentation repairs only; no claim tier or mathematical scope changed.",
+      "evidence_level": "T5 repository-local proof-text repair with exact/executable regression and rendered-PDF QA; no external audit",
+      "evidence_refs": [
+        "publish/papers/a2-r157-r158-ensemble-minimizers/manuscript.tex#eq:ensemble-high-frequency",
+        "publish/papers/a2-r157-r158-ensemble-minimizers/manuscript.tex#eq:ensemble-polynomial-coercivity",
+        "publish/papers/a2-r157-r158-ensemble-minimizers/manuscript.tex#eq:full-nonlinear-map",
+        "publish/papers/a2-r157-r158-ensemble-minimizers/proof-audit.md#R-158-3",
+        "publish/papers/a2-r157-r158-ensemble-minimizers/STATUS.md#Version-history",
+        "publish/papers/a2-r157-r158-ensemble-minimizers/README.md#Build",
+        "publish/papers/a2-r157-r158-ensemble-minimizers/manuscript.pdf#rendered-pages",
+        "codes/foundations/a2_full_production_verify.py#A2-FULL-PRODUCTION-VERIFY-PASS",
+        "codes/foundations/a2_pinned_functional_unique_zero_global_minimizer_verify.py#integrated",
+        "codes/foundations/a2_charge_ensemble_first_order_shell_transition_verify.py#integrated"
+      ],
+      "finding": "The direct-method paragraph supplies the missing existence mechanism for a nonzero grand-potential minimizer at mu>mu_t at the declared fixed side-16 torus: coercivity in H^2 follows after absorbing finite-dimensional low modes and the negative L^2 term with the sextic density term, while compact convergence of coefficients and weak convergence of gradients give the required lower-semicontinuity route. The full nonlinear map is explicitly N(u)=N_loc(u)+N_II(u), so the local-Lipschitz estimate used by the mild and Galerkin proofs has a defined target.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": [
+          "R-157",
+          "R-158"
+        ]
+      },
+      "gate_ids": [
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001373",
+      "method": [
+        "Audit the R-158 grand-potential assertion against the direct-method requirements: coercivity, compactness, and weak lower semicontinuity.",
+        "Add the high-frequency spectral inequality and polynomial Young bound, then state the Rellich and coefficient-convergence argument in manuscript.tex.",
+        "Define the real local polynomial gradient and the full lower-order map N=N_loc+N_II in the A2 evolution proof.",
+        "Repair all source occurrences of missing \\qquad controls, compile with bundled Tectonic, render all ten PDF pages, and run text/reference checks.",
+        "Rerun the A2 full-production, R-157 integrated, and R-158 integrated verifiers to confirm that the manuscript-only repair does not alter registered evidence."
+      ],
+      "missing_assumptions": [
+        "Signed independent mathematician proof audit of the high-frequency split, polynomial absorption, and Class-II weak lower semicontinuity.",
+        "Specialist literature and novelty review.",
+        "Operator confirmation of the integrated referee package before constructing the PUBLISHED capstone bundle."
+      ],
+      "next_action": "Submit the revised proof-audit checklist and manuscript to an independent mathematician; record every objection and repair before requesting operator confirmation and the PUBLISHED capstone bundle.",
+      "non_claims": [
+        "No A2, R-157, or R-158 theorem statement, tier, coefficient, or source hash was changed.",
+        "Executable PASS counts do not replace an analytic proof audit or specialist novelty review.",
+        "The LaTeX control repair is presentation QA and not evidence for a stronger theorem.",
+        "No PUBLISHED bundle, submission, upload, tag, or external referee sign-off is asserted."
+      ],
+      "provenance": "contemporaneous",
+      "question": "Does the integrated A2/R-157/R-158 manuscript explicitly justify the R-158 global-minimizer existence step for mu>mu_t and use a defined full lower-order map in the A2 flow proof, while remaining within the fixed finite-torus scope?",
+      "recorded_at": "2026-09-03T15:23:26Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001372",
+          "relation": "continues"
+        }
+      ],
+      "reproduction": [
+        "E:/Dev/TECT.venv/Scripts/python.exe -X utf8 codes/foundations/a2_full_production_verify.py",
+        "E:/Dev/TECT.venv/Scripts/python.exe -X utf8 codes/foundations/a2_pinned_functional_unique_zero_global_minimizer_verify.py",
+        "E:/Dev/TECT.venv/Scripts/python.exe -X utf8 codes/foundations/a2_charge_ensemble_first_order_shell_transition_verify.py",
+        "Tectonic compile command in publish/papers/a2-r157-r158-ensemble-minimizers/README.md",
+        "pdftoppm -png -r 150 publish/papers/a2-r157-r158-ensemble-minimizers/manuscript.pdf tmp/pdfs/a2-r157-r158-v0.1.2/page"
+      ],
+      "reviewed_on": "2026-09-03",
+      "revisit_condition": "Reopen if an external audit rejects the direct-method coercivity, compactness, Class-II lower-semicontinuity, or the full-map notation, or if the pinned functional/scope changes.",
+      "schema": "tect/proof-exploration/1.0",
+      "schema_version": "1.0",
+      "source_authorities": [
+        {
+          "path": "publish/papers/a2-r157-r158-ensemble-minimizers/manuscript.tex",
+          "role": "integrated manuscript proof text and theorem scope",
+          "source_id": "A2-R157-R158-MANUSCRIPT"
+        },
+        {
+          "path": "publish/papers/a2-r157-r158-ensemble-minimizers/proof-audit.md",
+          "role": "theorem obligations and external questions",
+          "source_id": "A2-R157-R158-PROOF-AUDIT"
+        },
+        {
+          "path": "claims/A2-FULL-PRODUCTION-WELLPOSED/status.json",
+          "role": "registered claim tier and no-overclaim boundary",
+          "source_id": "A2-FULL-PRODUCTION-WELLPOSED"
+        }
+      ],
+      "task_id": "T-054",
+      "title": "A2/R-157/R-158 independent paper and reproduction package",
+      "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "check": "Could Q=1 be vacuous?",
+          "disposition": "DISMISSED: every enumerated state has one radial quantum and both lanes assert the charge sum."
+        },
+        {
+          "check": "Could the diagonal be a colour-only substitution?",
+          "disposition": "DISMISSED: d0 is an independent edge in two oriented triangle faces and hostile mutation rejects its removal."
+        },
+        {
+          "check": "Could the row equality be fitted after projection?",
+          "disposition": "DISMISSED: the midpoint exponent is recomputed from the full exact Delta F and hostile mutation rejects altered rates."
+        },
+        {
+          "check": "Does this finite result prove a global uniform refinement?",
+          "disposition": "UPHELD AND BLOCKED: only the anchor-aperture cylinder and one finite Q=1 fixture are covered."
+        }
+      ],
+      "assumptions": [
+        "PAH-001 and PAH-OMC-004 remain byte-identical at their pinned hashes.",
+        "The Q=1 fixture is a finite researcher proposal and uses the unchanged displayed couplings and midpoint rate.",
+        "The neutral inclusion adds only zero-charge remote coordinates and preserves the four-vertex anchor closure.",
+        "The common observable is the bounded anchor-aperture cylinder, so all non-aperture roots have zero observable increment.",
+        "K=2 link inverses use the exact self-inverse sign in the displayed oriented Wilson words."
+      ],
+      "boundary": "Finite local compatibility only. The result does not close T-054, does not change any canonical gate or claim tier, and does not establish an infinite-volume generator, uniform limit, physical sector, Pre-A, spacetime, gravity, QFT, Yang--Mills, continuum, mass gap or TOE conclusion.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "classification": "MAINLINE_ADVANCE_NONZERO_Q_LOCAL_GENERATOR",
+      "decision_reason": "R-484 established the local row mechanism only on a Q=0 diagnostic. This result supplies a genuinely nonzero-charge finite state correspondence and replays the same unchanged PAH functional and rate, so it advances the geometric candidate without treating the new map as pre-existing PAH-001 structure.",
+      "evidence_level": "T0 finite exact nonzero-Q generator-row replay with primary, non-importing independent, hostile, integrated and Lean verification",
+      "evidence_refs": [
+        "strategy/pa-hyp/PAH-OMC-005-nonzero-q-generator-v1.json#compatibility_proposition",
+        "strategy/pa-hyp/PAH-OMC-005-nonzero-q-generator-manifest.json#contract",
+        "strategy/pa-hyp/R485-certificate.md#Exact-proposition-and-scope",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-04-pah-omc005-nonzero-q-generator/primary.json#generator_rows",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-04-pah-omc005-nonzero-q-generator/independent.json#generator_rows",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-04-pah-omc005-nonzero-q-generator/hostile.json#mutations",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-04-pah-omc005-nonzero-q-generator/integrated.json#verification_summary",
+        "verification/lean/Tect/R485.lean#generator_row_level_identity"
+      ],
+      "finding": "The anchor interaction closure is identical at G_1 and G_2. With K=2, M_s=M_psi=1 and Q=1, all 32768 finite patch states have identical exact rows (Delta F, mobility^2, observable increments and midpoint exponent). The primary lane passes 21/21, independent 16/16, hostile 9/9 mutations rejected, integrated 17/17 and Lean R485 compiles.",
+      "formal_refs": {
+        "events": [
+          "20260904-r-485-pah-omc-005-nonzero-q-anchor-generator-co"
+        ],
+        "negatives": [],
+        "results": [
+          "R-485"
+        ]
+      },
+      "gate_ids": [
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001374",
+      "method": [
+        "Create the separately hashed researcher contract PAH-OMC-005 without modifying PAH-001 or PAH-OMC-004.",
+        "Fix the genuine square-to-two-triangle diagonal strip and the anchor interaction closure at post-boundary levels n>=1.",
+        "Define the geometric inclusion by retaining old coordinates and adding neutral zero-charge coordinates; use the pointwise anchor-aperture cylinder as the common observable lift.",
+        "Evaluate the full displayed PAH-001 functional, including onsite matter polynomial, aperture stiffness, covariant matter edges and Wilson faces, on every Q=1 patch state.",
+        "Compare the exact midpoint generator tuple between G_1 and the neutral inclusion in G_2, then independently rebuild the same rows without importing the primary implementation.",
+        "Run hostile mutations for Q=0 substitution, colour-only topology, omitted matter/face terms, fitted rates, wrong mobility, frontier leakage, charge-changing inclusion and physical promotion; cross-check the finite arithmetic in Lean."
+      ],
+      "missing_assumptions": [
+        "A total gauge-equivariant refinement map for arbitrary fine matter/link cylinders.",
+        "A common invariant algebra and root multiplicity theorem beyond the anchor aperture.",
+        "A regulator-, volume- and source-uniform interaction estimate and convergence theorem in the inherited limit order."
+      ],
+      "next_action": "Construct a new hash-pinned contract for a nontrivial matter or link cylinder and prove its boundary-root transport or record an exact obstruction; do not infer it from the anchor-aperture result.",
+      "non_claims": [
+        "No physical Pre-A, spacetime, gravity, QFT, Yang--Mills, continuum, mass-gap or TOE conclusion.",
+        "No retroactive modification or completion of PAH-001, PAH-OMC-001, PAH-OMC-003 or PAH-OMC-004.",
+        "No global uniform estimate, ordered limit or physical interpretation follows from the 32768 finite rows."
+      ],
+      "provenance": "contemporaneous",
+      "question": "Does the actual unchanged PAH-001 midpoint generator remain compatible with a genuine PAH-OMC-004 geometric strip refinement on a nonzero-Q common anchor cylinder?",
+      "recorded_at": "2026-09-03T15:45:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001371",
+          "relation": "continues"
+        }
+      ],
+      "reproduction": [
+        "python codes/foundations/pah_omc005_nonzero_q_generator.py",
+        "python codes/foundations/pah_omc005_nonzero_q_generator_independent.py",
+        "python codes/foundations/pah_omc005_nonzero_q_generator_hostile.py",
+        "python verification/scripts/pah_omc005_nonzero_q_generator_verify.py",
+        "python verification/scripts/lean_toolchain_check.py --metadata",
+        "Set-Location verification/lean; & \"$env:USERPROFILE/.elan/toolchains/leanprover--lean4---v4.32.1/bin/lake.exe\" env lean Tect/R485.lean"
+      ],
+      "reviewed_on": "2026-09-04",
+      "revisit_condition": "Reopen the uniform lane only when the full nonzero-Q state transport, boundary root map and common-core norm are explicitly supplied.",
+      "schema": "tect/proof-exploration/1.0",
+      "schema_version": "1.0",
+      "source_authorities": [
+        {
+          "path": "strategy/pa-hyp/PAH-001-v1.json",
+          "role": "immutable functional, regulator, move and rate source",
+          "sha256": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+          "source_id": "PAH-001"
+        },
+        {
+          "path": "strategy/pa-hyp/PAH-OMC-004-v1.json",
+          "role": "geometric strip predecessor",
+          "sha256": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c",
+          "source_id": "PAH-OMC-004"
+        },
+        {
+          "path": "strategy/pa-hyp/PAH-OMC-005-nonzero-q-generator-v1.json",
+          "role": "researcher-owned nonzero-Q contract",
+          "sha256": "c779edafc99604047767864f14a2ea0840a7d96f8d5a2f7266bcbdfd2aea6ae5",
+          "source_id": "PAH-OMC-005"
+        },
+        {
+          "path": "strategy/pa-hyp/PAH-OMC-005-nonzero-q-generator-manifest.json",
+          "role": "contract and parent hash manifest",
+          "sha256": "c22b336cf17939ace8076fce9e97553f61e0db1b3e7a2737cc1aff37012003b3",
+          "source_id": "PAH-OMC-005-GEN-MANIFEST-001"
+        }
+      ],
+      "stop_or_redesign": [
+        "Retain this result at T0 and keep Stage 2 HOLD_FOR_EVIDENCE.",
+        "If the next full cylinder cannot obtain a gauge-equivariant boundary map, record the exact obstruction rather than fitting a projection.",
+        "Do not use this result for physical-empty, Reading-H, continuum or Yang--Mills claims."
+      ],
+      "task_id": "T-054",
+      "title": "PAH-OMC-005 nonzero-Q anchor generator compatibility",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",
