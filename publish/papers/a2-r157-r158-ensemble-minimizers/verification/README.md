@@ -15,6 +15,7 @@ $py = "E:\Dev\TECT.venv\Scripts\python.exe"
 & $py codes/foundations/a2_charge_ensemble_first_order_shell_transition.py
 & $py codes/foundations/a2_charge_ensemble_first_order_shell_transition_independent.py
 & $py codes/foundations/a2_charge_ensemble_first_order_shell_transition_verify.py
+& $py verification/scripts/a2_r472_lean_crosscheck_verify.py --output tmp/r472-integrated.json
 ```
 
 Expected registered results are:
@@ -27,10 +28,28 @@ Expected registered results are:
 * R-472 exact-core sidecar: primary `30/30`, independent `22/22`, hostile
   `12/12`, integrated `22/22`, with Lean compilation PASS.
 
+The last command is assurance-only: R-472 is explicitly non-bearing and must
+not be used to promote the A2/R-157/R-158 theorem claims.
+
 These executable checks recompute the exact constants, signs, spectral
 intervals, normalizations, and hostile mutations recorded by the claim.  They
 are not substitutes for the analytic proof, the literature crosswalk, or an
 external referee audit.
+
+## Current replay boundary
+
+On 2026-09-03 the A2 wrapper and all four R-157/R-158 child lanes reproduced
+their registered PASS counts.  A shared record predicate in the two integrated
+verifiers was then repaired in v1.0.2: the lookup key, structured title, status,
+and exact gate are authoritative, while the free-form task note is no longer
+required to repeat those tokens.  The repair and its adversarial boundary are
+recorded as `EXP-001372`, correcting the earlier replay boundary `EXP-001370`.
+
+A fresh replay now passes R-157 integrated verification `144/144` (including
+legacy A2 `61/61`) and R-158 integrated verification `155/155` (including the
+R-157/A2 regression).  This closes the repository synchronization gate only;
+it does not replace the analytic proof, specialist literature review, external
+proof audit, operator confirmation, capstone bundle, or release check.
 
 ## Canonical evidence paths
 
@@ -40,6 +59,7 @@ external referee audit.
 * `claims/A2-FULL-PRODUCTION-WELLPOSED/notes/a2-pinned-functional-unique-zero-global-minimizer-260803-v1.0.tex.txt`
 * `claims/A2-FULL-PRODUCTION-WELLPOSED/notes/a2-charge-ensemble-first-order-shell-transition-260803-v1.0.tex.txt`
 * `claims/A2-FULL-PRODUCTION-WELLPOSED/bundle/A2-Full-Production-WellPosedness-T6-260717/`
+* `publish/papers/a2-r157-r158-ensemble-minimizers/proof-audit.md`
 
 The manuscript's numerical table is valid only at the registered scope.  Any
 failed command, source-hash drift, or proof-audit objection must stop the

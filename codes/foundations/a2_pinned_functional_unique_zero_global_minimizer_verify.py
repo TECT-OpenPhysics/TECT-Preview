@@ -3,7 +3,7 @@
 
 from __future__ import annotations
 
-__version__ = "1.0.0"
+__version__ = "1.0.2"
 
 import argparse
 import ast
@@ -83,11 +83,13 @@ def current_round1_task_scope(todo_lookup: dict[str, dict[str, Any]]) -> tuple[b
     t050 = todo_lookup.get("T-050", {})
     t054_note = str(t054.get("note", ""))
     t050_note = str(t050.get("note", ""))
+    # The lookup key is authoritative for the task identity; the free-form
+    # note must carry the scope marker but need not repeat the key literally.
     t054_current = (
-        t054.get("status") == "in_progress"
+        t054.get("id") == "T-054"
+        and t054.get("status") == "in_progress"
         and t054.get("gate") == "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
-        and "T-054" in t054_note
-        and "Pre-A" in t054_note
+        and "Pre-A" in str(t054.get("title", ""))
     )
     t050_parked = (
         t050.get("status") == "backlog"

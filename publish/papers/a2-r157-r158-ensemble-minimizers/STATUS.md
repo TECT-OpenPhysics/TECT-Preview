@@ -1,7 +1,7 @@
 # STATUS — A2/R-157/R-158 ensemble-minimizers
 
 Lifecycle: `draft`
-Version: `0.1.0`
+Version: `0.1.1`
 Date: `2026-09-03`
 Owner: TECT publication lane
 
@@ -13,12 +13,22 @@ uses only the registered A2 claim, R-157, R-158, and the non-bearing R-472
 assurance sidecar.  It makes no physical-vacuum, BCC, infinite-volume,
 quantum-continuum, or Sector-A closure claim.
 
+The latest replay confirms all child and integrated audit lanes.  The
+shared T-054 record predicate was repaired in verifier v1.0.2 to use structured
+task id/title/status/gate fields rather than redundant free-form note tokens;
+the repair is recorded in exploration `EXP-001372`.  The repository-wide
+release check remains open while concurrent PAH work is still changing generated
+catalog, lineage, and proof-map surfaces; this is a repository-state gate, not
+a failure of the A2/R-157/R-158 theorem checks.
+
 ## Completion gates
 
 - [x] Scope fixed to the hash-pinned P1/A2 functional on the side-16 torus.
 - [x] R-157 and R-158 are stated as different variational problems.
 - [x] Proof text has been synthesized into one manuscript source.
 - [x] Existing primary and independent executable audits are identified.
+- [x] R-157/R-158 integrated authority, artifact, PDF, legacy, and regression checks pass.
+- [x] Internal adversarial proof-audit checklist and external-review questions recorded.
 - [x] LaTeX compile and zero-overfull visual review (Tectonic exit 0; final
   ten-page A4 PDF rendered and inspected page by page on 2026-09-03).
 - [ ] Full proof audit by an independent mathematician.
@@ -38,5 +48,6 @@ remain authoritative.
 ## Version history
 
 - `0.1.0` (2026-09-03): initial integrated manuscript and audit package draft.
-- `0.1.0` (2026-09-03): fixed the chain-rule integral notation, compiled the
+- `0.1.1` (2026-09-03): repaired the structured T-054 synchronization predicate, refreshed pinned verifier/child hashes, reproduced both integrated PASS lanes, and added the internal proof-audit checklist.
+- QA checkpoint for `0.1.0` (2026-09-03): fixed the chain-rule integral notation, compiled the
   ten-page PDF, and completed the rendered-page visual review.

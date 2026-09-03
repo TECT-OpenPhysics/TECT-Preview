@@ -1,0 +1,143 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "schema_version": "1.0",
+  "id": "EXP-001371",
+  "recorded_at": "2026-09-03T14:40:00Z",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-09-03",
+  "provenance": "contemporaneous",
+  "task_id": "T-054",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "gate_ids": [
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "title": "PAH-OMC-004 explicit anchor generator-row replay",
+  "question": "Does the actual PAH midpoint generator have identical rows on the n=1 and n=2 anchor patches of the genuine diagonal-incidence successor for every finite Q=0 local state, while retaining the n=0 boundary defect?",
+  "method": [
+    "Pin the immutable PAH-001 bytes, the separately hashed PAH-OMC-004 successor, and a new PAH-OMC-004-GEN-001 verification sidecar; do not edit any parent.",
+    "Rebuild the two oriented triangle terms, aperture onsite and edge terms, and the unchanged midpoint rate from the displayed PAH functional on the four-vertex anchor patch.",
+    "Enumerate all 2^4 aperture assignments and 2^5 Z_2 link assignments at Q=0, retaining the exact tuple (state, direction, Delta F, mobility^2, observable increment, rate exponent).",
+    "Construct the declared G_1 and G_2 strip incidence signatures and verify that the anchor interaction closure and affected term support are identical; remote terms cancel under an anchor aperture flip.",
+    "Recompute the preceding square boundary with diagonal link zero and one, preserving the exact nonzero defect instead of averaging, fitting or adding a term.",
+    "Run primary, non-importing independent, hostile mutation, integrated and Lean lanes; keep the result finite/local and claim-nonbearing."
+  ],
+  "finding": "The exact PAH generator row for the anchor-aperture cylinder agrees between G_1 and G_2 for all 512 binary Q=0 patch states. The primary lane passes 30/30, the non-importing independent lane passes 14/14, hostile review rejects 16/16 mutations, the integrated verifier passes 28/28, and Lean R484 compiles. The n=0 square-to-split boundary remains Delta F values 1/8, 1/4 and -55/36 with hidden diagonal defect 16/9.",
+  "verdict": "advanced",
+  "classification": "MAINLINE_ADVANCE_LOCAL_GENERATOR_REPLAY",
+  "decision_reason": "R-483 supplied a local geometric incidence family but did not explicitly enumerate the actual PAH generator rows. This sidecar closes that reproducibility gap on the declared anchor cylinder without changing PAH-001 or PAH-OMC-004. It is a finite Q=0 local check only; the active gate and Stage-2 evidence boundary remain unchanged.",
+  "boundary": "T0 claim-nonbearing finite/local structural verification for PAH-OMC-004. The 512-state enumeration is not a global all-cylinder theorem, a source-authorized nonzero-Q result, a volume-uniform estimate, a common infinite-volume dynamics theorem, an ordered limit or a physical interpretation.",
+  "evidence_level": "T0 finite exact generator-row replay with primary, independent, hostile, integrated and Lean verification",
+  "evidence_refs": [
+    "strategy/pa-hyp/PAH-001-v1.json#functional_or_action",
+    "strategy/pa-hyp/PAH-001-v1.json#dynamics",
+    "strategy/pa-hyp/PAH-OMC-004-v1.json#exact_scope",
+    "strategy/pa-hyp/PAH-OMC-004-v1.json#maps_and_parameters",
+    "strategy/pa-hyp/PAH-OMC-004-generator-replay-v1.json#exact_scope",
+    "strategy/pa-hyp/PAH-OMC-004-generator-replay-manifest.json#sidecar",
+    "strategy/pa-hyp/R484-certificate.md#Exact-finite-replay",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-03-pah-omc004-generator-replay/primary.json#generator_rows",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-03-pah-omc004-generator-replay/independent.json#generator_rows",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-03-pah-omc004-generator-replay/hostile.json#mutations",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-03-pah-omc004-generator-replay/integrated.json#verification_summary",
+    "verification/lean/Tect/R484.lean#generator_row_level_identity",
+    "verification/lean/Tect/R484.lean#boundary_defect_exact"
+  ],
+  "formal_refs": {
+    "results": [
+      "R-484"
+    ],
+    "negatives": [],
+    "events": [
+      "20260903-r-484-pah-omc-004-explicit-generator-row-replay"
+    ]
+  },
+  "source_authorities": [
+    {
+      "source_id": "PAH-001",
+      "path": "strategy/pa-hyp/PAH-001-v1.json",
+      "role": "immutable parent functional, moves, mobility and regulator",
+      "sha256": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37"
+    },
+    {
+      "source_id": "PAH-OMC-004",
+      "path": "strategy/pa-hyp/PAH-OMC-004-v1.json",
+      "role": "separately versioned geometric incidence successor",
+      "sha256": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c"
+    },
+    {
+      "source_id": "PAH-OMC-004-GEN-001",
+      "path": "strategy/pa-hyp/PAH-OMC-004-generator-replay-v1.json",
+      "role": "researcher verification sidecar for explicit local generator rows",
+      "sha256": "87f5d3ee29b15f57f3e461b4b4064955b5f1ced0ab0bdf2b4763ed0a7ffe3e3e"
+    },
+    {
+      "source_id": "PAH-OMC-004-GEN-MANIFEST-001",
+      "path": "strategy/pa-hyp/PAH-OMC-004-generator-replay-manifest.json",
+      "role": "sidecar and parent hash manifest",
+      "sha256": "88a07db1123a229733bdf7ab4fa413d0e6eb903001bc7faa1e44497ae31e9e57"
+    }
+  ],
+  "reproduction": [
+    "python -X utf8 codes/foundations/pah_omc004_generator_replay.py",
+    "python -X utf8 codes/foundations/pah_omc004_generator_replay_independent.py",
+    "python -X utf8 codes/foundations/pah_omc004_generator_replay_hostile.py",
+    "python -X utf8 verification/scripts/pah_omc004_generator_replay_verify.py",
+    "python -X utf8 verification/scripts/lean_toolchain_check.py --metadata",
+    "Set-Location verification/lean; & \"$env:USERPROFILE/.elan/toolchains/leanprover--lean4---v4.32.1/bin/lake.exe\" env lean Tect/R484.lean"
+  ],
+  "assumptions": [
+    "PAH-001 and PAH-OMC-004 remain byte-identical at the pinned hashes.",
+    "The sidecar's Q=0 restriction is a finite diagnostic slice, so all nonnegative radial levels are zero and radial transfer roots are inactive.",
+    "The anchor cylinder is generated by bounded functions of s_a; the basis 1, s_a and the j_a=1 indicator spans the tested observable dependence.",
+    "The n=1 and n=2 strip anchor incidence signatures are the declared successor maps, and terms whose support excludes a are unchanged under the anchor flip.",
+    "The displayed Z_2 orientation convention uses self-inverse link signs while retaining the declared oriented face words."
+  ],
+  "missing_assumptions": [
+    "A source-authorized nonzero-Q state transport and root multiplicity contract.",
+    "A global invariant common algebra and a volume-, regulator-, phase- and source-uniform interaction estimate.",
+    "A convergence theorem in the inherited ordered-limit sequence."
+  ],
+  "non_claims": [
+    "This is a verification sidecar and is not a new physical source or a replacement for PAH-001.",
+    "The exact equality is only for the declared anchor-aperture cylinder on finite G_1/G_2 patches and is not a global or uniform theorem.",
+    "The Q=0 slice is not the physical vacuum, Reading-H or Pre-A.",
+    "Markov time is not quantum real time, proper time or Lorentzian time.",
+    "No physical Pre-A, spacetime, event horizon, gravity, QFT, Yang--Mills, continuum, mass-gap, cosmic-origin or TOE conclusion follows."
+  ],
+  "adversarial_review": [
+    {
+      "check": "Could the replay be a colour-only fibre or duplicated transition?",
+      "disposition": "DISMISSED: the diagonal is an independent edge in both Wilson triangle incidences and the hostile lane rejects colour-only topology."
+    },
+    {
+      "check": "Could equality be forced by fitting rates, averaging remote variables or adding a counterterm?",
+      "disposition": "DISMISSED: the direct rows use the unchanged midpoint rate; hostile mutations reject rate fitting, conditional normalization and added terms."
+    },
+    {
+      "check": "Does the retained 16/9 boundary defect invalidate every refinement?",
+      "disposition": "UPHELD AND BOUNDED: it blocks equality at an affected boundary, while the result only asserts post-boundary local row equality."
+    },
+    {
+      "check": "Does all-state equality on this patch imply global uniformity or a continuum limit?",
+      "disposition": "UPHELD AND BLOCKED: nonzero-Q transport, common infinite-volume algebra and uniform estimates are missing."
+    },
+    {
+      "check": "Does the Q=0 row replay identify a physical sector?",
+      "disposition": "DISMISSED: the sidecar and all run outputs carry explicit physical-promotion firewalls."
+    }
+  ],
+  "next_action": "With a separately hashed owner packet only, construct a nonzero-Q geometric family and test whether the explicit interaction-closure estimate can be made uniform without changing PAH-001.",
+  "revisit_condition": "Reopen the broader refinement lane after source-authorized nonzero-Q transport, common-core completion and an independent uniform estimate are present.",
+  "related": [
+    {
+      "id": "EXP-001369",
+      "relation": "continues"
+    }
+  ],
+  "stop_or_redesign": [
+    "Do not promote the local equality to a global, continuum, physical or QFT result.",
+    "If nonzero-Q transport cannot be sourced, retain R-484 as a finite/local result and record the missing owner contract instead of inventing one."
+  ]
+}

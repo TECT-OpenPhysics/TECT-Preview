@@ -1,0 +1,50 @@
+{
+  "schema": "tect/pah-omc004-generator-replay-sidecar/1.0",
+  "contract_id": "PAH-OMC-004-GEN-001",
+  "version": "0.1.0",
+  "title": "Explicit PAH generator locality replay for the geometric incidence successor",
+  "proposed_at": "2026-09-03",
+  "provenance": {
+    "class": "RESEARCHER_VERIFICATION_SIDECAR",
+    "definition_owner": "TECT_RESEARCH_PROGRAM",
+    "external_source": false,
+    "physical_authority": false,
+    "epistemic_layer": "L2_FINITE_STRUCTURAL_VERIFICATION"
+  },
+  "parent": {
+    "contract_id": "PAH-OMC-004",
+    "path": "strategy/pa-hyp/PAH-OMC-004-v1.json",
+    "sha256": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c"
+  },
+  "purpose": "Recompute the actual PAH midpoint generator rows on the anchor interaction patch of G_n and verify exact equality between levels n=1 and n=2 for every finite Q=0 local state. This sidecar adds no model term, move, parameter or projection.",
+  "exact_scope": {
+    "levels": [1, 2],
+    "carrier_family": "The PAH-OMC-004 anchored two-row strip G_n with q_i split for i<n and frontier square q_n.",
+    "anchor_patch": "a=(0,0), b=(1,0), c=(0,1), d=(1,1), with edges h_0^0=(a,b), v_0=(a,c), d_0=(a,d), h_0^1=(c,d), v_1=(b,d) and the two split faces [h_0^0,v_1,d_0^(-1)] and [d_0,(h_0^1)^(-1),v_0^(-1)].",
+    "state": "All four patch apertures j in {0,1} and all five patch Z_2 links in {0,1}; Q=0 forces radial levels to zero and phase/link roots not changing the anchor aperture contribute zero to the chosen observable.",
+    "observable_core": "Every bounded function of the anchor aperture s_a, including f=s_a and the indicator of j_a=1; these are gauge neutral and anchor-preserving in the declared anchored strip.",
+    "projection": "The one-step projection retains the patch variables and drops the remote diagonal/new-column variables. For n>=1 the patch incidence and all PAH terms entering an anchor-aperture rate are identical.",
+    "generator": "For every valid aperture root at a, use c_r=m_r exp(-beta DeltaF/2) with the unchanged PAH aperture mobility and add c_r(f(r x)-f(x)); all other parent roots have zero observable increment.",
+    "normalization": "The unchanged finite counting-measure Gibbs midpoint rate; no conditional Gibbs average, rate fitting or counterterm.",
+    "limit": "No cutoff, volume, continuum, physical or observation limit; n is a finite strip/refinement label."
+  },
+  "compatibility_target": {
+    "exact_row_identity": "The exact tuple (DeltaF, mobility^2, observable increment) for every valid anchor-aperture root is equal between G_1 and G_2 for every patch state; therefore the generator value agrees for every bounded function of s_a.",
+    "boundary_scope": "The n=0 square-to-split boundary remains the explicit R-483 defect and is not erased. The sidecar tests the stationary local patch after that boundary, n>=1.",
+    "cumulative": "For the anchor-aperture cylinder, delta_n=0 for every n>=1, so every finite cumulative tail is exactly zero after the first geometric boundary."
+  },
+  "lean_entrypoint": "verification/lean/Tect/R484.lean",
+  "acceptance_conditions": [
+    "The parent PAH-OMC-004 hash matches and its no-parent-mutation firewall remains true.",
+    "The direct local energy uses only the PAH aperture onsite, edge stiffness and Wilson face terms with the declared Q=0 inputs.",
+    "All four patch apertures and five patch links are enumerated without importing the primary sidecar implementation.",
+    "The exact generator-row tuple agrees for every state at levels 1 and 2, and a nonzero n=0 boundary witness remains present.",
+    "Primary, non-importing independent, hostile and Lean checks pass."
+  ],
+  "non_claims": [
+    "This is a verification sidecar for PAH-OMC-004, not a new physical source or a replacement for PAH-001.",
+    "It proves exact generator equality only for the declared anchor-aperture cylinder and the n>=1 local strip patch; it is not a global all-cylinder or volume-uniform theorem.",
+    "No physical Pre-A, spacetime, gravity, QFT, Yang--Mills, continuum, mass-gap or TOE conclusion follows."
+  ],
+  "single_next_question": "Can the same explicit generator-row locality be proved for a source-authorized nonzero-Q cylinder family and then upgraded to a uniform interaction estimate?"
+}

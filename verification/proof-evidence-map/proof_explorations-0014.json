@@ -10260,6 +10260,372 @@
       "task_id": "T-054",
       "title": "PAH-OMC-004 genuine geometric incidence refinement with local common-core control",
       "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "check": "Does a child-lane PASS establish an integrated verifier PASS?",
+          "disposition": "UPHELD AS A GATE: the integrated record predicate is an additional reproducibility condition and remains open."
+        },
+        {
+          "check": "Is the stale T-054 text predicate evidence against the A2, R-157, or R-158 mathematics?",
+          "disposition": "DISMISSED: the failure occurs before any theorem-specific contradiction and the child exact audits pass."
+        },
+        {
+          "check": "Could the verifier be changed silently to force a PASS?",
+          "disposition": "UPHELD AS PROHIBITION: no canonical verifier, task record, claim card, or tier was edited in this replay."
+        }
+      ],
+      "assumptions": [
+        "The registered A2, R-157, and R-158 source files and claim-level result JSON files are unchanged.",
+        "The replay is a read-only reproduction check with temporary child outputs.",
+        "The T-054 task record in todo/todo.json is the current repository record for the integrated verifier predicate."
+      ],
+      "boundary": "This is a repository-local publication reproducibility gate for the finite A2/R-157/R-158 package. It is not a new theorem, a claim-tier change, a negative result about the functional, or evidence about any infinite-volume, quantum, or physical limit.",
+      "claim_ids": [
+        "A2-FULL-PRODUCTION-WELLPOSED"
+      ],
+      "classification": "PUBLICATION_REPRODUCTION_GATE",
+      "decision_reason": "The replay confirms the registered child arithmetic and audit lanes but cannot certify the integrated packages because both integrated verifiers reject the current T-054 record for lacking the literal token T-054 in its note. The failure is a stale record/verifier synchronization condition; changing either canonical source requires a separate governed repair and a fresh audit.",
+      "evidence_level": "T5 repository-local replay: child executable lanes pass; integrated verifier gate fails on a stale task-record predicate; no theorem promotion",
+      "evidence_refs": [
+        "codes/foundations/a2_full_production_verify.py#main",
+        "codes/foundations/a2_pinned_functional_unique_zero_global_minimizer_verify.py#current_round1_task_scope",
+        "codes/foundations/a2_charge_ensemble_first_order_shell_transition_verify.py#regression",
+        "todo/todo.json#T-054",
+        "publish/papers/a2-r157-r158-ensemble-minimizers/verification/README.md#verification-protocol"
+      ],
+      "finding": "A2 full-production replay passes 61/61. R-157 primary and independent replays pass 26/26 and 24/24. R-158 primary and independent replays pass 35/35 and 24/24. R-157 integrated and R-158 integrated each fail only the shared T-054 current-scope predicate because the task note does not contain the literal string T-054, although its status and gate fields match. The paper therefore remains draft and the integrated reproduction gate is open.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": []
+      },
+      "gate_ids": [
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001370",
+      "method": [
+        "Run the A2 full-production wrapper with temporary child JSON outputs.",
+        "Run the R-157 and R-158 primary and non-importing independent scripts into a temporary directory.",
+        "Run both integrated verifiers without changing their canonical output paths, then inspect the failing assertion and the current T-054 task record.",
+        "Compare the result with the paper protocol and retain the draft firewall."
+      ],
+      "missing_assumptions": [
+        "A governed choice of whether to update the verifier predicate or the T-054 task note while preserving provenance.",
+        "A fresh integrated R-157 and R-158 run after that synchronization repair.",
+        "Operator confirmation of the integrated referee package before building a dedicated capstone bundle."
+      ],
+      "next_action": "Keep the paper at draft, obtain an owner-authorized synchronization repair for the stale T-054 predicate, rerun both integrated verifiers, and only then consider the capstone reproduction bundle and release check.",
+      "non_claims": [
+        "No A2, R-157, or R-158 claim tier or source file is changed.",
+        "The integrated verifier failures are not a mathematical disproof and do not certify publication readiness.",
+        "No PUBLISHED bundle, submission, upload, tag, or external-audit completion is asserted.",
+        "No infinite-volume, continuum, quantum, physical-vacuum, BCC, or Sector-A conclusion follows."
+      ],
+      "provenance": "contemporaneous",
+      "question": "Do the current A2, R-157, and R-158 child and integrated verification lanes reproduce the registered package without a record-synchronization failure?",
+      "recorded_at": "2026-09-03T14:14:31Z",
+      "recorded_by": "Codex",
+      "related": [],
+      "reproduction": [
+        "E:\\Dev\\TECT.venv\\Scripts\\python.exe -X utf8 codes/foundations/a2_full_production_verify.py",
+        "E:\\Dev\\TECT.venv\\Scripts\\python.exe -X utf8 codes/foundations/a2_pinned_functional_unique_zero_global_minimizer.py --output tmp/paper-verification-20260903/r157-primary.json",
+        "E:\\Dev\\TECT.venv\\Scripts\\python.exe -X utf8 codes/foundations/a2_pinned_functional_unique_zero_global_minimizer_independent.py --output tmp/paper-verification-20260903/r157-independent.json",
+        "E:\\Dev\\TECT.venv\\Scripts\\python.exe -X utf8 codes/foundations/a2_pinned_functional_unique_zero_global_minimizer_verify.py --output tmp/paper-verification-20260903/r157-integrated.json",
+        "E:\\Dev\\TECT.venv\\Scripts\\python.exe -X utf8 codes/foundations/a2_charge_ensemble_first_order_shell_transition.py --output tmp/paper-verification-20260903/r158-primary.json",
+        "E:\\Dev\\TECT.venv\\Scripts\\python.exe -X utf8 codes/foundations/a2_charge_ensemble_first_order_shell_transition_independent.py --output tmp/paper-verification-20260903/r158-independent.json",
+        "E:\\Dev\\TECT.venv\\Scripts\\python.exe -X utf8 codes/foundations/a2_charge_ensemble_first_order_shell_transition_verify.py --output tmp/paper-verification-20260903/r158-integrated.json"
+      ],
+      "reviewed_on": "2026-09-03",
+      "revisit_condition": "Reopen the publication lane only after the owner-authorized record/verifier synchronization repair passes both integrated verifiers and the independent proof and literature audits remain open or are separately closed.",
+      "schema": "tect/proof-exploration/1.0",
+      "schema_version": "1.0",
+      "source_authorities": [
+        {
+          "path": "claims/A2-FULL-PRODUCTION-WELLPOSED/status.json",
+          "role": "registered A2 tier and scope",
+          "source_id": "A2-FULL-PRODUCTION-WELLPOSED"
+        },
+        {
+          "path": "claims/A2-FULL-PRODUCTION-WELLPOSED/claim.md",
+          "role": "registered R-157 and R-158 result boundaries",
+          "source_id": "R-157/R-158"
+        },
+        {
+          "path": "todo/todo.json",
+          "role": "current T-054 task record inspected by both integrated verifiers",
+          "source_id": "T-054"
+        }
+      ],
+      "stop_or_redesign": [
+        "Do not edit a verifier, task note, claim card, or generated index merely to make this replay pass.",
+        "Do not treat child arithmetic PASS as an integrated referee or publication PASS.",
+        "Do not build a PUBLISHED capstone bundle before operator confirmation."
+      ],
+      "task_id": "T-054",
+      "title": "A2/R-157/R-158 integrated verifier replay and stale T-054 predicate",
+      "verdict": "failed"
+    },
+    {
+      "adversarial_review": [
+        {
+          "check": "Could the replay be a colour-only fibre or duplicated transition?",
+          "disposition": "DISMISSED: the diagonal is an independent edge in both Wilson triangle incidences and the hostile lane rejects colour-only topology."
+        },
+        {
+          "check": "Could equality be forced by fitting rates, averaging remote variables or adding a counterterm?",
+          "disposition": "DISMISSED: the direct rows use the unchanged midpoint rate; hostile mutations reject rate fitting, conditional normalization and added terms."
+        },
+        {
+          "check": "Does the retained 16/9 boundary defect invalidate every refinement?",
+          "disposition": "UPHELD AND BOUNDED: it blocks equality at an affected boundary, while the result only asserts post-boundary local row equality."
+        },
+        {
+          "check": "Does all-state equality on this patch imply global uniformity or a continuum limit?",
+          "disposition": "UPHELD AND BLOCKED: nonzero-Q transport, common infinite-volume algebra and uniform estimates are missing."
+        },
+        {
+          "check": "Does the Q=0 row replay identify a physical sector?",
+          "disposition": "DISMISSED: the sidecar and all run outputs carry explicit physical-promotion firewalls."
+        }
+      ],
+      "assumptions": [
+        "PAH-001 and PAH-OMC-004 remain byte-identical at the pinned hashes.",
+        "The sidecar's Q=0 restriction is a finite diagnostic slice, so all nonnegative radial levels are zero and radial transfer roots are inactive.",
+        "The anchor cylinder is generated by bounded functions of s_a; the basis 1, s_a and the j_a=1 indicator spans the tested observable dependence.",
+        "The n=1 and n=2 strip anchor incidence signatures are the declared successor maps, and terms whose support excludes a are unchanged under the anchor flip.",
+        "The displayed Z_2 orientation convention uses self-inverse link signs while retaining the declared oriented face words."
+      ],
+      "boundary": "T0 claim-nonbearing finite/local structural verification for PAH-OMC-004. The 512-state enumeration is not a global all-cylinder theorem, a source-authorized nonzero-Q result, a volume-uniform estimate, a common infinite-volume dynamics theorem, an ordered limit or a physical interpretation.",
+      "claim_ids": [
+        "C6-SPACETIME-SIGNATURE"
+      ],
+      "classification": "MAINLINE_ADVANCE_LOCAL_GENERATOR_REPLAY",
+      "decision_reason": "R-483 supplied a local geometric incidence family but did not explicitly enumerate the actual PAH generator rows. This sidecar closes that reproducibility gap on the declared anchor cylinder without changing PAH-001 or PAH-OMC-004. It is a finite Q=0 local check only; the active gate and Stage-2 evidence boundary remain unchanged.",
+      "evidence_level": "T0 finite exact generator-row replay with primary, independent, hostile, integrated and Lean verification",
+      "evidence_refs": [
+        "strategy/pa-hyp/PAH-001-v1.json#functional_or_action",
+        "strategy/pa-hyp/PAH-001-v1.json#dynamics",
+        "strategy/pa-hyp/PAH-OMC-004-v1.json#exact_scope",
+        "strategy/pa-hyp/PAH-OMC-004-v1.json#maps_and_parameters",
+        "strategy/pa-hyp/PAH-OMC-004-generator-replay-v1.json#exact_scope",
+        "strategy/pa-hyp/PAH-OMC-004-generator-replay-manifest.json#sidecar",
+        "strategy/pa-hyp/R484-certificate.md#Exact-finite-replay",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-03-pah-omc004-generator-replay/primary.json#generator_rows",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-03-pah-omc004-generator-replay/independent.json#generator_rows",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-03-pah-omc004-generator-replay/hostile.json#mutations",
+        "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-03-pah-omc004-generator-replay/integrated.json#verification_summary",
+        "verification/lean/Tect/R484.lean#generator_row_level_identity",
+        "verification/lean/Tect/R484.lean#boundary_defect_exact"
+      ],
+      "finding": "The exact PAH generator row for the anchor-aperture cylinder agrees between G_1 and G_2 for all 512 binary Q=0 patch states. The primary lane passes 30/30, the non-importing independent lane passes 14/14, hostile review rejects 16/16 mutations, the integrated verifier passes 28/28, and Lean R484 compiles. The n=0 square-to-split boundary remains Delta F values 1/8, 1/4 and -55/36 with hidden diagonal defect 16/9.",
+      "formal_refs": {
+        "events": [
+          "20260903-r-484-pah-omc-004-explicit-generator-row-replay"
+        ],
+        "negatives": [],
+        "results": [
+          "R-484"
+        ]
+      },
+      "gate_ids": [
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001371",
+      "method": [
+        "Pin the immutable PAH-001 bytes, the separately hashed PAH-OMC-004 successor, and a new PAH-OMC-004-GEN-001 verification sidecar; do not edit any parent.",
+        "Rebuild the two oriented triangle terms, aperture onsite and edge terms, and the unchanged midpoint rate from the displayed PAH functional on the four-vertex anchor patch.",
+        "Enumerate all 2^4 aperture assignments and 2^5 Z_2 link assignments at Q=0, retaining the exact tuple (state, direction, Delta F, mobility^2, observable increment, rate exponent).",
+        "Construct the declared G_1 and G_2 strip incidence signatures and verify that the anchor interaction closure and affected term support are identical; remote terms cancel under an anchor aperture flip.",
+        "Recompute the preceding square boundary with diagonal link zero and one, preserving the exact nonzero defect instead of averaging, fitting or adding a term.",
+        "Run primary, non-importing independent, hostile mutation, integrated and Lean lanes; keep the result finite/local and claim-nonbearing."
+      ],
+      "missing_assumptions": [
+        "A source-authorized nonzero-Q state transport and root multiplicity contract.",
+        "A global invariant common algebra and a volume-, regulator-, phase- and source-uniform interaction estimate.",
+        "A convergence theorem in the inherited ordered-limit sequence."
+      ],
+      "next_action": "With a separately hashed owner packet only, construct a nonzero-Q geometric family and test whether the explicit interaction-closure estimate can be made uniform without changing PAH-001.",
+      "non_claims": [
+        "This is a verification sidecar and is not a new physical source or a replacement for PAH-001.",
+        "The exact equality is only for the declared anchor-aperture cylinder on finite G_1/G_2 patches and is not a global or uniform theorem.",
+        "The Q=0 slice is not the physical vacuum, Reading-H or Pre-A.",
+        "Markov time is not quantum real time, proper time or Lorentzian time.",
+        "No physical Pre-A, spacetime, event horizon, gravity, QFT, Yang--Mills, continuum, mass-gap, cosmic-origin or TOE conclusion follows."
+      ],
+      "provenance": "contemporaneous",
+      "question": "Does the actual PAH midpoint generator have identical rows on the n=1 and n=2 anchor patches of the genuine diagonal-incidence successor for every finite Q=0 local state, while retaining the n=0 boundary defect?",
+      "recorded_at": "2026-09-03T14:40:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001369",
+          "relation": "continues"
+        }
+      ],
+      "reproduction": [
+        "python -X utf8 codes/foundations/pah_omc004_generator_replay.py",
+        "python -X utf8 codes/foundations/pah_omc004_generator_replay_independent.py",
+        "python -X utf8 codes/foundations/pah_omc004_generator_replay_hostile.py",
+        "python -X utf8 verification/scripts/pah_omc004_generator_replay_verify.py",
+        "python -X utf8 verification/scripts/lean_toolchain_check.py --metadata",
+        "Set-Location verification/lean; & \"$env:USERPROFILE/.elan/toolchains/leanprover--lean4---v4.32.1/bin/lake.exe\" env lean Tect/R484.lean"
+      ],
+      "reviewed_on": "2026-09-03",
+      "revisit_condition": "Reopen the broader refinement lane after source-authorized nonzero-Q transport, common-core completion and an independent uniform estimate are present.",
+      "schema": "tect/proof-exploration/1.0",
+      "schema_version": "1.0",
+      "source_authorities": [
+        {
+          "path": "strategy/pa-hyp/PAH-001-v1.json",
+          "role": "immutable parent functional, moves, mobility and regulator",
+          "sha256": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+          "source_id": "PAH-001"
+        },
+        {
+          "path": "strategy/pa-hyp/PAH-OMC-004-v1.json",
+          "role": "separately versioned geometric incidence successor",
+          "sha256": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c",
+          "source_id": "PAH-OMC-004"
+        },
+        {
+          "path": "strategy/pa-hyp/PAH-OMC-004-generator-replay-v1.json",
+          "role": "researcher verification sidecar for explicit local generator rows",
+          "sha256": "87f5d3ee29b15f57f3e461b4b4064955b5f1ced0ab0bdf2b4763ed0a7ffe3e3e",
+          "source_id": "PAH-OMC-004-GEN-001"
+        },
+        {
+          "path": "strategy/pa-hyp/PAH-OMC-004-generator-replay-manifest.json",
+          "role": "sidecar and parent hash manifest",
+          "sha256": "88a07db1123a229733bdf7ab4fa413d0e6eb903001bc7faa1e44497ae31e9e57",
+          "source_id": "PAH-OMC-004-GEN-MANIFEST-001"
+        }
+      ],
+      "stop_or_redesign": [
+        "Do not promote the local equality to a global, continuum, physical or QFT result.",
+        "If nonzero-Q transport cannot be sourced, retain R-484 as a finite/local result and record the missing owner contract instead of inventing one."
+      ],
+      "task_id": "T-054",
+      "title": "PAH-OMC-004 explicit anchor generator-row replay",
+      "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "check": "Could removing the literal note-token checks make the verifier less strict about the active task?",
+          "disposition": "DISMISSED: the repaired predicate still requires the structured T-054 lookup identity, in_progress status, exact Round-1 gate, and Pre-A title marker."
+        },
+        {
+          "check": "Could the repair alter the A2, R-157, or R-158 mathematical statements or tier?",
+          "disposition": "DISMISSED: only verifier predicates and their manifest file hashes changed; claim cards, theorem statements, tier, and source functional remain unchanged."
+        },
+        {
+          "check": "Does an integrated executable PASS replace an external proof audit or publication decision?",
+          "disposition": "UPHELD AS LIMITATION: the PASS closes the repository synchronization gate only; independent mathematician, literature, operator, capstone, and release gates remain open."
+        }
+      ],
+      "assumptions": [
+        "todo/todo.json is the canonical structured source for T-054 identity, title, status, and gate.",
+        "A free-form task note may change wording without changing the structured task scope.",
+        "The registered A2, R-157, and R-158 theorem source files and claim tiers are unchanged by this maintenance repair."
+      ],
+      "boundary": "Repository-local publication reproducibility repair for the finite A2/R-157/R-158 package. This is not a new theorem, claim-tier change, physical conclusion, or external referee result.",
+      "claim_ids": [
+        "A2-FULL-PRODUCTION-WELLPOSED"
+      ],
+      "classification": "PUBLICATION_REPRODUCTION_GATE_REPAIR",
+      "decision_reason": "Both integrated verifiers previously rejected the current T-054 record because they required free-form note tokens that duplicated structured identity and scope fields. The repair makes the structured lookup key, title, status, and gate authoritative, updates verifier versions and pinned hashes, regenerates affected child hashes, and reruns both integrated lanes. The mathematical package and no-overclaim boundaries are unchanged.",
+      "evidence_level": "T5 repository-local maintenance with child, integrated, artifact, PDF, legacy, and regression checks; no theorem promotion",
+      "evidence_refs": [
+        "codes/foundations/a2_pinned_functional_unique_zero_global_minimizer_verify.py#current_round1_task_scope",
+        "codes/foundations/a2_charge_ensemble_first_order_shell_transition_verify.py#T-054 current Round-1 scope",
+        "claims/A2-FULL-PRODUCTION-WELLPOSED/pinned_functional_unique_zero_global_minimizer_manifest.json#files.verifier",
+        "claims/A2-FULL-PRODUCTION-WELLPOSED/charge_ensemble_first_order_shell_transition_manifest.json#files.verifier",
+        "todo/todo.json#T-054",
+        "publish/papers/a2-r157-r158-ensemble-minimizers/verification/README.md#current-replay-boundary"
+      ],
+      "finding": "After the v1.0.2 predicate repair and manifest hash update, R-157 integrated verification passes 144/144 with legacy A2 61/61, and R-158 integrated verification passes 155/155 with R-157/A2 regression PASS. The repaired condition checks structured T-054 id/title/status/gate fields and no longer depends on redundant free-text note tokens.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": []
+      },
+      "gate_ids": [
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001372",
+      "method": [
+        "Inspect the failing integrated assertion and compare its free-form note-token predicate with the structured T-054 task record.",
+        "Rewrite both integrated verifiers atomically so task identity and scope use the lookup key, title, status, and exact gate; bump each verifier version.",
+        "Update both claim manifests with the new verifier hashes and refresh R-158 child-result hashes induced by the pinned R-157 manifest hash.",
+        "Run the R-157 integrated verifier and the R-158 integrated verifier, retaining their canonical result artefacts and exact assertion counts.",
+        "Keep the repair at repository-local T5 and preserve all external-proof, literature, operator, capstone, release, and submission firewalls."
+      ],
+      "missing_assumptions": [
+        "An independent mathematician proof audit of the analytic argument.",
+        "A specialist literature and novelty review.",
+        "Operator confirmation before a dedicated capstone PUBLISHED bundle."
+      ],
+      "next_action": "Use the now-passing integrated lanes as the reproducibility baseline, then obtain the independent proof and literature audits and operator confirmation before constructing the capstone bundle and attempting release checks.",
+      "non_claims": [
+        "No A2, R-157, or R-158 theorem statement, tier, functional coefficient, or physical interpretation changed.",
+        "The integrated PASS does not prove the analytic semigroup, compactness, chain-rule, or literature arguments by computation.",
+        "No external referee, publication readiness, PUBLISHED bundle, submission, upload, tag, or release is asserted.",
+        "No infinite-volume, continuum, quantum, physical-vacuum, BCC, or Sector-A conclusion follows."
+      ],
+      "provenance": "contemporaneous",
+      "question": "Can the A2/R-157/R-158 integrated verifiers validate the current structured T-054 scope without relying on redundant free-form note tokens, while preserving all theorem and publication firewalls?",
+      "recorded_at": "2026-09-03T14:55:00Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001370",
+          "relation": "corrects"
+        }
+      ],
+      "reproduction": [
+        "E:/Dev/TECT.venv/Scripts/python.exe -X utf8 codes/foundations/a2_pinned_functional_unique_zero_global_minimizer_verify.py",
+        "E:/Dev/TECT.venv/Scripts/python.exe -X utf8 codes/foundations/a2_charge_ensemble_first_order_shell_transition_verify.py"
+      ],
+      "reviewed_on": "2026-09-03",
+      "revisit_condition": "Reopen this gate only if the structured T-054 task identity, title, status, or gate changes; rerun both integrated verifiers after any such governance change.",
+      "schema": "tect/proof-exploration/1.0",
+      "schema_version": "1.0",
+      "source_authorities": [
+        {
+          "path": "todo/todo.json",
+          "role": "structured T-054 task identity and scope",
+          "source_id": "T-054"
+        },
+        {
+          "path": "codes/foundations/a2_pinned_functional_unique_zero_global_minimizer_verify.py",
+          "role": "R-157 integrated verifier",
+          "source_id": "R-157-INTEGRATED-VERIFY"
+        },
+        {
+          "path": "codes/foundations/a2_charge_ensemble_first_order_shell_transition_verify.py",
+          "role": "R-158 integrated verifier",
+          "source_id": "R-158-INTEGRATED-VERIFY"
+        },
+        {
+          "path": "claims/A2-FULL-PRODUCTION-WELLPOSED/pinned_functional_unique_zero_global_minimizer_manifest.json",
+          "role": "R-157 verifier hash manifest",
+          "source_id": "R-157-MANIFEST"
+        },
+        {
+          "path": "claims/A2-FULL-PRODUCTION-WELLPOSED/charge_ensemble_first_order_shell_transition_manifest.json",
+          "role": "R-158 verifier and child hash manifest",
+          "source_id": "R-158-MANIFEST"
+        }
+      ],
+      "stop_or_redesign": [
+        "Do not treat the integrated executable PASS as an external proof audit or novelty result.",
+        "Do not build the PUBLISHED capstone bundle until operator confirmation and the remaining publication gates are closed."
+      ],
+      "task_id": "T-054",
+      "title": "A2/R-157/R-158 integrated verifier synchronization repair",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",

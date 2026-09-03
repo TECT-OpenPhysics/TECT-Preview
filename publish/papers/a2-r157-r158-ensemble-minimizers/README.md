@@ -1,6 +1,6 @@
 # A2/R-157/R-158 ensemble-minimizers paper
 
-Lifecycle: `draft` (version `0.1.0`, 2026-09-03).
+Lifecycle: `draft` (version `0.1.1`, 2026-09-03).
 
 This folder is the self-contained draft lane for the paper
 “Global Well-Posedness, Neutral-State Rejection, and Ensemble-Induced Shell
@@ -17,6 +17,7 @@ manual P2 manuscript, not a submission or a publication record.
 * `verification/README.md` — canonical source paths and reproducibility
   commands.
 * `STATUS.md` — completion gates and lifecycle history.
+* `proof-audit.md` — internal adversarial checklist and external-review questions.
 
 ## Build
 
@@ -34,7 +35,8 @@ $py = "E:\Dev\TECT.venv\Scripts\python.exe"
 The verification commands and their registered expected results are in
 `verification/README.md`.  Executable checks cover exact arithmetic,
 normalizations, spectral intervals, and provenance; they do not replace an
-independent proof audit.
+independent proof audit.  The internal checklist in `proof-audit.md` makes the
+remaining analytic and external-review obligations explicit.
 
 ## Release boundary
 

@@ -22,6 +22,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-484](#r-484) | PAH-OMC-004 explicit anchor generator-row replay | R-484 / EXP-001371 explicitly replays the unchanged PAH midpoint generator on the genuine diagonal-incidence anchor patch. All 512 Q=0 aperture/link states have identical exact rows between G_1 and G_2 for the anchor cylinder; primary 30/30, independent 14/14, hostile 16/16 mutations rejected, integrated 28/28, and Lean R484 pass. The retained n=0 boundary defect is 16/9. This is finite/local T0 evidence only; no global uniform, ordered-limit, physical Pre-A, spacetime, QFT, Yang--Mills or TOE conclusion follows. |
 | [R-483](#r-483) | PAH-OMC-004 geometric incidence local common-core control | R-483 / EXP-001369 registers a separately hashed square-face diagonal subdivision and anchored strip family for the unchanged PAH functional. The local incidence changes from (4,4,1) to (4,5,2); the Q=0 witness has exact Delta F values 1/8, 1/4, and -55/36 with hidden-diagonal defect 16/9. Fixed finite-support cylinders have an eventually zero generator defect and derived finite cumulative bound. Primary 51/51, independent 28/28, hostile 16/16 mutations rejected, integrated 33/33 and Lean R483 pass. This is local finite structural evidence only; no global uniform limit, physical Pre-A, spacetime, QFT, Yang--Mills or TOE conclusion follows. |
 | [R-482](#r-482) | PAH-OMC-003 exact cell-colour block refinement | R-482 / EXP-001368 defines a separately hashed structural successor with `q_n=2^n` cell-colour fibres, normalized local-term replication, and inverse-closed root cocycles. Primary 27/27, independent 28/28, hostile 12/12 mutations rejected, integrated 22/22, and Lean R482 pass; the common sup-norm generator defect and every finite cumulative defect are exactly zero. This is finite structural micro/macro compatibility only: no geometric lattice refinement, uniform limit, physical Pre-A, spacetime, QFT, Yang--Mills or TOE conclusion. |
 | [R-480](#r-480) | PAH-OMC-002 conditional-Gibbs projected-intertwining route-local defect | R-480 / EXP-001367 audits the exact PAH-OMC-002 Gibbs fibre average on one finite fine-only-vertex map. With immutable PAH-001 SHA-256 `03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37`, OMC-001 SHA-256 `948a87092f7393e5214a375d66295237e5c8be1b018b8788d3e6785d696e774f`, and OMC-002 SHA-256 `618265f978bae4e96e1330fbec0ce7af0bf1630d6f5a17f9029fcbde48de6876`, the invariant witness `f=j_v` has coarse increment `0` and hidden fine increments `+1/8,-1/8`; the conditional factor `(exp(-1/16)+exp(1/16))/2>1`. Primary 26/26, independent 20/20, hostile 12/12, integrated 17/17 and Lean R480 pass. This retires only the OMC-002 conditional diagnostic on this map; Stage 2 remains `HOLD_FOR_EVIDENCE`, with no PAH-001, uniform-limit, physical, QFT, Yang--Mills or TOE conclusion. |
@@ -849,6 +850,22 @@ candidate-neutral two-time observable, complete map stages and prospective
 holdout exist. Continue unchanged T-054 Q3LOCK owner intake and T-059/T-061
 observation-source intake; do not manufacture another finite mobility table.
 
+<a id="r-484"></a>
+### R-484 -- PAH-OMC-004 explicit anchor generator-row replay
+
+Result ID. R-484 (EXP-001371, T-054, audit PAH-GENERATOR-REPLAY-001).
+
+Authority and scope. This T0 claim-nonbearing result adds the separately hashed verification sidecar PAH-OMC-004-GEN-001 without editing PAH-001 or PAH-OMC-004. PAH-001 is pinned at SHA-256 03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37; PAH-OMC-004 is pinned at SHA-256 38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c; the sidecar is pinned at SHA-256 87f5d3ee29b15f57f3e461b4b4064955b5f1ced0ab0bdf2b4763ed0a7ffe3e3e. The sidecar adds no functional term, move, rate repair, projection, parameter, normalization or limit.
+
+Exact finite replay. The anchor patch has vertices a,b,c,d, edges h00=(a,b), v0=(a,c), d0=(a,d), h01=(c,d), v1=(b,d), and two oriented triangles [h00,v1,d0^(-1)] and [d0,h01^(-1),v0^(-1)]. The G_1 and G_2 strip carriers have identical anchor incidence closure. The unchanged PAH midpoint rate c=m exp(-beta DeltaF/2) is recomputed on K=2, M_s=M_psi=1, Q=0, epsilon=1/2, beta=nu=1 with the displayed couplings set to one where used. Every 2^4 aperture and 2^5 link assignment is enumerated, giving 512 states. The exact tuple (state, direction, Delta F, mobility^2, Delta s_a, Delta 1_{j_a=1}, -beta Delta F/2) is identical for levels 1 and 2. The basis observables 1, s_a and 1_{j_a=1} therefore have the same finite generator contribution on this local cylinder.
+
+Boundary retained. The preceding square-to-diagonal boundary is not erased: raising a at the all-zero state gives Delta F_square=1/8, Delta F_split(d0=0)=1/4, Delta F_split(d0=1)=-55/36 and hidden defect 16/9. No averaging, counterterm or rate fitting is used.
+
+Verification. Primary 30/30, non-importing independent 14/14, hostile 16/16 mutation cases rejected, integrated 28/28, and Lean R484 compile all pass. Artefacts are under claims/C6-SPACETIME-SIGNATURE/runs/2026-09-03-pah-omc004-generator-replay/. The certificate is strategy/pa-hyp/R484-certificate.md; the sidecar and manifest are under strategy/pa-hyp/.
+
+Consequence and boundary. This closes only the explicit finite generator-row replay gap for the declared anchor cylinder. It does not change the active canonical gate and does not supply a source-authorized nonzero-Q transport, a global common infinite-volume algebra, a volume-, regulator-, phase- or source-uniform estimate, an ordered limit or any physical interpretation. No physical Pre-A, spacetime, gravity, event horizon, QFT, Yang--Mills, continuum, mass-gap, cosmic-origin or TOE conclusion follows.
+
+Next question. Can a separately source-authorized nonzero-Q geometric family carry the same generator locality with a uniform interaction-closure estimate without modifying PAH-001?
 <a id="r-483"></a>
 ### R-483 -- PAH-OMC-004 geometric incidence local common-core control
 

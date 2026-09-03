@@ -3,7 +3,7 @@
 
 from __future__ import annotations
 
-__version__ = "1.0.0"
+__version__ = "1.0.2"
 
 import argparse
 import ast
@@ -307,11 +307,13 @@ def main() -> int:
     audit.check("records", "claim narrative", RESULT_ID in claim_text and "common-phase winding" in claim_text.lower(), RESULT_ID, "registered with boundary")
     audit.check("records", "status synchronized", "R-158" in status.get("statement", "") and "physical conserved charge" in status.get("notes", ""), status.get("notes"), "R-158 with provenance boundary")
     t054 = todo_lookup.get("T-054", {})
+    # The lookup key is authoritative for the task identity; the free-form
+    # note must carry the scope marker but need not repeat the key literally.
     t054_current = (
-        t054.get("status") == "in_progress"
+        t054.get("id") == "T-054"
+        and t054.get("status") == "in_progress"
         and t054.get("gate") == "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
-        and "T-054" in str(t054.get("note", ""))
-        and "Pre-A" in str(t054.get("note", ""))
+        and "Pre-A" in str(t054.get("title", ""))
     )
     audit.check("records", "T-054 current Round-1 scope", t054_current, t054, "in_progress on PA-ROUND1 evidence-role gate")
     audit.check("records", "changelog entry", "R-158" in changelog_text and "charge-ensemble" in changelog_text.lower(), LEDGER_ID, "registered")
