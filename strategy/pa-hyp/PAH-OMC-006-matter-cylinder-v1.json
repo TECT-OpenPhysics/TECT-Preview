@@ -1,0 +1,132 @@
+{
+  "schema": "tect/pre-a-owner-morphism-matter-cylinder-contract/1.0",
+  "contract_id": "PAH-OMC-006",
+  "version": "0.1.0",
+  "title": "Nonzero-charge matter-density cylinder compatibility on the stable strip",
+  "proposed_at": "2026-09-04",
+  "proposed_by": "TECT research programme",
+  "provenance": {
+    "class": "RESEARCHER_HYPOTHESIS_GEOMETRIC_SUCCESSOR_CONTRACT",
+    "definition_owner": "TECT_RESEARCH_PROGRAM",
+    "external_source": false,
+    "constructed_hypothesis": true,
+    "physical_authority": false,
+    "epistemic_layer": "L2_MODEL_SPECIFICATION_AND_FINITE_VERIFICATION"
+  },
+  "parents": {
+    "functional_source": {
+      "packet_id": "PAH-001",
+      "path": "strategy/pa-hyp/PAH-001-v1.json",
+      "sha256": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37"
+    },
+    "geometric_source": {
+      "contract_id": "PAH-OMC-004",
+      "path": "strategy/pa-hyp/PAH-OMC-004-v1.json",
+      "sha256": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c"
+    },
+    "predecessor": {
+      "contract_id": "PAH-OMC-005",
+      "path": "strategy/pa-hyp/PAH-OMC-005-nonzero-q-generator-v1.json",
+      "sha256": "c779edafc99604047767864f14a2ea0840a7d96f8d5a2f7266bcbdfd2aea6ae5"
+    },
+    "composition_rule": "This is a separately versioned researcher-owned extension. It does not edit, supersede or retroactively complete PAH-001, PAH-OMC-001, PAH-OMC-004 or PAH-OMC-005."
+  },
+  "status": {
+    "contract": "CANDIDATE_FINITE_NONZERO_Q_MATTER_CYLINDER",
+    "geometric_refinement": "GENUINE_FACE_EDGE_INCIDENCE_STRIP",
+    "local_generator_compatibility": "EXACT_ON_MATTER_DENSITY_CYLINDER_G2_TO_G3",
+    "uniform_limit": "NOT_ADMITTED",
+    "observable_chain": "NOT_ADMITTED"
+  },
+  "preservation_firewall": {
+    "parent_functional_unchanged": true,
+    "parent_move_families_unchanged": true,
+    "parent_mobility_unchanged": true,
+    "parent_projection_unchanged": true,
+    "parent_regulator_rule_unchanged": true,
+    "parent_limit_order_unchanged": true,
+    "no_new_term": true,
+    "no_counterterm": true,
+    "no_rate_fitting": true,
+    "no_conditional_gibbs_average": true,
+    "no_q3lock_import": true,
+    "no_physical_identification": true
+  },
+  "exact_scope": {
+    "carrier_family": "The PAH-OMC-004 two-row strip G_n. The first two squares are already split in G_2; G_3 splits the next frontier square, so the anchor-neighbour interaction closure is stable for this comparison.",
+    "anchors": "a=(0,0) is the retained matter-density observable anchor; O and C are the strip anchors and no nontrivial anchor automorphism is used.",
+    "comparison": "The exact finite comparison is the neutral coordinate inclusion J_(2,3): G_2 -> G_3. Level 1 is retained only as a deliberately checked boundary control, where the newly introduced d1 edge can touch the matter neighbour b and is not assumed compatible.",
+    "fixture": {
+      "K": 2,
+      "M_s": 1,
+      "M_psi": 1,
+      "Q": 1,
+      "R_max": "1",
+      "epsilon": "1/2",
+      "beta": "1",
+      "nu": "1",
+      "m2": "0",
+      "lambda_4": "1",
+      "eta_6": "1",
+      "g": "1",
+      "lambda_s": "1",
+      "kappa_s": "1",
+      "kappa_D": "1",
+      "kappa_g": "1",
+      "theta": "0"
+    },
+    "state_domain": "The audited finite states have one radial occupation quantum placed at exactly one of the four anchor-patch vertices a,b,c,d, zero radial occupation on remote vertices, all four patch phases in Z_2, all five patch links in Z_2, and all patch aperture bits. Thus Q=1 is nonzero and the state count is explicit.",
+    "functional": "Evaluate exactly the displayed PAH-001 F_rho: aperture onsite and matter polynomial, aperture edge stiffness, covariant matter edge term, and plaquette Wilson term. No term or coupling is added.",
+    "moves": "Use the unchanged PAH radial-transfer roots along directed edges. For f(x)=ell_a, only directed roots on h00, v0 and d0 can change the observable; every phase, link, aperture and remote radial root has zero observable increment and is retained only by the full generator definition.",
+    "observable": "The common cylinder is f(x)=ell_a, and the audit also records the bounded indicator 1_{ell_a=1}. Both are gauge invariant and anchor preserving because the gauge action changes phases/links but not radial occupation, and the anchor automorphism group is the identity.",
+    "normalization": "Finite counting-measure Gibbs midpoint rates exactly as in PAH-001; no averaging over dropped variables is used. A radial root carries mobility m=(s_v s_w)^(nu/2), represented exactly by its squared mobility and midpoint exponent.",
+    "limit": "No cutoff, volume, lattice, continuum, phase, beta or observation limit is taken. n is only a finite geometric refinement label."
+  },
+  "maps": {
+    "geometric_inclusion": "J_(2,3) retains every G_2 vertex, edge, aperture, phase, radial occupation and link coordinate by geometric ID; new G_3 coordinates are appended with neutral aperture, zero radial occupation and neutral Z_2 labels. Since the old state has Q=1, J preserves Q.",
+    "local_restriction": "For radial roots incident to a, the affected-term closure contains the endpoint onsite terms, all aperture-stiffness and covariant-edge terms incident to either endpoint, and all Wilson faces meeting those terms. This closure is identical in G_2 and G_3; the G_1 -> G_2 boundary is an explicit control failure because d1 is newly incident to b.",
+    "observable_lift": "I_(2,3)f is the same pointwise coordinate cylinder f(ell_a) on both finite state spaces; it is not a conditional expectation and is defined on every fine state.",
+    "root_correspondence": "Each directed radial root on h00, v0 or d0 has the same admissibility, endpoint apertures, exact energy increment and observable increment in G_2 and G_3. All other roots have zero increment on f and 1_{ell_a=1}."
+  },
+  "compatibility_proposition": {
+    "statement": "For every audited Q=1 patch state, the complete list of nonzero radial-transfer contributions to the generator of f=ell_a is identical under the neutral inclusion J_(2,3). Equivalently, the rootwise midpoint tuples (edge, direction, DeltaF, mobility^2, Delta ell_a, rate exponent) agree exactly. The same holds for the indicator 1_{ell_a=1}. The level-1 to level-2 comparison is not included in the proposition and is checked as a nonzero-boundary-defect control.",
+    "proof_obligations": [
+      "A radial move incident to a changes only its two endpoint matter values; the full PAH energy difference is therefore computed without dropping endpoint onsite, edge, or face terms.",
+      "For G_2 and G_3 the endpoint closure for h00, v0 and d0 has the same edge/face incidence; the newly split frontier at column 2 is disjoint from that closure.",
+      "The radial mobility depends only on endpoint apertures and the midpoint exponent is recomputed from the exact full-energy difference.",
+      "The neutral inclusion preserves Q=1 and every retained patch coordinate, so each valid directed root has a fine counterpart.",
+      "The G_1 -> G_2 control has a changed d1 edge at b and must exhibit a nonzero matter-transfer defect for at least one state; this prevents premature extension of the stable range."
+    ],
+    "cumulative_consequence": "The matter-density cylinder has zero geometric generator defect for this finite G_2 -> G_3 comparison. No supremum over all cylinders, volumes, regulators or limit parameters is asserted."
+  },
+  "finite_acceptance": {
+    "primary": "Enumerate every fixture state, evaluate the full PAH energy before and after each directed anchor-incident radial transfer on G_2 and G_3, compare rootwise tuples, and verify the G_1 boundary control.",
+    "independent": "Rebuild the strip, matter values, all PAH energy terms, directed radial roots and midpoint tuples from direct formulas without importing the primary implementation.",
+    "hostile": "Reject source drift, Q=0 substitution, omitted frontier terms, premature G_1 -> G_2 extension, fitted rates, wrong mobility, charge-changing inclusion, conditional averaging and physical promotion.",
+    "lean": "Cross-check the exact charge, state count, stable endpoint closure, mobility products, midpoint factor and explicit n=1 boundary defect. Lean is a finite arithmetic cross-check, not a global theorem formalization."
+  },
+  "known_boundaries": {
+    "boundary_control": "The G_1 -> G_2 matter-cylinder comparison is intentionally not claimed: the newly present d1 edge changes the covariant matter term when the quantum occupies b. This is a local failure boundary, not a refutation of later stable levels.",
+    "local_only": "The proposition covers f=ell_a and its indicator on one Q=1 finite strip fixture. It does not cover arbitrary matter, link or radial cylinders, or a global common algebra.",
+    "fixture_only": "Q=1, K=2, M_s=M_psi=1 and the displayed unit couplings are a finite researcher fixture. No parameter-uniform theorem is claimed.",
+    "no_global_uniformity": "Exact rootwise equality at G_2 -> G_3 does not establish a regulator-, volume- or source-uniform interaction estimate, an infinite-volume generator, or an ordered limit.",
+    "no_physics": "The Markov time and Q=1 sector are not quantum time, a physical sector, a vacuum, Pre-A, spacetime, gravity, QFT, Yang--Mills, a continuum or a mass gap."
+  },
+  "falsifiers": [
+    "Any parent hash or parent byte changes.",
+    "A G_2 -> G_3 radial root tuple differs for an audited patch state.",
+    "The exact PAH energy formula, orientations, mobility or rate convention is changed, weighted, counterterm-repaired or post-hoc fitted.",
+    "The neutral inclusion changes Q or a retained patch coordinate, or a directed root incident to a has no fine counterpart.",
+    "The independent lane fails to reproduce the rootwise rows or the G_1 boundary control is falsely reported as stable.",
+    "The result is promoted to a global uniform limit, physical Pre-A, spacetime, gravity, QFT, Yang--Mills, continuum, mass-gap or TOE theorem."
+  ],
+  "non_claims": [
+    "This contract is a researcher proposal, not an external source or physical authority.",
+    "The finite Q=1 result is not retroactive evidence that PAH-001 already contained this refinement map.",
+    "The G_1 boundary defect and G_2 -> G_3 equality are finite local statements, not a global common-core or uniform theorem.",
+    "No physical Pre-A, spacetime, event horizon, gravity, QFT, Yang--Mills, continuum, mass-gap, cosmic-origin or TOE conclusion follows.",
+    "No static fit selects the dynamics, and Markov time is not quantum real time, proper time or Lorentzian time."
+  ],
+  "single_next_question": "Can a finite common-core class containing several matter and link cylinders be proved stable for all sufficiently interior strip levels, with a source-authorized uniform interaction bound rather than one cylinder at one fixture?",
+  "revisit_condition": "Reopen the broader uniform lane only after a separately hashed owner contract supplies multiple-cylinder root transport, nonzero-Q state transport beyond the fixture, a common invariant core and a regulator/volume-uniform estimate in the declared limit order."
+}

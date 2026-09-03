@@ -1,6 +1,6 @@
 # Literature-first crosswalk for the A2/R-157/R-158 paper
 
-Status: bounded draft crosswalk, 2026-09-03.  This file records applicability
+Status: bounded draft crosswalk, 2026-09-04.  This file records applicability
 and residual novelty; it is not a claim promotion or a world-first search.
 
 ## Target statements
@@ -47,3 +47,28 @@ regularized Class-II continuum estimate, the neutral global rejection, and
 the imposed-ensemble shell completion.  A specialist literature search and
 external proof audit are still required before making a novelty or submission
 readiness claim.
+
+
+## Specialist-source expansion (2026-09-04)
+
+This bounded primary-source search was run to test whether a single existing
+result already subsumes the paper's combined theorem.  The search covered
+APS/DOI records, arXiv, the JETP archive, and a university journal record, using
+queries for vector Swift--Hohenberg well-posedness, multicomponent Brazovskii
+functionals, fourth-order quasilinear flows, and rigorous PFC minimizers.  No
+source below is used as a load-bearing premise.
+
+| source | exact feature inspected | disposition for this paper |
+|---|---|---|
+| S. A. Brazovskii, ``Phase transition of an isotropic system to a nonuniform state,'' Sov. Phys. JETP 41, 85 (1975), [JETP record](https://jetp.ras.ru/cgi-bin/index/r/68/1/p175?a=list) | fluctuation theory for scalar/vector order parameters with a nonzero-momentum minimum | `DOES-NOT-APPLY` as a proof: it is a fluctuation/field-theory analysis, not the declared finite-torus exact variational theorem |
+| J. Swift and P. Leitner, ``Models for phase transitions with continuous constant energy surfaces,'' Phys. Rev. B 16, 4137 (1977), [APS DOI](https://doi.org/10.1103/PhysRevB.16.4137) | continuous nonzero-wavevector energy surfaces and fluctuation-driven transition order | `DOES-NOT-APPLY` to the exact fixed-shell completion; the geometry and statistical treatment differ |
+| T. Asai, ``Quasilinear parabolic equation and its applications to fourth order equations with rough initial data,'' J. Math. Sci. Univ. Tokyo 19 (2012), 507--532, [journal record](https://www.ms.u-tokyo.ac.jp/journal/abstract_e/jms190402_e.html) | continuous-maximal-regularity framework for fourth-order quasilinear equations | `APPLIES-CONDITIONALLY` as background only; the present constant fourth-order operator and order-two Class-II lower-order map require a model-specific verification |
+| G. Martine-La Boissoniere, R. Choksi, and J.-P. Lessard, ``Microscopic Patterns in the 2D Phase-Field-Crystal Model,'' arXiv:2102.02338 (2021), [arXiv record](https://arxiv.org/abs/2102.02338) | rigorously validated numerical steady states and local minimizers for scalar 2D PFC | `DOES-NOT-APPLY` as a theorem for this work: dimension, scalar field, constraint, flow, and proof target differ |
+
+The bounded search did not identify a source proving the full conjunction of
+(a) a three-component complex field with the positive-floor derivative
+Class-II term, (b) the fixed side-16 periodic torus, (c) the exact neutral
+radial rejection, and (d) the imposed-charge/chemical-potential completion.
+This is a bounded non-subsumption result, not a priority or world-first claim.
+A specialist literature search and novelty opinion remain required before any
+submission-readiness statement.

@@ -29,7 +29,10 @@ Expected registered results are:
   `12/12`, integrated `22/22`, with Lean compilation PASS.
 
 The last command is assurance-only: R-472 is explicitly non-bearing and must
-not be used to promote the A2/R-157/R-158 theorem claims.
+not be used to promote the A2/R-157/R-158 theorem claims.  The manuscript
+version 0.1.7 records the self-contained functional and spectral specification
+and a bounded primary-source literature crosswalk; the displayed data and those
+sources are context and audit inputs, not new proof claims.
 
 These executable checks recompute the exact constants, signs, spectral
 intervals, normalizations, and hostile mutations recorded by the claim.  They
@@ -47,13 +50,18 @@ recorded as `EXP-001372`, correcting the earlier replay boundary `EXP-001370`.
 
 A fresh replay now passes R-157 integrated verification `144/144` (including
 legacy A2 `61/61`) and R-158 integrated verification `155/155` (including the
-R-157/A2 regression).  Manuscript v0.1.4 additionally states the direct-method
-coercivity/weak-lower-semicontinuity route for the `mu>mu_t` minimizer, names
-the full lower-order map `N=N_loc+N_II`, and records the Gelfand-triple
-chain-rule hypotheses; these are proof-text clarifications, not a new claim or
-tier change.  This closes the repository synchronization gate
-only; it does not replace the analytic proof, specialist literature review,
-external proof audit, operator confirmation, capstone bundle, or release check.
+R-157/A2 regression).  Manuscript v0.1.8 additionally displays the generators,
+internal matrices, density floor, Class-II coefficient formulas, explicit
+shell-bottom scalar symbol, the integration-by-parts sign in `N_II`, and the
+nonlinear energy `Phi`, alongside the direct-method
+coercivity/weak-lower-semicontinuity route for the `mu>mu_t` minimizer, the full
+lower-order map `N=N_loc+N_II`, the Gelfand-triple chain-rule hypotheses, and
+the bounded primary-source crosswalk.  These are self-containedness and
+proof-text/literature-boundary clarifications, not a new claim or tier change;
+the latest repair is recorded as `EXP-001379`.
+This closes the repository synchronization gate only; it does not replace the
+analytic proof, specialist literature review, external proof audit, operator
+confirmation, capstone bundle, or release check.
 
 ## Canonical evidence paths
 

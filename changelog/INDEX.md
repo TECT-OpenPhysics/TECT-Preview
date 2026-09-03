@@ -5,7 +5,7 @@ Compact generated reader surface. The append-only authority is
 record 568 / commit `4db22f4e` and no longer grows.
 Post-cutover full bodies live exactly once in bounded pages under `pages/`.
 
-**844 accepted events** · latest 25 shown below · machine locator: `index.json`
+**845 accepted events** · latest 25 shown below · machine locator: `index.json`
 
 Search the complete authority without loading every page:
 
@@ -17,6 +17,7 @@ python verification/scripts/changelog.py search --text <phrase>
 
 | Date | Event | Claims | Full entry |
 |---|---|---|---|
+| 2026-09-04 | `20260904-r-486-pah-omc-006-matter-density-cylinder-compa` — [R-486 PAH-OMC-006 matter-density cylinder compatibility and boundary control] - 2026-09-04 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000819-000868.md#20260904-r-486-pah-omc-006-matter-density-cylinder-compa) |
 | 2026-09-04 | `20260904-r-485-pah-omc-005-nonzero-q-anchor-generator-co` — [R-485 PAH-OMC-005 nonzero-Q anchor generator compatibility] - 2026-09-04 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000819-000868.md#20260904-r-485-pah-omc-005-nonzero-q-anchor-generator-co) |
 | 2026-09-03 | `20260903-r-484-pah-omc-004-explicit-generator-row-replay` — [R-484 PAH-OMC-004 explicit generator-row replay] - 2026-09-03 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000819-000868.md#20260903-r-484-pah-omc-004-explicit-generator-row-replay) |
 | 2026-09-03 | `20260903-r-483-pah-omc-004-geometric-incidence-local-com` — [R-483 PAH-OMC-004 geometric incidence local common-core control] - 2026-09-03 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000819-000868.md#20260903-r-483-pah-omc-004-geometric-incidence-local-com) |
@@ -41,7 +42,6 @@ python verification/scripts/changelog.py search --text <phrase>
 | 2026-08-31 | `20260831-t-057-batch-closure-audit-separates-preserved-b` — [T-057 batch closure audit separates preserved bytes from missing dependency and run links] - 2026-08-31 | B3-BCC-STRUCT, C6-SPACETIME-SIGNATURE | [bounded page](pages/000819-000868.md#20260831-t-057-batch-closure-audit-separates-preserved-b) |
 | 2026-08-31 | `20260831-r-473-hold-lc-001-tte-event-row-feature-index-2` — [R-473 HOLD-LC-001 TTE event-row feature index] - 2026-08-31 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000819-000868.md#20260831-r-473-hold-lc-001-tte-event-row-feature-index-2) |
 | 2026-08-31 | `20260831-r-472-a2-lean-exact-core-cross-check-2026-08-31` — [R-472 A2 Lean exact-core cross-check] - 2026-08-31 | A2-FULL-PRODUCTION-WELLPOSED | [bounded page](pages/000819-000868.md#20260831-r-472-a2-lean-exact-core-cross-check-2026-08-31) |
-| 2026-08-31 | `20260831-r-471-p1-owner-map-admission-contract-2026-08-3` — [R-471 P1 owner-map admission contract] - 2026-08-31 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000819-000868.md#20260831-r-471-p1-owner-map-admission-contract-2026-08-3) |
 
 ## Post-cutover pages
 
@@ -49,7 +49,7 @@ Each full event body after the cutover occurs in exactly one page.
 
 | Ordinals | Events | Page |
 |---|---:|---|
-| 819–844 | 26 | [000819-000868.md](pages/000819-000868.md) |
+| 819–845 | 27 | [000819-000868.md](pages/000819-000868.md) |
 | 769–818 | 50 | [000769-000818.md](pages/000769-000818.md) |
 | 719–768 | 50 | [000719-000768.md](pages/000719-000768.md) |
 | 669–718 | 50 | [000669-000718.md](pages/000669-000718.md) |

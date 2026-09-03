@@ -22,6 +22,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-486](#r-486) | PAH-OMC-006 nonzero-Q matter-density cylinder compatibility | R-486 / EXP-001378 defines a separately hashed researcher-owned extension of the unchanged PAH-001 functional on the genuine PAH-OMC-004 diagonal strip. With Q=1, K=2, M_s=M_psi=1, all 32768 finite states and 49152 directed anchor-incident radial roots have identical exact tuples between G_2 and G_3; primary 20/20, independent 12/12, hostile 9/9 mutations rejected, integrated 18/18 and Lean R486 pass. The deliberate G_1 to G_2 control has Delta F 0 versus -1. This is T0 finite/local evidence only; global common-core, uniform-limit and physical conclusions remain open. |
 | [R-485](#r-485) | PAH-OMC-005 nonzero-Q anchor generator compatibility | R-485 / EXP-001374 defines a separately hashed researcher-owned extension of the genuine PAH-OMC-004 diagonal strip without changing PAH-001. With Q=1, K=2, M_s=M_psi=1, the full displayed PAH functional and unchanged midpoint rate give identical exact anchor-aperture generator rows on all 32768 finite patch states between G_1 and its neutral inclusion in G_2; primary 21/21, independent 16/16, hostile 9/9 mutations rejected, integrated 17/17, and Lean R485 pass. The result is T0 finite/local evidence only; Stage 2 and the active gate remain open, with no global uniform, ordered-limit, physical Pre-A, spacetime, QFT, Yang--Mills or TOE conclusion. |
 | [R-484](#r-484) | PAH-OMC-004 explicit anchor generator-row replay | R-484 / EXP-001371 explicitly replays the unchanged PAH midpoint generator on the genuine diagonal-incidence anchor patch. All 512 Q=0 aperture/link states have identical exact rows between G_1 and G_2 for the anchor cylinder; primary 30/30, independent 14/14, hostile 16/16 mutations rejected, integrated 28/28, and Lean R484 pass. The retained n=0 boundary defect is 16/9. This is finite/local T0 evidence only; no global uniform, ordered-limit, physical Pre-A, spacetime, QFT, Yang--Mills or TOE conclusion follows. |
 | [R-483](#r-483) | PAH-OMC-004 geometric incidence local common-core control | R-483 / EXP-001369 registers a separately hashed square-face diagonal subdivision and anchored strip family for the unchanged PAH functional. The local incidence changes from (4,4,1) to (4,5,2); the Q=0 witness has exact Delta F values 1/8, 1/4, and -55/36 with hidden-diagonal defect 16/9. Fixed finite-support cylinders have an eventually zero generator defect and derived finite cumulative bound. Primary 51/51, independent 28/28, hostile 16/16 mutations rejected, integrated 33/33 and Lean R483 pass. This is local finite structural evidence only; no global uniform limit, physical Pre-A, spacetime, QFT, Yang--Mills or TOE conclusion follows. |
@@ -850,6 +851,20 @@ score M3 only after a versioned source owner, state/uncertainty contract,
 candidate-neutral two-time observable, complete map stages and prospective
 holdout exist. Continue unchanged T-054 Q3LOCK owner intake and T-059/T-061
 observation-source intake; do not manufacture another finite mobility table.
+
+<a id="r-486"></a>
+
+### R-486 -- PAH-OMC-006 nonzero-Q matter-density cylinder compatibility
+
+**Statement.** R-486 / EXP-001378 tests a separately hashed researcher-owned extension of the unchanged PAH-001 functional on the genuine PAH-OMC-004 diagonal strip. For the finite fixture K=2, M_s=M_psi=1, Q=1, epsilon=1/2, beta=nu=1, R_max=1, m2=0 and unit displayed couplings, every 32768 patch state and every 49152 directed radial-transfer root incident to the anchor matter coordinate ell_a agree exactly between G_2 and its neutral inclusion in G_3. The primary lane passes 20/20, the non-importing independent lane 12/12, hostile review rejects 9/9 mutations, the integrated verifier passes 18/18, and Lean R486 compiles. The canonical row digest is 716610a6a4694d963e079d4c890ce355f995add1f5f3ad12241f6ce7c2ce35eb.
+
+**Boundary.** The preceding G_1 -> G_2 comparison is retained only as a control: the h00 transfer with the quantum at b has Delta F_G1=0 and Delta F_G2=-1, an exact defect caused by the newly present d1 covariant term. No all-level extension is claimed.
+
+**Where proven.** `strategy/pa-hyp/PAH-OMC-006-matter-cylinder-v1.json`, `strategy/pa-hyp/R486-certificate.md`, `codes/foundations/pah_omc006_matter_cylinder.py`, `codes/foundations/pah_omc006_matter_cylinder_independent.py`, `codes/foundations/pah_omc006_matter_cylinder_hostile.py`, `verification/scripts/pah_omc006_matter_cylinder_verify.py`, `verification/lean/Tect/R486.lean`, and the four run artefacts under `claims/C6-SPACETIME-SIGNATURE/runs/2026-09-04-pah-omc006-matter-cylinder/`.
+
+**Scope and tier.** T0 claim-nonbearing finite/local structural evidence. It does not change the active T-054 gate or Stage 2 status and is not a global common-core, regulator/volume-uniform, ordered-limit, infinite-volume, physical-sector, Pre-A, spacetime, gravity, QFT, Yang--Mills, continuum, mass-gap or TOE result. Markov time remains external stochastic time.
+
+**Next.** Supply a separately hashed multi-cylinder common-core packet and test one shared support envelope before any uniform or limit claim.
 
 <a id="r-485"></a>
 ### R-485 -- PAH-OMC-005 nonzero-Q anchor generator compatibility

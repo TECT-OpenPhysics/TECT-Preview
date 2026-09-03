@@ -1,6 +1,6 @@
 # Proof-audit record — A2/R-157/R-158
 
-Status: `INTERNAL-AUDIT-DRAFT` (2026-09-03).  This document is a structured
+Status: `INTERNAL-AUDIT-DRAFT` (2026-09-04).  This document is a structured
 adversarial checklist for an eventual independent mathematician.  It is not
 an external referee report, an operator sign-off, or a claim-tier promotion.
 
@@ -8,7 +8,10 @@ an external referee report, an operator sign-off, or a claim-tier promotion.
 
 The audit covers the explicitly declared side-16 periodic three-torus,
 six-real-component field, positive density floor, pinned coefficients, and
-`eta_shell=0` functional in `manuscript.tex`.  It does not audit a removed
+`eta_shell=0` functional in `manuscript.tex`.  Version 0.1.7 retains the three embedded Hermitian generators, internal matrix
+data, and Class-II coefficient formulas, and makes the scalar spectral symbol
+and Class-II floor notation explicit and consistent so an auditor can reconstruct
+the declared functional and shell bottom without a private backend.  It does not audit a removed
 regulariser, a historical backend, a thermodynamic or continuum limit, a
 quantum/KMS construction, a physical charge, a physical vacuum, BCC selection,
 or any Sector-A interpretation.
@@ -21,7 +24,7 @@ The source claims are `A2-FULL-PRODUCTION-WELLPOSED`, `R-157`, and `R-158`.
 | item | proof obligation | current evidence | internal disposition | external review |
 |---|---|---|---|---|
 | A2-1 | The fourth-order symbol is positive and the form domain is `H^2`, operator domain `H^4`. | `manuscript.tex`, Sec. 4.1; A2 full-production audits | exact constants and operator statement are recorded | required: check self-adjoint realization and norm equivalence |
-| A2-2 | The regularised Class-II Euler map has order two and is locally Lipschitz `H^2 -> L^2`. | `manuscript.tex`, Sec. 4.2; nonlinear-mapping audit; explicit `N=N_loc+N_II` definition | argument is explicit and the full lower-order map is now named; product/Sobolev estimates remain | required: verify every product exponent and coefficient dependence |
+| A2-2 | The regularised Class-II Euler map has order two and is locally Lipschitz `H^2 -> L^2`. | `manuscript.tex`, Sec. 4.2; nonlinear-mapping audit; explicit `N=N_loc+N_II` definition | argument is explicit, the integration-by-parts sign is displayed, and the full lower-order map is named; product/Sobolev estimates remain | required: verify every product exponent, coefficient dependence, and sign convention |
 | A2-3 | Analytic-semigroup mild theory gives local existence and continuation. | `manuscript.tex`, Sec. 4.2; A2 wrapper | conditional on the declared operator realization | required: check sectorial hypotheses and the singular-kernel contraction |
 | A2-4 | Galerkin solutions pass to a global weak/strong solution and satisfy the exact energy identity. | `manuscript.tex`, Sec. 4.3; energy-continuation audit; explicit Gelfand-triple/Hilbert-space chain-rule statement | executable lanes pass; analytic compactness/chain rule are stated but not machine-proved | required: audit projection, compactness, and chain-rule passage |
 | A2-5 | Endpoint Duhamel cancellation yields `H^4` for positive time and Moser iteration yields smoothness. | `manuscript.tex`, Sec. 4.4; smoothing audit | cancellation is stated with the required Hölder remainder | required: verify endpoint integrability and iteration domains |
@@ -50,6 +53,16 @@ The source claims are `A2-FULL-PRODUCTION-WELLPOSED`, `R-157`, and `R-158`.
 5. **Could the positive density floor be removed without changing the theorem?**
    No.  Its removal is explicitly a different theorem and is outside scope.
 
+6. **Could the bounded literature search be mistaken for a novelty or priority proof?**
+   No.  It records only primary-source applicability dispositions and an explicit
+   residual proposition; specialist review and broader database coverage remain
+   required.
+
+7. **Could the printed constants be confused with independently verified
+normalizations?**  No.  The formulas and matrices are now visible in the paper,
+but their self-adjoint, Hermitian, and coefficient-normalization consequences
+remain explicit questions for the external audit.
+
 ## Required external review questions
 
 An independent mathematician should either answer these questions in writing
@@ -68,12 +81,20 @@ or identify a precise repair:
   completion exactly as claimed, including the finite-volume normalization?
 * Does the global-minimizer argument for `mu>mu_t` use a coercivity statement
   strong enough to prevent loss of mass on the fixed torus?
+* Do the displayed generator matrices, internal projection, density floor, and
+  Class-II coefficient formulas match the canonical A2/P1 normalization and
+  preserve the stated Hermitian and positive-definite properties?
 
 ## Current acceptance decision
 
 The repository-local executable and exact-arithmetic gates are passing, and the
 two former integrated record failures were repaired in verifier v1.0.2 and
-recorded as `EXP-001372`.  This is sufficient to advance the package from
+recorded as `EXP-001372`.  The bounded primary-source literature expansion
+recorded as `EXP-001375` improves the crosswalk but does not establish novelty
+or replace specialist review.  The v0.1.8 sign, nonlinear-energy, and
+self-contained spectral repairs improve auditability but do not close the
+analytic proof audit; the changes are recorded as `EXP-001379`.
+This is sufficient to advance the package from
 `REPRODUCTION-SYNC-OPEN` to `INTERNAL-AUDIT-READY`; it is not sufficient to
 mark the paper `internal-review`, `submitted`, or `published`.
 

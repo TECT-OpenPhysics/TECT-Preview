@@ -1,0 +1,88 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "schema_version": "1.0",
+  "id": "EXP-001378",
+  "title": "PAH-OMC-006 nonzero-Q matter-density cylinder compatibility",
+  "question": "Does the unchanged PAH-001 midpoint generator have exact rootwise compatibility for a nontrivial matter-density cylinder under the stable G_2 -> G_3 geometric strip inclusion, while exposing the preceding G_1 -> G_2 boundary defect?",
+  "task_id": "T-054",
+  "claim_ids": ["C6-SPACETIME-SIGNATURE"],
+  "gate_ids": ["PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"],
+  "method": [
+    "Create the separately hashed researcher-owned PAH-OMC-006 contract without modifying PAH-001, PAH-OMC-004 or PAH-OMC-005.",
+    "Use the genuine two-row diagonal strip and compare only the neutral inclusion G_2 -> G_3, where the endpoint closure of h00, v0 and d0 is interior to the newly split frontier.",
+    "Enumerate every K=2, M_s=M_psi=1, Q=1 patch state with one radial quantum at a,b,c or d and neutral remote coordinates.",
+    "Evaluate the full displayed PAH functional before and after every directed radial-transfer root incident to a, retaining endpoint onsite, edge, covariant and Wilson contributions.",
+    "Compare the complete rootwise tuple (state, edge, source, target, DeltaF, mobility squared, Delta ell_a, midpoint exponent) by exact rational arithmetic and a canonical digest.",
+    "Run an independently rebuilt lane, hostile mutations and a Lean finite arithmetic cross-check; separately replay G_1 -> G_2 as a boundary-control defect rather than extending the proposition."
+  ],
+  "finding": "All 32,768 states and 49,152 directed anchor-incident radial roots agree exactly between G_2 and G_3. The primary lane passes 20/20, the non-importing independent lane 12/12, hostile review rejects 9/9 mutations, integrated verification passes 18/18 and Lean R486 compiles. The common row digest is 716610a6a4694d963e079d4c890ce355f995add1f5f3ad12241f6ce7c2ce35eb. The G_1 -> G_2 control has DeltaF 0 versus -1 for h00:b->a, so the first boundary is explicitly not stable.",
+  "classification": "MAINLINE_ADVANCE_NONZERO_Q_MATTER_CYLINDER_LOCAL",
+  "verdict": "advanced",
+  "decision_reason": "R-485 covered only an anchor-aperture cylinder. This separately hashed finite successor tests a genuinely matter-dependent cylinder with the unchanged radial-transfer roots, proves exact rootwise equality on the first stable interior comparison, and records the prior boundary failure instead of extrapolating across it.",
+  "evidence_level": "T0 finite exact nonzero-Q matter-cylinder replay with primary, non-importing independent, hostile, integrated and Lean verification",
+  "source_authorities": [
+    {"source_id": "PAH-001", "path": "strategy/pa-hyp/PAH-001-v1.json", "sha256": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37", "role": "immutable functional, moves, mobility and rate source"},
+    {"source_id": "PAH-OMC-004", "path": "strategy/pa-hyp/PAH-OMC-004-v1.json", "sha256": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c", "role": "geometric strip source"},
+    {"source_id": "PAH-OMC-005", "path": "strategy/pa-hyp/PAH-OMC-005-nonzero-q-generator-v1.json", "sha256": "c779edafc99604047767864f14a2ea0840a7d96f8d5a2f7266bcbdfd2aea6ae5", "role": "preceding nonzero-Q anchor successor"},
+    {"source_id": "PAH-OMC-006", "path": "strategy/pa-hyp/PAH-OMC-006-matter-cylinder-v1.json", "sha256": "cb1c84e320d2bd24b430ec2b8f19ef9467e3564e1f2a3cd820487730946ddad5", "role": "researcher-owned matter-cylinder contract"},
+    {"source_id": "PAH-OMC-006-MATTER-MANIFEST-001", "path": "strategy/pa-hyp/PAH-OMC-006-matter-cylinder-manifest.json", "sha256": "5233bb0725747d374ac240fcd291f4f99b87806e0e78fcdc438cd5f64bd30042", "role": "contract and parent hash manifest"}
+  ],
+  "formal_refs": {"results": ["R-486"], "events": ["20260904-r-486-pah-omc-006-matter-density-cylinder-compa"], "negatives": []},
+  "evidence_refs": [
+    "strategy/pa-hyp/PAH-OMC-006-matter-cylinder-v1.json#compatibility_proposition",
+    "strategy/pa-hyp/PAH-OMC-006-matter-cylinder-manifest.json#contract",
+    "strategy/pa-hyp/R486-certificate.md#Exact-proposition-and-scope",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-04-pah-omc006-matter-cylinder/primary.json#row_identity",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-04-pah-omc006-matter-cylinder/independent.json#row_identity",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-04-pah-omc006-matter-cylinder/hostile.json#mutations",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-04-pah-omc006-matter-cylinder/integrated.json#verification_summary",
+    "verification/lean/Tect/R486.lean#generator_root_identity"
+  ],
+  "assumptions": [
+    "PAH-001, PAH-OMC-004 and PAH-OMC-005 remain byte-identical at their pinned hashes.",
+    "PAH-OMC-006 is a finite researcher proposal using the unchanged displayed couplings and midpoint rate.",
+    "The neutral inclusion retains all G_2 coordinates and adds only zero-charge, neutral remote coordinates.",
+    "The radial observable ell_a is gauge neutral and the declared anchor automorphism group is the identity.",
+    "G_2 and G_3 have identical endpoint interaction closure for the h00, v0 and d0 roots; G_1 -> G_2 is treated only as a checked boundary control."
+  ],
+  "missing_assumptions": [
+    "A total gauge-equivariant refinement map for arbitrary matter, link and radial cylinders.",
+    "A common invariant algebra and source-authorized root multiplicity theorem beyond this finite cylinder.",
+    "A regulator-, volume- and source-uniform interaction estimate and convergence theorem in the inherited ordered limit."
+  ],
+  "boundary": "Finite local compatibility only. The result does not close T-054, does not change any canonical gate or claim tier, and does not establish an infinite-volume generator, uniform limit, physical sector, Pre-A, spacetime, gravity, QFT, Yang--Mills, continuum, mass gap or TOE conclusion.",
+  "next_action": "Construct one separately hashed multi-cylinder common-core packet, including a link cylinder and a second interior matter anchor, and test whether a single root-support envelope survives without changing PAH-001.",
+  "revisit_condition": "Reopen the uniform lane only when multiple-cylinder root transport, nonzero-Q state transport beyond this fixture, a common invariant core and a regulator/volume-uniform bound are explicitly supplied.",
+  "non_claims": [
+    "No physical Pre-A, spacetime, gravity, QFT, Yang--Mills, continuum, mass-gap, cosmic-origin or TOE conclusion.",
+    "No retroactive modification or completion of PAH-001, PAH-OMC-001, PAH-OMC-003, PAH-OMC-004 or PAH-OMC-005.",
+    "The G_2 -> G_3 equality is a finite local result and the G_1 -> G_2 defect is not a global no-go.",
+    "Markov time is not quantum real time, proper time or Lorentzian time."
+  ],
+  "provenance": "contemporaneous",
+  "recorded_by": "Codex",
+  "recorded_at": "2026-09-03T16:26:02Z",
+  "reviewed_on": "2026-09-04",
+  "related": [{"id": "EXP-001374", "relation": "continues"}],
+  "reproduction": [
+    "python codes/foundations/pah_omc006_matter_cylinder.py",
+    "python codes/foundations/pah_omc006_matter_cylinder_independent.py",
+    "python codes/foundations/pah_omc006_matter_cylinder_hostile.py",
+    "python verification/scripts/pah_omc006_matter_cylinder_verify.py",
+    "python verification/scripts/lean_toolchain_check.py --metadata",
+    "Set-Location verification/lean; & \"$env:USERPROFILE/.elan/toolchains/leanprover--lean4---v4.32.1/bin/lake.exe\" env lean Tect/R486.lean"
+  ],
+  "adversarial_review": [
+    {"check": "Could the stable comparison be extrapolated to G_1 -> G_2?", "disposition": "DISMISSED: the exact 0 versus -1 boundary defect is retained and the proposition begins at G_2 -> G_3."},
+    {"check": "Could a radial transfer omit a newly present covariant endpoint term?", "disposition": "DISMISSED: every full PAH energy term is recomputed before and after each directed root; the G_2 support audit includes d1 where required."},
+    {"check": "Could Q=1 be vacuous or altered by the inclusion?", "disposition": "DISMISSED: all 32,768 states have one radial quantum and neutral added coordinates preserve the exact charge."},
+    {"check": "Could the rate be fitted after the energy difference is known?", "disposition": "DISMISSED: the midpoint exponent and endpoint mobility are recomputed from the unchanged PAH rules, and hostile mutations reject fitting."},
+    {"check": "Does one finite matter cylinder prove a global common core or uniform limit?", "disposition": "UPHELD AND BLOCKED: arbitrary cylinders, volume/regulator uniformity and ordered limits remain open."}
+  ],
+  "stop_or_redesign": [
+    "Retain the explicit G_1 boundary defect; do not erase it by averaging, counterterms or rate rescaling.",
+    "Keep the result at T0 and Stage 2 HOLD_FOR_EVIDENCE.",
+    "If the multi-cylinder packet fails, record the exact support obstruction rather than fitting a projection.",
+    "Do not use this result for physical-empty, Reading-H, continuum or Yang--Mills claims."
+  ]
+}

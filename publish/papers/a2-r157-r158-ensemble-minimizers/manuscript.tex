@@ -34,7 +34,7 @@
        Ensemble-Induced Shell Coexistence in a Regularized
        Multicomponent Brazovskii Functional}
 \author{Jusang Lee}
-\date{Draft v0.1.4 -- 2026-09-04}
+\date{Draft v0.1.9 -- 2026-09-04}
 
 \begin{document}
 \maketitle
@@ -111,13 +111,21 @@ $\Psi:\T^3_{16}\to\C^3$.  We regard $\C^3$ as $\R^6$ and use the real pairing
  \label{eq:real-pairing}
 \end{equation}
 Write $\rho=\Psi^\dagger\Psi$.  For the three Hermitian internal generators
-$T_A$ in the pinned P1 data, set
+$T_A$ displayed below, set
 \begin{equation}
  m_A=\Psi^\dagger T_A\Psi,\qquad
  J_A=\nabla m_A,\qquad
  K_A=J_A-\frac{m_A}{\rho+\eps_\rho}\nabla\rho,
  \qquad \eps_\rho=10^{-12}.
  \label{eq:currents}
+\end{equation}
+For complete specification, the three Hermitian generators (the Pauli basis
+embedded in the first two internal components) are
+\begin{equation}
+ T_1=\begin{pmatrix}0&1&0\\1&0&0\\0&0&0\end{pmatrix},\quad
+ T_2=\begin{pmatrix}0&-i&0\\ i&0&0\\0&0&0\end{pmatrix},\quad
+ T_3=\begin{pmatrix}1&0&0\\0&-1&0\\0&0&0\end{pmatrix}.
+ \label{eq:generators}
 \end{equation}
 The positive floor in \eqref{eq:currents} is part of the declared functional;
 removing it is a different theorem.
@@ -133,16 +141,38 @@ where the pinned scalar coefficients are
  Y=1,\qquad Z=-0.9252754126,\qquad r=0.4740336473,
  \label{eq:scalar-coeff}
 \end{equation}
-and the family/lock contribution is positive semidefinite.  The local
+The remaining pinned internal data are
+\begin{equation}
+ M_{\rm fam}=\operatorname{diag}\left(0,\frac{3}{100},\frac{7}{100}\right),\quad
+ z_0=(1,1,1)^T,\quad k_{\rm lock}=\frac{3}{20},\quad
+ P_0=\frac{z_0z_0^\dagger}{z_0^\dagger z_0}=\frac13\begin{pmatrix}1&1&1\\1&1&1\\1&1&1\end{pmatrix}.
+ \label{eq:internal-data}
+\end{equation}
+The shell-bias coefficient is fixed to \(\eta_{\rm shell}=0\), so no additional
+Fourier-shell term is present.  The sum of the family and lock contributions
+is the explicit internal matrix displayed in \eqref{eq:M}.  The family/lock
+contribution is therefore positive semidefinite.  The local
 polynomial coefficients are
 \begin{equation}
  \lambda=-\frac{43}{100},\qquad \gamma=\frac{81}{50}>0.
  \label{eq:local-coeff}
 \end{equation}
-For the spectral calculation below, the sum
-$M_{\rm fam}+k_{\rm lock}(\Id-P_0)$ is the explicit internal matrix displayed
-in \eqref{eq:M}.
-The Class-II density is
+The Class-II coefficients are fixed by
+\begin{equation}
+\begin{aligned}
+ &\varepsilon_M=10^{-12},\quad \alpha_X=\frac{3}{10},\quad
+   \beta_X=\frac14,\quad M_X=2,\\
+ &c_{JJ}=\frac15,\quad c_{JK}=\frac1{10},\quad c_{KK}=\frac3{20},\\
+ a&=\frac{c_{JJ}\alpha_X^2}{M_X^2+\varepsilon_M},\qquad
+ b=\frac{c_{JK}\alpha_X\beta_X}{M_X^2+\varepsilon_M},\\
+ c&=\frac{c_{KK}\beta_X^2}{M_X^2+\varepsilon_M}.
+\end{aligned}
+\label{eq:classii-coeff}
+\end{equation}
+For orientation, these formulas give approximately
+\(a=4.5\times10^{-3}\), \(b=1.875\times10^{-3}\), and
+\(c=2.34375\times10^{-3}\); the displayed formulas, rather than rounded
+numerical values, define the functional.  The Class-II density is
 \begin{equation}
  \cF_{\rm II}(\Psi)=\sum_A\int_{\T^3_{16}}
  \left(\frac a2|J_A|^2+b\operatorname{Re}(J_A^\dagger K_A)
@@ -306,12 +336,26 @@ The Class-II density can then be written exactly as
 The positive $\eps_\rho$ makes $B$ smooth on all of $\R^6$.  Direct
 Euler--Lagrange differentiation therefore has the form
 \begin{equation}
- N_{\rm II}(u)=B(u)\nabla^2u+C(u)[\nabla u,\nabla u],
+ N_{\rm II}(u)=-B(u)\nabla^2u+C(u)[\nabla u,\nabla u],
  \label{eq:N-map}
 \end{equation}
-where $C$ is smooth and no derivative above order two occurs.  To fix the
-notation used in the evolution equation, let the real gradient of the local
-polynomial be
+where $C$ is smooth and no derivative above order two occurs.  More explicitly,
+with $\partial_\alpha=\partial/\partial u_\alpha$ and summation over repeated
+Greek and spatial indices,
+\begin{equation}
+ \bigl[N_{\rm II}(u)\bigr]_\alpha
+ =\frac12\,\partial_\alpha B_{\beta\gamma}(u)\,
+       \partial_j u_\beta\,\partial_j u_\gamma
+  -\partial_j\!\left(B_{\alpha\gamma}(u)\,\partial_j u_\gamma\right),
+ \qquad
+ C_{\alpha\delta\gamma}(u)
+ =\frac12\partial_\alpha B_{\delta\gamma}(u)
+  -\partial_\delta B_{\alpha\gamma}(u).
+ \label{eq:euler-classii}
+\end{equation}
+The minus sign in the leading term is therefore the integration-by-parts sign
+from the Dirichlet part of the Class-II density.  To fix the notation used in
+the evolution equation, let the real gradient of the local polynomial be
 \begin{equation}
  N_{\rm loc}(u)=\lambda (u^Tu)u+\gamma (u^Tu)^2u,
  \qquad N(u)=N_{\rm loc}(u)+N_{\rm II}(u).
@@ -359,7 +403,13 @@ $L^2(0,T;H^4)$ bound.  Aubin--Lions compactness \cite{AubinLions,Temam} yields s
 $L^2(0,T;H^2)$, and \eqref{eq:local-lipschitz} gives strong convergence of
 the nonlinear term in $L^2(0,T;L^2)$.
 
-For the nonlinear part $\Phi$, the derivative identity
+For clarity, the nonlinear energy is
+\begin{equation}
+ \Phi(u)=\int_{\T^3_{16}}\left(\frac\lambda4(u^Tu)^2
+       +\frac\gamma6(u^Tu)^3\right)\dd x+\cF_{\rm II}(u).
+ \label{eq:nonlinear-energy}
+\end{equation}
+Its derivative identity
 $D\Phi(u)[h]=\ip{N(u)}{h}_{\R}$ and the local Lipschitz estimate are understood
 in the Gelfand triple $H^2\hookrightarrow L^2\hookrightarrow H^{-2}$.  In
 particular, $D\Phi:H^2\to L^2\subset H^{-2}$ is locally Lipschitz, while the
@@ -439,7 +489,7 @@ so $M>(7/250)\Id$.  Parseval therefore gives
 \end{equation}
 
 The full Class-II matrix is positive definite because, after writing
-$P=M_X^2+\eps_X>0$, its determinant factor is
+$P=M_X^2+\varepsilon_M>0$, its determinant factor is
 \begin{equation}
  c_{JJ}c_{KK}-c_{JK}^2=\frac1{50}>0.
  \label{eq:classii-det}
@@ -547,8 +597,11 @@ Because $|n|^2$ is integral and $3=1^2+1^2+1^2$, the radial minimum is the
 shell $|n|^2=3$, containing the eight body-diagonal indices
 $n=(\pm1,\pm1,\pm1)$.  Thus
 \begin{equation}
- \lambda_0=D(3\pi^2/64)+m_*,\qquad
- 0.28811617234458494031<\lambda_0<0.28811617234459494032.
+ \begin{aligned}
+ \lambda_0&=r+Z\left(\frac{3\pi^2}{64}\right)
+      +Y\left(\frac{3\pi^2}{64}\right)^2+m_*,\\
+ 0.28811617234458494031&<\lambda_0<0.28811617234459494032.
+ \end{aligned}
  \label{eq:lambda0}
 \end{equation}
 This is a finite-torus commensurability statement.  It is not a BCC theorem
@@ -672,6 +725,25 @@ present three-component regularized Class-II map, its exact radial sign, or
 the imposed-ensemble completion.  Thus the well-posedness theorem alone is
 not claimed as a new general method.
 
+The abstract framework of Asai \cite{Asai} treats fourth-order quasilinear
+parabolic equations by continuous maximal regularity.  It is relevant
+background, but its hypotheses do not directly identify the present problem:
+here the principal fourth-order operator is constant, while the regularized
+Class-II contribution is a model-specific order-two lower-order map.  We
+therefore verify the required Sobolev and chain-rule estimates explicitly
+rather than importing an existence theorem without a crosswalk.
+
+The original Brazovskii analysis \cite{Brazovskii} and the continuous-shell
+study of Swift and Leitner \cite{SwiftLeitner} provide the physical context
+for nonzero-wavevector minima and fluctuation-driven first-order transitions.
+They do not prove the exact finite-torus algebraic completion used here.  In a
+closer mathematical PFC setting, Martine-La Boissoniere, Choksi, and Lessard
+\cite{MLL} use rigorously validated numerics for scalar two-dimensional
+steady states and local minimizers; their conserved $H^{-1}$ flow, dimension,
+and target statements differ from the analytic three-component $L^2$ flow and
+finite-shell ensemble theorem proved here.
+
+
 Quantum anharmonic-crystal phase-transition work, such as
 Kargol--Kondratiev--Kozitsky \cite{KKK} develops Euclidean Gibbs states, reflection
 arguments, and infrared estimates for specified lattice models.  The present
@@ -784,6 +856,27 @@ A. Giorgini, ``On the Swift--Hohenberg equation with slow and fast dynamics:
 well-posedness and long-time behavior,'' \emph{Communications on Pure and
 Applied Analysis} 15 (2016), 219--241,
 \href{https://doi.org/10.3934/cpaa.2016.15.219}{doi:10.3934/cpaa.2016.15.219}.
+
+\bibitem{Asai}
+T. Asai, ``Quasilinear parabolic equation and its applications to fourth
+order equations with rough initial data,'' \emph{J. Math. Sci. Univ. Tokyo}
+19 (2012), 507--532,
+\href{https://www.ms.u-tokyo.ac.jp/journal/abstract_e/jms190402_e.html}{journal record}.
+
+\bibitem{Brazovskii}
+S. A. Brazovskii, ``Phase transition of an isotropic system to a nonuniform
+state,'' \emph{Sov. Phys. JETP} 41 (1975), 85--89,
+\href{https://jetp.ras.ru/cgi-bin/index/r/68/1/p175?a=list}{JETP archive}.
+
+\bibitem{SwiftLeitner}
+J. Swift and P. Leitner, ``Models for phase transitions with continuous
+constant energy surfaces,'' \emph{Phys. Rev. B} 16 (1977), 4137,
+\href{https://doi.org/10.1103/PhysRevB.16.4137}{doi:10.1103/PhysRevB.16.4137}.
+
+\bibitem{MLL}
+G. Martine-La Boissoniere, R. Choksi, and J.-P. Lessard, ``Microscopic
+Patterns in the 2D Phase-Field-Crystal Model,'' arXiv:2102.02338 (2021),
+\href{https://arxiv.org/abs/2102.02338}{arXiv:2102.02338}.
 
 \bibitem{KKK}
 J. Kargol, Y. Kondratiev, and Y. Kozitsky, ``Phase transitions and quantum

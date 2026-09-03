@@ -5,10 +5,11 @@
 
 Authorities: `RESULTS-LEDGER.md`.
 
-**318 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
+**319 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
 
 | ID | Result | Tier/scope |
 |---|---|---|
+| [`R-486`](../RESULTS-LEDGER.md#r-486) | PAH-OMC-006 nonzero-Q matter-density cylinder compatibility | T0 |
 | [`R-485`](../RESULTS-LEDGER.md#r-485) | PAH-OMC-005 nonzero-Q anchor generator compatibility | T0 |
 | [`R-484`](../RESULTS-LEDGER.md#r-484) | PAH-OMC-004 explicit anchor generator-row replay | T0 |
 | [`R-483`](../RESULTS-LEDGER.md#r-483) | PAH-OMC-004 geometric incidence local common-core control | See authority |
@@ -33,7 +34,6 @@ Authorities: `RESULTS-LEDGER.md`.
 | [`R-463`](../RESULTS-LEDGER.md#r-463) | Fixed-floor active-branch tube metric and finite entropy stress test | T0 |
 | [`R-462`](../RESULTS-LEDGER.md#r-462) | Fixed-floor active-branch normal-form coercivity | T0 |
 | [`R-461`](../RESULTS-LEDGER.md#r-461) | Fixed-floor smooth Class-II null-branch dichotomy | T0 |
-| [`R-460`](../RESULTS-LEDGER.md#r-460) | Canonical Contents remaining-scope production-owner applicability audit | T0 |
 
 Search without loading the full ledger:
 

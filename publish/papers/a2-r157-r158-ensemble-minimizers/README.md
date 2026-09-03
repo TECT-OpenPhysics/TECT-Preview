@@ -1,6 +1,6 @@
 # A2/R-157/R-158 ensemble-minimizers paper
 
-Lifecycle: `draft` (version `0.1.4`, 2026-09-04).
+Lifecycle: `draft` (version `0.1.9`, 2026-09-04).
 
 This folder is the self-contained draft lane for the paper
 “Global Well-Posedness, Neutral-State Rejection, and Ensemble-Induced Shell
@@ -19,7 +19,7 @@ manual P2 manuscript, not a submission or a publication record.
 * `STATUS.md` — completion gates and lifecycle history.
 * `proof-audit.md` — internal adversarial checklist and external-review questions.
 
-Version 0.1.4 makes the `\mu>\mu_t` direct-method existence and weak-lower-semicontinuity step explicit, defines the full lower-order map `N=N_loc+N_II`, and states the Gelfand-triple chain-rule hypotheses used by the flow proof; all remain subject to external proof audit.
+Version 0.1.9 makes the Class-II first variation fully auditable by displaying its indexed Euler--Lagrange formula and the coefficient tensor `C(u)`, retaining the corrected integration-by-parts sign and explicit nonlinear energy `\Phi`.  It retains the self-contained functional and spectral specification and the bounded primary-source literature expansion (Asai; Brazovskii; Swift--Leitner; Martine-La Boissoniere--Choksi--Lessard).  The direct-method, full-map, Gelfand-triple, normalization, and spectral-notation statements remain subject to external proof audit; the bounded search is not a priority claim.
 
 ## Build
 
