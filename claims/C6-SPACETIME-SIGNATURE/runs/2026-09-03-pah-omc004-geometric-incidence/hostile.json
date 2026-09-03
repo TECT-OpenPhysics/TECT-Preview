@@ -1,0 +1,123 @@
+{
+  "all_mutations_rejected": true,
+  "assertion_count": 24,
+  "audit_id": "PAH-GEOMETRIC-INCIDENCE-LOCAL-001",
+  "baseline": {
+    "genuine-incidence": true,
+    "no-parent-mutation": true,
+    "parent-identities": true,
+    "physical-firewall": true,
+    "reference-identity": true,
+    "scope-firewall": true,
+    "source-hashes": true,
+    "successor-identity": true
+  },
+  "claim_bearing": false,
+  "exploration_id": "EXP-001369",
+  "failed": 0,
+  "mutations": [
+    {
+      "accepted": false,
+      "name": "parent-hash-drift",
+      "target": "immutable PAH-001 hash"
+    },
+    {
+      "accepted": false,
+      "name": "successor-hash-drift",
+      "target": "successor hash pin"
+    },
+    {
+      "accepted": false,
+      "name": "remove-diagonal",
+      "target": "new geometric edge d=(0,2)"
+    },
+    {
+      "accepted": false,
+      "name": "keep-one-face",
+      "target": "two fine faces"
+    },
+    {
+      "accepted": false,
+      "name": "colour-only-substitution",
+      "target": "incidence versus colour firewall"
+    },
+    {
+      "accepted": false,
+      "name": "add-counterterm",
+      "target": "unchanged PAH functional"
+    },
+    {
+      "accepted": false,
+      "name": "rescale-rates",
+      "target": "inherited PAH midpoint rates"
+    },
+    {
+      "accepted": false,
+      "name": "change-q-sector",
+      "target": "fixed Q=0 diagnostic scope"
+    },
+    {
+      "accepted": false,
+      "name": "shift-old-projection",
+      "target": "p_(n+1,n) retains old variables"
+    },
+    {
+      "accepted": false,
+      "name": "erase-boundary-defect",
+      "target": "explicit hidden-diagonal witness"
+    },
+    {
+      "accepted": false,
+      "name": "declare-global-uniform",
+      "target": "local versus global scope"
+    },
+    {
+      "accepted": false,
+      "name": "promote-continuum",
+      "target": "ordered-limit firewall"
+    },
+    {
+      "accepted": false,
+      "name": "promote-physical-preA",
+      "target": "physical-authority firewall"
+    },
+    {
+      "accepted": false,
+      "name": "import-q3lock",
+      "target": "no Q3LOCK import"
+    },
+    {
+      "accepted": false,
+      "name": "drop-support-hypothesis",
+      "target": "finite interaction closure"
+    },
+    {
+      "accepted": false,
+      "name": "claim-zero-defect-at-boundary",
+      "target": "nonzero local boundary defect"
+    }
+  ],
+  "mutations_attempted": 16,
+  "mutations_rejected": 16,
+  "non_claims": [
+    "Hostile checks enforce a local finite structural result only.",
+    "No global uniform, continuum, physical Pre-A, spacetime, gravity, QFT, Yang--Mills or TOE claim is admitted."
+  ],
+  "passed": 24,
+  "physical_progress": false,
+  "result_id": "R-483",
+  "run_kind": "hostile",
+  "schema": "tect/pah-omc004-geometric-incidence-hostile/1.0",
+  "scientific_transition": false,
+  "source_hashes": {
+    "PAH-001": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "PAH-OMC-001": "948a87092f7393e5214a375d66295237e5c8be1b018b8788d3e6785d696e774f",
+    "PAH-OMC-003": "1ccadb20e4171927b4bb83d4407b1a0bd926e27c759dbe617d828df0958086f1",
+    "PAH-OMC-004": "38163b7f0320cc7041cda4230bc0f6f07cfdc589cd3f12fdbab9f86c25a3a10c",
+    "PAH-OMC-004-MANIFEST": "1e3d1914d000bd1241e34e69162fe885bd61e0e880e64a2e90f53111bf2daaec"
+  },
+  "stage2_status": "HOLD_FOR_EVIDENCE",
+  "task_id": "T-054",
+  "verdict": "LOCAL_COMMON_CORE_GEOMETRIC_COMPATIBILITY",
+  "verification": "PASS"
+}

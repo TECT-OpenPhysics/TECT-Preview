@@ -5,10 +5,11 @@
 
 Authorities: `RESULTS-LEDGER.md`.
 
-**315 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
+**316 registered results.** Latest 25 are shown; full statements, boundaries, proof anchors, and publication targets remain in the authority.
 
 | ID | Result | Tier/scope |
 |---|---|---|
+| [`R-483`](../RESULTS-LEDGER.md#r-483) | PAH-OMC-004 geometric incidence local common-core control | See authority |
 | [`R-482`](../RESULTS-LEDGER.md#r-482) | PAH-OMC-003 exact cell-colour block refinement | See authority |
 | [`R-480`](../RESULTS-LEDGER.md#r-480) | PAH-OMC-002 conditional-Gibbs projected-intertwining route-local defect | See authority |
 | [`R-479`](../RESULTS-LEDGER.md#r-479) | PAH-OMC-001 finite common dynamics and refinement-boundary theorem | T5 finite exact theorem for a hash-pinned composite T0 candidate; claim-nonbearing and no active canonical gate change. |
@@ -33,7 +34,6 @@ Authorities: `RESULTS-LEDGER.md`.
 | [`R-460`](../RESULTS-LEDGER.md#r-460) | Canonical Contents remaining-scope production-owner applicability audit | T0 |
 | [`R-459`](../RESULTS-LEDGER.md#r-459) | Canonical Contents alternate-terminology production-owner applicability audit | T0 |
 | [`R-458`](../RESULTS-LEDGER.md#r-458) | Finite chiral isolated-node and conservative-flow equation-level audit | T0 |
-| [`R-457`](../RESULTS-LEDGER.md#r-457) | Finite compact-U(1) equation-level invariance and Gauss-flow consistency audit | T0 |
 
 Search without loading the full ledger:
 

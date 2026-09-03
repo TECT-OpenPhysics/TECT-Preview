@@ -1,0 +1,153 @@
+{
+  "schema": "tect/pre-a-owner-morphism-geometric-incidence-successor-contract/1.0",
+  "contract_id": "PAH-OMC-004",
+  "version": "0.1.0",
+  "title": "Square-face diagonal subdivision with local common-core control",
+  "proposed_at": "2026-09-03",
+  "proposed_by": "TECT research programme under operator directive",
+  "provenance": {
+    "class": "RESEARCHER_HYPOTHESIS_GEOMETRIC_SUCCESSOR_CONTRACT",
+    "definition_owner": "TECT_RESEARCH_PROGRAM",
+    "external_source": false,
+    "constructed_hypothesis": true,
+    "physical_authority": false,
+    "epistemic_layer": "L2_MODEL_SPECIFICATION_ONLY"
+  },
+  "parent": {
+    "packet_id": "PAH-001",
+    "path": "strategy/pa-hyp/PAH-001-v1.json",
+    "sha256": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "finite_completion_contract": {
+      "contract_id": "PAH-OMC-001",
+      "path": "strategy/pa-hyp/PAH-OMC-001-v1.json",
+      "sha256": "948a87092f7393e5214a375d66295237e5c8be1b018b8788d3e6785d696e774f"
+    },
+    "reference_only": {
+      "contract_id": "PAH-OMC-003",
+      "path": "strategy/pa-hyp/PAH-OMC-003-v1.json",
+      "sha256": "1ccadb20e4171927b4bb83d4407b1a0bd926e27c759dbe617d828df0958086f1"
+    },
+    "composition_rule": "This is a separately versioned researcher-owned geometric successor. It supplements, but does not edit, supersede or retroactively complete PAH-001, PAH-OMC-001 or PAH-OMC-003."
+  },
+  "status": {
+    "contract": "CANDIDATE_NOT_ADMITTED",
+    "finite_block_compatibility": "LOCAL_EVENTUAL_EXACTNESS_WITH_EXPLICIT_BOUNDARY_DEFECT",
+    "refinement_family": "GENUINE_FACE_EDGE_INCIDENCE_STRIP",
+    "uniform_limit": "NOT_ADMITTED",
+    "observable_chain": "NOT_ADMITTED"
+  },
+  "preservation_firewall": {
+    "parent_functional_unchanged": true,
+    "gauge_group_unchanged": true,
+    "parent_move_families_unchanged": true,
+    "mobility_exponent_nu_unchanged": true,
+    "candidate_projection_unchanged": true,
+    "parent_regulator_rule_unchanged": true,
+    "parent_limit_order_unchanged": true,
+    "no_counterterm_or_energy_added": true,
+    "no_parent_rate_rescaling": true,
+    "no_color_only_substitution": true,
+    "no_q3lock_import": true,
+    "no_physical_identification": true
+  },
+  "exact_scope": {
+    "local_incidence_witness": {
+      "coarse_vertices": [0, 1, 2, 3],
+      "coarse_edges": [[0, 1], [1, 2], [2, 3], [3, 0]],
+      "coarse_faces": [[0, 1, 2, 3]],
+      "fine_vertices": [0, 1, 2, 3],
+      "fine_edges": [[0, 1], [1, 2], [2, 3], [3, 0], [0, 2]],
+      "fine_faces": [[0, 1, 4], [4, 2, 3]],
+      "incidence_change": "One square face is replaced by two triangular faces and one diagonal edge is added; the new diagonal carries an independent Z_K link variable."
+    },
+    "strip_family": {
+      "vertices": "V_n={(i,j):0<=i<=n+1, j in {0,1}}",
+      "horizontal_edges": "h_i^j=((i,j),(i+1,j)) for 0<=i<=n and j in {0,1}",
+      "vertical_edges": "v_i=((i,0),(i,1)) for 0<=i<=n+1",
+      "diagonals": "d_i=((i,0),(i+1,1)) for 0<=i<n",
+      "faces": "For i<n, q_i is replaced by triangles [h_i^0,v_(i+1),d_i^(-1)] and [d_i,(h_i^1)^(-1),v_i^(-1)]; q_n remains the unsplit square with its oriented boundary.",
+      "anchors": "O={(0,0)} and C={(0,1)}; the audited anchor-preserving automorphism group is the identity.",
+      "degree_bound": 5,
+      "face_incidence_bound": 4
+    },
+    "state_and_regulator": "Use the unchanged PAH-001 integer aperture, phase, radial and Z_K link variables on the displayed carrier. The finite audit fixes K=2, M_s=M_psi=1, Q=0, epsilon=1/2, beta=1, nu=1, R_max=1, m2=0, lambda_4=1, eta_6=1, g=1, lambda_s=1, kappa_s=1, kappa_D=1, kappa_g=1, theta=0. Q=0 is a finite scope restriction, so all nonnegative radial levels vanish; it is not a physical-sector assertion.",
+    "functional": "F_rho is exactly the displayed PAH-001 functional: vertex aperture/matter terms, edge aperture stiffness, covariant matter edge term and plaquette Wilson term with J_e(s)=2/(s_v+s_w) and J_p the boundary average. No term, coupling, weight or counterterm is added.",
+    "moves_and_rates": "Use the unchanged PAH move families and inverse convention. In the Q=0 witness, radial transfers are absent because the fixed nonnegative charge sector has all ell_v=0; phase roots have zero matter contribution. Aperture and link roots retain c_r(x)=m_r(x) exp(-beta(F_r x-F x)/2), with m_r from the parent mobility rule and no rate fitting.",
+    "time": "External stochastic Markov time only; no quantum, proper or Lorentzian interpretation.",
+    "limit_label": "a_n=a_0/2^n is a refinement label only. No cutoff, physical-volume or continuum limit is taken."
+  },
+  "maps_and_parameters": {
+    "one_step_projection": "p_(n+1,n) retains all old vertex apertures, phases and old edge links, and drops the new diagonal d_n and new column n+2 variables. It is total on the declared Q=0 states.",
+    "root_transport": "Old vertex and old-edge roots are retained with their PAH labels; the new diagonal and new-column roots are vertical. A root changing only dropped variables has zero action on an old cylinder observable.",
+    "observable_lift": "(I_n f)(x)=f(p x). The common core is the algebraic union of bounded gauge- and anchor-automorphism-invariant cylinder functions with finite column support.",
+    "parameter_transport": "K,Q,M_s,M_psi,R_max,epsilon,beta,nu,theta and every displayed coupling are inherited identically. Only the formal label a_n=a_0/2^n changes.",
+    "normalization": "Counting measure on each finite state space and the unchanged PAH Gibbs rate normalization; no conditional Gibbs averaging is used.",
+    "common_norm": "delta_n(f)=||L_(n+1) I_n f-I_n L_n f||_infinity over the finite fine state space."
+  },
+  "compatibility_target": {
+    "local_eventual_exactness": "If the interaction closure of f is contained in columns 0,...,m, then delta_n(f)=0 for every n>m because the q_n split and the newly added column are outside the local rate support of f.",
+    "finite_cumulative_bound": "For any bounded cylinder f, with N_f aperture/link roots that can change f, delta_n(f)<=4 N_f exp(beta D_local/2)||f||_infinity on affected levels and delta_n(f)=0 eventually; hence sum_n delta_n(f) is finite.",
+    "local_energy_envelope": "D_local is computed from the PAH terms on the declared Q=0 slice as onsite_range + degree_bound*edge_range + face_incidence_bound*face_range. The script derives all three ranges from epsilon and the exact local formulas.",
+    "scope_statement": "This is local common-core compatibility with a finite cumulative bound, not a global uniform estimate over all observables, volumes, regulators, phases or source choices."
+  },
+  "finite_witness": {
+    "state": "All aperture levels j_v=0 and all old links u_e=0; the fine diagonal link is u_d=0 or u_d=1.",
+    "observable": "f=s_0, a bounded gauge- and anchor-invariant aperture cylinder.",
+    "aperture_move": "Raise j_0 from 0 to 1 with s_v=1/2+j_v/2.",
+    "derived_values": "The exact PAH energy increments are Delta F_coarse=1/8, Delta F_fine(u_d=0)=1/4 and Delta F_fine(u_d=1)=-55/36. The aperture mobility is sqrt(1/2) and its square is 1/2, so the corresponding rate factors are sqrt(1/2)exp(-1/16), sqrt(1/2)exp(-1/8) and sqrt(1/2)exp(55/72).",
+    "interpretation": "The nonzero hidden-diagonal dependence is an explicit boundary defect for a split intersecting the observable; it is not used as a global no-go."
+  },
+  "finite_acceptance_conditions": [
+    "The PAH-001 and PAH-OMC-001 parent hashes match exactly and neither parent is edited.",
+    "The local witness changes edge and face incidence and introduces a genuine diagonal link, not a colour label or duplicated transition rate.",
+    "The strip projection, root transport, Q=0 sector and parameter transport are total and explicitly enumerated.",
+    "The primary script derives the exact PAH energy increments, mobility, local energy envelope, incidence counts and eventual-zero rule.",
+    "The non-importing independent script reproduces the witness and locality bound from direct formulas.",
+    "The hostile script rejects source drift, colour-only substitution, added terms, rate fitting, wrong topology, wrong projection, wrong Q sector and physical promotion.",
+    "Lean checks the rational witness, the incidence change, the eventual-zero/cumulative implication and the non-promotion firewall."
+  ],
+  "known_boundaries": {
+    "affected_levels": "The local square split need not intertwine exactly when it meets the observable support; the explicit diagonal-link witness has nonzero defect.",
+    "local_not_global": "Eventual exactness holds for each fixed finite-support cylinder along this strip family. A supremum over all observables or a volume-uniform generator estimate is not proved.",
+    "q_zero_scope": "Q=0 removes matter and radial-transfer activity in the audited fixture. This is a finite diagnostic slice, not a production-sector or physical-vacuum result.",
+    "no_continuum": "The geometric incidence family is an anchored strip refinement/exhaustion label, not a proof of a->0 continuum convergence or a physical lattice spacing."
+  },
+  "falsifiers": [
+    "Any parent hash or parent byte changes.",
+    "The local carrier does not change edge/face incidence or the diagonal link is only a colour label.",
+    "The exact PAH energy formula, orientations, mobility or rate convention is changed, weighted, counterterm-repaired or post-hoc fitted.",
+    "The projection is not total on the fixed-Q state space or a root changing a retained observable is silently dropped.",
+    "The independent lane fails to reproduce the exact witness or the eventual-zero locality condition.",
+    "The derived local energy envelope fails on a finite strip template or the cumulative bound is asserted without its root-count and support hypotheses.",
+    "The result is promoted to a global uniform limit, physical Pre-A, spacetime, gravity, QFT, Yang--Mills, continuum, mass-gap or TOE theorem."
+  ],
+  "non_claims": [
+    "PAH-OMC-004 is a researcher-proposed successor, not an external source or physical authority.",
+    "The finite theorem concerns PAH-001 composed with PAH-OMC-001 and this separately hashed geometric successor; it is not retroactive evidence for PAH-001 alone.",
+    "The local eventual-zero statement is not a global volume-, regulator-, source- or phase-uniform estimate and does not close an ordered limit.",
+    "Q=0 is a finite test sector and is not the physical vacuum or a Reading-H construction.",
+    "Markov time is not quantum real time, proper time or Lorentzian time.",
+    "No physical Pre-A, spacetime, event horizon, gravity, QFT, Yang--Mills, continuum, mass-gap, cosmic-origin or TOE conclusion follows."
+  ],
+  "ordered_limit_firewall": {
+    "inherited_order": [
+      "LOCAL_STATE_CUTOFF",
+      "LATTICE_REFINEMENT",
+      "VOLUME_EXHAUSTION",
+      "PHASE_SELECTOR",
+      "APERTURE_COLLAPSE",
+      "GROUND_STATE_IF_REQUESTED",
+      "OBSERVATION_TIME"
+    ],
+    "interchange_claimed": false,
+    "status": "NOT_ADMITTED"
+  },
+  "single_next_question": "Can the local eventual-exactness and finite cumulative bound be extended from the Q=0 strip diagnostic to a source-authorized nonzero-Q family with a uniform interaction-closure estimate, without altering PAH-001?",
+  "revisit_condition": "Reopen a broader or physical refinement route only after a separately hashed owner contract supplies nonzero-Q state transport, source-authorized root multiplicities, a common invariant core and a uniform estimate in the declared limit order.",
+  "stop_or_redesign": [
+    "Keep the explicit nonzero local boundary defect; do not erase it by averaging, a counterterm or rate rescaling.",
+    "If the independent locality proof fails, retain only the exact finite incidence witness and mark the successor HOLD_FOR_EVIDENCE.",
+    "If a global uniform estimate is requested, create a new contract with its own assumptions rather than upgrading this local theorem.",
+    "Do not use this result to assert physical vacuum, QFT, gravity, Yang--Mills or continuum closure."
+  ]
+}

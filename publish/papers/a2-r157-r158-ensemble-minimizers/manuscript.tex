@@ -1,0 +1,750 @@
+% Draft manuscript for the A2/R-157/R-158 publication lane.
+% This file is intentionally a manual synthesis of the registered proof notes.
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{hyperref}
+
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue}
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\T}{\mathbb T}
+\newcommand{\C}{\mathbb C}
+\newcommand{\R}{\mathbb R}
+\newcommand{\cF}{\mathcal F}
+\newcommand{\cO}{\mathcal O}
+\newcommand{\Id}{\mathrm I}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\ip}[2]{\left\langle #1,#2\right\rangle}
+\newcommand{\grad}{\nabla_{\!\R}}
+\newcommand{\eps}{\varepsilon}
+
+\title{Global Well-Posedness, Neutral-State Rejection, and
+       Ensemble-Induced Shell Coexistence in a Regularized
+       Multicomponent Brazovskii Functional}
+\author{Jusang Lee}
+\date{Draft v0.1.0 -- 2026-09-03}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We study one explicitly defined three-component complex field functional on a
+fixed periodic three-torus.  The field is treated as six real components and
+the derivative Class-II terms are regularized by a positive density floor.
+Conditional only on the registered identification of this functional with the
+canonical P1 production functional, we prove global well-posedness of its
+real-$L^2$ gradient flow for every $H^2$ datum, exact energy dissipation,
+continuous dependence, and positive-time smoothness.  An exact completion of
+the quadratic and local polynomial terms, together with a positive radial
+derivative of the Class-II energy, shows that the unconstrained functional has
+the zero field as its unique critical point and global minimizer and that the
+gradient flow decays exponentially in $L^2$.  We then solve a distinct,
+imposed ensemble problem.  On the side-$16$ torus, the exact spectral bottom
+lies on the integer shell $|n|^2=3$.  After fixing
+$Q=\norm{\Psi}_{2}^{2}/2$ or introducing
+$\cO_\mu=\cF-\mu Q$, an exact nonnegative decomposition gives a finite-shell
+constrained minimizer and a first-order grand-potential coexistence point.
+The charge or chemical potential is imposed rather than derived; the paper
+therefore makes no claim about a physical vacuum, BCC structure, infinite
+volume, or a quantum continuum limit.  We provide a claim-to-proof map and a
+reproducibility protocol tied to the repository's independent exact audits.
+\end{abstract}
+
+\section{Introduction and statement of scope}
+
+There are two mathematically different questions in the current TECT/A2
+candidate.  The first is whether a fixed regularized functional defines a
+well-behaved dissipative evolution and what its unconstrained equilibria are.
+The second is what happens after the variational problem is changed by fixing
+a nonzero quadratic charge or by subtracting a chemical-potential term.  A
+nonzero minimizer of the second problem must not be reported as an equilibrium
+of the first problem.  This distinction is the organizing principle of the
+present paper.
+
+The object is a specific functional, not an assertion that this functional is
+the physical law of nature.  Its identification with the canonical P1
+production functional is retained as the named hypothesis
+\texttt{A2-H3-CANONICAL-PRODUCTION-FUNCTIONAL}.  All conclusions below are
+conditional on that identification and unconditional for the explicitly
+defined mathematical functional once the identification is accepted.
+
+The paper has three main contributions.
+\begin{enumerate}[label=(\roman*)]
+\item We give a continuum proof for the full regularized three-component
+      fourth-order functional, including the derivative Class-II terms.  The
+      nonlinear map has order two, not four, and the endpoint $H^4$ estimate
+      is obtained by a Duhamel cancellation rather than by an invalid
+      fractional-smoothing shortcut.
+\item We give an exact global sign test for the pinned unconstrained problem.
+      It rejects every nonzero equilibrium of this candidate, not merely the
+      finite list of lattice patterns tested previously.
+\item We solve the separately declared fixed-charge and grand-canonical
+      problems by an exact spectral and polynomial completion.  The result is
+      a finite-volume ensemble mechanism, with an explicit discontinuous
+      charge jump, while the original neutral reference remains lower.
+\end{enumerate}
+
+The statements are deliberately narrower than a constructive quantum-field
+theory theorem.  We do not claim an infinite-volume limit, a real-time
+automorphism group, algebraic KMS dynamics, a ground-state gap, a continuum
+renormalization, a derived conserved charge, a density crystal, BCC selection,
+or any cosmological interpretation.
+
+\section{The functional and conventions}
+
+Let $\T^3_{16}=[0,16)^3$ with periodic boundary conditions and let
+$\Psi:\T^3_{16}\to\C^3$.  We regard $\C^3$ as $\R^6$ and use the real pairing
+\begin{equation}
+ \ip{U}{V}_{\R}=\operatorname{Re}\int_{\T^3_{16}}U^\dagger V\,\dd x.
+ \label{eq:real-pairing}
+\end{equation}
+Write $\rho=\Psi^\dagger\Psi$.  For the three Hermitian internal generators
+$T_A$ in the pinned P1 data, set
+\begin{equation}
+ m_A=\Psi^\dagger T_A\Psi,\qquad
+ J_A=\nabla m_A,\qquad
+ K_A=J_A-\frac{m_A}{\rho+\eps_\rho}\nabla\rho,
+ \qquad \eps_\rho=10^{-12}.
+ \label{eq:currents}
+\end{equation}
+The positive floor in \eqref{eq:currents} is part of the declared functional;
+removing it is a different theorem.
+
+The quadratic operator is
+\begin{equation}
+ L=\bigl(r+Z(-\Delta)+Y(-\Delta)^2\bigr)\Id_3+M_{\rm fam}
+       +k_{\rm lock}(\Id_3-P_0),
+ \label{eq:L}
+\end{equation}
+where the pinned scalar coefficients are
+\begin{equation}
+ Y=1,\qquad Z=-0.9252754126,\qquad r=0.4740336473,
+ \label{eq:scalar-coeff}
+\end{equation}
+and the family/lock contribution is positive semidefinite.  The local
+polynomial coefficients are
+\begin{equation}
+ \lambda=-\frac{43}{100},\qquad \gamma=\frac{81}{50}>0.
+ \label{eq:local-coeff}
+\end{equation}
+The Class-II density is
+\begin{equation}
+ \cF_{\rm II}(\Psi)=\sum_A\int_{\T^3_{16}}
+ \left(\frac a2|J_A|^2+b\operatorname{Re}(J_A^\dagger K_A)
+                  +\frac c2|K_A|^2\right)\dd x,
+ \label{eq:classii}
+\end{equation}
+with the pinned positive-definite coefficient matrix
+$Q_{\rm II}=\left(\begin{smallmatrix}a&b\\b&c\end{smallmatrix}\right)$.
+The full functional is
+\begin{equation}
+ \cF(\Psi)=\frac12\ip{\Psi}{L\Psi}_{\R}
+ +\int_{\T^3_{16}}\left(\frac\lambda4\rho^2+\frac\gamma6\rho^3\right)\dd x
+ +\cF_{\rm II}(\Psi).
+ \label{eq:functional}
+\end{equation}
+
+The domain for the evolution theorem is $H^2(\T^3_{16};\C^3)$, while the
+linear operator has domain $H^4$ and form domain $H^2$.  All assertions about
+the charge ensemble below refer to the same fixed torus and the same
+functional \eqref{eq:functional}; no new physical field or reservoir is
+introduced.
+
+\section{Main results}
+
+\begin{theorem}[full gradient-flow well-posedness]
+Assume the named canonical-functional hypothesis H3.  For every
+$\Psi_0\in H^2(\T^3_{16};\C^3)$, the real-$L^2$ gradient flow
+\begin{equation}
+ \partial_t\Psi=-\grad\cF(\Psi),\qquad \Psi(0)=\Psi_0,
+ \label{eq:flow}
+\end{equation}
+has a unique global solution with
+\begin{equation}
+ \Psi\in C([0,\infty);H^2)\cap L^2_{\rm loc}((0,\infty);H^4),qquad
+ \partial_t\Psi\in L^2_{\rm loc}((0,\infty);L^2).
+ \label{eq:solution-class}
+\end{equation}
+The solution depends continuously on the initial datum in $H^2$ on every
+finite time interval and satisfies
+\begin{equation}
+ \cF(\Psi(t))+\int_s^t\norm{\partial_\tau\Psi(\tau)}_2^2\dd\tau
+       =\cF(\Psi(s)),\qquad 0\le s\le t.
+ \label{eq:energy-id}
+\end{equation}
+For every $t>0$ it is smooth in space and time.
+\end{theorem}
+
+\begin{theorem}[neutral minimizer and exponential decay]
+For the pinned coefficients, there are exact rational constants
+\begin{equation}
+ g=\frac{719818750025582338837}{5400000000000000000000}>\frac18,qquad
+ \kappa=\frac{2101675000076747016511}{8100000000000000000000}>\frac14
+ \label{eq:g-kappa}
+\end{equation}
+such that every $\Psi\in H^2$ obeys
+\begin{equation}
+ \cF(\Psi)\ge g\norm{\Psi}_2^2,qquad
+ \ip{D\cF(\Psi)}{\Psi}_{\R}\ge\kappa\norm{\Psi}_2^2.
+ \label{eq:neutral-bounds}
+\end{equation}
+Consequently $\Psi=0$ is the unique critical point and global minimizer of
+the unconstrained problem, and every solution of \eqref{eq:flow} obeys
+\begin{equation}
+ \norm{\Psi(t)}_2^2\le e^{-2\kappa t}\norm{\Psi_0}_2^2.
+ \label{eq:decay}
+\end{equation}
+\end{theorem}
+
+\begin{theorem}[imposed charge and chemical-potential ensemble]
+Let $Q(\Psi)=\norm{\Psi}_2^2/2$ and let $\lambda_0$ be the exact bottom of
+the quadratic operator \eqref{eq:L} on the side-$16$ torus.  Put
+\begin{equation}
+ \rho_* = \frac{43}{216},\qquad
+ c_* = \frac{1849}{86400},\qquad \mu_t=\lambda_0-c_*.
+ \label{eq:ensemble-constants}
+\end{equation}
+Then, with $\rho=\Psi^\dagger\Psi$,
+\begin{equation}
+ \cF(\Psi)=\mu_t Q(\Psi)
+ +\frac12\ip{\Psi}{(L-\lambda_0)\Psi}_{\R}
+ +\cF_{\rm II}(\Psi)
+ +\frac\gamma6\int_{\T^3_{16}}\rho(\rho-\rho_*)^2\dd x.
+ \label{eq:ensemble-decomp}
+\end{equation}
+Every term after $\mu_tQ$ is nonnegative.  A ground-shell plane wave with
+constant density $\rho_*$ is a constrained global minimizer at
+\begin{equation}
+ Q_*=\frac{11008}{27}.
+ \label{eq:Qstar}
+\end{equation}
+For $\cO_\mu=\cF-\mu Q$, zero is the unique minimizer for $\mu<\mu_t$,
+coexists with nonzero ground-shell minimizers at $\mu=\mu_t$, and is beaten
+by a nonzero minimizer for $\mu>\mu_t$.  The coexistence point lies strictly
+between the amplitude saddle-node and the zero-field spinodal:
+\begin{equation}
+ \mu_{\rm sn}=\lambda_0-\frac{1849}{64800}<
+ \mu_t=\lambda_0-\frac{1849}{86400}<\lambda_0=\mu_{\rm lin}.
+ \label{eq:first-order-ordering}
+\end{equation}
+This is a theorem about an imposed ensemble, not a derived physical charge or
+neutral-vacuum selection.
+\end{theorem}
+
+\section{Proof of the evolution theorem}
+\label{sec:evolution-proof}
+
+\subsection{Linear operator and coercivity}
+
+The scalar symbol of \eqref{eq:L} is $p(x)=r+Zx+Yx^2$ with $x=|k|^2$.
+Completing the square gives
+\begin{equation}
+ p(x)=Y\left(x+\frac{Z}{2Y}\right)^2+r-\frac{Z^2}{4Y},qquad
+ \inf_{x\ge0}p(x)=0.260000000009475>0.
+ \label{eq:symbol-positive}
+\end{equation}
+Moreover,
+\begin{equation}
+ \inf_{x\ge0}\frac{p(x)}{1+x^2}=0.2048572626782363>0.
+ \label{eq:H2-coercivity}
+\end{equation}
+The family matrix and the lock term are positive semidefinite, so $L$ is
+self-adjoint on $H^4$ and its form domain is $H^2$, with equivalent graph and
+Sobolev norms.  The pinned Class-II matrix is positive definite; its recorded
+determinant and least eigenvalue are respectively
+\begin{equation}
+ \det Q_{\rm II}=7.031249999996483\times10^{-6},qquad
+ \lambda_{\min}(Q_{\rm II})=0.001259011500926061.
+ \label{eq:QII-numbers}
+\end{equation}
+
+Since $\lambda<0$ and $\gamma>0$, Young's inequality gives
+\begin{equation}
+ \frac{|\lambda|}{4}\rho^2\le \frac\gamma{12}\rho^3+C_Y,qquad
+ C_Y=0.010098435197886498.
+ \label{eq:young}
+\end{equation}
+Combining \eqref{eq:H2-coercivity}, \eqref{eq:QII-numbers}, and
+\eqref{eq:young} yields, for a positive $c_{H^2}$,
+\begin{equation}
+ \cF(\Psi)\ge \frac{c_{H^2}}2\norm{\Psi}_{H^2}^2
+       +\frac\gamma{12}\norm{\Psi}_{L^6}^6-C_Y|\T^3_{16}|.
+ \label{eq:energy-coercivity}
+\end{equation}
+
+\subsection{The Class-II map has order two}
+
+Realify $\Psi$ as $u\in\R^6$.  Let $A_A$ be the real symmetric realification
+of $T_A$, and define
+\begin{equation}
+ p_A(u)=2A_Au,qquad q_A(u)=\frac{u^TA_Au}{u^Tu+\eps_\rho},qquad
+ s_A(u)=2(A_A-q_A(u)\Id)u.
+ \label{eq:realified-coeff}
+\end{equation}
+The Class-II density can then be written exactly as
+\begin{equation}
+ G_{\rm II}(u,\nabla u)=\frac12\sum_j(\partial_j u)^T B(u)(\partial_j u),
+ \quad
+ B(u)=\sum_A\{a p_Ap_A^T+b(p_As_A^T+s_Ap_A^T)+c s_As_A^T\}.
+ \label{eq:B-map}
+\end{equation}
+The positive $\eps_\rho$ makes $B$ smooth on all of $\R^6$.  Direct
+Euler--Lagrange differentiation therefore has the form
+\begin{equation}
+ N_{\rm II}(u)=B(u)\nabla^2u+C(u)[\nabla u,\nabla u],
+ \label{eq:N-map}
+\end{equation}
+where $C$ is smooth and no derivative above order two occurs.  On the fixed
+three-torus,
+$H^2\hookrightarrow L^\infty\cap W^{1,6}$ and $L^3\hookrightarrow L^2$.
+Product estimates and the algebra property of $H^2$ thus give, on every
+bounded $H^2$ ball,
+\begin{equation}
+ \norm{N(u)-N(v)}_2\le C_R\norm{u-v}_{H^2}.
+ \label{eq:local-lipschitz}
+\end{equation}
+
+The positive fourth-order operator generates an analytic semigroup.  In
+particular,
+\begin{equation}
+ \norm{L^{1/2}e^{-tL}}_{L^2\to L^2}\le Ct^{-1/2},
+ \qquad t>0.
+ \label{eq:semigroup}
+\end{equation}
+The kernel in \eqref{eq:semigroup} is integrable at the origin.  The mild
+equation, \eqref{eq:local-lipschitz}, and a contraction argument in
+$C([0,T];H^2)$ yield a unique local solution and the usual continuation
+alternative.
+
+\subsection{Galerkin passage and energy identity}
+
+Let $P_n$ be the real $L^2$ Fourier projection and solve
+\begin{equation}
+ \partial_tu_n=-P_n(Lu_n+N(u_n)).
+ \label{eq:galerkin}
+\end{equation}
+This is the exact finite-dimensional real gradient flow, hence
+\begin{equation}
+ \frac{\dd}{\dd t}\cF(u_n)=-\norm{\partial_tu_n}_2^2.
+ \label{eq:galerkin-energy}
+\end{equation}
+The coercivity estimate gives a uniform $L^\infty(0,T;H^2)$ bound and
+\eqref{eq:galerkin-energy} gives an $L^2(0,T;L^2)$ bound on $\partial_tu_n$.
+Ellipticity applied to $Lu_n=-\partial_tu_n-P_nN(u_n)$ then gives an
+$L^2(0,T;H^4)$ bound.  Aubin--Lions compactness yields strong convergence in
+$L^2(0,T;H^2)$, and \eqref{eq:local-lipschitz} gives strong convergence of
+the nonlinear term in $L^2(0,T;L^2)$.
+
+For the nonlinear part $\Phi$, the derivative identity
+$D\Phi(u)[h]=\ip{N(u)}{h}_{\R}$ and the local Lipschitz estimate give the chain
+rule
+\begin{equation}
+\Phi(u(t))-\Phi(u(s))=\int_s^t\ip{N(u(\tau))}{\partial_\tau u(\tau)}_{\R}\dd\tau.
+ \label{eq:nonlinear-chain}
+\end{equation}
+The corresponding spectral quadratic-form chain rule combined with
+\eqref{eq:nonlinear-chain} proves the equality \eqref{eq:energy-id}, not just
+an energy inequality.  The lower bound \eqref{eq:energy-coercivity} prevents
+the $H^2$ norm from diverging at a finite maximal time, so the solution is
+global.
+
+\subsection{Continuous dependence and smoothing}
+
+For two solutions in a common energy-bounded ball, the mild difference equation
+has the Volterra estimate
+\begin{equation}
+ \norm{u(t)-v(t)}_{H^2}\le C\norm{u_0-v_0}_{H^2}
+ +C_R\int_0^t(t-s)^{-1/2}\norm{u(s)-v(s)}_{H^2}\dd s.
+ \label{eq:singular-gronwall}
+\end{equation}
+Weakly singular Gronwall proves continuous dependence on finite intervals.
+Analytic-semigroup estimates first give $u(t)\in D(L^\alpha)=H^{4\alpha}$ for
+$t>0$ and every $\alpha<1$.  Choose $\alpha>1/2$ to obtain Hölder continuity
+into $H^2$ away from $t=0$.  Thus $f(t)=N(u(t))$ is Hölder continuous into
+$L^2$, and the endpoint cancellation
+\begin{equation}
+ L\int_a^t e^{-(t-s)L}f(s)\dd s
+ =(\Id-e^{-(t-a)L})f(t)
+ +\int_a^tLe^{-(t-s)L}[f(s)-f(t)]\dd s
+ \label{eq:endpoint-cancellation}
+\end{equation}
+has an integrable last term.  It follows that $u(t)\in D(L)=H^4$ for every
+$t>0$.  Periodic Moser estimates give
+\begin{equation}
+ N:H^m\longrightarrow H^{m-2}\quad\text{locally Lipschitz},qquad m\ge2,
+ \label{eq:moser}
+\end{equation}
+and iteration of \eqref{eq:endpoint-cancellation} proves the claimed
+$C^\infty$ regularity.
+
+\section{Exact neutral-state result}
+\label{sec:neutral-proof}
+
+\subsection{Quadratic completion}
+
+The scalar symbol has the exact minimum
+\begin{equation}
+ \mu_{\rm sh}=r-\frac{Z^2}{4Y}
+ =\frac{26000000000947494031}{10^{20}}>0.
+ \label{eq:mu-shell}
+\end{equation}
+The pinned internal matrix is
+\begin{equation}
+ M=\begin{pmatrix}
+ 1/10&-1/20&-1/20\\
+ -1/20&13/100&-1/20\\
+ -1/20&-1/20&17/100
+ \end{pmatrix}.
+ \label{eq:M}
+\end{equation}
+The three leading Sylvester minors of $M-(7/250)\Id$ are
+\begin{equation}
+ \frac9{125},\qquad \frac{1211}{250000},\qquad
+ \frac{89}{31250000},
+ \label{eq:sylvester}
+\end{equation}
+so $M>(7/250)\Id$.  Parseval therefore gives
+\begin{equation}
+ \cF_{\rm quad}(\Psi)\ge\frac\nu2\norm{\Psi}_2^2,qquad
+ \nu=\mu_{\rm sh}+\frac7{250}.
+ \label{eq:nu}
+\end{equation}
+
+The full Class-II matrix is positive definite because, after writing
+$P=M_X^2+\eps_X>0$, its determinant factor is
+\begin{equation}
+ c_{JJ}c_{KK}-c_{JK}^2=\frac1{50}>0.
+ \label{eq:classii-det}
+\end{equation}
+For the local polynomial, direct coefficient matching gives
+\begin{equation}
+ \frac\nu2\rho+\frac\lambda4\rho^2+\frac\gamma6\rho^3
+ =g\rho+\frac\gamma6\rho(\rho-\rho_*)^2,
+ \quad \rho_*=-\frac{3\lambda}{4\gamma}=\frac{43}{216},
+ \quad g=\frac\nu2-\frac{3\lambda^2}{32\gamma}.
+ \label{eq:neutral-completion}
+\end{equation}
+The exact rational evaluation of $g$ is the first value in \eqref{eq:g-kappa}.
+After integration and addition of the nonnegative Class-II term,
+\eqref{eq:neutral-bounds}'s first inequality follows.  Equality forces
+$\rho=0$ almost everywhere, so the zero field is the unique global minimizer.
+
+\subsection{Radial derivative and absence of nonzero equilibria}
+
+The energy lower bound alone does not rule out nonzero saddles.  We therefore
+scale $\Psi\mapsto t\Psi$ and put $y=t^2$.  At a fixed field, let $j$ denote
+the unscaled current and let $\ell(y)=j-q(y)\nabla\rho$ with
+\begin{equation}
+ q(y)=\frac{y m}{y\rho+\eps_\rho},qquad
+ \theta=\frac{\eps_\rho}{y\rho+\eps_\rho}\in[0,1].
+ \label{eq:theta}
+\end{equation}
+Direct differentiation gives
+\begin{equation}
+ \frac{\dd E_{\rm II}}{\dd y}
+ =y\begin{pmatrix}j&\ell\end{pmatrix}
+ R_\theta\begin{pmatrix}j\\\ell\end{pmatrix},qquad
+ R_\theta=\begin{pmatrix}
+ a-\theta b&b+\theta(b-c)/2\\
+ b+\theta(b-c)/2&c(1+\theta)
+ \end{pmatrix}.
+ \label{eq:Rtheta}
+\end{equation}
+For the pinned coefficients,
+\begin{equation}
+ a-\theta b\ge\frac{21}{2000P}>0,qquad
+ \det R_\theta=\frac{9(-81\theta^2+128\theta+128)}{10240000P^2}>0
+ \quad(0\le\theta\le1).
+ \label{eq:Rtheta-positive}
+\end{equation}
+The numerator is concave and positive at both endpoints, so the Class-II
+energy is nondecreasing along every amplitude ray.  Differentiating the
+remaining terms in the same ray gives
+\begin{equation}
+ \ip{D\cF(\Psi)}{\Psi}_{\R}
+ \ge\left(\nu-\frac{\lambda^2}{4\gamma}\right)\norm{\Psi}_2^2
+ =\kappa\norm{\Psi}_2^2.
+ \label{eq:radial-bound}
+\end{equation}
+This is the second inequality in \eqref{eq:neutral-bounds}.  A nonzero
+critical point would make its left-hand side vanish, contradicting
+\eqref{eq:radial-bound}.  Finally,
+\begin{equation}
+ \frac12\frac{\dd}{\dd t}\norm{\Psi(t)}_2^2
+ =-\ip{D\cF(\Psi(t))}{\Psi(t)}_{\R}
+ \le-\kappa\norm{\Psi(t)}_2^2
+ \label{eq:decay-diff}
+\end{equation}
+proves \eqref{eq:decay}.
+
+\begin{remark}[meaning of the neutral result]
+The result rejects nonzero equilibria only for the declared unconstrained,
+neutral, hash-pinned functional and its canonical gradient flow.  It does not
+reject every retuned functional, fixed-charge problem, compact target, or
+conserved evolution.  In particular, it is a candidate-functional rejection
+boundary, not a proof that a physical vacuum is empty.
+\end{remark}
+
+\section{Exact imposed-ensemble transition}
+\label{sec:ensemble-proof}
+
+\subsection{The finite-torus spectral bottom}
+
+The quadratic operator has the form
+\begin{equation}
+ \mathcal L=(r+Z(-\Delta)+Y(-\Delta)^2)\Id+M,
+ \quad M=\begin{pmatrix}
+ 1/10&-1/20&-1/20\\-1/20&13/100&-1/20\\-1/20&-1/20&17/100
+ \end{pmatrix}.
+ \label{eq:ensemble-L}
+\end{equation}
+The characteristic polynomial of $M$ is
+\begin{equation}
+ p(t)=t^3-\frac25t^2+\frac{223}{5000}t-\frac3{3125}.
+ \label{eq:charpoly}
+\end{equation}
+An exact Sturm computation isolates its smallest root $m_*$ by
+\begin{equation}
+ \frac{2811617233511}{10^{14}}<m_*<
+ \frac{2811617233512}{10^{14}}.
+ \label{eq:mstar}
+\end{equation}
+For $n\in\mathbb Z^3$, $|k_n|^2=\pi^2|n|^2/64$.  The rational enclosure of
+$\pi$ used by the audit proves
+\begin{equation}
+ \frac52<\frac{-Z/(2Y)}{\pi^2/64}<\frac72.
+ \label{eq:radial-location}
+\end{equation}
+Because $|n|^2$ is integral and $3=1^2+1^2+1^2$, the radial minimum is the
+shell $|n|^2=3$, containing the eight body-diagonal indices
+$n=(\pm1,\pm1,\pm1)$.  Thus
+\begin{equation}
+ \lambda_0=D(3\pi^2/64)+m_*,qquad
+ 0.28811617234458494031<\lambda_0<0.28811617234459494032.
+ \label{eq:lambda0}
+\end{equation}
+This is a finite-torus commensurability statement.  It is not a BCC theorem
+and it does not remove the shell degeneracy in an infinite-volume limit.
+
+\subsection{Nonnegative decomposition and saturation}
+
+Set $Q=\norm{\Psi}_2^2/2$.  Coefficient matching for
+$f(\rho)=\lambda\rho^2/4+\gamma\rho^3/6$ gives
+\begin{equation}
+ \frac{\lambda_0}{2}\rho+f(\rho)
+ =\frac{\mu_t}{2}\rho+\frac{\gamma}{6}\rho(\rho-\rho_*)^2,
+ \quad \rho_*=-\frac{3\lambda}{4\gamma},
+ \quad c_* =\frac{3\lambda^2}{16\gamma}.
+ \label{eq:polynomial-completion}
+\end{equation}
+Adding the spectral and Class-II remainders yields \eqref{eq:ensemble-decomp}.
+
+Let $u_*$ be a unit eigenvector of $M$ for $m_*$ and select any one of the
+eight indices on the shell.  The plane wave
+\begin{equation}
+ \Psi_*(x)=\sqrt{\rho_*}\,u_*\exp\!\left(\frac{2\pi i}{16}n\cdot x\right)
+ \label{eq:plane-wave}
+\end{equation}
+has constant $\rho$ and constant internal bilinears.  Hence $J_A=K_A=0$,
+the spectral remainder vanishes, and
+\begin{equation}
+ Q_*=\frac{16^3\rho_*}{2}=\frac{11008}{27}.
+ \label{eq:Qstar-again}
+\end{equation}
+All terms in \eqref{eq:ensemble-decomp} are therefore saturated.
+
+\subsection{Fixed charge and grand potential}
+
+For a prescribed charge $Q$, let $\bar\rho=2Q/16^3$.  The exact Bregman
+identity is
+\begin{equation}
+ f(\rho)-f(\bar\rho)-f'(\bar\rho)(\rho-\bar\rho)
+ =\frac{(\rho-\bar\rho)^2}{12}
+   \bigl(4\gamma\bar\rho+2\gamma\rho+3\lambda\bigr).
+ \label{eq:bregman}
+\end{equation}
+If $\bar\rho\ge\rho_*$, the bracket is nonnegative.  On the affine constraint
+$\int\rho=2Q$, the linear term integrates to zero.  The spectral remainder,
+the Class-II energy, and \eqref{eq:bregman} consequently prove constrained
+global minimality of a constant-density ground-shell plane wave for all
+$2Q/16^3\ge\rho_*$.  The constrained problem below $Q_*$ is not decided here.
+
+Subtracting $\mu Q$ from \eqref{eq:ensemble-decomp} gives
+\begin{equation}
+ \cO_\mu(\Psi)=(\mu_t-\mu)Q(\Psi)
+ +\frac12\ip{\Psi}{(L-\lambda_0)\Psi}_{\R}
+ +\cF_{\rm II}(\Psi)
+ +\frac\gamma6\int\rho(\rho-\rho_*)^2\dd x.
+ \label{eq:grand-decomp}
+\end{equation}
+For $\mu<\mu_t$, every nonzero field has positive grand potential.  At
+$\mu=\mu_t$, zero and the saturated states coexist.  For $\mu>\mu_t$, the
+plane wave has negative grand potential and sextic coercivity supplies a
+global minimizer, which is necessarily nonzero.
+
+The zero-field Hessian loses positivity at $\mu_{\rm lin}=\lambda_0$.  Along
+the ground-plane-wave amplitude family, stationary densities solve
+\begin{equation}
+ \gamma\rho^2+\lambda\rho+(\lambda_0-\mu)=0.
+ \label{eq:amplitude-quadratic}
+\end{equation}
+The amplitude saddle-node is $\mu_{\rm sn}=\lambda_0-\lambda^2/(4\gamma)$,
+while coexistence is $\mu_t=\lambda_0-3\lambda^2/(16\gamma)$.  With the
+pinned coefficients this is exactly \eqref{eq:first-order-ordering}; the
+global charge jumps from zero to $Q_*$ while zero remains a strict local
+minimum.  This is the precise sense in which the imposed ensemble transition
+is first order.
+
+\begin{remark}[why R-157 and R-158 do not conflict]
+At the nonzero state \eqref{eq:plane-wave}, the constrained Euler--Lagrange
+equation is $D\cF(\Psi_*)=\mu_t\Psi_*$, not $D\cF(\Psi_*)=0$.  R-157 concerns
+the latter equation in the unconstrained linear space; R-158 changes the
+variational problem.  Moreover,
+$\cF(\Psi_*)=\mu_tQ_*>0=\cF(0)$, so the ordered state does not beat the
+original neutral reference.
+\end{remark}
+
+\section{Relation to prior work and residual contribution}
+\label{sec:prior-art}
+
+The functional-analytic ingredients used here are standard: sectorial
+fourth-order semigroups, Sobolev product estimates, Galerkin compactness,
+weakly singular Gronwall inequalities, and polynomial coercivity.  A
+Swift--Hohenberg analysis by Giorgini proves well-posedness and long-time
+attractor properties for scalar slow/fast equations, but does not contain the
+present three-component regularized Class-II map, its exact radial sign, or
+the imposed-ensemble completion.  Thus the well-posedness theorem alone is
+not claimed as a new general method.
+
+Quantum anharmonic-crystal phase-transition work, such as
+Kargol--Kondratiev--Kozitsky, develops Euclidean Gibbs states, reflection
+arguments, and infrared estimates for specified lattice models.  The present
+paper does not import a quantum phase theorem.  It instead treats a classical
+fixed-torus variational functional and proves the model-specific sign and
+spectral identities needed for its two ensembles.  The residual contribution
+is therefore the exact combination of (a) the full derivative Class-II
+well-posedness argument, (b) the global neutral rejection, and (c) the finite
+shell ensemble classification, all with a common pinned functional and an
+explicit scope firewall.
+
+The claim is not a world-first assertion.  A complete novelty determination
+requires a specialist literature search beyond the bounded crosswalk recorded
+in \texttt{literature-crosswalk.md} and independent mathematical review of the
+model-specific estimates.
+
+\section{Verification and reproducibility}
+\label{sec:verification}
+
+The paper cites only the registered A2 claim and its result records:
+\begin{center}
+\small
+\begin{tabular}{lll}
+\toprule
+component & independent executable evidence & recorded result\\
+\midrule
+full evolution & four audits & 20/20, 14/14, 12/12, 15/15 PASS\\
+R-157 neutral sign & primary and non-importing lanes & 26/26, 24/24 PASS\\
+R-158 ensemble sign & primary and standard-library lanes & 35/35, 24/24 PASS\\
+R-472 exact core & Lean sidecar and hostile checks & 30/30, 22/22, 12/12, 22/22 PASS\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The canonical commands are listed in \texttt{verification/README.md}.  The
+tests recompute rational constants, matrix signs, spectral intervals,
+normalizations, and hostile mutations.  They do not prove the analytic
+semigroup, compactness, chain-rule, or external-literature steps; those remain
+the proof text's responsibility.
+
+The existing A2 T6 reproduction bundle is recorded in the claim card and its
+bundle directory.  A dedicated capstone bundle containing the integrated
+R-157/R-158 referee note and all transitive scripts is a required
+post-review action.  Under the repository policy it must be built only after
+operator confirmation of the integrated referee package.  This draft does not
+claim that confirmation or a release-gated submission.
+
+\section{Limitations and falsifiers}
+\label{sec:limitations}
+
+The theorem's domain is the fixed side-$16$ torus, six-real-component $H^2$
+field space, pinned coefficients, positive density floor, and $\eta_{\rm
+shell}=0$.  The following are outside its scope:
+\begin{itemize}
+\item infinite-volume or continuum removal, counterterm flow, and regulator
+      independence;
+\item a real-time infinite-volume dynamics, algebraic KMS states, ground
+      states, spectral gaps, extremality, purity, or clustering;
+\item a conserved physical charge, a reservoir, or a derivation of $\mu$;
+\item gauge completion, gauge-invariant density modulation, BCC or unique
+      morphology;
+\item the historical non-variational backend, signed stochastic composites,
+      alternative parameters, and compact target spaces;
+\item any physical-vacuum, gravity, cosmology, or Sector-A closure claim.
+\end{itemize}
+
+The analytic theorem is falsified by a counterexample to global $H^2$
+well-posedness, uniqueness, continuous dependence, the exact energy identity,
+or positive-time smoothing in the declared domain.  R-157 is falsified by an
+exact nonzero critical point or a field violating \eqref{eq:neutral-bounds}.
+R-158 is falsified by failure of the exact spectral shell, the decomposition,
+the Bregman sign, plane-wave saturation, or the ordering
+\eqref{eq:first-order-ordering}.  A failure of the named P1 identification
+hypothesis blocks transfer to the TECT production interpretation but does not
+alter the mathematics of the explicitly defined functional.
+
+\section{Conclusion}
+
+The pinned functional has a sharp two-sided mathematical verdict.  Its neutral
+unconstrained dynamics are globally well posed and converge exponentially to
+zero; no nonzero equilibrium survives the exact radial sign.  A nonzero shell
+state appears only after the variational problem is changed by an imposed
+charge or chemical potential, where an exact first-order coexistence mechanism
+can be proved on the finite torus.  This separation is the principal result:
+the ensemble mechanism is mathematically real, while its physical provenance
+and interpretation remain open.  The manuscript is therefore a candidate
+independent mathematical paper, currently at draft status pending the
+literature crosswalk, proof audit, operator confirmation, capstone bundle, and
+release checks specified in the accompanying files.
+
+\begin{thebibliography}{9}
+\bibitem{Pazy}
+A. Pazy, \emph{Semigroups of Linear Operators and Applications to Partial
+Differential Equations}, Springer, 1983.
+
+\bibitem{Amann}
+H. Amann, \emph{Linear and Quasilinear Parabolic Problems}, Vol. I,
+Birkhäuser, 1995.
+
+\bibitem{Giorgini}
+A. Giorgini, ``On the Swift--Hohenberg equation with slow and fast dynamics:
+well-posedness and long-time behavior,'' \emph{Communications on Pure and
+Applied Analysis} 15 (2016), 219--241,
+\href{https://doi.org/10.3934/cpaa.2016.15.219}{doi:10.3934/cpaa.2016.15.219}.
+
+\bibitem{KKK}
+J. Kargol, Y. Kondratiev, and Y. Kozitsky, ``Phase transitions and quantum
+stabilization in quantum anharmonic crystals,'' arXiv:0710.2303,
+\href{https://arxiv.org/abs/0710.2303}{arXiv:0710.2303}.
+
+\bibitem{AubinLions}
+J.-L. Lions, \emph{Quelques méthodes de résolution des problèmes aux limites
+non linéaires}, Dunod, 1969.
+
+\bibitem{Temam}
+R. Temam, \emph{Infinite-Dimensional Dynamical Systems in Mechanics and
+Physics}, 2nd ed., Springer, 1997.
+\end{thebibliography}
+
+\end{document}
