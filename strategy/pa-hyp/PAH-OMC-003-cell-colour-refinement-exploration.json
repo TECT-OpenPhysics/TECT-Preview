@@ -1,0 +1,106 @@
+{
+  "schema": "tect/proof-exploration/1.0",
+  "schema_version": "1.0",
+  "id": "EXP-001368",
+  "recorded_at": "2026-09-03T02:45:00Z",
+  "recorded_by": "Codex",
+  "reviewed_on": "2026-09-03",
+  "provenance": "contemporaneous",
+  "task_id": "T-054",
+  "claim_ids": [
+    "C6-SPACETIME-SIGNATURE"
+  ],
+  "gate_ids": [
+    "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+  ],
+  "title": "PAH-OMC-003 exact cell-colour block refinement",
+  "question": "Can a separately versioned finite cell-colour block refinement preserve the PAH finite functional and generator exactly on one common invariant cylinder core without repeating the failed free-vertex, scalar-transport, or conditional-Gibbs routes?",
+  "method": [
+    "Pin the immutable PAH-001 and PAH-OMC-001 parent bytes and define PAH-OMC-003 as a separate successor contract.",
+    "For levels n=0,1,2,3 attach a local colour fibre H_n=(Z_(2^n))^C to two labelled cells, use p_n(x,h)=x, and replicate every parent local functional term with weights 1/(2^n).",
+    "Lift every parent root by an inverse-closed local colour cocycle, retain parent rates and channel labels, and test gauge and anchor-automorphism equivariance.",
+    "Check exact functional equality, projection surjectivity, inverse closure, full-basis generator intertwining, common sup-norm defect and finite cumulative defect.",
+    "Run primary, non-importing independent, hostile mutation and integrated Lean lanes while keeping the structural/geometric and physical promotion firewalls active."
+  ],
+  "finding": "The named structural successor passes: normalized local-term replication gives F_n=F_rho, the deterministic lift satisfies p_n r_n=r p_n with inherited rates, and L_n I_n=I_n L_rho exactly on the full finite parent basis at all audited levels. The fibre cardinality grows with q_n, the common sup-norm defect is 0, and every finite cumulative defect is 0. Primary 27/27, independent 28/28, hostile 12/12 mutations rejected, integrated 22/22, and Lean R482 pass.",
+  "verdict": "advanced",
+  "decision_reason": "This is the first repeatable nontrivial finite micro/macro compatibility result after the route-local R-479 free-vertex and R-480 conditional-Gibbs boundaries. The successor adds only a finite colour fibre and root cocycle, keeps the displayed PAH functional and parent rates unchanged, and declares the exact common norm and cumulative criterion. Because the construction does not transport geometric incidence and no limit is taken, it advances only the structural finite substage and leaves the main physical and uniform-limit gates closed.",
+  "boundary": "T0 claim-nonbearing finite structural theorem for PAH-001 + PAH-OMC-001 + PAH-OMC-003. The colour fibre is not a geometric lattice subdivision, physical volume, common infinite-volume automorphism group, continuum approximation, or observation map. The result does not alter the active canonical gate and does not erase the route-local R-479/R-480 failures.",
+  "evidence_level": "T0 finite exact structural successor with primary, non-importing independent, hostile and Lean verification; no physical or continuum promotion",
+  "evidence_refs": [
+    "strategy/pa-hyp/PAH-001-v1.json#functional_or_action",
+    "strategy/pa-hyp/PAH-OMC-001-v1.json#finite_theorem_targets",
+    "strategy/pa-hyp/PAH-OMC-003-v1.json#observable_and_generator_targets",
+    "strategy/pa-hyp/PAH-OMC-003-manifest.json#contract",
+    "strategy/pa-hyp/R482-certificate.md#Exact-compatibility-theorem",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-03-pah-omc003-cell-colour-refinement/primary.json#family",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-03-pah-omc003-cell-colour-refinement/independent.json#rows",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-03-pah-omc003-cell-colour-refinement/hostile.json#mutations",
+    "claims/C6-SPACETIME-SIGNATURE/runs/2026-09-03-pah-omc003-cell-colour-refinement/integrated.json#verification_summary",
+    "verification/lean/Tect/R482.lean#generator_intertwining",
+    "RESULTS-LEDGER.md#r-482"
+  ],
+  "formal_refs": {
+    "results": [
+      "R-482"
+    ],
+    "negatives": [],
+    "events": [
+      "20260903-r-482-pah-omc-003-exact-cell-colour-block-refin"
+    ]
+  },
+  "source_authorities": [
+    {
+      "source_id": "PAH-001",
+      "path": "strategy/pa-hyp/PAH-001-v1.json",
+      "role": "immutable parent functional and regulator",
+      "sha256": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37"
+    },
+    {
+      "source_id": "PAH-OMC-001",
+      "path": "strategy/pa-hyp/PAH-OMC-001-v1.json",
+      "role": "separately versioned finite root and common-dynamics completion",
+      "sha256": "948a87092f7393e5214a375d66295237e5c8be1b018b8788d3e6785d696e774f"
+    },
+    {
+      "source_id": "PAH-OMC-003",
+      "path": "strategy/pa-hyp/PAH-OMC-003-v1.json",
+      "role": "researcher-proposed structural cell-colour block successor",
+      "sha256": "1ccadb20e4171927b4bb83d4407b1a0bd926e27c759dbe617d828df0958086f1"
+    }
+  ],
+  "reproduction": [
+    "E:/Dev/TECT.venv/Scripts/python.exe -X utf8 codes/foundations/pah_omc003_cell_colour_refinement.py",
+    "E:/Dev/TECT.venv/Scripts/python.exe -X utf8 codes/foundations/pah_omc003_cell_colour_refinement_independent.py",
+    "E:/Dev/TECT.venv/Scripts/python.exe -X utf8 codes/foundations/pah_omc003_cell_colour_refinement_hostile.py",
+    "E:/Dev/TECT.venv/Scripts/python.exe -X utf8 verification/scripts/pah_omc003_cell_colour_refinement_verify.py",
+    "Set-Location E:/Dev/TECT/verification/lean; lake env lean Tect/R482.lean"
+  ],
+  "assumptions": [
+    "PAH-001 and PAH-OMC-001 remain byte-identical at their pinned hashes.",
+    "The parent finite functional is represented as a finite sum of local terms Phi_t(x), with no hidden colour dependence.",
+    "The finite cell list and root cocycle are fixed before comparison; no post-hoc parameter fitting or rate scaling is used.",
+    "The inherited parent rates are evaluated on the retained coarse state and are independent of the new colour fibre.",
+    "The common norm is the supremum norm on bounded lifted cylinder observables and the exact defect target is zero."
+  ],
+  "missing_assumptions": [
+    "A geometric incidence subdivision and a source-authorized transport law for its new cells.",
+    "A uniform estimate over regulator, volume, shape, source, phase and exhaustion for any geometric successor family.",
+    "An effective QFT/Yang--Mills/observation map and a holdout dataset."
+  ],
+  "non_claims": [
+    "This result concerns only the separately versioned structural successor and is not retroactive evidence for PAH-001 alone.",
+    "The colour fibre is not a geometric lattice refinement, physical volume, spacetime, or continuum approximation.",
+    "No common infinite-volume dynamics, ordered limit, uniform estimate, or observable prediction is proved.",
+    "Markov time is not quantum real time, proper time, or Lorentzian time.",
+    "No physical Pre-A, spacetime, gravity, event-horizon, QFT, Yang--Mills, continuum, mass-gap, cosmic-origin or TOE conclusion follows."
+  ],
+  "next_action": "Design and hash-pin one genuinely geometric anchor-preserving incidence subdivision, with explicit cell/root transport and the same common norm, before attempting any uniform-limit calculation.",
+  "revisit_condition": "Reopen the geometric refinement lane only when its owner contract, parent hashes, parameter and cell-weight transport, common cylinder core, and an independent exact or cumulative estimate are all present.",
+  "related": [
+    {
+      "id": "EXP-001367",
+      "relation": "continues"
+    }
+  ]
+}

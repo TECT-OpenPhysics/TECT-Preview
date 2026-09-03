@@ -8,9 +8,9 @@ or verification/catalog-summary.json. The allowlist is derived from the immutabl
 cutover commit, so deleting/migrating a legacy consumer needs no hand-maintained
 list while adding a new one fails closed.
 """
-__version__ = "1.0.0"
+__version__ = "1.0.1"
 __first_issued__ = "2026-08-10"
-__version_issued__ = "2026-08-10"
+__version_issued__ = "2026-09-03"
 
 import subprocess
 import sys
@@ -21,12 +21,15 @@ CUTOVER_COMMIT = "4db22f4ea94bb1a936d1a2e4b416aa2d6d1960d4"
 TARGETS = ("CHANGELOG.md", "CATALOG.md", "verification/catalog.json")
 CODE_SUFFIXES = {".py", ".js", ".ts", ".mjs", ".cjs"}
 SELF = "verification/scripts/check_aggregate_consumers.py"
-# These are integrity guards, not data consumers: one validates the frozen
-# compatibility bytes and one validates the canonical root-file allowlist.
+# These are integrity guards, not data consumers: frozen compatibility bytes,
+# the canonical root-file allowlist, and exact-byte checkout fixture coverage.
+# The checkout test writes a synthetic catalog in a temporary Git repository;
+# it never consumes the real frozen catalog as research data.
 EXEMPT = {
     SELF,
     "verification/scripts/check_protocol_single_source.py",
     "verification/tests/test_aggregate_indexes.py",
+    "verification/tests/test_checkout_bytes.py",
 }
 SKIP_PARTS = {".git", ".venv", "venv", "internal", "tmp", "build", ".cache"}
 

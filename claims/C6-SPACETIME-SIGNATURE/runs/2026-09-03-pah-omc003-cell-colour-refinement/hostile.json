@@ -1,0 +1,100 @@
+{
+  "all_mutations_rejected": true,
+  "assertion_count": 18,
+  "audit_id": "PAH-CELL-COLOUR-BLOCK-001",
+  "baseline": {
+    "contract_identity": true,
+    "finite_identity": true,
+    "parent_identity": true,
+    "physical_firewall": true,
+    "preservation_firewall": true,
+    "source_hashes": true
+  },
+  "claim_bearing": false,
+  "exploration_id": "EXP-001368",
+  "failed": 0,
+  "mutations": [
+    {
+      "accepted": false,
+      "name": "parent-hash-drift",
+      "target": "source hash pin"
+    },
+    {
+      "accepted": false,
+      "name": "q-family-drift",
+      "target": "q_n=2^n"
+    },
+    {
+      "accepted": false,
+      "name": "weight-normalization-drift",
+      "target": "sum_j w_(n,j)=1"
+    },
+    {
+      "accepted": false,
+      "name": "projection-shifts-parent",
+      "target": "p_n(x,h)=x"
+    },
+    {
+      "accepted": false,
+      "name": "root-inverse-drift",
+      "target": "inverse cocycle closure"
+    },
+    {
+      "accepted": false,
+      "name": "hidden-functional-term",
+      "target": "F_n=F_rho with no hidden energy"
+    },
+    {
+      "accepted": false,
+      "name": "fine-rate-rescaling",
+      "target": "c_(n,r)=c_r"
+    },
+    {
+      "accepted": false,
+      "name": "anchor-cocycle-drift",
+      "target": "h tau_r=tau_(h.r) h"
+    },
+    {
+      "accepted": false,
+      "name": "geometric-promotion",
+      "target": "structural/geometric boundary"
+    },
+    {
+      "accepted": false,
+      "name": "physical-time-promotion",
+      "target": "time interpretation firewall"
+    },
+    {
+      "accepted": false,
+      "name": "gibbs-average-substitution",
+      "target": "do not reuse OMC-002 route"
+    },
+    {
+      "accepted": false,
+      "name": "nonzero-defect-promotion",
+      "target": "zero common sup-norm defect"
+    }
+  ],
+  "mutations_attempted": 12,
+  "mutations_rejected": 12,
+  "non_claims": [
+    "Hostile checks enforce a finite structural result only.",
+    "No geometric continuum, physical Pre-A, spacetime, gravity, QFT, Yang--Mills or TOE claim is admitted."
+  ],
+  "passed": 18,
+  "physical_progress": false,
+  "result_id": "R-482",
+  "run_kind": "hostile",
+  "schema": "tect/pah-omc003-cell-colour-refinement-hostile/1.0",
+  "scientific_transition": false,
+  "source_hashes": {
+    "PAH-001": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "PAH-OMC-001": "948a87092f7393e5214a375d66295237e5c8be1b018b8788d3e6785d696e774f",
+    "PAH-OMC-003": "1ccadb20e4171927b4bb83d4407b1a0bd926e27c759dbe617d828df0958086f1",
+    "PAH-OMC-003-MANIFEST": "301dbc00b64ec5600c6d5720ad9496bce590939c76cd33ef92ec6792555802e8"
+  },
+  "stage2_status": "HOLD_FOR_EVIDENCE",
+  "task_id": "T-054",
+  "verdict": "STRUCTURAL_EXACT_MICRO_MACRO_COMPATIBILITY",
+  "verification": "PASS"
+}

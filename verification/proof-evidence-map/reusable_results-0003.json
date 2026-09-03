@@ -2,6 +2,38 @@
   "data": [
     {
       "accepted_event_ids": [
+        "20260728-a13-r-115-closes-the-stationary-scalar-k-2k-the"
+      ],
+      "anchor": "r-115",
+      "claim_ref_basis": {},
+      "claim_refs": [],
+      "co_recorded_negative_tags": [
+        "NG-2026-07-28-A13-FOUR-MOMENT-RESERVE-ONLY",
+        "NG-2026-07-28-A13-K2K-EXACT-KS-POST-EXTENSION"
+      ],
+      "detail": {
+        "exact_theorem": "For the original R-112 stationary scalar packet, every covariance shape `c in [0,1]`, every amplitude `b>=0`, and every `tau>=0`, `log E exp(-tau F_b) <= K(c,b) tau^2/4`. Equality holds at `tau=0`, and the inequality is strict for `tau>0`. R-114 supplies the closed cone `b<=643/200`. For `b>=643/200`, its sharp floor gives `Z=F_b+b/2>=0`.",
+        "four_moment_transfer": "The left three-node Gauss--Radau law on `{0,r_1,r_2}` matches the first four moments of `Z`. The degree-four Hermite remainder for `exp(-tau z)` is nonpositive on `z>=0`, so its Laplace transform majorizes that of `Z`. An exact three-atom identity reduces monotonicity of the tilted proxy variance to positivity of one dimensionless skew margin. Packet-specific node and weight geometry gives `r_2>=2r_1` and `w_2<=min(w_0,w_1)`. The primary outward-rounded Arb engine covers the full compact rectangle `0<=1/b<=200/643`, `0<=c<=1` with `46,714` evaluations, `23,613` accepted leaves, zero pending leaves, and weakest certified positive margin greater than `0.0019`. A structurally independent exact engine replaces the adverse exponential maximum by the analytic bound `F <= (q/p) exp(9/e)/9 < 25q/(8p)`. After clearing the already certified positive denominator, its remaining radical expression is `A+B sqrt(D)`. Exact tensor-Bernstein tables prove `A>0`, `-B>0`, and `A^2-D B^2>0` with respectively `2850/2850`, `2145/2145`, and `11175/11175` positive coefficients. Thus the proxy's tilted variance never exceeds its initial variance `V=(K-Delta)/2<K/2`; two integrations and the Radau majorant prove the theorem.",
+        "method_boundaries_retained": "A fifth-order exact `atanh` proxy extends the earlier two-moment cone through `b=103/32`, but the full sharp Kearns--Saul coefficient fails at the exact fixture `(b,c)=(3219/1000,31/100)`. Separately, a three-atom law proves that lower support, four moments, and positive covariance reserve do not imply the target distribution-free. Neither is a counterexample to the actual packet; its certified Radau geometry is load-bearing.",
+        "proof_and_reproduction": "Claim `A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION`, note `classii-scalar-k2k-four-moment-radau-all-amplitude-closure-260728-v1.0.tex.txt`, manifest `classii_scalar_k2k_four_moment_radau_all_amplitude_manifest.json`, the primary and independent all-amplitude executables, two non-importing exact method-boundary executables, and the integrated R-115 verifier. The verifier passes `126/126` fail-closed assertions and hash-pins all four child engines, their deterministic run artifacts, the note, and the final PDF.",
+        "result_id": "`A13-CLASSII-SCALAR-K2K-FOUR-MOMENT-RADAU-ALL-AMPLITUDE-CLOSURE`.",
+        "scope_boundary": "This is a complete stationary scalar theorem only. It does not identify or bound the full A1 tensor owner cluster, repeated visits, random-`W` double divergence, heat/mean/trace/mixed-baseline/rational/forest companions, or the separate one-use source/sextic aggregation. Therefore `OVERLAP_src`, Nelson, removals, the interacting measure, Sector A, and any tier promotion remain open. R-103 REG and R-087 fixed-cutoff CORE keep their accepted owners; historical R-085 weighted/labelled-owner formulas remain non-load-bearing."
+      },
+      "detail_title": "Four-moment Radau all-amplitude closure of the stationary scalar `k:2k` theorem",
+      "family_refs": [],
+      "id": "R-115",
+      "normalized_detail": {
+        "boundary": "",
+        "proof_anchor": "",
+        "publication_target": "",
+        "reuse": "",
+        "statement": ""
+      },
+      "summary": "Scoped T4 analytic/exact/executed theorem: the original R-112 scalar gap is strict for every `c in [0,1]`, every amplitude `b>=0`, and every `tau>0`, with equality at `tau=0`. R-114 covers `b<=643/200`; on the complementary compact reciprocal-amplitude rectangle, a left three-node Gauss--Radau majorant, an exact all-tilt three-atom skew lemma, a complete outward Arb cover, and a structurally independent exact Bernstein/radical certificate prove decreasing proxy variance. This closes only the stationary scalar theorem. The full A1 one-fresh-root owner-preserving embedding, one-use source/sextic aggregation, `OVERLAP_src`, Nelson, removals, interacting measure, and Sector-A closure remain open",
+      "title": "Four-moment Radau all-amplitude closure of the stationary scalar `k:2k` theorem"
+    },
+    {
+      "accepted_event_ids": [
         "20260728-r-114-extends-the-exact-scalar-cone-to-b-643-20",
         "20260728-a13-r-115-closes-the-stationary-scalar-k-2k-the"
       ],
@@ -3877,40 +3909,6 @@
       },
       "summary": "T4",
       "title": "Multi-knob controlled-error + continuum no-condensate + orthogonal-shell Hessian"
-    },
-    {
-      "accepted_event_ids": [
-        "20260607-estimator-upgrade-controlled-error-enumerated-s"
-      ],
-      "anchor": "r-015",
-      "claim_ref_basis": {
-        "B1-RH-ENUM": "proof_anchor_unique_family:B1"
-      },
-      "claim_refs": [
-        "B1-RH-ENUM"
-      ],
-      "co_recorded_negative_tags": [],
-      "detail": {
-        "proven_in": "B1 / estimator-upgrade-enumerated v1.0",
-        "publication_target": "methods note",
-        "reuse_scope": "Any amplitude-even variational free-energy selection where a naive min-over-A>0 margin is grid-dependent.",
-        "statement_one_line": "A variational selection 'dF>0 for all competitor amplitudes A' is upgraded from estimator-grade to controlled-error by certifying the grid-INDEPENDENT curvature kappa = dF''(0) > 0 (strict minimum) plus a no-deeper-minimum scan, each at two quadrature resolutions (envelope « kappa); the high-res pipeline reuses the production dF via a one-line M-evaluator monkeypatch (no formula re-transcription).",
-        "tier": "T4"
-      },
-      "detail_title": "Curvature-certified controlled-error selection margin",
-      "family_refs": [
-        "B1"
-      ],
-      "id": "R-015",
-      "normalized_detail": {
-        "boundary": "T4",
-        "proof_anchor": "B1 / estimator-upgrade-enumerated v1.0",
-        "publication_target": "methods note",
-        "reuse": "Any amplitude-even variational free-energy selection where a naive min-over-A>0 margin is grid-dependent.",
-        "statement": "A variational selection 'dF>0 for all competitor amplitudes A' is upgraded from estimator-grade to controlled-error by certifying the grid-INDEPENDENT curvature kappa = dF''(0) > 0 (strict minimum) plus a no-deeper-minimum scan, each at two quadrature resolutions (envelope « kappa); the high-res pipeline reuses the production dF via a one-line M-evaluator monkeypatch (no formula re-transcription)."
-      },
-      "summary": "T4",
-      "title": "Curvature-certified controlled-error selection margin"
     }
   ],
   "kind": "reusable_results",

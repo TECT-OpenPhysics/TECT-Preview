@@ -31,6 +31,12 @@ Do not load the complete map when a narrow lookup is sufficient.
 ## 2. Write discipline
 
 - All tracked files are **English-only**. Korean stays in chat.
+- **Exact-byte provenance:** `.gitattributes` disables automatic Git newline
+  conversion. Write new text as UTF-8 with explicit LF (`newline="\n"` in
+  Python); preserve existing hash-pinned files byte for byte. Do not enable
+  `text=auto`/`eol=lf` for research sources or replace expected hashes to hide
+  a checkout mismatch. The frozen catalog exception is documented in
+  `governance/enforcement-spine.md` section 7.
 - `CLAIMS.md` is generated — never hand-edit. Regenerate with
   `python verification/scripts/lint_claims.py --render`.
 - After any change under `claims/`, run the linter; a session may not end with

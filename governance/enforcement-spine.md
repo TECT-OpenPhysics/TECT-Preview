@@ -84,3 +84,31 @@ The enforcement point is intentionally the logical checkpoint/commit boundary,
 not each intermediate proof decision. Development records use the exploration
 ledger, manifests, certificates, and run JSON; the one synthesis note that
 survives to a checkpoint receives the full build and render review.
+
+## 7. Exact-byte checkout (binding from 2026-09-03)
+
+Research authorities and archived sources use raw SHA-256. Git previously
+normalized some files to LF in its index while local evidence was hashed as
+CRLF or mixed newlines. A Windows checkout with `core.autocrlf=true` also
+converted LF authorities to CRLF. Local verification therefore passed while
+fresh Windows or Linux checkouts failed without any scientific content change.
+
+The root fix is `.gitattributes` with `* -text`: Git does not change file bytes
+when staging or checking out, regardless of `core.autocrlf` or `core.eol`.
+This does not mark files as binary for diff purposes. No hash comparison is
+weakened, and no expected authority hash is rewritten. New text must be written
+as UTF-8 with explicit LF; existing hash-pinned evidence must not be reformatted.
+In Python use `open(..., encoding="utf-8", newline="\n")` or exact `write_bytes`.
+
+The one-time migration re-stages existing CRLF/mixed working bytes that Git
+previously stored as LF. It changes line-ending representation in history, not
+research content or the original working bytes. Append-only ledgers remain LF
+and retain their exact historical prefix. The frozen `CATALOG.md` is an explicit
+`text eol=crlf` exception: its existing LF Git blob is unchanged and its existing
+CRLF working bytes are reconstructed identically on every host.
+
+Regression tests in `verification/tests/test_checkout_bytes.py` exercise actual
+Git staging and fresh clones under `core.autocrlf=true`, `false`, and `input`,
+including old CRLF and mixed sources. They use the existing test suite, not a
+new proof/release gate. A recurrence must be repaired at the byte-producing or
+Git-conversion source, never by changing a verifier to ignore newline drift.

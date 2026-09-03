@@ -22,6 +22,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-482](#r-482) | PAH-OMC-003 exact cell-colour block refinement | R-482 / EXP-001368 defines a separately hashed structural successor with `q_n=2^n` cell-colour fibres, normalized local-term replication, and inverse-closed root cocycles. Primary 27/27, independent 28/28, hostile 12/12 mutations rejected, integrated 22/22, and Lean R482 pass; the common sup-norm generator defect and every finite cumulative defect are exactly zero. This is finite structural micro/macro compatibility only: no geometric lattice refinement, uniform limit, physical Pre-A, spacetime, QFT, Yang--Mills or TOE conclusion. |
 | [R-480](#r-480) | PAH-OMC-002 conditional-Gibbs projected-intertwining route-local defect | R-480 / EXP-001367 audits the exact PAH-OMC-002 Gibbs fibre average on one finite fine-only-vertex map. With immutable PAH-001 SHA-256 `03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37`, OMC-001 SHA-256 `948a87092f7393e5214a375d66295237e5c8be1b018b8788d3e6785d696e774f`, and OMC-002 SHA-256 `618265f978bae4e96e1330fbec0ce7af0bf1630d6f5a17f9029fcbde48de6876`, the invariant witness `f=j_v` has coarse increment `0` and hidden fine increments `+1/8,-1/8`; the conditional factor `(exp(-1/16)+exp(1/16))/2>1`. Primary 26/26, independent 20/20, hostile 12/12, integrated 17/17 and Lean R480 pass. This retires only the OMC-002 conditional diagnostic on this map; Stage 2 remains `HOLD_FOR_EVIDENCE`, with no PAH-001, uniform-limit, physical, QFT, Yang--Mills or TOE conclusion. |
 | [R-479](#r-479) | PAH-OMC-001 finite common dynamics and refinement-boundary theorem | R-479 / EXP-001361 registers separate successor contract PAH-OMC-001 SHA-256 `948a87092f7393e5214a375d66295237e5c8be1b018b8788d3e6785d696e774f` against immutable PAH-001 SHA-256 `03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37`. Exact partial move maps, inverse/invalid/duplicate conventions, symmetry-equivariant rates, root Hilbert measure/multiplicity and finite domains close `[P_cand,L_rho]=0` and `B_rho^*B_rho=-L_rho` on the composite model's finite invariant core. The finite common-dynamics substage is `MAINLINE_ADVANCE`; the programme remains `HOLD_FOR_EVIDENCE_AT_STAGE_2` because the named free-vertex pullback refinement fails exact intertwining by `-kappa_s delta(z_1-z_2)!=0` and no alternative owner morphism is selected. Primary 81/81, independent 191/191, hostile 42/42 with 41/41 mutations rejected, integrated 46/46 and Lean R479 pass with digest `c6f2e8ac2d62de0b99c35a4947003d2ede24d3b61f4f03bcee73b9a975e4a64e`. No active canonical gate, physical Pre-A, spacetime, gravity, continuum, QFT, Yang--Mills or TOE conclusion changes |
 | [R-478](#r-478) | PAH-001 finite reversible dynamics and common-core compatibility audit | R-478 / EXP-001359 audits the immutable PAH-001-v1 source SHA-256 `03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37` without model changes or Q3LOCK imports. Exact gauge invariance and Gibbs detailed balance pass. The finite group-average projection is idempotent/self-adjoint, and the directed-root half factor gives `B^*B=-L` conditionally under one explicit root measure; however source-level generator commutation remains unclosed because exact move equivariance is absent, `B^*` is not determined because the root inner product/multiplicity is absent, and refinement compatibility is not defined. Primary 170/170, independent 134/134, hostile 31/31 with 30/30 mutations rejected, integrated 33/33 and Lean R478 pass with core digest `af1eaf9dbc32ffd50e794b4373e4c3ddfe34f0f1a37780869010e25edea42703`. Verdict `HOLD_FOR_EVIDENCE`; no gate, negative registry, production/physical admission, Pre-A, spacetime, gravity, event-horizon, continuum, QFT, common-causal-cone or TOE conclusion changes |
@@ -846,6 +847,60 @@ score M3 only after a versioned source owner, state/uncertainty contract,
 candidate-neutral two-time observable, complete map stages and prospective
 holdout exist. Continue unchanged T-054 Q3LOCK owner intake and T-059/T-061
 observation-source intake; do not manufacture another finite mobility table.
+
+<a id="r-482"></a>
+### R-482 -- PAH-OMC-003 exact cell-colour block refinement
+
+**Result ID.** `R-482` (`EXP-001368`, `T-054`, audit
+`PAH-CELL-COLOUR-BLOCK-001`).
+
+**Authority and scope.** This is a T0 claim-nonbearing finite structural
+result for separately hashed successor `PAH-OMC-003`. It pins immutable
+PAH-001 SHA-256
+`03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37`,
+PAH-OMC-001 SHA-256
+`948a87092f7393e5214a375d66295237e5c8be1b018b8788d3e6785d696e774f`, and
+PAH-OMC-003 SHA-256
+`1ccadb20e4171927b4bb83d4407b1a0bd926e27c759dbe617d828df0958086f1`.
+The parent functional, move families, mobility, projection, regulator tuple,
+counting normalization and ordered-limit firewall are inherited unchanged.
+The audited levels are `n=0,1,2,3`, with `q_n=2^n` colours on two labelled
+local cells. Markov time is external stochastic time and no limit is taken.
+
+**Exact block theorem.** For `Omega_n=Omega_(rho,Q) x (Z_(q_n))^C`, the map
+`p_n(x,h)=x` and deterministic lift `I_n f(x,h)=f(x)` preserve every parent
+coordinate. Normalized local-term replication gives
+`F_n(x,h)=F_rho(x)` exactly. Each parent root receives an inverse-closed local
+colour cocycle, with `p_n r_n=r p_n` and inherited rate
+`c_(n,r)=c_r`. Consequently
+
+```text
+L_n I_n f = I_n L_rho f
+```
+
+pointwise on the full finite parent basis and hence on the gauge- and
+anchor-automorphism-invariant cylinder core. The common sup-norm defect is
+exactly zero at every audited level and every finite cumulative defect is zero.
+The finite fibre cardinality grows with `q_n`, so this is a nontrivial
+structural block connection, while remaining explicitly non-geometric.
+
+**Verification.** Primary `27/27`, non-importing independent `28/28`, hostile
+`12/12` mutations rejected, integrated `22/22`, and Lean R482 all pass. Full
+details are in [the certificate](strategy/pa-hyp/R482-certificate.md), the
+four run artefacts under
+`claims/C6-SPACETIME-SIGNATURE/runs/2026-09-03-pah-omc003-cell-colour-refinement/`,
+and the source contract/manifest under `strategy/pa-hyp/`.
+
+**Consequence and boundary.** This advances the finite structural
+micro/macro-compatibility substage for the named successor, but does not change
+the active canonical gate or open a uniform-limit route. The colour fibre is
+not a geometric lattice subdivision, common infinite-volume dynamics, or
+continuum approximation. No physical Pre-A, spacetime, gravity, event horizon,
+QFT, Yang--Mills, mass-gap, cosmic-origin or TOE conclusion follows.
+
+**Next question.** Can an owner-approved geometric incidence refinement, with
+genuinely transported cell structure, satisfy the same exact or cumulatively
+controlled common-core target without changing PAH-001?
 
 <a id="r-480"></a>
 ### R-480 -- PAH-OMC-002 conditional-Gibbs projected-intertwining route-local defect

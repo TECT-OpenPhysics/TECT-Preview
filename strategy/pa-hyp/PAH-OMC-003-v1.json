@@ -1,0 +1,142 @@
+{
+  "schema": "tect/pre-a-owner-morphism-successor-contract/1.0",
+  "contract_id": "PAH-OMC-003",
+  "version": "0.1.0",
+  "title": "Equivariant cell-colour block refinement with exact finite generator intertwining",
+  "proposed_at": "2026-09-03",
+  "proposed_by": "TECT research programme under operator directive",
+  "provenance": {
+    "class": "RESEARCHER_HYPOTHESIS_SUCCESSOR_CONTRACT",
+    "definition_owner": "TECT_RESEARCH_PROGRAM",
+    "external_source": false,
+    "constructed_hypothesis": true,
+    "physical_authority": false,
+    "epistemic_layer": "L2_MODEL_SPECIFICATION_ONLY"
+  },
+  "parent": {
+    "packet_id": "PAH-001",
+    "path": "strategy/pa-hyp/PAH-001-v1.json",
+    "sha256": "03e7ccdf7ff26fbd902ddc2c46a0cfd693ba2c5e861489aa87fb696882c2ea37",
+    "finite_completion_contract": {
+      "contract_id": "PAH-OMC-001",
+      "path": "strategy/pa-hyp/PAH-OMC-001-v1.json",
+      "sha256": "948a87092f7393e5214a375d66295237e5c8be1b018b8788d3e6785d696e774f"
+    },
+    "composition_rule": "This is a separately versioned structural successor. It supplements, but does not edit or supersede, PAH-001 or PAH-OMC-001. Every theorem is about the explicitly composed candidate and is not retroactive evidence for either parent."
+  },
+  "status": {
+    "contract": "CANDIDATE_NOT_ADMITTED",
+    "finite_block_compatibility": "AUDIT_TARGET",
+    "refinement_family": "STRUCTURAL_CELL_COLOUR_FIBRE_ONLY",
+    "uniform_limit": "NOT_ADMITTED",
+    "observable_chain": "NOT_ADMITTED"
+  },
+  "preservation_firewall": {
+    "parent_functional_unchanged": true,
+    "gauge_group_unchanged": true,
+    "parent_move_families_unchanged": true,
+    "mobility_exponent_nu_unchanged": true,
+    "candidate_projection_unchanged": true,
+    "parent_regulator_rule_unchanged": true,
+    "parent_limit_order_unchanged": true,
+    "no_counterterm_or_energy_added": true,
+    "no_parent_rate_rescaling": true,
+    "no_q3lock_import": true,
+    "no_physical_identification": true
+  },
+  "exact_scope": {
+    "coarse_carrier": "Any finite PAH-OMC-001 completed anchored relational carrier G with finite fixed-Q state space Omega_(rho,Q).",
+    "refinement_family": "For level n>=0 set q_n=2^n, retain the same coarse carrier and attach one colour in Z_(q_n) to each of a fixed finite list of local cells. The refined state is Omega_n=Omega_(rho,Q) x (Z_(q_n))^C. The family is a structural fibre/block refinement, not a geometric subdivision or physical lattice.",
+    "coarse_map": "p_n:Omega_n->Omega_(rho,Q) forgets all cell colours. It is surjective and preserves every parent coordinate, anchor, orientation and fixed-Q sector.",
+    "regulator": "The PAH tuple rho=(G,O,C,K,M_s,M_psi,R_max,epsilon,a,beta,nu,theta,Q) is transported identically. The refinement label is a_n=a_0/2^n only as a formal label; it is not a physical length.",
+    "functional": "Write the unchanged parent F_rho as a finite sum of local terms F_rho(x)=sum_t Phi_t(x). Define F_n(x,h)=sum_t sum_(j=0)^(q_n-1) (1/q_n) Phi_t(x). No hidden colour enters Phi_t and no energy, counterterm or coupling is added, so F_n=F_rho exactly.",
+    "time": "External stochastic Markov time only; the construction does not identify Markov time with quantum, proper or Lorentzian time.",
+    "limits": "The audit covers finitely many levels and takes no cutoff, volume, continuum, physical or observation limit."
+  },
+  "cell_weights_and_parameter_transport": {
+    "cell_set": "A fixed finite labelled cell list C; the audit fixture uses two cells c0,c1 only as a finite test input.",
+    "weights": "w_(n,j)=1/q_n for j in {0,...,q_n-1}; sum_j w_(n,j)=1 exactly at every level.",
+    "parameters": {
+      "K": "K_n=K",
+      "Q": "Q_n=Q",
+      "M_s": "M_s,n=M_s",
+      "M_psi": "M_psi,n=M_psi",
+      "R_max": "R_max,n=R_max",
+      "epsilon": "epsilon_n=epsilon",
+      "a": "a_n=a_0/2^n as a refinement label only",
+      "beta": "beta_n=beta",
+      "nu": "nu_n=nu",
+      "theta": "theta_n=theta",
+      "couplings": "Every scalar, edge, plaquette, onsite, aperture and rate-scale input is inherited identically from PAH-001 and PAH-OMC-001."
+    },
+    "error_contract": "Use the common sup norm ||g||_infinity=sup_(x,h)|g(x,h)| on lifted bounded cylinder observables. The exact target is delta_n(f)=||L_n I_n f-I_n L_rho f||_infinity=0. For a future approximate successor, admissibility requires a preregistered parameter range and sum_(n=0)^N delta_n(f)<=eta for every N with a finite eta; no such approximate claim is made here."
+  },
+  "symmetry_and_root_cocycle": {
+    "colour_fibre": "H_n=(Z_(q_n))^C with coordinate-wise addition modulo q_n.",
+    "retained_root_lift": "For every parent directed root r with parent map r.x, choose a labelled local cocycle tau_(n,r):H_n->H_n. Define r_n(x,h)=(r.x,tau_(n,r)(h)).",
+    "inverse_rule": "tau_(n,r^(-1))=tau_(n,r)^(-1), so every lifted parent root is inverse-closed and retains parent channel multiplicity.",
+    "gauge_action": "The parent gauge action acts on x and trivially on H_n; root labels and cocycles are gauge-equivariant.",
+    "anchor_automorphism": "An allowed parent anchor automorphism acts on x, permutes the labelled cells and sends r to h.r. Require h tau_(n,r)=tau_(n,h.r) h.",
+    "rate_rule": "The lifted root rate is c_(n,r)(x,h)=c_r(x), where c_r is the exact parent PAH-OMC-001 rate computed from the unchanged F_rho and mobility."
+  },
+  "observable_and_generator_targets": {
+    "lift": "(I_n f)(x,h)=f(x). The common cylinder core is the union of these lifts for parent gauge- and anchor-automorphism-invariant bounded observables f.",
+    "exact_generator_identity": "L_n I_n f=I_n L_rho f pointwise on Omega_n for every f in the declared core, because p_n r_n=r p_n and c_(n,r)=c_r.",
+    "semigroup_identity": "At each finite level, T_n(t) I_n=I_n T_rho(t) follows algebraically from the generator identity for the finite exponential; it is not a common infinite-volume dynamics theorem.",
+    "norm_and_cumulative": "The exact defect is zero for every level, hence sup_n delta_n(f)=0 and every finite cumulative defect sum is zero. No n->infinity limit is inferred."
+  },
+  "finite_acceptance_conditions": [
+    "The PAH-001 and PAH-OMC-001 parent hashes match exactly and neither parent is edited.",
+    "q_n=2^n, the fibre map p_n is total and surjective, and every cell-weight row is normalized.",
+    "F_n=F_rho exactly by normalized local-term replication; no hidden energy or counterterm is present.",
+    "Every retained root has the declared inverse cocycle, preserves p_n, and retains parent multiplicity.",
+    "Gauge and anchor automorphisms preserve the fibre map, cocycle, functional and rate.",
+    "The exact generator identity is checked on the full finite parent function basis, hence on the invariant cylinder core, with zero common sup-norm defect.",
+    "Primary, non-importing independent, hostile and Lean checks agree; no physical or continuum promotion is allowed."
+  ],
+  "known_boundaries": {
+    "structural_not_geometric": "The colour fibre increases finite state cardinality and supplies a local root cocycle, but it is not a cell subdivision with new geometric incidence, a physical lattice, or a continuum approximation.",
+    "not_free_vertex": "No fine vertex is added and no natural free-vertex forgetful pullback is used; the R-479/R-480 route-local defects are not reused or erased.",
+    "not_scalar_repair": "No positive scalar beta or kappa transport and no post-hoc rate rescaling is used.",
+    "not_gibbs_average": "The map is a deterministic pullback lift, not the rejected PAH-OMC-002 conditional-Gibbs fibre average.",
+    "successor_only": "The theorem is for PAH-001 composed with PAH-OMC-001 and this separately hashed PAH-OMC-003 structural successor; it is not a theorem about PAH-001 alone."
+  },
+  "falsifiers": [
+    "A parent hash changes or a parent byte is modified.",
+    "A cell-weight row does not sum to one or p_n is not total and surjective.",
+    "F_n differs from F_rho, or a hidden energy/counterterm is silently inserted.",
+    "A lifted root loses an inverse, changes a parent channel multiplicity, or fails p_n r_n=r p_n.",
+    "A gauge or anchor automorphism fails the cocycle or rate equivariance test.",
+    "The exact generator defect is nonzero on any finite parent basis observable.",
+    "Any report promotes the structural finite result to a geometric refinement, uniform continuum, physical Pre-A, QFT, gravity, Yang--Mills or TOE theorem."
+  ],
+  "non_claims": [
+    "PAH-OMC-003 is a researcher-proposed structural hypothesis, not an external source or physical authority.",
+    "No PAH-001 or PAH-OMC-001 byte, functional, parent move family, projection, regulator rule or limit order is changed.",
+    "The exact result is finite and structural; it does not prove a geometric lattice refinement, a uniform infinite-volume estimate or an ordered limit.",
+    "No Markov time is identified with quantum real time, proper time or Lorentzian time.",
+    "No physical Pre-A, spacetime, event horizon, gravity, QFT, Yang--Mills, continuum, mass gap, cosmic-origin or TOE conclusion follows.",
+    "Agreement between the coarse and refined observables is a compatibility theorem, not an observational fit or a physical identification."
+  ],
+  "ordered_limit_firewall": {
+    "inherited_order": [
+      "LOCAL_STATE_CUTOFF",
+      "LATTICE_REFINEMENT",
+      "VOLUME_EXHAUSTION",
+      "PHASE_SELECTOR",
+      "APERTURE_COLLAPSE",
+      "GROUND_STATE_IF_REQUESTED",
+      "OBSERVATION_TIME"
+    ],
+    "interchange_claimed": false,
+    "status": "NOT_ADMITTED"
+  },
+  "single_next_question": "Can a separately owner-approved geometric subdivision, with nontrivial incidence transport beyond a colour fibre, satisfy the same exact or cumulatively controlled common-core intertwining without changing PAH-001?",
+  "revisit_condition": "Reopen a geometric or uniform-limit route only after a new separately hashed owner contract supplies incidence transport, parameter and cell-weight laws, a common core, a common norm and an independent uniform estimate.",
+  "stop_or_redesign": [
+    "Do not call this structural fibre theorem a geometric lattice refinement or continuum result.",
+    "Do not edit PAH-001, PAH-OMC-001 or the failed PAH-OMC-002 route to obtain the identity.",
+    "If nonzero defect appears, record its first exact witness and keep the successor unadmitted.",
+    "If geometric incidence or new physical terms are required, create a new successor contract and restart finite auditing."
+  ]
+}
