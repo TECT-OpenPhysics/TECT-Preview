@@ -1,0 +1,75 @@
+{
+  "schema": "tect/pah-omc014-conditional-cauchy-lean-manifest/1.0",
+  "manifest_id": "PAH-OMC-014-CONDITIONAL-CAUCHY-LEAN",
+  "version": "0.1.0",
+  "title": "Conditional cylinder error criterion for existence and uniqueness of a real limit",
+  "purpose": "Record Lean-checked analytic bridges: a pairwise absolute error bound tending to zero makes one already-defined cylinder-observable sequence Cauchy and convergent in R, and positivity, normalization, or a zero stationarity identity pass to an already-proved limit. This support packet does not define a PAH sector law or a full-Q Gibbs state.",
+  "provenance": {
+    "class": "RESEARCHER_OWNED_CONDITIONAL_SUPPORT",
+    "definition_owner": "TECT_RESEARCH_PROGRAM",
+    "external_source": false,
+    "source_law_present": false,
+    "claim_bearing": false,
+    "physical_authority": false,
+    "model_change": false
+  },
+  "parents": {
+    "PAH-OMC-014": {
+      "path": "strategy/pa-hyp/PAH-OMC-014-full-q-gibbs-cylinder-limit-v1.json",
+      "sha256": "1389bf64b2f26f267aa35bdfbee59cced2d16d8a5dcefd8e34a3deabb41d31b0"
+    },
+    "PAH-OMC-014-WEIGHT-INTAKE": {
+      "path": "strategy/pa-hyp/PAH-OMC-014-full-q-gibbs-limit-next-evidence-contract-v1.json",
+      "sha256": "0ef41a6dd183458cea7ac45b84119dd820c7f5decdc8ef9ee393caca4031c502"
+    },
+    "PAH-OMC-014-MIXTURE-SUPPORT": {
+      "path": "strategy/pa-hyp/PAH-OMC-014-conditional-mixture-lean-manifest.json",
+      "sha256": "238ab9f0dcd3519e9bf6f5792865e9ff3a4c808e967bd278d7afa445f8f566d8"
+    }
+  },
+  "lean": {
+    "path": "verification/lean/Tect/R496.lean",
+    "sha256": "f80fb716c44d95060e6db584f09444dab0fa6677a16799b1bff809ab0a6c71f7",
+    "declarations": [
+      "cauchy_of_abs_error",
+      "limit_exists_of_abs_error",
+      "limit_unique",
+      "limit_nonnegative",
+      "limit_one",
+      "limit_zero"
+    ],
+    "toolchain": "leanprover/lean4:v4.32.1",
+    "scope": "A sequence of real values with a pairwise absolute-error bound b(n) for n <= m and b tending to zero; conditional inheritance of positivity, unit normalization, or zero stationarity; no PAH instantiation."
+  },
+  "theorem_contract": {
+    "assumptions": [
+      "s is a real-valued sequence representing one already-defined cylinder observable along the fixed ordered limit.",
+      "b is a real-valued error sequence with |s(n)-s(m)| <= b(n) whenever n <= m.",
+      "b tends to zero along the declared ordered limit.",
+      "For an inherited property, every finite term is nonnegative, identically one, or identically zero as specified by the corresponding theorem."
+    ],
+    "conclusion": "The sequence s is Cauchy and therefore has a unique real limit; if a limit is already known, finite-term positivity, unit normalization, and zero stationarity pass to it.",
+    "not_supplied": [
+      "No w_(n,R,Q) values or formula.",
+      "No definition of mu_(n,R), omega, or a common cylinder probability space.",
+      "No PAH-specific Cauchy estimate, topology, projective consistency or R-488 bound.",
+      "No stationarity passage or boundary-defect estimate."
+    ]
+  },
+  "status": {
+    "classification": "CONDITIONAL_SUPPORT_ONLY",
+    "source_law_present": false,
+    "active_gate_change": false,
+    "claim_bearing": false,
+    "physical_promotion": false,
+    "verdict": "HOLD_FOR_EVIDENCE"
+  },
+  "non_claims": [
+    "This theorem does not instantiate a PAH full-Q sector law, mu_(n,R) or omega.",
+    "It does not prove a PAH-specific error bound, projective consistency, positivity/normalization of a constructed Gibbs mixture, R-488 nonzero, infinite-volume dynamics or stationarity passage from PAH data.",
+    "No physical Pre-A, spacetime, QFT, gravity, Yang--Mills, mass-gap or TOE conclusion follows."
+  ],
+  "reproduction": {
+    "integrated": "python -X utf8 verification/scripts/pah_omc014_conditional_cauchy_lean_verify.py"
+  }
+}

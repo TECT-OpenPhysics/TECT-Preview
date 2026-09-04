@@ -1,0 +1,203 @@
+{
+  "schema": "tect/q3lock-exp782-independent-result-manifest/1.0",
+  "result_id": "R-497",
+  "title": "EXP-000782 Q3LOCK low-temperature phase route: independent result registration",
+  "issued": "2026-09-05",
+  "task_id": "T-054",
+  "claim_context": "C6-SPACETIME-SIGNATURE",
+  "tier": "T0",
+  "claim_bearing": false,
+  "status": "INTERNAL_REVIEW_ONLY",
+  "pdf_status": "DEFERRED",
+  "publication_status": "RESEARCH_ONLY",
+  "upstream_result_id": "PA-CP1-ST8-Q3LOCK-POSITIVE-LAMBDA-LOW-TEMPERATURE-DLR-PHASE-AND-COLLECTIVE-SOURCE-CUSP",
+  "authority_chain": [
+    {
+      "exploration_id": "EXP-000780",
+      "record_path": "explorations/log.jsonl",
+      "record_line": 780,
+      "role": "fixed-spacing finite and thermodynamic pressure foundations",
+      "scope": "finite/source pressure limits and zero-temperature scalar bookkeeping; no phase or cusp conclusion"
+    },
+    {
+      "exploration_id": "EXP-000781",
+      "record_path": "explorations/log.jsonl",
+      "record_line": 781,
+      "role": "tempered Euclidean DLR existence, compactness and source tangents",
+      "scope": "general vector quantum-crystal hypotheses and tangent-state composition; positive-lambda phase sign left open"
+    },
+    {
+      "exploration_id": "EXP-000782",
+      "record_path": "explorations/log.jsonl",
+      "record_line": 782,
+      "role": "conditional positive-lambda phase-route assembly",
+      "scope": "candidate proof spine for FKG, reflection positivity, infrared order, cusp and parity-related DLR states"
+    },
+    {
+      "exploration_id": "EXP-001516",
+      "record_path": "explorations/log.jsonl",
+      "record_line": 1516,
+      "role": "P-06/P-09 proof-text audit round 2",
+      "scope": "internal transcription readiness only; independent source, form-domain and limit audit remains required"
+    }
+  ],
+  "model_scope": {
+    "lattice": "fixed-spacing periodic cubes Lambda_L=(Z/LZ)^3 with V=L^3 and reflection-compatible even/dyadic subsequences",
+    "field": "q_y in R^8 with p_y canonical momentum; u=(1,...,1)/sqrt(8); Q_y=u dot q_y",
+    "parameters": "hbar>0, chi>0, c>0, g>0, lambda>0, r<0, beta>0",
+    "onsite": "r|q|^2/2 + (g/4) sum_e q_e^4 + (lambda/4) sum_(e~f in E(Q3)) (q_e-q_f)^2(q_e^2+q_f^2)",
+    "spatial": "(c/2) sum over positive-direction spatial bonds |q_y-q_z|^2, giving +3c onsite and ordered coupling Jhat_0=6c",
+    "source": "-h sum_y Q_y",
+    "convention_pins": [
+      "periodic edge multiset has 3V bonds and six endpoint incidences per site",
+      "D_L=(1/beta) integral_0^beta C(tau) d tau",
+      "Var(X_L(a))=beta^2<a,D_L a>",
+      "spatial Laplacian eigenvalue is 2 E(p), E(p)=sum_j(1-cos p_j)",
+      "finite-grid source uses eta=t sqrt(epsilon) (a_y u)"
+    ]
+  },
+  "candidate_proof_spine": [
+    {
+      "component": "finite and infinite-volume source pressure",
+      "status": "ASSEMBLED_PENDING_AUDIT",
+      "source": "EXP-000780 plus EXP-000782 source-normalization ledger"
+    },
+    {
+      "component": "tempered Euclidean DLR existence, compactness and source tangents",
+      "status": "ASSEMBLED_PENDING_AUDIT",
+      "source": "EXP-000781 with the exact Q3LOCK hypothesis crosswalk"
+    },
+    {
+      "component": "continuous-loop FKG",
+      "status": "PROOF_TEXT_ASSEMBLED_PENDING_INDEPENDENT_REVIEW",
+      "source": "P-06 finite-grid, interpolation and clipped-uniform-integrability route"
+    },
+    {
+      "component": "Hilbert-valued reflection positivity and the three-dimensional infrared bound",
+      "status": "PROOF_TEXT_ASSEMBLED_PENDING_INDEPENDENT_REVIEW",
+      "source": "P-09 finite FSS encoding and Duhamel/Fourier normalization route"
+    },
+    {
+      "component": "collective double commutator, Falk--Bruch and Griffiths inequalities",
+      "status": "ASSEMBLED_PENDING_OPERATOR_AND_SOURCE_AUDIT",
+      "source": "EXP-000782 and the P-12 pressure-slope audit"
+    },
+    {
+      "component": "strict source cusp under A0>I3 and beta>beta_star",
+      "status": "CONDITIONAL_ON_ALL_UPSTREAM_AUDITS",
+      "source": "EXP-000782 explicit threshold and pressure-tangent composition"
+    },
+    {
+      "component": "at least two parity-related tempered Euclidean DLR states",
+      "status": "CONDITIONAL_ON_ALL_UPSTREAM_AUDITS",
+      "source": "EXP-000781 tangent construction composed with EXP-000782"
+    }
+  ],
+  "explicit_regime": {
+    "theta_Q": "-r/[3(g+lambda)]",
+    "A0": "8 c chi theta_Q^2/hbar^2",
+    "I3": "(2 pi)^(-3) integral_(-pi,pi]^3 dp/[sum_j(1-cos p_j)] = 0.505462019717326...",
+    "condition": "A0>I3 and beta>beta_star",
+    "rho": "sqrt(I3/A0)",
+    "x_star": "artanh(rho)",
+    "beta_star": "(4 chi theta_Q/hbar^2) x_star rho",
+    "delta_beta": "theta_Q tanh(x_beta)/x_beta - I3/(2 beta c), where x_beta tanh(x_beta)=beta hbar^2/(4 chi theta_Q)",
+    "interpretation": "sufficient regime only; failure of the inequalities is inconclusive, not a no-phase result"
+  },
+  "verification_lanes": [
+    {
+      "lane": "primary",
+      "path": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-04-primary-pre-a-cp1-st8-q3lock-positive-lambda-fkg-infrared-cusp-phase-route-split/result.json",
+      "verdict": "PASS",
+      "assertions": "195/195",
+      "sha256": "a42c5f5684002b2b71908a739c91867411c9d269ca3f4b0343c49d986cfc9882"
+    },
+    {
+      "lane": "independent",
+      "path": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-04-independent-pre-a-cp1-st8-q3lock-positive-lambda-fkg-infrared-cusp-phase-route-split/result.json",
+      "verdict": "PASS",
+      "assertions": "306/306",
+      "sha256": "566942655d7ffce9f83e3b415cdb2d3339ec32a7b3b49b2828390e17993e0af9"
+    },
+    {
+      "lane": "integrated",
+      "path": "claims/C6-SPACETIME-SIGNATURE/runs/2026-08-04-integrated-pre-a-cp1-st8-q3lock-positive-lambda-fkg-infrared-cusp-phase-route-split/result.json",
+      "verdict": "PASS",
+      "assertions": "120/120",
+      "sha256": "2aaafe56bd215735bae89b54d87852dd804d7014c6f6fc66ff275903ba6d661e"
+    }
+  ],
+  "source_files": [
+    {
+      "path": "strategy/pre-a-cp1-st8-q3lock-positive-lambda-fkg-infrared-cusp-phase-route-split-manifest.json",
+      "role": "upstream EXP-000782 manifest",
+      "sha256": "c43225c313378673e11fd2cae1aca77c2be4045693330ace09b1c923349e0592"
+    },
+    {
+      "path": "strategy/pre-a-cp1-st8-q3lock-positive-lambda-fkg-infrared-cusp-phase-route-split-certificate-260804.md",
+      "role": "upstream proof-text certificate",
+      "sha256": "b6487a9381bef20cdf1a9abc4dfdec9aa40f69b0b73697595c263ffe574a4d89"
+    },
+    {
+      "path": "strategy/q3lock-exp782-clean-reproduction-audit-260905.md",
+      "role": "clean deterministic reproduction audit",
+      "sha256": "2943b2f1566a76d3c4b8366031d09aae96fa857d9a13a36272c7b903ef1955bb"
+    },
+    {
+      "path": "strategy/q3lock-p06-p09-independent-proof-audit-round2-260905.md",
+      "role": "current P-06/P-09 independent proof-text audit",
+      "sha256": "c5e62f8b7d4c0b3351063c0f9d5707e387be858f301e01d05a1b79ec0686b960"
+    },
+    {
+      "path": "strategy/q3lock-fkg-continuous-association-discretization-audit-260905.md",
+      "role": "continuous-loop FKG discretization audit",
+      "sha256": "e9557361e9b24da10acfe49d5fc57e05798029fde07641a8930bb05910265bb"
+    },
+    {
+      "path": "strategy/q3lock-p09-constant-source-loop-limit-audit-260905.md",
+      "role": "source-uniform loop-limit and Duhamel audit",
+      "sha256": "8a8de20d0f6a7faa50ccad9b9f31342d3038b9a9df1c439a9826450f3ce4b1c9"
+    },
+    {
+      "path": "strategy/q3lock-p12-griffiths-pressure-slope-factor8-audit-260905.md",
+      "role": "Griffiths pressure-slope normalization audit",
+      "sha256": "9fb9f8f6c1364cbd28080de0c095ad63726fcdba72ed13182f1b639d8b744036"
+    },
+    {
+      "path": "codes/foundations/pre_a_cp1_st8_q3lock_positive_lambda_fkg_infrared_cusp_phase_route_split.py",
+      "role": "primary verifier source",
+      "sha256": "d707e17db34fa2f17b09483a55d172edbcd3ff44ecb65e6a40165c01a7286fd3"
+    },
+    {
+      "path": "codes/foundations/pre_a_cp1_st8_q3lock_positive_lambda_fkg_infrared_cusp_phase_route_split_independent.py",
+      "role": "independent verifier source",
+      "sha256": "11ee55c1d225645d8621ae34f2223f4c99e90024cc3c46b6cefc325f4b457e71"
+    },
+    {
+      "path": "codes/foundations/pre_a_cp1_st8_q3lock_positive_lambda_fkg_infrared_cusp_phase_route_split_verify.py",
+      "role": "integrated verifier source",
+      "sha256": "c452e620933005ff12c84194b8f57f3aedb296bbc2d63358c57d9e505777b834"
+    }
+  ],
+  "open_gates": [
+    "independent mathematical audit of P-06 finite-grid-to-continuous-loop FKG",
+    "independent mathematical audit of P-09 finite FSS-to-loop Duhamel passage",
+    "exact KP/FSS bibliography version, theorem-domain and hypothesis crosswalk",
+    "operator/form-domain and unbounded-commutator audit",
+    "bounded independent claim-card and result-lineage decision",
+    "manuscript convention, bibliography, nonclaim and source-hash content freeze",
+    "clean-snapshot primary, independent and integrated replay with byte-stable outputs",
+    "release check on the frozen tree",
+    "external mathematical referee review before submission"
+  ],
+  "nonclaims": [
+    "No all-parameter positive-lambda phase theorem or phase-absence result below the sufficient threshold.",
+    "No assertion of extremality, purity, clustering or completeness of the DLR states.",
+    "No common infinite-volume real-time dynamics, algebraic KMS identification, ground-state phase or spectral gap.",
+    "No continuum regulator removal, counterterm theorem, physical empty-space reference or below-empty-space ordering.",
+    "No effective 3D-to-1+1 reduction, physical light, gravity, cooling, event horizon or cosmological interpretation.",
+    "No C0, N1-N5, C6, CP1, Sector A or Pre-A closure.",
+    "No claim-tier promotion, P2 manuscript, submission, upload, tag, release or PDF is created by this registration."
+  ],
+  "next_action": "Obtain the independent KP/FSS and operator/form-domain audit, repair any objection, then decide whether a bounded claim card and paper content freeze are warranted. Only after that decision may final LaTeX compilation, PDF rendering and page-by-page visual review begin."
+}

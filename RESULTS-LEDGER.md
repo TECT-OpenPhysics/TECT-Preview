@@ -22,6 +22,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-497](#r-497) | EXP-000782 Q3LOCK low-temperature phase route: independent result registration | R-497 / EXP-000782 records a T0, claim-nonbearing reusable proof-spine candidate for the fixed-spacing positive-lambda Q3LOCK model. Primary 195/195, independent 306/306 and integrated 120/120 artifacts pass with pinned hashes, while P-06/P-09, source/form-domain review, claim registration and content freeze remain open. No theorem certification or PDF is issued. |
 | [R-494](#r-494) | PAH-OMC-014 full-Q Gibbs cylinder functional and ordered-limit existence audit | R-494 / EXP-001504 finds no source-owned cross-Q sector weight law in the hash-pinned PAH-001/OMC-010/OMC-011/OMC-012/OMC-013 scope. Primary 20/20, independent 14/14, hostile 12/12, integrated 31/31 pass; verdict HOLD_FOR_EVIDENCE. Fixed-Q component Gibbs states remain valid, but a global mu_(n,R), omega, Cauchy error and stationarity test are not defined. This is T0 claim-nonbearing source-input evidence only; no physical or continuum conclusion follows. |
 | [R-493](#r-493) | PAH-OMC-013 full-Q eventual generator intertwining on the grade-blind cylinder | R-493 / EXP-001474 proves pointwise intertwining after N(f)=max(2,m_f+1) on the full-Q grade-blind finite cylinder algebra for unchanged PAH-001 rates; primary 22/22, independent 16/16, hostile 13/13, integrated 21/21 and Lean R493 pass. This is T0 claim-nonbearing finite algebraic progress only; weak Gibbs-L2, closability, infinite volume, continuum and physical conclusions remain open. |
 
@@ -17159,6 +17160,87 @@ scheme class and asymmetric anomaly boundary.
 
 **Publication target:** methods note (with a paired honest-negative: individually-positive channels can jointly fail an additive budget)
 
+
+<a id="r-497"></a>
+### R-497 -- EXP-000782 Q3LOCK low-temperature phase route: independent result registration
+
+**Statement.** R-497 / EXP-000782 registers a standalone T0,
+claim-nonbearing research result for the exact fixed-spacing positive-lambda
+eight-component Q3LOCK quantum anharmonic lattice. The authority chain
+EXP-000780 -> EXP-000781 -> EXP-000782 assembles a candidate proof spine for
+finite and thermodynamic source pressure, tempered Euclidean DLR existence and
+compactness, continuous-loop FKG, Hilbert-valued reflection positivity and the
+three-dimensional infrared estimate, the collective double commutator and
+Falk--Bruch/Griffiths bounds, and the resulting strict-source-cusp and
+parity-related-DLR-state composition under the explicit sufficient regime
+`r<0`, `A0>I3`, and `beta>beta_star`. The current P-06/P-09 audit records these
+passages as proof-text assembled but still requiring independent mathematical
+review; therefore R-497 is a reusable result-registration candidate, not a
+certified theorem.
+
+**Status.** `INTERNAL_REVIEW_ONLY`, tier T0, `claim_bearing=false`. The
+registration does not change a claim card, claim tier, gate status, physical
+interpretation, or publication lifecycle. The computational lanes are
+reproduction evidence for the recorded artifacts, not a substitute for the
+unresolved source, form-domain, topology, and limit audit.
+
+**Evidence.** The pinned EXP-000782 package reports primary 195/195,
+independent 306/306, and integrated 120/120 assertions. The three result JSON
+artifacts are byte-pinned in the companion manifest and are deterministic under
+the recorded verifier sources. These counts establish only artifact
+reproducibility and scope checks; they do not independently certify the
+mathematical theorem.
+
+**Source pins.**
+
+| source | SHA-256 |
+|---|---|
+| `strategy/q3lock-exp782-independent-result-manifest-260905.json` | `df1e7f089268e36c8fc07dd1826b4086443dbe0d0df942e1dda88320837e944d` |
+| upstream EXP-000782 manifest | `c43225c313378673e11fd2cae1aca77c2be4045693330ace09b1c923349e0592` |
+| upstream EXP-000782 certificate | `b6487a9381bef20cdf1a9abc4dfdec9aa40f69b0b73697595c263ffe574a4d89` |
+| P-06/P-09 audit round 2 | `c5e62f8b7d4c0b3351063c0f9d5707e387be858f301e01d05a1b79ec0686b960` |
+| primary verifier source | `d707e17db34fa2f17b09483a55d172edbcd3ff44ecb65e6a40165c01a7286fd3` |
+| independent verifier source | `11ee55c1d225645d8621ae34f2223f4c99e90024cc3c46b6cefc325f4b457e71` |
+| integrated verifier source | `c452e620933005ff12c84194b8f57f3aedb296bbc2d63358c57d9e505777b834` |
+| primary result JSON | `a42c5f5684002b2b71908a739c91867411c9d269ca3f4b0343c49d986cfc9882` |
+| independent result JSON | `566942655d7ffce9f83e3b415cdb2d3339ec32a7b3b49b2828390e17993e0af9` |
+| integrated result JSON | `2aaafe56bd215735bae89b54d87852dd804d7014c6f6fc66ff275903ba6d661e` |
+
+**Where proven.** The exact model and candidate component ledger are recorded
+in `strategy/q3lock-exp782-independent-result-manifest-260905.json`. The
+upstream authority records are EXP-000780, EXP-000781, and EXP-000782 in
+`explorations/log.jsonl`; the current seam decision is EXP-001516. The proof
+text and its boundaries are audited in
+`strategy/q3lock-p06-p09-independent-proof-audit-round2-260905.md`, with the
+finite-grid FKG, source-uniform loop limit, topology, edge-incidence,
+Duhamel/Fourier, and Griffiths normalization crosswalks linked there. The
+primary, independent, and integrated verifiers and their result JSON paths are
+listed in the companion manifest.
+
+**Reuse scope.** This result is reusable for mathematical-physics analysis of
+the declared fixed-lattice Q3LOCK quantum anharmonic model and for a possible
+independent phase-coexistence manuscript. It is not a source-owned dynamical,
+continuum, cosmological, physical-vacuum, Sector-A, CP1, C6, Pre-A, or
+Yang--Mills result.
+
+**Classification and boundary.** R-497 is T0 and claim-nonbearing. It does not
+assert an all-parameter phase theorem, phase absence below the sufficient
+threshold, extremality, purity, clustering, a common real-time dynamics,
+algebraic KMS identification, a ground-state phase or gap, a continuum limit,
+or any physical/cosmological interpretation. It does not close C6 or Sector A
+and does not promote EXP-000782 beyond its current research-only status.
+
+**Publication target.** A standalone mathematical-physics paper may be
+considered only after independent KP/FSS and operator/form-domain review,
+claim/result lineage review, content freeze, clean replay, and release review.
+No P2 manuscript, submission package, or PDF is created at this stage; PDF
+compilation, rendering, visual QA, and hash capture are explicitly deferred to
+the final content-frozen stage.
+
+**Next.** Obtain an external-level mathematical audit of P-06 and P-09 and the
+unbounded-operator passages, repair any objection, then decide whether a
+bounded claim card and manuscript content freeze are warranted. Re-run all
+verification lanes from a clean snapshot before any final LaTeX or PDF work.
 
 <a id="r-494"></a>
 ### R-494 -- PAH-OMC-014 full-Q Gibbs cylinder functional and ordered-limit existence audit

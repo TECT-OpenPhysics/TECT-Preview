@@ -5,7 +5,7 @@ Compact generated reader surface. The append-only authority is
 record 568 / commit `4db22f4e` and no longer grows.
 Post-cutover full bodies live exactly once in bounded pages under `pages/`.
 
-**902 accepted events** · latest 25 shown below · machine locator: `index.json`
+**904 accepted events** · latest 25 shown below · machine locator: `index.json`
 
 Search the complete authority without loading every page:
 
@@ -17,6 +17,8 @@ python verification/scripts/changelog.py search --text <phrase>
 
 | Date | Event | Claims | Full entry |
 |---|---|---|---|
+| 2026-09-05 | `20260905-q3lock-r-497-standalone-result-registration-wit` — [Q3LOCK R-497 standalone result registration with PDF deferral] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000869-000918.md#20260905-q3lock-r-497-standalone-result-registration-wit) |
+| 2026-09-05 | `20260905-q3lock-p-06-p-09-independent-proof-text-audit-r` — [Q3LOCK P-06/P-09 independent proof-text audit round 2] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000869-000918.md#20260905-q3lock-p-06-p-09-independent-proof-text-audit-r) |
 | 2026-09-05 | `20260905-q3lock-exp-000782-clean-deterministic-reproduct` — [Q3LOCK EXP-000782 clean deterministic reproduction recorded] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000869-000918.md#20260905-q3lock-exp-000782-clean-deterministic-reproduct) |
 | 2026-09-05 | `20260905-q3lock-kkk-duhamel-normalization-and-scalar-fou` — [Q3LOCK KKK Duhamel normalization and scalar Fourier source pin recorded] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000869-000918.md#20260905-q3lock-kkk-duhamel-normalization-and-scalar-fou) |
 | 2026-09-05 | `20260905-q3lock-spatial-edge-count-and-onsite-factor-cor` — [Q3LOCK spatial edge-count and onsite-factor correction recorded] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000869-000918.md#20260905-q3lock-spatial-edge-count-and-onsite-factor-cor) |
@@ -40,8 +42,6 @@ python verification/scripts/changelog.py search --text <phrase>
 | 2026-09-04 | `20260904-q3lock-primary-source-crosswalk-audited-2026-09` — [Q3LOCK primary-source crosswalk audited] - 2026-09-04 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000869-000918.md#20260904-q3lock-primary-source-crosswalk-audited-2026-09) |
 | 2026-09-04 | `20260904-q3lock-weighted-limit-compactness-correction-re` — [Q3LOCK weighted-limit compactness correction recorded] - 2026-09-04 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000869-000918.md#20260904-q3lock-weighted-limit-compactness-correction-re) |
 | 2026-09-04 | `20260904-q3lock-covariance-tail-audit-recorded-2026-09-0` — [Q3LOCK covariance tail audit recorded] - 2026-09-04 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000869-000918.md#20260904-q3lock-covariance-tail-audit-recorded-2026-09-0) |
-| 2026-09-04 | `20260904-q3lock-gaussian-interpolation-estimate-recorded` — [Q3LOCK Gaussian interpolation estimate recorded] - 2026-09-04 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000869-000918.md#20260904-q3lock-gaussian-interpolation-estimate-recorded) |
-| 2026-09-04 | `20260904-q3lock-grid-to-loop-limit-lemma-recorded-2026-0` — [Q3LOCK grid-to-loop limit lemma recorded] - 2026-09-04 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000869-000918.md#20260904-q3lock-grid-to-loop-limit-lemma-recorded-2026-0) |
 
 ## Post-cutover pages
 
@@ -49,7 +49,7 @@ Each full event body after the cutover occurs in exactly one page.
 
 | Ordinals | Events | Page |
 |---|---:|---|
-| 869–902 | 34 | [000869-000918.md](pages/000869-000918.md) |
+| 869–904 | 36 | [000869-000918.md](pages/000869-000918.md) |
 | 819–868 | 50 | [000819-000868.md](pages/000819-000868.md) |
 | 769–818 | 50 | [000769-000818.md](pages/000769-000818.md) |
 | 719–768 | 50 | [000719-000768.md](pages/000719-000768.md) |
