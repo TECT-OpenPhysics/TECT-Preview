@@ -100,13 +100,18 @@ the spatial difference form gives the exact identity
 
 ```text
 c/2 sum_{<yz>} |q_y-q_z|^2
- = 3c/2 sum_y |q_y|^2
+ = 3c sum_y |q_y|^2
    - c sum_{<yz>} (q_y,q_z).
 ```
 
+Here `<yz>` is the explicit positive-direction periodic edge multiset; it has
+`3|Lambda|` terms and six endpoint incidences per site, with `L=2` multiplicity
+retained.  Open boxes use `(c/2)d_R(y)` instead of a translation-invariant `3c`
+diagonal.  See EXP-001512 for the full correction audit.
+
 The second term is exactly
 `-(1/2) sum_(y,z) J_yz (q_y,q_z)` when the ordered KP sum contains both
-orientations.  The positive `3c/2` contribution belongs to the onsite
+orientations.  The positive `3c` contribution belongs to the onsite
 potential and must not be counted again in the pair interaction.  The
 nearest-neighbour interaction has
 
@@ -116,7 +121,7 @@ Jhat_0 = 6c.
 
 After the split, the residual one-site potential is the sum of the original
 Q3LOCK quadratic and quartic terms, the nonnegative `W_Q3`, the source term,
-the onsite `3c/2 |q|^2` contribution, and the subtraction
+the onsite `3c |q|^2` contribution, and the subtraction
 `-a|q|^2/2` associated with the harmonic reference.  Recombining the split
 recovers the exact Q3LOCK Hamiltonian; the normalized loop law is independent
 of the auxiliary choice of `a`.
@@ -224,7 +229,7 @@ sign each item below.
    to the KP closed-form domain and confirm that the auxiliary harmonic split
    is recombined before the final Hamiltonian is stated.
 3. **Edge convention.**  Recompute the ordered/unordered pair sum and the
-   onsite `3c/2` term for every finite-volume geometry used by EXP-000780;
+   onsite `3c` term for every finite-volume geometry used by EXP-000780;
    do not use the periodic degree-six identity for an open boundary without a
    separate boundary statement.
 4. **Source units.**  Check that the Hamiltonian source sign produces

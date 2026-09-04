@@ -60,7 +60,7 @@ harmonic part is `(a/2)|q|^2`; the residual onsite potential is
 V_(h,a)(q) = (r/2)|q|^2
              + U_component(q)
              + W_Q3(q)
-             + (3c/2)|q|^2
+             + (3c)|q|^2
              - (a/2)|q|^2
              - h*(u,q),
 ```
@@ -120,11 +120,15 @@ and the spatial difference form is
 
 ```text
 c/2 sum_<yz> |q_y-q_z|^2
- = 3c/2 sum_y |q_y|^2 - c sum_<yz> (q_y,q_z).
+ = 3c sum_y |q_y|^2 - c sum_<yz> (q_y,q_z).
 ```
 
+Here `<yz>` denotes the positive-direction periodic edge multiset with
+`3|Lambda|` terms; for `L=2` its parallel-edge multiplicities must be retained.
+Open boxes instead use the site degree `(c/2)d_R(y)`.
+
 The periodic degree-six interaction therefore has `Jhat_0=6c`.  The positive
-onsite `3c/2` term is assigned once to `V_(h,a)` and is not counted a second
+onsite `3c` term is assigned once to `V_(h,a)` and is not counted a second
 time in `J`.  For open boxes the boundary degree and edge list differ; the
 manuscript must state that convention separately rather than silently reuse
 the periodic identity.
@@ -194,7 +198,7 @@ limits.
 |---|---|---|
 | Theorem scope | Theorem 3.1/3.2 are general-vector inputs; 3.8/3.10/3.12 are scalar/ferroelectric inputs | Cite only the general-vector results for EXP-000781 |
 | Potential domain | Exact Q3LOCK residual potential is continuous, vanishes at zero and is quartically coercive on compact source intervals | Insert explicit Young constants and form-domain statement in the manuscript |
-| Pair normalization | Periodic ordered-pair convention gives `Jhat_0=6c` and one `3c/2` onsite allocation | Audit periodic and open edge lists independently |
+| Pair normalization | Periodic ordered-pair convention gives `Jhat_0=6c` and one `3c` onsite allocation | Audit periodic and open edge lists independently |
 | Topology | KP separates `W_alpha` accumulation from `W_t` DLR compactness | State the topology and continuity class in the grid-to-loop lemma |
 | Source and moments | KP fixed-source exponential moments support DLR compactness but do not prove source tangents or strict cusp | Keep P-05/P-12 conditional on the Q3LOCK pressure and UI arguments |
 | Version pin | The exact arXiv version and theorem numbering must be frozen in the bibliography | External source reviewer sign-off required |

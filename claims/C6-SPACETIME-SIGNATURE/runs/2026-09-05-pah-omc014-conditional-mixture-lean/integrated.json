@@ -1,0 +1,248 @@
+{
+  "active_gate_change": false,
+  "assertion_count": 16,
+  "assertions": [
+    {
+      "actual": "1389bf64b2f26f267aa35bdfbee59cced2d16d8a5dcefd8e34a3deabb41d31b0",
+      "expected": "1389bf64b2f26f267aa35bdfbee59cced2d16d8a5dcefd8e34a3deabb41d31b0",
+      "name": "PAH-OMC-014 parent hash",
+      "pass": true
+    },
+    {
+      "actual": "0ef41a6dd183458cea7ac45b84119dd820c7f5decdc8ef9ee393caca4031c502",
+      "expected": "0ef41a6dd183458cea7ac45b84119dd820c7f5decdc8ef9ee393caca4031c502",
+      "name": "weight-intake parent hash",
+      "pass": true
+    },
+    {
+      "actual": "072a55e76c47e2917a94e010682a82819eaf6e062a59d0a7733b654fb6c0e812",
+      "expected": "072a55e76c47e2917a94e010682a82819eaf6e062a59d0a7733b654fb6c0e812",
+      "name": "OMC-014 manifest parent hash",
+      "pass": true
+    },
+    {
+      "actual": "0483ea7af1f29095d813c0c8f2c531941e88e125cc64b3f810d03fb0688a2e79",
+      "expected": "0483ea7af1f29095d813c0c8f2c531941e88e125cc64b3f810d03fb0688a2e79",
+      "name": "Lean source hash",
+      "pass": true
+    },
+    {
+      "actual": {
+        "declarations": [
+          "mix_nonnegative",
+          "mix_normalized",
+          "mix_probability_pair"
+        ],
+        "path": "verification/lean/Tect/R495.lean",
+        "sha256": "0483ea7af1f29095d813c0c8f2c531941e88e125cc64b3f810d03fb0688a2e79"
+      },
+      "expected": {
+        "declarations": [
+          "mix_nonnegative",
+          "mix_normalized",
+          "mix_probability_pair"
+        ],
+        "sha256": "0483ea7af1f29095d813c0c8f2c531941e88e125cc64b3f810d03fb0688a2e79"
+      },
+      "name": "Lean registry hash/declarations",
+      "pass": true
+    },
+    {
+      "actual": "E:\\Dev\\TECT\\verification\\lean\\Tect\\R495.lean",
+      "expected": "LF-terminated source",
+      "name": "Lean source is UTF-8 LF",
+      "pass": true
+    },
+    {
+      "actual": "leanprover/lean4:v4.32.1",
+      "expected": "leanprover/lean4:v4.32.1",
+      "name": "Lean toolchain pin",
+      "pass": true
+    },
+    {
+      "actual": {
+        "provenance": {
+          "claim_bearing": false,
+          "class": "RESEARCHER_OWNED_CONDITIONAL_SUPPORT",
+          "definition_owner": "TECT_RESEARCH_PROGRAM",
+          "external_source": false,
+          "model_change": false,
+          "physical_authority": false,
+          "source_law_present": false
+        },
+        "status": {
+          "active_gate_change": false,
+          "claim_bearing": false,
+          "classification": "CONDITIONAL_SUPPORT_ONLY",
+          "physical_promotion": false,
+          "source_law_present": false,
+          "verdict": "HOLD_FOR_EVIDENCE"
+        }
+      },
+      "expected": "non-bearing/no parent mutation",
+      "name": "support packet is non-bearing",
+      "pass": true
+    },
+    {
+      "actual": {
+        "active_gate_change": false,
+        "claim_bearing": false,
+        "classification": "CONDITIONAL_SUPPORT_ONLY",
+        "physical_promotion": false,
+        "source_law_present": false,
+        "verdict": "HOLD_FOR_EVIDENCE"
+      },
+      "expected": "CONDITIONAL_SUPPORT_ONLY/HOLD_FOR_EVIDENCE",
+      "name": "HOLD verdict retained",
+      "pass": true
+    },
+    {
+      "actual": {
+        "intake": {
+          "active_gate_change": false,
+          "claim_bearing": false,
+          "intake_ready": true,
+          "omega_status": "NOT_DEFINED",
+          "source_law": "ABSENT_IN_PARENT",
+          "verdict": "HOLD_FOR_EVIDENCE"
+        },
+        "omc014": {
+          "active_gate_change": false,
+          "claim_bearing": false,
+          "classification": "HOLD_FOR_EVIDENCE_SOURCE_OWNER_FULL_Q_WEIGHT_LAW_ABSENT",
+          "csw_role": "DOMINATION_ONLY",
+          "omega_status": "NOT_DEFINED",
+          "physical_promotion": false,
+          "positivity_normalization": "NOT_TESTABLE",
+          "projective_consistency": "NOT_TESTABLE",
+          "r484_boundary_defect": "RETAINED_16_OVER_9",
+          "stationarity": "NOT_TESTABLE",
+          "verdict": "HOLD_FOR_EVIDENCE",
+          "weak_cylinder_limit": "NOT_TESTABLE"
+        }
+      },
+      "expected": "no source law",
+      "name": "parents remain source-owned",
+      "pass": true
+    },
+    {
+      "actual": [
+        "Weights are supplied externally and are nonnegative.",
+        "Weights sum to one.",
+        "Each component functional is positive on nonnegative test functions.",
+        "Each component functional evaluates the constant-one function to one."
+      ],
+      "expected": "four nonempty supplied-law assumptions",
+      "name": "conditional assumptions are explicit",
+      "pass": true
+    },
+    {
+      "actual": [
+        "No w_(n,R,Q) values or formula.",
+        "No projective consistency identity.",
+        "No Cauchy error or topology.",
+        "No R-488 lower bound or stationarity passage."
+      ],
+      "expected": [
+        "No w_(n,R,Q) values or formula.",
+        "No projective consistency identity.",
+        "No Cauchy error or topology.",
+        "No R-488 lower bound or stationarity passage."
+      ],
+      "name": "missing full-Q inputs are explicit",
+      "pass": true
+    },
+    {
+      "actual": {
+        "not_supplied": [
+          "No w_(n,R,Q) values or formula.",
+          "No projective consistency identity.",
+          "No Cauchy error or topology.",
+          "No R-488 lower bound or stationarity passage."
+        ],
+        "source_law_present": false
+      },
+      "expected": "absent",
+      "name": "no sector law is instantiated",
+      "pass": true
+    },
+    {
+      "actual": {
+        "claim_bearing": false,
+        "class": "RESEARCHER_OWNED_CONDITIONAL_SUPPORT",
+        "definition_owner": "TECT_RESEARCH_PROGRAM",
+        "external_source": false,
+        "model_change": false,
+        "physical_authority": false,
+        "source_law_present": false
+      },
+      "expected": "false/false",
+      "name": "no model repair or physical promotion",
+      "pass": true
+    },
+    {
+      "actual": [
+        "This theorem does not instantiate a PAH full-Q sector law, mu_(n,R) or omega.",
+        "It does not prove projective consistency, a cylinder limit, infinite-volume dynamics or stationarity.",
+        "No physical Pre-A, spacetime, QFT, gravity, Yang--Mills, mass-gap or TOE conclusion follows."
+      ],
+      "expected": "explicit non-claims",
+      "name": "physical and limit non-claims",
+      "pass": true
+    },
+    {
+      "actual": {
+        "command": "lake env lean Tect/R495.lean",
+        "output": "",
+        "returncode": 0,
+        "status": "PASS"
+      },
+      "expected": "PASS",
+      "name": "R495 pinned Lean compile",
+      "pass": true
+    }
+  ],
+  "assumptions": [
+    "Weights are supplied externally and are nonnegative.",
+    "Weights sum to one.",
+    "Each component functional is positive on nonnegative test functions.",
+    "Each component functional evaluates the constant-one function to one."
+  ],
+  "audit_id": "PAH-OMC-014-CONDITIONAL-MIXTURE-LEAN-INTEGRATED-001",
+  "claim_bearing": false,
+  "claim_id": "C6-SPACETIME-SIGNATURE",
+  "classification": "CONDITIONAL_SUPPORT_ONLY",
+  "exploration_id": null,
+  "failed": 0,
+  "lean": {
+    "command": "lake env lean Tect/R495.lean",
+    "output": "",
+    "returncode": 0,
+    "status": "PASS"
+  },
+  "missing_assumptions": [
+    "No w_(n,R,Q) values or formula.",
+    "No projective consistency identity.",
+    "No Cauchy error or topology.",
+    "No R-488 lower bound or stationarity passage."
+  ],
+  "next_question": "Can the source owner provide a hash-pinned nonnegative normalized cross-Q sector-weight law (or equivalent projective kernel) with a topology and Cauchy bound?",
+  "non_claims": [
+    "This theorem does not instantiate a PAH full-Q sector law, mu_(n,R) or omega.",
+    "It does not prove projective consistency, a cylinder limit, infinite-volume dynamics or stationarity.",
+    "No physical Pre-A, spacetime, QFT, gravity, Yang--Mills, mass-gap or TOE conclusion follows."
+  ],
+  "passed": 16,
+  "result_id": null,
+  "run_kind": "integrated_support_audit",
+  "schema": "tect/pah-omc014-conditional-mixture-lean-integrated/1.0",
+  "source_hashes": {
+    "OMC-014-manifest": "072a55e76c47e2917a94e010682a82819eaf6e062a59d0a7733b654fb6c0e812",
+    "PAH-OMC-014": "1389bf64b2f26f267aa35bdfbee59cced2d16d8a5dcefd8e34a3deabb41d31b0",
+    "R495": "0483ea7af1f29095d813c0c8f2c531941e88e125cc64b3f810d03fb0688a2e79",
+    "manifest": "238ab9f0dcd3519e9bf6f5792865e9ff3a4c808e967bd278d7afa445f8f566d8",
+    "weight_intake": "0ef41a6dd183458cea7ac45b84119dd820c7f5decdc8ef9ee393caca4031c502"
+  },
+  "verdict": "HOLD_FOR_EVIDENCE",
+  "verification": "PASS"
+}

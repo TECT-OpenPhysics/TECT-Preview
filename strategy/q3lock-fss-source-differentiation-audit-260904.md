@@ -39,8 +39,8 @@ s_y dot s_z = epsilon*sum_k x_(y,k) dot x_(z,k).
 Put into a single-site prior `d lambda_N(s_y)` every factor that is local in
 the spatial lattice: the temporal kinetic and harmonic terms, the Q3LOCK
 onsite polynomial, the source-free local quadratic and quartic terms, and the
-`3c/2` onsite term obtained by expanding the spatial difference square.  The
-remaining spatial interaction is exactly
+`3c` onsite term obtained by expanding the explicit positive-direction
+periodic edge multiset.  The remaining spatial interaction is exactly
 
 ```text
 exp[c*sum_<yz> s_y dot s_z].

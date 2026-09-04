@@ -257,8 +257,9 @@ zero-sum source and is not inverted.
   time-grid size and compatibility with the shifted FSS weight.
 * Verify the finite-grid-to-loop convergence of the second derivative with
   the connected-correlation convention used in the manuscript.
-* Check the periodic spatial edge count and the `3c/2` onsite allocation in
-  every finite volume used before the pressure limit.
+* Check the periodic spatial edge multiset and the corrected `3c` onsite
+  allocation in every finite volume used before the pressure limit; use the
+  site-dependent `(c/2)d_R(y)` diagonal for open boxes (EXP-001512).
 * Have an independent reviewer audit the source theorem version, all
   `epsilon`/`beta` factors and the order of limits.
 

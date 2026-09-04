@@ -5,7 +5,7 @@ Compact generated reader surface. The append-only authority is
 record 568 / commit `4db22f4e` and no longer grows.
 Post-cutover full bodies live exactly once in bounded pages under `pages/`.
 
-**898 accepted events** · latest 25 shown below · machine locator: `index.json`
+**902 accepted events** · latest 25 shown below · machine locator: `index.json`
 
 Search the complete authority without loading every page:
 
@@ -17,6 +17,10 @@ python verification/scripts/changelog.py search --text <phrase>
 
 | Date | Event | Claims | Full entry |
 |---|---|---|---|
+| 2026-09-05 | `20260905-q3lock-exp-000782-clean-deterministic-reproduct` — [Q3LOCK EXP-000782 clean deterministic reproduction recorded] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000869-000918.md#20260905-q3lock-exp-000782-clean-deterministic-reproduct) |
+| 2026-09-05 | `20260905-q3lock-kkk-duhamel-normalization-and-scalar-fou` — [Q3LOCK KKK Duhamel normalization and scalar Fourier source pin recorded] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000869-000918.md#20260905-q3lock-kkk-duhamel-normalization-and-scalar-fou) |
+| 2026-09-05 | `20260905-q3lock-spatial-edge-count-and-onsite-factor-cor` — [Q3LOCK spatial edge-count and onsite-factor correction recorded] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000869-000918.md#20260905-q3lock-spatial-edge-count-and-onsite-factor-cor) |
+| 2026-09-05 | `20260905-q3lock-kkk-loop-topology-and-interpolation-cros` — [Q3LOCK KKK loop topology and interpolation crosswalk recorded] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000869-000918.md#20260905-q3lock-kkk-loop-topology-and-interpolation-cros) |
 | 2026-09-05 | `20260905-q3lock-p-12-griffiths-pressure-slope-and-factor` — [Q3LOCK P-12 Griffiths pressure-slope and factor-eight audit recorded] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000869-000918.md#20260905-q3lock-p-12-griffiths-pressure-slope-and-factor) |
 | 2026-09-05 | `20260905-q3lock-p-09-constant-source-loop-limit-and-duha` — [Q3LOCK P-09 constant-source loop-limit and Duhamel audit recorded] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000869-000918.md#20260905-q3lock-p-09-constant-source-loop-limit-and-duha) |
 | 2026-09-05 | `20260905-q3lock-fkg-association-is-citation-exact-via-fi` — [Q3LOCK FKG association is citation-exact via finite-grid discretization] - 2026-09-05 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000869-000918.md#20260905-q3lock-fkg-association-is-citation-exact-via-fi) |
@@ -38,10 +42,6 @@ python verification/scripts/changelog.py search --text <phrase>
 | 2026-09-04 | `20260904-q3lock-covariance-tail-audit-recorded-2026-09-0` — [Q3LOCK covariance tail audit recorded] - 2026-09-04 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000869-000918.md#20260904-q3lock-covariance-tail-audit-recorded-2026-09-0) |
 | 2026-09-04 | `20260904-q3lock-gaussian-interpolation-estimate-recorded` — [Q3LOCK Gaussian interpolation estimate recorded] - 2026-09-04 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000869-000918.md#20260904-q3lock-gaussian-interpolation-estimate-recorded) |
 | 2026-09-04 | `20260904-q3lock-grid-to-loop-limit-lemma-recorded-2026-0` — [Q3LOCK grid-to-loop limit lemma recorded] - 2026-09-04 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000869-000918.md#20260904-q3lock-grid-to-loop-limit-lemma-recorded-2026-0) |
-| 2026-09-04 | `20260904-q3lock-duhamel-convention-fixes-the-beta-and-fa` — [Q3LOCK Duhamel convention fixes the beta and factor-eight conversions] - 2026-09-04 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000869-000918.md#20260904-q3lock-duhamel-convention-fixes-the-beta-and-fa) |
-| 2026-09-04 | `20260904-q3lock-finite-grid-fss-transfer-fixes-the-nonra` — [Q3LOCK finite-grid FSS transfer fixes the nonradial infrared normalization] - 2026-09-04 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000869-000918.md#20260904-q3lock-finite-grid-fss-transfer-fixes-the-nonra) |
-| 2026-09-04 | `20260904-q3lock-fkg-normalizer-includes-the-finite-volum` — [Q3LOCK FKG normalizer includes the finite-volume spatial-factor lower bound] - 2026-09-04 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000869-000918.md#20260904-q3lock-fkg-normalizer-includes-the-finite-volum) |
-| 2026-09-04 | `20260904-q3lock-round-1-independent-audit-keeps-p-06-and` — [Q3LOCK round-1 independent audit keeps P-06 and P-09 open] - 2026-09-04 | C6-SPACETIME-SIGNATURE | [bounded page](pages/000869-000918.md#20260904-q3lock-round-1-independent-audit-keeps-p-06-and) |
 
 ## Post-cutover pages
 
@@ -49,7 +49,7 @@ Each full event body after the cutover occurs in exactly one page.
 
 | Ordinals | Events | Page |
 |---|---:|---|
-| 869–898 | 30 | [000869-000918.md](pages/000869-000918.md) |
+| 869–902 | 34 | [000869-000918.md](pages/000869-000918.md) |
 | 819–868 | 50 | [000819-000868.md](pages/000819-000868.md) |
 | 769–818 | 50 | [000769-000818.md](pages/000769-000818.md) |
 | 719–768 | 50 | [000719-000768.md](pages/000719-000768.md) |

@@ -1,0 +1,72 @@
+{
+  "schema": "tect/pah-omc014-conditional-mixture-lean-manifest/1.0",
+  "manifest_id": "PAH-OMC-014-CONDITIONAL-MIXTURE-LEAN",
+  "version": "0.1.0",
+  "title": "Conditional finite full-Q mixture positivity and normalization support",
+  "purpose": "Record a Lean-checked conditional lemma for finite convex sector mixtures. This support packet does not define a PAH sector law or a full-Q Gibbs state.",
+  "provenance": {
+    "class": "RESEARCHER_OWNED_CONDITIONAL_SUPPORT",
+    "definition_owner": "TECT_RESEARCH_PROGRAM",
+    "external_source": false,
+    "source_law_present": false,
+    "claim_bearing": false,
+    "physical_authority": false,
+    "model_change": false
+  },
+  "parents": {
+    "PAH-OMC-014": {
+      "path": "strategy/pa-hyp/PAH-OMC-014-full-q-gibbs-cylinder-limit-v1.json",
+      "sha256": "1389bf64b2f26f267aa35bdfbee59cced2d16d8a5dcefd8e34a3deabb41d31b0"
+    },
+    "PAH-OMC-014-WEIGHT-INTAKE": {
+      "path": "strategy/pa-hyp/PAH-OMC-014-full-q-gibbs-limit-next-evidence-contract-v1.json",
+      "sha256": "0ef41a6dd183458cea7ac45b84119dd820c7f5decdc8ef9ee393caca4031c502"
+    },
+    "PAH-OMC-014-MANIFEST": {
+      "path": "strategy/pa-hyp/PAH-OMC-014-full-q-gibbs-cylinder-limit-manifest.json",
+      "sha256": "072a55e76c47e2917a94e010682a82819eaf6e062a59d0a7733b654fb6c0e812"
+    }
+  },
+  "lean": {
+    "path": "verification/lean/Tect/R495.lean",
+    "sha256": "0483ea7af1f29095d813c0c8f2c531941e88e125cc64b3f810d03fb0688a2e79",
+    "declarations": [
+      "mix_nonnegative",
+      "mix_normalized",
+      "mix_probability_pair"
+    ],
+    "toolchain": "leanprover/lean4:v4.32.1",
+    "scope": "Finite type-indexed convex mixture of assumed positive normalized component functionals."
+  },
+  "theorem_contract": {
+    "assumptions": [
+      "Weights are supplied externally and are nonnegative.",
+      "Weights sum to one.",
+      "Each component functional is positive on nonnegative test functions.",
+      "Each component functional evaluates the constant-one function to one."
+    ],
+    "conclusion": "The finite mixture is positive on nonnegative tests and evaluates the constant-one function to one.",
+    "not_supplied": [
+      "No w_(n,R,Q) values or formula.",
+      "No projective consistency identity.",
+      "No Cauchy error or topology.",
+      "No R-488 lower bound or stationarity passage."
+    ]
+  },
+  "status": {
+    "classification": "CONDITIONAL_SUPPORT_ONLY",
+    "source_law_present": false,
+    "active_gate_change": false,
+    "claim_bearing": false,
+    "physical_promotion": false,
+    "verdict": "HOLD_FOR_EVIDENCE"
+  },
+  "non_claims": [
+    "This theorem does not instantiate a PAH full-Q sector law, mu_(n,R) or omega.",
+    "It does not prove projective consistency, a cylinder limit, infinite-volume dynamics or stationarity.",
+    "No physical Pre-A, spacetime, QFT, gravity, Yang--Mills, mass-gap or TOE conclusion follows."
+  ],
+  "reproduction": {
+    "integrated": "python -X utf8 verification/scripts/pah_omc014_conditional_mixture_lean_verify.py"
+  }
+}

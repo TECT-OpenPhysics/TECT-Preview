@@ -62,18 +62,22 @@ edge `{y,z}`, set the KP symmetric coupling `J_yz=J_zy=c`.  Then
  = -c sum_{<yz>} (omega_y,omega_z)_L2.
 ```
 
-Adding the onsite contribution `3c/2 |omega_y|^2` at each cubic site gives
+Adding the onsite contribution `3c |omega_y|^2` at each cubic site gives
 
 ```text
 c/2 sum_<yz> |omega_y-omega_z|^2
- = 3c/2 sum_y |omega_y|^2
+ = 3c sum_y |omega_y|^2
    - c sum_<yz> (omega_y,omega_z)_L2.
 ```
+
+Here `<yz>` denotes the positive-direction periodic edge multiset, with `3|Lambda|`
+bond terms and the corresponding multiplicity retained when `L=2`; open boxes
+require the site-dependent degree formula recorded in EXP-001512.
 
 Thus the Q3LOCK spatial bond is exactly the KP pair interaction after moving
 the positive onsite part into the local potential.  The remaining local
 potential is the original `r|q|^2/2`, the onsite quartics, the Q3 locking
-quartics, the source `-h u dot q`, the `3c/2 |q|^2` term, and the subtraction
+quartics, the source `-h u dot q`, the `3c |q|^2` term, and the subtraction
 of `a|q|^2/2` associated with the harmonic reference.
 
 ## 3. Verification of KP potential hypotheses
@@ -150,7 +154,7 @@ matched.
   `+h X_L` in the exponential moment `exp(h X_L)`.
 * The pair interaction is counted with symmetric `J_yz` in KP, so the factor
   `-1/2 sum_(y,z)` produces exactly one `-c` term per undirected spatial edge.
-* The positive onsite `3c/2` term is part of the local potential and must not
+* The positive onsite `3c` term is part of the local potential and must not
   be counted a second time in the pair interaction.
 * The harmonic split parameter `a` is an auxiliary reference choice.  The
   residual potential and the normalized loop law are independent of `a` once
@@ -163,7 +167,7 @@ matched.
 
 1. Verify the bibliography version and equation/theorem numbering of the KP
    source used in the manuscript.
-2. Recompute the edge-count and onsite `3c/2` factor for both periodic and open
+2. Recompute the edge-count and onsite `3c` factor for both periodic and open
    finite boxes used by the pressure argument.
 3. Check that the chosen interpolation and compact cutoff make every test
    functional continuous in the exact topology used by KP.
