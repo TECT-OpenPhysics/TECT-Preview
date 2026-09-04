@@ -94,13 +94,23 @@ NEGATIVE_ROW_RE = re.compile(
 INTERNAL_FILE_REFERENCE_RE = re.compile(
     r"(?i)\binternal/[A-Za-z0-9_./-]*\.[A-Za-z0-9]+"
 )
+HANGUL_RE = re.compile(r"[\u1100-\u11FF\u3130-\u318F\uAC00-\uD7AF]")
 
 
 def redact_internal_file_references(value: object) -> object:
-    """Return a public-safe copy without operator-local internal file paths."""
+    """Return a public-safe copy without internal paths or Hangul glyphs.
+
+    The canonical exploration ledger remains byte-preserved.  Generated public
+    surfaces follow the English-only release policy; Hangul is therefore kept
+    as an explicit Unicode escape instead of being rendered as a locale glyph.
+    Other Unicode punctuation and mathematical symbols remain unchanged.
+    """
     if isinstance(value, str):
-        return INTERNAL_FILE_REFERENCE_RE.sub(
+        redacted = INTERNAL_FILE_REFERENCE_RE.sub(
             "operator-managed ignored workspace file (not published)", value
+        )
+        return HANGUL_RE.sub(
+            lambda match: f"\\u{ord(match.group()):04x}", redacted
         )
     if isinstance(value, list):
         return [redact_internal_file_references(item) for item in value]
@@ -1912,6 +1922,9 @@ def self_test() -> None:
     public = redact_internal_file_references(private)
     assert public["path"] == "operator-managed ignored workspace file (not published)"
     assert private["path"] == private_path
+    hangul_public = redact_internal_file_references({"text": "Schr\uCCA0dinger"})
+    assert hangul_public["text"] == "Schr\\ucca0dinger"
+    assert hangul_public["text"].isascii()
 
 
 def build_outputs() -> tuple[str, str, dict[str, object]]:
