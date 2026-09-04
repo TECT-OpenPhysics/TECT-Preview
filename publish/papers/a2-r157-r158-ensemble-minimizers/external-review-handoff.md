@@ -111,6 +111,9 @@ The v0.1.40 coupled-system literature repair, 17-page visual review, and
 isolated `14/14` replay are recorded in `EXP-001458`; the subsequent combined
 shared-tree repository release PASS is recorded in `EXP-001459`.  Neither is a
 signed proof or novelty response.
+The watcher-gated local content commit
+`7e1de76c06be0d6a43da0459f7ab0b55920a1795` is recorded in `EXP-001460`;
+reviewers should report the exact later commit they actually inspect.
 
 ## Frozen blank response contracts
 

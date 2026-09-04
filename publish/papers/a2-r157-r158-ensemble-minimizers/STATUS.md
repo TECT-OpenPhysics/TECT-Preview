@@ -140,7 +140,11 @@ its clean v0.1.11 replay are recorded in `EXP-001387`.  The convention-narrowing
   `33aa52f70c0e4b9edf143e72faeb3250e5521d81` (`EXP-001458`).
 - [x] The combined shared tree, including the separately scoped registered
   R-491 packet, passes governed regeneration and every repository release gate
-  (`EXP-001459`); commit and remote-backup confirmation remain open.
+  (`EXP-001459`).
+- [x] The maintainer watcher receives separate paper and R-491 queue records,
+  reruns the mandatory release gate, and creates local content commit
+  `7e1de76c06be0d6a43da0459f7ab0b55920a1795` with a clean worktree
+  (`EXP-001460`); remote-backup confirmation remains open.
 - [ ] Submission freeze/tag (requires separate explicit authorization).
 
 ## Non-claims

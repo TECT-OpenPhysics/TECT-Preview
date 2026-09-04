@@ -32,8 +32,9 @@ handoff-duplication guard without changing the manuscript or theorem scope;
 nested replay.  `EXP-001456` records governed regeneration and a complete
 release-check PASS in an isolated worktree containing only the paper changes;
 `EXP-001459` records the subsequent combined shared-tree regeneration and
-complete repository release PASS.  Commit/backup and all external gates remain
-open.
+complete repository release PASS.  `EXP-001460` records the watcher-gated local
+content commit `7e1de76c06be0d6a43da0459f7ab0b55920a1795`; remote backup and
+all external gates remain open.
 
 ## Contents
 
@@ -104,7 +105,8 @@ remaining analytic and external-review obligations explicit.
 For v0.1.39, the canonical Class-II source reconciliation remains open only
 for a TECT/P1 transfer claim.  The independent paper remains `draft` because
 the signed mathematical audit, specialist novelty review, operator review,
-commit/remote-backup confirmation, and capstone package are not yet complete.
+remote-backup confirmation and the capstone package are not yet complete; the
+local content commit is recorded at `EXP-001460`.
 The fresh replay, manifest, PDF review, governed regeneration, and repository
 release check pass at `EXP-001452`--`EXP-001453`.
 The external reproduction-surface hardening is recorded at `EXP-001454`.

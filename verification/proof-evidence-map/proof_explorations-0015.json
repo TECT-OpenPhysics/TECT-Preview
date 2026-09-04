@@ -5615,6 +5615,92 @@
       "task_id": "T-054",
       "title": "A2/R-157/R-158 v0.1.40 combined shared-tree release checkpoint",
       "verdict": "advanced"
+    },
+    {
+      "adversarial_review": [
+        {
+          "check": "Could a batch commit erase attribution between the paper and R-491?",
+          "disposition": "DISMISSED: two distinct queue records were present, the watcher composed a two-entry batch, and both source records moved to done only after success."
+        },
+        {
+          "check": "Could the local commit be reported as remote backup or publication?",
+          "disposition": "UPHELD AS LIMITATION: no push, tag, release, upload, or submission occurred."
+        },
+        {
+          "check": "Could the watcher release PASS replace the two signed external reviews?",
+          "disposition": "UPHELD AS LIMITATION: both blank contracts remain unfilled and the lifecycle remains DRAFT / NOT SUBMISSION-AUTHORIZED."
+        }
+      ],
+      "assumptions": [
+        "The maintainer watcher v1.3 or later enforces release_check.py before commit and preserves per-request detail in its batch message.",
+        "A local Git commit is not an offsite backup and does not authorize a remote push.",
+        "The paper and R-491 mathematical scopes remain separate despite sharing one generated-surface commit."
+      ],
+      "boundary": "Local repository commit and release-gate consistency for the combined paper/R-491 shared tree. No remote backup, external proof or novelty acceptance, theorem-tier promotion, canonical transfer, physical or limit conclusion, operator capstone, submission, upload, tag, release, push, or publication claim.",
+      "claim_ids": [
+        "A2-FULL-PRODUCTION-WELLPOSED"
+      ],
+      "classification": "LOCAL_COMMIT_PASS_REMOTE_BACKUP_AND_EXTERNAL_REVIEWS_OPEN",
+      "decision_reason": "Waiting for the R-491 owner request avoided silently attributing unrelated files to the paper. Once both requests existed, the repository's batch-draining watcher was the governed way to commit the shared generated surfaces and append-only records together.",
+      "evidence_refs": [
+        "verification/scripts/commit_watcher.ps1#process-queue-batch",
+        "verification/scripts/release_check.py#main",
+        "publish/papers/a2-r157-r158-ensemble-minimizers/STATUS.md#completion-gates",
+        "publish/papers/a2-r157-r158-ensemble-minimizers/submission-readiness.md#requirement-matrix"
+      ],
+      "finding": "The watcher rebuilt the note-PDF surface, passed every release gate with only the pre-existing large-file warnings, and created local commit 7e1de76c06be0d6a43da0459f7ab0b55920a1795 from two separately attributed queue requests. The commit contains the v0.1.40 paper/reproduction package and the independently scoped R-491 packet. Both queue requests moved to done, the pending queue is empty, and git status is clean. No remote push was attempted.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": [
+          "R-157",
+          "R-158"
+        ]
+      },
+      "gate_ids": [
+        "PA-ROUND1-EVIDENCE-ROLE-AND-MINIMUM-MANIFEST-FREEZE"
+      ],
+      "id": "EXP-001460",
+      "method": [
+        "Confirm that the paper request and the separately owned R-491 request are both present in internal/commit-queue.",
+        "Run commit_watcher.ps1 -Once so that it stages the whole governed tree, rebuilds current note PDFs, runs the mandatory release gate, composes the two queue messages as one batch commit, and moves both requests to done only on success.",
+        "Read the resulting HEAD and verify that the ordinary worktree is clean and no pending queue file remains."
+      ],
+      "missing_assumptions": [
+        "Explicit authorization and successful verification of a remote backup if offsite backup is desired.",
+        "Completed and signed independent mathematical proof review.",
+        "Completed and signed specialist novelty review, operator adversarial confirmation, and the dedicated PUBLISHED capstone."
+      ],
+      "next_action": "Synchronize the paper readers to the local-commit state, regenerate and release-check that metadata-only update, commit it through a paper-only queue, then obtain genuine signed proof and novelty reviews. Do not push without explicit authorization.",
+      "non_claims": [
+        "The local commit is not a remote backup, submission, release, or publication.",
+        "The shared commit does not merge the mathematical claims or evidence roles of R-491 and A2/R-157/R-158.",
+        "No external reviewer or operator disposition is inferred from repository PASS."
+      ],
+      "provenance": "contemporaneous",
+      "question": "After both the paper and R-491 owners supplied separate queue records, did the maintainer watcher pass its mandatory release gate and create an attributed local commit?",
+      "recorded_at": "2026-09-04T05:05:27Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-001459",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001458",
+          "relation": "continues"
+        },
+        {
+          "id": "EXP-001457",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-09-04",
+      "revisit_condition": "Reopen after any metadata commit, remote-backup authorization/result, reviewer response, operator disposition, package byte, lifecycle, or submission change.",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-054",
+      "title": "A2/R-157/R-158 v0.1.40 local release-gated commit checkpoint",
+      "verdict": "advanced"
     }
   ],
   "kind": "proof_explorations",
